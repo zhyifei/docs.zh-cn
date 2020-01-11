@@ -339,8 +339,9 @@
     - name: XML 序列化程序生成器
       href: additional-tools/xml-serializer-generator.md
 - name: 从 .NET Framework 移植
-  href: porting/index.md
   items:
+    - name: 概述
+      href: porting/index.md
     - name: .NET Framework 技术不可用于 .NET Core
       href: porting/net-framework-tech-unavailable.md
     - name: 分析第三方依赖项
