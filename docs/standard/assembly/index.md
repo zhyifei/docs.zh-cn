@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 8e68d2dbb13d226ba738bdf8455418c9e771d6a6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733153"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900598"
 ---
 # <a name="assemblies-in-net"></a>.NET 中的程序集
 
@@ -91,7 +91,7 @@ ms.locfileid: "73733153"
 
 ## <a name="related-content"></a>相关的内容
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[程序集内容](contents.md)|组成程序集的元素。|
 |[程序集清单](manifest.md)|程序集清单中的数据，以及它如何存储在程序集中。|
@@ -111,7 +111,6 @@ ms.locfileid: "73733153"
 ## <a name="see-also"></a>请参阅
 
 - [.NET 程序集文件格式](file-format.md)
-- [.NET 中的程序集](index.md)
 - [友元程序集](friend.md)
 - [引用程序集](reference-assemblies.md)
 - [如何：加载和卸载程序集](load-unload.md)
