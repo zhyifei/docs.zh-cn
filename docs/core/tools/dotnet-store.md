@@ -3,19 +3,18 @@ title: dotnet store 命令
 description: “dotnet store”命令可将指定的程序集存储到运行时包存储区。
 author: bleroy
 ms.date: 05/29/2018
-ms.custom: seodec18
-ms.openlocfilehash: 58889039d117a2231cda693e4aca7790f018d1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a81e06f36ffbed68b7cc35de47aa5dca32bab6e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606746"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714203"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet store` - 将指定的程序集存储到[运行时包存储区](../deploying/runtime-store.md)。
 
@@ -23,7 +22,7 @@ ms.locfileid: "54606746"
 
 `dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]`
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 `dotnet store` 将指定的程序集存储到[运行时包存储区](../deploying/runtime-store.md)。 默认情况下，程序集更适用于目标运行时和框架。 有关详细信息，请参阅[运行时包存储区](../deploying/runtime-store.md)主题。
 
@@ -35,7 +34,7 @@ ms.locfileid: "54606746"
 
 `-m|--manifest <PATH_TO_MANIFEST_FILE>`
 
-包存储区清单文件是包含要存储的包列表的 XML 文件。 清单文件的格式与 SDK 样式项目格式兼容。 因此，引用所需的包的项目文件能够与 `-m|--manifest` 选项结合使用，以便于将程序集存储到运行时包存储区。 若要指定多个清单文件，请为各个文件重复指定选项和路径。 例如：`--manifest packages1.csproj --manifest packages2.csproj`。
+包存储区清单文件  是包含要存储的包列表的 XML 文件。 清单文件的格式与 SDK 样式项目格式兼容。 因此，引用所需的包的项目文件能够与 `-m|--manifest` 选项结合使用，以便于将程序集存储到运行时包存储区。 若要指定多个清单文件，请为各个文件重复指定选项和路径。 例如：`--manifest packages1.csproj --manifest packages2.csproj`。
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -53,7 +52,7 @@ ms.locfileid: "54606746"
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-指定运行时包存储区的路径。 如果未指定，默认路径为用户配置文件 .NET Core 安装目录的 store 子目录。
+指定运行时包存储区的路径。 如果未指定，默认路径为用户配置文件 .NET Core 安装目录的 store  子目录。
 
 `--skip-optimization`
 
@@ -69,15 +68,15 @@ ms.locfileid: "54606746"
 
 `-w|--working-dir <INTERMEDIATE_WORKING_DIRECTORY>`
 
-此命令使用的工作目录。 如果未指定，使用当前目录的 obj 子目录。
+此命令使用的工作目录。 如果未指定，使用当前目录的 obj  子目录。
 
 ## <a name="examples"></a>示例
 
-存储 packages.csproj 项目文件中为 .NET Core 2.0.0 指定的包：
+存储 packages.csproj  项目文件中为 .NET Core 2.0.0 指定的包：
 
 `dotnet store --manifest packages.csproj --framework-version 2.0.0`
 
-存储 packages.csproj 中指定的包，但不进行优化：
+存储 packages.csproj  中指定的包，但不进行优化：
 
 `dotnet store --manifest packages.csproj --skip-optimization`
 

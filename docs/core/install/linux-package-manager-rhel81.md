@@ -4,21 +4,18 @@ description: 使用包管理器在 RHEL 8.1 上安装 .NET Core SDK 和运行时
 author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
-ms.openlocfilehash: 3ef639d5b76e81856ec8370d10e098c455ca8b3d
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 8781d6bd14daf975fcc602fd2924a333750d4256
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74998911"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714378"
 ---
 # <a name="rhel-81-package-manager---install-net-core"></a>RHEL 8.1 包管理器 - 安装 .NET Core
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
 本文介绍如何使用包管理器在 RHEL 8.1 上安装 .NET Core。 对于 RHEL 8.1，.NET Core 3.1 尚不可用。
-
-> [!NOTE]
-> RHEL 8.0 不包括 .NET Core 3.0。 使用命令 `yum upgrade` 更新到 RHEL 8.1。
 
 > [!NOTE]
 > RHEL 8.0 不包括 .NET Core 3.0。 使用命令 `yum upgrade` 更新到 RHEL 8.1。
@@ -40,7 +37,6 @@ scl enable dotnet-sdk-3.0 bash
 
 向订阅管理器注册后，你就可安装并启用 ASP.NET Core 运行时。 在终端中，运行以下命令。
 
-<!-- TODO: is this the correct value? Taken from the webpage but it doesn't have aspnet in the name -->
 ```bash
 dnf install aspnetcore-runtime-3.0
 scl enable aspnetcore-runtime-3.0 bash

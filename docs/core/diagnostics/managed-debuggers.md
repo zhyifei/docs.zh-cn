@@ -1,15 +1,13 @@
 ---
 title: 托管调试器 - .NET Core
 description: Visual Studio 和 Visual Studio Code 托管调试器的概述。
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 3741011d22ab6c4240b7f88a9ab790ea61ecd0d2
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 065b1b0fc32eb76b398cb3821c8592a1955c9359
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "72303646"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715558"
 ---
 # <a name="net-core-managed-debuggers"></a>.NET Core 托管调试器
 

@@ -5,13 +5,13 @@ author: thraka
 ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
-ms.custom: seodec18,updateeachrelease
-ms.openlocfilehash: 4c6a8e495d8532a0ab2e90368663a287731a9af0
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.custom: updateeachrelease
+ms.openlocfilehash: 6c394ad2721bcdd91fb750fe93c03f16ca9f799f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884261"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714079"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>通过命令行开始在 Windows/Linux/macOS 上使用 .NET Core
 
@@ -19,7 +19,7 @@ ms.locfileid: "74884261"
 
 如果熟悉 .NET Core CLI 工具集，请阅读 [.NET Core SDK 概述](../tools/index.md)。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - [.NET Core SDK 3.1](https://dotnet.microsoft.com/download) 或更高版本。
 - 按需选择的文本编辑器或代码编辑器。

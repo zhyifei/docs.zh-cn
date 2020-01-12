@@ -2,13 +2,12 @@
 title: 从 DNX 迁移到 .NET Core CLI
 description: 从使用 DNX 工具迁移到 .NET Core CLI 工具。
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 0f00ee6c05a47d976028c3cd4eade2b2b399260b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 91a43ffda31b34332d2e545a90c857221aa162c4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160831"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715529"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>从 DNX 迁移到 .NET Core CLI (project.json)
 
@@ -29,7 +28,7 @@ ms.locfileid: "59160831"
 首先将概述工具中存在的一般性更改。
 
 ### <a name="no-more-dnvm"></a>不再具有 DNVM
-DNVM（DotNet 版本管理器的简称），是用于在计算机上安装 DNX 的 bash/PowerShell 脚本。 它有助于用户从指定的数据源（或默认数据源）获得需要的 DNX，以及将某个 DNX 标记为“活动”，从而将其置于给定会话的 $PATH 中。 这使你能够使用各种工具。
+DNVM（DotNet 版本管理器  的简称），是用于在计算机上安装 DNX 的 bash/PowerShell 脚本。 它有助于用户从指定的数据源（或默认数据源）获得需要的 DNX，以及将某个 DNX 标记为“活动”，从而将其置于给定会话的 $PATH 中。 这使你能够使用各种工具。
 
 DNVM 现已停用，因为其功能集可能由于 .NET Core CLI 即将推出的更改变得冗余。
 
@@ -47,7 +46,7 @@ DNVM 现已停用，因为其功能集可能由于 .NET Core CLI 即将推出的
 
 下表显示了 DNX/DNU 命令及其 CLI 对应项之间的映射。
 
-| DNX 命令                    | CLI 命令    | 说明                                                                                                     |
+| DNX 命令                    | CLI 命令    | 描述                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
 | dnx 运行                        | dotnet 运行     | 从源运行代码。                                                                                           |
 | dnu 生成                      | dotnet 生成   | 生成代码的 IL 二进制。                                                                                |
@@ -113,12 +112,12 @@ CLI 和 DNX 都使用基于 `project.json` 文件的相同基本项目系统。 
 
 如果 `project.json` 中有“命令”部分，可将其删除。 过去作为 DNU 命令（例如，实体框架 CLI 命令）存在的某些命令，将作为每个项目的扩展移植到 CLI。 如果生成了自己正在项目中使用的命令，需要使用 CLI 扩展将其替换。 在这种情况下，`project.json` 中的 `commands` 节点需要替换为 `tools` 节点，并且需要列出工具依赖项。
 
-完成这些操作后，需要决定希望应用使用的可移植性类型。 借助 .NET Core，我们在提供一系列可从中进行选择的可移植性选项方面投入了大量工作。 例如，可能想要一个完全可移植的应用程序或者想要一个独立的应用程序。 可移植应用程序选项工作原理更像 .NET Framework 应用程序的工作原理：它需要共享组件才能在目标计算机 (.NET Core) 上执行。 独立应用程序不需要在目标上安装 .NET Core，但需要为每个要支持的 OS 生成一个应用程序。 有关这些可移植性类型等内容，请参阅[应用程序可移植性类型](../deploying/index.md)文档。
+完成这些操作后，需要决定希望应用使用的可移植性类型。 借助 .NET Core，我们在提供一系列可从中进行选择的可移植性选项方面投入了大量工作。 例如，可能想要一个完全可移植  的应用程序或者想要一个独立的  应用程序。 可移植应用程序选项工作原理更像 .NET Framework 应用程序的工作原理：它需要共享组件才能在目标计算机 (.NET Core) 上执行。 独立应用程序不需要在目标上安装 .NET Core，但需要为每个要支持的 OS 生成一个应用程序。 有关这些可移植性类型等内容，请参阅[应用程序可移植性类型](../deploying/index.md)文档。
 
 调用想要的可移植性类型后，需要更改目标框架。 如果是为 .NET Core 编写应用程序，很可能要使用 `dnxcore50` 作为目标框架。 鉴于 CLI 和全新 [.NET Standard](../../standard/net-standard.md) 引入的变化，框架需要为下列之一：
 
-1. `netcoreapp1.0` - 若要在 .NET Core 上编写应用（包括 ASP.NET Core 应用）
-2. `netstandard1.6` - 若要为 .NET Core 编写类库
+1. `netcoreapp1.0` - 如果要在 .NET Core 上编写应用程序（包括 ASP.NET Core 应用程序）
+2. `netstandard1.6` - 如果要为 .NET Core 编写类库
 
 如果要使用其他 `dnx` 目标，如 `dnx451`，则还需要更改这些内容。 `dnx451` 应更改为 `net451`。
 有关详细信息，请参阅 [.NET Standard](../../standard/net-standard.md) 主题。

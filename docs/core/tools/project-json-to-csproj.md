@@ -3,13 +3,12 @@ title: 比较 project.json 和 csproj
 description: 查看 project.json 和 csproj 元素之间的映射。
 author: natemcmaster
 ms.date: 03/13/2017
-ms.custom: seodec18
-ms.openlocfilehash: 6ac63f18bd42193e964aaeae3c54c887c9c63163
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747406"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714138"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 和 csproj 属性之间的映射
 
@@ -31,7 +30,7 @@ ms.locfileid: "56747406"
 
 ## <a name="common-top-level-properties"></a>常见顶级属性
 
-### <a name="name"></a>name
+### <a name="name"></a>NAME
 
 ```json
 {

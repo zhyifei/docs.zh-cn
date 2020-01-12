@@ -2,16 +2,16 @@
 title: dotnet-install 脚本
 description: 了解用于安装 .NET Core CLI 工具和共享运行时的 dotnet-install 脚本。
 ms.date: 01/16/2019
-ms.openlocfilehash: 867be93b5a4c66258df438ce718dabbd4ef2891c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f72e12fc415824a9c69eba6f52e3c01717cf654c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849575"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740528"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 脚本引用
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet-install.ps1` | `dotnet-install.sh` - 用于安装 .NET Core CLI 工具和共享运行时的脚本。
 
@@ -25,7 +25,7 @@ macOS/Linux：
 
 `dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--runtime] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--uncached-feed] [--no-cdn] [--feed-credential] [--runtime-id] [--skip-non-versioned-files] [--help]`
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 `dotnet-install` 脚本用于执行 .NET Core SDK 的非管理员安装，其中包含 .NET Core CLI 工具和共享运行时。
 
@@ -195,7 +195,7 @@ macOS/Linux：
   macOS/Linux：
 
   ```bash
-  curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
+  curl -ssl https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
 ## <a name="see-also"></a>请参阅
