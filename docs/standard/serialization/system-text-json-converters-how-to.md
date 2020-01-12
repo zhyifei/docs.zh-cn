@@ -1,20 +1,20 @@
 ---
 title: 如何编写用于 JSON 序列化的自定义转换器-.NET
-ms.date: 10/16/2019
+ms.date: 01/10/2020
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: efbaf852f07b2b59111f0e330cf52470e3eca4c3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8a2af76ca64359c12fafce6678def14d11d9f029
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705803"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904571"
 ---
-# <a name="how-to-write-custom-converters-for-json-serialization-in-net"></a>如何在 .NET 中编写用于 JSON 序列化的自定义转换器
+# <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>如何编写 .NET 中的 JSON 序列化（封送处理）的自定义转换器
 
 本文介绍如何为 <xref:System.Text.Json> 命名空间中提供的 JSON 序列化类创建自定义转换器。 有关 `System.Text.Json`的简介，请参阅[如何在 .net 中序列化和反序列化 JSON](system-text-json-how-to.md)。
 
@@ -23,7 +23,7 @@ ms.locfileid: "75705803"
 * 重写内置转换器的默认行为。 例如，你可能希望用 mm/dd/yyyy 格式而不是默认 ISO 8601-1:2019 格式来表示 `DateTime` 值。
 * 支持自定义值类型。 例如，`PhoneNumber` 结构。
 
-你还可以编写自定义转换器，以利用当前版本中未包含的功能来扩展 `System.Text.Json`。 本文的后面部分介绍了以下方案：
+你还可以编写自定义转换器，以自定义或扩展具有当前版本中未包含的功能的 `System.Text.Json`。 本文的后面部分介绍了以下方案：
 
 * [将推理出的类型反序列化为对象属性](#deserialize-inferred-types-to-object-properties)。
 * [支持带有非字符串键的字典](#support-dictionary-with-non-string-key)。
@@ -70,7 +70,7 @@ ms.locfileid: "75705803"
 * 重写 `Write` 方法以序列化 `T`类型的传入对象。 使用传递给方法的 <xref:System.Text.Json.Utf8JsonWriter> 来写入 JSON。
 * 仅在必要时重写 `CanConvert` 方法。 如果要转换的类型为类型 `T`，则默认实现将返回 `true`。 因此，仅支持类型的转换器 `T` 不需要重写此方法。 有关的确需要重写此方法的转换器的示例，请参阅本文后面的多[态反序列化](#support-polymorphic-deserialization)部分。
 
-可以参考[内置的转换器源代码](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json/src/System/Text/Json/Serialization/Converters/)，作为编写自定义转换器的参考实现。
+可以参考[内置的转换器源代码](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/)，作为编写自定义转换器的参考实现。
 
 ## <a name="steps-to-follow-the-factory-pattern"></a>遵循工厂模式的步骤
 
@@ -179,14 +179,15 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>反序列化推断类型到对象属性
 
-反序列化到类型 `Object`的属性时，将创建一个 `JsonElement` 对象。 这是因为反序列化程序不知道要创建什么 CLR 类型，也不会尝试推测。 例如，如果 JSON 属性的值为 "true"，则反序列化程序不会推断值为 `Boolean`，如果元素有 "01/01/2019"，则反序列化程序不会推断出它是一个 `DateTime`。
+反序列化到类型 `object`的属性时，将创建一个 `JsonElement` 对象。 这是因为反序列化程序不知道要创建什么 CLR 类型，也不会尝试推测。 例如，如果 JSON 属性的值为 "true"，则反序列化程序不会推断值为 `Boolean`，如果元素有 "01/01/2019"，则反序列化程序不会推断出它是一个 `DateTime`。
 
 类型推理可能不准确。 如果反序列化程序分析的 JSON 数字没有小数点作为 `long`，则当最初将值序列化为 `ulong` 或 `BigInteger`时，这可能会导致超出范围的问题。 如果数字最初序列化为 `decimal`，则将带小数点的数字分析为 `double` 可能会损失精度。
 
-对于需要类型推理的方案，以下代码演示了用于 `Object` 属性的自定义转换器。 代码转换：
+对于需要类型推理的方案，以下代码演示了用于 `object` 属性的自定义转换器。 代码转换：
 
 * `true` 和 `false` `Boolean`
-* 要 `long` 的数字或 `double`
+* 不带小数点的数字 `long`
+* 带小数点的数字 `double`
 * 要 `DateTime` 的日期
 * 要 `string` 的字符串
 * 要 `JsonElement` 的其他内容
@@ -195,9 +196,9 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 下面的代码注册转换器：
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertInferredTypesToObject.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeInferredTypesToObject.cs?name=SnippetRegister)]
 
-下面是包含 `Object` 属性的示例类型：
+下面是包含 `object` 属性的示例类型：
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithObjectProperties)]
 
@@ -213,7 +214,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 如果没有自定义转换器，反序列化会将 `JsonElement` 放入每个属性中。
 
-`System.Text.Json.Serialization` 命名空间中的 "[单元测试" 文件夹](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/)包含处理对象属性反序列化的自定义转换器的更多示例。
+`System.Text.Json.Serialization` 命名空间中的 "[单元测试" 文件夹](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/)包含用于处理反序列化到 `object` 属性的自定义转换器的更多示例。
 
 ### <a name="support-dictionary-with-non-string-key"></a>支持带有非字符串键的字典
 
@@ -225,7 +226,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 下面的代码注册转换器：
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
 
 转换器可以序列化和反序列化以下类的 `TemperatureRanges` 属性，该类使用以下 `Enum`：
 
@@ -245,11 +246,11 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 }
 ```
 
-`System.Text.Json.Serialization` 命名空间中的 "[单元测试" 文件夹](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/)包含处理非字符串键字典的自定义转换器的更多示例。
+`System.Text.Json.Serialization` 命名空间中的 "[单元测试" 文件夹](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/)包含处理非字符串键字典的自定义转换器的更多示例。
 
 ### <a name="support-polymorphic-deserialization"></a>支持多态反序列化
 
-多[态序列化](system-text-json-how-to.md#serialize-properties-of-derived-classes)不需要自定义转换器，但反序列化确实需要自定义转换器。
+内置功能提供有限范围的多[态序列化](system-text-json-how-to.md#serialize-properties-of-derived-classes)，但不支持反序列化。 反序列化需要自定义转换器。
 
 例如，假设有一个 `Person` 抽象基类，其中包含 `Employee` 和 `Customer` 派生类。 多态反序列化意味着可以在设计时将 `Person` 指定为反序列化目标，并且 JSON 中的 `Customer` 和 `Employee` 对象在运行时正确地反序列化。 在反序列化过程中，您必须查找识别 JSON 中所需类型的线索。 每个方案都有不同的可用线索类型。 例如，可以使用鉴别器属性，或者可能需要依赖于是否存在特定属性。 `System.Text.Json` 的当前版本不提供特性来指定如何处理多态反序列化方案，因此需要自定义转换器。
 
@@ -261,7 +262,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 下面的代码注册转换器：
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertPolymorphic.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripPolymorphic.cs?name=SnippetRegister)]
 
 转换器可以反序列化使用同一转换器进行序列化而创建的 JSON，例如：
 
@@ -282,22 +283,25 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 ## <a name="other-custom-converter-samples"></a>其他自定义转换器示例
 
-`System.Text.Json.Serialization` 源代码中的 "[单元测试" 文件夹](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/)包含其他自定义转换器示例，例如：
+[从 Newtonsoft.json 迁移到 system.object](system-text-json-migrate-from-newtonsoft-how-to.md)一文包含其他自定义转换器的示例。
 
-* 在反序列化时将 null 转换为0的 `Int32` 转换器
-* `Int32` 允许在反序列化时字符串和数字值的转换器
-* `Enum` 转换器
-* 接受外部数据 `List<T>` 转换器
-* 使用以逗号分隔的数字列表的 `Long[]` 转换器 
+`System.Text.Json.Serialization` 源代码中的 "[单元测试" 文件夹](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/)包含其他自定义转换器示例，例如：
+
+* [在反序列化时将 null 转换为0的 Int32 转换器](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.NullValueType.cs)
+* [允许 string 和 number 值反序列化的 Int32 转换器](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Int32.cs)
+* [枚举转换器](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Enum.cs)
+* [列出接受外部数据\<T > 转换器](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
+* [Long [] 转换器，适用于以逗号分隔的数字列表](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs) 
+
+如果需要创建一个修改现有内置转换器的行为的转换器，可以获取[现有转换器的源代码](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)，作为自定义的起点。
 
 ## <a name="additional-resources"></a>其他资源
 
+* [内置转换器的源代码](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
+* [系统中的 DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)
 * [System.web 概述](system-text-json-overview.md)
-* [System.web API 参考](xref:System.Text.Json)
 * [如何使用 system.exception](system-text-json-how-to.md)
-* [内置转换器的源代码](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json/src/System/Text/Json/Serialization/Converters/)
-* 与 `System.Text.Json` 的自定义转换器相关的 GitHub 问题
-  * [36639引入自定义转换器](https://github.com/dotnet/corefx/issues/36639)
-  * [38713有关反序列化到对象的信息](https://github.com/dotnet/corefx/issues/38713)
-  * [40120关于非字符串键字典](https://github.com/dotnet/corefx/issues/40120)
-  * [37787关于多态反序列化](https://github.com/dotnet/corefx/issues/37787)
+* [如何从 Newtonsoft.json 迁移](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [System.web API 参考](xref:System.Text.Json)
+* [System.web. 串行化 API 参考](xref:System.Text.Json.Serialization)
+<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

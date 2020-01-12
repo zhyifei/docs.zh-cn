@@ -1,19 +1,19 @@
 ---
 title: 如何使用C# -.NET 对 JSON 进行序列化和反序列化
-ms.date: 09/16/2019
+ms.date: 01/10/2020
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: a9c690e736a08c729a4099d5e7a519ed17ec282c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 047d5b5c6fa339089d2054eb6bfe8b3066c1d00c
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705790"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904660"
 ---
-# <a name="how-to-serialize-and-deserialize-json-in-net"></a>如何在 .NET 中对 JSON 进行序列化和反序列化
+# <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中对 JSON 进行序列化和反序列化（marshal 和取消封送）
 
 本文介绍如何使用 <xref:System.Text.Json> 命名空间在 JavaScript 对象表示法（JSON）之间进行序列化和反序列化。
 
@@ -109,7 +109,7 @@ using System.Text.Json.Serialization;
 * [默认编码器](xref:System.Text.Encodings.Web.JavaScriptEncoder.Default)会转义非 ascii 字符、ASCII 范围内的 HTML 敏感字符以及必须根据[RFC 8259 JSON 规范](https://tools.ietf.org/html/rfc8259#section-7)进行转义的字符。
 * 默认情况下，JSON 为缩小。 可以很好[打印 JSON](#serialize-to-formatted-json)。
 * 默认情况下，JSON 名称的大小写与 .NET 名称匹配。 你可以[自定义 JSON 名称大小写](#customize-json-names-and-values)。
-* 检测到循环引用并引发异常。 有关详细信息，请参阅 GitHub 上的 dotnet/corefx 存储库中的[循环引用问题 38579](https://github.com/dotnet/corefx/issues/38579) 。
+* 检测到循环引用并引发异常。
 * 当前排除了字段。
 
 支持的类型包括：
@@ -118,7 +118,7 @@ using System.Text.Json.Serialization;
 * 用户定义的[普通旧 CLR 对象（poco）](https://stackoverflow.com/questions/250001/poco-definition)。
 * 一维数组和交错数组（`ArrayName[][]`）。
 * `Dictionary<string,TValue>`，其中 `TValue` 为 `object`、`JsonElement`或 POCO。
-* 以下命名空间中的集合。 有关详细信息，请参阅 GitHub 上的 dotnet/corefx 存储库中的[收集支持问题](https://github.com/dotnet/corefx/issues/36643)。
+* 以下命名空间中的集合。
   * <xref:System.Collections>
   * <xref:System.Collections.Generic>
   * <xref:System.Collections.Immutable>
@@ -154,7 +154,7 @@ using System.Text.Json.Serialization;
 * 默认情况下，属性名称匹配区分大小写。 可以[指定不区分大小写](#case-insensitive-property-matching)。
 * 如果 JSON 包含只读属性的值，则该值将被忽略，并且不会引发异常。
 * 不支持反序列化到不具有无参数构造函数的引用类型。
-* 不支持对不可变对象或只读属性进行反序列化。 有关详细信息，请参阅 github 上的 dotnet/corefx 存储库中对[不可变对象支持的 GitHub 问题 38569](https://github.com/dotnet/corefx/issues/38569)和[上的38163问题](https://github.com/dotnet/corefx/issues/38163)。
+* 不支持对不可变对象或只读属性进行反序列化。
 * 默认情况下，枚举作为数字支持。 可以将[枚举名称序列化为字符串](#enums-as-strings)。
 * 不支持字段。
 * 默认情况下，JSON 中的注释或尾随逗号引发异常。 您可以[允许注释和尾随逗号](#allow-comments-and-trailing-commas)。
@@ -458,7 +458,9 @@ JSON 属性命名策略：
 
 ## <a name="serialize-properties-of-derived-classes"></a>序列化派生类的属性
 
-在编译时指定要序列化的类型时，不支持多态序列化。 例如，假设您有一个 `WeatherForecast` 类和一个派生类 `WeatherForecastDerived`：
+不支持多态类型层次结构的序列化。 例如，如果将某个属性定义为接口或抽象类，则即使运行时类型具有其他属性，也只会序列化对接口或抽象类定义的属性。 此部分中介绍了此行为的例外情况。
+
+例如，假设您有一个 `WeatherForecast` 类和一个派生类 `WeatherForecastDerived`：
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -480,7 +482,7 @@ JSON 属性命名策略：
 
 此行为旨在帮助防止在派生的运行时创建的类型中发生意外的数据泄露。
 
-若要序列化派生类型的属性，请使用以下方法之一：
+若要在前面的示例中序列化派生类型的属性，请使用以下方法之一：
 
 * 调用 <xref:System.Text.Json.JsonSerializer.Serialize%2A> 的重载，以便在运行时指定类型：
 
@@ -494,14 +496,74 @@ JSON 属性命名策略：
 
 ```json
 {
+  "WindSpeed": 35,
   "Date": "2019-08-01T00:00:00-07:00",
   "TemperatureCelsius": 25,
-  "Summary": "Hot",
-  "WindSpeed": 35
+  "Summary": "Hot"
 }
 ```
 
-有关多态反序列化的信息，请参阅[支持多态反序列化](system-text-json-converters-how-to.md#support-polymorphic-deserialization)。
+> [!IMPORTANT]
+> 这些方法只为要序列化的根对象提供多态序列化，而不提供该根对象的属性的多态序列化。 
+
+如果将较低级别的对象定义为 `object`类型，则可以获取多态序列化。 例如，假设 `WeatherForecast` 类具有一个名为 `PreviousForecast` 的属性，该属性可以定义为类型 `WeatherForecast` 或 `object`：
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPrevious)]
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPreviousAsObject)]
+
+如果 `PreviousForecast` 属性包含 `WeatherForecastDerived`的实例：
+
+* 序列化 `WeatherForecastWithPrevious` 的 JSON 输出**不包括**`WindSpeed`。
+* 序列化 `WeatherForecastWithPreviousAsObject` 的 JSON 输出**包括**`WindSpeed`。
+
+若要序列化 `WeatherForecastWithPreviousAsObject`，无需调用 `Serialize<object>` 或 `GetType`，因为根对象不是可能是派生类型的对象。 下面的代码示例不调用 `Serialize<object>` 或 `GetType`：
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeSecondLevel)]
+
+前面的代码正确地序列化 `WeatherForecastWithPreviousAsObject`：
+
+```json
+{
+  "Date": "2019-08-01T00:00:00-07:00",
+  "TemperatureCelsius": 25,
+  "Summary": "Hot",
+  "PreviousForecast": {
+    "WindSpeed": 35,
+    "Date": "2019-08-01T00:00:00-07:00",
+    "TemperatureCelsius": 25,
+    "Summary": "Hot"
+  }
+}
+```
+
+将属性定义为 `object` 与接口一起使用的方法相同。 假设您具有以下接口和实现，并且您想要使用包含实现实例的属性序列化类：
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/IForecast.cs)]
+
+序列化 `Forecasts`的实例时，只有 `Tuesday` 显示 `WindSpeed` 属性，因为 `Tuesday` 定义为 `object`：
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeInterface)]
+
+下面的示例显示了前面的代码生成的 JSON：
+
+```json
+{
+  "Monday": {
+    "Date": "2020-01-06T00:00:00-08:00",
+    "TemperatureCelsius": 10,
+    "Summary": "Cool"
+  },
+  "Tuesday": {
+    "Date": "2020-01-07T00:00:00-08:00",
+    "TemperatureCelsius": 11,
+    "Summary": "Rainy",
+    "WindSpeed": 10
+  }
+}
+```
+
+有关多态**序列化**的详细信息，以及有关**反序列**化的信息，请参阅[如何从 newtonsoft.json 迁移到 system.object](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)。
 
 ## <a name="allow-comments-and-trailing-commas"></a>允许注释和尾随逗号
 
@@ -626,11 +688,11 @@ JSON 属性命名策略：
 
 利用此选项，在反序列化后，`WeatherForecastWithDefault` 对象的 `Summary` 属性是默认值 "无摘要"。
 
-JSON 中的 Null 值仅在有效时才会被忽略。 不可以为 null 的值类型的 Null 值将导致异常。 有关详细信息，请参阅 GitHub 上的 dotnet/corefx 存储库中[不可以为 null 的值类型上的问题 40922](https://github.com/dotnet/corefx/issues/40922) 。
+JSON 中的 Null 值仅在有效时才会被忽略。 不可以为 null 的值类型的 Null 值将导致异常。
 
 ## <a name="utf8jsonreader-utf8jsonwriter-and-jsondocument"></a>Utf8JsonReader、Utf8JsonWriter 和 JsonDocument
 
-<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> 是面向 UTF-8 编码 JSON 文本的一个高性能、低分配、只进读取器，从 `ReadOnlySpan<byte>` 读取信息。 `Utf8JsonReader` 是可用于生成自定义分析程序和反的低级别类型。 <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> 方法使用 `Utf8JsonReader` 的内容。
+<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> 是适用于 UTF-8 编码的 JSON 文本的高性能、低分配、只进读取器、从 `ReadOnlySpan<byte>` 或 `ReadOnlySequence<byte>`读取。 `Utf8JsonReader` 是可用于生成自定义分析程序和反的低级别类型。 <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> 方法使用 `Utf8JsonReader` 的内容。
 
 <xref:System.Text.Json.Utf8JsonWriter?displayProperty=fullName> 是一种高性能的方式，用于从常见的 .NET 类型（如 `String`、`Int32`和 `DateTime`）编写 UTF-8 编码的 JSON 文本。 编写器是可用于生成自定义序列化程序的低级别类型。 <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> 方法使用 `Utf8JsonWriter` 的内容。
 
@@ -699,14 +761,15 @@ JSON 中的 Null 值仅在有效时才会被忽略。 不可以为 null 的值�
 
 前面的代码：
 
+* 假定 JSON 包含一个对象数组，并且每个对象可能包含一个字符串类型的 "name" 属性。
+* 计算以 "大学" 结尾的对象和 "name" 属性值。
 * 假定文件编码为 UTF-16，并将其转码为 UTF-8。 可以通过使用以下代码，将编码为 UTF-8 的文件直接读入 `ReadOnlySpan<byte>`：
 
   ```csharp
   ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName); 
   ```
 
-* 假定 JSON 包含一个对象数组，并且每个对象可能包含一个字符串类型的 "name" 属性。
-* 计算以 "大学" 结尾的对象和 `name` 属性值。
+  如果文件包含 UTF-8 字节顺序标记（BOM），请在将字节传递到 `Utf8JsonReader`之前将其删除，因为读取器需要文本。 否则，BOM 被视为无效的 JSON，读取器将引发异常。
 
 下面是前面的代码可以读取的 JSON 示例。 生成的摘要消息为 "2 个，共4个名称以 ' 大学 ' 结尾"：
 
@@ -715,7 +778,8 @@ JSON 中的 Null 值仅在有效时才会被忽略。 不可以为 null 的值�
 ## <a name="additional-resources"></a>其他资源
 
 * [System.web 概述](system-text-json-overview.md)
-* [System.web API 参考](xref:System.Text.Json)
-* [为 system.exception 编写自定义转换器](system-text-json-converters-how-to.md)
+* [如何编写自定义转换器](system-text-json-converters-how-to.md)
+* [如何从 Newtonsoft.json 迁移](system-text-json-migrate-from-newtonsoft-how-to.md)
 * [系统中的 DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)
-* [Dotnet/corefx 存储库中标记为 json 功能的 GitHub 问题-文档](https://github.com/dotnet/corefx/labels/json-functionality-doc) 
+* [System.web API 参考](xref:System.Text.Json)
+<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

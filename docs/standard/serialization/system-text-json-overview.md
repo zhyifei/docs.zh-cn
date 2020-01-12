@@ -1,19 +1,19 @@
 ---
 title: 使用C# -.NET 对 JSON 进行序列化和反序列化
-ms.date: 09/16/2019
+ms.date: 01/10/2020
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 6561d5e1580e1170369622ebc7bb330ff4e0964f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c05783963ba521109fb542f247ec9e62fdb5c2d9
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705777"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904647"
 ---
-# <a name="json-serialization-in-net---overview"></a>.NET 中的 JSON 序列化-概述
+# <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>.NET 中的 JSON 序列化和反序列化（封送和 unmarshalling）-概述
 
 `System.Text.Json` 命名空间提供用于序列化和反序列化 JavaScript 对象表示法（JSON）的功能。
 
@@ -26,16 +26,15 @@ ms.locfileid: "75705777"
 * 该库作为[.Net Core 3.0](https://aka.ms/netcore3download)共享框架的一部分内置。
 * 对于其他目标框架，请安装[System.object](https://www.nuget.org/packages/System.Text.Json) NuGet 包。 包支持：
   * .NET Standard 2.0 及更高版本
-  * .NET Framework 4.6.1 和更高版本
+  * .NET Framework 4.7.2 和更高版本
   * .NET Core 2.0、2.1 和2.2
 
 ## <a name="additional-resources"></a>其他资源
 
 * [如何使用库](system-text-json-how-to.md)
-* [源代码](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Text.Json)
-* [API 参考](xref:System.Text.Json)
-* [路线图](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Text.Json/roadmap/README.md)
-* Dotnet/corefx 存储库中的 GitHub 问题
-  * [有关系统开发的讨论](https://github.com/dotnet/corefx/issues/33115) <!-- TODO: Issues are still not moved to the new repo-->
-  * [所有系统问题](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
-  * [标记为 json 功能的 system.web 问题-doc](https://github.com/dotnet/runtime/labels/json-functionality-doc)
+* [如何从 Newtonsoft.json 迁移](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [如何编写转换器](system-text-json-converters-how-to.md)
+* [System.web 源文件](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
+* [System.web API 参考](xref:System.Text.Json)
+* [System.web. 串行化 API 参考](xref:System.Text.Json.Serialization)
+<!-- * [Roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->
