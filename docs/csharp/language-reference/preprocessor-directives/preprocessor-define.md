@@ -1,42 +1,41 @@
 ---
 title: '#define - C# 参考'
-ms.custom: seodec18
 ms.date: 06/30/2018
 f1_keywords:
 - '#define'
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: d207c96621564acd8070c9d5f618f43a6d8f15a4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7457b05ae827675969398792bcb02f025f3028fb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924606"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712580"
 ---
-# <a name="define-c-reference"></a><span data-ttu-id="abdd4-102">#define（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="abdd4-102">#define (C# Reference)</span></span>
-<span data-ttu-id="abdd4-103">使用 `#define` 来定义符号。</span><span class="sxs-lookup"><span data-stu-id="abdd4-103">You use `#define` to define a symbol.</span></span> <span data-ttu-id="abdd4-104">将符号用作传递给 [#if](./preprocessor-if.md) 指令的表达式时，该表达式的计算结果为 `true`，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="abdd4-104">When you use the symbol as the expression that's passed to the [#if](./preprocessor-if.md) directive, the expression will evaluate to `true`, as the following example shows:</span></span>  
+# <a name="define-c-reference"></a><span data-ttu-id="38ed5-102">#define（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="38ed5-102">#define (C# Reference)</span></span>
+<span data-ttu-id="38ed5-103">使用 `#define` 来定义符号。</span><span class="sxs-lookup"><span data-stu-id="38ed5-103">You use `#define` to define a symbol.</span></span> <span data-ttu-id="38ed5-104">将符号用作传递给 [#if](./preprocessor-if.md) 指令的表达式时，该表达式的计算结果为 `true`，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="38ed5-104">When you use the symbol as the expression that's passed to the [#if](./preprocessor-if.md) directive, the expression will evaluate to `true`, as the following example shows:</span></span>  
  
  ```csharp
  #define DEBUG
  ```
   
-## <a name="remarks"></a><span data-ttu-id="abdd4-105">备注</span><span class="sxs-lookup"><span data-stu-id="abdd4-105">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="38ed5-105">备注</span><span class="sxs-lookup"><span data-stu-id="38ed5-105">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="abdd4-106">`#define` 指令不能用于声明常量值，这与 C 和 C++ 中的通常做法一样。</span><span class="sxs-lookup"><span data-stu-id="abdd4-106">The `#define` directive cannot be used to declare constant values as is typically done in C and C++.</span></span> <span data-ttu-id="abdd4-107">C# 中的常量最好定义为类或结构的静态成员。</span><span class="sxs-lookup"><span data-stu-id="abdd4-107">Constants in C# are best defined as static members of a class or struct.</span></span> <span data-ttu-id="abdd4-108">如果具有多个此类常量，请考虑创建一个单独的“常量”类来容纳它们。</span><span class="sxs-lookup"><span data-stu-id="abdd4-108">If you have several such constants, consider creating a separate "Constants" class to hold them.</span></span>  
+> <span data-ttu-id="38ed5-106">`#define` 指令不能用于声明常量值，这与 C 和 C++ 中的通常做法一样。</span><span class="sxs-lookup"><span data-stu-id="38ed5-106">The `#define` directive cannot be used to declare constant values as is typically done in C and C++.</span></span> <span data-ttu-id="38ed5-107">C# 中的常量最好定义为类或结构的静态成员。</span><span class="sxs-lookup"><span data-stu-id="38ed5-107">Constants in C# are best defined as static members of a class or struct.</span></span> <span data-ttu-id="38ed5-108">如果具有多个此类常量，请考虑创建一个单独的“常量”类来容纳它们。</span><span class="sxs-lookup"><span data-stu-id="38ed5-108">If you have several such constants, consider creating a separate "Constants" class to hold them.</span></span>  
   
- <span data-ttu-id="abdd4-109">符号可用于指定编译的条件。</span><span class="sxs-lookup"><span data-stu-id="abdd4-109">Symbols can be used to specify conditions for compilation.</span></span> <span data-ttu-id="abdd4-110">可通过 [#if](./preprocessor-if.md) 或 [#elif](./preprocessor-elif.md) 测试符号。</span><span class="sxs-lookup"><span data-stu-id="abdd4-110">You can test for the symbol with either [#if](./preprocessor-if.md) or [#elif](./preprocessor-elif.md).</span></span> <span data-ttu-id="abdd4-111">还可以使用 <xref:System.Diagnostics.ConditionalAttribute> 来执行条件编译。</span><span class="sxs-lookup"><span data-stu-id="abdd4-111">You can also use the <xref:System.Diagnostics.ConditionalAttribute> to perform conditional compilation.</span></span>  
+ <span data-ttu-id="38ed5-109">符号可用于指定编译的条件。</span><span class="sxs-lookup"><span data-stu-id="38ed5-109">Symbols can be used to specify conditions for compilation.</span></span> <span data-ttu-id="38ed5-110">可通过 [#if](./preprocessor-if.md) 或 [#elif](./preprocessor-elif.md) 测试符号。</span><span class="sxs-lookup"><span data-stu-id="38ed5-110">You can test for the symbol with either [#if](./preprocessor-if.md) or [#elif](./preprocessor-elif.md).</span></span> <span data-ttu-id="38ed5-111">还可以使用 <xref:System.Diagnostics.ConditionalAttribute> 来执行条件编译。</span><span class="sxs-lookup"><span data-stu-id="38ed5-111">You can also use the <xref:System.Diagnostics.ConditionalAttribute> to perform conditional compilation.</span></span>  
   
- <span data-ttu-id="abdd4-112">可以定义一个符号，但不能向符号分配值。</span><span class="sxs-lookup"><span data-stu-id="abdd4-112">You can define a symbol, but you cannot assign a value to a symbol.</span></span> <span data-ttu-id="abdd4-113">文件中必须先出现 `#define` 指令，才能使用并非同时也是预处理器指令的任何指示。</span><span class="sxs-lookup"><span data-stu-id="abdd4-113">The `#define` directive must appear in the file before you use any instructions that aren't also preprocessor directives.</span></span>  
+ <span data-ttu-id="38ed5-112">可以定义一个符号，但不能向符号分配值。</span><span class="sxs-lookup"><span data-stu-id="38ed5-112">You can define a symbol, but you cannot assign a value to a symbol.</span></span> <span data-ttu-id="38ed5-113">文件中必须先出现 `#define` 指令，才能使用并非同时也是预处理器指令的任何指示。</span><span class="sxs-lookup"><span data-stu-id="38ed5-113">The `#define` directive must appear in the file before you use any instructions that aren't also preprocessor directives.</span></span>  
   
- <span data-ttu-id="abdd4-114">还可以通过 [-define](../compiler-options/define-compiler-option.md) 编译器选项来定义符号。</span><span class="sxs-lookup"><span data-stu-id="abdd4-114">You can also define a symbol with the [-define](../compiler-options/define-compiler-option.md) compiler option.</span></span> <span data-ttu-id="abdd4-115">可以通过 [#undef](./preprocessor-undef.md) 取消定义符号。</span><span class="sxs-lookup"><span data-stu-id="abdd4-115">You can undefine a symbol with [#undef](./preprocessor-undef.md).</span></span>  
+ <span data-ttu-id="38ed5-114">还可以通过 [-define](../compiler-options/define-compiler-option.md) 编译器选项来定义符号。</span><span class="sxs-lookup"><span data-stu-id="38ed5-114">You can also define a symbol with the [-define](../compiler-options/define-compiler-option.md) compiler option.</span></span> <span data-ttu-id="38ed5-115">可以通过 [#undef](./preprocessor-undef.md) 取消定义符号。</span><span class="sxs-lookup"><span data-stu-id="38ed5-115">You can undefine a symbol with [#undef](./preprocessor-undef.md).</span></span>  
   
- <span data-ttu-id="abdd4-116">使用 `-define` 或 `#define` 定义的符号与具有相同名称的变量不冲突。</span><span class="sxs-lookup"><span data-stu-id="abdd4-116">A symbol that you define with `-define` or with `#define` does not conflict with a variable of the same name.</span></span> <span data-ttu-id="abdd4-117">也就是说，变量名称不应传递给预处理器指令，且符号仅能由预处理器指令评估。</span><span class="sxs-lookup"><span data-stu-id="abdd4-117">That is, a variable name should not be passed to a preprocessor directive and a symbol can only be evaluated by a preprocessor directive.</span></span>  
+ <span data-ttu-id="38ed5-116">使用 `-define` 或 `#define` 定义的符号与具有相同名称的变量不冲突。</span><span class="sxs-lookup"><span data-stu-id="38ed5-116">A symbol that you define with `-define` or with `#define` does not conflict with a variable of the same name.</span></span> <span data-ttu-id="38ed5-117">也就是说，变量名称不应传递给预处理器指令，且符号仅能由预处理器指令评估。</span><span class="sxs-lookup"><span data-stu-id="38ed5-117">That is, a variable name should not be passed to a preprocessor directive and a symbol can only be evaluated by a preprocessor directive.</span></span>  
   
- <span data-ttu-id="abdd4-118">使用 `#define` 创建的符号的作用域是在其中定义该符号的文件。</span><span class="sxs-lookup"><span data-stu-id="abdd4-118">The scope of a symbol that was created by using `#define` is the file in which the symbol was defined.</span></span>  
+ <span data-ttu-id="38ed5-118">使用 `#define` 创建的符号的作用域是在其中定义该符号的文件。</span><span class="sxs-lookup"><span data-stu-id="38ed5-118">The scope of a symbol that was created by using `#define` is the file in which the symbol was defined.</span></span>  
   
- <span data-ttu-id="abdd4-119">如以下示例所示，必须将 `#define` 指令放在文件顶部。</span><span class="sxs-lookup"><span data-stu-id="abdd4-119">As the following example shows, you must put `#define` directives at the top of the file.</span></span>  
+ <span data-ttu-id="38ed5-119">如以下示例所示，必须将 `#define` 指令放在文件顶部。</span><span class="sxs-lookup"><span data-stu-id="38ed5-119">As the following example shows, you must put `#define` directives at the top of the file.</span></span>  
   
 ```csharp  
 #define DEBUG  
@@ -62,14 +61,14 @@ public class TestDefine
 // Debugging is enabled.  
 ```  
   
- <span data-ttu-id="abdd4-120">有关如何取消对符号进行定义的示例，请参阅 [#undef](./preprocessor-undef.md)。</span><span class="sxs-lookup"><span data-stu-id="abdd4-120">For an example of how to undefine a symbol, see [#undef](./preprocessor-undef.md).</span></span>  
+ <span data-ttu-id="38ed5-120">有关如何取消对符号进行定义的示例，请参阅 [#undef](./preprocessor-undef.md)。</span><span class="sxs-lookup"><span data-stu-id="38ed5-120">For an example of how to undefine a symbol, see [#undef](./preprocessor-undef.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="abdd4-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="abdd4-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="38ed5-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="38ed5-121">See also</span></span>
 
-- [<span data-ttu-id="abdd4-122">C# 参考</span><span class="sxs-lookup"><span data-stu-id="abdd4-122">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="abdd4-123">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="abdd4-123">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="abdd4-124">C# 预处理器指令</span><span class="sxs-lookup"><span data-stu-id="abdd4-124">C# Preprocessor Directives</span></span>](./index.md)
-- [<span data-ttu-id="abdd4-125">const</span><span class="sxs-lookup"><span data-stu-id="abdd4-125">const</span></span>](../keywords/const.md)
-- [<span data-ttu-id="abdd4-126">如何：使用跟踪和调试执行有条件编译</span><span class="sxs-lookup"><span data-stu-id="abdd4-126">How to: Compile Conditionally with Trace and Debug</span></span>](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
-- [<span data-ttu-id="abdd4-127">#undef</span><span class="sxs-lookup"><span data-stu-id="abdd4-127">#undef</span></span>](./preprocessor-undef.md)
-- [<span data-ttu-id="abdd4-128">#if</span><span class="sxs-lookup"><span data-stu-id="abdd4-128">#if</span></span>](./preprocessor-if.md)
+- [<span data-ttu-id="38ed5-122">C# 参考</span><span class="sxs-lookup"><span data-stu-id="38ed5-122">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="38ed5-123">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="38ed5-123">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="38ed5-124">C# 预处理器指令</span><span class="sxs-lookup"><span data-stu-id="38ed5-124">C# Preprocessor Directives</span></span>](./index.md)
+- [<span data-ttu-id="38ed5-125">const</span><span class="sxs-lookup"><span data-stu-id="38ed5-125">const</span></span>](../keywords/const.md)
+- [<span data-ttu-id="38ed5-126">如何：使用跟踪和调试执行有条件编译</span><span class="sxs-lookup"><span data-stu-id="38ed5-126">How to: Compile Conditionally with Trace and Debug</span></span>](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [<span data-ttu-id="38ed5-127">#undef</span><span class="sxs-lookup"><span data-stu-id="38ed5-127">#undef</span></span>](./preprocessor-undef.md)
+- [<span data-ttu-id="38ed5-128">#if</span><span class="sxs-lookup"><span data-stu-id="38ed5-128">#if</span></span>](./preprocessor-if.md)

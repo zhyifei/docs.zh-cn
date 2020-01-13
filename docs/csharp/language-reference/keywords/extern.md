@@ -1,6 +1,5 @@
 ---
 title: extern 修饰符 - C# 参考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - extern_CSharpKeyword
@@ -9,39 +8,39 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: 5f4a4b143578603a3285b1a3bc0b1efa11840e77
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c121d810e64b5fa27f105f814253c0752e028a95
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422814"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713528"
 ---
-# <a name="extern-c-reference"></a><span data-ttu-id="11db8-102">extern（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="11db8-102">extern (C# Reference)</span></span>
+# <a name="extern-c-reference"></a><span data-ttu-id="583a9-102">extern（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="583a9-102">extern (C# Reference)</span></span>
 
-<span data-ttu-id="11db8-103">`extern` 修饰符用于声明在外部实现的方法。</span><span class="sxs-lookup"><span data-stu-id="11db8-103">The `extern` modifier is used to declare a method that is implemented externally.</span></span> <span data-ttu-id="11db8-104">`extern` 修饰符的常见用法是在使用 Interop 服务调入非托管代码时与 `DllImport` 特性一起使用。</span><span class="sxs-lookup"><span data-stu-id="11db8-104">A common use of the `extern` modifier is with the `DllImport` attribute when you are using Interop services to call into unmanaged code.</span></span> <span data-ttu-id="11db8-105">在这种情况下，还必须将方法声明为 `static`，如下面的示例所示：</span><span class="sxs-lookup"><span data-stu-id="11db8-105">In this case, the method must also be declared as `static`, as shown in the following example:</span></span>
+<span data-ttu-id="583a9-103">`extern` 修饰符用于声明在外部实现的方法。</span><span class="sxs-lookup"><span data-stu-id="583a9-103">The `extern` modifier is used to declare a method that is implemented externally.</span></span> <span data-ttu-id="583a9-104">`extern` 修饰符的常见用法是在使用 Interop 服务调入非托管代码时与 `DllImport` 特性一起使用。</span><span class="sxs-lookup"><span data-stu-id="583a9-104">A common use of the `extern` modifier is with the `DllImport` attribute when you are using Interop services to call into unmanaged code.</span></span> <span data-ttu-id="583a9-105">在这种情况下，还必须将方法声明为 `static`，如下面的示例所示：</span><span class="sxs-lookup"><span data-stu-id="583a9-105">In this case, the method must also be declared as `static`, as shown in the following example:</span></span>
 
 ```csharp
 [DllImport("avifil32.dll")]
 private static extern void AVIFileInit();
 ```
 
-<span data-ttu-id="11db8-106">`extern` 关键字还可以定义外部程序集别名，使得可以从单个程序集中引用同一组件的不同版本。</span><span class="sxs-lookup"><span data-stu-id="11db8-106">The `extern` keyword can also define an external assembly alias, which makes it possible to reference different versions of the same component from within a single assembly.</span></span> <span data-ttu-id="11db8-107">有关详细信息，请参阅[外部别名](extern-alias.md)。</span><span class="sxs-lookup"><span data-stu-id="11db8-107">For more information, see [extern alias](extern-alias.md).</span></span>
+<span data-ttu-id="583a9-106">`extern` 关键字还可以定义外部程序集别名，使得可以从单个程序集中引用同一组件的不同版本。</span><span class="sxs-lookup"><span data-stu-id="583a9-106">The `extern` keyword can also define an external assembly alias, which makes it possible to reference different versions of the same component from within a single assembly.</span></span> <span data-ttu-id="583a9-107">有关详细信息，请参阅[外部别名](extern-alias.md)。</span><span class="sxs-lookup"><span data-stu-id="583a9-107">For more information, see [extern alias](extern-alias.md).</span></span>
 
-<span data-ttu-id="11db8-108">将 [abstract](abstract.md) 和 `extern` 修饰符一起使用来修改同一成员是错误的做法。</span><span class="sxs-lookup"><span data-stu-id="11db8-108">It is an error to use the [abstract](abstract.md) and `extern` modifiers together to modify the same member.</span></span> <span data-ttu-id="11db8-109">使用 `extern` 修饰符意味着方法是在 C# 代码的外部实现的，而使用 `abstract` 修饰符意味着类中未提供方法实现。</span><span class="sxs-lookup"><span data-stu-id="11db8-109">Using the `extern` modifier means that the method is implemented outside the C# code, whereas using the `abstract` modifier means that the method implementation is not provided in the class.</span></span>
+<span data-ttu-id="583a9-108">将 [abstract](abstract.md) 和 `extern` 修饰符一起使用来修改同一成员是错误的做法。</span><span class="sxs-lookup"><span data-stu-id="583a9-108">It is an error to use the [abstract](abstract.md) and `extern` modifiers together to modify the same member.</span></span> <span data-ttu-id="583a9-109">使用 `extern` 修饰符意味着方法是在 C# 代码的外部实现的，而使用 `abstract` 修饰符意味着类中未提供方法实现。</span><span class="sxs-lookup"><span data-stu-id="583a9-109">Using the `extern` modifier means that the method is implemented outside the C# code, whereas using the `abstract` modifier means that the method implementation is not provided in the class.</span></span>
 
-<span data-ttu-id="11db8-110">extern 关键字用于 C# 中时会比用于 C++ 中时受到更多的限制。</span><span class="sxs-lookup"><span data-stu-id="11db8-110">The extern keyword has more limited uses in C# than in C++.</span></span> <span data-ttu-id="11db8-111">若要比较 C# 关键字与 C++ 关键字，请参见 C++ 语言参考中的“使用 extern 指定链接”。</span><span class="sxs-lookup"><span data-stu-id="11db8-111">To compare the C# keyword with the C++ keyword, see Using extern to Specify Linkage in the C++ Language Reference.</span></span>
+<span data-ttu-id="583a9-110">extern 关键字用于 C# 中时会比用于 C++ 中时受到更多的限制。</span><span class="sxs-lookup"><span data-stu-id="583a9-110">The extern keyword has more limited uses in C# than in C++.</span></span> <span data-ttu-id="583a9-111">若要比较 C# 关键字与 C++ 关键字，请参见 C++ 语言参考中的“使用 extern 指定链接”。</span><span class="sxs-lookup"><span data-stu-id="583a9-111">To compare the C# keyword with the C++ keyword, see Using extern to Specify Linkage in the C++ Language Reference.</span></span>
 
-## <a name="example-1"></a><span data-ttu-id="11db8-112">示例 1</span><span class="sxs-lookup"><span data-stu-id="11db8-112">Example 1</span></span>
+## <a name="example-1"></a><span data-ttu-id="583a9-112">示例 1</span><span class="sxs-lookup"><span data-stu-id="583a9-112">Example 1</span></span>
 
-<span data-ttu-id="11db8-113">在此示例中，程序接收来自用户的字符串并将该字符串显示在消息框中。</span><span class="sxs-lookup"><span data-stu-id="11db8-113">In this example, the program receives a string from the user and displays it inside a message box.</span></span> <span data-ttu-id="11db8-114">程序使用从 User32.dll 库导入的 `MessageBox` 方法。</span><span class="sxs-lookup"><span data-stu-id="11db8-114">The program uses the `MessageBox` method imported from the User32.dll library.</span></span>
+<span data-ttu-id="583a9-113">在此示例中，程序接收来自用户的字符串并将该字符串显示在消息框中。</span><span class="sxs-lookup"><span data-stu-id="583a9-113">In this example, the program receives a string from the user and displays it inside a message box.</span></span> <span data-ttu-id="583a9-114">程序使用从 User32.dll 库导入的 `MessageBox` 方法。</span><span class="sxs-lookup"><span data-stu-id="583a9-114">The program uses the `MessageBox` method imported from the User32.dll library.</span></span>
 
 [!code-csharp[csrefKeywordsModifiers#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#8)]
 
-## <a name="example-2"></a><span data-ttu-id="11db8-115">示例 2</span><span class="sxs-lookup"><span data-stu-id="11db8-115">Example 2</span></span>
+## <a name="example-2"></a><span data-ttu-id="583a9-115">示例 2</span><span class="sxs-lookup"><span data-stu-id="583a9-115">Example 2</span></span>
 
-<span data-ttu-id="11db8-116">此示例阐释了调入 C 库（本机 DLL）的 C# 程序。</span><span class="sxs-lookup"><span data-stu-id="11db8-116">This example illustrates a C# program that calls into a C library (a native DLL).</span></span>
+<span data-ttu-id="583a9-116">此示例阐释了调入 C 库（本机 DLL）的 C# 程序。</span><span class="sxs-lookup"><span data-stu-id="583a9-116">This example illustrates a C# program that calls into a C library (a native DLL).</span></span>
 
-1. <span data-ttu-id="11db8-117">创建以下 C 文件并将其命名为 `cmdll.c`：</span><span class="sxs-lookup"><span data-stu-id="11db8-117">Create the following C file and name it `cmdll.c`:</span></span>
+1. <span data-ttu-id="583a9-117">创建以下 C 文件并将其命名为 `cmdll.c`：</span><span class="sxs-lookup"><span data-stu-id="583a9-117">Create the following C file and name it `cmdll.c`:</span></span>
 
     ```c
     // cmdll.c
@@ -52,9 +51,9 @@ private static extern void AVIFileInit();
     }
     ```
 
-2. <span data-ttu-id="11db8-118">从 Visual Studio 安装目录打开 Visual Studio x64（或 x32）本机工具命令提示符窗口，并通过在命令提示符处键入“cl -LD cmdll.c”来编译 `cmdll.c` 文件  。</span><span class="sxs-lookup"><span data-stu-id="11db8-118">Open a Visual Studio x64 (or x32) Native Tools Command Prompt window from the Visual Studio installation directory and compile the `cmdll.c` file by typing **cl -LD cmdll.c** at the command prompt.</span></span>
+2. <span data-ttu-id="583a9-118">从 Visual Studio 安装目录打开 Visual Studio x64（或 x32）本机工具命令提示符窗口，并通过在命令提示符处键入“cl -LD cmdll.c”来编译 `cmdll.c` 文件  。</span><span class="sxs-lookup"><span data-stu-id="583a9-118">Open a Visual Studio x64 (or x32) Native Tools Command Prompt window from the Visual Studio installation directory and compile the `cmdll.c` file by typing **cl -LD cmdll.c** at the command prompt.</span></span>
 
-3. <span data-ttu-id="11db8-119">在相同的目录中，创建以下 C# 文件并将其命名为 `cm.cs`：</span><span class="sxs-lookup"><span data-stu-id="11db8-119">In the same directory, create the following C# file and name it `cm.cs`:</span></span>
+3. <span data-ttu-id="583a9-119">在相同的目录中，创建以下 C# 文件并将其命名为 `cm.cs`：</span><span class="sxs-lookup"><span data-stu-id="583a9-119">In the same directory, create the following C# file and name it `cm.cs`:</span></span>
 
     ```csharp
     // cm.cs
@@ -72,26 +71,26 @@ private static extern void AVIFileInit();
     }
     ```
 
-4. <span data-ttu-id="11db8-120">从 Visual Studio 安装目录打开一个 Visual Studio x64（或 x32）本机工具命令提示符窗口，并通过键入以下内容来编译 `cm.cs` 文件：</span><span class="sxs-lookup"><span data-stu-id="11db8-120">Open a Visual Studio x64 (or x32) Native Tools Command Prompt window from the Visual Studio installation directory and compile the `cm.cs` file by typing:</span></span>
+4. <span data-ttu-id="583a9-120">从 Visual Studio 安装目录打开一个 Visual Studio x64（或 x32）本机工具命令提示符窗口，并通过键入以下内容来编译 `cm.cs` 文件：</span><span class="sxs-lookup"><span data-stu-id="583a9-120">Open a Visual Studio x64 (or x32) Native Tools Command Prompt window from the Visual Studio installation directory and compile the `cm.cs` file by typing:</span></span>
 
-    > <span data-ttu-id="11db8-121">“csc cm.cs”（针对 x64 命令提示符）或“csc -platform:x86 cm.cs”（针对 x32 命令提示符）  </span><span class="sxs-lookup"><span data-stu-id="11db8-121">**csc cm.cs** (for the x64 command prompt) —or— **csc -platform:x86 cm.cs** (for the x32 command prompt)</span></span>
+    > <span data-ttu-id="583a9-121">“csc cm.cs”（针对 x64 命令提示符）或“csc -platform:x86 cm.cs”（针对 x32 命令提示符）  </span><span class="sxs-lookup"><span data-stu-id="583a9-121">**csc cm.cs** (for the x64 command prompt) —or— **csc -platform:x86 cm.cs** (for the x32 command prompt)</span></span>
 
-    <span data-ttu-id="11db8-122">这将创建可执行文件 `cm.exe`。</span><span class="sxs-lookup"><span data-stu-id="11db8-122">This will create the executable file `cm.exe`.</span></span>
+    <span data-ttu-id="583a9-122">这将创建可执行文件 `cm.exe`。</span><span class="sxs-lookup"><span data-stu-id="583a9-122">This will create the executable file `cm.exe`.</span></span>
 
-5. <span data-ttu-id="11db8-123">运行 `cm.exe`。</span><span class="sxs-lookup"><span data-stu-id="11db8-123">Run `cm.exe`.</span></span> <span data-ttu-id="11db8-124">`SampleMethod` 方法将值 5 传递到 DLL 文件，这将返回该值与 10 相乘后的结果。</span><span class="sxs-lookup"><span data-stu-id="11db8-124">The `SampleMethod` method passes the value 5 to the DLL file, which returns the value multiplied by 10.</span></span>  <span data-ttu-id="11db8-125">该程序生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="11db8-125">The program produces the following output:</span></span>
+5. <span data-ttu-id="583a9-123">运行 `cm.exe`。</span><span class="sxs-lookup"><span data-stu-id="583a9-123">Run `cm.exe`.</span></span> <span data-ttu-id="583a9-124">`SampleMethod` 方法将值 5 传递到 DLL 文件，这将返回该值与 10 相乘后的结果。</span><span class="sxs-lookup"><span data-stu-id="583a9-124">The `SampleMethod` method passes the value 5 to the DLL file, which returns the value multiplied by 10.</span></span>  <span data-ttu-id="583a9-125">该程序生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="583a9-125">The program produces the following output:</span></span>
 
     ```output
     SampleMethod() returns 50.
     ```
 
-## <a name="c-language-specification"></a><span data-ttu-id="11db8-126">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="11db8-126">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="583a9-126">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="583a9-126">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="11db8-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="11db8-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="583a9-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="583a9-127">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>
-- [<span data-ttu-id="11db8-128">C# 参考</span><span class="sxs-lookup"><span data-stu-id="11db8-128">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="11db8-129">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="11db8-129">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="11db8-130">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="11db8-130">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="11db8-131">修饰符</span><span class="sxs-lookup"><span data-stu-id="11db8-131">Modifiers</span></span>](index.md)
+- [<span data-ttu-id="583a9-128">C# 参考</span><span class="sxs-lookup"><span data-stu-id="583a9-128">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="583a9-129">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="583a9-129">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="583a9-130">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="583a9-130">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="583a9-131">修饰符</span><span class="sxs-lookup"><span data-stu-id="583a9-131">Modifiers</span></span>](index.md)
