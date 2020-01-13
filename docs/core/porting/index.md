@@ -3,14 +3,14 @@ title: 从 .NET Framework 移植到 .NET Core
 description: 了解移植过程以及发现在将 .NET Framework 项目移植到 .NET Core 时可能有用的工具。
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 3dbd4a1f608d71f28fa507da2e11fc41226664c7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b5b010acbccf134afe800aa5bb98a0ae6e9ffa25
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714342"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777362"
 ---
-# <a name="overview-of-the-porting-process-from-net-framework-to-net-core"></a>从 .NET Framework 移植到 .NET Core 的过程概述
+# <a name="overview-of-porting-from-net-framework-to-net-core"></a>从 .NET Framework 移植到 .NET Core 的概述
 
 你可能有些代码当前正在 .NET Framework 上运行，但你想将这些代码移植到 .NET Core。 本文提供以下内容：
 
@@ -19,7 +19,7 @@ ms.locfileid: "75714342"
 
 ## <a name="overview-of-the-porting-process"></a>移植过程概述
 
-我们建议在将项目移植到 .NET Core 时使用以下过程：
+建议在将项目移植到 .NET Core 时使用以下过程：
 
 1. 将希望移植的所有项目重定向到目标 .NET Framework 4.7.2 或更高版本。
 
@@ -43,9 +43,11 @@ ms.locfileid: "75714342"
 
 6. 移植测试代码。
 
-   由于移植到 .NET Core 对代码库来说是很大的更改，因此强烈建议移植测试代码，以便在移植代码时可以进行测试。 MSTest、xUnit 和 NUnit 都适用于 .NET Core。
+   由于移植到 .NET Core 对代码库来说是很大的更改，因此强烈建议移植测试项目，以便在移植代码后运行测试。 MSTest、xUnit 和 NUnit 都适用于 .NET Core。
 
-此外，在某个操作中，可以尝试使用 [dotnet try-convert](https://github.com/dotnet/try-convert) 工具将较小的解决方案或单个项目移植到 .NET Core 项目文件格式。 不能保证 `dotnet try-convert` 适用于所有项目，而且它可能会导致所依赖的行为发生细微变化。 应将它用作一个起点，以自动化可自动执行的基本操作。 作为用于迁移项目的一种解决方案，它并不是万无一失的。
+此外，可以尝试使用 [dotnet try-convert](https://github.com/dotnet/try-convert) 工具通过一次操作将较小的解决方案或单个项目移植到 .NET Core 项目文件格式。 不能保证 `dotnet try-convert` 适用于所有项目，它可能导致所依赖的行为发生细微变化。 使用它作为起点  ，以自动化可自动执行的基本操作。 作为用于迁移项目的一种解决方案，它并不是万无一失的。
 
->[!div class="step-by-step"]
->[下一页](net-framework-tech-unavailable.md)
+## <a name="next-steps"></a>后续步骤
+
+>[!div class="nextstepaction"]
+>[.NET Core 中不可用的技术](net-framework-tech-unavailable.md)
