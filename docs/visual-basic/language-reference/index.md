@@ -10,12 +10,12 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: 7e1838fe6c9d563358757700d74cbf27228812a9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 90cd1984ceb3bdb9de62450e86184f493e7417f0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349959"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636713"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic 语言参考
 
@@ -66,7 +66,7 @@ ms.locfileid: "74349959"
  记录 Visual Basic 中可用的属性。  
   
  [查询](../../visual-basic/language-reference/queries/index.md)  
- 提供了有关如何在代码中使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 表达式的参考信息。  
+ 提供有关在代码中使用语言集成查询（LINQ）表达式的参考信息。  
   
  [语句](../../visual-basic/language-reference/statements/index.md)  
  记录 Visual Basic 中提供的声明和可执行语句。  
@@ -85,8 +85,5 @@ ms.locfileid: "74349959"
   
 ## <a name="related-sections"></a>相关章节  
 
- [Visual Basic](../../visual-basic/index.md)  
- 提供有关 Visual Basic 语言的所有区域的综合帮助。  
-  
  [Visual Basic 命令行编译器](../../visual-basic/reference/command-line-compiler/index.md)  
  描述如何使用命令行编译器作为从 Visual Studio 集成开发环境（IDE）中编译程序的替代方法。
