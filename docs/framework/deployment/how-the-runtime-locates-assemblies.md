@@ -9,14 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 01cef9646ca9c4f49ab8376364648f66b9651e4a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c462a6df2d5221907a6b574c33bb8fa1c52abac5
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052132"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741335"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>运行时如何定位程序集
 
@@ -35,7 +33,7 @@ ms.locfileid: "71052132"
 
 还可通过仅向调用方法提供程序集的部分信息（例如，仅指定程序集名称）动态引用程序集。 在这种情况下，仅搜索程序集的应用程序目录，不进行其他检查。 通过使用任一方式加载程序集（ <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 或 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>），可执行部分引用。
 
-最后，可使用 <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> 等方法执行动态引用并仅提供部分信息；然后在应用程序配置文件中用 [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) 元素限定该引用。 借助此元素，你可以提供应用程序配置文件（而不是代码）中的完全引用信息（名称、版本、区域性和公钥标记（若适用））。 如果想要完全限定应用程序目录之外的程序集引用，或者如果想要引用全局程序集缓存中的程序集且轻松指定配置文件（而不是代码）中的完全引用，可使用此技术。
+最后，可使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 等方法执行动态引用并仅提供部分信息；然后在应用程序配置文件中用 [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) 元素限定该引用。 借助此元素，你可以提供应用程序配置文件（而不是代码）中的完全引用信息（名称、版本、区域性和公钥标记（若适用））。 如果想要完全限定应用程序目录之外的程序集引用，或者如果想要引用全局程序集缓存中的程序集且轻松指定配置文件（而不是代码）中的完全引用，可使用此技术。
 
 > [!NOTE]
 > 多个应用程序间共享的程序集不应使用此类型的部分引用。 因为配置设置是基于每个应用程序（而非每个程序集）应用的，所以使用此类部分引用的共享程序集需要使用共享程序集的每个应用程序的配置文件中都具有限定信息。

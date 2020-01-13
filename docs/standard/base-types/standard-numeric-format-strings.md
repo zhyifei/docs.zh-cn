@@ -16,12 +16,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: c654ff2856891331f5680c673ac52f64ee2be141
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04ac99c6b5100c3749eefc219e51b4d0084bef06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121759"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346645"
 ---
 # <a name="standard-numeric-format-strings"></a>标准数字格式字符串
 
@@ -51,7 +51,7 @@ ms.locfileid: "73121759"
 
 <a name="table"></a>下表介绍标准数字格式说明符并显示每个格式说明符产生的示例输出。 有关使用标准数字格式字符串的其他信息，请参见[注释](#NotesStandardFormatting)一节；有关使用方法的完整演示，请参见[示例](#example)一节。
 
-|格式说明符|name|说明|示例|
+|格式说明符|“属性”|描述|示例|
 |----------------------|----------|-----------------|--------------|
 |“C”或“c”|货币|结果:货币值。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：十进制小数位数。<br /><br /> 默认值精度说明符：由 <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> 定义。<br /><br /> 更多信息：[货币（“C”）格式说明符](#CFormatString)。|123.456 ("C", en-US) -> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> (\\$123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
 |“D”或“d”|十进制|结果:整型数字，负号可选。<br /><br /> 受以下类型支持：仅限整型类型。<br /><br /> 精度说明符：数字位数下限。<br /><br /> 默认值精度说明符：所需数字位数下限。<br /><br /> 更多信息：[十进制（“D”）格式说明符](#DFormatString)。|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
@@ -104,7 +104,7 @@ ms.locfileid: "73121759"
 
 结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制返回字符串的格式。
 
-|NumberFormatInfo 属性|说明|
+|NumberFormatInfo 属性|描述|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A>|定义正值的货币符号的位置。|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>|定义负值的货币符号的位置，并指定负号由括号表示还是由 <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> 属性表示。|
@@ -133,7 +133,7 @@ ms.locfileid: "73121759"
 
 结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。 如下表所示，一个属性会影响结果字符串的格式。
 
-|NumberFormatInfo 属性|说明|
+|NumberFormatInfo 属性|描述|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定义指示数字为负值的字符串。|
 
@@ -157,7 +157,7 @@ ms.locfileid: "73121759"
 
 结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制返回字符串的格式。
 
-|NumberFormatInfo 属性|说明|
+|NumberFormatInfo 属性|描述|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定义表示数字对于系数和指数都为负值的字符串。|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定义在系数中将整数位与小数位分隔的字符串。|
@@ -181,7 +181,7 @@ ms.locfileid: "73121759"
 
 结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.NumberFormatInfo> 对象的属性，这些属性控制结果字符串的格式。
 
-|NumberFormatInfo 属性|说明|
+|NumberFormatInfo 属性|描述|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定义指示数字为负值的字符串。|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定义将整数位与小数位分隔的字符串。|
@@ -228,7 +228,7 @@ ms.locfileid: "73121759"
 
 结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制结果字符串的格式。
 
-|NumberFormatInfo 属性|说明|
+|NumberFormatInfo 属性|描述|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定义指示数字为负值的字符串。|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定义将整数位与小数位分隔的字符串。|
@@ -250,7 +250,7 @@ ms.locfileid: "73121759"
 
 结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制结果字符串的格式。
 
-|NumberFormatInfo 属性|说明|
+|NumberFormatInfo 属性|描述|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定义指示数字为负值的字符串。|
 |<xref:System.Globalization.NumberFormatInfo.NumberNegativePattern%2A>|定义负值的格式，并指定负号由括号表示还是由 <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> 属性表示。|
@@ -275,7 +275,7 @@ ms.locfileid: "73121759"
 
 下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制返回字符串的格式。
 
-|NumberFormatInfo 属性|说明|
+|NumberFormatInfo 属性|描述|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.PercentPositivePattern%2A>|定义正值的百分比符号的位置。|
 |<xref:System.Globalization.NumberFormatInfo.PercentNegativePattern%2A>|定义负值的百分比符号和负号的位置。|
@@ -307,7 +307,7 @@ ms.locfileid: "73121759"
 尽管可以包括精度说明符，但会忽略它。 使用此说明符时，往返过程优先于精度。
 结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制结果字符串的格式。
 
-|NumberFormatInfo 属性|说明|
+|NumberFormatInfo 属性|描述|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定义指示数字为负值的字符串。|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定义将整数位与小数位分隔的字符串。|

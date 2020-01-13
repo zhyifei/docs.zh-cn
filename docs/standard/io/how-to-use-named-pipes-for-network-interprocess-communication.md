@@ -15,14 +15,12 @@ helpviewer_keywords:
 - impersonation [.NET Framework], named pipes
 - full duplex communication [.NET Framework], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ddd862480a5977a4bada17945e10a25753b44de4
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 71f3a8d38b46993762b2673ea5fe735d8d54d351
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402486"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706629"
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>如何：使用命名管道进行网络进程间通信
 命名管道在管道服务器和一个或多个管道客户端之间提供进程间通信。 它们比匿名管道（用于在本地计算机上提供进程间的通信）提供更多的功能。 命名管道支持跨网络和多个服务器实例的全双工通信、基于消息的通信以及客户端模拟，这样连接进程便可在远程服务器上使用自己的权限集。  

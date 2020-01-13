@@ -12,12 +12,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-ms.openlocfilehash: 700eca16e7755823456c3e3ace17eb5e6b3526ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 18a0b7d657290835a34c705513d0d7a4ccbfc61c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122513"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738677"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>创建和使用具有强名称的程序集
 
@@ -29,7 +29,7 @@ ms.locfileid: "73122513"
 具有强名称的程序集只能使用其他具有强名称的程序集的类型。 否则，将会危害强名称程序集的完整性。
 
 > [!NOTE]
-> 虽然 .NET Core 支持强名称程序集，而且 .NET Core 库中的所有程序集均已签名，但大多数第三方程序集不需要强名称。 有关详细信息，请参阅 GitHub 上的[强名称签名](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md)。
+> 虽然 .NET Core 支持强名称程序集，而且 .NET Core 库中的所有程序集均已签名，但大多数第三方程序集不需要强名称。 有关详细信息，请参阅 GitHub 上的[强名称签名](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md)。
 
 ## <a name="strong-name-scenario"></a>强名称方案
 
@@ -68,7 +68,7 @@ ms.locfileid: "73122513"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[如何：创建公钥/私钥对](create-public-private-key-pair.md)|描述如何创建加密密钥对以对程序集进行签名。|
 |[如何：使用强名称为程序集签名](sign-strong-name.md)|介绍如何创建具有强名称的程序集。|

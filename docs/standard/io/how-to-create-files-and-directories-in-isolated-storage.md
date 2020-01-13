@@ -14,14 +14,12 @@ helpviewer_keywords:
 - stores, creating files and directories
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 92f4b686a5a2bdc74ff3f0f68de4c6b2048da5a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83e8c800dc74d9689f1bfdb506a6b454e87b36ca
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709008"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75707865"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>如何：在独立存储中创建文件和目录
 获得独立存储区之后，您可以创建用于存储数据的目录和文件。 在存储中，文件名和目录名称是相对于虚拟文件系统的根目录进行指定。  

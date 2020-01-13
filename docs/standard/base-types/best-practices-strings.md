@@ -18,13 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.custom: seodec18
-ms.openlocfilehash: cd6b24a6dd893f0c522573a0e19914164c15141f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973949"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711475"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>有关使用 .NET 中字符串的最佳做法
 
@@ -57,7 +56,7 @@ ms.locfileid: "73973949"
 
 重载 .NET 中大部分字符串操作方法。 通常，一个或多个重载会接受默认设置，然而其他重载则不接受默认设置，而是定义比较或操作字符串的精确方式。 大多数不依赖于默认设置的方法都包括 <xref:System.StringComparison>类型的参数，该参数是按区域性和大小写为字符串比较显式指定规则的枚举。 下表描述 <xref:System.StringComparison> 枚举成员。
 
-|StringComparison 成员|说明|
+|StringComparison 成员|描述|
 |-----------------------------|-----------------|
 |<xref:System.StringComparison.CurrentCulture>|使用当前区域性执行区分大小写的比较。|
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|使用当前区域性执行不区分大小写的比较。|
@@ -112,7 +111,7 @@ ms.locfileid: "73973949"
 - 不包括<xref:System.String.Compare%2A?displayProperty=nameWithType> 参数的 <xref:System.StringComparison> 重载。
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 重载。
 - 默认 <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> 方法和具有 <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> null `null`<xref:System.Globalization.CultureInfo> 重载。
-- 默认 <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> 方法和具有 <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> null `null`<xref:System.Globalization.CultureInfo> 重载。
+- 默认 <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> 方法和需要使用 `null`<xref:System.Globalization.CultureInfo> 参数的 <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> 方法。
 - 接受<xref:System.String.IndexOf%2A?displayProperty=nameWithType> 作为搜索参数且不包含 <xref:System.String> 参数的 <xref:System.StringComparison> 重载。
 - 接受<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> 作为搜索参数且不包含 <xref:System.String> 参数的 <xref:System.StringComparison> 重载。
 
@@ -204,8 +203,8 @@ InvariantCulture: a + ̊ = å
 |----------|--------------|-----------------------------------------------------|
 |区分大小写的内部标识符。<br /><br /> 区分大小写的标准标识符（例如 XML 和 HTTP）。<br /><br /> 区分大小写的安全相关设置。|字节完全匹配的非语言标识符。|<xref:System.StringComparison.Ordinal>|
 |不区分大小写的内部标识符。<br /><br /> 不区分大小写的标准标识符（例如 XML 和 HTTP）。<br /><br /> 文件路径。<br /><br /> 注册表项和值。<br /><br /> 环境变量。<br /><br /> 资源标识符（例如，句柄名称）。<br /><br /> 不区分大小写的安全相关设置。|无关大小写的非语言标识符；尤其是存储在大多数 Windows 系统服务中的数据。|<xref:System.StringComparison.OrdinalIgnoreCase>|
-|某些保留的、与语言相关的数据。<br /><br /> 需要固定排序顺序的语言数据的显示。|仍与语言相关的区域性不明确数据。|<xref:System.StringComparison.InvariantCulture><br /><br /> -或-<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
-|向用户显示的数据。<br /><br /> 大多数用户输入。|需要本地语言自定义的数据。|<xref:System.StringComparison.CurrentCulture><br /><br /> -或-<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
+|某些保留的、与语言相关的数据。<br /><br /> 需要固定排序顺序的语言数据的显示。|仍与语言相关的区域性不明确数据。|<xref:System.StringComparison.InvariantCulture><br /><br /> \- 或 -<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
+|向用户显示的数据。<br /><br /> 大多数用户输入。|需要本地语言自定义的数据。|<xref:System.StringComparison.CurrentCulture><br /><br /> \- 或 -<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
 
 ## <a name="common-string-comparison-methods-in-net"></a>.NET 中的常见字符串比较方法
 

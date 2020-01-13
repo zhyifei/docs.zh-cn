@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: e392f6b2e57bebf1ab916bc6142aebbc8f341db2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0abcc73e31eab89c422513acf778bc8bd092e788
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615319"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345543"
 ---
 # <a name="delegates-and-lambdas"></a>委托和 lambda
 
@@ -106,7 +106,7 @@ public class Program
 }
 ```
 
-如你所见，该委托的正文只是一组表达式，其他所有委托也是如此。 但它并非单独定义，而是在调用 <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> 方法时临时引入。
+如你所见，该委托的正文只是一组表达式，其他所有委托也是如此。 但它并非单独定义，而是在调用 <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> 方法时临时引入  。
 
 但是，即使使用此方法，仍有许多可以丢弃的代码。 此时就需要使用 **lambda 表达式**。
 
@@ -155,7 +155,7 @@ public MainWindow()
 }
 ```
 
-此上下文中的 `+=` 运算符用于订阅[事件](../../docs/csharp/language-reference/keywords/event.md)。 有关详细信息，请参阅[如何：订阅和取消订阅事件](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
+此上下文中的 `+=` 运算符用于订阅[事件](../../docs/csharp/language-reference/keywords/event.md)。 有关详细信息，请参阅[如何订阅和取消订阅事件](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 
 ## <a name="further-reading-and-resources"></a>其他阅读材料和资源
 

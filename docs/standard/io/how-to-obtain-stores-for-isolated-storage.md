@@ -13,14 +13,12 @@ helpviewer_keywords:
 - data stores, obtaining
 - data storage using isolated storage, obtaining stores
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d6fbc78c379951e05869a433875d057c49d44594
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 7104ba665f60c2d55217a2d8628c85f6e469ad6f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969262"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706926"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>如何：获取独立存储的存储区
 独立存储区公开数据隔离舱中的虚拟文件系统。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 类提供许多与独立存储区交互的方法。 为了创建和检索存储区，<xref:System.IO.IsolatedStorage.IsolatedStorageFile> 提供了三种静态方法：  

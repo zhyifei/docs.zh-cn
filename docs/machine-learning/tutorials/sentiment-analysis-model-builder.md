@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e919341130c6778207f324dd9eb3b3f54c8a9c68
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 670c4dd1ac9da496f59d12d2e880cf269d64f309
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74551849"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344967"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>教程：使用 ML.NET 模型生成器在 Web 应用程序中分析网站评论的情绪
 
@@ -124,7 +124,7 @@ wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户
 
 ### <a name="configure-the-predictionengine-pool"></a>配置 PredictionEngine 池
 
-若要进行单一预测，必须创建 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是线程安全型。 此外，必须在应用程序中的每一处所需位置创建它的实例。 随着应用程序的增长，此过程可能会变得难以管理。 为了提高性能和线程安全，请使用依赖项注入和 `PredictionEnginePool` 服务的组合，这将创建一个在整个应用程序中使用的 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 对象的 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)。
+若要进行单一预测，必须创建 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是线程安全型。 此外，必须在应用程序中的每一处所需位置创建它的实例。 随着应用程序的增长，此过程可能会变得难以管理。 为了提高性能和线程安全，请结合使用依赖项注入和 `PredictionEnginePool` 服务，这将创建一个在整个应用程序中使用的 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 对象的 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)。
 
 1. 安装 Microsoft.Extensions.ML NuGet 包  ：
 
@@ -304,4 +304,4 @@ wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户
 
 - [模型生成器应用场景](../automate-training-with-model-builder.md#scenarios)
 - [二元分类](../resources/glossary.md#binary-classification)
-- [二元分类模型指标](../resources/metrics.md#metrics-for-binary-classification)
+- [二元分类模型指标](../resources/metrics.md#evaluation-metrics-for-binary-classification)

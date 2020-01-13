@@ -18,14 +18,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 33583f430e5af2f3fa7027233febd9ec61f85a3f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ed784bafda2aed829f2e97d7e7e8b2716c48c7ba
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802448"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706577"
 ---
 # <a name="isolated-storage"></a>独立存储
 <a name="top"></a> 对于桌面应用，独立存储是一种数据存储机制，它在代码与保存的数据之间定义了标准化的关联方式，从而提供隔离性和安全性。 同时，标准化也提供了其他好处。 管理员可以使用旨在操作独立存储的工具来配置文件存储空间、设置安全策略及删除未使用的数据。 通过独立存储，代码不再需要使用唯一的路径来指定文件系统中的安全位置，同时可以保护数据免遭只具有独立存储访问权限的其他应用程序的损坏。 不再需要指示应用程序的存储区域位置的硬编码信息。
@@ -164,7 +162,7 @@ ms.locfileid: "74802448"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[隔离的类型](../../../docs/standard/io/types-of-isolation.md)|描述不同类型的隔离。|
 |[如何：获取独立存储的存储区](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|提供使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 类获取按用户和程序集隔离的存储区的示例。|

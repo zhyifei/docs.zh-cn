@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c21a1303cd67f5f5de42241f4d5ada929e68bf2c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1004a2f9a0594d9150d147dec1e16b56205e0d13
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589898"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711397"
 ---
 # <a name="commonly-used-collection-types"></a>常用的集合类型
 集合类型是数据集合（如哈希表、队列、堆栈、包、字典和列表）的常见变体。  
@@ -34,7 +32,7 @@ ms.locfileid: "65589898"
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|说明|  
+|Title|描述|  
 |-----------|-----------------|  
 |[集合和数据结构](../../../docs/standard/collections/index.md)|讨论在 .NET Framework 中提供的各种集合类型，包括堆栈、队列、列表、数组和字典。|  
 |[哈希表和字典集合类型](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|描述泛型和非泛型的基于哈希的字典类型的功能。|  

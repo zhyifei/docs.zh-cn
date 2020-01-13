@@ -1,5 +1,5 @@
 ---
-title: 设置 .NET 中类型的格式
+title: .NET 中的格式设置类型
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: 20aa7ecd354ef1a8982ae75eda87275c80cdaaf6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: a1f4d9107427140bcfa6b49bc8a850432fb204f7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802461"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348252"
 ---
 # <a name="format-types-in-net"></a>.NET 中的格式类型
 
@@ -313,7 +313,7 @@ ms.locfileid: "74802461"
 
 ## <a name="composite-formatting"></a>复合格式设置
 
-一些方法（如 <xref:System.String.Format%2A?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>）支持复合格式设置。 复合格式字符串是一种模板，该模板返回合并了零个、一个或多个对象的字符串表示形式的单一字符串。 每个对象均由复合格式字符串中的索引格式项表示。 格式项的索引对应于格式项在方法的参数列表中所表示的对象位置。 索引是从零开始的。 例如，在以下对 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法的调用中，第一个格式项 `{0:D}` 被 `thatDate` 的字符串表示形式；第二个格式项 `{1}` 被 `item1` 的字符串表示形式替换；第三个格式项 `{2:C2}` 被 `item1.Value` 的字符串表示形式替换。
+一些方法（如 <xref:System.String.Format%2A?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>）支持复合格式设置。 复合格式字符串是一种模板，该模板返回合并了零个、一个或多个对象的字符串表示形式的单一字符串。 每个对象均由复合格式字符串中的索引格式项表示。 格式项的索引对应于格式项在方法的参数列表中所表示的对象位置。 索引是从零开始的。 例如，在以下对 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法的调用中，第一个格式项 `{0:D}`被 `thatDate`的字符串表示形式；第二个格式项 `{1}`被 `item1`的字符串表示形式替换；第三个格式项 `{2:C2}`被 `item1.Value`的字符串表示形式替换。
 
 [!code-csharp[Conceptual.Formatting.Overview#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/composite1.cs#14)]
 [!code-vb[Conceptual.Formatting.Overview#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/composite1.vb#14)]

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - initialization errors [.NET Framework]
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cadcb5c2e85f046b5c1c561c17663b7c94829f4f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 73a0ffd4a39b144a61bf559ac424414728fb9a3f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802241"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716456"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 初始化错误：管理用户体验
 
@@ -71,12 +69,12 @@ Windows 提供的 [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlin
 
 CLR 包括一组适用于各种方案的主机，如果在加载所需运行时版本时遇到问题，这些主机均将显示错误消息。 下表提供了主机及其错误消息策略的列表。
 
-|CLR 主机|说明|错误消息策略|是否可以禁用错误消息？|
+|CLR 主机|描述|错误消息策略|是否可以禁用错误消息？|
 |--------------|-----------------|--------------------------|------------------------------------|
-|托管 EXE 主机|启动托管 EXE。|缺少 .NET Framework 版本时显示|No|
+|托管 EXE 主机|启动托管 EXE。|缺少 .NET Framework 版本时显示|否|
 |托管 COM 主机|将托管 COM 组件加载到进程。|缺少 .NET Framework 版本时显示|是，通过设置 SEM_FAILCRITICALERRORS 标志|
-|ClickOnce 主机|启动 ClickOnce 应用程序。|缺少 .NET Framework 版本时显示，从 .NET Framework 4.5 开始|No|
-|XBAP 主机|启动 WPF XBAP 应用程序。|缺少 .NET Framework 版本时显示，从 .NET Framework 4.5 开始|No|
+|ClickOnce 主机|启动 ClickOnce 应用程序。|缺少 .NET Framework 版本时显示，从 .NET Framework 4.5 开始|否|
+|XBAP 主机|启动 WPF XBAP 应用程序。|缺少 .NET Framework 版本时显示，从 .NET Framework 4.5 开始|否|
 
 ## <a name="windows-8-behavior-and-ui"></a>Windows 8 行为和 UI
 

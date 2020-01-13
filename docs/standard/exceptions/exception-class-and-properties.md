@@ -6,14 +6,12 @@ helpviewer_keywords:
 - exceptions, Exception class
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e17fa07fe2dd19cdcd03bc923940abfef886219c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: df05150a5bdd5d24766be252f5cec9a436720d8c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283127"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708940"
 ---
 # <a name="exception-class-and-properties"></a>异常类和属性
 
@@ -26,7 +24,7 @@ ms.locfileid: "74283127"
 
 <xref:System.Exception> 类具有以下属性，有助于更轻松地理解异常。
 
-| 属性名 | 说明 |
+| 属性名 | 描述 |
 | ------------- | ----------- |
 | <xref:System.Exception.Data> | <xref:System.Collections.IDictionary> 包含键/值对中的任意数据。 |
 | <xref:System.Exception.HelpLink> | 可容纳指向帮助文件的 URL（或 URN），帮助文件中提供了大量信息说明了异常的原因。 |

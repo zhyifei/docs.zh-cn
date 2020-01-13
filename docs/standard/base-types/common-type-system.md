@@ -16,13 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.custom: seodec18
-ms.openlocfilehash: 5590bb07c3927ba50000d7f9d99f11e30373343d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5223c9b2031b1e25ec2f84326c811da1a78ddc15
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105710"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711410"
 ---
 # <a name="common-type-system"></a>常规类型系统
 通用类型系统定义了如何在公共语言运行时中声明、使用和管理类型，同时也是运行时跨语言集成支持的一个重要组成部分。 常规类型系统执行以下功能：  
@@ -71,7 +70,7 @@ ms.locfileid: "73105710"
   
  下表介绍了类可以具有的一些特征。 支持运行时的每种语言都提供了一种方法，来指示类或类成员具有其中的一种或多种特征。 但是，针对 .NET 的各个编程语言不能使所有这些特征都可用。  
   
-|特征|说明|  
+|特征|描述|  
 |--------------------|-----------------|  
 |sealed|指定不能从此类型派生出另一个类。|  
 |实现|指出该类通过提供接口成员的实现，使用一个或多个接口。|  
@@ -188,7 +187,7 @@ ms.locfileid: "73105710"
 ### <a name="type-accessibility"></a>类型可访问性  
  所有类型都有一个修饰符，控制从其他类型对它们的可访问性。 下表说明了运行时所支持的类型可访问性。  
   
-|可访问性|说明|  
+|可访问性|描述|  
 |-------------------|-----------------|  
 |public|所有程序集都可以访问此类型。|  
 |程序集 (assembly)|只能在其程序集内访问此类型。|  
@@ -289,7 +288,7 @@ ms.locfileid: "73105710"
 ## <a name="characteristics-of-type-members"></a>类型成员的特征  
  通用类型系统允许类型成员具有多种特征，但并不要求语言能支持所有这些特征。 下表介绍了这些成员特征。  
   
-|特征|可应用到|说明|  
+|特征|可应用到|描述|  
 |--------------------|------------------|-----------------|  
 |abstract|方法、属性和事件|类型不提供方法的实现。 继承或实现抽象方法的类型必须提供方法的实现。 只有当派生的类型本身是抽象类型的时候，情况例外。 所有的抽象方法都是虚的。|  
 |private、family、assembly、family 和 assembly、family 或 assembly，或者 public|全部|定义成员的可访问性：<br /><br /> private<br /> 只能在与成员相同的类型或在嵌套类型中访问。<br /><br /> family<br /> 在与成员相同的类型中和从它继承的派生类型访问。<br /><br /> 程序集<br /> 只能在定义该类型的程序集中访问。<br /><br /> family 和 assembly<br /> 只能从同时具备族和程序集访问权的类型进行访问。<br /><br /> family 或 assembly<br /> 只能从具备族和程序集访问权的类型进行访问。<br /><br /> public<br /> 可从任何类型访问。|  

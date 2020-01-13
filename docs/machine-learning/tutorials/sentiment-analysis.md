@@ -3,13 +3,13 @@ title: 教程：分析网站评论 - 二元分类
 description: 本教程演示如何创建 .NET Core 控制台应用程序，该应用程序对网站评论情绪进行分类并采取适当的措施。 二元情绪分类器在 Visual Studio 中使用 C#。
 ms.date: 09/30/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18
-ms.openlocfilehash: 1b5a3f6c7d70c95916b99d386924347642e6d7e3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.custom: mvc
+ms.openlocfilehash: 4f54d867875efc3aa966f683a39b18d09952d8e0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974779"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711605"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>教程：在 ML.NET 中使用二元分类分析网站评论的情绪
 
@@ -28,7 +28,7 @@ ms.locfileid: "73974779"
 
 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 存储库中找到本教程的源代码。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
@@ -376,7 +376,7 @@ Press any key to continue . . .
 
 祝贺你！ 现在，你已成功生成用于分类和预测消息情绪的机器学习模型。
 
-生成成功的模型是一个迭代过程。 由于本教程使用小型数据集来提供快速模型训练，因此该模型的初始质量较低。 如果对模型质量不满意，可以通过尝试提供更大的训练数据集，或通过为每种算法选择具有不同[超参数](../resources/glossary.md##hyperparameter)的不同训练算法来改进它。
+生成成功的模型是一个迭代过程。 由于本教程使用小型数据集来提供快速模型训练，因此该模型的初始质量较低。 如果对模型质量不满意，可以通过尝试提供更大的训练数据集，或通过为每种算法选择具有不同[超参数](../resources/glossary.md#hyperparameter)的不同训练算法来改进它。
 
 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 存储库中找到本教程的源代码。
 

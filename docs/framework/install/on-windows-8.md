@@ -2,15 +2,13 @@
 title: 在 Windows 8 上安装 .NET Framework
 ms.custom: updateeachrelease
 description: 了解如何在 Windows 8 上安装 .NET Framework
-author: rlander
-ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: d0ee776fce94988478c8432e265c834ff2082ef0
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0d9afb30088256b6c5c1fd8c0b2c99e3a9760b89
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853887"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716725"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>在 Windows 8 和 Windows Server 2012 上安装 .NET Framework
 

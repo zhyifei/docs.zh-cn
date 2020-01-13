@@ -2,12 +2,12 @@
 title: 实现值对象
 description: 适用于容器化的 .NET 应用程序的 .NET 微服务体系结构 | 深入了解有关使用新实体框架功能实现值对象的详细信息和选项。
 ms.date: 10/08/2018
-ms.openlocfilehash: 2608517c4006f5e8da1d31b2c337d8ddd3ddd542
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 70c92fe86fda20ed4e909b945b843e8e71092f09
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739863"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899773"
 ---
 # <a name="implement-value-objects"></a>实现值对象
 
@@ -320,7 +320,7 @@ public class Address
   [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
 - **复杂类型和/或值对象**。 EF Core GitHub 存储库中的讨论（“问题”选项卡）\
-  <https://github.com/aspnet/EntityFramework/issues/246>
+  <https://github.com/dotnet/efcore/issues/246>
 
 - **ValueObject.cs.** eShopOnContainers 中的基值对象类。 \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs>

@@ -11,14 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee8cc1b677ad6f6c2718c155edbba632df38dbd3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 909b03588d2a41f667bfa117a5cecb420b125088
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974700"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708392"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的协变和逆变
 协变和逆变都是术语，前者指能够使用比原始指定的派生类型的派生程度更大（更具体的）的类型，后者指能够使用比原始指定的派生类型的派生程度更小（不太具体的）的类型。 泛型类型参数支持协变和逆变，可在分配和使用泛型类型方面提供更大的灵活性。 在引用类型系统时，协变、逆变和不变性具有如下定义。 这些示例假定一个名为 `Base` 的基类和一个名为 `Derived`的派生类。  
@@ -33,7 +31,7 @@ ms.locfileid: "73974700"
   
      使你能够使用比原始指定的类型更泛型（派生程度更小）的类型。  
   
-     你可以向 `Action<Base>` 类型的变量分配`Action(Of Base)` （在 Visual Basic 中为 `Action<Derived>`）的实例。  
+     可以向 `Action<Derived>` 类型的变量分配 `Action<Base>`（在 Visual Basic 中为 `Action(Of Base)`）的实例。  
   
 - `Invariance`  
   

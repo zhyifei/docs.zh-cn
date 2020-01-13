@@ -11,14 +11,12 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: df7ce0795daabdf34f46e20460bef23e7c486467
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2cfb2d9874b34eef78fe462e0270fd70307a9f61
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043893"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715711"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe（Windows 资源本地化编辑器）
 
@@ -35,11 +33,11 @@ winres /?
 
 ## <a name="arguments"></a>自变量
 
-|参数|说明|
+|参数|描述|
 |--------------|-----------------|
 |`resourceFile`|要本地化的资源文件。 此文件必须是由 Visual Studio 设计器生成的 Windows 窗体 .resx 或 .resources 文件。 Winres.exe 无法打开一般的 .resx 或 .resources 文件。|
 
-|选项|说明|
+|选项|描述|
 |------------|-----------------|
 |**/?**|显示该工具的命令语法和选项。|
 
@@ -110,7 +108,7 @@ Winres.exe 具有下列特性和功能：
 
 2. 若要打开要本地化的窗体的默认资源，请单击“文件”  菜单中的“打开”  命令，然后导航到该文件打开它。
 
-     -或-
+     \- 或 -
 
      指定启动 Winres.exe 时在命令行提示符处要打开的文件。
 

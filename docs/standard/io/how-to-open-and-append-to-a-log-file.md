@@ -11,17 +11,15 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET Framework], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 921b13e057929d7d6b283b26014a4c1f195f39c9
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: b0e399ba3c0cfa0ad3b92afbc7e07af7659e8ae6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674836"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706707"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>如何：打开并追加到日志文件
-<xref:System.IO.StreamWriter> 和 <xref:System.IO.StreamReader> 对流执行字符写入和读取操作。 下面的代码示例打开 log.txt 文件以供输入，或创建该文件（如果尚无文件的话），并将日志信息追加到文件末尾。 然后，示例将文件内容写入标准输出以供显示。 
+<xref:System.IO.StreamWriter> 和 <xref:System.IO.StreamReader> 对流执行字符写入和读取操作。 下面的代码示例打开 log.txt 文件以供输入，或创建该文件（如果尚无文件的话），并将日志信息追加到文件末尾  。 然后，示例将文件内容写入标准输出以供显示。 
 
 作为此示例的替换方法，可以将信息存储为一个字符串或字符串数组，并使用 <xref:System.IO.File.WriteAllText%2A?displayProperty=nameWithType> 或 <xref:System.IO.File.WriteAllLines%2A?displayProperty=nameWithType> 方法实现相同的功能。  
   

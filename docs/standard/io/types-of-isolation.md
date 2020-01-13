@@ -18,14 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 323b3fedb570ff97012b148aaeda2311b01960b5
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: aa8a62ee0c653a1905283696b97f55a3e6ffff85
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74205019"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706538"
 ---
 # <a name="types-of-isolation"></a>隔离的类型
 独立存储始终仅限创建它的用户访问。 为了实现这种隔离，公共语言运行时使用操作系统识别的相同用户标识，即与存储打开时的代码运行进程相关联的标识。 虽然此标识是已验证用户标识，但模拟可能会导致当前用户的标识发生动态变化。  

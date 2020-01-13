@@ -17,14 +17,12 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting files and directories
 - deleting directories within isolated stage file
 ms.assetid: 8fcc0dea-435b-4d40-ba4d-ba056265c202
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d05b7fa3010ab089d1a97e9a0516096326fd4bb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec4de3e3a139cfcf66f1f6252c03c467f4ccfbc5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538019"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75707852"
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>如何：在独立存储中删除文件和目录
 可以删除独立存储文件中的目录和文件。 在存储区中，文件名和目录名依赖于操作系统，并指定为虚拟文件系统根目录的相对路径。 在 Windows 操作系统中，它们不区分大小写。  

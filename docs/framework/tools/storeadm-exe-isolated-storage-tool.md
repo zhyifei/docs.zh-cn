@@ -8,14 +8,12 @@ helpviewer_keywords:
 - stores, current user
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1ca9b10623e4a8a1a977c926262c63f3f2ab076e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 46e846eaf92835fb2a9130b85ed20749934ca5a1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044135"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715718"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe（独立存储工具）
 独立存储工具列出或移除当前用户的所有现有存储。  
@@ -32,7 +30,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 ## <a name="parameters"></a>参数  
   
-|选项|说明|  
+|选项|描述|  
 |------------|-----------------|  
 |**/h**[**elp**]|显示该工具的命令语法和选项。|  
 |/list |显示当前用户的所有现有存储。 这包括该用户执行的所有应用程序或程序集的存储。|  

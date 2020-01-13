@@ -1,5 +1,5 @@
 ---
-title: 自定义日期和时间格式字符串 - .NET
+title: 自定义日期和时间格式字符串
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: ce4aeda8c9fb3c73d133316f985d99e7271411c9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 87436b7d9e2041afb14b146ae0c16201c8593154
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103770"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348296"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自定义日期和时间格式字符串
 
@@ -44,7 +44,7 @@ ms.locfileid: "73103770"
 
 下表描述自定义日期和时间格式说明符并显示由每个格式说明符生成的结果字符串。 默认情况下，结果字符串反映 zh-cn 区域性的格式设置约定。 如果特定格式说明符生成本地化结果字符串，则该示例还注明结果字符串适用的区域性。 有关使用自定义日期和时间格式字符串的详细信息，请参阅[备注](#notes)部分。
 
-| 格式说明符 | 说明 | 示例 |
+| 格式说明符 | 描述 | 示例 |
 | ---------------------- | ----------------- | -------------- |
 |"d"|一个月中的某一天（1 到 31）。<br /><br /> 更多信息：[“d”自定义格式说明符](#dSpecifier)。|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
 |“dd”|一个月中的某一天（01 到 31）。<br /><br /> 更多信息：[“dd”自定义格式说明符](#ddSpecifier)。|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|

@@ -12,14 +12,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET Framework], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7330c209ce6514459d3ab1dd58dc1c80b1978a56
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 49ea989a2b11c6572dc08970cf96e2df5f4fa024
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56834948"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706655"
 ---
 # <a name="how-to-read-text-from-a-file"></a>如何：从文件中读取文本
 下面的示例演示如何使用适用于桌面应用的 .NET 以异步方式和同步方式从文本文件中读取文本。 在这两个示例中，当你创建 <xref:System.IO.StreamReader> 类的实例时，你会提供文件的绝对路径或相对路径。 
@@ -27,20 +25,20 @@ ms.locfileid: "56834948"
 > [!NOTE]
 > 这些代码示例不适用于针对通用 Windows (UWP) 应用的开发，因为 Windows 运行时提供了对文件进行读写操作的不同的流类型。 有关演示如何在 UWP 应用中读取文本的示例，请参阅[快速入门：对文件执行读取和写入操作](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10))。 有关演示如何在 .NET Framework 流和 Windows 运行时流之间进行转换的示例，请参阅[如何：在 .NET Framework 流和 Windows 运行时流之间进行转换](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)。  
   
-## <a name="example-synchronous-read-in-a-console-app"></a>示例:控制台应用中的同步读取  
+## <a name="example-synchronous-read-in-a-console-app"></a>示例：控制台应用中的同步读取  
 以下示例演示控制台应用中的同步读取操作。 此示例使用流读取器打开文本文件，将内容复制到字符串并将字符串输出到控制台。  
   
 > [!IMPORTANT]
-> 该示例假定名为 TestFile.txt 的文件已存在于与应用相同的文件夹中。  
+> 该示例假定名为 TestFile.txt 的文件已存在于与应用相同的文件夹中  。  
 
  [!code-csharp[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source3.cs#3)]
  [!code-vb[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source3.vb#3)]  
   
-## <a name="example-asynchronous-read-in-a-wpf-app"></a>示例:WPF 应用中的异步读取 
+## <a name="example-asynchronous-read-in-a-wpf-app"></a>示例：WPF 应用中的异步读取 
  以下示例演示 Windows Presentation Foundation (WPF) 应用中的异步读取操作。  
   
 > [!IMPORTANT]
-> 该示例假定名为 TestFile.txt 的文件已存在于与应用相同的文件夹中。  
+> 该示例假定名为 TestFile.txt 的文件已存在于与应用相同的文件夹中  。  
 
  [!code-csharp[TextFiles](../../../samples/snippets/csharp/VS_Snippets_Wpf/TextFiles/MainWindow.xaml.cs)]
  [!code-vb[TextFiles](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextFiles/MainWindow.xaml.vb)]  

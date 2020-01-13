@@ -5,14 +5,12 @@ helpviewer_keywords:
 - deploying applications [.NET Framework]
 - .NET Framework, deploying apps
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 92c7bbfe2c35aa1474c83eae49240af39b664714
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c025643b6dd103e35231df5c983a06c899af02b1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052051"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716445"
 ---
 # <a name="deploying-net-framework-applications"></a>部署 .NET Framework 应用程序
 本部分 .NET Framework 文档提供了用于部署 .NET Framework 应用程序的基本信息，其中包括用于加载程序集、解析程序集引用和通过本机映像生成改善应用程序性能的指导原则。  

@@ -16,18 +16,17 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.custom: seodec18
-ms.openlocfilehash: 53f16e65a3cd19cd516756f3a2d036039964e021
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 319aa76754adc852528f35448d9906d4e903693b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971369"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711540"
 ---
 # <a name="anchors-in-regular-expressions"></a>正则表达式中的定位点
 定位点（原子零宽度断言）指定字符串中必须出现匹配的位置。 在搜索表达式中使用定位点时，正则表达式引擎不在字符串中前进或使用字符，它仅在指定位置查找匹配。 例如， `^` 指定必须从行或字符串的开头开始匹配。 因此，正则表达式 `^http:` 仅当 "http:" 出现在行开头时才与之匹配。 下表列出了 .NET 中正则表达式支持的定位点。  
   
-|定位点|说明|  
+|定位点|描述|  
 |------------|-----------------|  
 |`^`|默认情况下，匹配必须出现在字符串的开头；在多行模式中，必须出现在该行的开头。 有关详细信息，请参阅 [字符串或行的开头](#start-of-string-or-line-)。|  
 |`$`|默认情况下，匹配必须出现在字符串的末尾，或在字符串末尾的 `\n` 之前；在多行模式中，必须出现在该行的末尾，或在该行末尾的 `\n` 之前。 有关详细信息，请参阅 [字符串或行的末尾](#end-of-string-or-line-)。|  
@@ -52,7 +51,7 @@ ms.locfileid: "73971369"
   
  正则表达式模式 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` 的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`^`|从输入字符串的开头开始匹配（如果在调用该方法时选择了 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项，则从行的开头开始匹配）。|  
 |`((\w+(\s?)){2,}`|匹配至少两次后跟零个或一个空格的一个或多个单词字符。 这是第一个捕获组。 此表达式还定义第二个和第三个捕获组：第二个捕获组由捕获的单词组成，第三个捕获组由捕获的空格组成。|  
@@ -110,7 +109,7 @@ ms.locfileid: "73971369"
   
  正则表达式 `\G(\w+\s?\w*),?` 可以解释为下表中所示内容。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\G`|从上次匹配结束的位置开始。|  
 |`\w+`|匹配一个或多个单词字符。|  
@@ -129,7 +128,7 @@ ms.locfileid: "73971369"
   
  正则表达式模式可以解释为下表中所示内容。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`are`|匹配子字符串“are”。|  
@@ -146,7 +145,7 @@ ms.locfileid: "73971369"
   
  正则表达式模式可以解释为下表中所示内容。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\B`|不在单词边界处开始匹配。|  
 |`qu`|匹配子字符串“qu”。|  

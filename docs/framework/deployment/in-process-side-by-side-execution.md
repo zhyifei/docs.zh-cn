@@ -5,14 +5,12 @@ helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2a33d3c4216ed8c5d79aef4017c6b9256fc1ad7c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0c699f90143a87b7e7bee24c892efe2936a9399e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052105"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716483"
 ---
 # <a name="in-process-side-by-side-execution"></a>进程内并行执行
 从 .NET Framework 4 开始，可使用进程内并行承载在单个进程中运行多个公共语言运行时 (CLR) 版本。 默认情况下，托管 COM 组件使用其生成所用的 .NET Framework 版本运行，而不考虑为进程加载的 .NET Framework 版本。  
@@ -40,8 +38,8 @@ ms.locfileid: "71052105"
   
     |.NET Framework 版本|1.1|2.0 - 3.5|4|  
     |----------------------------|---------|----------------|-------|  
-    |1.1|不适用|No|是|  
-    |2.0 - 3.5|No|不适用|是|  
+    |1.1|不适用|否|是|  
+    |2.0 - 3.5|否|不适用|是|  
     |4|是|是|不适用|  
   
 > [!NOTE]

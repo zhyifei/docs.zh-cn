@@ -13,25 +13,23 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e890e4172e645e9919ea88ec5835aaed7432c0c6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 0c3516c4abadfd22609c3568beffc14e027ef69e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835195"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706668"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>如何：从字符串中读取字符
 下面的代码示例展示了如何从字符串中异步或同步读取字符。  
   
-## <a name="example-read-characters-synchronously"></a>示例:同步读取字符 
+## <a name="example-read-characters-synchronously"></a>示例：同步读取字符 
  此示例从字符串中同步读取 13 个字符，将它们存储到数组中，并显示这些字符。 然后，示例将读取字符串中的剩余字符，将它们存储到数组中（从第六个元素开始），并显示数组的内容。  
   
  [!code-csharp[Conceptual.StringReader#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source.cs#1)]
  [!code-vb[Conceptual.StringReader#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.stringreader/vb/source.vb#1)]  
   
-## <a name="example-read-characters-asynchronously"></a>示例:异步读取字符  
+## <a name="example-read-characters-asynchronously"></a>示例：异步读取字符  
  下一个示例是 WPF 应用背后的代码。 在窗口加载时，示例从 <xref:System.Windows.Controls.TextBox> 控件异步读取所有字符，并将其存储在数组中。 随后，它以异步方式将每个字母或空格字符写入单独的 <xref:System.Windows.Controls.TextBlock> 控件行。  
   
  [!code-csharp[Conceptual.StringReader#2](../../../samples/snippets/csharp/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.cs)]

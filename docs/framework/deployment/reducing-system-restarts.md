@@ -6,14 +6,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e2b030508897f13cce1fc6439809b98bbae17813
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6261a883e7b99b7fd38da2a17ab4820c81552506
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975674"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716430"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>在 .NET Framework 4.5 安装期间减少系统重新启动
 .NET Framework 4.5 安装程序使用[重启管理器](/windows/win32/rstmgr/about-restart-manager) 来防止安装期间可能出现的系统重启。 如果应用安装程序安装了 .NET Framework，则此程序可通过使用重启管理器来利用此功能。 有关详细信息，请参阅[如何：获取 .NET Framework 4.5 安装程序的进度](how-to-get-progress-from-the-dotnet-installer.md)。  

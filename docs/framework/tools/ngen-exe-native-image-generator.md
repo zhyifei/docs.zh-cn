@@ -18,19 +18,19 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: e6c4baae854e5997b153e1363ca8ed4204e10e2b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 297bc3f9182e76523eda4d4be3112f4d1d7e3fee
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085210"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741789"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe（本机映像生成器）
 
 本机映像生成器 (Ngen.exe) 是一种提高托管应用程序性能的工具。 Ngen.exe 创建本机映像（包含经编译的特定于处理器的机器代码的文件），并将它们安装到本地计算机上的本机映像缓存中。 运行时可从缓存中使用本机映像，而不必使用实时 (JIT) 编译器编译原始程序集。
 
 > [!NOTE]
-> Ngen.exe 编译仅面向 .NET Framework 的程序集的本机映像。 适用于 .NET Core 的等效本机映像生成器为 [CrossGen](https://github.com/dotnet/coreclr/blob/master/Documentation/building/crossgen.md)。 
+> Ngen.exe 编译仅面向 .NET Framework 的程序集的本机映像。 适用于 .NET Core 的等效本机映像生成器为 [CrossGen](https://github.com/dotnet/runtime/blob/master/docs/workflow/building/coreclr/crossgen.md)。
 
 .NET Framework 4 中对 Ngen.exe 进行的更改：
 
@@ -75,20 +75,20 @@ ngen /? | /help
 
 下表显示了每个 `action` 的语法。 有关 `action` 的各个部分的说明，请参见[参数](#ArgumentTable)、[优先级别](#PriorityTable)、[方案](#ScenarioTable)和[配置](#ConfigTable)表。 [选项`options`表描述了 ](#OptionTable) 和帮助开关。
 
-|操作|说明|
+|操作|描述|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|生成程序集及其依赖项的本机映像，并在本机映像缓存中安装这些映像。<br /><br /> 如果指定了 `/queue`，则操作将排队等待本机映像服务。 默认优先级是 3。 请参见[优先级级别](#PriorityTable)表。|
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|从本机映像缓存中删除程序集及其依赖项的本机映像。<br /><br /> 若要卸载单个映像及其依赖项，可使用与安装此映像时相同的命令行自变量。 **注意：** 从 .NET Framework 4 开始，不再支持操作 `uninstall` *。|
 |`update` [`/queue`]|更新已无效的本机映像。<br /><br /> 如果指定了 `/queue`，则更新将排队等待本机映像服务。 更新的优先级总是设定为 3，因此它们在计算机空闲时运行。|
 |`display` [`assemblyName` &#124; `assemblyPath`]|显示程序集及其依赖项的本机映像的状态。<br /><br /> 如果未提供自变量，则显示本机映像缓存中的所有内容。|
-|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> -或-<br /><br /> `eqi` [1&#124;2&#124;3]|执行排队的编译作业。<br /><br /> 如果指定了优先级，则执行具有较高或同等优先级的编译作业。 如果未指定优先级，则执行所有排队的编译作业。|
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> \- 或 -<br /><br /> `eqi` [1&#124;2&#124;3]|执行排队的编译作业。<br /><br /> 如果指定了优先级，则执行具有较高或同等优先级的编译作业。 如果未指定优先级，则执行所有排队的编译作业。|
 |`queue` {`pause` &#124; `continue` &#124; `status`}|暂停本机映像服务，允许暂停的服务继续，或查询服务状态。|
 
 <a name="ArgumentTable"></a>
 
 ## <a name="arguments"></a>自变量
 
-|参数|说明|
+|参数|描述|
 |--------------|-----------------|
 |`assemblyName`|程序集的完整显示名称。 例如 `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`。 **注意：** 可以为 `myAssembly` 和 `display` 操作提供部分程序集名称（如 `uninstall`）。 <br /><br /> 每个 Ngen.exe 命令行只能指定一个程序集。|
 |`assemblyPath`|程序集的显式路径。 可指定完整路径或相对路径。<br /><br /> 如果指定文件名而不指定路径，则程序集必须位于当前目录中。<br /><br /> 每个 Ngen.exe 命令行只能指定一个程序集。|
@@ -97,7 +97,7 @@ ngen /? | /help
 
 ## <a name="priority-levels"></a>优先级级别
 
-|优先级|说明|
+|优先级|描述|
 |--------------|-----------------|
 |`1`|生成本机映像，并立即进行安装，而无需等待空闲时间。|
 |`2`|生成本机映像，并立即进行安装，而无需等待空闲时间，但是在所有优先级为 1 的操作（及其依赖项）完成后。|
@@ -107,7 +107,7 @@ ngen /? | /help
 
 ## <a name="scenarios"></a>方案
 
-|方案|说明|
+|方案|描述|
 |--------------|-----------------|
 |`/Debug`|生成可在调试器下使用的本机映像。|
 |`/Profile`|生成可在探查器下使用的本机映像。|
@@ -117,7 +117,7 @@ ngen /? | /help
 
 ## <a name="config"></a>配置
 
-|配置|说明|
+|配置|描述|
 |-------------------|-----------------|
 |`/ExeConfig:` `exePath`|使用指定的可执行程序集的配置。<br /><br /> 绑定到依赖项时，Ngen.exe 需要做出与加载程序相同的决策。 如果在运行时使用 <xref:System.Reflection.Assembly.Load%2A> 方法加载共享组件，则应用程序的配置文件将决定为该共享组件加载的依赖项 - 例如，所加载依赖项的版本。 `/ExeConfig` 开关就运行时将加载哪些依赖项为 Ngen.exe 提供了指导。|
 |`/AppBase:` `directoryPath`|查找依赖项时，使用指定目录作为应用程序基础。|
@@ -126,12 +126,12 @@ ngen /? | /help
 
 ## <a name="options"></a>选项
 
-|选项|说明|
+|选项|描述|
 |------------|-----------------|
 |`/nologo`|禁止显示 Microsoft 启动版权标志。|
 |`/silent`|禁止显示成功消息。|
 |`/verbose`|显示详细的调试信息。 **注意：** 由于操作系统限制，此选项显示的附加信息比在 Windows 98 和 Windows Millennium Edition 上显示的少。|
-|`/help`， `/?`|显示当前版本的命令语法和选项。|
+|`/help`，`/?`|显示当前版本的命令语法和选项。|
 
 ## <a name="remarks"></a>备注
 
@@ -461,7 +461,7 @@ ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
-若要在全局程序集缓存中为程序集创建本机映像，请使用该程序集的显示名称。 例如:
+若要在全局程序集缓存中为程序集创建本机映像，请使用该程序集的显示名称。 例如：
 
 ```console
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,
@@ -567,7 +567,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 |任务名称|32 位计算机|64 位计算机|
 |---------------|----------------------|----------------------|
 |NET Framework NGEN v4.0.30319|是|是|
-|NET Framework NGEN v4.0.30319 64|No|是|
+|NET Framework NGEN v4.0.30319 64|否|是|
 
 在运行 Windows 8 或更高版本时，本机映像任务在 .NET Framework 4.5 和更高版本中可用。 在 Windows 早期版本中，.NET Framework 使用 [本机映像服务](#native-image-service)。
 

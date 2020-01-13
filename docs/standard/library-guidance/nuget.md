@@ -1,15 +1,13 @@
 ---
 title: NuGet 和 .NET 库
 description: 使用 .NET 库的 NuGet 打包的最佳实践建议。
-author: jamesnk
-ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 9288bf440692302c3a0b1954236540af6363f367
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 71c380f6062c09a8951769009b29b567fddfddfc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775314"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706473"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -46,7 +44,7 @@ NuGet 包 (`*.nupkg`) 是一个 zip 文件，其中包含 .NET 程序集和关�
 
 NuGet 包支持多个[元数据属性](/nuget/reference/nuspec)。 下表包含 NuGet.org 上的每个包应提供的核心元数据：
 
-| MSBuild 属性名称              | Nuspec 名称              | 说明  |
+| MSBuild 属性名称              | Nuspec 名称              | 描述  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | 包标识符。 如果标识符的前缀满足[条件](/nuget/reference/id-prefix-reservation)，则可以保留该前缀。 |
 | `PackageVersion`                   | `version`                  | NuGet 包版本。 有关详细信息，请参阅 [NuGet 包版本](./versioning.md#nuget-package-version)。             |

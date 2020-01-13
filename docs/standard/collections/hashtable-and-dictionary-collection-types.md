@@ -10,14 +10,12 @@ helpviewer_keywords:
 - hash function
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fefd9f95a669c9c0384cefe41322c7a10a96a3b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6f234b6205fd30507b9342d9839db6adcddfc2e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514707"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711371"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>哈希表和字典集合类型
 <xref:System.Collections.Hashtable?displayProperty=nameWithType> 类以及 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> 泛型类实现 <xref:System.Collections.IDictionary?displayProperty=nameWithType> 接口。 <xref:System.Collections.Generic.Dictionary%602> 泛型类还实现 <xref:System.Collections.Generic.IDictionary%602> 泛型接口。 因此，这些集合中的每个元素都是一个键值对。  

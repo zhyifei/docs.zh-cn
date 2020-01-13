@@ -2,12 +2,12 @@
 title: 使用 HttpClientFactory 实现复原 HTTP 请求
 description: 了解如何使用自 .NET Core 2.1 起可用的 HttpClientFactory 来创建 `HttpClient` 实例，使其更轻松地在应用程序中使用。
 ms.date: 08/08/2019
-ms.openlocfilehash: 9eff4a01361b3dc6f7471bc012c945d048b9a276
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 1a6d65509d669166e73ad907b506bae7fa26536d
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737740"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900316"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 实现复原 HTTP 请求
 
@@ -37,7 +37,7 @@ ms.locfileid: "73737740"
 - 管理 `HttpClientMessageHandlers` 的生存期，避免在自行管理 `HttpClient` 生存期时出现上述问题。
 
 > [!NOTE]
-> `HttpClientFactory` 与 `Microsoft.Extensions.DependencyInjection` NuGet 包中的依赖项注入 (DI) 实现紧密相关。 有关使用其他依赖项注入容器的详细信息，请参阅此 [GitHub 讨论](https://github.com/aspnet/Extensions/issues/1345)。
+> `HttpClientFactory` 与 `Microsoft.Extensions.DependencyInjection` NuGet 包中的依赖项注入 (DI) 实现紧密相关。 有关使用其他依赖项注入容器的详细信息，请参阅此 [GitHub 讨论](https://github.com/dotnet/extensions/issues/1345)。
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>HttpClientFactory 的多种用法
 
@@ -119,7 +119,7 @@ services.AddHttpClient<ICatalogService, CatalogService>()
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>实现使用注入的和配置的 HttpClient 的类型化客户端类
 
-在上一步中，需要定义类型化客户端类，如示例代码中的类，“BasketService”、“CatalogService”、“OrderingService”等。类型化客户端是一个类，它接受 `HttpClient` 对象（通过其构造函数注入），并用它来调用某些远程 HTTP 服务。 例如:
+在上一步中，需要定义类型化客户端类，如示例代码中的类，“BasketService”、“CatalogService”、“OrderingService”等。类型化客户端是一个类，它接受 `HttpClient` 对象（通过其构造函数注入），并用它来调用某些远程 HTTP 服务。 例如：
 
 ```csharp
 public class CatalogService : ICatalogService
@@ -188,14 +188,14 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 - 在 .NET Core 中使用 HttpClientFactory   
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- `aspnet/Extensions` GitHub 存储库中的 HttpClientFactory 源代码   
-  <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
+- `dotnet/extensions` GitHub 存储库中的 HttpClientFactory 源代码   
+  <https://github.com/dotnet/extensions/tree/master/src/HttpClientFactory>
 
 - **Polly（.NET 的恢复和暂时性故障处理库）**  
   <http://www.thepollyproject.org/>
   
 - **使用无依赖项注入的 HttpClientFactory（GitHub 问题）**  
-  <https://github.com/aspnet/Extensions/issues/1345>
+  <https://github.com/dotnet/extensions/issues/1345>
 
 >[!div class="step-by-step"]
 >[上一页](explore-custom-http-call-retries-exponential-backoff.md)

@@ -11,13 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.custom: seodec18
-ms.openlocfilehash: 3ac5602c32ce0dcfe21e913868faa7ab356e4194
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3cd461d8c56c3f31bf3ffe04acf239ecd32fe328
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120595"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711436"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字符编码
 
@@ -67,7 +66,7 @@ ms.locfileid: "73120595"
 
 可以检索所有 .NET 编码的相关信息，具体操作是调用 <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> 方法。 .NET 支持下表中列出的字符编码系统。
 
-|编码|类|说明|优点/缺点|
+|编码|类|描述|优点/缺点|
 |--------------|-----------|-----------------|-------------------------------|
 |ASCII|<xref:System.Text.ASCIIEncoding>|通过使用较低的七位字节将有限范围的字符进行编码。|由于此编码仅支持从 U+0000 到 U+007F 的字符值，因此在大多数情况下不足以支持国际化的应用程序。|
 |UTF-7|<xref:System.Text.UTF7Encoding>|将字符表示为 7 位 ASCII 字符的序列。 非 ASCII Unicode 字符由 ASCII 字符的转义序列表示。|UTF-7 支持电子邮件和新闻组协议等协议。 但是，utf-7 不是特别安全或可靠。 在某些情况下，更改一位可以彻底更改对整个 utf-7 字符串的解释。 在其他情况下，不同的 utf-7 字符串可以对相同的文本进行编码。 对于包含非 ASCII 字符的序列，utf-7 需要比 utf-8 更多的空间，且编码/解码更慢。 因此，应尽可能使用 utf-8，而不是 utf-7。|

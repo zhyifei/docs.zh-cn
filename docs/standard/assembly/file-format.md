@@ -2,20 +2,19 @@
 title: .NET 程序集文件格式
 description: 了解 .NET 程序集文件格式，使用它描述和包含 .NET 应用和库。
 author: richlander
-ms.author: mairaw
 ms.date: 08/20/2019
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: c9396c45e3c6cdbc9360485f6286a1746bf81fdd
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4cf6522d66d7a1efccde45078768a773db6e6cb0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970156"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711579"
 ---
 # <a name="net-assembly-file-format"></a>.NET 程序集文件格式
 
-.NET 定义用于充分描述和包含 .NET 程序的二进制文件格式 - 程序集。 程序集用于程序本身以及所有依赖库。 .NET 程序可作为一个或多个程序集运行，除了相应的 .NET 实现外，无需其他任何项目。 本机依赖项（包括操作系统 API）是一个需要单独考虑的问题，虽然有时会使用 .NET 程序集格式来描述它们，但并未将其包含在此格式内（例如，WinRT）。
+.NET 定义用于充分描述和包含 .NET 程序的二进制文件格式 - 程序集  。 程序集用于程序本身以及所有依赖库。 .NET 程序可作为一个或多个程序集运行，除了相应的 .NET 实现外，无需其他任何项目。 本机依赖项（包括操作系统 API）是一个需要单独考虑的问题，虽然有时会使用 .NET 程序集格式来描述它们，但并未将其包含在此格式内（例如，WinRT）。
 
 > 每个 CLI 组件都带有特定于该组件、用于声明、实现和引用的元数据。 因此，特定于组件的元数据被称为组件元数据，并且自 ECMA 335 I.9.1 生成的组件被认为是自描述组件和程序集。
 

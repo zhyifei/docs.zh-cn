@@ -9,14 +9,12 @@ helpviewer_keywords:
 - profile [.NET Framework Client Profile]
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 72749f47d85c4ed910bf8bf925d14246dcb4244a
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 32fc29500a8a2e95b52ba16847020cdb390caceb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195177"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716573"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile 是 .NET Framework 的子集，它随 .NET Framework 4 及早期版本一起提供并针对客户端应用程序进行了优化。 .NET Framework 是适用于 Windows、Windows Phone 和 Microsoft Azure 的开发平台，它提供了托管应用执行环境和 .NET Framework 类库。 .NET Framework 4 和早期版本提供了两个部署选项：完整的 .NET Framework 和 Client Profile。 Client Profile 启用了比完整的 .NET Framework 更快的部署和更小的应用安装包。  

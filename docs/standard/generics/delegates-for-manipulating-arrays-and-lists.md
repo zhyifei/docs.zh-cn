@@ -10,14 +10,12 @@ helpviewer_keywords:
 - lists [.NET Framework], generic delegates
 - generics [.NET Framework], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f37f55f5af70a232952bdb94f0c111a27fcbab1d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: baf8497289ee71c2dbdc544607212de90928289c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948785"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708379"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>用于操作数组和列表的泛型委托
 此主题概述了用于转换的泛型委托、搜索谓词以及对数组或集合中的元素所采取的操作。  

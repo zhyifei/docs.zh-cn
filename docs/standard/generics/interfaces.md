@@ -8,14 +8,12 @@ helpviewer_keywords:
 - generics [.NET Framework], interfaces
 - ordering comparisons [.NET Framework]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 09e9a51fe9c1fd25a6791cf924180329718138c8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 704ada32d428c468d5b71a3f1390568ca586079e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915894"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708319"
 ---
 # <a name="generic-interfaces"></a>泛型接口
 本主题概述跨泛型类型系列提供通用功能的泛型接口。  

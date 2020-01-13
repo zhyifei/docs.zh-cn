@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ac2b0eafa64b809d2b40ac6471806dc9ab3c8c53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01e9d6b50bd7eeafea792a772ca86a81e40dafd4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609624"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708173"
 ---
 # <a name="common-io-tasks"></a>通用 I/O 任务
 <xref:System.IO> 命名空间提供若干个类，通过这些类可以对文件、目录和流执行各种操作（如读取和写入）。 有关详细信息，请参阅[文件和流 I/O](../../../docs/standard/io/index.md)。  

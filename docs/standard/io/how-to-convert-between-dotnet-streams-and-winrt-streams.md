@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 22cf168c660349bda16c59aec4824e3283430807
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3b44b981a65dee5d216f882198a74b5fb61adfad
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877942"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708037"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>如何：在 .NET Framework 和 Windows 运行时流之间进行转换（仅限 Windows）
 
@@ -34,7 +32,7 @@ Windows 运行时提供支持只读、只写或读写的流类型。 如果将 W
 
 最佳做法是使用与要转换的 Windows 运行时流的功能匹配的转换方法。 但是，由于 <xref:Windows.Storage.Streams.IRandomAccessStream> 是可读写的（它同时实现了 <xref:Windows.Storage.Streams.IOutputStream> 和 <xref:Windows.Storage.Streams.IInputStream>），因此转换方法将保留原始流的功能。 例如，使用 <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> 转换 <xref:Windows.Storage.Streams.IRandomAccessStream> 不会限制转换的 .NET Framework 流的可读性。 它也是可写的。
 
-## <a name="example-convert-windows-runtime-random-access-to-net-framework-stream"></a>示例:将 Windows 运行时随机访问流转换为 .NET Framework 流
+## <a name="example-convert-windows-runtime-random-access-to-net-framework-stream"></a>示例：将 Windows 运行时随机访问流转换为 .NET Framework 流
 若要从 Windows 运行时随机访问流转换为 .NET Framework 流，请使用 <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A?displayProperty=nameWithType> 方法。
 
 下面的代码示例会提示用户选择文件，使用 Windows 运行时 API 将其打开，然后将其转换为 .NET Framework 流。 它可读取流，并将其输出为文本块。 在输出结果之前，通常使用 .NET Framework API 操作流。
@@ -57,7 +55,7 @@ Windows 运行时提供支持只读、只写或读写的流类型。 如果将 W
 
 .NET Framework 流不支持克隆，即使转换后也是如此。 如果将 .NET Framework 流转换为 Windows 运行时流，并调用 <xref:Windows.Storage.Streams.InMemoryRandomAccessStream.GetInputStreamAt%2A> 或 <xref:Windows.Storage.Streams.IRandomAccessStream.GetOutputStreamAt%2A>（这会直接调用 <xref:Windows.Storage.Streams.RandomAccessStreamOverStream.CloneStream%2A> 或 <xref:Windows.Storage.Streams.RandomAccessStreamOverStream.CloneStream%2A>），则会引发异常。
 
-## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>示例:将 .NET Framework 转换为 Windows 运行时随机访问流
+## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>示例：将 .NET Framework 转换为 Windows 运行时随机访问流
 
 要从 .NET Framework 流转换为 Windows 运行时随机访问流，请使用 <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A> 方法，如以下示例所示：
 

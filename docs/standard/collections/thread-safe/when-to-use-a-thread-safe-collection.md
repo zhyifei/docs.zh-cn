@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e18dd5370143dfe4faaffb49017d0a8f62c87433
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5a0abef6de9f932f44fc7e3239b98c3a27846580
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490988"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711215"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>何时使用线程安全集合
 .NET Framework 4 新引入了五个专为支持多线程添加和删除操作而设计的集合类型。 为了实现线程安全性，这些新类型使用多种高效的锁定和免锁定同步机制。 同步会增加操作的开销。 开销数取决于所用的同步类型、执行的操作类型和其他因素，例如尝试并行访问该集合的线程数。  

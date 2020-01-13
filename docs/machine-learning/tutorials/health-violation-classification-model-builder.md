@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 07729e1667f8aa3aba74576943d79eaa3bcd14d8
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 90abbc9ffe5765880d18d0d29c8e13bc1330ddc3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552886"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341556"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>教程：使用模型生成器对餐馆卫生违规行为进行分类
 
@@ -31,7 +31,7 @@ ms.locfileid: "74552886"
 > [!NOTE]
 > 模型生成器当前为预览版。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 有关先决条件和安装说明列表，请访问[模型生成器安装指南](../how-to-guides/install-model-builder.md)。
 
@@ -152,4 +152,4 @@ ms.locfileid: "74552886"
 
 - [模型生成器应用场景](../automate-training-with-model-builder.md#scenarios)
 - [多类分类](../resources/glossary.md#multiclass-classification)
-- [多级分类模型指标](../resources/metrics.md#metrics-for-multi-class-classification)
+- [多级分类模型指标](../resources/metrics.md#evaluation-metrics-for-multi-class-classification)
