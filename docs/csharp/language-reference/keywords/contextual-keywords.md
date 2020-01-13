@@ -1,22 +1,21 @@
 ---
 title: 上下文关键字 - C# 参考
-ms.custom: seodec18
 ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 9197ebb1fa48011c60a6d224497e57a604870fc3
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1de8fbccfa9485a546689233ea8a601a8bd697a5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422871"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713647"
 ---
 # <a name="contextual-keywords-c-reference"></a>上下文关键字（C# 参考）
 
 上下文关键字用于在代码中提供特定含义，但它不是 C# 中的保留字。 本部分介绍下面这些上下文关键字：  
   
-|关键字|说明|  
+|关键字|描述|  
 |-------------|-----------------|  
 |[add](./add.md)|定义一个自定义事件访问器，客户端代码订阅事件时会调用该访问器。|  
 |[async](./async.md)|指示修改后的方法、lambda 表达式或匿名方法是异步的。|  

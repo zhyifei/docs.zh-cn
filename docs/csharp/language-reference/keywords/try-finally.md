@@ -1,6 +1,5 @@
 ---
 title: try-finally - C# 参考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - finally
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-ms.openlocfilehash: a8d18a6ae8b3f8f6cde76b1b296ac6a317ca1ed1
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 2c4c69b1e104aed968bc24bac690de83026643a0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168583"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713009"
 ---
 # <a name="try-finally-c-reference"></a>try-finally（C# 参考）
 
@@ -22,7 +21,7 @@ ms.locfileid: "70168583"
 
 已处理的异常中会保证运行相关联的 `finally` 块。 但是，如果异常未经处理，则 `finally` 块的执行将取决于异常解除操作的触发方式。 反过来，这又取决于你计算机的设置方式。
 
-通常情况下，当未经处理的异常终止应用程序时，`finally` 块是否运行已不重要。 但是，如果 `finally` 块中的语句必须在这种情况下运行，则可以将 `catch` 块添加到 `try`-`finally` 语句，这是其中一种解决方法。 另一种解决方法是，可以捕获可能在调用堆栈上方的 `try` -`finally` 语句的 `try` 块中引发的异常。 也就是说，可以通过以下几种方法来捕获异常：调用包含 `try`-`finally` 语句的方法、调用该方法或调用堆栈中的任何方法。 如果未捕获异常，则 `finally` 块的执行取决于操作系统是否选择触发异常解除操作。
+通常情况下，当未经处理的异常终止应用程序时，`finally` 块是否运行已不重要。 但是，如果 `finally` 块中的语句必须在这种情况下运行，则可以将 `catch` 块添加到 `try`-`finally` 语句，这是其中一种解决方法。 另一种解决方法是，可以捕获可能在调用堆栈上方的 `try`-`finally` 语句的 `try` 块中引发的异常。 也就是说，可以通过以下几种方法来捕获异常：调用包含 `try`-`finally` 语句的方法、调用该方法或调用堆栈中的任何方法。 如果未捕获异常，则 `finally` 块的执行取决于操作系统是否选择触发异常解除操作。
 
 ## <a name="example"></a>示例
 

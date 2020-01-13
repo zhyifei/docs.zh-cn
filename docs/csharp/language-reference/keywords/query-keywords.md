@@ -1,17 +1,16 @@
 ---
 title: 查询关键字 - C# 参考
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: 44af3bf1a7c013c16c7b4a4528c3516621bea149
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3c08c2b6ecdaa4b875f118531e7e77f7164dd784
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422537"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713152"
 ---
 # <a name="query-keywords-c-reference"></a>查询关键字（C# 参考）
 
@@ -19,7 +18,7 @@ ms.locfileid: "73422537"
 
 ## <a name="in-this-section"></a>本节内容
 
-|子句|说明|
+|子句|描述|
 |------------|-----------------|
 |[from](from-clause.md)|指定数据源和范围变量（类似于迭代变量）。|
 |[where](where-clause.md)|基于由逻辑 AND 和 OR 运算符（`&&` 或 <code>&#124;&#124;</code>）分隔的一个或多个布尔表达式筛选源元素。|

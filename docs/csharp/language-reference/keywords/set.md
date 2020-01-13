@@ -1,6 +1,5 @@
 ---
 title: set 关键字 - C# 参考
-ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
 - set
@@ -8,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - set keyword [C#]
 ms.assetid: 30d7e4e5-cc2e-4635-a597-14a724879619
-ms.openlocfilehash: 0322f1bb94174dd3a0cdd2089c8626d25a80cc1c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 97b0dbf8716edc4cd465eb5ac693efa0ecaa498b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147988"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713074"
 ---
 # <a name="set-c-reference"></a>set（C# 参考）
 
-`set` 关键字在属性或索引器中定义访问器，它会向属性或索引器元素分配值。 有关详细信息和示例，请参阅[属性](../../programming-guide/classes-and-structs/properties.md)、[自动实现的属性](../../programming-guide/classes-and-structs/auto-implemented-properties.md)和[索引器](../../programming-guide/indexers/index.md)。
+`set` 关键字在属性或索引器中定义访问器  ，它会向属性或索引器元素分配值。 有关详细信息和示例，请参阅[属性](../../programming-guide/classes-and-structs/properties.md)、[自动实现的属性](../../programming-guide/classes-and-structs/auto-implemented-properties.md)和[索引器](../../programming-guide/indexers/index.md)。
 
 下面的示例为名为 `Seconds` 的属性同时定义 `get` 和 `set` 访问器。 它使用名为 `_seconds` 的私有字段备份属性值。
 

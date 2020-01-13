@@ -4,12 +4,12 @@ description: 通过 C# 语言最新增强功能，可以编写可验证的安全
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 3dc3213cf24f4cdd8f0f1b7752263b4a609b2fa2
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f590a338d35966e2cd3a507164057a49b8a5f6f8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039633"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346703"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>编写安全有效的 C# 代码
 
@@ -79,35 +79,35 @@ public struct Point3D
 {
     public Point3D(double x, double y, double z)
     {
-        this.X = x;
-        this.Y = y;
-        this.Z = z;
+        _x = x;
+        _y = y;
+        _z = z;
     }
 
     private double _x;
-    public double X 
-    { 
-        readonly get { return _x;}; 
-        set { _x = value; }
+    public double X
+    {
+        readonly get => _x;
+        set => _x = value;
     }
-    
+
     private double _y;
-    public double Y 
-    { 
-        readonly get { return _y;}; 
-        set { _y = value; }
+    public double Y
+    {
+        readonly get => _y;
+        set => _y = value;
     }
 
     private double _z;
-    public double Z 
-    { 
-        readonly get { return _z;}; 
-        set { _z = value; }
+    public double Z
+    {
+        readonly get => _z;
+        set => _z = value;
     }
 
     public readonly double Distance => Math.Sqrt(X * X + Y * Y + Z * Z);
 
-    public readonly override string ToString() => $"{X, Y, Z }";
+    public readonly override string ToString() => $"{X}, {Y}, {Z}";
 }
 ```
 
@@ -137,7 +137,7 @@ public struct Point3D
 }
 ```
 
-你不希望调用方修改原点，所以应该通过 `readonly ref` 返回值：
+你不希望调用方修改原点，所以应该通过 `ref readonly` 返回值：
 
 ```csharp
 public struct Point3D
@@ -152,7 +152,7 @@ public struct Point3D
 
 通过返回 `ref readonly` 可以保存复制较大的结构并保留内部数据成员的不变性。
 
-在调用站点，调用方可以选择将 `Origin` 属性用作 `readonly ref` 或值：
+在调用站点，调用方可以选择将 `Origin` 属性用作 `ref readonly` 或值：
 
 [!code-csharp[AssignRefReadonly](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
 

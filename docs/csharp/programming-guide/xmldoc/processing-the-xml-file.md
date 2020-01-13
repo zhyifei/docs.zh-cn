@@ -1,17 +1,16 @@
 ---
 title: 处理 XML 文件 - C# 编程指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: b2b19a2b2c46df5b78b6ebba48955cae55d32121
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 2c3ba0e12d0d7e6a568c4c3741d99b901fca2722
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846940"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696514"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>处理 XML 文件（C# 编程指南）
 
@@ -25,7 +24,7 @@ XML 文件不是代码的分层表示形式；它是具有每个元素生成的 
 
 - ID 字符串的第一部分标识被标识的成员类型，单个字符后跟一个冒号。 使用下面的成员类型：
 
-    |字符|说明|
+    |字符|描述|
     |---------------|-----------------|
     |N|namespace<br /><br /> 无法将文档注释添加到命名空间中，但可以在支持的情况下对它们进行 cref 引用。|
     |T|类型：类、接口、结构、枚举、委托|
@@ -71,7 +70,7 @@ XML 文件不是代码的分层表示形式；它是具有每个元素生成的 
 
 - 仅适用于转换运算符（op_Implicit 和 op_Explicit），该方法的返回值被编码为“~”，后面是返回类型，如上面的编码所示。
 
-- 对于泛型类型，类型名称后跟反引号，然后是指示泛型类型参数数量的一个数字。 例如:
+- 对于泛型类型，类型名称后跟反引号，然后是指示泛型类型参数数量的一个数字。 例如：
 
      ``<member name="T:SampleClass`2">`` 是定义为 `public class SampleClass<T, U>` 的类型的标记。
 

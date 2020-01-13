@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 6f0a2cfd5a6de9c8c05bc3daea1e242183ebf03e
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552342"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345396"
 ---
 # <a name="switch-c-reference"></a>switch（C# 参考）
 
@@ -47,7 +47,7 @@ ms.locfileid: "74552342"
 - [字符串](../builtin-types/reference-types.md)。
 - [bool](../builtin-types/bool.md)。
 - [整数](../builtin-types/integral-numeric-types.md)值，例如 `int` 或 `long`。
-- [枚举](enum.md)值。
+- [枚举](../builtin-types/enum.md)值。
 
 从 C# 7.0 开始，匹配表达式可以是任何非 null 表达式。
 
@@ -183,7 +183,7 @@ case null:
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> `case` 语句和 `when` 子句
+## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" />`case` 语句和 `when` 子句
 
 从 C# 7.0 开始，因为 case 语句不需要互相排斥，因此可以添加 `when` 子句来指定必须满足的附加条件使 case 语句计算为 true。 `when` 子句可以是返回布尔值的任何表达式。
 

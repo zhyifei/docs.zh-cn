@@ -1,6 +1,5 @@
 ---
 title: params 关键字 - C# 参考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - params_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - parameters [C#], params
 - params keyword [C#]
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
-ms.openlocfilehash: 772c8da879eeccbe484c631a47de7fe8a32ec8d2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 90d224080f607cbac96514aaf5ac6d67affef9e0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633573"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713230"
 ---
 # <a name="params-c-reference"></a>params（C# 参考）
 

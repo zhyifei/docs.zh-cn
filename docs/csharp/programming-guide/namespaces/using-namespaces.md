@@ -1,6 +1,5 @@
 ---
 title: using 命名空间 - C# 编程指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.names
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: b27a2fa42fc8e0d9ff0d1524c5d1bc19acbfbdb0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5193fc7aaae83cbc0c75e81835244eaaaece69a5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588852"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75700193"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>using 命名空间（C# 编程指南）
 
@@ -71,7 +70,7 @@ ms.locfileid: "69588852"
   
  一般情况下，使用[命名空间别名限定符 `::`](../../language-reference/operators/namespace-alias-qualifier.md) 来引用命名空间别名，或使用 `global::` 来引用全局命名空间，以及使用 `.` 来限定类型或成员。  
   
- 将 `::` 与引用类型而非引用命名空间的别名一起使用是错误的。 例如:  
+ 将 `::` 与引用类型而非引用命名空间的别名一起使用是错误的。 例如：  
   
  [!code-csharp[csProgGuideNamespaces#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#11)]  
   

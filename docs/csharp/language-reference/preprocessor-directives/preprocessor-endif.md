@@ -1,18 +1,17 @@
 ---
 title: '#endif - C# 参考'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#endif'
 helpviewer_keywords:
 - '#endif directive [C#]'
 ms.assetid: 6a5fca55-5aee-441f-86f6-1c99fbe9ec05
-ms.openlocfilehash: 74205c836b4eeb2d8b17b907bb13708f3225df08
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: cc344a224e2308e843328b228dd5e2466d02069f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608580"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712541"
 ---
 # <a name="endif-c-reference"></a>#endif（C# 参考）
 `#endif` 指定条件指令的末尾，以 [#if](./preprocessor-if.md) 指令开头。 例如，应用于对象的  

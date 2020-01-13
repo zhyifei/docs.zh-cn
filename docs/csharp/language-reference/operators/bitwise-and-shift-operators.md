@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 27f7cf46bd3e344503f74527df34506d38ad4545
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428447"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345344"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>位运算符和移位运算符（C# 参考）
 
@@ -154,7 +154,7 @@ x = x op y
 
 [!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
 
-要了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md#operator-precedence)一文中的[运算符优先级](index.md)部分。
+如需了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md#operator-precedence)一文中的[运算符优先级](index.md)部分。
 
 ## <a name="shift-count-of-the-shift-operators"></a>移位运算符的移位计数
 
@@ -172,13 +172,13 @@ x = x op y
 
 ## <a name="enumeration-logical-operators"></a>枚举逻辑运算符
 
-所有[枚举](../keywords/enum.md)类型还支持 `~`、`&`、`|` 和 `^` 运算符。 对于相同枚举类型的操作数，对底层整数类型的相应值执行逻辑运算。 例如，对于具有底层类型 `U` 的枚举类型 `T` 的任何 `x` 和 `y`，`x & y` 表达式生成与 `(T)((U)x & (U)y)` 表达式相同的结果。
+所有[枚举](../builtin-types/enum.md)类型还支持 `~`、`&`、`|` 和 `^` 运算符。 对于相同枚举类型的操作数，对底层整数类型的相应值执行逻辑运算。 例如，对于具有底层类型 `U` 的枚举类型 `T` 的任何 `x` 和 `y`，`x & y` 表达式生成与 `(T)((U)x & (U)y)` 表达式相同的结果。
 
-通常使用具有枚举类型的位逻辑运算符，该枚举类型使用 [Flags](xref:System.FlagsAttribute) 属性定义。 有关详细信息，请参阅[枚举类型](../../programming-guide/enumeration-types.md)一文的[作为位标记的枚举类型](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags)部分。
+通常使用具有枚举类型的位逻辑运算符，该枚举类型使用 [Flags](xref:System.FlagsAttribute) 属性定义。 有关详细信息，请参阅[枚举类型](../builtin-types/enum.md)一文的[作为位标记的枚举类型](../builtin-types/enum.md#enumeration-types-as-bit-flags)部分。
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
-用户定义的类型可以[重载](operator-overloading.md) `~`、`<<`、`>>`、`&`、`|` 和 `^` 运算符。 重载二元运算符时，对应的复合赋值运算符也会隐式重载。 用户定义类型不能显式重载复合赋值运算符。
+用户定义的类型可以[重载](operator-overloading.md)`~`、`<<`、`>>`、`&`、`|` 和 `^` 运算符。 重载二元运算符时，对应的复合赋值运算符也会隐式重载。 用户定义类型不能显式重载复合赋值运算符。
 
 如果用户定义类型 `T` 重载 `<<` 或 `>>` 运算符，则左侧操作数的类型必须为 `T` 且右侧操作数的类型必须为 `int`。
 

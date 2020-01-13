@@ -1,6 +1,5 @@
 ---
 title: ?? 和 ??= 运算符 - C# 参考
-ms.custom: seodec18
 ms.date: 09/10/2019
 f1_keywords:
 - ??_CSharpKeyword
@@ -11,20 +10,18 @@ helpviewer_keywords:
 - null-coalescing assignment [C#]
 - ??= operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 2bd6fe3d2d283e64eebc2251416fa5234e30bdad
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b3d56c6c08443d344002b8e780a72fc547c316bb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739656"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712645"
 ---
 # <a name="-and--operators-c-reference"></a>?? 和 ??= 运算符（C# 参考）
 
+如果左操作数的值不为 `null`，则 null 合并运算符 `??` 返回该值；否则，它会计算右操作数并返回其结果。 如果左操作数的求值结果为非 null，则 `??` 运算符不会对右操作数求值。
 
-如果空接合运算符 `??` 左侧的操作数的值不为 `null`，则运算符返回该侧操作数的值；否则，它会对右侧操作数求值并返回其结果。 如果左侧操作数的求值结果为非 null，则 `??` 运算符不会对右操作数求值。
-
-C# 8.0 及更高版本中可使用空合并赋值运算符 `??=`，该运算符仅在左侧操作数的求值结果为 `null` 时，才将其右侧操作数的值赋值给左操作数。如果左操作数的求值结果为非 null，则 `??=` 运算符不会对右操作数求值。
-
+C# 8.0 及更高版本中可使用空合并赋值运算符 `??=`，该运算符仅在左侧操作数的求值结果为 `null` 时，才将其右侧操作数的值赋值给左操作数。 如果左操作数的求值结果为非 null，则 `??=` 运算符不会对右操作数求值。
 
 [!code-csharp[null-coalescing assignment](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#Assignment)]
 

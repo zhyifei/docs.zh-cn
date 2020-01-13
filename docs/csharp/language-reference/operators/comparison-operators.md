@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: bb28e2adba896ae85b189858283376fbe3250dce
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 86f557d0575b440455fd6363f0d0d6783a9e7acc
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039067"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345333"
 ---
 # <a name="comparison-operators-c-reference"></a>比较运算符（C# 参考）
 
@@ -33,7 +33,7 @@ ms.locfileid: "73039067"
 > [!NOTE]
 > 对于 `==`、`<`、`>`、`<=` 和 `>=` 运算符，如果所有操作数都不是数字（<xref:System.Double.NaN?displayProperty=nameWithType> 或 <xref:System.Single.NaN?displayProperty=nameWithType>），则运算结果为 `false`。 这意味着 `NaN` 值不大于、小于或等于任何其他 `double`（或 `float`）值，包括 `NaN`。 有关更多信息和示例，请参阅 <xref:System.Double.NaN?displayProperty=nameWithType> 或 <xref:System.Single.NaN?displayProperty=nameWithType> 参考文章。
 
-枚举类型也支持比较运算符。 对于相同[枚举](../keywords/enum.md)类型的操作数，基础整数类型的相应值会进行比较。
+枚举类型也支持比较运算符。 对于相同[枚举](../builtin-types/enum.md)类型的操作数，基础整数类型的相应值会进行比较。
 
 [`==` 和 `!=` 运算符](equality-operators.md)检查其操作数是否相等。
 
@@ -63,7 +63,7 @@ ms.locfileid: "73039067"
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
-用户定义类型可以[重载](operator-overloading.md) `<`、`>`、`<=` 和 `>=` 运算符。
+用户定义类型可以[重载](operator-overloading.md)`<`、`>`、`<=` 和 `>=` 运算符。
 
 如果某类型重载 `<` 或 `>` 运算符之一，它必须同时重载 `<` 和 `>`。 如果某类型重载 `<=` 或 `>=` 运算符之一，它必须同时重载 `<=` 和 `>=`。
 

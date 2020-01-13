@@ -1,16 +1,15 @@
 ---
 title: 可访问性域 - C# 参考
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
-ms.openlocfilehash: 814aa8d3965674abe8bdb60b738cbeff93701ceb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 4a4319b03f3e0d7f9ec721e611b78c124a8a8ee5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606138"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713837"
 ---
 # <a name="accessibility-domain-c-reference"></a>可访问域（C# 参考）
 成员的可访问域可指定成员可以引用哪些程序分区。 如果成员嵌套于其他类型中，则该成员的可访问域是由该成员的[可访问性级别](./accessibility-levels.md)和直接包含类型的可访问域这二者共同确定的。  

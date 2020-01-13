@@ -1,6 +1,5 @@
 ---
 title: + 和 += 运算符 - C# 参考
-ms.custom: seodec18
 ms.date: 05/24/2019
 f1_keywords:
 - +_CSharpKeyword
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: e6a190e3d6e283f2ce3b1690ec2bfd15d50dfc6e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 0c468f0fe56c68a16de660dbb3bd6356b4b6a00f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972640"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712762"
 ---
 # <a name="-and--operators-c-reference"></a>+ 和 += 运算符（C# 参考）
 
@@ -71,7 +70,7 @@ x = x + y
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
-用户定义的类型可以[重载](operator-overloading.md) `+` 运算符。 重载二元 `+` 运算符后，也会隐式重载 `+=` 运算符。 用户定义类型不能显式重载 `+=` 运算符。
+用户定义的类型可以[重载](operator-overloading.md)`+` 运算符。 重载二元 `+` 运算符后，也会隐式重载 `+=` 运算符。 用户定义类型不能显式重载 `+=` 运算符。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

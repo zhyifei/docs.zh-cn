@@ -1,17 +1,16 @@
 ---
 title: 接口中的索引器 - C# 编程指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: 7f52df0283cf057c1cd6cc4fa87c0086da7e61d2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4ac51589ed1680f8484fde797c045d15beed3af9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253008"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712112"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>接口中的索引器（C# 编程指南）
 可以在[接口](../../language-reference/keywords/interface.md)上声明索引器。 接口索引器的访问器与[类](../../language-reference/keywords/class.md)索引器的访问器有所不同，差异如下：  
@@ -33,7 +32,7 @@ ms.locfileid: "70253008"
   
  [!code-csharp[csProgGuideIndexers#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#4)]  
   
- 在前面的示例中，可通过使用接口成员的完全限定名来使用显示接口成员实现。 例如:  
+ 在前面的示例中，可通过使用接口成员的完全限定名来使用显示接口成员实现。 例如：  
   
 ```csharp  
 string ISomeInterface.this[int index]   

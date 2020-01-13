@@ -1,17 +1,16 @@
 ---
 title: 如何定义抽象属性（C# 编程指南）
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 1b6dc1dfe932ffff161b0eef667bd35a75b66cf9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c46f36133b68a550a17cf882844fd2481eee8851
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971002"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705608"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>如何定义抽象属性（C# 编程指南）
 以下示例演示如何定义[抽象](../../language-reference/keywords/abstract.md)属性。 抽象属性声明不提供属性访问器的实现，它声明该类支持属性，而将访问器实现留给派生类。 以下示例演示如何实现从基类继承抽象属性。  
@@ -35,7 +34,7 @@ ms.locfileid: "73971002"
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
-- 属性的修饰符放置在属性声明中。 例如:  
+- 属性的修饰符放置在属性声明中。 例如：  
   
     ```csharp  
     public abstract double Area  

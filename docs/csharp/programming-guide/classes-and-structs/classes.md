@@ -1,18 +1,17 @@
 ---
 title: 类 - C# 编程指南
-ms.custom: seodec18
 description: 了解类类型及其创建方式
 ms.date: 08/21/2018
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 193446ff98edce3b7c078c6eeba07cf9acdadaf0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 832095e1d9712c85ad588836e8eba8f523719021
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597173"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714976"
 ---
 # <a name="classes-c-programming-guide"></a>类（C# 编程指南）
 

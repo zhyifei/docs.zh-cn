@@ -1,17 +1,16 @@
 ---
 title: 交错数组 - C# 编程指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 8d1be351e3aabea44138323d04c922dd1cccb78a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 56013f0143d5efcb31a476909cb6e92504ff0dbc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597337"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705699"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>交错数组（C# 编程指南）
 
@@ -27,7 +26,7 @@ ms.locfileid: "69597337"
   
  每个元素都是一维整数数组。 第一个元素是由 5 个整数组成的数组，第二个是由 4 个整数组成的数组，而第三个是由 2 个整数组成的数组。  
   
- 也可使用初始化表达式通过值来填充数组元素，这种情况下不需要数组大小。 例如:  
+ 也可使用初始化表达式通过值来填充数组元素，这种情况下不需要数组大小。 例如：  
   
  [!code-csharp[csProgGuideArrays#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#21)]  
   

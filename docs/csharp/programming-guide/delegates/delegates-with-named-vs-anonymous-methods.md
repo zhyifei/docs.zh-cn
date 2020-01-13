@@ -1,17 +1,16 @@
 ---
 title: 带有命名方法的委托与匿名方法 - C# 编程指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 50df0e9c42d366c9c79dde3b0d34f85b8e552a45
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1ec366999ca6457471b705fa83f06fcde4293f4e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418035"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712372"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>带有命名方法的委托与匿名方法（C# 编程指南）
 [委托](../../language-reference/builtin-types/reference-types.md)可以与命名方法相关联。 使用命名方法实例化委托时，该方法作为参数传递，例如：  
@@ -41,5 +40,5 @@ ms.locfileid: "73418035"
 
 - [C# 编程指南](../index.md)
 - [委托](./index.md)
-- [如何：合并委托（多播委托）](./how-to-combine-delegates-multicast-delegates.md)
+- [如何合并委托（多播委托）](./how-to-combine-delegates-multicast-delegates.md)
 - [事件](../events/index.md)

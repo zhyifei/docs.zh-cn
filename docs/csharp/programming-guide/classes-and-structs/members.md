@@ -1,17 +1,16 @@
 ---
 title: 成员 - C# 编程指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: acd992cba67a79f2a63c28c1d9d9ac70e4f4d029
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09802431d0a5954b67687e9878f572541eeaac79
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922159"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705504"
 ---
 # <a name="members-c-programming-guide"></a>成员（C# 编程指南）
 
@@ -19,7 +18,7 @@ ms.locfileid: "69922159"
   
  下表列出类或结构中可包含的成员类型：  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
 |[字段](./fields.md)|字段是在类范围声明的变量。 字段可以是内置数值类型或其他类的实例。 例如，日历类可能具有一个包含当前日期的字段。|  
 |[常量](./constants.md)|常量是在编译时设置其值并且不能更改其值的字段。|  

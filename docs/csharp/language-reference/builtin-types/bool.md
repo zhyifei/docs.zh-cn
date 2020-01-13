@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 1e79de6d9e5cf973ce394bfb06871777c562c8ac
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 577ccd3bb9a20964dcdfc79ef2028854e4a55dc6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552995"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342695"
 ---
 # <a name="bool-c-reference"></a>bool（C# 参考）
 
@@ -29,15 +29,15 @@ ms.locfileid: "74552995"
 
 [!code-csharp-interactive[bool literals](~/samples/csharp/language-reference/builtin-types/BoolType.cs#Literals)]
 
-## <a name="conversions"></a>转换
-
-C# 仅提供了两个涉及 `bool` 类型的转换。 它们是对相应的可以为空的 `bool?` 类型的隐式转换以及对 `bool?` 类型的显式转换。 但是，.NET 提供了其他方法可用来转换到 `bool` 类型从或此类型进行转换。 有关详细信息，请参阅 <xref:System.Boolean?displayProperty=nameWithType> API 参考页的[转换为布尔值和从布尔值转换](/dotnet/api/system.boolean#converting-to-and-from-boolean-values)部分。
-
 ## <a name="three-valued-boolean-logic"></a>三值布尔逻辑
 
 如需支持三值逻辑（例如，在使用支持三值布尔类型的数据库时），请使用可为空 `bool?` 类型。 对于 `bool?` 操作数，预定义的 `&` 和 `|` 运算符支持三值逻辑。 有关详细信息，请参阅[布尔逻辑运算符](../operators/boolean-logical-operators.md)一文的[可以为 null 的布尔逻辑运算符](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)部分。
 
 有关可为空的值类型的详细信息，请参阅[可为空的值类型](nullable-value-types.md)。
+
+## <a name="conversions"></a>转换
+
+C# 仅提供了两个涉及 `bool` 类型的转换。 它们是对相应的可以为空的 `bool?` 类型的隐式转换以及对 `bool?` 类型的显式转换。 但是，.NET 提供了其他方法可用来转换到 `bool` 类型从或此类型进行转换。 有关详细信息，请参阅 <xref:System.Boolean?displayProperty=nameWithType> API 参考页的[转换为布尔值和从布尔值转换](/dotnet/api/system.boolean#converting-to-and-from-boolean-values)部分。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

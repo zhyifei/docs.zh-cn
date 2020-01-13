@@ -1,6 +1,5 @@
 ---
 title: $ - 字符串内插 - C# 参考
-ms.custom: seodec18
 description: 与传统的字符串复合格式设置相比，字符串内插提供更具可读性且更方便的语法，用于设置字符串输出的格式。
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: cda8582da9ca8262ec2ce6bcfbb76e2e2f5f6006
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b32bbbb0bd99878822d7ca5abdba80b46539846a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421855"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715086"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 字符串内插（C# 参考）
 
@@ -38,7 +37,7 @@ ms.locfileid: "73421855"
 
 括号中的元素是可选的。 下表说明了每个元素：
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |`interpolationExpression`|生成需要设置格式的结果的表达式。 `null` 的字符串表示形式为 <xref:System.String.Empty?displayProperty=nameWithType>。|
 |`alignment`|常数表达式，它的值定义表达式结果的字符串表示形式中的最小字符数。 如果值为正，则字符串表示形式为右对齐；如果值为负，则为左对齐。 有关详细信息，请参阅[对齐组件](../../../standard/base-types/composite-formatting.md#alignment-component)。|

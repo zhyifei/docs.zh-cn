@@ -1,6 +1,5 @@
 ---
 title: unsafe 关键字 - C# 参考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - unsafe_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: aa22eac9d4ae06753bbed1fd5733eddeddd81a46
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ef98809eae0329c028dfb318c4a437aae4736db1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422274"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712983"
 ---
 # <a name="unsafe-c-reference"></a>unsafe（C# 参考）
 
@@ -34,7 +33,7 @@ unsafe static void FastCopy(byte[] src, byte[] dst, int count)
 unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
 ```
 
-还可以使用不安全块从而能够使用该块内的不安全代码。 例如:
+还可以使用不安全块从而能够使用该块内的不安全代码。 例如：
 
 ```csharp
 unsafe

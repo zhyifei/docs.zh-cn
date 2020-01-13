@@ -1,17 +1,16 @@
 ---
 title: 传递值类型参数 - C# 编程指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: dfd2c39eff44b431ec10d85f855fb015a2391f29
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b6999c90bbe254542419232ab719a2754018d295
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596239"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705452"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>传递值类型参数（C# 编程指南）
 一个[值类型](../../language-reference/keywords/value-types.md)变量包含它直接与[引用类型](../../language-reference/keywords/reference-types.md)变量相对的数据，其中包含对其数据的引用。 按值将值-类型变量传递给方法，意味着将变量副本传递给该方法。 在方法内发生的对该实参进行的任何更改不会影响存储在形参变量中的原始数据。 若要使用已调用的方法来更改参数值，必须使用 [ref](../../language-reference/keywords/ref.md) 或 [out](../../language-reference/keywords/out-parameter-modifier.md) 关键字通过引用传递它。 还可以使用 [in](../../language-reference/keywords/in-parameter-modifier.md) 关键字来按引用传递值参数，以避免复制并同时保证不更改值。 为简单起见，下面的示例使用 `ref`。  

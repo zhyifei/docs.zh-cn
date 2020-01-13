@@ -3,16 +3,16 @@ title: 使用 .NET Compiler Platform SDK 工作区模型
 description: 此概述介绍了用于查询和操作代码的工作区和项目的类型。
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 7d450b31cbf2c83c79552d1ace3a1ae692bfdd88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2e69129a869707eaec3516310a72f1fc918ca26
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354798"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346911"
 ---
 # <a name="work-with-a-workspace"></a>使用工作区
 
-工作区层是对整个解决方案执行代码分析和重构的起点。 此层内的工作区 API 有助于将解决方案中项目的全部相关信息组织为单个对象模型，可让用户直接访问编译器层对象模型（如源文本、语法树、语义模型和编译），而无需分析文件、配置选项，或管理项目内依赖项。 
+工作区  层是对整个解决方案执行代码分析和重构的起点。 此层内的工作区 API 有助于将解决方案中项目的全部相关信息组织为单个对象模型，可让用户直接访问编译器层对象模型（如源文本、语法树、语义模型和编译），而无需分析文件、配置选项，或管理项目内依赖项。 
 
 托管环境（如 IDE）提供对应于打开的解决方案的工作区。 此外，只需加载解决方案文件，即可在 IDE 外部使用此模型。
 
@@ -40,4 +40,4 @@ ms.locfileid: "33354798"
 
 ## <a name="summary"></a>总结
 
-Roslyn 公开了一组编译器 API 和工作区 API，提供了有关源代码的丰富信息，并完全保真地记录了 C# 和 Visual Basic 语言。  .NET Compiler Platform SDK 极大地降低了创建以代码为中心的工具和应用程序的门槛。 在元编程、代码生成和转换、C# 和 VB 语言的交互式使用以及在域专属语言中嵌入 C# 和 VB 等领域，它带来了许多创新机遇。  
+Roslyn 公开了一组编译器 API 和工作区 API，提供了有关源代码的丰富信息，并完全保真地记录了 C# 和 Visual Basic 语言。  .NET Compiler Platform SDK 极大地降低了创建以代码为中心的工具和应用程序的门槛。 它将在元编程、代码生成和转换、C# 和 Visual Basic 语言的交互式使用，以及在域特定语言中嵌入 C# 和 Visual Basic 等方面，创造许多创新的机遇。  

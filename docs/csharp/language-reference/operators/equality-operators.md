@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 11d2161004af5199d9e501f8ab1e3c0382e6bfe7
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: ecbb90dab8ccbd9148461c1372e21c523f3835e3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039022"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345318"
 ---
 # <a name="equality-operators-c-reference"></a>相等运算符（C# 参考）
 
@@ -39,7 +39,7 @@ ms.locfileid: "73039022"
 > [!NOTE]
 > 对于 `==`、[`<`、`>`、`<=` 和 `>=`](comparison-operators.md) 运算符，如果任何操作数不是数字（<xref:System.Double.NaN?displayProperty=nameWithType> 或 <xref:System.Single.NaN?displayProperty=nameWithType>），则运算的结果为 `false`。 这意味着 `NaN` 值不大于、小于或等于任何其他 `double`（或 `float`）值，包括 `NaN`。 有关更多信息和示例，请参阅 <xref:System.Double.NaN?displayProperty=nameWithType> 或 <xref:System.Single.NaN?displayProperty=nameWithType> 参考文章。
 
-如果基本整数类型的相应值相等，则相同[枚举](../keywords/enum.md)类型的两个操作数相等。
+如果基本整数类型的相应值相等，则相同[枚举](../builtin-types/enum.md)类型的两个操作数相等。
 
 用户定义的 [struct](../keywords/struct.md) 类型默认情况下不支持 `==` 运算符。 要支持 `==` 运算符，用户定义的结构必须[重载](operator-overloading.md)它。
 
@@ -83,7 +83,7 @@ ms.locfileid: "73039022"
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
-用户定义类型可以[重载](operator-overloading.md) `==` 和 `!=` 运算符。 如果某类型重载这两个运算符之一，它还必须重载另一个运算符。
+用户定义类型可以[重载](operator-overloading.md)`==` 和 `!=` 运算符。 如果某类型重载这两个运算符之一，它还必须重载另一个运算符。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

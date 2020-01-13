@@ -1,6 +1,5 @@
 ---
 title: class 关键字 - C# 参考
-ms.custom: seodec18
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 0c4fc9645e43f23e340804b46bbe8a5faa19525d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 187a49131e903e00cab54d9db43b6cd8eb359a3a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922388"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713695"
 ---
 # <a name="class-c-reference"></a>class（C# 参考）
 
@@ -33,7 +32,7 @@ class TestClass
 
 |继承|示例|
 |-----------------|-------------|
-|无|`class ClassA { }`|
+|None|`class ClassA { }`|
 |Single|`class DerivedClass: BaseClass { }`|
 |无，实现两个接口|`class ImplClass: IFace1, IFace2 { }`|
 |单一，实现一个接口|`class ImplDerivedClass: BaseClass, IFace1 { }`|
@@ -74,7 +73,7 @@ class TestClass
 
 - [结构](../../programming-guide/classes-and-structs/structs.md)
 
-- [枚举](../../programming-guide/enumeration-types.md)
+- [枚举](../builtin-types/enum.md)
 
 ## <a name="example"></a>示例
 

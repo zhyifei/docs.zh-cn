@@ -1,18 +1,17 @@
 ---
 title: '#pragma checksum - C# 参考'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma checksum'
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 4103b6262fc5085c1204f423a36c9c5c2053b497
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1bbb404e1183daa5e68e512e7439b6ae52abd605
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605652"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712476"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum（C# 参考）
 生成源文件的校验和以帮助调试 ASP.NET 页面。  
