@@ -1,14 +1,16 @@
 - name: 'C# 文档'
   href: index.yml
-- name: 开始操作
+- name: 入门
   items:
     - name: 概述
+      displayName: get started
       href: getting-started/index.md
     - name: 'C# 语言和 .NET Framework 介绍'
       href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
 - name: 教程
   items:
     - name: 概述
+      displayName: tutorials
       href: tutorials/index.md
     - name: 'C# 编程简介'
       items:
@@ -93,6 +95,7 @@
 - name: 'C# 中的新增功能'
   items:
     - name: 'C# 8.0'
+      displayName: what's new
       href: whats-new/csharp-8.md
     - name: 'C# 7.3'
       href: whats-new/csharp-7-3.md
@@ -238,9 +241,10 @@
       href: codedoc.md
     - name: 版本管理
       href: versioning.md
-- name: '操作指南 C# 主题'
+- name: '操作指南 C# 文章'
   items:
-    - name: 主题索引
+    - name: 文章索引
+      displayName: how to's
       href: how-to/index.md
     - name: 使用 `String.Split` 分析字符串
       href: how-to/parse-strings-using-split.md
@@ -285,8 +289,9 @@
 - name: 'C# 编程指南'
   items:
     - name: 概述
+      displayName: programming guide
       href: programming-guide/index.md
-    - name: '在 C# 程序内部'
+    - name: 'C# 程序内部探究'
       items:
         - name: 'C# 程序所含内容'
           href: programming-guide/inside-a-program/index.md
@@ -298,9 +303,10 @@
           href: programming-guide/inside-a-program/identifier-names.md
         - name: 'C# 编码约定'
           href: programming-guide/inside-a-program/coding-conventions.md
-    - name: Main() 和命令行自变量
+    - name: Main() 和命令行参数
       items:
         - name: 概述
+          displayName: main method
           href: programming-guide/main-and-command-args/index.md
         - name: 命令行自变量
           href: programming-guide/main-and-command-args/command-line-arguments.md
@@ -311,10 +317,12 @@
     - name: 编程概念
       items:
         - name: 概述
+          displayName: programming concepts
           href: programming-guide/concepts/index.md
         - name: 使用 Async 和 Await 的异步编程
           items:
             - name: 概述
+              displayName: asynchronous programming
               href: programming-guide/concepts/async/index.md
             - name: 异步编程模型
               href: programming-guide/concepts/async/task-asynchronous-programming-model.md
@@ -347,6 +355,7 @@
         - name: 特性
           items:
             - name: 概述
+              displayName: attributes
               href: programming-guide/concepts/attributes/index.md
             - name: 创建自定义特性
               href: programming-guide/concepts/attributes/creating-custom-attributes.md
@@ -365,6 +374,7 @@
         - name: 协变和逆变
           items:
             - name: 概述
+              displayName: covariance and contravariance
               href: programming-guide/concepts/covariance-contravariance/index.md
             - name: 泛型接口中的变体
               href: programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md
@@ -376,13 +386,14 @@
             - name: 委托中的变体
               href: programming-guide/concepts/covariance-contravariance/variance-in-delegates.md
               items:
-                - name: 使用委托中的变体
+                - name: 在委托中使用变体
                   href: programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md
                 - name: 对 Func 和 Action 泛型委托使用变体
                   href: programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md
         - name: 表达式树
           items:
             - name: 概述
+              displayName: expression trees
               href: programming-guide/concepts/expression-trees/index.md
             - name: 如何执行表达式树
               href: programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md
@@ -399,6 +410,7 @@
         - name: 语言集成查询 (LINQ)
           items:
             - name: 概述
+              displayName: LINQ overview
               href: programming-guide/concepts/linq/index.md
             - name: 'C# 中的 LINQ 入门'
               items:
@@ -873,6 +885,7 @@
         - name: '序列化 (C#)'
           items:
             - name: 概述
+              displayName: serialization
               href: programming-guide/concepts/serialization/index.md
             - name: 如何将对象数据写入 XML 文件
               href: programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md
@@ -883,6 +896,7 @@
     - name: 语句、表达式和运算符
       items:
         - name: 概述
+          displayName: 'statements, expressions, operators'
           href: programming-guide/statements-expressions-operators/index.md
         - name: 语句
           href: programming-guide/statements-expressions-operators/statements.md
@@ -927,6 +941,7 @@
     - name: 类和结构
       items:
         - name: 概述
+          displayName: classes structs
           href: programming-guide/classes-and-structs/index.md
         - name: 类
           href: programming-guide/classes-and-structs/classes.md
@@ -935,6 +950,7 @@
         - name: 结构
           items:
             - name: 概述
+              displayName: structs
               href: programming-guide/classes-and-structs/structs.md
             - name: 使用结构
               href: programming-guide/classes-and-structs/using-structs.md
@@ -943,6 +959,7 @@
         - name: 多态性
           items:
             - name: 概述
+              displayName: polymorphism
               href: programming-guide/classes-and-structs/polymorphism.md
             - name: 使用 Override 和 New 关键字进行版本控制
               href: programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md
@@ -1049,6 +1066,7 @@
     - name: 接口
       items:
         - name: 概述
+          displayName: interfaces
           href: programming-guide/interfaces/index.md
         - name: 显式接口实现
           href: programming-guide/interfaces/explicit-interface-implementation.md
@@ -1059,6 +1077,7 @@
     - name: 委托
       items:
         - name: 概述
+          displayName: delegates
           href: programming-guide/delegates/index.md
         - name: 使用委托
           href: programming-guide/delegates/using-delegates.md
@@ -1071,6 +1090,7 @@
     - name: 数组
       items:
         - name: 概述
+          displayName: arrays
           href: programming-guide/arrays/index.md
         - name: 作为对象的数组
           href: programming-guide/arrays/arrays-as-objects.md
@@ -1095,6 +1115,7 @@
     - name: 索引器
       items:
         - name: 概述
+          displayName: indexers
           href: programming-guide/indexers/index.md
         - name: 使用索引器
           href: programming-guide/indexers/using-indexers.md
@@ -1105,6 +1126,7 @@
     - name: 事件
       items:
         - name: 概述
+          displayName: events
           href: programming-guide/events/index.md
         - name: 如何订阅和取消订阅事件
           href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
@@ -1119,6 +1141,7 @@
     - name: 泛型
       items:
         - name: 概述
+          displayName: generics
           href: programming-guide/generics/index.md
         - name: 泛型类型参数
           href: programming-guide/generics/generic-type-parameters.md
@@ -1145,6 +1168,7 @@
     - name: 命名空间
       items:
         - name: 概述
+          displayName: namespaces
           href: programming-guide/namespaces/index.md
         - name: Using 命名空间
           href: programming-guide/namespaces/using-namespaces.md
@@ -1153,12 +1177,14 @@
     - name: 不安全代码和指针
       items:
         - name: 概述和限制
+          displayName: unsafe code pointers
           href: programming-guide/unsafe-code-pointers/index.md
         - name: 固定大小的缓冲区
           href: programming-guide/unsafe-code-pointers/fixed-size-buffers.md
         - name: 指针类型
           items:
             - name: 概述
+              displayName: pointer types
               href: programming-guide/unsafe-code-pointers/pointer-types.md
             - name: 指针转换
               href: programming-guide/unsafe-code-pointers/pointer-conversions.md
@@ -1167,6 +1193,7 @@
     - name: XML 文档注释
       items:
         - name: 概述
+          displayName: xml documentation comments
           href: programming-guide/xmldoc/index.md
         - name: 建议的文档注释标记
           href: programming-guide/xmldoc/recommended-tags-for-documentation-comments.md
@@ -1219,6 +1246,7 @@
     - name: 异常和异常处理
       items:
         - name: 概述
+          displayName: exceptions
           href: programming-guide/exceptions/index.md
         - name: 使用异常
           href: programming-guide/exceptions/using-exceptions.md
@@ -1237,6 +1265,7 @@
     - name: 文件系统和注册表
       items:
         - name: 概述
+          displayName: file system registry
           href: programming-guide/file-system/index.md
         - name: 如何循环访问目录树
           href: programming-guide/file-system/how-to-iterate-through-a-directory-tree.md
@@ -1275,12 +1304,14 @@
 - name: 语言参考
   items:
     - name: 概述
+      displayName: language reference
       href: language-reference/index.md
     - name: 配置语言版本
       href: language-reference/configure-language-version.md
     - name: 'C# 关键字'
       items:
         - name: 概述
+          displayName: keywords
           href: language-reference/keywords/index.md
         - name: 内置类型
           items:
@@ -1435,6 +1466,7 @@
             - name: Checked 和 Unchecked
               items:
                 - name: 概述
+                  displayName: checked unchecked
                   href: language-reference/keywords/checked-and-unchecked.md
                 - name: checked
                   href: language-reference/keywords/checked.md
@@ -1499,6 +1531,7 @@
         - name: 上下文关键字
           items:
             - name: 快速参考
+              displayName: contextual keywords
               href: language-reference/keywords/contextual-keywords.md
             - name: add
               href: language-reference/keywords/add.md
@@ -1521,6 +1554,7 @@
         - name: 查询关键字
           items:
             - name: 快速参考
+              displayName: query keywords
               href: language-reference/keywords/query-keywords.md
             - name: from 子句
               href: language-reference/keywords/from-clause.md
@@ -1631,6 +1665,7 @@
     - name: 'C# 特殊字符'
       items:
         - name: 概述
+          displayName: special characters
           href: language-reference/tokens/index.md
         - name: $ -- 字符串内插
           href: language-reference/tokens/interpolated.md
@@ -1639,6 +1674,7 @@
     - name: 'C# 预处理器指令'
       items:
         - name: 概述
+          displayName: preprocessor directives
           href: language-reference/preprocessor-directives/index.md
         - name: '#if'
           href: language-reference/preprocessor-directives/preprocessor-if.md
@@ -1671,6 +1707,7 @@
     - name: 'C# 编译器选项'
       items:
         - name: 概述
+          displayName: compiler options
           href: language-reference/compiler-options/index.md
         - name: 在命令行上使用 csc.exe 生成
           href: language-reference/compiler-options/command-line-building-with-csc-exe.md
