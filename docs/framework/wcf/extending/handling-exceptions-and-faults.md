@@ -2,12 +2,12 @@
 title: 处理异常和错误
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: c28b4420be82562a30873b65113811da06cee761
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2886463510a2237834529e1ec61c73ec7251e621
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975478"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937721"
 ---
 # <a name="handling-exceptions-and-faults"></a>处理异常和错误
 异常用来在服务或客户端实现中在本地传达错误， 而错误则用来跨服务边界传达错误，如在服务器与客户端之间传达。 除了错误以外，传输通道也常常使用传输特定的机制来传达传输级错误。 例如，HTTP 传输机制使用状态码（如 404）来传达不存在的终结点 URL（不存在发回错误的终结点）。 本文档由三部分组成，它们为自定义通道的作者提供指南。 第一部分提供关于何时以及如何定义和引发异常的指南。 第二部分提供关于生成和使用错误的指南。 第三部分说明如何提供跟踪信息来帮助自定义通道用户对所运行的应用程序进行疑难解答。  
@@ -20,10 +20,10 @@ ms.locfileid: "73975478"
   
 |异常类型|含义|内部异常的内容|恢复策略|  
 |--------------------|-------------|-----------------------------|-----------------------|  
-|<xref:System.ServiceModel.AddressAlreadyInUseException>|为进行侦听而指定的终结点地址已在使用。|如果存在，则提供有关引起此异常的传输错误的更多详细信息。 例如， <xref:System.IO.PipeException>, <xref:System.Net.HttpListenerException> 或 <xref:System.Net.Sockets.SocketException>。|请尝试使用其他地址。|  
+|<xref:System.ServiceModel.AddressAlreadyInUseException>|为进行侦听而指定的终结点地址已在使用。|如果存在，则提供有关引起此异常的传输错误的更多详细信息。 例如， <xref:System.IO.PipeException>、<xref:System.Net.HttpListenerException> 或 <xref:System.Net.Sockets.SocketException>。|请尝试使用其他地址。|  
 |<xref:System.ServiceModel.AddressAccessDeniedException>|不允许该进程访问为进行侦听而指定的终结点地址。|如果存在，则提供有关引起此异常的传输错误的更多详细信息。 例如，<xref:System.IO.PipeException> 或 <xref:System.Net.HttpListenerException>。|请尝试使用其他凭据。|  
-|<xref:System.ServiceModel.CommunicationObjectFaultedException>|正在使用的 <xref:System.ServiceModel.ICommunicationObject> 处于出错状态（有关详细信息，请参阅[了解状态更改](understanding-state-changes.md)）。 请注意，当具有多个挂起调用的对象转变为“出错”状态时，只有一个调用引发与该故障有关的异常，而其余调用都引发 <xref:System.ServiceModel.CommunicationObjectFaultedException>。 引发此异常的原因通常在于，应用程序忽略了某个异常并尝试使用已出错的对象，而在其中使用该对象的线程可能不是捕获原始异常的线程。|如果存在，则提供有关内部异常的详细信息。|新建一个对象。 请注意，根据首先导致 <xref:System.ServiceModel.ICommunicationObject> 出错的原因，可能还需要完成其他工作来进行恢复。|  
-|<xref:System.ServiceModel.CommunicationObjectAbortedException>|所使用的 <xref:System.ServiceModel.ICommunicationObject> 已中止（有关详细信息，请参阅[了解状态更改](understanding-state-changes.md)）。 与 <xref:System.ServiceModel.CommunicationObjectFaultedException> 相似，此异常指示应用程序已在该对象上调用了 <xref:System.ServiceModel.ICommunicationObject.Abort%2A>（有可能是从另一个线程调用的），而且该对象会因此而不再可用。|如果存在，则提供有关内部异常的详细信息。|新建一个对象。 请注意，根据首先导致 <xref:System.ServiceModel.ICommunicationObject> 中止的原因，可能还需要完成其他工作来进行恢复。|  
+|<xref:System.ServiceModel.CommunicationObjectFaultedException>|正在使用的 <xref:System.ServiceModel.ICommunicationObject> 处于出错状态（有关详细信息，请参阅[了解状态更改](understanding-state-changes.md)）。 请注意，当具有多个挂起调用的对象转变为“出错”状态时，只有一个调用引发与该故障有关的异常，而其余调用都引发 <xref:System.ServiceModel.CommunicationObjectFaultedException>。 引发此异常的原因通常在于，应用程序忽略了某个异常并尝试使用已出错的对象，而在其中使用该对象的线程可能不是捕获原始异常的线程。|如果存在，则提供有关内部异常的详细信息。|创建新的 对象。 请注意，根据首先导致 <xref:System.ServiceModel.ICommunicationObject> 出错的原因，可能还需要完成其他工作来进行恢复。|  
+|<xref:System.ServiceModel.CommunicationObjectAbortedException>|所使用的 <xref:System.ServiceModel.ICommunicationObject> 已中止（有关详细信息，请参阅[了解状态更改](understanding-state-changes.md)）。 与 <xref:System.ServiceModel.CommunicationObjectFaultedException> 相似，此异常指示应用程序已在该对象上调用了 <xref:System.ServiceModel.ICommunicationObject.Abort%2A>（有可能是从另一个线程调用的），而且该对象会因此而不再可用。|如果存在，则提供有关内部异常的详细信息。|创建新的 对象。 请注意，根据首先导致 <xref:System.ServiceModel.ICommunicationObject> 中止的原因，可能还需要完成其他工作来进行恢复。|  
 |<xref:System.ServiceModel.EndpointNotFoundException>|目标远程终结点未在进行侦听。 这可能是由于终结点地址的任何部分不正确、无法解析或者终结点已关闭。 这方面的例子有 DNS 错误、队列管理器不可用以及服务未在运行。|内部异常提供通常来自基础传输的详细信息。|请尝试使用其他地址。 或者，对于服务已关闭的情况，发送方可以稍等片刻再重试。|  
 |<xref:System.ServiceModel.ProtocolException>|终结点策略中所描述的通信协议在终结点之间不符。 例如，组帧内容类型不匹配或者超过了最大消息大小。|如果存在，则提供有关特定协议错误的更多信息。 例如，如果出错原因是由于超过了 MaxReceivedMessageSize，则 <xref:System.ServiceModel.QuotaExceededException> 为内部异常。|恢复：请确保发送方的协议设置与接收方的协议设置相匹配。 保证这一点的一种方法是，重新导入服务终结点的元数据（策略）并使用所生成的绑定来重新创建通道。|  
 |<xref:System.ServiceModel.ServerTooBusyException>|远程终结点正在侦听，但不准备处理消息。|如果存在，则该内部异常提供有关 SOAP 错误或传输级错误的详细信息。|恢复：请稍等片刻再重试该操作。|  
@@ -68,11 +68,11 @@ public abstract class MessageFault
 }  
 ```  
   
- `Code` 属性对应于 `env:Code`（或 SOAP 1.1 中的 `faultCode`），可用来标识错误的类型。 SOAP 1.2 定义了五个 `faultCode` 所允许的值（例如，Sender（发送方）和 Receiver（接收方）），并定义了一个可以包含任何子代码值的 `Subcode` 元素 （有关允许的错误代码及其含义的列表，请参阅[SOAP 1.2 规范](https://go.microsoft.com/fwlink/?LinkId=95176)。）SOAP 1.1 具有略微不同的机制：它定义了四个 `faultCode` 值（例如客户端和服务器），可以通过定义全新的值来扩展，也可以通过使用点表示法来创建更具体的 `faultCodes`，例如客户端身份验证。  
+ `Code` 属性对应于 `env:Code`（或 SOAP 1.1 中的 `faultCode`），可用来标识错误的类型。 SOAP 1.2 定义了五个 `faultCode` 所允许的值（例如，Sender（发送方）和 Receiver（接收方）），并定义了一个可以包含任何子代码值的 `Subcode` 元素 （有关允许的错误代码及其含义的列表，请参阅[SOAP 1.2 规范](https://www.w3.org/TR/soap12-part1/#tabsoapfaultcodes)。）SOAP 1.1 具有略微不同的机制：它定义了四个 `faultCode` 值（例如客户端和服务器），可以通过定义全新的值来扩展，也可以通过使用点表示法来创建更具体的 `faultCodes`，例如客户端身份验证。  
   
  在使用 MessageFault 对错误进行编程时，FaultCode.Name 和 FaultCode.Namespace 会映射到 `env:Code`（在 SOAP 1.2 中）或 `faultCode`（在 SOAP 1.1 中）的名称和命名空间。 FaultCode.SubCode 会映射到 `env:Subcode`（在 SOAP 1.2 中）或为 null（在 SOAP 1.1 中）。  
   
- 如果想要以编程方式区分某个错误，则应创建新的错误子代码（如果使用的是 SOAP 1.1，则应创建新的错误代码）。 这与创建新的异常类型相似。 应避免在 SOAP 1.1 错误代码中使用点表示法 （ [Ws-i 基本配置文件](https://go.microsoft.com/fwlink/?LinkId=95177)还不鼓励使用错误代码点表示法。）  
+ 如果想要以编程方式区分某个错误，则应创建新的错误子代码（如果使用的是 SOAP 1.1，则应创建新的错误代码）。 这与创建新的异常类型相似。 应避免在 SOAP 1.1 错误代码中使用点表示法 （ [Ws-i 基本配置文件](http://www.ws-i.org/Profiles/BasicProfile-1.1-2004-08-24.html#SOAP_Custom_Fault_Codes)还不鼓励使用错误代码点表示法。）  
   
 ```csharp
 public class FaultCode  
