@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 90e57c3d332155d42a38b8a01aba7dbb2c812d62
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c320d004b05e58fc7c239cd8c1f3bcec84ad8f78
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458032"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937906"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>编写大型的响应式 .NET Framework 应用
 
@@ -281,7 +281,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
   
  **示例 5：Lambda、List\<T> 和 IEnumerable\<T>**  
   
- 此示例使用 [LINQ 和功能性代码](https://blogs.msdn.microsoft.com/charlie/2007/01/27/anders-hejlsberg-on-linq-and-functional-programming/)在编译器模型中查找符号，给定的名称字符串为：  
+ 此示例使用 [LINQ 和功能性代码](https://docs.microsoft.com/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming)在编译器模型中查找符号，给定的名称字符串为：  
   
 ```csharp  
 class Symbol {  
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 在第一行中， [lambda 表达式](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)`s => s.Name == name` 在局部变量 `name`[上关闭](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/)。 这意味着除了针对 `predicate` 所保存的 [委托](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type)分配对象以外，该代码分配了静态类以保存捕获 `name` 的值的环境。 编译器生成的代码如下所示：  
+ 在第一行中， [lambda 表达式](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)`s => s.Name == name` 在局部变量 `name`[上关闭](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures)。 这意味着除了针对 `predicate` 所保存的 [委托](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type)分配对象以外，该代码分配了静态类以保存捕获 `name` 的值的环境。 编译器生成的代码如下所示：  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -462,7 +462,7 @@ class Compilation { /*...*/
   
 - 一切皆与分配有关 – 这就是编译器平台团队花大部分时间改进新编译器性能的原因所在。 
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [本主题演示的视频](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [性能分析初学者指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)

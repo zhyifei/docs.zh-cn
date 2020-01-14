@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-ms.openlocfilehash: 0ce84e1545523302cd47e60b9f047bc470e6bf0f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4e9268d292004f447b30c82f1db4d0fe58404fe
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443625"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937952"
 ---
 # <a name="corelementtype-enumeration"></a>CorElementType 枚举
 
@@ -77,7 +77,7 @@ typedef enum CorElementType {
 
 ## <a name="members"></a>Members
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |`ELEMENT_TYPE_END`|内部使用。|
 |`ELEMENT_TYPE_VOID`|Void 类型。|
@@ -121,7 +121,7 @@ typedef enum CorElementType {
 类型修饰符构成了用于表示更复杂类型的基础。 `CorElementType` 类型修饰符值应用于在类型签名中紧跟在其后面的值。 按照下表中的说明，`CorElementType` 类型修饰符值之后的值可以是一个 `CorElementType` 简单类型值、一个元数据标记或其他值。
 
 > [!NOTE]
-> 所有数字（*数字*、*参数计数*、*元数据标记*、*排名*、*计数*和*界限*）都存储为压缩整数。 有关详细信息，请参阅 ECMA 网站上的[标准 ECMA-335-公共语言基础结构（CLI）](https://go.microsoft.com/fwlink/?LinkID=116487) 。
+> 所有数字（*数字*、*参数计数*、*元数据标记*、*排名*、*计数*和*界限*）都存储为压缩整数。 有关详细信息，请参阅 ECMA 网站上的[标准 ECMA-335-公共语言基础结构（CLI）](http://www.ecma-international.org/publications/standards/Ecma-335.htm) 。
 
 |类型修饰符|格式|
 |-------------------|------------|
@@ -130,7 +130,7 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_VALUETYPE`|`mdTypeDef` 元数据标记 \<ELEMENT_TYPE_VALUETYPE >|
 |`ELEMENT_TYPE_CLASS`|`mdTypeDef` 元数据标记 \<ELEMENT_TYPE_CLASS >|
 |`ELEMENT_TYPE_VAR`|\<号码 ELEMENT_TYPE_VAR >|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<`CorElementType` 值 > \<> \<> \<> \<> \<>|
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<`CorElementType` 值 > \<> \<> \<> \<> \<|
 |`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<`mdTypeDef` 元数据令牌 > \<参数计数 > \<arg1 > ... \<argN >|
 |`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<函数的完整签名，包括调用约定 >|
 |`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<`CorElementType` 值 >|
@@ -138,7 +138,7 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<`mdTypeRef` 或 `mdTypeDef` 的元数据标记 >|
 |`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<`mdTypeRef` 或 `mdTypeDef` 的元数据标记 >|
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 

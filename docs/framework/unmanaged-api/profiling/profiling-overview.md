@@ -27,12 +27,12 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: 08015e2e5918ca64f601ec912a906cfb6319ed6c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a13470b970b35a2f6f088fd305ba455167c8e107
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427101"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937822"
 ---
 # <a name="profiling-overview"></a>分析概述
 
@@ -175,7 +175,7 @@ CLR 探查器可以安全调用托管代码的唯一位置是方法的 Microsoft
 
 堆栈快照是线程堆栈在某一时刻的跟踪。 分析 API 支持在堆栈上跟踪托管函数，但它会将跟踪非托管函数的工作交给探查器自己的堆栈审核器来完成。
 
-有关如何对探查器进行编程以遍历托管堆栈的详细信息，请参阅本文档集中的[ICorProfilerInfo2：:D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法和[探查器堆栈遍历 .NET Framework 2.0：基础和更](https://go.microsoft.com/fwlink/?LinkId=73638)高版本。
+有关如何对探查器进行编程以遍历托管堆栈的详细信息，请参阅本文档集中的[ICorProfilerInfo2：:D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法和[探查器堆栈遍历 .NET Framework 2.0：基础和更](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10))高版本。
 
 ### <a name="shadow-stack"></a>阴影堆栈
 
@@ -189,7 +189,7 @@ CLR 探查器可以安全调用托管代码的唯一位置是方法的 Microsoft
 
 ## <a name="related-topics"></a>相关主题
 
-|职务|说明|
+|职务|描述|
 |-----------|-----------------|
 |[设置分析环境](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|说明如何初始化探查器、设置事件通知和分析 Windows 服务。|
 |[Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|描述分析 API 使用的非托管接口。|

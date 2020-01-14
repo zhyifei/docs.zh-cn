@@ -2,12 +2,12 @@
 title: 使用 Windows Store 应用商店客户端应用访问 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: f5cc18973231f327ee161946a235cb8b8b2ea5a7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 77dc5d19bc40dc09148a8d2368c56e522bfafc1a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978186"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938175"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>使用 Windows Store 应用商店客户端应用访问 WCF 服务
 Windows 8 引入了一种新应用程序，称为 Windows 应用商店应用程序。 这些应用程序是围绕触摸屏界面设计的。 通过 .NET Framework 4.5，Windows 商店应用程序可以调用 WCF 服务。  
@@ -16,7 +16,7 @@ Windows 8 引入了一种新应用程序，称为 Windows 应用商店应用程�
  Windows 应用商店应用程序中提供了 WCF 功能的子集，请参见以下各节以了解更多详细信息。  
   
 > [!IMPORTANT]
-> 请使用 WinRT 联合 API 而不使用由 WCF 公开的 API。 有关更多信息，请参见 [WinRT 联合 API](https://go.microsoft.com/fwlink/?LinkId=236265)  
+> 请使用 WinRT 联合 API 而不使用由 WCF 公开的 API。 有关更多信息，请参见 [WinRT 联合 API](xref:Windows.Web.Syndication)  
   
 > [!WARNING]
 > 不支持使用“添加服务引用”向 Windows 运行时组件添加 Web 服务引用。  
@@ -94,7 +94,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
     }  
 ```  
   
-### <a name="serialization"></a>序列化  
+### <a name="serialization"></a>Serialization  
  Windows 应用商店应用程序支持以下序列化程序：  
   
 1. DataContractSerializer  
@@ -106,7 +106,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 > [!WARNING]
 > XmlDictionaryWriter.Write(DateTime) 现在会将 DateTime 对象作为字符串写入。  
   
-### <a name="security"></a>安全  
+### <a name="security"></a>安全性  
 
 Windows 应用商店应用程序支持以下安全模式：
   
@@ -120,13 +120,13 @@ Windows 应用商店应用程序支持以下安全模式：
   
 Windows 应用商店应用程序支持以下客户端凭据类型：
   
-1. None  
+1. 无  
   
 2. Basic  
   
-3. 摘要  
+3. Digest  
   
-4. 协商  
+4. Negotiate  
   
 5. NTLM  
   
@@ -174,11 +174,11 @@ void async SomeMethod()
   
  请注意进行异步调用的方法上 async 关键字的使用以及调用该异步方法时 await 关键字的使用。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Windows 应用商店应用博客中的 WCF](https://blogs.msdn.microsoft.com/piyushjo/2011/09/21/wcf-in-windows-8-metro-styled-apps-absolutely-supported/)
-- [WCF Windows 应用商店客户端和安全](https://blogs.msdn.microsoft.com/piyushjo/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security/)
-- [Windows 应用商店应用程序和跨计算机调用](https://blogs.msdn.microsoft.com/piyushjo/2011/10/21/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario/)
-- [从 Windows 应用商店应用调用 Azure 中部署的 WCF 服务](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Windows 应用商店应用博客中的 WCF](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
+- [WCF Windows 应用商店客户端和安全](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
+- [Windows 应用商店应用程序和跨计算机调用](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
+- [从 Windows 应用商店应用调用 Azure 中部署的 WCF 服务](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
 - [WCF 安全编程](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [绑定](../../../../docs/framework/wcf/bindings.md)

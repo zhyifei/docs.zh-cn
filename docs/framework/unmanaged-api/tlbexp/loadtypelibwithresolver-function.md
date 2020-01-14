@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: 82fa0903474ee04b767fd9c68812efe7f0cc4fa0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adbb5eca3b7ffa36d0c963d0dacc3b2afdb664d4
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124164"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935565"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 函数
 加载类型库，并使用提供的[ITypeLibResolver 接口](itypelibresolver-interface.md)解析任何内部引用的类型库。  
@@ -39,7 +39,7 @@ HRESULT LoadTypeLibWithResolver(
  中类型库的文件路径。  
   
  `regkind`  
- 中用于控制如何注册类型库的[REGKIND 枚举](https://docs.microsoft.com/windows/win32/api/oleauto/ne-oleauto-regkind)标志。 其可能的值为：  
+ 中用于控制如何注册类型库的[REGKIND 枚举](/windows/win32/api/oleauto/ne-oleauto-regkind)标志。 其可能的值为：  
   
 - `REGKIND_DEFAULT`：使用默认注册行为。  
   
@@ -82,7 +82,7 @@ HRESULT LoadTypeLibWithResolver(
   
  如果直接调用 `LoadTypeLibWithResolver`，则必须提供自己的[ITypeLibResolver 接口](itypelibresolver-interface.md)实现。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** TlbRef  
@@ -91,7 +91,7 @@ HRESULT LoadTypeLibWithResolver(
   
  **.NET Framework 版本：** 3.5、3.0、2.0  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Tlbexp Helper 函数](index.md)
 - [LoadTypeLibEx 函数](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

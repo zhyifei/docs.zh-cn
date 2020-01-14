@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a1c4d165-9bdc-4ca8-940e-292d4ffcc338
 topic_type:
 - apiref
-ms.openlocfilehash: e64a0512e05965b3da2e7486e986ee34ca8a20d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4f05eb2e6ef31cf1993a623c38bb177f7e3c297e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104307"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935651"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo 函数
-通过检查指定类型库的[TLIBATTR](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr)结构来返回相关信息。  
+通过检查指定类型库的[TLIBATTR](/windows/win32/api/oaidl/ns-oaidl-tlibattr)结构来返回相关信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ HRESULT GetTypeLibInfo(
  弄类型库的本地化 ID。  
   
  `pTypeLibPlatform`  
- 弄标识库的目标操作系统的[SYSKIND](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind)标志。 常见值为 SYS_WIN32 和 SYS_WIN64。  
+ 弄标识库的目标操作系统的[SYSKIND](/windows/win32/api/oaidl/ne-oaidl-syskind)标志。 常用值为 SYS_WIN32 和 SYS_WIN64。  
   
  `pTypeLibMajorVer`  
  弄类型库的主版本号。 例如，对于版本*x. y*，主版本号是*x*。  
@@ -61,7 +61,7 @@ HRESULT GetTypeLibInfo(
   
  如果任何参数为 null，则该函数将返回 `HRESULT` 的 `E_POINTER`。 否则，它将返回 `S_OK`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** TlbRef  
@@ -70,7 +70,7 @@ HRESULT GetTypeLibInfo(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Tlbexp Helper 函数](index.md)
 - [LoadTypeLibEx 函数](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

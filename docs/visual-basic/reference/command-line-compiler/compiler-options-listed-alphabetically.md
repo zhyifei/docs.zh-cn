@@ -4,19 +4,19 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: c529c03fd3856bbd3d3b26371415907c94ca8d30
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 85fb07f46c2d885491db7358f24b3b50836c2ca8
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343520"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937761"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>按字母顺序列出的 Visual Basic 编译器选项
 作为从 Visual Studio 集成开发环境（IDE）中编译程序的替代方法，可以使用 Visual Basic 命令行编译器。 下面是按字母顺序排序 Visual Basic 命令行编译器选项的列表。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-|选项|目的|  
+|选项|目标|  
 |------------|-------------|  
 |[@（指定响应文件）](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|指定响应文件。|  
 |[-?](../../../visual-basic/reference/command-line-compiler/help.md)|显示编译器选项。 此命令等同于指定 `-help` 选项。 未进行编译。|  
@@ -57,7 +57,7 @@ ms.locfileid: "74343520"
 |[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|允许在变量声明中使用局部类型推理。|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|强制执行严格的语言语义。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|指定输出目录。|  
-|`-parallel[+&#124;-]`|指定是否使用并发生成 (+)。|  
+|<code>-parallel[+&#124;-]</code>|指定是否使用并发生成 (+)。|  
 |[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|为输出文件指定编译器面向的处理器平台。|  
 |`-preferreduilang`|指定首选输出语言名称。|  
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|阻止编译器显示与语法相关的错误和警告的代码。|  

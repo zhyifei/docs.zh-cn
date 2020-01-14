@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 890f0ba25d8320008228c73660753b9899269fd7
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: aace683b1a105445b5a3ba3de0a6a671859588b5
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900991"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937443"
 ---
 # <a name="wcf-data-services-45"></a>WCF 数据服务 4.5
 
@@ -42,7 +42,7 @@ WCF 数据服务还包括一组客户端库，一个用于一般 .NET Framework 
 
 我想了解有关 OData 的详细信息 。
 
-- [白皮书：OData 简介](https://download.microsoft.com/download/E/5/A/E5A59052-EE48-4D64-897B-5F7C608165B8/IntroducingOData.pdf)
+- [白皮书： OData 简介](https://download.microsoft.com/download/E/5/A/E5A59052-EE48-4D64-897B-5F7C608165B8/IntroducingOData.pdf)
 - [Open Data Protocol 网站](https://www.odata.org/)
 - [OData：SDK](https://www.odata.org/ecosystem/)
 

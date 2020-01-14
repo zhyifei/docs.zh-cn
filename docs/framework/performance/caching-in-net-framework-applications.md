@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 2a0d138151722a76133da45c166c51d7f3bb0a31
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8fe2a386da8cdb4bb075b67a5e52c840a7b66c77
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428198"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935288"
 ---
 # <a name="caching-in-net-framework-applications"></a>在.NET Framework 应用程序中缓存
 缓存可以将数据存储在内存中以便快速访问。 再次访问数据时，应用程序可以从缓存获取数据，而不是从原始源检索数据。 这可改善性能和可伸缩性。 此外，数据源暂时不可用时，缓存可提供数据。  
@@ -69,7 +69,7 @@ ms.locfileid: "74428198"
   
 - 创建一个派生自 <xref:System.Runtime.Caching.ObjectCache> 类的自定义类，然后在此派生类中提供自定义缓存实现。  
   
-- 创建一个派生自 <xref:System.Runtime.Caching.MemoryCache> 类的类，并自定义或扩展此派生类。 有关如何执行此操作的示例，请参阅[在 ASP.NET 应用程序中使用多个缓存对象来缓存应用程序数据](https://blogs.msdn.microsoft.com/aspnetue/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application/)。  
+- 创建一个派生自 <xref:System.Runtime.Caching.MemoryCache> 类的类，并自定义或扩展此派生类。 有关如何执行此操作的示例，请参阅[在 ASP.NET 应用程序中使用多个缓存对象来缓存应用程序数据](https://docs.microsoft.com/archive/blogs/aspnetue/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application)。  
   
 - 创建 <xref:System.Web.Caching.OutputCacheProvider> 类的派生类，并配置应用程序以使用自定义输出缓存提供程序。  
   

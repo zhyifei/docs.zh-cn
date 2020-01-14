@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: a3e60f715c4c61e671980e4f36813e864469d28e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1a839c4cd99e21bc2a3ebd90cf3302a475c02e17
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344773"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938132"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 探查器和 Windows 应用商店应用
 
@@ -76,7 +76,7 @@ Windows RT 设备已被锁定。 此类设备上不能加载第三方探查器�
 
 在以下各节中讨论的几个方案中，探查器 UI 桌面应用程序需要使用一些新的 Windows 运行时 Api。 你需要参考文档来了解可以在桌面应用程序中使用哪些 Windows 运行时 Api，以及从桌面应用程序和 Windows 应用商店应用程序调用它们的行为是否不同。
 
-如果探查器 UI 是用托管代码编写的，则需要执行几个步骤，以便轻松地使用这些 Windows 运行时 Api。 有关详细信息，请参阅[托管桌面应用和 Windows 运行时](https://go.microsoft.com/fwlink/?LinkID=271858)文章。
+如果探查器 UI 是用托管代码编写的，则需要执行几个步骤，以便轻松地使用这些 Windows 运行时 Api。 有关详细信息，请参阅[托管桌面应用和 Windows 运行时](https://docs.microsoft.com/previous-versions/windows/apps/jj856306(v=win.10))文章。
 
 ## <a name="loading-the-profiler-dll"></a>加载探查器 DLL
 
@@ -378,11 +378,11 @@ WinMD 文件（如常规模块）包含可通过[元数据 api](../../../../docs
 
 进行内存分析时，探查器 DLL 通常会创建一个单独的线程来调用[ForceGC 方法](icorprofilerinfo-forcegc-method.md)方法。 这不是什么新内容。 但可能会令人吃惊的是，在 Windows 应用商店应用程序中执行垃圾回收的操作可能会将线程转换为托管线程（例如，将为该线程创建分析 API ThreadID）。
 
-若要理解这一点，请务必了解 CLR 分析 API 定义的同步和异步调用之间的差异。 请注意，这与 Windows 应用商店应用程序中异步调用的概念非常不同。 有关详细信息，请参阅博客文章[CORPROF_E_UNSUPPORTED_CALL_SEQUENCE 原因](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/)。
+若要理解这一点，请务必了解 CLR 分析 API 定义的同步和异步调用之间的差异。 请注意，这与 Windows 应用商店应用程序中异步调用的概念非常不同。 有关详细信息，请参阅博客文章[CORPROF_E_UNSUPPORTED_CALL_SEQUENCE 原因](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence)。
 
 相关的一点是，在探查器创建的线程上进行的调用始终被视为同步调用，即使这些调用是从某个探查器 DLL 的[ICorProfilerCallback](icorprofilercallback-interface.md)方法的实现之外进行的。 至少，这种情况下也是如此。 由于调用了[ForceGC 方法](icorprofilerinfo-forcegc-method.md)，CLR 已将探查器的线程转换为托管线程，该线程不再被视为探查器的线程。 因此，CLR 强制实施更严格的定义，该定义对该线程来说是同步的（也就是说，调用必须从探查器 DLL 的[ICorProfilerCallback](icorprofilercallback-interface.md)方法之一开始，才能作为同步。
 
-这实际意味着什么？ 大多数[ICorProfilerInfo](icorprofilerinfo-interface.md)方法只是以同步方式调用，并且会立即失败。 因此，如果探查器 DLL 对通常在探查器创建的线程上（例如， [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)、 [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)或[RequestRevert](icorprofilerinfo4-requestrevert-method.md)）进行的其他调用重用了[ForceGC 方法](icorprofilerinfo-forcegc-method.md)线程，则会遇到问题。 在从托管线程调用时，甚至异步安全函数（如[DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) ）都有特殊的规则。 （有关详细信息，请参阅博客文章[探查器堆栈遍历：基本信息和](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/)更高版本。）
+这实际意味着什么？ 大多数[ICorProfilerInfo](icorprofilerinfo-interface.md)方法只是以同步方式调用，并且会立即失败。 因此，如果探查器 DLL 对通常在探查器创建的线程上（例如， [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)、 [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)或[RequestRevert](icorprofilerinfo4-requestrevert-method.md)）进行的其他调用重用了[ForceGC 方法](icorprofilerinfo-forcegc-method.md)线程，则会遇到问题。 在从托管线程调用时，甚至异步安全函数（如[DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) ）都有特殊的规则。 （有关详细信息，请参阅博客文章[探查器堆栈遍历：基本信息和](https://docs.microsoft.com/archive/blogs/davbr/profiler-stack-walking-basics-and-beyond)更高版本。）
 
 因此，建议使用探查器 DLL 创建的任何线程来调用[ForceGC 方法](icorprofilerinfo-forcegc-method.md)，*只*应使用它来触发 GC，然后响应 gc 回调。 它不应调入分析 API 来执行其他任务，如堆栈采样或分离。
 

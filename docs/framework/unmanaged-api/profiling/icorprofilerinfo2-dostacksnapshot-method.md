@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: 64bcf6ee58d743a26e31c49a425f36cc808b5080
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5d90f414a945d346ca7721745ea7d86cb24a085c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426836"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936857"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot 方法
 遍历指定线程的堆栈上的托管帧，并通过回调将信息发送到探查器。  
@@ -71,7 +71,7 @@ HRESULT DoStackSnapshot(
   
  遍历堆栈的顺序与帧被推送到堆栈上的顺序相反：叶（上传）帧优先于最后一个（第一个推送的）帧。  
   
- 有关如何对探查器进行编程以遍历托管堆栈的详细信息，请参阅[.NET Framework 2.0：基础和更高版本中的探查器堆栈遍历](https://go.microsoft.com/fwlink/?LinkId=73638)。  
+ 有关如何对探查器进行编程以遍历托管堆栈的详细信息，请参阅[.NET Framework 2.0：基础和更高版本中的探查器堆栈遍历](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10))。  
   
  堆栈审核可以是同步的，也可以是异步的，如以下各节所述。  
   
@@ -93,11 +93,11 @@ HRESULT DoStackSnapshot(
   
 - 始终在[ICorProfilerCallback：： ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)回调中阻止，直到该线程的堆栈遍历完成。  
   
-- 当探查器调入可触发垃圾回收的 CLR 函数时，不要持有锁。 也就是说，如果拥有的线程可能发出调用来触发垃圾回收，则不要持有锁。  
+- 不要在分析器调用到可以触发垃圾收集的 CLR 函数之中时持有锁。 也就是说，如果拥有的线程可能发出调用来触发垃圾回收，则不要持有锁。  
   
  如果从探查器已创建的线程调用 `DoStackSnapshot`，以便可以遍历单独目标线程的堆栈，还会发生死锁的风险。 第一次创建的线程会输入某些 `ICorProfilerInfo*` 方法（包括 `DoStackSnapshot`），CLR 将在该线程上执行每个线程特定于 CLR 的初始化。 如果探查器已挂起要尝试遍历其堆栈的目标线程，并且如果该目标线程发生了对每个线程初始化执行所需的锁，则会发生死锁。 若要避免这种死锁，请在探查器创建的线程中初始调用 `DoStackSnapshot`，以遍历单独的目标线程，但不要首先挂起目标线程。 此初始调用可确保在发生死锁的情况下，每个线程的初始化都可以完成。 如果 `DoStackSnapshot` 成功并报告了至少一个帧，则在该点之后，此探查器创建的线程将会挂起任何目标线程，并调用 `DoStackSnapshot` 来遍历该目标线程的堆栈。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
