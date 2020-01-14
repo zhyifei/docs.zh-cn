@@ -10,13 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.custom: seodec18
-ms.openlocfilehash: 56014469f14280deae5f220da6d786f4363ea98f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 158964d1e04091faaa9b3acf82bf4ce2b5aba797
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105724"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711488"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中的正则表达式最佳做法
 
@@ -103,7 +102,7 @@ ms.locfileid: "73105724"
 
 此示例中使用的正则表达式 `\p{Sc}+\s*\d+` 可验证输入字符串是否包含一个货币符号和至少一个十进制数。 模式的定义如下表所示。
 
-|模式|说明|
+|模式|描述|
 |-------------|-----------------|
 |`\p{Sc}+`|与 Unicode 符号、货币类别中的一个或多个字符匹配。|
 |`\s*`|匹配零个或多个空白字符。|
@@ -124,7 +123,7 @@ ms.locfileid: "73105724"
 
 该示例中使用的正则表达式模式 `\b(\w+((\r?\n)|,?\s))*\w+[.?:;!]` 的定义如下表所示。
 
-|模式|说明|
+|模式|描述|
 |-------------|-----------------|
 |`\b`|在单词边界处开始匹配。|
 |`\w+`|匹配一个或多个单词字符。|
@@ -168,7 +167,7 @@ ms.locfileid: "73105724"
 
 通常，尽管回溯不是匹配所必需的，但应用程序会因使用回溯而对性能产生负面影响。 例如，正则表达式 `\b\p{Lu}\w*\b` 将匹配以大写字符开头的所有单词，如下表所示。
 
-|模式|说明|
+|模式|描述|
 |-|-|
 |`\b`|在单词边界处开始匹配。|
 |`\p{Lu}`|匹配大写字符。|
@@ -191,7 +190,7 @@ ms.locfileid: "73105724"
 
 在这些情况下，可通过移除嵌套限定符并将外部子表达式替换为零宽度预测先行和回顾断言来优化正则表达式性能。 预测先行和回顾断言是定位点；它们不在输入字符串中移动指针，而是通过预测先行或回顾来检查是否满足指定条件。 例如，可将部件号正则表达式重写为 `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`。 此正则表达式模式的定义如下表所示。
 
-|模式|说明|
+|模式|描述|
 |-------------|-----------------|
 |`^`|从输入字符串的开头部分开始匹配。|
 |`[0-9A-Z]`|匹配字母数字字符。 部件号至少要包含此字符。|
@@ -207,7 +206,7 @@ ms.locfileid: "73105724"
 
 .NET 中的正则表达式语言包括以下可用于消除嵌套限定符的语言元素。 有关详细信息，请参阅 [分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
-|语言元素|说明|
+|语言元素|描述|
 |----------------------|-----------------|
 |`(?=` `subexpression` `)`|零宽度正预测先行。 预测先行当前位置，以确定 `subexpression` 是否与输入字符串匹配。|
 |`(?!` `subexpression` `)`|零宽度负预测先行。 预测先行当前位置，以确定 `subexpression` 是否不与输入字符串匹配。|
@@ -241,7 +240,7 @@ ms.locfileid: "73105724"
 
 通常，只在正则表达式中使用分组构造，这样可对其应用限定符，而且以后不会使用这些子表达式捕获的组。 例如，正则表达式 `\b(\w+[;,]?\s?)+[.?!]` 用于捕获整个句子。 下表描述了此正则表达式模式中的语言元素及其对 <xref:System.Text.RegularExpressions.Match> 对象的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合的影响。
 
-|模式|说明|
+|模式|描述|
 |-------------|-----------------|
 |`\b`|在单词边界处开始匹配。|
 |`\w+`|匹配一个或多个单词字符。|
@@ -272,7 +271,7 @@ ms.locfileid: "73105724"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[正则表达式行为的详细信息](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|在 .NET 中检查正则表达式引擎的实现。 该主题重点介绍正则表达式的灵活性，并说明开发人员确保正则表达式引擎高效、强健运行的职责。|
 |[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|说明何为回溯及其对正则表达式性能有何影响，并检查为回溯提供替代项的语言元素。|
