@@ -1358,14 +1358,14 @@
               href: language-reference/keywords/var.md
             - name: 非托管类型
               href: language-reference/builtin-types/unmanaged-types.md
+            - name: 默认值
+              href: language-reference/builtin-types/default-values.md
             - name: 类型引用表
               items:
                 - name: 内置类型表
                   href: language-reference/keywords/built-in-types-table.md
                 - name: 值类型表
                   href: language-reference/keywords/value-types-table.md
-                - name: 默认值表
-                  href: language-reference/keywords/default-values-table.md
                 - name: 设置数值结果表的格式
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: 修饰符

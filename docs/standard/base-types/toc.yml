@@ -38,10 +38,6 @@
               href: how-to-define-and-use-custom-numeric-format-providers.md
             - name: 如何：往返行程日期和时间值
               href: how-to-round-trip-date-and-time-values.md
-            - name: 如何：将用户在 Web 控件中输入的数值转换成数字
-              href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
-            - name: 如何：向 Web 用户显示本地化的日期和时间信息
-              href: how-to-display-localized-date-and-time-information-to-web-users.md
             - name: 如何：显示日期和时间值中的毫秒
               href: how-to-display-milliseconds-in-date-and-time-values.md
             - name: 如何：用非公历日历显示日期

@@ -342,24 +342,20 @@
   items:
     - name: 概述
       href: porting/index.md
-    - name: .NET Framework 技术不可用于 .NET Core
-      href: porting/net-framework-tech-unavailable.md
     - name: 分析第三方依赖项
       href: porting/third-party-deps.md
     - name: 移植库
       href: porting/libraries.md
     - name: 整理 .NET Core 的项目
       href: porting/project-structure.md
+    - name: 不可用的技术
+      href: porting/net-framework-tech-unavailable.md
     - name: 工具
       href: porting/tools.md
     - name: 使用 Windows 兼容包
       href: porting/windows-compat-pack.md
     - name: 移植 Windows 窗体项目
-      items:
-        - name: 如何移植项目
-          href: porting/winforms.md
-        - name: 重大更改
-          href: porting/winforms-breaking-changes.md
+      href: porting/winforms.md
     - name: 移植 WPF 项目
       href: porting/wpf.md
 - name: 依赖项加载
