@@ -24,10 +24,10 @@ ms.locfileid: "73738188"
 
 - 一组程序集，它们是为应用提供功能的类型与资源的集合。 .NET Framework 和程序集使用相同的版本号。
 
-- 公共语言运行时 (CLR)，可管理并执行应用的代码。 CLR 按其自己的版本号标识（请参阅[版本和依赖关系](versions-and-dependencies.md)）。
+- 公共语言运行时 (CLR)，可管理并执行应用代码。 CLR 按其自己的版本号标识（请参阅[版本和依赖关系](versions-and-dependencies.md)）。
 
 > [!NOTE]
-> 每个新版本的 .NET Framework 都会保留早期版本中的功能并会添加新功能。 可在同一台计算机上同时加载多个版本的 .NET Framework，这意味着可安装 .NET Framework 而无需卸载以前的版本。 通常，你不应卸载以前版本的 .NET Framework，因为你使用的应用程序可能依赖于特定版本，如果删除该版本，可能会中断。
+> 每个 .NET Framework 的新版本都会保留早期版本中的功能并会添加新功能。 可在同一台计算机上同时加载多个版本的 .NET Framework，这意味着可安装 .NET Framework 而无需卸载以前的版本。 通常，你不应卸载以前版本的 .NET Framework，因为你使用的应用程序可能依赖于某个特定版本，如果删除该版本，应用程序可能会中断。
 >
 > .NET Framework 版本和 CLR 版本之间存在差异：
 >
@@ -73,7 +73,7 @@ ms.locfileid: "73738188"
     > [!NOTE]
     > 注册表中的“.NET Framework 安装程序”  文件夹不以句点开头  。
 
-3. 请检查名为“Release”的 DWORD 条目  。 如果存在，则安装 .NET Framework 4.5 或更高版本。 其值是对应于特定版本的 .NET Framework 的版本密钥。 以下图为例，“Release”条目的值为 378389，这是 .NET Framework 4.5 的版本密钥  。
+3. 请检查名为“Release”的 DWORD 条目  。 如果存在，则已安装 .NET Framework 4.5 或更高版本。 其值是对应于特定版本的 .NET Framework 的版本密钥。 以下图为例，“Release”条目的值为 378389，这是 .NET Framework 4.5 的版本密钥  。
 
    ![.NET Framework 4.5 的注册表项](./media/clr-installdir.png ".NET Framework 4.5 的注册表项")
 
@@ -146,7 +146,7 @@ ms.locfileid: "73738188"
 
 <a name="ps_a"></a>
 
-### <a name="use-powershell-to-check-for-a-minimum-required-version"></a>使用 PowerShell 检查要求的最低版本
+### <a name="use-powershell-to-check-for-a-minimum-required-version"></a>使用 PowerShell 检查最低支持的版本
 
 使用 PowerShell 命令检查“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full”子项的“Release”条目的值   。
 
@@ -219,7 +219,7 @@ ms.locfileid: "73738188"
 
 1. 查询 <xref:System.Environment.Version?displayProperty=nameWithType> 属性以检索 <xref:System.Version> 对象。
 
-    返回的 `System.Version` 对象标识当前正在执行代码的运行时版本。 它不返回计算机上可能已安装的程序集版本或运行时的其他版本。
+    返回的 `System.Version` 对象标识当前正在执行代码的运行时版本。 它不返回可能已安装在计算机上的程序集版本或其他运行时版本。
 
     对于 .NET Framework 版本 4、4.5、4.5.1 和 4.5.2，返回的 <xref:System.Version> 对象的字符串表示形式为 4.0.30319. *xxxxx*（其中 *xxxxx* 小于 42000）。 对于 .NET Framework 4.6 及更高版本，它的格式为 4.0.30319.42000。
 

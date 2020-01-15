@@ -55,7 +55,7 @@ ms.locfileid: "73092050"
 
 1. 尝试启动应用程序。
 
-1. 在某些情况下，可能会显示一个对话框，要求你安装 .NET Framework 3.5。 选择“下载并安装此功能”  以安装 .NET Framework 3.5，然后重新启动应用程序。
+1. 在某些情况下，可能会显示如下所示的对话框，要求你安装 .NET Framework 3.5。 选择“下载并安装此功能”  以安装 .NET Framework 3.5，然后重新启动应用程序。
 
    ![无法解决问题](media/application-not-started/install-3-5.png)
 

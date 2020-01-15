@@ -24,7 +24,7 @@ ms.locfileid: "74960023"
 
 可以确定系统上安装了哪些版本的 .NET Framework。 请参阅[如何：确定已安装的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)以获取详细信息。
 
-在此表中，4.5.x 指 .NET Framework 4.5 及其单点版本 4.5.1 和 4.5.2，4.6.x 指 .NET Framework 4.6 及其单点版本 4.6.1 和 4.6.2，4.7.x 指 .NET Framework 4.7 及其单点版本 4.7.1 和 4.7.2，4.8 指 .NET Framework 4.8。
+在此表中，4.5.x 指 .NET Framework 4.5 及其点发行版 4.5.1 和 4.5.2，4.6.x 指 .NET Framework 4.6 及其点发行版 4.6.1 和 4.6.2，4.7.x 指 .NET Framework 4.7 及其点发行版 4.7.1 和 4.7.2，4.8 指 .NET Framework 4.8。
 
 |阻止消息|了解更多信息或解决此问题|  
 |----------------------|--------------------------------------------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "74960023"
 |安装本产品之前需要先安装 KB\<*编号*> 所对应的更新。|.NET Framework 安装需要在安装 .NET Framework 之前先安装 KB 更新。 安装此更新，然后再次开始 .NET Framework 安装。<br /><br /> 例如，在 Windows 8.1、Windows RT 8.1 和 Windows Server 2012 R2 上安装更新版本的 .NET Framework 需要先安装 [KB 2919355](https://support.microsoft.com/kb/2919355) 所对应的更新。|  
 |你的计算机当前正在运行 Windows Server 2008 操作系统的服务器核心安装。 .NET Framework 4.5.x 需要使用更高版本的操作系统。 请安装 Windows Server 2008 R2 SP1 或更高版本并重新运行 .NET Framework 4.5.x 安装程序。|.NET Framework 4.5.1 和 4.5.2 在带有 Windows Server 2008 R2 SP1 或更高版本的服务器核心角色中受支持。 请参阅[系统需求](../get-started/system-requirements.md)。|  
 |你没有足够的权限为此计算机的所有用户完成此操作。 以管理员身份登录并重新运行“安装程序”  。|若要安装 .NET Framework，你必须是计算机的管理员。|  
-|前一次安装要求重新启动计算机，所以安装程序无法继续。 请重新启动计算机，然后重新运行安装程序。|有时需要重新启动以完全完成一次安装。 根据说明重新启动计算机并重新运行安装程序。<br /><br /> 在极少数情况下，如果 Windows 检测到缺少一些更新并需要重新启动来安装队列中的下一个更新，则可能要求不止一次重新启动系统。|  
+|先前的安装要求重新启动计算机，所以安装程序无法继续。 请重新启动计算机，然后重新运行安装程序。|有时需要重新启动以完全完成安装。 根据说明重新启动计算机并重新运行安装程序。<br /><br /> 在极少数情况下，如果 Windows 检测到缺少一些更新并需要重新启动来安装队列中的下一个更新，则可能要求不止一次重新启动系统。|  
 |.NET Framework 安装程序无法在程序兼容性模式下运行。|请参阅本文后面的[程序兼容性问题](#compat)一节。|  
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8 尚未安装，因为组件存储已损坏。|有关详细信息，请参阅[使用 DISM 或系统更新准备工具修复 Windows 更新错误](https://support.microsoft.com/kb/947821)。|  
 |安装程序无法运行，因为 Windows Installer 服务在此计算机上不可用。|请参阅 Microsoft 支持网站上的[尝试在 Windows 7 或 Windows Vista 中安装程序时出现的“无法访问 Windows Installer 服务”错误](https://support.microsoft.com/help/2642495/the-windows-installer-service-could-not-be-accessed-error-when-you-try)。|  
@@ -55,7 +55,7 @@ ms.locfileid: "74960023"
 <a name="compat"></a>
 ### <a name="program-compatibility-issues"></a>程序兼容性问题
 
-.NET Framework 4.5 及其单点版本的安装失败并显示错误代码 1603，或在 Windows 程序兼容性模式下运行时受到阻止。 程序兼容性助手  指示可能未正确安装 .NET Framework，并提示使用建议的设置（程序兼容性模式）重新安装它。 以前，在运行 .NET Framework 安装程序失败或取消尝试时，程序兼容性模式还可能已由“程序兼容性助手”进行了设置。
+.NET Framework 4.5 及其点发行版的安装失败并显示错误代码 1603，或在 Windows 程序兼容性模式下运行时受到阻止。 程序兼容性助手  指示可能未正确安装 .NET Framework，并提示使用建议的设置（程序兼容性模式）重新安装它。 程序兼容性模式还可能已由“程序兼容性助手”在之前运行 .NET Framework 安装程序失败或取消尝试时进行了设置。
 
 .NET Framework 安装程序无法在程序兼容性模式下运行。 若要解决此阻碍问题，必须使用注册表编辑器以确保未在系统范围内启用兼容性模式设置：
 
@@ -71,7 +71,7 @@ ms.locfileid: "74960023"
 
 1. 在“名称”列中查找 .NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 下载名称（具体取决于要安装的版本），然后删除这些项。 有关下载名称，请参阅[安装面向开发人员的 .NET Framework](guide-for-developers.md) 一文。
 
-1. 重新运行版本 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 的 .NET Framework 安装程序。
+1. 重新运行版本 4.5、4.5.1、4.5.2 或 4.6、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 的 .NET Framework 安装程序。
 
 ## <a name="see-also"></a>请参阅
 
