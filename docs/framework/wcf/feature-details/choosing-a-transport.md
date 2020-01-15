@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 69f2724182f83d507f749a150a8d006a4e0f2192
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: bf1bda5f1a2e1f0dfa0cc034c293f448cca2bd32
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838060"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964471"
 ---
 # <a name="choosing-a-transport"></a>选择传输方式
 本主题讨论在 Windows Communication Foundation （WCF）中包括的三个主要传输的条件： HTTP、TCP 和命名管道。 WCF 还包括消息队列（也称为 MSMQ）传输，但本文档不涵盖消息队列。  
@@ -26,7 +26,7 @@ ms.locfileid: "74838060"
  本节介绍在三种主要传输方式中选择其中之一的主要理由，包括一个用于进行选择的详细决策表。  
   
 ### <a name="when-to-use-http-transport"></a>适合使用 HTTP 传输的情况  
- HTTP 是客户端与服务器之间的一个请求/响应协议。 最常见的应用程序包括与 Web 服务器进行通信的 Web 浏览器客户端。 该客户端向服务器发送一个请求，服务器侦听客户端请求消息。 当服务器接收到一个请求时，会返回响应，其中包含请求的状态。 如果成功，将返回可选数据，如网页、错误消息或其他信息。 有关 HTTP 协议的详细信息，请参阅[http-超文本传输协议](https://go.microsoft.com/fwlink/?LinkId=94858)。  
+ HTTP 是客户端与服务器之间的一个请求/响应协议。 最常见的应用程序包括与 Web 服务器进行通信的 Web 浏览器客户端。 该客户端向服务器发送一个请求，服务器侦听客户端请求消息。 当服务器接收到一个请求时，会返回响应，其中包含请求的状态。 如果成功，将返回可选数据，如网页、错误消息或其他信息。 有关 HTTP 协议的详细信息，请参阅[http-超文本传输协议](https://www.w3.org/Protocols/)。  
   
  HTTP 协议不是基于连接的 － 一旦发送了响应，就不会再维护任何状态。 要处理多页事务，应用程序必须持续保持任何必要的状态。  
   

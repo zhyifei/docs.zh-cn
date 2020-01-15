@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: e0c617ce32f80bdde1bcfda31da40ae610e07452
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b5943e509bb850abc6c74e1b97ccd5fb0038f1e0
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712354"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964338"
 ---
 # <a name="await-operator-visual-basic"></a>Await 运算符 (Visual Basic)
 
@@ -58,7 +58,7 @@ Await AsyncMethodThatReturnsTask()
 
 `Await` 表达式或声明不阻止正在执行它的线程。 而是导致编译器在 `Await` 表达式之后，将剩下的异步方法注册为等待任务的后续部分。 控制权随后会返回给异步方法的调用方。 任务完成时，它会调用其延续任务，异步方法的执行会在暂停的位置处恢复。
 
-`Await` 表达式只出现在由 `Async` 修饰符标记的一个立即封闭方法体或 lambda 表达式中。 术语 " *Await* " 在该上下文中仅用作关键字。 在其他位置，它会解释为标识符。 在异步方法或 lambda 表达式中，不能在查询表达式中出现 `Await` 表达式，`catch` 或 `finally` [Try 。Catch 。Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)语句，在 `For` 或 `For Each` 循环的循环控制变量表达式中，或在[SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)语句的正文中。
+`Await` 表达式只出现在由 `Async` 修饰符标记的一个立即封闭方法体或 lambda 表达式中。 术语 " *Await* " 在该上下文中仅用作关键字。 在其他位置，它会解释为标识符。 在 `Async` 方法或 lambda 表达式中，`Await` 表达式不能在查询表达式中出现在 Try ... 的 `Catch` 或 `Finally` 块中[Catch 。Finally 语句](../statements/try-catch-finally-statement.md)，在 `For` 或 `For Each` 循环的循环控制变量表达式中，或在[SyncLock](../statements/synclock-statement.md)语句的正文中。
 
 ## <a name="exceptions"></a>异常
 

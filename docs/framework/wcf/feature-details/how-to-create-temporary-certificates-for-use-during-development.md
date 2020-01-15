@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: e2df35959f9821c65d694079aefa0ae6ba01897f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9e01ccb29ad017a2657ab08b54d7f01ef4564481
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053292"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964537"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>如何：创建开发期间使用的临时证书
 
@@ -21,7 +21,7 @@ ms.locfileid: "71053292"
 >
 > 默认情况下， [new-selfsignedcertificate](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet 创建自签名证书，这些证书是不安全的。 将自签名证书放置在 "受信任的根证书颁发机构" 存储中使您能够创建更密切地模拟您的部署环境的开发环境。
 
- 有关创建和使用证书的详细信息，请参阅使用[证书](working-with-certificates.md)。 有关使用证书作为凭据的详细信息，请参阅[保护服务和客户端](securing-services-and-clients.md)。 有关使用 Microsoft Authenticode 技术的教程，请参阅 [Authenticode Overviews and Tutorials](https://go.microsoft.com/fwlink/?LinkId=88919)（Authenticode 概述和教程）。
+ 有关创建和使用证书的详细信息，请参阅使用[证书](working-with-certificates.md)。 有关使用证书作为凭据的详细信息，请参阅[保护服务和客户端](securing-services-and-clients.md)。 有关使用 Microsoft Authenticode 技术的教程，请参阅 [Authenticode Overviews and Tutorials](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537360(v=vs.85))（Authenticode 概述和教程）。
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>创建一个自签名根证书颁发机构证书并导出私钥
 
@@ -31,7 +31,7 @@ ms.locfileid: "71053292"
 $rootcert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
 ```
 
-我们需要将该证书导出到 PFX 文件中，以便可以将其导入到后面的步骤中所需的位置。 导出带私钥的证书时，需要使用密码来保护密码。 我们将密码保存在中`SecureString` ，并使用[get-pfxcertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlet 将具有关联私钥的证书导出到 PFX 文件。 我们还使用[导出证书](/powershell/module/pkiclient/export-certificate)cmdlet 将公共证书仅保存到 CRT 文件中。
+我们需要将该证书导出到 PFX 文件中，以便可以将其导入到后面的步骤中所需的位置。 导出带私钥的证书时，需要使用密码来保护密码。 我们将密码保存在 `SecureString` 中，并使用[get-pfxcertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlet 将具有关联私钥的证书导出到 PFX 文件。 我们还使用[导出证书](/powershell/module/pkiclient/export-certificate)cmdlet 将公共证书仅保存到 CRT 文件中。
 
 ```powershell
 [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
@@ -42,7 +42,7 @@ Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 
 ## <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>创建一个由根证书颁发机构证书签名的新证书
 
-下面的命令使用颁发者的私钥创建`RootCA`一个由使用者名称 "SignedByRootCA" 签名的证书。
+下面的命令使用颁发者的私钥创建一个证书，该证书由使用者名称为 "SignedByRootCA" 的 `RootCA` 签名。
 
 ```powershell
 $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
@@ -62,7 +62,7 @@ Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 ### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>在受信任的根证书颁发机构中安装自签名证书
 
-1. 打开证书管理单元。 有关详细信息，请参阅[如何：用 MMC 管理单元](how-to-view-certificates-with-the-mmc-snap-in.md)查看证书。
+1. 打开证书管理单元。 有关详细信息，请参阅[如何：使用 MMC 管理单元查看证书](how-to-view-certificates-with-the-mmc-snap-in.md)。
 
 2. 打开要存储证书的文件夹， **“本地计算机”** 或 **“当前用户”** 。
 
@@ -112,8 +112,8 @@ Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 请确保通过右击证书，再单击 **“删除”** ，从 **“受信任的根证书颁发机构”** 和 **“个人”** 文件夹中删除所有临时根证书颁发机构证书。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用证书](working-with-certificates.md)
-- [如何：用 MMC 管理单元查看证书](how-to-view-certificates-with-the-mmc-snap-in.md)
-- [保护服务和客户端的安全](securing-services-and-clients.md)
+- [如何：使用 MMC 管理单元查看证书](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Securing Services and Clients](securing-services-and-clients.md)

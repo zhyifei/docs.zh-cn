@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 4a9f3a3b7e69d33a8707a4bed5b9bc369c75f601
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 55120430a9aaafe7d8bbf2b26f07806e4f1aa44a
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346698"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964425"
 ---
 # <a name="denial-of-service"></a>拒绝服务
 当系统处于过载状态而无法处理消息或者处理速度极慢时，会出现拒绝服务的情况。  
@@ -44,7 +44,7 @@ ms.locfileid: "75346698"
 ## <a name="auditing-event-log-can-be-filled"></a>可以填充审核事件日志  
  如果恶意用户了解到审核功能处于启用状态，则该攻击者可能会发送导致写入审核项的无效消息。 如果以这种方式填充审核日志，则审核系统会出现故障。  
   
- 为了缓解此问题，请将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 属性设置为 `true`，然后使用事件查看器的属性来控制审核行为。 有关使用事件查看器查看和管理事件日志的详细信息，请参阅[事件查看器](https://go.microsoft.com/fwlink/?LinkId=186123)。 有关详细信息，请参阅[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
+ 为了缓解此问题，请将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 属性设置为 `true`，然后使用事件查看器的属性来控制审核行为。 有关使用事件查看器查看和管理事件日志的详细信息，请参阅[事件查看器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11))。 有关详细信息，请参阅[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>无效的 IAuthorizationPolicy 实现会导致服务无法响应  
  对 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 接口的错误实现调用 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 方法可能会导致服务不响应。  
@@ -52,7 +52,7 @@ ms.locfileid: "75346698"
  缓解：仅使用受信任的代码。 即，仅使用在编写后经过测试的代码或者来自受信任提供者的代码。 未经深思熟虑，请勿允许在代码中插入对 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 的不受信任的扩展。 这适用于服务实现中所使用的全部扩展。 WCF 不会对使用扩展点插入的应用程序代码和外接程序代码进行任何区分。  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>可能需要调整最大 Kerberos 令牌大小  
- 如果客户端属于许多组（大约 900 个，尽管实际数字因组的数目而异），则可能会在消息头的块超过 64 KB 时出现问题。 在这种情况下，你可以增加最大 Kerberos 令牌大小，如 Microsoft 支持部门文章 "[Internet Explorer Kerberos 身份验证由于没有足够的缓冲区连接到 IIS 而无法工作](https://go.microsoft.com/fwlink/?LinkId=89176)" 中所述。 你可能还需要增加最大 WCF 消息大小以容纳更大的 Kerberos 令牌。  
+ 如果客户端属于许多组（大约 900 个，尽管实际数字因组的数目而异），则可能会在消息头的块超过 64 KB 时出现问题。 在这种情况下，可以增加 Kerberos 令牌的最大大小。 你可能还需要增加最大 WCF 消息大小以容纳更大的 Kerberos 令牌。  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>自动注册功能会为计算机生成多个具有相同主题名称的证书  
  自动*注册*是 Windows Server 2003 的一种功能，用于自动注册用户和计算机的证书。 如果计算机处于启用了该功能的域中，那么，每当有新计算机加入网络中时，都会自动创建一个既定目的为客户端身份验证的 X.509 证书，并将其插入本地计算机的“个人”证书存储区。 但是，自动注册功能对它在缓存中创建的所有证书使用同一主题名称。  
@@ -61,7 +61,7 @@ ms.locfileid: "75346698"
   
  若要缓解这种情况，请通过对[\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)使用更精确的搜索条件来引用要使用的确切证书。 例如，使用 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 选项并按照证书的唯一指纹（哈希）来指定证书。  
   
- 有关自动注册功能的详细信息，请参阅[Windows Server 2003 中的证书自动注册](https://go.microsoft.com/fwlink/?LinkId=95166)。  
+ 有关自动注册功能的详细信息，请参阅[Windows Server 2003 中的证书自动注册](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10))。  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>用于授权的多个备选主题名称中的最后一个  
  在极少数情况下，如果 X.509 证书包含多个备选主题名称，并且您使用备选主题名称进行授权，则授权可能会失败。  

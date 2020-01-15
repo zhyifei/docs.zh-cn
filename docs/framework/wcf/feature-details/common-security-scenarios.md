@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: af58d6b529fba32380bedb9a892a2b1fd4807d96
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 578ec2d7d5abe1285007ad22d8bacd69e695b1d3
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857566"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964286"
 ---
 # <a name="common-security-scenarios"></a>常用安全方案
 本节中的主题对众多可能的客户端和服务安全配置进行分类。 配置会随多种因素而变化。 例如，服务或客户端是否位于 Intranet 上，或者安全性是由 Windows 提供还是由传输（如 HTTPS）提供。  
@@ -19,7 +19,7 @@ ms.locfileid: "61857566"
  一个公共的、不安全的客户端和服务的示例。  
   
  [不安全的 Intranet 客户端和服务](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
- 一个基本的 Windows Communication Foundation (WCF) 服务开发提供到 WCF 应用程序安全的专用网络上的信息。  
+ 一种基本 Windows Communication Foundation （WCF）服务，用于为 WCF 应用程序提供有关安全的专用网络的信息。  
   
  [使用基本身份验证的传输安全性](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  应用程序允许客户端使用自定义身份验证进行登录。  
@@ -34,7 +34,7 @@ ms.locfileid: "61857566"
  显示由证书保护的客户端和服务。  
   
  [匿名客户端的消息安全性](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- 显示客户端和受保护的 WCF 消息安全的服务。  
+ 显示由 WCF 消息安全保护的客户端和服务。  
   
  [用户名客户端的消息安全性](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  客户端是一个 Windows 窗体应用程序，允许客户端使用域用户名和密码登录。  
@@ -57,7 +57,7 @@ ms.locfileid: "61857566"
  [受信任的子系统](../../../../docs/framework/wcf/feature-details/trusted-subsystem.md)  
  客户端访问分布在网络上的一个或多个 Web 服务。 Web 服务访问必须加以保护的其他资源（如数据库或其他 Web 服务）。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>相关章节  
@@ -65,11 +65,11 @@ ms.locfileid: "61857566"
   
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
- [安全性](../../../../docs/framework/wcf/feature-details/security.md)  
+ [安全](../../../../docs/framework/wcf/feature-details/security.md)  
   
  [绑定与安全](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
   
- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
  [身份验证](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "61857566"
   
  [审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全指导和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
-- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

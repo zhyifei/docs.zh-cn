@@ -2,12 +2,12 @@
 title: 部署承载于 Internet 信息服务中的 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: e46bcec846fcc8f9455c436bb551564e1cb5b5ea
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 36bdd22ec838af8b1a6b3be8c5636beced9b9132
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053315"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964846"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署承载于 Internet 信息服务中的 WCF 服务
 
@@ -23,7 +23,7 @@ ms.locfileid: "71053315"
 
 - 配置 WCF 服务。
 
-有关创建 IIS 承载的 WCF 服务的详细演练，请参阅[如何：在 IIS](how-to-host-a-wcf-service-in-iis.md)中承载 WCF 服务。
+有关创建 IIS 承载的 WCF 服务的详细演练，请参阅[如何：在 iis 中承载 WCF 服务](how-to-host-a-wcf-service-in-iis.md)。
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>确保已正确安装和注册 IIS、ASP.NET 和 WCF
 
@@ -35,31 +35,31 @@ ms.locfileid: "71053315"
 
 如果计算机上已存在 IIS，则 .NET Framework 的安装过程会自动将 WCF 注册到 IIS。 如果在 .NET Framework 后安装 IIS，则需要执行其他步骤以将 WCF 注册到 IIS 和 ASP.NET。 根据您的操作系统，可以按如下所述执行此操作：
 
-- Windows 7 和 Windows Server 2003：使用 " [System.servicemodel 注册工具" （servicemodelreg.exe）](../../../../docs/framework/wcf/servicemodelreg-exe.md)工具将 WCF 注册到 IIS。 若要使用此工具，请在[Visual Studio 的开发人员命令提示](../../tools/developer-command-prompt-for-vs.md)中键入**servicemodelreg.exe/i/x** 。
+- Windows 7 和 Windows Server 2003：使用[System.servicemodel 注册工具（servicemodelreg.exe）](../../../../docs/framework/wcf/servicemodelreg-exe.md)工具将 WCF 注册到 IIS。 若要使用此工具，请在[Visual Studio 的开发人员命令提示](../../tools/developer-command-prompt-for-vs.md)中键入**servicemodelreg.exe/i/x** 。
 
-- Windows 7：最后，必须验证是否已将 ASP.NET 配置为使用 .NET Framework 版本4或更高版本。 可以通过使用`–i`选项运行 ASPNET_Regiis 工具来执行此操作。 有关详细信息，请参阅[ASP.NET IIS 注册工具](https://go.microsoft.com/fwlink/?LinkId=201186)。
+- Windows 7：最后，必须验证是否已将 ASP.NET 配置为使用 .NET Framework 版本4或更高版本。 可以通过使用 `–i` 选项运行 ASPNET_Regiis 工具来执行此操作。 有关详细信息，请参阅[ASP.NET IIS 注册工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))。
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>创建新的 IIS 应用程序或重新使用现有的 ASP.NET 应用程序
 
 IIS 承载的 WCF 服务必须驻留在 IIS 应用程序内。 你可以创建新的 IIS 应用程序以独占方式承载 WCF 服务。 或者，你可以将 WCF 服务部署到现有应用程序，该应用程序已托管 ASP.NET 2.0 内容（如 .aspx 页和 ASP.NET Web services [.ASMX]）。 有关这些选项的详细信息，请参阅[Wcf 服务和 ASP.NET](wcf-services-and-aspnet.md)中的 "在 ASP.NET 兼容模式下承载 wcf 并行" 和 "在兼容模式下承载 wcf 服务" 部分。
 
-请注意，IIS 6.0 和更高版本定期重新启动独立的面向对象的编程应用程序。 默认值为 1740 分钟。 支持的最大值为 71,582 分钟。 可以禁用此重新启动。 有关此属性的详细信息，请参阅[PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)。
+请注意，IIS 6.0 和更高版本定期重新启动独立的面向对象的编程应用程序。 默认值为 1740 分钟。 支持的最大值为 71,582 分钟。 可以禁用此重新启动。 有关此属性的详细信息，请参阅[PeriodicRestartTime](https://docs.microsoft.com/previous-versions/iis/6.0-sdk/ms525914(v=vs.90))。
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>为 WCF 服务创建 .svc 文件
 
-IIS 中承载的 WCF 服务在 IIS 应用程序内表示为特殊内容文件（.svc 文件）。 此模型与在 IIS 应用程序内将 ASMX 页表示为 .asmx 文件的方式类似。 .Svc 文件包含特定于 wcf 的处理指令（[\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)），该指令允许 WCF 宿主基础结构激活承载的服务以响应传入消息。 .svc 文件的最常见语法如以下语句所示。
+IIS 中承载的 WCF 服务在 IIS 应用程序内表示为特殊内容文件（.svc 文件）。 此模型与在 IIS 应用程序内将 ASMX 页表示为 .asmx 文件的方式类似。 .Svc 文件包含 WCF 特定的处理指令（[\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)），该指令允许 WCF 宿主基础结构激活承载的服务以响应传入消息。 .svc 文件的最常见语法如以下语句所示。
 
 `<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>`
 
-它由[ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)指令和单个属性`Service`组成。 `Service` 属性的值是服务实现的公共语言运行库 (CLR) 类型名称。 使用此指令与使用以下代码创建服务主机基本等效。
+它由[\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)指令和单个属性组成，`Service`。 `Service` 属性的值是服务实现的公共语言运行库 (CLR) 类型名称。 使用此指令与使用以下代码创建服务主机基本等效。
 
 ```csharp
 new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 ```
 
-也可以执行其他承载配置，如创建服务的基址列表。 也可以使用自定义 <xref:System.ServiceModel.Activation.ServiceHostFactory> 扩展指令以用于自定义承载解决方案。 承载 WCF 服务的 IIS 应用程序不负责管理<xref:System.ServiceModel.ServiceHost>实例的创建和生存期。 当收到 .svc 文件的第一个请求<xref:System.ServiceModel.ServiceHost>时，托管 WCF 宿主基础结构会动态创建必要的实例。 在代码显式关闭该实例之前或回收应用程序时，不释放该实例。
+也可以执行其他承载配置，如创建服务的基址列表。 也可以使用自定义 <xref:System.ServiceModel.Activation.ServiceHostFactory> 扩展指令以用于自定义承载解决方案。 承载 WCF 服务的 IIS 应用程序不负责管理 <xref:System.ServiceModel.ServiceHost> 实例的创建和生存期。 当收到 .svc 文件的第一个请求时，托管 WCF 宿主基础结构会动态创建必要的 <xref:System.ServiceModel.ServiceHost> 实例。 在代码显式关闭该实例之前或回收应用程序时，不释放该实例。
 
-有关 .svc 文件语法的详细信息，请参阅[ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)。
+有关 .svc 文件语法的详细信息，请参阅[\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)。
 
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>将服务实现部署到 IIS 应用程序
 
@@ -67,11 +67,11 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 
 - 作为全局程序集缓存 (GAC) 或应用程序的 \bin 目录中的预编译 .dll 文件。 在部署类库的新版本后，才更新预编译的二进制文件。
 
-- 作为位于应用程序的 \App_Code 目录中的未编译源文件。 处理应用程序的第一个请求时，动态需要位于此目录中的源文件。 对 \App_Code 目录中文件进行的任何更改都导致在收到下一个请求时回收和重新编译整个应用程序。
+- 作为位于应用程序的 \ App_Code 目录中的未编译源文件。 处理应用程序的第一个请求时，动态需要位于此目录中的源文件。 对 \App_Code 目录中文件进行的任何更改都导致在收到下一个请求时回收和重新编译整个应用程序。
 
-- 作为直接放置在 .svc 文件中的未编译代码。 实现代码还可以在服务的 .svc 文件中内联定位到\@ServiceHost 指令之后。 对内联代码进行的任何更改导致在收到下一个请求时回收和重新编译应用程序。
+- 作为直接放置在 .svc 文件中的未编译代码。 在 \@ServiceHost 指令后，还可以在服务的 .svc 文件中以内联方式找到实现代码。 对内联代码进行的任何更改导致在收到下一个请求时回收和重新编译应用程序。
 
-有关 ASP.NET 2.0 编译模型的详细信息，请参阅[ASP.NET 编译概述](https://go.microsoft.com/fwlink/?LinkId=94773)。
+有关 ASP.NET 2.0 编译模型的详细信息，请参阅[ASP.NET 编译概述](https://docs.microsoft.com/previous-versions/aspnet/ms178466(v=vs.100))。
 
 ## <a name="configure-the-wcf-service"></a>配置 WCF 服务
 
@@ -79,25 +79,25 @@ IIS 承载的 WCF 服务将其配置存储在应用程序的 web.config 文件�
 
 - 承载于 IIS 中的服务的基址。
 
-- 在 IIS 外部承载 WCF 服务的应用程序可以通过将一组基址 uri 传递到<xref:System.ServiceModel.ServiceHost>构造函数或[ \<](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)提供服务的中 > 元素，来控制它们所承载服务的基址。configuration. 承载于 IIS 中的服务无法控制其基址；承载于 IIS 中的服务的基址是其 .svc 文件的地址。
+- 在 IIS 外部承载 WCF 服务的应用程序可以通过将一组基址 Uri 传递给 <xref:System.ServiceModel.ServiceHost> 构造函数或在服务的配置中提供[\<主机 >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)元素，来控制它们所承载服务的基址。 承载于 IIS 中的服务无法控制其基址；承载于 IIS 中的服务的基址是其 .svc 文件的地址。
 
 ### <a name="endpoint-addresses-for-iis-hosted-services"></a>承载于 IIS 中的服务的终结点地址
 
-承载于 IIS 中时，任何终结点地址始终被认为相对于表示服务的 .svc 文件的地址。 例如，如果 WCF 服务`http://localhost/Application1/MyService.svc`的基址具有以下终结点配置：
+承载于 IIS 中时，任何终结点地址始终被认为相对于表示服务的 .svc 文件的地址。 例如，如果 WCF 服务的基址与以下终结点配置 `http://localhost/Application1/MyService.svc`：
 
 ```xml
 <endpoint address="anotherEndpoint" .../>
 ```
 
-这提供了一个可以在上`http://localhost/Application1/MyService.svc/anotherEndpoint`访问的终结点。
+这会提供可在 `http://localhost/Application1/MyService.svc/anotherEndpoint`上访问的终结点。
 
-同样，使用空字符串作为相对地址的终结点配置元素提供了一个可到达`http://localhost/Application1/MyService.svc`的终结点，即基址。
+同样，使用空字符串作为相对地址的终结点配置元素提供了可在 `http://localhost/Application1/MyService.svc`（基址）访问的终结点。
 
 ```xml
 <endpoint address="" ... />
 ```
 
-对于承载于 IIS 中的服务的终结点，必须始终使用相对终结点地址。 如果终结点地址未指向承载公开终结点的`http://localhost/MyService.svc`服务的 IIS 应用程序，则提供完全限定的终结点地址（例如）可能会导致服务部署出错。 对所承载的服务使用相对终结点地址避免了这些潜在冲突。
+对于承载于 IIS 中的服务的终结点，必须始终使用相对终结点地址。 如果终结点地址未指向承载公开终结点的服务的 IIS 应用程序，则提供完全限定的终结点地址（例如 `http://localhost/MyService.svc`）可能会导致服务部署中的错误。 对所承载的服务使用相对终结点地址避免了这些潜在冲突。
 
 ### <a name="available-transports"></a>可用传输
 
@@ -109,8 +109,8 @@ IIS 承载的 WCF 服务可以利用 HTTP 传输安全（例如，HTTPS 和 HTTP
 
 例如，配置为使用 HTTP 摘要式身份验证的 WCF 终结点必须驻留在也配置为允许 HTTP 摘要式身份验证的 IIS 虚拟目录中。 IIS 设置和 WCF 终结点设置的不匹配组合会导致服务激活期间出错。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Internet Information Services 中承载](hosting-in-internet-information-services.md)
 - [Internet Information Services 承载最佳做法](internet-information-services-hosting-best-practices.md)
-- [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server App Fabric 承载功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

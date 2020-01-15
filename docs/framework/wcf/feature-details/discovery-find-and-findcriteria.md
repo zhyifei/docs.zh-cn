@@ -2,16 +2,16 @@
 title: Discovery Find 和 FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 477edabb5d6fe263db43debc2f1d4f29df862609
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: da4c3c4a1d765e4f91b03f4f8fc1a73c3fea1535
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663362"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964838"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Discovery Find 和 FindCriteria
 
-发现查找操作是发现功能中的主要操作之一，它由客户端启动，用于发现一个或多个服务。 执行查找时将通过网络发送一条 WS-Discovery Probe 消息。 与指定条件匹配的服务通过 WS-Discovery ProbeMatch 消息进行答复。 有关发现消息的详细信息，请参阅[Ws-discovery 规范](https://go.microsoft.com/fwlink/?LinkID=122347)。
+发现查找操作是发现功能中的主要操作之一，它由客户端启动，用于发现一个或多个服务。 执行查找时将通过网络发送一条 WS-Discovery Probe 消息。 与指定条件匹配的服务通过 WS-Discovery ProbeMatch 消息进行答复。 有关发现消息的详细信息，请参阅[WS 发现规范](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)。
 
 ## <a name="discoveryclient"></a>DiscoveryClient
 
@@ -23,7 +23,7 @@ ms.locfileid: "67663362"
 
 搜索条件包括：
 
-- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - 可选项。 要搜索的服务的协定名称以及搜索服务时通常采用的条件。 如果指定了多个协定名称，则只有与所有协定均匹配的服务终结点才会进行答复。 请注意，在 WCF 中终结点只能支持一个协定。
+- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - 可选项。 要搜索的服务的协定名称以及搜索服务时通常采用的条件。 如果指定了多个协定名称，则只有与所有协定均匹配的服务终结点才会进行答复。 请注意，在 WCF 中，一个终结点只能支持一个协定。
 
 - <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> - 可选项。 范围表示对各服务终结点进行分类所使用的绝对 URI。 如果多个终结点公开同一协定，并且您希望采用某种方法来搜索终结点的子集，则您可能希望使用此搜索条件。 如果指定了多个范围，则只有与所有范围匹配的服务终结点才会进行答复。
 
@@ -31,7 +31,7 @@ ms.locfileid: "67663362"
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> 执行区分大小写的基本字符串比较。
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> 由分隔的段的匹配项"/"。 搜索`http://contoso/building1`匹配具有作用域的服务`http://contoso/building/floor1`。 请注意，它不匹配`http://contoso/building100`因为最后两个段不匹配。
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> 按 "/" 分隔的段匹配。 搜索 `http://contoso/building1` 与范围 `http://contoso/building/floor1`的服务匹配。 请注意，它与 `http://contoso/building100` 不匹配，因为最后两个段不匹配。
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> 按使用 LDAP URL 的段来匹配范围。
 
@@ -68,7 +68,7 @@ FindResponse findResponse = discoveryClient.Find(findCriteria);
 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count)
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [使用发现客户端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)

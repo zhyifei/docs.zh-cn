@@ -1,18 +1,18 @@
 ---
-title: 如何：在 WAS 中承载 WCF 服务
+title: 如何在 WAS 中承载 WCF
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: b6d3ace054260de1ca649fbf4bd54156bbea24ce
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9945e398bbd33776cce808b44388a4415da297a1
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972207"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964774"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a>如何：在 WAS 中承载 WCF 服务
+# <a name="how-to-host-a-wcf-service-in-was"></a>如何在 WAS 中承载 WCF
 本主题概述了创建 Windows 进程激活服务（也称为 WAS）托管 Windows Communication Foundation （WCF）服务所需的基本步骤。 WAS 是新的进程激活服务，是对使用非 HTTP 传输协议的 Internet Information Services (IIS) 功能的泛化。 WCF 使用侦听器适配器接口传递通过 WCF 支持的非 HTTP 协议（如 TCP、命名管道和消息队列）接收的激活请求。  
   
- 此主机选项要求正确安装和配置 WAS 激活组件，但不要求编写任何主机代码作为应用程序的一部分。 有关安装和配置 WAS 的详细信息，请[参阅如何：安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
+ 此主机选项要求正确安装和配置 WAS 激活组件，但不要求编写任何主机代码作为应用程序的一部分。 有关安装和配置 WAS 的详细信息，请参阅[如何：安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
   
 > [!WARNING]
 > 如果将 Web 服务器的请求处理管道设置为经典模式，则将不支持 WAS 激活。 如果要使用 WAS 激活，则必须将 Web 服务器的请求处理管道设置为集成模式。  
@@ -98,7 +98,7 @@ ms.locfileid: "70972207"
   
 6. 编译并运行客户端。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [TCP 激活](../../../../docs/framework/wcf/samples/tcp-activation.md)
-- [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server App Fabric 承载功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

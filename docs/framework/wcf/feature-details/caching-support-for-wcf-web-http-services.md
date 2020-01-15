@@ -2,15 +2,16 @@
 title: 对 WCF Web HTTP 服务的缓存支持
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 7c60deab635c29785398a1b50f9cf14c0f688420
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 5964c58ce28f67815774741815bba0fcbe3b2de7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141785"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964222"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>对 WCF Web HTTP 服务的缓存支持
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 使你能够使用 WCF Web HTTP 服务中已在 ASP.NET 中提供的声明性缓存机制。 这样，你可以缓存来自 WCF Web HTTP 服务操作的响应。 如果用户向配置为进行缓存的服务发送了 HTTP GET，ASP.NET 将发送回已缓存的响应且不会调用服务方法。 在缓存过期后，下次用户发送 HTTP GET 时，将会调用服务方法且再次缓存响应。 有关 ASP.NET 缓存的详细信息，请参阅[ASP.NET 缓存概述](https://go.microsoft.com/fwlink/?LinkId=152534)  
+
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 使你能够使用 WCF Web HTTP 服务中已在 ASP.NET 中提供的声明性缓存机制。 这样，你可以缓存来自 WCF Web HTTP 服务操作的响应。 如果用户向配置为进行缓存的服务发送了 HTTP GET，ASP.NET 将发送回已缓存的响应且不会调用服务方法。 在缓存过期后，下次用户发送 HTTP GET 时，将会调用服务方法且再次缓存响应。 有关 ASP.NET 缓存的详细信息，请参阅[ASP.NET 缓存概述](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))。  
   
 ## <a name="basic-web-http-service-caching"></a>基本 Web HTTP 服务缓存  
  若要启用 WEB HTTP 服务缓存，必须首先通过将 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 应用到服务且将 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> 设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> 来启用 ASP.NET 兼容性。  
@@ -122,10 +123,10 @@ public class Service
  此处将缓存持续时间设置为 60 秒，将 `varyByParam` 设置为“无”，并将 `sqlDependency` 设置为以分号分隔的数据库名称列表/以冒号分隔的表对。 当 `MyTable` 中的数据发生更改时，将删除服务操作的已缓存响应；当调用操作时，将生成新的响应（通过调用服务操作），缓存该响应并将其返回到客户端。  
   
 > [!IMPORTANT]
-> 要使 ASP.NET 能够访问 SQL 数据库，必须使用[ASP.NET SQL Server 注册工具](https://go.microsoft.com/fwlink/?LinkId=152536)。 此外，还必须允许适当的用户帐户对数据库和表具有访问权限。 有关详细信息，请参阅[从 Web 应用程序访问 SQL Server](https://go.microsoft.com/fwlink/?LinkId=178988)。  
+> 要使 ASP.NET 能够访问 SQL 数据库，必须使用[ASP.NET SQL Server 注册工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229862(v=vs.90))。 此外，还必须允许适当的用户帐户对数据库和表具有访问权限。 有关详细信息，请参阅[从 Web 应用程序访问 SQL Server](https://docs.microsoft.com/previous-versions/aspnet/ht43wsex(v=vs.100))。  
   
 ## <a name="conditional-http-get-based-caching"></a>基于条件 HTTP GET 的缓存  
- 在 Web HTTP 方案中，服务通常使用条件 HTTP GET 来实现智能 HTTP 缓存，如[HTTP 规范](https://go.microsoft.com/fwlink/?LinkId=165800)中所述。 为此，服务必须在 HTTP 响应中设置 ETag 标头的值。 服务还必须检查 HTTP 请求中的 If-None-Match 标头，查看是否有任何指定的 ETag 与当前 ETag 相匹配。  
+ 在 Web HTTP 方案中，服务通常使用条件 HTTP GET 来实现智能 HTTP 缓存，如[HTTP 规范](https://www.w3.org/Protocols/rfc2616/rfc2616.html)中所述。 为此，服务必须在 HTTP 响应中设置 ETag 标头的值。 服务还必须检查 HTTP 请求中的 If-None-Match 标头，查看是否有任何指定的 ETag 与当前 ETag 相匹配。  
   
  对于 GET 和 HEAD 请求，<xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> 接受 ETag 值并根据请求的 If-None-Match 标头检查该值。 如果该标头存在并且匹配，将引发 <xref:System.ServiceModel.Web.WebFaultException>，返回 HTTP 状态代码 304（未修改），并将 ETag 标头添加到具有匹配的 ETag 的响应中。  
   
@@ -162,5 +163,5 @@ public Customer GetCustomer(string id)
 }
 ```  
   
-## <a name="security-considerations"></a>安全注意事项  
+## <a name="security-considerations"></a>需要考虑的安全性因素  
  对于需要授权的请求，不应缓存其响应，因为从缓存中提供响应时不会执行该授权。  缓存此类响应将会带来严重的安全漏洞。  通常，需要授权的请求会提供用户特定数据，因此服务器端缓存也没有益处。  在这种情况下，客户端缓存或根本不缓存将更合适。

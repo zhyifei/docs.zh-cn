@@ -2,12 +2,12 @@
 title: 身份验证的扩展保护概述
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: 2c166ae4795a64983c0df81629669c9cbf5b0d97
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 400bf7987b5fcd4ec75628d19a30739dd5f23b08
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665955"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964603"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>身份验证的扩展保护概述
 身份验证的扩展保护有助于抵御中间人 (MITM) 攻击，在此类攻击中，攻击者截获客户端凭据并将它们转发给服务器。  
@@ -32,6 +32,6 @@ ms.locfileid: "64665955"
   
  有关更多信息，请参见 Win7 CBT/扩展保护示例。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

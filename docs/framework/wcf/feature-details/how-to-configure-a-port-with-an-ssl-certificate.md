@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: d56da60f174933af789a6abd7d8aa90f3f29d9c1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1ea7680d092a4270b8c0969c50db8accf7c23d49
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344627"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963312"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>如何：使用 SSL 证书配置端口
 使用 <xref:System.ServiceModel.WSHttpBinding> 类创建使用传输安全的自承载 Windows Communication Foundation （WCF）服务时，还必须使用 x.509 证书配置端口。 如果不是在创建自承载服务，可以在 Internet 信息服务 (IIS) 上承载服务。 有关详细信息，请参阅[HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
   
  若要配置端口，使用的工具取决于计算机运行的操作系统。  
   
- 如果运行的是 Windows Server 2003 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，请使用 Httpcfg.exe 工具。 对于 Windows Server 2003，安装了此工具。 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，可以在[WINDOWS XP Service Pack 2 支持工具](https://go.microsoft.com/fwlink/?LinkId=88606)中下载该工具。 有关详细信息，请参阅[Httpcfg.exe 概述](https://go.microsoft.com/fwlink/?LinkId=88605)。 [Windows 支持工具文档](https://go.microsoft.com/fwlink/?LinkId=94840)说明了 httpcfg.exe 工具的语法。  
+ 如果运行的是 Windows Server 2003 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，请使用 Httpcfg.exe 工具。 对于 Windows Server 2003，安装了此工具。 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，可以在[WINDOWS XP Service Pack 2 支持工具](https://go.microsoft.com/fwlink/?LinkId=88606)中下载该工具。 有关详细信息，请参阅[Httpcfg.exe 概述](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))。 [Windows 支持工具文档](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10))说明了 httpcfg.exe 工具的语法。  
   
  如果运行的是 Windows Vista，请使用已安装的 Netsh 工具。  
   

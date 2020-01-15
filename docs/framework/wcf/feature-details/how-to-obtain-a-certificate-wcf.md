@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: 485741f98c4a120669eafe85d3a3810374f61378
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: bfe6dcfe6850ee17a7bbb59f3a6ccad6c3c3e7d7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347141"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964243"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>如何：获取证书 (WCF)
 若要使用使用 x.509 证书的的任何 Windows Communication Foundation （WCF）功能，只需获取证书。  
@@ -20,7 +20,7 @@ ms.locfileid: "75347141"
   
     - 从证书颁发机构（如 VeriSign Inc）购买证书。  
   
-    - 设置自己的证书服务，并让证书颁发机构为证书签名。 Windows Server 2003、Windows 2000 服务器、Windows 2000 Server Datacenter 和 Windows 2000 Datacenter 服务器都包含支持公钥基础结构（PKI）的证书服务。 在 Windows Server 2008 中，使用[Active Directory 证书服务](https://go.microsoft.com/fwlink/?LinkID=153483)角色来管理证书颁发机构。  
+    - 设置自己的证书服务，并让证书颁发机构为证书签名。 Windows Server 2003、Windows 2000 服务器、Windows 2000 Server Datacenter 和 Windows 2000 Datacenter 服务器都包含支持公钥基础结构（PKI）的证书服务。 在 Windows Server 2008 中，使用[Active Directory 证书服务](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731564(v=ws.10))角色来管理证书颁发机构。  
   
     - 设置自己的证书服务，但不对证书进行签名。  
   

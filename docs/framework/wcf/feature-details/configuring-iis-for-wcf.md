@@ -2,12 +2,12 @@
 title: 为 Windows Communication Foundation 配置 Internet Information Services 7.0
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-ms.openlocfilehash: 369fd641adc91c58a676a7c2708e267366d73b41
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 41eedcf78d8ca6f10fcd0380e43420dcc1b328f1
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838047"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964510"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>为 Windows Communication Foundation 配置 Internet Information Services 7.0
 
@@ -71,4 +71,4 @@ Internet Information Services (IIS) 7.0 具有模块化设计，允许有选择�
 - [WAS 激活体系结构](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
 - [配置 WAS 以用于 WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
 - [如何：安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server App Fabric 承载功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

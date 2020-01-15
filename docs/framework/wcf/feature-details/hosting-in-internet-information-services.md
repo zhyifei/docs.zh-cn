@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: b8e8bbe35ec3091816a4a943662f93f1b4581663
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 108048f6bdd2c02a67e331bd7b07b724d0e86527
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544682"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963804"
 ---
 # <a name="host-in-internet-information-services"></a>Internet Information Services 中的主机
 
@@ -25,7 +25,7 @@ ms.locfileid: "75544682"
 
 - Windows Vista 和 Windows Server 2008 上的 IIS 7.0。 IIS 7.0 提供与 IIS 6.0 相同的高级进程模型，但使用 Windows 进程激活服务（WAS）允许通过 HTTP 以外的协议进行激活和网络通信。 此环境适用于 WCF 服务的开发，这些服务通过 WCF 支持的任何网络协议（包括 HTTP、net.tcp、net.pipe 和 net.tcp）进行通信。 有关 WAS 的详细信息，请参阅[Windows 进程激活服务中的托管](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。
 
-- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496)使用 IIS 7.0 和 Windows 进程激活服务（WAS）为 NET4 WCF 和 WF 服务提供丰富的应用程序宿主环境。 这些优点包括进程生命周期管理、进程回收、共享承载、快速失败保护、进程孤立、按需激活和运行状况监视。 有关详细信息，请参阅[Appfabric 托管功能](https://go.microsoft.com/fwlink/?LinkId=196494)和[appfabric 托管概念](https://go.microsoft.com/fwlink/?LinkId=196495)。
+- [Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))使用 IIS 7.0 和 Windows 进程激活服务（WAS）为 NET4 WCF 和 WF 服务提供丰富的应用程序宿主环境。 这些优点包括进程生命周期管理、进程回收、共享承载、快速失败保护、进程孤立、按需激活和运行状况监视。 有关详细信息，请参阅[Appfabric 托管功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))和[appfabric 托管概念](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10))。
 
 ## <a name="benefits-of-iis-hosting"></a>IIS 托管的优点
 
@@ -68,4 +68,4 @@ WCF 服务可与 ASP.NET 或在 ASP.NET 兼容模式下并行托管，在此模�
 - [WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
 - [Internet Information Services 承载最佳做法](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
 - [为 Windows Communication Foundation 配置 Internet Information Services 7.0](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)
-- [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server App Fabric 承载功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

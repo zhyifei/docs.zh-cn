@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 52e968706ef4ca703a26e613e681cff3c30ba181
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 45e4926905bbf3b5a24af15de153afc7bd2a4823
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838021"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964570"
 ---
 # <a name="debugging-windows-authentication-errors"></a>调试 Windows 身份验证错误
 使用 Windows 验证身份作为安全机制时，安全支持提供程序接口 (SSPI) 将处理安全进程。 当 SSPI 层发生安全错误时，它们将由 Windows Communication Foundation （WCF）呈现。 本主题提供一组问题以帮助诊断这些错误。  
   
- 有关 Kerberos 协议的概述，请参阅[Kerberos 说明](https://go.microsoft.com/fwlink/?LinkID=86946);有关 SSPI 的概述，请参阅[sspi](https://go.microsoft.com/fwlink/?LinkId=88941)。  
+ 有关 Kerberos 协议的概述，请参阅[Kerberos 说明](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10));有关 SSPI 的概述，请参阅[sspi](/windows/win32/secauthn/sspi)。  
   
  对于 Windows 身份验证，WCF 通常使用*Negotiate*安全支持提供程序（SSP），该提供程序在客户端和服务之间执行 Kerberos 相互身份验证。 如果 Kerberos 协议不可用，则默认情况下，WCF 将回退到 NT LAN Manager （NTLM）。 但是，你可以将 WCF 配置为仅使用 Kerberos 协议（如果 Kerberos 不可用，则会引发异常）。 你还可以将 WCF 配置为使用受限形式的 Kerberos 协议。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "74838021"
   
  在负载平衡方案（如网络场或网络园）中，常见的做法是为每个应用程序定义唯一帐户，为该帐户分配 SPN，并确保应用程序的所有服务都使用该帐户来运行。  
   
- 为了获取服务帐户的 SPN，需要具有 Active Directory 域管理员的身份。 有关详细信息，请参阅[适用于 Windows 的 Kerberos 技术补充](https://go.microsoft.com/fwlink/?LinkID=88330)。  
+ 为了获取服务帐户的 SPN，需要具有 Active Directory 域管理员的身份。 有关详细信息，请参阅[适用于 Windows 的 Kerberos 技术补充](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10))。  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Kerberos 协议定向要求在域计算机帐户下运行服务  
  当 `ClientCredentialType` 属性设置为 `Windows` 且 <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 属性设置为 `false` 时，会发生这种情况，如下面的代码所示。  
