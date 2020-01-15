@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 3187b8b94c6e46ec13312fc31ac1ed9852199d6b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 43e37dc4b0977542add05c8cc13e2d7fa47b19bf
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714613"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937494"
 ---
 # <a name="interfaces-c-programming-guide"></a>接口（C# 编程指南）
 
@@ -22,7 +22,7 @@ ms.locfileid: "75714613"
   
  [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
-结构名称必须是有效的 C# [标识符名称](../inside-a-program/identifier-names.md)。 按照约定，接口名称以大写字母 `I` 开头。
+接口名称必须是有效的 C# [标识符名称](../inside-a-program/identifier-names.md)。 按照约定，接口名称以大写字母 `I` 开头。
 
 实现 <xref:System.IEquatable%601> 接口的任何类或结构都必须包含与该接口指定的签名匹配的 <xref:System.IEquatable%601.Equals%2A> 方法的定义。 因此，可以依靠实现 `IEquatable<T>` 的类来包含 `Equals` 方法，类的实例可以通过该方法确定它是否等于相同类的另一个实例。  
   
