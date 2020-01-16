@@ -358,6 +358,8 @@
       href: porting/winforms.md
     - name: 移植 WPF 项目
       href: porting/wpf.md
+    - name: 端口 C++/CLI 项目
+      href: porting/cpp-cli.md
 - name: 依赖项加载
   items:
     - name: 概述
