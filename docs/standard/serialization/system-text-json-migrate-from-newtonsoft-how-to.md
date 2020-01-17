@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 8b3ffc885691264548a19f694d159ce07aba7550
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: 01f94bcfce97da8c71b1b709baa34c2b7509a5e5
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904694"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116683"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>如何从 Newtonsoft.json 迁移到 system.exception
 
@@ -136,17 +136,6 @@ The JSON value could not be converted to System.String.
 ### <a name="maximum-depth"></a>最大深度
 
 默认情况下，`Newtonsoft.Json` 没有最大深度限制。 对于 <xref:System.Text.Json>，默认限制为64，可通过设置 <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>进行配置。
-
-### <a name="stack-type-handling"></a>堆栈类型处理
-
-在 <xref:System.Text.Json>中，序列化时，堆栈的内容的顺序会反转。 此行为适用于以下类型和接口以及从它们派生的用户定义类型：
-
-* <xref:System.Collections.Stack>
-* <xref:System.Collections.Generic.Stack%601>
-* <xref:System.Collections.Immutable.ImmutableStack%601>
-* <xref:System.Collections.Immutable.IImmutableStack%601>
-
-可以实现自定义转换器以按相同顺序保留堆栈内容。
 
 ### <a name="omit-null-value-properties"></a>省略 null 值属性
 

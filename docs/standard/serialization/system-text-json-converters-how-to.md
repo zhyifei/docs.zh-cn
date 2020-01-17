@@ -7,12 +7,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 8a2af76ca64359c12fafce6678def14d11d9f029
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: 0f8b89ec7d7b1677de085631958b888e154aa4fa
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904571"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116720"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>如何编写 .NET 中的 JSON 序列化（封送处理）的自定义转换器
 
@@ -280,6 +280,8 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
   }
 ]
 ```
+
+前面的示例中的转换器代码将手动读取并写入每个属性。 一种替代方法是调用 `Deserialize` 或 `Serialize` 来执行某些工作。 有关示例，请参阅[此 StackOverflow 文章](https://stackoverflow.com/a/59744873/12509023)。
 
 ## <a name="other-custom-converter-samples"></a>其他自定义转换器示例
 

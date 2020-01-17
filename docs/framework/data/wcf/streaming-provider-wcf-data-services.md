@@ -10,18 +10,18 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 83f28c50c53281692e1c3c6d55cc55e8d9304ad9
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900913"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116598"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>流提供程序（WCF 数据服务）
 
 数据服务可公开二进制大型对象数据。 此二进制数据可以表示视频和音频流、图像、文档文件或其他类型的二进制媒体。 当数据模型中的某个实体包括一个或多个二进制属性时，数据服务会在响应源的入口内以 base-64 编码形式返回此二进制数据。 由于以这种方式加载和序列化大型二进制数据会影响性能，因此 Open Data Protocol （OData）定义了一种机制，该机制独立于其所属的实体来检索二进制数据。 这一点是通过将实体和二进制数据分隔到一个或多个数据流来实现的。
 
-- 媒体资源 - 属于某个实体的二进制数据，例如视频、音频、图像或其他类型的媒体资源流。
+- 媒体资源-属于某个实体的二进制数据，例如视频、音频、图像或其他类型的媒体资源流。
 
 - 媒体链接入口 - 引用相关媒体资源流的实体。
 
@@ -88,14 +88,14 @@ ms.locfileid: "75900913"
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>在宿主环境中启用大型二进制数据流
 
-在 ASP.NET Web 应用程序中创建数据服务时，Windows Communication Foundation （WCF）用于提供 HTTP 协议实现。 默认情况下，WCF 将 HTTP 消息的大小限制为仅 65K 字节。 为了使大型二进制数据能够流入或流出数据服务，还必须将 Web 应用程序配置为启用大型二进制文件并使用流进行转换。 为此，请将以下内容添加到应用程序的 Web.config 文件的 `<configuration />` 元素中：
+在 ASP.NET Web 应用程序中创建数据服务时，Windows Communication Foundation （WCF）用于提供 HTTP 协议实现。 默认情况下，WCF 将 HTTP 消息的大小限制为仅 65 KB。 为了使大型二进制数据能够流入或流出数据服务，还必须将 Web 应用程序配置为启用大型二进制文件并使用流进行转换。 为此，请将以下内容添加到应用程序的 Web.config 文件的 `<configuration />` 元素中：
 
 > [!NOTE]
 > 必须使用 <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> 传输模式来确保请求消息和响应消息中的二进制数据都经过流处理，并且不会通过 WCF 进行缓冲处理。
 
 有关详细信息，请参阅[流式传输消息传输](../../wcf/feature-details/streaming-message-transfer.md)和[传输配额](../../wcf/feature-details/transport-quotas.md)。
 
-默认情况下，Internet 信息服务 (IIS) 还将请求的大小限制为 4MB。 若要允许数据服务在 IIS 上运行时接收大于4MB 的流，还必须在 `<system.web />` 配置节中设置[HttpRuntime 元素（ASP.NET 设置架构）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100))的 `maxRequestLength` 属性，如以下示例中所示：
+默认情况下，Internet Information Services （IIS）还会将请求的大小限制为 4 MB。 若要允许数据服务在 IIS 上运行时接收大于 4 MB 的流，还必须在 `<system.web />` 配置节中设置[HttpRuntime 元素（ASP.NET 设置架构）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100))的 `maxRequestLength` 属性，如以下示例中所示：
 
 ## <a name="using-data-streams-in-a-client-application"></a>在客户端应用程序中使用数据流
 
@@ -117,7 +117,7 @@ ms.locfileid: "75900913"
 
   - 数据模型中不应包括作为媒体资源的二进制属性。 数据模型中公开的所有属性都会在响应源的入口中返回。
 
-  - 为了提高使用大型二进制数据流时的性能，建议您创建一个自定义流类来存储数据库中的二进制数据。 此类由 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 实现返回并将二进制数据分块区发送到数据库。 对于 SQL Server 数据库，当二进制数据大于1MB 时，建议使用 FILESTREAM 将数据流式传输到数据库。
+  - 为了提高使用大型二进制数据流时的性能，建议您创建一个自定义流类来存储数据库中的二进制数据。 此类由 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 实现返回并将二进制数据分块区发送到数据库。 对于 SQL Server 数据库，当二进制数据大于 1 MB 时，建议使用 FILESTREAM 将数据流式传输到数据库。
 
   - 确保您的数据库设计为存储将由数据服务接收的大型二进制数据流。
 
