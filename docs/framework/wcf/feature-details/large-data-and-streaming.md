@@ -2,20 +2,21 @@
 title: 大型数据和流
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 70e43eaf4dc77e07af8ec65faf9cf0fa9a7a0fe4
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 5719f941c71867699960c6029f9cc512021986f3
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991519"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212195"
 ---
 # <a name="large-data-and-streaming"></a>大型数据和流
-Windows Communication Foundation （WCF）是一种基于 XML 的通信基础结构。 由于 XML 数据通常采用[xml 1.0 规范](https://go.microsoft.com/fwlink/?LinkId=94838)中定义的标准文本格式进行编码，因此连接的系统开发人员和架构师通常关心网络上发送的消息的线路需求量（或大小），以及XML 基于文本的编码对二进制数据的有效传输提出了特殊的挑战。  
+
+Windows Communication Foundation （WCF）是一种基于 XML 的通信基础结构。 由于 XML 数据通常采用[xml 1.0 规范](https://www.w3.org/TR/REC-xml/)中定义的标准文本格式进行编码，因此，连接的系统开发人员和架构师通常关心网络上发送的消息的线路需求量（或大小），而基于文本的 XML 编码对二进制数据的有效传输提出了特殊的挑战。  
   
 ## <a name="basic-considerations"></a>基本考虑事项  
  为了提供有关 WCF 的以下信息的背景信息，本部分重点介绍了通常适用于连接的系统基础结构的编码、二进制数据和流式处理的一些一般注意事项和注意事项。  
   
-### <a name="encoding-data-text-vs-binary"></a>编码数据：文本与二进制  
+### <a name="encoding-data-text-vs-binary"></a>编码数据：文本和二进制  
  开发人员最常有的顾虑包括：认为与二进制格式相比 XML 的开销非常可观（因为其开始标记和结束标记的重复性），数值的编码可能要大得多（因为它们是以文本值来表示的），并且无法有效地表示二进制数据（因为它们必须进行特殊的编码才能嵌入到文本格式中）。  
   
  尽管上述以及其他许多类似的问题是存在的，但是 XML Web services 环境中的 XML 文本编码消息与旧式的远程过程调用 (RPC) 环境中的二进制编码消息之间的实际差异，通常远远小于最初的考虑中所预想的程度。  
@@ -56,10 +57,10 @@ Windows Communication Foundation （WCF）是一种基于 XML 的通信基础结
   
  对于不具有上述限制条件的数据，通常最好在一个会话的范围内发送消息序列，而不是一次性地发送一个大消息。 有关详细信息，请参阅本主题后面的 "流式处理数据" 一节。  
   
- 发送大量数据时，需要设置`maxAllowedContentLength` IIS 设置（有关详细信息，请参阅[配置 iis 请求限制](https://go.microsoft.com/fwlink/?LinkId=253165)）和`maxReceivedMessageSize`绑定设置（例如[BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A)或<xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>）。 属性默认为 28.6 M `maxReceivedMessageSize` ，属性默认为64kb。 `maxAllowedContentLength`  
+ 发送大量数据时，需要设置 `maxAllowedContentLength` IIS 设置（有关详细信息，请参阅[配置 Iis 请求限制](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)）和 `maxReceivedMessageSize` 绑定设置（例如[BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A)或 <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>）。 `maxAllowedContentLength` 属性的默认值为 28.6 MB，`maxReceivedMessageSize` 属性默认为64KB。  
   
 ## <a name="encodings"></a>编码  
- *编码*定义有关如何在网络上显示消息的一组规则。 *编码器*实现此类编码，并负责在发送方，将内存中的内存<xref:System.ServiceModel.Channels.Message>转换为可通过网络发送的字节流或字节缓冲区。 在接收方，编码器会将一系列字节转变为内存中的消息。  
+ *编码*定义有关如何在网络上显示消息的一组规则。 *编码器*实现此类编码，并负责在发送方，将内存中 <xref:System.ServiceModel.Channels.Message> 转换为可通过网络发送的字节流或字节缓冲区。 在接收方，编码器会将一系列字节转变为内存中的消息。  
   
  WCF 包括三个编码器，并允许你编写并插入你自己的编码器（如有必要）。  
   
@@ -67,7 +68,7 @@ Windows Communication Foundation （WCF）是一种基于 XML 的通信基础结
   
 |编码器绑定元素|描述|  
 |-----------------------------|-----------------|  
-|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|文本消息编码器是所有基于 HTTP 的绑定的默认编码器，并且是最关注互操作性的所有自定义绑定的正确选择。 此编码器读取和编写标准 SOAP 1.1/SOAP 1.2 文本消息，而不会对二进制数据进行任何特殊处理。 如果消息<xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType>的属性设置为<xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>，则会从输出中省略 SOAP 信封包装，并且仅序列化消息正文内容。|  
+|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|文本消息编码器是所有基于 HTTP 的绑定的默认编码器，并且是最关注互操作性的所有自定义绑定的正确选择。 此编码器读取和编写标准 SOAP 1.1/SOAP 1.2 文本消息，而不会对二进制数据进行任何特殊处理。 如果消息的 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>，则将从输出中省略 SOAP 信封包装，并且仅序列化消息正文内容。|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|MTOM 消息编码器是一个文本编码器，实现对二进制数据的特殊处理，默认情况下在任何标准绑定中都不会使用，因为它是一个严格按具体情况进行优化的实用工具。 只有当二进制数据的量不超过某个阈值时，MTOM 编码才具有优势，如果消息包含的二进制数据超过了这个阈值，则这些数据会外部化到消息信封之后的 MIME 部分。 请参见本节后面部分中的“启用 MTOM”。|  
 |<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|二进制消息编码器是 Net * 绑定的默认编码器，只要两个通信方都基于 WCF，就可以选择相应的编码器。 二进制消息编码器使用 .NET 二进制 XML 格式，该格式是 XML 信息集 (Information Sets, Infosets) 的 Microsoft 特定二进制表示法，与等效的 XML 1.0 表示法相比产生的需求量通常较小，并将二进制数据编码为字节流。|  
   
@@ -152,7 +153,7 @@ class MyData
  当使用对等通道传输时，流模式也不可用，因此流模式在 <xref:System.ServiceModel.NetPeerTcpBinding> 中不可用。  
   
 #### <a name="streaming-and-sessions"></a>流和会话  
- 在流与基于会话的绑定一起调用时可能会产生意外行为。 可通过单一通道（数据报通道）执行所有流调用，该通道不支持会话，即使将正在使用的绑定配置为使用会话也是如此。 如果多个客户端通过基于会话的绑定对同一服务对象进行流调用，并且该服务对象的并发模式设置为“单个”，同时其实例上下文模式设置为 PerSession，则所用调用都必须经过数据报通道，因此一次只处理一个调用。 一个或多个客户端因此可能会超时。通过将该服务对象的实例上下文模式设置为 PerCall 或将“并发”设置为“多个”，可以解决此问题。  
+ 在流与基于会话的绑定一起调用时可能会产生意外行为。 可通过单一通道（数据报通道）执行所有流调用，该通道不支持会话，即使将正在使用的绑定配置为使用会话也是如此。 如果多个客户端通过基于会话的绑定对同一服务对象进行流调用，并且该服务对象的并发模式设置为“单个”，同时其实例上下文模式设置为 PerSession，则所用调用都必须经过数据报通道，因此一次只处理一个调用。 一个或多个客户端可能会超时。可以通过将服务对象的实例上下文模式设置为 PerCall 或并发性到多个，来解决此问题。  
   
 > [!NOTE]
 > MaxConcurrentSessions 在此情况下不会产生任何影响，因为只有一个“会话”可用。  
@@ -220,24 +221,24 @@ public class UploadStreamMessage
 }   
 ```  
   
- 当流到达文件尾 (EOF) 时，流传输结束，消息关闭。 当发送消息（返回一个值或调用一个操作）时，您可以传递<xref:System.IO.FileStream> ，然后 WCF 基础结构将从该流中提取所有数据，直到流已完全读取并到达 EOF。 要为不存在此类预置 <xref:System.IO.Stream> 派生类的源传输流数据，请构造这样一个类，用该类覆盖流源，并将其用作自变量或返回值。  
+ 当流到达文件尾 (EOF) 时，流传输结束，消息关闭。 当发送消息（返回一个值或调用一个操作）时，你可以传递一个 <xref:System.IO.FileStream>，WCF 基础结构随后会从该流中提取所有数据，直到流已完全读取并到达 EOF。 要为不存在此类预置 <xref:System.IO.Stream> 派生类的源传输流数据，请构造这样一个类，用该类覆盖流源，并将其用作自变量或返回值。  
   
  在接收消息时，WCF 将使用 Base64 编码的消息正文内容（或者，如果使用 MTOM，则为相应的 MIME 部分）构造流，并在读取内容时流到达 EOF。  
   
  传输级流还可以与其他任何消息协定类型（参数列表、数据协定参数和显式消息协定）一起工作，但是由于此类型化消息的序列化和反序列化要求由序列化程序进行缓冲，因此不建议使用此类协定变体。  
   
 ### <a name="special-security-considerations-for-large-data"></a>关于大型数据的特殊安全考虑事项  
- 所有绑定都允许您限制传入消息的大小，以阻止拒绝服务攻击。 例如，公开[BasicHttpBinding MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A)属性，该属性限制传入消息的大小，因此还限制处理时所访问的最大内存量。 <xref:System.ServiceModel.BasicHttpBinding>消息。 此单元是以字节为单位设置的，默认值为 65,536 个字节。  
+ 所有绑定都允许您限制传入消息的大小，以阻止拒绝服务攻击。 例如，<xref:System.ServiceModel.BasicHttpBinding>公开[MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A)属性，该属性限制传入消息的大小，因此也会限制处理消息时所访问的最大内存量。 此单元是以字节为单位设置的，默认值为 65,536 个字节。  
   
  大型数据流情形所特有的安全威胁会在接收方希望数据以流模式发送时导致数据缓冲，从而促使拒绝服务。 例如，WCF 始终会缓冲消息的 SOAP 标头，因此攻击者可能会构建一个完全由标头组成的大型恶意消息来强制缓冲数据。 当启用流模式时，`MaxReceivedMessageSize` 可能设置为一个极其大的值，因为接收方绝预料不到会一次性地在内存中缓冲整个消息。 如果强制 WCF 对消息进行缓冲，则会发生内存溢出。  
   
- 因此，这种情况下仅限制最大传入消息大小是不够的。 需要`MaxBufferSize`属性来约束 WCF 缓冲区的内存。 进行流处理时，将此属性设置为一个安全值（或保留为默认值）很重要。 例如，假设您的服务必须接收大至 4 GB 的文件，并将其存储在本地磁盘上。 另外，还假设您的内存存在一些约束，一次只能缓冲 64 KB 的数据。 这样，您应该将 `MaxReceivedMessageSize` 设置为 4 GB，将 `MaxBufferSize` 设置为 64 KB。 另外，在您的服务实现中，必须确保仅按 64 KB 大小的块从传入流中读取数据，并且在上一块写入到磁盘并从内存中丢弃之前，不读取下一块。  
+ 因此，这种情况下仅限制最大传入消息大小是不够的。 需要 `MaxBufferSize` 属性来限制 WCF 缓冲区的内存。 进行流处理时，将此属性设置为一个安全值（或保留为默认值）很重要。 例如，假设您的服务必须接收大至 4 GB 的文件，并将其存储在本地磁盘上。 另外，还假设您的内存存在一些约束，一次只能缓冲 64 KB 的数据。 这样，您应该将 `MaxReceivedMessageSize` 设置为 4 GB，将 `MaxBufferSize` 设置为 64 KB。 另外，在您的服务实现中，必须确保仅按 64 KB 大小的块从传入流中读取数据，并且在上一块写入到磁盘并从内存中丢弃之前，不读取下一块。  
   
  还必须了解，此配额仅限制由 WCF 完成的缓冲，而不能防止您在自己的服务或客户端实现中执行任何缓冲。 有关其他安全注意事项的详细信息，请参阅[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。  
   
 > [!NOTE]
 > 使用缓冲传输还是流传输是在终结点本地决定的。 对于 HTTP 传输，传输模式不会通过连接传播，也不会传播到代理服务器和其他中间方。 设置传输模式不会反映在服务接口的说明中。 将 WCF 客户端生成到服务后，必须编辑要与流式传输一起使用的服务的配置文件，以设置模式。 对于 TCP 和命名管道传输协议，该传输模式将作为策略断言传播。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：启用流式处理](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

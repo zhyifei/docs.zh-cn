@@ -2,19 +2,19 @@
 title: 终结点：Reliable Messaging Sessions Faulted Per Second（每秒出错的可靠消息会话数）
 ms.date: 03/30/2017
 ms.assetid: e9ae808a-7e1f-46b0-9560-d5a866be6d6e
-ms.openlocfilehash: f6b48ec4c37c28588dd874a5bfa94a01a2f43b0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26fd8236af6516716f7cf9c7c06f669473bdfc3a
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61951237"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163184"
 ---
 # <a name="endpoint-reliable-messaging-sessions-faulted-per-second"></a>终结点：Reliable Messaging Sessions Faulted Per Second（每秒出错的可靠消息会话数）
-计数器名称：每秒出错的可靠消息传送会话。  
+计数器名称：Reliable Messaging Sessions Faulted Per Second（每秒出错的可靠消息会话数）。  
   
 ## <a name="description"></a>描述  
  此终结点上每秒出错的可靠消息会话的数量。  
   
- 此计数器为性能计数器类型[PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)，使用以下公式计算其值。  
+ 此计数器的性能计数器类型[PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))，其值使用以下公式进行计算。  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)

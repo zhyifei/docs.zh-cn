@@ -5,33 +5,33 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: a5e3e96ce8c8bb3304c8abcc93a881998382c6ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 547c23509096b66c1fdbd46117a10f4de1692387
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638000"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212048"
 ---
 # <a name="message-security-with-a-user-name-client"></a>用户名客户端的消息安全
-下图显示了 Windows Communication Foundation (WCF) 服务和客户端使用消息级安全保护。 服务使用 X.509 证书进行身份验证。 客户端使用用户名和密码进行身份验证。  
+下图显示了使用消息级安全性保护 Windows Communication Foundation （WCF）服务和客户端。 服务使用 X.509 证书进行身份验证。 客户端使用用户名和密码进行身份验证。  
   
- 示例应用程序，请参阅[用户名消息安全](../../../../docs/framework/wcf/samples/message-security-user-name.md)。  
+ 有关示例应用程序，请参阅[消息安全用户名](../../../../docs/framework/wcf/samples/message-security-user-name.md)。  
   
  ![使用用户名身份验证的消息安全](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
 |特征|描述|  
 |--------------------|-----------------|  
-|安全模式|消息|  
-|互操作性|Windows Communication Foundation (WCF) 仅|  
+|安全模式|Message|  
+|互操作性|仅 Windows Communication Foundation （WCF）|  
 |身份验证（服务器）|初始协商需要服务器身份验证|  
 |身份验证（客户端）|用户名/密码|  
 |完整性|是，使用共享安全上下文|  
 |保密性|是，使用共享安全上下文|  
-|传输|HTTP|  
+|Transport|HTTP|  
 |绑定|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>服务  
- 下面的代码和配置应独立运行。 执行下列操作之一：  
+ 下面的代码和配置应独立运行。 执行以下操作之一：  
   
 - 使用代码（而不使用配置）创建独立服务。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "64638000"
 </configuration>  
 ```  
   
-## <a name="client"></a>客户端  
+## <a name="client"></a>Client  
   
 ### <a name="code"></a>代码  
  下面的代码创建客户端。 绑定设置为消息模式安全，客户端凭据类型设置为 `UserName`。 用户名和密码只能使用代码指定（不可配置）。 返回用户名和密码的代码未在此处显示，因为这必须在应用程序级完成。 例如，使用 Windows 窗体对话框查询用户以获得这些数据。  
@@ -125,10 +125,10 @@ ms.locfileid: "64638000"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [用户名消息安全](../../../../docs/framework/wcf/samples/message-security-user-name.md)
 - [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
-- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

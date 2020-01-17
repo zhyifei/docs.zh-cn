@@ -5,34 +5,34 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: 613b85e18109faa2a4386090e91aaddcfd8e0b68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fccdd021e392e6c37615a9091ce13f0e94167246
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038579"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212009"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>匿名客户端的消息安全
 
-下面的方案演示客户端和受保护的 Windows Communication Foundation (WCF) 消息安全的服务。 设计目标是使用消息安全而非传输安全，以便将来可支持更加丰富的基于声明的模型。 有关使用丰富声明用于授权的详细信息，请参阅[管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。
+下面的方案演示了 Windows Communication Foundation （WCF）消息安全性所保护的客户端和服务。 设计目标是使用消息安全而非传输安全，以便将来可支持更加丰富的基于声明的模型。 有关将丰富声明用于授权的详细信息，请参阅[使用标识模型管理声明和授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。
 
-示例应用程序，请参阅[匿名消息安全](../../../../docs/framework/wcf/samples/message-security-anonymous.md)。
+有关示例应用程序，请参阅[消息安全匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)。
 
-![消息与匿名客户端的安全](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
+![匿名客户端的消息安全性](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
 
 |特征|描述|
 |--------------------|-----------------|
-|安全模式|消息|
-|互操作性|WCF 仅|
+|安全模式|Message|
+|互操作性|仅 WCF|
 |身份验证（服务器）|初始协商要求服务器身份验证，而不是客户端身份验证|
-|身份验证（客户端）|None|
+|身份验证（客户端）|无|
 |完整性|是，使用共享安全上下文|
 |保密性|是，使用共享安全上下文|
-|传输|HTTP|
+|Transport|HTTP|
 
 ## <a name="service"></a>服务
 
-下面的代码和配置应独立运行。 执行下列操作之一：
+下面的代码和配置应独立运行。 执行以下操作之一：
 
 - 使用代码（而不使用配置）创建独立服务。
 
@@ -88,9 +88,9 @@ ms.locfileid: "62038579"
 </configuration>
 ```
 
-## <a name="client"></a>客户端
+## <a name="client"></a>Client
 
-下面的代码和配置应独立运行。 执行下列操作之一：
+下面的代码和配置应独立运行。 执行以下操作之一：
 
 - 使用代码（和客户端代码）创建独立客户端。
 
@@ -138,10 +138,10 @@ ms.locfileid: "62038579"
 </configuration>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [分布式应用程序安全](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
 - [匿名消息安全](../../../../docs/framework/wcf/samples/message-security-anonymous.md)
 - [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

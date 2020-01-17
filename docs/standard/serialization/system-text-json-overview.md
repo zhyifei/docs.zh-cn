@@ -1,17 +1,20 @@
 ---
 title: 使用C# -.NET 对 JSON 进行序列化和反序列化
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: c05783963ba521109fb542f247ec9e62fdb5c2d9
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: acb83be9b20a155b6b6a9fb5ade38e099f54e71d
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904647"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163587"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>.NET 中的 JSON 序列化和反序列化（封送和 unmarshalling）-概述
 
@@ -24,7 +27,7 @@ ms.locfileid: "75904647"
 ## <a name="how-to-get-the-library"></a>如何获取库
 
 * 该库作为[.Net Core 3.0](https://aka.ms/netcore3download)共享框架的一部分内置。
-* 对于其他目标框架，请安装[System.object](https://www.nuget.org/packages/System.Text.Json) NuGet 包。 包支持：
+* 对于其他目标框架，请安装[System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet 包。 包支持：
   * .NET Standard 2.0 及更高版本
   * .NET Framework 4.7.2 和更高版本
   * .NET Core 2.0、2.1 和2.2
@@ -32,9 +35,9 @@ ms.locfileid: "75904647"
 ## <a name="additional-resources"></a>其他资源
 
 * [如何使用库](system-text-json-how-to.md)
-* [如何从 Newtonsoft.json 迁移](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [如何从 Newtonsoft.Json 迁移](system-text-json-migrate-from-newtonsoft-how-to.md)
 * [如何编写转换器](system-text-json-converters-how-to.md)
-* [System.web 源文件](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
-* [System.web API 参考](xref:System.Text.Json)
-* [System.web. 串行化 API 参考](xref:System.Text.Json.Serialization)
+* [System.Text.Json 源代码](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
+* [System.Text.Json API 参考](xref:System.Text.Json)
+* [System.Text.Json。序列化 API 参考](xref:System.Text.Json.Serialization)
 <!-- * [Roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

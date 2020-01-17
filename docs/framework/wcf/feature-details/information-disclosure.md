@@ -2,12 +2,12 @@
 title: 信息泄露
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 0e45a71855ecb172f36aae8139f89d4b8c8ffd0d
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0bcf1aa04d7ba7477a6c3f1559a77bbda1f974af
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425307"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211956"
 ---
 # <a name="information-disclosure"></a>信息泄露
 
@@ -19,11 +19,11 @@ ms.locfileid: "67425307"
 
 ## <a name="policy-information"></a>策略信息
 
-保持策略安全是十分重要的，在联合方案中尤其如此 — 在这些方案中，会在策略中公开敏感的已颁发令牌要求或令牌颁发者信息。 在这些情况下，建议保护联合服务的策略终结点，以防止攻击者获取服务的有关信息（如要放置在已颁发令牌中的声明的类型）或是将客户端重定向到恶意的令牌颁发者。 例如，攻击者可能通过将联合信任链重新配置为终止于执行中间人攻击的颁发者处，来发现用户名/密码对。 此外，还建议通过策略检索来获取绑定的联合客户端验证是否信任所获得的联合信任链中的颁发者。 有关联合身份验证方案的详细信息，请参阅[联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)。
+保持策略安全是十分重要的，在联合方案中尤其如此 — 在这些方案中，会在策略中公开敏感的已颁发令牌要求或令牌颁发者信息。 在这些情况下，建议保护联合服务的策略终结点，以防止攻击者获取服务的有关信息（如要放置在已颁发令牌中的声明的类型）或是将客户端重定向到恶意的令牌颁发者。 例如，攻击者可能通过将联合信任链重新配置为终止于执行中间人攻击的颁发者处，来发现用户名/密码对。 此外，还建议通过策略检索来获取绑定的联合客户端验证是否信任所获得的联合信任链中的颁发者。 有关联合方案的详细信息，请参阅[联合](../../../../docs/framework/wcf/feature-details/federation.md)。
 
 ## <a name="memory-dumps-can-reveal-claim-information"></a>内存转储可能泄露声明信息
 
-当应用程序失败时，日志文件（如由 Dr. Watson 生成的那些日志文件）可能包含声明信息。 不应该将这些信息导出到其他实体，如支持团队；否则，包含私有数据的声明信息也会导出。 通过避免将日志文件发送到未知实体，可以减轻这一问题带来的威胁。 有关详细信息，请参阅[Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=89160)。
+当应用程序失败时，日志文件（如由 Dr. Watson 生成的那些日志文件）可能包含声明信息。 不应该将这些信息导出到其他实体，如支持团队；否则，包含私有数据的声明信息也会导出。 通过避免将日志文件发送到未知实体，可以减轻这一问题带来的威胁。
 
 ## <a name="endpoint-addresses"></a>终结点地址
 
@@ -35,13 +35,13 @@ ms.locfileid: "67425307"
 
 ## <a name="service-references"></a>服务引用
 
-服务引用是对另一个服务的引用。 例如，服务可能会在操作过程中将服务引用传递给客户端。 服务引用也用于*信任标识验证程序*，公开信息，例如应用程序数据或目标的凭据之前确保目标主体的标识的内部组件。 如果远程信任标识无法验证或不正确，则发送方应确保没有泄露任何可能危及自身、应用程序或用户的数据。
+服务引用是对另一个服务的引用。 例如，服务可能会在操作过程中将服务引用传递给客户端。 服务引用还用于*信任标识验证*程序，这是一个内部组件，它在向目标公开应用程序数据或凭据等信息之前确保目标主体的标识。 如果远程信任标识无法验证或不正确，则发送方应确保没有泄露任何可能危及自身、应用程序或用户的数据。
 
 缓解措施包括：
 
 - 假定服务引用是值得信任的。 无论何时传输服务引用实例时都应小心处理，以确保它们没有被篡改。
 
-- 某些应用程序可以提供这样一种用户体验，即允许基于服务引用中的数据和经过远程主机证明的信任数据来交互地建立信任。 WCF 为这样一种功能，提供了扩展点，但用户必须实现它们。
+- 某些应用程序可以提供这样一种用户体验，即允许基于服务引用中的数据和经过远程主机证明的信任数据来交互地建立信任。 WCF 为这样一种功能提供了扩展点，但用户必须实现这些扩展点。
 
 ## <a name="ntlm"></a>NTLM
 
@@ -55,7 +55,7 @@ ms.locfileid: "67425307"
 
 在创建客户端时，如果指定不带域名的客户端凭据或指定无效的服务器标识，则会导致使用 NTLM 而不是 Kerberos 协议（如果 `AllowNtlm` 属性设置为 `true`）。 因为 NTLM 不进行服务器身份验证，所以信息可能会泄露。
 
-例如，就可以指定 Windows 客户端凭据不带域名，如下面的 Visual C# 代码中所示。
+例如，可以指定不带域名的 Windows 客户端凭据，如下面的 Visual C#代码所示。
 
 ```csharp
 MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCredential("username", "password");
@@ -65,7 +65,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
 
 如果指定了域，但使用终结点标识功能指定了无效的服务主体名称，则会使用 NTLM。 有关如何指定终结点标识的详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [特权提升](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)

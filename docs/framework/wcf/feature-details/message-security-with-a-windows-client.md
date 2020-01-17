@@ -5,31 +5,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: 36193090349f5b8ddb07ee7c3c6c663621cc6d06
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3c1661acf4d4aa2de8b6eca7015c74ba7f80af1
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637855"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212017"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 客户端的消息安全
-此方案显示了 Windows Communication Foundation (WCF) 客户端和服务器保护的消息安全模式。 客户端和服务使用 Windows 凭据进行身份验证。  
+此方案显示 Windows Communication Foundation （WCF）客户端和由消息安全模式保护的服务器。 客户端和服务使用 Windows 凭据进行身份验证。  
   
- ![消息安全使用 Windows 客户端](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
+ ![Windows 客户端的消息安全性](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |特征|描述|  
 |--------------------|-----------------|  
-|安全模式|消息|  
-|互操作性|WCF 仅|  
+|安全模式|Message|  
+|互操作性|仅 WCF|  
 |身份验证（服务器）|服务器和客户端的相互身份验证|  
 |身份验证（客户端）|服务器和客户端的相互身份验证|  
 |完整性|是，使用共享安全上下文|  
 |保密性|是，使用共享安全上下文|  
-|传输|NET.TCP|  
+|Transport|NET.TCP|  
 |绑定|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>服务  
- 下面的代码和配置应独立运行。 执行下列操作之一：  
+ 下面的代码和配置应独立运行。 执行以下操作之一：  
   
 - 使用代码（而不使用配置）创建独立服务。  
   
@@ -72,8 +72,8 @@ ms.locfileid: "64637855"
 </configuration>  
 ```  
   
-## <a name="client"></a>客户端  
- 下面的代码和配置应独立运行。 执行下列操作之一：  
+## <a name="client"></a>Client  
+ 下面的代码和配置应独立运行。 执行以下操作之一：  
   
 - 使用代码（和客户端代码）创建独立客户端。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "64637855"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

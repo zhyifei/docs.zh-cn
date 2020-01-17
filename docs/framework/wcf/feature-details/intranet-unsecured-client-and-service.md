@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 65b8597727da256e832351792b9d5d9bd016eb28
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ffd0421195b0339ad966b661c229e5a5ebb94ec
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587013"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212100"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>不安全的 Intranet 客户端和服务
-下图描绘了开发到 WCF 应用程序安全的专用网络上提供信息的简单 Windows Communication Foundation (WCF) 服务。 不需要安全，因为数据重要性较低、 网络应为本质上是安全的或者在通过以下 WCF 基础结构的层来提供安全性。  
+下图描绘了一个简单的 Windows Communication Foundation （WCF）服务，该服务是为在 WCF 应用程序中提供有关安全专用网络的信息而开发的。 安全不是必需的，因为数据重要性较低，网络本来就是安全的，或者是由 WCF 基础结构下面的层提供的。  
   
- ![不安全的 intranet 客户端和服务方案。](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
+ ![Intranet 不安全的客户端和服务方案。](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |特征|描述|  
 |--------------------|-----------------|  
-|安全模式|None|  
-|传输|TCP|  
+|安全模式|无|  
+|Transport|TCP|  
 |绑定|<xref:System.ServiceModel.NetTcpBinding>|  
-|互操作性|WCF 仅|  
-|身份验证|None|  
-|完整性|None|  
-|保密性|None|  
+|互操作性|仅 WCF|  
+|身份验证 （可能为英文网页）|无|  
+|完整性|无|  
+|保密性|无|  
   
 ## <a name="service"></a>服务  
- 下面的代码和配置应独立运行。 执行下列操作之一：  
+ 下面的代码和配置应独立运行。 执行以下操作之一：  
   
 - 使用代码（而不使用配置）创建独立服务。  
   
@@ -70,8 +70,8 @@ ms.locfileid: "64587013"
 </configuration>  
 ```  
   
-## <a name="client"></a>客户端  
- 下面的代码和配置应独立运行。 执行下列操作之一：  
+## <a name="client"></a>Client  
+ 下面的代码和配置应独立运行。 执行以下操作之一：  
   
 - 使用代码（和客户端代码）创建独立客户端。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "64587013"
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>代码  
- 下面的代码演示一个基本的 WCF 客户端访问不安全终结点使用 TCP 协议。  
+ 下面的代码演示一个基本 WCF 客户端，它使用 TCP 协议访问不安全的终结点。  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
@@ -112,8 +112,8 @@ ms.locfileid: "64587013"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceModel.NetTcpBinding>
 - [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

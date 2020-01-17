@@ -2,15 +2,16 @@
 title: 集成企业服务事务性组件
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: c73be31bef67f1de818f7b04181a3540bbd7caa8
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 5914f76639adc3ff569a3bfb8d6eb1db14313e76
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991540"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211936"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>集成企业服务事务性组件
-Windows Communication Foundation （WCF）提供了用于与企业服务集成的自动机制（请参阅[与 COM + 应用程序集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)）。 但是，你可能希望灵活地开发可在内部使用承载于企业服务中的事务性组件的服务。 因为 WCF 事务功能是在<xref:System.Transactions>基础结构上构建的，所以将企业服务与 WCF 集成的过程与指定与企业服务之间<xref:System.Transactions>的互操作性的过程相同，如中所述。[与企业服务和 COM + 事务的互操作性](https://go.microsoft.com/fwlink/?LinkId=94949)。  
+
+Windows Communication Foundation （WCF）提供了用于与企业服务集成的自动机制（请参阅[与 COM + 应用程序集成](integrating-with-com-plus-applications.md)）。 但是，你可能希望灵活地开发可在内部使用承载于企业服务中的事务性组件的服务。 因为 WCF 事务功能是在 <xref:System.Transactions> 基础结构上构建的，所以将企业服务与 WCF 集成的过程与指定 <xref:System.Transactions> 与企业服务之间的互操作性的过程相同，如[与企业服务和 COM + 事务的互操作性](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))中所述。  
   
  若要在传入的流式事务和 COM+ 上下文事务之间提供所需级别的互操作性，服务实现必须创建一个 <xref:System.Transactions.TransactionScope> 实例并使用 <xref:System.Transactions.EnterpriseServicesInteropOption> 枚举中的适当值。  
   
@@ -92,7 +93,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [与 COM+ 应用程序集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
 - [与 COM 应用程序集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

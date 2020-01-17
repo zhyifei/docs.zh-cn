@@ -1,18 +1,21 @@
 ---
 title: 如何编写用于 JSON 序列化的自定义转换器-.NET
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 0f8b89ec7d7b1677de085631958b888e154aa4fa
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: f72d2d83d701b20648140900d65c9098a8abb721
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116720"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76164055"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>如何编写 .NET 中的 JSON 序列化（封送处理）的自定义转换器
 
@@ -285,7 +288,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 ## <a name="other-custom-converter-samples"></a>其他自定义转换器示例
 
-[从 Newtonsoft.json 迁移到 system.object](system-text-json-migrate-from-newtonsoft-how-to.md)一文包含其他自定义转换器的示例。
+[从 Newtonsoft.Json 迁移到 System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)一文包含其他自定义转换器的示例。
 
 `System.Text.Json.Serialization` 源代码中的 "[单元测试" 文件夹](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/)包含其他自定义转换器示例，例如：
 
@@ -300,10 +303,10 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 ## <a name="additional-resources"></a>其他资源
 
 * [内置转换器的源代码](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
-* [系统中的 DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)
-* [System.web 概述](system-text-json-overview.md)
-* [如何使用 system.exception](system-text-json-how-to.md)
-* [如何从 Newtonsoft.json 迁移](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [System.web API 参考](xref:System.Text.Json)
-* [System.web. 串行化 API 参考](xref:System.Text.Json.Serialization)
+* [System.Text.Json 中的 DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)
+* [System.Text.Json 概述](system-text-json-overview.md)
+* [如何使用 System.Text.Json](system-text-json-how-to.md)
+* [如何从 Newtonsoft.Json 迁移](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [System.Text.Json API 参考](xref:System.Text.Json)
+* [System.Text.Json。序列化 API 参考](xref:System.Text.Json.Serialization)
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

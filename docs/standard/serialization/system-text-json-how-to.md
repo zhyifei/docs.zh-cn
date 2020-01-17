@@ -1,17 +1,20 @@
 ---
 title: 如何使用C# -.NET 对 JSON 进行序列化和反序列化
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 047d5b5c6fa339089d2054eb6bfe8b3066c1d00c
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: fdca8d957bb2453e90652af1dfe5ef99b33b1b2c
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904660"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163197"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中对 JSON 进行序列化和反序列化（marshal 和取消封送）
 
@@ -563,7 +566,7 @@ JSON 属性命名策略：
 }
 ```
 
-有关多态**序列化**的详细信息，以及有关**反序列**化的信息，请参阅[如何从 newtonsoft.json 迁移到 system.object](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)。
+有关多态**序列化**的详细信息，以及有关**反序列**化的信息，请参阅[如何从 Newtonsoft.Json 迁移到 System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)。
 
 ## <a name="allow-comments-and-trailing-commas"></a>允许注释和尾随逗号
 
@@ -777,9 +780,9 @@ JSON 中的 Null 值仅在有效时才会被忽略。 不可以为 null 的值�
 
 ## <a name="additional-resources"></a>其他资源
 
-* [System.web 概述](system-text-json-overview.md)
+* [System.Text.Json 概述](system-text-json-overview.md)
 * [如何编写自定义转换器](system-text-json-converters-how-to.md)
-* [如何从 Newtonsoft.json 迁移](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [系统中的 DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)
-* [System.web API 参考](xref:System.Text.Json)
+* [如何从 Newtonsoft.Json 迁移](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [System.Text.Json 中的 DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)
+* [System.Text.Json API 参考](xref:System.Text.Json)
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->
