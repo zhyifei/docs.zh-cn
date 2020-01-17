@@ -2,37 +2,40 @@
 title: .NET Core 中断性变更
 description: 了解 .NET Core 每个版本的中断性变更。
 ms.date: 11/27/2019
-ms.openlocfilehash: 30459ca1178c0d62427138b22dd42f11cd2c2475
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8bd8ebc803a80069530fe1cf6adc66769f7d6c85
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568033"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900146"
 ---
-# <a name="breaking-change-selectors"></a><span data-ttu-id="ecc00-103">中断性变更选择器</span><span class="sxs-lookup"><span data-stu-id="ecc00-103">Breaking change selectors</span></span>
+# <a name="breaking-change-selectors"></a><span data-ttu-id="365d9-103">中断性变更选择器</span><span class="sxs-lookup"><span data-stu-id="365d9-103">Breaking change selectors</span></span>
 
-<span data-ttu-id="ecc00-104">以下版本和区域选择器提供了 .NET Core、ASP.NET Core 和 EF Core 不同版本之间的适用中断性变更的筛选列表。</span><span class="sxs-lookup"><span data-stu-id="ecc00-104">The following version and area selectors provide a filtered list of applicable breaking changes between different versions of .NET Core, ASP.NET Core, and EF Core.</span></span> <span data-ttu-id="ecc00-105">你还可浏览目录中的不同版本或类别项目。</span><span class="sxs-lookup"><span data-stu-id="ecc00-105">You can also browse version to version or category articles in the table of contents.</span></span>
+<span data-ttu-id="365d9-104">以下版本和区域选择器提供了 .NET Core、ASP.NET Core 和 EF Core 不同版本之间的适用中断性变更的筛选列表。</span><span class="sxs-lookup"><span data-stu-id="365d9-104">The following version and area selectors provide a filtered list of applicable breaking changes between different versions of .NET Core, ASP.NET Core, and EF Core.</span></span> <span data-ttu-id="365d9-105">你还可浏览目录中的不同版本或类别项目。</span><span class="sxs-lookup"><span data-stu-id="365d9-105">You can also browse version to version or category articles in the table of contents.</span></span>
 
-## <a name="by-version"></a><span data-ttu-id="ecc00-106">按版本</span><span class="sxs-lookup"><span data-stu-id="ecc00-106">By version</span></span>
+## <a name="by-version"></a><span data-ttu-id="365d9-106">按版本</span><span class="sxs-lookup"><span data-stu-id="365d9-106">By version</span></span>
 
-<span data-ttu-id="ecc00-107">选择当前面向的 .NET Core 版本，然后选择想迁移到的 .NET Core 版本：</span><span class="sxs-lookup"><span data-stu-id="ecc00-107">Select the .NET Core version that you're currently targeting and then the .NET Core version you wish to migrate to:</span></span>
+<span data-ttu-id="365d9-107">选择当前面向的 .NET 版本，然后选择想迁移到的 .NET Core 版本：</span><span class="sxs-lookup"><span data-stu-id="365d9-107">Select the .NET version that you're currently targeting and then the .NET Core version you wish to migrate to:</span></span>
 
 [!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
 
-## <a name="by-area"></a><span data-ttu-id="ecc00-108">按区域</span><span class="sxs-lookup"><span data-stu-id="ecc00-108">By area</span></span>
+> [!TIP]
+> <span data-ttu-id="365d9-108">如果要将 Windows 窗体应用从 .NET Framework 迁移到 .NET Core，请参阅 [Windows 窗体的中断性变更（从 .NET Framework 到 .NET Core）](../porting/winforms-breaking-changes.md)，而不是使用版本选择器。</span><span class="sxs-lookup"><span data-stu-id="365d9-108">If you're migrating a Windows Forms app from .NET Framework to .NET Core, see [Breaking changes in Windows Forms (.NET Framework to .NET Core)](../porting/winforms-breaking-changes.md) instead of using the version selector.</span></span>
 
-<span data-ttu-id="ecc00-109">选择你感兴趣的 .NET Core 技术领域。</span><span class="sxs-lookup"><span data-stu-id="ecc00-109">Select the .NET Core technology area that you're interested in.</span></span> <span data-ttu-id="ecc00-110">单个更改按 .NET Core 版本进行排序。</span><span class="sxs-lookup"><span data-stu-id="ecc00-110">Individual changes are ordered by .NET Core version.</span></span>
+## <a name="by-area"></a><span data-ttu-id="365d9-109">按区域</span><span class="sxs-lookup"><span data-stu-id="365d9-109">By area</span></span>
+
+<span data-ttu-id="365d9-110">选择你感兴趣的 .NET Core 技术领域。</span><span class="sxs-lookup"><span data-stu-id="365d9-110">Select the .NET Core technology area that you're interested in.</span></span> <span data-ttu-id="365d9-111">单个更改按 .NET Core 版本进行排序。</span><span class="sxs-lookup"><span data-stu-id="365d9-111">Individual changes are ordered by .NET Core version.</span></span>
 
 [!INCLUDE[categoryselector](~/includes/core-changes/categoryselector.md)]
 
-## <a name="github-issues-and-announcements"></a><span data-ttu-id="ecc00-111">GitHub 问题和公告</span><span class="sxs-lookup"><span data-stu-id="ecc00-111">GitHub issues and announcements</span></span>
+## <a name="github-issues-and-announcements"></a><span data-ttu-id="365d9-112">GitHub 问题和公告</span><span class="sxs-lookup"><span data-stu-id="365d9-112">GitHub issues and announcements</span></span>
 
-<span data-ttu-id="ecc00-112">还可在以下 GitHub 存储库中查看详细说明 .NET Core 中引入的中断性变更的各个问题：</span><span class="sxs-lookup"><span data-stu-id="ecc00-112">You can also view individual issues that detail the breaking changes introduced in .NET Core in the following GitHub repositories:</span></span>
+<span data-ttu-id="365d9-113">还可在以下 GitHub 存储库中查看详细说明 .NET Core 中引入的中断性变更的各个问题：</span><span class="sxs-lookup"><span data-stu-id="365d9-113">You can also view individual issues that detail the breaking changes introduced in .NET Core in the following GitHub repositories:</span></span>
 
-- <span data-ttu-id="ecc00-113">.NET Core 对应的是 [dotnet/docs](https://github.com/dotnet/docs/issues?q=is%3Aissue+label%3Abreaking-change) 存储库。</span><span class="sxs-lookup"><span data-stu-id="ecc00-113">For .NET Core, the [dotnet/docs](https://github.com/dotnet/docs/issues?q=is%3Aissue+label%3Abreaking-change) repository.</span></span>
-- <span data-ttu-id="ecc00-114">ASP.NET Core 对应的是 [dotnet/docs](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) 存储库。</span><span class="sxs-lookup"><span data-stu-id="ecc00-114">For ASP.NET Core, the [aspnet/Announcements](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) repository.</span></span>
-- <span data-ttu-id="ecc00-115">Entity Framework Core 对应的是 [aspnet/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) 存储库。</span><span class="sxs-lookup"><span data-stu-id="ecc00-115">For Entity Framework Core, the [aspnet/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) repository.</span></span>
+- <span data-ttu-id="365d9-114">.NET Core 对应的是 [dotnet/docs](https://github.com/dotnet/docs/issues?q=is%3Aissue+label%3Abreaking-change) 存储库。</span><span class="sxs-lookup"><span data-stu-id="365d9-114">For .NET Core, the [dotnet/docs](https://github.com/dotnet/docs/issues?q=is%3Aissue+label%3Abreaking-change) repository.</span></span>
+- <span data-ttu-id="365d9-115">ASP.NET Core 对应的是 [dotnet/docs](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) 存储库。</span><span class="sxs-lookup"><span data-stu-id="365d9-115">For ASP.NET Core, the [aspnet/Announcements](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) repository.</span></span>
+- <span data-ttu-id="365d9-116">Entity Framework Core 对应的是 [dotnet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) 存储库。</span><span class="sxs-lookup"><span data-stu-id="365d9-116">For Entity Framework Core, the [dotnet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) repository.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="ecc00-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="ecc00-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="365d9-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="365d9-117">See also</span></span>
 
-- [<span data-ttu-id="ecc00-117">从 .NET Framework 迁移到 .NET Core</span><span class="sxs-lookup"><span data-stu-id="ecc00-117">Migrate from .NET Framework to .NET Core</span></span>](../porting/index.md)
+- [<span data-ttu-id="365d9-118">从 .NET Framework 迁移到 .NET Core</span><span class="sxs-lookup"><span data-stu-id="365d9-118">Migrate from .NET Framework to .NET Core</span></span>](../porting/index.md)
