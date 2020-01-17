@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: e9278320ee3fdf9e6b89698d187f047c309ea791
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 1d8bcaf68d44f27642048c1c207b52c55b604690
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198360"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901783"
 ---
 ### <a name="signalr-handshakeprotocolsuccesshandshakedata-replaced"></a>SignalR：HandshakeProtocol.SuccessHandshakeData 已替换
 
-已删除 [HandshakeProtocol.SuccessHandshakeData](https://github.com/aspnet/AspNetCore/blob/c5b2bc0df2a0027832bf7d01dfb19ca39cd08ae6/src/SignalR/common/SignalR.Common/src/Protocol/HandshakeProtocol.cs#L27) 字段，并将其替换为一个 Helper 方法，该方法根据特定 `IHubProtocol` 生成成功的握手响应。
+已删除 [HandshakeProtocol.SuccessHandshakeData](https://github.com/dotnet/aspnetcore/blob/c5b2bc0df2a0027832bf7d01dfb19ca39cd08ae6/src/SignalR/common/SignalR.Common/src/Protocol/HandshakeProtocol.cs#L27) 字段，并将其替换为一个 Helper 方法，该方法根据特定 `IHubProtocol` 生成成功的握手响应。
 
 #### <a name="version-introduced"></a>引入的版本
 
@@ -24,11 +24,11 @@ ms.locfileid: "73198360"
 
 #### <a name="reason-for-change"></a>更改原因
 
-握手响应  中添加了其他字段，这些字段是非常量，并会根据所选协议的不同而变化。
+握手响应中添加了其他字段，这些字段是非常量，并会根据所选协议的不同而变化。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
-无。 此类型不适用于从用户代码使用。 它是 `public` 类型，因此可以在 SignalR 服务器和客户端之间共享。 它还可以由以 .NET 编写的客户 SignalR 客户端使用。 SignalR 用户不应受此更改的影响  。
+无。 此类型不适用于从用户代码使用。 它是 `public` 类型，因此可以在 SignalR 服务器和客户端之间共享。 它还可以由以 .NET 编写的客户 SignalR 客户端使用。 SignalR 用户不应受此更改的影响。
 
 #### <a name="category"></a>类别
 

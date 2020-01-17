@@ -2,12 +2,12 @@
 title: .NET Core 中断性变更
 description: 了解 .NET Core 每个版本的中断性变更。
 ms.date: 11/27/2019
-ms.openlocfilehash: 30459ca1178c0d62427138b22dd42f11cd2c2475
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8bd8ebc803a80069530fe1cf6adc66769f7d6c85
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568033"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900146"
 ---
 # <a name="breaking-change-selectors"></a>中断性变更选择器
 
@@ -15,9 +15,12 @@ ms.locfileid: "74568033"
 
 ## <a name="by-version"></a>按版本
 
-选择当前面向的 .NET Core 版本，然后选择想迁移到的 .NET Core 版本：
+选择当前面向的 .NET 版本，然后选择想迁移到的 .NET Core 版本：
 
 [!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
+
+> [!TIP]
+> 如果要将 Windows 窗体应用从 .NET Framework 迁移到 .NET Core，请参阅 [Windows 窗体的中断性变更（从 .NET Framework 到 .NET Core）](../porting/winforms-breaking-changes.md)，而不是使用版本选择器。
 
 ## <a name="by-area"></a>按区域
 
@@ -31,7 +34,7 @@ ms.locfileid: "74568033"
 
 - .NET Core 对应的是 [dotnet/docs](https://github.com/dotnet/docs/issues?q=is%3Aissue+label%3Abreaking-change) 存储库。
 - ASP.NET Core 对应的是 [dotnet/docs](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) 存储库。
-- Entity Framework Core 对应的是 [aspnet/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) 存储库。
+- Entity Framework Core 对应的是 [dotnet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) 存储库。
 
 ## <a name="see-also"></a>请参阅
 

@@ -4,12 +4,12 @@ description: 使用包管理器在 Ubuntu 16.04 上安装 .NET Core SDK 和运�
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 77033e327349e7543148dab27f7229c69de4aa1c
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: eae847232f5f89e81acfb90027c555d8ccd1a0b8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74999055"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740626"
 ---
 # <a name="ubuntu-1604-package-manager---install-net-core"></a>Ubuntu 16.04 包管理器 - 安装 .NET Core
 
@@ -21,9 +21,9 @@ ms.locfileid: "74999055"
 
 安装 .NET 之前，需要：
 
-- 注册 Microsoft 密钥
-- 注册产品存储库
-- 安装必需的依赖项
+- 注册 Microsoft 密钥。
+- 注册产品存储库。
+- 安装必需的依赖项。
 
 每台计算机只需要执行一次此操作。
 
@@ -46,7 +46,7 @@ sudo apt-get install dotnet-sdk-3.1
 ```
 
 > [!IMPORTANT]
-> 如果收到类似于“找不到包 dotnet-sdk-3.1”  的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。
+> 如果收到类似于“找不到包 dotnet-sdk-3.1”的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。
 
 ## <a name="install-the-aspnet-core-runtime"></a>安装 ASP.NET Core 运行时
 
@@ -60,7 +60,7 @@ sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> 如果收到类似于“找不到包 aspnetcore-runtime-3.1”  的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。
+> 如果收到类似于“找不到包 aspnetcore-runtime-3.1”的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。
 
 ## <a name="install-the-net-core-runtime"></a>安装 .NET Core 运行时
 
@@ -74,7 +74,7 @@ sudo apt-get install dotnet-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> 如果收到类似于“找不到包 dotnet-runtime-3.1”  的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。
+> 如果收到类似于“找不到包 dotnet-runtime-3.1”的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。
 
 ## <a name="how-to-install-other-versions"></a>如何安装其他版本
 
@@ -82,7 +82,7 @@ sudo apt-get install dotnet-runtime-3.1
 
 ## <a name="troubleshoot-the-package-manager"></a>包管理器疑难解答
 
-如果收到类似于“找不到包 {.NET Core 包}”  的错误消息，请运行以下命令。
+如果收到类似于“找不到包 {.NET Core 包}”的错误消息，请运行以下命令。
 
 ```bash
 sudo dpkg --purge packages-microsoft-prod && sudo dpkg -i packages-microsoft-prod.deb

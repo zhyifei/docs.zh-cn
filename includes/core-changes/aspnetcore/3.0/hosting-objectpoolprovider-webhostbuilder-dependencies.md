@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 16b9fde49f513643a37f65f3e926a34fc991c55a
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 4d99d0b6e99a7a9b976cf11832b33ad3bdc6d299
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394015"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901718"
 ---
 ### <a name="hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies"></a>托管：ObjectPoolProvider 已从 WebHostBuilder 依赖项中删除
 
 作为使 ASP.NET Core 更具成本效益计划的一部分，`ObjectPoolProvider` 已从主要依赖项集中删除。 依赖于 `ObjectPoolProvider` 的特定组件现在会自行添加。
 
-有关讨论，请参阅 [aspnet/AspNetCore#5944](https://github.com/aspnet/AspNetCore/issues/5944)。
+有关讨论，请参阅 [dotnet/aspnetcore#5944](https://github.com/dotnet/aspnetcore/issues/5944)。
 
 #### <a name="version-introduced"></a>引入的版本
 
@@ -28,7 +28,7 @@ ms.locfileid: "72394015"
 
 进行此更改是为了使 ASP.NET Core 更具成本效益。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 如果组件需要 `ObjectPoolProvider`，则需要通过 `IServiceCollection` 将其添加到依赖项。
 
@@ -38,7 +38,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影响的 API
 
-无
+None
 
 <!-- 
 

@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 1f7efaedaa1a0be90f7b619f954bdf78eecafa07
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74999061"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740564"
 ---
 # <a name="install-the-net-core-sdk"></a>安装 .NET Core SDK
 
@@ -44,9 +44,11 @@ macOS 具有独立的安装程序，可用于安装 .NET Core 3.1 SDK：
 
 可使用许多常见的 Linux 包管理器安装 .NET Core SDK。 有关详细信息，请参阅 [Linux 包管理器 - 安装 .NET Core](linux-package-managers.md)。
 
+仅在 x64 体系结构上支持使用包管理器安装。 如果要使用其他体系结构（如 ARM）安装 .NET Core SDK，请遵循下面的[下载并手动安装](#download-and-manually-install)说明。 有关支持的体系结构的详细信息，请参阅 [.NET Core 依赖项和要求](dependencies.md)。
+
 ## <a name="download-and-manually-install"></a>下载并手动安装
 
-若要提取 SDK 并使命令可用于终端，请先[下载](#all-net-core-downloads) .NET Core 二进制版本。 然后，打开终端并运行以下命令。
+若要提取 SDK 并使 .NET Core CLI 命令可用于终端，请先[下载](#all-net-core-downloads) .NET Core 二进制版本。 然后，打开终端并运行以下命令。
 
 ```bash
 mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.100-linux-x64.tar.gz -C $HOME/dotnet
@@ -55,14 +57,14 @@ export PATH=$PATH:$HOME/dotnet
 ```
 
 > [!TIP]
-> 上述命令只会使 .NET SDK 命令对运行它的终端会话可用。
+> 前面的 `export` 命令只会使 .NET Core CLI 命令对运行它的终端会话可用。
 >
-> 你可以编辑 shell 配置文件，永久地添加这些命令。 Linux 提供了许多不同的 shell，每个都有不同的配置文件。 例如:
+> 你可以编辑 shell 配置文件，永久地添加这些命令。 Linux 提供了许多不同的 shell，每个都有不同的配置文件。 例如：
 >
-> - **Bash Shell**：~/.bash_profile  、~/.bashrc 
-> - **Korn Shell**：~/.kshrc  或 .profile 
-> - **Z Shell**：~/.zshrc  或 .zprofile 
-> 
+> - **Bash Shell**：~/.bash_profile、~/.bashrc
+> - **Korn Shell**：~/.kshrc 或 .profile
+> - **Z Shell**：~/.zshrc 或 .zprofile
+>
 > 为 shell 编辑相应的源文件，并将 `:$HOME/dotnet` 添加到现有 `PATH` 语句的末尾。 如果不包含 `PATH` 语句，则使用 `export PATH=$PATH:$HOME/dotnet` 添加新行。
 >
 > 另外，将 `export DOTNET_ROOT=$HOME/dotnet` 添加至文件的末尾。
@@ -85,8 +87,8 @@ export PATH=$PATH:$HOME/dotnet
 如果你已安装 Visual Studio，则可以使用以下步骤检查你的版本。
 
 01. 打开 Visual Studio。
-01. 选择“帮助”   > “Microsoft Visual Studio”  。
-01. 从“关于”  对话框中读取版本号。
+01. 选择“帮助” > “Microsoft Visual Studio”。
+01. 从“关于”对话框中读取版本号。
 
 Visual Studio 可安装最新的 .NET Core SDK 和运行时。
 
@@ -94,12 +96,12 @@ Visual Studio 可安装最新的 .NET Core SDK 和运行时。
 
 ### <a name="select-a-workload"></a>选择工作负载
 
-安装或修改 Visual Studio 时，根据要生成的应用程序的类型，选择下列一种工作负载：
+安装或修改 Visual Studio 时，根据要生成的应用程序的类型，选择以下一个或多个工作负载：
 
-- “其他工具集”部分中的“.NET Core 跨平台开发”工作负荷   。
-- “Web 和云”部分中的“ASP.NET 和 Web 开发”工作负荷   。
-- “Web 和云”部分中的“Azure 开发”工作负载   。
-- “桌面和移动”部分中的“NET 桌面开发”工作负载   。
+- “其他工具集”部分中的“.NET Core 跨平台开发”工作负荷。
+- “Web 和云”部分中的“ASP.NET 和 Web 开发”工作负荷。
+- “Web 和云”部分中的“Azure 开发”工作负载。
+- “桌面和移动”部分中的“NET 桌面开发”工作负载。
 
 [![具有 .NET Core 工作负载的 Windows Visual Studio 2019](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)
 
@@ -109,7 +111,7 @@ Visual Studio 可安装最新的 .NET Core SDK 和运行时。
 
 ## <a name="install-with-visual-studio-for-mac"></a>使用 Visual Studio for Mac 安装
 
-在选定“.NET Core”  工作负载时，使用 Visual Studio for Mac 安装 .NET Core SDK。 若要开始在 macOS 上进行 .NET Core 开发，请参阅[安装 Visual Studio 2019 for Mac](/visualstudio/mac/installation)。 对于最新的版本 .NET Core 3.1，则必须使用 Visual Studio for Mac 8.4 预览版。
+在选定“.NET Core”工作负载时，使用 Visual Studio for Mac 安装 .NET Core SDK。 若要开始在 macOS 上进行 .NET Core 开发，请参阅[安装 Visual Studio 2019 for Mac](/visualstudio/mac/installation)。 对于最新的版本 .NET Core 3.1，则必须使用 Visual Studio for Mac 8.4 预览版。
 
 [![具有 .NET Core 工作负载功能的 macOS Visual Studio 2019 for Mac](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)
 
@@ -131,7 +133,7 @@ Visual Studio Code 是一个功能强大的轻量级源代码编辑器，可在�
 
 [dotnet-install 脚本](../tools/dotnet-install-script.md)用于 SDK 的自动化和非管理员安装。 可从 [dotnet-install 脚本引用页](../tools/dotnet-install-script.md)下载该脚本。
 
-此脚本默认安装最新的[长期支持 (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，即 .NET Core 2.1。 若要安装最新版本的 .NET Core，请使用以下开关运行脚本。
+此脚本默认安装最新的[长期支持 (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，即 .NET Core 3.1。 若要安装最新版本的 .NET Core，请使用以下开关运行脚本。
 
 ```powershell
 dotnet-install.ps1 -Channel Current
@@ -145,7 +147,7 @@ dotnet-install.ps1 -Channel Current
 
 [dotnet-install 脚本](../tools/dotnet-install-script.md)用于 SDK 的自动化和非管理员安装。 可从 [dotnet-install 脚本引用页](../tools/dotnet-install-script.md)下载该脚本。
 
-此脚本默认安装最新的[长期支持 (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，即 .NET Core 2.1。 若要安装最新版本的 .NET Core，请使用以下开关运行脚本。
+此脚本默认安装最新的[长期支持 (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，即 .NET Core 3.1。 若要安装最新版本的 .NET Core，请使用以下开关运行脚本。
 
 ```bash
 ./dotnet-install.sh -c Current
@@ -176,8 +178,7 @@ Microsoft 提供适合特定场景的映像。 例如，[ASP.NET Core 存储库]
 
 ::: zone pivot="os-windows"
 
-- [教程：C# Hello World 教程](../tutorials/with-visual-studio.md)。
-- [教程：Visual Basic Hello World 教程](../tutorials/vb-with-visual-studio.md)。
+- [教程：Hello World 教程](../tutorials/with-visual-studio.md)。
 - [教程：使用 Visual Studio Code 创建一个新应用](../tutorials/with-visual-studio-code.md)。
 - [教程：使 .NET Core 应用容器化](../docker/build-container.md)。
 

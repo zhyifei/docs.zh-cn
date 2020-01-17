@@ -4,12 +4,12 @@ description: 介绍如何创建全局工具。 全局工具是一个通过 .NET 
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 5c2b1e459f0308f5f96eb041c10f4d7a7ae0ca20
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 1daecf7234f02a5fe0dcf25cf7edbb0af327b8c1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117448"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343524"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>使用 .NET Core CLI 创建 .NET Core 全局工具
 
@@ -115,7 +115,7 @@ static void ShowBot(string message)
 
 ### <a name="test-the-tool"></a>测试工具
 
-运行项目并观察输出。 尝试使用命令行的这些变体来查看不同的结果：
+运行项目并观察输出。 尝试使用命令行处的这些变体来查看不同的结果：
 
 ```dotnetcli
 dotnet run
@@ -125,7 +125,7 @@ dotnet run -- hello from the bot
 
 位于 `--` 分隔符后的所有参数均会传递给应用程序。
 
-## <a name="setup-the-global-tool"></a>安装全局工具
+## <a name="set-up-the-global-tool"></a>安装全局工具
 
 在将应用程序作为全局工具打包并分发之前，你需要修改项目文件。 打开 `botsay.csproj` 文件，并向 `<Project><PropertyGroup>` 节点添加三个新的 XML 节点：
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 09fd95ba5f3aee59f2abdfbb4e64eb6202e2b873
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 5741e8cdd51e00d5459c4c1032a56682429aab17
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393944"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901856"
 ---
 ### <a name="mvc-pubternal-types-changed-to-internal"></a>MVC：“Pubternal”类型更改为内部
 
@@ -30,11 +30,11 @@ MVC 中的某些类型为 `public`，但在 `.Internal` 命名空间中。 这�
 
 经常会意外使用“pubternal”类型，导致对这些项目做出中断性变更，并使维护框架的能力受到限制。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 如果使用的类型已真正成为 `public` 且已移动到新的受支持的命名空间中，请更新引用以匹配新命名空间。
 
-如果使用的类型已标记为 `internal`，则需要查找替代方法。 永远不支持将以前的“pubternal”类型用于公共用途。 如果这些命名空间中的特定类型对应用至关重要，请在 [aspnet/AspNetCore ](https://github.com/aspnet/AspNetCore/issues) 中提出问题。 可以考虑将请求的类型设为 `public`。
+如果使用的类型已标记为 `internal`，则需要查找替代方法。 永远不支持将以前的“pubternal”类型用于公共用途。 如果这些命名空间中的特定类型对应用至关重要，请在 [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues) 中提出问题。 可以考虑将请求的类型设为 `public`。
 
 #### <a name="category"></a>类别
 

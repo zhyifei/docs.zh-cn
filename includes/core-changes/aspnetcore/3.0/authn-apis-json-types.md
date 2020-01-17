@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ad451329d7b9ec15bc8b3c49159346d79944d692
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 494e792d63a611cdaedf3e40aa607cfbb0420ae4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393948"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901592"
 ---
 ### <a name="authentication-newtonsoftjson-types-replaced"></a>身份验证：Newtonsoft.json 类型已替换
 
@@ -13,15 +13,15 @@ ms.locfileid: "72393948"
 * 派生自 OAuth 提供程序的类，例如来自 [aspnet-contrib](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers) 的类。
 * 高级声明操作实现。
 
-有关详细信息，请参阅 [aspnet/AspNetCore#7105](https://github.com/aspnet/AspNetCore/pull/7105)。 有关讨论，请参阅 [aspnet/AspNetCore#7289](https://github.com/aspnet/AspNetCore/issues/7289)。
+有关详细信息，请参阅 [dotnet/aspnetcore#7105](https://github.com/dotnet/aspnetcore/pull/7105)。 有关讨论，请参阅 [dotnet/aspnetcore#7289](https://github.com/dotnet/aspnetcore/issues/7289)。
 
 #### <a name="version-introduced"></a>引入的版本
 
 3.0
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
-对于派生的 OAuth 实现，最常见的更改是将 `JObject.Parse` 替换为 `CreateTicketAsync` 重写中的 `JsonDocument.Parse`，如[本文](https://github.com/aspnet/AspNetCore/pull/7105/files?utf8=%E2%9C%93&diff=unified&w=1#diff-e1c9f9740a6fe8021020a6f249c589b0L40)所示。 `JsonDocument` 可实现 `IDisposable`。
+对于派生的 OAuth 实现，最常见的更改是将 `JObject.Parse` 替换为 `CreateTicketAsync` 重写中的 `JsonDocument.Parse`，如[本文](https://github.com/dotnet/aspnetcore/pull/7105/files?utf8=%E2%9C%93&diff=unified&w=1#diff-e1c9f9740a6fe8021020a6f249c589b0L40)所示。 `JsonDocument` 可实现 `IDisposable`。
 
 以下列表概述了已知更改：
 

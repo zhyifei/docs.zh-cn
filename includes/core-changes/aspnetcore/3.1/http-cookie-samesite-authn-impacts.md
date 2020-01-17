@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: b0d093cc30a09b3248cc57a521b386bf581b5451
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 02602c70689a6d2729e03d3d7230cda5ae7a4994
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552141"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901734"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP：浏览器的 SameSite 更改会影响身份验证
 
 某些浏览器（如 Chrome 和 Firefox）对 Cookie 的 `SameSite` 实现进行了中断性变更。 这些变更会影响 OpenID Connect 和 WS 联合身份验证等远程身份验证方案，必须通过发送 `SameSite=None` 来选择退出。 但是，`SameSite=None` 会在 iOS 12 和其他浏览器的某些较早版本上中断运行。 应用需探查这些版本，并忽略 `SameSite`。
 
-有关此问题的讨论，请参阅 [aspnet/AspNetCore#14996](https://github.com/aspnet/AspNetCore/issues/14996)。
+有关此问题的讨论，请参阅 [dotnet/aspnetcore#14996](https://github.com/dotnet/aspnetcore/issues/14996)。
 
 #### <a name="version-introduced"></a>引入的版本
 
@@ -32,7 +32,7 @@ Google 提出了一项不向后兼容的新草案标准。 该标准将默认模
 
 浏览器和规范更改如前文所述。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 与远程站点交互（例如通过第三方登录）的应用需要：
 

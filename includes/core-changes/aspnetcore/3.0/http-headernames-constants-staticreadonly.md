@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: e0d0a680915f14c2d33f1864ad5ad05aff3dde5f
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 31e7f84a787d255a474f4c2b1fa3068903dbed52
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394048"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901956"
 ---
 ### <a name="http-headernames-constants-changed-to-static-readonly"></a>HTTP：HeaderNames 常量已更改为静态只读
 
 从 ASP.NET Core 3.0 预览版 5 开始，<xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> 中的字段已从 `const` 更改为 `static readonly`。
 
-有关讨论，请参阅 [aspnet/AspNetCore#9514](https://github.com/aspnet/AspNetCore/issues/9514)。
+有关讨论，请参阅 [dotnet/aspnetcore#9514](https://github.com/dotnet/aspnetcore/issues/9514)。
 
 #### <a name="version-introduced"></a>引入的版本
 
@@ -31,7 +31,7 @@ ms.locfileid: "72394048"
 * 防止将值嵌入到程序集边界内，允许根据需要更正值。
 * 实现更快的引用同等性检查。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 针对 3.0 重新编译。 通过以下方式使用这些字段的源代码将无法再执行此项操作：
 

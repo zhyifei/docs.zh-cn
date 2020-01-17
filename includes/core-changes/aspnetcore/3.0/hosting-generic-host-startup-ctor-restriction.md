@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: be9a79f6ead3e72d7ffaade758704f0c1e2477f0
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: d1ddba72ce25c5e01025d916d52f785b5a1a9e71
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393946"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901887"
 ---
 ### <a name="hosting-generic-host-restricts-startup-constructor-injection"></a>托管：通用主机限制 Startup 构造函数注入
 
@@ -16,11 +16,11 @@ ms.locfileid: "72393946"
 
 **ASP.NET Core 2.x：**
 
-<https://github.com/aspnet/AspNetCore/blob/5cb615fcbe8559e49042e93394008077e30454c0/src/Templating/src/Microsoft.DotNet.Web.ProjectTemplates/content/EmptyWeb-CSharp/Program.cs#L20-L22>
+<https://github.com/dotnet/aspnetcore/blob/5cb615fcbe8559e49042e93394008077e30454c0/src/Templating/src/Microsoft.DotNet.Web.ProjectTemplates/content/EmptyWeb-CSharp/Program.cs#L20-L22>
 
 **ASP.NET Core 3.0：**
 
-<https://github.com/aspnet/AspNetCore/blob/b1ca2c1155da3920f0df5108b9fedbe82efaa11c/src/ProjectTemplates/Web.ProjectTemplates/content/EmptyWeb-CSharp/Program.cs#L19-L24>
+<https://github.com/dotnet/aspnetcore/blob/b1ca2c1155da3920f0df5108b9fedbe82efaa11c/src/ProjectTemplates/Web.ProjectTemplates/content/EmptyWeb-CSharp/Program.cs#L19-L24>
 
 `Host` 使用一个依赖关系注入 (DI) 容器生成应用。 `WebHost` 使用两个容器：一个用于主机，另一个用于应用。 因此，`Startup` 构造函数不再支持自定义服务注入。 只能注入 `IHostEnvironment`、`IWebHostEnvironment` 和 `IConfiguration`。 此更改可防止出现 DI 问题，例如重复创建单一实例服务。
 
@@ -32,9 +32,9 @@ ms.locfileid: "72393946"
 
 此更改是将 Web 堆栈重新平台化到通用主机库的结果。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
-将服务注入 `Startup.Configure` 方法签名。 例如:
+将服务注入 `Startup.Configure` 方法签名。 例如：
 
 ```csharp
 public void Configure(IApplicationBuilder app, IOptions<MyOptions> options)
@@ -46,7 +46,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影响的 API
 
-无
+None
 
 <!-- 
 

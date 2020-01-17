@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: f103c96588bae167216d09a82973a4a7abfb5cc3
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: db70596552ffd699156e1b7a55cb1e944596f077
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394157"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901836"
 ---
 ### <a name="data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis"></a>数据保护：DataProtection.AzureStorage 使用新的 Azure 存储 API
 
 <xref:Microsoft.AspNetCore.DataProtection.AzureStorage?displayProperty=fullName> 取决于 [Azure 存储库](https://github.com/Azure/azure-storage-net)。 这些库已重命名其程序集、包和命名空间。 从 ASP.NET Core 3.0 开始，`Microsoft.AspNetCore.DataProtection.AzureStorage` 使用新的带有 `Microsoft.Azure.Storage.` 前缀的 API 和包。
 
-有关 Azure 存储 API 的问题，请使用 <https://github.com/Azure/azure-storage-net>。 有关此问题的讨论，请参阅 [aspnet/AspNetCore#8472](https://github.com/aspnet/AspNetCore/issues/8472)。
+有关 Azure 存储 API 的问题，请使用 <https://github.com/Azure/azure-storage-net>。 有关此问题的讨论，请参阅 [dotnet/aspnetcore#8472](https://github.com/dotnet/aspnetcore/issues/8472)。
 
 #### <a name="version-introduced"></a>引入的版本
 
@@ -28,7 +28,7 @@ ms.locfileid: "72394157"
 
 此更改允许 `Microsoft.AspNetCore.DataProtection.AzureStorage` 迁移到建议的 Azure 存储包。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 如果仍需要将较旧的 Azure 存储 API 与 ASP.NET Core 3.0 一起使用，请将直接依赖项添加到 [WindowsAzure.Storage](https://www.nuget.org/packages/WindowsAzure.Storage/) 包。 此包可以与新的 `Microsoft.Azure.Storage` API 一起安装。
 
@@ -47,7 +47,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影响的 API
 
-无
+None
 
 <!-- 
 

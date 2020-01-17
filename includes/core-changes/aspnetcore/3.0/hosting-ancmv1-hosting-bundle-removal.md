@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 04e5ca41374fc333a31f0422bc2e89f54b3cb049
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 82103d82a6f68c62f3532608718bc71b0ba126bf
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394296"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901957"
 ---
 ### <a name="hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle"></a>托管：从 Windows 托管捆绑包中删除了 AspNetCoreModule V1
 
@@ -12,7 +12,7 @@ ms.locfileid: "72394296"
 
 ANCM V2 向后兼容 ANCM OutOfProcess，建议与 ASP.NET Core 3.0 应用一起使用。
 
-有关讨论，请参阅 [aspnet/AspNetCore#7095](https://github.com/aspnet/AspNetCore/issues/7095)。
+有关讨论，请参阅 [dotnet/aspnetcore#7095](https://github.com/dotnet/aspnetcore/issues/7095)。
 
 #### <a name="version-introduced"></a>引入的版本
 
@@ -30,7 +30,7 @@ ANCM V1 不包含在 Windows 托管捆绑包中。
 
 ANCM V2 向后兼容 ANCM OutOfProcess，建议与 ASP.NET Core 3.0 应用一起使用。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 将 ANCM V2 与 ASP.NET Core 3.0 应用一起使用。
 
@@ -39,7 +39,7 @@ ANCM V2 向后兼容 ANCM OutOfProcess，建议与 ASP.NET Core 3.0 应用一起
 此更改将中断以下 ASP.NET Core 3.0 应用：
 
 - 已明确选择将 ANCM V1 与 `<AspNetCoreModuleName>AspNetCoreModule</AspNetCoreModuleName>` 结合使用。
-- 具有 `<add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModule" resourceType="Unspecified" />` 的自定义 web.config  文件。
+- 具有 `<add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModule" resourceType="Unspecified" />` 的自定义 web.config 文件。
 
 #### <a name="category"></a>类别
 
@@ -47,7 +47,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影响的 API
 
-无
+None
 
 <!-- 
 

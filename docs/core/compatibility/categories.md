@@ -2,12 +2,12 @@
 title: 中断性变更类别 - .NET Core
 description: 了解在 .NET Core 中对中断性变更分类的方式。
 ms.date: 06/10/2019
-ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 32cf55dc3ba0b16bae8cfe6179211150b2c90e2c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567928"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343600"
 ---
 # <a name="breaking-change-categories"></a>重大更改类别
 
@@ -18,8 +18,7 @@ ms.locfileid: "74567928"
 - [源兼容性](#source-compatibility)
 - [设计时兼容性](#design-time-compatibility)
 - [向后兼容性](#backwards-compatibility)
-
-[向前兼容性](#forward-compatibility)不是 .NET Core 的目标。
+- [向前兼容性](#forward-compatibility)（不是 .NET Core 的目标）
 
 ## <a name="behavioral-change"></a>行为变更
 
@@ -43,7 +42,7 @@ ms.locfileid: "74567928"
 
 向后兼容性指的是 API 的现有使用者能够在操作方式相同的情况下在新版本中运行。 行为变更和二进制兼容性更改都会影响向后兼容性。 如果使用者无法在运行更新版本的 API 时以不同方式运行或操作，则 API 是向后不兼容的  。
 
-强烈建议不做出影响向后兼容性的更改，因为默认情况下，开发人员需要更新版本的 API 中的向后兼容性。
+建议不做出影响向后兼容性的更改，因为开发人员需要更新版本的 API 中的向后兼容性。
 
 ## <a name="forward-compatibility"></a>向前兼容性
 

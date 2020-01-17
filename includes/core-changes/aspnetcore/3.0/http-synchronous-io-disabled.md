@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c861d61cbbe8075db4b17a702e863336ea621f2b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 53d2c989120c92f4e2d18f50ce4b364bd4c9b604
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198357"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901988"
 ---
 ### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP：所有服务器均禁用同步 IO
 
@@ -29,7 +29,7 @@ ms.locfileid: "73198357"
 
 每台服务器都有一个 `AllowSynchronousIO` 选项，该选项控制此行为，且它们的默认值当前为 `false`。
 
-作为一种临时缓解措施，还可以根据每个请求重写该行为。 例如:
+作为一种临时缓解措施，还可以根据每个请求重写该行为。 例如：
 
 ```csharp
 var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();
@@ -41,7 +41,7 @@ if (syncIOFeature != null)
 
 如果调用 `Dispose` 中同步 API 的 `TextWriter` 或另一个流出现问题，请改为调用新的 `DisposeAsync` API。
 
-有关讨论，请参阅 [aspnet/AspNetCore#7644](https://github.com/aspnet/AspNetCore/issues/7644)。
+有关讨论，请参阅 [dotnet/aspnetcore#7644](https://github.com/dotnet/aspnetcore/issues/7644)。
 
 #### <a name="version-introduced"></a>引入的版本
 
@@ -65,7 +65,7 @@ if (syncIOFeature != null)
 
 这些同步 API 长期以来一直是线程不足和应用挂起的根源。 从 ASP.NET Core 3.0 预览版 3 开始，默认将禁用同步操作。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 使用这些方法的异步版本。 作为一种临时缓解措施，还可以根据每个请求重写该行为。
 

@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 74b989a2413d2192f7cf5208e400eaed879ea096
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 58dbb73902c0226fa81acf1a70de2160f406f6c6
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198356"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901680"
 ---
-### <a name="authorization-iauthorizationpolicyprovider-implementations-require-new-method"></a>Authorization:IAuthorizationPolicyProvider 实现需要新方法
+### <a name="authorization-iauthorizationpolicyprovider-implementations-require-new-method"></a>授权：IAuthorizationPolicyProvider 实现需要新方法
 
 在 ASP.NET Core 3.0 中，已将一个新 `GetFallbackPolicyAsync` 方法添加到 `IAuthorizationPolicyProvider`。 当未指定策略时，授权中间件会使用此回退策略。
 
-有关详细信息，请参阅 [aspnet/AspNetCore # 9759](https://github.com/aspnet/AspNetCore/pull/9759)。
+有关详细信息，请参阅 [dotnet/aspnetcore#9759](https://github.com/dotnet/aspnetcore/pull/9759)。
 
 #### <a name="version-introduced"></a>引入的版本
 
@@ -28,7 +28,7 @@ ms.locfileid: "73198356"
 
 如果未指定策略，则新 `AuthorizationMiddleware` 需要使用新方法。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 将 `GetFallbackPolicyAsync` 方法添加到 `IAuthorizationPolicyProvider` 的实现。
 

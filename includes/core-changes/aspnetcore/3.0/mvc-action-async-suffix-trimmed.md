@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 503d61cb86c83e2f32ad40c60a127ae255ef71b0
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 58b1190e3e6a3168d35700eed655f6756e076a29
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198361"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75902014"
 ---
 ### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC：从控制器操作名称中剪裁的异步后缀
 
-作为寻址 [aspnet/AspNetCore#4849](https://github.com/aspnet/AspNetCore/issues/4849) 的一部分，ASP.NET Core MVC 默认从操作名称中剪裁后缀 `Async`。 从 ASP.NET Core 3.0 开始，这一更改会影响路由和链接生成。
+作为寻址 [dotnet/aspnetcore#4849](https://github.com/dotnet/aspnetcore/issues/4849) 的一部分，ASP.NET Core MVC 默认从操作名称中剪裁后缀 `Async`。 从 ASP.NET Core 3.0 开始，这一更改会影响路由和链接生成。
 
 #### <a name="version-introduced"></a>引入的版本
 
@@ -29,7 +29,7 @@ public class ProductController : Controller
 }
 ```
 
-此操作可通过 `Product/ListAsync` 进行路由。 链接生成需要指定 `Async` 后缀。 例如:
+此操作可通过 `Product/ListAsync` 进行路由。 链接生成需要指定 `Async` 后缀。 例如：
 
 ```cshtml
 <a asp-controller="Product" asp-action="ListAsync">List</a>
@@ -37,7 +37,7 @@ public class ProductController : Controller
 
 #### <a name="new-behavior"></a>新行为
 
-在 ASP.NET Core 3.0 中，操作可通过 `Product/List` 进行路由。 链接生成代码应省略 `Async` 后缀。 例如:
+在 ASP.NET Core 3.0 中，操作可通过 `Product/List` 进行路由。 链接生成代码应省略 `Async` 后缀。 例如：
 
 ```cshtml
 <a asp-controller="Product" asp-action="List">List</a>
@@ -56,7 +56,7 @@ services.AddMvc(options =>
 
 按照约定，异步 .NET 方法以 `Async` 为后缀。 但是，当方法定义 MVC 操作时，不需要使用 `Async` 后缀。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 如果应用依赖于保留名称的 `Async` 后缀的 MVC 操作，请选择下列缓解措施之一：
 
@@ -76,7 +76,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影响的 API
 
-无
+None
 
 <!-- 
 

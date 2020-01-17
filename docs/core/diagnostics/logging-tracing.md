@@ -1,15 +1,13 @@
 ---
 title: 日志记录和跟踪 - .NET Core
 description: .NET Core 日志记录和跟踪简介。
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 46e64a7f60b88c26ceef9ac817be885bfa180c8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "72303652"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714412"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core 日志记录和跟踪
 
@@ -31,7 +29,7 @@ ms.locfileid: "72303652"
 
 每个 <xref:System.Console?displayProperty=nameWithType>、<xref:System.Diagnostics.Trace?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 类都提供类似的打印样式 API，以便于日志记录。
 
-选择使用哪种打印样式 API 由用户自己决定。 主要差异为：
+选择使用哪种打印样式 API 由用户自己决定。 主要区别包括：
 
 - <xref:System.Console?displayProperty=nameWithType>
   - 始终启用，并始终写入控制台。

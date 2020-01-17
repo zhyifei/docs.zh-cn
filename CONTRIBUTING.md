@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 25615dd43f1ae4f56c7bced7f79a0612093a21fb
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 469be53e14c42775f21ef1ef815becd5cad03a97
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191692"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336727"
 ---
 # <a name="contributing"></a>参与
 
@@ -22,12 +22,9 @@ ms.locfileid: "73191692"
 
 此存储库包含适用于 .NET 的概念文档。 .NET 文档站点建立在多个存储库的基础上，还包括下面这个：
 
-- [代码示例和代码片段](https://github.com/dotnet/samples)  
-    此存储库的问题和任务在 [dotnet/docs/issues](https://github.com/dotnet/docs/issues) 中进行跟踪。
-- [.NET API 参考](https://github.com/dotnet/dotnet-api-docs)  
-    此存储库的问题和任务在 [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues) 中进行跟踪。
-- [.NET Compiler Platform SDK 参考](https://github.com/dotnet/roslyn-api-docs)  
-    此存储库的问题和任务在 [dotnet/docs/issues](https://github.com/dotnet/docs/issues) 中进行跟踪。
+- 此存储库的[代码示例和代码段](https://github.com/dotnet/samples)问题和任务在 [dotnet/docs/issues](https://github.com/dotnet/docs/issues) 中进行跟踪。
+- 此存储库的 [.NET API 引用](https://github.com/dotnet/dotnet-api-docs)问题和任务在 [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues) 中进行跟踪。
+- 此存储库的 [.NET Compiler Platform SDK 参考](https://github.com/dotnet/roslyn-api-docs)问题和任务在 [dotnet/docs/issues](https://github.com/dotnet/docs/issues) 中进行跟踪。
 
 ## <a name="dos-and-donts"></a>注意事项
 
@@ -37,7 +34,7 @@ ms.locfileid: "73191692"
 - 查看当前的  [容易作答](https://github.com/dotnet/docs/labels/up-for-grabs)问题，获取有关这些任务的建议。
 - 为每个任务创建一个拉取请求。  包含多个无关更改的拉取请求更加难以评审。 这会延迟拉取请求的评审和合并。 此准则同时适用于评审：我们尽量不在评审中建议无关的更改；我们要求社区评审遵循此准则。
 - 在拉取请求中提供清晰工作描述。  说明更改的内容和原因。 “update article.md”的默认描述对审阅者没有帮助。
-- 未经提前讨论，不要提交仅样式更改的拉取请求。  处理这些拉取请求需要花费额外的时间来评审其准确性，而且合并它们往往会与其他重要更新导致合并冲突。 我们正在努力采用一致的样式，并协调此项工作与其他任务的平衡。 当我们出于其他原因进行重大更新时，会将文章样式更新为一致。 
+- 未经提前讨论，不要提交仅样式更改的拉取请求。  处理这些拉取请求需要花费额外的时间来评审其准确性，而且合并它们往往会与其他重要更新导致合并冲突。 我们正在努力采用一致的样式，并协调此项工作与其他任务的平衡。 当我们出于其他原因进行重大更新时，会将文章样式更新为一致。
 - 请务必阅读[风格指南](./styleguide/template.md)以及[语气和语调](./styleguide/voice-tone.md)指南  。 新增内容应遵循以下准则。
 - 请务必在处理文章前，在分叉上创建一个单独的分支  。
 - 请务必遵循 [GitHub 流工作流](https://guides.github.com/introduction/flow/)  。
@@ -54,7 +51,7 @@ ms.locfileid: "73191692"
 **步骤 1：** 对于较小的更改，请跳过此步骤（例如，如果你正在更正一个拼写错误，或者立即打开一个拉取请求来处理在文档中发现的问题）。 如果有意编写新内容或彻底修改现有内容，请打开[问题](https://github.com/dotnet/docs/issues)，描述要执行的操作。
 “文档”  文件夹中的内容划分为在目录 (TOC) 中反应的不同部分。 定义主题在 TOC 中的位置。 获取对建议的反馈。
 
--或-
+\- 或 -
 
 还可以从现有问题中进行选择，了解哪些是热门的社区发布内容。 [.NET 社区参与者项目](https://github.com/dotnet/docs/projects/35)列出了许多可用于社区参与者的工作项。 根据你的兴趣和承诺水平，可从以下类别的问题中作出选择：
 
@@ -64,7 +61,7 @@ ms.locfileid: "73191692"
 
 - **新内容创作**。 如果了解如何创作你自己的主题，这些问题将列出我们知道要添加到文档集的主题。 不过，在你开始研究某个主题之前，请告知我们。 如果你有意编写此处未列出的主题，请提问。
 
-此外可以查看我们的[待解决问题](https://github.com/dotnet/docs/issues)列表，并自愿参与你感兴趣的工作。 我们使用[空缺](https://github.com/dotnet/docs/labels/up-for-grabs)标签来标记公开供参与的问题。 
+此外可以查看我们的[待解决问题](https://github.com/dotnet/docs/issues)列表，并自愿参与你感兴趣的工作。 我们使用[空缺](https://github.com/dotnet/docs/labels/up-for-grabs)标签来标记公开供参与的问题。
 
 **步骤 2：** 根据需要对 `dotnet/docs`、`dotnet/samples` 或 `dotnet/dotnet-api-docs` 存储库进行分支，并为所做更改创建分支。
 
@@ -138,7 +135,7 @@ docs
 
 ## <a name="the-c-interactive-experience"></a>C# 交互式体验
 
-C# 中的简短代码示例可以使用 `csharp-interactive` 语言标记来指定浏览器中运行的 C# 示例。 （内联代码示例使用 `csharp-interactive` 标记，对于源代码中包含的代码段，请使用 `code-csharp-interactive` 标记。）这些代码示例在本文中显示一个代码窗口和一个输出窗口。 输出窗口显示用户运行示例后执行交互式代码的任何输出。 
+C# 中的简短代码示例可以使用 `csharp-interactive` 语言标记来指定浏览器中运行的 C# 示例。 （内联代码示例使用 `csharp-interactive` 标记，对于源代码中包含的代码段，请使用 `code-csharp-interactive` 标记。）这些代码示例在本文中显示一个代码窗口和一个输出窗口。 输出窗口显示用户运行示例后执行交互式代码的任何输出。
 
 C# 交互式体验改变了我们使用示例的方式。 访问者可以运行该示例以查看结果。 很多因素有助于确定示例或相应的文本是否应包括有关输出的信息。
 
@@ -149,7 +146,7 @@ C# 交互式体验改变了我们使用示例的方式。 访问者可以运行�
 - 当示例和预期输出都很短时，请考虑显示输出。 它可以节省一些时间。
 - 说明当前区域性或固定区域性如何影响输出的文章应解释预期输出。 交互式 REPL（读取评估打印循环）在基于 Linux 的主机上运行。 默认区域性和固定区域性在不同的操作系统和计算机上生成不同输出。 本文应介绍 Windows、Linux 和 Mac 系统中的输出。
 
-### <a name="when-to-exclude-expected-output-from-the-sample"></a>何时不在示例中包含预期输出 
+### <a name="when-to-exclude-expected-output-from-the-sample"></a>何时不在示例中包含预期输出
 
 - 示例生成较大输出的文章不应在注释中包含该输出。 运行该示例后，它会遮盖代码。
 - 示例演示一个主题但输出并不是理解它的必要条件的文章。 例如，运行 LINQ 查询来解释查询语法，然后显示输出集合中的每个项的代码。

@@ -2,12 +2,12 @@
 title: 关于 .NET Core
 description: 了解 .NET Core。
 ms.date: 09/17/2019
-ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 12611c2cd0b872a683d070ff17dcf9f111578627
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801952"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900622"
 ---
 # <a name="about-net-core"></a>关于 .NET Core
 
@@ -17,9 +17,9 @@ ms.locfileid: "74801952"
 - **跨体系结构保持一致：** 在多个体系结构（包括 x64、x86 和 ARM）上以相同的行为运行代码。
 - **命令行工具：** 包括可用于本地开发和持续集成方案中的易于使用的命令行工具。
 - **部署灵活：** 可以包含在应用或已安装的并行（用户或系统范围安装）中。 可搭配 [Docker 容器](docker/introduction.md)使用。
-- **兼容性：** .NET Core 通过 [.NET Standard](../standard/net-standard.md) 与 .NET Framework、Xamarin 和 Mono 兼容。
-- **开放源代码：** .NET Core 平台是开放源代码，使用 MIT 和 Apache 2 许可证。 .NET Core 是一个 [.NET Foundation](https://dotnetfoundation.org/) 项目。
-- **由 Microsoft 支持：** .NET Core 由 Microsoft 依据 [.NET Core 支持](https://dotnet.microsoft.com/platform/support/policy)提供支持。
+- **兼容性：**.NET Core 通过 [.NET Standard](../standard/net-standard.md) 与 .NET Framework、Xamarin 和 Mono 兼容。
+- **开放源代码：**.NET Core 平台是开放源代码，使用 MIT 和 Apache 2 许可证。 .NET Core 是一个 [.NET Foundation](https://dotnetfoundation.org/) 项目。
+- **由 Microsoft 支持：**.NET Core 由 Microsoft 依据 [.NET Core 支持](https://dotnet.microsoft.com/platform/support/policy)提供支持。
 
 ## <a name="languages"></a>语言
 
@@ -57,8 +57,8 @@ ms.locfileid: "74801952"
 .NET Core 包括以下部分：
 
 - [.NET Core 运行时](https://github.com/dotnet/runtime/tree/master/src/coreclr)：提供类型系统、程序集加载、垃圾回收器、本机互操作和其他基本服务。 [.NET Core 框架库](https://github.com/dotnet/runtime/tree/master/src/libraries)：提供基元数据类型、应用编写类型和基本实用程序。
-- [ASP.NET 运行时](https://github.com/aspnet/home)：提供一个框架来生成基于云且连接到 Internet 的新式应用程序，例如 Web 应用、IoT 应用和移动后端。
-- [.NET Core CLI 工具](https://github.com/dotnet/cli)和语言编译器（[Roslyn](https://github.com/dotnet/roslyn) 和 [F#](https://github.com/microsoft/visualfsharp)）：提供 .NET Core 开发人员体验。
+- [ASP.NET Core 运行时](https://github.com/dotnet/aspnetcore)：提供一个框架来生成基于云且连接到 Internet 的新式应用程序，例如 Web 应用、IoT 应用和移动后端。
+- [.NET Core CLI 工具](https://github.com/dotnet/sdk)和语言编译器（[Roslyn](https://github.com/dotnet/roslyn) 和 [F#](https://github.com/microsoft/visualfsharp)）：提供 .NET Core 开发人员体验。
 - [dotnet 工具](https://github.com/dotnet/core-setup)：用于启动 .NET Core 应用和 CLI 工具。 它选择运行时并托管运行时，提供程序集加载策略并启动应用和工具。
 
 这些组件采用以下方式分布：
@@ -113,7 +113,7 @@ Windows 和 Unix 实现大小相似。 Windows 的实现范围更广，这是因
 
 ### <a name="comparison-with-mono"></a>与 Mono 比较
 
-[Mono](https://www.mono-project.com/) 是 .NET 的初始跨平台实现。 它一开始是用作 .NET Framework 的[开源](https://github.com/mono/mono)替代项，之后随着 iOS 和 Android 设备变得流行，过渡到面向移动设备。 可将它看作是 .NET Framework 的社区克隆。 Mono 项目团队依赖于 Microsoft 发布的开放 [.NET 标准](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)（尤其是 ECMA 335）来实现兼容性。
+[Mono](https://www.mono-project.com/) 是 .NET 的初始跨平台实现。 它一开始是用作 .NET Framework 的[开源](https://github.com/mono/mono)替代项，之后随着 iOS 和 Android 设备变得流行，过渡到面向移动设备。 可将它看作是 .NET Framework 的社区克隆。 Mono 项目团队依赖于 Microsoft 发布的开放 [.NET 标准](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md)（尤其是 ECMA 335）来实现兼容性。
 
 .NET Core 和 Mono 的主要差异在于：
 

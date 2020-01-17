@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: 7d40324e6b0bc4afab9dd39b236f0909f360cc9b
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 2c1362d6982206b14475f77700add0bae61da173
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394273"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901755"
 ---
 ### <a name="caching-compactonmemorypressure-property-removed"></a>缓存：已删除 CompactOnMemoryPressure 属性
 
-ASP.NET Core 3.0 版本已删除[过时的 MemoryCacheOptions API](https://github.com/aspnet/Extensions/blob/dc5c593da7b72c82e6fe85abb91d03818f9b700c/src/Caching/Memory/src/MemoryCacheOptions.cs#L17-L18)。
+ASP.NET Core 3.0 版本已删除[过时的 MemoryCacheOptions API](https://github.com/dotnet/extensions/blob/dc5c593da7b72c82e6fe85abb91d03818f9b700c/src/Caching/Memory/src/MemoryCacheOptions.cs#L17-L18)。
 
 #### <a name="change-description"></a>更改描述
 
-此更改是对 [aspnet/Caching#221](https://github.com/aspnet/Caching/issues/221) 的后续补充。 有关讨论，请参阅 [aspnet/Extensions#1062](https://github.com/aspnet/Extensions/issues/1062)。
+此更改是对 [aspnet/Caching#221](https://github.com/aspnet/Caching/issues/221) 的后续补充。 有关讨论，请参阅 [dotnet/extensions#1062](https://github.com/dotnet/extensions/issues/1062)。
 
 #### <a name="version-introduced"></a>引入的版本
 
@@ -30,7 +30,7 @@ ASP.NET Core 3.0 版本已删除[过时的 MemoryCacheOptions API](https://githu
 
 自动压缩缓存会引起问题。 若要避免意外行为，只应在需要时压缩缓存。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 若要压缩缓存，请向下转换到 `MemoryCache` 并在需要时调用 `Compact`。
 

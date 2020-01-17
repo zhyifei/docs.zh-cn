@@ -1,27 +1,26 @@
 ---
 title: 使用 Windows 兼容性包将代码移植到 .NET Core
-description: 了解有关 Windows 兼容性包以及如何使用它将现有 .NET Framework 代码移植到 .NET Core 的信息
+description: 了解有关 Windows 兼容性包以及如何使用它将现有 .NET Framework 代码移植到 .NET Core 的信息。
 author: terrajobst
 ms.date: 12/07/2018
-ms.custom: seodec18
-ms.openlocfilehash: adf2aaab27b5a8afcc89fceac67184d3b1974037
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 65530987a3cded941b6a292118ed9bfdb6f5b86c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521276"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715470"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>使用 Windows 兼容性包将代码移植到 .NET Core
 
 将现有代码移植到 .NET Core 时发现的一些最常见问题依赖于仅在 .NET Framework 中找到的 API 和技术。 Windows 兼容性包  提供许多这些技术，因此可以更轻松地生成 .NET Core 应用程序和 .NET Standard 库。
 
-此包是 [.NET Standard 2.0 的逻辑扩展](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)，显著增加了 API 集和现有代码编译，而几乎无需进行任何修改。 但为了信守 .NET Standard 的承诺（“它是一组所有 .NET 实现都提供的 API”），这不包括无法跨所有平台工作的技术，如注册表、Windows Management Instrumentation (WMI) 或反射发出 API。
+此包是 [.NET Standard 2.0 的逻辑扩展](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)，显著增加了 API 集和现有代码编译，而几乎无需进行任何修改。 为了信守 .NET Standard 的承诺（“它是一组所有 .NET 实现都提供的 API”），此包不包括无法跨所有平台工作的技术，如注册表、Windows Management Instrumentation (WMI) 或反射发出 API。
 
-Windows 兼容性包  位于 .NET Standard 顶部，提供对仅用于 Windows 的技术的访问权限。 它对于第一步想要移动到 .NET Core 但仍计划停留在 Windows 上的客户尤其有用。 在这种情况下，无法使用仅限 Windows 的技术只会造成迁移障碍，没有任何体系结构优势。
+Windows 兼容性包位于 .NET Standard 顶部，提供对仅用于 Windows 的技术的访问权限。 它对于第一步想要移动到 .NET Core 但仍计划停留在 Windows 上的客户尤其有用。 在这种情况下，无法使用仅限 Windows 的技术只会造成迁移障碍，没有任何体系结构优势。
 
 ## <a name="package-contents"></a>包内容
 
-Windows 兼容性包  通过 NuGet 包 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) 提供，可从面向 .NET Core 或 .NET Standard 的项目引用。
+Windows 兼容性包通过 [Microsoft.Windows.Compatibility NuGet 包](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)提供，可从面向 .NET Core 或 .NET Standard 的项目引用。
 
 它提供了约 20,000 个 API，包括仅 Windows API 以及以下技术领域中的跨平台 API：
 
@@ -49,13 +48,13 @@ Windows 兼容性包  通过 NuGet 包 [Microsoft.Windows.Compatibility](https:/
 
 1. 移植之前，请确保查看[移植过程](index.md)。
 
-2. 将现有代码移植到 .NET Core 或 .NET Standard 时，请安装 NuGet 包 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)。
+2. 将现有代码移植到 .NET Core 或 .NET Standard 时，请安装 [Microsoft.Windows.Compatibility NuGet 包](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)。
 
-3. 如果要停留在 Windows 上，则已准备完毕。
+   如果要停留在 Windows 上，则已准备完毕。
 
-4. 如果要在 Linux 或 macOS 上运行 .NET Core 应用程序或 .NET Standard 库，请使用 [API 分析器](../../standard/analyzers/api-analyzer.md)查找不会跨平台工作的 API 的使用情况。
+3. 如果要在 Linux 或 macOS 上运行 .NET Core 应用程序或 .NET Standard 库，请使用 [API 分析器](../../standard/analyzers/api-analyzer.md)查找不会跨平台工作的 API 的使用情况。
 
-5. 删除这些 API 的使用情况、将其替换为跨平台替代项，或使用平台检查对其实施保护，例如：
+4. 删除这些 API 的使用情况、将其替换为跨平台替代项，或使用平台检查对其实施保护，例如：
 
     ```csharp
     private static string GetLoggingPath()

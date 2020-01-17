@@ -2,18 +2,18 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet-restore 命令还原依赖项和特定于项目的工具。
 ms.date: 05/29/2018
-ms.openlocfilehash: 055a4250755af02ad392877663985f86a647f892
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 82dd85e340a4cb520f781d977b0798b0f532a088
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275748"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340440"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet restore` - 恢复项目的依赖项和工具。
 
@@ -39,13 +39,13 @@ dotnet restore [-h|--help]
 
 ---
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 `dotnet restore` 命令使用 NuGet 还原依赖项以及在 project 文件中指定的特定于项目的工具。 默认情况下会并行执行对依赖项和工具的还原。
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-为了还原依赖项，NuGet 需要包所在的源。 通常通过“nuGet.config”配置文件提供源  。 安装 CLI 工具时提供一个默认的配置文件。 可以通过在项目目录中创建自己的 nuGet.config 文件来指定其他源  。 也可以在命令提示符处指定每次调用的其他源。
+为了还原依赖项，NuGet 需要包所在的源。 通常通过“nuGet.config”配置文件提供源  。 安装 CLI 工具时提供一个默认的配置文件。 可以通过在项目目录中创建自己的 nuGet.config 文件来指定其他源  。 可以使用 `-s` 选项替代 nuget.config  源。
 
 对于依赖项，使用 `--packages` 参数指定还原操作期间放置还原包的位置。 如未指定，将使用默认的 NuGet 包缓存，可在所有操作系统上的用户主目录中的 `.nuget/packages` 目录找到它。 例如 Linux 上的 /home/user1 或 Windows 上的 C:\Users\user1   。
 

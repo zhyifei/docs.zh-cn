@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3f702febc78488b9413ec9303ded211493650f02
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 1e081c9f37fbd7ab754ce44ba89d7aa5cabfc219
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198364"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75902063"
 ---
 ### <a name="mvc-precompilation-tool-deprecated"></a>MVC：预编译工具已弃用
 
@@ -28,9 +28,9 @@ Razor SDK 本机支持此功能。 `Microsoft.AspNetCore.Mvc.Razor.ViewCompilati
 
 Razor SDK 提供更多的功能并在生成时验证 .cshtml  文件的正确性。 SDK 还会缩短应用的启动时间。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
-对于 ASP.NET Core 2.1 或更高版本的用户，更新以在 [Razor SDK](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0) 中使用本机支持进行预编译。 如果 Bug 或缺失的功能阻止迁移到 Razor SDK，请在 [aspnet/AspNetCore](https://github.com/aspnet/AspNetCore/issues) 中提出问题。
+对于 ASP.NET Core 2.1 或更高版本的用户，更新以在 [Razor SDK](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0) 中使用本机支持进行预编译。 如果 Bug 或缺失的功能阻止迁移到 Razor SDK，请在 [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues) 中提出问题。
 
 #### <a name="category"></a>类别
 
@@ -38,7 +38,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影响的 API
 
-无
+None
 
 <!-- 
 

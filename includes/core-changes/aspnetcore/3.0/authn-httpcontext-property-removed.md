@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2945465bb6a3a362dc640641056712dffd73d559
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 60ebcd9fc9ca18c33d31b82ba5020426d22a7d5a
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394263"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901996"
 ---
 ### <a name="authentication-httpcontextauthentication-property-removed"></a>身份验证：已删除 HttpContext.Authentication 属性
 
@@ -12,9 +12,9 @@ ms.locfileid: "72394263"
 
 #### <a name="change-description"></a>更改描述
 
-作为 [aspnet/AspNetCore#6504](https://github.com/aspnet/AspNetCore/pull/6504) 的一部分，已删除 `HttpContext` 上弃用的 `Authentication` 属性。 从 2.0 开始，`Authentication` 属性已弃用。 [迁移指南 ](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions)已发布，可使用此弃用属性将代码迁移到新的替换 API。 在 commit [aspnet/AspNetCore@d7a7c65](https://github.com/aspnet/AspNetCore/commit/d7a7c65) 中移除了与旧 ASP.NET Core 1.x 身份验证堆栈相关的其余未使用的类/API。
+作为 [dotnet/aspnetcore#6504](https://github.com/dotnet/aspnetcore/pull/6504) 的一部分，已删除 `HttpContext` 上弃用的 `Authentication` 属性。 从 2.0 开始，`Authentication` 属性已弃用。 [迁移指南 ](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions)已发布，可使用此弃用属性将代码迁移到新的替换 API。 在 commit [dotnet/aspnetcore@d7a7c65](https://github.com/dotnet/aspnetcore/commit/d7a7c65) 中移除了与旧 ASP.NET Core 1.x 身份验证堆栈相关的其余未使用的类/API。
 
-有关讨论，请参阅 [aspnet/AspNetCore#6533](https://github.com/aspnet/AspNetCore/issues/6533)。
+有关讨论，请参阅 [dotnet/aspnetcore#6533](https://github.com/dotnet/aspnetcore/issues/6533)。
 
 #### <a name="version-introduced"></a>引入的版本
 
@@ -24,7 +24,7 @@ ms.locfileid: "72394263"
 
 ASP.NET Core 1.0 API 已被 <xref:Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions?displayProperty=fullName> 中的扩展方法替换。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 请参阅[迁移指南](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions)。
 

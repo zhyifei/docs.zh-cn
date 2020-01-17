@@ -4,12 +4,12 @@ description: 使用包管理器在 Debian 9 上安装 .NET Core SDK 和运行时
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: b8b6a3039efcc2fbd15e0c3948984086c619bd44
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7a9d4524661e1230af7d1d50a4d8a60ad7774a68
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74998965"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740709"
 ---
 # <a name="debian-9-package-manager---install-net-core"></a>Debian 9 包管理器 - 安装 .NET Core
 
@@ -21,9 +21,9 @@ ms.locfileid: "74998965"
 
 安装 .NET 之前，需要：
 
-- 注册 Microsoft 密钥
-- 注册产品存储库
-- 安装必需的依赖项
+- 注册 Microsoft 密钥。
+- 注册产品存储库。
+- 安装必需的依赖项。
 
 每台计算机只需要执行一次此操作。
 

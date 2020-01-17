@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: acef6d7177ee5ad7e18dc8ba1e383d6f76263623
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: f202b39f1a45f740625827be25e72df0e403d605
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394442"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901923"
 ---
 ### <a name="signalr-javascript-client-package-name-changed"></a>SignalR：已更改 JavaScript 客户端包名称
 
@@ -12,7 +12,7 @@ ms.locfileid: "72394442"
 
 若要对此更改做出反应，请更改 package.json  文件、`require` 语句和 ECMAScript `import` 语句中的引用。 在此重命名过程中，不会更改 API。
 
-有关讨论，请参阅 [aspnet/AspNetCore#11637](https://github.com/aspnet/AspNetCore/issues/11637)。
+有关讨论，请参阅 [dotnet/aspnetcore#11637](https://github.com/dotnet/aspnetcore/issues/11637)。
 
 #### <a name="version-introduced"></a>引入的版本
 
@@ -30,7 +30,7 @@ ms.locfileid: "72394442"
 
 由于 Azure SignalR 服务，名称更改阐明了 SignalR 在 ASP.NET Core 应用之外也很有用。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 切换到新包 `@microsoft/signalr`。
 
@@ -40,7 +40,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影响的 API
 
-无
+None
 
 <!-- 
 
