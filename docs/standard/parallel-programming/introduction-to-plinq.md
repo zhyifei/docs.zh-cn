@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: 938bae09eab4e95c0ec875a8681cc276325b976b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ed1b2df57c118a0ebb6b5ffa4326b3e2eac81dec
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129044"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632358"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 介绍
 
@@ -21,7 +21,7 @@ ms.locfileid: "73129044"
 
 .NET Framework 3.5 中引入了语言集成查询 (LINQ)。 它具有统一的模型，以类型安全方式查询任何 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 数据源。 LINQ to Objects 是针对内存中集合（如 <xref:System.Collections.Generic.List%601> 和数组）运行的 LINQ 查询的名称。 本文假定你对 LINQ 有基本的了解。 有关详细信息，请参阅[语言集成查询 (LINQ) - C#](../../csharp/programming-guide/concepts/linq/index.md) 或[语言集成查询 (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)。
 
-并行 LINQ (PLINQ) 是 LINQ 模式的并行实现。 一个 PLINQ 查询的许多方面都类似于非并行的 LINQ to Objects 查询。 与顺序 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] 查询一样，PLINQ 查询对任何内存中 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 数据源执行操作，并且推迟了执行，即在枚举查询前不会开始执行。 主要区别在于，PLINQ 会尝试充分利用系统上的所有处理器。 方法是将数据源分区成片段，然后在多个处理器上针对单独工作线程上的每个片段执行并行查询。 在许多情况下，并行执行意味着查询运行速度显著提高。
+并行 LINQ (PLINQ) 是 LINQ 模式的并行实现。 一个 PLINQ 查询的许多方面都类似于非并行的 LINQ to Objects 查询。 与顺序 LINQ 查询一样，PLINQ 查询对任何内存中 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 数据源执行操作，并且推迟了执行，即在枚举查询前不会开始执行。 主要区别在于，PLINQ 会尝试充分利用系统上的所有处理器。 方法是将数据源分区成片段，然后在多个处理器上针对单独工作线程上的每个片段执行并行查询。 在许多情况下，并行执行意味着查询运行速度显著提高。
 
 通过并行执行，通常只需向数据源添加 <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 查询操作，PLINQ 即可显著提升性能（与某些类型查询的旧代码相比）。 但是，并行可能会引入其自身的复杂性，因此并非所有的查询操作的运行速度在 PLINQ 中都更快。 事实上，并行实际上会降低某些查询的速度。 因此，应了解排序等问题将如何对并行查询产生影响。 有关详细信息，请参阅[了解 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。
 
@@ -34,11 +34,11 @@ ms.locfileid: "73129044"
 
 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> 类公开了几乎所有的 PLINQ 功能。 它和 <xref:System.Linq?displayProperty=nameWithType> 命名空间类型的其余部分一起被编译到 System.Core.dll 程序集中。 Visual Studio 中默认的 C# 和 Visual Basic 项目均会引用该程序集并导入该命名空间。
 
-尽管 <xref:System.Linq.ParallelEnumerable> 实现了 LINQ to Objects 支持的所有标准查询运算符，但它不会尝试并行执行每个实现。 如果你不熟悉 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)]，请参阅 [LINQ (C#) 简介](../../csharp/programming-guide/concepts/linq/index.md)和 [LINQ (Visual Basic) 简介](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)。
+尽管 <xref:System.Linq.ParallelEnumerable> 实现了 LINQ to Objects 支持的所有标准查询运算符，但它不会尝试并行执行每个实现。 如果你不熟悉 LINQ，请参阅 [LINQ (C#) 简介](../../csharp/programming-guide/concepts/linq/index.md)和 [LINQ (Visual Basic) 简介](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)。
 
 除了标准查询运算符外，<xref:System.Linq.ParallelEnumerable> 类还包含一组启用并行执行专用行为的方法。 下表中列出了这些特定于 PLINQ 的方法。
 
-|ParallelEnumerable 运算符|说明|
+|ParallelEnumerable 运算符|描述|
 |---------------------------------|-----------------|
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|PLINQ 的入口点。 指定如果可能，应并行化查询的其余部分。|
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|指定查询的其余部分应像非并行的 LINQ 查询一样按顺序运行。|
@@ -94,7 +94,7 @@ ms.locfileid: "73129044"
 
 ## <a name="the-forall-operator"></a>ForAll 运算符
 
-在顺序 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] 查询中，执行一直延迟到在 `foreach`（Visual Basic 中为 `For Each`）循环中或通过调用 <xref:System.Linq.ParallelEnumerable.ToList%2A>、<xref:System.Linq.ParallelEnumerable.ToArray%2A> 或 <xref:System.Linq.ParallelEnumerable.ToDictionary%2A> 等方法枚举查询。 在 PLINQ 中，还可以使用 `foreach` 执行查询以及循环访问结果。 但是，`foreach` 本身不会并行运行，因此，它要求将所有并行任务的输出合并回该循环正在上面运行的线程中。 在 PLINQ 中，在必须保留查询结果的最终排序，以及以按串行方式处理结果时，例如当为每个元素调用 `Console.WriteLine` 时，则可以使用 `foreach`。 为了在无需顺序暂留以及可自行并行处理结果时更快地执行查询，请使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法执行 PLINQ 查询。 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 不执行最终的这一合并步骤。 下面的代码示例说明如何使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法。 此处使用 <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> 是因为它已优化，可以同时添加多个线程，而无需尝试移除任何项。
+在顺序 LINQ 查询中，执行一直延迟到在 `foreach`（Visual Basic 中为 `For Each`）循环中或通过调用 <xref:System.Linq.ParallelEnumerable.ToList%2A>、<xref:System.Linq.ParallelEnumerable.ToArray%2A> 或 <xref:System.Linq.ParallelEnumerable.ToDictionary%2A> 等方法枚举查询。 在 PLINQ 中，还可以使用 `foreach` 执行查询以及循环访问结果。 但是，`foreach` 本身不会并行运行，因此，它要求将所有并行任务的输出合并回该循环正在上面运行的线程中。 在 PLINQ 中，在必须保留查询结果的最终排序，以及以按串行方式处理结果时，例如当为每个元素调用 `Console.WriteLine` 时，则可以使用 `foreach`。 为了在无需顺序暂留以及可自行并行处理结果时更快地执行查询，请使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法执行 PLINQ 查询。 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 不执行最终的这一合并步骤。 下面的代码示例说明如何使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法。 此处使用 <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> 是因为它已优化，可以同时添加多个线程，而无需尝试移除任何项。
 
 [!code-csharp[PLINQ#4](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinq2_cs.cs#4)]
 [!code-vb[PLINQ#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#4)]

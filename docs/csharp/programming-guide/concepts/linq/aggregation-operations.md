@@ -2,12 +2,12 @@
 title: 聚合运算 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6fc035e5-7639-48b8-bc7f-b093dd31b039
-ms.openlocfilehash: aebefcad8a741a97a51e73bfade9d4a16d343100
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: ea32becbb7ad0d3944eaea7b1b5448342ed438a5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141542"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347549"
 ---
 # <a name="aggregation-operations-c"></a>聚合运算 (C#)
 聚合运算从值的集合中计算出单个值。 例如，从一个月累计的每日温度值计算出日平均温度值就是一个聚合运算。  
@@ -20,7 +20,7 @@ ms.locfileid: "74141542"
   
 ## <a name="methods"></a>方法  
   
-|方法名|说明|C# 查询表达式语法|详细信息|  
+|方法名|描述|C# 查询表达式语法|详细信息|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |聚合|对集合的值执行自定义聚合运算。|不适用。|<xref:System.Linq.Enumerable.Aggregate%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Aggregate%2A?displayProperty=nameWithType>|  
 |平均值|计算值集合的平均值。|不适用。|<xref:System.Linq.Enumerable.Average%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Average%2A?displayProperty=nameWithType>|  
@@ -35,5 +35,5 @@ ms.locfileid: "74141542"
 - <xref:System.Linq>
 - [标准查询运算符概述 (C#)](./standard-query-operators-overview.md)
 - [如何在 CSV 文本文件中计算列值 (LINQ) (C#)](./how-to-compute-column-values-in-a-csv-text-file-linq.md)
-- [如何：查询最大的文件或目录树中的文件 (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
-- [如何：查询一组文件夹中的总字节数 (LINQ) (C#)](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)
+- [如何查询目录树中的一个或多个最大的文件 (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
+- [如何查询一组文件夹中的总字节数 (LINQ) (C#)](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)

@@ -3,13 +3,13 @@ title: 教程：使用回归预测价格
 description: 本教程演示如何使用 ML.NET 生成回归模型来预测价格，特别是纽约市的出租车费。
 ms.date: 09/30/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: a7a7a246f3153889343589a7b32c183ca30df5a3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: e4014dbdfb81af65c35d2f7693ef2c57885303ff
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459162"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711618"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>教程：将回归与 ML.NET 配合使用以预测价格
 
@@ -25,7 +25,7 @@ ms.locfileid: "73459162"
 > * 评估模型
 > * 使用预测模型
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 * 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
 
@@ -37,7 +37,7 @@ ms.locfileid: "73459162"
 
 1. 安装“Microsoft.ML”NuGet 包  ：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”   。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择包，再选择“安装”按钮    。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。 对 Microsoft.ML.FastTree Nuget 包执行相同操作  。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”   。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择包，再选择“安装”按钮    。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。 对 **Microsoft.ML.FastTree** NuGet 包执行相同操作。
 
 ## <a name="prepare-and-understand-the-data"></a>准备和了解数据
 
@@ -75,7 +75,7 @@ ms.locfileid: "73459162"
 
 `TaxiTrip` 是输入数据类且具有针对每个数据集列的定义。 使用 <xref:Microsoft.ML.Data.LoadColumnAttribute> 属性在数据集中指定源列的索引。
 
-`TaxiTripFarePrediction` 类表示预测的结果。 它应用了单个浮动 `FareAmount` 字段，附带 `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> 属性。 对于回归任务，“分数”列包含预测的标签值  。
+`TaxiTripFarePrediction` 类表示预测的结果。 它应用了单个浮动 `FareAmount` 字段，附带 `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> 属性。 对于回归任务，“分数”  列包含预测的标签值。
 
 > [!NOTE]
 > 使用 `float` 类型来表示输入和预测数据类中的浮点值。
@@ -130,7 +130,7 @@ ML.NET 使用 [IDataView 类](xref:Microsoft.ML.IDataView)灵活、有效地描�
 
 [!code-csharp[LoadTrainData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#6 "loading training dataset")]
 
-由于要预测出租车车费，`FareAmount` 列是将预测的 `Label`（模型的输出）。使用 `CopyColumnsEstimator` 转换类以复制 `FareAmount`，并添加以下代码：
+由于要预测出租车车费，`FareAmount` 列是将预测的 `Label`（模型的输出）。 使用 `CopyColumnsEstimator` 转换类以复制 `FareAmount`，并添加以下代码：
 
 [!code-csharp[CopyColumnsEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Use the CopyColumnsEstimator")]
 
@@ -215,7 +215,7 @@ Console.WriteLine($"*------------------------------------------------");
 
 [!code-csharp[DisplayRSquared](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#18 "Display the RSquared metric.")]
 
-[RMS](../resources/glossary.md##root-of-mean-squared-error-rmse) 是回归模型的一种评估指标。 指标越低，模型就越好。 将以下代码添加到 `Evaluate` 方法以显示 RMS 值：
+[RMS](../resources/glossary.md#root-of-mean-squared-error-rmse) 是回归模型的一种评估指标。 指标越低，模型就越好。 将以下代码添加到 `Evaluate` 方法以显示 RMS 值：
 
 [!code-csharp[DisplayRMS](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#19 "Display the RMS metric.")]
 

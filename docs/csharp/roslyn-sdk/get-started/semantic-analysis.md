@@ -3,12 +3,12 @@ title: 语义分析入门
 description: 本教程概述如何使用.NET 编译器 SDK 进行语义分析。
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 80a814054ab95a5b6585289e8580a725b18ca44e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7bf2f40ea0bc059d9c517780016ca5deb805ceb6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252933"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346982"
 ---
 # <a name="get-started-with-semantic-analysis"></a>语义分析入门
 
@@ -22,7 +22,7 @@ ms.locfileid: "70252933"
 
 ## <a name="understanding-compilations-and-symbols"></a>了解编译和符号
 
-随着 .NET 编译器 SDK 的使用越来越多，你会越来越熟悉语法 API 和语义 API 之间的区别。 “语法 API”使你可以看到程序的结构   。 但是经常会需要更多关于程序的语义或含义的信息  。 虽然可以独立地对松散的代码文件或 VB 或 C# 代码的代码片段进行语法上的分析，但是凭空提出类似“这是什么类型的变量？”这样的问题毫无意义。 类型名称的含义可能取决于程序集引用、命名空间导入或其他代码文件。 使用**语义 API** 回答这些问题，特别是 <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> 类。
+随着 .NET 编译器 SDK 的使用越来越多，你会越来越熟悉语法 API 和语义 API 之间的区别。 “语法 API”使你可以看到程序的结构   。 但是经常会需要更多关于程序的语义或含义的信息  。 虽然可以独立地对松散的代码文件或 Visual Basic 或 C# 代码的代码片段进行语法上的分析，但是凭空提出类似“这是什么类型的变量？”这样的问题毫无意义。 类型名称的含义可能取决于程序集引用、命名空间导入或其他代码文件。 使用**语义 API** 回答这些问题，特别是 <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> 类。
 
 <xref:Microsoft.CodeAnalysis.Compilation> 实例类似于编译器所看见的单个项目，且代表编译 Visual Basic 或 C# 程序所需的一切。 编译  包括一组要编译的源文件、程序集引用和编译器选项。 可以使用此上下文中所有的其他信息来推断代码的含义。 <xref:Microsoft.CodeAnalysis.Compilation> 允许你查找“符号”  - 类似名称和其他表达式引用的类型、命名空间、成员和变量的实体。 将名称和表达式与“符号”进行关联的过程被称为“绑定”   。
 

@@ -1,15 +1,15 @@
 ---
-title: 如何：从文件系统填充 XML 树 (C#)
+title: 如何从文件系统填充 XML 树 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: dc3850c943ebac8980abbff0933413538823d21d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: beb44be1a787fa09b091aa48022dbb5b10c4632b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485173"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345787"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>如何：从文件系统填充 XML 树 (C#)
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>如何从文件系统填充 XML 树 (C#)
 XML 树有一种有用的常见应用，即作为层次结构名称/值数据存储区。 您可以使用层次结构数据填充 XML 树，然后对它进行查询、转换和序列化（如有必要）。 在这种用法中，很多 XML 特定的语义（如命名空间和空白行为）都不重要。 相反，你将 XML 树用作内存中的小型单用户层次结构数据库。  
   
 ## <a name="example"></a>示例  

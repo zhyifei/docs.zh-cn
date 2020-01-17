@@ -1,20 +1,20 @@
 ---
-title: 如何：按任意词或字段对文本数据进行排序或筛选 (LINQ) (C#)
+title: 如何按任意词或字段对文本数据进行排序或筛选 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: e6c0cbf523095122be4227bebee8d7a234eba2d0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e869d57c413d175c092cdc15a6fe54cab94e04b8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592390"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347352"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>如何：按任意词或字段对文本数据进行排序或筛选 (LINQ) (C#)
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>如何按任意词或字段对文本数据进行排序或筛选 (LINQ) (C#)
 下面的示例演示如何按行中的任何字段对结构化文本（如以逗号分隔的值）行进行排序。 可以在运行时动态指定字段。 假定 scores.csv 中的字段表示学生的 ID 号，后跟一系列四个测试分数。  
   
 ### <a name="to-create-a-file-that-contains-data"></a>创建包含数据的文件  
   
-1. 从主题[如何：联接不同文件的内容 (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) 复制 scores.csv 数据并将它保存到解决方案文件夹。  
+1. 从主题[如何联接不同文件的内容 (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) 复制 scores.csv 数据并将它保存到解决方案文件夹。  
   
 ## <a name="example"></a>示例  
   

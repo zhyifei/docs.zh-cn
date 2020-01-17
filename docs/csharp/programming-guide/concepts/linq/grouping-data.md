@@ -2,12 +2,12 @@
 title: 对数据分组 (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: e7f10b121a7a1c599d88731a806fe784eb1a7e66
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7ef3d3c9097d7a9478605565518ac8975feb9fe2
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423408"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635738"
 ---
 # <a name="grouping-data-c"></a>对数据分组 (C#)
 分组是指将数据分到不同的组，使每组中的元素拥有公共的属性。  
@@ -20,9 +20,9 @@ ms.locfileid: "73423408"
   
 ## <a name="methods"></a>方法  
   
-|方法名|说明|C# 查询表达式语法|详细信息|  
+|方法名|描述|C# 查询表达式语法|详细信息|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|GroupBy|对共享通用属性的元素进行分组。 每组由一个 <xref:System.Linq.IGrouping%602> 对象表示。|`group … by`<br /><br /> -或-<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|GroupBy|对共享通用属性的元素进行分组。 每组由一个 <xref:System.Linq.IGrouping%602> 对象表示。|`group … by`<br /><br /> \- 或 -<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|将元素插入基于键选择器函数的 <xref:System.Linq.Lookup%602>（一种一对多字典）。|不适用。|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>查询表达式语法示例  
@@ -64,8 +64,8 @@ foreach (var group in query)
 - <xref:System.Linq>
 - [标准查询运算符概述 (C#)](./standard-query-operators-overview.md)
 - [group 子句](../../../language-reference/keywords/group-clause.md)
-- [如何：创建嵌套组](../../../linq/create-a-nested-group.md)
-- [如何：按扩展名对文件进行分组 (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
-- [如何：对查询结果进行分组](../../../linq/group-query-results.md)
-- [如何：对分组操作执行子查询](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
-- [如何：使用组将一个文件拆分成多个文件 (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [创建嵌套组](../../../linq/create-a-nested-group.md)
+- [如何按扩展名对文件进行分组 (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
+- [对查询结果进行分组](../../../linq/group-query-results.md)
+- [对分组操作执行子查询](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
+- [如何使用组将一个文件拆分成多个文件 (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

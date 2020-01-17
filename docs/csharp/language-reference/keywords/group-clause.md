@@ -1,6 +1,5 @@
 ---
 title: group 子句 - C# 参考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - group
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: dd14a4baf9967f41690e7978b8b6cf57c9275e36
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 75a366ec24e4e48af7e87d3372950aad8d76435b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428502"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713472"
 ---
 # <a name="group-clause-c-reference"></a>group 子句（C# 参考）
 
@@ -54,7 +53,7 @@ ms.locfileid: "74428502"
 
 ### <a name="grouping-by-numeric-range"></a>按数值范围分组
 
-下一示例使用表达式创建表示百分比范围的数值组键。 请注意，该示例使用 [let](let-clause.md) 作为方法调用结果的方便存储位置，因此无需在 `group` 子句中调用该方法两次。 若要详细了解如何在查询表达式中安全地使用方法，请参阅[操作说明：在查询表达式中处理异常](../../linq/handle-exceptions-in-query-expressions.md)。
+下一示例使用表达式创建表示百分比范围的数值组键。 请注意，该示例使用 [let](let-clause.md) 作为方法调用结果的方便存储位置，因此无需在 `group` 子句中调用该方法两次。 若要详细了解如何在查询表达式中安全使用方法，请参阅[在查询表达式中处理异常](../../linq/handle-exceptions-in-query-expressions.md)。
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -66,7 +65,7 @@ ms.locfileid: "74428502"
 group person by new {name = person.surname, city = person.city};
 ```
 
-如果必须将查询变量传递给其他方法，请使用命名类型。 使用键的自动实现的属性创建一个特殊类，然后替代 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法。 还可以使用结构，在此情况下，并不严格要求替代这些方法。 有关详细信息，请参阅[如何使用自动实现的属性实现轻量类](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)和[如何：在目录树中查询重复文件](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)。 后文包含的代码示例演示了如何将复合键与命名类型结合使用。
+如果必须将查询变量传递给其他方法，请使用命名类型。 使用键的自动实现的属性创建一个特殊类，然后替代 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法。 还可以使用结构，在此情况下，并不严格要求替代这些方法。 有关详细信息，请参阅[如何使用自动实现的属性实现轻量类](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)和[如何在目录树中查询重复文件](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)。 后文包含的代码示例演示了如何将复合键与命名类型结合使用。
 
 ## <a name="example"></a>示例
 

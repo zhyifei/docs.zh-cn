@@ -1,15 +1,15 @@
 ---
-title: 如何：查询字符串中的字符 (LINQ) (C#)
+title: 如何查询字符串中的字符 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: bc72c4370ff408a60f48aa020a16dae7f48f702a
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: d85e488a38a6167505732103b4c540cade6ea9bc
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140971"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345683"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>如何：查询字符串中的字符 (LINQ) (C#)
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>如何查询字符串中的字符 (LINQ) (C#)
 因为 <xref:System.String> 类可实现泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口，因此任何字符串都可以字符序列的形式进行查询。 但是，这不是 LINQ 的一般用法。 对于复杂的模式匹配操作，请使用 <xref:System.Text.RegularExpressions.Regex> 类。  
   
 ## <a name="example"></a>示例  

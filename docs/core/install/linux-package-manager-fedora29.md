@@ -4,12 +4,12 @@ description: 使用包管理器在 Fedora 29 上安装 .NET Core SDK 和运行�
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 1cd761e323467ef34fdad58de7385c1ca7b2c14a
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 750952229297ae069c0e8465bf83333d86b38dbd
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74998929"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740678"
 ---
 # <a name="fedora-29-package-manager---install-net-core"></a>Fedora 29 包管理器 - 安装 .NET Core
 
@@ -21,9 +21,9 @@ ms.locfileid: "74998929"
 
 安装 .NET 之前，需要：
 
-- 注册 Microsoft 密钥
-- 注册产品存储库
-- 安装必需的依赖项
+- 注册 Microsoft 密钥。
+- 注册产品存储库。
+- 安装必需的依赖项。
 
 每台计算机只需要执行一次此操作。
 

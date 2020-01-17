@@ -1,20 +1,19 @@
 ---
-title: 如何：订阅和取消订阅事件 - C# 编程指南
-ms.custom: seodec18
+title: 如何订阅和取消订阅事件 - C# 编程指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 523045e990532f1475e1c4816c98d1af76daa92b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3df357cb15f7f77cefbf360dd9615ce246afe2ea
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590410"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705322"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>如何：订阅和取消订阅事件（C# 编程指南）
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>如何订阅和取消订阅事件（C# 编程指南）
 如果想编写引发事件时调用的自定义代码，则可以订阅由其他类发布的事件。 例如，可以订阅某个按钮的 `click` 事件，以使应用程序在用户单击该按钮时执行一些有用的操作。  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>使用 Visual Studio IDE 订阅事件  
@@ -102,6 +101,6 @@ ms.locfileid: "69590410"
 
 - [事件](./index.md)
 - [event](../../language-reference/keywords/event.md)
-- [如何：发布符合 .NET Framework 准则的事件](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [如何发布符合 .NET Framework 准则的事件](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [- 和 -= 运算符](../../language-reference/operators/subtraction-operator.md)
 - [+ 和 += 运算符](../../language-reference/operators/addition-operator.md)

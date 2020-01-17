@@ -4,14 +4,12 @@ description: 本教程演示如何使用预先训练的 TensorFlow 模型对网�
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.author: nakersha
-author: natke
-ms.openlocfilehash: 8c3544b60b1fba1d419ca091b0a1d85fbbdbe2d6
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 0e80cdc6bb7dcc62a57466e909451da972c92db8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204919"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738696"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>教程：在 ML.NET 中使用预先训练的 TensorFlow 模型分析电影评论的情绪
 
@@ -28,7 +26,7 @@ ms.locfileid: "74204919"
 
 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF) 存储库中找到本教程的源代码。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 * 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。
 
@@ -81,14 +79,14 @@ ms.locfileid: "74204919"
 
 首先是将文本拆分为单独的单词，然后使用提供的映射文件将每个单词映射到整数编码。 这种转换的结果是一个可变长度的整数数组，其长度对应于句子中的单词数。
 
-|属性| 值|类型|
+|Property| “值”|类型|
 |-------------|-----------------------|------|
 |ReviewText|这部电影非常不错|string|
 |VariableLengthFeatures|14,22,9,66,78,... |int[]|
 
 然后将可变长度特征数组的大小调整为固定长度 600。 这是 TensorFlow 模型所需的长度。
 
-|属性| 值|类型|
+|Property| “值”|类型|
 |-------------|-----------------------|------|
 |ReviewText|这部电影非常不错|string|
 |VariableLengthFeatures|14,22,9,66,78,... |int[]|
@@ -226,7 +224,7 @@ ms.locfileid: "74204919"
 
 1. [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 函数对单行数据进行预测：
 
-    |属性| 值|类型|
+    |Property| “值”|类型|
     |-------------|-----------------------|------|
     |预测|[0.5459937, 0.454006255]|float[]|
 

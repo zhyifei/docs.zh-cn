@@ -2,12 +2,12 @@
 title: LINQ to XML 概述 (C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 313abae6e8a82414ead90d5a4fdab7406492784f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d8b606e1d3287f13a2112b75d5239fd1ac7dd7dc
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785232"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635504"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML 概述 (C#)
 
@@ -15,7 +15,7 @@ LINQ to XML 提供使用 .NET 语言集成查询 (LINQ) Framework 的内存中 X
  
 在很多环境中，XML 已广泛采用为格式化数据的方式。 例如，在 Web 上，在配置文件、Microsoft Office Word 文件以及数据库中，都可以看到 XML。
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 经过了重新设计，是最新的 XML 编程方法。 它提供文档对象模型 (DOM) 的内存文档修改功能，支持 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式。 尽管这些查询表达式在语法上与 XPath 不同，但它们提供类似的功能。
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 经过了重新设计，是最新的 XML 编程方法。 提供文档对象模型 (DOM) 的内存中文档修改功能，并支持 LINQ 查询表达式。 尽管这些查询表达式在语法上与 XPath 不同，但它们提供类似的功能。
 
 ## <a name="linq-to-xml-developers"></a>LINQ to XML 开发人员
 
@@ -29,7 +29,7 @@ LINQ to XML 提供使用 .NET 语言集成查询 (LINQ) Framework 的内存中 X
 
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 将 XML 文档置于内存中，这一点很像文档对象模型 (DOM)。 您可以查询和修改 XML 文档，修改之后，可以将其另存为文件，也可以将其序列化然后通过 Internet 发送。 但是，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 与 DOM 不同：它提供一种新的对象模型，这是一种更轻量的模型，使用也更方便，这种模型利用了 C# 中的语言功能。
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 最重要的优势是它与 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 的集成。 由于实现了这一集成，因此，可以对内存 XML 文档编写查询，以检索元素和属性的集合。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的查询功能在功能上（尽管不是在语法上）与 XPath 和 XQuery 具有可比性。 C# 中的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 集成可提供更强的类型化功能、编译时检查和改进的调试器支持。
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 最重要的优势是它与语言集成查询 (LINQ) 的集成。 由于实现了这一集成，因此，可以对内存 XML 文档编写查询，以检索元素和属性的集合。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的查询功能在功能上（尽管不是在语法上）与 XPath 和 XQuery 具有可比性。 C# 中的 LINQ 集成可提供更强的类型化功能、编译时检查和改进的调试器支持。
 
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的另一个优势是通过将查询结果用作 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 对象构造函数的参数，实现了一种功能强大的创建 XML 树的方法。 此方法称为*功能构造*，可使开发人员轻松地将 XML 树从一个形状转换成另一个形状。
 
@@ -77,7 +77,7 @@ IEnumerable<XElement> pricesByPartNos = purchaseOrder.Descendants("Item")
                                         .OrderBy(order => order.Element("PartNumber"));
 ```
 
-除了这些 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 功能以外，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供了改进的 XML 编程接口。 使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，您可以：
+除了这些 LINQ 功能以外，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供了改进的 XML 编程接口。 使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，您可以：
 
 - 从[文件](how-to-load-xml-from-a-file.md)或[流](how-to-stream-xml-fragments-from-an-xmlreader.md)加载 XML。
 

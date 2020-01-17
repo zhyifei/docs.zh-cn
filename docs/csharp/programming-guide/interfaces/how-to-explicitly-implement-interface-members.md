@@ -1,19 +1,18 @@
 ---
-title: 如何：显式实现接口成员 - C# 编程指南
-ms.custom: seodec18
+title: 如何显式实现接口成员 - C# 编程指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: 5ef8b42fe5ca07548d52b88720ea4845d2408bb1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d006db2a7501a3273f5cd11e82bc589b21e1ce9f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589205"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712086"
 ---
-# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>如何：显式实现接口成员（C# 编程指南）
-本示例声明一个[接口](../../language-reference/keywords/interface.md) `IDimensions` 和一个类 `Box`，显式实现了接口成员 `getLength` 和 `getWidth`。 通过接口实例 `dimensions` 访问这些成员。  
+# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>如何显式实现接口成员（C# 编程指南）
+本示例声明一个[接口](../../language-reference/keywords/interface.md)`IDimensions` 和一个类 `Box`，显式实现了接口成员 `getLength` 和 `getWidth`。 通过接口实例 `dimensions` 访问这些成员。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[csProgGuideInheritance#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#8)]  
@@ -33,4 +32,4 @@ ms.locfileid: "69589205"
 - [C# 编程指南](../index.md)
 - [类和结构](../classes-and-structs/index.md)
 - [接口](./index.md)
-- [如何：显式实现两个接口的成员](./how-to-explicitly-implement-members-of-two-interfaces.md)
+- [如何显式实现两个接口的成员](./how-to-explicitly-implement-members-of-two-interfaces.md)

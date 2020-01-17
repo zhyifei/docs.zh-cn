@@ -5,13 +5,12 @@ author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.custom: seodec18
-ms.openlocfilehash: 1a5320f47b880c2d84132d70e1d0be19d6de486b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 3347e5b90c31589e9a0f99ac0d9298927a717f56
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116202"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715446"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>使用 dotnet test 和 NUnit 在 .NET Core 中进行 F# 库的单元测试
 
@@ -19,7 +18,7 @@ ms.locfileid: "71116202"
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更高版本。
 - 按需选择的文本编辑器或代码编辑器。
@@ -44,7 +43,7 @@ dotnet new sln
 将 MathService  作为当前目录，并运行以下命令以创建源项目：
 
 ```dotnetcli
-dotnet new classlib -lang F#
+dotnet new classlib -lang "F#"
 ```
 
 创建数学服务的失败实现：
@@ -76,7 +75,7 @@ dotnet sln add .\MathService\MathService.fsproj
 将 MathService.Tests  目录作为当前目录，并使用以下命令创建一个新项目：
 
 ```dotnetcli
-dotnet new nunit -lang F#
+dotnet new nunit -lang "F#"
 ```
 
 这会创建一个将 NUnit 用作测试框架的测试项目。 生成的模板在 MathServiceTests.fsproj  中配置测试运行程序：
@@ -89,7 +88,7 @@ dotnet new nunit -lang F#
 </ItemGroup>
 ```
 
-测试项目需要其他包创建和运行单元测试。 在上一步中，`dotnet new` 已添加 NUnit 和 NUnit 测试适配器。 现在，将 `MathService` 类库作为另一个依赖项添加到项目中。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
+测试项目需要其他包创建和运行单元测试。 在上一步中，`dotnet new` 已添加 NUnit 和 NUnit 测试适配器。 现在，将 `MathService` 类库作为另一个依赖项添加到项目中。 使用 `dotnet add reference` 命令：
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
@@ -138,7 +137,7 @@ type TestClass () =
      member this.FailEveryTime() = Assert.True(false)
 ```
 
-`[<TestFixture>]` 属性表示包含测试的类。 `[<Test>]` 属性表示由测试运行程序运行的测试方法。 在 unit-testing-with-fsharp  目录中，执行 [`dotnet test`](../tools/dotnet-test.md) 以构建测试和类库，然后运行测试。 NUnit 测试运行程序包含要运行测试的程序入口点。 `dotnet test` 使用已创建的单元测试项目启动测试运行程序。
+`[<TestFixture>]` 属性表示包含测试的类。 `[<Test>]` 属性表示由测试运行程序运行的测试方法。 在 unit-testing-with-fsharp  目录中，执行 `dotnet test` 以构建测试和类库，然后运行测试。 NUnit 测试运行程序包含要运行测试的程序入口点。 `dotnet test` 使用已创建的单元测试项目启动测试运行程序。
 
 这两个测试演示了最基本的已通过测试和未通过测试。 `My test` 通过，而 `Fail every time` 未通过。 现在创建针对 `squaresOfOdds` 方法的测试。 `squaresOfOdds` 方法返回输入序列中所有奇整数值的平方序列。 可以以迭代的方式创建可验证此功能的测试，而非尝试同时写入所有的函数。 若要让每个测试都通过，意味着要针对此方法创建必要的功能。
 
@@ -210,3 +209,8 @@ let squaresOfOdds xs =
 ```
 
 你已生成一个小型库和该库的一组单元测试。 你已将解决方案结构化，使添加新包和新测试成为了正常工作流的一部分。 你已将多数的时间和精力集中在解决应用程序的目标上。
+
+## <a name="see-also"></a>请参阅
+
+- [dotnet add reference](../tools/dotnet-add-reference.md)
+- [dotnet test](../tools/dotnet-test.md)

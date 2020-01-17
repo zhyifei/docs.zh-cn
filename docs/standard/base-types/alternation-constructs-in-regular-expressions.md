@@ -15,13 +15,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.custom: seodec18
-ms.openlocfilehash: 352cfd65cd4620d8274ff0a14ea507cd49522470
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8db9ef72415f148aca2c975fc4e8b70421e3adc3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140562"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711553"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>正则表达式中的替换构造
 
@@ -43,21 +42,21 @@ ms.locfileid: "73140562"
 
 使用 `|` 字符的正则表达式 `\bgr(a|e)y\b` 的解释如下表所示：
 
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`gr`|匹配字符“gr”。|  
 |<code>(a&#124;e)</code>|匹配“a”或“e”。|  
 |`y\b`|匹配单词边界中的“y”。|  
 
-还可以使用 `|` 字符执行具有多个字符或子表达式（包含任意组合的字符常量和正则表达式语言元素）的 either/or 匹配。 （字符类不提供此功能。）下面的示例使用 `|` 字符提取美国社会安全号码 (SSN)（格式为 ddd-dd-dddd  的 9 位数字），或美国雇主标识号 (EIN)（格式为 dd-ddddddd  的 9 位数字）   。
+还可以使用 `|` 字符执行具有多个字符或子表达式（包含任意组合的字符常量和正则表达式语言元素）的 either/or 匹配。 （字符类不提供此功能。）下面的示例使用 `|` 字符提取美国社会安全号码 (SSN)（格式为 ddd-dd-dddd  的 9 位数字），或美国雇主标识号 (EIN)（格式为 dd-ddddddd  的 9 位数字）      。
 
 [!code-csharp[RegularExpressions.Language.Alternation#2](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
 [!code-vb[RegularExpressions.Language.Alternation#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
 
 正则表达式 `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` 可以解释为下表中所示内容：
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|匹配以下其中一个内容：连字符连接的两个十进制数字和七个十进制数字；或三个十进制数字后接连字符，后接两个十进制数字，后接另一个连字符，然后再接四个十进制数字。|  
@@ -68,7 +67,7 @@ ms.locfileid: "73140562"
 
 此语言元素尝试根据是否可以匹配初始模式来匹配两种模式之一。 语法为：  
 
-`(?(`expression  `)`yes  `|`no  `)`
+`(?(` *expression* `)` *yes* `|` *no* `)`
 
 其中， *expression* 是要匹配的初始模式， *yes* 是当匹配 *expression* 时要匹配的模式，而 *no* 是未匹配 *expression* 时要匹配的可选模式。 正则表达式引擎将 *expression* 视为一个宽度为零的断言；也就是说，正则表达式引擎在计算 *expression*之后，不再处理输入流的后续数据。 因此，该构造是等效于以下语法：
 
@@ -86,7 +85,7 @@ ms.locfileid: "73140562"
 
 正则表达式模式 `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` 的释义如下表所示：
 
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`(?(\d{2}-)`|确定接下来的三个字符是否由两个数字后接一个连字符组成。|  
@@ -116,7 +115,7 @@ or
 
 正则表达式模式 `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` 的释义如下表所示：
 
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`(?<n2>\d{2}-)?`|匹配两个数字后接一个连字符的零或一个匹配项。 命名此捕获组 `n2`。|  

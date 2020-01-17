@@ -1,15 +1,15 @@
 ---
-title: 如何：联接不同文件的内容 (LINQ) (C#)
+title: 如何联接不同文件的内容 (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: eb2e5d8e598b7b671afe9271e6e591c5ce0ada2b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 49b70c15b3be2efea5cf6a9e7d85df944a67c730
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253551"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345889"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>如何：联接不同文件的内容 (LINQ) (C#)
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>如何联接不同文件的内容 (LINQ) (C#)
 
 本示例演示如何联接两个逗号分隔文件中的数据，这两个文件共享一个用作匹配键的公共值。 如果需要合并来自两个电子表格的数据，或者从一个电子表格和具有另一种格式的文件合并到一个新文件时，此技术很有用。 可以修改此示例以用于任何类型的结构化文本。  
   

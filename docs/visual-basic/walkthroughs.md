@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: a6e45e31e2678ce05dc0f637ed1121b54d8d6cbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 76f9b428bc5f613296e24d893f49f124bb13c089
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352840"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636037"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 语言演练
 
@@ -35,7 +35,7 @@ ms.locfileid: "74352840"
  描述如何声明类及其字段、属性、方法和事件。
 
 - [用 Visual Basic 编写查询](programming-guide/concepts/linq/walkthrough-writing-queries.md)  
- 演示如何使用 Visual Basic 语言功能编写 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 查询表达式。
+ 演示如何使用 Visual Basic 语言功能编写语言集成查询 (LINQ) 查询表达式。
 
 - [在 Visual Basic 中实现 IEnumerable(Of T)](programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)  
  演示如何创建实现 `IEnumerable(Of String)` 接口的类和实现 `IEnumerator(Of String)` 接口的类，以一次读取一行文本文件。

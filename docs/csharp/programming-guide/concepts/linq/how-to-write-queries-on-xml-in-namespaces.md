@@ -1,15 +1,15 @@
 ---
-title: 如何：针对命名空间中的 XML 编写查询 (C#)
+title: 如何针对命名空间中的 XML 编写查询 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: 1ded47ced44bebfda92b96f4dc908f1c1b2bbf6b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a8b8d55daaad1ae00e43fed897080ed7a62fafab
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253202"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337376"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>如何：针对命名空间中的 XML 编写查询 (C#)
+# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>如何针对命名空间中的 XML 编写查询 (C#)
 若要针对命名空间中的 XML 编写查询，必须使用具有正确命名空间的 <xref:System.Xml.Linq.XName> 对象。  
   
  对于 C#，最常用的方法是使用包含 URI 的字符串初始化 <xref:System.Xml.Linq.XNamespace>，然后使用加法运算符重载来组合命名空间和本地名称。  

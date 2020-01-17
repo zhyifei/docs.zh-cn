@@ -11,17 +11,17 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: c9ddbcf8f7b6307ab2d89b819aee4809f753a0fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64f3a51b29a7116c736fea0e76465a4a73c640c2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138610"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738779"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>如何：使用强名称为程序集签名
 
 > [!NOTE]
-> 虽然 .NET Core 支持强名称程序集，而且 .NET Core 库中的所有程序集均已签名，但大多数第三方程序集不需要强名称。 有关详细信息，请参阅 GitHub 上的[强名称签名](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md)。
+> 虽然 .NET Core 支持强名称程序集，而且 .NET Core 库中的所有程序集均已签名，但大多数第三方程序集不需要强名称。 有关详细信息，请参阅 GitHub 上的[强名称签名](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md)。
 
 可通过许多方法为程序集签署强名称：  
   

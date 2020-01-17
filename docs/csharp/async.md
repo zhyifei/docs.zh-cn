@@ -5,13 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.custom: seodec18
-ms.openlocfilehash: 86145e8971d9a59fba17368d9530f40d86bf2858
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 38d7c856e9a536db9ef26349175ad440a49f5fe2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037676"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713956"
 ---
 # <a name="asynchronous-programming"></a>异步编程
 
@@ -107,9 +106,9 @@ calculateButton.Clicked += async (o, e) =>
 
     如果答案为“是”，则你的工作是 **CPU 绑定**。
 
-如果你的工作为 **I/O 绑定**，请使用 `async` 和 `await`  （而不使用 `Task.Run`）。  不应使用任务并行库  。  相关原因在[深入了解异步的文章](../standard/async-in-depth.md)中说明。
+如果你的工作为 I/O 绑定，请使用 `async` 和 `await`（而不使用 `Task.Run`）   。  不应使用任务并行库  。  相关原因在[深入了解异步的文章](../standard/async-in-depth.md)中说明。
 
-如果你的工作为 **CPU 绑定**，并且你重视响应能力，请使用 `async` 和 `await`，并在另一个线程上使用 `Task.Run` 生成工作。   如果该工作同时适用于并发和并行，则应考虑使用[任务并行库](../standard/parallel-programming/task-parallel-library-tpl.md)。
+如果你的工作为 CPU 绑定，并且你重视响应能力，请使用 `async` 和 `await`，并在另一个线程上使用 `Task.Run` 生成工作。    如果该工作同时适用于并发和并行，则应考虑使用[任务并行库](../standard/parallel-programming/task-parallel-library-tpl.md)。
 
 此外，应始终对代码的执行进行测量。  例如，你可能会遇到这样的情况：多线程处理时，上下文切换的开销高于 CPU 绑定工作的开销。  每种选择都有折衷，应根据自身情况选择正确的折衷方案。
 
@@ -219,7 +218,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 
 尽管异步编程相对简单，但应记住一些可避免意外行为的要点。
 
-* `async`**方法需在其主体中具有**`await` **关键字，否则它们将永不暂停！**
+* `async` 方法需要在主体中有 `await` 关键字，否则它们将永不暂停！  
 
 这一点需牢记在心。  如果 `await` 未用在 `async` 方法的主体中，C# 编译器将生成一个警告，但此代码将会以类似普通方法的方式进行编译和运行。  请注意这会导致效率低下，因为由 C# 编译器为异步方法生成的状态机将不会完成任何任务。
 
@@ -227,7 +226,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 
 这是 .NET 中的惯例，以便更轻松区分同步和异步方法。 请注意，未由代码显式调用的某些方法（如事件处理程序或 Web 控制器方法）并不一定适用。 由于它们未由代码显式调用，因此对其显式命名并不重要。
 
-* `async void` **应仅用于事件处理程序。**
+* `async void` 应仅用于事件处理程序  。
 
 `async void` 是允许异步事件处理程序工作的唯一方法，因为事件不具有返回类型（因此无法利用 `Task` 和 `Task<T>`）。 其他任何对 `async void` 的使用都不遵循 TAP 模型，且可能存在一定使用难度，例如：
 

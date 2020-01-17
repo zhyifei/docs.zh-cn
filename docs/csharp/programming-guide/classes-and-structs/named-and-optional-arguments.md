@@ -1,6 +1,5 @@
 ---
 title: 命名参数和可选参数 - C# 编程指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 30475b637202d3b614ac968897e467956bc78646
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6afa8a2bd2dfee8d7c36b58342036d18241317a8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970511"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714789"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>命名实参和可选实参（C# 编程指南）
 C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特定形参指定实参，方法是将实参与该形参的名称关联，而不是与形参在形参列表中的位置关联。 通过*可选参数*，你可以为某些形参省略实参。 这两种技术都可与方法、索引器、构造函数和委托一起使用。  
@@ -70,7 +69,7 @@ C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特
   
 - 常量表达式；  
   
-- `new ValType()` 形式的表达式，其中 `ValType` 是值类型，例如 [enum](../../language-reference/keywords/enum.md) 或 [struct](./structs.md)；  
+- `new ValType()` 形式的表达式，其中 `ValType` 是值类型，例如 [enum](../../language-reference/builtin-types/enum.md) 或 [struct](structs.md)；  
   
 - [default(ValType)](../../language-reference/operators/default.md) 形式的表达式，其中 `ValType` 是值类型。  
   
@@ -113,7 +112,7 @@ C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- 有关详细信息和示例，请参阅[如何在 Office 编程中使用命名实参和可选实参](./how-to-use-named-and-optional-arguments-in-office-programming.md)和[如何：使用 Visual C# 功能访问 Office 互操作对象](../interop/how-to-access-office-onterop-objects.md)。  
+ 有关详细信息和示例，请参阅[如何在 Office 编程中使用命名参数和可选参数](./how-to-use-named-and-optional-arguments-in-office-programming.md)和[如何使用 C# 功能访问 Office 互操作性对象](../interop/how-to-access-office-onterop-objects.md)。  
   
 ## <a name="overload-resolution"></a>重载决策  
  使用命名实参和可选实参将在以下方面对重载决策产生影响：  
@@ -129,7 +128,7 @@ C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：在 Office 编程中使用命名实参和可选实参](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [如何在 Office 编程中使用命名参数和可选参数](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [使用类型 dynamic](../types/using-type-dynamic.md)
 - [使用构造函数](./using-constructors.md)
 - [使用索引器](../indexers/using-indexers.md)

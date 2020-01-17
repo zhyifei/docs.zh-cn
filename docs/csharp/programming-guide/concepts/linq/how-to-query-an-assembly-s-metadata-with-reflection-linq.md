@@ -1,15 +1,15 @@
 ---
-title: 如何：使用反射查询程序集的元数据 (LINQ) (C#)
+title: 如何使用反射查询程序集的元数据 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: fb0fb118eaabbd9d66c5c4a445b0393a69dd2355
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 65f27ae17d77553bfd7a78c1310febd337a55a6e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592911"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345691"
 ---
-# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>如何：使用反射查询程序集的元数据 (LINQ) (C#)
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>如何使用反射查询程序集的元数据 (LINQ) (C#)
 
 .NET Framework 类库反射 API 可用于检查 .NET 程序集中的元数据，以及创建位于该程序集中的类型、类型成员、参数等等的集合。 因为这些集合支持泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口，所以可以使用 LINQ 查询它们。  
   

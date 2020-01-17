@@ -2,12 +2,12 @@
 title: 字符串内插 - C# 教程
 description: 本教程介绍了如何使用 C# 字符串内插功能将格式化表达式结果添加到较大的字符串中。
 ms.date: 10/23/2018
-ms.openlocfilehash: 53b9afa4c5ccdcb1f18d2947981aee6571b73134
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120123"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346783"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>使用字符串内插构造格式化字符串
 
@@ -58,7 +58,7 @@ public Vegetable(string name) => Name = name;
 var item = new Vegetable("eggplant");
 ```
 
-最后，将 `item` 变量添加到同样包含 <xref:System.DateTime> 值、<xref:System.Decimal> 值和 `Unit` [枚举](../../programming-guide/enumeration-types.md)值的内插字符串中。 将编辑器中的所有 C# 代码替换为以下代码，然后使用 `dotnet run` 命令运行：
+最后，将 `item` 变量添加到同样包含 <xref:System.DateTime> 值、<xref:System.Decimal> 值和 `Unit` [枚举](../../language-reference/builtin-types/enum.md)值的内插字符串中。 将编辑器中的所有 C# 代码替换为以下代码，然后使用 `dotnet run` 命令运行：
 
 ```csharp
 using System;

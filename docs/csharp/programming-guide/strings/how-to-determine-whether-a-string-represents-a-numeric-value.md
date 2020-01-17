@@ -1,20 +1,19 @@
 ---
-title: 如何：确定字符串是否表示数值 - C# 编程指南
-ms.custom: seodec18
+title: 如何确定字符串是否表示数值 - C# 编程指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - numeric strings [C#]
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 8fc5051893882a6dbdbb4c9097949794d4430a93
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: bd89024a0a9bd62927d2d5e0eda248b57bb7d21d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252953"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711917"
 ---
-# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>如何：确定字符串是否表示数值（C# 编程指南）
+# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>如何确定字符串是否表示数值（C# 编程指南）
 若要确定字符串是否是指定数值类型的有效表示形式，请使用由所有基元数值类型以及如 <xref:System.DateTime> 和 <xref:System.Net.IPAddress> 等类型实现的静态 `TryParse` 方法。 以下示例演示如何确定“108”是否为有效的 [int](../../language-reference/builtin-types/integral-numeric-types.md)。  
   
 ```csharp  
@@ -41,8 +40,8 @@ bool result = int.TryParse(s, out i); //i now = 108
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：将字节数组转换为 int](../types/how-to-convert-a-byte-array-to-an-int.md)
-- [如何：将字符串转换为数字](../types/how-to-convert-a-string-to-a-number.md)
-- [如何：在十六进制字符串与数值类型之间转换](../types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
+- [如何将字节数组转换为 int](../types/how-to-convert-a-byte-array-to-an-int.md)
+- [如何将字符串转换为数字](../types/how-to-convert-a-string-to-a-number.md)
+- [如何在十六进制字符串与数值类型之间转换](../types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
 - [分析数值字符串](../../../standard/base-types/parsing-numeric.md)
 - [格式设置类型](../../../standard/base-types/formatting-types.md)

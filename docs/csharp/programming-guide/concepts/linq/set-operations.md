@@ -2,12 +2,12 @@
 title: 集运算 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 22079b1d41533803f694af210f98bc9fb8a5b322
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 170316b36705eaed51a9a17f8f79333a29e8c315
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711873"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346516"
 ---
 # <a name="set-operations-c"></a>集运算 (C#)
 LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在等效元素来生成结果集的查询运算。  
@@ -16,7 +16,7 @@ LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在
   
 ## <a name="methods"></a>方法  
   
-|方法名|说明|C# 查询表达式语法|详细信息|  
+|方法名|描述|C# 查询表达式语法|详细信息|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Distinct|删除集合中的重复值。|不适用。|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|  
 |Except|返回差集，差集指位于一个集合但不位于另一个集合的元素。|不适用。|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|  
@@ -58,4 +58,4 @@ LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在
 - <xref:System.Linq>
 - [标准查询运算符概述 (C#)](./standard-query-operators-overview.md)
 - [如何合并和比较字符串集合 (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)
-- [如何：查找两个列表之间的差集 (LINQ) (C#)](./how-to-find-the-set-difference-between-two-lists-linq.md)
+- [如何查找两个列表之间的差集 (LINQ) (C#)](./how-to-find-the-set-difference-between-two-lists-linq.md)

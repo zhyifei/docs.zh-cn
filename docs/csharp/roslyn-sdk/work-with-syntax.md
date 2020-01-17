@@ -3,12 +3,12 @@ title: 使用 .NET Compiler Platform SDK 语法模型
 description: 此概述介绍了用于理解和操作语法节点的类型。
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 940d2756ef7735ee96d38d0286f99fadf7b81dc6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: fc1b1f5ae5ec985425c8d6aec49ef7f830ea9162
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774105"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740471"
 ---
 # <a name="work-with-syntax"></a>使用语法
 
@@ -65,13 +65,13 @@ ms.locfileid: "72774105"
 
 每个节点、标记或琐碎内容都知道其在源文本内的位置和包含的字符数。 文本位置表示为一个 32 位整数，是一个从零开始的 `char` 索引。 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 对象表示开始位置和字符计数，都表示为整数。 如果 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 的长度为零，则其表示两个字符之间的位置。
 
-每个节点具有两个 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 属性：<xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 和 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>。
+每个节点具有两个 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 属性：<xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> 和 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A>。
 
-<xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 属性表示从节点子树中第一个标记的开头到最后一个标记末尾的文本范围。 此范围不包括任何前导或尾随琐碎内容。
+<xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> 属性表示从节点子树中第一个标记的开头到最后一个标记末尾的文本范围。 此范围不包括任何前导或尾随琐碎内容。
 
-<xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> 属性表示的文本范围包括节点的正常范围，加上任何前导或尾随琐碎内容的范围。
+<xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A> 属性表示的文本范围包括节点的正常范围，加上任何前导或尾随琐碎内容的范围。
 
-例如:
+例如：
 
 ``` csharp
       if (x > 3)
@@ -85,11 +85,11 @@ ms.locfileid: "72774105"
 
 ## <a name="kinds"></a>种类
 
-每个节点、标记或琐碎内容都具有 <xref:System.Int32?displayProperty=nameWithType> 类型的 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 属性，标识所表示的确切语法元素。 此值可强制转换为特定语言枚举；每种语言（C# 或 VB）都具有单个 `SyntaxKind` 枚举（分别为 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 和 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>），列出了语法中所有可能的节点、标记和琐碎内容。 可通过访问 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> 或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> 扩展方法自动完成此转换。
+每个节点、标记或琐碎内容都具有 <xref:System.Int32?displayProperty=nameWithType> 类型的 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 属性，标识所表示的确切语法元素。 此值可强制转换为特定语言的枚举。 每种语言（C# 或 Visual Basic）都具有单个 `SyntaxKind` 枚举（分别为 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 和 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>），列出了语法中所有可能的节点、标记和琐碎内容。 可通过访问 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A?displayProperty=nameWithType> 或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind%2A?displayProperty=nameWithType> 扩展方法自动完成此转换。
 
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> 属性可轻松消除共享同一节点类的语法节点类型的歧义。 对于标记和琐碎内容，此属性是区分不同元素类型的唯一方法。
 
-例如，一个 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> 类具有 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 和 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> 作为子级。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> 属性可辨别它是 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> 还是 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> 类型的语法节点。
+例如，一个 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> 类具有 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 和 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> 作为子级。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A> 属性可辨别它是 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> 还是 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> 类型的语法节点。
 
 ## <a name="errors"></a>错误
 

@@ -12,22 +12,22 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 42519a74be1bd6934bc7a3304d154321697d128c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 41853e6858fae9e8d449aeed95a6a84f343d5874
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591020"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635608"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ 查询操作中的类型关系 (C#)
-若要有效编写查询，应了解完整的查询操作中的变量类型是如何全部彼此关联的。 如果了解这些关系，就能够更容易地理解文档中的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 示例和代码示例。 另外，还能了解在使用 `var` 隐式对变量进行类型化时的后台操作。  
+若要有效编写查询，应了解完整的查询操作中的变量类型是如何全部彼此关联的。 如果了解这些关系，就能够更容易地理解文档中的 LINQ 示例和代码示例。 另外，还能了解在使用 `var` 隐式对变量进行类型化时的后台操作。  
   
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询操作在数据源、查询本身及查询执行中是强类型化的。 查询中变量的类型必须与数据源中元素的类型和 `foreach` 语句中迭代变量的类型兼容。 此强类型保证在编译时捕获类型错误，以便可以在用户遇到这些错误之前更正它们。  
+ LINQ 查询操作在数据源、查询本身及查询执行中是强类型的。 查询中变量的类型必须与数据源中元素的类型和 `foreach` 语句中迭代变量的类型兼容。 此强类型保证在编译时捕获类型错误，以便可以在用户遇到这些错误之前更正它们。  
   
  为了演示这些类型关系，下面的大多数示例对所有变量使用显式类型。 最后一个示例演示在利用使用 [var](../../../language-reference/keywords/var.md) 的隐式类型时，如何应用相同的原则。  
   
 ## <a name="queries-that-do-not-transform-the-source-data"></a>不转换源数据的查询  
- 下图演示不对数据执行转换的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 查询操作。 源包含一个字符串序列，查询输出也是一个字符串序列。  
+ 下图演示不对数据执行转换的 LINQ to Objects 查询操作。 源包含一个字符串序列，查询输出也是一个字符串序列。  
   
  ![关系图显示 LINQ 查询中数据类型的关系。](./media/type-relationships-in-linq-query-operations/linq-query-data-type-relation.png)  
   

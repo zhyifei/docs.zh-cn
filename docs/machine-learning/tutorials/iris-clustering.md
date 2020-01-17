@@ -4,13 +4,13 @@ description: 了解如何在聚类分析方案中使用 ML.NET
 author: pkulikov
 ms.date: 11/15/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: a7199ce2e5217eaadfa10893eb1fbb3417e9be20
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: cc3a1ae984289eb01ad8fdee9741f3f9788196c7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204837"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716234"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>教程：配合使用 K 平均值聚类分析和 ML.NET 来对鸢尾花分类
 
@@ -27,7 +27,7 @@ ms.locfileid: "74204837"
 > - 定型模型
 > - 使用预测模型
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
 
@@ -118,7 +118,7 @@ ms.locfileid: "74204837"
 
 <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> 类表示机器学习环境，并提供用于数据加载、模型定型、预测和其他任务的日志记录和入口点的机制。 这在概念上相当于在实体框架中使用 `DbContext`。
 
-## <a name="setup-data-loading"></a>设置数据加载
+## <a name="set-up-data-loading"></a>设置数据加载
 
 将以下代码添加到 `Main` 方法以设置加载数据的方式：
 

@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 1f4e73287fca650b20ed5617c8dfd80e0bd8363c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 64b029f87135c3424d01a6833619f0aec3833883
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318277"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340355"
 ---
 # <a name="tutorial-create-a-project-template"></a>教程：创建项目模板
 
@@ -26,16 +26,16 @@ ms.locfileid: "72318277"
 > * 测试项模板
 > * 卸载项模板
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 * 完成本系列教程的[第 1 部分](cli-templates-create-item-template.md)。
-* 打开终端并导航到 working\templates\\  文件夹。
+* 打开终端并导航到 working\templates  文件夹。
 
 ## <a name="create-a-project-template"></a>创建项目模板
 
 项目模板生成可立即运行的项目，使用户可以轻松地使用一组有效的代码。 .NET Core 包含一些项目模板，例如控制台应用程序或类库。 在本例中，你将创建一个新的控制台项目，该项目启用 C# 8.0 并生成 `async main` 入口点。
 
-在终端中，导航到 working\templates\\  文件夹，并创建一个名为“consoleasync”  的新子文件夹。 进入子文件夹，并运行 `dotnet new console` 以生成标准控制台应用程序。 将编辑此模板生成的文件以创建新模板。
+在终端中，导航到 working\templates  文件夹，并创建一个名为“consoleasync”  的新子文件夹。 进入子文件夹，并运行 `dotnet new console` 以生成标准控制台应用程序。 将编辑此模板生成的文件以创建新模板。
 
 ```console
 working
@@ -98,7 +98,7 @@ Hello World with C# 8.0!
 
 ## <a name="create-the-template-config"></a>创建模板配置
 
-模板在 .NET Core 中通过模板根目录中的特殊文件夹和配置文件进行识别。 在本教程中，你的模板文件夹位于 working\templates\consoleasync\\  。
+模板在 .NET Core 中通过模板根目录中的特殊文件夹和配置文件进行识别。 在本教程中，你的模板文件夹位于 working\templates\consoleasync  。
 
 创建模板时，除特殊配置文件夹外，模板文件夹中的所有文件和文件夹都作为模板的一部分包含在内。 此配置文件夹名为“.template.config”  。
 

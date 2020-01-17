@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: 0137066b3a351d60bf1cc2e06640030ba1216d03
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: f853663bef4dd0de7ac61e706dedf8c6a19b5b51
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960059"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545008"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系统要求
 
@@ -96,7 +96,7 @@ ms.locfileid: "74960059"
 
  **注意：**
 
-- Windows Server 2012 包括 .NET Framework 4.5，因此，你不必单独安装它。 同样，[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] 包括.NET Framework 4.5.1。
+- Windows Server 2012 包括 .NET Framework 4.5，因此，你不必单独安装它。 同样，Windows Server 2012 R2 包括 .NET Framework 4.5.1。
 
 - .NET Framework 对 Windows Server 2008 R2 SP1 或更高版本的服务器核心角色的支持有限。 有关不受支持的 API 列表，请参阅[服务器核心 .NET 功能](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85))。
 

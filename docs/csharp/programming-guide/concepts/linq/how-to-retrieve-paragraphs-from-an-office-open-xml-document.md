@@ -1,15 +1,15 @@
 ---
-title: 如何：从 Office Open XML 文档检索段落 (C#)
+title: 如何从 Office Open XML 文档中检索段落 (C#)
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: bfac597e0c36f41216821947928babd471fd61b3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 241bacc730f205bf501c1ab1ab47f6fda4c15d64
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253392"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347463"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>如何：从 Office Open XML 文档检索段落 (C#)
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>如何从 Office Open XML 文档中检索段落 (C#)
 本主题提供一个示例，该示例打开一个 Office Open XML 文档，然后检索文档中所有段落所构成的集合。  
   
  若要详细了解 Office Open XML，请参阅 [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) 和 [www.ericwhite.com](http://ericwhite.com/)。  

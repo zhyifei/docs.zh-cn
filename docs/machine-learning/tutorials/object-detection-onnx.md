@@ -3,15 +3,15 @@ title: 教程：使用 ONNX 和 ML.NET 进行深度学习来检测对象
 description: 本教程演示如何在 ML.NET 中使用预训练的 ONNX 深度学习模型来检测图像中的对象。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 08/27/2019
+ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1364b6a1cf6d424975828185a50175b2763c6516
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 04d7dedf9f882d9f0e0396949c71e4941c207fe3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420021"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345026"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教程：在 ML.NET 中使用 ONNX 检测对象
 
@@ -74,9 +74,9 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 
 开放神经网络交换 (ONNX) 是 AI 模型的开放源代码格式。 ONNX 支持框架之间的互操作性。 这意味着，你可以在许多常见的机器学习框架（如 pytorch）中训练模型，将其转换为 ONNX 格式，并在其他框架（如 ML.NET）中使用 ONNX 模型。 有关详细信息，请参阅 [ONNX 网站](https://onnx.ai/)。
 
-![所使用的 ONNX 支持格式的关系图。](./media/object-detection-onnx/onyx-supported-formats.png)
+![所使用的 ONNX 支持格式的关系图。](./media/object-detection-onnx/onnx-supported-formats.png)
 
-预训练的 Tiny YOLOv2 模型以 ONNX 格式存储，这是层的序列化表示形式，也是这些层的已知模式。 在 ML.NET 中，使用 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 和 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet 包实现了与 ONNX 的互操作性。 [ `ImageAnalytics` ](xref:Microsoft.ML.Transforms.Image) 包包含一系列转换，这些转换采用图像并将其编码为可用作预测或训练管道输入的数值。 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) 包利用 ONNX 运行时加载 ONNX 模型并使用它根据提供的输入进行预测。
+预训练的 Tiny YOLOv2 模型以 ONNX 格式存储，这是层的序列化表示形式，也是这些层的已知模式。 在 ML.NET 中，使用 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 和 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet 包实现了与 ONNX 的互操作性。 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 包包含一系列转换，这些转换采用图像并将其编码为可用作预测或训练管道输入的数值。 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) 包利用 ONNX 运行时加载 ONNX 模型并使用它根据提供的输入进行预测。
 
 ![ONNX 文件到 ONNX 运行时的数据流。](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
@@ -448,7 +448,7 @@ for (var j = i + 1; j < boxes.Count; j++)
 
 [!code-csharp [ReturnFilteredBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L246)]
 
-很好！ 现在可以将此代码与模型配合使用，以进行评分。
+很棒！ 现在可以将此代码与模型配合使用，以进行评分。
 
 ## <a name="use-the-model-for-scoring"></a>使用该模型进行评分
 

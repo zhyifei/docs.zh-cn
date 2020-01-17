@@ -1,20 +1,19 @@
 ---
-title: 如何：在 COM 互操作编程中使用索引属性 - C# 编程指南
-ms.custom: seodec18
+title: 如何在 COM 互操作编程中使用索引属性 - C# 编程指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - indexed properties [C#]
 - Office programming [C#], indexed properties
 - properties [C#], indexed
 ms.assetid: 756bfc1e-7c28-4d4d-b114-ac9288c73882
-ms.openlocfilehash: 0d4e85646a1e7f8c4ee9a73fbf7bf5a01b10b14b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 864e2274f0e0e79b4843e0bb67b5c4384eac8588
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423223"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712060"
 ---
-# <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>如何：在 COM 互操作编程中使用索引属性（C# 编程指南）
+# <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>如何在 COM 互操作编程中使用索引属性（C# 编程指南）
 索引属性  改进了在 C# 编程中使用具有参数的 COM 属性的方式。 结合使用索引属性与 Visual C# 中的其他功能（如[命名实参和可选实参](../classes-and-structs/named-and-optional-arguments.md)、一种新类型（[动态](../../language-reference/builtin-types/reference-types.md)）以及[嵌入类型信息](../../../standard/assembly/embed-types-visual-studio.md)）可以增强 Microsoft Office 编程。  
   
  在早期版本的 C# 中，仅当 `get` 方法没有参数且 `set` 方法有且只有一个值参数时，方法才能作为属性访问。 但是，并非所有 COM 属性都符合上述限制。 例如，Excel <xref:Microsoft.Office.Interop.Excel.Range.Range%2A> 属性具有一个 `get` 访问器，它需要该范围名称的一个参数。 过去，由于无法直接访问 `Range` 属性，因此必须使用 `get_Range` 方法，如以下示例所示。  
@@ -39,7 +38,7 @@ ms.locfileid: "73423223"
  你不能创建自己的索引属性。 该功能仅支持使用现有索引属性。  
   
 ## <a name="example"></a>示例  
- 以下代码显示完整示例。 若要详细了解如何设置访问 Office API 的项目，请参阅[操作说明：使用 Visual C# 功能访问 Office 互操作对象](./how-to-access-office-onterop-objects.md)。  
+ 以下代码显示完整示例。 有关如何设置访问 Office API 的项目的详细信息，请参阅[如何使用 C# 功能访问 Office 互操作对象](./how-to-access-office-onterop-objects.md)。
   
  [!code-csharp[csProgGuideIndexedProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#5)]  
   
@@ -48,6 +47,6 @@ ms.locfileid: "73423223"
 - [命名参数和可选参数](../classes-and-structs/named-and-optional-arguments.md)
 - [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [使用类型 dynamic](../types/using-type-dynamic.md)
-- [如何：在 Office 编程中使用命名参数和可选参数](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
-- [如何：通过使用 Visual C# 功能访问 Office 互操作对象](./how-to-access-office-onterop-objects.md)
+- [如何在 Office 编程中使用命名参数和可选参数](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [如何使用 C# 功能访问 Office 互操作对象](./how-to-access-office-onterop-objects.md)
 - [演练：Office 编程](./walkthrough-office-programming.md)

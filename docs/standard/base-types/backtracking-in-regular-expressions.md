@@ -17,13 +17,12 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.custom: seodec18
-ms.openlocfilehash: 6504430f94f800bb9f41761ad64c65fefecb68d6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a11e3501aa57fc81a28d27d1280d299f99e1dea1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968257"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711514"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正则表达式中的回溯
 当正则表达式模式包含可选[限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)或[备用构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)时，会发生回溯，并且正则表达式引擎会返回以前保存的状态，以继续搜索匹配项。 回溯是正则表达式的强大功能的中心；它使得表达式强大、灵活，可以匹配非常复杂的模式。 同时，这种强大功能需要付出一定代价。 通常，回溯是影响正则表达式引擎性能的单个最重要的因素。 幸运的是，开发人员可以控制正则表达式引擎的行为及其使用回溯的方式。 本主题说明回溯的工作方式以及如何对其进行控制。  
@@ -101,7 +100,7 @@ ms.locfileid: "73968257"
   
 - 它返回到以前保存的匹配 3。 它确定有两个附加的“a”字符可分配给其他捕获的组。 但是，字符串末尾测试失败。 然后，它返回 match3 并尝试在两个附加的捕获组中匹配两个附加的“a”字符。 字符串末尾测试仍失败。 这些失败的匹配需要进行 12 次比较。 到目前为止，总共执行了 25 次比较。  
   
- 输入字符串与正则表达式的比较将以此方式继续，直到正则表达式引擎已尝试所有可能的匹配组合然后得出无匹配的结论。 因为存在嵌套的限定符，所以此比较为 O(2<sup>n</sup>) 或指数操作，其中 n 是输入字符串中的字符数  。 这意味着在最糟糕的情况下，包含 30 个字符的输入字符串大约需要进行 1,073,741,824 次比较，包含 40 个字符的输入字符串大约需要进行 1,099,511,627,776 次比较。 如果使用上述长度甚至更长的字符串，则正则表达式方法在处理与正则表达式模式不匹配的输入时，会需要超长的时间来完成。 
+ 输入字符串与正则表达式的比较将以此方式继续，直到正则表达式引擎已尝试所有可能的匹配组合然后得出无匹配的结论。 因为存在嵌套的限定符，所以此比较为 O(2<sup>n</sup>) 或指数操作，其中 n 是输入字符串中的字符数。 这意味着在最糟糕的情况下，包含 30 个字符的输入字符串大约需要进行 1,073,741,824 次比较，包含 40 个字符的输入字符串大约需要进行 1,099,511,627,776 次比较。 如果使用上述长度甚至更长的字符串，则正则表达式方法在处理与正则表达式模式不匹配的输入时，会需要超长的时间来完成。 
 
 ## <a name="controlling-backtracking"></a>控制回溯  
  通过回溯可以创建强大、灵活的正则表达式。 但如上一节所示，回溯在提供这些优点的同时，可能也会使性能差的无法接受。 若要防止过度回溯，则应在实例化 <xref:System.Text.RegularExpressions.Regex> 对象或调用静态正则表达式匹配方法时定义超时间隔。 下一节中将对此进行讨论。 此外，.NET 还支持以下三个正则表达式语言元素，这些元素限制或禁止回溯，并支持几乎不会或完全不会导致性能损失的复杂正则表达式：[非回溯子表达式](#nonbacktracking-subexpression)、[回顾断言](#lookbehind-assertions)和[预测先行断言](#lookahead-assertions)。 有关每个语言元素的详细信息，请参见 [分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
@@ -120,7 +119,7 @@ ms.locfileid: "73968257"
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
 
 ### <a name="nonbacktracking-subexpression"></a>非回溯子表达式  
- `(?>` *subexpression*`)` 语言元素禁止在子表达式中使用回溯。 它可用于预防与匹配失败关联的性能问题。  
+ `(?>` subexpression`)` 语言元素禁止在子表达式中使用回溯。 它可用于预防与匹配失败关联的性能问题。  
   
  下面的示例演示在使用嵌套的限定符时禁止回溯如何改进性能。 它测量正则表达式引擎确定输入字符串与两个正则表达式不匹配所需要的时间。 第一个正则表达式使用回溯尝试匹配一个字符串，在该字符串中，一个或多个十六进制数出现了一次或多次，然后依次为冒号、一个或多个十六进制数、两个冒号。 第二个正则表达式与第一个相同，不同之处是它禁用了回溯。 如该示例输出所示，禁用回溯对性能的改进非常显著。  
   
@@ -128,9 +127,9 @@ ms.locfileid: "73968257"
  [!code-vb[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking4.vb#4)]  
 
 ### <a name="lookbehind-assertions"></a>回顾断言  
- .NET 包括两个语言元素（`(?<=`subexpression  `)` 和 `(?<!`subexpression  `)`），它们与输入字符串中之前的一个或多个字符匹配。 这两个语言元素都是零宽度断言；也就是说，它们通过 *subexpression*而不是前移或回溯来确定当前字符之前紧挨着的一个或多个字符是否匹配。  
+ .NET 包括两个语言元素（`(?<=`subexpression`)` 和 `(?<!`subexpression`)`），它们与输入字符串中之前的一个或多个字符匹配。 这两个语言元素都是零宽度断言；也就是说，它们通过 *subexpression*而不是前移或回溯来确定当前字符之前紧挨着的一个或多个字符是否匹配。  
   
- `(?<=` *subexpression* `)` 是正回顾断言；也就是说，当前位置之前的一个或多个字符必须与 *subexpression*匹配。 `(?<!`*subexpression*`)` 是负回顾断言；也就是说，当前位置之前的一个或多个字符不得与 *subexpression*匹配。 当 *subexpression* 为前一个子表达式的子集时，正回顾断言和负回顾断言都最为有用。  
+ `(?<=` subexpression`)` 是正回顾断言；也就是说，当前位置之前的一个或多个字符必须与 subexpression 匹配。 `(?<!`*subexpression*`)` 是负回顾断言；也就是说，当前位置之前的一个或多个字符不得与 *subexpression*匹配。 当 *subexpression* 为前一个子表达式的子集时，正回顾断言和负回顾断言都最为有用。  
   
  下面的示例使用两个相当的正则表达式模式，验证电子邮件地址中的用户名。 第一个模式由于过多使用回溯，性能极差。 第二个模式通过将嵌套的限定符替换为正回顾断言来修改第一个正则表达式。 该示例的输出显示 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法的执行时间。  
   
@@ -139,7 +138,7 @@ ms.locfileid: "73968257"
   
  第一个正则表达式模式 `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`^`|从字符串开头开始匹配。|  
 |`[0-9A-Z]`|匹配字母数字字符。 因为 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 选项调用的，所以此比较不区分大小写。|  
@@ -150,7 +149,7 @@ ms.locfileid: "73968257"
   
  第二个正则表达式模式 `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`使用正回顾断言。 其定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`^`|从字符串开头开始匹配。|  
 |`[0-9A-Z]`|匹配字母数字字符。 因为 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 选项调用的，所以此比较不区分大小写。|  
@@ -159,9 +158,9 @@ ms.locfileid: "73968257"
 |`@`|匹配 at 符号（“\@”）。|  
 
 ### <a name="lookahead-assertions"></a>预测先行断言  
- .NET 包括两个语言元素（`(?=`subexpression  `)` 和 `(?!`subexpression  `)`），它们与输入字符串中接下来的一个或多个字符匹配。 这两个语言元素都是零宽度断言；也就是说，它们通过 *subexpression*而不是前移或回溯来确定当前字符之后紧挨着的一个或多个字符是否匹配。  
+ .NET 包括两个语言元素（`(?=`subexpression`)` 和 `(?!`subexpression`)`），它们与输入字符串中接下来的一个或多个字符匹配。 这两个语言元素都是零宽度断言；也就是说，它们通过 *subexpression*而不是前移或回溯来确定当前字符之后紧挨着的一个或多个字符是否匹配。  
   
- `(?=` *subexpression* `)` 是正预测先行断言；也就是说，当前位置之后的一个或多个字符必须与 *subexpression*匹配。 `(?!`*subexpression*`)` 是负预测先行断言；也就是说，当前位置之后的一个或多个字符不得与 *subexpression*匹配。 当 *subexpression* 为下一个子表达式的子集时，正预测先行断言和负预测先行断言都最为有用。  
+ `(?=` subexpression`)` 是正预测先行断言；也就是说，当前位置之后的一个或多个字符必须与 subexpression 匹配。 `(?!`*subexpression*`)` 是负预测先行断言；也就是说，当前位置之后的一个或多个字符不得与 *subexpression*匹配。 当 *subexpression* 为下一个子表达式的子集时，正预测先行断言和负预测先行断言都最为有用。  
   
  下面的示例使用两个可验证完全限定的类型名称的等效正则表达式模式。 第一个模式由于过多使用回溯，性能极差。 第二个模式通过将嵌套的限定符替换为正预测先行断言来修改第一个正则表达式。 该示例的输出显示 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法的执行时间。  
   
@@ -170,7 +169,7 @@ ms.locfileid: "73968257"
   
  第一个正则表达式模式 `^(([A-Z]\w*)+\.)*[A-Z]\w*$`的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`^`|从字符串开头开始匹配。|  
 |`([A-Z]\w*)+\.`|对后跟零个或多个单词字符、句点的字母字符 (A-Z) 匹配一次或多次。 因为 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 选项调用的，所以此比较不区分大小写。|  
@@ -180,7 +179,7 @@ ms.locfileid: "73968257"
   
  第二个正则表达式模式 `^((?=[A-Z])\w+\.)*[A-Z]\w*$`使用正预测先行断言。 其定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`^`|从字符串开头开始匹配。|  
 |`(?=[A-Z])`|预测先行到第一个字符，如果它是字母 (A-Z)，则继续匹配。 因为 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 选项调用的，所以此比较不区分大小写。|  

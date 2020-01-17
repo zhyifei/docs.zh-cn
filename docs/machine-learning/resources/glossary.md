@@ -1,15 +1,14 @@
 ---
 title: 机器学习库
 description: 一个重要的机器学习术语表，可在 ML.NET 中生成自定义模型时使用。
-ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: bd4f2db701f537d5c87529115a6bd44035432534
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977289"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739877"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>机器学习重要术语词汇表
 
@@ -57,7 +56,7 @@ ms.locfileid: "73977289"
 
 ML.NET 中实现 <xref:Microsoft.ML.IEstimator%601> 接口的类。
 
-估算器是一种转换（数据准备转换和机器学习模型训练转换）规范。 估算器可以链接在一起形成转换管道。 调用 <xref:Microsoft.ML.IEstimator`1.Fit*> 时，会学习估算器或估算器管道的参数。 <xref:Microsoft.ML.IEstimator`1.Fit*> 的结果为[转换器](#transformer)。
+估算器是一种转换（数据准备转换和机器学习模型训练转换）规范。 估算器可以链接在一起形成转换管道。 调用 <xref:Microsoft.ML.IEstimator%601.Fit%2A> 时，会学习估算器或估算器管道的参数。 <xref:Microsoft.ML.IEstimator%601.Fit%2A> 的结果为[转换器](#transformer)。
 
 ## <a name="extension-method"></a>扩展方法
 

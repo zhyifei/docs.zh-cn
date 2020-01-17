@@ -1,16 +1,15 @@
 ---
 title: 命令行参数 - C# 编程指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: f74f374f13aef5135b81d59f94bc2c6913766763
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e73eeeeb0e613d45b2ce31e744803bb75ba2a3c2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039315"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75700635"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令行参数（C# 编程指南）
 
@@ -79,6 +78,6 @@ long num = Convert.ToInt64(s);
 - <xref:System.Environment?displayProperty=nameWithType>
 - [C# 编程指南](../index.md)
 - [Main() 和命令行参数](index.md)
-- [如何：显示命令行参数](how-to-display-command-line-arguments.md)
+- [如何显示命令行自变量](how-to-display-command-line-arguments.md)
 - [Main() 返回值](main-return-values.md)
 - [类](../classes-and-structs/classes.md)

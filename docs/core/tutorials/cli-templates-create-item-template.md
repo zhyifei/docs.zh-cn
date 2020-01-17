@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 5183781d6a131aa395cf7c1fd8a09e05ed0bd71d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926153"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340369"
 ---
 # <a name="tutorial-create-an-item-template"></a>教程：创建项模板
 
@@ -26,14 +26,14 @@ ms.locfileid: "70926153"
 > * 测试项模板
 > * 卸载项模板
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 * [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download) 或更高版本。
 * 阅读参考文章[为 dotnet new 自定义模板](../tools/custom-templates.md)。
 
   参考文章介绍了有关模板的基础知识，以及如何将它们组合在一起。 其中一些信息将在本文中重复出现。
 
-* 打开终端并导航到 working\templates\\  文件夹。
+* 打开终端并导航到 working\templates  文件夹。
 
 ## <a name="create-the-required-folders"></a>创建所需的文件夹
 
@@ -54,7 +54,7 @@ parent_folder
 
 项模板是包含一个或多个文件的特定类型的模板。 当你想要生成类似于配置、代码或解决方案文件的内容时，这些类型的模板非常有用。 在本例中，你将创建一个类，该类将扩展方法添加到字符串类型中。
 
-在终端中，导航到 working\templates\\  文件夹，并创建一个名为“extensions”  的新子文件夹。 进入文件夹。
+在终端中，导航到 working\templates  文件夹，并创建一个名为“extensions”  的新子文件夹。 进入文件夹。
 
 ```console
 working
@@ -85,7 +85,7 @@ namespace System
 
 ## <a name="create-the-template-config"></a>创建模板配置
 
-模板在 .NET Core 中通过模板根目录中的特殊文件夹和配置文件进行识别。 在本教程中，你的模板文件夹位于 working\templates\extensions\\  。
+模板在 .NET Core 中通过模板根目录中的特殊文件夹和配置文件进行识别。 在本教程中，你的模板文件夹位于 working\templates\extensions  。
 
 创建模板时，除特殊配置文件夹外，模板文件夹中的所有文件和文件夹都作为模板的一部分包含在内。 此配置文件夹名为“.template.config”  。
 

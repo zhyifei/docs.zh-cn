@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: ba2a8cd4995b9baab2071d3fb3c7980e45565692
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e69cc5a9634f0b5232562782557645894f94ce2e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039002"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345307"
 ---
 # <a name="member-access-operators-c-reference"></a>成员访问运算符（C# 参考）
 
@@ -109,7 +109,13 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Null 条件运算符 ?. 和 ?[]
 
-Null 条件运算符在 C# 6 及更高版本中可用，仅当操作数的计算结果为非 null 时，null 条件运算符才会将成员访问 `?.` 或元素访问 `?[]` 运算应用于其操作数。 如果操作数的计算结果为 `null`，则应用运算符的结果为 `null`。 Null 条件成员访问运算符 `?.` 也称为 Elvis 运算符。
+Null 条件运算符在 C# 6 及更高版本中可用，仅当操作数的计算结果为非 null 时，null 条件运算符才会将[成员访问](#member-access-operator-) `?.` 或[元素访问](#indexer-operator-) `?[]` 运算应用于其操作数；否则，将返回 `null`。 即：
+
+- 如果 `a` 的计算结果为 `null`，则 `a?.x` 或 `a?[x]` 的结果为 `null`。
+- 如果 `a` 的计算结果为非 null，则 `a?.x` 或 `a?[x]` 的结果将分别与 `a.x` 或 `a[x]` 的结果相同。
+
+  > [!NOTE]
+  > 如果 `a.x` 或 `a[x]` 引发异常，则 `a?.x` 或 `a?[x]` 将对非 null `a` 引发相同的异常。 例如，如果 `a` 为非 null 数组实例且 `x` 在 `a`的边界之外，则 `a?[x]` 将引发 <xref:System.IndexOutOfRangeException>。
 
 NULL 条件运算符采用最小化求值策略。 也就是说，如果条件成员或元素访问运算链中的一个运算返回 `null`，则链的其余部分不会执行。 在以下示例中，如果 `A` 的计算结果为 `null`，则不会计算 `B`；如果 `A` 或 `B` 的计算结果为 `null`，则不会计算 `C`：
 
@@ -123,6 +129,8 @@ A?.B?[C];
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
 前面的示例还使用 [Null 合并运算符 `??`](null-coalescing-operator.md) 来指定替代表达式，以便在 null 条件运算的结果为 `null` 时用于计算。
+
+Null 条件成员访问运算符 `?.` 也称为 Elvis 运算符。
 
 ### <a name="thread-safe-delegate-invocation"></a>线程安全的委托调用
 
@@ -168,7 +176,7 @@ if (handler != null)
 
 还可以将 `^` 运算符与[范围运算符](#range-operator-)一起使用以创建一个索引范围。 有关详细信息，请参阅[索引和范围](../../tutorials/ranges-indexes.md)。
 
-## <a name="range-operator-"></a>范围运算符 ..
+## <a name="range-operator-"></a>范围运算符 .
 
 `..` 运算符在 C# 8.0 和更高版本中提供，指定索引范围的开头和末尾作为其操作数。 左侧操作数是范围的包含性  开头。 右侧操作数是范围的包含性  末尾。 任一操作数都可以是序列开头或末尾的索引，如以下示例所示：
 

@@ -1,15 +1,15 @@
 ---
-title: 如何：在目录树中查询重复文件 (LINQ) (C#)
+title: 如何在目录树中查询重复文件 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 3e7d1ee779f6e584bfc636963e038e31332bfca8
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 7c84dba3e87077077f28bc2e665ea3774cf44d3b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216604"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347878"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>如何：在目录树中查询重复文件 (LINQ) (C#)
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>如何在目录树中查询重复文件 (LINQ) (C#)
 有时，具有相同名称的文件可能位于多个文件夹中。 例如，在 Visual Studio 安装文件夹下，多个文件夹中都有 readme.htm 文件。 此示例显示如何在指定根文件夹下查询此类重复文件名。 第二个示例显示如何查询大小和上次写入时间都匹配的文件。  
   
 ## <a name="example"></a>示例  

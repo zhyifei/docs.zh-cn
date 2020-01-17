@@ -1,20 +1,20 @@
 ---
-title: 在 .NET Core 上使用 dotnet-svcutil.xmlserializer
+title: 使用 dotnet-svcutil.xmlserializer
 description: 了解如何使用 `dotnet-svcutil.xmlserializer` NuGet 包为 .NET Core 项目预生成序列化程序集。
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: f1eebeb70206ce883a8e4e4bbd5216ae0ba5507c
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 4811647c294118cb160d25805e7d3ada97f071f9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117278"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344899"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>在 .NET Core 上使用 dotnet-svcutil.xmlserializer
 
 `dotnet-svcutil.xmlserializer` NuGet 包可以为 .NET Core 项目预生成序列化程序集。 它为客户端应用程序中由 WCF 服务协定使用的且可由 XmlSerializer 序列化的类型预生成 C# 序列化代码。 当序列化或反序列化这些类型的对象时，这会提高 XML 序列化的启动性能。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 * [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更高版本
 * 你最喜欢的代码编辑器

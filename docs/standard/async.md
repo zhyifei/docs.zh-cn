@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: 2f76eb7d2b769b59809bec81aefacb7cec90a450
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 1570909b7b416eff81dd90a936ff5ed10aad94f1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106689"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346087"
 ---
 # <a name="async-overview"></a>异步概述
 
@@ -20,7 +20,7 @@ ms.locfileid: "70106689"
 - 有了高应用存储率，客户端应用有望保持始终开启，始终连接的状态，并且可持续响应用户交互（例如，触摸）！
 - 用户期望服务能够通过平稳地扩展和收缩来应对流量高峰。 
 
-异步编程是一项关键技术，可以直接处理多个核心上的阻塞 I/O 和并发操作。 .NET 可以通过 C#、VB 和 F# 中的易用语言级异步编程模型提高应用和服务的响应速度和灵活性。
+异步编程是一项关键技术，可以直接处理多个核心上的阻塞 I/O 和并发操作。 通过 C#、Visual Basic 和 F# 中易于使用的语言级异步编程模型，.NET 可为应用和服务提供使其变得可响应且富有弹性。
 
 ## <a name="why-write-async-code"></a>为什么要编写异步代码？
 

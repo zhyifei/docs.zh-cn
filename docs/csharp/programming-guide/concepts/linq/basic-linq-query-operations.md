@@ -17,15 +17,15 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 361101258caca763502f92d897866c75bc8d7da2
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 91c038303c1ad7c2530964d3102aae49090c4c2a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418725"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635933"
 ---
 # <a name="basic-linq-query-operations-c"></a>基本 LINQ 查询操作 (C#)
-本主题简要介绍了 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式和一些在查询中执行的典型操作。 下面各主题中提供了更具体的信息：  
+本主题简要介绍了 LINQ 查询表达式和一些在查询中执行的典型操作。 下面各主题中提供了更具体的信息：  
   
  [LINQ 查询表达式](../../../linq/index.md)  
   
@@ -34,17 +34,17 @@ ms.locfileid: "73418725"
  [演练：用 C# 编写查询](./walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
-> 如果你已熟悉查询语言（如 SQL 或 XQuery），则可以跳过本主题的大部分内容。 请参阅下一节中的“`from` 子句”部分，了解 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式中的子句顺序。  
+> 如果你已熟悉查询语言（如 SQL 或 XQuery），则可以跳过本主题的大部分内容。 请参阅下一节中的“`from` 子句”部分，了解 LINQ 查询表达式中的子句顺序。  
   
 ## <a name="obtaining-a-data-source"></a>获取数据源  
- 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，第一步是指定数据源。 和大多数编程语言相同，在使用 C# 时也必须先声明变量，然后才能使用它。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，先使用 `from` 子句引入数据源 (`customers`) 和范围变量 (`cust`)  。  
+ 在 LINQ 查询中，第一步是指定数据源。 和大多数编程语言相同，在使用 C# 时也必须先声明变量，然后才能使用它。 在 LINQ 查询中，先使用 `from` 子句引入数据源 (`customers`) 和范围变量 (`cust`)  。  
   
  [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   
  范围变量就像 `foreach` 循环中的迭代变量，但查询表达式中不会真正发生迭代。 当执行查询时，范围变量将充当对 `customers` 中每个连续的元素的引用。 由于编译器可以推断 `cust` 的类型，因此无需显式指定它。 可通过 `let` 子句引入其他范围变量。 有关详细信息，请参阅 [let 子句](../../../language-reference/keywords/let-clause.md)。  
   
 > [!NOTE]
-> 对于非泛型数据源（例如 <xref:System.Collections.ArrayList>），必须显式键入范围变量。 有关详细信息，请参阅[如何：使用 LINQ 查询 ArrayList (C#)](./how-to-query-an-arraylist-with-linq.md) 和 [from 子句](../../../language-reference/keywords/from-clause.md)。  
+> 对于非泛型数据源（例如 <xref:System.Collections.ArrayList>），必须显式键入范围变量。 有关详细信息，请参阅[如何使用 LINQ (C#)](./how-to-query-an-arraylist-with-linq.md) 和 [From 子句](../../../language-reference/keywords/from-clause.md)查询 ArrayList。  
   
 ## <a name="filtering"></a>筛选  
  或许，最常见的查询操作是以布尔表达式的形式应用筛选器。 筛选器使查询仅返回表达式为 true 的元素。 将通过使用 `where` 子句生成结果。 筛选器实际指定要从源序列排除哪些元素。 在下列示例中，仅返回地址位于“London”的 `customers`。  
@@ -84,11 +84,11 @@ ms.locfileid: "73418725"
  有关详细信息，请参阅 [group 子句](../../../language-reference/keywords/group-clause.md)。  
   
 ## <a name="joining"></a>联接  
- 联接操作在不同序列间创建关联，这些序列在数据源中未被显式模块化。 例如，可通过执行联接来查找所有位置相同的客户和分销商。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中，`join` 子句始终作用于对象集合，而非直接作用于数据库表。  
+ 联接操作在不同序列间创建关联，这些序列在数据源中未被显式模块化。 例如，可通过执行联接来查找所有位置相同的客户和分销商。 在 LINQ 中，`join` 子句始终作用于对象集合，而非直接作用于数据库表。  
   
  [!code-csharp[csLINQGettingStarted#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#36)]  
   
- 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中，不必像在 SQL 中那样频繁使用 `join`，因为 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中的外键在对象模型中表示为包含项集合的属性。 例如 `Customer` 对象包含 `Order` 对象的集合。 不必执行联接，只需使用点表示法访问订单：  
+ 在 LINQ 中，不必像在 SQL 中那样频繁使用 `join`，因为 LINQ 中的外键在对象模型中表示为包含项集合的属性。 例如 `Customer` 对象包含 `Order` 对象的集合。 不必执行联接，只需使用点表示法访问订单：  
   
 ```csharp
 from order in Customer.Orders...  
@@ -97,7 +97,7 @@ from order in Customer.Orders...
  有关详细信息，请参阅 [join 子句](../../../language-reference/keywords/join-clause.md)。  
   
 ## <a name="selecting-projections"></a>选择（投影）  
- `select` 子句生成查询结果并指定每个返回的元素的“形状”或类型。 例如，可以指定结果包含的是整个 `Customer` 对象、仅一个成员、成员的子集，还是某个基于计算或新对象创建的完全不同的结果类型。 当 `select` 子句生成除源元素副本以外的内容时，该操作称为投影  。 使用投影转换数据是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式的一种强大功能。 有关详细信息，请参阅[使用 LINQ (C#)](./data-transformations-with-linq.md) 和 [select 子句](../../../language-reference/keywords/select-clause.md)进行数据转换。  
+ `select` 子句生成查询结果并指定每个返回的元素的“形状”或类型。 例如，可以指定结果包含的是整个 `Customer` 对象、仅一个成员、成员的子集，还是某个基于计算或新对象创建的完全不同的结果类型。 当 `select` 子句生成除源元素副本以外的内容时，该操作称为投影  。 使用投影转换数据是 LINQ 查询表达式的一种强大功能。 有关详细信息，请参阅[使用 LINQ (C#)](./data-transformations-with-linq.md) 和 [select 子句](../../../language-reference/keywords/select-clause.md)进行数据转换。  
   
 ## <a name="see-also"></a>请参阅
 

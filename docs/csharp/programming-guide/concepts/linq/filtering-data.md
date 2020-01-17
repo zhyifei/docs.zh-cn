@@ -2,12 +2,12 @@
 title: 筛选数据 (C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: eb448c1c2ea6d9b3fcf0120043cafebc01cd3805
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 74399244990f8ff2deaa1d10576ea94a57c16bee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418478"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346994"
 ---
 # <a name="filtering-data-c"></a>筛选数据 (C#)
 筛选是指将结果集限制为仅包含满足指定条件的元素的操作。 它也称为选定内容。  
@@ -20,7 +20,7 @@ ms.locfileid: "73418478"
   
 ## <a name="methods"></a>方法  
   
-|方法名|说明|C# 查询表达式语法|详细信息|  
+|方法名|描述|C# 查询表达式语法|详细信息|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |OfType|根据其转换为特定类型的能力选择值。|不适用。|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
 |Where|选择基于谓词函数的值。|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
@@ -50,7 +50,7 @@ foreach (string str in query)
 - <xref:System.Linq>
 - [标准查询运算符概述 (C#)](./standard-query-operators-overview.md)
 - [where 子句](../../../language-reference/keywords/where-clause.md)
-- [如何：在运行时动态指定谓词筛选器](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
-- [如何：使用反射查询程序集的元数据 (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [如何：查询具有指定特性或名称的文件 (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [如何：按任意词或字段对文本数据进行排序或筛选 (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [在运行时动态指定谓词筛选器](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
+- [如何使用反射查询程序集的元数据 (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [如何查询具有指定特性或名称的文件 (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [如何按任意词或字段对文本数据进行排序或筛选 (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

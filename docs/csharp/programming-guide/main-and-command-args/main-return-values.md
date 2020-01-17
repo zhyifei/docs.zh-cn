@@ -1,16 +1,15 @@
 ---
 title: Main() 返回值 - C# 编程指南
-ms.custom: seodec18
 ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 13d1eda178a4c2580af67ef5a7198e7f0884a7d6
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.openlocfilehash: 21e780470f455ac133fd4d11ae43c63a4b18c582
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884392"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712034"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 返回值（C# 编程指南）
 
@@ -34,7 +33,7 @@ ms.locfileid: "74884392"
 
 在 Windows 中执行程序时，从 `Main` 函数返回的任何值都存储在环境变量中。 可使用批处理文件中的 `ERRORLEVEL` 或 PowerShell 中的 `$LastExitCode` 来检索此环境变量。
 
-可使用 [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build`命令构建应用程序。
+可使用 [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build` 命令构建应用程序。
 
 接下来，创建一个 Powershell 脚本来运行应用程序并显示结果。 将以下代码粘贴到文本文件中，并在包含该项目的文件夹中将其另存为 `test.ps1`。 可通过在 PowerShell 提示符下键入 `test.ps1` 来运行 PowerShell 脚本。
 
@@ -98,4 +97,4 @@ private static async Task<int> AsyncConsoleWork()
 - [C# 编程指南](../index.md)
 - [C# 参考](../index.md)
 - [Main() 和命令行参数](index.md)
-- [如何：显示命令行参数](./how-to-display-command-line-arguments.md)
+- [如何显示命令行参数](./how-to-display-command-line-arguments.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: c699ed68606293b1a49a540e00636cf7f56bdf2f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ec06edc16829c6d4caf8c760922aac1471e365c2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972095"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346632"
 ---
 # <a name="standard-timespan-format-strings"></a>标准 TimeSpan 格式字符串
 
@@ -40,7 +40,7 @@ ms.locfileid: "73972095"
   
 下表列出了标准时间间隔格式说明符。  
   
-|格式说明符|name|说明|示例|  
+|格式说明符|“属性”|描述|示例|  
 |----------------------|----------|-----------------|--------------|  
 |“c”|常量（固定）格式|此说明符不区分区域性。 它的形式是 `[-][d'.']hh':'mm':'ss['.'fffffff]`。<br /><br /> （“t”格式与“T”格式字符串产生的结果相同。）<br /><br /> 更多信息：[常量（“c”）格式说明符](#the-constant-c-format-specifier)。|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |“g”|常规短格式|该说明符仅输出需要的内容。 它区分区域性并采用 `[-][d':']h':'mm':'ss[.FFFFFFF]` 形式。<br /><br /> 更多信息：[常规短（“g”）格式说明符](#the-general-short-g-format-specifier)。|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
@@ -53,7 +53,7 @@ ms.locfileid: "73972095"
   
  方括号 ([ and ]) 中的元素是可选的。 句点 (.) 和冒号 (:) 是文字符号。 下表介绍了剩余的元素。  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |*-*|可选负号，指示负时间间隔。|  
 |*d*|不带前导零的可选天数。|  
@@ -79,7 +79,7 @@ ms.locfileid: "73972095"
   
  方括号 ([ and ]) 中的元素是可选的。 冒号 (:) 是一种文字符号。 下表介绍了剩余的元素。  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |*-*|可选负号，指示负时间间隔。|  
 |*d*|不带前导零的可选天数。|  
@@ -103,7 +103,7 @@ ms.locfileid: "73972095"
   
  方括号 ([ and ]) 中的元素是可选的。 冒号 (:) 是一种文字符号。 下表介绍了剩余的元素。  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |*-*|可选负号，指示负时间间隔。|  
 |*d*|不带前导零的天数。|  

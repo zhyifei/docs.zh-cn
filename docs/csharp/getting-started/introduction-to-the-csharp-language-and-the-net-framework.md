@@ -6,14 +6,14 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: cf9c0ad345ce8762e700bb46b431804dccb79409
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d2fd879203932ea3f2211e38a2efdd626928962b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283066"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713914"
 ---
-# <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 语言和 .NET Framework 介绍
+# <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 语言和 .NET Framework 简介
 
 C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 .NET Framework 上运行的各种安全可靠的应用程序。 C# 可用于创建 Windows 客户端应用程序、XML Web service、分布式组件、客户端服务器应用程序、数据库应用程序等。 Visual C# 提供高级代码编辑器、方便使用的用户界面设计器、集成调试器和其他许多工具，以便你可以更轻松地开发基于 C# 语言和 .NET Framework 的应用程序。  
   
@@ -22,9 +22,9 @@ C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 .
   
 ## <a name="c-language"></a>C# 语言
 
- C# 语法高度重视表达，但学习起来也很简单轻松。 任何熟悉 C、C++ 或 Java 的人都可以立即认出 C# 的大括号语法。 通常情况下，了解上述任何一种语言的开发者可以在很短的时间内就开始使用 C# 高效工作。 C# 语法简化了 C++ 的许多复杂操作，并提供强大功能，如可以为 null 的值类型、枚举、委托、lambda 表达式和直接内存访问，而 Java 并不提供这些功能。 C# 不仅支持泛型方法和类型，提升了类型安全性和性能，还支持迭代器，以便集合类的实现者可以定义方便客户端代码使用的自定义迭代行为。 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 表达式让强类型查询成为最高级的语言构造。  
+C# 语法高度重视表达，但学习起来也很简单轻松。 任何熟悉 C、C++ 或 Java 的人都可以立即认出 C# 的大括号语法。 通常情况下，了解上述任何一种语言的开发者可以在很短的时间内就开始使用 C# 高效工作。 C# 语法简化了 C++ 的许多复杂操作，并提供强大功能，如可以为 null 的值类型、枚举、委托、lambda 表达式和直接内存访问。 C# 不仅支持泛型方法和类型，提升了类型安全性和性能，还支持迭代器，以便集合类的实现者可以定义方便客户端代码使用的自定义迭代行为。 语言集成查询 (LINQ) 表达式让强类型查询成为最高级的语言构造。  
   
- 作为面向对象的语言，C# 支持封装、继承和多形性这些概念。 所有变量和方法（包括作为应用程序入口点的 `Main` 方法）都封装在类定义中。 虽然类可能会直接继承一个父类，但可以实现任意数量的接口。 若要用方法重写父类中的虚方法，必须使用 `override` 关键字，以免发生意外重定义。 在 C# 中，结构就像是轻量级类，是可以实现接口但不支持继承的堆栈分配类型。  
+ 作为面向对象的语言，C# 支持封装、继承和多态性这些概念。 所有变量和方法（包括作为应用程序入口点的 `Main` 方法）都封装在类定义中。 虽然类可能会直接继承一个父类，但可以实现任意数量的接口。 若要用方法重写父类中的虚方法，必须使用 `override` 关键字，以免发生意外重定义。 在 C# 中，结构就像是轻量级类，是可以实现接口但不支持继承的堆栈分配类型。  
   
  除了这些面向对象的基本原则，使用 C# 还可以通过以下多个创新语言构造更加轻松地开发软件组件：  
   
@@ -36,9 +36,9 @@ C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 .
   
 - 内联的 XML 文档注释。  
   
-- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]，提供跨各种数据源的内置查询功能。  
+- 语言集成查询 (LINQ)，提供跨各种数据源的内置查询功能。  
   
- 如果需要与其他 Windows 软件（如 COM 对象或本机 Win32 DLL）进行交互，可以在 C# 中通过名为“互操作”的过程来实现。 借助互操作，C# 程序可以执行本机 C++ 应用程序可以执行的几乎任何操作。 在直接内存访问非常关键的情况下，C# 甚至支持指针和“不安全”代码的概念。  
+ 如果需要与其他 Windows 软件（如 COM 对象或本机 Win32 DLL）进行交互，可以在 C# 中通过名为“互操作”的过程来实现。 借助互操作，C# 程序可以执行本机 C++ 应用程序可以执行的几乎任何操作。 在直接内存访问关键的情况下，C# 甚至支持指针和“不安全”代码的概念。  
   
  C# 生成过程比 C 和 C++ 更简单，比 Java 更灵活。 没有单独的头文件，也不要求按特定顺序声明方法和类型。 C# 源文件可以定义任意数量的类、结构、接口和事件。  
   
@@ -48,7 +48,7 @@ C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 .
   
 - 有关 C# 语言特定方面的详细信息，请参阅 [C# 参考](../language-reference/index.md)。  
   
-- 有关 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 的详细信息，请参阅 [LINQ（语言集成查询）](../programming-guide/concepts/linq/index.md)。  
+- 有关 LINQ 的详细信息，请参阅 [LINQ（语言集成查询）](../programming-guide/concepts/linq/index.md)。  
 
 ## <a name="net-framework-platform-architecture"></a>.NET Framework 平台体系结构
 

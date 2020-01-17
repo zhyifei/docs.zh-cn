@@ -4,13 +4,12 @@ description: 通过使用 dotnet test 和 MSTest 分步生成示例解决方案�
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.custom: seodec18
-ms.openlocfilehash: 68878073b031d155c9ff67f24ed950570e666523
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a685ed8a56393fb6e1c1b9400f0ed4bcef15f9b5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117004"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714280"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>使用 dotnet test 和 MSTest 在 .NET Core 中进行 F# 库单元测试
 
@@ -21,7 +20,7 @@ ms.locfileid: "71117004"
 ## <a name="creating-the-source-project"></a>创建源项目
 
 打开 shell 窗口。 创建一个名为 unit-testing-with-fsharp  的目录，以保留该解决方案。
-在此新目录中，运行 [`dotnet new sln`](../tools/dotnet-new.md) 创建新的解决方案。 这样便于管理类库和单元测试项目。
+在此新目录中，运行 `dotnet new sln` 创建新的解决方案。 这样便于管理类库和单元测试项目。
 在解决方案库中，创建 MathService  目录。 目录和文件结构目前如下所示：
 
 ```
@@ -30,14 +29,14 @@ ms.locfileid: "71117004"
     /MathService
 ```
 
-将 MathService  作为当前目录，然后运行 [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) 以创建源项目。  创建数学服务的失败实现：
+将 MathService  作为当前目录，然后运行 `dotnet new classlib -lang "F#"` 以创建源项目。  创建数学服务的失败实现：
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-将目录更改回 unit-testing-with-fsharp  目录。 运行 [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) 向解决方案添加类库项目。
+将目录更改回 unit-testing-with-fsharp  目录。 运行 `dotnet sln add .\MathService\MathService.fsproj` 向解决方案添加类库项目。
 
 ## <a name="creating-the-test-project"></a>创建测试项目
 
@@ -52,7 +51,7 @@ module MyMath =
     /MathService.Tests
 ```
 
-将 MathService.Tests  目录作为当前目录，并使用 [`dotnet new mstest -lang F#`](../tools/dotnet-new.md) 创建一个新项目。 这会创建一个将 MSTest 用作测试框架的测试项目。 生成的模板在 MathServiceTests.fsproj  中配置测试运行程序：
+将 MathService.Tests  目录作为当前目录，并使用 `dotnet new mstest -lang "F#"` 创建一个新项目。 这会创建一个将 MSTest 用作测试框架的测试项目。 生成的模板在 MathServiceTests.fsproj  中配置测试运行程序：
 
 ```xml
 <ItemGroup>
@@ -62,7 +61,7 @@ module MyMath =
 </ItemGroup>
 ```
 
-测试项目需要其他包创建和运行单元测试。 `dotnet new` 在前面的步骤中已添加 MSTest 和 MSTest 运行程序。 现在，将 `MathService` 类库作为另一个依赖项添加到项目中。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
+测试项目需要其他包创建和运行单元测试。 `dotnet new` 在前面的步骤中已添加 MSTest 和 MSTest 运行程序。 现在，将 `MathService` 类库作为另一个依赖项添加到项目中。 使用 `dotnet add reference` 命令：
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
@@ -83,7 +82,7 @@ dotnet add reference ../MathService/MathService.fsproj
         MathServiceTests.fsproj
 ```
 
-在 unit-testing-with-fsharp  目录中执行 [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md)。
+在 unit-testing-with-fsharp  目录中执行 `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`。
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
@@ -107,7 +106,7 @@ type TestClass () =
      member this.FailEveryTime() = Assert.IsTrue(false)
 ```
 
-`[<TestClass>]` 属性表示包含测试的类。 `[<TestMethod>]` 属性表示由测试运行程序运行的测试方法。 在 unit-testing-with-fsharp  目录中，执行 [`dotnet test`](../tools/dotnet-test.md) 以构建测试和类库，然后运行测试。 MSTest 测试运行程序包含要运行测试的程序入口点。 `dotnet test` 使用已创建的单元测试项目启动测试运行程序。
+`[<TestClass>]` 属性表示包含测试的类。 `[<TestMethod>]` 属性表示由测试运行程序运行的测试方法。 在 unit-testing-with-fsharp  目录中，执行 `dotnet test` 以构建测试和类库，然后运行测试。 MSTest 测试运行程序包含要运行测试的程序入口点。 `dotnet test` 使用已创建的单元测试项目启动测试运行程序。
 
 这两个测试演示了最基本的已通过测试和未通过测试。 `My test` 通过，而 `Fail every time` 未通过。 现在创建针对 `squaresOfOdds` 方法的测试。 `squaresOfOdds` 方法返回输入序列中所有奇整数值的平方列表。 可以以迭代的方式创建可验证此功能的测试，而非尝试同时写入所有的函数。 若要让每个测试都通过，意味着要针对此方法创建必要的功能。
 
@@ -180,3 +179,10 @@ let squaresOfOdds xs =
 ```
 
 你已生成一个小型库和该库的一组单元测试。 你已将解决方案结构化，使添加新包和新测试成为了正常工作流的一部分。 你已将多数的时间和精力集中在解决应用程序的目标上。
+
+## <a name="see-also"></a>请参阅
+
+- [dotnet new](../tools/dotnet-new.md)
+- [dotnet sln](../tools/dotnet-sln.md)
+- [dotnet add reference](../tools/dotnet-add-reference.md)
+- [dotnet test](../tools/dotnet-test.md)

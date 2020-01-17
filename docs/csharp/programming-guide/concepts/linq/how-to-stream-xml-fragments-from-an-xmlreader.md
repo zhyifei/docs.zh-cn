@@ -1,15 +1,16 @@
 ---
-title: 如何：从 XmlReader 流式处理 XML 片段 (C#)
+title: 如何从 XmlReader 流式处理 XML 片段 (C#)
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: e5aeb5111931ff6a35a3b7806abc24e0fbbf9621
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f7914d33622518f983a685dd2e844a25fd3ca15f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253296"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714657"
 ---
-# <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>如何：从 XmlReader 流式处理 XML 片段 (C#)
+# <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>如何从 XmlReader 流式处理 XML 片段 (C#)
+
 如果必须处理很大的 XML 文件，将整个 XML 树加载到内存可能不可行。 本主题演示如何使用 <xref:System.Xml.XmlReader> 对片段进行流式处理。  
   
  使用 <xref:System.Xml.XmlReader> 读取 <xref:System.Xml.Linq.XElement> 对象的一种最有效方式是编写您自己的自定义轴方法。 轴方法通常会返回一个集合，比如 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，如本主题中的示例所示。 在自定义轴方法中，在通过调用 <xref:System.Xml.Linq.XNode.ReadFrom%2A> 方法创建 XML 片段后，可以使用 `yield return` 返回该集合。 这可为您的自定义轴方法提供延迟执行语义。  
@@ -18,12 +19,12 @@ ms.locfileid: "70253296"
   
  如果想要创建一个部分树，可实例化 <xref:System.Xml.XmlReader>，将读取器定位在要转换为 <xref:System.Xml.Linq.XElement> 树的节点上，然后创建 <xref:System.Xml.Linq.XElement> 对象。  
   
- 主题[如何：通过对标头信息的访问流式处理 XML 片段 (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) 包含有关如何流式处理更复杂的文档的信息和示例。  
+[如何通过对标头信息的访问流式处理 XML 片段 (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) 主题包含有关如何流式处理更复杂的文档的信息和示例。
   
- 主题[如何：执行大型 XML 文档的流式转换 (C#)](./how-to-perform-streaming-transform-of-large-xml-documents.md) 包含如何使用 LINQ to XML 在保持小内存需求量的同时转换超大型 XML 文档的示例。  
+ [如何执行大型 XML 文档的流式转换 (C#)](./how-to-perform-streaming-transform-of-large-xml-documents.md) 主题包含如何使用 LINQ to XML 在保持小内存需求量的同时转换极大 XML 文档的示例。  
   
 ## <a name="example"></a>示例  
- 本示例创建一个自定义轴方法。 可以通过使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询来查询该方法。 自定义轴方法 `StreamRootChildDoc` 是一个专门设计的方法，用于读取具有重复 `Child` 元素的文档。  
+ 本示例创建一个自定义轴方法。 可以通过使用 LINQ 查询来查询该方法。 自定义轴方法 `StreamRootChildDoc` 是一个专门设计的方法，用于读取具有重复 `Child` 元素的文档。  
   
 ```csharp  
 static IEnumerable<XElement> StreamRootChildDoc(StringReader stringReader)  
@@ -81,4 +82,3 @@ ccc
 ```  
   
  在本示例中，源文档非常小。 但是即使有数百万个 `Child` 元素，本示例也仍具有很小的内存需求量。  
-  

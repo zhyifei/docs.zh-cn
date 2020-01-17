@@ -4,14 +4,14 @@ description: 了解如何使用 XML 文档注释来记录代码和在编译时�
 ms.date: 02/14/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 92a64a8f7a652f8b957013fc05f426e6b983655d
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6aa52030e20f61b26311347a57629658ebe0e609
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710992"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713942"
 ---
-# <a name="documenting-your-code-with-xml-comments"></a>使用 XML 注释来记录代码
+# <a name="document-your-code-with-xml-comments"></a>使用 XML 注释记录代码
 
 XML 文档注释是一种特殊注释，添加在任何用户定义的类型或成员的定义上方。
 其特殊之处在于其可由编译器处理，由此在编译时生成 XML 文档文件。
@@ -37,7 +37,7 @@ XML 文档注释是一种特殊注释，添加在任何用户定义的类型或�
 
 - 如果是从命令行编译 .NET Framework 应用程序，编译时请添加 [-doc 编译器选项](language-reference/compiler-options/doc-compiler-option.md)。  
 
-XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 例如:
+XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 例如：
 
 [!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 
@@ -150,7 +150,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 ## <a name="paramref"></a>\<paramref>
 
-有时可能正在通过一个 `<summary>` 标记描述一个方法的作用，并且想要引用一个参数。 这时 `<paramref>` 标记就很适合用来实现这一目的。 现在来更新双基 `Add` 方法的摘要。 与 `<param>` 标记一样，参数名称在**必需**的 `name` 属性中指定。
+有时可能正在通过一个 `<summary>` 标记描述一个方法的作用，并且想要引用一个参数。 这时 `<paramref>` 标记就很适合用来实现这一目的。 现在来更新双基 `Add` 方法的摘要。 与 `<param>` 标记一样，参数名称在必需的 `name` 属性中指定  。
 
 [!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
@@ -170,7 +170,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 可以通过将 `type` 属性分别改为 `number` 或 `table` 来制作有序列表或表格。
 
-### <a name="putting-it-all-together"></a>配合使用
+### <a name="put-it-all-together"></a>将其放在一起
 
 如果已按照本教程的操作方法将标记应用于代码中的所需位置，则代码现应如下所示：
 
@@ -206,7 +206,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 ### <a name="user-defined-tags"></a>用户定义的标记
 
 上述所有标记均表示由 C# 编译器识别的标记。 但用户可随意定义自己的标记。
-Sandcastle 等工具支持其他标记，如 [`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm)、 [`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)，甚至支持[编制命名空间文档](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)。
+Sandcastle 等工具支持其他标记，如 [\<event>](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm)、[\<note>](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)，甚至支持[编制命名空间文档](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)。
 自定义或内部文档生成工具也可与标准标记配合使用，并支持 HTML 到 PDF 等多种输出格式。
 
 ## <a name="recommendations"></a>建议

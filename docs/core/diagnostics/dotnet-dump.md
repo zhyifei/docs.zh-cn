@@ -1,15 +1,13 @@
 ---
 title: dotnet-dump - .NET Core
 description: 安装和使用 dotnet-dump 命令行工具。
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: dcd5dd42620010c1a9b6dffd3365fc1b777c0eeb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973459"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740776"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>转储收集和分析实用工具 (`dotnet-dump`)
 
@@ -32,7 +30,7 @@ dotnet tool install -g dotnet-dump
 dotnet-dump [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 `dotnet-dump` 全局工具是在未涉及任何本机调试器（如 Linux 上的 `lldb`）的情况下收集和分析 Windows 和 Linux 转储的方法。 在 `lldb` 无法正常运行的平台（如 Alpine Linux）上，此工具非常重要。 借助 `dotnet-dump` 工具，可以运行 SOS 命令来分析崩溃和垃圾回收器 (GC)，但它不是本机调试器，因此不支持显示本机堆栈帧之类的操作。
 
@@ -160,7 +158,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
 ## <a name="using-dotnet-dump"></a>使用 `dotnet-dump`
 
-第一步是收集转储。 如果已生成核心转储，则可以跳过此步骤。 操作系统或 .NET Core 运行时的内置[转储生成功能](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/xplat-minidump-generation.md#configurationpolicy)均可以创建核心转储。
+第一步是收集转储。 如果已生成核心转储，则可以跳过此步骤。 操作系统或 .NET Core 运行时的内置[转储生成功能](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md)均可以创建核心转储。
 
 ```console
 $ dotnet-dump collect --process-id 1902

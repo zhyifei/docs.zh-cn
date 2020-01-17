@@ -5,14 +5,14 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 5b4541b527559ee05c9b97d84324e9e70599a014
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 382683f8b8500a2235a2d610a67119cf9a7fc301
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977379"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900701"
 ---
-# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>教程：使用矩阵因子分解和 ML.NET 生成影片推荐系统
+# <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>教程：使用矩阵因子分解和 ML.NET 生成影片推荐系统
 
 本教程演示如何在 .NET Core 控制台应用程序中使用 ML.NET 生成电影推荐系统。 这些步骤使用 C# 和 Visual Studio 2019。
 
@@ -36,7 +36,7 @@ ms.locfileid: "73977379"
 3. [评估模型](#evaluate-your-model)
 4. [使用模型](#use-your-model)
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 * 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
 

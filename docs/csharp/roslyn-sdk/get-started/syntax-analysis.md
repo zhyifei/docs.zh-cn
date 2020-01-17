@@ -3,16 +3,16 @@ title: 语法分析 (Roslyn API) 入门
 description: 介绍如何遍历、查询及浏览语法树。
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: e377fe10e094e958627c3503fc39b7e2d02b3d7a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d4163e8aadf577a5a5cbed225b26a0ec8390277e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931754"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347005"
 ---
 # <a name="get-started-with-syntax-analysis"></a>语法分析入门
 
-在本教程中，你将了解“语法 API”。 语法 API 提供对描述 C# 或 Visual Basic 程序的数据结构的访问。 这些数据结构具备足够的详细信息，它们可以充分表示任何规模的任何程序。 这些结构可以描述准确编译并运行的完整程序。 当你在编辑器中编写程序时，它们还可以描述这些尚不完整的程序。
+在本教程中，你将了解“语法 API”  。 语法 API 提供对描述 C# 或 Visual Basic 程序的数据结构的访问。 这些数据结构具备足够的详细信息，它们可以充分表示任何规模的任何程序。 这些结构可以描述准确编译并运行的完整程序。 当你在编辑器中编写程序时，它们还可以描述这些尚不完整的程序。
 
 要启用此丰富的表达式，组成语法 API 的数据结构和 API 必然是复杂的。 让我们看看数据结构是什么样的，从典型的“Hello World”程序的数据结构开始：
 
@@ -33,32 +33,32 @@ namespace HelloWorld
 }
 ```
 
-查看以前程序的文本。 识别熟悉的元素。 整个文本代表一个源文件，或者一个“编译单元”。 源文件的前三行是 using 指令。 剩余源包含在命名空间声明中。 命名空间声明包含一个子类声明。 类声明包含一个方法声明。
+查看以前程序的文本。 识别熟悉的元素。 整个文本代表一个源文件，或者一个“编译单元”  。 源文件的前三行是 using 指令  。 剩余源包含在命名空间声明中  。 命名空间声明包含一个子类声明  。 类声明包含一个方法声明  。
 
-语法 API 使用代表编译单元的根创建树结构。 树中的节点代表 using 指令、命名空间声明和程序中的所有其他元素。 树结构一直到最低级别：字符串“Hello World!” 是“字符串文本标记”，即一种参数的子代。 语法 API 提供对程序结构的访问。 你可以查询特定代码实践、浏览整个树以理解代码并通过修改现有树来新建树。
+语法 API 使用代表编译单元的根创建树结构。 树中的节点代表 using 指令、命名空间声明和程序中的所有其他元素。 树结构一直到最低级别：字符串“Hello World!” 是“字符串文本标记”  ，即一种参数的子代  。 语法 API 提供对程序结构的访问。 你可以查询特定代码实践、浏览整个树以理解代码并通过修改现有树来新建树。
 
 该简介概述了使用语法 API 可以访问的信息类型。 语法 API 仅仅是描述你从 C# 中熟悉的代码结构的正式 API。 完整的功能包括关于设置代码格式（包括换行符、空格和缩进）的信息。 在人工程序员或编译者编写和读取代码时，你可以使用此信息完整表示代码。 使用此结构可以在深有意义的级别上与源代码进行交互。 它不再是文本字符串，而是代表 C# 程序结构的数据。
 
-若要开始，需要安装 .NET 编译器平台 SDK：
+若要开始，需要安装 .NET 编译器平台 SDK  ：
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 ## <a name="understanding-syntax-trees"></a>了解语法树
 
-将语法 API 用于 C# 代码结构的所有分析。 语法 API 公开分析程序、语法树和用于分析并构造语法树的实用程序。 这是搜索特定语法元素的代码或读取程序代码的方式。
+将语法 API 用于 C# 代码结构的所有分析。 语法 API 公开分析程序、语法树和用于分析并构造语法树的实用程序  。 这是搜索特定语法元素的代码或读取程序代码的方式。
 
-语法树是 C# 和 Visual Basic 编译器用于理解 C# 和 Visual Basic 程序的数据结构。 语法树由生成项目时或开发人员按 F5 时所运行的分析程序生成。 语法树对语言完全保真；代码文件中的每一位信息都在树中。 将语法树写入文本会再现已分析的完全原始文本。 语法树也是不可变的；一旦创建语法树，就不能再更改。 树的使用者可以在多个线程上对树进行分析，不需要锁或其他并发度量，很清楚数据是不会更改的。 可使用 API 新建树，新建的树就是对现有树进行修改后的成果。
+语法树是 C# 和 Visual Basic 编译器用于理解 C# 和 Visual Basic 程序的数据结构。 语法树由生成项目时或开发人员按 F5 时所运行的分析程序生成。 语法树对语言完全保真；代码文件中的每一位信息都在树中。 将语法树写入文本会再现已分析的完全原始文本。 语法树也是不可变的  ；一旦创建语法树，就不能再更改。 树的使用者可以在多个线程上对树进行分析，不需要锁或其他并发度量，很清楚数据是不会更改的。 可使用 API 新建树，新建的树就是对现有树进行修改后的成果。
 
 语法树的四个主要构建基块为：
 
-* <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> 类，它的实例代表整个分析树。 <xref:Microsoft.CodeAnalysis.SyntaxTree> 是一种带有语言特定派生类的抽象类。 使用 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType>（或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>）类的分析方法对 C# 或 VB 中的文本进行分析。
+* <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> 类，它的实例代表整个分析树。 <xref:Microsoft.CodeAnalysis.SyntaxTree> 是一种带有语言特定派生类的抽象类。 使用 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType>（或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>）类的分析方法对 C# 或 Visual Basic 中的文本进行分析。
 * <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> 类，它的实例表示声明、语句、子句和表达式等语法构造。
 * <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType> 结构，它代表独立的关键词、标识符、运算符或标点。
 * 最后是 <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> 结构，它代表语法上不重要的信息，例如标记、预处理指令和注释之间的空格。
 
-琐事、标记和节点分层次地构成了树，树完全代表了 Visual Basic 或 C# 代码片段中的所有内容。 你可以使用语法可视化工具窗口查看此结构。 在 Visual Studio 中，选择“视图” > “其他窗口” > “语法可视化工具”。 例如使用语法可视化工具检查上述 C# 源文件，如下图所示：
+琐事、标记和节点分层次地构成了树，树完全代表了 Visual Basic 或 C# 代码片段中的所有内容。 你可以使用语法可视化工具窗口  查看此结构。 在 Visual Studio 中，选择“视图”   > “其他窗口”   > “语法可视化工具”  。 例如使用语法可视化工具检查上述 C# 源文件  ，如下图所示：
 
-SyntaxNode：蓝色 | SyntaxToken：绿色 | SyntaxTrivia：红色 ![C# 代码文件](media/walkthrough-csharp-syntax-figure1.png)
+**SyntaxNode**：蓝色 | **SyntaxToken**：绿色 | **SyntaxTrivia**：红色 ![C# 代码文件](media/walkthrough-csharp-syntax-figure1.png)
 
 通过在此树结构中导航，可以查找代码文件中的所有语句、表达式、标记或空格位。
 
@@ -75,18 +75,18 @@ SyntaxNode：蓝色 | SyntaxToken：绿色 | SyntaxTrivia：红色 ![C# 代码�
 > [!NOTE]
 > 语法树类型使用继承描述不同的语法元素，这些语法元素在程序中的不同位置生效。 使用这些 API 通常意味着将属性或集合成员强制转换为特定的派生类型。 在以下示例中，作业和强制转换分别是独立的语句，采用显式类型化变量。 你可以读取代码以查看 API 的返回类型以及所返回对象的运行时类型。 在实践中，更常见的是使用隐式类型化变量并靠 API 名称来描述要检查的对象的类型。
 
-新建 C#“独立代码分析工具”项目：
+新建 C#“独立代码分析工具”项目  ：
 
-* 在 Visual Studio 中，选择“文件” > “新建” > “项目”，显示新建项目对话框。
-* 在“Visual C#” > “扩展性”下，选择“独立代码分析工具”。
-* 将项目命名为 SyntaxTreeManualTraversal，然后单击“确定”。
+* 在 Visual Studio 中，选择“文件”   > “新建”   > “项目”  ，显示新建项目对话框。
+* 在“Visual C#”   > “扩展性”  下，选择“独立代码分析工具”  。
+* 将项目命名为 SyntaxTreeManualTraversal  ，然后单击“确定”。
 
 你将分析上面展示过的基本“Hello World!” 程序。
 为 Hello World 程序添加文本，作为 `Program` 类中的常量：
 
 [!code-csharp[Declare the program text](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
-下一步，添加下列代码以生成 `programText` 常量中的代码文本的语法树。  将下面这行代码添加到 `Main` 方法中：
+下一步，添加下列代码以生成 `programText` 常量中的代码文本的语法树  。  将下面这行代码添加到 `Main` 方法中：
 
 [!code-csharp[Create the tree](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
 
@@ -158,7 +158,7 @@ The body text of the Main method follows:
 
 此示例实现了检查语法树的 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>。 它收集所找到的不导入 `System` 命名空间的 `using` 指令。
 
-新建 C#“独立代码分析工具”项目，将其命名为 SyntaxWalker。
+新建 C#“独立代码分析工具”项目  ，将其命名为 SyntaxWalker  。
 
 可以在[我们的 GitHub 存储库](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart)中看到此示例的已完成代码。 GitHub 上的示例包含本教程介绍的两个项目。
 
@@ -172,7 +172,7 @@ The body text of the Main method follows:
 
 [!code-csharp[Create the Syntax tree and access the root](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
-接下来，创建一个新类。 在 Visual Studio 中，依次选择“项目” > “添加新项”。 在“添加新项”对话框中键入 UsingCollector.cs 作为文件名。
+接下来，创建一个新类。 在 Visual Studio 中，依次选择“项目”   > “添加新项”  。 在“添加新项”对话框中键入 UsingCollector.cs 作为文件名   。
 
 在 `UsingCollector` 类中实现 `using` 访问器功能。 首先，从 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 派生 `UsingCollector` 类。
 
@@ -220,4 +220,4 @@ Microsoft.CSharp
 Press any key to continue . . .
 ```
 
-祝贺你！ 你已使用语法 API 查找特定类型的 C# 语句和 C# 源代码中的声明。
+祝贺你！ 你已使用语法 API 查找特定类型的 C# 语句和 C# 源代码中的声明  。

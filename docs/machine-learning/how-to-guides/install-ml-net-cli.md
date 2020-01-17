@@ -1,18 +1,19 @@
 ---
 title: 如何安装 ML.NET 命令行接口 (CLI) 工具
-description: ML.NET 命令行接口 (CLI) 工具的概述和安装。
-ms.date: 04/16/2019
-ms.custom: ''
-ms.openlocfilehash: feeb4832b5bbd39f28ac2c6f6caa40d60b4f3aa9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+description: 了解如何安装、升级、降级和卸载 ML.NET 命令行接口 (CLI) 工具。
+ms.date: 12/18/2019
+ms.openlocfilehash: 350122f2d2d2f03484ab6e272b482adf2094495c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977081"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739967"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>如何安装 ML.NET 命令行接口 (CLI) 工具
 
-ML.NET CLI（命令行接口）是可以在任何命令提示符（Windows、Mac 或 Linux）上运行的工具，用于根据提供的训练数据集生成高质量的 ML.NET 模型和源代码。
+了解如何在 Windows、Mac 或 Linux 上安装 ML.NET CLI（命令行接口）。
+
+ML.NET CLI 使用自动化机器学习 (AutoML) 和训练数据集生成质量良好的 ML.NET 模型和源代码。
 
 > [!NOTE]
 > 本主题涉及目前处于预览状态的 ML.NET CLI 和 ML.NET AutoML，且材料可能会有所变化。
@@ -23,7 +24,7 @@ ML.NET CLI（命令行接口）是可以在任何命令提示符（Windows、Mac
 
 - （可选）[Visual Studio 2017 或 2019](https://visualstudio.microsoft.com/vs/)
 
-可以使用 Visual Studio F5 或 `dotnet run` (.NET Core CLI) 运行生成的 C# 代码项目。
+可以使用 Visual Studio 按 `F5` 键或 `dotnet run` (.NET Core CLI) 运行生成的 C# 代码项目。
 
 注意：如果在安装 [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) 后，`dotnet tool` 命令不起作用，请从 Windows 注销并再次登录。
 
@@ -134,7 +135,7 @@ ML.NET CLI 可安装在默认目录或特定位置。 默认目录为：
 
 ## <a name="see-also"></a>请参阅
 
-- [“ML.NET CLI 工具入门”教程](../tutorials/mlnet-cli.md)
-- [如何使用 ML.NET CLI 工具自动训练模型](../automate-training-with-cli.md)
+- [ML.NET CLI 概述](../automate-training-with-cli.md)
+- [教程：使用 ML.NET CLI 分析情绪](../tutorials/sentiment-analysis-cli.md)
 - [ML.NET CLI auto-train 命令参考指南](../reference/ml-net-cli-reference.md)
 - [ML.NET CLI 中的遥测](../resources/ml-net-cli-telemetry.md)

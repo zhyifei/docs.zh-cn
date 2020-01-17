@@ -1,18 +1,17 @@
 ---
-title: 如何：发布符合 .NET Framework 准则的事件 - C# 编程指南
-ms.custom: seodec18
+title: 如何发布符合 .NET Framework 准则的事件 - C# 编程指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 8cf0f57caad41da0a29b935029731260154a2dc7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ae240d0c078b5eaa690f128c037ee2471325872
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924026"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705335"
 ---
-# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>如何：发布符合 .NET Framework 准则的事件（C# 编程指南）
+# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>如何发布符合 .NET Framework 准则的事件（C# 编程指南）
 下面的过程演示了如何将遵循标准 .NET Framework 模式的事件添加到类和结构中。 .NET Framework 类库中的所有事件均基于 <xref:System.EventHandler> 委托，定义如下：  
   
 ```csharp  

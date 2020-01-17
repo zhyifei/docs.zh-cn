@@ -4,12 +4,12 @@ description: 了解如何在多类分类方案中使用 ML.NET 对 GitHub 问题
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 65b83c4396c1f80281cbb60b5e9e6e91c802472b
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 44e6234a56ae1890a7f485ffaca827945c1a33ff
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74205042"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739645"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>教程：将多类分类与 ML .NET 配合使用，对支持问题分类
 
@@ -27,7 +27,7 @@ ms.locfileid: "74205042"
 
 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) 存储库中找到本教程的源代码。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 * 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
 
@@ -104,7 +104,7 @@ ms.locfileid: "74205042"
 
 `IssuePrediction` 是在定型模型后用于预测的类。 它有一个 `string` (`Area`) 和一个 `PredictedLabel` `ColumnName` 属性。  `PredictedLabel` 在预测和评估过程中使用。 对于计算，将使用带定型数据的输入、预测值和模型。
 
-所有 ML.NET 操作都从 [MLContext](xref:Microsoft.ML.MLContext) 类开始。 初始化 `mlContext` 会创建一个新的 ML.NET 环境，可在模型创建工作流对象之间共享该环境。 从概念上讲，它与 `Entity Framework` 中的 `DBContext` 类似。
+所有 ML.NET 操作都从 [MLContext](xref:Microsoft.ML.MLContext) 类开始。 初始化 `mlContext` 创建了新的 ML.NET 环境，可以在模型创建工作流对象之间共享。 从概念上讲，它与 `Entity Framework` 中的 `DBContext` 类似。
 
 ### <a name="initialize-variables-in-main"></a>在 Main 中初始化变量
 
@@ -340,7 +340,7 @@ private static void PredictIssue()
 
 [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine)]
 
-[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) 是一个简便 API，可使用它对单个数据实例执行预测。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是线程安全型。 可以在单线程环境或原型环境中使用。 为了在生产环境中提高性能和线程安全，请使用 `PredictionEnginePool` 服务，这将创建一个在整个应用程序中使用的 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 对象的 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)。 请参阅本指南，了解如何[在 ASP.NET Core Web API 中使用 `PredictionEnginePool`](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) 是一个简便 API，可使用它对单个数据实例执行预测。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是线程安全型。 可以在单线程环境或原型环境中使用。 为了在生产环境中提高性能和线程安全，请使用 `PredictionEnginePool` 服务，这将创建一个在整个应用程序中使用的 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 对象的 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)。 请参阅本指南，了解如何[在 ASP.NET Core Web API 中使用 `PredictionEnginePool`](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)。
 
 > [!NOTE]
 > `PredictionEnginePool` 服务扩展目前处于预览状态。

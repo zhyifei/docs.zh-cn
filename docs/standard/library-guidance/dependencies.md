@@ -1,15 +1,13 @@
 ---
 title: 依赖项和.NET 库
 description: 管理 .NET 库中 NuGet 依赖项的最佳做法建议。
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 0cd00ff36ad52bc46769ca1793b9efd02db14da1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b5742bf4724c4aff4beb4ca40a543bd096528a00
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644279"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706499"
 ---
 # <a name="dependencies"></a>依赖项
 
@@ -25,13 +23,13 @@ ms.locfileid: "65644279"
 
 大多数菱形依赖关系很容易解决；但是，在某些情况下，它们可能会引发问题：
 
-1. 存在冲突的 NuGet 包引用会导致在包还原期间无法解析版本。
-2. 各版本之间的重大更改会在运行时导致 bug 和异常。
-3. 包程序集具有强名称，程序集版本会发生更改，并且在 .NET Framework 上运行应用。 程序集绑定重定向是必需的。
+1.  存在冲突的 NuGet 包引用会导致在包还原期间无法解析版本。
+2.  各版本之间的重大更改会在运行时导致 bug 和异常。
+3.  包程序集具有强名称，程序集版本会发生更改，并且在 .NET Framework 上运行应用。 程序集绑定重定向是必需的。
 
 无法确定哪些包将与你自己的包一起使用。 降低菱形依赖关系破坏库的可能性的一个好方法是将依赖的包的数量降至最低。
 
-✔️请务必查看 .NET 库中是否存在不必要的依赖项。
+ ✔️请务必查看 .NET 库中是否存在不必要的依赖项。
 
 ## <a name="nuget-dependency-version-ranges"></a>NuGet 依赖项版本范围
 
@@ -58,11 +56,11 @@ NuGet 在解析依赖关系时使用的规则是 [complex](/nuget/consume-packag
 
 ![菱形依赖关系冲突](./media/dependencies/diamond-dependency-conflict.png "菱形依赖关系冲突")
 
-❌请避免执行无最低版本的 NuGet 包引用。
+❌ 请避免执行无最低版本的 NuGet 包引用  。
 
-❌请避免使用需要确切版本的 NuGet 包引用。
+**❌** 请避免使用需要确切版本的 NuGet 包引用。
 
-❌请避免执行存在版本上限的 NuGet 包引用。
+❌ 请避免执行存在版本上限的 NuGet 包引用  。
 
 ## <a name="nuget-shared-source-packages"></a>NuGet 共享源包
 
@@ -80,19 +78,19 @@ NuGet 在解析依赖关系时使用的规则是 [complex](/nuget/consume-packag
 
 共享源包存在一些限制。 它们只能由 `PackageReference` 引用，因此排除了较旧的 `packages.config` 项目。 另外，共享源包只能由具有相同语言类型的项目使用。 由于这些限制，共享源包最好用于在开源项目中共享功能。
 
-✔️请考虑引用共享源包并用于一些小型的内部功能。
+ ✔️请考虑引用共享源包并用于一些小型的内部功能。
 
-✔️请考虑在包提供一些小型内部功能时将其用作共享源包。
+ ✔️请考虑在包提供一些小型内部功能时将其用作共享源包。
 
-✔️请务必使用 `PrivateAssets="All"` 引用共享源包。
+ ✔️请务必使用 `PrivateAssets="All"` 引用共享源包。
 
 > 此项设置将告知 NuGet：包只在开发时使用，不应作为公共依赖项公开。
 
-❌请避免在公共 API 中包含共享源包类型。
+❌ 请避免在公共 API 中包含共享源包类型  。
 
 > 共享源类型将编译到引用程序集中，并且无法跨程序集边界进行交换。 例如，一个项目中的共享源 `IRepository` 类型与另一个项目中的同一共享源 `IRepository` 是彼此独立的类型。 共享源包中的类型应具有 `internal` 可见性。
 
-**❌请避免**将共享源包发布到 NuGet.org。
+❌ 请避免将共享源包发布到 NuGet.org  。
 
 > 共享源包包含源代码，只能由具有相同语言类型的项目使用。 例如，F# 应用程序无法使用 C# 共享源包。
 >

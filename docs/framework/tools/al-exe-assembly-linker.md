@@ -7,14 +7,12 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 746abee0861b32900e757f030ab6165f297b83ed
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8e60bdaedb403237383c4655e728443747af29e6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774215"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715811"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe（程序集链接器）
 
@@ -37,7 +35,7 @@ al sources options
 
 你可以指定以下一个或多个 `sources`。
 
-| 源 | 说明 |
+| 源 | 描述 |
 | ------ | ----------- |
 |`file`[,`target`]|将 `file`（模块）的内容复制到 `target` 指定的文件名。 复制后，Al.exe 将 `target` 编译为程序集  。|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|将 `file` 指定的资源嵌入到包含程序集清单的映像中；Al.exe 将 `file` 的内容复制到可移植的可执行 (PE) 映像中  。<br /><br /> `name` 参数是资源的内部标识符。 默认情况下，资源在程序集中是公共的（对于其他程序集可见）。 指定 `private` 会使该资源对于其他程序集不可见。<br /><br /> 例如，如果 `file` 是由[资源文件生成器 (Resgen.exe)](resgen-exe-resource-file-generator.md) 创建的或在开发环境中创建的 .NET Framework 资源文件，则可使用 <xref:System.Resources> 中的成员来访问它  。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager>。 对于所有其他资源，请使用 `GetManifestResource` 中的 <xref:System.Reflection.Assembly>* 方法在运行时访问此资源。<br /><br /> 如果只将资源文件传递给 Al.exe，则输出文件为附属资源程序集  。|
@@ -45,7 +43,7 @@ al sources options
 
 可以指定以下 `options`；必须指定 **/out**。
 
-| 选项 | 说明 |
+| 选项 | 描述 |
 | ------ | ----------- |
 |**/algid:** `id`|指定一种算法来对多文件程序集中的所有文件（包含程序集清单的文件除外）进行哈希处理。 默认算法是 CALG_SHA1。 有关其他算法，请参见平台 SDK 文档中的 ALG_ID。 对于 .NET Framework 的第一版，只有 CALG_SHA1 和 CALG_MD5 是有效的。<br /><br /> 哈希值存储在程序集清单的文件表中。 在安装和加载时，会对照相应的哈希值检查程序集文件。<br /><br /> 还可以将此选项指定为任何模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyAlgorithmIdAttribute>)。|
 |**/base[address]:** `addr`|指定一个地址，运行时在用户计算机上在该地址加载 DLL。 如果指定 DLL 的基址，而不是让操作系统在进程空间内重新定位 DLL，则应用程序的加载速度会更快。|
@@ -89,7 +87,7 @@ al sources options
 
 下表列出了 Al.exe 生成的错误  。
 
-| 错误 | 说明 |
+| 错误 | 描述 |
 | ----- | ----------- |
 |al1001|内部编译器错误<br /><br /> 尝试确定 Al.exe 是否因为无法分析意外语法而失败  。 然后，请与 Microsoft 产品支持服务联系。|
 |al1002|内存不足<br /><br /> Al.exe 内存不足，已停止  。 增加可用内存量。|

@@ -1,15 +1,15 @@
 ---
-title: 如何：将对象数据写入 XML 文件 (C#)
+title: 如何将对象数据写入 XML 文件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 5da79d68bf7e1c955cb6edededb3914bd9c898e5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 475e9398f20a2a4db9fb537d0b8d44f0273e980b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590688"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346451"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-c"></a>如何：将对象数据写入 XML 文件 (C#)
+# <a name="how-to-write-object-data-to-an-xml-file-c"></a>如何将对象数据写入 XML 文件 (C#)
 本示例使用 <xref:System.Xml.Serialization.XmlSerializer> 类从某个类将对象写入 XML 文件。  
   
 ## <a name="example"></a>示例  
@@ -64,5 +64,5 @@ public class XMLWrite
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.IO.StreamWriter>
-- [如何：从 XML 文件读取对象数据 (C#)](./how-to-read-object-data-from-an-xml-file.md)
+- [如何从 XML 文件读取对象数据 (C#)](./how-to-read-object-data-from-an-xml-file.md)
 - [序列化 (C#)](./index.md)

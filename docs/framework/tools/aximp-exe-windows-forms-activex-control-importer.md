@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c879375a4b0622311c8731acc276ec79fe0217d5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a1b061b480b3e22b136a6373ddb87cf9d2233457
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044893"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715785"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe（Windows 窗体 ActiveX 控件导入程序）
 ActiveX 控件导入程序将 ActiveX 控件的 COM 类型库中的类型定义转换为 Windows 窗体控件。  
@@ -36,20 +34,20 @@ aximp [options]{file.dll | file.ocx}
   
 ## <a name="remarks"></a>备注  
   
-|参数|说明|  
+|参数|描述|  
 |--------------|-----------------|  
 |文件 |包含要转换的 ActiveX 控件的源文件的名称。 文件参数中必须具有扩展名 .dll 或 .ocx。|  
   
-|选项|说明|  
+|选项|描述|  
 |------------|-----------------|  
 |`/delaysign`|指定 Aximp.exe 使用延迟的签名对生成的控件进行签名。 必须使用 `/keycontainer:`、`/keyfile:` 或 `/publickey:` 选项指定此选项。 有关延迟签名过程的更多信息，请参见[延迟为程序集签名](../../standard/assembly/delay-sign.md)。|  
 |`/help`|显示该工具的命令语法和选项。|  
-|`/keycontainer:` containerName |使用在 containerName 指定的密钥容器中找到的公钥/私钥对，对生成的控件进行强名称签名  。|  
-|`/keyfile:` filename |使用在 filename 中找到的发行者的正式公钥/私钥对，对生成的控件进行强名称签名  。|  
+|`/keycontainer:` *containerName*|使用在 containerName 指定的密钥容器中找到的公钥/私钥对，对生成的控件进行强名称签名  。|  
+|`/keyfile:` *filename*|使用在 filename 中找到的发行者的正式公钥/私钥对，对生成的控件进行强名称签名  。|  
 |`/nologo`|取消显示 Microsoft 启动版权标志。|  
-|`/out:` filename |指定要创建的程序集的名称。|  
-|`/publickey:` filename |使用在 filename 指定的文件中找到的公钥，对生成的控件进行强名称签名  。|  
-|`/rcw:` filename |使用指定的运行时可调用包装器，而不用生成新的包装器。 你可以指定多个实例。 当前目录用于相对路径。 有关详细信息，请参阅[运行时可调用包装器](../../standard/native-interop/runtime-callable-wrapper.md)。|  
+|`/out:` *filename*|指定要创建的程序集的名称。|  
+|`/publickey:` *filename*|使用在 filename 指定的文件中找到的公钥，对生成的控件进行强名称签名  。|  
+|`/rcw:` *filename*|使用指定的运行时可调用包装器，而不用生成新的包装器。 你可以指定多个实例。 当前目录用于相对路径。 有关详细信息，请参阅[运行时可调用包装器](../../standard/native-interop/runtime-callable-wrapper.md)。|  
 |`/silent`|取消显示成功消息。|  
 |`/source`|生成 Windows 窗体包装器的 C# 源代码。|  
 |`/verbose`|指定详细模式；显示更多进度信息。|  

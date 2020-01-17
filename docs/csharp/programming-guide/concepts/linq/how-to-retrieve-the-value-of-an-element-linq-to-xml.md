@@ -1,15 +1,15 @@
 ---
-title: 如何：检索元素的值 (LINQ to XML) (C#)
+title: 如何检索元素的值 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: a7b36ea7bb602c241593da356b87d35baee8163f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 775e7282408910cc06b7d660d84cb6f80ef47949
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253351"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347420"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>如何：检索元素的值 (LINQ to XML) (C#)
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>如何检索元素的值 (LINQ to XML) (C#)
 本主题演示如何获取元素的值。 有两种主要方法可以完成此操作。 一种方法是将 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 强制转换为所需的类型。 然后，显式转换运算符将元素或属性的内容转换为指定的类型，并将其分配给变量。 此外，还可以使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 属性或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 属性。  
   
  但是，对于 C#，强制转换通常是更好的方法。 在检索可能存在也可能不存在的元素（或属性）的值时，如果将元素或属性强制转换为可以为 null 的类型，则代码会更易于编写。 本主题最后一个示例对此进行了演示。 但是，无法通过强制转换设置元素的内容，而通过 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 属性可以做到这一点。  

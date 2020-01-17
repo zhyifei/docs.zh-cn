@@ -1,6 +1,5 @@
 ---
 title: 强制转换和类型转换 - C# 编程指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - type conversion [C#]
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 33195ef77e2f51e52cd9ed69a11b12bed8d9ead1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 252d509617ab5dbc53b282bac52e356396d82fab
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969614"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711891"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>强制转换和类型转换（C# 编程指南）
 
@@ -34,7 +33,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **用户定义的转换**：用户定义的转换是使用特殊方法执行，这些方法可定义为在没有基类和派生类关系的自定义类型之间启用显式转换和隐式转换。 有关详细信息，请参阅[用户定义转换运算符](../../language-reference/operators/user-defined-conversion-operators.md)。  
   
-- **使用帮助程序类进行转换**：若要在非兼容类型（如整数和 <xref:System.DateTime?displayProperty=nameWithType> 对象，或十六进制字符串和字节数组）之间转换，可使用 <xref:System.BitConverter?displayProperty=nameWithType> 类、<xref:System.Convert?displayProperty=nameWithType> 类和内置数值类型的 `Parse` 方法（如 <xref:System.Int32.Parse%2A?displayProperty=nameWithType>）。 有关详细信息，请参阅[如何：将字节数组转换为 int](./how-to-convert-a-byte-array-to-an-int.md)、[操作说明：将字符串转换为数字](./how-to-convert-a-string-to-a-number.md)和[操作说明：在十六进制字符串与数值类型之间转换](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md)。  
+- **使用帮助程序类进行转换**：若要在非兼容类型（如整数和 <xref:System.DateTime?displayProperty=nameWithType> 对象，或十六进制字符串和字节数组）之间转换，可使用 <xref:System.BitConverter?displayProperty=nameWithType> 类、<xref:System.Convert?displayProperty=nameWithType> 类和内置数值类型的 `Parse` 方法（如 <xref:System.Int32.Parse%2A?displayProperty=nameWithType>）。 有关详细信息，请参见[如何将字节数组转换为 int](./how-to-convert-a-byte-array-to-an-int.md)、[如何将字符串转换为数字](./how-to-convert-a-string-to-a-number.md)和[如何在十六进制字符串与数值类型之间转换](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md)。
   
 ## <a name="implicit-conversions"></a>隐式转换
 
@@ -96,4 +95,4 @@ Giraffe g2 = (Giraffe) a;
 - [() 强制转换运算符](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
 - [用户定义转换运算符](../../language-reference/operators/user-defined-conversion-operators.md)
 - [通用类型转换](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
-- [如何：将字符串转换为数字](./how-to-convert-a-string-to-a-number.md)
+- [如何将字符串转换为数字](./how-to-convert-a-string-to-a-number.md)

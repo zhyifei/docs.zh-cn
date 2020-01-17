@@ -5,14 +5,14 @@ author: mgroves
 ms.technology: csharp-fundamentals
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 54eb3038594e1d4becf8a1bddd58b1e0e6464d68
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9f08e362ada032e7193d83a73fbbf05259bd2259
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039291"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694551"
 ---
-# <a name="using-attributes-in-c"></a>在 C\# 中使用属性
+# <a name="use-attributes-in-c"></a>在 C\# 中使用属性
 
 使用特性，可以声明的方式将信息与代码相关联。 特性还可以提供能够应用于各种目标的可重用元素。
 
@@ -20,9 +20,10 @@ ms.locfileid: "73039291"
 
 此教程将介绍如何将特性添加到代码中、如何创建和使用你自己的特性，以及如何使用一些内置到 .NET Core 中的特性。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core 下载](https://dotnet.microsoft.com/download)页。
-可以在 Windows、Ubuntu Linux、macOS 或 Docker 容器中运行此应用程序。 必须安装常用的代码编辑器。 在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。 不过，你可以使用习惯使用的任意工具。
+可以在 Windows、Ubuntu Linux、macOS 或 Docker 容器中运行此应用程序。
+必须安装常用的代码编辑器。 在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。 不过，你可以使用习惯使用的任意工具。
 
 ## <a name="create-the-application"></a>创建应用程序
 
@@ -41,7 +42,7 @@ ms.locfileid: "73039291"
 在 C# 中，特性是继承自 `Attribute` 基类的类。 所有继承自 `Attribute` 的类都可以用作其他代码块的一种“标记”。
 例如，有一个名为 `ObsoleteAttribute` 的特性。 它用于示意代码已过时，不得再使用。 可以将此特性应用于类（比如说，使用方括号）。
 
-[!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]  
+[!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]
 
 请注意，虽然此类的名称为 `ObsoleteAttribute`，但只需在代码中使用 `[Obsolete]`。 这是 C# 遵循一项约定。
 如果愿意，也可以使用全名 `[ObsoleteAttribute]`。
@@ -93,7 +94,7 @@ ms.locfileid: "73039291"
 * 方法
 * 模块
 * 参数
-* 属性
+* Property
 * 返回值
 * 结构
 
@@ -111,7 +112,7 @@ ms.locfileid: "73039291"
 
 若要查找并使用特性，通常需要使用[反射](../programming-guide/concepts/reflection.md)。 我不会在此教程中深入介绍反射，但基本概念就是借助反射，可以在 C# 中编写用于检查其他代码的代码。
 
-例如，可以使用反射获取类的相关信息（在代码开始处添加 `using System.Reflection;`）： 
+例如，可以使用反射获取类的相关信息（在代码开始处添加 `using System.Reflection;`）：
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 

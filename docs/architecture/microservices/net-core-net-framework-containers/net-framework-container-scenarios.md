@@ -2,12 +2,12 @@
 title: 何时为 Docker 容器选择 .NET Framework
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 何时为 Docker 容器选择 .NET Framework
 ms.date: 01/07/2019
-ms.openlocfilehash: 9e5b18e8e3482eb86c0d9dea5de56fb12f9d6256
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e60572f33bda93663080b9d2e3504f0987b8483e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966891"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899706"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>何时为 Docker 容器选择 .NET Framework
 
@@ -39,7 +39,7 @@ ms.locfileid: "73966891"
 
 - 与工作流相关的服务。 Windows Workflow Foundation (WF)、工作流服务（WCF + 单个服务中的 WF）和 WCF Data Services（以前称为 ADO.NET Data Services）仅在 .NET Framework 上可用。 尚未计划将其引入 .NET Core。
 
-除了官方 [.NET Core 路线图](https://github.com/aspnet/Home/wiki/Roadmap)中列出的技术之外，可能还会将其他功能移植到 .NET Core 中。 有关完整列表，请查看 CoreFX GitHub 站点上标记为 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) 的项目。 请注意，此列表不代表 Microsoft 承诺将这些组件引入 .NET Core，而只表示从社区搜集到的一些请求。 如果对以上所列的任何组件感兴趣，请参与 GitHub 上的讨论，发表你的看法。 如果认为丢失了某些内容，请[在 CoreFX 存储库中提出新的问题](https://github.com/dotnet/corefx/issues/new)。
+除了官方 [.NET Core 路线图](https://github.com/dotnet/aspnetcore/wiki/Roadmap)中列出的技术之外，可能还会将其他功能移植到 .NET Core 中。 有关完整列表，请查看 CoreFX GitHub 站点上标记为 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) 的项目。 请注意，此列表不代表 Microsoft 承诺将这些组件引入 .NET Core，而只表示从社区搜集到的一些请求。 如果对以上所列的任何组件感兴趣，请参与 GitHub 上的讨论，发表你的看法。 如果认为丢失了某些内容，请[在运行时存储库中提出新的问题](https://github.com/dotnet/runtime/issues/new)。
 
 即使 .NET Core 3（正在撰写本文时）将包括对许多现有 .NET Framework API 的支持，但这些 API 是面向桌面的，因此它们当前在容器中没有用处。
 

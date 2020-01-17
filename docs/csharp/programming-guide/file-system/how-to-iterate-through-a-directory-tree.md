@@ -1,19 +1,18 @@
 ---
-title: 如何：循环访问目录树 - C# 编程指南
-ms.custom: seodec18
+title: 如何循环访问目录树 - C# 编程指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: ec48b9ff5a9ebe352bf0361b9e52ee0fb48576a8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: be3931a23e7a88affcf4d0abf617ec00bd35297a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923970"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712255"
 ---
-# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>如何：循环访问目录树（C# 编程指南）
+# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>如何循环访问目录树（C# 编程指南）
 短语“循环访问目录树”的意思是访问特定根文件夹下的每个嵌套子目录中的每个文件，可以是任意深度。 不需要打开每个文件。 可以以 `string` 的形式只检索文件或子目录的名称，也可以以 <xref:System.IO.FileInfo?displayProperty=nameWithType> 或 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 对象的形式检索其他信息。  
   
 > [!NOTE]

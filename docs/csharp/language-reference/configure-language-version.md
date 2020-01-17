@@ -2,12 +2,12 @@
 title: C# 语言版本控制 - C# 指南
 description: 了解如何根据项目确定 C# 语言版本，以及可以手动调整的不同值。
 ms.date: 07/10/2019
-ms.openlocfilehash: aa4f16d91b38fec7f5d4cd0b2632e62552b64eb7
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 90624816a68de694cacd0017c6d3162f6a89431c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698808"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713878"
 ---
 # <a name="c-language-versioning"></a>C# 语言版本控制
 
@@ -38,7 +38,7 @@ ms.locfileid: "71698808"
 
 - 手动编辑[项目文件](#edit-the-project-file)。
 - 为[子目录中的多个项目](#configure-multiple-projects)设置语言版本。
-- 配置 [`-langversion` 编译器选项](compiler-options/langversion-compiler-option.md)
+- 配置 [`-langversion` 编译器选项](compiler-options/langversion-compiler-option.md)。
 
 ### <a name="edit-the-project-file"></a>编辑项目文件
 
@@ -70,7 +70,7 @@ ms.locfileid: "71698808"
 
 下表显示当前所有 C# 语言版本。 如果编译器较旧，它可能不一定了解每个值。 如果安装的是 .NET Core 3.0，则你可以访问列出的所有内容。
 
-|值|含义|
+|“值”|含义|
 |------------|-------------|
 |preview|编译器接受最新预览版中的所有有效语言语法。|
 |latest|编译器接受最新发布的编译器版本（包括次要版本）中的语法。|

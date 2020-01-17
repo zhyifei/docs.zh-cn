@@ -4,12 +4,12 @@ description: 使用包管理器在 Ubuntu 19.04 上安装 .NET Core SDK 和运�
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 69bfc3395f5cd92ed54850e5ea8b76eba7f27d83
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a229369b9252d08fe5fc83add98c694214ce5ba5
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74999049"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740610"
 ---
 # <a name="ubuntu-1904-package-manager---install-net-core"></a>Ubuntu 19.04 包管理器 - 安装 .NET Core
 
@@ -21,9 +21,9 @@ ms.locfileid: "74999049"
 
 安装 .NET 之前，需要：
 
-- 注册 Microsoft 密钥
-- 注册产品存储库
-- 安装必需的依赖项
+- 注册 Microsoft 密钥。
+- 注册产品存储库。
+- 安装必需的依赖项。
 
 每台计算机只需要执行一次此操作。
 

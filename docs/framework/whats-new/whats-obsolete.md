@@ -1,5 +1,5 @@
 ---
-title: .NET Framework 类库中过时的内容
+title: .NET Framework 中的过时功能
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-ms.openlocfilehash: 4de441ff55c3728f43742d6e467deeb47f400507
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: eda60ce9e1396805541229c9756b13cdd167dc72
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140595"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901332"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework 类库中过时的内容
 
-.NET Framework 随时间推移而变化。 每个新版本都添加了提供新功能的新类型和类型成员。 现有类型和成员也会随着时间推移而变化。 例如，某些类型变得不太重要，因为它们支持的技术由新技术所替代，而某些方法由更方便或功能更全面的方法所取代。
+.NET 随时间变化。 每个新版本都添加了提供新功能的新类型和类型成员。 现有类型和成员也会随着时间推移而变化。 例如，某些类型变得不太重要，因为它们支持的技术由新技术所替代，而某些方法由在某种程度上更高级的新方法所取代。
 
-.NET Framework 和公共语言运行时会努力支持向后兼容（允许使用一个版本的 .NET Framework 开发的应用程序在下一版本的 .NET Framework 上运行）。 这便难以仅仅删除类型或类型成员。 相反，.NET Framework 通过将类型或类型成员标记为已过时或已弃用，来指示应不再使用它。 弃用某个类型或成员涉及对它进行标记，以便开发人员知道它将消失，从而有时间来响应其删除。 但是，使用该类型或成员的现有代码会继续在新版本的 .NET Framework 中运行。
+.NET Framework 和公共语言运行时会努力支持向后兼容（允许使用一个版本的 .NET Framework 开发的应用程序在下一版本的 .NET Framework 上运行）。 这便难以仅仅删除类型或类型成员。 相反，.NET 通过将类型或类型成员标记为已过时或已弃用，来指示应不再使用它。 弃用某个类型或成员涉及对它进行标记，以便开发人员知道它将消失，从而有时间来响应其删除。 但是，使用该类型或成员的现有代码会继续在新版本的 .NET 中运行。
 
 > [!NOTE]
-> 术语 *“已过时”* 和 *“已弃用”* 在应用于 .NET Framework 的类型和成员时含义相同。
+> 术语“已过时”  和“已弃用”  在应用于 .NET 类型和成员时含义相同。
 
 ## <a name="the-obsoleteattribute-attribute"></a>ObsoleteAttribute 特性
 
@@ -37,13 +37,13 @@ ms.locfileid: "73140595"
 
 - 通过删除该类型或成员的使用（如果可能）来更改代码。
 
-     -或-
+     \- 或 -
 
 - 查看有关此技术领域的文档，以确定如何响应弃用情况。
 
 可以选择不针对更高版本的 .NET Framework 重新编译现有代码。 相反，可以指定针对其运行现有已编译代码的 .NET Framework 版本。 例如，假设你有一个名为 app1.exe 并且针对 .NET Framework 3.5 进行了编译的应用程序，但是希望针对 .NET Framework 4.5 运行该应用程序。 这需要执行以下步骤：
 
-1. 为主可执行文件创建一个配置文件并将它命名为 *appName*.exe.config，其中 *appName* 是应用程序可执行文件的名称。 对于我们示例中名为 app1.exe 的应用程序，会创建一个名为 app1.exe.config 的配置文件。
+1. 为主可执行文件创建一个配置文件并将它命名为 *appName*.exe.config，其中 *appName* 是应用程序可执行文件的名称。 对于我们示例中名为 app1.exe  的应用程序，会创建一个名为 app1.exe.config  的配置文件。
 
 2. 向该配置文件添加以下内容：
 
@@ -55,7 +55,7 @@ ms.locfileid: "73140595"
     </configuration>
     ```
 
-下表列出可以分配给 `version` 特性以针对特定 .NET Framework 版本的字符串值：
+为针对特定版本的 .NET Framework，请将下列其中一个字符串值分配给 `version` 特性：
 
 |.NET Framework 版本|`version` 字符串|
 |-|-|
@@ -69,19 +69,16 @@ ms.locfileid: "73140595"
 |1.1|v1.1.4322|
 |1.0|v1.0.3705|
 
-## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>.NET Framework 4.5 及更高版本的过时列表
+## <a name="obsolete-apis-for-net-framework-45-and-later-versions"></a>.NET Framework 4.5 及更高版本的过时 API
 
 - [过时类型](obsolete-types.md)
 - [过时成员](obsolete-members.md)
 
-## <a name="obsolete-lists-for-previous-versions"></a>以前版本的过时列表
+## <a name="obsolete-apis-for-previous-versions"></a>以前版本的过时 API
 
-- [.NET Framework 4 中的过时类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee461503(v=vs.100))
-
-- [.NET Framework 4 中的过时成员](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee471421(v=vs.100))
-
+- [.NET Framework 4 中的已过时类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee461503(v=vs.100))
+- [.NET Framework 4 中的已过时成员](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee471421(v=vs.100))
 - [.NET Framework 3.5 过时列表](https://docs.microsoft.com/previous-versions/cc835481(v=msdn.10))
-
 - [.NET Framework 2.0 过时列表](https://docs.microsoft.com/previous-versions/aa497286(v=msdn.10))
 
 ## <a name="see-also"></a>请参阅

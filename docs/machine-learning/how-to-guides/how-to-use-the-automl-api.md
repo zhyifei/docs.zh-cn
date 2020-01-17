@@ -1,14 +1,14 @@
 ---
 title: 如何使用 ML.NET 自动化 ML API
 description: ML.NET 自动化 ML API 可自动化模型生成过程并生成可供部署的模型。 了解可用于配置自动化机器学习任务的选项。
-ms.date: 11/7/2019
+ms.date: 12/18/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c1c18decc48bc1499aa55210becff305cdec4a53
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977120"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636557"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>如何使用 ML.NET 自动化机器学习 API
 
@@ -38,6 +38,7 @@ using Microsoft.ML.AutoML;
 * 二元分类
 * 多类分类
 * 回归测试
+* 建议
 
 ## <a name="create-experiment-settings"></a>创建试验设置
 
@@ -59,6 +60,12 @@ using Microsoft.ML.AutoML;
 
   ```csharp
   var experimentSettings = new RegressionExperimentSettings();
+  ```
+
+* 建议
+
+  ```csharp
+  var experimentSettings = new RecommendationExperimentSettings();
   ```
 
 ## <a name="configure-experiment-settings"></a>配置试验设置
@@ -110,12 +117,13 @@ using Microsoft.ML.AutoML;
 * [支持的二元分类算法](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
 * [支持的多类分类算法](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
 * [支持的回归算法](xref:Microsoft.ML.AutoML.RegressionTrainer)
+* [支持的推荐算法](xref:Microsoft.ML.AutoML.RecommendationTrainer)
 
 ## <a name="optimizing-metric"></a>优化指标
 
 如以上示例所示，优化指标可确定在模型训练期间要优化的指标。 可以选择的优化指标由选择的任务类型决定。 以下是可用指标的列表。
 
-|[二元分类](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [多类分类](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[回归](xref:Microsoft.ML.AutoML.RegressionMetric)
+|[二元分类](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [多类分类](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[回归和建议](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
 |准确性| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
@@ -219,7 +227,7 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 
 * [二元分类指标](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [多类分类指标](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
-* [回归指标](xref:Microsoft.ML.AutoML.RegressionMetric)
+* [回归和建议指标](xref:Microsoft.ML.AutoML.RegressionMetric)
 
 ## <a name="see-also"></a>请参阅
 

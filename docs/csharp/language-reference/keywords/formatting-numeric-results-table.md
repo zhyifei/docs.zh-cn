@@ -1,6 +1,5 @@
 ---
 title: 设置数值结果表的格式 - C# 参考
-ms.custom: seodec18
 description: 了解 C# 标准数字格式字符串
 ms.date: 09/20/2018
 helpviewer_keywords:
@@ -8,20 +7,20 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 2cba5e704787ae6368b2543c985babf2fde3b4dd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: eb93f0a4f3c66e9f7b295366a77b9fb099fc3a1e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422744"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713514"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>设置数值结果表的格式（C# 参考）
 
 下表显示了设置数值结果格式的受支持格式说明符。 最后一列中的格式化结果对应于“en-US”<xref:System.Globalization.CultureInfo>。
 
-|格式说明符|说明|示例|结果|  
+|格式说明符|描述|示例|结果|  
 |----------------------|-----------------|--------------|------------|  
-|C 或 c|货币|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
+|C 或 c|货币|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|\\$2.50<br /><br /> (\\$2.50)|  
 |D 或 d|十进制|`string s = $"{25:D5}";`|00025|  
 |E 或 e|指数|`string s = $"{250000:E2}";`|2.50E+005|  
 |F 或 f|定点|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  

@@ -1,15 +1,13 @@
 ---
 title: 重大更改和 .NET 库
 description: 有关在创建 .NET 库时浏览重大更改的最佳做法建议。
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6881b8737d9dd3fa7fa71f099fa1dc97b747033d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 8536662ae1cd9733efbcc0c6526bd69d34a13177
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104660"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740979"
 ---
 # <a name="breaking-changes"></a>重大更改
 
@@ -66,9 +64,9 @@ public class Task
 
 二进制重大更改还可能会中断整个程序集  。 使用 `AssemblyName` 重命名程序集会更改程序集的标识，如同添加、删除或更改程序集的强命名密钥一样。 程序集标识的更改会中断所有使用它的已编译代码。
 
- ❌ 请勿更改程序集名称。
+❌ 请勿更改程序集名称  。
 
- ❌请勿添加、删除或更改强命名密钥。
+ ❌ 请勿添加、删除或更改强命名密钥。
 
  ✔️ 请考虑使用抽象基类而不是接口。
 
@@ -102,7 +100,7 @@ public class Document
 
 - [面向 C# 开发人员的版本和更新注意事项](../../csharp/whats-new/version-update-considerations.md)
 - [.NET 中的 API 重大更改的权威指南](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-- [CoreFX 重大更改规则](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
+- [.NET 重大更改规则](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[上一篇](versioning.md)

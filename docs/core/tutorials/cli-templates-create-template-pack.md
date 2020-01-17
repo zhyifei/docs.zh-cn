@@ -2,15 +2,15 @@
 title: 为 dotnet new 创建模板包
 description: 了解如何创建一个 csproj 文件，该文件将为 dotnet new 命令生成模板包。
 author: thraka
-ms.date: 06/25/2019
+ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 520af5022e061236c0cfe80379679d9c7b5896b2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117399"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340174"
 ---
 # <a name="tutorial-create-a-template-pack"></a>教程：创建模板包
 
@@ -25,13 +25,13 @@ ms.locfileid: "71117399"
 > * 从 NuGet 包文件安装模板
 > * 按包 ID 卸载模板
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 * 完成本系列教程的[第 1 部分](cli-templates-create-item-template.md)和[第 2 部分](cli-templates-create-project-template.md)。
 
-  本教程使用本教程前两部分中创建的两个模板。 只要将模板作为文件夹复制到 working\templates\\  文件夹中，就可以使用不同的模板。
+  本教程使用本教程前两部分中创建的两个模板。 只要将不同的模板作为文件夹复制到 working\templates\\  文件夹中，就可以使用该模板。
 
-* 打开终端并导航到 working\templates\\  文件夹。
+* 打开终端并导航到 working\\  文件夹。
 
 ## <a name="create-a-template-pack-project"></a>创建模板包项目
 

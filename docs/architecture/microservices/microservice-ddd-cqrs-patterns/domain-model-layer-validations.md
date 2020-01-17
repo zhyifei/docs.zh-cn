@@ -2,12 +2,12 @@
 title: 在域模型层中设计验证
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解域模型验证的关键概念。
 ms.date: 10/08/2018
-ms.openlocfilehash: 1d3196d2130df33969ed231bccfe0fc6f0af2ad8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 98ccc5df84c9f6f402ecbee83b077c806d6a76fc
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674244"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899671"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>在域模型层中设计验证
 
@@ -53,7 +53,7 @@ public void SetAddress(string line1, string line2,
 
 ### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>在模型中根据数据注释使用验证属性
 
-数据注释与 Required 或 MaxLength 特性一样，可用于配置 EF Core 数据库字段属性（[表映射](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping)部分对此进行了详细说明）。自 .NET Framework 中的 EF 4.x 以来，可使用数据注释进行实体验证，但[它们不再适用于 EF Core 中的实体验证](https://github.com/aspnet/EntityFrameworkCore/issues/3680)（<xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> 方法也是如此）。
+数据注释与 Required 或 MaxLength 特性一样，可用于配置 EF Core 数据库字段属性（[表映射](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping)部分对此进行了详细说明）。自 .NET Framework 中的 EF 4.x 以来，可使用数据注释进行实体验证，但[它们不再适用于 EF Core 中的实体验证](https://github.com/dotnet/efcore/issues/3680)（<xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> 方法也是如此）。
 
 在模型绑定期间（即，在像往常一样调用控制器的操作之前），数据注释和 <xref:System.ComponentModel.DataAnnotations.IValidatableObject> 接口仍然可用于模型验证，但该模型应该是一个视图模型或 DTO，因此这属于 MVC 或 API 方面的问题，而不是域模型方面的问题。
 
@@ -61,7 +61,7 @@ public void SetAddress(string line1, string line2,
 
 你仍然可以通过重写 DbContext 的 SaveChanges 方法，在实体类中使用数据注释和 `IValidatableObject.Validate` 方法来实现自定义验证。
 
-在 [GitHub 上的此注释](https://github.com/aspnet/EntityFrameworkCore/issues/3680#issuecomment-155502539)中，可以看到用于验证 `IValidatableObject` 实体的示例实现。 该示例不执行基于属性的验证，但应该可以在同一替代机制中使用反射来轻松实现此类验证。
+在 [GitHub 上的此注释](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539)中，可以看到用于验证 `IValidatableObject` 实体的示例实现。 该示例不执行基于属性的验证，但应该可以在同一替代机制中使用反射来轻松实现此类验证。
 
 但是，从 DDD 的角度来看，最好通过在实体行为方法中使用异常，或者通过实现规范和通知模式来执行验证规则，从而使域模型保持精简。
 

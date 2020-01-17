@@ -4,14 +4,12 @@ description: 了解如何将现有 TensorFlow 模型中的知识传输到新的 
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-author: natke
-ms.author: nakersha
-ms.openlocfilehash: 952ce5c52bcd09b8c4e4e40d5ddf85835a26478d
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 5fe47c42d0cf24ebfdc33a937e1afbd11a976680
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204990"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738952"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>教程：从预先训练的 TensorFlow 模型生成 ML.NET 图像分类模型
 
@@ -37,7 +35,7 @@ TensorFlow 模型经过训练，可以将图像分为一千个类别。 ML.NET �
 
 在本教程中，在可将图像分为 3 个类别的 ML.NET 模型中使用 TensorFlow 模型的一部分，该模型经过训练，可将图像分为一千个类别。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 * 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
 * [教程资产目录 .ZIP 文件](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)

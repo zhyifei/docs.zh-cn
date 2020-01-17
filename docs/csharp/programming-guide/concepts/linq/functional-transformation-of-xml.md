@@ -2,12 +2,12 @@
 title: XML 的功能转换 (C#)
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 3c563c5dde1543c6ede53de0a9bb627f34108eaf
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 83ecd97f9319027dc50f346abf7a9888b5c23862
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594300"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336800"
 ---
 # <a name="functional-transformation-of-xml-c"></a>XML 的功能转换 (C#)
 本主题讨论用于修改 XML 文档的纯函数转换方法，并将该方法与过程方法进行比较。  
@@ -30,7 +30,7 @@ ms.locfileid: "69594300"
   
  有关 LINQ to XML 与其他 Microsoft XML 技术的更全面比较，请参见 [LINQ to XML 和其他 XML 技术](./linq-to-xml-vs-other-xml-technologies.md)。  
   
- 如果源文档具有不规则的结构，则推荐使用 XSLT 工具进行以文档为中心的转换。 但是 LINQ to XML 也可以执行以文档为中心的转换。 有关详细信息，请参阅[如何：使用批注转换 XSLT 样式中的 LINQ to XML 树 (C#)](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md)。  
+如果源文档具有不规则的结构，则推荐使用 XSLT 工具进行以文档为中心的转换。 但是 LINQ to XML 也可以执行以文档为中心的转换。 有关详细信息，请参阅[如何使用批注以 XSLT 样式转换 LINQ to XML 树 (C#)](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md)。
   
 ## <a name="see-also"></a>请参阅
 

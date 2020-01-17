@@ -1,6 +1,5 @@
 ---
 title: readonly 关键字 - C# 参考
-ms.custom: seodec18
 ms.date: 06/21/2018
 f1_keywords:
 - readonly_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 30419200cfce785d7fcbbf59650241580a1f0ce4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f9fa6f893e7f999564c4dcb43d40755547d3c793
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454958"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713113"
 ---
 # <a name="readonly-c-reference"></a>readonly（C# 参考）
 
@@ -103,7 +102,7 @@ public readonly struct Point
 
 `readonly` 修饰符对 `struct` 的大多数成员有效，包括重写在 <xref:System.Object?displayProperty=nameWithType> 中声明的方法的方法。 但存在一些限制：
 
-- 无法声明 `readonly` 静态成员。
+- 不能声明 `readonly` 静态方法或属性。
 - 无法声明 `readonly` 构造函数。
 
 可将 `readonly` 修饰符添加到属性或索引器声明中：

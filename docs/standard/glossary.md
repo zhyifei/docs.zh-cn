@@ -3,12 +3,12 @@ title: .NET 术语表
 description: 了解 .NET 文档中所用的选定术语的含义。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9bca68753a93721e48d1ff90aa7baf3a147da0ee
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929081"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708199"
 ---
 # <a name="net-glossary"></a>.NET 术语表
 
@@ -58,7 +58,7 @@ ms.locfileid: "70929081"
 
 .NET Core 基类库 (BCL)
 
-一组构成 System.\*（在一定的程度上构成 Microsoft.\*）命名空间的库。 BCL 是用于生成 ASP.NET Core 等较高级应用程序框架的较低级通用框架。 .NET Core BCL 的源代码包含在 [CoreFX 存储库](https://github.com/dotnet/corefx)中。 但大部分 .NET Core API 也可在 .NET Framework 中使用，因此可将 CoreFX 视为 .NET Framework BCL 的一个分支。
+一组构成 System.\*（在一定的程度上构成 Microsoft.\*）命名空间的库。 BCL 是用于生成 ASP.NET Core 等较高级应用程序框架的较低级通用框架。 .NET Core BCL 的源代码包含在 [.NET Core 运行时存储库](https://github.com/dotnet/runtime)中。 但大部分 .NET Core API 也可在 .NET Framework 中使用，因此可将 CoreFX 视为 .NET Framework BCL 的一个分支。
 
 ## <a name="corert"></a>CoreRT
 
@@ -66,7 +66,7 @@ ms.locfileid: "70929081"
 
 与 CLR/CoreCLR 相比，CoreRT 不是虚拟机，这意味着它不包含用于快速生成并运行代码的功能，因为它不包括 [JIT](#jit)。 但它包含 [GC](#gc) 以及运行时类型标识 (RTTI) 和反射功能。 只是由于设计有类型系统，因此并不需要元数据反射功能。 包含这些功能使它具有 [AOT](#aot) 工具链，该工具链可去除多余的元数据，更重要的是可识别应用不使用的代码。 CoreRT 正在开发中。
 
-请参阅 [.NET Native 和 CoreRT 简介](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
+请参阅 [.NET Native 和 CoreRT 简介](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)。
 
 ## <a name="cross-platform"></a>跨平台
 
@@ -269,7 +269,7 @@ NuGet 包 &mdash; 或只是一个包 &mdash; 是一个 .zip  文件，其中具�
 
 通用 Windows 平台。
 
-用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件的 .NET 实现。 它旨在统一可能想要以其为目标的不同类型的设备，包括电脑、平板电脑、平板手机、电话，甚至 Xbox。 UWP 提供许多服务，如集中式应用商店、执行环境 (AppContainer) 和一组 Windows API（用于代替 Win32 (WinRT)）。 应用可采用 C++、C#、VB.NET 和 JavaScript 编写。 使用 C# 和 VB.NET 时，.NET API 由 .NET Core 提供。
+用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件的 .NET 实现。 它旨在统一可能想要以其为目标的不同类型的设备，包括电脑、平板电脑、平板手机、电话，甚至 Xbox。 UWP 提供许多服务，如集中式应用商店、执行环境 (AppContainer) 和一组 Windows API（用于代替 Win32 (WinRT)）。 应用可采用 C++、C#、Visual Basic 和 JavaScript 编写。 使用 C# 和 Visual Basic 时，.NET API 由 .NET Core 提供。
 
 ## <a name="see-also"></a>请参阅
 

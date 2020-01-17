@@ -1,20 +1,19 @@
 ---
-title: 如何：使用 finally 执行清理代码 - C# 编程指南
-ms.custom: seodec18
+title: 如何使用 finally 执行清理代码 - C# 编程指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - try/finally blocks [C#]
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: e6adbb864b0450cdd1dbfcc56abdbad2034c5c7a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d1ba761e64053d656ad4cd004133fc455a57c6f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590243"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705270"
 ---
-# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>如何：使用 finally 执行清理代码（C# 编程指南）
+# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>如何使用 finally 执行清理代码（C# 编程指南）
 `finally` 语句的用途是确保立即进行对象（通常是容纳外部资源的对象）的必要清理（即使引发异常）。 这类清理的一个示例是在使用之后立即对 <xref:System.IO.FileStream> 调用 <xref:System.IO.Stream.Close%2A>（而不是等待公共语言运行时对对象进行垃圾回收），如下所示：  
   
  [!code-csharp[csProgGuideExceptions#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#16)]  

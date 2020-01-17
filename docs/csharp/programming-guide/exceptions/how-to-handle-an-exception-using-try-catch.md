@@ -1,20 +1,19 @@
 ---
-title: 如何：使用 try-catch 处理异常 - C# 编程指南
-ms.custom: seodec18
+title: 如何使用 try-catch 处理异常 - C# 编程指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], try/catch blocks
 - exceptions [C#], try/catch blocks
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
-ms.openlocfilehash: 5378de09962055fe7d2e100484ad69662c803e0f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: adfc53cbe4fd603ac3a6de6b9a0162320d5a2e19
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590235"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712281"
 ---
-# <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>如何：使用 try/catch 处理异常（C# 编程指南）
+# <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>如何使用 try/catch 处理异常（C# 编程指南）
 [try-catch](../../language-reference/keywords/try-catch.md) 块的用途是捕获并处理工作代码产生的异常。 某些异常可以在 `catch` 块中进行处理，问题得以解决并不再出现异常；但是，大多数情况下你唯一可做的是确保引发的异常是合理异常。  
   
 ## <a name="example"></a>示例  

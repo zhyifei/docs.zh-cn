@@ -5,12 +5,12 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 47a339de60301e01b52a4b8a3a85945624daf940
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: f11fbedad766753ee462c5f597b823493cdaf7cf
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733199"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338559"
 ---
 # <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>演练：在 Visual Studio 中嵌入托管程序集中的类型
 
@@ -22,7 +22,7 @@ ms.locfileid: "73733199"
 
 如果创建新版本的强命名运行时程序集，则不必重新编译客户端程序。 客户端程序继续使用任何可用的运行时程序集版本，使用公共接口的嵌入类型信息。
 
-本演练中的操作：
+在此演练中，将：
 
 1. 创建一个强命名程序集，使其中的公共接口包含可嵌入的类型信息。
 1. 创建一个实现公共接口的强命名运行时程序集。
@@ -53,7 +53,7 @@ ms.locfileid: "73733199"
 
 1. 在 Visual Studio 中，选择“文件” > “新建” > “项目”    。
 
-1. 在“创建新项目”对话框中，在“搜索模板”框中键入“类库”    。 从列表中选择 C# 或 VB“类库 (.NET Framework)”模板，然后选择“下一步”   。
+1. 在“创建新项目”对话框中，在“搜索模板”框中键入“类库”    。 从列表中选择 C# 或 Visual Basic“类库(.NET Framework)”模板，然后选择“下一步”   。
 
 1. 在“配置新项目”对话框的“项目名称”下，键入“TypeEquivalenceInterface”，然后选择“创建”     。 新项目创建完成。
 
@@ -120,7 +120,7 @@ ms.locfileid: "73733199"
 
 1. 在 Visual Studio 中，选择“文件” > “新建” > “项目”    。
 
-1. 在“创建新项目”对话框中，在“搜索模板”框中键入“类库”    。 从列表中选择 C# 或 VB“类库 (.NET Framework)”模板，然后选择“下一步”   。
+1. 在“创建新项目”对话框中，在“搜索模板”框中键入“类库”    。 从列表中选择 C# 或 Visual Basic“类库(.NET Framework)”模板，然后选择“下一步”   。
 
 1. 在“配置新项目”对话框的“项目名称”下，键入“TypeEquivalenceRuntime”，然后选择“创建”     。 新项目创建完成。
 
@@ -192,7 +192,7 @@ ms.locfileid: "73733199"
 
 1. 在 Visual Studio 中，选择“文件” > “新建” > “项目”    。
 
-1. 在“创建新项目”对话框中，在“搜索模板”框中键入“控制台”    。 从列表中选择 C# 或 VB“控制台应用 (.NET Framework)”模板，然后选择“下一步”   。
+1. 在“创建新项目”对话框中，在“搜索模板”框中键入“控制台”    。 从列表中选择 C# 或 Visual Basic“控制台应用(.NET Framework)”模板，然后选择“下一步”   。
 
 1. 在“配置新项目”对话框的“项目名称”下，键入“TypeEquivalenceClient”，然后选择“创建”     。 新项目创建完成。
 

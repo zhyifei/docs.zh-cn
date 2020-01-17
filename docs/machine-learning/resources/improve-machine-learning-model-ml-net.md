@@ -5,12 +5,12 @@ ms.date: 04/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc
-ms.openlocfilehash: 8bb47102ede8e135090b1381eb815dccd512e03d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 8f3b283de378a37bfe429688207ea9fb52f9ca7f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557803"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739582"
 ---
 # <a name="improve-mlnet-model-accuracy"></a>提高 ML.NET 模型准确性
 
@@ -32,7 +32,7 @@ ms.locfileid: "65557803"
 
 虽然更多的数据示例和特征可以帮助提高模型的准确性，但它们也可能会引入干扰，因为并非所有数据和特征都有意义。 因此，了解哪些特征对算法所做的决策具有最大影响非常重要。 使用排列特征重要性 (PFI) 等技术可以帮助识别这些突出的特征，这不仅有助于解释模型，还可以使用输出作为特征选择方法来减少进入训练过程的干扰特征的数量。
 
-访问以下[链接](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)，了解如何使用 PFI
+有关使用 PFI 的详细信息，请参阅[使用排列特征重要性解释模型预测](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)。
 
 ## <a name="cross-validation"></a>交叉验证
 

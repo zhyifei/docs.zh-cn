@@ -6,12 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974763"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900586"
 ---
 # <a name="garbage-collection-and-performance"></a>垃圾回收和性能
 
@@ -327,7 +327,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
   在此示例中，最大可用区域的大小大约为 24000 KB（按十六进制形式则为 3A980）。 此区域比垃圾回收器对分段所需的大小要小得多。
 
-  -或-
+  \- 或 -
 
 - 使用 **vmstat** 命令：
 
@@ -423,7 +423,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
   如果托管堆很大，则 **dumpheap** 可能需要一段时间才能完成。
 
-  你可以从输出的最后几行开始分析，因为它们列出了占用了大多数空间的对象。 例如:
+  你可以从输出的最后几行开始分析，因为它们列出了占用了大多数空间的对象。 例如：
 
   ```console
   2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo

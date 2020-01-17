@@ -1,21 +1,20 @@
 ---
 title: 编译器生成的异常 - C# 编程指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-ms.openlocfilehash: d0e0a304c8f7d77e7ba5c89b643fc5658c458558
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2a6b2c3fa053f1c555856df8098975340e78e2b2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590366"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705309"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>编译器生成的异常（C# 编程指南）
 当基本操作失败时，.NET Framework 的公共语言运行时 (CLR) 会自动引发一些异常。 这些异常及其错误条件在下表中列出。  
   
-|例外|说明|  
+|例外|描述|  
 |---------------|-----------------|  
 |<xref:System.ArithmeticException>|算术运算期间出现的异常的基类，例如 <xref:System.DivideByZeroException> 和 <xref:System.OverflowException>。|  
 |<xref:System.ArrayTypeMismatchException>|由于元素的实际类型与数组的实际类型不兼容而导致数组无法存储给定元素时引发。|  

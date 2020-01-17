@@ -1,21 +1,21 @@
 ---
-title: 如何：从文件加载 XML (C#)
+title: 如何从文件加载 XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 3ed38487-8028-4209-9872-c8dce0ed4dfe
-ms.openlocfilehash: d3e7cdbb0691fafcfcfc684f4495f4785b4ea3e7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f57d7a8375d04d1d7eda6d09aef81f42dd3e4b51
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593174"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345837"
 ---
-# <a name="how-to-load-xml-from-a-file-c"></a>如何：从文件加载 XML (C#)
+# <a name="how-to-load-xml-from-a-file-c"></a>如何从文件加载 XML (C#)
 本主题演示如何通过使用 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 方法从 URI 加载 XML。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何从文件加载 XML 文档。 下面的示例加载 books.xml 并将 XML 树输出到控制台。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md)。  
   
 ```csharp  
 XElement booksFromFile = XElement.Load(@"books.xml");  

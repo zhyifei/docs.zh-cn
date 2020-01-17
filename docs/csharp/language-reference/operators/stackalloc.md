@@ -1,23 +1,20 @@
 ---
 title: stackalloc 运算符 - C# 参考
-ms.custom: seodec18
 ms.date: 09/20/2019
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: 82fc1649bac66c0e934db13c50390b977432c34c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 5654cae622cd94c8dad7e58fbc8a99fcf48391a9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036142"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712619"
 ---
 # <a name="stackalloc-operator-c-reference"></a>stackalloc 运算符（C# 参考）
 
 `stackalloc` 运算符在堆栈上分配内存块。 该方法返回时，将自动丢弃在方法执行期间创建的堆栈中分配的内存块。 不能显式释放使用 `stackalloc` 运算符分配的内存。 堆栈中分配的内存块不受[垃圾回收](../../../standard/garbage-collection/index.md)的影响，也不必通过 [`fixed` 语句](../keywords/fixed-statement.md)固定。
-
-在表达式 `stackalloc T[E]` 中，`T` 须为[非托管类型](../builtin-types/unmanaged-types.md)，`E` 须为 `int` 类型的表达式。
 
 可以将 `stackalloc` 运算符的结果分配给以下任一类型的变量：
 
@@ -50,13 +47,15 @@ ms.locfileid: "73036142"
 
 [!code-csharp[stackalloc initialization](~/samples/csharp/language-reference/operators/StackallocOperator.cs#StackallocInit)]
 
+在表达式 `stackalloc T[E]` 中，`T` 须为[非托管类型](../builtin-types/unmanaged-types.md)，`E` 须为 [int](../builtin-types/integral-numeric-types.md) 类型的表达式。
+
 ## <a name="security"></a>安全性
 
 使用 `stackalloc` 会自动启用公共语言运行时 (CLR) 中的缓冲区溢出检测功能。 如果检测到缓冲区溢出，则将尽快终止进程，以便将执行恶意代码的可能性降到最低。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[堆栈分配](~/_csharplang/spec/unsafe-code.md#stack-allocation)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)以及[允许嵌入上下文中的 `stackalloc`](~/_csharplang/proposals/csharp-8.0/nested-stackalloc.md) 功能建议说明的[堆栈分配](~/_csharplang/spec/unsafe-code.md#stack-allocation)部分。
 
 ## <a name="see-also"></a>请参阅
 

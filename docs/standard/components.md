@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 543f05cd52e62166b8a5ee318a588dee1e8ef76a
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 4f52a89179e241dcfce5c888e03518d878009175
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838190"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348063"
 ---
 # <a name="net-architectural-components"></a>.NET 体系结构组件
 
@@ -49,7 +49,7 @@ Microsoft 积极开发和维护的主要 .NET 实现有 4 个：.NET Core、.NET
 
 ### <a name="mono"></a>Mono
 
-Mono 是主要在需要小型运行时使用的 .NET 实现。 它是在 Android、Mac、iOS、tvOS 和 watchOS 上驱动 Xamarin 应用程序的运行时，且主要针对小内存占用。 Mono 还支持使用 Unity 引擎生成的游戏。
+Mono 是主要在需要小型运行时使用的 .NET 实现。 它是在 Android、macOS、iOS、tvOS 和 watchOS 上驱动 Xamarin 应用程序的运行时，且主要针对小内存占用。 Mono 还支持使用 Unity 引擎生成的游戏。
 
 它支持所有当前已发布的 .NET Standard 版本。
 
@@ -61,7 +61,7 @@ Mono 通常与实时编译器一起使用，但它也提供在 iOS 之类的平�
 
 ### <a name="universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP)
 
-UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件的 .NET 实现。 它旨在统一可能想要以其为目标的不同类型的设备，包括电脑、平板电脑、平板手机、电话，甚至 Xbox。 UWP 提供许多服务，如集中式应用商店、执行环境 (AppContainer) 和一组 Windows API（用于代替 Win32 (WinRT)）。 应用可采用 C++、C#、VB.NET 和 JavaScript 编写。 使用 C# 和 VB.NET 时，.NET API 由 .NET Core 提供。
+UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件的 .NET 实现。 它旨在统一可能想要以其为目标的不同类型的设备，包括电脑、平板电脑、平板手机、电话，甚至 Xbox。 UWP 提供许多服务，如集中式应用商店、执行环境 (AppContainer) 和一组 Windows API（用于代替 Win32 (WinRT)）。 应用可采用 C++、C#、Visual Basic 和 JavaScript 编写。 使用 C# 和 Visual Basic 时，.NET API 由 .NET Core 提供。
 
 若要详细了解 UWP，请参阅[通用 Windows 平台简介](/windows/uwp/get-started/universal-application-platform-guide)。
 
@@ -112,4 +112,4 @@ C# 语言和公共语言基础结构 (CLI) 规范通过 [Ecma International®](h
 - [.NET Framework 指南](../framework/index.md)
 - [C# 指南](../csharp/index.yml)
 - [F# 指南](../fsharp/index.yml)
-- [VB.NET 指南](../visual-basic/index.yml)
+- [Visual Basic 指南](../visual-basic/index.yml)

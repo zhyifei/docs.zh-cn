@@ -7,16 +7,16 @@ ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 4fa0153cfa9dd52f4d80301d228dde3f16225bfd
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6a4406775056b76dfa789911b8bb14e84dbc8eea
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582026"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738651"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standard](https://github.com/dotnet/standard) 是一套正式的 .NET API 规范，有望在所有 .NET 实现中推出。 推出 .NET Standard 的背后动机是要提高 .NET 生态系统中的一致性。 [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) 持续为 .NET 实现行为建立统一性，但适用于 .NET 库实现的 .NET 基类库 (BCL) 没有类似的规范。
+[.NET Standard](https://github.com/dotnet/standard) 是一套正式的 .NET API 规范，有望在所有 .NET 实现中推出。 推出 .NET Standard 的背后动机是要提高 .NET 生态系统中的一致性。 [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) 持续为 .NET 实现行为建立统一性，但适用于 .NET 库实现的 .NET 基类库 (BCL) 没有类似的规范。
 
 .NET Standard 可实现以下重要情境：
 

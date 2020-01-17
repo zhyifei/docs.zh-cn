@@ -3,13 +3,12 @@ title: 运行选择性单元测试
 description: 如何使用筛选表达式通过 .NET Core 中的 dotnet 测试命令运行选择性单元测试。
 author: smadala
 ms.date: 03/22/2017
-ms.custom: seodec18
-ms.openlocfilehash: 6160a8b9184d031fcc06356b5b489ee24b765e84
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 57428dad2de6c2507ca2cdc42e3df9e83a1edd69
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201412"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715464"
 ---
 # <a name="running-selective-unit-tests"></a>运行选择性单元测试
 
@@ -54,9 +53,9 @@ namespace MSTestNamespace
 
 | 表达式 | 结果 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | 运行 `FullyQualifiedName` 包含 `UnitTest1` **或** `TestCategory` 是 `CategoryA` 的测试。 |
-| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | 运行 `FullyQualifiedName` 包含 `UnitTest1` **且** `TestCategory` 是 `CategoryA` 的测试。 |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | 运行 `FullyQualifiedName` 包含 `UnitTest1` **且** `TestCategory` 是 `CategoryA` **或** `Priority` 是 1 的测试。 |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | 运行 `FullyQualifiedName` 包含 `UnitTest1` 或 `TestCategory` 是 `CategoryA` 的测试  。 |
+| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | 运行 `FullyQualifiedName` 包含 `UnitTest1` 且 `TestCategory` 是 `CategoryA` 的测试  。 |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | 运行 `FullyQualifiedName` 包含 `UnitTest1` 且 `TestCategory` 是 `CategoryA` 或 `Priority` 是 1 的测试   。 |
 
 ## <a name="xunit"></a>xUnit
 
@@ -100,9 +99,9 @@ namespace XUnitNamespace
 
 | 表达式 | 结果 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | 运行 `FullyQualifiedName` 包含 `TestClass1` **或** `Category`是 `CategoryA` 的测试。 |
-| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | 运行 `FullyQualifiedName` 包含 `TestClass1` **且** `Category`是 `CategoryA` 的测试。 |
-| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | 运行 `FullyQualifiedName` 包含 `TestClass1` **且** `Category` 是 `CategoryA` **或** `Priority` 是 1 的测试。 |
+| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | 运行 `FullyQualifiedName` 包含 `TestClass1` 或 `Category` 是 `CategoryA` 的测试  。 |
+| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | 运行 `FullyQualifiedName` 包含 `TestClass1` 且 `Category` 是 `CategoryA` 的测试  。 |
+| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | 运行 `FullyQualifiedName` 包含 `TestClass1` 且 `Category` 是 `CategoryA` 或 `Priority` 是 1 的测试   。 |
 
 ## <a name="nunit"></a>NUnit
 
@@ -142,6 +141,6 @@ namespace NUnitNamespace
 
 | 表达式 | 结果 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | 运行 `FullyQualifiedName` 包含 `UnitTest1` **或** `TestCategory` 是 `CategoryA` 的测试。 |
-| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | 运行 `FullyQualifiedName` 包含 `UnitTest1` **且** `TestCategory` 是 `CategoryA` 的测试。 |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | 运行 `FullyQualifiedName` 包含 `UnitTest1` **且** `TestCategory` 是 `CategoryA` **或** `Priority` 是 1 的测试。 |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | 运行 `FullyQualifiedName` 包含 `UnitTest1` 或 `TestCategory` 是 `CategoryA` 的测试  。 |
+| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | 运行 `FullyQualifiedName` 包含 `UnitTest1` 且 `TestCategory` 是 `CategoryA` 的测试  。 |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | 运行 `FullyQualifiedName` 包含 `UnitTest1` 且 `TestCategory` 是 `CategoryA` 或 `Priority` 是 1 的测试   。 |

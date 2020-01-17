@@ -4,13 +4,13 @@ description: Microsoft XML 序列化程序生成器概述。 使用 XML 序列�
 author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
-ms.custom: mvc, seodec18
-ms.openlocfilehash: 403651978667c8cf531c3f87f1156f67206fb490
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.custom: mvc
+ms.openlocfilehash: 094dd1227033e167050ad73121b3005a592a0ae4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522819"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714524"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>在 .NET Core 上使用 Microsoft XML 序列化程序生成器
 
@@ -26,7 +26,7 @@ ms.locfileid: "72522819"
 
 正如适用于 .NET Framework 的 [Xml Serializer Generator (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md)，[Microsoft.XmlSerializer.Generator NuGet 包](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) 是适用于 .NET Core 和 .NET 标准项目的等效项。 它为程序集中包含的类型创建 XML 序列化程序集，从而提高使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化或反序列化这些类型对象时，XML 序列化的启动性能。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 完成本教程：
 
@@ -131,5 +131,5 @@ dotnet run
 ## <a name="related-resources"></a>相关资源
 
 - [XML 序列化简介](../../standard/serialization/introducing-xml-serialization.md)
-- [如何：使用 XmlSerializer (C#) 进行序列化](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [如何使用 XmlSerializer 进行序列化 (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
 - [如何：使用 XmlSerializer (Visual Basic) 进行序列化](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

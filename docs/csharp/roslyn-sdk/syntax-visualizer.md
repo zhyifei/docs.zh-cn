@@ -3,12 +3,12 @@ title: 使用 Visual Studio 中的 Roslyn 语法可视化工具浏览代码
 description: 语法可视化工具提供了可视化工具，用于浏览 .NET Compiler Platform SDK 为代码生成的模型。
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: fa3b4fdbb8d573805119e13e8aa93f156c4111f9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: c4b4414dabcb6c9749a23d726e4a69334376d988
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972019"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346966"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>使用 Visual Studio 中的 Roslyn 语法可视化工具浏览代码
 
@@ -20,7 +20,7 @@ ms.locfileid: "70972019"
 
 ## <a name="syntax-visualizer"></a>语法可视化工具
 
-使用语法可视化工具可以检查 Visual Studio IDE 当前活动的编辑器窗口中的 C# 或 VB 代码文件的语法树  。 通过单击“视图” > “其他窗口” > “语法可视化工具”，可以启动可视化工具    。  还可以使用右上角的“快速启动”工具栏  。 键入“语法”，然后应该会显示用于开启语法可视化工具的命令  。
+使用“语法可视化工具”可以检查 Visual Studio IDE 当前活动的编辑器窗口中的 C# 或 Visual Basic 代码文件的语法树  。 通过单击“视图” > “其他窗口” > “语法可视化工具”，可以启动可视化工具    。  还可以使用右上角的“快速启动”工具栏  。 键入“语法”，然后应该会显示用于开启语法可视化工具的命令  。
 
 此命令会以浮动工具窗口的形式打开语法可视化工具。 如果没有打开代码编辑器窗口，则显示为空白，如下图所示。 
 
@@ -28,14 +28,15 @@ ms.locfileid: "70972019"
 
 将此工具窗口停靠在 Visual Studio 中方便操作的位置，例如左侧。 可视化工具显示关于当前代码文件的信息。
 
-使用 File > New Project 命令新建项目   。 可以创建 VB 项目或 C# 项目。 当 Visual Studio 打开此项目的主代码文件时，可视化工具会显示它的语法树。 可以打开此 Visual Studio 实例中的任何现有 C#/VB 文件，可视化工具会显示该文件的语法树。 如果在 Visual Studio 中打开了多个代码文件，可视化工具会显示当前活动的代码文件（键盘焦点所在的代码文件）的语法树。
+使用 File > New Project 命令新建项目   。 可以创建 Visual Basic 项目或 C# 项目。 当 Visual Studio 打开此项目的主代码文件时，可视化工具会显示它的语法树。 可以打开此 Visual Studio 实例中的任何现有 C#/Visual Basic 文件，可视化工具会显示该文件的语法树。 如果在 Visual Studio 中打开了多个代码文件，可视化工具会显示当前活动的代码文件（键盘焦点所在的代码文件）的语法树。
 
 <!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![将 C# 语法树可视化](media/syntax-visualizer/visualize-csharp.png)
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
-![将 VB 语法树可视化](media/syntax-visualizer/visualize-visual-basic.png)
+![将 Visual Basic 语法树可视化](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
 
@@ -48,7 +49,7 @@ ms.locfileid: "70972019"
 在树中进行导航有两种方式：
 
 * 展开或单击树中的项。 可视化工具自动选择与代码编辑器中的项的范围对应的文本。
-* 单击或选择代码编辑器中的文本。 在前面的 VB 示例中，如果在代码编辑器中选择了包含“Module Module1”的那一行，则可视化工具会在树中自动导航至对应的 ModuleStatement 节点。 
+* 单击或选择代码编辑器中的文本。 在前面的 Visual Basic 示例中，如果在代码编辑器中选择了包含“Module Module1”的那一行，则可视化工具会在树中自动导航至对应的 ModuleStatement 节点。 
 
 可视化工具会突出显示树中的项，该项的范围与编辑器中所选择的文本的范围最匹配。
 
@@ -65,11 +66,12 @@ ms.locfileid: "70972019"
 可视化工具会以图解形式显示以所选项为根的关系子树。 针对 C# 示例中对应于 `Main()` 方法的 MethodDeclaration 节点，尝试以下步骤  。 可视化工具显示如下所示的语法关系图：
 
 ![查看 C# 语法关系图](media/syntax-visualizer/csharp-syntax-graph.png)
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
-针对前面的 VB 示例中对应于 `Main()` 方法的 SubBlock 节点，尝试相同的操作  。 可视化工具显示如下所示的语法关系图：
+针对前面的 Visual Basic 示例中对应于 `Main()` 方法的 SubBlock 节点，尝试相同的操作  。 可视化工具显示如下所示的语法关系图：
 
-![查看 VB 语法关系图](media/syntax-visualizer/visual-basic-syntax-graph.png)
+![查看 Visual Basic 语法关系图](media/syntax-visualizer/visual-basic-syntax-graph.png)
 
 ---
 
@@ -103,9 +105,9 @@ ms.locfileid: "70972019"
 
 ![一个常数值](media/syntax-visualizer/constant-value.png)
 
-在 VB 中也可以重复上述示例。 在 VB 文件中键入 `Dim x As Double = 1 + 1`。 在代码编辑器窗口中选择表达式 `1 + 1`。 可视化工具突出显示了对应的 AddExpression 节点  。 对此 AddExpression 节点重复前面所述的步骤，应该能看到相同的结果  。
+在 Visual Basic 中也可以重复上述示例。 在 Visual Basic 文件中键入 `Dim x As Double = 1 + 1`。 在代码编辑器窗口中选择表达式 `1 + 1`。 可视化工具突出显示了对应的 AddExpression 节点  。 对此 AddExpression 节点重复前面所述的步骤，应该能看到相同的结果  。
 
-检查 VB 中的更多代码。 使用以下列代码更新主 VB 文件：
+检查 Visual Basic 中的更多代码。 使用以下代码更新主 Visual Basic 文件：
 
 ```vb
 Imports C = System.Console
@@ -129,7 +131,7 @@ End Module
 
 ![查看方法声明的符号](media/syntax-visualizer/method-symbol.png)
 
-在 C# 中可以轻松重复上述 VB 示例。 为别名键入 `using C = System.Console;` 以代替 `Imports C = System.Console`。 在 C# 中完成的上述步骤会在可视化工具窗口中产生相同的结果。
+在 C# 中可以轻松重复上述 Visual Basic 示例。 为别名键入 `using C = System.Console;` 以代替 `Imports C = System.Console`。 在 C# 中完成的上述步骤会在可视化工具窗口中产生相同的结果。
 
 语义检查操作只能用于节点。 不能用于标记和琐事。 并非所有节点都有相关的语义信息可供检查。 如果某个节点不具备相关的语义信息，单击“查看 \* 符号(如果有)”会显示空白的属性网格  。
 

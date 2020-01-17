@@ -1,16 +1,19 @@
 ---
-title: 如何：使用本地化的异常消息创建用户定义的异常
+title: 如何使用本地化的异常消息创建用户定义的异常
 description: 了解如何使用本地化的异常消息创建用户定义的异常
 author: Youssef1313
+dev_langs:
+- csharp
+- vb
 ms.date: 09/13/2019
-ms.openlocfilehash: 453e332541628770932da2a6802fdcaee5211a84
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9360fccf27a0900d8380461e03baa5806ce1e0da
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141522"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708913"
 ---
-# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>如何：使用本地化的异常消息创建用户定义的异常
+# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>如何使用本地化的异常消息创建用户定义的异常
 
 在本文中，你将了解如何通过使用附属程序集的本地化异常消息创建从 <xref:System.Exception> 基类继承的用户定义异常。
 
@@ -27,6 +30,13 @@ ms.locfileid: "73141522"
     [Serializable]
     public class StudentNotFoundException : Exception { }
     ```
+    
+    ```vb
+    <Serializable>
+    Public Class StudentNotFoundException
+        Inherits Exception
+    End Class
+    ```
 
 1. 添加默认构造函数：
 
@@ -42,6 +52,24 @@ ms.locfileid: "73141522"
         public StudentNotFoundException(string message, Exception inner)
             : base(message, inner) { }
     }
+    ```
+    
+    ```vb
+    <Serializable>
+    Public Class StudentNotFoundException
+        Inherits Exception
+
+        Public Sub New()
+        End Sub
+
+        Public Sub New(message As String)
+            MyBase.New(message)
+        End Sub
+
+        Public Sub New(message As String, inner As Exception)
+            MyBase.New(message, inner)
+        End Sub
+    End Class
     ```
 
 1. 定义任何其他属性和构造函数：
@@ -68,12 +96,41 @@ ms.locfileid: "73141522"
     }
     ```
 
+    ```vb
+    <Serializable>
+    Public Class StudentNotFoundException
+        Inherits Exception
+
+        Public ReadOnly Property StudentName As String
+
+        Public Sub New()
+        End Sub
+
+        Public Sub New(message As String)
+            MyBase.New(message)
+        End Sub
+
+        Public Sub New(message As String, inner As Exception)
+            MyBase.New(message, inner)
+        End Sub
+
+        Public Sub New(message As String, studentName As String)
+            Me.New(message)
+            StudentName = studentName
+        End Sub
+    End Class
+    ```
+
 ## <a name="create-localized-exception-messages"></a>创建本地化异常消息
 
 你已创建一个自定义异常，可以使用如下所示的代码在任何位置将其抛出：
 
 ```csharp
 throw new StudentNotFoundException("The student cannot be found.", "John");
+```
+
+```vb
+Throw New StudentNotFoundException("The student cannot be found.", "John")
 ```
 
 上一行的问题是，`"The student cannot be found."` 只是一个常量字符串。 在本地化应用程序中，你需要根据用户区域性使用不同的消息。
@@ -100,8 +157,8 @@ throw new StudentNotFoundException("The student cannot be found.", "John");
     throw new StudentNotFoundException(resourceManager.GetString("StudentNotFound"), "John");
     ```
 
-  > [!NOTE]
-  > 如果项目名称为 `TestProject`，并且资源文件 ExceptionMessages.resx  位于项目的 Resources  文件夹中，则资源文件的完全限定名称为 `TestProject.Resources.ExceptionMessages`。
+    > [!NOTE]
+    > 如果项目名称为 `TestProject`，并且资源文件 ExceptionMessages.resx  位于项目的 Resources  文件夹中，则资源文件的完全限定名称为 `TestProject.Resources.ExceptionMessages`。
 
 ## <a name="see-also"></a>请参阅
 

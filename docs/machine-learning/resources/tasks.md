@@ -1,19 +1,21 @@
 ---
 title: 机器学习任务
 description: 浏览 ML.NET 中支持的不同机器学习任务和关联的任务。
-ms.custom: seodec18
-ms.date: 04/23/2019
-author: natke
-ms.openlocfilehash: d0634ce8a0559ab3cdb5bf27fc5406ab02af8df6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.date: 12/23/2019
+ms.openlocfilehash: badb096ab3e7fbd575d8594b4fbd0e2ebaf63820
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977246"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739637"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 中的机器学习任务
 
-在生成机器学习模型时，首先需要定义你希望通过数据实现的目标。 这样可以根据你的实际情况选择正确的机器学习任务。 下面介绍了可以从中选择的不同机器学习任务，以及一些常见用例。 有关选择适合你场景的任务的详细信息，请参阅[算法](../how-to-choose-an-ml-net-algorithm.md)。
+机器学习任务是根据所询问的问题和可用数据进行的预测或推理的类型。 例如，分类任务将数据分配给类别，聚类分析任务根据相似性对数据进行分组。
+
+机器学习任务依赖于数据中的模式，而不是显式编程。
+
+本文介绍了可以从 ML.NET 中选择的不同机器学习任务，以及一些常见用例。
 
 决定适合场景的任务后，则需要选择最佳算法来训练模型。 本节列出了每个任务的可用算法。
 
@@ -54,7 +56,7 @@ ms.locfileid: "73977246"
 
 这些训练程序将输出以下列：
 
-| 输出列名称 | 列名称 | 说明|
+| 输出列名称 | 列名称 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 由模型计算得出的原始分数|
 | `PredictedLabel` | <xref:System.Boolean> | 预测的标签，基于分数符号。 负分数映射到 `false`，正分数映射到 `true`。|
@@ -91,7 +93,7 @@ ms.locfileid: "73977246"
 
 该训练程序输出以下列：
 
-| 输出名称 | 类型 | 说明|
+| 输出名称 | 类型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> 的向量 | 所有类的分数。 值越高意味着落入相关类的概率越高。 如果第 i 个元素具有最大值，则预测的标签索引为 i。 请注意，i 是从零开始的索引。 |
 | `PredictedLabel` | [key](xref:Microsoft.ML.Data.KeyDataViewType) 类型 | 预测标签的索引。 如果其值为 i，则实际标签为键值输入标签类型中的第 i 个类别。 |
@@ -124,7 +126,7 @@ ms.locfileid: "73977246"
 
 此任务的训练程序输出以下列：
 
-| 输出名称 | 类型 | 说明|
+| 输出名称 | 类型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 模型预测的原始分数 |
 
@@ -148,7 +150,7 @@ ms.locfileid: "73977246"
 
 该训练程序输出以下列：
 
-| 输出名称 | 类型 | 说明|
+| 输出名称 | 类型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> 的向量 | 给定数据点到所有群集的质心的距离 |
 | `PredictedLabel` | [key](xref:Microsoft.ML.Data.KeyDataViewType) 类型 | 模型预测的最接近的群集的索引。 |
@@ -180,9 +182,10 @@ PCA 是机器学习中已建立的一种技术，由于它揭示了数据的内�
 
 该训练程序输出以下列：
 
-| 输出名称 | 类型 | 说明|
+| 输出名称 | 类型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 由异常情况检测模型计算得出的非负无界分数 |
+| `PredictedLabel` | <xref:System.Boolean> | true/false 值表示输入是否异常 (PredictedLabel=true) 或 (PredictedLabel=false) |
 
 ## <a name="ranking"></a>排名
 
@@ -203,7 +206,7 @@ PCA 是机器学习中已建立的一种技术，由于它揭示了数据的内�
 
 该训练程序输出以下列：
 
-| 输出名称 | 类型 | 说明|
+| 输出名称 | 类型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 由模型计算以确定预测的无界分数 |
 

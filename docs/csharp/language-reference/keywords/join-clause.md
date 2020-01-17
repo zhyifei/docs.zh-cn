@@ -1,6 +1,5 @@
 ---
 title: join 子句 - C# 参考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - join
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-ms.openlocfilehash: 21d4d1f9878fb7df4692fdeacd23b042680c14f1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8e52e9db241392b67818b7316767dd97bd38432a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633626"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713410"
 ---
 # <a name="join-clause-c-reference"></a>join 子句（C# 参考）
 
@@ -56,7 +55,7 @@ ms.locfileid: "65633626"
 
 ## <a name="left-outer-join"></a>左外部联接
 
-在左外部联接中，将返回左侧源序列中的所有元素，即使右侧序列中没有其匹配元素也是如此。 若要在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中执行左外部联接，请结合使用 `DefaultIfEmpty` 方法与分组联接，指定要在某个左侧元素不具有匹配元素时生成的默认右侧元素。 可以使用 `null` 作为任何引用类型的默认值，也可以指定用户定义的默认类型。 以下示例演示了用户定义的默认类型：
+在左外部联接中，将返回左侧源序列中的所有元素，即使右侧序列中没有其匹配元素也是如此。 若要在 LINQ 中执行左外部联接，请结合使用 `DefaultIfEmpty` 方法与分组联接，指定要在某个左侧元素不具有匹配元素时生成的默认右侧元素。 可以使用 `null` 作为任何引用类型的默认值，也可以指定用户定义的默认类型。 以下示例演示了用户定义的默认类型：
 
 [!code-csharp[cscsrefQueryKeywords#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#27)]
 
@@ -72,7 +71,7 @@ ms.locfileid: "65633626"
 
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>对象集合联接与关系表
 
-在[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式中，联接操作是在对象集合上执行的。 不能使用与 2 个关系表完全相同的方式“联接”对象集合。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中，仅当 2 个源序列没有通过任何关系相互联系时，才需要使用显式 `join` 子句。 使用 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 时，外键表在对象模型中表示为主表的属性。 例如，在 Northwind 数据库中，Customer 表与 Orders 表之间具有外键关系。 将这两个表映射到对象模型时，Customer 类具有一个 Orders 属性，其中包含与该 Customer 相关联的 Orders 集合。 实际上，已经为你执行了联接。
+在 LINQ 查询表达式中，联接操作是在对象集合上执行的。 不能使用与 2 个关系表完全相同的方式“联接”对象集合。 在 LINQ 中，仅当 2 个源序列没有通过任何关系相互联系时，才需要使用显式 `join` 子句。 使用 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 时，外键表在对象模型中表示为主表的属性。 例如，在 Northwind 数据库中，Customer 表与 Orders 表之间具有外键关系。 将这两个表映射到对象模型时，Customer 类具有一个 Orders 属性，其中包含与该 Customer 相关联的 Orders 集合。 实际上，已经为你执行了联接。
 
 若要详细了解如何在 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 的上下文中跨相关表执行查询，请参阅[操作说明：映射数据库关系](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。
 

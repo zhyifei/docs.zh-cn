@@ -1,17 +1,16 @@
 ---
 title: 隐式类型本地变量 - C# 编程指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: dab708bfbc33458bc2664c0d04757f0badcc2575
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 692a0f8ad933f3ba4bef50681cb3487fa0a7eea9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141604"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714836"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隐式类型本地变量（C# 编程指南）
 
@@ -49,7 +48,7 @@ ms.locfileid: "74141604"
 
 ## <a name="var-and-anonymous-types"></a>var 和匿名类型
 
-在许多情况下，使用 `var` 是可选的，只是一种语法便利。 但是，在使用匿名类型初始化变量时，如果需要在以后访问对象的属性，则必须将变量声明为 `var`。 这是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式中的常见方案。 有关详细信息，请参阅[匿名类型](anonymous-types.md)。
+在许多情况下，使用 `var` 是可选的，只是一种语法便利。 但是，在使用匿名类型初始化变量时，如果需要在以后访问对象的属性，则必须将变量声明为 `var`。 这是 LINQ 查询表达式中的常见方案。 有关详细信息，请参阅[匿名类型](anonymous-types.md)。
 
 从源代码角度来看，匿名类型没有名称。 因此，如果使用 `var` 初始化了查询变量，则访问返回对象序列中的属性的唯一方法是在 `foreach` 语句中将 `var` 用作迭代变量的类型。
 

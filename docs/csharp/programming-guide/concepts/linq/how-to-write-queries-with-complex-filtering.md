@@ -1,21 +1,21 @@
 ---
-title: 如何：编写使用复杂筛选的查询 (C#)
+title: 如何使用复杂筛选编写查询 (C#)
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: 7759a02c1b9ef0ae0c1af4bfb2600543b21cdf0f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a4918631fed21967b402c5c56cfb8a211d44c139
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253190"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337361"
 ---
-# <a name="how-to-write-queries-with-complex-filtering-c"></a>如何：编写使用复杂筛选的查询 (C#)
+# <a name="how-to-write-queries-with-complex-filtering-c"></a>如何使用复杂筛选编写查询 (C#)
 有时，您需要编写使用复杂筛选器的 LINQ to XML 查询。 例如，您可能必须查找其子元素具有特定名称和值的所有元素。 本主题提供一个编写使用复杂筛选的查询的示例。  
   
 ## <a name="example"></a>示例  
  本示例演示如何查找具有 `PurchaseOrder` 属性等于“Shipping”的子 `Address` 元素和等于“NY”的子 `Type` 元素的所有 `State` 元素。 示例在 `Where` 子句中使用嵌套查询，如果集合中有任何元素，则 `Any` 运算符返回 `true`。 有关使用基于方法的查询语法的信息，请参阅 [LINQ 中的查询语法和方法语法](./query-syntax-and-method-syntax-in-linq.md)。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
  有关 `Any` 运算符的详细信息，请参阅[限定符运算 (C#)](./quantifier-operations.md)。  
   
@@ -44,7 +44,7 @@ foreach (XElement el in purchaseOrders)
 ## <a name="example"></a>示例  
  下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[命名空间概述(LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的多个采购订单](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的多个采购订单](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrdersInNamespace.xml");  

@@ -2,12 +2,12 @@
 title: LINQ to XML 与其他 XML 技术 3
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-ms.openlocfilehash: 1cafa8b690afb753dfdb0301dc6a19f5f257e9c0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 4cade6ecbee95ee288db34246986858609697731
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591870"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635673"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML 与其他 XML 技术
 本主题将 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 与下面的 XML 技术进行比较：<xref:System.Xml.XmlReader>、XSLT、MSXML 和 XmlLite。 了解这些信息，有助于确定要使用哪种技术。  
@@ -50,7 +50,7 @@ ms.locfileid: "69591870"
   
  XmlLite 的主要优势在于它是快速的轻量 XML 分析器，在大多数方案中都是安全的。 它可能受到的威胁很少。 如果必须分析不受信任的文档，并且要预防受到拒绝服务或数据暴露等攻击，则 XmlLite 可能是很好的选择。  
   
- XmlLite 未与 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 集成。 它不会使程序员的工作效率得到提高，而工作效率提高正是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 背后的推动力量。  
+ XmlLite 未与语言集成查询 (LINQ) 集成。 它不会使程序员的工作效率得到提高，而工作效率提高正是 LINQ 背后的推动力量。  
   
 ## <a name="see-also"></a>请参阅
 

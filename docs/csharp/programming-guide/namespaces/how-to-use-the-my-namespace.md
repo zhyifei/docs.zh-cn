@@ -1,18 +1,17 @@
 ---
-title: 如何：使用 My 命名空间 - C# 编程指南
-ms.custom: seodec18
+title: 如何使用 My 命名空间 - C# 编程指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: ff00a60d92ec6abbeb257abec76ed2812867f651
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 063b46a32ced859c6c86e40c4a6b9870c3decd24
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588876"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75700414"
 ---
-# <a name="how-to-use-the-my-namespace-c-programming-guide"></a>如何：使用 My 命名空间（C# 编程指南）
+# <a name="how-to-use-the-my-namespace-c-programming-guide"></a>如何使用 My 命名空间（C# 编程指南）
 <xref:Microsoft.VisualBasic.MyServices> 命名空间（在 Visual Basic 中为 `My`）使访问多个 .NET Framework 类变得轻松直观，让你能够编写与计算机、应用程序、设置、资源等交互的代码。 虽然最初设计用于 Visual Basic，但 `MyServices` 命名空间仍可用于 C# 应用程序。  
   
  有关使用 Visual Basic 的 `MyServices` 命名空间的详细信息，请参阅[使用 My 开发](../../../visual-basic/developing-apps/development-with-my/index.md)。  

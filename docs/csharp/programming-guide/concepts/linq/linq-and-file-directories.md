@@ -2,39 +2,40 @@
 title: LINQ 和文件目录 (C#)
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
-ms.openlocfilehash: 2a91e397686b329d47380a8b03f61be2e2ec5043
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: fe503584e7d14e8d1dd281eb644f0723782feb4a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140944"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714629"
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ 和文件目录 (C#)
+
 许多文件系统操作实质上是查询，因此非常适合使用 LINQ 方法。  
   
- 请注意，本部分中的查询是非破坏性查询。 它们不用于更改原始文件或文件夹的内容。 这遵循了查询不应引起任何副作用这条规则。 通常，修改源数据的任何代码（包括执行创建/更新/删除运算符的查询）应与只查询数据的代码分开。  
+ 本部分中的查询是非破坏性查询。 它们不用于更改原始文件或文件夹的内容。 这遵循了查询不应引起任何副作用这条规则。 通常，修改源数据的任何代码（包括执行创建/更新/删除运算符的查询）应与只查询数据的代码分开。  
   
  本节包含下列主题：  
   
- [如何：查询具有指定属性或名称的文件 (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)  
+ [如何查询具有指定特性或名称的文件 (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)\
  演示如何通过检查文件的 <xref:System.IO.FileInfo> 对象的一个或多个属性来搜索文件。  
   
- [如何：按扩展名对文件进行分组 (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)  
+ [如何按扩展名对文件进行分组 (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)\
  演示如何根据文件扩展名返回 <xref:System.IO.FileInfo> 对象组。  
   
- [如何：查询一组文件夹中的总字节数 (LINQ) (C#)](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)  
+ [如何查询一组文件夹中的总字节数 (LINQ) (C#)](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)\
  演示如何返回指定目录树中所有文件的总字节数。  
   
  [如何比较两个文件夹的内容 (LINQ) (C#)](./how-to-compare-the-contents-of-two-folders-linq.md)  
  演示如何返回位于两个指定文件夹中的所有文件，以及仅位于其中一个文件夹中的所有文件。  
   
- [如何：查询最大的文件或目录树中的文件 (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)  
+ [如何查询目录树中的一个或多个最大的文件 (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)\
  演示如何返回目录树中的最大文件、最小文件或指定数量的文件。  
   
- [如何：在目录树中查询重复文件 (LINQ) (C#)](./how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
+ [如何在目录树中查询重复文件 (LINQ) (C#)](./how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)\
  演示如何对出现在指定目录树中多个位置的所有文件名进行分组。 此外，还演示如何根据自定义比较器执行更复杂的比较。  
   
- [如何：查询文件夹中文件的内容 (LINQ) (C#)](./how-to-query-the-contents-of-files-in-a-folder-lin.md)  
+ [如何查询文件夹中文件的内容 (LINQ) (C#)](./how-to-query-the-contents-of-files-in-a-folder-lin.md)\
  演示如何循环访问树中的文件夹，打开每个文件以及查询文件的内容。  
   
 ## <a name="comments"></a>注释  

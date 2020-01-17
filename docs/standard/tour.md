@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 274fea83c474d4b67aab919b604eda893d8204d7
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 0154910b91df0b2f72daebe802e4c75bbca964bb
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552867"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337583"
 ---
 # <a name="tour-of-net"></a>.NET 教程
 
@@ -27,13 +27,13 @@ ms.locfileid: "74552867"
 
 .NET 支持多种编程语言。 .NET 实现可实现[公共语言基础结构 (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)，除其他事项外，它指定与语言无关的运行时和语言互操作性。 这意味着可选择任意 .NET 语言在 .NET 上生成应用和服务。
 
-Microsoft 积极开发和支持三种 .NET 语言：C#、F# 和 Visual Basic (VB)。 
+Microsoft 积极开发和支持三种 .NET 语言：C#、F# 和 Visual Basic。 
 
 * C# 是一种简单、强大、类型安全、面向对象的语言，同时保留了 C 语言的表达力度和简洁性。 熟悉 C 和类似语言的任何人在适应 C# 的过程中几乎不会遇到什么问题。 请查看 [C# 指南](../csharp/index.yml)，了解有关 C# 的详细信息。
 
 * F# 是一种跨平台、函数优先的编程语言，它也支持传统的面向对象的编程和命令式编程。 请查看 [F# 指南](../fsharp/index.yml)，了解有关 F# 的详细信息。
 
-* Visual Basic 是一种简单易学的语言，用于生成在 .NET 上运行的各种应用。 在 .NET 语言中，VB 的语法最接近于人类的普通用语，通常使软件开发新手更容易上手。
+* Visual Basic 是一种简单易学的语言，用于生成在 .NET 上运行的各种应用。 在 .NET 语言中，Visual Basic 的语法最接近于人类的普通用语，通常使软件开发新手更容易上手。
 
 ## <a name="automatic-memory-management"></a>自动内存管理
 
@@ -47,7 +47,7 @@ Microsoft 积极开发和支持三种 .NET 语言：C#、F# 和 Visual Basic (VB
 
 垃圾回收站是一种帮助确保内存安全  的服务。 如果某个程序仅访问分配的内存，则该程序就是内存安全的。 例如，运行时可确保应用不会访问超过数组边界的未分配内存。
 
-下例中，运行时引发 `InvalidIndexException` 异常，强制实现内存安全：
+下例中，运行时引发 <xref:System.IndexOutOfRangeException> 异常，强制实现内存安全：
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
@@ -65,7 +65,7 @@ Microsoft 积极开发和支持三种 .NET 语言：C#、F# 和 Visual Basic (VB
 
 * 对于 C#，请参阅 [using 语句（C# 参考）](../csharp/language-reference/keywords/using-statement.md)主题。
 * 有关 F#，请参阅[资源管理：使用关键字](../fsharp/language-reference/resource-management-the-use-keyword.md)。
-* 对于 VB，请参阅 [Using 语句 (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) 主题。
+* 对于 Visual Basic，请参阅 [Using 语句 (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) 主题。
 
 ## <a name="type-safety"></a>类型安全
 
@@ -79,11 +79,11 @@ Microsoft 积极开发和支持三种 .NET 语言：C#、F# 和 Visual Basic (VB
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#、VB 和 F# 支持本地类型推理  。 类型推理是指编译器根据右侧的表达式推断左侧表达式的类型。 这并不意味着类型安全遭到破坏或规避。 生成的类型具有一个隐含所有信息的强类型。 在上例中，重写了 `dog` 以介绍类型推理，示例的其余部分保持不变：
+C#、Visual Basic 和 F# 支持本地*类型推理*。 类型推理是指编译器根据右侧的表达式推断左侧表达式的类型。 这并不意味着类型安全遭到破坏或规避。 生成的类型具有一个隐含所有信息的强类型。 在上例中，重写了 `dog` 以介绍类型推理，示例的其余部分保持不变：
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
-与在 C# 和 VB 中找到的方法本地类型推理相比，F# 的类型推理能力更强。 若要了解详细信息，请参阅[类型推理](../fsharp/language-reference/type-inference.md)。
+与在 C# 和 Visual Basic 中找到的方法本地类型推理相比，F# 的类型推理能力更强。 若要了解详细信息，请参阅[类型推理](../fsharp/language-reference/type-inference.md)。
 
 ## <a name="delegates-and-lambdas"></a>委托和 lambda
 
@@ -97,7 +97,7 @@ C#、VB 和 F# 支持本地类型推理  。 类型推理是指编译器根据�
 
 泛型可让程序员在设计类时引入一个*类型参数*，这样，客户端代码（类型的使用者）便可指定要使用哪个确切的类型来取代类型参数。
 
-添加泛型的目的是帮助程序员实现通用数据结构。 在泛型问世之前，要将 `List` 等类型用作泛型，必须处理 `object` 类型的元素。 这会造成各种性能和语义问题，甚至造成微妙的运行时错误。 例如，当数据结构包含整数和字符串时，如果在处理列表的成员时引发 `InvalidCastException`，则就会出现运行时错误这种非常棘手的问题。
+添加泛型的目的是帮助程序员实现通用数据结构。 在泛型问世之前，要将 `List` 等类型用作泛型，必须处理 `object` 类型的元素。 这会造成各种性能和语义问题，甚至造成微妙的运行时错误。 常见的运行时错误是数据结构同时包含整数和字符串，并且在处理列表的成员时引发 <xref:System.InvalidCastException>。
 
 以下示例显示了使用 <xref:System.Collections.Generic.List%601> 类型实例运行的基本程序：
 
@@ -113,7 +113,7 @@ C#、VB 和 F# 支持本地类型推理  。 类型推理是指编译器根据�
 
 ## <a name="language-integrated-query-linq"></a>语言集成查询 (LINQ)
 
-LINQ 是适用于 C# 和 VB 的强大功能集，可用于编写简单的声明性代码来处理数据。 数据可采用多种形式（例如，内存中对象、SQL 数据库或 XML 文档），但针对每个数据源编写的 LINQ 代码往往没有差别。
+LINQ 是适用于 C# 和 Visual Basic 的强大功能集，可用于编写简单的声明性代码来处理数据。 数据可采用多种形式（例如，内存中对象、SQL 数据库或 XML 文档），但针对每个数据源编写的 LINQ 代码往往没有差别。
 
 若要了解详细信息并查看某部分示例，请参阅 [LINQ（语言集成查询）](using-linq.md)主题。
 

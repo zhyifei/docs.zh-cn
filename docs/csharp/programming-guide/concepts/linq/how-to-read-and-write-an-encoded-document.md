@@ -1,15 +1,15 @@
 ---
-title: 如何：读取和写入编码的文档 (C#)
+title: 如何读取和写入编码的文档 (C#)
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: a611fe064401c0da80d76ef8c64cd58d9b0fb5d6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: fa28c26845a0c6019943e0532ea0692a6dffd5a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253470"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347668"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-c"></a>如何：读取和写入编码的文档 (C#)
+# <a name="how-to-read-and-write-an-encoded-document-c"></a>如何读取和写入编码的文档 (C#)
 若要创建编码的 XML 文档，请向 XML 树中添加一个 <xref:System.Xml.Linq.XDeclaration>，将编码设置为需要的代码页名称。  
   
  由 <xref:System.Text.Encoding.WebName%2A> 返回的任何值都是有效值。  

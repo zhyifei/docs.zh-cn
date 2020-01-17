@@ -1,21 +1,21 @@
 ---
-title: 如何：从 XML 生成文本文件 (C#)
+title: 如何从 XML 生成文本文件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 8e36bbda60bea207707dcf869afc059e645ec8ad
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9ca76cf955e07bdcc8e095b30f6fadc74edba739
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418308"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345920"
 ---
-# <a name="how-to-generate-text-files-from-xml-c"></a>如何：从 XML 生成文本文件 (C#)
+# <a name="how-to-generate-text-files-from-xml-c"></a>如何从 XML 生成文本文件 (C#)
 本示例演示如何从 XML 文件生成逗号分隔值 (CSV) 文件。  
   
 ## <a name="example"></a>示例  
  本示例的 C# 版本使用方法语法和 `Aggregate` 运算符通过一个表达式从 XML 文档生成 CSV 文件。 有关详细信息，请参阅 [LINQ 中的查询语法和方法语法](./query-syntax-and-method-syntax-in-linq.md)。  
   
- 本示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) 的架构定义。  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  

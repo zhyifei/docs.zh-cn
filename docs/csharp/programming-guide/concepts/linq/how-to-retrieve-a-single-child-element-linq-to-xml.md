@@ -1,15 +1,15 @@
 ---
-title: 如何：检索单个子元素 (LINQ to XML) (C#)
+title: 如何检索单个子元素 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
-ms.openlocfilehash: 5f2f675f5ce4914124f62981a2591441260b6976
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0e10cf230a73e6419f2d9c663766f9a24a0930af
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592631"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347475"
 ---
-# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>如何：检索单个子元素 (LINQ to XML) (C#)
+# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>如何检索单个子元素 (LINQ to XML) (C#)
 本主题说明如何在给定子元素名称的情况下检索单个子元素。 如果知道子元素的名称并且只有一个元素具有此名称，则只检索一个元素而不是一个集合会很方便。  
   
  <xref:System.Xml.Linq.XContainer.Element%2A> 方法返回具有指定 <xref:System.Xml.Linq.XElement> 的第一个子 <xref:System.Xml.Linq.XName>。  
@@ -21,7 +21,7 @@ ms.locfileid: "69592631"
   
  Visual Basic 示例演示如何使用数组索引器表示法来检索单个元素。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) 中所述。  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -38,7 +38,7 @@ Console.WriteLine(e);
 ## <a name="example"></a>示例  
  下面的示例演示如何对命名空间中的 XML 使用相同的代码。 有关详细信息，请参阅[命名空间概述(LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的典型采购单](./sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的典型采购单](./sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrderInNamespace.xml");  

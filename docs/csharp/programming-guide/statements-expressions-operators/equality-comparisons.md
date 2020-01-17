@@ -1,16 +1,15 @@
 ---
 title: 相等性比较 - C# 编程指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: a6876cb98a8c1b1e58e61eb650416d412467ae3d
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d8dc1fd9ba99116d4d6ec84ca6e48b4307b30dbb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552426"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75699179"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>相等性比较（C# 编程指南）
 
@@ -24,7 +23,7 @@ ms.locfileid: "74552426"
   
  在此代码中，创建了两个对象，但在赋值语句后，这两个引用所引用的是同一对象。 因此，它们具有引用相等性。 使用 <xref:System.Object.ReferenceEquals%2A> 方法确定两个引用是否引用同一对象。  
   
- 引用相等性的概念仅适用于引用类型。 由于在将值类型的实例赋给变量时将产生值的副本，因此值类型对象无法具有引用相等性。 因此，永远不会有两个未装箱结构引用内存中的同一位置。 此外，如果使用 <xref:System.Object.ReferenceEquals%2A> 比较两个值类型，结果将始终为 `false`，即使对象中包含的值都相同也是如此。 这是因为会将每个变量装箱到单独的对象实例中。 有关详细信息，请参阅[如何：测试引用相等性（标识）](./how-to-test-for-reference-equality-identity.md)。  
+引用相等性的概念仅适用于引用类型。 由于在将值类型的实例赋给变量时将产生值的副本，因此值类型对象无法具有引用相等性。 因此，永远不会有两个未装箱结构引用内存中的同一位置。 此外，如果使用 <xref:System.Object.ReferenceEquals%2A> 比较两个值类型，结果将始终为 `false`，即使对象中包含的值都相同也是如此。 这是因为会将每个变量装箱到单独的对象实例中。 有关详细信息，请参阅[如何测试引用相等性（标识）](./how-to-test-for-reference-equality-identity.md)。
 
 ## <a name="value-equality"></a>值相等性
 
@@ -43,7 +42,7 @@ if( b == a)
   
  对于大多数其他类型，针对值相等性的测试较为复杂，因为它需要用户了解类型对值相等性的定义方式。 对于具有多个字段或属性的类和结构，值相等性的定义通常指所有字段或属性都具有相同的值。 例如，如果 pointA.X 等于 pointB.X，并且 pointA.Y 等于 pointB.Y，则可以将两个 `Point` 对象定义为相等。  
   
- 但是，并不要求类型中的所有字段均相等。 只需子集相等即可。 比较不具所有权的类型时，应确保明确了解相等性对于该类型是如何定义的。 若要详细了解如何在自己的类和结构中定义值相等性，请参阅[操作说明：为类型定义值相等性](./how-to-define-value-equality-for-a-type.md)。  
+但是，并不要求类型中的所有字段均相等。 只需子集相等即可。 比较不具所有权的类型时，应确保明确了解相等性对于该类型是如何定义的。 若要详细了解如何在自己的类和结构中定义值相等性，请参阅[如何为类型定义值相等性](./how-to-define-value-equality-for-a-type.md)。
   
 ### <a name="value-equality-for-floating-point-values"></a>浮点值的值相等性
 
@@ -51,10 +50,10 @@ if( b == a)
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|说明|  
+|Title|描述|  
 |-----------|-----------------|  
-|[如何：测试引用相等性（标识）](./how-to-test-for-reference-equality-identity.md)|介绍如何确定两个变量是否具有引用相等性。|  
-|[如何：为类型定义值相等性](./how-to-define-value-equality-for-a-type.md)|介绍如何为类型提供值相等性的自定义定义。|  
+|[如何测试引用相等性（标识）](./how-to-test-for-reference-equality-identity.md)|介绍如何确定两个变量是否具有引用相等性。|  
+|[如何为类型定义值相等性](./how-to-define-value-equality-for-a-type.md)|介绍如何为类型提供值相等性的自定义定义。|  
 |[C# 编程指南](../index.md)|提供一些链接，这些链接指向重要 C# 语言功能以及通过 .NET Framework 提供给 C# 的功能的相关详细信息。|  
 |[类型](../types/index.md)|提供有关 C# 类型系统的信息以及指向附加信息的链接。|  
   

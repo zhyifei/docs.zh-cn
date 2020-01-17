@@ -1,15 +1,13 @@
 ---
 title: .NET 库的跨平台定位
 description: 有关创建跨平台 .NET 库的最佳做法建议。
-author: jamesnk
-ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 6bd310f2e4b7a9bd7bb550ed9c7da9ebabdf64ba
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 08/12/2019
+ms.openlocfilehash: 45eb67837c924558ec51381dd924abf9fd0fa315
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129709"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706512"
 ---
 # <a name="cross-platform-targeting"></a>跨平台定位
 
@@ -33,7 +31,7 @@ ms.locfileid: "53129709"
 
 > 最常规用途的库应该不需要除 .NET Standard 2.0 之外的其他 API。 所有新式平台都支持 .NET Standard 2.0，并且它是支持具有一个目标的多个平台的推荐方法。
 
- 请避免包含 `netstandard1.x` 目标。
+❌ 请避免包含 `netstandard1.x` 目标  。
 
 > .NET Standard 1.x 作为一组精细的 NuGet 包分发，它创建了一个大型的包依赖项关系图，并导致开发人员在构建时下载大量的包。 新式 .NET 平台（包括 .NET Framework 4.6.1、UWP 和 Xamarin）全部支持 .NET Standard 2.0。 如果需要专门面向较旧的平台，则只能面向 .NET Standard。
 
@@ -41,7 +39,7 @@ ms.locfileid: "53129709"
 
 > 所有支持 .NET Standard 2.0 的平台都将使用 `netstandard2.0` 目标，并从较小的包关系图中受益，而较旧的平台仍然可以正常运行并回退到使用 `netstandard1.x` 目标。
 
-如果库依赖于平台特定的应用模型，  请避免包括 .NET Standard 目标。
+如果库依赖于平台特定的应用模型，❌ 请避免包括 .NET Standard 目标  。
 
 > 例如，UWP 控件工具包库依赖的应用模型只能在 UWP 上使用。 特定于应用模型的 API 将无法在 .NET Standard 中使用。
 
@@ -51,7 +49,7 @@ ms.locfileid: "53129709"
 
 为了让使用者不必针对各个框架构建，应该尽量获取 .NET Standard 输出以及一个或多个特定于框架的输出。 通过多目标，所有程序集都打包在一个 NuGet 包中。 然后，使用者可以引用同一个包，NuGet 将选择适当的实现。 你的 .NET Standard 库充当在任何地方使用的回退库（NuGet 包提供特定于框架的实现的情况除外）。 通过多目标可以在代码中使用条件编译并调用特定于框架的 API。
 
-![具有多个程序集的 NuGet 包](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "具有多个程序集的 NuGet 包")
+![包含多个程序集的 NuGet 包](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "包含多个程序集的 NuGet 包")
 
  ✔️请在面向 .NET Standard 的基础上考虑面向 .NET 实现。
 
@@ -59,11 +57,42 @@ ms.locfileid: "53129709"
 >
 > 执行此操作时，请不要放弃对 .NET Standard 的支持。 相反，从实现引发并提供功能 API。 这样一来，你的库可以在任何地方使用，并支持运行时启动功能。
 
-如果你的源代码源代码对所有目标都相同，  请避免多目标以及面向 .NET Standard。
+```csharp
+public static class GpsLocation
+{
+    // This project uses multi-targeting to expose device-specific APIs to .NET Standard.
+    public static async Task<(double latitude, double longitude)> GetCoordinatesAsync()
+    {
+#if NET461
+        return CallDotNetFramworkApi();
+#elif WINDOWS_UWP
+        return CallUwpApi();
+#else
+        throw new PlatformNotSupportedException();
+#endif
+    }
+
+    // Allows callers to check without having to catch PlatformNotSupportedException
+    // or replicating the OS check.
+    public static bool IsSupported
+    {
+        get
+        {
+#if NET461 || WINDOWS_UWP
+            return true;
+#else
+            return false;
+#endif
+        }
+    }
+}
+```
+
+如果你的源代码源代码对所有目标都相同，❌ 请避免多目标以及面向 .NET Standard  。
 
 > .NET Standard 程序集将自动供 NuGet 使用。 面向单个 .NET 实现会增加 `*.nupkg` 大小，不会提供任何好处。
 
- ✔️请考虑在提供 `netstandard2.0` 目标时，为 `net461` 添加目标。 
+ ✔️请考虑在提供 `netstandard2.0` 目标时，为 `net461` 添加目标。
 
 > 在 .NET Framework 中使用 .NET Standard 2.0 存在一些问题，这些在 .NET Framework 4.7.2 中已得到解决。 可以为仍在使用 .NET Framework 4.6.1 - 4.7.1 的开发人员提供为 .NET Framework 4.6.1 构建的二进制文件，从而改善其体验。
 
@@ -88,11 +117,11 @@ ms.locfileid: "53129709"
 
 .NET 支持长期不受支持的 .NET Framework 的目标版本以及不再经常使用的平台。 尽管使库在尽可能多的目标上工作是有价值的，但这种情况下必须解决缺少的 API 问题，这会增加很大的开销。 考虑到某些框架的使用范围和局限性，我们认为不再值得面向这些框架。
 
- 请避免包括可移植类库 (PCL) 目标。 例如 `portable-net45+win8+wpa81+wp8`。
+❌ 请避免包括可移植类库 (PCL) 目标  。 例如 `portable-net45+win8+wpa81+wp8`。
 
 > .NET standard 是支持跨平台 .NET 库的新式方法，它可以替代 PCL。
 
- 请避免包括面向不再受支持的 .NET 平台的目标。 例如：`SL4`、`WP`。
+❌ 请避免包括面向不再受支持的 .NET 平台的目标  。 例如：`SL4`、`WP`。
 
 >[!div class="step-by-step"]
 >[上一页](get-started.md)

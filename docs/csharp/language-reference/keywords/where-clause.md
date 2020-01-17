@@ -1,6 +1,5 @@
 ---
 title: where 子句 - C# 参考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - whereclause_CSharpKeyword
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 15df6339cec9eabadf5aa4c184d7504c4e065032
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 42932809d58c739afc165676c0b90c5a23f568de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421932"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712814"
 ---
 # <a name="where-clause-c-reference"></a>where 子句（C# 参考）
 
@@ -41,7 +40,7 @@ ms.locfileid: "73421932"
 
 `where` 子句是一种筛选机制。 除了不能是第一个或最后一个子句外，它几乎可以放在查询表达式中的任何位置。 `where` 子句可以出现在 [group](group-clause.md) 子句的前面或后面，具体取决于时必须在对源元素进行分组之前还是之后来筛选源元素。
 
-如果指定的谓词对于数据源中的元素无效，则会发生编译时错误。 这是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供的强类型检查的一个优点。
+如果指定的谓词对于数据源中的元素无效，则会发生编译时错误。 这是 LINQ 提供的强类型检查的一个优点。
 
 在编译时，`where` 关键字将转换为对 <xref:System.Linq.Enumerable.Where%2A> 标准查询运算符方法的调用。
 

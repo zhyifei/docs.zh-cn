@@ -1,15 +1,15 @@
 ---
-title: 如何：使用 XSD 进行验证 (LINQ to XML) (C#)
+title: 如何使用 XSD 进行验证 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: 0e35e12efa9530fd5bbcf7a21e86ed03c1325bc4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 29830457b63f36dd401a412364060339344f35cb
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253257"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347257"
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>如何：使用 XSD 进行验证 (LINQ to XML) (C#)
+# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>如何使用 XSD 进行验证 (LINQ to XML) (C#)
 <xref:System.Xml.Schema> 命名空间包含扩展方法，这些扩展方法可以简化针对 XML 架构定义语言 (XSD) 文件验证 XML 树的过程。 有关更多信息，请参见 <xref:System.Xml.Schema.Extensions.Validate%2A> 方法文档。  
   
 ## <a name="example"></a>示例  
@@ -78,7 +78,7 @@ doc2 did not validate
 ## <a name="example"></a>示例  
  以下示例验证来自[示例 XML 文件：客户和订单 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)的 XML 文档对于[示例 XSD 文件：客户和订单](./sample-xsd-file-customers-and-orders1.md)中的架构是否有效。 然后修改源 XML 文档。 它更改第一个客户的 `CustomerID` 属性。 更改后，订单将指向不存在的客户，因此该 XML 文档不再有效。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) 的架构定义。  
   
  本示例使用下面的 XSD 架构：[示例 XSD 文件：客户和订单](./sample-xsd-file-customers-and-orders1.md).  
   

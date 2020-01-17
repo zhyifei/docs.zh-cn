@@ -15,13 +15,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.custom: seodec18
-ms.openlocfilehash: 0179c4313ebce3cf6f2ad09d527d43aeb627bf77
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 82e60b3cb5eb777d48219209550367642f78d8c3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120588"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711423"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>正则表达式中的字符转义
 正则表达式中的反斜杠 (\\) 指示以下值之一：  
@@ -36,21 +35,21 @@ ms.locfileid: "73120588"
 ## <a name="character-escapes-in-net"></a>.NET 中的字符转义  
  下表列出了 .NET 中正则表达式支持的字符转义。  
   
-|字符或序列|说明|  
+|字符或序列|描述|  
 |---------------------------|-----------------|  
-|除以下字符外的所有字符：<br /><br /> 。 $ ^ { [ ( &#124; ) * + ? \ |“字符或序列”  列中未包含的字符在正则表达式中没有特殊含义；此类字符与自身匹配。<br /><br /> “字符或序列”  列中包括的字符均为特殊的正则表达式语言元素。 若要在正则表达式中匹配这些字符，必须将其转义或纳入[正字符组](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。 例如，正则表达式 `\$\d+` 或 `[$]\d+` 匹配“$1200”。|  
+|除以下字符外的所有字符：<br /><br /> 。 $ ^ { [ ( &#124; ) * + ? \ |“字符或序列”列中未包含的字符在正则表达式中没有特殊含义；此类字符与自身匹配。<br /><br /> “字符或序列”列中包括的字符均为特殊的正则表达式语言元素。 若要在正则表达式中匹配这些字符，必须将其转义或纳入[正字符组](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。 例如，正则表达式 `\$\d+` 或 `[$]\d+` 匹配“$1200”。|  
 |`\a`|匹配响铃（警报）字符，`\u0007`。|  
-|`\b`|在 `[`character_group  `]` 字符类中，匹配退格，`\u0008`。  （请参阅[字符类](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。）在字符类之外，`\b` 是匹配字边界的定位点。 （请参阅[定位标记](../../../docs/standard/base-types/anchors-in-regular-expressions.md)）|  
+|`\b`|在 `[`character_group`]` 字符类中，匹配退格，`\u0008`。  （请参阅[字符类](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。）在字符类之外，`\b` 是匹配字边界的定位点。 （请参阅[定位标记](../../../docs/standard/base-types/anchors-in-regular-expressions.md)）|  
 |`\t`|匹配制表符，`\u0009`。|  
 |`\r`|匹配回车，`\u000D`。 请注意，`\r` 不等同于换行符，`\n`。|  
 |`\v`|匹配垂直制表符，`\u000B`。|  
 |`\f`|匹配换页，`\u000C`。|  
 |`\n`|匹配换行，`\u000A`。|  
 |`\e`|匹配转义，`\u001B`。|  
-|`\` *nnn*|匹配 ASCII 字符，其中 nnn  包含表示八进制字符代码的两位数或三位数。 例如，`\040` 表示空格字符。 如果此构造仅包含一个数字（如 `\2`）或者它对应捕获组的编号，则将它解释为向后引用。 （请参阅[向后引用构造](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。）|  
-|`\x` nn |匹配 ASCII 字符，其中 nn  是两位数的十六进制字符代码。|  
-|`\c` X |匹配 ASCII 控制字符，其中 X 是控制字符的字母。 例如，`\cC` 为 CTRL-C。|  
-|`\u` nnnn |匹配的 UTF-16 代码单元，单元值是 nnnn  十六进制。 **注意：** .NET 不支持用于指定 Unicode 的 Perl 5 字符转义。 Perl 5 字符转义采用以下格式 `\x{`####  `…}`，其中 ####  `…` 是一系列十六进制数字。 改用 `\u`nnnn  。|  
+|`\` *nnn*|匹配 ASCII 字符，其中 nnn 包含表示八进制字符代码的两位数或三位数。 例如，`\040` 表示空格字符。 如果此构造仅包含一个数字（如 `\2`）或者它对应捕获组的编号，则将它解释为向后引用。 （请参阅[向后引用构造](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。）|  
+|`\x` *nn*|匹配 ASCII 字符，其中 nn 是两位数的十六进制字符代码。|  
+|`\c` *X*|匹配 ASCII 控制字符，其中 X 是控制字符的字母。 例如，`\cC` 为 CTRL-C。|  
+|`\u` *nnnn*|匹配的 UTF-16 代码单元，单元值是 nnnn 十六进制。 **注意：**.NET 不支持用于指定 Unicode 的 Perl 5 字符转义。 Perl 5 字符转义采用以下格式 `\x{`####`…}`，其中 ####`…` 是一系列十六进制数字。 改用 `\u`nnnn。|  
 |`\`|后接字符未识别为转义字符时，将匹配此字符。 例如，`\*` 匹配星号 (*) 并等同于 `\x2A`。|  
   
 ## <a name="an-example"></a>示例  
@@ -61,7 +60,7 @@ ms.locfileid: "73120588"
   
  正则表达式 `\G(.+)[\t|\u007c](.+)\r?\n` 可以解释为下表中所示内容。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\G`|从上次匹配结束处开始匹配。|  
 |`(.+)`|一次或多次匹配任何字符。 这是第一个捕获组。|  

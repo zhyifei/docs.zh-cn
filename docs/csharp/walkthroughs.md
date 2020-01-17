@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: a997cc62b03a0d92d5ef76173981f5a9e287b13a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 11a58ddf246c77cf4372e940b184413054b10778
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204589"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634919"
 ---
 # <a name="c-walkthroughs"></a>C# 演练
 演练提供有关常见方案的分步说明，这使它们成为了解产品或特定功能部分的良好开端。  
@@ -48,7 +48,7 @@ ms.locfileid: "74204589"
  演示通常执行的部分任务，如在 `TabControl` 上添加或删除选项卡、将控件停靠在其父级，以及更改 `SplitContainer` 控件的方向。  
   
  [用 C# 编写查询 (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- 演示用于编写 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式的 C# 语言功能。  
+ 演示用于编写 LINQ 查询表达式的 C# 语言功能。  
   
  [操作数据 (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
  描述在数据库中添加、修改以及删除数据的 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 方案。  

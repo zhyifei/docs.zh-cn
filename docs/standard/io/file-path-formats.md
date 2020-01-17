@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 808c92e906a0bf6f8fdc368396d6d240573de501
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 258cf59fb8383fe131f4a0e78dac6189e1d9c91e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120779"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337673"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系统中的文件路径格式
 
@@ -30,7 +30,7 @@ ms.locfileid: "73120779"
 
 如果以上三项都存在，则为绝对路径。 如未指定卷号或驱动器号，且目录名称的开头是[目录分隔符](<xref:System.IO.Path.DirectorySeparatorChar>)，则路径属于当前驱动器根路径上的相对路径。 否则路径相对于当前目录。 下表显示了一些可能出现的目录和文件路径。
 
-|路径  |说明  |
+|路径  |描述  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | C: 盘根路径上的绝对文件路径。 |
 | `\Program Files\Custom Utilities\StringFinder.exe` | 当前驱动器根路径上的绝对路径。 |
@@ -60,7 +60,7 @@ ms.locfileid: "73120779"
 
 以下是一些 UNC 路径的示例：
 
-|路径  |说明  |
+|路径  |描述  |
 | -- | -- |
 | `\\system07\C$\` | `system07` 上 C: 盘的根目录。 |
 | `\\Server2\Share\Test\Foo.txt` | \\\\Server2\\Share 卷的测试目录中的 Foo.txt 文件。|
@@ -71,7 +71,7 @@ UNC 路径必须始终是完全限定的。 它们可以包括相对目录段（
 
 Windows 操作系统有一个指向所有资源（包括文件）的统一对象模型。 可从控制台窗口访问这些对象路径；并通过旧版 DOS 和 UNC 路径映射到的符号链接的特殊文件，将这些对象路径公开至 Win32 层。 此特殊文件夹可通过 DOS 设备路径语法（以下任一）进行访问：
 
-`\\.\C:\Test\Foo.txt`  
+`\\.\C:\Test\Foo.txt`
 `\\?\C:\Test\Foo.txt`
 
 除了通过驱动器号识别驱动器以外，还可以使用卷 GUID 来识别卷。 它采用以下形式：
@@ -93,12 +93,12 @@ DOS 设备路径由以下部分组成：
 
    设备路径说明符后的第一个 DOS 设备路径段标识了卷或驱动器。 （例如，`\\?\C:\` 和 `\\.\BootPartition\`。）
 
-   UNC 有个特定的链接，很自然地名为 `UNC`。 例如:
+   UNC 有个特定的链接，很自然地名为 `UNC`。 例如：
 
-  `\\.\UNC\Server\Share\Test\Foo.txt`  
+  `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    对于设备 UNC，服务器/共享部分构成了卷。 例如，在 `\\?\server1\e:\utilities\\filecomparer\` 中，服务器/共享部分是 server1\utilities。 使用相对目录段调用 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> 等方法时，这一点非常重要；决不可能越过卷。 
+    对于设备 UNC，服务器/共享部分构成了卷。 例如，在 `\\?\server1\e:\utilities\\filecomparer\` 中，服务器/共享部分是 server1\utilities。 使用相对目录段调用 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> 等方法时，这一点非常重要；决不可能越过卷。
 
 DOS 设备路径通过定义进行完全限定。 不允许使用相对目录段（`.` 和 `..`）。 也不会包含当前目录。
 
@@ -126,7 +126,7 @@ DOS 设备路径通过定义进行完全限定。 不允许使用相对目录段
 路径规范化的第一步就是识别路径类型。 路径归为以下几个类别之一：
 
 - 它们是设备路径；就是说，它们的开头是两个分隔符和一个问号或句点（`\\?` 或 `\\.`）。
-- 它们是 UNC 路径；就是说，它们的开头是两个分隔符，没有问号或句点。 
+- 它们是 UNC 路径；就是说，它们的开头是两个分隔符，没有问号或句点。
 - 它们是完全限定的 DOS 路径；就是说，它们的开头是驱动器号、卷分隔符和组件分隔符 (`C:\`)。
 - 它们指定旧设备（`CON`、`LPT1`）。
 - 它们相对于当前驱动器的根路径；就是说，它们的开头是单个组件分隔符 (`\`)。
@@ -137,7 +137,7 @@ DOS 设备路径通过定义进行完全限定。 不允许使用相对目录段
 
 ### <a name="handling-legacy-devices"></a>处理旧设备
 
-如果路径是旧版 DOS 设备（例如 `CON`、`COM1` 或 `LPT1`），则会转换为设备路径（方法是在其前面追加 `\\.\`）并返回。 
+如果路径是旧版 DOS 设备（例如 `CON`、`COM1` 或 `LPT1`），则会转换为设备路径（方法是在其前面追加 `\\.\`）并返回。
 
 开头为旧设备名的路径始终被 <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType> 方法解释为旧设备。 例如，`CON.TXT` 的 DOS 设备路径为 `\\.\CON`，而 `COM1.TXT\file1.txt` 的 DOS 设备路径为 `\\.\COM1`。
 
@@ -152,7 +152,7 @@ DOS 设备路径通过定义进行完全限定。 不允许使用相对目录段
 如果路径不是以分隔符开头的，则应用当前驱动器和当前目录。 例如，如果路径是 `filecompare` 且当前目录是 `C:\utilities\`，则结果为 `C:\utilities\filecompare\`。
 
 > [!IMPORTANT]
-> 相对路径在多线程应用程序（也就是大多数应用程序）中很危险，因为当前目录是分进程的设置。 任何线程都能在任何时候更改当前目录。 从 .NET Core 2.1 开始，可以调用 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> 方法，从想要据此解析绝对路径的相对路径和基础路径（当前目录）获取绝对路径。 
+> 相对路径在多线程应用程序（也就是大多数应用程序）中很危险，因为当前目录是分进程的设置。 任何线程都能在任何时候更改当前目录。 从 .NET Core 2.1 开始，可以调用 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> 方法，从想要据此解析绝对路径的相对路径和基础路径（当前目录）获取绝对路径。
 
 ### <a name="canonicalizing-separators"></a>规范化分隔符
 
@@ -160,7 +160,7 @@ DOS 设备路径通过定义进行完全限定。 不允许使用相对目录段
 
 ### <a name="evaluating-relative-components"></a>评估相对组件
 
-处理路径时，会评估所有由一个或两个句点（`.` 或 `..`）组成的组件或分段： 
+处理路径时，会评估所有由一个或两个句点（`.` 或 `..`）组成的组件或分段：
 
 - 如果是单句点，则删除当前分段，因为它表示当前目录。
 
@@ -174,9 +174,9 @@ DOS 设备路径通过定义进行完全限定。 不允许使用相对目录段
 
 - 如果某段以单个句点结尾，则删除此句点。 （单个或两个句点的段在之前的步骤中已规范化。 三个或更多句点的段未规范化，并且实际上是有效的文件/目录名。）
 
-- 如果路径的结尾不是分隔符，则删除所有尾随句点和空格 (U+0020)。 如果最后的段只是单个或两个句点，则按上述相对组件规则处理。 
+- 如果路径的结尾不是分隔符，则删除所有尾随句点和空格 (U+0020)。 如果最后的段只是单个或两个句点，则按上述相对组件规则处理。
 
-   此规则意味着可以创建以空格结尾的目录名称，方法是在空格后添加结尾分隔符。  
+   此规则意味着可以创建以空格结尾的目录名称，方法是在空格后添加结尾分隔符。
 
    > [!IMPORTANT]
    > 请勿创建以空格结尾的目录名或文件名  。 如果以空格结尾，则可能难以或者无法访问目录，并且应用程序在尝试处理这样的目录或文件时通常会操作失败。
@@ -187,7 +187,7 @@ DOS 设备路径通过定义进行完全限定。 不允许使用相对目录段
 
 为什么要跳过规范化过程？ 主要有三方面的原因：
 
-1. 为了访问那些通常无法访问但合法的路径。 例如名为 `hidden.` 的文件或目录，这是能访问它的唯一方式。 
+1. 为了访问那些通常无法访问但合法的路径。 例如名为 `hidden.` 的文件或目录，这是能访问它的唯一方式。
 
 1. 为了在已规范化的情况下通过跳过规范化过程来提升性能。
 
@@ -200,7 +200,7 @@ DOS 设备路径通过定义进行完全限定。 不允许使用相对目录段
 
 如果将开头为 `\\?\` 的路径显式地传递至 [GetFullPathName 函数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)，则依然会对它们进行规范化。
 
-请注意，可将超过 `MAX_PATH` 字符数的路径传递至 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)，前提是该路径不含 `\\?\`。 支持任意长度的路径，只要其字符串大小在 Windows 能处理的范围内。
+可将超过 `MAX_PATH` 字符数的路径传递至 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)，前提是该路径不含 `\\?\`。 支持任意长度的路径，只要其字符串大小在 Windows 能处理的范围内。
 
 ## <a name="case-and-the-windows-file-system"></a>大小写和 Windows 文件系统
 

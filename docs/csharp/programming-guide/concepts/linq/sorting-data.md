@@ -2,12 +2,12 @@
 title: 对数据排序 (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 78b263c384895b736b11cc524befa42b4a896380
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8db5ab2ead0e59b8d41d83704ff237d4493155c3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418191"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346458"
 ---
 # <a name="sorting-data-c"></a>对数据排序 (C#)
 排序操作基于一个或多个属性对序列的元素进行排序。 第一个排序条件对元素执行主要排序。 通过指定第二个排序条件，您可以对每个主要排序组内的元素进行排序。  
@@ -20,7 +20,7 @@ ms.locfileid: "73418191"
   
 ## <a name="methods"></a>方法  
   
-|方法名|说明|C# 查询表达式语法|详细信息|  
+|方法名|描述|C# 查询表达式语法|详细信息|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |OrderBy|按升序对值排序。|`orderby`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
 |OrderByDescending|按降序对值排序。|`orderby … descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
@@ -131,5 +131,5 @@ foreach (string str in query)
 - <xref:System.Linq>
 - [标准查询运算符概述 (C#)](./standard-query-operators-overview.md)
 - [orderby 子句](../../../language-reference/keywords/orderby-clause.md)
-- [如何：对 join 子句的结果进行排序](../../../linq/order-the-results-of-a-join-clause.md)
-- [如何：按任意词或字段对文本数据进行排序或筛选 (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [对 Join 子句的结果进行排序](../../../linq/order-the-results-of-a-join-clause.md)
+- [如何按任意词或字段对文本数据进行排序或筛选 (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

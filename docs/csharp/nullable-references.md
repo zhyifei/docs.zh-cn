@@ -3,12 +3,12 @@ title: 可为空引用类型
 description: 本文概述了在 C# 8.0 中添加的可为空引用类型。 你将了解该功能如何为新项目和现有项目提供针对空引用异常的安全性。
 ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: ded7234ecb746ba03ba59505b7189272886f1cbf
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: bb4c2b6951a38eeb705c7de50ef5d9645350e336
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737833"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559620"
 ---
 # <a name="nullable-reference-types"></a>可为空引用类型
 
@@ -93,7 +93,7 @@ name!.Length;
 编译器在已禁用的可为空注释上下文中使用以下规则：
 
 - 不能在已禁用的上下文中声明可为空引用。
-- 可以将所有引用变量分配为 null。
+- 可以为所有引用变量分配 null 值。
 - 取消引用引用类型的变量时不会生成警告。
 - 可能不会在禁用的上下文中使用 null 包容运算符。
 
@@ -106,7 +106,7 @@ name!.Length;
 - 任何可为空引用类型（在变量声明中的类型之后由 `?` 标记）可为 null。 静态分析确定在取消引用该值时是否已知该值不为 null。 否则，编译器会发出警告。
 - 你可以使用 null 包容运算符声明可为空引用不为 null。
 
-在已启用的可为空注释上下文中，附加到引用类型的 `?` 字符声明“可为空引用类型”  。 可将 NULL 包容运算符 `!` 附加到表达式以声明表达式不为 NULL  。
+在已启用的可为空注释上下文中，附加到引用类型的 `?` 字符声明“可为空引用类型”  。 可将 NULL 包容运算符  `!` 附加到表达式以声明表达式不为 NULL。
 
 ## <a name="nullable-warning-context"></a>可为空警告上下文
 

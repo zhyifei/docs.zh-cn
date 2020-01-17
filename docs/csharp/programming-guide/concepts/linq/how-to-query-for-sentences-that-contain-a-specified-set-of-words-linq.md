@@ -1,15 +1,15 @@
 ---
-title: 如何：查询包含一组指定词语的句子 (LINQ) (C#)
+title: 如何查询包含一组指定词语的句子 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: e478364f07c08a334692ba54ae1a95880b95519e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: efb0eb60a9695c19e16b507d29ef6994e904cff9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592769"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347697"
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>如何：查询包含一组指定词语的句子 (LINQ) (C#)
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>如何查询包含一组指定词语的句子 (LINQ) (C#)
 此示例演示如何在包含一组指定的词语的每个匹配项的文本文件中查找句子。 尽管此示例中的搜索词数组采用硬编码形式，但它也可在运行时以动态方式进行填充。 在此示例中，查询将返回包含单词“Historically,”、“data,”和“integrated”的句子。  
   
 ## <a name="example"></a>示例  

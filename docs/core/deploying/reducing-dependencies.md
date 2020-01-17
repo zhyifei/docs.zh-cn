@@ -3,13 +3,12 @@ title: 使用 project.json 减少包依赖项
 description: 创建基于 project.json 的库时减少包依赖项。
 author: cartermp
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 9d4f9d7f6e7a736b7d07062f3cd31d6f45176cb1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 48ba3ef578388fd98fe7cb830df313512d359483
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674960"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740822"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>使用 project.json 减少包依赖项
 
@@ -17,7 +16,7 @@ ms.locfileid: "57674960"
 
 ## <a name="why-its-important"></a>为什么这十分重要
 
-.NET Core 是由 NuGet 包组成的产品。  基本包为 [.NETStandard.Library 元包](https://www.nuget.org/packages/NETStandard.Library)，它是由其他包组成的 NuGet 包。  它提供保证可在多个 .NET 实现（例如，.NET Framework、.NET Core 和 Xamarin/Mono）上正常工作的包集。
+.NET Core 是由 NuGet 包组成的产品。  基本包为 [.NETStandard.Library 元包](https://www.nuget.org/packages/NETStandard.Library)，它是由其他包组成的 NuGet 包。 它提供保证可在多个 .NET 实现（例如，.NET Framework、.NET Core 和 Xamarin/Mono）上正常工作的包集。
 
 但是，很有可能库将不会使用它所包含的每个包。  当创作库并通过 NuGet 进行分发时，最佳做法是将依赖项“修剪”为仅实际使用的包。  这会使 NuGet 包的总体内存占用变小。
 
@@ -34,12 +33,12 @@ ms.locfileid: "57674960"
 
 可以通过下面其中一种方式查找不需要的包：
 
-1. 试用和错误。  这包括删除包、还原以及查看库是否仍在编译，并重复此过程。
-2. 使用如 [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) 或 [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) 等工具快速浏览引用，以查看代码实际使用的内容。  然后，可以删除与正在使用的类型不相对应的包。
+1. 试用和错误。 这包括删除包、还原以及查看库是否仍在编译，并重复此过程。
+2. 使用如 [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) 或 [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) 等工具快速浏览引用，以查看代码实际使用的内容。 然后，可以删除与正在使用的类型不相对应的包。
 
 ## <a name="example"></a>示例
 
-假设编写了一个为泛型集合类型提供其他功能的库。  此类库需要依赖于如 `System.Collections` 的包，但可能根本不会依赖于如 `System.Net.Http` 的包。  因此，将包依赖项修剪为只剩该库所需的依赖项是个好办法！
+假设编写了一个为泛型集合类型提供其他功能的库。 此类库需要依赖于如 `System.Collections` 的包，但可能根本不会依赖于如 `System.Net.Http` 的包。 因此，将包依赖项修剪为只剩该库所需的依赖项是个好办法！
 
 若要修剪此库，请从 `project.json` 文件开始，然后将引用添加到 `NETStandard.Library` 版本 `1.6.0`。
 

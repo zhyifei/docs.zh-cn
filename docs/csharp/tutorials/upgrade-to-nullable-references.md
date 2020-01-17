@@ -1,15 +1,15 @@
 ---
-title: 使用可为空引用类型进行设计
-description: 本高级教程介绍了可为空引用类型。 你将学习在引用值可能为 NULL 时表达你的设计意图，并在引用值不能为 NULL 时让编译器强制执行。
+title: 升级为可为 null 的引用类型
+description: 本高级教程演示如何使用可为 null 的引用类型迁移现有代码。
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969350"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740462"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教程：使用可为空引用类型迁移现有代码
 
@@ -24,7 +24,7 @@ C# 8 引入了  可为空引用类型，它们以与可为空值类型补充值�
 > - 管理可为空启用上下文和可为空禁用上下文之间的接口。
 > - 控制可为空的批注上下文。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 需要将计算机设置为运行 .NET Core，包括 C# 8.0 编译器。 自 [Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或 [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) 起，开始随附 C# 8 编译器。
 
@@ -167,4 +167,4 @@ public class NewsStoryViewModel
 
 已经修复了在初始测试编译中标识的警告，因此现在可以为两个项目启用可为空注释上下文。 重新生成项目；编译器不会报告任何警告。 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished) GitHub 存储库中获取已完成项目的代码。
 
-支持可为空引用类型的新功能可以帮助你发现和修复代码中处理 `null` 值的方式中的潜在错误。 启用可为空注释上下文可以表达设计意图：某些变量永远不应为 Null，其他变量可以包含 Null 值。 借助这些功能，可以更轻松地声明设计意图。 同样，可为空警告上下文指示编译器在违背该意图时发出警告。 这些警告指导你进行更新，使代码更具弹性，并减少在执行期间引发 `NullReferenceException` 的可能性。 可以控制这些上下文的范围，以便专注于要迁移的代码的本地区域，同时保证其余代码库不受影响。 实际上，可以将此迁移任务作为类的常规维护的一部分。 本教程演示了迁移应用程序以使用可为空引用类型的过程。 可以通过检查 PR [Jon Skeet](https://github.com/jskeet) 来浏览此过程一个更大的实际示例，用于将可为空引用类型合并到 [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits)。
+支持可为空引用类型的新功能可以帮助你发现和修复代码中处理 `null` 值的方式中的潜在错误。 启用可为空注释上下文可以表达设计意图：某些变量永远不应为 Null，其他变量可以包含 Null 值。 借助这些功能，可以更轻松地声明设计意图。 同样，可为空警告上下文指示编译器在违背该意图时发出警告。 这些警告指导你进行更新，使代码更具弹性，并减少在执行期间引发 `NullReferenceException` 的可能性。 可以控制这些上下文的范围，以便专注于要迁移的代码的本地区域，同时保证其余代码库不受影响。 实际上，可以将此迁移任务作为类的常规维护的一部分。 本教程演示了迁移应用程序以使用可为空引用类型的过程。 可以通过检查 PR [Jon Skeet](https://github.com/jskeet) 来浏览此过程一个更大的实际示例，用于将可为空引用类型合并到 [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits)。 此外，还可以在 [Entity Framework Core - 使用可为 null 的引用类型](/ef/core/miscellaneous/nullable-reference-types)中学习将可为 null 的引用类型与 Entity Framework Core 结合使用的技术。

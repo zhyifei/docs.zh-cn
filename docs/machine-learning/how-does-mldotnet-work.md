@@ -4,14 +4,12 @@ description: ML.NET 使你能够在联机或脱机场景中将机器学习添加
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.author: nakersha
-author: natke
-ms.openlocfilehash: 5d8093c77799a55f4bc13e82c06c856dbb8d85cd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 98251c39a4bdaba8203c26c6a781a86efc46efa4
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976742"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740091"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什么是 ML.NET 以及它如何工作？
 
@@ -214,7 +212,7 @@ ML.NET 应用程序从 <xref:Microsoft.ML.MLContext> 对象开始。 此单一�
 
 调用 `Fit()` 使用输入训练数据来估算模型的参数。 这称为训练模型。 请记住，上述线性回归模型有两个模型参数：**偏差**和**权重**。 在 `Fit()` 调用后，参数的值是已知的。 大部分模型拥有的参数比这多得多。
 
-可以在[如何训练模型](./how-to-guides/train-machine-learning-model-ml-net.md)中了解有关模型训练的详细信息
+可以在[如何训练模型](./how-to-guides/train-machine-learning-model-ml-net.md)中了解有关模型训练的详细信息。
 
 生成的模型对象实现 <xref:Microsoft.ML.ITransformer> 接口。 也就是说，模型将输入数据转换为预测。
 
@@ -242,7 +240,7 @@ ML.NET 机器学习管道的核心是 [DataView](xref:Microsoft.ML.IDataView) �
 
 如果管道中一个转换的输出架构与下一个转换的输入架构不匹配，ML.NET 将引发异常。
 
-数据视图对象具有列和行。 每个列都有名称、类型和长度。 例如：房屋价格示例中的输入列为**大小**和**价格**。 它们都是类型，且它们是标量数量而不是向量数量。
+数据视图对象具有列和行。 每个列都有名称、类型和长度。 例如，房屋价格示例中的输入列为“大小”  和“价格”  。 它们都是类型，且它们是标量数量而不是向量数量。
 
    ![具有房屋价格预测数据的 ML.NET 数据视图示例](./media/ml-net-dataview.png)
 

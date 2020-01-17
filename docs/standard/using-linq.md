@@ -1,6 +1,6 @@
 ---
 title: LINQ（语言集成查询）
-description: 了解 LINQ 如何向 C# 和 VB 中提供语言级查询功能和 API，以便能够编写具有表达力度的声明性代码。
+description: 了解 LINQ 如何向 C# 和 Visual Basic 中提供语言级查询功能和 API，以便能够编写具有表达力度的声明性代码。
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -9,18 +9,18 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 2e4b23b7bf197c9984c53b2f4cc2acaa61731d38
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 6ec86b7e728eef2cb4937662fd013d7fe951904d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238628"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347276"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ（语言集成查询）
 
 ## <a name="what-is-it"></a>什么是 LINQ？
 
-LINQ 在 C# 和 VB 中提供语言级查询功能和[高阶函数](https://en.wikipedia.org/wiki/Higher-order_function) API，以便能够编写具有很高表达力度的声明性代码。
+LINQ 在 C# 和 Visual Basic 中提供语言级查询功能和[高阶函数](https://en.wikipedia.org/wiki/Higher-order_function) API，以便能够编写具有很高表达力度的声明性代码。
 
 语言级查询语法：
 
@@ -395,5 +395,5 @@ Public Shared GetAllFacebookUserLikesMessage(facebookUsers As IEnumerable(Of Fac
 ## <a name="further-resources"></a>其他资源：
 
 * [101 LINQ 示例](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-* [Linqpad](https://www.linqpad.net/)，适用于 C#/F#/VB 的演练环境和数据库查询引擎
+* [Linqpad](https://www.linqpad.net/)，适用于 C#/F#/Visual Basic 的演练环境和数据库查询引擎
 * [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)，帮助用户了解如何实现 LINQ 到对象的电子书

@@ -1,19 +1,19 @@
 ---
-title: 如何：一次一行地读取文本文件 (Visual C#)
+title: 如何一次一行地读取文本文件 - C# 编程指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ReadLine method [C#]
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 75274d93ee29feb5f79dfc29c24109f25fd98a5c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a6af48cdacd836465d776a3fd4e1d17aa0298b77
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589964"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635335"
 ---
-# <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>如何：一次一行地读取文本文件 (Visual C#)
+# <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a>如何一次一行地读取文本文件（C# 编程指南）
 此示例使用 `StreamReader` 类的 `ReadLine` 方法，一次一行地将文本文件内容读入字符串。 每个文本行都存储到字符串 `line` 中并显示在屏幕上。  
   
 ## <a name="example"></a>示例  

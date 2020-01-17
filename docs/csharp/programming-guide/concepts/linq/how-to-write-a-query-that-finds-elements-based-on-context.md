@@ -1,15 +1,15 @@
 ---
-title: 如何：编写基于上下文查找元素的查询 (C#)
+title: 如何编写基于上下文查找元素的查询 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: e3ac8fc965132521b85cce6391908634cdb17127
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3fc131fdeb8dbf8871bfa455bc54eab0eeca7022
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253207"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348370"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>如何：编写基于上下文查找元素的查询 (C#)
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>如何编写基于上下文查找元素的查询 (C#)
 有时，您可能必须编写基于元素上下文选择元素的查询。 您可能需要基于前面或后面的同级元素进行筛选。 您可能需要基于子元素或上级元素进行筛选。  
   
  通过编写查询并在 `where` 子句中使用查询的结果可以实现此目的。 如果在测试值之前必须先测试空值，则更适合在 `let` 子句中执行查询，然后在 `where` 子句中使用查询结果。  

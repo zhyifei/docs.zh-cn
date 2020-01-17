@@ -2,12 +2,12 @@
 title: 联接运算 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: 456894dd07f512d7e694ad0056b1e861dc3012c5
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 86d85c7de16887fbe3001dc548d940d9c114e634
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423381"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635595"
 ---
 # <a name="join-operations-c"></a>联接运算 (C#)
 联接  两个数据源就是将一个数据源中的对象与另一个数据源中具有相同公共属性的对象相关联。  
@@ -22,7 +22,7 @@ ms.locfileid: "73423381"
   
 ## <a name="methods"></a>方法  
   
-|方法名|说明|C# 查询表达式语法|详细信息|  
+|方法名|描述|C# 查询表达式语法|详细信息|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |联接|根据键选择器函数联接两个序列并提取值对。|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|根据键选择器函数联接两个序列，并对每个元素的结果匹配项进行分组。|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
@@ -34,11 +34,11 @@ ms.locfileid: "73423381"
 - [匿名类型](../../classes-and-structs/anonymous-types.md)
 - [构建联接和叉积查询](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
 - [join 子句](../../../language-reference/keywords/join-clause.md)
-- [如何：使用组合键进行联接](../../../linq/join-by-using-composite-keys.md)
-- [如何：联接不同文件的内容 (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
-- [如何：对 join 子句的结果进行排序](../../../linq/order-the-results-of-a-join-clause.md)
-- [如何：执行自定义联接操作](../../../linq/perform-custom-join-operations.md)
-- [如何：执行分组联接](../../../linq/perform-grouped-joins.md)
-- [如何：执行内部联接](../../../linq/perform-inner-joins.md)
-- [如何：执行左外部联接](../../../linq/perform-left-outer-joins.md)
-- [如何：从多个源填充对象集合 (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [使用复合键进行联接](../../../linq/join-by-using-composite-keys.md)
+- [如何联接不同文件的内容 (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
+- [对 Join 子句的结果进行排序](../../../linq/order-the-results-of-a-join-clause.md)
+- [执行自定义联接操作](../../../linq/perform-custom-join-operations.md)
+- [执行分组联接](../../../linq/perform-grouped-joins.md)
+- [执行内部联接](../../../linq/perform-inner-joins.md)
+- [执行左外部联接](../../../linq/perform-left-outer-joins.md)
+- [如何从多个源填充对象集合 (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)

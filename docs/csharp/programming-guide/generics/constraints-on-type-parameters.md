@@ -1,24 +1,23 @@
 ---
 title: 类型参数约束 - C# 编程指南
-ms.custom: seodec18
 ms.date: 04/12/2018
 helpviewer_keywords:
 - generics [C#], type constraints
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: d05307735506db0f0e4abab067334e4f0466ee6a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 3ce68ecc1f0740fdb43ccf22b636dcd4bc05ea0a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204642"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712229"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>类型参数的约束（C# 编程指南）
 
 约束告知编译器类型参数必须具备的功能。 在没有任何约束的情况下，类型参数可以是任何类型。 编译器只能假定 <xref:System.Object?displayProperty=nameWithType> 的成员，它是任何 .NET 类型的最终基类。 有关详细信息，请参阅[使用约束的原因](#why-use-constraints)。 如果客户端代码尝试使用约束所不允许的类型来实例化类，则会产生编译时错误。 通过使用 `where` 上下文关键字指定约束。 下表列出了七种类型的约束：
 
-|约束|说明|
+|约束|描述|
 |----------------|-----------------|
 |`where T : struct`|类型参数必须是不可为 null 的值类型。 有关可为 null 的值类型的信息，请参阅[可为 null 的值类型](../../language-reference/builtin-types/nullable-value-types.md)。 由于所有值类型都具有可访问的无参数构造函数，因此 `struct` 约束表示 `new()` 约束，并且不能与 `new()` 约束结合使用。 此外，`struct` 约束也不能与 `unmanaged` 约束结合使用。|
 |`where T : class`|类型参数必须是引用类型。 此约束还应用于任何类、接口、委托或数组类型。|
@@ -107,15 +106,15 @@ ms.locfileid: "74204642"
 
 从 C# 7.3 开始，还可指定 <xref:System.Enum?displayProperty=nameWithType> 类型作为基类约束。 CLR 始终允许此约束，但 C# 语言不允许。 使用 `System.Enum` 的泛型提供类型安全的编程，缓存使用 `System.Enum` 中静态方法的结果。 以下示例查找枚举类型的所有有效的值，然后生成将这些值映射到其字符串表示形式的字典。
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
+[!code-csharp[using the enum constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
 
 所用方法利用反射，这会对性能产生影响。 可调用此方法来生成可缓存和重用的集合，而不是重复需要反射才能实施的调用。
 
 如以下示例所示，可使用它来创建枚举并生成其值和名称的字典：
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
+[!code-csharp[enum definition](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
+[!code-csharp[using the enum constrained method](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
 ## <a name="see-also"></a>请参阅
 

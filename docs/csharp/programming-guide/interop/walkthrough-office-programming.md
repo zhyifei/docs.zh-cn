@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: d4a2562324259bda0bab523849449d584736b2ae
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6c27442cb5c0c4172f503c945849e47560c2b33d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423186"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635348"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>演练：Office 编程（C# 和 Visual Basic）
 
@@ -24,7 +24,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
 
 本演练演示 Office 编程上下文中的这些功能，但其中许多功能在常规编程中也极为有用。 本演练将使用 Excel 外接应用程序创建 Excel 工作簿。 然后，将创建包含工作簿链接的 Word 文档。 最后，将介绍如何启用和禁用 PIA 依赖项。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 若要完成本演练，计算机上必须安装 Microsoft Office Excel 和 Microsoft Office Word。
 
@@ -106,7 +106,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
 
          你不能创建自己的索引属性。 该功能仅支持使用现有索引属性。
 
-         有关详细信息，请参阅[如何：在 COM 互操作编程中使用已编制索引的属性](./how-to-use-indexed-properties-in-com-interop-rogramming.md)。
+         有关详细信息，请参阅[如何在 COM 互操作编程中使用索引属性](./how-to-use-indexed-properties-in-com-interop-rogramming.md)。
 
 2. 在 `DisplayInExcel` 的末尾添加以下代码以将列宽调整为适合内容。
 
@@ -203,7 +203,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
 - [使用类型 dynamic](../types/using-type-dynamic.md)
 - [Lambda 表达式 (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Lambda 表达式 (C#)](../statements-expressions-operators/lambda-expressions.md)
-- [如何：在 COM 互操作编程中使用已编制索引的属性](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [如何在 COM 互操作编程中使用索引属性](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [演练：在 Visual Studio 中嵌入 Microsoft Office 程序集中的类型信息](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
 - [演练：嵌入托管程序集中的类型](../../../standard/assembly/embed-types-visual-studio.md)
 - [演练：创建你的第一个 Excel VSTO 外接程序](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)

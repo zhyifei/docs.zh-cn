@@ -3,10 +3,10 @@ title: 使用 Web API 实现微服务应用层
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解依赖关系注入和转存进程模式及其在 Web API 应用层中的实现详细信息。
 ms.date: 10/08/2018
 ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 12/25/2019
 ms.locfileid: "73737521"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 实现微服务应用层

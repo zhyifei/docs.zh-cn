@@ -1,15 +1,15 @@
 ---
-title: 如何：用 XmlWriter 填充 XML 树 (LINQ to XML) (C#)
+title: 如何使用 XmlWriter 填充 XML 树 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: cd5674d1-5c54-4efc-ba68-e23b2875295f
-ms.openlocfilehash: 88b088ddad54d1fef67cb4c86f8df4eee7bf3662
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f48843af403f2ee0e6d2850deab009a143f55dc7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593103"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345763"
 ---
-# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>如何：用 XmlWriter 填充 XML 树 (LINQ to XML) (C#)
+# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>如何使用 XmlWriter 填充 XML 树 (LINQ to XML) (C#)
 填充 XML 树的一种方式是使用 <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 创建一个 <xref:System.Xml.XmlWriter>，然后写入 <xref:System.Xml.XmlWriter>。 XML 树将用写入到 <xref:System.Xml.XmlWriter> 的所有节点进行填充。  
   
  在与预期会向 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 写入数据的另一个类（如 <xref:System.Xml.XmlWriter>）一起使用 <xref:System.Xml.Xsl.XslCompiledTransform> 时，通常应使用此方法。  

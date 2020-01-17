@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: af7bf487ff4ed250025b946f0948c269fcc5bf09
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9fc8adaa49d02f8b69c2db6e94a28b9fab36b3b0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418564"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635790"
 ---
 # <a name="c-features-that-support-linq"></a>支持 LINQ 的 C# 功能
 
-下一节介绍 C# 3.0 中引入的新语言构造。 虽然这些新功能在一定程度上都用于 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询，但并不限于 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，如果认为有用，在任何情况下都可以使用这些新功能。
+下一节介绍 C# 3.0 中引入的新语言构造。 虽然这些新功能在一定程度上都用于 LINQ 查询，但并不限于 LINQ，如果认为有用，在任何情况下都可以使用这些新功能。
 
 ## <a name="query-expressions"></a>查询表达式
 
-查询表达式使用类似于 SQL 或 XQuery 的声明性语法来查询 IEnumerable 集合。 在编译时，查询语法转换为对 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序的标准查询运算符扩展方法实现的方法调用。 应用程序通过使用 `using` 指令指定适当的命名空间来控制范围内的标准查询运算符。 下面的查询表达式获取一个字符串数组，按字符串中的第一个字符对字符串进行分组，然后对各组进行排序。
+查询表达式使用类似于 SQL 或 XQuery 的声明性语法来查询 IEnumerable 集合。 在编译时，查询语法转换为对 LINQ 提供程序的标准查询运算符扩展方法实现的方法调用。 应用程序通过使用 `using` 指令指定适当的命名空间来控制范围内的标准查询运算符。 下面的查询表达式获取一个字符串数组，按字符串中的第一个字符对字符串进行分组，然后对各组进行排序。
 
 ```csharp
 var query = from str in stringArray
@@ -84,13 +84,13 @@ select new {name = cust.Name, phone = cust.Phone};
 
 ## <a name="extension-methods"></a>扩展方法
 
-扩展方法是一种可与类型关联的静态方法，因此可以像实例方法那样对类型调用它。 实际上，利用此功能，可以将新方法“添加”到现有类型，而不会实际修改它们。 标准查询运算符是一组扩展方法，它们为实现 <xref:System.Collections.Generic.IEnumerable%601> 的任何类型提供 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询功能。
+扩展方法是一种可与类型关联的静态方法，因此可以像实例方法那样对类型调用它。 实际上，利用此功能，可以将新方法“添加”到现有类型，而不会实际修改它们。 标准查询运算符是一组扩展方法，它们为实现 <xref:System.Collections.Generic.IEnumerable%601> 的任何类型提供 LINQ 查询功能。
 
 有关详细信息，请参阅[扩展方法](../../classes-and-structs/extension-methods.md)。
 
 ## <a name="lambda-expressions"></a>Lambda 表达式
 
-Lambda 表达式是一种内联函数，该函数使用 => 运算符将输入参数与函数体分离，并且可以在编译时转换为委托或表达式树。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 编程中，在对标准查询运算符进行直接方法调用时，会遇到 lambda 表达式。
+Lambda 表达式是一种内联函数，该函数使用 => 运算符将输入参数与函数体分离，并且可以在编译时转换为委托或表达式树。 在 LINQ 编程中，在对标准查询运算符进行直接方法调用时，会遇到 lambda 表达式。
 
 有关详细信息，请参见:
 

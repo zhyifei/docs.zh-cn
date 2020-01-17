@@ -1,22 +1,21 @@
 ---
 title: '#if 预处理器指令 - C# 参考'
-ms.custom: seodec18
 ms.date: 10/27/2019
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: e467a890e971e6c6f2c681ee503d7c7ead19a1e4
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d047b88f202341a795834809d0b601706c30fcb4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552448"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899857"
 ---
 # <a name="if-c-reference"></a>#if（C# 参考）
 
-如果 C# 编译器遇到 `#if` 指令，最终是 [#endif](preprocessor-endif.md) 指令，则仅当定义指定的符号时，它才编译这些指令之间的代码。 与 C 和 C++ 不同，你不能为符号分配数字值。 C# 中的 #if 语句是布尔值，且仅测试是否已定义该符号。 例如:
+如果 C# 编译器遇到 `#if` 指令，最终是 [#endif](preprocessor-endif.md) 指令，则仅当定义指定的符号时，它才编译这些指令之间的代码。 与 C 和 C++ 不同，你不能为符号分配数字值。 C# 中的 `#if` 语句是布尔值，且仅测试是否已定义该符号。 例如：
 
 ```csharp
 #if DEBUG
@@ -24,7 +23,7 @@ ms.locfileid: "74552448"
 #endif
 ```
 
-仅可使用运算符 [==](../operators/equality-operators.md#equality-operator-)（相等）和 [!=](../operators/equality-operators.md#inequality-operator-)（不相等）测试[布尔](../builtin-types/bool.md)值 `true` 或 `false`。 True 表示定义该符号。 语句 `#if DEBUG` 具有与 `#if (DEBUG == true)` 相同的含义。 可以使用运算符 [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (and)、[&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (or) 和 [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (not) 评估是否已经定义了多个符号。 还可以用括号对符号和运算符进行分组。
+仅可使用运算符 [==](../operators/equality-operators.md#equality-operator-)（相等）和 [!=](../operators/equality-operators.md#inequality-operator-)（不相等）测试[布尔](../builtin-types/bool.md)值 `true` 或 `false`。 `true` 表示定义该符号。 语句 `#if DEBUG` 具有与 `#if (DEBUG == true)` 相同的含义。 可以使用 [&& (and)](../operators/boolean-logical-operators.md#conditional-logical-and-operator-)、[&#124;&#124; (or)](../operators/boolean-logical-operators.md#conditional-logical-or-operator-)和 [! (not)](../operators/boolean-logical-operators.md#logical-negation-operator-) 运算符来计算是否已定义多个符号。 还可以用括号对符号和运算符进行分组。
 
 ## <a name="remarks"></a>备注
 

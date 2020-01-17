@@ -4,22 +4,22 @@ description: 此教程将介绍如何使用 LINQ 生成序列、编写用于 LIN
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: b25cd1763511f460537bccaf6011a3d23390ea72
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039175"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345614"
 ---
-# <a name="working-with-linq"></a>使用 LINQ
+# <a name="work-with-language-integrated-query-linq"></a>使用语言集成查询 (LINQ)
 
 ## <a name="introduction"></a>介绍
 
-本教程将介绍 .NET Core 和 C# 语言的功能。 你将了解：
+本教程将介绍 .NET Core 和 C# 语言的功能。 你将了解如何：
 
-- 如何使用 LINQ 生成序列。
-- 如何编写可轻松用于 LINQ 查询的方法。
-- 如何区分及早计算和惰性计算。
+- 使用 LINQ 生成序列。
+- 编写可轻松用于 LINQ 查询的方法。
+- 区分及早计算和惰性计算。
 
 你将通过生成应用程序来了解如何执行这些操作，应用程序体现了所有魔术师都具备的一项基本技能，即[完美洗牌](https://en.wikipedia.org/wiki/Faro_shuffle)。 简而言之，完美洗牌这项技能是指，将一副纸牌分成两半，然后两手各拿一半交错洗牌（一张隔一张），以便重新生成原来的一副纸牌。
 
@@ -29,7 +29,7 @@ ms.locfileid: "73039175"
 
 在此教程中，将执行多步操作。 执行每步操作后，都可以运行应用程序，并查看进度。 还可参阅 dotnet/samples GitHub 存储库中的[完整示例](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core 下载](https://dotnet.microsoft.com/download)页。 可以在 Windows、Ubuntu Linux、OS X 或 Docker 容器中运行此应用程序。 必须安装常用的代码编辑器。 在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。 不过，你可以使用习惯使用的任意工具。
 
@@ -39,7 +39,7 @@ ms.locfileid: "73039175"
 
 如果之前从未用过 C#，请参阅[这篇教程](console-teleprompter.md)，其中介绍了 C# 程序的结构。 可以阅读相应的内容，然后回到此教程详细了解 LINQ。
 
-## <a name="creating-the-data-set"></a>创建数据集
+## <a name="create-the-data-set"></a>创建数据集
 
 开始前，请确保下列行在 `dotnet new console` 生成的 `Program.cs` 文件的顶部：
 
@@ -118,7 +118,7 @@ var startingDeck = Suits().SelectMany(suit => Ranks().Select(rank => new { Suit 
 
 ![显示应用输出 52 张扑克牌的控制台窗口。](./media/working-with-linq/console-52-card-application.png)
 
-## <a name="manipulating-the-order"></a>控制顺序
+## <a name="manipulate-the-order"></a>操作顺序
 
 接下来重点介绍如何洗牌。 正确洗牌的第一步是将一副扑克牌分成两半。 LINQ API 包含的 <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 方法提供了这种功能。 将它们置于 `foreach` 循环的下面：
 
@@ -351,8 +351,8 @@ public static void Main(string[] args)
 有关 LINQ 的更多信息，请访问：
 
 - [语言集成查询 (LINQ)](../programming-guide/concepts/linq/index.md)
-  - [LINQ 简介](../programming-guide/concepts/linq/index.md)
-  - [基本 LINQ 查询操作 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-  - [使用 LINQ 进行数据转换 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-  - [LINQ 中的查询语法和方法语法 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-  - [支持 LINQ 的 C# 功能](../programming-guide/concepts/linq/features-that-support-linq.md)
+- [LINQ 简介](../programming-guide/concepts/linq/index.md)
+- [基本 LINQ 查询操作 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+- [使用 LINQ 进行数据转换 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+- [LINQ 中的查询语法和方法语法 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+- [支持 LINQ 的 C# 功能](../programming-guide/concepts/linq/features-that-support-linq.md)

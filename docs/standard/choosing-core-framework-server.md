@@ -4,12 +4,12 @@ description: 关于在 .NET 中生成服务器应用时应考虑使用哪种 .NE
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b2b9e15cfdfd63d070ae94c29a9f2d1a5b5c87b2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799255"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738664"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
@@ -95,7 +95,7 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 
 - 语言支持：.NET Core 目前支持 Visual Basic 和 F#，但不是所有项目类型都支持。 有关支持的项目模板列表，请参阅 [dotnet new 的模板选项](../core/tools/dotnet-new.md#arguments)。
 
-除了正式的路线图，还有其他框架将植入 .NET Core。 若要查看完整列表，请参阅标记为 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) 的 CoreFX 问题。 此列表并不代表 Microsoft 承诺将这些组件引入 .NET Core。 这样做只是因为他们捕获到了社区所需。 如果关注任何标记为 `port-to-core` 的组件，请在 GitHub 上参与讨论。 如果认为遗漏了某些内容，请在 [CoreFX 存储库](https://github.com/dotnet/corefx/issues/new)中提出新的问题。
+除了正式的路线图，还有其他框架将植入 .NET Core。 若要查看完整列表，请参阅标记为 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) 的 CoreFX 问题。 此列表并不代表 Microsoft 承诺将这些组件引入 .NET Core。 这样做只是因为他们捕获到了社区所需。 如果关注任何标记为 `port-to-core` 的组件，请在 GitHub 上参与讨论。 如果认为遗漏了某些内容，请在 [.NET 存储库](https://github.com/dotnet/runtime/issues/new)中提出新的问题。
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>需要使用不支持 .NET Core 的平台
 

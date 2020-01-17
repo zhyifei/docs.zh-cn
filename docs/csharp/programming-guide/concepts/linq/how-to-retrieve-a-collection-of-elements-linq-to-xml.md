@@ -1,21 +1,21 @@
 ---
-title: 如何：检索元素集合 (LINQ to XML) (C#)
+title: 如何检索元素集合 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b849668c-7976-4974-b8e1-1cd587d34258
-ms.openlocfilehash: fef12745bd608622f071f72049f242405d17ed7d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 89799b17115fb56a93bda5fbc144b21b334a6974
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253424"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345009"
 ---
-# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-c"></a>如何：检索元素集合 (LINQ to XML) (C#)
+# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-c"></a>如何检索元素集合 (LINQ to XML) (C#)
 本主题演示 <xref:System.Xml.Linq.XContainer.Elements%2A> 方法。 此方法检索元素的子元素集合。  
   
 ## <a name="example"></a>示例  
  本示例循环访问 `purchaseOrder` 元素的子元素。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) 中所述。  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  

@@ -2,25 +2,25 @@
 title: XAttribute 类概述 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: 79ef00aa79be0c743423cfba1a911b238ff9a7ca
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7a806314664c6319fc45cff0dddedbe38027059d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590923"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635660"
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute 类概述 (C#)
 属性是与元素关联的名称/值对。 <xref:System.Xml.Linq.XAttribute> 类表示 XML 属性。  
   
 ## <a name="overview"></a>概述  
- 使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的属性，与使用元素非常相似。 它们的构造函数相似。 用于检索它们的集合的方法相似。 属性集合的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式与元素集合的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式看起来非常相似。  
+ 使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的属性，与使用元素非常相似。 它们的构造函数相似。 用于检索它们的集合的方法相似。 属性集合的 LINQ 查询表达式与元素集合的 LINQ 查询表达式看起来非常相似。  
   
  将属性添加到元素中的顺序会保留下来。 也就是说，当循环访问属性时，所见到的属性顺序与它们的添加顺序相同。  
   
 ## <a name="the-xattribute-constructor"></a>XAttribute 构造函数  
  下面的 <xref:System.Xml.Linq.XAttribute> 类构造函数是您将最常使用的构造函数之一：  
   
-|构造函数|说明|  
+|构造函数|描述|  
 |-----------------|-----------------|  
 |`XAttribute(XName name, object content)`|创建一个 <xref:System.Xml.Linq.XAttribute> 对象。 `name` 参数指定属性的名称；`content` 指定属性的内容。|  
   

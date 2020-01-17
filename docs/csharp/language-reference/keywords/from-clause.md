@@ -1,6 +1,5 @@
 ---
 title: from 子句 - C# 参考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - from_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: d44c0b7a2f6617a01416ccc5bd1eb857b1f782da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 388b9c0245b112d619fc173f6019b3f7dbf59940
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607889"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715295"
 ---
 # <a name="from-clause-c-reference"></a>from 子句（C# 参考）
 
@@ -22,7 +21,7 @@ ms.locfileid: "54607889"
 
 - 将在其上运行查询或子查询的数据源。
 
-- 表示源序列中每个元素的本地范围变量。
+- 表示源序列中每个元素的本地范围变量  。
 
 范围变量和数据源已强类型化。 `from` 子句中引用的数据源必须具有 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601> 类型之一，或 <xref:System.Linq.IQueryable%601> 等派生类型。
 
@@ -32,7 +31,7 @@ ms.locfileid: "54607889"
 
 ## <a name="the-range-variable"></a>范围变量
 
-数据源实现 <xref:System.Collections.Generic.IEnumerable%601> 时，编译器推断范围变量的类型。 例如，如果源具有 `IEnumerable<Customer>` 类型，则范围变量会被推断为 `Customer`。 仅在以下情况下必须显式指定类型：源是 <xref:System.Collections.ArrayList> 等非泛型 `IEnumerable` 类型时。 有关详细信息，请参阅[如何：使用 LINQ 查询 ArrayList](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)。
+数据源实现 <xref:System.Collections.Generic.IEnumerable%601> 时，编译器推断范围变量的类型。 例如，如果源具有 `IEnumerable<Customer>` 类型，则范围变量会被推断为 `Customer`。 仅在以下情况下必须显式指定类型：源是 <xref:System.Collections.ArrayList> 等非泛型 `IEnumerable` 类型时。 有关详细信息，请参阅[如何使用 LINQ 查询 ArrayList](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)。
 
 在以上示例中，`num` 推断为 `int` 类型。 由于强类型化了范围变量，所以可以在其上调用方法，或将其用于其他操作中。 例如，不再编写 `select num`，而编写 `select num.ToString()`，使查询表达式返回字符串序列，而不是整数序列。 或者可以编写 `select num + 10`，使表达式返回序列 14、11、13、12、10。 有关详细信息，请参阅 [select 子句](select-clause.md)。
 

@@ -1,17 +1,16 @@
 ---
 title: 多形性 - C# 编程指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: be075c358d9ca2c36b6d173fca983c16f6b0d78c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4f65082ad5094eb0aab28edeb06790a9af4019c6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970341"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714732"
 ---
 # <a name="polymorphism-c-programming-guide"></a>多态性（C# 编程指南）
 多态性常被视为自封装和继承之后，面向对象的编程的第三个支柱。 Polymorphism（多态性）是一个希腊词，指“多种形态”，多态性具有两个截然不同的方面：  
@@ -58,7 +57,7 @@ ms.locfileid: "73970341"
   
  [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   
- 通过将派生类的实例强制转换为基类的实例，仍然可以从客户端代码访问隐藏的基类成员。 例如:  
+ 通过将派生类的实例强制转换为基类的实例，仍然可以从客户端代码访问隐藏的基类成员。 例如：  
   
  [!code-csharp[csProgGuideInheritance#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#19)]  
   

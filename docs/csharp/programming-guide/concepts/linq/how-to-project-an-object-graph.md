@@ -1,15 +1,15 @@
 ---
-title: 如何：投影对象图 (C#)
+title: 如何投影对象图 (C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: b00e350dd5bf00a5939547b3ed1651b2a6645197
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 93fabe26fd3d9ff0b61d8b8dfc33425715452c88
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253486"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635686"
 ---
-# <a name="how-to-project-an-object-graph-c"></a>如何：投影对象图 (C#)
+# <a name="how-to-project-an-object-graph-c"></a>如何投影对象图 (C#)
 本主题演示如何从 XML 投影或填充对象图。  
   
 ## <a name="example"></a>示例  
@@ -214,7 +214,7 @@ class Program {
 }  
 ```  
   
- 在此示例中，[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询的结果以 <xref:System.Collections.Generic.IEnumerable%601> 的 `PurchaseOrderItem` 形式返回。 `PurchaseOrder` 类中各项的类型都是 <xref:System.Collections.Generic.IEnumerable%601> 的 `PurchaseOrderItem`。 该代码使用 <xref:System.Linq.Enumerable.ToList%2A> 扩展方法，根据查询结果来创建 <xref:System.Collections.Generic.List%601> 集合。  
+ 在此示例中，LINQ 查询的结果以 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 形式返回。 `PurchaseOrder` 类中各项的类型都是 <xref:System.Collections.Generic.IEnumerable%601> 的 `PurchaseOrderItem`。 该代码使用 <xref:System.Linq.Enumerable.ToList%2A> 扩展方法，根据查询结果来创建 <xref:System.Collections.Generic.List%601> 集合。  
   
  此示例产生以下输出：  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.custom: seodec18
-ms.openlocfilehash: dbfa61077cbfdd7da104dc12f304a4096b3c032d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd9d3f69f8135b608ced91c34f747600352bafe1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120617"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711449"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正则表达式中的字符类
 
@@ -59,20 +58,20 @@ ms.locfileid: "73120617"
 
 `[*character_group*]`
 
- 其中，*character_group* 是单个字符的列表，这些字符可出现在输入字符串中以便成功匹配。 character  _group 可以包含一个或多个文本字符、[转义字符](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)或字符类的任意组合。  
+ 其中，*character_group* 是单个字符的列表，这些字符可出现在输入字符串中以便成功匹配。 character_group 可以包含一个或多个文本字符、[转义字符](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)或字符类的任意组合。  
   
  用于指定字符范围的语法如下：  
   
 `[firstCharacter-lastCharacter]`  
   
- 其中，*firstCharacter* 是范围的开始字符，*lastCharacter* 是范围的结束字符。 字符范围是通过以下方式定义的一系列连续字符：指定系列中的第一个字符，连字符 (-)，然后指定系列中的最后一个字符。 如果两个字符具有相邻的 Unicode 码位，则这两个字符是连续的。 firstCharacter 必须是码位较低的字符，而 lastCharacter 必须是码位较高的字符   。
+ 其中，*firstCharacter* 是范围的开始字符，*lastCharacter* 是范围的结束字符。 字符范围是通过以下方式定义的一系列连续字符：指定系列中的第一个字符，连字符 (-)，然后指定系列中的最后一个字符。 如果两个字符具有相邻的 Unicode 码位，则这两个字符是连续的。 firstCharacter 必须是码位较低的字符，而 lastCharacter 必须是码位较高的字符。
 
 > [!NOTE]
 > 由于正字符组可以包含一组字符和一个字符范围，因此连字符 (`-`) 始终被解释为范围分隔符，除非它是该组的第一个或最后一个字符。
 
 下表列出了一些常见的包含正字符类的正则表达式模式。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`[aeiou]`|匹配所有元音。|  
 |`[\p{P}\d]`|匹配所有标点符号和十进制数字字符。|  
@@ -85,7 +84,7 @@ ms.locfileid: "73120617"
   
  按以下方式定义正则表达式 `gr[ae]y\s\S+?[\s|\p{P}]`：  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`gr`|匹配文本字符“gr”。|  
 |`[ae]`|匹配“a”或“e”。|  
@@ -100,7 +99,7 @@ ms.locfileid: "73120617"
   
  正则表达式 `\b[A-Z]\w*\b` 的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`[A-Z]`|匹配从 A 到 Z 的所有大写字符。|  
@@ -115,13 +114,13 @@ ms.locfileid: "73120617"
 
 `[*^character_group*]`
 
- 其中，*character_group* 是单个字符的列表，这些字符不可出现在输入字符串中以便成功匹配。 character  _group 可以包含一个或多个文本字符、[转义字符](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)或字符类的任意组合。  
+ 其中，*character_group* 是单个字符的列表，这些字符不可出现在输入字符串中以便成功匹配。 character_group 可以包含一个或多个文本字符、[转义字符](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)或字符类的任意组合。  
   
  用于指定字符范围的语法如下：  
 
 `[^*firstCharacter*-*lastCharacter*]`
 
-其中，*firstCharacter* 是范围的开始字符，*lastCharacter* 是范围的结束字符。 字符范围是通过以下方式定义的一系列连续字符：指定系列中的第一个字符，连字符 (-)，然后指定系列中的最后一个字符。 如果两个字符具有相邻的 Unicode 码位，则这两个字符是连续的。 firstCharacter 必须是码位较低的字符，而 lastCharacter 必须是码位较高的字符   。
+其中，*firstCharacter* 是范围的开始字符，*lastCharacter* 是范围的结束字符。 字符范围是通过以下方式定义的一系列连续字符：指定系列中的第一个字符，连字符 (-)，然后指定系列中的最后一个字符。 如果两个字符具有相邻的 Unicode 码位，则这两个字符是连续的。 firstCharacter 必须是码位较低的字符，而 lastCharacter 必须是码位较高的字符。
 
 > [!NOTE]
 > 由于负字符组可以包含一组字符和一个字符范围，因此连字符 (`-`) 始终被解释为范围分隔符，除非它是该组的第一个或最后一个字符。
@@ -135,7 +134,7 @@ ms.locfileid: "73120617"
   
  下表列出了一些常见的包含负字符组的正则表达式模式。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`[^aeiou]`|匹配除元音以外的所有字符。|  
 |`[^\p{P}\d]`|匹配标点符号和十进制数字字符以外的所有字符。|  
@@ -147,7 +146,7 @@ ms.locfileid: "73120617"
   
  正则表达式 `\bth[^o]\w+\b` 的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`th`|匹配文本字符“th”。|  
@@ -185,16 +184,16 @@ ms.locfileid: "73120617"
   
  `\p{` *name* `}`  
   
- 匹配属于 Unicode 常规类别或命名块的任何字符，其中，name  是类别缩写或命名块的名称。 有关类别缩写的列表，请参阅本主题稍后的[支持的 Unicode 常规类别](#SupportedUnicodeGeneralCategories)部分。 有关命名块的列表，请参阅本主题稍后的[支持的命名块](#SupportedNamedBlocks)部分。  
+ 匹配属于 Unicode 常规类别或命名块的任何字符，其中，name 是类别缩写或命名块的名称。 有关类别缩写的列表，请参阅本主题稍后的[支持的 Unicode 常规类别](#SupportedUnicodeGeneralCategories)部分。 有关命名块的列表，请参阅本主题稍后的[支持的命名块](#SupportedNamedBlocks)部分。  
   
- 下面的示例使用 `\p{`名称`}` 构造以匹配 Unicode 常规类别（在该示例中为 `Pd` 或“标点，短划线”类别）和命名块（`IsGreek` 和 `IsBasicLatin` 命名块）  。  
+ 下面的示例使用 `\p{`名称`}` 构造以匹配 Unicode 常规类别（在该示例中为 `Pd` 或“标点，短划线”类别）和命名块（`IsGreek` 和 `IsBasicLatin` 命名块）。  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/category1.cs#6)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/category1.vb#6)]  
   
  正则表达式 `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` 的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`\p{IsGreek}+`|匹配一个或多个希腊语字符。|  
@@ -214,9 +213,9 @@ ms.locfileid: "73120617"
   
  `\P{` *name* `}`  
   
- 匹配不属于 Unicode 常规类别或命名块的任何字符，其中，name  是类别缩写或命名块的名称。 有关类别缩写的列表，请参阅本主题稍后的[支持的 Unicode 常规类别](#SupportedUnicodeGeneralCategories)部分。 有关命名块的列表，请参阅本主题稍后的[支持的命名块](#SupportedNamedBlocks)部分。  
+ 匹配不属于 Unicode 常规类别或命名块的任何字符，其中，name是类别缩写或命名块的名称。 有关类别缩写的列表，请参阅本主题稍后的[支持的 Unicode 常规类别](#SupportedUnicodeGeneralCategories)部分。 有关命名块的列表，请参阅本主题稍后的[支持的命名块](#SupportedNamedBlocks)部分。  
   
- 下面的示例使用 `\P{`name  `}`构造来删除数字字符串中的任何货币符号（在该示例中为 `Sc` 或“符号，货币”类别）。  
+ 下面的示例使用 `\P{`name`}`构造来删除数字字符串中的任何货币符号（在该示例中为 `Sc` 或“符号，货币”类别）。  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/notcategory1.cs#7)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/notcategory1.vb#7)]  
@@ -227,7 +226,7 @@ ms.locfileid: "73120617"
 ## <a name="word-character-w"></a>单词字符：\w  
  `\w` 与任何单词字符匹配。 单词字符是下表中列出的任何 Unicode 类别的成员。  
   
-|类别|说明|  
+|类别|描述|  
 |--------------|-----------------|  
 |Ll|字母，小写|  
 |Lu|字母，大写|  
@@ -245,7 +244,7 @@ ms.locfileid: "73120617"
   
  下面的示例使用 `\w` 语言元素来匹配单词中的重复字符。 该示例定义可按如下方式解释的正则表达式模式 `(\w)\1`。  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |(\w)|匹配单词字符。 这是第一个捕获组。|  
 |\1|匹配第一次捕获的值。|  
@@ -261,7 +260,7 @@ ms.locfileid: "73120617"
   
  换言之，它与下表列出的 Unicode 类别中的字符以外的任何字符匹配。  
   
-|类别|说明|  
+|类别|描述|  
 |--------------|-----------------|  
 |Ll|字母，小写|  
 |Lu|字母，大写|  
@@ -279,7 +278,7 @@ ms.locfileid: "73120617"
   
  下面的示例阐释 `\W` 字符类。  它定义正则表达式模式 `\b(\w+)(\W){1,2}`，该模式匹配后跟一个或两个非单词字符（例如，空白或标点符号）的单词。 正则表达式模式可以解释为下表中所示内容。  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |\b|在单词边界处开始匹配。|  
 |(\w+)|匹配一个或多个单词字符。 这是第一个捕获组。|  
@@ -294,7 +293,7 @@ ms.locfileid: "73120617"
 ## <a name="whitespace-character-s"></a>空格字符：\s  
  `\s` 匹配任意空格字符。 它等效于下表中列出的转义序列和 Unicode 类别。  
   
-|类别|说明|  
+|类别|描述|  
 |--------------|-----------------|  
 |`\f`|窗体换页符，\u000C。|  
 |`\n`|换行符，\u000A。|  
@@ -308,7 +307,7 @@ ms.locfileid: "73120617"
   
  下面的示例阐释 `\s` 字符类。 它定义正则表达式模式 `\b\w+(e)?s(\s|$)`，该模式匹配以“s”或“es”结尾且后跟一个空白字符或输入字符串末尾的单词。 正则表达式模式可以解释为下表中所示内容。  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |\b|在单词边界处开始匹配。|  
 |\w+|匹配一个或多个单词字符。|  
@@ -327,7 +326,7 @@ ms.locfileid: "73120617"
   
  下面的示例阐释 `\S` 语言元素。 正则表达式模式 `\b(\S+)\s?` 匹配由空白字符分隔的字符串。 匹配项的 <xref:System.Text.RegularExpressions.GroupCollection> 对象中的第二个元素包含匹配的字符串。 正则表达式可按下表中的方式解释。  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`(\S+)`|匹配一个或多个非空白字符。 这是第一个捕获组。|  
@@ -344,7 +343,7 @@ ms.locfileid: "73120617"
   
  下面的示例阐释 `\d` 语言元素。 它测试输入字符串是否表示美国和加拿大的有效电话号码。 正则表达式模式 `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` 的定义如下表所示。  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`^`|从输入字符串的开头部分开始匹配。|  
 |`\(?`|匹配零个或一个“(”文本字符。|  
@@ -366,7 +365,7 @@ ms.locfileid: "73120617"
   
  下面的示例阐释了 \D 语言元素。 它测试部件号等字符串是否包含适当的十进制和非十进制数字字符的组合。 正则表达式模式 `^\D\d{1,5}\D*$` 的定义如下表所示。  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`^`|从输入字符串的开头部分开始匹配。|  
 |`\D`|匹配非数字字符。|  
@@ -381,7 +380,7 @@ ms.locfileid: "73120617"
 ## <a name="supported-unicode-general-categories"></a>支持的 Unicode 常规类别  
  Unicode 定义下表列出的常规类别。 有关详细信息，请参阅 [Unicode 字符数据库](https://www.unicode.org/reports/tr44/)中的“UCD 文件格式”和“常规类别值”子主题。  
   
-|类别|说明|  
+|类别|描述|  
 |--------------|-----------------|  
 |`Lu`|字母，大写|  
 |`Ll`|字母，小写|  
@@ -440,7 +439,7 @@ ms.locfileid: "73120617"
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> -或-<br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> - 或 -<br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
@@ -484,7 +483,7 @@ ms.locfileid: "73120617"
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> -或-<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> - 或 -<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  
@@ -545,9 +544,9 @@ ms.locfileid: "73120617"
   
  字符类减法表达式具有以下形式：  
   
- `[` base_group  `-[` excluded_group  `]]`  
+ `[` *base_group* `-[` *excluded_group* `]]`  
   
- 方括号 (`[]`) 和连字符 (`-`) 是强制的。 base_group  是[正字符组](#PositiveGroup)或[负字符组](#NegativeGroup)。 *excluded_group* 部分是另一个正字符组或负字符组，或者是另一个字符类减法表达式（即，可以嵌套字符类减法表达式）。  
+ 方括号 (`[]`) 和连字符 (`-`) 是强制的。 base_group 是[正字符组](#PositiveGroup)或[负字符组](#NegativeGroup)。 *excluded_group* 部分是另一个正字符组或负字符组，或者是另一个字符类减法表达式（即，可以嵌套字符类减法表达式）。  
   
  例如，假设你有一个由从“a”至“z”范围内的字符组成的基本组。 若要定义由除字符“m”之外的基本组组成的字符集，请使用 `[a-z-[m]]`。 若要定义由除字符集“d”、“j”和“p”之外的基本组组成的字符集，请使用 `[a-z-[djp]]`。 若要定义由除从“m”至“p”字符范围之外的基本组组成的字符集，请使用 `[a-z-[m-p]]`。  
   
@@ -559,7 +558,7 @@ ms.locfileid: "73120617"
   
  下面的示例定义正则表达式 `^[0-9-[2468]]+$`，该表达式匹配输入字符串中的零和奇数。  正则表达式模式可以解释为下表中所示内容。  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |^|从输入字符串的开头处开始进行匹配。|  
 |`[0-9-[2468]]+`|匹配任意字符（从 0 到 9，除了 2、4、6 和 8 之外）的一个或多个匹配项。 换句话说，匹配零或奇数的一个或多个匹配项。|  

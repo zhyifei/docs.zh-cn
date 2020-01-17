@@ -1,19 +1,19 @@
 ---
-title: 如何：对元素进行排序 (C#)
+title: 如何对元素进行排序 (C#)
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: e5f76518437954ac683ec2e3e30ad9007c280f83
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7fad9fcb43905072c88a5704c56672917bfc377c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253304"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347367"
 ---
-# <a name="how-to-sort-elements-c"></a>如何：对元素进行排序 (C#)
+# <a name="how-to-sort-elements-c"></a>如何对元素进行排序 (C#)
 本示例演示如何编写对查询结果进行排序的查询。  
   
 ## <a name="example"></a>示例  
- 此示例使用下面的 XML 文档：[示例 XML 文件：数值数据 (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：数值数据 (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md)。  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -41,7 +41,7 @@ foreach (decimal el in prices)
 ## <a name="example"></a>示例  
  下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[命名空间概述(LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的数值数据](./sample-xml-file-numerical-data-in-a-namespace.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的数值数据](./sample-xml-file-numerical-data-in-a-namespace.md)。  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  

@@ -1,15 +1,15 @@
 ---
-title: 如何：按扩展名对文件进行分组 (LINQ) (C#)
+title: 如何按扩展名对文件进行分组 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: aa3e428a4655bfcc0707e111da3ca6206a2b9596
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d12b40c7dba7bd3e10f30ddfd394b25c36794428
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593253"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345902"
 ---
-# <a name="how-to-group-files-by-extension-linq-c"></a>如何：按扩展名对文件进行分组 (LINQ) (C#)
+# <a name="how-to-group-files-by-extension-linq-c"></a>如何按扩展名对文件进行分组 (LINQ) (C#)
 本示例演示如何使用 LINQ 来执行高级分组和对文件或文件夹列表执行排序操作。 它还演示如何使用 <xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Take%2A> 方法在控制台窗口中对输出进行分页。  
   
 ## <a name="example"></a>示例  

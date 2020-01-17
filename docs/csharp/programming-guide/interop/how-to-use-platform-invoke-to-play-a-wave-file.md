@@ -1,6 +1,5 @@
 ---
-title: 如何：使用平台调用播放波形文件 - C# 编程指南
-ms.custom: seodec18
+title: 如何使用平台调用播放 WAV 文件 - C# 编程指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - platform invoke, sound files
@@ -8,16 +7,16 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 6c2313f7b600bc1670c944f6a93868c1bc4c7c16
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3ea90f0739ad45c31e4f25836c9de8e708dff2cc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039328"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75700817"
 ---
-# <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>如何：使用平台调用播放波形文件（C# 编程指南）
+# <a name="how-to-use-platform-invoke-to-play-a-wav-file-c-programming-guide"></a>如何使用平台调用播放 WAV 文件（C# 编程指南）
 
-下面的 C# 代码示例说明了如何使用平台调用服务在 Windows 操作系统中播放波形声音文件。
+下面的 C# 代码示例说明了如何使用平台调用服务在 Windows 操作系统中播放 WAV 声音文件。
 
 ## <a name="example"></a>示例
 

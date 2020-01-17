@@ -1,17 +1,16 @@
 ---
 title: 方法 - C# 编程指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 318f51afefd780ed7be0ab8c2a72acb5fcf9db15
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5955228d51d2f6845a363bcaf32581b6598273f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699966"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714773"
 ---
 # <a name="methods-c-programming-guide"></a>方法（C# 编程指南）
 
@@ -39,7 +38,7 @@ ms.locfileid: "71699966"
 
 ## <a name="method-parameters-vs-arguments"></a>方法形参与实参
 
-该方法定义指定任何所需参数的名称和类型。 调用代码调用该方法时，它为每个参数提供了称为参数的具体值。 参数必须与参数类型兼容，但调用代码中使用的参数名（如果有）不需要与方法中定义的参数名相同。 例如:
+该方法定义指定任何所需参数的名称和类型。 调用代码调用该方法时，它为每个参数提供了称为参数的具体值。 参数必须与参数类型兼容，但调用代码中使用的参数名（如果有）不需要与方法中定义的参数名相同。 例如：
 
 [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]
 
@@ -120,7 +119,7 @@ public static void FillMatrix(int[,] matrix)
 
 通过使用异步功能，你可以调用异步方法而无需使用显式回调，也不需要跨多个方法或 lambda 表达式来手动拆分代码。
 
-如果用 [async](../../language-reference/keywords/async.md) 修饰符标记方法，则可以使用该方法中的 [await](../../language-reference/operators/await.md) 运算符。 当控件到达异步方法中的 await 表达式时，控件将返回到调用方，并在等待任务完成前，方法中进度将一直处于挂起状态。 任务完成后，可以在方法中恢复执行。
+如果用 [async](../../language-reference/keywords/async.md) 修饰符标记方法，则可以在该方法中使用 [await](../../language-reference/operators/await.md) 运算符。 当控件到达异步方法中的 await 表达式时，控件将返回到调用方，并在等待任务完成前，方法中进度将一直处于挂起状态。 任务完成后，可以在方法中恢复执行。
 
 > [!NOTE]
 > 异步方法在遇到第一个尚未完成的 awaited 对象或到达异步方法的末尾时（以先发生者为准），将返回到调用方。

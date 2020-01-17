@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: ca2513a0f865fd7da728f7d3247bdb7b50a2f48a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8701991542f1e950914d5b4275ae8dcd68ad83a1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036429"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345368"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算术运算符（C# 参考）
 
@@ -187,7 +187,7 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
-你还可以使用 `+=` 和 `-=` 运算符分别订阅和取消订阅[事件](../keywords/event.md)。 有关详细信息，请参阅[如何：订阅和取消订阅事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
+你还可以使用 `+=` 和 `-=` 运算符分别订阅和取消订阅[事件](../keywords/event.md)。 有关详细信息，请参阅[如何订阅和取消订阅事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 
 ## <a name="operator-precedence-and-associativity"></a>运算符优先级和关联性
 

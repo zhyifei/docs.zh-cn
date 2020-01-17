@@ -1,5 +1,5 @@
 ---
-title: 自定义 TimeSpan 格式字符串 - .NET
+title: 自定义 TimeSpan 格式字符串
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-ms.openlocfilehash: f38ea3a1e2d687044f862e5d6c0a78c6c12965d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5963f9afe422206627a1baea47339ecb81becf0
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126557"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348322"
 ---
 # <a name="custom-timespan-format-strings"></a>自定义 TimeSpan 格式字符串
 
-<xref:System.TimeSpan> 格式字符串定义格式设置操作生成的 <xref:System.TimeSpan> 值的字符串表示形式。 自定义格式字符串包含一个或多个自定义 <xref:System.TimeSpan> 格式说明符，以及任意数量的文本字符。 任何不是[标准 TimeSpan 格式字符串](standard-timespan-format-strings.md)的字符串都会被解释为自定义 <xref:System.TimeSpan> 格式字符串。
+<xref:System.TimeSpan> 格式字符串定义格式设置操作生成的 <xref:System.TimeSpan> 值的字符串表示形式。 自定义格式字符串包含一个或多个自定义 <xref:System.TimeSpan> 格式说明符，以及任意数量的文本字符。 任何不是[标准 TimeSpan 格式字符串](standard-timespan-format-strings.md)的字符串都会解释为自定义 <xref:System.TimeSpan> 格式字符串。
 
 > [!IMPORTANT]
 > 自定义 <xref:System.TimeSpan> 格式说明符不包含占位符分隔符符号，如分隔天与小时、小时与分钟或秒与秒若干分之一的符号。 相反，这些符号必须以字符串形式包含在自定义格式字符串中。 例如，`"dd\.hh\:mm"` 将句点 (.) 定义为天与小时之间的分隔符，将冒号 (:) 定义为小时与分钟之间的分隔符。
@@ -41,7 +41,7 @@ ms.locfileid: "73126557"
 
 <a name="table"></a> 下表列出了自定义日期和时间格式说明符。
 
-| 格式说明符 | 说明 | 示例 |
+| 格式说明符 | 描述 | 示例 |
 |----------------------|-----------------|-------------|
 |“d”，“%d”|时间间隔中的整天数。<br /><br /> 更多信息：[“d”自定义格式说明符](#dSpecifier)。|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d` --> "6"<br /><br /> `d\.hh\:mm` --> "6.14:32"|
 |"dd"-"dddddddd"|时间间隔中的整天数，根据需要使用前导零填充。<br /><br /> 更多信息：[“dd”-“dddddddd”自定义格式说明符](#ddSpecifier)。|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --> "06.14:32"|

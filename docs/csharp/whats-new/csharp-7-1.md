@@ -2,12 +2,12 @@
 title: C# 7.1 中的新增功能
 description: C# 7.1 中的新增功能概述。
 ms.date: 04/09/2019
-ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105548"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714583"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 中的新增功能
 

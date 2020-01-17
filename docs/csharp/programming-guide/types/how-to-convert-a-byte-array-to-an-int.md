@@ -1,19 +1,18 @@
 ---
-title: 如何：将字节数组转换为 int - C# 编程指南
-ms.custom: seodec18
+title: 如何将字节数组转换为 int - C# 编程指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: cb6252069302a28f8a85247aa4584a9284b26c4d
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 9f477649dba1b42d7a10d521c010977707daf3ec
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195463"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698750"
 ---
-# <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>如何：将字节数组转换为 int（C# 编程指南）
+# <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>如何将字节数组转换为 int（C# 编程指南）
 
 此示例演示如何使用 <xref:System.BitConverter> 类将字节数组转换为 [int](../../language-reference/builtin-types/integral-numeric-types.md) 然后又转换回字节数组。 例如，在从网络读取字节之后，可能需要将字节转换为内置数据类型。 除了示例中的 [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) 方法之外，下表还列出了 <xref:System.BitConverter> 类中将字节（来自字节数组）转换为其他内置类型的方法。
 
