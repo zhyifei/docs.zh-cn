@@ -6,286 +6,286 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974763"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900586"
 ---
-# <a name="garbage-collection-and-performance"></a><span data-ttu-id="ea821-102">垃圾回收和性能</span><span class="sxs-lookup"><span data-stu-id="ea821-102">Garbage Collection and Performance</span></span>
+# <a name="garbage-collection-and-performance"></a><span data-ttu-id="ff402-102">垃圾回收和性能</span><span class="sxs-lookup"><span data-stu-id="ff402-102">Garbage Collection and Performance</span></span>
 
-<span data-ttu-id="ea821-103">本主题介绍与垃圾回收和内存使用情况相关的问题。</span><span class="sxs-lookup"><span data-stu-id="ea821-103">This topic describes issues related to garbage collection and memory usage.</span></span> <span data-ttu-id="ea821-104">它解决了关于托管堆的问题，并解释了如何最小化垃圾回收对应用程序的影响。</span><span class="sxs-lookup"><span data-stu-id="ea821-104">It addresses issues that pertain to the managed heap and explains how to minimize the effect of garbage collection on your applications.</span></span> <span data-ttu-id="ea821-105">每个问题具有访问可用来调查问题的过程的链接。</span><span class="sxs-lookup"><span data-stu-id="ea821-105">Each issue has links to procedures that you can use to investigate problems.</span></span>
+<span data-ttu-id="ff402-103">本主题介绍与垃圾回收和内存使用情况相关的问题。</span><span class="sxs-lookup"><span data-stu-id="ff402-103">This topic describes issues related to garbage collection and memory usage.</span></span> <span data-ttu-id="ff402-104">它解决了关于托管堆的问题，并解释了如何最小化垃圾回收对应用程序的影响。</span><span class="sxs-lookup"><span data-stu-id="ff402-104">It addresses issues that pertain to the managed heap and explains how to minimize the effect of garbage collection on your applications.</span></span> <span data-ttu-id="ff402-105">每个问题具有访问可用来调查问题的过程的链接。</span><span class="sxs-lookup"><span data-stu-id="ff402-105">Each issue has links to procedures that you can use to investigate problems.</span></span>
 
-## <a name="performance-analysis-tools"></a><span data-ttu-id="ea821-106">性能分析工具</span><span class="sxs-lookup"><span data-stu-id="ea821-106">Performance Analysis Tools</span></span>
+## <a name="performance-analysis-tools"></a><span data-ttu-id="ff402-106">性能分析工具</span><span class="sxs-lookup"><span data-stu-id="ff402-106">Performance Analysis Tools</span></span>
 
-<span data-ttu-id="ea821-107">以下各节介绍了可用于调查内存使用情况和垃圾回收问题的工具。</span><span class="sxs-lookup"><span data-stu-id="ea821-107">The following sections describe the tools that are available for investigating memory usage and garbage collection issues.</span></span> <span data-ttu-id="ea821-108">本主题中稍后提供的[过程](#performance-check-procedures)将引用这些工具。</span><span class="sxs-lookup"><span data-stu-id="ea821-108">The [procedures](#performance-check-procedures) provided later in this topic refer to these tools.</span></span>
+<span data-ttu-id="ff402-107">以下各节介绍了可用于调查内存使用情况和垃圾回收问题的工具。</span><span class="sxs-lookup"><span data-stu-id="ff402-107">The following sections describe the tools that are available for investigating memory usage and garbage collection issues.</span></span> <span data-ttu-id="ff402-108">本主题中稍后提供的[过程](#performance-check-procedures)将引用这些工具。</span><span class="sxs-lookup"><span data-stu-id="ff402-108">The [procedures](#performance-check-procedures) provided later in this topic refer to these tools.</span></span>
 
-### <a name="memory-performance-counters"></a><span data-ttu-id="ea821-109">内存性能计数器</span><span class="sxs-lookup"><span data-stu-id="ea821-109">Memory Performance Counters</span></span>
+### <a name="memory-performance-counters"></a><span data-ttu-id="ff402-109">内存性能计数器</span><span class="sxs-lookup"><span data-stu-id="ff402-109">Memory Performance Counters</span></span>
 
-<span data-ttu-id="ea821-110">可以使用性能计数器来收集性能数据。</span><span class="sxs-lookup"><span data-stu-id="ea821-110">You can use performance counters to gather performance data.</span></span> <span data-ttu-id="ea821-111">有关说明，请参阅[运行时分析](../../../docs/framework/debug-trace-profile/runtime-profiling.md)。</span><span class="sxs-lookup"><span data-stu-id="ea821-111">For instructions, see [Runtime Profiling](../../../docs/framework/debug-trace-profile/runtime-profiling.md).</span></span> <span data-ttu-id="ea821-112">如 [.NET Framework 中的性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)中所述，性能计数器的 .NET CLR 内存类别提供有关垃圾回收器的信息。</span><span class="sxs-lookup"><span data-stu-id="ea821-112">The .NET CLR Memory category of performance counters, as described in [Performance Counters in the .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md), provides information about the garbage collector.</span></span>
+<span data-ttu-id="ff402-110">可以使用性能计数器来收集性能数据。</span><span class="sxs-lookup"><span data-stu-id="ff402-110">You can use performance counters to gather performance data.</span></span> <span data-ttu-id="ff402-111">有关说明，请参阅[运行时分析](../../../docs/framework/debug-trace-profile/runtime-profiling.md)。</span><span class="sxs-lookup"><span data-stu-id="ff402-111">For instructions, see [Runtime Profiling](../../../docs/framework/debug-trace-profile/runtime-profiling.md).</span></span> <span data-ttu-id="ff402-112">如 [.NET Framework 中的性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)中所述，性能计数器的 .NET CLR 内存类别提供有关垃圾回收器的信息。</span><span class="sxs-lookup"><span data-stu-id="ff402-112">The .NET CLR Memory category of performance counters, as described in [Performance Counters in the .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md), provides information about the garbage collector.</span></span>
 
-### <a name="debugging-with-sos"></a><span data-ttu-id="ea821-113">用 SOS 调试</span><span class="sxs-lookup"><span data-stu-id="ea821-113">Debugging with SOS</span></span>
+### <a name="debugging-with-sos"></a><span data-ttu-id="ff402-113">用 SOS 调试</span><span class="sxs-lookup"><span data-stu-id="ff402-113">Debugging with SOS</span></span>
 
-<span data-ttu-id="ea821-114">可以使用 [Windows 调试器 (WinDbg)](/windows-hardware/drivers/debugger/index) 检查托管堆上的对象。</span><span class="sxs-lookup"><span data-stu-id="ea821-114">You can use the [Windows Debugger (WinDbg)](/windows-hardware/drivers/debugger/index) to inspect objects on the managed heap.</span></span>
+<span data-ttu-id="ff402-114">可以使用 [Windows 调试器 (WinDbg)](/windows-hardware/drivers/debugger/index) 检查托管堆上的对象。</span><span class="sxs-lookup"><span data-stu-id="ff402-114">You can use the [Windows Debugger (WinDbg)](/windows-hardware/drivers/debugger/index) to inspect objects on the managed heap.</span></span>
 
-<span data-ttu-id="ea821-115">若要安装 WinDbg，请从[下载 Windows 调试工具](/windows-hardware/drivers/debugger/debugger-download-tools)页安装 Windows 调试工具。</span><span class="sxs-lookup"><span data-stu-id="ea821-115">To install WinDbg, install Debugging Tools for Windows from the [Download Debugging Tools for Windows](/windows-hardware/drivers/debugger/debugger-download-tools) page.</span></span>
+<span data-ttu-id="ff402-115">若要安装 WinDbg，请从[下载 Windows 调试工具](/windows-hardware/drivers/debugger/debugger-download-tools)页安装 Windows 调试工具。</span><span class="sxs-lookup"><span data-stu-id="ff402-115">To install WinDbg, install Debugging Tools for Windows from the [Download Debugging Tools for Windows](/windows-hardware/drivers/debugger/debugger-download-tools) page.</span></span>
 
-### <a name="garbage-collection-etw-events"></a><span data-ttu-id="ea821-116">垃圾回收 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="ea821-116">Garbage Collection ETW Events</span></span>
+### <a name="garbage-collection-etw-events"></a><span data-ttu-id="ff402-116">垃圾回收 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="ff402-116">Garbage Collection ETW Events</span></span>
 
-<span data-ttu-id="ea821-117">Windows 事件跟踪 (ETW) 是一个跟踪系统，对由 .NET Framework 提供的分析和调试支持提供补充。</span><span class="sxs-lookup"><span data-stu-id="ea821-117">Event tracing for Windows (ETW) is a tracing system that supplements the profiling and debugging support provided by the .NET Framework.</span></span> <span data-ttu-id="ea821-118">从 .NET Framework 4 开始，[垃圾回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)将捕获有用信息，用于从统计的角度来分析托管堆。</span><span class="sxs-lookup"><span data-stu-id="ea821-118">Starting with the .NET Framework 4, [garbage collection ETW events](../../../docs/framework/performance/garbage-collection-etw-events.md) capture useful information for analyzing the managed heap from a statistical point of view.</span></span> <span data-ttu-id="ea821-119">例如，在将要发生垃圾回收时引发的 `GCStart_V1` 事件提供了以下信息：</span><span class="sxs-lookup"><span data-stu-id="ea821-119">For example, the `GCStart_V1` event, which is raised when a garbage collection is about to occur, provides the following information:</span></span>
+<span data-ttu-id="ff402-117">Windows 事件跟踪 (ETW) 是一个跟踪系统，对由 .NET Framework 提供的分析和调试支持提供补充。</span><span class="sxs-lookup"><span data-stu-id="ff402-117">Event tracing for Windows (ETW) is a tracing system that supplements the profiling and debugging support provided by the .NET Framework.</span></span> <span data-ttu-id="ff402-118">从 .NET Framework 4 开始，[垃圾回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)将捕获有用信息，用于从统计的角度来分析托管堆。</span><span class="sxs-lookup"><span data-stu-id="ff402-118">Starting with the .NET Framework 4, [garbage collection ETW events](../../../docs/framework/performance/garbage-collection-etw-events.md) capture useful information for analyzing the managed heap from a statistical point of view.</span></span> <span data-ttu-id="ff402-119">例如，在将要发生垃圾回收时引发的 `GCStart_V1` 事件提供了以下信息：</span><span class="sxs-lookup"><span data-stu-id="ff402-119">For example, the `GCStart_V1` event, which is raised when a garbage collection is about to occur, provides the following information:</span></span>
 
-- <span data-ttu-id="ea821-120">正在收集哪一代对象。</span><span class="sxs-lookup"><span data-stu-id="ea821-120">Which generation of objects is being collected.</span></span>
+- <span data-ttu-id="ff402-120">正在收集哪一代对象。</span><span class="sxs-lookup"><span data-stu-id="ff402-120">Which generation of objects is being collected.</span></span>
 
-- <span data-ttu-id="ea821-121">是什么触发了垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ea821-121">What triggered the garbage collection.</span></span>
+- <span data-ttu-id="ff402-121">是什么触发了垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ff402-121">What triggered the garbage collection.</span></span>
 
-- <span data-ttu-id="ea821-122">垃圾回收的类型（并发或非并发）。</span><span class="sxs-lookup"><span data-stu-id="ea821-122">Type of garbage collection (concurrent or not concurrent).</span></span>
+- <span data-ttu-id="ff402-122">垃圾回收的类型（并发或非并发）。</span><span class="sxs-lookup"><span data-stu-id="ff402-122">Type of garbage collection (concurrent or not concurrent).</span></span>
 
-<span data-ttu-id="ea821-123">ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问题。</span><span class="sxs-lookup"><span data-stu-id="ea821-123">ETW event logging is efficient and will not mask any performance problems associated with garbage collection.</span></span> <span data-ttu-id="ea821-124">一个进程可以通过结合 ETW 事件来提供其自身的事件。</span><span class="sxs-lookup"><span data-stu-id="ea821-124">A process can provide its own events in conjunction with ETW events.</span></span> <span data-ttu-id="ea821-125">登录后，可以关联应用程序事件和垃圾回收事件，以确定如何以及何时出现堆问题。</span><span class="sxs-lookup"><span data-stu-id="ea821-125">When logged, both the application's events and the garbage collection events can be correlated to determine how and when heap problems occur.</span></span> <span data-ttu-id="ea821-126">例如，服务器应用程序可以在客户端请求开始和结束时提供事件。</span><span class="sxs-lookup"><span data-stu-id="ea821-126">For example, a server application could provide events at the start and end of a client request.</span></span>
+<span data-ttu-id="ff402-123">ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问题。</span><span class="sxs-lookup"><span data-stu-id="ff402-123">ETW event logging is efficient and will not mask any performance problems associated with garbage collection.</span></span> <span data-ttu-id="ff402-124">一个进程可以通过结合 ETW 事件来提供其自身的事件。</span><span class="sxs-lookup"><span data-stu-id="ff402-124">A process can provide its own events in conjunction with ETW events.</span></span> <span data-ttu-id="ff402-125">登录后，可以关联应用程序事件和垃圾回收事件，以确定如何以及何时出现堆问题。</span><span class="sxs-lookup"><span data-stu-id="ff402-125">When logged, both the application's events and the garbage collection events can be correlated to determine how and when heap problems occur.</span></span> <span data-ttu-id="ff402-126">例如，服务器应用程序可以在客户端请求开始和结束时提供事件。</span><span class="sxs-lookup"><span data-stu-id="ff402-126">For example, a server application could provide events at the start and end of a client request.</span></span>
 
-### <a name="the-profiling-api"></a><span data-ttu-id="ea821-127">分析 API</span><span class="sxs-lookup"><span data-stu-id="ea821-127">The Profiling API</span></span>
+### <a name="the-profiling-api"></a><span data-ttu-id="ff402-127">分析 API</span><span class="sxs-lookup"><span data-stu-id="ff402-127">The Profiling API</span></span>
 
-<span data-ttu-id="ea821-128">公共语言运行时 (CLR) 分析接口将提供有关垃圾回收期间受影响对象的详细信息。</span><span class="sxs-lookup"><span data-stu-id="ea821-128">The common language runtime (CLR) profiling interfaces provide detailed information about the objects that were affected during garbage collection.</span></span> <span data-ttu-id="ea821-129">垃圾回收开始和结束时，可以通知探查器。</span><span class="sxs-lookup"><span data-stu-id="ea821-129">A profiler can be notified when a garbage collection starts and ends.</span></span> <span data-ttu-id="ea821-130">它可以提供有关托管堆上对象的报告，其中包括每一代对象的标识。</span><span class="sxs-lookup"><span data-stu-id="ea821-130">It can provide reports about the objects on the managed heap, including an identification of objects in each generation.</span></span> <span data-ttu-id="ea821-131">有关详细信息，请参阅[分析概述](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="ea821-131">For more information, see [Profiling Overview](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md).</span></span>
+<span data-ttu-id="ff402-128">公共语言运行时 (CLR) 分析接口将提供有关垃圾回收期间受影响对象的详细信息。</span><span class="sxs-lookup"><span data-stu-id="ff402-128">The common language runtime (CLR) profiling interfaces provide detailed information about the objects that were affected during garbage collection.</span></span> <span data-ttu-id="ff402-129">垃圾回收开始和结束时，可以通知探查器。</span><span class="sxs-lookup"><span data-stu-id="ff402-129">A profiler can be notified when a garbage collection starts and ends.</span></span> <span data-ttu-id="ff402-130">它可以提供有关托管堆上对象的报告，其中包括每一代对象的标识。</span><span class="sxs-lookup"><span data-stu-id="ff402-130">It can provide reports about the objects on the managed heap, including an identification of objects in each generation.</span></span> <span data-ttu-id="ff402-131">有关详细信息，请参阅[分析概述](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="ff402-131">For more information, see [Profiling Overview](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md).</span></span>
 
-<span data-ttu-id="ea821-132">探查器可以提供全面的信息。</span><span class="sxs-lookup"><span data-stu-id="ea821-132">Profilers can provide comprehensive information.</span></span> <span data-ttu-id="ea821-133">但是，复杂的探查器可能会修改应用程序的行为。</span><span class="sxs-lookup"><span data-stu-id="ea821-133">However, complex profilers can potentially modify an application's behavior.</span></span>
+<span data-ttu-id="ff402-132">探查器可以提供全面的信息。</span><span class="sxs-lookup"><span data-stu-id="ff402-132">Profilers can provide comprehensive information.</span></span> <span data-ttu-id="ff402-133">但是，复杂的探查器可能会修改应用程序的行为。</span><span class="sxs-lookup"><span data-stu-id="ff402-133">However, complex profilers can potentially modify an application's behavior.</span></span>
 
-### <a name="application-domain-resource-monitoring"></a><span data-ttu-id="ea821-134">应用程序域资源监控</span><span class="sxs-lookup"><span data-stu-id="ea821-134">Application Domain Resource Monitoring</span></span>
+### <a name="application-domain-resource-monitoring"></a><span data-ttu-id="ff402-134">应用程序域资源监控</span><span class="sxs-lookup"><span data-stu-id="ff402-134">Application Domain Resource Monitoring</span></span>
 
-<span data-ttu-id="ea821-135">从 .NET Framework 4 开始，应用程序域资源监视 (ARM) 使主机可以通过应用程序域监视 CPU 和内存使用情况。</span><span class="sxs-lookup"><span data-stu-id="ea821-135">Starting with the .NET Framework 4, Application domain resource monitoring (ARM) enables hosts to monitor CPU and memory usage by application domain.</span></span> <span data-ttu-id="ea821-136">有关详细信息，请参阅[应用程序域资源监控](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)。</span><span class="sxs-lookup"><span data-stu-id="ea821-136">For more information, see [Application Domain Resource Monitoring](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).</span></span>
+<span data-ttu-id="ff402-135">从 .NET Framework 4 开始，应用程序域资源监视 (ARM) 使主机可以通过应用程序域监视 CPU 和内存使用情况。</span><span class="sxs-lookup"><span data-stu-id="ff402-135">Starting with the .NET Framework 4, Application domain resource monitoring (ARM) enables hosts to monitor CPU and memory usage by application domain.</span></span> <span data-ttu-id="ff402-136">有关详细信息，请参阅[应用程序域资源监控](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)。</span><span class="sxs-lookup"><span data-stu-id="ff402-136">For more information, see [Application Domain Resource Monitoring](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).</span></span>
 
-## <a name="troubleshooting-performance-issues"></a><span data-ttu-id="ea821-137">故障排除性能问题</span><span class="sxs-lookup"><span data-stu-id="ea821-137">Troubleshooting Performance Issues</span></span>
+## <a name="troubleshooting-performance-issues"></a><span data-ttu-id="ff402-137">故障排除性能问题</span><span class="sxs-lookup"><span data-stu-id="ff402-137">Troubleshooting Performance Issues</span></span>
 
-<span data-ttu-id="ea821-138">第一步是[确定问题是否确实为垃圾回收](#IsGC)。</span><span class="sxs-lookup"><span data-stu-id="ea821-138">The first step is to [determine whether the issue is actually garbage collection](#IsGC).</span></span> <span data-ttu-id="ea821-139">如果确定是，则从以下列表进行选择，以解决该问题。</span><span class="sxs-lookup"><span data-stu-id="ea821-139">If you determine that it is, select from the following list to troubleshoot the problem.</span></span>
+<span data-ttu-id="ff402-138">第一步是[确定问题是否确实为垃圾回收](#IsGC)。</span><span class="sxs-lookup"><span data-stu-id="ff402-138">The first step is to [determine whether the issue is actually garbage collection](#IsGC).</span></span> <span data-ttu-id="ff402-139">如果确定是，则从以下列表进行选择，以解决该问题。</span><span class="sxs-lookup"><span data-stu-id="ff402-139">If you determine that it is, select from the following list to troubleshoot the problem.</span></span>
 
-- [<span data-ttu-id="ea821-140">引发内存不足异常</span><span class="sxs-lookup"><span data-stu-id="ea821-140">An out-of-memory exception is thrown</span></span>](#Issue_OOM)
+- [<span data-ttu-id="ff402-140">引发内存不足异常</span><span class="sxs-lookup"><span data-stu-id="ff402-140">An out-of-memory exception is thrown</span></span>](#Issue_OOM)
 
-- [<span data-ttu-id="ea821-141">进程占用过多内存</span><span class="sxs-lookup"><span data-stu-id="ea821-141">The process uses too much memory</span></span>](#Issue_TooMuchMemory)
+- [<span data-ttu-id="ff402-141">进程占用过多内存</span><span class="sxs-lookup"><span data-stu-id="ff402-141">The process uses too much memory</span></span>](#Issue_TooMuchMemory)
 
-- [<span data-ttu-id="ea821-142">垃圾回收器回收对象的速度不够快</span><span class="sxs-lookup"><span data-stu-id="ea821-142">The garbage collector does not reclaim objects fast enough</span></span>](#Issue_NotFastEnough)
+- [<span data-ttu-id="ff402-142">垃圾回收器回收对象的速度不够快</span><span class="sxs-lookup"><span data-stu-id="ff402-142">The garbage collector does not reclaim objects fast enough</span></span>](#Issue_NotFastEnough)
 
-- [<span data-ttu-id="ea821-143">托管堆太零碎</span><span class="sxs-lookup"><span data-stu-id="ea821-143">The managed heap is too fragmented</span></span>](#Issue_Fragmentation)
+- [<span data-ttu-id="ff402-143">托管堆太零碎</span><span class="sxs-lookup"><span data-stu-id="ff402-143">The managed heap is too fragmented</span></span>](#Issue_Fragmentation)
 
-- [<span data-ttu-id="ea821-144">垃圾回收暂停时间太长</span><span class="sxs-lookup"><span data-stu-id="ea821-144">Garbage collection pauses are too long</span></span>](#Issue_LongPauses)
+- [<span data-ttu-id="ff402-144">垃圾回收暂停时间太长</span><span class="sxs-lookup"><span data-stu-id="ff402-144">Garbage collection pauses are too long</span></span>](#Issue_LongPauses)
 
-- [<span data-ttu-id="ea821-145">第 0 代太大</span><span class="sxs-lookup"><span data-stu-id="ea821-145">Generation 0 is too big</span></span>](#Issue_Gen0)
+- [<span data-ttu-id="ff402-145">第 0 代太大</span><span class="sxs-lookup"><span data-stu-id="ff402-145">Generation 0 is too big</span></span>](#Issue_Gen0)
 
-- [<span data-ttu-id="ea821-146">垃圾回收期间的 CPU 使用率太高</span><span class="sxs-lookup"><span data-stu-id="ea821-146">CPU usage during a garbage collection is too high</span></span>](#Issue_HighCPU)
+- [<span data-ttu-id="ff402-146">垃圾回收期间的 CPU 使用率太高</span><span class="sxs-lookup"><span data-stu-id="ff402-146">CPU usage during a garbage collection is too high</span></span>](#Issue_HighCPU)
 
 <a name="Issue_OOM"></a>
 
-### <a name="issue-an-out-of-memory-exception-is-thrown"></a><span data-ttu-id="ea821-147">问题：抛出内存不足异常</span><span class="sxs-lookup"><span data-stu-id="ea821-147">Issue: An Out-of-Memory Exception Is Thrown</span></span>
+### <a name="issue-an-out-of-memory-exception-is-thrown"></a><span data-ttu-id="ff402-147">问题：抛出内存不足异常</span><span class="sxs-lookup"><span data-stu-id="ff402-147">Issue: An Out-of-Memory Exception Is Thrown</span></span>
 
-<span data-ttu-id="ea821-148">对于引发的托管 <xref:System.OutOfMemoryException>，存在以下两种合理的情况：</span><span class="sxs-lookup"><span data-stu-id="ea821-148">There are two legitimate cases for a managed <xref:System.OutOfMemoryException> to be thrown:</span></span>
+<span data-ttu-id="ff402-148">对于引发的托管 <xref:System.OutOfMemoryException>，存在以下两种合理的情况：</span><span class="sxs-lookup"><span data-stu-id="ff402-148">There are two legitimate cases for a managed <xref:System.OutOfMemoryException> to be thrown:</span></span>
 
-- <span data-ttu-id="ea821-149">虚拟内存不足。</span><span class="sxs-lookup"><span data-stu-id="ea821-149">Running out of virtual memory.</span></span>
+- <span data-ttu-id="ff402-149">虚拟内存不足。</span><span class="sxs-lookup"><span data-stu-id="ff402-149">Running out of virtual memory.</span></span>
 
-  <span data-ttu-id="ea821-150">垃圾回收器按预先确定大小的分段来分配系统内存。</span><span class="sxs-lookup"><span data-stu-id="ea821-150">The garbage collector allocates memory from the system in segments of a pre-determined size.</span></span> <span data-ttu-id="ea821-151">如果分配需要其他段，但在进程的虚拟内存空间中没有剩余的连续可用块了，则托管堆的分配将失败。</span><span class="sxs-lookup"><span data-stu-id="ea821-151">If an allocation requires an additional segment, but there is no contiguous free block left in the process's virtual memory space, the allocation for the managed heap will fail.</span></span>
+  <span data-ttu-id="ff402-150">垃圾回收器按预先确定大小的分段来分配系统内存。</span><span class="sxs-lookup"><span data-stu-id="ff402-150">The garbage collector allocates memory from the system in segments of a pre-determined size.</span></span> <span data-ttu-id="ff402-151">如果分配需要其他段，但在进程的虚拟内存空间中没有剩余的连续可用块了，则托管堆的分配将失败。</span><span class="sxs-lookup"><span data-stu-id="ff402-151">If an allocation requires an additional segment, but there is no contiguous free block left in the process's virtual memory space, the allocation for the managed heap will fail.</span></span>
 
-- <span data-ttu-id="ea821-152">没有足够的物理内存来分配。</span><span class="sxs-lookup"><span data-stu-id="ea821-152">Not having enough physical memory to allocate.</span></span>
+- <span data-ttu-id="ff402-152">没有足够的物理内存来分配。</span><span class="sxs-lookup"><span data-stu-id="ff402-152">Not having enough physical memory to allocate.</span></span>
 
-|<span data-ttu-id="ea821-153">性能检查</span><span class="sxs-lookup"><span data-stu-id="ea821-153">Performance checks</span></span>|
+|<span data-ttu-id="ff402-153">性能检查</span><span class="sxs-lookup"><span data-stu-id="ff402-153">Performance checks</span></span>|
 |------------------------|
-|[<span data-ttu-id="ea821-154">确定是否已托管内存不足异常。</span><span class="sxs-lookup"><span data-stu-id="ea821-154">Determine whether the out-of-memory exception is managed.</span></span>](#OOMIsManaged)<br /><br /> [<span data-ttu-id="ea821-155">确定可保留的虚拟内存量。</span><span class="sxs-lookup"><span data-stu-id="ea821-155">Determine how much virtual memory can be reserved.</span></span>](#GetVM)<br /><br /> [<span data-ttu-id="ea821-156">确定是否有足够的物理内存。</span><span class="sxs-lookup"><span data-stu-id="ea821-156">Determine whether there is enough physical memory.</span></span>](#Physical)|
+|[<span data-ttu-id="ff402-154">确定是否已托管内存不足异常。</span><span class="sxs-lookup"><span data-stu-id="ff402-154">Determine whether the out-of-memory exception is managed.</span></span>](#OOMIsManaged)<br /><br /> [<span data-ttu-id="ff402-155">确定可保留的虚拟内存量。</span><span class="sxs-lookup"><span data-stu-id="ff402-155">Determine how much virtual memory can be reserved.</span></span>](#GetVM)<br /><br /> [<span data-ttu-id="ff402-156">确定是否有足够的物理内存。</span><span class="sxs-lookup"><span data-stu-id="ff402-156">Determine whether there is enough physical memory.</span></span>](#Physical)|
 
-<span data-ttu-id="ea821-157">如果确定异常不合法，请使用以下信息与 Microsoft 客户服务和支持联系：</span><span class="sxs-lookup"><span data-stu-id="ea821-157">If you determine that the exception is not legitimate, contact Microsoft Customer Service and Support with the following information:</span></span>
+<span data-ttu-id="ff402-157">如果确定异常不合法，请使用以下信息与 Microsoft 客户服务和支持联系：</span><span class="sxs-lookup"><span data-stu-id="ff402-157">If you determine that the exception is not legitimate, contact Microsoft Customer Service and Support with the following information:</span></span>
 
-- <span data-ttu-id="ea821-158">带有托管内存不足异常的堆栈。</span><span class="sxs-lookup"><span data-stu-id="ea821-158">The stack with the managed out-of-memory exception.</span></span>
+- <span data-ttu-id="ff402-158">带有托管内存不足异常的堆栈。</span><span class="sxs-lookup"><span data-stu-id="ff402-158">The stack with the managed out-of-memory exception.</span></span>
 
-- <span data-ttu-id="ea821-159">完整内存转储。</span><span class="sxs-lookup"><span data-stu-id="ea821-159">Full memory dump.</span></span>
+- <span data-ttu-id="ff402-159">完整内存转储。</span><span class="sxs-lookup"><span data-stu-id="ff402-159">Full memory dump.</span></span>
 
-- <span data-ttu-id="ea821-160">证明这不是合法内存不足异常的数据包括显示虚拟或物理内存不是问题的数据。</span><span class="sxs-lookup"><span data-stu-id="ea821-160">Data that proves that it is not a legitimate out-of-memory exception, including data that shows that virtual or physical memory is not an issue.</span></span>
+- <span data-ttu-id="ff402-160">证明这不是合法内存不足异常的数据包括显示虚拟或物理内存不是问题的数据。</span><span class="sxs-lookup"><span data-stu-id="ff402-160">Data that proves that it is not a legitimate out-of-memory exception, including data that shows that virtual or physical memory is not an issue.</span></span>
 
 <a name="Issue_TooMuchMemory"></a>
 
-### <a name="issue-the-process-uses-too-much-memory"></a><span data-ttu-id="ea821-161">问题：进程占用过多内存</span><span class="sxs-lookup"><span data-stu-id="ea821-161">Issue: The Process Uses Too Much Memory</span></span>
+### <a name="issue-the-process-uses-too-much-memory"></a><span data-ttu-id="ff402-161">问题：进程占用过多内存</span><span class="sxs-lookup"><span data-stu-id="ff402-161">Issue: The Process Uses Too Much Memory</span></span>
 
-<span data-ttu-id="ea821-162">通常会假设 Windows 任务管理器“性能”  选项卡上的内存使用量显示可以指示何时使用了太多内存。</span><span class="sxs-lookup"><span data-stu-id="ea821-162">A common assumption is that the memory usage display on the **Performance** tab of Windows Task Manager can indicate when too much memory is being used.</span></span> <span data-ttu-id="ea821-163">然而，该显示与工作集相关；它不提供有关虚拟内存使用量的信息。</span><span class="sxs-lookup"><span data-stu-id="ea821-163">However, that display pertains to the working set; it does not provide information about virtual memory usage.</span></span>
+<span data-ttu-id="ff402-162">通常会假设 Windows 任务管理器“性能”  选项卡上的内存使用量显示可以指示何时使用了太多内存。</span><span class="sxs-lookup"><span data-stu-id="ff402-162">A common assumption is that the memory usage display on the **Performance** tab of Windows Task Manager can indicate when too much memory is being used.</span></span> <span data-ttu-id="ff402-163">然而，该显示与工作集相关；它不提供有关虚拟内存使用量的信息。</span><span class="sxs-lookup"><span data-stu-id="ff402-163">However, that display pertains to the working set; it does not provide information about virtual memory usage.</span></span>
 
-<span data-ttu-id="ea821-164">如果确定问题是托管堆引发的，必须测量一段时间的托管堆，以确定模式。</span><span class="sxs-lookup"><span data-stu-id="ea821-164">If you determine that the issue is caused by the managed heap, you must measure the managed heap over time to determine any patterns.</span></span>
+<span data-ttu-id="ff402-164">如果确定问题是托管堆引发的，必须测量一段时间的托管堆，以确定模式。</span><span class="sxs-lookup"><span data-stu-id="ff402-164">If you determine that the issue is caused by the managed heap, you must measure the managed heap over time to determine any patterns.</span></span>
 
-<span data-ttu-id="ea821-165">如果确定问题不是托管堆引发的，则必须使用本地调试。</span><span class="sxs-lookup"><span data-stu-id="ea821-165">If you determine that the problem is not caused by the managed heap, you must use native debugging.</span></span>
+<span data-ttu-id="ff402-165">如果确定问题不是托管堆引发的，则必须使用本地调试。</span><span class="sxs-lookup"><span data-stu-id="ff402-165">If you determine that the problem is not caused by the managed heap, you must use native debugging.</span></span>
 
-|<span data-ttu-id="ea821-166">性能检查</span><span class="sxs-lookup"><span data-stu-id="ea821-166">Performance checks</span></span>|
+|<span data-ttu-id="ff402-166">性能检查</span><span class="sxs-lookup"><span data-stu-id="ff402-166">Performance checks</span></span>|
 |------------------------|
-|[<span data-ttu-id="ea821-167">确定可保留的虚拟内存量。</span><span class="sxs-lookup"><span data-stu-id="ea821-167">Determine how much virtual memory can be reserved.</span></span>](#GetVM)<br /><br /> [<span data-ttu-id="ea821-168">确定托管堆的内存提交量。</span><span class="sxs-lookup"><span data-stu-id="ea821-168">Determine how much memory the managed heap is committing.</span></span>](#ManagedHeapCommit)<br /><br /> [<span data-ttu-id="ea821-169">确定托管堆的内存保留量。</span><span class="sxs-lookup"><span data-stu-id="ea821-169">Determine how much memory the managed heap reserves.</span></span>](#ManagedHeapReserve)<br /><br /> [<span data-ttu-id="ea821-170">确定第 2 代中的大型对象。</span><span class="sxs-lookup"><span data-stu-id="ea821-170">Determine large objects in generation 2.</span></span>](#ExamineGen2)<br /><br /> [<span data-ttu-id="ea821-171">确定对对象的引用。</span><span class="sxs-lookup"><span data-stu-id="ea821-171">Determine references to objects.</span></span>](#ObjRef)|
+|[<span data-ttu-id="ff402-167">确定可保留的虚拟内存量。</span><span class="sxs-lookup"><span data-stu-id="ff402-167">Determine how much virtual memory can be reserved.</span></span>](#GetVM)<br /><br /> [<span data-ttu-id="ff402-168">确定托管堆的内存提交量。</span><span class="sxs-lookup"><span data-stu-id="ff402-168">Determine how much memory the managed heap is committing.</span></span>](#ManagedHeapCommit)<br /><br /> [<span data-ttu-id="ff402-169">确定托管堆的内存保留量。</span><span class="sxs-lookup"><span data-stu-id="ff402-169">Determine how much memory the managed heap reserves.</span></span>](#ManagedHeapReserve)<br /><br /> [<span data-ttu-id="ff402-170">确定第 2 代中的大型对象。</span><span class="sxs-lookup"><span data-stu-id="ff402-170">Determine large objects in generation 2.</span></span>](#ExamineGen2)<br /><br /> [<span data-ttu-id="ff402-171">确定对对象的引用。</span><span class="sxs-lookup"><span data-stu-id="ff402-171">Determine references to objects.</span></span>](#ObjRef)|
 
 <a name="Issue_NotFastEnough"></a>
 
-### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a><span data-ttu-id="ea821-172">问题：垃圾回收器回收对象的速度不够快</span><span class="sxs-lookup"><span data-stu-id="ea821-172">Issue: The Garbage Collector Does Not Reclaim Objects Fast Enough</span></span>
+### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a><span data-ttu-id="ff402-172">问题：垃圾回收器回收对象的速度不够快</span><span class="sxs-lookup"><span data-stu-id="ff402-172">Issue: The Garbage Collector Does Not Reclaim Objects Fast Enough</span></span>
 
-<span data-ttu-id="ea821-173">当出现对象好像未按垃圾回收的预期进行回收的情况时，必须确定是否存在任何对这些对象的强引用。</span><span class="sxs-lookup"><span data-stu-id="ea821-173">When it appears as if objects are not being reclaimed as expected for garbage collection, you must determine if there are any strong references to those objects.</span></span>
+<span data-ttu-id="ff402-173">当出现对象好像未按垃圾回收的预期进行回收的情况时，必须确定是否存在任何对这些对象的强引用。</span><span class="sxs-lookup"><span data-stu-id="ff402-173">When it appears as if objects are not being reclaimed as expected for garbage collection, you must determine if there are any strong references to those objects.</span></span>
 
-<span data-ttu-id="ea821-174">如果没有对包含死对象的一代进行垃圾回收，这表示尚未运行死对象的终结器，你也可能会遇到以上问题。</span><span class="sxs-lookup"><span data-stu-id="ea821-174">You may also encounter this issue if there has been no garbage collection for the generation that contains a dead object, which indicates that the finalizer for the dead object has not been run.</span></span> <span data-ttu-id="ea821-175">例如，当正在运行一个单线程单元 (STA) 应用程序并且服务终结器队列的线程不能调用至其中时，可能发生这种问题。</span><span class="sxs-lookup"><span data-stu-id="ea821-175">For example, this is possible when you are running a single-threaded apartment (STA) application and the thread that services the finalizer queue cannot call into it.</span></span>
+<span data-ttu-id="ff402-174">如果没有对包含死对象的一代进行垃圾回收，这表示尚未运行死对象的终结器，你也可能会遇到以上问题。</span><span class="sxs-lookup"><span data-stu-id="ff402-174">You may also encounter this issue if there has been no garbage collection for the generation that contains a dead object, which indicates that the finalizer for the dead object has not been run.</span></span> <span data-ttu-id="ff402-175">例如，当正在运行一个单线程单元 (STA) 应用程序并且服务终结器队列的线程不能调用至其中时，可能发生这种问题。</span><span class="sxs-lookup"><span data-stu-id="ff402-175">For example, this is possible when you are running a single-threaded apartment (STA) application and the thread that services the finalizer queue cannot call into it.</span></span>
 
-|<span data-ttu-id="ea821-176">性能检查</span><span class="sxs-lookup"><span data-stu-id="ea821-176">Performance checks</span></span>|
+|<span data-ttu-id="ff402-176">性能检查</span><span class="sxs-lookup"><span data-stu-id="ff402-176">Performance checks</span></span>|
 |------------------------|
-|[<span data-ttu-id="ea821-177">检查对对象的引用。</span><span class="sxs-lookup"><span data-stu-id="ea821-177">Check references to objects.</span></span>](#ObjRef)<br /><br /> [<span data-ttu-id="ea821-178">确定是否已运行终结器。</span><span class="sxs-lookup"><span data-stu-id="ea821-178">Determine whether a finalizer has been run.</span></span>](#Induce)<br /><br /> [<span data-ttu-id="ea821-179">确定是否存在等待终结的对象。</span><span class="sxs-lookup"><span data-stu-id="ea821-179">Determine whether there are objects waiting to be finalized.</span></span>](#Finalize)|
+|[<span data-ttu-id="ff402-177">检查对对象的引用。</span><span class="sxs-lookup"><span data-stu-id="ff402-177">Check references to objects.</span></span>](#ObjRef)<br /><br /> [<span data-ttu-id="ff402-178">确定是否已运行终结器。</span><span class="sxs-lookup"><span data-stu-id="ff402-178">Determine whether a finalizer has been run.</span></span>](#Induce)<br /><br /> [<span data-ttu-id="ff402-179">确定是否存在等待终结的对象。</span><span class="sxs-lookup"><span data-stu-id="ff402-179">Determine whether there are objects waiting to be finalized.</span></span>](#Finalize)|
 
 <a name="Issue_Fragmentation"></a>
 
-### <a name="issue-the-managed-heap-is-too-fragmented"></a><span data-ttu-id="ea821-180">问题：托管堆太零碎</span><span class="sxs-lookup"><span data-stu-id="ea821-180">Issue: The Managed Heap Is Too fragmented</span></span>
+### <a name="issue-the-managed-heap-is-too-fragmented"></a><span data-ttu-id="ff402-180">问题：托管堆太零碎</span><span class="sxs-lookup"><span data-stu-id="ff402-180">Issue: The Managed Heap Is Too fragmented</span></span>
 
-<span data-ttu-id="ea821-181">碎片级别将计算为可用空间占这一代已分配的总内存的比率。</span><span class="sxs-lookup"><span data-stu-id="ea821-181">The fragmentation level is calculated as the ratio of free space over the total allocated memory for the generation.</span></span> <span data-ttu-id="ea821-182">对于第 2 代，可接受的碎片级别不能超过 20%。</span><span class="sxs-lookup"><span data-stu-id="ea821-182">For generation 2, an acceptable level of fragmentation is no more than 20%.</span></span> <span data-ttu-id="ea821-183">因为第 2 代可以变得很大，所以碎片的比率比绝对值更重要。</span><span class="sxs-lookup"><span data-stu-id="ea821-183">Because generation 2 can get very big, the ratio of fragmentation is more important than the absolute value.</span></span>
+<span data-ttu-id="ff402-181">碎片级别将计算为可用空间占这一代已分配的总内存的比率。</span><span class="sxs-lookup"><span data-stu-id="ff402-181">The fragmentation level is calculated as the ratio of free space over the total allocated memory for the generation.</span></span> <span data-ttu-id="ff402-182">对于第 2 代，可接受的碎片级别不能超过 20%。</span><span class="sxs-lookup"><span data-stu-id="ff402-182">For generation 2, an acceptable level of fragmentation is no more than 20%.</span></span> <span data-ttu-id="ff402-183">因为第 2 代可以变得很大，所以碎片的比率比绝对值更重要。</span><span class="sxs-lookup"><span data-stu-id="ff402-183">Because generation 2 can get very big, the ratio of fragmentation is more important than the absolute value.</span></span>
 
-<span data-ttu-id="ea821-184">第 0 代中存在大量可用空间，这不是问题，因为新的对象将在其中进行分配。</span><span class="sxs-lookup"><span data-stu-id="ea821-184">Having lots of free space in generation 0 is not a problem because this is the generation where new objects are allocated.</span></span>
+<span data-ttu-id="ff402-184">第 0 代中存在大量可用空间，这不是问题，因为新的对象将在其中进行分配。</span><span class="sxs-lookup"><span data-stu-id="ff402-184">Having lots of free space in generation 0 is not a problem because this is the generation where new objects are allocated.</span></span>
 
-<span data-ttu-id="ea821-185">碎片始终出现在大型对象堆中，因为它没有进行压缩。</span><span class="sxs-lookup"><span data-stu-id="ea821-185">Fragmentation always occurs in the large object heap because it is not compacted.</span></span> <span data-ttu-id="ea821-186">相邻的可用对象会自然地折叠至一个单个的空间，以满足大型对象的分配请求。</span><span class="sxs-lookup"><span data-stu-id="ea821-186">Free objects that are adjacent are naturally collapsed into a single space to satisfy large object allocation requests.</span></span>
+<span data-ttu-id="ff402-185">碎片始终出现在大型对象堆中，因为它没有进行压缩。</span><span class="sxs-lookup"><span data-stu-id="ff402-185">Fragmentation always occurs in the large object heap because it is not compacted.</span></span> <span data-ttu-id="ff402-186">相邻的可用对象会自然地折叠至一个单个的空间，以满足大型对象的分配请求。</span><span class="sxs-lookup"><span data-stu-id="ff402-186">Free objects that are adjacent are naturally collapsed into a single space to satisfy large object allocation requests.</span></span>
 
-<span data-ttu-id="ea821-187">在第 1 代和第 2 代中，碎片可能会成为问题。</span><span class="sxs-lookup"><span data-stu-id="ea821-187">Fragmentation can become a problem in generation 1 and generation 2.</span></span> <span data-ttu-id="ea821-188">如果它们在垃圾回收后还有大量的可用空间，则应用程序对象的使用可能需要进行修改，并且应考虑重新评估长期对象的生存期。</span><span class="sxs-lookup"><span data-stu-id="ea821-188">If these generations have a large amount of free space after a garbage collection, an application's object usage may need modification, and you should consider re-evaluating the lifetime of long-term objects.</span></span>
+<span data-ttu-id="ff402-187">在第 1 代和第 2 代中，碎片可能会成为问题。</span><span class="sxs-lookup"><span data-stu-id="ff402-187">Fragmentation can become a problem in generation 1 and generation 2.</span></span> <span data-ttu-id="ff402-188">如果它们在垃圾回收后还有大量的可用空间，则应用程序对象的使用可能需要进行修改，并且应考虑重新评估长期对象的生存期。</span><span class="sxs-lookup"><span data-stu-id="ff402-188">If these generations have a large amount of free space after a garbage collection, an application's object usage may need modification, and you should consider re-evaluating the lifetime of long-term objects.</span></span>
 
-<span data-ttu-id="ea821-189">固定对象过多可能会增加碎片。</span><span class="sxs-lookup"><span data-stu-id="ea821-189">Excessive pinning of objects can increase fragmentation.</span></span> <span data-ttu-id="ea821-190">如果碎片太多，则可以固定许多对象。</span><span class="sxs-lookup"><span data-stu-id="ea821-190">If fragmentation is high, too many objects could be pinned.</span></span>
+<span data-ttu-id="ff402-189">固定对象过多可能会增加碎片。</span><span class="sxs-lookup"><span data-stu-id="ff402-189">Excessive pinning of objects can increase fragmentation.</span></span> <span data-ttu-id="ff402-190">如果碎片太多，则可以固定许多对象。</span><span class="sxs-lookup"><span data-stu-id="ff402-190">If fragmentation is high, too many objects could have been pinned.</span></span>
 
-<span data-ttu-id="ea821-191">如果虚拟内存的碎片阻止垃圾回收器添加段，原因可能是下列之一：</span><span class="sxs-lookup"><span data-stu-id="ea821-191">If fragmentation of virtual memory is preventing the garbage collector from adding segments, the causes could be one of the following:</span></span>
+<span data-ttu-id="ff402-191">如果虚拟内存的碎片阻止垃圾回收器添加段，原因可能是下列之一：</span><span class="sxs-lookup"><span data-stu-id="ff402-191">If fragmentation of virtual memory is preventing the garbage collector from adding segments, the causes could be one of the following:</span></span>
 
-- <span data-ttu-id="ea821-192">频繁加载和卸载许多小的程序集。</span><span class="sxs-lookup"><span data-stu-id="ea821-192">Frequent loading and unloading of many small assemblies.</span></span>
+- <span data-ttu-id="ff402-192">频繁加载和卸载许多小的程序集。</span><span class="sxs-lookup"><span data-stu-id="ff402-192">Frequent loading and unloading of many small assemblies.</span></span>
 
-- <span data-ttu-id="ea821-193">与非托管代码互操作时，保留了太多对 COM 对象的引用。</span><span class="sxs-lookup"><span data-stu-id="ea821-193">Holding too many references to COM objects when interoperating with unmanaged code.</span></span>
+- <span data-ttu-id="ff402-193">与非托管代码互操作时，保留了太多对 COM 对象的引用。</span><span class="sxs-lookup"><span data-stu-id="ff402-193">Holding too many references to COM objects when interoperating with unmanaged code.</span></span>
 
-- <span data-ttu-id="ea821-194">大型暂时性对象的创建会导致大型对象堆频繁分配和释放堆段。</span><span class="sxs-lookup"><span data-stu-id="ea821-194">Creation of large transient objects, which causes the large object heap to allocate and free heap segments frequently.</span></span>
+- <span data-ttu-id="ff402-194">大型暂时性对象的创建会导致大型对象堆频繁分配和释放堆段。</span><span class="sxs-lookup"><span data-stu-id="ff402-194">Creation of large transient objects, which causes the large object heap to allocate and free heap segments frequently.</span></span>
 
-  <span data-ttu-id="ea821-195">当承载 CLR 时，应用程序可以请求垃圾回收器保留其片段。</span><span class="sxs-lookup"><span data-stu-id="ea821-195">When hosting the CLR, an application can request that the garbage collector retain its segments.</span></span> <span data-ttu-id="ea821-196">这将减少段分配的频率。</span><span class="sxs-lookup"><span data-stu-id="ea821-196">This reduces the frequency of segment allocations.</span></span> <span data-ttu-id="ea821-197">通过使用 [STARTUP_FLAGS 枚举](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)中的 STARTUP_HOARD_GC_VM 标志来完成。</span><span class="sxs-lookup"><span data-stu-id="ea821-197">This is accomplished by using the STARTUP_HOARD_GC_VM flag in the [STARTUP_FLAGS Enumeration](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).</span></span>
+  <span data-ttu-id="ff402-195">当承载 CLR 时，应用程序可以请求垃圾回收器保留其片段。</span><span class="sxs-lookup"><span data-stu-id="ff402-195">When hosting the CLR, an application can request that the garbage collector retain its segments.</span></span> <span data-ttu-id="ff402-196">这将减少段分配的频率。</span><span class="sxs-lookup"><span data-stu-id="ff402-196">This reduces the frequency of segment allocations.</span></span> <span data-ttu-id="ff402-197">通过使用 [STARTUP_FLAGS 枚举](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)中的 STARTUP_HOARD_GC_VM 标志来完成。</span><span class="sxs-lookup"><span data-stu-id="ff402-197">This is accomplished by using the STARTUP_HOARD_GC_VM flag in the [STARTUP_FLAGS Enumeration](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).</span></span>
 
-|<span data-ttu-id="ea821-198">性能检查</span><span class="sxs-lookup"><span data-stu-id="ea821-198">Performance checks</span></span>|
+|<span data-ttu-id="ff402-198">性能检查</span><span class="sxs-lookup"><span data-stu-id="ff402-198">Performance checks</span></span>|
 |------------------------|
-|[<span data-ttu-id="ea821-199">确定托管堆中的可用空间量。</span><span class="sxs-lookup"><span data-stu-id="ea821-199">Determine the amount of free space in the managed heap.</span></span>](#Fragmented)<br /><br /> [<span data-ttu-id="ea821-200">确定固定对象的数目。</span><span class="sxs-lookup"><span data-stu-id="ea821-200">Determine the number of pinned objects.</span></span>](#Pinned)|
+|[<span data-ttu-id="ff402-199">确定托管堆中的可用空间量。</span><span class="sxs-lookup"><span data-stu-id="ff402-199">Determine the amount of free space in the managed heap.</span></span>](#Fragmented)<br /><br /> [<span data-ttu-id="ff402-200">确定固定对象的数目。</span><span class="sxs-lookup"><span data-stu-id="ff402-200">Determine the number of pinned objects.</span></span>](#Pinned)|
 
-<span data-ttu-id="ea821-201">如果认为没有出现碎片的合理原因，请与 Microsoft 客户服务和支持联系。</span><span class="sxs-lookup"><span data-stu-id="ea821-201">If you think that there is no legitimate cause for the fragmentation, contact Microsoft Customer Service and Support.</span></span>
+<span data-ttu-id="ff402-201">如果认为没有出现碎片的合理原因，请与 Microsoft 客户服务和支持联系。</span><span class="sxs-lookup"><span data-stu-id="ff402-201">If you think that there is no legitimate cause for the fragmentation, contact Microsoft Customer Service and Support.</span></span>
 
 <a name="Issue_LongPauses"></a>
 
-### <a name="issue-garbage-collection-pauses-are-too-long"></a><span data-ttu-id="ea821-202">问题：垃圾回收暂停时间太长</span><span class="sxs-lookup"><span data-stu-id="ea821-202">Issue: Garbage Collection Pauses Are Too Long</span></span>
+### <a name="issue-garbage-collection-pauses-are-too-long"></a><span data-ttu-id="ff402-202">问题：垃圾回收暂停时间太长</span><span class="sxs-lookup"><span data-stu-id="ff402-202">Issue: Garbage Collection Pauses Are Too Long</span></span>
 
-<span data-ttu-id="ea821-203">由于垃圾回收软实时操作，因此应用程序必须能够容忍暂停。</span><span class="sxs-lookup"><span data-stu-id="ea821-203">Garbage collection operates in soft real time, so an application must be able to tolerate some pauses.</span></span> <span data-ttu-id="ea821-204">软实时的一个衡量标准是 95% 的操作必须按时完成。</span><span class="sxs-lookup"><span data-stu-id="ea821-204">A criterion for soft real time is that 95% of the operations must finish on time.</span></span>
+<span data-ttu-id="ff402-203">由于垃圾回收软实时操作，因此应用程序必须能够容忍暂停。</span><span class="sxs-lookup"><span data-stu-id="ff402-203">Garbage collection operates in soft real time, so an application must be able to tolerate some pauses.</span></span> <span data-ttu-id="ff402-204">软实时的一个衡量标准是 95% 的操作必须按时完成。</span><span class="sxs-lookup"><span data-stu-id="ff402-204">A criterion for soft real time is that 95% of the operations must finish on time.</span></span>
 
-<span data-ttu-id="ea821-205">在并发垃圾回收中，允许托管线程在一个回收过程中运行，这意味着暂停时间会非常短。</span><span class="sxs-lookup"><span data-stu-id="ea821-205">In concurrent garbage collection, managed threads are allowed to run during a collection, which means that pauses are very minimal.</span></span>
+<span data-ttu-id="ff402-205">在并发垃圾回收中，允许托管线程在一个回收过程中运行，这意味着暂停时间会非常短。</span><span class="sxs-lookup"><span data-stu-id="ff402-205">In concurrent garbage collection, managed threads are allowed to run during a collection, which means that pauses are very minimal.</span></span>
 
-<span data-ttu-id="ea821-206">短暂的垃圾回收（第 0 代和第 1 代）只会持续几毫秒，所以减少暂停时间通常是不可行的。</span><span class="sxs-lookup"><span data-stu-id="ea821-206">Ephemeral garbage collections (generations 0 and 1) last only a few milliseconds, so decreasing pauses is usually not feasible.</span></span> <span data-ttu-id="ea821-207">然而，你可以通过更改应用程序的分配请求的模式，在第 2 代回收中减少暂停。</span><span class="sxs-lookup"><span data-stu-id="ea821-207">However, you can decrease the pauses in generation 2 collections by changing the pattern of allocation requests by an application.</span></span>
+<span data-ttu-id="ff402-206">短暂的垃圾回收（第 0 代和第 1 代）只会持续几毫秒，所以减少暂停时间通常是不可行的。</span><span class="sxs-lookup"><span data-stu-id="ff402-206">Ephemeral garbage collections (generations 0 and 1) last only a few milliseconds, so decreasing pauses is usually not feasible.</span></span> <span data-ttu-id="ff402-207">然而，你可以通过更改应用程序的分配请求的模式，在第 2 代回收中减少暂停。</span><span class="sxs-lookup"><span data-stu-id="ff402-207">However, you can decrease the pauses in generation 2 collections by changing the pattern of allocation requests by an application.</span></span>
 
-<span data-ttu-id="ea821-208">另一个更准确的方法是使用[垃圾回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)。</span><span class="sxs-lookup"><span data-stu-id="ea821-208">Another, more accurate, method is to use [garbage collection ETW events](../../../docs/framework/performance/garbage-collection-etw-events.md).</span></span> <span data-ttu-id="ea821-209">可以通过为某个事件序列添加时间戳的差异来查找回收的计时。</span><span class="sxs-lookup"><span data-stu-id="ea821-209">You can find the timings for collections by adding the time stamp differences for a sequence of events.</span></span> <span data-ttu-id="ea821-210">整个集合序列包括暂停执行引擎、垃圾回收本身以及恢复执行引擎。</span><span class="sxs-lookup"><span data-stu-id="ea821-210">The whole collection sequence includes suspension of the execution engine, the garbage collection itself, and the resumption of the execution engine.</span></span>
+<span data-ttu-id="ff402-208">另一个更准确的方法是使用[垃圾回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)。</span><span class="sxs-lookup"><span data-stu-id="ff402-208">Another, more accurate, method is to use [garbage collection ETW events](../../../docs/framework/performance/garbage-collection-etw-events.md).</span></span> <span data-ttu-id="ff402-209">可以通过为某个事件序列添加时间戳的差异来查找回收的计时。</span><span class="sxs-lookup"><span data-stu-id="ff402-209">You can find the timings for collections by adding the time stamp differences for a sequence of events.</span></span> <span data-ttu-id="ff402-210">整个集合序列包括暂停执行引擎、垃圾回收本身以及恢复执行引擎。</span><span class="sxs-lookup"><span data-stu-id="ff402-210">The whole collection sequence includes suspension of the execution engine, the garbage collection itself, and the resumption of the execution engine.</span></span>
 
-<span data-ttu-id="ea821-211">可以使用[垃圾回收通知](../../../docs/standard/garbage-collection/notifications.md)，确定服务器是否将要进行第 2 代回收，以及将请求重新路由到另一个服务器是否可以减轻任何暂停问题。</span><span class="sxs-lookup"><span data-stu-id="ea821-211">You can use [Garbage Collection Notifications](../../../docs/standard/garbage-collection/notifications.md) to determine whether a server is about to have a generation 2 collection, and whether rerouting requests to another server could ease any problems with pauses.</span></span>
+<span data-ttu-id="ff402-211">可以使用[垃圾回收通知](../../../docs/standard/garbage-collection/notifications.md)，确定服务器是否将要进行第 2 代回收，以及将请求重新路由到另一个服务器是否可以减轻任何暂停问题。</span><span class="sxs-lookup"><span data-stu-id="ff402-211">You can use [Garbage Collection Notifications](../../../docs/standard/garbage-collection/notifications.md) to determine whether a server is about to have a generation 2 collection, and whether rerouting requests to another server could ease any problems with pauses.</span></span>
 
-|<span data-ttu-id="ea821-212">性能检查</span><span class="sxs-lookup"><span data-stu-id="ea821-212">Performance checks</span></span>|
+|<span data-ttu-id="ff402-212">性能检查</span><span class="sxs-lookup"><span data-stu-id="ff402-212">Performance checks</span></span>|
 |------------------------|
-|[<span data-ttu-id="ea821-213">确定垃圾回收中的时长。</span><span class="sxs-lookup"><span data-stu-id="ea821-213">Determine the length of time in a garbage collection.</span></span>](#TimeInGC)<br /><br /> [<span data-ttu-id="ea821-214">确定导致垃圾回收的原因。</span><span class="sxs-lookup"><span data-stu-id="ea821-214">Determine what caused a garbage collection.</span></span>](#Triggered)|
+|[<span data-ttu-id="ff402-213">确定垃圾回收中的时长。</span><span class="sxs-lookup"><span data-stu-id="ff402-213">Determine the length of time in a garbage collection.</span></span>](#TimeInGC)<br /><br /> [<span data-ttu-id="ff402-214">确定导致垃圾回收的原因。</span><span class="sxs-lookup"><span data-stu-id="ff402-214">Determine what caused a garbage collection.</span></span>](#Triggered)|
 
 <a name="Issue_Gen0"></a>
 
-### <a name="issue-generation-0-is-too-big"></a><span data-ttu-id="ea821-215">问题：第 0 代太大</span><span class="sxs-lookup"><span data-stu-id="ea821-215">Issue: Generation 0 Is Too Big</span></span>
+### <a name="issue-generation-0-is-too-big"></a><span data-ttu-id="ff402-215">问题：第 0 代太大</span><span class="sxs-lookup"><span data-stu-id="ff402-215">Issue: Generation 0 Is Too Big</span></span>
 
-<span data-ttu-id="ea821-216">第 0 代可能在 64 位系统上有更多的对象，尤其是当使用服务器垃圾回收而不是工作站垃圾回收时。</span><span class="sxs-lookup"><span data-stu-id="ea821-216">Generation 0 is likely to have a larger number of objects on a 64-bit system, especially when you use server garbage collection instead of workstation garbage collection.</span></span> <span data-ttu-id="ea821-217">这是因为触发 0 代垃圾回收的阈值在这些环境中更高，且 0 代回收可以变得更大。</span><span class="sxs-lookup"><span data-stu-id="ea821-217">This is because the threshold to trigger a generation 0 garbage collection is higher in these environments, and generation 0 collections can get much bigger.</span></span> <span data-ttu-id="ea821-218">触发垃圾回收之前，当应用程序分配更多的内存时，性能将会提高。</span><span class="sxs-lookup"><span data-stu-id="ea821-218">Performance is improved when an application allocates more memory before a garbage collection is triggered.</span></span>
+<span data-ttu-id="ff402-216">第 0 代可能在 64 位系统上有更多的对象，尤其是当使用服务器垃圾回收而不是工作站垃圾回收时。</span><span class="sxs-lookup"><span data-stu-id="ff402-216">Generation 0 is likely to have a larger number of objects on a 64-bit system, especially when you use server garbage collection instead of workstation garbage collection.</span></span> <span data-ttu-id="ff402-217">这是因为触发 0 代垃圾回收的阈值在这些环境中更高，且 0 代回收可以变得更大。</span><span class="sxs-lookup"><span data-stu-id="ff402-217">This is because the threshold to trigger a generation 0 garbage collection is higher in these environments, and generation 0 collections can get much bigger.</span></span> <span data-ttu-id="ff402-218">触发垃圾回收之前，当应用程序分配更多的内存时，性能将会提高。</span><span class="sxs-lookup"><span data-stu-id="ff402-218">Performance is improved when an application allocates more memory before a garbage collection is triggered.</span></span>
 
 <a name="Issue_HighCPU"></a>
 
-### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a><span data-ttu-id="ea821-219">问题：垃圾回收期间的 CPU 使用率太高</span><span class="sxs-lookup"><span data-stu-id="ea821-219">Issue: CPU Usage During a Garbage Collection Is Too High</span></span>
+### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a><span data-ttu-id="ff402-219">问题：垃圾回收期间的 CPU 使用率太高</span><span class="sxs-lookup"><span data-stu-id="ff402-219">Issue: CPU Usage During a Garbage Collection Is Too High</span></span>
 
-<span data-ttu-id="ea821-220">在垃圾回收期间，CPU 的使用率会很高。</span><span class="sxs-lookup"><span data-stu-id="ea821-220">CPU usage will be high during a garbage collection.</span></span> <span data-ttu-id="ea821-221">如果在垃圾回收中花费大量的处理时间，则回收的数量将过于频繁或回收的持续时间将过长。</span><span class="sxs-lookup"><span data-stu-id="ea821-221">If a significant amount of process time is spent in a garbage collection, the number of collections is too frequent or the collection is lasting too long.</span></span> <span data-ttu-id="ea821-222">托管堆上增加的对象分配率将导致垃圾回收更频繁地发生。</span><span class="sxs-lookup"><span data-stu-id="ea821-222">An increased allocation rate of objects on the managed heap causes garbage collection to occur more frequently.</span></span> <span data-ttu-id="ea821-223">减少分配速率可减少垃圾回收的频率。</span><span class="sxs-lookup"><span data-stu-id="ea821-223">Decreasing the allocation rate reduces the frequency of garbage collections.</span></span>
+<span data-ttu-id="ff402-220">在垃圾回收期间，CPU 的使用率会很高。</span><span class="sxs-lookup"><span data-stu-id="ff402-220">CPU usage will be high during a garbage collection.</span></span> <span data-ttu-id="ff402-221">如果在垃圾回收中花费大量的处理时间，则回收的数量将过于频繁或回收的持续时间将过长。</span><span class="sxs-lookup"><span data-stu-id="ff402-221">If a significant amount of process time is spent in a garbage collection, the number of collections is too frequent or the collection is lasting too long.</span></span> <span data-ttu-id="ff402-222">托管堆上增加的对象分配率将导致垃圾回收更频繁地发生。</span><span class="sxs-lookup"><span data-stu-id="ff402-222">An increased allocation rate of objects on the managed heap causes garbage collection to occur more frequently.</span></span> <span data-ttu-id="ff402-223">减少分配速率可减少垃圾回收的频率。</span><span class="sxs-lookup"><span data-stu-id="ff402-223">Decreasing the allocation rate reduces the frequency of garbage collections.</span></span>
 
-<span data-ttu-id="ea821-224">可以通过使用 `Allocated Bytes/second` 性能计数器来监视分配速率。</span><span class="sxs-lookup"><span data-stu-id="ea821-224">You can monitor allocation rates by using the `Allocated Bytes/second` performance counter.</span></span> <span data-ttu-id="ea821-225">有关详细信息，请参阅 [.NET Framework 中的性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)。</span><span class="sxs-lookup"><span data-stu-id="ea821-225">For more information, see [Performance Counters in the .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).</span></span>
+<span data-ttu-id="ff402-224">可以通过使用 `Allocated Bytes/second` 性能计数器来监视分配速率。</span><span class="sxs-lookup"><span data-stu-id="ff402-224">You can monitor allocation rates by using the `Allocated Bytes/second` performance counter.</span></span> <span data-ttu-id="ff402-225">有关详细信息，请参阅 [.NET Framework 中的性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)。</span><span class="sxs-lookup"><span data-stu-id="ff402-225">For more information, see [Performance Counters in the .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).</span></span>
 
-<span data-ttu-id="ea821-226">收集的持续时间是分配后幸存对象数量的主要因素。</span><span class="sxs-lookup"><span data-stu-id="ea821-226">The duration of a collection is primarily a factor of the number of objects that survive after allocation.</span></span> <span data-ttu-id="ea821-227">如果有许多对象仍需收集，则垃圾回收器必须要检查大量的内存。</span><span class="sxs-lookup"><span data-stu-id="ea821-227">The garbage collector must go through a large amount of memory if many objects remain to be collected.</span></span> <span data-ttu-id="ea821-228">压缩幸存对象的工作很耗时。</span><span class="sxs-lookup"><span data-stu-id="ea821-228">The work to compact the survivors is time-consuming.</span></span> <span data-ttu-id="ea821-229">若要确定回收期间处理对象的数量，请在指定代的垃圾回收结束时，在调试器中设置一个断点。</span><span class="sxs-lookup"><span data-stu-id="ea821-229">To determine how many objects were handled during a collection, set a breakpoint in the debugger at the end of a garbage collection for a specified generation.</span></span>
+<span data-ttu-id="ff402-226">收集的持续时间是分配后幸存对象数量的主要因素。</span><span class="sxs-lookup"><span data-stu-id="ff402-226">The duration of a collection is primarily a factor of the number of objects that survive after allocation.</span></span> <span data-ttu-id="ff402-227">如果有许多对象仍需收集，则垃圾回收器必须要检查大量的内存。</span><span class="sxs-lookup"><span data-stu-id="ff402-227">The garbage collector must go through a large amount of memory if many objects remain to be collected.</span></span> <span data-ttu-id="ff402-228">压缩幸存对象的工作很耗时。</span><span class="sxs-lookup"><span data-stu-id="ff402-228">The work to compact the survivors is time-consuming.</span></span> <span data-ttu-id="ff402-229">若要确定回收期间处理对象的数量，请在指定代的垃圾回收结束时，在调试器中设置一个断点。</span><span class="sxs-lookup"><span data-stu-id="ff402-229">To determine how many objects were handled during a collection, set a breakpoint in the debugger at the end of a garbage collection for a specified generation.</span></span>
 
-|<span data-ttu-id="ea821-230">性能检查</span><span class="sxs-lookup"><span data-stu-id="ea821-230">Performance checks</span></span>|
+|<span data-ttu-id="ff402-230">性能检查</span><span class="sxs-lookup"><span data-stu-id="ff402-230">Performance checks</span></span>|
 |------------------------|
-|[<span data-ttu-id="ea821-231">确定 CPU 的使用率过高是否由垃圾回收引起。</span><span class="sxs-lookup"><span data-stu-id="ea821-231">Determine if high CPU usage is caused by garbage collection.</span></span>](#HighCPU)<br /><br /> [<span data-ttu-id="ea821-232">在垃圾回收结束时，设置一个断点。</span><span class="sxs-lookup"><span data-stu-id="ea821-232">Set a breakpoint at the end of garbage collection.</span></span>](#GenBreak)|
+|[<span data-ttu-id="ff402-231">确定 CPU 的使用率过高是否由垃圾回收引起。</span><span class="sxs-lookup"><span data-stu-id="ff402-231">Determine if high CPU usage is caused by garbage collection.</span></span>](#HighCPU)<br /><br /> [<span data-ttu-id="ff402-232">在垃圾回收结束时，设置一个断点。</span><span class="sxs-lookup"><span data-stu-id="ff402-232">Set a breakpoint at the end of garbage collection.</span></span>](#GenBreak)|
 
-## <a name="troubleshooting-guidelines"></a><span data-ttu-id="ea821-233">故障排除指南</span><span class="sxs-lookup"><span data-stu-id="ea821-233">Troubleshooting Guidelines</span></span>
+## <a name="troubleshooting-guidelines"></a><span data-ttu-id="ff402-233">故障排除指南</span><span class="sxs-lookup"><span data-stu-id="ff402-233">Troubleshooting Guidelines</span></span>
 
-<span data-ttu-id="ea821-234">本部分介绍在开始调查时应考虑的准则。</span><span class="sxs-lookup"><span data-stu-id="ea821-234">This section describes guidelines that you should consider as you begin your investigations.</span></span>
+<span data-ttu-id="ff402-234">本部分介绍在开始调查时应考虑的准则。</span><span class="sxs-lookup"><span data-stu-id="ff402-234">This section describes guidelines that you should consider as you begin your investigations.</span></span>
 
-### <a name="workstation-or-server-garbage-collection"></a><span data-ttu-id="ea821-235">工作站或服务器垃圾回收</span><span class="sxs-lookup"><span data-stu-id="ea821-235">Workstation or Server Garbage Collection</span></span>
+### <a name="workstation-or-server-garbage-collection"></a><span data-ttu-id="ff402-235">工作站或服务器垃圾回收</span><span class="sxs-lookup"><span data-stu-id="ff402-235">Workstation or Server Garbage Collection</span></span>
 
-<span data-ttu-id="ea821-236">确定是否正在使用正确的垃圾回收类型。</span><span class="sxs-lookup"><span data-stu-id="ea821-236">Determine if you are using the correct type of garbage collection.</span></span> <span data-ttu-id="ea821-237">如果应用程序使用多个线程和对象实例，则使用服务器垃圾回收，而不是工作站垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ea821-237">If your application uses multiple threads and object instances, use server garbage collection instead of workstation garbage collection.</span></span> <span data-ttu-id="ea821-238">服务器垃圾回收在多个线程上进行操作，而工作站垃圾回收则需要应用程序的多个实例运行它们自己的垃圾回收线程并争取 CPU 时间。</span><span class="sxs-lookup"><span data-stu-id="ea821-238">Server garbage collection operates on multiple threads, whereas workstation garbage collection requires multiple instances of an application to run their own garbage collection threads and compete for CPU time.</span></span>
+<span data-ttu-id="ff402-236">确定是否正在使用正确的垃圾回收类型。</span><span class="sxs-lookup"><span data-stu-id="ff402-236">Determine if you are using the correct type of garbage collection.</span></span> <span data-ttu-id="ff402-237">如果应用程序使用多个线程和对象实例，则使用服务器垃圾回收，而不是工作站垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ff402-237">If your application uses multiple threads and object instances, use server garbage collection instead of workstation garbage collection.</span></span> <span data-ttu-id="ff402-238">服务器垃圾回收在多个线程上进行操作，而工作站垃圾回收则需要应用程序的多个实例运行它们自己的垃圾回收线程并争取 CPU 时间。</span><span class="sxs-lookup"><span data-stu-id="ff402-238">Server garbage collection operates on multiple threads, whereas workstation garbage collection requires multiple instances of an application to run their own garbage collection threads and compete for CPU time.</span></span>
 
-<span data-ttu-id="ea821-239">低负载且不常在后台（如服务）执行任务的应用程序，可以在禁用并发垃圾回收的情况下使用工作站垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ea821-239">An application that has a low load and that performs tasks infrequently in the background, such as a service, could use workstation garbage collection with concurrent garbage collection disabled.</span></span>
+<span data-ttu-id="ff402-239">低负载且不常在后台（如服务）执行任务的应用程序，可以在禁用并发垃圾回收的情况下使用工作站垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ff402-239">An application that has a low load and that performs tasks infrequently in the background, such as a service, could use workstation garbage collection with concurrent garbage collection disabled.</span></span>
 
-### <a name="when-to-measure-the-managed-heap-size"></a><span data-ttu-id="ea821-240">何时衡量托管堆的大小</span><span class="sxs-lookup"><span data-stu-id="ea821-240">When to Measure the Managed Heap Size</span></span>
+### <a name="when-to-measure-the-managed-heap-size"></a><span data-ttu-id="ff402-240">何时衡量托管堆的大小</span><span class="sxs-lookup"><span data-stu-id="ff402-240">When to Measure the Managed Heap Size</span></span>
 
-<span data-ttu-id="ea821-241">除非使用探查器，否则必须建立一致的测量模式，以有效地诊断性能问题。</span><span class="sxs-lookup"><span data-stu-id="ea821-241">Unless you are using a profiler, you will have to establish a consistent measuring pattern to effectively diagnose performance issues.</span></span> <span data-ttu-id="ea821-242">若要建立一个计划，请考虑以下几点：</span><span class="sxs-lookup"><span data-stu-id="ea821-242">Consider the following points to establish a schedule:</span></span>
+<span data-ttu-id="ff402-241">除非使用探查器，否则必须建立一致的测量模式，以有效地诊断性能问题。</span><span class="sxs-lookup"><span data-stu-id="ff402-241">Unless you are using a profiler, you will have to establish a consistent measuring pattern to effectively diagnose performance issues.</span></span> <span data-ttu-id="ff402-242">若要建立一个计划，请考虑以下几点：</span><span class="sxs-lookup"><span data-stu-id="ff402-242">Consider the following points to establish a schedule:</span></span>
 
-- <span data-ttu-id="ea821-243">如果在第 2 代垃圾回收后测量，则整个托管的堆将不再存在垃圾（死对象）。</span><span class="sxs-lookup"><span data-stu-id="ea821-243">If you measure after a generation 2 garbage collection, the entire managed heap will be free of garbage (dead objects).</span></span>
+- <span data-ttu-id="ff402-243">如果在第 2 代垃圾回收后测量，则整个托管的堆将不再存在垃圾（死对象）。</span><span class="sxs-lookup"><span data-stu-id="ff402-243">If you measure after a generation 2 garbage collection, the entire managed heap will be free of garbage (dead objects).</span></span>
 
-- <span data-ttu-id="ea821-244">如果在一个 0 代垃圾回收后立即进行测量，则尚不会收集第 1 代和 2 中的对象。</span><span class="sxs-lookup"><span data-stu-id="ea821-244">If you measure immediately after a generation 0 garbage collection, the objects in generations 1 and 2 will not be collected yet.</span></span>
+- <span data-ttu-id="ff402-244">如果在一个 0 代垃圾回收后立即进行测量，则尚不会收集第 1 代和 2 中的对象。</span><span class="sxs-lookup"><span data-stu-id="ff402-244">If you measure immediately after a generation 0 garbage collection, the objects in generations 1 and 2 will not be collected yet.</span></span>
 
-- <span data-ttu-id="ea821-245">如果在垃圾回收之前立即进行测量，则你将在垃圾回收启动之前，测量尽可能多的分配。</span><span class="sxs-lookup"><span data-stu-id="ea821-245">If you measure immediately before a garbage collection, you will measure as much allocation as possible before the garbage collection starts.</span></span>
+- <span data-ttu-id="ff402-245">如果在垃圾回收之前立即进行测量，则你将在垃圾回收启动之前，测量尽可能多的分配。</span><span class="sxs-lookup"><span data-stu-id="ff402-245">If you measure immediately before a garbage collection, you will measure as much allocation as possible before the garbage collection starts.</span></span>
 
-- <span data-ttu-id="ea821-246">在垃圾回收期间进行测量会出现问题，因为垃圾回收器的数据结构对于遍历是无效状态，可能不能提供完整的结果。</span><span class="sxs-lookup"><span data-stu-id="ea821-246">Measuring during a garbage collection is problematic, because the garbage collector data structures are not in a valid state for traversal and may not be able to give you the complete results.</span></span> <span data-ttu-id="ea821-247">这是设计使然。</span><span class="sxs-lookup"><span data-stu-id="ea821-247">This is by design.</span></span>
+- <span data-ttu-id="ff402-246">在垃圾回收期间进行测量会出现问题，因为垃圾回收器的数据结构对于遍历是无效状态，可能不能提供完整的结果。</span><span class="sxs-lookup"><span data-stu-id="ff402-246">Measuring during a garbage collection is problematic, because the garbage collector data structures are not in a valid state for traversal and may not be able to give you the complete results.</span></span> <span data-ttu-id="ff402-247">这是设计使然。</span><span class="sxs-lookup"><span data-stu-id="ff402-247">This is by design.</span></span>
 
-- <span data-ttu-id="ea821-248">当与并发垃圾回收一起使用工作站垃圾回收时，回收的对象不会进行压缩，因此，堆的大小可能会相同或更大（碎片可以使它看起来更大）。</span><span class="sxs-lookup"><span data-stu-id="ea821-248">When you are using workstation garbage collection with concurrent garbage collection, the reclaimed objects are not compacted, so the heap size can be the same or larger (fragmentation can make it appear to be larger).</span></span>
+- <span data-ttu-id="ff402-248">当与并发垃圾回收一起使用工作站垃圾回收时，回收的对象不会进行压缩，因此，堆的大小可能会相同或更大（碎片可以使它看起来更大）。</span><span class="sxs-lookup"><span data-stu-id="ff402-248">When you are using workstation garbage collection with concurrent garbage collection, the reclaimed objects are not compacted, so the heap size can be the same or larger (fragmentation can make it appear to be larger).</span></span>
 
-- <span data-ttu-id="ea821-249">第 2 代上的并发垃圾回收在物理内存加载过高时，将被延迟。</span><span class="sxs-lookup"><span data-stu-id="ea821-249">Concurrent garbage collection on generation 2 is delayed when the physical memory load is too high.</span></span>
+- <span data-ttu-id="ff402-249">第 2 代上的并发垃圾回收在物理内存加载过高时，将被延迟。</span><span class="sxs-lookup"><span data-stu-id="ff402-249">Concurrent garbage collection on generation 2 is delayed when the physical memory load is too high.</span></span>
 
-<span data-ttu-id="ea821-250">以下过程介绍如何设置一个断点，以便测量托管堆。</span><span class="sxs-lookup"><span data-stu-id="ea821-250">The following procedure describes how to set a breakpoint so that you can measure the managed heap.</span></span>
+<span data-ttu-id="ff402-250">以下过程介绍如何设置一个断点，以便测量托管堆。</span><span class="sxs-lookup"><span data-stu-id="ff402-250">The following procedure describes how to set a breakpoint so that you can measure the managed heap.</span></span>
 
 <a name="GenBreak"></a>
 
-#### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a><span data-ttu-id="ea821-251">若要在垃圾回收结束时设置一个断点</span><span class="sxs-lookup"><span data-stu-id="ea821-251">To set a breakpoint at the end of garbage collection</span></span>
+#### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a><span data-ttu-id="ff402-251">若要在垃圾回收结束时设置一个断点</span><span class="sxs-lookup"><span data-stu-id="ff402-251">To set a breakpoint at the end of garbage collection</span></span>
 
-- <span data-ttu-id="ea821-252">在加载了 SOS 调试器扩展的 WinDbg 中，键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="ea821-252">In WinDbg with the SOS debugger extension loaded, type the following command:</span></span>
+- <span data-ttu-id="ff402-252">在加载了 SOS 调试器扩展的 WinDbg 中，键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="ff402-252">In WinDbg with the SOS debugger extension loaded, type the following command:</span></span>
 
-  <span data-ttu-id="ea821-253">**bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**</span><span class="sxs-lookup"><span data-stu-id="ea821-253">**bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**</span></span>
+  <span data-ttu-id="ff402-253">**bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**</span><span class="sxs-lookup"><span data-stu-id="ff402-253">**bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**</span></span>
 
-  <span data-ttu-id="ea821-254">其中，**GcCondemnedGeneration** 设置为所需的代。</span><span class="sxs-lookup"><span data-stu-id="ea821-254">where **GcCondemnedGeneration** is set to the desired generation.</span></span> <span data-ttu-id="ea821-255">此命令要求私有符号。</span><span class="sxs-lookup"><span data-stu-id="ea821-255">This command requires private symbols.</span></span>
+  <span data-ttu-id="ff402-254">其中，**GcCondemnedGeneration** 设置为所需的代。</span><span class="sxs-lookup"><span data-stu-id="ff402-254">where **GcCondemnedGeneration** is set to the desired generation.</span></span> <span data-ttu-id="ff402-255">此命令要求私有符号。</span><span class="sxs-lookup"><span data-stu-id="ff402-255">This command requires private symbols.</span></span>
 
-  <span data-ttu-id="ea821-256">如果在已回收第 2 代对象以进行垃圾回收后执行 **RestartEE**，则此命令会强制中断。</span><span class="sxs-lookup"><span data-stu-id="ea821-256">This command forces a break if **RestartEE** is executed after generation 2 objects have been reclaimed for garbage collection.</span></span>
+  <span data-ttu-id="ff402-256">如果在已回收第 2 代对象以进行垃圾回收后执行 **RestartEE**，则此命令会强制中断。</span><span class="sxs-lookup"><span data-stu-id="ff402-256">This command forces a break if **RestartEE** is executed after generation 2 objects have been reclaimed for garbage collection.</span></span>
 
-  <span data-ttu-id="ea821-257">在服务器垃圾回收中，只有一个线程调用 **RestartEE**，因此在第 2 代垃圾回收期间，此断点只会出现一次。</span><span class="sxs-lookup"><span data-stu-id="ea821-257">In server garbage collection, only one thread calls **RestartEE**, so the breakpoint will occur only once during a generation 2 garbage collection.</span></span>
+  <span data-ttu-id="ff402-257">在服务器垃圾回收中，只有一个线程调用 **RestartEE**，因此在第 2 代垃圾回收期间，此断点只会出现一次。</span><span class="sxs-lookup"><span data-stu-id="ff402-257">In server garbage collection, only one thread calls **RestartEE**, so the breakpoint will occur only once during a generation 2 garbage collection.</span></span>
 
-## <a name="performance-check-procedures"></a><span data-ttu-id="ea821-258">性能检查过程</span><span class="sxs-lookup"><span data-stu-id="ea821-258">Performance Check Procedures</span></span>
+## <a name="performance-check-procedures"></a><span data-ttu-id="ff402-258">性能检查过程</span><span class="sxs-lookup"><span data-stu-id="ff402-258">Performance Check Procedures</span></span>
 
-<span data-ttu-id="ea821-259">本部分将介绍下列过程，以避免造成性能问题的原因：</span><span class="sxs-lookup"><span data-stu-id="ea821-259">This section describes the following procedures to isolate the cause of your performance issue:</span></span>
+<span data-ttu-id="ff402-259">本部分将介绍下列过程，以避免造成性能问题的原因：</span><span class="sxs-lookup"><span data-stu-id="ff402-259">This section describes the following procedures to isolate the cause of your performance issue:</span></span>
 
-- [<span data-ttu-id="ea821-260">确定问题是否由垃圾回收引起。</span><span class="sxs-lookup"><span data-stu-id="ea821-260">Determine whether the problem is caused by garbage collection.</span></span>](#IsGC)
+- [<span data-ttu-id="ff402-260">确定问题是否由垃圾回收引起。</span><span class="sxs-lookup"><span data-stu-id="ff402-260">Determine whether the problem is caused by garbage collection.</span></span>](#IsGC)
 
-- [<span data-ttu-id="ea821-261">确定是否已托管内存不足异常。</span><span class="sxs-lookup"><span data-stu-id="ea821-261">Determine whether the out-of-memory exception is managed.</span></span>](#OOMIsManaged)
+- [<span data-ttu-id="ff402-261">确定是否已托管内存不足异常。</span><span class="sxs-lookup"><span data-stu-id="ff402-261">Determine whether the out-of-memory exception is managed.</span></span>](#OOMIsManaged)
 
-- [<span data-ttu-id="ea821-262">确定可保留的虚拟内存量。</span><span class="sxs-lookup"><span data-stu-id="ea821-262">Determine how much virtual memory can be reserved.</span></span>](#GetVM)
+- [<span data-ttu-id="ff402-262">确定可保留的虚拟内存量。</span><span class="sxs-lookup"><span data-stu-id="ff402-262">Determine how much virtual memory can be reserved.</span></span>](#GetVM)
 
-- [<span data-ttu-id="ea821-263">确定是否有足够的物理内存。</span><span class="sxs-lookup"><span data-stu-id="ea821-263">Determine whether there is enough physical memory.</span></span>](#Physical)
+- [<span data-ttu-id="ff402-263">确定是否有足够的物理内存。</span><span class="sxs-lookup"><span data-stu-id="ff402-263">Determine whether there is enough physical memory.</span></span>](#Physical)
 
-- [<span data-ttu-id="ea821-264">确定托管堆的内存提交量。</span><span class="sxs-lookup"><span data-stu-id="ea821-264">Determine how much memory the managed heap is committing.</span></span>](#ManagedHeapCommit)
+- [<span data-ttu-id="ff402-264">确定托管堆的内存提交量。</span><span class="sxs-lookup"><span data-stu-id="ff402-264">Determine how much memory the managed heap is committing.</span></span>](#ManagedHeapCommit)
 
-- [<span data-ttu-id="ea821-265">确定托管堆的内存保留量。</span><span class="sxs-lookup"><span data-stu-id="ea821-265">Determine how much memory the managed heap reserves.</span></span>](#ManagedHeapReserve)
+- [<span data-ttu-id="ff402-265">确定托管堆的内存保留量。</span><span class="sxs-lookup"><span data-stu-id="ff402-265">Determine how much memory the managed heap reserves.</span></span>](#ManagedHeapReserve)
 
-- [<span data-ttu-id="ea821-266">确定第 2 代中的大型对象。</span><span class="sxs-lookup"><span data-stu-id="ea821-266">Determine large objects in generation 2.</span></span>](#ExamineGen2)
+- [<span data-ttu-id="ff402-266">确定第 2 代中的大型对象。</span><span class="sxs-lookup"><span data-stu-id="ff402-266">Determine large objects in generation 2.</span></span>](#ExamineGen2)
 
-- [<span data-ttu-id="ea821-267">确定对对象的引用。</span><span class="sxs-lookup"><span data-stu-id="ea821-267">Determine references to objects.</span></span>](#ObjRef)
+- [<span data-ttu-id="ff402-267">确定对对象的引用。</span><span class="sxs-lookup"><span data-stu-id="ff402-267">Determine references to objects.</span></span>](#ObjRef)
 
-- [<span data-ttu-id="ea821-268">确定是否已运行终结器。</span><span class="sxs-lookup"><span data-stu-id="ea821-268">Determine whether a finalizer has been run.</span></span>](#Induce)
+- [<span data-ttu-id="ff402-268">确定是否已运行终结器。</span><span class="sxs-lookup"><span data-stu-id="ff402-268">Determine whether a finalizer has been run.</span></span>](#Induce)
 
-- [<span data-ttu-id="ea821-269">确定是否存在等待终结的对象。</span><span class="sxs-lookup"><span data-stu-id="ea821-269">Determine whether there are objects waiting to be finalized.</span></span>](#Finalize)
+- [<span data-ttu-id="ff402-269">确定是否存在等待终结的对象。</span><span class="sxs-lookup"><span data-stu-id="ff402-269">Determine whether there are objects waiting to be finalized.</span></span>](#Finalize)
 
-- [<span data-ttu-id="ea821-270">确定托管堆中的可用空间量。</span><span class="sxs-lookup"><span data-stu-id="ea821-270">Determine the amount of free space in the managed heap.</span></span>](#Fragmented)
+- [<span data-ttu-id="ff402-270">确定托管堆中的可用空间量。</span><span class="sxs-lookup"><span data-stu-id="ff402-270">Determine the amount of free space in the managed heap.</span></span>](#Fragmented)
 
-- [<span data-ttu-id="ea821-271">确定固定对象的数目。</span><span class="sxs-lookup"><span data-stu-id="ea821-271">Determine the number of pinned objects.</span></span>](#Pinned)
+- [<span data-ttu-id="ff402-271">确定固定对象的数目。</span><span class="sxs-lookup"><span data-stu-id="ff402-271">Determine the number of pinned objects.</span></span>](#Pinned)
 
-- [<span data-ttu-id="ea821-272">确定垃圾回收中的时长。</span><span class="sxs-lookup"><span data-stu-id="ea821-272">Determine the length of time in a garbage collection.</span></span>](#TimeInGC)
+- [<span data-ttu-id="ff402-272">确定垃圾回收中的时长。</span><span class="sxs-lookup"><span data-stu-id="ff402-272">Determine the length of time in a garbage collection.</span></span>](#TimeInGC)
 
-- [<span data-ttu-id="ea821-273">确定触发垃圾回收的原因。</span><span class="sxs-lookup"><span data-stu-id="ea821-273">Determine what triggered a garbage collection.</span></span>](#Triggered)
+- [<span data-ttu-id="ff402-273">确定触发垃圾回收的原因。</span><span class="sxs-lookup"><span data-stu-id="ff402-273">Determine what triggered a garbage collection.</span></span>](#Triggered)
 
-- [<span data-ttu-id="ea821-274">确定 CPU 的使用率过高是否由垃圾回收引起。</span><span class="sxs-lookup"><span data-stu-id="ea821-274">Determine whether high CPU usage is caused by garbage collection.</span></span>](#HighCPU)
+- [<span data-ttu-id="ff402-274">确定 CPU 的使用率过高是否由垃圾回收引起。</span><span class="sxs-lookup"><span data-stu-id="ff402-274">Determine whether high CPU usage is caused by garbage collection.</span></span>](#HighCPU)
 
 <a name="IsGC"></a>
 
-### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a><span data-ttu-id="ea821-275">若要确定问题是否是垃圾回收引起</span><span class="sxs-lookup"><span data-stu-id="ea821-275">To determine whether the problem is caused by garbage collection</span></span>
+### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a><span data-ttu-id="ff402-275">若要确定问题是否是垃圾回收引起</span><span class="sxs-lookup"><span data-stu-id="ff402-275">To determine whether the problem is caused by garbage collection</span></span>
 
-- <span data-ttu-id="ea821-276">请检查以下两个内存性能计数器：</span><span class="sxs-lookup"><span data-stu-id="ea821-276">Examine the following two memory performance counters:</span></span>
+- <span data-ttu-id="ff402-276">请检查以下两个内存性能计数器：</span><span class="sxs-lookup"><span data-stu-id="ff402-276">Examine the following two memory performance counters:</span></span>
 
-  - <span data-ttu-id="ea821-277">**GC 所占时间百分比**。</span><span class="sxs-lookup"><span data-stu-id="ea821-277">**% Time in GC**.</span></span> <span data-ttu-id="ea821-278">显示执行最后一个垃圾回收周期后，执行垃圾回收所用运行时间的百分比。</span><span class="sxs-lookup"><span data-stu-id="ea821-278">Displays the percentage of elapsed time that was spent performing a garbage collection after the last garbage collection cycle.</span></span> <span data-ttu-id="ea821-279">使用此计数器确定垃圾回收器是否花费太多时间来使托管堆空间可用。</span><span class="sxs-lookup"><span data-stu-id="ea821-279">Use this counter to determine whether the garbage collector is spending too much time to make managed heap space available.</span></span> <span data-ttu-id="ea821-280">如果垃圾回收所用的时间相对较短，这可能表示托管堆之外存在资源问题。</span><span class="sxs-lookup"><span data-stu-id="ea821-280">If the time spent in garbage collection is relatively low, that could indicate a resource problem outside the managed heap.</span></span> <span data-ttu-id="ea821-281">当涉及并发或后台垃圾回收时，此计数器可能不准确。</span><span class="sxs-lookup"><span data-stu-id="ea821-281">This counter may not be accurate when concurrent or background garbage collection is involved.</span></span>
+  - <span data-ttu-id="ff402-277">**GC 所占时间百分比**。</span><span class="sxs-lookup"><span data-stu-id="ff402-277">**% Time in GC**.</span></span> <span data-ttu-id="ff402-278">显示执行最后一个垃圾回收周期后，执行垃圾回收所用运行时间的百分比。</span><span class="sxs-lookup"><span data-stu-id="ff402-278">Displays the percentage of elapsed time that was spent performing a garbage collection after the last garbage collection cycle.</span></span> <span data-ttu-id="ff402-279">使用此计数器确定垃圾回收器是否花费太多时间来使托管堆空间可用。</span><span class="sxs-lookup"><span data-stu-id="ff402-279">Use this counter to determine whether the garbage collector is spending too much time to make managed heap space available.</span></span> <span data-ttu-id="ff402-280">如果垃圾回收所用的时间相对较短，这可能表示托管堆之外存在资源问题。</span><span class="sxs-lookup"><span data-stu-id="ff402-280">If the time spent in garbage collection is relatively low, that could indicate a resource problem outside the managed heap.</span></span> <span data-ttu-id="ff402-281">当涉及并发或后台垃圾回收时，此计数器可能不准确。</span><span class="sxs-lookup"><span data-stu-id="ff402-281">This counter may not be accurate when concurrent or background garbage collection is involved.</span></span>
 
-  - <span data-ttu-id="ea821-282">**已提交的字节总数**。</span><span class="sxs-lookup"><span data-stu-id="ea821-282">**# Total committed Bytes**.</span></span> <span data-ttu-id="ea821-283">显示垃圾回收器当前已提交的虚拟内存量。</span><span class="sxs-lookup"><span data-stu-id="ea821-283">Displays the amount of virtual memory currently committed by the garbage collector.</span></span> <span data-ttu-id="ea821-284">使用此计数器确定垃圾回收器所占用的内存是否是应用程序所使用的内存的过多部分。</span><span class="sxs-lookup"><span data-stu-id="ea821-284">Use this counter to determine whether the memory consumed by the garbage collector is an excessive portion of the memory that your application uses.</span></span>
+  - <span data-ttu-id="ff402-282">**已提交的字节总数**。</span><span class="sxs-lookup"><span data-stu-id="ff402-282">**# Total committed Bytes**.</span></span> <span data-ttu-id="ff402-283">显示垃圾回收器当前已提交的虚拟内存量。</span><span class="sxs-lookup"><span data-stu-id="ff402-283">Displays the amount of virtual memory currently committed by the garbage collector.</span></span> <span data-ttu-id="ff402-284">使用此计数器确定垃圾回收器所占用的内存是否是应用程序所使用的内存的过多部分。</span><span class="sxs-lookup"><span data-stu-id="ff402-284">Use this counter to determine whether the memory consumed by the garbage collector is an excessive portion of the memory that your application uses.</span></span>
 
-  <span data-ttu-id="ea821-285">大多数的内存性能计数器会在每次垃圾回收结束时进行更新。</span><span class="sxs-lookup"><span data-stu-id="ea821-285">Most of the memory performance counters are updated at the end of each garbage collection.</span></span> <span data-ttu-id="ea821-286">因此，它们可能不会反映你希望了解的当前情况。</span><span class="sxs-lookup"><span data-stu-id="ea821-286">Therefore, they may not reflect the current conditions that you want information about.</span></span>
+  <span data-ttu-id="ff402-285">大多数的内存性能计数器会在每次垃圾回收结束时进行更新。</span><span class="sxs-lookup"><span data-stu-id="ff402-285">Most of the memory performance counters are updated at the end of each garbage collection.</span></span> <span data-ttu-id="ff402-286">因此，它们可能不会反映你希望了解的当前情况。</span><span class="sxs-lookup"><span data-stu-id="ff402-286">Therefore, they may not reflect the current conditions that you want information about.</span></span>
 
 <a name="OOMIsManaged"></a>
 
-### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a><span data-ttu-id="ea821-287">若要确定是否已托管内存不足异常</span><span class="sxs-lookup"><span data-stu-id="ea821-287">To determine whether the out-of-memory exception is managed</span></span>
+### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a><span data-ttu-id="ff402-287">若要确定是否已托管内存不足异常</span><span class="sxs-lookup"><span data-stu-id="ff402-287">To determine whether the out-of-memory exception is managed</span></span>
 
-1. <span data-ttu-id="ea821-288">在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入打印异常 (**pe**) 命令：</span><span class="sxs-lookup"><span data-stu-id="ea821-288">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the print exception (**pe**) command:</span></span>
+1. <span data-ttu-id="ff402-288">在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入打印异常 (**pe**) 命令：</span><span class="sxs-lookup"><span data-stu-id="ff402-288">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the print exception (**pe**) command:</span></span>
 
-    <span data-ttu-id="ea821-289">**!pe**</span><span class="sxs-lookup"><span data-stu-id="ea821-289">**!pe**</span></span>
+    <span data-ttu-id="ff402-289">**!pe**</span><span class="sxs-lookup"><span data-stu-id="ff402-289">**!pe**</span></span>
 
-    <span data-ttu-id="ea821-290">如果已托管异常，<xref:System.OutOfMemoryException> 将显示为异常类型，如以下示例中所示。</span><span class="sxs-lookup"><span data-stu-id="ea821-290">If the exception is managed, <xref:System.OutOfMemoryException> is displayed as the exception type, as shown in the following example.</span></span>
+    <span data-ttu-id="ff402-290">如果已托管异常，<xref:System.OutOfMemoryException> 将显示为异常类型，如以下示例中所示。</span><span class="sxs-lookup"><span data-stu-id="ff402-290">If the exception is managed, <xref:System.OutOfMemoryException> is displayed as the exception type, as shown in the following example.</span></span>
 
     ```console
     Exception object: 39594518
@@ -295,45 +295,45 @@ ms.locfileid: "73974763"
     StackTrace (generated):
     ```
 
-2. <span data-ttu-id="ea821-291">如果输出没有指定异常，则必须确定内存不足异常来自哪个线程。</span><span class="sxs-lookup"><span data-stu-id="ea821-291">If the output does not specify an exception, you have to determine which thread the out-of-memory exception is from.</span></span> <span data-ttu-id="ea821-292">在调试器中键入以下命令，以显示所有带调用堆栈的线程：</span><span class="sxs-lookup"><span data-stu-id="ea821-292">Type the following command in the debugger to show all the threads with their call stacks:</span></span>
+2. <span data-ttu-id="ff402-291">如果输出没有指定异常，则必须确定内存不足异常来自哪个线程。</span><span class="sxs-lookup"><span data-stu-id="ff402-291">If the output does not specify an exception, you have to determine which thread the out-of-memory exception is from.</span></span> <span data-ttu-id="ff402-292">在调试器中键入以下命令，以显示所有带调用堆栈的线程：</span><span class="sxs-lookup"><span data-stu-id="ff402-292">Type the following command in the debugger to show all the threads with their call stacks:</span></span>
 
-    <span data-ttu-id="ea821-293">**~\*kb**</span><span class="sxs-lookup"><span data-stu-id="ea821-293">**~\*kb**</span></span>
+    <span data-ttu-id="ff402-293">**~\*kb**</span><span class="sxs-lookup"><span data-stu-id="ff402-293">**~\*kb**</span></span>
 
-    <span data-ttu-id="ea821-294">具有存在异常调用的堆栈的线程会由 `RaiseTheException` 参数进行指示。</span><span class="sxs-lookup"><span data-stu-id="ea821-294">The thread with the stack that has exception calls is indicated by the `RaiseTheException` argument.</span></span> <span data-ttu-id="ea821-295">这是托管异常对象。</span><span class="sxs-lookup"><span data-stu-id="ea821-295">This is the managed exception object.</span></span>
+    <span data-ttu-id="ff402-294">具有存在异常调用的堆栈的线程会由 `RaiseTheException` 参数进行指示。</span><span class="sxs-lookup"><span data-stu-id="ff402-294">The thread with the stack that has exception calls is indicated by the `RaiseTheException` argument.</span></span> <span data-ttu-id="ff402-295">这是托管异常对象。</span><span class="sxs-lookup"><span data-stu-id="ff402-295">This is the managed exception object.</span></span>
 
     ```console
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0
     ```
 
-3. <span data-ttu-id="ea821-296">可以使用以下命令来转储嵌套的异常。</span><span class="sxs-lookup"><span data-stu-id="ea821-296">You can use the following command to dump nested exceptions.</span></span>
+3. <span data-ttu-id="ff402-296">可以使用以下命令来转储嵌套的异常。</span><span class="sxs-lookup"><span data-stu-id="ff402-296">You can use the following command to dump nested exceptions.</span></span>
 
-    <span data-ttu-id="ea821-297">**!pe -nested**</span><span class="sxs-lookup"><span data-stu-id="ea821-297">**!pe -nested**</span></span>
+    <span data-ttu-id="ff402-297">**!pe -nested**</span><span class="sxs-lookup"><span data-stu-id="ff402-297">**!pe -nested**</span></span>
 
-    <span data-ttu-id="ea821-298">如果找不到任何异常，则非托管代码将产生内存不足异常。</span><span class="sxs-lookup"><span data-stu-id="ea821-298">If you do not find any exceptions, the out-of-memory exception originated from unmanaged code.</span></span>
+    <span data-ttu-id="ff402-298">如果找不到任何异常，则非托管代码将产生内存不足异常。</span><span class="sxs-lookup"><span data-stu-id="ff402-298">If you do not find any exceptions, the out-of-memory exception originated from unmanaged code.</span></span>
 
 <a name="GetVM"></a>
 
-### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a><span data-ttu-id="ea821-299">若要确定可保留的虚拟内存量</span><span class="sxs-lookup"><span data-stu-id="ea821-299">To determine how much virtual memory can be reserved</span></span>
+### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a><span data-ttu-id="ff402-299">若要确定可保留的虚拟内存量</span><span class="sxs-lookup"><span data-stu-id="ff402-299">To determine how much virtual memory can be reserved</span></span>
 
-- <span data-ttu-id="ea821-300">在加载了 SOS 调试器扩展的 WinDbg 中键入以下命令，以获取最大的可用区域：</span><span class="sxs-lookup"><span data-stu-id="ea821-300">In WinDbg with the SOS debugger extension loaded, type the following command to get the largest free region:</span></span>
+- <span data-ttu-id="ff402-300">在加载了 SOS 调试器扩展的 WinDbg 中键入以下命令，以获取最大的可用区域：</span><span class="sxs-lookup"><span data-stu-id="ff402-300">In WinDbg with the SOS debugger extension loaded, type the following command to get the largest free region:</span></span>
 
-  <span data-ttu-id="ea821-301">**!address -summary**</span><span class="sxs-lookup"><span data-stu-id="ea821-301">**!address -summary**</span></span>
+  <span data-ttu-id="ff402-301">**!address -summary**</span><span class="sxs-lookup"><span data-stu-id="ff402-301">**!address -summary**</span></span>
 
-  <span data-ttu-id="ea821-302">最大可用区域将如以下输出所示进行显示。</span><span class="sxs-lookup"><span data-stu-id="ea821-302">The largest free region is displayed as shown in the following output.</span></span>
+  <span data-ttu-id="ff402-302">最大可用区域将如以下输出所示进行显示。</span><span class="sxs-lookup"><span data-stu-id="ff402-302">The largest free region is displayed as shown in the following output.</span></span>
 
   ```console
   Largest free region: Base 54000000 - Size 0003A980
   ```
 
-  <span data-ttu-id="ea821-303">在此示例中，最大可用区域的大小大约为 24000 KB（按十六进制形式则为 3A980）。</span><span class="sxs-lookup"><span data-stu-id="ea821-303">In this example, the size of the largest free region is approximately 24000 KB (3A980 in hexadecimal).</span></span> <span data-ttu-id="ea821-304">此区域比垃圾回收器对分段所需的大小要小得多。</span><span class="sxs-lookup"><span data-stu-id="ea821-304">This region is much smaller than what the garbage collector needs for a segment.</span></span>
+  <span data-ttu-id="ff402-303">在此示例中，最大可用区域的大小大约为 24000 KB（按十六进制形式则为 3A980）。</span><span class="sxs-lookup"><span data-stu-id="ff402-303">In this example, the size of the largest free region is approximately 24000 KB (3A980 in hexadecimal).</span></span> <span data-ttu-id="ff402-304">此区域比垃圾回收器对分段所需的大小要小得多。</span><span class="sxs-lookup"><span data-stu-id="ff402-304">This region is much smaller than what the garbage collector needs for a segment.</span></span>
 
-  <span data-ttu-id="ea821-305">-或-</span><span class="sxs-lookup"><span data-stu-id="ea821-305">-or-</span></span>
+  <span data-ttu-id="ff402-305">\- 或 -</span><span class="sxs-lookup"><span data-stu-id="ff402-305">-or-</span></span>
 
-- <span data-ttu-id="ea821-306">使用 **vmstat** 命令：</span><span class="sxs-lookup"><span data-stu-id="ea821-306">Use the **vmstat** command:</span></span>
+- <span data-ttu-id="ff402-306">使用 **vmstat** 命令：</span><span class="sxs-lookup"><span data-stu-id="ff402-306">Use the **vmstat** command:</span></span>
 
-  <span data-ttu-id="ea821-307">**!vmstat**</span><span class="sxs-lookup"><span data-stu-id="ea821-307">**!vmstat**</span></span>
+  <span data-ttu-id="ff402-307">**!vmstat**</span><span class="sxs-lookup"><span data-stu-id="ff402-307">**!vmstat**</span></span>
 
-  <span data-ttu-id="ea821-308">最大可用区域是 MAXIMUM 列中的最大值，如以下输出所示。</span><span class="sxs-lookup"><span data-stu-id="ea821-308">The largest free region is the largest value in the MAXIMUM column, as shown in the following output.</span></span>
+  <span data-ttu-id="ff402-308">最大可用区域是 MAXIMUM 列中的最大值，如以下输出所示。</span><span class="sxs-lookup"><span data-stu-id="ff402-308">The largest free region is the largest value in the MAXIMUM column, as shown in the following output.</span></span>
 
   ```console
   TYPE        MINIMUM   MAXIMUM     AVERAGE   BLK COUNT   TOTAL
@@ -347,39 +347,39 @@ ms.locfileid: "73974763"
 
 <a name="Physical"></a>
 
-### <a name="to-determine-whether-there-is-enough-physical-memory"></a><span data-ttu-id="ea821-309">若要确定是否有足够的物理内存</span><span class="sxs-lookup"><span data-stu-id="ea821-309">To determine whether there is enough physical memory</span></span>
+### <a name="to-determine-whether-there-is-enough-physical-memory"></a><span data-ttu-id="ff402-309">若要确定是否有足够的物理内存</span><span class="sxs-lookup"><span data-stu-id="ff402-309">To determine whether there is enough physical memory</span></span>
 
-1. <span data-ttu-id="ea821-310">则启动 Windows 任务管理器。</span><span class="sxs-lookup"><span data-stu-id="ea821-310">Start Windows Task Manager.</span></span>
+1. <span data-ttu-id="ff402-310">则启动 Windows 任务管理器。</span><span class="sxs-lookup"><span data-stu-id="ff402-310">Start Windows Task Manager.</span></span>
 
-2. <span data-ttu-id="ea821-311">在“性能”  选项卡上，查看已提交的值。</span><span class="sxs-lookup"><span data-stu-id="ea821-311">On the **Performance** tab, look at the committed value.</span></span> <span data-ttu-id="ea821-312">（在 Windows 7 中，查看“系统组”  中的“提交 (KB)”  。）</span><span class="sxs-lookup"><span data-stu-id="ea821-312">(In Windows 7, look at **Commit (KB)** in the **System group**.)</span></span>
+2. <span data-ttu-id="ff402-311">在“性能”  选项卡上，查看已提交的值。</span><span class="sxs-lookup"><span data-stu-id="ff402-311">On the **Performance** tab, look at the committed value.</span></span> <span data-ttu-id="ff402-312">（在 Windows 7 中，查看“系统组”  中的“提交 (KB)”  。）</span><span class="sxs-lookup"><span data-stu-id="ff402-312">(In Windows 7, look at **Commit (KB)** in the **System group**.)</span></span>
 
-    <span data-ttu-id="ea821-313">如果“总数”  接近“限值”  ，则物理内存将不足。</span><span class="sxs-lookup"><span data-stu-id="ea821-313">If the **Total** is close to the **Limit**, you are running low on physical memory.</span></span>
+    <span data-ttu-id="ff402-313">如果“总数”  接近“限值”  ，则物理内存将不足。</span><span class="sxs-lookup"><span data-stu-id="ff402-313">If the **Total** is close to the **Limit**, you are running low on physical memory.</span></span>
 
 <a name="ManagedHeapCommit"></a>
 
-### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a><span data-ttu-id="ea821-314">若要确定托管堆的内存提交量</span><span class="sxs-lookup"><span data-stu-id="ea821-314">To determine how much memory the managed heap is committing</span></span>
+### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a><span data-ttu-id="ff402-314">若要确定托管堆的内存提交量</span><span class="sxs-lookup"><span data-stu-id="ff402-314">To determine how much memory the managed heap is committing</span></span>
 
-- <span data-ttu-id="ea821-315">使用 `# Total committed bytes` 内存性能计数器获取托管堆提交的字节数。</span><span class="sxs-lookup"><span data-stu-id="ea821-315">Use the `# Total committed bytes` memory performance counter to get the number of bytes that the managed heap is committing.</span></span> <span data-ttu-id="ea821-316">垃圾回收器根据需要在某个段上提交区块，但不会全部在同一时间进行。</span><span class="sxs-lookup"><span data-stu-id="ea821-316">The garbage collector commits chunks on a segment as needed, not all at the same time.</span></span>
+- <span data-ttu-id="ff402-315">使用 `# Total committed bytes` 内存性能计数器获取托管堆提交的字节数。</span><span class="sxs-lookup"><span data-stu-id="ff402-315">Use the `# Total committed bytes` memory performance counter to get the number of bytes that the managed heap is committing.</span></span> <span data-ttu-id="ff402-316">垃圾回收器根据需要在某个段上提交区块，但不会全部在同一时间进行。</span><span class="sxs-lookup"><span data-stu-id="ff402-316">The garbage collector commits chunks on a segment as needed, not all at the same time.</span></span>
 
   > [!NOTE]
-  > <span data-ttu-id="ea821-317">请不要使用 `# Bytes in all Heaps` 性能计数器，因为它不表示托管堆的实际内存使用情况。</span><span class="sxs-lookup"><span data-stu-id="ea821-317">Do not use the `# Bytes in all Heaps` performance counter, because it does not represent actual memory usage by the managed heap.</span></span> <span data-ttu-id="ea821-318">代的大小包括在此值中，且实际上是其阈值大小，即如果代以对象进行填充，将引发垃圾回收的大小。</span><span class="sxs-lookup"><span data-stu-id="ea821-318">The size of a generation is included in this value and is actually its threshold size, that is, the size that induces a garbage collection if the generation is filled with objects.</span></span> <span data-ttu-id="ea821-319">因此，此值通常为零。</span><span class="sxs-lookup"><span data-stu-id="ea821-319">Therefore, this value is usually zero.</span></span>
+  > <span data-ttu-id="ff402-317">请不要使用 `# Bytes in all Heaps` 性能计数器，因为它不表示托管堆的实际内存使用情况。</span><span class="sxs-lookup"><span data-stu-id="ff402-317">Do not use the `# Bytes in all Heaps` performance counter, because it does not represent actual memory usage by the managed heap.</span></span> <span data-ttu-id="ff402-318">代的大小包括在此值中，且实际上是其阈值大小，即如果代以对象进行填充，将引发垃圾回收的大小。</span><span class="sxs-lookup"><span data-stu-id="ff402-318">The size of a generation is included in this value and is actually its threshold size, that is, the size that induces a garbage collection if the generation is filled with objects.</span></span> <span data-ttu-id="ff402-319">因此，此值通常为零。</span><span class="sxs-lookup"><span data-stu-id="ff402-319">Therefore, this value is usually zero.</span></span>
 
 <a name="ManagedHeapReserve"></a>
 
-### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a><span data-ttu-id="ea821-320">若要确定托管堆的内存保留量</span><span class="sxs-lookup"><span data-stu-id="ea821-320">To determine how much memory the managed heap reserves</span></span>
+### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a><span data-ttu-id="ff402-320">若要确定托管堆的内存保留量</span><span class="sxs-lookup"><span data-stu-id="ff402-320">To determine how much memory the managed heap reserves</span></span>
 
-- <span data-ttu-id="ea821-321">使用 `# Total reserved bytes`内存性能计数器。</span><span class="sxs-lookup"><span data-stu-id="ea821-321">Use the `# Total reserved bytes` memory performance counter.</span></span>
+- <span data-ttu-id="ff402-321">使用 `# Total reserved bytes`内存性能计数器。</span><span class="sxs-lookup"><span data-stu-id="ff402-321">Use the `# Total reserved bytes` memory performance counter.</span></span>
 
-  <span data-ttu-id="ea821-322">垃圾回收器在段中保留内存，你可以使用 **eeheap** 命令确定段的开始位置。</span><span class="sxs-lookup"><span data-stu-id="ea821-322">The garbage collector reserves memory in segments, and you can determine where a segment starts by using the **eeheap** command.</span></span>
+  <span data-ttu-id="ff402-322">垃圾回收器在段中保留内存，你可以使用 **eeheap** 命令确定段的开始位置。</span><span class="sxs-lookup"><span data-stu-id="ff402-322">The garbage collector reserves memory in segments, and you can determine where a segment starts by using the **eeheap** command.</span></span>
 
   > [!IMPORTANT]
-  > <span data-ttu-id="ea821-323">尽管可以确定垃圾回收器为每个段分配的内存量，但是段的大小是特定于实现的，并可能会在任何时间（包括在定期更新中）进行更改。</span><span class="sxs-lookup"><span data-stu-id="ea821-323">Although you can determine the amount of memory the garbage collector allocates for each segment, segment size is implementation-specific and is subject to change at any time, including in periodic updates.</span></span> <span data-ttu-id="ea821-324">应用程序不应假设特定段的大小或依赖于此大小，也不应尝试配置段分配可用的内存量。</span><span class="sxs-lookup"><span data-stu-id="ea821-324">Your app should never make assumptions about or depend on a particular segment size, nor should it attempt to configure the amount of memory available for segment allocations.</span></span>
+  > <span data-ttu-id="ff402-323">尽管可以确定垃圾回收器为每个段分配的内存量，但是段的大小是特定于实现的，并可能会在任何时间（包括在定期更新中）进行更改。</span><span class="sxs-lookup"><span data-stu-id="ff402-323">Although you can determine the amount of memory the garbage collector allocates for each segment, segment size is implementation-specific and is subject to change at any time, including in periodic updates.</span></span> <span data-ttu-id="ff402-324">应用程序不应假设特定段的大小或依赖于此大小，也不应尝试配置段分配可用的内存量。</span><span class="sxs-lookup"><span data-stu-id="ff402-324">Your app should never make assumptions about or depend on a particular segment size, nor should it attempt to configure the amount of memory available for segment allocations.</span></span>
 
-- <span data-ttu-id="ea821-325">在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="ea821-325">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>
+- <span data-ttu-id="ff402-325">在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="ff402-325">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>
 
-  <span data-ttu-id="ea821-326">**!eeheap -gc**</span><span class="sxs-lookup"><span data-stu-id="ea821-326">**!eeheap -gc**</span></span>
+  <span data-ttu-id="ff402-326">**!eeheap -gc**</span><span class="sxs-lookup"><span data-stu-id="ff402-326">**!eeheap -gc**</span></span>
 
-  <span data-ttu-id="ea821-327">结果如下所示：</span><span class="sxs-lookup"><span data-stu-id="ea821-327">The result is as follows.</span></span>
+  <span data-ttu-id="ff402-327">结果如下所示：</span><span class="sxs-lookup"><span data-stu-id="ff402-327">The result is as follows.</span></span>
 
   ```console
   Number of GC Heaps: 2
@@ -411,19 +411,19 @@ ms.locfileid: "73974763"
   GC Heap Size   0x24db8(150968)
   ```
 
-  <span data-ttu-id="ea821-328">由“段”指示的地址是段的起始地址。</span><span class="sxs-lookup"><span data-stu-id="ea821-328">The addresses indicated by "segment" are the starting addresses of the segments.</span></span>
+  <span data-ttu-id="ff402-328">由“段”指示的地址是段的起始地址。</span><span class="sxs-lookup"><span data-stu-id="ff402-328">The addresses indicated by "segment" are the starting addresses of the segments.</span></span>
 
 <a name="ExamineGen2"></a>
 
-### <a name="to-determine-large-objects-in-generation-2"></a><span data-ttu-id="ea821-329">若要确定第 2 代中的大型对象</span><span class="sxs-lookup"><span data-stu-id="ea821-329">To determine large objects in generation 2</span></span>
+### <a name="to-determine-large-objects-in-generation-2"></a><span data-ttu-id="ff402-329">若要确定第 2 代中的大型对象</span><span class="sxs-lookup"><span data-stu-id="ff402-329">To determine large objects in generation 2</span></span>
 
-- <span data-ttu-id="ea821-330">在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="ea821-330">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>
+- <span data-ttu-id="ff402-330">在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="ff402-330">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>
 
-  <span data-ttu-id="ea821-331">**!dumpheap –stat**</span><span class="sxs-lookup"><span data-stu-id="ea821-331">**!dumpheap –stat**</span></span>
+  <span data-ttu-id="ff402-331">**!dumpheap –stat**</span><span class="sxs-lookup"><span data-stu-id="ff402-331">**!dumpheap –stat**</span></span>
 
-  <span data-ttu-id="ea821-332">如果托管堆很大，则 **dumpheap** 可能需要一段时间才能完成。</span><span class="sxs-lookup"><span data-stu-id="ea821-332">If the managed heap is big, **dumpheap** may take a while to finish.</span></span>
+  <span data-ttu-id="ff402-332">如果托管堆很大，则 **dumpheap** 可能需要一段时间才能完成。</span><span class="sxs-lookup"><span data-stu-id="ff402-332">If the managed heap is big, **dumpheap** may take a while to finish.</span></span>
 
-  <span data-ttu-id="ea821-333">你可以从输出的最后几行开始分析，因为它们列出了占用了大多数空间的对象。</span><span class="sxs-lookup"><span data-stu-id="ea821-333">You can start analyzing from the last few lines of the output, because they list the objects that use the most space.</span></span> <span data-ttu-id="ea821-334">例如:</span><span class="sxs-lookup"><span data-stu-id="ea821-334">For example:</span></span>
+  <span data-ttu-id="ff402-333">你可以从输出的最后几行开始分析，因为它们列出了占用了大多数空间的对象。</span><span class="sxs-lookup"><span data-stu-id="ff402-333">You can start analyzing from the last few lines of the output, because they list the objects that use the most space.</span></span> <span data-ttu-id="ff402-334">例如：</span><span class="sxs-lookup"><span data-stu-id="ff402-334">For example:</span></span>
 
   ```console
   2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo
@@ -439,11 +439,11 @@ ms.locfileid: "73974763"
   Total 8454945 objects
   ```
 
-  <span data-ttu-id="ea821-335">所列出的最后一个对象是一个字符串，且占用的空间最多。</span><span class="sxs-lookup"><span data-stu-id="ea821-335">The last object listed is a string and occupies the most space.</span></span> <span data-ttu-id="ea821-336">可以检查应用程序，以查看如何优化字符串对象。</span><span class="sxs-lookup"><span data-stu-id="ea821-336">You can examine your application to see how your string objects can be optimized.</span></span> <span data-ttu-id="ea821-337">若要查看 150 到 200 个字节之间的字符串，请键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="ea821-337">To see strings that are between 150 and 200 bytes, type the following:</span></span>
+  <span data-ttu-id="ff402-335">所列出的最后一个对象是一个字符串，且占用的空间最多。</span><span class="sxs-lookup"><span data-stu-id="ff402-335">The last object listed is a string and occupies the most space.</span></span> <span data-ttu-id="ff402-336">可以检查应用程序，以查看如何优化字符串对象。</span><span class="sxs-lookup"><span data-stu-id="ff402-336">You can examine your application to see how your string objects can be optimized.</span></span> <span data-ttu-id="ff402-337">若要查看 150 到 200 个字节之间的字符串，请键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="ff402-337">To see strings that are between 150 and 200 bytes, type the following:</span></span>
 
-  <span data-ttu-id="ea821-338">**!dumpheap -type System.String -min 150 -max 200**</span><span class="sxs-lookup"><span data-stu-id="ea821-338">**!dumpheap -type System.String -min 150 -max 200**</span></span>
+  <span data-ttu-id="ff402-338">**!dumpheap -type System.String -min 150 -max 200**</span><span class="sxs-lookup"><span data-stu-id="ff402-338">**!dumpheap -type System.String -min 150 -max 200**</span></span>
 
-  <span data-ttu-id="ea821-339">如下所示是结果的一个示例。</span><span class="sxs-lookup"><span data-stu-id="ea821-339">An example of the results is as follows.</span></span>
+  <span data-ttu-id="ff402-339">如下所示是结果的一个示例。</span><span class="sxs-lookup"><span data-stu-id="ff402-339">An example of the results is as follows.</span></span>
 
   ```console
   Address  MT           Size  Gen
@@ -451,23 +451,23 @@ ms.locfileid: "73974763"
   …
   ```
 
-  <span data-ttu-id="ea821-340">对 ID 使用整数而非字符串，这样可能会更有效。</span><span class="sxs-lookup"><span data-stu-id="ea821-340">Using an integer instead of a string for an ID can be more efficient.</span></span> <span data-ttu-id="ea821-341">如果数千次重复相同的字符串，请考虑字符串暂留。</span><span class="sxs-lookup"><span data-stu-id="ea821-341">If the same string is being repeated thousands of times, consider string interning.</span></span> <span data-ttu-id="ea821-342">有关字符串暂留的详细信息，请参阅 <xref:System.String.Intern%2A?displayProperty=nameWithType> 方法的参考主题。</span><span class="sxs-lookup"><span data-stu-id="ea821-342">For more information about string interning, see the reference topic for the <xref:System.String.Intern%2A?displayProperty=nameWithType> method.</span></span>
+  <span data-ttu-id="ff402-340">对 ID 使用整数而非字符串，这样可能会更有效。</span><span class="sxs-lookup"><span data-stu-id="ff402-340">Using an integer instead of a string for an ID can be more efficient.</span></span> <span data-ttu-id="ff402-341">如果数千次重复相同的字符串，请考虑字符串暂留。</span><span class="sxs-lookup"><span data-stu-id="ff402-341">If the same string is being repeated thousands of times, consider string interning.</span></span> <span data-ttu-id="ff402-342">有关字符串暂留的详细信息，请参阅 <xref:System.String.Intern%2A?displayProperty=nameWithType> 方法的参考主题。</span><span class="sxs-lookup"><span data-stu-id="ff402-342">For more information about string interning, see the reference topic for the <xref:System.String.Intern%2A?displayProperty=nameWithType> method.</span></span>
 
 <a name="ObjRef"></a>
 
-### <a name="to-determine-references-to-objects"></a><span data-ttu-id="ea821-343">若要确定对对象的引用</span><span class="sxs-lookup"><span data-stu-id="ea821-343">To determine references to objects</span></span>
+### <a name="to-determine-references-to-objects"></a><span data-ttu-id="ff402-343">若要确定对对象的引用</span><span class="sxs-lookup"><span data-stu-id="ff402-343">To determine references to objects</span></span>
 
-- <span data-ttu-id="ea821-344">在加载了 SOS 调试器扩展的 WinDbg 中，键入以下命令，以列出对对象的引用：</span><span class="sxs-lookup"><span data-stu-id="ea821-344">In WinDbg with the SOS debugger extension loaded, type the following command to list references to objects:</span></span>
+- <span data-ttu-id="ff402-344">在加载了 SOS 调试器扩展的 WinDbg 中，键入以下命令，以列出对对象的引用：</span><span class="sxs-lookup"><span data-stu-id="ff402-344">In WinDbg with the SOS debugger extension loaded, type the following command to list references to objects:</span></span>
 
-  <span data-ttu-id="ea821-345">**!gcroot**</span><span class="sxs-lookup"><span data-stu-id="ea821-345">**!gcroot**</span></span>
+  <span data-ttu-id="ff402-345">**!gcroot**</span><span class="sxs-lookup"><span data-stu-id="ff402-345">**!gcroot**</span></span>
 
   `-or-`
 
-- <span data-ttu-id="ea821-346">若要确定对特定对象的引用，包括地址：</span><span class="sxs-lookup"><span data-stu-id="ea821-346">To determine the references for a specific object, include the address:</span></span>
+- <span data-ttu-id="ff402-346">若要确定对特定对象的引用，包括地址：</span><span class="sxs-lookup"><span data-stu-id="ff402-346">To determine the references for a specific object, include the address:</span></span>
 
-  <span data-ttu-id="ea821-347">**!gcroot 1c37b2ac**</span><span class="sxs-lookup"><span data-stu-id="ea821-347">**!gcroot 1c37b2ac**</span></span>
+  <span data-ttu-id="ff402-347">**!gcroot 1c37b2ac**</span><span class="sxs-lookup"><span data-stu-id="ff402-347">**!gcroot 1c37b2ac**</span></span>
 
-  <span data-ttu-id="ea821-348">在堆栈上找到的根可能是误报。</span><span class="sxs-lookup"><span data-stu-id="ea821-348">Roots found on stacks may be false positives.</span></span> <span data-ttu-id="ea821-349">有关详细信息，请参阅命令 `!help gcroot`。</span><span class="sxs-lookup"><span data-stu-id="ea821-349">For more information, use the command `!help gcroot`.</span></span>
+  <span data-ttu-id="ff402-348">在堆栈上找到的根可能是误报。</span><span class="sxs-lookup"><span data-stu-id="ff402-348">Roots found on stacks may be false positives.</span></span> <span data-ttu-id="ff402-349">有关详细信息，请参阅命令 `!help gcroot`。</span><span class="sxs-lookup"><span data-stu-id="ff402-349">For more information, use the command `!help gcroot`.</span></span>
 
   ```console
   ebx:Root:19011c5c(System.Windows.Forms.Application+ThreadContext)->
@@ -485,13 +485,13 @@ ms.locfileid: "73974763"
   Scan Thread 6 OSTHread 484
   ```
 
-  <span data-ttu-id="ea821-350">**gcroot** 命令可能需要很长时间才能完成。</span><span class="sxs-lookup"><span data-stu-id="ea821-350">The **gcroot** command can take a long time to finish.</span></span> <span data-ttu-id="ea821-351">任何不通过垃圾回收进行回收的对象是活动对象。</span><span class="sxs-lookup"><span data-stu-id="ea821-351">Any object that is not reclaimed by garbage collection is a live object.</span></span> <span data-ttu-id="ea821-352">这意味着，某些根直接或间接地保留于该对象，因此 **gcroot** 应将路径信息返回到该对象。</span><span class="sxs-lookup"><span data-stu-id="ea821-352">This means that some root is directly or indirectly holding onto the object, so **gcroot** should return path information to the object.</span></span> <span data-ttu-id="ea821-353">应检查返回的关系图，并查看仍然引用这些对象的原因。</span><span class="sxs-lookup"><span data-stu-id="ea821-353">You should examine the graphs returned and see why these objects are still referenced.</span></span>
+  <span data-ttu-id="ff402-350">**gcroot** 命令可能需要很长时间才能完成。</span><span class="sxs-lookup"><span data-stu-id="ff402-350">The **gcroot** command can take a long time to finish.</span></span> <span data-ttu-id="ff402-351">任何不通过垃圾回收进行回收的对象是活动对象。</span><span class="sxs-lookup"><span data-stu-id="ff402-351">Any object that is not reclaimed by garbage collection is a live object.</span></span> <span data-ttu-id="ff402-352">这意味着，某些根直接或间接地保留于该对象，因此 **gcroot** 应将路径信息返回到该对象。</span><span class="sxs-lookup"><span data-stu-id="ff402-352">This means that some root is directly or indirectly holding onto the object, so **gcroot** should return path information to the object.</span></span> <span data-ttu-id="ff402-353">应检查返回的关系图，并查看仍然引用这些对象的原因。</span><span class="sxs-lookup"><span data-stu-id="ff402-353">You should examine the graphs returned and see why these objects are still referenced.</span></span>
 
 <a name="Induce"></a>
 
-### <a name="to-determine-whether-a-finalizer-has-been-run"></a><span data-ttu-id="ea821-354">若要确定是否已运行终结器</span><span class="sxs-lookup"><span data-stu-id="ea821-354">To determine whether a finalizer has been run</span></span>
+### <a name="to-determine-whether-a-finalizer-has-been-run"></a><span data-ttu-id="ff402-354">若要确定是否已运行终结器</span><span class="sxs-lookup"><span data-stu-id="ff402-354">To determine whether a finalizer has been run</span></span>
 
-- <span data-ttu-id="ea821-355">则运行包含以下代码的测试程序：</span><span class="sxs-lookup"><span data-stu-id="ea821-355">Run a test program that contains the following code:</span></span>
+- <span data-ttu-id="ff402-355">则运行包含以下代码的测试程序：</span><span class="sxs-lookup"><span data-stu-id="ff402-355">Run a test program that contains the following code:</span></span>
 
   ```csharp
   GC.Collect();
@@ -499,23 +499,23 @@ ms.locfileid: "73974763"
   GC.Collect();
   ```
 
-  <span data-ttu-id="ea821-356">如果测试解决了此问题，这意味着垃圾回收器未回收对象，因为这些对象的终结器已被挂起。</span><span class="sxs-lookup"><span data-stu-id="ea821-356">If the test resolves the problem, this means that the garbage collector was not reclaiming objects, because the finalizers for those objects had been suspended.</span></span> <span data-ttu-id="ea821-357"><xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> 方法将启用这些终结器来完成其任务，并解决问题。</span><span class="sxs-lookup"><span data-stu-id="ea821-357">The <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> method enables the finalizers to complete their tasks, and fixes the problem.</span></span>
+  <span data-ttu-id="ff402-356">如果测试解决了此问题，这意味着垃圾回收器未回收对象，因为这些对象的终结器已被挂起。</span><span class="sxs-lookup"><span data-stu-id="ff402-356">If the test resolves the problem, this means that the garbage collector was not reclaiming objects, because the finalizers for those objects had been suspended.</span></span> <span data-ttu-id="ff402-357"><xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> 方法将启用这些终结器来完成其任务，并解决问题。</span><span class="sxs-lookup"><span data-stu-id="ff402-357">The <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> method enables the finalizers to complete their tasks, and fixes the problem.</span></span>
 
 <a name="Finalize"></a>
 
-### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a><span data-ttu-id="ea821-358">若要确定是否存在等待被终结的对象</span><span class="sxs-lookup"><span data-stu-id="ea821-358">To determine whether there are objects waiting to be finalized</span></span>
+### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a><span data-ttu-id="ff402-358">若要确定是否存在等待被终结的对象</span><span class="sxs-lookup"><span data-stu-id="ff402-358">To determine whether there are objects waiting to be finalized</span></span>
 
-1. <span data-ttu-id="ea821-359">在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="ea821-359">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>
+1. <span data-ttu-id="ff402-359">在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="ff402-359">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>
 
-    <span data-ttu-id="ea821-360">**!finalizequeue**</span><span class="sxs-lookup"><span data-stu-id="ea821-360">**!finalizequeue**</span></span>
+    <span data-ttu-id="ff402-360">**!finalizequeue**</span><span class="sxs-lookup"><span data-stu-id="ff402-360">**!finalizequeue**</span></span>
 
-    <span data-ttu-id="ea821-361">查看已准备好进行终结的对象的数目。</span><span class="sxs-lookup"><span data-stu-id="ea821-361">Look at the number of objects that are ready for finalization.</span></span> <span data-ttu-id="ea821-362">如果数目很多，则必须检查这些终结器完全没有进展或进展速度不够快的原因。</span><span class="sxs-lookup"><span data-stu-id="ea821-362">If the number is high, you must examine why these finalizers cannot progress at all or cannot progress fast enough.</span></span>
+    <span data-ttu-id="ff402-361">查看已准备好进行终结的对象的数目。</span><span class="sxs-lookup"><span data-stu-id="ff402-361">Look at the number of objects that are ready for finalization.</span></span> <span data-ttu-id="ff402-362">如果数目很多，则必须检查这些终结器完全没有进展或进展速度不够快的原因。</span><span class="sxs-lookup"><span data-stu-id="ff402-362">If the number is high, you must examine why these finalizers cannot progress at all or cannot progress fast enough.</span></span>
 
-2. <span data-ttu-id="ea821-363">若要获取线程的输出，请键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="ea821-363">To get an output of threads, type the following command:</span></span>
+2. <span data-ttu-id="ff402-363">若要获取线程的输出，请键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="ff402-363">To get an output of threads, type the following command:</span></span>
 
-    <span data-ttu-id="ea821-364">**threads -special**</span><span class="sxs-lookup"><span data-stu-id="ea821-364">**threads -special**</span></span>
+    <span data-ttu-id="ff402-364">**threads -special**</span><span class="sxs-lookup"><span data-stu-id="ff402-364">**threads -special**</span></span>
 
-    <span data-ttu-id="ea821-365">此命令提供如下所示的输出。</span><span class="sxs-lookup"><span data-stu-id="ea821-365">This command provides output such as the following.</span></span>
+    <span data-ttu-id="ff402-365">此命令提供如下所示的输出。</span><span class="sxs-lookup"><span data-stu-id="ff402-365">This command provides output such as the following.</span></span>
 
     ```console
        OSID     Special thread type
@@ -524,17 +524,17 @@ ms.locfileid: "73974763"
     4    df0    GC SuspendEE
     ```
 
-    <span data-ttu-id="ea821-366">终结器线程将指示当前正在运行的终结器（如果存在）。</span><span class="sxs-lookup"><span data-stu-id="ea821-366">The finalizer thread indicates which finalizer, if any, is currently being run.</span></span> <span data-ttu-id="ea821-367">当终结器线程没有运行任何终结器时，则它正在等待一个事件告诉它进行工作。</span><span class="sxs-lookup"><span data-stu-id="ea821-367">When a finalizer thread is not running any finalizers, it is waiting for an event to tell it to do its work.</span></span> <span data-ttu-id="ea821-368">大多数情况下，你将看到此状态中的终结器线程，因为它在 THREAD_HIGHEST_PRIORITY 处运行，并应快速完成运行终结器（如果存在）。</span><span class="sxs-lookup"><span data-stu-id="ea821-368">Most of the time you will see the finalizer thread in this state because it runs at THREAD_HIGHEST_PRIORITY and is supposed to finish running finalizers, if any, very quickly.</span></span>
+    <span data-ttu-id="ff402-366">终结器线程将指示当前正在运行的终结器（如果存在）。</span><span class="sxs-lookup"><span data-stu-id="ff402-366">The finalizer thread indicates which finalizer, if any, is currently being run.</span></span> <span data-ttu-id="ff402-367">当终结器线程没有运行任何终结器时，则它正在等待一个事件告诉它进行工作。</span><span class="sxs-lookup"><span data-stu-id="ff402-367">When a finalizer thread is not running any finalizers, it is waiting for an event to tell it to do its work.</span></span> <span data-ttu-id="ff402-368">大多数情况下，你将看到此状态中的终结器线程，因为它在 THREAD_HIGHEST_PRIORITY 处运行，并应快速完成运行终结器（如果存在）。</span><span class="sxs-lookup"><span data-stu-id="ff402-368">Most of the time you will see the finalizer thread in this state because it runs at THREAD_HIGHEST_PRIORITY and is supposed to finish running finalizers, if any, very quickly.</span></span>
 
 <a name="Fragmented"></a>
 
-### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a><span data-ttu-id="ea821-369">若要确定托管堆中的可用空间量</span><span class="sxs-lookup"><span data-stu-id="ea821-369">To determine the amount of free space in the managed heap</span></span>
+### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a><span data-ttu-id="ff402-369">若要确定托管堆中的可用空间量</span><span class="sxs-lookup"><span data-stu-id="ff402-369">To determine the amount of free space in the managed heap</span></span>
 
-- <span data-ttu-id="ea821-370">在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="ea821-370">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>
+- <span data-ttu-id="ff402-370">在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="ff402-370">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>
 
-  <span data-ttu-id="ea821-371">**!dumpheap -type Free -stat**</span><span class="sxs-lookup"><span data-stu-id="ea821-371">**!dumpheap -type Free -stat**</span></span>
+  <span data-ttu-id="ff402-371">**!dumpheap -type Free -stat**</span><span class="sxs-lookup"><span data-stu-id="ff402-371">**!dumpheap -type Free -stat**</span></span>
 
-  <span data-ttu-id="ea821-372">此命令将显示托管堆上所有可用对象的总大小，如以下示例中所示。</span><span class="sxs-lookup"><span data-stu-id="ea821-372">This command displays the total size of all the free objects on the managed heap, as shown in the following example.</span></span>
+  <span data-ttu-id="ff402-372">此命令将显示托管堆上所有可用对象的总大小，如以下示例中所示。</span><span class="sxs-lookup"><span data-stu-id="ff402-372">This command displays the total size of all the free objects on the managed heap, as shown in the following example.</span></span>
 
   ```console
   total 230 objects
@@ -544,11 +544,11 @@ ms.locfileid: "73974763"
   Total 230 objects
   ```
 
-- <span data-ttu-id="ea821-373">若要确定第 0 代中的可用空间，请键入以下命令以获取代的内存使用信息：</span><span class="sxs-lookup"><span data-stu-id="ea821-373">To determine the free space in generation 0, type the following command for memory consumption information by generation:</span></span>
+- <span data-ttu-id="ff402-373">若要确定第 0 代中的可用空间，请键入以下命令以获取代的内存使用信息：</span><span class="sxs-lookup"><span data-stu-id="ff402-373">To determine the free space in generation 0, type the following command for memory consumption information by generation:</span></span>
 
-  <span data-ttu-id="ea821-374">**!eeheap -gc**</span><span class="sxs-lookup"><span data-stu-id="ea821-374">**!eeheap -gc**</span></span>
+  <span data-ttu-id="ff402-374">**!eeheap -gc**</span><span class="sxs-lookup"><span data-stu-id="ff402-374">**!eeheap -gc**</span></span>
 
-  <span data-ttu-id="ea821-375">该命令将显示类似以下所示的输出。</span><span class="sxs-lookup"><span data-stu-id="ea821-375">This command displays output similar to the following.</span></span> <span data-ttu-id="ea821-376">最后一行将显示暂时段。</span><span class="sxs-lookup"><span data-stu-id="ea821-376">The last line shows the ephemeral segment.</span></span>
+  <span data-ttu-id="ff402-375">该命令将显示类似以下所示的输出。</span><span class="sxs-lookup"><span data-stu-id="ff402-375">This command displays output similar to the following.</span></span> <span data-ttu-id="ff402-376">最后一行将显示暂时段。</span><span class="sxs-lookup"><span data-stu-id="ff402-376">The last line shows the ephemeral segment.</span></span>
 
   ```console
   Heap 0 (0015ad08)
@@ -564,21 +564,21 @@ ms.locfileid: "73974763"
   46120000 46120038  49e05d04   0x03ce5ccc(63855820)
   ```
 
-- <span data-ttu-id="ea821-377">计算 0 代使用的空间：</span><span class="sxs-lookup"><span data-stu-id="ea821-377">Calculate the space used by generation 0:</span></span>
+- <span data-ttu-id="ff402-377">计算 0 代使用的空间：</span><span class="sxs-lookup"><span data-stu-id="ff402-377">Calculate the space used by generation 0:</span></span>
 
-  <span data-ttu-id="ea821-378">**?49e05d04-0x49521f8c**</span><span class="sxs-lookup"><span data-stu-id="ea821-378">**? 49e05d04-0x49521f8c**</span></span>
+  <span data-ttu-id="ff402-378">**?49e05d04-0x49521f8c**</span><span class="sxs-lookup"><span data-stu-id="ff402-378">**? 49e05d04-0x49521f8c**</span></span>
 
-  <span data-ttu-id="ea821-379">结果如下所示：</span><span class="sxs-lookup"><span data-stu-id="ea821-379">The result is as follows.</span></span> <span data-ttu-id="ea821-380">0 代大约为 9 MB。</span><span class="sxs-lookup"><span data-stu-id="ea821-380">Generation 0 is approximately 9 MB.</span></span>
+  <span data-ttu-id="ff402-379">结果如下所示：</span><span class="sxs-lookup"><span data-stu-id="ff402-379">The result is as follows.</span></span> <span data-ttu-id="ff402-380">0 代大约为 9 MB。</span><span class="sxs-lookup"><span data-stu-id="ff402-380">Generation 0 is approximately 9 MB.</span></span>
 
   ```console
   Evaluate expression: 9321848 = 008e3d78
   ```
 
-- <span data-ttu-id="ea821-381">以下命令将转储 0 代范围内的可用空间：</span><span class="sxs-lookup"><span data-stu-id="ea821-381">The following command dumps the free space within the generation 0 range:</span></span>
+- <span data-ttu-id="ff402-381">以下命令将转储 0 代范围内的可用空间：</span><span class="sxs-lookup"><span data-stu-id="ff402-381">The following command dumps the free space within the generation 0 range:</span></span>
 
-  <span data-ttu-id="ea821-382">**!dumpheap -type Free -stat 0x49521f8c 49e05d04**</span><span class="sxs-lookup"><span data-stu-id="ea821-382">**!dumpheap -type Free -stat 0x49521f8c 49e05d04**</span></span>
+  <span data-ttu-id="ff402-382">**!dumpheap -type Free -stat 0x49521f8c 49e05d04**</span><span class="sxs-lookup"><span data-stu-id="ff402-382">**!dumpheap -type Free -stat 0x49521f8c 49e05d04**</span></span>
 
-  <span data-ttu-id="ea821-383">结果如下所示：</span><span class="sxs-lookup"><span data-stu-id="ea821-383">The result is as follows.</span></span>
+  <span data-ttu-id="ff402-383">结果如下所示：</span><span class="sxs-lookup"><span data-stu-id="ff402-383">The result is as follows.</span></span>
 
   ```console
   ------------------------------
@@ -601,17 +601,17 @@ ms.locfileid: "73974763"
   Total 409 objects
   ```
 
-  <span data-ttu-id="ea821-384">此输出显示堆的 0 代部分正在对对象使用 9 MB 的空间并且有 7 MB 可用。</span><span class="sxs-lookup"><span data-stu-id="ea821-384">This output shows that the generation 0 portion of the heap is using 9 MB of space for objects and has 7 MB free.</span></span> <span data-ttu-id="ea821-385">此分析显示了 0 代对碎片的贡献程度。</span><span class="sxs-lookup"><span data-stu-id="ea821-385">This analysis shows the extent to which generation 0 contributes to fragmentation.</span></span> <span data-ttu-id="ea821-386">此堆的使用量应从总量中扣除，作为长期对象所产生的碎片的原因。</span><span class="sxs-lookup"><span data-stu-id="ea821-386">This amount of heap usage should be discounted from the total amount as the cause of fragmentation by long-term objects.</span></span>
+  <span data-ttu-id="ff402-384">此输出显示堆的 0 代部分正在对对象使用 9 MB 的空间并且有 7 MB 可用。</span><span class="sxs-lookup"><span data-stu-id="ff402-384">This output shows that the generation 0 portion of the heap is using 9 MB of space for objects and has 7 MB free.</span></span> <span data-ttu-id="ff402-385">此分析显示了 0 代对碎片的贡献程度。</span><span class="sxs-lookup"><span data-stu-id="ff402-385">This analysis shows the extent to which generation 0 contributes to fragmentation.</span></span> <span data-ttu-id="ff402-386">此堆的使用量应从总量中扣除，作为长期对象所产生的碎片的原因。</span><span class="sxs-lookup"><span data-stu-id="ff402-386">This amount of heap usage should be discounted from the total amount as the cause of fragmentation by long-term objects.</span></span>
 
 <a name="Pinned"></a>
 
-### <a name="to-determine-the-number-of-pinned-objects"></a><span data-ttu-id="ea821-387">若要确定固定对象的数目</span><span class="sxs-lookup"><span data-stu-id="ea821-387">To determine the number of pinned objects</span></span>
+### <a name="to-determine-the-number-of-pinned-objects"></a><span data-ttu-id="ff402-387">若要确定固定对象的数目</span><span class="sxs-lookup"><span data-stu-id="ff402-387">To determine the number of pinned objects</span></span>
 
-- <span data-ttu-id="ea821-388">在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="ea821-388">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>
+- <span data-ttu-id="ff402-388">在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="ff402-388">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>
 
-  <span data-ttu-id="ea821-389">**!gchandles**</span><span class="sxs-lookup"><span data-stu-id="ea821-389">**!gchandles**</span></span>
+  <span data-ttu-id="ff402-389">**!gchandles**</span><span class="sxs-lookup"><span data-stu-id="ff402-389">**!gchandles**</span></span>
 
-  <span data-ttu-id="ea821-390">显示的统计信息包括固定句柄的数量，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="ea821-390">The statistics displayed includes the number of pinned handles, as the following example shows.</span></span>
+  <span data-ttu-id="ff402-390">显示的统计信息包括固定句柄的数量，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="ff402-390">The statistics displayed includes the number of pinned handles, as the following example shows.</span></span>
 
   ```console
   GC Handle Statistics:
@@ -621,15 +621,15 @@ ms.locfileid: "73974763"
 
 <a name="TimeInGC"></a>
 
-### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a><span data-ttu-id="ea821-391">若要确定垃圾回收中的时间</span><span class="sxs-lookup"><span data-stu-id="ea821-391">To determine the length of time in a garbage collection</span></span>
+### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a><span data-ttu-id="ff402-391">若要确定垃圾回收中的时间</span><span class="sxs-lookup"><span data-stu-id="ff402-391">To determine the length of time in a garbage collection</span></span>
 
-- <span data-ttu-id="ea821-392">检查 `% Time in GC` 内存性能计数器。</span><span class="sxs-lookup"><span data-stu-id="ea821-392">Examine the `% Time in GC` memory performance counter.</span></span>
+- <span data-ttu-id="ff402-392">检查 `% Time in GC` 内存性能计数器。</span><span class="sxs-lookup"><span data-stu-id="ff402-392">Examine the `% Time in GC` memory performance counter.</span></span>
 
-  <span data-ttu-id="ea821-393">通过使用采样间隔时间来计算值。</span><span class="sxs-lookup"><span data-stu-id="ea821-393">The value is calculated by using a sample interval time.</span></span> <span data-ttu-id="ea821-394">因为该计数器在每次垃圾回收结束时进行更新，所以如果在间隔期间没有产生任何回收，则当前的示例将具有与之前的示例相同的值。</span><span class="sxs-lookup"><span data-stu-id="ea821-394">Because the counters are updated at the end of each garbage collection, the current sample will have the same value as the previous sample if no collections occurred during the interval.</span></span>
+  <span data-ttu-id="ff402-393">通过使用采样间隔时间来计算值。</span><span class="sxs-lookup"><span data-stu-id="ff402-393">The value is calculated by using a sample interval time.</span></span> <span data-ttu-id="ff402-394">因为该计数器在每次垃圾回收结束时进行更新，所以如果在间隔期间没有产生任何回收，则当前的示例将具有与之前的示例相同的值。</span><span class="sxs-lookup"><span data-stu-id="ff402-394">Because the counters are updated at the end of each garbage collection, the current sample will have the same value as the previous sample if no collections occurred during the interval.</span></span>
 
-  <span data-ttu-id="ea821-395">回收时间是通过将采样间隔时间乘以百分比值获取的。</span><span class="sxs-lookup"><span data-stu-id="ea821-395">Collection time is obtained by multiplying the sample interval time with the percentage value.</span></span>
+  <span data-ttu-id="ff402-395">回收时间是通过将采样间隔时间乘以百分比值获取的。</span><span class="sxs-lookup"><span data-stu-id="ff402-395">Collection time is obtained by multiplying the sample interval time with the percentage value.</span></span>
 
-  <span data-ttu-id="ea821-396">以下数据显示了为时 8 秒的研究的 4 个采样，彼此间隔 2 秒。</span><span class="sxs-lookup"><span data-stu-id="ea821-396">The following data shows four sampling intervals of two seconds, for an 8-second study.</span></span> <span data-ttu-id="ea821-397">`Gen0`、`Gen1` 和 `Gen2` 列显示了该代的间隔期间发生的垃圾回收数。</span><span class="sxs-lookup"><span data-stu-id="ea821-397">The `Gen0`, `Gen1`, and `Gen2` columns show the number of garbage collections that occurred during that interval for that generation.</span></span>
+  <span data-ttu-id="ff402-396">以下数据显示了为时 8 秒的研究的 4 个采样，彼此间隔 2 秒。</span><span class="sxs-lookup"><span data-stu-id="ff402-396">The following data shows four sampling intervals of two seconds, for an 8-second study.</span></span> <span data-ttu-id="ff402-397">`Gen0`、`Gen1` 和 `Gen2` 列显示了该代的间隔期间发生的垃圾回收数。</span><span class="sxs-lookup"><span data-stu-id="ff402-397">The `Gen0`, `Gen1`, and `Gen2` columns show the number of garbage collections that occurred during that interval for that generation.</span></span>
 
   ```console
   Interval    Gen0    Gen1    Gen2    % Time in GC
@@ -639,9 +639,9 @@ ms.locfileid: "73974763"
           4      11       3       1               3
   ```
 
-  <span data-ttu-id="ea821-398">当垃圾回收发生时，将不会显示此信息，但可以确定时间间隔中发生的垃圾回收数。</span><span class="sxs-lookup"><span data-stu-id="ea821-398">This information does not show when the garbage collection occurred, but you can determine the number of garbage collections that occurred in an interval of time.</span></span> <span data-ttu-id="ea821-399">假设最坏的情况下，第 10 个 0 代垃圾回收在第 2 个间隔开始时完成，且第 11 个 0 代垃圾回收在第 5 个间隔结束时完成。</span><span class="sxs-lookup"><span data-stu-id="ea821-399">Assuming the worst case, the tenth generation 0 garbage collection finished at the start of the second interval, and the eleventh generation 0 garbage collection finished at the end of the fifth interval.</span></span> <span data-ttu-id="ea821-400">第 10 个和第 11 个垃圾回收结束时之间的时间约为 2 秒钟，并且性能计数器显示为 3%，因此第 11 个 0 代垃圾回收的持续时间为（2 秒 \* 3%= 60 毫秒）。</span><span class="sxs-lookup"><span data-stu-id="ea821-400">The time between the end of the tenth and the end of the eleventh garbage collection is about 2 seconds, and the performance counter shows 3%, so the duration of the eleventh generation 0 garbage collection was (2 seconds \* 3% = 60ms).</span></span>
+  <span data-ttu-id="ff402-398">当垃圾回收发生时，将不会显示此信息，但可以确定时间间隔中发生的垃圾回收数。</span><span class="sxs-lookup"><span data-stu-id="ff402-398">This information does not show when the garbage collection occurred, but you can determine the number of garbage collections that occurred in an interval of time.</span></span> <span data-ttu-id="ff402-399">假设最坏的情况下，第 10 个 0 代垃圾回收在第 2 个间隔开始时完成，且第 11 个 0 代垃圾回收在第 5 个间隔结束时完成。</span><span class="sxs-lookup"><span data-stu-id="ff402-399">Assuming the worst case, the tenth generation 0 garbage collection finished at the start of the second interval, and the eleventh generation 0 garbage collection finished at the end of the fifth interval.</span></span> <span data-ttu-id="ff402-400">第 10 个和第 11 个垃圾回收结束时之间的时间约为 2 秒钟，并且性能计数器显示为 3%，因此第 11 个 0 代垃圾回收的持续时间为（2 秒 \* 3%= 60 毫秒）。</span><span class="sxs-lookup"><span data-stu-id="ff402-400">The time between the end of the tenth and the end of the eleventh garbage collection is about 2 seconds, and the performance counter shows 3%, so the duration of the eleventh generation 0 garbage collection was (2 seconds \* 3% = 60ms).</span></span>
 
-  <span data-ttu-id="ea821-401">在此示例中，存在 5 个周期。</span><span class="sxs-lookup"><span data-stu-id="ea821-401">In this example, there are 5 periods.</span></span>
+  <span data-ttu-id="ff402-401">在此示例中，存在 5 个周期。</span><span class="sxs-lookup"><span data-stu-id="ff402-401">In this example, there are 5 periods.</span></span>
 
   ```console
   Interval    Gen0    Gen1    Gen2     % Time in GC
@@ -652,11 +652,11 @@ ms.locfileid: "73974763"
           5      11       4       2               20
   ```
 
-  <span data-ttu-id="ea821-402">第 2 个第 2代垃圾回收在第 3 个间隔期间开始并在第 5 个间隔处完成。</span><span class="sxs-lookup"><span data-stu-id="ea821-402">The second generation 2 garbage collection started during the third interval and finished at the fifth interval.</span></span> <span data-ttu-id="ea821-403">假设最坏情况下，最后一次垃圾回收是针对在第 2 个间隔开始时完成的 0 代回收，且第 2 代垃圾回收在第 5 个间隔结束时完成。</span><span class="sxs-lookup"><span data-stu-id="ea821-403">Assuming the worst case, the last garbage collection was for a generation 0 collection that finished at the start of the second interval, and the generation 2 garbage collection finished at the end of the fifth interval.</span></span> <span data-ttu-id="ea821-404">因此，第 0 代垃圾回收结束和第 2 代垃圾回收结束之间的时间是 4 秒。</span><span class="sxs-lookup"><span data-stu-id="ea821-404">Therefore, the time between the end of the generation 0 garbage collection and the end of the generation 2 garbage collection is 4 seconds.</span></span> <span data-ttu-id="ea821-405">因为 `% Time in GC` 计数器为 20%，所以第 2 代垃圾回收可能使用的最长时间为（4 秒 \* 20%= 800 毫秒）。</span><span class="sxs-lookup"><span data-stu-id="ea821-405">Because the `% Time in GC` counter is 20%, the maximum amount of time the generation 2 garbage collection could have taken is (4 seconds \* 20% = 800ms).</span></span>
+  <span data-ttu-id="ff402-402">第 2 个第 2代垃圾回收在第 3 个间隔期间开始并在第 5 个间隔处完成。</span><span class="sxs-lookup"><span data-stu-id="ff402-402">The second generation 2 garbage collection started during the third interval and finished at the fifth interval.</span></span> <span data-ttu-id="ff402-403">假设最坏情况下，最后一次垃圾回收是针对在第 2 个间隔开始时完成的 0 代回收，且第 2 代垃圾回收在第 5 个间隔结束时完成。</span><span class="sxs-lookup"><span data-stu-id="ff402-403">Assuming the worst case, the last garbage collection was for a generation 0 collection that finished at the start of the second interval, and the generation 2 garbage collection finished at the end of the fifth interval.</span></span> <span data-ttu-id="ff402-404">因此，第 0 代垃圾回收结束和第 2 代垃圾回收结束之间的时间是 4 秒。</span><span class="sxs-lookup"><span data-stu-id="ff402-404">Therefore, the time between the end of the generation 0 garbage collection and the end of the generation 2 garbage collection is 4 seconds.</span></span> <span data-ttu-id="ff402-405">因为 `% Time in GC` 计数器为 20%，所以第 2 代垃圾回收可能使用的最长时间为（4 秒 \* 20%= 800 毫秒）。</span><span class="sxs-lookup"><span data-stu-id="ff402-405">Because the `% Time in GC` counter is 20%, the maximum amount of time the generation 2 garbage collection could have taken is (4 seconds \* 20% = 800ms).</span></span>
 
-- <span data-ttu-id="ea821-406">或者，可以通过使用[垃圾回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)，确定垃圾回收的时长，并分析此信息以确定垃圾回收的持续时间。</span><span class="sxs-lookup"><span data-stu-id="ea821-406">Alternatively, you can determine the length of a garbage collection by using [garbage collection ETW events](../../../docs/framework/performance/garbage-collection-etw-events.md), and analyze the information to determine the duration of garbage collection.</span></span>
+- <span data-ttu-id="ff402-406">或者，可以通过使用[垃圾回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)，确定垃圾回收的时长，并分析此信息以确定垃圾回收的持续时间。</span><span class="sxs-lookup"><span data-stu-id="ff402-406">Alternatively, you can determine the length of a garbage collection by using [garbage collection ETW events](../../../docs/framework/performance/garbage-collection-etw-events.md), and analyze the information to determine the duration of garbage collection.</span></span>
 
-  <span data-ttu-id="ea821-407">例如，以下数据显示了一个发生在非并发垃圾回收期间的事件序列。</span><span class="sxs-lookup"><span data-stu-id="ea821-407">For example, the following data shows an event sequence that occurred during a non-concurrent garbage collection.</span></span>
+  <span data-ttu-id="ff402-407">例如，以下数据显示了一个发生在非并发垃圾回收期间的事件序列。</span><span class="sxs-lookup"><span data-stu-id="ff402-407">For example, the following data shows an event sequence that occurred during a non-concurrent garbage collection.</span></span>
 
   ```console
   Timestamp    Event name
@@ -669,13 +669,13 @@ ms.locfileid: "73974763"
   517918        GCRestartEEEnd
   ```
 
-  <span data-ttu-id="ea821-408">挂起托管线程花费了 26us (`GCSuspendEEEnd` – `GCSuspendEEBegin_V1`)。</span><span class="sxs-lookup"><span data-stu-id="ea821-408">Suspending the managed thread took 26us (`GCSuspendEEEnd` – `GCSuspendEEBegin_V1`).</span></span>
+  <span data-ttu-id="ff402-408">挂起托管线程花费了 26us (`GCSuspendEEEnd` – `GCSuspendEEBegin_V1`)。</span><span class="sxs-lookup"><span data-stu-id="ff402-408">Suspending the managed thread took 26us (`GCSuspendEEEnd` – `GCSuspendEEBegin_V1`).</span></span>
 
-  <span data-ttu-id="ea821-409">实际的垃圾回收花费了 4.8 毫秒 (`GCEnd_V1` – `GCStart_V1`)。</span><span class="sxs-lookup"><span data-stu-id="ea821-409">The actual garbage collection took 4.8ms (`GCEnd_V1` – `GCStart_V1`).</span></span>
+  <span data-ttu-id="ff402-409">实际的垃圾回收花费了 4.8 毫秒 (`GCEnd_V1` – `GCStart_V1`)。</span><span class="sxs-lookup"><span data-stu-id="ff402-409">The actual garbage collection took 4.8ms (`GCEnd_V1` – `GCStart_V1`).</span></span>
 
-  <span data-ttu-id="ea821-410">回复执行托管线程花费了 21us (`GCRestartEEEnd` – `GCRestartEEBegin`)。</span><span class="sxs-lookup"><span data-stu-id="ea821-410">Resuming the managed threads took 21us (`GCRestartEEEnd` – `GCRestartEEBegin`).</span></span>
+  <span data-ttu-id="ff402-410">回复执行托管线程花费了 21us (`GCRestartEEEnd` – `GCRestartEEBegin`)。</span><span class="sxs-lookup"><span data-stu-id="ff402-410">Resuming the managed threads took 21us (`GCRestartEEEnd` – `GCRestartEEBegin`).</span></span>
 
-  <span data-ttu-id="ea821-411">以下输出为后台垃圾回收提供了一个示例，并包括进程、线程和事件字段。</span><span class="sxs-lookup"><span data-stu-id="ea821-411">The following output provides an example for background garbage collection, and includes the process, thread, and event fields.</span></span> <span data-ttu-id="ea821-412">（没有显示所有数据。）</span><span class="sxs-lookup"><span data-stu-id="ea821-412">(Not all data is shown.)</span></span>
+  <span data-ttu-id="ff402-411">以下输出为后台垃圾回收提供了一个示例，并包括进程、线程和事件字段。</span><span class="sxs-lookup"><span data-stu-id="ff402-411">The following output provides an example for background garbage collection, and includes the process, thread, and event fields.</span></span> <span data-ttu-id="ff402-412">（没有显示所有数据。）</span><span class="sxs-lookup"><span data-stu-id="ff402-412">(Not all data is shown.)</span></span>
 
   ```console
   timestamp(us)    event name            process    thread    event field
@@ -695,27 +695,27 @@ ms.locfileid: "73974763"
   89931464        GCHeapStats            Test.exe    4372
   ```
 
-  <span data-ttu-id="ea821-413">42504816 处的 `GCStart_V1` 事件指示此为一个后台垃圾回收，因为最后一个字段是 `1`。</span><span class="sxs-lookup"><span data-stu-id="ea821-413">The `GCStart_V1` event at 42504816 indicates that this is a background garbage collection, because the last field is `1`.</span></span> <span data-ttu-id="ea821-414">这将变为垃圾回收 No.</span><span class="sxs-lookup"><span data-stu-id="ea821-414">This becomes garbage collection No.</span></span> <span data-ttu-id="ea821-415">102019。</span><span class="sxs-lookup"><span data-stu-id="ea821-415">102019.</span></span>
+  <span data-ttu-id="ff402-413">42504816 处的 `GCStart_V1` 事件指示此为一个后台垃圾回收，因为最后一个字段是 `1`。</span><span class="sxs-lookup"><span data-stu-id="ff402-413">The `GCStart_V1` event at 42504816 indicates that this is a background garbage collection, because the last field is `1`.</span></span> <span data-ttu-id="ff402-414">这将变为垃圾回收 No.</span><span class="sxs-lookup"><span data-stu-id="ff402-414">This becomes garbage collection No.</span></span> <span data-ttu-id="ff402-415">102019。</span><span class="sxs-lookup"><span data-stu-id="ff402-415">102019.</span></span>
 
-  <span data-ttu-id="ea821-416">将发生 `GCStart` 事件，因为在开始后台垃圾回收之前，需要一个暂时垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ea821-416">The `GCStart` event occurs because there is a need for an ephemeral garbage collection before you start a background garbage collection.</span></span> <span data-ttu-id="ea821-417">这将变为垃圾回收 No.</span><span class="sxs-lookup"><span data-stu-id="ea821-417">This becomes garbage collection No.</span></span> <span data-ttu-id="ea821-418">102020。</span><span class="sxs-lookup"><span data-stu-id="ea821-418">102020.</span></span>
+  <span data-ttu-id="ff402-416">将发生 `GCStart` 事件，因为在开始后台垃圾回收之前，需要一个暂时垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ff402-416">The `GCStart` event occurs because there is a need for an ephemeral garbage collection before you start a background garbage collection.</span></span> <span data-ttu-id="ff402-417">这将变为垃圾回收 No.</span><span class="sxs-lookup"><span data-stu-id="ff402-417">This becomes garbage collection No.</span></span> <span data-ttu-id="ff402-418">102020。</span><span class="sxs-lookup"><span data-stu-id="ff402-418">102020.</span></span>
 
-  <span data-ttu-id="ea821-419">在 42514170 处，垃圾回收 No.</span><span class="sxs-lookup"><span data-stu-id="ea821-419">At 42514170, garbage collection No.</span></span> <span data-ttu-id="ea821-420">102020 结束。</span><span class="sxs-lookup"><span data-stu-id="ea821-420">102020 finishes.</span></span> <span data-ttu-id="ea821-421">此时，将重新启动托管线程。</span><span class="sxs-lookup"><span data-stu-id="ea821-421">The managed threads are restarted at this point.</span></span> <span data-ttu-id="ea821-422">这将在触发此后台垃圾回收的线程 4372 上完成。</span><span class="sxs-lookup"><span data-stu-id="ea821-422">This is completed on thread 4372, which triggered this background garbage collection.</span></span>
+  <span data-ttu-id="ff402-419">在 42514170 处，垃圾回收 No.</span><span class="sxs-lookup"><span data-stu-id="ff402-419">At 42514170, garbage collection No.</span></span> <span data-ttu-id="ff402-420">102020 结束。</span><span class="sxs-lookup"><span data-stu-id="ff402-420">102020 finishes.</span></span> <span data-ttu-id="ff402-421">此时，将重新启动托管线程。</span><span class="sxs-lookup"><span data-stu-id="ff402-421">The managed threads are restarted at this point.</span></span> <span data-ttu-id="ff402-422">这将在触发此后台垃圾回收的线程 4372 上完成。</span><span class="sxs-lookup"><span data-stu-id="ff402-422">This is completed on thread 4372, which triggered this background garbage collection.</span></span>
 
-  <span data-ttu-id="ea821-423">在线程 4744 上，发生了一个挂起。</span><span class="sxs-lookup"><span data-stu-id="ea821-423">On thread 4744, a suspension occurs.</span></span> <span data-ttu-id="ea821-424">这是唯一一次后台垃圾回收不得不挂起托管线程。</span><span class="sxs-lookup"><span data-stu-id="ea821-424">This is the only time at which the background garbage collection has to suspend managed threads.</span></span> <span data-ttu-id="ea821-425">此持续时间为大约 99 毫秒 ((63784407-63685394)/1000)。</span><span class="sxs-lookup"><span data-stu-id="ea821-425">This duration is approximately 99ms ((63784407-63685394)/1000).</span></span>
+  <span data-ttu-id="ff402-423">在线程 4744 上，发生了一个挂起。</span><span class="sxs-lookup"><span data-stu-id="ff402-423">On thread 4744, a suspension occurs.</span></span> <span data-ttu-id="ff402-424">这是唯一一次后台垃圾回收不得不挂起托管线程。</span><span class="sxs-lookup"><span data-stu-id="ff402-424">This is the only time at which the background garbage collection has to suspend managed threads.</span></span> <span data-ttu-id="ff402-425">此持续时间为大约 99 毫秒 ((63784407-63685394)/1000)。</span><span class="sxs-lookup"><span data-stu-id="ff402-425">This duration is approximately 99ms ((63784407-63685394)/1000).</span></span>
 
-  <span data-ttu-id="ea821-426">后台垃圾回收的 `GCEnd` 事件位于 89931423。</span><span class="sxs-lookup"><span data-stu-id="ea821-426">The `GCEnd` event for the background garbage collection is at 89931423.</span></span> <span data-ttu-id="ea821-427">这意味着后台垃圾回收持续了大约 47 秒 ((89931423-42504816)/1000)。</span><span class="sxs-lookup"><span data-stu-id="ea821-427">This means that the background garbage collection lasted for about 47seconds ((89931423-42504816)/1000).</span></span>
+  <span data-ttu-id="ff402-426">后台垃圾回收的 `GCEnd` 事件位于 89931423。</span><span class="sxs-lookup"><span data-stu-id="ff402-426">The `GCEnd` event for the background garbage collection is at 89931423.</span></span> <span data-ttu-id="ff402-427">这意味着后台垃圾回收持续了大约 47 秒 ((89931423-42504816)/1000)。</span><span class="sxs-lookup"><span data-stu-id="ff402-427">This means that the background garbage collection lasted for about 47seconds ((89931423-42504816)/1000).</span></span>
 
-  <span data-ttu-id="ea821-428">托管线程运行时，可以查看发生的任意数量的暂时垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ea821-428">While the managed threads are running, you can see any number of ephemeral garbage collections occurring.</span></span>
+  <span data-ttu-id="ff402-428">托管线程运行时，可以查看发生的任意数量的暂时垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ff402-428">While the managed threads are running, you can see any number of ephemeral garbage collections occurring.</span></span>
 
 <a name="Triggered"></a>
 
-### <a name="to-determine-what-triggered-a-garbage-collection"></a><span data-ttu-id="ea821-429">若要确定触发垃圾回收的原因</span><span class="sxs-lookup"><span data-stu-id="ea821-429">To determine what triggered a garbage collection</span></span>
+### <a name="to-determine-what-triggered-a-garbage-collection"></a><span data-ttu-id="ff402-429">若要确定触发垃圾回收的原因</span><span class="sxs-lookup"><span data-stu-id="ff402-429">To determine what triggered a garbage collection</span></span>
 
-- <span data-ttu-id="ea821-430">在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令，以显示所有带调用堆栈的线程：</span><span class="sxs-lookup"><span data-stu-id="ea821-430">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command to show all the threads with their call stacks:</span></span>
+- <span data-ttu-id="ff402-430">在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令，以显示所有带调用堆栈的线程：</span><span class="sxs-lookup"><span data-stu-id="ff402-430">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command to show all the threads with their call stacks:</span></span>
 
-  <span data-ttu-id="ea821-431">**~\*kb**</span><span class="sxs-lookup"><span data-stu-id="ea821-431">**~\*kb**</span></span>
+  <span data-ttu-id="ff402-431">**~\*kb**</span><span class="sxs-lookup"><span data-stu-id="ff402-431">**~\*kb**</span></span>
 
-  <span data-ttu-id="ea821-432">该命令将显示类似以下所示的输出。</span><span class="sxs-lookup"><span data-stu-id="ea821-432">This command displays output similar to the following.</span></span>
+  <span data-ttu-id="ff402-432">该命令将显示类似以下所示的输出。</span><span class="sxs-lookup"><span data-stu-id="ff402-432">This command displays output similar to the following.</span></span>
 
   ```console
   0012f3b0 79ff0bf8 mscorwks!WKS::GCHeap::GarbageCollect
@@ -723,9 +723,9 @@ ms.locfileid: "73974763"
   0012f490 79fa22bd fragment_ni!request.Main(System.String[])+0x48
   ```
 
-  <span data-ttu-id="ea821-433">如果垃圾回收是操作系统的内存不足通知引起的，则调用堆栈会非常相似，除了线程是终结器线程之外。</span><span class="sxs-lookup"><span data-stu-id="ea821-433">If the garbage collection was caused by a low memory notification from the operating system, the call stack is similar, except that the thread is the finalizer thread.</span></span> <span data-ttu-id="ea821-434">终结器线程将获取异步内存不足的通知，并引发垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ea821-434">The finalizer thread gets an asynchronous low memory notification and induces the garbage collection.</span></span>
+  <span data-ttu-id="ff402-433">如果垃圾回收是操作系统的内存不足通知引起的，则调用堆栈会非常相似，除了线程是终结器线程之外。</span><span class="sxs-lookup"><span data-stu-id="ff402-433">If the garbage collection was caused by a low memory notification from the operating system, the call stack is similar, except that the thread is the finalizer thread.</span></span> <span data-ttu-id="ff402-434">终结器线程将获取异步内存不足的通知，并引发垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ff402-434">The finalizer thread gets an asynchronous low memory notification and induces the garbage collection.</span></span>
 
-  <span data-ttu-id="ea821-435">如果垃圾回收是内存分配引起的，则堆栈显示如下：</span><span class="sxs-lookup"><span data-stu-id="ea821-435">If the garbage collection was caused by memory allocation, the stack appears as follows:</span></span>
+  <span data-ttu-id="ff402-435">如果垃圾回收是内存分配引起的，则堆栈显示如下：</span><span class="sxs-lookup"><span data-stu-id="ff402-435">If the garbage collection was caused by memory allocation, the stack appears as follows:</span></span>
 
   ```console
   0012f230 7a07c551 mscorwks!WKS::GCHeap::GarbageCollectGeneration
@@ -739,13 +739,13 @@ ms.locfileid: "73974763"
   0000002a 79fa22bd fragment_ni!request.Main(System.String[])+0x153
   ```
 
-  <span data-ttu-id="ea821-436">实时帮助程序 (`JIT_New*`) 最终调用 `GCHeap::GarbageCollectGeneration`。</span><span class="sxs-lookup"><span data-stu-id="ea821-436">A just-in-time helper (`JIT_New*`) eventually calls `GCHeap::GarbageCollectGeneration`.</span></span> <span data-ttu-id="ea821-437">如果确定第 2 代垃圾回收是分配引起的，则必须确定第 2 代垃圾回收所分配的对象以及如何避免它们。</span><span class="sxs-lookup"><span data-stu-id="ea821-437">If you determine that generation 2 garbage collections are caused by allocations, you must determine which objects are collected by a generation 2 garbage collection and how to avoid them.</span></span> <span data-ttu-id="ea821-438">也就是说，想要确定第 2 代垃圾回收的开始和结束之间的差异，以及引发第 2 代回收的对象。</span><span class="sxs-lookup"><span data-stu-id="ea821-438">That is, you want to determine the difference between the start and the end of a generation 2 garbage collection, and the objects that caused the generation 2 collection.</span></span>
+  <span data-ttu-id="ff402-436">实时帮助程序 (`JIT_New*`) 最终调用 `GCHeap::GarbageCollectGeneration`。</span><span class="sxs-lookup"><span data-stu-id="ff402-436">A just-in-time helper (`JIT_New*`) eventually calls `GCHeap::GarbageCollectGeneration`.</span></span> <span data-ttu-id="ff402-437">如果确定第 2 代垃圾回收是分配引起的，则必须确定第 2 代垃圾回收所分配的对象以及如何避免它们。</span><span class="sxs-lookup"><span data-stu-id="ff402-437">If you determine that generation 2 garbage collections are caused by allocations, you must determine which objects are collected by a generation 2 garbage collection and how to avoid them.</span></span> <span data-ttu-id="ff402-438">也就是说，想要确定第 2 代垃圾回收的开始和结束之间的差异，以及引发第 2 代回收的对象。</span><span class="sxs-lookup"><span data-stu-id="ff402-438">That is, you want to determine the difference between the start and the end of a generation 2 garbage collection, and the objects that caused the generation 2 collection.</span></span>
 
-  <span data-ttu-id="ea821-439">例如，在调试器中键入以下命令，以显示第 2 代回收的开始：</span><span class="sxs-lookup"><span data-stu-id="ea821-439">For example, type the following command in the debugger to show the beginning of a generation 2 collection:</span></span>
+  <span data-ttu-id="ff402-439">例如，在调试器中键入以下命令，以显示第 2 代回收的开始：</span><span class="sxs-lookup"><span data-stu-id="ff402-439">For example, type the following command in the debugger to show the beginning of a generation 2 collection:</span></span>
 
-  <span data-ttu-id="ea821-440">**!dumpheap –stat**</span><span class="sxs-lookup"><span data-stu-id="ea821-440">**!dumpheap –stat**</span></span>
+  <span data-ttu-id="ff402-440">**!dumpheap –stat**</span><span class="sxs-lookup"><span data-stu-id="ff402-440">**!dumpheap –stat**</span></span>
 
-  <span data-ttu-id="ea821-441">输出示例（经过删减以显示使用的最多空间的对象）：</span><span class="sxs-lookup"><span data-stu-id="ea821-441">Example output (abridged to show the objects that use the most space):</span></span>
+  <span data-ttu-id="ff402-441">输出示例（经过删减以显示使用的最多空间的对象）：</span><span class="sxs-lookup"><span data-stu-id="ff402-441">Example output (abridged to show the objects that use the most space):</span></span>
 
   ```console
   79124228    31857      9862328 System.Object[]
@@ -763,11 +763,11 @@ ms.locfileid: "73974763"
   Total 6471774 objects
   ```
 
-  <span data-ttu-id="ea821-442">在第 2 代结束时，重复该命令：</span><span class="sxs-lookup"><span data-stu-id="ea821-442">Repeat the command at the end of generation 2:</span></span>
+  <span data-ttu-id="ff402-442">在第 2 代结束时，重复该命令：</span><span class="sxs-lookup"><span data-stu-id="ff402-442">Repeat the command at the end of generation 2:</span></span>
 
-  <span data-ttu-id="ea821-443">**!dumpheap –stat**</span><span class="sxs-lookup"><span data-stu-id="ea821-443">**!dumpheap –stat**</span></span>
+  <span data-ttu-id="ff402-443">**!dumpheap –stat**</span><span class="sxs-lookup"><span data-stu-id="ff402-443">**!dumpheap –stat**</span></span>
 
-  <span data-ttu-id="ea821-444">输出示例（经过删减以显示使用的最多空间的对象）：</span><span class="sxs-lookup"><span data-stu-id="ea821-444">Example output (abridged to show the objects that use the most space):</span></span>
+  <span data-ttu-id="ff402-444">输出示例（经过删减以显示使用的最多空间的对象）：</span><span class="sxs-lookup"><span data-stu-id="ff402-444">Example output (abridged to show the objects that use the most space):</span></span>
 
   ```console
   79124228    26648      9314256 System.Object[]
@@ -784,16 +784,16 @@ ms.locfileid: "73974763"
   Total 6417525 objects
   ```
 
-  <span data-ttu-id="ea821-445">`double[]` 对象从输出的末尾消失，这意味着它们被回收了。</span><span class="sxs-lookup"><span data-stu-id="ea821-445">The `double[]` objects disappeared from the end of the output, which means that they were collected.</span></span> <span data-ttu-id="ea821-446">这些对象大约占 70 MB。</span><span class="sxs-lookup"><span data-stu-id="ea821-446">These objects account for approximately 70 MB.</span></span> <span data-ttu-id="ea821-447">剩余的对象没有太多变化。</span><span class="sxs-lookup"><span data-stu-id="ea821-447">The remaining objects did not change much.</span></span> <span data-ttu-id="ea821-448">因此，这些 `double[]` 对象是第 2 代垃圾回收发生的原因。</span><span class="sxs-lookup"><span data-stu-id="ea821-448">Therefore, these `double[]` objects were the reason why this generation 2 garbage collection occurred.</span></span> <span data-ttu-id="ea821-449">下一步是确定 `double[]` 对象存在以及他们最后死亡的原因。</span><span class="sxs-lookup"><span data-stu-id="ea821-449">Your next step is to determine why the `double[]` objects are there and why they died.</span></span> <span data-ttu-id="ea821-450">可以询问代码开发人员这些对象的来源，或使用 **gcroot** 命令。</span><span class="sxs-lookup"><span data-stu-id="ea821-450">You can ask the code developer where these objects came from, or you can use the **gcroot** command.</span></span>
+  <span data-ttu-id="ff402-445">`double[]` 对象从输出的末尾消失，这意味着它们被回收了。</span><span class="sxs-lookup"><span data-stu-id="ff402-445">The `double[]` objects disappeared from the end of the output, which means that they were collected.</span></span> <span data-ttu-id="ff402-446">这些对象大约占 70 MB。</span><span class="sxs-lookup"><span data-stu-id="ff402-446">These objects account for approximately 70 MB.</span></span> <span data-ttu-id="ff402-447">剩余的对象没有太多变化。</span><span class="sxs-lookup"><span data-stu-id="ff402-447">The remaining objects did not change much.</span></span> <span data-ttu-id="ff402-448">因此，这些 `double[]` 对象是第 2 代垃圾回收发生的原因。</span><span class="sxs-lookup"><span data-stu-id="ff402-448">Therefore, these `double[]` objects were the reason why this generation 2 garbage collection occurred.</span></span> <span data-ttu-id="ff402-449">下一步是确定 `double[]` 对象存在以及他们最后死亡的原因。</span><span class="sxs-lookup"><span data-stu-id="ff402-449">Your next step is to determine why the `double[]` objects are there and why they died.</span></span> <span data-ttu-id="ff402-450">可以询问代码开发人员这些对象的来源，或使用 **gcroot** 命令。</span><span class="sxs-lookup"><span data-stu-id="ff402-450">You can ask the code developer where these objects came from, or you can use the **gcroot** command.</span></span>
 
 <a name="HighCPU"></a>
 
-### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a><span data-ttu-id="ea821-451">若要确定 CPU 的使用率高是否是垃圾回收引起的</span><span class="sxs-lookup"><span data-stu-id="ea821-451">To determine whether high CPU usage is caused by garbage collection</span></span>
+### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a><span data-ttu-id="ff402-451">若要确定 CPU 的使用率高是否是垃圾回收引起的</span><span class="sxs-lookup"><span data-stu-id="ff402-451">To determine whether high CPU usage is caused by garbage collection</span></span>
 
-- <span data-ttu-id="ea821-452">将 `% Time in GC` 内存性能计数器的值与处理时间相关联。</span><span class="sxs-lookup"><span data-stu-id="ea821-452">Correlate the `% Time in GC` memory performance counter value with the process time.</span></span>
+- <span data-ttu-id="ff402-452">将 `% Time in GC` 内存性能计数器的值与处理时间相关联。</span><span class="sxs-lookup"><span data-stu-id="ff402-452">Correlate the `% Time in GC` memory performance counter value with the process time.</span></span>
 
-  <span data-ttu-id="ea821-453">如果 `% Time in GC` 值在与处理时间同时达到峰值，则垃圾回收将造成 CPU 使用率过高。</span><span class="sxs-lookup"><span data-stu-id="ea821-453">If the `% Time in GC` value spikes at the same time as process time, garbage collection is causing a high CPU usage.</span></span> <span data-ttu-id="ea821-454">否则，配置应用程序，以查找发生使用率过高的位置。</span><span class="sxs-lookup"><span data-stu-id="ea821-454">Otherwise, profile the application to find where the high usage is occurring.</span></span>
+  <span data-ttu-id="ff402-453">如果 `% Time in GC` 值在与处理时间同时达到峰值，则垃圾回收将造成 CPU 使用率过高。</span><span class="sxs-lookup"><span data-stu-id="ff402-453">If the `% Time in GC` value spikes at the same time as process time, garbage collection is causing a high CPU usage.</span></span> <span data-ttu-id="ff402-454">否则，配置应用程序，以查找发生使用率过高的位置。</span><span class="sxs-lookup"><span data-stu-id="ff402-454">Otherwise, profile the application to find where the high usage is occurring.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="ea821-455">请参阅</span><span class="sxs-lookup"><span data-stu-id="ea821-455">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ff402-455">请参阅</span><span class="sxs-lookup"><span data-stu-id="ff402-455">See also</span></span>
 
-- [<span data-ttu-id="ea821-456">垃圾回收</span><span class="sxs-lookup"><span data-stu-id="ea821-456">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)
+- [<span data-ttu-id="ff402-456">垃圾回收</span><span class="sxs-lookup"><span data-stu-id="ff402-456">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)

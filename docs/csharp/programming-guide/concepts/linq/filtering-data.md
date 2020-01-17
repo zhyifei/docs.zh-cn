@@ -2,31 +2,31 @@
 title: 筛选数据 (C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: eb448c1c2ea6d9b3fcf0120043cafebc01cd3805
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 74399244990f8ff2deaa1d10576ea94a57c16bee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418478"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346994"
 ---
-# <a name="filtering-data-c"></a><span data-ttu-id="baca1-102">筛选数据 (C#)</span><span class="sxs-lookup"><span data-stu-id="baca1-102">Filtering Data (C#)</span></span>
-<span data-ttu-id="baca1-103">筛选是指将结果集限制为仅包含满足指定条件的元素的操作。</span><span class="sxs-lookup"><span data-stu-id="baca1-103">Filtering refers to the operation of restricting the result set to contain only those elements that satisfy a specified condition.</span></span> <span data-ttu-id="baca1-104">它也称为选定内容。</span><span class="sxs-lookup"><span data-stu-id="baca1-104">It is also known as selection.</span></span>  
+# <a name="filtering-data-c"></a><span data-ttu-id="4b440-102">筛选数据 (C#)</span><span class="sxs-lookup"><span data-stu-id="4b440-102">Filtering Data (C#)</span></span>
+<span data-ttu-id="4b440-103">筛选是指将结果集限制为仅包含满足指定条件的元素的操作。</span><span class="sxs-lookup"><span data-stu-id="4b440-103">Filtering refers to the operation of restricting the result set to contain only those elements that satisfy a specified condition.</span></span> <span data-ttu-id="4b440-104">它也称为选定内容。</span><span class="sxs-lookup"><span data-stu-id="4b440-104">It is also known as selection.</span></span>  
   
- <span data-ttu-id="baca1-105">下图演示了对字符序列进行筛选的结果。</span><span class="sxs-lookup"><span data-stu-id="baca1-105">The following illustration shows the results of filtering a sequence of characters.</span></span> <span data-ttu-id="baca1-106">筛选操作的谓词指定字符必须为“A”。</span><span class="sxs-lookup"><span data-stu-id="baca1-106">The predicate for the filtering operation specifies that the character must be 'A'.</span></span>  
+ <span data-ttu-id="4b440-105">下图演示了对字符序列进行筛选的结果。</span><span class="sxs-lookup"><span data-stu-id="4b440-105">The following illustration shows the results of filtering a sequence of characters.</span></span> <span data-ttu-id="4b440-106">筛选操作的谓词指定字符必须为“A”。</span><span class="sxs-lookup"><span data-stu-id="4b440-106">The predicate for the filtering operation specifies that the character must be 'A'.</span></span>  
   
  ![显示 LINQ 筛选操作的图表](./media/filtering-data/linq-filter-operation.png)  
   
- <span data-ttu-id="baca1-108">下面一节列出了执行所选内容的标准查询运算符方法。</span><span class="sxs-lookup"><span data-stu-id="baca1-108">The standard query operator methods that perform selection are listed in the following section.</span></span>  
+ <span data-ttu-id="4b440-108">下面一节列出了执行所选内容的标准查询运算符方法。</span><span class="sxs-lookup"><span data-stu-id="4b440-108">The standard query operator methods that perform selection are listed in the following section.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="baca1-109">方法</span><span class="sxs-lookup"><span data-stu-id="baca1-109">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="4b440-109">方法</span><span class="sxs-lookup"><span data-stu-id="4b440-109">Methods</span></span>  
   
-|<span data-ttu-id="baca1-110">方法名</span><span class="sxs-lookup"><span data-stu-id="baca1-110">Method Name</span></span>|<span data-ttu-id="baca1-111">说明</span><span class="sxs-lookup"><span data-stu-id="baca1-111">Description</span></span>|<span data-ttu-id="baca1-112">C# 查询表达式语法</span><span class="sxs-lookup"><span data-stu-id="baca1-112">C# Query Expression Syntax</span></span>|<span data-ttu-id="baca1-113">详细信息</span><span class="sxs-lookup"><span data-stu-id="baca1-113">More Information</span></span>|  
+|<span data-ttu-id="4b440-110">方法名</span><span class="sxs-lookup"><span data-stu-id="4b440-110">Method Name</span></span>|<span data-ttu-id="4b440-111">描述</span><span class="sxs-lookup"><span data-stu-id="4b440-111">Description</span></span>|<span data-ttu-id="4b440-112">C# 查询表达式语法</span><span class="sxs-lookup"><span data-stu-id="4b440-112">C# Query Expression Syntax</span></span>|<span data-ttu-id="4b440-113">详细信息</span><span class="sxs-lookup"><span data-stu-id="4b440-113">More Information</span></span>|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|<span data-ttu-id="baca1-114">OfType</span><span class="sxs-lookup"><span data-stu-id="baca1-114">OfType</span></span>|<span data-ttu-id="baca1-115">根据其转换为特定类型的能力选择值。</span><span class="sxs-lookup"><span data-stu-id="baca1-115">Selects values, depending on their ability to be cast to a specified type.</span></span>|<span data-ttu-id="baca1-116">不适用。</span><span class="sxs-lookup"><span data-stu-id="baca1-116">Not applicable.</span></span>|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="baca1-117">Where</span><span class="sxs-lookup"><span data-stu-id="baca1-117">Where</span></span>|<span data-ttu-id="baca1-118">选择基于谓词函数的值。</span><span class="sxs-lookup"><span data-stu-id="baca1-118">Selects values that are based on a predicate function.</span></span>|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="4b440-114">OfType</span><span class="sxs-lookup"><span data-stu-id="4b440-114">OfType</span></span>|<span data-ttu-id="4b440-115">根据其转换为特定类型的能力选择值。</span><span class="sxs-lookup"><span data-stu-id="4b440-115">Selects values, depending on their ability to be cast to a specified type.</span></span>|<span data-ttu-id="4b440-116">不适用。</span><span class="sxs-lookup"><span data-stu-id="4b440-116">Not applicable.</span></span>|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="4b440-117">Where</span><span class="sxs-lookup"><span data-stu-id="4b440-117">Where</span></span>|<span data-ttu-id="4b440-118">选择基于谓词函数的值。</span><span class="sxs-lookup"><span data-stu-id="4b440-118">Selects values that are based on a predicate function.</span></span>|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-example"></a><span data-ttu-id="baca1-119">查询表达式语法示例</span><span class="sxs-lookup"><span data-stu-id="baca1-119">Query Expression Syntax Example</span></span>  
- <span data-ttu-id="baca1-120">以下示例使用 `where` 子句从数组中筛选具有特定长度的字符串。</span><span class="sxs-lookup"><span data-stu-id="baca1-120">The following example uses the `where` clause to filter from an array those strings that have a specific length.</span></span>  
+## <a name="query-expression-syntax-example"></a><span data-ttu-id="4b440-119">查询表达式语法示例</span><span class="sxs-lookup"><span data-stu-id="4b440-119">Query Expression Syntax Example</span></span>  
+ <span data-ttu-id="4b440-120">以下示例使用 `where` 子句从数组中筛选具有特定长度的字符串。</span><span class="sxs-lookup"><span data-stu-id="4b440-120">The following example uses the `where` clause to filter from an array those strings that have a specific length.</span></span>  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  
@@ -45,12 +45,12 @@ foreach (string str in query)
 */  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="baca1-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="baca1-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4b440-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="4b440-121">See also</span></span>
 
 - <xref:System.Linq>
-- [<span data-ttu-id="baca1-122">标准查询运算符概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="baca1-122">Standard Query Operators Overview (C#)</span></span>](./standard-query-operators-overview.md)
-- [<span data-ttu-id="baca1-123">where 子句</span><span class="sxs-lookup"><span data-stu-id="baca1-123">where clause</span></span>](../../../language-reference/keywords/where-clause.md)
-- [<span data-ttu-id="baca1-124">如何：在运行时动态指定谓词筛选器</span><span class="sxs-lookup"><span data-stu-id="baca1-124">How to: Dynamically Specify Predicate Filters at Runtime</span></span>](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
-- [<span data-ttu-id="baca1-125">如何：使用反射查询程序集的元数据 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="baca1-125">How to: Query An Assembly's Metadata with Reflection (LINQ) (C#)</span></span>](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [<span data-ttu-id="baca1-126">如何：查询具有指定特性或名称的文件 (C#)</span><span class="sxs-lookup"><span data-stu-id="baca1-126">How to: Query for Files with a Specified Attribute or Name (C#)</span></span>](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [<span data-ttu-id="baca1-127">如何：按任意词或字段对文本数据进行排序或筛选 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="baca1-127">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (C#)</span></span>](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [<span data-ttu-id="4b440-122">标准查询运算符概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="4b440-122">Standard Query Operators Overview (C#)</span></span>](./standard-query-operators-overview.md)
+- [<span data-ttu-id="4b440-123">where 子句</span><span class="sxs-lookup"><span data-stu-id="4b440-123">where clause</span></span>](../../../language-reference/keywords/where-clause.md)
+- [<span data-ttu-id="4b440-124">在运行时动态指定谓词筛选器</span><span class="sxs-lookup"><span data-stu-id="4b440-124">Dynamically specify predicate filters at runtime</span></span>](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
+- [<span data-ttu-id="4b440-125">如何使用反射查询程序集的元数据 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="4b440-125">How to query an assembly's metadata with Reflection (LINQ) (C#)</span></span>](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [<span data-ttu-id="4b440-126">如何查询具有指定特性或名称的文件 (C#)</span><span class="sxs-lookup"><span data-stu-id="4b440-126">How to query for files with a specified attribute or name (C#)</span></span>](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [<span data-ttu-id="4b440-127">如何按任意词或字段对文本数据进行排序或筛选 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="4b440-127">How to sort or filter text data by any word or field (LINQ) (C#)</span></span>](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

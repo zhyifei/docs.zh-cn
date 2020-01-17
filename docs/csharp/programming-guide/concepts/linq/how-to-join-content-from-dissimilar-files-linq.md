@@ -1,21 +1,21 @@
 ---
-title: 如何：联接不同文件的内容 (LINQ) (C#)
+title: 如何联接不同文件的内容 (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: eb2e5d8e598b7b671afe9271e6e591c5ce0ada2b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 49b70c15b3be2efea5cf6a9e7d85df944a67c730
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253551"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345889"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="a4d0a-102">如何：联接不同文件的内容 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="a4d0a-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="34ea3-102">如何联接不同文件的内容 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="34ea3-102">How to join content from dissimilar files (LINQ) (C#)</span></span>
 
-<span data-ttu-id="a4d0a-103">本示例演示如何联接两个逗号分隔文件中的数据，这两个文件共享一个用作匹配键的公共值。</span><span class="sxs-lookup"><span data-stu-id="a4d0a-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="a4d0a-104">如果需要合并来自两个电子表格的数据，或者从一个电子表格和具有另一种格式的文件合并到一个新文件时，此技术很有用。</span><span class="sxs-lookup"><span data-stu-id="a4d0a-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="a4d0a-105">可以修改此示例以用于任何类型的结构化文本。</span><span class="sxs-lookup"><span data-stu-id="a4d0a-105">You can modify the example to work with any kind of structured text.</span></span>  
+<span data-ttu-id="34ea3-103">本示例演示如何联接两个逗号分隔文件中的数据，这两个文件共享一个用作匹配键的公共值。</span><span class="sxs-lookup"><span data-stu-id="34ea3-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="34ea3-104">如果需要合并来自两个电子表格的数据，或者从一个电子表格和具有另一种格式的文件合并到一个新文件时，此技术很有用。</span><span class="sxs-lookup"><span data-stu-id="34ea3-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="34ea3-105">可以修改此示例以用于任何类型的结构化文本。</span><span class="sxs-lookup"><span data-stu-id="34ea3-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-## <a name="to-create-the-data-files"></a><span data-ttu-id="a4d0a-106">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="a4d0a-106">To create the data files</span></span>
+## <a name="to-create-the-data-files"></a><span data-ttu-id="34ea3-106">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="34ea3-106">To create the data files</span></span>
   
-1. <span data-ttu-id="a4d0a-107">将以下行复制到名为 scores.csv 的文件，并将文件保存到项目文件夹  。</span><span class="sxs-lookup"><span data-stu-id="a4d0a-107">Copy the following lines into a file that is named *scores.csv* and save it to your project folder.</span></span> <span data-ttu-id="a4d0a-108">此文件表示电子表格数据。</span><span class="sxs-lookup"><span data-stu-id="a4d0a-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="a4d0a-109">第 1 列是学生的 ID，第 2 至 5 列是测验分数。</span><span class="sxs-lookup"><span data-stu-id="a4d0a-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
+1. <span data-ttu-id="34ea3-107">将以下行复制到名为 scores.csv 的文件，并将文件保存到项目文件夹  。</span><span class="sxs-lookup"><span data-stu-id="34ea3-107">Copy the following lines into a file that is named *scores.csv* and save it to your project folder.</span></span> <span data-ttu-id="34ea3-108">此文件表示电子表格数据。</span><span class="sxs-lookup"><span data-stu-id="34ea3-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="34ea3-109">第 1 列是学生的 ID，第 2 至 5 列是测验分数。</span><span class="sxs-lookup"><span data-stu-id="34ea3-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```csv  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ ms.locfileid: "70253551"
     122, 94, 92, 91, 91  
     ```  
   
-2. <span data-ttu-id="a4d0a-110">将以下行复制到名为 names.csv 的文件，并将文件保存到项目文件夹  。</span><span class="sxs-lookup"><span data-stu-id="a4d0a-110">Copy the following lines into a file that is named *names.csv* and save it to your project folder.</span></span> <span data-ttu-id="a4d0a-111">此文件表示电子表格，其中包含学生的姓氏、名字和学生 ID。</span><span class="sxs-lookup"><span data-stu-id="a4d0a-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
+2. <span data-ttu-id="34ea3-110">将以下行复制到名为 names.csv 的文件，并将文件保存到项目文件夹  。</span><span class="sxs-lookup"><span data-stu-id="34ea3-110">Copy the following lines into a file that is named *names.csv* and save it to your project folder.</span></span> <span data-ttu-id="34ea3-111">此文件表示电子表格，其中包含学生的姓氏、名字和学生 ID。</span><span class="sxs-lookup"><span data-stu-id="34ea3-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```csv  
     Omelchenko,Svetlana,111  
@@ -49,7 +49,7 @@ ms.locfileid: "70253551"
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a><span data-ttu-id="a4d0a-112">示例</span><span class="sxs-lookup"><span data-stu-id="a4d0a-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="34ea3-112">示例</span><span class="sxs-lookup"><span data-stu-id="34ea3-112">Example</span></span>  
 
 ```csharp
 using System;
@@ -124,7 +124,7 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="see-also"></a><span data-ttu-id="a4d0a-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="a4d0a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="34ea3-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="34ea3-113">See also</span></span>
 
-- [<span data-ttu-id="a4d0a-114">LINQ 和字符串 (C#)</span><span class="sxs-lookup"><span data-stu-id="a4d0a-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="a4d0a-115">LINQ 和文件目录 (C#)</span><span class="sxs-lookup"><span data-stu-id="a4d0a-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="34ea3-114">LINQ 和字符串 (C#)</span><span class="sxs-lookup"><span data-stu-id="34ea3-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="34ea3-115">LINQ 和文件目录 (C#)</span><span class="sxs-lookup"><span data-stu-id="34ea3-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
