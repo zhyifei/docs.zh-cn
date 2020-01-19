@@ -1,14 +1,14 @@
 ---
 title: 垃圾回收器配置设置
 description: 了解用于配置垃圾回收器如何为 .NET Core 应用管理内存的运行时设置。
-ms.date: 11/13/2019
+ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: e7f6877a3cbc7f28776a93b9126f4b64026487fa
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 24e5c47de781e7eed5f76d2c551cac2dce1e8f05
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74998815"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900099"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>用于垃圾回收的运行时配置选项
 
@@ -20,7 +20,7 @@ ms.locfileid: "74998815"
 >
 > - 这些设置也可以在应用运行时由应用动态地进行更改，因此，你设置的任何运行时设置都可能会被覆盖。
 > - 某些设置（如[延迟级别](../../standard/garbage-collection/latency.md)）通常仅在设计时通过 API 进行设置。 此页面省略了此类设置。
-> - 对于数值，请对 runtimeconfig.json  文件中的设置使用十进制表示法，而对环境变量设置使用十六进制表示法。
+> - 对于数值，请对 runtimeconfig.json  文件中的设置使用十进制表示法，而对环境变量设置使用十六进制表示法。 对于十六进制值，可以使用或不使用“0x”前缀来指定它们。
 
 ## <a name="flavors-of-garbage-collection"></a>垃圾回收的风格
 
@@ -41,6 +41,18 @@ ms.locfileid: "74998815"
 | **环境变量** | `COMPlus_gcServer` | `0` - 工作站<br/>`1` - 服务器 | .NET Core 1.0 |
 | **.NET Framework 的 app.config** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false` - 工作站<br/>`true` - 服务器 |  |
 
+示例：
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.Server": true
+      }
+   }
+}
+```
+
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.GC.Concurrent/COMPlus_gcConcurrent
 
 - 配置是否启用后台（并发）垃圾回收。
@@ -53,6 +65,18 @@ ms.locfileid: "74998815"
 | **环境变量** | `COMPlus_gcConcurrent` | `true` - 后台 GC<br/>`false` - 非并发 GC | .NET Core 1.0 |
 | **.NET Framework 的 app.config** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true` - 后台 GC<br/>`false` - 非并发 GC |  |
 
+示例：
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.Concurrent": false
+      }
+   }
+}
+```
+
 ## <a name="manage-resource-usage"></a>管理资源使用情况
 
 使用此部分中所述的设置，管理垃圾回收器的内存和处理器使用情况。
@@ -62,7 +86,7 @@ ms.locfileid: "74998815"
 ### <a name="systemgcheapcountcomplus_gcheapcount"></a>System.GC.HeapCount/COMPlus_GCHeapCount
 
 - 限制通过垃圾回收器创建的堆数。
-- 仅适用于服务器垃圾回收 (GC)。
+- 仅适用于服务器垃圾回收。
 - 如果启用了默认的 GC 处理器关联，堆计数设置会将 `n` 个 GC 堆/线程关联到前 `n` 个处理器。 （使用关联掩码或关联范围设置来精确指定要关联的处理器。）
 - 如果禁用了 GC 处理器关联，则此设置会限制 GC 堆的数量。
 - 有关详细信息，请参阅 [GCHeapCount 备注](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md#remarks)。
@@ -71,23 +95,47 @@ ms.locfileid: "74998815"
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.HeapCount` | 十进制值  | .NET Core 3.0 |
 | **环境变量** | `COMPlus_GCHeapCount` | 十六进制值  | .NET Core 3.0 |
-| **.NET Framework 的 app.config** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | 十进制值  | 4.6.2 |
+| **.NET Framework 的 app.config** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | 十进制值  | .NET Framework 4.6.2 |
+
+示例：
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapCount": 16
+      }
+   }
+}
+```
 
 > [!TIP]
-> 如果要在 runtimeconfig.template.json  中设置该选项，请指定一个十进制值。 如果要将选项设置为一个环境变量，请指定一个十六进制值。 例如，若要将堆数限制为 16，则该值对于 JSON 文件为 16，对于环境变量则为 10。
+> 如果要在 runtimeconfig.template.json  中设置该选项，请指定一个十进制值。 如果要将选项设置为一个环境变量，请指定一个十六进制值。 例如，若要将堆数限制为 16，则该值对于 JSON 文件为 16，对于环境变量则为 0x10 或 10。
 
 ### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System.GC.HeapAffinitizeMask/COMPlus_GCHeapAffinitizeMask
 
 - 指定垃圾回收器线程应使用的确切处理器数。
 - 如果通过将 `System.GC.NoAffinitize` 设置为 `true` 禁用了处理器关联，则忽略此设置。
-- 仅适用于服务器垃圾回收 (GC)。
-- 该值是一个位掩码，用于定义可用于该进程的处理器。 例如，十进制值 1023 或十六进制值 3FF（如果使用环境变量）在二进制记数法中为 0011 1111 1111。 这指定将使用前 10 个处理器。 若要指定接下来使用的 10 个处理器（即处理器 10-19），请指定一个十进制值 1047552（或十六进制值 FFC00），它等效于二进制值 1111 1111 1100 0000 0000。
+- 仅适用于服务器垃圾回收。
+- 该值是一个位掩码，用于定义可用于该进程的处理器。 例如，十进制值 1023 或十六进制值 0x3FF 或 3FF（如果使用环境变量）在二进制记数法中为 0011 1111 1111。 这指定将使用前 10 个处理器。 若要指定接下来使用的 10 个处理器（即处理器 10-19），请指定一个十进制值 1047552（或十六进制值 0xFFC00 或 FFC00），它等效于二进制值 1111 1111 1100 0000 0000。
 
 | | 设置名 | 值 | 引入的版本 |
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.HeapAffinitizeMask` | 十进制值  | .NET Core 3.0 |
 | **环境变量** | `COMPlus_GCHeapAffinitizeMask` | 十六进制值  | .NET Core 3.0 |
-| **.NET Framework 的 app.config** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | 十进制值  | 4.6.2 |
+| **.NET Framework 的 app.config** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | 十进制值  | .NET Framework 4.6.2 |
+
+示例：
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapAffinitizeMask": 1023
+      }
+   }
+}
+```
 
 ### <a name="systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges"></a>System.GC.GCHeapAffinitizeRanges/COMPlus_GCHeapAffinitizeRanges
 
@@ -95,7 +143,7 @@ ms.locfileid: "74998815"
 - 此设置与 `System.GC.HeapAffinitizeMask` 类似，只是它允许你指定超过 64 个的处理器。
 - 对于 Windows 操作系统，请为处理器编号或范围加上相应的 [CPU 组](/windows/win32/procthread/processor-groups)作为前缀，例如“0:1-10,0:12,1:50-52,1:70”。
 - 如果通过将 `System.GC.NoAffinitize` 设置为 `true` 禁用了处理器关联，则忽略此设置。
-- 仅适用于服务器垃圾回收 (GC)。
+- 仅适用于服务器垃圾回收。
 - 有关详细信息，请参阅 Maoni Stephens 的博客文章 [Making CPU configuration better for GC on machines with > 64 CPUs](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/)（在 CPU 大于 64 个的计算机上，为 GC 提供更好的 CPU 配置）。
 
 | | 设置名 | 值 | 引入的版本 |
@@ -103,13 +151,25 @@ ms.locfileid: "74998815"
 | **runtimeconfig.json** | `System.GC.GCHeapAffinitizeRanges` | 以逗号分隔的处理器编号列表或处理器编号范围。<br/>Unix 示例：“1-10,12,50-52,70”<br/>Windows 示例：“0:1-10,0:12,1:50-52,1:70” | .NET Core 3.0 |
 | **环境变量** | `COMPlus_GCHeapAffinitizeRanges` | 以逗号分隔的处理器编号列表或处理器编号范围。<br/>Unix 示例：“1-10,12,50-52,70”<br/>Windows 示例：“0:1-10,0:12,1:50-52,1:70” | .NET Core 3.0 |
 
+示例：
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.GCHeapAffinitizeRanges": "0:1-10,0:12,1:50-52,1:70"
+      }
+   }
+}
+```
+
 ### <a name="complus_gccpugroup"></a>COMPlus_GCCpuGroup
 
 - 配置垃圾回收器是否使用 [CPU 组](/windows/win32/procthread/processor-groups)。
 
   当 64 位 Windows 计算机具有多个 CPU 组（即，有超过 64 个处理器）时，通过启用此元素，可跨所有 CPU 组扩展垃圾回收。 垃圾回收器使用所有核心来创建和平衡堆。
 
-- 仅适用于 64 位 Windows 操作系统上的服务器垃圾回收 (GC)。
+- 仅适用于 64 位 Windows 操作系统上的服务器垃圾回收。
 - 默认：禁用 (`0`)。
 - 有关详细信息，请参阅 Maoni Stephens 的博客文章 [Making CPU configuration better for GC on machines with > 64 CPUs](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/)（在 CPU 大于 64 个的计算机上，为 GC 提供更好的 CPU 配置）。
 
@@ -125,14 +185,26 @@ ms.locfileid: "74998815"
 ### <a name="systemgcnoaffinitizecomplus_gcnoaffinitize"></a>System.GC.NoAffinitize/COMPlus_GCNoAffinitize
 
 - 指定是否将垃圾回收线程与处理器关联  。 若要关联一个 GC 线程，则意味着它只能在其特定的 CPU 上运行。 为每个 GC 线程创建一个堆。
-- 仅适用于服务器垃圾回收 (GC)。
+- 仅适用于服务器垃圾回收。
 - 默认：将垃圾回收线程与处理器关联 (`false`)。
 
 | | 设置名 | 值 | 引入的版本 |
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.NoAffinitize` | `false` - 关联<br/>`true` - 不关联 | .NET Core 3.0 |
 | **环境变量** | `COMPlus_GCNoAffinitize` | `0` - 关联<br/>`1` - 不关联 | .NET Core 3.0 |
-| **.NET Framework 的 app.config** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false` - 关联<br/>`true` - 不关联 | 4.6.2 |
+| **.NET Framework 的 app.config** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false` - 关联<br/>`true` - 不关联 | .NET Framework 4.6.2 |
+
+示例：
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.NoAffinitize": true
+      }
+   }
+}
+```
 
 ### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System.GC.HeapHardLimit/COMPlus_GCHeapHardLimit
 
@@ -143,8 +215,20 @@ ms.locfileid: "74998815"
 | **runtimeconfig.json** | `System.GC.HeapHardLimit` | 十进制值  | .NET Core 3.0 |
 | **环境变量** | `COMPlus_GCHeapHardLimit` | 十六进制值  | .NET Core 3.0 |
 
+示例：
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapHardLimit": 209715200
+      }
+   }
+}
+```
+
 > [!TIP]
-> 如果要在 runtimeconfig.template.json  中设置该选项，请指定一个十进制值。 如果要将选项设置为一个环境变量，请指定一个十六进制值。 例如，若要将堆硬限制指定为 80,000 个字节，则该值对于 JSON 文件为 80,000，对于环境变量则为 13,880。
+> 如果要在 runtimeconfig.template.json  中设置该选项，请指定一个十进制值。 如果要将选项设置为一个环境变量，请指定一个十六进制值。 例如，若要将堆硬限制指定为 200 个 mebibyte (MiB)，则该值对于 JSON 文件为 209715200，对于环境变量则为 0xC800000 或 C800000。
 
 ### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System.GC.HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
 
@@ -155,8 +239,20 @@ ms.locfileid: "74998815"
 | **runtimeconfig.json** | `System.GC.HeapHardLimitPercent` | 十进制值  | .NET Core 3.0 |
 | **环境变量** | `COMPlus_GCHeapHardLimitPercent` | 十六进制值  | .NET Core 3.0 |
 
+示例：
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapHardLimitPercent": 30
+      }
+   }
+}
+```
+
 > [!TIP]
-> 如果要在 runtimeconfig.template.json  中设置该选项，请指定一个十进制值。 如果要将选项设置为一个环境变量，请指定一个十六进制值。 例如，若要将堆使用率限制为 30%，则该值对于 JSON 文件为 30，对于环境变量则为 1E。
+> 如果要在 runtimeconfig.template.json  中设置该选项，请指定一个十进制值。 如果要将选项设置为一个环境变量，请指定一个十六进制值。 例如，若要将堆使用率限制为 30%，则该值对于 JSON 文件为 30，对于环境变量则为 0x1E 或 1E。
 
 ### <a name="systemgcretainvmcomplus_gcretainvm"></a>System.GC.RetainVM/COMPlus_GCRetainVM
 
@@ -167,6 +263,18 @@ ms.locfileid: "74998815"
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.RetainVM` | `false` - 释放到 OS<br/>`true` - 置于备用列表上| .NET Core 1.0 |
 | **环境变量** | `COMPlus_GCRetainVM` | `0` - 释放到 OS<br/>`1` - 置于备用列表上 | .NET Core 1.0 |
+
+示例：
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.RetainVM": true
+      }
+   }
+}
+```
 
 ## <a name="large-pages"></a>大型页面
 
@@ -209,15 +317,27 @@ ms.locfileid: "74998815"
 | **环境变量** | `COMPlus_GCLOHThreshold` | 十六进制值  | .NET Core 1.0 |
 | **.NET Framework 的 app.config** | [GCLOHThreshold](../../framework/configure-apps/file-schema/runtime/gclohthreshold-element.md) | 十进制值  | .NET Framework 4.8 |
 
+示例：
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.LOHThreshold": 120000
+      }
+   }
+}
+```
+
 > [!TIP]
-> 如果要在 runtimeconfig.template.json  中设置该选项，请指定一个十进制值。 如果要将选项设置为一个环境变量，请指定一个十六进制值。 例如，若要将阙值大小设置为 120,000 个字节，则该值对于 JSON 文件为 120,000，对于环境变量则为 1D4C0。
+> 如果要在 runtimeconfig.template.json  中设置该选项，请指定一个十进制值。 如果要将选项设置为一个环境变量，请指定一个十六进制值。 例如，若要将阙值大小设置为 120,000 个字节，则该值对于 JSON 文件为 120,000，对于环境变量则为 0x1D4C0 或 1D4C0。
 
 ## <a name="standalone-gc"></a>独立 GC
 
 ### <a name="complus_gcname"></a>COMPlus_GCName
 
 - 指定库的路径，该库包含运行时打算加载的垃圾回收器。
-- 有关详细信息，请参阅 [Standalone GC loader design](https://github.com/dotnet/coreclr/blob/master/Documentation/design-docs/standalone-gc-loading.md)（独立 GC 加载程序设计）。
+- 有关详细信息，请参阅 [Standalone GC loader design](https://github.com/dotnet/runtime/blob/master/docs/design/features/standalone-gc-loading.md)（独立 GC 加载程序设计）。
 
 | | 设置名 | 值 | 引入的版本 |
 | - | - | - | - |

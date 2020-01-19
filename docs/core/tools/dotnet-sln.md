@@ -2,12 +2,12 @@
 title: dotnet sln 命令
 description: 使用 dotnet-sln 命令，可以便捷地在解决方案文件中添加、删除和列出项目。
 ms.date: 10/29/2019
-ms.openlocfilehash: 18702c7638798117bd04d5c6a829d64cc6bf18a8
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: c0badfeba1438a795106691a86c09a8b1675829b
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191819"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937253"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -17,7 +17,7 @@ ms.locfileid: "73191819"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet sln` - 修改 .NET Core 解决方案文件。
 
@@ -27,7 +27,7 @@ ms.locfileid: "73191819"
 dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 ```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 使用 `dotnet sln` 命令，可以便捷地在解决方案文件中添加、删除和列出项目。
 
@@ -137,38 +137,38 @@ dotnet sln list [-h|--help]
 
 ## <a name="examples"></a>示例
 
-将一个 C# 项目添加到解决方案中：
+- 将一个 C# 项目添加到解决方案中：
 
-```dotnetcli
-dotnet sln todo.sln add todo-app/todo-app.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj
+  ```
 
-从解决方案中删除一个 C# 项目：
+- 从解决方案中删除一个 C# 项目：
 
-```dotnetcli
-dotnet sln todo.sln remove todo-app/todo-app.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove todo-app/todo-app.csproj
+  ```
 
-将多个 C# 项目添加到解决方案中：
+- 将多个 C# 项目添加到解决方案中：
 
-```dotnetcli
-dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
+  ```
 
-从解决方案中删除多个 C# 项目：
+- 从解决方案中删除多个 C# 项目：
 
-```dotnetcli
-dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
+  ```
 
-使用 glob 模式（仅限 Unix/Linux）将多个 C# 项目添加到解决方案中：
+- 使用 glob 模式（仅限 Unix/Linux）将多个 C# 项目添加到解决方案中：
 
-```dotnetcli
-dotnet sln todo.sln add **/*.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add **/*.csproj
+  ```
 
-使用 glob 模式（仅限 Unix/Linux）将多个 C# 项目从解决方案中删除：
+- 使用 glob 模式（仅限 Unix/Linux）将多个 C# 项目从解决方案中删除：
 
-```dotnetcli
-dotnet sln todo.sln remove **/*.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove **/*.csproj
+  ```

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2067ea2a70277d188950c449d3990f4426f69beb
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: a8146db1fb54d63d4716b879ce793f7d817cef59
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75902040"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937301"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>共享框架：从 Microsoft.AspNetCore.App 中删除了程序集
 
@@ -46,7 +46,7 @@ Json.NET 和 Entity Framework Core 可继续使用 ASP.NET Core。 但是，它�
 
 此更改简化了 `Microsoft.AspNetCore.App` 的使用，并减少了 NuGet 包与共享框架之间的重复。
 
-有关此更改动机的详细信息，请参阅[博客文章](https://blogs.msdn.microsoft.com/webdev/2018/10/29/a-first-look-at-changes-coming-in-asp-net-core-3-0)。
+有关此更改动机的详细信息，请参阅[博客文章](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/)。
 
 #### <a name="recommended-action"></a>建议操作
 

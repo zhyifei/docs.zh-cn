@@ -2,16 +2,16 @@
 title: .NET Core 命令行接口 (CLI) 工具
 description: 概述了 .NET Core 命令行接口 (CLI) 工具和功能。
 ms.date: 08/14/2017
-ms.openlocfilehash: b3bffb47ff973bd0da90e3f943e817756e563138
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f19dcb19fb9d0203b3d3795c3fdc0b026c4c60e3
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714141"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163210"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令行接口 (CLI) 工具
 
-.NET Core 命令行接口 (CLI) 工具是用于开发 .NET 应用程序的新型跨平台工具链。 CLI 是更高级别的工具（如集成开发环境 (IDE)、编辑器和生成协调程序）可以驻留的基础。
+.NET Core 命令行接口 (CLI) 是用于开发 .NET 应用程序的跨平台工具链。 CLI 是更高级别的工具（如集成开发环境 (IDE)、编辑器和生成协调程序）可以驻留的基础。
 
 ## <a name="installation"></a>安装
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4c676a185ff4a7a825acb059bf0a5842ca3922fc
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b60f74947a537c602c7bd1a89587b76bd847c82a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394081"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937293"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>目标框架：删除了 .NET Framework 支持
 
@@ -20,7 +20,7 @@ ms.locfileid: "72394081"
 
 `Microsoft.Extensions` 包（如日志记录、依赖项注入和配置）和 Entity Framework Core 不受影响。 它们将继续支持 .NET Standard。
 
-有关此更改动机的详细信息，请参阅[原始博客文章](https://blogs.msdn.microsoft.com/webdev/2018/10/29/a-first-look-at-changes-coming-in-asp-net-core-3-0)。
+有关此更改动机的详细信息，请参阅[原始博客文章](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/)。
 
 #### <a name="version-introduced"></a>引入的版本
 
@@ -34,7 +34,7 @@ ASP.NET Core 应用可在 .NET Core 或 .NET Framework 上运行。
 
 ASP.NET Core 应用只能在 .NET Core 上运行。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 请执行以下一项操作：
 
@@ -47,7 +47,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影响的 API
 
-无
+None
 
 <!-- 
 

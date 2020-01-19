@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 58e65bae1593f23945a971b896a1db4a929b4587
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: d207a937917da78f6b902ad8ca4f02fa9a46c2e1
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567431"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116363"
 ---
 ### <a name="types-in-microsoftvisualbasicmyservices-namespace-not-available"></a>Microsoft.VisualBasic.MyServices 命名空间中的类型不可用
 
@@ -20,7 +20,7 @@ ms.locfileid: "74567431"
 
 已删除这些类型，以避免在后续版本中出现不必要的程序集依赖项或中断性变更。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 如果你的代码依赖于对 Microsoft.VisualBasic.MyServices 类型及其成员的使用，可使用 .NET 类库中的相应类型和成员  。 下面是 Microsoft.VisualBasic.MyServices 到其等效 .NET 类库类型的映射  ：
 
@@ -45,5 +45,4 @@ Visual Basic
 
 - `N:Microsoft.VisualBasic.MyServices`
 
--- >
-
+-->
