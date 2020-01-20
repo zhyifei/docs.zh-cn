@@ -1,55 +1,75 @@
 ---
-title: 使用 Visual Studio 2017 发布 .NET Core Hello World 应用程序
+title: 使用 Visual Studio 发布 .NET Core Hello World 应用程序
 description: 发布会创建运行 .NET Core 应用程序所需的一组文件。
 author: BillWagner
 ms.author: wiwagn
-ms.date: 10/05/2017
-ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f8c37f47cc8dfb999f2371773a50c2dd91e074a5
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.date: 12/10/2019
+ms.custom: vs-dotnet
+ms.openlocfilehash: 485d62ce67f284fe1bbe931dcaa00671be154f35
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660477"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715369"
 ---
-# <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a><span data-ttu-id="9f4c7-103">使用 Visual Studio 2017 发布 .NET Core Hello World 应用程序</span><span class="sxs-lookup"><span data-stu-id="9f4c7-103">Publish your .NET Core Hello World application with Visual Studio 2017</span></span>
+# <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a><span data-ttu-id="6ca54-103">使用 Visual Studio 发布 .NET Core Hello World 应用程序</span><span class="sxs-lookup"><span data-stu-id="6ca54-103">Publish your .NET Core Hello World application with Visual Studio</span></span>
 
-<span data-ttu-id="9f4c7-104">在[使用 Visual Studio 2017 生成 C# .NET Core Hello World 应用程序](with-visual-studio.md)或[使用 Visual Studio 2017 生成 Visual Basic .NET Core Hello World 应用程序](vb-with-visual-studio.md)中，生成了 Hello World 控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-104">In [Build a C# Hello World application with .NET Core in Visual Studio 2017](with-visual-studio.md) or [Build a Visual Basic Hello World application with .NET Core in Visual Studio 2017](vb-with-visual-studio.md), you built a Hello World console application.</span></span> <span data-ttu-id="9f4c7-105">在[使用 Visual Studio 2017 调试 C# Hello World 应用程序](debugging-with-visual-studio.md)中，使用 Visual Studio 调试程序测试了应用程序。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-105">In [Debug your C# Hello World application with Visual Studio 2017](debugging-with-visual-studio.md), you tested it using the Visual Studio debugger.</span></span> <span data-ttu-id="9f4c7-106">至此，你已确定应用程序能够按预期运行，可以发布它以供其他用户运行了。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-106">Now that you're sure that it works as expected, you can publish it so that other users can run it.</span></span> <span data-ttu-id="9f4c7-107">发布应用程序会创建运行应用程序所需的一组文件；可以通过将这些文件复制到目标计算机来进行部署。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-107">Publishing creates the set of files that are needed to run your application, and you can deploy the files by copying them to a target machine.</span></span>
+<span data-ttu-id="6ca54-104">在[在 Visual Studio 中使用 .NET Core 创建 Hello World 应用程序](with-visual-studio.md)中，生成了 Hello World 控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="6ca54-104">In [Create a Hello World application with .NET Core in Visual Studio](with-visual-studio.md), you built a Hello World console application.</span></span> <span data-ttu-id="6ca54-105">在[使用 Visual Studio 调试 Hello World 应用程序](debugging-with-visual-studio.md)中，使用 Visual Studio 调试程序测试了应用程序。</span><span class="sxs-lookup"><span data-stu-id="6ca54-105">In [Debug your Hello World application with Visual Studio](debugging-with-visual-studio.md), you tested it using the Visual Studio debugger.</span></span> <span data-ttu-id="6ca54-106">至此，你已确定应用程序能够按预期运行，可以发布它以供其他用户运行了。</span><span class="sxs-lookup"><span data-stu-id="6ca54-106">Now that you're sure that it works as expected, you can publish it so that other users can run it.</span></span> <span data-ttu-id="6ca54-107">发布应用程序会创建运行应用程序所需的一组文件。</span><span class="sxs-lookup"><span data-stu-id="6ca54-107">Publishing creates the set of files that are needed to run your application.</span></span> <span data-ttu-id="6ca54-108">若要部署文件，请将文件复制到目标计算机。</span><span class="sxs-lookup"><span data-stu-id="6ca54-108">To deploy the files, copy them to the target machine.</span></span>
 
-<span data-ttu-id="9f4c7-108">若要发布并运行应用程序，请执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="9f4c7-108">To publish and run your application:</span></span> 
+## <a name="publish-the-app"></a><span data-ttu-id="6ca54-109">发布应用</span><span class="sxs-lookup"><span data-stu-id="6ca54-109">Publish the app</span></span>
 
-1. <span data-ttu-id="9f4c7-109">请确保 Visual Studio 生成的是应用程序的发布版本。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-109">Make sure that Visual Studio is building the Release version of your application.</span></span> <span data-ttu-id="9f4c7-110">必要时，将工具栏上的生成配置设置从“调试”  更改为“发布”  。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-110">If necessary, change the build configuration setting on the toolbar from **Debug** to **Release**.</span></span>
+1. <span data-ttu-id="6ca54-110">请确保 Visual Studio 生成的是应用程序的发布版本。</span><span class="sxs-lookup"><span data-stu-id="6ca54-110">Make sure that Visual Studio is building the Release version of your application.</span></span> <span data-ttu-id="6ca54-111">必要时，将工具栏上的生成配置设置从“调试”  更改为“发布”  。</span><span class="sxs-lookup"><span data-stu-id="6ca54-111">If necessary, change the build configuration setting on the toolbar from **Debug** to **Release**.</span></span>
 
    ![选定发布版本的 Visual Studio 工具栏](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
-1. <span data-ttu-id="9f4c7-112">右键单击“HelloWorld”  项目（而不是 HelloWorld 解决方案），然后选择菜单中的“发布”  。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-112">Right-click on the **HelloWorld** project (not the HelloWorld solution) and select **Publish** from the menu.</span></span> <span data-ttu-id="9f4c7-113">还可以选择 **“生成”** Visual Studio 主菜单中的 **“发布 HelloWorld”** 。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-113">You can also select **Publish HelloWorld** from the main Visual Studio **Build** menu.</span></span>
+1. <span data-ttu-id="6ca54-113">右键单击“HelloWorld”  项目（而不是 HelloWorld 解决方案），然后选择菜单中的“发布”  。</span><span class="sxs-lookup"><span data-stu-id="6ca54-113">Right-click on the **HelloWorld** project (not the HelloWorld solution) and select **Publish** from the menu.</span></span> <span data-ttu-id="6ca54-114">（还可以选择“生成”  主菜单中的“发布 HelloWorld”  。）</span><span class="sxs-lookup"><span data-stu-id="6ca54-114">(You can also select **Publish HelloWorld** from the main **Build** menu.)</span></span>
 
    ![Visual Studio 发布上下文菜单](media/publishing-with-visual-studio/publish-context-menu.png)
+   
+1. <span data-ttu-id="6ca54-116">在“选择发布目标”  页上，选择“文件夹”  ，然后选择“创建配置文件”  。</span><span class="sxs-lookup"><span data-stu-id="6ca54-116">On the **Pick a publish target** page, select **Folder**, and then select **Create Profile**.</span></span>
 
-   ![Visual Studio 发布窗口](media/publishing-with-visual-studio/publish-settings-window.png)
+   ![在 Visual Studio 中选择发布目标](media/publishing-with-visual-studio/pick-publish-target.png)
+   
+1. <span data-ttu-id="6ca54-118">在“发布”  页上，选择“发布”  。</span><span class="sxs-lookup"><span data-stu-id="6ca54-118">On the **Publish** page, select **Publish**.</span></span>
 
-1. <span data-ttu-id="9f4c7-116">打开控制台窗口。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-116">Open a console window.</span></span> <span data-ttu-id="9f4c7-117">例如，在 Windows 任务栏的“在此处键入内容以进行搜索”  文本框中，输入“`Command Prompt`”（或缩写“`cmd`”），再选择“命令提示符”  桌面应用程序或按 Enter（如果已在搜索结果中选择），打开控制台窗口。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-117">For example in the **Type here to search** text box in the Windows taskbar, enter `Command Prompt` (or `cmd` for short), and open a console window by either selecting the **Command Prompt** desktop app or pressing Enter if it's selected in the search results.</span></span>
+   ![Visual Studio 发布窗口](media/publishing-with-visual-studio/publish-page.png)
+   
+## <a name="inspect-the-files"></a><span data-ttu-id="6ca54-120">检查文件</span><span class="sxs-lookup"><span data-stu-id="6ca54-120">Inspect the files</span></span>
 
-1. <span data-ttu-id="9f4c7-118">导航到已发布的应用程序，它位于应用程序项目目录的 `bin\release\PublishOutput` 子目录中。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-118">Navigate to the published application in the `bin\release\PublishOutput` subdirectory of your application's project directory.</span></span> <span data-ttu-id="9f4c7-119">如下图所示，已发布的输出包括以下四个文件：</span><span class="sxs-lookup"><span data-stu-id="9f4c7-119">As the following figure shows, the published output includes the following four files:</span></span>
+<span data-ttu-id="6ca54-121">发布过程中会生成依赖于框架的部署，在此类部署中，若系统上安装了 .NET Core，已发布的应用程序可在 .NET Core 支持的任何平台上运行。</span><span class="sxs-lookup"><span data-stu-id="6ca54-121">The publishing process creates a framework-dependent deployment, which is a type of deployment where the published application runs on any platform supported by .NET Core with .NET Core installed on the system.</span></span> <span data-ttu-id="6ca54-122">用户可以通过双击可执行文件或从命令提示符发出 `dotnet HelloWorld.dll` 命令来运行发布的应用。</span><span class="sxs-lookup"><span data-stu-id="6ca54-122">Users can run the published app by double-clicking the executable or issuing the `dotnet HelloWorld.dll` command from a command prompt.</span></span>
 
-      * <span data-ttu-id="9f4c7-120">HelloWorld.deps.json </span><span class="sxs-lookup"><span data-stu-id="9f4c7-120">*HelloWorld.deps.json*</span></span>
+<span data-ttu-id="6ca54-123">在下面的步骤中，查看由发布过程创建的文件。</span><span class="sxs-lookup"><span data-stu-id="6ca54-123">In the following steps, you'll look at the files created by the publish process.</span></span>
 
-         <span data-ttu-id="9f4c7-121">应用程序的运行时依赖项文件。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-121">The application's runtime dependencies file.</span></span> <span data-ttu-id="9f4c7-122">它定义了运行应用程序所需的 .NET Core 组件和库（包括包含该应用程序的动态链接库）。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-122">It defines the .NET Core components and the libraries (including the dynamic link library that contains your application) needed to run your application.</span></span> <span data-ttu-id="9f4c7-123">有关详细信息，请参阅[运行时配置文件](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-123">For more information, see [Runtime Configuration Files](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).</span></span>
- 
-      * <span data-ttu-id="9f4c7-124">HelloWorld.dll </span><span class="sxs-lookup"><span data-stu-id="9f4c7-124">*HelloWorld.dll*</span></span>
+1. <span data-ttu-id="6ca54-124">打开命令提示。</span><span class="sxs-lookup"><span data-stu-id="6ca54-124">Open a command prompt.</span></span>
 
-         <span data-ttu-id="9f4c7-125">包含应用程序的文件。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-125">The file that contains your application.</span></span> <span data-ttu-id="9f4c7-126">它是一个动态链接库，可通过在控制台窗口中输入 `dotnet HelloWorld.dll` 命令来执行。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-126">It is a dynamic link library that can be executed by entering the `dotnet HelloWorld.dll` command in a console window.</span></span> 
+   <span data-ttu-id="6ca54-125">打开命令提示符的一种方法是，在 Windows 任务栏上的搜索框中输入“命令提示符”  （或简写的“cmd”  ）。</span><span class="sxs-lookup"><span data-stu-id="6ca54-125">One way to open a command prompt is to enter **Command Prompt** (or **cmd** for short) in the search box on the Windows taskbar.</span></span> <span data-ttu-id="6ca54-126">选择“命令提示符”  桌面应用或按 Enter  （如果已在搜索结果中选择）。</span><span class="sxs-lookup"><span data-stu-id="6ca54-126">Select the **Command Prompt** desktop app, or press **Enter** if it's already selected in the search results.</span></span>
 
-      * <span data-ttu-id="9f4c7-127">HelloWorld.pdb  （对于部署是可选的）</span><span class="sxs-lookup"><span data-stu-id="9f4c7-127">*HelloWorld.pdb* (optional for deployment)</span></span>
-
-         <span data-ttu-id="9f4c7-128">包含调试符号的文件。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-128">A file that contains debug symbols.</span></span> <span data-ttu-id="9f4c7-129">尽管应在需要调试应用程序的已发布版本时保存此文件，但无需将此文件与应用程序一起部署。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-129">You aren't required to deploy this file along with your application, although you should save it in the event that you need to debug the published version of your application.</span></span>
-
-      * <span data-ttu-id="9f4c7-130">HelloWorld.runtimeconfig.json </span><span class="sxs-lookup"><span data-stu-id="9f4c7-130">*HelloWorld.runtimeconfig.json*</span></span>
-
-         <span data-ttu-id="9f4c7-131">应用程序的运行时配置文件。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-131">The application's runtime configuration file.</span></span> <span data-ttu-id="9f4c7-132">它标识用于运行应用程序的 .NET Core 版本。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-132">It identifies the version of .NET Core that your application was built to run on.</span></span> <span data-ttu-id="9f4c7-133">有关详细信息，请参阅[运行时配置文件](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-133">For more information, see [Runtime Configuration Files](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).</span></span>  
+1. <span data-ttu-id="6ca54-127">导航到已发布的应用程序，它位于应用程序项目目录的 bin\Release\netcoreapp3.1\publish  子目录中。</span><span class="sxs-lookup"><span data-stu-id="6ca54-127">Navigate to the published application in the *bin\Release\netcoreapp3.1\publish* subdirectory of the application's project directory.</span></span>
 
    ![显示已发布文件的控制台窗口](media/publishing-with-visual-studio/published-files-output.png)
 
-<span data-ttu-id="9f4c7-135">发布过程中会生成依赖于框架的部署，在此类部署中，若系统上安装了 .NET Core，已发布的应用程序可在 .NET Core 支持的任何平台上运行。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-135">The publishing process creates a framework-dependent deployment, which is a type of deployment where the published application will run on any platform supported by .NET Core with .NET Core installed on the system.</span></span> <span data-ttu-id="9f4c7-136">用户可以通过在控制台窗口中发出 `dotnet HelloWorld.dll` 命令来运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-136">Users can run your application by issuing the `dotnet HelloWorld.dll` command from a console window.</span></span>
+   <span data-ttu-id="6ca54-129">如下图所示，已发布的输出包括以下文件：</span><span class="sxs-lookup"><span data-stu-id="6ca54-129">As the image shows, the published output includes the following files:</span></span>
 
-<span data-ttu-id="9f4c7-137">若要详细了解如何发布和部署 .NET Core 应用程序，请参阅 [.NET Core 应用程序部署](../deploying/index.md)。</span><span class="sxs-lookup"><span data-stu-id="9f4c7-137">For more information on publishing and deploying .NET Core applications, see [.NET Core Application Deployment](../deploying/index.md).</span></span>
+      * <span data-ttu-id="6ca54-130">HelloWorld.deps.json </span><span class="sxs-lookup"><span data-stu-id="6ca54-130">*HelloWorld.deps.json*</span></span>
+
+         <span data-ttu-id="6ca54-131">这是应用程序的运行时依赖项文件。</span><span class="sxs-lookup"><span data-stu-id="6ca54-131">This is the application's runtime dependencies file.</span></span> <span data-ttu-id="6ca54-132">它定义了运行应用程序所需的 .NET Core 组件和库（包括包含该应用程序的动态链接库）。</span><span class="sxs-lookup"><span data-stu-id="6ca54-132">It defines the .NET Core components and the libraries (including the dynamic link library that contains your application) needed to run the app.</span></span> <span data-ttu-id="6ca54-133">有关详细信息，请参阅[运行时配置文件](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。</span><span class="sxs-lookup"><span data-stu-id="6ca54-133">For more information, see [Runtime configuration files](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).</span></span>
+
+      * <span data-ttu-id="6ca54-134">HelloWorld.dll </span><span class="sxs-lookup"><span data-stu-id="6ca54-134">*HelloWorld.dll*</span></span>
+
+         <span data-ttu-id="6ca54-135">这是应用程序的[依赖于框架的部署](../deploying/deploy-with-cli.md#framework-dependent-deployment)版本。</span><span class="sxs-lookup"><span data-stu-id="6ca54-135">This is the [framework-dependent deployment](../deploying/deploy-with-cli.md#framework-dependent-deployment) version of the application.</span></span> <span data-ttu-id="6ca54-136">若要执行此动态链接库，请在命令提示符处输入 `dotnet HelloWorld.dll`。</span><span class="sxs-lookup"><span data-stu-id="6ca54-136">To execute this dynamic link library, enter `dotnet HelloWorld.dll` at a command prompt.</span></span>
+
+      * <span data-ttu-id="6ca54-137">*HelloWorld.exe*</span><span class="sxs-lookup"><span data-stu-id="6ca54-137">*HelloWorld.exe*</span></span>
+      
+         <span data-ttu-id="6ca54-138">这是应用程序的[依赖于框架的可执行文件](../deploying/deploy-with-cli.md#framework-dependent-executable)版本。</span><span class="sxs-lookup"><span data-stu-id="6ca54-138">This is the [framework-dependent executable](../deploying/deploy-with-cli.md#framework-dependent-executable) version of the application.</span></span> <span data-ttu-id="6ca54-139">若要运行该版本，请在命令提示符处输入 `HelloWorld.exe`。</span><span class="sxs-lookup"><span data-stu-id="6ca54-139">To run it, enter `HelloWorld.exe` at a command prompt.</span></span>
+
+      * <span data-ttu-id="6ca54-140">HelloWorld.pdb  （对于部署是可选的）</span><span class="sxs-lookup"><span data-stu-id="6ca54-140">*HelloWorld.pdb* (optional for deployment)</span></span>
+
+         <span data-ttu-id="6ca54-141">这是调试符号文件。</span><span class="sxs-lookup"><span data-stu-id="6ca54-141">This is the debug symbols file.</span></span> <span data-ttu-id="6ca54-142">尽管应在需要调试应用程序的已发布版本时保存此文件，但无需将此文件与应用程序一起部署。</span><span class="sxs-lookup"><span data-stu-id="6ca54-142">You aren't required to deploy this file along with your application, although you should save it in the event that you need to debug the published version of your application.</span></span>
+
+      * <span data-ttu-id="6ca54-143">HelloWorld.runtimeconfig.json </span><span class="sxs-lookup"><span data-stu-id="6ca54-143">*HelloWorld.runtimeconfig.json*</span></span>
+
+         <span data-ttu-id="6ca54-144">这是应用程序的运行时配置文件。</span><span class="sxs-lookup"><span data-stu-id="6ca54-144">This is the application's runtime configuration file.</span></span> <span data-ttu-id="6ca54-145">它标识用于运行应用程序的 .NET Core 版本。</span><span class="sxs-lookup"><span data-stu-id="6ca54-145">It identifies the version of .NET Core that your application was built to run on.</span></span> <span data-ttu-id="6ca54-146">有关详细信息，请参阅[运行时配置文件](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。</span><span class="sxs-lookup"><span data-stu-id="6ca54-146">For more information, see [Runtime configuration files](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).</span></span>
+
+## <a name="additional-resources"></a><span data-ttu-id="6ca54-147">其他资源</span><span class="sxs-lookup"><span data-stu-id="6ca54-147">Additional resources</span></span>
+
+- [<span data-ttu-id="6ca54-148">.NET Core 应用程序部署</span><span class="sxs-lookup"><span data-stu-id="6ca54-148">.NET Core application deployment</span></span>](../deploying/index.md)
