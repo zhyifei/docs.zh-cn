@@ -7,18 +7,18 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: e3439d2e0e0fb8f3126770ec7922f5ae180f781b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 74a6f2e1e9296551f4faf73a905b49d3e2e3687e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418253"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635712"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ 查询简介 (C#)
-*查询*是一种从数据源检索数据的表达式。 查询通常用专门的查询语言来表示。 随着时间的推移，人们已经为各种数据源开发了不同的语言；例如，用于关系数据库的 SQL 和用于 XML 的 XQuery。 因此，开发人员对于他们必须支持的每种数据源或数据格式，都不得不学习一种新的查询语言。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 通过提供一种跨各种数据源和数据格式使用数据的一致模型，简化了这一情况。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，始终会用到对象。 可以使用相同的基本编码模式来查询和转换 XML 文档、SQL 数据库、ADO.NET 数据集、.NET 集合中的数据以及 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序可用的任何其他格式的数据。  
+*查询*是一种从数据源检索数据的表达式。 查询通常用专门的查询语言来表示。 随着时间的推移，人们已经为各种数据源开发了不同的语言；例如，用于关系数据库的 SQL 和用于 XML 的 XQuery。 因此，开发人员对于他们必须支持的每种数据源或数据格式，都不得不学习一种新的查询语言。 LINQ 通过提供处理各种数据源和数据格式的数据的一致模型，简化了这一情况。 在 LINQ 查询中，始终会用到对象。 可以使用相同的基本编码模式来查询和转换 XML 文档、SQL 数据库、ADO.NET 数据集、.NET 集合中的数据以及 LINQ 提供程序可用的任何其他格式的数据。  
   
 ## <a name="three-parts-of-a-query-operation"></a>查询操作的三个部分  
- 所有 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询操作都由以下三个不同的操作组成：  
+ 所有 LINQ 查询操作都由以下三个不同的操作组成：  
   
 1. 获取数据源。  
   
@@ -30,14 +30,14 @@ ms.locfileid: "73418253"
   
  [!code-csharp[CsLINQGettingStarted#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#1)]  
   
- 下图演示完整的查询操作。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中，查询的执行与查询本身截然不同；换句话说，如果只是创建查询变量，则不会检索任何数据。  
+ 下图演示完整的查询操作。 在 LINQ 中，查询的执行不同于查询本身。 换句话说，仅通过创建查询变量不会检索到任何数据。  
   
  ![完整 LINQ 查询运算的图表。](./media/introduction-to-linq-queries/linq-query-complete-operation.png)  
   
 ## <a name="the-data-source"></a>数据源  
- 上例中，数据源是一个数组，因此它隐式支持泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口。 这一事实意味着该数据源可以用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 进行查询。 查询在 `foreach` 语句中执行，且 `foreach` 需要 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>。 支持 <xref:System.Collections.Generic.IEnumerable%601> 或派生接口（如泛型 <xref:System.Linq.IQueryable%601>）的类型称为可查询类型  。  
+ 上例中，数据源是一个数组，因此它隐式支持泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口。 这一事实意味着该数据源可以用 LINQ 进行查询。 查询在 `foreach` 语句中执行，且 `foreach` 需要 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>。 支持 <xref:System.Collections.Generic.IEnumerable%601> 或派生接口（如泛型 <xref:System.Linq.IQueryable%601>）的类型称为可查询类型  。  
   
- 可查询类型不需要进行修改或特殊处理就可以用作 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 数据源。 如果源数据还没有作为可查询类型出现在内存中，则 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序必须以此方式表示源数据。 例如，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 将 XML 文档加载到可查询的 <xref:System.Xml.Linq.XElement> 类型中：  
+ 可查询类型不需要进行修改或特殊处理就可以用作 LINQ 数据源。 如果源数据还没有作为可查询类型出现在内存中，则 LINQ 提供程序必须以此方式表示源数据。 例如，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 将 XML 文档加载到可查询的 <xref:System.Xml.Linq.XElement> 类型中：  
   
  [!code-csharp[CsLINQGettingStarted#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#2)]  
   
@@ -53,15 +53,15 @@ IQueryable<Customer> custQuery =
     select cust;  
 ```  
   
- 有关如何创建特定类型的数据源的详细信息，请参阅各种 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序的文档。 但基本规则很简单：[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 数据源是支持泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口或从中继承的接口的任意对象。  
+ 有关如何创建特定类型的数据源的详细信息，请参阅各种 LINQ 提供程序的文档。 但基本规则很简单：LINQ 数据源是支持泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口或从中继承的接口的任意对象。  
   
 > [!NOTE]
-> 支持非泛型 <xref:System.Collections.IEnumerable> 接口的类型（如 <xref:System.Collections.ArrayList>）还可用作 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 数据源。 有关详细信息，请参阅[如何：使用 LINQ 查询 ArrayList (C#)](./how-to-query-an-arraylist-with-linq.md)。  
+> 支持非泛型 <xref:System.Collections.IEnumerable> 接口的类型（如 <xref:System.Collections.ArrayList>）还可用作 LINQ 数据源。 有关详细信息，请参阅[如何使用 LINQ 查询 ArrayList (C#)](./how-to-query-an-arraylist-with-linq.md)。  
   
 ## <a name="query"></a> 查询  
  查询指定要从数据源中检索的信息。 查询还可以指定在返回这些信息之前如何对其进行排序、分组和结构化。 查询存储在查询变量中，并用查询表达式进行初始化。 为使编写查询的工作变得更加容易，C# 引入了新的查询语法。  
   
- 上一个示例中的查询从整数数组中返回所有偶数。 该查询表达式包含三个子句：`from`、`where` 和 `select`。 （如果熟悉 SQL，会注意到这些子句的顺序与 SQL 中的顺序相反。）`from` 子句指定数据源，`where` 子句应用筛选器，`select` 子句指定返回的元素的类型。 [LINQ 查询表达式](../../../linq/index.md)一节中详细讨论了这些子句和其他查询子句。 目前需要注意的是，在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中，查询变量本身不执行任何操作并且不返回任何数据。 它只是存储在以后某个时刻执行查询时为生成结果而必需的信息。 有关在后台如何构造查询的详细信息，请参阅[标准查询运算符概述 (C#)](./standard-query-operators-overview.md)。  
+ 上一个示例中的查询从整数数组中返回所有偶数。 该查询表达式包含三个子句：`from`、`where` 和 `select`。 （如果熟悉 SQL，会注意到这些子句的顺序与 SQL 中的顺序相反。）`from` 子句指定数据源，`where` 子句应用筛选器，`select` 子句指定返回的元素的类型。 [LINQ 查询表达式](../../../linq/index.md)一节中详细讨论了这些子句和其他查询子句。 目前需要注意的是，在 LINQ 中，查询变量本身不执行任何操作并且不返回任何数据。 它只是存储在以后某个时刻执行查询时为生成结果而必需的信息。 有关在后台如何构造查询的详细信息，请参阅[标准查询运算符概述 (C#)](./standard-query-operators-overview.md)。  
   
 > [!NOTE]
 > 还可以使用方法语法来表示查询。 有关详细信息，请参阅 [LINQ 中的查询语法和方法语法](./query-syntax-and-method-syntax-in-linq.md)。  

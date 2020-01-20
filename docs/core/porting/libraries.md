@@ -3,73 +3,71 @@ title: 将库移植到 .NET Core
 description: 了解如何将 .NET Framework 中的库项目移植到 .NET Core。
 author: cartermp
 ms.date: 12/07/2018
-ms.custom: seodec18
-ms.openlocfilehash: 3e3c613f6be50ae5ff2b07052c7c1bced2047855
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 6ff38647f77bbe1d25dd1d0065c4b32c60f87fcd
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105293"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777352"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>将 .NET Framework 库移植到 .NET Core
 
-了解如何将 .NET Framework 库代码移植到 .NET Core，以跨平台运行并扩展使用该代码的应用的范围。
+了解如何将 .NET Framework 库代码移植到 .NET Core，它在其中跨平台运行并扩展使用它的应用的范围。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 本文假定你：
 
-- 正在使用 Visual Studio 2017 或更高版本。
-  - Visual Studio 的早期版本不支持 .NET Core
+- 正在使用 Visual Studio 2017 或更高版本。 （Visual Studio 的早期版本不支持 .NET Core。）
 - 了解[推荐的移植过程](index.md)。
 - 已解决与[第三方依赖项](third-party-deps.md)有关的任何问题。
 
-还应熟悉下列主题的内容：
+还应熟悉下列文章的内容：
 
 [.NET Standard](../../standard/net-standard.md)\
-此主题介绍了适用于所有 .NET 实现代码的 .NET API 正式规范。
+本文介绍了适用于所有 .NET 实现代码的 .NET API 正式规范。
 
-[包、元包和框架](../packages.md)   
+[包、元包和框架](../packages.md)\
 这篇文章介绍了 .NET Core 如何定义和使用包，以及包如何支持多个 .NET 实现代码。
 
-[使用跨平台工具开发库](../tutorials/libraries.md)   
-此主题介绍了如何使用跨平台 CLI 工具编写 .NET 的库。
+[使用跨平台工具开发库](../tutorials/libraries.md)\
+本文介绍了如何使用跨平台 CLI 工具编写 .NET 的库。
 
-[.NET Core 的 csproj  格式的新增内容](../tools/csproj.md)   
+[.NET Core 的 csproj  格式的新增内容](../tools/csproj.md)\
 本文概述了作为从移动到 csproj  和 MSBuild 的一部分，添加到项目文件的更改。
 
-[移植到 .NET Core - 分析第三方依赖项](third-party-deps.md)   
-本主题介绍了第三方依赖项的可移植性及 NuGet 包依赖项无法在 .NET Core 上运行时要执行的操作。
+[移植到 .NET Core - 分析第三方依赖项](third-party-deps.md)\
+本文介绍了第三方依赖项的可移植性及 NuGet 包依赖项无法在 .NET Core 上运行时要执行的操作。
 
-## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>将 .NET Framework 代码重定向到 .NET Framework 4.7.2
+## <a name="retarget-to-net-framework-472"></a>重定向到 .NET Framework 4.7.2
 
 如果代码不面向 .NET Framework 4.7.2，建议重定向到 .NET Framework 4.7.2。 在 .NET Standard 不支持现有 API 情况下，这可确保最新备用 API 的可用性。
 
-对于 Visual Studio 中每个想要移植的项目，请执行以下操作：
+对于每个想要移植的项目，请在 Visual Studio 中执行以下操作：
 
 1. 右键单击该项目，然后选择“属性”  。
 1. 在“目标框架”  下拉列表中，选择“.NET Framework 4.7.2”  。
-1. 重新编译项目。
+1. 重新编译该项目。
 
 因为项目现在面向 .NET Framework 4.7.2，因此可使用该版本的 .NET Framework 作为移植代码的基准。
 
-## <a name="determining-the-portability-of-your-code"></a>确定代码的可移植性
+## <a name="determine-portability"></a>确定可移植性
 
 下一步是运行 API 可移植性分析器 (ApiPort) 生成可供分析的可移植性报表。
 
-确保了解 [API 可移植性分析器 (ApiPort)](../../standard/analyzers/portability-analyzer.md) 及如何生成用于面向 .NET Core 的可移植性报表。 执行此操作的方式可能取决于需求和个人偏好。 下面介绍了一些不同方法。 用户可能会发现自己根据生成代码的方式混合使用了这些方法中的步骤。
+确保了解 [API 可移植性分析器 (ApiPort)](../../standard/analyzers/portability-analyzer.md) 及如何生成用于面向 .NET Core 的可移植性报表。 执行此操作的方式可能取决于需求和个人偏好。 以下部分详细介绍了几种不同的方法。 用户可能会发现自己根据生成代码的方式混合使用了这些方法中的步骤。
 
-### <a name="dealing-primarily-with-the-compiler"></a>主要处理编译器
+### <a name="deal-primarily-with-the-compiler"></a>主要处理编译器
 
-此方法可能最适合小项目或不会用很多 .NET Framework API 的项目。 此方法很简单：
+此方法可能较适合小项目或不会用很多 .NET Framework API 的项目。 此方法很简单：
 
 1. 可选择在项目上运行 ApiPort。 若运行 ApiPort，则从报告获取有关需要解决的问题的信息。
 1. 将所有代码复制到新的 .NET Core 项目。
 1. 查看可移植性报表（如果已生成）时，解决编译器错误，直至项目完全得到编译。
 
-尽管这种方法非常松散，但以代码为中心的方法通常可快速解决问题，并且可能是最适合小型项目或库的方法。 只包含数据模型的项目可能是此方法的理想选择。
+尽管它是非结构化的，但这种以代码为中心的方法通常可以快速解决问题。 只包含数据模型的项目可能是此方法的理想选择。
 
-### <a name="staying-on-the-net-framework-until-portability-issues-are-resolved"></a>可移植性问题得到解决前停留在 .NET Framework 上
+### <a name="stay-on-the-net-framework-until-portability-issues-are-resolved"></a>可移植性问题得到解决前停留在 .NET Framework 上
 
 如果更希望拥有在整个过程期间编译的代码，此方法可能是最佳选择。 该方法如下所示：
 
@@ -80,9 +78,9 @@ ms.locfileid: "70105293"
 1. 将代码复制到新的 .NET Core 项目。
 1. 解决所有已记录的不存在直接替代方案的问题。
 
-这种谨慎的方法比单纯解决编译器错误更有条理，但相对而言，它仍以代码为中心，且优点是始终拥有编译的代码。 解决不能通过只使用另一个 API 解决的某些问题的方法大不相同。 你可能会发现对于某些项目，需要制定更全面的计划，这将在下一种方法中涉及到。
+这种谨慎的方法比单纯解决编译器错误更有条理，但相对而言，它仍以代码为中心，且优点是始终拥有编译的代码。 解决不能通过只使用另一个 API 解决的某些问题的方法大不相同。 你可能会发现对于某些项目，需要制定更全面的计划，这将在下一种方法中介绍。
 
-### <a name="developing-a-comprehensive-plan-of-attack"></a>制定全面的施行计划
+### <a name="develop-a-comprehensive-plan-of-attack"></a>制定全面的攻击计划
 
 此方法可能最适合大型或更复杂的项目，在这种情况下，为支持 .NET Core，可能必需重构代码或将某些代码区域完全重写。 该方法如下所示：
 
@@ -94,7 +92,7 @@ ms.locfileid: "70105293"
    - 对于这些不可移植的类型，是否存在可完成相同任务的备用 API？ 例如，如果使用 <xref:System.Net.WebClient> 类，也许能够改用 <xref:System.Net.Http.HttpClient> 类。
    - 是否存在其他可用于完成任务的可移植 API，即使它不是直接替代 API？ 例如，如果使用 <xref:System.Xml.Schema.XmlSchema> 来分析 XML，但是无需 XML 架构发现，则可使用 <xref:System.Xml.Linq> API 并自行实现分析，而不依赖于 API。
 1. 如果具有难以移植的程序集，是否值得将其暂时留在 .NET Framework 上？ 以下是一些需要考虑的事项：
-   - 库中可能具有某些与 .NET Core 不兼容的功能，因为它太依赖 .NET Framework 或 Windows 特定的功能。 是否值得暂时搁置该功能并发布在资源可用于移植这些功能前暂具较少功能的库的 .NET Core 版本？
+   - 库中可能具有某些与 .NET Core 不兼容的功能，因为它太依赖 .NET Framework 或 Windows 特定的功能。 是否值得暂时搁置该功能，并直到资源可用于移植这些功能，才发布具有较少功能的库的临时 .NET Core 版本？
    - 重构是否有用？
 1. 编写自己对不可用 .NET Framework API 的实现是否合理？
    可以考虑复制、修改，并使用 [.NET Framework 参考源](https://github.com/Microsoft/referencesource)中的代码。 参考源代码已在 [MIT 许可证](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt)下获得许可，因此可以自由选择将此源作为自己代码的基础。 只需确保在代码中正确设置 Microsoft。
@@ -104,11 +102,11 @@ ms.locfileid: "70105293"
 
 计划可能包括对代码库做重大更改，同时面向 .NET Framework 4.7.2，使它成为前一种方法更有条理的版本。 着手执行计划的方式具体取决于代码库。
 
-### <a name="mixing-approaches"></a>混合方法
+### <a name="mixed-approach"></a>混合方法
 
 在每个项目的基础上，可能会将上述方法进行混合。 应该进行对你和代码库最有意义的操作。
 
-## <a name="porting-your-tests"></a>移植测试
+## <a name="port-your-tests"></a>移植测试
 
 要确保移植代码后一切正常的最佳方式是在将代码移植到 .NET Core 时进行测试。 为此，需要使用将针对 .NET Core 生成和运行测试的测试框架。 当前，有三个选择：
 
@@ -118,9 +116,9 @@ ms.locfileid: "70105293"
 - [NUnit](https://nunit.org/)
   - [入门](https://github.com/nunit/docs/wiki/Installation)
   - [关于从 MSTest 迁移到 NUnit 的博客文章](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
-- [MSTest](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
+- [MSTest](/visualstudio/test/unit-test-basics)
 
-## <a name="recommended-approach-to-porting"></a>移植的推荐方法
+## <a name="recommended-approach"></a>推荐的方法
 
 从根本上讲，移植工作在很大程度上取决于生成 .NET Framework 代码的方式。 移植代码的一个好方法是从库的基项  开始，这是代码的基础组件。 这可能是数据模型或某些其他内容直接或间接使用的基本类和方法。
 
@@ -132,5 +130,7 @@ ms.locfileid: "70105293"
 
 如果从库的基项开始并从基项向外移动并根据需要测试每一层，移植将是一个系统化的过程，在这种情况下，问题可以一次隔离到一层代码中。
 
->[!div class="step-by-step"]
->[下一页](project-structure.md)
+## <a name="next-steps"></a>后续步骤
+
+>[!div class="nextstepaction"]
+>[整理 .NET Core 的项目](project-structure.md)

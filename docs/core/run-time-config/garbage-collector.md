@@ -228,7 +228,7 @@ ms.locfileid: "75900099"
 ```
 
 > [!TIP]
-> 如果要在 runtimeconfig.template.json  中设置该选项，请指定一个十进制值。 如果要将选项设置为一个环境变量，请指定一个十六进制值。 例如，若要将堆硬限制指定为 200 个 mebibyte (MiB)，则该值对于 JSON 文件为 209715200，对于环境变量则为 0xC800000 或 C800000。
+> 如果要在 runtimeconfig.template.json  中设置该选项，请指定一个十进制值。 如果要将选项设置为一个环境变量，请指定一个十六进制值。 例如，若要将堆硬限制指定为 200 个兆字节 (MiB)，则该值对于 JSON 文件为 209715200，对于环境变量则为 0xC800000 或 C800000。
 
 ### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System.GC.HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
 

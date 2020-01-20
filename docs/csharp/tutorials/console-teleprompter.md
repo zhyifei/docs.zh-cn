@@ -4,14 +4,14 @@ description: 此教程将介绍 .NET Core 和 C# 语言的许多功能。
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 2b9948ce22eb221d9d757fcec4c556d365469fdf
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 921c8fc7824bdb48f08e4d9f5a276bf2284f8a17
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039267"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714600"
 ---
-# <a name="console-application"></a>控制台应用程序
+# <a name="console-app"></a>控制台应用
 
 此教程将介绍 .NET Core 和 C# 语言的许多功能。 你将了解：
 
@@ -25,12 +25,13 @@ ms.locfileid: "73039267"
 
 此教程将介绍许多功能。 我们将逐个生成这些功能。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
-必须将计算机设置为运行 .NET Core。 有关安装说明，请访问 [.NET Core 下载](https://dotnet.microsoft.com/download)页。 可以在 Windows、Linux、macOS 或 Docker 容器中运行此应用程序。
-必须安装常用的代码编辑器。
+- 将计算机设置为运行 .NET Core。 有关安装说明，请访问 [.NET Core 下载](https://dotnet.microsoft.com/download)页。 可以在 Windows、Linux、macOS 或 Docker 容器中运行此应用程序。
 
-## <a name="create-the-application"></a>创建应用程序
+- 安装最喜爱的代码编辑器。
+
+## <a name="create-the-app"></a>创建应用
 
 第一步是新建应用程序。 打开命令提示符，然后新建应用程序的目录。 将新建的目录设为当前目录。 在命令提示符处，键入命令 `dotnet new console`。 这将为基本的“Hello World”应用程序创建起始文件。
 
@@ -40,8 +41,7 @@ ms.locfileid: "73039267"
 
 还原包后，运行 `dotnet build`。 这将运行生成引擎，并创建应用程序可执行文件。 最后，执行 `dotnet run` 来运行应用程序。
 
-简单的 Hello World 应用程序代码全都在 Program.cs 中。 使用常用文本编辑器打开此文件。 我们将执行首轮更改。
-在此文件的最上面，你会看到 using 语句：
+简单的 Hello World 应用程序代码全都在 Program.cs 中。 使用常用文本编辑器打开此文件。 我们将执行首轮更改。 在此文件的最上面，你会看到 using 语句：
 
 ```csharp
 using System;
@@ -156,8 +156,7 @@ if (lineLength > 70)
 
 ## <a name="async-tasks"></a>异步任务
 
-最后一步将是添加代码，以便在一个任务中异步编写输出，同时运行另一任务来读取用户输入（如果用户想要加快或减慢文本显示速度，或完全停止文本显示的话）。 此过程分为几步操作，最后将完成所需的全部更新。
-第一步是创建异步 <xref:System.Threading.Tasks.Task> 返回方法，用于表示已创建的用于读取和显示文件的代码。
+最后一步将是添加代码，以便在一个任务中异步编写输出，同时运行另一任务来读取用户输入（如果用户想要加快或减慢文本显示速度，或完全停止文本显示的话）。 此过程分为几步操作，最后将完成所需的全部更新。 第一步是创建异步 <xref:System.Threading.Tasks.Task> 返回方法，用于表示已创建的用于读取和显示文件的代码。
 
 将以下方法（截取自 `Main` 方法主体）添加到 `Program` 类中：
 
@@ -176,8 +175,7 @@ private static async Task ShowTeleprompter()
 }
 ```
 
-你会注意到两处更改。 首先，此版本在方法主体中使用 `await` 关键字，而不是调用 <xref:System.Threading.Tasks.Task.Wait> 同步等待任务完成。 为此，需要将 `async` 修饰符添加到方法签名中。 此方法返回 `Task`。 请注意，没有用于返回 `Task` 对象的返回语句。 相反，`Task` 对象由编译器在你使用 `await` 运算符时生成的代码进行创建。 可以想象，此方法在到达 `await` 时返回。 返回的 `Task` 指示工作未完成。
-在等待的任务完成时，此方法继续执行。 执行完后，返回的 `Task` 会指示已完成。
+你会注意到两处更改。 首先，此版本在方法主体中使用 `await` 关键字，而不是调用 <xref:System.Threading.Tasks.Task.Wait> 同步等待任务完成。 为此，需要将 `async` 修饰符添加到方法签名中。 此方法返回 `Task`。 请注意，没有用于返回 `Task` 对象的返回语句。 相反，`Task` 对象由编译器在你使用 `await` 运算符时生成的代码进行创建。 可以想象，此方法在到达 `await` 时返回。 返回的 `Task` 指示工作未完成。 在等待的任务完成时，此方法继续执行。 执行完后，返回的 `Task` 会指示已完成。
 调用代码可以通过监视返回的 `Task` 来确定完成时间。
 
 可以在 `Main` 方法中调用以下新方法：
@@ -219,8 +217,7 @@ private static async Task GetInput()
 }
 ```
 
-这创建了一个表示 <xref:System.Action> 委托的 lambda 表达式，用于在用户按“<”（小于）或“>”（大于）键时，从控制台读取键，并修改表示延迟的局部变量。 当用户按下“X”或“x”键时，委托方法结束，允许用户随时停止文本显示。
-此方法使用 <xref:System.Console.ReadKey> 来阻止并等待用户按键。
+这创建了一个表示 <xref:System.Action> 委托的 lambda 表达式，用于在用户按“<”（小于）或“>”（大于）键时，从控制台读取键，并修改表示延迟的局部变量。 当用户按下“X”或“x”键时，委托方法结束，允许用户随时停止文本显示。 此方法使用 <xref:System.Console.ReadKey> 来阻止并等待用户按键。
 
 若要完成这项功能，需要新建 `async Task` 返回方法，用于启动这两项任务（`GetInput` 和 `ShowTeleprompter`），并管理这两项任务之间共享的数据。
 
@@ -314,7 +311,6 @@ RunTeleprompter().Wait();
 
 ## <a name="conclusion"></a>结束语
 
-此教程介绍了与处理控制台应用程序相关的许多 C# 语言和 .NET Core 库功能。
-可以在此教程的基础上进一步探索语言和本文介绍的类。 你已了解文件和控制台 I/O 的基础知识、基于任务的异步编程的阻止性和非阻止性用途、C# 语言介绍、C# 程序的组织结构，以及 .NET Core 命令行接口和工具。
+此教程介绍了与处理控制台应用程序相关的许多 C# 语言和 .NET Core 库功能。 可以在此教程的基础上进一步探索语言和本文介绍的类。 你已了解文件和控制台 I/O 的基础知识、基于任务的异步编程的阻止性和非阻止性用途、C# 语言介绍、C# 程序的组织结构，以及 .NET Core 命令行接口和工具。
 
 有关文件 I/O 的详细信息，请参阅[文件和流 I/O](../../standard/io/index.md) 主题。 有关本教程中使用的异步编程模型的详细信息，请参阅[基于任务的异步编程](../..//standard/parallel-programming/task-based-asynchronous-programming.md)主题和[异步编程](../async.md)主题。

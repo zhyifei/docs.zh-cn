@@ -8,16 +8,16 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 668bb08526a6eeb1cf640c9ecdac3b8f2c850a99
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c549b9fcc91401aed846afd39e656b60e16afb74
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711943"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937605"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 表达式（C# 编程指南）
 
-“Lambda 表达式”是采用以下任意一种形式的表达式： 
+“Lambda 表达式”是采用以下任意一种形式的表达式：
 
 - [表达式 lambda](#expression-lambdas)，表达式为其主体：
 
@@ -49,7 +49,7 @@ ms.locfileid: "75711943"
   
 ## <a name="expression-lambdas"></a>表达式 lambda
 
-表达式位于 `=>` 运算符右侧的 lambda 表达式称为“表达式 lambda”  。 表达式 lambda 广泛用于[表达式树](../concepts/expression-trees/index.md)的构造。 表达式 lambda 会返回表达式的结果，并采用以下基本形式：
+表达式位于 `=>` 运算符右侧的 lambda 表达式称为“表达式 lambda”。 表达式 lambda 广泛用于[表达式树](../concepts/expression-trees/index.md)的构造。 表达式 lambda 会返回表达式的结果，并采用以下基本形式：
 
 ```csharp
 (input-parameters) => expression
@@ -201,7 +201,7 @@ lambda 类型推理的一般规则如下：
 
 ## <a name="capture-of-outer-variables-and-variable-scope-in-lambda-expressions"></a>捕获 lambda 表达式中的外部变量和变量范围
 
-lambda 可以引用外部变量  。 这些变量是在定义 lambda 表达式的方法中或包含 lambda 表达式的类型中的范围内变量。 以这种方式捕获的变量将进行存储以备在 lambda 表达式中使用，即使在其他情况下，这些变量将超出范围并进行垃圾回收。 必须明确地分配外部变量，然后才能在 lambda 表达式中使用该变量。 下面的示例演示这些规则：
+lambda 可以引用外部变量。 这些变量是在定义 lambda 表达式的方法中或包含 lambda 表达式的类型中的范围内变量。 以这种方式捕获的变量将进行存储以备在 lambda 表达式中使用，即使在其他情况下，这些变量将超出范围并进行垃圾回收。 必须明确地分配外部变量，然后才能在 lambda 表达式中使用该变量。 下面的示例演示这些规则：
 
 [!code-csharp[variable scope](~/samples/snippets/csharp/programming-guide/lambda-expressions/VariableScopeWithLambdas.cs#VariableScope)]
 
@@ -223,7 +223,7 @@ lambda 可以引用外部变量  。 这些变量是在定义 lambda 表达式�
 
 ## <a name="featured-book-chapter"></a>特别推荐书籍章节
 
-[C# 3.0 手册（第三版）：面向 C# 3.0 程序员的超过 250 个解决方案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)中的[委托、事件和 Lambda 表达式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29)  
+[面向 C# 3.0 程序员的超过 250 个解决方案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29)中的 [C# 3.0 手册（第三版）：委托、事件和 Lambda 表达式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
   
 ## <a name="see-also"></a>请参阅
 
@@ -233,4 +233,4 @@ lambda 可以引用外部变量  。 这些变量是在定义 lambda 表达式�
 - [本地函数与 lambda 表达式比较](../../local-functions-vs-lambdas.md)
 - [隐式类型化 lambda 表达式](../../implicitly-typed-lambda-expressions.md)
 - [Visual Studio 2008 C# 示例（请参阅 LINQ 示例查询文件和 XQuery 程序）](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
-- [递归 lambda 表达式](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)
+- [递归 lambda 表达式](https://docs.microsoft.com/archive/blogs/madst/recursive-lambda-expressions)

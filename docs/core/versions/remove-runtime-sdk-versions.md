@@ -1,16 +1,16 @@
 ---
 title: 删除 .NET Core 运行时和 SDK
 description: 本文介绍如何确定当前安装的 .NET Core 运行时和 SDK 的版本，以及如何在 Windows、Mac 和 Linux 上删除它们。
-ms.date: 07/28/2018
+ms.date: 12/17/2019
 author: billwagner
 ms.author: wiwagn
-ms.custom: seodec18
-ms.openlocfilehash: 6d1012b8ddc5fd4a5ee8227902886727dbb10739
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.custom: updateeachrelease
+ms.openlocfilehash: 8f8dbf7a8730712dc546643a6ef86425a3e19794
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970298"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713990"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>如何删除 .NET Core 运行时和 SDK
 
@@ -168,7 +168,7 @@ Linux 还提供其他可用来卸载 .NET Core（SDK 或运行时）的选项。
 
 对于仅安装了运行时而未安装 SDK 的计算机，.NET Core 运行时的包名称为 `dotnet-runtime-<version>`，整个运行时堆栈的包名称为 `aspnetcore-runtime-<version>`。
 
-使用包管理器卸载 SDK 时，2.0 之前的 NET Core 安装不会卸载主机应用程序。 使用 `apt-get`，该命令为：
+使用包管理器卸载 SDK 时，2.0 之前的 .NET Core 安装不会卸载主机应用程序。 使用 `apt-get`，该命令为：
 
 ```bash
 apt-get remove dotnet-host
@@ -203,3 +203,37 @@ sudo rm -rf /usr/local/share/dotnet/host/fxr/1.0.1
 SDK 和运行时的父目录列在 `dotnet --list-sdks` 和 `dotnet --list-runtimes` 命令的输出中，如上表所示。
 
 ---
+
+## <a name="net-core-uninstall-tool"></a>.NET Core 卸载工具
+
+[.NET Core 卸载工具](../additional-tools/uninstall-tool.md) (`dotnet-core-uninstall`) 使你可以从系统中删除 .NET Core SDK 和运行时。 可使用选项集合来指定应卸载的版本。
+
+## <a name="visual-studio-dependency-on-net-core-sdk-versions"></a>.NET Core SDK 版本的 Visual Studio 依赖项
+
+在 Visual Studio 2019 版本 16.3 之前，Visual Studio 安装程序称为独立的 .NET Core SDK 安装程序。 因此，SDK 版本显示在 Windows“添加/删除程序”  对话框中。 使用独立安装程序删除 Visual Studio 安装的 .NET Core SDK 可能会破坏 Visual Studio。 如果 Visual Studio 在卸载 SDK 之后出现问题，请在该特定版本的 Visual Studio 上运行修复。 下表显示了 .NET Core SDK 版本的一些 Visual Studio 依赖项：
+
+| Visual Studio 版本 | .NET Core SDK 版本 |
+| -- | -- |
+| Visual Studio 2019 版本 16.2 | .NET Core SDK 2.2.4xx、2.1.8xx |
+| Visual Studio 2019 版本 16.1 | .NET Core SDK 2.2.3xx、2.1.7xx |
+| Visual Studio 2019 版本 16.0 | .NET Core SDK 2.2.2xx、2.1.6xx |
+| Visual Studio 2017 版本 15.9 | .NET Core SDK 2.2.1xx、2.1.5xx |
+| Visual Studio 2017 版本 15.8 | .NET Core SDK 2.1.4xx |
+
+从 Visual Studio 2019 16.3 开始，Visual Studio 负责其自己的 .NET Core SDK 副本。 为此，在“添加/删除程序”  对话框中将不再显示这些 SDK 版本。
+
+## <a name="remove-the-nuget-fallback-folder"></a>删除 NuGet 回退文件夹
+
+在 .NET Core 3.0 SDK 之前，.NET Core SDK 安装程序使用 NuGetFallbackFolder  存储 NuGet 包的缓存。 此缓存在操作期间（如 `dotnet restore` 或 `dotnet build /t:Restore`）使用。 `NuGetFallbackFolder` 在 Windows 位于 C:\Program Files\dotnet\sdk  ，在 macOS 上位于 /usr/local/share/dotnet/sdk  。
+
+如果是以下情况，则可能需要删除此文件夹：
+
+* 仅使用 .NET Core 3.0 SDK 或更高版本进行开发。
+* 你使用早于 3.0 的 .NET Core SDK 版本进行开发，但可以联机工作，并且操作速度可能会慢一些。
+
+如果要删除 NuGet 回退文件夹，可以将其删除，但需要管理员权限才能执行此操作。
+
+建议不要删除 dotnet  文件夹。 这样做会删除以前安装的所有全局工具。 此外，在 Windows 上：
+
+- 你将中断 Visual Studio 2019 版本 16.3 及更高版本。 可以运行“修复”  来恢复。
+- 如果“添加/删除程序”  对话框中存在 .NET Core SDK 条目，它们将是孤立的。

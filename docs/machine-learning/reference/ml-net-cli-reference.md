@@ -1,89 +1,65 @@
 ---
-title: ML.NET CLI 工具中的 auto-train 命令
+title: ML.NET CLI 命令参考
 description: ML.NET CLI 工具中 auto-train 命令的概述、示例和参考。
-ms.date: 04/16/2019
-ms.custom: ''
-ms.openlocfilehash: 8363a16ab5e793e715131ac37283106517850439
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.date: 12/18/2019
+ms.openlocfilehash: 5e59eba91721b26622360818a73adb07a654dc28
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929200"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636115"
 ---
-# <a name="the-auto-train-command-in-mlnet-cli"></a>ML.NET CLI 中的“auto-train”命令
+# <a name="the-mlnet-cli-command-reference"></a>ML.NET CLI 命令参考
+
+`auto-train` 命令是 ML.NET CLI 工具提供的主要命令。 该命令允许使用自动化机器学习 (AutoML) 生成高质量的 ML.NET 模型以及用于运行该模型/对该模型评分的示例 C# 代码。 此外，还会生成用于训练模型的 C# 代码，以便你可以研究模型的算法和设置。
 
 > [!NOTE]
 > 本主题涉及目前处于预览状态的 ML.NET CLI 和 ML.NET AutoML，且材料可能会有所变化。
 
-`auto-train` 命令是 ML.NET CLI 工具提供的主要命令。 该命令允许生成高质量的 ML.NET 模型（序列化模型 .zip 文件）以及用于运行该模型/对该模型评分的示例 C# 代码。 此外，还会生成用于创建/训练该模型的 C# 代码，以便研究用于该生成的“最佳模型”的算法和设置。
+## <a name="overview"></a>概述
 
-可以从自己的数据集生成这些资产而无需自行编码，因此，即使已经了解 ML.NET，它也可以提高工作效率。
-
-目前，ML.NET CLI 支持的 ML 任务包括：
-
-- `binary-classification`
-- `multiclass-classification`
-- `regression`
-
-- 未来：其他机器学习任务，例如
-  - `recommendation`
-  - `anomaly-detection`
-  - `clustering`
-
-命令提示符上的用法示例：
+示例用法：
 
 ```console
-> mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
+mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
 ```
 
 `mlnet auto-train` 命令生成以下资产：
 
 - 可供使用的序列化模型 .zip 文件（“最佳模型”）。
-- 用于运行生成的模型/对生成的模型评分的 C# 代码（使用该模型在最终用户应用中进行预测）。
-- C# 代码，其中包含用于生成该模型的训练代码（学习目的）。
+- 用于运行生成的模型和对其进行评分的 C# 代码。
+- 包含用于生成该模型的训练代码的 C# 代码。
 
-前两个资产可以直接用于最终用户应用（ASP.NET Core Web 应用、服务、桌面应用等），以使用生成的 ML 模型进行预测。
+前两个资产可以直接用于最终用户应用（ASP.NET Core Web 应用、服务、桌面应用等），以使用模型进行预测。
 
-第三个资产（训练代码）显示 CLI 用于训练生成的模型的 ML.NET API 代码，因此可以研究 CLI 和 ML.NET AutoML 引擎选择的特定训练程序/算法和超参数。
-
-## <a name="the-auto-train-command-uses-the-automl-engine"></a>“auto-train”命令使用 AutoML 引擎
-
-CLI 使用 ML.NET AutoML 引擎（NuGet 包）智能搜索最佳质量模型，如以下关系图所示：
-
-![图像](./media/ml-net-automl-working-diagram.png "在 ML.NET CLI 内部工作的 AutoML 引擎")
-
-使用 `auto-train- 命令运行 ML.NET CLI 工具时，将看到该工具尝试使用不同的算法和配置组合进行多次迭代。
-
-## <a name="reference-for-auto-train-command"></a>“auto-train”命令参考
+第三个资产（训练代码）显示 CLI 用于训练生成的模型的 ML.NET API 代码，因此可以研究模型的特定算法和设置。
 
 ## <a name="examples"></a>示例
 
-用于二元分类问题的最简单的 CLI 命令（AutoML 将需要从提供的数据中推断出大部分配置）：
+用于二元分类问题的最简单的 CLI 命令（AutoML 从提供的数据中推断出大部分配置）：
 
 ```console
-> mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
 ```
 
 另一个用于回归问题的简单 CLI 命令：
 
 ``` console
-> mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
+mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
 ```
 
 使用训练数据集、测试数据集和进一步的自定义显式参数创建和训练二元分类模型：
 
 ```console
-> mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
+mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
 ```
 
-## <a name="name"></a>name
+## <a name="command-options"></a>命令选项
 
-`mlnet auto-train` - 根据提供的数据集训练多个模型（“n”次迭代）并最终选择最佳模型，然后将其作为序列化 .zip 文件保存，并生成相关 C# 代码用于评分和训练。
-
-## <a name="synopsis"></a>摘要
+`mlnet auto-train` 根据提供的数据集训练多个模型并最终选择最佳模型，然后将其作为序列化 .zip 文件保存，并生成相关 C# 代码用于评分和训练。
 
 ```console
-> mlnet auto-train
+mlnet auto-train
 
 --task | --mltask | -T <value>
 
@@ -116,11 +92,9 @@ CLI 使用 ML.NET AutoML 引擎（NuGet 包）智能搜索最佳质量模型，�
 
 ```
 
-无效的输入选项应该使 CLI 工具发出有效输入的列表和说明缺少的参数的错误消息（如果缺少参数）。
+无效输入选项会导致 CLI 工具发出有效输入和错误消息列表。
 
-## <a name="options"></a>选项
-
- ----------------------------------------------------------
+## <a name="task"></a>任务
 
 `--task | --mltask | -T`（字符串）
 
@@ -130,11 +104,9 @@ CLI 使用 ML.NET AutoML 引擎（NuGet 包）智能搜索最佳质量模型，�
 - `binary-classification` - 如果 ML 模型结果有两个可能的分类布尔值（0 或 1），则选择。
 - `multiclass-classification` - 如果 ML 模型结果有多个分类可能值，则选择。
 
-在未来的版本中，将支持其他 ML 任务和方案，例如 `recommendations`、`clustering` 和 `ranking`。
+仅应在此参数中提供一个 ML 任务。
 
- 仅应在此参数中提供一个 ML 任务。
-
- ----------------------------------------------------------
+## <a name="dataset"></a>数据集
 
 `--dataset | -d`（字符串）
 
@@ -144,7 +116,7 @@ CLI 使用 ML.NET AutoML 引擎（NuGet 包）智能搜索最佳质量模型，�
 
 - *B：训练数据集文件：* 如果用户还提供用于模型验证的数据集（使用 `--test-dataset` 和可选的 `--validation-dataset`），则 `--dataset` 参数意味着仅拥有“训练数据集”。 例如，当使用 80%-20% 方法来验证模型的质量以及获取准确性指标时，“训练数据集”将拥有 80% 的数据，而“测试数据集”将拥有 20% 的数据。
 
-----------------------------------------------------------
+## <a name="test-dataset"></a>测试数据集
 
 `--test-dataset | -t`（字符串）
 
@@ -154,7 +126,7 @@ CLI 使用 ML.NET AutoML 引擎（NuGet 包）智能搜索最佳质量模型，�
 
 除非使用 --validation-dataset，否则 `--test-dataset` 参数是可选的。 在这种情况下，用户必须使用三个参数。
 
-----------------------------------------------------------
+## <a name="validation-dataset"></a>验证数据集
 
 `--validation-dataset | -v`（字符串）
 
@@ -173,7 +145,7 @@ CLI 使用 ML.NET AutoML 引擎（NuGet 包）智能搜索最佳质量模型，�
 1. 在第一部分中，只需查看模型并使用验证数据选择性能最佳的方法即可（= 验证）
 2. 然后，估算选定方法的准确性（= 测试）。
 
-因此，数据分离可以是 80/10/10 或 75/15/10。 例如:
+因此，数据分离可以是 80/10/10 或 75/15/10。 例如：
 
 - `training-dataset` 文件应拥有 75% 的数据。
 - `validation-dataset` 文件应拥有 15% 的数据。
@@ -181,7 +153,7 @@ CLI 使用 ML.NET AutoML 引擎（NuGet 包）智能搜索最佳质量模型，�
 
 在任何情况下，这些百分比都将由使用 CLI 的用户决定，用户将提供已经拆分的文件。
 
-----------------------------------------------------------
+## <a name="label-column-name"></a>标签列名称
 
 `--label-column-name | -n`（字符串）
 
@@ -189,7 +161,7 @@ CLI 使用 ML.NET AutoML 引擎（NuGet 包）智能搜索最佳质量模型，�
 
 此参数仅用于受监管的 ML 任务，例如*分类问题*。 它不能用于不受监管的 ML 任务，例如*聚类分析*。
 
-----------------------------------------------------------
+## <a name="label-column-index"></a>标签列索引
 
 `--label-column-index | -i`（整数）
 
@@ -199,7 +171,7 @@ CLI 使用 ML.NET AutoML 引擎（NuGet 包）智能搜索最佳质量模型，�
 
 此参数仅用于受监管的 ML 任务，例如*分类问题*。 它不能用于不受监管的 ML 任务，例如*聚类分析*。
 
-----------------------------------------------------------
+## <a name="ignore-columns"></a>忽略列
 
 `--ignore-columns | -I`（字符串）
 
@@ -211,7 +183,7 @@ CLI 使用 ML.NET AutoML 引擎（NuGet 包）智能搜索最佳质量模型，�
 
 `--ignore-columns email, address, id, logged_in`
 
-----------------------------------------------------------
+## <a name="has-header"></a>具有标头
 
 `--has-header | -h`（布尔值）
 
@@ -225,7 +197,7 @@ CLI 使用 ML.NET AutoML 引擎（NuGet 包）智能搜索最佳质量模型，�
 
 若要使用 `--label-column-name` 参数，需要在数据集文件中包含标头，并将 `--has-header` 设置为 `true`（默认值）。
 
-----------------------------------------------------------
+## <a name="max-exploration-time"></a>最长探索时间
 
 `--max-exploration-time | -x`（字符串）
 
@@ -235,7 +207,7 @@ CLI 使用 ML.NET AutoML 引擎（NuGet 包）智能搜索最佳质量模型，�
 
 迭代所需的时间可能因数据集的大小而异。
 
-----------------------------------------------------------
+## <a name="cache"></a>缓存
 
 `--cache | -c`（字符串）
 
@@ -253,7 +225,7 @@ CLI 使用 ML.NET AutoML 引擎（NuGet 包）智能搜索最佳质量模型，�
 
 如果未指定 `--cache` 参数，则默认情况下将使用缓存 `auto` 配置。
 
-----------------------------------------------------------
+## <a name="name"></a>“属性”
 
 `--name | -N`（字符串）
 
@@ -261,13 +233,13 @@ CLI 使用 ML.NET AutoML 引擎（NuGet 包）智能搜索最佳质量模型，�
 
 ML.NET 模型文件（.zip 文件）也将获得相同的名称。
 
-----------------------------------------------------------
+## <a name="output-path"></a>输出路径
 
 `--output-path | -o`（字符串）
 
 用于放置生成的输出的根位置/文件夹。 默认为当前目录。
 
-----------------------------------------------------------
+## <a name="verbosity"></a>详细级别
 
 `--verbosity | -V`（字符串）
 
@@ -281,17 +253,15 @@ ML.NET 模型文件（.zip 文件）也将获得相同的名称。
 
 默认情况下，CLI 工具应在运行时应显示一些最低限度的反馈（最小值），例如提及它正在运行以及剩余多少时间或已完成时间的百分比（如果可能）。
 
-----------------------------------------------------------
+## <a name="help"></a>帮助
 
 `-h|--help`
 
 打印命令帮助，其中包含对每个命令的参数的描述。
 
-----------------------------------------------------------
-
 ## <a name="see-also"></a>请参阅
 
 - [如何安装 ML.NET CLI 工具](../how-to-guides/install-ml-net-cli.md)
-- [使用 ML.NET CLI 自动进行模型训练](../automate-training-with-cli.md)
-- [教程：使用 ML.NET CLI 自动生成二元分类器](../tutorials/mlnet-cli.md)
+- [ML.NET CLI 概述](../automate-training-with-cli.md)
+- [教程：使用 ML.NET CLI 分析情绪](../tutorials/sentiment-analysis-cli.md)
 - [ML.NET CLI 中的遥测](../resources/ml-net-cli-telemetry.md)

@@ -3,25 +3,24 @@ title: 使用跨平台工具开发库
 description: 了解如何使用 .NET Core CLI 工具创建 .NET Core 库。 将创建一个支持多个框架的库。
 author: cartermp
 ms.date: 05/01/2017
-ms.custom: seodec18
-ms.openlocfilehash: dcd454f0bd1739597fc27dccf2849fc259767292
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4132113037e6c5ec555d2d1859b8217a1a53d07f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420462"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714030"
 ---
-# <a name="developing-libraries-with-cross-platform-tools"></a>使用跨平台工具开发库
+# <a name="develop-libraries-with-cross-platform-tools"></a>使用跨平台工具开发库
 
 本文介绍如何使用跨平台 CLI 工具编写 .NET 的库。 CLI 提供可跨任何支持的 OS 工作的高效低级别体验。 仍可使用 Visual Studio 生成库，如果你首选这种体验，请[参阅 Visual Studio 指南](library-with-visual-studio.md)。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 需要在计算机上安装 [.NET Core SDK 和 CLI](https://dotnet.microsoft.com/download) 。
 
 对于本文档中处理 .NET Framework 版本的部分，需要在 Windows 计算机上安装 [.NET Framework](https://dotnet.microsoft.com)。
 
-此外，如果想要支持较旧的 .NET Framework 目标，需要从 [.NET 下载存档页](https://dotnet.microsoft.com/download/archives)安装用于较旧 Framework 版本的目标包/开发人员工具包。 请参阅此表：
+此外，如果想要支持较旧的 .NET Framework 目标，需要从 [.NET 下载存档页](https://dotnet.microsoft.com/download/archives)安装目标包或开发人员工具包。 请参阅此表：
 
 | .NET Framework 版本 | 下载内容                                       |
 | ---------------------- | ------------------------------------------------------ |
@@ -35,7 +34,7 @@ ms.locfileid: "73420462"
 
 ## <a name="how-to-target-the-net-standard"></a>如何以 .NET Standard 为目标
 
-如果对 .NET Standard 不是很熟悉，请参阅 [.NET Standard](../../standard/net-standard.md) 了解详细信息。
+如果不熟悉 .NET Standard，请参阅 [.NET Standard](../../standard/net-standard.md) 了解详细信息。
 
 在该文中，提供有一个将 .NET Standard 版本映射到各种实现的表格：
 
@@ -47,7 +46,7 @@ ms.locfileid: "73420462"
 
 面向 .NET Standard 时，有三种主要选项，具体取决于你的需求。
 
-1. 可使用 .NET Standard 的默认版本，该版本由 `netstandard1.4` 模板提供，可提供对 .NET Standard 上大多数 API 的访问权限，同时仍与 UWP、.NET Framework 4.6.1 和即将推出的 .NET Standard 2.0 兼容。
+1. 可使用 .NET Standard 的默认版本，该版本由 `netstandard1.4` 模板提供，可提供对 .NET Standard 上大多数 API 的访问权限，同时仍与 UWP、.NET Framework 4.6.1 和 .NET Standard 2.0 兼容。
 
     ```xml
     <Project Sdk="Microsoft.NET.Sdk">
@@ -59,18 +58,18 @@ ms.locfileid: "73420462"
 
 2. 可通过修改项目文件 `TargetFramework` 节点中的值来使用更低或更高版本的 .NET Standard。
 
-    .NET Standard 版本可后向兼容。 这意味着 `netstandard1.0` 库可在 `netstandard1.1` 平台以及更高版本上运行。 但是，不可向前兼容，即版本较低的 .NET Standard 平台无法引用版本较高的平台。 这意味着 `netstandard1.0` 库不能引用面向 `netstandard1.1` 或更高版本的库。 选择适合所需、恰当混合有 API 和平台支持的 Standard 版本。 目前，我们建议 `netstandard1.4`。
+    .NET Standard 版本可后向兼容。 这意味着 `netstandard1.0` 库可在 `netstandard1.1` 平台以及更高版本上运行。 但是，没有向前兼容性。 低版本的 .NET Standard 平台无法引用较高版本的平台。 这意味着 `netstandard1.0` 库不能引用面向 `netstandard1.1` 或更高版本的库。 选择适合所需、恰当混合有 API 和平台支持的 Standard 版本。 目前，我们建议 `netstandard1.4`。
 
 3. 如果希望面向 .NET Framework 版本 4.0 或更低版本，或者要使用 .NET Framework 中提供但 .NET Standard 中不提供的 API（例如 `System.Drawing`），请阅读以下部分，了解如何设定多目标。
 
-## <a name="how-to-target-the-net-framework"></a>如何以 .NET Framework 为目标
+## <a name="how-to-target-net-framework"></a>如何面向 .NET framework
 
 > [!NOTE]
 > 这些说明假定计算机上安装有 .NET Framework。 请参阅[先决条件](#prerequisites) 获取安装的依赖项。
 
 请记住，此处使用的某些 .NET Framework 版本不再受支持。 有关不受支持的版本信息，请参阅 [.NET Framework 支持生命周期策略常见问题](https://support.microsoft.com/gp/framework_faq/en-us)。
 
-如果要达到最大数量的开发人员和项目，可将 .NET Framework 4.0 用作基线目标。 若要以 .NET Framework 为目标，首先需要使用与要支持的 .NET Framework 版本相对应的正确目标框架名字对象 (TFM)。
+如果要达到最大数量的开发人员和项目，可将 .NET Framework 4.0 用作基线目标。 若要以 .NET Framework 为目标，首先使用与要支持的 .NET Framework 版本相对应的正确目标框架名字对象 (TFM)。
 
 | .NET Framework 版本 | TFM      |
 | ---------------------- | -------- |
@@ -87,7 +86,7 @@ ms.locfileid: "73420462"
 | .NET Framework 4.7     | `net47`  |
 | .NET Framework 4.8     | `net48`  |
 
-然后将此 TFM 插入项目文件的 `TargetFramework` 部分。 例如，以下是如何编写面向 .NET Framework 4.0 的库：
+然后将此 TFM 插入项目文件的 `TargetFramework` 部分。 例如，下面展示了如何编写面向 .NET Framework 4.0 的库：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -269,7 +268,7 @@ netstandard1.4/
 
 对于较大的库，通常需要将功能置于不同项目中。
 
-假设要生成一个可以惯用的 C# 和 F# 使用的库。 这意味着库的使用者可通过对 C# 或 F# 来说很自然的方式来使用它们。 例如，在 C# 中，了能会这样使用库：
+假设要生成一个可以惯用的 C# 和 F# 使用的库。 这意味着库的使用者可通过对 C# 或 F# 来说很自然的方式来使用它。 例如，在 C# 中，了能会这样使用库：
 
 ```csharp
 using AwesomeLibrary.CSharp;
@@ -308,7 +307,7 @@ mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib
 cd ..
 mkdir AwesomeLibrary.CSharp && cd AwesomeLibrary.CSharp && dotnet new classlib
 cd ..
-mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang F#
+mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang "F#"
 cd ..
 dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj
