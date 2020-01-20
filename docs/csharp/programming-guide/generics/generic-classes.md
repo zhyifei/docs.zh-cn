@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 13a1ca2d85be0c61b9d0f09c0c5cb670b49f5625
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1fdfaa833ad32428d341b6f3a61cc7f638036183
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75703216"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937509"
 ---
 # <a name="generic-classes-c-programming-guide"></a>泛型类（C# 编程指南）
 泛型类封装不特定于特定数据类型的操作。 泛型类最常见用法是用于链接列表、哈希表、堆栈、队列和树等集合。 无论存储数据的类型如何，添加项和从集合删除项等操作的执行方式基本相同。  
@@ -70,5 +70,5 @@ ms.locfileid: "75703216"
 - <xref:System.Collections.Generic>
 - [C# 编程指南](../index.md)
 - [泛型](./index.md)
-- [Saving the State of Enumerators](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)（保存枚举器状态）
-- [An Inheritance Puzzle, Part One](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)（继承测验，第一部分）
+- [Saving the State of Enumerators](https://docs.microsoft.com/archive/blogs/wesdyer/saving-the-state-of-enumerators)（保存枚举器状态）
+- [An Inheritance Puzzle, Part One](https://docs.microsoft.com/archive/blogs/ericlippert/an-inheritance-puzzle-part-one)（继承测验，第一部分）

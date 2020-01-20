@@ -8,15 +8,15 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: e96ab3ece6edc36c913a8efc0097ff9c4a1e3c22
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f138f445b8a335c7505e25b34f560c4da40ab2dd
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69607027"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937214"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress（C# 编译器选项）
-通过 -baseaddress 选项可指定加载 DLL 的首选基址  。 若要深入了解何时且为何要使用此选项，请参阅 [Larry Osterman 的网络日志](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/)。  
+通过 -baseaddress 选项可指定加载 DLL 的首选基址  。 若要深入了解何时且为何要使用此选项，请参阅 [Larry Osterman 的网络日志](https://docs.microsoft.com/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system)。  
   
 ## <a name="syntax"></a>语法  
   

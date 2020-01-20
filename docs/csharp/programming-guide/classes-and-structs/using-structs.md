@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: d85b11204eb1f1de3a95efc67054cdffc4c219e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714665"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964747"
 ---
 # <a name="using-structs-c-programming-guide"></a>使用结构（C# 编程指南）
 
@@ -21,7 +21,7 @@ ms.locfileid: "75714665"
 
 使用 [new](../../language-reference/operators/new-operator.md) 运算符创建结构对象时，会创建结构对象且会遵循[构造函数签名](constructors.md#constructor-syntax)来调用相应的构造函数。 与类不同，可以对结构进行实例化，而无需使用 `new` 运算符。 在这种情况下，没有调用任何构造函数，从而提高了分配效率。 但是，字段将保持为未分配状态且必须在在初始化所有字段之后才可使用对象。 这包括无法通过属性获取或设置值。
 
-如果使用无参数构造函数实例化结构对象，则根据成员的[默认值](../../language-reference/keywords/default-values-table.md)分配所有成员。
+如果使用无参数构造函数实例化结构对象，则根据成员的[默认值](../../language-reference/builtin-types/default-values.md)分配所有成员。
 
 为结构编写带有参数的构造函数时，必须显式初始化所有成员，否则一个或多个成员将保持未分配状态，并且无法使用该结构，从而生成编译器错误 [CS0171](../../misc/cs0171.md)。
 
