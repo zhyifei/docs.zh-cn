@@ -55,4 +55,4 @@ ms.locfileid: "75708173"
 
 - [文件和流 I/O](../../../docs/standard/io/index.md)
 - [撰写流](../../../docs/standard/io/composing-streams.md)
-- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [异步文件 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)

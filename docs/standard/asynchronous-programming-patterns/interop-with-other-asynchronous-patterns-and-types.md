@@ -20,7 +20,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123978"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>与其他异步模式和类型互操作
-.NET Framework 1.0 引进了 <xref:System.IAsyncResult> 模式，也称为 [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)或 `Begin/End` 模式。  .NET Framework 2.0 增加了 [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)。  从.NET Framework 4 开始， [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 取代了 APM 和 EAP，但能够轻松构建从早期模式中迁移的例程。  
+.NET Framework 1.0 引进了 <xref:System.IAsyncResult> 模式，也称为 [异步编程模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)或 `Begin/End` 模式。  .NET Framework 2.0 增加了 [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)。  从.NET Framework 4 开始， [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 取代了 APM 和 EAP，但能够轻松构建从早期模式中迁移的例程。  
   
  本主题内容：  
   
@@ -35,7 +35,7 @@ ms.locfileid: "73123978"
   
 <a name="ApmToTap"></a>   
 ### <a name="from-apm-to-tap"></a>从 APM 到 TAP  
- 因为 [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 模式的结构非常合理，而且能够轻松生成包装，将 APM 实现公开为 TAP 实现。 实际上，自 .NET Framework 4 之后的 .NET Framework 就包含采用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法重载形式的帮助器例程来实现这种转换。  
+ 因为 [异步编程模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 模式的结构非常合理，而且能够轻松生成包装，将 APM 实现公开为 TAP 实现。 实际上，自 .NET Framework 4 之后的 .NET Framework 就包含采用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法重载形式的帮助器例程来实现这种转换。  
   
  请考虑 <xref:System.IO.Stream> 类及其 <xref:System.IO.Stream.BeginRead%2A> 和 <xref:System.IO.Stream.EndRead%2A> 方法，它们代表与同步 <xref:System.IO.Stream.Read%2A> 方法对应的 APM：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "73123978"
   
 <a name="EAP"></a>   
 ## <a name="tasks-and-the-event-based-asynchronous-pattern-eap"></a>任务和基于事件的异步模式 (EAP)  
- 包装 [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) 实现比包装 APM 模式更为复杂，因为与 APM 模式相比，EAP 模式的变体更多，结构更少。  为了演示，以下代码包装了 `DownloadStringAsync` 方法。  `DownloadStringAsync` 接受 URI，在下载时引发 `DownloadProgressChanged` 事件，以报告进度的多个统计信息，并在完成时引发 `DownloadStringCompleted` 事件。  最终在指定 URI 中返回一个字符串，其中包含页面内容。  
+ 包装 [基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) 实现比包装 APM 模式更为复杂，因为与 APM 模式相比，EAP 模式的变体更多，结构更少。  为了演示，以下代码包装了 `DownloadStringAsync` 方法。  `DownloadStringAsync` 接受 URI，在下载时引发 `DownloadProgressChanged` 事件，以报告进度的多个统计信息，并在完成时引发 `DownloadStringCompleted` 事件。  最终在指定 URI 中返回一个字符串，其中包含页面内容。  
   
  [!code-csharp[Conceptual.AsyncInterop#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/EAP1.cs#11)]
  [!code-vb[Conceptual.AsyncInterop#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/EAP1.vb#11)]  

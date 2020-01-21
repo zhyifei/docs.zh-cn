@@ -42,7 +42,7 @@ ms.locfileid: "73091593"
 还可以使用 <xref:System.BitConverter?displayProperty=nameWithType> 类对整数值中的单个位进行运算。  
 
 > [!NOTE]  
-> 无符号整数类型不符合 CLS。 有关详细信息，请参阅 [Language Independence and Language-Independent Components](language-independence-and-language-independent-components.md)。
+> 无符号整数类型不符合 CLS。 有关详细信息，请参阅 “[语言独立性和与语言无关的组件](language-independence-and-language-independent-components.md)”。
 
 ## <a name="biginteger"></a>BigInteger
 
@@ -96,4 +96,4 @@ ms.locfileid: "73091593"
 ## <a name="see-also"></a>请参阅
 
 - [应用程序要点](application-essentials.md)
-- [Standard Numeric Format Strings](base-types/standard-numeric-format-strings.md)
+- [标准数字格式字符串](base-types/standard-numeric-format-strings.md)

@@ -100,14 +100,14 @@ ms.locfileid: "75708366"
   
 - 泛型类型可从多数基类中派生，如 <xref:System.MarshalByRefObject> （约束可用于要求泛型类型形参派生自诸如 <xref:System.MarshalByRefObject>的基类）。 不过，.NET Framework 不支持上下文绑定泛型类型。 泛型类型可派生自 <xref:System.ContextBoundObject>，但尝试创建该类型实例会导致 <xref:System.TypeLoadException>。  
   
-- 枚举不能具有泛型类型形参。 枚举偶尔可为泛型（例如，因为它嵌套在被定义使用 Visual Basic、C# 或 C++ 的泛型类型中）。 有关详细信息，请参阅 [Common Type System](../../../docs/standard/base-types/common-type-system.md)中的“枚举”。  
+- 枚举不能具有泛型类型形参。 枚举偶尔可为泛型（例如，因为它嵌套在被定义使用 Visual Basic、C# 或 C++ 的泛型类型中）。 有关详细信息，请参阅 “[常规类型系统](../../../docs/standard/base-types/common-type-system.md)”中的“枚举”。  
   
 - 轻量动态方法不能是泛型。  
   
 - 在 Visual Basic、C# 和 C++ 中，包含在泛型类型中的嵌套类型不能被实例化，除非已将类型分配给所有封闭类型的类型形参。 另一种说法是：在反射中，定义使用这些语言的嵌套类型包括其所有封闭类型的类型形参。 这使封闭类型的类型形参可在嵌套类型的成员定义中使用。 有关详细信息，请参阅 <xref:System.Type.MakeGenericType%2A>中的“嵌套类型”。  
   
     > [!NOTE]
-    > 通过在动态程序集中触发代码或通过使用 [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 定义的嵌套类型不需要包括其封闭类型的类型参数；然而，如果不包括，类型参数就不会在嵌套类的范围内。  
+    > 通过在动态程序集中触发代码或通过使用 [Ilasm.exe (IL 汇编程序)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 定义的嵌套类型不需要包括其封闭类型的类型参数；然而，如果不包括，类型参数就不会在嵌套类的范围内。  
   
      有关详细信息，请参阅 <xref:System.Type.MakeGenericType%2A>中的“嵌套类型”。  
 

@@ -41,7 +41,7 @@ ms.locfileid: "74348936"
 
 - **查找**。 可以查询和修改流中的位置。
 
-有关详细信息，请参阅 [Composing Streams](../../../../standard/io/composing-streams.md)。
+有关详细信息，请参阅 “[撰写流](../../../../standard/io/composing-streams.md)”。
 
 ## <a name="types-of-streams"></a>流的类型
 
@@ -110,5 +110,5 @@ ms.locfileid: "74348936"
 
 - [撰写流](../../../../standard/io/composing-streams.md)
 - [文件和流 I/O](../../../../standard/io/index.md)
-- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [异步文件 I/O](../../../../standard/io/asynchronous-file-i-o.md)
 - [在 .NET Framework 文件 I/O 和文件系统中使用的类 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

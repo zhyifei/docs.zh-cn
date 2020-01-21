@@ -40,7 +40,7 @@ ms.locfileid: "74960385"
 ## <a name="choosing-a-compiler"></a>选择编译器  
  若要获取公共语言运行时 (CLR) 提供的好处，必须使用一个或多个面向运行时的语言编译器，如 Visual Basic、C#、Visual C++、F# 或众多第三方编译器之一，如 Eiffel、Perl 或 COBOL 编译器。  
   
- 因为它是一个多语言的执行环境，运行时支持各种各样的数据类型和语言功能。 你使用的语言编译器确定哪些运行时功能是可用的，并且可以使用这些功能设计你的代码。 编译器（而非运行时）设定代码必须使用的语法。 如果组件必须完全可供以其他语言编写的组件使用，则组件的导出类型必须仅公开 [Language Independence and Language-Independent Components](../../docs/standard/language-independence-and-language-independent-components.md) (CLS) 中包含的语言功能。 可以使用 <xref:System.CLSCompliantAttribute> 属性来确保你的代码符合 CLS。 有关详细信息，请参阅 [Language Independence and Language-Independent Components](../../docs/standard/language-independence-and-language-independent-components.md)。  
+ 因为它是一个多语言的执行环境，运行时支持各种各样的数据类型和语言功能。 你使用的语言编译器确定哪些运行时功能是可用的，并且可以使用这些功能设计你的代码。 编译器（而非运行时）设定代码必须使用的语法。 如果组件必须完全可供以其他语言编写的组件使用，则组件的导出类型必须仅公开 [Language Independence and Language-Independent Components](../../docs/standard/language-independence-and-language-independent-components.md) (CLS) 中包含的语言功能。 可以使用 <xref:System.CLSCompliantAttribute> 属性来确保你的代码符合 CLS。 有关详细信息，请参阅 “[语言独立性和与语言无关的组件](../../docs/standard/language-independence-and-language-independent-components.md)”。  
   
  [返回页首](#introduction)  
   

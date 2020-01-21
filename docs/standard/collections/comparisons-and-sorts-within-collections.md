@@ -48,7 +48,7 @@ ms.locfileid: "75711384"
   
  为了提供显式比较，某些方法接受 **IComparer** 实现作为参数。 例如， <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> 方法接受 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 实现。  
   
- 系统当前的区域性设置可影响集合中的比较和排序。 默认情况下， **Collections** 类中的比较和排序是区分区域性的。 若要忽略区域性设置并因此获得一致的比较和排序结果，请使用具有接受 <xref:System.Globalization.CultureInfo.InvariantCulture%2A> 的成员重载的 <xref:System.Globalization.CultureInfo>。 有关详细信息，请参阅 [Performing Culture-Insensitive String Operations in Collections](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) 和 [Performing Culture-Insensitive String Operations in Arrays](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)。  
+ 系统当前的区域性设置可影响集合中的比较和排序。 默认情况下， **Collections** 类中的比较和排序是区分区域性的。 若要忽略区域性设置并因此获得一致的比较和排序结果，请使用具有接受 <xref:System.Globalization.CultureInfo.InvariantCulture%2A> 的成员重载的 <xref:System.Globalization.CultureInfo>。 有关详细信息，请参阅 “[在集合中执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)” 和 “[在数组中执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)”。  
   
 <a name="BKMK_Equalityandsortexample"></a>   
 ## <a name="equality-and-sort-example"></a>等同性和排序示例  
