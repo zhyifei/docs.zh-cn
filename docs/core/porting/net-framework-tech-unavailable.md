@@ -3,12 +3,12 @@ title: .NET Framework 技术在 .NET Core 上不可用
 description: 了解在 .NET Core 上不可用的 .NET Framework 技术
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: d474b694b80b2f0e74dd2916106016802f7e0c68
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 89871753fef92a30bf2151a618207a73b40bb402
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777302"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936950"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Framework 技术在 .NET Core 上不可用
 
@@ -46,7 +46,6 @@ ms.locfileid: "75777302"
 
 .NET Core 不支持 System.EnterpriseServices (COM+)。
 
-## <a name="next-steps"></a>后续步骤
+## <a name="see-also"></a>请参阅
 
->[!div class="nextstepaction"]
->[分析依赖项](third-party-deps.md)
+- [有关从 .NET Framework 移植到 .NET Core 的概述](../porting/index.md)

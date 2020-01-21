@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 8c2d586a444412abd67198ad7f295e81cb3101fb
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: eb1815f965e86a6f8f709b32f84f879eb03de447
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567324"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115786"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新增功能
 
@@ -74,7 +74,7 @@ C# 8.0 也是该发布的一部分，包含[可为空引用类型](../../csharp/
 </PropertyGroup>
 ```
 
--或-
+\- 或 -
 
 ```dotnetcli
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
@@ -470,7 +470,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 ### <a name="improved-net-core-version-apis"></a>改进的 .NET Core 版本 API
 
-从 .NET Core 3.0 开始，.NET Core 提供的版本 API 现在可以返回你预期的信息。 例如:
+从 .NET Core 3.0 开始，.NET Core 提供的版本 API 现在可以返回你预期的信息。 例如：
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");
@@ -497,9 +497,13 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ### <a name="fast-built-in-json-support"></a>内置的快速 JSON 支持
 
-.NET 用户在很大程度上依赖于 [**Json.NET**](https://www.newtonsoft.com/json) 和其他常用的 JSON 库，它们仍是很好的选择。 **Json.NET** 使用 .NET 字符串作为其基本数据类型，它实际上是 UTF-16。
+.NET 用户在很大程度上依赖于 [Newtonsoft.Json](https://www.newtonsoft.com/json) 和其他常用的 JSON 库，它们仍是很好的选择。 `Newtonsoft.Json` 使用 .NET 字符串作为其基本数据类型，它实际上是 UTF-16。
 
-新的内置 JSON 支持具有高性能、低分配的特点，并基于 `Span<byte>`。 有关 <xref:System.Text.Json> 命名空间和类型的详细信息，请参阅 [.NET 中的 JSON 序列化 - 概述](../../standard/serialization/system-text-json-overview.md)。 有关常见 JSON 序列化方案的教程，请参阅[如何在 .NET 中序列化和反序列化 JSON](../../standard/serialization/system-text-json-how-to.md)。
+新的内置 JSON 支持具有高性能、低分配的特点，并且可用于 UTF-8 编码的 JSON 文本。 有关 <xref:System.Text.Json> 命名空间和类型的详细信息，请参阅以下文章：
+
+* [.NET 中的 JSON 序列化 - 概述](../../standard/serialization/system-text-json-overview.md)
+* [如何在 .NET 中对 JSON 数据进行序列化和反序列化](../../standard/serialization/system-text-json-how-to.md)。
+* [如何从 Newtonsoft.Json 迁移到 System.Text.Json](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
 
 ### <a name="http2-support"></a>HTTP/2 支持
 
@@ -520,4 +524,4 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 ## <a name="next-steps"></a>后续步骤
 
 - [查看 .NET Core 2.2 和 3.0 之间的重大变更。](../compatibility/2.2-3.0.md)
-- [查看 Windows 窗体应用的 .NET Framework 和 .NET Core 3.0 之间的中断性变更。](../porting/winforms-breaking-changes.md)
+- [查看用于 Windows 窗体应用的 .NET Core 3.0 中的中断性变更。](../compatibility/winforms.md#net-core-30)

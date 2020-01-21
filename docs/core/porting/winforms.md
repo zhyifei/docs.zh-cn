@@ -4,12 +4,12 @@ description: 了解如何将 .NET Framework Windows 窗体应用程序移植到 
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.openlocfilehash: 959b506fe23691e160d7e88e0ae61cc71c1f3421
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567277"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116026"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>如何将 Windows 窗体桌面应用程序移植到 .NET Core
 
@@ -17,14 +17,14 @@ ms.locfileid: "74567277"
 
 本文中的各种名称用于标识迁移所用的文件类型。 迁移项目时，你的文件将以不同的名称命名，因此，请自行在心里将它们与下面列出的文件进行匹配：
 
-| 文件 | 说明 |
+| 文件 | 描述 |
 | ---- | ----------- |
 | **MyApps.sln** | 解决方案文件的名称。 |
 | **MyForms.csproj** | 要移植的 .NET Framework Windows 窗体项目的名称。 |
 | **MyFormsCore.csproj** | 创建的新 .NET Core 项目的名称。 |
 | **MyAppCore.exe** | .NET Core Windows 窗体应用程序的可执行文件。 |
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - 适用于要执行的任何设计器工作的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。
 
@@ -106,7 +106,7 @@ SolutionFolder
     └───MyFormsCore.csproj
 ```
 
-需要使用 Visual Studio 或 SolutionFolder 目录中的 .NET Core CLI 将 MyFormsCore.csproj 项目添加到 MyApps.sln    ：
+使用 Visual Studio 或 SolutionFolder 目录中的 .NET Core CLI 将 MyFormsCore.csproj 项目添加到 MyApps.sln    ：
 
 ```dotnetcli
 dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
@@ -188,7 +188,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework.Fonts
 
 借助上一步的示例，详细介绍正在处理的项目和文件。
 
-| 文件 | 说明 |
+| 文件 | 描述 |
 | ---- | ----------- |
 | **MyApps.sln** | 解决方案文件的名称。 |
 | **MyControls.csproj** | 要移植的 .NET Framework Windows 窗体控件项目的名称。 |
@@ -287,7 +287,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.1.0" />
   </ItemGroup>
 ```
 
@@ -299,6 +299,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 ## <a name="next-steps"></a>后续步骤
 
+- 了解[从 .NET Framework 到 .NET Core 的中断性变更](../compatibility/fx-core.md)。
 - 详细了解 [Windows 兼容包][compat-pack]。
 - 观看将 .NET Framework Windows 窗体项目移植到 .NET Core 的[视频](https://www.youtube.com/watch?v=upVQEUc_KwU)。
 

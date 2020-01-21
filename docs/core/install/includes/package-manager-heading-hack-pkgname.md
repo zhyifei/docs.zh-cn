@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7a55641b3673dc4d8d9b328f0de99b7247ca51d4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 47e8e15a64236d8ade2febb1add81fa4e5c030d9
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74998797"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116150"
 ---
 
 添加到包管理器源的包以可改动的格式命名：`{product}-{type}-{version}`。
@@ -31,7 +31,7 @@ ms.locfileid: "74998797"
 ### <a name="examples"></a>示例
 
 - 安装 .NET Core 2.2 SDK：`dotnet-sdk-2.2`
-- 安装 ASP.NET Core 3.0 运行时：`aspnetcore-runtime-3.0`
+- 安装 ASP.NET Core 3.1 运行时：`aspnetcore-runtime-3.1`
 - 安装 .NET Core 2.1 运行时：`dotnet-runtime-2.1`
 
 ### <a name="troubleshoot"></a>疑难解答

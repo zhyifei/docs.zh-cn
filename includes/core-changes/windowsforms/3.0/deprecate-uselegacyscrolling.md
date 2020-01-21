@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 459e7e1f0b5543f069682dadf60668e94b472377
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 80fc75d0736e2ae17699073a025e79b52b340613
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643861"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937095"
 ---
-### <a name="switchsystemwindowsformsdomainupdownuselegacyscrolling-compatibility-switch-not-supported"></a>不支持 Switch.System.Windows.Forms.DomainUpDown.UseLegacyScrolling 兼容性开关
+### <a name="domainupdownuselegacyscrolling-compatibility-switch-not-supported"></a>不支持 DomainUpDown.UseLegacyScrolling 兼容性开关
 
 已在 .NET Framework 4.7.1 中引入 `Switch.System.Windows.Forms.DomainUpDown.UseLegacyScrolling` 兼容性开关，但它在 .NET Core 3.0 上的 Windows 窗体中尚不受支持。
 
@@ -20,7 +20,7 @@ ms.locfileid: "74643861"
 
 3.0 预览版 9
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 删除此开关。 此开关不受支持，且未提供替代功能。
 

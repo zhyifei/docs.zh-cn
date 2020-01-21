@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 07527c247e6ccd53d2a77793946ffc796c3e1cbb
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 3eab49acd3eaa5b6d5802af5f4e6f0fe2699ee97
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643915"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937094"
 ---
-### <a name="switchsystemwindowsformsuselegacyimages-compatibility-switch-not-supported"></a>不支持 Switch.System.Windows.Forms.UseLegacyImages 兼容性开关
+### <a name="uselegacyimages-compatibility-switch-not-supported"></a>不支持 UseLegacyImages 兼容性开关
 
 已在 .NET Framework 4.8 中引入 `Switch.System.Windows.Forms.UseLegacyImages` 兼容性开关，但它在 .NET Core 3.0 上的 Windows 窗体中尚不受支持。
 
@@ -20,7 +20,7 @@ ms.locfileid: "74643915"
 
 3.0 预览版 9
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 删除此开关。 此开关不受支持，且未提供替代功能。
 
@@ -30,7 +30,7 @@ Windows 窗体
 
 #### <a name="affected-apis"></a>受影响的 API
 
-- 无
+- None
 
 <!-- 
 
