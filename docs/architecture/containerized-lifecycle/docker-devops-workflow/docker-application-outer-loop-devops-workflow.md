@@ -2,12 +2,12 @@
 title: Docker 应用程序的外部循环 DevOps 工作流步骤
 description: 了解 DevOps 工作流的“外部循环”步骤
 ms.date: 02/15/2019
-ms.openlocfilehash: 7c465ab380770441005f7365f53bc585236c31bd
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 735f92c00cd6279649ec3b0c35cfb00543f21a8c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738356"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936785"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 应用程序的外部循环 DevOps 工作流步骤
 
@@ -91,7 +91,7 @@ Visual Studio Azure DevOps Services 包含可在 CI/CD 管道中使用的生成�
 >   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
 >
 > - 使用 Azure DevOps Services 生成 .NET Core Linux Docker 映像：\
->   <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
+>   <https://docs.microsoft.com/archive/blogs/stevelasker/building-net-core-linux-docker-images-with-visual-studio-team-services>
 >
 > - 使用 Docker 支持生成基于 Linux 的 Visual Studio Team Service 生成计算机：\
 >   <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>

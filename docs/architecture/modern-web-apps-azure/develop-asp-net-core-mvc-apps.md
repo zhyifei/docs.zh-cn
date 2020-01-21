@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 开�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: efb57b4290825be9f21c61c8dee5af073d264d3a
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 7bc30db084f361e6c4654b89e69230b379b0136c
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899694"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116533"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>开发 ASP.NET Core MVC 应用
 
@@ -32,9 +32,9 @@ Razor Page 的页面模型结合了 MVC 控制器和视图模型的职责。 不
 
 ### <a name="when-to-use-mvc"></a>何时使用 MVC
 
-如果正在构建 Web API，则 MVC 模式比尝试使用 Razor Pages 更有意义。 如果项目只公开 Web API 终结点，那么最好从 Web API 项目模板开始，否则很容易向任何 ASP.NET Core 应用添加控制器和相关的 API 终结点。 如果要将现有应用程序从 ASP.NET MVC 5 或更早版本迁移到 ASP.NET Core MVC，并且希望以最少的工作量完成此操作，则还应使用基于视图的 MVC 方法。 完成初始迁移后，可以评估针对新功能甚至批量迁移采用 Razor Pages 是否有意义。
+如果正在构建 Web API，则 MVC 模式比尝试使用 Razor Pages 更有意义。 如果项目将只公开 Web API 终结点，则最好从 Web API 项目模板开始。 否则，很容易将控制器和关联的 API 终结点添加到任何 ASP.NET Core 应用中。 如果要将现有应用程序从 ASP.NET MVC 5 或更早版本迁移到 ASP.NET Core MVC，并且需要以最少的工作量完成此操作，可使用基于视图的 MVC 方法。 完成初始迁移后，可以评估针对新功能甚至批量迁移采用 Razor Pages 是否有意义。
 
-无论选择使用 Razor Pages 还是 MVC 视图构建 web 应用，应用都将具有类似的性能，并将包括对依赖项注入、筛选器、模型绑定和验证等的支持。
+无论是选择使用 Razor Pages 还是 MVC 视图生成 Web 应用，应用都将具有类似的性能，并且都支持依赖项注入、筛选器、模型绑定、验证等。
 
 ## <a name="mapping-requests-to-responses"></a>将请求映射到响应
 
@@ -540,7 +540,7 @@ DDD 还建议使用之前介绍过的整洁架构，以实现松散耦合、封�
 
 ### <a name="when-should-you-apply-ddd"></a>该何时使用 DDD
 
-DDD 非常适合业务（不仅仅是技术）非常复杂的大型应用程序。 这种应用程序需要域专家的知识。 领域模型本身应包含有某种意义的行为，应体现出业务规则和交互，而不仅仅是存储和检索数据存储中各种记录的当前状态。
+DDD 非常适合业务（不仅仅是技术）非常复杂的大型应用程序。 这种应用程序需要借助领域专家的知识。 领域模型本身应包含有某种意义的行为，应体现出业务规则和交互，而不仅仅是存储和检索数据存储中各种记录的当前状态。
 
 ### <a name="when-shouldnt-you-apply-ddd"></a>何时不该使用 DDD
 

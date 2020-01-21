@@ -158,7 +158,7 @@ Public Async Sub ProcessWriteMult()
 End Sub  
 ```  
   
- 当使用 <xref:System.IO.Stream.WriteAsync%2A> 和 <xref:System.IO.Stream.ReadAsync%2A> 方法时，可以指定可用于取消操作中间流的 <xref:System.Threading.CancellationToken>。 有关详细信息，请参阅[在托管线程中](../../../../standard/threading/cancellation-in-managed-threads.md)[微调异步应用程序（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)和取消。  
+ 当使用 <xref:System.IO.Stream.WriteAsync%2A> 和 <xref:System.IO.Stream.ReadAsync%2A> 方法时，可以指定可用于取消操作中间流的 <xref:System.Threading.CancellationToken>。 有关详细信息，请参“[阅微调异步应用程序 (C#)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)”和 “[托管线程中的取消](../../../../standard/threading/cancellation-in-managed-threads.md)”。  
   
 ## <a name="see-also"></a>另请参阅
 

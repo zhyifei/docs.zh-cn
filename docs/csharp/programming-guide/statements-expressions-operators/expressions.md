@@ -76,7 +76,7 @@ DoWork();
   
 ## <a name="expression-body-definitions"></a>表达式主体定义
 
-C# 支持“Expression-Bodied 成员”  ，这允许为方法、构造函数、终结器、属性和索引器提供简洁的表达式主体定义。 有关详细信息，请参阅 [Expression-bodied members](expression-bodied-members.md)（Expression-bodied 成员）。
+C# 支持“Expression-Bodied 成员”  ，这允许为方法、构造函数、终结器、属性和索引器提供简洁的表达式主体定义。 有关详细信息，请参阅 “[Expression-bodied 成员](expression-bodied-members.md)”。
 
 ## <a name="remarks"></a>备注
 

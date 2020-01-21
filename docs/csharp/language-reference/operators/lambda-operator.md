@@ -63,7 +63,7 @@ public override string ToString()
 
 自 C#6 起，支持方法、运算符和只读属性的表达式主体定义。 自 C# 7.0 起，支持构造函数、终结器、属性和索引器访问器的表达式主体定义。
 
-有关详细信息，请参阅 [Expression-bodied members](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)（Expression-bodied 成员）。
+有关详细信息，请参阅 “[Expression-bodied 成员](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)”。
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 

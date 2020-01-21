@@ -23,7 +23,7 @@ ms.locfileid: "74348200"
 
 对于 .NET Core 程序集，以及对于不在全局程序集缓存中的 .NET Framework 程序集，可以通过多种方式获取完全限定的程序集名称：
 
-- 可使用代码将信息输出到控制台或变量，或者使用 [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) 检查程序集的元数据（其中包含了完全限定名）。
+- 可使用代码将信息输出到控制台或变量，或者使用 [Ildasm.exe (IL 反汇编程序)](../../framework/tools/ildasm-exe-il-disassembler.md) 检查程序集的元数据（其中包含了完全限定名）。
 
 - 如果应用程序已加载程序集，则可检索 <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> 属性的值在以获取完全限定名。 可以使用该程序集中定义的 <xref:System.Type> 的 <xref:System.Type.Assembly> 属性来检索对 <xref:System.Reflection.Assembly> 对象的引用。 说明如示例所示。
 

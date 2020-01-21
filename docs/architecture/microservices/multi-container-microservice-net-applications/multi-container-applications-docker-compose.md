@@ -2,12 +2,12 @@
 title: 使用 docker-compose.yml 定义多容器应用程序
 description: 如何使用 docker-compose.yml 指定多容器应用程序的微服务组合。
 ms.date: 10/02/2018
-ms.openlocfilehash: 02db27feb1320d8b9c6823b8f9ef51c2ddf9791c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: f9cab35ac8e11ca89a83f646c29bf72f84e66ef4
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737075"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116550"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定义多容器应用程序
 
@@ -84,7 +84,7 @@ services:
 
 此文件中的根密钥是服务。 在该密钥下，可在执行 `docker-compose up` 命令或使用此 docker-compose.yml 文件从 Visual Studio 进行部署时，定义要部署和运行的服务。 在这种情况下，docker-compose.yml 文件定义了多个服务，如以下表所述。
 
-| 服务名称 | 说明 |
+| 服务名称 | 描述 |
 |--------------|-------------|
 | webmvc       | 容器，包括从服务器端 C\# 使用微服务的 ASP.NET Core MVC 应用程序|
 | catalog.api  | 容器，包括 Catalog ASP.NET Core Web API 微服务 |
@@ -129,7 +129,7 @@ services:
 
 - 它将 Web 服务链接到 sql.data 服务（在容器中运行的 Linux 数据库的 SQL Server 实例）。 指定此依赖项时，在 sql.data 容器启动后，catalog.api 容器才会启动；这一点很重要，因为 catalog.api 需要先启动并运行 SQL Server 数据库。 但是，在许多情况下，这种容器依赖项不足，因为 Docker 只能在容器级别进行检查。 有时服务（在此情况下为 SQL Server）可能还未准备就绪，因此建议在客户端微服务中实施具有指数回退的重试逻辑。 这样一来，如果依赖项容器在短时间内未准备就绪，应用程序仍然可以复原。
 
-- 它被配置为允许访问外部服务器：extra\_hosts 设置允许访问 Docker 主机之外的外部服务器或计算机（即作为开发 Docker 主机的默认 Linux VM 以外的），例如开发计算机上的本地 SQL Server 实例。
+- 它被配置为允许访问外部服务器：extra\_hosts 设置允许访问 Docker 主机之外的外部服务器或计算机（即作为开发 Docker 主机的默认 Linux VM 以外的），例如开发 PC 上的本地 SQL Server 实例。
 
 此外，还有其他更高级的 docker-compose.yml 设置，我们将在下面的部分介绍。
 
@@ -390,7 +390,7 @@ services:
 
 运行 `docker-compose up`（或从 Visual Studio 启动它时）时，该命令会自动读取替代内容，就像它已合并这两个文件。
 
-假设想为生产环境使用具有不同配置值、端口或连接字符串的另一个 Compose 文件。 可创建另一个重写文件，如具有不同设置和环境变量的名为 `docker-compose.prod.yml` 的文件。 该文件可能存储在不同 Git 存储库中，或由其他团队管理和保护。
+假设需要为生产环境使用具有不同配置值、端口或连接字符串的另一个 Compose 文件。 可创建另一个重写文件，如具有不同设置和环境变量的名为 `docker-compose.prod.yml` 的文件。 该文件可能存储在不同 Git 存储库中，或由其他团队管理和保护。
 
 #### <a name="how-to-deploy-with-a-specific-override-file"></a>如何使用特定重写文件进行部署
 
@@ -422,7 +422,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 
 Docker-compose 要求 .env 文件中的每行都是 \<variable\>=\<value\> 格式。
 
-请注意，运行时环境中设置的值始终会重写 .env 文件中定义的值。 同样，通过命令行命令参数传递的值也会重写 .env 文件中设置的默认值。
+运行时环境中设置的值始终会重写 .env 文件中定义的值。 同样，通过命令行参数传递的值也会重写 .env 文件中设置的默认值。
 
 #### <a name="additional-resources"></a>其他资源
 
@@ -470,7 +470,7 @@ ENTRYPOINT ["dotnet", "run"]
 #### <a name="additional-resources"></a>其他资源
 
 - **Building Optimized Docker Images with ASP.NET Core**（使用 ASP.NET Core 生成优化的 Docker 映像）  
-  <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
+  <https://docs.microsoft.com/archive/blogs/stevelasker/building-optimized-docker-images-with-asp-net-core>
 
 - **为 .NET Core 应用程序生成 Docker 映像**  
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)

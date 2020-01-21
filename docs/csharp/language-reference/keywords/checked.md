@@ -45,5 +45,5 @@ ms.locfileid: "75713708"
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](./index.md)
-- [Checked and Unchecked](./checked-and-unchecked.md)
+- [Checked 和 Unchecked](./checked-and-unchecked.md)
 - [unchecked](./unchecked.md)

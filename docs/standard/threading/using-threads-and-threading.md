@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 863fa565f7c107214273912a6d110b7664bffe6b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131501"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936844"
 ---
 # <a name="using-threads-and-threading"></a>使用线程和线程处理
 
@@ -28,11 +28,13 @@ ms.locfileid: "73131501"
 
 ## <a name="how-to-stop-a-thread"></a>如何：停止线程
 
-要终止执行线程，请使用 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法。 该方法在调用它的线程上引发 <xref:System.Threading.ThreadAbortException>。 有关详细信息，请参阅[销毁线程](destroying-threads.md)。
+要终止执行线程，请使用 <xref:System.Threading.CancellationToken?displayProperty=nameWithType>。 它提供一种统一的方法以协作方式停止线程。 有关详细信息，请参阅[托管线程中的取消](cancellation-in-managed-threads.md)。
 
-从 .NET Framework 4 开始，可使用 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 以协作方式取消线程。 有关详细信息，请参阅[托管线程中的取消](cancellation-in-managed-threads.md)。
+有时无法以协作方式停止线程，因为它运行的第三方代码不是为协作取消而设计的。 在这种情况下，可能需要强制终止其执行。 若要强制终止线程的执行，可以在 .NET Framework 中使用 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法。 该方法在调用它的线程上引发 <xref:System.Threading.ThreadAbortException>。 有关详细信息，请参阅[销毁线程](destroying-threads.md)。 .NET Core 中不支持 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法。 如果需要在 .NET Core 中强制终止第三方代码的执行，请在单独的进程中运行该代码，并使用 <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>。
 
-使用 <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> 方法使调用线程等待调用该方法的线程终止。
+<xref:System.Threading.CancellationToken?displayProperty=nameWithType> 在 .NET Framework 4 之前的版本中不可用。 若要停止较旧 .NET Framework 版本中的线程，应使用线程同步技术手动实现协作取消。 例如，可以创建 volatile 布尔字段 `shouldStop`，并使用它来请求线程执行的代码停止。 有关详细信息，请参阅 C# 参考中的 [volatile](../../csharp/language-reference/keywords/volatile.md) 和 <xref:System.Threading.Volatile?displayProperty=nameWithType>。
+
+使用 <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> 方法使调用线程等待线程终止停止。
 
 ## <a name="how-to-pause-or-interrupt-a-thread"></a>如何：暂停或中断线程
 
@@ -42,7 +44,7 @@ ms.locfileid: "73131501"
 
 下表列出了某些 <xref:System.Threading.Thread> 属性：  
   
-|属性|说明|  
+|Property|描述|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|如果此线程已启动但尚未正常终止或中止，则返回 `true`。|  
 |<xref:System.Threading.Thread.IsBackground%2A>|获取或设置布尔值，该值指示线程是否为后台线程。 后台线程类似前台线程，但后台线程不会阻止进程停止。 属于某个进程的所有前台线程均停止后，公共语言运行时通过对仍处于活动状态的后台进程调用 <xref:System.Threading.Thread.Abort%2A> 方法来结束进程。 有关详细信息，请参阅[前台和后台线程](foreground-and-background-threads.md)。|  

@@ -27,7 +27,7 @@ ms.locfileid: "74445650"
   
  [AssemblyOptions 枚举](assemblyoptions-enumeration.md)  
   
- [CreateALink Function](createalink-function.md)  
+ [CreateALink 函数](createalink-function.md)  
   
  [GetALinkMessageDll 函数](getalinkmessagedll-function.md)  
   

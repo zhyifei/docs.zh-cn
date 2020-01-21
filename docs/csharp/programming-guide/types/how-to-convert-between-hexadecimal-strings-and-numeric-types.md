@@ -54,6 +54,6 @@ ms.locfileid: "75698516"
   
 ## <a name="see-also"></a>请参阅
 
-- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
+- [标准数字格式字符串](../../../standard/base-types/standard-numeric-format-strings.md)
 - [类型](./index.md)
 - [如何确定字符串是否表示数值](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

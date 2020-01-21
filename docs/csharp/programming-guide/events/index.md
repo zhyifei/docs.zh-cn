@@ -29,7 +29,7 @@ ms.locfileid: "75712307"
   
 - 事件通常用于表示用户操作，例如单击按钮或图形用户界面中的菜单选项。  
   
-- 当事件具有多个订户时，引发该事件时会同步调用事件处理程序。 若要异步调用事件，请参阅 [Calling Synchronous Methods Asynchronously](../../../standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)。  
+- 当事件具有多个订户时，引发该事件时会同步调用事件处理程序。 若要异步调用事件，请参阅 “[使用异步方式调用同步方法](../../../standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)”。  
   
 - 在 .NET Framework 类库中，事件基于 <xref:System.EventHandler> 委托和 <xref:System.EventArgs> 基类。  
   

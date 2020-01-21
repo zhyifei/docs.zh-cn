@@ -47,7 +47,7 @@ Console.WriteLine(info);
 - 需要访问程序元数据中的特性时。 有关详细信息，请参阅[检索存储在特性中的信息](../../../standard/attributes/retrieving-information-stored-in-attributes.md)。
 - 检查和实例化程序集中的类型。
 - 在运行时构建新类型。 使用 <xref:System.Reflection.Emit> 中的类。
-- 执行后期绑定，访问在运行时创建的类型上的方法。 请参阅主题 [Dynamically Loading and Using Types](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md)（动态加载和使用类型）。
+- 执行后期绑定，访问在运行时创建的类型上的方法。 请参阅主题 “[动态加载和使用类型](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md)”。
 
 ## <a name="related-sections"></a>相关章节
 
