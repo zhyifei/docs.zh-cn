@@ -1,36 +1,36 @@
 ---
-ms.openlocfilehash: 07527c247e6ccd53d2a77793946ffc796c3e1cbb
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 3eab49acd3eaa5b6d5802af5f4e6f0fe2699ee97
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643915"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937094"
 ---
-### <a name="switchsystemwindowsformsuselegacyimages-compatibility-switch-not-supported"></a><span data-ttu-id="d3b04-101">不支持 Switch.System.Windows.Forms.UseLegacyImages 兼容性开关</span><span class="sxs-lookup"><span data-stu-id="d3b04-101">Switch.System.Windows.Forms.UseLegacyImages compatibility switch not supported</span></span>
+### <a name="uselegacyimages-compatibility-switch-not-supported"></a><span data-ttu-id="e334f-101">不支持 UseLegacyImages 兼容性开关</span><span class="sxs-lookup"><span data-stu-id="e334f-101">UseLegacyImages compatibility switch not supported</span></span>
 
-<span data-ttu-id="d3b04-102">已在 .NET Framework 4.8 中引入 `Switch.System.Windows.Forms.UseLegacyImages` 兼容性开关，但它在 .NET Core 3.0 上的 Windows 窗体中尚不受支持。</span><span class="sxs-lookup"><span data-stu-id="d3b04-102">The `Switch.System.Windows.Forms.UseLegacyImages` compatibility switch, which was introduced in .NET Framework 4.8, is not supported in Windows Forms on .NET Core 3.0.</span></span>
+<span data-ttu-id="e334f-102">已在 .NET Framework 4.8 中引入 `Switch.System.Windows.Forms.UseLegacyImages` 兼容性开关，但它在 .NET Core 3.0 上的 Windows 窗体中尚不受支持。</span><span class="sxs-lookup"><span data-stu-id="e334f-102">The `Switch.System.Windows.Forms.UseLegacyImages` compatibility switch, which was introduced in .NET Framework 4.8, is not supported in Windows Forms on .NET Core 3.0.</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="d3b04-103">更改描述</span><span class="sxs-lookup"><span data-stu-id="d3b04-103">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="e334f-103">更改描述</span><span class="sxs-lookup"><span data-stu-id="e334f-103">Change description</span></span>
 
-<span data-ttu-id="d3b04-104">自 .NET Framework 4.8 起，`Switch.System.Windows.Forms.UseLegacyImages` 兼容性开关会处理高 DPI 环境中 ClickOnce 方案内可能出现的图像缩放问题。</span><span class="sxs-lookup"><span data-stu-id="d3b04-104">Starting with the .NET Framework 4.8, the `Switch.System.Windows.Forms.UseLegacyImages` compatibility switch addressed possible image scaling issues in ClickOnce scenarios in high DPI environments.</span></span> <span data-ttu-id="d3b04-105">如果设置为 `true`，则用户可通过此开关在缩放比例设置为大于 100% 的高 DPI 显示器上还原旧的图像缩放行为。</span><span class="sxs-lookup"><span data-stu-id="d3b04-105">When set to `true`, the switch allows the user to restore legacy image scaling on high DPI displays whose scale is set to greater than 100%.</span></span> <span data-ttu-id="d3b04-106">有关详细信息，请参阅 GitHub 上的 [.NET Framework 4.8 发行说明](https://github.com/microsoft/dotnet/blob/master/releases/net48/dotnet48-changes.md#clickonce)。</span><span class="sxs-lookup"><span data-stu-id="d3b04-106">For more information, see [.NET Framework 4.8 Release Notes](https://github.com/microsoft/dotnet/blob/master/releases/net48/dotnet48-changes.md#clickonce) on GitHub.</span></span>
+<span data-ttu-id="e334f-104">自 .NET Framework 4.8 起，`Switch.System.Windows.Forms.UseLegacyImages` 兼容性开关会处理高 DPI 环境中 ClickOnce 方案内可能出现的图像缩放问题。</span><span class="sxs-lookup"><span data-stu-id="e334f-104">Starting with the .NET Framework 4.8, the `Switch.System.Windows.Forms.UseLegacyImages` compatibility switch addressed possible image scaling issues in ClickOnce scenarios in high DPI environments.</span></span> <span data-ttu-id="e334f-105">如果设置为 `true`，则用户可通过此开关在缩放比例设置为大于 100% 的高 DPI 显示器上还原旧的图像缩放行为。</span><span class="sxs-lookup"><span data-stu-id="e334f-105">When set to `true`, the switch allows the user to restore legacy image scaling on high DPI displays whose scale is set to greater than 100%.</span></span> <span data-ttu-id="e334f-106">有关详细信息，请参阅 GitHub 上的 [.NET Framework 4.8 发行说明](https://github.com/microsoft/dotnet/blob/master/releases/net48/dotnet48-changes.md#clickonce)。</span><span class="sxs-lookup"><span data-stu-id="e334f-106">For more information, see [.NET Framework 4.8 Release Notes](https://github.com/microsoft/dotnet/blob/master/releases/net48/dotnet48-changes.md#clickonce) on GitHub.</span></span>
 
-<span data-ttu-id="d3b04-107">.NET Core 中尚不支持 `Switch.System.Windows.Forms.UseLegacyImages` 开关。</span><span class="sxs-lookup"><span data-stu-id="d3b04-107">In .NET Core, the `Switch.System.Windows.Forms.UseLegacyImages` switch is not supported.</span></span>
+<span data-ttu-id="e334f-107">.NET Core 中尚不支持 `Switch.System.Windows.Forms.UseLegacyImages` 开关。</span><span class="sxs-lookup"><span data-stu-id="e334f-107">In .NET Core, the `Switch.System.Windows.Forms.UseLegacyImages` switch is not supported.</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="d3b04-108">引入的版本</span><span class="sxs-lookup"><span data-stu-id="d3b04-108">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="e334f-108">引入的版本</span><span class="sxs-lookup"><span data-stu-id="e334f-108">Version introduced</span></span>
 
-<span data-ttu-id="d3b04-109">3.0 预览版 9</span><span class="sxs-lookup"><span data-stu-id="d3b04-109">3.0 Preview 9</span></span>
+<span data-ttu-id="e334f-109">3.0 预览版 9</span><span class="sxs-lookup"><span data-stu-id="e334f-109">3.0 Preview 9</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="d3b04-110">建议的操作</span><span class="sxs-lookup"><span data-stu-id="d3b04-110">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="e334f-110">建议操作</span><span class="sxs-lookup"><span data-stu-id="e334f-110">Recommended action</span></span>
 
-<span data-ttu-id="d3b04-111">删除此开关。</span><span class="sxs-lookup"><span data-stu-id="d3b04-111">Remove the switch.</span></span> <span data-ttu-id="d3b04-112">此开关不受支持，且未提供替代功能。</span><span class="sxs-lookup"><span data-stu-id="d3b04-112">The switch is not supported, and no alternative functionality is available.</span></span>
+<span data-ttu-id="e334f-111">删除此开关。</span><span class="sxs-lookup"><span data-stu-id="e334f-111">Remove the switch.</span></span> <span data-ttu-id="e334f-112">此开关不受支持，且未提供替代功能。</span><span class="sxs-lookup"><span data-stu-id="e334f-112">The switch is not supported, and no alternative functionality is available.</span></span>
 
-#### <a name="category"></a><span data-ttu-id="d3b04-113">类别</span><span class="sxs-lookup"><span data-stu-id="d3b04-113">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="e334f-113">类别</span><span class="sxs-lookup"><span data-stu-id="e334f-113">Category</span></span>
 
-<span data-ttu-id="d3b04-114">Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="d3b04-114">Windows Forms</span></span>
+<span data-ttu-id="e334f-114">Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="e334f-114">Windows Forms</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="d3b04-115">受影响的 API</span><span class="sxs-lookup"><span data-stu-id="d3b04-115">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="e334f-115">受影响的 API</span><span class="sxs-lookup"><span data-stu-id="e334f-115">Affected APIs</span></span>
 
-- <span data-ttu-id="d3b04-116">无</span><span class="sxs-lookup"><span data-stu-id="d3b04-116">None</span></span>
+- <span data-ttu-id="e334f-116">None</span><span class="sxs-lookup"><span data-stu-id="e334f-116">None</span></span>
 
 <!-- 
 
