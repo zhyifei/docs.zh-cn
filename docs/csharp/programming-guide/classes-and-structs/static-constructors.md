@@ -5,12 +5,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 0956c174f4d5742780baf00a6f2785a9efd1d93f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7b8171e75bbd27a1079f2c6cc1b7aef6400d7419
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714675"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115769"
 ---
 # <a name="static-constructors-c-programming-guide"></a>静态构造函数（C# 编程指南）
 静态构造函数用于初始化任何[静态](../../language-reference/keywords/static.md)数据，或执行仅需执行一次的特定操作。 将在创建第一个实例或引用任何静态成员之前自动调用静态构造函数。  
@@ -30,9 +30,9 @@ ms.locfileid: "75714675"
 
 - 用户无法控制在程序中执行静态构造函数的时间。
   
-- 在创建第一个实例或引用任何静态成员之前，将自动调用静态构造函数以初始化[类](../../language-reference/keywords/class.md)。 静态构造函数应在实例构造函数之前运行。 请注意，分配给事件或委托的静态方法被调用（而不是分配）时，将调用类型的静态构造函数。 如果静态构造函数类中存在静态字段变量初始值设定项，它们将在执行静态构造函数之前立即以在类声明中显示的文本顺序执行。
+- 在创建第一个实例或引用任何静态成员之前，将自动调用静态构造函数以初始化[类](../../language-reference/keywords/class.md)。 静态构造函数应在实例构造函数之前运行。 调用（而不是分配）分配给事件或委托的静态方法时，将调用类型的静态构造函数。 如果静态构造函数类中存在静态字段变量初始值设定项，它们将在执行静态构造函数之前立即以在类声明中显示的文本顺序执行。
 
-- 如果未提供静态构造函数来初始化静态字段，会将所有静态字段初始化为其默认值，如[默认值表](../../language-reference/keywords/default-values-table.md)中所列。 
+- 如果未提供静态构造函数来初始化静态字段，会将所有静态字段初始化为其默认值，如 [C# 类型的默认值](../../language-reference/builtin-types/default-values.md)中所列。
   
 - 如果静态构造函数引发异常，运行时将不会再次调用该函数，并且类型在程序运行所在的应用程序域的生存期内将保持未初始化。 大多数情况下，当静态构造函数无法实例化一个类型时，或者当静态构造函数中发生未经处理的异常时，将引发 <xref:System.TypeInitializationException> 异常。 对于未在源代码中显式定义的隐式静态构造函数，故障排除可能需要检查中间语言 (IL) 代码。
 
@@ -48,7 +48,7 @@ ms.locfileid: "75714675"
 - 静态构造函数的一种典型用法是在类使用日志文件且将构造函数用于将条目写入到此文件中时使用。  
 - 静态构造函数对于创建非托管代码的包装类也非常有用，这种情况下构造函数可调用 `LoadLibrary` 方法。  
 
-- 也可以在静态构造函数中方便地对无法在编译时通过约束（类型参数约束）检查的类型参数强制执行运行时检查。
+- 也可在静态构造函数中轻松地对无法在编译时通过约束（类型参数约束）检查的类型参数强制执行运行时检查。
 
 ## <a name="example"></a>示例
  在此示例中，类 `Bus` 具有静态构造函数。 创建 `Bus` 的第一个实例 (`bus1`) 时，将调用该静态构造函数，以便初始化类。 示例输出验证即使创建了两个 `Bus` 的实例，静态构造函数也仅运行一次，并且在实例构造函数运行前运行。  

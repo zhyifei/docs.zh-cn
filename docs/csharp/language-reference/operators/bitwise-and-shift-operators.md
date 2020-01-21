@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: a9f507ecdfced5b044b9d6338f723f53b1b4c4b7
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345344"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115827"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>位运算符和移位运算符（C# 参考）
 
@@ -60,7 +60,7 @@ ms.locfileid: "75345344"
 
 ## <a name="left-shift-operator-"></a>左移位运算符 \<\<
 
-`<<` 运算符将其左侧操作数向左移动右侧操作数定义的位数。
+`<<` 运算符将其左侧操作数向左移动[右侧操作数定义的位数](#shift-count-of-the-shift-operators)。
 
 左移运算会放弃超出结果类型范围的高阶位，并将低阶空位位置设置为零，如以下示例所示：
 
@@ -74,7 +74,7 @@ ms.locfileid: "75345344"
 
 ## <a name="right-shift-operator-"></a>右移位运算符 >>
 
-`>>` 运算符将其左侧操作数向右移动右侧操作数定义的位数。
+`>>` 运算符将其左侧操作数向右移动[右侧操作数定义的位数](#shift-count-of-the-shift-operators)。
 
 右移位运算会放弃低阶位，如以下示例所示：
 
@@ -170,11 +170,14 @@ x = x op y
 
 [!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
 
+> [!NOTE]
+> 如前例所示，即使右侧操作符的值大于左侧操作符中的位数，移位运算的结果也不可为零。
+
 ## <a name="enumeration-logical-operators"></a>枚举逻辑运算符
 
 所有[枚举](../builtin-types/enum.md)类型还支持 `~`、`&`、`|` 和 `^` 运算符。 对于相同枚举类型的操作数，对底层整数类型的相应值执行逻辑运算。 例如，对于具有底层类型 `U` 的枚举类型 `T` 的任何 `x` 和 `y`，`x & y` 表达式生成与 `(T)((U)x & (U)y)` 表达式相同的结果。
 
-通常使用具有枚举类型的位逻辑运算符，该枚举类型使用 [Flags](xref:System.FlagsAttribute) 属性定义。 有关详细信息，请参阅[枚举类型](../builtin-types/enum.md)一文的[作为位标记的枚举类型](../builtin-types/enum.md#enumeration-types-as-bit-flags)部分。
+通常使用具有枚举类型的位逻辑运算符，该枚举类型使用 [Flags](xref:System.FlagsAttribute) 特性定义。 有关详细信息，请参阅[枚举类型](../builtin-types/enum.md)一文的[作为位标记的枚举类型](../builtin-types/enum.md#enumeration-types-as-bit-flags)部分。
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 

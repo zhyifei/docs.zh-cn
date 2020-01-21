@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 9c57ff6dd9acd8a8bcff6de4fce7d898f1135703
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 465dbb9120e6e81e5ef216c34dc6a92283956033
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714965"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964670"
 ---
 # <a name="constructors-c-programming-guide"></a>构造函数（C# 编程指南）
 
@@ -19,7 +19,7 @@ ms.locfileid: "75714965"
 
 ## <a name="parameterless-constructors"></a>无参数构造函数
   
-如果没有为类提供构造函数，默认情况下，C# 将创建一个会实例化对象并将成员变量设置为默认值的构造函数，如[默认值表](../../language-reference/keywords/default-values-table.md)中所列。 如果没有为结构提供构造函数，C# 将依赖于隐式无参数构造函数，自动将值类型的每个字段初始化为其默认值，如[默认值表](../../language-reference/keywords/default-values-table.md)中所列  。 有关详细信息和示例，请参阅[实例构造函数](./instance-constructors.md)。  
+如果没有为类提供构造函数，则 C# 将默认创建一个构造函数，该函数会实例化对象并将成员变量设置为默认值，如 [C# 类型的默认值](../../language-reference/builtin-types/default-values.md)中所列。 如果没有为结构提供构造函数，C# 将依赖于隐式无参数构造函数，自动将每个字段初始化为其默认值  。 有关详细信息和示例，请参阅[实例构造函数](instance-constructors.md)。  
 
 ## <a name="constructor-syntax"></a>构造函数语法
 
@@ -33,13 +33,13 @@ ms.locfileid: "75714965"
 
 ## <a name="static-constructors"></a>静态构造函数
 
-前面的示例具有所有已展示的实例构造函数，这些构造函数创建一个新对象。 类或结构也可以具有静态构造函数，该静态构造函数初始化类型的静态成员。  静态构造函数是无参数构造函数。 如果未提供静态构造函数来初始化静态字段，C# 编译器会将静态字段初始化为其默认值，如[默认值表](../../language-reference/keywords/default-values-table.md)中所列。
+前面的示例具有所有已展示的实例构造函数，这些构造函数创建一个新对象。 类或结构也可以具有静态构造函数，该静态构造函数初始化类型的静态成员。  静态构造函数是无参数构造函数。 如果未提供静态构造函数来初始化静态字段，C# 编译器会将静态字段初始化为其默认值，如 [C# 类型的默认值](../../language-reference/builtin-types/default-values.md)中所列。
 
 以下示例使用静态构造函数来初始化静态字段。
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
 
-也可以通过表达式主体定义来定义静态构造函数，如以下示例所示。 
+也可以通过表达式主体定义来定义静态构造函数，如以下示例所示。
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
 
@@ -62,4 +62,4 @@ ms.locfileid: "75714965"
 - [类和结构](./index.md)
 - [终结器](./destructors.md)
 - [static](../../language-reference/keywords/static.md)
-- [Why Do Initializers Run In The Opposite Order As Constructors?Part One](https://blogs.msdn.microsoft.com/ericlippert/2008/02/15/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)（为何初始值设定项作为构造函数以相反顺序运行？第一部分）
+- [Why Do Initializers Run In The Opposite Order As Constructors?Part One](https://docs.microsoft.com/archive/blogs/ericlippert/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)（为何初始值设定项作为构造函数以相反顺序运行？第一部分）

@@ -3,12 +3,12 @@ title: 使用 .NET Core 创建 REST 客户端
 description: 此教程将介绍 .NET Core 和 C# 语言的许多功能。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 776d0ca65944e943c1c5114f95801c20d31a2b74
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 85a3c8e17e14db86786950380ba745ae286dccca
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900740"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115868"
 ---
 # <a name="rest-client"></a>REST 客户端
 
@@ -25,7 +25,7 @@ ms.locfileid: "75900740"
 
 将生成一个应用程序，向 GitHub 上的 REST 服务发出 HTTP 请求。 需要读取 JSON 格式的信息，并将相应的 JSON 数据包转换成 C# 对象。 最后将了解如何使用 C# 对象。
 
-此教程将介绍许多功能。 我们将逐个生成这些功能。
+此教程中介绍了多项功能。 我们将逐个生成这些功能。
 
 如果想要按照针对本主题的[最终示例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)操作，可以下载它。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
@@ -38,11 +38,11 @@ ms.locfileid: "75900740"
 
 第一步是新建应用程序。 打开命令提示符，然后新建应用程序的目录。 将新建的目录设为当前目录。 在控制台窗口中输入以下命令：
 
-```console
+```dotnetcli
 dotnet new console --name WebApiClient
 ```
 
-这将为基本的“Hello World”应用程序创建起始文件。 项目名称为“WebApiClient”。 因为这是新项目，所有没有任何依赖项，第一次运行时将下载 .NET Core 框架、安装开发证书并运行 NuGet 包管理器来还原缺少的依赖项。
+这将为基本的“Hello World”应用程序创建起始文件。 项目名称为“WebApiClient”。 这是一个新项目，因此没有部署任何依赖项。 第一次运行时将下载 .NET Core 框架、安装开发证书并运行 NuGet 包管理器来还原缺少的依赖项。
 
 在开始修改之前，在命令提示符中键入 `dotnet run`（[参见注释](#dotnet-restore-note)）以运行应用程序。 如果环境缺少依赖项，则 `dotnet run` 会自动执行 `dotnet restore`。 如果需要重新生成应用程序，它还会执行 `dotnet build`。
 初始设置完成后，只需在对项目有意义的情况下运行 `dotnet restore` 或 `dotnet build`。

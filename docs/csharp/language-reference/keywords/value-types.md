@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 0ab9b6e089f5add9963ffae73e196643ad999763
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cfa92923ff5c7d5e7e4e2a9a965dc1562c183b74
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712905"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964639"
 ---
 # <a name="value-types-c-reference"></a>值类型（C# 参考）
 
@@ -33,7 +33,7 @@ ms.locfileid: "75712905"
 
 值类型变量不能默认为 `null`。 但相应的[可为空的值类型](../builtin-types/nullable-value-types.md)的变量可以为 `null`。
 
-每个值类型都有一个隐式无参数构造函数，用于初始化该类型的默认值。 有关值类型的默认值的信息，请参阅[默认值表](default-values-table.md)。
+每个值类型都有一个隐式无参数构造函数，用于初始化该类型的默认值。 有关值类型的默认值的信息，请参阅 [C# 类型的默认值](../builtin-types/default-values.md)。
 
 ## <a name="simple-types"></a>简单类型
 
@@ -87,7 +87,7 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-使用 [new](../operators/new-operator.md) 运算符调用特定类型的无参数构造函数，并将默认值赋给变量。 在上述示例中，无参数构造函数将值 `0` 赋给 `myInt`。 有关通过调用无参数构造函数所赋予的值的详细信息，请参阅[默认值表](default-values-table.md)。
+使用 [new](../operators/new-operator.md) 运算符调用特定类型的无参数构造函数，并将默认值赋给变量。 在上述示例中，无参数构造函数将值 `0` 赋给 `myInt`。 要详细了解通过调用无参数构造函数所赋予的值，请参阅 [C# 类型的默认值](../builtin-types/default-values.md)。
 
 对于用户定义类型，使用 [new](../operators/new-operator.md) 调用无参数构造函数。 例如，以下语句调用 `Point` 结构的无参数构造函数：
 

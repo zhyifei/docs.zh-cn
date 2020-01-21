@@ -4,16 +4,16 @@ description: 了解 C# 中可以为 null 的值类型及其使用方法
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: b9400cd76eb0430dbe9c278e835a3cec7f9f131e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740965"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964317"
 ---
 # <a name="nullable-value-types-c-reference"></a>可为空的值类型（C# 参考）
 
-可为空的值类型 `T?` 表示其基础[值类型](../keywords/value-types.md) `T` 的所有值，还可表示附加的 [null](../keywords/null.md) 值。 例如，可以将以下三个值中的任意一个指定给 `bool?` 变量：`true`、`false` 或 `null`。 基础值类型 `T` 本身不能是可为空的值类型。
+可为空的值类型 `T?` 表示其基础[值类型](../keywords/value-types.md)`T` 的所有值，还可表示附加的 [null](../keywords/null.md) 值。 例如，可以将以下三个值中的任意一个指定给 `bool?` 变量：`true`、`false` 或 `null`。 基础值类型 `T` 本身不能是可为空的值类型。
 
 > [!NOTE]
 > C# 8.0 引入了可为空引用类型功能。 有关详细信息，请参阅[可为空引用类型](../../nullable-references.md)。 从 C# 2 开始，提供可为空的值类型。
@@ -24,7 +24,7 @@ ms.locfileid: "73740965"
 
 ## <a name="declaration-and-assignment"></a>声明和赋值
 
-由于值类型可隐式转换为相应的可为空的值类型，因此可以像向其基础值类型赋值一样，向可为空值类型的变量赋值。 还可分配 `null` 值。 例如:
+由于值类型可隐式转换为相应的可为空的值类型，因此可以像向其基础值类型赋值一样，向可为空值类型的变量赋值。 还可分配 `null` 值。 例如：
 
 [!code-csharp[declare and assign](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Declaration)]
 
@@ -56,7 +56,7 @@ ms.locfileid: "73740965"
 
 [!code-csharp-interactive[?? operator](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
 
-如果要使用基础值类型的[默认值](../keywords/default-values-table.md)来替代 `null`，请使用 <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> 方法。
+如果要使用基础值类型的[默认值](default-values.md)来替代 `null`，请使用 <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> 方法。
 
 还可以将可为空的值类型显式强制转换为不可为 null 的类型，如以下示例所示：
 
@@ -68,7 +68,7 @@ ms.locfileid: "73740965"
 
 ## <a name="lifted-operators"></a>提升的运算符
 
-预定义的一元运算符和二元运算符或值类型 `T` 支持的任何重载运算符也受相应的可为空值类型 `T?` 支持。 如果一个或全部两个操作数为 `null`  ，则这些运算符（也称为提升的运算符）将生成 `null`；否则，运算符使用其操作数所包含的值来计算结果。 例如:
+预定义的一元运算符和二元运算符或值类型 `T` 支持的任何重载运算符也受相应的可为空值类型 `T?` 支持。 如果一个或全部两个操作数为 `null`  ，则这些运算符（也称为提升的运算符）将生成 `null`；否则，运算符使用其操作数所包含的值来计算结果。 例如：
 
 [!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
@@ -88,7 +88,7 @@ ms.locfileid: "73740965"
 
 ## <a name="boxing-and-unboxing"></a>装箱和取消装箱
 
-可为空值类型的实例 `T?` [已装箱](../../programming-guide/types/boxing-and-unboxing.md)，如下所示：
+可为空值类型的实例 `T?`[已装箱](../../programming-guide/types/boxing-and-unboxing.md)，如下所示：
 
 - 如果 <xref:System.Nullable%601.HasValue%2A> 返回 `false`，则生成空引用。
 - 如果 <xref:System.Nullable%601.HasValue%2A> 返回 `true`，则基础值类型 `T` 的对应值将装箱，而不对 <xref:System.Nullable%601> 的实例进行装箱。
@@ -133,7 +133,7 @@ ms.locfileid: "73740965"
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
-- [“提升”的准确含义是什么？](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+- [“提升”的准确含义是什么？](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean)
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>

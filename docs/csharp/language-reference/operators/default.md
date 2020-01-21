@@ -4,16 +4,16 @@ description: 使用 default 运算符生成类型的默认值
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 744bdf1ec683ef32bba508c260590c0ed4c6e987
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 651c4698514aee8cf4dab75ea32c98493e19a30b
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712710"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964623"
 ---
 # <a name="default-operator-c-reference"></a>default 运算符（C# 参考）
 
-`default` 运算符生成类型的[默认值](../keywords/default-values-table.md)。 `default` 运算符的实参必须是类型或类型形参的名称。
+`default` 运算符生成类型的[默认值](../builtin-types/default-values.md)。 `default` 运算符的实参必须是类型或类型形参的名称。
 
 下面的示例演示 `default` 运算符的用法：
 
@@ -44,5 +44,5 @@ ms.locfileid: "75712710"
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)
-- [默认值表](../keywords/default-values-table.md)
+- [C# 类型的默认值](../builtin-types/default-values.md)
 - [.NET 中的泛型](../../../standard/generics/index.md)

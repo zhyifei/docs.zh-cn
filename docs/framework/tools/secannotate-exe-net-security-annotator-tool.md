@@ -5,12 +5,12 @@ helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-ms.openlocfilehash: cc57bd01c5626c889b5d94eac1e7358cafa4ab10
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ffc275c588775fb79da276be904ada90a5a31bad
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447323"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937930"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe（.NET 安全批注器工具）
 .NET 安全性批注器工具 (SecAnnotate.exe) 是标识一个或多个程序集的 `SecurityCritical` 和 `SecuritySafeCritical` 部分的命令行应用程序。  
@@ -29,7 +29,7 @@ SecAnnotate.exe [parameters] [assemblies]
   
 ## <a name="parameters"></a>参数  
   
-|选项|说明|  
+|选项|描述|  
 |------------|-----------------|  
 |`/a`<br /><br /> or<br /><br /> `/showstatistics`|显示与正在分析的程序集中的透明度使用有关的统计信息。|  
 |`/d:` directory <br /><br /> or<br /><br /> `/referencedir:` directory |指定在批注过程中搜索依赖程序集的目录。|  
@@ -38,7 +38,7 @@ SecAnnotate.exe [parameters] [assemblies]
 |`/o:` output.xml <br /><br /> or<br /><br /> `/out:` output.xml |指定输出批注文件。|  
 |`/p:` maxpasses <br /><br /> or<br /><br /> `/maximumpasses:` maxpasses |指定停止生成新的批注前要对程序集进行的最大批注轮数。|  
 |`/q`<br /><br /> or<br /><br /> `/quiet`|指定安静模式，在此模式下，批注器不会输出状态消息；它只会输出错误信息。|  
-|`/r:` *assembly*<br /><br /> or<br /><br /> `/referenceassembly:` *assembly*|当在批注过程中解析依赖程序集时，包含指定的程序集。 引用程序集获得的优先级高于在引用路径中找到的程序集。|  
+|`/r:` assembly <br /><br /> or<br /><br /> `/referenceassembly:` assembly |当在批注过程中解析依赖程序集时，包含指定的程序集。 引用程序集获得的优先级高于在引用路径中找到的程序集。|  
 |`/s:` rulename <br /><br /> or<br /><br /> `/suppressrule:` rulename |禁止对输入程序集运行指定的透明度规则。|  
 |`/t`<br /><br /> or<br /><br /> `/forcetransparent`|强制批准器工具将所有没有任何透明度批注的程序集作为完全透明来处理。|  
 |`/t`:assembly <br /><br /> or<br /><br /> `/forcetransparent`:assembly |将给定程序集强制为透明，而无论其当前程序集级别批注如何。|  
@@ -50,6 +50,6 @@ SecAnnotate.exe [parameters] [assemblies]
 ## <a name="remarks"></a>备注  
  参数和程序集也可能在命令行上指定的响应文件中提供，且带有前缀 at 符号 (@)。 响应文件中的每行应包含单个参数或程序集名称。  
   
- 有关 .NET 安全性批注器的详细信息，请参阅 .NET 安全性博客中的[使用 SecAnnotate 分析程序集中的透明度冲突](https://blogs.msdn.microsoft.com/shawnfa/2009/11/18/using-secannotate-to-analyze-your-assemblies-for-transparency-violations-an-example/)。  
+ 有关 .NET 安全性批注器的详细信息，请参阅 .NET 安全性博客中的[使用 SecAnnotate 分析程序集中的透明度冲突](https://docs.microsoft.com/archive/blogs/shawnfa/using-secannotate-to-analyze-your-assemblies-for-transparency-violations-an-example)。  
   
 ## <a name="examples"></a>示例

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: d8858acb2743b26cc3a5172edf4765976d81adf4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d5ca0593d802d331d980cf35c701e0a79d54abee
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973017"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163093"
 ---
 # <a name="built-in-reference-types-c-reference"></a>内置引用类型（C# 引用）
 
@@ -33,13 +33,13 @@ C# 具有多个内置引用类型。 这些类型包含的关键字或运算符�
 
 ## <a name="the-object-type"></a>对象类型
 
-`object` 类型是 <xref:System.Object?displayProperty=nameWithType> 在 .NET 中的别名。 在 C# 的统一类型系统中，所有类型（预定义类型、用户定义类型、引用类型和值类型）都是直接或间接从 <xref:System.Object?displayProperty=nameWithType> 继承的。 可以将任何类型的值赋给 `object` 类型的变量。 可以使用文本 `null` 将任何 `object` 变量赋值给其默认值。 将值类型的变量转换为对象的过程称为*装箱*。 将对象类型的变量转换为值类型的过程称为*取消装箱*。 有关详细信息，请参阅[装箱和取消装箱](../../programming-guide/types/boxing-and-unboxing.md)。 
+`object` 类型是 <xref:System.Object?displayProperty=nameWithType> 在 .NET 中的别名。 在 C# 的统一类型系统中，所有类型（预定义类型、用户定义类型、引用类型和值类型）都是直接或间接从 <xref:System.Object?displayProperty=nameWithType> 继承的。 可以将任何类型的值赋给 `object` 类型的变量。 可以使用文本 `null` 将任何 `object` 变量赋值给其默认值。 将值类型的变量转换为对象的过程称为*装箱*。 将 `object` 类型的变量转换为值类型的过程称为取消装箱  。 有关详细信息，请参阅[装箱和取消装箱](../../programming-guide/types/boxing-and-unboxing.md)。 
 
 ## <a name="the-string-type"></a>字符串类型
 
 `string` 类型表示零个或多个 Unicode 字符的序列。 `string` 是 <xref:System.String?displayProperty=nameWithType> 在 .NET 中的别名。
 
-尽管 `string` 为引用类型，但是定义[相等运算符 `==` 和 `!=`](../operators/equality-operators.md#string-equality) 是为了比较 `string` 对象（而不是引用）的值。 这使得对字符串相等性的测试更为直观。 例如:
+尽管 `string` 为引用类型，但是定义[相等运算符 `==` 和 `!=`](../operators/equality-operators.md#string-equality) 是为了比较 `string` 对象（而不是引用）的值。 这使得对字符串相等性的测试更为直观。 例如：
 
 ```csharp-interactive
 string a = "hello";
@@ -67,14 +67,14 @@ string b = "h";
 b += "ello";
 ```
 
-`[]` [运算符](../operators/member-access-operators.md#indexer-operator-)可用于只读访问 `string` 的个别字符。 有效值从 `0` 开始，且必须小于 `string` 的长度：
+`[]` [运算符](../operators/member-access-operators.md#indexer-operator-)可用于只读访问字符串的个别字符。 有效索引于 `0` 开始，且必须小于字符串的长度：
 
 ```csharp
 string str = "test";
 char x = str[2];  // x = 's';
 ```
 
-同样，`[]` 运算符也可用于循环访问 `string` 中的每个字符：
+同样，`[]` 运算符也可用于循环访问字符串中的每个字符：
 
 ```csharp-interactive
 string str = "test";
@@ -105,7 +105,7 @@ Console.WriteLine(a);
 > [!NOTE]
 > 转义码 `\udddd`（其中 `dddd` 是一个四位数字）表示 Unicode 字符 U+`dddd`。 另外，还可识别八位 Unicode 转义码：`\Udddddddd`。
 
-[逐字字符串文本](../tokens/verbatim.md)以 `@` 开头，并且也括在双引号内。 例如:
+[逐字字符串文本](../tokens/verbatim.md)以 `@` 开头，并且也括在双引号内。 例如：
 
 ```csharp
 @"good morning"  // a string literal

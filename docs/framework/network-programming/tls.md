@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 2433d8b8563cace4415fb8fcd2d110f75d7d4304
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: e2f8f1304de587e1bedd8cde60e665971d903183
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196378"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937685"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 中的传输层安全性 (TLS) 最佳做法
 
@@ -104,7 +104,7 @@ WCF 使用与 .NET Framework 的其余部分相同的网络堆栈。
 
 ### <a name="for-wcf-message-security-with-certificate-credentials"></a>对于具有证书凭据的 WCF 消息安全性
 
-默认情况下，.NET Framework 4.7 和更高版本使用 <xref:System.Net.ServicePointManager.SecurityProtocol> 属性中指定的协议。 当 [AppContextSwitch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` 被设置为 `true` 时，WCF 将选择最佳协议（最高至 TLS 1.0）。
+默认情况下，.NET Framework 4.7 和更高版本使用 <xref:System.Net.ServicePointManager.SecurityProtocol> 属性中指定的协议。 当 [AppContextSwitch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)`Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` 设置为 `true` 时，WCF 将选择最佳协议（最高至 TLS 1.0）。
 
 ## <a name="if-your-app-targets-a-net-framework-version-earlier-than-47"></a>如果你的应用面向 .NET Framework 4.7 之前的版本
 
@@ -112,7 +112,7 @@ WCF 使用与 .NET Framework 的其余部分相同的网络堆栈。
 
 ### <a name="for-net-framework-46---462-and-not-wcf"></a>对于 .NET Framework 4.6 - 4.6.2（而不是 WFC）
 
-将 `DontEnableSystemDefaultTlsVersions` `AppContext` 开关设置为 `false`。 请参阅[通过 AppContext 开关配置安全性](#configuring-security-via-appcontext-switches)。
+将 `DontEnableSystemDefaultTlsVersions``AppContext` 开关设置为 `false`。 请参阅[通过 AppContext 开关配置安全性](#configuring-security-via-appcontext-switches)。
 
 ### <a name="for-wcf-using-net-framework-46---462-using-tcp-transport-security-with-certificate-credentials"></a>对于使用具有证书凭据的 TCP 传输安全性的 .NET Framework 4.6 - 4.6.2 的 WCF
 

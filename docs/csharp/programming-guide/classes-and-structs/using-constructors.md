@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 7d027a67e533cb1ed7b2cea38112b4f585bf5fbc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: faab6ac57629db11c60ee5b563ea95ebb90016dd
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714642"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964361"
 ---
 # <a name="using-constructors-c-programming-guide"></a>使用构造函数（C# 编程指南）
 
@@ -29,7 +29,7 @@ ms.locfileid: "75714642"
   
  有关详细信息，请参阅[私有构造函数](./private-constructors.md)。  
   
- [结构](../../language-reference/keywords/struct.md)类型的构造函数与类的构造函数类似，但是 `structs` 不包含显式无参数构造函数，因为编译器将自动提供一个显式无参数构造函数。 此构造函数会将 `struct` 中的每个字段初始化为默认值。 有关详细信息，请参阅[默认值表](../../language-reference/keywords/default-values-table.md)。 但是，只有使用 `new` 实例化 `struct` 时，才会调用此无参数构造函数。 例如，此代码使用 <xref:System.Int32> 的无参数构造函数，因此可确保整数已初始化：  
+ [结构](../../language-reference/keywords/struct.md)类型的构造函数与类的构造函数类似，但是 `structs` 不包含显式无参数构造函数，因为编译器将自动提供一个显式无参数构造函数。 此构造函数会将 `struct` 中的每个字段初始化为[默认值](../../language-reference/builtin-types/default-values.md)。 但是，只有使用 `new` 实例化 `struct` 时，才会调用此无参数构造函数。 例如，此代码使用 <xref:System.Int32> 的无参数构造函数，因此可确保整数已初始化：  
   
 ```csharp  
 int i = new int();  

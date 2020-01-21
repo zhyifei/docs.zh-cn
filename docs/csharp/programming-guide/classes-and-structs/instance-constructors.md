@@ -5,12 +5,12 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: ee3cc30334154ef8aae6d7d26286463c537ff3dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 621b8ca7510b0b9916c9c46f201ff77402c3c655
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714804"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964728"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>实例构造函数（C# 编程指南）
 
@@ -31,7 +31,7 @@ ms.locfileid: "75714804"
   
  [!code-csharp[csProgGuideObjects#77](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#77)]  
   
- 如果某个类没有构造函数，则会自动生成一个无参数构造函数，并使用默认值来初始化对象字段。 例如，[int](../../language-reference/builtin-types/integral-numeric-types.md) 初始化为 0。 有关默认值的详细信息，请参阅[默认值表](../../language-reference/keywords/default-values-table.md)。 由于 `Coords` 类的无参数构造函数将所有数据成员都初始化为零，因此可以将它完全移除，而不会更改类的工作方式。 本主题稍后部分的示例 1 中提供了使用多个构造函数的完整示例，示例 2 中提供了自动生成的构造函数的示例。  
+ 如果某个类没有构造函数，则会自动生成一个无参数构造函数，并使用默认值来初始化对象字段。 例如，[int](../../language-reference/builtin-types/integral-numeric-types.md) 初始化为 0。 有关类型默认值的信息，请参阅 [C# 类型的默认值](../../language-reference/builtin-types/default-values.md)。 由于 `Coords` 类的无参数构造函数将所有数据成员都初始化为零，因此可以将它完全移除，而不会更改类的工作方式。 本主题稍后部分的示例 1 中提供了使用多个构造函数的完整示例，示例 2 中提供了自动生成的构造函数的示例。  
   
  也可以用实例构造函数来调用基类的实例构造函数。 类构造函数可通过初始值设定项来调用基类的构造函数，如下所示：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75714804"
   
  [!code-csharp[csProgGuideObjects#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#8)]  
   
- 请注意，`age` 的默认值为 `0`，`name` 的默认值为`null`。 有关默认值的详细信息，请参阅[默认值表](../../language-reference/keywords/default-values-table.md)。  
+ 请注意，`age` 的默认值为 `0`，`name` 的默认值为`null`。
   
 ## <a name="example-3"></a>示例 3  
  下面的示例说明使用基类初始值设定项。 `Circle` 类派生自常规类 `Shape`，`Cylinder` 类派生自 `Circle` 类。 每个派生类的构造函数都使用其基类的初始值设定项。  
