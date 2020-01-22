@@ -1,5 +1,5 @@
 ---
-title: LINQ 简介
+title: LINQ 介绍
 ms.date: 08/28/2018
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], about LINQ in Visual Basic queries
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 610f2a1020cc15f855b3ddfc0917e14aae34fb82
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3f58edf326ab9415d78d7065d74d8c1954fbbf37
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344938"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76315858"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic 中的 LINQ 简介
 语言集成查询（LINQ）向 Visual Basic 添加了查询功能，并在使用各种数据时提供了简单而强大的功能。 LINQ 会引入查询作为 Visual Basic 语言的一部分，而不是将查询发送到要处理的数据库，或对要搜索的每个数据类型使用不同的查询语法。 它使用统一语法，而不考虑数据的类型。  
@@ -38,7 +38,7 @@ ms.locfileid: "74344938"
   
  Visual Basic 包括以下 LINQ 提供程序。  
   
-|Provider|说明|  
+|Provider|描述|  
 |---|---|  
 |LINQ to Objects|通过 LINQ to Objects 提供程序，可以查询内存中集合和数组。 如果对象支持 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 接口，则可以通过 LINQ to Objects 提供程序对其进行查询。<br /><br /> 可以通过导入 <xref:System.Linq> 命名空间来启用 LINQ to Objects 提供程序，默认情况下，将为所有 Visual Basic 项目导入该命名空间。<br /><br /> 有关 LINQ to Objects 提供程序的详细信息，请参阅[LINQ to Objects](../../concepts/linq/linq-to-objects.md)。|  
 |LINQ to SQL|通过 LINQ to SQL 提供程序，可以查询和修改 SQL Server 数据库中的数据。 这样就可以轻松将应用程序的对象模型映射到数据库中的表和对象。<br /><br /> 通过包括对象关系设计器（O/R 设计器），Visual Basic 可以更轻松地处理 LINQ to SQL。 此设计器用于在应用程序中创建映射到数据库中的对象的对象模型。 O/R 设计器还提供了将存储过程和函数映射到 <xref:System.Data.Linq.DataContext> 对象的功能，该对象管理与数据库的通信并存储开放式并发检查的状态。<br /><br /> 有关 LINQ to SQL 提供程序的详细信息，请参阅[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)。 有关对象关系设计器的详细信息，请参阅[Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。|  
@@ -94,9 +94,9 @@ ms.locfileid: "74344938"
 
  [!code-vb[VbVbalrIntroToLINQ#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#9)]
 
-### <a name="order-by-clause"></a>Order By 子句]
+### <a name="order-by-clause"></a>Order By 子句
 
-|可有可无. [`Order By` 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)指定查询中列的排序顺序。 例如：
+可选。 [`Order By` 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)指定查询中列的排序顺序。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#10)]
 
@@ -175,7 +175,7 @@ ms.locfileid: "74344938"
 ## <a name="connect-to-a-database-by-using-linq-to-sql"></a>使用 LINQ to SQL 连接到数据库  
  在 Visual Basic 中，你将通过使用 LINQ to SQL 文件来标识要访问的 SQL Server 数据库对象，例如表、视图和存储过程。 LINQ to SQL 文件具有 .dbml 扩展名。  
   
- 如果与 SQL Server 数据库之间存在有效连接，则可以将**LINQ to SQL 类**项模板添加到项目。 此操作将显示对象关系设计器（O/R 设计器）。 O/R 设计器使你能够将你想要在代码中访问的项从**服务器资源管理器**/**数据库资源管理器**拖到设计器图面上。 LINQ to SQL 文件可向项目添加 <xref:System.Data.Linq.DataContext> 对象。 此对象包括你希望访问的表和视图的属性和集合，以及希望调用的存储过程的方法。 保存对 LINQ to SQL (.dbml) 文件所作的更改后，即可通过引用由 O/R 设计器定义的 <xref:System.Data.Linq.DataContext> 对象，在代码中访问这些对象。 项目的 <xref:System.Data.Linq.DataContext> 对象根据 LINQ to SQL 文件的名称进行命名。 例如，名为 Northwind.dbml 的 LINQ to SQL 文件将创建名为 <xref:System.Data.Linq.DataContext> 的 `NorthwindDataContext` 对象。  
+ 如果与 SQL Server 数据库之间存在有效连接，则可以将**LINQ to SQL 类**项模板添加到项目。 此操作将显示对象关系设计器（O/R 设计器）。 O/R 设计器使你能够将你想要在代码中访问的项从**服务器资源管理器**/**数据库资源管理器**拖到设计器图面上。 LINQ to SQL 文件可向项目添加 <xref:System.Data.Linq.DataContext> 对象。 此对象包括你希望访问的表和视图的属性和集合，以及希望调用的存储过程的方法。 保存对 LINQ to SQL (.dbml) 文件所作的更改后，即可通过引用由 O/R 设计器定义的 <xref:System.Data.Linq.DataContext> 对象，在代码中访问这些对象。 项目的 <xref:System.Data.Linq.DataContext> 对象根据 LINQ to SQL 文件的名称进行命名。 例如，名为 Northwind.dbml 的 LINQ to SQL 文件将创建名为 `NorthwindDataContext` 的 <xref:System.Data.Linq.DataContext> 对象。  
   
  有关分步说明的示例，请参阅[如何：查询数据库](how-to-query-a-database-by-using-linq.md)和[如何：调用存储过程](how-to-call-a-stored-procedure-by-using-linq.md)。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "74344938"
   
 ## <a name="related-resources"></a>相关资源  
   
-|主题|说明|  
+|主题|描述|  
 |---|---|  
 |[XML](../../language-features/xml/index.md)|介绍 Visual Basic 中可查询的 XML 功能，以及使您能够将 XML 作为 Visual Basic 代码中的第一类数据对象包括在内。|  
 |[查询](../../../language-reference/queries/index.md)|提供有关 Visual Basic 中可用的查询子句的参考信息。|  
