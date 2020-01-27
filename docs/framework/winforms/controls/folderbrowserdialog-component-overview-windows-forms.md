@@ -1,5 +1,5 @@
 ---
-title: FolderBrowserDialog 组件概述（Windows 窗体）
+title: FolderBrowserDialog 组件概述
 ms.date: 03/30/2017
 f1_keywords:
 - FolderBrowserDialog
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - directories [Windows Forms], enabling browsing in applications
 - folders [Windows Forms], enabling browsing in applications
 ms.assetid: 796b622c-3ba9-4356-93bb-e217fc52f2c7
-ms.openlocfilehash: cd89980ccad7e6c73094c1fb462d93cee8094959
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8b017ba08ae4205e930ac00177c89a89fde17d3b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210402"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745723"
 ---
-# <a name="folderbrowserdialog-component-overview-windows-forms"></a><span data-ttu-id="d2caa-102">FolderBrowserDialog 组件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="d2caa-102">FolderBrowserDialog Component Overview (Windows Forms)</span></span>
+# <a name="folderbrowserdialog-component-overview-windows-forms"></a><span data-ttu-id="1dc2e-102">FolderBrowserDialog 组件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="1dc2e-102">FolderBrowserDialog Component Overview (Windows Forms)</span></span>
 
-<span data-ttu-id="d2caa-103">Windows 窗体<xref:System.Windows.Forms.FolderBrowserDialog>组件是一个模式对话框，用于浏览和选择文件夹。</span><span class="sxs-lookup"><span data-stu-id="d2caa-103">The Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> component is a modal dialog box that is used for browsing and selecting folders.</span></span> <span data-ttu-id="d2caa-104">此外可以在创建新文件夹<xref:System.Windows.Forms.FolderBrowserDialog>组件。</span><span class="sxs-lookup"><span data-stu-id="d2caa-104">New folders can also be created from within the <xref:System.Windows.Forms.FolderBrowserDialog> component.</span></span>
+<span data-ttu-id="1dc2e-103">Windows 窗体 <xref:System.Windows.Forms.FolderBrowserDialog> 组件是用于浏览和选择文件夹的模式对话框。</span><span class="sxs-lookup"><span data-stu-id="1dc2e-103">The Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> component is a modal dialog box that is used for browsing and selecting folders.</span></span> <span data-ttu-id="1dc2e-104">还可以从 <xref:System.Windows.Forms.FolderBrowserDialog> 组件中创建新文件夹。</span><span class="sxs-lookup"><span data-stu-id="1dc2e-104">New folders can also be created from within the <xref:System.Windows.Forms.FolderBrowserDialog> component.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="d2caa-105">若要选择文件，而不是文件夹，请使用[OpenFileDialog](openfiledialog-component-windows-forms.md)组件。</span><span class="sxs-lookup"><span data-stu-id="d2caa-105">To select files, instead of folders, use the [OpenFileDialog](openfiledialog-component-windows-forms.md) component.</span></span>
+> <span data-ttu-id="1dc2e-105">若要选择文件而不是文件夹，请使用[OpenFileDialog](openfiledialog-component-windows-forms.md)组件。</span><span class="sxs-lookup"><span data-stu-id="1dc2e-105">To select files, instead of folders, use the [OpenFileDialog](openfiledialog-component-windows-forms.md) component.</span></span>
 
-<span data-ttu-id="d2caa-106"><xref:System.Windows.Forms.FolderBrowserDialog>组件，系统会在运行的时使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="d2caa-106">The <xref:System.Windows.Forms.FolderBrowserDialog> component is displayed at run time using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span> <span data-ttu-id="d2caa-107">设置<xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>属性来确定最顶层的文件夹，然后将对话框中的树视图中显示的任何子文件夹。</span><span class="sxs-lookup"><span data-stu-id="d2caa-107">Set the <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> property to determine the top-most folder and any subfolders that will appear within the tree view of the dialog box.</span></span> <span data-ttu-id="d2caa-108">一旦已显示对话框中，可以使用<xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A>属性以获取所选的文件夹的路径。</span><span class="sxs-lookup"><span data-stu-id="d2caa-108">Once the dialog box has been shown, you can use the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> property to get the path of the folder that was selected.</span></span>
+<span data-ttu-id="1dc2e-106"><xref:System.Windows.Forms.FolderBrowserDialog> 组件在运行时使用 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 方法显示。</span><span class="sxs-lookup"><span data-stu-id="1dc2e-106">The <xref:System.Windows.Forms.FolderBrowserDialog> component is displayed at run time using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span> <span data-ttu-id="1dc2e-107">设置 <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> 属性以确定最顶层的文件夹以及将在对话框的树视图中显示的所有子文件夹。</span><span class="sxs-lookup"><span data-stu-id="1dc2e-107">Set the <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> property to determine the top-most folder and any subfolders that will appear within the tree view of the dialog box.</span></span> <span data-ttu-id="1dc2e-108">显示该对话框后，可以使用 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 属性来获取所选文件夹的路径。</span><span class="sxs-lookup"><span data-stu-id="1dc2e-108">Once the dialog box has been shown, you can use the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> property to get the path of the folder that was selected.</span></span>
 
-<span data-ttu-id="d2caa-109">添加到窗体时<xref:System.Windows.Forms.FolderBrowserDialog>组件在 Visual Studio 中的 Windows 窗体设计器底部的任务栏中显示。</span><span class="sxs-lookup"><span data-stu-id="d2caa-109">When it is added to a form, the <xref:System.Windows.Forms.FolderBrowserDialog> component appears in the tray at the bottom of the Windows Forms Designer in Visual Studio.</span></span>
+<span data-ttu-id="1dc2e-109">将其添加到窗体时，<xref:System.Windows.Forms.FolderBrowserDialog> 组件会显示在 Visual Studio 中 Windows 窗体设计器底部的托盘中。</span><span class="sxs-lookup"><span data-stu-id="1dc2e-109">When it is added to a form, the <xref:System.Windows.Forms.FolderBrowserDialog> component appears in the tray at the bottom of the Windows Forms Designer in Visual Studio.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d2caa-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="d2caa-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1dc2e-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1dc2e-110">See also</span></span>
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [<span data-ttu-id="d2caa-111">如何：选择使用 Windows 窗体 FolderBrowserDialog 组件的文件夹</span><span class="sxs-lookup"><span data-stu-id="d2caa-111">How to: Choose Folders with the Windows Forms FolderBrowserDialog Component</span></span>](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
-- [<span data-ttu-id="d2caa-112">FolderBrowserDialog 组件</span><span class="sxs-lookup"><span data-stu-id="d2caa-112">FolderBrowserDialog Component</span></span>](folderbrowserdialog-component-windows-forms.md)
+- [<span data-ttu-id="1dc2e-111">如何：使用 Windows 窗体 FolderBrowserDialog 组件选择文件夹</span><span class="sxs-lookup"><span data-stu-id="1dc2e-111">How to: Choose Folders with the Windows Forms FolderBrowserDialog Component</span></span>](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
+- [<span data-ttu-id="1dc2e-112">FolderBrowserDialog 组件</span><span class="sxs-lookup"><span data-stu-id="1dc2e-112">FolderBrowserDialog Component</span></span>](folderbrowserdialog-component-windows-forms.md)
