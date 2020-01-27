@@ -1,17 +1,17 @@
 ---
-title: 演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件
+title: 使用 TableLayoutPanel 排列控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with TableLayoutPanel
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 7b7380690d8668f46b98272e1d42640f23679b19
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 803a56f6416cf3b718890e96cf9f36ae6c4ee471
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799112"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740318"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件
 
@@ -51,7 +51,7 @@ ms.locfileid: "72799112"
 
 第一步是创建项目并设置窗体。
 
-#### <a name="to-create-the-project"></a>要创建项目
+#### <a name="to-create-the-project"></a>创建项目
 
 1. 创建名为 "TableLayoutPanelExample" 的 Windows 应用程序项目。 有关详细信息，请参阅[如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)。
 
@@ -187,7 +187,7 @@ ms.locfileid: "72799112"
 
 - 将 <xref:System.Windows.Forms.TableLayoutPanel> 控件停靠到父窗体。 调整窗体大小，并注意对布局产生的效果。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>

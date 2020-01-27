@@ -1,15 +1,16 @@
 ---
-title: 演练：在 Windows 窗体中承载 WPF 复合控件
+title: 在 Windows 窗体中承载 WPF 复合控件
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 59243e1810757ff0ff58a60ac3eb007bbc227be0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458932"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742680"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>演练：在 Windows 窗体中承载 WPF 复合控件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当您对 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 代码做了大量投资时，使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 而不是从头重新编写现有 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序会更有效。 常见的一种情况是，当你想要将一个或多个使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现的控件嵌入 Windows 窗体应用程序中。 有关自定义 WPF 控件的详细信息，请参阅[控件自定义](../controls/control-customization.md)。  
@@ -26,7 +27,7 @@ ms.locfileid: "73458932"
   
  有关本演练中阐释的任务的完整代码列表，请参阅[在 Windows 窗体示例中承载 WPF 复合控件](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WindowsFormsHostingWpfControl)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先决条件  
 
 若要完成本演练，必须具有 Visual Studio。  
   
@@ -230,19 +231,19 @@ namespace MyControls
   
 4. 将以下 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> 控件添加到窗体。  
   
-    |“属性”|Text|  
+    |Name|文本|  
     |----------|----------|  
-    |groupBox1|背景色|  
+    |groupBox1|Background Color|  
     |groupBox2|前景色|  
-    |groupBox3|字号|  
+    |groupBox3|Font Size|  
     |groupBox4|字体系列|  
-    |groupBox5|字形|  
+    |groupBox5|Font Style|  
     |groupBox6|字体粗细|  
     |groupBox7|来自控件的数据|  
   
 5. 将以下 <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> 控件添加到 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> 控件。  
   
-    |GroupBox|“属性”|Text|  
+    |GroupBox|Name|文本|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|原始|  
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
@@ -257,18 +258,18 @@ namespace MyControls
     |groupBox4|radioFamilyTimes|宋体, Times New Roman|  
     |groupBox4|radioFamilyWingDings|WingDings|  
     |groupBox5|radioStyleOriginal|普通|  
-    |groupBox5|radioStyleItalic|斜体|  
+    |groupBox5|radioStyleItalic|倾斜|  
     |groupBox6|radioWeightOriginal|原始|  
-    |groupBox6|radioWeightBold|粗体|  
+    |groupBox6|radioWeightBold|加粗|  
   
 6. 将以下 <xref:System.Windows.Forms.Label?displayProperty=nameWithType> 控件添加到最后一个 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>。 这些控件显示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 复合控件返回的数据。  
   
-    |GroupBox|“属性”|Text|  
+    |GroupBox|Name|文本|  
     |--------------|----------|----------|  
-    |groupBox7|lblName|姓名:|  
+    |groupBox7|lblName|名称：|  
     |groupBox7|lblAddress|街道地址:|  
     |groupBox7|lblCity|市/县:|  
-    |groupBox7|lblState|省/自治区/直辖市:|  
+    |groupBox7|lblState|状态：|  
     |groupBox7|lblZip|邮政编码:|  
   
 ### <a name="initializing-the-form"></a>初始化窗体  
@@ -311,7 +312,7 @@ namespace MyControls
   
  [!code-csharp[WindowsFormsHostingWpfControl#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#3)]  
   
- 生成并运行应用程序。 在 WPF 复合控件中添加一些文本，然后单击 **"确定"** 。 文本将显示在标签中。 此时，尚未添加代码来处理单选按钮。  
+ 构建并运行应用程序。 在 WPF 复合控件中添加一些文本，然后单击 **"确定"** 。 文本将显示在标签中。 此时，尚未添加代码来处理单选按钮。  
   
 ### <a name="modifying-the-appearance-of-the-control"></a>修改控件的外观  
  窗体上的 <xref:System.Windows.Forms.RadioButton> 控件将使用户能够更改 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 复合控件的前景色和背景色以及多个字体属性。 背景色由 <xref:System.Windows.Forms.Integration.ElementHost> 对象公开。 其余属性作为控件的自定义属性公开。  
@@ -320,9 +321,9 @@ namespace MyControls
   
  [!code-csharp[WindowsFormsHostingWpfControl#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#4)]  
   
- 生成并运行应用程序。 单击不同的单选按钮来查看在 WPF 复合控件上的效果。  
+ 构建并运行应用程序。 单击不同的单选按钮来查看在 WPF 复合控件上的效果。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

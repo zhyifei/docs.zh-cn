@@ -1,5 +1,5 @@
 ---
-title: Windows 窗体中的高 DPI 支持
+title: 높은 DPI 지원
 ms.date: 05/16/2017
 helpviewer_keywords:
 - High DPI in Windows Forms
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Windows Forms layout
 - Windows Forms dynamic resizing
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
-ms.openlocfilehash: f9183b15da24f70b6fceaa90f718c5af93a3cdda
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5c3125475c2de2cf83a3d97e356b26c0acdde99
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139080"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741895"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows 窗体中的高 DPI 支持
 
-从 .NET Framework 4.7 开始，Windows 窗体包括常见高 DPI 和动态 DPI 方案的增强功能。 这些方法包括：
+从 .NET Framework 4.7 开始，Windows 窗体包括常见高 DPI 和动态 DPI 方案的增强功能。 여기에는 다음이 포함됩니다.
 
 - 改进了许多 Windows 窗体控件（如 <xref:System.Windows.Forms.MonthCalendar> 控件和 <xref:System.Windows.Forms.CheckedListBox> 控件）的缩放和布局。
 
@@ -60,7 +60,7 @@ ms.locfileid: "73139080"
 
 - 调用静态 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法。
 
-  这应该是应用程序入口点中的第一个方法调用。 例如:
+  这应该是应用程序入口点中的第一个方法调用。 예를 들면 다음과 같습니다.:
 
   ```csharp
   static void Main()
@@ -94,7 +94,7 @@ ms.locfileid: "73139080"
 
 ## <a name="new-helper-methods-and-properties"></a>新的帮助器方法和属性
 
-.NET Framework 4.7 还添加了一些新的帮助器方法和属性，这些方法和属性提供了有关 DPI 缩放的信息，并允许您执行 DPI 缩放。 这些方法包括：
+.NET Framework 4.7 还添加了一些新的帮助器方法和属性，这些方法和属性提供了有关 DPI 缩放的信息，并允许您执行 DPI 缩放。 여기에는 다음이 포함됩니다.
 
 - <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>，它将值从逻辑到设备像素转换。
 
@@ -128,7 +128,7 @@ Console.WriteLine(Environment.OSVersion.Version.CompareTo(OsMinVersion));
 Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Windows 窗体添加配置元素](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
-- [调整 Windows 窗体的大小和比例](adjusting-the-size-and-scale-of-windows-forms.md)
+- [Windows Forms의 크기 및 배율 조정](adjusting-the-size-and-scale-of-windows-forms.md)

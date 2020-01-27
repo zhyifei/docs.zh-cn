@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Windows 窗体 Label 控件创建访问键
+title: 使用标签控件创建访问键
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,25 +17,25 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-ms.openlocfilehash: dd7f238f8c20ba990158f23344e36376d3b1cb7a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 800afc03e71435e2721456b93bb9704af01f714a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950540"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731046"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>如何：使用 Windows 窗体 Label 控件创建访问键
 Windows 窗体<xref:System.Windows.Forms.Label>控件可用于定义其他控件的访问键。 在标签控件中定义访问键时，用户可以同时按 ALT 键和指定的字符，以便将焦点移到 Tab 键顺序中排在其后面的控件。 由于标签不能接收焦点，因此焦点会自动移到 Tab 键顺序中的下一个控件。 使用此方法可将访问键分配给文本框、组合框、列表框和数据网格。  
   
 ### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>为具有标签的控件分配访问键  
   
-1. 首先绘制标签, 然后绘制另一个控件。  
+1. 首先绘制标签，然后绘制另一个控件。  
   
      或  
   
-     按任意顺序绘制控件, 并将标签<xref:System.Windows.Forms.Control.TabIndex%2A>的属性设置为一个小于另一个控件的。  
+     按任意顺序绘制控件，并将标签的 <xref:System.Windows.Forms.Control.TabIndex%2A> 属性设置为小于另一个控件的一个。  
   
-2. 将标签的<xref:System.Windows.Forms.Label.UseMnemonic%2A>属性设置为`true`。  
+2. 将标签的 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 属性设置为 `true`。  
   
 3. 在标签的 <xref:System.Windows.Forms.Label.Text%2A> 属性中使用与号 (&) 来分配标签的访问键。 有关详细信息，请参阅[为 Windows 窗体控件创建访问键](how-to-create-access-keys-for-windows-forms-controls.md)。  
   
@@ -63,8 +63,8 @@ Windows 窗体<xref:System.Windows.Forms.Label>控件可用于定义其他控件
     label2->Text = "&Copy && Paste";  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [如何：调整 Windows 窗体标签控件大小以适应其内容](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [如何：重设 Windows 窗体 Label 控件大小以适应其内容](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Label 控件概述](label-control-overview-windows-forms.md)
 - [Label 控件](label-control-windows-forms.md)

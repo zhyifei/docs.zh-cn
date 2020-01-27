@@ -1,5 +1,5 @@
 ---
-title: WPF 外接程序概述
+title: 外接程序概述
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add-ins and XAML browser applications [WPF]
@@ -12,77 +12,77 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 93904e308932ea41c736ca849ce0efb200502a7e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421088"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738938"
 ---
-# <a name="wpf-add-ins-overview"></a>WPF 外接程序概述
+# <a name="wpf-add-ins-overview"></a>WPF 추가 기능 개요
 
-<a name="Introduction"></a>.NET Framework 包含外接程序模型，开发人员可以使用该模型来创建支持外接程序扩展性的应用程序。 借助此外接程序模型，可以创建与应用程序功能集成并进行扩展的外接程序。 在某些情况下，应用程序还需要显示外接程序提供的用户界面。本主题演示 WPF 如何补充 .NET Framework 外接程序模型，以实现这些方案、其背后的体系结构、其优点和其局限性。
+<a name="Introduction"></a>.NET Framework 包含外接程序模型，开发人员可以使用该模型来创建支持外接程序扩展性的应用程序。 이 추가 기능 모델을 사용하면 애플리케이션 기능과 통합하고 이 기능을 확장하는 추가 기능을 만들 수 있습니다. 在某些情况下，应用程序还需要显示外接程序提供的用户界面。本主题演示 WPF 如何补充 .NET Framework 外接程序模型，以实现这些方案、其背后的体系结构、其优点和其局限性。
 
 <a name="Requirements"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
-熟悉 .NET Framework 外接程序模型是必需的。 有关详细信息，请参阅[外接程序和扩展性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。
+熟悉 .NET Framework 外接程序模型是必需的。 자세한 내용은 [추가 기능 및 확장성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))을 참조하세요.
 
 <a name="AddInsOverview"></a>
 
-## <a name="add-ins-overview"></a>外接程序概述
+## <a name="add-ins-overview"></a>추가 기능 개요
 
-为了需要对应用程序重新编译和重新部署才能引入新功能这一复杂过程，应用程序实现了扩展机制，使开发者（包括第一方和第三方）能够创建与应用程序集成的其他应用程序。 支持此扩展性类型的最常见方式是，使用外接程序（也称为“加载项”和“插件”）。 通过外接程序公开扩展性的实际应用程序示例包括：
+애플리케이션에서는 새 기능을 통합하기 위해 애플리케이션을 다시 컴파일하여 배포하는 복잡한 작업을 방지하도록 확장성 메커니즘을 구현하여 개발자(자사 및 타사)가 새 기능을 통합하는 다른 애플리케이션을 만들 수 있도록 합니다. 이러한 형식의 확장성을 지원하는 가장 일반적인 방법은 추가 기능(“추가 기능” 및 “플러그 인”이라고도 함)을 사용하는 것입니다. 추가 기능으로 확장성을 노출하는 실제 애플리케이션의 예에는 다음이 있습니다.
 
-- Internet Explorer 加载项。
+- Internet Explorer 추가 기능.
 
-- Windows Media Player 插件。
+- Windows Media Player 플러그 인.
 
-- Visual Studio 外接程序。
+- Visual Studio 추가 기능.
 
-例如，通过 Windows Media Player 外接程序模型，第三方开发人员可以实现“插件”，从而以各种方式对 Windows Media Player 进行扩展，包括为 Windows Media Player 本身不支持的媒体格式（例如 DVD、MP3）创建解码器和编码器，创建音频效果和外观。 尽管有一些实体和行为是所有外接程序模型共有的，但会生成每个外接程序模型以公开某个应用程序的特有功能。
+예를 들어, Windows Media Player 추가 기능 모델을 사용하면 타사 개발자가 다양한 방식으로 Windows Media Player를 확장하는 “플러그 인”을 구현할 수 있습니다. 이러한 방식에는 Windows Media Player에서 기본적으로 지원하지 않는 미디어 형식(예: DVD, MP3)의 디코더와 인코더, 오디오 효과 및 스킨이 포함됩니다. 모든 추가 기능 모델에 공통인 동작과 엔터티가 여러 개 있지만, 각 추가 기능 모델은 애플리케이션에 고유한 기능을 노출하도록 빌드되어 있습니다.
 
-典型外接程序扩展性解决方案的三大实体是“协定”、“外接程序”和“主机应用程序”。 协定会定义外接程序与主机应用程序之间的两种集成方式：
+일반적인 추가 기능 확장성 솔루션의 세 가지 기본 엔터티는 *계약*, *추가 기능* 및 *호스트 애플리케이션*입니다. 계약은 추가 기능이 다음 두 방법으로 호스트 애플리케이션과 통합하는 방법을 정의합니다.
 
-- 外接程序集成主机应用程序所实现的功能。
+- 추가 기능은 호스트 애플리케이션으로 구현된 기능과 통합됩니다.
 
-- 主机应用程序公开供外接程序集成的功能。
+- 호스트 애플리케이션에서 추가 기능과 통합될 기능을 노출합니다.
 
-为了使外接程序能发挥作用，主机应用程序需要在运行时找到它们并进行加载。 因此，支持外接程序的应用程序需要承担以下附加的职责：
+추가 기능을 사용하려면 호스트 애플리케이션에서 해당 기능을 찾아 런타임 시 로드해야 합니다. 따라서 추가 기능을 지원하는 애플리케이션에서는 다음과 같은 추가 작업을 담당합니다.
 
-- **发现**：查找遵循主机应用程序所支持的协定的外接程序。
+- **검색**: 호스트 애플리케이션에서 지원하는 계약을 준수하는 추가 기능 찾기.
 
-- **激活**：加载和运行外接程序并与它们建立通信。
+- **활성화**: 추가 기능과의 통신을 로드, 실행 및 설정.
 
-- **隔离**：使用应用程序域或进程建立隔离边界，以保护应用程序不受外接程序潜在安全问题和执行问题的影响。
+- **격리**: 애플리케이션 도메인 또는 프로세스를 사용하여 추가 기능의 잠재적인 보안 및 실행 문제로부터 애플리케이션을 보호하는 격리 경계 설정.
 
-- **通信**：通过调用方法和传递数据，允许外接程序和主机应用程序跨过隔离边界相互通信。
+- **통신**: 추가 기능과 호스트 애플리케이션을 통해 메서드를 호출하고 데이터를 전달하여 격리 경계를 넘어 서로 통신할 수 있도록 허용.
 
-- **生存期管理**：通过可预测的干净方式来加载和卸载应用程序域和进程（请参阅[应用程序域](../../app-domains/application-domains.md)）。
+- **수명 관리**: 예측 가능하고 정리된 방식으로 애플리케이션 도메인과 프로세스를 로드 및 언로드( [애플리케이션 도메인](../../app-domains/application-domains.md) 참조).
 
-- **版本管理**：确保在创建主机应用程序或外接程序的新版本后，它们仍可进行通信。
+- **버전 관리**: 호스트 애플리케이션과 추가 기능 중 하나의 새 버전이 만들어진 경우에도 계속 통신 가능한지 확인.
 
-总之，开发一个可靠的外接程序模型不是一项简单的任务。 出于此原因，.NET Framework 提供了一个用于生成外接程序模型的基础结构。
+근본적으로, 강력한 추가 기능 모델을 개발하는 것은 쉬운 작업이 아닙니다. 出于此原因，.NET Framework 提供了一个用于生成外接程序模型的基础结构。
 
 > [!NOTE]
-> 有关外接程序的更多详细信息，请参阅[外接程序和扩展性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。
+> 추가 기능에 대한 자세한 내용은 [추가 기능 및 확장성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))을 참조하세요.
 
 <a name="NETFrameworkAddInModelOverview"></a>
 
-## <a name="net-framework-add-in-model-overview"></a>.NET Framework 外接程序模型概述
+## <a name="net-framework-add-in-model-overview"></a>.NET Framework 추가 기능 모델 개요
 
-<xref:System.AddIn> 命名空间中的 .NET Framework 外接程序模型包含一组类型，这些类型旨在简化外接程序扩展性的开发。 .NET Framework 外接程序模型的基本单位为协定，该*协定*定义主机应用程序和外接程序之间的通信方式。 会使用特定于主机应用程序的协定*视图*向主机应用程序公开协定。 同样，向外接程序公开特定于外接程序的协定*视图*。 使用*适配器*，主机应用程序和外接程序可以在它们各自的协定视图之间进行通信。 协定、视图和适配器称为管道段，一组相关的管道段组成一条*管道*。 管道是 .NET Framework 外接程序模型支持发现、激活、安全隔离、执行隔离（使用应用程序域和进程）、通信、生存期管理和版本控制的基础。
+<xref:System.AddIn> 命名空间中的 .NET Framework 外接程序模型包含一组类型，这些类型旨在简化外接程序扩展性的开发。 .NET Framework 外接程序模型的基本单位为协定，该*协定*定义主机应用程序和外接程序之间的通信方式。 계약은 계약의 호스트-애플리케이션별 *보기*를 사용하여 호스트 애플리케이션에 노출됩니다. 마찬가지로 계약의 추가 기능별 *보기*가 추가 기능에 노출됩니다. 호스트 애플리케이션과 추가 기능이 계약의 각 보기 간에 통신할 수 있도록 *어댑터*가 사용됩니다. 계약, 보기 및 어댑터를 세그먼트라고 하며, 관련 세그먼트 집합이 *파이프라인*을 구성합니다. 管道是 .NET Framework 外接程序模型支持发现、激活、安全隔离、执行隔离（使用应用程序域和进程）、通信、生存期管理和版本控制的基础。
 
-所有这些支持使得开发人员能够生成与主机应用程序的功能相集成的外接程序。 不过，某些方案需要宿主应用程序显示外接程序提供的用户界面。由于 .NET Framework 中的每个表示技术都有自己的模型来实现用户界面，.NET Framework 外接程序模型不支持任何特定的表示技术。 而 WPF 却扩展了 .NET Framework 外接程序模型，其中包含外接程序的 UI 支持。
+개발자는 이러한 지원을 모두 활용하여 호스트 애플리케이션의 기능과 통합하는 추가 기능을 빌드할 수 있습니다. 不过，某些方案需要宿主应用程序显示外接程序提供的用户界面。由于 .NET Framework 中的每个表示技术都有自己的模型来实现用户界面，.NET Framework 外接程序模型不支持任何特定的表示技术。 而 WPF 却扩展了 .NET Framework 外接程序模型，其中包含外接程序的 UI 支持。
 
 <a name="WPFAddInModel"></a>
 
-## <a name="wpf-add-ins"></a>WPF 外接程序
+## <a name="wpf-add-ins"></a>WPF 추가 기능
 
 WPF 与 .NET Framework 外接程序模型一起使用，可以解决需要宿主应用程序从外接程序显示用户界面的各种方案。具体而言，WPF 使用以下两种编程模型解决了这些方案：
 
-1. **外接程序返回 UI**。 外接程序通过方法调用向宿主应用程序返回一个 UI，由协定定义。 此方案可用于以下情况：
+1. **추가 기능이 UI를 반환함**. 外接程序通过方法调用向宿主应用程序返回一个 UI，由协定定义。 이 시나리오는 다음과 같은 경우에 사용됩니다.
 
     - 外接程序返回的 UI 的外观依赖于只在运行时存在的数据或条件，如动态生成的报表。
 
@@ -90,26 +90,26 @@ WPF 与 .NET Framework 外接程序模型一起使用，可以解决需要宿主
 
     - 外接程序主要为主机应用程序执行服务，并使用 UI 向主机应用程序报告状态。
 
-2. **外接程序为 UI**。 外接程序是由协定定义的 UI。 此方案可用于以下情况：
+2. **추가 기능이 UI임**. 外接程序是由协定定义的 UI。 이 시나리오는 다음과 같은 경우에 사용됩니다.
 
-    - 外接程序提供的服务都需要显示，例如广告。
+    - 추가 기능에서 광고와 같이 표시되고 있지 않은 서비스를 제공하지 않는 경우.
 
     - 外接程序提供的服务的 UI 对于所有可使用该外接程序的宿主应用程序（如计算器或颜色选取器）都是通用的。
 
 这些方案要求可以在主机应用程序和外接程序应用程序域之间传递 UI 对象。 由于 .NET Framework 外接程序模型依赖于远程处理来在应用程序域之间进行通信，因此在它们之间传递的对象必须是可远程处理的。
 
-可远程处理的对象是某个类的实例，并执行以下一个或多个任务：
+원격으로 사용 가능한 개체는 다음 중 하나 이상을 수행하는 클래스의 인스턴스입니다.
 
 - 派生自 <xref:System.MarshalByRefObject> 类。
 
-- 实现 <xref:System.Runtime.Serialization.ISerializable> 接口。
+- <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현합니다.
 
 - 应用了 <xref:System.SerializableAttribute> 特性。
 
 > [!NOTE]
 > 有关创建可远程处理 .NET Framework 对象的详细信息，请参阅[使对象可远程](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))处理。
 
-WPF UI 类型不能远程处理。 为了解决此问题，WPF 扩展了 .NET Framework 外接程序模型，以允许从主机应用程序显示外接程序创建的 WPF UI。 此支持由 WPF 通过两种类型提供： <xref:System.AddIn.Contract.INativeHandleContract> 接口和 <xref:System.AddIn.Pipeline.FrameworkElementAdapters> 类实现的两个静态方法： <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> 和 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 从较高层面来看，这些类型和方法按以下方式使用：
+WPF UI 类型不能远程处理。 为了解决此问题，WPF 扩展了 .NET Framework 外接程序模型，以允许从主机应用程序显示外接程序创建的 WPF UI。 此支持由 WPF 通过两种类型提供： <xref:System.AddIn.Contract.INativeHandleContract> 接口和 <xref:System.AddIn.Pipeline.FrameworkElementAdapters> 类实现的两个静态方法： <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> 和 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 상위 수준에서는 대략적으로 이러한 형식과 메서드가 다음과 같은 방식으로 사용됩니다.
 
 1. WPF 要求外接程序提供的用户界面是直接或间接从 <xref:System.Windows.FrameworkElement>派生的类，如形状、控件、用户控件、布局面板和页面。
 
@@ -119,11 +119,11 @@ WPF UI 类型不能远程处理。 为了解决此问题，WPF 扩展了 .NET Fr
 
 4. 将 <xref:System.AddIn.Contract.INativeHandleContract> 传递到主机应用程序的应用程序域之后，必须通过调用 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>将重新打包为 <xref:System.Windows.FrameworkElement>。
 
-如何使用 <xref:System.AddIn.Contract.INativeHandleContract>、<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>和 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 取决于具体的方案。 下面几节介绍每个编程模型的详细信息。
+如何使用 <xref:System.AddIn.Contract.INativeHandleContract>、<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>和 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 取决于具体的方案。 다음 섹션에서는 각 프로그래밍 모델의 자세한 내용을 제공합니다.
 
 <a name="ReturnUIFromAddInContract"></a>
 
-## <a name="add-in-returns-a-user-interface"></a>外接程序返回用户界面
+## <a name="add-in-returns-a-user-interface"></a>추가 기능이 사용자 인터페이스를 반환함
 
 若要使外接程序向宿主应用程序返回 UI，需要满足以下要求：
 
@@ -143,7 +143,7 @@ WPF UI 类型不能远程处理。 为了解决此问题，WPF 扩展了 .NET Fr
 
 <a name="AddInIsAUI"></a>
 
-## <a name="add-in-is-a-user-interface"></a>外接程序为用户界面
+## <a name="add-in-is-a-user-interface"></a>추가 기능이 사용자 인터페이스임
 
 当外接程序为 UI 时，需要以下各项：
 
@@ -163,15 +163,15 @@ WPF UI 类型不能远程处理。 为了解决此问题，WPF 扩展了 .NET Fr
 
 <a name="ReturningMultipleUIsFromAnAddIn"></a>
 
-## <a name="returning-multiple-uis-from-an-add-in"></a>从外接程序返回多个 UI
+## <a name="returning-multiple-uis-from-an-add-in"></a>추가 기능에서 여러 UI 반환
 
-外接程序通常为宿主应用程序提供多个用户界面以显示。 例如，请考虑作为 UI 的外接程序，该外接程序还向宿主应用程序提供状态信息。 此类外接程序可以通过结合使用[外接程序返回用户界面](#ReturnUIFromAddInContract)和[外接程序为用户界面](#AddInIsAUI)模型中的技术来实现。
+外接程序通常为宿主应用程序提供多个用户界面以显示。 例如，请考虑作为 UI 的外接程序，该外接程序还向宿主应用程序提供状态信息。 이와 같은 추가 기능은 [추가 기능이 사용자 인터페이스를 반환함](#ReturnUIFromAddInContract) 및 [추가 기능이 사용자 인터페이스임](#AddInIsAUI) 모델의 기술을 조합하여 구현할 수 있습니다.
 
 <a name="AddInsAndXBAPs"></a>
 
-## <a name="add-ins-and-xaml-browser-applications"></a>外接程序和 XAML 浏览器应用程序
+## <a name="add-ins-and-xaml-browser-applications"></a>추가 기능 및 XAML 브라우저 애플리케이션
 
-到目前为止，示例中的主机应用程序都安装为独立应用程序。 但 XAML 浏览器应用程序（Xbap）也可以承载外接程序，但有以下其他生成和实现要求：
+지금까지의 예에서는 호스트 애플리케이션이 독립형 애플리케이션으로 설치되었습니다. 但 XAML 浏览器应用程序（Xbap）也可以承载外接程序，但有以下其他生成和实现要求：
 
 - XBAP 应用程序清单必须经过专门配置，以将管道（文件夹和程序集）和外接程序程序集下载到客户端计算机上的 ClickOnce 应用程序缓存中，该文件位于 XBAP 所在的文件夹中。
 
@@ -179,39 +179,39 @@ WPF UI 类型不能远程处理。 为了解决此问题，WPF 扩展了 .NET Fr
 
 - 如果外接程序引用位于源站点的松散文件，XBAP 必须将外接程序加载到特殊安全上下文中;当由 Xbap 承载时，外接程序只能引用位于主机应用程序源站点的松散文件。
 
-下面几个小节将详细介绍这些任务。
+이러한 작업은 다음 하위 섹션에 자세히 설명되어 있습니다.
 
-### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>配置用于 ClickOnce 部署的管道和外接程序
+### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>ClickOnce 배포를 위한 파이프라인 및 추가 기능 구성
 
-Xbap 将下载到并从 ClickOnce 部署缓存中的一个安全文件夹运行。 为了使 XBAP 承载外接程序，还必须将管道和外接程序程序集下载到 safe 文件夹中。 为此，需要将应用程序清单配置为包含要下载的管道和外接程序程序集。 尽管管道和外接程序程序集需要位于主机 XBAP 项目的根文件夹中，但对于 Visual Studio 检测管道程序集，但这在 Visual Studio 中最容易实现。
+Xbap 将下载到并从 ClickOnce 部署缓存中的一个安全文件夹运行。 为了使 XBAP 承载外接程序，还必须将管道和外接程序程序集下载到 safe 文件夹中。 이 작업을 수행하려면 다운로드할 파이프라인과 추가 기능 어셈블리를 모두 포함하도록 애플리케이션 매니페스트를 구성해야 합니다. 尽管管道和外接程序程序集需要位于主机 XBAP 项目的根文件夹中，但对于 Visual Studio 检测管道程序集，但这在 Visual Studio 中最容易实现。
 
 因此，第一步是通过设置每个管道程序集和外接程序程序集项目的生成输出，将管道和外接程序程序集生成到 XBAP 项目的根。 下表显示了管道程序集项目和外接程序程序集项目的生成输出路径，该程序集项目位于与宿主 XBAP 项目相同的解决方案和根文件夹中。
 
-表 1：XBAP 承载的管道程序集的生成输出路径
+표 1: XBAP로 호스팅되는 파이프라인 어셈블리의 출력 경로 빌드
 
-|管道程序集项目|生成输出路径|
+|파이프라인 어셈블리 프로젝트|빌드 출력 경로|
 |-------------------------------|-----------------------|
-|协定|`..\HostXBAP\Contracts\`|
-|加载项视图|`..\HostXBAP\AddInViews\`|
-|加载项方适配器|`..\HostXBAP\AddInSideAdapters\`|
-|宿主端适配器|`..\HostXBAP\HostSideAdapters\`|
-|外接程序|`..\HostXBAP\AddIns\WPFAddIn1`|
+|계약|`..\HostXBAP\Contracts\`|
+|추가 기능 뷰|`..\HostXBAP\AddInViews\`|
+|추가 기능측 어댑터|`..\HostXBAP\AddInSideAdapters\`|
+|호스트측 어댑터|`..\HostXBAP\HostSideAdapters\`|
+|추가 기능|`..\HostXBAP\AddIns\WPFAddIn1`|
 
 下一步是通过执行以下操作，将管道程序集和外接程序程序集指定为 Visual Studio 中的 Xbap 内容文件：
 
-1. 通过在“解决方案资源管理器”中右键单击每个管道文件夹，然后选择“包括在项目中”，将管道和外接程序程序集包括在项目中。
+1. 솔루션 탐색기에서 각 파이프라인 폴더를 마우스 오른쪽 단추로 클릭하고 **프로젝트에 포함**을 선택하여 프로젝트에 파이프라인 및 추가 기능 어셈블리 포함.
 
-2. 在“属性”窗口中，将每个管道程序集和外接程序程序集的“生成操作”都设置为“内容”。
+2. **속성** 창에서 각 파이프라인 어셈블리 및 추가 기능 어셈블리의 **빌드 작업**을 **콘텐츠**로 설정.
 
-最后一步是配置应用程序清单，以包含要下载的管道程序集文件和外接程序程序集文件。 文件应位于 XBAP 应用程序所占用的 ClickOnce 缓存中文件夹根目录的文件夹中。 通过执行以下操作，可以在 Visual Studio 中实现该配置：
+마지막 단계에서는 다운로드할 파이프라인 어셈블리 파일과 추가 기능 어셈블리 파일을 포함하도록 애플리케이션 매니페스트를 구성합니다. 文件应位于 XBAP 应用程序所占用的 ClickOnce 缓存中文件夹根目录的文件夹中。 通过执行以下操作，可以在 Visual Studio 中实现该配置：
 
 1. 右键单击 XBAP 项目，单击 "**属性**"，单击 "**发布**"，然后单击 "**应用程序文件**" 按钮。
 
-2. 在“应用程序文件”对话框中，将每个管道和外接程序 DLL 的“发布状态”都设置为“包括(自动)”，并将每个管道和外接程序 DLL 的“下载组”都设置为“(必需)”。
+2. **애플리케이션 파일** 대화 상자에서 각 파이프라인과 추가 기능 DLL의 **게시 상태**를 **포함(자동)** 으로 설정하고 각 파이프라인과 추가 기능 DLL에 대해 **그룹 다운로드**을 **(필수)** 로 설정합니다.
 
-### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>从应用程序基使用管道和外接程序
+### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>애플리케이션 기준 위치에서 파이프라인과 추가 기능 사용
 
-为 ClickOnce 部署配置管道和外接程序时，会将它们下载到与 XBAP 相同的 ClickOnce 缓存文件夹中。 若要从 XBAP 使用管道和外接程序，XBAP 代码必须从应用程序基获取它们。 使用管道和外接程序的 .NET Framework 外接程序模型的各种类型和成员为此方案提供特殊支持。 首先，路径由 <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> 枚举值标识。 将此值用于使用管道的相关外接程序成员的重载，这些成员包括：
+为 ClickOnce 部署配置管道和外接程序时，会将它们下载到与 XBAP 相同的 ClickOnce 缓存文件夹中。 若要从 XBAP 使用管道和外接程序，XBAP 代码必须从应用程序基获取它们。 使用管道和外接程序的 .NET Framework 外接程序模型的各种类型和成员为此方案提供特殊支持。 首先，路径由 <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> 枚举值标识。 다음을 포함하는 파이프라인을 사용하기 위해 관련 추가 기능 멤버의 오버로드와 함께 이 값을 사용합니다.
 
 - <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>
 
@@ -221,13 +221,13 @@ Xbap 将下载到并从 ClickOnce 部署缓存中的一个安全文件夹运行�
 
 - <xref:System.AddIn.Hosting.AddInStore.Update%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>
 
-### <a name="accessing-the-hosts-site-of-origin"></a>访问宿主的源站点
+### <a name="accessing-the-hosts-site-of-origin"></a>호스트의 원본 사이트에 액세스
 
-为确保外接程序可以引用源站点的文件，必须使用等效于主机应用程序的安全隔离来加载外接程序。 此安全级别由 <xref:System.AddIn.Hosting.AddInSecurityLevel.Host?displayProperty=nameWithType> 枚举值标识，并在激活外接程序时传递到 <xref:System.AddIn.Hosting.AddInToken.Activate%2A> 方法。
+추가 기능이 원본 사이트의 파일을 참조할 수 있도록 호스트 애플리케이션과 동일한 수준의 보안 격리로 추가 기능을 로드해야 합니다. 此安全级别由 <xref:System.AddIn.Hosting.AddInSecurityLevel.Host?displayProperty=nameWithType> 枚举值标识，并在激活外接程序时传递到 <xref:System.AddIn.Hosting.AddInToken.Activate%2A> 方法。
 
 <a name="WPFAddInModelArchitecture"></a>
 
-## <a name="wpf-add-in-architecture"></a>WPF 外接程序体系结构
+## <a name="wpf-add-in-architecture"></a>WPF 추가 기능 아키텍처
 
 正如我们所看到的，在最高级别，WPF 允许 .NET Framework 外接程序使用 <xref:System.AddIn.Contract.INativeHandleContract>、<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 和 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>实现直接或间接从 <xref:System.Windows.FrameworkElement>派生的用户界面。 结果是，主机应用程序返回了从主机应用程序中的 UI 显示的 <xref:System.Windows.FrameworkElement>。
 
@@ -239,20 +239,20 @@ Xbap 将下载到并从 ClickOnce 部署缓存中的一个安全文件夹运行�
 
 - 在宿主应用程序端，WPF 将 <xref:System.Windows.Interop.HwndSource> 作为从 <xref:System.Windows.Interop.HwndHost> 派生并使用 <xref:System.AddIn.Contract.INativeHandleContract>的内部 WPF 类重新打包。 此类的实例由 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> 向宿主应用程序返回。
 
-<xref:System.Windows.Interop.HwndHost> 存在，用于显示 WPF 用户界面中由窗口句柄标识的用户界面。 有关详细信息，请参阅 [WPF 和 Win32 互操作](../advanced/wpf-and-win32-interoperation.md)。
+<xref:System.Windows.Interop.HwndHost> 存在，用于显示 WPF 用户界面中由窗口句柄标识的用户界面。 자세한 내용은 [WPF 및 Win32 상호 운용성](../advanced/wpf-and-win32-interoperation.md)을 참조하세요.
 
 在 "摘要" 中，<xref:System.AddIn.Contract.INativeHandleContract>、<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>和 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> 存在，以允许将 WPF UI 的窗口句柄从外接程序传递到主机应用程序，在该应用程序中，将由 <xref:System.Windows.Interop.HwndHost> 并显示宿主应用程序的 UI。
 
 > [!NOTE]
 > 由于宿主应用程序获取 <xref:System.Windows.Interop.HwndHost>，因此主机应用程序无法将 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> 返回的对象转换为该外接程序（例如，<xref:System.Windows.Controls.UserControl>）所实现的类型。
 
-<xref:System.Windows.Interop.HwndHost> 在本质上存在一些限制，这些限制会影响主机应用程序的使用方式。 不过，WPF 扩展了 <xref:System.Windows.Interop.HwndHost> 具有一些外接程序方案的功能。 下面介绍这些优点和限制。
+<xref:System.Windows.Interop.HwndHost> 在本质上存在一些限制，这些限制会影响主机应用程序的使用方式。 不过，WPF 扩展了 <xref:System.Windows.Interop.HwndHost> 具有一些外接程序方案的功能。 이러한 이점과 한계는 아래에 설명되어 있습니다.
 
 <a name="WPFAddInModelBenefits"></a>
 
-## <a name="wpf-add-in-benefits"></a>WPF 外接程序的优点
+## <a name="wpf-add-in-benefits"></a>WPF 추가 기능의 이점
 
-因为 WPF 外接程序用户界面是使用派生自 <xref:System.Windows.Interop.HwndHost>的内部类从主机应用程序显示的，所以这些用户界面受与 WPF UI 服务相关的 <xref:System.Windows.Interop.HwndHost> 的功能的约束，如布局、呈现、数据绑定、样式、模板和资源。 不过，WPF 通过其他功能增强了其内部 <xref:System.Windows.Interop.HwndHost> 子类，其中包括：
+因为 WPF 外接程序用户界面是使用派生自 <xref:System.Windows.Interop.HwndHost>的内部类从主机应用程序显示的，所以这些用户界面受与 WPF UI 服务有关的 <xref:System.Windows.Interop.HwndHost> 的功能的约束，如布局、呈现、数据绑定、样式、模板和资源。 不过，WPF 通过其他功能增强了其内部 <xref:System.Windows.Interop.HwndHost> 子类，其中包括：
 
 - 在宿主应用程序的 UI 和外接程序的 UI 之间进行 tab 键切换。 请注意，"外接程序是 UI" 编程模型要求外接程序端适配器覆盖 <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> 来启用 tab 键切换，无论外接程序是完全信任的还是部分信任的。
 
@@ -266,19 +266,19 @@ Xbap 将下载到并从 ClickOnce 部署缓存中的一个安全文件夹运行�
 
   - 对于 "外接程序是 UI" 编程模型，需要重写外接程序端适配器上的 <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>，并调用 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> （如前面的示例中所示），就像从宿主端适配器调用外接程序端适配器的 `QueryContract` 实现一样。
 
-- 提供多个应用程序域执行保护。 由于应用程序域的限制，因此即使存在隔离边界，外接程序应用程序域中引发的未经处理的异常也会导致整个应用程序出现故障。 不过，WPF 和 .NET Framework 外接程序模型提供一种简单的方法来解决此问题并提高应用程序的稳定性。 如果主机应用程序是 WPF 应用程序，则显示 UI 的 WPF 外接程序会为运行应用程序域的线程创建 <xref:System.Windows.Threading.Dispatcher>。 您可以通过处理 WPF 外接程序的 <xref:System.Windows.Threading.Dispatcher>的 <xref:System.Windows.Threading.Dispatcher.UnhandledException> 事件来检测应用程序域中发生的所有未处理的异常。 可以从 <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> 属性获取 <xref:System.Windows.Threading.Dispatcher>。
+- 여러 애플리케이션 도메인 실행 보호 제공. 애플리케이션 도메인의 한계로 인해 추가 기능 애플리케이션 도메인에서 throw된 처리되지 않은 예외가 발생하면 격리 경계가 있는 경우에도 전체 애플리케이션이 중단됩니다. 不过，WPF 和 .NET Framework 外接程序模型提供一种简单的方法来解决此问题并提高应用程序的稳定性。 如果主机应用程序是 WPF 应用程序，则显示 UI 的 WPF 外接程序会为运行应用程序域的线程创建 <xref:System.Windows.Threading.Dispatcher>。 您可以通过处理 WPF 外接程序的 <xref:System.Windows.Threading.Dispatcher>的 <xref:System.Windows.Threading.Dispatcher.UnhandledException> 事件来检测应用程序域中发生的所有未处理的异常。 可以从 <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> 属性获取 <xref:System.Windows.Threading.Dispatcher>。
 
 <a name="WPFAddInModelLimitations"></a>
 
-## <a name="wpf-add-in-limitations"></a>WPF 外接程序限制
+## <a name="wpf-add-in-limitations"></a>WPF 추가 기능 한계
 
 除了 WPF 添加到 <xref:System.Windows.Interop.HwndSource>、<xref:System.Windows.Interop.HwndHost>和窗口句柄提供的默认行为以外，还存在从主机应用程序显示的外接程序用户界面的限制：
 
 - 宿主应用程序显示的外接程序用户界面不遵守主机应用程序的剪辑行为。
 
-- 互操作性方案中的“空域”概念也适用于外接程序（请参阅[技术区概述](../advanced/technology-regions-overview.md)）。
+- 상호 운용성 시나리오의 *에어스페이스* 개념도 추가 기능에 적용됩니다([기술 영역 개요](../advanced/technology-regions-overview.md) 참조).
 
-- 宿主应用程序的 UI 服务（如资源继承、数据绑定和命令）不会自动提供给外接程序用户界面。 若要向外接程序提供这些服务，需要更新管道。
+- 宿主应用程序的 UI 服务（如资源继承、数据绑定和命令）不会自动提供给外接程序用户界面。 추가 기능에 이러한 서비스를 제공하려면 파이프라인을 업데이트해야 합니다.
 
 - 外接程序 UI 不能旋转、缩放、倾斜或以其他方式受转换的影响（请参阅[转换概述](../graphics-multimedia/transforms-overview.md)）。
 
@@ -304,15 +304,15 @@ Xbap 将下载到并从 ClickOnce 部署缓存中的一个安全文件夹运行�
 
 <a name="PerformanceOptimization"></a>
 
-## <a name="performance-optimization"></a>性能优化
+## <a name="performance-optimization"></a>성능 최적화
 
-默认情况下，当使用多个应用程序域时，每个应用程序所需的各种 .NET Framework 程序集都将加载到该应用程序的域中。 因此，创建新应用程序域和在应用程序域中启动应用程序所需的时间可能会影响性能。 不过，通过指示应用程序在已加载的应用程序域之间共享程序集，.NET Framework 提供了一种减少开始时间的方法。 为此，请使用 <xref:System.LoaderOptimizationAttribute> 特性，该特性必须应用于入口点方法（`Main`）。 这种情况下，只能使用代码来实现应用程序定义（请参阅[应用程序管理概述](application-management-overview.md)）。
+默认情况下，当使用多个应用程序域时，每个应用程序所需的各种 .NET Framework 程序集都将加载到该应用程序的域中。 결과적으로 새 애플리케이션 도메인을 만들고 이 도메인의 애플리케이션을 시작하는 데 필요한 시간이 성능에 영향을 미칠 수 있습니다. 不过，通过指示应用程序在已加载的应用程序域之间共享程序集，.NET Framework 提供了一种减少开始时间的方法。 为此，请使用 <xref:System.LoaderOptimizationAttribute> 特性，该特性必须应用于入口点方法（`Main`）。 이 경우, 애플리케이션 정의를 구현하는 코드만 사용해야 합니다([애플리케이션 관리 개요](application-management-overview.md) 참조).
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.LoaderOptimizationAttribute>
-- [外接程序和扩展性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [应用程序域](../../app-domains/application-domains.md)
+- [추가 기능 및 확장성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [애플리케이션 도메인](../../app-domains/application-domains.md)
 - [.NET Framework 远程处理概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [使对象可远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [帮助主题](how-to-topics.md)
+- [방법 항목](how-to-topics.md)

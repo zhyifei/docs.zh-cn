@@ -1,5 +1,5 @@
 ---
-title: 如何：设置 Windows 窗体 DataGridView 控件中的字体和颜色样式
+title: 设置 DataGridView 控件中的字体和颜色样式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], font styles
 - data grids [Windows Forms], color styles
 ms.assetid: 588f2c57-d963-41b1-9c1d-d02d71818113
-ms.openlocfilehash: ad2426ed9643fd46927c4f8b6373fedbec372d38
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f1ee9131cfc0b28a5f6263dcd6254d27a092cc62
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638095"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746754"
 ---
 # <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>如何：设置 Windows 窗体 DataGridView 控件中的字体和颜色样式
 可以通过设置 <xref:System.Windows.Forms.DataGridViewCellStyle> 类的属性，指定 <xref:System.Windows.Forms.DataGridView> 控件内单元格的可视外观。 可以从 <xref:System.Windows.Forms.DataGridView> 类及其伴生类的各个属性检索此类的实例，或可实例化 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象以分配到这些属性。  
   
  以下步骤演示使用 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> 属性进行单元格外观的基本自定义。 控件中每个单元格将继承通过此属性指定的样式，除非它们在列、行或单元格级别中重写。 有关样式继承的示例，请参阅[如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。 有关的 <xref:System.Windows.Forms.DataGridViewCellStyle> 类更多用法的信息，请参阅“另请参阅”部分中列出的主题。  
   
- Visual Studio 中对此任务提供广泛支持。  另请参阅[如何：设置 Windows 窗体 DataGridView 控件使用设计器的默认单元格样式和数据格式](default-cell-styles-datagridview.md)。  
+ Visual Studio 中对此任务提供广泛支持。  另请参阅[如何：使用设计器设置 Windows 窗体 DataGridView 控件的默认单元格样式和数据格式](default-cell-styles-datagridview.md)。  
   
 ### <a name="to-specify-the-font-used-by-datagridview-cells"></a>若要指定 DataGridView 单元格所使用的字体  
   
@@ -56,10 +56,10 @@ ms.locfileid: "64638095"
   
 - 对 <xref:System?displayProperty=nameWithType><xref:System.Drawing?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   
-## <a name="robust-programming"></a>可靠编程  
+## <a name="robust-programming"></a>可靠的编程  
  为实现最大的可伸缩性，应在使用相同样式的多个行、列或单元格间共享 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象，而不是分别设置单个元素的样式属性。 有关详细信息，请参阅[缩放 Windows 窗体 DataGridView 控件的最佳做法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

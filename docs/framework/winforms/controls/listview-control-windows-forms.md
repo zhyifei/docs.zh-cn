@@ -1,5 +1,5 @@
 ---
-title: ListView 控件（Windows 窗体）
+title: ListView 控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lists
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: a5f20ec34a1b4b41ec1aee667b5d4bfb0c3eebb1
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 009739f78f334d09a9f7e4f0e9f171669014b909
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960357"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745144"
 ---
 # <a name="listview-control-windows-forms"></a>ListView 控件（Windows 窗体）
 Windows 窗体 `ListView` 控件显示带图标的项列表。 你可以使用列表视图创建类似 Windows 资源管理器右窗格的用户界面。  
@@ -62,7 +62,7 @@ Windows 窗体 `ListView` 控件显示带图标的项列表。 你可以使用�
   
 - [演练：使用设计器创建带有 ListView 和 TreeView 控件的资源管理器样式界面](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Windows.Forms.ListView> 类  
  对此类进行描述，并提供指向其所有成员的链接。  
   

@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Windows 窗体中更改 ToolStrip 项的间距和对齐方式
+title: 如何：更改 ToolStrip 项的间距和对齐方式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: c7a874659be8dbaec66b78e1e065bcbec21da3b4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 805fbac5fe33071006f29692d503e5c57eacd765
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650881"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746559"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>如何：在 Windows 窗体中更改 ToolStrip 项的间距和对齐方式
-<xref:System.Windows.Forms.ToolStrip>控件完全支持布局功能，例如调整大小的间距<xref:System.Windows.Forms.ToolStripItem>上的控件相对于彼此，控件的排列<xref:System.Windows.Forms.ToolStrip>，并相对于控件的间距<xref:System.Windows.Forms.ToolStrip>。  
+<xref:System.Windows.Forms.ToolStrip> 控件完全支持布局功能，如调整大小、<xref:System.Windows.Forms.ToolStripItem> 控件之间的间距、<xref:System.Windows.Forms.ToolStrip>上的控件排列以及控件与 <xref:System.Windows.Forms.ToolStrip>的间距。  
   
- 因为默认值<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>属性是`true`，除非设置，将自动调整控件<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>属性设置为`false`。  
+ 由于 <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> 属性的默认值为 `true`，因此控件将自动调整大小，除非您将 <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> 属性设置为 `false`。  
   
-### <a name="to-manually-size-a-toolstripitem"></a>若要手动调整大小 ToolStripItem  
+### <a name="to-manually-size-a-toolstripitem"></a>手动调整 ToolStripItem 的大小  
   
-1. 设置<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>属性设置为`false`为关联的控件。  
+1. 将关联控件的 <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> 属性设置为 `false`。  
   
     ```vb  
     ToolStripButton1.AutoSize = False  
@@ -33,13 +33,13 @@ ms.locfileid: "64650881"
     toolStripButton1.AutoSize = false;  
     ```  
   
-2. 设置<xref:System.Windows.Forms.ToolStripItem.Size%2A>属性关联的所需的方式<xref:System.Windows.Forms.ToolStripItem>。  
+2. 按所需的方式为关联 <xref:System.Windows.Forms.ToolStripItem>设置 <xref:System.Windows.Forms.ToolStripItem.Size%2A> 属性。  
   
-### <a name="to-set-the-spacing-of-a-toolstripitem"></a>若要设置 ToolStripItem 的间距  
+### <a name="to-set-the-spacing-of-a-toolstripitem"></a>设置 ToolStripItem 的间距  
   
-1. 将所需的值，以像素为单位，插入到<xref:System.Windows.Forms.ToolStripItem.Margin%2A>关联控件的属性。  
+1. 在关联控件的 <xref:System.Windows.Forms.ToolStripItem.Margin%2A> 属性中插入所需的值（以像素为单位）。  
   
-     值<xref:System.Windows.Forms.ToolStripItem.Margin%2A>属性按此顺序指定项与相邻项之间的间距：左侧、 顶部、 右侧和底部。  
+     <xref:System.Windows.Forms.ToolStripItem.Margin%2A> 属性的值按此顺序指定项和相邻项之间的间距： Left、Top、Right 和底端。  
   
     ```vb  
     ToolStripTextBox1.Margin = New System.Windows.Forms.Padding _  
@@ -51,9 +51,9 @@ ms.locfileid: "64650881"
         (3, 0, 3, 0);  
     ```  
   
-### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a>若要使 ToolStripItem ToolStrip 的右侧对齐  
+### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a>将 ToolStripItem 与 ToolStrip 右端对齐  
   
-1. 设置<xref:System.Windows.Forms.ToolStripItem.Alignment%2A>属性设置为<xref:System.Windows.Forms.ToolStripItemAlignment.Right>为关联的控件。 默认情况下<xref:System.Windows.Forms.ToolStripItem.Alignment%2A>设置为<xref:System.Windows.Forms.ToolStripItemAlignment.Left>，其中将左侧和右侧的控件对齐<xref:System.Windows.Forms.ToolStrip>。  
+1. 将关联控件的 <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> 属性设置为 <xref:System.Windows.Forms.ToolStripItemAlignment.Right>。 默认情况下，<xref:System.Windows.Forms.ToolStripItem.Alignment%2A> 设置为 <xref:System.Windows.Forms.ToolStripItemAlignment.Left>，这会使控件与 <xref:System.Windows.Forms.ToolStrip>的左侧对齐。  
   
     ```vb  
     ToolStripSplitButton1.Alignment = _  
@@ -65,9 +65,9 @@ ms.locfileid: "64650881"
         System.Windows.Forms.ToolStripItemAlignment.Right;  
     ```  
   
-### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a>若要排列的各个工具条上的 ToolStrip 项  
+### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a>在 ToolStrip 上排列 ToolStrip 项  
   
-- 设置<xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A>属性的值<xref:System.Windows.Forms.ToolStripLayoutStyle>想。  
+- 将 <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> 属性设置为所需 <xref:System.Windows.Forms.ToolStripLayoutStyle> 的值。  
   
     ```vb  
     ToolStripDropDown1.LayoutStyle = _  
@@ -79,7 +79,7 @@ ms.locfileid: "64650881"
         System.Windows.Forms.ToolStripLayoutStyle.Flow;  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.Control.Layout>

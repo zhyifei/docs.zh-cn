@@ -2,35 +2,35 @@
 title: 事务模型
 ms.date: 03/30/2017
 ms.assetid: 48a8bc1b-128b-4cf1-a421-8cc73223c340
-ms.openlocfilehash: 8731b72d0657aa420dbb020e216c3af059916ce9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6c78a5342bf19d19308352cddc241f436bfcb3a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050774"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745319"
 ---
 # <a name="transaction-models"></a>事务模型
 本主题描述 Microsoft 提供的事务编程模型和基础结构组件之间的关系。  
   
- 使用事务时 Windows Communication Foundation (WCF) 中，务必了解不选择不同的事务模型之间但不同层的集成和一致的模型而不操作。  
+ 使用 Windows Communication Foundation （WCF）中的事务时，务必要了解不要在不同的事务模型之间进行选择，而是在集成且一致的模型的不同层上操作。  
   
  以下各部分描述了三个主要事务组件。  
   
 ## <a name="windows-communication-foundation-transactions"></a>Windows Communication Foundation 事务  
- WCF 中的事务支持允许您编写事务性服务。 此外，它对 WS-AtomicTransaction (WS-AT) 协议的支持，与应用程序可以使事务流动到使用 WCF 或第三方技术生成的 Web 服务。  
+ WCF 中的事务支持可让你编写事务性服务。 此外，通过其对 WS-ATOMICTRANSACTION （WS-AT）协议的支持，应用程序可以将事务流式传输到使用 WCF 或第三方技术生成的 Web 服务。  
   
- 在 WCF 服务或应用程序中，WCF 事务功能提供属性和配置用于以声明方式指定基础结构如何以及何时应创建、 流、 和同步事务。  
+ 在 WCF 服务或应用程序中，WCF 事务功能提供了属性和配置，用于以声明方式指定基础结构创建、流动和同步事务的方式和时间。  
   
 ## <a name="systemtransactions-transactions"></a>System.Transactions 事务  
  <xref:System.Transactions> 命名空间同时提供了一个基于 <xref:System.Transactions.Transaction> 类的显式编程模型和一个使用 <xref:System.Transactions.TransactionScope> 类的隐式编程模型（在此模型中，基础结构自动管理事务）。  
   
- 有关如何创建事务应用程序使用这两种模型的详细信息，请参阅[编写事务应用程序](https://go.microsoft.com/fwlink/?LinkId=94947)。  
+ 有关如何使用这两种模型创建事务应用程序的详细信息，请参阅[编写事务应用程序](https://go.microsoft.com/fwlink/?LinkId=94947)。  
   
- 中的 WCF 服务或应用程序，<xref:System.Transactions>提供编程模型，用于创建客户端应用程序中的事务和显式进行交互与事务，在需要时，在服务中。  
+ 在 WCF 服务或应用程序中，<xref:System.Transactions> 提供用于在客户端应用程序中创建事务的编程模型，并在需要时，在服务中显式与事务进行交互。  
   
 ## <a name="msdtc-transactions"></a>MSDTC 事务  
  Microsoft Distributed Transaction Coordinator (MSDTC) 是一个事务管理器，它为分布式事务提供支持。  
   
- 有关详细信息，请参阅[DTC 程序员参考](https://go.microsoft.com/fwlink/?LinkId=94948)。  
+ 有关详细信息，请参阅[DTC 程序员参考](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108(v=vs.85))。  
   
- 在 WCF 服务或应用程序中，MSDTC 提供客户端或服务中创建的事务协调的基础结构。
+ 在 WCF 服务或应用程序中，MSDTC 提供基础结构，用于协调客户端或服务中创建的事务。

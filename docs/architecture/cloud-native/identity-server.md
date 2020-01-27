@@ -2,12 +2,12 @@
 title: 适用于云本机应用的 IdentityServer
 description: 构建适用于 Azure 的云本机 .NET 应用 |IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: e96395766d1a4b63815c10c2c90e35a8f7f9159d
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 48d0b95a40682f3127127851781b4d0e26e44630
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568468"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728582"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>适用于云原生应用程序的 IdentityServer
 
@@ -96,13 +96,13 @@ IdentityServer 还托管了公共演示网站，可用于测试各种协议和�
 
 ## <a name="javascript-clients"></a>JavaScript 客户端
 
-许多云本机应用程序在前端使用服务器端 Api 和丰富的客户端单页面应用程序（Spa）。 IdentityServer 通过 NPM 提供了一个[JavaScript 客户端](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html)（`oidc-client.js`），可以将其添加到 spa，使其能够使用 IdentityServer 进行登录、注销和 web api 基于令牌的身份验证。
+许多云本机应用程序在前端使用服务器端 Api 和丰富的客户端单页面应用程序（Spa）。 IdentityServer 通过 NPM 提供了一个[JavaScript 客户端](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)（`oidc-client.js`），可以将其添加到 spa，使其能够使用 IdentityServer 进行登录、注销和 web api 基于令牌的身份验证。
 
 ## <a name="references"></a>引用
 
 - [IdentityServer 文档](http://docs.identityserver.io/en/latest/)
 - [应用程序类型](https://docs.microsoft.com/azure/active-directory/develop/app-types)
-- [JavaScript OIDC 客户端](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html)
+- [JavaScript OIDC 客户端](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]
 >[上一页](azure-active-directory.md)

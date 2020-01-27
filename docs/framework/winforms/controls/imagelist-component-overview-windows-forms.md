@@ -1,5 +1,5 @@
 ---
-title: ImageList 组件概述（Windows 窗体）
+title: ImageList 组件概述
 ms.date: 03/30/2017
 f1_keywords:
 - ImageList
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - icon list control
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
-ms.openlocfilehash: d4513439594c9bceac3463a5b878f9059a16046e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b46204375cb046d637f4c9e1d888f37d10ea1f57
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645701"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728100"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList 组件概述（Windows 窗体）
 
@@ -27,7 +27,7 @@ Windows 窗体 <xref:System.Windows.Forms.ImageList> 组件用于存储图像，
 
 <xref:System.Windows.Forms.ImageList> 组件的键属性是 <xref:System.Windows.Forms.ImageList.Images%2A>，其中包含关联控件使用的图片。 可通过相应的索引值或键访问每张单独的图像。 <xref:System.Windows.Forms.ImageList.ColorDepth%2A> 属性确定图像呈现的颜色数。 由 <xref:System.Windows.Forms.ImageList.ImageSize%2A> 属性设置后，图像将以相同大小显示。 较大的图像将调整为合适大小。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.ImageList>
-- [如何：添加或删除映像使用 Windows 窗体 ImageList 组件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [如何：使用 Windows 窗体 ImageList 组件添加或删除图像](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

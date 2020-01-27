@@ -2,12 +2,12 @@
 title: 设计模式：基于列表的发布-订阅
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 831e6947c0919e8112627ff0a0697592f598561b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3a62b09a29ec0b7e241bf2fdc09df6eaba5420c7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716345"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728825"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>设计模式：基于列表的发布-订阅
 此示例演示了作为 Windows Communication Foundation （WCF）程序实现的基于列表的发布-订阅模式。  
@@ -15,7 +15,7 @@ ms.locfileid: "74716345"
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
   
- 基于列表的发布-订阅设计模式在 Microsoft 模式 & 实践发布、[集成模式](https://go.microsoft.com/fwlink/?LinkId=95894)中进行了介绍。 发布-订阅模式可以向已经订阅某一信息主题的接收者群体传递信息。 基于列表的发布-订阅可维护一份订户列表。 如果有要共享的信息，则会向列表上的每个订户发送一份副本。 本示例演示基于列表的动态发布-订阅模式，在此模式下客户端可以根据需要随时订阅或取消订阅。  
+ 基于列表的发布-订阅设计模式在 Microsoft 模式 & 实践发布、[集成模式](https://docs.microsoft.com/previous-versions/msp-n-p/ff647309(v=pandp.10))中进行了介绍。 发布-订阅模式可以向已经订阅某一信息主题的接收者群体传递信息。 基于列表的发布-订阅可维护一份订户列表。 如果有要共享的信息，则会向列表上的每个订户发送一份副本。 本示例演示基于列表的动态发布-订阅模式，在此模式下客户端可以根据需要随时订阅或取消订阅。  
   
  基于列表的发布-订阅示例由客户端、服务和数据源程序组成。 可以有多个客户端和多个数据源程序同时运行。 客户端订阅服务、接收通知，然后取消订阅。 数据源程序向服务发送将与所有当前订户共享的信息。  
   

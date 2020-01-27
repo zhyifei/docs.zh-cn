@@ -1,5 +1,5 @@
 ---
-title: 如何：设置所有 Windows 窗体的网格选项
+title: 设置网格选项
 ms.date: 03/30/2017
 helpviewer_keywords:
 - snap to grid [Windows Forms], Windows Forms Designer
@@ -11,12 +11,12 @@ ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5a69bbd25677e91d0a0c792a1e3c67f948fc90cb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 14934763e6f17948dfc0494adae2a22d8352580d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460820"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744841"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>如何：为所有 Windows 窗体设置网格选项
 
@@ -30,6 +30,6 @@ ms.locfileid: "73460820"
 
    在右窗格中的 "**布局设置**" 标题下，你可以为你创建的所有新窗体设置默认网格设置。 这些设置包括网格大小、控件是否与它对齐以及它是否在默认情况下处于打开状态。 此外，还可以在**对齐**布局模式和**对齐线**布局模式之间进行选择。 有关对齐线的详细信息，请参阅[演练：使用对齐线排列 Windows 窗体上的控件](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [选项： Windows 窗体设计器](/visualstudio/ide/reference/options-windows-forms-designer)

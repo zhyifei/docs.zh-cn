@@ -1,5 +1,5 @@
 ---
-title: 类型成员的名称
+title: 형식 멤버의 이름
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,95 +12,94 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: a9cd531100057fbad4884a20e6e7db6ef94e7956
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 81c837bd045992043208a59f6ee16803c1d6eb3c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709213"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744177"
 ---
-# <a name="names-of-type-members"></a>类型成员的名称
-类型由以下成员构成：方法、属性、事件、构造函数和字段。 以下各节介绍命名类型成员的准则。  
-  
-## <a name="names-of-methods"></a>方法的名称  
- 方法是执行操作的方式，设计准则要求方法名称为谓词或谓词短语。 遵循此准则，还有利于区分方法名称与属性和类型名称，后者为名词或形容词性短语。  
-  
- **✓ DO** 用谓词或谓词短语为方法命名。  
-  
-```csharp  
-public class String {  
-    public int CompareTo(...);  
-    public string[] Split(...);  
-    public string Trim();  
-}  
-```  
-  
-## <a name="names-of-properties"></a>属性的名称  
- 与其他成员不同，应向属性给定名词性短语或形容词性名称。 这是因为属性是指数据，属性的名称应反映这一点。 属性名称总是采用帕斯卡大小写。  
-  
- **✓ 正确做法** 使用名词、名词性短语或形容词为属性命名。  
-  
- **X DO NOT** 拥有与“Get”方法同名的属性，如以下示例所示：  
-  
- `public string TextWriter { get {...} set {...} }`  
- `public string GetTextWriter(int value) { ... }`  
-  
- 此模式通常意味着该属性事实上是一种方法。  
-  
- **✓**使用一个复数短语来描述集合中的项，而不是使用后跟 "List" 或 "collection" 的短语来命名集合属性。  
-  
- **✓ 正确做法** 用肯定性短语（`CanSeek` 而非 `CantSeek`）为布尔属性命名。 或者，还可以在布尔属性前面添加 "Is"、"Can" 或 "has" 前缀，但前提是在它添加值的位置。  
-  
- **✓ CONSIDER** 为属性提供与其类型相同的名称。  
-  
- 例如，以下属性可正确获取和设置名为 `Color` 的枚举值，因此属性名为 `Color`：  
-  
-```csharp  
-public enum Color {...}  
-public class Control {  
-    public Color Color { get {...} set {...} }  
-}  
-```  
-  
-## <a name="names-of-events"></a>事件的名称  
- 事件始终指操作，可以是即将发生的，也可以是已经发生的。 因此，对于方法，事件用谓词命名，并用谓词时态指示引发事件的时间。  
-  
- **✓ 正确做法** 用谓词或谓词短语为事件命名。  
-  
- 示例包括`Clicked`、`Painting` 和 `DroppedDown`。  
-  
- **✓ 正确做法** 使用现在时和过去时，为事件名称赋予之前和之后的概念。  
-  
- 例如，在窗口关闭前引发的关闭事件可命名为 `Closing`，而在窗口关闭后后引发的关闭事件可命名为 `Closed`。  
-  
- **X DO NOT** 使用“Before”或“After”前缀或后缀指示发生在事件前后。 请如上所示使用现在时和过去时。  
-  
- **✓ 正确做法** 为事件处理程序（用作事件类型的委托）添加“EventHandler”后缀，如以下示例中所示：  
-  
- `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`  
-  
- **✓ 正确做法** 在事件处理程序中使用名为 `sender` 和 `e` 的两个参数。  
-  
- sender 参数表示引发事件的对象。 sender 参数的类型通常是 `object`，即使可以使用更具体的类型。  
-  
- **✓ 正确做法** 为事件参数类名称添加“EventArgs”后缀。  
-  
-## <a name="names-of-fields"></a>字段的名称  
- 字段命名准则适用于静态公开字段和受保护的字段。 原则不涉及内部和专用字段，而[成员设计准则](../../../docs/standard/design-guidelines/member.md)不允许使用公开字段或受保护的实例字段。  
-  
- **✓ 正确做法** 在字段名称中使用帕斯卡大小写。  
-  
- **✓ 正确做法** 使用名词、名词性短语或形容词为字段命名。  
-  
- **X DO NOT** 在字段名称中使用前缀。  
-  
- 例如，请勿使用“g_”或“s_”来指示静态字段。  
-  
- *部分©2005，2009 Microsoft Corporation。保留所有权利。*  
-  
- *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。  
-  
+# <a name="names-of-type-members"></a>형식 멤버의 이름
+형식은 메서드, 속성, 이벤트, 생성자 및 필드 등의 멤버로 이루어집니다. 다음 섹션에서는 형식 멤버 이름 지정에 대한 지침을 설명합니다.
+
+## <a name="names-of-methods"></a>메서드 이름
+ 메서드가 작업을 수행하는 수단이기 때문에 디자인 지침에서는 메서드 이름이 동사 또는 동사구여야 합니다. 또한 이 지침을 따르면 명사 또는 형용사구인 속성 및 형식 이름과 메서드 이름을 구분할 수 있습니다.
+
+ ✔️为谓词或谓词短语指定方法名称。
+
+```csharp
+public class String {
+    public int CompareTo(...);
+    public string[] Split(...);
+    public string Trim();
+}
+```
+
+## <a name="names-of-properties"></a>속성 이름
+ 다른 멤버와 달리 속성은 명사구 또는 형용사 이름이 지정되어야 합니다. 속성이 데이터를 나타내기 때문에 속성 이름은 이를 반영해야 합니다. PascalCasing은 속성 이름에 항상 사용됩니다.
+
+ ✔️使用名词、名词短语或形容词名称属性。
+
+ ❌ 没有与 "Get" 方法的名称相匹配的属性，如以下示例中所示：
+
+ `public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`
+
+ 이 패턴은 일반적으로 속성이 실제로 메서드임을 나타냅니다.
+
+ ✔️使用一个复数短语来描述集合中的项，而不是使用后跟 "List" 或 "Collection" 的短语来命名集合属性。
+
+ ✔️使用赞成短语（`CanSeek` 而不是 `CantSeek`）命名布尔属性。 或者，还可以在布尔属性前面添加 "Is"、"Can" 或 "has" 前缀，但前提是在它添加值的位置。
+
+ ✔️考虑为属性提供与其类型相同的名称。
+
+ 예를 들어, 다음 속성은 현재 올바르게 `Color`라는 열거형 값을 설정하므로 속성 이름은 `Color`입니다.
+
+```csharp
+public enum Color {...}
+public class Control {
+    public Color Color { get {...} set {...} }
+}
+```
+
+## <a name="names-of-events"></a>이벤트 이름
+ 이벤트는 발생 중인 작업 또는 발생한 작업 중 하나를 가리킵니다. 따라서 메서드와 마찬가지로 이벤트는 동사를 사용하여 명명하고 동사 시제는 이벤트가 발생할 시간을 나타내는 데 사용됩니다.
+
+ ✔️使用动词或动词短语来命名事件。
+
+ 예를 들면 `Clicked`, `Painting`, `DroppedDown` 등입니다.
+
+ ✔️使用现有的和过去的时态为事件名称提供前后的概念。
+
+ 예를 들어 창이 닫히기 전에 발생하는 닫기 이벤트는 `Closing`이라고 하고 창이 닫힌 후에 발생하는 닫기 이벤트는 `Closed`라고 합니다.
+
+ ❌ 不要使用 "Before" 或 "After" 前缀或 postfixes 来指示前和后事件。 위에서 설명한 대로 현재 및 과거 시제를 사용합니다.
+
+ ✔️使用 "EventHandler" 后缀来命名事件处理程序（用作事件类型的委托），如以下示例中所示：
+
+ `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`
+
+ ✔️确实使用两个名为 `sender` 的参数，并在事件处理程序中 `e`。
+
+ 보낸 사람 매개 변수는 이벤트를 발생시킨 개체를 나타냅니다. 보낸 사람 매개 변수는 보다 구체적인 형식을 적용할 수 있더라도 일반적으로 `object` 형식입니다.
+
+ ✔️用 "EventArgs" 后缀命名事件参数类。
+
+## <a name="names-of-fields"></a>필드 이름
+ 필드 명명 지침은 공용 및 보호된 고정 필드에 적용됩니다. 내부 및 개인 필드는 지침에서 다루지 않고 공용 또는 보호된 인스턴스 필드는 [멤버 디자인 지침](../../../docs/standard/design-guidelines/member.md)에서 허용하지 않습니다.
+
+ ✔️在字段名称中使用 PascalCasing。
+
+ ✔️使用名词、名词短语或形容词来命名字段。
+
+ ❌ 不使用字段名称前缀。
+
+ 예를 들어 "g_" 또는 "s_"를 사용하여 고정 필드를 나타내지 마십시오.
+
+ *部分©2005，2009 Microsoft Corporation。保留所有权利。*
+
+ *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
+
 ## <a name="see-also"></a>另请参阅
 
-- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
-- [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
+- [명명 지침](../../../docs/standard/design-guidelines/naming-guidelines.md)

@@ -2,21 +2,21 @@
 title: 安全对话和安全会话
 ms.date: 03/30/2017
 ms.assetid: 48cb104a-532d-40ae-aa57-769dae103fda
-ms.openlocfilehash: 9b2c22d6db5a773bfb3f3a41e458b530fc889d71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 887b2e6e6553a910de046950514869907519cf35
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990998"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746462"
 ---
 # <a name="secure-conversations-and-secure-sessions"></a>安全对话和安全会话
-Windows Communication Foundation (WCF) 的一项功能是能够建立安全会话之间相互进行身份验证和加密和数字签名过程达成的两个终结点。 例如，服务终结点可能要求客户端终结点发送一个基于 X.509 证书的安全令牌，以便进行身份验证。 在对客户端进行身份验证之后，服务终结点将向客户端返回一个安全上下文令牌 (SCT)，该令牌随后将用于保护该会话中的所有后续消息。 通过建立这一安全会话，可使两个终结点之间交换的一组消息更有效率，因为 SCT 具有对称密钥。 在生成数字签名或加密一组数据时，与对称密钥相比，作为 X.509 证书基础的非对称密钥明显需要更多的计算能力。  
+Windows Communication Foundation （WCF）的一项功能是能够在两个终结点之间建立安全会话，这些终结点彼此进行身份验证，并同意加密和数字签名过程。 例如，服务终结点可能要求客户端终结点发送一个基于 X.509 证书的安全令牌，以便进行身份验证。 在对客户端进行身份验证之后，服务终结点将向客户端返回一个安全上下文令牌 (SCT)，该令牌随后将用于保护该会话中的所有后续消息。 通过建立这一安全会话，可使两个终结点之间交换的一组消息更有效率，因为 SCT 具有对称密钥。 在生成数字签名或加密一组数据时，与对称密钥相比，作为 X.509 证书基础的非对称密钥明显需要更多的计算能力。  
   
- 启动策略 (定义中的第 6.2.7 节[Ws-securitypolicy](https://go.microsoft.com/fwlink/?LinkId=99817)标准) 包含用于保护通道，并对 RST/SCT 和 RSTR/SCT 交换之前客户端进行身份验证的消息安全断言。 某些 WCF 标准绑定具有`Security.Message.EstablishSecurityContext`使用哪些控件是否安全对话的属性。 使用自定义绑定时由嵌套安全绑定元素，通过指示 bootstrap [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)配置文件中或通过调用<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%2A>在代码中。  
+ 启动策略（在[ws-securitypolicy](https://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/ws-securitypolicy-1.2-spec-os.html)标准的6.2.7 节中定义）包含用于保护通道和在 RST/SCT 和 RSTR/sct 交换之前对客户端进行身份验证的消息安全断言。 某些 WCF 标准绑定具有一个 `Security.Message.EstablishSecurityContext` 属性，该属性控制是否使用安全对话。 使用自定义绑定时，通过在配置文件中[\<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)或通过在代码中调用 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%2A>，可以嵌套安全绑定元素。  
   
- 有关会话的详细信息，请参阅[使用会话的](../../../../docs/framework/wcf/using-sessions.md)。  
+ 有关会话的详细信息，请参阅[使用会话](../../../../docs/framework/wcf/using-sessions.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [会话、实例化和并发](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
 - [如何：创建要求会话的服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

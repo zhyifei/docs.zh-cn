@@ -1,5 +1,5 @@
 ---
-title: ListBox 控件（Windows 窗体）
+title: ListBox 控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListBox control [Windows Forms]
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: b0172473-c5f2-411e-aaa4-c8f17cb5eed4
-ms.openlocfilehash: 09b58bb0440f8ec187c4fa047e280d802747cd3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36ae8140a2d81aafe983b5f1f56e180a0f91e96c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012810"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745175"
 ---
 # <a name="listbox-control-windows-forms"></a>ListBox 控件（Windows 窗体）
-Windows 窗体`ListBox`控件显示用户可以从中选择一个或多个项的列表。  
+Windows 窗体 `ListBox` 控件将显示用户可从中选择一个或多个项的列表。  
   
 ## <a name="in-this-section"></a>本节内容  
  [ListBox 控件概述](listbox-control-overview-windows-forms.md)  
  说明此控件的本质及其主要功能和属性。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Windows.Forms.ListBox> 类  
  对此类进行描述，并提供指向其所有成员的链接。  
   
 ## <a name="related-sections"></a>相关章节  
  [用于列出选项的 Windows 窗体控件](windows-forms-controls-used-to-list-options.md)  
- 提供了一系列你可以使用列表框、 组合框和选中的列表框执行的操作。
+ 提供可对列表框、组合框和选中的列表框执行的操作的列表。

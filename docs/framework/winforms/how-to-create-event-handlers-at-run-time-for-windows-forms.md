@@ -1,5 +1,5 @@
 ---
-title: 如何：在运行时为 Windows 窗体创建事件处理程序
+title: 如何：在运行时创建事件处理程序
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 440086bfd5384fc46aec2997dbdd9937f7a1b65f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0b496a3da77c5bcf7a08c435edba468a7c5809cb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964331"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739505"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>如何：在运行时为 Windows 窗体创建事件处理程序
 
-除了使用 Visual Studio 中的 Windows 窗体设计器创建事件之外, 还可以在运行时创建事件处理程序。 该操作允许在运行时根据代码中的条件连接相应的事件处理程序，而不是在程序刚启动时连接事件处理程序。
+除了使用 Visual Studio 中的 Windows 窗体设计器创建事件之外，还可以在运行时创建事件处理程序。 该操作允许在运行时根据代码中的条件连接相应的事件处理程序，而不是在程序刚启动时连接事件处理程序。
 
 ## <a name="create-an-event-handler-at-run-time"></a>在运行时创建事件处理程序
 
@@ -29,7 +29,7 @@ ms.locfileid: "69964331"
 
 2. 对于要处理的事件，将带有其方法签名的方法添加到窗体上。
 
-     例如, 如果您正在处理<xref:System.Windows.Forms.Control.Click> <xref:System.Windows.Forms.Button>控件的事件, 则会创建如下所示的方法:
+     例如，如果您正在处理 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Click> 事件，则会创建如下所示的方法：
 
     ```vb
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -57,7 +57,7 @@ ms.locfileid: "69964331"
 
 4. 确定要为其创建事件处理程序的窗体或控件。
 
-5. 在窗体类的方法中添加代码，以指定用于处理事件的事件处理程序。 例如, 下面的代码指定事件处理程序`button1_Click` <xref:System.Windows.Forms.Control.Click>处理<xref:System.Windows.Forms.Button>控件的事件:
+5. 在窗体类的方法中添加代码，以指定用于处理事件的事件处理程序。 例如，下面的代码指定 `button1_Click` 处理 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Click> 事件的事件处理程序：
 
     ```vb
     AddHandler Button1.Click, AddressOf Button1_Click
@@ -71,9 +71,9 @@ ms.locfileid: "69964331"
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
     ```
 
-     上面<xref:System.ComponentModel.EventHandlerList.AddHandler%2A>的 Visual Basic 代码中演示的方法将为该按钮建立一个 click 事件处理程序。
+     上面的 Visual Basic 代码中演示的 <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> 方法为该按钮建立了一个 click 事件处理程序。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Windows 窗体中创建事件处理程序](creating-event-handlers-in-windows-forms.md)
 - [事件处理程序概述](event-handlers-overview-windows-forms.md)

@@ -4,16 +4,16 @@ description: 了解 C# 中可以为 null 的值类型及其使用方法
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964317"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740945"
 ---
 # <a name="nullable-value-types-c-reference"></a>可为空的值类型（C# 参考）
 
-可为空的值类型 `T?` 表示其基础[值类型](../keywords/value-types.md)`T` 的所有值，还可表示附加的 [null](../keywords/null.md) 值。 例如，可以将以下三个值中的任意一个指定给 `bool?` 变量：`true`、`false` 或 `null`。 基础值类型 `T` 本身不能是可为空的值类型。
+可为空的值类型 `T?` 表示其基础[值类型](value-types.md)`T` 的所有值，还可表示附加的 [null](../keywords/null.md) 值。 例如，可以将以下三个值中的任意一个指定给 `bool?` 变量：`true`、`false` 或 `null`。 基础值类型 `T` 本身不能是可为空的值类型。
 
 > [!NOTE]
 > C# 8.0 引入了可为空引用类型功能。 有关详细信息，请参阅[可为空引用类型](../../nullable-references.md)。 从 C# 2 开始，提供可为空的值类型。

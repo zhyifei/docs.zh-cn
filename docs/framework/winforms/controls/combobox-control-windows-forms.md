@@ -1,5 +1,5 @@
 ---
-title: ComboBox 控件（Windows 窗体）
+title: ComboBox 컨트롤
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drop-down lists [Windows Forms], Windows Forms
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df56a777c40cd41af6086e8adbcb0a733660df6e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956034"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746182"
 ---
-# <a name="combobox-control-windows-forms"></a>ComboBox 控件（Windows 窗体）
-Windows 窗体`ComboBox`控件用于显示下拉组合框中的数据。 默认情况下，`ComboBox`控件将显示在两个部分： 上半部分是允许用户键入列表项的文本框。 第二部分是显示的用户可以从中选择一个项列表的列表框。  
+# <a name="combobox-control-windows-forms"></a>ComboBox 컨트롤(Windows Forms)
+"Windows 窗体" `ComboBox` 控件用于在下拉组合框中显示数据。 默认情况下，`ComboBox` 控件出现在两个部分中：顶部是一个文本框，用户可以在其中键入列表项。 第二部分是显示项列表的列表框，用户可以从中选择一个项。  
   
-## <a name="in-this-section"></a>本节内容  
- [ComboBox 控件概述](combobox-control-overview-windows-forms.md)  
- 说明此控件的本质及其主要功能和属性。  
+## <a name="in-this-section"></a>섹션 내용  
+ [ComboBox 컨트롤 개요](combobox-control-overview-windows-forms.md)  
+ 이 컨트롤의 정의와 주요 기능 및 속성을 설명합니다.  
   
- [如何：在组合框控件中创建大小可变的文本](how-to-create-variable-sized-text-in-a-combobox-control.md)  
- 演示自定义绘图中的文本`ComboBox`控件。  
+ [방법: ComboBox 컨트롤에서 가변 크기 텍스트 만들기](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ 演示 `ComboBox` 控件中的自定义文本绘制。  
   
-## <a name="reference"></a>参考  
- <xref:System.Windows.Forms.ComboBox> 类  
- 对此类进行描述，并提供指向其所有成员的链接。  
+## <a name="reference"></a>참조  
+ <xref:System.Windows.Forms.ComboBox> 클래스  
+ 이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
-## <a name="related-sections"></a>相关章节  
- [用于列出选项的 Windows 窗体控件](windows-forms-controls-used-to-list-options.md)  
- 提供了一系列你可以使用列表框、 组合框和选中的列表框执行的操作。  
+## <a name="related-sections"></a>관련 섹션  
+ [옵션 목록 표시에 사용된 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)  
+ 提供可对列表框、组合框和选中的列表框执行的操作的列表。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
+- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

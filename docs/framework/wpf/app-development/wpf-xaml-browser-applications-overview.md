@@ -1,5 +1,5 @@
 ---
-title: WPF XAML 浏览器应用程序概述
+title: XAML 浏览器应用程序概述
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: a4d3b808aee14d5d2f29053b0c60798f9f626e8c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: bec7e14ceed867e89c3117efbc245938356b9d78
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636323"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742278"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 浏览器应用程序概述
 <a name="introduction"></a>XAML 浏览器应用程序（Xbap）结合了 Web 应用程序和丰富客户端应用程序的功能。 与 Web 应用程序类似，可以将 XBAP 部署到 Web 服务器并从 Internet Explorer 或 Firefox 启动。 与胖客户端应用程序一样，Xbap 可以利用 WPF 的功能。 开发 XBAP 也与开发丰富客户端类似。 本主题提供简单、高级的 XBAP 开发简介，并介绍 XBAP 开发与标准的丰富客户端开发的不同之处。

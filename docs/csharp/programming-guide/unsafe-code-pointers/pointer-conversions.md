@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 308d5e0646eeb94012dbe18d46d6d33f67dfeaf5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 517166331d2bcf73132269ce2adcf68d5f60b4fe
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75698360"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745361"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>指针转换（C# 编程指南）
 下表显示预定义隐式指针转换。 隐式转换可能会在许多情况下出现（包括方法调用和赋值语句）。  
@@ -43,7 +43,7 @@ ms.locfileid: "75698360"
 - [C# 编程指南](../index.md)
 - [指针类型](pointer-types.md)
 - [引用类型](../../language-reference/keywords/reference-types.md)
-- [值类型](../../language-reference/keywords/value-types.md)
+- [值类型](../../language-reference/builtin-types/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
 - [fixed 语句](../../language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../language-reference/operators/stackalloc.md)

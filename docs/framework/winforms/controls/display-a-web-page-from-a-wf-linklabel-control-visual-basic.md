@@ -1,5 +1,5 @@
 ---
-title: 如何：通过 Windows 窗体 LinkLabel 控件显示 Web 页面 (Visual Basic)
+title: 通过 LinkLabel 控件显示网页（Visual Basic）
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: f36f5bbaaf28963fc95440a4f3a174b8b48f6276
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75373d55b7bc5ef11e39d5b9546996cb1c4f6f7c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651803"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745927"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>如何：通过 Windows 窗体 LinkLabel 控件显示 Web 页面 (Visual Basic)
-此示例在默认浏览器中显示网页，当用户单击 Windows 窗体<xref:System.Windows.Forms.LinkLabel>控件。  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>방법: Windows Forms LinkLabel 컨트롤에서 웹 페이지 표시(Visual Basic)
+当用户单击 <xref:System.Windows.Forms.LinkLabel> 控件的 Windows 窗体时，此示例将在默认浏览器中显示网页。  
   
 ## <a name="example"></a>示例  
   
@@ -37,19 +37,19 @@ LinkLabel1.LinkClicked
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a>编译代码  
- 此示例需要：  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 이 예제에는 다음 사항이 필요합니다.  
   
-- 名为 Windows 窗体`Form1`。  
+- 名为 `Form1`的 Windows 窗体。  
   
-- 名为 `LinkLabel1` 的 <xref:System.Windows.Forms.LinkLabel> 控件。  
+- `LinkLabel1`이라는 <xref:System.Windows.Forms.LinkLabel> 컨트롤  
   
-- 活动的 Internet 连接。  
+- 活动 Internet 连接。  
   
-## <a name="net-framework-security"></a>.NET Framework 安全性  
- 对调用<xref:System.Diagnostics.Process.Start%2A>方法需要完全信任。 有关详细信息，请参阅 <xref:System.Security.SecurityException>。  
+## <a name="net-framework-security"></a>.NET Framework 보안  
+ 调用 <xref:System.Diagnostics.Process.Start%2A> 方法需要完全信任。 자세한 내용은 <xref:System.Security.SecurityException>를 참조하세요.  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.LinkLabel>
-- [LinkLabel 控件](linklabel-control-windows-forms.md)
+- [LinkLabel 컨트롤](linklabel-control-windows-forms.md)

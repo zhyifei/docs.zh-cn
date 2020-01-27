@@ -1,17 +1,17 @@
 ---
-title: Windows 窗体控件
+title: 控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls
 - controls [Windows Forms]
 - Windows Forms controls, about Windows Forms controls
 ms.assetid: f050de8f-4ebd-4042-94b8-edf9a1dbd52a
-ms.openlocfilehash: 1088781a7780df71773b01a3816f024562abfcaf
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: e36efb8b653f528be6f68f77ced26de262cbc6ad
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69986986"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745296"
 ---
 # <a name="windows-forms-controls"></a>Windows 窗体控件
 
@@ -25,7 +25,7 @@ ms.locfileid: "69986986"
 [排列 Windows 窗体上的控件](how-to-align-multiple-controls-on-windows-forms.md)\
 与在窗体上排列控件相关的文章。
 
-[为单个 Windows 窗体控件标记并提供其快捷方式](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)\
+[标记单个 Windows 窗体控件并为其提供快捷方式](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)\
 介绍了如何使用键盘快捷键、控件文本标签和修改键。
 
 [要在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)\

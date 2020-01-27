@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Windows 窗体 TextBox 控件中选择文本
+title: 在 TextBox 控件中选择文本
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: 3bb1245cd47084935d632ff345a32058db6074e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a32e40f14ddae6f8ddcaa6d62337329df6fde26
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013291"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745313"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>如何：在 Windows 窗体 TextBox 控件中选择文本
-您可以在 Windows 窗体中以编程方式选择文本<xref:System.Windows.Forms.TextBox>控件。 例如，如果创建搜索特定字符串文本的函数，您可以选择要直观地发出警报找到的字符串中的位置的读取器的文本。  
+您可以在 Windows 窗体 <xref:System.Windows.Forms.TextBox> 控件中以编程方式选择文本。 例如，如果您创建一个函数，用于在文本中搜索特定字符串，则可以选择该文本以直观地向读者提醒找到的字符串位置。  
   
-### <a name="to-select-text-programmatically"></a>若要以编程方式选择文本  
+### <a name="to-select-text-programmatically"></a>以编程方式选择文本  
   
-1. 设置<xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>到想要选择的文本开头的属性。  
+1. 将 <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> 属性设置为要选择的文本开头。  
   
-     <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>属性为一个数字，指示插入点内的文本字符串，则为 0 表示最左边的位置。 如果<xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>属性设置为值等于或大于的字符数在文本框中，插入点放在最后一个字符之后。  
+     <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> 属性是一个数字，用于指示文本字符串中的插入点，0表示最左侧的位置。 如果将 <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> 属性设置为等于或大于文本框中字符数的值，则将插入点放在最后一个字符之后。  
   
-2. 设置<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>属性设置为你想要选择的文本的长度。  
+2. 将 <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> 属性设置为要选择的文本长度。  
   
-     <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>属性是设置插入点的宽度的数字值。 设置<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>到之间的数字不是 0 将导致该要选择的字符数，从开始在当前插入点。  
+     <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> 属性是设置插入点宽度的数值。 如果将 <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> 设置为大于0的数字，则会从当前插入点开始选择要选择的字符数。  
   
-3. （可选）访问通过所选的文本<xref:System.Windows.Forms.TextBoxBase.SelectedText%2A>属性。  
+3. 可有可无通过 <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> 属性访问所选文本。  
   
-     选择下面的代码的文本内容框时控件的<xref:System.Windows.Forms.Control.Enter>事件发生。 此示例检查文本框中是否具有的值<xref:System.Windows.Forms.TextBox.Text%2A>属性不是`null`或空字符串。 当文本框中收到焦点时，选择在文本框中的当前文本。 `TextBox1_Enter`事件处理程序必须将绑定到控件; 有关详细信息，请参阅[如何：在运行时为 Windows 窗体创建事件处理程序](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
+     下面的代码在控件的 <xref:System.Windows.Forms.Control.Enter> 事件发生时选择文本框的内容。 此示例检查文本框是否具有未 `null` 的 <xref:System.Windows.Forms.TextBox.Text%2A> 属性的值或空字符串。 当文本框接收到焦点时，文本框中的当前文本处于选中状态。 必须将 `TextBox1_Enter` 事件处理程序绑定到控件;有关详细信息，请参阅[如何：在运行时为 Windows 窗体创建事件处理程序](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
   
-     若要测试此示例中，按 Tab 键，直到文本框中获得焦点。 如果在文本框中单击，将取消选中文本。  
+     若要测试此示例，请按 Tab 键，直到文本框具有焦点。 如果在文本框中单击，则不会选择文本。  
   
     ```vb  
     Private Sub TextBox1_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox1.Enter  
@@ -67,13 +67,13 @@ ms.locfileid: "62013291"
     }  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox 控件概述](textbox-control-overview-windows-forms.md)
-- [如何：控制 Windows 窗体 TextBox 控件中的插入点](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [如何：在 Windows 窗体 TextBox 控件中控制插入点](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
 - [如何：使用 Windows 窗体 TextBox 控件创建密码文本框](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [如何：创建只读文本框](how-to-create-a-read-only-text-box-windows-forms.md)
-- [如何：在字符串中放置引号](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [如何：查看 Windows 窗体 TextBox 控件中的多个行](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [如何：在字符串中添加引号](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [如何：在 Windows 窗体 TextBox 控件中查看多个行](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox 控件](textbox-control-windows-forms.md)

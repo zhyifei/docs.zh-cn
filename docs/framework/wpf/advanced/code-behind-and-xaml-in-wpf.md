@@ -1,23 +1,23 @@
 ---
-title: WPF 中的代码隐藏和 XAML
+title: 代码隐藏和 XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 00427004448997aa234b335b397390f9fabe1bd5
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 212a37fb7fbcb7e66a669d96671333be793956df
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559906"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738103"
 ---
-# <a name="code-behind-and-xaml-in-wpf"></a>WPF 中的代码隐藏和 XAML
+# <a name="code-behind-and-xaml-in-wpf"></a>WPF의 코드 숨김 및 XAML
 <a name="introduction"></a>代码隐藏是一项术语，用于描述在对 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页进行标记编译时与标记定义的对象联接的代码。 本主题介绍代码隐藏的要求，以及 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中代码的替代内联代码机制。  
   
- 本主题包含以下各节：  
+ 이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
-- [系统必备](#Prerequisites)  
+- [전제 조건](#Prerequisites)  
   
 - [代码隐藏和 XAML 语言](#codebehind_and_the_xaml_language)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "75559906"
   
 ## <a name="see-also"></a>另请参阅
 
-- [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [x:Code 内部 XAML 类型](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)
-- [生成 WPF 应用程序](../app-development/building-a-wpf-application-wpf.md)
-- [XAML 语法详述](xaml-syntax-in-detail.md)
+- [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [x:Code 내장 XAML 형식](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)
+- [WPF 애플리케이션 빌드](../app-development/building-a-wpf-application-wpf.md)
+- [XAML 구문 정보](xaml-syntax-in-detail.md)

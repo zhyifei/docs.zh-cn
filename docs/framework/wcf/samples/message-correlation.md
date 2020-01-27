@@ -1,23 +1,23 @@
 ---
-title: 消息相关性
+title: 메시지 상관 관계
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: adabf02cb8ec232a887bd4720ea9552a7d870fe3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9ded0886920f9f0b3d2f9b441061253b42a1c567
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348335"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747167"
 ---
-# <a name="message-correlation"></a>消息相关性
+# <a name="message-correlation"></a>메시지 상관 관계
 
-此示例演示消息队列（MSMQ）应用程序如何将 MSMQ 消息发送到 Windows Communication Foundation （WCF）服务，以及如何在请求/响应方案中将消息与发送方和接收方应用程序相关联。 此示例使用 msmqIntegrationBinding 绑定。 这种情况下的服务是自承载控制台应用程序，通过它可以观察接收排队消息的服务。 k
+此示例演示消息队列（MSMQ）应用程序如何将 MSMQ 消息发送到 Windows Communication Foundation （WCF）服务，以及如何在请求/响应方案中将消息与发送方和接收方应用程序相关联。 이 샘플에서는 msmqIntegrationBinding 바인딩을 사용합니다. 이 경우 서비스는 자체 호스팅 콘솔 애플리케이션으로, 이를 사용하여 대기 중인 메시지를 받는 서비스를 확인할 수 있습니다. k
 
- 该服务处理接收的来自发送方的消息，并向发送方回发一个响应消息。 发送方将它收到的响应与其最初发送的请求关联。 可以使用消息的 `MessageID` 和 `CorrelationID` 属性将请求消息与响应消息关联。
+ 서비스는 발신자로부터 받은 메시지를 처리하여 발신자에게 응답 메시지를 보냅니다. 발신자는 받은 응답을 원래 보낸 요청에 상호 연결합니다. 메시지의 `MessageID` 속성과 `CorrelationID` 속성은 요청 메시지와 응답 메시지를 상호 연결하는 데 사용됩니다.
 
- `IOrderProcessor` 服务协定定义了适合与队列一起使用的单向服务操作。 MSMQ 消息没有 Action 标头，因此无法将不同的 MSMQ 消息自动映射到操作协定。 因此，在这种情况下只有一个操作协定。 如果您希望在服务中定义更多的操作协定，则应用程序必须提供相关信息，如 MSMQ 消息中的哪个标头（例如标签或 correlationID）可用于确定要调度的操作协定。
+ `IOrderProcessor` 서비스 계약은 큐에 사용하기 적합한 단방향 서비스 작업을 정의합니다. MSMQ 메시지에는 동작 헤더가 없기 때문에 여러 MSMQ 메시지를 작업 계약에 자동으로 매핑할 수 없습니다. 따라서 이 경우에는 한 작업 계약만 있을 수 있습니다. 서비스에 좀더 많은 작업 계약을 정의하려는 경우 애플리케이션은 발송할 작업 계약을 결정하는 데 사용할 수 있는 MSMQ 메시지의 헤더에 대한 정보(예: 레이블 또는 correlationID)를 제공해야 합니다.
 
- MSMQ 消息也不包含诸如哪些标头映射到操作协定的不同参数等信息。 因此，在该操作协定中只有一个参数。 参数的类型为 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>，其中包含基础 MSMQ 消息。 `MsmqMessage<T>` 类中的“T”类型表示序列化到 MSMQ 消息正文中的数据。 在此示例中，`PurchaseOrder` 类型序列化到 MSMQ 消息正文中。
+ MSMQ 메시지에는 작업 계약의 다른 매개 변수에 매핑되는 헤더에 대한 정보도 포함되지 않습니다. 따라서 작업 계약에는 한 매개 변수만 있을 수 있습니다. 参数的类型为 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>，其中包含基础 MSMQ 消息。 `MsmqMessage<T>` 클래스의 "T" 형식은 MSMQ 메시지 본문에 serialize되는 데이터를 나타냅니다. 이 샘플에서는 `PurchaseOrder` 형식이 MSMQ 메시지 본문으로 serialize됩니다.
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -29,7 +29,7 @@ public interface IOrderProcessor
 }
 ```
 
- 服务操作处理采购订单，并在服务控制台窗口中显示采购订单的内容及其状态。 <xref:System.ServiceModel.OperationBehaviorAttribute> 使用队列配置要在事务中登记的操作并在返回操作时标记事务已完成。 `PurchaseOrder` 包含必须由服务处理的订单详细信息。
+ 서비스 작업을 통해 구매 주문을 처리하고 구매 주문의 내용과 상태를 서비스 콘솔 창에 표시합니다. <xref:System.ServiceModel.OperationBehaviorAttribute>를 통해 트랜잭션에 작업을 큐로 나열하고 작업이 반환되면 트랜잭션이 완료된 것으로 표시하도록 구성합니다. `PurchaseOrder`에는 서비스에서 처리해야 할 주문 세부 정보가 포함되어 있습니다.
 
 ```csharp
 // Service class that implements the service contract.
@@ -66,9 +66,9 @@ public class OrderProcessorService : IOrderProcessor
 }
 ```
 
- 服务使用自定义客户端 `OrderResponseClient` 将 MSMQ 消息发送到队列。 由于接收和处理消息的应用程序是 MSMQ 应用程序，而不是 WCF 应用程序，因此两个应用程序之间没有隐式服务协定。 所以在此方案中，我们不能使用 Svcutil.exe 工具创建代理。
+ 서비스는 사용자 지정 클라이언트 `OrderResponseClient`를 사용하여 MSMQ 메시지를 큐에 보냅니다. 由于接收和处理消息的应用程序是 MSMQ 应用程序，而不是 WCF 应用程序，因此两个应用程序之间没有隐式服务协定。 따라서 이 시나리오에서는 Svcutil.exe 도구를 사용하여 프록시를 만들 수 없습니다.
 
- 对于使用 `msmqIntegrationBinding` 绑定发送消息的所有 WCF 应用程序而言，自定义代理本质上都是相同的。 与其他代理不同，它不包含一系列服务操作。 它只是一个提交消息操作。
+ 对于使用 `msmqIntegrationBinding` 绑定发送消息的所有 WCF 应用程序而言，自定义代理本质上都是相同的。 하지만 다른 프록시와 달리 사용자 지정 프록시에는 일정 범위의 서비스 작업이 포함되지 않습니다. 메시지 제출 작업으로만 한정됩니다.
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -100,7 +100,7 @@ public partial class OrderResponseClient : System.ServiceModel.ClientBase<IOrder
 }
 ```
 
- 服务是自承载服务。 使用 MSMQ 集成传输时，必须提前创建所使用的队列。 可以手动或通过代码完成此操作。 在此示例中，服务包含 <xref:System.Messaging> 代码，以检查队列是否存在并在必要时创建队列。 从配置文件中读取队列名称。
+ 서비스는 자체 호스트됩니다. MSMQ 통합 전송을 사용하는 경우에는 사용되는 큐를 미리 만들어야 합니다. 수동으로 또는 코드를 통해 이 작업을 수행할 수 있습니다. 이 샘플의 서비스에는 큐가 있는지 확인하고 필요한 경우 만드는 <xref:System.Messaging> 코드가 포함되어 있습니다. 큐 이름은 구성 파일에서 읽습니다.
 
 ```csharp
 public static void Main()
@@ -126,7 +126,7 @@ public static void Main()
 }
 ```
 
- 订单请求发送至的 MSMQ 队列是在配置文件的 appSettings 节中指定的。 客户端终结点和服务终结点是在配置文件的 system.serviceModel 节中定义的。 二者均指定了 `msmqIntegrationbinding` 绑定。
+ 주문 요청을 받는 MSMQ 큐는 구성 파일의 appSettings 섹션에 지정됩니다. 클라이언트 엔드포인트와 서비스 엔드포인트는 구성 파일의 system.serviceModel 섹션에 정의됩니다. 둘 다 `msmqIntegrationbinding` 바인딩을 지정합니다.
 
 ```xml
 <appSettings>
@@ -165,7 +165,7 @@ public static void Main()
 </system.serviceModel>
 ```
 
- 客户端应用程序使用 <xref:System.Messaging> 向队列发送持久的事务性消息。 消息的正文包含采购订单。
+ 클라이언트 애플리케이션은 <xref:System.Messaging>을 사용하여 지속적인 메시지와 트랜잭션 메시지를 큐로 보냅니다. 메시지 본문에는 구매 주문이 포함됩니다.
 
 ```csharp
 static void PlaceOrder()
@@ -211,10 +211,10 @@ static void PlaceOrder()
 }
 ```
 
- 从中接收订单响应的 MSMQ 队列是在配置文件的 appSettings 节中定义的，如下面的示例配置所示。
+ 주문 응답을 받는 MSMQ 큐는 다음 샘플 구성에 표시된 것처럼 구성 파일의 appSettings 섹션에 지정됩니다.
 
 > [!NOTE]
-> 队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 WCF 终结点地址指定 msmq.formatname 方案，并为本地计算机使用 "localhost"。 根据 MSMQ 准则，格式正确的格式名称应遵循 URI 中的 msmq.formatname。
+> 큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다. WCF 终结点地址指定 msmq.formatname 方案，并为本地计算机使用 "localhost"。 적절한 형식의 형식 이름은 MSMQ 지침에 따라 URI에서 msmq.formatname을 따릅니다.
 
 ```xml
 <appSettings>
@@ -222,7 +222,7 @@ static void PlaceOrder()
 </appSettings>
 ```
 
- 客户端应用程序保存发送到服务的订单请求消息的 `messageID`，并等待服务响应。 一旦响应到达队列，客户端使用消息的 `correlationID` 属性将该响应与客户端发送的订单消息关联，此属性包含客户端最初向服务发送的订单消息的 `messageID`。
+ 클라이언트 애플리케이션은 서비스로 보내는 주문 요청 메시지의 `messageID`를 저장하고 서비스의 응답을 기다립니다. 큐에 응답이 도착하면 클라이언트는 메시지의 `correlationID` 속성을 사용하여 보낸 주문 메시지와 응답 메시지를 상호 연결합니다. 여기에는 클라이언트에서 원래 서비스로 보낸 주문 메시지의 `messageID`가 포함되어 있습니다.
 
 ```csharp
 static void DisplayOrderStatus()
@@ -265,16 +265,16 @@ static void DisplayOrderStatus()
 }
 ```
 
- 运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。 可以看到服务接收来自客户端的消息，并向客户端回发响应。 客户端会显示来自服务的响应。 在每个控制台窗口中按 Enter 可以关闭服务和客户端。
+ 샘플을 실행하면 클라이언트 및 서비스 동작이 서비스 콘솔 창과 클라이언트 콘솔 창에 모두 표시됩니다. 클라이언트의 서비스 수신 메시지를 확인하고 클라이언트로 다시 응답을 보낼 수 있습니다. 클라이언트는 서비스로부터 받은 응답을 표시합니다. 서비스와 클라이언트를 종료하려면 각 콘솔 창에서 Enter 키를 누릅니다.
 
 > [!NOTE]
-> 此示例要求安装消息队列 (MSMQ)。 请参阅“请参见”部分中的 MSMQ 安装说明。
+> 이 샘플을 사용하려면 MSMQ(메시지 큐)를 설치해야 합니다. 참고 항목 단원의 MSMQ 설치 지침을 참조하십시오.
 
 ## <a name="set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
 1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2. 如果先运行服务，则它将检查以确保队列存在。 如果队列不存在，则服务将创建一个队列。 可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。 执行下面的步骤来在 Windows 2008 中创建队列。
+2. 서비스가 처음 실행되는 경우 서비스에서는 큐가 있는지 확인하고 큐가 없으면 큐를 만듭니다. 서비스를 처음 실행하여 큐를 만들거나 MSMQ 큐 관리자를 통해 큐를 만들 수 있습니다. Windows 2008에서 큐를 만들려면 다음 단계를 수행하세요.
 
     1. 在 Visual Studio 2012 中打开服务器管理器。
 
@@ -286,34 +286,34 @@ static void DisplayOrderStatus()
 
     5. 输入 `ServiceModelSamplesTransacted` 作为新队列的名称。
 
-3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
+3. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.
 
 4. 若要在单计算机配置中运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
 
 ## <a name="run-the-sample-across-computers"></a>跨计算机运行示例
 
-1. 将 \service\bin\ 文件夹（在语言特定文件夹内）中的服务程序文件复制到服务计算机上。
+1. 언어별 폴더의 \service\bin\ 폴더에서 서비스 컴퓨터로 서비스 프로그램 파일을 복사합니다.
 
-2. 将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。
+2. 언어별 폴더의 \client\bin\ 폴더에서 클라이언트 프로그램 파일을 클라이언트 컴퓨터로 복사합니다.
 
-3. 在 Client.exe.config 文件中，更改 orderQueueName 以指定服务计算机名称，而不是使用“.”。
+3. Client.exe.config 파일에서 orderQueueName을 변경하여 "." 대신 서비스 컴퓨터 이름을 지정합니다.
 
-4. 在 Service.exe.config 文件中，更改客户端终结点地址以指定客户端计算机名称，而不是使用“.”。
+4. Service.exe.config 파일에서 클라이언트 엔드포인트 주소를 변경하여 "." 대신 클라이언트 컴퓨터 이름을 지정합니다.
 
-5. 在服务计算机上，在命令提示符下启动 Service.exe。
+5. 서비스 컴퓨터의 명령 프롬프트에서 Service.exe를 실행합니다.
 
-6. 在客户端计算机上，在命令提示符下启动 Client.exe。
+6. 클라이언트 컴퓨터의 명령 프롬프트에서 Client.exe를 실행합니다.
 
 > [!IMPORTANT]
-> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`
 
 ## <a name="see-also"></a>另请参阅
 
-- [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [消息队列](https://go.microsoft.com/fwlink/?LinkId=94968)
+- [WCF의 큐](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [消息队列](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

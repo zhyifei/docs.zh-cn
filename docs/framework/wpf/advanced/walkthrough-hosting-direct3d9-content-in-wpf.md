@@ -1,16 +1,17 @@
 ---
-title: 演练：在 WPF 中承载 Direct3D9 内容
+title: 在 WPF 中托管 Direct3D9 内容
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 03c93ea3813d3572abd7ca60519478c9bf54cf7d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e65b0c59268b44abed289e54181bf0bda9355664
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976509"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742604"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>演练：在 WPF 中承载 Direct3D9 内容
 
@@ -26,11 +27,11 @@ ms.locfileid: "73976509"
 
  完成后，你将了解如何在 WPF 应用程序中托管 Direct3D9 内容。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 你需要以下组件来完成本演练：
 
-- Visual Studio。
+- 。
 
 - DirectX SDK 9 或更高版本。
 
@@ -68,15 +69,15 @@ Mainwindow.xaml 在 WPF 设计器中打开。
 
     [!code-xaml[System.Windows.Interop.D3DImage#10](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]
 
-2. 生成项目。
+2. 生成此项目。
 
 3. 将包含 Direct3D9 内容的 DLL 复制到 bin/Debug 文件夹。
 
-4. 按 F5 运行项目。
+4. 按 F5 运行该项目。
 
     Direct3D9 内容显示在 WPF 应用程序中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 和 WPF 互操作性的性能注意事项](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

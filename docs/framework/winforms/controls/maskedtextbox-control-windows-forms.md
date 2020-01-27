@@ -1,5 +1,5 @@
 ---
-title: MaskedTextBox 控件（Windows 窗体）
+title: MaskedTextBox 컨트롤
 ms.date: 03/30/2017
 f1_keywords:
 - MaskedTextBox
@@ -9,27 +9,27 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 - text boxes [Windows Forms], validating user input
 ms.assetid: 235d6121-027d-481d-8d59-4f6794d15d0c
-ms.openlocfilehash: af699875f6f3dea2f384574c85d85bd77a4507af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e46c5b5ec670a58b571703e9920cb3ee90a13aa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780635"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744955"
 ---
 # <a name="maskedtextbox-control-windows-forms"></a>MaskedTextBox 控件（Windows 窗体）
-本主题链接到其他有关`MaskedTextBox`控件。  
+本主题链接到有关 `MaskedTextBox` 控件的其他内容。  
   
-## <a name="in-this-section"></a>本节内容  
- [演练：使用 MaskedTextBox 控件](walkthrough-working-with-the-maskedtextbox-control.md)  
- 演示的主要功能`MaskedTextBox`控件。  
+## <a name="in-this-section"></a>섹션 내용  
+ [연습: MaskedTextBox 컨트롤 사용](walkthrough-working-with-the-maskedtextbox-control.md)  
+ 演示 `MaskedTextBox` 控件的主要功能。  
   
- [如何：将数据绑定到 MaskedTextBox 控件](how-to-bind-data-to-the-maskedtextbox-control.md)  
- 演示如何在数据库中的数据掩码定义所需的格式不匹配时重新设置数据格式。  
+ [방법: MaskedTextBox 컨트롤에 데이터 바인딩](how-to-bind-data-to-the-maskedtextbox-control.md)  
+ 演示当数据库中的数据与掩码定义所需的格式不匹配时，如何重新设置数据的格式。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.MaskedTextBox>  
- 进行掩码的文本框控件的实现的主要类。  
+ 掩码文本框控件的实现的主类。  
   
-## <a name="related-sections"></a>相关章节  
- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)  
- 提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。
+## <a name="related-sections"></a>관련 섹션  
+ [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ 사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.

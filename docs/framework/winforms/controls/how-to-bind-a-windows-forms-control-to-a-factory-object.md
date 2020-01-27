@@ -1,5 +1,5 @@
 ---
-title: 如何：将 Windows 窗体控件绑定到 Factory 对象
+title: 将控件绑定到工厂对象
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a factory object
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
-ms.openlocfilehash: b64545528746e50d00f88d626a07ac98839e926c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2b4d9aca3345a0cb1e7e995f66a8982dee983ca8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589733"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745093"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>如何：将 Windows 窗体控件绑定到 Factory 对象
 生成与数据交互的控件时，有时需要将控件绑定到生成其他对象的对象或方法。 此类对象或方法被称为 Factory。 例如，数据源可能是方法调用的返回值，而不是内存中的对象或类型。 只要源返回集合，即可将控件绑定到此类数据源。  
@@ -35,7 +35,7 @@ ms.locfileid: "65589733"
   
 - 对 System、System.Data、System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>

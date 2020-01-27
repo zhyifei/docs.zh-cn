@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Windows 窗体 TextBox 控件中查看多个行
+title: 在 TextBox 控件中查看多行
 ms.date: 03/30/2017
 helpviewer_keywords:
 - newline
@@ -11,48 +11,48 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: 893782e041b1397fe0598394b69575a5c9e53806
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 61ea671c1e86fa8254bfc1b043a46f3b7aa6af1d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625396"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728288"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>如何：在 Windows 窗体 TextBox 控件中查看多个行
-默认情况下，Windows 窗体<xref:System.Windows.Forms.TextBox>控件显示单行文本并不会显示滚动条。 文本的长度超过可用空间，仅部分文本可见。 可以通过设置更改此默认行为<xref:System.Windows.Forms.TextBox.Multiline%2A>， <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>，和<xref:System.Windows.Forms.TextBox.ScrollBars%2A>为适当的值的属性。  
+默认情况下，Windows 窗体 <xref:System.Windows.Forms.TextBox> 控件显示单行文本，而不显示滚动条。 如果文本长度超过可用空间，则仅部分文本可见。 可以通过将 <xref:System.Windows.Forms.TextBox.Multiline%2A>、<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>和 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 属性设置为相应的值来更改此默认行为。  
   
-### <a name="to-display-a-carriage-return-in-the-textbox-control"></a>若要显示在 TextBox 控件中返回一个回车符  
+### <a name="to-display-a-carriage-return-in-the-textbox-control"></a>在 TextBox 控件中显示回车符  
   
-- 若要显示多行的回车<xref:System.Windows.Forms.TextBox>，使用<xref:System.Environment.NewLine%2A>属性。  
+- 若要在多行 <xref:System.Windows.Forms.TextBox>中显示回车符，请使用 <xref:System.Environment.NewLine%2A> 属性。  
   
-     请注意，解释转义符 (\\) 是特定于语言的。 Visual Basic 则使用`Chr$(13) & Chr$(10)`为回车符和换行符字符组合。  
+     请注意，转义符（\\）的解释是特定于语言的。 Visual Basic 使用 `Chr$(13) & Chr$(10)` 的回车符和换行符组合。  
   
-### <a name="to-view-multiple-lines-in-the-textbox-control"></a>若要查看 TextBox 控件中的多个行  
+### <a name="to-view-multiple-lines-in-the-textbox-control"></a>在 TextBox 控件中查看多行  
   
-1. 将 <xref:System.Windows.Forms.TextBox.Multiline%2A> 属性设置为 `true`。 如果<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>是`true`（默认值），然后在控件中的文本将显示为一个或多个段落; 否则它将显示为列表中，某些行可能会剪裁在控件的边缘。  
+1. 将 <xref:System.Windows.Forms.TextBox.Multiline%2A> 属性设置为 `true`。 如果 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> `true` （默认值），则控件中的文本将显示为一个或多个段落;否则，它将显示为一个列表，在此列表中，可能会在控件的边缘剪裁一些行。  
   
 2. 将 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 属性设置为适当的值。  
   
-    |值|描述|  
+    |{2&gt;值&lt;2}|描述|  
     |-----------|-----------------|  
-    |<xref:System.Windows.Forms.ScrollBars.None>|使用此值，如果该文本则为一个段落，几乎总是能适合控件。 用户可以使用鼠标指针在控件内移动，如果文本太长而无法一次性全部显示。|  
-    |<xref:System.Windows.Forms.ScrollBars.Horizontal>|如果你想要显示的行，其中一些可能会比的宽度更长列表，请使用此值<xref:System.Windows.Forms.TextBox>控件。|  
-    |<xref:System.Windows.Forms.ScrollBars.Both>|如果该列表可能会超过控件的高度，则使用此值。|  
+    |<xref:System.Windows.Forms.ScrollBars.None>|如果文本将是几乎始终适合控件的段落，请使用此值。 如果文本太长而无法同时显示，用户可以使用鼠标指针在控件内移动。|  
+    |<xref:System.Windows.Forms.ScrollBars.Horizontal>|如果要显示行列表，则使用此值，其中某些行的长度可能大于 <xref:System.Windows.Forms.TextBox> 控件的宽度。|  
+    |<xref:System.Windows.Forms.ScrollBars.Both>|如果列表的长度可能超过控件的高度，则使用此值。|  
   
 3. 将 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 属性设置为适当的值。  
   
-    |值|描述|  
+    |{2&gt;值&lt;2}|描述|  
     |-----------|-----------------|  
-    |`false`|控件中的文本不会自动换行，所以它将滚动到右侧，直到到达一个分行符。 使用此值，如果你选择了<xref:System.Windows.Forms.ScrollBars.Horizontal>滚动条或<xref:System.Windows.Forms.ScrollBars.Both>、 更高版本。|  
-    |`true`（默认值）|不会出现水平滚动条。 使用此值，如果你选择了<xref:System.Windows.Forms.ScrollBars.Vertical>滚动条或<xref:System.Windows.Forms.ScrollBars.None>、 更高版本来显示一个或多个段落。|  
+    |`false`|控件中的文本不会自动换行，因此它将向右滚动，直至到达换行符。 如果选择了上面 <xref:System.Windows.Forms.ScrollBars.Horizontal> 滚动条或 <xref:System.Windows.Forms.ScrollBars.Both>，请使用此值。|  
+    |`true`（默认）|不会显示水平滚动条。 如果选择 <xref:System.Windows.Forms.ScrollBars.Vertical> 滚动条或 <xref:System.Windows.Forms.ScrollBars.None>上方以显示一个或多个段落，请使用此值。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox 控件概述](textbox-control-overview-windows-forms.md)
-- [如何：控制 Windows 窗体 TextBox 控件中的插入点](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [如何：在 Windows 窗体 TextBox 控件中控制插入点](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
 - [如何：使用 Windows 窗体 TextBox 控件创建密码文本框](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [如何：创建只读文本框](how-to-create-a-read-only-text-box-windows-forms.md)
-- [如何：在字符串中放置引号](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [如何：在字符串中添加引号](how-to-put-quotation-marks-in-a-string-windows-forms.md)
 - [如何：在 Windows 窗体 TextBox 控件中选择文本](how-to-select-text-in-the-windows-forms-textbox-control.md)
 - [TextBox 控件](textbox-control-windows-forms.md)

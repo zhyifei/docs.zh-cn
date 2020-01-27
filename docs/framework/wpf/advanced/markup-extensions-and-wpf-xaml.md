@@ -1,5 +1,5 @@
 ---
-title: 标记扩展和 WPF XAML
+title: 标记扩展和 XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
 - brace character [WPF]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: a9e0657aa9f9dd4de0ff3f8788c686bf1535b1ad
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: f4134e9d0b26135d1bd6058ac9ed8941a9c6be34
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559789"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727895"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>标记扩展和 WPF XAML
 本主题介绍 XAML 的标记扩展概念，包括其语法规则、用途以及作为其基础的类对象模型。 标记扩展是 XAML 语言以及 XAML 服务的 .NET 实现的常规功能。 本主题专门详细讨论用于 WPF XAML 的标记扩展。  

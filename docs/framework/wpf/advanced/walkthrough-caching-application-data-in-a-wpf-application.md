@@ -1,5 +1,5 @@
 ---
-title: 演练：在 WPF 应用程序中缓存应用程序数据
+title: 缓存应用数据
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 922d91466731b331cc409cc362c4ada2c287916a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b7d999f94e2f2ae410a16e537d51c0f890def4e1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715892"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728055"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>演练：在 WPF 应用程序中缓存应用程序数据
 缓存可以将数据存储在内存中以便快速访问。 再次访问数据时，应用程序可以从缓存获取数据，而不是从原始源检索数据。 这可改善性能和可伸缩性。 此外，数据源暂时不可用时，缓存可提供数据。
@@ -73,7 +73,7 @@ ms.locfileid: "74715892"
 
 6. 选择“为解决方案创建目录”复选框。
 
-7. 单击“确定”。
+7. 单击" **确定**"。
 
      WPF 设计器将在 "**设计**" 视图中打开并显示 mainwindow.xaml 文件。 Visual Studio 将创建 "**我的项目**" 文件夹、应用程序 .xaml 文件和 mainwindow.xaml 文件。
 
@@ -99,7 +99,7 @@ ms.locfileid: "74715892"
 
 4. 在 "**目标框架（所有配置）** " 列表中，选择 ".NET Framework 4"。 （请勿选择 .NET Framework 4 客户端配置文件。）
 
-5. 单击“确定”。
+5. 单击" **确定**"。
 
      随即显示“目标框架更改”对话框。
 

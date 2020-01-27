@@ -1,37 +1,37 @@
 ---
-title: OpenFileDialog 组件（Windows 窗体）
+title: OpenFileDialog 구성 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Open File dialog box
 - OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
-ms.openlocfilehash: 0e13417e43e9cda79e9e253135e564990361dcf6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef6b69a90a048caf7924b00ddd0b79a0a7efaeb9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936339"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744362"
 ---
-# <a name="openfiledialog-component-windows-forms"></a>OpenFileDialog 组件（Windows 窗体）
-Windows 窗体 <xref:System.Windows.Forms.OpenFileDialog> 组件是一个预配置的对话框。 它是相同**打开的文件**公开的 Windows 操作系统的对话框。 它继承自 <xref:System.Windows.Forms.CommonDialog> 类。  
+# <a name="openfiledialog-component-windows-forms"></a>OpenFileDialog 구성 요소(Windows Forms)
+Windows Forms <xref:System.Windows.Forms.OpenFileDialog> 구성 요소는 미리 구성된 대화 상자입니다. 它与 Windows 操作系统公开的 "**打开文件**" 对话框相同。 <xref:System.Windows.Forms.CommonDialog> 클래스에서 상속됩니다.  
   
-## <a name="in-this-section"></a>本节内容  
- [OpenFileDialog 组件概述](openfiledialog-component-overview-windows-forms.md)  
- 介绍 <xref:System.Windows.Forms.OpenFileDialog> 组件的一般概念，此组件使你可以显示用户可用于打开文件的预配置对话框。  
+## <a name="in-this-section"></a>섹션 내용  
+ [OpenFileDialog 구성 요소 개요](openfiledialog-component-overview-windows-forms.md)  
+ 사용자가 파일을 여는 데 사용할 수 있는 미리 구성된 대화 상자를 표시할 수 있는 <xref:System.Windows.Forms.OpenFileDialog> 구성 요소의 일반적인 개념을 소개합니다.  
   
- [如何：使用 OpenFileDialog 组件打开文件](how-to-open-files-using-the-openfiledialog-component.md)  
- 说明如何通过 <xref:System.Windows.Forms.OpenFileDialog> 组件的实例在运行时打开文件。  
+ [방법: OpenFileDialog 구성 요소를 사용하여 파일 열기](how-to-open-files-using-the-openfiledialog-component.md)  
+ <xref:System.Windows.Forms.OpenFileDialog> 구성 요소의 인스턴스를 통해 런타임에 파일을 여는 방법을 설명합니다.  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.OpenFileDialog>  
- 提供有关 <xref:System.Windows.Forms.OpenFileDialog> 类及其成员的引用信息。  
+ <xref:System.Windows.Forms.OpenFileDialog> 클래스 및 해당 멤버에 대한 참조 정보를 제공합니다.  
   
-## <a name="related-sections"></a>相关章节  
- [对话框控件和组件](dialog-box-controls-and-components-windows-forms.md)  
- 描述一组用户可用于执行与应用程序或系统的标准交互的控件和组件。  
+## <a name="related-sections"></a>관련 섹션  
+ [대화 상자 컨트롤 및 구성 요소](dialog-box-controls-and-components-windows-forms.md)  
+ 사용자가 애플리케이션이나 시스템에서 표준 조작을 수행할 수 있도록 하는 컨트롤 및 구성 요소 집합에 대해 설명합니다.  
   
- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)  
- 提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。  
+ [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ 사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.  
   
- [Windows 窗体对话框的基本代码](https://go.microsoft.com/fwlink/?LinkID=102575)  
- 讨论 Windows 窗体对话框控件和组件以及执行其基本功能必需的代码。 （MSDN 联机库技术文章）
+ [Windows Forms 대화 상자의 필수 코드](https://go.microsoft.com/fwlink/?LinkID=102575)  
+ Windows Forms 대화 상자 컨트롤 및 구성 요소와 기본 함수를 실행하는 데 필요한 코드에 대해 설명합니다. (MSDN Online Library 기술 문서)

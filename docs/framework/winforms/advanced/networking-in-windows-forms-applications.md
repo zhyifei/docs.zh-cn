@@ -1,36 +1,36 @@
 ---
-title: Windows 窗体应用程序中的网络
+title: 네트워킹
 ms.date: 03/30/2017
 helpviewer_keywords:
 - networking [Windows Forms], Windows Forms
 - Windows Forms, networking
 ms.assetid: babf8af3-8000-46e2-8c68-a42127efabba
-ms.openlocfilehash: 2432fbd0a2c769efb126e4b9c1dc19e35fbe4c31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a339792e716e9c23a0c178dc08410aa66988d7c6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641497"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745014"
 ---
 # <a name="networking-in-windows-forms-applications"></a>Windows 窗体应用程序中的网络
-.NET Framework 提供了用于显示网页，下载 Web 内容、 文件传输协议 (FTP) 站点，与之进行交互和使用 Web 服务，轻松地构建到你的应用程序的网络功能的类。 以下资源将帮助你了解.NET Framework 和如何您可以将其集成到 Windows 窗体的网络技术。  
+.NET Framework 提供了用于显示网页、下载 Web 内容、与文件传输协议（FTP）站点交互以及使用 Web 服务的类，从而使你可以轻松地将网络功能构建到应用程序中。 以下资源将帮助你了解 .NET Framework 的网络技术，以及如何将它们集成到 Windows 窗体中。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>참조  
  <xref:System.Net>  
- .NET Framework 的句柄网络连接中类的根命名空间。  
+ 用于处理网络连接的 .NET Framework 中的类的根命名空间。  
   
  <xref:System.Net.WebClient>  
- 用于以编程方式检索 Web 或基于 HTTP 的内容很方便的类。  
+ 一种方便的类，用于以编程方式检索基于 Web 或 HTTP 的内容。  
   
  <xref:System.Net.FtpWebRequest>  
- 用于检索和发送文件使用 FTP 的类。  
+ 用于使用 FTP 检索和发送文件的类。  
   
  <xref:System.Windows.Forms.WebBrowser>  
- 托管的包装类`WebBrowser`Windows 附带的控件。  
+ Windows 附带的 `WebBrowser` 控件的托管包装器类。  
   
-## <a name="related-sections"></a>相关章节  
- [.NET Framework 中的网络编程](../../network-programming/index.md)  
- .NET Framework 中的联网简介。  
+## <a name="related-sections"></a>관련 섹션  
+ [.NET Framework의 네트워크 프로그래밍](../../network-programming/index.md)  
+ .NET Framework 中的网络简介。  
   
- [Windows 窗体数据绑定](../windows-forms-data-binding.md)  
- 介绍如何在应用程序，从本地数据存储或位于网络上的数据库中显示数据库内容。
+ [Windows Forms 데이터 바인딩](../windows-forms-data-binding.md)  
+ 描述如何从本地数据存储或位于网络中的数据库中显示应用程序中的数据库内容。

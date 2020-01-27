@@ -1,5 +1,5 @@
 ---
-title: Windows 窗体和非托管应用程序概述
+title: 非托管应用概述
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [Windows Forms]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: 02f3224a8069fd091833bb09744389592c769818
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0b4c3e738848be1ead2adeb1945e168c9db60071
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592497"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732533"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows 窗体和非托管应用程序概述
 Windows 窗体应用程序和控件可以与非托管应用程序进行互操作，但有一些需要注意的问题。 以下各节将介绍 Windows 窗体应用程序和控件支持和不支持的方案和配置。  
@@ -47,17 +47,17 @@ Windows 窗体应用程序和控件可以与非托管应用程序进行互操作
  应用程序的消息循环是内部程序循环，它从线程的消息队列检索消息，然后转换这些消息，之后将它们发送给要处理的应用程序。 Windows 窗体的消息循环与更早的应用程序（例如，Visual Basic 6.0 应用程序和 MFC 应用程序）所提供的消息循环的体系结构不同。 发布到消息循环的窗口消息的处理方式可能与 Windows 窗体期望的不同。 因此，可能发生意外的行为。 某些击键组合可能不起作用，某些鼠标活动可能不工作，或者某些事件可能不会按期望引发。  
   
 ## <a name="resolving-interoperability-issues"></a>解决互操作性问题  
- 可以通过在创建使用.NET Framework 消息循环上显示窗体来解决这些问题<xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>方法。  
+ 可以通过在 .NET Framework 消息循环上显示窗体来解决这些问题，该消息循环是使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法创建的。  
   
  若要使 Windows 窗体在 COM 客户端应用程序中正确工作，必须在 Windows 窗体消息循环上运行该窗体。 若要执行此操作，请使用以下方法之一：  
   
-- 使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法显示 Windows 窗体。 有关详细信息，请参阅[如何：通过显示 Windows 窗体使用 ShowDialog 方法来支持 COM 互操作](com-interop-by-displaying-a-windows-form-shadow.md)。  
+- 使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法显示 Windows 窗体。 有关详细信息，请参阅[如何：通过使用 ShowDialog 方法显示 Windows 窗体来支持 COM 互操作](com-interop-by-displaying-a-windows-form-shadow.md)。  
   
-- 在新线程上显示每个 Windows 窗体。 有关详细信息，请参阅[如何：通过在其自己的线程上显示每个 Windows 窗体来支持 COM 互操作](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)。  
+- 在新线程上显示每个 Windows 窗体。 有关详细信息，请参阅[如何：通过在每个 Windows 窗体各自的线程上显示该 Windows 窗体来支持 COM 互操作](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Windows 窗体和非托管应用程序](windows-forms-and-unmanaged-applications.md)
+- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
 - [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)
 - [.NET Framework 应用程序中的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [COM 互操作性示例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
@@ -65,5 +65,5 @@ Windows 窗体应用程序和控件可以与非托管应用程序进行互操作
 - [向 COM 公开 .NET Framework 组件](../../interop/exposing-dotnet-components-to-com.md)
 - [将 COM 的程序集打包](../../interop/packaging-an-assembly-for-com.md)
 - [向 COM 注册程序集](../../interop/registering-assemblies-with-com.md)
-- [如何：通过显示 Windows 窗体使用 ShowDialog 方法来支持 COM 互操作](com-interop-by-displaying-a-windows-form-shadow.md)
-- [如何：通过在其自己的线程上显示每个 Windows 窗体来支持 COM 互操作](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [如何：通过使用 ShowDialog 方法显示 Windows 窗体来支持 COM 互操作](com-interop-by-displaying-a-windows-form-shadow.md)
+- [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

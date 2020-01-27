@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Windows 窗体 DateTimePicker 控件以自定义格式显示日期
+title: 使用 DateTimePicker 控件以自定义格式显示日期
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - dates [Windows Forms], displaying in DateTimePicker control
 ms.assetid: 39767691-2d2b-46b6-a663-b7901e581a6e
-ms.openlocfilehash: 08d5a505229cd434dbf82e8ae4624bb418efd379
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a27dbe737b81af86c0ac50b791bcd87bafe05b4f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972155"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745931"
 ---
 # <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>如何：使用 Windows 窗体 DateTimePicker 控件以自定义格式显示日期
-Windows 窗体<xref:System.Windows.Forms.DateTimePicker>控制可以让你灵活地设置日期和时间控件中的显示格式。 <xref:System.Windows.Forms.DateTimePicker.Format%2A>属性，可选择从中列出的预定义格式<xref:System.Windows.Forms.DateTimePickerFormat>。 如果这些都不能充分满足您需求，则可以创建您自己使用中列出的格式字符的格式样式<xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>。  
+Windows 窗体 <xref:System.Windows.Forms.DateTimePicker> 控件使您可以灵活地设置控件中日期和时间的显示格式。 <xref:System.Windows.Forms.DateTimePicker.Format%2A> 属性允许您从 <xref:System.Windows.Forms.DateTimePickerFormat>中列出的预定义格式中进行选择。 如果这些都不能满足您的需要，则可以使用 <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>中列出的格式字符来创建自己的格式样式。  
   
-### <a name="to-display-a-custom-format"></a>若要显示的自定义格式  
+### <a name="to-display-a-custom-format"></a>显示自定义格式  
   
-1. 将 <xref:System.Windows.Forms.DateTimePicker.Format%2A> 属性设置为 `DateTimePickerFormat.Custom`。  
+1. <xref:System.Windows.Forms.DateTimePicker.Format%2A> 속성을 `DateTimePickerFormat.Custom`으로 설정합니다.  
   
-2. 设置<xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>属性设置为格式字符串。  
+2. 将 <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> 属性设置为格式字符串。  
   
     ```vb  
     DateTimePicker1.Format = DateTimePickerFormat.Custom  
@@ -44,9 +44,9 @@ Windows 窗体<xref:System.Windows.Forms.DateTimePicker>控制可以让你灵活
     dateTimePicker1->CustomFormat = "ddd dd MMM yyyy";  
     ```  
   
-### <a name="to-add-text-to-the-formatted-value"></a>若要将文本添加到带格式的值  
+### <a name="to-add-text-to-the-formatted-value"></a>向格式化值添加文本  
   
-1. 使用单引号括起来不像"M"的格式字符或分隔符等任何字符":"。 例如，下面的格式字符串显示当前日期，格式以"今天是：05:30:31 星期五年 3 月 02，2012"英语 （美国） 区域性中。  
+1. 使用单引号将不是格式字符（如 "M"）或分隔符（如 "："）的任何字符括起来。 例如，以下格式字符串将显示英语（美国）区域性中格式为 "今日：05:30:31 星期五3月02，2012" 的当前日期。  
   
     ```vb  
     DateTimePicker1.CustomFormat = "'Today is:' hh:mm:ss dddd MMMM dd, yyyy"  
@@ -61,9 +61,9 @@ Windows 窗体<xref:System.Windows.Forms.DateTimePicker>控制可以让你灵活
        "'Today is:' hh:mm:ss dddd MMMM dd, yyyy";  
     ```  
   
-     具体取决于的区域性设置，可能会更改任何未括在单引号内字符。 例如，上面的格式字符串显示当前日期，格式以"今天是：05:30:31 星期五年 3 月 02，2012"英语 （美国） 区域性中。 请注意，第一个冒号括在单引号中，因为它不是因为它处于"hh: mm:"为分隔字符。 在另一个区域性格式可能显示为"现在是：05.30.31 星期五年 3 月 02，2012"。  
+     根据区域性设置的不同，不包含在单引号中的任何字符都可以更改。 例如，上述格式字符串将显示英语（美国）区域性中格式为 "今日：05:30:31 星期五3月02，2012" 的当前日期。 请注意，第一个冒号括在单引号中，因为它不应作为 "hh： mm： ss" 中的分隔字符。 在另一种区域性中，该格式可能显示为 "今天是：05.30.31 星期五02： 2012"。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [DateTimePicker 控件](datetimepicker-control-windows-forms.md)
-- [如何：使用 Windows 窗体 DateTimePicker 控件设置和返回日期](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+- [DateTimePicker 컨트롤](datetimepicker-control-windows-forms.md)
+- [방법: Windows Forms DateTimePicker 컨트롤을 사용하여 날짜 설정 및 반환](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

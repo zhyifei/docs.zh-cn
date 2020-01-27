@@ -1,5 +1,5 @@
 ---
-title: 如何：向 WPF 应用程序添加初始屏幕
+title: 如何添加初始屏幕
 ms.date: 08/18/2018
 helpviewer_keywords:
 - WPF [WPF], splash screen
@@ -7,44 +7,44 @@ helpviewer_keywords:
 - SplashScreen class [WPF]
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
-ms.openlocfilehash: 3120ee64d65822d323800a89466c6b707169aaaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39f53e21c40f036c65894b4f275cd5fb414999be
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947896"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740446"
 ---
-# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>如何：向 WPF 应用程序添加初始屏幕
+# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>如何：将初始屏幕添加到 WPF 应用程序
 
-本主题演示如何将添加一个启动窗口中，或*初始屏幕*，到 Windows Presentation Foundation (WPF) 应用程序。
+本主题演示如何将启动窗口或*初始屏幕*添加到 WINDOWS PRESENTATION FOUNDATION （WPF）应用程序。
 
-## <a name="to-add-an-existing-image-as-a-splash-screen"></a>若要将现有映像添加为初始屏幕
+## <a name="to-add-an-existing-image-as-a-splash-screen"></a>将现有图像添加为初始屏幕
 
-1. 创建或查找想要用于初始屏幕的图像。 可以使用任何支持的 Windows Imaging Component (WIC) 的图像格式。 例如，可以使用 BMP、 GIF、 JPEG、 PNG 或 TIFF 格式。
+1. 创建或查找要用于初始屏幕的映像。 可以使用 Windows 映像组件（WIC）支持的任何图像格式。 例如，可以使用 BMP、GIF、JPEG、PNG 或 TIFF 格式。
 
 2. 将图像文件添加到 WPF 应用程序项目。
 
-3. 在中**解决方案资源管理器**，选择的映像。
+3. 在**解决方案资源管理器**中，选择图像。
 
-4. 在属性窗口中，单击下拉箭头**生成操作**属性。
+4. 在属性窗口中，单击 "**生成操作**" 属性的下拉箭头。
 
-5. 选择**初始屏幕**从下拉列表。
+5. 从下拉列表中选择 " **SplashScreen** "。
 
 6. 按 F5 生成并运行该应用程序。
 
-     初始屏幕图像显示在屏幕上，在中心，然后淡主应用程序窗口出现时。
+     初始屏幕图像显示在屏幕的中心，然后在主应用程序窗口出现时淡化。
 
-## <a name="to-exclude-the-splash-screen-from-build"></a>若要从生成中排除的初始屏幕
+## <a name="to-exclude-the-splash-screen-from-build"></a>从生成中排除初始屏幕
 
-1. 在中**解决方案资源管理器**，选择初始屏幕图像。
+1. 在**解决方案资源管理器**中，选择初始屏幕图像。
 
-2. 在中**属性**窗口中，将**生成操作**到**None**。
+2. 在 "**属性**" 窗口中，将 "**生成操作**" 设置为 "**无**"。
 
-## <a name="to-remove-the-splash-screen-from-an-application"></a>若要删除从应用程序的初始屏幕
+## <a name="to-remove-the-splash-screen-from-an-application"></a>从应用程序中删除初始屏幕
 
-在中**解决方案资源管理器**，删除初始屏幕图像。
+在**解决方案资源管理器**中，删除初始屏幕图像。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.SplashScreen>
-- [如何：向项目添加现有项](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))
+- [如何：向项目中添加现有项](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

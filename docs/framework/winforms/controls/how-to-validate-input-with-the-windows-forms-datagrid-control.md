@@ -1,5 +1,5 @@
 ---
-title: 如何：用 Windows 窗体 DataGrid 控件验证输入
+title: 通过 DataGrid 控件验证输入
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], validating input
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-ms.openlocfilehash: dc8c8f157e6673c1bddc68bfb511683e6d2b99be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3958089007401d2e977c9c96f07c9196e6216596
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796469"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728296"
 ---
 # <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>如何：用 Windows 窗体 DataGrid 控件验证输入
 
 > [!NOTE]
 > <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。
 
-有两种类型的输入验证可用于 Windows 窗体<xref:System.Windows.Forms.DataGrid>控件。 如果用户尝试输入的单元格，例如整数、 字符串不可接受的数据类型的值的新的无效值将被替换的旧值。 这种输入验证自动完成的不能自定义。
+Windows 窗体 <xref:System.Windows.Forms.DataGrid> 控件提供两种类型的输入验证。 如果用户尝试输入的值不是单元格的不可接受的数据类型（例如，将字符串转换为整数），则新的无效值将替换为旧值。 这种输入验证是自动完成的，不能进行自定义。
 
-可以使用其他类型的输入验证拒绝任何不可接受的数据，例如中必须是大于或等于 1 或不适当的字符串的字段值为 0。 这通过编写事件处理程序完成在数据集中<xref:System.Data.DataTable.ColumnChanging>或<xref:System.Data.DataTable.RowChanging>事件。 下面的示例使用<xref:System.Data.DataTable.ColumnChanging>事件因为不可接受的值特别是"Product"列不允许。 可以使用<xref:System.Data.DataTable.RowChanging>对于检查"结束日期"列的值是否晚于同一行中的"起始日期"列的事件。
+其他类型的输入验证可用于拒绝任何不可接受的数据，例如，字段中的值必须大于或等于1，或者字符串不正确。 这是通过为 <xref:System.Data.DataTable.ColumnChanging> 或 <xref:System.Data.DataTable.RowChanging> 事件编写事件处理程序在数据集中完成的。 下面的示例使用 <xref:System.Data.DataTable.ColumnChanging> 事件，因为特定的 "Product" 列不允许使用不可接受的值。 您可以使用 <xref:System.Data.DataTable.RowChanging> 事件来检查 "结束日期" 列的值是否晚于同一行中的 "开始日期" 列。
 
-## <a name="to-validate-user-input"></a>若要验证用户输入
+## <a name="to-validate-user-input"></a>验证用户输入
 
-1. 编写代码来处理<xref:System.Data.DataTable.ColumnChanging>适当的表的事件。 检测到不适当的输入时，调用<xref:System.Data.DataRow.SetColumnError%2A>方法的<xref:System.Data.DataRow>对象。
+1. 编写代码来处理相应表的 <xref:System.Data.DataTable.ColumnChanging> 事件。 如果检测到不正确的输入，请调用 <xref:System.Data.DataRow> 对象的 <xref:System.Data.DataRow.SetColumnError%2A> 方法。
 
     ```vb
     Private Sub Customers_ColumnChanging(ByVal sender As Object, _
@@ -66,9 +66,9 @@ ms.locfileid: "61796469"
     }
     ```
 
-2. 连接到该事件的事件处理程序。
+2. 将事件处理程序连接到事件。
 
-    将下面的代码中窗体的<xref:System.Windows.Forms.Form.Load>事件或其构造函数。
+    将以下代码放在窗体的 <xref:System.Windows.Forms.Form.Load> 事件或其构造函数中。
 
     ```vb
     ' Assumes the grid is bound to a dataset called customersDataSet1
@@ -84,7 +84,7 @@ ms.locfileid: "61796469"
     customersDataSet1.Tables["Customers"].ColumnChanging += new DataColumnChangeEventHandler(this.Customers_ColumnChanging);
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Data.DataTable.ColumnChanging>

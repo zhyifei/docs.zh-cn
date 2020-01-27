@@ -1,5 +1,6 @@
 ---
-title: 教程：在 Visual Studio 2019 中创建第一个 WPF 应用程序-.NET Framework
+title: 在 Visual Studio 2019 中创建第一个 WPF 应用-.NET Framework
+titleSuffix: ''
 ms.date: 09/06/2019
 dev_langs:
 - csharp
@@ -12,18 +13,18 @@ ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 232605850c65aebd9aafdc9b76c90af42f2c901c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336812"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746971"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>教程：在 Visual Studio 2019 中创建第一个 WPF 应用程序
 
 本文介绍如何开发 Windows Presentation Foundation （WPF）桌面应用程序，该应用程序包括大多数 WPF 应用程序所共有的元素： Extensible Application Markup Language （XAML）标记、代码隐藏、应用程序定义、控件、布局、数据绑定和样式。 若要开发应用程序，请使用 Visual Studio。 
 
-在本教程中，你将了解：
+이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 > [!div class="checklist"]
 >
 > - 创建 WPF 项目。
@@ -61,7 +62,7 @@ ms.locfileid: "75336812"
       
    3. 选择 " **WPF 应用（.NET Framework）** " 模板，然后选择 "**下一步**"。 
      
-      ![“创建新项目”对话框](./media/walkthrough-my-first-wpf-desktop-application/create-new-project-dialog.png)
+      ![새 프로젝트 만들기 대화 상자](./media/walkthrough-my-first-wpf-desktop-application/create-new-project-dialog.png)
     
       此时将打开 "**配置新项目**" 对话框。
 
@@ -83,7 +84,7 @@ ms.locfileid: "75336812"
 
     [!code-xaml[ExpenseIt#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. 打开 MainWindow.xaml。
+3. 打开*mainwindow.xaml*。
 
     此 XAML 文件是应用程序的主窗口，并显示在页中创建的内容。 <xref:System.Windows.Window> 类定义窗口的属性，例如其标题、大小或图标，并处理事件（如关闭或隐藏）。
 
@@ -119,7 +120,7 @@ ms.locfileid: "75336812"
 
 7. 打开*mainwindow.xaml*或*MainWindow.xaml.cs*。
 
-    此文件是一个代码隐藏文件，其中包含处理*mainwindow.xaml*中声明的事件的代码。 此文件包含在 XAML 中定义的窗口的分部类。
+    此文件是一个代码隐藏文件，其中包含处理*mainwindow.xaml*中声明的事件的代码。 이 파일에는 XAML에 정의된 창의 부분 클래스가 포함되어 있습니다.
 
 8. 如果使用C#的是，请将 `MainWindow` 类更改为从 <xref:System.Windows.Navigation.NavigationWindow>派生。 （在 Visual Basic 中，当你更改 XAML 中的窗口时会自动发生这种情况。）你C#的代码现在应如下所示：
 
@@ -127,7 +128,7 @@ ms.locfileid: "75336812"
 
 ## <a name="add-files-to-the-application"></a>向应用程序添加文件
 
-本部分将向应用程序添加两个页面和一个图像。
+이 섹션에서는 애플리케이션에 두 페이지와 이미지를 추가합니다.
 
 1. 将新页面添加到项目中，并将其命名 *`ExpenseItHome.xaml`* :
 
@@ -151,7 +152,7 @@ ms.locfileid: "75336812"
 
     [!code-xaml[ExpenseIt#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-1. 打开 MainWindow.xaml。
+1. 打开*mainwindow.xaml*。
 
 1. 向 <xref:System.Windows.Navigation.NavigationWindow> 元素添加 <xref:System.Windows.Navigation.NavigationWindow.Source%2A> 属性，并将其设置为 "`ExpenseItHome.xaml`"。
 
@@ -178,7 +179,7 @@ ms.locfileid: "75336812"
 
     此页会显示费用报表上选择的人员 **`ExpenseItHome`** 页。
 
-1. 打开 *ExpenseReportPage.xaml*。
+1. *ExpenseReportPage.xaml*을 엽니다.
 
 1. 将 <xref:System.Windows.Controls.Page.Title%2A> 设置为 "`ExpenseIt - View Expense`"。
 
@@ -194,7 +195,7 @@ ms.locfileid: "75336812"
 
 1. 打开*expenseithome.xaml*和*expensereportpage.xaml*，或*ExpenseItHome.xaml.cs*和*ExpenseReportPage.xaml.cs*。
 
-    创建新的页面文件时，Visual Studio 会自动创建其*代码隐藏*文件。 这些代码隐藏文件处理响应用户输入的逻辑。
+    创建新的页面文件时，Visual Studio 会自动创建其*代码隐藏*文件。 이러한 코드 숨김 파일은 사용자 입력에 응답하기 위한 논리를 처리합니다.
 
     你的代码应如以下所示 **`ExpenseItHome`** :
 
@@ -214,7 +215,7 @@ ms.locfileid: "75336812"
 
     2. 在 "**添加现有项**" 对话框中，将 "文件筛选器" 设置为 "**所有文件**或**图像文件**"，浏览到想要使用的图像文件，然后选择 "**添加**"。
 
-## <a name="build-and-run-the-application"></a>编译和运行应用程序
+## <a name="build-and-run-the-application"></a>애플리케이션 빌드 및 실행
 
 1. 若要生成并运行应用程序，请按**F5**或从 "**调试**" 菜单中选择 "**启动调试**"。
 
@@ -226,7 +227,7 @@ ms.locfileid: "75336812"
 
 ## <a name="create-the-layout"></a>创建布局
 
-布局提供了放置 UI 元素的有序方式，还可在调整 UI 大小时管理这些元素的大小和位置。 通常使用以下布局控件之一来创建布局：
+布局提供了放置 UI 元素的有序方式，还可在调整 UI 大小时管理这些元素的大小和位置。 일반적으로 다음 레이아웃 컨트롤 중 하나를 사용하여 레이아웃을 만듭니다.
 
 - <xref:System.Windows.Controls.Canvas>-定义一个区域，可在其中使用相对于画布区域的坐标显式定位子元素。
 - <xref:System.Windows.Controls.DockPanel>-定义一个区域，您可以在其中彼此水平或垂直排列子元素。
@@ -265,7 +266,7 @@ ms.locfileid: "75336812"
 
 ## <a name="add-controls"></a>添加控件
 
-在本部分中，你将更新主页 UI 以显示人员列表，你可以在其中选择一个人员来显示其费用报表。 控件是允许用户与应用程序交互的 UI 对象。 有关详细信息，请参阅 [控件](../controls/index.md)。
+在本部分中，你将更新主页 UI 以显示人员列表，你可以在其中选择一个人员来显示其费用报表。 컨트롤은 사용자가 애플리케이션과 상호 작용할 수 있게 하는 UI 개체입니다. 자세한 내용은 [컨트롤](../controls/index.md)을 참조하세요.
 
 若要创建此 UI，将添加到以下元素 *`ExpenseItHome.xaml`* :
 
@@ -282,7 +283,7 @@ ms.locfileid: "75336812"
    > [!TIP]
    > 还可以通过将控件从 "**工具箱**" 窗口拖到设计窗口，然后在 "**属性**" 窗口中设置其属性来创建控件。
 
-2. 构建并运行应用程序。
+2. 애플리케이션을 빌드 및 실행합니다.
 
     下图显示了您创建的控件：
 
@@ -316,7 +317,7 @@ ms.locfileid: "75336812"
 
     [!code-xaml[ExpenseIt#13](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#13)]
 
-7. 构建并运行应用程序。
+7. 애플리케이션을 빌드 및 실행합니다.
 
 下图显示刚刚添加的内容的结果：
 
@@ -339,7 +340,7 @@ ms.locfileid: "75336812"
 
 *ExpenseReportPage.xaml*选择的人员显示费用报表 **`ExpenseItHome`** 页。 在本部分中，你将为**expensereportpage.xaml**创建 UI。 还将向各种 UI 元素添加背景色和填充颜色。
 
-1. 打开 *ExpenseReportPage.xaml*。
+1. *ExpenseReportPage.xaml*을 엽니다.
 
 2. 在 <xref:System.Windows.Controls.Grid> 标记之间添加以下 XAML：
 
@@ -347,11 +348,11 @@ ms.locfileid: "75336812"
 
     此用户界面是类似于 *`ExpenseItHome.xaml`* ，但报表数据显示在<xref:System.Windows.Controls.DataGrid>。
 
-3. 构建并运行应用程序。
+3. 애플리케이션을 빌드 및 실행합니다.
 
 4. 选择 "**视图**" 按钮。
 
-    出现费用报告页。 另请注意，"后退" 导航按钮已启用。
+    경비 보고서 페이지가 나타납니다. 另请注意，"后退" 导航按钮已启用。
 
 下图显示了添加到*expensereportpage.xaml*的 UI 元素。
 
@@ -359,7 +360,7 @@ ms.locfileid: "75336812"
 
 ## <a name="style-controls"></a>样式控件
 
-对于 UI 中同一类型的所有元素，各种元素的外观通常是相同的。 UI 使用[样式](../controls/styling-and-templating.md)使外观在多个元素中可重用。 样式的可重用性有助于简化 XAML 创建和管理。 本部分替换在以前步骤中通过样式定义的按元素划分的属性。
+对于 UI 中同一类型的所有元素，各种元素的外观通常是相同的。 UI 使用[样式](../controls/styling-and-templating.md)使外观在多个元素中可重用。 样式的可重用性有助于简化 XAML 创建和管理。 이 섹션에서는 이전 단계에서 정의된 요소별 특성을 스타일로 바꿉니다.
 
 1. 打开*Application .xaml*或*app.xaml*。
 
@@ -367,29 +368,29 @@ ms.locfileid: "75336812"
 
     [!code-xaml[ExpenseIt#18](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt7/App.xaml#18)]
 
-    此 XAML 将添加以下样式：
+    이 XAML은 다음 스타일을 추가합니다.
 
-    - `headerTextStyle`：可设置页标题 <xref:System.Windows.Controls.Label>的格式。
+    - `headerTextStyle`: 페이지 제목 <xref:System.Windows.Controls.Label>의 형식을 지정합니다.
 
-    - `labelStyle`：可设置 <xref:System.Windows.Controls.Label> 控件的格式。
+    - `labelStyle`: <xref:System.Windows.Controls.Label> 컨트롤의 형식을 지정합니다.
 
-    - `columnHeaderStyle`：可设置 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>的格式。
+    - `columnHeaderStyle`: <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>의 형식을 지정합니다.
 
-    - `listHeaderStyle`：可设置列表标头 <xref:System.Windows.Controls.Border> 控件的格式。
+    - `listHeaderStyle`: 목록 헤더 <xref:System.Windows.Controls.Border> 컨트롤의 형식을 지정합니다.
 
     - `listHeaderTextStyle`：设置列表标题 <xref:System.Windows.Controls.Label>的格式。
 
     - `buttonStyle`：设置 `ExpenseItHome.xaml`上的 <xref:System.Windows.Controls.Button> 格式。
 
-    请注意，样式是 <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> 属性元素的资源和子级。 在此位置中，这些样式将应用到应用程序中的所有元素。 有关在 .NET 应用中使用资源的示例，请参阅[使用应用程序资源](../advanced/how-to-use-application-resources.md)。
+    请注意，样式是 <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> 属性元素的资源和子级。 이 위치에서 스타일은 애플리케이션의 모든 요소에 적용됩니다. 有关在 .NET 应用中使用资源的示例，请参阅[使用应用程序资源](../advanced/how-to-use-application-resources.md)。
 
 3. 在中 *`ExpenseItHome.xaml`* ，将为之间的所有内容<xref:System.Windows.Controls.Grid>具有以下 XAML 元素：
 
     [!code-xaml[ExpenseIt#19](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt7/ExpenseItHome.xaml#19)]
 
-    应用样式会删除和替换定义每个控件外观的属性（如 <xref:System.Windows.VerticalAlignment> 和 <xref:System.Windows.Media.FontFamily> 。 例如，`headerTextStyle` 应用于 "查看支出报表" <xref:System.Windows.Controls.Label>。
+    스타일을 적용하면 각 컨트롤의 모양을 정의하는 <xref:System.Windows.VerticalAlignment> 및 <xref:System.Windows.Media.FontFamily> 와 같은 속성이 제거되고 바뀝니다. 例如，`headerTextStyle` 应用于 "查看支出报表" <xref:System.Windows.Controls.Label>。
 
-4. 打开 *ExpenseReportPage.xaml*。
+4. *ExpenseReportPage.xaml*을 엽니다.
 
 5. 将 <xref:System.Windows.Controls.Grid> 元素之间的所有内容替换为以下 XAML：
 
@@ -397,7 +398,7 @@ ms.locfileid: "75336812"
 
     此 XAML 将样式添加到 <xref:System.Windows.Controls.Label> 和 <xref:System.Windows.Controls.Border> 元素。
 
-6. 构建并运行应用程序。 窗口外观与以前相同。
+6. 애플리케이션을 빌드 및 실행합니다. 窗口外观与以前相同。
 
     ![与上一节中的外观相同的 ExpenseIt 示例屏幕快照。](./media/walkthrough-my-first-wpf-desktop-application/create-application-ui.png)
 
@@ -429,9 +430,9 @@ ms.locfileid: "75336812"
 
 接下来，将添加代码以检索名称上所选 **`ExpenseItHome`** 页上，并将其传递给构造函数的**ExpenseReportPage**。 **Expensereportpage.xaml**用传递的项设置其数据上下文，这是在*expensereportpage.xaml*中定义的控件绑定到的内容。
 
-1. 打开 *ExpenseReportPage.xaml.vb* 或 *ExpenseReportPage.xaml.cs*。
+1. *ExpenseReportPage.xaml.vb* 또는 *ExpenseReportPage.xaml.cs*를 엽니다.
 
-2. 添加获取对象的构造函数，以便传递所选人员的费用报表数据。
+2. 선택한 사람의 비용 보고서 데이터를 전달할 수 있도록 개체를 사용하는 생성자를 추가합니다.
 
     [!code-csharp[ExpenseIt#26](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseReportPage.xaml.cs#26)]
     [!code-vb[ExpenseIt#26](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt8/ExpenseReportPage.xaml.vb#26)]
@@ -447,7 +448,7 @@ ms.locfileid: "75336812"
 
 在本部分中，将使用数据模板更新数据绑定列表中每个项的 UI。
 
-1. 打开 *ExpenseReportPage.xaml*。
+1. *ExpenseReportPage.xaml*을 엽니다.
 
 2. 将 "名称" 和 "部门" <xref:System.Windows.Controls.Label> 元素的内容绑定到相应的数据源属性。 有关数据绑定的详细信息，请参阅[数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)。
 
@@ -461,7 +462,7 @@ ms.locfileid: "75336812"
 
     [!code-xaml[ExpenseIt#32](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#32)]
 
-5. 构建并运行应用程序。
+5. 애플리케이션을 빌드 및 실행합니다.
 
 6. 选择一个用户，然后选择 "**查看**" 按钮。
 
@@ -472,27 +473,27 @@ ms.locfileid: "75336812"
 > [!NOTE]
 > 此示例演示了 WPF 的特定功能，并且不遵循安全性、本地化和辅助功能等功能的所有最佳实践。 有关 WPF 和 .NET 应用开发最佳做法的全面介绍，请参阅以下主题：
 >
-> - [辅助功能](../../ui-automation/accessibility-best-practices.md)
-> - [安全](../security-wpf.md)
-> - [WPF 全球化和本地化](../advanced/wpf-globalization-and-localization-overview.md)
+> - [액세스 가능성](../../ui-automation/accessibility-best-practices.md)
+> - [Security](../security-wpf.md)
+> - [WPF 전역화 및 지역화](../advanced/wpf-globalization-and-localization-overview.md)
 > - [WPF 性能](../advanced/optimizing-wpf-application-performance.md)
 
 ## <a name="next-steps"></a>后续步骤
 
-在本演练中，您学习了使用 Windows Presentation Foundation （WPF）创建 UI 的多种方法。 现在，你应基本了解数据绑定 .NET 应用的构建基块。 有关 WPF 体系结构和编程模型的详细信息，请参阅以下主题：
+在本演练中，您学习了使用 Windows Presentation Foundation （WPF）创建 UI 的多种方法。 现在，你应基本了解数据绑定 .NET 应用的构建基块。 WPF 아키텍처 및 프로그래밍 모델에 대한 자세한 내용은 다음 항목을 참조하세요.
 
 - [WPF 体系结构](../advanced/wpf-architecture.md)
-- [XAML 概述 (WPF)](../advanced/xaml-overview-wpf.md)
+- [XAML 개요(WPF)](../advanced/xaml-overview-wpf.md)
 - [依赖属性概述](../advanced/dependency-properties-overview.md)
-- [布局](../advanced/layout.md)
+- [레이아웃](../advanced/layout.md)
 
-有关创建应用程序的详细信息，请参阅以下主题：
+애플리케이션을 만드는 방법에 대한 자세한 내용은 다음 항목을 참조하세요.
 
 - [应用程序开发](../app-development/index.md)
-- [控件](../controls/index.md)
-- [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)
+- [컨트롤](../controls/index.md)
+- [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)
 - [图形和多媒体](../graphics-multimedia/index.md)
-- [WPF 中的文档](../advanced/documents-in-wpf.md)
+- [WPF의 문서](../advanced/documents-in-wpf.md)
 
 ## <a name="see-also"></a>另请参阅
 

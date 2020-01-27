@@ -1,5 +1,5 @@
 ---
-title: 如何：为 Windows 窗体 DataGridView 控件中的新行指定默认值
+title: 指定 DataGridView 控件中新行的默认值
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - rows [Windows Forms], specifying default values
 - DataGridView control [Windows Forms], default values for new rows
 ms.assetid: 8d127963-d9f8-4e4e-9f7f-beb66688f1f2
-ms.openlocfilehash: 879c035366c4686ceff3250a63c6ae8d8d3cfec4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 364f922aefc10e57f2ed7f3a0c2a5b25c922d87a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651951"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742927"
 ---
 # <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>如何：为 Windows 窗体 DataGridView 控件中的新行指定默认值
-应用程序填充默认值为新添加的行时，可以进行数据输入更方便。 与<xref:System.Windows.Forms.DataGridView>类，您可以填充默认值与<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。 当用户输入新记录的行时，引发此事件。 当你的代码处理此事件时，可以填充具有所选的值的所需单元格。  
+当应用程序在新添加的行中填充默认值时，可以更方便地输入数据。 利用 <xref:System.Windows.Forms.DataGridView> 类，您可以用 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 事件填充默认值。 当用户输入新记录的行时，将引发此事件。 当代码处理此事件时，可以用所选的值填充所需的单元格。  
   
- 下面的代码示例演示如何指定默认值的新行使用<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。  
+ 下面的代码示例演示如何使用 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 事件指定新行的默认值。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#120)]
@@ -31,11 +31,11 @@ ms.locfileid: "64651951"
   
 - 名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件。  
   
-- 一个`NewCustomerId`函数，用于生成唯一`CustomerID`值。  
+- 用于生成唯一 `CustomerID` 值的 `NewCustomerId` 函数。  
   
 - 对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>

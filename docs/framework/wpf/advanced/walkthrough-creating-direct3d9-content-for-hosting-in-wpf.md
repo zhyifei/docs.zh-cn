@@ -1,5 +1,5 @@
 ---
-title: 演练：创建在 WPF 中承载的 Direct3D9 内容
+title: 创建用于托管的 Direct3D9 内容
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: 462220b526db90d3acfa90a28f9bfd56dbe813e2
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 847ee74da5b295c2c9d3824b3df74f94bc98a4db
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991400"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727915"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>演练：创建在 WPF 中承载的 Direct3D9 内容
 本演练演示如何创建适用于在 Windows Presentation Foundation （WPF）应用程序中承载的 Direct3D9 内容。 有关在 WPF 应用程序中承载 Direct3D9 内容的详细信息，请参阅[wpf 和 Direct3D9 互操作](wpf-and-direct3d9-interoperation.md)。
@@ -25,7 +25,7 @@ ms.locfileid: "70991400"
 
  完成后，将拥有一个包含 Direct3D9 内容的 DLL，以便在 WPF 应用程序中使用。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
  你需要以下组件来完成本演练：
 
 - Visual Studio 2010。
@@ -37,7 +37,7 @@ ms.locfileid: "70991400"
 
 #### <a name="to-create-the-direct3d9-project"></a>创建 Direct3D9 项目
 
-1. 创建一个C++名为`D3DContent`的新 Win32 项目。
+1. 在命名 `D3DContent`中C++创建新的 Win32 项目。
 
      Win32 应用程序向导将打开并显示欢迎屏幕。
 
@@ -65,9 +65,9 @@ ms.locfileid: "70991400"
 
 10. 选择 "**输入**" 节点。
 
-11. 在 "**其他依赖项**" 字段中`d3d9.lib` ， `d3dx9.lib`添加和文件。
+11. 在 "**其他依赖项**" 字段中，添加 `d3d9.lib` 和 `d3dx9.lib` 文件。
 
-12. 在解决方案资源管理器中，将名`D3DContent.def`为的新模块定义文件（.def）添加到项目。
+12. 在解决方案资源管理器中，将名为 `D3DContent.def` 的新模块定义文件（.def）添加到项目。
 
 ## <a name="creating-the-direct3d9-content"></a>创建 Direct3D9 内容
  若要获得最佳性能，你的 Direct3D9 内容必须使用特定设置。 下面的代码演示如何创建具有最佳性能特征的 Direct3D9 图面。 有关详细信息，请参阅[Direct3D9 和 WPF 互操作性的性能注意事项](performance-considerations-for-direct3d9-and-wpf-interoperability.md)。
@@ -76,7 +76,7 @@ ms.locfileid: "70991400"
 
 1. 使用解决方案资源管理器将三个C++类添加到名为的项目，如下所示。
 
-     `CRenderer`（包含虚拟析构函数）
+     `CRenderer` （包含虚拟析构函数）
 
      `CRendererManager`
 
@@ -133,14 +133,14 @@ ms.locfileid: "70991400"
     Destroy
     ```
 
-12. 生成项目。
+12. 生成此项目。
 
 ## <a name="next-steps"></a>后续步骤
 
-- 在 WPF 应用程序中托管 Direct3D9 内容。 有关详细信息，请参见[演练：在 WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)中承载 Direct3D9 内容。
+- 在 WPF 应用程序中托管 Direct3D9 内容。 有关详细信息，请参阅[演练：在 WPF 中承载 Direct3D9 内容](walkthrough-hosting-direct3d9-content-in-wpf.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 和 WPF 互操作性的性能注意事项](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [演练：在 WPF 中承载 Direct3D9 内容](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [演练：在 WPF 中托管 Direct3D9 内容](walkthrough-hosting-direct3d9-content-in-wpf.md)
