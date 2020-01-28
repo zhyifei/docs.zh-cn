@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Windows 窗体中选择附加到用户计算机的打印机
+title: 如何：选择连接到用户计算机的打印机
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: e81ef8b563afff6dd57a9fbb7674d17c0eb80916
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 7fc2427468540ac0a1480f6140cbb34c3a0f1ab3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053077"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746508"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>如何：在 Windows 窗体中选择附加到用户计算机的打印机
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>如何：在 Windows 窗体中选择连接到用户计算机的打印机
 用户通常希望选择默认打印机之外的打印机进行打印。 可以使用 <xref:System.Windows.Forms.PrintDialog> 组件使用户能够从当前安装的打印机中选择打印机。 通过 <xref:System.Windows.Forms.PrintDialog> 组件，会捕获 <xref:System.Windows.Forms.DialogResult> 组件的 <xref:System.Windows.Forms.PrintDialog> 并用于选择打印机。  
   
  在下面的过程中，选择一个文本文件以打印到默认打印机。 <xref:System.Windows.Forms.PrintDialog> 类随后进行实例化。  
   
 ### <a name="to-choose-a-printer-and-then-print-a-file"></a>选择打印机，然后打印文件  
   
-1. 选择要使用的打印机<xref:System.Windows.Forms.PrintDialog>组件。  
+1. 选择要使用 <xref:System.Windows.Forms.PrintDialog> 组件使用的打印机。  
   
-     在下面的代码示例中，要处理两个事件。 在第一种<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件，<xref:System.Windows.Forms.PrintDialog>类进行实例化和中捕获用户选择打印机<xref:System.Windows.Forms.DialogResult>属性。  
+     在下面的代码示例中，要处理两个事件。 在第一种情况下，<xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Click> 事件，将实例化 <xref:System.Windows.Forms.PrintDialog> 类并在 <xref:System.Windows.Forms.DialogResult> 属性中捕获用户选择的打印机。  
   
-     在第二个事件中，<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件的<xref:System.Drawing.Printing.PrintDocument>组件，示例文档打印到指定的打印机。  
+     在第二个事件中，<xref:System.Drawing.Printing.PrintDocument> 组件的 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件中，将在指定的打印机上打印一个示例文档。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -89,7 +89,7 @@ ms.locfileid: "66053077"
        }  
     ```  
   
-     (VisualC#和 Visual C++)将以下代码放在窗体的构造函数中以注册事件处理程序。  
+     （视觉C#对象和C++视觉对象）将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -106,6 +106,6 @@ ms.locfileid: "66053077"
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Windows 窗体打印支持](windows-forms-print-support.md)

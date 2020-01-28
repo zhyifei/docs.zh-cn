@@ -1,5 +1,5 @@
 ---
-title: 如何：更改 Windows 窗体 ColorDialog 组件的外观
+title: 更改 ColorDialog 组件的外观
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-ms.openlocfilehash: d2bb9e06d9d84a9b61c67510e9c012066f69d55e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0402d7f3c03a0771512a03ac54e1b093c9fe6e9b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61595447"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746634"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>如何：更改 Windows 窗体 ColorDialog 组件的外观
-你可以配置 Windows 窗体外观<xref:System.Windows.Forms.ColorDialog>组件与多个其属性。 该对话框具有两个部分 — 一个显示基本颜色，另一部分允许用户定义的自定义颜色。  
+可以使用多个属性的属性来配置 Windows 窗体 <xref:System.Windows.Forms.ColorDialog> 组件的外观。 此对话框包含两个部分：一个显示基本颜色，另一个允许用户定义自定义颜色。  
   
- 大部分属性限制哪些用户可以从对话框中选择的颜色。 如果<xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>属性设置为`true`，允许用户定义自定义颜色。 <xref:System.Windows.Forms.ColorDialog.FullOpen%2A>属性是`true`如果对话框中展开定义自定义颜色; 通过否则用户必须单击"定义自定义颜色"按钮。 当<xref:System.Windows.Forms.ColorDialog.AnyColor%2A>属性设置为`true`，对话框显示基本颜色集中可用的所有颜色。 如果<xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>属性设置为`true`，用户不能选择抖色的颜色; 仅纯色可供选择。  
+ 大多数属性限制用户可从对话框中选择的颜色。 如果 <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> 属性设置为 `true`，则允许用户定义自定义颜色。 如果扩展对话框以定义自定义颜色，则 `true` <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> 属性;否则，用户必须单击 "定义自定义颜色" 按钮。 <xref:System.Windows.Forms.ColorDialog.AnyColor%2A> 属性设置为 "`true`" 时，该对话框将显示基本颜色集中的所有可用颜色。 如果 <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> 属性设置为 `true`，则用户无法选择抖动颜色;只有纯色可供选择。  
   
- 如果<xref:System.Windows.Forms.ColorDialog.ShowHelp%2A>属性设置为`true`，帮助按钮显示在对话框中。 当用户单击帮助按钮<xref:System.Windows.Forms.ColorDialog>组件的<xref:System.Windows.Forms.CommonDialog.HelpRequest>引发事件。  
+ 如果 <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> 属性设置为 `true`，则对话框中将显示一个 "帮助" 按钮。 当用户单击 "帮助" 按钮时，将引发 <xref:System.Windows.Forms.ColorDialog> 组件的 <xref:System.Windows.Forms.CommonDialog.HelpRequest> 事件。  
   
-### <a name="to-configure-the-appearance-of-the-color-dialog-box"></a>若要配置的颜色对话框外观  
+### <a name="to-configure-the-appearance-of-the-color-dialog-box"></a>配置 "颜色" 对话框的外观  
   
-1. 设置<xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>， <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>， <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>，和<xref:System.Windows.Forms.ColorDialog.ShowHelp%2A>属性设置为所需的值。  
+1. 将 <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>、<xref:System.Windows.Forms.ColorDialog.AnyColor%2A>、<xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>和 <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> 属性设置为所需的值。  
   
     ```vb  
     ColorDialog1.AllowFullOpen = True  
@@ -49,7 +49,7 @@ ms.locfileid: "61595447"
     colorDialog1->ShowHelp = true;  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog 组件](colordialog-component-windows-forms.md)

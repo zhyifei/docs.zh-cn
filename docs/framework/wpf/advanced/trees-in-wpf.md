@@ -1,17 +1,17 @@
 ---
-title: WPF 中的树
+title: 林中
 ms.date: 03/30/2017
 helpviewer_keywords:
 - logical tree [WPF]
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 0dfae3a601a07c68b2dfe029f061dcf838e98af7
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d4b17c34fb33f73ca1c173bebc8f94ddac5b1942
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459495"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746579"
 ---
 # <a name="trees-in-wpf"></a>WPF 中的树
 在许多技术中，元素和组件都按树结构的形式组织。在这种结构中，开发人员可以直接操作树中的对象节点来影响应用程序的绘制或行为。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也使用了若干树结构形式来定义程序元素之间的关系。 多数情况下，在概念层面考虑对象树形式时，WPF 开发人员会用代码创建应用程序，或用 XAML 定义应用程序的组成部分，但他们会调用具体的 API 或使用特定的标记来执行此操作，而不是像在 XML DOM 中那样，使用某些常规对象树操作 API。 WPF 公开了两个帮助器类，它们提供树比喻视图，<xref:System.Windows.LogicalTreeHelper> 和 <xref:System.Windows.Media.VisualTreeHelper>。 WPF 文档中还使用了“可视化树”和“逻辑树”两个术语，它们有助于理解某些关键 WPF 功能的行为。 本主题定义可视化树和逻辑树表示的内容，讨论此类树如何与整体对象树概念相关，并介绍 <xref:System.Windows.LogicalTreeHelper> 和 <xref:System.Windows.Media.VisualTreeHelper>。  
@@ -35,7 +35,7 @@ ms.locfileid: "73459495"
   
  如果此 XAML 是作为文档对象模型下的 XML 进行处理，且已包含作为隐式项禁止注释的标记（可能是合法的），生成的 XML DOM 树已包含 `<ListBox.Items>` 的元素以及其他隐式项。 但是，读取标记和写入对象时，XAML 不会这样处理，生成的对象图不包含 `ListBox.Items`。 但它确实具有一个名为 `Items` 的 <xref:System.Windows.Controls.ListBox> 属性，该属性包含一个 <xref:System.Windows.Controls.ItemCollection>，并且在处理 <xref:System.Windows.Controls.ListBox> XAML 时该 <xref:System.Windows.Controls.ItemCollection> 已初始化但为空。 然后，将作为 <xref:System.Windows.Controls.ListBox> 的内容存在的每个子对象元素添加到 <xref:System.Windows.Controls.ItemCollection>，分析程序将调用 `ItemCollection.Add`。 此示例将 XAML 处理成对象树，目前这似乎表明所创建的对象树基本上是逻辑树。  
   
- 但是，逻辑树并不是应用程序 UI 在运行时存在的整个对象图，即使已分解 XAML 隐式语法项也是如此。这种情况的主要原因是视觉对象和模板。 例如，请考虑 <xref:System.Windows.Controls.Button>。 逻辑树报告 <xref:System.Windows.Controls.Button> 对象及其 `Content`的字符串。 但在运行时对象树中，此按钮还有更多内容。 特别是，按钮只在屏幕上显示，因为应用了特定 <xref:System.Windows.Controls.Button> 控件模板。 在逻辑树中不会报告应用的模板中的视觉对象（如视觉按钮周围的模板定义 <xref:System.Windows.Controls.Border> 深灰色），即使在运行时查看逻辑树（如处理来自的输入事件，可见 UI，然后读取逻辑树）。 若要查找模板视觉对象，需要改为检查可视化树。  
+ 但是，逻辑树并不是应用程序 UI 在运行时存在的整个对象图，即使已分解 XAML 隐式语法项也是如此。这种情况的主要原因是视觉对象和模板。 例如，请考虑 <xref:System.Windows.Controls.Button>。 逻辑树报告 <xref:System.Windows.Controls.Button> 对象及其 `Content`的字符串。 但在运行时对象树中，此按钮还有更多内容。 特别是，按钮只在屏幕上显示，因为应用了特定 <xref:System.Windows.Controls.Button> 控件模板。 即使您在运行时查看逻辑树（例如，从可见 UI 处理输入事件，然后读取逻辑树），来自应用的模板的视觉对象（如视觉按钮周围的模板定义 <xref:System.Windows.Controls.Border>）也不会在逻辑树中报告。 若要查找模板视觉对象，需要改为检查可视化树。  
   
  有关 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法如何映射到所创建的对象图，以及 XAML 中隐式语法的详细信息，请参阅 [XAML 语法详述](xaml-syntax-in-detail.md)或 [XAML 概述 (WPF)](xaml-overview-wpf.md)。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73459495"
 ### <a name="the-purpose-of-the-logical-tree"></a>逻辑树用途  
  借助逻辑树，内容模型可以方便地循环访问其可能的子对象，从而实现扩展。 此外，逻辑树还为某些通知提供框架，例如在加载逻辑树中的所有对象时。 基本上，逻辑树是框架级别的近似运行时对象图（排除了视觉对象），但其足以用于对你自己的运行时应用程序组合执行多种查询操作。  
   
- 此外，通过在初始请求对象上的 <xref:System.Windows.FrameworkElement.Resources%2A> 集合中向上查找逻辑树来解析静态和动态资源引用，然后继续逻辑树并检查每个 <xref:System.Windows.FrameworkElement> （或 <xref:System.Windows.FrameworkContentElement>）包含 <xref:System.Windows.ResourceDictionary>（可能包含该密钥）的另一个 `Resources` 值。 当同时存在逻辑树和可视化树时，将使用逻辑树进行资源查找。 有关资源字典和查找的详细信息，请参见 [XAML 资源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)。  
+ 此外，通过在初始请求对象上的 <xref:System.Windows.FrameworkElement.Resources%2A> 集合中向上查找逻辑树来解析静态和动态资源引用，然后继续运行逻辑树，并检查每个 <xref:System.Windows.FrameworkElement> （或 <xref:System.Windows.FrameworkContentElement>）以查找包含 <xref:System.Windows.ResourceDictionary>的另一个 `Resources` 值，可能包含该密钥。 当同时存在逻辑树和可视化树时，将使用逻辑树进行资源查找。 有关资源字典和查找的详细信息，请参见 [XAML 资源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)。  
   
 <a name="composition"></a>   
 ### <a name="composition-of-the-logical-tree"></a>逻辑树的构成  
@@ -67,12 +67,12 @@ ms.locfileid: "73459495"
   
 <a name="tree_traversal"></a>   
 ## <a name="tree-traversal"></a>树遍历  
- <xref:System.Windows.LogicalTreeHelper> 类为逻辑树遍历提供 <xref:System.Windows.LogicalTreeHelper.GetChildren%2A>、<xref:System.Windows.LogicalTreeHelper.GetParent%2A>和 <xref:System.Windows.LogicalTreeHelper.FindLogicalNode%2A> 方法。 在大多数情况下，不需要遍历现有控件的逻辑树，因为这些控件几乎总是将其逻辑子元素公开为一个专用集合属性，这种属性支持集合访问，如 `Add`、索引器等等。 树遍历主要是一种方案，控件作者可以选择不从预期的控件模式派生，如 <xref:System.Windows.Controls.ItemsControl> 或已定义集合属性的 <xref:System.Windows.Controls.Panel>，以及要提供自己的集合属性的用户。支持.  
+ <xref:System.Windows.LogicalTreeHelper> 类为逻辑树遍历提供 <xref:System.Windows.LogicalTreeHelper.GetChildren%2A>、<xref:System.Windows.LogicalTreeHelper.GetParent%2A>和 <xref:System.Windows.LogicalTreeHelper.FindLogicalNode%2A> 方法。 在大多数情况下，不需要遍历现有控件的逻辑树，因为这些控件几乎总是将其逻辑子元素公开为一个专用集合属性，这种属性支持集合访问，如 `Add`、索引器等等。 树遍历主要是一种方案，控件作者可以选择不从预期的控件模式派生，如 <xref:System.Windows.Controls.ItemsControl> 或已定义集合属性的 <xref:System.Windows.Controls.Panel>，以及要提供自己的集合属性支持的用户。  
   
- 可视化树还支持 visual tree 遍历的帮助器类，<xref:System.Windows.Media.VisualTreeHelper>。 可视化树不会通过特定于控件的属性方便地公开，因此，如果您的编程方案需要，则建议使用 <xref:System.Windows.Media.VisualTreeHelper> 类来遍历可视化树。 有关详细信息，请参见 [WPF 图形绘制概述](../graphics-multimedia/wpf-graphics-rendering-overview.md)。  
+ 可视化树还支持 visual tree 遍历的帮助器类，<xref:System.Windows.Media.VisualTreeHelper>。 可视化树不会通过特定于控件的属性方便地公开，因此，如果您的编程方案需要，则建议使用 <xref:System.Windows.Media.VisualTreeHelper> 类来遍历可视化树。 有关详细信息，请参阅 [WPF 图形呈现概述](../graphics-multimedia/wpf-graphics-rendering-overview.md)。  
   
 > [!NOTE]
-> 有时有必要检查所应用模板的可视化树。 执行此操作时应谨慎。 即使您正在遍历定义模板的控件的可视化树，控件的使用者也可以通过设置实例的 <xref:System.Windows.Controls.Control.Template%2A> 属性来更改模板，甚至最终用户也可以通过更改系统来影响应用的模板。主体.  
+> 有时有必要检查所应用模板的可视化树。 执行此操作时应谨慎。 即使您正在遍历定义模板的控件的可视化树，控件的使用者也可以通过设置实例的 <xref:System.Windows.Controls.Control.Template%2A> 属性来更改模板，甚至最终用户也可以通过更改系统主题来影响应用的模板。  
   
 <a name="routes"></a>   
 ## <a name="routes-for-routed-events-as-a-tree"></a>“树”形式路由事件的路由  
@@ -84,7 +84,7 @@ ms.locfileid: "73459495"
   
  但是，资源查找也可以超出直接逻辑树。 对于应用程序标记，资源查找可向前继续进行到应用程序级资源字典，然后再到作为静态属性或键进行引用的主题支持和系统值。 如果资源引用是动态的，则主题本身也可以引用主题逻辑树之外的系统值。 有关资源字典和查找逻辑的详细信息，请参阅 [XAML 资源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [输入概述](input-overview.md)
 - [WPF 图形呈现概述](../graphics-multimedia/wpf-graphics-rendering-overview.md)

@@ -1,38 +1,38 @@
 ---
-title: PictureBox 控件（Windows 窗体）
+title: PictureBox 컨트롤
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PictureBox control [Windows Forms]
 - image controls [Windows Forms]
 - images [Windows Forms], adding to PictureBox control
 ms.assetid: f900eb93-25d5-40e5-b5df-b3cea0e831b6
-ms.openlocfilehash: 06633583bf99d9888ec7f9180b503a46f2451691
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34e6e7a58e8a022d1359281ddfbe1a90a7ab5593
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903209"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744232"
 ---
-# <a name="picturebox-control-windows-forms"></a>PictureBox 控件（Windows 窗体）
-Windows 窗体`PictureBox`控件用于显示位图、 GIF、 JPEG、 图元文件或图标格式的图形。  
+# <a name="picturebox-control-windows-forms"></a>PictureBox 컨트롤(Windows Forms)
+"Windows 窗体" `PictureBox` 控件用于以位图、GIF、JPEG、图元文件或图标格式显示图形。  
   
-## <a name="in-this-section"></a>本节内容  
- [PictureBox 控件概述](picturebox-control-overview-windows-forms.md)  
- 说明此控件的本质及其主要功能和属性。  
+## <a name="in-this-section"></a>섹션 내용  
+ [PictureBox 컨트롤 개요](picturebox-control-overview-windows-forms.md)  
+ 이 컨트롤의 정의와 주요 기능 및 속성을 설명합니다.  
   
- [如何：在运行时修改的大小或位置的图片](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- 说明什么<xref:System.Windows.Forms.PictureBox.SizeMode%2A>属性作用以及如何将其设置。  
+ [방법: 런타임에 그림의 크기 또는 위치 수정](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
+ 说明 <xref:System.Windows.Forms.PictureBox.SizeMode%2A> 属性的作用，以及如何设置它。  
   
- [如何：在运行时设置图片](how-to-set-pictures-at-run-time-windows-forms.md)  
- 介绍如何显示和在运行时清除图片。  
+ [방법: 런타임에 그림 설정](how-to-set-pictures-at-run-time-windows-forms.md)  
+ 描述如何在运行时显示和清除图片。  
   
- [如何：使用设计器加载图片](how-to-load-a-picture-using-the-designer-windows-forms.md)  
- 介绍如何加载并在设计时在窗体上显示的图片。  
+ [방법: 디자이너를 사용하여 그림 로드](how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ 介绍如何在设计时在窗体上加载和显示图片。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.PictureBox>  
- 对此类进行描述，并提供指向其所有成员的链接。  
+ 이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
-## <a name="related-sections"></a>相关章节  
- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)  
- 提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。
+## <a name="related-sections"></a>관련 섹션  
+ [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ 사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.

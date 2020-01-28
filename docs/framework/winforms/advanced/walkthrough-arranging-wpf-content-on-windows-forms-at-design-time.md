@@ -1,5 +1,6 @@
 ---
-title: 演练：设计时在 Windows 窗体上排列 WPF 内容
+title: 在设计时排列 Windows 窗体上的 WPF 内容
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in a layout panel
@@ -12,18 +13,18 @@ ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c9db49ae299870479a5cfa6372c25d793a92ff8f
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5a6b12def45052e117fb149555946ea42d6cd3c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460684"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746814"
 ---
 # <a name="walkthrough-arrange-wpf-content-on-windows-forms-at-design-time"></a>演练：在设计时在 Windows 窗体上排列 WPF 内容
 
 本文介绍如何使用 Windows 窗体布局功能（如锚定和对齐线）来排列 Windows Presentation Foundation （WPF）控件。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 若要完成本演练，必须具有 Visual Studio。
 
@@ -46,7 +47,7 @@ ms.locfileid: "73460684"
 
 4. 将 <xref:System.Windows.Controls.Control.Background%2A> 属性的值设置为**蓝色**。
 
-5. 生成项目。
+5. 生成此项目。
 
 ## <a name="host-wpf-controls-in-a-layout-panel"></a>在布局面板中承载 WPF 控件
 
@@ -128,7 +129,7 @@ ms.locfileid: "73460684"
 
     有关详细信息，请参阅[如何：在 TableLayoutPanel 控件中锚定和停靠子控件](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

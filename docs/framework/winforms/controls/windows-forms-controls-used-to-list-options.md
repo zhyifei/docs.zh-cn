@@ -1,40 +1,40 @@
 ---
-title: 用于列出选项的 Windows 窗体控件
+title: 用于列出选项的控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, listing options
 - option lists in Windows Forms
 ms.assetid: 5bc064c7-bc1f-4b62-8f4b-252f864b118e
-ms.openlocfilehash: 92d5f330fbd5269e15bf52dc11ad998939aa18e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52e8f2fcae3cbb4dae495cad3b29b647732ad5b7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009066"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742349"
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>用于列出选项的 Windows 窗体控件
-如果你想要向用户提供可供选择的选项的列表，可以向 Windows 窗体中添加各种控件。 具体取决于多少你想要限制用户的输入，您可以添加<xref:System.Windows.Forms.ListBox>控件，<xref:System.Windows.Forms.ComboBox>控件，或<xref:System.Windows.Forms.CheckedListBox>控件。 使用以下链接来确定哪个控件最适合你的需求。  
+如果要向用户提供选项列表以供选择，则可以将各种控件添加到 Windows 窗体。 根据要限制用户输入的程度，可以添加 <xref:System.Windows.Forms.ListBox> 控件、<xref:System.Windows.Forms.ComboBox> 控件或 <xref:System.Windows.Forms.CheckedListBox> 控件。 使用以下链接来确定最适合你的需求的控件。  
   
 ## <a name="in-this-section"></a>本节内容  
  [何时使用 Windows 窗体 ComboBox 而非 ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
- 建议根据需求和 Windows 窗体的限制基于列表的相应控件。  
+ 根据 Windows 窗体的需求和限制，推荐适当的基于列表的控件。  
   
- [如何：访问特定于 Windows 中的项窗体 ComboBox、 ListBox 或 CheckedListBox 控件](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
- 提供用于以编程方式确定列表中的项出现在给定位置的说明。  
+ [如何：在 Windows 窗体 ComboBox、ListBox 或 CheckedListBox 控件中访问特定项](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
+ 提供以编程方式确定列表中的哪个项显示在给定位置的说明。  
   
- [如何：添加和删除项从 Windows 窗体 ComboBox、 ListBox 或 CheckedListBox 控件](add-and-remove-items-from-a-wf-combobox.md)  
- 添加或删除项的控件的项列表中提供的说明。  
+ [如何：在 Windows 窗体 ComboBox、ListBox 或 CheckedListBox 控件中添加和删除项](add-and-remove-items-from-a-wf-combobox.md)  
+ 提供有关在控件的项列表中添加或移除项的说明。  
   
- [如何：为 Windows 窗体 ComboBox、 ListBox 或 CheckedListBox 控件创建查找表](create-a-lookup-table-for-a-wf-combobox-listbox.md)  
- 指示如何显示并将窗体数据存储在有用的格式。  
+ [如何：创建 Windows 窗体 ComboBox、ListBox 或 CheckedListBox 控件的查找表](create-a-lookup-table-for-a-wf-combobox-listbox.md)  
+ 提供有关以有用格式显示和存储窗体数据的说明。  
   
  [如何：将 Windows 窗体 ComboBox 或 ListBox 控件绑定到数据](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
- 提供有关如何将基于列表的控件绑定到数据源。  
+ 提供有关将基于列表的控件绑定到数据源的说明。  
   
- [如何：排序的内容的 Windows 窗体 ComboBox、 ListBox 或 CheckedListBox 控件](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
- 介绍如何在其数据源的列表数据进行排序。  
+ [如何：对 Windows 窗体 ComboBox、ListBox 或 CheckedListBox 控件的内容进行排序](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ 说明如何在数据源中对列表数据进行排序。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Windows.Forms.CheckedListBox>  
  对此类进行描述，并提供指向其所有成员的链接。  
   

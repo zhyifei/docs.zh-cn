@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 0764ca29fc959092e77629ff3888e65f0d68d70c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: e38ead0d378092af086218277fd2e85b4a6396c3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938053"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746885"
 ---
 # <a name="working-with-certificates"></a>使用证书
 
@@ -164,9 +164,9 @@ PowerShell New-selfsignedcertificate cmdlet 创建 x.509 证书和私钥/公钥�
 
 ## <a name="mapping-a-certificate-to-a-user-account"></a>将证书映射到用户帐户
 
-IIS 和 Active Directory 的一个功能是将证书映射到 Windows 用户帐户。 有关此功能的详细信息，请参阅 [Map certificates to user accounts](https://go.microsoft.com/fwlink/?LinkId=88917)（将证书映射到用户帐户）。
+IIS 和 Active Directory 的一个功能是将证书映射到 Windows 用户帐户。 有关此功能的详细信息，请参阅 [Map certificates to user accounts](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736706(v=ws.10))（将证书映射到用户帐户）。
 
-有关使用 Active Directory 映射的详细信息，请参阅 [Mapping Client Certificates with Directory Service Mapping](https://go.microsoft.com/fwlink/?LinkId=88918)（使用目录服务映射来映射客户端证书）。
+有关使用 Active Directory 映射的详细信息，请参阅 [Mapping Client Certificates with Directory Service Mapping](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc758484(v=ws.10))（使用目录服务映射来映射客户端证书）。
 
 如果启用了这一功能，则可以将 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 类的 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 属性设置为 `true`。 在配置中，可以将 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 元素的 `mapClientCertificateToWindowsAccount` 属性设置为 `true`，如下面的代码所示。
 

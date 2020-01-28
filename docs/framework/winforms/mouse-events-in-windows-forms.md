@@ -1,5 +1,5 @@
 ---
-title: Windows 窗体中的鼠标事件
+title: 鼠标事件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MouseLeave event [Windows Forms]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: a61f4eedde611cfb7598d55465103924516e06c6
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 4909f56fc3935848fd18bc35c1cb56b5407a24c8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834597"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740975"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows 窗体中的鼠标事件
 
@@ -28,13 +28,13 @@ ms.locfileid: "71834597"
 
 ## <a name="mouse-information"></a>鼠标信息
 
-<xref:System.Windows.Forms.MouseEventArgs> 将发送到与单击鼠标按钮和跟踪鼠标移动相关的鼠标事件处理程序。 <xref:System.Windows.Forms.MouseEventArgs> 提供有关鼠标的当前状态的信息，包括鼠标指针在工作区坐标中的位置、按下鼠标按钮以及鼠标滚轮是否已滚动。 几个鼠标事件（例如通知鼠标指针进入或离开控件边界的时间）会向事件处理程序发送 <xref:System.EventArgs>，但不提供详细信息。
+<xref:System.Windows.Forms.MouseEventArgs> 将发送到与单击鼠标按钮和跟踪鼠标移动相关的鼠标事件处理程序。 <xref:System.Windows.Forms.MouseEventArgs> 提供有关当前鼠标状态的信息，包括鼠标指针在客户端坐标中的位置、按下的鼠标按钮是哪一个以及是否已经滚动鼠标滚轮。 几个鼠标事件（例如通知鼠标指针进入或离开控件边界的时间）会向事件处理程序发送 <xref:System.EventArgs>，但不提供详细信息。
 
-如果想要知道鼠标按钮当前的状态或鼠标指针的位置，并且希望避免处理鼠标事件，还可以使用 <xref:System.Windows.Forms.Control.MouseButtons%2A> 类的 <xref:System.Windows.Forms.Control.MousePosition%2A> 和 <xref:System.Windows.Forms.Control> 属性。 <xref:System.Windows.Forms.Control.MouseButtons%2A> 返回当前按下鼠标按钮的相关信息。 <xref:System.Windows.Forms.Control.MousePosition%2A> 返回鼠标指针的屏幕坐标，等同于由 <xref:System.Windows.Forms.Cursor.Position%2A> 返回的值。
+如果想要知道鼠标按钮当前的状态或鼠标指针的位置，并且希望避免处理鼠标事件，还可以使用 <xref:System.Windows.Forms.Control> 类的 <xref:System.Windows.Forms.Control.MouseButtons%2A> 和 <xref:System.Windows.Forms.Control.MousePosition%2A> 属性。 <xref:System.Windows.Forms.Control.MouseButtons%2A> 返回有关当前按下哪些鼠标按钮的信息。 <xref:System.Windows.Forms.Control.MousePosition%2A> 返回鼠标指针的屏幕坐标，等同于由 <xref:System.Windows.Forms.Cursor.Position%2A> 返回的值。
 
 ## <a name="converting-between-screen-and-client-coordinates"></a>在屏幕坐标和客户端坐标之间转换
 
-由于某些鼠标位置信息以客户端坐标提供，另一些以屏幕坐标提供，因此可能需要将某个点的位置信息从一个坐标系统转换到另一个坐标系统。 通过使用 <xref:System.Windows.Forms.Control.PointToClient%2A> 类提供的 <xref:System.Windows.Forms.Control.PointToScreen%2A> 和 <xref:System.Windows.Forms.Control> 方法可轻松完成此操作。
+由于某些鼠标位置信息以客户端坐标提供，另一些以屏幕坐标提供，因此可能需要将某个点的位置信息从一个坐标系统转换到另一个坐标系统。 通过使用 <xref:System.Windows.Forms.Control> 类提供的 <xref:System.Windows.Forms.Control.PointToClient%2A> 和 <xref:System.Windows.Forms.Control.PointToScreen%2A> 方法可轻松完成此操作。
 
 ## <a name="standard-click-event-behavior"></a>标准单击事件行为
 
@@ -88,7 +88,7 @@ ms.locfileid: "71834597"
 
   - 右键双击：不会引发任何单击事件
 
-- <xref:System.Windows.Forms.TextBox>、<xref:System.Windows.Forms.RichTextBox>、<xref:System.Windows.Forms.ListBox>、<xref:System.Windows.Forms.MaskedTextBox>和 <xref:System.Windows.Forms.CheckedListBox> 控件
+- <xref:System.Windows.Forms.TextBox>、<xref:System.Windows.Forms.RichTextBox>、<xref:System.Windows.Forms.ListBox>、<xref:System.Windows.Forms.MaskedTextBox> 和 <xref:System.Windows.Forms.CheckedListBox> 控件
 
   > [!NOTE]
   > 当用户单击这些控件内的任意位置时，将发生稍后详细说明的事件行为。

@@ -1,5 +1,5 @@
 ---
-title: 如何：设置 Windows 窗体上的 Tab 键顺序
+title: 设置控件的 tab 键顺序
 ms.date: 03/30/2017
 f1_keywords:
 - TabStop
@@ -13,12 +13,12 @@ ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 026cff06a8d662cb40107fa76cf6d7989fe30cf1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5d53e411bda0279271e4f73e1842c52fd6d9b3a9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458522"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746831"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>如何：在 Windows 窗体上设置 tab 键顺序
 
@@ -55,7 +55,7 @@ Tab 键顺序是用户通过按 Tab 键将焦点从一个控件移动到另一�
 > [!NOTE]
 > 单选按钮组在运行时具有单个制表位。 选定的按钮（即，其 <xref:System.Windows.Forms.RadioButton.Checked%2A> 属性设置为 `true`）的 <xref:System.Windows.Forms.Control.TabStop%2A> 属性自动设置为 `true`，而其他按钮的 <xref:System.Windows.Forms.Control.TabStop%2A> 属性设置为 `false`。 有关分组 <xref:System.Windows.Forms.RadioButton> 控件的详细信息，请参阅将[Windows 窗体单选按钮控件分组为一个集](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Windows 窗体控件](index.md)
 - [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

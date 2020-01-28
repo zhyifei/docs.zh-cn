@@ -1,94 +1,94 @@
 ---
-title: 使用 LINQ to XML 进行 WPF 数据绑定
+title: LINQ to XML로 데이터 바인딩
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: 53aba3295b98ae4a476b321cb585e1bbbdd45dad
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 3c5567c81d2097a1524f5bbbf9010836ca8c0646
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197389"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733818"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>与 LINQ to XML 的 WPF 数据绑定概述
 
-本文介绍 <xref:System.Xml.Linq> 命名空间中的动态数据绑定功能。 这些功能可用作 Windows Presentation Foundation (WPF) 应用中用户界面 (UI) 元素的数据源。 此方案依赖于 <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> 和 <xref:System.Xml.Linq.XElement?displayProperty=fullName> 的特殊动态属性。
+本文介绍 <xref:System.Xml.Linq> 命名空间中的动态数据绑定功能。 이러한 기능을 WPF(Windows Presentation Foundation) 앱의 UI(사용자 인터페이스) 요소에 대한 데이터 소스로 사용할 수 있습니다. 이 시나리오에서는 <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> 및 <xref:System.Xml.Linq.XElement?displayProperty=fullName>의 특수 *동적 속성*을 사용합니다.
 
-## <a name="xaml-and-linq-to-xml"></a>XAML 和 LINQ to XML
+## <a name="xaml-and-linq-to-xml"></a>XAML 및 LINQ to XML
 
-Extensible Application Markup Language (XAML) 是由 Microsoft 创建的用于支持 .NET 技术的 XML 方言。 它在 WPF 中用于表示用户界面元素和相关功能，如事件和数据绑定。 在 Windows Workflow Foundation 中，XAML 用于表示程序结构，如程序控制（工作流）。 XAML 使技术的声明性方面与相关的过程性代码分离，从而可定义更具个性化的程序行为。
+XAML(Extensible Application Markup Language)은 .NET 기술을 지원하기 위해 Microsoft에서 만드는 XML 언어입니다. XAML은 사용자 인터페이스 요소와 이벤트 및 데이터 바인딩과 같은 관련 기능을 나타내기 위해 WPF에서 사용됩니다. Windows Workflow Foundation에서 XAML은 프로그램 제어(*워크플로*)와 같은 프로그램 구조를 나타내는 데 사용됩니다. XAML을 통해 프로그램의 더욱 개별화된 동작을 정의하는 기술의 선언적 측면을 관련 절차형 코드에서 분리할 수 있습니다.
 
-XAML 和 LINQ to XML 的交互有两种主要方式：
+XAML과 LINQ to XML은 다음 두 가지 주요 방식으로 상호 작용할 수 있습니다.
 
-- 由于 XAML 文件是格式良好的 XML，因此可以通过 XML 技术（如 LINQ to XML）查询和操作。
+- XAML 파일이 제대로 구성된 XML이기 때문에 LINQ to XML과 같은 XML 기술을 통해 XAML 파일을 쿼리하고 조작할 수 있습니다.
 
-- 由于 LINQ to XML 查询表示数据的源，因此这些查询可用作 WPF UI 元素数据绑定的数据源。
+- LINQ to XML 쿼리가 데이터 소스를 나타내기 때문에 이러한 쿼리를 WPF UI 요소의 데이터 바인딩에 대한 데이터 소스로 사용할 수 있습니다.
 
-本文档说明第二种情况。
+이 문서에서는 두 번째 시나리오에 대해 설명합니다.
 
 ## <a name="data-binding-in-the-windows-presentation-foundation"></a>Windows Presentation Foundation 中的数据绑定
 
-WPF 数据绑定可使 UI 元素将其一个属性与一个数据源相关联。 这种情况的一个简单示例是 <xref:System.Windows.Controls.Label>，其文本表示用户定义对象中一个公共属性的值。 WPF 数据绑定依赖于下列组件：
+WPF 데이터 바인딩을 통해 UI 요소에서 속성 중 하나를 데이터 소스와 연결할 수 있습니다. 이에 대한 간단한 예는 사용자 정의 개체에서 public 속성의 값을 제공하는 텍스트가 포함된 <xref:System.Windows.Controls.Label>입니다. WPF 데이터 바인딩은 다음 구성 요소를 사용합니다.
 
-|组件|描述|
+|구성 요소|설명|
 |---------------|-----------------|
-|绑定目标|要与数据源关联的 UI 元素。 WPF 中的可视元素是从 <xref:System.Windows.UIElement> 类派生的。|
-|目标属性|绑定目标的依赖项属性，反映数据绑定源的值。 从中派生 <xref:System.Windows.DependencyObject> 的 <xref:System.Windows.UIElement> 类直接支持依赖项属性。|
-|绑定源|提供给 UI 元素以便进行显示的一个或多个值的源对象。 WPF 自动支持以下类型作为绑定源：CLR 对象、ADO.NET 数据对象、XML 数据（来自 XPath 或 LINQ to XML 查询）或其他 <xref:System.Windows.DependencyObject>。|
-|源路径|绑定源的属性，可解析为要绑定的一个或一组值。|
+|바인딩 대상|데이터 소스와 연결할 UI 요소입니다. WPF의 시각적 요소는 <xref:System.Windows.UIElement> 클래스에서 파생됩니다.|
+|대상 속성|데이터 바인딩 원본의 값을 반영하는 바인딩 대상의 *종속성 속성*입니다. 종속성 속성은 <xref:System.Windows.DependencyObject>가 파생되는 <xref:System.Windows.UIElement> 클래스에서 직접 지원합니다.|
+|바인딩 원본|표시하기 위해 UI 요소에 제공되는 하나 이상의 값에 대한 원본 개체입니다. WPF는 CLR 개체, ADO.NET 데이터 개체, XML 데이터(XPath 또는 LINQ to XML 쿼리의 데이터) 또는 다른 <xref:System.Windows.DependencyObject>를 바인딩 원본으로 자동으로 지원합니다.|
+|원본 경로|바인딩될 값이나 값의 집합으로 확인되는 바인딩 원본의 속성입니다.|
 
-依赖项属性是特定于 WPF 的概念，它表示 UI 元素的动态计算的属性。 例如，依赖项属性通常具有默认值或具有由父元素提供的值。 <xref:System.Windows.DependencyProperty> 类的实例（而不是支持标准属性的字段）支持这些特殊属性。 有关详细信息，请参阅[依赖项属性概述](../advanced/dependency-properties-overview.md)。
+종속성 속성은 UI 요소의 동적으로 계산된 속성을 나타내는 WPF에 특정한 개념입니다. 예를 들어, 종속성 속성에는 기본값이나 부모 요소에서 제공하는 값이 있는 경우가 많습니다. 이러한 특수 속성은 표준 속성의 경우처럼 필드가 아니라 <xref:System.Windows.DependencyProperty> 클래스의 인스턴스로 지원됩니다. 자세한 내용은 [종속성 속성 개요](../advanced/dependency-properties-overview.md)를 참조하세요.
 
 ### <a name="dynamic-data-binding-in-wpf"></a>WPF 中的动态数据绑定
 
-默认情况下，仅在初始化目标 UI 元素时，才会发生数据绑定。 这称为“一次性”绑定。 这不能满足多数用途的需要；通常，数据绑定解决方案要求使用以下方式之一在运行时动态传播更改：
+기본적으로 데이터 바인딩은 대상 UI 요소가 초기화될 때만 발생합니다. 이를 *일회성* 바인딩이라고 합니다. 일회성 바인딩은 대부분의 목적에 충분하지만 일반적으로 데이터 바인딩 솔루션에서는 변경 내용이 다음 중 하나를 사용하여 런타임에 동적으로 전파되어야 합니다.
 
-- 单向绑定，这种方式会自动传播对一侧所做的更改。 最常见的情况是对源所做的更改会反映在目标中，但有时需要相反的情况。
+- *단방향* 바인딩에서는 한 쪽의 변경 내용이 자동으로 전파됩니다. 원본의 변경 내용이 대상에 반영되는 경우가 가장 일반적이지만 때때로 그 반대의 경우가 유용할 수 있습니다.
 
-- 双向绑定，在这种方式中，对源所做的更改会自动传播到目标，而且对目标的更改也会自动传播到源。
+- *양방향* 바인딩에서는 원본의 변경 내용이 대상에 자동으로 전파되고 대상의 변경 내용이 원본에 자동으로 전파됩니다.
 
-为了进行单向或双向绑定，源必须实现一种更改通知机制，例如通过实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口或通过对支持的每个属性使用 PropertyNameChanged 模式。
+단방향 또는 양방향 바인딩이 발생하려면 소스에서 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 구현하거나 지원되는 각 속성의 *PropertyNameChanged* 패턴을 사용하는 등의 방법으로 변경 알림 메커니즘을 구현해야 합니다.
 
-有关 WPF 中数据绑定的详细信息，请参阅[数据绑定 (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)。
+WPF의 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩(WPF)](/dotnet/framework/wpf/data/data-binding-wpf)을 참조하세요.
 
 ## <a name="dynamic-properties-in-linq-to-xml-classes"></a>LINQ to XML 类中的动态属性
 
-大多数 LINQ to XML 类都不适合作为适当的 WPF 动态数据源。 一些最有用的信息只能通过方法（而不是属性）提供，并且这些类中的属性不实现更改通知。 为了支持 WPF 数据绑定，LINQ to XML 公开了一组动态属性。
+대부분의 LINQ to XML 클래스는 적절한 WPF 동적 데이터 소스로 적합하지 않습니다. 가장 유용한 정보 중 일부는 속성이 아니라 메서드를 통해서만 사용할 수 있으며 이러한 클래스의 속성은 변경 알림을 구현하지 않습니다. WPF 데이터 바인딩을 지원하기 위해 LINQ to XML에서는 *동적 속성*의 집합을 노출합니다.
 
-这些动态属性是特殊的运行时属性，它们重复 <xref:System.Xml.Linq.XAttribute> 和 <xref:System.Xml.Linq.XElement> 类中现有方法和属性的功能。 将这些属性添加到这些类中只是为了使这些类能够充当 WPF 的动态数据源。 为了满足这一要求，所有这些动态属性都要实现更改通知。 下一节 [LINQ to XML 动态属性](linq-to-xml-dynamic-properties.md)中提供有关这些动态属性的详细参考。
+이러한 동적 속성은 <xref:System.Xml.Linq.XAttribute> 및 <xref:System.Xml.Linq.XElement> 클래스에 있는 기존 메서드 및 속성의 기능과 중복되는 특수 런타임 속성이며, WPF의 동적 데이터 소스로 작동하기 위한 목적으로만 이러한 클래스에 추가됩니다. 이 요구를 충족시키기 위해 이러한 모든 동적 속성은 변경 알림을 구현합니다. 이러한 동적 속성에 대한 자세한 참조 정보는 다음 섹션 [LINQ to XML 동적 속성](linq-to-xml-dynamic-properties.md)에서 제공됩니다.
 
 > [!NOTE]
-> <xref:System.Xml.Linq> 命名空间的各个类中的很多标准公共属性都可用于一次性数据绑定。 但请记住，在这种方案下，源和目标都不会动态更新。
+> <xref:System.Xml.Linq> 네임스페이스의 다양한 클래스에 있는 표준 public 속성 중 상당수를 일회성 데이터 바인딩에 사용할 수 있습니다. 그러나 이 체계에서 원본이나 대상은 동적으로 업데이트되지 않습니다.
 
 ### <a name="access-dynamic-properties"></a>访问动态属性
 
-不能像访问标准属性那样访问 <xref:System.Xml.Linq.XAttribute> 和 <xref:System.Xml.Linq.XElement> 类中的动态属性。 例如，在符合 CLR 的语言（如 C#）中，动态属性不能：
+<xref:System.Xml.Linq.XAttribute> 및 <xref:System.Xml.Linq.XElement> 클래스의 동적 속성에는 표준 속성의 경우처럼 액세스할 수 없습니다. 예를 들어, C#과 같은 CLR 규격 언어에서 동적 속성에는 다음과 같은 특징이 있습니다.
 
-- 在编译时直接访问。 动态属性对于编译器和 Visual Studio IntelliSense 是不可见的。
+- 컴파일 타임에 직접 액세스할 수 없습니다. 동적 속성은 컴파일러와 Visual Studio IntelliSense에 표시되지 않습니다.
 
-- 在运行时使用 .NET 反射来发现或访问。 即使在运行时，它们也不是基本 CLR 意义上的属性。
+- .NET 리플렉션을 사용하여 런타임에 검색하거나 액세스할 수 없습니다. 런타임에도 동적 속성은 기본 CLR 의미에서 속성이 아닙니다.
 
-在 C# 中，动态属性只能在运行时通过 <xref:System.ComponentModel> 命名空间提供的功能进行访问。
+C#에서는 <xref:System.ComponentModel> 네임스페이스에서 제공하는 기능을 통해 런타임에만 동적 속성에 액세스할 수 있습니다.
 
-但相比之下，在 XML 源中，可以通过下面形式的简洁表示法访问动态属性：
+그러나 XML 원본에서는 이와 대조적으로 다음과 같은 형태의 간단한 표기법을 통해 동적 속성에 액세스할 수 있습니다.
 
 ```xml
 <object>.<dynamic-property>
 ```
 
-这两个类的动态属性或者解析为可以直接使用的值，或者解析为必须与索引一起提供的索引器，以便获取结果值或值的集合。 后一种语法采用的格式为：
+이러한 두 클래스의 동적 속성은 직접 사용할 수 있는 값이나 결과 값 또는 값 컬렉션을 얻기 위해 인덱스와 함께 제공되어야 하는 인덱서로 확인됩니다. 후자의 구문은 다음과 같습니다.
 
 ```xml
 <object>.<dynamic-property>[<index-value>]
 ```
 
-有关详细信息，请参阅 [LINQ to XML 动态属性](linq-to-xml-dynamic-properties.md)。
+자세한 내용은 [LINQ to XML 동적 속성](linq-to-xml-dynamic-properties.md)을 참조하세요.
 
-为了实现 WPF 动态绑定，需要与 <xref:System.Windows.Data> 命名空间提供的功能（特别是 <xref:System.Windows.Data.Binding> 类）一起使用动态属性。
+WPF 동적 바인딩을 구현하기 위해 동적 속성은 <xref:System.Windows.Data> 네임스페이스(무엇보다도 <xref:System.Windows.Data.Binding> 클래스)에서 제공하는 기능과 함께 사용됩니다
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [使用 LINQ to XML 进行 WPF 数据绑定](wpf-data-binding-with-linq-to-xml-overview.md)
-- [LINQ to XML 动态属性](linq-to-xml-dynamic-properties.md)
-- [WPF 中的 XAML](../advanced/xaml-in-wpf.md)
-- [数据绑定 (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
-- [使用工作流标记](https://go.microsoft.com/fwlink/?LinkId=98685)
+- [LINQ to XML로 WPF 데이터 바인딩](wpf-data-binding-with-linq-to-xml-overview.md)
+- [LINQ to XML 동적 속성](linq-to-xml-dynamic-properties.md)
+- [WPF의 XAML](../advanced/xaml-in-wpf.md)
+- [데이터 바인딩(WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
+- [워크플로 마크업 사용](https://go.microsoft.com/fwlink/?LinkId=98685)

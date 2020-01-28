@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 47a1da4982d22c63cb762a27313590c8ec0c5dd4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964747"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743972"
 ---
 # <a name="using-structs-c-programming-guide"></a>使用结构（C# 编程指南）
 
@@ -27,7 +27,7 @@ ms.locfileid: "75964747"
 
 由于全都是用于类的继承，因此没有用于结构的继承。 一个结构无法继承自另一个结构或类，并且它不能为类的基类。 但是，它可以从基类 <xref:System.Object>继承。 结构也可以实现接口，且实现方法与类相同。
 
-不能使用关键字 `struct`声明一个类。 在 C# 中，类和结构在语义上是不同的。 结构是值类型，而类是引用类型。 有关详细信息，请参阅[值类型](../../language-reference/keywords/value-types.md)和[引用类型](../../language-reference/keywords/reference-types.md)。
+不能使用关键字 `struct`声明一个类。 在 C# 中，类和结构在语义上是不同的。 结构是值类型，而类是引用类型。 有关详细信息，请参阅[值类型](../../language-reference/builtin-types/value-types.md)和[引用类型](../../language-reference/keywords/reference-types.md)。
 
 除非需要引用类型语义，将较小的类声明为结构，可以提高系统的处理效率。
 

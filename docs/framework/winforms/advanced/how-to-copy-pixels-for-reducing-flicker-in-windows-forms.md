@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Windows 窗体中复制像素以减少闪烁
+title: 如何：复制像素以减少闪烁
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: 5a18539153c64a5059d8079f6e245115b026bb91
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 299041e7038d5bd5b9824d668b3f47d842030ac7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950151"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746482"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>如何：在 Windows 窗体中复制像素以减少闪烁
-当您对一个简单的图形进行动画处理时, 用户有时可能会遇到闪烁或其他不需要的视觉效果。 限制此问题的一种方法是在图形上使用 "bitblt" 进程。 Bitblt 是颜色数据的 "位块传输", 它将像素的源矩形转换为像素的目标矩形。  
+当您对一个简单的图形进行动画处理时，用户有时可能会遇到闪烁或其他不需要的视觉效果。 限制此问题的一种方法是在图形上使用 "bitblt" 进程。 Bitblt 是颜色数据的 "位块传输"，它将像素的源矩形转换为像素的目标矩形。  
   
- 使用 Windows 窗体, 可以使用<xref:System.Drawing.Graphics.CopyFromScreen%2A> <xref:System.Drawing.Graphics>类的方法来实现 bitblt。 在方法的参数中, 指定源和目标 (如点)、要复制的区域的大小以及用于绘制新形状的图形对象。  
+ 使用 Windows 窗体，可以使用 <xref:System.Drawing.Graphics> 类的 <xref:System.Drawing.Graphics.CopyFromScreen%2A> 方法来实现 bitblt。 在方法的参数中，指定源和目标（如点）、要复制的区域的大小以及用于绘制新形状的图形对象。  
   
- 在下面的示例中, 在窗体的<xref:System.Windows.Forms.Control.Paint>事件处理程序中绘制形状。 然后, <xref:System.Drawing.Graphics.CopyFromScreen%2A>使用方法来复制形状。  
+ 在下面的示例中，在窗体的 <xref:System.Windows.Forms.Control.Paint> 事件处理程序中绘制形状。 然后，使用 <xref:System.Drawing.Graphics.CopyFromScreen%2A> 方法来复制形状。  
   
 > [!NOTE]
-> 将窗体<xref:System.Windows.Forms.Control.DoubleBuffered%2A>的属性设置`true`为将使<xref:System.Windows.Forms.Control.Paint>事件中基于图形的代码双缓冲。 当使用下面的代码时, 这将不会有任何明显的性能提升, 而是在使用更复杂的图形操作代码时需要注意的事项。  
+> 将窗体的 <xref:System.Windows.Forms.Control.DoubleBuffered%2A> 属性设置为 `true` 会使 <xref:System.Windows.Forms.Control.Paint> 事件中基于图形的代码双缓冲。 当使用下面的代码时，这将不会有任何明显的性能提升，而是在使用更复杂的图形操作代码时需要注意的事项。  
   
 ## <a name="example"></a>示例  
   
@@ -60,9 +60,9 @@ private void Form1_Paint(System.Object sender,
 ```  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 上面的代码在窗体的<xref:System.Windows.Forms.Control.Paint>事件处理程序中运行, 以便在重绘窗体时保持图形。 因此, 请不要在<xref:System.Windows.Forms.Form.Load>事件处理程序中调用图形相关方法, 因为如果窗体调整大小或被其他窗体遮住, 则不会重新绘制所绘制的内容。  
+ 上面的代码在窗体的 <xref:System.Windows.Forms.Control.Paint> 事件处理程序中运行，以便在重绘窗体时保持图形。 因此，请不要在 <xref:System.Windows.Forms.Form.Load> 事件处理程序中调用与图形相关的方法，因为当窗体调整或被其他窗体遮住时，不会重新绘制所绘制的内容。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>

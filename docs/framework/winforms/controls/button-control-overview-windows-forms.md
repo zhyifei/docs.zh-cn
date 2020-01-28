@@ -1,5 +1,5 @@
 ---
-title: Button 控件概述（Windows 窗体）
+title: Button 컨트롤 개요
 ms.date: 03/30/2017
 f1_keywords:
 - Button
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - Button control [Windows Forms], about Button control
 - buttons [Windows Forms], about buttons
 ms.assetid: 255b291b-51a9-4a92-a1a4-2400cd82443f
-ms.openlocfilehash: 1ded871fdfab83407d8022ca0c4ce6b2c8a6c67c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ba7b333e5414efb4814d64ce50c55e08b27f859
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938978"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747075"
 ---
-# <a name="button-control-overview-windows-forms"></a>Button 控件概述（Windows 窗体）
-Windows 窗体 <xref:System.Windows.Forms.Button> 控件允许用户通过单击来执行某项操作。 单击该按钮时，看上去它像是被按下并释放。 每当用户单击一个按钮，<xref:System.Windows.Forms.Control.Click>调用事件处理程序。 你将代码放在<xref:System.Windows.Forms.Control.Click>事件处理程序以执行所选择的任何操作。  
+# <a name="button-control-overview-windows-forms"></a>Button 컨트롤 개요(Windows Forms)
+사용자는 Windows Forms <xref:System.Windows.Forms.Button> 컨트롤을 클릭하여 작업을 수행할 수 있습니다. 단추를 클릭하면 눌렀다 놓는 것처럼 표시됩니다. 每当用户单击某个按钮时，就会调用 <xref:System.Windows.Forms.Control.Click> 事件处理程序。 将代码放在 <xref:System.Windows.Forms.Control.Click> 事件处理程序中，以执行您选择的任何操作。  
   
- 在按钮上显示的文本包含在<xref:System.Windows.Forms.Control.Text%2A>属性。 如果您的文本超出了按钮的宽度，它将换行到下一行。 但是，它将剪辑如果控件所能容纳的窗体的整体高度。 有关详细信息，请参阅[如何：设置显示的文本的 Windows 窗体控件](how-to-set-the-text-displayed-by-a-windows-forms-control.md)。 <xref:System.Windows.Forms.Control.Text%2A>属性可以包含访问密钥，这样用户就可以通过按 ALT 键和访问密钥"单击"控件。 有关详细信息，请参阅[如何：Windows 窗体控件的创建访问键](how-to-create-access-keys-for-windows-forms-controls.md)。 由控制文本的外观<xref:System.Windows.Forms.Control.Font%2A>属性和<xref:System.Windows.Forms.ButtonBase.TextAlign%2A>属性。  
+ 按钮上显示的文本包含在 <xref:System.Windows.Forms.Control.Text%2A> 属性中。 如果文本超出按钮宽度，则会换行到下一行。 但是，如果控件无法容纳其整体高度，则会将其剪切。 有关详细信息，请参阅[如何：设置 Windows 窗体控件显示的文本](how-to-set-the-text-displayed-by-a-windows-forms-control.md)。 <xref:System.Windows.Forms.Control.Text%2A> 属性可以包含访问键，这允许用户通过按 ALT 键和访问键来 "单击" 控件。 有关详细信息，请参阅[如何：创建 Windows 窗体控件的访问键](how-to-create-access-keys-for-windows-forms-controls.md)。 文本的外观由 <xref:System.Windows.Forms.Control.Font%2A> 属性和 <xref:System.Windows.Forms.ButtonBase.TextAlign%2A> 属性控制。  
   
- <xref:System.Windows.Forms.Button>控件还可以显示使用的映像<xref:System.Windows.Forms.ButtonBase.Image%2A>和<xref:System.Windows.Forms.ButtonBase.ImageList%2A>属性。 有关详细信息，请参阅[如何：设置所显示的图像的 Windows 窗体控件](how-to-set-the-image-displayed-by-a-windows-forms-control.md)。  
+ <xref:System.Windows.Forms.Button> 控件还可以使用 <xref:System.Windows.Forms.ButtonBase.Image%2A> 和 <xref:System.Windows.Forms.ButtonBase.ImageList%2A> 属性来显示图像。 有关详细信息，请参阅[如何：设置 Windows 窗体控件显示的图像](how-to-set-the-image-displayed-by-a-windows-forms-control.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Button>
-- [如何：响应 Windows 窗体按钮单击](how-to-respond-to-windows-forms-button-clicks.md)
-- [如何选择 Windows 窗体 Button 控件](ways-to-select-a-windows-forms-button-control.md)
-- [如何：将 Windows 窗体按钮指定为接受按钮使用设计器](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
-- [如何：将 Windows 窗体按钮指定为使用设计器的取消按钮](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
-- [Button 控件](button-control-windows-forms.md)
+- [방법: Windows Forms 단추 클릭에 응답](how-to-respond-to-windows-forms-button-clicks.md)
+- [Windows Forms Button 컨트롤 선택 방법](ways-to-select-a-windows-forms-button-control.md)
+- [방법: 디자이너를 사용하여 Windows Forms 단추를 적용 단추로 지정](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [방법: 디자이너를 사용하여 Windows Forms 단추를 취소 단추로 지정](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [Button 컨트롤](button-control-windows-forms.md)

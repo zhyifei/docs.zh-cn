@@ -1,5 +1,6 @@
 ---
-title: 演练：在 WPF 中承载 ActiveX 控件
+title: 在 WPF 中承载 ActiveX 控件
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 8679181d720d9550cf60034a7cf1809b79198e83
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
-ms.translationtype: MT
+ms.openlocfilehash: f2d9345eaaba7b85a217e6b230ae202f27ad3af8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197896"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742620"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>演练：在 WPF 中承载 ActiveX 控件
 若要实现与浏览器的更好交互，可以在基于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的应用程序中使用 Microsoft ActiveX 控件。 本演练演示如何将 Microsoft Windows Media Player 作为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 页上的控件进行承载。
@@ -28,7 +29,7 @@ ms.locfileid: "73197896"
 
  完成本演练后，你将了解如何在基于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的应用程序中使用 Microsoft ActiveX 控件。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  你需要以下组件来完成本演练：
 
 - Microsoft Windows Media Player 安装在安装了 Visual Studio 的计算机上。
@@ -105,7 +106,7 @@ ms.locfileid: "73197896"
   
 10. 按 F5 生成并运行该应用程序。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

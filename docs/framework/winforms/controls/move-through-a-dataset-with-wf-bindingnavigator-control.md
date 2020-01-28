@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Windows 窗体 BindingNavigator 控件浏览数据集
+title: 使用 BindingNavigator 控件浏览数据集
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,35 +9,35 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], moving through datasets
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 146d97be-3d97-400e-accb-860bbf47729d
-ms.openlocfilehash: d33cad4d0a60aa29d8c9f5e2217532963e8358c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 73a102da74a3a2a00b5042331cffcaf3d858ea5b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952697"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742149"
 ---
-# <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>如何：使用 Windows 窗体 BindingNavigator 控件浏览数据集
-生成数据驱动的应用程序时，经常需要向用户显示数据集合。 <xref:System.Windows.Forms.BindingNavigator> 控件与 <xref:System.Windows.Forms.BindingSource> 组件一起为滚动集合并按顺序显示其中的项提供方便的可扩展解决方案。  
+# <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>방법: Windows Forms BindingNavigator 컨트롤을 사용하여 데이터 집합에서 이동
+데이터 기반 애플리케이션을 빌드할 때 사용자에게 데이터 컬렉션을 표시해야 하는 경우가 많습니다. <xref:System.Windows.Forms.BindingSource> 구성 요소와 더불어 <xref:System.Windows.Forms.BindingNavigator> 컨트롤은 컬렉션을 탐색하고 항목을 순차적으로 표시하기 위한 편리하고 확장 가능한 솔루션을 제공합니다.  
   
 ## <a name="example"></a>示例  
- 下面的代码示例演示如何使用 <xref:System.Windows.Forms.BindingNavigator> 控件来浏览数据。 集合包含在 <xref:System.Data.DataView> 中，后者使用 <xref:System.Windows.Forms.BindingSource> 组件绑定到 <xref:System.Windows.Forms.TextBox> 控件。  
+ 다음 코드 예제에서는 <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 사용하여 데이터를 탐색하는 방법을 보여 줍니다. 集合包含在 <xref:System.Data.DataView> 中，后者使用 <xref:System.Windows.Forms.BindingSource> 组件绑定到 <xref:System.Windows.Forms.TextBox> 控件。  
   
 > [!NOTE]
-> 将敏感信息（如密码）存储在连接字符串中可能会影响应用程序的安全性。 若要控制对数据库的访问，一种较为安全的方法是使用 Windows 身份验证（也称为集成安全性）。 有关详细信息，请参阅[保护连接信息](../../data/adonet/protecting-connection-information.md)。  
+> 암호와 같은 중요한 정보를 연결 문자열 내에 저장하면 애플리케이션 보안 문제가 발생할 수 있습니다. 데이터베이스 액세스를 제어할 경우에는 통합 보안이라고도 하는 Windows 인증을 사용하는 방법이 더 안전합니다. 자세한 내용은 [연결 정보 보호](../../data/adonet/protecting-connection-information.md)를 참조하세요.  
   
  [!code-csharp[System.Windows.Forms.DataNavigator#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataNavigator/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataNavigator#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataNavigator/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a>编译代码  
- 此示例需要：  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 이 예제에는 다음 사항이 필요합니다.  
   
-- 对 System、System.Data、System.Drawing、System.Windows.Forms 和 System.Xml 程序集的引用。  
+- System, System.Data, System.Drawing, System.Windows.Forms and System.Xml 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [BindingNavigator 控件](bindingnavigator-control-windows-forms.md)
-- [BindingSource 组件](bindingsource-component.md)
-- [如何：将 Windows 窗体控件绑定到类型](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [BindingNavigator 컨트롤](bindingnavigator-control-windows-forms.md)
+- [BindingSource 구성 요소](bindingsource-component.md)
+- [방법: 형식에 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)

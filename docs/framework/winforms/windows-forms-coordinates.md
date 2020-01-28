@@ -1,5 +1,5 @@
 ---
-title: Windows 窗体坐标
+title: 一致
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms coordinates
@@ -7,28 +7,28 @@ helpviewer_keywords:
 - client coordinates
 - coordinates [Windows Forms], Windows Forms
 ms.assetid: cc06e61f-43b6-4408-a676-2542dcfcd96e
-ms.openlocfilehash: 6feabadff17538f4a7368c348f7b72226e2d678e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c95888f31bfc867e9c028d53072ab3d710256708
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800147"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734660"
 ---
-# <a name="windows-forms-coordinates"></a>Windows 窗体坐标
-Windows 窗体坐标系统取决于设备坐标，并在 Windows 窗体中绘制时的度量值的基本单位是将设备单位 （通常情况下，像素）。 在屏幕上的点的 x 坐标和 y 坐标对所述增加到右侧和 y 坐标增加从上到下的 x 坐标。 原点，相对于屏幕的位置不定，具体取决于是否要指定屏幕或客户端坐标。  
+# <a name="windows-forms-coordinates"></a>Windows Forms 좌표
+Windows 窗体的坐标系统基于设备坐标，在 Windows 窗体中绘制时的基本度量单位是设备单位（通常为像素）。 屏幕上的点按 x 和 y 坐标对进行说明，其中 x 坐标向右递增，y 坐标从上到下递增。 根据您指定的是屏幕坐标还是工作区坐标，原点相对于屏幕的位置会有所不同。  
   
 ## <a name="screen-coordinates"></a>屏幕坐标  
- Windows 窗体应用程序在屏幕坐标中屏幕上指定窗口的位置。 对于屏幕坐标原点是屏幕的左上角。 窗口的完整位置通常描述由<xref:System.Drawing.Rectangle>结构，它包含两个点定义窗口的左上角和右下角的屏幕坐标。  
+ Windows 窗体应用程序以屏幕坐标的形式指定窗口在屏幕上的位置。 对于屏幕坐标，原点是屏幕的左上角。 窗口的完整位置通常由 <xref:System.Drawing.Rectangle> 结构描述，该结构包含定义窗口的左上角和右下角的两个点的屏幕坐标。  
   
-## <a name="client-coordinates"></a>客户端坐标  
- Windows 窗体应用程序窗体或控件使用客户端坐标中指定点的位置。 工作区坐标中的源是控件或窗体的工作区的左上角。 客户端坐标可确保在应用程序可以在窗体或控件，而不考虑屏幕上的控件的窗体的位置绘制时使用一致的坐标值。  
+## <a name="client-coordinates"></a>工作区坐标  
+ Windows 窗体应用程序使用客户端坐标指定窗体或控件中点的位置。 工作区坐标原点是控件或窗体工作区的左上角。 客户端坐标可确保应用程序在窗体或控件中绘制时可以使用一致的坐标值，而不管窗体或控件在屏幕上的位置。  
   
- 客户端区域的尺寸，还介绍了通过<xref:System.Drawing.Rectangle>结构，其中包含工作区坐标中的区域。 在所有情况下，该矩形的左上角坐标包含工作区中，而排除右下角坐标。 图形操作不包括的工作区上边缘右和下边缘。 例如<xref:System.Drawing.Graphics.FillRectangle%2A>方法将被填满到指定的矩形中，右和下边缘，但不是会包括这些边缘。  
+ 工作区的维度也由 <xref:System.Drawing.Rectangle> 结构描述，该结构包含区域的工作区坐标。 在所有情况下，矩形的左上角坐标都包含在工作区中，同时排除右下坐标。 图形操作不包括工作区的右边缘和下边缘。 例如，<xref:System.Drawing.Graphics.FillRectangle%2A> 方法将填充指定矩形的右边缘和下边缘，但不包括这些边缘。  
   
-## <a name="mapping-from-one-type-of-coordinate-to-another"></a>从一种类型的坐标映射到另一个  
- 有时，可能需要从屏幕坐标映射到客户端坐标。 您可以轻松地实现此目的通过使用<xref:System.Windows.Forms.Control.PointToClient%2A>并<xref:System.Windows.Forms.Control.PointToScreen%2A>方法中提供<xref:System.Windows.Forms.Control>类。 例如，<xref:System.Windows.Forms.Control.MousePosition%2A>属性的<xref:System.Windows.Forms.Control>屏幕坐标中报告但你可能想要将它们转换成工作区坐标中。  
+## <a name="mapping-from-one-type-of-coordinate-to-another"></a>从一种坐标类型映射到另一种坐标  
+ 有时，可能需要从屏幕坐标映射到工作区坐标。 您可以使用 <xref:System.Windows.Forms.Control> 类中提供的 <xref:System.Windows.Forms.Control.PointToClient%2A> 和 <xref:System.Windows.Forms.Control.PointToScreen%2A> 方法轻松实现此目的。 例如，<xref:System.Windows.Forms.Control> 的 <xref:System.Windows.Forms.Control.MousePosition%2A> 属性以屏幕坐标的形式报告，但你可能想要将它们转换为客户端坐标。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Control.PointToClient%2A>
 - <xref:System.Windows.Forms.Control.PointToScreen%2A>

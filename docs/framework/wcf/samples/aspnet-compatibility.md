@@ -2,12 +2,12 @@
 title: ASP.NET 兼容性
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 0938075464a0f2739bdb2a9d8ed1f16f61edff2b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 1f1690cdd1a880c852abc04ea8e4958bae2c5432
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716163"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728019"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 兼容性
 
@@ -24,9 +24,9 @@ ms.locfileid: "74716163"
 
 2. 展开 "**连接**" 窗格中的 treeview。 选择 "**应用程序池**" 节点。
 
-3. 若要将默认应用程序池设置为使用 .NET Framework 4 （这可能会导致与现有站点的不兼容问题），请右键单击 " **DefaultAppPool** " 列表项并选择 "**基本设置 ...** "。 将 **.Net Framework 版本**下拉菜单设置为 **.net framework v v4.0.30128** （或更高版本）。
+3. 若要将默认应用程序池设置为使用 .NET Framework 4 （这可能会导致与现有站点的不兼容问题），请右键单击 " **DefaultAppPool** " 列表项并选择 "**基本设置 ...** "。 设置 **.Net Framework 版本**下拉到 **.Net Framework v4.0.30128** （或更高版本）。
 
-4. 若要创建使用 .NET Framework 4 的新应用程序池（保持其他应用程序的兼容性），请右键单击 "**应用程序**池" 节点，然后选择 "**添加应用程序池 ...** "。 命名新的应用程序池，并将 **.Net Framework 版本**下拉菜单设置为 **.net framework v v4.0.30128** （或更高版本）。 运行以下安装步骤后，右键单击**ServiceModelSamples**应用程序，然后选择 "**管理应用程序**、**高级设置 ...** "。 将**应用程序池**设置为新的应用程序池。
+4. 若要创建使用 .NET Framework 4 的新应用程序池（保持其他应用程序的兼容性），请右键单击 "**应用程序**池" 节点，然后选择 "**添加应用程序池 ...** "。 命名新的应用程序池，并将设置 **.Net Framework 版本**下拉到 **.Net Framework v4.0.30128** （或更高版本）。 运行以下安装步骤后，右键单击**ServiceModelSamples**应用程序，然后选择 "**管理应用程序**、**高级设置 ...** "。 将**应用程序池**设置为新的应用程序池。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：
@@ -130,4 +130,4 @@ Press <ENTER> to terminate client.
 
 ## <a name="see-also"></a>另请参阅
 
-- [AppFabric 宿主和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric 宿主和持久性示例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

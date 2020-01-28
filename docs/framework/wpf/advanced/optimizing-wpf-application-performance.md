@@ -1,5 +1,5 @@
 ---
-title: 优化 WPF 应用程序性能
+title: 优化应用程序性能
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application rendering [WPF], performance
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: 98c7022eab9153808d47d7da69c23349032165c3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: cc6ea051401199a87965565c920068fd55cb05d0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460847"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743945"
 ---
 # <a name="optimizing-wpf-application-performance"></a>优化 WPF 应用程序性能
 本部分旨在作为正在寻找提高应用程序性能的方法的 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序开发人员的参考。 如果你是 Microsoft .NET 框架和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的新手的开发人员，则应首先熟悉这两个平台。 本部分假设同时了解这两种情况，并为已知道足以启动并运行应用程序的程序员编写这些内容。  
@@ -33,7 +33,7 @@ ms.locfileid: "73460847"
   
  [应用程序资源](optimizing-performance-application-resources.md)  
   
- [文本](optimizing-performance-text.md)  
+ [“文本”](optimizing-performance-text.md)  
   
  [数据绑定](optimizing-performance-data-binding.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73460847"
   
  [应用程序启动时间](application-startup-time.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>

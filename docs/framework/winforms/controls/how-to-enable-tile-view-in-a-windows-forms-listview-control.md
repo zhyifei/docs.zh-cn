@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Windows 窗体 ListView 控件中启用图块视图
+title: 在 ListView 控件中启用磁贴视图
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: 489b9a9d0341391c756175acb19d962d642eb7b2
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 8ccbd42d870e44fc6fd80169327922409ea4f6e7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960449"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745464"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>如何：在 Windows 窗体 ListView 控件中启用图块视图
 使用 <xref:System.Windows.Forms.ListView> 控件的磁贴视图功能，可以在图形和文本信息之间提供一种视觉平衡。 磁贴视图中，为项目显示的文本信息与为详细信息视图定义的列信息相同。 磁贴视图与 <xref:System.Windows.Forms.ListView> 控件中的分组或插入标记功能配合使用。  

@@ -1,48 +1,48 @@
 ---
-title: Windows 窗体中的拖放功能
+title: 拖放功能
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: 437b632706b27cd487d60c2ad23db3f9a3c96c09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 603dc158719c0b11def4386eb24a33f235cf3a42
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966850"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732760"
 ---
-# <a name="drag-and-drop-functionality-in-windows-forms"></a>Windows 窗体中的拖放功能
-Windows 窗体包含一组实现拖放行为的方法、事件和类。 本主题概述了 Windows 窗体对拖放功能的支持。  另请参阅[拖放操作和剪贴板支持](./advanced/drag-and-drop-operations-and-clipboard-support.md)。  
+# <a name="drag-and-drop-functionality-in-windows-forms"></a>Windows Forms에서의 끌어서 놓기 기능
+Windows Forms에는 끌어서 놓기 동작을 구현하는 메서드, 이벤트 및 클래스 집합이 포함되어 있습니다. 이 항목에서는 Windows Forms의 끌어서 놓기 지원에 대해 개괄적으로 설명합니다.  另请参阅[拖放操作和剪贴板支持](./advanced/drag-and-drop-operations-and-clipboard-support.md)。  
   
-## <a name="performing-drag-and-drop-operations"></a>执行拖放操作  
- 若要执行拖放操作，请使用 <xref:System.Windows.Forms.Control> 类的 <xref:System.Windows.Forms.Control.DoDragDrop%2A> 方法。 有关如何执行拖放操作的详细信息，请参阅 <xref:System.Windows.Forms.Control.DoDragDrop%2A>。 若要获取拖放操作开始前鼠标指针必须拖动到的矩形，请使用 <xref:System.Windows.Forms.SystemInformation> 类的 <xref:System.Windows.Forms.SystemInformation.DragSize%2A> 属性。  
+## <a name="performing-drag-and-drop-operations"></a>끌어서 놓기 작업 수행  
+ 끌어서 놓기 작업을 수행하려면 <xref:System.Windows.Forms.Control> 클래스의 <xref:System.Windows.Forms.Control.DoDragDrop%2A> 메서드를 사용합니다. 끌어서 놓기 작업을 수행하는 방법에 대한 자세한 내용은 <xref:System.Windows.Forms.Control.DoDragDrop%2A>을 참조하세요. 끌어서 놓기 작업이 시작되기 전에 마우스 포인터를 위로 끌어와야 하는 사각형을 가져오려면 <xref:System.Windows.Forms.SystemInformation> 클래스의 <xref:System.Windows.Forms.SystemInformation.DragSize%2A> 속성을 사용합니다.  
   
-## <a name="events-related-to-drag-and-drop-operations"></a>与拖放操作相关的事件  
- 拖放操作中有两类事件：一类是拖放操作的当前目标上发生的事件，一类是拖放操作的源上发生的事件。  
+## <a name="events-related-to-drag-and-drop-operations"></a>끌어서 놓기 작업과 관련된 이벤트  
+ 끌어서 놓기 작업에는 두 가지 범주의 이벤트가 있습니다. 하나는 끌어서 놓기 작업의 현재 대상에서 발생하는 이벤트이고, 다른 하나는 끌어서 놓기 작업의 소스에서 발생하는 이벤트입니다.  
   
-### <a name="events-on-the-current-target"></a>当前目标上的事件  
- 下表显示在拖放操作的当前目标上发生的事件。  
+### <a name="events-on-the-current-target"></a>현재 대상의 이벤트  
+ 다음 표에서는 끌어서 놓기 작업의 현재 대상에서 발생하는 이벤트를 보여 줍니다.  
   
-|鼠标事件|描述|  
+|마우스 이벤트|설명|  
 |-----------------|-----------------|  
-|<xref:System.Windows.Forms.Control.DragEnter>|将对象拖入控件的边界时此事件发生。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.DragEventArgs> 的参数。|  
-|<xref:System.Windows.Forms.Control.DragOver>|在鼠标指针位于控件的边界内时如果拖动对象则此事件发生。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.DragEventArgs> 的参数。|  
-|<xref:System.Windows.Forms.Control.DragDrop>|拖放操作完成时此事件发生。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.DragEventArgs> 的参数。|  
-|<xref:System.Windows.Forms.Control.DragLeave>|将对象拖出控件的边界时此事件发生。 此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。|  
+|<xref:System.Windows.Forms.Control.DragEnter>|이 이벤트는 개체를 컨트롤의 범위로 끌어올 때 발생합니다. 이 이벤트의 처리기는 <xref:System.Windows.Forms.DragEventArgs> 형식의 인수를 받습니다.|  
+|<xref:System.Windows.Forms.Control.DragOver>|이 이벤트는 마우스 포인터가 컨트롤의 범위 내에 있는 동안 개체를 끌 때 발생합니다. 이 이벤트의 처리기는 <xref:System.Windows.Forms.DragEventArgs> 형식의 인수를 받습니다.|  
+|<xref:System.Windows.Forms.Control.DragDrop>|이 이벤트는 끌어서 놓기 작업이 완료될 때 발생합니다. 이 이벤트의 처리기는 <xref:System.Windows.Forms.DragEventArgs> 형식의 인수를 받습니다.|  
+|<xref:System.Windows.Forms.Control.DragLeave>|이 이벤트는 컨트롤의 범위 밖으로 개체를 끌 때 발생합니다. 이 이벤트의 처리기는 <xref:System.EventArgs> 형식의 인수를 받습니다.|  
   
- <xref:System.Windows.Forms.DragEventArgs> 类提供鼠标指针的位置、鼠标按钮和键盘修改键的当前状态、正在拖动的数据以及 <xref:System.Windows.Forms.DragDropEffects> 值（指定拖动事件的源所允许的操作以及操作的目标放置效果）。  
+ <xref:System.Windows.Forms.DragEventArgs> 클래스는 마우스 포인터의 위치, 마우스 단추의 현재 상태 및 키보드의 한정자 키, 끄는 데이터, 끌기 이벤트의 소스에서 허용되는 작업과 작업의 대상 놓기 효과를 지정하는 <xref:System.Windows.Forms.DragDropEffects> 값을 제공합니다.  
   
-### <a name="events-on-the-source"></a>源上的事件  
- 下表显示在拖放操作的源上发生的事件。  
+### <a name="events-on-the-source"></a>소스의 이벤트  
+ 다음 표에서는 끌어서 놓기 작업의 소스에서 발생하는 이벤트를 보여 줍니다.  
   
-|鼠标事件|描述|  
+|마우스 이벤트|설명|  
 |-----------------|-----------------|  
-|<xref:System.Windows.Forms.Control.GiveFeedback>|此事件在执行拖动操作期间发生。 借助此事件，可向用户提供可视提示（例如更改鼠标指针），通知拖放操作正在发生。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.GiveFeedbackEventArgs> 的参数。|  
-|<xref:System.Windows.Forms.Control.QueryContinueDrag>|此事件在拖放操作期间引发，并使拖动源可以确定是否应取消拖放操作。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.QueryContinueDragEventArgs> 的参数。|  
+|<xref:System.Windows.Forms.Control.GiveFeedback>|이 이벤트는 끌기 작업 중에 발생합니다. 마우스 포인터 변경 등 끌어서 드롭 작업이 발생하고 있음을 알리는 시각 신호를 사용자에게 제공할 수 있습니다. 이 이벤트의 처리기는 <xref:System.Windows.Forms.GiveFeedbackEventArgs> 형식의 인수를 받습니다.|  
+|<xref:System.Windows.Forms.Control.QueryContinueDrag>|이 이벤트는 끌어서 놓기 작업 중에 발생하며 끌기 소스가 끌어서 놓기 작업을 취소해야 할지를 결정하도록 합니다. 이 이벤트의 처리기는 <xref:System.Windows.Forms.QueryContinueDragEventArgs> 형식의 인수를 받습니다.|  
   
- <xref:System.Windows.Forms.QueryContinueDragEventArgs> 类提供鼠标按钮和键盘修改键的当前状态、指定是否按 ESC 键的值以及 <xref:System.Windows.Forms.DragAction> 值（可设置为指定是否应继续拖放操作）。  
+ <xref:System.Windows.Forms.QueryContinueDragEventArgs> 클래스는 마우스 단추의 현재 상태 및 키보드의 한정자 키, Esc 키를 눌렀는지 여부를 지정하는 값, 끌어서 놓기 작업을 계속할지 여부를 지정하기 위해 설정할 수 있는 <xref:System.Windows.Forms.DragAction> 값을 제공합니다.  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Windows 窗体应用程序中的鼠标输入](mouse-input-in-a-windows-forms-application.md)
+- [Windows Forms 애플리케이션의 마우스 입력](mouse-input-in-a-windows-forms-application.md)

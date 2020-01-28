@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Windows 窗体 DataGridView 控件中实现虚拟模式
+title: 在 DataGridView 控件中实现虚拟模式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - virtual mode
 - DataGridView control [Windows Forms], large data sets
 ms.assetid: 98236267-f08e-4918-bcf9-77acf050a3ca
-ms.openlocfilehash: 064b58b64e0a9f55e3ef7d15b4962cfec514eff3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f8612a808ac5c9facee55d820529945f481a2cea
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592404"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736506"
 ---
 # <a name="how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control"></a>如何：在 Windows 窗体 DataGridView 控件中实现虚拟模式
 以下代码示例演示如何使用 <xref:System.Windows.Forms.DataGridView> 控件（将其 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 属性设置为 `true`）来管理大型数据集。  
   
- 此代码示例的完整说明，请参阅[演练：在 Windows 中实现虚拟模式窗体 DataGridView 控件](implementing-virtual-mode-wf-datagridview-control.md)。  
+ 有关此代码示例的完整说明，请参阅[演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式](implementing-virtual-mode-wf-datagridview-control.md)。  
   
 ## <a name="example"></a>示例  
  [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#000](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#000)]
@@ -33,7 +33,7 @@ ms.locfileid: "65592404"
   
 - 对 System 和 System.Windows.Forms 程序集的引用。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>

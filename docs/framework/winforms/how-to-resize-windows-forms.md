@@ -1,5 +1,5 @@
 ---
-title: 如何：调整 Windows 窗体的大小
+title: 调整窗体大小
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: aa7ee2bbbf6983a371ea71edc0dfd0cc12cd0c9d
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8d4ce46ada505f952fc3090d10c5d893338d19f2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211669"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739301"
 ---
-# <a name="how-to-resize-windows-forms"></a>如何：调整 Windows 窗体的大小
+# <a name="how-to-resize-windows-forms"></a>방법: Windows Forms 크기 조정
 
-可使用多种方式指定 Windows 窗体的大小。 可以通过设置 <xref:System.Windows.Forms.Form.Size%2A> 属性的新值，或单独调整 <xref:System.Windows.Forms.Control.Height%2A> 或 <xref:System.Windows.Forms.Control.Width%2A> 属性，以编程方式更改窗体的高度和宽度。 如果你使用 Visual Studio，你可以使用 Windows 窗体设计器的大小。 另请参阅[如何：调整 Windows 窗体使用设计器的大小](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))。
+여러가지 방법으로 Windows Form의 크기를 지정할 수 있습니다. <xref:System.Windows.Forms.Form.Size%2A> 속성에 대해 새 값을 설정하거나 <xref:System.Windows.Forms.Control.Height%2A> 또는 <xref:System.Windows.Forms.Control.Width%2A> 속성을 개별적으로 조정하여 프로그래밍 방식으로 폼의 높이와 너비를 모두 변경할 수 있습니다. 如果使用的是 Visual Studio，则可以使用 Windows 窗体设计器更改大小。 另请参阅[如何：使用设计器调整 Windows 窗体大小](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))。
 
 ## <a name="resize-a-form-programmatically"></a>以编程方式调整窗体的大小
 
-在运行时通过设置窗体的 <xref:System.Windows.Forms.Form.Size%2A> 属性，定义窗体的大小。
+폼의 <xref:System.Windows.Forms.Form.Size%2A> 속성을 설정하여 런타임에 폼의 크기를 정의합니다.
 
-以下代码示例显示窗体大小设置为 100 × 100 像素。
+다음 코드 예제에서는 100 × 100 픽셀로 설정된 폼 크기를 보여 줍니다.
 
 ```vb
 Form1.Size = New System.Drawing.Size(100, 100)
@@ -40,9 +40,9 @@ Form1->Size = System::Drawing::Size(100, 100);
 
 ## <a name="change-form-width-and-height-programmatically"></a>以编程方式更改窗体的宽度和高度
 
-定义 <xref:System.Windows.Forms.Form.Size%2A> 后，通过使用 <xref:System.Windows.Forms.Control.Width%2A> 或 <xref:System.Windows.Forms.Control.Height%2A> 属性更改窗体的高度或宽度。
+<xref:System.Windows.Forms.Form.Size%2A>가 정의된 후 <xref:System.Windows.Forms.Control.Width%2A> 또는 <xref:System.Windows.Forms.Control.Height%2A> 속성을 사용하여 폼 높이나 너비를 변경합니다.
 
-以下代码示例显示自窗体左边缘起，窗体宽度设置为 300 像素，而高度保持不变。
+다음 코드 예제에서는 높이가 일정하게 유지되고 폼의 왼쪽 가장자리에서 300픽셀로 설정된 폼의 너비를 보여 줍니다.
 
 ```vb
 Form1.Width = 300
@@ -56,11 +56,11 @@ Form1.Width = 300;
 Form1->Width = 300;
 ```
 
-或
+-또는-
 
-通过设置 <xref:System.Windows.Forms.Form.Size%2A> 属性更改 <xref:System.Drawing.Size.Width%2A> 或 <xref:System.Drawing.Size.Height%2A>。
+<xref:System.Windows.Forms.Form.Size%2A> 속성을 설정하여 <xref:System.Drawing.Size.Width%2A> 또는 <xref:System.Drawing.Size.Height%2A>를 변경합니다.
 
-但是，如以下代码示例所示，这种方法比只设置 <xref:System.Windows.Forms.Control.Width%2A> 或 <xref:System.Windows.Forms.Control.Height%2A> 属性更繁琐。
+그러나 다음 코드 예제와 같이 이 접근 방식은 단순히 <xref:System.Windows.Forms.Control.Width%2A> 또는 <xref:System.Windows.Forms.Control.Height%2A> 속성을 설정하는 것보다 성가십니다.
 
 ```vb
 Form1.Size = New Size(300, Form1.Size.Height)
@@ -74,11 +74,11 @@ Form1.Size = new Size(300, Form1.Size.Height);
 Form1->Size = System::Drawing::Size(300, Form1->Size.Height);
 ```
 
-## <a name="change-form-size-by-increments-programmatically"></a>以编程方式按增量更改窗体大小
+## <a name="change-form-size-by-increments-programmatically"></a>以编程方式更改窗体大小
 
-若要增加窗体大小，则设置 <xref:System.Drawing.Size.Width%2A> 和 <xref:System.Drawing.Size.Height%2A> 属性。
+폼의 크기를 증가시키려면 <xref:System.Drawing.Size.Width%2A> 및 <xref:System.Drawing.Size.Height%2A> 속성을 설정합니다.
 
-以下代码示例显示高于当前设置的 200 像素窗体宽度。
+다음 코드 예제에서는 현재 설정보다 200픽셀 넓게 설정된 폼의 너비를 보여 줍니다.
 
 ```vb
 Form1.Width += 200
@@ -93,7 +93,7 @@ Form1->Width += 200;
 ```
 
 > [!CAUTION]
-> 始终使用 <xref:System.Drawing.Size.Height%2A> 或 <xref:System.Drawing.Size.Width%2A> 属性更改窗体维度，除非正在通过将 <xref:System.Windows.Forms.Form.Size%2A> 属性设置为一个新 <xref:System.Drawing.Size> 结构来同时设置高度和宽度。 <xref:System.Windows.Forms.Form.Size%2A> 属性将返回 <xref:System.Drawing.Size> 结构，此结构是值类型。 不能将新值分配给值类型的属性。 例如，以下代码示例将不会编译。
+> <xref:System.Windows.Forms.Form.Size%2A> 속성을 새로운 <xref:System.Drawing.Size> 구조체로 설정하여 동시에 높이 및 너비 크기를 설정하지 않는 한 항상 <xref:System.Drawing.Size.Height%2A> 또는 <xref:System.Drawing.Size.Width%2A> 속성을 사용하여 폼의 크기를 변경합니다. <xref:System.Windows.Forms.Form.Size%2A> 속성은 값 형식인 <xref:System.Drawing.Size> 구조체를 반환합니다. 값 형식의 속성에 새 값을 할당할 수 없습니다. 따라서 다음 코드 예제는 컴파일되지 않습니다.
 
 ```vb
 ' NOTE: CODE WILL NOT COMPILE
@@ -113,7 +113,7 @@ Form^ f = gcnew Form();
 f->Size->X += 100;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Windows 窗体入门](getting-started-with-windows-forms.md)
-- [增强 Windows 窗体应用程序](./advanced/index.md)
+- [Windows Forms 시작](getting-started-with-windows-forms.md)
+- [Windows Forms 애플리케이션 강화](./advanced/index.md)

@@ -386,10 +386,7 @@
           href: tutorials/creating-app-with-plugin-support.md
         - name: 如何在 .NET Core 中使用和调试程序集可卸载性
           href: ../standard/assembly/unloadability-howto.md
-- name: 从源生成 .NET Core
-  href: build/index.md
+- name: .NET Core 分发打包
   items:
-    - name: .NET Core 分发打包
-      href: build/distribution-packaging.md
-- name: VS 2015/project.json docs
-  href: ../project-json.md
+    - name: 概述
+      href: distribution-packaging.md

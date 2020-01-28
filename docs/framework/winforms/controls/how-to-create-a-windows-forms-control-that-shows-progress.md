@@ -1,5 +1,5 @@
 ---
-title: 如何：创建显示进度的 Windows 窗体控件
+title: 创建显示进度的控件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: 84f0caace70f9877e84fdd01dc69216dc10fe485
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9d2cf353ba2309380221bb51733baaca1b81a5d5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950580"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731185"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>如何：创建显示进度的 Windows 窗体控件
 以下代码示例显示了一个名为 `FlashTrackBar` 的自定义控件，可用于向用户显示应用程序的级别或进度。 它使用渐变来直观地表示进度。  
@@ -26,9 +26,9 @@ ms.locfileid: "69950580"
   
 - 定义自定义事件。 （`FlashTrackBar` 定义 `ValueChanged` 事件。）  
   
-- 重写<xref:System.Windows.Forms.Control.OnPaint%2A>方法以提供用于绘制控件的逻辑。  
+- 重写 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法，以提供用于绘制控件的逻辑。  
   
-- 使用其<xref:System.Windows.Forms.Control.ClientRectangle%2A>属性计算用于绘制控件的区域。 `FlashTrackBar` 在 `OptimizedInvalidate` 方法中执行此操作。  
+- 使用其 <xref:System.Windows.Forms.Control.ClientRectangle%2A> 属性计算用于绘制控件的区域。 `FlashTrackBar` 在 `OptimizedInvalidate` 方法中执行此操作。  
   
 - 在 Windows 窗体设计器中更改属性时，实现其序列化或持久性。 `FlashTrackBar` 定义用于序列化其 `StartColor` 和 `EndColor` 属性的 `ShouldSerializeStartColor` 和 `ShouldSerializeEndColor` 方法。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "69950580"
 |`OnValueChanged`|引发 `ValueChanged` 事件的方法。|  
   
 > [!NOTE]
-> `FlashTrackBar`使用类作为事件数据和<xref:System.EventHandler>事件委托。 <xref:System.EventArgs>  
+> `FlashTrackBar` 使用事件数据的 <xref:System.EventArgs> 类和事件委托的 <xref:System.EventHandler>。  
   
- 若要处理相应的*事件名称*事件, 请`FlashTrackBar`重写继承自<xref:System.Windows.Forms.Control?displayProperty=nameWithType>的以下方法:  
+ 若要处理相应的*事件名称*事件，`FlashTrackBar` 会重写其从 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>继承的以下方法：  
   
 - <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
@@ -69,7 +69,7 @@ ms.locfileid: "69950580"
   
 - <xref:System.Windows.Forms.Control.OnResize%2A>  
   
- 若要处理相应的属性更改事件, `FlashTrackBar`将重写从<xref:System.Windows.Forms.Control?displayProperty=nameWithType>其继承的以下方法:  
+ 若要处理相应的属性更改事件，`FlashTrackBar` 会重写其从 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>继承的以下方法：  
   
 - <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
   
@@ -92,7 +92,7 @@ ms.locfileid: "69950580"
  [!code-csharp[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/HostApp.cs#30)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [扩展设计时支持](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Windows 窗体控件开发基础知识](windows-forms-control-development-basics.md)

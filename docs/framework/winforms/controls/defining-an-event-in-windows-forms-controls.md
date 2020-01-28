@@ -1,5 +1,5 @@
 ---
-title: 在 Windows 窗体控件中定义事件
+title: 定义控件中的事件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - events [Windows Forms], defining within Windows Forms custom controls
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-ms.openlocfilehash: 4235c8b3c513509023388112071e78cfd079ec6f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d45c369e1fc82ee009a85b5b35fe6aa754873436
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972336"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746074"
 ---
-# <a name="defining-an-event-in-windows-forms-controls"></a>在 Windows 窗体控件中定义事件
-有关定义自定义事件的详细信息，请参阅[事件](../../../standard/events/index.md)。 如果你定义的事件没有任何关联的数据，则使用事件数据的基类型 <xref:System.EventArgs>，并使用 <xref:System.EventHandler> 作为事件委托。 所有这些剩下工作就是定义一个事件成员和受保护`On` *EventName*引发事件的方法。  
+# <a name="defining-an-event-in-windows-forms-controls"></a>Windows Forms 컨트롤에서 이벤트 정의
+有关定义自定义事件的详细信息，请参阅[事件](../../../standard/events/index.md)。 연결된 데이터가 없는 이벤트를 정의하는 경우에는 이벤트 데이터의 기본 형식인 <xref:System.EventArgs>를 사용하고 이벤트 대리자로 <xref:System.EventHandler>를 사용합니다. 剩下的工作就是定义一个事件成员和一个引发该事件的受保护 `On`事件*名*方法。  
   
- 以下代码段显示了 `FlashTrackBar` 自定义控件如何定义自定义事件 `ValueChanged`。 有关的完整代码`FlashTrackBar`示例，请参阅[如何：创建显示进度的 Windows 窗体控件](how-to-create-a-windows-forms-control-that-shows-progress.md)。  
+ 다음 코드 조각은 `FlashTrackBar` 사용자 지정 컨트롤이 사용자 지정 이벤트 `ValueChanged`를 정의하는 방법을 보여줍니다. 有关 `FlashTrackBar` 示例的完整代码，请参阅[如何：创建显示进度的 Windows 窗体控件](how-to-create-a-windows-forms-control-that-shows-progress.md)。  
   
 ```vb  
 Option Explicit  
@@ -76,7 +76,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Windows 窗体控件中的事件](events-in-windows-forms-controls.md)
-- [事件](../../../standard/events/index.md)
+- [Windows Forms 컨트롤의 이벤트](events-in-windows-forms-controls.md)
+- [이벤트](../../../standard/events/index.md)

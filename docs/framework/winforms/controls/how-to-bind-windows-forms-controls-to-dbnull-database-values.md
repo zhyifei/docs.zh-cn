@@ -1,5 +1,5 @@
 ---
-title: 如何：将 Windows 窗体控件绑定到 DBNull 数据库值
+title: 将控件绑定到 DBNull 数据库值
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingSource component
 - controls [Windows Forms], binding to DBNull values
 ms.assetid: 96494e6f-5f40-4f83-af97-bbd7192c2af8
-ms.openlocfilehash: 8abce5d69a7cece6528e0c9d8728de0e0acd9305
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 175d7f5aee2540916480e2c55a485af1f9d16653
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591427"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746660"
 ---
 # <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>如何：将 Windows 窗体控件绑定到 DBNull 数据库值
 将 Windows 窗体绑定到数据源且该数据源返回 <xref:System.DBNull> 值时，可以直接替换相应的值，而不用处理、格式化或解析事件。 在格式化或解析数据源的值时，<xref:System.Windows.Forms.Binding.NullValue%2A> 属性将 <xref:System.DBNull> 转换为指定的对象。  
@@ -32,8 +32,8 @@ ms.locfileid: "65591427"
   
 - 对 System、System.Data、System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [BindingSource 组件](bindingsource-component.md)
-- [如何：处理错误和因数据绑定而发生的异常](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [如何：处理因数据绑定而发生的错误和异常](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
 - [如何：将 Windows 窗体控件绑定到类型](how-to-bind-a-windows-forms-control-to-a-type.md)

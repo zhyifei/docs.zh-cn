@@ -1,16 +1,16 @@
 ---
-title: ToolBar 控件（Windows 窗体）
+title: ToolBar 控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
-ms.openlocfilehash: 13a56af0e52897a6fd4e11516fbf4c0b8f6d6b5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 027c96bb49e9446244e4b08ba93c551ef043b3c0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929569"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735463"
 ---
 # <a name="toolbar-control-windows-forms"></a>ToolBar 控件（Windows 窗体）
 > [!NOTE]
@@ -25,18 +25,18 @@ ms.locfileid: "69929569"
  [ToolBar 控件概述](toolbar-control-overview-windows-forms.md)  
  介绍 `ToolBar` 控件的一般概念，此控件可用于设计用户可使用的自定义工具栏。  
   
- [如何：向工具栏控件添加按钮](how-to-add-buttons-to-a-toolbar-control.md)  
+ [如何：向 ToolBar 控件添加按钮](how-to-add-buttons-to-a-toolbar-control.md)  
  介绍如何向 `ToolBar` 控件添加按钮。  
   
- [如何：定义工具栏按钮的图标](how-to-define-an-icon-for-a-toolbar-button.md)  
+ [如何：定义 ToolBar 控件按钮的图标](how-to-define-an-icon-for-a-toolbar-button.md)  
  介绍如何显示 `ToolBar` 控件按钮中的图标。  
   
- [如何：工具栏按钮的触发器菜单事件](how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [如何：触发工具栏按钮的菜单事件](how-to-trigger-menu-events-for-toolbar-buttons.md)  
  指示如何编写代码以解释用户在 `ToolBar` 控件中单击的按钮。  
   
- 另请[参阅如何:使用设计器](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md)定义工具栏按钮的图标, [如何:使用设计器](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md)将按钮添加到工具栏控件。  
+ 另请参阅[如何：使用设计器定义工具栏按钮的图标](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md)，[如何：使用设计器将按钮添加到工具栏控件](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md)。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Windows.Forms.ToolBar> 类  
  提供类及其成员的相关引用信息。  
   

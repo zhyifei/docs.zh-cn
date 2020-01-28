@@ -1,5 +1,5 @@
 ---
-title: 如何：更改 Windows 窗体 MonthCalendar 控件的外观
+title: 更改 MonthCalendar 控件的外观
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: 5582624d881b2d8039bcd5e8ac45e548c7b38f57
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ded9059ede4ad03f637c0e697b880c41a9a8ba32
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929052"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746651"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>如何：更改 Windows 窗体 MonthCalendar 控件的外观
-Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件允许您通过多种方式自定义日历的外观。 例如, 可以设置配色方案, 并选择显示或隐藏周数和当前日期。  
+Windows 窗体 <xref:System.Windows.Forms.MonthCalendar> 控件允许您通过多种方式自定义日历的外观。 例如，可以设置配色方案，并选择显示或隐藏周数和当前日期。  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>更改月历的配色方案  
   
-- 设置属性<xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, 如、 <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>和<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>。 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>属性还确定一周中各天的字体颜色。 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>属性确定在显示月份之前和之后的日期的颜色。  
+- 设置属性，如 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>、<xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> 和 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>。 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> 属性还确定一周中各天的字体颜色。 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> 属性确定在显示的月份或月份之前和之后的日期的颜色。  
   
     ```vb  
     MonthCalendar1.TitleBackColor = System.Drawing.Color.Blue  
@@ -42,7 +42,7 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件允许您通过多�
     ```  
   
     > [!NOTE]
-    > 从 Windows Vista 开始, 根据主题, 设置某些属性可能不会更改日历的外观。 例如, 如果将 Windows 设置为使用 Aero 主题<xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, 则设置<xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>、 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>、或<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>属性不起作用。 这是因为, 日历的更新版本呈现为在运行时从当前操作系统主题派生的外观。 如果要使用这些属性并启用日历的早期版本, 则可以禁用应用程序的视觉样式。 禁用视觉样式可能会影响应用程序中其他控件的外观和行为。 若要禁用 Visual Basic 中的视觉样式, 请打开项目设计器并取消选中 "**启用 XP 视觉样式**" 复选框。 若要在中C#禁用视觉样式, 请打开 Program.cs `Application.EnableVisualStyles();`并注释掉。 有关视觉样式的详细信息, 请参阅[启用视觉样式](/windows/desktop/controls/cookbook-overview)。  
+    > 从 Windows Vista 开始，根据主题，设置某些属性可能不会更改日历的外观。 例如，如果将 Windows 设置为使用 Aero 主题，则设置 <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>、<xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>、<xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>或 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> 属性不起作用。 这是因为，日历的更新版本呈现为在运行时从当前操作系统主题派生的外观。 如果要使用这些属性并启用日历的早期版本，则可以禁用应用程序的视觉样式。 禁用视觉样式可能会影响应用程序中其他控件的外观和行为。 若要禁用 Visual Basic 中的视觉样式，请打开项目设计器并取消选中 "**启用 XP 视觉样式**" 复选框。 若要在中C#禁用视觉样式，请打开 Program.cs 并注释掉 `Application.EnableVisualStyles();`。 有关视觉样式的详细信息，请参阅[启用视觉样式](/windows/desktop/controls/cookbook-overview)。  
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>显示控件底部的当前日期  
   
@@ -74,7 +74,7 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件允许您通过多�
        }  
     ```  
   
-     (视觉C#对象、 C++视觉对象)将以下代码放在窗体的构造函数中以注册事件处理程序。  
+     （视觉C#对象、 C++视觉对象）将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);  
@@ -103,9 +103,9 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件允许您通过多�
     monthCalendar1->ShowWeekNumbers = true;  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [MonthCalendar 控件](monthcalendar-control-windows-forms.md)
 - [如何：在 Windows 窗体 MonthCalendar 控件中选择日期范围](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [如何：用 Windows 窗体 MonthCalendar 控件以粗体显示特定的日期](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [如何：在 Windows 窗体 MonthCalendar 控件中显示多个月](display-more-than-one-month-wf-monthcalendar-control.md)
+- [如何：使用 Windows 窗体 MonthCalendar 控件以粗体显示具体日期](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [如何：在 Windows 窗体 MonthCalendar 控件中显示多个月份](display-more-than-one-month-wf-monthcalendar-control.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：在运行时设置图片 (Windows 窗体)
+title: 如何：在运行时设置图片
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,21 +13,21 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: 99d78a275c8ad8f55d9b0832a794545b65da7e20
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bd0509c05fd9c1cfc0c631fcd613c64d20296f6b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917532"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746748"
 ---
-# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>如何：在运行时设置图片 (Windows 窗体)
-您可以通过编程方式设置 Windows 窗体<xref:System.Windows.Forms.PictureBox>控件显示的图像。  
+# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>如何：在运行时设置图片（Windows 窗体）
+您可以通过编程方式设置 Windows 窗体 <xref:System.Windows.Forms.PictureBox> 控件显示的图像。  
   
 ### <a name="to-set-a-picture-programmatically"></a>以编程方式设置图片  
   
-- 使用类的<xref:System.Windows.Forms.PictureBox.Image%2A> 方法<xref:System.Drawing.Image>设置属性。 <xref:System.Drawing.Image.FromFile%2A>  
+- 使用 <xref:System.Drawing.Image> 类的 <xref:System.Drawing.Image.FromFile%2A> 方法设置 <xref:System.Windows.Forms.PictureBox.Image%2A> 属性。  
   
-     在下面的示例中, 为图像的位置设置的路径是 "我的文档" 文件夹。 这样做是因为您可以假定大多数运行 Windows 操作系统的计算机都包含此目录。 这还使得具有最低系统访问级别的用户能够安全运行应用程序。 下面的示例假设窗体<xref:System.Windows.Forms.PictureBox>已添加控件。  
+     在下面的示例中，为图像的位置设置的路径是 "我的文档" 文件夹。 这样做是因为您可以假定大多数运行 Windows 操作系统的计算机都包含此目录。 这还使得具有最低系统访问级别的用户能够安全运行应用程序。 下面的示例假定已添加 <xref:System.Windows.Forms.PictureBox> 控件的窗体。  
   
     ```vb  
     Private Sub LoadNewPict()  
@@ -67,7 +67,7 @@ ms.locfileid: "69917532"
   
 ### <a name="to-clear-a-graphic"></a>清除图形  
   
-- 首先, 释放图像所使用的内存, 然后清除图形。 如果内存管理变成问题, 垃圾回收将在以后释放内存。  
+- 首先，释放图像所使用的内存，然后清除图形。 如果内存管理变成问题，垃圾回收将在以后释放内存。  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  
@@ -93,11 +93,11 @@ ms.locfileid: "69917532"
     ```  
   
     > [!NOTE]
-    > 有关应以这种方式使用方法的<xref:System.Drawing.Image.Dispose%2A>原因的详细信息, 请参阅[清理非托管资源](../../../standard/garbage-collection/unmanaged.md)。  
+    > 有关应以这种方式使用 <xref:System.Drawing.Image.Dispose%2A> 方法的原因的详细信息，请参阅[清理非托管资源](../../../standard/garbage-collection/unmanaged.md)。  
   
-     即使在设计时将图形加载到控件中, 此代码也会清除图像。  
+     即使在设计时将图形加载到控件中，此代码也会清除图像。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>

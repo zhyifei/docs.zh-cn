@@ -1,5 +1,5 @@
 ---
-title: 枚举设计
+title: 열거형 디자인
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-ms.openlocfilehash: 130e9b4e7f8d7076d1dc3f21f51dc07a68799bbe
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3b24bfefd3edb0585e9c6369e9b8151b17151661
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709447"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741711"
 ---
-# <a name="enum-design"></a>枚举设计
+# <a name="enum-design"></a>열거형 디자인
 
 枚举是一种特殊的值类型。 枚举分为两种类型：简单枚举和标志枚举。
 
@@ -24,29 +24,29 @@ ms.locfileid: "75709447"
 
 标志枚举旨在支持枚举值的按位运算。 标志枚举的一个常见示例是选项列表。
 
-✓ 务必将枚举用于强类型参数、属性和表示一组值集的返回值。
+✔️确实使用枚举来表示值集的强类型参数、属性和返回值。
 
-✓ 务必首选使用枚举而不是静态常量。
+✔️使用枚举而不是静态常量。
 
-X 切忌将枚举用于开放集（如操作系统版本、朋友的姓名等）。
+❌ 不会对开放集（如操作系统版本、朋友名称等）使用枚举。
 
-X 切忌提供供将来使用的保留枚举值。
+❌ 不提供旨在供将来使用的保留枚举值。
 
 在后面的阶段，可以随时向现有枚举添加值。 有关向枚举添加值的更多详细信息，请参阅[向枚举添加值](#add_value)。 保留值只会污染实际的值集，并往往会导致用户错误。
 
-**X AVOID** 公开使用只有一个值的枚举。
+❌ 避免公开只包含一个值的枚举。
 
 确保 C API 未来可扩展性的常见做法是向方法签名添加保留参数。 这样的保留参数可以表示为具有单个默认值的枚举。 这不应该在托管 API 中完成。 方法重载允许在将来的版本中添加参数。
 
-**X DO NOT** 在枚举中包括 sentinel 值。
+❌ 不在枚举中包含 sentinel 值。
 
 虽然它们有时对框架开发人员很有帮助，但是 sentinel 值会给框架的用户造成混淆。 它们用于跟踪枚举的状态，而不是枚举表示的集合中的一个值。
 
-**✓ DO** 提供简单枚举零的值。
+✔️在简单枚举上提供零值。
 
 考虑将值称为“None”等类似名称。 如果此类值不适合此特定枚举，则应为该枚举的最常见默认值指定为零的基础值。
 
-**✓ CONSIDER** 使用<xref:System.Int32>（默认值在大多数编程语言） 作为枚举的基础类型除非以下任一条件成立：
+✔️考虑使用 <xref:System.Int32> （大多数编程语言中的默认值）作为枚举的基础类型，除非满足以下任一条件：
 
 - 枚举是一个标志枚举，包含 32 个以上标志，或者将来可能有更多标志。
 
@@ -62,9 +62,9 @@ X 切忌提供供将来使用的保留枚举值。
 
 对于内存中的用，请注意托管对象始终是 `DWORD` 对齐的，因此您需要在实例中有效地使用多个枚举或其他较小的结构来打包较小的枚举，这很重要，因为总实例大小总是要四舍五入到 `DWORD`。
 
-**✓ 务必**为标志枚举使用复数名词或名词短语命名，为简单枚举使用单数名词或名词短语命名。
+✔️用名词或名词短语复数和简单枚举作为名词或名词短语来命名标志枚举。
 
-**X 切忌**直接扩展 <xref:System.Enum?displayProperty=nameWithType>。
+❌ 不会直接扩展 <xref:System.Enum?displayProperty=nameWithType>。
 
 <xref:System.Enum?displayProperty=nameWithType> 是 CLR 用于创建用户定义的枚举的特殊类型。 大多数编程语言都提供了一个编程元素，来使你可以使用此功能。 例如，在 C# 中，`enum` 关键字用于定义枚举。
 
@@ -72,19 +72,19 @@ X 切忌提供供将来使用的保留枚举值。
 
 ### <a name="designing-flag-enums"></a>设计标志枚举
 
-**✓ DO** 应用<xref:System.FlagsAttribute?displayProperty=nameWithType>到标志枚举。 不要将此特性应用于简单枚举。
+✔️应用 <xref:System.FlagsAttribute?displayProperty=nameWithType> 来标记枚举。 不要将此特性应用于简单枚举。
 
-**✓ DO** 使用幂的两个用于标志枚举值，因此它们可以自由地组合使用按位或运算。
+✔️对标志枚举值使用2的幂，以便可以使用按位 "或" 运算自由合并这些值。
 
-**✓ 考虑**为常用的标志组合提供特殊的枚举值。
+✔️考虑为常用的标志组合提供特殊的枚举值。
 
 按位运算是一种高级概念，简单任务应无需使用。 <xref:System.IO.FileAccess.ReadWrite> 就是这种特殊值的一个例子。
 
-**X AVOID** 创建标志枚举值的某些组合将无效。
+❌ 避免创建标志枚举，其中某些值的组合无效。
 
-**X 避免**使用值为零的标志枚举，除非该值表示“已清除所有标志”，并按照下一指南的规定进行适当命名。
+❌ 避免使用值为零的标志枚举值，除非此值表示 "所有标志均已清除" 并正确命名，如下一个准则所述。
 
-**✓ DO** 命名的零值的标志枚举`None`。 于标志枚举，该值必须始终表示“已清除所有标志”。
+✔️将标志枚举的零值命名 `None`。 于标志枚举，该值必须始终表示“已清除所有标志”。
 
 <a name="add_value"></a>
 
@@ -92,15 +92,15 @@ X 切忌提供供将来使用的保留枚举值。
 
 你常常会发现，需要在已发布枚举后向其添加一个值。 从现有 API 返回新添加的值时，会存在潜在的应用程序兼容性问题，因为编写不当的应用程序可能无法正确处理新值。
 
-✓ 考虑将值添加到枚举，监管存在较低的兼容性风险。
+✔️考虑向枚举添加值，而不考虑较小的兼容性风险。
 
 如果已获得了有关向枚举添加值而引起的应用程序不兼容性问题的实际数据，请考虑添加可返回新值和旧值的新 API，并弃用旧 API，该旧 API 应会继续仅返回旧值。 这将确保现有的应用程序保持兼容。
 
 *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
-*在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。
+*Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
 ## <a name="see-also"></a>另请参阅
 
-- [类型设计准则](../../../docs/standard/design-guidelines/type.md)
-- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
+- [형식 디자인 지침](../../../docs/standard/design-guidelines/type.md)
+- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)

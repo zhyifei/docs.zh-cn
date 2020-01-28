@@ -1,71 +1,71 @@
 ---
-title: 使用消息安全保护消息
+title: 메시지 보안을 사용하여 메시지에 보안 설정
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 1098057042c0842161258fd081d3ee63e82b4c5f
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: a6b062d0d6a74ce2a2ff9afa7e8a0a18853dbd22
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395707"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746444"
 ---
-# <a name="securing-messages-using-message-security"></a>使用消息安全保护消息
-本部分讨论使用 <xref:System.ServiceModel.NetMsmqBinding> 时的 WCF 消息安全性。  
+# <a name="securing-messages-using-message-security"></a>메시지 보안을 사용하여 메시지에 보안 설정
+本部分讨论使用 <xref:System.ServiceModel.NetMsmqBinding>时的 WCF 消息安全性。  
   
 > [!NOTE]
 > 在阅读本主题之前，建议你阅读[安全概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
   
- 下图提供了使用 WCF 进行排队通信的概念模型。 此图及术语用于说明  
+ 下图提供了使用 WCF 进行排队通信的概念模型。 이 그림과 용어는 전송 보안 개념을  
   
- 传输安全概念。  
+ 설명하는 데 사용됩니다.  
   
- ![排队应用程序关系图](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分布式队列图")  
+ ![排队应用程序关系图](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "분산 큐 그림")  
   
- 当使用 WCF 发送排队消息时，WCF 消息将附加为消息队列（MSMQ）消息的正文。 传输安全保护整个 MSMQ 消息，而消息（或 SOAP）安全仅保护 MSMQ 消息正文。  
+ 当使用 WCF 发送排队消息时，WCF 消息将附加为消息队列（MSMQ）消息的正文。 전송 보안은 MSMQ 메시지 전체를 보호하지만, 메시지(또는 SOAP) 보안은 MSMQ 메시지의 본문만 보호합니다.  
   
- 传输安全用于在客户端保护目标队列的消息，与此不同，消息安全的关键概念在于客户端保护接收应用程序（服务）的消息。 因此，在使用消息安全保护 WCF 消息时，MSMQ 不起作用。  
+ 클라이언트에서 대상 큐의 메시지를 보호하는 전송 보안과 달리, 메시지 보안의 핵심 개념은 클라이언트에서 받는 애플리케이션(서비스)의 메시지를 보호하는 것입니다. 因此，在使用消息安全保护 WCF 消息时，MSMQ 不起作用。  
   
  WCF 消息安全将安全标头添加到 WCF 消息，该消息与现有安全基础结构（如证书或 Kerberos 协议）集成。  
   
-## <a name="message-credential-type"></a>消息凭据类型  
- 使用消息安全，服务和客户端可以提供相互进行身份验证的凭据。 可以通过将 <xref:System.ServiceModel.NetMsmqBinding.Security%2A> 模式设置为 `Message` 或 `Both`（即既使用传输安全又使用消息安全）来选择消息安全。  
+## <a name="message-credential-type"></a>메시지 자격 증명 형식  
+ 메시지 보안을 사용하면 서비스 및 클라이언트에서 서로 자격 증명을 제출하여 인증할 수 있습니다. <xref:System.ServiceModel.NetMsmqBinding.Security%2A> 모드를 `Message` 또는 `Both`(즉, 전송 보안과 메시지 보안 모두 사용)로 설정하면 메시지 보안을 선택할 수 있습니다.  
   
- 该服务可以使用 <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> 属性检查用于对客户端进行身份验证的凭据。 这也可用于该服务选择实现的进一步的授权检查。  
+ 서비스에서 <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> 속성을 사용하여 클라이언트 인증에 사용되는 자격 증명을 검사할 수 있습니다. 이 방법을 사용하여 서비스에서 구현하는 추가 인증 검사를 수행할 수도 있습니다.  
   
- 本节说明不同的凭据类型以及如何将其用于队列。  
+ 이 절에서는 서로 다른 자격 증명 형식과 큐에서 그러한 형식을 사용하는 방법에 대해 설명합니다.  
   
-### <a name="certificate"></a>证书  
- 证书凭据类型使用 X.509 证书来标识服务和客户端。  
+### <a name="certificate"></a>인증서  
+ Certificate 자격 증명 형식에서는 X.509 인증서를 사용하여 서비스와 클라이언트를 식별합니다.  
   
- 在典型方案中，由受信任的证书颁发机构向客户端和服务颁发有效证书。 然后将建立连接，客户端使用服务的证书对服务有效性进行身份验证，以决定是否可以信任该服务。 同样，服务使用客户端的证书来验证客户端是否可信。  
+ 일반적인 시나리오에서 클라이언트와 서비스에는 신뢰할 수 있는 인증 기관의 유효한 인증서가 발급됩니다. 그런 다음 연결이 설정되고, 클라이언트에서 서비스의 인증서를 통해 서비스의 유효성을 인증하여 서비스 신뢰 여부를 결정합니다. 마찬가지로 서비스에서는 클라이언트의 인증서를 사용하여 클라이언트 신뢰를 확인합니다.  
   
- 鉴于队列有断开连接的特性，客户端和服务可能不会同时联机。 这样，客户端和服务必须在带外交换证书。 尤其是，由于客户端在其受信任存储区中存有服务的证书（可以将该证书链接到证书颁发机构），因此必须信任它将与正确的服务进行通信。 至于对客户端进行身份验证，服务使用附有消息的 X.509 证书将该客户端与其存储中的证书进行匹配来验证客户端的真实性。 该证书必须再次链接到证书颁发机构。  
+ 연결되지 않은 쿼리의 성질을 생각하면, 클라이언트와 서비스는 동시에 온라인 상태가 아닐 수도 있습니다. 따라서 클라이언트와 서비스는 out-of-band로 인증서를 교환해야 합니다. 특히 신뢰할 수 있는 저장소에 서비스의 인증서(인증 기관에 체인으로 연결 가능)를 가지고 있는 클라이언트는 올바른 서비스와 통신하고 있는 것을 신뢰해야 합니다. 클라이언트 인증의 경우 서비스에서는 메시지와 함께 첨부된 X.509 인증서를 저장소에 있는 인증서와 비교하여 클라이언트를 인증합니다. 인증서는 인증 기관에 연결되어 있어야 합니다.  
   
- 在运行 Windows 的计算机上，证书存放在多类存储区中。 有关不同存储的详细信息，请参阅[证书存储](https://go.microsoft.com/fwlink/?LinkId=87787)。  
+ Windows를 실행하는 컴퓨터에서 인증서는 다양한 종류의 저장소에 저장됩니다. 有关不同存储的详细信息，请参阅[证书存储](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10))。  
   
 ### <a name="windows"></a>Windows  
- Windows 消息凭据类型使用 Kerberos 协议。  
+ Windows 메시지 자격 증명 형식에는 Kerberos 프로토콜이 사용됩니다.  
   
- Kerberos 协议是一种安全机制，可用于对域中的用户进行身份验证，并允许通过身份验证的用户与域中的其他实体建立安全上下文。  
+ Kerberos 프로토콜은 도메인에서 사용자를 인증하고 인증된 사용자가 도메인에 있는 다른 엔터티와 보안 컨텍스트를 구성할 수 있게 해 주는 보안 메커니즘입니다.  
   
- 将 Kerberos 协议用于排队通信的问题在于包含密钥分发中心 (KDC) 所分发客户端标识的票证的生存期相对较短。 *生存期*与指示票证有效性的 Kerberos 票证关联。 这样，鉴于滞后时间较长，您将无法确定令牌对于对客户端进行身份验证的服务仍有效。  
+ 대기 중인 통신에 Kerberos 프로토콜을 사용하는 경우의 문제는 KDC(키 배포 센터)에서 배포하는 클라이언트 ID가 포함된 티켓의 수명이 비교적 짧다는 것입니다. *生存期*与指示票证有效性的 Kerberos 票证关联。 따라서 대기 시간이 긴 경우에는 클라이언트를 인증하는 서비스에서 토큰이 여전히 유효한지 확신할 수 없습니다.  
   
- 请注意，在使用此凭据类型时，服务必须在 SERVICE 帐户下运行。  
+ 이 자격 증명 형식을 사용하는 경우 서비스는 SERVICE 계정에서 실행해야 합니다.  
   
- 默认情况下，在选择消息凭据时使用 Kerberos 协议。
+ 메시지 자격 증명을 선택할 때, 기본적으로 Kerberos 프로토콜이 사용됩니다.
   
-### <a name="username-password"></a>用户名密码  
- 使用此属性，可以使用消息安全标头中的用户名密码将客户端向服务器进行身份验证。  
+### <a name="username-password"></a>Username Password  
+ 이 속성을 이용하면 메시지의 보안 헤더에 사용자 이름 암호를 사용하여 클라이언트를 서버에 인증할 수 있습니다.  
   
 ### <a name="issuedtoken"></a>IssuedToken  
- 客户端可以使用安全令牌服务发出随后可以附加到消息中的令牌，以供服务对客户端进行身份验证。  
+ 클라이언트에서는 보안 토큰 서비스를 사용하여 서비스에서 클라이언트에 사용할 메시지에 첨부되는 토큰을 발급할 수 있습니다.  
   
-## <a name="using-transport-and-message-security"></a>使用传输安全和消息安全  
- 在既使用传输安全又使用消息安全时，用于在传输级别和 SOAP 消息级别保护消息的证书必须相同。  
+## <a name="using-transport-and-message-security"></a>전송 및 메시지 보안 사용  
+ 전송 보안과 메시지 보안을 모두 사용하는 경우에는 전송과 SOAP 메시지 수준 모두에서 메시지 보호에 사용되는 인증서가 같아야 합니다.  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [使用传输安全性保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
-- [基于消息队列的消息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
-- [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [전송 보안을 사용하여 메시지에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
+- [메시지 큐에 대한 메시지 보안](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+- [보안 개념](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

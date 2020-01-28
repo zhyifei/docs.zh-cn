@@ -1,5 +1,5 @@
 ---
-title: 如何：创作 Windows 窗体的控件
+title: 如何：创作控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], creating
@@ -9,12 +9,12 @@ ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3776e47191d9b10431acbb9a2a7257996e531ba8
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 169104f51898f9bda08efa08685207e50406a7ff
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459424"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746718"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>如何：创作 Windows 窗体的控件
 
@@ -50,7 +50,7 @@ ms.locfileid: "73459424"
 
 10. 打包和部署控件。 有关详细信息，请参阅[Visual Studio 中的 "部署"](/visualstudio/deployment/deploying-applications-services-and-components)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：从 UserControl 类继承](how-to-inherit-from-the-usercontrol-class.md)
 - [如何：从 Control 类继承](how-to-inherit-from-the-control-class.md)

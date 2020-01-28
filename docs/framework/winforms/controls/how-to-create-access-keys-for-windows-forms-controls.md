@@ -1,5 +1,5 @@
 ---
-title: 如何：创建 Windows 窗体控件的访问键
+title: 为控件创建访问键
 ms.date: 08/20/2019
 dev_langs:
 - csharp
@@ -20,22 +20,22 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: ccec8bba9e01cbaa7bfef841af68a0fcaa720b90
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7f6b0a5838cacfc1189fba819a54b3423d567ea0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658383"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731167"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls"></a>如何：为 Windows 窗体控件创建访问键
 
-*访问键*是菜单、菜单项或控件 (如按钮) 的标签文本中带下划线的字符。 使用访问键, 用户可以通过将 Alt 键与预定义访问键结合使用来 "单击" 按钮。 例如, 如果按钮运行过程来打印窗体, 因此其`Text`属性设置为 "打印", 则在字母 "p" 之前添加 "&" 符会导致在运行时将字母 "p" 添加到按钮文本中的下划线。 用户可以通过按 Alt + P 运行与该按钮关联的命令。
+*访问键*是菜单、菜单项或控件（如按钮）的标签文本中带下划线的字符。 使用访问键，用户可以通过将 Alt 键与预定义访问键结合使用来 "单击" 按钮。 例如，如果某个按钮运行一个打印窗体的过程，因此其 `Text` 属性设置为 "Print"，则在字母 "P" 之前添加 "&" 号将导致在运行时字母 "P" 带有下划线。 用户可以通过按 Alt + P 运行与该按钮关联的命令。
 
 无法接收焦点的控件不能有访问密钥。
 
 ## <a name="programmatic"></a>编程
 
-`Text`将属性设置为一个字符串, 该字符串在将成为快捷方式的字母之前包含 "and" 符 (&)。
+将 `Text` 属性设置为一个字符串，该字符串在将成为快捷方式的字母之前包含 "and" 符（&）。
 
 ```vb
 ' Set the letter "P" as an access key.
@@ -53,15 +53,15 @@ button1->Text = "&Print";
 ```
 
 > [!NOTE]
-> 若要在不创建访问密钥的情况下在标题中使用 "and" 符, 请包括两个与 (& &)。 标题中将显示单个号, 并且不会有任何字符带有下划线。
+> 若要在不创建访问密钥的情况下在标题中使用 "and" 符，请包括两个与（& &）。 标题中将显示单个号，并且不会有任何字符带有下划线。
 
 ## <a name="designer"></a>Designer
 
-在 Visual Studio 的 "**属性**" 窗口中, 将 " **Text** " 属性设置为一个字符串, 该字符串包含 "&" 符 ("&"), 在将作为访问密钥的字母之前。 例如, 若要将字母 "P" 设置为访问键, 请输入 **& Print**。
+在 Visual Studio 的 "**属性**" 窗口中，将 " **Text** " 属性设置为一个字符串，该字符串包含 "&" 符（"&"），在将作为访问密钥的字母之前。 例如，若要将字母 "P" 设置为访问键，请输入 **& Print**。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Button>
-- [如何：响应 Windows 窗体按钮单击](how-to-respond-to-windows-forms-button-clicks.md)
+- [如何：响应 Windows 窗体 Button 控件单击](how-to-respond-to-windows-forms-button-clicks.md)
 - [如何：设置 Windows 窗体控件显示的文本](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [标记各个 Windows 窗体控件并创建它们的快捷键](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

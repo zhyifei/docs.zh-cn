@@ -1,5 +1,5 @@
 ---
-title: DataGridView 控件（Windows 窗体）
+title: DataGridView 컨트롤
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tables [Windows Forms]
@@ -13,75 +13,75 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 86e96045b7de580b7cefd0262369ce860d00e234
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc40c0f08c0c11fa9acc94ce12caab8766658f1e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909189"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746947"
 ---
-# <a name="datagridview-control-windows-forms"></a>DataGridView 控件（Windows 窗体）
-`DataGridView` 控件提供一种以表格格式显示数据的功能强大且灵活的方法。 可以使用 `DataGridView` 控件来显示少量数据的只读视图，或者可以缩放该控件以显示大型数据集的可编辑视图。  
+# <a name="datagridview-control-windows-forms"></a>DataGridView 컨트롤(Windows Forms)
+`DataGridView` 컨트롤에서는 데이터를 표 형식으로 표시하는 강력하고 유연한 방법을 제공합니다. `DataGridView` 컨트롤을 사용하여 적은 양의 데이터에 대한 읽기 전용 보기를 표시하거나, 컨트롤을 확장하여 매우 큰 데이터 집합에 대한 편집 가능한 보기를 표시할 수 있습니다.  
   
- 可以使用多种方法扩展 `DataGridView` 控件，以便将自定义行为置入你的应用程序中。 例如，可以以编程方式指定自己的排序算法，并且可以创建自己的单元格类型。 可以通过在多个属性之间进行选择来轻松地自定义 `DataGridView` 控件的外观。 许多数据存储类型均可用作数据源，或者，`DataGridView` 控件可以在不绑定任何数据源的情况下进行操作。  
+ 다양한 방법으로 `DataGridView` 컨트롤을 확장하여 사용자 지정 동작을 애플리케이션에 빌드할 수 있습니다. 예를 들어 프로그래밍 방식으로 고유한 정렬 알고리즘을 지정하고 고유한 셀 형식을 만들 수도 있습니다. 여러 속성 중에서 선택하여 `DataGridView` 컨트롤의 모양을 쉽게 사용자 지정할 수 있습니다. 대부분 데이터 저장소 형식을 데이터 소스로 사용하거나 `DataGridView` 컨트롤을 바인딩된 데이터 소스 없이 작동할 수 있습니다.  
   
- 本节中的主题介绍可用于将 `DataGridView` 功能构建到应用程序中的概念和技术。  
+ 이 섹션의 항목에서는 `DataGridView` 기능을 애플리케이션에 빌드하는 데 사용할 수 있는 개념 및 기술을 설명합니다.  
   
-## <a name="in-this-section"></a>本节内容  
- [DataGridView 控件概述](datagridview-control-overview-windows-forms.md)  
- 提供一些主题，介绍 Windows 窗体 `DataGridView` 控件的体系结构和核心概念。  
+## <a name="in-this-section"></a>섹션 내용  
+ [DataGridView 컨트롤 개요](datagridview-control-overview-windows-forms.md)  
+ Windows Forms `DataGridView` 컨트롤의 아키텍처와 핵심 개념을 설명하는 항목을 제공합니다.  
   
- [Windows 窗体 DataGridView 控件中的默认功能](default-functionality-in-the-windows-forms-datagridview-control.md)  
- 描述 Windows 窗体 `DataGridView` 控件在绑定到数据源时的默认外观和行为。  
+ [Windows Forms DataGridView 컨트롤의 기본 기능](default-functionality-in-the-windows-forms-datagridview-control.md)  
+ 데이터 소스에 바인딩될 때 Windows Forms `DataGridView` 컨트롤의 기본 모양과 동작에 대해 설명합니다.  
   
- [Windows 窗体 DataGridView 控件中的列类型](column-types-in-the-windows-forms-datagridview-control.md)  
- 描述 Windows 窗体 `DataGridView` 控件中用于显示数据和允许用户修改或添加数据的列类型。  
+ [Windows Forms DataGridView 컨트롤의 열 형식](column-types-in-the-windows-forms-datagridview-control.md)  
+ 데이터를 표시하고 사용자가 데이터를 수정 또는 추가할 수 있도록 하는 데 사용되는 Windows Forms `DataGridView` 컨트롤의 열 형식을 설명합니다.  
   
- [Windows 窗体 DataGridView 控件中的列、行和单元格基本功能](basic-column-row-and-cell-features-wf-datagridview-control.md)  
- 提供一些主题，描述常用的单元格、行和列属性。  
+ [Windows Forms DataGridView 컨트롤의 기본 열, 행 및 셀 기능](basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ 일반적으로 사용되는 셀, 행 및 열 속성을 설명하는 항목을 제공합니다.  
   
- [Windows 窗体 DataGridView 控件中的基本格式和样式设置](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
- 提供一些主题，描述如何修改该控件的基本外观和单元数据的显示格式。  
+ [Windows Forms DataGridView 컨트롤의 기본 형식 및 스타일 지정](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ 컨트롤의 기본 모양과 셀 데이터의 표시 형식을 수정하는 방법을 설명하는 항목을 제공합니다.  
   
- [在 Windows 窗体 DataGridView 控件中显示数据](displaying-data-in-the-windows-forms-datagridview-control.md)  
- 提供一些主题，描述如何手动或从外部数据源向控件填充数据。  
+ [Windows Forms DataGridView 컨트롤에서 데이터 표시](displaying-data-in-the-windows-forms-datagridview-control.md)  
+ 수동으로 또는 외부 데이터 소스에서 컨트롤을 데이터로 채우는 방법을 설명하는 항목을 제공합니다.  
   
- [调整 Windows 窗体 DataGridView 控件中列和行的大小](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)  
- 提供一些主题，描述可如何自动调整行和列的大小，以便适应单元格内容，或适应该控件的可用宽度。  
+ [Windows Forms DataGridView 컨트롤의 열 및 행 크기 조정](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)  
+ 셀 내용에 맞추거나 컨트롤의 사용 가능한 너비에 맞춰서 행 및 열 크기를 자동으로 조정할 수 있는 방법을 설명하는 항목을 제공합니다.  
   
- [在 Windows 窗体 DataGridView 控件中进行数据排序](sorting-data-in-the-windows-forms-datagridview-control.md)  
- 提供介绍控件中的排序功能的主题。  
+ [Windows Forms DataGridView 컨트롤의 데이터 정렬](sorting-data-in-the-windows-forms-datagridview-control.md)  
+ 컨트롤의 정렬 기능을 설명하는 항목을 제공합니다.  
   
- [Windows 窗体 DataGridView 控件中的数据输入](data-entry-in-the-windows-forms-datagridview-control.md)  
- 提供一些主题，介绍如何改变用户添加和修改控件中数据的方式。  
+ [Windows Forms DataGridView 컨트롤의 데이터 입력](data-entry-in-the-windows-forms-datagridview-control.md)  
+ 사용자가 컨트롤에서 데이터를 추가 및 수정하는 방법을 변경하는 방법에 대해 설명하는 항목을 제공합니다.  
   
- [将选择模式和剪贴板与 Windows 窗体 DataGridView 控件结合使用](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
- 提供一些主题，介绍控件中的单元格、行和列选择功能。  
+ [Windows Forms DataGridView 컨트롤에서 선택 및 클립보드 사용](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
+ 컨트롤의 셀, 행 및 열 선택 기능을 설명하는 항목을 제공합니다.  
   
- [使用 Windows 窗体 DataGridView 控件中的单元格、行和列编程](programming-with-cells-rows-and-columns-in-the-datagrid.md)  
- 提供一些主题，介绍如何使用单元格、行和列对象进行编程。  
+ [Windows Forms DataGridView 컨트롤에서 셀, 행 및 열 프로그래밍](programming-with-cells-rows-and-columns-in-the-datagrid.md)  
+ 셀, 행 및 열 개체를 사용하여 프로그래밍하는 방법을 설명하는 항목을 제공합니다.  
   
- [自定义 Windows 窗体 DataGridView 控件](customizing-the-windows-forms-datagridview-control.md)  
- 提供一些主题，介绍自定义绘制 `DataGridView` 单元格和行，以及创建派生的单元、列和行类型。  
+ [Windows Forms DataGridView 컨트롤 사용자 지정](customizing-the-windows-forms-datagridview-control.md)  
+ `DataGridView` 셀 및 행의 사용자 지정 그리기를 수행하고 파생된 셀, 열 및 행 형식을 설명하는 항목을 제공합니다.  
   
- [Windows 窗体 DataGridView 控件中的性能调整](performance-tuning-in-the-windows-forms-datagridview-control.md)  
- 提供一些主题，介绍如何在使用大量数据时，有效地使用控件以避免性能问题。  
+ [Windows Forms DataGridView 컨트롤의 성능 조정](performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ 컨트롤을 효율적으로 사용하여 대용량 데이터를 사용할 때 성능 문제를 방지하는 방법을 설명하는 항목을 제공합니다.  
   
- [Windows 窗体 DataGridView 控件中的默认键盘和鼠标处理](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)  
- 介绍用户可如何通过键盘和鼠标与 `DataGridView` 控件进行交互。  
+ [Windows Forms DataGridView 컨트롤에서의 기본 키보드 및 마우스 처리](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)  
+ 사용자가 키보드와 마우스를 통해 `DataGridView` 컨트롤을 조작할 수 있는 방법을 설명합니다.  
   
- [Windows 窗体 DataGridView 控件和 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)  
- 描述 `DataGridView` 控件如何改进和替换 <xref:System.Windows.Forms.DataGrid> 控件。  
+ [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)  
+ `DataGridView` 컨트롤로 <xref:System.Windows.Forms.DataGrid> 컨트롤을 개선하고 대체하는 방법을 설명합니다.  
   
- 另请参阅[设计器中使用 Windows 窗体 DataGridView 控件](using-the-designer-with-the-windows-forms-datagridview-control.md)。  
+ 另请参阅将[设计器与 Windows 窗体 DataGridView 控件结合使用](using-the-designer-with-the-windows-forms-datagridview-control.md)。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.DataGridView>  
- 提供关于 <xref:System.Windows.Forms.DataGridView> 控件的参考文档。  
+ <xref:System.Windows.Forms.DataGridView> 컨트롤에 대한 참조 설명서를 제공합니다.  
   
  <xref:System.Windows.Forms.BindingSource>  
- 提供关于 <xref:System.Windows.Forms.BindingSource> 组件的参考文档。 <xref:System.Windows.Forms.DataGridView> 控件和 <xref:System.Windows.Forms.BindingSource> 组件设计为需紧密协作。  
+ <xref:System.Windows.Forms.BindingSource> 구성 요소에 대한 참조 설명서를 제공합니다. <xref:System.Windows.Forms.DataGridView> 컨트롤과 <xref:System.Windows.Forms.BindingSource> 구성 요소는 서로 긴밀하게 작동하도록 설계되었습니다.  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
+- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

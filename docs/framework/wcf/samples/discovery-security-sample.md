@@ -2,15 +2,16 @@
 title: 发现安全示例
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 8469b69baabcd2ba9185956c276554b4bb929d85
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: cfee226f52bc5f001b2952b76b40ce0eb8aebceb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712057"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728851"
 ---
 # <a name="discovery-security-sample"></a>发现安全示例
-Discovery 规范不要求参与发现过程的终结点是安全的。 增强发现消息的安全性可缓解各种类型的攻击（消息更改、拒绝服务、重播、欺骗）。 本示例实现自定义通道，这些通道计算和验证使用精简签名格式（在 WS-Discovery 规范的第 8.2 节中进行了介绍）的消息签名。 该示例支持[2005 发现规范](https://go.microsoft.com/fwlink/?LinkId=177912)和[1.1 版本](https://go.microsoft.com/fwlink/?LinkId=179677)。  
+
+Discovery 规范不要求参与发现过程的终结点是安全的。 增强发现消息的安全性可缓解各种类型的攻击（消息更改、拒绝服务、重播、欺骗）。 本示例实现自定义通道，这些通道计算和验证使用精简签名格式（在 WS-Discovery 规范的第 8.2 节中进行了介绍）的消息签名。 该示例支持[2005 发现规范](http://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf)和[1.1 版本](http://docs.oasis-open.org/ws-dd/discovery/1.1/cs-01/wsdd-discovery-1.1-spec-cs-01.pdf)。  
   
  自定义通道应用于发现和公告终结点的现有通道堆栈顶部。 这样，对于发送的每个消息都应用一个签名标头。 会对接收的消息验证签名，如果签名不匹配或消息没有签名，则丢弃消息。 本示例使用证书对消息进行签名和验证。  
   

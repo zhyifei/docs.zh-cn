@@ -1,17 +1,17 @@
 ---
-title: 优化性能：控件-WPF
+title: 优化控件性能
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], improving performance
 - container recycling [WPF]
 - user interface virtualization [WPF]
 ms.assetid: 45a31c43-ea8a-4546-96c8-0631b9934179
-ms.openlocfilehash: 595a4865e1d422f460aab18fc541326a4557476b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d02fde7076cd6a24fdfb171ed54161b20f3d465e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458538"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746725"
 ---
 # <a name="optimizing-performance-controls"></a>优化性能：控件
 
@@ -66,15 +66,15 @@ UI 虚拟化是列表控件的一个重要方面。 不应混淆 UI 虚拟化和
 |<xref:System.Windows.Controls.ComboBox>|可启用|可启用|可启用|
 |<xref:System.Windows.Controls.ContextMenu>|可启用|可启用|可启用|
 |<xref:System.Windows.Controls.DocumentViewer>|不可用|不可用|可启用|
-|<xref:System.Windows.Controls.ListBox>|Default|可启用|可启用|
-|<xref:System.Windows.Controls.ListView>|Default|可启用|可启用|
+|<xref:System.Windows.Controls.ListBox>|默认值|可启用|可启用|
+|<xref:System.Windows.Controls.ListView>|默认值|可启用|可启用|
 |<xref:System.Windows.Controls.TreeView>|可启用|可启用|可启用|
 |<xref:System.Windows.Controls.ToolBar>|不可用|不可用|可启用|
 
 > [!NOTE]
 > 有关如何在 <xref:System.Windows.Controls.TreeView>上启用虚拟化和容器回收的示例，请参阅[提高 TreeView 的性能](../controls/how-to-improve-the-performance-of-a-treeview.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [布局](layout.md)
 - [布局和示例](optimizing-performance-layout-and-design.md)

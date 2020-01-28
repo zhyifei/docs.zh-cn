@@ -1,41 +1,41 @@
 ---
-title: BindingNavigator 控件（Windows 窗体）
+title: BindingNavigator 컨트롤
 ms.date: 03/30/2017
 helpviewer_keywords:
 - BindingNavigator control [Windows Forms]
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 18c1e2a5-9834-40d3-9b2e-2b545e4e769e
-ms.openlocfilehash: ce67a06a5fe43602258d52548e8d933b99548f44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96a14ac95afd9131faf1a1687bfde7f0b0c0b73a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961715"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744380"
 ---
-# <a name="bindingnavigator-control-windows-forms"></a>BindingNavigator 控件（Windows 窗体）
-`BindingNavigator` 控件是绑定到数据的控件的导航和操作用户界面 (UI)。 `BindingNavigator` 控件让用户能够在 Windows 窗体上导航和处理数据。  
+# <a name="bindingnavigator-control-windows-forms"></a>BindingNavigator 컨트롤(Windows Forms)
+`BindingNavigator` 컨트롤은 데이터에 바인딩된 컨트롤에 대한 탐색 및 조작 UI (사용자 인터페이스)입니다. `BindingNavigator` 컨트롤을 사용하면 사용자가 Windows Form에서 데이터를 탐색하고 조작할 수 있습니다.  
   
- 本节中的主题提供了对 `BindingNavigator` 控件的概述，并提供了对如何使用控件导航数据并浏览 <xref:System.Data.DataSet> 的分步说明。  
+ 이 섹션의 항목에서는 `BindingNavigator` 컨트롤을 개괄적으로 설명하고 컨트롤을 사용하여 데이터와 <xref:System.Data.DataSet>를 탐색하는 방법에 대한 단계별 지침을 제공합니다.  
   
-## <a name="in-this-section"></a>本节内容  
- [BBindingNavigator 控件概述](bindingnavigator-control-overview-windows-forms.md)  
- 介绍 `BindingNavigator` 控件的一般概念，该控件使用户能够浏览数据源的项。  
+## <a name="in-this-section"></a>섹션 내용  
+ [BindingNavigator 컨트롤 개요](bindingnavigator-control-overview-windows-forms.md)  
+ 사용자가 데이터 소스의 항목을 탐색할 수 있게 해주는 `BindingNavigator` 컨트롤의 일반적인 개념을 소개합니다.  
   
- [如何：使用 Windows 窗体 BindingNavigator 控件导航数据](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
- 提供了将 `BindingNavigator` 控件与数据源绑定的步骤。  
+ [방법: Windows Forms BindingNavigator 컨트롤을 사용하여 데이터 탐색](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
+ `BindingNavigator` 컨트롤을 데이터 소스에 바인딩하는 단계를 제공합니다.  
   
- [如何：浏览数据集使用 Windows 窗体 BindingNavigator 控件](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
- 演示使用 `BindingNavigator` 控件浏览 <xref:System.Data.DataSet> 中的记录。  
+ [방법: Windows Forms BindingNavigator 컨트롤을 사용하여 데이터 세트에서 이동](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
+ `BindingNavigator` 컨트롤을 사용하여 <xref:System.Data.DataSet>의 레코드를 탐색하는 방법을 보여 줍니다.  
   
- 另请参阅[如何：添加负载，保存和取消按钮，为 Windows 窗体 BindingNavigator 控件](load-save-and-cancel-bindingnavigator.md)。  
+ [방법: Windows Forms BindingNavigator 컨트롤에 로드, 저장 및 취소 단추 추가](load-save-and-cancel-bindingnavigator.md)를 참조하세요.  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.BindingNavigator>  
- 提供关于 <xref:System.Windows.Forms.BindingNavigator> 控件的参考文档。  
+ <xref:System.Windows.Forms.BindingNavigator> 컨트롤에 대한 참조 설명서를 제공합니다.  
   
  <xref:System.Windows.Forms.BindingSource>  
- 提供关于 <xref:System.Windows.Forms.BindingSource> 控件的参考文档。  
+ <xref:System.Windows.Forms.BindingSource> 컨트롤에 대한 참조 설명서를 제공합니다.  
   
-## <a name="related-sections"></a>相关章节  
- [在 Visual Studio 中将控件绑定到数据](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
+## <a name="related-sections"></a>관련 섹션  
+ [Visual Studio에서 데이터에 컨트롤 바인딩](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

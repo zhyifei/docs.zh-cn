@@ -1,5 +1,6 @@
 ---
-title: ForwardTranslateAccelerator 函数 （WPF 非托管 API 参考）
+title: ForwardTranslateAccelerator 函数-WPF 非托管 API 参考
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +9,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: 4bb7e665bb836dc5f95b14f39179f1d4b9f8173d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6e8208ffe2c186234f30f31e346ca6b1d0be4c0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960909"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747047"
 ---
-# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>ForwardTranslateAccelerator 函数 （WPF 非托管 API 参考）
-此 API 支持 Windows Presentation Foundation (WPF) 基础结构，不应在代码中直接使用。  
+# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>ForwardTranslateAccelerator 函数（WPF 非托管 API 参考）
+此 API 支持 Windows Presentation Foundation （WPF）基础结构，不应在代码中直接使用。  
   
- Windows Presentation Foundation (WPF) 基础结构使用的 windows 管理。  
+ 由用于 Windows 管理的 Windows Presentation Foundation （WPF）基础结构使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,22 +32,22 @@ HRESULT ForwardTranslateAccelerator(
   
 ## <a name="parameters"></a>参数  
  pMsg  
- 一条消息指向的指针。  
+ 指向消息的指针。  
   
  appUnhandled  
- `true` 当应用程序已提供有机会处理输入的消息，但不是处理它;否则为`false`。  
+ 当应用程序有机会处理输入消息但尚未处理时 `true`;否则，`false`。  
   
-## <a name="requirements"></a>要求  
- **平台：** 请参阅[.NET Framework 系统需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+ **平台：** 请参阅[.NET Framework 系统要求](../../get-started/system-requirements.md)。  
   
- **DLL:**  
+ **.DLL**  
   
- 在.NET Framework 3.0 和 3.5:PresentationHostDLL.dll  
+ 在 .NET Framework 3.0 和3.5： PresentationHostDLL  
   
- 在.NET Framework 4 及更高版本：PresentationHost_v0400.dll  
+ 在 .NET Framework 4 及更高版本中： PresentationHost_v0400 .dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WPF 非托管 API 参考](wpf-unmanaged-api-reference.md)

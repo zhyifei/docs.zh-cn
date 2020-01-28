@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Windows 窗体上锚定控件
+title: 컨트롤 고정
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Anchor property [Windows Forms], enabling resizable forms
@@ -15,12 +15,12 @@ ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 15f12cb0d389344351c4ddf97ee9db37882de460
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7c307d8c5b3bc32e15e6de048c434854ef1bbc65
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459677"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747180"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>如何：在 Windows 窗体上定位控件
 
@@ -54,11 +54,11 @@ ms.locfileid: "73459677"
 
 继承的控件必须 `Protected`，才能定位。 若要更改控件的访问级别，请在 "**属性**" 窗口中设置它的 `Modifiers` 属性。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Windows 窗体控件](index.md)
-- [AutoSize 属性概述](autosize-property-overview.md)
-- [如何：在 Windows 窗体上停靠控件](how-to-dock-controls-on-windows-forms.md)
-- [演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [演练：使用 Padding、Margins 和 AutoSize 属性对 Windows 窗体控件进行布局](windows-forms-controls-padding-autosize.md)
+- [Windows Forms 컨트롤](index.md)
+- [AutoSize 속성 개요](autosize-property-overview.md)
+- [방법: Windows Forms에서 컨트롤 고정](how-to-dock-controls-on-windows-forms.md)
+- [연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [연습: Padding, Margins 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃](windows-forms-controls-padding-autosize.md)

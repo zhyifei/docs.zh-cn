@@ -1,5 +1,5 @@
 ---
-title: Windows 窗体中的更加安全的打印
+title: 更安全的打印
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, printing
@@ -7,28 +7,28 @@ helpviewer_keywords:
 - printing [Windows Forms], security
 - security [Windows Forms], printing
 ms.assetid: 48fd36ac-872f-4de0-902a-e52969cd4367
-ms.openlocfilehash: b0387a82f142fb32912dad1370d6ac0c784e8894
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6285b76d01660bfa761ea606421f264bdc0c0af5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592652"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734890"
 ---
-# <a name="more-secure-printing-in-windows-forms"></a>Windows 窗体中的更加安全的打印
-Windows 窗体应用程序通常包括打印功能。 使用.NET Framework<xref:System.Drawing.Printing.PrintingPermission>类控制对打印功能的访问，关联<xref:System.Drawing.Printing.PrintingPermissionLevel>枚举值，以指示的访问级别。 默认情况下，在本地 Intranet 和 Internet 区域中; 默认情况下启用打印但是，在这两个区域受到限制的访问级别。 是否可以打印您的应用程序，需要用户交互或不能打印取决于授予应用程序的权限值。 默认情况下，本地 Intranet 区域接收<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>访问权限和 Intranet 区域接收<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>访问。  
+# <a name="more-secure-printing-in-windows-forms"></a>Windows Forms의 인쇄 추가 보안
+Windows 窗体应用程序通常包括打印功能。 .NET Framework 使用 <xref:System.Drawing.Printing.PrintingPermission> 类来控制对打印功能的访问，并使用关联的 <xref:System.Drawing.Printing.PrintingPermissionLevel> 枚举值来指示访问级别。 默认情况下，默认情况下，在本地 Intranet 和 Internet 区域中启用打印;但是，这两个区域中的访问级别都受到限制。 您的应用程序是可以打印、需要用户交互还是无法打印取决于授予应用程序的权限值。 默认情况下，本地 Intranet 区域接收 <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> 访问权限，并且 Intranet 区域接收 <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> 访问权限。  
   
- 下表显示了在每个打印的权限级别可用的功能。  
+ 下表显示了每个打印权限级别的可用功能。  
   
-|PrintingPermissionLevel|描述|  
+|PrintingPermissionLevel|설명|  
 |-----------------------------|-----------------|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>|提供对所有已安装打印机的完全访问权限。|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|可以以编程方式打印到默认打印机和限制性的打印对话框通过更安全的打印。 <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting> 的子集。|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|仅从更多限制的对话框提供打印。 <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> 的子集。|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|禁止对打印机的访问权限。 <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> 的子集。|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|允许以编程方式打印到默认打印机，并通过限制性打印对话框更安全地打印。 <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>的子集。|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|仅从受限制的对话框提供打印。 <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>的子集。|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|阻止对打印机的访问。 <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>的子集。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [在 Windows 窗体中提高文件和数据访问的安全性](more-secure-file-and-data-access-in-windows-forms.md)
-- [Windows 窗体中额外的安全注意事项](additional-security-considerations-in-windows-forms.md)
-- [Windows 窗体中的安全性概述](security-in-windows-forms-overview.md)
-- [Windows 窗体安全](windows-forms-security.md)
+- [Windows Forms의 파일 및 데이터 액세스 추가 보안](more-secure-file-and-data-access-in-windows-forms.md)
+- [Windows Forms의 추가 보안 고려 사항](additional-security-considerations-in-windows-forms.md)
+- [Windows Forms의 보안 개요](security-in-windows-forms-overview.md)
+- [Windows Forms 보안](windows-forms-security.md)

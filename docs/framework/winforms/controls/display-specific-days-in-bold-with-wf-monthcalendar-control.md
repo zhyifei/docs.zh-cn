@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Windows 窗体 MonthCalendar 控件以粗体显示特定日期
+title: 用 MonthCalendar 控件以粗体显示特定日期
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: 27b19e47d108b9af43a6d8882264d62c726ffe56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 377eb76f562fff20aae2136ddb7130516d2d76f7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972076"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745879"
 ---
-# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>如何：使用 Windows 窗体 MonthCalendar 控件以粗体显示特定日期
-Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件可以显示天以粗体类型为单数形式的日期或重复的基础上。 您可能会这样做可以为特殊日期，例如节假日和周末突出。  
+# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>방법: Windows Forms MonthCalendar 컨트롤을 사용하여 특정 날짜를 굵게 표시
+Windows 窗体 <xref:System.Windows.Forms.MonthCalendar> 控件可以将以粗体显示的日期显示为 "单数" 或 "重复"。 您可以这样做，以突出特殊日期，如假日和周末。  
   
- 三个属性控制此功能。 <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>属性包含一个日期。 <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>属性包含显示为粗体每年的日期。 <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A>属性包含以粗体显示每个月的日期。 每个属性包含的数组<xref:System.DateTime>对象。 若要添加或删除其中一个列表中的日期，必须添加或删除<xref:System.DateTime>对象。  
+ 这三个属性控制此功能。 <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> 属性包含一个日期。 <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> 属性包含每年以粗体显示的日期。 <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> 属性包含每月以粗体显示的日期。 其中每个属性都包含一个 <xref:System.DateTime> 对象的数组。 若要在这些列表之一中添加或删除日期，必须添加或删除 <xref:System.DateTime> 对象。  
   
-### <a name="to-make-a-date-appear-in-bold-type"></a>若要使日期以粗体类型显示  
+### <a name="to-make-a-date-appear-in-bold-type"></a>使日期显示为粗体  
   
-1. 创建<xref:System.DateTime>对象。  
+1. 创建 <xref:System.DateTime> 对象。  
   
     ```vb  
     Dim myVacation1 As Date = New DateTime(2001, 6, 10)  
@@ -42,7 +42,7 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件可以显示天以�
     DateTime myVacation2 = DateTime(2001, 6, 17);  
     ```  
   
-2. 通过调用使单个日期加粗<xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>， <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>，或<xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A>方法的<xref:System.Windows.Forms.MonthCalendar>控件。  
+2. 通过调用 <xref:System.Windows.Forms.MonthCalendar> 控件的 <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>、<xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>或 <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> 方法，使单个日期为粗体。  
   
     ```vb  
     MonthCalendar1.AddBoldedDate(myVacation1)  
@@ -59,9 +59,9 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件可以显示天以�
     monthCalendar1->AddBoldedDate(myVacation2);  
     ```  
   
-     - 或 -  
+     – 또는 –  
   
-     使一组日期以粗体显示一次性创建的数组<xref:System.DateTime>对象并将其分配给其中一个属性。  
+     通过创建 <xref:System.DateTime> 对象的数组，并将其分配给其中一个属性，使一组日期同时为粗体。  
   
     ```vb  
     Dim VacationDates As DateTime() = {myVacation1, myVacation2}  
@@ -78,9 +78,9 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件可以显示天以�
     monthCalendar1->BoldedDates = VacationDates;  
     ```  
   
-### <a name="to-make-a-date-appear-in-the-regular-font"></a>若要使日期以常规字体显示  
+### <a name="to-make-a-date-appear-in-the-regular-font"></a>使日期显示为常规字体  
   
-1. 使单个粗体日期以常规字体显示通过调用<xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>， <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>，或<xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A>方法。  
+1. 通过调用 <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>、<xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>或 <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> 方法，使单个以粗体显示的日期显示为常规字体。  
   
     ```vb  
     MonthCalendar1.RemoveBoldedDate(myVacation1)  
@@ -97,9 +97,9 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件可以显示天以�
     monthCalendar1->RemoveBoldedDate(myVacation2);  
     ```  
   
-     - 或 -  
+     – 또는 –  
   
-     通过调用从一个三个列表中删除所有粗体格式日期<xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>， <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>，或<xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A>方法。  
+     通过调用 <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>、<xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>或 <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A> 方法，从三个列表之一删除所有粗体日期。  
   
     ```vb  
     MonthCalendar1.RemoveAllBoldedDates()  
@@ -113,7 +113,7 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件可以显示天以�
     monthCalendar1->RemoveAllBoldedDates();  
     ```  
   
-2. 通过调用更新的字体的外观<xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A>方法。  
+2. 通过调用 <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> 方法来更新字体的外观。  
   
     ```vb  
     MonthCalendar1.UpdateBoldedDates()  
@@ -127,9 +127,9 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件可以显示天以�
     monthCalendar1->UpdateBoldedDates();  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [MonthCalendar 控件](monthcalendar-control-windows-forms.md)
-- [如何：在 Windows 窗体 MonthCalendar 控件中选择日期范围](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [如何：更改 Windows 窗体 MonthCalendar 控件的外观](how-to-change-monthcalendar-control-appearance.md)
-- [如何：在 Windows 窗体 MonthCalendar 控件中显示多个月份](display-more-than-one-month-wf-monthcalendar-control.md)
+- [MonthCalendar 컨트롤](monthcalendar-control-windows-forms.md)
+- [방법: Windows Forms MonthCalendar 컨트롤에서 날짜 범위 선택](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [방법: Windows Forms MonthCalendar 컨트롤의 모양 변경](how-to-change-monthcalendar-control-appearance.md)
+- [방법: Windows Forms MonthCalendar 컨트롤에서 여러 달 표시](display-more-than-one-month-wf-monthcalendar-control.md)

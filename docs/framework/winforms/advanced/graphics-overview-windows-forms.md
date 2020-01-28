@@ -1,5 +1,5 @@
 ---
-title: 图形概述（Windows 窗体）
+title: 图形概述
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, graphics
@@ -8,29 +8,29 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-ms.openlocfilehash: e14d60e5b77fab8490c373ad76ee2d829aad7c74
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: cc99f0fda4625b278b2bea56e7d8642edb0a63d9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505387"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742269"
 ---
 # <a name="graphics-overview-windows-forms"></a>图形概述（Windows 窗体）
-GDI + 是图形设备接口，使程序员编写独立于设备的应用程序。 通过托管类的一组公开的 GDI + 服务。  
+GDI + 是一图形设备接口使程序员能够编写与设备无关的应用程序。 GDI + 的服务通过一组托管类公开。  
   
 ## <a name="in-this-section"></a>本节内容  
  [图形概述](overview-of-graphics.md)  
- 提供了简要介绍的 GDI +。  
+ 简要介绍了 GDI +。  
   
  [图形服务的三大分类](three-categories-of-graphics-services.md)  
- 描述组成使用 GDI + 编程的三个类别。  
+ 介绍用 GDI + 进行编程的三个类别。  
   
  [图形界面的结构](structure-of-the-graphics-interface.md)  
- 描述 GDI + 的托管的类的接口。  
+ 介绍 GDI + 的托管类接口。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Drawing>  
- 提供了对 GDI + 基本图形功能的访问。  
+ 提供对 GDI + 基本图形功能的访问权限。  
   
  <xref:System.Drawing.Drawing2D>  
  提供高级二维和矢量图形功能。  
@@ -39,10 +39,10 @@ GDI + 是图形设备接口，使程序员编写独立于设备的应用程序�
  提供高级 GDI + 图像处理功能。  
   
  <xref:System.Drawing.Text>  
- 提供高级的 GDI + 排版功能。  
+ 提供高级 GDI + 版式功能。  
   
  <xref:System.Drawing.Printing>  
  提供与打印相关的服务。  
   
  <xref:System.Windows.Forms.TextRenderer>  
- 提供了 GDI 文本绘制，并且正在测量功能。
+ 提供 GDI 文本绘制和度量功能。

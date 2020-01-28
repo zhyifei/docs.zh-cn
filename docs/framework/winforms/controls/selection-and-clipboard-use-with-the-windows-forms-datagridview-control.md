@@ -1,5 +1,5 @@
 ---
-title: Windows 窗体 DataGridView 控件的选项和剪贴板使用
+title: 选择和剪贴板用于 DataGridView 控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], Clipboard use
@@ -9,49 +9,49 @@ helpviewer_keywords:
 - data grids [Windows Forms], selecting cells
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
-ms.openlocfilehash: 1836fbc1887082ca685c49bef2bc42bdb167578f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6993f77e8ce532d8df1bdc7e6b6abc1cc3268e49
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902247"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743062"
 ---
-# <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件的选项和剪贴板使用
-`DataGridView`控件提供了各种用于配置如何，用户可以选择单元格、 行和列的选项。 例如，你可以启用单个或多个选定内容、 选择整个行或列，当用户单击单元格或选择整个行或列仅当用户单击其标头，从而使单元格选定区域。 如果你想要为所选内容提供您自己的用户界面，可以禁用普通所选内容并以编程方式处理所有选项。 此外，可以使用户能够将选定的值复制到剪贴板。  
+# <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 선택 및 클립보드 사용
+`DataGridView` 控件提供多种选项，用于配置用户选择单元格、行和列的方式。 例如，你可以启用单个或多个选择、在用户单击单元格时选择整行或列，或者仅在用户单击其标题时选择整行或列，这样就可以选择单元格。 如果要为选择提供自己的用户界面，则可以禁用普通选择并以编程方式处理所有选择。 此外，还可以让用户将所选值复制到剪贴板。  
   
-## <a name="in-this-section"></a>本节内容  
- [Windows 窗体 DataGridView 控件中的选择模式](selection-modes-in-the-windows-forms-datagridview-control.md)  
- 描述用户和控件中的以编程方式选择的选项。  
+## <a name="in-this-section"></a>섹션 내용  
+ [Windows Forms DataGridView 컨트롤의 선택 모드](selection-modes-in-the-windows-forms-datagridview-control.md)  
+ 描述控件中用户和编程选择的选项。  
   
- [如何：设置 Windows 窗体 DataGridView 控件的选择模式](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
- 介绍如何配置用于单行选择的控件，当用户单击一个单元格。  
+ [방법: Windows Forms DataGridView 컨트롤의 선택 모드 설정](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
+ 介绍如何在用户单击某个单元格时，将控件配置为单行选择。  
   
- [如何：Windows 窗体 DataGridView 控件中获取选定的单元格、 行和列](selected-cells-rows-and-columns-datagridview.md)  
- 介绍如何处理与所选的单元格、 行和列集合。  
+ [방법: Windows Forms DataGridView 컨트롤에서 선택한 셀, 행 및 열 가져오기](selected-cells-rows-and-columns-datagridview.md)  
+ 介绍如何使用选定的单元格、行和列集合。  
   
- [如何：使用户能够将多个单元格从 Windows 窗体 DataGridView 控件复制到剪贴板](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
- 介绍如何启用控件中的剪贴板支持。  
+ [방법: Windows Forms DataGridView 컨트롤에서 사용자가 여러 셀을 클립보드에 복사할 수 있도록 설정](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
+ 描述如何在控件中启用剪贴板支持。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.DataGridView>  
- 提供关于 <xref:System.Windows.Forms.DataGridView> 控件的参考文档。  
+ <xref:System.Windows.Forms.DataGridView> 컨트롤에 대한 참조 설명서를 제공합니다.  
   
  <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType>  
- 为提供参考文档<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>属性。  
+ 提供 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 属性的参考文档。  
   
  <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A>  
- 为提供参考文档<xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A>属性。  
+ 提供 <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A> 属性的参考文档。  
   
  <xref:System.Windows.Forms.DataGridViewSelectedCellCollection>  
- 为提供参考文档<xref:System.Windows.Forms.DataGridViewSelectedCellCollection>类。  
+ 提供 <xref:System.Windows.Forms.DataGridViewSelectedCellCollection> 类的参考文档。  
   
  <xref:System.Windows.Forms.DataGridViewSelectedRowCollection>  
- 为提供参考文档<xref:System.Windows.Forms.DataGridViewSelectedRowCollection>类。  
+ 提供 <xref:System.Windows.Forms.DataGridViewSelectedRowCollection> 类的参考文档。  
   
  <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection>  
- 为提供参考文档<xref:System.Windows.Forms.DataGridViewSelectedColumnCollection>类。  
+ 提供 <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection> 类的参考文档。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [DataGridView 控件](datagridview-control-windows-forms.md)
-- [Windows 窗体 DataGridView 控件中的默认键盘和鼠标处理](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+- [DataGridView 컨트롤](datagridview-control-windows-forms.md)
+- [Windows Forms DataGridView 컨트롤에서의 기본 키보드 및 마우스 처리](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

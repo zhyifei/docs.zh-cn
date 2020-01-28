@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Windows 窗体 CheckBox 控件设置选项
+title: 使用 CheckBox 控件设置选项
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: 881996563acef36a1981ca6236c155b8fc56ef0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84198eab42aa02b1bb37fa16a3c4247a37f58a10
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013200"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746766"
 ---
-# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>如何：使用 Windows 窗体 CheckBox 控件设置选项
-Windows 窗体<xref:System.Windows.Forms.CheckBox>控制用于授予用户 True/False 或 Yes/No 选项。 选择此项时，该控件将显示一个复选标记。  
+# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>如何： 使用 Windows 窗体复选框控件设置选项
+Windows 窗体 <xref:System.Windows.Forms.CheckBox> 控件用于向用户授予 True/False 或 Yes/No 选项。 选中时，控件将显示复选标记。  
   
-### <a name="to-set-options-with-checkbox-controls"></a>若要使用 CheckBox 控件设置选项  
+### <a name="to-set-options-with-checkbox-controls"></a>用 CheckBox 控件设置选项  
   
-1. 检查的值<xref:System.Windows.Forms.CheckBox.Checked%2A>属性来确定其状态，然后使用该值来设置一个选项。  
+1. 检查 <xref:System.Windows.Forms.CheckBox.Checked%2A> 属性的值以确定其状态，并使用该值来设置选项。  
   
-     代码在以下示例中，当<xref:System.Windows.Forms.CheckBox>控件的<xref:System.Windows.Forms.CheckBox.CheckedChanged>引发事件时，窗体的<xref:System.Windows.Forms.Control.AllowDrop%2A>属性设置为`false`如果选中了复选框。 这是适用于想要限制用户交互的情况。  
+     在下面的代码示例中，当引发 <xref:System.Windows.Forms.CheckBox> 控件的 <xref:System.Windows.Forms.CheckBox.CheckedChanged> 事件时，如果选中此复选框，则窗体的 <xref:System.Windows.Forms.Control.AllowDrop%2A> 属性设置为 `false`。 这对于想要限制用户交互的情况非常有用。  
   
     ```vb  
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, _  
@@ -65,7 +65,7 @@ Windows 窗体<xref:System.Windows.Forms.CheckBox>控制用于授予用户 True/
        }  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.CheckBox>
 - [CheckBox 控件概述](checkbox-control-overview-windows-forms.md)

@@ -1,5 +1,6 @@
 ---
-title: 演练：设计时在 Windows 窗体上分配 WPF 内容
+title: 为 Windows 窗体选择 WPF 控件
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF content [Windows Forms], assigning at design time
@@ -11,18 +12,18 @@ ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0c1e0c91b7ab8bded677a86b597b02b9cb442d98
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 19f1dfec282b025f5a1fa367ec5fa9a52472c691
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460668"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746810"
 ---
 # <a name="walkthrough-assign-wpf-content-on-windows-forms-at-design-time"></a>演练：在设计时在 Windows 窗体上分配 WPF 内容
 
-本文介绍如何选择要在窗体上显示的 Windows Presentation Foundation （WPF）控件类型。 可选择项目中包含的任何 WPF 控件类型。
+本文介绍如何选择要在窗体上显示的 Windows Presentation Foundation （WPF）控件类型。 您可以选择项目中包括的任何 WPF 控件类型。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 若要完成本演练，必须具有 Visual Studio。
 
@@ -54,7 +55,7 @@ ms.locfileid: "73460668"
    > [!NOTE]
    > 一般情况下，你应承载更复杂的 WPF 内容。 此处，<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> 控件仅为了便于说明。
 
-8. 生成项目。
+8. 生成此项目。
 
 ## <a name="select-wpf-controls"></a>选择 WPF 控件
 
@@ -84,7 +85,7 @@ ms.locfileid: "73460668"
 
 9. `elementHost2` 控件现承载 `UserControl1` 类型的实例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

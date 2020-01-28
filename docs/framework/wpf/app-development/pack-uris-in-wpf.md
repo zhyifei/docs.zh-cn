@@ -1,5 +1,5 @@
 ---
-title: WPF 中的 Pack URI
+title: 包 Uri
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pack URI scheme [WPF]
@@ -9,44 +9,44 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: e20053c451d12c6a8493d5d7fcfc72fe3d3d764e
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 0fec72bdedbcc2c84d8bc65e72391366e42d82be
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636375"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739158"
 ---
-# <a name="pack-uris-in-wpf"></a>WPF 中的 Pack URI
+# <a name="pack-uris-in-wpf"></a>WPF의 Pack URI
 
 在 Windows Presentation Foundation （WPF）中，统一资源标识符（Uri）用于通过多种方式标识和加载文件，其中包括：
 
 - 指定在应用程序首次启动时要显示的 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。
 
-- 加载图像。
+- 이미지 로드
 
-- 导航到页。
+- 페이지 탐색
 
-- 加载不可执行的数据文件。
+- 비실행 데이터 파일 로드
 
 此外，可以使用 Uri 来标识和加载来自各种位置的文件，包括以下各项：
 
-- 当前程序集。
+- 현재 어셈블리입니다.
 
-- 引用的程序集。
+- 참조된 어셈블리
 
-- 相对于程序集的某个位置。
+- 어셈블리에 상대적인 위치
 
-- 应用程序的源站点。
+- 애플리케이션의 원본 사이트
 
 为了提供用于从这些位置标识和加载这些类型的文件的一致机制，WPF 利用了*PACK URI 方案*的扩展性。 本主题概述了方案，并介绍了如何为各种方案构造包 Uri，以及如何在显示如何使用标记和代码中的 pack Uri 之前介绍绝对和相对 Uri 以及 URI 解析。
 
 <a name="The_Pack_URI_Scheme"></a>
 
-## <a name="the-pack-uri-scheme"></a>Pack URI 方案
+## <a name="the-pack-uri-scheme"></a>Pack URI 체계
 
-Pack URI 方案由[开放式打包约定](https://go.microsoft.com/fwlink/?LinkID=71255)（OPC）规范使用，此规范描述了用于组织和标识内容的模型。 此模型的关键元素是包和部件，其中，*包*是一个或多个逻辑*部分*的逻辑容器。 下图阐释了此概念。
+Pack URI 方案由[开放式打包约定](https://go.microsoft.com/fwlink/?LinkID=71255)（OPC）规范使用，此规范描述了用于组织和标识内容的模型。 此模型的关键元素是包和部件，其中，*包*是一个或多个逻辑*部分*的逻辑容器。 다음 그림에서는 이 개념을 보여 줍니다.
 
-![包和部件示意图](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)
+![패키지 및 파트 다이어그램](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)
 
 为了识别部件，OPC 规范利用了 RFC 2396 （统一资源标识符（URI）：通用语法）的扩展性来定义 pack URI 方案。
 
@@ -56,46 +56,46 @@ pack://*机构*/*路径*
 
 *颁发机构*指定包含部件的包类型，而*路径*指定部件在包中的位置。
 
-下图阐释了此概念：
+다음 그림에서는 이 개념을 보여 줍니다.
 
-![包、颁发机构与路径之间的关系](./media/pack-uris-in-wpf/wpf-relationship-diagram.png)
+![패키지, 권한 및 경로의 관계](./media/pack-uris-in-wpf/wpf-relationship-diagram.png)
 
-包和部件之间的关系类似于应用程序和文件之间的关系，其中应用程序（包）可以包含一个或多个文件（部件），包括：
+패키지와 파트는 애플리케이션 및 파일과 유사합니다. 즉, 애플리케이션(패키지)은 다음을 비롯한 하나 이상의 파일(파트)을 포함할 수 있습니다.
 
-- 编译到本地程序集内的资源文件。
+- 로컬 어셈블리로 컴파일되는 리소스 파일
 
-- 编译到所引用的程序集内的资源文件。
+- 참조된 어셈블리로 컴파일되는 리소스 파일
 
-- 编译到引用程序集内的资源文件。
+- 참조하는 어셈블리로 컴파일되는 리소스 파일
 
-- 内容文件。
+- 콘텐츠 파일
 
-- 源站点文件。
+- 원본 사이트 파일
 
-为了访问这些类型的文件，WPF 支持两个权限： application:///和 siteoforigin:///。 application:/// 授权标识在编译时已知的应用程序数据文件，包括资源文件和内容文件。 siteoforigin:/// 授权标识源站点文件。 下图显示了每种授权的范围。
+为了访问这些类型的文件，WPF 支持两个权限： application:///和 siteoforigin:///。 application:/// 인증 기관은 리소스 및 콘텐츠 파일을 비롯하여 컴파일 시 알려진 애플리케이션 데이터 파일을 식별합니다. siteoforigin:/// 인증 기관은 원본 사이트 파일을 식별합니다. 다음 그림에서는 각 인증 기관의 범위를 보여 줍니다.
 
-![Pack URI 示意图](./media/pack-uris-in-wpf/wpf-pack-uri-scheme.png)
+![Pack URI 다이어그램](./media/pack-uris-in-wpf/wpf-pack-uri-scheme.png)
 
 > [!NOTE]
-> 包 URI 的颁发机构组件是一个指向包并必须符合 RFC 2396 的嵌入 URI。 另外，必须用字符“,”替换字符“/”，并且必须对保留字符（如“%”和“?”）进行转义。 有关详细信息，请参阅 OPC。
+> 包 URI 的颁发机构组件是一个指向包并必须符合 RFC 2396 的嵌入 URI。 또한 “/” 문자를 “,” 문자로 바꾸고 “%” 및 “?” 같은 예약 문자는 이스케이프해야 합니다. 자세한 내용은 OPC를 참조하세요.
 
 以下各节说明如何使用这两个颁发机构构造包 Uri 以及用于标识资源、内容和源站点文件的相应路径。
 
 <a name="Resource_File_Pack_URIs___Local_Assembly"></a>
 
-## <a name="resource-file-pack-uris"></a>资源文件 Pack URI
+## <a name="resource-file-pack-uris"></a>리소스 파일 Pack URI
 
 资源文件配置为 MSBuild `Resource` 项，并编译到程序集中。 WPF 支持构造包 Uri，这些 Uri 可用于标识编译到本地程序集中或编译到从本地程序集引用的程序集中的资源文件。
 
 <a name="Local_Assembly_Resource_File"></a>
 
-### <a name="local-assembly-resource-file"></a>本地程序集资源文件
+### <a name="local-assembly-resource-file"></a>로컬 어셈블리 리소스 파일
 
 编译到本地程序集的资源文件的 pack URI 使用以下授权和路径：
 
-- **授权**：application:///。
+- **인증 기관**: application:///
 
-- **路径**：资源文件的名称，包括其相对于本地程序集项目文件夹根目录的路径。
+- **경로**: 로컬 어셈블리 프로젝트 폴더 루트에 상대적인 경로를 포함한 리소스 파일의 이름
 
 下面的示例演示位于本地程序集的项目文件夹的根目录中的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 资源文件的 pack URI。
 
@@ -107,25 +107,25 @@ pack://*机构*/*路径*
 
 <a name="Resource_File_Pack_URIs___Referenced_Assembly"></a>
 
-### <a name="referenced-assembly-resource-file"></a>引用的程序集资源文件
+### <a name="referenced-assembly-resource-file"></a>참조된 어셈블리 리소스 파일
 
 编译到引用的程序集中的资源文件的 pack URI 使用以下授权和路径：
 
-- **授权**：application:///。
+- **인증 기관**: application:///
 
-- **路径**：编译到所引用程序集内的资源文件的名称。 路径必须符合以下格式：
+- **경로**: 참조된 어셈블리로 컴파일되는 리소스 파일의 이름. 경로는 다음 형식을 따라야 합니다.
 
   *AssemblyShortName*{ *;版本*] { *;PublicKey*]; 组件/*路径*
 
-  - **程序集短名称**：所引用的程序集的短名称。
+  - **AssemblyShortName**: 참조된 어셈블리에 대한 약식 이름
 
-  - **;版本** [可选]：所引用的包含资源文件的程序集的版本。 此部分在加载两个或多个具有相同短名称的引用程序集时使用。
+  - **;Version**[옵션]: 리소스 파일을 포함하는 참조된 어셈블리의 버전. 동일한 약식 이름을 갖는 두 개 이상의 참조된 어셈블리가 로드된 경우 사용됩니다.
 
-  - **;公钥** [可选]：用于对引用程序集进行签名的公钥。 此部分在加载两个或多个具有相同短名称的引用程序集时使用。
+  - **;PublicKey**[옵션]: 참조된 어셈블리를 서명하는 데 사용된 공개 키. 동일한 약식 이름을 갖는 두 개 이상의 참조된 어셈블리가 로드된 경우 사용됩니다.
 
-  - **;组件**：指定所引用的程序集是从本地程序集引用的。
+  - **;component**: 참조되는 어셈블리가 로컬 어셈블리에서 참조된다는 것을 지정
 
-  - **/路径**：资源文件的名称，包括其相对于所引用程序集的项目文件夹根目录的路径。
+  - **/Path**: 참조된 어셈블리 프로젝트 폴더의 루트에 상대적인 경로를 포함한 리소스 파일의 이름
 
 下面的示例显示了位于所引用程序集的项目文件夹的根目录中的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 资源文件的 pack URI。
 
@@ -145,13 +145,13 @@ pack://*机构*/*路径*
 
 <a name="Content_File_Pack_URIs"></a>
 
-## <a name="content-file-pack-uris"></a>内容文件 Pack URI
+## <a name="content-file-pack-uris"></a>콘텐츠 파일 Pack URI
 
 内容文件的 pack URI 使用以下授权和路径：
 
-- **授权**：application:///。
+- **인증 기관**: application:///
 
-- **路径**：内容文件的名称，包括其相对于应用程序的主可执行程序集的文件系统位置的路径。
+- **경로**: 애플리케이션의 주 실행 가능 어셈블리의 파일 시스템 위치에 상대적인 경로를 포함한 콘텐츠 파일의 이름
 
 下面的示例演示与可执行程序集位于同一文件夹中的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 内容文件的 pack URI。
 
@@ -166,13 +166,13 @@ pack://*机构*/*路径*
 
 <a name="The_siteoforigin_____Authority"></a>
 
-## <a name="site-of-origin-pack-uris"></a>源站点 Pack URI
+## <a name="site-of-origin-pack-uris"></a>원본 사이트 Pack URI
 
 源站点文件的 pack URI 使用以下授权和路径：
 
-- **授权**：siteoforigin:///。
+- **인증 기관**: siteoforigin:///
 
-- **路径**：源站点文件的名称，包括其相对于可执行程序集启动位置的路径。
+- **경로**: 실행 가능 어셈블리가 시작된 위치에 상대적인 경로를 포함한 원본 사이트 파일의 이름
 
 下面的示例显示了一个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 源站点文件的 pack URI，该 URI 存储在从中启动可执行程序集的位置。
 
@@ -184,7 +184,7 @@ pack://*机构*/*路径*
 
 <a name="Page_Files"></a>
 
-## <a name="page-files"></a>页面文件
+## <a name="page-files"></a>페이지 파일
 
 配置为 MSBuild `Page` 项的 XAML 文件将以与资源文件相同的方式编译到程序集中。 因此，可以使用资源文件的 pack Uri 来标识 MSBuild `Page` 项。
 
@@ -219,7 +219,7 @@ pack://*机构*/*路径*
 > [!NOTE]
 > 由于源站点文件不与程序集相关联，因此只能用绝对包 Uri 来引用它们。
 
-默认情况下，相对 pack URI 被视为相对于包含引用的标记或代码的位置。 但是，如果使用前导反斜杠，则相对 pack URI 引用将被视为相对于应用程序的根。 例如，假设具有以下项目结构。
+默认情况下，相对 pack URI 被视为相对于包含引用的标记或代码的位置。 但是，如果使用前导反斜杠，则相对 pack URI 引用将被视为相对于应用程序的根。 예를 들어 다음과 같은 프로젝트 구조를 가정해 봅니다.
 
 `App.xaml`
 
@@ -241,7 +241,7 @@ pack://*机构*/*路径*
 
 <a name="Pack_URI_Resolution"></a>
 
-## <a name="pack-uri-resolution"></a>Pack URI 解析
+## <a name="pack-uri-resolution"></a>Pack URI 확인
 
 Pack Uri 的格式使得不同类型的文件的包 Uri 能够看起来相同。 例如，请考虑下面的绝对包 URI。
 
@@ -275,7 +275,7 @@ Pack URI 解析可以通过一种简化来使代码在一定程度上独立于�
 
 <a name="Programming_with_Pack_URIs"></a>
 
-## <a name="programming-with-pack-uris"></a>使用 Pack URI 编程
+## <a name="programming-with-pack-uris"></a>Pack URI를 사용한 프로그래밍
 
 许多 WPF 类实现可通过 pack Uri 进行设置的属性，包括：
 
@@ -291,50 +291,50 @@ Pack URI 解析可以通过一种简化来使代码在一定程度上独立于�
 
 - <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>
 
-可以从标记和代码中设置这些属性。 本节演示这两种设置方式的基本构造，然后演示通用方案示例。
+이러한 속성을 태그와 코드 모두에서 설정할 수 있습니다. 이 섹션에서는 두 경우에 대한 기본 구조를 설명한 다음 일반적인 시나리오 예제를 보여 줍니다.
 
 <a name="Using_Pack_URIs_in_Markup"></a>
 
-### <a name="using-pack-uris-in-markup"></a>在标记中使用 Pack URI
+### <a name="using-pack-uris-in-markup"></a>태그에서 Pack URI 사용
 
-通过使用 pack URI 设置特性的元素，在标记中指定包 URI。 例如：
+通过使用 pack URI 设置特性的元素，在标记中指定包 URI。 예를 들면 다음과 같습니다.:
 
 `<element attribute="pack://application:,,,/File.xaml" />`
 
 表1说明了可在标记中指定的各种绝对包 Uri。
 
-表 1：标记中的绝对 Pack URI
+표 1: 태그의 절대 Pack URI
 
 |File|绝对包 URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
-|资源文件 - 本地程序集|`"pack://application:,,,/ResourceFile.xaml"`|
-|子文件夹中的资源文件 - 本地程序集|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|
-|资源文件 - 引用的程序集|`"pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml"`|
-|所引用程序集的子文件夹中的资源文件|`"pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml"`|
-|所引用版本化程序集中的资源文件|`"pack://application:,,,/ReferencedAssembly;v1.0.0.0;component/ResourceFile.xaml"`|
-|内容文件|`"pack://application:,,,/ContentFile.xaml"`|
-|子文件夹中的内容文件|`"pack://application:,,,/Subfolder/ContentFile.xaml"`|
-|源站点文件|`"pack://siteoforigin:,,,/SOOFile.xaml"`|
-|子文件夹中的源站点文件|`"pack://siteoforigin:,,,/Subfolder/SOOFile.xaml"`|
+|리소스 파일 - 로컬 어셈블리|`"pack://application:,,,/ResourceFile.xaml"`|
+|하위 폴더의 리소스 파일 - 로컬 어셈블리|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|
+|리소스 파일 - 참조된 어셈블리|`"pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml"`|
+|참조된 어셈블리의 하위 폴더에 있는 리소스 파일|`"pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml"`|
+|버전이 있는 참조된 어셈블리의 리소스 파일|`"pack://application:,,,/ReferencedAssembly;v1.0.0.0;component/ResourceFile.xaml"`|
+|콘텐츠 파일|`"pack://application:,,,/ContentFile.xaml"`|
+|하위 폴더의 콘텐츠 파일|`"pack://application:,,,/Subfolder/ContentFile.xaml"`|
+|원본 사이트 파일|`"pack://siteoforigin:,,,/SOOFile.xaml"`|
+|하위 폴더의 원본 사이트 파일|`"pack://siteoforigin:,,,/Subfolder/SOOFile.xaml"`|
 
 表2说明了可以在标记中指定的各种相对包 Uri。
 
-表 2：标记中的相对 Pack URI
+표 2: 태그의 상대 Pack URI
 
 |File|相对 pack URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
-|本地程序集内的资源文件|`"/ResourceFile.xaml"`|
-|本地程序集的子文件夹中的资源文件|`"/Subfolder/ResourceFile.xaml"`|
-|所引用程序集内的资源文件|`"/ReferencedAssembly;component/ResourceFile.xaml"`|
-|所引用程序集的子文件夹中的资源文件|`"/ReferencedAssembly;component/Subfolder/ResourceFile.xaml"`|
-|内容文件|`"/ContentFile.xaml"`|
-|子文件夹中的内容文件|`"/Subfolder/ContentFile.xaml"`|
+|로컬 어셈블리의 리소스 파일|`"/ResourceFile.xaml"`|
+|로컬 어셈블리의 하위 폴더에 있는 리소스 파일|`"/Subfolder/ResourceFile.xaml"`|
+|참조된 어셈블리의 리소스 파일|`"/ReferencedAssembly;component/ResourceFile.xaml"`|
+|참조된 어셈블리의 하위 폴더에 있는 리소스 파일|`"/ReferencedAssembly;component/Subfolder/ResourceFile.xaml"`|
+|콘텐츠 파일|`"/ContentFile.xaml"`|
+|하위 폴더의 콘텐츠 파일|`"/Subfolder/ContentFile.xaml"`|
 
 <a name="Using_Pack_URIs_in_Code"></a>
 
-### <a name="using-pack-uris-in-code"></a>在代码中使用 Pack URI
+### <a name="using-pack-uris-in-code"></a>코드에서 Pack URI 사용
 
-通过实例化 <xref:System.Uri> 类并将包 URI 作为参数传递给构造函数，可以在代码中指定包 URI。 下面的示例说明了这一点。
+通过实例化 <xref:System.Uri> 类并将包 URI 作为参数传递给构造函数，可以在代码中指定包 URI。 다음 예제를 통해 볼 수 있습니다.
 
 ```csharp
 Uri uri = new Uri("pack://application:,,,/File.xaml");
@@ -366,42 +366,42 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 表3说明了可以使用 <xref:System.Uri?displayProperty=nameWithType>在代码中指定的各种相对包 Uri。
 
-表 3：代码中的绝对 Pack URI
+표 3: 코드의 절대 Pack URI
 
 |File|绝对包 URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
-|资源文件 - 本地程序集|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|
-|子文件夹中的资源文件 - 本地程序集|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
-|资源文件 - 引用的程序集|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml", UriKind.Absolute);`|
-|所引用程序集的子文件夹中的资源文件|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
-|所引用版本化程序集中的资源文件|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;v1.0.0.0;component/ResourceFile.xaml", UriKind.Absolute);`|
-|内容文件|`Uri uri = new Uri("pack://application:,,,/ContentFile.xaml", UriKind.Absolute);`|
-|子文件夹中的内容文件|`Uri uri = new Uri("pack://application:,,,/Subfolder/ContentFile.xaml", UriKind.Absolute);`|
-|源站点文件|`Uri uri = new Uri("pack://siteoforigin:,,,/SOOFile.xaml", UriKind.Absolute);`|
-|子文件夹中的源站点文件|`Uri uri = new Uri("pack://siteoforigin:,,,/Subfolder/SOOFile.xaml", UriKind.Absolute);`|
+|리소스 파일 - 로컬 어셈블리|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|
+|하위 폴더의 리소스 파일 - 로컬 어셈블리|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
+|리소스 파일 - 참조된 어셈블리|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml", UriKind.Absolute);`|
+|참조된 어셈블리의 하위 폴더에 있는 리소스 파일|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
+|버전이 있는 참조된 어셈블리의 리소스 파일|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;v1.0.0.0;component/ResourceFile.xaml", UriKind.Absolute);`|
+|콘텐츠 파일|`Uri uri = new Uri("pack://application:,,,/ContentFile.xaml", UriKind.Absolute);`|
+|하위 폴더의 콘텐츠 파일|`Uri uri = new Uri("pack://application:,,,/Subfolder/ContentFile.xaml", UriKind.Absolute);`|
+|원본 사이트 파일|`Uri uri = new Uri("pack://siteoforigin:,,,/SOOFile.xaml", UriKind.Absolute);`|
+|하위 폴더의 원본 사이트 파일|`Uri uri = new Uri("pack://siteoforigin:,,,/Subfolder/SOOFile.xaml", UriKind.Absolute);`|
 
 表4说明了可使用 <xref:System.Uri?displayProperty=nameWithType>在代码中指定的各种相对包 Uri。
 
-表 4：代码中的相对 Pack URI
+표 4: 코드의 상대 Pack URI
 
 |File|相对 pack URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
-|资源文件 - 本地程序集|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|
-|子文件夹中的资源文件 - 本地程序集|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
-|资源文件 - 引用的程序集|`Uri uri = new Uri("/ReferencedAssembly;component/ResourceFile.xaml", UriKind.Relative);`|
-|子文件夹中的资源文件 - 引用的程序集|`Uri uri = new Uri("/ReferencedAssembly;component/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
-|内容文件|`Uri uri = new Uri("/ContentFile.xaml", UriKind.Relative);`|
-|子文件夹中的内容文件|`Uri uri = new Uri("/Subfolder/ContentFile.xaml", UriKind.Relative);`|
+|리소스 파일 - 로컬 어셈블리|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|
+|하위 폴더의 리소스 파일 - 로컬 어셈블리|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
+|리소스 파일 - 참조된 어셈블리|`Uri uri = new Uri("/ReferencedAssembly;component/ResourceFile.xaml", UriKind.Relative);`|
+|하위 폴더의 리소스 파일 - 참조된 어셈블리|`Uri uri = new Uri("/ReferencedAssembly;component/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
+|콘텐츠 파일|`Uri uri = new Uri("/ContentFile.xaml", UriKind.Relative);`|
+|하위 폴더의 콘텐츠 파일|`Uri uri = new Uri("/Subfolder/ContentFile.xaml", UriKind.Relative);`|
 
 <a name="Common_Pack_URI_Scenarios"></a>
 
-### <a name="common-pack-uri-scenarios"></a>常见 Pack URI 方案
+### <a name="common-pack-uri-scenarios"></a>일반적인 Pack URI 시나리오
 
 前面几节讨论了如何构造包 Uri 来标识资源、内容和源站点文件。 在 WPF 中，可以通过多种方式使用这些构造，以下部分介绍了几种常见的用法。
 
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>
 
-#### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>指定当应用程序启动时显示的 UI
+#### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>애플리케이션을 시작할 때 표시되는 UI 지정
 
 <xref:System.Windows.Application.StartupUri%2A> 指定在启动 WPF 应用程序时要显示的第一个 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 对于独立应用程序，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 可以是窗口，如下面的示例中所示。
 
@@ -415,9 +415,9 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 <a name="Navigating_to_a_Page"></a>
 
-#### <a name="navigating-to-a-page"></a>导航到页面
+#### <a name="navigating-to-a-page"></a>페이지 탐색
 
-下面的示例演示如何导航到页面。
+다음 예제에서는 페이지를 탐색하는 방법을 보여 줍니다.
 
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml1)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]
@@ -427,17 +427,17 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 <a name="Specifying_a_Window_Icon"></a>
 
-#### <a name="specifying-a-window-icon"></a>指定窗口图标
+#### <a name="specifying-a-window-icon"></a>창 아이콘 지정
 
-下面的示例演示如何使用 URI 指定窗口的图标。
+다음 예제에서는 URI를 사용하여 창 아이콘을 지정하는 방법을 보여 줍니다.
 
 [!code-xaml[WindowIconSnippets#WindowIconSetXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]
 
-有关更多信息，请参见<xref:System.Windows.Window.Icon%2A>。
+자세한 내용은 <xref:System.Windows.Window.Icon%2A>를 참조하세요.
 
 <a name="Loading_Image__Audio__and_Video_Files"></a>
 
-#### <a name="loading-image-audio-and-video-files"></a>加载图像、音频和视频文件
+#### <a name="loading-image-audio-and-video-files"></a>이미지, 오디오 및 비디오 파일 로드
 
 WPF 允许应用程序使用各种媒体类型，所有这些类型都可以使用 pack Uri 进行标识和加载，如下面的示例中所示。
 
@@ -451,9 +451,9 @@ WPF 允许应用程序使用各种媒体类型，所有这些类型都可以使�
 
 <a name="Loading_a_Resource_Dictionary_from_the_Site_of_Origin"></a>
 
-#### <a name="loading-a-resource-dictionary-from-the-site-of-origin"></a>从源站点加载资源字典
+#### <a name="loading-a-resource-dictionary-from-the-site-of-origin"></a>원본 사이트에서 리소스 사전 로드
 
-资源字典（<xref:System.Windows.ResourceDictionary>）可用于支持应用程序主题。 创建和管理主题的一种方式是将多个主题创建为位于应用程序源站点的资源字典。 这样，在添加和更新主题时将无需重新编译和重新部署应用程序。 可以使用 pack Uri 来标识和加载这些资源字典，如以下示例中所示。
+资源字典（<xref:System.Windows.ResourceDictionary>）可用于支持应用程序主题。 테마를 만들고 관리하는 한 가지 방법은 애플리케이션의 원본 사이트에 위치한 리소스 사전으로 여러 개의 테마를 만드는 것입니다. 이렇게 하면 애플리케이션을 다시 컴파일하여 배포할 필요 없이 테마를 추가하고 업데이트할 수 있습니다. 可以使用 pack Uri 来标识和加载这些资源字典，如以下示例中所示。
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 
@@ -461,4 +461,4 @@ WPF 允许应用程序使用各种媒体类型，所有这些类型都可以使�
 
 ## <a name="see-also"></a>另请参阅
 
-- [WPF 应用程序资源、内容和数据文件](wpf-application-resource-content-and-data-files.md)
+- [WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일](wpf-application-resource-content-and-data-files.md)

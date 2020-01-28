@@ -1,5 +1,5 @@
 ---
-title: 如何：将数据绑定到 Windows 窗体 DataGridView 控件
+title: 将数据绑定到 DataGridView 控件
 ms.date: 02/08/2019
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
-ms.openlocfilehash: bdba8af04cd9473b17d1a28f07ead7cd5bf43698
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e2762bf363a469abf8c1e57b851d351c1cb41b62
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139084"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745072"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>如何：将数据绑定到 Windows 窗体 DataGridView 控件
 
@@ -45,7 +45,7 @@ Visual Studio 提供对 DataGridView 控件数据绑定的广泛支持。 有关
 [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
 [!code-vb[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>

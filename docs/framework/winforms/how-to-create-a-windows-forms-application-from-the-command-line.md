@@ -1,5 +1,6 @@
 ---
-title: 如何：从命令行创建 Windows 窗体应用程序
+title: 从命令行创建 Windows 窗体应用程序
+titleSuffix: ''
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-ms.openlocfilehash: af1548602ece8ea0f5720a836ec05648854e198f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: da6b9da53a36a44233dde4f0d1c4f147d913c7cf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127251"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739526"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>如何：从命令行创建 Windows 窗体应用程序
 
@@ -110,7 +111,7 @@ ms.locfileid: "73127251"
  [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>

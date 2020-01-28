@@ -1,5 +1,5 @@
 ---
-title: 生成 WPF 应用程序 (WPF)
+title: 编译应用
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,40 +7,40 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 48536d8fba3f86c2883e48cd4e5cf9a3a8752fcd
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 00c76dfcdcedc7ceaefaaae785368f8b343457a7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636310"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744763"
 ---
-# <a name="building-a-wpf-application-wpf"></a>生成 WPF 应用程序 (WPF)
+# <a name="compile-a-wpf-application"></a>编译 WPF 应用程序
 
 Windows Presentation Foundation （WPF）应用程序可以生成为 .NET Framework 可执行文件（.exe）、库（.dll）或这两种类型的程序集的组合。 本主题介绍如何构建 WPF 应用程序，并介绍生成过程中的关键步骤。
 
 <a name="Building_a_WPF_Application_using_Command_Line"></a>
 
-## <a name="building-a-wpf-application"></a>生成 WPF 应用程序
+## <a name="building-a-wpf-application"></a>WPF 애플리케이션 빌드
 
-WPF 应用程序可通过以下方式编译：
+다음과 같은 방법으로 WPF 애플리케이션을 컴파일할 수 있습니다.
 
-- 命令行。 应用程序必须只包含代码（并非 XAML）和一个应用程序定义文件。 有关详细信息，请参阅[在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)或[从命令行生成 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。
+- 명령줄. 애플리케이션에 코드(XAML 없음)와 애플리케이션 정의 파일만 포함되어야 합니다. 자세한 내용은 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) 또는 [명령줄에서 빌드(Visual Basic)](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)를 참조하세요.
 
-- Microsoft 生成引擎 (MSBuild)。 除了代码和 XAML 文件之外，应用程序还必须包含一个 MSBuild 项目文件。 有关详细信息，请参阅“MSBuild”。
+- MSBuild(Microsoft Build Engine). 애플리케이션에 코드 및 XAML 파일 외에 MSBuild 프로젝트 파일이 포함되어야 합니다. 자세한 내용은 "MSBuild"를 참조하세요.
 
-- 。 Visual Studio 是一个集成式开发环境，可编译使用 MSBuild 生成的 WPF 应用程序，并包含可用于创建 UI 的可视化设计器。 有关详细信息，请参阅[使用 Visual Studio 编写和管理代码](/visualstudio/ide/index-writing-code)和[在 Visual STUDIO 中设计 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)。
+- 보여 줍니다. Visual Studio는 MSBuild를 사용하여 WPF 애플리케이션을 컴파일하고 UI를 만들기 위한 비주얼 디자이너를 포함하는 통합 개발 환경입니다. 有关详细信息，请参阅[使用 Visual Studio 编写和管理代码](/visualstudio/ide/index-writing-code)和[在 Visual STUDIO 中设计 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)。
 
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>
 
-## <a name="wpf-build-pipeline"></a>WPF 生成管道
+## <a name="wpf-build-pipeline"></a>WPF 빌드 파이프라인
 
-生成 WPF 项目时，将调用语言特定目标和特定于 WPF 的目标的组合。 执行这些目标的进程被称为生成管道，相关的关键步骤已显示在下图中。
+生成 WPF 项目时，将调用语言特定目标和特定于 WPF 的目标的组合。 이러한 대상을 실행 중인 프로세스를 빌드 파이프라인이라고 하며 주요 단계는 다음 그림에서와 같이 설명됩니다.
 
 ![WPF 生成过程](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")
 
 <a name="Pre_Build_Initializations"></a>
 
-### <a name="pre-build-initializations"></a>预生成初始化
+### <a name="pre-build-initializations"></a>빌드 전 초기화
 
 在生成之前，MSBuild 确定重要工具和库的位置，包括以下各项：
 
@@ -50,33 +50,33 @@ WPF 应用程序可通过以下方式编译：
 
 - WPF 引用程序集的位置。
 
-- 程序集搜索路径的属性。
+- 어셈블리 검색 경로의 속성
 
-MSBuild 在其中搜索程序集的第一个位置是引用程序集目录（%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.0\\）。 在执行这个步骤时，生成进程还会初始化各种属性和项组，并执行所有必要的清理工作。
+MSBuild 在其中搜索程序集的第一个位置是引用程序集目录（%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.0\\）。 이 단계에서 빌드 프로세스는 다양한 속성 및 항목 그룹을 초기화하고 필요한 정리 작업을 수행합니다.
 
 <a name="Resolving_references"></a>
 
-### <a name="resolving-references"></a>解析引用
+### <a name="resolving-references"></a>참조 확인
 
-生成进程会查找并绑定生成应用程序项目所需的程序集。 这个逻辑包含在 `ResolveAssemblyReference` 任务中。 在项目文件中声明为 `Reference` 的所有程序集会连同有关搜索路径的信息以及系统上已安装的程序集的元数据一并提供给任务。 该任务将查找程序集，并使用已安装的程序集的元数据来筛选出那些不需要显示在输出清单中的核心 WPF 程序集。 这么做可以避免 ClickOnce 清单中出现冗余信息。 例如，由于 PresentationFramework 可被视为在和 WPF 上构建的应用程序的代表，并且由于在安装了 .NET Framework 的每台计算机上的同一位置都存在所有 WPF 程序集，因此无需包括所有有关清单中所有 .NET Framework 引用程序集的信息。
+빌드 프로세스는 애플리케이션 프로젝트를 빌드하는 데 필요한 어셈블리를 찾아서 바인딩합니다. 이 논리는 `ResolveAssemblyReference` 작업에 포함되어 있습니다. 프로젝트 파일에서 `Reference`로 선언된 모든 어셈블리는 시스템에 이미 설치된 어셈블리의 메타데이터 및 검색 경로에 대한 정보와 함께 작업에 제공됩니다. 该任务将查找程序集，并使用已安装的程序集的元数据来筛选出那些不需要显示在输出清单中的核心 WPF 程序集。 이 작업의 목적은 ClickOnce 매니페스트에서 중복되는 정보를 방지하는 것입니다. 例如，由于 PresentationFramework 可被视为在和 WPF 上构建的应用程序的代表，并且由于在安装了 .NET Framework 的每台计算机上的同一位置都存在所有 WPF 程序集，因此无需包括所有有关清单中所有 .NET Framework 引用程序集的信息。
 
 <a name="Markup_Compilation___Pass_1"></a>
 
-### <a name="markup-compilationpass-1"></a>标记编译 - 第 1 次传递
+### <a name="markup-compilationpass-1"></a>태그 컴파일 - 패스 1
 
-在此步骤中，将对 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件进行分析和编译，使运行时不会花费时间分析 XML 和验证属性值。 编译型 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件会进行预标记，因此其在运行时的加载速度应该要远高于 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件的加载速度。
+在此步骤中，将对 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件进行分析和编译，使运行时不会花费时间分析 XML 和验证属性值。 컴파일된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일은 사전 토큰화되어 있으므로 런타임 시 이 파일을 로드하면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일을 로드하는 것보다 훨씬 속도가 빨라집니다.
 
-这个步骤会针对属于 `Page` 生成项的每一个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件完成以下活动：
+이 단계에서 다음 작업은 `Page` 빌드 항목인 모든 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 대해 수행됩니다.
 
-1. 由标记编译器对 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件进行分析。
+1. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일은 태그 컴파일러에 의해 구문 분석됩니다.
 
-2. 创建编译型 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 并将其复制到 obj\Release 文件夹。
+2. 컴파일된 표현은 해당 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 대해 만들어져서 obj\Release 폴더에 복사됩니다.
 
-3. 创建 CodeDOM 型新分部类并将其复制到 obj\Release 文件夹。
+3. 새 partial 클래스의 CodeDOM 표현이 만들어져서 obj\Release 폴더에 복사됩니다.
 
-另外，还会针对每一个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件生成特定于语言的代码文件。 例如，对于 Visual Basic 项目中的 Page1 页，生成了 Page1. g.;对于C#项目中的 Page1 页，会生成 Page1.g.cs。 文件名中的“.g”表明文件包含的是生成的代码，这些代码针对标记文件的顶级元素（如 `Page` 或 `Window`）进行了分部类声明。 此类是用中C#的 `partial` 修饰符声明的（`Extends` 在 Visual Basic 中），以指示该类的其他声明（通常在代码隐藏文件 Page1.xaml.cs 中）。
+또한 모든 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 대해 언어별 코드 파일이 생성됩니다. 例如，对于 Visual Basic 项目中的 Page1 页，生成了 Page1. g.;对于C#项目中的 Page1 页，会生成 Page1.g.cs。 파일 이름에 ".g"가 있으면 파일이 태그 파일(예: `Page` 또는 `Window`)의 최상위 수준 요소에 대한 partial 클래스 선언을 포함하여 생성된 코드라는 의미입니다. 此类是用中C#的 `partial` 修饰符声明的（`Extends` 在 Visual Basic 中），以指示该类的其他声明（通常在代码隐藏文件 Page1.xaml.cs 中）。
 
-分部类从适当的基类（如页面 <xref:System.Windows.Controls.Page>）进行扩展并实现 <xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType> 接口。 <xref:System.Windows.Markup.IComponentConnector> 接口包含用于初始化组件并连接其内容中元素上的名称和事件的方法。 因此，生成的代码文件中都包含如下所示的方法实现：
+分部类从适当的基类（如页面 <xref:System.Windows.Controls.Page>）进行扩展并实现 <xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType> 接口。 <xref:System.Windows.Markup.IComponentConnector> 接口包含用于初始化组件并连接其内容中元素上的名称和事件的方法。 결과적으로 생성된 코드 파일에는 다음과 같은 메서드 구현이 있습니다.
 
 ```csharp
 public void InitializeComponent() {
@@ -108,87 +108,87 @@ Public Sub InitializeComponent() _
 End Sub
 ```
 
-默认情况下，标记编译在与 MSBuild 引擎相同的 <xref:System.AppDomain> 中运行。 这可以显著提高性能。 此行为可通过 `AlwaysCompileMarkupFilesInSeparateDomain` 属性来切换。 此方法的优点是通过卸载单独的 <xref:System.AppDomain>卸载所有引用程序集。
+默认情况下，标记编译在与 MSBuild 引擎相同的 <xref:System.AppDomain> 中运行。 따라서 성능이 크게 향상됩니다. 이 동작은 `AlwaysCompileMarkupFilesInSeparateDomain` 속성을 통해 전환할 수 있습니다. 此方法的优点是通过卸载单独的 <xref:System.AppDomain>卸载所有引用程序集。
 
 <a name="Pass_2_of_Markup_Compilation"></a>
 
-### <a name="markup-compilationpass-2"></a>标记编译 - 第 2 次传递
+### <a name="markup-compilationpass-2"></a>태그 컴파일 - 패스 2
 
-并非所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面都会在标记编译的第 1 次传递过程中完成编译。 包含本地定义类型引用（引用同一项目中其他位置的代码所定义的类型）的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件就不会在此期间进行编译。 这是因为这些本地定义的类型仅存在于源中，并且尚未编译。 分析器会采用试探法来确定文件是否已编译，而这一操作会涉及在标记文件中查找 `x:Name` 之类的项。 如果找到此类实例，标记文件的编译将会推迟，直至代码文件完成编译；在代码文件完成编译后，标记文件会在第二次标记编译传递期间得到处理。
+일부 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 태그 컴파일의 패스 1에서 컴파일됩니다. 이때 로컬로 정의된 형식 참조(동일한 프로젝트의 코드에서 정의된 형식에 대한 참조)가 있는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일은 컴파일에서 제외됩니다. 이는 로컬로 정의된 형식이 소스에만 있어 아직 컴파일되지 않았기 때문입니다. 이를 확인하기 위해 파서는 추론을 사용하여 태그 파일에서 `x:Name`과 같은 항목을 찾습니다. 이러한 인스턴스를 찾은 경우 코드 파일이 컴파일될 때까지 해당 태그 파일의 컴파일이 연기되며 나중에 두 번째 태그 컴파일 패스가 이러한 파일을 처리합니다.
 
 <a name="File_Classification"></a>
 
-### <a name="file-classification"></a>文件分类
+### <a name="file-classification"></a>파일 분류
 
-生成进程会根据输出文件将被置于哪个应用程序集中，将输出文件放入不同的资源组。 在典型的非本地化应用程序中，所有被标记为 `Resource` 的数据文件都会置于主程序集（可执行文件或库）中。 如果在项目中设置了 `UICulture`，则所有编译型 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件以及那些专门标记为特定于语言的资源会置于附属资源程序集中。 此外，所有中性语言资源都会置于主程序集中。 生成进程会在执行这个步骤时确定放置位置。
+빌드 프로세스는 출력 파일을 배치할 애플리케이션 어셈블리를 기반으로 다른 리소스 그룹에 출력 파일을 배치합니다. 일반적으로 지역화되지 않은 애플리케이션에서 `Resource`로 표시된 모든 데이터 파일은 주 어셈블리(실행 파일 또는 라이브러리)에 배치됩니다. 프로젝트에서 `UICulture`가 설정된 경우 컴파일된 모든 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일 및 해당 리소스(특히 언어별로 표시된 리소스)가 위성 리소스 어셈블리에 배치됩니다. 또한 모든 언어 중립 리소스는 주 어셈블리에 배치됩니다. 빌드 프로세스의 이 단계에서 해당 사항이 결정됩니다.
 
-项目文件中的 `ApplicationDefinition`、`Page` 和 `Resource` 生成操作可以使用 `Localizable` 元数据（可接受的值为 `true` 和 `false`）来扩充，该元数据会指明文件是特定于语言的文件还是中性语言文件。
+프로젝트 파일의 `ApplicationDefinition`, `Page` 및 `Resource` 빌드 작업은 `Localizable` 메타데이터(허용 가능한 값은 `true` 및 `false`)를 통해 보강할 수 있으며 이는 파일이 언어와 관련되었는지 또는 언어 중립적인지 지정합니다.
 
 <a name="Core_Compilation"></a>
 
-### <a name="core-compilation"></a>内核编译
+### <a name="core-compilation"></a>핵심 컴파일
 
-内核编译步骤涉及代码文件的编译。 这要由特定于语言的目标文件 Microsoft.CSharp.targets 和 Microsoft.VisualBasic.targets 中的逻辑来协调。 如果试探法确定标记编译器只需要进行一次传递，则会生成主程序集。 但是，如果项目中的一个或多个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件引用了本地定义的类型，则会生成一个临时的.dll 文件，最终的应用程序集则可能会在标记编译的第二次传递完成后再创建。
+핵심 컴파일 단계에서는 코드 파일을 컴파일합니다. 이 작업은 언어별 대상 파일 Microsoft.CSharp.targets 및 Microsoft.VisualBasic.targets의 논리에 의해 오케스트레이션됩니다. 추론을 통해 태그 컴파일러의 단일 패스로 충분하다고 판단된 경우 주 어셈블리가 생성됩니다. 그러나 프로젝트에서 하나 이상의 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 로컬로 정의된 형식에 대한 참조가 있는 경우 태그 컴파일의 두 번째 패스가 완료된 후 최종 애플리케이션 어셈블리가 만들어질 수 있도록 임시 .dll 파일이 생성됩니다.
 
 <a name="Manifest_generation"></a>
 
-### <a name="manifest-generation"></a>清单生成
+### <a name="manifest-generation"></a>매니페스트 생성
 
 在生成过程结束时，所有应用程序程序集和内容文件都准备就绪后，将生成应用程序的 ClickOnce 清单。
 
-部署清单文件可描述部署模型：当前版本、更新行为、发布服务器标识以及数字签名。 该清单应由负责处理部署的管理员来编写。 文件扩展名为 xbap （适用于 XAML 浏览器应用程序（Xbap））和应用程序。 前者受 `HostInBrowser` 项目属性支配，因此清单会将应用程序标识为由浏览器承载。
+배포 매니페스트 파일은 배포 모델, 즉 현재 버전, 업데이트 동작 및 게시자 ID를 디지털 시그니처와 함께 설명합니다. 이 매니페스트는 배포를 처리하는 관리자가 작성합니다. 文件扩展名为 xbap （适用于 XAML 浏览器应用程序（Xbap））和应用程序。 .xbap는 `HostInBrowser` 프로젝트 속성에 의해 지정되며 그 결과 매니페스트는 애플리케이션이 브라우저에 호스트되는 것으로 식별합니다.
 
-应用程序清单（一个 .exe.manifest 文件）可描述应用程序集和依赖库，并列出应用程序所需的权限。 该文件应由应用程序开发者编写。 为了启动 ClickOnce 应用程序，用户将打开该应用程序的部署清单文件。
+애플리케이션 매니페스트(.exe.manifest 파일)는 애플리케이션 어셈블리 및 종속 라이브러리를 설명하고 애플리케이션에 필요한 사용 권한을 나열합니다. 이 파일은 애플리케이션 개발자가 작성합니다. 为了启动 ClickOnce 应用程序，用户将打开该应用程序的部署清单文件。
 
-这些清单文件始终为 Xbap 创建。 对于已安装的应用程序，这些文件不会创建，除非在项目文件中为 `GenerateManifests` 属性指定值 `true`。
+这些清单文件始终为 Xbap 创建。 설치된 애플리케이션의 경우 프로젝트 파일에서 `GenerateManifests` 속성 값이 `true`로 지정되지 않는 한 만들어지지 않습니다.
 
 Xbap 在分配给典型 Internet 区域应用程序的权限之上或更高的其他两个权限： <xref:System.Security.Permissions.WebBrowserPermission> 和 <xref:System.Security.Permissions.MediaPermission>。 WPF 生成系统会在应用程序清单中声明这些权限。
 
 <a name="Incremental_Build_Support"></a>
 
-## <a name="incremental-build-support"></a>增量生成支持
+## <a name="incremental-build-support"></a>증분 빌드 지원
 
-WPF 生成系统为增量生成提供支持。 该系统能以非常智能化的方式来检测对标记或代码所做的各种更改，而且只会编译那些受到更改操作影响的项目。 增量生成机制会使用以下文件：
+WPF 生成系统为增量生成提供支持。 태그 또는 코드에 대한 변경 사항을 지능적으로 검색하고 변경 사항의 영향을 받는 아티팩트만 컴파일합니다. 증분 빌드 메커니즘은 다음 파일을 사용합니다.
 
-- $(*AssemblyName*)_MarkupCompiler.Cache 文件，用于维护当前的编译器状态。
+- 현재 컴파일러 상태를 유지 관리하는 $(*AssemblyName*)_MarkupCompiler.Cache 파일
 
-- $(*AssemblyName*)_MarkupCompiler.lref 文件，用于缓存引用了本地定义类型的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件。
+- 로컬로 정의된 형식에 대한 참조가 있는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일을 캐시하는 $(*AssemblyName*) _MarkupCompiler.lref 파일
 
-下面显示了一组用于控制增量生成的规则：
+다음은 증분 빌드를 제어하는 규칙 집합입니다.
 
-- 文件是生成系统检测更改时的最小单位。 因此，对于代码文件，生成系统无法判断类型是否已更改或者是否添加了代码。 对于项目文件也是如此。
+- 파일은 빌드 시스템이 변경을 검색하는 가장 작은 단위입니다. 따라서 코드 파일의 경우 빌드 시스템에서 형식이 변경되었는지 또는 코드가 추가되었는지 확인할 수 없습니다. 이는 프로젝트 파일도 마찬가지입니다.
 
-- 增量生成机制必须确定 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面是定义了一个类，还是使用了其他类。
+- 증분 빌드 메커니즘은 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지가 클래스를 정의하거나 다른 클래스를 사용한다는 것을 인식해야 합니다.
 
-- 如果 `Reference` 条目发生变化，则会重新编译所有页面。
+- `Reference` 항목이 변경된 경우 모든 페이지를 다시 컴파일합니다.
 
-- 如果代码文件发生变化，则会重新编译引用了本地定义类型的所有页面。
+- 코드 파일이 변경되면 로컬로 정의된 형식 참조가 있는 모든 페이지를 다시 컴파일합니다.
 
-- 如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件发生变化：
+- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일이 변경된 경우:
 
-  - 如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 在项目中被声明为 `Page`：如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 没有引用本地定义的类型，则会重新编译 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 以及包含本地引用的所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面；如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 包含本地引用，则会重新编译包含本地引用的所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面。
+  - 프로젝트에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]이 `Page`로 선언된 경우: [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 로컬로 정의된 형식 참조가 없는 경우 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 및 모든 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지를 로컬 참조와 함께 다시 컴파일합니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 로컬 참조가 있는 경우 모든 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지를 로컬 참조와 함께 다시 컴파일합니다.
 
   - 如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 在项目中声明为 `ApplicationDefinition`：重新编译所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页（原因：每个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 都引用了可能已更改的 <xref:System.Windows.Application> 类型）。
 
-- 如果项目文件将代码文件声明为应用程序定义，而不是 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件：
+- 프로젝트 파일에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일 대신 애플리케이션 정의로 코드 파일을 선언한 경우:
 
-  - 检查项目文件中的 `ApplicationClassName` 值是不是发生了变化（是不是有新的应用程序类型？）。 如果是，则重新编译整个应用程序。
+  - 프로젝트 파일의 `ApplicationClassName` 값이 변경되었는지(새로운 애플리케이션 형식이 있는지) 확인합니다. 변경된 경우 전체 애플리케이션을 다시 컴파일합니다.
 
-  - 否则，重新编译包含本地引用的所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面。
+  - 변경되지 않은 경우 모든 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지를 로컬 참조와 함께 다시 컴파일합니다.
 
-- 如果项目文件发生变化：应用前面的所有规则，并确认哪些内容需要重新编译。 以下属性发生变化会触发全面的重新编译：`AssemblyName`、`IntermediateOutputPath`、`RootNamespace` 和 `HostInBrowser`。
+- 프로젝트 파일이 변경된 경우: 앞에서 설명한 규칙을 모두 적용하고 다시 컴파일해야 할 항목을 확인합니다. `AssemblyName`, `IntermediateOutputPath`, `RootNamespace` 및 `HostInBrowser` 속성이 변경되면 전체 다시 컴파일됩니다.
 
-可能会出现以下重新编译情形：
+다시 컴파일 작업은 다음과 같은 시나리오로 수행될 수 있습니다.
 
-- 重新编译整个应用程序。
+- 전체 애플리케이션이 다시 컴파일됩니다.
 
-- 仅重新编译那些引用了本地定义类型的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件。
+- 로컬로 정의된 형식 참조가 있는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일만 다시 컴파일됩니다.
 
-- 不会重新编译任何内容（如果项目未发生任何变化）。
+- 모든 항목이 다시 컴파일되지 않습니다(프로젝트의 모든 항목이 변경되지 않음).
 
 ## <a name="see-also"></a>另请参阅
 
-- [部署 WPF 应用程序](deploying-a-wpf-application-wpf.md)
-- [WPF MSBuild 参考](/visualstudio/msbuild/wpf-msbuild-reference)
-- [WPF 中的 Pack URI](pack-uris-in-wpf.md)
-- [WPF 应用程序资源、内容和数据文件](wpf-application-resource-content-and-data-files.md)
+- [WPF 애플리케이션 배포](deploying-a-wpf-application-wpf.md)
+- [WPF MSBuild 참조](/visualstudio/msbuild/wpf-msbuild-reference)
+- [WPF의 Pack URI](pack-uris-in-wpf.md)
+- [WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일](wpf-application-resource-content-and-data-files.md)

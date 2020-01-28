@@ -1,5 +1,5 @@
 ---
-title: 如何：为 Windows 窗体 DataGridView 控件中的各个单元格添加工具提示
+title: 向 DataGridView 控件中的各个单元格添加工具提示
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding tooltips
 - data grids [Windows Forms], adding tooltips
 ms.assetid: 2a81f9de-d58b-4ea8-bc0b-8d93c2f4cf78
-ms.openlocfilehash: d0e9b3ad742633b135a2fe1c00af3fa72af7b44a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac86db5fa27a95adb20888cd59b5e236941d9177
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663457"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732176"
 ---
-# <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>如何：为 Windows 窗体 DataGridView 控件中的各个单元格添加工具提示
-默认情况下，使用工具提示显示的值<xref:System.Windows.Forms.DataGridView>太小而无法显示其完整内容的单元格。 您可以重写此行为，但是，若要设置的各个单元格工具提示文本值。 这是要显示给用户的单元的相关的其他信息，或向用户提供的单元格内容的其他说明。 例如，如果有行显示状态图标，你可能想要提供了使用工具提示的文本说明。  
+# <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>如何：为 Windows 窗体 DataGridView 控件中的单个单元格添加工具提示
+默认情况下，工具提示用于显示 <xref:System.Windows.Forms.DataGridView> 的单元格的值，这些值太小而无法显示其全部内容。 不过，您可以重写此行为，以便为个别单元格设置工具提示文本值。 这对于向用户显示有关单元的其他信息或向用户提供单元内容的替代说明非常有用。 例如，如果有一个显示状态图标的行，则可能需要使用工具提示提供文本说明。  
   
- 此外可以通过设置禁用的单元格级别工具提示显示<xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>属性设置为`false`。  
+ 还可以通过将 <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType> 属性设置为 `false`来禁用单元格级工具提示的显示。  
   
-### <a name="to-add-a-tooltip-to-a-cell"></a>若要向单元格添加工具提示  
+### <a name="to-add-a-tooltip-to-a-cell"></a>向单元格添加工具提示  
   
 - 设置 <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType> 属性。  
   
@@ -34,14 +34,14 @@ ms.locfileid: "64663457"
   
 - 此示例需要：  
   
-- 一个<xref:System.Windows.Forms.DataGridView>名为控件`dataGridView1`，其中包含一个名为列`Rating`显示字符串值的一到四个星号 ("*") 符号。 <xref:System.Windows.Forms.DataGridView.CellFormatting>控件的事件必须与在示例中所示的事件处理程序方法关联。  
+- 名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件，其中包含一个名为 `Rating` 的列，用于显示一到四个星号（"*"）符号的字符串值。 控件的 <xref:System.Windows.Forms.DataGridView.CellFormatting> 事件必须与此示例中所示的事件处理程序方法相关联。  
   
 - 对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   
-## <a name="robust-programming"></a>可靠编程  
- 当绑定<xref:System.Windows.Forms.DataGridView>到外部数据源控件或通过实现虚拟模式下提供您自己的数据源，可能会遇到性能问题。 若要使用的大量数据时，请避免对性能产生负面影响，请处理<xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded>事件而不是设置<xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A>的多个单元格的属性。 当处理此情况下，获取单元格的值<xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A>属性引发事件，并返回的值<xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType>属性设置为指定在事件处理程序。  
+## <a name="robust-programming"></a>可靠的编程  
+ 将 <xref:System.Windows.Forms.DataGridView> 控件绑定到外部数据源或通过实现虚拟模式提供自己的数据源时，可能会遇到性能问题。 若要避免在处理大量数据时出现性能损失，请处理 <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> 事件，而不是设置多个单元格的 <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> 属性。 处理此事件时，获取单元 <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> 属性的值将引发事件，并返回事件处理程序中指定的 <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> 属性的值。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>
