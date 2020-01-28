@@ -1,5 +1,5 @@
 ---
-title: 如何：向 TreeView 或 ListView 控件添加自定义信息（Windows 窗体）
+title: 如何：向 TreeView 或 ListView 控件添加自定义信息
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: f588a00c430eb1ae1f0cdcde6b7dd22f0c8671c5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fe507c41de97e9332f3f27e453a476d992f86627
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957002"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732219"
 ---
-# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a><span data-ttu-id="d55b0-102">如何：向 TreeView 或 ListView 控件添加自定义信息（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="d55b0-102">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>
-<span data-ttu-id="d55b0-103">可以在<xref:System.Windows.Forms.TreeView> <xref:System.Windows.Forms.ListView>控件中 Windows 窗体控件或派生项中创建派生节点。</span><span class="sxs-lookup"><span data-stu-id="d55b0-103">You can create a derived node in a Windows Forms <xref:System.Windows.Forms.TreeView> control or a derived item in a <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="d55b0-104">通过派生可添加任何所需字段，以及添加处理这些字段的自定义方法和构造函数。</span><span class="sxs-lookup"><span data-stu-id="d55b0-104">Derivation allows you to add any fields you require, as well as custom methods and constructors for handling them.</span></span> <span data-ttu-id="d55b0-105">此功能的用途之一是将 Customer 对象附加到每个树节点或列表项。</span><span class="sxs-lookup"><span data-stu-id="d55b0-105">One use of this feature is to attach a Customer object to each tree node or list item.</span></span> <span data-ttu-id="d55b0-106">此处的示例适用于<xref:System.Windows.Forms.TreeView>控件, 但相同的方法可用于<xref:System.Windows.Forms.ListView>控件。</span><span class="sxs-lookup"><span data-stu-id="d55b0-106">The examples here are for a <xref:System.Windows.Forms.TreeView> control, but the same approach can be used for a <xref:System.Windows.Forms.ListView> control.</span></span>  
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a><span data-ttu-id="00ce6-102">방법: TreeView 또는 ListView 컨트롤에 사용자 지정 정보 추가(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="00ce6-102">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>
+<span data-ttu-id="00ce6-103">可以在 Windows 窗体 <xref:System.Windows.Forms.TreeView> 控件或 <xref:System.Windows.Forms.ListView> 控件中的派生项中创建派生节点。</span><span class="sxs-lookup"><span data-stu-id="00ce6-103">You can create a derived node in a Windows Forms <xref:System.Windows.Forms.TreeView> control or a derived item in a <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="00ce6-104">파생은 필드를 처리하는 사용자 지정 메서드 및 생성자뿐만 아니라 필요로 하는 모든 필드를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00ce6-104">Derivation allows you to add any fields you require, as well as custom methods and constructors for handling them.</span></span> <span data-ttu-id="00ce6-105">이 기능을 사용하여 각 트리 노드 또는 목록 항목에 고객 개체를 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="00ce6-105">One use of this feature is to attach a Customer object to each tree node or list item.</span></span> <span data-ttu-id="00ce6-106">此处的示例针对 <xref:System.Windows.Forms.TreeView> 控件，但相同的方法可用于 <xref:System.Windows.Forms.ListView> 控件。</span><span class="sxs-lookup"><span data-stu-id="00ce6-106">The examples here are for a <xref:System.Windows.Forms.TreeView> control, but the same approach can be used for a <xref:System.Windows.Forms.ListView> control.</span></span>  
   
-### <a name="to-derive-a-tree-node"></a><span data-ttu-id="d55b0-107">派生树节点</span><span class="sxs-lookup"><span data-stu-id="d55b0-107">To derive a tree node</span></span>  
+### <a name="to-derive-a-tree-node"></a><span data-ttu-id="00ce6-107">트리 노드를 파생하려면</span><span class="sxs-lookup"><span data-stu-id="00ce6-107">To derive a tree node</span></span>  
   
-- <span data-ttu-id="d55b0-108">创建一个从<xref:System.Windows.Forms.TreeNode>类派生的新节点类, 该类具有一个用于记录文件路径的自定义字段。</span><span class="sxs-lookup"><span data-stu-id="d55b0-108">Create a new node class, derived from the <xref:System.Windows.Forms.TreeNode> class, which has a custom field to record a file path.</span></span>  
+- <span data-ttu-id="00ce6-108">创建一个新的 node 类，该类派生自 <xref:System.Windows.Forms.TreeNode> 类，该类具有一个用于记录文件路径的自定义字段。</span><span class="sxs-lookup"><span data-stu-id="00ce6-108">Create a new node class, derived from the <xref:System.Windows.Forms.TreeNode> class, which has a custom field to record a file path.</span></span>  
   
     ```vb  
     Class myTreeNode  
@@ -68,11 +68,11 @@ ms.locfileid: "69957002"
     };  
     ```  
   
-### <a name="to-use-a-derived-tree-node"></a><span data-ttu-id="d55b0-109">使用派生的树节点</span><span class="sxs-lookup"><span data-stu-id="d55b0-109">To use a derived tree node</span></span>  
+### <a name="to-use-a-derived-tree-node"></a><span data-ttu-id="00ce6-109">파생된 트리 노드를 사용하려면</span><span class="sxs-lookup"><span data-stu-id="00ce6-109">To use a derived tree node</span></span>  
   
-1. <span data-ttu-id="d55b0-110">新的派生树节点可用作函数调用的参数。</span><span class="sxs-lookup"><span data-stu-id="d55b0-110">You can use the new derived tree node as a parameter to function calls.</span></span>  
+1. <span data-ttu-id="00ce6-110">함수 호출에 대한 매개 변수로 새롭게 파생된 트리 노드를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00ce6-110">You can use the new derived tree node as a parameter to function calls.</span></span>  
   
-     <span data-ttu-id="d55b0-111">在下例中，为文本文件位置设置的路径是 My Documents 文件夹。</span><span class="sxs-lookup"><span data-stu-id="d55b0-111">In the example below, the path set for the location of the text file is the My Documents folder.</span></span> <span data-ttu-id="d55b0-112">这样做是出于一个假定，即假定大多数运行 Windows 操作系统的计算机都包含此目录。</span><span class="sxs-lookup"><span data-stu-id="d55b0-112">This is done because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="d55b0-113">这还使得具有最低系统访问级别的用户能够安全运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="d55b0-113">This also allows users with minimal system access levels to safely run the application.</span></span>  
+     <span data-ttu-id="00ce6-111">아래 예제에서 텍스트 파일의 위치에 설정된 경로는 내 문서 폴더입니다.</span><span class="sxs-lookup"><span data-stu-id="00ce6-111">In the example below, the path set for the location of the text file is the My Documents folder.</span></span> <span data-ttu-id="00ce6-112">Windows 운영 체제를 실행하는 대부분 컴퓨터가 이 디렉터리에 포함된다고 가정할 수 있기 때문에 그렇습니다.</span><span class="sxs-lookup"><span data-stu-id="00ce6-112">This is done because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="00ce6-113">또한 최소한의 시스템 액세스 수준을 가진 사용자가 안전하게 애플리케이션을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00ce6-113">This also allows users with minimal system access levels to safely run the application.</span></span>  
   
     ```vb  
     ' You should replace the bold text file   
@@ -100,7 +100,7 @@ ms.locfileid: "69957002"
        "\\TextFile.txt")));  
     ```  
   
-2. <span data-ttu-id="d55b0-114">如果传递的是树节点, 并且它被类型化为<xref:System.Windows.Forms.TreeNode>类, 则需要强制转换为派生类。</span><span class="sxs-lookup"><span data-stu-id="d55b0-114">If you are passed the tree node and it is typed as a <xref:System.Windows.Forms.TreeNode> class, then you will need to cast to your derived class.</span></span> <span data-ttu-id="d55b0-115">强制转换是从一种对象类型到另一种对象类型的显式转换。</span><span class="sxs-lookup"><span data-stu-id="d55b0-115">Casting is an explicit conversion from one type of object to another.</span></span> <span data-ttu-id="d55b0-116">有关强制转换的详细信息, 请参阅[隐式和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)(Visual Basic)、[强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)(视觉对象C#) 或[强制转换运算符: ()](/cpp/cpp/cast-operator-parens) (视觉对象C++)。</span><span class="sxs-lookup"><span data-stu-id="d55b0-116">For more information on casting, see [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [Casting and type conversions](../../../csharp/programming-guide/types/casting-and-type-conversions.md) (Visual C#), or [Cast Operator: ()](/cpp/cpp/cast-operator-parens) (Visual C++).</span></span>  
+2. <span data-ttu-id="00ce6-114">如果传递的是树节点，并且它被类型化为 <xref:System.Windows.Forms.TreeNode> 类，则需要强制转换为派生类。</span><span class="sxs-lookup"><span data-stu-id="00ce6-114">If you are passed the tree node and it is typed as a <xref:System.Windows.Forms.TreeNode> class, then you will need to cast to your derived class.</span></span> <span data-ttu-id="00ce6-115">캐스팅은 개체의 한 유형에서 다른 유형으로의 명시적 변환입니다.</span><span class="sxs-lookup"><span data-stu-id="00ce6-115">Casting is an explicit conversion from one type of object to another.</span></span> <span data-ttu-id="00ce6-116">有关强制转换的详细信息，请参阅[隐式和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)（Visual Basic）、[强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)（视觉对象C#）或[强制转换运算符：（）](/cpp/cpp/cast-operator-parens) （视觉对象C++）。</span><span class="sxs-lookup"><span data-stu-id="00ce6-116">For more information on casting, see [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [Casting and type conversions](../../../csharp/programming-guide/types/casting-and-type-conversions.md) (Visual C#), or [Cast Operator: ()](/cpp/cpp/cast-operator-parens) (Visual C++).</span></span>  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  
@@ -130,7 +130,7 @@ ms.locfileid: "69957002"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="d55b0-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="d55b0-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="00ce6-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="00ce6-117">See also</span></span>
 
-- [<span data-ttu-id="d55b0-118">TreeView 控件</span><span class="sxs-lookup"><span data-stu-id="d55b0-118">TreeView Control</span></span>](treeview-control-windows-forms.md)
-- [<span data-ttu-id="d55b0-119">ListView 控件</span><span class="sxs-lookup"><span data-stu-id="d55b0-119">ListView Control</span></span>](listview-control-windows-forms.md)
+- [<span data-ttu-id="00ce6-118">TreeView 컨트롤</span><span class="sxs-lookup"><span data-stu-id="00ce6-118">TreeView Control</span></span>](treeview-control-windows-forms.md)
+- [<span data-ttu-id="00ce6-119">ListView 컨트롤</span><span class="sxs-lookup"><span data-stu-id="00ce6-119">ListView Control</span></span>](listview-control-windows-forms.md)

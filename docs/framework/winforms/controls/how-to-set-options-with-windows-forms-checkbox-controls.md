@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Windows 窗体 CheckBox 控件设置选项
+title: 使用 CheckBox 控件设置选项
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: 881996563acef36a1981ca6236c155b8fc56ef0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84198eab42aa02b1bb37fa16a3c4247a37f58a10
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013200"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746766"
 ---
-# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a><span data-ttu-id="0630f-102">如何：使用 Windows 窗体 CheckBox 控件设置选项</span><span class="sxs-lookup"><span data-stu-id="0630f-102">How to: Set Options with Windows Forms CheckBox Controls</span></span>
-<span data-ttu-id="0630f-103">Windows 窗体<xref:System.Windows.Forms.CheckBox>控制用于授予用户 True/False 或 Yes/No 选项。</span><span class="sxs-lookup"><span data-stu-id="0630f-103">A Windows Forms <xref:System.Windows.Forms.CheckBox> control is used to give users True/False or Yes/No options.</span></span> <span data-ttu-id="0630f-104">选择此项时，该控件将显示一个复选标记。</span><span class="sxs-lookup"><span data-stu-id="0630f-104">The control displays a check mark when it is selected.</span></span>  
+# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a><span data-ttu-id="6e085-102">如何： 使用 Windows 窗体复选框控件设置选项</span><span class="sxs-lookup"><span data-stu-id="6e085-102">How to: Set Options with Windows Forms CheckBox Controls</span></span>
+<span data-ttu-id="6e085-103">Windows 窗体 <xref:System.Windows.Forms.CheckBox> 控件用于向用户授予 True/False 或 Yes/No 选项。</span><span class="sxs-lookup"><span data-stu-id="6e085-103">A Windows Forms <xref:System.Windows.Forms.CheckBox> control is used to give users True/False or Yes/No options.</span></span> <span data-ttu-id="6e085-104">选中时，控件将显示复选标记。</span><span class="sxs-lookup"><span data-stu-id="6e085-104">The control displays a check mark when it is selected.</span></span>  
   
-### <a name="to-set-options-with-checkbox-controls"></a><span data-ttu-id="0630f-105">若要使用 CheckBox 控件设置选项</span><span class="sxs-lookup"><span data-stu-id="0630f-105">To set options with CheckBox controls</span></span>  
+### <a name="to-set-options-with-checkbox-controls"></a><span data-ttu-id="6e085-105">用 CheckBox 控件设置选项</span><span class="sxs-lookup"><span data-stu-id="6e085-105">To set options with CheckBox controls</span></span>  
   
-1. <span data-ttu-id="0630f-106">检查的值<xref:System.Windows.Forms.CheckBox.Checked%2A>属性来确定其状态，然后使用该值来设置一个选项。</span><span class="sxs-lookup"><span data-stu-id="0630f-106">Examine the value of the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine its state, and use that value to set an option.</span></span>  
+1. <span data-ttu-id="6e085-106">检查 <xref:System.Windows.Forms.CheckBox.Checked%2A> 属性的值以确定其状态，并使用该值来设置选项。</span><span class="sxs-lookup"><span data-stu-id="6e085-106">Examine the value of the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine its state, and use that value to set an option.</span></span>  
   
-     <span data-ttu-id="0630f-107">代码在以下示例中，当<xref:System.Windows.Forms.CheckBox>控件的<xref:System.Windows.Forms.CheckBox.CheckedChanged>引发事件时，窗体的<xref:System.Windows.Forms.Control.AllowDrop%2A>属性设置为`false`如果选中了复选框。</span><span class="sxs-lookup"><span data-stu-id="0630f-107">In the code sample below, when the <xref:System.Windows.Forms.CheckBox> control's <xref:System.Windows.Forms.CheckBox.CheckedChanged> event is raised, the form's <xref:System.Windows.Forms.Control.AllowDrop%2A> property is set to `false` if the check box is checked.</span></span> <span data-ttu-id="0630f-108">这是适用于想要限制用户交互的情况。</span><span class="sxs-lookup"><span data-stu-id="0630f-108">This is useful for situations where you want to restrict user interaction.</span></span>  
+     <span data-ttu-id="6e085-107">在下面的代码示例中，当引发 <xref:System.Windows.Forms.CheckBox> 控件的 <xref:System.Windows.Forms.CheckBox.CheckedChanged> 事件时，如果选中此复选框，则窗体的 <xref:System.Windows.Forms.Control.AllowDrop%2A> 属性设置为 `false`。</span><span class="sxs-lookup"><span data-stu-id="6e085-107">In the code sample below, when the <xref:System.Windows.Forms.CheckBox> control's <xref:System.Windows.Forms.CheckBox.CheckedChanged> event is raised, the form's <xref:System.Windows.Forms.Control.AllowDrop%2A> property is set to `false` if the check box is checked.</span></span> <span data-ttu-id="6e085-108">这对于想要限制用户交互的情况非常有用。</span><span class="sxs-lookup"><span data-stu-id="6e085-108">This is useful for situations where you want to restrict user interaction.</span></span>  
   
     ```vb  
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, _  
@@ -65,9 +65,9 @@ ms.locfileid: "62013200"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="0630f-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="0630f-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e085-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6e085-109">See also</span></span>
 
 - <xref:System.Windows.Forms.CheckBox>
-- [<span data-ttu-id="0630f-110">CheckBox 控件概述</span><span class="sxs-lookup"><span data-stu-id="0630f-110">CheckBox Control Overview</span></span>](checkbox-control-overview-windows-forms.md)
-- [<span data-ttu-id="0630f-111">如何：响应 Windows 窗体 CheckBox 控件单击</span><span class="sxs-lookup"><span data-stu-id="0630f-111">How to: Respond to Windows Forms CheckBox Clicks</span></span>](how-to-respond-to-windows-forms-checkbox-clicks.md)
-- [<span data-ttu-id="0630f-112">CheckBox 控件</span><span class="sxs-lookup"><span data-stu-id="0630f-112">CheckBox Control</span></span>](checkbox-control-windows-forms.md)
+- [<span data-ttu-id="6e085-110">CheckBox 控件概述</span><span class="sxs-lookup"><span data-stu-id="6e085-110">CheckBox Control Overview</span></span>](checkbox-control-overview-windows-forms.md)
+- [<span data-ttu-id="6e085-111">如何：响应 Windows 窗体 CheckBox 控件单击</span><span class="sxs-lookup"><span data-stu-id="6e085-111">How to: Respond to Windows Forms CheckBox Clicks</span></span>](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [<span data-ttu-id="6e085-112">CheckBox 控件</span><span class="sxs-lookup"><span data-stu-id="6e085-112">CheckBox Control</span></span>](checkbox-control-windows-forms.md)
