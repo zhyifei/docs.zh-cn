@@ -1,66 +1,62 @@
 ---
 title: .NET 指南
-description: 了解 .NET。
+description: 了解 .NET 和 .NET Standard。
 author: cartermp
-ms.date: 05/02/2017
+ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 8a989ed4ff0d670296fc255733d01ddd5b5a8f1e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ce76448b69a002216125192f75d24b38e7582260
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838099"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76730775"
 ---
-# <a name="net-guide"></a><span data-ttu-id="0c214-103">.NET 指南</span><span class="sxs-lookup"><span data-stu-id="0c214-103">.NET Guide</span></span>
+# <a name="net-guide"></a><span data-ttu-id="75dd1-103">.NET 指南</span><span class="sxs-lookup"><span data-stu-id="75dd1-103">.NET guide</span></span>
 
-<span data-ttu-id="0c214-104">.NET 指南提供大量关于 .NET 的信息。</span><span class="sxs-lookup"><span data-stu-id="0c214-104">The .NET Guide provides a large amount of information about .NET.</span></span>  <span data-ttu-id="0c214-105">根据对 .NET 的熟悉程度，可浏览本指南的不同部分以及 .NET 文档的其他部分。</span><span class="sxs-lookup"><span data-stu-id="0c214-105">Depending on your familiarity with .NET, you may wish to explore different sections of this guide and other sections of the .NET documentation.</span></span>
+<span data-ttu-id="75dd1-104">.NET 指南提供关于 .NET 的信息。</span><span class="sxs-lookup"><span data-stu-id="75dd1-104">The .NET guide provides information about .NET.</span></span> <span data-ttu-id="75dd1-105">根据对 .NET 的熟悉程度，可浏览本指南的不同部分和其他指南，例如 [.NET Core](../core/index.md) 或 [.NET Framework](../framework/index.md)。</span><span class="sxs-lookup"><span data-stu-id="75dd1-105">Depending on your familiarity with .NET, you may wish to explore different sections of this guide and other guides such as [.NET Core](../core/index.md) or [.NET Framework](../framework/index.md).</span></span>
 
-## <a name="new-to-net"></a><span data-ttu-id="0c214-106">初次使用 .NET</span><span class="sxs-lookup"><span data-stu-id="0c214-106">New to .NET</span></span>
+## <a name="new-to-net"></a><span data-ttu-id="75dd1-106">初次使用 .NET</span><span class="sxs-lookup"><span data-stu-id="75dd1-106">New to .NET</span></span>
 
-<span data-ttu-id="0c214-107">如果希望了解有关 .NET 的高级概述，请查看[什么是 .NET？](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet)。</span><span class="sxs-lookup"><span data-stu-id="0c214-107">If you want a high-level overview about .NET, check out [What is .NET?](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet).</span></span>
+<span data-ttu-id="75dd1-107">如果希望了解 .NET 的简要概述，请参阅[什么是 .NET？](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet)一文。</span><span class="sxs-lookup"><span data-stu-id="75dd1-107">If you want a high-level overview of .NET, see [What is .NET?](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet).</span></span>
 
-<span data-ttu-id="0c214-108">如果不熟悉 .NET，请查看[入门](get-started.md)文章。</span><span class="sxs-lookup"><span data-stu-id="0c214-108">If you're new to .NET, check out the [Get Started](get-started.md) article.</span></span>
+<span data-ttu-id="75dd1-108">如果不熟悉 .NET，请参阅[入门](get-started.md)。</span><span class="sxs-lookup"><span data-stu-id="75dd1-108">If you're new to .NET, see [Get started](get-started.md).</span></span>
 
-<span data-ttu-id="0c214-109">如果想要通过指导教程了解 .NET 的主要功能，请查看 [.NET 教程](tour.md)。</span><span class="sxs-lookup"><span data-stu-id="0c214-109">If you prefer to have a guided tour through major features of .NET, check out the [Tour of .NET](tour.md).</span></span>
+<span data-ttu-id="75dd1-109">如果想要通过指导教程了解 .NET 的主要功能，请参阅 [.NET 教程](tour.md)。</span><span class="sxs-lookup"><span data-stu-id="75dd1-109">If you prefer to have a guided tour through major features of .NET, see [Tour of .NET](tour.md).</span></span>
 
-<span data-ttu-id="0c214-110">还可阅读 [.NET 体系结构组件](components.md)，大致了解 .NET 的各个部分以及如何将它们组合在一起。</span><span class="sxs-lookup"><span data-stu-id="0c214-110">You can also read about [.NET Architectural Components](components.md) to get an overview of the various "pieces" of .NET and how they fit together.</span></span>
+<span data-ttu-id="75dd1-110">若要大致了解 .NET 的各个部分以及如何将它们组合在一起，请参阅 [.NET 体系结构组件](components.md)。</span><span class="sxs-lookup"><span data-stu-id="75dd1-110">For an overview of the various pieces of .NET and how they fit together, see [.NET architectural components](components.md).</span></span>
 
-## <a name="new-to-net-core"></a><span data-ttu-id="0c214-111">初次使用 .NET Core</span><span class="sxs-lookup"><span data-stu-id="0c214-111">New to .NET Core</span></span>
+## <a name="new-to-net-core"></a><span data-ttu-id="75dd1-111">初次使用 .NET Core</span><span class="sxs-lookup"><span data-stu-id="75dd1-111">New to .NET Core</span></span>
 
-<span data-ttu-id="0c214-112">如果不熟悉 .NET Core，请查看 [.NET Core 入门](../core/get-started.md)。</span><span class="sxs-lookup"><span data-stu-id="0c214-112">If you're new to .NET Core, check out [Get Started with .NET Core](../core/get-started.md).</span></span>
+<span data-ttu-id="75dd1-112">如果不熟悉 .NET Core，请查看 [.NET Core 入门](../core/get-started.md)。</span><span class="sxs-lookup"><span data-stu-id="75dd1-112">If you're new to .NET Core, check out [Get started with .NET Core](../core/get-started.md).</span></span>
 
-## <a name="new-to-net-standard"></a><span data-ttu-id="0c214-113">初次使用 .NET Standard</span><span class="sxs-lookup"><span data-stu-id="0c214-113">New to .NET Standard</span></span>
+## <a name="new-to-net-standard"></a><span data-ttu-id="75dd1-113">初次使用 .NET Standard</span><span class="sxs-lookup"><span data-stu-id="75dd1-113">New to .NET Standard</span></span>
 
-<span data-ttu-id="0c214-114">如果不熟悉 .NET Standard，请查看 [.NET Standard](net-standard.md)。</span><span class="sxs-lookup"><span data-stu-id="0c214-114">If you're new to .NET Standard, check out [.NET Standard](net-standard.md).</span></span>
+<span data-ttu-id="75dd1-114">如果不熟悉 .NET Standard，请查看 [.NET Standard](net-standard.md)。</span><span class="sxs-lookup"><span data-stu-id="75dd1-114">If you're new to .NET Standard, check out [.NET Standard](net-standard.md).</span></span>
 
-## <a name="porting-net-framework-code-to-net-core"></a><span data-ttu-id="0c214-115">将 .NET Framework 代码移植到 .NET Core</span><span class="sxs-lookup"><span data-stu-id="0c214-115">Porting .NET Framework Code to .NET Core</span></span>
+## <a name="port-net-framework-code-to-net-standard-or-net-core"></a><span data-ttu-id="75dd1-115">将 .NET Framework 代码移植到 .NET Standard 或 .NET Core</span><span class="sxs-lookup"><span data-stu-id="75dd1-115">Port .NET Framework code to .NET Standard or .NET Core</span></span>
 
-<span data-ttu-id="0c214-116">如果要将应用程序、服务或某些系统组件移植到 .NET Core，请查看[从 .NET Framework 移植到 .NET Core](../core/porting/index.md)。</span><span class="sxs-lookup"><span data-stu-id="0c214-116">If you're looking to port an application, service, or some component of a system to .NET Core, check out [Porting to .NET Core from .NET Framework](../core/porting/index.md).</span></span>
+<span data-ttu-id="75dd1-116">若要将应用程序、服务、组件或 NuGet 包移植到 .NET Standard 或 .NET Core，请参阅[从 .NET Framework 移植到 .NET Core](../core/porting/index.md)。</span><span class="sxs-lookup"><span data-stu-id="75dd1-116">To port an application, service, component, or NuGet package to .NET Standard or .NET Core, see [Port to .NET Core from .NET Framework](../core/porting/index.md).</span></span> <span data-ttu-id="75dd1-117">.NET Standard 和 .NET Core 共享工具，因此，文章内容适用于移植到这两个框架。</span><span class="sxs-lookup"><span data-stu-id="75dd1-117">Tooling for .NET Standard and .NET Core is shared, so the content is relevant for porting to both frameworks.</span></span>
 
-## <a name="porting-a-nuget-package-from-net-framework-to-net-standard-or-net-core"></a><span data-ttu-id="0c214-117">将 NuGet 包从 .NET Framework 移植到 .NET Standard 或 .NET Core</span><span class="sxs-lookup"><span data-stu-id="0c214-117">Porting a NuGet package from .NET Framework to .NET Standard or .NET Core</span></span>
+## <a name="net-concepts"></a><span data-ttu-id="75dd1-118">.NET 概念</span><span class="sxs-lookup"><span data-stu-id="75dd1-118">.NET concepts</span></span>
 
-<span data-ttu-id="0c214-118">如果要将 NuGet 包移植到 .NET Standard，请查看[从 .NET Framework 移植到 .NET Core](../core/porting/index.md)。</span><span class="sxs-lookup"><span data-stu-id="0c214-118">If you're looking to port a NuGet package to .NET Standard, check out [Porting to .NET Core from .NET Framework](../core/porting/index.md).</span></span>  <span data-ttu-id="0c214-119">.NET Standard 和 .NET Core 使用相同的工具，因此移植到 .NET Standard 以及 .NET Core 的内容彼此相关。</span><span class="sxs-lookup"><span data-stu-id="0c214-119">Tooling for .NET Standard and .NET Core are shared, so the content will be relevant for porting to .NET Standard as well as .NET Core.</span></span>
+<span data-ttu-id="75dd1-119">有关 .NET 的主要概念的详细信息，请参阅：</span><span class="sxs-lookup"><span data-stu-id="75dd1-119">For more information about the major concepts of .NET, see:</span></span>
 
-## <a name="interested-in-major-net-concepts"></a><span data-ttu-id="0c214-120">对 .NET 主要概念感兴趣</span><span class="sxs-lookup"><span data-stu-id="0c214-120">Interested in Major .NET Concepts</span></span>
+* [<span data-ttu-id="75dd1-120">.NET 体系结构组件</span><span class="sxs-lookup"><span data-stu-id="75dd1-120">.NET architectural components</span></span>](components.md)
+* [<span data-ttu-id="75dd1-121">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="75dd1-121">.NET Standard</span></span>](net-standard.md)
+* [<span data-ttu-id="75dd1-122">本机互操作性</span><span class="sxs-lookup"><span data-stu-id="75dd1-122">Native interoperability</span></span>](native-interop/index.md)
+* [<span data-ttu-id="75dd1-123">垃圾回收</span><span class="sxs-lookup"><span data-stu-id="75dd1-123">Garbage collection</span></span>](garbage-collection/index.md)
+* [<span data-ttu-id="75dd1-124">.NET 中的基类型</span><span class="sxs-lookup"><span data-stu-id="75dd1-124">Base types in .NET</span></span>](base-types/index.md)
+* [<span data-ttu-id="75dd1-125">集合</span><span class="sxs-lookup"><span data-stu-id="75dd1-125">Collections</span></span>](collections/index.md)
+* [<span data-ttu-id="75dd1-126">日期、时间和时区</span><span class="sxs-lookup"><span data-stu-id="75dd1-126">Dates, times, and time zones</span></span>](datetime/index.md)
+* [<span data-ttu-id="75dd1-127">异步编程</span><span class="sxs-lookup"><span data-stu-id="75dd1-127">Asynchronous programming</span></span>](async.md)
 
-<span data-ttu-id="0c214-121">如果对 .NET 的某些主要概念感兴趣，请查看：</span><span class="sxs-lookup"><span data-stu-id="0c214-121">If you're interested in some of the major concepts of .NET, check out:</span></span>
+<span data-ttu-id="75dd1-128">有关三种主要 .NET 语言的信息，请参阅：</span><span class="sxs-lookup"><span data-stu-id="75dd1-128">For information about the three major .NET languages, see:</span></span>
 
-* [<span data-ttu-id="0c214-122">.NET 体系结构组件</span><span class="sxs-lookup"><span data-stu-id="0c214-122">.NET Architectural Components</span></span>](components.md)
-* [<span data-ttu-id="0c214-123">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="0c214-123">.NET Standard</span></span>](net-standard.md)
-* [<span data-ttu-id="0c214-124">本机互操作性</span><span class="sxs-lookup"><span data-stu-id="0c214-124">Native Interoperability</span></span>](native-interop/index.md)
-* [<span data-ttu-id="0c214-125">垃圾回收</span><span class="sxs-lookup"><span data-stu-id="0c214-125">Garbage Collection</span></span>](garbage-collection/index.md)
-* [<span data-ttu-id="0c214-126">.NET 中的基类型</span><span class="sxs-lookup"><span data-stu-id="0c214-126">Base Types in .NET</span></span>](base-types/index.md)
-* [<span data-ttu-id="0c214-127">集合</span><span class="sxs-lookup"><span data-stu-id="0c214-127">Collections</span></span>](collections/index.md)
-* [<span data-ttu-id="0c214-128">日期、时间和时区</span><span class="sxs-lookup"><span data-stu-id="0c214-128">Dates, times, and time zones</span></span>](datetime/index.md)
-* [<span data-ttu-id="0c214-129">异步编程</span><span class="sxs-lookup"><span data-stu-id="0c214-129">Asynchronous Programming</span></span>](async.md)
+* [<span data-ttu-id="75dd1-129">C# 指南</span><span class="sxs-lookup"><span data-stu-id="75dd1-129">C# guide</span></span>](../csharp/index.yml)
+* [<span data-ttu-id="75dd1-130">F# 指南</span><span class="sxs-lookup"><span data-stu-id="75dd1-130">F# guide</span></span>](../fsharp/index.yml)
+* [<span data-ttu-id="75dd1-131">Visual Basic 指南</span><span class="sxs-lookup"><span data-stu-id="75dd1-131">Visual Basic guide</span></span>](../visual-basic/index.yml)
 
-<span data-ttu-id="0c214-130">此外，请查看以下每种语言指南，了解这三种主要的 .NET 语言：</span><span class="sxs-lookup"><span data-stu-id="0c214-130">Additionally, check out each language guide to learn about the three major .NET languages:</span></span>
+## <a name="api-reference"></a><span data-ttu-id="75dd1-132">API 参考</span><span class="sxs-lookup"><span data-stu-id="75dd1-132">API reference</span></span>
 
-* [<span data-ttu-id="0c214-131">C# 指南</span><span class="sxs-lookup"><span data-stu-id="0c214-131">C# Guide</span></span>](../csharp/index.yml)
-* [<span data-ttu-id="0c214-132">F# 指南</span><span class="sxs-lookup"><span data-stu-id="0c214-132">F# Guide</span></span>](../fsharp/index.yml)
-* [<span data-ttu-id="0c214-133">Visual Basic 指南</span><span class="sxs-lookup"><span data-stu-id="0c214-133">Visual Basic Guide</span></span>](../visual-basic/index.yml)
-
-## <a name="api-reference"></a><span data-ttu-id="0c214-134">API 参考</span><span class="sxs-lookup"><span data-stu-id="0c214-134">API Reference</span></span>
-
-<span data-ttu-id="0c214-135">请查看 [.NET API 参考](../../api/index.md)，了解各种可用的 API。</span><span class="sxs-lookup"><span data-stu-id="0c214-135">Check out the [.NET API Reference](../../api/index.md) to see the breadth of APIs available.</span></span>
+<span data-ttu-id="75dd1-133">有关 .NET 中所有可用 API 的详细信息，请参阅 [.NET API 参考](../../api/index.md)。</span><span class="sxs-lookup"><span data-stu-id="75dd1-133">For detailed information about all of the APIs that are available in .NET, see [.NET API reference](../../api/index.md).</span></span>
