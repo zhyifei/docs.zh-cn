@@ -2,12 +2,12 @@
 title: 实现复原 Entity Framework Core SQL 连接
 description: 了解如何实现复原 Entity Framework Core SQL 连接。 在云中使用 Azure SQL 数据库时，此技术尤为重要。
 ms.date: 10/16/2018
-ms.openlocfilehash: 3128cf1be7f2dc8804a002556db232f4e0fc8c33
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7899fc263ab3cde6ac2410ca614a7e5fa285576b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094053"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732722"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>实现复原 Entity Framework Core SQL 连接
 
@@ -88,7 +88,7 @@ public async Task<IActionResult> UpdateProduct(
 }
 ```
 
-第一个 <xref:Microsoft.EntityFrameworkCore.DbContext> 是 `_catalogContext`，第二个 `DbContext` 在 `_integrationEventLogService` 对象中。 通过使用 EF 执行策略在所有 `DbContext` 对象之间执行“提交”操作。
+第一个 <xref:Microsoft.EntityFrameworkCore.DbContext> 是 `_catalogContext`，第二个 `DbContext` 在 `_catalogIntegrationEventService` 对象中。 通过使用 EF 执行策略在所有 `DbContext` 对象之间执行“提交”操作。
 
 若要实现此多个 `DbContext` 提交，`SaveEventAndCatalogContextChangesAsync` 要使用 `ResilientTransaction` 类，如以下代码所示：
 

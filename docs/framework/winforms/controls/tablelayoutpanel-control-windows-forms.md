@@ -1,5 +1,5 @@
 ---
-title: TableLayoutPanel 控件（Windows 窗体）
+title: TableLayoutPanel 控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - layout [Windows Forms], TableLayoutPanel control
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
-ms.openlocfilehash: b51d3bd8e9d8816dfae6c10fc752adb0b3cea59c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12b40d4ce47770b3ffe9bfdebca74eca4afd3dd1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932491"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735504"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel 控件（Windows 窗体）
 <xref:System.Windows.Forms.TableLayoutPanel> 控件将其内容排列在网格中。 由于布局是同时在设计时和运行时执行的，因此它可随应用程序环境的变化而动态地变化。 这使得面板中的控件能够按比例调整大小，以便能够响应更改（例如父控件的大小调整或本地化产生的文本长度更改）。  
@@ -29,24 +29,24 @@ ms.locfileid: "61932491"
  [TableLayoutPanel 控件中的自动调整大小行为](autosize-behavior-in-the-tablelayoutpanel-control.md)  
  说明 <xref:System.Windows.Forms.TableLayoutPanel> 控件支持自动调整大小行为的方式。  
   
- [如何：锚定和停靠在 TableLayoutPanel 控件中的子控件](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ [如何：在 TableLayoutPanel 控件中锚定和停靠子控件](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
  演示如何在 <xref:System.Windows.Forms.TableLayoutPanel> 控件中锚定和停靠子控件。  
   
- [如何：设计很好地响应本地化 Windows 窗体布局](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
+ [如何：设计非常适合本地化的 Windows 窗体布局](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
  演示使用 <xref:System.Windows.Forms.TableLayoutPanel> 控件来生成适合本地化的窗体。  
   
- [如何：创建用于数据输入的大小可调的 Windows 窗体](how-to-create-a-resizable-windows-form-for-data-entry.md)  
+ [如何：创建可重设大小的 Windows 窗体以供输入数据](how-to-create-a-resizable-windows-form-for-data-entry.md)  
  演示使用 <xref:System.Windows.Forms.TableLayoutPanel> 控件来生成能很好地响应大小调整的窗体。  
   
-1. [如何：对齐和拉伸控件在 TableLayoutPanel 控件中](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
+1. [如何：在 TableLayoutPanel 控件中对齐和拉伸控件](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2. [如何：TableLayoutPanel 控件中 s p a n 行和列](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
+2. [如何：在 TableLayoutPanel 控件中跨行和跨列](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-3. [如何：编辑 TableLayoutPanel 控件中的行和列](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
+3. [如何：在 TableLayoutPanel 控件中编辑行和列](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4. [演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+4. [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Windows.Forms.TableLayoutPanel>  
  提供关于 <xref:System.Windows.Forms.TableLayoutPanel> 控件的参考文档。  
   

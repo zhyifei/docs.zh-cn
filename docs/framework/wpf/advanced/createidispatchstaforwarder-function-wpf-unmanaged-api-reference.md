@@ -1,5 +1,6 @@
 ---
-title: CreateIDispatchSTAForwarder 函数 （WPF 非托管 API 参考）
+title: CreateIDispatchSTAForwarder 函数-WPF 非托管 API 参考
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,19 +9,19 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 57a02dfa-f091-4ace-9c06-1f4ab52b3527
-ms.openlocfilehash: a89b29cd459060c93d5ca77bb2154e1a10b02d03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67f2542733fb9c6af197c99ede2bd097ce876b5d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926446"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738028"
 ---
-# <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>CreateIDispatchSTAForwarder 函数 （WPF 非托管 API 参考）
-此 API 支持 Windows Presentation Foundation (WPF) 基础结构，不应在代码中直接使用。  
+# <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>CreateIDispatchSTAForwarder 函数（WPF 非托管 API 参考）
+此 API 支持 Windows Presentation Foundation （WPF）基础结构，不应在代码中直接使用。  
   
- Windows Presentation Foundation (WPF) 基础结构使用的线程和 windows 管理。  
+ 由 Windows Presentation Foundation （WPF）基础结构用于线程和 Windows 管理。  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT CreateIDispatchSTAForwarder(  
@@ -29,26 +30,26 @@ HRESULT CreateIDispatchSTAForwarder(
 )  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>매개 변수  
   
-## <a name="property-valuereturn-value"></a>属性值/返回值  
+## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  pDispatchDelegate  
- 一个指向`IDispatch`接口。  
+ 指向 `IDispatch` 接口的指针。  
   
  ppForwarder  
- 指向的地址的指针`IDispatch`接口。  
+ 指向 `IDispatch` 接口的地址的指针。  
   
-## <a name="requirements"></a>要求  
- **平台：** 请参阅[.NET Framework 系统需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>요구 사항  
+ **平台：** 请参阅[.NET Framework 系统要求](../../get-started/system-requirements.md)。  
   
- **DLL:**  
+ **.DLL**  
   
- 在.NET Framework 3.0 和 3.5:PresentationHostDLL.dll  
+ 在 .NET Framework 3.0 和3.5： PresentationHostDLL  
   
- 在.NET Framework 4 及更高版本：PresentationHost_v0400.dll  
+ 在 .NET Framework 4 及更高版本中： PresentationHost_v0400 .dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [WPF 非托管 API 参考](wpf-unmanaged-api-reference.md)
+- [F 관리되지 않는 API 참조](wpf-unmanaged-api-reference.md)

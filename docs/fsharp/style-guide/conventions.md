@@ -1,15 +1,15 @@
 ---
-title: F# 编码约定
+title: F# 코딩 규칙
 description: 编写F#代码时，请了解一般准则和惯例。
-ms.date: 11/04/2019
-ms.openlocfilehash: 60eff6392d71caa54eeb438f2f6ba9db910f1bc1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.date: 01/15/2020
+ms.openlocfilehash: ca86bcf714d2fb4ee5f173ee54ba12c317f9abe7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978229"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737820"
 ---
-# <a name="f-coding-conventions"></a>F# 编码约定
+# <a name="f-coding-conventions"></a>F# 코딩 규칙
 
 以下约定是从使用大型F#基本代码的经验中制定的。 [好F#代码的五大原则](index.md#five-principles-of-good-f-code)是每个建议的基础。 它们与[ F#组件设计准则](component-design-guidelines.md)相关，但适用于任何F#代码，不仅仅是库等组件。
 
@@ -36,7 +36,7 @@ type MyClass() =
     ...
 ```
 
-仅从F#调用时，使用顶级模块可能不会出现差异，但是对于C#使用者来说，必须使用`MyCode`模块限定`MyClass`。
+仅从F#调用时，使用顶级模块可能不会出现差异，但是对于C#使用者来说，必须使用 `MyCode` 模块限定 `MyClass`。
 
 ```fsharp
 // Bad!
@@ -48,7 +48,7 @@ type MyClass() =
 
 ### <a name="carefully-apply-autoopen"></a>仔细应用 `[<AutoOpen>]`
 
-`[<AutoOpen>]` 构造可以污染可供调用方使用的作用域，并且从何处获得答案是 "神奇的"。 这通常不是件好事。 此规则的例外情况是F#核心库本身（尽管这种情况也有争议）。
+`[<AutoOpen>]` 构造可以污染可供调用方使用的作用域，并且从何处获得答案是 "神奇的"。 这并不是件好事。 此规则的例外情况是F#核心库本身（尽管这种情况也有争议）。
 
 但是，如果你想要从该公共 API 单独组织的公共 API 具有 helper 功能，则此功能非常方便。
 
@@ -89,9 +89,9 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 ### <a name="sort-open-statements-topologically"></a>Sort `open` 语句界定闭合
 
-在F#中，声明的顺序很重要，包括 `open`语句。 这不同于C#，`using`和`using static`的影响与文件中这些语句的排序无关。
+在F#中，声明的顺序很重要，包括 `open` 语句。 这不同于C#，`using` 和 `using static` 的影响与文件中这些语句的排序无关。
 
-在F#中，在范围中打开的元素可以隐藏已存在的其他元素。 这意味着重新排序 `open` 语句可能会改变代码的含义。 因此，通常不建议对所有 `open` 语句（例如 alphanumerically）进行任意排序，避免会生成您可能需要的不同行为。
+在F#中，在范围中打开的元素可以隐藏已存在的其他元素。 这意味着重新排序 `open` 语句可能会改变代码的含义。 因此，不建议对所有 `open` 语句（例如 alphanumerically）进行任意排序，避免会生成您可能需要的不同行为。
 
 相反，我们建议对它们进行排序[界定闭合](https://en.wikipedia.org/wiki/Topological_sorting);也就是说，按定义系统_层_的顺序对 `open` 语句排序。 还可以考虑在不同的拓扑层中执行字母数字排序。
 
@@ -189,7 +189,7 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>表示域内部类型的错误事例和非法状态
 
-利用可[区分联合](../language-reference/discriminated-unions.md)， F#可以在类型系统中表示有问题的程序状态。 例如:
+利用可[区分联合](../language-reference/discriminated-unions.md)， F#可以在类型系统中表示有问题的程序状态。 예를 들면 다음과 같습니다.:
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -224,7 +224,7 @@ let handleWithdrawal amount =
 
 中F#可用于引发异常的主构造应按以下优先顺序考虑：
 
-| 函数 | 语法 | 目标 |
+| 기능 | 구문 | 용도 |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | 使用指定的参数名引发 `System.ArgumentNullException`。 |
 | `invalidArg` | `invalidArg "argumentName" "message"` | 使用指定的参数名称和消息引发 `System.ArgumentException`。 |
@@ -239,7 +239,7 @@ let handleWithdrawal amount =
 
 ### <a name="using-exception-handling-syntax"></a>使用异常处理语法
 
-F#通过`try...with`语法支持异常模式：
+F#通过 `try...with` 语法支持异常模式：
 
 ```fsharp
 try
@@ -320,7 +320,7 @@ let tryReadAllTextIfPresent (path : string) =
 
 ## <a name="partial-application-and-point-free-programming"></a>部分应用和无点编程
 
-F#支持部分应用程序，并因此使用各种方法来编程无点样式。 这对于模块内的代码重用或某些内容的实现非常有用，但通常不是公开公开的内容。 通常情况下，无点编程不是本身，也不能为不沉浸样式的人员添加重要认知障碍。
+F#支持部分应用程序，并因此使用各种方法来编程无点样式。 这对于模块内的代码重用或某些内容的实现非常有用，但它并不是公开公开的内容。 通常情况下，无点编程不是本身，也不能为不沉浸样式的人员添加重要认知障碍。
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>不要在公共 Api 中使用部分应用程序和 currying
 
@@ -415,7 +415,7 @@ let ``Test withdrawal transaction with 0.0 for balance``() =
 
 不应将此方法广泛应用于整个基本代码，但这是减少复杂内部和这些内部测试单元的样本的好办法。
 
-## <a name="access-control"></a>访问控制
+## <a name="access-control"></a>액세스 제어
 
 F#具有多个用于[访问控制](../language-reference/access-control.md)的选项，这些选项是从 .net 运行时中的可用项继承而来的。 这些类型不仅可用于类型，还可以将它们用于函数。
 
@@ -441,13 +441,120 @@ F#具有多个用于[访问控制](../language-reference/access-control.md)的�
 
 最后，对于新的F#或大的基本代码，自动通用化并非始终是 boon 的。 使用通用组件时存在认知开销。 此外，如果自动通用化的函数不用于不同的输入类型（如果打算将其用作这样的类型），则这些函数在该时间点是泛型的。 如果要编写的代码实际上是泛型的，则应始终考虑。
 
-## <a name="performance"></a>性能
+## <a name="performance"></a>성능
 
-F#默认情况下，值是不可变的，这使你可以避免某些类 bug （尤其是涉及并发和并行的类）。 但是，在某些情况下，为了实现执行时间或内存分配的最佳（甚至合理）的效率，可以通过使用状态的就地转变来最佳地实现一段工作量。 这可以通过F#使用`mutable`关键字来选择。
+### <a name="prefer-structs-for-small-data-types"></a>更倾向于小型数据类型的结构
 
-但是，在中F#使用 `mutable` 可能会受到功能纯度的干扰。 如果将期望值从纯度调整到[引用透明度](https://en.wikipedia.org/wiki/Referential_transparency)，则这种情况很好。 引用透明度-非纯度-编写F#函数时的最终目标。 这样，便可以在性能关键代码的基于变化的实现上编写功能接口。
+使用结构（也称为值类型）通常可以提高某些代码的性能，因为这通常会避免分配对象。 但结构并不总是 "更快" 按钮：如果结构中的数据大小超过16个字节，则复制数据通常会导致比使用引用类型更多的 CPU 时间。
 
-### <a name="wrap-mutable-code-in-immutable-interfaces"></a>在不可变接口中包装可变代码
+若要确定是否应使用结构，请考虑以下情况：
+
+- 如果数据的大小为16字节或更小。
+- 如果有很多这样的数据类型存在于正在运行的程序中的内存中。
+
+如果第一个条件适用，则通常应使用结构。 如果这两个均适用，则几乎始终使用结构。 在某些情况下，上述条件适用，但使用结构并不比使用引用类型更好或更糟，但这种情况很少发生。 但一定要在进行更改时始终度量，而不是在假设或直觉上操作。
+
+#### <a name="prefer-struct-tuples-when-grouping-small-value-types"></a>分组小值类型时首选结构元组
+
+请考虑以下两个函数：
+
+```fsharp
+let rec runWithTuple t offset times =
+    let offsetValues x y z offset =
+        (x + offset, y + offset, z + offset)
+
+    if times <= 0 then
+        t
+    else
+        let (x, y, z) = t
+        let r = offsetValues x y z offset
+        runWithTuple r offset (times - 1)
+
+let rec runWithStructTuple t offset times =
+    let offsetValues x y z offset =
+        struct(x + offset, y + offset, z + offset)
+
+    if times <= 0 then
+        t
+    else
+        let struct(x, y, z) = t
+        let r = offsetValues x y z offset
+        runWithStructTuple r offset (times - 1)
+```
+
+当使用[BenchmarkDotNet](https://benchmarkdotnet.org/)等统计基准工具来对这些函数进行基准测试时，会发现使用结构元组的 `runWithStructTuple` 函数的运行速度40%，并且不会分配内存。
+
+不过，这些结果在您自己的代码中并不总是如此。 如果将某个函数标记为 `inline`，则使用引用元组的代码可能会获得一些额外的优化，否则，将分配的代码只需进行优化即可。 应始终在性能考虑时测量结果，而永远不会根据假设或直觉来操作结果。
+
+#### <a name="prefer-struct-records-when-the-data-type-is-small"></a>当数据类型为小型时，首选结构记录
+
+前面所述的经验法则也包含在[ F#记录类型](../language-reference/records.md)中。 请考虑以下数据类型和处理这些数据类型的函数：
+
+```fsharp
+type Point = { X: float; Y: float; Z: float }
+
+[<Struct>]
+type SPoint = { X: float; Y: float; Z: float }
+
+let rec processPoint (p: Point) offset times =
+    let inline offsetValues (p: Point) offset =
+        { p with X = p.X + offset; Y = p.Y + offset; Z = p.Z + offset }
+
+    if times <= 0 then
+        p
+    else
+        let r = offsetValues p offset
+        processPoint r offset (times - 1)
+
+let rec processStructPoint (p: SPoint) offset times =
+    let inline offsetValues (p: SPoint) offset =
+        { p with X = p.X + offset; Y = p.Y + offset; Z = p.Z + offset }
+
+    if times <= 0 then
+        p
+    else
+        let r = offsetValues p offset
+        processStructPoint r offset (times - 1)
+```
+
+这类似于以前的元组代码，但这次此示例使用记录和内联的内部函数。
+
+当使用[BenchmarkDotNet](https://benchmarkdotnet.org/)等统计基准工具对这些函数进行基准测试时，会发现 `processStructPoint` 的运行速度几乎60%，并且不会在托管堆上分配任何内容。
+
+#### <a name="prefer-struct-discriminated-unions-when-the-data-type-is-small"></a>当数据类型为小时，首选结构可区分联合
+
+前面对结构元组和记录的性能的观测值还适用于[ F#可区分联合](../language-reference/discriminated-unions.md)。 다음 코드를 살펴보세요.
+
+```fsharp
+    type Name = Name of string
+    
+    [<Struct>]
+    type SName = SName of string
+
+    let reverseName (Name s) =
+        s.ToCharArray()
+        |> Array.rev
+        |> string
+        |> Name
+
+    let structReverseName (SName s) =
+        s.ToCharArray()
+        |> Array.rev
+        |> string
+        |> SName
+```
+
+通常为域建模定义单一用例可区分的联合。 当你使用[BenchmarkDotNet](https://benchmarkdotnet.org/)等统计基准工具来基准这些函数时，你会发现 `structReverseName` 比 `reverseName` 小字符串的速度要快25%。 对于大型字符串，这两个方法都执行相同的。 因此，在这种情况下，最好使用结构。 如前文所述，请始终度量，而不是在假设或直觉上操作。
+
+尽管上面的示例演示了结构可区分联合生成了更好的性能，但在对域进行建模时，有一个很常见的可区分联合。 更大的数据类型（如这样的数据类型）可能不会执行，因为这些数据类型取决于其结构，因为这样做可能会涉及更多的复制操作。
+
+### <a name="functional-programming-and-mutation"></a>函数编程和变化
+
+F#默认情况下，值是不可变的，这使你可以避免某些类 bug （尤其是涉及并发和并行的类）。 但是，在某些情况下，为了实现执行时间或内存分配的最佳（甚至合理）的效率，可以通过使用状态的就地转变来最佳地实现一段工作量。 这可以通过F#使用 `mutable` 关键字来选择。
+
+在中F#使用 `mutable` 可能会受到功能纯度的干扰。 这是可理解的，但任何位置的功能纯度都有可能与性能目标相同。 一种折衷是封装变化，使调用方不必关心调用函数时所发生的情况。 这样，便可以在性能关键代码的基于变化的实现上编写功能接口。
+
+#### <a name="wrap-mutable-code-in-immutable-interfaces"></a>在不可变接口中包装可变代码
 
 使用引用透明度作为目标，编写不公开性能关键函数的可变 underbelly 的代码至关重要。 例如，下面的代码实现F#核心库中的 `Array.contains` 函数：
 
@@ -465,7 +572,7 @@ let inline contains value (array:'T[]) =
 
 多次调用此函数不会更改基础数组，也不需要您维护任何使用它的可变状态。 尽管几乎每个代码行都使用变化，但它是引用的。
 
-### <a name="consider-encapsulating-mutable-data-in-classes"></a>考虑在类中封装可变数据
+#### <a name="consider-encapsulating-mutable-data-in-classes"></a>考虑在类中封装可变数据
 
 前面的示例使用了一个函数来封装使用可变数据的操作。 对于更复杂的数据集，这并不总是足够的。 请考虑以下几组函数：
 
@@ -511,9 +618,9 @@ type Closure1Table() =
 
 `Closure1Table` 封装基于变化的基础数据结构，因此不强制调用方维护基础数据结构。 类是一种强大的方法，用于封装基于变化的数据和例程，而不会向调用方公开详细信息。
 
-### <a name="prefer-let-mutable-to-reference-cells"></a>首选 `let mutable` 引用单元格
+#### <a name="prefer-let-mutable-to-reference-cells"></a>首选 `let mutable` 引用单元格
 
-引用单元是表示对值（而不是值本身）的引用的一种方法。 尽管它们可用于性能关键代码，但通常不建议这样做。 请看下面的示例：
+引用单元是表示对值（而不是值本身）的引用的一种方法。 尽管它们可用于性能关键代码，但不建议这样做。 다음 예제를 참조하세요.
 
 ```fsharp
 let kernels =
@@ -552,23 +659,23 @@ F#完全支持对象和面向对象的（OO）概念。 尽管许多 OO 概念�
 * 点表示法（`x.Length`）
 * 实例成员
 * 隐式构造函数
-* 静态成员
+* 정적 멤버
 * 索引器表示法（`arr.[x]`）
 * 命名参数和可选参数
 * 接口和接口实现
 
 **不要首先接触这些功能，但在解决问题时，请慎用这些功能：**
 
-* 方法重载
+* 메서드 오버로드
 * 封装的可变数据
 * 类型上的运算符
 * 自动属性
 * 实现 `IDisposable` 和 `IEnumerable`
 * 类型扩展
-* 事件
-* 结构
-* 委托
-* 枚举
+* 이벤트
+* Structs
+* 대리자
+* 열거형
 
 **通常，请避免使用这些功能，除非您必须使用这些功能：**
 

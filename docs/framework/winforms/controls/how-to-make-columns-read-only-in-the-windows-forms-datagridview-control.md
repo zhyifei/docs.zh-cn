@@ -1,5 +1,5 @@
 ---
-title: 如何：将 Windows 窗体 DataGridView 控件中的列设为只读
+title: 在 DataGridView 控件中将列设为只读
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - data grids [Windows Forms], read-only columns
 - DataGridView control [Windows Forms], read-only columns
 ms.assetid: 2bb73ebb-1a55-4362-9fda-e50574c087d5
-ms.openlocfilehash: c865db5caf33b34f12c7acf8078995b12db3c970
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11d008d47ec5edb594d3d862c68ff3b9920e0e25
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649271"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736186"
 ---
-# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>如何：将 Windows 窗体 DataGridView 控件中的列设为只读
-无需对所有的数据进行编辑。 在 <xref:System.Windows.Forms.DataGridView> 控件中，列 <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> 属性值确定用户是否可在该列中编辑单元格。 有关如何使控件完全只读的信息，请参阅[如何：防止行中添加和删除 Windows 窗体 DataGridView 控件](prevent-row-addition-and-deletion-datagridview.md)。  
+# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>如何：使 Windows 窗体 DataGridView 控件中的列只读
+无需对所有的数据进行编辑。 在 <xref:System.Windows.Forms.DataGridView> 控件中，列 <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> 属性值确定用户是否可在该列中编辑单元格。 有关如何使控件完全成为只读控件的信息，请参阅[如何：防止在 Windows 窗体 DataGridView 控件中添加和删除行](prevent-row-addition-and-deletion-datagridview.md)。  
   
- Visual Studio 中对此任务提供支持。  另请参阅[如何：将列设为只读、 只在 Windows 窗体 DataGridView 控件使用设计器](make-columns-read-only-in-the-datagrid-using-the-designer.md)。  
+ Visual Studio 中对此任务提供支持。  另请参阅[如何：使用设计器在 Windows 窗体 DataGridView 控件中将列设为只读](make-columns-read-only-in-the-datagrid-using-the-designer.md)。  
   
 ### <a name="to-make-a-column-read-only-programmatically"></a>以编程方式将列设置为只读  
   
@@ -34,10 +34,10 @@ ms.locfileid: "64649271"
   
 - 对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType>
 - [Windows 窗体 DataGridView 控件中的列、行和单元格基本功能](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [如何：防止添加和 Windows 窗体 DataGridView 控件中的删除行](prevent-row-addition-and-deletion-datagridview.md)
+- [如何：防止在 Windows 窗体 DataGridView 控件中添加和删除行](prevent-row-addition-and-deletion-datagridview.md)

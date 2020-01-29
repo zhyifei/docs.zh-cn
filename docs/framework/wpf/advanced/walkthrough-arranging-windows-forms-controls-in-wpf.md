@@ -1,5 +1,6 @@
 ---
-title: 演练：在 WPF 中排列 Windows 窗体控件
+title: 在 WPF 中排列 Windows 窗体控件
+titleSuffix: ''
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 484895db539b288bf388ff6c2ce3c29db55080b1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
-ms.translationtype: MT
+ms.openlocfilehash: 5e7544dfdbee234bb968c9a7f39814e8749ece15
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197840"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735287"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>演练：在 WPF 中排列 Windows 窗体控件
 
@@ -31,7 +32,7 @@ ms.locfileid: "73197840"
 - 停靠。
 - 设置可见性。
 - 承载不拉伸的控件。
-- 缩放。
+- Scaling。
 - 旋转。
 - 设置填充和边距。
 - 使用动态布局容器。
@@ -40,7 +41,7 @@ ms.locfileid: "73197840"
 
 完成后，你将了解基于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的应用程序中 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 布局功能。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 若要完成本演练，必须具有 Visual Studio。
 
@@ -149,7 +150,7 @@ ms.locfileid: "73197840"
 
 2. 按 F5 生成并运行该应用程序<kbd></kbd>。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素绘制在 label 元素上。
 
-## <a name="docking"></a>停靠
+## <a name="docking"></a>Docking
 
 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素支持 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 停靠。 设置 <xref:System.Windows.Controls.DockPanel.Dock%2A> 附加属性以将承载的控件停靠在 <xref:System.Windows.Controls.DockPanel> 元素中。
 
@@ -255,7 +256,7 @@ ms.locfileid: "73197840"
 
 4. 按 F5 生成并运行该应用程序<kbd></kbd>。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素填充 <xref:System.Windows.Controls.DockPanel>，<xref:System.Windows.Forms.FlowLayoutPanel> 将其子控件排列在默认的 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

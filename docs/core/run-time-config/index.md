@@ -1,13 +1,13 @@
 ---
-title: 运行时配置
+title: 运行时配置选项
 description: 了解如何使用运行时配置设置来配置 .NET Core 应用程序。
-ms.date: 11/13/2019
-ms.openlocfilehash: 2665026347e94d26026821beb2bfcf8441f755f6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.date: 01/21/2020
+ms.openlocfilehash: ddf68c30e620a06856f65e71bd050e1b77618f20
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801917"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733449"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core 运行时配置设置
 
@@ -18,49 +18,95 @@ ms.locfileid: "74801917"
 - 应用程序的多个实例在单个系统上同时运行，并且你想要将每个实例配置为获得最佳性能。
 
 > [!NOTE]
-> 本文档正在编写中。 如果你注意到此处提供的信息不完整或不准确，可以[创建一个问题](https://github.com/dotnet/docs/issues)告知我们，或[提交拉取请求](https://github.com/dotnet/docs/pulls)以解决问题。 要了解如何为 dotnet/docs 存储库提交拉取请求，请参阅[参与者指南](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md)。
+> 本文档正在编写中。 如果你注意到此处提供的信息不完整或不准确，可以[创建一个问题](https://github.com/dotnet/docs/issues)告知我们，或[提交拉取请求](https://github.com/dotnet/docs/pulls)以解决问题。 要了解如何提交 dotnet/docs 存储库的拉取请求，请参阅[参与者指南](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md)。
 
-.NET Core 提供了以下用于在运行时配置应用程序的机制：
+.NET Core 提供以下用于配置运行时应用程序行为的机制：
 
 - [runtimeconfig.json 文件](#runtimeconfigjson)
 
+- [MSBuild 属性](#msbuild-properties)
+
 - [环境变量](#environment-variables)
 
-文档此部分的文章根据类别组织，例如调试和垃圾回收。 适用时，配置选项针对 runtimeconfig.json（仅限 .NET Core）、app.config（仅限 .NET Framework）和环境变量显示   。
+某些配置值还可以通过调用 <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> 方法以编程方式进行设置。
+
+文档此部分的文章按类别组织，例如[调试](debugging-profiling.md)和[垃圾回收](garbage-collector.md)。 如果适用，将显示 runtimeconfig.json 文件、MSBuild 属性、环境变量的配置选项；对于 .NET Framework 项目，还会显示 app.config 文件的配置选项以便交叉引用。  
 
 ## <a name="runtimeconfigjson"></a>runtimeconfig.json
 
-在应用的 runtimeconfig.json 文件的 configProperties 部分指定运行时配置选项   。 此部分包含窗体：
+[构建](../tools/dotnet-build.md)项目时，将在输出目录中生成 *[appname].runtimeconfig.json* 文件。 如果项目文件所在的文件夹中存在 *runtimeconfig.template.json* 文件，它包含的任何配置选项都将合并到 *[appname].runtimeconfig.json* 文件中。 如果自行构建应用，请将所有配置选项放在 *runtimeconfig.template.json* 文件中。 如果只是运行应用，请将其直接插入 [appname].runtimeconfig.template.json  文件中。
+
+> [!NOTE]
+> 后续生成中将覆盖 [appname].runtimeconfig.template.json  文件。
+
+在 runtimeconfig.json 文件的 configProperties 部分指定运行时配置选项   。 此部分包含窗体：
 
 ```json
-{
-   "runtimeOptions": {
-      "configProperties": {
-         "config-property-name1": "config-value1",
-         "config-property-name2": "config-value2"
-      }
-   }
+"configProperties": {
+  "config-property-name1": "config-value1",
+  "config-property-name2": "config-value2"
 }
 ```
 
-下面是示例文件：
+### <a name="example-appnameruntimeconfigjson-file"></a>示例 [appname].runtimeconfig.template.json 文件
+
+如果要将这些选项放在输出 JSON 文件中，请将它们嵌套在 `runtimeOptions` 属性下。
 
 ```json
 {
-   "runtimeOptions": {
-      "configProperties": {
-         "System.GC.Concurrent": true,
-         "System.GC.RetainVM": true,
-         "System.Threading.ThreadPool.MinThreads": "4",
-         "System.Threading.ThreadPool.MaxThreads": "25"
-      }
-   }
+  "runtimeOptions": {
+    "tfm": "netcoreapp3.1",
+    "framework": {
+      "name": "Microsoft.NETCore.App",
+      "version": "3.1.0"
+    },
+    "configProperties": {
+      "System.GC.Concurrent": false,
+      "System.Threading.ThreadPool.MinThreads": 4,
+      "System.Threading.ThreadPool.MaxThreads": 25
+    }
+  }
 }
 ```
 
-runtimeconfig.json  文件在生成目录中由 [dotnet build](../tools/dotnet-build.md) 命令自动创建。 在 Visual Studio 中选择“生成”菜单选项时，也会创建此文件  。 然后，可以在创建文件后对其进行编辑。
+### <a name="example-runtimeconfigtemplatejson-file"></a>示例 runtimeconfig.template.json 文件
 
-某些配置值还可以通过调用 <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> 方法以编程方式进行设置。
+如果要将这些选项放在模板 JSON 文件中，请省略 `runtimeOptions` 属性。
+
+```json
+{
+  "configProperties": {
+    "System.GC.Concurrent": false,
+    "System.Threading.ThreadPool.MinThreads": "4",
+    "System.Threading.ThreadPool.MaxThreads": "25"
+  }
+}
+```
+
+## <a name="msbuild-properties"></a>MSBuild 属性
+
+可以使用 SDK 样式 .NET Core 项目的 .csproj 或 .vbproj 文件中的 MSBuild 属性设置某些运行时配置选项。   MSBuild 属性优先于在 *runtimeconfig.template.json* 文件中设置的选项。 它们还会覆盖生成时在 [appname].runtimeconfig.json 文件中设置的任何选项。 
+
+下面是一个示例 SDK 样式项目文件，其中包含用于配置运行时行为的 MSBuild 属性：
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+    <ThreadPoolMinThreads>4</ThreadPoolMinThreads>
+    <ThreadPoolMaxThreads>25</ThreadPoolMaxThreads>
+  </PropertyGroup>
+
+</Project>
+```
+
+用于配置运行时行为的 MSBuild 属性记录在每个区域各自的文章中，例如[垃圾回收](garbage-collector.md)。
 
 ## <a name="environment-variables"></a>环境变量
 

@@ -1,5 +1,5 @@
 ---
-title: DateTimePicker 控件（Windows 窗体）
+title: DateTimePicker 控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dates [Windows Forms], choosing from a list
@@ -7,30 +7,30 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms]
 - date and time picker controls
 ms.assetid: 1dac1fbd-8f67-4910-9ccb-2c5462d0d855
-ms.openlocfilehash: 236017834f3a965ee0ddfc1a74121679f086050b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22883da5dec58a6272e611b50671a8b1341d92e4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971335"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731969"
 ---
 # <a name="datetimepicker-control-windows-forms"></a>DateTimePicker 控件（Windows 窗体）
-Windows 窗体`DateTimePicker`控件允许用户从日期或时间的列表中选择单个项。 当用于表示日期，它将显示在两个部分： 一下拉列表中的文本，并单击列表旁的向下箭头上时，将显示一个网格形式表示的日期。  
+使用 Windows 窗体 `DateTimePicker` 控件，用户可从日期或时间列表中选择单个项。 用于表示日期时，它显示在两个部分：一个下拉列表，其中包含以文本表示的日期，当您单击列表旁边的向下箭头时，将显示网格。  
   
 ## <a name="in-this-section"></a>本节内容  
  [DateTimePicker 控件概述](datetimepicker-control-overview-windows-forms.md)  
- 引入了的一般概念`DateTimePicker`控件，它允许用户从日期或时间的列表中选择单个项。  
+ 介绍 `DateTimePicker` 控件的一般概念，该控件允许用户从日期或时间列表中选择单个项。  
   
- [如何：使用 Windows 窗体 DateTimePicker 控件以自定义格式显示日期](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)  
- 介绍如何使用格式字符串中的首选格式显示日期。  
+ [如何：使用 Windows 窗体 DateTimePicker 控件显示自定义格式的日期](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)  
+ 说明如何使用格式字符串以首选格式显示日期。  
   
  [如何：使用 Windows 窗体 DateTimePicker 控件设置和返回日期](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)  
- 提供的步骤设置该控件中的日期和访问用户选定的日期。  
+ 提供在控件中设置日期并访问用户选择的日期的步骤。  
   
  [如何：使用 DateTimePicker 控件显示时间](how-to-display-time-with-the-datetimepicker-control.md)  
- 演示了步骤到`DateTimePicker`以仅显示时间。  
+ 显示 `DateTimePicker` 仅显示时间的步骤。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Windows.Forms.DateTimePicker>  
  对此类进行描述，并提供指向其所有成员的链接。  
   

@@ -1,5 +1,6 @@
 ---
-title: Visual Studio 中的 WPF 简介
+title: Visual Studio에서의 WPF 소개
+titleSuffix: ''
 ms.date: 01/26/2018
 helpviewer_keywords:
 - typography [WPF]
@@ -15,22 +16,22 @@ helpviewer_keywords:
 - WPF [WPF], about Windows Presentation Foundation
 - 3-D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
-ms.openlocfilehash: 536022a1273b9992541d83f0a55f06d2b9efb9a4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7aa2ca24a3a9b24d2911e81950716438e3ed302b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459622"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733688"
 ---
-# <a name="introduction-to-wpf-in-visual-studio"></a>Visual Studio 中的 WPF 简介
+# <a name="introduction-to-wpf-in-visual-studio"></a>Visual Studio에서의 WPF 소개
 Visual Studio 中的 Windows Presentation Foundation （WPF）为开发人员提供了一个统一的编程模型，用于在 Windows 上构建业务线桌面应用程序。  
   
  [创建具有 Windows Presentation Foundation 的桌面应用程序](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
- [在 Visual Studio 和 Blend for Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [Visual Studio 및 Blend for Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [WPF 介绍](../introduction-to-wpf.md)  
+ [WPF 소개](../introduction-to-wpf.md)  
   
- [.NET Framework 中的 WPF](../index.md)  
+ [.NET Framework의 WPF](../index.md)  
   
- [获取 Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ [Visual Studio 가져오기](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

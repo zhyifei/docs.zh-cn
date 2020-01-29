@@ -1,96 +1,96 @@
 ---
-title: ToolStrip 控件（Windows 窗体）
+title: ToolStrip 컨트롤
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: e5ef455a-e049-429c-8005-30c93132fb79
-ms.openlocfilehash: c7c140eaec8e16826c7dd7c26094be7cec234991
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b468b81f0ac0d0a2bc59ea08e95ac5dd71b6412e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654790"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733869"
 ---
-# <a name="toolstrip-control-windows-forms"></a>ToolStrip 控件（Windows 窗体）
-<xref:System.Windows.Forms.ToolStrip> 控件是可承载 Windows 窗体应用程序中菜单、控件和用户控件的工具栏。  
+# <a name="toolstrip-control-windows-forms"></a>{7&gt;ToolStrip 控件（Windows 窗体）&lt;7}
+<xref:System.Windows.Forms.ToolStrip> 컨트롤은 Windows Forms 애플리케이션에서 메뉴, 컨트롤 및 사용자 정의 컨트롤을 호스트할 수 있는 도구 모음입니다.  
   
-## <a name="in-this-section"></a>本节内容  
- [ToolStrip 控件概述](toolstrip-control-overview-windows-forms.md)  
- 说明此控件的本质及其主要功能和属性。  
+## <a name="in-this-section"></a>섹션 내용  
+ [ToolStrip 컨트롤 개요](toolstrip-control-overview-windows-forms.md)  
+ 이 컨트롤의 정의와 주요 기능 및 속성을 설명합니다.  
   
- [如何：管理 ToolStrip 溢出](how-to-manage-toolstrip-overflow-in-windows-forms.md)  
- 演示如何启用溢出功能和控制溢出行为。  
+ [방법: ToolStrip 오버플로 관리](how-to-manage-toolstrip-overflow-in-windows-forms.md)  
+ 오버플로 기능을 사용하도록 설정하고 오버플로 동작을 제어하는 방법을 보여 줍니다.  
   
- [如何：启用 ToolStrip 项的运行时重新排序](how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms.md)  
- 演示如何启用 <xref:System.Windows.Forms.ToolStripItem> 控件的运行时重新排序。  
+ [방법: 런타임에 ToolStrip 항목 다시 정렬 활성화](how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms.md)  
+ <xref:System.Windows.Forms.ToolStripItem> 컨트롤의 런타임 다시 정렬을 사용하도록 설정하는 방법을 보여 줍니다.  
   
- [如何：ToolStrip 控件中启用自动完成](how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms.md)  
- 演示 <xref:System.Windows.Forms.ToolStripComboBox> 中的自动完成功能。  
+ [방법: ToolStrip 컨트롤에 자동 완성 기능 활성화](how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms.md)  
+ <xref:System.Windows.Forms.ToolStripComboBox>에서 자동 완성 기능을 보여 줍니다.  
   
- [如何：更改的间距和对齐方式在 Windows 窗体的 ToolStrip 项](how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms.md)  
- 描述在 <xref:System.Windows.Forms.ToolStrip> 上排列 <xref:System.Windows.Forms.ToolStripItem> 的各种方法。  
+ [방법: Windows Forms에서 ToolStrip 항목의 간격 및 맞춤 변경](how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms.md)  
+ <xref:System.Windows.Forms.ToolStrip>에서 <xref:System.Windows.Forms.ToolStripItem>을 정렬하는 다양한 방법을 설명합니다.  
   
- [如何：更改 ToolStrip 文本和图像在 Windows 窗体中的外观](how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms.md)  
- 描述如何在 <xref:System.Windows.Forms.ToolStripItem> 控件中定义和修改文本和图像的排列方式。  
+ [방법: Windows Forms에서 ToolStrip 텍스트 및 이미지의 모양 변경](how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms.md)  
+ <xref:System.Windows.Forms.ToolStripItem> 컨트롤에서 텍스트 및 이미지 정렬을 정의하고 수정하는 방법을 설명합니다.  
   
- [如何：Windows 窗体使用 ToolStripControlHost 包装控件](how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md)  
- 演示如何在 <xref:System.Windows.Forms.ToolStripControlHost> 中承载 <xref:System.Windows.Forms.MonthCalendar> 控件。  
+ [방법: ToolStripControlHost를 사용하여 Windows Forms 컨트롤 래핑](how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md)  
+ <xref:System.Windows.Forms.ToolStripControlHost>에서 <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 호스트하는 방법을 보여 줍니다.  
   
- [如何：创建并设置自定义呈现器在 Windows 窗体的 ToolStrip 控件](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
- 描述如何在 <xref:System.Windows.Forms.ToolStrip> 控件中实现标准和自定义绘图。  
+ [방법: Windows Forms의 ToolStrip 컨트롤에 대한 사용자 지정 렌더러를 설정하고 만들기](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+ <xref:System.Windows.Forms.ToolStrip> 컨트롤에서 표준 및 사용자 지정 그리기를 수행하는 방법을 설명합니다.  
   
- [如何：自定义绘制 ToolStrip 控件](how-to-custom-draw-a-toolstrip-control.md)  
- 描述 <xref:System.Windows.Forms.ToolStrip> 控件中自定义（所有者）绘图的各个方面。  
+ [방법: ToolStrip 컨트롤 그리기 사용자 지정](how-to-custom-draw-a-toolstrip-control.md)  
+ <xref:System.Windows.Forms.ToolStrip> 컨트롤에서 사용자 지정(소유자) 그리기의 다양한 측면을 설명합니다.  
   
- [如何：在 ToolStrip 控件中创建切换按钮](how-to-create-toggle-buttons-in-toolstrip-controls.md)  
- 描述如何创建切换 <xref:System.Windows.Forms.ToolStripButton>。  
+ [방법: ToolStrip 컨트롤에 설정/해제 단추 만들기](how-to-create-toggle-buttons-in-toolstrip-controls.md)  
+ 설정/해제 <xref:System.Windows.Forms.ToolStripButton>을 만드는 방법을 설명합니다.  
   
- [如何：在 ToolStrip 控件中使用工具提示](how-to-use-tooltips-in-toolstrip-controls.md)  
- 描述为 <xref:System.Windows.Forms.ToolStrip> 项定义的工具提示。  
+ [방법: ToolStrip 컨트롤의 도구 설명 사용](how-to-use-tooltips-in-toolstrip-controls.md)  
+ <xref:System.Windows.Forms.ToolStrip> 항목에 대한 도구 설명을 정의하는 방법을 설명합니다.  
   
- [如何：将 ToolStrip 从 toolstripcontainer 移到窗体](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
- 描述如何拥有具有窗体（而非容器）的 <xref:System.Windows.Forms.ToolStrip>。  
+ [방법: ToolStripContainer의 ToolStrip을 폼으로 이동](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
+ 컨테이너가 아니라 폼이 있는 <xref:System.Windows.Forms.ToolStrip>을 포함하는 방법을 설명합니다.  
   
- [如何：将 toolstripitem 置于 ToolStrip](how-to-position-a-toolstripitem-on-a-toolstrip.md)  
- 描述如何将 <xref:System.Windows.Forms.ToolStripButton> 定位在 <xref:System.Windows.Forms.ToolStrip> 的最左侧或最右侧的末尾。  
+ [방법: ToolStrip에 ToolStripItem 배치](how-to-position-a-toolstripitem-on-a-toolstrip.md)  
+ <xref:System.Windows.Forms.ToolStrip>의 맨 왼쪽 또는 맨 오른쪽에 <xref:System.Windows.Forms.ToolStripButton>을 배치하는 방법을 설명합니다.  
   
- [如何：启用 TAB 键能够移出 ToolStrip 控件](how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control.md)  
- 描述如何在 <xref:System.Windows.Forms.ToolStrip> 中移动并移出至 Tab 键顺序中的下一个控件。  
+ [방법: TAB 키를 사용하여 ToolStrip 컨트롤 밖으로 이동 가능하도록 설정](how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control.md)  
+ <xref:System.Windows.Forms.ToolStrip> 내부 및 외부에서 Tab 키를 눌러 탭 순서에서 다음 컨트롤로 이동하는 방법을 설명합니다.  
   
- [如何：检测鼠标指针何时悬停在 toolstripitem 之上](how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem.md)  
- 描述如何设置 <xref:System.Windows.Forms.ToolStrip> 项，以便无需同步各种鼠标事件就可检测出何时鼠标位于这些项上。  
+ [방법: 마우스 포인터가 ToolStripItem을 가리키는 시점 감지](how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem.md)  
+ 다양한 마우스 이벤트를 동기화할 필요 없이 마우스가 <xref:System.Windows.Forms.ToolStrip> 항목을 가리킬 때 항목이 감지되도록 해당 항목을 설정하는 방법을 설명합니다.  
   
- [如何：创建带有 ToolStripPanel 控件的 MDI 窗体](how-to-create-an-mdi-form-with-toolstrippanel-controls.md)  
- 描述如何创建带有 <xref:System.Windows.Forms.ToolStripPanel> 控件的多文档界面 (MDI) 窗体。  
+ [방법: ToolStripPanel 컨트롤을 사용하여 MDI 폼 만들기](how-to-create-an-mdi-form-with-toolstrippanel-controls.md)  
+ <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 사용하여 MDI(다중 문서 인터페이스)를 만드는 방법을 설명합니다.  
   
- [如何：创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
- 描述如何创建支持 <xref:System.Windows.Forms.ToolStrip> 控件和菜单合并功能的 MDI 窗体。  
+ [방법: 메뉴 병합 및 ToolStrip 컨트롤을 사용하여 MDI 폼 만들기](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
+ <xref:System.Windows.Forms.ToolStrip> 컨트롤과 메뉴 병합을 지원하는 MDI 폼을 만드는 방법을 설명합니다.  
   
- [如何：创建具有专业样式的 ToolStrip 控件](how-to-create-a-professionally-styled-toolstrip-control.md)  
- 介绍如何使用<xref:System.Windows.Forms.ToolStripProfessionalRenderer>类来创建复合控件，以模拟**导航窗格**Microsoft Outlook® 提供的。  
+ [방법: 전문적인 스타일의 ToolStrip 컨트롤 만들기](how-to-create-a-professionally-styled-toolstrip-control.md)  
+ 介绍如何使用 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 类创建一个复合控件，该控件模拟 Microsoft® Outlook®提供的**导航窗格**。  
   
- [如何：实现自定义 ToolStripRenderer](how-to-implement-a-custom-toolstriprenderer.md)  
- 描述如何通过实现从 <xref:System.Windows.Forms.ToolStripRenderer> 中派生的类来自定义 <xref:System.Windows.Forms.ToolStrip> 控件的外观。  
+ [방법: 사용자 지정 ToolStripRenderer 구현](how-to-implement-a-custom-toolstriprenderer.md)  
+ <xref:System.Windows.Forms.ToolStripRenderer>에서 파생된 클래스를 구현하여 <xref:System.Windows.Forms.ToolStrip> 컨트롤의 모양을 사용자 지정하는 방법을 설명합니다.  
   
-- [如何：创建含有标准项使用设计器的基本 Windows 窗体 ToolStrip](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
+- [如何：使用设计器创建包含标准项的基本 Windows 窗体 ToolStrip](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
   
-- [如何：将 ToolStrip 从 toolstripcontainer 移到窗体](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
+- [방법: ToolStripContainer의 ToolStrip을 폼으로 이동](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
   
-- [演练：创建具有专业样式的 ToolStrip 控件](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
+- [연습: 전문적인 스타일의 ToolStrip 컨트롤 만들기](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
   
-- [演练：创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
+- [연습: 메뉴 병합 및 ToolStrip 컨트롤을 사용하여 MDI 폼 만들기](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
-## <a name="reference"></a>参考  
- <xref:System.Windows.Forms.ToolStrip> 类  
- 对此类进行描述，并提供指向其所有成员的链接。  
+## <a name="reference"></a>참조  
+ <xref:System.Windows.Forms.ToolStrip> 클래스  
+ 이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
  <xref:System.Windows.Forms.ToolStrip>  
- 描述 <xref:System.Windows.Forms.ToolStrip> 类并提供指向其所有成员的链接。  
+ <xref:System.Windows.Forms.ToolStrip> 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
  <xref:System.Windows.Forms.ToolStripItem>  
- 描述 <xref:System.Windows.Forms.ToolStripItem> 类并提供指向其所有成员的链接。  
+ <xref:System.Windows.Forms.ToolStripItem> 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
-## <a name="related-sections"></a>相关章节  
- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)  
- 提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。
+## <a name="related-sections"></a>관련 섹션  
+ [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ 사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.

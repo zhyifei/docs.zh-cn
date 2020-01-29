@@ -1,5 +1,5 @@
 ---
-title: Windows 窗体打印支持
+title: 打印支持
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, printing
@@ -8,57 +8,57 @@ helpviewer_keywords:
 - printing [Windows Forms], Windows Forms, support
 - printing [Windows Forms], print support
 ms.assetid: a4a2960c-eb70-48e2-b641-cfb222704e46
-ms.openlocfilehash: 8e008f2cb4b2f32cdba676e68d9fd790530e2b06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6e8f60db7afe2f1b04eaae6fe71aa93e5c22cae
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011842"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732488"
 ---
 # <a name="windows-forms-print-support"></a>Windows 窗体打印支持
-使用的主要包含在 Windows 窗体中的打印[PrintDocument 组件](../controls/printdocument-component-windows-forms.md)组件，使用户能够打印，并[PrintPreviewDialog 控件](../controls/printpreviewdialog-control-windows-forms.md)控件， [PrintDialog组件](../controls/printdialog-component-windows-forms.md)并[PageSetupDialog 组件](../controls/pagesetupdialog-component-windows-forms.md)要向用户习惯于 Windows 操作系统提供熟悉的图形界面的组件。  
+Windows 窗体中的打印主要包括使用[PrintDocument 组件](../controls/printdocument-component-windows-forms.md)组件来使用户能够打印， [PrintPreviewDialog 控件](../controls/printpreviewdialog-control-windows-forms.md)控制[PrintDialog 组件](../controls/printdialog-component-windows-forms.md)和[PageSetupDialog 组件](../controls/pagesetupdialog-component-windows-forms.md)组件，为习惯于 Windows 操作系统的用户提供熟悉的图形界面。  
   
- 通常情况下，创建的新实例<xref:System.Drawing.Printing.PrintDocument>组件，将设置描述打印使用内容的属性<xref:System.Drawing.Printing.PrinterSettings>并<xref:System.Drawing.Printing.PageSettings>类，并调用<xref:System.Drawing.Printing.PrintDocument.Print%2A>方法来实际打印文档。  
+ 通常，您创建 <xref:System.Drawing.Printing.PrintDocument> 组件的新实例，使用 <xref:System.Drawing.Printing.PrinterSettings> 和 <xref:System.Drawing.Printing.PageSettings> 类设置描述要打印内容的属性，然后调用 <xref:System.Drawing.Printing.PrintDocument.Print%2A> 方法来实际打印文档。  
   
- 从基于 Windows 的应用程序，打印期间<xref:System.Drawing.Printing.PrintDocument>组件会警告用户正在进行打印的这一事实，并允许打印作业要取消显示中止打印对话框。  
+ 在从基于 Windows 的应用程序中进行打印的过程中，<xref:System.Drawing.Printing.PrintDocument> 组件将显示 "中止打印" 对话框，以便向用户发出警报，提醒用户发生打印并允许取消打印作业。  
   
-## <a name="in-this-section"></a>本节内容  
- [如何：创建标准 Windows 窗体打印作业](how-to-create-standard-windows-forms-print-jobs.md)  
- 说明如何使用<xref:System.Drawing.Printing.PrintDocument>组件从 Windows 窗体中打印。  
+## <a name="in-this-section"></a>섹션 내용  
+ [방법: 표준 Windows Forms 인쇄 작업 만들기](how-to-create-standard-windows-forms-print-jobs.md)  
+ 介绍如何使用 <xref:System.Drawing.Printing.PrintDocument> 组件从 Windows 窗体中进行打印。  
   
- [如何：在运行时捕获用户输入从 PrintDialog](how-to-capture-user-input-from-a-printdialog-at-run-time.md)  
- 说明如何修改所选的打印选项，以编程方式使用<xref:System.Windows.Forms.PrintDialog>组件。  
+ [방법: 런타임에 PrintDialog에서 사용자 입력 캡처](how-to-capture-user-input-from-a-printdialog-at-run-time.md)  
+ 说明如何使用 <xref:System.Windows.Forms.PrintDialog> 组件以编程方式修改选定的打印选项。  
   
- [如何：选择连接到在 Windows 窗体中的用户的计算机的打印机](how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md)  
- 介绍更改打印机来打印到使用<xref:System.Windows.Forms.PrintDialog>在运行时组件。  
+ [방법: Windows Forms에서 사용자의 컴퓨터에 연결된 프린터 선택](how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md)  
+ 描述如何在运行时使用 <xref:System.Windows.Forms.PrintDialog> 组件更改要打印到的打印机。  
   
- [如何：在 Windows 窗体中打印图形](how-to-print-graphics-in-windows-forms.md)  
- 介绍向打印机发送图形。  
+ [방법: Windows Forms의 그래픽 인쇄](how-to-print-graphics-in-windows-forms.md)  
+ 介绍如何将图形发送到打印机。  
   
- [如何：打印 Windows 窗体中的多页文本文件](how-to-print-a-multi-page-text-file-in-windows-forms.md)  
- 描述向打印机发送文本。  
+ [방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄](how-to-print-a-multi-page-text-file-in-windows-forms.md)  
+ 介绍如何将文本发送到打印机。  
   
- [如何：完整的 Windows 窗体打印作业](how-to-complete-windows-forms-print-jobs.md)  
- 介绍如何向完成的打印作业的用户发出警报。  
+ [방법: Windows Forms 인쇄 작업 완료](how-to-complete-windows-forms-print-jobs.md)  
+ 说明如何提醒用户完成打印作业。  
   
- [如何：打印 Windows 窗体](how-to-print-a-windows-form.md)  
- 演示如何打印一份当前窗体。  
+ [방법: Windows Form 인쇄](how-to-print-a-windows-form.md)  
+ 说明如何打印当前窗体的副本。  
   
- [如何：使用打印预览的 Windows 窗体中打印](how-to-print-in-windows-forms-using-print-preview.md)  
- 演示如何使用<xref:System.Windows.Forms.PrintPreviewDialog>用于打印文档。  
+ [방법: Windows Forms에서 인쇄 미리 보기를 사용하여 인쇄](how-to-print-in-windows-forms-using-print-preview.md)  
+ 演示如何使用 <xref:System.Windows.Forms.PrintPreviewDialog> 打印文档。  
   
-## <a name="related-sections"></a>相关章节  
- [PrintDocument 组件](../controls/printdocument-component-windows-forms.md)  
- 说明使用方式的<xref:System.Drawing.Printing.PrintDocument>组件。  
+## <a name="related-sections"></a>관련 섹션  
+ [PrintDocument 구성 요소](../controls/printdocument-component-windows-forms.md)  
+ 说明 <xref:System.Drawing.Printing.PrintDocument> 组件的用法。  
   
- [PrintDialog 组件](../controls/printdialog-component-windows-forms.md)  
- 说明使用方式的<xref:System.Windows.Forms.PrintDialog>组件。  
+ [PrintDialog 구성 요소](../controls/printdialog-component-windows-forms.md)  
+ 说明 <xref:System.Windows.Forms.PrintDialog> 组件的用法。  
   
- [PrintPreviewDialog 控件](../controls/printpreviewdialog-control-windows-forms.md)  
- 说明使用方式的<xref:System.Windows.Forms.PrintPreviewDialog>控件。  
+ [PrintPreviewDialog 컨트롤](../controls/printpreviewdialog-control-windows-forms.md)  
+ 说明 <xref:System.Windows.Forms.PrintPreviewDialog> 控件的用法。  
   
- [PageSetupDialog 组件](../controls/pagesetupdialog-component-windows-forms.md)  
- 说明使用方式的<xref:System.Windows.Forms.PageSetupDialog>组件。  
+ [PageSetupDialog Component](../controls/pagesetupdialog-component-windows-forms.md)  
+ 说明 <xref:System.Windows.Forms.PageSetupDialog> 组件的用法。  
   
  <xref:System.Drawing.Printing>  
- 描述中的类<xref:System.Drawing.Printing>命名空间。
+ 介绍 <xref:System.Drawing.Printing> 命名空间中的类。

@@ -1,48 +1,48 @@
 ---
-title: 更改 Windows 窗体外观
+title: 모양 사용자 지정
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, changing the appearance of
 ms.assetid: 12f35d5b-1587-49cc-ada3-47eec1ff1738
-ms.openlocfilehash: 0582ad4c8e18d0f0419f0463ba260226839f7f42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c75fb1849ab9f9a07fcbbe5dd915b965f5aea05d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640412"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732362"
 ---
-# <a name="changing-the-appearance-of-windows-forms"></a>更改 Windows 窗体外观
-可以按多种不同的方式自定义 Windows 窗体应用程序的外观，例如，更改 Windows 窗体应用程序的边框、不透明度、形状、样式，或设置它的背景图像。  
+# <a name="changing-the-appearance-of-windows-forms"></a>Windows Forms의 모양 변경
+테두리, 불투명도, 도형, 스타일 변경이나 Windows Forms 애플리케이션에 대한 배경 이미지 설정과 같은 다양한 방법으로 Windows Forms 애플리케이션의 모양을 사용자 지정할 수 있습니다.  
   
-## <a name="in-this-section"></a>本节内容  
- [如何：更改 Windows 窗体的边框](how-to-change-the-borders-of-windows-forms.md)  
- 显示如何更改窗体的边框样式。  
+## <a name="in-this-section"></a>섹션 내용  
+ [방법: Windows Forms의 테두리 변경](how-to-change-the-borders-of-windows-forms.md)  
+ 폼의 테두리 스타일을 변경하는 방법을 보여 줍니다.  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.Form>  
- 对此类进行描述，并提供指向其所有成员的链接。  
+ 이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
  <xref:System.Windows.Forms.FormBorderStyle>  
- 对此类进行描述，并提供指向其所有成员的链接。  
+ 이 열거형을 설명하고 모든 해당 멤버에 대한 설명을 포함합니다.  
   
  <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>  
- 对此类进行描述，并提供指向其所有成员的链接。  
+ 이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
  <xref:System.Drawing.Image>  
- 对此类进行描述，并提供指向其所有成员的链接。  
+ 이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
  <xref:System.Drawing.Region>  
- 对此类进行描述，并提供指向其所有成员的链接。  
+ 이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
  <xref:System.Drawing.Color>  
- 对此类进行描述，并提供指向其所有成员的链接。  
+ 이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
-## <a name="related-sections"></a>相关章节  
- [调整 Windows 窗体的大小和比例](adjusting-the-size-and-scale-of-windows-forms.md)  
- 包含指向一些主题的链接，这些主题显示如何更改窗体的大小和比例。  
+## <a name="related-sections"></a>관련 섹션  
+ [Windows Forms의 크기 및 배율 조정](adjusting-the-size-and-scale-of-windows-forms.md)  
+ 폼의 크기와 배율을 변경하는 방법을 보여 주는 항목의 링크를 포함합니다.  
   
- [Windows 窗体中的图形和绘制](./advanced/graphics-and-drawing-in-windows-forms.md)  
- 包含指向一些主题的链接，这些主题描述如何在 Windows 窗体上执行自定义绘制。  
+ [Windows Forms의 그래픽 및 그리기](./advanced/graphics-and-drawing-in-windows-forms.md)  
+ Windows Forms에서 사용자 지정 그리기를 수행하는 방법을 설명하는 항목의 링크를 포함합니다.  
   
- [具有内置所有者描述支持的控件](./controls/controls-with-built-in-owner-drawing-support.md)  
- 列出 Windows 窗体控件中的所有者描述支持。
+ [소유자 그리기 지원이 기본 제공되는 컨트롤](./controls/controls-with-built-in-owner-drawing-support.md)  
+ Windows Forms 컨트롤의 소유자 그리기 지원을 나열합니다.

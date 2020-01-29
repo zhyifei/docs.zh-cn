@@ -1,5 +1,5 @@
 ---
-title: Windows 窗体中的用户输入验证
+title: 用户输入验证
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, validating user input
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 2b83e94f188f46d0cedc9fed9e9c5a946ada59c5
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: dc56c09677d1054e8f264169b78638fa83bd7d9e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960428"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734691"
 ---
-# <a name="user-input-validation-in-windows-forms"></a>Windows 窗体中的用户输入验证
+# <a name="user-input-validation-in-windows-forms"></a>Windows Forms에서 사용자 입력 유효성 검사
 当用户将数据输入应用程序时，可能需要在应用程序使用数据之前验证数据是否有效。 您可能要求某些文本字段的长度不能为零，字段的格式设置为电话号码或其他类型格式的数据，或者不包含任何可用于破坏数据库安全性的不安全字符的字符串。 Windows 窗体提供多种方式来验证应用程序中的输入。  
   
 ## <a name="validation-with-the-maskedtextbox-control"></a>MaskedTextBox 控件验证  
@@ -67,7 +67,7 @@ ms.locfileid: "74960428"
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Windows 窗体控件的默认隐式验证行为  
  不同 Windows 窗体控件的 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> 属性具有不同的默认值。 下表显示了最常见的控件及其默认值。  
   
-|控件|默认验证行为|  
+|Control|默认验证行为|  
 |-------------|---------------------------------|  
 |<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
 |<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
@@ -85,7 +85,7 @@ ms.locfileid: "74960428"
   
 - 通过以编程方式调用 <xref:System.Windows.Forms.Form.Close%2A> 方法。  
   
- 但是，在某些情况下，您可能需要让用户关闭窗体，无论控件中的值是否有效。 您可以通过为窗体的 <xref:System.Windows.Forms.Form.FormClosing> 事件创建处理程序来覆盖验证并关闭仍包含无效数据的窗体。 在此事件中，将 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 属性设置为 `false`。 这会强制关闭窗体。 有关详细信息及示例，请参阅<xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>。  
+ 但是，在某些情况下，您可能需要让用户关闭窗体，无论控件中的值是否有效。 您可以通过为窗体的 <xref:System.Windows.Forms.Form.FormClosing> 事件创建处理程序来覆盖验证并关闭仍包含无效数据的窗体。 在此事件中，将 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 属性设置为 `false`。 这会强制关闭窗体。 자세한 내용과 예제는 <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>를 참조하세요.  
   
 > [!NOTE]
 > 如果以这种方式强制关闭窗体，则尚未保存窗体控件中的所有数据都将丢失。 此外，模式窗体在关闭时不会验证控件的内容。 你仍可以使用控件验证将焦点锁定到控件，但你不必担心与关闭窗体相关联的行为。  
@@ -95,5 +95,5 @@ ms.locfileid: "74960428"
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.FormClosingEventArgs?displayProperty=nameWithType>
-- [MaskedTextBox 控件](./controls/maskedtextbox-control-windows-forms.md)
-- [正则表达式示例](../../standard/base-types/regular-expression-examples.md)
+- [MaskedTextBox 컨트롤](./controls/maskedtextbox-control-windows-forms.md)
+- [정규식 예제](../../standard/base-types/regular-expression-examples.md)

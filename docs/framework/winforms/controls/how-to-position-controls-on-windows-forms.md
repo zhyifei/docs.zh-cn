@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Windows 窗体上定位控件
+title: 放置控件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +18,12 @@ ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bb57d14397a4626e01c41dd687dfed7331282a10
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 144a0021c74f0fb5afec1d511315168fb28528e9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458325"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735911"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>如何：在 Windows 窗体上定位控件
 
@@ -96,7 +96,7 @@ button1->Left += 200;
 > [!NOTE]
 > 使用 <xref:System.Windows.Forms.Control.Location%2A> 属性可以同时设置控件的 X 和 Y 位置。 若要单独设置位置，请使用控件的 <xref:System.Windows.Forms.Control.Left%2A> （**X**）或 <xref:System.Windows.Forms.Control.Top%2A> （**Y**）子属性。 不要尝试隐式设置表示按钮位置的 <xref:System.Drawing.Point> 结构的 X 和 Y 坐标，因为此结构包含按钮坐标的副本。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Windows 窗体控件](index.md)
 - [演练：使用对齐线在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

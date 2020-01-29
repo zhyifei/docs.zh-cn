@@ -1,30 +1,30 @@
 ---
 title: .NET 指南
-description: 了解 .NET。
+description: 了解 .NET 和 .NET Standard。
 author: cartermp
-ms.date: 05/02/2017
+ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 8a989ed4ff0d670296fc255733d01ddd5b5a8f1e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ce76448b69a002216125192f75d24b38e7582260
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838099"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76730775"
 ---
 # <a name="net-guide"></a>.NET 指南
 
-.NET 指南提供大量关于 .NET 的信息。  根据对 .NET 的熟悉程度，可浏览本指南的不同部分以及 .NET 文档的其他部分。
+.NET 指南提供关于 .NET 的信息。 根据对 .NET 的熟悉程度，可浏览本指南的不同部分和其他指南，例如 [.NET Core](../core/index.md) 或 [.NET Framework](../framework/index.md)。
 
 ## <a name="new-to-net"></a>初次使用 .NET
 
-如果希望了解有关 .NET 的高级概述，请查看[什么是 .NET？](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet)。
+如果希望了解 .NET 的简要概述，请参阅[什么是 .NET？](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet)一文。
 
-如果不熟悉 .NET，请查看[入门](get-started.md)文章。
+如果不熟悉 .NET，请参阅[入门](get-started.md)。
 
-如果想要通过指导教程了解 .NET 的主要功能，请查看 [.NET 教程](tour.md)。
+如果想要通过指导教程了解 .NET 的主要功能，请参阅 [.NET 教程](tour.md)。
 
-还可阅读 [.NET 体系结构组件](components.md)，大致了解 .NET 的各个部分以及如何将它们组合在一起。
+若要大致了解 .NET 的各个部分以及如何将它们组合在一起，请参阅 [.NET 体系结构组件](components.md)。
 
 ## <a name="new-to-net-core"></a>初次使用 .NET Core
 
@@ -34,17 +34,13 @@ ms.locfileid: "74838099"
 
 如果不熟悉 .NET Standard，请查看 [.NET Standard](net-standard.md)。
 
-## <a name="porting-net-framework-code-to-net-core"></a>将 .NET Framework 代码移植到 .NET Core
+## <a name="port-net-framework-code-to-net-standard-or-net-core"></a>将 .NET Framework 代码移植到 .NET Standard 或 .NET Core
 
-如果要将应用程序、服务或某些系统组件移植到 .NET Core，请查看[从 .NET Framework 移植到 .NET Core](../core/porting/index.md)。
+若要将应用程序、服务、组件或 NuGet 包移植到 .NET Standard 或 .NET Core，请参阅[从 .NET Framework 移植到 .NET Core](../core/porting/index.md)。 .NET Standard 和 .NET Core 共享工具，因此，文章内容适用于移植到这两个框架。
 
-## <a name="porting-a-nuget-package-from-net-framework-to-net-standard-or-net-core"></a>将 NuGet 包从 .NET Framework 移植到 .NET Standard 或 .NET Core
+## <a name="net-concepts"></a>.NET 概念
 
-如果要将 NuGet 包移植到 .NET Standard，请查看[从 .NET Framework 移植到 .NET Core](../core/porting/index.md)。  .NET Standard 和 .NET Core 使用相同的工具，因此移植到 .NET Standard 以及 .NET Core 的内容彼此相关。
-
-## <a name="interested-in-major-net-concepts"></a>对 .NET 主要概念感兴趣
-
-如果对 .NET 的某些主要概念感兴趣，请查看：
+有关 .NET 的主要概念的详细信息，请参阅：
 
 * [.NET 体系结构组件](components.md)
 * [.NET Standard](net-standard.md)
@@ -55,7 +51,7 @@ ms.locfileid: "74838099"
 * [日期、时间和时区](datetime/index.md)
 * [异步编程](async.md)
 
-此外，请查看以下每种语言指南，了解这三种主要的 .NET 语言：
+有关三种主要 .NET 语言的信息，请参阅：
 
 * [C# 指南](../csharp/index.yml)
 * [F# 指南](../fsharp/index.yml)
@@ -63,4 +59,4 @@ ms.locfileid: "74838099"
 
 ## <a name="api-reference"></a>API 参考
 
-请查看 [.NET API 参考](../../api/index.md)，了解各种可用的 API。
+有关 .NET 中所有可用 API 的详细信息，请参阅 [.NET API 参考](../../api/index.md)。

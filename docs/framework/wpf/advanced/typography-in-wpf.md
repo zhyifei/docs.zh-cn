@@ -1,15 +1,15 @@
 ---
-title: WPF 中的版式
+title: 版式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0c98d0e7363e7732f44f2edf238b9cb6d2bf11fb
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3d94873931e3ee6df780df214f508258aa07a791
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740286"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735533"
 ---
 # <a name="typography-in-wpf"></a>WPF 中的版式
 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要版式功能。 这些功能包括改进的文本呈现质量和性能、OpenType 版式支持、增强的国际文本、增强的字体支持以及新的文本应用程序编程接口（Api）。  
@@ -33,7 +33,7 @@ ms.locfileid: "75740286"
   
  Pericles OpenType 字体包含其他一些标志符号，它们提供标准字形集的样式备用项。 以下文本显示样式备用字形。  
   
- ![使用 OpenType 样式备用字形的文本](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "使用 OpenType 样式备用标志符号的文本")  
+ ![使用 OpenType 样式备用字形的文本](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "使用 OpenType 样式备用字形的文本")  
   
  花体是使用精美修饰的装饰性字形，通常与书法相关。 以下文本显示 Pescadero 字体的标准和花体字形。  
   
@@ -156,5 +156,5 @@ ms.locfileid: "75740286"
 - [OpenType 字体功能](opentype-font-features.md)
 - [绘制格式化文本](drawing-formatted-text.md)
 - [高级文本格式设置](advanced-text-formatting.md)
-- [文本](optimizing-performance-text.md)
+- [“文本”](optimizing-performance-text.md)
 - [Microsoft 版式](https://docs.microsoft.com/typography/)

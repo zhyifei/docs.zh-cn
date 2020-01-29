@@ -1,5 +1,5 @@
 ---
-title: 如何：对 Windows 窗体上的对象分层
+title: 对对象进行分层
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +15,12 @@ ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5b8f6c00e70df94ae3a82c2c195fa781f0840a53
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1615b9c4df222edd95cda9bceae622ba6f1d8d78
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458351"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736339"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>如何：在 Windows 窗体上的层对象
 
@@ -53,7 +53,7 @@ txtFirstName->BringToFront();
 > [!NOTE]
 > Windows 窗体支持*控件包含*。 控件包含涉及到在包含控件中放置许多控件，如 <xref:System.Windows.Forms.GroupBox> 控件中的大量 <xref:System.Windows.Forms.RadioButton> 控件。 然后，可以将控件分层到包含控件中。 移动组框也将移动控件，因为这些控件包含在其中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Windows 窗体控件](index.md)
 - [标记各个 Windows 窗体控件并创建它们的快捷键](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

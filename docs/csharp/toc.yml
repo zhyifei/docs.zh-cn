@@ -1317,14 +1317,15 @@
           items:
             - name: 值类型
               items:
-                - name: 值类型的功能
-                  href: language-reference/keywords/value-types.md
+                - name: 概述
+                  href: language-reference/builtin-types/value-types.md
+                  displayName: 'value types, simple types'
                 - name: 整型数值类型
-                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                   href: language-reference/builtin-types/integral-numeric-types.md
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                 - name: 浮点型数值类型
-                  displayName: 'float, decimal, double, rational, real, literal'
                   href: language-reference/builtin-types/floating-point-numeric-types.md
+                  displayName: 'float, decimal, double, rational, real, literal'
                 - name: 内置数值转换
                   href: language-reference/builtin-types/numeric-conversions.md
                 - name: bool
@@ -1364,8 +1365,6 @@
               items:
                 - name: 内置类型表
                   href: language-reference/keywords/built-in-types-table.md
-                - name: 值类型表
-                  href: language-reference/keywords/value-types-table.md
                 - name: 设置数值结果表的格式
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: 修饰符
@@ -1399,7 +1398,7 @@
               displayName: await
             - name: const
               href: language-reference/keywords/const.md
-            - name: 事件
+            - name: event
               href: language-reference/keywords/event.md
             - name: extern
               href: language-reference/keywords/extern.md
@@ -1415,13 +1414,13 @@
               href: language-reference/keywords/readonly.md
             - name: sealed
               href: language-reference/keywords/sealed.md
-            - name: 静态
+            - name: static
               href: language-reference/keywords/static.md
             - name: unsafe
               href: language-reference/keywords/unsafe.md
             - name: virtual
               href: language-reference/keywords/virtual.md
-            - name: 易失
+            - name: volatile
               href: language-reference/keywords/volatile.md
         - name: 语句关键字
           items:

@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Windows 窗体 TabControl 添加和移除选项卡
+title: 添加和删除 TabControl 的选项卡
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: 938f1210eaa3479822e752327123737a3286fe9a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8292d8441f9b47334b98736cf3282c846673dbb4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624061"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732716"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>如何：使用 Windows 窗体 TabControl 添加和移除选项卡
-默认情况下<xref:System.Windows.Forms.TabControl>控件包含两个<xref:System.Windows.Forms.TabPage>控件。 您可以访问通过这些选项卡<xref:System.Windows.Forms.TabControl.TabPages%2A>属性。  
+默认情况下，<xref:System.Windows.Forms.TabControl> 控件包含两个 <xref:System.Windows.Forms.TabPage> 控件。 可以通过 <xref:System.Windows.Forms.TabControl.TabPages%2A> 属性访问这些选项卡。  
   
-### <a name="to-add-a-tab-programmatically"></a>若要以编程方式添加选项卡  
+### <a name="to-add-a-tab-programmatically"></a>以编程方式添加选项卡  
   
-- 使用<xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A>方法的<xref:System.Windows.Forms.TabControl.TabPages%2A>属性。  
+- 使用 <xref:System.Windows.Forms.TabControl.TabPages%2A> 属性的 <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> 方法。  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -45,13 +45,13 @@ ms.locfileid: "64624061"
     tabControl1->TabPages->Add(myTabPage);  
     ```  
   
-### <a name="to-remove-a-tab-programmatically"></a>若要以编程方式删除选项卡  
+### <a name="to-remove-a-tab-programmatically"></a>以编程方式删除选项卡  
   
-- 若要删除所选的选项卡，请使用<xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A>方法的<xref:System.Windows.Forms.TabControl.TabPages%2A>属性。  
+- 若要删除选定的选项卡，请使用 <xref:System.Windows.Forms.TabControl.TabPages%2A> 属性的 <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> 方法。  
   
      或  
   
-- 若要删除所有选项卡，请使用<xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A>方法的<xref:System.Windows.Forms.TabControl.TabPages%2A>属性。  
+- 若要删除所有选项卡，请使用 <xref:System.Windows.Forms.TabControl.TabPages%2A> 属性的 <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> 方法。  
   
     ```vb  
     ' Removes the selected tab:  
@@ -74,9 +74,9 @@ ms.locfileid: "64624061"
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [TabControl 控件概述](tabcontrol-control-overview-windows-forms.md)
 - [如何：向选项卡页添加控件](how-to-add-a-control-to-a-tab-page.md)
 - [如何：禁用选项卡页](how-to-disable-tab-pages.md)
-- [如何：更改 Windows 窗体 TabControl 的外观](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [如何：更改 Windows 窗体 TabControl 控件的外观](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

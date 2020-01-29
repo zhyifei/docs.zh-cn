@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Windows 窗体 BindingSource 组件创建查找表
+title: 使用 BindingSource 组件创建查找表
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 33b9e4e98a8a3f8c0d5dd6433ebbf15c049b608e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ccf2bfa6cf3f56a38b55f8c87004c42a46172891
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643058"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736809"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>如何：使用 Windows 窗体 BindingSource 组件创建查找表
 查找表是一种数据表，其中有一列显示另一个相关表的记录数据。 在以下过程中，<xref:System.Windows.Forms.ComboBox> 控件可用于显示具有从父表到子表的外键关系的字段。  
@@ -49,7 +49,7 @@ ms.locfileid: "64643058"
   
 ### <a name="to-create-the-user-interface"></a>创建用户界面  
   
-1. 从**工具箱**，拖动<xref:System.Windows.Forms.ComboBox>拖到窗体控件。  
+1. 从 "**工具箱**" 中，将 "<xref:System.Windows.Forms.ComboBox>" 控件拖动到窗体上。  
   
      此控件将显示父表的列。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "64643058"
   
     7. 如果愿意，可以替换默认的数据集名称。  
   
-    8. 单击 **“完成”**。  
+    8. 单击 **“完成”** 。  
   
 4. 在“显示成员”下拉框中，选择将在组合框中显示的列名（例如，ContactName）。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "64643058"
   
 8. 从想要显示的子表的 <xref:System.Windows.Forms.ComboBox>（例如，<xref:System.Windows.Forms.BindingNavigator>）中，将除了 <xref:System.Windows.Forms.BindingSource> 和 `OrdersBindingSource` 外的控件绑定到详细信息字段上。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingSource 组件](bindingsource-component.md)

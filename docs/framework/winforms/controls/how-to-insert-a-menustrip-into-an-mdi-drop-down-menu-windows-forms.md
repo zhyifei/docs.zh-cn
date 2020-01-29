@@ -1,5 +1,5 @@
 ---
-title: 如何：将 MenuStrip 插入 MDI 下拉菜单 （Windows 窗体）
+title: 如何：将 MenuStrip 插入 MDI 下拉菜单
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], merging
 - MDI [Windows Forms], merging menu items
 ms.assetid: 0fad444e-26d9-49af-8860-044d9c10d608
-ms.openlocfilehash: febe5347ed305dc85e67d992fac8aefa18a02cff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e189dd159c48b5779679d0563fab85e9b848992
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651648"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736412"
 ---
-# <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>如何：将 MenuStrip 插入 MDI 下拉菜单 （Windows 窗体）
+# <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>如何：将 MenuStrip 插入 MDI 下拉菜单（Windows 窗体）
 在某些应用程序中，多文档界面 (MDI) 子窗口的类型可以不同于 MDI 父窗口。 例如，MDI 父窗口可能为电子表格，而 MDI 子窗口可能为图表。 在这种情况下，由于激活了不同类型的 MDI 子窗口，你想用 MDI 子菜单上的内容更新 MDI 父菜单的内容。  
   
- 以下过程使用<xref:System.Windows.Forms.Form.IsMdiContainer%2A>， <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>， <xref:System.Windows.Forms.MergeAction>，和<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>属性，以从 MDI 子菜单中的一组菜单项插入 MDI 父菜单的下拉部分。 关闭 MDI 子窗口从 MDI 父删除插入的菜单项。  
+ 下面的过程使用 "<xref:System.Windows.Forms.Form.IsMdiContainer%2A>"、"<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>"、"<xref:System.Windows.Forms.MergeAction>" 和 "<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>" 属性将一组菜单项从 MDI 子菜单插入到 MDI 父菜单的下拉部分。 关闭 MDI 子窗口会删除 MDI 父窗口中插入的菜单项。  
   
-### <a name="to-insert-a-menustrip-into-an-mdi-drop-down-menu"></a>若要将 MenuStrip 插入 MDI 下拉菜单  
+### <a name="to-insert-a-menustrip-into-an-mdi-drop-down-menu"></a>将 MenuStrip 插入 MDI 下拉菜单  
   
 1. 创建一个窗体并将其 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 属性设置为 `true`。  
   
@@ -29,25 +29,25 @@ ms.locfileid: "64651648"
   
 3. 将顶级菜单项添加到 `Form1`<xref:System.Windows.Forms.MenuStrip> 并将其 <xref:System.Windows.Forms.Control.Text%2A> 属性设置为 `&File`。  
   
-4. 添加到的三个子菜单项`&File`菜单项并设置其<xref:System.Windows.Forms.ToolStripItem.Text%2A>属性设置为`&Open`， `&Import from`，和`E&xit`。  
+4. 将三个子菜单项添加到 `&File` 菜单项，并将其 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为 `&Open`、`&Import from`和 `E&xit`。  
   
-5. 添加到的两个子菜单项`&Import from`子菜单项并设置其<xref:System.Windows.Forms.ToolStripItem.Text%2A>属性设置为`&Word`和`&Excel`。  
+5. 将两个子菜单项添加到 `&Import from` 子菜单项，并将其 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为 `&Word` 和 `&Excel`。  
   
 6. 将窗体添加到项目，将 <xref:System.Windows.Forms.MenuStrip> 添加该窗体，并将 `Form2`<xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 属性设置为 `true`。  
   
 7. 将顶级菜单项添加到 `Form2`<xref:System.Windows.Forms.MenuStrip> 并将其 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为 `&File`。  
   
-8. 添加到的子菜单项`&File`菜单`Form2`按以下顺序： <xref:System.Windows.Forms.ToolStripSeparator>， `&Save`， `Save and &Close`，，另一个<xref:System.Windows.Forms.ToolStripSeparator>。  
+8. 按照以下顺序将子菜单项添加到 `Form2` 的 `&File` 菜单： <xref:System.Windows.Forms.ToolStripSeparator>、`&Save`、`Save and &Close`和其他 <xref:System.Windows.Forms.ToolStripSeparator>。  
   
-9. 设置<xref:System.Windows.Forms.MergeAction>并<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>的属性`Form2`下表中所示的菜单项。  
+9. 按下表所示设置 `Form2` 菜单项的 <xref:System.Windows.Forms.MergeAction> 和 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 属性。  
   
-    |Form2 的菜单项|MergeAction 值|MergeIndex 值|  
+    |Form2 菜单项|MergeAction 值|MergeIndex 值|  
     |---------------------|-----------------------|----------------------|  
-    |文件|MatchOnly|-1|  
-    |Separator|Insert|2|  
-    |保存|Insert|3|  
-    |保存并关闭|Insert|4|  
-    |Separator|Insert|5|  
+    |File|MatchOnly|-1|  
+    |Separator|插入|2|  
+    |“保存”|插入|3|  
+    |保存并关闭|插入|4|  
+    |Separator|插入|5|  
   
 10. 为 `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> 的 <xref:System.Windows.Forms.Control.Click> 事件创建一个事件处理程序。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "64651648"
   
 - 对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：创建 MDI 父窗体](../advanced/how-to-create-mdi-parent-forms.md)
 - [如何：创建 MDI 子窗体](../advanced/how-to-create-mdi-child-forms.md)

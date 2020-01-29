@@ -1,5 +1,5 @@
 ---
-title: 如何：用引号将引号引起来 (Windows 窗体)
+title: 如何：在字符串中放置引号
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 20828f75eeae9df33fcc22d8558b26a8a1ab2bdc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c14747291d6c41144eef97b258f852bbe14ef07d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910424"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735895"
 ---
-# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>如何：用引号将引号引起来 (Windows 窗体)
-有时可能需要将引号（“”）放入文本字符串中。 例如:  
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>如何：在字符串中放置引号（Windows 窗体）
+有时可能需要将引号（“”）放入文本字符串中。 例如：  
   
  她说：“该好好款待你了！”  
   
- 作为替代方法, 还可以将<xref:Microsoft.VisualBasic.ControlChars.Quote>字段用作常量。  
+ 作为替代方法，还可以将 <xref:Microsoft.VisualBasic.ControlChars.Quote> 字段用作常量。  
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>在代码中的字符串内放置引号  
   
-1. 在 Visual Basic 中, 在行中插入两个用引号引起来的引号。 在 visual C#和视觉C++对象中, 插入转义\\序列 "作为嵌入的引号。 例如，若要创建前面提到的字符串，请使用下面的代码。  
+1. 在 Visual Basic 中，在行中插入两个用引号引起来的引号。 在 Visual C#和视觉C++对象中，插入转义序列 \\"作为嵌入的引号。 例如，若要创建前面提到的字符串，请使用下面的代码。  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -50,7 +50,7 @@ ms.locfileid: "69910424"
   
      或  
   
-2. 插入 ASCII 字符或 Unicode 字符表示引号。 在 Visual Basic 中, 使用 ASCII 字符 (34)。 在视觉C#对象中, 使用 Unicode 字符 (\u0022)。  
+2. 插入 ASCII 字符或 Unicode 字符表示引号。 在 Visual Basic 中，使用 ASCII 字符（34）。 在视觉C#对象中，使用 Unicode 字符（\u0022）。  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -88,14 +88,14 @@ ms.locfileid: "69910424"
        const_cast<String^>(quote));  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>
 - [TextBox 控件概述](textbox-control-overview-windows-forms.md)
-- [如何：控制 Windows 窗体 TextBox 控件中的插入点](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [如何：使用 "Windows 窗体 TextBox" 控件创建密码文本框](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [如何：在 Windows 窗体 TextBox 控件中控制插入点](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [如何：使用 Windows 窗体 TextBox 控件创建密码文本框](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [如何：创建只读文本框](how-to-create-a-read-only-text-box-windows-forms.md)
 - [如何：在 Windows 窗体 TextBox 控件中选择文本](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [如何：在 "Windows 窗体 TextBox" 控件中查看多行](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [如何：在 Windows 窗体 TextBox 控件中查看多个行](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox 控件](textbox-control-windows-forms.md)

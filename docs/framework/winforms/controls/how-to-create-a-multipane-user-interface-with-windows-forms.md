@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Windows 窗体创建多窗格用户界面
+title: 创建多窗格用户界面
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b168a6d566e20814d4403f90e157d80efe3bf12
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747090"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731333"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>如何：使用 Windows 窗体创建多窗格用户界面
-在下面的过程中，将创建类似于在 Microsoft Outlook 中使用与多窗格用户界面**文件夹**列表中，**消息**窗格中，和一个**预览**窗格。 这种排列方式被实现主要通过处理该窗体控件停靠。  
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>如何：用 Windows 窗体创建多窗格用户界面
+在下面的过程中，你将创建一个多窗格用户界面，该用户界面类似于在 Microsoft Outlook 中使用的用户界面，其中包含**文件夹**列表、**邮件**窗格和**预览**窗格。 这种方式是通过窗体的停靠控件主要实现的。  
   
- 停靠控件时，您可以确定控件固定的父容器的边缘。 因此，如果您设置<xref:System.Windows.Forms.SplitContainer.Dock%2A>属性设置为<xref:System.Windows.Forms.DockStyle.Right>，将在该控件的右边缘停靠到其父控件的右边缘。 此外，该控件的停靠的边缘调整大小以匹配的它的容器控件。 详细了解如何<xref:System.Windows.Forms.SplitContainer.Dock%2A>属性的工作原理，请参阅[如何：在 Windows 窗体上停靠控件](how-to-dock-controls-on-windows-forms.md)。  
+ 停靠控件时，可以确定控件所固定到的父容器的边缘。 因此，如果将 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Right>，控件的右边缘将停靠在其父控件的右边缘。 此外，控件的停靠边缘的大小会调整，以匹配其容器控件的边缘。 有关 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性如何工作的详细信息，请参阅[如何：在 Windows 窗体上停靠控件](how-to-dock-controls-on-windows-forms.md)。  
   
- 此过程重点介绍排列<xref:System.Windows.Forms.SplitContainer>和其他控件在窗体上，而不上添加功能以使应用程序模仿 Microsoft Outlook。  
+ 此过程侧重于排列窗体上的 <xref:System.Windows.Forms.SplitContainer> 和其他控件，而不是添加功能以使应用程序模拟 Microsoft Outlook。  
   
- 若要创建此用户界面，您将中的所有控件<xref:System.Windows.Forms.SplitContainer>控件，它包含<xref:System.Windows.Forms.TreeView>左侧面板中的控件。 右侧面板中的<xref:System.Windows.Forms.SplitContainer>控件包含第二个<xref:System.Windows.Forms.SplitContainer>控件替换<xref:System.Windows.Forms.ListView>控制上述<xref:System.Windows.Forms.RichTextBox>控件。 这些<xref:System.Windows.Forms.SplitContainer>控件启用独立调整大小的窗体上的其他控件。 您可以改写此过程，以制作出的您自己的自定义用户界面中的技术。  
+ 若要创建此用户界面，请将所有控件放在 <xref:System.Windows.Forms.SplitContainer> 控件中，其中包含左侧面板中的 <xref:System.Windows.Forms.TreeView> 控件。 <xref:System.Windows.Forms.SplitContainer> 控件的右侧面板中包含另一个 <xref:System.Windows.Forms.SplitContainer> 控件，该控件在 <xref:System.Windows.Forms.RichTextBox> 控件上带有 <xref:System.Windows.Forms.ListView> 控件。 这些 <xref:System.Windows.Forms.SplitContainer> 控件可以独立调整窗体上其他控件的大小。 您可以调整此过程中的技术，以创建自己的自定义用户界面。  
   
-### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>若要以编程方式创建的 Outlook 样式用户界面  
+### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>以编程方式创建 Outlook 样式的用户界面  
   
-1. 在窗体中声明每个控件组成用户界面。 对于此示例中，使用<xref:System.Windows.Forms.TreeView>， <xref:System.Windows.Forms.ListView>， <xref:System.Windows.Forms.SplitContainer>，和<xref:System.Windows.Forms.RichTextBox>控件来模拟 Microsoft Outlook 用户界面。  
+1. 在窗体中，声明组成用户界面的每个控件。 对于本示例，请使用 <xref:System.Windows.Forms.TreeView>、<xref:System.Windows.Forms.ListView>、<xref:System.Windows.Forms.SplitContainer>和 <xref:System.Windows.Forms.RichTextBox> 控件来模拟 Microsoft Outlook 用户界面。  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -50,7 +50,7 @@ ms.locfileid: "61747090"
     private System.Windows.Forms. SplitContainer splitContainer1;  
     ```  
   
-2. 创建一个定义用户界面的过程。 下面的代码，以便窗体将类似于 Microsoft Outlook 中的用户界面设置的属性。 但是，通过使用其他控件，或以不同的方式将它们停靠在一起，将只需创建其他同样灵活的用户界面一样简单。  
+2. 创建用于定义用户界面的过程。 下面的代码设置属性，使窗体与 Microsoft Outlook 中的用户界面类似。 但是，通过使用其他控件或将它们停靠在不同的其他控件中，可以轻松地创建具有同样灵活性的其他用户界面。  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -164,7 +164,7 @@ ms.locfileid: "61747090"
     }  
     ```  
   
-3. 在 Visual Basic 中，添加对刚刚创建的过程的调用`New()`过程。 视觉对象中C#，将这行代码添加到窗体类的构造函数。  
+3. 在 Visual Basic 中，添加对你在 `New()` 过程中刚创建的过程的调用。 在视觉C#对象中，将以下代码行添加到窗体类的构造函数中。  
   
     ```vb  
     ' Add this to the New procedure.  
@@ -176,8 +176,8 @@ ms.locfileid: "61747090"
     createOutlookUI();  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer 控件](splitcontainer-control-windows-forms.md)
-- [如何：用 Windows 窗体使用设计器创建多窗格用户界面](create-a-multipane-user-interface-with-wf-using-the-designer.md)
+- [如何：使用设计器用 Windows 窗体创建多窗格用户界面](create-a-multipane-user-interface-with-wf-using-the-designer.md)

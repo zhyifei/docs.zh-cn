@@ -1,5 +1,5 @@
 ---
-title: CheckedListBox 控件（Windows 窗体）
+title: CheckedListBox 컨트롤
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CheckedListBox control [Windows Forms], reference
@@ -13,30 +13,30 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: 2a525f72-0245-41d7-94e9-b9c971dc4484
-ms.openlocfilehash: 4d24a25a0b033caeb165566eb0dc5a2e189a8d4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 069c0a2332f7035ce59f17058f388f9fb452b720
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956450"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736995"
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox 控件（Windows 窗体）
-Windows 窗体`CheckedListBox`控件将显示一系列项，如<xref:System.Windows.Forms.ListBox>控件，并还可以显示在列表中的项旁边的复选标记。  
+Windows 窗体 `CheckedListBox` 控件将显示项列表，如 <xref:System.Windows.Forms.ListBox> 控件，还可以在列表中的项旁显示复选标记。  
   
-## <a name="in-this-section"></a>本节内容  
- [CheckedListBox 控件概述](checkedlistbox-control-overview-windows-forms.md)  
- 说明此控件的本质及其主要功能和属性。  
+## <a name="in-this-section"></a>섹션 내용  
+ [CheckedListBox 컨트롤 개요](checkedlistbox-control-overview-windows-forms.md)  
+ 이 컨트롤의 정의와 주요 기능 및 속성을 설명합니다.  
   
- [如何：确定 Windows 窗体 CheckedListBox 控件中的选中的项](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
- 介绍如何来单步执行用于确定未选中的项的列表。  
+ [방법: Windows Forms CheckedListBox 컨트롤에서 선택된 항목 확인](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
+ 描述如何单步执行列表以确定哪些项已选中。  
   
-## <a name="reference"></a>参考  
- <xref:System.Windows.Forms.CheckedListBox> 类  
- 对此类进行描述，并提供指向其所有成员的链接。  
+## <a name="reference"></a>참조  
+ <xref:System.Windows.Forms.CheckedListBox> 클래스  
+ 이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
-## <a name="related-sections"></a>相关章节  
- [用于列出选项的 Windows 窗体控件](windows-forms-controls-used-to-list-options.md)  
- 提供了一系列你可以使用列表框、 组合框和选中的列表框执行的操作。  
+## <a name="related-sections"></a>관련 섹션  
+ [옵션 목록 표시에 사용된 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)  
+ 提供可对列表框、组合框和选中的列表框执行的操作的列表。  
   
- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)  
- 提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。
+ [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ 사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.

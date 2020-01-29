@@ -1,5 +1,6 @@
 ---
-title: 墨迹对象模型：Windows 窗体和 COM 与 WPF
+title: 数字墨迹 Windows 窗体和 COM 与 WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - ink [WPF], enabling
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
-ms.openlocfilehash: 2c0d155d320bab2f0114280e962c8f2f0b559681
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 4a183bba2c5cfb2d12a9cf435ae1f92b4cf63948
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636414"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737297"
 ---
-# <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>墨迹对象模型：Windows 窗体和 COM 与 WPF
+# <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>잉크 개체 모델: Windows Forms 및 COM과 WPF
 
 实质上有三个支持数字墨迹的平台： Tablet PC Windows 窗体平台、Tablet PC COM 平台和 Windows Presentation Foundation （WPF）平台。  Windows 窗体和 COM 平台共享类似的对象模型，但 WPF 平台的对象模型差别很大。  本主题讨论了较高级别的差异，使使用一个对象模型的开发人员可以更好地理解其他对象模型。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "75636414"
   
  下表比较了如何在 WPF 平台和 Windows 窗体和 COM 平台上完成一些常见任务。  
   
-|任务|Windows Presentation Foundation|Windows 窗体和 COM|  
+|작업|Windows Presentation Foundation|Windows 窗体和 COM|  
 |----------|-------------------------------------|---------------------------|  
 |保存墨迹|<xref:System.Windows.Ink.StrokeCollection.Save%2A>|[Microsoft.Ink.Ink.Save](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571335(v=vs.90))|  
 |加载墨迹|使用 <xref:System.Windows.Ink.StrokeCollection.%23ctor%2A> 构造函数创建 <xref:System.Windows.Ink.StrokeCollection>。|[Microsoft.Ink.Ink.Load](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms569609(v=vs.90))|  

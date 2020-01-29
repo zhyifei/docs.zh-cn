@@ -1,5 +1,5 @@
 ---
-title: 演练：设置 WPF 内容的样式
+title: 演练：样式 WPF 内容
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Designer [Windows Forms], styling WPF content
@@ -9,18 +9,18 @@ ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d0aa2c54f05cea658c95dc2c23b7ba4bb78835c9
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: e52297f51c74fc3dba93c987fd5b9bd5b6801777
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138924"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732541"
 ---
 # <a name="walkthrough-style-wpf-content"></a>演练：样式 WPF 内容
 
 本文介绍如何将样式应用于 Windows 窗体上承载的 Windows Presentation Foundation （WPF）控件。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 若要完成本演练，必须具有 Visual Studio。
 
@@ -45,7 +45,7 @@ ms.locfileid: "74138924"
 
 5. 将第二个 <xref:System.Windows.Controls.Button?displayProperty=nameWithType> 控件添加到 <xref:System.Windows.Controls.UserControl> 并将 <xref:System.Windows.Controls.ContentControl.Content%2A> 属性的值设置为 **"确定"** 。
 
-6. 生成项目。
+6. 生成此项目。
 
 ## <a name="apply-a-style-to-a-wpf-control"></a>将样式应用到 WPF 控件
 
@@ -124,7 +124,7 @@ ms.locfileid: "74138924"
                 Style="{StaticResource SimpleButton}">Cancel</Button>
    ```
 
-1. 生成项目。
+1. 生成此项目。
 
 1. 在 Windows 窗体设计器中打开 `Form1`。
 
@@ -134,7 +134,7 @@ ms.locfileid: "74138924"
 
 1. 单击 **"确定" 和 "** **取消**" 按钮，查看不同之处。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

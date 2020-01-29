@@ -1,5 +1,5 @@
 ---
-title: 如何：循环访问 Windows 窗体 TreeView 控件的所有节点
+title: 遍历 TreeView 控件的所有节点
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 00a0f19803967f02795e3eade767786eecc1f4dd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 010932fa3fdfaa907325b9934682dcbf889265c1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966547"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736364"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>如何：循环访问 Windows 窗体 TreeView 控件的所有节点
-检查 Windows 窗体<xref:System.Windows.Forms.TreeView>控件中的每个节点有时很有用, 以便对节点值执行某些计算。 使用循环访问每个树集合中每个节点的递归过程（C# 和 C++ 中为递归方法）可完成此操作。  
+检查 Windows 窗体 <xref:System.Windows.Forms.TreeView> 控件中的每个节点以对节点值执行某些计算，有时很有用。 使用循环访问每个树集合中每个节点的递归过程（C# 和 C++ 中为递归方法）可完成此操作。  
   
- 树<xref:System.Windows.Forms.TreeNode>视图中的每个对象都具有可用于在树视图中导航的属性<xref:System.Windows.Forms.TreeNode.FirstNode%2A>: <xref:System.Windows.Forms.TreeNode.LastNode%2A>、 <xref:System.Windows.Forms.TreeNode.NextNode%2A>、 <xref:System.Windows.Forms.TreeNode.PrevNode%2A>、和<xref:System.Windows.Forms.TreeNode.Parent%2A>。 <xref:System.Windows.Forms.TreeNode.Parent%2A>属性的值为当前节点的父节点。 当前节点的子节点 (如果有) 将在其<xref:System.Windows.Forms.TreeNode.Nodes%2A>属性中列出。 <xref:System.Windows.Forms.TreeView>控件本身<xref:System.Windows.Forms.TreeView.TopNode%2A>具有属性, 该属性是整个树视图的根节点。  
+ 树视图中的每个 <xref:System.Windows.Forms.TreeNode> 对象都具有属性，可用于在树视图中导航： <xref:System.Windows.Forms.TreeNode.FirstNode%2A>、<xref:System.Windows.Forms.TreeNode.LastNode%2A>、<xref:System.Windows.Forms.TreeNode.NextNode%2A>、<xref:System.Windows.Forms.TreeNode.PrevNode%2A>和 <xref:System.Windows.Forms.TreeNode.Parent%2A>。 <xref:System.Windows.Forms.TreeNode.Parent%2A> 属性的值是当前节点的父节点。 当前节点的子节点（如果有）在其 <xref:System.Windows.Forms.TreeNode.Nodes%2A> 属性中列出。 <xref:System.Windows.Forms.TreeView> 控件本身具有 <xref:System.Windows.Forms.TreeView.TopNode%2A> 属性，该属性是整个树视图的根节点。  
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>循环访问 TreeView 控件的所有节点  
   
@@ -28,7 +28,7 @@ ms.locfileid: "69966547"
   
 2. 调用过程。  
   
-     下面的示例演示如何打印每个<xref:System.Windows.Forms.TreeNode>对象的<xref:System.Windows.Forms.TreeNode.Text%2A>属性:  
+     下面的示例演示如何打印每个 <xref:System.Windows.Forms.TreeNode> 对象的 <xref:System.Windows.Forms.TreeNode.Text%2A> 属性：  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
@@ -123,7 +123,7 @@ ms.locfileid: "69966547"
        }  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [TreeView 控件](treeview-control-windows-forms.md)
 - [递归过程](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

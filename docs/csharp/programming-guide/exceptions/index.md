@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: f5d709a35e160a8b03ac59e52f7bcb46196a3ce4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b883012cf8f72247ff4e0b47a46eee1854e2d534
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705283"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735659"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>异常和异常处理（C# 编程指南）
 
@@ -25,7 +25,7 @@ C# 语言的异常处理功能有助于处理在程序运行期间发生的任�
 
 ## <a name="exceptions-overview"></a>异常概述
 
-异常具有以下属性：  
+异常具有以下属性：
 
 - 异常是最终全都派生自 `System.Exception` 的类型。
 - 在可能抛出异常的语句周围使用 `try` 代码块。
@@ -36,7 +36,7 @@ C# 语言的异常处理功能有助于处理在程序运行期间发生的任�
 - 使用 `throw` 关键字，程序可以显式生成异常。
 - 异常对象包含错误详细信息，如调用堆栈的状态和错误的文本说明。
 - 即使有异常抛出，`finally` 代码块中的代码仍会执行。 使用 `finally` 代码块可释放资源。例如，关闭在 `try` 代码块中打开的任何流或文件。
-- .NET Framework 中的托管异常在 Win32 结构化异常处理机制的基础之上实现。 有关详细信息，请参阅[结构化异常处理 (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) 和[速成教程：深入了解 Win32 结构化异常处理](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm)。
+- .NET Framework 中的托管异常在 Win32 结构化异常处理机制的基础之上实现。 有关详细信息，请参阅[结构化异常处理 (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) 和[速成教程：深入了解 Win32 结构化异常处理](http://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm)。
 
 ## <a name="related-sections"></a>相关章节
 

@@ -1,5 +1,5 @@
 ---
-title: WPF 体系结构
+title: 体系结构
 ms.date: 03/30/2017
 helpviewer_keywords:
 - properties [WPF], attached
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 382facef15e79c4ce49fdedaeb1a072b7591e4a0
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
-ms.translationtype: MT
+ms.openlocfilehash: db9938f26f31506737eb0395fa389da01a1ee444
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740213"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735063"
 ---
 # <a name="wpf-architecture"></a>WPF 体系结构
 本主题提供 Windows Presentation Foundation （WPF）类层次结构的指导教程。 它涵盖了 WPF 的大部分主要子系统，并描述了它们的交互方式。 它还详细介绍了 WPF 架构师所做的一些选择。  
