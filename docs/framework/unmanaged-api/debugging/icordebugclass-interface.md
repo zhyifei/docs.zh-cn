@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03a6facb-f12f-49be-9839-e73b9c791cd5
 topic_type:
 - apiref
-ms.openlocfilehash: 5714597b5e5ca2936aad53217ae934684e75585c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ac588591222a1abbc7b99ec7e973284c055f95e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125752"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784169"
 ---
 # <a name="icordebugclass-interface"></a>ICorDebugClass 接口
 
@@ -29,9 +29,9 @@ ms.locfileid: "73125752"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetModule 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|获取定义此类的模块。|  
-|[GetStaticFieldValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)|获取指定的静态字段的值。|  
-|[GetToken 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|获取此类的 `TypeDef` 元数据标记。|  
+|[GetModule 方法](icordebugclass-getmodule-method.md)|获取定义此类的模块。|  
+|[GetStaticFieldValue 方法](icordebugclass-getstaticfieldvalue-method.md)|获取指定的静态字段的值。|  
+|[GetToken 方法](icordebugclass-gettoken-method.md)|获取此类的 `TypeDef` 元数据标记。|  
   
 ## <a name="remarks"></a>备注  
  `ICorDebugClass` 接口表示未实例化的泛型类型。 ICorDebugType 接口表示一个实例化的泛型类型。 例如，`Hashtable<K, V>` 将由 `ICorDebugClass`表示，而 `Hashtable<Int32, String>` 将由 `ICorDebugType`表示。  
@@ -41,7 +41,7 @@ ms.locfileid: "73125752"
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -50,6 +50,6 @@ ms.locfileid: "73125752"
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试接口](debugging-interfaces.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef782c53-dae7-4990-b4ad-fddb1e690d4e
 topic_type:
 - apiref
-ms.openlocfilehash: fd224279b3df6c9e8e55cd81ebfbf2e5ea2428d5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 0ed7a0619816caab64361d7922d28b18c60ed453
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440778"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790270"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 函数
 通知探查器控制正在传递到函数。  
@@ -30,10 +30,12 @@ ms.locfileid: "74440778"
 void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);  
 ```  
   
-## <a name="parameters"></a>参数  
- `functionOrRemappedID`  
- 中要传递控制的函数的标识符。  
-  
+## <a name="parameters"></a>参数
+
+- `functionOrRemappedID`
+
+  \[中] 控制传递到的函数的标识符。
+
 ## <a name="remarks"></a>备注  
  `FunctionEnter3` 回调函数将在调用函数时通知探查器，但不支持参数检查。 使用[ICorProfilerInfo3：： SetEnterLeaveFunctionHooks3 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)注册此函数的实现。  
   
@@ -45,7 +47,7 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
 - 退出时，必须通过弹出由其调用方推送的所有参数来还原堆栈。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Corprof.idl .idl  

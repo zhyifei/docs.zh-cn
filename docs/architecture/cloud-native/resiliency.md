@@ -2,12 +2,12 @@
 title: 云本机复原能力
 description: 构建适用于 Azure 的云本机 .NET 应用 |云本机复原
 ms.date: 06/30/2019
-ms.openlocfilehash: 680542abc5d8c43c577321d5ae834f0a13290da3
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 427405d95534c4467ab519c2188fe88e2f18e2b2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73841041"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781089"
 ---
 # <a name="cloud-native-resiliency"></a>云本机复原能力
 
@@ -41,5 +41,5 @@ ms.locfileid: "73841041"
 因此，您的应用程序和基础结构必须具有复原能力。 在以下部分中，我们将探讨可添加到应用程序中的防御性技术，以及可以利用的内置云功能，以帮助你对用户体验进行验证。
 
 >[!div class="step-by-step"]
->[上一页](azure-data-storage.md)
+>[上一页](elastic-search-in-azure.md)
 >[下一页](application-resiliency-patterns.md)

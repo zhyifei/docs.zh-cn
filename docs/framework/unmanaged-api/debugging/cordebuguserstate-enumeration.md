@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-ms.openlocfilehash: d0394d511197c8d0aaa366ce7b791216a3d226bc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c142b9656af2031b10de239645da76835c435655
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120189"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789228"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState 枚举
 指示线程的用户状态。  
@@ -42,7 +42,7 @@ typedef enum CorDebugUserState {
   
 ## <a name="members"></a>Members  
   
-|“值”|描述|  
+|{2&gt;值&lt;2}|描述|  
 |-----------|-----------------|  
 |`USER_STOP_REQUESTED`|已请求终止线程。|  
 |`USER_SUSPEND_REQUESTED`|已请求挂起线程。|  
@@ -57,9 +57,9 @@ typedef enum CorDebugUserState {
 ## <a name="remarks"></a>备注  
  线程的用户状态是调试器在检查线程时具有的状态。 一个线程可能会组合用户状态。  
   
- 使用[ICorDebugThread：： GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md)方法检索线程的用户状态。  
+ 使用[ICorDebugThread：： GetUserState](icordebugthread-getuserstate-method.md)方法检索线程的用户状态。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -68,6 +68,6 @@ typedef enum CorDebugUserState {
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [调试枚举](debugging-enumerations.md)

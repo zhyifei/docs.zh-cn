@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84e1e605-37c1-49a5-8e12-35db85654622
 topic_type:
 - apiref
-ms.openlocfilehash: d38a59b23d47cbaf57dc21e121d56530a514d354
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d0dc301c67d09ebb15bf47cef15e642fb7c78fb9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128865"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792608"
 ---
 # <a name="icordebugprocessgethelperthreadid-method"></a>ICorDebugProcess::GetHelperThreadID 方法
 获取调试器的内部帮助器线程的操作系统（OS）线程 ID。  
@@ -42,9 +42,9 @@ HRESULT GetHelperThreadID (
   
  不能缓存帮助器线程的线程 ID，因为它可能会随时间而改变。 必须在每次停止事件时重新查询线程 ID。  
   
- 在每个非托管[ICorDebugManagedCallback：： CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md)事件上，调试器的帮助器线程的线程 id 都是正确的，从而允许调试器确定其帮助器线程的线程 id 并将其隐藏给用户。 在非托管 `ICorDebugManagedCallback::CreateThread` 事件期间识别为帮助器线程的线程永远不会运行托管的用户代码。  
+ 在每个非托管[ICorDebugManagedCallback：： CreateThread](icordebugmanagedcallback-createthread-method.md)事件上，调试器的帮助器线程的线程 id 都是正确的，从而允许调试器确定其帮助器线程的线程 id 并将其隐藏给用户。 在非托管 `ICorDebugManagedCallback::CreateThread` 事件期间识别为帮助器线程的线程永远不会运行托管的用户代码。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cordebug.idl。 Cordebug.idl  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: 9e1a5ba65da09c90f33e5e8108c3bd91f3aee4a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cfec84483d387630623f77c176c668171303dd0f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131292"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791981"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx 方法
 在调试器下的远程计算机上启动进程。  
@@ -47,7 +47,7 @@ HRESULT CreateProcessEx (
   
 ## <a name="parameters"></a>参数  
  `pRemoteTarget`  
- 中指向[ICorDebugRemoteTarget 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)的指针。 用于确定将在其上启动进程的远程计算机。  
+ 中指向[ICorDebugRemoteTarget 接口](icordebugremotetarget-interface.md)的指针。 用于确定将在其上启动进程的远程计算机。  
   
  `lpApplicationName`  
  中指向以 null 结尾的字符串的指针，该字符串指定由已启动的进程执行的模块。 该模块在调用进程的安全上下文中执行。  
@@ -95,7 +95,7 @@ HRESULT CreateProcessEx (
 ## <a name="remarks"></a>备注  
  Silverlight 中不支持混合模式调试。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cordebug.idl .idl  
@@ -104,9 +104,9 @@ HRESULT CreateProcessEx (
   
  **.NET Framework 版本：** 4.5、4、3.5 SP1  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugRemote 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemote 接口](icordebugremote-interface.md)
+- [ICorDebug 接口](icordebug-interface.md)
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试接口](debugging-interfaces.md)

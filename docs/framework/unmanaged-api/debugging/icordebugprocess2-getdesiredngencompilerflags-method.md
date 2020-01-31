@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc834580-3a90-4315-95d2-349b6bb7d059
 topic_type:
 - apiref
-ms.openlocfilehash: 2d5b07acb9dc374fdd8872ed982a92171da28603
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 015735e1c6c3b6c146f2fca3a9bdc28baeca2f92
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137235"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792518"
 ---
 # <a name="icordebugprocess2getdesiredngencompilerflags-method"></a>ICorDebugProcess2::GetDesiredNGENCompilerFlags 方法
 获取当前编译器标志设置，公共语言运行时（CLR）使用这些设置来选择要加载到此进程中的正确预编译（即本机）映像。  
@@ -35,12 +35,12 @@ HRESULT GetDesiredNGENCompilerFlags (
   
 ## <a name="parameters"></a>参数  
  `pdwFlags`  
- 弄指向[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)枚举值的按位组合的指针，这些值用于选择要加载的正确预编译映像。  
+ 弄指向[CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md)枚举值的按位组合的指针，这些值用于选择要加载的正确预编译映像。  
   
 ## <a name="remarks"></a>备注  
- 使用[ICorDebugProcess2：： SetDesiredNGENCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setdesiredngencompilerflags-method.md)方法设置 CLR 将用于选择要加载的正确预编译图像的标志。  
+ 使用[ICorDebugProcess2：： SetDesiredNGENCompilerFlags](icordebugprocess2-setdesiredngencompilerflags-method.md)方法设置 CLR 将用于选择要加载的正确预编译图像的标志。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  

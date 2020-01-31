@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 250021c9eb475d0cbcb1bd14c8515b969fc9d30b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b6dabefceba038a129148f7ba36d4ffcfc425c80
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449823"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790039"
 ---
 # <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10：： IsFrozenObject 方法
 
@@ -29,15 +29,17 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
                         [out] BOOL *pbFrozen);
 ```
 
-#### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
-`objectId` \
-中要检查的对象。
+- `objectId`
 
-`pbFrozen` \
-弄一个 `BOOL`，该值指示对象是否位于只读段中。
+  \[中] 要检查的对象。
 
-## <a name="requirements"></a>要求
+- `pbFrozen`
+
+  \[out] 一个 `BOOL`，该值指示对象是否位于只读段中。
+
+## <a name="requirements"></a>需求
 
 **平台：** 请参阅[支持 .Net Core 的操作系统](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)。
 
@@ -49,4 +51,4 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo10 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 接口](icorprofilerinfo10-interface.md)

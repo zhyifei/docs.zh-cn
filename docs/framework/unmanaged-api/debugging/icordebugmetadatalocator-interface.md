@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 287f5ecd-863f-4090-a615-077859f0257b
 topic_type:
 - apiref
-ms.openlocfilehash: 1116945ae1a886f1b9491e0baf183e20c4fff177
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dd31bf458dde043a04e24251cedcac585fd385f6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136614"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793043"
 ---
 # <a name="icordebugmetadatalocator-interface"></a>ICorDebugMetaDataLocator 接口
 向调试器提供元数据信息。  
@@ -28,14 +28,14 @@ ms.locfileid: "73136614"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetMetaData 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmetadatalocator-getmetadata-method.md)|要求调试器返回模块（完成该调试器请求的操作需要其元数据）的完整路径。|  
+|[GetMetaData 方法](icordebugmetadatalocator-getmetadata-method.md)|要求调试器返回模块（完成该调试器请求的操作需要其元数据）的完整路径。|  
   
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -44,7 +44,7 @@ ms.locfileid: "73136614"
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [调试接口](debugging-interfaces.md)
+- [调试](index.md)

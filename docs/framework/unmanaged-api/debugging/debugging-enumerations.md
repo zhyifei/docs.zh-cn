@@ -6,105 +6,105 @@ helpviewer_keywords:
 - unmanaged enumerations [.NET Framework], debugging
 - enumerations [.NET Framework debugging]
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
-ms.openlocfilehash: 7948b78da1db5267ce53364af1e4a26ff73801e0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a83b1aa0b2cc068ed2f73dca04083b1085d45201
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124333"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789161"
 ---
 # <a name="debugging-enumerations"></a>调试枚举
 本节介绍了调试 API 使用的非托管枚举。  
   
 ## <a name="in-this-section"></a>本节内容  
- [CLR_DEBUGGING_PROCESS_FLAGS 枚举](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md)  
- 提供[ICLRDebugging：： OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法使用的值。  
+ [CLR_DEBUGGING_PROCESS_FLAGS 枚举](clr-debugging-process-flags-enumeration.md)  
+ 提供[ICLRDebugging：： OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md)方法使用的值。  
   
- [CLRDataEnumMemoryFlags 枚举](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md)  
- 指示对[ICLRDataEnumMemoryRegions：： EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)方法的调用应包括哪些内存区域。  
+ [CLRDataEnumMemoryFlags 枚举](clrdataenummemoryflags-enumeration.md)  
+ 指示对[ICLRDataEnumMemoryRegions：： EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md)方法的调用应包括哪些内存区域。  
   
- [COR_PUB_ENUMPROCESS 枚举](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md)  
+ [COR_PUB_ENUMPROCESS 枚举](cor-pub-enumprocess-enumeration.md)  
  标识要枚举的进程的类型。  
   
- [CorDebugBlockingReason 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingreason-enumeration.md)  
+ [CorDebugBlockingReason 枚举](cordebugblockingreason-enumeration.md)  
  指定线程可能在给定对象上受到阻塞的原因。  
   
  CorDebugChainReason  
  指示启动调用链的一个或多个原因。  
   
- [CorDebugCodeInvokeKind 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokekind-enumeration.md)  
+ [CorDebugCodeInvokeKind 枚举](cordebugcodeinvokekind-enumeration.md)  
  描述导出函数如何调用托管代码。  
   
- [CorDebugCodeInvokePurpose 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokepurpose-enumeration.md)  
+ [CorDebugCodeInvokePurpose 枚举](cordebugcodeinvokepurpose-enumeration.md)  
  描述为何导出的函数会调用托管代码。  
   
  CorDebugCreateProcessFlags  
- 提供可在对[ICorDebug：： CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)方法的调用中使用的其他调试选项。  
+ 提供可在对[ICorDebug：： CreateProcess](icordebug-createprocess-method.md)方法的调用中使用的其他调试选项。  
   
- [CorDebugDebugEventKind 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)  
- 指示[DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)方法对其信息进行解码的事件类型。  
+ [CorDebugDebugEventKind 枚举](cordebugdebugeventkind-enumeration.md)  
+ 指示[DecodeEvent](icordebugprocess6-decodeevent-method.md)方法对其信息进行解码的事件类型。  
   
- [CorDebugDecodeEventFlagsWindows 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
+ [CorDebugDecodeEventFlagsWindows 枚举](cordebugdecodeeventflagswindows-enumeration.md)  
  提供关于 Windows 平台上的调试事件的其他信息。  
   
  CorDebugExceptionCallbackType  
- 指示从[ICorDebugManagedCallback2：： Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件进行的回调类型。  
+ 指示从[ICorDebugManagedCallback2：： Exception](icordebugmanagedcallback2-exception-method.md)事件进行的回调类型。  
   
- [CorDebugExceptionFlags 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)  
+ [CorDebugExceptionFlags 枚举](cordebugexceptionflags-enumeration.md)  
  提供有关异常的附加信息。  
   
  CorDebugExceptionUnwindCallbackType  
  指示在展开阶段正由回调发送信号的事件。  
   
- [CorDebugGCType 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md)  
+ [CorDebugGCType 枚举](cordebuggctype-enumeration.md)  
  指示垃圾回收器是在工作站还是服务器上运行。  
   
- [CorDebugGenerationTypes 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md)  
+ [CorDebugGenerationTypes 枚举](cordebuggenerationtypes-enumeration.md)  
  指定托管堆上内存区域的生成。  
   
  CorDebugHandleType  
  指示句柄类型。  
   
- [CorDebugIlToNativeMappingTypes 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md)  
+ [CorDebugIlToNativeMappingTypes 枚举](cordebugiltonativemappingtypes-enumeration.md)  
  指示本机指令的某一特定范围是否与特殊的代码区域相符。  
   
  CorDebugIntercept  
  指示可单步执行的代码的类型。  
   
- [CorDebugInterfaceVersion 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md)  
+ [CorDebugInterfaceVersion 枚举](cordebuginterfaceversion-enumeration.md)  
  指定 .NET Framework 的版本，或在其中引入了接口的 .NET Framework 的版本。  
   
  CorDebugInternalFrameType  
  标识堆栈帧的类型。  
   
- [CorDebugJITCompilerFlags 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)  
+ [CorDebugJITCompilerFlags 枚举](cordebugjitcompilerflags-enumeration.md)  
  包含影响托管的实时 (JIT) 编译器的行为的值。  
   
- [CorDebugJITCompilerFlagsDeprecated 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflagsdeprecated-enumeration.md)  
- 已过时。 改为使用[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)枚举的 `CORDEBUG_JIT_DEFAULT` 成员。  
+ [CorDebugJITCompilerFlagsDeprecated 枚举](cordebugjitcompilerflagsdeprecated-enumeration.md)  
+ 已过时。 改为使用[CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md)枚举的 `CORDEBUG_JIT_DEFAULT` 成员。  
   
  CorDebugMappingResult  
  提供如何获取指令指针 (IP) 的值的详细信息。  
   
- [CorDebugMDAFlags 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugmdaflags-enumeration.md)  
+ [CorDebugMDAFlags 枚举](cordebugmdaflags-enumeration.md)  
  指定在其上激发托管调试助手 (MDA) 的线程的状态。  
   
- [CorDebugNGenPolicy 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)  
+ [CorDebugNGenPolicy 枚举](cordebugngenpolicy-enumeration.md)  
  提供用于确定调试器是否从本机映像缓存中加载本机 (NGen) 映像的值。  
   
- [CorDebugPlatform 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)  
- 提供[ICorDebugDataTarget：： GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法使用的目标平台值。  
+ [CorDebugPlatform 枚举](cordebugplatform-enumeration.md)  
+ 提供[ICorDebugDataTarget：： GetPlatform](icordebugdatatarget-getplatform-method.md)方法使用的目标平台值。  
   
- [CorDebugRecordFormat 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
+ [CorDebugRecordFormat 枚举](cordebugrecordformat-enumeration.md)  
  描述包含本机异常调试事件相关信息的字节数组的数据格式。  
   
  CorDebugRegister  
  指定与给定处理器体系结构关联的寄存器。  
   
- [CorDebugSetContextFlag 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md)  
+ [CorDebugSetContextFlag 枚举](cordebugsetcontextflag-enumeration.md)  
  指示上下文是来自堆栈上的活动（或叶）帧，还是已通过从另一个帧展开来进行计算。  
   
- [CorDebugStateChange 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugstatechange-enumeration.md)  
+ [CorDebugStateChange 枚举](cordebugstatechange-enumeration.md)  
  描述基于进程变化必须删除的缓存数据数量。  
   
  CorDebugStepReason  
@@ -119,31 +119,31 @@ ms.locfileid: "73124333"
  CorDebugUserState  
  指示线程的用户状态。  
   
- [CorGCReferenceType 枚举](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)  
+ [CorGCReferenceType 枚举](corgcreferencetype-enumeration.md)  
  标识要进行垃圾回收的对象的源。  
   
- [ILCodeKind 枚举](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md)  
+ [ILCodeKind 枚举](ilcodekind-enumeration.md)  
  提供用于指定调试器是否能够访问在探查器 ReJIT 检测中添加的局部变量或代码的值。  
   
- [LoggingLevelEnum 枚举](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md)  
+ [LoggingLevelEnum 枚举](logginglevelenum-enumeration.md)  
  指示在托管线程记录事件时写入事件日志的描述性消息的严重级别。  
   
- [LogSwitchCallReason 枚举](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md)  
+ [LogSwitchCallReason 枚举](logswitchcallreason-enumeration.md)  
  指示已对调试/跟踪开关执行的操作。  
   
- [VariableLocationType 枚举](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)  
+ [VariableLocationType 枚举](variablelocationtype-enumeration.md)  
  指示变量的本机位置类型。  
   
- [WriteableMetadataUpdateMode 枚举](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md)  
+ [WriteableMetadataUpdateMode 枚举](writeablemetadataupdatemode-enumeration.md)  
  提供用于指定元数据的内存中更新对调试器是否可见的值。 
 
- [ClrDataSourceType 枚举](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)提供 CLRDATA_IL_ADDRESS_MAP 结构使用的值。
+ [ClrDataSourceType 枚举](clrdatasourcetype-enumeration.md)提供 CLRDATA_IL_ADDRESS_MAP 结构使用的值。
 
 ## <a name="related-sections"></a>相关章节  
- [调试组件类](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
+ [调试组件类](debugging-coclasses.md)  
   
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [调试接口](debugging-interfaces.md)  
   
- [调试全局静态函数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
+ [调试全局静态函数](debugging-global-static-functions.md)  
   
- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+ [调试结构](debugging-structures.md)

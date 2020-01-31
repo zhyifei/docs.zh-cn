@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ab14e6cb7d9bd4c1571040280dc35233e9b89d43
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 538806627a31366d4b8597eb010a4bbe3f8f9202
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937983"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860954"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 
@@ -600,7 +600,7 @@ Windows 窗体的 HDPI 感知应用程序、Windows Presentation Foundation (WPF
 
 **支持 .NET Standard 2.0**
 
-[.NET Standard](../../standard/net-standard.md) 定义一组 API，这些 API 必须可用于支持 Standard 版本的每个 .NET 实现。 .NET Framework 4.7.1 完全支持 .NET Standard 2.0 并增加了[ 200 个 API](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt)，这些 API 在 .NET Standard 2.0 中定义，.NET Framework 4.6.1、4.6.2 和 4.7 中也延续使用。 （请注意，这些版本的 .NET Framework 只有在其他 .NET Standard 支持文件也部署在目标系统时才支持 .NET Standard 2.0。）有关详细信息，请参阅 [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/)（.NET Framework 4.7.1 运行时和编译器功能）博客文章中的“BCL - .NET Standard 2.0 Support”（BCL - .NET Standard 2.0 支持）。
+[.NET Standard](../../standard/net-standard.md) 定义一组 API，这些 API 必须可用于支持 Standard 版本的每个 .NET 实现。 .NET Framework 4.7.1 完全支持 .NET Standard 2.0 并增加了[ 200 个 API](https://github.com/dotnet/standard/blob/master/src/netstandard/src/ApiCompatBaseline.net461.txt)，这些 API 在 .NET Standard 2.0 中定义，.NET Framework 4.6.1、4.6.2 和 4.7 中也延续使用。 （请注意，这些版本的 .NET Framework 只有在其他 .NET Standard 支持文件也部署在目标系统时才支持 .NET Standard 2.0。）有关详细信息，请参阅 [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/)（.NET Framework 4.7.1 运行时和编译器功能）博客文章中的“BCL - .NET Standard 2.0 Support”（BCL - .NET Standard 2.0 支持）。
 
 **支持配置生成器**
 

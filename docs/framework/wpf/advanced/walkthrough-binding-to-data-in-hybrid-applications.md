@@ -8,16 +8,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 92d267ee9e87e9d204fe76172ca7e0fe33cf1a1b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976582"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794223"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>演练：绑定到混合应用程序中的数据
 
-无论你使用 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 还是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，将数据源绑定到控件对于向用户提供对基础数据的访问至关重要。 本演练演示如何在包含 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件的混合应用程序中使用数据绑定。
+无论你使用 Windows 窗体还是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，将数据源绑定到控件对于向用户提供对基础数据的访问至关重要。 本演练演示如何在包含 Windows 窗体和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件的混合应用程序中使用数据绑定。
 
 本演练涉及以下任务：
 
@@ -39,11 +39,11 @@ ms.locfileid: "73976582"
 
 完成本演练后，你将对混合应用程序中的数据绑定功能有所了解。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 你需要以下组件来完成本演练：
 
-- Visual Studio。
+- 。
 
 - 访问 Microsoft SQL Server 上运行的 Northwind 示例数据库。
 
@@ -61,7 +61,7 @@ ms.locfileid: "73976582"
 
 3. 在 WPF 设计器中打开 Mainwindow.xaml。
 
-4. 在 <xref:System.Windows.Window> 元素中，添加以下 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 命名空间映射。
+4. 在 <xref:System.Windows.Window> 元素中，添加以下 Windows 窗体命名空间映射。
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -113,7 +113,7 @@ ms.locfileid: "73976582"
 
 ## <a name="displaying-data-by-using-interoperation"></a>使用互操作功能显示数据
 
-对应于所选客户的订单将显示在一个名为 `dataGridView1`<xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> 控件中。 `dataGridView1` 控件绑定到代码隐藏文件中的数据源。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 控件是此 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件的父级。
+对应于所选客户的订单将显示在一个名为 `dataGridView1`<xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> 控件中。 `dataGridView1` 控件绑定到代码隐藏文件中的数据源。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 控件是此 Windows 窗体控件的父级。
 
 ### <a name="to-display-data-in-the-datagridview-control"></a>在 DataGridView 控件中显示数据
 
@@ -181,7 +181,7 @@ ms.locfileid: "73976582"
 
 10. 按 F5 生成并运行该应用程序。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84296b55-c2c5-424c-ac9c-8e28e2895945
 topic_type:
 - apiref
-ms.openlocfilehash: 5a957a042875b546a18a17422f355b712756e91c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 15572037940f7c45ec5dcb7e34599756e15fd3bd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73098173"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793913"
 ---
 # <a name="cordebughandletype-enumeration"></a>CorDebugHandleType 枚举
 指示句柄类型。  
@@ -40,7 +40,7 @@ typedef enum CorDebugHandleType {
 |`HANDLE_STRONG`|句柄是强的，这会阻止垃圾回收功能回收对象。|  
 |`HANDLE_WEAK_TRACK_RESURRECTION`|句柄是弱的，不会阻止垃圾回收来回收对象。<br /><br /> 收集对象时句柄变为无效。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -49,6 +49,6 @@ typedef enum CorDebugHandleType {
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [调试枚举](debugging-enumerations.md)

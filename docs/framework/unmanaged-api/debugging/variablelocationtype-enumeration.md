@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-ms.openlocfilehash: 861d5daa481132d3d6527e8d5fbccfab6436c5fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1aa59ee559abff8006f0ac63a812e4315aa48154
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139116"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790313"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType 枚举
 指示变量的本机位置类型。  
@@ -44,9 +44,9 @@ typedef enum VariableLocationType
 |`VLT_INVALID`|变量不存储在寄存器或寄存器相对内存位置中。|  
   
 ## <a name="remarks"></a>备注  
- `VariableLocationType` 枚举的成员由[ICorDebugVariableHome：： GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)方法返回。  
+ `VariableLocationType` 枚举的成员由[ICorDebugVariableHome：： GetLocationType](icordebugvariablehome-getlocationtype-method.md)方法返回。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -55,6 +55,6 @@ typedef enum VariableLocationType
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [调试枚举](debugging-enumerations.md)

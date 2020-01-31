@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-ms.openlocfilehash: 8fc2abd0728115edbbfae42958d8013029523ed1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d0c283232ff8eca1af9f3ff4448fb7f4c81d554f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111360"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789036"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary 方法
 
@@ -56,13 +56,13 @@ HRESULT ProvideLibrary(
 
 |HRESULT|描述|
 |-------------|-----------------|
-|S_OK|该方法已成功完成。|
+|S_OK|该方法成功完成。|
 
 ## <a name="exceptions"></a>异常
 
 ## <a name="remarks"></a>备注
 
-`ProvideLibrary` 允许调试器提供调试特定 CLR 文件（如 mscordbi.dll 和 mscordacwks）所需的模块。 模块句柄必须保持有效，直到对[ICLRDebugging：： CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)方法的调用指示它们可能已被释放，此时调用方负责释放句柄。
+`ProvideLibrary` 允许调试器提供调试特定 CLR 文件（如 mscordbi.dll 和 mscordacwks）所需的模块。 模块句柄必须保持有效，直到对[ICLRDebugging：： CanUnloadNow](iclrdebugging-canunloadnow-method.md)方法的调用指示它们可能已被释放，此时调用方负责释放句柄。
 
 调试器可以使用任何可用的方法来查找或获取调试模块。
 
@@ -71,7 +71,7 @@ HRESULT ProvideLibrary(
 >
 > 如果在已发布的库（如 mscordbi.dll 或 mscordacwks）中发现了严重的安全问题，则可以对填充程序进行修补，以识别文件的不正确版本。 然后，填充程序可以为文件的已修补版本发出请求，并拒绝不正确的版本（如果提供这些文件以响应任何请求）。 仅当用户已修补新的填充码版本时，才会发生这种情况。 未修补的版本将仍然容易受到攻击。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
@@ -81,7 +81,7 @@ HRESULT ProvideLibrary(
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [调试接口](debugging-interfaces.md)
+- [调试](index.md)

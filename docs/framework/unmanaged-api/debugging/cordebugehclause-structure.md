@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-ms.openlocfilehash: f35e979a5107064d2987a385a989075ef71283ff
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 197c33511a474eb8291e4361ebb3c21fb3720cae
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73098863"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789427"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause 结构
 [仅在 .NET Framework 4.5.2 及更高版本中受支持]  
@@ -51,20 +51,20 @@ typedef struct _CorDebugEHClause {
 |`FilterOffset`|基于筛选器的异常处理程序的方法主体开头的偏移量（以字节为单位）。|  
   
 ## <a name="remarks"></a>备注  
- [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)方法返回 `CoreDebugEHClause` 值的数组。  
+ [GetEHClauses](icordebugilcode-getehclauses-method.md)方法返回 `CoreDebugEHClause` 值的数组。  
   
  EH 子句信息由 CLI 规范定义。 有关详细信息，请参阅[标准 ECMA-355：公共语言基础结构（CLI）、第六版](https://www.ecma-international.org/publications/standards/Ecma-335.htm)。  
   
  `flags` 字段可以包含以下标志。 请注意，它们不会在 CorDebug.idl 或 CorDebug.h 中定义。  
   
-|Flag|“值”|描述|  
+|Flag|{2&gt;值&lt;2}|描述|  
 |----------|-----------|-----------------|  
 |`COR_ILEXCEPTION_CLAUSE_EXCEPTION`|0x00000000|键入的异常子句。|  
 |`COR_ILEXCEPTION_CLAUSE_FILTER`|0x00000001|异常筛选器和处理程序子句。|  
 |`COR_ILEXCEPTION_CLAUSE_FINALLY`|0x00000002|`finally` 子句。|  
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Fault 子句（仅当引发异常时才调用的 `finally` 子句）。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -73,7 +73,7 @@ typedef struct _CorDebugEHClause {
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [GetEHClauses 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)
-- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [GetEHClauses 方法](icordebugilcode-getehclauses-method.md)
+- [调试结构](debugging-structures.md)

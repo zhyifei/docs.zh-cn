@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5be25292-8357-445f-a09b-f997c0de761c
 topic_type:
 - apiref
-ms.openlocfilehash: 4719f155957f04471d4ad2b8d71bec9c0f0d30c0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d15938e94d647fd5fded23c72bdc200d198d21a7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096089"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792694"
 ---
 # <a name="icordebugobjectvaluegetclass-method"></a>ICorDebugObjectValue::GetClass 方法
 获取此对象值的类。  
@@ -38,9 +38,9 @@ HRESULT GetClass (
  弄一个指向 "ICorDebugClass" 对象地址的指针，该对象表示由此 "ICorDebugObjectValue" 对象表示的对象值的类。  
   
 ## <a name="remarks"></a>备注  
- `GetClass` 和[ICorDebugValue：： GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)方法都返回有关值类型的信息;它们都由可感知泛型的[ICorDebugValue2：： GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)取代。  
+ `GetClass` 和[ICorDebugValue：： GetType](icordebugvalue-gettype-method.md)方法都返回有关值类型的信息;它们都由可感知泛型的[ICorDebugValue2：： GetExactType](icordebugvalue2-getexacttype-method.md)取代。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -49,4 +49,4 @@ HRESULT GetClass (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅

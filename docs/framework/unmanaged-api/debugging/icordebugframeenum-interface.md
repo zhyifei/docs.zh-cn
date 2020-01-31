@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee3f85d3-044e-46b8-945c-93ebfa5d9e91
 topic_type:
 - apiref
-ms.openlocfilehash: 3a33d25ee13e12a2612d0132da1dc84c24f2f95b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6cc1ef5f778902efaa53156fbefe334046c82114
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090542"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794534"
 ---
 # <a name="icordebugframeenum-interface"></a>ICorDebugFrameEnum 接口
 
@@ -29,14 +29,14 @@ ms.locfileid: "73090542"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugframeenum-next-method.md)|从当前位置开始，从枚举中获取指定数目的 `ICorDebugFrame` 实例。|  
+|[Next 方法](icordebugframeenum-next-method.md)|从当前位置开始，从枚举中获取指定数目的 `ICorDebugFrame` 实例。|  
   
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -45,6 +45,6 @@ ms.locfileid: "73090542"
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试接口](debugging-interfaces.md)

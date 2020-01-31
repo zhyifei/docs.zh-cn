@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c399f37-1e38-4ca1-b70d-8ae41f7228b7
 topic_type:
 - apiref
-ms.openlocfilehash: d79b642735543ff84f6211fe5ca2e5b424be1f2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 084af87acd73ef65739ba69ef2bd66d10d7c27c2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103448"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790514"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>ICorPublishProcessEnum::Next 方法
 从当前游标位置开始，获取集合中指定数量的进程。  
@@ -41,12 +41,12 @@ HRESULT Next (
  中要检索的进程数。  
   
  `objects`  
- 弄一个指针，指向检索到的[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)对象的数组，其中每个对象都表示一个进程。  
+ 弄一个指针，指向检索到的[ICorPublishProcess](icorpublishprocess-interface.md)对象的数组，其中每个对象都表示一个进程。  
   
  `pceltFetched`  
  弄一个指针，指向实际返回的进程数。 如果 `celt` 为1，则此值可以为 null。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorPub，CorPub  
@@ -55,6 +55,6 @@ HRESULT Next (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorPublishProcessEnum 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)
+- [ICorPublishProcessEnum 接口](icorpublishprocessenum-interface.md)

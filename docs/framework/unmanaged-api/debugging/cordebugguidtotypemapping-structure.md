@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 57dbccd9-b16d-4da3-ae25-7a2cf9adf679
 topic_type:
 - apiref
-ms.openlocfilehash: 313f6649448653ad630d616c7dbf739653e352dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b855a53c9e4303138d7605bdf108d37bb345b917
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132837"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789331"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping 结构
 将 Windows 运行时 GUID 映射到其对应的 ICorDebugType 对象。  
@@ -42,7 +42,7 @@ typedef struct CorDebugGuidToTypeMapping {
 |`iid`|缓存的 Windows 运行时类型的 GUID。|  
 |`pType`|指向 ICorDebugType 对象的指针，该对象提供有关缓存类型的信息。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** Windows 运行时。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -51,7 +51,7 @@ typedef struct CorDebugGuidToTypeMapping {
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [调试结构](debugging-structures.md)
+- [调试](index.md)

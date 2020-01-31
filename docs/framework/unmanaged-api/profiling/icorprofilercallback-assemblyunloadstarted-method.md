@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-ms.openlocfilehash: 3abf944df3619256791882bf61dfc4072b642c54
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 4c14b3e8b9d0116d638e2983955598a6c51c405a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445139"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790208"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted 方法
 通知探查器正在卸载程序集。  
@@ -32,14 +32,16 @@ HRESULT AssemblyUnloadStarted(
     [in] AssemblyID assemblyId);  
 ```  
   
-## <a name="parameters"></a>参数  
- `assemblyId`  
- 中标识正在卸载的程序集。  
-  
+## <a name="parameters"></a>参数
+
+- `assemblyId`
+
+  \[中的] 标识正在卸载的程序集。
+
 ## <a name="remarks"></a>备注  
  `AssemblyUnloadStarted` 方法返回后，`assemblyId` 的值对信息请求无效-这是探查器获取有关此程序集的相关信息的最后机会。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  

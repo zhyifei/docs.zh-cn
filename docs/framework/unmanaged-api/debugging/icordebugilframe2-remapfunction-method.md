@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd639ba0-f77b-426d-9ff6-f92706840348
 topic_type:
 - apiref
-ms.openlocfilehash: 152cdb13a9f517a7a9c29c04a056661bb2edb45e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f4f73b99b4cb48690a2a8611dbf5a5420adab5d4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090454"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794357"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a>ICorDebugILFrame2::RemapFunction 方法
 通过指定新的 Microsoft 中间语言（MSIL）偏移量重新映射编辑的函数  
@@ -43,15 +43,15 @@ HRESULT RemapFunction (
  编辑框架的函数后，调试器可以调用 `RemapFunction` 方法来交换最新版本的框架函数以便可以执行该函数。 代码执行将以给定的 MSIL 偏移量开始。  
   
 > [!NOTE]
-> 调用 `RemapFunction`（如调用[ICorDebugILFrame：： SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)）将立即无效与为线程生成堆栈跟踪相关的所有调试接口。 这些接口包括[ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md)、ICorDebugILFrame、ICorDebugInternalFrame 和 ICorDebugNativeFrame。  
+> 调用 `RemapFunction`（如调用[ICorDebugILFrame：： SetIP](icordebugilframe-setip-method.md)）将立即无效与为线程生成堆栈跟踪相关的所有调试接口。 这些接口包括[ICorDebugChain](icordebugchain-interface.md)、ICorDebugILFrame、ICorDebugInternalFrame 和 ICorDebugNativeFrame。  
   
  只能在当前帧的上下文中调用 `RemapFunction` 方法，并且只能在以下情况之一中调用：  
   
-- 在收到尚未继续的[ICorDebugManagedCallback2：： FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md)回调之后。  
+- 在收到尚未继续的[ICorDebugManagedCallback2：： FunctionRemapOpportunity](icordebugmanagedcallback2-functionremapopportunity-method.md)回调之后。  
   
-- 当代码执行由于此帧的[ICorDebugManagedCallback：： EditAndContinueRemap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md)事件而停止时。  
+- 当代码执行由于此帧的[ICorDebugManagedCallback：： EditAndContinueRemap](icordebugmanagedcallback-editandcontinueremap-method.md)事件而停止时。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  

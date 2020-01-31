@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 6643c2af-2ee6-4789-aa25-1d8eaf500c94
 topic_type:
 - apiref
-ms.openlocfilehash: d5e7841844c8fa500935eb9cba06f4e2fe95d2d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 037e216cb93e3aa6fce28966fc724498024abd52
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111987"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789060"
 ---
 # <a name="iclrdatatarget3getexceptionrecord-method"></a>ICLRDataTarget3::GetExceptionRecord 方法
 由公共语言运行时 (CLR) 数据访问服务调用，以检索与目标进程关联的异常记录。 例如，对于转储目标，此操作等效于通过 Windows 调试帮助库（Dbghelp.dll）中的[MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump)函数的 `ExceptionParam` 参数传入的异常记录。  
@@ -56,7 +56,7 @@ HRESULT GetExceptionRecord(
   
  此方法由调试应用程序的编写器实现。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** ClrData，ClrData  
@@ -65,8 +65,8 @@ HRESULT GetExceptionRecord(
   
  **.NET Framework 版本：** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICLRDataTarget3 接口](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
-- [GetExceptionContextRecord 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)
-- [GetExceptionThreadID 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
+- [ICLRDataTarget3 接口](iclrdatatarget3-interface.md)
+- [GetExceptionContextRecord 方法](iclrdatatarget3-getexceptioncontextrecord-method.md)
+- [GetExceptionThreadID 方法](iclrdatatarget3-getexceptionthreadid-method.md)

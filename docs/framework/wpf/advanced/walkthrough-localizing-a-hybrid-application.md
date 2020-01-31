@@ -5,20 +5,20 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 281afad0c0de856ca67abc74c65aff0e7afc3e01
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b406d539f2446824027e9462c8ecbe20c18cfb27
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976500"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794130"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>演练：本地化混合应用程序
 
-本演练演示如何在基于 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]的混合应用程序中本地化 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素。
+本演练演示如何在基于 Windows 窗体的混合应用程序中本地化 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素。
 
 本演练涉及以下任务：
 
-- 正在创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 主机项目。
+- 正在创建 Windows 窗体主机项目。
 
 - 添加可本地化的内容。
 
@@ -32,7 +32,7 @@ ms.locfileid: "73976500"
 
 完成后，你将拥有一个本地化的混合应用程序。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 你需要以下组件来完成本演练：
 
@@ -40,7 +40,7 @@ ms.locfileid: "73976500"
 
 ## <a name="creating-the-windows-forms-host-project"></a>创建 Windows 窗体宿主项目
 
-第一步是创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序项目，并添加包含要本地化的内容的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素。
+第一步是创建 Windows 窗体应用程序项目，并添加包含要本地化的内容的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素。
 
 ### <a name="to-create-the-host-project"></a>创建宿主项目
 
@@ -52,7 +52,7 @@ ms.locfileid: "73976500"
 
 ## <a name="adding-localizable-content"></a>添加可本地化的内容
 
-接下来，您将添加一个 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] "标签" 控件，并将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素的内容设置为可本地化的字符串。
+接下来，您将添加一个 Windows 窗体 "标签" 控件，并将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素的内容设置为可本地化的字符串。
 
 ### <a name="to-add-localizable-content"></a>添加可本地化的内容
 
@@ -172,7 +172,7 @@ Windows 窗体设计器提供用于在附属程序集中启用本地化的设置
 
      应用程序显示本地化后的字符串，而不是英语字符串。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

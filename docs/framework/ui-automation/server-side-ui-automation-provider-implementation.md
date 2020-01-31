@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 25f22d5e8caacc69643f6d79e109ebaa94159d80
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 8a52d84f7152b9cb431ad0aa97c88b143463be2d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75632306"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789613"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>服务器端 UI 自动化提供程序的实现
 
@@ -20,7 +20,7 @@ ms.locfileid: "75632306"
 
 本部分将介绍如何实现自定义控件的服务器端 UI 自动化提供程序。
 
-Windows Presentation Foundation （WPF）元素和非 WPF 元素（例如为 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]设计的元素）的实现在本质上是不同的。 WPF 元素通过从 <xref:System.Windows.Automation.Peers.AutomationPeer>派生的类为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供支持。 非 WPF 元素通过提供程序接口的实现提供支持。
+Windows Presentation Foundation （WPF）元素和非 WPF 元素（例如为 Windows 窗体设计的元素）的实现在本质上是不同的。 WPF 元素通过从 <xref:System.Windows.Automation.Peers.AutomationPeer>派生的类为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供支持。 非 WPF 元素通过提供程序接口的实现提供支持。
 
 <a name="Security_Considerations"></a>
 
@@ -40,7 +40,7 @@ Windows Presentation Foundation （WPF）元素和非 WPF 元素（例如为 [!I
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>通过非 WPF 元素实现的提供程序实现
 
-不属于 WPF 框架但以托管代码（大多数情况下为 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 控件）编写的自定义控件，通过实现接口为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供支持。 每个元素必须实现至少一个下一部分中第一个表中列出的接口。 此外，如果该元素支持一个或多个控件模式，它必须实现每个控件模式的相应接口。
+不属于 WPF 框架但以托管代码（大多数情况下为 Windows 窗体控件）编写的自定义控件，通过实现接口为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供支持。 每个元素必须实现至少一个下一部分中第一个表中列出的接口。 此外，如果该元素支持一个或多个控件模式，它必须实现每个控件模式的相应接口。
 
 你的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供程序项目必须引用以下程序集：
 
@@ -117,7 +117,7 @@ Windows Presentation Foundation （WPF）元素和非 WPF 元素（例如为 [!I
 > [!NOTE]
 > 承载在窗口的简单元素或片段根的 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 是从窗口中获取的；但是，根下的片段元素（如列表框中的列表项）必须提供自己的标识符。 有关更多信息，请参见<xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>。
 >
-> 应为承载在 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> 控件中的提供程序返回 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 。 在这种情况下，默认的窗口提供程序可能无法检索正确值。
+> 应为 Windows 窗体控件中承载的提供程序返回 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>。 在这种情况下，默认的窗口提供程序可能无法检索正确值。
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 通常由宿主提供程序提供。 例如，如果自定义控件从 <xref:System.Windows.Forms.Control>派生，则名称从控件的 `Text` 属性派生。
 

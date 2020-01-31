@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-ms.openlocfilehash: ec265525d01dab0669939569501fce91b500a900
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8be7c0e32f6183deb354d8b3936ef55c2520fe9f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127495"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788619"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock 方法
 返回拥有此对象的监视器锁的托管线程。  
@@ -46,7 +46,7 @@ HRESULT GetThreadOwningMonitorLock (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|该方法已成功完成。|  
+|S_OK|该方法成功完成。|  
 |S_FALSE|没有托管线程拥有此对象的监视器锁。|  
   
 ## <a name="exceptions"></a>异常  
@@ -58,13 +58,13 @@ HRESULT GetThreadOwningMonitorLock (
   
 - 线程对象在线程退出之前有效。  
   
- 如果没有托管线程拥有此对象的监视器锁，`ppThread` 和 `pAcquisitionCount` 会保持不变，并且方法将返回 S_FALSE。  
+ 如果没有托管线程拥有此对象的监视器锁，`ppThread` 和 `pAcquisitionCount` 会保持不变，并且该方法返回 S_FALSE。  
   
  如果 `ppThread` 或 `pAcquisitionCount` 不是有效的指针，则结果是不确定的。  
   
  如果发生错误，因此无法确定线程（如果有）线程拥有此对象的监视器锁，则方法将返回指示失败的 HRESULT。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -73,7 +73,7 @@ HRESULT GetThreadOwningMonitorLock (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [调试接口](debugging-interfaces.md)
+- [调试](index.md)

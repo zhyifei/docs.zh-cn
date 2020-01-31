@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29746b24-3766-4255-8813-0426c45e73e5
 topic_type:
 - apiref
-ms.openlocfilehash: f80bdffbf5c0ba39980bd27c6e89a368547340c0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd1882bdfca1258889514a041726a59435e126b8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129813"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793208"
 ---
 # <a name="icordebugmdagetxml-method"></a>ICorDebugMDA::GetXML 方法
-获取与[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)表示的托管调试助手（MDA）关联的完整 XML 流。  
+获取与[ICorDebugMDA](icordebugmda-interface.md)表示的托管调试助手（MDA）关联的完整 XML 流。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +49,7 @@ HRESULT GetXML (
 ## <a name="remarks"></a>备注  
  `GetXML` 方法可能会影响性能，具体取决于关联的 XML 流的大小。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -58,7 +58,7 @@ HRESULT GetXML (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugMDA 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [ICorDebugMDA 接口](icordebugmda-interface.md)
 - [使用托管调试助手诊断错误](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

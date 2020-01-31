@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc79a67d-5368-434d-a943-209db90491b9
 topic_type:
 - apiref
-ms.openlocfilehash: ca0844e4d2b1cad65266d58c6cda74de203d1758
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 13ac5379992f4e768b09a03d31591143ba9bf627
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137661"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788723"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray 方法
 分配指定元素类型和维度的新数组。  
   
- 此方法在 .NET Framework 版本2.0 中已过时。 改[为使用 ICorDebugEval2：： NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) 。  
+ 此方法在 .NET Framework 版本2.0 中已过时。 改[为使用 ICorDebugEval2：： NewParameterizedArray](icordebugeval2-newparameterizedarray-method.md) 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,7 +58,7 @@ HRESULT NewArray (
 ## <a name="remarks"></a>备注  
  始终在当前执行线程的应用程序域中创建数组。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  

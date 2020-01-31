@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: db9938f26f31506737eb0395fa389da01a1ee444
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 6d8dedafd4ffc582b529289d3583f90d81779762
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735063"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794038"
 ---
 # <a name="wpf-architecture"></a>WPF 体系结构
 本主题提供 Windows Presentation Foundation （WPF）类层次结构的指导教程。 它涵盖了 WPF 的大部分主要子系统，并描述了它们的交互方式。 它还详细介绍了 WPF 架构师所做的一些选择。  
@@ -116,7 +116,7 @@ ms.locfileid: "76735063"
   
  <xref:System.Windows.FrameworkElement> 介绍的两个最关键的方面是数据绑定和样式。  
   
- 对于已使用 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 或 ASP.NET 创建应用程序 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]的任何人而言，WPF 中的数据绑定子系统应相对较为熟悉。 在上述每个系统中，可通过一种简单的方式来表达希望将给定元素中的一个或多个属性绑定到一个数据片段。 WPF 完全支持属性绑定、转换和列表绑定。  
+ 对于已使用 Windows 窗体或 ASP.NET 创建应用程序 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]的任何人而言，WPF 中的数据绑定子系统应相对较为熟悉。 在上述每个系统中，可通过一种简单的方式来表达希望将给定元素中的一个或多个属性绑定到一个数据片段。 WPF 完全支持属性绑定、转换和列表绑定。  
   
  WPF 中数据绑定的最有趣的功能之一是引入数据模板。 利用数据模板，可以通过声明方式指定某个数据片断的可视化方式。 无需创建可绑定到数据的自定义用户界面，而是转而让数据来确定要创建的显示内容。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "76735063"
   
  数据模型（属性）、交互模型（命令和事件）及显示模型（模板）之间的划分，可实现对控件的外观和行为的完全自定义。  
   
- 最常见的控件数据模型是内容模型。 如果你查看类似 <xref:System.Windows.Controls.Button>的控件，你会看到它有一个类型为 "Content" 的属性 <xref:System.Object>。 在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 和 ASP.NET 中，此属性通常是一个字符串，但它限制了可放入按钮中的内容的类型。 按钮的内容可以是简单的字符串、复杂的数据对象或整个元素树。 如果是数据对象，可以使用数据模板构造显示内容。  
+ 最常见的控件数据模型是内容模型。 如果你查看类似 <xref:System.Windows.Controls.Button>的控件，你会看到它有一个类型为 "Content" 的属性 <xref:System.Object>。 在 Windows 窗体和 ASP.NET 中，此属性通常是一个字符串，但它限制了可放入按钮中的内容的类型。 按钮的内容可以是简单的字符串、复杂的数据对象或整个元素树。 如果是数据对象，可以使用数据模板构造显示内容。  
   
 <a name="Summary"></a>   
 ## <a name="summary"></a>摘要  
@@ -138,7 +138,7 @@ ms.locfileid: "76735063"
   
  传统的应用程序创建一个显示内容，然后绑定到某些数据。 在 WPF 中，关于控件的所有内容都是由某种类型的数据绑定生成的。 通过在按钮内部创建复合控件并将其显示内容绑定到按钮的内容属性，会显示按钮中的文本。  
   
- 开始开发基于 WPF 的应用程序时，应该非常熟悉。 可以设置属性、使用对象和数据绑定，其方式与使用 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 或 ASP.NET 的方式大致相同。 通过更深入地调查 WPF 的体系结构，你会发现创建更丰富的应用程序的可能性，这些应用程序在本质上将数据视为应用程序的核心驱动程序。  
+ 开始开发基于 WPF 的应用程序时，应该非常熟悉。 可以设置属性、使用对象和数据绑定，其方式与使用 Windows 窗体或 ASP.NET 的方式大致相同。 通过更深入地调查 WPF 的体系结构，你会发现创建更丰富的应用程序的可能性，这些应用程序在本质上将数据视为应用程序的核心驱动程序。  
   
 ## <a name="see-also"></a>另请参阅
 

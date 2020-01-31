@@ -9,16 +9,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 5e7544dfdbee234bb968c9a7f39814e8749ece15
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: eee26165e17b3327166a160e7c4ee3726215dcfc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735287"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794247"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>演练：在 WPF 中排列 Windows 窗体控件
 
-本演练演示如何使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 布局功能在混合应用程序中排列 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件。
+本演练演示如何使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 布局功能在混合应用程序中排列 Windows 窗体控件。
 
 本演练涉及以下任务：
 
@@ -39,7 +39,7 @@ ms.locfileid: "76735287"
 
 有关本演练中所述任务的完整代码列表，请参阅[在 WPF 中排列 Windows 窗体控件示例](https://go.microsoft.com/fwlink/?LinkID=159971)。
 
-完成后，你将了解基于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的应用程序中 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 布局功能。
+完成后，你将了解基于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的应用程序中 Windows 窗体布局功能。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -59,7 +59,7 @@ ms.locfileid: "76735287"
 
 3. 双击 " *mainwindow.xaml* " 以在 xaml 视图中打开它。
 
-4. 在 <xref:System.Windows.Window> 元素中，添加以下 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 命名空间映射。
+4. 在 <xref:System.Windows.Window> 元素中，添加以下 Windows 窗体命名空间映射。
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -71,7 +71,7 @@ ms.locfileid: "76735287"
 
 ## <a name="using-default-layout-settings"></a>使用默认布局设置
 
-默认情况下，<xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素处理承载的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件的布局。
+默认情况下，<xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素处理承载的 Windows 窗体控件的布局。
 
 若要使用默认布局设置，请执行以下步骤：
 
@@ -79,7 +79,7 @@ ms.locfileid: "76735287"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]
 
-2. 按 F5 生成并运行该应用程序<kbd></kbd>。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> 控件将出现在 <xref:System.Windows.Controls.Canvas>中。 承载的控件根据其内容调整大小，并调整 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素的大小以适应所承载的控件。
+2. 按 F5 生成并运行该应用程序<kbd></kbd>。 Windows 窗体 <xref:System.Windows.Forms.Button?displayProperty=nameWithType> 控件将出现在 <xref:System.Windows.Controls.Canvas>中。 承载的控件根据其内容调整大小，并调整 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素的大小以适应所承载的控件。
 
 ## <a name="sizing-to-content"></a>按内容调整大小
 
@@ -115,7 +115,7 @@ ms.locfileid: "76735287"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#6](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]
 
-2. 按 F5 生成并运行该应用程序<kbd></kbd>。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素的大小设置为50像素宽 x 70 像素高，小于默认布局设置。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件的内容会相应地重新排列。
+2. 按 F5 生成并运行该应用程序<kbd></kbd>。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素的大小设置为50像素宽 x 70 像素高，小于默认布局设置。 Windows 窗体控件的内容会相应地重新排列。
 
 ## <a name="setting-layout-properties"></a>设置布局属性
 
@@ -164,7 +164,7 @@ ms.locfileid: "76735287"
 
 ## <a name="setting-visibility"></a>设置可见性
 
-可以通过在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素上设置 <xref:System.Windows.UIElement.Visibility%2A> 属性使 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件不可见或折叠。 当控件不可见时，控件不会显示，但会占据布局空间。 当控件处于折叠状态时，控件不会显示，也不会占据布局空间。
+可以通过在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素上设置 <xref:System.Windows.UIElement.Visibility%2A> 属性使 Windows 窗体控件不可见或折叠。 当控件不可见时，控件不会显示，但会占据布局空间。 当控件处于折叠状态时，控件不会显示，也不会占据布局空间。
 
 若要设置寄宿的控件的可见性，请执行以下步骤：
 
@@ -181,11 +181,11 @@ ms.locfileid: "76735287"
 
 4. 单击 "**单击以使不可见**" 按钮，使 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素不可见。
 
-5. 单击 "**单击以折叠**" 按钮可完全隐藏布局中的 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素。 折叠 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件时，会重新排列周围的元素以占用其空间。
+5. 单击 "**单击以折叠**" 按钮可完全隐藏布局中的 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素。 折叠 Windows 窗体控件时，会重新排列周围的元素以占用其空间。
 
 ## <a name="hosting-a-control-that-does-not-stretch"></a>承载不拉伸的控件
 
-某些 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件具有固定大小，且不会拉伸以填充布局中的可用空间。 例如，<xref:System.Windows.Forms.MonthCalendar> 控件在一个固定空间内显示月份。
+某些 Windows 窗体控件具有固定大小，且不会拉伸以填充布局中的可用空间。 例如，<xref:System.Windows.Forms.MonthCalendar> 控件在一个固定空间内显示月份。
 
 若要承载不拉伸的控件，请执行以下步骤：
 
@@ -223,7 +223,7 @@ ms.locfileid: "76735287"
 
 ## <a name="setting-padding-and-margins"></a>设置填充和边距
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 布局中的填充和边距类似于 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]中的填充和边距。 只需在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素上设置 <xref:System.Windows.Controls.Control.Padding%2A> 和 <xref:System.Windows.FrameworkElement.Margin%2A> 属性即可。
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 布局中的填充和边距类似于 Windows 窗体中的填充和边距。 只需在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素上设置 <xref:System.Windows.Controls.Control.Padding%2A> 和 <xref:System.Windows.FrameworkElement.Margin%2A> 属性即可。
 
 若要为承载的控件设置填充和边距，请执行以下步骤：
 
@@ -232,11 +232,11 @@ ms.locfileid: "76735287"
      [!code-xaml[WpfLayoutHostingWfWithXaml#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]
     [!code-xaml[WpfLayoutHostingWfWithXaml#15](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]
 
-2. 按 F5 生成并运行该应用程序<kbd></kbd>。 填充和边距设置将以应用于 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]中应用的相同方式应用于承载 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件。
+2. 按 F5 生成并运行该应用程序<kbd></kbd>。 填充和边距设置将以应用于 Windows 窗体中应用的相同方式应用于承载 Windows 窗体控件。
 
 ## <a name="using-dynamic-layout-containers"></a>使用动态布局容器
 
-[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 提供了两个动态布局容器，<xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel>。 你还可以在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 布局中使用这些容器。
+Windows 窗体提供了两个动态布局容器，<xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel>。 你还可以在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 布局中使用这些容器。
 
 若要使用动态布局容器，请执行以下步骤：
 

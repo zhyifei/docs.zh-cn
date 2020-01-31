@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8dc29c6a-e2ba-41d8-a1e0-0fdd21421e0b
 topic_type:
 - apiref
-ms.openlocfilehash: d8c0f69ce407638aed6475c4d84d0e032cc6a8f5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fb7a2a6d8bac7e9a67a5275694fc07e0f1d469e1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435979"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861328"
 ---
 # <a name="icorprofilermoduleenumskip-method"></a>ICorProfilerModuleEnum::Skip 方法
 将枚举器的游标从其当前位置前移，以便跳过指定数量的元素。  
@@ -38,7 +38,7 @@ HRESULT Skip([in] ULONG celt);
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
-|HRESULT|说明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已跳过 `celt` 元素。|  
 |S_FALSE|跳过的元素数少于 `celt`，这表示没有更多的元素。|  
@@ -46,7 +46,7 @@ HRESULT Skip([in] ULONG celt);
 ## <a name="remarks"></a>备注  
  此枚举器的游标的新位置为（当前位置） + `celt`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -57,5 +57,5 @@ HRESULT Skip([in] ULONG celt);
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerModuleEnum 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerModuleEnum 接口](icorprofilermoduleenum-interface.md)
+- [Profiling 接口](profiling-interfaces.md)

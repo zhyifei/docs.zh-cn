@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 1a5a259e6604d906e55166b3fcb770bc37d346c5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5c49d75432980d2f3af77ee040bc6eb20886b027
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444731"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861666"
 ---
 # <a name="icorprofilerinfo9getiltonativemapping3-method"></a>ICorProfilerInfo9：： GetILToNativeMapping3 方法
 
@@ -31,25 +31,29 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
                                [out] COR_DEBUG_IL_TO_NATIVE_MAP map[]);
 ```
 
-#### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
-`pNativeCodeStartAddress` \
-中指向本机函数开头的指针。
+- `pNativeCodeStartAddress`
 
-`cMap` \
-[in] `map` 数组的最大大小。
+  \[中的）指向本机函数开头的指针。
 
-`pcMap` \
-[out] COR_DEBUG_IL_TO_NATIVE_MAP 结构的可用总数。
+- `cMap`
 
-`map` \
-弄[COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md)结构的数组，其中每个结构都指定了偏移量。 `GetILToNativeMapping3` 方法返回后，`map` 将包含部分或全部 `COR_DEBUG_IL_TO_NATIVE_MAP` 结构。
+  \[] `map` 数组的最大大小。
+
+- `pcMap`
+
+  \[out] 可用 COR_DEBUG_IL_TO_NATIVE_MAP 结构的总数。
+
+- `map`
+
+  \[out] [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md)结构的数组，其中每个结构指定偏移量。 `GetILToNativeMapping3` 方法返回后，`map` 将包含部分或全部 `COR_DEBUG_IL_TO_NATIVE_MAP` 结构。
 
 ## <a name="remarks"></a>备注
 
-当启用分层编译时，一个方法可能有多个本机代码体。 [ICorProfilerInfo9：： GetNativeCodeStartAddresses](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-getnativecodestartaddresses-method.md)将返回所有本机代码正文的开始地址。
+当启用分层编译时，一个方法可能有多个本机代码体。 [ICorProfilerInfo9：： GetNativeCodeStartAddresses](icorprofilerinfo9-getnativecodestartaddresses-method.md)将返回所有本机代码正文的开始地址。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 **平台：** 请参阅[支持 .Net Core 的操作系统](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)。
 
@@ -61,4 +65,4 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
 
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo9 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 接口](icorprofilerinfo9-interface.md)

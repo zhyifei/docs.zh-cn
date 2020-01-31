@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07cf3bab-e193-4991-8205-3f41cf2d67b3
 topic_type:
 - apiref
-ms.openlocfilehash: 2b01acbd617b13a64ef3dca6c8661f1e6bb067ac
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c92ee580caed9f1fb87a31b676747769ad31a0e2
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447380"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867242"
 ---
 # <a name="cor_prf_function_argument_info-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO 结构
 按从左向右的顺序表示函数的参数。  
@@ -36,9 +36,9 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 ## <a name="members"></a>Members  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
-|`numRanges`|参数块的数目。 也就是说，此值是 `ranges` 数组中[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)结构的数目。|  
+|`numRanges`|参数块的数目。 也就是说，此值是 `ranges` 数组中[COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md)结构的数目。|  
 |`totalArgumentSize`|所有参数的总大小。 换言之，此值是自变量长度之和。|  
 |`ranges`|`COR_PRF_FUNCTION_ARGUMENT_RANGE` 结构的数组，其中每个结构都表示一个函数参数块。|  
   
@@ -49,7 +49,7 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
  存储在寄存器中的参数会溢出到内存中以生成结构。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Corprof.idl .idl  
@@ -60,4 +60,4 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 ## <a name="see-also"></a>另请参阅
 
-- [分析结构](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [分析结构](profiling-structures.md)
