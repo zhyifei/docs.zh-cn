@@ -1,39 +1,39 @@
 ---
-title: 类库 (WPF)
+title: 類別庫
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF class library [WPF]
 - Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-ms.openlocfilehash: d43b46be2e05561eadcba12c744368db056a3ce5
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: bd099cbbbf96c71749375dab0aadfe84412ca103
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859708"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742295"
 ---
-# <a name="class-library-wpf"></a><span data-ttu-id="731d3-102">类库 (WPF)</span><span class="sxs-lookup"><span data-stu-id="731d3-102">Class Library (WPF)</span></span>
-<span data-ttu-id="731d3-103">以下链接是指包含命名空间的[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Api。</span><span class="sxs-lookup"><span data-stu-id="731d3-103">The following links refer to namespaces that contain [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] APIs.</span></span>  
+# <a name="class-library-wpf"></a><span data-ttu-id="fcb12-102">类库 (WPF)</span><span class="sxs-lookup"><span data-stu-id="fcb12-102">Class Library (WPF)</span></span>
+<span data-ttu-id="fcb12-103">以下链接引用包含 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Api 的命名空间。</span><span class="sxs-lookup"><span data-stu-id="fcb12-103">The following links refer to namespaces that contain [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] APIs.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="731d3-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="731d3-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="fcb12-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="fcb12-104">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="731d3-105">参考</span><span class="sxs-lookup"><span data-stu-id="731d3-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="fcb12-105">引用</span><span class="sxs-lookup"><span data-stu-id="fcb12-105">Reference</span></span>  
   
 - <xref:Microsoft.Build.Tasks.Windows>  
   
-- <span data-ttu-id="731d3-106"><xref:Microsoft.Win32> （共享）</span><span class="sxs-lookup"><span data-stu-id="731d3-106"><xref:Microsoft.Win32> (shared)</span></span>  
+- <span data-ttu-id="fcb12-106"><xref:Microsoft.Win32> （共享）</span><span class="sxs-lookup"><span data-stu-id="fcb12-106"><xref:Microsoft.Win32> (shared)</span></span>  
   
 - <xref:Microsoft.Windows.Themes>  
   
-- <span data-ttu-id="731d3-107"><xref:System.Collections.ObjectModel> （共享）</span><span class="sxs-lookup"><span data-stu-id="731d3-107"><xref:System.Collections.ObjectModel> (shared)</span></span>  
+- <span data-ttu-id="fcb12-107"><xref:System.Collections.ObjectModel> （共享）</span><span class="sxs-lookup"><span data-stu-id="fcb12-107"><xref:System.Collections.ObjectModel> (shared)</span></span>  
   
-- <span data-ttu-id="731d3-108"><xref:System.Collections.Specialized> （共享）</span><span class="sxs-lookup"><span data-stu-id="731d3-108"><xref:System.Collections.Specialized> (shared)</span></span>  
+- <span data-ttu-id="fcb12-108"><xref:System.Collections.Specialized> （共享）</span><span class="sxs-lookup"><span data-stu-id="fcb12-108"><xref:System.Collections.Specialized> (shared)</span></span>  
   
-- <span data-ttu-id="731d3-109"><xref:System.ComponentModel> （共享）</span><span class="sxs-lookup"><span data-stu-id="731d3-109"><xref:System.ComponentModel> (shared)</span></span>  
+- <span data-ttu-id="fcb12-109"><xref:System.ComponentModel> （共享）</span><span class="sxs-lookup"><span data-stu-id="fcb12-109"><xref:System.ComponentModel> (shared)</span></span>  
   
-- <span data-ttu-id="731d3-110"><xref:System.Diagnostics> （共享）</span><span class="sxs-lookup"><span data-stu-id="731d3-110"><xref:System.Diagnostics> (shared)</span></span>  
+- <span data-ttu-id="fcb12-110"><xref:System.Diagnostics> （共享）</span><span class="sxs-lookup"><span data-stu-id="fcb12-110"><xref:System.Diagnostics> (shared)</span></span>  
   
-- <span data-ttu-id="731d3-111"><xref:System.IO> （共享）</span><span class="sxs-lookup"><span data-stu-id="731d3-111"><xref:System.IO> (shared)</span></span>  
+- <span data-ttu-id="fcb12-111"><xref:System.IO> （共享）</span><span class="sxs-lookup"><span data-stu-id="fcb12-111"><xref:System.IO> (shared)</span></span>  
   
 - <xref:System.IO.Packaging>  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67859708"
   
 - <xref:System.Printing.Interop>  
   
-- <span data-ttu-id="731d3-112"><xref:System.Security.Permissions> （共享）</span><span class="sxs-lookup"><span data-stu-id="731d3-112"><xref:System.Security.Permissions> (shared)</span></span>  
+- <span data-ttu-id="fcb12-112"><xref:System.Security.Permissions> （共享）</span><span class="sxs-lookup"><span data-stu-id="fcb12-112"><xref:System.Security.Permissions> (shared)</span></span>  
   
 - <xref:System.Security.RightsManagement>  
   
@@ -85,7 +85,7 @@ ms.locfileid: "67859708"
   
 - <xref:System.Windows.Interop>  
   
-- <span data-ttu-id="731d3-113"><xref:System.Windows.Markup> （共享）</span><span class="sxs-lookup"><span data-stu-id="731d3-113"><xref:System.Windows.Markup> (shared)</span></span>  
+- <span data-ttu-id="fcb12-113"><xref:System.Windows.Markup> （共享）</span><span class="sxs-lookup"><span data-stu-id="fcb12-113"><xref:System.Windows.Markup> (shared)</span></span>  
   
 - <xref:System.Windows.Markup.Localizer>  
   
@@ -123,10 +123,10 @@ ms.locfileid: "67859708"
   
 - <xref:UIAutomationClientsideProviders>  
   
-## <a name="xaml-support-in-net-4"></a><span data-ttu-id="731d3-114">.NET 4 中的 XAML 支持</span><span class="sxs-lookup"><span data-stu-id="731d3-114">XAML Support in .NET 4</span></span>  
- <span data-ttu-id="731d3-115">以下命名空间包含 System.Xaml 程序集中的类型。</span><span class="sxs-lookup"><span data-stu-id="731d3-115">The following namespaces contain types from the System.Xaml assembly.</span></span> <span data-ttu-id="731d3-116">System.Xaml 的框架，如 WPF 基于.NET Framework 4 提供常见 XAML 语言支持。</span><span class="sxs-lookup"><span data-stu-id="731d3-116">System.Xaml provides common XAML language support for frameworks such as WPF that are built on .NET Framework 4.</span></span>  
+## <a name="xaml-support-in-net-4"></a><span data-ttu-id="fcb12-114">.NET 4 中的 XAML 支持</span><span class="sxs-lookup"><span data-stu-id="fcb12-114">XAML Support in .NET 4</span></span>  
+ <span data-ttu-id="fcb12-115">以下命名空间包含来自 System.object 程序集的类型。</span><span class="sxs-lookup"><span data-stu-id="fcb12-115">The following namespaces contain types from the System.Xaml assembly.</span></span> <span data-ttu-id="fcb12-116">对于在 .NET Framework 4 上构建的 WPF （如 WPF），.Xaml 提供常见的 XAML 语言支持。</span><span class="sxs-lookup"><span data-stu-id="fcb12-116">System.Xaml provides common XAML language support for frameworks such as WPF that are built on .NET Framework 4.</span></span>  
   
-- <span data-ttu-id="731d3-117"><xref:System.Windows.Markup> （共享）</span><span class="sxs-lookup"><span data-stu-id="731d3-117"><xref:System.Windows.Markup> (shared)</span></span>  
+- <span data-ttu-id="fcb12-117"><xref:System.Windows.Markup> （共享）</span><span class="sxs-lookup"><span data-stu-id="fcb12-117"><xref:System.Windows.Markup> (shared)</span></span>  
   
 - <xref:System.Xaml>  
   

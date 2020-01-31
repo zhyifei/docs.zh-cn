@@ -1,5 +1,5 @@
 ---
-title: Windows 窗体的应用程序设置
+title: 应用程序设置
 ms.date: 04/07/2017
 f1_keywords:
 - ClientApplicationSettings
@@ -7,40 +7,40 @@ helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-ms.openlocfilehash: d64aebb1cb84b39a2e2fb9a6a8375c52d58699df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8a6a1ab69754d48017059d547a1f9e5e3889a606
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963232"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739717"
 ---
-# <a name="application-settings-for-windows-forms"></a><span data-ttu-id="7c876-102">Windows 窗体的应用程序设置</span><span class="sxs-lookup"><span data-stu-id="7c876-102">Application Settings for Windows Forms</span></span>
-<span data-ttu-id="7c876-103">借助 Windows 窗体的应用程序设置功能，可轻松地在客户端创建、存储和维护自定义应用程序和用户首选项。</span><span class="sxs-lookup"><span data-stu-id="7c876-103">The Applications Settings feature of Windows Forms makes it easy to create, store, and maintain custom application and user preferences on the client.</span></span> <span data-ttu-id="7c876-104">借助应用程序设置，可存储应用程序数据（如数据库连接字符串）以及用户特定的数据（如工具栏位置和最近使用的列表）。</span><span class="sxs-lookup"><span data-stu-id="7c876-104">With Application Settings, you can store not only application data such as database connection strings, but also user-specific data, such as toolbar positions and most-recently used lists.</span></span>  
+# <a name="application-settings-for-windows-forms"></a><span data-ttu-id="c3f38-102">Windows 窗体的应用程序设置</span><span class="sxs-lookup"><span data-stu-id="c3f38-102">Application Settings for Windows Forms</span></span>
+<span data-ttu-id="c3f38-103">借助 Windows 窗体的应用程序设置功能，可轻松地在客户端创建、存储和维护自定义应用程序和用户首选项。</span><span class="sxs-lookup"><span data-stu-id="c3f38-103">The Applications Settings feature of Windows Forms makes it easy to create, store, and maintain custom application and user preferences on the client.</span></span> <span data-ttu-id="c3f38-104">借助应用程序设置，可存储应用程序数据（如数据库连接字符串）以及用户特定的数据（如工具栏位置和最近使用的列表）。</span><span class="sxs-lookup"><span data-stu-id="c3f38-104">With Application Settings, you can store not only application data such as database connection strings, but also user-specific data, such as toolbar positions and most-recently used lists.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7c876-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="7c876-105">In This Section</span></span>  
- [<span data-ttu-id="7c876-106">应用程序设置概述</span><span class="sxs-lookup"><span data-stu-id="7c876-106">Application Settings Overview</span></span>](application-settings-overview.md)  
- <span data-ttu-id="7c876-107">讨论如何代表你的应用程序和你的用户创建和存储设置数据。</span><span class="sxs-lookup"><span data-stu-id="7c876-107">Discusses how to create and store settings data on behalf of your application and your users.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="c3f38-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="c3f38-105">In This Section</span></span>  
+ [<span data-ttu-id="c3f38-106">应用程序设置概述</span><span class="sxs-lookup"><span data-stu-id="c3f38-106">Application Settings Overview</span></span>](application-settings-overview.md)  
+ <span data-ttu-id="c3f38-107">讨论如何代表你的应用程序和你的用户创建和存储设置数据。</span><span class="sxs-lookup"><span data-stu-id="c3f38-107">Discusses how to create and store settings data on behalf of your application and your users.</span></span>  
   
- [<span data-ttu-id="7c876-108">应用程序设置体系结构</span><span class="sxs-lookup"><span data-stu-id="7c876-108">Application Settings Architecture</span></span>](application-settings-architecture.md)  
- <span data-ttu-id="7c876-109">介绍应用程序设置功能的工作原理，并探讨了体系结构（如分组设置和设置键）的高级功能。</span><span class="sxs-lookup"><span data-stu-id="7c876-109">Describes how the Application Settings feature works, and explores advanced features of the architecture such as grouped settings and settings keys.</span></span>  
+ [<span data-ttu-id="c3f38-108">应用程序设置体系结构</span><span class="sxs-lookup"><span data-stu-id="c3f38-108">Application Settings Architecture</span></span>](application-settings-architecture.md)  
+ <span data-ttu-id="c3f38-109">介绍应用程序设置功能的工作原理，并探讨了体系结构（如分组设置和设置键）的高级功能。</span><span class="sxs-lookup"><span data-stu-id="c3f38-109">Describes how the Application Settings feature works, and explores advanced features of the architecture such as grouped settings and settings keys.</span></span>  
   
- [<span data-ttu-id="7c876-110">应用程序设置特性</span><span class="sxs-lookup"><span data-stu-id="7c876-110">Application Settings Attributes</span></span>](application-settings-attributes.md)  
- <span data-ttu-id="7c876-111">列出并介绍了可应用于应用程序设置包装类或其设置属性的属性。</span><span class="sxs-lookup"><span data-stu-id="7c876-111">Lists and describes the attributes that can be applied to an application settings wrapper class or its settings properties.</span></span>  
+ [<span data-ttu-id="c3f38-110">应用程序设置特性</span><span class="sxs-lookup"><span data-stu-id="c3f38-110">Application Settings Attributes</span></span>](application-settings-attributes.md)  
+ <span data-ttu-id="c3f38-111">列出并介绍了可应用于应用程序设置包装类或其设置属性的属性。</span><span class="sxs-lookup"><span data-stu-id="c3f38-111">Lists and describes the attributes that can be applied to an application settings wrapper class or its settings properties.</span></span>  
   
- [<span data-ttu-id="7c876-112">Application Settings for Custom Controls</span><span class="sxs-lookup"><span data-stu-id="7c876-112">Application Settings for Custom Controls</span></span>](application-settings-for-custom-controls.md)  
- <span data-ttu-id="7c876-113">讨论必须执行什么操作以使自定义控件在第三方应用程序中承载时可以保存应用程序设置。</span><span class="sxs-lookup"><span data-stu-id="7c876-113">Discusses what must be done to give your custom controls the ability to persist application settings when hosted in third-party applications.</span></span>  
+ [<span data-ttu-id="c3f38-112">Application Settings for Custom Controls</span><span class="sxs-lookup"><span data-stu-id="c3f38-112">Application Settings for Custom Controls</span></span>](application-settings-for-custom-controls.md)  
+ <span data-ttu-id="c3f38-113">讨论必须执行什么操作以使自定义控件在第三方应用程序中承载时可以保存应用程序设置。</span><span class="sxs-lookup"><span data-stu-id="c3f38-113">Discusses what must be done to give your custom controls the ability to persist application settings when hosted in third-party applications.</span></span>  
   
- [<span data-ttu-id="7c876-114">如何：创建应用程序设置</span><span class="sxs-lookup"><span data-stu-id="7c876-114">How to: Create Application Settings</span></span>](how-to-create-application-settings.md)  
- <span data-ttu-id="7c876-115">演示如何创建在应用程序会话之间保存的新应用程序设置。</span><span class="sxs-lookup"><span data-stu-id="7c876-115">Demonstrates creating new application settings that are persisted between application sessions.</span></span>  
+ [<span data-ttu-id="c3f38-114">如何：创建应用程序设置</span><span class="sxs-lookup"><span data-stu-id="c3f38-114">How to: Create Application Settings</span></span>](how-to-create-application-settings.md)  
+ <span data-ttu-id="c3f38-115">演示如何创建在应用程序会话之间保存的新应用程序设置。</span><span class="sxs-lookup"><span data-stu-id="c3f38-115">Demonstrates creating new application settings that are persisted between application sessions.</span></span>  
   
- [<span data-ttu-id="7c876-116">如何：验证应用程序设置</span><span class="sxs-lookup"><span data-stu-id="7c876-116">How to: Validate Application Settings</span></span>](how-to-validate-application-settings.md)  
- <span data-ttu-id="7c876-117">演示如何在保存前验证应用程序设置。</span><span class="sxs-lookup"><span data-stu-id="7c876-117">Demonstrates validating application settings before they are persisted.</span></span>  
+ [<span data-ttu-id="c3f38-116">如何：验证应用程序设置</span><span class="sxs-lookup"><span data-stu-id="c3f38-116">How to: Validate Application Settings</span></span>](how-to-validate-application-settings.md)  
+ <span data-ttu-id="c3f38-117">演示如何在保存前验证应用程序设置。</span><span class="sxs-lookup"><span data-stu-id="c3f38-117">Demonstrates validating application settings before they are persisted.</span></span>  
   
-## <a name="related-topics"></a><span data-ttu-id="7c876-118">相关主题</span><span class="sxs-lookup"><span data-stu-id="7c876-118">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="c3f38-118">相关主题</span><span class="sxs-lookup"><span data-stu-id="c3f38-118">Related topics</span></span>
 
-<span data-ttu-id="7c876-119">[Windows 窗体配置部分](../../configure-apps/file-schema/winforms/index.md)  </span><span class="sxs-lookup"><span data-stu-id="7c876-119">[Windows Forms Configuration Section](../../configure-apps/file-schema/winforms/index.md)  </span></span>  
-<span data-ttu-id="7c876-120">记录从 .NET Framework 4.7 开始 Windows 窗体的应用程序中启用高 DPI 支持的设置。</span><span class="sxs-lookup"><span data-stu-id="7c876-120">Documents the settings to enable High DPI support in Windows Forms Application starting with the .NET Framework 4.7.</span></span>
+<span data-ttu-id="c3f38-119">[Windows 窗体配置部分](../../configure-apps/file-schema/winforms/index.md)  </span><span class="sxs-lookup"><span data-stu-id="c3f38-119">[Windows Forms Configuration Section](../../configure-apps/file-schema/winforms/index.md)  </span></span>  
+<span data-ttu-id="c3f38-120">记录从 .NET Framework 4.7 开始 Windows 窗体的应用程序中启用高 DPI 支持的设置。</span><span class="sxs-lookup"><span data-stu-id="c3f38-120">Documents the settings to enable High DPI support in Windows Forms Application starting with the .NET Framework 4.7.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="7c876-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="7c876-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3f38-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c3f38-121">See also</span></span>
 
-- [<span data-ttu-id="7c876-122">Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="7c876-122">Windows Forms</span></span>](../index.md)
+- [<span data-ttu-id="c3f38-122">Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="c3f38-122">Windows Forms</span></span>](../index.md)
