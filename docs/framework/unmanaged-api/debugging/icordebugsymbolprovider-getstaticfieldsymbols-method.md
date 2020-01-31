@@ -1,18 +1,18 @@
 ---
-title: ICorDebugSymbolProvider：： GetStaticFieldSymbols 方法
+title: ICorDebugSymbolProvider::GetStaticFieldSymbols 方法
 ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
-ms.openlocfilehash: 8c4211a60786016e25cc3e3419804817b57ab64e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 02cc62a421058f83e28ce945ae9e76745f768988
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138808"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791556"
 ---
-# <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a><span data-ttu-id="c0097-102">ICorDebugSymbolProvider：： GetStaticFieldSymbols 方法</span><span class="sxs-lookup"><span data-stu-id="c0097-102">ICorDebugSymbolProvider::GetStaticFieldSymbols Method</span></span>
-<span data-ttu-id="c0097-103">获取与 Typespec 签名相对应的静态字段符号。</span><span class="sxs-lookup"><span data-stu-id="c0097-103">Gets the static field symbols that correspond to a typespec signature.</span></span>  
+# <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a><span data-ttu-id="e6e44-102">ICorDebugSymbolProvider::GetStaticFieldSymbols 方法</span><span class="sxs-lookup"><span data-stu-id="e6e44-102">ICorDebugSymbolProvider::GetStaticFieldSymbols Method</span></span>
+<span data-ttu-id="e6e44-103">获取与 Typespec 签名相对应的静态字段符号。</span><span class="sxs-lookup"><span data-stu-id="e6e44-103">Gets the static field symbols that correspond to a typespec signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c0097-104">语法</span><span class="sxs-lookup"><span data-stu-id="c0097-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6e44-104">语法</span><span class="sxs-lookup"><span data-stu-id="e6e44-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStaticFieldSymbols(  
@@ -24,38 +24,38 @@ HRESULT GetStaticFieldSymbols(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c0097-105">参数</span><span class="sxs-lookup"><span data-stu-id="c0097-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e6e44-105">参数</span><span class="sxs-lookup"><span data-stu-id="e6e44-105">Parameters</span></span>  
  `cbSignature`  
- <span data-ttu-id="c0097-106">[in] `typeSig` 数组中的字节数。</span><span class="sxs-lookup"><span data-stu-id="c0097-106">[in] The number of bytes in the `typeSig` array.</span></span>  
+ <span data-ttu-id="e6e44-106">[in] `typeSig` 数组中的字节数。</span><span class="sxs-lookup"><span data-stu-id="e6e44-106">[in] The number of bytes in the `typeSig` array.</span></span>  
   
  `typeSig`  
- <span data-ttu-id="c0097-107">[in] 包含 `typespec` 签名的字节数组。</span><span class="sxs-lookup"><span data-stu-id="c0097-107">[in] A byte array that contains the `typespec` signature.</span></span>  
+ <span data-ttu-id="e6e44-107">[in] 包含 `typespec` 签名的字节数组。</span><span class="sxs-lookup"><span data-stu-id="e6e44-107">[in] A byte array that contains the `typespec` signature.</span></span>  
   
  `cRequestedSymbols`  
- <span data-ttu-id="c0097-108">[in] 请求的符号数。</span><span class="sxs-lookup"><span data-stu-id="c0097-108">[in] The number of symbols requested.</span></span>  
+ <span data-ttu-id="e6e44-108">[in] 请求的符号数。</span><span class="sxs-lookup"><span data-stu-id="e6e44-108">[in] The number of symbols requested.</span></span>  
   
  `pcFetchedSymbols`  
- <span data-ttu-id="c0097-109">[out] 一个指针，指向由方法检索的符号的数量。</span><span class="sxs-lookup"><span data-stu-id="c0097-109">[out] A pointer to the number of symbols retrieved by the method.</span></span>  
+ <span data-ttu-id="e6e44-109">[out] 一个指针，指向由方法检索的符号的数量。</span><span class="sxs-lookup"><span data-stu-id="e6e44-109">[out] A pointer to the number of symbols retrieved by the method.</span></span>  
   
  `pSymbols`  
- <span data-ttu-id="c0097-110">弄指向[ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)数组的指针，该数组包含请求的静态字段符号。</span><span class="sxs-lookup"><span data-stu-id="c0097-110">[out] A pointer to an [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) array that contains the requested static field symbols.</span></span>  
+ <span data-ttu-id="e6e44-110">弄指向[ICorDebugStaticFieldSymbol](icordebugstaticfieldsymbol-interface.md)数组的指针，该数组包含请求的静态字段符号。</span><span class="sxs-lookup"><span data-stu-id="e6e44-110">[out] A pointer to an [ICorDebugStaticFieldSymbol](icordebugstaticfieldsymbol-interface.md) array that contains the requested static field symbols.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c0097-111">备注</span><span class="sxs-lookup"><span data-stu-id="c0097-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e6e44-111">备注</span><span class="sxs-lookup"><span data-stu-id="e6e44-111">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="c0097-112">此方法仅适用于 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="c0097-112">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="e6e44-112">此方法仅适用于 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="e6e44-112">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c0097-113">要求</span><span class="sxs-lookup"><span data-stu-id="c0097-113">Requirements</span></span>  
- <span data-ttu-id="c0097-114">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c0097-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e6e44-113">需求</span><span class="sxs-lookup"><span data-stu-id="e6e44-113">Requirements</span></span>  
+ <span data-ttu-id="e6e44-114">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e6e44-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c0097-115">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c0097-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e6e44-115">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e6e44-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c0097-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c0097-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e6e44-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e6e44-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c0097-117">**.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c0097-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="e6e44-117">**.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6e44-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c0097-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="c0097-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e6e44-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e6e44-118">See also</span></span>
 
-- [<span data-ttu-id="c0097-119">GetInstanceFieldSymbols 方法</span><span class="sxs-lookup"><span data-stu-id="c0097-119">GetInstanceFieldSymbols Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getinstancefieldsymbols-method.md)
-- [<span data-ttu-id="c0097-120">ICorDebugSymbolProvider 接口</span><span class="sxs-lookup"><span data-stu-id="c0097-120">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [<span data-ttu-id="c0097-121">调试接口</span><span class="sxs-lookup"><span data-stu-id="c0097-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="e6e44-119">GetInstanceFieldSymbols 方法</span><span class="sxs-lookup"><span data-stu-id="e6e44-119">GetInstanceFieldSymbols Method</span></span>](icordebugsymbolprovider-getinstancefieldsymbols-method.md)
+- [<span data-ttu-id="e6e44-120">ICorDebugSymbolProvider 接口</span><span class="sxs-lookup"><span data-stu-id="e6e44-120">ICorDebugSymbolProvider Interface</span></span>](icordebugsymbolprovider-interface.md)
+- [<span data-ttu-id="e6e44-121">调试接口</span><span class="sxs-lookup"><span data-stu-id="e6e44-121">Debugging Interfaces</span></span>](debugging-interfaces.md)
