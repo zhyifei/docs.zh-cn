@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 8c2ff5d8-8c04-4423-b1e1-e1c8764b36d3
 topic_type:
 - apiref
-ms.openlocfilehash: 77cda2c3d30b5926da219a38b762295818ca54a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dc03365b72a5f3613402faf1aed44b5683e9892c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121199"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777837"
 ---
-# <a name="icordebugcode3getreturnvalueliveoffset-method"></a><span data-ttu-id="b828b-102">ICorDebugCode3::GetReturnValueLiveOffset 方法</span><span class="sxs-lookup"><span data-stu-id="b828b-102">ICorDebugCode3::GetReturnValueLiveOffset Method</span></span>
-<span data-ttu-id="b828b-103">对于指定的 IL 偏移量，获取应放置断点的本机偏移量，以便调试器可以从函数中获取返回值。</span><span class="sxs-lookup"><span data-stu-id="b828b-103">For a specified IL offset, gets the native offsets where a breakpoint should be placed so that the debugger can obtain the return value from a function.</span></span>  
+# <a name="icordebugcode3getreturnvalueliveoffset-method"></a><span data-ttu-id="086b6-102">ICorDebugCode3::GetReturnValueLiveOffset 方法</span><span class="sxs-lookup"><span data-stu-id="086b6-102">ICorDebugCode3::GetReturnValueLiveOffset Method</span></span>
+<span data-ttu-id="086b6-103">对于指定的 IL 偏移量，获取应放置断点的本机偏移量，以便调试器可以从函数中获取返回值。</span><span class="sxs-lookup"><span data-stu-id="086b6-103">For a specified IL offset, gets the native offsets where a breakpoint should be placed so that the debugger can obtain the return value from a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b828b-104">语法</span><span class="sxs-lookup"><span data-stu-id="b828b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="086b6-104">语法</span><span class="sxs-lookup"><span data-stu-id="086b6-104">Syntax</span></span>  
   
 ```cpp
 HRESULT GetReturnValueLiveOffset(  
@@ -38,45 +38,45 @@ HRESULT GetReturnValueLiveOffset(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b828b-105">参数</span><span class="sxs-lookup"><span data-stu-id="b828b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="086b6-105">参数</span><span class="sxs-lookup"><span data-stu-id="086b6-105">Parameters</span></span>  
  `ILoffset`  
- <span data-ttu-id="b828b-106">IL 偏移量。</span><span class="sxs-lookup"><span data-stu-id="b828b-106">The IL offset.</span></span> <span data-ttu-id="b828b-107">它必须是函数调用站点，否则函数调用将失败。</span><span class="sxs-lookup"><span data-stu-id="b828b-107">It must be a function call site or the function call will fail.</span></span>  
+ <span data-ttu-id="086b6-106">IL 偏移量。</span><span class="sxs-lookup"><span data-stu-id="086b6-106">The IL offset.</span></span> <span data-ttu-id="086b6-107">它必须是函数调用站点，否则函数调用将失败。</span><span class="sxs-lookup"><span data-stu-id="086b6-107">It must be a function call site or the function call will fail.</span></span>  
   
  `bufferSize`  
- <span data-ttu-id="b828b-108">可用于存储 `pOffsets`的字节数。</span><span class="sxs-lookup"><span data-stu-id="b828b-108">The number of bytes available to store `pOffsets`.</span></span>  
+ <span data-ttu-id="086b6-108">可用于存储 `pOffsets`的字节数。</span><span class="sxs-lookup"><span data-stu-id="086b6-108">The number of bytes available to store `pOffsets`.</span></span>  
   
  `pFetched`  
- <span data-ttu-id="b828b-109">指向实际返回的偏移量的指针。</span><span class="sxs-lookup"><span data-stu-id="b828b-109">A pointer to the number of offsets actually returned.</span></span> <span data-ttu-id="b828b-110">通常，其值为1，但单个 IL 指令可以映射到多个 `CALL` 程序集说明。</span><span class="sxs-lookup"><span data-stu-id="b828b-110">Usually, its value is 1, but a single IL instruction can map to multiple `CALL` assembly instructions.</span></span>  
+ <span data-ttu-id="086b6-109">指向实际返回的偏移量的指针。</span><span class="sxs-lookup"><span data-stu-id="086b6-109">A pointer to the number of offsets actually returned.</span></span> <span data-ttu-id="086b6-110">通常，其值为1，但单个 IL 指令可以映射到多个 `CALL` 程序集说明。</span><span class="sxs-lookup"><span data-stu-id="086b6-110">Usually, its value is 1, but a single IL instruction can map to multiple `CALL` assembly instructions.</span></span>  
   
  `pOffsets`  
- <span data-ttu-id="b828b-111">本机偏移量的数组。</span><span class="sxs-lookup"><span data-stu-id="b828b-111">An array of native offsets.</span></span> <span data-ttu-id="b828b-112">通常，`pOffsets` 包含单个偏移量，但单个 IL 指令可以映射到多个映射到多个 `CALL` 的程序集指令。</span><span class="sxs-lookup"><span data-stu-id="b828b-112">Typically, `pOffsets` contains a single offset, although a single IL instruction can map to multiple map to multiple `CALL` assembly instructions.</span></span>  
+ <span data-ttu-id="086b6-111">本机偏移量的数组。</span><span class="sxs-lookup"><span data-stu-id="086b6-111">An array of native offsets.</span></span> <span data-ttu-id="086b6-112">通常，`pOffsets` 包含单个偏移量，但单个 IL 指令可以映射到多个映射到多个 `CALL` 的程序集指令。</span><span class="sxs-lookup"><span data-stu-id="086b6-112">Typically, `pOffsets` contains a single offset, although a single IL instruction can map to multiple map to multiple `CALL` assembly instructions.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b828b-113">备注</span><span class="sxs-lookup"><span data-stu-id="b828b-113">Remarks</span></span>  
- <span data-ttu-id="b828b-114">此方法与[ICorDebugILFrame3：： GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法一起使用，以获取返回引用类型的方法的返回值。</span><span class="sxs-lookup"><span data-stu-id="b828b-114">This method is used along with the [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) method to get the return value of a method that returns a reference type.</span></span> <span data-ttu-id="b828b-115">如果将 IL 偏移量传递给函数调用站点，此方法将返回一个或多个本机偏移量。</span><span class="sxs-lookup"><span data-stu-id="b828b-115">Passing an IL offset to a function call site to this method returns one or more native offsets.</span></span> <span data-ttu-id="b828b-116">然后，调试器可以在函数中的这些本机偏移量上设置断点。</span><span class="sxs-lookup"><span data-stu-id="b828b-116">The debugger can then set breakpoints on these native offsets in the function.</span></span> <span data-ttu-id="b828b-117">当调试器遇到其中一个断点时，可以将传递给此方法的同一 IL 偏移传递给[ICorDebugILFrame3：： GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法以获取返回值。</span><span class="sxs-lookup"><span data-stu-id="b828b-117">When the debugger hits one of the breakpoints, you can then pass the same IL offset that you passed to this method to the [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) method to get the return value.</span></span> <span data-ttu-id="b828b-118">调试器随后应清除它所设置的所有断点。</span><span class="sxs-lookup"><span data-stu-id="b828b-118">The debugger should then clear all the breakpoints that it set.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="086b6-113">备注</span><span class="sxs-lookup"><span data-stu-id="086b6-113">Remarks</span></span>  
+ <span data-ttu-id="086b6-114">此方法与[ICorDebugILFrame3：： GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md)方法一起使用，以获取返回引用类型的方法的返回值。</span><span class="sxs-lookup"><span data-stu-id="086b6-114">This method is used along with the [ICorDebugILFrame3::GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) method to get the return value of a method that returns a reference type.</span></span> <span data-ttu-id="086b6-115">如果将 IL 偏移量传递给函数调用站点，此方法将返回一个或多个本机偏移量。</span><span class="sxs-lookup"><span data-stu-id="086b6-115">Passing an IL offset to a function call site to this method returns one or more native offsets.</span></span> <span data-ttu-id="086b6-116">然后，调试器可以在函数中的这些本机偏移量上设置断点。</span><span class="sxs-lookup"><span data-stu-id="086b6-116">The debugger can then set breakpoints on these native offsets in the function.</span></span> <span data-ttu-id="086b6-117">当调试器遇到其中一个断点时，可以将传递给此方法的同一 IL 偏移传递给[ICorDebugILFrame3：： GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md)方法以获取返回值。</span><span class="sxs-lookup"><span data-stu-id="086b6-117">When the debugger hits one of the breakpoints, you can then pass the same IL offset that you passed to this method to the [ICorDebugILFrame3::GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) method to get the return value.</span></span> <span data-ttu-id="086b6-118">调试器随后应清除它所设置的所有断点。</span><span class="sxs-lookup"><span data-stu-id="086b6-118">The debugger should then clear all the breakpoints that it set.</span></span>  
   
 > [!WARNING]
-> <span data-ttu-id="b828b-119">`ICorDebugCode3::GetReturnValueLiveOffset` 和[ICorDebugILFrame3：： GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法只允许获取引用类型的返回值信息。</span><span class="sxs-lookup"><span data-stu-id="b828b-119">The `ICorDebugCode3::GetReturnValueLiveOffset` and [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) methods allow you to get return value information for reference types only.</span></span> <span data-ttu-id="b828b-120">不支持从值类型（即从 <xref:System.ValueType>派生的所有类型）检索返回值信息。</span><span class="sxs-lookup"><span data-stu-id="b828b-120">Retrieving return value information from value types (that is, all types that derive from <xref:System.ValueType>) is not supported.</span></span>  
+> <span data-ttu-id="086b6-119">`ICorDebugCode3::GetReturnValueLiveOffset` 和[ICorDebugILFrame3：： GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md)方法只允许获取引用类型的返回值信息。</span><span class="sxs-lookup"><span data-stu-id="086b6-119">The `ICorDebugCode3::GetReturnValueLiveOffset` and [ICorDebugILFrame3::GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) methods allow you to get return value information for reference types only.</span></span> <span data-ttu-id="086b6-120">不支持从值类型（即从 <xref:System.ValueType>派生的所有类型）检索返回值信息。</span><span class="sxs-lookup"><span data-stu-id="086b6-120">Retrieving return value information from value types (that is, all types that derive from <xref:System.ValueType>) is not supported.</span></span>  
   
- <span data-ttu-id="b828b-121">函数将返回下表中显示的 `HRESULT` 值。</span><span class="sxs-lookup"><span data-stu-id="b828b-121">The function returns the `HRESULT` values shown in the following table.</span></span>  
+ <span data-ttu-id="086b6-121">函数将返回下表中显示的 `HRESULT` 值。</span><span class="sxs-lookup"><span data-stu-id="086b6-121">The function returns the `HRESULT` values shown in the following table.</span></span>  
   
-|<span data-ttu-id="b828b-122">`HRESULT` 值</span><span class="sxs-lookup"><span data-stu-id="b828b-122">`HRESULT` value</span></span>|<span data-ttu-id="b828b-123">描述</span><span class="sxs-lookup"><span data-stu-id="b828b-123">Description</span></span>|  
+|<span data-ttu-id="086b6-122">`HRESULT` 值</span><span class="sxs-lookup"><span data-stu-id="086b6-122">`HRESULT` value</span></span>|<span data-ttu-id="086b6-123">描述</span><span class="sxs-lookup"><span data-stu-id="086b6-123">Description</span></span>|  
 |---------------------|-----------------|  
-|`S_OK`|<span data-ttu-id="b828b-124">成功。</span><span class="sxs-lookup"><span data-stu-id="b828b-124">Success.</span></span>|  
-|`CORDBG_E_INVALID_OPCODE`|<span data-ttu-id="b828b-125">给定的 IL 偏移量站点不是调用指令，或函数返回 `void`。</span><span class="sxs-lookup"><span data-stu-id="b828b-125">The given IL offset site is not a call instruction, or the function returns `void`.</span></span>|  
-|`CORDBG_E_UNSUPPORTED`|<span data-ttu-id="b828b-126">给定的 IL 偏移量是正确的调用，但不支持返回类型来获取返回值。</span><span class="sxs-lookup"><span data-stu-id="b828b-126">The given IL offset is a proper call, but the return type is unsupported for getting a return value.</span></span>|  
+|`S_OK`|<span data-ttu-id="086b6-124">成功。</span><span class="sxs-lookup"><span data-stu-id="086b6-124">Success.</span></span>|  
+|`CORDBG_E_INVALID_OPCODE`|<span data-ttu-id="086b6-125">给定的 IL 偏移量站点不是调用指令，或函数返回 `void`。</span><span class="sxs-lookup"><span data-stu-id="086b6-125">The given IL offset site is not a call instruction, or the function returns `void`.</span></span>|  
+|`CORDBG_E_UNSUPPORTED`|<span data-ttu-id="086b6-126">给定的 IL 偏移量是正确的调用，但不支持返回类型来获取返回值。</span><span class="sxs-lookup"><span data-stu-id="086b6-126">The given IL offset is a proper call, but the return type is unsupported for getting a return value.</span></span>|  
   
- <span data-ttu-id="b828b-127">`ICorDebugCode3::GetReturnValueLiveOffset` 方法仅适用于基于 x86 的和 AMD64 系统。</span><span class="sxs-lookup"><span data-stu-id="b828b-127">The `ICorDebugCode3::GetReturnValueLiveOffset` method is available only on x86-based and AMD64 systems.</span></span>  
+ <span data-ttu-id="086b6-127">`ICorDebugCode3::GetReturnValueLiveOffset` 方法仅适用于基于 x86 的和 AMD64 系统。</span><span class="sxs-lookup"><span data-stu-id="086b6-127">The `ICorDebugCode3::GetReturnValueLiveOffset` method is available only on x86-based and AMD64 systems.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b828b-128">要求</span><span class="sxs-lookup"><span data-stu-id="b828b-128">Requirements</span></span>  
- <span data-ttu-id="b828b-129">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b828b-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="086b6-128">需求</span><span class="sxs-lookup"><span data-stu-id="086b6-128">Requirements</span></span>  
+ <span data-ttu-id="086b6-129">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="086b6-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b828b-130">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b828b-130">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="086b6-130">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="086b6-130">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b828b-131">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b828b-131">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="086b6-131">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="086b6-131">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b828b-132">**.NET Framework 版本：** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b828b-132">**.NET Framework Versions:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span></span>  
+ <span data-ttu-id="086b6-132">**.NET Framework 版本：** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="086b6-132">**.NET Framework Versions:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b828b-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="b828b-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="086b6-133">另请参阅</span><span class="sxs-lookup"><span data-stu-id="086b6-133">See also</span></span>
 
-- [<span data-ttu-id="b828b-134">GetReturnValueForILOffset 方法</span><span class="sxs-lookup"><span data-stu-id="b828b-134">GetReturnValueForILOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)
-- [<span data-ttu-id="b828b-135">ICorDebugCode3 接口</span><span class="sxs-lookup"><span data-stu-id="b828b-135">ICorDebugCode3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
+- [<span data-ttu-id="086b6-134">GetReturnValueForILOffset 方法</span><span class="sxs-lookup"><span data-stu-id="086b6-134">GetReturnValueForILOffset Method</span></span>](icordebugilframe3-getreturnvalueforiloffset-method.md)
+- [<span data-ttu-id="086b6-135">ICorDebugCode3 接口</span><span class="sxs-lookup"><span data-stu-id="086b6-135">ICorDebugCode3 Interface</span></span>](icordebugcode3-interface.md)
