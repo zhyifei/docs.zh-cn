@@ -12,17 +12,17 @@ api_type:
 ms.assetid: 307d6ac7-4a86-45f3-999d-6b47004a68f2
 topic_type:
 - apiref
-ms.openlocfilehash: 5e7fd2f277a9c3d8410020a53d348456ef9deffb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 961e74551ae7fc170e443c632ca11598f1494a39
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111908"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785210"
 ---
-# <a name="iclrdatatarget3getexceptionthreadid-method"></a><span data-ttu-id="f3a7f-102">ICLRDataTarget3::GetExceptionThreadID 方法</span><span class="sxs-lookup"><span data-stu-id="f3a7f-102">ICLRDataTarget3::GetExceptionThreadID Method</span></span>
-<span data-ttu-id="f3a7f-103">由公共语言运行时 (CLR) 数据访问服务调用，从而获取引发异常的线程的 ID。</span><span class="sxs-lookup"><span data-stu-id="f3a7f-103">Called by the common language runtime (CLR) data access services to get the ID of the thread that threw the exception.</span></span>  
+# <a name="iclrdatatarget3getexceptionthreadid-method"></a><span data-ttu-id="32dae-102">ICLRDataTarget3::GetExceptionThreadID 方法</span><span class="sxs-lookup"><span data-stu-id="32dae-102">ICLRDataTarget3::GetExceptionThreadID Method</span></span>
+<span data-ttu-id="32dae-103">由公共语言运行时 (CLR) 数据访问服务调用，从而获取引发异常的线程的 ID。</span><span class="sxs-lookup"><span data-stu-id="32dae-103">Called by the common language runtime (CLR) data access services to get the ID of the thread that threw the exception.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f3a7f-104">语法</span><span class="sxs-lookup"><span data-stu-id="f3a7f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="32dae-104">语法</span><span class="sxs-lookup"><span data-stu-id="32dae-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetExceptionThreadID(  
@@ -30,32 +30,32 @@ HRESULT GetExceptionThreadID(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f3a7f-105">参数</span><span class="sxs-lookup"><span data-stu-id="f3a7f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="32dae-105">参数</span><span class="sxs-lookup"><span data-stu-id="32dae-105">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="f3a7f-106">[out] 引发异常的线程的 ID。</span><span class="sxs-lookup"><span data-stu-id="f3a7f-106">[out] The ID of the thread that threw the exception.</span></span>  
+ <span data-ttu-id="32dae-106">[out] 引发异常的线程的 ID。</span><span class="sxs-lookup"><span data-stu-id="32dae-106">[out] The ID of the thread that threw the exception.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f3a7f-107">返回值</span><span class="sxs-lookup"><span data-stu-id="f3a7f-107">Return Value</span></span>  
- <span data-ttu-id="f3a7f-108">如果成功，则返回值是 `S_OK`；如果失败，则返回失败 `HRESULT` 代码。</span><span class="sxs-lookup"><span data-stu-id="f3a7f-108">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="f3a7f-109">`HRESULT` 代码可以包括但不限于以下代码：</span><span class="sxs-lookup"><span data-stu-id="f3a7f-109">The `HRESULT` codes can include but are not limited to the following:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="32dae-107">返回值</span><span class="sxs-lookup"><span data-stu-id="32dae-107">Return Value</span></span>  
+ <span data-ttu-id="32dae-108">如果成功，则返回值是 `S_OK`；如果失败，则返回失败 `HRESULT` 代码。</span><span class="sxs-lookup"><span data-stu-id="32dae-108">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="32dae-109">`HRESULT` 代码可以包括但不限于以下代码：</span><span class="sxs-lookup"><span data-stu-id="32dae-109">The `HRESULT` codes can include but are not limited to the following:</span></span>  
   
-|<span data-ttu-id="f3a7f-110">返回代码</span><span class="sxs-lookup"><span data-stu-id="f3a7f-110">Return code</span></span>|<span data-ttu-id="f3a7f-111">描述</span><span class="sxs-lookup"><span data-stu-id="f3a7f-111">Description</span></span>|  
+|<span data-ttu-id="32dae-110">返回代码</span><span class="sxs-lookup"><span data-stu-id="32dae-110">Return code</span></span>|<span data-ttu-id="32dae-111">描述</span><span class="sxs-lookup"><span data-stu-id="32dae-111">Description</span></span>|  
 |-----------------|-----------------|  
-|`S_OK`|<span data-ttu-id="f3a7f-112">方法成功。</span><span class="sxs-lookup"><span data-stu-id="f3a7f-112">Method succeeded.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="f3a7f-113">找不到该异常的有效线程 ID。</span><span class="sxs-lookup"><span data-stu-id="f3a7f-113">Could not find a valid thread ID for the exception.</span></span>|  
+|`S_OK`|<span data-ttu-id="32dae-112">方法成功。</span><span class="sxs-lookup"><span data-stu-id="32dae-112">Method succeeded.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="32dae-113">找不到该异常的有效线程 ID。</span><span class="sxs-lookup"><span data-stu-id="32dae-113">Could not find a valid thread ID for the exception.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f3a7f-114">备注</span><span class="sxs-lookup"><span data-stu-id="f3a7f-114">Remarks</span></span>  
- <span data-ttu-id="f3a7f-115">此方法由调试应用程序的编写器实现。</span><span class="sxs-lookup"><span data-stu-id="f3a7f-115">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="32dae-114">备注</span><span class="sxs-lookup"><span data-stu-id="32dae-114">Remarks</span></span>  
+ <span data-ttu-id="32dae-115">此方法由调试应用程序的编写器实现。</span><span class="sxs-lookup"><span data-stu-id="32dae-115">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f3a7f-116">要求</span><span class="sxs-lookup"><span data-stu-id="f3a7f-116">Requirements</span></span>  
- <span data-ttu-id="f3a7f-117">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f3a7f-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="32dae-116">需求</span><span class="sxs-lookup"><span data-stu-id="32dae-116">Requirements</span></span>  
+ <span data-ttu-id="32dae-117">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="32dae-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f3a7f-118">**标头：** ClrData，ClrData</span><span class="sxs-lookup"><span data-stu-id="f3a7f-118">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="32dae-118">**标头：** ClrData，ClrData</span><span class="sxs-lookup"><span data-stu-id="32dae-118">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="f3a7f-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f3a7f-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="32dae-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="32dae-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f3a7f-120">**.NET Framework 版本：** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span><span class="sxs-lookup"><span data-stu-id="f3a7f-120">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span></span>  
+ <span data-ttu-id="32dae-120">**.NET Framework 版本：** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span><span class="sxs-lookup"><span data-stu-id="32dae-120">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f3a7f-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="f3a7f-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32dae-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="32dae-121">See also</span></span>
 
-- [<span data-ttu-id="f3a7f-122">ICLRDataTarget3 接口</span><span class="sxs-lookup"><span data-stu-id="f3a7f-122">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
-- [<span data-ttu-id="f3a7f-123">GetExceptionContextRecord 方法</span><span class="sxs-lookup"><span data-stu-id="f3a7f-123">GetExceptionContextRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)
-- [<span data-ttu-id="f3a7f-124">GetExceptionRecord 方法</span><span class="sxs-lookup"><span data-stu-id="f3a7f-124">GetExceptionRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)
+- [<span data-ttu-id="32dae-122">ICLRDataTarget3 接口</span><span class="sxs-lookup"><span data-stu-id="32dae-122">ICLRDataTarget3 Interface</span></span>](iclrdatatarget3-interface.md)
+- [<span data-ttu-id="32dae-123">GetExceptionContextRecord 方法</span><span class="sxs-lookup"><span data-stu-id="32dae-123">GetExceptionContextRecord Method</span></span>](iclrdatatarget3-getexceptioncontextrecord-method.md)
+- [<span data-ttu-id="32dae-124">GetExceptionRecord 方法</span><span class="sxs-lookup"><span data-stu-id="32dae-124">GetExceptionRecord Method</span></span>](iclrdatatarget3-getexceptionrecord-method.md)

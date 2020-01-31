@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d7e916a6-1c39-4676-972d-da3d8546044b
 topic_type:
 - apiref
-ms.openlocfilehash: 217c0ea3eea6ce7413028b9638dbaae66bd99452
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6ebe07fc7cd963cbe9cae3cd8c3f7c0580dad5fc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137413"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788814"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="695ed-102">ICorDebugEditAndContinueSnapshot::GetMvid 方法</span><span class="sxs-lookup"><span data-stu-id="695ed-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
-<span data-ttu-id="695ed-103">`GetMvid` 已过时。</span><span class="sxs-lookup"><span data-stu-id="695ed-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="695ed-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="695ed-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="2f9e7-102">ICorDebugEditAndContinueSnapshot::GetMvid 方法</span><span class="sxs-lookup"><span data-stu-id="2f9e7-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
+<span data-ttu-id="2f9e7-103">`GetMvid` 已过时。</span><span class="sxs-lookup"><span data-stu-id="2f9e7-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="2f9e7-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="2f9e7-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="695ed-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="695ed-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2f9e7-105">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2f9e7-105">See also</span></span>
 
-- [<span data-ttu-id="695ed-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="695ed-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="2f9e7-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="2f9e7-106">Debugging Interfaces</span></span>](debugging-interfaces.md)

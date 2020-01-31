@@ -1,37 +1,37 @@
 ---
-title: MSMQ 激活
+title: MSMQ 활성화
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 2afcfbee69f8257e4ed0b1c352ef29e4af9ddb84
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 805ab78908b4d1146cce94cac5357bafbb35c832
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544714"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744788"
 ---
-# <a name="msmq-activation"></a><span data-ttu-id="151a4-102">MSMQ 激活</span><span class="sxs-lookup"><span data-stu-id="151a4-102">MSMQ Activation</span></span>
+# <a name="msmq-activation"></a><span data-ttu-id="ce8bc-102">MSMQ 활성화</span><span class="sxs-lookup"><span data-stu-id="ce8bc-102">MSMQ Activation</span></span>
 
-<span data-ttu-id="151a4-103">本示例演示如何在 Windows 进程激活服务 (WAS) 中承载从消息队列读取的应用程序。</span><span class="sxs-lookup"><span data-stu-id="151a4-103">This sample demonstrates how to host applications in Windows Process Activation Service (WAS) that are read from a message queue.</span></span> <span data-ttu-id="151a4-104">此示例使用 `netMsmqBinding`，并基于[双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)示例。</span><span class="sxs-lookup"><span data-stu-id="151a4-104">This sample uses the `netMsmqBinding` and is based on the [Two-Way Communication](../../../../docs/framework/wcf/samples/two-way-communication.md) sample.</span></span> <span data-ttu-id="151a4-105">本示例中的服务是一个 Web 承载的应用程序，而客户端是自承载的，并输出到控制台以观察提交的采购订单的状态。</span><span class="sxs-lookup"><span data-stu-id="151a4-105">The service in this case is a Web-hosted application and the client is self-hosted and outputs to the console to observe the status of purchase orders submitted.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="151a4-106">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="151a4-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>
+<span data-ttu-id="ce8bc-103">이 샘플에서는 메시지 큐에서 읽은 WAS(Windows Process Activation Service)에서 애플리케이션을 호스트하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-103">This sample demonstrates how to host applications in Windows Process Activation Service (WAS) that are read from a message queue.</span></span> <span data-ttu-id="ce8bc-104">此示例使用 `netMsmqBinding`，并基于[双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)示例。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-104">This sample uses the `netMsmqBinding` and is based on the [Two-Way Communication](../../../../docs/framework/wcf/samples/two-way-communication.md) sample.</span></span> <span data-ttu-id="ce8bc-105">이 경우 서비스는 웹 호스팅 애플리케이션이고 클라이언트는 자체 호스트되며 전송된 구매 주문의 상태를 확인하기 위해 콘솔에 출력됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-105">The service in this case is a Web-hosted application and the client is self-hosted and outputs to the console to observe the status of purchase orders submitted.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="151a4-107">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="151a4-107">The samples may already be installed on your computer.</span></span> <span data-ttu-id="151a4-108">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="151a4-108">Check for the following (default) directory before continuing.</span></span>
+> <span data-ttu-id="ce8bc-106">이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="ce8bc-107">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-107">The samples may already be installed on your computer.</span></span> <span data-ttu-id="ce8bc-108">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-108">Check for the following (default) directory before continuing.</span></span>
 >
-> <span data-ttu-id="151a4-109">\<InstallDrive>:\WF_WCF_Samples</span><span class="sxs-lookup"><span data-stu-id="151a4-109">\<InstallDrive>:\WF_WCF_Samples</span></span>
+> <span data-ttu-id="ce8bc-109">\<InstallDrive>:\WF_WCF_Samples</span><span class="sxs-lookup"><span data-stu-id="ce8bc-109">\<InstallDrive>:\WF_WCF_Samples</span></span>
 >
-> <span data-ttu-id="151a4-110">如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （WCF）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WCF 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="151a4-110">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all WCF and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="151a4-111">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="151a4-111">This sample is located in the following directory.</span></span>
+> <span data-ttu-id="ce8bc-110">如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （WCF）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WCF 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-110">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all WCF and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ce8bc-111">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-111">This sample is located in the following directory.</span></span>
 >
-> <span data-ttu-id="151a4-112">\<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.</span><span class="sxs-lookup"><span data-stu-id="151a4-112">\<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.</span></span>
+> <span data-ttu-id="ce8bc-112">\<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-112">\<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.</span></span>
 
-<span data-ttu-id="151a4-113">Windows 进程激活服务（WAS）是 Windows Server 2008 的新进程激活机制，它提供了类似 IIS 的功能，这些功能以前仅对使用非 HTTP 协议的应用程序可用。</span><span class="sxs-lookup"><span data-stu-id="151a4-113">Windows Process Activation Service (WAS), the new process activation mechanism for Windows Server 2008, provides IIS-like features that were previously only available to HTTP-based applications to applications that use non-HTTP protocols.</span></span> <span data-ttu-id="151a4-114">Windows Communication Foundation （WCF）使用侦听器适配器接口传递通过 WCF 支持的非 HTTP 协议（如 TCP、命名管道和 MSMQ）接收的激活请求。</span><span class="sxs-lookup"><span data-stu-id="151a4-114">Windows Communication Foundation (WCF) uses the Listener Adapter interface to communicate activation requests that are received over the non-HTTP protocols supported by WCF, such as TCP, Named Pipes, and MSMQ.</span></span> <span data-ttu-id="151a4-115">用于通过非 HTTP 协议接收请求的功能由 SMSvcHost.exe 中运行的托管 Windows 服务承载。</span><span class="sxs-lookup"><span data-stu-id="151a4-115">The functionality for receiving requests over non-HTTP protocols is hosted by managed Windows services running in SMSvcHost.exe.</span></span>
+<span data-ttu-id="ce8bc-113">Windows 进程激活服务（WAS）是 Windows Server 2008 的新进程激活机制，它提供了类似 IIS 的功能，这些功能以前仅对使用非 HTTP 协议的应用程序可用。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-113">Windows Process Activation Service (WAS), the new process activation mechanism for Windows Server 2008, provides IIS-like features that were previously only available to HTTP-based applications to applications that use non-HTTP protocols.</span></span> <span data-ttu-id="ce8bc-114">Windows Communication Foundation （WCF）使用侦听器适配器接口传递通过 WCF 支持的非 HTTP 协议（如 TCP、命名管道和 MSMQ）接收的激活请求。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-114">Windows Communication Foundation (WCF) uses the Listener Adapter interface to communicate activation requests that are received over the non-HTTP protocols supported by WCF, such as TCP, Named Pipes, and MSMQ.</span></span> <span data-ttu-id="ce8bc-115">HTTP가 아닌 프로토콜을 통해 요청을 수신하는 기능은 SMSvcHost.exe에서 실행되는 관리되는 Windows 서비스에 의해 호스트됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-115">The functionality for receiving requests over non-HTTP protocols is hosted by managed Windows services running in SMSvcHost.exe.</span></span>
 
-<span data-ttu-id="151a4-116">Net.Msmq Listener Adapter 服务 (NetMsmqActivator) 根据队列中的消息激活排队的应用程序。</span><span class="sxs-lookup"><span data-stu-id="151a4-116">The Net.Msmq Listener Adapter service (NetMsmqActivator) activates queued applications based on messages in the queue.</span></span>
+<span data-ttu-id="ce8bc-116">Net.Msmq Listener Adapter 서비스(NetMsmqActivator)는 큐의 메시지에 기초하여 큐에 대기 중인 애플리케이션을 활성화합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-116">The Net.Msmq Listener Adapter service (NetMsmqActivator) activates queued applications based on messages in the queue.</span></span>
 
-<span data-ttu-id="151a4-117">客户端从事务范围内向服务发送采购订单。</span><span class="sxs-lookup"><span data-stu-id="151a4-117">The client sends purchase orders to the service from within the scope of a transaction.</span></span> <span data-ttu-id="151a4-118">服务在事务中接收订单并处理订单。</span><span class="sxs-lookup"><span data-stu-id="151a4-118">The service receives the orders in a transaction and processes them.</span></span> <span data-ttu-id="151a4-119">然后服务使用订单状态回调客户端。</span><span class="sxs-lookup"><span data-stu-id="151a4-119">The service then calls back the client with the status of the order.</span></span> <span data-ttu-id="151a4-120">为了便于双向通信，客户端和服务都使用队列以便将采购订单和订单状态排入队列。</span><span class="sxs-lookup"><span data-stu-id="151a4-120">To facilitate two-way communication the client and service both use queues to enqueue purchase orders and order status.</span></span>
+<span data-ttu-id="ce8bc-117">클라이언트는 트랜잭션의 범위 내에서 서비스에 구매 주문을 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-117">The client sends purchase orders to the service from within the scope of a transaction.</span></span> <span data-ttu-id="ce8bc-118">서비스는 트랜잭션의 주문을 수신하고 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-118">The service receives the orders in a transaction and processes them.</span></span> <span data-ttu-id="ce8bc-119">그런 다음 서비스는 주문 상태와 함께 클라이언트를 콜백합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-119">The service then calls back the client with the status of the order.</span></span> <span data-ttu-id="ce8bc-120">양방향 통신을 쉽게 수행하기 위해 클라이언트와 서비스는 둘 다 큐를 사용하여 구매 주문과 주문 상태를 큐에 삽입합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-120">To facilitate two-way communication the client and service both use queues to enqueue purchase orders and order status.</span></span>
 
-<span data-ttu-id="151a4-121">服务协定 `IOrderProcessor` 定义使用队列的单向服务操作。</span><span class="sxs-lookup"><span data-stu-id="151a4-121">The service contract `IOrderProcessor` defines the one-way service operations that work with queuing.</span></span> <span data-ttu-id="151a4-122">服务操作使用答复终结点将订单状态发送到客户端。</span><span class="sxs-lookup"><span data-stu-id="151a4-122">The service operation uses the reply endpoint to send order statuses to the client.</span></span> <span data-ttu-id="151a4-123">答复终结点的地址是用于将订单状态发回客户端的队列的 URI。</span><span class="sxs-lookup"><span data-stu-id="151a4-123">The reply endpoint's address is the URI of the queue used to send the order status back to the client.</span></span> <span data-ttu-id="151a4-124">订单处理应用程序实现下面的协定。</span><span class="sxs-lookup"><span data-stu-id="151a4-124">The order processing application implements this contract.</span></span>
+<span data-ttu-id="ce8bc-121">서비스 계약 `IOrderProcessor`는 큐를 사용하는 단방향 서비스 작업을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-121">The service contract `IOrderProcessor` defines the one-way service operations that work with queuing.</span></span> <span data-ttu-id="ce8bc-122">이 서비스 작업은 회신 엔드포인트를 사용하여 주문 상태를 클라이언트에게 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-122">The service operation uses the reply endpoint to send order statuses to the client.</span></span> <span data-ttu-id="ce8bc-123">회신 엔드포인트의 주소는 주문 상태를 클라이언트에게 다시 보내는 데 사용되는 큐의 URI입니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-123">The reply endpoint's address is the URI of the queue used to send the order status back to the client.</span></span> <span data-ttu-id="ce8bc-124">주문 처리 애플리케이션에서 이 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-124">The order processing application implements this contract.</span></span>
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -43,7 +43,7 @@ public interface IOrderProcessor
 }
 ```
 
-<span data-ttu-id="151a4-125">向其发送订单状态的答复协定由客户端指定。</span><span class="sxs-lookup"><span data-stu-id="151a4-125">The reply contract to send order status to is specified by the client.</span></span> <span data-ttu-id="151a4-126">客户端实现订单状态协定。</span><span class="sxs-lookup"><span data-stu-id="151a4-126">The client implements the order status contract.</span></span> <span data-ttu-id="151a4-127">服务使用下面协定的生成的客户端将订单状态发回客户端。</span><span class="sxs-lookup"><span data-stu-id="151a4-127">The service uses the generated client of this contract to send order status back to the client.</span></span>
+<span data-ttu-id="ce8bc-125">주문 상태를 보낼 회신 계약은 클라이언트에 의해 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-125">The reply contract to send order status to is specified by the client.</span></span> <span data-ttu-id="ce8bc-126">클라이언트는 주문 상태 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-126">The client implements the order status contract.</span></span> <span data-ttu-id="ce8bc-127">서비스는 이 계약의 생성된 클라이언트를 사용하여 주문 상태를 다시 클라이언트에게 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-127">The service uses the generated client of this contract to send order status back to the client.</span></span>
 
 ```csharp
 [ServiceContract]
@@ -54,9 +54,9 @@ public interface IOrderStatus
 }
 ```
 
-<span data-ttu-id="151a4-128">服务操作处理提交的采购订单。</span><span class="sxs-lookup"><span data-stu-id="151a4-128">The service operation processes the submitted purchase order.</span></span> <span data-ttu-id="151a4-129">对服务操作应用 <xref:System.ServiceModel.OperationBehaviorAttribute> 以在用于从队列中接收消息的事务中指定自动登记，并指定在服务操作完成时事务自动完成。</span><span class="sxs-lookup"><span data-stu-id="151a4-129">The <xref:System.ServiceModel.OperationBehaviorAttribute> is applied to the service operation to specify automatic enlistment in the transaction that is used to receive the message from the queue and automatic completion of the transaction on completion of the service operation.</span></span> <span data-ttu-id="151a4-130">`Orders` 类封装了订单处理功能。</span><span class="sxs-lookup"><span data-stu-id="151a4-130">The `Orders` class encapsulates order processing functionality.</span></span> <span data-ttu-id="151a4-131">在本例中，它将采购订单添加到字典。</span><span class="sxs-lookup"><span data-stu-id="151a4-131">In this case, it adds the purchase order to a dictionary.</span></span> <span data-ttu-id="151a4-132">`Orders` 类中的操作可以使用服务操作登记的事务。</span><span class="sxs-lookup"><span data-stu-id="151a4-132">The transaction that the service operation enlisted in is available to the operations in the `Orders` class.</span></span>
+<span data-ttu-id="ce8bc-128">서비스 작업은 전송된 구매 주문을 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-128">The service operation processes the submitted purchase order.</span></span> <span data-ttu-id="ce8bc-129">큐에서 메시지를 수신하는 데 사용되는 트랜잭션의 자동 인리스트먼트 및 서비스 작업 완료 시의 트랜잭션의 자동 완료를 지정하기 위해 <xref:System.ServiceModel.OperationBehaviorAttribute>가 서비스 작업에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-129">The <xref:System.ServiceModel.OperationBehaviorAttribute> is applied to the service operation to specify automatic enlistment in the transaction that is used to receive the message from the queue and automatic completion of the transaction on completion of the service operation.</span></span> <span data-ttu-id="ce8bc-130">`Orders` 클래스는 주문 처리 기능을 캡슐화합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-130">The `Orders` class encapsulates order processing functionality.</span></span> <span data-ttu-id="ce8bc-131">이 경우에는 구매 주문을 사전에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-131">In this case, it adds the purchase order to a dictionary.</span></span> <span data-ttu-id="ce8bc-132">서비스 작업이 참여하는 트랜잭션은 `Orders` 클래스의 작업에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-132">The transaction that the service operation enlisted in is available to the operations in the `Orders` class.</span></span>
 
-<span data-ttu-id="151a4-133">服务操作除了处理提交的采购订单之外，还向客户端答复有关订单状态的信息。</span><span class="sxs-lookup"><span data-stu-id="151a4-133">The service operation, in addition to processing the submitted purchase order, replies back to the client about the status of the order.</span></span>
+<span data-ttu-id="ce8bc-133">전송된 구매 주문을 처리하는 것 외에도 서비스 작업은 주문 상태에 대해 클라이언트에 의존합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-133">The service operation, in addition to processing the submitted purchase order, replies back to the client about the status of the order.</span></span>
 
 ```csharp
 public class OrderProcessorService : IOrderProcessor
@@ -81,24 +81,24 @@ public class OrderProcessorService : IOrderProcessor
 }
 ```
 
-<span data-ttu-id="151a4-134">要使用的客户端绑定是使用配置文件指定的。</span><span class="sxs-lookup"><span data-stu-id="151a4-134">The client binding to use is specified using a configuration file.</span></span>
+<span data-ttu-id="ce8bc-134">사용할 클라이언트 바인딩은 구성 파일을 사용하여 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-134">The client binding to use is specified using a configuration file.</span></span>
 
-<span data-ttu-id="151a4-135">MSMQ 队列名称是在配置文件的 appSettings 节中指定的。</span><span class="sxs-lookup"><span data-stu-id="151a4-135">The MSMQ queue name is specified in an appSettings section of the configuration file.</span></span> <span data-ttu-id="151a4-136">服务的终结点是在配置文件的 System.serviceModel 节中定义的。</span><span class="sxs-lookup"><span data-stu-id="151a4-136">The endpoint for the service is defined in the System.serviceModel section of the configuration file.</span></span>
+<span data-ttu-id="ce8bc-135">MSMQ 큐 이름은 구성 파일의 appSettings 섹션에 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-135">The MSMQ queue name is specified in an appSettings section of the configuration file.</span></span> <span data-ttu-id="ce8bc-136">서비스의 엔드포인트는 구성 파일의 System.serviceModel 섹션에 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-136">The endpoint for the service is defined in the System.serviceModel section of the configuration file.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="151a4-137">MSMQ 队列名称和终结点地址使用略有不同的寻址约定。</span><span class="sxs-lookup"><span data-stu-id="151a4-137">The MSMQ queue name and endpoint address use slightly different addressing conventions.</span></span> <span data-ttu-id="151a4-138">MSMQ 队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。</span><span class="sxs-lookup"><span data-stu-id="151a4-138">The MSMQ queue name uses a dot (.) for the local computer and backslash separators in its path.</span></span> <span data-ttu-id="151a4-139">WCF 终结点地址指定一个 net.pipe：方案，使用本地计算机的 "localhost"，并在其路径中使用正斜杠。</span><span class="sxs-lookup"><span data-stu-id="151a4-139">The WCF endpoint address specifies a net.msmq: scheme, uses "localhost" for the local computer, and uses forward slashes in its path.</span></span> <span data-ttu-id="151a4-140">若要从在远程计算机上承载的队列读取数据，请将“.”和“localhost”替换为远程计算机名称。</span><span class="sxs-lookup"><span data-stu-id="151a4-140">To read from a queue that is hosted on the remote computer, replace the "." and "localhost" to the remote computer name.</span></span>
+> <span data-ttu-id="ce8bc-137">MSMQ 큐 이름 및 엔드포인트 주소는 약간 다른 주소 지정 규칙을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-137">The MSMQ queue name and endpoint address use slightly different addressing conventions.</span></span> <span data-ttu-id="ce8bc-138">MSMQ 큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-138">The MSMQ queue name uses a dot (.) for the local computer and backslash separators in its path.</span></span> <span data-ttu-id="ce8bc-139">WCF 终结点地址指定一个 net.pipe：方案，使用本地计算机的 "localhost"，并在其路径中使用正斜杠。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-139">The WCF endpoint address specifies a net.msmq: scheme, uses "localhost" for the local computer, and uses forward slashes in its path.</span></span> <span data-ttu-id="ce8bc-140">원격 컴퓨터에서 호스트되는 큐에서 읽으려면 "." 및 "localhost"를 원격 컴퓨터 이름으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-140">To read from a queue that is hosted on the remote computer, replace the "." and "localhost" to the remote computer name.</span></span>
 
-<span data-ttu-id="151a4-141">使用一个以类名作为名称的 .svc 文件来承载 WAS 中的服务代码。</span><span class="sxs-lookup"><span data-stu-id="151a4-141">A .svc file with the name of the class is used to host the service code in WAS.</span></span>
+<span data-ttu-id="ce8bc-141">클래스 이름을 가진 .svc 파일은 WAS에서 서비스 코드를 호스트하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-141">A .svc file with the name of the class is used to host the service code in WAS.</span></span>
 
-<span data-ttu-id="151a4-142">Service.svc 文件本身包含用于创建 `OrderProcessorService` 的指令。</span><span class="sxs-lookup"><span data-stu-id="151a4-142">The Service.svc file itself contains a directive to create the `OrderProcessorService`.</span></span>
+<span data-ttu-id="ce8bc-142">Service.svc 파일 자체는 `OrderProcessorService`를 만들기 위한 지시문을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-142">The Service.svc file itself contains a directive to create the `OrderProcessorService`.</span></span>
 
 `<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>`
 
-<span data-ttu-id="151a4-143">Service.svc 文件还包含一个程序集指令以确保加载 System.Transactions.dll。</span><span class="sxs-lookup"><span data-stu-id="151a4-143">The Service.svc file also contains an assembly directive to ensure that System.Transactions.dll is loaded.</span></span>
+<span data-ttu-id="ce8bc-143">또한 Service.svc 파일은 System.Transactions.dll이 로드되도록 하는 어셈블리 지시문을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-143">The Service.svc file also contains an assembly directive to ensure that System.Transactions.dll is loaded.</span></span>
 
 `<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>`
 
-<span data-ttu-id="151a4-144">客户端创建事务范围。</span><span class="sxs-lookup"><span data-stu-id="151a4-144">The client creates a transaction scope.</span></span> <span data-ttu-id="151a4-145">与服务的通信在事务范围内进行，从而可以将事务范围视为所有消息在其中成功或失败的原子单元。</span><span class="sxs-lookup"><span data-stu-id="151a4-145">Communication with the service takes place within the scope of the transaction, causing it to be treated as an atomic unit where all messages succeed or fail.</span></span> <span data-ttu-id="151a4-146">通过在事务范围上调用 `Complete` 可以提交事务。</span><span class="sxs-lookup"><span data-stu-id="151a4-146">The transaction is committed by calling `Complete` on the transaction scope.</span></span>
+<span data-ttu-id="ce8bc-144">클라이언트는 트랜잭션 범위를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-144">The client creates a transaction scope.</span></span> <span data-ttu-id="ce8bc-145">서비스와의 통신이 트랜잭션 범위 내에서 발생하므로 트랜잭션 범위는 모든 메시지가 성공하거나 실패하는 원자 단위로 간주됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-145">Communication with the service takes place within the scope of the transaction, causing it to be treated as an atomic unit where all messages succeed or fail.</span></span> <span data-ttu-id="ce8bc-146">트랜잭션은 트랜잭션 범위에서 `Complete`를 호출하여 커밋합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-146">The transaction is committed by calling `Complete` on the transaction scope.</span></span>
 
 ```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
@@ -153,7 +153,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
     }
 ```
 
-<span data-ttu-id="151a4-147">客户端代码实现 `IOrderStatus` 协定以便从服务接收订单状态。</span><span class="sxs-lookup"><span data-stu-id="151a4-147">The client code implements the `IOrderStatus` contract to receive order status from the service.</span></span> <span data-ttu-id="151a4-148">在本例中，它输出订单状态。</span><span class="sxs-lookup"><span data-stu-id="151a4-148">In this case, it prints out the order status.</span></span>
+<span data-ttu-id="ce8bc-147">클라이언트 코드는 서비스로부터 주문 상태를 수신하기 위해 `IOrderStatus` 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-147">The client code implements the `IOrderStatus` contract to receive order status from the service.</span></span> <span data-ttu-id="ce8bc-148">이 경우 주문 상태가 출력됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-148">In this case, it prints out the order status.</span></span>
 
 ```csharp
 [ServiceBehavior]
@@ -169,7 +169,7 @@ public class OrderStatusService : IOrderStatus
 }
 ```
 
-<span data-ttu-id="151a4-149">订单状态队列在 `Main` 方法中创建。</span><span class="sxs-lookup"><span data-stu-id="151a4-149">The order status queue is created in the `Main` method.</span></span> <span data-ttu-id="151a4-150">客户端配置包括订单状态服务配置，以便承载订单状态服务，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="151a4-150">The client configuration includes the order status service configuration to host the order status service, as shown in the following sample configuration.</span></span>
+<span data-ttu-id="ce8bc-149">주문 상태 큐는 `Main` 메서드에 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-149">The order status queue is created in the `Main` method.</span></span> <span data-ttu-id="ce8bc-150">다음 샘플 구성과 같이 클라이언트 구성에는 주문 상태 서비스를 호스트하는 주문 상태 서비스 구성이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-150">The client configuration includes the order status service configuration to host the order status service, as shown in the following sample configuration.</span></span>
 
 ```xml
 <appSettings>
@@ -201,52 +201,52 @@ public class OrderStatusService : IOrderStatus
   </system.serviceModel>
 ```
 
-<span data-ttu-id="151a4-151">运行示例时，客户端和服务活动将显示在服务器和客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="151a4-151">When you run the sample, the client and service activities are displayed in both the server and client console windows.</span></span> <span data-ttu-id="151a4-152">您可以看到服务器从客户端接收消息。</span><span class="sxs-lookup"><span data-stu-id="151a4-152">You can see the server receive messages from the client.</span></span> <span data-ttu-id="151a4-153">在每个控制台窗口中按 Enter 可以关闭服务器和客户端。</span><span class="sxs-lookup"><span data-stu-id="151a4-153">Press ENTER in each console window to shut down the server and client.</span></span>
+<span data-ttu-id="ce8bc-151">샘플을 실행하면 클라이언트 및 서비스 동작이 서버 콘솔 창과 클라이언트 콘솔 창에 모두 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-151">When you run the sample, the client and service activities are displayed in both the server and client console windows.</span></span> <span data-ttu-id="ce8bc-152">클라이언트에서 서버 수신 메시지를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-152">You can see the server receive messages from the client.</span></span> <span data-ttu-id="ce8bc-153">서버와 클라이언트를 종료하려면 각 콘솔 창에서 Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-153">Press ENTER in each console window to shut down the server and client.</span></span>
 
-<span data-ttu-id="151a4-154">客户端显示由服务器发送的订单状态信息：</span><span class="sxs-lookup"><span data-stu-id="151a4-154">The client displays the order status information sent by the server:</span></span>
+<span data-ttu-id="ce8bc-154">클라이언트는 서버가 보낸 주문 상태 정보를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-154">The client displays the order status information sent by the server:</span></span>
 
 ```console
 Press <ENTER> to terminate client.
 Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 ```
 
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="151a4-155">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="151a4-155">To set up, build, and run the sample</span></span>
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="ce8bc-155">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="ce8bc-155">To set up, build, and run the sample</span></span>
 
-1. <span data-ttu-id="151a4-156">确保安装了 IIS 7.0，因为 WAS 激活所必需的。</span><span class="sxs-lookup"><span data-stu-id="151a4-156">Ensure that IIS 7.0 is installed, as it is required for WAS activation.</span></span>
+1. <span data-ttu-id="ce8bc-156">确保安装了 IIS 7.0，因为 WAS 激活所必需的。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-156">Ensure that IIS 7.0 is installed, as it is required for WAS activation.</span></span>
 
-2. <span data-ttu-id="151a4-157">确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="151a4-157">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span> <span data-ttu-id="151a4-158">此外，还必须安装 WCF 非 HTTP 激活组件：</span><span class="sxs-lookup"><span data-stu-id="151a4-158">In addition, you must install the WCF non-HTTP activation components:</span></span>
+2. <span data-ttu-id="ce8bc-157">确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-157">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span> <span data-ttu-id="ce8bc-158">此外，还必须安装 WCF 非 HTTP 激活组件：</span><span class="sxs-lookup"><span data-stu-id="ce8bc-158">In addition, you must install the WCF non-HTTP activation components:</span></span>
 
-    1. <span data-ttu-id="151a4-159">从“开始”菜单中，选择“控制面板”。</span><span class="sxs-lookup"><span data-stu-id="151a4-159">From the **Start** menu, choose **Control Panel**.</span></span>
+    1. <span data-ttu-id="ce8bc-159">**시작** 메뉴에서 **제어판**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-159">From the **Start** menu, choose **Control Panel**.</span></span>
 
-    2. <span data-ttu-id="151a4-160">选择 "**程序和功能**"。</span><span class="sxs-lookup"><span data-stu-id="151a4-160">Select **Programs and Features**.</span></span>
+    2. <span data-ttu-id="ce8bc-160">选择 "**程序和功能**"。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-160">Select **Programs and Features**.</span></span>
 
-    3. <span data-ttu-id="151a4-161">单击 **"打开或关闭 Windows 功能"** 。</span><span class="sxs-lookup"><span data-stu-id="151a4-161">Click **Turn Windows Features on or off**.</span></span>
+    3. <span data-ttu-id="ce8bc-161">单击 **"打开或关闭 Windows 功能"** 。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-161">Click **Turn Windows Features on or off**.</span></span>
 
-    4. <span data-ttu-id="151a4-162">在 "**功能摘要**" 下，单击 "**添加功能**"。</span><span class="sxs-lookup"><span data-stu-id="151a4-162">Under **Features Summary**, click **Add Features**.</span></span>
+    4. <span data-ttu-id="ce8bc-162">在 "**功能摘要**" 下，单击 "**添加功能**"。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-162">Under **Features Summary**, click **Add Features**.</span></span>
 
-    5. <span data-ttu-id="151a4-163">展开**Microsoft .NET Framework 3.0**节点并检查**Windows Communication Foundation 非 HTTP 激活**功能。</span><span class="sxs-lookup"><span data-stu-id="151a4-163">Expand the **Microsoft .NET Framework 3.0** node and check the **Windows Communication Foundation Non-HTTP Activation** feature.</span></span>
+    5. <span data-ttu-id="ce8bc-163">展开**Microsoft .NET Framework 3.0**节点并检查**Windows Communication Foundation 非 HTTP 激活**功能。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-163">Expand the **Microsoft .NET Framework 3.0** node and check the **Windows Communication Foundation Non-HTTP Activation** feature.</span></span>
 
-3. <span data-ttu-id="151a4-164">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="151a4-164">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>
+3. <span data-ttu-id="ce8bc-164">C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-164">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>
 
-4. <span data-ttu-id="151a4-165">通过从命令窗口执行 client.exe 运行客户端。</span><span class="sxs-lookup"><span data-stu-id="151a4-165">Run the client by executing client.exe from a command window.</span></span> <span data-ttu-id="151a4-166">这将创建队列并向其发送消息。</span><span class="sxs-lookup"><span data-stu-id="151a4-166">This creates the queue and sends a message to it.</span></span> <span data-ttu-id="151a4-167">让客户端保持运行以观察服务读取消息的结果</span><span class="sxs-lookup"><span data-stu-id="151a4-167">Leave the client running to see the result of the service reading the message</span></span>
+4. <span data-ttu-id="ce8bc-165">명령 창에서 client.exe를 실행하여 클라이언트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-165">Run the client by executing client.exe from a command window.</span></span> <span data-ttu-id="ce8bc-166">이렇게 하면 큐가 만들어지고 메시지가 큐에 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-166">This creates the queue and sends a message to it.</span></span> <span data-ttu-id="ce8bc-167">메시지를 읽는 서비스의 결과를 확인하기 위해 클라이언트를 실행된 상태로 둡니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-167">Leave the client running to see the result of the service reading the message</span></span>
 
-5. <span data-ttu-id="151a4-168">在默认情况下 MSMQ 激活服务将作为网络服务运行。</span><span class="sxs-lookup"><span data-stu-id="151a4-168">The MSMQ activation service runs as Network Service by default.</span></span> <span data-ttu-id="151a4-169">因此，用于激活应用程序的队列必须具有对网络服务的接收和查看权限。</span><span class="sxs-lookup"><span data-stu-id="151a4-169">Therefore, the queue that is used to activate the application must have receive and peek permissions for Network Service.</span></span> <span data-ttu-id="151a4-170">可以通过使用消息队列 MMC 来添加这些权限：</span><span class="sxs-lookup"><span data-stu-id="151a4-170">This can be added by using the Message Queuing MMC:</span></span>
+5. <span data-ttu-id="ce8bc-168">MSMQ 활성화 서비스는 기본적으로 네트워크 서비스로 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-168">The MSMQ activation service runs as Network Service by default.</span></span> <span data-ttu-id="ce8bc-169">따라서 애플리케이션을 활성화하는 데 사용되는 큐는 네트워크 서비스에 대한 수신 및 피킹 권한이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-169">Therefore, the queue that is used to activate the application must have receive and peek permissions for Network Service.</span></span> <span data-ttu-id="ce8bc-170">다음과 같이 메시지 큐 MMC를 사용하여 이러한 권한을 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-170">This can be added by using the Message Queuing MMC:</span></span>
 
-    1. <span data-ttu-id="151a4-171">从 "**开始**" 菜单中，单击 "**运行**"，然后键入 `Compmgmt.msc` 然后按 enter。</span><span class="sxs-lookup"><span data-stu-id="151a4-171">From the **Start** menu, click **Run**, then type `Compmgmt.msc` and press ENTER.</span></span>
+    1. <span data-ttu-id="ce8bc-171">从 "**开始**" 菜单中，单击 "**运行**"，然后键入 `Compmgmt.msc` 然后按 enter。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-171">From the **Start** menu, click **Run**, then type `Compmgmt.msc` and press ENTER.</span></span>
 
-    2. <span data-ttu-id="151a4-172">在 "**服务和应用程序**" 下，展开 "**消息队列**"。</span><span class="sxs-lookup"><span data-stu-id="151a4-172">Under **Services and Applications**, expand **Message Queuing**.</span></span>
+    2. <span data-ttu-id="ce8bc-172">在 "**服务和应用程序**" 下，展开 "**消息队列**"。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-172">Under **Services and Applications**, expand **Message Queuing**.</span></span>
 
-    3. <span data-ttu-id="151a4-173">单击 "**专用队列**"。</span><span class="sxs-lookup"><span data-stu-id="151a4-173">Click **Private Queues**.</span></span>
+    3. <span data-ttu-id="ce8bc-173">单击 "**专用队列**"。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-173">Click **Private Queues**.</span></span>
 
-    4. <span data-ttu-id="151a4-174">右键单击队列（servicemodelsamples/服务），然后选择 "**属性**"。</span><span class="sxs-lookup"><span data-stu-id="151a4-174">Right-click the queue (servicemodelsamples/Service.svc) and choose **Properties**.</span></span>
+    4. <span data-ttu-id="ce8bc-174">右键单击队列（servicemodelsamples/服务），然后选择 "**属性**"。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-174">Right-click the queue (servicemodelsamples/Service.svc) and choose **Properties**.</span></span>
 
-    5. <span data-ttu-id="151a4-175">在 "**安全**" 选项卡上，单击 "**添加**" 并向网络服务授予 "查看" 和 "接收" 权限。</span><span class="sxs-lookup"><span data-stu-id="151a4-175">On the **Security** tab, click **Add** and give peek and receive permissions to Network Service.</span></span>
+    5. <span data-ttu-id="ce8bc-175">在 "**安全**" 选项卡上，单击 "**添加**" 并向网络服务授予 "查看" 和 "接收" 权限。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-175">On the **Security** tab, click **Add** and give peek and receive permissions to Network Service.</span></span>
 
-6. <span data-ttu-id="151a4-176">将 Windows 进程激活服务 (WAS) 配置为支持 MSMQ 激活。</span><span class="sxs-lookup"><span data-stu-id="151a4-176">Configure the Windows Process Activation Service (WAS) to support MSMQ activation.</span></span>
+6. <span data-ttu-id="ce8bc-176">MSMQ 활성화를 지원하도록 WAS(Windows Process Activation Service)를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-176">Configure the Windows Process Activation Service (WAS) to support MSMQ activation.</span></span>
 
-    <span data-ttu-id="151a4-177">为方便起见，在位于示例目录中名为 AddMsmqSiteBinding.cmd 的批处理文件中实现以下步骤。</span><span class="sxs-lookup"><span data-stu-id="151a4-177">As a convenience, the following steps are implemented in a batch file called AddMsmqSiteBinding.cmd located in the sample directory.</span></span>
+    <span data-ttu-id="ce8bc-177">편의를 위해 다음 단계는 샘플 디렉터리에 있는 AddMsmqSiteBinding.cmd라는 배치 파일에서 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-177">As a convenience, the following steps are implemented in a batch file called AddMsmqSiteBinding.cmd located in the sample directory.</span></span>
 
-    1. <span data-ttu-id="151a4-178">若要支持 net.msmq 激活，必须首先将默认网站绑定到 net.msmq 协议。</span><span class="sxs-lookup"><span data-stu-id="151a4-178">To support net.msmq activation, the default Web site must first be bound to the net.msmq protocol.</span></span> <span data-ttu-id="151a4-179">可以通过使用随 IIS 7.0 管理工具集安装的 appcmd.exe 来执行此操作。</span><span class="sxs-lookup"><span data-stu-id="151a4-179">This can be done using appcmd.exe, which is installed with the IIS 7.0 management toolset.</span></span> <span data-ttu-id="151a4-180">在具有提升权限的（管理员）命令提示符处，运行下列命令。</span><span class="sxs-lookup"><span data-stu-id="151a4-180">From an elevated (administrator) command prompt, run the following command.</span></span>
+    1. <span data-ttu-id="ce8bc-178">net.msmq 활성화를 지원하려면 먼저 기본 웹 사이트를 net.msmq 프로토콜에 바인딩해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-178">To support net.msmq activation, the default Web site must first be bound to the net.msmq protocol.</span></span> <span data-ttu-id="ce8bc-179">이 작업은 IIS 7.0 관리 도구 집합과 함께 설치되는 appcmd.exe를 사용하여 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-179">This can be done using appcmd.exe, which is installed with the IIS 7.0 management toolset.</span></span> <span data-ttu-id="ce8bc-180">권한이 높은 명령 프롬프트에서 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-180">From an elevated (administrator) command prompt, run the following command.</span></span>
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"
@@ -254,59 +254,59 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         ```
 
         > [!NOTE]
-        > <span data-ttu-id="151a4-181">此命令是单行文本。</span><span class="sxs-lookup"><span data-stu-id="151a4-181">This command is a single line of text.</span></span>
+        > <span data-ttu-id="ce8bc-181">이 명령은 줄 바꿈 없이 한 줄로 입력해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-181">This command is a single line of text.</span></span>
 
-        <span data-ttu-id="151a4-182">此命令可将 net.msmq 站点绑定添加到默认网站。</span><span class="sxs-lookup"><span data-stu-id="151a4-182">This command adds a net.msmq site binding to the default Web site.</span></span>
+        <span data-ttu-id="ce8bc-182">이 명령은 기본 웹 사이트에 net.msmq 사이트 바인딩을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-182">This command adds a net.msmq site binding to the default Web site.</span></span>
 
-    2. <span data-ttu-id="151a4-183">尽管网站内的所有应用程序共享一个公共 net.msmq 绑定，但是每个应用程序可以单独启用 net.msmq 支持。</span><span class="sxs-lookup"><span data-stu-id="151a4-183">Although all applications within a site share a common net.msmq binding, each application can enable net.msmq support individually.</span></span> <span data-ttu-id="151a4-184">若要启用 /servicemodelsamples 应用程序的 net.msmq，请在具有提升权限的命令提示符处运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="151a4-184">To enable net.msmq for the /servicemodelsamples application, run the following command from an elevated command prompt.</span></span>
+    2. <span data-ttu-id="ce8bc-183">사이트 내의 모든 애플리케이션이 공통된 net.msmq 바인딩을 공유하지만 각 애플리케이션에서 개별적으로 net.msmq 지원을 사용하도록 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-183">Although all applications within a site share a common net.msmq binding, each application can enable net.msmq support individually.</span></span> <span data-ttu-id="ce8bc-184">/servicemodelsamples 애플리케이션에서 net.msmq를 사용하도록 설정하려면 권한이 높은 명령 프롬프트에서 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-184">To enable net.msmq for the /servicemodelsamples application, run the following command from an elevated command prompt.</span></span>
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.msmq
         ```
 
         > [!NOTE]
-        > <span data-ttu-id="151a4-185">此命令是单行文本。</span><span class="sxs-lookup"><span data-stu-id="151a4-185">This command is a single line of text.</span></span>
+        > <span data-ttu-id="ce8bc-185">이 명령은 줄 바꿈 없이 한 줄로 입력해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-185">This command is a single line of text.</span></span>
 
-        <span data-ttu-id="151a4-186">此命令允许使用 `http://localhost/servicemodelsamples` 和 `net.msmq://localhost/servicemodelsamples`访问/servicemodelsamples 应用程序。</span><span class="sxs-lookup"><span data-stu-id="151a4-186">This command enables the /servicemodelsamples application to be accessed using `http://localhost/servicemodelsamples` and `net.msmq://localhost/servicemodelsamples`.</span></span>
+        <span data-ttu-id="ce8bc-186">此命令允许使用 `http://localhost/servicemodelsamples` 和 `net.msmq://localhost/servicemodelsamples`访问/servicemodelsamples 应用程序。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-186">This command enables the /servicemodelsamples application to be accessed using `http://localhost/servicemodelsamples` and `net.msmq://localhost/servicemodelsamples`.</span></span>
 
-7. <span data-ttu-id="151a4-187">如果您以前没有进行此操作，应确保启用 MSMQ 激活服务。</span><span class="sxs-lookup"><span data-stu-id="151a4-187">If you have not done so previously, ensure that the MSMQ activation service is enabled.</span></span> <span data-ttu-id="151a4-188">从 "**开始**" 菜单中，单击 "**运行**"，然后键入 `Services.msc`。</span><span class="sxs-lookup"><span data-stu-id="151a4-188">From the **Start** menu, click **Run**, and type `Services.msc`.</span></span> <span data-ttu-id="151a4-189">在服务列表中搜索**Net.tcp 侦听器适配器**。</span><span class="sxs-lookup"><span data-stu-id="151a4-189">Search the list of services for the **Net.Msmq Listener Adapter**.</span></span> <span data-ttu-id="151a4-190">右键单击并选择 **“属性”** 。</span><span class="sxs-lookup"><span data-stu-id="151a4-190">Right-click and select **Properties**.</span></span> <span data-ttu-id="151a4-191">将 "**启动类型**" 设置为 "**自动**"，单击 "**应用**"，然后单击 "**开始**" 按钮。</span><span class="sxs-lookup"><span data-stu-id="151a4-191">Set the **Startup Type** to **Automatic**, click **Apply** and click the **Start** button.</span></span> <span data-ttu-id="151a4-192">此步骤只能在第一次使用 Net.Msmq Listener Adapter 服务之前操作一次。</span><span class="sxs-lookup"><span data-stu-id="151a4-192">This step must only be done once prior to the first usage of the Net.Msmq Listener Adapter service.</span></span>
+7. <span data-ttu-id="ce8bc-187">아직 설정하지 않은 경우 MSMQ 활성화 서비스를 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-187">If you have not done so previously, ensure that the MSMQ activation service is enabled.</span></span> <span data-ttu-id="ce8bc-188">从 "**开始**" 菜单中，单击 "**运行**"，然后键入 `Services.msc`。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-188">From the **Start** menu, click **Run**, and type `Services.msc`.</span></span> <span data-ttu-id="ce8bc-189">在服务列表中搜索**Net.tcp 侦听器适配器**。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-189">Search the list of services for the **Net.Msmq Listener Adapter**.</span></span> <span data-ttu-id="ce8bc-190">右键单击并选择 "**属性**"。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-190">Right-click and select **Properties**.</span></span> <span data-ttu-id="ce8bc-191">将 "**启动类型**" 设置为 "**自动**"，单击 "**应用**"，然后单击 "**开始**" 按钮。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-191">Set the **Startup Type** to **Automatic**, click **Apply** and click the **Start** button.</span></span> <span data-ttu-id="ce8bc-192">이 단계는 Net.Msmq Listener Adapter 서비스를 처음 사용하기 전에 한 번만 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-192">This step must only be done once prior to the first usage of the Net.Msmq Listener Adapter service.</span></span>
 
-8. <span data-ttu-id="151a4-193">若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="151a4-193">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span> <span data-ttu-id="151a4-194">此外，在客户端上更改用于提交采购订单的代码，使其在提交采购订单时在队列的 URI 中反映计算机名。</span><span class="sxs-lookup"><span data-stu-id="151a4-194">Additionally, change the code on the client that submits the purchase order to reflect the computer name in the URI of the queue when submitting the purchase order.</span></span> <span data-ttu-id="151a4-195">使用以下代码：</span><span class="sxs-lookup"><span data-stu-id="151a4-195">Use the following code:</span></span>
+8. <span data-ttu-id="ce8bc-193">若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-193">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span> <span data-ttu-id="ce8bc-194">또한 구매 주문 전송 시에 큐의 URI에서 컴퓨터 이름이 반영되도록 구매 주문을 전송하는 클라이언트에서 코드를 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-194">Additionally, change the code on the client that submits the purchase order to reflect the computer name in the URI of the queue when submitting the purchase order.</span></span> <span data-ttu-id="ce8bc-195">다음 코드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-195">Use the following code:</span></span>
 
     ```csharp
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");
     ```
 
-9. <span data-ttu-id="151a4-196">移除为此示例添加的 net.msmq 站点绑定。</span><span class="sxs-lookup"><span data-stu-id="151a4-196">Remove the net.msmq site binding you added for this sample.</span></span>
+9. <span data-ttu-id="ce8bc-196">이 샘플에 대해 추가한 net.msmq 사이트 바인딩을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-196">Remove the net.msmq site binding you added for this sample.</span></span>
 
-    <span data-ttu-id="151a4-197">为方便起见，在位于示例目录中名为 RemoveMsmqSiteBinding.cmd 的批处理文件中实现以下步骤：</span><span class="sxs-lookup"><span data-stu-id="151a4-197">As a convenience, the following steps are implemented in a batch file called RemoveMsmqSiteBinding.cmd located in the sample directory:</span></span>
+    <span data-ttu-id="ce8bc-197">편의를 위해 다음 단계는 샘플 디렉터리에 있는 RemoveMsmqSiteBinding.cmd라는 배치 파일에서 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-197">As a convenience, the following steps are implemented in a batch file called RemoveMsmqSiteBinding.cmd located in the sample directory:</span></span>
 
-    1. <span data-ttu-id="151a4-198">通过在具有提升权限的命令提示符处运行以下命令，从启用的协议列表中移除 net.msmq。</span><span class="sxs-lookup"><span data-stu-id="151a4-198">Remove net.msmq from the list of enabled protocols by running the following command from an elevated command prompt.</span></span>
+    1. <span data-ttu-id="ce8bc-198">권한이 높은 명령 프롬프트에서 다음 명령을 실행하여 사용된 프로토콜 목록에서 net.msmq를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-198">Remove net.msmq from the list of enabled protocols by running the following command from an elevated command prompt.</span></span>
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http
         ```
 
         > [!NOTE]
-        > <span data-ttu-id="151a4-199">此命令是单行文本。</span><span class="sxs-lookup"><span data-stu-id="151a4-199">This command is a single line of text.</span></span>
+        > <span data-ttu-id="ce8bc-199">이 명령은 줄 바꿈 없이 한 줄로 입력해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-199">This command is a single line of text.</span></span>
 
-    2. <span data-ttu-id="151a4-200">通过在具有提升权限的命令提示符处运行以下命令移除 net.msmq 站点绑定。</span><span class="sxs-lookup"><span data-stu-id="151a4-200">Remove the net.msmq site binding by running the following command from an elevated command prompt.</span></span>
+    2. <span data-ttu-id="ce8bc-200">권한이 높은 명령 프롬프트에서 다음 명령을 실행하여 net.msmq 사이트 바인딩을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-200">Remove the net.msmq site binding by running the following command from an elevated command prompt.</span></span>
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.msmq',bindingInformation='localhost']
         ```
 
         > [!NOTE]
-        > <span data-ttu-id="151a4-201">此命令是单行文本。</span><span class="sxs-lookup"><span data-stu-id="151a4-201">This command is a single line of text.</span></span>
+        > <span data-ttu-id="ce8bc-201">이 명령은 줄 바꿈 없이 한 줄로 입력해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-201">This command is a single line of text.</span></span>
 
     > [!WARNING]
-    > <span data-ttu-id="151a4-202">运行该批处理文件会将 DefaultAppPool 重置为使用 .NET Framework 2.0 版运行。</span><span class="sxs-lookup"><span data-stu-id="151a4-202">Running the batch file will reset the DefaultAppPool to run using .NET Framework version 2.0.</span></span>
+    > <span data-ttu-id="ce8bc-202">배치 파일을 실행하면 DefaultAppPool이 .NET Framework 버전 2.0을 사용하여 실행되도록 다시 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-202">Running the batch file will reset the DefaultAppPool to run using .NET Framework version 2.0.</span></span>
 
-<span data-ttu-id="151a4-203">默认情况下对 `netMsmqBinding` 绑定传输启用了安全性。</span><span class="sxs-lookup"><span data-stu-id="151a4-203">By default with the `netMsmqBinding` binding transport, security is enabled.</span></span> <span data-ttu-id="151a4-204">`MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 这两个属性共同确定了传输安全性的类型。</span><span class="sxs-lookup"><span data-stu-id="151a4-204">Two properties, `MsmqAuthenticationMode` and `MsmqProtectionLevel`, together determine the type of transport security.</span></span> <span data-ttu-id="151a4-205">默认情况下，身份验证模式设置为 `Windows`，保护级别设置为 `Sign`。</span><span class="sxs-lookup"><span data-stu-id="151a4-205">By default the authentication mode is set to `Windows` and the protection level is set to `Sign`.</span></span> <span data-ttu-id="151a4-206">MSMQ 必须是域的成员才可以提供身份验证和签名功能。</span><span class="sxs-lookup"><span data-stu-id="151a4-206">For MSMQ to provide the authentication and signing feature, it must be part of a domain.</span></span> <span data-ttu-id="151a4-207">如果在不是域成员的计算机上运行此示例，则会接收以下错误：“用户的内部消息队列证书不存在”。</span><span class="sxs-lookup"><span data-stu-id="151a4-207">If you run this sample on a computer that is not part of a domain, the following error is received: "User's internal message queuing certificate does not exist".</span></span>
+<span data-ttu-id="ce8bc-203">기본적으로 `netMsmqBinding` 바인딩 전송을 사용하여 보안이 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-203">By default with the `netMsmqBinding` binding transport, security is enabled.</span></span> <span data-ttu-id="ce8bc-204">`MsmqAuthenticationMode` 및 `MsmqProtectionLevel` 속성은 모두 전송 보안의 형식을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-204">Two properties, `MsmqAuthenticationMode` and `MsmqProtectionLevel`, together determine the type of transport security.</span></span> <span data-ttu-id="ce8bc-205">기본적으로 인증 모드는 `Windows`로 설정되고 보호 수준은 `Sign`으로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-205">By default the authentication mode is set to `Windows` and the protection level is set to `Sign`.</span></span> <span data-ttu-id="ce8bc-206">MSMQ에서 인증 및 서명 기능을 제공하려면 도메인에 속해 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-206">For MSMQ to provide the authentication and signing feature, it must be part of a domain.</span></span> <span data-ttu-id="ce8bc-207">도메인에 속하지 않은 컴퓨터에서 이 샘플을 실행할 경우 "사용자의 내부 메시지 큐 인증서가 없습니다."라는 오류 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-207">If you run this sample on a computer that is not part of a domain, the following error is received: "User's internal message queuing certificate does not exist".</span></span>
 
-### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a><span data-ttu-id="151a4-208">在加入到工作组的计算机上运行此示例</span><span class="sxs-lookup"><span data-stu-id="151a4-208">To run the sample on a computer joined to a workgroup</span></span>
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a><span data-ttu-id="ce8bc-208">작업 그룹에 가입된 컴퓨터에서 샘플을 실행하려면</span><span class="sxs-lookup"><span data-stu-id="ce8bc-208">To run the sample on a computer joined to a workgroup</span></span>
 
-1. <span data-ttu-id="151a4-209">如果计算机不是域成员，请将身份验证模式和保护级别设置为 None 以禁用传输安全性，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="151a4-209">If your computer is not part of a domain, turn off transport security by setting the authentication mode and protection level to none as shown in the following sample configuration.</span></span>
+1. <span data-ttu-id="ce8bc-209">컴퓨터가 도메인의 일부가 아닌 경우 다음 샘플 구성과 같이 인증 모드와 보호 수준을 none으로 설정하여 전송 보안을 해제합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-209">If your computer is not part of a domain, turn off transport security by setting the authentication mode and protection level to none as shown in the following sample configuration.</span></span>
 
     ```xml
     <bindings>
@@ -318,35 +318,35 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     </bindings>
     ```
 
-2. <span data-ttu-id="151a4-210">在运行示例前更改服务和客户端上的配置。</span><span class="sxs-lookup"><span data-stu-id="151a4-210">Change the configuration on both the server and the client before you run the sample.</span></span>
+2. <span data-ttu-id="ce8bc-210">샘플을 실행하기 전에 서버와 클라이언트 모두에서 구성을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-210">Change the configuration on both the server and the client before you run the sample.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="151a4-211">将 `security mode` 设置为 `None` 等效于将 `MsmqAuthenticationMode`、`MsmqProtectionLevel` 和 `Message` 安全设置为 `None`。</span><span class="sxs-lookup"><span data-stu-id="151a4-211">Setting `security mode` to `None` is equivalent to setting `MsmqAuthenticationMode`, `MsmqProtectionLevel` and `Message` security to `None`.</span></span>
+    > <span data-ttu-id="ce8bc-211">`security mode`를 `None`으로 설정하는 것은 `MsmqAuthenticationMode`, `MsmqProtectionLevel` 및 `Message` 보안을 `None`으로 설정하는 것과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-211">Setting `security mode` to `None` is equivalent to setting `MsmqAuthenticationMode`, `MsmqProtectionLevel` and `Message` security to `None`.</span></span>
 
-3. <span data-ttu-id="151a4-212">若要在加入到工作组的计算机上启用激活，必须使用特定用户帐户运行激活服务和辅助进程（两者使用的账户必须相同），并且队列必须具有该特定用户帐户的 ACL。</span><span class="sxs-lookup"><span data-stu-id="151a4-212">To enable activation in a computer joined to a workgroup, both the activation service and the worker process must be run with a specific user account (must be same for both) and the queue must have ACLs for the specific user account.</span></span>
+3. <span data-ttu-id="ce8bc-212">작업 그룹에 가입된 컴퓨터에서 활성화를 사용하려면 활성화 서비스와 작업자 프로세스가 둘 다 특정 사용자 계정(두 경우에 동일해야 함)으로 실행되어야 하고 큐에는 해당 사용자 계정에 대한 ACL이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-212">To enable activation in a computer joined to a workgroup, both the activation service and the worker process must be run with a specific user account (must be same for both) and the queue must have ACLs for the specific user account.</span></span>
 
-     <span data-ttu-id="151a4-213">更改运行辅助进程所用的标识：</span><span class="sxs-lookup"><span data-stu-id="151a4-213">To change the identity that the worker process runs under:</span></span>
+     <span data-ttu-id="ce8bc-213">작업자 프로세스가 실행될 때 사용되는 ID를 변경하려면</span><span class="sxs-lookup"><span data-stu-id="ce8bc-213">To change the identity that the worker process runs under:</span></span>
 
-    1. <span data-ttu-id="151a4-214">运行 Inetmgr.exe。</span><span class="sxs-lookup"><span data-stu-id="151a4-214">Run Inetmgr.exe.</span></span>
+    1. <span data-ttu-id="ce8bc-214">Inetmgr.exe를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-214">Run Inetmgr.exe.</span></span>
 
-    2. <span data-ttu-id="151a4-215">在 "**应用程序池**" 下，右键单击**AppPool** （通常为**DefaultAppPool**），然后选择 "**设置应用程序池默认值 ...** "。</span><span class="sxs-lookup"><span data-stu-id="151a4-215">Under **Application Pools**, right-click the **AppPool** (typically **DefaultAppPool**) and choose **Set Application Pool Defaults…**.</span></span>
+    2. <span data-ttu-id="ce8bc-215">在 "**应用程序池**" 下，右键单击**AppPool** （通常为**DefaultAppPool**），然后选择 "**设置应用程序池默认值 ...** "。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-215">Under **Application Pools**, right-click the **AppPool** (typically **DefaultAppPool**) and choose **Set Application Pool Defaults…**.</span></span>
 
-    3. <span data-ttu-id="151a4-216">更改标识属性以使用特定用户帐户。</span><span class="sxs-lookup"><span data-stu-id="151a4-216">Change the Identity properties to use the specific user account.</span></span>
+    3. <span data-ttu-id="ce8bc-216">특정 사용자 계정을 사용하도록 ID 속성을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-216">Change the Identity properties to use the specific user account.</span></span>
 
-     <span data-ttu-id="151a4-217">更改运行激活服务所使用的标识：</span><span class="sxs-lookup"><span data-stu-id="151a4-217">To change the identity that the Activation Service runs under:</span></span>
+     <span data-ttu-id="ce8bc-217">활성화 서비스가 실행될 때 사용되는 ID를 변경하려면</span><span class="sxs-lookup"><span data-stu-id="ce8bc-217">To change the identity that the Activation Service runs under:</span></span>
 
-    1. <span data-ttu-id="151a4-218">运行 Services.msc。</span><span class="sxs-lookup"><span data-stu-id="151a4-218">Run Services.msc.</span></span>
+    1. <span data-ttu-id="ce8bc-218">Services.msc를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-218">Run Services.msc.</span></span>
 
-    2. <span data-ttu-id="151a4-219">右键单击**Listener 适配器**，然后选择 "**属性**"。</span><span class="sxs-lookup"><span data-stu-id="151a4-219">Right-click the **Net.MsmqListener Adapter**, and choose **Properties**.</span></span>
+    2. <span data-ttu-id="ce8bc-219">右键单击**Listener 适配器**，然后选择 "**属性**"。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-219">Right-click the **Net.MsmqListener Adapter**, and choose **Properties**.</span></span>
 
-4. <span data-ttu-id="151a4-220">更改 "**登录**" 选项卡中的帐户。</span><span class="sxs-lookup"><span data-stu-id="151a4-220">Change the account in the **LogOn** tab.</span></span>
+4. <span data-ttu-id="ce8bc-220">更改 "**登录**" 选项卡中的帐户。</span><span class="sxs-lookup"><span data-stu-id="ce8bc-220">Change the account in the **LogOn** tab.</span></span>
 
-5. <span data-ttu-id="151a4-221">在工作组中，服务还必须使用不受限制的令牌来运行。</span><span class="sxs-lookup"><span data-stu-id="151a4-221">In workgroup, the service must also run using an unrestricted token.</span></span> <span data-ttu-id="151a4-222">为此，请在命令窗口中运行下面的命令：</span><span class="sxs-lookup"><span data-stu-id="151a4-222">To do this, run the following in a command window:</span></span>
+5. <span data-ttu-id="ce8bc-221">작업 그룹에서 서비스는 또한 제한되지 않은 토큰을 사용하여 실행되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-221">In workgroup, the service must also run using an unrestricted token.</span></span> <span data-ttu-id="ce8bc-222">이렇게 하려면 명령 창에서 다음을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="ce8bc-222">To do this, run the following in a command window:</span></span>
 
     ```console
     sc sidtype netmsmqactivator unrestricted
     ```
 
-## <a name="see-also"></a><span data-ttu-id="151a4-223">另请参阅</span><span class="sxs-lookup"><span data-stu-id="151a4-223">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce8bc-223">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ce8bc-223">See also</span></span>
 
-- [<span data-ttu-id="151a4-224">AppFabric 宿主和持久性示例</span><span class="sxs-lookup"><span data-stu-id="151a4-224">AppFabric Hosting and Persistence Samples</span></span>](https://go.microsoft.com/fwlink/?LinkId=193961)
+- <span data-ttu-id="ce8bc-224">[AppFabric 宿主和持久性示例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))</span><span class="sxs-lookup"><span data-stu-id="ce8bc-224">[AppFabric Hosting and Persistence Samples](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))</span></span>
