@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c2f45801-dd38-4b78-b6b7-64397dc73f83
 topic_type:
 - apiref
-ms.openlocfilehash: 62035d623d56f7521e0a599a13bc20778e3f18d1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3e13b17fb03530730a78f6889309f1993419574b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449900"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866204"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>ICorProfilerCallback::JITInlining 方法
 通知探查器，实时（JIT）编译器将与另一个函数插入一个函数。  
@@ -45,11 +45,11 @@ HRESULT JITInlining(
  [out] 用于允许插入的 `true`;否则，`false`。  
   
 ## <a name="remarks"></a>备注  
- 探查器可以将 `pfShouldInline` 设置为 `false`，以防止 `calleeId` 函数插入 `callerId` 函数。 此外，探查器可以通过使用[COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)枚举的 COR_PRF_DISABLE_INLINING 值全局禁用内联插入。  
+ 探查器可以将 `pfShouldInline` 设置为 `false`，以防止 `calleeId` 函数插入 `callerId` 函数。 此外，探查器可以通过使用[COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)枚举的 COR_PRF_DISABLE_INLINING 值全局禁用内联插入。  
   
  以内联方式插入的函数不会引发用于进入或离开的事件。 因此，探查器必须将 `pfShouldInline` 设置为 `false` 才能生成准确的调用图。 将 `pfShouldInline` 设置为 `false` 会影响性能，因为内联插入通常会提高速度，并减少插入方法的单独 JIT 编译事件数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -60,4 +60,4 @@ HRESULT JITInlining(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 接口](icorprofilercallback-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 634ac28c-a5b7-4fc3-af84-256c24ca8177
 topic_type:
 - apiref
-ms.openlocfilehash: f6d26abba649b608858fde8beaac750600493869
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9069498a4f62f4d9dbb50a7075323b14c3cc5ab9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442863"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868442"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs 方法
 返回 Id 的数组，这些 Id 标识仍分配的指定函数的所有 JIT 重新编译版本。 这包括 JIT 重新编译的函数版本，这些版本已进行了还原但尚未释放（例如，当包含还原函数的应用程序域仍在使用时）。  
@@ -51,7 +51,7 @@ HRESULT GetReJITIDs (
 ## <a name="remarks"></a>备注  
  `GetReJITIDs` 枚举给定函数实例的活动 JIT 重新编译的 Id。 它遵循的使用模式与接受调用方分配的缓冲区的其他 `ICorProfilerInfo` 函数相同。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -62,6 +62,6 @@ HRESULT GetReJITIDs (
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo4 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [分析](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo4 接口](icorprofilerinfo4-interface.md)
+- [Profiling 接口](profiling-interfaces.md)
+- [分析](index.md)

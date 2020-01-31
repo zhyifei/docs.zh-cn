@@ -8,17 +8,17 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 251c53a8665d2eae7c3b5bb23b0a388009362dcc
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: dd52313e9100f9c6a1141b53ccc5a23a4b54410a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960112"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789922"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>如何：在混合应用程序中启用视觉样式
-本主题演示如何在基于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的应用程序中承载的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件上启用视觉样式。  
+本主题演示如何在基于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的应用程序中承载的 Windows 窗体控件上启用视觉样式。  
   
- 如果你的应用程序调用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法，则大部分 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件将自动使用视觉样式。 有关详细信息，请参阅[使用视觉样式呈现控件](../../winforms/controls/rendering-controls-with-visual-styles.md)。  
+ 如果你的应用程序调用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法，则大部分 Windows 窗体控件将自动使用视觉样式。 有关详细信息，请参阅[使用视觉样式呈现控件](../../winforms/controls/rendering-controls-with-visual-styles.md)。  
   
  有关本主题中所述任务的完整代码列表，请参阅[在混合应用程序示例中启用视觉样式](https://go.microsoft.com/fwlink/?LinkID=159986)。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "74960112"
   
 9. 按 F5 生成并运行该应用程序。  
   
-     [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件用视觉样式绘制。  
+     Windows 窗体控件用视觉样式绘制。  
   
 ## <a name="disabling-windows-forms-visual-styles"></a>禁用 Windows 窗体视觉样式  
  若要禁用视觉样式，只需删除对 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法的调用。  
@@ -64,7 +64,7 @@ ms.locfileid: "74960112"
   
 3. 按 F5 生成并运行该应用程序。  
   
-     [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件将用默认系统样式进行绘制。  
+     Windows 窗体控件将用默认系统样式进行绘制。  
   
 ## <a name="see-also"></a>另请参阅
 

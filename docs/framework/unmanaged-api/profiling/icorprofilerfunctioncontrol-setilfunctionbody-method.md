@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c33f0f7-75b2-4c19-b2c7-c94b54997576
 topic_type:
 - apiref
-ms.openlocfilehash: f6e2cfe47bdd212e39549544b06bf5b11033a956
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bebc0cf6ac7912ea3a6641e0c729b759e865dac3
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429883"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864656"
 ---
 # <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a>ICorProfilerFunctionControl::SetILFunctionBody 方法
 替换方法的公共中间语言 (CIL) 主体。  
@@ -43,14 +43,14 @@ HRESULT SetILFunctionBody(
 ## <a name="return-value"></a>返回值  
  此方法会返回以下特定的 HRESULT。  
   
-|HRESULT|说明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|替换成功。|  
   
 ## <a name="remarks"></a>备注  
- 与[ICorProfilerInfo：： SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)方法不同，`SetILFunctionBody` 方法管理新 CIL 主体所需的内存。 这意味着，无需通过使用[IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)接口来分配探查器提供的 CIL 主体，也不必在特定范围内进行分配。 它可在任何堆上进行分配。 探查器可以在 `SetILFunctionBody` 返回后释放用于其 CIL 体的内存。  
+ 与[ICorProfilerInfo：： SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md)方法不同，`SetILFunctionBody` 方法管理新 CIL 主体所需的内存。 这意味着，无需通过使用[IMethodMalloc](imethodmalloc-interface.md)接口来分配探查器提供的 CIL 主体，也不必在特定范围内进行分配。 它可在任何堆上进行分配。 探查器可以在 `SetILFunctionBody` 返回后释放用于其 CIL 体的内存。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -61,4 +61,4 @@ HRESULT SetILFunctionBody(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerFunctionControl 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)
+- [ICorProfilerFunctionControl 接口](icorprofilerfunctioncontrol-interface.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: c0bf92c9b6046d531e75771a9205e6dffe0fd367
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9f61a5a60b2ba1305158d1ab570079fe6aac19ac
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458480"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870735"
 ---
 # <a name="weak-event-patterns"></a>弱事件模式
 在应用程序中，附加到事件源的处理程序可能不会与附加了该处理程序的侦听器对象一起销毁。 这种情况可能会导致内存泄漏。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 引入了一个可用于解决此问题的设计模式，方法是为特定事件提供一个专用的管理器类，并在该事件的侦听器上实现一个接口。 此设计模式称为*弱事件模式*。  
@@ -36,7 +36,7 @@ ms.locfileid: "73458480"
 |使用现有弱事件管理器类|如果要订阅的事件有相应的 <xref:System.Windows.WeakEventManager>，请使用现有的弱事件管理器。 有关 WPF 随附的弱事件管理器的列表，请参阅 <xref:System.Windows.WeakEventManager> 类中的继承层次结构。 由于包含的弱事件管理器受到限制，因此你可能需要选择其他方法之一。|  
 |使用一般弱事件管理器类|当现有 <xref:System.Windows.WeakEventManager> 不可用时使用泛型 <xref:System.Windows.WeakEventManager%602>，你需要一种简单的方法来实现，而你不关心效率。 泛型 <xref:System.Windows.WeakEventManager%602> 比现有的或自定义的弱事件管理器低。 例如，泛型类执行更多反射来发现事件的名称中的事件。 此外，使用泛型 <xref:System.Windows.WeakEventManager%602> 注册事件的代码比使用现有的或自定义的 <xref:System.Windows.WeakEventManager>更详细。|  
 |创建自定义弱事件管理器类|在现有 <xref:System.Windows.WeakEventManager> 不可用时创建自定义 <xref:System.Windows.WeakEventManager>，并希望获得最佳效率。 使用自定义 <xref:System.Windows.WeakEventManager> 订阅事件将更有效，但你会在一开始就开始编写更多代码。|  
-|使用第三方弱事件管理器|NuGet 具有[几个弱事件管理器](https://www.nuget.org/packages?q=weak+event+manager&prerel=false)，而许多 WPF 框架还支持该模式（例如，请参阅[Prism 的有关松散耦合的事件订阅的文档](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/Communication.md#subscribing-to-events)）。|
+|使用第三方弱事件管理器|NuGet 具有[几个弱事件管理器](https://www.nuget.org/packages?q=weak+event+manager&prerel=false)，而许多 WPF 框架还支持该模式（例如，请参阅[Prism 的有关松散耦合的事件订阅的文档](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/legacy/Communication.md#subscribing-to-events)）。|
 
  以下各节介绍如何实现弱事件模式。  出于此讨论的目的，要订阅的事件具有以下特征。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "73458480"
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.WeakEventManager>
 - <xref:System.Windows.IWeakEventListener>

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 116085df-7a77-404a-afac-d0557a12b986
 topic_type:
 - apiref
-ms.openlocfilehash: 9bb3934be4a2f4de4a3a235a00522c801331e1eb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cda629b7a6560ca5d731cd88cffc2cffd3486d8a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448426"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866206"
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>ICorProfilerCallback::JITFunctionPitched 方法
 通知探查器已从内存中删除了实时（JIT）编译的函数。  
@@ -41,7 +41,7 @@ HRESULT JITFunctionPitched(
   
  重新编译该函数之前，`functionId` 的值无效。 重新编译函数时，将使用相同的 `functionId` 值。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -52,4 +52,4 @@ HRESULT JITFunctionPitched(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 接口](icorprofilercallback-interface.md)

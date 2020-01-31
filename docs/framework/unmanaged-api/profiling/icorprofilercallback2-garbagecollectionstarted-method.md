@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44eef087-f21f-4fe2-b481-f8a0ee022e7d
 topic_type:
 - apiref
-ms.openlocfilehash: ed2553f2d971deefd85f731dd39f383cd096c5b0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c90c790c519cc0c422657e6e2d8040a365fbf48c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439811"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865774"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>ICorProfilerCallback2::GarbageCollectionStarted 方法
 通知代码探查器垃圾回收已启动。  
@@ -41,17 +41,17 @@ HRESULT GarbageCollectionStarted(
  `generationCollected`  
  中布尔值的数组，如果此垃圾回收正在收集与数组索引对应的代，则 `true` 此数组;否则，`false`。  
   
- 数组由[COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md)枚举的一个值进行索引，该枚举指示代。  
+ 数组由[COR_PRF_GC_GENERATION](cor-prf-gc-generation-enumeration.md)枚举的一个值进行索引，该枚举指示代。  
   
  `reason`  
- 中一个[COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md)枚举的值，该值指示导致垃圾回收的原因。  
+ 中一个[COR_PRF_GC_REASON](cor-prf-gc-reason-enumeration.md)枚举的值，该值指示导致垃圾回收的原因。  
   
 ## <a name="remarks"></a>备注  
- 与此垃圾回收相关的所有回调都将在 `GarbageCollectionStarted` 回调和相应的[ICorProfilerCallback2：： GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)回调之间发生。 这些回调不需要在同一线程上发生。  
+ 与此垃圾回收相关的所有回调都将在 `GarbageCollectionStarted` 回调和相应的[ICorProfilerCallback2：： GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)回调之间发生。 这些回调不需要在同一线程上发生。  
   
  探查器在 `GarbageCollectionStarted` 回调过程中检查其原始位置中的对象是安全的。 垃圾回收器将在从 `GarbageCollectionStarted`返回后开始移动对象。 在探查器从此回调返回后，探查器应在收到 `ICorProfilerCallback2::GarbageCollectionFinished` 回调之前，将所有对象 Id 视为无效。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -62,5 +62,5 @@ HRESULT GarbageCollectionStarted(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [ICorProfilerCallback 接口](icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 接口](icorprofilercallback2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f069802a-198f-46dd-9f09-4f77adffc9ba
 topic_type:
 - apiref
-ms.openlocfilehash: 14b152474cd71dc3ff7b59c94b6ec4fa0cd7ce0c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cd1f3982fe1439135bf96579370a5a798c61dd2e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439209"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863772"
 ---
 # <a name="icorprofilerinfogetfunctionfromip-method"></a>ICorProfilerInfo::GetFunctionFromIP 方法
 将托管代码指令指针映射到 `FunctionID`。  
@@ -33,14 +33,17 @@ HRESULT GetFunctionFromIP(
     [out] FunctionID *pFunctionId);  
 ```  
   
-## <a name="parameters"></a>参数  
- `ip`  
- 中托管代码中的指令指针。  
-  
- `pFunctionId`  
- 弄返回的函数 ID。  
-  
-## <a name="requirements"></a>要求  
+## <a name="parameters"></a>参数
+
+- `ip`
+
+  \[中的] 托管代码中的指令指针。
+
+- `pFunctionId`
+
+  \[out] 返回的函数 ID。
+
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -51,4 +54,4 @@ HRESULT GetFunctionFromIP(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo 接口](icorprofilerinfo-interface.md)

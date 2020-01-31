@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-ms.openlocfilehash: b4f228d55c9ffd6b85ebd0b430a7f5db404320f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 25cd3e05bc80dd39d2ca558bb4dd5fb77d255f5a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124336"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791400"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>ICorDebugThread3::GetActiveInternalFrames 方法
-返回堆栈上的内部帧（[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)对象）的数组。  
+返回堆栈上的内部帧（[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md)对象）的数组。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +52,7 @@ HRESULT GetActiveInternalFrames
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功创建[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)对象。|  
+|S_OK|已成功创建[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md)对象。|  
 |E_INVALIDARG|`cInternalFrames` 不为零，并且 `ppInternalFrames` 为 `null`或 `pcInternalFrames` 为 `null`。|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` 小于内部帧的计数。|  
   
@@ -65,9 +65,9 @@ HRESULT GetActiveInternalFrames
   
  然后，应再次调用 `GetActiveInternalFrames`。 应在 `cInternalFrames` 参数中传递正确的计数（`pcInternalFrames`），并在 `ppInternalFrames`指定指向适当大小的数组的指针。  
   
- 使用[ICorDebugStackWalk：： GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md)方法返回实际的堆栈帧。  
+ 使用[ICorDebugStackWalk：： GetFrame](icordebugthread3-getactiveinternalframes-method.md)方法返回实际的堆栈帧。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -76,7 +76,7 @@ HRESULT GetActiveInternalFrames
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [调试接口](debugging-interfaces.md)
+- [调试](index.md)

@@ -15,15 +15,15 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 66933b3778807b40f1d39d8b4c565c334328812f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fabbcd497dc2f321da90188cebbac6ed4e147492
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450400"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867082"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>COR_PRF_REJIT_FLAGS 枚举
-包含指示[ICorProfilerInfo10：： RequestReJITWithInliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) API 应如何运行的值。  
+包含指示[ICorProfilerInfo10：： RequestReJITWithInliners](icorprofilerinfo10-requestrejitwithinliners-method.md) API 应如何运行的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,12 +37,12 @@ typedef enum
   
 ## <a name="members"></a>Members  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
 |`COR_PRF_REJIT_BLOCK_INLINING`| 将阻止在其他方法中内联 ReJITted 方法。 |  
 |`COR_PRF_REJIT_INLINING_CALLBACKS`| 为内联 ReJITted 请求的方法的任何方法接收 `GetFunctionParameters` 回调。 |  
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[支持 .Net Core 的操作系统](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -53,4 +53,4 @@ typedef enum
   
 ## <a name="see-also"></a>另请参阅
 
-- [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [分析枚举](profiling-enumerations.md)

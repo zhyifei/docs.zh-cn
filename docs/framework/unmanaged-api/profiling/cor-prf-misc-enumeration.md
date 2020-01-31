@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 619bb5de-e309-48b6-a3af-32d935a0ff46
 topic_type:
 - apiref
-ms.openlocfilehash: 8105ba34ca400771fbc4273630f20941a4a9557d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fe27c0fca6d38b4cff6cac2b9778cf2be68903a3
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432275"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867121"
 ---
 # <a name="cor_prf_misc-enumeration"></a>COR_PRF_MISC 枚举
 包含指定特殊标识符的常数值。  
@@ -36,13 +36,13 @@ typedef enum {
   
 ## <a name="members"></a>Members  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|[ICorProfilerInfo：： GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md)用于尚未附加到程序集的模块的默认标识符。|  
+|`PROFILER_PARENT_UNKNOWN`|[ICorProfilerInfo：： GetModuleInfo](icorprofilerinfo-getmoduleinfo-method.md)用于尚未附加到程序集的模块的默认标识符。|  
 |`PROFILER_GLOBAL_CLASS`|不属于类的全局常数的默认类标识符。|  
 |`PROFILER_GLOBAL_MODULE`|不属于模块的全局对象的默认模块标识符。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -53,4 +53,4 @@ typedef enum {
   
 ## <a name="see-also"></a>另请参阅
 
-- [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [分析枚举](profiling-enumerations.md)

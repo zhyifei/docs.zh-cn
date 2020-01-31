@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc5fab2a-4b45-4b12-8727-b89c9915f23e
 topic_type:
 - apiref
-ms.openlocfilehash: 64df6a81eb23c20537238c702fd0c204d64d14bc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e4a003b30c495852a3a68d44d92bef35c3ed7812
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434548"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866288"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>ICorProfilerCallback::Initialize 方法
 调用以在新的公共语言运行时（CLR）应用程序启动时初始化代码探查器。  
@@ -32,14 +32,16 @@ HRESULT Initialize(
     [in] IUnknown     *pICorProfilerInfoUnk);  
 ```  
   
-## <a name="parameters"></a>参数  
- `pICorProfilerInfoUnk`  
- [在接口中](/cpp/atl/iunknown)，探查器必须查询[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)接口指针。  
-  
+## <a name="parameters"></a>参数
+
+- `pICorProfilerInfoUnk`
+
+  \[in] 指向[IUnknown](/cpp/atl/iunknown)接口的指针，探查器必须查询[ICorProfilerInfo](icorprofilerinfo-interface.md)接口指针。  
+
 ## <a name="remarks"></a>备注  
- `Initialize` 调用是启用（或禁用）不变回叫的唯一机会。 `Initialize` 调用启用回调后，将无法在以后使用[ICorProfilerInfo：： SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)将其禁用。 [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)枚举的 COR_PRF_MONITOR_IMMUTABLE 值指示哪些事件是不可变的。  
+ `Initialize` 调用是启用（或禁用）不变回叫的唯一机会。 `Initialize` 调用启用回调后，将无法在以后使用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)将其禁用。 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)枚举的 COR_PRF_MONITOR_IMMUTABLE 值指示哪些事件是不可变的。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -50,5 +52,5 @@ HRESULT Initialize(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Shutdown 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-shutdown-method.md)
+- [ICorProfilerCallback 接口](icorprofilercallback-interface.md)
+- [Shutdown 方法](icorprofilercallback-shutdown-method.md)

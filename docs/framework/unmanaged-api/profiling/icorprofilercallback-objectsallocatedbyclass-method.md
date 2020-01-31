@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 91d688f3-a80e-419d-9755-ff94bc04188a
 topic_type:
 - apiref
-ms.openlocfilehash: 9ba021ec223d00e57081567b76f70f59768e6b9a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 028207486f43e35086ed2e515eb3ae6bca304491
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445868"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866067"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass 方法
 通知探查器自最近一次垃圾回收后已创建的每个指定类的实例数。  
@@ -47,11 +47,11 @@ HRESULT ObjectsAllocatedByClass(
 ## <a name="remarks"></a>备注  
  `classIds` 和 `cObjects` 数组是并行数组。 例如，`classIds[i]` 和 `cObjects[i]` 引用相同的类。 如果自上次垃圾回收后未创建类的任何实例，则忽略类。 `ObjectsAllocatedByClass` 回调不会报告在大型对象堆中分配的对象。  
   
- `ObjectsAllocatedByClass` 报告的数字仅为估算值。 对于确切计数，请使用[ICorProfilerCallback：： ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)。  
+ `ObjectsAllocatedByClass` 报告的数字仅为估算值。 对于确切计数，请使用[ICorProfilerCallback：： ObjectAllocated](icorprofilercallback-objectallocated-method.md)。  
   
  如果相应的 `cObjects` 数组包含正在卸载的类型，则 `classIds` 数组可能包含一个或多个 null 项。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -62,4 +62,4 @@ HRESULT ObjectsAllocatedByClass(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 接口](icorprofilercallback-interface.md)

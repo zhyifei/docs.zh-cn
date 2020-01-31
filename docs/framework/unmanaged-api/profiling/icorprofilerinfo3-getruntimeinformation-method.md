@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4400fb8c-0407-4791-8557-f011fd2aee51
 topic_type:
 - apiref
-ms.openlocfilehash: 20556d85655a0a1bbe069a94b99c19c774a13ce6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e3d167be9a4091ae57a3283424186142e90ca7a1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449683"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868546"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation 方法
 提供有关正在分析的公共语言运行时（CLR）的版本信息。  
@@ -72,7 +72,7 @@ HRESULT GetRuntimeInformation(
 ## <a name="remarks"></a>备注  
  可以为任何参数传递 null。 但 `pcchVersionString` 不能为 null，除非 `szVersionString` 也为 null。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -83,6 +83,6 @@ HRESULT GetRuntimeInformation(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo3 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [分析](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo3 接口](icorprofilerinfo3-interface.md)
+- [Profiling 接口](profiling-interfaces.md)
+- [分析](index.md)

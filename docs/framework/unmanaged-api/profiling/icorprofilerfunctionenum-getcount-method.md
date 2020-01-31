@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 62ec65e3-3e9d-400b-ae61-d24b8963995b
 topic_type:
 - apiref
-ms.openlocfilehash: 5ccd90e92e83d7f9f6f19a082fb84dc1f1c35f4c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8a21f1c0018e99b94a1b9910b6f266bdca84b7fe
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447817"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864552"
 ---
 # <a name="icorprofilerfunctionenumgetcount-method"></a>ICorProfilerFunctionEnum::GetCount 方法
 获取应用程序加载的函数数量或探查器强制加载的函数数量。  
@@ -35,7 +35,7 @@ HRESULT GetCount([out] ULONG * pcelt);
  `celt`  
  弄已加载的函数的数目。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -46,5 +46,5 @@ HRESULT GetCount([out] ULONG * pcelt);
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerFunctionEnum 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerFunctionEnum 接口](icorprofilerfunctionenum-interface.md)
+- [Profiling 接口](profiling-interfaces.md)

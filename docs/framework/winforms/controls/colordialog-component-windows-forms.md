@@ -6,12 +6,12 @@ helpviewer_keywords:
 - colors [Windows Forms], dialog box
 - color dialog box
 ms.assetid: 261793e0-8252-47c5-b76c-621857b8da44
-ms.openlocfilehash: 0b44774fcace82f7e209440bc15705ad632bc223
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3ac758c353d235183041b6442d4472f863f7ca75
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736931"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870799"
 ---
 # <a name="colordialog-component-windows-forms"></a>ColorDialog 组件（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.ColorDialog> 组件是一个预配置的对话框，用户可以使用该对话框从调色板中选择颜色，并向该调色板添加自定义颜色。 此对话框与在其他基于 Windows 的应用程序中看到的用于选择颜色的对话框相同。 在基于 Windows 的应用程序中，使用它作为一种替代配置自己对话框的简单解决方案。  
@@ -32,9 +32,6 @@ Windows 窗体 <xref:System.Windows.Forms.ColorDialog> 组件是一个预配置�
   
  <xref:System.Windows.Forms.ColorDialog>  
  提供有关 <xref:System.Windows.Forms.ColorDialog> 类及其成员的引用信息。  
-  
- [Windows 窗体对话框的基本代码](assetId:///VS|dv_vstechart|~\html\vbtchessentialcodeforwindowsformsdialogboxes.htm)  
- 讨论 Windows 窗体对话框控件和组件以及执行其基本功能必需的代码。  
-  
+ 
  [对话框控件和组件](dialog-box-controls-and-components-windows-forms.md)  
  列出一组控件，这些控件允许用户执行与应用程序或系统的标准交互操作。

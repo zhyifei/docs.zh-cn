@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5da1bf3d-dddf-4892-b266-578ee54d570b
 topic_type:
 - apiref
-ms.openlocfilehash: 8af2b6834ac8655c64a7738c65550b515a4b6675
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5fe472c4a0053ec9e37d7d61ffde5cf21d65dd2f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439046"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863460"
 ---
 # <a name="icorprofilerinfogetilfunctionbodyallocator-method"></a>ICorProfilerInfo::GetILFunctionBodyAllocator 方法
 获取一个接口，该接口提供一个方法，用于分配用于在 Microsoft 中间语言（MSIL）代码中交换方法体的内存。  
@@ -38,12 +38,12 @@ HRESULT GetILFunctionBodyAllocator(
  中方法所在的模块的 ID。  
   
  `ppMalloc`  
- 弄指向[IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)接口的指针，该接口提供分配内存的方法。  
+ 弄指向[IMethodMalloc](imethodmalloc-interface.md)接口的指针，该接口提供分配内存的方法。  
   
 ## <a name="remarks"></a>备注  
  MSIL 代码中的方法体必须作为相对虚拟地址（RVA）定位，相对于已加载的模块，这意味着它遵循 4 GB 内的模块。 为了更轻松地交换方法的主体，`GetILFunctionBodyAllocator` 方法确保在该范围内分配内存。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -54,4 +54,4 @@ HRESULT GetILFunctionBodyAllocator(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo 接口](icorprofilerinfo-interface.md)

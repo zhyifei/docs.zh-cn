@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-ms.openlocfilehash: 700e0af05828b9fe0a50c1aac114e840adc276b5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9953d0f3e1a4d4cd935918f0e5721e474453ca7d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131846"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791911"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext 方法
-返回[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)对象中的当前帧的上下文。  
+返回[ICorDebugStackWalk](icordebugstackwalk-interface.md)对象中的当前帧的上下文。  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +54,7 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
 |-------------|-----------------|  
 |S_OK|当前帧的上下文已成功返回。|  
 |E_FAIL|未能返回上下文。|  
-|HRESULT_FROM_WIN32 （ERROR_INSUFFICIENT BUFFER）|上下文缓冲区太小。|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|上下文缓冲区太小。|  
 |CORDBG_E_PAST_END_OF_STACK|帧指针已位于堆栈末尾;因此，不能访问其他帧。|  
   
 ## <a name="exceptions"></a>异常  
@@ -62,7 +62,7 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
 ## <a name="remarks"></a>备注  
  因为展开仅还原一个寄存器子集，如非易失性寄存器，所以在调用时，上下文可能与注册状态不完全匹配。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -71,7 +71,7 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [调试接口](debugging-interfaces.md)
+- [调试](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 53fca564-84b1-44d4-9e21-17a492d2aae7
 topic_type:
 - apiref
-ms.openlocfilehash: 01404d23707be90b6b15cf741632400d49f164de
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 734ae1d14d02d47c7d3126f1b4cf55dcb4ad151b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445146"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866619"
 ---
 # <a name="icorprofilercallbackassemblyunloadfinished-method"></a>ICorProfilerCallback::AssemblyUnloadFinished 方法
 通知探查器已卸载程序集。  
@@ -33,19 +33,22 @@ HRESULT AssemblyUnloadFinished(
     [in] HRESULT    hrStatus);  
 ```  
   
-## <a name="parameters"></a>参数  
- `assemblyId`  
- 中标识正在卸载的程序集。  
-  
- `hrStatus`  
- 中一个 HRESULT，指示程序集是否已成功卸载。  
-  
+## <a name="parameters"></a>参数
+
+- `assemblyId`
+
+  \[中的] 标识正在卸载的程序集。
+
+- `hrStatus`
+
+  \[中的] HRESULT，它指示是否已成功卸载程序集。
+
 ## <a name="remarks"></a>备注  
- [ICorProfilerCallback：： AssemblyUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md)方法返回后，`assemblyId` 的值对信息请求无效。  
+ [ICorProfilerCallback：： AssemblyUnloadStarted](icorprofilercallback-assemblyunloadstarted-method.md)方法返回后，`assemblyId` 的值对信息请求无效。  
   
  在 `AssemblyUnloadFinished` 回调后，卸载程序集的某些部分可能会继续。 如果 `hrStatus` 失败，则指示失败。 不过，`hrStatus` 中的 HRESULT 成功只指示卸载程序集的第一部分已成功完成。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -56,4 +59,4 @@ HRESULT AssemblyUnloadFinished(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 接口](icorprofilercallback-interface.md)

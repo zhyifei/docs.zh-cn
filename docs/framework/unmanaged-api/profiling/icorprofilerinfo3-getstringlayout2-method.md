@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a268496-ee51-4d84-8700-ee56fd0c499d
 topic_type:
 - apiref
-ms.openlocfilehash: 1e3dc4735af68da7f76fc6fce84d2dd4ac3f576e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f3727343755d7014202f844be28414d31ce55bc1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449664"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862251"
 ---
 # <a name="icorprofilerinfo3getstringlayout2-method"></a>ICorProfilerInfo3::GetStringLayout2 方法
-获取有关字符串对象布局的信息。 此方法取代了[ICorProfilerInfo2：： GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md)方法。  
+获取有关字符串对象布局的信息。 此方法取代了[ICorProfilerInfo2：： GetStringLayout](icorprofilerinfo2-getstringlayout-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ HRESULT GetStringLayout2(
 ## <a name="remarks"></a>备注  
  字符串可以是，也可以不是以 null 结尾。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -54,5 +54,5 @@ HRESULT GetStringLayout2(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo3 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerInfo3 接口](icorprofilerinfo3-interface.md)
+- [Profiling 接口](profiling-interfaces.md)

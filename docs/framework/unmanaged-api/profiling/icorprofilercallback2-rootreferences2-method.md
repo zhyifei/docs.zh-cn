@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55a2f907-d216-42eb-8f2f-e5d59c2eebd6
 topic_type:
 - apiref
-ms.openlocfilehash: dffd4365669da61f7b321110ad663c131ce591e6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a9ce9a7a56847efcadf09924ffc56c41f20a1c58
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439677"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865722"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2 方法
-发生垃圾回收后，通知探查器有关根引用的信息。 此方法是[ICorProfilerCallback：： RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)方法的扩展。  
+发生垃圾回收后，通知探查器有关根引用的信息。 此方法是[ICorProfilerCallback：： RootReferences](icorprofilercallback-rootreferences-method.md)方法的扩展。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,10 +44,10 @@ HRESULT RootReferences2(
  中对象 Id 的数组，其中每个对象都引用堆栈上的静态对象或对象。 `rootKinds` 数组中的元素提供了用于对 `rootRefIds` 数组中的相应元素进行分类的信息。  
   
  `rootKinds`  
- 中一个[COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md)值的数组，这些值指示垃圾回收根的类型。  
+ 中一个[COR_PRF_GC_ROOT_KIND](cor-prf-gc-root-kind-enumeration.md)值的数组，这些值指示垃圾回收根的类型。  
   
  `rootFlags`  
- 中描述垃圾回收根属性的[COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md)值的数组。  
+ 中描述垃圾回收根属性的[COR_PRF_GC_ROOT_FLAGS](cor-prf-gc-root-flags-enumeration.md)值的数组。  
   
  `rootIds`  
  中一个 UINT_PTR 值的数组，这些值指向一个整数，该整数包含有关垃圾回收根的其他信息，具体取决于 `rootKinds` 参数的值。  
@@ -61,9 +61,9 @@ HRESULT RootReferences2(
   
  `rootRefIds` 中的条目可能为零，这意味着对应的根引用为 null，并且不引用托管堆上的对象。  
   
- `RootReferences2` 返回的对象 Id 在回调过程中无效，因为垃圾回收可能正处于将对象从旧地址移到新地址的过程中。 因此，探查器不应在 `RootReferences2` 调用期间尝试检查对象。 调用[ICorProfilerCallback2：： GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)时，所有对象已移动到它们的新位置，并且可以安全检查。  
+ `RootReferences2` 返回的对象 Id 在回调过程中无效，因为垃圾回收可能正处于将对象从旧地址移到新地址的过程中。 因此，探查器不应在 `RootReferences2` 调用期间尝试检查对象。 调用[ICorProfilerCallback2：： GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)时，所有对象已移动到它们的新位置，并且可以安全检查。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -74,5 +74,5 @@ HRESULT RootReferences2(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [ICorProfilerCallback 接口](icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 接口](icorprofilercallback2-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a3e43ed-3ee3-4395-ab14-f78b903be13e
 topic_type:
 - apiref
-ms.openlocfilehash: fdfba34f35e40b2a50dbc4edc5b6b6c45f17194f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 441f7743ba01884592393ce9382348fbecaeaa9d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442868"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861874"
 ---
 # <a name="icorprofilerinfo4getobjectsize2-method"></a>ICorProfilerInfo4::GetObjectSize2 方法
-返回指定的对象的大小。 将[ICorProfilerInfo：： GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md)方法替换为大于可在 `ULONG`中表示的对象的大小。  
+返回指定的对象的大小。 将[ICorProfilerInfo：： GetObjectSize](icorprofilerinfo-getobjectsize-method.md)方法替换为大于可在 `ULONG`中表示的对象的大小。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ HRESULT GetObjectSize2(
 ## <a name="remarks"></a>备注  
  相同类型的不同对象通常具有相同的大小。 但是，某些类型（例如数组或字符串）对于每个对象可能有不同的大小。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -54,4 +54,4 @@ HRESULT GetObjectSize2(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo4 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [ICorProfilerInfo4 接口](icorprofilerinfo4-interface.md)

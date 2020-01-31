@@ -2,22 +2,22 @@
 title: dotnet run 命令
 description: dotnet run 命令可便于使用源代码运行应用程序。
 ms.date: 10/31/2019
-ms.openlocfilehash: 87e9a57e874116533951a9c5eb676be76be2c98d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5920f0d1f04204b286fdf6f51f5fd13644846390
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454774"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734101"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
-**本文适用于：✓** .NET Core 1.x SDK 及更高版本
+ 本文适用于：✔️ .NET Core 1.x SDK 及更高版本
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet run` - 无需任何显式编译或启动命令即可运行源代码。
 
@@ -58,7 +58,7 @@ dotnet run [-h|--help]
 
 ---
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 `dotnet run` 命令为从源代码使用一个命令运行应用程序提供了一个方便的选项。 这对从命令行中进行快速迭代开发很有帮助。 命令取决于生成代码的 [`dotnet build`](dotnet-build.md) 命令。 对于此生成的任何要求，例如项目必须首先还原，同样适用于 `dotnet run`。
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 603b3881-ea94-4dca-95cd-91eebac873a0
 topic_type:
 - apiref
-ms.openlocfilehash: 93c042d760eab4bcb1846701ad92ac38cb473c69
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 56221c6b3ac40595e999f2a2a3739f023441c46d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449731"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862403"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>ICorProfilerInfo3::GetAppDomainsContainingModule 方法
 获取其中已加载给定模块的应用程序域的标识符。  
@@ -52,7 +52,7 @@ HRESULT GetAppDomainsContainingModule(
 ## <a name="remarks"></a>备注  
  此方法使用调用方分配的缓冲区。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -63,7 +63,7 @@ HRESULT GetAppDomainsContainingModule(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerFunctionEnum 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [ICorProfilerInfo3 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [分析](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerFunctionEnum 接口](icorprofilerfunctionenum-interface.md)
+- [ICorProfilerInfo3 接口](icorprofilerinfo3-interface.md)
+- [Profiling 接口](profiling-interfaces.md)
+- [分析](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5854bfb2-c568-4f19-904a-7c9d41e7b995
 topic_type:
 - apiref
-ms.openlocfilehash: fe204bbe6154bf3d512a998818cf053d1e96ab3d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c7b52954a6be449de0c3633f0ac648980c6d13f6
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433542"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865917"
 ---
 # <a name="icorprofilercallbackruntimeresumestarted-method"></a>ICorProfilerCallback::RuntimeResumeStarted 方法
 通知探查器运行时正在恢复所有运行时线程。  
@@ -31,7 +31,7 @@ ms.locfileid: "74433542"
 HRESULT RuntimeResumeStarted();  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -42,5 +42,5 @@ HRESULT RuntimeResumeStarted();
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [RuntimeResumeFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumefinished-method.md)
+- [ICorProfilerCallback 接口](icorprofilercallback-interface.md)
+- [RuntimeResumeFinished 方法](icorprofilercallback-runtimeresumefinished-method.md)

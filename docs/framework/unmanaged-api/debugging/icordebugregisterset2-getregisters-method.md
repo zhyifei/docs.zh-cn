@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-ms.openlocfilehash: 8e5583acfe338c185200c0b8e41b7d6e051fa146
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 54a5fb50a0177fe9886582c112f16ce871ea9df4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131355"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792062"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2::GetRegisters 方法
 获取由给定位掩码指定的每个寄存器（对于当前正在执行其代码的平台）的值。  
@@ -56,9 +56,9 @@ HRESULT GetRegisters (
   
  对于包含64个以上寄存器的平台，`ICorDebugRegisterSet2::GetRegisters` 方法是必需的。 例如，IA64 具有128常规用途寄存器和128浮点寄存器，因此位掩码中需要超过64位。  
   
- 如果寄存器不超过64，则与 x86 等平台上的情况一样，`GetRegisters` 方法实际上只是将 `mask` 字节数组中的字节转换为 `ULONG64`，然后调用[ICorDebugRegisterSet：： GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md)方法，它采用 `ULONG64` 掩码。  
+ 如果寄存器不超过64，则与 x86 等平台上的情况一样，`GetRegisters` 方法实际上只是将 `mask` 字节数组中的字节转换为 `ULONG64`，然后调用[ICorDebugRegisterSet：： GetRegisters](icordebugregisterset-getregisters-method.md)方法，该方法采用 `ULONG64` 掩码。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -67,7 +67,7 @@ HRESULT GetRegisters (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugRegisterSet2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
-- [ICorDebugRegisterSet 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 接口](icordebugregisterset2-interface.md)
+- [ICorDebugRegisterSet 接口](icordebugregisterset-interface.md)

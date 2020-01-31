@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-ms.openlocfilehash: 38ed7de647aabefc95f515d9aa627b0e9c8d9015
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: caea1d3d526017c0118f95bb138ee4ac45d2c137
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790256"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866991"
 ---
 # <a name="functionenter-function"></a>FunctionEnter 函数
 通知探查器控制正在传递到函数。  
   
 > [!NOTE]
-> `FunctionEnter` 函数在 .NET Framework 版本2.0 中已弃用，其使用将导致性能下降。 改为使用[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)函数。  
+> `FunctionEnter` 函数在 .NET Framework 版本2.0 中已弃用，其使用将导致性能下降。 改为使用[FunctionEnter2](functionenter2-function.md)函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -65,8 +65,8 @@ void __stdcall FunctionEnter (
   
 ## <a name="see-also"></a>另请参阅
 
-- [FunctionEnter2 函数](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2 函数](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [FunctionTailcall2 函数](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [分析全局静态函数](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 函数](functionenter2-function.md)
+- [FunctionLeave2 函数](functionleave2-function.md)
+- [FunctionTailcall2 函数](functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2 方法](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [分析全局静态函数](profiling-global-static-functions.md)

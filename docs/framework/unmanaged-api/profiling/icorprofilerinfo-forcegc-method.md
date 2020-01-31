@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0da1ef80-d242-4636-87d0-43e0470b342a
 topic_type:
 - apiref
-ms.openlocfilehash: 9f97da4e68d4b76178198e91c3fb8f08b56dda7b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e1fe38419cda328c919f0840d51cf6336919aa60
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448185"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864188"
 ---
 # <a name="icorprofilerinfoforcegc-method"></a>ICorProfilerInfo::ForceGC 方法
 强制在公共语言运行时（CLR）内发生垃圾回收。  
@@ -34,7 +34,7 @@ HRESULT ForceGC();
 ## <a name="remarks"></a>备注  
  只能从从未运行托管代码且在其堆栈上没有任何探查器回调的线程调用 `ForceGC` 方法。 最方便的实现是在探查器中创建一个单独的线程，该线程在发出信号时调用 `ForceGC`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -45,4 +45,4 @@ HRESULT ForceGC();
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo 接口](icorprofilerinfo-interface.md)

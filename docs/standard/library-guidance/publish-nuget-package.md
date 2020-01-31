@@ -2,12 +2,12 @@
 title: 发布 NuGet 包
 description: 将 .NET 库发布到 NuGet 的最佳做法建议。
 ms.date: 10/02/2018
-ms.openlocfilehash: e567fe3f7e00bf322cdd50786e50128961107469
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 089c660bc51252c6295858b1462ae59bde968564
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706460"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744556"
 ---
 # <a name="publishing-a-nuget-package"></a>发布 NuGet 包
 
@@ -22,11 +22,11 @@ ms.locfileid: "75706460"
 > [!NOTE]
 > 上传包后，NuGet.org [不允许将其删除](/nuget/policies/deleting-packages)。 可以不列出包，使其不在 UI 中公开可见，但仍可在还原后下载 `*.nupkg`。 此外，nuget.org 不允许重复的包版本。 若要更正存在错误的 NuGet 包，必须取消列出不正确的包，递增版本号并发布新版本的包。
 
-✔️ 务必将想要获取社区反馈的  [稳定包和预发行包发布](/nuget/create-packages/publish-a-package)到 NuGet.org。
+✔️ 务必将想要获取社区反馈的[稳定包和预发行包发布](/nuget/create-packages/publish-a-package)到 NuGet.org。
 
-✔️ 请考虑  将预发行包从持续集成版本发布到 MyGet 源。
+✔️ 请考虑将预发行包从持续集成版本发布到 MyGet 源。
 
-✔️ 请考虑  使用本地源或 MyGet 在开发环境中测试包。 检查包是否运行正常，然后将其发布到 NuGet.org。
+✔️ 请考虑使用本地源或 MyGet 在开发环境中测试包。 检查包是否运行正常，然后将其发布到 NuGet.org。
 
 ## <a name="nugetorg-security"></a>NuGet.org 安全
 
@@ -34,11 +34,11 @@ ms.locfileid: "75706460"
 
 ![替换文字](./media/publish-nuget-package/nuget-2fa.png "NuGet 帐户安全")
 
-✔️ 务必  使用 Microsoft 帐户登录到 NuGet。
+✔️ 务必使用 Microsoft 帐户登录到 NuGet。
 
-✔️ 务必  启用双因素身份验证来访问 NuGet。
+✔️ 务必启用双重身份验证来访问 NuGet。
 
-✔️ 务必  在发布包时启用电子邮件通知。
+✔️ 务必在发布包时启用电子邮件通知。
 
 >[!div class="step-by-step"]
 >[上一页](sourcelink.md)

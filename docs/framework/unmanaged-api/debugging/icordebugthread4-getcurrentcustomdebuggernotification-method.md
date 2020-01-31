@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 57e0f2d2-5f0e-4e2d-99ec-3f26632eb693
 topic_type:
 - apiref
-ms.openlocfilehash: ba4375511fe7f5aaee032c4e132de54808041111
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a8a377074ca1005ad8089dfd8e2a6a464bb86f60
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122449"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791358"
 ---
 # <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a>ICorDebugThread4::GetCurrentCustomDebuggerNotification 方法
 
-获取当前线程上的当前[ICorDebugManagedCallback3：： CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)对象。
+获取当前线程上的当前[ICorDebugManagedCallback3：： CustomNotification](icordebugmanagedcallback3-customnotification-method.md)对象。
 
 ## <a name="syntax"></a>语法
 
@@ -43,7 +43,7 @@ HRESULT GetCurrentCustomDebuggerNotification(
 
 如果未从 `ICorDebugManagedCallback3::CustomNotification` 回调内调用方法，或者如果不存在当前通知对象，`ppNotificationObject` 的值为 null。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
@@ -53,8 +53,8 @@ HRESULT GetCurrentCustomDebuggerNotification(
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugThread4 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugThread4 接口](icordebugthread4-interface.md)
+- [调试接口](debugging-interfaces.md)
+- [调试](index.md)

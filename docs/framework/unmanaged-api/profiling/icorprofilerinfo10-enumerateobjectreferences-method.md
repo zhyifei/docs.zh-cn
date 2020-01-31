@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d6518612c213d21c2dc7d80878121ccd3b7e2abb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7fd62e0d3d9173f3b75882131e57126075c0677f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449851"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863304"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10：： EnumerateObjectReferences 方法
 
@@ -30,22 +30,25 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
                                    [in] void* clientData);
 ```
 
-#### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
-`objectId` \
-中要在其上枚举引用的对象。
+- `objectId`
 
-`callback` \
-中将用对象的引用调用的函数。
+  \[中] 要在其上枚举引用的对象。
 
-`clientData` \
-中探查器提供的要传递到 `callback` 函数的数据。
+- `callback`
+
+  \[中]：将与对象的引用一起调用的函数。
+
+- `clientData`
+
+  \[中的] 探查器提供的用于传递到 `callback` 函数的数据。
 
 ## <a name="remarks"></a>备注
 
-`EnumerateObjectReferences` 方法类似于[ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)，只不过它会按需对探查器进行引用，而不是预先分配用于存储引用的数组。
+方法类似于 [ObjectReferences](icorprofilercallback-objectreferences-method.md), 只不过它会按需对探查器进行引用, 而不是预先分配用于存储引用的数组。 `EnumerateObjectReferences`
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 **平台：** 请参阅[支持 .Net Core 的操作系统](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)。
 
@@ -57,4 +60,4 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo10 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 接口](icorprofilerinfo10-interface.md)

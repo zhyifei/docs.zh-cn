@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d17a065b-5bc6-4817-b3e1-1e413fcb33a8
 topic_type:
 - apiref
-ms.openlocfilehash: 37d5f5e8294bb87a8796d6dcae046864904b096b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2f305852ae218417aa1f4d4fe9d2076c0163fd60
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439375"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865267"
 ---
 # <a name="icorprofilercallback4movedreferences2-method"></a>ICorProfilerCallback4::MovedReferences2 方法
-调用以报告堆中对象的新布局（压缩垃圾回收产生的结果）。 如果探查器实现了[ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)接口，则调用此方法。 此回调可替换[ICorProfilerCallback：： MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)方法，因为它可以报告长度超过在 ULONG 中可表达的内容的更大范围的对象。  
+调用以报告堆中对象的新布局（压缩垃圾回收产生的结果）。 如果探查器实现了[ICorProfilerCallback4](icorprofilercallback4-interface.md)接口，则调用此方法。 此回调可替换[ICorProfilerCallback：： MovedReferences](icorprofilercallback-movedreferences-method.md)方法，因为它可以报告长度超过在 ULONG 中可表达的内容的更大范围的对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -65,17 +65,17 @@ HRESULT MovedReferences2(
   
  对于以下范围内的任何 `i` 值：  
   
- 0 < = `i` < `cMovedObjectIDRanges`  
+ 0 <= `i` < `cMovedObjectIDRanges`  
   
  可以按以下方式计算出新的 `ObjectID`：  
   
- `newObjectID` = `newObjectIDRangeStart[i]` + （`oldObjectID` – `oldObjectIDRangeStart[i]`）  
+ `newObjectID` = `newObjectIDRangeStart[i]` + (`oldObjectID` – `oldObjectIDRangeStart[i]`)  
   
- 在该回调本身中，由 `ObjectID` 传递的任何 `MovedReferences2` 值都无效，因为垃圾回收器可能正在将对象从旧位置移至新位置。 因此，探查器不应在 `MovedReferences2` 调用期间尝试检查对象。 [ICorProfilerCallback2：： GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)回调指示所有对象已移动到其新位置，并可执行检查。  
+ 在该回调本身中，由 `MovedReferences2` 传递的任何 `ObjectID` 值都无效，因为垃圾回收器可能正在将对象从旧位置移至新位置。 因此，探查器不应在 `MovedReferences2` 调用期间尝试检查对象。 [ICorProfilerCallback2：： GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)回调指示所有对象已移动到其新位置，并可执行检查。  
   
- 如果探查器同时实现[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)和[ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)接口，则在[ICorProfilerCallback：： MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)方法之前调用 `MovedReferences2` 方法，但前提是 `MovedReferences2` 方法成功返回。 探查器可以返回一个 HRESULT，指示由 `MovedReferences2` 方法引发的故障，以避免调用第二种方法。  
+ 如果探查器同时实现[ICorProfilerCallback](icorprofilercallback-interface.md)和[ICorProfilerCallback4](icorprofilercallback4-interface.md)接口，则在[ICorProfilerCallback：： MovedReferences](icorprofilercallback-movedreferences-method.md)方法之前调用 `MovedReferences2` 方法，但前提是 `MovedReferences2` 方法成功返回。 探查器可以返回一个 HRESULT，指示由 `MovedReferences2` 方法引发的故障，以避免调用第二种方法。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -86,8 +86,8 @@ HRESULT MovedReferences2(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [MovedReferences 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)
-- [ICorProfilerCallback4 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
-- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [分析](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerCallback 接口](icorprofilercallback-interface.md)
+- [MovedReferences 方法](icorprofilercallback-movedreferences-method.md)
+- [ICorProfilerCallback4 接口](icorprofilercallback4-interface.md)
+- [Profiling 接口](profiling-interfaces.md)
+- [分析](index.md)

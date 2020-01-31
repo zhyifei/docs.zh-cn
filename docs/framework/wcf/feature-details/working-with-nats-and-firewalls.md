@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: bfbff63c8c2cdb76d5f6d84424a9b03233744dae
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b8be10740c8e92d3dac7094f07b3372e8d78a3d9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347108"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743870"
 ---
 # <a name="working-with-nats-and-firewalls"></a>使用 NAT 和防火墙
 网络连接的客户端和服务器通常不具有用于进行通信的直接和开放的路径。 数据包在终结点计算机和网络中的中间计算机上进行筛选、路由、分析和转换。 网络地址转换 (NAT) 和防火墙是可以参与网络通信的中间应用程序的常见示例。  
@@ -32,7 +32,8 @@ ms.locfileid: "75347108"
  家庭用户防火墙的常见配置是禁止传入连接，除非以前与该计算机之间建立过传出连接。 企业用户防火墙的常见配置是在所有端口上禁止传入连接，除非该连接来自专门标识的组。 这方面的一个示例是这样一个防火墙，它在除端口 80 和 443 以外的所有端口上禁止连接，以便提供 HTTP 和 HTTPS 服务。 家庭和企业用户都存在托管防火墙，它允许计算机上受信任的用户或进程更改防火墙配置。 对于没有用于控制网络使用的公司策略的家庭用户而言，托管防火墙更为常见。  
   
 ## <a name="using-teredo"></a>使用 Teredo  
- Teredo 是一种 IPv6 过渡技术，可用来对位于 NAT 后面的计算机进行直接寻址。 Teredo 依靠使用可以公开和全局路由的服务器来公布潜在的连接。 Teredo 服务器为应用程序客户端和服务器提供了一个公用的接头地点，以便它们可以交换连接信息。 然后，这些计算机请求一个临时 Teredo 地址，并且通过现有网络对数据包进行隧道路由。 WCF 中的 Teredo 支持需要在操作系统中启用 IPv6 和 Teredo 支持。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和更高版本的操作系统支持 Teredo。 默认情况下，Windows Vista 和更高版本的操作系统支持 IPv6，并且仅要求用户启用 Teredo。 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 和 Windows Server 2003 要求用户同时启用 IPv6 和 Teredo。 有关详细信息，请参阅[Teredo 概述](https://go.microsoft.com/fwlink/?LinkId=87571)。  
+
+ Teredo 是一种 IPv6 过渡技术，可用来对位于 NAT 后面的计算机进行直接寻址。 Teredo 依靠使用可以公开和全局路由的服务器来公布潜在的连接。 Teredo 服务器为应用程序客户端和服务器提供了一个公用的接头地点，以便它们可以交换连接信息。 然后，这些计算机请求一个临时 Teredo 地址，并且通过现有网络对数据包进行隧道路由。 WCF 中的 Teredo 支持需要在操作系统中启用 IPv6 和 Teredo 支持。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和更高版本的操作系统支持 Teredo。 默认情况下，Windows Vista 和更高版本的操作系统支持 IPv6，并且仅要求用户启用 Teredo。 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 和 Windows Server 2003 要求用户同时启用 IPv6 和 Teredo。 有关详细信息，请参阅[Teredo 概述](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10))。  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>选择传输协议和消息交换模式  
  选择传输协议和 MEP 的过程分为三步：  

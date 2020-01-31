@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88989482-a09f-4bd0-9adb-16f47b0291fd
 topic_type:
 - apiref
-ms.openlocfilehash: 4cc9849ee8cd160a33ae9c769f7b98a87eafb8dd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ba61df045caa117acae3756eb879cf67d0791222
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134602"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791064"
 ---
 # <a name="icordebugvalueenum-interface"></a>ICorDebugValueEnum 接口
 实现 "ICorDebugEnum" 方法并枚举 "ICorDebugValue" 数组。  
@@ -28,14 +28,14 @@ ms.locfileid: "73134602"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalueenum-next-method.md)|从当前位置开始，从枚举中获取指定数目的 `ICorDebugValue` 实例。|  
+|[Next 方法](icordebugvalueenum-next-method.md)|从当前位置开始，从枚举中获取指定数目的 `ICorDebugValue` 实例。|  
   
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -44,6 +44,6 @@ ms.locfileid: "73134602"
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试接口](debugging-interfaces.md)

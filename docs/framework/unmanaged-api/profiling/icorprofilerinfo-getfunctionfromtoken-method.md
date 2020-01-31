@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0eed759f-cce8-405d-88dc-9ee293a38928
 topic_type:
 - apiref
-ms.openlocfilehash: 72531dc4fa7a8afc3bd719d73389fac94e3363bb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2b2d619c5940376806e9873a528b4f08886593e9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439139"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863551"
 ---
 # <a name="icorprofilerinfogetfunctionfromtoken-method"></a>ICorProfilerInfo::GetFunctionFromToken 方法
-获取函数的 ID。 此方法在 .NET Framework 版本2.0 中已过时。 改为使用[ICorProfilerInfo2：： GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)方法。  
+获取函数的 ID。 此方法在 .NET Framework 版本2.0 中已过时。 改为使用[ICorProfilerInfo2：： GetFunctionFromTokenAndTypeArgs](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT GetFunctionFromToken(
 ## <a name="remarks"></a>备注  
  `GetFunctionFromToken` 方法对于泛型函数或泛型类型中的函数将不起作用;它现已过时。 对所有函数使用 `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -48,4 +48,4 @@ HRESULT GetFunctionFromToken(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo 接口](icorprofilerinfo-interface.md)

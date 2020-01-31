@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bc3a938-0df1-4739-9ff1-89cff454b704
 topic_type:
 - apiref
-ms.openlocfilehash: bdbf93ba4df50cf26538f0e527fdc3c982bb274e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0f6fb469aa9d6d40b762bfd2feec28c28299732f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447330"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867108"
 ---
 # <a name="cor_prf_module_flags-enumeration"></a>COR_PRF_MODULE_FLAGS 枚举
 指定模块的属性。  
@@ -41,7 +41,7 @@ typedef enum
   
 ## <a name="members"></a>Members  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
 |COR_PRF_MODULE_DISK|模块是从磁盘加载的。|  
 |COR_PRF_MODULE_NGEN|模块是由本机映像生成器（Ngen.exe）生成的。|  
@@ -52,9 +52,9 @@ typedef enum
 |COR_PRF_MODULE_WINDOWS_RUNTIME|在此模块的程序集的元数据中设置 Windows 运行时内容类型标志。 这适用于所有 Windows 元数据（winmd）模块。|  
   
 ## <a name="remarks"></a>备注  
- COR_PRF_MODULE_FLAGS 中的位将返回到探查器的[ICorProfilerInfo3：： GetModuleInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md)方法的 `pdwModuleFlags` output 参数中。 可能有两个或更多标志的一些组合，但并非所有组合都可行。  
+ COR_PRF_MODULE_FLAGS 中的位将返回到探查器的[ICorProfilerInfo3：： GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md)方法的 `pdwModuleFlags` output 参数中。 可能有两个或更多标志的一些组合，但并非所有组合都可行。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -65,4 +65,4 @@ typedef enum
   
 ## <a name="see-also"></a>另请参阅
 
-- [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [分析枚举](profiling-enumerations.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9671e5a-7b14-4f5b-8404-58136422c8b2
 topic_type:
 - apiref
-ms.openlocfilehash: 1b69c0522c47d4e675180af67adab166626da4d7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0e8c91f65d4ebec07689a42d4517fc100fce136d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440022"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865839"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>ICorProfilerCallback::ThreadAssignedToOSThread 方法
 通知探查器使用特定操作系统线程实现了托管线程。  
@@ -43,7 +43,7 @@ HRESULT ThreadAssignedToOSThread(
 ## <a name="remarks"></a>备注  
  存在 `ThreadAssignedToOSThread` 回调，以便探查器能够在操作系统线程的纤程之间保持准确的映射到托管线程。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -54,4 +54,4 @@ HRESULT ThreadAssignedToOSThread(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 接口](icorprofilercallback-interface.md)
