@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d218554a-bf42-4d88-833d-ede30de67a53
 topic_type:
 - apiref
-ms.openlocfilehash: d95662167dbc8fcda049fb6a7b3e6ff1dfb6e736
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4306c4ae44b0ae1ade2bf374981492fa1a4df76f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130710"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788371"
 ---
 # <a name="icordebugmanagedcallbacklogmessage-method"></a>ICorDebugManagedCallback::LogMessage 方法
 通知调试器公共语言运行时（CLR）托管线程在 <xref:System.Diagnostics.EventLog> 类中调用了方法来记录事件。  
@@ -45,7 +45,7 @@ HRESULT LogMessage (
  中指向 ICorDebugThread 对象的指针，该对象表示托管线程。  
   
  `lLevel`  
- 中[LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md)枚举的一个值，该值指示写入事件日志的描述性消息的严重性级别。  
+ 中[LoggingLevelEnum](logginglevelenum-enumeration.md)枚举的一个值，该值指示写入事件日志的描述性消息的严重性级别。  
   
  `pLogSwitchName`  
  中指向跟踪开关名称的指针。  
@@ -53,7 +53,7 @@ HRESULT LogMessage (
  `pMessage`  
  中指向写入事件日志的消息的指针。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -62,6 +62,6 @@ HRESULT LogMessage (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback 接口](icordebugmanagedcallback-interface.md)

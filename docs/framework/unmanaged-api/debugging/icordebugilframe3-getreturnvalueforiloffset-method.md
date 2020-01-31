@@ -13,12 +13,12 @@ api_type:
 ms.assetid: 06522727-5f64-4391-9331-11386883c352
 topic_type:
 - apiref
-ms.openlocfilehash: c7419e5c3677b5679a0ca5c234463ae6e205b7d1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a96385ccc6e7f9089365c19bb8f150015bba81c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090366"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788531"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>ICorDebugILFrame3::GetReturnValueForILOffset 方法
 获取一个 "ICorDebugValue" 对象，该对象封装函数的返回值。  
@@ -40,7 +40,7 @@ HRESULT GetReturnValueForILOffset(
  一个指向 "ICorDebugValue" 接口对象地址的指针，该对象提供有关函数调用的返回值的信息。  
   
 ## <a name="remarks"></a>备注  
- 此方法与[ICorDebugCode3：： GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)方法一起使用，以获取方法的返回值。 这对于返回值被忽略的方法特别有用，如以下两个代码示例所示。 第一个示例调用 <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> 方法，但忽略方法的返回值。  
+ 此方法与[ICorDebugCode3：： GetReturnValueLiveOffset](icordebugcode3-getreturnvalueliveoffset-method.md)方法一起使用，以获取方法的返回值。 这对于返回值被忽略的方法特别有用，如以下两个代码示例所示。 第一个示例调用 <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> 方法，但忽略方法的返回值。  
   
  [!code-csharp[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv1.cs#1)]
  [!code-vb[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv1.vb#1)]  
@@ -50,18 +50,18 @@ HRESULT GetReturnValueForILOffset(
  [!code-csharp[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv2.cs#2)]
  [!code-vb[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv2.vb#2)]  
   
- 如果将[ICorDebugCode3：： GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)方法传递给函数调用站点的 IL 偏移量，它将返回一个或多个本机偏移量。 然后，调试器可以在函数中的这些本机偏移量上设置断点。 当调试器遇到其中一个断点时，您可以传递您传递给此方法的同一 IL 偏移量来获取返回值。 调试器随后应清除它所设置的所有断点。  
+ 如果将[ICorDebugCode3：： GetReturnValueLiveOffset](icordebugcode3-getreturnvalueliveoffset-method.md)方法传递给函数调用站点的 IL 偏移量，它将返回一个或多个本机偏移量。 然后，调试器可以在函数中的这些本机偏移量上设置断点。 当调试器遇到其中一个断点时，您可以传递您传递给此方法的同一 IL 偏移量来获取返回值。 调试器随后应清除它所设置的所有断点。  
   
 > [!WARNING]
-> [ICorDebugCode3：： GetReturnValueLiveOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)和 `ICorDebugILFrame3::GetReturnValueForILOffset` 方法仅允许获取引用类型的返回值信息。 不支持从值类型（即从 <xref:System.ValueType>派生的所有类型）检索返回值信息。  
+> [ICorDebugCode3：： GetReturnValueLiveOffset 方法](icordebugcode3-getreturnvalueliveoffset-method.md)和 `ICorDebugILFrame3::GetReturnValueForILOffset` 方法仅允许获取引用类型的返回值信息。 不支持从值类型（即从 <xref:System.ValueType>派生的所有类型）检索返回值信息。  
   
- `ILOffset` 参数指定的 IL 偏移量应位于函数调用站点，调试对象应在[ICorDebugCode3：： GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)方法为同一 IL 偏移量返回的本机偏移量处停止。 如果在指定的 IL 偏移量的正确位置没有停止调试对象，则 API 将失败。  
+ `ILOffset` 参数指定的 IL 偏移量应位于函数调用站点，调试对象应在[ICorDebugCode3：： GetReturnValueLiveOffset](icordebugcode3-getreturnvalueliveoffset-method.md)方法为同一 IL 偏移量返回的本机偏移量处停止。 如果在指定的 IL 偏移量的正确位置没有停止调试对象，则 API 将失败。  
   
  如果函数调用不返回值，则 API 将失败。  
   
  `ICorDebugILFrame3::GetReturnValueForILOffset` 方法仅适用于基于 x86 的和 AMD64 系统。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -70,7 +70,7 @@ HRESULT GetReturnValueForILOffset(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [GetReturnValueLiveOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)
-- [ICorDebugILFrame3 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
+- [GetReturnValueLiveOffset 方法](icordebugcode3-getreturnvalueliveoffset-method.md)
+- [ICorDebugILFrame3 接口](icordebugilframe3-interface.md)

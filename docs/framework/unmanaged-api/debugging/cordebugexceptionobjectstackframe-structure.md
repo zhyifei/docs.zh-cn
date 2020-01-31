@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 542cdd81-5ae7-4361-b0ef-1ae4775df258
 topic_type:
 - apiref
-ms.openlocfilehash: faa2082d31c5fa47b87e2238017066b477fdc191
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2845c15d67e287d6efb0cd0a9c940b69de3a1c0c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132174"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789368"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>CorDebugExceptionObjectStackFrame 结构
 表示异常对象中的堆栈帧信息。  
@@ -47,7 +47,7 @@ typedef struct CorDebugExceptionObjectStackFrame {
 ## <a name="remarks"></a>备注  
  当不再使用 ICorDebugModule 对象时，调用方必须释放指向该对象的指针。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -56,7 +56,7 @@ typedef struct CorDebugExceptionObjectStackFrame {
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [调试结构](debugging-structures.md)
+- [调试](index.md)

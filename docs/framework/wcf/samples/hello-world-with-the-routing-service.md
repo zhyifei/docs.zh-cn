@@ -2,12 +2,12 @@
 title: 通过路由服务进行通信
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 7a41a1b552e220dcb6367ae59876da4570bab909
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ae0615c8cf2fa33f3bb363f77c0d06440b6afc13
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716918"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743718"
 ---
 # <a name="hello-world-with-the-routing-service"></a>通过路由服务进行通信
 此示例演示 Windows Communication Foundation （WCF）路由服务。 路由服务是一个 WCF 组件，使您可以轻松地在应用程序中包含基于内容的路由器。 此示例改编了标准 WCF 计算器示例，以使用路由服务进行通信。 在此示例中，计算器客户端配置为将消息发送到由路由器公开的一个终结点。 路由服务配置为接受发送给它的所有消息，然后将这些消息转发至与计算器服务对应的终结点。 因此，从客户端发送的消息将由路由器接收，并重新路由到实际的计算器服务。 来自计算器服务的消息将发回到路由器，后者又将这些消息传回到计算器客户端。
@@ -27,7 +27,7 @@ ms.locfileid: "74716918"
 
 3. 按 Enter 启动客户端。
 
-     您应看到下列输出：
+     你应该会看到以下输出：
 
     ```console
      Add(100,15.99) = 115.99
@@ -59,4 +59,4 @@ ms.locfileid: "74716918"
   
 ## <a name="see-also"></a>另请参阅
 
-- [AppFabric 宿主和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric 宿主和持久性示例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

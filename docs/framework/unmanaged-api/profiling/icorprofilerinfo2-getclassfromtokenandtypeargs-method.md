@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b25c88f0-71b9-443b-8eea-1c94db0a44b9
 topic_type:
 - apiref
-ms.openlocfilehash: 5b6c0159b432d2a70f583357bbcf714b27399633
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e0663ff122397ba639a0a219e513be2f3f0cbbef
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447173"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862758"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs 方法
 使用指定的元数据标记和任何类型参数的 `ClassID` 值获取类型的 `ClassID`。  
@@ -57,9 +57,9 @@ HRESULT GetClassFromTokenAndTypeArgs(
   
  如果尚未加载该类型，则调用 `GetClassFromTokenAndTypeArgs` 将触发加载，这在许多上下文中是一个危险操作。 例如，在加载模块或其他类型期间调用此方法可能会导致无限循环，因为运行时尝试循环加载某些功能。  
   
- 通常，不建议使用 `GetClassFromTokenAndTypeArgs`。 如果探查器对特定类型的事件感兴趣，则它们应存储该类型的 `ModuleID` 和 `mdTypeDef`，并使用[ICorProfilerInfo2：： GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)来检查给定的 `ClassID` 是否为所需的类型。  
+ 通常，不建议使用 `GetClassFromTokenAndTypeArgs`。 如果探查器对特定类型的事件感兴趣，则它们应存储该类型的 `ModuleID` 和 `mdTypeDef`，并使用[ICorProfilerInfo2：： GetClassIDInfo2](icorprofilerinfo2-getclassidinfo2-method.md)来检查给定的 `ClassID` 是否为所需的类型。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -70,5 +70,5 @@ HRESULT GetClassFromTokenAndTypeArgs(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo 接口](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 接口](icorprofilerinfo2-interface.md)

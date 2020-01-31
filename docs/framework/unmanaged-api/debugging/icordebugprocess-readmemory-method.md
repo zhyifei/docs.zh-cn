@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-ms.openlocfilehash: ef9e339c74b2d2785d758ed9c4adfc1901073253
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dca2a4e5ee869346108137a8ba01ab8855756725
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139356"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792556"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory 方法
 读取此进程的指定内存区域。  
@@ -51,11 +51,11 @@ HRESULT ReadMemory(
 ## <a name="remarks"></a>备注  
  `ReadMemory` 方法主要用于互操作调试，用于检查调试对象的非托管部分所使用的内存区域。 此方法还可用于读取 Microsoft 中间语言（MSIL）代码和本机 JIT 编译代码。  
   
- 将从 `buffer` 参数中返回的数据中删除任何托管断点。 不会对[ICorDebugProcess2：： SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)设置的本机断点进行任何调整。  
+ 将从 `buffer` 参数中返回的数据中删除任何托管断点。 不会对[ICorDebugProcess2：： SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)设置的本机断点进行任何调整。  
   
  不会执行进程内存缓存。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  

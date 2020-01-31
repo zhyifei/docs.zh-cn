@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: f2d9345eaaba7b85a217e6b230ae202f27ad3af8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 4ca40c0f6e62fd413e7f305649c5c01ddc152b2a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742620"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794137"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>演练：在 WPF 中承载 ActiveX 控件
 若要实现与浏览器的更好交互，可以在基于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的应用程序中使用 Microsoft ActiveX 控件。 本演练演示如何将 Microsoft Windows Media Player 作为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 页上的控件进行承载。
@@ -83,7 +83,7 @@ ms.locfileid: "76742620"
 
 2. 添加对 WindowsFormsIntegration 程序集的引用，该程序集名为 WindowsFormsIntegration。
 
-3. 添加对 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 程序集的引用，该程序集名为 System.object。
+3. 添加对 Windows 窗体程序集的引用，该程序集名为 System.object。
 
 4. 在 WPF 设计器中打开 Mainwindow.xaml。
 

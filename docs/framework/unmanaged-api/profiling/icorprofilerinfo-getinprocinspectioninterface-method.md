@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22a92d1d-8849-4af6-8304-ecc53dd1d289
 topic_type:
 - apiref
-ms.openlocfilehash: d3fcd859fb11f6a0c660751f16fa175e19e9d03b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5c9258126c872bd501b4eebc4698b4dded402dfe
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438993"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863356"
 ---
 # <a name="icorprofilerinfogetinprocinspectioninterface-method"></a>ICorProfilerInfo::GetInprocInspectionInterface 方法
 获取一个对象，该对象可查询 "ICorDebugProcess" 接口。 此方法在 .NET Framework 版本2.0 中已过时。  
@@ -39,7 +39,7 @@ HRESULT GetInprocInspectionInterface(
 ## <a name="remarks"></a>备注  
  公共语言运行时（CLR）调试 API 在 .NET Framework 版本1.0 中支持有限的进程内调试。 进程内调试使探查器能够使用调试 API 的检查部分。 由于客户反馈，已从版本2.0 中的 .NET Framework 中删除进程内调试，并将其替换为一组功能，这些功能与分析 API 是一种更多的功能。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -50,4 +50,4 @@ HRESULT GetInprocInspectionInterface(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo 接口](icorprofilerinfo-interface.md)

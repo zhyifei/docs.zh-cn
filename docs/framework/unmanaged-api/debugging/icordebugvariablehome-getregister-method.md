@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5eecd7b-b04c-4266-bff2-7c8771d519a8
 topic_type:
 - apiref
-ms.openlocfilehash: 4c9932c3eeebd0101ee364c9b4d0b0a26862c4b1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 396dd9c017fca6dc7037b43355ba7f726d7390ea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125072"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790978"
 ---
 # <a name="icordebugvariablehomegetregister-method"></a>ICorDebugVariableHome：： GetRegister 方法
 获取一个寄存器，其中包含位置类型为 `VLT_REGISTER`的变量，以及位置类型为 `VLT_REGISTER_RELATIVE`的变量的基寄存器。  
@@ -40,12 +40,12 @@ HRESULT GetRegister(
 ## <a name="return-value"></a>返回值  
  方法返回以下值：  
   
-|“值”|描述|  
+|{2&gt;值&lt;2}|描述|  
 |-----------|-----------------|  
 |`S_OK`|变量位于 `pRegister` 参数所指示的寄存器中。|  
 |`E_FAIL`|变量不在寄存器或寄存器相对位置中。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -54,7 +54,7 @@ HRESULT GetRegister(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [VariableLocationType 枚举](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)
-- [ICorDebugVariableHome 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [VariableLocationType 枚举](variablelocationtype-enumeration.md)
+- [ICorDebugVariableHome 接口](icordebugvariablehome-interface.md)

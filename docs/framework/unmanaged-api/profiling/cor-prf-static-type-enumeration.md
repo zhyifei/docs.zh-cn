@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 441d7809-5b65-41a5-ba64-2910a8008315
 topic_type:
 - apiref
-ms.openlocfilehash: 40efe81f72a2043503bf521e3e47dad1a7f4530c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 880c9bd186d6cb2acb277e9cc55d3063fb8d51d8
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448449"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867024"
 ---
 # <a name="cor_prf_static_type-enumeration"></a>COR_PRF_STATIC_TYPE 枚举
 指示字段是否为静态的，并在字段为静态字段时指示应用于该字段的静态质量。 可以使用按位 "或" 运算组合这些值，以指示该字段具有多个不同的静态质量。  
@@ -38,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>Members  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_NOT_A_STATIC`|此字段不是静态的。|  
 |`COR_PRF_FIELD_APP_DOMAIN_STATIC`|此字段为应用程序域静态。|  
@@ -46,7 +46,7 @@ typedef enum {
 |`COR_PRF_FIELD_CONTEXT_STATIC`|此字段是上下文静态的。|  
 |`COR_PRF_FIELD_RVA_STATIC`|该字段是相对虚拟地址（RVA）静态的。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -57,4 +57,4 @@ typedef enum {
   
 ## <a name="see-also"></a>另请参阅
 
-- [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [分析枚举](profiling-enumerations.md)

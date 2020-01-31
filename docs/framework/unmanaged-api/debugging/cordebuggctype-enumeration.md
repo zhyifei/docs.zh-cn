@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 880ca92a-42d4-42a5-9b9c-c2848eb39c6a
 topic_type:
 - apiref
-ms.openlocfilehash: b954aa0e4db10fd4b3bde951c7f27d18b8634f5a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6f4c96517375df4cd249b72953bf37812a498c0c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132188"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789360"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType 枚举
 指示垃圾回收器是在工作站还是服务器上运行。  
@@ -44,7 +44,7 @@ typedef enum CorDebugGCType {
   
 ## <a name="remarks"></a>备注  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -53,6 +53,6 @@ typedef enum CorDebugGCType {
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [调试枚举](debugging-enumerations.md)

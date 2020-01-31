@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: 5b58b7131d015353c2276b6f422e93e5d6a09109
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0c833416cca965f2655266152c5bdf5f11624d14
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428154"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861121"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next 方法
 从对象的顺序集合中获取指定数目的连续对象，从该序列中的枚举器的当前位置开始。  
@@ -46,7 +46,7 @@ HRESULT Next (
  `pceltFetched`  
  [out] 指向 `objects` 数组中实际返回的元素数目的指针。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -57,4 +57,4 @@ HRESULT Next (
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerObjectEnum 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+- [ICorProfilerObjectEnum 接口](icorprofilerobjectenum-interface.md)

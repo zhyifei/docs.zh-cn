@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 90140b0f-a926-4a7e-b6fa-23e05f703cce
 topic_type:
 - apiref
-ms.openlocfilehash: 2393468f78312511d11cbe0ab422c26c710e25d8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 583189cd667af142ab7d0934be34411644dac936
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439236"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863915"
 ---
 # <a name="icorprofilerinfogetcodeinfo-method"></a>ICorProfilerInfo::GetCodeInfo 方法
 获取与指定函数 ID 关联的本机代码的范围。  
   
- 此方法已过时。 改为使用[ICorProfilerInfo2：： GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)方法。  
+ 此方法已过时。 改为使用[ICorProfilerInfo2：： GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +51,7 @@ HRESULT GetCodeInfo(
   
  此函数使用调用方分配的缓冲区。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -62,6 +62,6 @@ HRESULT GetCodeInfo(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [分析](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo 接口](icorprofilerinfo-interface.md)
+- [Profiling 接口](profiling-interfaces.md)
+- [分析](index.md)

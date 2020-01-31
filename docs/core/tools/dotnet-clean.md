@@ -2,38 +2,38 @@
 title: dotnet clean 命令
 description: dotnet clean 命令可清除当前目录。
 ms.date: 06/26/2019
-ms.openlocfilehash: 982232833b460b4ea4181acebee74dcef54d3131
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117741"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734248"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**本主题适用于：✓** .NET Core 1.x SDK 及更高版本
+ 本文适用于：✔️ .NET Core 1.x SDK 及更高版本
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet clean` - 清除项目输出。
 
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive]
     [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 `dotnet clean` 命令可清除上一个生成的输出。 它以 [MSBuild 目标](/visualstudio/msbuild/msbuild-targets) 的形式实现，以便在运行命令时对项目进行评估。 只会清除在生成过程中创建的输出。 中间 (*obj*) 和最终输出 (*bin*) 文件夹都会被清除。
 
-## <a name="arguments"></a>清理对象
+## <a name="arguments"></a>自变量
 
 `PROJECT | SOLUTION`
 

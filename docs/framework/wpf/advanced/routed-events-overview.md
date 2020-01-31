@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: ecd340d00e7f02655dfdcd8eee548309d424a5ea
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f47eccac4e960bd6869da0da139803cd4e433393
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458741"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794294"
 ---
 # <a name="routed-events-overview"></a>路由事件概述
 
@@ -28,7 +28,7 @@ ms.locfileid: "73458741"
 
 <a name="prerequisites"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 本主题假定你对公共语言运行时（CLR）和面向对象的编程具有基本的了解，并介绍了如何将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素之间的关系概念化为树。 若要理解本主题中的示例，你还应当了解 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 并知道如何编写非常基本的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序或页。 有关详细信息，请参阅[演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)和[XAML 概述（WPF）](../../../desktop-wpf/fundamentals/xaml.md)。
 
@@ -64,7 +64,7 @@ Button-->StackPanel-->Border-->...
 
 **控件的撰写和封装：** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的各个控件都有一个丰富的内容模型。 例如，可以将图像放在 <xref:System.Windows.Controls.Button>中，这会有效地扩展按钮的可视化树。 但是，添加的图像不得中断导致按钮响应其内容 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 的命中测试行为，即使用户单击了在技术上是图像的一部分的像素。
 
-**单一处理程序附加点：** 在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 中，必须多次附加同一个处理程序，才能处理从多个元素引发的事件。 借助路由事件，可以只附加该处理程序一次（如上例中所示），并在必要时使用处理程序逻辑来确定该事件的源位置。 例如，这可以是前面显示的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的处理程序：
+**单一处理程序附件点：** 在 Windows 窗体中，你必须多次附加相同的处理程序，以处理可能会从多个元素引发的事件。 借助路由事件，可以只附加该处理程序一次（如上例中所示），并在必要时使用处理程序逻辑来确定该事件的源位置。 例如，这可以是前面显示的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的处理程序：
 
 [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
 [!code-vb[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]
@@ -98,7 +98,7 @@ Button-->StackPanel-->Border-->...
 
 - **浮升：** 调用事件源上的事件处理程序。 路由事件随后会路由到后续的父级元素，直到到达元素树的根。 大多数路由事件都使用浮升路由策略。 浮升路由事件通常用于报告来自不同控件或其他 UI 元素的输入或状态变化。
 
-- **直接：** 只有源元素本身才有机会调用处理程序以进行响应。 这与 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 用于事件的“路由”相似。 但是，与标准 CLR 事件不同，直接路由事件支持类处理（在下一节中介绍类处理），并可由 <xref:System.Windows.EventSetter> 和 <xref:System.Windows.EventTrigger>使用。
+- **直接：** 只有源元素本身才有机会调用处理程序以进行响应。 这类似于 Windows 窗体用于事件的 "路由"。 但是，与标准 CLR 事件不同，直接路由事件支持类处理（在下一节中介绍类处理），并可由 <xref:System.Windows.EventSetter> 和 <xref:System.Windows.EventTrigger>使用。
 
 - **隧道：** 最初将调用元素树的根处的事件处理程序。 随后，路由事件将朝着路由事件的源节点元素（即引发路由事件的元素）方向，沿路由线路传播到后续的子元素。 合成控件的过程中通常会使用或处理隧道路由事件，通过这种方式，可以有意地禁止复合部件中的事件，或者将其替换为特定于整个控件的事件。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中提供的输入事件通常是以隧道/浮升对实现的。 隧道事件有时又称作预览事件，这是由该对所使用的命名约定决定的。
 
@@ -179,7 +179,7 @@ Button-->StackPanel-->Border-->...
 
   - 执行代码以响应该事件。 在传递到处理程序的事件数据中将该事件标记为“已处理”，因为所执行的操作被视为不足以保证将该事件标记为“已处理”。 事件仍路由到下一个侦听器，但在其事件数据中 <xref:System.Windows.RoutedEventArgs.Handled%2A>=`true`，因此只有 `handledEventsToo` 侦听器才能调用进一步的处理程序。
 
-此概念设计是通过前面提到的路由行为加强的：更难（尽管仍可能在代码或样式中）附加处理路由事件的处理程序，即使路由中的以前处理程序已设置 <xref:System.Windows.RoutedEventArgs.Handled%2A>要 `true`。
+此概念设计由前面提到的路由行为加强：更难（尽管代码或样式中仍有可能）附加处理程序的处理程序，即使路由中的以前处理程序已将 <xref:System.Windows.RoutedEventArgs.Handled%2A> 设置为 `true`。
 
 有关 <xref:System.Windows.RoutedEventArgs.Handled%2A>、路由事件的类处理以及何时适合将路由事件标记为 <xref:System.Windows.RoutedEventArgs.Handled%2A>的建议的详细信息，请参阅将[路由事件标记为 "已处理" 和 "类处理"](marking-routed-events-as-handled-and-class-handling.md)。
 
@@ -271,7 +271,7 @@ Button-->StackPanel-->Border-->...
 
 本主题主要从以下角度讨论路由事件：描述基本概念；就如何以及何时响应各种基元素和控件中已经存在的路由事件提供指南。 但是，你可以在自定义类上创建自己的路由事件以及所有必要的支持（如专用的事件数据类和委托）。 路由事件所有者可以是任何类，但路由事件必须由 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement> 派生类来处理并处理才能发挥作用。 有关自定义事件的详细信息，请参阅[创建自定义路由事件](how-to-create-a-custom-routed-event.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.EventManager>
 - <xref:System.Windows.RoutedEvent>

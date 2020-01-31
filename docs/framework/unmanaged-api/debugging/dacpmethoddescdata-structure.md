@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 97079b824dbd0e056374af4173e49304babd6c32
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc54664ea8ad61005de3f3fae7407946d1c861b2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739131"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793849"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData 结构
 
@@ -52,39 +52,39 @@ struct DacpMethodDescData
 };
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 | 成员                       | 描述                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
-| `bHasNativeCode`             | 指示运行时是否有可用于该方法的给定实例化的本机代码。 |
-| `bIsDynamic`                 | 指示是否通过轻量级代码生成动态生成方法。           |
-| `wSlotNumber`                | 方法的方法表中的槽数。                                                   |
-| `NativeCodeAddr`             | 该方法的初始本机地址。                                                            |
-| `data`                       | 指向由运行时在内部使用的缓冲区。                                             |
-| `MethodDescPtr`              | 指向`MethodDesc`运行时中。                                                     |
-| `nativeCodeInfo`             | 指向由运行时在内部使用，以跟踪方法的缓冲区。                            |
-| `moduleInfo`                 | 模块信息由运行时在内部使用的缓冲区的指针。                      |
-| `MDToken`                    | 与给定的方法相关联的标记。                                                         |
-| `payloadGC`                  | 运行时在内部使用的垃圾收集缓冲区的指针。                          |
-| `payloadGC2`                 | 运行时在内部使用的垃圾收集缓冲区的指针。                          |
-| `managedDynamicMethodObject` | 如果该方法是动态的运行时使用此缓冲区在内部跟踪的信息。     |
-| `requestedIP`                | 用于填充每个请求在给定的本机代码地址结构。                    |
-| `rejitDataCurrent`           | 有关最新的检测方法版本的信息。                                   |
-| `rejitDataRequested`         | Rejit 请求的本机地址信息。                                             |
-| `cJittedRejitVersions`       | 该方法已通过检测 rejitted 次数。                           |
+| `bHasNativeCode`             | 指示运行时是否具有可用于方法的给定实例化的本机代码。 |
+| `bIsDynamic`                 | 指示是否通过轻型代码生成动态生成方法。           |
+| `wSlotNumber`                | 方法表中的方法的槽号。                                                   |
+| `NativeCodeAddr`             | 方法的初始本机地址。                                                            |
+| `data`                       | 指向运行时内部使用的缓冲区的指针。                                             |
+| `MethodDescPtr`              | 指向运行时中的 `MethodDesc` 的指针。                                                     |
+| `nativeCodeInfo`             | 指向由运行时内部用于跟踪方法的缓冲区的指针。                            |
+| `moduleInfo`                 | 指向由运行时内部用于模块信息的缓冲区的指针。                      |
+| `MDToken`                    | 与给定方法关联的标记。                                                         |
+| `payloadGC`                  | 指向运行时内部使用的垃圾回收缓冲区的指针。                          |
+| `payloadGC2`                 | 指向运行时内部使用的垃圾回收缓冲区的指针。                          |
+| `managedDynamicMethodObject` | 如果该方法是动态的，则运行时在内部使用此缓冲区进行信息跟踪。     |
+| `requestedIP`                | 用于在给定本机代码地址时填充每个请求的结构。                    |
+| `rejitDataCurrent`           | 有关该方法的最新检测版本的信息。                                   |
+| `rejitDataRequested`         | 请求的本机地址的 Rejit 信息。                                             |
+| `cJittedRejitVersions`       | 方法已通过检测 rejitted 的次数。                           |
 
 ## <a name="remarks"></a>备注
 
-此结构存在于运行时内，不通过任何标头或库文件公开。 若要使用它，如上所示定义的结构。
+此结构存在于运行时中，并且不会通过任何标头或库文件公开。 若要使用它，请定义上面指定的结构。
 
-## <a name="requirements"></a>要求
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** 无  
-**库：** 无  
+## <a name="requirements"></a>需求
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**标头：** 内容  
+**库：** 内容  
 **.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [调试](index.md)
+- [调试结构](debugging-structures.md)
 - [常见数据类型](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)

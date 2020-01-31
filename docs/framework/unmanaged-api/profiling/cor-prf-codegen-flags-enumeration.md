@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3e184022-0247-4824-a23d-6b29593d8d01
 topic_type:
 - apiref
-ms.openlocfilehash: c49bdcb9345960bce018cefd4443948f997c7267
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4dd4e39c9092d018f13e3bd2822e9492d71141ad
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428361"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867290"
 ---
 # <a name="cor_prf_codegen_flags-enumeration"></a>COR_PRF_CODEGEN_FLAGS 枚举
-定义可以用[ICorProfilerFunctionControl：： SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)方法设置的代码生成标志。  
+定义可以用[ICorProfilerFunctionControl：： SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md)方法设置的代码生成标志。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,15 +35,15 @@ typedef enum {
   
 ## <a name="members"></a>Members  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
 |`COR_PRF_CODEGEN_DISABLE_INLINING`|不会将任何函数内联到此函数的主体中。 但是，函数本身可能会内联到其调用方。|  
 |`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|对于此函数的主体，将禁用所有优化。 但是，该函数本身可能仍会内联到其调用方。|  
   
 ## <a name="remarks"></a>备注  
- [ICorProfilerFunctionControl：： SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)方法使用 `COR_PRF_CODEGEN_FLAGS` 枚举，以使探查器能够控制 JIT 重新编译函数的代码生成。  
+ [ICorProfilerFunctionControl：： SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md)方法使用 `COR_PRF_CODEGEN_FLAGS` 枚举，以使探查器能够控制 JIT 重新编译函数的代码生成。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -54,4 +54,4 @@ typedef enum {
   
 ## <a name="see-also"></a>另请参阅
 
-- [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [分析枚举](profiling-enumerations.md)

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 7d1cf353f7e6c4b87c13598e7e6029960cd0f715
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 7ff4ff607ab70b55cda1e2c4736ff773d4907a22
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197813"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794118"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>演练：使用 ElementHost 控件映射属性
 
-本演练演示如何使用 <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> 属性将 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 属性映射到寄宿 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素上的相应属性。
+本演练演示如何使用 <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> 属性将 Windows 窗体属性映射到寄宿 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素上的相应属性。
 
 本演练涉及以下任务：
 
@@ -31,9 +31,9 @@ ms.locfileid: "73197813"
 
 有关本演练中所述任务的完整代码列表，请参阅[使用 ElementHost 控件示例映射属性](https://go.microsoft.com/fwlink/?LinkID=160018)。
 
-完成后，可以将 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 属性映射到寄宿元素上相应的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性。
+完成后，可以将 Windows 窗体属性映射到寄宿元素上相应的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 你需要以下组件来完成本演练：
 
@@ -41,7 +41,7 @@ ms.locfileid: "73197813"
 
 ## <a name="creating-the-project"></a>创建项目
 
-### <a name="to-create-the-project"></a>要创建项目
+### <a name="to-create-the-project"></a>创建项目
 
 1. 创建一个名为 `PropertyMappingWithElementHost`**Windows 窗体应用**项目。
 
@@ -140,7 +140,7 @@ ms.locfileid: "73197813"
 
 2. 按 F5 生成并运行该应用程序。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>
