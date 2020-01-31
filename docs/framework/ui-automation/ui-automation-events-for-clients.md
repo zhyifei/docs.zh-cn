@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 6d4525aeea458e1ec810efa659f373a2b5f21f57
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 497c05740fd9e1c05d877cfdb72881168fff6e2e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741308"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778756"
 ---
 # <a name="ui-automation-events-for-clients"></a>客户端的 UI 自动化事件
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "75741308"
  由于能够只侦听定义范围内的事件，因此效率也得到了提高。 例如，客户端可以在树中的所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 元素上侦听焦点更改事件，也可以只在一个元素及其后代上侦听。  
   
 > [!NOTE]
-> 不要假定所有可能的事件都是由 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 提供程序引发的。 例如，并非所有属性更改都会导致 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 和 Win32 控件的标准代理提供程序引发事件。  
+> 不要假定所有可能的事件都是由 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 提供程序引发的。 例如，并非所有属性更改都会导致 Windows 窗体和 Win32 控件的标准代理提供程序引发事件。  
   
  有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件的更广泛视图，请参阅[UI 自动化事件概述](ui-automation-events-overview.md)。  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 920b6483-7064-4d64-8613-fcc38ccf9b1e
 topic_type:
 - apiref
-ms.openlocfilehash: 51e0c5b08b8a2ac3b8eaf38cdabd682078ba70c8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 27b3037459ac4f995e37515f6e96c28449c80a4f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436052"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862940"
 ---
 # <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a>ICorProfilerInfo2::EnumModuleFrozenObjects 方法
 获取一个枚举器，该枚举数允许对指定模块中的冻结对象进行迭代。此方法已过时。  
@@ -38,9 +38,9 @@ HRESULT EnumModuleFrozenObjects(
  中包含要枚举的冻结对象的模块的 ID。  
   
  `ppEnum`  
- 弄一个指针，指向用于枚举冻结对象的[ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)接口的地址。  
+ 弄一个指针，指向用于枚举冻结对象的[ICorProfilerObjectEnum](icorprofilerobjectenum-interface.md)接口的地址。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -51,5 +51,5 @@ HRESULT EnumModuleFrozenObjects(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo 接口](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 接口](icorprofilerinfo2-interface.md)

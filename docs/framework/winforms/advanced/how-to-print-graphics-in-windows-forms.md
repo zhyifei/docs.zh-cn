@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Windows 窗体中打印图形
+title: 如何：打印图形
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: 347c7064c199e953b496c9505f08c9e12c1ae670
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 2435b3bc14747a00d2a0fc03a9ebd21ae43c5369
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052817"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740641"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>如何：在 Windows 窗体中打印图形
-通常情况下，想要在基于 Windows 的应用程序中打印图形。 <xref:System.Drawing.Graphics>类提供了对象绘制到设备，如屏幕或打印机的方法。  
+通常，您需要在基于 Windows 的应用程序中打印图形。 <xref:System.Drawing.Graphics> 类提供将对象绘制到设备（如屏幕或打印机）的方法。  
   
-### <a name="to-print-graphics"></a>若要打印图形  
+### <a name="to-print-graphics"></a>打印图形  
   
-1. 添加<xref:System.Drawing.Printing.PrintDocument>向窗体组件。  
+1. 将 <xref:System.Drawing.Printing.PrintDocument> 组件添加到窗体。  
   
-2. 在中<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件处理程序，使用<xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A>属性的<xref:System.Drawing.Printing.PrintPageEventArgs>类，以指示要打印的图形类型上的打印机。  
+2. 在 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件处理程序中，使用 <xref:System.Drawing.Printing.PrintPageEventArgs> 类的 <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> 属性指示打印机要打印的图形类型。  
   
-     下面的代码示例显示了用于创建一个蓝色的椭圆的边框内的事件处理程序。 矩形具有的以下位置和尺寸： 开始为 100，150 具有 250 的宽度和高度为 250。  
+     下面的代码示例演示了一个事件处理程序，用于在边框内创建蓝色椭圆。 该矩形具有以下位置和维度：从100开始150，宽度为250，高度为250。  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -52,7 +52,7 @@ ms.locfileid: "66052817"
        }  
     ```  
   
-     (VisualC#和 Visual C++)将以下代码放在窗体的构造函数中以注册事件处理程序。  
+     （视觉C#对象和C++视觉对象）将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -66,7 +66,7 @@ ms.locfileid: "66052817"
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>

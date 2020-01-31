@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08dbd558-bd39-4263-94c2-71e70687aaf0
 topic_type:
 - apiref
-ms.openlocfilehash: c1e2b557a5e5794c50986b1af8ec39faba845cc9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d1d6d2f506086dd3204053b0b635da2e7cdc87e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125512"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783954"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>ICorDebugComObjectValue::GetCachedInterfacePointers 方法
 获取缓存在当前运行时可调用包装器（RCW）上的原始接口指针。  
@@ -48,7 +48,7 @@ HRESULT GetCachedInterfacePointers(
   
 ## <a name="remarks"></a>备注  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -57,7 +57,7 @@ HRESULT GetCachedInterfacePointers(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugComObjectValue 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugComObjectValue 接口](icordebugcomobjectvalue-interface.md)
+- [调试接口](debugging-interfaces.md)

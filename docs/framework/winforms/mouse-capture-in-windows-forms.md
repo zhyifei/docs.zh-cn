@@ -1,26 +1,26 @@
 ---
-title: Windows 窗体中的鼠标捕获
+title: 鼠标捕获
 ms.date: 03/30/2017
 helpviewer_keywords:
 - mouse [Windows Forms], capture
 ms.assetid: 8911d4b0-a4f8-4f93-8246-371aebd27d0c
-ms.openlocfilehash: 30432c6978f60cc9ad47d5df5dafc7aa45229f3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10583f074831b16dce3c713b4ac9a76c7005c9f5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800953"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741019"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Windows 窗体中的鼠标捕获
-*鼠标捕获*指何时控件执行的所有鼠标输入的命令。 当控件已捕获鼠标时，它接收鼠标输入，指示在其边框内为指针。  
+*鼠标捕获*指的是控件使用所有鼠标输入的命令。 当控件已捕获鼠标时，它将接收鼠标输入，无论指针是否在其边框内。  
   
 ## <a name="setting-mouse-capture"></a>设置鼠标捕获  
- 在 Windows 窗体中鼠标用户按鼠标按钮上一个控件，, 并在用户释放鼠标按钮时由控件中释放鼠标时由该控件捕获。  
+ 在 Windows 窗体当用户在控件上按下鼠标按钮时，由控件捕获鼠标，而当用户释放鼠标按钮时，鼠标由控件释放。  
   
- <xref:System.Windows.Forms.Control.Capture%2A>属性的<xref:System.Windows.Forms.Control>类指定控件是否已捕获鼠标。 若要确定当控件失去鼠标捕获，请处理<xref:System.Windows.Forms.Control.MouseCaptureChanged>事件。  
+ <xref:System.Windows.Forms.Control> 类的 <xref:System.Windows.Forms.Control.Capture%2A> 属性指定控件是否已捕获鼠标。 若要确定控件何时失去了鼠标捕获，请处理 <xref:System.Windows.Forms.Control.MouseCaptureChanged> 事件。  
   
- 仅在前台窗口可以捕获鼠标。 当后台窗口尝试捕获鼠标时，窗口接收鼠标事件时鼠标指针位于该窗口的可见部分发生的消息。 此外，即使前景窗口已捕获鼠标，用户仍可以单击另一个窗口，将其带到前台。 时捕获鼠标、 键盘快捷方式执行操作不起作用。  
+ 只有前景窗口才能捕获鼠标。 当后台窗口尝试捕获鼠标时，窗口仅接收鼠标指针位于窗口可见部分内时发生的鼠标事件的消息。 此外，即使前景窗口已捕获鼠标，用户仍可以单击其他窗口，使其成为前台。 捕获鼠标时，快捷键不起作用。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Windows 窗体应用程序中的鼠标输入](mouse-input-in-a-windows-forms-application.md)

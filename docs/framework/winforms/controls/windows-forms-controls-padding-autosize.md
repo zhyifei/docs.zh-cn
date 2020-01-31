@@ -1,5 +1,5 @@
 ---
-title: 演练：使用 Padding、Margins 和 AutoSize 属性对 Windows 窗体控件进行布局
+title: 用填充、边距和 AutoSize 属性对控件进行布局
 ms.date: 03/30/2017
 f1_keywords:
 - Margin.Bottom
@@ -18,12 +18,12 @@ ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 76c880c208355b01d0fbaf46cf58091ad147846b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ca7942c04434592f2541252c47ac3dd17e03dbac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460610"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742369"
 ---
 # <a name="walkthrough-lay-out-controls-with-padding-margins-and-the-autosize-property"></a>演练：按填充、边距和 AutoSize 属性对控件进行布局
 
@@ -39,7 +39,7 @@ ms.locfileid: "73460610"
 
 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性通知控件自动调整其内容的大小。 它不会将其大小调整为小于其原始 <xref:System.Windows.Forms.Control.Size%2A> 属性的值，并且将考虑其 <xref:System.Windows.Forms.Control.Padding%2A> 属性的值。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 需要 Visual Studio 才能完成此演练。
 
@@ -174,7 +174,7 @@ ms.locfileid: "73460610"
 
 - 尝试在 <xref:System.Windows.Forms.Panel> 控件中停靠子控件。 <xref:System.Windows.Forms.Control.Padding%2A> 属性是对 <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> 属性的更通用的实现，你可以通过将子控件置于 <xref:System.Windows.Forms.Panel> 控件中并将子控件的 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>来满足这种情况。 将 <xref:System.Windows.Forms.Panel> 控件的 <xref:System.Windows.Forms.Control.Padding%2A> 属性设置为不同的值，并记下该效果。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>

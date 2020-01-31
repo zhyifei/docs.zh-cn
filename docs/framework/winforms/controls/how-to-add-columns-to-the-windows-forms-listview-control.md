@@ -1,5 +1,5 @@
 ---
-title: 如何：向 Windows 窗体 ListView 控件中添加列
+title: 向 ListView 控件添加列
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,27 +9,27 @@ helpviewer_keywords:
 - columns [Windows Forms], adding to ListView controls
 - list views [Windows Forms], adding columns
 ms.assetid: 79174274-12ee-4a5d-80db-6ec02976d010
-ms.openlocfilehash: 5c87d43513f2125945145445c61f689cdd9d2aaf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: dd438ffbadddfc37ec9eb15e59a908bb58472a45
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345737"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744583"
 ---
-# <a name="how-to-add-columns-to-the-windows-forms-listview-control"></a>如何：向 Windows 窗体 ListView 控件中添加列
-在详细信息视图中，<xref:System.Windows.Forms.ListView>控件可以显示每个列表项的多个列。 列可用于向用户显示多种类型的每个列表项的相关信息。 例如，文件的列表可以显示文件名、 文件类型、 大小和文件的上次修改的日期。 有关在创建后填充列的信息，请参阅[如何：在具有 Windows 的列中显示子项窗体 ListView 控件](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)。  
+# <a name="how-to-add-columns-to-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤에 열 추가
+在详细信息视图中，<xref:System.Windows.Forms.ListView> 控件可以显示每个列表项的多个列。 您可以使用这些列向用户显示有关每个列表项的多种类型的信息。 例如，文件列表可以显示文件的名称、文件类型、大小和文件的上次修改日期。 有关在创建列后对其进行填充的信息，请参阅[如何：用 Windows 窗体 ListView 控件在列中显示子项](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)。  
   
-### <a name="to-add-columns-programmatically"></a>若要以编程方式添加列  
+### <a name="to-add-columns-programmatically"></a>以编程方式添加列  
   
-1. 设置控件的<xref:System.Windows.Forms.ListView.View%2A>属性设置为<xref:System.Windows.Forms.View.Details>。  
+1. 将控件的 <xref:System.Windows.Forms.ListView.View%2A> 属性设置为 <xref:System.Windows.Forms.View.Details>。  
   
-2. 使用<xref:System.Windows.Forms.ListView.ColumnHeaderCollection.Add%2A>方法的列表视图<xref:System.Windows.Forms.ListView.Columns%2A>属性。  
+2. 使用列表视图的 <xref:System.Windows.Forms.ListView.Columns%2A> 属性的 <xref:System.Windows.Forms.ListView.ColumnHeaderCollection.Add%2A> 方法。  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#31)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#31)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.ListView>
-- [ListView 控件](listview-control-windows-forms.md)
-- [ListView 控件概述](listview-control-overview-windows-forms.md)
+- [ListView 컨트롤](listview-control-windows-forms.md)
+- [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：设置 Windows 窗体 RichTextBox 控件的字体特性
+title: 为 RichTextBox 控件设置字体特性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,25 +14,25 @@ helpviewer_keywords:
 - text boxes [Windows Forms], formatting text
 - formatting [Windows Forms]
 ms.assetid: 2bc23ddb-0529-4489-a1a2-ad253cb43f9a
-ms.openlocfilehash: 4919e94c23b1a67680ea0f360304ee0f75c7f425
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f27256c155223df576ee3c42e6bf65270c870b0f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963225"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744861"
 ---
-# <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>如何：设置 Windows 窗体 RichTextBox 控件的字体特性
-Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件具有很多用于设置其显示文本格式的选项。 您可以使用<xref:System.Windows.Forms.RichTextBox.SelectionFont%2A>属性将所选字符设置为粗体、下划线或斜体。 也可以使用此属性来更改所选字符的大小和字样。 <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A>属性使您可以更改所选字符的颜色。  
+# <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤의 글꼴 특성 설정
+Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件有很多用于设置其显示文本格式的选项。 您可以使用 <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> 属性使所选字符变为粗体、下划线或斜体。 또한 이 속성을 사용하여 선택한 문자의 크기와 서체를 변경할 수도 있습니다. <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> 属性允许您更改所选字符的颜色。  
   
-### <a name="to-change-the-appearance-of-characters"></a>更改字符的外观  
+### <a name="to-change-the-appearance-of-characters"></a>문자의 모양을 변경하려면  
   
-1. <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A>将属性设置为合适的字体。  
+1. 将 <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> 属性设置为合适的字体。  
   
-     若要使用户能够在应用程序中设置字体系列、字号和字体, 通常应使用<xref:System.Windows.Forms.FontDialog>组件。 有关概述，请参阅 [FontDialog 组件概述](fontdialog-component-overview-windows-forms.md)。  
+     若要使用户能够在应用程序中设置字体系列、字号和字体，通常应使用 <xref:System.Windows.Forms.FontDialog> 组件。 개요는 [FontDialog 구성 요소 개요](fontdialog-component-overview-windows-forms.md)를 참조하세요.  
   
-2. <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A>将属性设置为适当的颜色。  
+2. 将 <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> 属性设置为适当的颜色。  
   
-     若要使用户能够在应用程序中设置颜色, 通常应使用<xref:System.Windows.Forms.ColorDialog>组件。 有关概述，请参阅 [ColorDialog 组件概述](colordialog-component-overview-windows-forms.md)。  
+     若要使用户能够在应用程序中设置颜色，通常应使用 <xref:System.Windows.Forms.ColorDialog> 组件。 개요는 [ColorDialog 구성 요소 개요](colordialog-component-overview-windows-forms.md)를 참조하세요.  
   
     ```vb  
     RichTextBox1.SelectionFont = New Font("Tahoma", 12, FontStyle.Bold)  
@@ -51,10 +51,10 @@ Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件具有很多用于设
     ```  
   
     > [!NOTE]
-    > 这些属性只影响所选的文本，如果未选择文本，则只影响当前插入点位置处键入的文本。 有关以编程方式选择文本的信息<xref:System.Windows.Forms.TextBoxBase.Select%2A>, 请参阅。  
+    > 이러한 속성은 선택한 텍스트에만 적용되며, 선택한 텍스트가 없으면 삽입 지점의 현재 위치에서 입력한 텍스트에 적용됩니다. 有关以编程方式选择文本的信息，请参阅 <xref:System.Windows.Forms.TextBoxBase.Select%2A>。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox 控件](richtextbox-control-windows-forms.md)
-- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
+- [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)
+- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

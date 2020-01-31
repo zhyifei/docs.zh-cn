@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: f41fc102dfbe24d47e194da7477791a46f8d712d
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 98208f1e1fa1b540bf3880e33478854128505233
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741744"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778789"
 ---
 # <a name="ui-automation-providers-overview"></a>UI 自动化提供程序概述
 > [!NOTE]
@@ -18,9 +18,9 @@ ms.locfileid: "75741744"
   
  UI 自动化提供程序使控件能够与 UI 自动化客户端应用程序进行通信。 通常， [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 中的每个控件或其他非重复元素均由提供程序表示。 提供程序公开有关该元素的信息并选择性实现控件模式，这些空间模式使客户端应用程序能够与控件进行交互。  
   
- 客户端应用程序通常不需要直接使用提供程序。 使用 Win32、[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]或 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 框架的应用程序中的大多数标准控件自动公开给 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 系统。 实现自定义控件的应用程序也可实现这些控件的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供程序，客户端应用程序不需要采取任何特殊措施来获得其访问权限。  
+ 客户端应用程序通常不需要直接使用提供程序。 使用 Win32、Windows 窗体或 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 框架的应用程序中的大多数标准控件自动公开给 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 系统。 实现自定义控件的应用程序也可实现这些控件的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供程序，客户端应用程序不需要采取任何特殊措施来获得其访问权限。  
   
- 本主题概述控件开发人员如何实现 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供程序，特别是对于 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 和 Win32 窗口中的控件。  
+ 本主题概述控件开发人员如何实现 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供程序，特别是对于 Windows 窗体和 Win32 窗口中的控件。  
   
 <a name="Types_of_Providers"></a>   
 ## <a name="types-of-providers"></a>提供程序类型  

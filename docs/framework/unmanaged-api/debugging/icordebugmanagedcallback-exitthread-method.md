@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 62db708b-6cf0-45c5-b897-4b5c75bd2505
 topic_type:
 - apiref
-ms.openlocfilehash: bbe2727e4b93cf6d7b3111b6060d170e497024a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fa649fd1983a76c71d400ad3e6965ac0794da6ed
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130773"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781609"
 ---
 # <a name="icordebugmanagedcallbackexitthread-method"></a>ICorDebugManagedCallback::ExitThread 方法
 通知调试器已退出正在执行的托管代码的线程。  
@@ -44,7 +44,7 @@ HRESULT ExitThread (
 ## <a name="remarks"></a>备注  
  激发 `ExitThread` 回调后，线程将不再显示在线程枚举中。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -53,6 +53,6 @@ HRESULT ExitThread (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback 接口](icordebugmanagedcallback-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：将快捷菜单与 Windows 窗体 NotifyIcon 组件关联
+title: 关联快捷菜单与 NotifyIcon 组件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,46 +10,46 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: bf5602d0526fdd97f0cc14382339095a793f13c3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 392c04f73feaec201033ad76f9419a0e070bec70
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922765"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742044"
 ---
-# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>如何：将快捷菜单与 Windows 窗体 NotifyIcon 组件关联
+# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>방법: Windows Forms NotifyIcon 구성 요소에 바로 가기 메뉴 연결
 > [!NOTE]
-> 尽管<xref:System.Windows.Forms.MenuStrip>和<xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.ContextMenu>将功能替换为以前版本的和控件, 并将其保留以实现后向兼容性和将来使用 (如果你选择)。 <xref:System.Windows.Forms.ContextMenuStrip>  
+> 尽管 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.ContextMenuStrip> 将功能替换并添加到以前版本的 <xref:System.Windows.Forms.MainMenu> 和 <xref:System.Windows.Forms.ContextMenu> 控件中，但 <xref:System.Windows.Forms.MainMenu> 和 <xref:System.Windows.Forms.ContextMenu> 会保留，以实现向后兼容性和将来使用（如果你选择）。  
   
- <xref:System.Windows.Forms.NotifyIcon>组件在任务栏的状态通知区域中显示一个图标。 通常情况下, 应用程序允许您右键单击此图标, 将命令发送到它代表的应用程序。 通过将<xref:System.Windows.Forms.ContextMenu>组件<xref:System.Windows.Forms.NotifyIcon>与组件关联, 你可以将此功能添加到应用程序。  
+ <xref:System.Windows.Forms.NotifyIcon> 组件在任务栏的状态通知区域中显示一个图标。 通常情况下，应用程序允许您右键单击此图标，将命令发送到它代表的应用程序。 通过将 <xref:System.Windows.Forms.ContextMenu> 组件与 <xref:System.Windows.Forms.NotifyIcon> 组件相关联，你可以将此功能添加到应用程序。  
   
 > [!NOTE]
-> 如果希望在启动时最大程度地减少应用程序, 同时在任务栏<xref:System.Windows.Forms.NotifyIcon>中显示组件的实例, 请将主窗<xref:System.Windows.Forms.Form.WindowState%2A>体的<xref:System.Windows.Forms.FormWindowState.Minimized>属性设置<xref:System.Windows.Forms.NotifyIcon>为, 并确保<xref:System.Windows.Forms.NotifyIcon.Visible%2A>组件的属性设置为`true`。  
+> 如果希望在启动时最大程度地减少应用程序，同时在任务栏中显示 <xref:System.Windows.Forms.NotifyIcon> 组件的实例，请将主窗体的 <xref:System.Windows.Forms.Form.WindowState%2A> 属性设置为 <xref:System.Windows.Forms.FormWindowState.Minimized>，并确保 <xref:System.Windows.Forms.NotifyIcon> 组件的 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 属性设置为 `true`。  
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>在设计时将快捷菜单与 NotifyIcon 组件关联  
   
-1. 将组件添加到窗体, 并设置重要属性, 如<xref:System.Windows.Forms.NotifyIcon.Icon%2A>和<xref:System.Windows.Forms.NotifyIcon.Visible%2A>属性。 <xref:System.Windows.Forms.NotifyIcon>  
+1. 将 <xref:System.Windows.Forms.NotifyIcon> 组件添加到窗体中，并设置重要属性，例如 <xref:System.Windows.Forms.NotifyIcon.Icon%2A> 和 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 属性。  
   
-     有关详细信息，请参阅[如何：向任务栏添加应用程序图标, 其中包含 Windows 窗体 NotifyIcon](app-icons-to-the-taskbar-with-wf-notifyicon.md)组件。  
+     有关详细信息，请参阅[如何：向任务栏添加应用程序图标以及 Windows 窗体 NotifyIcon 组件](app-icons-to-the-taskbar-with-wf-notifyicon.md)。  
   
-2. <xref:System.Windows.Forms.ContextMenu>将组件添加到 Windows 窗体。  
+2. 将 <xref:System.Windows.Forms.ContextMenu> 组件添加到 Windows 窗体。  
   
-     将菜单项添加到快捷菜单, 表示要在运行时使用的命令。 这也是向这些菜单项添加菜单增强功能 (如访问密钥) 的好时机。  
+     将菜单项添加到快捷菜单，表示要在运行时使用的命令。 这也是向这些菜单项添加菜单增强功能（如访问密钥）的好时机。  
   
-3. 将<xref:System.Windows.Forms.NotifyIcon>组件<xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>的属性设置为添加的快捷菜单。  
+3. 将 <xref:System.Windows.Forms.NotifyIcon> 组件的 <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> 属性设置为添加的快捷菜单。  
   
-     设置此属性后, 单击任务栏上的图标时, 将显示快捷菜单。  
+     设置此属性后，单击任务栏上的图标时，将显示快捷菜单。  
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>以编程方式将快捷菜单与 NotifyIcon 组件相关联  
   
-1. <xref:System.Windows.Forms.NotifyIcon>创建类<xref:System.Windows.Forms.NotifyIcon.Visible%2A> <xref:System.Windows.Forms.NotifyIcon.Icon%2A> <xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.NotifyIcon>和类的实例, 其中包含应用程序所需的任何属性设置 (组件的属性、组件的菜单项) <xref:System.Windows.Forms.ContextMenu>组件)。  
+1. 创建 <xref:System.Windows.Forms.NotifyIcon> 类和 <xref:System.Windows.Forms.ContextMenu> 类的实例，其中包含应用程序所需的任何属性设置（<xref:System.Windows.Forms.NotifyIcon.Icon%2A> 和 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 属性（<xref:System.Windows.Forms.NotifyIcon> 组件的菜单项）。  
   
-2. 将<xref:System.Windows.Forms.NotifyIcon>组件<xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>的属性设置为添加的快捷菜单。  
+2. 将 <xref:System.Windows.Forms.NotifyIcon> 组件的 <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> 属性设置为添加的快捷菜单。  
   
-     设置此属性后, 单击任务栏上的图标时, 将显示快捷菜单。  
+     设置此属性后，单击任务栏上的图标时，将显示快捷菜单。  
   
     > [!NOTE]
-    > 下面的代码示例创建一个基本菜单结构。 您将需要自定义菜单选项, 使其适合您正在开发的应用程序。 此外, 您还需要编写代码来处理这些菜单<xref:System.Windows.Forms.MenuItem.Click>项的事件。  
+    > 下面的代码示例创建一个基本菜单结构。 您将需要自定义菜单选项，使其适合您正在开发的应用程序。 此外，您还需要编写代码来处理这些菜单项的 <xref:System.Windows.Forms.MenuItem.Click> 事件。  
   
     ```vb  
     Public ContextMenu1 As New ContextMenu  
@@ -119,17 +119,17 @@ public:
 ```  
   
 > [!NOTE]
-> 您必须通过`notifyIcon1`在`contextMenu1,`您的窗体的构造函数中包含以下语句来初始化和可执行的操作:  
+> 必须通过在窗体的构造函数中包含以下语句来初始化 `notifyIcon1` 和 `contextMenu1,`：  
   
 ```cpp  
 notifyIcon1 = gcnew System::Windows::Forms::NotifyIcon();  
 contextMenu1 = gcnew System::Windows::Forms::ContextMenu();  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [如何：向任务栏添加应用程序图标, 其中包含 Windows 窗体 NotifyIcon 组件](app-icons-to-the-taskbar-with-wf-notifyicon.md)
-- [NotifyIcon 组件](notifyicon-component-windows-forms.md)
-- [NotifyIcon 组件概述](notifyicon-component-overview-windows-forms.md)
+- [방법: Windows Forms NotifyIcon 구성 요소를 사용하여 작업 표시줄에 애플리케이션 아이콘 추가](app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [NotifyIcon 구성 요소](notifyicon-component-windows-forms.md)
+- [NotifyIcon 구성 요소 개요](notifyicon-component-overview-windows-forms.md)

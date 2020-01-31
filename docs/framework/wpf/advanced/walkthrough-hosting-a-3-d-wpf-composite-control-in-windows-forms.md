@@ -1,5 +1,6 @@
 ---
-title: 演练：在 Windows 窗体中承载 3-D WPF 复合控件
+title: 在 Windows 窗体中托管 3D WPF 复合控件
+titleSuffix: ''
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,20 +9,20 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-ms.openlocfilehash: f33adf6bac5efab87fecd9e95437ac8cff6d1f16
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: 07222809d62b207730ddad3c87b8fb60e1602bc3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976558"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744450"
 ---
-# <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>演练：在 Windows 窗体中承载 3-D WPF 复合控件
+# <a name="walkthrough-host-a-3d-wpf-composite-control-in-windows-forms"></a>演练：在 Windows 窗体中托管 3D WPF 复合控件
 
 本演练演示如何创建 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 复合控件，并使用 <xref:System.Windows.Forms.Integration.ElementHost> 控件将其承载于 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件和窗体中。
 
-在本演练中，您将实现一个 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>，其中包含两个子控件。 <xref:System.Windows.Controls.UserControl> 将显示一个三维（3-d）圆锥。 与 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]相比，呈现三维对象比处理 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 要容易得多。 因此，在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]中承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> 类来创建三维图形是有意义的。
+在本演练中，您将实现一个 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>，其中包含两个子控件。 <xref:System.Windows.Controls.UserControl> 显示三维（3D）圆锥。 与 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]相比，呈现3D 对象更容易 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 因此，在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]中承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> 类来创建3D 图形是有意义的。
 
-本演练涉及以下任务：
+이 연습에서 설명하는 작업은 다음과 같습니다.
 
 - 创建 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>。
 
@@ -29,9 +30,9 @@ ms.locfileid: "73976558"
 
 - 承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
-你需要以下组件来完成本演练：
+이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
 - Visual Studio 2017
 
@@ -83,13 +84,13 @@ ms.locfileid: "73976558"
      [!code-csharp[HostingWpfUserControlInWf#10](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/WpfUserControlHost/Form1.cs#10)]
      [!code-vb[HostingWpfUserControlInWf#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWpfUserControlInWf/VisualBasic/WpfUserControlHost/Form1.vb#10)]
 
-4. 按 F5 生成并运行该应用程序。
+4. **F5** 키를 눌러 애플리케이션을 빌드하고 실행합니다.
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [在 Visual Studio 中设计 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
-- [演练：在 Windows 窗体中承载 WPF 复合控件](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [演练：在 WPF 中托管 Windows 窗体复合控件](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Visual Studio에서 XAML 디자인](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
+- [연습: Windows Forms에서 WPF 복합 컨트롤 호스팅](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [연습: WPF에서 Windows Forms 복합 컨트롤 호스팅](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [在 Windows 窗体示例中承载 WPF 复合控件](https://go.microsoft.com/fwlink/?LinkID=160001)

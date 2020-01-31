@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 0b7c9fc0e9dd0f559c52f692c405a3f9e68814d0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: be2af77f9680ab3285720525638bba8ef2041999
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711878"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745374"
 ---
 # <a name="types-c-programming-guide"></a>类型（C# 编程指南）
 
@@ -113,7 +113,7 @@ char c = 'Z';
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-有关结构的详细信息，请参阅[结构](../classes-and-structs/structs.md)。 有关 .NET 中的值类型的详细信息，请参阅[值类型](../../language-reference/keywords/value-types.md)。
+有关结构的详细信息，请参阅[结构](../classes-and-structs/structs.md)。 有关值类型的详细信息，请参阅[值类型](../../language-reference/builtin-types/value-types.md)。
 
 另一种值类型是[枚举](../../language-reference/builtin-types/enum.md)。 枚举定义的是一组已命名的整型常量。 例如，.NET 类库中的 <xref:System.IO.FileMode?displayProperty=nameWithType> 枚举包含一组已命名的常量整数，用于指定打开文件应采用的方式。 下面的示例展示了具体定义：
 
@@ -148,7 +148,7 @@ IMyInterface iface = new MyClass();
 
 ## <a name="types-of-literal-values"></a>文本值的类型
 
-在 C# 中，文本值从编译器接收类型。 可以通过在数字末尾追加一个字母来指定数字文本应采用的类型。 例如，若要将值 4.56 指定为应按浮点值处理，请在数字后面追加“f”或“F”：`4.56f`。 如果没有追加字母，那么编译器就会推断文本值的类型。 若要详细了解可以使用字母后缀指定哪些类型，请参阅[值类型](../../language-reference/keywords/value-types.md)中的各个类型参考页。
+在 C# 中，文本值从编译器接收类型。 可以通过在数字末尾追加一个字母来指定数字文本应采用的类型。 例如，若要将值 4.56 指定为应按浮点值处理，请在数字后面追加“f”或“F”：`4.56f`。 如果没有追加字母，那么编译器就会推断文本值的类型。 若要详细了解可以使用字母后缀指定哪些类型，请参阅[整型数值类型](../../language-reference/builtin-types/integral-numeric-types.md)和[浮点数值类型](../../language-reference/builtin-types/floating-point-numeric-types.md)。
 
 由于文本已类型化，且所有类型最终都是从 <xref:System.Object?displayProperty=nameWithType> 派生，因此可以编写和编译如下所示的代码：
 
@@ -185,7 +185,7 @@ stringList.Add(4);
 
 - [使用类型 dynamic](./using-type-dynamic.md)
 
-- [值类型](../../language-reference/keywords/value-types.md)
+- [值类型](../../language-reference/builtin-types/value-types.md)
 
 - [引用类型](../../language-reference/keywords/reference-types.md)
 

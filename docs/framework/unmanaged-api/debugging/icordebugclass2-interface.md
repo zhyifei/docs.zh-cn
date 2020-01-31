@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: 5416de70-43f2-4cdf-a11f-d570759c9c0c
 topic_type:
 - apiref
-ms.openlocfilehash: cb2ab28824d209dd1eed627600e30e9ddb0d7c7a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 795e9f4862992d95eeef98a986545cca47d828c6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125721"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784143"
 ---
 # <a name="icordebugclass2-interface"></a>ICorDebugClass2 接口
 
-表示泛型类或具有 <xref:System.Type> 类型的方法参数的类。 此接口扩展[ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)。  
+表示泛型类或具有 <xref:System.Type> 类型的方法参数的类。 此接口扩展[ICorDebugClass](icordebugclass-interface.md)。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetParameterizedType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-getparameterizedtype-method.md)|获取此类的类型声明。|  
-|[SetJMCStatus 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|对于此类的每个方法，设置一个值，该值指示该方法是否为用户定义的代码。|  
+|[GetParameterizedType 方法](icordebugclass2-getparameterizedtype-method.md)|获取此类的类型声明。|  
+|[SetJMCStatus 方法](icordebugclass2-setjmcstatus-method.md)|对于此类的每个方法，设置一个值，该值指示该方法是否为用户定义的代码。|  
   
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -46,7 +46,7 @@ ms.locfileid: "73125721"
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugClass 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugClass 接口](icordebugclass-interface.md)
+- [调试接口](debugging-interfaces.md)

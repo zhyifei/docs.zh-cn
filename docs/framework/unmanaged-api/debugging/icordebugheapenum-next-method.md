@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2221fd06-9e27-4113-972e-2530db8c3594
 topic_type:
 - apiref
-ms.openlocfilehash: 1beb69bfaad9acb9c269ad8becb81bea64edb6a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2c84112984e9cb7dec2a492ac16af00e14770806
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138459"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782484"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next 方法
-获取指定数量的[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)实例，这些实例包含有关托管堆上的对象的信息。  
+获取指定数量的[COR_HEAPOBJECT](cor-heapobject-structure.md)实例，这些实例包含有关托管堆上的对象的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,16 +38,16 @@ HRESULT Next(
  celt  
  [in] 要检索的对象数。  
   
- 对象  
- 弄指针数组，其中每个都指向一个[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)对象，该对象提供有关托管堆上的对象的信息。  
+ 对象执行）  
+ 弄指针数组，其中每个都指向一个[COR_HEAPOBJECT](cor-heapobject-structure.md)对象，该对象提供有关托管堆上的对象的信息。  
   
  pceltFetched  
- 弄一个指针，指向 `objects`中实际返回的[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)对象的数目。 如果 `celt` 为 1，此值可能为 `null`。  
+ 弄一个指针，指向 `objects`中实际返回的[COR_HEAPOBJECT](cor-heapobject-structure.md)对象的数量。 如果 `celt` 为 1，此值可能为 `null`。  
   
 ## <a name="remarks"></a>备注  
  `COR_HEAPOBJECT.type` 字段是嵌套的引用计数 COM 接口的标识符。 此引用必须由 `ICorDebugHeapEnum::Next` 的调用方释放。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -56,7 +56,7 @@ HRESULT Next(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugHeapEnum 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugHeapEnum 接口](icordebugheapenum-interface.md)
+- [调试接口](debugging-interfaces.md)

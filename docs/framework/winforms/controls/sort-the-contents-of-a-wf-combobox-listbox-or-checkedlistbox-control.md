@@ -1,5 +1,5 @@
 ---
-title: 如何：对 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件的内容排序
+title: 对 ComboBox、ListBox 或 CheckedListBox 控件的内容进行排序
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CheckedListBox control [Windows Forms], sorting
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - list boxes [Windows Forms], sorting contents
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
-ms.openlocfilehash: bd26d396c238bfc53858320b8f4487df84b3436a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dee969d777edf76434622fe632f7e934987a1dc3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902988"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742964"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：对 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件的内容排序
-Windows 窗体控件不排序操作时它们是数据绑定。 若要显示已排序的数据，请使用支持排序的数据源，然后对其进行排序的数据源。 支持排序的数据源是数据的视图，数据查看管理器，并已排序数组。  
+Windows 窗体控件在数据绑定时不进行排序。 若要显示已排序的数据，请使用支持排序的数据源，然后使数据源对其进行排序。 支持排序的数据源包括数据视图、数据视图管理器和排序数组。  
   
- 如果控件不是数据绑定，您可以对其进行排序。  
+ 如果控件不是数据绑定的，则可以对其进行排序。  
   
-### <a name="to-sort-the-list"></a>若要对列表进行排序  
+### <a name="to-sort-the-list"></a>对列表进行排序  
   
 1. 将 `Sorted` 属性设置为 `true`。  
   
-     此设置按排序顺序重新定位所有现有列表项。  
+     此设置会按排序顺序重新定位所有现有列表项。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
 - [Windows 窗体数据绑定](../windows-forms-data-binding.md)
-- [如何：添加和删除项从 Windows 窗体 ComboBox、 ListBox 或 CheckedListBox 控件](add-and-remove-items-from-a-wf-combobox.md)
+- [如何：在 Windows 窗体 ComboBox、ListBox 或 CheckedListBox 控件中添加和删除项](add-and-remove-items-from-a-wf-combobox.md)
 - [何时使用 Windows 窗体 ComboBox 而非 ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
 - [用于列出选项的 Windows 窗体控件](windows-forms-controls-used-to-list-options.md)

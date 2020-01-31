@@ -1,38 +1,38 @@
 ---
-title: Windows 窗体控件开发基础知识
+title: 控件开发基础知识
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [Windows Forms], derivation types
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-ms.openlocfilehash: 8d9dedc016a8fda654fecb2ee09c7206b3ddea82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fab0a76e2f9fdb7e2f89e9d6a10dd9c522a6d8e1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584768"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739916"
 ---
 # <a name="windows-forms-control-development-basics"></a>Windows 窗体控件开发基础知识
-Windows 窗体控件是派生的类直接或间接从<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。 以下列表描述用于开发 Windows 窗体控件的常见方案：  
+Windows 窗体控件是直接或间接从 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>派生的类。 以下列表描述了用于开发 Windows 窗体控件的常见方案：  
   
-- 组合现有控件来创作复合控件。  
+- 组合现有控件以创作复合控件。  
   
-     复合控件封装为控件可以重复使用的用户界面。 复合控件的一个示例是包含一个文本框和重置按钮控件。 可视化设计器提供了用于创建复合控件的丰富支持。 若要创作复合控件，派生<xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>。 类的基类<xref:System.Windows.Forms.UserControl>提供了键盘路由子控件，并使子控件作为组进行处理。 有关详细信息，请参阅[开发复合 Windows 窗体控件](developing-a-composite-windows-forms-control.md)。  
+     复合控件封装可作为控件重复使用的用户界面。 复合控件的一个示例是包含一个文本框和一个 "重置" 按钮的控件。 可视化设计器为创建复合控件提供了丰富的支持。 若要创作复合控件，请从 <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>派生。 基类 <xref:System.Windows.Forms.UserControl> 为子控件提供了键盘路由，并使子控件可以作为组工作。 有关详细信息，请参阅[开发复合 Windows 窗体控件](developing-a-composite-windows-forms-control.md)。  
   
-- 扩展现有控件进行自定义，或将添加到其功能。  
+- 扩展现有控件以便对其进行自定义或将其添加到其功能。  
   
-     不能更改其颜色的按钮和一个按钮，跟踪已点击的次数的其他属性是扩展控件的示例。 通过从其派生和重写或添加属性、 方法和事件，可以自定义任何 Windows 窗体控件。  
+     不能更改其颜色的按钮以及具有其他属性（用于跟踪单击次数）的按钮是扩展控件的示例。 您可以通过从该控件派生并重写或添加属性、方法和事件来自定义任何 Windows 窗体控件。  
   
-- 创作的控件，不会合并或扩展现有的控件。  
+- 创作不会合并或扩展现有控件的控件。  
   
-     在此方案中，从基类派生你的控件<xref:System.Windows.Forms.Control>。 您可以添加以及重写属性、 方法和事件的基类。 若要开始，请参阅[如何：开发的简单 Windows 窗体控件](how-to-develop-a-simple-windows-forms-control.md)。  
+     在此方案中，从基类 <xref:System.Windows.Forms.Control>派生控件。 你可以添加，还可以重写基类的属性、方法和事件。 若要开始操作，请参阅[如何：开发简单的 Windows 窗体控件](how-to-develop-a-simple-windows-forms-control.md)。  
   
- Windows 窗体控件的基类<xref:System.Windows.Forms.Control>，提供所需的客户端的基于 Windows 的应用程序的可视显示的基本功能。 <xref:System.Windows.Forms.Control> 提供窗口句柄、 处理消息路由，并提供鼠标和键盘事件，以及许多其他用户界面事件。 它提供高级的布局，并有特定于可视显示的属性，如<xref:System.Windows.Forms.Control.ForeColor%2A>， <xref:System.Windows.Forms.Control.BackColor%2A>， <xref:System.Windows.Forms.Control.Height%2A>， <xref:System.Windows.Forms.Control.Width%2A>，以及许多其他。 此外，它提供安全性，线程处理支持和 ActiveX 控件与互操作性。 由于基类提供了大量基础结构，因此使开发自己的 Windows 窗体控件变得相对简单。  
+ <xref:System.Windows.Forms.Control>的 Windows 窗体控件的基类提供了在基于 Windows 的客户端应用程序中进行可视化显示所需的管道。 <xref:System.Windows.Forms.Control> 提供了一个窗口句柄，处理消息路由，并提供鼠标和键盘事件以及许多其他用户界面事件。 它提供高级布局，并具有特定于可视显示的属性，例如 <xref:System.Windows.Forms.Control.ForeColor%2A>、<xref:System.Windows.Forms.Control.BackColor%2A>、<xref:System.Windows.Forms.Control.Height%2A>、<xref:System.Windows.Forms.Control.Width%2A>，等等。 此外，它还提供与 ActiveX 控件的安全、线程支持和互操作性。 由于基类提供了大量基础结构，因此使开发自己的 Windows 窗体控件变得相对简单。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [如何：开发的简单 Windows 窗体控件](how-to-develop-a-simple-windows-forms-control.md)
+- [如何：开发简单的 Windows 窗体控件](how-to-develop-a-simple-windows-forms-control.md)
 - [开发复合 Windows 窗体控件](developing-a-composite-windows-forms-control.md)
 - [如何：创建显示进度的 Windows 窗体控件](how-to-create-a-windows-forms-control-that-shows-progress.md)
 - [各种自定义控件](varieties-of-custom-controls.md)

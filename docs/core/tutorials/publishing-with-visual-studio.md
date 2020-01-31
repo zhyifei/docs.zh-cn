@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/10/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 485d62ce67f284fe1bbe931dcaa00671be154f35
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a82934fd2ea9568681a3bec82c3b15513decc926
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715369"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741564"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>使用 Visual Studio 发布 .NET Core Hello World 应用程序
 
@@ -68,7 +68,7 @@ ms.locfileid: "75715369"
 
       * HelloWorld.runtimeconfig.json 
 
-         这是应用程序的运行时配置文件。 它标识用于运行应用程序的 .NET Core 版本。 有关详细信息，请参阅[运行时配置文件](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。
+         这是应用程序的运行时配置文件。 它标识用于运行应用程序的 .NET Core 版本。 还可向其添加配置选项。 有关详细信息，请参阅 [.NET Core 运行时配置设置](../run-time-config/index.md#runtimeconfigjson)。
 
 ## <a name="additional-resources"></a>其他资源
 

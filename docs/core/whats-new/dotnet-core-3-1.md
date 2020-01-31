@@ -6,20 +6,20 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: eba3d21cfc787c5d388de31f988b835522118151
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 0905cbebb2d966570be4ac3aefb40f4377b97061
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936929"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742584"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1 的新增功能
 
 本文介绍了 .NET Core 3.1 中的新增功能。 此版本包含对 .NET Core 3.0 的细微改进，重点介绍小型但重要的修复。 .NET Core 3.1 中最重要的特性为，它是[长期支持 (LTS)](#long-term-support) 版本。
 
-如果使用的是 Visual Studio 2019，则必须更新到 [Visual Studio 2019 版本 16.4](https://visualstudio.microsoft.com/downloads/) 才能使用 .NET Core 3.1 项目。 有关 Visual Studio 中新增功能的详细信息，请参阅 [Visual Studio 博客](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/)。
+如果使用的是 Visual Studio 2019，则必须更新到 [Visual Studio 2019 版本 16.4](https://visualstudio.microsoft.com/downloads/) 才能使用 .NET Core 3.1 项目。 有关 Visual Studio 中新增功能的详细信息，请参阅 [Visual Studio 2019 版本 16.4 中的新增功能](/visualstudio/releases/2019/release-notes#whats-new-in-visual-studio-2019-version-164)。
 
-Visual Studio for Mac 还支持并包括 Visual Studio for Mac 8.4 预览通道中的 .NET Core 3.1。 需要选择加入该预览通道才能使用 .NET Core 3.1。
+Visual Studio for Mac 也支持 .NET Core 3.1，并且 Visual Studio for Mac 8.4 中就包括 .NET Core 3.1。
 
 有关版本的详细信息，请参阅 [.NET Core 3.1 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/)。
 
@@ -64,7 +64,7 @@ Visual Studio for Mac 还支持并包括 Visual Studio for Mac 8.4 预览通道�
 
 已添加对创建 C++/CLI（也称为“托管 C++”）项目的支持。 从这些项目生成的二进制文件与 .NET Core 3.0 及更高版本兼容。
 
-若要添加对 Visual Studio 2019 16.4 中的 C++/CLI 的支持，请安装[“使用 C++ 的桌面开发”工作负载](https://docs.microsoft.com/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads)。 此工作负载将两个模板添加到 Visual Studio：
+若要添加对 Visual Studio 2019 版本 16.4 中的 C++/CLI 的支持，请安装[“使用 C++ 的桌面开发”工作负荷](/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads)。 此工作负载将两个模板添加到 Visual Studio：
 
 - CLR 类库(.NET Core)
 - CLR 空项目(.NET Core)

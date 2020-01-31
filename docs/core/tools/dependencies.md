@@ -2,12 +2,12 @@
 title: 在 .NET Core 工具中管理依赖项
 description: 介绍如何使用 .NET Core 工具管理依赖项。
 ms.date: 03/06/2017
-ms.openlocfilehash: 9c088829ce3d5197198b7ff22a1331b8baba41d7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e14fa42534d807e2a0fcce1dabe747c18c5166b7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714215"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733374"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>使用 .NET Core SDK 1.0 管理依赖项
 

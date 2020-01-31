@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 72f54a45-dbe6-4bb4-8c99-e879a27368e5
 topic_type:
 - apiref
-ms.openlocfilehash: b521c96d26202119dad6fedb61cbd9da8b3c2e52
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ab31ab8f83a71372c8e12b460458a26996f65ff5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137627"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782977"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction 方法
 设置对指定 ICorDebugFunction 的调用，此调用可以嵌套在构造函数采用 <xref:System.Type> 参数的类中，也可以采用 <xref:System.Type> 参数。  
@@ -54,13 +54,13 @@ HRESULT CallParameterizedFunction (
  中指针的数组，其中每个都指向表示在函数参数中传递的值的 ICorDebugValue 对象。  
   
 ## <a name="remarks"></a>备注  
- `CallParameterizedFunction` 类似于[ICorDebugEval：： CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) ，只不过该函数可能位于具有类型参数的类中，可能会采用类型参数或两者。 应该首先为类提供类型参数，然后为函数指定。  
+ `CallParameterizedFunction` 类似于[ICorDebugEval：： CallFunction](icordebugeval-callfunction-method.md) ，只不过该函数可能位于具有类型参数的类中，可能会采用类型参数或两者。 应该首先为类提供类型参数，然后为函数指定。  
   
  如果函数在不同的应用程序域中，则会发生转换。 但是，所有类型和值参数都必须在目标应用程序域中。  
   
  仅在有限的情况下才能执行函数求值。 如果 `CallParameterizedFunction` 或 `ICorDebugEval::CallFunction` 失败，则返回的 HRESULT 将指示失败的最常见原因。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  

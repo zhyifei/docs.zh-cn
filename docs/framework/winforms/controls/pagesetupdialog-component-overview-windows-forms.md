@@ -1,5 +1,5 @@
 ---
-title: PageSetupDialog 组件概述（Windows 窗体）
+title: PageSetupDialog 구성 요소 개요
 ms.date: 03/30/2017
 f1_keywords:
 - PageSetupDialog
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Page Setup dialog box [Windows Forms], displaying
 - PageSetupDialog component
 ms.assetid: 791caacb-a5ca-4fca-bad9-1a5721ad697c
-ms.openlocfilehash: 989183b6152dfccb6167d89433317cea596d83c5
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: a891cb8cc77007d7591d41461c94f61c077eb300
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211743"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744339"
 ---
-# <a name="pagesetupdialog-component-overview-windows-forms"></a>PageSetupDialog 组件概述（Windows 窗体）
+# <a name="pagesetupdialog-component-overview-windows-forms"></a>PageSetupDialog 구성 요소 개요(Windows Forms)
 
-Windows 窗体<xref:System.Windows.Forms.PageSetupDialog>组件是一个预配置的对话框，用于在基于 Windows 的应用程序中设置用于打印的页详细信息。 用于在基于 Windows 的应用程序中作为一个简单的解决方案为用户设置首选项而不是配置您自己的对话框。 可以使用户能够设置边框和边距调整、 页眉和页脚和纵向或横向布局。 利用标准的 Windows 对话框，你可以创建其基本功能可立即为用户所熟悉的应用程序。
+Windows 窗体 <xref:System.Windows.Forms.PageSetupDialog> 组件是一个预先配置的对话框，用于在基于 Windows 的应用程序中设置用于打印的页面详细信息。 在基于 Windows 的应用程序中使用它作为一种简单的解决方案，用户可以使用它来设置页面首选项，而不是配置自己的对话框。 可以让用户设置边框和边距调整、页眉和页脚以及纵向或横向方向。 표준 Windows 대화 상자를 사용하여 기본 기능이 사용자에게 익숙한 애플리케이션을 만듭니다.
 
 ## <a name="key-properties-and-methods"></a>键属性和方法
 
-使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法，以便在运行时显示对话框。 此组件具有可以设置与单个页面的属性 (<xref:System.Drawing.Printing.PrintDocument>类) 或任何文档 (<xref:System.Drawing.Printing.PageSettings>类)。 此外，<xref:System.Windows.Forms.PageSetupDialog>组件可用于确定特定的打印机设置，它们将存储在<xref:System.Drawing.Printing.PrinterSettings>类。
+使用 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 方法可在运行时显示该对话框。 此组件具有与单页（<xref:System.Drawing.Printing.PrintDocument> 类）或任何文档（<xref:System.Drawing.Printing.PageSettings> 类）相关的属性。 此外，<xref:System.Windows.Forms.PageSetupDialog> 组件可用于确定存储在 <xref:System.Drawing.Printing.PrinterSettings> 类中的特定打印机设置。
 
-添加到窗体时<xref:System.Windows.Forms.PageSetupDialog>组件在 Visual Studio 中的 Windows 窗体设计器底部的任务栏中显示。
+将其添加到窗体时，<xref:System.Windows.Forms.PageSetupDialog> 组件会显示在 Visual Studio 中 Windows 窗体设计器底部的托盘中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [PageSetupDialog 组件](pagesetupdialog-component-windows-forms.md)
+- [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)

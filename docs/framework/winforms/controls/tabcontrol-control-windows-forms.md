@@ -1,5 +1,5 @@
 ---
-title: TabControl 控件（Windows 窗体）
+title: TabControl 控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TabControl control [Windows Forms]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - property pages [Windows Forms], creating
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-ms.openlocfilehash: d00dbe1e450a2d4316709e92eff7dab488b36045
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4f310629342e5302021bbc7dc5f92d473377397
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755371"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742813"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl 控件（Windows 窗体）
 Windows 窗体 `TabControl` 显示多个选项卡，就像笔记本中的分隔线或档案柜中一组文件夹的标签。 选项卡可以包含图片和其他控件。 使用 `TabControl` 创建属性页。  
@@ -27,18 +27,18 @@ Windows 窗体 `TabControl` 显示多个选项卡，就像笔记本中的分隔�
  [如何：向选项卡页添加控件](how-to-add-a-control-to-a-tab-page.md)  
  提供有关在选项卡页上显示控件的指导。  
   
- [如何：添加和删除使用 Windows 窗体 TabControl 的选项卡](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
+ [如何：使用 Windows 窗体 TabControl 控件添加和删除选项卡](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
  提供有关在设计器或代码中添加和移除选项卡的指导。  
   
- [如何：更改 Windows 窗体 TabControl 的外观](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
+ [如何：更改 Windows 窗体 TabControl 控件的外观](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
  提供有关调整影响单个选项卡外观的属性的指导。  
   
  [如何：禁用选项卡页](how-to-disable-tab-pages.md)  
  说明如何限制对选项卡页的访问，可能根据用户凭据进行限制。  
   
- 另请参阅[如何：添加和删除使用 Windows 窗体 tabcontrol 控件使用设计器选项卡](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md)，[如何：向使用设计器的选项卡页添加控件](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
+ 另请参阅[如何：使用设计器添加和移除 Windows 窗体 TabControl 的选项卡](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md)，[如何：使用设计器向选项卡页添加控件](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Windows.Forms.TabControl> 类  
  对此类进行描述，并提供指向其所有成员的链接。  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 550ba74c7ceba16c2040932918364ae2a59ea665
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740269"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794275"
 ---
 # <a name="threading-model"></a>线程处理模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 旨在帮助开发人员处理复杂的线程处理问题。 因此，大多数 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 开发人员无需编写使用多个线程的接口。 由于多线程程序既复杂又难以调试，因此当存在单线程解决方案时，应避免使用多线程程序。
@@ -177,7 +177,7 @@ ms.locfileid: "75740269"
 
  `GetWeatherAsync` 将使用上述的技术之一（如创建后台线程）来以异步方式工作，而非阻止调用线程。
 
- 此模式中最重要的部分之一是在调用*方法名称*`Async` 方法的同一线程上调用方法*名称*`Completed` 方法，以开始。 通过存储 <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>，你可以轻松地通过 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 来执行此操作，但是，非图形组件只能在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序中使用，而不能在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 或 ASP.NET 程序中使用。
+ 此模式中最重要的部分之一是在调用*方法名称*`Async` 方法的同一线程上调用方法*名称*`Completed` 方法，以开始。 通过存储 <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>，你可以轻松地通过 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 来执行此操作，但是，非图形组件只能在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序中使用，而不能在 Windows 窗体或 ASP.NET 程序中使用。
 
  <xref:System.Windows.Threading.DispatcherSynchronizationContext> 类可满足这种需要-将它视为适用于其他 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 框架的简化版本的 <xref:System.Windows.Threading.Dispatcher>。
 

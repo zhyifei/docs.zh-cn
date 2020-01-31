@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Windows 窗体 ImageList 组件添加或移除图像
+title: 用 ImageList 组件添加或删除图像
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,24 +13,24 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: 430b7f573b115c21b9e2fa87f0ace74205717285
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f531003377395bf219775e5ddb48ceb0822ff0ea
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925121"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741498"
 ---
-# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>如何：使用 Windows 窗体 ImageList 组件添加或移除图像
-通常, <xref:System.Windows.Forms.ImageList>在将图像与控件相关联之前, Windows 窗体组件会填充图像。 但是, 在将图像列表与控件相关联后, 可以添加和移除图像。  
+# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>방법: Windows Forms ImageList 구성 요소를 사용하여 이미지 추가 또는 제거
+在将 Windows 窗体 <xref:System.Windows.Forms.ImageList> 组件与控件关联之前，通常使用图像填充该组件。 但是，在将图像列表与控件相关联后，可以添加和移除图像。  
   
 > [!NOTE]
-> 删除图像时, 验证任何关联控件<xref:System.Windows.Forms.ButtonBase.ImageIndex%2A>的属性是否仍然有效。  
+> 删除图像时，验证任何关联控件的 <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> 属性是否仍然有效。  
   
 ### <a name="to-add-images-programmatically"></a>以编程方式添加图像  
   
-- 使用图像列表的<xref:System.Windows.Forms.ImageList.Images%2A>属性的方法。<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>  
+- 使用图像列表的 <xref:System.Windows.Forms.ImageList.Images%2A> 属性的 <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> 方法。  
   
-     在下面的代码示例中, 为图像的位置设置的路径是 "**我的文档**" 文件夹。 使用此位置是因为您可以假定大多数运行 Windows 操作系统的计算机都包含此文件夹。 选择此位置还允许具有最低系统访问级别的用户更安全地运行应用程序。 下面的代码示例要求具有已添加<xref:System.Windows.Forms.ImageList>控件的窗体。  
+     在下面的代码示例中，为图像的位置设置的路径是 "**我的文档**" 文件夹。 使用此位置是因为您可以假定大多数运行 Windows 操作系统的计算机都包含此文件夹。 选择此位置还允许具有最低系统访问级别的用户更安全地运行应用程序。 下面的代码示例要求您具有一个已添加了 <xref:System.Windows.Forms.ImageList> 控件的窗体。  
   
     ```vb  
     Public Sub LoadImage()  
@@ -76,9 +76,9 @@ ms.locfileid: "69925121"
   
 ### <a name="to-add-images-with-a-key-value"></a>添加具有键值的映像。  
   
-- 使用图像<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> <xref:System.Windows.Forms.ImageList.Images%2A>列表的属性的一个方法, 该方法采用键值。  
+- 使用图像列表的 <xref:System.Windows.Forms.ImageList.Images%2A> 属性的 <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> 方法之一，该方法采用键值。  
   
-     在下面的代码示例中, 为图像的位置设置的路径是 "**我的文档**" 文件夹。 使用此位置是因为您可以假定大多数运行 Windows 操作系统的计算机都包含此文件夹。 选择此位置还允许具有最低系统访问级别的用户更安全地运行应用程序。 下面的代码示例要求具有已添加<xref:System.Windows.Forms.ImageList>控件的窗体。  
+     在下面的代码示例中，为图像的位置设置的路径是 "**我的文档**" 文件夹。 使用此位置是因为您可以假定大多数运行 Windows 操作系统的计算机都包含此文件夹。 选择此位置还允许具有最低系统访问级别的用户更安全地运行应用程序。 下面的代码示例要求您具有一个已添加了 <xref:System.Windows.Forms.ImageList> 控件的窗体。  
   
     ```vb  
     Public Sub LoadImage()  
@@ -107,11 +107,11 @@ public void addImage()
   
 ### <a name="to-remove-all-images-programmatically"></a>以编程方式删除所有图像  
   
-- <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A>使用方法删除单个映像  
+- 使用 <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> 方法删除单个映像  
   
      、-或-  
   
-     <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A>使用方法清除图像列表中的所有图像。  
+     使用 <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> 方法可清除图像列表中的所有图像。  
   
     ```vb  
     ' Removes the first image in the image list  
@@ -129,7 +129,7 @@ imageList1.Images.Clear();
   
 ### <a name="to-remove-images-by-key"></a>按键删除映像  
   
-- <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A>使用方法可按其键删除单个映像。  
+- 使用 <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> 方法，按其键删除单个映像。  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  
@@ -141,8 +141,8 @@ imageList1.Images.Clear();
 imageList1.Images.RemoveByKey("myPhoto");  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ImageList 组件](imagelist-component-windows-forms.md)
-- [ImageList 组件概述](imagelist-component-overview-windows-forms.md)
-- [图像、位图和图元文件](../advanced/images-bitmaps-and-metafiles.md)
+- [ImageList 구성 요소](imagelist-component-windows-forms.md)
+- [ImageList 구성 요소 개요](imagelist-component-overview-windows-forms.md)
+- [이미지, 비트맵 및 메타파일](../advanced/images-bitmaps-and-metafiles.md)

@@ -1,17 +1,17 @@
 ---
-title: WPF 示例
+title: 예제
 ms.date: 11/02/2017
 helpviewer_keywords:
 - WPF samples [WPF]
 - samples [WPF]
 ms.assetid: 1fc53e12-dfe5-476e-be13-fc3714aaf640
-ms.openlocfilehash: fc4eb03e0488994d9e17337e56b8fa0ecbd62b56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebc2b9b2f2b6368f7d061059f57f578df20638fe
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696088"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743306"
 ---
-# <a name="wpf-samples"></a>WPF 示例
+# <a name="wpf-samples"></a>WPF 샘플
 
-有关演示 Windows Presentation Foundation (WPF) 的示例，请参阅[Microsoft/WPF 示例存储库](https://github.com/Microsoft/WPF-Samples)GitHub 上。
+有关演示 Windows Presentation Foundation （WPF）的示例，请参阅 GitHub 上的[Microsoft/WPF 示例](https://github.com/Microsoft/WPF-Samples)存储库。

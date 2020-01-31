@@ -1,5 +1,5 @@
 ---
-title: 如何：打印 Windows 窗体中的多页文本文件
+title: 如何：打印多页文本文件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: bd858279a4d8a3509a91bcd1c62fb1f61d6d2bb9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 51e30706bb7693988d611701d013792c82dccd0b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931794"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740659"
 ---
 # <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>如何：打印 Windows 窗体中的多页文本文件
 基于 Windows 的应用程序打印文本是很常见的。 <xref:System.Drawing.Graphics> 类提供将对象（图形或文本）绘制到设备（如屏幕或打印机）的方法。  
@@ -58,9 +58,9 @@ ms.locfileid: "69931794"
   
 - 对 System、System.Windows.Forms 和 System.Drawing 程序集的引用。  
   
-- 有关从 Visual Basic 或视觉对象C#的命令行生成此示例的信息, 请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[通过 csc 生成命令行](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 还可以通过将代码粘贴到新项目中, 在 Visual Studio 中生成此示例。  
+- 有关从 Visual Basic 或视觉对象C#的命令行生成此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[通过 csc 生成命令行](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 还可以通过将代码粘贴到新项目中，在 Visual Studio 中生成此示例。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>

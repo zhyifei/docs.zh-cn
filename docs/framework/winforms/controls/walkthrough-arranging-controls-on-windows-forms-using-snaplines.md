@@ -1,5 +1,5 @@
 ---
-title: 演练：使用对齐线在 Windows 窗体上排列控件
+title: 使用对齐线排列控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -10,12 +10,12 @@ ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 04bef7162662f4fbefdaa151de13468d88530914
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3b88f64fca8d3f11308f1cbfde97de2e6c2f22cc
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460642"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740217"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>演练：使用对齐线排列 Windows 窗体上的控件
 
@@ -29,7 +29,7 @@ ms.locfileid: "73460642"
 
 1. 在 Visual Studio 中，创建一个名为 "SnaplineExample" 的基于 Windows 的应用程序项目。
 
-2. 在窗体设计器中选择窗体。
+2. 在“窗体设计器”中选择窗体。
 
 ## <a name="space-and-align-controls"></a>间距和对齐控件
 
@@ -188,7 +188,7 @@ ms.locfileid: "73460642"
 
 - 创建 <xref:System.Windows.Forms.TextBox> 控件的列和 <xref:System.Windows.Forms.Label> 控件的相应列。 将 <xref:System.Windows.Forms.Label> 控件的 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性的值设置为 "`true`"。 使用对齐线移动 <xref:System.Windows.Forms.Label> 控件，使其显示的文本与 <xref:System.Windows.Forms.TextBox> 控件中的文本对齐。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
 - [演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)

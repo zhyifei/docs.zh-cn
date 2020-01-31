@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ac59d27-783f-4a87-b7a8-baa3ccc54582
 topic_type:
 - apiref
-ms.openlocfilehash: a72eabb1b405c67f5603164e56a589a237603d2f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 46c8b3fb2c9e7c353f74ef589e21f2a61df618fb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130693"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777317"
 ---
 # <a name="icordebugmanagedcallbacklogswitch-method"></a>ICorDebugManagedCallback::LogSwitch 方法
 通知调试器公共语言运行时（CLR）托管线程在 <xref:System.Diagnostics.Switch> 类中调用了方法来创建、修改或删除调试/跟踪开关。  
@@ -48,7 +48,7 @@ HRESULT LogSwitch (
  中一个值，该值指示写入事件日志的描述性消息的严重性级别。  
   
  `ulReason`  
- 中[LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md)枚举的值，该值指示在调试/跟踪开关上执行的操作。  
+ 中[LogSwitchCallReason](logswitchcallreason-enumeration.md)枚举的值，该值指示在调试/跟踪开关上执行的操作。  
   
  `pLogSwitchName`  
  中指向调试/跟踪开关的名称的指针。  
@@ -56,7 +56,7 @@ HRESULT LogSwitch (
  `pParentName`  
  中一个指针，指向调试/跟踪开关的父项的名称。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -65,6 +65,6 @@ HRESULT LogSwitch (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback 接口](icordebugmanagedcallback-interface.md)

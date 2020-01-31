@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab18a509-dff3-4930-b585-bd15e0414176
 topic_type:
 - apiref
-ms.openlocfilehash: af2dab65629093401219f1016538b912bee4d067
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 328c10c1895f65b43dc365b1be6b4ec5ef01e720
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130828"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777349"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>ICorDebugManagedCallback::Exception 方法
 通知调试器已从托管代码引发了异常。  
@@ -48,7 +48,7 @@ HRESULT Exception (
 ## <a name="remarks"></a>备注  
  可以从线程对象中检索特定的异常。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -57,6 +57,6 @@ HRESULT Exception (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback 接口](icordebugmanagedcallback-interface.md)

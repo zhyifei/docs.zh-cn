@@ -2,37 +2,37 @@
 title: dotnet pack 命令
 description: dotnet pack 命令可为 .NET Core 项目创建 NuGet 包。
 ms.date: 08/08/2019
-ms.openlocfilehash: 99dd8e35601f82adf2a3101121028f191a4c3da4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 057d1029e5c933912c43c178b6db8a8498f2ed57
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117646"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734121"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**本主题适用于：✓** .NET Core 1.x SDK 及更高版本
+ 本文适用于：✔️ .NET Core 1.x SDK 及更高版本
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet pack` - 将代码打包到 NuGet 包。
 
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive] 
-    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable] 
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive]
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable]
     [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
-`dotnet pack` 命令生成项目并创建 NuGet 包。 该命令的结果是一个 NuGet 包，也就是一个 .nupkg 文件  。 
+`dotnet pack` 命令生成项目并创建 NuGet 包。 该命令的结果是一个 NuGet 包，也就是一个 .nupkg 文件  。
 
 如果要生成包含调试符号的包，可以使用以下两个选项：
 

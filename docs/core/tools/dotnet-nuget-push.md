@@ -3,22 +3,22 @@ title: dotnet nuget push 命令
 description: dotnet nuget push 命令可将包推送到服务器并发布。
 author: karann-msft
 ms.date: 12/04/2019
-ms.openlocfilehash: 5e80295a570adc30a06d86b6735cb0387e39d5a3
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: a483c559dee8b4a82cc2c792f5c2c5e4a8ff3f87
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835514"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733104"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**本主题适用于：✓** .NET Core 1.x SDK 及更高版本
+ 本文适用于：✔️ .NET Core 1.x SDK 及更高版本
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet nuget push` - 将包推送到服务器，并将其发布。
 
@@ -30,7 +30,7 @@ dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--
 dotnet nuget push [-h|--help]
 ```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 `dotnet nuget push` 将包推送到服务器，并将其发布。 push 命令使用在系统的 NuGet 配置文件或配置文件链中找到的服务器和凭据详细信息。 有关配置文件的详细信息，请参阅 [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior)（配置 NuGet 行为）。 通过加载 *%AppData%\NuGet\NuGet.config* (Windows) 或 *$HOME/.local/share* (Linux/macOS) 获得 NuGet 的默认配置，然后加载任意 *nuget.config* 或 *.nuget\nuget.config*，从驱动器的根目录开始，并在当前目录中结束。
 
@@ -77,7 +77,7 @@ dotnet nuget push [-h|--help]
 * **`--skip-duplicate`**
 
   将多个包推送到 HTTP(S) 服务器时，将任何 409 冲突响应视为警告，以便可以继续推送。 自 .NET Core 3.1 SDK 起可用。
-                                 
+
 * **`-sk|--symbol-api-key <API_KEY>`**
 
   符号服务器的 API 密钥。
@@ -127,11 +127,11 @@ dotnet nuget push [-h|--help]
   ```dotnetcli
   dotnet nuget push *.nupkg
   ```
-  
+
   > [!NOTE]
   > 如果此命令不起作用，则可能是较旧版本的 SDK（.NET Core 2.1 SDK 及更早版本）中的 bug 导致的。
   > 要解决此问题，请升级 SDK 版本或改为运行以下命令：`dotnet nuget push **/*.nupkg`
-  
+
 * 推送所有 .nupkg 文件，即使 HTTP(S) 服务器返回了 409 冲突响应也是如此  ：
 
   ```dotnetcli

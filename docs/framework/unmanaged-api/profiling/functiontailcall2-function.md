@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: db3c3d38e0200f9849c84d7605a436816d56b813
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 7f6ef2c410d49e2e63b88d6f47c33c211f2a8dd8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427426"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790285"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 函数
 通知探查器，当前正在执行的函数即将对另一个函数执行尾调用，并提供有关堆栈帧的信息。  
@@ -34,18 +34,22 @@ void __stdcall FunctionTailcall2 (
 );  
 ```  
   
-## <a name="parameters"></a>参数  
- `funcId`  
- 中要进行尾调用的当前正在执行的函数的标识符。  
+## <a name="parameters"></a>参数
+
+- `funcId`
+
+  \[中的]：要进行尾调用的当前正在执行的函数的标识符。
+
+- `clientData`
+
+  \[）中的重新映射函数标识符，该标识符之前通过[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)指定的探查器将进行尾调用。
   
- `clientData`  
- 中探查器前面通过[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)指定的函数标识符，当前正在执行的函数将进行尾调用。  
-  
- `func`  
- 中一个 `COR_PRF_FRAME_INFO` 值，该值指向有关堆栈帧的信息。  
-  
- 探查器应将此视为不透明的句柄，该句柄可传递回[ICorProfilerInfo2：： GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法中的执行引擎。  
-  
+- `func`
+
+  \[中的] `COR_PRF_FRAME_INFO` 值，该值指向有关堆栈帧的信息。
+
+  探查器应将此视为不透明的句柄，该句柄可传递回[ICorProfilerInfo2：： GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法中的执行引擎。
+
 ## <a name="remarks"></a>备注  
  尾调用的目标函数将使用当前堆栈帧，并将直接返回到进行尾调用的函数的调用方。 这意味着将不会为作为尾调用目标的函数发出[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)回调。  
   
@@ -63,7 +67,7 @@ void __stdcall FunctionTailcall2 (
   
  此外，`FunctionTailcall2` 函数不得调入托管代码或以任何方式导致托管的内存分配。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Corprof.idl .idl  

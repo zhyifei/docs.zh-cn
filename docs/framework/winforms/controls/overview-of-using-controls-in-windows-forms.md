@@ -1,5 +1,5 @@
 ---
-title: 在“Windows 窗体”中使用控件的概述
+title: 使用控件概述
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 16a28db6477ea86a8bc853fbf506cf6d6d4fa5e0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca8b9fab3c53e256792faf0969b5066d5e35f6c7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654593"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744349"
 ---
-# <a name="overview-of-using-controls-in-windows-forms"></a>在“Windows 窗体”中使用控件的概述
-本主题描述 Windows 窗体应用程序的基本元素，并提供一个简单示例，使用控件以及处理 Windows 窗体应用程序中的事件。  
+# <a name="overview-of-using-controls-in-windows-forms"></a>Windows Forms에서 컨트롤 사용 개요
+本主题介绍 Windows 窗体应用程序的基本元素，并提供一个简单的示例，该示例使用控件并在 Windows 窗体应用程序中处理事件。  
   
-## <a name="simple-windows-forms-applications"></a>简单 Windows 窗体应用程序  
- 至少，Windows 窗体应用程序由以下元素组成：  
+## <a name="simple-windows-forms-applications"></a>简单的 Windows 窗体应用程序  
+ Windows 窗体应用程序至少包含以下元素：  
   
-- 派生的一个或多个类<xref:System.Windows.Forms.Form?displayProperty=nameWithType>。  
+- 一个或多个派生自 <xref:System.Windows.Forms.Form?displayProperty=nameWithType>的类。  
   
-- 一个`Main`调用的方法`static`(`shared`在 Visual Basic 中)<xref:System.Windows.Forms.Application.Run%2A>方法，并传递<xref:System.Windows.Forms.Form>到它的实例。 <xref:System.Windows.Forms.Application.Run%2A>方法处理从操作系统到应用程序的消息。  
+- 一种 `Main` 方法，该方法调用 `static` （`shared` Visual Basic） <xref:System.Windows.Forms.Application.Run%2A> 方法并向其传递 <xref:System.Windows.Forms.Form> 实例。 <xref:System.Windows.Forms.Application.Run%2A> 方法处理从操作系统到应用程序的消息。  
   
- 下面的代码示例显示了 Windows 窗体应用程序的必备要素。  
+ 下面的代码示例演示 Windows 窗体应用程序的基本元素。  
   
 ```vb  
 Option Explicit  
@@ -75,7 +75,7 @@ public class MyForm : Form {
 ```  
   
 ## <a name="using-controls-in-a-windows-forms-application"></a>在 Windows 窗体应用程序中使用控件  
- 下面的代码示例显示了简单的应用程序说明了 Windows 窗体应用程序如何使用控件和处理事件。 示例包含三个按钮在窗体;每个按钮更改背景色在单击时。  
+ 下面的代码示例演示了一个简单的应用程序，该应用程序演示 Windows 窗体应用程序如何使用控件并处理事件。 该示例由窗体上的三个按钮组成：每个按钮在单击时都将更改背景色。  
   
 ```vb  
 Option Explicit  
@@ -223,7 +223,7 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [使用 .NET Framework 开发自定义 Windows 窗体控件](developing-custom-windows-forms-controls.md)
-- [Windows 窗体控件开发基础知识](windows-forms-control-development-basics.md)
+- [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)
+- [Windows Forms 컨트롤 개발 기본 사항](windows-forms-control-development-basics.md)

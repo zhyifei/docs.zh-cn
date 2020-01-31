@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55cb673a-e240-43a6-a406-6912e7c0fe66
 topic_type:
 - apiref
-ms.openlocfilehash: c6d77ff1393bc0ba4884dfa34810fee5316e33ef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 80836cbbf82a97ccd6dc7251e5cbe934e0cbe66f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130748"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777274"
 ---
 # <a name="icordebugmanagedcallbackloadassembly-method"></a>ICorDebugManagedCallback::LoadAssembly 方法
 通知调试器已成功加载公共语言运行时（CLR）程序集。  
@@ -41,7 +41,7 @@ HRESULT LoadAssembly (
  `pAssembly`  
  中指向表示程序集的 ICorDebugAssembly 对象的指针。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -50,7 +50,7 @@ HRESULT LoadAssembly (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [UnloadAssembly 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadassembly-method.md)
-- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [UnloadAssembly 方法](icordebugmanagedcallback-unloadassembly-method.md)
+- [ICorDebugManagedCallback 接口](icordebugmanagedcallback-interface.md)

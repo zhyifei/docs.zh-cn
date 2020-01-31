@@ -1,5 +1,5 @@
 ---
-title: WPF 图形呈现疑难解答
+title: 图形呈现概述
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: 09f5f026ed320aaa253d8cdf6e0b271235aff604
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 103d086857bce8ae0960452bb92a69b68dc49dfa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004164"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744804"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF 图形呈现疑难解答
 本主题概述 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可视化层。 它侧重于 <xref:System.Windows.Media.Visual> 类的角色，以便在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 模型中呈现支持。  
@@ -62,10 +62,10 @@ ms.locfileid: "72004164"
 ### <a name="drawing-content-in-visual-objects"></a>视觉对象中的绘图内容  
  <xref:System.Windows.Media.Visual> 对象将其呈现数据存储为**矢量图形指令列表**。 指令列表中的每一项都以序列化格式表示一组低级别的图形数据及其相关资源。 共有四种不同类型的呈现数据可以包含绘图内容。  
   
-|绘图内容类型|说明|  
+|绘图内容类型|描述|  
 |--------------------------|-----------------|  
 |矢量图形|表示向量图形数据以及任何关联的 <xref:System.Windows.Media.Brush> 和 <xref:System.Windows.Media.Pen> 信息。|  
-|映像|表示 <xref:System.Windows.Rect>所定义区域内的图像。|  
+|Image|表示 <xref:System.Windows.Rect>所定义区域内的图像。|  
 |标志符号|表示一个呈现 <xref:System.Windows.Media.GlyphRun>的绘图，它是指定的字体资源中的一系列字形。 这是文本的表示方式。|  
 |视频|表示用于呈现视频的绘图。|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "72004164"
   
  下图显示了在呈现顺序中应用 <xref:System.Windows.Media.DrawingGroup> 操作的顺序。  
   
- ![操作的 DrawingGroup 顺序](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
+ ![DrawingGroup 操作顺序](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
 DrawingGroup 操作的顺序  
   
  有关详细信息，请参阅 [Drawing 对象概述](drawing-objects-overview.md)。  
@@ -162,7 +162,7 @@ DrawingGroup 操作的顺序
   
  如果要枚举包含标记示例中的 <xref:System.Windows.Controls.DockPanel> 元素的逻辑对象，可找到如下所示的逻辑对象的层次结构：  
   
- ![树形框图](./media/tree1-wcp.gif "Tree1_wcp")  
+ ![树关系图](./media/tree1-wcp.gif "Tree1_wcp")  
 逻辑树关系图  
   
  可视化树和逻辑树与当前的应用程序元素集合同步，并反映对元素进行的任何添加、删除或修改。 但是，这些树表示不同的应用程序视图。 与可视化树不同，逻辑树不展开控件的 <xref:System.Windows.Controls.ContentPresenter> 元素。 这意味着同一组对象的逻辑树和可视化树之间不存在直接的一对一对应关系。 事实上，使用与参数相同的元素调用**system.windows.logicaltreehelper>** 对象的 <xref:System.Windows.LogicalTreeHelper.GetChildren%2A> 方法和**VisualTreeHelper**对象的 <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A> 方法会产生不同的结果。  
@@ -220,7 +220,7 @@ DrawingGroup 操作的顺序
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 通过使用与设备无关的像素（而不是硬件像素）作为主要测量单位支持自动缩放；图形和文本可正确缩放，而无需应用程序开发者执行任何额外的工作。 下图显示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文本和图形如何采用不同 DPI 设置进行显示的示例。  
   
- ![不同 DPI 设置的图形和文本](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
+ ![采用不同 DPI 设置的图形和文本](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
 采用不同 DPI 设置的图形和文本  
   
 <a name="visualtreehelper_class"></a>   

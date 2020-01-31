@@ -1,23 +1,23 @@
 ---
-title: 类库 (WPF)
+title: 類別庫
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF class library [WPF]
 - Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-ms.openlocfilehash: d43b46be2e05561eadcba12c744368db056a3ce5
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: bd099cbbbf96c71749375dab0aadfe84412ca103
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859708"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742295"
 ---
 # <a name="class-library-wpf"></a>类库 (WPF)
-以下链接是指包含命名空间的[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Api。  
+以下链接引用包含 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Api 的命名空间。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
   
 - <xref:Microsoft.Build.Tasks.Windows>  
   
@@ -124,7 +124,7 @@ ms.locfileid: "67859708"
 - <xref:UIAutomationClientsideProviders>  
   
 ## <a name="xaml-support-in-net-4"></a>.NET 4 中的 XAML 支持  
- 以下命名空间包含 System.Xaml 程序集中的类型。 System.Xaml 的框架，如 WPF 基于.NET Framework 4 提供常见 XAML 语言支持。  
+ 以下命名空间包含来自 System.object 程序集的类型。 对于在 .NET Framework 4 上构建的 WPF （如 WPF），.Xaml 提供常见的 XAML 语言支持。  
   
 - <xref:System.Windows.Markup> （共享）  
   

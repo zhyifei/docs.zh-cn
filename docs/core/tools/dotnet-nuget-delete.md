@@ -3,22 +3,22 @@ title: dotnet nuget delete 命令
 description: dotnet-nuget-delete 命令从服务器删除或取消列出包。
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 79634baa9d6d7ff1f388f6a794ffd816687be105
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 0950f03c0986bde17ae3e2e7170d402ea8222853
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117641"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733117"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
-**本主题适用于：✓** .NET Core 1.x SDK 及更高版本
+ 本文适用于：✔️ .NET Core 1.x SDK 及更高版本
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet nuget delete` - 从服务器删除或取消列出包。
 
@@ -30,7 +30,7 @@ dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] 
 dotnet nuget delete [-h|--help]
 ```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 `dotnet nuget delete` 命令从服务器删除或取消列出包。 对于 [NuGet.org](https://www.nuget.org/)，该操作将取消列出包。
 

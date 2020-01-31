@@ -1,5 +1,5 @@
 ---
-title: 如何：设置 Windows 窗体 DataGridView 控件的选择模式
+title: 设置 DataGridView 控件的选择模式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selection mode
 - data grids [Windows Forms], selection mode
 ms.assetid: 2f241643-7f82-4583-8757-03494f63b465
-ms.openlocfilehash: 22db5c1438405fc830202ec7baac6b6fcd631b41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: da866aac3ac5b08a06ec71744aadb4260bd0cfc4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620788"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743499"
 ---
-# <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>如何：设置 Windows 窗体 DataGridView 控件的选择模式
-下面的代码示例演示如何配置<xref:System.Windows.Forms.DataGridView>控件，以便单击的任意位置的行自动选择整行，并且可以选择一次只有一个行。  
+# <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤의 선택 모드 설정
+下面的代码示例演示如何配置 <xref:System.Windows.Forms.DataGridView> 控件以便单击行中的任意位置自动选择整行，以便每次只能选择一行。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#065](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#065)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#065](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#065)]  
   
-## <a name="compiling-the-code"></a>编译代码  
- 此示例需要：  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 이 예제에는 다음 사항이 필요합니다.  
   
-- 名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件。  
+- `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
   
-- 对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
+- <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridViewSelectionMode>
-- [将选择模式和剪贴板与 Windows 窗体 DataGridView 控件结合使用](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
-- [Windows 窗体 DataGridView 控件中的选择模式](selection-modes-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤에서 선택 및 클립보드 사용](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤의 선택 모드](selection-modes-in-the-windows-forms-datagridview-control.md)

@@ -1,37 +1,37 @@
 ---
-title: SaveFileDialog 组件（Windows 窗体）
+title: SaveFileDialog 구성 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Save File dialog box
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
-ms.openlocfilehash: 552e6cae64ab3b30279e04512a87b18c2f2b068a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 920816c648f5dbdd50f869e58769655e8be8e1a1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947974"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743091"
 ---
-# <a name="savefiledialog-component-windows-forms"></a>SaveFileDialog 组件（Windows 窗体）
-Windows 窗体 <xref:System.Windows.Forms.SaveFileDialog> 组件是一个预配置的对话框。 它与 Windows 使用的标准保存文件对话框相同。 它继承自 <xref:System.Windows.Forms.CommonDialog> 类。  
+# <a name="savefiledialog-component-windows-forms"></a>SaveFileDialog 구성 요소(Windows Forms)
+Windows Forms <xref:System.Windows.Forms.SaveFileDialog> 구성 요소는 미리 구성된 대화 상자입니다. Windows에서 사용하는 표준 파일 저장 대화 상자와 같습니다. <xref:System.Windows.Forms.CommonDialog> 클래스에서 상속됩니다.  
   
-## <a name="in-this-section"></a>本节内容  
- [SaveFileDialog 组件概述](savefiledialog-component-overview-windows-forms.md)  
- 介绍 <xref:System.Windows.Forms.SaveFileDialog> 组件的一般概念，此组件使你可以显示用户用于将文件保存到指定路径的预配置对话框。  
+## <a name="in-this-section"></a>섹션 내용  
+ [SaveFileDialog 구성 요소 개요](savefiledialog-component-overview-windows-forms.md)  
+ 사용자가 파일을 지정된 위치에 저장하는 데 사용할 수 있는 미리 구성된 대화 상자를 표시할 수 있는 <xref:System.Windows.Forms.SaveFileDialog> 구성 요소의 일반적인 개념을 소개합니다.  
   
- [如何：使用 SaveFileDialog 组件保存文件](how-to-save-files-using-the-savefiledialog-component.md)  
- 说明如何通过在运行时的 <xref:System.Windows.Forms.SaveFileDialog> 组件的实例保存文件。  
+ [방법: SaveFileDialog 구성 요소를 사용하여 파일 저장](how-to-save-files-using-the-savefiledialog-component.md)  
+ <xref:System.Windows.Forms.SaveFileDialog> 구성 요소의 인스턴스를 통해 런타임에 파일을 저장하는 방법을 설명합니다.  
   
-## <a name="reference"></a>参考  
- <xref:System.Windows.Forms.SaveFileDialog> 类  
- 提供类及其成员的相关引用信息。  
+## <a name="reference"></a>참조  
+ <xref:System.Windows.Forms.SaveFileDialog> 클래스  
+ 클래스 및 해당 멤버에 대한 참조 정보를 제공합니다.  
   
-## <a name="related-sections"></a>相关章节  
- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)  
- 提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。  
+## <a name="related-sections"></a>관련 섹션  
+ [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ 사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.  
   
- [对话框控件和组件](dialog-box-controls-and-components-windows-forms.md)  
- 描述一组用户可用于执行与应用程序或系统的标准交互的控件和组件。  
+ [대화 상자 컨트롤 및 구성 요소](dialog-box-controls-and-components-windows-forms.md)  
+ 사용자가 애플리케이션이나 시스템에서 표준 조작을 수행할 수 있도록 하는 컨트롤 및 구성 요소 집합에 대해 설명합니다.  
   
- [Windows 窗体对话框的基本代码](https://go.microsoft.com/fwlink/?LinkID=102575)  
- 讨论 Windows 窗体对话框控件和组件以及执行其基本功能必需的代码。 （MSDN 联机库技术文章）
+ [Windows Forms 대화 상자의 필수 코드](https://go.microsoft.com/fwlink/?LinkID=102575)  
+ Windows Forms 대화 상자 컨트롤 및 구성 요소와 기본 함수를 실행하는 데 필요한 코드에 대해 설명합니다. (MSDN Online Library 기술 문서)

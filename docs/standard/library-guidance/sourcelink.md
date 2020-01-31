@@ -2,12 +2,12 @@
 title: 源链接和 .NET 库
 description: 有关使用源链接改进 .NET 库调试的最佳做法建议。
 ms.date: 01/15/2019
-ms.openlocfilehash: 0ebc7601f1ad92b0fc6ab4c7599b010cb42feb5d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706434"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744548"
 ---
 # <a name="source-link"></a>源链接
 
@@ -25,7 +25,7 @@ ms.locfileid: "75706434"
 
 ![NuGet 包资源管理器中的源链接](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet 包资源管理器中的源链接")
 
-**✔️ 请考虑**使用源链接将源代码管理元数据添加到程序集和 NuGet 包。
+✔️ 请考虑使用源链接将源代码管理元数据添加到程序集和 NuGet 包。
 
 > [!TIP]
 > 可以通过将调试器特性添加到类型来进一步增强开发人员的调试体验。
@@ -34,7 +34,7 @@ ms.locfileid: "75706434"
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> 指示调试器逐行执行代码，而不是单步执行代码。
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> 控制成员是否会显示在调试器变量窗口中以及其显示方式。
 
- ✔️ 请考虑发布符号文件 (`*.pdb`)。
+✔️ 请考虑发布符号文件 (`*.pdb`)。
 
 > 为获得最佳调试体验，库应发布符号文件并使用源链接。 有关符号文件和符号包的详细信息，请参阅[符号包](./nuget.md#symbol-packages)。
 

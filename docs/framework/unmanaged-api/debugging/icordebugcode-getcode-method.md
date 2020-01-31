@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-ms.openlocfilehash: db24228de7e8c98fd97f890b1e408515172299b3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 14a72e4622aac09840e43f8bcdcf8a8c8d6e6892
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125669"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777915"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode 方法
-获取用于反汇编的指定函数的所有代码。 此方法在 .NET Framework 版本2.0 中已弃用。 改[为使用 ICorDebugCode2：： GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) 。  
+获取用于反汇编的指定函数的所有代码。 此方法在 .NET Framework 版本2.0 中已弃用。 改[为使用 ICorDebugCode2：： GetCodeChunks](icordebugcode2-getcodechunks-method.md) 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,7 +57,7 @@ HRESULT GetCode (
 ## <a name="remarks"></a>备注  
  如果函数的代码已划分为多个块，则它们将按照增加的本机偏移量的顺序进行连接。 不检查指令边界。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -66,6 +66,6 @@ HRESULT GetCode (
   
  **.NET Framework 版本：** 1.1、1.0  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [GetCodeChunks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+- [GetCodeChunks 方法](icordebugcode2-getcodechunks-method.md)

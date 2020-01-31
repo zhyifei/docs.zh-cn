@@ -2,22 +2,22 @@
 title: dotnet add reference 命令
 description: dotnet add reference 命令可便于添加项目间引用。
 ms.date: 06/26/2019
-ms.openlocfilehash: c97975e11410cfaad18ca68832957d75a4a2fd09
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dc8bc01a2bff4f2cf3a8af9efb233448d7de337f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100820"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733274"
 ---
 # <a name="dotnet-add-reference"></a>dotnet add reference
 
-**本文适用于：✓** .NET Core 1.x SDK 及更高版本
+ 本文适用于：✔️ .NET Core 1.x SDK 及更高版本
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet add reference` - 添加项目到项目 (P2P) 引用。
 
@@ -25,7 +25,7 @@ ms.locfileid: "73100820"
 
 `dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help] [--interactive]`
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 使用 `dotnet add reference` 命令可方便地向项目添加项目引用。 运行该命令后，会将 `<ProjectReference>` 元素添加到项目文件。
 

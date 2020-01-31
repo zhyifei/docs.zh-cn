@@ -1,5 +1,5 @@
 ---
-title: 演练：设计时调试自定义 Windows 窗体控件
+title: 在设计时调试自定义控件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +18,12 @@ ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a8572c1e70e36faf3a179de7a69e88e9cf1e781b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d9e292a1219c24571bcb35db2fe357b0197c8812
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460616"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740196"
 ---
 # <a name="walkthrough-debug-custom-windows-forms-controls-at-design-time"></a>演练：在设计时调试自定义 Windows 窗体控件
 
@@ -149,6 +149,6 @@ ms.locfileid: "73460616"
 
 - 可以编写自定义控件的自定义设计器。 这使你可以使用由 Visual Studio 公开的可扩展设计器基础结构来完全控制设计体验。 有关详细信息，请参阅[演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件](creating-a-wf-control-design-time-features.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件](creating-a-wf-control-design-time-features.md)

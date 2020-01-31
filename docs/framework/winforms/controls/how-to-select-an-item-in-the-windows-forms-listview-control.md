@@ -1,5 +1,5 @@
 ---
-title: 如何：选择 Windows 窗体 ListView 控件中的项
+title: 选择 ListView 控件中的项
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - selection [Windows Forms], in list views
 - list views [Windows Forms], selecting items
 ms.assetid: ddea918e-1ddf-47f4-bd09-1e9b4c9d0c39
-ms.openlocfilehash: 41a30ba6c242d0587e98b458e41ca213e8885bca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 57e985af9d0347510d7d7782f68d5b414d36e077
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638207"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743228"
 ---
-# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>如何：选择 Windows 窗体 ListView 控件中的项
-此示例演示如何以编程方式在 Windows 窗体中选择一项<xref:System.Windows.Forms.ListView>控件。 以编程方式选择某个项不会自动更改焦点<xref:System.Windows.Forms.ListView>控件。 出于此原因，你通常还需要设置的项，因为聚焦时选择某一项。  
+# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤에서 항목 선택
+此示例演示如何以编程方式选择 Windows 窗体 <xref:System.Windows.Forms.ListView> 控件中的项。 以编程方式选择项并不会自动将焦点更改为 <xref:System.Windows.Forms.ListView> 控件。 出于此原因，在选择项时，通常还需要将项设置为聚焦项。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[System.Windows.Forms.ListView.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.ListView.Misc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a>编译代码  
- 此示例需要：  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 이 예제에는 다음 사항이 필요합니다.  
   
-- 一个<xref:System.Windows.Forms.ListView>名为控件`listView1`，其中包含至少一个项。  
+- 一个名为 `listView1` 的 <xref:System.Windows.Forms.ListView> 控件，其中至少包含一项。  
   
-- 对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间的引用。  
+- <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 네임스페이스에 대한 참조  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListViewItem.Selected%2A?displayProperty=nameWithType>
