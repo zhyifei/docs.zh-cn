@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 166b0761-ed80-4ccd-9973-dc20e61bf8fa
 topic_type:
 - apiref
-ms.openlocfilehash: 077e6d729eb98ddad25cd0c0cccf6d4641e2602c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a1a616c1289867864eb9eb449c7d6f47f9a8352b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428255"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861276"
 ---
-# <a name="icorprofilerobjectenumgetcount-method"></a><span data-ttu-id="2bb34-102">ICorProfilerObjectEnum::GetCount 方法</span><span class="sxs-lookup"><span data-stu-id="2bb34-102">ICorProfilerObjectEnum::GetCount Method</span></span>
-<span data-ttu-id="2bb34-103">获取集合中冻结对象的总数。</span><span class="sxs-lookup"><span data-stu-id="2bb34-103">Gets the total number of frozen objects in the collection.</span></span>  
+# <a name="icorprofilerobjectenumgetcount-method"></a><span data-ttu-id="30e75-102">ICorProfilerObjectEnum::GetCount 方法</span><span class="sxs-lookup"><span data-stu-id="30e75-102">ICorProfilerObjectEnum::GetCount Method</span></span>
+<span data-ttu-id="30e75-103">获取集合中冻结对象的总数。</span><span class="sxs-lookup"><span data-stu-id="30e75-103">Gets the total number of frozen objects in the collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2bb34-104">语法</span><span class="sxs-lookup"><span data-stu-id="2bb34-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="30e75-104">语法</span><span class="sxs-lookup"><span data-stu-id="30e75-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCount (  
@@ -33,21 +33,21 @@ HRESULT GetCount (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2bb34-105">参数</span><span class="sxs-lookup"><span data-stu-id="2bb34-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="30e75-105">参数</span><span class="sxs-lookup"><span data-stu-id="30e75-105">Parameters</span></span>  
  `pcelt`  
- <span data-ttu-id="2bb34-106">弄一个指针，它指向集合中的冻结对象的数目。</span><span class="sxs-lookup"><span data-stu-id="2bb34-106">[out] A pointer to the number of frozen objects in the collection.</span></span>  
+ <span data-ttu-id="30e75-106">弄一个指针，它指向集合中的冻结对象的数目。</span><span class="sxs-lookup"><span data-stu-id="30e75-106">[out] A pointer to the number of frozen objects in the collection.</span></span>  
   
- <span data-ttu-id="2bb34-107">此方法在 .NET Framework 版本 3.5 Service Pack 1 （SP1）和更高版本中将始终返回零。</span><span class="sxs-lookup"><span data-stu-id="2bb34-107">This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.</span></span>  
+ <span data-ttu-id="30e75-107">此方法在 .NET Framework 版本 3.5 Service Pack 1 （SP1）和更高版本中将始终返回零。</span><span class="sxs-lookup"><span data-stu-id="30e75-107">This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2bb34-108">要求</span><span class="sxs-lookup"><span data-stu-id="2bb34-108">Requirements</span></span>  
- <span data-ttu-id="2bb34-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2bb34-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="30e75-108">需求</span><span class="sxs-lookup"><span data-stu-id="30e75-108">Requirements</span></span>  
+ <span data-ttu-id="30e75-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="30e75-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2bb34-110">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2bb34-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="30e75-110">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="30e75-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="2bb34-111">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2bb34-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="30e75-111">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="30e75-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2bb34-112">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2bb34-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="30e75-112">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30e75-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2bb34-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2bb34-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="30e75-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="30e75-113">See also</span></span>
 
-- [<span data-ttu-id="2bb34-114">ICorProfilerObjectEnum 接口</span><span class="sxs-lookup"><span data-stu-id="2bb34-114">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+- [<span data-ttu-id="30e75-114">ICorProfilerObjectEnum 接口</span><span class="sxs-lookup"><span data-stu-id="30e75-114">ICorProfilerObjectEnum Interface</span></span>](icorprofilerobjectenum-interface.md)

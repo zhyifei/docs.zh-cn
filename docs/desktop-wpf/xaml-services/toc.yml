@@ -76,7 +76,7 @@
           href: service-contexts-with-type-converters-and-markup-extensions.md
     - name: XAML 中的泛型
       href: generics.md
-    - name: 定义与 .NET Framework XAML 服务一起使用的自定义类型
+    - name: 定义与 .NET XAML 服务一起使用的自定义类型
       href: define-custom-types.md
       items:
         - name: 自定义类型和库的 XAML 相关 CLR 特性

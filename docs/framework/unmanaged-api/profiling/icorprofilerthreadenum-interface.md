@@ -14,39 +14,39 @@ helpviewer_keywords:
 ms.assetid: 1e35031b-e095-4c14-9644-8deeb3081e0b
 topic_type:
 - apiref
-ms.openlocfilehash: b83706176091fd70d48e0f50a0fe5988c876f606
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b9fb308f19ff09218c97b030296b9a3d4f0f2512
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447618"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868182"
 ---
-# <a name="icorprofilerthreadenum-interface"></a><span data-ttu-id="c3a6a-102">ICorProfilerThreadEnum 接口</span><span class="sxs-lookup"><span data-stu-id="c3a6a-102">ICorProfilerThreadEnum Interface</span></span>
-<span data-ttu-id="c3a6a-103">提供方法以按顺序循环访问公共语言运行时中的线程集合。</span><span class="sxs-lookup"><span data-stu-id="c3a6a-103">Provides methods to sequentially iterate through a collection of threads in the common language runtime.</span></span>  
+# <a name="icorprofilerthreadenum-interface"></a><span data-ttu-id="3fcc0-102">ICorProfilerThreadEnum 接口</span><span class="sxs-lookup"><span data-stu-id="3fcc0-102">ICorProfilerThreadEnum Interface</span></span>
+<span data-ttu-id="3fcc0-103">提供方法以按顺序循环访问公共语言运行时中的线程集合。</span><span class="sxs-lookup"><span data-stu-id="3fcc0-103">Provides methods to sequentially iterate through a collection of threads in the common language runtime.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="c3a6a-104">方法</span><span class="sxs-lookup"><span data-stu-id="c3a6a-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="3fcc0-104">方法</span><span class="sxs-lookup"><span data-stu-id="3fcc0-104">Methods</span></span>  
   
-|<span data-ttu-id="c3a6a-105">方法</span><span class="sxs-lookup"><span data-stu-id="c3a6a-105">Method</span></span>|<span data-ttu-id="c3a6a-106">说明</span><span class="sxs-lookup"><span data-stu-id="c3a6a-106">Description</span></span>|  
+|<span data-ttu-id="3fcc0-105">方法</span><span class="sxs-lookup"><span data-stu-id="3fcc0-105">Method</span></span>|<span data-ttu-id="3fcc0-106">描述</span><span class="sxs-lookup"><span data-stu-id="3fcc0-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="c3a6a-107">Clone 方法</span><span class="sxs-lookup"><span data-stu-id="c3a6a-107">Clone Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-clone-method.md)|<span data-ttu-id="c3a6a-108">获取指向此 `ICorProfilerThreadEnum` 接口副本的接口指针。</span><span class="sxs-lookup"><span data-stu-id="c3a6a-108">Gets an interface pointer to a copy of this `ICorProfilerThreadEnum` interface.</span></span>|  
-|[<span data-ttu-id="c3a6a-109">GetCount 方法</span><span class="sxs-lookup"><span data-stu-id="c3a6a-109">GetCount Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-getcount-method.md)|<span data-ttu-id="c3a6a-110">获取应用程序使用的线程数。</span><span class="sxs-lookup"><span data-stu-id="c3a6a-110">Gets the number of threads that are used by the application.</span></span>|  
-|[<span data-ttu-id="c3a6a-111">Next 方法</span><span class="sxs-lookup"><span data-stu-id="c3a6a-111">Next Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-next-method.md)|<span data-ttu-id="c3a6a-112">从线程的序列集合获取指定的连续线程数，从序列中枚举器的当前位置开始。</span><span class="sxs-lookup"><span data-stu-id="c3a6a-112">Gets the specified number of contiguous threads from a sequential collection of threads, starting at the enumerator's current position in the sequence.</span></span>|  
-|[<span data-ttu-id="c3a6a-113">Reset 方法</span><span class="sxs-lookup"><span data-stu-id="c3a6a-113">Reset Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-reset-method.md)|<span data-ttu-id="c3a6a-114">将枚举器的光标移动到序列的起始位置。</span><span class="sxs-lookup"><span data-stu-id="c3a6a-114">Moves the enumerator's cursor to the starting position of the sequence.</span></span>|  
-|[<span data-ttu-id="c3a6a-115">Skip 方法</span><span class="sxs-lookup"><span data-stu-id="c3a6a-115">Skip Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-skip-method.md)|<span data-ttu-id="c3a6a-116">从当前位置前移枚举器的光标，以便跳过指定的元素数量。</span><span class="sxs-lookup"><span data-stu-id="c3a6a-116">Advances the enumerator's cursor from its current position to skip the specified number of elements.</span></span>|  
+|[<span data-ttu-id="3fcc0-107">Clone 方法</span><span class="sxs-lookup"><span data-stu-id="3fcc0-107">Clone Method</span></span>](icorprofilerthreadenum-clone-method.md)|<span data-ttu-id="3fcc0-108">获取指向此 `ICorProfilerThreadEnum` 接口副本的接口指针。</span><span class="sxs-lookup"><span data-stu-id="3fcc0-108">Gets an interface pointer to a copy of this `ICorProfilerThreadEnum` interface.</span></span>|  
+|[<span data-ttu-id="3fcc0-109">GetCount 方法</span><span class="sxs-lookup"><span data-stu-id="3fcc0-109">GetCount Method</span></span>](icorprofilerthreadenum-getcount-method.md)|<span data-ttu-id="3fcc0-110">获取应用程序使用的线程数。</span><span class="sxs-lookup"><span data-stu-id="3fcc0-110">Gets the number of threads that are used by the application.</span></span>|  
+|[<span data-ttu-id="3fcc0-111">Next 方法</span><span class="sxs-lookup"><span data-stu-id="3fcc0-111">Next Method</span></span>](icorprofilerthreadenum-next-method.md)|<span data-ttu-id="3fcc0-112">从线程的序列集合获取指定的连续线程数，从序列中枚举器的当前位置开始。</span><span class="sxs-lookup"><span data-stu-id="3fcc0-112">Gets the specified number of contiguous threads from a sequential collection of threads, starting at the enumerator's current position in the sequence.</span></span>|  
+|[<span data-ttu-id="3fcc0-113">Reset 方法</span><span class="sxs-lookup"><span data-stu-id="3fcc0-113">Reset Method</span></span>](icorprofilerthreadenum-reset-method.md)|<span data-ttu-id="3fcc0-114">将枚举器的光标移动到序列的起始位置。</span><span class="sxs-lookup"><span data-stu-id="3fcc0-114">Moves the enumerator's cursor to the starting position of the sequence.</span></span>|  
+|[<span data-ttu-id="3fcc0-115">Skip 方法</span><span class="sxs-lookup"><span data-stu-id="3fcc0-115">Skip Method</span></span>](icorprofilerthreadenum-skip-method.md)|<span data-ttu-id="3fcc0-116">从当前位置前移枚举器的光标，以便跳过指定的元素数量。</span><span class="sxs-lookup"><span data-stu-id="3fcc0-116">Advances the enumerator's cursor from its current position to skip the specified number of elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c3a6a-117">备注</span><span class="sxs-lookup"><span data-stu-id="c3a6a-117">Remarks</span></span>  
- <span data-ttu-id="c3a6a-118">`ICorProfilerThreadEnum` 接口是一个枚举器。</span><span class="sxs-lookup"><span data-stu-id="c3a6a-118">The `ICorProfilerThreadEnum` interface is an enumerator.</span></span> <span data-ttu-id="c3a6a-119">它可以让数组接收器以其合适的速率从发送器拉取元素。</span><span class="sxs-lookup"><span data-stu-id="c3a6a-119">It allows the receiver of an array to pull elements from the sender at a rate that is appropriate for the receiver.</span></span> <span data-ttu-id="c3a6a-120">换而言之，接收器可以显式控制数组元素流，从而避免将大型数组作为方法形参传递方面的相关问题。</span><span class="sxs-lookup"><span data-stu-id="c3a6a-120">In other words, the receiver is able to explicitly control the flow of array elements, thereby avoiding the problems associated with passing large arrays as method parameters.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3fcc0-117">备注</span><span class="sxs-lookup"><span data-stu-id="3fcc0-117">Remarks</span></span>  
+ <span data-ttu-id="3fcc0-118">`ICorProfilerThreadEnum` 接口是一个枚举器。</span><span class="sxs-lookup"><span data-stu-id="3fcc0-118">The `ICorProfilerThreadEnum` interface is an enumerator.</span></span> <span data-ttu-id="3fcc0-119">它可以让数组接收器以其合适的速率从发送器拉取元素。</span><span class="sxs-lookup"><span data-stu-id="3fcc0-119">It allows the receiver of an array to pull elements from the sender at a rate that is appropriate for the receiver.</span></span> <span data-ttu-id="3fcc0-120">换而言之，接收器可以显式控制数组元素流，从而避免将大型数组作为方法形参传递方面的相关问题。</span><span class="sxs-lookup"><span data-stu-id="3fcc0-120">In other words, the receiver is able to explicitly control the flow of array elements, thereby avoiding the problems associated with passing large arrays as method parameters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c3a6a-121">要求</span><span class="sxs-lookup"><span data-stu-id="c3a6a-121">Requirements</span></span>  
- <span data-ttu-id="c3a6a-122">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c3a6a-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3fcc0-121">需求</span><span class="sxs-lookup"><span data-stu-id="3fcc0-121">Requirements</span></span>  
+ <span data-ttu-id="3fcc0-122">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3fcc0-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c3a6a-123">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c3a6a-123">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="3fcc0-123">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3fcc0-123">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="c3a6a-124">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c3a6a-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3fcc0-124">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3fcc0-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c3a6a-125">**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3a6a-125">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="3fcc0-125">**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3fcc0-125">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c3a6a-126">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c3a6a-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3fcc0-126">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3fcc0-126">See also</span></span>
 
-- [<span data-ttu-id="c3a6a-127">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="c3a6a-127">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="c3a6a-128">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="c3a6a-128">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="3fcc0-127">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="3fcc0-127">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
+- [<span data-ttu-id="3fcc0-128">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="3fcc0-128">Profiling Interfaces</span></span>](profiling-interfaces.md)

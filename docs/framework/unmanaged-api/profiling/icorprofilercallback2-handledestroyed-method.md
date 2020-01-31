@@ -15,37 +15,37 @@ helpviewer_keywords:
 ms.assetid: ab4f4bbd-40c7-4667-bfde-60cd73803110
 topic_type:
 - apiref
-ms.openlocfilehash: 2ad1eb765c435244389a671c74026539fa3590cf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b2618da708a1c4351b56a15af9156a68392a0d59
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439752"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865742"
 ---
-# <a name="icorprofilercallback2handledestroyed-method"></a><span data-ttu-id="ea32a-102">ICorProfilerCallback2::HandleDestroyed 方法</span><span class="sxs-lookup"><span data-stu-id="ea32a-102">ICorProfilerCallback2::HandleDestroyed Method</span></span>
-<span data-ttu-id="ea32a-103">通知代码探查器垃圾回收句柄已销毁。</span><span class="sxs-lookup"><span data-stu-id="ea32a-103">Notifies the code profiler that a garbage collection handle has been destroyed.</span></span>  
+# <a name="icorprofilercallback2handledestroyed-method"></a><span data-ttu-id="92b78-102">ICorProfilerCallback2::HandleDestroyed 方法</span><span class="sxs-lookup"><span data-stu-id="92b78-102">ICorProfilerCallback2::HandleDestroyed Method</span></span>
+<span data-ttu-id="92b78-103">通知代码探查器垃圾回收句柄已销毁。</span><span class="sxs-lookup"><span data-stu-id="92b78-103">Notifies the code profiler that a garbage collection handle has been destroyed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ea32a-104">语法</span><span class="sxs-lookup"><span data-stu-id="ea32a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="92b78-104">语法</span><span class="sxs-lookup"><span data-stu-id="92b78-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT HandleDestroyed(  
     [in] GCHandleID handleId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ea32a-105">参数</span><span class="sxs-lookup"><span data-stu-id="ea32a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="92b78-105">参数</span><span class="sxs-lookup"><span data-stu-id="92b78-105">Parameters</span></span>  
  `handleId`  
- <span data-ttu-id="ea32a-106">中垃圾回收的句柄的 ID。</span><span class="sxs-lookup"><span data-stu-id="ea32a-106">[in] The ID of the handle for the garbage collection.</span></span>  
+ <span data-ttu-id="92b78-106">中垃圾回收的句柄的 ID。</span><span class="sxs-lookup"><span data-stu-id="92b78-106">[in] The ID of the handle for the garbage collection.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ea32a-107">要求</span><span class="sxs-lookup"><span data-stu-id="ea32a-107">Requirements</span></span>  
- <span data-ttu-id="ea32a-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ea32a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="92b78-107">需求</span><span class="sxs-lookup"><span data-stu-id="92b78-107">Requirements</span></span>  
+ <span data-ttu-id="92b78-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="92b78-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ea32a-109">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ea32a-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="92b78-109">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="92b78-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ea32a-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ea32a-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="92b78-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="92b78-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ea32a-111">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ea32a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="92b78-111">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="92b78-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ea32a-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ea32a-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="92b78-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="92b78-112">See also</span></span>
 
-- [<span data-ttu-id="ea32a-113">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="ea32a-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="ea32a-114">ICorProfilerCallback2 接口</span><span class="sxs-lookup"><span data-stu-id="ea32a-114">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [<span data-ttu-id="92b78-113">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="92b78-113">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
+- [<span data-ttu-id="92b78-114">ICorProfilerCallback2 接口</span><span class="sxs-lookup"><span data-stu-id="92b78-114">ICorProfilerCallback2 Interface</span></span>](icorprofilercallback2-interface.md)
