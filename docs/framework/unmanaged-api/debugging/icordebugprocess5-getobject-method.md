@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-ms.openlocfilehash: e4d297023d96de83965c3d04ca9efe2613fd54d0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 540ca78c5548d4fbdd3338671ea02314736f15cd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084447"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792366"
 ---
-# <a name="icordebugprocess5getobject-method"></a><span data-ttu-id="5cef6-102">ICorDebugProcess5::GetObject 方法</span><span class="sxs-lookup"><span data-stu-id="5cef6-102">ICorDebugProcess5::GetObject Method</span></span>
-<span data-ttu-id="5cef6-103">将对象地址转换为 "ICorDebugObjectValue" 对象。</span><span class="sxs-lookup"><span data-stu-id="5cef6-103">Converts an object address to an "ICorDebugObjectValue" object.</span></span>  
+# <a name="icordebugprocess5getobject-method"></a><span data-ttu-id="5e0e6-102">ICorDebugProcess5::GetObject 方法</span><span class="sxs-lookup"><span data-stu-id="5e0e6-102">ICorDebugProcess5::GetObject Method</span></span>
+<span data-ttu-id="5e0e6-103">将对象地址转换为 "ICorDebugObjectValue" 对象。</span><span class="sxs-lookup"><span data-stu-id="5e0e6-103">Converts an object address to an "ICorDebugObjectValue" object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5cef6-104">语法</span><span class="sxs-lookup"><span data-stu-id="5cef6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5e0e6-104">语法</span><span class="sxs-lookup"><span data-stu-id="5e0e6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetObject(  
@@ -34,26 +34,26 @@ HRESULT GetObject(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5cef6-105">参数</span><span class="sxs-lookup"><span data-stu-id="5cef6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5e0e6-105">参数</span><span class="sxs-lookup"><span data-stu-id="5e0e6-105">Parameters</span></span>  
  `addr`  
- <span data-ttu-id="5cef6-106">中对象地址。</span><span class="sxs-lookup"><span data-stu-id="5cef6-106">[in] The object address.</span></span>  
+ <span data-ttu-id="5e0e6-106">中对象地址。</span><span class="sxs-lookup"><span data-stu-id="5e0e6-106">[in] The object address.</span></span>  
   
  `ppObject`  
- <span data-ttu-id="5cef6-107">弄一个指向 "ICorDebugObjectValue" 对象地址的指针。</span><span class="sxs-lookup"><span data-stu-id="5cef6-107">[out] A pointer to the address of an  "ICorDebugObjectValue" object.</span></span>  
+ <span data-ttu-id="5e0e6-107">弄一个指向 "ICorDebugObjectValue" 对象地址的指针。</span><span class="sxs-lookup"><span data-stu-id="5e0e6-107">[out] A pointer to the address of an  "ICorDebugObjectValue" object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5cef6-108">备注</span><span class="sxs-lookup"><span data-stu-id="5cef6-108">Remarks</span></span>  
- <span data-ttu-id="5cef6-109">如果 `addr` 未指向有效的托管对象，则 `GetObject` 方法返回 `E_FAIL`。</span><span class="sxs-lookup"><span data-stu-id="5cef6-109">If `addr` does not point to a valid managed object, the `GetObject` method returns `E_FAIL`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5e0e6-108">备注</span><span class="sxs-lookup"><span data-stu-id="5e0e6-108">Remarks</span></span>  
+ <span data-ttu-id="5e0e6-109">如果 `addr` 未指向有效的托管对象，则 `GetObject` 方法返回 `E_FAIL`。</span><span class="sxs-lookup"><span data-stu-id="5e0e6-109">If `addr` does not point to a valid managed object, the `GetObject` method returns `E_FAIL`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5cef6-110">要求</span><span class="sxs-lookup"><span data-stu-id="5cef6-110">Requirements</span></span>  
- <span data-ttu-id="5cef6-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5cef6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5e0e6-110">需求</span><span class="sxs-lookup"><span data-stu-id="5e0e6-110">Requirements</span></span>  
+ <span data-ttu-id="5e0e6-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5e0e6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5cef6-112">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5cef6-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5e0e6-112">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5e0e6-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5cef6-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5cef6-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5e0e6-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5e0e6-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5cef6-114">**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5cef6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="5e0e6-114">**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5e0e6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5cef6-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="5cef6-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5e0e6-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5e0e6-115">See also</span></span>
 
-- [<span data-ttu-id="5cef6-116">ICorDebugProcess5 接口</span><span class="sxs-lookup"><span data-stu-id="5cef6-116">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="5cef6-117">调试接口</span><span class="sxs-lookup"><span data-stu-id="5cef6-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="5e0e6-116">ICorDebugProcess5 接口</span><span class="sxs-lookup"><span data-stu-id="5e0e6-116">ICorDebugProcess5 Interface</span></span>](icordebugprocess5-interface.md)
+- [<span data-ttu-id="5e0e6-117">调试接口</span><span class="sxs-lookup"><span data-stu-id="5e0e6-117">Debugging Interfaces</span></span>](debugging-interfaces.md)

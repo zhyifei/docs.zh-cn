@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 92d76893-683c-475d-9996-5bff03cdb10f
 topic_type:
 - apiref
-ms.openlocfilehash: ade0ba0517e47e9500683836b87d7a8ac1dfcfdb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b9093f920a8c14247bc51471da3682c7e500afa4
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439861"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865800"
 ---
-# <a name="icorprofilercallback2finalizeableobjectqueued-method"></a><span data-ttu-id="9304c-102">ICorProfilerCallback2::FinalizeableObjectQueued 方法</span><span class="sxs-lookup"><span data-stu-id="9304c-102">ICorProfilerCallback2::FinalizeableObjectQueued Method</span></span>
-<span data-ttu-id="9304c-103">通知代码探查器，具有终结器的对象已排入终结器线程，以执行其 `Finalize` 方法。</span><span class="sxs-lookup"><span data-stu-id="9304c-103">Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.</span></span>  
+# <a name="icorprofilercallback2finalizeableobjectqueued-method"></a><span data-ttu-id="17752-102">ICorProfilerCallback2::FinalizeableObjectQueued 方法</span><span class="sxs-lookup"><span data-stu-id="17752-102">ICorProfilerCallback2::FinalizeableObjectQueued Method</span></span>
+<span data-ttu-id="17752-103">通知代码探查器，具有终结器的对象已排入终结器线程，以执行其 `Finalize` 方法。</span><span class="sxs-lookup"><span data-stu-id="17752-103">Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9304c-104">语法</span><span class="sxs-lookup"><span data-stu-id="9304c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="17752-104">语法</span><span class="sxs-lookup"><span data-stu-id="17752-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT FinalizeableObjectQueued(  
@@ -33,23 +33,23 @@ HRESULT FinalizeableObjectQueued(
     [in] ObjectID objectID);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9304c-105">参数</span><span class="sxs-lookup"><span data-stu-id="9304c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="17752-105">参数</span><span class="sxs-lookup"><span data-stu-id="17752-105">Parameters</span></span>  
  `finalizerFlags`  
- <span data-ttu-id="9304c-106">中一个[COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md)枚举的值，该值描述终结器的各个方面。</span><span class="sxs-lookup"><span data-stu-id="9304c-106">[in] A value of the [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumeration that describes aspects of the finalizer.</span></span>  
+ <span data-ttu-id="17752-106">中一个[COR_PRF_FINALIZER_FLAGS](cor-prf-finalizer-flags-enumeration.md)枚举的值，该值描述终结器的各个方面。</span><span class="sxs-lookup"><span data-stu-id="17752-106">[in] A value of the [COR_PRF_FINALIZER_FLAGS](cor-prf-finalizer-flags-enumeration.md) enumeration that describes aspects of the finalizer.</span></span>  
   
  `objectID`  
- <span data-ttu-id="9304c-107">中已排队的对象的 ID。</span><span class="sxs-lookup"><span data-stu-id="9304c-107">[in] The ID of the object that has been queued.</span></span>  
+ <span data-ttu-id="17752-107">中已排队的对象的 ID。</span><span class="sxs-lookup"><span data-stu-id="17752-107">[in] The ID of the object that has been queued.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9304c-108">要求</span><span class="sxs-lookup"><span data-stu-id="9304c-108">Requirements</span></span>  
- <span data-ttu-id="9304c-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9304c-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="17752-108">需求</span><span class="sxs-lookup"><span data-stu-id="17752-108">Requirements</span></span>  
+ <span data-ttu-id="17752-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="17752-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9304c-110">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9304c-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="17752-110">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="17752-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="9304c-111">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9304c-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="17752-111">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="17752-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9304c-112">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9304c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="17752-112">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17752-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9304c-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9304c-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="17752-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="17752-113">See also</span></span>
 
-- [<span data-ttu-id="9304c-114">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="9304c-114">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="9304c-115">ICorProfilerCallback2 接口</span><span class="sxs-lookup"><span data-stu-id="9304c-115">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [<span data-ttu-id="17752-114">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="17752-114">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
+- [<span data-ttu-id="17752-115">ICorProfilerCallback2 接口</span><span class="sxs-lookup"><span data-stu-id="17752-115">ICorProfilerCallback2 Interface</span></span>](icorprofilercallback2-interface.md)
