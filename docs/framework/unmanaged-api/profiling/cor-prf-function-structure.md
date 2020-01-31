@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8bb5acf5-cf4b-4ccb-93f1-46db1f3f8bf3
 topic_type:
 - apiref
-ms.openlocfilehash: 40698a49ac7012c4f67eb88b1ead04c80f3dea77
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 14dcb251e25b5bd502c8d514a6dc35778fbe9f73
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428327"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867225"
 ---
 # <a name="cor_prf_function-structure"></a>COR_PRF_FUNCTION 结构
 通过将函数的 ID 与其重新编译的 ID 版本组合起来，提供该函数的唯一表示形式。  
@@ -32,14 +32,14 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
   
 ## <a name="members"></a>Members  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
 |`functionId`|函数的 ID。|  
 |`reJitId`|重新编译的函数的 ID。 值0（零）表示函数的原始版本。|  
   
 ## <a name="remarks"></a>备注  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Corprof.idl .idl  
@@ -50,4 +50,4 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
   
 ## <a name="see-also"></a>另请参阅
 
-- [分析结构](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [分析结构](profiling-structures.md)

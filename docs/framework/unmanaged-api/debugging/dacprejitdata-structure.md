@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 77ef2c65157df4a033700bb8d0295875ede46554
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 46031f29da6916eeaeea863ebef6924a720d7155
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739107"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793818"
 ---
 # <a name="dacprejitdata-structure"></a>DacpReJitData 结构
 
-定义给定探查器检测方法有关的基本信息。
+定义有关给定探查器检测到的方法的基本信息。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -47,25 +47,25 @@ struct MSLAYOUT DacpReJitData
 };
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 | 成员           | 描述                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------ |
-| `rejitID`        | 一种方法 ReJit 修订号。                                                          |
-| `flags`          | 一个标志，指示该方法的给定版本的 ReJit 检测的当前状态。 |
-| `NativeCodeAddr` | 方法的 rejitted 实现基址。                                         |
+| `rejitID`        | 方法的 ReJit 修订号。                                                          |
+| `flags`          | 一个标志，指示给定版本的该方法的 ReJit 检测的当前状态。 |
+| `NativeCodeAddr` | 该方法的 rejitted 实现的基址。                                         |
 
 ## <a name="remarks"></a>备注
 
-此结构存在于运行时内，不通过任何标头或库文件公开。 若要使用它，如上所示定义的结构。 此外必须使用定义结构`ms_struct`打包，如果不是使用 Microsoft 编译器。
+此结构存在于运行时中，并且不会通过任何标头或库文件公开。 若要使用它，请定义上面指定的结构。 如果不使用 Microsoft 编译器，还必须使用 `ms_struct` 封装来定义结构。
 
-## <a name="requirements"></a>要求
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** 无  
-**库：** None  
+## <a name="requirements"></a>需求
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**标头：** 内容  
+**库：** 内容  
 **.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [调试](index.md)
+- [调试结构](debugging-structures.md)

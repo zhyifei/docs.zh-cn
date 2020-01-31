@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3ff2ad2a-da5a-461b-8627-1a8eba49df9c
 topic_type:
 - apiref
-ms.openlocfilehash: ab5adabe868c245ed7a773d9b4206b25d9e9a4f0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6f20b0f7927d79ee56b5b6962137d668dc048d1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140246"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791120"
 ---
 # <a name="icordebugvalue2-interface"></a>ICorDebugValue2 接口
 扩展 "ICorDebugValue" 接口，以提供对 "ICorDebugType" 对象的支持。  
@@ -28,14 +28,14 @@ ms.locfileid: "73140246"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetExactType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|获取一个接口指针，该指针指向表示此值的 <xref:System.Type> 的 `ICorDebugType` 对象。|  
+|[GetExactType 方法](icordebugvalue2-getexacttype-method.md)|获取一个接口指针，该指针指向表示此值的 <xref:System.Type> 的 `ICorDebugType` 对象。|  
   
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -44,8 +44,8 @@ ms.locfileid: "73140246"
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试接口](debugging-interfaces.md)
 
-- [ICorDebugValue3 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
+- [ICorDebugValue3 接口](icordebugvalue3-interface.md)

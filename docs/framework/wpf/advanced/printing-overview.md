@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 3f99b0e93e6b16ac66f6869c284c1119ddfc3751
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: de9f4b5c0a817d010c7510395b4e5c09ed0a9865
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740302"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794285"
 ---
 # <a name="printing-overview"></a>打印概述
-使用 Microsoft .NET 框架，使用 Windows Presentation Foundation （WPF）的应用程序开发人员具有丰富的一组新的打印和打印系统管理 Api。 在 Windows Vista 中，某些打印系统增强功能还可供开发人员使用非托管代码创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序和开发人员使用。 这一新功能的核心是新的 XML 纸张规范（XPS）文件格式和 XPS 打印路径。  
+使用 Microsoft .NET 框架，使用 Windows Presentation Foundation （WPF）的应用程序开发人员具有丰富的一组新的打印和打印系统管理 Api。 在 Windows Vista 中，某些打印系统增强功能还可供开发人员使用非托管代码创建 Windows 窗体应用程序和开发人员使用。 这一新功能的核心是新的 XML 纸张规范（XPS）文件格式和 XPS 打印路径。  
   
  本主题包含以下各节：  
   
@@ -57,7 +57,7 @@ ms.locfileid: "75740302"
   
 - 打印架构。 公共架构将定期进行更新，并可以实现设备功能的迅速扩展。 （请参阅下面的 **PrintTicket 和 PrintCapabilities**。）  
   
-- 可扩展筛选器管道。 XPS 打印机驱动程序（XPSDrv）筛选器管道设计用于启用 XPS 文档的直接和可缩放打印。 有关详细信息，请参阅 [XPSDrv 打印机驱动程序](/windows-hardware/drivers/print/xpsdrv-printer-drivers)。 
+- 可扩展筛选器管道。 XPS 打印机驱动程序（XPSDrv）筛选器管道设计用于启用 XPS 文档的直接和可缩放打印。 有关详细信息，请参阅[XPSDrv 打印机驱动程序](/windows-hardware/drivers/print/xpsdrv-printer-drivers)。 
   
 ### <a name="print-path-architecture"></a>打印路径体系结构  
  尽管 Win32 和 .NET Framework 应用程序都支持 XPS，但 Win32 和 Windows 窗体应用程序都使用 GDI 进行 XPS 转换，以便为 XPS 打印机驱动程序（XPSDrv）创建 XPS 格式的内容。 这些应用程序不是使用 XPS 打印路径所必需的，并且可以继续使用基于增强型图元文件（EMF）的打印。 但是，大多数 XPS 功能和增强功能仅适用于面向 XPS 打印路径的应用程序。  

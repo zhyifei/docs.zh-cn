@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: 7f6ef2c410d49e2e63b88d6f47c33c211f2a8dd8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: 2d99c6d8bd2af02456c6a90143b524c337483868
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790285"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866877"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 函数
 通知探查器，当前正在执行的函数即将对另一个函数执行尾调用，并提供有关堆栈帧的信息。  
@@ -42,16 +42,16 @@ void __stdcall FunctionTailcall2 (
 
 - `clientData`
 
-  \[）中的重新映射函数标识符，该标识符之前通过[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)指定的探查器将进行尾调用。
+  \[）中的重新映射函数标识符，该标识符之前通过[FunctionIDMapper](functionidmapper-function.md)指定的探查器将进行尾调用。
   
 - `func`
 
   \[中的] `COR_PRF_FRAME_INFO` 值，该值指向有关堆栈帧的信息。
 
-  探查器应将此视为不透明的句柄，该句柄可传递回[ICorProfilerInfo2：： GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法中的执行引擎。
+  探查器应将此视为不透明的句柄，该句柄可传递回[ICorProfilerInfo2：： GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)方法中的执行引擎。
 
 ## <a name="remarks"></a>备注  
- 尾调用的目标函数将使用当前堆栈帧，并将直接返回到进行尾调用的函数的调用方。 这意味着将不会为作为尾调用目标的函数发出[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)回调。  
+ 尾调用的目标函数将使用当前堆栈帧，并将直接返回到进行尾调用的函数的调用方。 这意味着将不会为作为尾调用目标的函数发出[FunctionLeave2](functionleave2-function.md)回调。  
   
  `FunctionTailcall2` 函数返回后，`func` 参数的值无效，因为该值可能会更改或被销毁。  
   
@@ -78,7 +78,7 @@ void __stdcall FunctionTailcall2 (
   
 ## <a name="see-also"></a>另请参阅
 
-- [FunctionEnter2 函数](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2 函数](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [SetEnterLeaveFunctionHooks2 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [分析全局静态函数](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 函数](functionenter2-function.md)
+- [FunctionLeave2 函数](functionleave2-function.md)
+- [SetEnterLeaveFunctionHooks2 方法](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [分析全局静态函数](profiling-global-static-functions.md)

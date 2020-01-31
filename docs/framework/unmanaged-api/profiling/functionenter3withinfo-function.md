@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 277c3344-d0cb-431e-beae-eb1eeeba8eea
 topic_type:
 - apiref
-ms.openlocfilehash: 86b1c8b3f5bd88b216c59f5cc6846f83f3c094ee
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 75a9a7174f105d99e9d1c9b220cfc5bf928d46ec
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440747"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866965"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo 函数
-通知探查器控制正在传递到函数，并提供一个句柄，该句柄可传递给[ICorProfilerInfo3：： GetFunctionEnter3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)以检索堆栈帧和函数自变量。  
+通知探查器控制正在传递到函数，并提供一个句柄，该句柄可传递给[ICorProfilerInfo3：： GetFunctionEnter3Info 方法](icorprofilerinfo3-getfunctionenter3info-method.md)以检索堆栈帧和函数自变量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,15 +32,18 @@ void __stdcall FunctionEnter3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-## <a name="parameters"></a>参数  
- `functionIDOrClientID`  
- 中要传递控制的函数的标识符。  
-  
- `eltInfo`  
- [in] 表示有关给定堆栈帧的信息的不透明的句柄。 此句柄仅在其传递到的回调期间有效。  
-  
+## <a name="parameters"></a>参数
+
+- `functionIDOrClientID`
+
+  \[中] 控制传递到的函数的标识符。
+
+- `eltInfo`
+
+  \[中] 表示有关给定堆栈帧的信息的不透明的句柄。 此句柄仅在其传递到的回调期间有效。
+
 ## <a name="remarks"></a>备注  
- `FunctionEnter3WithInfo` 回调方法会在调用函数时通知探查器，并使探查器可以使用[ICorProfilerInfo3：： GetFunctionEnter3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)来检查参数值。 若要访问参数信息，必须设置 `COR_PRF_ENABLE_FUNCTION_ARGS` 标志。 探查器可以使用[ICorProfilerInfo：： SetEventMask 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)来设置事件标志，然后使用[ICorProfilerInfo3：： SetEnterLeaveFunctionHooks3WithInfo 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)来注册此函数的实现。  
+ `FunctionEnter3WithInfo` 回调方法会在调用函数时通知探查器，并使探查器可以使用[ICorProfilerInfo3：： GetFunctionEnter3Info 方法](icorprofilerinfo3-getfunctionenter3info-method.md)来检查参数值。 若要访问参数信息，必须设置 `COR_PRF_ENABLE_FUNCTION_ARGS` 标志。 探查器可以使用[ICorProfilerInfo：： SetEventMask 方法](icorprofilerinfo-seteventmask-method.md)来设置事件标志，然后使用[ICorProfilerInfo3：： SetEnterLeaveFunctionHooks3WithInfo 方法](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)来注册此函数的实现。  
   
  `FunctionEnter3WithInfo` 函数是回调;必须实现此方法。 实现必须使用 `__declspec(naked)` 存储类特性。  
   
@@ -54,7 +57,7 @@ void __stdcall FunctionEnter3WithInfo(
   
  `FunctionEnter3WithInfo` 函数不得调入托管代码或以任何方式导致托管内存分配。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Corprof.idl .idl  
@@ -65,7 +68,7 @@ void __stdcall FunctionEnter3WithInfo(
   
 ## <a name="see-also"></a>另请参阅
 
-- [GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)
-- [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
-- [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
-- [分析全局静态函数](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [GetFunctionEnter3Info](icorprofilerinfo3-getfunctionenter3info-method.md)
+- [FunctionEnter3](functionenter3-function.md)
+- [FunctionLeave3](functionleave3-function.md)
+- [分析全局静态函数](profiling-global-static-functions.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 973dbcc5-bce8-43a7-9a66-d9a1db7cc5b7
 topic_type:
 - apiref
-ms.openlocfilehash: 3353b453133b14b622a5f62409e7076e111cf824
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e4b093765889ef2ba0e5fab5057e2c5278ff9e4b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428137"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868208"
 ---
 # <a name="icorprofilerobjectenumreset-method"></a>ICorProfilerObjectEnum::Reset 方法
 将此枚举器的光标移动到序列的起始位置。  
@@ -31,7 +31,7 @@ ms.locfileid: "74428137"
 HRESULT Reset ();  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -42,4 +42,4 @@ HRESULT Reset ();
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerObjectEnum 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+- [ICorProfilerObjectEnum 接口](icorprofilerobjectenum-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70261da5-5933-4e25-9de0-ddf51cba56cc
 topic_type:
 - apiref
-ms.openlocfilehash: c7ced05692e3030bace10dab9a6793a29fac6c26
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 73d122b1ffa890bfa43f8eef7e24595ac0d26ebe
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444836"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861783"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert 方法
 将指定函数的所有实例还原为其初始版本。  
@@ -40,10 +40,10 @@ HRESULT RequestRevert (
  [in] 要还原的函数数目。  
   
  `moduleIds`  
- [in] 指定（`moduleId`、`module`）对的 `methodDef` 部分，它标识要还原的函数。  
+ [in] 指定（`module`、`methodDef`）对的 `moduleId` 部分，它标识要还原的函数。  
   
  `methodIds`  
- [in] 指定（`methodId`、`module`）对的 `methodDef` 部分，它标识要还原的函数。  
+ [in] 指定（`module`、`methodDef`）对的 `methodId` 部分，它标识要还原的函数。  
   
  `status`  
  [out] 在本主题后面的“状态 HRESULT”章节中列出的 HRESULT 数组。 每个 HRESULT 表示尝试还原并行数组 `moduleIds` 和 `methodIds` 中指定的每个函数是成功还是失败。  
@@ -51,17 +51,17 @@ HRESULT RequestRevert (
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
-|HRESULT|说明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|尝试还原所有请求；但是，必须检查返回的状态数组，确定成功还原了哪些函数。|  
-|CORPROF_E_CALLBACK4_REQUIRED|探查器必须实现[ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)接口，以便支持此调用。|  
-|CORPROF_E_REJIT_NOT_ENABLED|尚未启用 JIT 重新编译。 必须通过使用[ICorProfilerInfo：： SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法设置 `COR_PRF_ENABLE_REJIT` 标志来在初始化期间启用 JIT 重新编译。|  
-|E_INVALIDARG|`cFunctions` 为0，或者 `moduleIds` 或 `methodIds` `NULL`。|  
+|CORPROF_E_CALLBACK4_REQUIRED|探查器必须实现[ICorProfilerCallback4](icorprofilercallback4-interface.md)接口，以便支持此调用。|  
+|CORPROF_E_REJIT_NOT_ENABLED|尚未启用 JIT 重新编译。 必须通过使用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)方法设置 `COR_PRF_ENABLE_REJIT` 标志来在初始化期间启用 JIT 重新编译。|  
+|E_INVALIDARG|`cFunctions` 为 0，或者 `moduleIds` 或 `methodIds` 为 `NULL`。|  
 |E_OUTOFMEMORY|CLR 无法完成请求，因为它已耗尽内存。|  
   
 ## <a name="status-hresults"></a>状态 HRESULTS  
   
-|状态数组 HRESULT|说明|  
+|状态数组 HRESULT|描述|  
 |--------------------------|-----------------|  
 |S_OK|已成功还原相应函数。|  
 |E_INVALIDARG|`moduleID` 或 `methodDef` 参数为 `NULL`。|  
@@ -73,7 +73,7 @@ HRESULT RequestRevert (
 ## <a name="remarks"></a>备注  
  在下次调用任何已还原的函数实例时，将运行此函数的初始版本。 如果已在运行某个函数，则将完成正在运行的版本的执行操作。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -84,6 +84,6 @@ HRESULT RequestRevert (
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo4 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [分析](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo4 接口](icorprofilerinfo4-interface.md)
+- [Profiling 接口](profiling-interfaces.md)
+- [分析](index.md)

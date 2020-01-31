@@ -1,5 +1,5 @@
 ---
-title: Windows 窗体和控件中的国际字体
+title: 窗体和控件中的国际字体
 ms.date: 03/30/2017
 helpviewer_keywords:
 - fonts [Windows Forms], international
@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c3066df-9bac-479a-82b2-79e484b346a3
-ms.openlocfilehash: 0ddbd6d7a1b614d588a2572b410957a5ed3b768c
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 59dde6bb384d644321a8ff5674d735f8e6d36fd0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956906"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743519"
 ---
 # <a name="international-fonts-in-windows-forms-and-controls"></a>Windows 窗体和控件中的国际字体
 
@@ -86,4 +86,4 @@ textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);
   
 ## <a name="see-also"></a>另请参阅
 
-- [使用字体和文本](using-fonts-and-text.md)
+- [글꼴 및 텍스트 사용](using-fonts-and-text.md)

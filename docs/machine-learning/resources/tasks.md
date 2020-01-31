@@ -2,12 +2,12 @@
 title: 机器学习任务
 description: 浏览 ML.NET 中支持的不同机器学习任务和关联的任务。
 ms.date: 12/23/2019
-ms.openlocfilehash: badb096ab3e7fbd575d8594b4fbd0e2ebaf63820
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 6cd41065e668375537b9816ef7a208a65e0a523b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739637"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745101"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 中的机器学习任务
 
@@ -85,6 +85,7 @@ ms.locfileid: "75739637"
 * <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Vision.ImageClassificationTrainer>
 
 ### <a name="multiclass-classification-inputs-and-outputs"></a>多类分类输入和输出
 
@@ -219,3 +220,13 @@ PCA 是机器学习中已建立的一种技术，由于它揭示了数据的内�
 可以使用以下算法训练建议模型：
 
 * <xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer>
+
+## <a name="forecasting"></a>预测
+
+预测任务使用过去的时序数据来预测将来的行为。 适用于预测的场景包括天气预测、季节性销售预测和预测维护。
+
+### <a name="forecasting-trainers"></a>预测训练器
+
+可以使用以下算法训练预测模型：
+
+<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*>

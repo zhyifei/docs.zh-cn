@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c37185f-d1e0-4a6e-8b99-707f7df61d88
 topic_type:
 - apiref
-ms.openlocfilehash: 11157bca2d0f0be2b9b9bc36c382188a43db22a9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3cdc185408576f5679daacef4dde438d66e490ff
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433127"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862745"
 ---
 # <a name="icorprofilerinfo2getgenerationbounds-method"></a>ICorProfilerInfo2::GetGenerationBounds 方法
 获取属于堆段的内存区域，堆段构成各代垃圾回收。  
@@ -42,7 +42,7 @@ HRESULT GetGenerationBounds(
  [out] 指向指定范围总数的整数的指针，部分或所有范围都将在 `ranges` 数组中返回。  
   
  `ranges`  
- 弄[COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)结构的数组，其中每个结构都描述了要进行垃圾回收的代内内存的范围（即块）。  
+ 弄[COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md)结构的数组，其中每个结构都描述了要进行垃圾回收的代内内存的范围（即块）。  
   
 ## <a name="remarks"></a>备注  
  可以从任何探查器回调调用 `GetGenerationBounds` 方法，前提是当前未进行垃圾回收。
@@ -53,7 +53,7 @@ HRESULT GetGenerationBounds(
   
  此函数使用调用方分配的缓冲区。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -64,7 +64,7 @@ HRESULT GetGenerationBounds(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [分析](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo 接口](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 接口](icorprofilerinfo2-interface.md)
+- [Profiling 接口](profiling-interfaces.md)
+- [分析](index.md)

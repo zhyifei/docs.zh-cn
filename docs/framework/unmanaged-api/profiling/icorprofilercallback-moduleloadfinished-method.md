@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 050649e5-ffc0-4458-a0a4-d9ee128a219e
 topic_type:
 - apiref
-ms.openlocfilehash: 08fbf49e6944de4934a9fe7a960405ee96a7d8e3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 661229e5fbd5d106662f0e823a1753bd76c33311
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445937"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866164"
 ---
 # <a name="icorprofilercallbackmoduleloadfinished-method"></a>ICorProfilerCallback::ModuleLoadFinished 方法
 通知探查器模块已完成加载。  
@@ -45,7 +45,7 @@ HRESULT ModuleLoadFinished(
   
  在 `ModuleLoadFinished` 回调后，加载模块的某些部分可能会继续。 如果 `hrStatus` 失败，则指示失败。 不过，`hrStatus` 中的 HRESULT 成功只指示加载模块的第一部分已成功完成。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -56,5 +56,5 @@ HRESULT ModuleLoadFinished(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ModuleLoadStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadstarted-method.md)
+- [ICorProfilerCallback 接口](icorprofilercallback-interface.md)
+- [ModuleLoadStarted 方法](icorprofilercallback-moduleloadstarted-method.md)

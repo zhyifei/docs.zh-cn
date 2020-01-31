@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15cfc300-8231-4ecb-9a04-19851c3eb484
 topic_type:
 - apiref
-ms.openlocfilehash: e25cbfabc10da0c7b1095a956583bb5c7450dba9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 62973a36e899b1a8c618888e5245bfc00d8ad777
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445805"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866049"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply 方法
 通知探查器远程处理调用的服务器端部分已完成，并且客户端现在正在接收，并即将处理答复。  
@@ -35,7 +35,7 @@ HRESULT RemotingClientReceivingReply(
   
 ## <a name="parameters"></a>参数  
  `pCookie`  
- 中与以下条件下的[ICorProfilerCallback：： RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)中提供的值对应的值：  
+ 中与以下条件下的[ICorProfilerCallback：： RemotingServerSendingReply](icorprofilercallback-remotingserversendingreply-method.md)中提供的值对应的值：  
   
 - 远程处理 GUID cookie 处于活动状态。  
   
@@ -48,7 +48,7 @@ HRESULT RemotingClientReceivingReply(
  `fIsAsync`  
  中如果调用是异步的，则为 `true` 的值;否则，`false`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -59,4 +59,4 @@ HRESULT RemotingClientReceivingReply(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 接口](icorprofilercallback-interface.md)

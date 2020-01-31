@@ -2,12 +2,12 @@
 title: 教程：使用 Visual Studio Code 在 macOS 中创建 .NET Core 解决方案
 description: 本文档提供使用 Visual Studio Code 创建 .NET Core 解决方案的步骤和工作流概述。
 ms.date: 12/19/2019
-ms.openlocfilehash: 4dc44a0aa155dca3c106a7da68cf100ef644b58b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e3c210d4391c0e3c9c3455ecf23dd138abdb4363
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715307"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741539"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>教程：使用 Visual Studio Code 在 macOS 中创建 .NET Core 解决方案
 
@@ -28,7 +28,7 @@ ms.locfileid: "75715307"
 
 在本教程中，将创建三个项目：库项目、对该库项目的测试和使用该库的控制台应用程序。 若要[查看或下载本文的源代码](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)，请访问 GitHub 上的 dotnet/samples 存储库。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-启动 Visual Studio Code。 按 <kbd>Ctrl</kbd>+<kbd>\`</kbd>（反引号）或在菜单中依次选择“视图”>“终端”  ，在 Visual Studio Code 中打开嵌入式终端。 若要在 Visual Studio Code 外部执行操作，仍可以使用资源管理器的“通过命令提示符打开”  （在 Mac 或 Linux 上，为“在终端中打开”  ）命令打开外部 shell。
+启动 Visual Studio Code。 按 <kbd>Ctrl</kbd><kbd>\`</kbd>   >   （反引号）或在菜单中依次选择“视图”>“终端”，在 Visual Studio Code 中打开嵌入式终端。 若要在 Visual Studio Code 外部执行操作，仍可以使用资源管理器的“通过命令提示符打开”  （在 macOS 或 Linux 上，为“在终端中打开”  ）命令打开外部 shell。
 
 首先创建一个解决方案文件，它将用作一个或多个 .NET Core 项目的容器。 在终端中，运行 [`dotnet new`](../tools/dotnet-new.md) 命令以在名为 golden  的新文件夹中创建新的解决方案 golden.sln  ：
 
@@ -142,7 +142,8 @@ namespace TestApp
     public class LibraryTests
     {
         [Fact]
-        public void TestThing() {
+        public void TestThing()
+        {
             Assert.NotEqual(42, new Thing().Get(19, 23));
         }
     }
@@ -211,7 +212,7 @@ dotnet run -p app/app.csproj
 
 在 `Main` 方法中的 `WriteLine` 语句处设置一个断点。 要实现此操作，可在光标位于 `WriteLine` 行之上时按 <kbd>Fn</kbd>+<kbd>F9</kbd> 键，也可在想要设置断点的行的左侧边缘中单击鼠标。 代码行旁边的边缘中将出现一个红色圆圈。 到达断点时，将在执行断点行前  停止执行代码。
 
-若要打开“调试器”选项卡，请在 Visual Studio Code 工具栏中选择“调试”图标，再从菜单栏中依次选择“视图”>“调试”  ，或使用键盘快捷方式 <kbd>Command</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>：
+若要打开“调试器”选项卡，请在 Visual Studio Code 工具栏中选择“调试”图标，再从菜单栏中依次选择“视图”   >   “调试”，或使用键盘快捷方式 <kbd>&#8679;</kbd><kbd>&#8984;</kbd><kbd>D</kbd>：
 
 ![Visual Studio Code 调试程序](./media/using-on-macos/visual-studio-code-debugger.png)
 

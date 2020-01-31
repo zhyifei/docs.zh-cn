@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f469eac-ac66-419b-8668-fe705bc1a51f
 topic_type:
 - apiref
-ms.openlocfilehash: 223ad57f0b317bf75778d4e5355ec129185f5a29
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dae5ed7c25f85051d1a28681fb88b056617c4de0
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449484"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867238"
 ---
 # <a name="cor_prf_function_argument_range-structure"></a>COR_PRF_FUNCTION_ARGUMENT_RANGE 结构
 表示内存中按从左向右的顺序连续存储的函数自变量块。  
@@ -35,12 +35,12 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
 ## <a name="members"></a>Members  
   
-|Members|说明|  
+|Members|描述|  
 |-------------|-----------------|  
 |`startAddress`|块的起始地址。|  
 |`length`|连续块的长度。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Corprof.idl .idl  
@@ -51,4 +51,4 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
 ## <a name="see-also"></a>另请参阅
 
-- [分析结构](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [分析结构](profiling-structures.md)

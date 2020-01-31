@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-ms.openlocfilehash: 6ea9dee6e83870d1f2e0fdccffa53f16e6f18dba
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 66195ea9df4c8e9ce847b38f7d020a3bebffcd37
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430106"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865176"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError 方法
 通知探查器，实时（JIT）编译器在重新编译过程中遇到错误。  
@@ -53,7 +53,7 @@ HRESULT ReJITError(
   
 ## <a name="status-hresults"></a>状态 HRESULTS  
   
-|状态数组 HRESULT|说明|  
+|状态数组 HRESULT|描述|  
 |--------------------------|-----------------|  
 |E_INVALIDARG|`moduleID` 或 `methodDef` 令牌 `NULL`。|  
 |CORPROF_E_DATAINCOMPLETE|该模块尚未完全加载，或正在被卸载。|  
@@ -62,7 +62,7 @@ HRESULT ReJITError(
 |E_OUTOFMEMORY|尝试将指定的方法标记为 JIT 重新编译时，CLR 用尽了内存。|  
 |其他|操作系统返回了 CLR 控件范围之外的失败。 例如，如果系统调用更改内存页的访问保护失败，则会显示操作系统错误。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -73,5 +73,5 @@ HRESULT ReJITError(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback4 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [ICorProfilerCallback 接口](icorprofilercallback-interface.md)
+- [ICorProfilerCallback4 接口](icorprofilercallback4-interface.md)

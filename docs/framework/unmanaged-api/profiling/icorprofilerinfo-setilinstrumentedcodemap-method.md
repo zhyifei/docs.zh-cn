@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-ms.openlocfilehash: 32e63a6d2b6f739025d4c5558c16fe2d74fde73c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 99e473268fd0d5bb8ce120b97576277949b86508
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449863"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868992"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap 方法
 
@@ -55,7 +55,7 @@ HRESULT SetILInstrumentedCodeMap(
 
 ## <a name="remarks"></a>备注
 
-探查器通常在方法的源代码中插入语句，以便检测该方法（例如，当到达给定的源行时发出通知）。 `SetILInstrumentedCodeMap` 使探查器能够将原始 MSIL 指令映射到新位置。 探查器可以使用[ICorProfilerInfo：： GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)方法获取给定本机偏移量的原始 MSIL 偏移量。
+探查器通常在方法的源代码中插入语句，以便检测该方法（例如，当到达给定的源行时发出通知）。 `SetILInstrumentedCodeMap` 使探查器能够将原始 MSIL 指令映射到新位置。 探查器可以使用[ICorProfilerInfo：： GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md)方法获取给定本机偏移量的原始 MSIL 偏移量。
 
 调试器将假设每个旧偏移都是在原始的、未修改的 MSIL 代码内引用 MSIL 偏移量，并且每个新偏移指的是新的、经过检测的代码内的 MSIL 偏移量。 地图应按递增顺序排序。 若要单步执行，请遵循以下准则：
 
@@ -85,7 +85,7 @@ HRESULT SetILInstrumentedCodeMap(
 
 在 .NET Framework 3.5 和以前的版本中，通过调用[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)方法来分配 `rgILMapEntries` 数组。 由于运行时取得了此内存的所有权，因此探查器不应尝试释放它。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
@@ -97,4 +97,4 @@ HRESULT SetILInstrumentedCodeMap(
 
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo 接口](icorprofilerinfo-interface.md)

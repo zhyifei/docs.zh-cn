@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cca0f799-09b8-4689-a33c-6d6537943a9b
 topic_type:
 - apiref
-ms.openlocfilehash: 1d8aa231f65bad88806ee9b1d3c5df978c9740a2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6514606290bf006443d7011c1a428bebb4cca0f6
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446925"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865824"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>ICorProfilerCallback::ThreadCreated 方法
 通知探查器已创建一个线程。  
@@ -39,7 +39,7 @@ HRESULT ThreadCreated(
 ## <a name="remarks"></a>备注  
  `threadId` 值立即有效。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -50,5 +50,5 @@ HRESULT ThreadCreated(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ThreadDestroyed 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)
+- [ICorProfilerCallback 接口](icorprofilercallback-interface.md)
+- [ThreadDestroyed 方法](icorprofilercallback-threaddestroyed-method.md)

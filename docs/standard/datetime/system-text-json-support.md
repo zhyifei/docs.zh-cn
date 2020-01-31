@@ -13,12 +13,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 8198359e2c54c4ed098703fbcc070f7469b3362a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fb8836d9c556b317c50b6b34a9dde4e42c6486b5
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344657"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867342"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json 中的 DateTime 和 DateTimeOffset 支持
 
@@ -199,4 +199,12 @@ ms.locfileid: "75344657"
 
         用于将 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 的小数部分格式设置为小数部分和本地偏移量。
 
-如果存在，则最多可以写入7个小数位。 这与 <xref:System.DateTime> 实现保持一致，此方法仅限于此解决方案。
+如果 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 实例的[往返格式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier)表示形式在其秒的小数部分有尾随零，<xref:System.Text.Json.JsonSerializer> 和 <xref:System.Text.Json.Utf8JsonWriter> 将在不带尾随零的情况下格式化实例的表示形式。
+例如，其[往返格式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier)表示形式为 `2019-04-24T14:50:17.1010000Z`<xref:System.DateTime> 实例将按 <xref:System.Text.Json.JsonSerializer> 和 <xref:System.Text.Json.Utf8JsonWriter>格式设置为 `2019-04-24T14:50:17.101Z`。
+
+如果 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 实例的[往返格式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier)表示形式在其秒的小数部分都为零，则 <xref:System.Text.Json.JsonSerializer> 和 <xref:System.Text.Json.Utf8JsonWriter> 会将实例的表示形式设置为不包含秒的小数部分。
+例如，其[往返格式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier)表示形式为 `2019-04-24T14:50:17.0000000+02:00`<xref:System.DateTime> 实例将按 <xref:System.Text.Json.JsonSerializer> 和 <xref:System.Text.Json.Utf8JsonWriter>格式设置为 `2019-04-24T14:50:17+02:00`。
+
+如果截断秒的小数部分数字，则可以使用这些最小的输出来保留往返行程中的信息。
+
+最多只能写入7个小数位数。 这与 <xref:System.DateTime> 实现保持一致，此方法仅限于此解决方案。

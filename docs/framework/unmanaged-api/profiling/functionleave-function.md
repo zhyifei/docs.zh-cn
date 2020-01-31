@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-ms.openlocfilehash: 774a5d4e48f00ea8c28977f3f685dcd5a8da3199
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a9ab8c81c995bbec41db217c904e03dd70351aee
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440585"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866879"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 函数
 通知探查器某个函数将要返回到调用方。  
   
 > [!NOTE]
-> `FunctionLeave` 函数在 .NET Framework 2.0 中已弃用。 它将继续运行，但会导致性能下降。 改为使用[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)函数。  
+> `FunctionLeave` 函数在 .NET Framework 2.0 中已弃用。 它将继续运行，但会导致性能下降。 改为使用[FunctionLeave2](functionleave2-function.md)函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,10 +35,12 @@ void __stdcall FunctionLeave (
 );  
 ```  
   
-## <a name="parameters"></a>参数  
- `funcID`  
- 中返回的函数的标识符。  
-  
+## <a name="parameters"></a>参数
+
+- `funcID`
+
+  \[中] 返回的函数的标识符。
+
 ## <a name="remarks"></a>备注  
  `FunctionLeave` 函数是回调;必须实现此方法。 实现必须使用 `__declspec`（`naked`）存储类特性。  
   
@@ -52,7 +54,7 @@ void __stdcall FunctionLeave (
   
  此外，`FunctionLeave` 函数不得调入托管代码或以任何方式导致托管的内存分配。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Corprof.idl .idl  
@@ -63,8 +65,8 @@ void __stdcall FunctionLeave (
   
 ## <a name="see-also"></a>另请参阅
 
-- [FunctionEnter2 函数](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2 函数](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [FunctionTailcall2 函数](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [分析全局静态函数](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 函数](functionenter2-function.md)
+- [FunctionLeave2 函数](functionleave2-function.md)
+- [FunctionTailcall2 函数](functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2 方法](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [分析全局静态函数](profiling-global-static-functions.md)

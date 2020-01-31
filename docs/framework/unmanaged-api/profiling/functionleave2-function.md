@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: e40687f7f843dc563801bb01b503d2ae94a094fc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0b1ecd1266528f8a08ef114de2f111dd0f71ca8b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446014"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866926"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 函数
 通知探查器函数将要返回到调用方，并提供有关堆栈帧和函数返回值的信息。  
@@ -35,23 +35,28 @@ void __stdcall FunctionLeave2 (
 );  
 ```  
   
-## <a name="parameters"></a>参数  
- `funcId`  
- 中返回的函数的标识符。  
+## <a name="parameters"></a>参数
+
+- `funcId`
+
+  \[中] 返回的函数的标识符。
+
+- `clientData`
+
+  中 \[] 重新映射的函数标识符，探查器先前通过[FunctionIDMapper](functionidmapper-function.md)函数指定。
+
+- `func`
+
+  \[中的] `COR_PRF_FRAME_INFO` 值，该值指向有关堆栈帧的信息。
+
+  探查器应将此视为不透明的句柄，该句柄可传递回[ICorProfilerInfo2：： GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)方法中的执行引擎。  
   
- `clientData`  
- 中重新映射的函数标识符，该标识符以前通过[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)函数指定。  
-  
- `func`  
- 中一个 `COR_PRF_FRAME_INFO` 值，该值指向有关堆栈帧的信息。  
-  
- 探查器应将此视为不透明的句柄，该句柄可传递回[ICorProfilerInfo2：： GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法中的执行引擎。  
-  
- `retvalRange`  
- 中指向[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)结构的指针，该结构指定函数的返回值的内存位置。  
-  
- 若要访问返回值信息，必须设置 `COR_PRF_ENABLE_FUNCTION_RETVAL` 标志。 探查器可以使用[ICorProfilerInfo：： SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法来设置事件标志。  
-  
+- `retvalRange`
+
+  \[中的）一个指向[COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md)结构的指针，该结构指定函数的返回值的内存位置。
+
+  若要访问返回值信息，必须设置 `COR_PRF_ENABLE_FUNCTION_RETVAL` 标志。 探查器可以使用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)方法来设置事件标志。
+
 ## <a name="remarks"></a>备注  
  `FunctionLeave2` 函数返回后，`func` 和 `retvalRange` 参数的值无效，因为值可能会更改或被销毁。  
   
@@ -67,7 +72,7 @@ void __stdcall FunctionLeave2 (
   
  此外，`FunctionLeave2` 函数不得调入托管代码或以任何方式导致托管的内存分配。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Corprof.idl .idl  
@@ -78,7 +83,7 @@ void __stdcall FunctionLeave2 (
   
 ## <a name="see-also"></a>另请参阅
 
-- [FunctionEnter2 函数](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionTailcall2 函数](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [分析全局静态函数](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 函数](functionenter2-function.md)
+- [FunctionTailcall2 函数](functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2 方法](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [分析全局静态函数](profiling-global-static-functions.md)
