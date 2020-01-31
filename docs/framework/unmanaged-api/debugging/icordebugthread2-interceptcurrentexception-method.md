@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 536d2357-1b97-49e0-a10c-c860aed74e6e
 topic_type:
 - apiref
-ms.openlocfilehash: 1f3cf3db5df610e57a957147f0ab79121679e00b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c25a03ef5bbba18da31787c911f83a1348badd4b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138704"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791451"
 ---
 # <a name="icordebugthread2interceptcurrentexception-method"></a>ICorDebugThread2::InterceptCurrentException 方法
 允许调试器截获此线程上的当前异常。  
@@ -38,9 +38,9 @@ HRESULT InterceptCurrentException (
  中指向表示活动堆栈帧的 ICorDebugFrame 的指针。  
   
 ## <a name="remarks"></a>备注  
- 可以在异常回调（[ICorDebugManagedCallback：： exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md)或[ICorDebugManagedCallback2：： exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)）与对[ICorDebugController：： Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)的关联调用之间调用 `InterceptCurrentException` 方法。  
+ 可以在异常回调（[ICorDebugManagedCallback：： exception](icordebugmanagedcallback-exception-method.md)或[ICorDebugManagedCallback2：： exception](icordebugmanagedcallback2-exception-method.md)）与对[ICorDebugController：： Continue](icordebugcontroller-continue-method.md)的关联调用之间调用 `InterceptCurrentException` 方法。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  

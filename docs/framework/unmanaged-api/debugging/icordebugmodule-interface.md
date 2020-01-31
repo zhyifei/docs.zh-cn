@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 32e4d6fa-e5a3-413e-9166-d5e2871d3114
 topic_type:
 - apiref
-ms.openlocfilehash: 971d6a6a2157c48dcb9105e9f523b1f077098479
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c573e6b768aee1e8b681dcf2e828dc24d409025b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129487"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793016"
 ---
 # <a name="icordebugmodule-interface"></a>ICorDebugModule 接口
 
@@ -29,30 +29,30 @@ ms.locfileid: "73129487"
   
 |方法|描述|  
 |------------|-----------------|  
-|[CreateBreakpoint 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-createbreakpoint-method.md)|未实现。|  
-|[EnableClassLoadCallbacks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-enableclassloadcallbacks-method.md)|确定是否为此模块调用[ICorDebugManagedCallback：： LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)和[ICorDebugManagedCallback：： UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)回调。|  
-|[EnableJITDebugging 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-enablejitdebugging-method.md)|确定实时（JIT）编译器是否保留此模块内方法的调试信息。|  
-|[GetAssembly 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)|获取包含此模块的程序集。|  
-|[GetBaseAddress 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getbaseaddress-method.md)|获取模块的基址。|  
-|[GetClassFromToken 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md)|从元数据中获取 ICorDebugClass。|  
-|[GetEditAndContinueSnapshot 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-geteditandcontinuesnapshot-method.md)|已否决。|  
-|[GetFunctionFromRVA 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getfunctionfromrva-method.md)|未实现。|  
-|[GetFunctionFromToken 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getfunctionfromtoken-method.md)|获取元数据标记指定的函数。|  
-|[GetGlobalVariableValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getglobalvariablevalue-method.md)|获取指定全局变量的值对象。|  
-|[GetMetaDataInterface 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getmetadatainterface-method.md)|获取可用于检查模块的元数据的元数据接口指针。|  
-|[GetName 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md)|获取模块的文件名。|  
-|[GetProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getprocess-method.md)|获取此模块的包含进程。|  
-|[GetSize 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)|获取模块的大小（以字节为单位）。|  
-|[GetToken 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-gettoken-method.md)|获取此模块的表项的标记。|  
-|[IsDynamic 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-isdynamic-method.md)|指示模块是否为动态模块。|  
-|[IsInMemory 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-isinmemory-method.md)|指示此模块是否仅存在于内存中。|  
+|[CreateBreakpoint 方法](icordebugmodule-createbreakpoint-method.md)|未实现。|  
+|[EnableClassLoadCallbacks 方法](icordebugmodule-enableclassloadcallbacks-method.md)|确定是否为此模块调用[ICorDebugManagedCallback：： LoadClass](icordebugmanagedcallback-loadclass-method.md)和[ICorDebugManagedCallback：： UnloadClass](icordebugmanagedcallback-unloadclass-method.md)回调。|  
+|[EnableJITDebugging 方法](icordebugmodule-enablejitdebugging-method.md)|确定实时（JIT）编译器是否保留此模块内方法的调试信息。|  
+|[GetAssembly 方法](icordebugmodule-getassembly-method.md)|获取包含此模块的程序集。|  
+|[GetBaseAddress 方法](icordebugmodule-getbaseaddress-method.md)|获取模块的基址。|  
+|[GetClassFromToken 方法](icordebugmodule-getclassfromtoken-method.md)|从元数据中获取 ICorDebugClass。|  
+|[GetEditAndContinueSnapshot 方法](icordebugmodule-geteditandcontinuesnapshot-method.md)|已否决。|  
+|[GetFunctionFromRVA 方法](icordebugmodule-getfunctionfromrva-method.md)|未实现。|  
+|[GetFunctionFromToken 方法](icordebugmodule-getfunctionfromtoken-method.md)|获取元数据标记指定的函数。|  
+|[GetGlobalVariableValue 方法](icordebugmodule-getglobalvariablevalue-method.md)|获取指定全局变量的值对象。|  
+|[GetMetaDataInterface 方法](icordebugmodule-getmetadatainterface-method.md)|获取可用于检查模块的元数据的元数据接口指针。|  
+|[GetName 方法](icordebugmodule-getname-method.md)|获取模块的文件名。|  
+|[GetProcess 方法](icordebugmodule-getprocess-method.md)|获取此模块的包含进程。|  
+|[GetSize 方法](icordebugmodule-getsize-method.md)|获取模块的大小（以字节为单位）。|  
+|[GetToken 方法](icordebugmodule-gettoken-method.md)|获取此模块的表项的标记。|  
+|[IsDynamic 方法](icordebugmodule-isdynamic-method.md)|指示模块是否为动态模块。|  
+|[IsInMemory 方法](icordebugmodule-isinmemory-method.md)|指示此模块是否仅存在于内存中。|  
   
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -61,7 +61,7 @@ ms.locfileid: "73129487"
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebug 接口](icordebug-interface.md)
+- [调试接口](debugging-interfaces.md)

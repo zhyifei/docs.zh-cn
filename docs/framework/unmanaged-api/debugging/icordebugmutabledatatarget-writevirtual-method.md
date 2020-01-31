@@ -1,15 +1,15 @@
 ---
-title: ICorDebugMutableDataTarget：： WriteVirtual 方法
+title: ICorDebugMutableDataTarget::WriteVirtual 方法
 ms.date: 03/30/2017
 ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
-ms.openlocfilehash: 5947caa8dfb97574bb4b3c5634d962df153211c7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2b4bd1dc97f37f5a514ab54f9e4d778fe3b91736
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132682"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792835"
 ---
-# <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget：： WriteVirtual 方法
+# <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget::WriteVirtual 方法
 将内存写入目标进程地址空间。  
   
 ## <a name="syntax"></a>语法  
@@ -37,7 +37,7 @@ HRESULT WriteVirtual(
 ## <a name="remarks"></a>备注  
  如果无法写入任何字节，方法调用失败且不更改目标地址空间中的任何字节。 （否则，目标状态不一致，从而使进一步的调试不可靠。）  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -46,7 +46,7 @@ HRESULT WriteVirtual(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugMutableDataTarget 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMutableDataTarget 接口](icordebugmutabledatatarget-interface.md)
+- [调试接口](debugging-interfaces.md)

@@ -1,86 +1,86 @@
 ---
-title: Windows 窗体 DataGridView 控件中的列类型
+title: DataGridView 控件中的列类型
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], types
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-ms.openlocfilehash: a33cf4cd865921c04ef10c7fccf3a67c3d22de73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e918394cca6350854074d4c1567890138b2a1462
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956242"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743850"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的列类型
-<xref:System.Windows.Forms.DataGridView>控件使用几种列类型来显示其信息，并使用户能够修改或添加信息。  
+<xref:System.Windows.Forms.DataGridView> 控件使用多种列类型来显示其信息，并使用户能够修改或添加信息。  
   
- 当绑定<xref:System.Windows.Forms.DataGridView>控件，并设置<xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A>属性设置为`true`，列会自动生成使用相应绑定的数据源中包含的数据类型的默认列类型。  
+ 绑定 <xref:System.Windows.Forms.DataGridView> 控件并将 <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> 属性设置为 `true`时，将使用适用于绑定数据源中包含的数据类型的默认列类型自动生成列。  
   
- 此外可以自己创建的任何列类的实例，并将其添加到返回的集合<xref:System.Windows.Forms.DataGridView.Columns%2A>属性。 可以创建用于为未绑定列，这些实例，或者您可以手动将它们绑定。 手动绑定的列非常有用，例如，如果想要自动生成的列的一种类型替换为另一种类型的列。  
+ 你还可以自行创建任何列类的实例，并将它们添加到 <xref:System.Windows.Forms.DataGridView.Columns%2A> 属性返回的集合中。 您可以创建用作未绑定列的这些实例，也可以手动绑定它们。 手动绑定列很有用，例如，当您想要将一种类型的自动生成列替换为另一种类型的列时。  
   
- 下表描述了可用于在中使用的各种列类<xref:System.Windows.Forms.DataGridView>控件。  
+ 下表描述了可在 <xref:System.Windows.Forms.DataGridView> 控件中使用的各种列类。  
   
 |类|描述|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|与基于文本的值一起使用。 绑定到数字和字符串时，会自动生成。|  
-|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|用于<xref:System.Boolean>和<xref:System.Windows.Forms.CheckState>值。 绑定到这些类型的值时，会自动生成。|  
-|<xref:System.Windows.Forms.DataGridViewImageColumn>|用于显示图像。 绑定到字节数组时自动生成<xref:System.Drawing.Image>对象，或<xref:System.Drawing.Icon>对象。|  
-|<xref:System.Windows.Forms.DataGridViewButtonColumn>|用于在单元中显示按钮。 在绑定时，不会自动生成。 通常用作未绑定的列。|  
-|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|用于在单元中显示的下拉列表。 在绑定时，不会自动生成。 通常手动进行数据绑定。|  
-|<xref:System.Windows.Forms.DataGridViewLinkColumn>|用于在单元中显示的链接。 在绑定时，不会自动生成。 通常手动进行数据绑定。|  
-|自定义列类型|您可以通过继承来创建您自己的列类<xref:System.Windows.Forms.DataGridViewColumn>类或任何其派生的类提供自定义外观、 行为或承载的控件。 有关详细信息，请参阅[如何：通过扩展行为和外观自定义单元格和 Windows 窗体 DataGridView 控件中的列](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
+|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|与基于文本的值一起使用。 当绑定到数字和字符串时自动生成。|  
+|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|与 <xref:System.Boolean> 和 <xref:System.Windows.Forms.CheckState> 值一起使用。 当绑定到这些类型的值时自动生成。|  
+|<xref:System.Windows.Forms.DataGridViewImageColumn>|用于显示图像。 绑定到字节数组、<xref:System.Drawing.Image> 对象或 <xref:System.Drawing.Icon> 对象时自动生成。|  
+|<xref:System.Windows.Forms.DataGridViewButtonColumn>|用于显示单元中的按钮。 绑定时不自动生成。 通常用作未绑定的列。|  
+|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|用于在单元格中显示下拉列表。 绑定时不自动生成。 通常，手动进行数据绑定。|  
+|<xref:System.Windows.Forms.DataGridViewLinkColumn>|用于显示单元中的链接。 绑定时不自动生成。 通常，手动进行数据绑定。|  
+|自定义列类型|你可以通过继承 <xref:System.Windows.Forms.DataGridViewColumn> 类或它的任何派生类来创建自己的列类，以提供自定义外观、行为或托管控件。 有关详细信息，请参阅[如何：通过扩展其行为和外观自定义 Windows 窗体 DataGridView 控件中的单元格和列](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
   
- 以下各节中更详细地介绍了这些列类型。  
+ 以下各节将更详细地介绍这些列类型。  
   
 ## <a name="datagridviewtextboxcolumn"></a>DataGridViewTextBoxColumn  
- <xref:System.Windows.Forms.DataGridViewTextBoxColumn>是一种通用的列类型与数字、 字符串等基于文本的值一起使用。 在编辑模式下，<xref:System.Windows.Forms.TextBox>控件显示在活动单元格，使用户能够修改单元格的值。  
+ <xref:System.Windows.Forms.DataGridViewTextBoxColumn> 是一种通用列类型，适用于基于文本的值（如数字和字符串）。 在编辑模式下，<xref:System.Windows.Forms.TextBox> 控件显示在活动单元格中，使用户能够修改单元值。  
   
- 单元格的值会自动转换为显示的字符串。 输入或由用户修改值自动进行分析以创建相应的数据类型的单元格值。 您可以通过处理来自定义这些转换<xref:System.Windows.Forms.DataGridView.CellFormatting>并<xref:System.Windows.Forms.DataGridView.CellParsing>的事件<xref:System.Windows.Forms.DataGridView>控件。  
+ 单元值自动转换为字符串以显示。 系统会自动分析输入或修改的值，以创建适当数据类型的单元值。 您可以通过处理 <xref:System.Windows.Forms.DataGridView> 控件的 <xref:System.Windows.Forms.DataGridView.CellFormatting> 和 <xref:System.Windows.Forms.DataGridView.CellParsing> 事件来自定义这些转换。  
   
- 中指定的列的单元格值数据类型<xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A>的列的属性。  
+ 列的单元格值数据类型在列的 <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> 属性中指定。  
   
 ## <a name="datagridviewcheckboxcolumn"></a>DataGridViewCheckBoxColumn  
- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>用于<xref:System.Boolean>和<xref:System.Windows.Forms.CheckState>值。 <xref:System.Boolean> 值显示为两个或三态复选框，具体取决于值<xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A>属性。 当列绑定到<xref:System.Windows.Forms.CheckState>值，<xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A>属性值是`true`默认情况下。  
+ <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> 与 <xref:System.Boolean> 和 <xref:System.Windows.Forms.CheckState> 值一起使用。 <xref:System.Boolean> 值显示为两状态或三状态复选框，具体取决于 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> 属性的值。 将列绑定到 <xref:System.Windows.Forms.CheckState> 值后，默认情况下将 `true` <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> 属性值。  
   
- 通常情况下，复选框单元格的值被合适的存储，如任何其他数据，或用于执行批量操作。 如果你想要立即当用户单击复选框单元格，可以处理响应<xref:System.Windows.Forms.DataGridView.CellClick>事件，但此事件发生之前更新单元格的值。 如果在单击时需要的新值，一种方法是计算所需的值将根据当前值。 另一种方法是立即提交更改并处理<xref:System.Windows.Forms.DataGridView.CellValueChanged>事件以对其做出响应。 若要提交更改，单击该单元格时，你必须处理<xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged>事件。 在处理程序中，如果当前单元格是一个复选框单元格，则调用<xref:System.Windows.Forms.DataGridView.CommitEdit%2A>方法并传入<xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit>值。  
+ 通常，复选框单元值适用于存储（如任何其他数据）或用于执行批量操作。 如果希望在用户单击复选框单元时立即做出响应，可以处理 <xref:System.Windows.Forms.DataGridView.CellClick> 事件，但此事件发生在更新单元格值之前。 如果在单击时需要新值，一个选项是根据当前值计算预期值的值。 另一种方法是立即提交更改，并处理 <xref:System.Windows.Forms.DataGridView.CellValueChanged> 事件来对其进行响应。 若要在单击单元格时提交更改，必须处理 <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> 事件。 在处理程序中，如果当前单元格为复选框单元，则调用 <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> 方法，并传入 <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> 值。  
   
 ## <a name="datagridviewimagecolumn"></a>DataGridViewImageColumn  
- <xref:System.Windows.Forms.DataGridViewImageColumn>用于显示图像。 Image 列可以从数据源将自动填充、 手动填充对于未绑定列，或处理程序中动态填充<xref:System.Windows.Forms.DataGridView.CellFormatting>事件。  
+ <xref:System.Windows.Forms.DataGridViewImageColumn> 用于显示图像。 可以从数据源自动填充图像列，手动填充未绑定的列，或在 <xref:System.Windows.Forms.DataGridView.CellFormatting> 事件的处理程序中动态填充。  
   
- 自动填充数据源的图像列的工作原理的不同的图像格式，包括支持的所有格式的字节数组<xref:System.Drawing.Image>类，并使用 Microsoft® Access 和 Northwind 示例数据库的 OLE 图片格式。  
+ 数据源中的图像列的自动填充可处理多种图像格式的字节数组，包括 <xref:System.Drawing.Image> 类支持的所有格式和 Microsoft® Access 和 Northwind 示例数据库所使用的 OLE 图片格式。  
   
- 手动填充图像列时，你想要提供的功能<xref:System.Windows.Forms.DataGridViewButtonColumn>，但与自定义外观。 您可以处理<xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType>要响应图像单元格中的单击事件。  
+ 如果希望提供 <xref:System.Windows.Forms.DataGridViewButtonColumn>的功能，但具有自定义外观，则手动填充 image 列很有用。 您可以处理 <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> 事件以响应图像单元内的单击。  
   
- 填充的处理程序中的图像列的单元格<xref:System.Windows.Forms.DataGridView.CellFormatting>事件非常有用，当你想要为计算出的值或非图像格式的值提供映像。 例如，可能会如具有字符串值的"风险"列`"high"`， `"middle"`，和`"low"`想要以图标形式显示。 或者，您可能包含必须加载而不是二进制内容的图像的图像的位置的"映像"列。  
+ 如果要为计算值或非图像格式的值提供图像，则在 <xref:System.Windows.Forms.DataGridView.CellFormatting> 事件的处理程序中填充 image 列的单元格非常有用。 例如，您可能有一个 "风险" 列，其中包含要显示为图标 `"high"`、`"middle"`和 `"low"` 的字符串值。 或者，您可能有一个 "图像" 列包含必须加载的映像的位置，而不是映像的二进制内容。  
   
 ## <a name="datagridviewbuttoncolumn"></a>DataGridViewButtonColumn  
- 使用<xref:System.Windows.Forms.DataGridViewButtonColumn>，可以显示包含按钮的单元格的列。 当您想要提供用于轻松对用户执行操作的特定记录，例如订购或在单独的窗口中显示子记录，这很有用。  
+ 使用 <xref:System.Windows.Forms.DataGridViewButtonColumn>，可以显示包含按钮的单元格的列。 当你希望为用户提供一种简单的方法来对特定记录执行操作（例如，在单独的窗口中放置订单或显示子记录）时，这非常有用。  
   
- 数据绑定时，不会自动生成按钮列<xref:System.Windows.Forms.DataGridView>控件。 若要使用按钮列，必须手动创建它们，并将其添加到返回的集合<xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType>属性。  
+ 在对 <xref:System.Windows.Forms.DataGridView> 控件进行数据绑定时，不会自动生成按钮列。 若要使用按钮列，必须手动创建它们，并将它们添加到 <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType> 属性返回的集合中。  
   
- 您可以通过处理响应用户单击按钮单元格在<xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType>事件。  
+ 您可以通过处理 <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> 事件来响应按钮单元中的用户单击。  
   
 ## <a name="datagridviewcomboboxcolumn"></a>DataGridViewComboBoxColumn  
- 使用<xref:System.Windows.Forms.DataGridViewComboBoxColumn>，可以显示包含下拉列表框的单元格的列。 这可用于仅包含特定值，例如 Northwind 示例数据库中的产品表的类别列的字段中输入数据。  
+ 使用 <xref:System.Windows.Forms.DataGridViewComboBoxColumn>，可以显示包含下拉列表框的单元格的列。 这对于只能包含特定值的字段中的数据输入很有用，如 Northwind 示例数据库中 Products 表的 "类别" 列。  
   
- 您可以填充下拉列表用于在相同的方式将填充所有单元格<xref:System.Windows.Forms.ComboBox>下拉列表中，通过返回的集合手动<xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>属性，或通过将其绑定到数据源通过<xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>， <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>，和<xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>属性。 有关详细信息，请参阅[组合框控件](combobox-control-windows-forms.md)。  
+ 您可以使用与填充 <xref:System.Windows.Forms.ComboBox> 下拉列表相同的方式来填充用于所有单元格的下拉列表，方法是：手动通过 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> 属性返回的集合，或通过 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>、<xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>和 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 属性将其绑定到数据源。 有关详细信息，请参阅[ComboBox 控件](combobox-control-windows-forms.md)。  
   
- 您可以将实际的单元格的值绑定到使用的数据源<xref:System.Windows.Forms.DataGridView>通过设置控件<xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A>属性的<xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>。  
+ 通过设置 <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>的 <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> 属性，可以将实际单元值绑定到 <xref:System.Windows.Forms.DataGridView> 控件所使用的数据源。  
   
- 数据绑定时，不会自动生成组合框列<xref:System.Windows.Forms.DataGridView>控件。 若要使用组合框中的列，必须手动创建它们，并将其添加到返回的集合<xref:System.Windows.Forms.DataGridView.Columns%2A>属性。  
+ 在对 <xref:System.Windows.Forms.DataGridView> 控件进行数据绑定时，不会自动生成组合框列。 若要使用组合框列，必须手动创建它们，并将它们添加到 <xref:System.Windows.Forms.DataGridView.Columns%2A> 属性返回的集合中。  
   
 ## <a name="datagridviewlinkcolumn"></a>DataGridViewLinkColumn  
- 使用<xref:System.Windows.Forms.DataGridViewLinkColumn>，可以显示一列包含超链接的单元格。 这可用于数据源中或作为特殊行为，例如使用子记录打开一个窗口的按钮列的替代方法的 URL 值。  
+ 使用 <xref:System.Windows.Forms.DataGridViewLinkColumn>，可以显示包含超链接的单元格的列。 这适用于数据源中的 URL 值或作为特殊行为（如打开包含子记录的窗口）的 "按钮" 列的替代项。  
   
- 数据绑定时，不会自动生成链接列<xref:System.Windows.Forms.DataGridView>控件。 若要使用链接列，必须手动创建它们，并将其添加到返回的集合<xref:System.Windows.Forms.DataGridView.Columns%2A>属性。  
+ 在对 <xref:System.Windows.Forms.DataGridView> 控件进行数据绑定时，不会自动生成链接列。 若要使用链接列，必须手动创建它们，并将它们添加到 <xref:System.Windows.Forms.DataGridView.Columns%2A> 属性返回的集合中。  
   
- 您可以通过处理响应用户单击链接上<xref:System.Windows.Forms.DataGridView.CellContentClick>事件。 此事件是不同于<xref:System.Windows.Forms.DataGridView.CellClick>和<xref:System.Windows.Forms.DataGridView.CellMouseClick>事件，当用户单击任意位置的单元格中出现。  
+ 可以通过处理 <xref:System.Windows.Forms.DataGridView.CellContentClick> 事件来响应用户单击的链接。 此事件与 <xref:System.Windows.Forms.DataGridView.CellClick> 和 <xref:System.Windows.Forms.DataGridView.CellMouseClick> 事件不同，用户单击单元格中的任意位置时发生此事件。  
   
- <xref:System.Windows.Forms.DataGridViewLinkColumn>类提供多个属性用于修改链接的外观之前,、 期间和之后在被单击。  
+ <xref:System.Windows.Forms.DataGridViewLinkColumn> 类提供多个属性，用于修改单击之前、期间和之后的链接的外观。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
@@ -92,5 +92,5 @@ ms.locfileid: "61956242"
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
 - [DataGridView 控件](datagridview-control-windows-forms.md)
 - [如何：在 Windows 窗体 DataGridView 控件的单元格中显示图像](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [如何：使用的 Windows 窗体 DataGridView 控件中的图像列](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [如何：使用 Windows 窗体 DataGridView 控件中的图像列](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
 - [自定义 Windows 窗体 DataGridView 控件](customizing-the-windows-forms-datagridview-control.md)

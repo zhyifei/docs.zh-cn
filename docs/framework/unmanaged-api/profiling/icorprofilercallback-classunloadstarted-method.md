@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc93bead-f3a9-415c-b919-ddd3ca80facc
 topic_type:
 - apiref
-ms.openlocfilehash: 3b729d3be84571a48cc9a770d7f06b99723c0d1f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 752ebc4fcb284fbeb91a1efcda476249632adc5c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445064"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790179"
 ---
 # <a name="icorprofilercallbackclassunloadstarted-method"></a>ICorProfilerCallback::ClassUnloadStarted 方法
 通知探查器正在卸载某个类。  
@@ -32,14 +32,16 @@ HRESULT ClassUnloadStarted(
     [in] ClassID classId);  
 ```  
   
-## <a name="parameters"></a>参数  
- `classId`  
- 中标识正在卸载的类。  
-  
+## <a name="parameters"></a>参数
+
+- `classId`
+
+  \[中的] 标识正在卸载的类。
+
 ## <a name="remarks"></a>备注  
  `ClassUnloadStarted` 方法返回后，`classId` 的值对信息请求无效-这是探查器获取有关此类的信息的最后机会。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  

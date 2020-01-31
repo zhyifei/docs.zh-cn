@@ -1,15 +1,15 @@
 ---
-title: ICorDebugSymbolProvider2：： GetFrameProps 方法
+title: ICorDebugSymbolProvider2::GetFrameProps 方法
 ms.date: 03/30/2017
 ms.assetid: f07b73f3-188d-43a9-8f7d-44dce2f1ddb7
-ms.openlocfilehash: 39bdb93fcb48da6667d982ca2d511ee5e499ae32
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dc64152938c46945978715251286ecb6c6d8983c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133649"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791511"
 ---
-# <a name="icordebugsymbolprovider2getframeprops-method"></a>ICorDebugSymbolProvider2：： GetFrameProps 方法
+# <a name="icordebugsymbolprovider2getframeprops-method"></a>ICorDebugSymbolProvider2::GetFrameProps 方法
 返回启动方法相对虚拟地址的方法和具有代码相对虚拟地址的父框架。  
   
 ## <a name="syntax"></a>语法  
@@ -37,7 +37,7 @@ HRESULT GetFrameProps(
 > [!NOTE]
 > 此方法仅适用于 .NET Native。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -46,7 +46,7 @@ HRESULT GetFrameProps(
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugSymbolProvider2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider2 接口](icordebugsymbolprovider2-interface.md)
+- [调试接口](debugging-interfaces.md)

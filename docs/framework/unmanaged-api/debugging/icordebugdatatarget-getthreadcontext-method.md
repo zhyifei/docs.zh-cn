@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8954268-1821-4b23-b665-dbb55f2af31b
 topic_type:
 - apiref
-ms.openlocfilehash: 278320391615eddaa8ba878ef87f802f30cddb95
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3eace2d91b3bb6e637a659b8b49a31450ebc2c42
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122027"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783720"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext 方法
 返回指定线程的当前线程上下文。  
@@ -49,9 +49,9 @@ HRESULT GetThreadContext(
  弄将存储线程上下文的缓冲区。  
   
 ## <a name="remarks"></a>备注  
- 在 Windows 平台上，`pContext` 必须是适用于由[ICorDebugDataTarget：： GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法指定的计算机类型的 `CONTEXT` 结构（在 WinNT .h 中定义）。 `contextFlags` 必须具有与 `CONTEXT` 结构的 `ContextFlags` 字段相同的值。 `CONTEXT` 结构特定于处理器;有关详细信息，请参阅 WinNT .h 文件。  
+ 在 Windows 平台上，`pContext` 必须是适用于由[ICorDebugDataTarget：： GetPlatform](icordebugdatatarget-getplatform-method.md)方法指定的计算机类型的 `CONTEXT` 结构（在 WinNT .h 中定义）。 `contextFlags` 必须具有与 `CONTEXT` 结构的 `ContextFlags` 字段相同的值。 `CONTEXT` 结构特定于处理器;有关详细信息，请参阅 WinNT .h 文件。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -60,8 +60,8 @@ HRESULT GetThreadContext(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugDataTarget 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugDataTarget 接口](icordebugdatatarget-interface.md)
+- [调试接口](debugging-interfaces.md)
+- [调试](index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COR_ENABLE_PROFILING environment variable
 - profiling API [.NET Framework], enabling
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
-ms.openlocfilehash: 86720cb1739e3f193cd1d5081577d69bca1cf0f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 04b9abd8ffe04a24c08ad89ff48b037c9b003359
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427050"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860974"
 ---
 # <a name="setting-up-a-profiling-environment"></a>设置分析环境
 > [!NOTE]
@@ -55,23 +55,23 @@ ms.locfileid: "74427050"
   
 ## <a name="additional-considerations"></a>其他注意事项  
   
-- 探查器类实现[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)和[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)接口。 在 .NET Framework 2.0 版中，探查器必须实现 `ICorProfilerCallback2`。 否则，将不会加载 `ICorProfilerCallback2`。  
+- 探查器类实现[ICorProfilerCallback](icorprofilercallback-interface.md)和[ICorProfilerCallback2](icorprofilercallback2-interface.md)接口。 在 .NET Framework 2.0 版中，探查器必须实现 `ICorProfilerCallback2`。 否则，将不会加载 `ICorProfilerCallback2`。  
   
 - 在给定环境中一次只能由一个事件探查器分析进程。 可以在不同环境中注册两个不同的探查器，但每个探查器必须分析单独的进程。 必须将探查器作为进程内 COM 服务器 DLL 实现，后者被映射到与正在被分析的进程相同的地址空间。 这表示探查器在进程内运行。 .NET Framework 不支持任何其他类型的 COM 服务器。 例如，如果探查器要监视远程计算机上的应用程序，则它必须在每台计算机上实现收集器代理。 这些代理将批处理结果，并将它们传递给中央数据收集计算机。  
   
 - 由于探查器是在进程内实例化的 COM 对象，所以每个被分析的应用程序都将具有其自己的探查器副本。 因此，单个探查器实例不一定要处理来自多个应用程序的数据。 但是，必须向探查器的日志记录代码添加逻辑，以防日志文件从其他被分析的应用程序进行覆盖。  
   
 ## <a name="initializing-the-profiler"></a>初始化探查器  
- 如果两次环境变量检查均通过，CLR 就会以与 COM `CoCreateInstance` 函数类似的方式创建探查器实例。 直接调用 `CoCreateInstance` 不会加载探查器。 因此避免了调用 `CoInitialize`（需设置线程模型）。 然后，CLR 将调用探查器中的[ICorProfilerCallback：： Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)方法。 此方法的签名如下。  
+ 如果两次环境变量检查均通过，CLR 就会以与 COM `CoCreateInstance` 函数类似的方式创建探查器实例。 直接调用 `CoCreateInstance` 不会加载探查器。 因此避免了调用 `CoInitialize`（需设置线程模型）。 然后，CLR 将调用探查器中的[ICorProfilerCallback：： Initialize](icorprofilercallback-initialize-method.md)方法。 此方法的签名如下。  
   
 ```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
- 探查器必须查询[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)或[ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)接口指针 `pICorProfilerInfoUnk`，并将其保存，以便以后可以在分析期间请求详细信息。  
+ 探查器必须查询[ICorProfilerInfo](icorprofilerinfo-interface.md)或[ICorProfilerInfo2](icorprofilerinfo2-interface.md)接口指针 `pICorProfilerInfoUnk`，并将其保存，以便以后可以在分析期间请求详细信息。  
   
 ## <a name="setting-event-notifications"></a>设置事件通知  
- 然后，探查器调用[ICorProfilerInfo：： SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法来指定它感兴趣的通知的类别。 例如，如果探查器只关注函数进入和离开通知以及垃圾回收通知，它将指定以下内容。  
+ 然后，探查器调用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)方法来指定它感兴趣的通知的类别。 例如，如果探查器只关注函数进入和离开通知以及垃圾回收通知，它将指定以下内容。  
   
 ```cpp  
 ICorProfilerInfo* pInfo;  
@@ -91,8 +91,8 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
   
  请注意，这些更改将在整个系统范围内启用分析。 若要防止对随后运行的每个托管应用程序进行分析，应在重启目标计算机后删除系统环境变量。  
   
- 此技术也会导致对每个 CLR 进程进行分析。 探查器应将逻辑添加到它的[ICorProfilerCallback：： Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)回调以检测当前进程是否感兴趣。 如果不相关，探查器可使回调失败而不执行初始化。  
+ 此技术也会导致对每个 CLR 进程进行分析。 探查器应将逻辑添加到它的[ICorProfilerCallback：： Initialize](icorprofilercallback-initialize-method.md)回调以检测当前进程是否感兴趣。 如果不相关，探查器可使回调失败而不执行初始化。  
   
 ## <a name="see-also"></a>另请参阅
 
-- [分析概述](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)
+- [分析概述](profiling-overview.md)

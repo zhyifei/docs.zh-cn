@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c02338fe-da6c-467f-9567-70ebb387e901
 topic_type:
 - apiref
-ms.openlocfilehash: cee421ef7d7c856ba90dc21f4e9dc25ae6fe1a9b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e1bb5a6fd0550f7c25d46fa31ca11a10cec54986
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140200"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791076"
 ---
 # <a name="icordebugvaluebreakpoint-interface"></a>ICorDebugValueBreakpoint 接口
 扩展 ICorDebugBreakpoint 接口以提供对特定值的访问。  
@@ -28,14 +28,14 @@ ms.locfileid: "73140200"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvaluebreakpoint-getvalue-method.md)|获取一个指向 ICorDebugValue 对象的接口指针，该对象表示在其上设置断点的对象的值。|  
+|[GetValue 方法](icordebugvaluebreakpoint-getvalue-method.md)|获取一个指向 ICorDebugValue 对象的接口指针，该对象表示在其上设置断点的对象的值。|  
   
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -44,6 +44,6 @@ ms.locfileid: "73140200"
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试接口](debugging-interfaces.md)

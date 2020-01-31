@@ -1,15 +1,15 @@
 ---
-title: ICorDebugSymbolProvider：： GetObjectSize 方法
+title: ICorDebugSymbolProvider::GetObjectSize 方法
 ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
-ms.openlocfilehash: a5c0fe6d73302abbfabe2272cc878d6fd8f5fdec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fce7410b5ae9571af0c8a5963596e2af41737798
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138819"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791573"
 ---
-# <a name="icordebugsymbolprovidergetobjectsize-method"></a>ICorDebugSymbolProvider：： GetObjectSize 方法
+# <a name="icordebugsymbolprovidergetobjectsize-method"></a>ICorDebugSymbolProvider::GetObjectSize 方法
 基于对象的 TypeSpec 签名返回对象的大小。  
   
 ## <a name="syntax"></a>语法  
@@ -37,7 +37,7 @@ HRESULT GetObjectSize(
 > [!NOTE]
 > 此方法仅适用于 .NET Native。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -46,7 +46,7 @@ HRESULT GetObjectSize(
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugSymbolProvider 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider 接口](icordebugsymbolprovider-interface.md)
+- [调试接口](debugging-interfaces.md)

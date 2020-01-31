@@ -10,12 +10,12 @@ api_type:
 ms.assetid: b22717b9-ead5-4eea-887e-789b52d613dc
 topic_type:
 - apiref
-ms.openlocfilehash: b74008e0a183d46d82c5262209d582537fd155c7
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 7ef983c2f0785cb97baf8ba1ad3483b46c08af9a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938075"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788657"
 ---
 # <a name="icordebugfunction3-interface"></a>ICorDebugFunction3 接口
 [仅在 .NET Framework 4.5.2 及更高版本中受支持]  
@@ -26,7 +26,7 @@ ms.locfileid: "75938075"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetActiveReJitRequestILCode 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)|获取一个接口指针，该指针指向包含活动 ReJIT 请求中的 IL 的[ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) 。|  
+|[GetActiveReJitRequestILCode 方法](icordebugfunction3-getactiverejitrequestilcode-method.md)|获取一个接口指针，该指针指向包含活动 ReJIT 请求中的 IL 的[ICorDebugILCode](icordebugilcode-interface.md) 。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -41,6 +41,6 @@ ms.locfileid: "75938075"
   
 ## <a name="see-also"></a>另请参阅
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [调试接口](debugging-interfaces.md)
+- [调试](index.md)
 - [ReJIT：操作方法指南](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Radio Button control type
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
-ms.openlocfilehash: 416d6d6b9d8e7fbd3b3bb5483ddd8dc22380166c
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 037f237537980f1c68855decf468da54e9a22d14
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741560"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76786103"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>对 RadioButton 控件类型的 UI 自动化支持
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741560"
   
  单选按钮包含一个圆形按钮和应用程序定义的文本（标签）、一个图标或者一个表示用户可以通过选择按钮进行选择的位图。 应用程序通常使用分组框中的单选按钮，以允许用户从一组相关，但相互排斥的选项中进行选择。 例如，应用程序可能会提供一组单选按钮，用户可以从中选择一个客户端区域中所选文本的格式首选项。 用户可以通过选择相应的单选按钮来选择左对齐、右对齐或居中的格式。 通常情况下，用户一次只可以从一组单选按钮中选择一项。  
   
- 以下几节定义了 RadioButton 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有列表控件，无论 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
+ 以下几节定义了 RadioButton 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有列表控件，无论 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 或 Windows 窗体。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必需的 UI 自动化树结构  

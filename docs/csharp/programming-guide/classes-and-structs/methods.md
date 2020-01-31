@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 5955228d51d2f6845a363bcaf32581b6598273f6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c90f06bfadc528bd9575ead30e6b01263055fe8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714773"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743904"
 ---
 # <a name="methods-c-programming-guide"></a>方法（C# 编程指南）
 
@@ -44,7 +44,7 @@ ms.locfileid: "75714773"
 
 ## <a name="passing-by-reference-vs-passing-by-value"></a>按引用传递与按值传递
 
-默认情况下，值类型传递给方法时，传递的是副本而不是对象本身。 因此，对参数的更改不会影响调用方法中的原始副本。 可以使用 ref 关键字按引用传递值类型。 有关详细信息，请参阅[传递值类型参数](./passing-value-type-parameters.md)。 有关内置值类型的列表，请参阅[值类型表](../../language-reference/keywords/value-types-table.md)。
+默认情况下，将[值类型](../../language-reference/builtin-types/value-types.md)的实例传递给方法时，传递的是其副本而不是实例本身。 因此，对参数的更改不会影响调用方法中的原始实例。 若要按引用传递值类型实例，请使用 `ref` 关键字。 有关详细信息，请参阅[传递值类型参数](./passing-value-type-parameters.md)。
 
 引用类型的对象传递到方法中时，将传递对对象的引用。 也就是说，该方法接收的不是对象本身，而是指示该对象位置的参数。 如果通过使用此引用更改对象的成员，即使是按值传递该对象，此更改也会反映在调用方法的参数中。
 

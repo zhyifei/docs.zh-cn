@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 91b558b3-cea9-4106-be8c-3d628d904bfe
 topic_type:
 - apiref
-ms.openlocfilehash: 21683a038b84cae4b2bf51fabd451a4a7514eb89
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4cd2fd05dc193884ab73c9e92e43f67b3a42ca3a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137478"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783182"
 ---
 # <a name="icordebugeditandcontinuesnapshot-interface"></a>ICorDebugEditAndContinueSnapshot 接口
 
 `ICorDebugEditAndContinueSnapshot` 已过时。 不要使用此接口。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试接口](debugging-interfaces.md)

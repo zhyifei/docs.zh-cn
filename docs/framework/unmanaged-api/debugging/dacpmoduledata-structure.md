@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 2e27082ba4c35bc10eb65139b2af6c81c10d79a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b46a04d67f59c5031b5bd195cef4cc2275e1e5e0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739119"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793799"
 ---
 # <a name="dacpmoduledata-structure"></a>DacpModuleData 结构
 
@@ -40,26 +40,26 @@ struct DacpModuleData
 };
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 | 成员    | 描述                                                             |
 | --------- | ----------------------------------------------------------------------- |
-| `Address` | 模块对象的地址。                                           |
-| `File`    | 指向可移植可执行 (PE) 文件的指针。                       |
-| `ilBase`  | 地址加载映像的基。                                 |
-| `payLoad` | 运行时使用的其他模块信息有效负载缓冲区。 |
+| `Address` | Module 对象的地址。                                           |
+| `File`    | 指向可移植可执行（PE）文件的指针。                       |
+| `ilBase`  | 加载的映像的基址。                                 |
+| `payLoad` | 运行时使用的其他模块信息的负载缓冲区。 |
 
 ## <a name="remarks"></a>备注
 
-此结构存在于运行时内，不通过任何标头或库文件公开。 若要使用它，如上所示定义的结构。
+此结构存在于运行时中，并且不会通过任何标头或库文件公开。 若要使用它，请定义上面指定的结构。
 
-## <a name="requirements"></a>要求
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** 无  
-**库：** 无  
+## <a name="requirements"></a>需求
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**标头：** 内容  
+**库：** 内容  
 **.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [调试](index.md)
+- [调试结构](debugging-structures.md)

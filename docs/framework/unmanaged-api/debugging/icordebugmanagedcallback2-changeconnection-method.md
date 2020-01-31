@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7263f9a9-4c0b-4d82-a181-288873fb2b18
 topic_type:
 - apiref
-ms.openlocfilehash: 4558074bc23334bd697461a00ccb31db3e3fe397
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d60644d54373dfb3d1d191900df71d3e5f6547a6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130595"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788296"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>ICorDebugManagedCallback2::ChangeConnection 方法
 通知调试器与指定连接关联的任务集已更改。  
@@ -44,13 +44,13 @@ HRESULT ChangeConnection (
 ## <a name="remarks"></a>备注  
  在以下任一情况下，都将激发 `ChangeConnection` 回调：  
   
-- 调试器附加到包含连接的进程时。 在这种情况下，运行时将为进程中的每个连接生成并调度[ICorDebugManagedCallback2：： CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md)事件和 `ChangeConnection` 事件。 将为每个现有连接生成 `ChangeConnection` 事件，不管该连接的任务集自从创建后是否已更改。  
+- 调试器附加到包含连接的进程时。 在这种情况下，运行时将为进程中的每个连接生成并调度[ICorDebugManagedCallback2：： CreateConnection](icordebugmanagedcallback2-createconnection-method.md)事件和 `ChangeConnection` 事件。 将为每个现有连接生成 `ChangeConnection` 事件，不管该连接的任务集自从创建后是否已更改。  
   
 - 当主机在[托管 API](../../../../docs/framework/unmanaged-api/hosting/index.md)中调用[ICLRDebugManager：： SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)时。  
   
  调试器应扫描进程中的所有线程以选取新的更改。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -59,7 +59,7 @@ HRESULT ChangeConnection (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugManagedCallback2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback2 接口](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback 接口](icordebugmanagedcallback-interface.md)

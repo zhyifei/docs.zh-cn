@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46380fcc-0198-43ae-a1f5-2d4939425886
 topic_type:
 - apiref
-ms.openlocfilehash: 202aed64de78675c79f998afb4483e0d19b811de
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 33400f6b2700bbdbf9c2ccb8a61da192066c0e2f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445972"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790246"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo 函数
 通知探查器，当前正在执行的函数即将对另一个函数执行尾调用，并提供一个可传递给[ICorProfilerInfo3：： GetFunctionTailcall3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md)以检索堆栈帧的句柄。  
@@ -33,12 +33,15 @@ void __stdcall FunctionTailcall3WithInfo(
 ```  
   
 ## <a name="parameters"></a>参数  
- `functionIDOrClientID`  
- 中要进行尾调用的当前正在执行的函数的标识符。  
-  
- `eltInfo`  
- [in] 表示有关给定堆栈帧的信息的不透明的句柄。 此句柄仅在其传递到的回调期间有效。  
-  
+
+- `functionIDOrClientID`
+
+  \[中的]：要进行尾调用的当前正在执行的函数的标识符。
+
+- `eltInfo`
+
+  \[中] 表示有关给定堆栈帧的信息的不透明的句柄。 此句柄仅在其传递到的回调期间有效。
+
 ## <a name="remarks"></a>备注  
  `FunctionTailcall3WithInfo` 回调方法会在调用函数时通知探查器，并允许探查器使用[ICorProfilerInfo3：： GetFunctionTailcall3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md)来检查堆栈帧。 若要访问 stack 帧信息，必须设置 `COR_PRF_ENABLE_FRAME_INFO` 标志。 探查器可以使用[ICorProfilerInfo：： SetEventMask 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)来设置事件标志，然后使用[ICorProfilerInfo3：： SetEnterLeaveFunctionHooks3WithInfo 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)来注册此函数的实现。  
   
@@ -54,7 +57,7 @@ void __stdcall FunctionTailcall3WithInfo(
   
  此外，FunctionTailcall3WithInfo 函数不得调入托管代码或以任何方式引发托管内存分配。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Corprof.idl .idl  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5cba642c-0d80-48ee-889d-198c5044d821
 topic_type:
 - apiref
-ms.openlocfilehash: 5d3fe6691a2d9989de002bad09c2e8f66a094f56
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 01989812b85cf98aedfd8855bee7b2dfbfd375f4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448430"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790062"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted 方法
 通知探查器搜索已开始使用本机映像生成器（Ngen.exe）编译的函数。  
@@ -33,13 +33,16 @@ HRESULT JITCachedFunctionSearchStarted(
     [out] BOOL *pbUseCachedFunction);  
 ```  
   
-## <a name="parameters"></a>参数  
- `functionId`  
- 中正在为其执行搜索的函数的 ID。  
-  
- `pbUseCachedFunction`  
- [out] 如果执行引擎应使用函数的缓存版本（如果可用），则 `true`;否则 `false`。 如果 `false`值，则执行引擎将对函数进行 JIT 编译，而不是使用 JIT 编译的版本。  
-  
+## <a name="parameters"></a>参数
+
+- `functionId`
+
+  \[中] 要执行搜索的函数的 ID。
+
+- `pbUseCachedFunction`
+
+  \[out] `true` 是否应使用函数的缓存版本（如果可用）;否则 `false`。 如果 `false`值，则执行引擎将对函数进行 JIT 编译，而不是使用 JIT 编译的版本。
+
 ## <a name="remarks"></a>备注  
  在 .NET Framework 版本2.0 中，将不会对常规 NGen 映像中的所有函数执行 `JITCachedFunctionSearchStarted` 和[ICorProfilerCallback：： JITCachedFunctionSearchFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md)回调。 只有针对配置文件优化的 NGen 映像将为映像中的所有函数生成回调。 但是，由于额外的开销，如果探查器打算使用这些回调来强制实时（JIT）编译函数，则它应请求探查器优化的 NGen 映像。 否则，探查器应使用延迟策略来收集函数信息。  
   
@@ -49,7 +52,7 @@ HRESULT JITCachedFunctionSearchStarted(
   
  当探查器收到重复的回调时，它必须将 `pbUseCachedFunction` 引用的值设置为所有重复回调的相同值。 也就是说，当用相同的 `functionId` 值多次调用 `JITCachedFunctionSearchStarted` 时，探查器每次都必须响应相同的值。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  

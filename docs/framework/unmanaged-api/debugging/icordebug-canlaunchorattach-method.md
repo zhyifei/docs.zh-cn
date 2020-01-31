@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ca7723db-7c07-4cdd-bd92-fba34928b623
 topic_type:
 - apiref
-ms.openlocfilehash: 805f9a5d1f2590a06bfa929c152bdfd13900531a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 28b9fb5a25981e5e37a5f1bbb797baeac45e0028
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134286"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793565"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach 方法
 返回一个 HRESULT，它指示是否可以在当前计算机和运行时配置的上下文中启动新进程或附加到指定的现有进程。  
@@ -42,7 +42,7 @@ HRESULT CanLaunchOrAttach (
  中如果计划在启用 Win32 调试的情况下启动或附加到已启用 Win32 调试，则传入 `true`;否则，传递 `false`。  
   
 ## <a name="return-value"></a>返回值  
- 如果调试服务确定启动新的进程或附加到给定的进程，则为 S_OK，前提是有关当前计算机和运行时配置的信息。 可能的 HRESULT 值为：  
+ 在给定有关当前计算机和运行时配置的信息的情况下，如果调试服务确定启动新进程或附加到给定进程，则 S_OK。 可能的 HRESULT 值为：  
   
 - S_OK  
   
@@ -57,7 +57,7 @@ HRESULT CanLaunchOrAttach (
   
  如果计划在启用 Win32 调试的情况下启动或附加启用了 Win32 调试，请为 `win32DebuggingEnabled`传递 `true`。 如果使用此选项，`CanLaunchOrAttach` 返回的 HRESULT 可能不同。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -66,6 +66,6 @@ HRESULT CanLaunchOrAttach (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug 接口](icordebug-interface.md)

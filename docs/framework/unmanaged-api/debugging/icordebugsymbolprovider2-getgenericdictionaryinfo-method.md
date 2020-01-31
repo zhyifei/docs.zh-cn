@@ -1,15 +1,15 @@
 ---
-title: ICorDebugSymbolProvider2：： GetGenericDictionaryInfo 方法
+title: ICorDebugSymbolProvider2::GetGenericDictionaryInfo 方法
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-ms.openlocfilehash: c9f7206cac54d64c28eb50d81fea00a6f3c494d4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 02ecaf56e845680472f42c04f3978e54e7a69272
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133635"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791509"
 ---
-# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2：： GetGenericDictionaryInfo 方法
+# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo 方法
 
 检索泛型字典映射。
 
@@ -24,7 +24,7 @@ HRESULT GetGenericDictionaryInfo(
 ## <a name="parameters"></a>参数
 
 `ppMemoryBuffer`\
-弄指向包含泛型字典映射的[ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)对象地址的指针。 有关详细信息，请参阅备注部分。
+弄指向包含泛型字典映射的[ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md)对象地址的指针。 有关详细信息，请参阅备注部分。
 
 ## <a name="remarks"></a>备注
 
@@ -75,7 +75,7 @@ Heap Size = Stream.Length – (Directory Size + 4)
 
 包含每个堆元素的长度使目录部分实现简单排序，而不对堆造成影响。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
@@ -85,7 +85,7 @@ Heap Size = Stream.Length – (Directory Size + 4)
 
 **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugSymbolProvider2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider2 接口](icordebugsymbolprovider2-interface.md)
+- [调试接口](debugging-interfaces.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c5444816-7378-4521-afd3-bf5e4b5303d5
 topic_type:
 - apiref
-ms.openlocfilehash: 5d66503487e1b997e2b8cc7d3d46e210a4dbbe05
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2ed32449c4a133e6e72ec44f9cb57f49de22164a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132755"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778235"
 ---
 # <a name="cordebugplatform-enumeration"></a>CorDebugPlatform 枚举
-提供[ICorDebugDataTarget：： GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法使用的目标平台值。  
+提供[ICorDebugDataTarget：： GetPlatform](icordebugdatatarget-getplatform-method.md)方法使用的目标平台值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +51,7 @@ typedef enum CorDebugPlatform
 |CORDB_PLATFORM_WINDOWS_ARM|目标平台是在 Windows ARM 硬件上运行的 Macintosh 操作系统。|  
 |CORDB_PLATFORM_MAC_AMD64|目标平台是在 AMD64 硬件上运行的 Macintosh 操作系统。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -62,6 +62,6 @@ typedef enum CorDebugPlatform
   
  `CORDB_PLATFORM_WINDOWS_ARM` 成员和 `CORDB_PLATFORM_MAC_AMD64` 成员在 .NET Framework 4.5.2 及更高版本中可用。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [调试枚举](debugging-enumerations.md)

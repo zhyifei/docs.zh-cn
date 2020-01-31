@@ -1,5 +1,5 @@
 ---
-title: 演练：使用 Windows 窗体控件上的智能标记执行常规任务
+title: 使用控件上的智能标记 Performi 常见任务
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DesignerAction object model
@@ -9,12 +9,12 @@ ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 07fb43a711ae8b1e2e375b17b136c07f35b1cf39
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 826313d0a89410f62c034a5fba4dee32e90a1750
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459574"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744256"
 ---
 # <a name="walkthrough-perform-common-tasks-using-smart-tags"></a>演练：使用智能标记执行常规任务
 
@@ -30,9 +30,9 @@ ms.locfileid: "73459574"
 
 智能标记在设计器的生存期内保持附加到控件实例，并且始终可用。
 
-## <a name="create-the-project"></a>创建项目
+## <a name="create-the-project"></a>프로젝트를 만듭니다.
 
-第一步是创建项目并设置窗体。
+첫 번째 단계는 프로젝트를 만들고 폼을 설정하는 것입니다.
 
 1. 在 Visual Studio 中，创建一个名为**SmartTagsExample**的基于 Windows 的应用程序项目。
 
@@ -46,15 +46,15 @@ ms.locfileid: "73459574"
 
 2. 单击智能标记标志符号。 在标志符号旁边显示的快捷菜单中，选择 "**添加" 选项卡**项。 请注意，新的选项卡页已添加到 <xref:System.Windows.Forms.TabControl>。
 
-3. 从 <xref:System.Windows.Forms.TableLayoutPanel> “工具箱” **将** 控件拖到你的窗体上。
+3. <xref:System.Windows.Forms.TableLayoutPanel> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다.
 
 4. 单击智能标记标志符号。 在出现标志符号旁边的快捷菜单中，选择 "**添加列**" 项。 请注意，新列已添加到 <xref:System.Windows.Forms.TableLayoutPanel> 控件。
 
-5. 从 <xref:System.Windows.Forms.SplitContainer> “工具箱” **将** 控件拖到你的窗体上。
+5. <xref:System.Windows.Forms.SplitContainer> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다.
 
 6. 单击智能标记标志符号。 在标志符号旁边显示的快捷菜单中，选择 "**水平拆分器方向**" 项。 请注意，<xref:System.Windows.Forms.SplitContainer> 控件的拆分条现在为水平方向。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:System.Windows.Forms.TabControl>

@@ -2,12 +2,12 @@
 title: ICorDebugAssembly3::EnumerateContainedAssemblies 方法
 ms.date: 03/30/2017
 ms.assetid: 98f15b05-afad-4616-9e2a-1a9af31948b6
-ms.openlocfilehash: 032f32a08efa92cea682b0e2fc974dc607a9dca4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 616675f839e562227558ece440bdfdf497747572
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133941"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784560"
 ---
 # <a name="icordebugassembly3enumeratecontainedassemblies-method"></a>ICorDebugAssembly3::EnumerateContainedAssemblies 方法
 获取该程序集中所包含的程序集的枚举器。  
@@ -22,7 +22,7 @@ HRESULT EnumerateContainedAssemblies(
   
 ## <a name="parameters"></a>参数  
  `ppAssemblies`  
- 弄指向作为枚举器的 ICorDebugAssemblyEnum 接口对象地址的指针。  
+ [输出] 指针指向 ICor调试程序集枚举器界面对象（即枚举器）的地址。  
   
 ## <a name="return-value"></a>返回值  
  `S_OK` 若该 `ICorDebugAssembly3` 对象为容器；反之，`S_FALSE`，枚举为空。  
@@ -33,7 +33,7 @@ HRESULT EnumerateContainedAssemblies(
 > [!NOTE]
 > 此方法仅适用于 .NET Native。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -42,7 +42,7 @@ HRESULT EnumerateContainedAssemblies(
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugAssembly3 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugAssembly3 接口](icordebugassembly3-interface.md)
+- [调试接口](debugging-interfaces.md)

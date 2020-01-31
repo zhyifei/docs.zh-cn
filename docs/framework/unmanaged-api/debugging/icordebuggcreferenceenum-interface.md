@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f3c91c9-c035-454f-96cc-011cab1ea06b
 topic_type:
 - apiref
-ms.openlocfilehash: 49f89f7d36e74b1fa5921230d7dc6d271d4c0883
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f01c27376191c3a2dddf56dae4b26c8b5193c73e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134633"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788644"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum 接口
 提供针对将进行垃圾回收的对象的枚举器。  
@@ -28,14 +28,14 @@ ms.locfileid: "73134633"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md)|获取指定数量的[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)实例，其中包含有关将进行垃圾回收的对象的信息。|  
+|[Next 方法](icordebuggcreferenceenum-next-method.md)|获取指定数量的[COR_GC_REFERENCE](cor-gc-reference-structure.md)实例，这些实例包含有关将进行垃圾回收的对象的信息。|  
   
 ## <a name="remarks"></a>备注  
  `ICorDebugGCReferenceEnum` 接口实现 "ICorDebugEnum" 接口。  
   
- `ICorDebugGCReferenceEnum` 实例通过调用[ICorDebugProcess5：： EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)方法填充[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)实例。 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)对象可通过调用[ICorDebugGCReference：： Next](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md)方法进行枚举。  
+ `ICorDebugGCReferenceEnum` 实例通过调用[ICorDebugProcess5：： EnumerateGCReferences](icordebugprocess5-enumerategcreferences-method.md)方法填充[COR_GC_REFERENCE](cor-gc-reference-structure.md)实例。 可以通过调用[ICorDebugGCReference：： Next](icordebuggcreferenceenum-next-method.md)方法来枚举[COR_GC_REFERENCE](cor-gc-reference-structure.md)的对象。  
   
- 此方法填充的集合中的[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)对象表示三种对象：  
+ 此方法填充的集合中的[COR_GC_REFERENCE](cor-gc-reference-structure.md)对象表示三种对象：  
   
 - 所有托管堆栈中的对象。 这包括托管代码中的实时引用以及由公共语言运行时创建的对象。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73134633"
   
 - 终结器队列中的对象。 终结器队列根对象，直到终结器运行。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -52,6 +52,6 @@ ms.locfileid: "73134633"
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试接口](debugging-interfaces.md)

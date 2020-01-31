@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 624672b5-1189-488a-85d2-3e12b49617c1
 topic_type:
 - apiref
-ms.openlocfilehash: 5f98c35f77fdb200be2e96364c9ac06c386faa62
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 500cf74c320438fc1b78f0aac737b418716e1a11
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436021"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862823"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout 方法
 获取有关指定值类型的装箱位置的信息。  
@@ -43,7 +43,7 @@ HRESULT GetBoxClassLayout(
 ## <a name="remarks"></a>备注  
  `pBufferOffset` 值是值类型在框中的位置。 将 `pBufferOffset` 应用于装箱对象后，可以使用值类型的类布局来解释该对象的值。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -54,5 +54,5 @@ HRESULT GetBoxClassLayout(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo 接口](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 接口](icorprofilerinfo2-interface.md)

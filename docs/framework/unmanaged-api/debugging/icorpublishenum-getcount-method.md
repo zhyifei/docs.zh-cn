@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d228f684-2be3-4029-93ae-31fe02213c1f
 topic_type:
 - apiref
-ms.openlocfilehash: a03b06143c0bd92425c7bfc13af6e374dc629f10
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0b3754fbcca50b52039dc358aed7070b8a152ead
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140476"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790635"
 ---
 # <a name="icorpublishenumgetcount-method"></a>ICorPublishEnum::GetCount 方法
 获取枚举中的项数。  
@@ -37,7 +37,7 @@ HRESULT GetCount (
  `pcelt`  
  弄一个指针，指向枚举中的项数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorPub，CorPub  
@@ -46,6 +46,6 @@ HRESULT GetCount (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorPublishEnum 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+- [ICorPublishEnum 接口](icorpublishenum-interface.md)

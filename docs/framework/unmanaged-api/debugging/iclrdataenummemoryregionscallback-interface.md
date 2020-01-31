@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 3f1af8b0-8478-48e0-a7ec-3e90e0b97649
 topic_type:
 - apiref
-ms.openlocfilehash: cf46133095d1345ffbe0356d3ab486c11ae6dbd6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4e3891996af5945ed95c8c37dddfee5c446db248
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122915"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789110"
 ---
 # <a name="iclrdataenummemoryregionscallback-interface"></a>ICLRDataEnumMemoryRegionsCallback 接口
-为[ICLRDataEnumMemoryRegions：： EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)提供回调方法，以便向调试器报告尝试枚举指定的内存区域的结果。  
+为[ICLRDataEnumMemoryRegions：： EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md)提供回调方法，以便向调试器报告尝试枚举指定的内存区域的结果。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[EnumMemoryRegion 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-enummemoryregion-method.md)|由 `ICLRDataEnumMemoryRegions::EnumMemoryRegions` 调用，以向调试器报告尝试枚举指定的内存区域的结果。|  
+|[EnumMemoryRegion 方法](iclrdataenummemoryregionscallback-enummemoryregion-method.md)|由 `ICLRDataEnumMemoryRegions::EnumMemoryRegions` 调用，以向调试器报告尝试枚举指定的内存区域的结果。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** ClrData，ClrData  
@@ -39,6 +39,6 @@ ms.locfileid: "73122915"
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试接口](debugging-interfaces.md)

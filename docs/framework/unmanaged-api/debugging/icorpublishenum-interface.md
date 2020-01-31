@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76a136b5-e444-417a-8ade-f1596d597dc7
 topic_type:
 - apiref
-ms.openlocfilehash: 7d083655326333f18ee98f8e84fff2ed182dde6d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f54bb99df60d7b3fb7bb98de75fbae210597e45c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103452"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790614"
 ---
 # <a name="icorpublishenum-interface"></a>ICorPublishEnum 接口
 用作枚举器的抽象基接口，这些枚举器用于发布有关进程和应用程序域的信息。  
@@ -28,19 +28,19 @@ ms.locfileid: "73103452"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Clone 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-clone-method.md)|创建此 `ICorPublishEnum` 对象的副本。|  
-|[GetCount 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-getcount-method.md)|获取枚举中的项数。|  
-|[Reset 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-reset-method.md)|将光标移到枚举的开头。|  
-|[Skip 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-skip-method.md)|按指定的项数在枚举中向前移动光标。|  
+|[Clone 方法](icorpublishenum-clone-method.md)|创建此 `ICorPublishEnum` 对象的副本。|  
+|[GetCount 方法](icorpublishenum-getcount-method.md)|获取枚举中的项数。|  
+|[Reset 方法](icorpublishenum-reset-method.md)|将光标移到枚举的开头。|  
+|[Skip 方法](icorpublishenum-skip-method.md)|按指定的项数在枚举中向前移动光标。|  
   
 ## <a name="remarks"></a>备注  
  以下枚举器派生自 `ICorPublishEnum`：  
   
-- [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)  
+- [ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md)  
   
-- [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)  
+- [ICorPublishProcessEnum](icorpublishprocessenum-interface.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorPub，CorPub  
@@ -49,7 +49,7 @@ ms.locfileid: "73103452"
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [CorpubPublish 组件类](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [CorpubPublish 组件类](corpubpublish-coclass.md)
+- [调试接口](debugging-interfaces.md)

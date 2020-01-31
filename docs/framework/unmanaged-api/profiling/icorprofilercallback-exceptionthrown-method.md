@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1a23f3b-ac21-4905-8abf-8ea59f15af53
 topic_type:
 - apiref
-ms.openlocfilehash: 4ecbe0ef3c3021c5633b9380da2eb31cf22aa4b1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 332f88388ac72c11d273fc4d62d6684adae35b86
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445324"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790112"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>ICorProfilerCallback::ExceptionThrown 方法
 通知探查器引发了异常。  
@@ -35,16 +35,18 @@ HRESULT ExceptionThrown(
     [in] ObjectID thrownObjectId);  
 ```  
   
-## <a name="parameters"></a>参数  
- `thrownObjectId`  
- 中导致引发异常的对象的 ID。  
+## <a name="parameters"></a>参数
+
+- `thrownObjectId`
+
+  中 \[] 导致引发异常的对象的 ID。
   
 ## <a name="remarks"></a>备注  
  探查器不应在此方法的实现中被阻止，因为堆栈可能不处于允许垃圾回收的状态，因此无法启用抢先垃圾回收。 如果探查器在此处阻止并且试图进行垃圾回收，则运行时将被阻止，直到此回调返回。  
   
  探查器的此方法的实现不应调入托管代码或以任何方式导致托管内存分配。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
