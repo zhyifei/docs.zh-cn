@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: df5f05be-bed7-4f3c-bc89-dbb435d79a0b
 topic_type:
 - apiref
-ms.openlocfilehash: f8b216d370f7278f6d2a4beed5bab88afa666200
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9029d53872108bc1953fd22c584b6e01a6f3c7ab
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122205"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788867"
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget 接口
 提供一个回调接口，该接口可提供对特定目标进程的访问。  
@@ -28,9 +28,9 @@ ms.locfileid: "73122205"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetPlatform 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|提供有关平台的信息，包括在其上运行目标进程的处理器体系结构和操作系统。|  
-|[ReadVirtual 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-readvirtual-method.md)|获取从指定地址开始的连续内存块，并将其返回到提供的缓冲区中。|  
-|[GetThreadContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|请求指定线程的当前线程上下文。|  
+|[GetPlatform 方法](icordebugdatatarget-getplatform-method.md)|提供有关平台的信息，包括在其上运行目标进程的处理器体系结构和操作系统。|  
+|[ReadVirtual 方法](icordebugdatatarget-readvirtual-method.md)|获取从指定地址开始的连续内存块，并将其返回到提供的缓冲区中。|  
+|[GetThreadContext 方法](icordebugdatatarget-getthreadcontext-method.md)|请求指定线程的当前线程上下文。|  
   
 ## <a name="remarks"></a>备注  
  `ICorDebugDataTarget` 及其方法具有以下特征：  
@@ -43,12 +43,12 @@ ms.locfileid: "73122205"
   
 - `ICorDebugDataTarget` 实现必须始终返回有关目标的最新信息。  
   
- 如果调用了 `ICorDebug*` 接口（因此 `ICorDebugDataTarget` 方法），则目标进程应停止并且不以任何方式更改。 如果目标是实时进程并且其状态发生更改，则必须再次调用[ICLRDebugging：： OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法以提供替换 ICorDebugProcess 实例。  
+ 如果调用了 `ICorDebug*` 接口（因此 `ICorDebugDataTarget` 方法），则目标进程应停止并且不以任何方式更改。 如果目标是实时进程并且其状态发生更改，则必须再次调用[ICLRDebugging：： OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md)方法以提供替换 ICorDebugProcess 实例。  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -57,7 +57,7 @@ ms.locfileid: "73122205"
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [调试接口](debugging-interfaces.md)
+- [调试](index.md)

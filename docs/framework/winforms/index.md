@@ -1,20 +1,21 @@
 ---
 title: Windows 窗体
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms
 - user interface
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: 00e359e7c2440b6d88f2c42fd0267fc1f12b7bb7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cdd3a71b406f1f0ae2afa1e1b3982c27f4db21a4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583420"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739194"
 ---
 # <a name="windows-forms"></a>Windows 窗体
-因为窗体是应用程序的基本单位，有必要思考一下它们的功能和设计。 窗体最终成为白板，作为开发成员，你要用控件进行增强以创建用户界面，并借助代码操纵数据。 为此，Visual Studio 提供的集成的开发环境 (IDE) 来帮助编写代码，以及丰富的控件集使用.NET Framework 编写。 通过使用代码补充这些控件的功能，你可轻松并快速开发所需要的解决方案。  
+因为窗体是应用程序的基本单位，有必要思考一下它们的功能和设计。 窗体最终成为白板，作为开发成员，你要用控件进行增强以创建用户界面，并借助代码操纵数据。 为此，Visual Studio 提供了一个集成开发环境（IDE）来帮助编写代码，以及一个使用 .NET Framework 编写的丰富的控件集。 通过使用代码补充这些控件的功能，你可轻松并快速开发所需要的解决方案。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Windows 窗体入门](getting-started-with-windows-forms.md)  
@@ -45,7 +46,7 @@ ms.locfileid: "65583420"
  [Windows 窗体应用程序](/visualstudio/debugger/debugging-preparation-windows-forms-applications)  
  讨论用 Windows 应用程序项目模板创建的应用程序的调试进程，以及如何更改调试和发布配置。  
   
- [首先看一下 Visual Studio 中的部署](/visualstudio/deployment/deploying-applications-services-and-components)  
+ [在 Visual Studio 中首先了解部署](/visualstudio/deployment/deploying-applications-services-and-components)  
  描述分配要安装到其他计算机上的已完成应用程序或组件的进程。  
   
  [生成控制台应用程序](../../standard/building-console-apps.md)  

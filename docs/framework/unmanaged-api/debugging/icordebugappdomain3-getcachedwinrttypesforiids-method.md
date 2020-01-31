@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23682ca0-1bcf-48e6-996e-69f7ba337682
 topic_type:
 - apiref
-ms.openlocfilehash: 0369cc6d98736542b764e5914d733a9341753b24
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8b259636a8bd28abd3bba12c4a05dda3c13557e1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088877"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784895"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs 方法
 基于其接口标识符获取应用程序域中缓存的 Windows 运行时类型的枚举器。  
@@ -48,7 +48,7 @@ HRESULT GetCachedWinRTTypesForIIDs (
 ## <a name="remarks"></a>备注  
  如果该方法无法检索特定接口标识符的信息，则 "ICorDebugTypeEnum" 集合中的对应条目将有一种类型的 `ELEMENT_TYPE_END` 用于错误，这是由于数据检索问题或未知接口标识符 `ELEMENT_TYPE_VOID` 的。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** Windows 运行时  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -57,6 +57,6 @@ HRESULT GetCachedWinRTTypesForIIDs (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugAppDomain3 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)
+- [ICorDebugAppDomain3 接口](icordebugappdomain3-interface.md)

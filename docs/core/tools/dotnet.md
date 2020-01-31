@@ -2,18 +2,18 @@
 title: dotnet 命令
 description: 了解 dotnet 命令（.NET Core CLI 工具的通用驱动程序）及其用法。
 ms.date: 06/04/2018
-ms.openlocfilehash: a22340c26ca2e483e43857e2ecb31f2ab53b60f4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: fe90968560b58471c279fcd2097741ea476cef0b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117507"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734064"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet` - 一款管理 .NET 源代码和二进制文件的工具。
 
@@ -45,7 +45,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ---
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 `dotnet` 是一款管理 .NET 源代码和二进制文件的工具。 它公开执行特定任务的命令，例如 [`dotnet build`](dotnet-build.md) 和 [`dotnet run`](dotnet-run.md)。 每个命令都定义自己的参数。 在每个命令后键入 `--help` 以访问简要帮助文档。
 
@@ -107,7 +107,7 @@ deps.json 文件包含依赖项、编译依赖项和用于解决程序集冲突�
 
 runtimeconfig.template.json 文件的路径  。
 
-runtimeconfig.template.json 文件是包含运行时配置设置的配置文件  。 有关详细信息，请参阅 GitHub 上的[运行时配置文件](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)。
+runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 有关详细信息，请参阅 [.NET Core 运行时配置设置](../run-time-config/index.md#runtimeconfigjson)。
 
 `-v|--verbosity <LEVEL>`
 
@@ -157,7 +157,7 @@ deps.json 文件包含依赖项、编译依赖项和用于解决程序集冲突�
 
 runtimeconfig.template.json 文件的路径  。
 
-runtimeconfig.template.json 文件是包含运行时配置设置的配置文件  。 有关详细信息，请参阅 GitHub 上的[运行时配置文件](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)。
+runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 有关详细信息，请参阅 [.NET Core 运行时配置设置](../run-time-config/index.md#runtimeconfigjson)。
 
 `-v|--verbosity <LEVEL>`
 
@@ -199,7 +199,7 @@ deps.json 文件包含依赖项、编译依赖项和用于解决程序集冲突�
 
 runtimeconfig.template.json 文件的路径  。
 
-runtimeconfig.template.json 文件是包含运行时配置设置的配置文件  。 有关详细信息，请参阅 GitHub 上的[运行时配置文件](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)。
+runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 有关详细信息，请参阅 [.NET Core 运行时配置设置](../run-time-config/index.md#runtimeconfigjson)。
 
 `-v|--verbosity <LEVEL>`
 
@@ -399,3 +399,4 @@ runtimeconfig.template.json 文件是包含运行时配置设置的配置文件 
 ## <a name="see-also"></a>请参阅
 
 - [运行时配置文件](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [.NET Core 运行时配置设置](../run-time-config/index.md)

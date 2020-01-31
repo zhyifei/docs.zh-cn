@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6c394ad2721bcdd91fb750fe93c03f16ca9f799f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4285ed3c0488ea615ca89b0b771bf09c8c29b318
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714079"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739123"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>通过命令行开始在 Windows/Linux/macOS 上使用 .NET Core
 
@@ -183,7 +183,7 @@ Hello World!
 如本文开头处所述，会随 `Hello.dll` 一起创建特定于操作系统的可执行文件。 在 Windows 上，这将是 `Hello.exe`；在 Linux 或 macOS 上，这将是 `hello`。 在上面的示例中，用 `Hello.exe` 或 `Hello` 命名该文件。 可以直接运行已发布的可执行文件。
 
 ```console
-.\bin\Debug\netcoreapp3.1\Hello.exe
+.\bin\Debug\netcoreapp3.1\publish\Hello.exe
 
 Hello World!
 ```

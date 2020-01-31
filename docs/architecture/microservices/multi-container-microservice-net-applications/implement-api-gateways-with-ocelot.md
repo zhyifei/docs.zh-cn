@@ -2,16 +2,16 @@
 title: 通过 Ocelot 实现 API 网关
 description: 了解如何通过 Ocelot 实现 API 网关以及如何在基于容器的环境中使用 Ocelot。
 ms.date: 10/02/2018
-ms.openlocfilehash: 6c576a17d784777557bfb8bd99438eb111e8ec2e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 1ade05cc6935ce6a1bc74e6d6e4cdd5ef9fc6873
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737683"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734605"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>通过 Ocelot 实现 API 网关
 
-引用的微服务应用程序 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 使用的是 [Ocelot](https://github.com/ThreeMammals/Ocelot)，这是一个简单的轻量级 API 网关，可与微服务/容器一起部署到任意位置，例如 eShopOnContainers 使用的以下任意环境。
+引用的微服务应用程序 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 使用的是 [Ocelot](https://github.com/ThreeMammals/Ocelot)，这是一个简单的轻量级 API 网关，可与微服务/容器一起部署到任意位置，例如 eShopOnContainers 使用的以下任意环境：
 
 - 位于本地开发电脑、本地或云中的 Docker 主机。
 - 本地或 Azure Kubernetes 服务 (AKS) 等托管云中的 Kubernetes 群集。
@@ -26,7 +26,7 @@ ms.locfileid: "73737683"
 
 图 6-28  。 使用 API 网关的 eShopOnContainers 体系结构
 
-该图显示了如何使用“用于 Windows 的 Docker”或“用于 Mac 的 Docker”将整个应用程序部署到单个 Docker 主机或开发电脑。 然而，虽然部署到业务流程协调程序中的方法与之非常相似，但图中的容器都可在业务流程协调程序中横向扩展。
+该图显示了如何使用“用于 Windows 的 Docker”或“用于 Mac 的 Docker”将整个应用程序部署到单个 Docker 主机或开发电脑。 然而，虽然部署到业务流程协调程序中的方法与之相似，但图中的容器都可在业务流程协调程序中横向扩展。
 
 此外，应从业务流程协调程序卸载基础结构资产（如数据库、缓存和消息代理），并将其部署到基础结构的高可用系统，如 Azure SQL 数据库、Azure Cosmos DB、Azure Redis、Azure 服务总线或本地 HA 群集解决方案。
 
@@ -42,7 +42,7 @@ ms.locfileid: "73737683"
 
 对于许多中型和大型应用程序，关键在于使用自定义生成的 API 网关产品，这通常是一种不错的方法，但不能作为单一聚合器或唯一的中央自定义 API 网关，除非该 API 网关允许多个开发团队在多个独立配置区域创建自主微服务。
 
-### <a name="sample-microservicescontainers-to-re-route-through-the-api-gateways"></a>通过 API 网关重新路由的示例微服务/容器
+### <a name="sample-microservicescontainers-to-reroute-through-the-api-gateways"></a>通过 API 网关重新路由的示例微服务/容器
 
 例如，eShopOnContainers 具有大约六项必须通过 API 网关发布的内部微服务类型，如下图所示。
 
@@ -120,7 +120,7 @@ catalog.api:
 
 通常不会将 docker-compose 部署到生产环境中，因为适合微服务的生产部署环境是 Kubernetes 或 Service Fabric 等业务流程协调程序。 部署到这些环境时，会使用不同的配置文件，部署时不直接发布微服务的任何外部端口，但始终要使用 API 网关中的反向代理。
 
-可通过以下方式运行本地 Docker 主机中的“目录”微服务：从 Visual Studio 运行完整的 eShopOnContainers 解决方案（它将运行 docker-compose 文件中的所有服务）；在 CMD 或放置 `docker-compose.yml` 和 docker-compose.override.yml 的文件夹中的 PowerShell 中运行以下 docker-compose 命令启动“目录”微服务。
+在本地 Docker 主机中运行“目录”微服务。 从 Visual Studio 运行完整的 eShopOnContainers 解决方案（它将运行 docker-compose 文件中的所有服务）；在 CMD 或放置 `docker-compose.yml` 和 `docker-compose.override.yml` 的文件夹中的 PowerShell 中运行以下 docker-compose 命令启动“目录”微服务。
 
 ```console
 docker-compose run --service-ports catalog.api
@@ -195,9 +195,9 @@ namespace OcelotApiGw
 }
 ```
 
-配置具有两个部分。 一组 Re-Route 和一个 GlobalConfiguration。 Re-Route 是指示 Ocelot 如何处理上游请求的对象。 全局配置允许替代 Re-Route 特定设置。 如果不想管理大量的 Re-Route 特定设置，可采用此方法。
+配置具有两个部分。 一组 ReRoute 和一个 GlobalConfiguration。 ReRoute 是指示 Ocelot 如何处理上游请求的对象。 全局配置允许替代 ReRoute 特定设置。 如果不想管理大量的 ReRoute 特定设置，可采用此方法。
 
-以下是 eShopOnContainers 中某个 API 网关的 [ReRoute 配置文件](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/ApiGateways/Web.Bff.Shopping/apigw/configuration.json)的简化示例。
+以下是 eShopOnContainers 中某个 API 网关的 [ReRoute 配置文件](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/ApiGateways/Web.Bff.Shopping/apigw/configuration.json)的简化示例。
 
 ```json
 {
@@ -239,9 +239,9 @@ namespace OcelotApiGw
   }
 ```
 
-Ocelot API 网关的主要功能是接收传入的 HTTP 请求并将其转发到下游服务，目前作为另一 HTTP 请求。 Ocelot 将一个请求到另一请求的路由描述为 Re-Route。
+Ocelot API 网关的主要功能是接收传入的 HTTP 请求并将其转发到下游服务，目前作为另一 HTTP 请求。 Ocelot 将一个请求到另一请求的路由描述为 ReRoute。
 
-例如，我们主要来看上方 configuration.json（即“购物篮”微服务的配置）中的某个 Re-Route。
+例如，我们主要来看上方 configuration.json（即“购物篮”微服务的配置）中的某个 ReRoute。
 
 ```json
 {
@@ -394,9 +394,9 @@ webmarketingapigw:
 
 图 6-38  。 聚合器服务的放大影像
 
-可以看到，当关系图显示可能来自 API 网关的请求时，它会变得非常复杂。 虽然可以看到如何简化蓝色箭头，但从客户端应用角度来看，通过减少通信中的干扰和延迟来使用聚合器模式时，尤其是远程应用（移动和 SPA 应用）的用户体验最终可获得显著改善。
+可以看到，当关系图显示可能来自 API 网关的请求时，它可能变得复杂。 虽然可以看到如何简化蓝色箭头，但从客户端应用角度来看，通过减少通信中的干扰和延迟来使用聚合器模式时，尤其是远程应用（移动和 SPA 应用）的用户体验最终可获得显著改善。
 
-对于“营销”业务范围和微服务，它是一个非常简单的用例，因此不需要使用聚合器，但如果需要，也可使用。
+对于“营销”业务范围和微服务，它是一个简单的用例，因此不需要使用聚合器，但如果需要，也可使用。
 
 ### <a name="authentication-and-authorization-in-ocelot-api-gateways"></a>Ocelot API 网关中的身份验证和授权
 
@@ -416,7 +416,7 @@ webmarketingapigw:
 
 如上图所示，当标识微服务位于 API 网关 (AG) 下时：1) AG 从标识微服务请求身份验证令牌，2) 标识微服务将令牌返回到 AG，3-4) AG 使用身份验证令牌向微服务发出请求。 由于 eShopOnContainers 应用程序已将 API 网关拆分为多个 BFF（用于前端的后端）和业务范围 API 网关，因此另一种选择是为横切关注点创建其他 API 网关。 对于基于更复杂的微服务且具有多个横切关注点微服务的架构，这种选择更加合理。 由于 eShopOnContainers 中只有一个横切关注点，为简单起见，决定仅从 API 网关领域处理安全服务。
 
-在任何情况下，如果应用受到 API 网关级别的保护，则尝试使用任何安全的微服务时，首先会访问 Ocelot API 网关的身份验证模块。 这将重新定向 HTTP 请求，访问“标识”或“身份验证”微服务以获取访问令牌，这样便可通过 access_token 访问受保护的服务。
+在任何情况下，如果应用受到 API 网关级别的保护，则尝试使用任何安全的微服务时，首先会访问 Ocelot API 网关的身份验证模块。 这将重定向 HTTP 请求，访问“标识”或“身份验证”微服务以获取访问令牌，这样便可通过 access_token 访问受保护的服务。
 
 使用身份验证在 API 网关级别保护服务的方法是在 configuration.json 的相关设置中设置 AuthenticationProviderKey。
 
@@ -508,7 +508,7 @@ services.AddAuthentication(options =>
 });
 ```
 
-如果尝试使用基于 API 网关的 Re-Route URL（例如 `http://localhost:5202/api/v1/b/basket/1`）访问任何安全的微服务（如“购物篮”微服务），除非提供有效令牌，否则会出现“401 未授权”。 另一方面，如果 Re-Route URL 未经身份验证，Ocelot 将调用与其关联的任何下游方案（内部微服务 URL）。
+如果尝试使用基于 API 网关的 ReRoute URL（例如 `http://localhost:5202/api/v1/b/basket/1`）访问任何安全的微服务（如“购物篮”微服务），除非提供有效令牌，否则会出现“401 未授权”。 另一方面，如果 ReRoute URL 未经身份验证，Ocelot 将调用与其关联的任何下游方案（内部微服务 URL）。
 
 Ocelot 的 ReRoute 层中的授权。   Ocelot 支持在进行身份验证后评估的基于声明的授权。 通过将以下行添加到 ReRoute 配置中，可以在路由级别设置授权。
 
@@ -534,7 +534,7 @@ Ocelot 的 ReRoute 层中的授权。   Ocelot 支持在进行身份验证后评
 
 但是，当面向基于 Kubernetes 的“生产”环境时，eShopOnContainers 会在 API 网关前使用入口。 这样一来，客户端仍可调用相同基 URL，但请求会路由到多个 API 网关或 BFF。
 
-请注意，API 网关只是呈现服务的前端或外观，Web 应用通常不在其呈现范围内。 此外，API 网关可能会隐藏某些内部微服务。
+API 网关只是呈现服务的前端或外观，Web 应用通常不在其呈现范围内。 此外，API 网关可能会隐藏某些内部微服务。
 
 然而，入口只重定向 HTTP 请求，而不会试图隐藏任何微服务或 Web 应用。
 

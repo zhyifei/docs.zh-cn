@@ -2,12 +2,12 @@
 title: WCF Web HTTP 编程模型概述
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 4862ae0e5151177e74da0f94d06b5b39205ed4c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8a4b4ff6c0482ed8a09fe30b7d03afc1f84db581
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283295"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739899"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 编程模型概述
 Windows Communication Foundation （WCF） WEB HTTP 编程模型提供了用 WCF 生成 WEB HTTP 服务所需的基本元素。 WCF WEB HTTP 服务旨在由最大范围的可能客户端（包括 Web 浏览器）访问，并且具有以下独特要求：  
@@ -43,15 +43,15 @@ Windows Communication Foundation （WCF） WEB HTTP 编程模型提供了用 WCF
   
  在此模板中，大括号表示法 ("{segment}") 指示变量段而不是文本值。  
   
- .NET Framework 提供了一个 API 来处理名为 <xref:System.UriTemplate> 的 URI 模板。 `UriTemplates` 允许你执行以下操作：  
+ .NET Framework 提供了一个 API 来处理名为 <xref:System.UriTemplate> 的 URI 模板。 `UriTemplates` 允许执行下列操作：  
   
 - 您可以使用一组参数调用 `Bind` 方法之一来生成与模板匹配的*完全关闭的 URI* 。 这意味着，URI 模板中的所有变量均由实际值替换。  
   
 - 可以使用候选 URI 调用 `Match`()，此时会使用模板将候选 URI 的各个组成部分分解开来，并会返回一个字典，其中包含根据模板中的变量标记的 URI 的不同部分。  
   
-- `Bind`（）和 `Match`（）都是逆的，以便您可以调用 `Match`（`Bind`（x））并返回到开始时所用的相同环境。  
+- `Bind`() 和 `Match`() 互为逆方法，因此可以调用 `Match`( `Bind`( x ) ) 并返回到开始时的相同环境。  
   
- 在很多时候（尤其是在服务器需要基于 URI 将请求调度到某个服务操作时），对于那些可以单独对包含的每个模板进行寻址的数据结构，您需要一直跟踪其中的一组 <xref:System.UriTemplate> 对象。 <xref:System.UriTemplateTable> 表示一组 URI 模板，并在给定一组模板和候选 URI 时选择最佳匹配项。 这并不隶属于任何特定的网络堆栈（包括 WCF），因此可以在必要时使用。  
+ 在很多时候（尤其是在服务器需要基于 URI 将请求调度到某个服务操作时），对于那些可以单独对包含的每个模板进行寻址的数据结构，您需要一直跟踪其中的一组 <xref:System.UriTemplate> 对象。 <xref:System.UriTemplateTable> 表示一组 URI 模板，并在给定的一组模板和候选 URI 中选择最匹配的项。 这并不隶属于任何特定的网络堆栈（包括 WCF），因此可以在必要时使用。  
   
  WCF 服务模型使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 将服务操作与由 <xref:System.UriTemplate> 描述的一组 URI 相关联。 通过使用 <xref:System.UriTemplate> 或 <xref:System.ServiceModel.Web.WebGetAttribute>，将服务操作与 <xref:System.ServiceModel.Web.WebInvokeAttribute> 相关联。 有关 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable>的详细信息，请参阅[UriTemplate 和 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
   
@@ -80,7 +80,7 @@ interface ICustomer
   
  `POST /UpdateCustomerName`  
   
- <xref:System.ServiceModel.Web.WebInvokeAttribute> 默认为 POST，但也可以将其用于其他谓词。  
+ <xref:System.ServiceModel.Web.WebInvokeAttribute> 的默认值为 POST，但也可以将其用于其他谓词。  
   
 ```csharp
 [ServiceContract]  
@@ -138,7 +138,8 @@ interface ICustomer
  .NET Framework 3.5 支持 JSON 数据（AJAX）和联合源（包括 ATOM 和 RSS）。 有关这些功能的详细信息，请参阅[Wcf WEB HTTP 格式设置](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[wcf 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)和[AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP 编程模型和安全  
- 由于 WCF WEB HTTP 编程模型不支持 WS-* 协议，因此保证 WCF WEB HTTP 服务安全的唯一方式是使用 SSL 通过 HTTPS 公开服务。 有关设置 SSL 和 IIS 7.0 的详细信息，请参阅[如何在 iis 中实现 ssl](https://go.microsoft.com/fwlink/?LinkId=131613)  
+
+由于 WCF WEB HTTP 编程模型不支持 WS-* 协议，因此保证 WCF WEB HTTP 服务安全的唯一方式是使用 SSL 通过 HTTPS 公开服务。 有关设置 SSL 和 IIS 7.0 的详细信息，请参阅[如何在 iis 中实现 ssl](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis)。
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP 编程模型疑难解答  
  当使用 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 调用 WCF WEB HTTP 服务以创建通道时，即使将其他 <xref:System.ServiceModel.Description.WebHttpBehavior> 传递给 <xref:System.ServiceModel.EndpointAddress>，<xref:System.ServiceModel.EndpointAddress> 也会使用配置文件中设置的 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>。  

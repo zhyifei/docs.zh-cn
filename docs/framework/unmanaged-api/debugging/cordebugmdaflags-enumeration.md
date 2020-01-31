@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7c0c92fe-8bd2-477f-b307-aca0143732ca
 topic_type:
 - apiref
-ms.openlocfilehash: c7af194351290ad937e40a2fc8b960c2c242629c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 34a66a8afa118ecaaaeea0b7b78daaadf1da7509
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132798"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778264"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>CorDebugMDAFlags 枚举
 指定在其上激发托管调试助手 (MDA) 的线程的状态。  
@@ -41,7 +41,7 @@ typedef enum CorDebugMDAFlags {
 ## <a name="remarks"></a>备注  
  当调用堆栈不再描述最初引发 MDA 的位置时，线程被视为已*落后*。 这是一个不寻常的情况，导致在退出时线程执行无效操作的情况。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -50,6 +50,6 @@ typedef enum CorDebugMDAFlags {
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [调试枚举](debugging-enumerations.md)

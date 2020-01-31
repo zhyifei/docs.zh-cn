@@ -1,42 +1,42 @@
 ---
-title: Windows 窗体 DataGridView 控件中的性能优化
+title: DataGridView 控件中的性能优化
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], performance tuning
 - performance [Windows Forms], DataGridView control
 - performance tuning [Windows Forms], data grids
 ms.assetid: 6ccbff28-a0ff-41e4-b601-61b31b61851d
-ms.openlocfilehash: 79f74db4ebd095156207a6218f59c0e9ae423085
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77ad86c4cd606bcf074473c97371ec27bcc5605b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012641"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744274"
 ---
 # <a name="performance-tuning-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的性能优化
-当使用大量的数据，`DataGridView`控件可以消耗大量的内存开销，除非谨慎使用。 在内存有限的客户端，可以避免此开销的一些通过避免具有高内存成本的功能。 你还可以管理部分或全部数据维护和检索任务自己使用的虚拟模式以自定义你的方案的内存使用情况。  
+处理大量数据时，`DataGridView` 控件可能会消耗大量内存，除非你小心使用。 在内存有限的客户端上，你可以通过避免使用具有较高内存成本的功能来避免一些开销。 你还可以使用虚拟模式自行管理部分或全部数据维护和检索任务，以便为你的方案自定义内存使用量。  
   
 ## <a name="in-this-section"></a>本节内容  
  [有关缩放 Windows 窗体 DataGridView 控件的最佳做法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
- 介绍如何使用`DataGridView`中来避免不必要的内存使用情况和性能损失，处理大量数据时的控件。  
+ 介绍如何在处理大量数据时，以避免不必要的内存使用情况和性能损失的方式使用 `DataGridView` 控件。  
   
  [Windows 窗体 DataGridView 控件中的虚拟模式](virtual-mode-in-the-windows-forms-datagridview-control.md)  
- 介绍如何使用虚拟模式下以补充或替代标准的数据绑定机制。  
+ 介绍如何使用虚拟模式来补充或替换标准的数据绑定机制。  
   
  [演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式](implementing-virtual-mode-wf-datagridview-control.md)  
- 介绍如何实现虚拟模式下的多个事件的处理程序。 此外演示了如何实现行级回滚和提交用户编辑。  
+ 描述如何为多个虚拟模式事件实现处理程序。 还演示如何实现行级回滚和提交以进行用户编辑。  
   
  [在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
- 介绍如何加载数据按需、 具有更多可显示与可用的客户端内存可以存储数据时非常有用。  
+ 描述如何按需加载数据，当要显示的数据多于可用客户端内存可以存储的数据时，这非常有用。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Windows.Forms.DataGridView>  
  提供关于 <xref:System.Windows.Forms.DataGridView> 控件的参考文档。  
   
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
- 为提供参考文档<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性。  
+ 提供 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 属性的参考文档。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [DataGridView 控件](datagridview-control-windows-forms.md)
 - [Windows 窗体 DataGridView 控件中的数据显示模式](data-display-modes-in-the-windows-forms-datagridview-control.md)

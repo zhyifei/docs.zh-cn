@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c2ff5d8-8c04-4423-b1e1-e1c8764b36d3
 topic_type:
 - apiref
-ms.openlocfilehash: 77cda2c3d30b5926da219a38b762295818ca54a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dc03365b72a5f3613402faf1aed44b5683e9892c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121199"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777837"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset 方法
 对于指定的 IL 偏移量，获取应放置断点的本机偏移量，以便调试器可以从函数中获取返回值。  
@@ -52,10 +52,10 @@ HRESULT GetReturnValueLiveOffset(
  本机偏移量的数组。 通常，`pOffsets` 包含单个偏移量，但单个 IL 指令可以映射到多个映射到多个 `CALL` 的程序集指令。  
   
 ## <a name="remarks"></a>备注  
- 此方法与[ICorDebugILFrame3：： GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法一起使用，以获取返回引用类型的方法的返回值。 如果将 IL 偏移量传递给函数调用站点，此方法将返回一个或多个本机偏移量。 然后，调试器可以在函数中的这些本机偏移量上设置断点。 当调试器遇到其中一个断点时，可以将传递给此方法的同一 IL 偏移传递给[ICorDebugILFrame3：： GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法以获取返回值。 调试器随后应清除它所设置的所有断点。  
+ 此方法与[ICorDebugILFrame3：： GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md)方法一起使用，以获取返回引用类型的方法的返回值。 如果将 IL 偏移量传递给函数调用站点，此方法将返回一个或多个本机偏移量。 然后，调试器可以在函数中的这些本机偏移量上设置断点。 当调试器遇到其中一个断点时，可以将传递给此方法的同一 IL 偏移传递给[ICorDebugILFrame3：： GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md)方法以获取返回值。 调试器随后应清除它所设置的所有断点。  
   
 > [!WARNING]
-> `ICorDebugCode3::GetReturnValueLiveOffset` 和[ICorDebugILFrame3：： GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法只允许获取引用类型的返回值信息。 不支持从值类型（即从 <xref:System.ValueType>派生的所有类型）检索返回值信息。  
+> `ICorDebugCode3::GetReturnValueLiveOffset` 和[ICorDebugILFrame3：： GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md)方法只允许获取引用类型的返回值信息。 不支持从值类型（即从 <xref:System.ValueType>派生的所有类型）检索返回值信息。  
   
  函数将返回下表中显示的 `HRESULT` 值。  
   
@@ -67,7 +67,7 @@ HRESULT GetReturnValueLiveOffset(
   
  `ICorDebugCode3::GetReturnValueLiveOffset` 方法仅适用于基于 x86 的和 AMD64 系统。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -76,7 +76,7 @@ HRESULT GetReturnValueLiveOffset(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [GetReturnValueForILOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)
-- [ICorDebugCode3 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
+- [GetReturnValueForILOffset 方法](icordebugilframe3-getreturnvalueforiloffset-method.md)
+- [ICorDebugCode3 接口](icordebugcode3-interface.md)

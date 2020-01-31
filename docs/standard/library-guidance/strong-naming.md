@@ -2,12 +2,12 @@
 title: 强命名和 .NET 库
 description: 强命名 .NET 库的最佳实践建议。
 ms.date: 10/16/2018
-ms.openlocfilehash: 0c2dba06413bc6435e3350bf6cc48f1b5882a261
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: db268093b07a2ece7cdb8329fd789b52da9c5c32
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706421"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744532"
 ---
 # <a name="strong-naming"></a>强命名
 
@@ -45,26 +45,26 @@ ms.locfileid: "75706421"
 > [!NOTE]
 > 本指南特定于公开分布的 .NET 库，如 NuGet.org 上发布的 .NET 库。强命名不是大多数 .NET 应用程序所必需的，默认情况下不得执行强命名。
 
- ✔️请考虑强命名库的程序集。
+✔️ 请考虑强命名库的程序集。
 
- ✔️请考虑将强命名密钥添加到源代码管理系统。
+✔️ 请考虑将强命名密钥添加到源代码管理系统。
 
 > 公开提供的密钥可让开发人员修改库源代码并使用相同的密钥进行重新编译。
-> 
+>
 > 如果强命名密钥过去用于在[部分信任的方案](../../framework/misc/using-libraries-from-partially-trusted-code.md)中授予特殊权限，则不得公开该强命名密钥。 或者，可能会破坏现有环境。
 
 > [!IMPORTANT]
 > 需要了解代码发布者的身份时，建议使用[验证码](/windows-hardware/drivers/install/authenticode)和 [NuGet 包签名](/nuget/create-packages/sign-a-package)。 代码访问安全性 (CAS) 不得用作安全缓解。
 
- ✔️请考虑仅在主版本发生更改时递增程序集版本，以帮助用户减少绑定重定向和更新频率。
+✔️ 请考虑仅在主版本发生更改时递增程序集版本，以帮助用户减少绑定重定向和更新频率。
 
 > 详细了解[版本控制和程序集版本](./versioning.md#assembly-version)。
 
- ❌ 请勿添加、删除或更改强命名密钥。
+❌ 请勿添加、删除或更改强命名密钥。
 
 > 修改程序集的强命名密钥会更改程序集的标识并破坏使用该标识的已编译代码。 有关详细信息，请参阅[二进制重大更改](./breaking-changes.md#binary-breaking-change)。
 
- ❌ 请勿发布库的强名称或非强名称版本。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
+❌ 请勿发布库的强名称和非强名称版本。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
 
 > 发布两个包会为开发人员生态系统创建分支。 此外，如果应用程序依赖于这两个包，则开发人员可能会遇到类型名称冲突。 就 .NET 而言，它们是不同程序集中的不同类型。
 

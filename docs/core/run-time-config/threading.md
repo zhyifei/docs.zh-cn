@@ -3,12 +3,12 @@ title: 线程配置设置
 description: 了解为 .NET Core 应用配置线程的运行时设置。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 6a920dbc301830e3f4c95bf637ff3de6d4f464ff
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ed7688d4d8f7178440fe59afc6e2f5e0a11b2a5c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74998827"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733431"
 ---
 # <a name="run-time-configuration-options-for-threading"></a>用于线程的运行时配置选项
 
@@ -30,7 +30,34 @@ ms.locfileid: "74998827"
 | | 设置名 | 值 |
 | - | - | - |
 | **runtimeconfig.json** | `System.Threading.ThreadPool.MinThreads` | 一个表示最小线程数的整数 |
+| MSBuild 属性  | `ThreadPoolMinThreads` | 一个表示最小线程数的整数 |
 | **环境变量** | 不可用 | 不可用 |
+
+### <a name="examples"></a>示例
+
+runtimeconfig.json 文件： 
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.Threading.ThreadPool.MinThreads": 4
+      }
+   }
+}
+```
+
+项目文件：
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ThreadPoolMinThreads>4</ThreadPoolMinThreads>
+  </PropertyGroup>
+
+</Project>
+```
 
 ## <a name="maximum-threads"></a>最大线程数
 
@@ -40,4 +67,31 @@ ms.locfileid: "74998827"
 | | 设置名 | 值 |
 | - | - | - |
 | **runtimeconfig.json** | `System.Threading.ThreadPool.MaxThreads` | 一个表示最大线程数的整数 |
+| MSBuild 属性  | `ThreadPoolMaxThreads` | 一个表示最大线程数的整数 |
 | **环境变量** | 不可用 | 不可用 |
+
+### <a name="examples"></a>示例
+
+runtimeconfig.json 文件： 
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.Threading.ThreadPool.MaxThreads": 20
+      }
+   }
+}
+```
+
+项目文件：
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ThreadPoolMaxThreads>20</ThreadPoolMaxThreads>
+  </PropertyGroup>
+
+</Project>
+```

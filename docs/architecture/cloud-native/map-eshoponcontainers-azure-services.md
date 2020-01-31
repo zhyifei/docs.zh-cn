@@ -2,12 +2,12 @@
 title: 将 eShopOnContainers 映射到 Azure 服务
 description: 将 eShopOnContainers 映射到 azure 服务，如 Azure Kubernetes 服务、API 网关和 Azure 服务总线。
 ms.date: 06/30/2019
-ms.openlocfilehash: 67430da18c0a12c694426214de33e85c2113e454
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: eb37be94461a5373afe328572a94892dec50432d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "73841191"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781218"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>将 eShopOnContainers 映射到 Azure 服务
 
@@ -54,7 +54,7 @@ EShopOnContainers 应用程序在请求之间存储用户的当前购物篮。 �
 
 位置微服务将 MongoDB NoSQL 数据库用于持久性。 在开发过程中，可以将数据库部署在其自己的容器中，而在生产环境中，服务可以利用[Azure Cosmos DB 的 API For MongoDB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)。 Azure Cosmos DB 的优点之一是能够利用多种不同的通信协议，其中包括 SQL API 和常见 NoSQL Api，包括 MongoDB、Cassandra、Gremlin 和 Azure 表存储。 Azure Cosmos DB 提供了一种完全托管的全球分布式数据库作为一种服务，可进行缩放以满足使用它的服务的需要。
 
-[第5章](distributed-data.md)更详细地介绍了云中的分布式数据。
+[第5章](database-per-microservice.md)更详细地介绍了云中的分布式数据。
 
 ## <a name="event-bus"></a>事件总线
 
@@ -64,7 +64,7 @@ EShopOnContainers 应用程序在请求之间存储用户的当前购物篮。 �
 
 在部署到生产环境后，eShopOnContainers 应用程序将能够利用几项 Azure 服务来改善其复原能力。 应用程序发布运行状况检查，这些检查可与 Application Insights 集成，以根据应用程序的可用性提供报告和警报。 Azure 资源还提供可用于识别和更正 bug 和性能问题的诊断日志。 资源日志提供有关应用程序使用不同 Azure 资源的时间和方式的详细信息。 你将在[第6章](resiliency.md)了解有关云本机复原功能的详细信息。
 
-## <a name="references"></a>参考
+## <a name="references"></a>引用
 
 - [EShopOnContainers 体系结构](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
 - [安排微服务和多容器应用的业务流程，以实现高可伸缩性和高可用性](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)

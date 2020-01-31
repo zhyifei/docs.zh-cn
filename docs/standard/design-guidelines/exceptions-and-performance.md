@@ -1,5 +1,5 @@
 ---
-title: 异常和性能
+title: 예외 및 성능
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-ms.openlocfilehash: e3a7fa0f284ebf028a18cae37c050d7ceda9bb79
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: afa4e748599781a5979823320d8913ff5357d415
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709382"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741642"
 ---
-# <a name="exceptions-and-performance"></a>异常和性能
+# <a name="exceptions-and-performance"></a>예외 및 성능
 一个常见的与异常相关的问题是，如果异常用于通常会失败的代码，则实现的性能将变得不可接受。 这确实是一个问题。 当成员引发异常时，其性能可能会慢几个数量级。 但是，在严格遵守禁止使用错误代码的异常准则的同时，仍可能实现良好的性能。 本部分中描述了两种建议的模式。
 
- **X DO NOT** 由于异常可能会对性能产生负面影响的问题，因此使用错误代码。
+ ❌ 不使用错误代码，原因是异常可能会对性能产生负面影响。
 
  为了提高性能，可以使用 Tester-Doer 模式或 Try-Parse 模式，如以下两部分所述。
 
@@ -44,7 +44,7 @@ if (!numbers.IsReadOnly)
 
  用于测试条件的成员（在我们的示例中是属性 `IsReadOnly` ）被称为 tester。 用于执行潜在引发操作的成员（在我们的示例中为 `Add` 方法）称为doer。
 
- **✓ CONSIDER** 可能会引发异常的成员 Tester-doer 模式在常见方案以避免性能问题与异常相关。
+ ✔️考虑在常见方案中可能会引发异常的成员的 Doer 模式，以避免与异常相关的性能问题。
 
 ## <a name="try-parse-pattern"></a>Try-Parse 模式
  对于性能极其敏感的 API，应使用比上一部分中介绍的 Tester-Doer 模式更快的模式。 该模式要求调整成员名称，以使明确定义的测试用例成为成员语义的一部分。 例如，<xref:System.DateTime> 定义了一个 <xref:System.DateTime.Parse%2A> 方法，如果解析字符串失败，则该方法会引发异常。 它还定义了一个相应的尝试进行解析的 <xref:System.DateTime.TryParse%2A> 方法，如果解析不成功则返回 false，并使用 `out` 参数返回成功解析的结果。
@@ -65,17 +65,17 @@ public struct DateTime
 
  使用此模式时，务必要严格定义 try 功能。 如果在已妥善定义 try 的情况下，成员仍因某个原因失败，则该成员仍必须引发相应异常。
 
- **✓ CONSIDER** 可能会引发异常的成员尝试分析模式在常见方案以避免性能问题与异常相关。
+ ✔️考虑在常见方案中可能会引发异常的成员的试验分析模式，以避免与异常相关的性能问题。
 
- **✓ DO** 方法实现此模式中使用前缀"Try"和布尔值返回的类型。
+ ✔️对实现此模式的方法使用前缀 "Try" 和 Boolean 返回类型。
 
- **✓ DO** 每个成员使用 Try 分析模式提供的异常引发的成员。
+ ✔️使用 Try Parse 模式为每个成员提供异常引发成员。
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。
+ *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
 ## <a name="see-also"></a>另请参阅
 
-- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
-- [异常的设计准则](../../../docs/standard/design-guidelines/exceptions.md)
+- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
+- [예외 디자인 지침](../../../docs/standard/design-guidelines/exceptions.md)

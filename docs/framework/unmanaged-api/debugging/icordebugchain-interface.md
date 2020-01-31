@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f671f519-1cb3-4ae5-b9f1-abc5e783459f
 topic_type:
 - apiref
-ms.openlocfilehash: 8baf3567e4ae188f88ad3a2df157cffab3f597ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f4bacfe94178ea78b1c3afd15a2e100076c38a84
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125798"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777985"
 ---
 # <a name="icordebugchain-interface"></a>ICorDebugChain 接口
 
@@ -29,18 +29,18 @@ ms.locfileid: "73125798"
   
 |方法|描述|  
 |------------|-----------------|  
-|[EnumerateFrames 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-enumerateframes-method.md)|获取一个枚举数，该枚举数包含链中所有托管堆栈帧（从最新帧开始）。|  
-|[GetActiveFrame 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getactiveframe-method.md)|获取链上的活动（即最近的）帧。|  
-|[GetCallee 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcallee-method.md)|获取此链调用的链。|  
-|[GetCaller 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcaller-method.md)|获取调用此链的链。|  
-|[GetContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcontext-method.md)|未实现。|  
-|[GetNext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getnext-method.md)|获取线程的下一个帧链。|  
-|[GetPrevious 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getprevious-method.md)|获取线程的上一个帧链。|  
-|[GetReason 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md)|获取此调用链的 genesis 的原因。|  
-|[GetRegisterSet 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getregisterset-method.md)|获取此链的活动部分的寄存器集。|  
-|[GetStackRange 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getstackrange-method.md)|获取此链的堆栈段的地址范围。|  
-|[GetThread 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getthread-method.md)|获取此调用链所属的物理线程。|  
-|[IsManaged 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-ismanaged-method.md)|获取一个值，该值指示此链是否正在运行托管代码。|  
+|[EnumerateFrames 方法](icordebugchain-enumerateframes-method.md)|获取一个枚举数，该枚举数包含链中所有托管堆栈帧（从最新帧开始）。|  
+|[GetActiveFrame 方法](icordebugchain-getactiveframe-method.md)|获取链上的活动（即最近的）帧。|  
+|[GetCallee 方法](icordebugchain-getcallee-method.md)|获取此链调用的链。|  
+|[GetCaller 方法](icordebugchain-getcaller-method.md)|获取调用此链的链。|  
+|[GetContext 方法](icordebugchain-getcontext-method.md)|未实现。|  
+|[GetNext 方法](icordebugchain-getnext-method.md)|获取线程的下一个帧链。|  
+|[GetPrevious 方法](icordebugchain-getprevious-method.md)|获取线程的上一个帧链。|  
+|[GetReason 方法](icordebugchain-getreason-method.md)|获取此调用链的 genesis 的原因。|  
+|[GetRegisterSet 方法](icordebugchain-getregisterset-method.md)|获取此链的活动部分的寄存器集。|  
+|[GetStackRange 方法](icordebugchain-getstackrange-method.md)|获取此链的堆栈段的地址范围。|  
+|[GetThread 方法](icordebugchain-getthread-method.md)|获取此调用链所属的物理线程。|  
+|[IsManaged 方法](icordebugchain-ismanaged-method.md)|获取一个值，该值指示此链是否正在运行托管代码。|  
   
 ## <a name="remarks"></a>备注  
  链中的堆栈帧占用连续堆栈空间并共享相同的线程和上下文。 链可以表示托管或非托管代码链。 空的 `ICorDebugChain` 实例表示非托管代码链。  
@@ -48,7 +48,7 @@ ms.locfileid: "73125798"
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -57,6 +57,6 @@ ms.locfileid: "73125798"
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试接口](debugging-interfaces.md)

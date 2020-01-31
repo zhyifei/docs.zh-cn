@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 532e9dfd-d114-4c75-b952-1accce102643
 topic_type:
 - apiref
-ms.openlocfilehash: d948fda048e724ad11c59bf7d4776ee2ca6c8d58
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4ad1fb1bcb43dda9796b54cbf868f89c001995da
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125545"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777902"
 ---
 # <a name="icordebugcode2getcompilerflags-method"></a>ICorDebugCode2::GetCompilerFlags 方法
 
@@ -37,9 +37,9 @@ HRESULT GetCompilerFlags (
 ## <a name="parameters"></a>参数
 
 `pdwFlags`  
-弄指向[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)枚举的值的指针，该枚举指定 JIT 编译器或本机图像生成器的行为。
+弄指向[CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md)枚举的值的指针，该枚举指定 JIT 编译器或本机图像生成器的行为。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 

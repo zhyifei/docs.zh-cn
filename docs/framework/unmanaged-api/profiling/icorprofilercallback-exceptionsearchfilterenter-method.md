@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: acc239ce-3eef-418c-b1df-c5a6dd8e8a4c
 topic_type:
 - apiref
-ms.openlocfilehash: 65765795c13948175a7eb5bd78843968d55953d8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 96ca2b926217ced6c88f8890f0facc7346fe10c7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445381"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790143"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a>ICorProfilerCallback::ExceptionSearchFilterEnter 方法
 通知探查器异常处理的搜索阶段已开始执行用户定义的异常筛选器。  
@@ -32,11 +32,13 @@ HRESULT ExceptionSearchFilterEnter(
     [in] FunctionID functionId);  
 ```  
   
-## <a name="parameters"></a>参数  
- `functionId`  
- 中包含筛选器的函数的 ID。  
-  
-## <a name="requirements"></a>要求  
+## <a name="parameters"></a>参数
+
+- `functionId`
+
+  \[中] 包含筛选器的函数的 ID。
+
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  

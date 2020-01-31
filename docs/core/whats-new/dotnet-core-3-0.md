@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: eb1815f965e86a6f8f709b32f84f879eb03de447
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 4bf1c4826273535bfe824828f0fad96998b29483
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115786"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742600"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新增功能
 
@@ -112,20 +112,20 @@ dotnet publish -r <rid> -c Release
 
 ### <a name="tiered-compilation"></a>分层编译
 
-.NET Core 3.0 中默认启用了[分层编译](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC)。 此功能使运行时能够更适应地使用实时 (JIT) 编译器来获得更好的性能。
+.NET Core 3.0 中默认启用了[分层编译](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) (TC)。 此功能使运行时能够更适应地使用实时 (JIT) 编译器来实现更好的性能。
 
-TC 的主要优势是使（重新）实时编译方法能够要么牺牲代码质量以更快地生成代码，要么以较慢的速度生成更高质量的代码。 这有助于提高应用程序在从启动到稳定状态的各个执行阶段的性能。 这与非 TC 方法完全不同，其中每种方法均以单一方式进行编译（与高质量层相同），这种方法偏向于稳定状态而不是启动性能。
+分层编译的主要优势是提供两种实现实时的方法，可在低质量快速层或高质量慢速层中编译。 质量是指方法的优化程度。 这有助于提高应用程序在从启动到稳定状态的各个执行阶段的性能。 禁用分层编译后，每种方法都以同一种方式进行编译，这种方式倾向于牺牲启动性能来保证稳定状态性能。
 
-启用 TC 后，在启动调用的方法期间：
+启用 TC 后，以下行为适用于应用启动时的方法编译：
 
-- 如果该方法具有 AOT 编译的代码 (ReadyToRun)，将使用预生成的代码。
-- 否则，将实时编译该方法。 一般来说，这些方法目前是值类型的泛型。
-  - 快速 JIT 可以更快地生成较低质量的代码。 在 .NET Core 3.0 中默认为不包含循环的方法启用了快速 JIT，并且该方法在启动过程中作为首选方法。
-  - 完全优化的 JIT 可生成更高质量的代码，但速度更慢。 对于不使用快速 JIT 的方法（例如，如果该方法具有 `[MethodImpl(MethodImplOptions.AggressiveOptimization)]` 特性），则使用完全优化的 JIT。
+- 如果方法具有预先编译的代码 ([ReadyToRun](#readytorun-images))，将使用预生成的代码。
+- 否则，将实时编译该方法。 一般来说，这些方法是泛型而不是值类型。
+  -  快速 JIT 可以更快地生成较低质量（优化程度较低）的代码。 在 .NET Core 3.0 中，默认为不包含循环的方法启用了快速 JIT，并且启动过程中首选快速 JIT。
+  - 完全优化的 JIT 可生成更高质量（优化程度更高）的代码，但速度更慢。 对于不使用快速 JIT 的方法（例如，如果该方法具有 <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType> 特性），则使用完全优化的 JIT。
 
-在调用方法数次后，最终将使用完全优化的 JIT 在后台重新实时编译这些方法。
+对于频繁调用的方法，实时编译器最终会在后台创建完全优化的代码。 然后，优化后的代码将替换该方法的预编译代码。
 
-通过快速 JIT 生成的代码可能会运行较慢、分配更多内存或使用更多堆栈空间。 如果出现问题，可以使用项目文件中的此设置禁用快速 JIT：
+通过快速 JIT 生成的代码可能会运行较慢、分配更多内存或使用更多堆栈空间。 如果出现问题，可以在项目文件中使用此 MSBuild 属性禁用快速 JIT：
 
 ```xml
 <PropertyGroup>
@@ -133,7 +133,7 @@ TC 的主要优势是使（重新）实时编译方法能够要么牺牲代码�
 </PropertyGroup>
 ```
 
-若要完全禁用 TC，请在项目文件中使用此设置：
+若要完全禁用 TC，请在项目文件中使用此 MSBuild 属性：
 
 ```xml
 <PropertyGroup>
@@ -141,7 +141,10 @@ TC 的主要优势是使（重新）实时编译方法能够要么牺牲代码�
 </PropertyGroup>
 ```
 
-对项目文件中的上述设置所做的任何更改都可能需要反映清理生成（删除 `obj` 和 `bin` 目录并重新生成）。
+> [!TIP]
+> 如果在项目文件中更改这些设置，则可能需要执行干净的生成以反映新的设置（删除 `obj` 和 `bin` 目录并重新生成）。
+
+有关在运行时配置编译的详细信息，请参阅[用于编译的运行时配置选项](../run-time-config/compilation.md)。
 
 ### <a name="readytorun-images"></a>ReadyToRun 映像
 

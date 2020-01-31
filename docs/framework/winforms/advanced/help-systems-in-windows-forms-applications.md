@@ -1,5 +1,5 @@
 ---
-title: Windows 窗体应用程序中的帮助系统
+title: 帮助系统
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Help [Windows Forms], adding to Windows applications
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Help [Windows Forms], Windows Forms
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
-ms.openlocfilehash: 1a02271d59a59f0a6e06a652a34922ba5dcdf1f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c97a22dbdbdcc0eb282b52e16c4ef40914b1d9e7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937938"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742243"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Windows 窗体应用程序中的帮助系统
-其中一个最重要的礼物，如的应用程序，开发人员可以为用户提供的功能完善的帮助系统。 这是他们将在这里打开时它们迷惑不解。 提供在基于 Windows 的应用程序的帮助系统轻松可通过使用[HelpProvider 组件](../controls/helpprovider-component-windows-forms.md)。  
+作为应用程序开发人员，作为应用程序开发人员，最重要的礼节之一就是提供有帮助的帮助系统。 在这种情况下，它们会在出现混乱或 disoriented 的情况下打开。 使用[HelpProvider 组件](../controls/helpprovider-component-windows-forms.md)，可以轻松地在基于 Windows 的应用程序中提供帮助系统。  
   
 ## <a name="different-types-of-help"></a>不同类型的帮助  
- Windows 窗体 <xref:System.Windows.Forms.HelpProvider> 组件用于将基于 Windows 的应用程序与 HTML Help 1.x 帮助文件（HTML Help Workshop 生成的 .chm 文件，或 .htm 文件）关联。 <xref:System.Windows.Forms.HelpProvider>组件可用于为 Windows 窗体上的控件或特定的控件提供上下文相关帮助。 此外，<xref:System.Windows.Forms.HelpProvider>组件可以打开帮助文件的特定区域，如表的内容、 索引或搜索功能的主页。 有关常规信息<xref:System.Windows.Forms.HelpProvider>组件，请参阅[HelpProvider 组件概述](../controls/helpprovider-component-overview-windows-forms.md)。 有关如何使用信息<xref:System.Windows.Forms.HelpProvider>组件在 Windows 窗体上显示弹出帮助，请参阅[如何：显示弹出帮助](how-to-display-pop-up-help.md)。 有关使用信息<xref:System.Windows.Forms.ToolTip>组件来显示特定于控件的帮助，请参阅[控制帮助使用工具提示](control-help-using-tooltips.md)。  
+ Windows 窗体 <xref:System.Windows.Forms.HelpProvider> 组件用于将基于 Windows 的应用程序与 HTML Help 1.x 帮助文件（HTML Help Workshop 生成的 .chm 文件，或 .htm 文件）关联。 <xref:System.Windows.Forms.HelpProvider> 组件可用于为 Windows 窗体或特定控件上的控件提供区分上下文的帮助。 此外，<xref:System.Windows.Forms.HelpProvider> 组件可以将帮助文件打开到特定区域，如目录的主页、索引或搜索函数。 有关 <xref:System.Windows.Forms.HelpProvider> 组件的常规信息，请参阅[HelpProvider 组件概述](../controls/helpprovider-component-overview-windows-forms.md)。 有关如何使用 <xref:System.Windows.Forms.HelpProvider> 组件显示有关 Windows 窗体的弹出帮助的信息，请参阅[如何：显示弹出帮助](how-to-display-pop-up-help.md)。 有关使用 <xref:System.Windows.Forms.ToolTip> 组件显示特定于控件的帮助的信息，请参阅[使用工具提示的控件帮助](control-help-using-tooltips.md)。  
   
- 你可以生成与 HTML Help Workshop HTML Help 1.x 文件。 HTML 帮助的详细信息，请参阅"HTML Help Workshop"或在 MSDN 中的其他"HTML Help"主题。  
+ 可以通过 HTML 帮助讨论会生成 HTML Help 1.x 文件。 有关 HTML 帮助的详细信息，请参阅 MSDN 中的 "HTML 帮助讨论会" 或其他 "HTML 帮助" 主题。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Windows 窗体中集成用户帮助](integrating-user-help-in-windows-forms.md)
 - [HelpProvider 组件](../controls/helpprovider-component-windows-forms.md)

@@ -2,22 +2,22 @@
 title: dotnet build-server 命令
 description: dotnet build-server 命令与通过生成启动的服务器进行交互。
 ms.date: 04/24/2019
-ms.openlocfilehash: 1c6c6dcdb53d779426daf5daa470d2ad0470a7a1
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: e77a4d9f49f555ac847bb13380380599eef881b1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523010"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734375"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 
-**本文适用于：✓** .NET Core 2.1 SDK 及更高版本
+ 本文适用于： ✔️ .NET Core 2.1 SDK 及更高版本
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-21plus](../../../includes/topic-appliesto-net-core-21plus.md)]
 -->
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet build-server` -与通过生成启动的服务器进行交互。
 

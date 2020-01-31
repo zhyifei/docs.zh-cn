@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdda4bd7-4743-4d58-a22b-8067e967db95
 topic_type:
 - apiref
-ms.openlocfilehash: 1190f83e2671216cf1627eeb710ba576e4b2ec93
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: be7fce700756d7120e0853446b7b307ec77c2080
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125357"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783763"
 ---
 # <a name="icordebugcontrollersetallthreadsdebugstate-method"></a>ICorDebugController::SetAllThreadsDebugState 方法
 设置进程中所有托管线程的调试状态。  
@@ -42,9 +42,9 @@ HRESULT SetAllThreadsDebugState (
  中一个指向 "ICorDebugThread" 对象的指针，该对象表示要从调试状态设置中免除的线程。 如果此值为 null，则不免除任何线程。  
   
 ## <a name="remarks"></a>备注  
- `SetAllThreadsDebugState` 方法可能会影响通过[EnumerateThreads 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md)不可见的线程，因此，将需要通过 `SetAllThreadsDebugState` 方法恢复用 `SetAllThreadsDebugState` 方法挂起的线程。  
+ `SetAllThreadsDebugState` 方法可能会影响通过[EnumerateThreads 方法](icordebugcontroller-enumeratethreads-method.md)不可见的线程，因此，将需要通过 `SetAllThreadsDebugState` 方法恢复用 `SetAllThreadsDebugState` 方法挂起的线程。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -53,4 +53,4 @@ HRESULT SetAllThreadsDebugState (
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅

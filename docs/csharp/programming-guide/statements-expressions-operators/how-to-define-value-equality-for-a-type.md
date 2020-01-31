@@ -8,16 +8,18 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 5eb1aaf96097d2c00cb04e24e65e01464f5f00c6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c911dc1d0aa36ab8e57fb8a77a52d9cec20743c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711969"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745390"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>如何为类型定义值相等性（C# 编程指南）
 
-定义类或结构时，需确定为类型创建值相等性（或等效性）的自定义定义是否有意义。 通常，类型的对象预期要添加到某类集合时，或者这些对象主要用于存储一组字段或属性时，需实现值相等性。 可以基于类型中所有字段和属性的比较结果来定义值相等性，也可以基于子集进行定义。 但在任何一种情况下，类和结构中的实现均应遵循 5 个等效性保证条件：  
+定义类或结构时，需确定为类型创建值相等性（或等效性）的自定义定义是否有意义。 通常，类型的对象预期要添加到某类集合时，或者这些对象主要用于存储一组字段或属性时，需实现值相等性。 可以基于类型中所有字段和属性的比较结果来定义值相等性，也可以基于子集进行定义。 
+
+在任何一种情况下，类和结构中的实现均应遵循 5 个等效性保证条件（对于以下规则，假设 `x`、`y` 和 `z` 都不为 null）：  
   
 1. `x.Equals(x)` 返回 `true`。 这称为自反属性。  
   
@@ -27,8 +29,8 @@ ms.locfileid: "75711969"
   
 4. 只要未修改 x 和 y 引用的对象，`x.Equals(y)` 的连续调用将返回相同的值。  
   
-5. `x.Equals(null)` 返回 `false`。 但是，`null.Equals(null)` 会引发异常；它未遵循上面的第二条规则。  
-  
+5. 任何非 null 值均不等于 null。 但是，CLR 会在所有方法调用上检查 null，如果 `this` 引用为 null，则会引发 `NullReferenceException`。 因此，当 `x` 为 null 时，`x.Equals(y)` 将引发异常。 这会违反规则 1 或 2，具体取决于 `Equals` 的参数。
+ 
  定义的任何结构都已具有其从 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法的 <xref:System.ValueType?displayProperty=nameWithType> 替代中继承的值相等性的默认实现。 此实现使用反射来检查类型中的所有字段和属性。 尽管此实现可生成正确的结果，但与专门为类型编写的自定义实现相比，它的速度相对较慢。  
   
  类和结构的值相等性的实现详细信息有所不同。 但是，类和结构都需要相同的基础步骤来实现相等性：  

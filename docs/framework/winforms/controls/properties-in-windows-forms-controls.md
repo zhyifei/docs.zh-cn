@@ -1,20 +1,20 @@
 ---
-title: Windows 窗体控件中的属性
+title: 控件的属性
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [Windows Forms], properties overview (using code)
 - controls [Windows Forms], properties
 - properties [Windows Forms]
 ms.assetid: 2785279b-fb57-4937-8f6b-2050e475db6f
-ms.openlocfilehash: e531b80cffabb94d2589383936a425b740c9cc07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82bfab15cef4946661a37d2d88fbe1b797f3d816
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012498"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741179"
 ---
 # <a name="properties-in-windows-forms-controls"></a>Windows 窗体控件中的属性
-Windows 窗体控件继承许多属性窗体的基类<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。 这些包括属性如下所述<xref:System.Windows.Forms.Control.Font%2A>， <xref:System.Windows.Forms.Control.ForeColor%2A>， <xref:System.Windows.Forms.Control.BackColor%2A>， <xref:System.Windows.Forms.Control.Bounds%2A>， <xref:System.Windows.Forms.Control.ClientRectangle%2A>， <xref:System.Windows.Forms.Control.DisplayRectangle%2A>， <xref:System.Windows.Forms.Control.Enabled%2A>， <xref:System.Windows.Forms.Control.Focused%2A>， <xref:System.Windows.Forms.Control.Height%2A>， <xref:System.Windows.Forms.Control.Width%2A>， <xref:System.Windows.Forms.Control.Visible%2A>， <xref:System.Windows.Forms.Control.AutoSize%2A>，以及许多其他。 有关继承的属性的详细信息，请参阅<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。  
+Windows 窗体控件将继承基类 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>中的许多属性。 其中包括诸如 <xref:System.Windows.Forms.Control.Font%2A>、<xref:System.Windows.Forms.Control.ForeColor%2A>、<xref:System.Windows.Forms.Control.BackColor%2A>、<xref:System.Windows.Forms.Control.Bounds%2A>、<xref:System.Windows.Forms.Control.ClientRectangle%2A>、<xref:System.Windows.Forms.Control.DisplayRectangle%2A>、<xref:System.Windows.Forms.Control.Enabled%2A>、<xref:System.Windows.Forms.Control.Focused%2A>、<xref:System.Windows.Forms.Control.Height%2A>、<xref:System.Windows.Forms.Control.Width%2A>、<xref:System.Windows.Forms.Control.Visible%2A>、<xref:System.Windows.Forms.Control.AutoSize%2A>和其他许多属性。 有关继承的属性的详细信息，请参阅 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>。  
   
  可以在控件中重写继承的属性和定义新属性。  
   
@@ -34,15 +34,15 @@ Windows 窗体控件继承许多属性窗体的基类<xref:System.Windows.Forms.
  [自定义控件中的方法实现](method-implementation-in-custom-controls.md)  
  介绍如何在自定义控件和组件中实现方法。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Windows.Forms.UserControl>  
  介绍用于实现复合控件的基类。  
   
  <xref:System.ComponentModel.TypeConverterAttribute>  
- 介绍指定的特性<xref:System.ComponentModel.TypeConverter>要用于自定义属性类型。  
+ 记录属性，该属性指定要用于自定义属性类型的 <xref:System.ComponentModel.TypeConverter>。  
   
  <xref:System.ComponentModel.EditorAttribute>  
- 介绍指定的特性<xref:System.Drawing.Design.UITypeEditor>要用于自定义属性。  
+ 记录属性，该属性指定要用于自定义属性的 <xref:System.Drawing.Design.UITypeEditor>。  
   
 ## <a name="related-sections"></a>相关章节  
  [Windows 窗体控件中的特性](attributes-in-windows-forms-controls.md)  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9c149303-14b1-4138-83d7-e8c3e0fcd332
 topic_type:
 - apiref
-ms.openlocfilehash: a7876cd932558ad95dab7adac3c91a6f23ca647c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e3804335bacefad61c4f521ea1ef1444b7b1fed
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134652"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777710"
 ---
 # <a name="icordebugfunctionbreakpoint-interface"></a>ICorDebugFunctionBreakpoint 接口
 
@@ -29,15 +29,15 @@ ms.locfileid: "73134652"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetFunction 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getfunction-method.md)|获取一个指向 ICorDebugFunction 的接口指针，该指针引用在其中设置断点的函数。|  
-|[GetOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|获取函数内断点的偏移量。|  
+|[GetFunction 方法](icordebugfunctionbreakpoint-getfunction-method.md)|获取一个指向 ICorDebugFunction 的接口指针，该指针引用在其中设置断点的函数。|  
+|[GetOffset 方法](icordebugfunctionbreakpoint-getoffset-method.md)|获取函数内断点的偏移量。|  
   
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -46,6 +46,6 @@ ms.locfileid: "73134652"
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试接口](debugging-interfaces.md)

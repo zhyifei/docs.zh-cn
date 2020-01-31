@@ -1,47 +1,47 @@
 ---
-title: Windows 窗体 DataGridView 控件中的数据显示模式
+title: DataGridView 控件中的数据显示模式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], display modes
 - data grids [Windows Forms], display modes
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
-ms.openlocfilehash: 673780909f6d66168548893e99d79bbfec70a0e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad6be647e3a36904b055fd6771f539df28938fab
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011399"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744016"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的数据显示模式
-<xref:System.Windows.Forms.DataGridView>控件可以显示三种不同模式中的数据： 绑定、 未绑定，和虚拟。 选择最合适的模式基于你的要求。  
+<xref:System.Windows.Forms.DataGridView> 控件可以在三种不同模式下显示数据：绑定、未绑定和虚拟。 根据要求选择最适合的模式。  
   
 ## <a name="unbound"></a>未绑定  
- 取消绑定的模式适合用于显示的以编程方式管理的数据量相对较少。 不附加<xref:System.Windows.Forms.DataGridView>直接与数据源如下所示绑定模式的控件。 相反，您必须亲自填充该控件，通常使用<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType>方法。  
+ 取消绑定模式适用于显示以编程方式管理的相对较少的数据量。 不要将 <xref:System.Windows.Forms.DataGridView> 控件直接附加到作为绑定模式的数据源。 相反，您必须自行填充控件，通常使用 <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> 方法。  
   
- 未绑定的模式可以是静态的只读数据，或当您想要与外部数据存储区提供你自己的代码进行交互时尤其有用。 当你想在用户与外部数据源进行交互时，但是，将通常使用绑定的模式。  
+ 未绑定模式对于静态、只读数据，或者当你想要提供你自己的与外部数据存储交互的代码时特别有用。 但是，如果希望用户与外部数据源进行交互，通常会使用绑定模式。  
   
- 使用一个只读的示例，未绑定<xref:System.Windows.Forms.DataGridView>，请参阅[如何：创建未绑定的 Windows 窗体 DataGridView 控件](how-to-create-an-unbound-windows-forms-datagridview-control.md)。  
+ 有关使用只读未绑定 <xref:System.Windows.Forms.DataGridView>的示例，请参阅[如何：创建未绑定的 Windows 窗体 DataGridView 控件](how-to-create-an-unbound-windows-forms-datagridview-control.md)。  
   
-## <a name="bound"></a>绑定  
- 绑定的模式是适用于管理数据使用与数据存储区的自动交互。 可以将附加<xref:System.Windows.Forms.DataGridView>直接向通过设置其数据源控件<xref:System.Windows.Forms.DataGridView.DataSource%2A>属性。 数据绑定控件时，推送和拉取而无需显式管理您的数据行。 当<xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A>属性是`true`，数据源中的每一列将导致控件中创建相对应的列。 如果想要创建自己的列，可以将此属性设置为`false`，并使用<xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A>要绑定的每个列时将其配置属性。 当你想要使用的类型与默认情况下生成的类型的列类型时，这很有用。 有关详细信息，请参阅[Windows 窗体 DataGridView 控件中的列类型](column-types-in-the-windows-forms-datagridview-control.md)。  
+## <a name="bound"></a>已绑定  
+ 绑定模式适用于使用与数据存储区的自动交互来管理数据。 可以通过设置 <xref:System.Windows.Forms.DataGridView.DataSource%2A> 属性，将 <xref:System.Windows.Forms.DataGridView> 控件直接附加到其数据源。 当控件被数据绑定时，将推送和拉取数据行，而无需对你的部分进行显式管理。 当 `true`<xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> 属性时，数据源中的每一列都将导致在控件中创建相应的列。 如果你想要创建自己的列，则可以将此属性设置为 `false`，并使用 <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> 属性在配置列时绑定每个列。 如果要使用默认情况下生成的类型之外的列类型，则此方法非常有用。 有关详细信息，请参阅[Windows 窗体 DataGridView 控件中的列类型](column-types-in-the-windows-forms-datagridview-control.md)。  
   
- 有关使用绑定的示例<xref:System.Windows.Forms.DataGridView>控件，请参阅[演练：验证 Windows 中的数据窗体 DataGridView 控件](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)。  
+ 有关使用绑定 <xref:System.Windows.Forms.DataGridView> 控件的示例，请参阅[演练：验证 Windows 窗体 DataGridView 控件中的数据](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)。  
   
- 您还可以添加到未绑定的列<xref:System.Windows.Forms.DataGridView>绑定模式中的控件。 当你想要显示的按钮或链接，可让用户执行操作的特定行的列时，这很有用。 也很有用，与计算从绑定列的值显示列。 您可以填充的单元格值的处理程序中的计算列的<xref:System.Windows.Forms.DataGridView.CellFormatting>事件。 如果使用的<xref:System.Data.DataSet>或<xref:System.Data.DataTable>作为数据源，但是，你可能想要使用<xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>属性改为创建计算的列。 在这种情况下，<xref:System.Windows.Forms.DataGridView>控制会将计算的列就像任何其他列中的数据源一样。  
+ 还可以在绑定模式下将未绑定的列添加到 <xref:System.Windows.Forms.DataGridView> 控件。 当您想要显示允许用户对特定行执行操作的按钮或链接列时，这非常有用。 它还可用于显示包含从绑定列计算的值的列。 您可以在 <xref:System.Windows.Forms.DataGridView.CellFormatting> 事件的处理程序中填充计算列的单元值。 但是，如果您使用的是 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable> 作为数据源，则可以改为使用 <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType> 属性来创建计算列。 在这种情况下，<xref:System.Windows.Forms.DataGridView> 控件将像处理数据源中的任何其他列一样处理计算列。  
   
- 不支持通过在绑定模式下的未绑定列进行排序。 如果在包含用户可编辑值的绑定模式下创建未绑定的列，则必须实现虚拟模式下，该控件绑定的列进行排序时保留这些值。  
+ 不支持在绑定模式下按未绑定列进行排序。 如果在绑定模式下创建的未绑定列包含用户可编辑的值，则当控件按绑定列进行排序时，必须实现虚拟模式来维护这些值。  
   
-## <a name="virtual"></a>虚拟  
- 随着虚拟模式下，您可以实现自己的数据管理操作。 这是在绑定模式下维护未绑定列的值，该控件绑定列进行排序时所必需的。 但是，虚拟模式的主要用途是与大量的数据进行交互时优化性能。  
+## <a name="virtual"></a>Virtual  
+ 在虚拟模式下，你可以实现你自己的数据管理操作。 在按绑定列对控件进行排序时，必须使用此方法来维护绑定模式下未绑定列的值。 不过，虚拟模式的主要用途是在与大量数据进行交互时优化性能。  
   
- 附加<xref:System.Windows.Forms.DataGridView>你管理的缓存控制和代码控件时推送和拉取数据行。 若要保留的内存占用量小，缓存应在大小上类似于当前显示的行数。 当用户滚动到视图的新行时，代码请求缓存中的新数据，并可选择从内存中将旧数据。  
+ 将 <xref:System.Windows.Forms.DataGridView> 控件附加到所管理的缓存，代码会控制何时推送和拉取数据行。 若要使内存占用量较小，缓存大小应与当前显示的行数大小相似。 当用户将新行滚动到视图中时，你的代码将请求缓存中的新数据，并选择性地从内存中刷新旧数据。  
   
- 在实现虚拟模式时，需要跟踪新行回滚新行添加到需要在数据模型中时。 此功能的具体实现将取决于数据模型中; 的事务语义和实现数据模型是否提交作用域是在单元格或行级别。  
+ 在实现虚拟模式时，需要跟踪数据模型中何时需要新行以及何时回滚新行的添加。 此功能的确切实现将取决于数据模型的实现和数据模型的事务语义;提交范围是否位于单元或行级别。  
   
- 有关虚拟模式的详细信息，请参阅[Windows 窗体 DataGridView 控件中的虚拟模式](virtual-mode-in-the-windows-forms-datagridview-control.md)。 有关演示如何使用虚拟模式下的事件的示例，请参阅[演练：在 Windows 中实现虚拟模式窗体 DataGridView 控件](implementing-virtual-mode-wf-datagridview-control.md)。  
+ 有关虚拟模式的详细信息，请参阅[Windows 窗体 DataGridView 控件中的虚拟模式](virtual-mode-in-the-windows-forms-datagridview-control.md)。 有关演示如何使用虚拟模式事件的示例，请参阅[演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式](implementing-virtual-mode-wf-datagridview-control.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
@@ -50,7 +50,7 @@ ms.locfileid: "62011399"
 - <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A?displayProperty=nameWithType>
 - [在 Windows 窗体 DataGridView 控件中显示数据](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Windows 窗体 DataGridView 控件中的列类型](column-types-in-the-windows-forms-datagridview-control.md)
-- [演练：创建未绑定的 Windows 窗体 DataGridView 控件](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [演练：创建未绑定 Windows 窗体 DataGridView 控件](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
 - [如何：将数据绑定到 Windows 窗体 DataGridView 控件](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
 - [Windows 窗体 DataGridView 控件中的虚拟模式](virtual-mode-in-the-windows-forms-datagridview-control.md)
 - [演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式](implementing-virtual-mode-wf-datagridview-control.md)

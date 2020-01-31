@@ -2,12 +2,12 @@
 title: 本机互操作性最佳做法 - .NET
 description: 了解与 .NET 中的本机组件交互的最佳做法。
 ms.date: 01/18/2019
-ms.openlocfilehash: 7fe0dd0545f8ba800174f8be18bb2f11f39463f9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9486256b815856c0c283f5fe231be3d35d6e8f00
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706395"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742746"
 ---
 # <a name="native-interoperability-best-practices"></a>本机互操作性最佳做法
 
@@ -17,12 +17,12 @@ ms.locfileid: "75706395"
 
 本部分中的指南适用于所有互操作方案。
 
-- ✔️ 请务必对方法和参数使用同一命名和大小写以作为要调用的本机方法。
-- ✔️ 请考虑对常数值使用同一命名和大小写。
-- ✔️ 请务必使用映射到最接近本机类型的 .NET 类型。 例如，在 C# 中，当本机类型为 `unsigned int` 时使用 `uint`。
-- ✔️ 请务必在所需行为与默认行为不同时仅使用 `[In]` 和 `[Out]` 属性。
-- ✔️ 请考虑使用 <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> 汇集本机数组缓冲区。
-- ✔️ 请考虑使用与本机库相同的名称和大小写包装类中的 P/Invoke 声明。
+- ✔️对方法和参数使用与要调用的本机方法相同的命名和大写。
+- ✔️考虑对常数值使用相同的命名和大写。
+- ✔️使用最接近本机类型的 .NET 类型。 例如，在 C# 中，当本机类型为 `unsigned int` 时使用 `uint`。
+- 当所需的行为不同于默认行为时，✔️仅使用 `[In]` 和 `[Out]` 特性。
+- ✔️考虑使用 <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> 来池本机数组缓冲区。
+- ✔️考虑将您的 P/Invoke 声明包装在与本机库具有相同名称和大小写的类中。
   - 这允许 `[DllImport]` 属性使用 C# `nameof` 语言功能传入本机库的名称，并确保本机库的名称拼写正确。
 
 ## <a name="dllimport-attribute-settings"></a>DllImport 属性设置
@@ -40,15 +40,15 @@ ms.locfileid: "75706395"
 
 除非明确想要对字符串进行 ANSI 处理，否则请务必将 `[DllImport]` 标记为 `Charset.Unicode`。
 
-**❌ 不**使用 `[Out] string` 参数。 如果该字符串为暂存的字符串，则通过包含 `[Out]` 属性的值传递的字符串参数可能使运行时变得不稳定。 请在 <xref:System.String.Intern%2A?displayProperty=nameWithType> 的文档中查看有关字符串暂存的详细信息。
+❌ 不使用 `[Out] string` 参数。 如果该字符串为暂存的字符串，则通过包含 `[Out]` 属性的值传递的字符串参数可能使运行时变得不稳定。 请在 <xref:System.String.Intern%2A?displayProperty=nameWithType> 的文档中查看有关字符串暂存的详细信息。
 
-**❌ 避免**`StringBuilder` 参数。 `StringBuilder` 封送*始终*创建本机缓冲区副本。 因此，该操作的效率可能非常低。 采取调用带有字符串的 Windows API 的典型方案：
+❌ 避免 `StringBuilder` 参数。 `StringBuilder` 封送*始终*创建本机缓冲区副本。 因此，该操作的效率可能非常低。 采取调用带有字符串的 Windows API 的典型方案：
 
 1. 创建所需容量的 SB（分配托管容量） **{1}**
 2. 调用
-   1. 分配本机缓冲区 **{2}**  
-   2. 如果 `[In]`，则复制内容 _（`StringBuilder` 参数的默认值）_  
-   3. 如果 `[Out]` **{3}** _（也是 `StringBuilder`的默认值）_ ，则将本机缓冲区复制到新分配的托管数组  
+   1. 分配本机缓冲区 **{2}**
+   2. 如果 `[In]`，则复制内容 _（`StringBuilder` 参数的默认值）_
+   3. 如果 `[Out]` **{3}** _（也是 `StringBuilder`的默认值）_ ，则将本机缓冲区复制到新分配的托管数组
 3. `ToString()` 分配其他托管数组{4}
 
 这是 {4} 分配，可从本机代码中获取字符串。 可用来限制此操作的最佳方法是在其他调用中重用 `StringBuilder`，但这仍只能保存 1 个分配。 最好从 `ArrayPool` 使用并缓存字符缓冲区 - 然后可以在后续调用中直接获得 `ToString()` 的分配。
@@ -57,17 +57,15 @@ ms.locfileid: "75706395"
 
 如果使用 `StringBuilder`，则最后一个问题是容量确实不会包括隐藏的 Null，该值始终计入互操作。 人们常常会犯这个错误，因为大多数 API 希望缓冲区的大小包括 Null。 这可能会导致产生浪费/不必要的分配。 此外，此问题会阻止运行时通过优化 `StringBuilder` 封送来最大限度地减少副本。
 
-✔️ 请考虑使用 `ArrayPool` 中的 `char[]`。
+✔️考虑从 `ArrayPool`使用 `char[]`。
 
 有关字符串封送的详细信息，请参阅[字符串的默认封送](../../framework/interop/default-marshaling-for-strings.md)和[自定义字符串封送](customize-parameter-marshaling.md#customizing-string-parameters)。
 
-> __Windows 特定__  
-> 对于 `[Out]` 字符串，CLR 将默认使用 `CoTaskMemFree` 来释放字符串，或对于标记为 `UnmanagedType.BSTR` 的字符串，使用 `SysStringFree`。  
-**对于具有输出字符串缓冲区的大多数 API：**  
-> 传入的字符计数必须包括 Null。 如果返回的值小于传入的字符计数，则调用成功，并且该值是不带尾随 Null 的字符数。 否则，该计数是包括 Null 字符的缓冲区的所需大小。  
+> __Windows 专用__对于 `[Out]` 字符串，CLR 将默认使用 `CoTaskMemFree`，以便为标记为 `UnmanagedType.BSTR`的字符串自由字符串或 `SysStringFree`。
+> **对于包含输出字符串缓冲区的大多数 api：** 传入的字符计数必须包含 null。 如果返回的值小于传入的字符计数，则调用成功，并且该值是不带尾随 Null 的字符数。 否则，该计数是包括 Null 字符的缓冲区的所需大小。
 >
 > - 传入5，get 4：字符串长度为4个字符，尾随 null。
-> - Pass 5，get 6：字符串长度为5个字符，需要6个字符的缓冲区来容纳 null。  
+> - Pass 5，get 6：字符串长度为5个字符，需要6个字符的缓冲区来容纳 null。
 > [字符串的 Windows 数据类型](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>布尔参数和字段
@@ -82,7 +80,7 @@ GUID 可在签名中直接使用。 许多 Windows API 使用 `GUID&` 类型别�
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-**❌ 不**将 `[MarshalAs(UnmanagedType.LPStruct)]` 用于除 `ref` GUID 参数以外的任何内容。
+对于 `ref` GUID 参数外的任何内容，❌ 不要使用 `[MarshalAs(UnmanagedType.LPStruct)]`。
 
 ## <a name="blittable-types"></a>Blittable 类型
 
@@ -120,11 +118,11 @@ public struct UnicodeCharStruct
 
 可以通过尝试创建固定的 `GCHandle` 来查看类型是否为 blittable。 如果该类型不是字符串或被视为 blittable，则 `GCHandle.Alloc` 将引发 `ArgumentException`。
 
-✔️ 尽可能使结构为 blittable。
+✔️尽可能使结构成为可复制的。
 
 有关详细信息，请参阅：
 
-- [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../../framework/interop/blittable-and-non-blittable-types.md)  
+- [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../../framework/interop/blittable-and-non-blittable-types.md)
 - [类型封送](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>使托管对象保持活动状态
@@ -133,7 +131,7 @@ public struct UnicodeCharStruct
 
 [`HandleRef`](xref:System.Runtime.InteropServices.HandleRef) 允许封送处理程序在 P/Invoke 的持续时间内使对象保持活动状态。 方法签名中可以使用该类型，而不是 `IntPtr`。 `SafeHandle` 可有效地替换此类，应改为使用此类型。
 
-[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle) 允许固定托管对象和获取指向该类型的本机指针。 基本模式是：  
+[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle) 允许固定托管对象和获取指向该类型的本机指针。 基本模式是：
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj, GCHandleType.Pinned);
@@ -215,9 +213,9 @@ Blittable 结构的性能更好，因为它们可以由封送层直接使用。 
 
 指向定义中的结构的指针必须通过 `ref` 传递或使用 `unsafe` 和 `*`。
 
-✔️ 请尽可能将托管结构与官方平台文档或标题中使用的形状和名称匹配。
+✔️将托管结构尽可能与正式平台文档或标头中使用的形状和名称相匹配。
 
-✔️ 请务必使用 C# `sizeof()` 而不是 blittable 结构的 `Marshal.SizeOf<MyStruct>()`，以提高性能。
+✔️使用C# `sizeof()` 而不是 `Marshal.SizeOf<MyStruct>()` 来实现直接复制的结构，从而提高性能。
 
 `INT_PTR Reserved1[2]` 等数组必须封送到两个 `IntPtr` 字段（`Reserved1a` 和 `Reserved1b`）。 当本机数组为基元类型时，可以使用 `fixed` 关键字更明确地进行编写。 例如，`SYSTEM_PROCESS_INFORMATION` 在本机标头中类似如下内容：
 

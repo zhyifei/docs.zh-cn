@@ -3,12 +3,12 @@ title: 垃圾回收器配置设置
 description: 了解用于配置垃圾回收器如何为 .NET Core 应用管理内存的运行时设置。
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 24e5c47de781e7eed5f76d2c551cac2dce1e8f05
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 044083d69601f5092724a46d358b2ee5673d428d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900099"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733521"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>用于垃圾回收的运行时配置选项
 
@@ -38,10 +38,13 @@ ms.locfileid: "75900099"
 | | 设置名 | 值 | 引入的版本 |
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.Server` | `false` - 工作站<br/>`true` - 服务器 | .NET Core 1.0 |
+| MSBuild 属性  | `ServerGarbageCollection` | `false` - 工作站<br/>`true` - 服务器 | .NET Core 1.0 |
 | **环境变量** | `COMPlus_gcServer` | `0` - 工作站<br/>`1` - 服务器 | .NET Core 1.0 |
 | **.NET Framework 的 app.config** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false` - 工作站<br/>`true` - 服务器 |  |
 
-示例：
+### <a name="examples"></a>示例
+
+runtimeconfig.json 文件： 
 
 ```json
 {
@@ -53,6 +56,18 @@ ms.locfileid: "75900099"
 }
 ```
 
+项目文件：
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+  </PropertyGroup>
+
+</Project>
+```
+
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.GC.Concurrent/COMPlus_gcConcurrent
 
 - 配置是否启用后台（并发）垃圾回收。
@@ -62,10 +77,13 @@ ms.locfileid: "75900099"
 | | 设置名 | 值 | 引入的版本 |
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.Concurrent` | `true` - 后台 GC<br/>`false` - 非并发 GC | .NET Core 1.0 |
+| MSBuild 属性  | `ConcurrentGarbageCollection` | `true` - 后台 GC<br/>`false` - 非并发 GC | .NET Core 1.0 |
 | **环境变量** | `COMPlus_gcConcurrent` | `true` - 后台 GC<br/>`false` - 非并发 GC | .NET Core 1.0 |
 | **.NET Framework 的 app.config** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true` - 后台 GC<br/>`false` - 非并发 GC |  |
 
-示例：
+### <a name="examples"></a>示例
+
+runtimeconfig.json 文件： 
 
 ```json
 {
@@ -75,6 +93,18 @@ ms.locfileid: "75900099"
       }
    }
 }
+```
+
+项目文件：
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="manage-resource-usage"></a>管理资源使用情况
@@ -261,10 +291,13 @@ ms.locfileid: "75900099"
 
 | | 设置名 | 值 | 引入的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | `System.GC.RetainVM` | `false` - 释放到 OS<br/>`true` - 置于备用列表上| .NET Core 1.0 |
+| **runtimeconfig.json** | `System.GC.RetainVM` | `false` - 释放到 OS<br/>`true` - 置于备用列表上 | .NET Core 1.0 |
+| MSBuild 属性  | `RetainVMGarbageCollection` | `false` - 释放到 OS<br/>`true` - 置于备用列表上 | .NET Core 1.0 |
 | **环境变量** | `COMPlus_GCRetainVM` | `0` - 释放到 OS<br/>`1` - 置于备用列表上 | .NET Core 1.0 |
 
-示例：
+### <a name="examples"></a>示例
+
+runtimeconfig.json 文件： 
 
 ```json
 {
@@ -274,6 +307,18 @@ ms.locfileid: "75900099"
       }
    }
 }
+```
+
+项目文件：
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="large-pages"></a>大型页面

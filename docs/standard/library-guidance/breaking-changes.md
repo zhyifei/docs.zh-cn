@@ -2,12 +2,12 @@
 title: 重大更改和 .NET 库
 description: 有关在创建 .NET 库时浏览重大更改的最佳做法建议。
 ms.date: 10/02/2018
-ms.openlocfilehash: 8536662ae1cd9733efbcc0c6526bd69d34a13177
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740979"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731461"
 ---
 # <a name="breaking-changes"></a>重大更改
 
@@ -25,11 +25,11 @@ ms.locfileid: "75740979"
 
   高级库在最终用户应用程序中直接引用。 如果发生重大更改，则开发人员可以选择更新到最新版本，或者可以修改其应用程序以应对重大更改。
 
- ✔️ 请考虑将如何使用库。 重大更改会对使用它的应用程序和库有何影响？
+✔️ 请考虑将如何使用库。 重大更改会对使用它的应用程序和库有何影响？
 
- ✔️ 请在开发低级 .NET 库时尽量减少重大更改。
+✔️ 请在开发低级 .NET 库时尽量减少重大更改。
 
- ✔️ 请考虑将库的重大重写作为新 NuGet 包进行发布。
+✔️ 请考虑将库的重大重写作为新 NuGet 包进行发布。
 
 ## <a name="types-of-breaking-changes"></a>重大更改的类型
 
@@ -56,7 +56,7 @@ public class Task
 
 例如，ASP.NET Core MVC 提出了[兼容性版本](/aspnet/core/mvc/compatibility-version)这一概念，可在 `MvcOptions` 中修改启用和禁用的功能。
 
- ✔️ 请考虑在默认情况下关闭新功能（如果它们会影响现有用户），通过设置让开发人员可以选择加入功能。
+✔️ 请考虑在默认情况下关闭新功能（如果它们会影响现有用户），通过设置让开发人员可以选择加入功能。
 
 ### <a name="binary-breaking-change"></a>二进制重大更改
 
@@ -64,15 +64,15 @@ public class Task
 
 二进制重大更改还可能会中断整个程序集  。 使用 `AssemblyName` 重命名程序集会更改程序集的标识，如同添加、删除或更改程序集的强命名密钥一样。 程序集标识的更改会中断所有使用它的已编译代码。
 
-❌ 请勿更改程序集名称  。
+❌ 请勿更改程序集名称。
 
- ❌ 请勿添加、删除或更改强命名密钥。
+❌ 请勿添加、删除或更改强命名密钥。
 
- ✔️ 请考虑使用抽象基类而不是接口。
+✔️ 请考虑使用抽象基类而不是接口。
 
 > 向接口添加任何内容都会导致实现它的现有类型失败。 抽象基类允许添加默认虚拟实现。
 
- ✔️ 请考虑在打算删除的类型和成员上放置 <xref:System.ObsoleteAttribute>。 该属性应具有有关更新代码以不再使用已过时 API 的说明。
+✔️ 请考虑在打算删除的类型和成员上放置 <xref:System.ObsoleteAttribute>。 该属性应具有有关更新代码以不再使用已过时 API 的说明。
 
 > 调用具有 <xref:System.ObsoleteAttribute> 的类型和方法的代码会生成一个生成警告，其中包含向该属性提供的消息。 警告向使用已过时 API 的人员提供了进行迁移的缓冲时间，以便在删除已过时 API 时，大多数人都不再使用它。
 
@@ -92,7 +92,7 @@ public class Document
 }
 ```
 
- ✔️ 请考虑在低级和中级库中无限期地保留具有 <xref:System.ObsoleteAttribute> 的类型和方法。
+✔️ 请考虑在低级和中级库中无限期地保留具有 <xref:System.ObsoleteAttribute> 的类型和方法。
 
 > 删除 API 是一种二进制重大更改。 如果维护成本较低，并且不会向库增添大量技术债务，请考虑保留已过时类型和方法。 不删除类型和方法可以帮助避免上述最糟糕情况。
 

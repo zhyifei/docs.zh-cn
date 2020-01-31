@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e86fcc72-388d-4009-ab21-8f9c3323e9a3
 topic_type:
 - apiref
-ms.openlocfilehash: 86b2815c6f95c674c49bba7455e8497192bd8bac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 12d4e63480f03bfad613f30362ddaeaf12b57a88
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125142"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791054"
 ---
 # <a name="icordebugvariablehomegetargumentindex-method"></a>ICorDebugVariableHome：： GetArgumentIndex 方法
 
@@ -43,16 +43,16 @@ HRESULT GetArgumentIndex(
 
 方法返回以下值。
 
-|“值”|描述|
+|{2&gt;值&lt;2}|描述|
 |-----------|-----------------|
 |`S_OK`|方法调用返回有效的参数索引。|
-|`E_FAIL`|当前[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)实例表示局部变量。|
+|`E_FAIL`|当前[ICorDebugVariableHome](icordebugvariablehome-interface.md)实例表示局部变量。|
 
 ## <a name="remarks"></a>备注
 
 参数索引可用于检索此参数的元数据。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
@@ -62,6 +62,6 @@ HRESULT GetArgumentIndex(
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICorDebugVariableHome 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [ICorDebugVariableHome 接口](icordebugvariablehome-interface.md)

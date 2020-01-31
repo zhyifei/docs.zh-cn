@@ -1,5 +1,5 @@
 ---
-title: TrackBar 控件概述（Windows 窗体）
+title: TrackBar 컨트롤 개요
 ms.date: 03/30/2017
 f1_keywords:
 - TrackBar
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - TrackBar control [Windows Forms], about TrackBar control
 - slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
-ms.openlocfilehash: 1606db73485944f3dfa8b9c084bffda817520c7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6901405100df4633c84850757f55b756bc9a0199
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009261"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741470"
 ---
-# <a name="trackbar-control-overview-windows-forms"></a>TrackBar 控件概述（Windows 窗体）
-Windows 窗体<xref:System.Windows.Forms.TrackBar>控件 （有时也称为"滑块"控件） 用于浏览大量的信息或用于直观地调整数字设置。 <xref:System.Windows.Forms.TrackBar>控件具有两个部分： thumb，也称为滑块，将和刻度线。 滚动块是可调整的一部分。 其位置对应于<xref:System.Windows.Forms.TrackBar.Value%2A>属性。 刻度线是按固定间隔分布的可视指示符。 指定并可以水平或垂直对齐的增量移动跟踪条。 例如，可能会使用跟踪条以控制光标闪烁速率或鼠标的速度的系统。  
+# <a name="trackbar-control-overview-windows-forms"></a>TrackBar 컨트롤 개요(Windows Forms)
+Windows 窗体 <xref:System.Windows.Forms.TrackBar> 控件（有时也称为 "滑块" 控件）用于在大量信息中导航，或用于直观调整数字设置。 <xref:System.Windows.Forms.TrackBar> 控件包含两部分：滚动块（也称为滑块）和刻度线。 滚动块是可以调整的部分。 其位置与 <xref:System.Windows.Forms.TrackBar.Value%2A> 属性相对应。 刻度线是按固定间隔分隔的可视指示器。 跟踪条以指定的增量移动，并可水平或垂直对齐。 例如，您可以使用跟踪栏来控制系统的光标闪烁速率或鼠标速度。  
   
-## <a name="key-properties"></a>键属性  
- 键属性<xref:System.Windows.Forms.TrackBar>控制是在<xref:System.Windows.Forms.TrackBar.Value%2A>， <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>， <xref:System.Windows.Forms.TrackBar.Minimum%2A>，和<xref:System.Windows.Forms.TrackBar.Maximum%2A>。 <xref:System.Windows.Forms.TrackBar.TickFrequency%2A> 为刻度间隔。 <xref:System.Windows.Forms.TrackBar.Minimum%2A> 和<xref:System.Windows.Forms.TrackBar.Maximum%2A>是可以表示跟踪条的最小和最大值。  
+## <a name="key-properties"></a>키 속성  
+ <xref:System.Windows.Forms.TrackBar> 控件的键属性为 <xref:System.Windows.Forms.TrackBar.Value%2A>、<xref:System.Windows.Forms.TrackBar.TickFrequency%2A>、<xref:System.Windows.Forms.TrackBar.Minimum%2A>和 <xref:System.Windows.Forms.TrackBar.Maximum%2A>。 <xref:System.Windows.Forms.TrackBar.TickFrequency%2A> 是刻度的间距。 <xref:System.Windows.Forms.TrackBar.Minimum%2A> 和 <xref:System.Windows.Forms.TrackBar.Maximum%2A> 是可在跟踪条上表示的最小值和最大值。  
   
- 其他两个重要属性是<xref:System.Windows.Forms.TrackBar.SmallChange%2A>和<xref:System.Windows.Forms.TrackBar.LargeChange%2A>。 值<xref:System.Windows.Forms.TrackBar.SmallChange%2A>属性是滚动块移动到具有左或向右箭头键按下的响应中的位置数。 值<xref:System.Windows.Forms.TrackBar.LargeChange%2A>属性是 thumb 响应具有 PAGE UP 或 PAGE DOWN 键按下，移动或以响应鼠标单击跟踪条上滚动块的任何一侧上的位置数。  
+ 另外两个重要的属性是 <xref:System.Windows.Forms.TrackBar.SmallChange%2A> 和 <xref:System.Windows.Forms.TrackBar.LargeChange%2A>。 <xref:System.Windows.Forms.TrackBar.SmallChange%2A> 属性的值是指在按下左右箭头键时移动的位置数。 <xref:System.Windows.Forms.TrackBar.LargeChange%2A> 属性的值是指在按下 PAGE UP 或 PAGE DOWN 键时移动的位置数，或响应滚动块两侧跟踪栏的鼠标单击。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.TrackBar>
-- [TrackBar 控件](trackbar-control-windows-forms.md)
+- [TrackBar 컨트롤](trackbar-control-windows-forms.md)

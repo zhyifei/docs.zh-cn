@@ -1,5 +1,5 @@
 ---
-title: 演练：创建一个利用 Visual Studio 设计时功能的 Windows 窗体控件
+title: 创建利用 Visual Studio 设计时功能的控件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 64f637b232cf21701185e7b87d86f63fdece5127
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7166b4203c54ab31f1d929c85cf1e6481ff120f8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459525"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744073"
 ---
 # <a name="walkthrough-create-a-control-that-takes-advantage-of-design-time-features"></a>演练：创建利用设计时功能的控件
 
@@ -36,7 +36,7 @@ ms.locfileid: "73459525"
 
 有关完整的代码列表，请参阅[如何：创建利用设计时功能的 Windows 窗体控件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 若要完成本演练，你将需要 Visual Studio。
 
@@ -120,13 +120,13 @@ ms.locfileid: "73459525"
 
 3. 将 `DemoMarqueeControl` 的声明更改为继承自 `MarqueeControl` 类。
 
-4. 生成项目。
+4. 生成此项目。
 
 5. 在 Windows 窗体设计器中打开 "Form1"。
 
 6. 找到 "**工具箱**" 中的 " **MarqueeControlTest 组件**" 选项卡并将其打开。 将 `DemoMarqueeControl` 从 "**工具箱**" 拖到窗体上。
 
-7. 生成项目。
+7. 生成此项目。
 
 ## <a name="set-up-the-project-for-design-time-debugging"></a>设置项目以进行设计时调试
 
@@ -608,7 +608,7 @@ ms.locfileid: "73459525"
 
 - 控制如何序列化控件，以及如何为控件生成代码。 有关详细信息，请参阅[动态源代码生成和编译](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.Design.ParentControlDesigner>

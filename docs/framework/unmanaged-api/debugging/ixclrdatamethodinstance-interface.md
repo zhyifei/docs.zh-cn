@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: f62cbdc4b3e73f0c27492f7ed20b35378654d399
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c51825433bbc86c897c097475d5c15c855f6ec8b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775489"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790411"
 ---
 # <a name="ixclrdatamethodinstance-interface"></a>IXCLRDataMethodInstance 接口
 
-提供用于查询方法实例的信息的方法。
+提供用于查询有关方法实例的信息的方法。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -32,21 +32,21 @@ ms.locfileid: "61775489"
 
 | 方法                                                                                                                  | 描述                                 |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| [GetILAddressMap](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getiladdressmap-method.md) | 获取到地址映射信息的 IL。 |
-| [GetRepresentativeEntryAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getrepresentativeentryaddress-method.md) | 获取方法的所有可能的入口点在本机编译的最具代表性的入口点地址。 |
+| [GetILAddressMap](ixclrdatamethodinstance-getiladdressmap-method.md) | 获取用于寻址映射信息的 IL。 |
+| [GetRepresentativeEntryAddress](ixclrdatamethodinstance-getrepresentativeentryaddress-method.md) | 获取方法的所有可能入口点的本机编译的最具代表性的入口点地址。 |
 
 ## <a name="remarks"></a>备注
 
-此接口存在于运行时内并不通过任何标头或库文件公开。 但是，它是一个 COM 接口派生`IUnknown`具有 GUID `ECD73800-22CA-4b0d-AB55-E9BA7E6318A5` ，可以通过常用的 COM 机制获取。
+此接口在运行时中存在，不会通过任何标头或库文件公开。 不过，它是一个使用 GUID `ECD73800-22CA-4b0d-AB55-E9BA7E6318A5` 派生的 COM 接口，可通过常用的 COM 机制来获取 `IUnknown`。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** None  
-**库：** None  
-**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**标头：** 内容  
+**库：** 内容  
+**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试](index.md)
+- [调试接口](debugging-interfaces.md)

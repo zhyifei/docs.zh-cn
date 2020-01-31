@@ -1,15 +1,13 @@
 ---
 title: 安装本地化的 IntelliSense 文件
 description: 了解如何设置开发计算机，以便在 Visual Studio 中为 .NET Core 项目使用本地化的 IntelliSense 文件。
-author: mairaw
-ms.author: mairaw
-ms.date: 12/18/2019
-ms.openlocfilehash: 98d75544ab853e75c175dd2919991b250cfaa3b0
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.date: 01/23/2020
+ms.openlocfilehash: 58b462507edf953a6c28aadbb9e3239a5cbe05b2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75436672"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733652"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>如何为 .NET Core 安装本地化的 IntelliSense 文件
 
@@ -18,7 +16,7 @@ ms.locfileid: "75436672"
 - 如何安装这些文件的本地化版本。
 - 如何修改 Visual Studio 安装以使用其他语言。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 或更高版本。
 - [Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或更高版本。
@@ -34,9 +32,10 @@ ms.locfileid: "75436672"
 
 1. 提取 zip 文件的内容。
 
-1. 导航至 .NET Core 安装文件夹。 默认情况下，它位于 %ProgramFiles%\dotnet\packs 下  。
+1. 导航到 .NET Core Intellisense 文件夹。
 
-   - 选择要为其安装 IntelliSense 的 SDK，然后导航到关联的路径。 有下列选项：
+   1. 导航至 .NET Core 安装文件夹。 默认情况下，它位于 %ProgramFiles%\dotnet\packs 下  。
+   1. 选择要为其安装 IntelliSense 的 SDK，然后导航到关联的路径。 有下列选项：
 
       | SDK 类型        | 路径                               |
       | --------------- | ---------------------------------- |
@@ -44,9 +43,9 @@ ms.locfileid: "75436672"
       | Windows 桌面 | Microsoft.WindowsDesktop.App.Ref  |
       | .NET Standard   | NETStandard.Library.Ref           |
    
-   - 导航到要为其安装本地化 IntelliSense 的版本。 例如，3.1.0  。
-   - 打开 ref 文件夹  。
-   - 打开 moniker 文件夹。 例如，netcoreapp3.1  。
+   1. 导航到要为其安装本地化 IntelliSense 的版本。 例如，3.1.0  。
+   1. 打开 ref 文件夹  。
+   1. 打开 moniker 文件夹。 例如，netcoreapp3.1  。
 
    因此，要导航到的完整路径看起来将类似于 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1  。
 
@@ -55,8 +54,8 @@ ms.locfileid: "75436672"
    | 语言              | 文件夹名称 |
    | --------------------- | ----------- |
    | 巴西葡萄牙语  | pt-br      |
-   | 简体中文  | zh-hans    |
-   | 繁体中文 | zh-hant    |
+   | 中文（简体）  | zh-hans    |
+   | 中文（繁体） | zh-hant    |
    | 法语                | fr         |
    | 德语                | de         |
    | 意大利语               | it         |
@@ -76,7 +75,7 @@ ms.locfileid: "75436672"
 如果在安装过程中未安装所需的语言包，请按以下步骤更新 Visual Studio 来安装语言包：
 
 > [!IMPORTANT]
-> 若要安装、更新或修改 Visual Studio，必须使用具有管理权限的帐户登录。 有关详细信息，请参阅[用户权限与 Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio)。
+> 若要安装、更新或修改 Visual Studio，必须使用具有管理员权限的帐户登录。 有关详细信息，请参阅[用户权限与 Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio)。
 
 1. 在计算机上找到 Visual Studio 安装程序。
 
@@ -103,7 +102,7 @@ ms.locfileid: "75436672"
 
    ![Visual Studio 语言包选项卡](./media/localized-intellisense/vs-modify-language-packs.png)
 
-1. 选择“修改”  。 更新启动。
+1. 选择“修改”  。 更新开始。
 
 ### <a name="modify-language-settings-in-visual-studio"></a>修改 Visual Studio 中的语言设置
 
@@ -113,9 +112,9 @@ ms.locfileid: "75436672"
 
 1. 在“启动”窗口中，选择“继续但无需代码”  。
 
-1. 在主菜单中，选择“工具” > “选项”   。 “选项”对话框随即打开。
+1. 在菜单栏上，选择“工具”   >   “选项”。 “选项”对话框随即打开。
 
-1. 在“环境”文件夹下，选择“国际设置”   。
+1. 在“环境”节点下，选择“国际设置”   。
 
 1. 在“语言”下拉列表中，选择所需的语言  。 选择 **“确定”** 。 
 

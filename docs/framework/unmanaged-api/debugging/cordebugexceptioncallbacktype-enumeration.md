@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4d946ad4-3c19-42cb-bec9-8633325ba769
 topic_type:
 - apiref
-ms.openlocfilehash: c927dcde99f5217ee7c160359385e0b953034380
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 977b1608539a302c6a27a1b54cfb2ad687025fe6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132243"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789411"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>CorDebugExceptionCallbackType 枚举
-指示从[ICorDebugManagedCallback2：： Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件进行的回调类型。  
+指示从[ICorDebugManagedCallback2：： Exception](icordebugmanagedcallback2-exception-method.md)事件进行的回调类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ typedef enum CorDebugExceptionCallbackType {
 |`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|异常 windup 进程在用户代码中找到 `catch` 块。|  
 |`DEBUG_EXCEPTION_UNHANDLED`|异常未处理。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
@@ -53,6 +53,6 @@ typedef enum CorDebugExceptionCallbackType {
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [调试枚举](debugging-enumerations.md)

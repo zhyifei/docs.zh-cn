@@ -2,12 +2,12 @@
 title: 排队消息处理疑难解答
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: ed114cc9a37fff549e8bfc874765252fd18893a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3d2d48076fafe44687546ca27e4d8670b81ce433
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345587"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742667"
 ---
 # <a name="troubleshooting-queued-messaging"></a>排队消息处理疑难解答
 
@@ -113,10 +113,6 @@ ms.locfileid: "75345587"
 
 **答：** 在操作中设置 "自动完成" =`true` 与会话中的最后一条消息相对应，并在所有剩余服务操作中设置 "自动完成 =`false`"。
 
-**问：** 在哪里可以找到有关 MSMQ 的常见问题的答案？
-
-**答：** 有关 MSMQ 的详细信息，请参阅[Microsoft 消息队列](https://go.microsoft.com/fwlink/?LinkId=87810)。
-
 **问：** 为什么当从包含排队会话消息和排队数据报消息的队列中进行读取时，服务才会引发 `ProtocolException`？
 
 **答：** 排队会话消息和排队数据报消息的构建方式存在根本的差异。 因此，要读取排队会话消息的服务无法接收排队数据报消息，而要读取排队数据报消息的服务也无法接收会话消息。 试图从同一个队列读取这两种消息时将引发以下异常：
@@ -174,7 +170,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 6. 接下来，使用前面的步骤添加另一个证书管理单元，但这次请选择 "**计算机帐户**"，然后单击 "**下一步**"。
 
-7. 选择“本地计算机”，然后单击“完成”。 现在，可以将证书从计算机证书存储区拖放到当前用户存储区。
+7. 选择 "**本地计算机**"，然后单击 "**完成**"。 现在，可以将证书从计算机证书存储区拖放到当前用户存储区。
 
 **问：** 当我的服务在工作组模式下从另一台计算机上的队列中读取时，出现 "拒绝访问" 异常。
 
@@ -186,7 +182,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 ### <a name="remote-transacted-receives"></a>远程事务处理接收
 
-**问：** 当我在计算机 A 上有一个队列，而在计算机 B 上读取消息的 WCF 服务（远程事务处理接收方案）时，不会从队列中读取消息。 跟踪信息指示接收失败，并显示消息 "无法导入事务"。 如何进行修复？
+**问：** 当我在计算机 A 上有一个队列，而在计算机 B 上读取消息的 WCF 服务（远程事务处理接收方案）时，不会从队列中读取消息。 跟踪信息指示接收失败，并显示消息 "无法导入事务"。 可以执行哪些操作来解决此问题？
 
 **答：** 有三个可能的原因：
 

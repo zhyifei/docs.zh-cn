@@ -1,17 +1,17 @@
 ---
-title: PrintPreviewDialog 控件概述（Windows 窗体）
+title: PrintPreviewDialog 控件概述
 ms.date: 01/08/2018
 f1_keywords:
 - PrintPreviewDialog
 helpviewer_keywords:
 - PrintPreviewDialog control (using designer), about PrintPreviewDialog
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
-ms.openlocfilehash: 670886956e1b348895862c117ccf9cf586bde8bb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6fb971493336cda1e04c720dd09147e650918c3a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141216"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741409"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>PrintPreviewDialog 控件概述（Windows 窗体）
 
@@ -53,7 +53,7 @@ Windows 窗体 <xref:System.Windows.Forms.PrintPreviewDialog> 控件是一个预
 
 如果使用 <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> 事件来修改打印机设置，即使设置了优化配置开关，<xref:System.Windows.Forms.PrintPreviewDialog> 控件的性能也不会提高。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [PrintPreviewControl 控件概述](printpreviewcontrol-control-overview-windows-forms.md)

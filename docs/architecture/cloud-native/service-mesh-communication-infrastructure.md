@@ -3,12 +3,12 @@ title: 服务网格通信基础结构
 description: 了解服务网格技术如何简化云本地微服务通信
 author: robvet
 ms.date: 09/10/2019
-ms.openlocfilehash: a9192bf9f5827d05b2453c796c72e11782f9f911
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 66bc69580cc56efe725683c16a047aeb07e7e840
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "73841281"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76780932"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>服务网格通信基础结构
 
@@ -52,7 +52,7 @@ ms.locfileid: "73841281"
 
 接下来，我们将迁移到云本机系统中的分布式数据，以及它所呈现的优点和挑战。
 
-### <a name="references"></a>参考
+### <a name="references"></a>引用
 
 - [.NET 微服务：容器化 .NET 应用程序的体系结构](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 
@@ -74,4 +74,4 @@ ms.locfileid: "73841281"
 
 >[!div class="step-by-step"]
 >[上一页](rest-grpc.md)
->[下一页](distributed-data.md)
+>[下一页](Database-per-microservice.md)

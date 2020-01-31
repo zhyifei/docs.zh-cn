@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 45a40d49cea2dd5f881fbd47cc2fb4bd96e8f9ff
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
-ms.translationtype: MT
+ms.openlocfilehash: 66a08cf60ae4ca9bb6e373d230d0819ee6f9b28c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243989"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790011"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>ICorProfilerInfo8：： GetDynamicFunctionInfo 方法
 
@@ -34,28 +34,35 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
                                 [out] WCHAR                   wszName[]);
 ```
 
-#### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
-`functionId` \
-中要为其检索信息的函数的 ID。
+- `functionId`
 
-`moduleId` \
-中指向定义函数父类的模块的指针。
+  \[中] 要为其检索信息的函数的 ID。
 
-`ppvSig` \
-弄指向函数的签名的指针。
+- `moduleId`
 
-`pbSig` \
-弄指向函数签名的字节计数的指针。
+  \[中的] 一个指针，指向在其中定义函数父类的模块。
 
-`cchName` \
-[in] `wszName` 数组的最大大小。
+- `ppvSig`
 
-`pcchName` \
-弄`wszName`数组中的字符数。
+  \[out] 指向函数签名的指针。
 
-`wszName` \
-弄一个数组`WCHAR` ，它是函数的名称（如果存在）。
+- `pbSig`
+
+  \[out] 指向函数签名的字节计数的指针。
+
+- `cchName`
+
+  \[] `wszName` 数组的最大大小。
+
+- `pcchName`
+
+  \[out] `wszName` 数组中的字符数。
+
+- `wszName`
+
+  \[out] 作为函数名称（如果存在）的 `WCHAR` 数组。
 
 ## <a name="remarks"></a>备注
 
@@ -63,16 +70,16 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 此 API 可用于检索有关动态方法的信息，包括友好名称（如果可用）。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
-**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**标头：** Corprof.idl，Corprof.idl
+**头文件：** CorProf.idl、CorProf.h
 
-**类库**CorGuids.lib
+**库：** CorGuids.lib
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo8 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: WPF Windows 概述
+title: Windows 概述
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 3bc31391d30b0724a480152aa7f1d0dc93380b8c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 17582192fabf85777bba250f6f53047a84f264b9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636401"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742358"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows 概述
 用户通过 Windows 与 Windows Presentation Foundation （WPF）独立应用程序交互。 窗口的主要用途是托管使数据可视化并使用户能够与数据交互的内容。 独立 WPF 应用程序通过使用 <xref:System.Windows.Window> 类提供自己的窗口。 本主题介绍了 <xref:System.Windows.Window>，然后介绍在独立应用程序中创建和管理 windows 的基本原理。  

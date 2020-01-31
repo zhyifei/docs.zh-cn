@@ -2,16 +2,16 @@
 title: dotnet-trace 工具 - .NET Core
 description: 安装和使用 dotnet-trace 命令行工具。
 ms.date: 11/21/2019
-ms.openlocfilehash: 64c931db5a18659707e832aaca910cfbbd6823c0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b19b159636fbf57fa2d461b398fcf9234aab491c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714431"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737643"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace 性能分析实用工具
 
-**本文适用于：** ✓ .NET Core 3.0 SDK 及更高版本
+ 本文适用于： ✔️ .NET Core 3.0 SDK 及更高版本
 
 ## <a name="install-dotnet-trace"></a>安装 dotnet-trace
 
@@ -38,7 +38,7 @@ dotnet-trace [-h, --help] [--version] <command>
 
 ## <a name="options"></a>选项
 
-- **`--version`**  
+- **`--version`**
 
   显示 dotnet-counters 实用工具的版本。
 
