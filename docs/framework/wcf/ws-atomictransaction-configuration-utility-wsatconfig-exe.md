@@ -2,12 +2,12 @@
 title: WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: c57d0266102c5ad79657e875cb0107a2c11cabca
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3b37c271afa20de120682d093e40c0f30f4730de
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337601"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921330"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)
 WS-AtomicTransaction 配置实用工具用于配置基本的 WS-AtomicTransaction 支持设置。  
@@ -25,7 +25,7 @@ wsatConfig [Options]
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
- 如果运行 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 或 Windows Server 2003，则必须在运行 Wsatconfig.exe 之前下载更新。 有关此更新的详细信息，请参阅[Windows Communication Foundation 更新（KB912817）](https://www.microsoft.com/download/details.aspx?id=21520)。  
+ 如果运行的是 Windows XP 或 Windows Server 2003，则必须在运行 Wsatconfig.exe 之前下载更新。 有关此更新的详细信息，请参阅[Windows Communication Foundation 更新（KB912817）](https://www.microsoft.com/download/details.aspx?id=21520)。  
   
  下表显示了可用于 WS-AtomicTransaction 配置实用工具 (wsatConfig.exe) 的选项。  
   

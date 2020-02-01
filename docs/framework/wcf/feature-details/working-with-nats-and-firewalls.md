@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: b8be10740c8e92d3dac7094f07b3372e8d78a3d9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 28360b8b5b07c7c532dd2406ca98604870b8335f
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743870"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921077"
 ---
 # <a name="working-with-nats-and-firewalls"></a>使用 NAT 和防火墙
 网络连接的客户端和服务器通常不具有用于进行通信的直接和开放的路径。 数据包在终结点计算机和网络中的中间计算机上进行筛选、路由、分析和转换。 网络地址转换 (NAT) 和防火墙是可以参与网络通信的中间应用程序的常见示例。  
@@ -25,7 +25,7 @@ ms.locfileid: "76743870"
  某些 NAT 支持配置转发规则，以使外部计算机可以连接到特定的内部计算机。 对于不同的 NAT，有关配置转发规则的说明也各异；而且，对于大多数应用程序来说，要求最终用户更改其 NAT 配置都不是值得推荐的做法。 很多最终用户无法或者不希望针对特定应用程序更改他们的 NAT 配置。  
   
 ## <a name="how-firewalls-affect-communication"></a>防火墙如何影响通信  
- *防火墙*是一种软件或硬件设备，可将规则应用于传递到的流量，以决定是允许还是拒绝发送。 可以配置防火墙以检查传入和/或传出的通信流。 防火墙在网络边缘或终结点宿主上为网络提供了安全边界。 企业用户传统上将其服务器放在防火墙后面，以防止恶意攻击。 自从在 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 中引入了个人防火墙以来，位于防火墙后面的家庭用户的数量也已经大大增加。 这样，很可能连接的一端或两端具有检查数据包的防火墙。  
+ *防火墙*是一种软件或硬件设备，可将规则应用于传递到的流量，以决定是允许还是拒绝发送。 可以配置防火墙以检查传入和/或传出的通信流。 防火墙在网络边缘或终结点宿主上为网络提供了安全边界。 企业用户传统上将其服务器放在防火墙后面，以防止恶意攻击。 由于在 Windows XP SP2 中引入了个人防火墙，防火墙后面的家庭用户数量也大幅增加。 这样，很可能连接的一端或两端具有检查数据包的防火墙。  
   
  防火墙在其复杂性以及检查数据包的能力方面差异极大。 简单防火墙基于数据包中的源和目标地址以及端口应用规则。 智能防火墙还可以检查数据包的内容以便做出决定。 这些防火墙具有很多不同配置，并且通常用于专用应用程序。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "76743870"
   
 ## <a name="using-teredo"></a>使用 Teredo  
 
- Teredo 是一种 IPv6 过渡技术，可用来对位于 NAT 后面的计算机进行直接寻址。 Teredo 依靠使用可以公开和全局路由的服务器来公布潜在的连接。 Teredo 服务器为应用程序客户端和服务器提供了一个公用的接头地点，以便它们可以交换连接信息。 然后，这些计算机请求一个临时 Teredo 地址，并且通过现有网络对数据包进行隧道路由。 WCF 中的 Teredo 支持需要在操作系统中启用 IPv6 和 Teredo 支持。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和更高版本的操作系统支持 Teredo。 默认情况下，Windows Vista 和更高版本的操作系统支持 IPv6，并且仅要求用户启用 Teredo。 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 和 Windows Server 2003 要求用户同时启用 IPv6 和 Teredo。 有关详细信息，请参阅[Teredo 概述](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10))。  
+ Teredo 是一种 IPv6 过渡技术，可用来对位于 NAT 后面的计算机进行直接寻址。 Teredo 依靠使用可以公开和全局路由的服务器来公布潜在的连接。 Teredo 服务器为应用程序客户端和服务器提供了一个公用的接头地点，以便它们可以交换连接信息。 然后，这些计算机请求一个临时 Teredo 地址，并且通过现有网络对数据包进行隧道路由。 WCF 中的 Teredo 支持需要在操作系统中启用 IPv6 和 Teredo 支持。 Windows XP 和更高版本的操作系统支持 Teredo。 默认情况下，Windows Vista 和更高版本的操作系统支持 IPv6，并且仅要求用户启用 Teredo。 Windows XP SP2 和 Windows Server 2003 要求用户同时启用 IPv6 和 Teredo。 有关详细信息，请参阅[Teredo 概述](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10))。  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>选择传输协议和消息交换模式  
  选择传输协议和 MEP 的过程分为三步：  

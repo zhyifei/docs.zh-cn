@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: 0be22fa1e81c85d82494bc4b93468a18f05d6423
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 48e3a080097aae2e539c238bfe33c3e107f81bf0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345555"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921153"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>使用死信队列处理消息传输故障
 排队消息可能传送失败。 这些失败的消息将记录在死信队列中。 传送失败可能是由于网络故障、队列已删除、队列已满、身份验证失败或未能准时传送等原因而引起的。  
@@ -23,7 +23,7 @@ ms.locfileid: "75345555"
   
  自定义死信队列在共享同一个 MSMQ 服务来发送消息的各客户端之间提供隔离。  
   
- 在 Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上，Windows Communication Foundation （WCF）为所有排队客户端应用程序提供系统级死信队列。 在 Windows Vista 上，WCF 提供每个排队客户端应用程序的死信队列。  
+ 在 Windows Server 2003 和 Windows XP 中，Windows Communication Foundation （WCF）为所有排队客户端应用程序提供系统级死信队列。 在 Windows Vista 上，WCF 提供每个排队客户端应用程序的死信队列。  
   
 ## <a name="specifying-use-of-the-dead-letter-queue"></a>指定死信队列的用途  
  死信队列位于发送应用程序的队列管理器中。 该队列中存储已过期或者传输/传送失败的消息。  

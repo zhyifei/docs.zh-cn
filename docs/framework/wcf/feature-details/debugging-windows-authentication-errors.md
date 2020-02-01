@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 45e4926905bbf3b5a24af15de153afc7bd2a4823
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 9dbf9eee6e4222f899d77a4457bc78132ec7f092
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964570"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920234"
 ---
 # <a name="debugging-windows-authentication-errors"></a>调试 Windows 身份验证错误
 使用 Windows 验证身份作为安全机制时，安全支持提供程序接口 (SSPI) 将处理安全进程。 当 SSPI 层发生安全错误时，它们将由 Windows Communication Foundation （WCF）呈现。 本主题提供一组问题以帮助诊断这些错误。  
@@ -139,7 +139,7 @@ ms.locfileid: "75964570"
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>SSPI 不可用  
- 以下操作系统不支持使用 Windows 身份验证作为服务器： [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition、[!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition 和 Windows Vista Home 版本。  
+ 以下操作系统不支持使用 Windows 身份验证作为服务器： Windows XP Home Edition、Windows XP Media Center Edition 和 Windows Vista Home 版本。  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>使用不同的标识开发和部署  
  如果在一台计算机上开发应用程序，并在另一台计算机上部署它，然后在每台计算机上使用不同的帐户类型进行身份验证，则可能遇到不同的行为。 例如，假定使用 `SSPI Negotiated` 身份验证模式，在 Windows XP Pro 计算机上开发应用程序。 如果使用本地用户帐户进行身份验证，则会使用 NTLM 协议。 在开发应用程序后，将服务部署到使用域帐户运行它的 Windows Server 2003 计算机。 此时，客户端将无法对服务进行身份验证，因为它正在使用 Kerberos 和域控制器。  

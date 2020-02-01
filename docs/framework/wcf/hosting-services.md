@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 7a77f7d11bbd2b685bdcf53a3992b4e04b3691b8
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9608f9cc55bbba29686440be529659c6606b0eb8
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901232"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921053"
 ---
 # <a name="hosting-services"></a>托管服务
 
@@ -32,9 +32,9 @@ WCF 提供了一个统一的编程模型，用于生成面向服务的应用程�
 
 ### <a name="internet-information-services-iis"></a>Internet Information Services (IIS)
 
-IIS 托管选项与 ASP.NET 集成，并使用这些技术提供的功能，如进程回收、空闲关闭、进程运行状况监视和基于消息的激活。 在 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 和 Windows Server 2003 操作系统上，这是用于托管必须高度可用且高度可缩放的 Web 服务应用程序的首选解决方案。 IIS 还提供了客户期望企业级服务器产品具有的集成可管理性。 此宿主选项要求正确配置 IIS，但不需要编写任何承载代码作为应用程序的一部分。 有关如何为 WCF 服务配置 IIS 托管的详细信息，请参阅[如何：在 iis 中承载 Wcf 服务](./feature-details/how-to-host-a-wcf-service-in-iis.md)。
+IIS 托管选项与 ASP.NET 集成，并使用这些技术提供的功能，如进程回收、空闲关闭、进程运行状况监视和基于消息的激活。 在 Windows XP 和 Windows Server 2003 操作系统上，这是用于托管必须高度可用且高度可缩放的 Web 服务应用程序的首选解决方案。 IIS 还提供了客户期望企业级服务器产品具有的集成可管理性。 此宿主选项要求正确配置 IIS，但不需要编写任何承载代码作为应用程序的一部分。 有关如何为 WCF 服务配置 IIS 托管的详细信息，请参阅[如何：在 iis 中承载 Wcf 服务](./feature-details/how-to-host-a-wcf-service-in-iis.md)。
 
- 承载于 IIS 中的服务只能使用 HTTP 传输。 它在 IIS 5.1 中的实现在 [!INCLUDE[wxp](../../../includes/wxp-md.md)]中引入了一些限制。 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 上的 IIS 5.1 为 WCF 服务提供的基于消息的激活会阻止同一计算机上任何其他自承载的 WCF 服务使用端口80进行通信。 当 Windows Server 2003 上的 IIS 6.0 承载时，WCF 服务可以在与其他应用程序相同的 AppDomain/应用程序池/工作进程中运行。 但是，因为 WCF 和 IIS 6.0 都使用内核模式 HTTP 堆栈（http.sys），所以 IIS 6.0 可以与在同一台计算机上运行的其他自承载 WCF 服务共享端口80，这与 IIS 5.1 不同。
+ 承载于 IIS 中的服务只能使用 HTTP 传输。 在 IIS 5.1 中，它的实现在 Windows XP 中引入了一些限制。 Windows XP 上的 IIS 5.1 为 WCF 服务提供的基于消息的激活会阻止同一计算机上任何其他自承载的 WCF 服务使用端口80进行通信。 当 Windows Server 2003 上的 IIS 6.0 承载时，WCF 服务可以在与其他应用程序相同的 AppDomain/应用程序池/工作进程中运行。 但是，因为 WCF 和 IIS 6.0 都使用内核模式 HTTP 堆栈（http.sys），所以 IIS 6.0 可以与在同一台计算机上运行的其他自承载 WCF 服务共享端口80，这与 IIS 5.1 不同。
 
 ### <a name="windows-process-activation-service-was"></a>Windows 进程激活服务 (WAS)
 
@@ -57,9 +57,9 @@ Windows 进程激活服务（WAS）是 windows Vista 上也提供的 Windows Ser
 
 |宿主环境|平台可用性|支持的传输|进程和 AppDomain 回收|
 |-------------------------|---------------------------|--------------------------|-------------------------------------|
-|托管应用程序（“自承载”）|[!INCLUDE[wxp](../../../includes/wxp-md.md)]、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP；<br /><br /> net.tcp；<br /><br /> net.pipe；<br /><br /> net.msmq|否|
-|Windows 服务（以前称为 NT 服务）|[!INCLUDE[wxp](../../../includes/wxp-md.md)]、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP；<br /><br /> net.tcp；<br /><br /> net.pipe；<br /><br /> net.msmq|否|
-|IIS 5.1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|是|
+|托管应用程序（“自承载”）|Windows XP、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP；<br /><br /> net.tcp；<br /><br /> net.pipe；<br /><br /> net.msmq|否|
+|Windows 服务（以前称为 NT 服务）|Windows XP、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP；<br /><br /> net.tcp；<br /><br /> net.pipe；<br /><br /> net.msmq|否|
+|IIS 5.1|Windows XP|HTTP|是|
 |IIS 6.0|Windows Server 2003|HTTP|是|
 |Windows 进程激活服务 (WAS)|Windows Vista 和 Windows Server 2008|HTTP；<br /><br /> net.tcp；<br /><br /> net.pipe；<br /><br /> net.msmq|是|
 

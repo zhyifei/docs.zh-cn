@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: dfbf5a9b437d0acea16a75236fd3d2861c0f2e06
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 2fef4c7b00fd6a1ed8f85a8bfa01ef9cfffa1bbb
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802367"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919942"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑难解答快速入门
 本主题列出了一些客户开发 WCF 客户端和服务时所遇到的已知问题。 如果您遇到的问题不在此列表中，我们建议您为您的服务配置跟踪。 这将生成一个跟踪文件，您可以使用跟踪文件查看器查看它并获取有关服务中可能发生的异常的详细信息。 有关配置跟踪的详细信息，请参阅： [Configuring Tracing](./diagnostics/tracing/configuring-tracing.md)。 有关跟踪文件查看器的详细信息，请参阅： [Service Trace Viewer Tool (SvcTraceViewer.exe)](service-trace-viewer-tool-svctraceviewer-exe.md)。  
@@ -158,7 +158,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>我对我的服务使用的是 X.509 证书，并且获得一个 System.Security.Cryptography.CryptographicException。 发生了什么情况？  
- 这通常发生在更改了 IIS 辅助进程运行时所使用的用户帐户之后。 例如，在 [!INCLUDE[wxp](../../../includes/wxp-md.md)]中，如果将 Aspnet_wp.exe 运行时所使用的默认用户帐户 ASPNET 更改为自定义用户帐户，则您可能会看到此错误。 如果使用的是私钥，则使用该私钥的进程需要具有访问存储该私钥的文件的权限。  
+ 这通常发生在更改了 IIS 辅助进程运行时所使用的用户帐户之后。 例如，在 Windows XP 中，如果你将 Aspnet_wp 的默认用户帐户从 ASPNET 更改为自定义用户帐户，你可能会看到此错误。 如果使用的是私钥，则使用该私钥的进程需要具有访问存储该私钥的文件的权限。  
   
  如果的确如此，则必须向该进程的帐户授予对包含该私钥的文件的读访问特权。 例如，如果 IIS 辅助进程运行在 Bob 帐户下，则您需要向 Bob 授予对包含该私钥的文件的读访问权。  
   

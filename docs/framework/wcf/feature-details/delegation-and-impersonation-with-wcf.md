@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 578957888daf7be20ab7418a46c533a011b3d2ac
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 3fd90cde16afdfe32b9bd0533ba04e35928d2706
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964166"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920201"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF 的委派和模拟
 模拟 是一种常用技术，服务可使用该技术限制客户端对服务域资源的访问。 服务域资源可以是计算机资源，如本地文件（模拟），也可以是其他计算机上的资源，如文件共享（委托）。 有关示例应用程序，请参见 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)。 有关如何使用模拟的示例，请参阅 [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)。  
@@ -71,7 +71,7 @@ ms.locfileid: "75964166"
  仅当调用方使用可以映射到 Windows 用户帐户的凭据进行身份验证时，WCF 基础结构才能模拟调用方。 如果将服务配置为使用无法映射到 Windows 用户帐户的凭据进行身份验证，则不会执行服务方法。  
   
 > [!NOTE]
-> 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，如果创建了有状态 SCT，则模拟会失败，导致 <xref:System.InvalidOperationException>。 有关详细信息，请参阅[不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
+> 在 Windows XP 上，如果创建了有状态 SCT，则模拟会失败，从而导致 <xref:System.InvalidOperationException>。 有关详细信息，请参阅[不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>服务方法中的模拟：命令性模型  
  有时，调用方不需要模拟整个服务方法，只需模拟它的一部分就行。 在这种情况下，请获取服务方法中调用方的 Windows 标识并以强制方式执行模拟。 为此，请使用 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 的 <xref:System.ServiceModel.ServiceSecurityContext> 属性返回 <xref:System.Security.Principal.WindowsIdentity> 类的实例并在使用该实例前调用 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 方法。  

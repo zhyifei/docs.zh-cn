@@ -2,12 +2,12 @@
 title: 排队消息处理疑难解答
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 3d2d48076fafe44687546ca27e4d8670b81ce433
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 5c039c34983647884561f33645f26e4a89280248
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742667"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921269"
 ---
 # <a name="troubleshooting-queued-messaging"></a>排队消息处理疑难解答
 
@@ -25,7 +25,7 @@ ms.locfileid: "76742667"
 
 **问：** 是否必须升级 MSMQ 才能使用 <xref:System.ServiceModel.NetMsmqBinding> 和 `MsmqIntegration` 绑定？
 
-**答：** 否。 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 Windows Server 2003 上，这两种绑定都适用于 MSMQ 3.0。 升级到 Windows Vista 中的 MSMQ 4.0 时，绑定的某些功能将变为可用。
+**答：** 否。 在 Windows XP 和 Windows Server 2003 上，这两种绑定都适用于 MSMQ 3.0。 升级到 Windows Vista 中的 MSMQ 4.0 时，绑定的某些功能将变为可用。
 
 **问：** <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 绑定的哪些功能在 MSMQ 4.0 中可用，但在 MSMQ 3.0 中不可用？
 

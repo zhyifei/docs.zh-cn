@@ -2,16 +2,16 @@
 title: 不支持的方案
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: a963b46d22f2103cddcc8fd080feefc39070690c
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: b643e6df8a877860ce36fc6ee34c4e4ca08ec748
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901267"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921163"
 ---
 # <a name="unsupported-scenarios"></a>不支持的方案
 
-由于各种原因，Windows Communication Foundation （WCF）不支持某些特定的安全方案。 例如，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 不实现 SSPI 或 Kerberos 身份验证协议，因此 WCF 不支持在该平台上使用 Windows 身份验证运行服务。 在 Windows XP Home Edition 下运行 WCF 时，支持其他身份验证机制，例如用户名/密码和 HTTP/HTTPS 集成身份验证。
+由于各种原因，Windows Communication Foundation （WCF）不支持某些特定的安全方案。 例如，Windows XP Home Edition 不实现 SSPI 或 Kerberos 身份验证协议，因此 WCF 不支持在该平台上使用 Windows 身份验证运行服务。 在 Windows XP Home Edition 下运行 WCF 时，支持其他身份验证机制，例如用户名/密码和 HTTP/HTTPS 集成身份验证。
 
 ## <a name="impersonation-scenarios"></a>模拟方案
 
@@ -22,7 +22,7 @@ ms.locfileid: "75901267"
 
 当存在以下情况时，WCF 不支持模拟，并引发 <xref:System.InvalidOperationException>：
 
-- 操作系统为 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。
+- 操作系统为 Windows XP。
 
 - 身份验证模式产生 Windows 标识。
 
@@ -35,7 +35,7 @@ ms.locfileid: "75901267"
  或者，在配置中，通过创建一个 <`customBinding`>，然后添加 <`security`> 元素，并将 `authenticationMode` 特性设置为 Ws-secureconversation，并将 `requireSecurityContextCancellation` 特性设置为 `true`来启用该标记。
 
 > [!NOTE]
-> 上述要求是特定的。 例如，<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 创建一个产生 Windows 标识的绑定元素，但并不建立一个 SCT。 因此，在 `Required` 上，可以将其与 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 选项一起使用。
+> 上述要求是特定的。 例如，<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 创建一个产生 Windows 标识的绑定元素，但并不建立一个 SCT。 因此，你可以将其与 Windows XP 上的 `Required` 选项一起使用。
 
 ### <a name="possible-aspnet-conflict"></a>可能的 ASP.NET 冲突
 

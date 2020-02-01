@@ -9,12 +9,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 7f24966f06730e62ea7a8967c3930f05ca78f50e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 71dbf395f43c8028a703a342c032f2b8d022a61c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347087"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921297"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>如何：使 X.509 证书可由 WCF 访问
 为了使 x.509 证书可 Windows Communication Foundation （WCF）可访问，应用程序代码必须指定证书存储名称和位置。 在某些情况下，进程标识必须具有对包含私钥的文件的访问权限，此私钥与 X.509 证书相关联。 若要获取与证书存储区中的 x.509 证书关联的私钥，WCF 必须有权执行此操作。 默认情况下，只有所有者和“系统”帐户才可以访问证书的私钥。  
@@ -60,7 +60,7 @@ ms.locfileid: "75347087"
         |客户端（控制台或 WinForms 应用程序）。|当前登录的用户。|  
         |自承载服务。|当前登录的用户。|  
         |承载在 IIS 6.0 （Windows Server 2003）或 IIS 7.0 （Windows Vista）中的服务。|NETWORK SERVICE|  
-        |在 IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]) 中承载的服务。|由 Machine.config 文件中的 `<processModel>` 元素控制。 默认帐户为 ASPNET。|  
+        |承载于 IIS 1.x （Windows XP）中的服务。|由 Machine.config 文件中的 `<processModel>` 元素控制。 默认帐户为 ASPNET。|  
   
     5. 使用 icacls 之类的工具，向运行 WCF 的帐户授予对包含私钥的文件的读取访问权限。  
   

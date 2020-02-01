@@ -2,18 +2,18 @@
 title: 安装“消息队列 (MSMQ)”
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: e6d6a3a2e1bc0a0c936e4b8594eab836b559e5a7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8ecbd07adfb6bfb4e9898f9b8508809480d17e16
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344737"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921105"
 ---
 # <a name="installing-message-queuing-msmq"></a>安装“消息队列 (MSMQ)”
 以下过程介绍如何安装“消息队列 4.0”和“消息队列 3.0”。  
   
 > [!NOTE]
-> 消息队列4.0 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 Windows Server 2003 中不可用。  
+> 在 Windows XP 和 Windows Server 2003 中，消息队列4.0 不可用。  
   
 #### <a name="to-install-message-queuing-40-on-windows-server-2008-or-windows-server-2008-r2"></a>在 Windows Server 2008 or Windows Server 2008 R2 上安装消息队列 4.0  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75344737"
   
     - MSMQ HTTP 支持。  
   
-4. 单击" **确定**"。  
+4. 单击“确定”。  
   
 5. 如果系统提示您重新启动计算机，请单击 **"确定"** 以完成安装。  
   

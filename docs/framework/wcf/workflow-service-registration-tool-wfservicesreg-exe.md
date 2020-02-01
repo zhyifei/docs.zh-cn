@@ -2,12 +2,12 @@
 title: 工作流服务注册工具 (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 182bef75bff1785905d77d3bc497e0701e297912
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5e7d39062a8ad016eebf949daa625a5ba7848328
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346592"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921230"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>工作流服务注册工具 (WFServicesReg.exe)
 工作流服务注册工具 (WFServicesReg.exe) 是一个独立的工具，可用于添加、移除或修复 Windows Workflow Foundation (WF) 服务的配置元素。  
@@ -56,7 +56,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  该工具还在 IIS 元数据库中注册 .xoml 和 .rules 脚本映射和处理程序。  
   
- 在 Windows Server 2003 和 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 机（IIS 5.1 和 IIS 6.0）上，注册了一组 xoml 和. 规则脚本映射。  
+ 在 Windows Server 2003 和 Windows XP 计算机（IIS 5.1 和 IIS 6.0）上，注册了一组 xoml 和. 规则脚本映射。  
   
  在 64 位计算机上，如果启用 `Enable32BitAppOnWin64` 开关，则该工具注册 WOW 模式脚本映射；如果禁用 `Enable32BitAppOnWin64` 开关，则该工具注册本机 64 位模式脚本映射。  
   

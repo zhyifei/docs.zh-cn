@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 6505cc027b2983fd61ae53ca7ae43319024c74f7
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: e1c3e3d7697bf9a85cf0ab7df35a4755939d1df0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964704"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921414"
 ---
 # <a name="auditing-security-events"></a>审核安全事件
 用 Windows Communication Foundation （WCF）创建的应用程序可以通过审核功能记录安全事件（成功和/或失败）。 这些事件被写入 Windows 系统事件日志，并且可以使用事件查看器进行检查。  
@@ -32,7 +32,7 @@ ms.locfileid: "75964704"
   
  写入 Security 日志要求具有 `SeAuditPrivilege`。 默认情况下，只有“本地系统”和“网络服务”帐户具有此特权。 管理 Security 日志功能 `read` 和 `delete` 要求具有 `SeSecurityPrivilege`。 默认情况下，只有管理员具有此特权。  
   
- 与此相反，经过身份验证的用户可以读取和写入应用程序日志。 默认情况下，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] 将审核事件写入到应用程序日志。 该日志还包含对所有通过身份验证的用户可见的个人信息。  
+ 与此相反，经过身份验证的用户可以读取和写入应用程序日志。 默认情况下，Windows XP 将审核事件写入应用程序日志。 该日志还包含对所有通过身份验证的用户可见的个人信息。  
   
 ## <a name="suppressing-audit-failures"></a>禁止显示审核失败  
  审核过程中的另一个选择为是否禁止显示任何审核失败。 默认情况下，审核失败不会影响应用程序。 但是，如若需要，可将此选项设置为 `false`，这将导致引发异常。  
@@ -78,7 +78,7 @@ ms.locfileid: "75964704"
 ## <a name="security-considerations"></a>需要考虑的安全性因素  
  如果恶意用户了解到审核功能处于启用状态，攻击者可能会发送将导致写入审核项的无效消息。 如果以这种方式填充审核日志，则审核系统会出现故障。 为了缓解此问题，请将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 属性设置为 `true`，然后使用事件查看器的属性来控制审核行为。  
   
- 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上写入 Application 日志的审核事件对任何通过身份验证的用户都是可见的。  
+ 写入到 Windows XP 上的应用程序日志的审核事件对任何经过身份验证的用户可见。  
   
 ## <a name="choosing-between-application-and-security-event-logs"></a>选择 Application 或 Security 事件日志  
  下表提供的信息有助于您选择是记录到 Application 事件日志中还是记录到 Security 事件日志中。  
@@ -87,7 +87,7 @@ ms.locfileid: "75964704"
   
 |System|Application 日志|Security 日志|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 或更高版本|支持|不支持|  
+|Windows XP SP2 或更高版本|支持|不支持|  
 |Windows Server 2003 SP1 和 Windows Vista|支持|线程上下文必须具有 `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>其他因素  

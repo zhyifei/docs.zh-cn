@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 108048f6bdd2c02a67e331bd7b07b724d0e86527
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 2e0fb579897797b732859692092665225a0d6168
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963804"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919355"
 ---
 # <a name="host-in-internet-information-services"></a>Internet Information Services 中的主机
 
@@ -19,7 +19,7 @@ ms.locfileid: "75963804"
 
 可以在以下操作系统上的 IIS 版本上承载 WCF：
 
-- [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 上的 IIS 5.1。 此环境可用于设计和开发 IIS 托管的应用程序，这些应用程序稍后部署在服务器操作系统（如 Windows Server 2003）中。
+- Windows XP SP2 上的 IIS 5.1。 此环境可用于设计和开发 IIS 托管的应用程序，这些应用程序稍后部署在服务器操作系统（如 Windows Server 2003）中。
 
 - IIS 6.0（在 Windows Server 2003 上）。 IIS 6.0 提供了一个高级的进程模型，该模型提供经过改进的可伸缩性、可靠性和应用程序隔离。 此环境适用于仅使用 HTTP 通信的 WCF 服务的生产部署。
 

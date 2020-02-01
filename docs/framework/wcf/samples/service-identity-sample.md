@@ -2,12 +2,12 @@
 title: 服务标识示例
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 375246127b6b39440360f48fc7b24bd0388a35e5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 868bd6e0ac7429224462c973c1c48132ec3860ba
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347927"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919365"
 ---
 # <a name="service-identity-sample"></a>服务标识示例
 此服务标识示例演示如何为服务设置标识。 客户端可以在设计时使用服务的元数据来检索标识，然后在运行时对服务的标识进行身份验证。 服务标识的概念是允许客户端在调用服务的任何操作之前对服务进行身份验证，从而保护客户端，防止进行未经身份验证的调用。 在安全连接中，服务还在允许客户端访问其之前对客户端的凭据进行身份验证，但这不是此示例要介绍的重点。 请参阅[客户端](../../../../docs/framework/wcf/samples/client.md)中显示服务器身份验证的示例。
@@ -115,7 +115,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例
 
-1. 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 或 Windows Vista 上，使用 MMC 管理单元工具将标识解决方案文件夹中的 Identity 证书文件导入到 LocalMachine/My （个人）证书存储中。 此文件受密码保护。 在导入过程中，将提示您输入密码。 在 "密码" 框中键入 `xyz`。 有关详细信息，请参阅[如何：通过 MMC 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)主题。 完成此操作后，在 Visual Studio 的开发人员命令提示中，使用管理员权限运行 Setup.exe，此操作将此证书复制到 CurrentUser/受信任的人员存储区，以便在客户端上使用。
+1. 在 Windows XP 或 Windows Vista 上，使用 MMC 管理单元工具将标识解决方案文件夹中的 Identity 证书文件导入到 LocalMachine/My （个人）证书存储区。 此文件受密码保护。 在导入过程中，将提示您输入密码。 在 "密码" 框中键入 `xyz`。 有关详细信息，请参阅[如何：通过 MMC 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)主题。 完成此操作后，在 Visual Studio 的开发人员命令提示中，使用管理员权限运行 Setup.exe，此操作将此证书复制到 CurrentUser/受信任的人员存储区，以便在客户端上使用。
 
 2. 在 Windows Server 2003 上，使用管理员权限在 Visual Studio 2012 命令提示符下从示例安装文件夹运行安装程序。 这将安装运行示例所需的所有证书。
 

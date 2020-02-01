@@ -2,12 +2,12 @@
 title: MSMQ 4.0 中的病毒消息处理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 71ce6d3df69164aa0d565539bad5e843a7ed6a47
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: cc4da0deea0de2cd8b3bb8e8f2ba9b8a17e3cc60
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337505"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919398"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 中的病毒消息处理
 本示例演示如何在服务中执行病毒消息处理。 此示例基于已进行[事务处理的 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。 其中使用到了 `netMsmqBinding`。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。
@@ -18,7 +18,7 @@ ms.locfileid: "75337505"
 
  根据 MSMQ 版本，NetMsmqBinding 支持对病毒消息进行有限检测和完全检测。 在已经将消息检测为病毒后，可以通过多种方式对消息进行处理。 同样，根据 MSMQ 版本，NetMsmqBinding 支持对病毒消息进行有限处理和完全处理。
 
- 此示例演示了 Windows Server 2003 上提供的有限病毒功能和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 平台以及 Windows Vista 上提供的完整病毒功能。 在这两个示例中，目的是将病毒消息从一个队列移出到另一个队列，然后由病毒消息服务对其进行处理。
+ 此示例演示了 windows Server 2003 和 Windows XP 平台上提供的有限病毒功能，以及 Windows Vista 上提供的完整病毒功能。 在这两个示例中，目的是将病毒消息从一个队列移出到另一个队列，然后由病毒消息服务对其进行处理。
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 病毒处理示例
  在 Windows Vista 中，MSMQ 提供了可用于存储病毒消息的病毒子队列设备。 此示例演示使用 Windows Vista 处理病毒消息的最佳实践。

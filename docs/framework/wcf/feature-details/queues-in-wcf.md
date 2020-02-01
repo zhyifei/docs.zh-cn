@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: fbe3a546fd431beb5ddf1d71153d38580a19ecc9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 92bd3a6809386764251c4a69c6bc583ed745205d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348342"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921362"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation 中的队列
 本节中的主题讨论 Windows Communication Foundation （WCF）对队列的支持。 WCF 通过利用 Microsoft 消息队列（以前称为 MSMQ）作为传输来提供队列支持，并启用以下方案：  
@@ -50,7 +50,7 @@ ms.locfileid: "75348342"
  说明如何处理病毒消息（向接收应用程序尝试传送的次数超出最大次数的消息）。  
   
  [Windows Vista、Windows Server 2003 和 Windows XP 在排队功能方面的差异](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- 概述了 Windows Vista、Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]之间 WCF 队列功能之间的差异。  
+ 概述 Windows Vista、Windows Server 2003 和 Windows XP 之间的 WCF 队列功能之间的差异。  
   
  [使用传输安全性保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  介绍如何使用传输安全来保护排队消息。  
