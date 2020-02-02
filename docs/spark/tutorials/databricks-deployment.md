@@ -1,15 +1,15 @@
 ---
 title: 将 .NET for Apache Spark 应用程序部署到 Databricks
 description: 了解如何将 .NET for Apache Spark 应用程序部署到 Databricks。
-ms.date: 05/17/2019
+ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: dfd33e83c04428b7a6a72e4992c40f00982b1958
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a117d85ab911b380598c93417f6ff95661ab864c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960461"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868026"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>教程：将 .NET for Apache Spark 应用程序部署到 Databricks
 
@@ -24,7 +24,7 @@ ms.locfileid: "74960461"
 > - 创建 Spark 作业和 Spark 群集。
 > - 在 Spark 群集上运行应用。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 开始之前，请完成以下任务：
 
@@ -46,14 +46,14 @@ ms.locfileid: "74960461"
 
 2. 在“Azure Databricks 服务”  下，提供所需的值以创建 Databricks 工作区。
 
-    |属性  |说明  |
+    |Property  |描述  |
     |---------|---------|
     |**工作区名称**     | 为 Databricks 工作区提供一个名称。        |
     |**订阅**     | 从下拉列表中选择自己的 Azure 订阅。        |
     |**资源组**     | 指定是要创建新的资源组还是使用现有的资源组。 资源组是用于保存 Azure 解决方案相关资源的容器。 有关详细信息，请参阅 [Azure 资源组概述](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)。 |
     |**位置**     | 选择首选区域。 有关可用区域的信息，请参阅[各区域推出的 Azure 服务](https://azure.microsoft.com/regions/services/)。        |
     |**定价层**     |  在“标准”、“高级”和“试用”之间进行选择。    有关这些层的详细信息，请参阅 [Databricks 价格页](https://azure.microsoft.com/pricing/details/databricks/)。       |
-    |**虚拟网络**     |   No       |
+    |**虚拟网络**     |   否       |
 
 3. 选择“创建”  。 创建工作区需要几分钟时间。 创建工作区时，可以在“通知”中查看部署状态。 
 
@@ -190,7 +190,7 @@ Databricks CLI 安装完毕之后，接下来需要设置身份验证详细信�
 3. 在作业配置中粘贴以下参数。 然后，选择“确认”  。
 
    ```
-   ["--class","org.apache.spark.deploy.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
+   ["--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
    ```
 
 ## <a name="create-a-cluster"></a>创建群集

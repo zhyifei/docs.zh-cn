@@ -1,15 +1,15 @@
 ---
 title: 将 .NET for Apache Spark 应用程序部署到 Azure HDInsight
 description: 了解如何将 .NET for Apache Spark 应用程序部署到 HDInsight。
-ms.date: 05/17/2019
+ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3604aff5d1f138071c941ea85546af03185d722d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 76a150879324640352aa36f753ec3d6e7342bcaf
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460715"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860773"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>教程：将 .NET for Apache Spark 应用程序部署到 Azure HDInsight
 
@@ -25,7 +25,7 @@ ms.locfileid: "73460715"
 > * 创建并运行 HDInsight 脚本操作。
 > * 在 HDInsight 群集上运行 .NET for Apache Spark 应用。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 开始之前，请完成以下任务：
 
@@ -57,7 +57,7 @@ ms.locfileid: "73460715"
 
 3. 在“基本”下，提供以下值  ：
 
-    |属性  |说明  |
+    |Property  |描述  |
     |---------|---------|
     |订阅  | 从下拉列表中选择一个可用 Azure 订阅。 |
     |资源组 | 指定是要创建新的资源组还是使用现有的资源组。 资源组是用于保存 Azure 解决方案相关资源的容器。 |
@@ -71,7 +71,7 @@ ms.locfileid: "73460715"
 
 4. 在完成时选择“下一步:  存储 >>”转到“存储”页  。 在“存储”下，提供以下值  ：
 
-    |属性  |说明  |
+    |Property  |描述  |
     |---------|---------|
     |主存储类型|使用默认值“Azure 存储”。 |
     |选择方法|使用默认值“从列表中选择”。 |
@@ -148,10 +148,10 @@ ms.locfileid: "73460715"
 
 2. 选择“+ 提交新脚本”并提供以下值  ：
 
-   |属性  |说明  |
+   |Property  |描述  |
    |---------|---------|
    | 脚本类型 |自定义|
-   | name | 安装辅助角色|
+   | “属性” | 安装辅助角色|
    | Bash 脚本 URI |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> 要确认此 URI，请在 Azure 存储资源管理器中右键单击“install-worker.sh”，然后选择“属性”。 |
    | 节点类型| 辅助角色|
    | 参数 | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
@@ -169,7 +169,7 @@ ms.locfileid: "73460715"
    ```bash
    $SPARK_HOME/bin/spark-submit \
    --master yarn \
-   --class org.apache.spark.deploy.DotnetRunner \
+   --class org.apache.spark.deploy.dotnet.DotnetRunner \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```

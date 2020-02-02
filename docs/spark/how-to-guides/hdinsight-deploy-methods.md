@@ -4,12 +4,12 @@ description: 了解如何使用 spark-submit 和 Apache Livy 将 .NET for Apache
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: cdd5e15ffde78ccb8b3156ee047b8ca98f7320b8
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d558234a53cc22d65540a380ac7f5b3ac03ba0ae
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74553021"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868013"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>将 .NET for Apache Spark 作业提交到 Azure HDInsight
 
@@ -28,7 +28,7 @@ ms.locfileid: "74553021"
    ```bash
    $SPARK_HOME/bin/spark-submit \
    --master yarn \
-   --class org.apache.spark.deploy.DotnetRunner \
+   --class org.apache.spark.deploy.dotnet.DotnetRunner \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
