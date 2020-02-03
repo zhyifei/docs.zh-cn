@@ -1,5 +1,5 @@
 ---
-title: 클래스와 구조체 간의 선택
+title: 在类和结构之间选择
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -19,7 +19,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741746"
 ---
-# <a name="choosing-between-class-and-struct"></a>클래스와 구조체 간의 선택
+# <a name="choosing-between-class-and-struct"></a>在类和结构之间选择
 每个框架设计者面临的基本设计决策之一是将类型设计为类（引用类型）还是结构（值类型）。 要做出合适的选择，深入理解引用类型和值类型的行为差异非常重要。
 
  我们要考虑的第一个引用类型和值类型之间的区别是引用类型在堆上分配并进行垃圾回收，而值类型在堆栈中分配并在堆栈展开时被释放，或内联包含类型并在它们的包含类型被释放时被释放。 因此，值类型的分配和释放通常比引用类型的分配和释放开销更低。
@@ -50,9 +50,9 @@ ms.locfileid: "76741746"
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。
 
 ## <a name="see-also"></a>另请参阅
 
-- [형식 디자인 지침](../../../docs/standard/design-guidelines/type.md)
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
+- [类型设计准则](../../../docs/standard/design-guidelines/type.md)
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)

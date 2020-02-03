@@ -25,7 +25,7 @@ ms.locfileid: "76743945"
   
  [利用硬件](optimizing-performance-taking-advantage-of-hardware.md)  
   
- [布局和示例](optimizing-performance-layout-and-design.md)  
+ [布局和设计](optimizing-performance-layout-and-design.md)  
   
  [2D 图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)  
   
@@ -33,11 +33,11 @@ ms.locfileid: "76743945"
   
  [应用程序资源](optimizing-performance-application-resources.md)  
   
- [“文本”](optimizing-performance-text.md)  
+ [Text](optimizing-performance-text.md)  
   
  [数据绑定](optimizing-performance-data-binding.md)  
   
- [控件](optimizing-performance-controls.md)  
+ [控制](optimizing-performance-controls.md)  
   
  [其他性能建议](optimizing-performance-other-recommendations.md)  
   

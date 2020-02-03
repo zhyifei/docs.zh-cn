@@ -1,5 +1,5 @@
 ---
-title: 類別庫
+title: 类库
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF class library [WPF]
@@ -17,7 +17,7 @@ ms.locfileid: "76742295"
   
 ## <a name="in-this-section"></a>本节内容  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
   
 - <xref:Microsoft.Build.Tasks.Windows>  
   

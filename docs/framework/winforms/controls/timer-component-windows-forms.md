@@ -26,7 +26,7 @@ Windows 窗体 <xref:System.Windows.Forms.Timer> 是一种按固定事件间隔�
  [如何：使用 Windows 窗体 Timer 组件按设置的时间间隔运行过程](run-procedures-at-set-intervals-with-wf-timer-component.md)  
  介绍如何在基于 Windows 的应用程序中响应定时的时间间隔。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> 类  
  提供类的相关引用信息，可用于 Windows 窗体计时器及其成员。  
   

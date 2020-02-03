@@ -1,5 +1,5 @@
 ---
-title: SaveFileDialog 구성 요소 개요
+title: SaveFileDialog 组件概述
 ms.date: 03/30/2017
 f1_keywords:
 - SaveFileDialog
@@ -16,7 +16,7 @@ ms.locfileid: "76743097"
 ---
 # <a name="savefiledialog-component-overview-windows-forms"></a>SaveFileDialog 组件概述（Windows 窗体）
 
-Windows Forms <xref:System.Windows.Forms.SaveFileDialog> 구성 요소는 미리 구성된 대화 상자입니다. 它与 Windows 使用的标准 "**保存文件**" 对话框相同。 <xref:System.Windows.Forms.CommonDialog> 클래스에서 상속됩니다.
+Windows 窗体 <xref:System.Windows.Forms.SaveFileDialog> 组件是一个预配置的对话框。 它与 Windows 使用的标准 "**保存文件**" 对话框相同。 它继承自 <xref:System.Windows.Forms.CommonDialog> 类。
 
 ## <a name="working-with-the-savefiledialog-component"></a>使用 SaveFileDialog 组件
 
@@ -29,4 +29,4 @@ Windows Forms <xref:System.Windows.Forms.SaveFileDialog> 구성 요소는 미리
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.SaveFileDialog>
-- [SaveFileDialog 구성 요소](savefiledialog-component-windows-forms.md)
+- [SaveFileDialog 组件](savefiledialog-component-windows-forms.md)

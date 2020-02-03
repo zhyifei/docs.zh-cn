@@ -30,7 +30,7 @@ ms.locfileid: "76736186"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
-- 名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件具有名为 `CompanyName` 的列。  
+- 名为 <xref:System.Windows.Forms.DataGridView> 的 `dataGridView1` 控件具有名为 `CompanyName` 的列。  
   
 - 对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   

@@ -14,7 +14,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743153"
 ---
-# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 순서 변경
+# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器更改 Windows 窗体 DataGridView 控件中列的顺序
 
 将 Windows 窗体 <xref:System.Windows.Forms.DataGridView> 控件绑定到数据源时，自动生成的列的显示顺序由数据源决定。 如果此顺序不是你喜欢的顺序，则可以使用设计器更改列的顺序。 你可能还需要向控件添加未绑定的列并更改其显示顺序。 有关如何以编程方式更改列顺序的信息，请参阅[如何：更改 Windows 窗体 DataGridView 控件中列的顺序](how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)。
 
@@ -31,6 +31,6 @@ ms.locfileid: "76743153"
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.DataGridView>
-- [방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 추가 및 제거](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [如何：使用设计器在 Windows 窗体 DataGridView 控件中添加和删除列](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
 - [如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)
+- [如何：向 Windows 窗体添加控件](how-to-add-controls-to-windows-forms.md)

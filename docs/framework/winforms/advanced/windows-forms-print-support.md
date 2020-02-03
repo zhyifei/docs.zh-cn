@@ -22,42 +22,42 @@ Windows 窗体中的打印主要包括使用[PrintDocument 组件](../controls/p
   
  在从基于 Windows 的应用程序中进行打印的过程中，<xref:System.Drawing.Printing.PrintDocument> 组件将显示 "中止打印" 对话框，以便向用户发出警报，提醒用户发生打印并允许取消打印作业。  
   
-## <a name="in-this-section"></a>섹션 내용  
- [방법: 표준 Windows Forms 인쇄 작업 만들기](how-to-create-standard-windows-forms-print-jobs.md)  
+## <a name="in-this-section"></a>本节内容  
+ [如何：创建标准的 Windows 窗体打印作业](how-to-create-standard-windows-forms-print-jobs.md)  
  介绍如何使用 <xref:System.Drawing.Printing.PrintDocument> 组件从 Windows 窗体中进行打印。  
   
- [방법: 런타임에 PrintDialog에서 사용자 입력 캡처](how-to-capture-user-input-from-a-printdialog-at-run-time.md)  
+ [如何：在运行时从 PrintDialog 中捕获用户输入](how-to-capture-user-input-from-a-printdialog-at-run-time.md)  
  说明如何使用 <xref:System.Windows.Forms.PrintDialog> 组件以编程方式修改选定的打印选项。  
   
- [방법: Windows Forms에서 사용자의 컴퓨터에 연결된 프린터 선택](how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md)  
+ [如何：在 Windows 窗体中选择用户计算机连接的打印机](how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md)  
  描述如何在运行时使用 <xref:System.Windows.Forms.PrintDialog> 组件更改要打印到的打印机。  
   
- [방법: Windows Forms의 그래픽 인쇄](how-to-print-graphics-in-windows-forms.md)  
+ [如何：在 Windows 窗体中打印图形](how-to-print-graphics-in-windows-forms.md)  
  介绍如何将图形发送到打印机。  
   
- [방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄](how-to-print-a-multi-page-text-file-in-windows-forms.md)  
+ [如何：打印 Windows 窗体中的多页文本文件](how-to-print-a-multi-page-text-file-in-windows-forms.md)  
  介绍如何将文本发送到打印机。  
   
- [방법: Windows Forms 인쇄 작업 완료](how-to-complete-windows-forms-print-jobs.md)  
+ [如何：完成 Windows 窗体打印作业](how-to-complete-windows-forms-print-jobs.md)  
  说明如何提醒用户完成打印作业。  
   
- [방법: Windows Form 인쇄](how-to-print-a-windows-form.md)  
+ [如何：打印 Windows 窗体](how-to-print-a-windows-form.md)  
  说明如何打印当前窗体的副本。  
   
- [방법: Windows Forms에서 인쇄 미리 보기를 사용하여 인쇄](how-to-print-in-windows-forms-using-print-preview.md)  
+ [如何：使用打印预览在 Windows 窗体中进行打印](how-to-print-in-windows-forms-using-print-preview.md)  
  演示如何使用 <xref:System.Windows.Forms.PrintPreviewDialog> 打印文档。  
   
-## <a name="related-sections"></a>관련 섹션  
- [PrintDocument 구성 요소](../controls/printdocument-component-windows-forms.md)  
+## <a name="related-sections"></a>相关章节  
+ [PrintDocument 组件](../controls/printdocument-component-windows-forms.md)  
  说明 <xref:System.Drawing.Printing.PrintDocument> 组件的用法。  
   
- [PrintDialog 구성 요소](../controls/printdialog-component-windows-forms.md)  
+ [PrintDialog 组件](../controls/printdialog-component-windows-forms.md)  
  说明 <xref:System.Windows.Forms.PrintDialog> 组件的用法。  
   
- [PrintPreviewDialog 컨트롤](../controls/printpreviewdialog-control-windows-forms.md)  
+ [PrintPreviewDialog 控件](../controls/printpreviewdialog-control-windows-forms.md)  
  说明 <xref:System.Windows.Forms.PrintPreviewDialog> 控件的用法。  
   
- [PageSetupDialog Component](../controls/pagesetupdialog-component-windows-forms.md)  
+ [PageSetupDialog 组件](../controls/pagesetupdialog-component-windows-forms.md)  
  说明 <xref:System.Windows.Forms.PageSetupDialog> 组件的用法。  
   
  <xref:System.Drawing.Printing>  

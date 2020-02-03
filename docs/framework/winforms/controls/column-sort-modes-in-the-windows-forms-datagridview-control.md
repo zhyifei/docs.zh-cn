@@ -12,10 +12,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744192"
 ---
-# <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 열 정렬 모드
+# <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的列排序模式
 <xref:System.Windows.Forms.DataGridView> 列具有三种排序模式。 每个列的排序模式是通过列的 <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> 属性指定的，该属性可设置为以下 <xref:System.Windows.Forms.DataGridViewColumnSortMode> 枚举值之一。  
   
-|`DataGridViewColumnSortMode` 값|설명|  
+|`DataGridViewColumnSortMode` 值|说明|  
 |----------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|文本框列的默认值。 除非列标题用于选择，否则，单击列标题会自动对此列 <xref:System.Windows.Forms.DataGridView> 排序，并显示指示排序顺序的标志符号。|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|非文本框列的默认值。 您可以通过编程方式对此列进行排序;但是，它不用于排序，因此不会为排序标志符号保留任何空间。|  
@@ -33,7 +33,7 @@ ms.locfileid: "76744192"
   
  当包含绑定列和未绑定列的 <xref:System.Windows.Forms.DataGridView> 控件进行排序时，无法自动维护未绑定列中的值。 若要维护这些值，必须通过将 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 属性设置为 `true` 并处理 <xref:System.Windows.Forms.DataGridView.CellValueNeeded> 和 <xref:System.Windows.Forms.DataGridView.CellValuePushed> 事件来实现虚拟模式。 有关详细信息，请参阅[如何：在 Windows 窗体 DataGridView 控件中实现虚拟模式](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)。 不支持在绑定模式下按未绑定列进行排序。  
   
-## <a name="programmatic-sorting"></a>프로그래밍 방식 정렬  
+## <a name="programmatic-sorting"></a>编程排序  
  可以通过调用其 <xref:System.Windows.Forms.DataGridView.Sort%2A> 方法以编程方式对 <xref:System.Windows.Forms.DataGridView> 进行排序。  
   
  <xref:System.Windows.Forms.DataGridView.Sort%2A> 方法的 `Sort(DataGridViewColumn,ListSortDirection)` 重载采用 <xref:System.Windows.Forms.DataGridViewColumn>，并将 <xref:System.ComponentModel.ListSortDirection> 枚举值作为参数。 此重载在按具有可有意义的值的列进行排序时非常有用，但不希望将其配置为自动排序。 当你调用此重载并传入 <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> 属性值为 <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic?displayProperty=nameWithType>的列时，将自动设置 <xref:System.Windows.Forms.DataGridView.SortedColumn%2A> 和 <xref:System.Windows.Forms.DataGridView.SortOrder%2A> 属性，并且相应的排序标志符号将出现在列标题中。  
@@ -66,6 +66,6 @@ ms.locfileid: "76744192"
 - <xref:System.Windows.Forms.DataGridView.SortOrder%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
-- [Windows Forms DataGridView 컨트롤의 데이터 정렬](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤의 열 정렬 모드 설정](set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤에서 정렬 사용자 지정](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [在 Windows 窗体 DataGridView 控件中进行数据排序](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [如何：设置 Windows 窗体 DataGridView 控件中列的排序模式](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [如何：在 Windows 窗体 DataGridView 控件中自定义排序](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

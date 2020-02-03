@@ -70,7 +70,7 @@ ms.locfileid: "76744134"
 
 <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> 集合不会通过大型选择有效地执行。 尽管与典型的 <xref:System.Windows.Forms.DataGridView> 控件中的单元格相比，其行比典型的控件中的单元数少很多，而且还有比行少的列，但 <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> 和 <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> 集合也可能效率低下。 若要避免在使用这些集合时出现性能损失，请使用以下准则：
 
-- 若要确定在访问 <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> 集合的内容之前是否选择了 <xref:System.Windows.Forms.DataGridView> 中的所有单元格，请检查 <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> 方法的返回值。 但请注意，此方法可能导致行成为非共享行。 有关更多信息，请参见下一节。
+- 若要确定在访问 <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> 集合的内容之前是否选择了 <xref:System.Windows.Forms.DataGridView> 中的所有单元格，请检查 <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> 方法的返回值。 但请注意，此方法可能导致行成为非共享行。 有关详细信息，请参阅下一节。
 
 - 避免使用 <xref:System.Windows.Forms.DataGridViewSelectedCellCollection?displayProperty=nameWithType> 的 <xref:System.Collections.ICollection.Count%2A> 属性来确定所选单元格的数目。 请改用 <xref:System.Windows.Forms.DataGridView.GetCellCount%2A?displayProperty=nameWithType> 方法，并传入 <xref:System.Windows.Forms.DataGridViewElementStates.Selected?displayProperty=nameWithType> 值。 同样，使用 <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A?displayProperty=nameWithType> 方法来确定所选元素的数目，而不是访问所选的行和列集合。
 

@@ -21,7 +21,7 @@ Windows 窗体提供了执行多个函数的控件和组件。 下表根据常�
   
 ## <a name="recommended-controls-and-components-by-function"></a>推荐的控件和组件（按功能）  
   
-|函数|控件|描述|  
+|函数|控件|说明|  
 |--------------|-------------|-----------------|  
 |数据显示|<xref:System.Windows.Forms.DataGridView> 控件|<xref:System.Windows.Forms.DataGridView> 控件提供了一个可自定义的表来显示数据。 <xref:System.Windows.Forms.DataGridView> 类启用单元格、行、列和边框的自定义。 **注意：** <xref:System.Windows.Forms.DataGridView> 控件提供了许多在 <xref:System.Windows.Forms.DataGrid> 控件中缺少的基本和高级功能。 有关详细信息，请参阅[Windows 窗体 DataGridView 和 DataGrid 控件之间的差异](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
 |数据绑定和导航|<xref:System.Windows.Forms.BindingSource> 组件|通过提供货币管理、更改通知和其他服务，简化窗体上的控件与数据的绑定。|  

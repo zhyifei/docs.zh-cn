@@ -46,7 +46,7 @@ Windows 窗体 <xref:System.Windows.Forms.ToolStrip> 控件及其关联的类提
   
 ### <a name="important-toolstrip-members"></a>重要 ToolStrip 成员  
   
-|Name|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|获取或设置 <xref:System.Windows.Forms.ToolStrip> 停靠到的父容器的边缘。|  
 |<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|获取或设置一个用于指示是否专门由 <xref:System.Windows.Forms.ToolStrip> 类处理拖放和项重新排序操作的值。|  
@@ -55,14 +55,14 @@ Windows 窗体 <xref:System.Windows.Forms.ToolStrip> 控件及其关联的类提
 |<xref:System.Windows.Forms.ToolStrip.IsDropDown%2A>|获取一个值，该值指示在单击 <xref:System.Windows.Forms.ToolStripItem> 时，<xref:System.Windows.Forms.ToolStripItem> 是否显示下拉列表中的其他项。|  
 |<xref:System.Windows.Forms.ToolStrip.OverflowButton%2A>|获取 <xref:System.Windows.Forms.ToolStripItem>，它是启用了溢出的 <xref:System.Windows.Forms.ToolStrip> 的“溢出”按钮。|  
 |<xref:System.Windows.Forms.ToolStrip.Renderer%2A>|获取或设置用于自定义 <xref:System.Windows.Forms.ToolStrip>的外观和行为（外观）的 <xref:System.Windows.Forms.ToolStripRenderer>。|  
-|<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|获取或设置要应用于 <xref:System.Windows.Forms.ToolStrip>的绘制样式。|  
+|<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|获取或设置要应用于 <xref:System.Windows.Forms.ToolStrip> 的绘制样式。|  
 |<xref:System.Windows.Forms.ToolStrip.RendererChanged>|在 <xref:System.Windows.Forms.ToolStrip.Renderer%2A> 属性更改时引发。|  
   
  通过使用多个伴生类来实现 <xref:System.Windows.Forms.ToolStrip> 控件的灵活性。 下面是一些最值得注意的事项：  
   
 ### <a name="important-toolstrip-companion-classes"></a>重要的 ToolStrip 伴生类  
   
-|Name|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|替换 <xref:System.Windows.Forms.MainMenu> 类并向其中添加功能。|  
 |<xref:System.Windows.Forms.StatusStrip>|替换 <xref:System.Windows.Forms.StatusBar> 类并向其中添加功能。|  
@@ -71,7 +71,7 @@ Windows 窗体 <xref:System.Windows.Forms.ToolStrip> 控件及其关联的类提
 |<xref:System.Windows.Forms.ToolStripContainer>|提供一个容器，该容器在窗体的每一侧有一个面板，可通过多种方式排列控件。|  
 |<xref:System.Windows.Forms.ToolStripRenderer>|处理 <xref:System.Windows.Forms.ToolStrip> 对象的绘制功能。|  
 |<xref:System.Windows.Forms.ToolStripProfessionalRenderer>|提供 Microsoft Office 样式的外观。|  
-|<xref:System.Windows.Forms.ToolStripManager>|控制 <xref:System.Windows.Forms.ToolStrip> 的呈现和漂浮，以及 <xref:System.Windows.Forms.MenuStrip>、<xref:System.Windows.Forms.ToolStripDropDownMenu>和 <xref:System.Windows.Forms.ToolStripMenuItem> 对象的合并。|  
+|<xref:System.Windows.Forms.ToolStripManager>|控制 <xref:System.Windows.Forms.ToolStrip> 的呈现和漂浮，以及 <xref:System.Windows.Forms.MenuStrip>、<xref:System.Windows.Forms.ToolStripDropDownMenu> 和 <xref:System.Windows.Forms.ToolStripMenuItem> 对象的合并。|  
 |<xref:System.Windows.Forms.ToolStripManagerRenderMode>|指定应用于窗体中包含的多个 <xref:System.Windows.Forms.ToolStrip> 对象的绘制样式（自定义、Windows XP 或 Microsoft Office 专业版）。|  
 |<xref:System.Windows.Forms.ToolStripRenderMode>|指定应用于窗体中包含的一个 <xref:System.Windows.Forms.ToolStrip> 对象的绘制样式（自定义、Windows XP 或 Microsoft Office 专业版）。|  
 |<xref:System.Windows.Forms.ToolStripControlHost>|承载并非专门 <xref:System.Windows.Forms.ToolStrip> 控件但要 <xref:System.Windows.Forms.ToolStrip> 功能的其他控件。|  

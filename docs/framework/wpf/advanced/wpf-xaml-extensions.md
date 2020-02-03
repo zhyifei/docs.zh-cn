@@ -15,15 +15,15 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744407"
 ---
-# <a name="wpf-xaml-extensions"></a>WPF XAML 확장
-## <a name="in-this-section"></a>섹션 내용  
- [Binding 태그 확장](binding-markup-extension.md)  
-  [ColorConvertedBitmap 태그 확장](colorconvertedbitmap-markup-extension.md)  
-  [ComponentResourceKey 태그 확장](componentresourcekey-markup-extension.md)  
-  [DynamicResource 태그 확장](dynamicresource-markup-extension.md)  
-  [RelativeSource 태그 확장](relativesource-markupextension.md)  
-  [StaticResource 태그 확장](staticresource-markup-extension.md)  
-  [TemplateBinding 태그 확장](templatebinding-markup-extension.md)  
-  [ThemeDictionary 태그 확장](themedictionary-markup-extension.md)  
-  [PropertyPath XAML 구문](propertypath-xaml-syntax.md)  
-  [PresentationOptions:Freeze 특성](presentationoptions-freeze-attribute.md)
+# <a name="wpf-xaml-extensions"></a>WPF XAML 扩展
+## <a name="in-this-section"></a>本节内容  
+ [绑定标记扩展](binding-markup-extension.md)  
+  [ColorConvertedBitmap 标记扩展](colorconvertedbitmap-markup-extension.md)  
+  [ComponentResourceKey 标记扩展](componentresourcekey-markup-extension.md)  
+  [DynamicResource 标记扩展](dynamicresource-markup-extension.md)  
+  [RelativeSource 标记扩展](relativesource-markupextension.md)  
+  [StaticResource 标记扩展](staticresource-markup-extension.md)  
+  [TemplateBinding 标记扩展](templatebinding-markup-extension.md)  
+  [ThemeDictionary 标记扩展](themedictionary-markup-extension.md)  
+  [PropertyPath XAML 语法](propertypath-xaml-syntax.md)  
+  [PresentationOptions:Freeze 特性](presentationoptions-freeze-attribute.md)

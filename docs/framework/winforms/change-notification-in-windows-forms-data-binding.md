@@ -12,7 +12,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746349"
 ---
-# <a name="change-notification-in-windows-forms-data-binding"></a>Windows Forms 데이터 바인딩의 변경 알림
+# <a name="change-notification-in-windows-forms-data-binding"></a>Windows 窗体数据绑定中的更改通知
 Windows 窗体数据绑定的最重要的概念之一是*更改通知*。 若要确保数据源和绑定控件始终具有最新的数据，必须为数据绑定添加更改通知。 具体来说，您需要确保绑定控件收到对其数据源所做的更改的通知，并通知数据源对控件的绑定属性所做的更改。  
   
  有不同类型的更改通知，具体取决于数据绑定的种类：  
@@ -37,6 +37,6 @@ Windows 窗体数据绑定的最重要的概念之一是*更改通知*。 若要
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.ComponentModel.INotifyPropertyChanged>
 - <xref:System.ComponentModel.BindingList%601>
-- [Windows Forms 데이터 바인딩](windows-forms-data-binding.md)
-- [Windows Forms에서 지원하는 데이터 소스](data-sources-supported-by-windows-forms.md)
-- [데이터 바인딩 및 Windows Forms](data-binding-and-windows-forms.md)
+- [Windows 窗体数据绑定](windows-forms-data-binding.md)
+- [Windows 窗体支持的数据源](data-sources-supported-by-windows-forms.md)
+- [数据绑定和 Windows 窗体](data-binding-and-windows-forms.md)

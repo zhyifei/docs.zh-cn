@@ -1,5 +1,5 @@
 ---
-title: 대화 상자 컨트롤 및 구성 요소
+title: 对话框控件和组件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CommonDialog control
@@ -14,57 +14,57 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745978"
 ---
-# <a name="dialog-box-controls-and-components-windows-forms"></a>대화 상자 컨트롤 및 구성 요소(Windows Forms)
-다음 Windows Forms 컨트롤 및 구성 요소는 표준 대화 상자를 제공합니다. 각 대화 상자에서 사용할 수 있는 함수에 대한 자세한 내용은 링크를 참조하세요.  
+# <a name="dialog-box-controls-and-components-windows-forms"></a>对话框控件和组件（Windows 窗体）
+以下 Windows 窗体控件和组件提供标准对话框。 单击链接，获取有关每个对话框中可用函数的详细信息。  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.ColorDialog>  
- <xref:System.Windows.Forms.ColorDialog> 클래스 및 해당 멤버에 대한 참조 정보를 제공합니다.  
+ 提供关于 <xref:System.Windows.Forms.ColorDialog> 类及其成员的引用信息。  
   
  <xref:System.Windows.Forms.FontDialog>  
- <xref:System.Windows.Forms.FontDialog> 클래스 및 해당 멤버에 대한 참조 정보를 제공합니다.  
+ 提供关于 <xref:System.Windows.Forms.FontDialog> 类及其成员的引用信息。  
   
  <xref:System.Windows.Forms.OpenFileDialog>  
- <xref:System.Windows.Forms.OpenFileDialog> 클래스 및 해당 멤버에 대한 참조 정보를 제공합니다.  
+ 提供关于 <xref:System.Windows.Forms.OpenFileDialog> 类及其成员的引用信息。  
   
  <xref:System.Windows.Forms.PageSetupDialog>  
- <xref:System.Windows.Forms.PageSetupDialog> 클래스 및 해당 멤버에 대한 참조 정보를 제공합니다.  
+ 提供关于 <xref:System.Windows.Forms.PageSetupDialog> 类及其成员的引用信息。  
   
  <xref:System.Windows.Forms.PrintDialog>  
- <xref:System.Windows.Forms.PrintDialog> 클래스 및 해당 멤버에 대한 참조 정보를 제공합니다.  
+ 提供关于 <xref:System.Windows.Forms.PrintDialog> 类及其成员的引用信息。  
   
  <xref:System.Windows.Forms.PrintPreviewDialog>  
- <xref:System.Windows.Forms.PrintPreviewDialog> 클래스 및 해당 멤버에 대한 참조 정보를 제공합니다.  
+ 提供关于 <xref:System.Windows.Forms.PrintPreviewDialog> 类及其成员的引用信息。  
   
  <xref:System.Windows.Forms.SaveFileDialog>  
- <xref:System.Windows.Forms.SaveFileDialog> 클래스 및 해당 멤버에 대한 참조 정보를 제공합니다.  
+ 提供关于 <xref:System.Windows.Forms.SaveFileDialog> 类及其成员的引用信息。  
   
-## <a name="related-sections"></a>관련 섹션  
- [Windows Forms 대화 상자](../dialog-boxes-in-windows-forms.md)  
- Windows Form에 대한 대화 상자를 만드는 방법을 설명합니다.  
+## <a name="related-sections"></a>相关章节  
+ [Windows 窗体中的对话框](../dialog-boxes-in-windows-forms.md)  
+ 介绍如何为 Windows 窗体创建对话框。  
   
- [ColorDialog 구성 요소 개요](colordialog-component-overview-windows-forms.md)  
- 사용자가 미리 구성된 대화 상자의 색상표에서 색을 선택하고 해당 색상표에 사용자 지정 색을 추가할 수 있게 합니다.  
+ [ColorDialog 组件概述](colordialog-component-overview-windows-forms.md)  
+ 使用户可以在预配置对话框的调色板中选择颜色，并向此调色板添加自定义颜色。  
   
- [FolderBrowserDialog 구성 요소 개요(Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)  
- 사용자가 폴더를 찾고 선택할 수 있게 합니다.  
+ [FolderBrowserDialog 组件概述（Windows 窗体）](folderbrowserdialog-component-overview-windows-forms.md)  
+ 使用户能够浏览和选择文件夹。  
   
- [FontDialog 구성 요소 개요](fontdialog-component-overview-windows-forms.md)  
- 현재 시스템에 설치된 글꼴을 노출합니다.  
+ [FontDialog 组件概述](fontdialog-component-overview-windows-forms.md)  
+ 公开当前系统上安装的字体。  
   
- [OpenFileDialog 구성 요소 개요](openfiledialog-component-overview-windows-forms.md)  
- 사용자가 미리 구성된 대화 상자를 통해 파일을 열 수 있게 합니다.  
+ [OpenFileDialog 组件概述](openfiledialog-component-overview-windows-forms.md)  
+ 允许用户通过预配置的对话框打开文件。  
   
- [PageSetupDialog 구성 요소 개요](pagesetupdialog-component-overview-windows-forms.md)  
- 미리 구성된 대화 상자를 통해 인쇄를 위한 페이지 세부 정보를 설정합니다.  
+ [PageSetupDialog 组件概述](pagesetupdialog-component-overview-windows-forms.md)  
+ 通过预配置的对话框设置用于打印的页面详细信息。  
   
- [PrintDialog 구성 요소 개요](printdialog-component-overview-windows-forms.md)  
- 프린터 및 인쇄할 페이지를 선택하고 다른 인쇄 관련 설정을 결정합니다.  
+ [PrintDialog 组件概述](printdialog-component-overview-windows-forms.md)  
+ 选择打印机，选中要打印的压面，并确定其他与打印相关的设置。  
   
- [PrintPreviewDialog 컨트롤 개요](printpreviewdialog-control-overview-windows-forms.md)  
- 인쇄할 때 나타나는 대로 문서를 표시합니다.  
+ [PrintPreviewDialog 控件概述](printpreviewdialog-control-overview-windows-forms.md)  
+ 显示文档打印时将显示的情况。  
   
- [SaveFileDialog 구성 요소 개요](savefiledialog-component-overview-windows-forms.md)  
- 저장할 파일 및 저장 위치를 선택합니다.  
+ [SaveFileDialog 组件概述](savefiledialog-component-overview-windows-forms.md)  
+ 选择要保存的文件及要保存的位置。  
   
- [Windows Forms 대화 상자](../dialog-boxes-in-windows-forms.md)도 참조하세요.
+ 另请参阅 [Windows 窗体中的对话框](../dialog-boxes-in-windows-forms.md)。

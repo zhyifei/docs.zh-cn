@@ -23,7 +23,7 @@ ms.locfileid: "76731776"
  [WPF 应用程序资源、内容和数据文件](../app-development/wpf-application-resource-content-and-data-files.md)  
  [WPF 中的 Pack URI](../app-development/pack-uris-in-wpf.md)  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.ResourceDictionary>  
   
  [StaticResource 标记扩展](staticresource-markup-extension.md)  

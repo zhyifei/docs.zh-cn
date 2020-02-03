@@ -13,7 +13,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737272"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms으로 다중 창 사용자 인터페이스 만들기
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>如何：使用设计器用 Windows 窗体创建多窗格用户界面
 在下面的过程中，你将创建一个多窗格用户界面，该用户界面类似于在 Microsoft Outlook 中使用的用户界面，其中包含**文件夹**列表、**邮件**窗格和**预览**窗格。 这种方式是通过窗体的停靠控件主要实现的。
 
  停靠控件时，可以确定控件所固定到的父容器的边缘。 因此，如果将 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Right>，控件的右边缘将停靠在其父控件的右边缘。 此外，控件的停靠边缘的大小会调整，以匹配其容器控件的边缘。 有关 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性如何工作的详细信息，请参阅[如何：在 Windows 窗体上停靠控件](how-to-dock-controls-on-windows-forms.md)。
@@ -26,15 +26,15 @@ ms.locfileid: "76737272"
 
 1. 创建新的 Windows 应用程序项目 **（文件** > **新**的 > **项目** > **视觉对象C#** 或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**）。
 
-2. 将 <xref:System.Windows.Forms.SplitContainer> 控件从**工具箱**拖到窗体上。 **속성** 창에서 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>로 설정합니다.
+2. 将 <xref:System.Windows.Forms.SplitContainer> 控件从**工具箱**拖到窗体上。 在“属性” 窗口中，将 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。
 
 3. 将 <xref:System.Windows.Forms.TreeView> 控件从**工具箱**拖动到 <xref:System.Windows.Forms.SplitContainer> 控件的左侧面板。 在 "**属性**" 窗口中，通过单击在单击向下箭头时显示的值编辑器中的左侧面板，将 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Left>。
 
 4. 从**工具箱**中拖动另一个 <xref:System.Windows.Forms.SplitContainer> 控件;将其放在添加到窗体的 <xref:System.Windows.Forms.SplitContainer> 控件的右侧面板中。 在 "**属性**" 窗口中，将 "<xref:System.Windows.Forms.SplitContainer.Dock%2A>" 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>，将 <xref:System.Windows.Forms.SplitContainer.Orientation%2A> 属性设置为 "<xref:System.Windows.Forms.Orientation.Horizontal>"。
 
-5. 将 <xref:System.Windows.Forms.ListView> 控件从**工具箱**拖动到您添加到窗体的第二个 <xref:System.Windows.Forms.SplitContainer> 控件的上部面板。 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 컨트롤의 <xref:System.Windows.Forms.ListView> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>로 설정합니다.
+5. 将 <xref:System.Windows.Forms.ListView> 控件从**工具箱**拖动到您添加到窗体的第二个 <xref:System.Windows.Forms.SplitContainer> 控件的上部面板。 将 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 控件的 <xref:System.Windows.Forms.ListView> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。
 
-6. 将 <xref:System.Windows.Forms.RichTextBox> 控件从**工具箱**拖到第二个 <xref:System.Windows.Forms.SplitContainer> 控件的下面板。 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 컨트롤의 <xref:System.Windows.Forms.RichTextBox> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>로 설정합니다.
+6. 将 <xref:System.Windows.Forms.RichTextBox> 控件从**工具箱**拖到第二个 <xref:System.Windows.Forms.SplitContainer> 控件的下面板。 将 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 控件的 <xref:System.Windows.Forms.RichTextBox> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。
 
      此时，如果按 F5 运行应用程序，窗体将显示由三个部分组成的用户界面，类似于 Microsoft Outlook。
 
@@ -46,4 +46,4 @@ ms.locfileid: "76737272"
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [SplitContainer 컨트롤](splitcontainer-control-windows-forms.md)
+- [SplitContainer 控件](splitcontainer-control-windows-forms.md)

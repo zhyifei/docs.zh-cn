@@ -25,7 +25,7 @@ Windows 窗体 `PrintDialog` 组件是一个预先配置的对话框，可用于
  [如何：显示 PrintDialog 组件](how-to-display-the-printdialog-component.md)  
  解释如何显示对话框以及它在何处保存属性。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.PrintDialog>  
  提供类及其成员的相关引用信息。  
   

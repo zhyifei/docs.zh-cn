@@ -13,7 +13,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744393"
 ---
-# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms 컨트롤에 BindingSource 구성 요소 바인딩
+# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定
 将控件添加到窗体并确定应用程序的用户界面后，可以将控件绑定到数据源，以便在运行时，用户可以更改和保存与应用程序相关的数据。
 
  使用 <xref:System.Windows.Forms.BindingSource> 控件作为窗体上的控件与数据源之间的桥梁，可以轻松地在 Windows 窗体中绑定控件或一系列控件。
@@ -36,9 +36,9 @@ ms.locfileid: "76744393"
 
          如果以前已经为项目或窗体配置了数据源，则将显示该数据源。
 
-3. **프로젝트 데이터 소스 추가**를 클릭하여 데이터에 연결한 다음 데이터 소스를 만듭니다.
+3. 单击“添加项目数据源”以连接到数据并创建一个数据源。
 
-4. **데이터 소스 구성 마법사** 시작 페이지에서 **다음**을 클릭합니다.
+4. 在“数据源配置向导”欢迎页上，单击“下一步”。
 
 5. 在 "**选择数据源类型**" 页上，选择 "**数据库**"。
 
@@ -46,11 +46,11 @@ ms.locfileid: "76744393"
 
 7. 选择 **"是，保存连接"，** 将连接字符串保存到应用程序配置文件中。
 
-8. 애플리케이션에 바인딩할 데이터베이스 개체를 선택합니다. 在这种情况下，请在表中选择希望 <xref:System.Windows.Forms.TextBox> 显示的字段。
+8. 选择要放置到应用程序中的数据库对象。 在这种情况下，请在表中选择希望 <xref:System.Windows.Forms.TextBox> 显示的字段。
 
-9. 원하는 경우 기본 데이터 세트 이름을 바꿉니다.
+9. 如果愿意，可以替换默认的数据集名称。
 
-10. **마침**을 클릭합니다.
+10. 单击 **“完成”** 。
 
 11. 在 "**属性**" 窗口中，再次单击 <xref:System.Windows.Forms.TextBox.Text%2A> 属性旁的箭头。 在 "**数据源**UI 类型编辑器" 中，选择要将 <xref:System.Windows.Forms.TextBox> 绑定到的字段的名称。
 
@@ -60,5 +60,5 @@ ms.locfileid: "76744393"
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
-- [새 데이터 소스 추가](/visualstudio/data-tools/add-new-data-sources)
+- [添加新数据源](/visualstudio/data-tools/add-new-data-sources)
 - [数据源窗口](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))

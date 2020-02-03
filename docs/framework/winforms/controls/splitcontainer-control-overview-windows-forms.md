@@ -17,7 +17,7 @@ ms.locfileid: "76742921"
 Windows 窗体 <xref:System.Windows.Forms.SplitContainer> 控件可视为一个复合控件；它是由可移动条隔开的两个面板。 当鼠标指针位于条上方时，指针将改变形状以表示条可移动。  
   
 > [!IMPORTANT]
-> 在 "**工具箱**" 中，<xref:System.Windows.Forms.SplitContainer> 控件将替换在以前版本的 Visual Studio 中存在的 <xref:System.Windows.Forms.Splitter> 控件。 相较于 <xref:System.Windows.Forms.Splitter> 控件，优先选择 <xref:System.Windows.Forms.SplitContainer> 控件。 <xref:System.Windows.Forms.Splitter> 类仍包含在 .NET Framework 中，以便与现有应用程序兼容，但我们强烈建议为新项目使用 <xref:System.Windows.Forms.SplitContainer> 控件。  
+> 在 "**工具箱**" 中，<xref:System.Windows.Forms.SplitContainer> 控件将替换在以前版本的 Visual Studio 中存在的 <xref:System.Windows.Forms.Splitter> 控件。 相较于 <xref:System.Windows.Forms.SplitContainer> 控件，优先选择 <xref:System.Windows.Forms.Splitter> 控件。 <xref:System.Windows.Forms.Splitter> 类仍包含在 .NET Framework 中，以便与现有应用程序兼容，但我们强烈建议为新项目使用 <xref:System.Windows.Forms.SplitContainer> 控件。  
   
  利用 <xref:System.Windows.Forms.SplitContainer> 控件，可以创建复杂的用户界面;通常，在一个面板中所做的选择决定了哪些对象显示在其他面板中。 这种安排对于显示和浏览信息非常有效。 通过具有两个面板，可以在区域、栏或 "拆分器" 中聚合信息，使用户可以轻松地调整面板的大小。  
   
@@ -38,7 +38,7 @@ Windows 窗体 <xref:System.Windows.Forms.SplitContainer> 控件可视为一个�
   
 ## <a name="commonly-used-properties-methods-and-events"></a>常用的属性、方法和事件  
   
-|Name|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> 属性|确定调整 <xref:System.Windows.Forms.SplitContainer> 控件大小后哪个面板将保持相同的大小。|  
 |<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 属性|确定是否可以用键盘或鼠标移动拆分器。|  

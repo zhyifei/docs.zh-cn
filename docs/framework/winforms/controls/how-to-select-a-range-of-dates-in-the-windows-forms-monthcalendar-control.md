@@ -18,7 +18,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732895"
 ---
-# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>방법: Windows Forms MonthCalendar 컨트롤에서 날짜 범위 선택
+# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>如何：在 Windows 窗体 MonthCalendar 控件中选择日期范围
 Windows 窗体 <xref:System.Windows.Forms.MonthCalendar> 控件的一项重要功能是用户可以选择日期范围。 此功能优于 <xref:System.Windows.Forms.DateTimePicker> 控件的日期选择功能，只允许用户选择单个日期/时间值。 您可以通过使用 <xref:System.Windows.Forms.MonthCalendar> 控件的属性来设置日期范围或获取由用户设置的选择范围。 下面的代码示例演示如何设置选择范围。  
   
 ### <a name="to-select-a-range-of-dates"></a>选择日期范围  
@@ -40,7 +40,7 @@ Windows 窗体 <xref:System.Windows.Forms.MonthCalendar> 控件的一项重要�
     DateTime projectEnd = DateTime(2001, 2, 28);  
     ```  
   
-2. <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> 속성을 설정합니다.  
+2. 设置 <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> 属性。  
   
     ```vb  
     MonthCalendar1.SelectionRange = New SelectionRange(projectStart, projectEnd)  
@@ -55,9 +55,9 @@ Windows 窗体 <xref:System.Windows.Forms.MonthCalendar> 控件的一项重要�
        SelectionRange(projectStart, projectEnd);  
     ```  
   
-     – 또는 –  
+     \- 或 -  
   
-     <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> 및 <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> 속성을 설정합니다.  
+     设置 <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> 和 <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> 属性。  
   
     ```vb  
     MonthCalendar1.SelectionStart = projectStart  
@@ -76,7 +76,7 @@ Windows 窗体 <xref:System.Windows.Forms.MonthCalendar> 控件的一项重要�
   
 ## <a name="see-also"></a>另请参阅
 
-- [MonthCalendar 컨트롤](monthcalendar-control-windows-forms.md)
-- [방법: Windows Forms MonthCalendar 컨트롤의 모양 변경](how-to-change-monthcalendar-control-appearance.md)
-- [방법: Windows Forms MonthCalendar 컨트롤을 사용하여 특정 날짜를 굵게 표시](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [방법: Windows Forms MonthCalendar 컨트롤에서 여러 달 표시](display-more-than-one-month-wf-monthcalendar-control.md)
+- [MonthCalendar 控件](monthcalendar-control-windows-forms.md)
+- [如何：更改 Windows 窗体 MonthCalendar 控件的外观](how-to-change-monthcalendar-control-appearance.md)
+- [如何：使用 Windows 窗体 MonthCalendar 控件以粗体显示具体日期](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [如何：在 Windows 窗体 MonthCalendar 控件中显示多个月份](display-more-than-one-month-wf-monthcalendar-control.md)

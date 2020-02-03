@@ -15,21 +15,21 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739008"
 ---
-# <a name="windows-in-wpf-applications"></a>WPF 애플리케이션의 창
+# <a name="windows-in-wpf-applications"></a>WPF 应用程序中的窗口
 用户通过 windows 与应用程序进行交互。 窗口的基本用途是宿主并显示内容。 窗口承载的内容的类型取决于应用程序所操作的数据类型，该类型可以包括媒体、Extensible Application Markup Language （XAML）页、网页、文档、数据库表和记录以及系统信息。  
   
-## <a name="in-this-section"></a>섹션 내용  
- [WPF 창 개요](wpf-windows-overview.md)  
- [대화 상자 개요](dialog-boxes-overview.md)  
- [방법 항목](window-management-how-to-topics.md)  
+## <a name="in-this-section"></a>本节内容  
+ [WPF 窗口概述](wpf-windows-overview.md)  
+ [对话框概述](dialog-boxes-overview.md)  
+ [帮助主题](window-management-how-to-topics.md)  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Window>  
   
  <xref:System.Windows.Navigation.NavigationWindow>  
   
-## <a name="related-sections"></a>관련 섹션  
- [애플리케이션 관리 개요](application-management-overview.md)  
-  [탐색 개요](navigation-overview.md)  
-  [호스팅](hosting-wpf-applications.md)  
-  [빌드 및 배포](building-and-deploying-wpf-applications.md)
+## <a name="related-sections"></a>相关章节  
+ [应用程序管理概述](application-management-overview.md)  
+  [导航概述](navigation-overview.md)  
+  [承载](hosting-wpf-applications.md)  
+  [生成和部署](building-and-deploying-wpf-applications.md)

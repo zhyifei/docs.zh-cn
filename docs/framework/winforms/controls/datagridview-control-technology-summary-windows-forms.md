@@ -17,7 +17,7 @@ ms.locfileid: "76742479"
   
  以表格格式显示数据是您可能经常要执行的任务。 `DataGridView` 控件设计为在网格中显示数据的完整解决方案。  
   
-## <a name="keywords"></a>关键字  
+## <a name="keywords"></a>Keywords  
  DataGridView、BindingSource、表、单元格、数据绑定、虚拟模式  
   
 ## <a name="namespaces"></a>命名空间  
@@ -55,7 +55,7 @@ ms.locfileid: "76742479"
 |数据显示|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> 和派生类<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> 和派生类<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> 和派生类<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
 |<xref:System.Windows.Forms.DataGridView> 扩展性|<xref:System.Windows.Forms.DataGridViewCell> 和派生类<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> 和派生类<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
-## <a name="whats-new"></a>新功能  
+## <a name="whats-new"></a>新增功能  
  <xref:System.Windows.Forms.DataGridView> 控件旨在作为使用 Windows 窗体显示表格数据的完整解决方案。 创作新应用程序时，应考虑在其他解决方案（如 <xref:System.Windows.Forms.DataGrid>）之前使用 <xref:System.Windows.Forms.DataGridView> 控件。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
  <xref:System.Windows.Forms.DataGridView> 控件可以与 <xref:System.Windows.Forms.BindingSource> 组件紧密结合使用。 此组件设计为窗体的主数据源。 它可以管理 <xref:System.Windows.Forms.DataGridView> 控件与其数据源之间的交互，而不考虑数据源类型。  

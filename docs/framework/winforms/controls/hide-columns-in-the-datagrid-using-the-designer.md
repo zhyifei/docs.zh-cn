@@ -14,8 +14,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76738654"
 ---
-# <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 숨기기
-Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤에서 사용할 수 있는 열 중 일부만 표시하려는 경우도 있습니다. 例如，你可能希望向具有管理凭据的用户显示员工薪金列，同时将其与其他用户隐藏。 或者，您可能想要将该控件绑定到包含多个列的数据源，其中只包含您要显示的部分列。 在这种情况下，通常会删除不想要显示的列，而不是隐藏它们。 有关详细信息，请参阅[如何：使用设计器在 Windows 窗体 DataGridView 控件中添加和删除列](add-and-remove-columns-in-the-datagrid-using-the-designer.md)。
+# <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器隐藏 Windows 窗体 DataGridView 控件中的列
+有时，你会想仅显示在 Windows 窗体 <xref:System.Windows.Forms.DataGridView> 控件中可用的某些列。 例如，你可能希望向具有管理凭据的用户显示员工薪金列，同时将其与其他用户隐藏。 或者，您可能想要将该控件绑定到包含多个列的数据源，其中只包含您要显示的部分列。 在这种情况下，通常会删除不想要显示的列，而不是隐藏它们。 有关详细信息，请参阅[如何：使用设计器在 Windows 窗体 DataGridView 控件中添加和删除列](add-and-remove-columns-in-the-datagrid-using-the-designer.md)。
 
  下面的过程需要一个**Windows 应用程序**项目，其中包含一个包含 <xref:System.Windows.Forms.DataGridView> 控件的窗体。 有关设置此类项目的信息，请参阅[如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[如何：将控件添加到 Windows 窗体](how-to-add-controls-to-windows-forms.md)。
 
@@ -34,6 +34,6 @@ Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤에서 사용할
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>
-- [방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 추가 및 제거](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [如何：使用设计器在 Windows 窗体 DataGridView 控件中添加和删除列](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
 - [如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)
+- [如何：向 Windows 窗体添加控件](how-to-add-controls-to-windows-forms.md)

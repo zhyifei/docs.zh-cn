@@ -27,7 +27,7 @@ ms.locfileid: "76740579"
 
 ## <a name="prerequisites"></a>先决条件
 
-若要完成本演练，你将需要：
+为了完成本演练，您需要：
 
 - 访问包含 Northwind SQL Server 示例数据库的服务器。
 

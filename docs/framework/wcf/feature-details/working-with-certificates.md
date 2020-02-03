@@ -72,7 +72,7 @@ ms.locfileid: "76746885"
 
 在创建新服务时，可能会使用不是由受信任的根证书颁发的证书，或者颁发证书本身可能不在受信任的根证书颁发机构存储区中。 如果仅为了开发目的，可以暂时禁用检查证书信任链的机制。 为此，需要将 `CertificateValidationMode` 属性设置为 `PeerTrust` 或 `PeerOrChainTrust`。 这两种模式都指定，证书可以是自行颁发的（对等信任），也可以是信任链的一部分。 在下列所有类上，都可以设置此属性。
 
-|类|Property|
+|类|属性|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -121,7 +121,7 @@ PowerShell New-selfsignedcertificate cmdlet 创建 x.509 证书和私钥/公钥�
 
 ### <a name="client-certificates"></a>客户端证书
 
-客户端证书通常不是由第三方证书颁发机构颁发的。 相反，在当前用户位置的个人存储区中，通常包含由根证书颁发机构存放在此的证书，其预期目的为“客户端身份验证”。 如果需要相互身份验证，则客户端可以使用此类证书。
+客户端证书通常不是由第三方证书颁发机构颁发的。 相反，在当前用户位置的个人存储区中，通常包含由根证书颁发机构存放在此的证书，其预期目的为“客户端身份验证”。 客户端可以在需要相互身份验证时使用此类证书。
 
 ## <a name="online-revocation-and-offline-revocation"></a>联机吊销和脱机吊销
 
@@ -135,7 +135,7 @@ PowerShell New-selfsignedcertificate cmdlet 创建 x.509 证书和私钥/公钥�
 
 如果证书吊销，则从被吊销证书继承的任何链都将无效，在身份验证过程中也不受信任。 为了查看吊销了哪些证书，每个证书颁发者都发布一个加盖了时间戳和日期戳的证书吊销列表 (CRL)。 可以使用联机吊销或脱机吊销来查看此列表，方法是将以下类的 `RevocationMode` 或 `DefaultRevocationMode` 属性设置为 <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 枚举值之一：<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>、<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>、<xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> 和 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 类。 所有属性的默认值都是 `Online`。
 
-还可使用 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)（属于 [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)）和 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)（属于 [\<endpointBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)）的 `revocationMode` 属性在配置中设置模式。
+还可使用 `revocationMode`[authentication>\<（属于 ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[serviceBehaviors>\<）和 ](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)[authentication>\<（属于 ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[endpointBehaviors>\<）的 ](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 属性在配置中设置模式。
 
 ## <a name="the-setcertificate-method"></a>SetCertificate 方法
 
@@ -168,7 +168,7 @@ IIS 和 Active Directory 的一个功能是将证书映射到 Windows 用户帐�
 
 有关使用 Active Directory 映射的详细信息，请参阅 [Mapping Client Certificates with Directory Service Mapping](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc758484(v=ws.10))（使用目录服务映射来映射客户端证书）。
 
-如果启用了这一功能，则可以将 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 类的 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 属性设置为 `true`。 在配置中，可以将 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 元素的 `mapClientCertificateToWindowsAccount` 属性设置为 `true`，如下面的代码所示。
+如果启用了这一功能，则可以将 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 类的 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 属性设置为 `true`。 在配置中，可以将 `mapClientCertificateToWindowsAccount`[authentication>\< 元素的 ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 属性设置为 `true`，如下面的代码所示。
 
 ```xml
 <serviceBehaviors>
@@ -194,4 +194,4 @@ IIS 和 Active Directory 的一个功能是将证书映射到 Windows 用户帐�
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType>
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

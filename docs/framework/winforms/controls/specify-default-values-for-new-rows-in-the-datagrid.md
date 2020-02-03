@@ -29,7 +29,7 @@ ms.locfileid: "76742927"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
-- 名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件。  
+- 名为 <xref:System.Windows.Forms.DataGridView> 的 `dataGridView1` 控件。  
   
 - 用于生成唯一 `CustomerID` 值的 `NewCustomerId` 函数。  
   

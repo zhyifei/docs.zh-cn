@@ -15,10 +15,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746074"
 ---
-# <a name="defining-an-event-in-windows-forms-controls"></a>Windows Forms 컨트롤에서 이벤트 정의
-有关定义自定义事件的详细信息，请参阅[事件](../../../standard/events/index.md)。 연결된 데이터가 없는 이벤트를 정의하는 경우에는 이벤트 데이터의 기본 형식인 <xref:System.EventArgs>를 사용하고 이벤트 대리자로 <xref:System.EventHandler>를 사용합니다. 剩下的工作就是定义一个事件成员和一个引发该事件的受保护 `On`事件*名*方法。  
+# <a name="defining-an-event-in-windows-forms-controls"></a>在 Windows 窗体控件中定义事件
+有关定义自定义事件的详细信息，请参阅[事件](../../../standard/events/index.md)。 如果你定义的事件没有任何关联的数据，则使用事件数据的基类型 <xref:System.EventArgs>，并使用 <xref:System.EventHandler> 作为事件委托。 剩下的工作就是定义一个事件成员和一个引发该事件的受保护 `On`事件*名*方法。  
   
- 다음 코드 조각은 `FlashTrackBar` 사용자 지정 컨트롤이 사용자 지정 이벤트 `ValueChanged`를 정의하는 방법을 보여줍니다. 有关 `FlashTrackBar` 示例的完整代码，请参阅[如何：创建显示进度的 Windows 窗体控件](how-to-create-a-windows-forms-control-that-shows-progress.md)。  
+ 以下代码段显示了 `FlashTrackBar` 自定义控件如何定义自定义事件 `ValueChanged`。 有关 `FlashTrackBar` 示例的完整代码，请参阅[如何：创建显示进度的 Windows 窗体控件](how-to-create-a-windows-forms-control-that-shows-progress.md)。  
   
 ```vb  
 Option Explicit  
@@ -78,5 +78,5 @@ public class FlashTrackBar : Control {
   
 ## <a name="see-also"></a>另请参阅
 
-- [Windows Forms 컨트롤의 이벤트](events-in-windows-forms-controls.md)
-- [이벤트](../../../standard/events/index.md)
+- [Windows 窗体控件中的事件](events-in-windows-forms-controls.md)
+- [事件](../../../standard/events/index.md)

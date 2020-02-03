@@ -17,7 +17,7 @@ ms.locfileid: "76742604"
 
 本演练演示如何在 Windows Presentation Foundation （WPF）应用程序中承载 Direct3D9 内容。
 
-在本演练中，你将要执行以下任务：
+在本演练中，您将执行下列任务：
 
 - 创建用于托管 Direct3D9 内容的 WPF 项目。
 
@@ -29,9 +29,9 @@ ms.locfileid: "76742604"
 
 ## <a name="prerequisites"></a>先决条件
 
-你需要以下组件来完成本演练：
+您需要满足以下条件才能完成本演练：
 
-- 。
+- Visual Studio。
 
 - DirectX SDK 9 或更高版本。
 

@@ -18,7 +18,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745879"
 ---
-# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>방법: Windows Forms MonthCalendar 컨트롤을 사용하여 특정 날짜를 굵게 표시
+# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>如何：使用 Windows 窗体 MonthCalendar 控件以粗体显示特定日期
 Windows 窗体 <xref:System.Windows.Forms.MonthCalendar> 控件可以将以粗体显示的日期显示为 "单数" 或 "重复"。 您可以这样做，以突出特殊日期，如假日和周末。  
   
  这三个属性控制此功能。 <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> 属性包含一个日期。 <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> 属性包含每年以粗体显示的日期。 <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> 属性包含每月以粗体显示的日期。 其中每个属性都包含一个 <xref:System.DateTime> 对象的数组。 若要在这些列表之一中添加或删除日期，必须添加或删除 <xref:System.DateTime> 对象。  
@@ -59,7 +59,7 @@ Windows 窗体 <xref:System.Windows.Forms.MonthCalendar> 控件可以将以粗�
     monthCalendar1->AddBoldedDate(myVacation2);  
     ```  
   
-     – 또는 –  
+     \- 或 -  
   
      通过创建 <xref:System.DateTime> 对象的数组，并将其分配给其中一个属性，使一组日期同时为粗体。  
   
@@ -97,7 +97,7 @@ Windows 窗体 <xref:System.Windows.Forms.MonthCalendar> 控件可以将以粗�
     monthCalendar1->RemoveBoldedDate(myVacation2);  
     ```  
   
-     – 또는 –  
+     \- 或 -  
   
      通过调用 <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>、<xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>或 <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A> 方法，从三个列表之一删除所有粗体日期。  
   
@@ -129,7 +129,7 @@ Windows 窗体 <xref:System.Windows.Forms.MonthCalendar> 控件可以将以粗�
   
 ## <a name="see-also"></a>另请参阅
 
-- [MonthCalendar 컨트롤](monthcalendar-control-windows-forms.md)
-- [방법: Windows Forms MonthCalendar 컨트롤에서 날짜 범위 선택](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [방법: Windows Forms MonthCalendar 컨트롤의 모양 변경](how-to-change-monthcalendar-control-appearance.md)
-- [방법: Windows Forms MonthCalendar 컨트롤에서 여러 달 표시](display-more-than-one-month-wf-monthcalendar-control.md)
+- [MonthCalendar 控件](monthcalendar-control-windows-forms.md)
+- [如何：在 Windows 窗体 MonthCalendar 控件中选择日期范围](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [如何：更改 Windows 窗体 MonthCalendar 控件的外观](how-to-change-monthcalendar-control-appearance.md)
+- [如何：在 Windows 窗体 MonthCalendar 控件中显示多个月份](display-more-than-one-month-wf-monthcalendar-control.md)

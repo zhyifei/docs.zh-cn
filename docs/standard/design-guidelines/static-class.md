@@ -18,9 +18,9 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743591"
 ---
 # <a name="static-class-design"></a>静态类设计
-静态类的定义为：仅包含静态成员的类 (当然除了继承自<xref:System.Object?displayProperty=nameWithType> 的实例成员和可能是私有的构造函数)。 某些语言提供对静态类的内置支持。 在 C# 2.0 及更高版本中，当类声明为静态时，它是密封、抽象的，并且不能覆盖或声明实例成员。
+静态类定义为仅包含静态成员的类（当然，除了从 <xref:System.Object?displayProperty=nameWithType> 继承的实例成员，还可能是私有构造函数）。 某些语言提供对静态类的内置支持。 在 C# 2.0 及更高版本中，当类声明为静态时，它是密封、抽象的，并且不能覆盖或声明实例成员。
 
- 静态类是纯面向对象设计和简单性之间的妥协。 它们通常用于提供其他操作的快捷方式（例如<xref:System.IO.File?displayProperty=nameWithType> ），扩展方法的持有者，或完全面向对象的包装器不合适的功能（例如<xref:System.Environment?displayProperty=nameWithType> ）。
+ 静态类是纯面向对象设计和简单性之间的妥协。 它们通常用于提供对其他操作（如 <xref:System.IO.File?displayProperty=nameWithType>）、扩展方法的持有者或功能的快捷方式，以便为其有人完全面向对象的包装器（如 <xref:System.Environment?displayProperty=nameWithType>）。
 
  ✔️尽量少使用静态类。
 

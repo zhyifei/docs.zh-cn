@@ -1,5 +1,5 @@
 ---
-title: 배열
+title: 阵列
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,8 +14,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741801"
 ---
-# <a name="arrays"></a>배열
-✔️确实更喜欢在公共 Api 中对数组使用集合。 [集合](../../../docs/standard/design-guidelines/guidelines-for-collections.md)部分提供了有关如何在集合和数组之间进行选择的详细信息。
+# <a name="arrays"></a>阵列
+✔️确实更喜欢在公共 Api 中对数组使用集合。 "[集合](../../../docs/standard/design-guidelines/guidelines-for-collections.md)" 部分提供了有关如何在集合和数组之间进行选择的详细信息。
 
  ❌ 不使用只读数组字段。 该字段本身是只读的且无法更改，但可以更改数组中的元素。
 
@@ -25,10 +25,10 @@ ms.locfileid: "76741801"
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。
 
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Array>
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
-- [사용 지침](../../../docs/standard/design-guidelines/usage-guidelines.md)
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
+- [使用准则](../../../docs/standard/design-guidelines/usage-guidelines.md)

@@ -13,42 +13,42 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744422"
 ---
-# <a name="xaml-and-custom-classes-for-wpf"></a>WPF에 대한 XAML 및 사용자 지정 클래스
-在公共语言运行时（CLR）框架中实现的 XAML 支持使用任何公共语言运行时（CLR）语言定义自定义类或结构，然后使用 XAML 标记访问该类。 일반적으로 사용자 지정 형식을 XAML 네임스페이스 접두사에 매핑하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 정의 형식과 사용자 지정 형식의 혼합을 동일한 태그 파일에서 함께 사용할 수 있습니다. 이 항목에서는 사용자 지정 클래스를 XAML 요소로 사용 가능하기 위해 만족해야 하는 요구 사항을 설명합니다.  
+# <a name="xaml-and-custom-classes-for-wpf"></a>XAML 及 WPF 的自定义类
+在公共语言运行时（CLR）框架中实现的 XAML 支持使用任何公共语言运行时（CLR）语言定义自定义类或结构，然后使用 XAML 标记访问该类。 通常通过将自定义类型映射到 XAML 命名空间前缀，可在同一标记文件中混合使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定义类型和自定义类型。 本主题讨论将自定义类用作 XAML 元素必须满足的要求。  
 
 <a name="Custom_Classes_in_Applications_vs__in_Assemblies"></a>   
-## <a name="custom-classes-in-applications-or-assemblies"></a>애플리케이션 또는 어셈블리의 사용자 지정 클래스  
- XAML에서 사용되는 사용자 지정 클래스는 두 가지 방법으로 정의할 수 있습니다. 즉, 기본 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애플리케이션을 생성하는 다른 코드 또는 코드 숨김 파일에서 정의하거나, 클래스 라이브러리로 사용되는 DLL 또는 실행 파일과 같은 별도 어셈블리의 클래스로 정의합니다. 각 방법에는 고유한 장점과 단점이 있습니다.  
+## <a name="custom-classes-in-applications-or-assemblies"></a>应用程序或程序集中的自定义类  
+ XAML 中使用的自定义类可通过两种不同的方式进行定义：在代码隐藏或其他生成主 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序的代码内，或者在单独程序集中作为类（例如用作类库的可执行文件或 DLL）。 这些方法各有特定的优点和缺点。  
   
-- 클래스 라이브러리를 만드는 경우 사용자 지정 클래스를 서로 다른 여러 애플리케이션에서 공유할 수 있다는 장점이 있습니다. 또한 별도 라이브러리 애플리케이션의 버전 관리 문제를 더 쉽게 컨트롤하고 클래스를 XAML 페이지의 루트 요소로 사용하는 클래스를 간단하게 만들 수 있습니다.  
+- 创建类库的优点在于可在多个不同的应用程序间共享任意此类自定义类。 通过使用单独的库，更易于控制应用程序的版本控制问题，并可简化类创建过程，在此过程中，所需的类用法是作为 XAML 页面上的根元素。  
   
-- 사용자 지정 클래스를 애플리케이션에 정의하는 방법은 비교적 간단하며 기본 애플리케이션 실행 파일이 아닌 별도의 어셈블리를 사용할 때 발생하는 배포 및 테스트 문제를 최소화할 수 있다는 장점이 있습니다.  
+- 在应用程序中定义自定义类的优点在于此方法相对轻量，可减少在主应用程序可执行文件外引入单独程序集时遇到的部署和测试问题。  
   
-- 동일한 어셈블리에 정의되어 있는지 다른 어셈블리에 정의되어 있는지에 상관없이, 사용자 지정 클래스를 XAML에서 요소로 사용하려면 CLR 네임스페이스와 XML 네임스페이스 간에 매핑해야 합니다. [WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)을 참조하세요.  
+- 无论定义在相同还是不同的程序集中，自定义类若要在 XAML 中用作元素，都需要在 CLR 命名空间和 XML 命名空间之间进行映射。 请参阅 [WPF XAML 的 XAML 命名空间和命名空间映射](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
 <a name="Requirements_for_a_Custom_Class_as_a_XAML_Element"></a>   
-## <a name="requirements-for-a-custom-class-as-a-xaml-element"></a>사용자 지정 클래스를 XAML 요소로 사용하기 위한 요구 사항  
- 클래스를 개체 요소로 인스턴스화하려면 클래스가 다음 요구 사항을 충족해야 합니다.  
+## <a name="requirements-for-a-custom-class-as-a-xaml-element"></a>将自定义类用作 XAML 元素的要求  
+ 为能够实例化为对象元素，类必须满足以下要求：  
   
-- 사용자 지정 클래스가 공용 클래스여야 하고 매개 변수가 없는 기본 공용 생성자를 지원해야 합니다. 구조체에 대한 자세한 내용은 다음 섹션을 참조하세요.  
+- 自定义类必须是公共的且支持默认（无参数）公共构造函数。 （有关结构注释，请参阅下节内容。）  
   
-- 사용자 지정 클래스가 중첩 클래스가 아니어야 합니다. 중첩 클래스 및 일반 CLR 사용 구문의 "점"은 연결된 속성과 같은 다른 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및/또는 XAML의 기능을 방해합니다.  
+- 自定义类不得为嵌套类。 嵌套类及其常规 CLR 使用语法中的“点”会干扰其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和/或 XAML 功能（例如附加属性）。  
   
- 개체 요소 구문을 사용하는 것 외에도 개체 정의에서 해당 개체를 값 형식으로 사용하는 다른 공용 속성에 대해서는 속성 요소 구문을 사용해야 합니다. 그 이유는 이제 개체가 개체 요소로 인스턴스화되어 이러한 속성의 속성 요소 값을 채울 수 있기 때문입니다.  
+ 除启用对象元素语法外，对象定义还会对任何其他将该对象作为值类型的公共属性启用属性元素语法。 这是因为对象现在可被实例化为对象元素，且可填充此类属性的属性元素值。  
   
-### <a name="structures"></a>구조체  
- 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，定义为自定义类型的结构始终可以在 XAML 中构造。这是因为 CLR 编译器会为结构隐式创建一个无参数的构造函数，该构造函数将所有属性值初始化为其默认值。 경우에 따라서는 구조체의 기본 생성 동작 및/또는 개체 요소를 사용하는 것이 바람직하지 않습니다. 구조체가 값을 채우고 개념적으로 공용 구조체로 작동하기 때문일 수 있습니다. 이 경우 포함된 값의 해석이 서로 달라서 어느 속성도 설정할 수 없습니다. <xref:System.Windows.GridLength>此类结构的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 示例。 일반적으로 이러한 구조체는 구조체의 값에 대해 서로 다른 해석이나 모드를 만드는 문자열 규칙을 사용하여 값을 특성 형식으로 표현할 수 있도록 형식 변환기를 구현합니다. 结构还应通过非参数构造函数公开代码构造的类似行为。  
+### <a name="structures"></a>结构  
+ 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，定义为自定义类型的结构始终可以在 XAML 中构造。这是因为 CLR 编译器会为结构隐式创建一个无参数的构造函数，该构造函数将所有属性值初始化为其默认值。 某些情况下，结构并不需要默认构造行为和/或对象元素用法。 这可能是因为结构需要通过概念方式将值和函数作为联合来填充，其中包含的值可能具有互斥的解释，因而其不存在任何可设置属性。 <xref:System.Windows.GridLength>此类结构的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 示例。 通常情况下，此类结构应实现类型转换器，以便可通过属性形式表达值，方法是使用创建结构值的不同解释或模式的字符串约定。 结构还应通过非参数构造函数公开代码构造的类似行为。  
   
 <a name="Requirements_for_Properties_of_a_Custom_Class_as_XAML"></a>   
-## <a name="requirements-for-properties-of-a-custom-class-as-xaml-attributes"></a>사용자 지정 클래스의 속성을 XAML 특성으로 사용하기 위한 요구 사항  
+## <a name="requirements-for-properties-of-a-custom-class-as-xaml-attributes"></a>将自定义类属性用作 XAML 特性的要求  
  属性必须引用按值类型（如基元），或使用具有可参数构造函数或 XAML 处理器可以访问的专用类型转换器的类型的类。 在 CLR XAML 实现中，XAML 处理器通过对语言基元的本机支持查找此类转换器，或者通过将 <xref:System.ComponentModel.TypeConverterAttribute> 应用到后备类型定义中的类型或成员  
   
- 또는 속성이 추상 클래스 형식 또는 인터페이스를 참조할 수도 있습니다. 추상 클래스나 인터페이스의 경우에는 XAML 구문 분석 시 해당 인터페이스를 구현하는 실제 클래스 인스턴스로 또는 추상 클래스에서 파생되는 형식의 인스턴스로 속성 값을 채워야 합니다.  
+ 或者，属性可引用抽象类类型或接口。 对于抽象类或接口，XAML 分析的所需条件是必须用实现接口的实际类实例或派生自抽象类的类型实例填充属性值。  
   
- 속성을 추상 클래스에서 선언할 수 있지만 해당 속성은 추상 클래스에서 파생되는 실제 클래스에서만 설정될 수 있습니다. 这是因为，为类创建对象元素根本需要类的公共无参数构造函数。  
+ 属性可在抽象类上声明，但仅可在派生自抽象类的实际类上设置。 这是因为，为类创建对象元素根本需要类的公共无参数构造函数。  
   
-### <a name="typeconverter-enabled-attribute-syntax"></a>TypeConverter 사용 특성 구문  
- 클래스 수준에서 전용 특성 사용 형식 변환기를 제공한 경우 적용된 형식 변환을 사용하면 해당 형식을 인스턴스화해야 하는 모든 속성에 특성 구문을 사용할 수 있습니다. 类型转换器不启用类型的对象元素用法;只有该类型的无参数构造函数才会启用对象元素用法。 따라서 형식 변환기가 사용하는 속성은 일반적으로 속성 구문에서 사용할 수 없습니다. 단, 형식 자체가 개체 요소 구문도 지원하는 경우는 예외입니다. 한 가지 예외적인 경우로 속성 요소에 문자열을 포함하여 속성 요소 구문을 지정할 수 있습니다. 这种用法实质上相当于属性语法用法，因此，这种用法并不常见，除非需要对特性值进行更可靠的空白处理。 예를 들어 다음은 문자열을 사용하는 속성 요소를 사용하는 방법을 보여 주며 이는 특성을 사용하는 것과 같습니다.  
+### <a name="typeconverter-enabled-attribute-syntax"></a>启用 TypeConverter 的特性语法  
+ 如果提供类级别的专用特性化类型转换器，则应用的类型转换会对需实例化该类型的任何属性启用特性语法。 类型转换器不启用类型的对象元素用法;只有该类型的无参数构造函数才会启用对象元素用法。 因此，启用类型转换器的属性通常不适用于属性语法，除非类型本身也支持对象元素语法。 此规则存在一个例外，即可指定属性元素语法，但使属性元素包含一个字符串。 这种用法实质上相当于属性语法用法，因此，这种用法并不常见，除非需要对特性值进行更可靠的空白处理。 例如，以下是一个采用字符串的属性元素用法以及一个特性用法等效项：  
   
  [!code-xaml[XamlOvwSupport#GoofyTCPE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#goofytcpe)]  
   
@@ -56,30 +56,30 @@ ms.locfileid: "76744422"
   
  允许使用属性语法的属性的示例，但不允许通过 XAML 使用包含对象元素的属性元素语法，这是采用 <xref:System.Windows.Input.Cursor> 类型的各种属性。 <xref:System.Windows.Input.Cursor> 类具有专用的类型转换器 <xref:System.Windows.Input.CursorConverter>，但不公开无参数构造函数，因此，<xref:System.Windows.FrameworkElement.Cursor%2A> 属性只能通过特性语法设置，即使实际的 <xref:System.Windows.Input.Cursor> 类型为引用类型。  
   
-### <a name="per-property-type-converters"></a>속성별 형식 변환기  
- 또는 속성 자체가 속성 수준에서 형식 변환기를 선언할 수도 있습니다. 这将启用 "微型语言"，它通过将属性的传入字符串值作为基于适当类型的 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 操作的输入处理，来实例化内联属性类型的对象。 일반적으로 이 작업은 XAML에서 속성을 설정할 수 있는 유일한 방법이 아니라 편리한 접근자를 제공하기 위해 수행합니다. 但是，也可以将类型转换器用于要使用不提供无参数构造函数或特性化类型转换器的现有 CLR 类型的特性。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API 中的示例是采用 <xref:System.Globalization.CultureInfo> 类型的某些属性。 在这种情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用现有 Microsoft .NET Framework <xref:System.Globalization.CultureInfo> 类型来更好地解决在早期版本的框架中使用的兼容性和迁移方案，但 <xref:System.Globalization.CultureInfo> 类型不支持作为 XAML 属性值直接使用所需的构造函数或类型级别类型转换。  
+### <a name="per-property-type-converters"></a>按属性类型转换器  
+ 或者，属性本身可能声明属性级别的类型转换器。 这将启用 "微型语言"，它通过将属性的传入字符串值作为基于适当类型的 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 操作的输入处理，来实例化内联属性类型的对象。 此操作的目的通常是提供方便的访问器，且这不是在 XAML 中启用属性设置的唯一方式。 但是，也可以将类型转换器用于要使用不提供无参数构造函数或特性化类型转换器的现有 CLR 类型的特性。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API 中的示例是采用 <xref:System.Globalization.CultureInfo> 类型的某些属性。 在这种情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用现有 Microsoft .NET Framework <xref:System.Globalization.CultureInfo> 类型来更好地解决在早期版本的框架中使用的兼容性和迁移方案，但 <xref:System.Globalization.CultureInfo> 类型不支持作为 XAML 属性值直接使用所需的构造函数或类型级别类型转换。  
   
- 따라서 컨트롤 작성자는 XAML을 사용하는 속성을 노출할 때마다 해당 속성에 종속성 속성을 지원하는 방법을 고려해야 합니다. 如果使用 XAML 处理器的现有 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 实现，则更是如此，因为可以通过使用 <xref:System.Windows.DependencyProperty> 支持来提高性能。 종속성 속성은 XAML 액세스 가능 속성이 제공할 것으로 예상되는 속성 시스템의 기능을 노출합니다. 이러한 기능에는 애니메이션, 데이터 바인딩 및 스타일 지원 등이 포함됩니다. 자세한 내용은 [사용자 지정 종속성 속성](custom-dependency-properties.md) 및 [XAML 로드 및 종속성 속성](xaml-loading-and-dependency-properties.md)을 참조하세요.  
+ 每当公开具有 XAML 用法的属性时，特别是对于控件作者，应特别考虑使用依赖属性支持此属性。 如果使用 XAML 处理器的现有 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 实现，则更是如此，因为可以通过使用 <xref:System.Windows.DependencyProperty> 支持来提高性能。 依赖属性将对用户针对 XAML 可访问属性所需的属性公开属性系统功能。 这包括动画、数据绑定和样式支持等功能。 有关详细信息，请参阅[自定义依赖属性](custom-dependency-properties.md)和 [XAML 加载和依赖属性](xaml-loading-and-dependency-properties.md)。  
   
-### <a name="writing-and-attributing-a-type-converter"></a>형식 변환기 작성 및 특성 설정  
+### <a name="writing-and-attributing-a-type-converter"></a>编写和特性化类型转换器  
  偶尔需要编写自定义 <xref:System.ComponentModel.TypeConverter> 派生类，以便为属性类型提供类型转换。 有关如何从派生并创建可支持 XAML 用法的类型转换器以及如何应用 <xref:System.ComponentModel.TypeConverterAttribute>的说明，请参阅[TypeConverters 和 XAML](typeconverters-and-xaml.md)。  
   
 <a name="Requirements_for_Events_of_a_Custom_Class_as_XAML"></a>   
-## <a name="requirements-for-xaml-event-handler-attribute-syntax-on-events-of-a-custom-class"></a>사용자 지정 클래스의 이벤트에 XAML 이벤트 처리기 특성 구문을 사용하기 위한 요구 사항  
- 若要用作 CLR 事件，事件必须作为支持无参数构造函数的类上的公共事件公开，或在可在派生类上访问事件的抽象类上公开。 为了方便地用作路由事件，CLR 事件应该实现显式 `add` 和 `remove` 方法，这些方法可为 CLR 事件签名添加和删除处理程序，并将这些处理程序转发到 <xref:System.Windows.UIElement.AddHandler%2A> 和 <xref:System.Windows.UIElement.RemoveHandler%2A> 方法。 이 두 메서드는 이벤트가 연결된 인스턴스의 라우트된 이벤트 처리기 저장소에 처리기를 추가하거나 제거합니다.  
+## <a name="requirements-for-xaml-event-handler-attribute-syntax-on-events-of-a-custom-class"></a>自定义类事件上 XAML 事件处理程序特性语法的要求  
+ 若要用作 CLR 事件，事件必须作为支持无参数构造函数的类上的公共事件公开，或在可在派生类上访问事件的抽象类上公开。 为了方便地用作路由事件，CLR 事件应该实现显式 `add` 和 `remove` 方法，这些方法可为 CLR 事件签名添加和删除处理程序，并将这些处理程序转发到 <xref:System.Windows.UIElement.AddHandler%2A> 和 <xref:System.Windows.UIElement.RemoveHandler%2A> 方法。 这些方法添加或删除事件所附加到的实例上的路由事件处理程序存储的处理程序。  
   
 > [!NOTE]
-> 可以使用 <xref:System.Windows.UIElement.AddHandler%2A>直接为路由事件注册处理程序，并特意不定义公开路由事件的 CLR 事件。 이벤트에서 연결 처리기에 대해 XAML 특성 구문을 사용하지 않으며 결과 클래스에서 해당 형식의 기능에 대해 투명도가 떨어지는 XAML 보기를 제공하므로, 이 방법은 일반적으로 권장되지 않습니다.  
+> 可以使用 <xref:System.Windows.UIElement.AddHandler%2A>直接为路由事件注册处理程序，并特意不定义公开路由事件的 CLR 事件。 通常不建议采用此操作，因为事件不会启用 XAML 特性语法用于附加处理程序，并且生成类提供的类型功能的 XAML 视图透明度较低。  
   
 <a name="Collection_Properties"></a>   
-## <a name="writing-collection-properties"></a>컬렉션 속성 작성  
- 컬렉션 형식을 사용하는 속성에는 컬렉션에 추가할 개체를 지정하는 데 사용할 수 있는 XAML 구문이 있습니다. 이 구문은 다음과 같은 두 가지 중요한 기능을 제공합니다.  
+## <a name="writing-collection-properties"></a>编写集合属性  
+ 采用集合类型的属性所具有的 XAML 语法使你可指定添加到集合的对象。 此语法具有两个重要功能。  
   
-- 컬렉션 개체인 개체를 개체 요소 구문에 지정할 필요가 없습니다. 컬렉션 형식을 사용하는 XAML에 속성을 지정할 때마다 컬렉션 형식이 항상 암시적으로 존재합니다.  
+- 无需在对象元素语法中指定作为集合对象的对象。 无论何时在采用集合类型的 XAML 中指定属性，该集合类型的状态总是隐式。  
   
-- 태그에서 컬렉션 속성의 자식 요소는 컬렉션의 멤버로 처리됩니다. 일반적으로 컬렉션 멤버에 대한 코드 액세스는 `Add`와 같은 목록/사전 메서드를 통해 또는 인덱서를 통해 수행됩니다. 하지만 XAML 구문은 메서드나 인덱서를 지원하지 않습니다(예외: XAML 2009는 메서드를 지원할 수 있지만, XAML 2009를 사용하여 가능한 WPF 사용을 제한합니다. [XAML 2009 언어 기능](../../../desktop-wpf/xaml-services/xaml-2009-language-features.md) 참조). 컬렉션은 요소 트리를 구성하는 데 있어 공통된 요구 사항이므로 선언적 XAML에서 이러한 컬렉션을 채우는 데 사용할 몇 가지 방법이 필요합니다. 따라서 컬렉션 속성의 자식 요소는 컬렉션 속성 형식 값인 컬렉션에 추가하여 처리됩니다.  
+- 标记中集合属性的子元素经处理后变成集合的成员。 对集合成员的代码访问通常通过列表/字典方法（例如 `Add`）或通过索引器执行。 但是，XAML 语法不支持方法和索引器（例外：XAML 2009 可支持这些方法，但使用 XAML 2009 会限制可能的 WPF 用法；请参阅 [XAML 2009 语言功能](../../../desktop-wpf/xaml-services/xaml-2009-language-features.md)）。 对生成元素树而言，集合显然是非常常见的要求，并且你需要某种方法来填充声明 XAML 中的这些集合。 因此，通过将集合属性的子元素添加到作为集合属性类型值的集合中来对其进行处理。  
   
- .NET Framework XAML 서비스 구현과 WPF XAML 프로세서에서 컬렉션 속성을 구성하는 사항에 대한 다음 정의를 사용합니다. 속성의 형식은 다음 중 하나를 구현해야 합니다.  
+ .NET Framework XAML 服务实现和 WPF XAML 处理器将以下定义用于组成集合属性的项。 属性的属性类型必须实现以下项之一：  
   
 - 实现 <xref:System.Collections.IList>。  
   
@@ -89,31 +89,31 @@ ms.locfileid: "76744422"
   
 - 实现 <xref:System.Windows.Markup.IAddChild> （由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]定义的接口）。  
   
- CLR의 각 형식에는 개체 그래프를 만들 때 XAML 프로세서에서 기본 컬렉션에 항목을 추가하는 데 사용하는 `Add` 메서드가 있습니다.  
+ CLR 中这些类型每个都具有 `Add` 方法，创建对象图时，XAML 处理器使用该方法将项添加到基础集合。  
   
 > [!NOTE]
 > [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 处理器不支持泛型 `List` 和 `Dictionary` 接口（<xref:System.Collections.Generic.IList%601> 和 <xref:System.Collections.Generic.IDictionary%602>）进行集合检测。 但是，可以使用 <xref:System.Collections.Generic.List%601> 类作为基类，因为它直接实现 <xref:System.Collections.IList> 或 <xref:System.Collections.Generic.Dictionary%602> 为基类，因为它直接实现 <xref:System.Collections.IDictionary>。  
   
- 컬렉션을 사용하는 속성을 선언하는 경우 해당 형식의 새 인스턴스에서 속성 값이 초기화되는 방법에 유의하세요. 속성을 종속성 속성으로 구현하지 않는 경우에는 속성이 컬렉션 형식 생성자를 호출하는 지원 필드를 사용하도록 설정하는 것이 좋습니다. 속성이 종속성 속성인 경우에는 기본 형식 생성자의 일부로 컬렉션 속성을 초기화해야 할 수 있습니다. 그 이유는 종속성 속성이 속성의 기본값을 메타데이터에서 가져오는데, 개발자는 일반적으로 컬렉션 속성의 초기 값을 정적 공유 컬렉션에 사용하지 않으려고 하기 때문입니다. 형식 인스턴스를 포함하는 경우마다 컬렉션 인스턴스가 있어야 합니다. 자세한 내용은 [사용자 지정 종속성 속성](custom-dependency-properties.md)을 참조하세요.  
+ 声明采用集合的属性时，请注意类型的新实例中如何实例化此属性值。 如果不将此属性实现为依赖属性，则使属性使用调用此集合类型构造函数的支持字段已可满足使用需求。 如果属性为依赖属性，则可能需要将集合属性初始化为默认类型构造函数的一部分。 这是因为依赖属性从元数据获取其默认值，而通常不希望集合属性的初始值为静态共享集合。 每个包含类型实例应具有一个集合实例。 有关详细信息，请参阅[自定义依赖属性](custom-dependency-properties.md)。  
   
- 컬렉션 속성에 대해 사용자 지정 컬렉션 형식을 구현할 수 있습니다. 由于隐式集合属性处理，自定义集合类型不需要提供无参数的构造函数即可在 XAML 中隐式使用。 但是，您可以选择为集合类型提供无参数的构造函数。 이 방법은 유용한 방법입니다. 除非提供无参数的构造函数，否则不能将集合显式声明为对象元素。 명시적 컬렉션을 태그 스타일의 문제로 보는 태그 작성자도 있습니다. 此外，在创建将集合类型用作属性值的新对象时，无参数构造函数可以简化初始化要求。  
+ 可为集合属性实现自定义集合类型。 由于隐式集合属性处理，自定义集合类型不需要提供无参数的构造函数即可在 XAML 中隐式使用。 但是，您可以选择为集合类型提供无参数的构造函数。 此做法是有用的。 除非提供无参数的构造函数，否则不能将集合显式声明为对象元素。 一些标记作者可能希望看到作为标记样式的显式集合。 此外，在创建将集合类型用作属性值的新对象时，无参数构造函数可以简化初始化要求。  
   
 <a name="XAMLCONtent"></a>   
-## <a name="declaring-xaml-content-properties"></a>XAML 콘텐츠 속성 선언  
- XAML 언어를 통해 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 콘텐츠 속성의 개념을 정의합니다. 개체 구문에서 사용할 수 있는 각 클래스에는 정확히 하나의 XAML 콘텐츠 속성만 포함될 수 있습니다. 若要将属性声明为类的 XAML 内容属性，请将 <xref:System.Windows.Markup.ContentPropertyAttribute> 作为类定义的一部分。 指定预期 XAML 内容属性的名称作为属性中的 <xref:System.Windows.Markup.ContentPropertyAttribute.Name%2A>。 属性按名称指定为字符串，而不是作为 <xref:System.Reflection.PropertyInfo>的反射构造。  
+## <a name="declaring-xaml-content-properties"></a>声明 XAML 内容属性  
+ XAML 语言定义 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 内容属性的概念。 对象语法中可用的每个类仅可具有一个 XAML 内容属性。 若要将属性声明为类的 XAML 内容属性，请将 <xref:System.Windows.Markup.ContentPropertyAttribute> 作为类定义的一部分。 指定预期 XAML 内容属性的名称作为属性中的 <xref:System.Windows.Markup.ContentPropertyAttribute.Name%2A>。 属性按名称指定为字符串，而不是作为 <xref:System.Reflection.PropertyInfo>的反射构造。  
   
- 컬렉션 속성을 XAML 콘텐츠 속성으로 지정할 수 있습니다. 이 경우 중간의 컬렉션 개체 요소나 속성 요소 태그 없이도 개체 요소가 하나 이상의 자식 요소를 가질 수 있는 상황에서 해당 속성이 사용됩니다. 그러면 이러한 요소가 XAML 콘텐츠 속성에 대한 값으로 처리되어 지원 컬렉션 인스턴스에 추가됩니다.  
+ 可将集合属性指定为 XAML 内容属性。 这产生一种属性的用法，通过此用法，对象元素可具有一个或多个子元素，不干扰集合对象元素或属性元素标记。 这些元素被视为 XAML 内容属性的值，并添加到支持集合实例中。  
   
- 기존 XAML 콘텐츠 속성 중 일부에서는 `Object`의 속성 형식을 사용합니다. 这将启用 XAML 内容属性，该属性可以采用 <xref:System.String> 的基元值以及采用单个引用对象值。 이 모델을 따르는 경우 사용자의 형식을 통해 형식을 결정하고 가능한 형식을 처리합니다. <xref:System.Object> 内容类型的典型原因是支持将对象内容添加为字符串（接收默认的演示处理）的简单方法，或添加对象内容（用于指定非默认呈现或其他数据）的高级方法。  
+ 一些现有 XAML 内容属性使用 `Object` 的属性类型。 这将启用 XAML 内容属性，该属性可以采用 <xref:System.String> 的基元值以及采用单个引用对象值。 如果按照此模型，类型负责类型确定以及处理可能的类型。 <xref:System.Object> 内容类型的典型原因是支持将对象内容添加为字符串（接收默认的演示处理）的简单方法，或添加对象内容（用于指定非默认呈现或其他数据）的高级方法。  
   
 <a name="Serializing"></a>   
-## <a name="serializing-xaml"></a>XAML Serialize  
- 예를 들어 컨트롤 작성자인 경우 XAML에서 인스턴스화할 수 있는 개체 표현도 해당 XAML 태그로 다시 serialize할 수 있도록 하려는 경우가 있습니다. Serialization 요구 사항은 이 항목에서 설명하지 않습니다. [컨트롤 작성 개요](../controls/control-authoring-overview.md) 및 [요소 트리 및 Serialization](element-tree-and-serialization.md)을 참조하세요.  
+## <a name="serializing-xaml"></a>序列化 XAML  
+ 某些情况下（例如对于控件作者），可能还需要确保任何可在 XAML 中实例化的对象演示文稿也可被序列化到等效的 XAML 标记。 本主题中未介绍序列化要求。 请参阅[控件创作概述](../controls/control-authoring-overview.md)和[元素树和序列化](element-tree-and-serialization.md)。  
   
 ## <a name="see-also"></a>另请参阅
 
-- [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [사용자 지정 종속성 속성](custom-dependency-properties.md)
-- [컨트롤 제작 개요](../controls/control-authoring-overview.md)
-- [기본 요소 개요](base-elements-overview.md)
-- [XAML 로드 및 종속성 속성](xaml-loading-and-dependency-properties.md)
+- [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [自定义依赖属性](custom-dependency-properties.md)
+- [控件创作概述](../controls/control-authoring-overview.md)
+- [基元素概述](base-elements-overview.md)
+- [XAML 加载和依赖项属性](xaml-loading-and-dependency-properties.md)

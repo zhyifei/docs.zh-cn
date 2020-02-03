@@ -63,7 +63,7 @@ ms.locfileid: "76742227"
     ```
 
     > [!IMPORTANT]
-    > 若要使用此类，程序集需要 <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> 属性授予的特权级别，这是 <xref:System.Security.Permissions.FileIOPermissionAccess> 枚举的一部分。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 有关详细信息，请参阅[代码访问安全性基础知识](../../misc/code-access-security-basics.md)。
+    > 若要使用此类，程序集需要 <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> 属性授予的特权级别，这是 <xref:System.Security.Permissions.FileIOPermissionAccess> 枚举的一部分。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 有关详细信息，请参阅 [Code Access Security Basics](../../misc/code-access-security-basics.md)。
 
 有关如何保存文件的信息，请参阅[如何：使用 SaveFileDialog 组件保存文件](how-to-save-files-using-the-savefiledialog-component.md)。
 

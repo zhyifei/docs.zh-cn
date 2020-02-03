@@ -1,5 +1,5 @@
 ---
-title: WCF Discovery 개요
+title: WCF Discovery 概述
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
 ms.openlocfilehash: 46092c3bce87d426f4d465367e99a9ebb6dc37fa
@@ -9,25 +9,25 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737490"
 ---
-# <a name="wcf-discovery-overview"></a>WCF Discovery 개요
-Discovery API는 WS-Discovery 프로토콜을 사용한 웹 서비스의 동적 게시 및 검색을 위한 통합 프로그래밍 모델을 제공합니다. 이러한 API를 통해 서비스는 스스로를 게시할 수 있고 클라이언트는 게시된 서비스를 찾을 수 있습니다. 서비스가 검색 가능하게 되면 해당 서비스는 검색 요청을 수신하고 이에 대해 응답하는 것 외에 알림 메시지를 보낼 수도 있습니다. 검색 가능한 서비스는 Hello 메시지를 보내 네트워크에서 서비스의 도착을 알리며, Bye 메시지를 보내 네트워크에서 서비스의 출발을 알립니다. 클라이언트는 서비스를 찾기 위해 서비스 계약 형식, 키워드 및 네트워크 범위와 같은 특정 조건이 포함된 `Probe` 요청을 보냅니다. 서비스는 `Probe` 요청을 받고 자신이 이 조건에 일치하는지 여부를 확인합니다. 일치할 경우 서비스는 서비스에 연결하는 데 필요한 정보와 함께 `ProbeMatch` 메시지를 클라이언트로 돌려보내 응답합니다. 또한 클라이언트는 엔드포인트 주소가 변경된 경우에도 서비스를 찾을 수 있는 `Resolve` 요청을 보낼 수도 있습니다. 일치하는 서비스는 `Resolve` 메시지를 클라이언트로 돌려보내 `ResolveMatch` 요청에 응답합니다.  
+# <a name="wcf-discovery-overview"></a>WCF Discovery 概述
+Discovery API 提供了统一的编程模型来使用 WS-Discovery 协议动态发布和发现 Web 服务。 通过这些 API，服务可以发布自身，客户端可以查找已发布的服务。 服务一旦可供检测，即可发送公告消息，并侦听和响应发现请求。 可检测到的服务可以发送 Hello 消息和 Bye 消息，前者用于公告服务将到达网络，后者用于公告服务将离开网络。 若要查找服务，客户端将在网络上发送包含特定条件（如服务协定类型、关键字和范围）的 `Probe` 请求。 服务接收到此 `Probe` 请求，并确定它们是否匹配该条件。 如果某一服务匹配该条件，该服务会做出响应，向客户端回发一条 `ProbeMatch` 消息，该消息包含与该服务联系所需的信息。 客户端还可以发送 `Resolve` 请求，以便查找可能已更改终结点地址的服务。 匹配的服务会向客户端回发一条 `Resolve` 消息，以此来响应 `ResolveMatch` 请求。  
   
-## <a name="ad-hoc-and-managed-modes"></a>애드혹 및 관리 모드  
- Discovery API가 지원하는 모드는 관리 모드와 애드혹 모드, 두 가지입니다. 관리 모드에는 사용 가능한 서비스에 대한 정보를 유지 관리하는 검색 프록시라는 중앙 서버가 있습니다. 검색 프록시는 다양한 방법을 통해 서비스에 대한 정보로 채워집니다. 예를 들어 서비스가 시작 시에 검색 프록시로 알림 메시지를 보낼 수도 있고, 프록시가 데이터베이스 또는 구성 파일에서 데이터를 읽어 사용 가능한 서비스를 확인할 수도 있습니다. 검색 프록시를 채우는 방법은 전적으로 개발자의 재량에 따라 결정됩니다. 클라이언트는 검색 프록시를 통해 사용 가능한 서비스에 대한 정보를 검색합니다. 클라이언트는 서비스를 검색할 때 검색 프록시로 `Probe` 메시지를 보내며, 프록시는 자신이 아는 서비스 중에 클라이언트가 검색하는 서비스와 일치하는 서비스가 있는지 여부를 확인합니다. 일치하는 서비스가 있으면 검색 프록시는 클라이언트로 `ProbeMatch` 응답을 돌려보냅니다. 그러면 클라이언트는 프록시에서 반환된 서비스 정보를 사용하여 서비스에 직접 연결합니다. 관리 모드의 기반이 되는 핵심 원칙은 검색 요청이 하나의 기관, 즉 검색 프록시로 유니캐스트 방식으로 전송된다는 것입니다. .NET Framework에는 사용자가 직접 프록시를 빌드할 수 있도록 하는 주요 구성 요소가 포함되어 있습니다. 클라이언트와 서비스는 다음과 같은 여러 방법으로 프록시를 찾을 수 있습니다.  
+## <a name="ad-hoc-and-managed-modes"></a>临时模式和托管模式  
+ Discovery API 支持两种不同模式：托管模式和临时模式。 托管模式中存在一台称为发现代理的中央服务器，用于维护有关可用服务的信息。 可以采用多种方式使用服务相关信息填充发现代理。 例如，服务可以在启动时向发现代理发送公告消息，或者代理也可以从数据库或配置文件中读取数据以确定可用服务。 发现代理的填充方式完全由开发人员决定。 客户端使用发现代理检索有关可用服务的信息。 当客户端搜索服务时，它会向发现代理发送一条 `Probe` 消息，然后由代理确定已知的任何服务是否与客户端搜索的服务匹配。 如果存在匹配服务，发现代理会向客户端回发 `ProbeMatch` 响应。 然后，客户端可以使用代理返回的服务信息，直接与该服务联系。 托管模式所依据的关键原理是：以单播方式向一个机构（即发现代理）发送发现请求。 通过 .NET Framework 包含的关键组件，您可以生成自己的代理。 客户端和服务可以采用多种方法来定位代理：  
   
-- 프록시는 애드혹 메시지에 응답할 수 있습니다.  
+- 代理可以响应临时消息。  
   
-- 프록시는 시작 시 알림 메시지를 보낼 수 있습니다.  
+- 代理可以在启动时发送公告消息。  
   
-- 잘 알려진 특정 엔드포인트를 찾도록 클라이언트 및 서비스를 작성할 수 있습니다.  
+- 可以编写客户端和服务来查找特定的已知终结点。  
   
- 애드혹 모드에는 중앙 서버가 없습니다. 서비스 알림 및 클라이언트 요청과 같은 모든 검색 메시지는 멀티캐스트 방식으로 전송됩니다. 기본적으로 .NET Framework에는 UDP 프로토콜을 통한 애드혹 검색 지원이 포함되어 있습니다. 예를 들어 서비스가 시작 시 Hello 알림을 보내도록 구성된 경우 이 서비스는 UDP 프로토콜을 사용하여 잘 알려진 멀티캐스트 주소를 통해 알림을 보냅니다. 클라이언트는 적극적으로 이러한 알림을 수신하고 적절히 처리해야 합니다. 클라이언트는 서비스에 대한 `Probe` 메시지를 보낼 때 멀티캐스트 프로토콜을 사용하여 네트워크를 통해 이 메시지를 보냅니다. 요청을 받는 각 서비스는 `Probe` 메시지에 포함된 조건과 자신이 일치하는지 여부를 확인하고, `ProbeMatch` 메시지에 지정된 조건과 일치하는 경우 `Probe` 메시지로 클라이언트에 직접 응답합니다.  
+ 临时模式中没有任何中央服务器。 服务公告和客户端请求等所有发现消息都以多播方式发送。 默认情况下，.NET Framework 包含对基于 UDP 协议的临时发现的支持。 例如，如果将服务配置为在启动时发出 Hello 公告，则该服务采用 UDP 协议通过已知多播地址来发出此公告。 客户端必须主动侦听这些公告，并对这些公告进行相应处理。 当客户端针对某一服务发送 `Probe` 消息时，会通过采用多播协议的网络进行发送。 接收到请求的各服务确定自身是否与 `Probe` 消息中的条件匹配，如果服务与 `ProbeMatch` 消息中指定的条件匹配，服务将直接使用 `Probe` 消息响应客户端。  
   
-## <a name="benefits-of-using-wcf-discovery"></a>WCF Discovery를 사용할 경우의 장점  
- WCF Discovery는 WS-Discovery 프로토콜을 사용하여 구현되므로 WS-Discovery를 구현하는 다른 클라이언트, 서비스 및 프록시와 상호 운용이 가능합니다. WCF Discovery는 기존 WCF API를 기반으로 구축되므로 기존 서비스 및 클라이언트에 검색 기능을 손쉽게 추가할 수 있습니다. 서비스 검색 기능은 애플리케이션 구성 설정을 통해 쉽게 추가할 수 있습니다. 또한 WCF Discovery는 피어 넷, 명명 오버레이 및 HTTP와 같은 다른 전송에서의 검색 프로토콜 사용도 지원합니다. WCF Discovery는 검색 프록시가 사용되는 작업의 관리 모드를 지원합니다. 이로써 전체 네트워크로 멀티캐스트 메시지를 보내는 대신 검색 프록시로 메시지를 직접 보내게 되므로 네트워크 트래픽이 감소합니다. WCF Discovery는 웹 서비스와 함께 사용할 때 유연성도 더욱 높여 줍니다. 예를 들어 클라이언트나 서비스를 다시 구성할 필요 없이 서비스 주소를 변경할 수 있습니다. 클라이언트는 서비스에 액세스해야 하는 경우 `Probe` 요청을 통해 `Find` 메시지를 발송하고 서비스가 현재 주소를 사용하여 응답하기를 기다립니다. WCF Discovery를 통해 클라이언트는 계약 형식, 바인딩 요소, 네임스페이스, 범위 및 키워드 또는 버전 번호와 같은 다양한 조건에 따라 서비스를 검색할 수 있습니다. WCF Discovery를 사용하면 런타임 및 디자인 타임 검색이 가능합니다. 내결함성 및 자동 구성과 같은 다른 시나리오를 지원하기 위해 애플리케이션에 검색 기능을 추가할 수 있습니다.  
+## <a name="benefits-of-using-wcf-discovery"></a>使用 WCF Discovery 的好处  
+ 由于 WCF Discovery 是采用 WS-Discovery 协议实现的，因此它可以与其他客户端、服务以及实现 WS-Discovery 的代理进行互操作。 WCF Discovery 建立在现有 WCF API 的基础上，从而可以向现有服务和客户端方便地添加 Discovery 功能。 通过应用程序配置设置，可以轻松地添加服务发现功能。 此外，WCF Discovery 还支持在其他传输（如对等网络、命名覆盖和 HTTP）中使用发现协议。 WCF Discovery 支持采用发现代理的托管运行模式。 由于消息直接发送到发现代理，而不是将多播消息发送到整个网络，因此这样可以减少网络流量。 使用 Web 服务时，WCF Discovery 还可以提高灵活性。 例如，您可以更改服务地址，而不必重新配置客户端或服务。 当客户端必须访问该服务时，它通过 `Probe` 请求发出 `Find` 消息，并希望该服务使用其当前地址进行响应。 WCF Discovery 允许客户端基于不同条件搜索服务，这些条件包括协定类型、绑定元素、命名空间、范围以及关键字或版本号。 WCF Discovery 支持运行时和设计时发现功能。 可以将发现功能添加到应用程序中，这一特点可用于启用其他方案，如容错和自动配置。  
   
-## <a name="service-publication"></a>서비스 게시  
- 서비스 검색을 가능하게 하려면 서비스 호스트에 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>를 추가하고 검색 엔드포인트를 추가하여 검색 메시지를 수신할 위치를 지정해야 합니다. 다음 코드 예제에서는 자체 호스팅 서비스를 검색 가능하도록 수정하는 방법을 보여 줍니다.  
+## <a name="service-publication"></a>服务发布  
+ 若要使服务可供检测，必须向服务主机添加 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>，并且必须添加发现终结点，以便指定侦听发现消息的位置。 下面的代码示例演示如何修改自承载服务，以使该服务可供检测。  
   
 ```csharp  
 Uri baseAddress = new Uri($"http://{System.Net.Dns.GetHostName()}:8000/discovery/scenarios/calculatorservice/{Guid.NewGuid().ToString()}/");
@@ -55,10 +55,10 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 }
 ```  
   
- 서비스를 검색 가능하게 하려면 서비스 설명에 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 인스턴스를 추가해야 합니다. 서비스에 검색 요청을 수신할 위치를 알리려면 서비스 호스트에 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 인스턴스를 추가해야 합니다. 이 예제에서는 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>(<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>에서 파생됨)를 추가하여 서비스가 UDP 멀티캐스트 전송을 통해 검색 요청을 수신하도록 지정합니다. 모든 메시지가 멀티캐스트 방식으로 전송되므로 애드혹 검색을 위해 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>가 사용됩니다.  
+ 必须在服务说明中添加 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 实例，以使服务可供检测。 必须向服务主机添加 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 实例，以将发现请求的侦听位置告知服务。 在本示例中，添加了 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>（派生自 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>），用于指定服务应通过 UDP 多播传输侦听发现请求。 由于所有消息均以多播方式发送，因此，<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 用于临时发现。  
   
-## <a name="announcement"></a>공지  
- 기본적으로 서비스 게시는 알림 메시지를 보내지 않습니다. 알림 메시지를 보내도록 서비스를 구성해야 합니다. 이렇게 하면 서비스 작성기가 검색 메시지 수신과는 별도로 서비스를 알릴 수 있으므로 유연성이 높아집니다. 서비스 알림은 검색 프록시 및 기타 서비스 레지스트리에 서비스를 등록하기 위한 메커니즘으로도 사용할 수 있습니다. 다음 코드는 UDP 바인딩을 통해 알림 메시지를 보내도록 서비스를 구성하는 방법을 보여 줍니다.  
+## <a name="announcement"></a>公告  
+ 默认情况下，发布服务时不会发出公告消息。 必须对服务进行配置才能发出公告消息。 这就为服务编写器提供了额外的灵活性，因为它们可以分别通告服务和侦听发现消息。 服务公告还可用作向发现代理或其他服务注册表注册服务的机制。 下面的代码演示如何将服务配置为通过 UDP 绑定发送公告消息。  
   
 ```csharp  
 Uri baseAddress = new Uri($"http://{System.Net.Dns.GetHostName()}:8000/discovery/scenarios/calculatorservice/{Guid.NewGuid().ToString()}/");
@@ -91,8 +91,8 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 }
 ```  
   
-## <a name="service-discovery"></a>서비스 검색  
- 클라이언트 애플리케이션은 <xref:System.ServiceModel.Discovery.DiscoveryClient> 클래스를 사용하여 서비스를 찾을 수 있습니다. 개발자는 <xref:System.ServiceModel.Discovery.DiscoveryClient> 또는 `Probe` 메시지를 보낼 위치를 지정하는 검색 엔드포인트를 전달하는 `Resolve` 클래스의 인스턴스를 만듭니다. 그러면 클라이언트가 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 인스턴스 내에서 검색 조건을 지정하는 <xref:System.ServiceModel.Discovery.FindCriteria>를 호출합니다. 일치하는 서비스가 발견되면 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>는 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> 컬렉션을 반환합니다. 다음 코드는 `Find` 메서드를 호출한 다음 검색된 서비스에 연결하는 방법을 보여 줍니다.  
+## <a name="service-discovery"></a>服务发现  
+ 客户端应用程序可以使用 <xref:System.ServiceModel.Discovery.DiscoveryClient> 类查找服务。 开发人员可创建 <xref:System.ServiceModel.Discovery.DiscoveryClient> 类的实例，用于传入指定 `Probe` 或 `Resolve` 消息的发送位置的发现终结点。 然后，客户端调用 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>，用于指定 <xref:System.ServiceModel.Discovery.FindCriteria> 实例中的搜索条件。 如果找到匹配的服务，则 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 返回 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> 的集合。 下面的代码演示如何调用 `Find` 方法并连接到已发现的服务。  
   
 ```csharp  
 class Client
@@ -143,19 +143,19 @@ class Client
 }  
 ```  
   
-## <a name="discovery-and-message-level-security"></a>검색 및 메시지 수준 보안  
- 메시지 수준 보안을 사용하는 경우 서비스 검색 엔드포인트에 <xref:System.ServiceModel.EndpointIdentity>를, 클라이언트 검색 엔드포인트에 일치하는 <xref:System.ServiceModel.EndpointIdentity>를 지정해야 합니다. 有关消息级别安全性的详细信息，请参阅[消息安全](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)。  
+## <a name="discovery-and-message-level-security"></a>发现和消息级别安全  
+ 使用消息级别安全时，需要在服务发现终结点上指定 <xref:System.ServiceModel.EndpointIdentity>，并在客户端发现终结点上指定匹配的 <xref:System.ServiceModel.EndpointIdentity>。 有关消息级别安全性的详细信息，请参阅[消息安全](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)。  
   
-## <a name="discovery-and-web-hosted-services"></a>검색 및 웹 호스팅 서비스  
- WCF 서비스가 검색 가능하려면 실행되고 있어야 합니다. IIS 또는 WAS에서 호스팅되는 WCF 서비스는 IIS/WAS가 서비스에 바인딩된 메시지를 받을 때까지 실행되지 않으므로 기본적으로 검색 가능하지 않습니다.  웹 호스팅 서비스를 검색 가능하게 만드는 방법은 다음 두 가지입니다.  
+## <a name="discovery-and-web-hosted-services"></a>发现和 Web 承载的服务  
+ 若要使 WCF 服务可发现，这些服务必须正在运行。 在 IIS/WAS 接收到为服务绑定的消息之前，IIS 或 WAS 下承载的 WCF 服务不会运行，因此这些服务在默认情况下不可发现。  使 Web 承载的服务可发现的两种方法：  
   
-1. Windows Server AppFabric 자동 시작 기능 사용  
+1. 使用 Windows Server AppFabric 自动启动功能  
   
-2. 서비스 대신 통신할 검색 프록시 사용  
+2. 使用发现代理代表服务进行通信  
   
- Windows Server AppFabric에는 메시지를 받기 전에 서비스가 시작될 수 있도록 하는 자동 시작 기능이 있습니다. 이 자동 시작 집합을 사용하여 IIS/WAS에서 호스팅된 서비스가 검색 가능하도록 구성할 수 있습니다. 有关自动启动功能的详细信息，请参阅[Windows Server AppFabric 自动启动功能](https://docs.microsoft.com/previous-versions/appfabric/ee677260(v=azure.10))。 자동 시작 기능을 설정하는 것과 함께 검색에 대해 서비스를 구성해야 합니다. 有关详细信息，请参阅[如何：以编程方式向 WCF 服务添加可发现性和](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[在配置文件中配置发现](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md)的客户端。  
+ Windows Server AppFabric 具有自动启动功能，该功能允许服务在接收到任何消息之前启动。 设置了此自动启动功能时，IIS/WAS 承载的服务可配置为可发现。 有关自动启动功能的详细信息，请参阅[Windows Server AppFabric 自动启动功能](https://docs.microsoft.com/previous-versions/appfabric/ee677260(v=azure.10))。 必须随打开自动启动功能一起，针对发现配置服务。 有关详细信息，请参阅[如何：以编程方式向 WCF 服务添加可发现性和](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[在配置文件中配置发现](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md)的客户端。  
   
- WCF 서비스가 실행되지 않을 때 검색 프록시를 사용하여 WCF 서비스 대신 통신할 수 있습니다. 프록시는 프로브 또는 확인 메시지를 수신하고 클라이언트에 응답할 수 있습니다. 그러면 클랑이언트에서 서비스에 직접 메시지를 보낼 수 있습니다. 클라이언트에서 서비스에 메시지를 보낼 때 서비스가 메시지에 응답하기 위해 인스턴스화됩니다. 有关实现发现代理的详细信息，请参阅[实现发现代理](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)。  
+ 发现代理可以用于在服务未运行时，代表 WCF 服务进行通信。 代理可以为进行探测而侦听，或解析消息及对客户端的响应。 客户端随后可以直接向服务发送消息。 当客户端向服务发送消息时，它将实例化以响应消息。 有关实现发现代理的详细信息，请参阅[实现发现代理](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)。  
   
 > [!NOTE]
 > 为了使 WCF 发现正常工作，所有 Nic （网络接口控制器）都应只有1个 IP 地址。

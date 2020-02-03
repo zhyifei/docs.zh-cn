@@ -18,7 +18,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744502"
 ---
-# <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤의 아이콘 표시
+# <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>如何：显示 Windows 窗体 ListView 控件的图标
 Windows 窗体 <xref:System.Windows.Forms.ListView> 控件可以显示三个图像列表中的图标。 "列表"、"详细信息" 和 "SmallIcon" 视图显示 <xref:System.Windows.Forms.ListView.SmallImageList%2A> 属性中指定的图像列表中的图像。 LargeIcon 视图显示 <xref:System.Windows.Forms.ListView.LargeImageList%2A> 属性中指定的图像列表中的图像。 列表视图还可以显示一组附加的图标，在 "<xref:System.Windows.Forms.ListView.StateImageList%2A>" 属性中，在大图标或小图标旁显示。 有关图像列表的详细信息，请参阅[Imagelist 组件](imagelist-component-windows-forms.md)和[如何：通过 Windows 窗体 ImageList 组件添加或删除图像](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。  
   
 ### <a name="to-display-images-in-a-list-view"></a>在列表视图中显示图像  
@@ -39,8 +39,8 @@ Windows 窗体 <xref:System.Windows.Forms.ListView> 控件可以显示三个图�
   
 ## <a name="see-also"></a>另请参阅
 
-- [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)
-- [방법: Windows Forms ListView 컨트롤을 사용하여 항목 추가 및 제거](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [방법: Windows Forms ListView 컨트롤에 열 추가](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [방법: TreeView 또는 ListView 컨트롤에 사용자 지정 정보 추가(Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
-- [ImageList 구성 요소](imagelist-component-windows-forms.md)
+- [ListView 控件概述](listview-control-overview-windows-forms.md)
+- [如何：使用 Windows 窗体 ListView 控件添加和删除项](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [如何：向 Windows 窗体 ListView 控件添加列](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [如何：向 TreeView 或 ListView 控件（Windows 窗体）添加自定义信息](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [ImageList 组件](imagelist-component-windows-forms.md)

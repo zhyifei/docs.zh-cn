@@ -1,5 +1,5 @@
 ---
-title: '방법: MDI 부모 창에 MenuStrip 추가'
+title: 如何：将 MenuStrip 附加到 MDI 父窗口
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,36 +16,36 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76747155"
 ---
-# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>방법: MDI 부모 창에 MenuStrip 추가(Windows Forms)
-일부 애플리케이션에서는 MDI(다중 문서 인터페이스) 자식 창의 종류가 MDI 부모 창과 다를 수 있습니다. 예를 들어 MDI 부모는 스프레드시트이고 MDI 자식은 차트일 수 있습니다. 이 경우 다른 종류의 MDI 자식 창이 활성화될 때 MDI 부모 메뉴의 내용을 MDI 자식 메뉴의 내용으로 업데이트하려고 합니다.  
+# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>如何：将 MenuStrip 附加到 MDI 父窗口（Windows 窗体）
+在某些应用程序中，多文档界面 (MDI) 子窗口的类型可以不同于 MDI 父窗口。 例如，MDI 父窗口可能为电子表格，而 MDI 子窗口可能为图表。 在这种情况下，由于激活了不同类型的 MDI 子窗口，你想用 MDI 子菜单上的内容更新 MDI 父菜单的内容。  
   
- 다음 절차에서는 <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction> 및 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 속성을 사용하여 MDI 자식 메뉴를 MDI 부모 메뉴에 추가합니다. MDI 자식 창을 닫으면 MDI 부모에서 추가된 메뉴가 제거됩니다.  
+ 下面的过程使用 <xref:System.Windows.Forms.Form.IsMdiContainer%2A>、<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>、<xref:System.Windows.Forms.MergeAction> 和 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 属性将 MDI 子菜单附加到 MDI 父菜单。 关闭 MDI 子窗口可将附加的菜单从 MDI 父窗口中删除。  
   
  另请参阅[多文档界面（MDI）应用程序](../advanced/multiple-document-interface-mdi-applications.md)。  
   
-### <a name="to-append-a-menu-item-to-an-mdi-parent"></a>MDI 부모에 메뉴 항목을 추가하려면  
+### <a name="to-append-a-menu-item-to-an-mdi-parent"></a>将菜单项附加到 MDI 父菜单  
   
-1. 폼을 만들고 해당 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 속성을 `true`로 설정합니다.  
+1. 创建一个窗体并将其 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 属性设置为 `true`。  
   
-2. `Form1`에 <xref:System.Windows.Forms.MenuStrip>을 추가하고 <xref:System.Windows.Forms.MenuStrip>의 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 속성을 `true`로 설정합니다.  
+2. 将 <xref:System.Windows.Forms.MenuStrip> 添加到 `Form1` 并将 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 的 <xref:System.Windows.Forms.MenuStrip> 属性设置为 `true`。  
   
-3. `Form1`<xref:System.Windows.Forms.MenuStrip>의 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 속성을 `false`로 설정합니다.  
+3. 将 <xref:System.Windows.Forms.ToolStripItem.Visible%2A>`Form1` 的 <xref:System.Windows.Forms.MenuStrip> 属性设置为 `false`。  
   
-4. `Form1`<xref:System.Windows.Forms.MenuStrip>에 최상위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.Control.Text%2A> 속성을 `&File`로 설정합니다.  
+4. 将顶级菜单项添加到 `Form1`<xref:System.Windows.Forms.MenuStrip> 并将其 <xref:System.Windows.Forms.Control.Text%2A> 属性设置为 `&File`。  
   
-5. `&File` 메뉴 항목에 하위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.Form.Text%2A> 속성을 `&Open`로 설정합니다.  
+5. 将子菜单项添加到 `&File` 菜单项，并将其 <xref:System.Windows.Forms.Form.Text%2A> 属性设置为 `&Open`。  
   
-6. 프로젝트에 폼을 추가하고, 폼에 <xref:System.Windows.Forms.MenuStrip>을 추가한 다음 `Form2`<xref:System.Windows.Forms.MenuStrip>의 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 속성을 `true`로 설정합니다.  
+6. 将窗体添加到项目，将 <xref:System.Windows.Forms.MenuStrip> 添加该窗体，并将 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>`Form2` 的 <xref:System.Windows.Forms.MenuStrip> 属性设置为 `true`。  
   
-7. `Form2`<xref:System.Windows.Forms.MenuStrip>에 최상위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.Form.Text%2A> 속성을 `&Special`로 설정합니다.  
+7. 将顶级菜单项添加到 `Form2`<xref:System.Windows.Forms.MenuStrip> 并将其 <xref:System.Windows.Forms.Form.Text%2A> 属性设置为 `&Special`。  
   
-8. `&Special` 메뉴 항목에 두 개의 하위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.Form.Text%2A> 속성을 각각 `Command&1` 및 `Command&2`로 설정합니다.  
+8. 将两个子菜单项添加到 `&Special` 菜单项，并将其 <xref:System.Windows.Forms.Form.Text%2A> 属性分别设置为 `Command&1` 和 `Command&2`。  
   
-9. `&Special`, `Command&1` 및 `Command&2` 메뉴 항목의 <xref:System.Windows.Forms.MergeAction> 속성을 <xref:System.Windows.Forms.MergeAction.Append>로 설정합니다.  
+9. 将 <xref:System.Windows.Forms.MergeAction>、`&Special` 和 `Command&1` 菜单项的 `Command&2` 属性设置为 <xref:System.Windows.Forms.MergeAction.Append>。  
   
 10. 为 `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>的 <xref:System.Windows.Forms.Control.Click> 事件创建事件处理程序。  
   
-11. 이벤트 처리기 내에서 다음 코드 예제와 비슷한 코드를 삽입하여 `Form2`의 새 인스턴스를 만들고 `Form1`의 MDI 자식으로 표시합니다.  
+11. 在事件处理程序内，插入类似于以下示例代码的代码，从而将 `Form2` 的新实例创建和显示为 `Form1` 的 MDI 子级。  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles openToolStripMenuItem.Click  
@@ -68,7 +68,7 @@ ms.locfileid: "76747155"
     }  
     ```  
   
-12. `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>에 다음 코드 예제와 비슷한 코드를 배치하여 이벤트 처리기를 등록합니다.  
+12. 将类似于以下示例代码的代码放在 `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> 中以注册事件处理程序。  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  
@@ -79,11 +79,11 @@ ms.locfileid: "76747155"
     this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);  
     ```  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
- 이 예제에는 다음 사항이 필요합니다.  
+## <a name="compiling-the-code"></a>编译代码  
+ 此示例需要：  
   
-- `Form1` 및 `Form2`라는 두 개의 <xref:System.Windows.Forms.Form> 컨트롤  
+- 名为 <xref:System.Windows.Forms.Form> 和 `Form1` 的两个 `Form2` 控件。  
   
-- `menuStrip1`이라는 `Form1`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤 및 `menuStrip2`라는 `Form2`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤  
+- <xref:System.Windows.Forms.MenuStrip> 上名为 `Form1` 的 `menuStrip1` 控件和 <xref:System.Windows.Forms.MenuStrip> 上名为 `Form2` 的 `menuStrip2` 控件。  
   
-- <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조
+- 对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。

@@ -13,7 +13,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746151"
 ---
-# <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 셀 스타일
+# <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的单元格样式
 <xref:System.Windows.Forms.DataGridView> 控件中的每个单元格都可以有自己的样式，如文本格式、背景色、前景色和字体。 不过，通常情况下，多个单元格将共享特定的样式特征。  
   
  共享样式的单元格组可以包含特定行或列中的所有单元格、包含特定值的所有单元格或控件中的所有单元格。 由于这些组重叠，因此每个单元格可能会从多个位置获取其样式信息。 例如，您可能希望 <xref:System.Windows.Forms.DataGridView> 控件中的每个单元格使用同一字体，但只有货币列中的单元格才能使用货币格式，而只希望使用负数的货币单元格使用红色前景色。  
@@ -21,17 +21,17 @@ ms.locfileid: "76746151"
 ## <a name="the-datagridviewcellstyle-class"></a>DataGridViewCellStyle 类  
  <xref:System.Windows.Forms.DataGridViewCellStyle> 类包含以下与视觉样式相关的属性：  
   
-- <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> 및 <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
   
-- <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> 및 <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A>  
   
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A>  
   
  此类还包含以下与格式设置相关的属性：  
   
-- <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 및 <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
   
-- <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> 및 <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>  
   
 - <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>  
   
@@ -48,7 +48,7 @@ ms.locfileid: "76746151"
   
  下表列出了 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象获取或设置的主要属性。  
   
-|속성|클래스|설명|  
+|属性|类|说明|  
 |--------------|-------------|-----------------|  
 |`DefaultCellStyle`|<xref:System.Windows.Forms.DataGridView>、<xref:System.Windows.Forms.DataGridViewColumn>、<xref:System.Windows.Forms.DataGridViewRow>和派生类|获取或设置整个控件中的所有单元格（包括标头单元格）、列或行中的默认样式。|  
 |<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|获取或设置控件中的所有行使用的默认单元格样式。 这不包括标头单元格。|  
@@ -62,7 +62,7 @@ ms.locfileid: "76746151"
   
  每个样式属性在 <xref:System.Windows.Forms.DataGridView> 控件上都有相应的*PropertyName*`Changed` 事件。 对于行、列和单元属性，事件的名称以 "`Row`"、"`Column`" 或 "`Cell`" 开头（例如 <xref:System.Windows.Forms.DataGridView.RowDefaultCellStyleChanged>）。 当相应的样式属性设置为其他 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象时，将发生这些事件中的每一个。 从样式属性检索 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象并修改其属性值时，不会发生这些事件。 若要对单元格样式对象本身的更改做出响应，请处理 <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged> 事件。  
   
-## <a name="style-inheritance"></a>스타일 상속  
+## <a name="style-inheritance"></a>样式继承  
  每个 <xref:System.Windows.Forms.DataGridViewCell> 从其 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> 属性中获取其外观。 此属性返回的 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象将从类型 <xref:System.Windows.Forms.DataGridViewCellStyle>的属性层次结构继承其值。 下面列出了这些属性，这些属性的 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> 为非标题单元格获取其值的顺序。  
   
 1. <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
@@ -81,11 +81,11 @@ ms.locfileid: "76746151"
   
 1. <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
-2. <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType> 또는 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
+2. <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType> 或 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
   
 3. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
- 다음 다이어그램은 이 프로세스를 보여 줍니다.  
+ 下图对此过程进行了说明：  
   
  ![DataGridViewCellStyle 类型的属性](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-inheritance-diagram.gif "DataGridViewCells 继承关系图")  
   
@@ -163,6 +163,6 @@ ms.locfileid: "76746151"
 - <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>
-- [Windows Forms DataGridView 컨트롤의 기본 형식 및 스타일 지정](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤에 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 데이터 형식 지정](data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的基本格式和样式设置](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的数据格式设置](data-formatting-in-the-windows-forms-datagridview-control.md)

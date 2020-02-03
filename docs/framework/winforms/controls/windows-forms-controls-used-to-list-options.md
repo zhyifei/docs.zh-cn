@@ -34,7 +34,7 @@ ms.locfileid: "76742349"
  [如何：对 Windows 窗体 ComboBox、ListBox 或 CheckedListBox 控件的内容进行排序](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
  说明如何在数据源中对列表数据进行排序。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.CheckedListBox>  
  对此类进行描述，并提供指向其所有成员的链接。  
   

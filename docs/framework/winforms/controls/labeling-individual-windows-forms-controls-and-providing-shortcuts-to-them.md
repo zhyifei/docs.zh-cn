@@ -18,7 +18,7 @@ ms.locfileid: "76745255"
 
 添加到 Windows 窗体的控件具有用于进一步专用化用户体验的属性和方法。 对于设计良好的 Windows 应用程序而言，自定义用户界面以满足用户需求至关重要。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
 [如何：设置 Windows 窗体控件显示的文本](how-to-set-the-text-displayed-by-a-windows-forms-control.md)\
 描述如何将文本标签分配给控件。

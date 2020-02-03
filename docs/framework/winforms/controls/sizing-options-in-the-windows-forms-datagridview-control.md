@@ -16,26 +16,26 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742980"
 ---
-# <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 크기 조정 옵션
+# <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的大小调整选项
 <xref:System.Windows.Forms.DataGridView> 的行、列和标头可能会因发生多种不同的原因而改变大小。 下表显示了这些情况。  
   
-|발생|설명|  
+|次数|说明|  
 |----------------|-----------------|  
 |用户调整大小|用户可以通过拖动或双击行、列或标题分隔线来调整大小。|  
 |控件调整大小|在列填充模式下，当控件的宽度发生变化时，列宽将更改;例如，当控件停靠在其父窗体上并且用户调整窗体的大小时。|  
 |单元格值更改|在基于内容的自动调整大小模式下，调整大小以适应新的显示值。|  
-|메서드 호출|基于编程内容的大小调整使你可以基于方法调用时的单元格值进行机会调整大小。|  
+|方法调用|基于编程内容的大小调整使你可以基于方法调用时的单元格值进行机会调整大小。|  
 |属性设置|你还可以设置特定的高度和宽度值。|  
   
  默认情况下，将启用用户大小调整，禁用自动调整大小，并剪裁宽度超过其列的单元值。  
   
  下表显示了可用于调整默认行为或使用特定大小调整选项实现特定效果的方案。  
   
-|시나리오|구현|  
+|场景|实现|  
 |--------------|--------------------|  
-|使用列填充模式，在占用整个控件宽度的列中显示大小类似的数据，而不显示水平滚动条。|<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 속성을 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>으로 설정합니다.|  
-|使用具有不同大小的显示值的列填充模式。|<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 속성을 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>으로 설정합니다. 在使用数据填充控件后，通过将列设置 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 属性或调用控件 <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> 方法来初始化相对列宽度。|  
-|使用具有不同重要性的值的列填充模式。|<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 속성을 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>으로 설정합니다. 为必须始终显示部分数据的列设置大 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值，或者对特定列使用填充模式之外的大小调整选项。|  
+|使用列填充模式，在占用整个控件宽度的列中显示大小类似的数据，而不显示水平滚动条。|将 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 属性设置为 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>。|  
+|使用具有不同大小的显示值的列填充模式。|将 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 属性设置为 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>。 在使用数据填充控件后，通过将列设置 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 属性或调用控件 <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> 方法来初始化相对列宽度。|  
+|使用具有不同重要性的值的列填充模式。|将 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 属性设置为 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>。 为必须始终显示部分数据的列设置大 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值，或者对特定列使用填充模式之外的大小调整选项。|  
 |使用列填充模式可避免显示控件背景。|将最后一列的 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 属性设置为 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>，并对其他列使用其他调整大小选项。 如果其他列使用了太多的可用空间，请设置最后一列的 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 属性。|  
 |显示固定宽度的列，例如图标或 ID 列。|将 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 设置为 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.None> 并 <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> 为列 <xref:System.Windows.Forms.DataGridViewTriState.False>。 在使用数据填充控件后，通过设置 <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> 属性或调用控件 <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A> 方法来初始化其宽度。|  
 |当单元格内容更改时自动调整大小，以避免剪辑和优化空间的使用。|将自动调整大小属性设置为一个值，该值表示基于内容的大小调整模式。 若要避免在处理大量数据时出现性能损失，请使用只计算显示行的调整大小模式。|  
@@ -155,6 +155,6 @@ ms.locfileid: "76742980"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [Windows Forms DataGridView 컨트롤의 열 및 행 크기 조정](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 열 채우기 모드](column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤의 크기 조정 모드 설정](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [调整 Windows 窗体 DataGridView 控件中列和行的大小](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的列填充模式](column-fill-mode-in-the-windows-forms-datagridview-control.md)
+- [如何：设置 Windows 窗体 DataGridView 控件的重设大小模式](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

@@ -98,7 +98,7 @@ IdentityServer 还托管了公共演示网站，可用于测试各种协议和�
 
 许多云本机应用程序在前端使用服务器端 Api 和丰富的客户端单页面应用程序（Spa）。 IdentityServer 通过 NPM 提供了一个[JavaScript 客户端](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)（`oidc-client.js`），可以将其添加到 spa，使其能够使用 IdentityServer 进行登录、注销和 web api 基于令牌的身份验证。
 
-## <a name="references"></a>引用
+## <a name="references"></a>参考
 
 - [IdentityServer 文档](http://docs.identityserver.io/en/latest/)
 - [应用程序类型](https://docs.microsoft.com/azure/active-directory/develop/app-types)

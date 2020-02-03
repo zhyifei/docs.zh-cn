@@ -20,31 +20,31 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743109"
 ---
-# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>방법: Windows Forms Timer 구성 요소를 사용하여 설정된 간격마다 프로시저 실행
-루프가 완료될 때까지 특정 시간 간격으로 실행되거나 설정된 시간 간격이 경과할 때 실행되는 프로시저를 만들려는 경우도 있습니다. <xref:System.Windows.Forms.Timer> 구성 요소는 이러한 프로시저를 가능하게 합니다.  
+# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>如何：使用 Windows 窗体 Timer 组件按设定间隔运行过程
+有时可能需要创建一个在循环完成之前以特定时间间隔运行或者在设定时间间隔之后运行的过程。 <xref:System.Windows.Forms.Timer> 组件可实现此过程。  
   
- 이 구성 요소는 Windows Forms 환경에 맞게 설계되었습니다. 서버 환경에 적합한 타이머가 필요한 경우 [서버 기반 타이머 소개](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90))를 참조하세요.  
+ 此组件专为 Windows 窗体环境设计。 如果需要适合服务器环境的计时器，请参阅[基于服务器的计时器介绍](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90))。  
   
 > [!NOTE]
-> <xref:System.Windows.Forms.Timer> 구성 요소를 사용하는 경우 몇 가지 제한 사항이 있습니다. 有关详细信息，请参阅[Windows 窗体 Timer 组件的 Interval 属性的限制](limitations-of-the-timer-component-interval-property.md)。  
+> 使用 <xref:System.Windows.Forms.Timer> 组件时，有一些限制。 有关详细信息，请参阅[Windows 窗体 Timer 组件的 Interval 属性的限制](limitations-of-the-timer-component-interval-property.md)。  
   
-## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Timer 구성 요소를 사용하여 설정된 간격마다 프로시저를 실행하려면  
+## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>若要使用 Timer 组件以设定间隔运行过程  
   
-1. 폼에 <xref:System.Windows.Forms.Timer>를 추가합니다. 이 작업을 프로그래밍 방식으로 수행하는 방법은 다음 예제 섹션을 참조하세요. Visual Studio 还支持将组件添加到窗体。 另请参阅[如何：将没有用户界面的控件添加到 Windows 窗体](how-to-add-controls-without-a-user-interface-to-windows-forms.md)。  
+1. 在窗体中添加 <xref:System.Windows.Forms.Timer>。 请参阅下图中的示例，了解如何以编程方式执行此操作。 Visual Studio 还支持将组件添加到窗体。 另请参阅[如何：将没有用户界面的控件添加到 Windows 窗体](how-to-add-controls-without-a-user-interface-to-windows-forms.md)。  
   
-2. 타이머에 대한 <xref:System.Windows.Forms.Timer.Interval%2A> 속성(밀리초)을 설정합니다. 이 속성은 프로시저가 다시 실행되기까지 남은 시간을 결정합니다.  
+2. 设置计时器的 <xref:System.Windows.Forms.Timer.Interval%2A> 属性（以毫秒计）。 此属性确定过程再次运行之前的时间间隔。  
   
     > [!NOTE]
-    > 타이머 이벤트가 자주 발생할수록 이벤트에 응답하는 데 더 많은 프로세서 시간이 사용됩니다. 이 경우 전반적인 성능이 느려질 수 있습니다. 필요 이상으로 작은 간격을 설정하지 마세요.  
+    > 计时器事件的发生频率越高，处理器用于响应事件的时间越长。 这将会降低整体性能。 时间间隔必须设置为大于所需间隔。  
   
-3. <xref:System.Windows.Forms.Timer.Tick> 이벤트 처리기에서 적절한 코드를 작성합니다. 이 이벤트에서 작성하는 코드는 <xref:System.Windows.Forms.Timer.Interval%2A> 속성에 지정된 간격마다 실행됩니다.  
+3. 在 <xref:System.Windows.Forms.Timer.Tick> 事件处理程序中编写相应代码。 在此事件中编写的代码将以 <xref:System.Windows.Forms.Timer.Interval%2A> 属性中指定的间隔运行。  
   
-4. <xref:System.Windows.Forms.Timer.Enabled%2A> 속성을 `true`로 설정하여 타이머를 시작합니다. <xref:System.Windows.Forms.Timer.Tick> 이벤트 발생이 시작되고 설정된 간격마다 프로시저를 실행합니다.  
+4. 将 <xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `true` 以启动计时器。 <xref:System.Windows.Forms.Timer.Tick> 事件将开始发生，进而以设定间隔运行过程。  
   
-5. 적절한 시간에 <xref:System.Windows.Forms.Timer.Enabled%2A> 속성을 `false`로 설정하여 프로시저가 다시 실행되지 않도록 중지합니다. 将间隔设置为 `0` 不会导致计时器停止。  
+5. 在适当时间，将 <xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `false`以阻止过程再次运行。 将间隔设置为 `0` 不会导致计时器停止。  
   
 ## <a name="example"></a>示例  
- 이 첫 번째 코드 예제에서는 1초 증분으로 시간을 추적합니다. 폼의 <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Label> 및 <xref:System.Windows.Forms.Timer> 구성 요소를 사용합니다. <xref:System.Windows.Forms.Timer.Interval%2A> 속성은 1000(1초와 같음)으로 설정됩니다. <xref:System.Windows.Forms.Timer.Tick> 이벤트에서 레이블의 캡션은 현재 시간으로 설정됩니다. 단추를 클릭하면 <xref:System.Windows.Forms.Timer.Enabled%2A> 속성이 `false`로 설정되어 타이머가 레이블 캡션 업데이트를 중지합니다. 下面的代码示例要求你有一个窗体，其中包含名为 `Button1`的 <xref:System.Windows.Forms.Button> 控件、一个名为 `Timer1`的 <xref:System.Windows.Forms.Timer> 控件以及一个名为 <xref:System.Windows.Forms.Label> 的 `Label1`控件。  
+ 第一个代码示例以一秒的增量跟踪每天的时间。 它使用窗体上的 <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.Label> 和 <xref:System.Windows.Forms.Timer> 组件。 将 <xref:System.Windows.Forms.Timer.Interval%2A> 属性设置为 1000（等于 1 秒）。 在 <xref:System.Windows.Forms.Timer.Tick> 事件中，将标签的标题设置为当前时间。 单击按钮时，<xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `false`，使计时器停止更新标签的标题。 下面的代码示例要求你有一个窗体，其中包含名为 `Button1`的 <xref:System.Windows.Forms.Button> 控件、一个名为 `Timer1`的 <xref:System.Windows.Forms.Timer> 控件以及一个名为 <xref:System.Windows.Forms.Label> 的 `Label1`控件。  
   
 ```vb  
 Private Sub InitializeTimer()  
@@ -149,7 +149,7 @@ private:
 ```  
   
 ## <a name="example"></a>示例  
- 이 두 번째 코드 예제는 루프가 완료될 때까지 600밀리초마다 프로시저를 실행합니다. 下面的代码示例要求你有一个窗体，其中包含名为 `Button1`的 <xref:System.Windows.Forms.Button> 控件、一个名为 `Timer1`的 <xref:System.Windows.Forms.Timer> 控件以及一个名为 <xref:System.Windows.Forms.Label> 的 `Label1`控件。  
+ 第二个代码示例每隔 600 毫秒运行一个过程，直至完成一个循环。 下面的代码示例要求你有一个窗体，其中包含名为 `Button1`的 <xref:System.Windows.Forms.Button> 控件、一个名为 `Timer1`的 <xref:System.Windows.Forms.Timer> 控件以及一个名为 <xref:System.Windows.Forms.Label> 的 `Label1`控件。  
   
 ```vb  
 ' This variable will be the loop counter.  
@@ -245,5 +245,5 @@ private:
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Timer>
-- [Timer 구성 요소](timer-component-windows-forms.md)
-- [Timer 구성 요소 개요](timer-component-overview-windows-forms.md)
+- [Timer 组件](timer-component-windows-forms.md)
+- [Timer 组件概述](timer-component-overview-windows-forms.md)

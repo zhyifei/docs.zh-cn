@@ -38,7 +38,7 @@ Microsoft 模式和实践组编写了一篇称为[WCF 安全指南](https://arch
   
 1. <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
-2. ASP.NET 成员资格提供程序  
+2. ASP.NET 成员身份提供程序  
   
 3. ASP.NET 角色提供程序  
   
@@ -50,5 +50,5 @@ Microsoft 模式和实践组编写了一篇称为[WCF 安全指南](https://arch
   
 ## <a name="see-also"></a>另请参阅
 
-- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server App Fabric 的安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

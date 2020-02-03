@@ -21,7 +21,7 @@ ms.locfileid: "76734803"
 ## <a name="methods-that-process-user-input-messages"></a>处理用户输入消息的方法  
  窗体和控件可以访问 <xref:System.Windows.Forms.IMessageFilter> 接口和一组可重写的方法，这些方法可在消息队列中的不同点处理 Windows 消息。 这些方法都有 <xref:System.Windows.Forms.Message> 参数，用于封装 Windows 消息的低级详细信息。 您可以实现或重写这些方法来检查消息，然后使用消息或将消息传递到消息队列中的下一个使用者。 下表显示了处理 Windows 窗体中所有 Windows 消息的方法。  
   
-|메서드|참고|  
+|方法|注意|  
 |------------|-----------|  
 |<xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A>|此方法在应用程序级别截获排队（也称为已发布） Windows 消息。|  
 |<xref:System.Windows.Forms.Control.PreProcessMessage%2A>|此方法在处理之前，在窗体和控件级别截获 Windows 消息。|  
@@ -33,6 +33,6 @@ ms.locfileid: "76734803"
   
 ## <a name="see-also"></a>另请参阅
 
-- [Windows Forms에 사용자 입력](user-input-in-windows-forms.md)
-- [Windows Forms 애플리케이션의 키보드 입력](keyboard-input-in-a-windows-forms-application.md)
-- [Windows Forms 애플리케이션의 마우스 입력](mouse-input-in-a-windows-forms-application.md)
+- [Windows 窗体中的用户输入](user-input-in-windows-forms.md)
+- [Windows 窗体应用程序中的键盘输入](keyboard-input-in-a-windows-forms-application.md)
+- [Windows 窗体应用程序中的鼠标输入](mouse-input-in-a-windows-forms-application.md)

@@ -30,11 +30,11 @@ ms.locfileid: "76731185"
   
 - 使用其 <xref:System.Windows.Forms.Control.ClientRectangle%2A> 属性计算用于绘制控件的区域。 `FlashTrackBar` 在 `OptimizedInvalidate` 方法中执行此操作。  
   
-- 在 Windows 窗体设计器中更改属性时，实现其序列化或持久性。 `FlashTrackBar` 定义用于序列化其 `StartColor` 和 `EndColor` 属性的 `ShouldSerializeStartColor` 和 `ShouldSerializeEndColor` 方法。  
+- 在 Windows 窗体设计器中更改属性时，实现其序列化或持久性。 `FlashTrackBar` 定义用于序列化其 `ShouldSerializeStartColor` 和 `ShouldSerializeEndColor` 属性的 `StartColor` 和 `EndColor` 方法。  
   
  下表显示了由 `FlashTrackBar` 定义的自定义属性。  
   
-|Property|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |`AllowUserEdit`|指示用户是否可以通过单击和拖动来更改闪存跟踪条的值。|  
 |`EndColor`|指定跟踪条的结束颜色。|  
@@ -49,7 +49,7 @@ ms.locfileid: "76731185"
   
  下表显示了 `FlashTrackBar:` 定义的其他成员：property-changed 事件和引发该事件的方法。  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`ValueChanged`|当跟踪条的 `Value` 属性更改时引发的事件。|  
 |`OnValueChanged`|引发 `ValueChanged` 事件的方法。|  

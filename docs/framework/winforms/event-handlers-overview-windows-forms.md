@@ -1,5 +1,5 @@
 ---
-title: 이벤트 처리기 개요
+title: 事件处理程序概述
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,7 +17,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743495"
 ---
-# <a name="event-handlers-overview-windows-forms"></a>이벤트 처리기 개요(Windows Forms)
+# <a name="event-handlers-overview-windows-forms"></a>事件处理程序概述（Windows 窗体）
 事件处理程序是绑定到事件的方法。 引发事件时，将执行事件处理程序中的代码。 每个事件处理程序提供了两个参数，可用于正确处理事件。 下面的示例演示 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Click> 事件的事件处理程序。  
   
 ```vb  
@@ -50,5 +50,5 @@ private:
   
 ## <a name="see-also"></a>另请参阅
 
-- [Windows Forms에서 이벤트 처리기 만들기](creating-event-handlers-in-windows-forms.md)
-- [이벤트 개요](events-overview-windows-forms.md)
+- [在 Windows 窗体中创建事件处理程序](creating-event-handlers-in-windows-forms.md)
+- [事件概述](events-overview-windows-forms.md)

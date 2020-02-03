@@ -22,7 +22,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742030"
 ---
-# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>방법: 데이터에 Windows Forms ComboBox 또는 ListBox 컨트롤 바인딩
+# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>如何：将 Windows 窗体 ComboBox 控件或 ListBox 控件绑定到数据
 您可以将 <xref:System.Windows.Forms.ComboBox> 和 <xref:System.Windows.Forms.ListBox> 绑定到数据，以执行诸如浏览数据库中的数据、输入新数据或编辑现有数据等任务。  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>绑定 ComboBox 或 ListBox 控件  
@@ -31,7 +31,7 @@ ms.locfileid: "76742030"
   
 2. 如果要绑定到表，请将 `DisplayMember` 属性设置为数据源中的列的名称。  
   
-     \- 또는 -  
+     \- 或 -  
   
      如果要绑定到 <xref:System.Collections.IList>，请在列表中将显示成员设置为该类型的公共属性。  
   
@@ -57,6 +57,6 @@ ms.locfileid: "76742030"
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Windows Forms 데이터 바인딩](../windows-forms-data-binding.md)
-- [데이터 바인딩 및 Windows Forms](../data-binding-and-windows-forms.md)
-- [옵션 목록 표시에 사용된 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)
+- [Windows 窗体数据绑定](../windows-forms-data-binding.md)
+- [数据绑定和 Windows 窗体](../data-binding-and-windows-forms.md)
+- [用于列出选项的 Windows 窗体控件](windows-forms-controls-used-to-list-options.md)

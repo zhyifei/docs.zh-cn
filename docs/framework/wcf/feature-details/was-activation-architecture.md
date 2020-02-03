@@ -1,5 +1,5 @@
 ---
-title: WAS Activation 아키텍처
+title: WAS 激活体系结构
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
 ms.openlocfilehash: 01c30db1182ece6dd968b69cc4efcaa2d9fabd79
@@ -9,38 +9,38 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737513"
 ---
-# <a name="was-activation-architecture"></a>WAS Activation 아키텍처
-이 항목에서는 Windows Process Activation Service(WAS라고도 함)의 구성 요소를 항목별로 정리하고 설명합니다.  
+# <a name="was-activation-architecture"></a>WAS 激活体系结构
+本主题详细列举和讨论了 Windows 进程激活服务（也称为 WAS）的组件。  
   
-## <a name="activation-components"></a>활성화 구성 요소  
- WAS는 여러 가지 아키텍처 구성 요소로 구성됩니다.  
+## <a name="activation-components"></a>激活组件  
+ WAS 由几个体系结构组件组成：  
   
-- 수신기 어댑터. 특정 네트워크 프로토콜에서 메시지를 받고, 들어오는 메시지를 올바른 작업자 프로세스로 라우트하기 위해 WAS와 통신하는 Windows 서비스입니다.  
+- 侦听器适配器。 通过特定的网络协议接收消息并与 WAS 进行通信以将传入消息路由到正确的辅助进程中的 Windows 服务。  
   
-- WAS. 작업자 프로세스 만들기 및 수명을 관리하는 Windows 서비스입니다.  
+- WAS。 管理工作进程的创建和生存期的 Windows 服务。  
   
-- 제네릭 작업자 프로세스 실행 파일(w3wp.exe).  
+- 一般辅助进程可执行程序 (w3wp.exe)。  
   
-- 애플리케이션 관리자. 작업자 프로세스 내에서 애플리케이션을 호스팅하는 애플리케이션 도메인 만들기 및 수명을 관리합니다.  
+- 应用程序管理器。 管理在辅助进程中承载应用程序的应用程序域的创建和生存期。  
   
-- 프로토콜 처리기. 작업자 프로세스에서 실행되고 작업자 프로세스와 개별 수신기 어댑터 간 통신을 관리하는 프로토콜 관련 구성 요소입니다. 프로토콜 처리기 형식에는 프로세스 프로토콜 처리기와 AppDomain 프로토콜 처리기가 있습니다.  
+- 协议处理程序。 在辅助进程中运行并管理辅助进程与各个侦听器适配器之间的通信的协议特定的组件。 存在两种类型的协议处理程序：进程协议处理程序和 AppDomain 协议处理程序。  
   
- WAS가 작업자 프로세스 인스턴스를 활성화하면 작업자 프로세스에 필요한 프로세스 프로토콜 처리기를 로드하고, 애플리케이션 관리자를 사용하여 애플리케이션을 호스트할 애플리케이션 도메인을 만듭니다. 애플리케이션 도메인은 애플리케이션에서 사용하는 네트워크 프로토콜에 필요한 AppDomain 프로토콜 처리기와 애플리케이션의 코드를 로드합니다.  
+ 当 WAS 激活辅助进程实例时，会将所需的进程协议处理程序加载到辅助进程中，并使用应用程序管理器来创建一个应用程序域以承载应用程序。 应用程序域将加载应用程序的代码以及应用程序使用的网络协议所要求的 AppDomain 协议处理程序。  
   
  ![显示 WAS 体系结构的屏幕截图。](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
-### <a name="listener-adapters"></a>수신기 어댑터  
- 수신기 어댑터는 수신 대기하는 네트워크 프로토콜을 사용하여 메시지를 받는 데 사용되는 네트워크 통신 논리를 구현하는 개별 Windows 서비스입니다. 下表列出了用于 Windows Communication Foundation （WCF）协议的侦听器适配器。  
+### <a name="listener-adapters"></a>侦听器适配器  
+ 侦听器适配器是一些单独的 Windows 服务，这些服务可以实现用于通过其侦听的网络协议接收消息的网络通信逻辑。 下表列出了用于 Windows Communication Foundation （WCF）协议的侦听器适配器。  
   
-|수신기 어댑터 서비스 이름|프로토콜|참고|  
+|侦听器适配器服务名称|协议|注意|  
 |-----------------------------------|--------------|-----------|  
 |W3SVC|http|提供 IIS 7.0 和 WCF HTTP 激活的通用组件。|  
-|NetTcpActivator|net.tcp|NetTcpPortSharing 서비스에 따라 다릅니다.|  
+|NetTcpActivator|net.tcp|取决于 NetTcpPortSharing 服务。|  
 |NetPipeActivator|net.pipe||  
 |NetMsmqActivator|net.msmq|用于基于 WCF 的消息队列应用程序。|  
-|NetMsmqActivator|msmq.formatname|이전 버전의 기존 메시지 큐 애플리케이션과의 호환성을 제공합니다.|  
+|NetMsmqActivator|msmq.formatname|提供与现有消息队列应用程序的向后兼容性。|  
   
- 특정 프로토콜의 수신기 어댑터는 다음 XML 예제에서처럼 설치하는 동안 applicationHost.config 파일에 등록됩니다.  
+ 在安装过程中，在 applicationHost.config 文件中注册特定协议的侦听器适配器，如下面的 XML 示例中所示。  
   
 ```xml  
 <system.applicationHost>  
@@ -58,8 +58,8 @@ ms.locfileid: "76737513"
 </system.applicationHost>  
 ```  
   
-### <a name="protocol-handlers"></a>프로토콜 처리기  
- 특정 프로토콜에 대한 프로세스 및 AppDomain 프로토콜 처리기는 시스템 수준의 Web.config 파일에 등록됩니다.  
+### <a name="protocol-handlers"></a>协议处理程序  
+ 在计算机级别的 Web.config 文件中注册特定协议的进程和 AppDomain 协议处理程序。  
   
 ```xml  
 <system.web>  
@@ -87,5 +87,5 @@ ms.locfileid: "76737513"
   
 ## <a name="see-also"></a>另请参阅
 
-- [WCF와 함께 사용하도록 WAS 구성](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Windows Server App Fabric 호스팅 기능](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [配置 WAS 以用于 WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
+- [Windows Server App Fabric 承载功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

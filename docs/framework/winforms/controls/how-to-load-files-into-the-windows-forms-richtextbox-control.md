@@ -24,7 +24,7 @@ ms.locfileid: "76736294"
 ---
 # <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>如何：将文件加载到 Windows 窗体 RichTextBox 控件中
 
-Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件可以显示纯文本、Unicode 纯文本或 RTF 格式 (RTF) 文件。 若要显示这些文件，请调用 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法。 还可以使用 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法从流中加载数据。 有关更多信息，请参见<xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。
+Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件可以显示纯文本、Unicode 纯文本或 RTF 格式 (RTF) 文件。 若要显示这些文件，请调用 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法。 还可以使用 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法从流中加载数据。 有关详细信息，请参阅 <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。
 
 ### <a name="to-load-a-file-into-the-richtextbox-control"></a>将文件加载到 RichTextBox 控件中
 
@@ -79,7 +79,7 @@ Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件可以显示纯文�
     ```
 
     > [!IMPORTANT]
-    > 若要运行此进程，程序集可能需要 <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> 类授予的特权等级。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 有关详细信息，请参阅[代码访问安全性基础知识](../../misc/code-access-security-basics.md)。
+    > 若要运行此进程，程序集可能需要 <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> 类授予的特权等级。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 有关详细信息，请参阅 [Code Access Security Basics](../../misc/code-access-security-basics.md)。
 
 ## <a name="see-also"></a>另请参阅
 

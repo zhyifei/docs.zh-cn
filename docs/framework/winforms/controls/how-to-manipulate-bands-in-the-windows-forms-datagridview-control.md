@@ -18,7 +18,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76736127"
 ---
 # <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>如何：操作 Windows 窗体 DataGridView 控件中的带区
-以下代码示例介绍了使用从 <xref:System.Windows.Forms.DataGridViewRow> 和 <xref:System.Windows.Forms.DataGridViewColumn> 类派生的 <xref:System.Windows.Forms.DataGridViewBand> 类的属性处理 <xref:System.Windows.Forms.DataGridView> 行和列的各种方法。  
+以下代码示例介绍了使用从 <xref:System.Windows.Forms.DataGridView> 和 <xref:System.Windows.Forms.DataGridViewBand> 类派生的 <xref:System.Windows.Forms.DataGridViewRow> 类的属性处理 <xref:System.Windows.Forms.DataGridViewColumn> 行和列的各种方法。  
   
 ## <a name="example"></a>示例  
  [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#0)]

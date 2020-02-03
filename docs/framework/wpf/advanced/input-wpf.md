@@ -26,7 +26,7 @@ Windows Presentation Foundation （WPF）包括对几种类型的输入的支持
  [帮助主题](input-and-commands-how-to-topics.md)  
  [数字墨迹](digital-ink.md)  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -42,5 +42,5 @@ Windows Presentation Foundation （WPF）包括对几种类型的输入的支持
  <xref:System.Windows.Input.FocusManager>  
   
 ## <a name="related-sections"></a>相关章节  
- [控件](../controls/index.md)  
+ [控制](../controls/index.md)  
   [事件](events-wpf.md)

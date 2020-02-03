@@ -40,7 +40,7 @@ ms.locfileid: "76745447"
   
  仅当 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 属性设置为 `true`时，才会发生以下事件。  
   
-|Event|描述|  
+|事件|说明|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|由控件用于从数据缓存中检索要显示的单元值。 此事件仅在未绑定列中的单元格时发生。|  
 |<xref:System.Windows.Forms.DataGridView.CellValuePushed>|由控件用于将单元格的用户输入提交到数据缓存。 此事件仅在未绑定列中的单元格时发生。<br /><br /> 在 <xref:System.Windows.Forms.DataGridView.CellValuePushed> 事件处理程序外更改缓存的值时调用 <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> 方法，以确保在控件中显示当前值，并应用当前有效的任何自动调整大小模式。|  
@@ -50,7 +50,7 @@ ms.locfileid: "76745447"
   
  以下事件在虚拟模式下非常有用，但不管 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 属性设置如何，都可以使用这些事件。  
   
-|Events|描述|  
+|Events|说明|  
 |------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.UserDeletingRow><br /><br /> <xref:System.Windows.Forms.DataGridView.UserDeletedRow><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsRemoved><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsAdded>|由控件用来指示删除或添加行的时间，从而使您可以相应地更新数据缓存。|  
 |<xref:System.Windows.Forms.DataGridView.CellFormatting><br /><br /> <xref:System.Windows.Forms.DataGridView.CellParsing><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidated><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidated>|由控件用于设置显示的单元格值的格式，并用于分析和验证用户输入。|  

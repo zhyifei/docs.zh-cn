@@ -13,12 +13,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745800"
 ---
-# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms ListView 컨트롤에서 Tile 보기 사용
-利用 <xref:System.Windows.Forms.ListView> 控件的磁贴视图功能，可以在图形和文本信息之间提供视觉平衡。 바둑판식 뷰에서 항목에 대해 표시되는 텍스트 정보는 세부 정보 뷰에 대해 정의된 열 정보와 같습니다. 平铺视图函数与 <xref:System.Windows.Forms.ListView> 控件中的分组或插入标记功能结合在一起。
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>如何：使用设计器在 Windows 窗体 ListView 控件中启用平铺视图
+利用 <xref:System.Windows.Forms.ListView> 控件的磁贴视图功能，可以在图形和文本信息之间提供视觉平衡。 磁贴视图中，为项目显示的文本信息与为详细信息视图定义的列信息相同。 平铺视图函数与 <xref:System.Windows.Forms.ListView> 控件中的分组或插入标记功能结合在一起。
 
  磁贴视图使用 32 x 32 图标和几行文本，如下图所示。
 
- ![ListView 컨트롤의 타일 보기](./media/enable-tile-view-in-a-wf-listview-control-using-the-designer/tile-view-in-listview-control.gif "바둑판식 뷰 아이콘 및 텍스트")
+ ![ListView 控件中的平铺视图](./media/enable-tile-view-in-a-wf-listview-control-using-the-designer/tile-view-in-listview-control.gif "磁贴视图图标和文本")
 
  利用磁贴视图属性和方法，您可以指定要为每个项显示的列字段，以及共同控制平铺视图窗口中所有项的大小和外观。 为清楚起见，磁贴中的第一行文本始终是项的名称;不能更改它。
 
@@ -33,4 +33,4 @@ ms.locfileid: "76745800"
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
-- [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)
+- [ListView 控件概述](listview-control-overview-windows-forms.md)

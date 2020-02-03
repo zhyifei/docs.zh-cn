@@ -1,5 +1,5 @@
 ---
-title: HelpProvider 구성 요소 개요
+title: HelpProvider 组件概述
 ms.date: 03/30/2017
 f1_keywords:
 - HelpProvider
@@ -17,7 +17,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76738723"
 ---
-# <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider 구성 요소 개요(Windows Forms)
+# <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider 组件概述（Windows 窗体）
 Windows 窗体[HelpProvider](helpprovider-component-windows-forms.md)组件用于将 html Help 1.x 帮助文件（使用 Html 帮助讨论会生成的 .chm 文件或 .htm 文件）与 Windows 应用程序相关联。 可以通过多种方式提供帮助：  
   
 - 为 Windows 窗体上的控件提供上下文相关帮助。  
@@ -38,4 +38,4 @@ Windows 窗体[HelpProvider](helpprovider-component-windows-forms.md)组件用�
   
 ## <a name="see-also"></a>另请参阅
 
-- [Windows Forms 애플리케이션의 도움말 시스템](../advanced/help-systems-in-windows-forms-applications.md)
+- [Windows 窗体应用程序中的帮助系统](../advanced/help-systems-in-windows-forms-applications.md)

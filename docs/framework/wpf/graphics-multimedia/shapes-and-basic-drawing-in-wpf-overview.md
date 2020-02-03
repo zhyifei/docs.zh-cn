@@ -217,6 +217,6 @@ myPolygon.StrokeThickness = 2;
 
 - [2D 图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [使用纯色和渐变进行绘制概述](painting-with-solid-colors-and-gradients-overview.md)
-- [几何图形概述](geometry-overview.md)
+- [Geometry 概述](geometry-overview.md)
 - [演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [动画概述](animation-overview.md)

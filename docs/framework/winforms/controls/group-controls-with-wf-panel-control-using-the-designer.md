@@ -13,7 +13,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745649"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>방법: 디자이너에서 Windows Forms 패널 컨트롤을 사용하여 컨트롤 그룹화
+# <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>如何：使用设计器用 Windows 窗体面板控件对控件进行分组
 Windows 窗体 <xref:System.Windows.Forms.Panel> 控件用于对其他控件进行分组。 分组控件有三个原因。 一个是清晰用户界面的相关窗体元素的直观分组;另一种是按编程分组，例如单选按钮;最后一种是在设计时将控件作为一个单元移动。
 
 ## <a name="to-create-a-group-of-controls"></a>创建一组控件
@@ -28,6 +28,6 @@ Windows 窗体 <xref:System.Windows.Forms.Panel> 控件用于对其他控件进�
 
 ## <a name="see-also"></a>另请参阅
 
-- [Panel 컨트롤](panel-control-windows-forms.md)
-- [Panel 컨트롤 개요](panel-control-overview-windows-forms.md)
-- [방법: 패널의 배경 설정](how-to-set-the-background-of-a-windows-forms-panel.md)
+- [Panel 控件](panel-control-windows-forms.md)
+- [Panel 控件概述](panel-control-overview-windows-forms.md)
+- [如何：设置 Panel 控件的背景](how-to-set-the-background-of-a-windows-forms-panel.md)

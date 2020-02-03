@@ -18,7 +18,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739396"
 ---
-# <a name="how-to-navigate-data-in-windows-forms"></a>방법: Windows Forms에서 데이터 탐색
+# <a name="how-to-navigate-data-in-windows-forms"></a>如何：在 Windows 窗体中导航数据
 在 Windows 应用程序中，在数据源中导航记录的最简单方法是将 <xref:System.Windows.Forms.BindingSource> 组件绑定到数据源，然后将控件绑定到 <xref:System.Windows.Forms.BindingSource>。 然后，你可以在 <xref:System.Windows.Forms.BindingSource> 上使用内置的导航方法，如 <xref:System.Windows.Forms.BindingSource.MoveNext%2A>、<xref:System.Windows.Forms.BindingSource.MoveLast%2A>、<xref:System.Windows.Forms.BindingSource.MovePrevious%2A> 和 <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>。 使用这些方法会适当地调整 <xref:System.Windows.Forms.BindingSource> 的 <xref:System.Windows.Forms.BindingSource.Position%2A> 和 <xref:System.Windows.Forms.BindingSource.Current%2A> 属性。 还可以通过设置 "<xref:System.Windows.Forms.BindingSource.Position%2A>" 属性来查找项并将其设置为当前项。  
   
 ### <a name="to-increment-the-position-in-a-data-source"></a>递增数据源中的位置  
@@ -33,7 +33,7 @@ ms.locfileid: "76739396"
   
 ### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a>检查是否已通过结尾或开头  
   
-1. <xref:System.Windows.Forms.BindingSource.PositionChanged> 이벤트에 대한 이벤트 처리기를 만듭니다. 在处理程序中，你可以测试建议的位置值是否超过了实际的数据元素计数。  
+1. 为 <xref:System.Windows.Forms.BindingSource.PositionChanged> 事件创建一个事件处理程序。 在处理程序中，你可以测试建议的位置值是否超过了实际的数据元素计数。  
   
      下面的示例演示如何测试是否已到达最后一个数据元素。 在此示例中，如果您位于最后一个元素，则窗体上的 "**下一步**" 按钮处于禁用状态。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "76739396"
   
 ## <a name="see-also"></a>另请参阅
 
-- [Windows Forms에서 지원하는 데이터 소스](data-sources-supported-by-windows-forms.md)
-- [Windows Forms 데이터 바인딩의 변경 알림](change-notification-in-windows-forms-data-binding.md)
-- [데이터 바인딩 및 Windows Forms](data-binding-and-windows-forms.md)
-- [Windows Forms 데이터 바인딩](windows-forms-data-binding.md)
+- [Windows 窗体支持的数据源](data-sources-supported-by-windows-forms.md)
+- [Windows 窗体数据绑定中的更改通知](change-notification-in-windows-forms-data-binding.md)
+- [数据绑定和 Windows 窗体](data-binding-and-windows-forms.md)
+- [Windows 窗体数据绑定](windows-forms-data-binding.md)

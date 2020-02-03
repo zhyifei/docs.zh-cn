@@ -1,5 +1,5 @@
 ---
-title: PictureBox 컨트롤 개요
+title: PictureBox 控件概述
 ms.date: 03/30/2017
 f1_keywords:
 - PictureBox
@@ -15,7 +15,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744252"
 ---
-# <a name="picturebox-control-overview-windows-forms"></a>PictureBox 컨트롤 개요(Windows Forms)
+# <a name="picturebox-control-overview-windows-forms"></a>PictureBox 控件概述（Windows 窗体）
 "Windows 窗体" <xref:System.Windows.Forms.PictureBox> 控件用于以位图、GIF、JPEG、图元文件或图标格式显示图形。  
   
 ## <a name="key-properties-and-methods"></a>键属性和方法  
@@ -24,7 +24,7 @@ ms.locfileid: "76744252"
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.PictureBox>
-- [방법: 디자이너를 사용하여 그림 로드](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [방법: 런타임에 그림의 크기 또는 위치 수정](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [방법: 런타임에 그림 설정](how-to-set-pictures-at-run-time-windows-forms.md)
-- [PictureBox 컨트롤](picturebox-control-windows-forms.md)
+- [如何：使用设计器加载图片](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [如何：在运行时修改图片的大小或位置](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [如何：在运行时设置图片](how-to-set-pictures-at-run-time-windows-forms.md)
+- [PictureBox 控件](picturebox-control-windows-forms.md)

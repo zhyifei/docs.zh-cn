@@ -33,9 +33,9 @@ HRESULT SaveToHistory(
  pHistoryStream  
  指向历史记录流的指针。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **平台：** 请参阅[.NET Framework 系统要求](../../get-started/system-requirements.md)。  
   
  **.DLL**  

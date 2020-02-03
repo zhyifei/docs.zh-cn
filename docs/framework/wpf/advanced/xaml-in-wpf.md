@@ -14,35 +14,35 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741876"
 ---
-# <a name="xaml-in-wpf"></a>WPF의 XAML
+# <a name="xaml-in-wpf"></a>WPF 中的 XAML
 
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 是一种用于声明性应用程序编程的标记语言。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 实现 XAML 处理器实现并提供 XAML 语言支持。 实现 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 类型，以便它们可以为 XAML 表示形式提供所需的类型支持。 通常，你可以在 XAML 标记中创建大多数 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序 UI。  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>本节内容  
 
-[XAML 개요(WPF)](xaml-overview-wpf.md)  
-[XAML 구문 정보](xaml-syntax-in-detail.md)  
-[WPF의 코드 숨김 및 XAML](code-behind-and-xaml-in-wpf.md)  
-[WPF에 대한 XAML 및 사용자 지정 클래스](xaml-and-custom-classes-for-wpf.md)  
-[태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)  
-[WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
-[WPF XAML 이름 범위](wpf-xaml-namescopes.md)  
-[인라인 스타일 및 템플릿](inline-styles-and-templates.md)  
+[XAML 概述 (WPF)](xaml-overview-wpf.md)  
+[XAML 语法详述](xaml-syntax-in-detail.md)  
+[WPF 中的代码隐藏和 XAML](code-behind-and-xaml-in-wpf.md)  
+[XAML 及 WPF 的自定义类](xaml-and-custom-classes-for-wpf.md)  
+[标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)  
+[WPF XAML 的 XAML 命名空间和命名空间映射](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
+[WPF XAML 名称范围](wpf-xaml-namescopes.md)  
+[嵌入式样式和模板](inline-styles-and-templates.md)  
 [XAML 中的空白处理](../../../desktop-wpf/xaml-services/white-space-processing.md)  
-[TypeConverter 및 XAML](typeconverters-and-xaml.md)  
-[XML 문자 엔터티 및 XAML](../../../desktop-wpf/xaml-services/xml-character-entities.md)  
-[XAML 네임스페이스(x:) 언어 기능](../../../desktop-wpf/xaml-services/namespace-language-features.md)  
-[WPF XAML 확장](wpf-xaml-extensions.md)  
-[태그 호환성(mc:) 언어 기능](markup-compatibility-mc-language-features.md)  
+[TypeConverter 和 XAML](typeconverters-and-xaml.md)  
+[XML 字符实体和 XAML](../../../desktop-wpf/xaml-services/xml-character-entities.md)  
+[XAML 命名空间 (x:) 语言功能](../../../desktop-wpf/xaml-services/namespace-language-features.md)  
+[WPF XAML 扩展](wpf-xaml-extensions.md)  
+[标记兼容 (mc:) 语言功能](markup-compatibility-mc-language-features.md)  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>相关章节  
 
-[WPF 아키텍처](wpf-architecture.md)  
-[기본 요소](base-elements.md)  
-[요소 트리 및 Serialization](element-tree-and-serialization.md)  
-[데이터 액세스](properties-wpf.md)  
-[이벤트](events-wpf.md)  
-[입력](input-wpf.md)  
-[리소스](resources-wpf.md)  
-[스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
-[스레딩 모델](threading-model.md)
+[WPF 体系结构](wpf-architecture.md)  
+[基元素](base-elements.md)  
+[元素树和序列化](element-tree-and-serialization.md)  
+[属性](properties-wpf.md)  
+[事件](events-wpf.md)  
+[输入](input-wpf.md)  
+[资源](resources-wpf.md)  
+[样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
+[线程模型](threading-model.md)

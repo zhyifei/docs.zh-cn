@@ -20,10 +20,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732219"
 ---
-# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>방법: TreeView 또는 ListView 컨트롤에 사용자 지정 정보 추가(Windows Forms)
-可以在 Windows 窗体 <xref:System.Windows.Forms.TreeView> 控件或 <xref:System.Windows.Forms.ListView> 控件中的派生项中创建派生节点。 파생은 필드를 처리하는 사용자 지정 메서드 및 생성자뿐만 아니라 필요로 하는 모든 필드를 추가할 수 있습니다. 이 기능을 사용하여 각 트리 노드 또는 목록 항목에 고객 개체를 연결합니다. 此处的示例针对 <xref:System.Windows.Forms.TreeView> 控件，但相同的方法可用于 <xref:System.Windows.Forms.ListView> 控件。  
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>如何：向 TreeView 或 ListView 控件添加自定义信息（Windows 窗体）
+可以在 Windows 窗体 <xref:System.Windows.Forms.TreeView> 控件或 <xref:System.Windows.Forms.ListView> 控件中的派生项中创建派生节点。 通过派生可添加任何所需字段，以及添加处理这些字段的自定义方法和构造函数。 此功能的用途之一是将 Customer 对象附加到每个树节点或列表项。 此处的示例针对 <xref:System.Windows.Forms.TreeView> 控件，但相同的方法可用于 <xref:System.Windows.Forms.ListView> 控件。  
   
-### <a name="to-derive-a-tree-node"></a>트리 노드를 파생하려면  
+### <a name="to-derive-a-tree-node"></a>派生树节点  
   
 - 创建一个新的 node 类，该类派生自 <xref:System.Windows.Forms.TreeNode> 类，该类具有一个用于记录文件路径的自定义字段。  
   
@@ -68,11 +68,11 @@ ms.locfileid: "76732219"
     };  
     ```  
   
-### <a name="to-use-a-derived-tree-node"></a>파생된 트리 노드를 사용하려면  
+### <a name="to-use-a-derived-tree-node"></a>使用派生的树节点  
   
-1. 함수 호출에 대한 매개 변수로 새롭게 파생된 트리 노드를 사용할 수 있습니다.  
+1. 新的派生树节点可用作函数调用的参数。  
   
-     아래 예제에서 텍스트 파일의 위치에 설정된 경로는 내 문서 폴더입니다. Windows 운영 체제를 실행하는 대부분 컴퓨터가 이 디렉터리에 포함된다고 가정할 수 있기 때문에 그렇습니다. 또한 최소한의 시스템 액세스 수준을 가진 사용자가 안전하게 애플리케이션을 실행할 수 있습니다.  
+     在下例中，为文本文件位置设置的路径是 My Documents 文件夹。 这样做是出于一个假定，即假定大多数运行 Windows 操作系统的计算机都包含此目录。 这还使得具有最低系统访问级别的用户能够安全运行应用程序。  
   
     ```vb  
     ' You should replace the bold text file   
@@ -100,7 +100,7 @@ ms.locfileid: "76732219"
        "\\TextFile.txt")));  
     ```  
   
-2. 如果传递的是树节点，并且它被类型化为 <xref:System.Windows.Forms.TreeNode> 类，则需要强制转换为派生类。 캐스팅은 개체의 한 유형에서 다른 유형으로의 명시적 변환입니다. 有关强制转换的详细信息，请参阅[隐式和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)（Visual Basic）、[强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)（视觉对象C#）或[强制转换运算符：（）](/cpp/cpp/cast-operator-parens) （视觉对象C++）。  
+2. 如果传递的是树节点，并且它被类型化为 <xref:System.Windows.Forms.TreeNode> 类，则需要强制转换为派生类。 强制转换是从一种对象类型到另一种对象类型的显式转换。 有关强制转换的详细信息，请参阅[隐式和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)（Visual Basic）、[强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)（视觉对象C#）或[强制转换运算符：（）](/cpp/cpp/cast-operator-parens) （视觉对象C++）。  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  
@@ -132,5 +132,5 @@ ms.locfileid: "76732219"
   
 ## <a name="see-also"></a>另请参阅
 
-- [TreeView 컨트롤](treeview-control-windows-forms.md)
-- [ListView 컨트롤](listview-control-windows-forms.md)
+- [TreeView 控件](treeview-control-windows-forms.md)
+- [ListView 控件](listview-control-windows-forms.md)

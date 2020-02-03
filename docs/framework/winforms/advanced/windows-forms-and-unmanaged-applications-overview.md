@@ -51,13 +51,13 @@ Windows 窗体应用程序和控件可以与非托管应用程序进行互操作
   
  若要使 Windows 窗体在 COM 客户端应用程序中正确工作，必须在 Windows 窗体消息循环上运行该窗体。 若要执行此操作，请使用以下方法之一：  
   
-- 使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法显示 Windows 窗体。 有关详细信息，请参阅[如何：通过使用 ShowDialog 方法显示 Windows 窗体来支持 COM 互操作](com-interop-by-displaying-a-windows-form-shadow.md)。  
+- 使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法显示 Windows 窗体。 有关详细信息，请参阅 [How to: Support COM Interop by Displaying a Windows Form with the ShowDialog Method](com-interop-by-displaying-a-windows-form-shadow.md)。  
   
-- 在新线程上显示每个 Windows 窗体。 有关详细信息，请参阅[如何：通过在每个 Windows 窗体各自的线程上显示该 Windows 窗体来支持 COM 互操作](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)。  
+- 在新线程上显示每个 Windows 窗体。 有关详细信息，请参阅 [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)。  
   
 ## <a name="see-also"></a>另请参阅
 
-- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
+- [Windows 窗体和非托管应用程序](windows-forms-and-unmanaged-applications.md)
 - [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)
 - [.NET Framework 应用程序中的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [COM 互操作性示例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))

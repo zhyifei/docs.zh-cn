@@ -21,7 +21,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742198"
 ---
-# <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>방법: 안쪽 여백을 사용하여 Windows Forms 컨트롤 주위에 테두리 만들기
+# <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>如何：使用填充在 Windows 窗体控件周围创建边框
 下面的代码示例演示如何在 <xref:System.Windows.Forms.RichTextBox> 控件周围创建边框或边框。 该示例将 <xref:System.Windows.Forms.Panel> 控件的 <xref:System.Windows.Forms.Padding> 属性的值设置为5，并将子 <xref:System.Windows.Forms.RichTextBox> 控件的 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。 <xref:System.Windows.Forms.Panel> 控件的 <xref:System.Windows.Forms.Control.BackColor%2A> 设置为 <xref:System.Drawing.Color.Blue%2A>，这会在 <xref:System.Windows.Forms.RichTextBox> 控件周围创建一个蓝色边框。  
   
 ## <a name="example"></a>示例  
@@ -31,4 +31,4 @@ ms.locfileid: "76742198"
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Padding>
-- [Windows Forms 컨트롤의 여백 및 안쪽 여백](margin-and-padding-in-windows-forms-controls.md)
+- [Windows 窗体控件中的边距和填充](margin-and-padding-in-windows-forms-controls.md)

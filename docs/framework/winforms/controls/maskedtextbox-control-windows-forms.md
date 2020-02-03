@@ -1,5 +1,5 @@
 ---
-title: MaskedTextBox 컨트롤
+title: MaskedTextBox 控件
 ms.date: 03/30/2017
 f1_keywords:
 - MaskedTextBox
@@ -19,17 +19,17 @@ ms.locfileid: "76744955"
 # <a name="maskedtextbox-control-windows-forms"></a>MaskedTextBox 控件（Windows 窗体）
 本主题链接到有关 `MaskedTextBox` 控件的其他内容。  
   
-## <a name="in-this-section"></a>섹션 내용  
- [연습: MaskedTextBox 컨트롤 사용](walkthrough-working-with-the-maskedtextbox-control.md)  
+## <a name="in-this-section"></a>本节内容  
+ [演练：使用 MaskedTextBox 控件](walkthrough-working-with-the-maskedtextbox-control.md)  
  演示 `MaskedTextBox` 控件的主要功能。  
   
- [방법: MaskedTextBox 컨트롤에 데이터 바인딩](how-to-bind-data-to-the-maskedtextbox-control.md)  
+ [如何：将数据绑定到 MaskedTextBox 控件](how-to-bind-data-to-the-maskedtextbox-control.md)  
  演示当数据库中的数据与掩码定义所需的格式不匹配时，如何重新设置数据的格式。  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.MaskedTextBox>  
  掩码文本框控件的实现的主类。  
   
-## <a name="related-sections"></a>관련 섹션  
- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
- 사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.
+## <a name="related-sections"></a>相关章节  
+ [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)  
+ 提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。

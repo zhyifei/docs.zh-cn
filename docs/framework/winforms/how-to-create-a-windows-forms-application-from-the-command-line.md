@@ -65,7 +65,7 @@ ms.locfileid: "76739526"
   
     - 如果使用 Visual Basic，请键入： `vbc form1.vb`  
   
-3. 在命令提示符下，键入： `Form1.exe`  
+3. 在命令提示符处，键入：`Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>添加控件和处理事件
 

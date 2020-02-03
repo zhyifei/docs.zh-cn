@@ -34,7 +34,7 @@ ms.locfileid: "76731010"
   
 6. 向项目中添加一个窗体，并向其添加所需的控件，如另一个 <xref:System.Windows.Forms.MenuStrip>。  
   
-7. 为 `&New`<xref:System.Windows.Forms.ToolStripMenuItem> 的 <xref:System.Windows.Forms.Control.Click> 事件创建一个事件处理程序。  
+7. 为 <xref:System.Windows.Forms.Control.Click>`&New` 的 <xref:System.Windows.Forms.ToolStripMenuItem> 事件创建一个事件处理程序。  
   
 8. 在事件处理程序中，插入与下面类似的代码，以创建和显示 `Form1`的 MDI 子级 `Form2` 的新实例。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "76731010"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
-- 名为 `Form1` 和 `Form2` 的两个 <xref:System.Windows.Forms.Form> 控件。  
+- 名为 <xref:System.Windows.Forms.Form> 和 `Form1` 的两个 `Form2` 控件。  
   
-- `Form1` 上名为 `menuStrip1` 的 <xref:System.Windows.Forms.MenuStrip> 控件和 `Form2` 上名为 `menuStrip2` 的 <xref:System.Windows.Forms.MenuStrip> 控件。  
+- <xref:System.Windows.Forms.MenuStrip> 上名为 `Form1` 的 `menuStrip1` 控件和 <xref:System.Windows.Forms.MenuStrip> 上名为 `Form2` 的 `menuStrip2` 控件。  
   
 - 对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   

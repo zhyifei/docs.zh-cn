@@ -33,7 +33,7 @@ ms.locfileid: "76728288"
   
 2. 将 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 属性设置为适当的值。  
   
-    |{2&gt;值&lt;2}|描述|  
+    |值|说明|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.ScrollBars.None>|如果文本将是几乎始终适合控件的段落，请使用此值。 如果文本太长而无法同时显示，用户可以使用鼠标指针在控件内移动。|  
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|如果要显示行列表，则使用此值，其中某些行的长度可能大于 <xref:System.Windows.Forms.TextBox> 控件的宽度。|  
@@ -41,10 +41,10 @@ ms.locfileid: "76728288"
   
 3. 将 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 属性设置为适当的值。  
   
-    |{2&gt;值&lt;2}|描述|  
+    |值|说明|  
     |-----------|-----------------|  
     |`false`|控件中的文本不会自动换行，因此它将向右滚动，直至到达换行符。 如果选择了上面 <xref:System.Windows.Forms.ScrollBars.Horizontal> 滚动条或 <xref:System.Windows.Forms.ScrollBars.Both>，请使用此值。|  
-    |`true`（默认）|不会显示水平滚动条。 如果选择 <xref:System.Windows.Forms.ScrollBars.Vertical> 滚动条或 <xref:System.Windows.Forms.ScrollBars.None>上方以显示一个或多个段落，请使用此值。|  
+    |`true`（默认值）|不会显示水平滚动条。 如果选择 <xref:System.Windows.Forms.ScrollBars.Vertical> 滚动条或 <xref:System.Windows.Forms.ScrollBars.None>上方以显示一个或多个段落，请使用此值。|  
   
 ## <a name="see-also"></a>另请参阅
 

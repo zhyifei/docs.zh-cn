@@ -1,5 +1,5 @@
 ---
-title: 대/소문자 표기법
+title: 大写约定
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741769"
 ---
-# <a name="capitalization-conventions"></a>대/소문자 표기법
+# <a name="capitalization-conventions"></a>大写约定
 本章中的准则列出了一种针对用例的简单方法，当统一应用此方法时，可以使类型、成员和参数的标识符易于阅读。
 
 ## <a name="capitalization-rules-for-identifiers"></a>标识符的大小写规则
@@ -47,17 +47,17 @@ ms.locfileid: "76741769"
 
  下表描述了不同类型的标识符的大小写规则。
 
-|식별자|Camel|示例|
+|Identifier|大小写|示例|
 |----------------|------------|-------------|
-|네임스페이스|形式|`namespace System.Security { ... }`|
-|형식|形式|`public class StreamReader { ... }`|
-|인터페이스|形式|`public interface IEnumerable { ... }`|
-|메서드|形式|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
-|속성|形式|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
-|Event|形式|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
-|필드|形式|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
+|命名空间|形式|`namespace System.Security { ... }`|
+|类型|形式|`public class StreamReader { ... }`|
+|接口|形式|`public interface IEnumerable { ... }`|
+|方法|形式|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
+|属性|形式|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
+|事件|形式|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
+|字段|形式|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
 |枚举值|形式|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
-|매개 변수|大小|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
+|参数|混合|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>复合词和常用术语的大写
  出于大写的目的，大多数复合词被视为单个词。
@@ -66,7 +66,7 @@ ms.locfileid: "76741769"
 
  下面是以单个单词形式拼写的复合词，例如 endpoint。 根据大小写准则，请将封闭形式的复合词视为单个单词。 请使用最新字典确定复合词是否以封闭形式拼写。
 
-|形式|大小|not|
+|形式|混合|Not|
 |------------|-----------|---------|
 |`BitFlag`|`bitFlag`|`Bitflag`|
 |`Callback`|`callback`|`CallBack`|
@@ -94,16 +94,16 @@ ms.locfileid: "76741769"
 |`WhiteSpace`|`whiteSpace`|`Whitespace`|
 |`Writable`|`writable`|`Writeable`|
 
-## <a name="case-sensitivity"></a>대/소문자 구분
+## <a name="case-sensitivity"></a>区分大小写
  可以在 CLR 上运行的语言不要求区分大小写，尽管有些语言要求。 即使你的语言支持该功能，其他可能访问你的框架的语言也可能不支持。 因此，任何可从外部访问的 API 都不能仅依赖于大小写来区分同一上下文中的两个名称。
 
- ❌ 不假定所有编程语言都区分大小写。 그러나 동일하지 않습니다. 名称不能仅通过大小写来区分。
+ ❌ 不假定所有编程语言都区分大小写。 它们不是这样的。 名称不能仅通过大小写来区分。
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。
 
 ## <a name="see-also"></a>另请参阅
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
-- [명명 지침](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
+- [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)

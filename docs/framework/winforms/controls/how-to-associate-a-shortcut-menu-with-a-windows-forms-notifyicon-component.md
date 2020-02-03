@@ -17,7 +17,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742044"
 ---
-# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>방법: Windows Forms NotifyIcon 구성 요소에 바로 가기 메뉴 연결
+# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>如何：将快捷菜单与 Windows 窗体 NotifyIcon 组件关联
 > [!NOTE]
 > 尽管 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.ContextMenuStrip> 将功能替换并添加到以前版本的 <xref:System.Windows.Forms.MainMenu> 和 <xref:System.Windows.Forms.ContextMenu> 控件中，但 <xref:System.Windows.Forms.MainMenu> 和 <xref:System.Windows.Forms.ContextMenu> 会保留，以实现向后兼容性和将来使用（如果你选择）。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "76742044"
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>以编程方式将快捷菜单与 NotifyIcon 组件相关联  
   
-1. 创建 <xref:System.Windows.Forms.NotifyIcon> 类和 <xref:System.Windows.Forms.ContextMenu> 类的实例，其中包含应用程序所需的任何属性设置（<xref:System.Windows.Forms.NotifyIcon.Icon%2A> 和 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 属性（<xref:System.Windows.Forms.NotifyIcon> 组件的菜单项）。  
+1. 创建 <xref:System.Windows.Forms.NotifyIcon> 类和 <xref:System.Windows.Forms.ContextMenu> 类的实例，其中包含应用程序所需的任何属性设置（<xref:System.Windows.Forms.NotifyIcon.Icon%2A> 和 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 属性（<xref:System.Windows.Forms.NotifyIcon> 组件的菜单项）。<xref:System.Windows.Forms.ContextMenu>  
   
 2. 将 <xref:System.Windows.Forms.NotifyIcon> 组件的 <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> 属性设置为添加的快捷菜单。  
   
@@ -130,6 +130,6 @@ contextMenu1 = gcnew System::Windows::Forms::ContextMenu();
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [방법: Windows Forms NotifyIcon 구성 요소를 사용하여 작업 표시줄에 애플리케이션 아이콘 추가](app-icons-to-the-taskbar-with-wf-notifyicon.md)
-- [NotifyIcon 구성 요소](notifyicon-component-windows-forms.md)
-- [NotifyIcon 구성 요소 개요](notifyicon-component-overview-windows-forms.md)
+- [如何：使用 Windows 窗体 NotifyIcon 组件向任务栏添加应用程序图标](app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [NotifyIcon 组件](notifyicon-component-windows-forms.md)
+- [NotifyIcon 组件概述](notifyicon-component-overview-windows-forms.md)

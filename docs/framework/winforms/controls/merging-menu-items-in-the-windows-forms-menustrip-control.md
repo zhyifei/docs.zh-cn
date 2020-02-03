@@ -12,12 +12,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739052"
 ---
-# <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Windows Forms MenuStrip 컨트롤의 메뉴 항목 병합
+# <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>在 Windows 窗体 MenuStrip 控件中合并菜单项
 如果有多文档界面（MDI）应用程序，则可以将子窗体中的菜单项或整个菜单合并到父窗体的菜单中。  
   
  本主题介绍与在 MDI 应用程序中合并菜单项相关的基本概念。  
   
-## <a name="general-concepts"></a>일반 개념  
+## <a name="general-concepts"></a>一般概念  
  合并过程涉及目标和源代码管理：  
   
 - 目标是要合并菜单项的主窗体或 MDI 父窗体上的 <xref:System.Windows.Forms.MenuStrip> 控件。  
@@ -37,7 +37,7 @@ ms.locfileid: "76739052"
   
  下表介绍了可用合并操作的含义和典型用法。  
   
-|MergeAction 值|설명|일반적인 용도|  
+|MergeAction 值|说明|典型用法|  
 |-----------------------|-----------------|-----------------|  
 |<xref:System.Windows.Forms.MergeAction.Append>|缺省值将源项添加到目标项集合的末尾。|当激活程序的一部分时，将菜单项添加到菜单的末尾。|  
 |<xref:System.Windows.Forms.MergeAction.Insert>|在源项上设置的 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 属性指定的位置，将源项添加到目标项的集合中。|当激活程序的一部分时，将菜单项添加到菜单的中间或开头。<br /><br /> 如果两个菜单项 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 的值相同，则按相反顺序添加它们。 适当设置 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 以保留原始订单。|  
@@ -57,6 +57,6 @@ ms.locfileid: "76739052"
 
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>
-- [MenuStrip 컨트롤](menustrip-control-windows-forms.md)
-- [방법: MenuStrip이 포함된 MDI 창 목록 만들기](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
-- [방법: MDI 애플리케이션의 자동 메뉴 병합 설정](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+- [MenuStrip 控件](menustrip-control-windows-forms.md)
+- [如何：使用 MenuStrip 创建 MDI 窗口列表](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
+- [如何：为 MDI 应用程序设置自动菜单合并](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

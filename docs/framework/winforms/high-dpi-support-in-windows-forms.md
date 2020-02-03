@@ -1,5 +1,5 @@
 ---
-title: 높은 DPI 지원
+title: 高 DPI 支持
 ms.date: 05/16/2017
 helpviewer_keywords:
 - High DPI in Windows Forms
@@ -16,7 +16,7 @@ ms.locfileid: "76741895"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows 窗体中的高 DPI 支持
 
-从 .NET Framework 4.7 开始，Windows 窗体包括常见高 DPI 和动态 DPI 方案的增强功能。 여기에는 다음이 포함됩니다.
+从 .NET Framework 4.7 开始，Windows 窗体包括常见高 DPI 和动态 DPI 方案的增强功能。 其中包括：
 
 - 改进了许多 Windows 窗体控件（如 <xref:System.Windows.Forms.MonthCalendar> 控件和 <xref:System.Windows.Forms.CheckedListBox> 控件）的缩放和布局。
 
@@ -60,7 +60,7 @@ ms.locfileid: "76741895"
 
 - 调用静态 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法。
 
-  这应该是应用程序入口点中的第一个方法调用。 예를 들면 다음과 같습니다.:
+  这应该是应用程序入口点中的第一个方法调用。 例如：
 
   ```csharp
   static void Main()
@@ -94,7 +94,7 @@ ms.locfileid: "76741895"
 
 ## <a name="new-helper-methods-and-properties"></a>新的帮助器方法和属性
 
-.NET Framework 4.7 还添加了一些新的帮助器方法和属性，这些方法和属性提供了有关 DPI 缩放的信息，并允许您执行 DPI 缩放。 여기에는 다음이 포함됩니다.
+.NET Framework 4.7 还添加了一些新的帮助器方法和属性，这些方法和属性提供了有关 DPI 缩放的信息，并允许您执行 DPI 缩放。 其中包括：
 
 - <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>，它将值从逻辑到设备像素转换。
 
@@ -131,4 +131,4 @@ Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 ## <a name="see-also"></a>另请参阅
 
 - [Windows 窗体添加配置元素](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
-- [Windows Forms의 크기 및 배율 조정](adjusting-the-size-and-scale-of-windows-forms.md)
+- [调整 Windows 窗体的大小和比例](adjusting-the-size-and-scale-of-windows-forms.md)

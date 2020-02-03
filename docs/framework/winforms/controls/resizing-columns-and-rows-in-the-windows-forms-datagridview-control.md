@@ -36,7 +36,7 @@ ms.locfileid: "76742410"
  [如何：在 Windows 窗体 DataGridView 控件中的内容发生变化时自动重设单元格大小](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
  提供了可用于尝试自动调整大小模式的演示代码。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.DataGridView>  
  提供关于 <xref:System.Windows.Forms.DataGridView> 控件的参考文档。  
   

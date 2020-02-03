@@ -1,5 +1,5 @@
 ---
-title: PageSetupDialog 구성 요소 개요
+title: PageSetupDialog 组件概述
 ms.date: 03/30/2017
 f1_keywords:
 - PageSetupDialog
@@ -14,9 +14,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744339"
 ---
-# <a name="pagesetupdialog-component-overview-windows-forms"></a>PageSetupDialog 구성 요소 개요(Windows Forms)
+# <a name="pagesetupdialog-component-overview-windows-forms"></a>PageSetupDialog 组件概述（Windows 窗体）
 
-Windows 窗体 <xref:System.Windows.Forms.PageSetupDialog> 组件是一个预先配置的对话框，用于在基于 Windows 的应用程序中设置用于打印的页面详细信息。 在基于 Windows 的应用程序中使用它作为一种简单的解决方案，用户可以使用它来设置页面首选项，而不是配置自己的对话框。 可以让用户设置边框和边距调整、页眉和页脚以及纵向或横向方向。 표준 Windows 대화 상자를 사용하여 기본 기능이 사용자에게 익숙한 애플리케이션을 만듭니다.
+Windows 窗体 <xref:System.Windows.Forms.PageSetupDialog> 组件是一个预先配置的对话框，用于在基于 Windows 的应用程序中设置用于打印的页面详细信息。 在基于 Windows 的应用程序中使用它作为一种简单的解决方案，用户可以使用它来设置页面首选项，而不是配置自己的对话框。 可以让用户设置边框和边距调整、页眉和页脚以及纵向或横向方向。 利用标准的 Windows 对话框，你可以创建其基本功能可立即为用户所熟悉的应用程序。
 
 ## <a name="key-properties-and-methods"></a>键属性和方法
 
@@ -27,4 +27,4 @@ Windows 窗体 <xref:System.Windows.Forms.PageSetupDialog> 组件是一个预先
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)
+- [PageSetupDialog 组件](pagesetupdialog-component-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: 사용자 입력
+title: 用户输入
 ms.date: 03/30/2017
 helpviewer_keywords:
 - keyboard input [Windows Forms], using in Windows Forms
@@ -14,27 +14,27 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76734736"
 ---
-# <a name="user-input-in-windows-forms"></a>Windows Forms에 사용자 입력
-Windows Forms에는 관련된 Windows 메시지를 처리하는 동안 발생한 이벤트를 기반으로 하는 사용자 입력 모델이 포함됩니다. 이 섹션의 항목에서는 특정 작업을 수행하는 방법을 보여 주는 코드 예제를 포함하여 마우스 및 키보드 사용자 입력에 대한 정보를 제공합니다.  
+# <a name="user-input-in-windows-forms"></a>Windows 窗体中的用户输入
+Windows 窗体包括一种用户输入模型，该模型基于在处理相关的 Windows 消息时所引发的事件。 本节中的主题提供了有关鼠标和键盘用户输入的信息，其中包括演示如何执行特定任务的代码示例。  
   
-## <a name="in-this-section"></a>섹션 내용  
- [Windows Forms 애플리케이션의 사용자 입력](user-input-in-a-windows-forms-application.md)  
- Windows 메시지를 처리하는 메서드와 사용자 입력 이벤트를 개괄적으로 설명합니다.  
+## <a name="in-this-section"></a>本节内容  
+ [Windows 窗体应用程序中的用户输入](user-input-in-a-windows-forms-application.md)  
+ 提供处理 Windows 消息的用户输入事件和方法的概述。  
   
- [Windows Forms 애플리케이션의 키보드 입력](keyboard-input-in-a-windows-forms-application.md)  
- 키보드 메시지 처리, 다양한 유형의 키 및 키보드 이벤트에 대한 정보를 제공합니다.  
+ [Windows 窗体应用程序中的键盘输入](keyboard-input-in-a-windows-forms-application.md)  
+ 提供有关键盘消息处理、不同类型的键和键盘事件的信息。  
   
- [Windows Forms 애플리케이션의 마우스 입력](mouse-input-in-a-windows-forms-application.md)  
- 마우스 이벤트와 마우스 커서 및 마우스 캡처를 비롯한 다른 마우스 관련 기능에 대한 정보를 제공합니다.  
+ [Windows 窗体应用程序中的鼠标输入](mouse-input-in-a-windows-forms-application.md)  
+ 提供有关鼠标事件和其他鼠标相关功能（包括鼠标光标和鼠标捕获）的信息。  
   
- [방법: 코드에서 마우스 및 키보드 이벤트 시뮬레이션](how-to-simulate-mouse-and-keyboard-events-in-code.md)  
- 마우스 및 키보드 입력을 프로그래밍 방식으로 시뮬레이션하는 여러 가지 방법을 보여 줍니다.  
+ [如何：在代码中模拟鼠标和键盘事件](how-to-simulate-mouse-and-keyboard-events-in-code.md)  
+ 演示通过编程模拟鼠标和键盘输入的几种不同方式。  
   
- [방법: Windows Forms 컨트롤에서 사용자 입력 이벤트 처리](how-to-handle-user-input-events-in-windows-forms-controls.md)  
- 대부분의 사용자 입력 이벤트를 처리하고 각 이벤트에 대한 정보를 보고하는 코드 예제를 제공합니다.  
+ [如何：在 Windows 窗体控件中处理用户输入事件](how-to-handle-user-input-events-in-windows-forms-controls.md)  
+ 显示处理大多数用户输入事件的代码示例，并报告有关每个事件的信息。  
   
- [Windows Forms에서 사용자 입력 유효성 검사](user-input-validation-in-windows-forms.md)  
- Windows Forms 애플리케이션에서 사용자 입력의 유효성을 검사하는 방법을 설명합니다.  
+ [Windows 窗体中的用户输入验证](user-input-validation-in-windows-forms.md)  
+ 描述用于验证 Windows 窗体应用程序中的用户输入的方法。  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>相关章节  
  另请参阅[在 Windows 窗体中创建事件处理程序](creating-event-handlers-in-windows-forms.md)。

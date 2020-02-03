@@ -44,7 +44,7 @@ WCF WEB HTTP 编程模型允许开发人员通过基本 HTTP 请求（无需 SOA
 ## <a name="webgetattribute"></a>WebGetAttribute  
  <xref:System.ServiceModel.Web.WebGetAttribute> 特性用于将服务操作标记为响应 HTTP GET 请求的操作。 这是将元数据添加到操作说明中的被动操作行为（<xref:System.ServiceModel.Description.IOperationBehavior> 方法不执行任何操作）。 应用 <xref:System.ServiceModel.Web.WebGetAttribute> 将无任何效果，除非将在操作说明中查找此元数据的行为（具体来说是 <xref:System.ServiceModel.Description.WebHttpBehavior>）添加到服务的行为集合中。 <xref:System.ServiceModel.Web.WebGetAttribute> 特性采用下表所示的可选参数。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |`BodyStyle`|控制是否包装发送到应用该属性的服务操作以及从该操作接收的请求和响应。|  
 |`RequestFormat`|控制如何格式化请求消息。|  
@@ -59,7 +59,7 @@ WCF WEB HTTP 编程模型允许开发人员通过基本 HTTP 请求（无需 SOA
   
  <xref:System.ServiceModel.Web.WebInvokeAttribute> 特性采用下表所示的可选参数。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |`BodyStyle`|控制是否包装发送到应用该属性的服务操作以及从该操作接收的请求和响应。|  
 |`Method`|指定将服务操作映射到的 HTTP 方法。|  

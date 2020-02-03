@@ -1,5 +1,5 @@
 ---
-title: <cryptoClasses> 요소
+title: <cryptoClasses> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses
@@ -16,7 +16,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732890"
 ---
 # <a name="cryptoclasses-element"></a>\<cryptoClasses > 元素
-[\<nameEntry>](nameentry-element.md) 요소에 있는 이름에 매핑되는 암호화 클래스의 목록이 포함되어 있습니다.  
+包含密码类的列表，这些类具有到 [\<nameEntry>](nameentry-element.md) 元素中的友好名称的映射。  
   
 [ **\<configuration>** ](../configuration-element.md)  
 &nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
@@ -24,32 +24,32 @@ ms.locfileid: "76732890"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<cryptoClasses >**  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>语法  
   
 ```xml  
 <cryptoClasses>   
 </cryptoClasses>  
 ```  
   
-## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a>属性和元素  
+ 下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>특성  
- 없음.  
+### <a name="attributes"></a>Attributes  
+ 无。  
   
-### <a name="child-elements"></a>자식 요소  
+### <a name="child-elements"></a>子元素  
   
-|요소|설명|  
+|元素|说明|  
 |-------------|-----------------|  
-|[\<cryptoClass>](cryptoclass-element.md)|**\<nameEntry>** 요소에 있는 이름에 매핑되는 암호화 클래스가 포함되어 있습니다.|  
+|[\<cryptoClass >](cryptoclass-element.md)|包含一个密码类，该类具有到 **\<nameEntry>** 元素中的友好名称的映射。|  
   
-### <a name="parent-elements"></a>부모 요소  
+### <a name="parent-elements"></a>父元素  
   
-|요소|설명|  
+|元素|说明|  
 |-------------|-----------------|  
-|`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
-|`cryptographySettings`|암호화 설정이 포함되어 있습니다.|  
-|`cryptoNameMapping`|이름에 대한 클래스의 매핑이 포함되어 있습니다.|  
+|`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
+|`cryptographySettings`|包含加密设置。|  
+|`cryptoNameMapping`|包含类到友好名称的映射。|  
 |`mscorlib`|包含 `cryptographySettings` 元素。|  
   
 ## <a name="example"></a>示例  
@@ -79,8 +79,8 @@ ms.locfileid: "76732890"
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Security.Cryptography>
-- [구성 파일 스키마](../index.md)
-- [암호화 설정 스키마](index.md)
+- [配置文件架构](../index.md)
+- [加密设置架构](index.md)
 - [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
-- [System.Security.Cryptography.CryptoConfig.CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
-- [암호화 클래스 구성](../../configure-cryptography-classes.md)
+- [CryptoConfig. Cryptoconfig.createfromname。](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
+- [配置加密类](../../configure-cryptography-classes.md)

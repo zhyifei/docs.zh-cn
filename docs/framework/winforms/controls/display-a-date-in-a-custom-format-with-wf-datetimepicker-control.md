@@ -22,7 +22,7 @@ Windows 窗体 <xref:System.Windows.Forms.DateTimePicker> 控件使您可以灵�
   
 ### <a name="to-display-a-custom-format"></a>显示自定义格式  
   
-1. <xref:System.Windows.Forms.DateTimePicker.Format%2A> 속성을 `DateTimePickerFormat.Custom`으로 설정합니다.  
+1. 将 <xref:System.Windows.Forms.DateTimePicker.Format%2A> 属性设置为 `DateTimePickerFormat.Custom`。  
   
 2. 将 <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> 属性设置为格式字符串。  
   
@@ -65,5 +65,5 @@ Windows 窗体 <xref:System.Windows.Forms.DateTimePicker> 控件使您可以灵�
   
 ## <a name="see-also"></a>另请参阅
 
-- [DateTimePicker 컨트롤](datetimepicker-control-windows-forms.md)
-- [방법: Windows Forms DateTimePicker 컨트롤을 사용하여 날짜 설정 및 반환](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+- [DateTimePicker 控件](datetimepicker-control-windows-forms.md)
+- [如何：使用 Windows 窗体 DateTimePicker 控件设置和返回日期](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

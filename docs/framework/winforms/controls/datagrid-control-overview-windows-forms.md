@@ -47,7 +47,7 @@ Windows 窗体 <xref:System.Windows.Forms.DataGrid> 控件将数据显示在一�
 > [!NOTE]
 > 如果你熟悉 Visual Basic 6.0 中的 DataGrid 控件，就会发现 Windows 窗体 <xref:System.Windows.Forms.DataGrid> 控件中的一些重要差异。
 
-当网格绑定到 <xref:System.Data.DataSet> 时，会自动创建列和行，同时对其格式进行设置并填充数据。 有关详细信息，请参阅 [Data Binding and Windows Forms](../data-binding-and-windows-forms.md)。 生成 <xref:System.Windows.Forms.DataGrid> 控件后，可根据需要对列和行进行添加、删除、重新排列以及设置格式。
+当网格绑定到 <xref:System.Data.DataSet> 时，会自动创建列和行，同时对其格式进行设置并填充数据。 有关更多信息，请参见 [Data Binding and Windows Forms](../data-binding-and-windows-forms.md)。 生成 <xref:System.Windows.Forms.DataGrid> 控件后，可根据需要对列和行进行添加、删除、重新排列以及设置格式。
 
 ## <a name="binding-data-to-the-control"></a>将数据绑定到控件
 
@@ -100,19 +100,19 @@ Windows 窗体 <xref:System.Windows.Forms.DataGrid> 控件将数据显示在一�
 
 ## <a name="columns-and-rows"></a>列和行
 
-<xref:System.Windows.Forms.DataGrid> 由 <xref:System.Windows.Forms.DataGrid> 控件的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 属性中包含的 <xref:System.Windows.Forms.DataGridTableStyle> 对象集合组成。 表样式可能具有 <xref:System.Windows.Forms.DataGridTableStyle> 的 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 属性中包含的 <xref:System.Windows.Forms.DataGridColumnStyle> 对象集合。 可以通过使用通过 "**属性**" 窗口访问的集合编辑器来编辑 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 和 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 属性。
+<xref:System.Windows.Forms.DataGrid> 由 <xref:System.Windows.Forms.DataGridTableStyle> 控件的 <xref:System.Windows.Forms.DataGrid> 属性中包含的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 对象集合组成。 表样式可能具有 <xref:System.Windows.Forms.DataGridColumnStyle> 的 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 属性中包含的 <xref:System.Windows.Forms.DataGridTableStyle> 对象集合。 可以通过使用通过 "**属性**" 窗口访问的集合编辑器来编辑 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 和 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 属性。
 
-任何与 <xref:System.Windows.Forms.DataGrid> 控件关的联 <xref:System.Windows.Forms.DataGridTableStyle> 都可通过 <xref:System.Windows.Forms.GridTableStylesCollection> 进行访问。 可利用 <xref:System.Windows.Forms.DataGridTableStyle> 集合编辑器在设计器中编辑 <xref:System.Windows.Forms.GridTableStylesCollection>，或以编程方式通过 <xref:System.Windows.Forms.DataGrid> 控件的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 属性进行编辑。
+任何与 <xref:System.Windows.Forms.DataGridTableStyle> 控件关的联 <xref:System.Windows.Forms.DataGrid> 都可通过 <xref:System.Windows.Forms.GridTableStylesCollection> 进行访问。 可利用 <xref:System.Windows.Forms.GridTableStylesCollection> 集合编辑器在设计器中编辑 <xref:System.Windows.Forms.DataGridTableStyle>，或以编程方式通过 <xref:System.Windows.Forms.DataGrid> 控件的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 属性进行编辑。
 
 下图显示了 DataGrid 控件中包含的对象：
 
 ![显示 DataGrid 控件中包含的对象的关系图。](./media/datagrid-control-overview-windows-forms/visual-basic-columns.gif)
 
-通过将表样式和列样式的 `MappingName` 属性设置为相应的 <xref:System.Data.DataTable.TableName%2A> 和 <xref:System.Data.DataColumn.ColumnName%2A> 属性，使它们与 <xref:System.Data.DataTable> 对象和 <xref:System.Data.DataColumn> 对象保持同步。 当将没有列样式的 <xref:System.Windows.Forms.DataGridTableStyle> 添加至绑定到有效数据源的 <xref:System.Windows.Forms.DataGrid> 控件，并且将该表样式的 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 属性设置为有效的 <xref:System.Data.DataTable.TableName%2A> 属性时，会针对该表样式创建 <xref:System.Windows.Forms.DataGridColumnStyle> 对象集合。 对于在 <xref:System.Data.DataTable> 的 <xref:System.Data.DataTable.Columns%2A> 集合中发现的每个 <xref:System.Data.DataColumn>，都会将相应的 <xref:System.Windows.Forms.DataGridColumnStyle> 添加至 <xref:System.Windows.Forms.GridColumnStylesCollection>。 通过 <xref:System.Windows.Forms.DataGridTableStyle> 的 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 属性访问 <xref:System.Windows.Forms.GridColumnStylesCollection>。 通过对 <xref:System.Windows.Forms.GridColumnStylesCollection> 使用 <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> 或 <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> 方法在网格中添加或删除列。 有关详细信息，请参阅[如何：向 Windows 窗体 DataGrid 控件添加表和列](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)和[如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)。
+通过将表样式和列样式的 <xref:System.Data.DataTable> 属性设置为相应的 <xref:System.Data.DataColumn> 和 `MappingName` 属性，使它们与 <xref:System.Data.DataTable.TableName%2A> 对象和 <xref:System.Data.DataColumn.ColumnName%2A> 对象保持同步。 当将没有列样式的 <xref:System.Windows.Forms.DataGridTableStyle> 添加至绑定到有效数据源的 <xref:System.Windows.Forms.DataGrid> 控件，并且将该表样式的 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 属性设置为有效的 <xref:System.Data.DataTable.TableName%2A> 属性时，会针对该表样式创建 <xref:System.Windows.Forms.DataGridColumnStyle> 对象集合。 对于在 <xref:System.Data.DataColumn> 的 <xref:System.Data.DataTable.Columns%2A> 集合中发现的每个 <xref:System.Data.DataTable>，都会将相应的 <xref:System.Windows.Forms.DataGridColumnStyle> 添加至 <xref:System.Windows.Forms.GridColumnStylesCollection>。 通过 <xref:System.Windows.Forms.GridColumnStylesCollection> 的 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 属性访问 <xref:System.Windows.Forms.DataGridTableStyle>。 通过对 <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> 使用 <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> 或 <xref:System.Windows.Forms.GridColumnStylesCollection> 方法在网格中添加或删除列。 有关详细信息，请参阅[如何：向 Windows 窗体 DataGrid 控件添加表和列](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)和[如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)。
 
-列类型的集合可扩展具有丰富格式设置和编辑功能的 <xref:System.Windows.Forms.DataGridColumnStyle> 类。 所有列类型都继承自 <xref:System.Windows.Forms.DataGridColumnStyle> 基类。 创建的类取决于 <xref:System.Web.UI.WebControls.DataGridColumn> 基于的 <xref:System.Data.DataColumn> 的 <xref:System.Data.DataColumn.DataType%2A> 属性。 例如，<xref:System.Data.DataColumn.DataType%2A> 属性设置为 <xref:System.Boolean> 的 <xref:System.Data.DataColumn> 将与 <xref:System.Windows.Forms.DataGridBoolColumn> 关联。 下表描述了每种列类型。
+列类型的集合可扩展具有丰富格式设置和编辑功能的 <xref:System.Windows.Forms.DataGridColumnStyle> 类。 所有列类型都继承自 <xref:System.Windows.Forms.DataGridColumnStyle> 基类。 创建的类取决于 <xref:System.Data.DataColumn.DataType%2A> 基于的 <xref:System.Data.DataColumn> 的 <xref:System.Web.UI.WebControls.DataGridColumn> 属性。 例如，<xref:System.Data.DataColumn> 属性设置为 <xref:System.Data.DataColumn.DataType%2A> 的 <xref:System.Boolean> 将与 <xref:System.Windows.Forms.DataGridBoolColumn> 关联。 下表描述了每种列类型。
 
-|列名称|描述|
+|列类型|说明|
 |-----------------|-----------------|
 |<xref:System.Windows.Forms.DataGridTextBoxColumn>|接受并显示数据为格式化或非格式化的字符串。 编辑功能与在简单的 <xref:System.Windows.Forms.TextBox> 中编辑数据相同。 继承自 <xref:System.Windows.Forms.DataGridColumnStyle>。|
 |<xref:System.Windows.Forms.DataGridBoolColumn>|接受并显示 `true`、`false` 和 null 值。 继承自 <xref:System.Windows.Forms.DataGridColumnStyle>。|
@@ -138,7 +138,7 @@ Windows 窗体 <xref:System.Windows.Forms.DataGrid> 控件将数据显示在一�
 >
 > 有时，你可能只希望微调众多列中的某一列，例如，数据集包含 50 列，而你只需要其中的 49 列。 在这种情况下，相对简单的办法是导入所有 50 列，然后以编程方式删除其中的一列，而不是以编程方式添加 49 个单独的列。
 
-## <a name="formatting"></a>格式化
+## <a name="formatting"></a>格式设置
 
 可应用于 <xref:System.Windows.Forms.DataGrid> 控件的格式设置包括边框样式、网格线样式、字体、标题属性、数据对齐以及交替行之间的背景颜色。 有关详细信息，请参阅[如何：设置 Windows 窗体 DataGrid 控件的格式](how-to-format-the-windows-forms-datagrid-control.md)。
 

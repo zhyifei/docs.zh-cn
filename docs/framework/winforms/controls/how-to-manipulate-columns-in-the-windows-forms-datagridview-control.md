@@ -19,7 +19,7 @@ ms.locfileid: "76736092"
 ---
 # <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a>如何：操作 Windows 窗体 DataGridView 控件中的列
 
-以下代码示例介绍了使用 <xref:System.Windows.Forms.DataGridViewColumn> 类的属性处理 <xref:System.Windows.Forms.DataGridView> 列的各种方法。
+以下代码示例介绍了使用 <xref:System.Windows.Forms.DataGridView> 类的属性处理 <xref:System.Windows.Forms.DataGridViewColumn> 列的各种方法。
 
 ## <a name="example"></a>示例
 

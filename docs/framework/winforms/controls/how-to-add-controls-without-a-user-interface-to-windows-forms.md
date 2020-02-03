@@ -1,5 +1,5 @@
 ---
-title: 사용자 인터페이스 없이 컨트롤 추가
+title: 不使用用户界面而添加控件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -21,7 +21,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744755"
 ---
-# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>방법: Windows Forms에 사용자 인터페이스가 없는 컨트롤 추가
+# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>如何：向 Windows 窗体添加无用户界面的控件
 
 非可视控件（或组件）为应用程序提供功能。 与其他控件不同，组件并不为用户提供用户界面，因此不需要在 Windows 窗体设计器表面上显示。 将组件添加到窗体时，Windows 窗体设计器将在显示所有组件的窗体底部显示可调整大小的托盘。 将控件添加到组件栏后，您可以选择该组件并设置其属性，就像对窗体上的任何其他控件一样。
 
@@ -79,10 +79,10 @@ ms.locfileid: "76744755"
 
 ## <a name="see-also"></a>另请参阅
 
-- [Windows Forms 컨트롤](index.md)
-- [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)
-- [방법: Windows Forms에 ActiveX 컨트롤 추가](how-to-add-activex-controls-to-windows-forms.md)
-- [Windows Forms에 컨트롤 넣기](putting-controls-on-windows-forms.md)
-- [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
-- [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)
+- [Windows 窗体控件](index.md)
+- [如何：向 Windows 窗体添加控件](how-to-add-controls-to-windows-forms.md)
+- [如何：向 Windows 窗体添加 ActiveX 控件](how-to-add-activex-controls-to-windows-forms.md)
+- [将控件置于 Windows 窗体上](putting-controls-on-windows-forms.md)
+- [标记各个 Windows 窗体控件并创建它们的快捷键](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
+- [按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)

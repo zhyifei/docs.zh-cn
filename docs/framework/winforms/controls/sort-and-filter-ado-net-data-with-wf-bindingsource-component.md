@@ -20,11 +20,11 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742977"
 ---
-# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>방법: Windows Forms BindingSource 구성 요소를 사용하여 ADO.NET 데이터 정렬 및 필터링
+# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>如何：使用 Windows 窗体 BindingSource 组件对 ADO.NET 数据进行排序和筛选
 可以通过 <xref:System.Windows.Forms.BindingSource.Sort%2A> 和 <xref:System.Windows.Forms.BindingSource.Filter%2A> 属性公开 <xref:System.Windows.Forms.BindingSource> 控件的排序和筛选功能。 如果基础数据源是 <xref:System.ComponentModel.IBindingList>，则可以应用简单排序，当数据源为 <xref:System.ComponentModel.IBindingListView>时，可以应用筛选和高级排序。 <xref:System.Windows.Forms.BindingSource.Sort%2A> 属性需要标准 ADO.NET 语法：一个字符串，表示数据源中的数据列的名称，后跟 `ASC` 或 `DESC`，以指示列表是按升序排序还是按降序排序。 您可以通过用逗号分隔符分隔每一列来设置高级排序或多列排序。 <xref:System.Windows.Forms.BindingSource.Filter%2A> 属性采用字符串表达式。  
   
 > [!NOTE]
-> 암호와 같은 중요한 정보를 연결 문자열 내에 저장하면 애플리케이션 보안 문제가 발생할 수 있습니다. 데이터베이스 액세스를 제어할 경우에는 통합 보안이라고도 하는 Windows 인증을 사용하는 방법이 더 안전합니다. 자세한 내용은 [연결 정보 보호](../../data/adonet/protecting-connection-information.md)를 참조하세요.  
+> 将敏感信息（如密码）存储在连接字符串中可能会影响应用程序的安全性。 若要控制对数据库的访问，一种较为安全的方法是使用 Windows 身份验证（也称为集成安全性）。 有关详细信息，请参阅[保护连接信息](../../data/adonet/protecting-connection-information.md)。  
   
 ### <a name="to-filter-data-with-the-bindingsource"></a>用 BindingSource 筛选数据  
   
@@ -50,12 +50,12 @@ ms.locfileid: "76742977"
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
+## <a name="compiling-the-code"></a>编译代码  
  若要运行此示例，请将代码粘贴到包含名为 `BindingSource1` 的 <xref:System.Windows.Forms.BindingSource> 的窗体和名为 `dataGridView1`的 <xref:System.Windows.Forms.DataGridView>。 处理窗体的 <xref:System.Windows.Forms.Form.Load> 事件，并在 load 事件处理程序方法中调用 `InitializeSortedFilteredBindingSource`。  
   
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>
-- [방법: 샘플 데이터베이스 설치](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/8b6y4c7s(v=vs.120))
-- [BindingSource 구성 요소](bindingsource-component.md)
+- [如何：安装示例数据库](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/8b6y4c7s(v=vs.120))
+- [BindingSource 组件](bindingsource-component.md)

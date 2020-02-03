@@ -52,7 +52,7 @@ ms.locfileid: "76747025"
 
 <xref:System.Windows.Controls.InkCanvas> 提供对许多墨迹编辑操作的支持。 例如，<xref:System.Windows.Controls.InkCanvas> 支持笔背面擦除，并且无需其他代码即可将该功能添加到元素中。
 
-#### <a name="selection"></a>选择
+#### <a name="selection"></a>选项
 
 设置选择模式与将 <xref:System.Windows.Controls.InkCanvasEditingMode> 属性设置为**Select**一样简单。
 

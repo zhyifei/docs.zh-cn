@@ -59,7 +59,7 @@ ms.locfileid: "76746791"
   
 1. 将 <xref:System.Windows.Forms.Control.AllowDrop%2A> 属性设置为 true。  
   
-2. 在将发生放置的控件的 `DragEnter` 事件中，确保正在拖动的数据是可接受的类型（在本例中为 <xref:System.Windows.Forms.Control.Text%2A>）。 然后，该代码将设置在将其放到 <xref:System.Windows.Forms.DragDropEffects> 枚举中的值时发生的效果。 有关更多信息，请参见<xref:System.Windows.Forms.DragEventArgs.Effect%2A>。  
+2. 在将发生放置的控件的 `DragEnter` 事件中，确保正在拖动的数据是可接受的类型（在本例中为 <xref:System.Windows.Forms.Control.Text%2A>）。 然后，该代码将设置在将其放到 <xref:System.Windows.Forms.DragDropEffects> 枚举中的值时发生的效果。 有关详细信息，请参阅 <xref:System.Windows.Forms.DragEventArgs.Effect%2A>。  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -83,9 +83,9 @@ ms.locfileid: "76746791"
     ```  
   
     > [!NOTE]
-    > 您可以通过将自己的对象指定为 <xref:System.Windows.Forms.DataObject.SetData%2A> 方法的 <xref:System.Object> 参数来定义自己的 <xref:System.Windows.Forms.DataFormats>。 在进行该操作时，请确保指定的对象可序列化。 有关更多信息，请参见<xref:System.Runtime.Serialization.ISerializable>。  
+    > 您可以通过将自己的对象指定为 <xref:System.Windows.Forms.DataObject.SetData%2A> 方法的 <xref:System.Object> 参数来定义自己的 <xref:System.Windows.Forms.DataFormats>。 在进行该操作时，请确保指定的对象可序列化。 有关详细信息，请参阅 <xref:System.Runtime.Serialization.ISerializable>。  
   
-3. 在将发生放置的控件的 <xref:System.Windows.Forms.Control.DragDrop> 事件中，使用 <xref:System.Windows.Forms.DataObject.GetData%2A> 方法检索要拖动的数据。 有关更多信息，请参见<xref:System.Security.Cryptography.Xml.DataObject.Data%2A>。  
+3. 在将发生放置的控件的 <xref:System.Windows.Forms.Control.DragDrop> 事件中，使用 <xref:System.Windows.Forms.DataObject.GetData%2A> 方法检索要拖动的数据。 有关详细信息，请参阅 <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>。  
   
      在下面的示例中，<xref:System.Windows.Forms.TextBox> 控件是要拖动到的控件（将在其中发生放置）。 该代码将 <xref:System.Windows.Forms.TextBox> 控件的 <xref:System.Windows.Forms.Control.Text%2A> 属性设置为等于正在拖动的数据。  
   

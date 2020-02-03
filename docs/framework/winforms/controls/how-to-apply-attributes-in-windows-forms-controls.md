@@ -16,7 +16,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741491"
 ---
-# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>방법: Windows Forms 컨트롤에서 특성 적용
+# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>如何：应用 Windows 窗体控件中的特性
 若要开发正确与设计环境进行交互并在运行时正确执行的组件和控件，需要正确地将特性应用于类和成员。  
   
 ## <a name="example"></a>示例  
@@ -73,7 +73,7 @@ ms.locfileid: "76741491"
  [!code-csharp[System.ComponentModel.AttributesDemoControl#26](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#26)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#26](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#26)]  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
+## <a name="compiling-the-code"></a>编译代码  
   
 - 承载 `AttributesDemoControl` 的窗体需要引用 `AttributesDemoControl` 的程序集才能生成。  
   
@@ -81,6 +81,6 @@ ms.locfileid: "76741491"
 
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>
-- [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)
-- [Windows Forms 컨트롤의 특성](attributes-in-windows-forms-controls.md)
+- [使用 .NET Framework 开发自定义 Windows 窗体控件](developing-custom-windows-forms-controls.md)
+- [Windows 窗体控件中的特性](attributes-in-windows-forms-controls.md)
 - [如何：用 DesignerSerializationVisibilityAttribute 序列化标准类型的集合](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))

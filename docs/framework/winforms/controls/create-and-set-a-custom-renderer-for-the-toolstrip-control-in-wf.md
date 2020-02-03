@@ -17,7 +17,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743419"
 ---
-# <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>방법: Windows Forms의 ToolStrip 컨트롤에 대한 사용자 지정 렌더러 만들기 및 설정
+# <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>如何：在 Windows 窗体中为 ToolStrip 控件创建和设置自定义呈现器
 <xref:System.Windows.Forms.ToolStrip> 控件可以轻松地支持主题和样式。 可以通过将 <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> 属性或 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> 属性设置为自定义呈现器来实现完全自定义的外观和行为（外观和感觉）。  
   
  可以将呈现器分配给每个 <xref:System.Windows.Forms.ToolStrip>、<xref:System.Windows.Forms.MenuStrip>、<xref:System.Windows.Forms.ContextMenuStrip>或 <xref:System.Windows.Forms.StatusStrip> 控件，也可以通过将 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> 属性设置为 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> 来使用 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>属性来影响所有对象。  
@@ -29,7 +29,7 @@ ms.locfileid: "76743419"
   
 1. 扩展 <xref:System.Windows.Forms.ToolStripRenderer> 类。  
   
-2. 通过重写适当*的*来实现所需的自定义呈现 멤버  
+2. 通过重写适当*的*来实现所需的自定义呈现 成员  
   
     ```vb  
     Public Class RedTextRenderer  
@@ -86,6 +86,6 @@ ms.locfileid: "76743419"
 - <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>
-- [ToolStrip 컨트롤 개요](toolstrip-control-overview-windows-forms.md)
-- [ToolStrip 컨트롤 아키텍처](toolstrip-control-architecture.md)
-- [ToolStrip 기술 요약](toolstrip-technology-summary.md)
+- [ToolStrip 控件概述](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip 控件体系结构](toolstrip-control-architecture.md)
+- [ToolStrip 技术摘要](toolstrip-technology-summary.md)

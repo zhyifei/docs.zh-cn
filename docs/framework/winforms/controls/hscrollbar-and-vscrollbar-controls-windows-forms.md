@@ -22,7 +22,7 @@ Windows 窗体滚动条控件用于在项的长列表或大量信息中轻松导
  [HScrollBar 和 VScrollBar 控件概述](hscrollbar-and-vscrollbar-controls-overview-windows-forms.md)  
  介绍 <xref:System.Windows.Forms.HScrollBar> 和 <xref:System.Windows.Forms.VScrollBar> 控件的一般概念，这两种控件使用户能够在大量信息中水平和垂直滚动。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.HScrollBar>  
  对此类进行描述，并提供指向其所有成员的链接。  
   

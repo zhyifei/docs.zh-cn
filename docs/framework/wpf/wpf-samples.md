@@ -1,5 +1,5 @@
 ---
-title: 예제
+title: 示例
 ms.date: 11/02/2017
 helpviewer_keywords:
 - WPF samples [WPF]
@@ -12,6 +12,6 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743306"
 ---
-# <a name="wpf-samples"></a>WPF 샘플
+# <a name="wpf-samples"></a>WPF 示例
 
 有关演示 Windows Presentation Foundation （WPF）的示例，请参阅 GitHub 上的[Microsoft/WPF 示例](https://github.com/Microsoft/WPF-Samples)存储库。

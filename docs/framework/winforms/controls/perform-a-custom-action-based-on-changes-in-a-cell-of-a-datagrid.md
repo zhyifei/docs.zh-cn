@@ -36,7 +36,7 @@ ms.locfileid: "76744279"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
-- 名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件。 对于C#，事件处理程序必须连接到相应的事件。  
+- 名为 <xref:System.Windows.Forms.DataGridView> 的 `dataGridView1` 控件。 对于C#，事件处理程序必须连接到相应的事件。  
   
 - 对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   

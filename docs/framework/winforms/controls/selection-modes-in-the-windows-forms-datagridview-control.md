@@ -12,13 +12,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743037"
 ---
-# <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 선택 모드
+# <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的选择模式
 
 有时，你希望应用程序根据 <xref:System.Windows.Forms.DataGridView> 控件中的用户选择执行操作。 根据具体的操作，可能需要限制可能的选择类型。 例如，假设您的应用程序可以打印当前所选记录的报表。 在这种情况下，您可能需要配置 <xref:System.Windows.Forms.DataGridView> 控件以便单击行中的任意位置，以始终选择整行，以便每次只能选择一行。
 
 可以通过将 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> 属性设置为以下 <xref:System.Windows.Forms.DataGridViewSelectionMode> 枚举值之一来指定允许的选项。
 
-|DataGridViewSelectionMode 值|설명|
+|DataGridViewSelectionMode 值|说明|
 |-------------------------------------|-----------------|
 |<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|单击单元格会将其选中。 行标题和列标题不能用于选择。|
 |<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|单击单元格会将其选中。 单击列标题会选择整个列。 列标题不能用于排序。|
@@ -52,5 +52,5 @@ ms.locfileid: "76743037"
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridViewSelectionMode>
-- [Windows Forms DataGridView 컨트롤에서 선택 및 클립보드 사용](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤의 선택 모드 설정](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+- [将选择模式和剪贴板与 Windows 窗体 DataGridView 控件结合使用](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+- [如何：设置 Windows 窗体 DataGridView 控件的选择模式](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

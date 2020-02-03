@@ -38,7 +38,7 @@ ms.locfileid: "76743930"
 > [!NOTE]
 > Windows XP 和 Windows Vista 上都提供了 XDDM;但是，WDDM 仅适用于 Windows Vista。  
   
-## <a name="general-best-practices"></a>一般最佳实践  
+## <a name="general-best-practices"></a>常规最佳做法  
  创建设备时，请使用 `D3DCREATE_MULTITHREADED` 创建标志。 这会降低性能，但 WPF 呈现系统会从另一个线程调用此设备上的方法。 请确保正确遵循锁定协议，以便没有两个线程同时访问设备。  
   
  如果您的呈现在 WPF 托管线程上执行，则强烈建议您使用 `D3DCREATE_FPU_PRESERVE` 创建标志来创建设备。 如果没有此设置，D3D 呈现可以降低 WPF 双精度操作的准确性，并引入呈现问题。  

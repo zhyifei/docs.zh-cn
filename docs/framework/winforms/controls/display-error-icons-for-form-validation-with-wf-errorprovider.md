@@ -18,7 +18,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745907"
 ---
-# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>방법: Windows Forms ErrorProvider 구성 요소를 사용하여 폼 유효성에 대한 오류 아이콘 표시
+# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>如何：使用 Windows 窗体 ErrorProvider 组件显示窗体验证的错误图标
 用户输入无效数据时，可以使用 Windows 窗体 <xref:System.Windows.Forms.ErrorProvider> 组件显示错误图标。 窗体上必须至少有两个控件，才能在它们之间进行 tab 键排列，从而调用验证代码。  
   
 ### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>当控件的值无效时显示错误图标  
@@ -90,10 +90,10 @@ ms.locfileid: "76745907"
        (this, &Form1::textBox1_Validating);  
     ```  
   
-4. 프로젝트를 실행합니다. 在第一个控件中键入无效（在此示例中为非数字）数据，然后按 tab 键。 显示错误图标时，用鼠标指针指向它，查看错误文本。  
+4. 运行该项目。 在第一个控件中键入无效（在此示例中为非数字）数据，然后按 tab 键。 显示错误图标时，用鼠标指针指向它，查看错误文本。  
   
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
-- [ErrorProvider 구성 요소 개요](errorprovider-component-overview-windows-forms.md)
-- [방법: Windows Forms ErrorProvider 구성 요소를 사용하여 데이터 세트에 있는 오류 보기](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [ErrorProvider 组件概述](errorprovider-component-overview-windows-forms.md)
+- [如何：使用 Windows 窗体 ErrorProvider 组件查看数据集中的错误](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

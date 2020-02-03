@@ -21,9 +21,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732959"
 ---
-# <a name="how-to-format-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤 서식 지정
+# <a name="how-to-format-the-windows-forms-datagrid-control"></a>如何：设置 Windows 窗体 DataGrid 控件的格式
 > [!NOTE]
-> <xref:System.Windows.Forms.DataGridView> 控件将替换功能并将其添加到 <xref:System.Windows.Forms.DataGrid> 控件;但是，如果您选择，则会保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容性和将来使用。 자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하세요.  
+> <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
  将不同的颜色应用到 <xref:System.Windows.Forms.DataGrid> 控件的各个部分，有助于更轻松地读取和解释信息。 颜色可以应用于行和列。 还可以根据自己的意愿隐藏或显示行和列。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "76732959"
   
 1. 根据需要设置以下属性：  
   
-    |속성|설명|  
+    |属性|说明|  
     |--------------|-----------------|  
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|<xref:System.Windows.Forms.DataGrid.BackColor%2A> 属性定义网格中偶数行的颜色。 将 <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> 属性设置为其他颜色时，会将每个其他行设置为此新颜色（第1行、第3、第5行等）。|  
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|网格中偶数行的背景色（行0、2、4、6，等等）。|  
@@ -158,5 +158,5 @@ ms.locfileid: "76732959"
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [방법: Windows Forms DataGrid 컨트롤에서 열 삭제 또는 숨기기](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [DataGrid 컨트롤](datagrid-control-windows-forms.md)
+- [如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [DataGrid 控件](datagrid-control-windows-forms.md)

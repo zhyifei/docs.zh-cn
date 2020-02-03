@@ -23,7 +23,7 @@ ms.locfileid: "76744062"
   
  在以下代码示例中，你将创建一个名为 `DataGridViewRolloverCell` 的自定义单元格类，用于检测鼠标进入和离开单元格边界的时间。 当鼠标位于单元格的边界内时，会绘制一个内嵌的矩形。 这个新类型派生自 <xref:System.Windows.Forms.DataGridViewTextBoxCell>，在所有其他方面均表现为其基类。 伴生列类称为 `DataGridViewRolloverColumn`。  
   
- 若要使用这些类，可创建一个包含 <xref:System.Windows.Forms.DataGridView> 控件的窗体，向 <xref:System.Windows.Forms.DataGridView.Columns%2A> 集合添加一个或多个 `DataGridViewRolloverColumn` 对象，并用包含值的行填充该控件。  
+ 若要使用这些类，可创建一个包含 <xref:System.Windows.Forms.DataGridView> 控件的窗体，向 `DataGridViewRolloverColumn` 集合添加一个或多个 <xref:System.Windows.Forms.DataGridView.Columns%2A> 对象，并用包含值的行填充该控件。  
   
 > [!NOTE]
 > 如果添加空行，此示例将无法正常工作。 例如，当你通过设置 <xref:System.Windows.Forms.DataGridView.RowCount%2A> 属性将行添加到该控件时，则会创建空行。 这是因为在这种情况下添加的行将被自动共享，即在你单击一个单元格之后才会实例化 `DataGridViewRolloverCell` 对象，这就导致关联的行变为非共享。  
@@ -35,7 +35,7 @@ ms.locfileid: "76744062"
   
 ### <a name="to-customize-cells-and-columns-in-the-datagridview-control"></a>自定义 DataGridView 控件中的单元格和列  
   
-1. 从 <xref:System.Windows.Forms.DataGridViewTextBoxCell> 类型派生一个名为 `DataGridViewRolloverCell` 的新单元格类。  
+1. 从 `DataGridViewRolloverCell` 类型派生一个名为 <xref:System.Windows.Forms.DataGridViewTextBoxCell> 的新单元格类。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#201](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#201)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#201](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#201)]  
@@ -47,12 +47,12 @@ ms.locfileid: "76744062"
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#210](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#210)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#210](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#210)]  
   
-3. 重写 `DataGridViewRolloverCell` 类中的 <xref:System.Windows.Forms.DataGridViewCell.OnMouseEnter%2A> 和 <xref:System.Windows.Forms.DataGridViewCell.OnMouseLeave%2A> 方法，以强制单元格在鼠标指针进入或离开它们时重新绘制自己。  
+3. 重写 <xref:System.Windows.Forms.DataGridViewCell.OnMouseEnter%2A> 类中的 <xref:System.Windows.Forms.DataGridViewCell.OnMouseLeave%2A> 和 `DataGridViewRolloverCell` 方法，以强制单元格在鼠标指针进入或离开它们时重新绘制自己。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#220](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#220)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#220](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#220)]  
   
-4. 从 <xref:System.Windows.Forms.DataGridViewColumn> 类型派生一个名为 `DataGridViewRolloverCellColumn` 的新类。 在构造函数中，向其 <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A> 属性分配一个新的 `DataGridViewRolloverCell` 对象。  
+4. 从 `DataGridViewRolloverCellColumn` 类型派生一个名为 <xref:System.Windows.Forms.DataGridViewColumn> 的新类。 在构造函数中，向其 `DataGridViewRolloverCell` 属性分配一个新的 <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A> 对象。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#300](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#300)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#300](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#300)]  

@@ -27,7 +27,7 @@ ms.locfileid: "76743718"
 
 3. 按 Enter 启动客户端。
 
-     你应该会看到以下输出：
+     您应看到下列输出：
 
     ```console
      Add(100,15.99) = 115.99
@@ -42,7 +42,7 @@ ms.locfileid: "76743718"
 ## <a name="configurable-via-code-or-appconfig"></a>可通过代码或 App.Config 进行配置
  所提供的示例配置为使用 App.config 文件来定义路由器行为。 也可将 App.config 文件的名称更改为无法识别的其他名称，并将对 ConfigureRouterViaCode() 的方法调用取消注释。 以上任一方法都可产生相同的路由器行为。
 
-### <a name="scenario"></a>方案
+### <a name="scenario"></a>场景
  此示例演示作为基本消息泵的路由器。 路由服务用作透明的代理节点，该节点配置为将消息直接传递到目标终结点的预配置集。
 
 ### <a name="real-world-scenario"></a>实际方案

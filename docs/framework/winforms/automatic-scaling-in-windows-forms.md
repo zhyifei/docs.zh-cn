@@ -14,43 +14,43 @@ ms.locfileid: "76732375"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows 窗体中的自动缩放
 
-자동 크기 조정은 한 컴퓨터에서 특정 디스플레이 해상도 또는 시스템 글꼴로 디자인된 폼과 해당 컨트롤이 다른 디스플레이 해상도 또는 시스템 글꼴을 사용하는 다른 컴퓨터에서 제대로 표시될 수 있게 합니다. 이 기능은 사용자 및 다른 개발자 컴퓨터 둘 다의 네이티브 Windows 및 기타 애플리케이션과 일치하도록 폼과 해당 컨트롤의 크기가 지능적으로 조정되도록 합니다. 支持自动缩放和视觉样式的 .NET Framework，使 .NET Framework 应用程序与每个用户的计算机上的本机 Windows 应用程序保持一致的外观和感觉。
+借助自动缩放功能，在某台计算机上以某种显示分辨率或系统字体设计的窗体及其控件可以在其他计算机上以不同的显示分辨率或系统字体适当显示。 它确保窗体及其控件将以智能方式调整大小，以便与本机 Windows 以及用户和其他开发人员的计算机上的其他应用程序保持一致。 支持自动缩放和视觉样式的 .NET Framework，使 .NET Framework 应用程序与每个用户的计算机上的本机 Windows 应用程序保持一致的外观和感觉。
 
-大多数情况下，自动缩放在 .NET Framework 版本2.0 及更高版本中按预期方式工作。 그러나 글꼴 구성표 변경은 문제가 될 수 있습니다. 有关如何解决此问题的示例，请参阅[如何：在 Windows 窗体应用程序中响应字体方案更改](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md)。
+大多数情况下，自动缩放在 .NET Framework 版本2.0 及更高版本中按预期方式工作。 但是，字体方案更改可能会产生问题。 有关如何解决此问题的示例，请参阅[如何：在 Windows 窗体应用程序中响应字体方案更改](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md)。
 
 ## <a name="need-for-automatic-scaling"></a>需要自动缩放
 
-자동 크기 조정이 없으면 특정 디스플레이 해상도 또는 글꼴로 디자인된 애플리케이션이 해당 해상도나 글꼴이 변경될 경우 너무 작거나 너무 크게 나타납니다. 예를 들어 애플리케이션이 Tahoma 9 포인트를 기준으로 디자인된 경우 조정하지 않으면 시스템 글꼴이 Tahoma 12 포인트인 컴퓨터에서 실행할 경우 너무 작게 나타납니다. 제목, 메뉴, 텍스트 상자 내용 등의 텍스트 요소가 다른 애플리케이션보다 작게 렌더링됩니다. 또한 제목 표시줄, 메뉴, 많은 컨트롤 등 텍스트가 포함된 UI(사용자 인터페이스) 요소의 크기는 사용하는 글꼴에 따라 달라집니다. 이 예제에서는 이러한 요소도 상대적으로 더 작게 나타납니다.
+若不进行自动缩放，在分辨率或字体更改时，为某个显示分辨率或字体设计的应用程序将显示太大或太小。 例如，如果应用程序是使用 Tahoma 9 point 作为基准而设计的，则在系统字体为 Tahoma 12 point 的计算机上运行时，若不进行调整它将显示太小。 与其他应用程序相比，呈现的文本元素（如标题、菜单、文本框内容等）要小一些。 此外，包含文本的用户界面 (UI) 元素（如标题栏、菜单和很多控件）的大小均取决于所使用的字体。 在此示例中，这些元素的显示也相对小一些。
 
-애플리케이션이 특정 디스플레이 해상도로 디자인된 경우 비슷한 상황이 발생합니다. 最常见的显示分辨率为每英寸96点（DPI），这等于100% 的显示比例，但分辨率显示支持125%、150%、200% （分别等于120、144和 192 DPI），更常见。 조정하지 않으면 특정 해상도로 디자인된 애플리케이션, 특히 그래픽 기반 애플리케이션은 다른 해상도로 실행할 경우 너무 크거나 너무 작게 나타납니다.
+如果应用程序是针对某种显示分辨率设计的，会发生类似情况。 最常见的显示分辨率为每英寸96点（DPI），这等于100% 的显示比例，但分辨率显示支持125%、150%、200% （分别等于120、144和 192 DPI），更常见。 如果不进行调整，针对某个分辨率设计的应用程序（特别是基于图形的应用程序）在其他分辨率上运行时就会显示太大或太小。
 
-자동 크기 조정은 상대 글꼴 크기나 디스플레이 해상도에 따라 폼과 해당 자식 컨트롤의 크기를 자동으로 조정하여 이러한 문제를 개선하려고 합니다. Windows 운영 체제는 대화 상자 단위라는 상대 측정 단위를 사용하여 대화 상자의 자동 크기 조정을 지원합니다. 대화 상자 단위는 시스템 글꼴을 기반으로 하며, Win32 SDK 함수 `GetDialogBaseUnits`를 통해 픽셀과의 해당 관계를 확인할 수 있습니다. 사용자가 Windows에서 사용되는 테마를 변경하면 모든 대화 상자가 자동으로 적절하게 조정됩니다. 此外，.NET Framework 支持根据默认系统字体或显示分辨率进行自动缩放。 필요에 따라 애플리케이션에서 자동 크기 조정을 사용하지 않도록 설정할 수 있습니다.
+自动缩放寻求解决这些问题，方法是更具相对字体大小或显示分辨率自动调整窗体及其子控件的大小。 Windows 操作系统支持使用一种名为对话框单位的相对度量单位的自动缩放对话框。 对话框单位基于系统字体，并且它与像素的关系可由 Win32 SDK 函数 `GetDialogBaseUnits` 确定。 当用户更改 Windows 使用的主题时，所有对话框均自动进行相应调整。 此外，.NET Framework 支持根据默认系统字体或显示分辨率进行自动缩放。 或者，可在应用程序中禁用自动缩放。
 
 ## <a name="original-support-for-automatic-scaling"></a>自动缩放的初始支持
 
-.NET Framework 的版本1.0 和1.1 支持自动缩放，这种方式依赖于 UI 使用的 Windows 默认字体（由 Win32 SDK 值**DEFAULT_GUI_FONT**表示）。 이 글꼴은 일반적으로 디스플레이 해상도가 변경되는 경우에만 변경됩니다. 자동 크기 조정을 구현하기 위해 다음 메커니즘이 사용되었습니다.
+.NET Framework 的版本1.0 和1.1 支持自动缩放，这种方式依赖于 UI 使用的 Windows 默认字体（由 Win32 SDK 值**DEFAULT_GUI_FONT**表示）。 通常，此字体只在显示分辨率更改时才更改。 已使用以下机制来实现自动缩放：
 
-1. 디자인 타임에 <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 속성(이제 사용 되지 않음)이 개발자 컴퓨터의 기본 시스템 글꼴 높이와 너비로 설정되었습니다.
+1. 在设计时，将 <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 属性（现已弃用）设置为开发人员计算机上默认系统字体的高度和宽度。
 
-2. 런타임에 사용자 컴퓨터의 기본 시스템 글꼴이 <xref:System.Windows.Forms.Form> 클래스의 <xref:System.Windows.Forms.Control.Font%2A> 속성을 초기화하는 데 사용되었습니다.
+2. 在运行时，用户计算机的默认系统字体用于初始化 <xref:System.Windows.Forms.Control.Font%2A> 类的 <xref:System.Windows.Forms.Form> 属性。
 
-3. 폼을 표시하기 전에 <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> 메서드가 폼의 크기 조정을 위해 호출되었습니다. 이 메서드는 <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 및 <xref:System.Windows.Forms.Control.Font%2A>에서 상대 크기를 계산한 다음 <xref:System.Windows.Forms.Control.Scale%2A> 메서드를 호출하여 실제로 폼과 자식의 크기를 조정했습니다.
+3. 在显示窗体前，调用 <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> 方法以缩放窗体。 此方法计算 <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 和 <xref:System.Windows.Forms.Control.Font%2A> 的相对缩放大小，然后调用 <xref:System.Windows.Forms.Control.Scale%2A> 方法来实际缩放窗体及其子窗体。
 
-4. 후속 <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> 호출에서 점진적으로 폼의 크기를 조정하지 않도록 <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 값이 업데이트되었습니다.
+4. 更新 <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 的值，以便对 <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> 的后续调用不会逐渐调整窗体大小。
 
-이 메커니즘은 대부분의 용도에 충분했지만 다음과 같은 제한 사항이 있었습니다.
+虽然此机制足够实现大多数目的时，但具有以下限制：
 
 - 由于 <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 属性将基准字体大小表示为整数值，因此当窗体通过多种分辨率循环时，将会出现舍入误差。
 
-- 자동 크기 조정이 <xref:System.Windows.Forms.Form> 클래스에서만 구현되고 <xref:System.Windows.Forms.ContainerControl> 클래스에서는 구현되지 않았습니다. 따라서 사용자 정의 컨트롤이 폼과 동일한 해상도로 디자인되고 디자인 타임에 폼에 배치된 경우에만 제대로 크기가 조정되었습니다.
+- 自动缩放仅在 <xref:System.Windows.Forms.Form> 类中实现，无法在 <xref:System.Windows.Forms.ContainerControl> 类中实现。 因此，只有在用户控件的分辨率设计为与窗体的相同且在设计时置于窗体时，用户控件才可正确缩放。
 
-- 컴퓨터 해상도가 동일한 경우에만 여러 개발자가 동시에 폼과 해당 자식 컨트롤을 디자인할 수 있었습니다. 마찬가지로, 폼의 상속이 부모 폼과 연결된 해상도에 따라 달라지도록 했습니다.
+- 窗体及其子控件只可由计算机分辨率相同的多名开发人员进行同时设计。 同样，如果窗体依赖与父窗体关联的分辨率，也会被继承。
 
 - 它与 .NET Framework 版本2.0 引入的较新布局管理器不兼容，如 <xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel>。
 
 - 它不支持直接基于与 .NET Compact Framework 的兼容性所需的显示分辨率进行缩放。
 
-虽然此机制保留在 .NET Framework 版本2.0 中以保持向后兼容性，但它已被下一步所述的更可靠的缩放机制所取代。 따라서 <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 및 특정 <xref:System.Windows.Forms.Control.Scale%2A> 오버로드는 사용되지 않는 것으로 표시됩니다.
+虽然此机制保留在 .NET Framework 版本2.0 中以保持向后兼容性，但它已被下一步所述的更可靠的缩放机制所取代。 因此，<xref:System.Windows.Forms.Form.AutoScale%2A><xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>、<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 和某些 <xref:System.Windows.Forms.Control.Scale%2A> 重载被标记为“已过时”。
 
 > [!NOTE]
 > 将旧代码升级到 .NET Framework 版本2.0 时，可以安全删除对这些成员的引用。
@@ -59,44 +59,44 @@ ms.locfileid: "76732375"
 
 .NET Framework 版本2.0 通过引入对 Windows 窗体自动缩放的以下更改来 surmounts 以前的限制：
 
-- 폼, 네이티브 복합 컨트롤 및 사용자 정의 컨트롤이 모두 균일한 크기 조정 지원을 받을 수 있도록 크기 조정에 대한 기본 지원이 <xref:System.Windows.Forms.ContainerControl> 클래스로 이동되었습니다. 새 멤버 <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> 및 <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>이 추가되었습니다.
+- 基本的缩放支持已移至 <xref:System.Windows.Forms.ContainerControl> 类，以便窗体、本机复合控件和用户控件均接收一致的缩放支持。 已添加新成员 <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A>、<xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>、<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> 和 <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>。
 
-- <xref:System.Windows.Forms.Control> 클래스에는 크기 조정에 참여하고 동일한 폼에서 혼합된 크기 조정을 지원할 수 있게 해주는 여러 개의 새 멤버도 있습니다. 구체적으로 <xref:System.Windows.Forms.Control.Scale%2A>, <xref:System.Windows.Forms.Control.ScaleChildren%2A> 및 <xref:System.Windows.Forms.Control.GetScaledBounds%2A> 멤버가 크기 조정을 지원합니다.
+- <xref:System.Windows.Forms.Control> 类还具有使其可参与缩放并支持在同一个窗体上的混合缩放的几个新成员。 特别是 <xref:System.Windows.Forms.Control.Scale%2A>、<xref:System.Windows.Forms.Control.ScaleChildren%2A> 和 <xref:System.Windows.Forms.Control.GetScaledBounds%2A> 成员支持缩放。
 
-- <xref:System.Windows.Forms.AutoScaleMode> 열거형에서 정의된 시스템 글꼴 지원을 보완하기 위해 화면 해상도를 기반으로 하는 크기 조정 지원이 추가되었습니다. 此模式与支持的自动缩放兼容，使应用程序迁移更轻松 .NET Compact Framework。
+- 已按照 <xref:System.Windows.Forms.AutoScaleMode> 枚举定义添加基于屏幕分辨率的缩放支持以补充系统字体支持。 此模式与支持的自动缩放兼容，使应用程序迁移更轻松 .NET Compact Framework。
 
-- <xref:System.Windows.Forms.FlowLayoutPanel> 및 <xref:System.Windows.Forms.TableLayoutPanel>과 같은 레이아웃 관리자와의 호환성이 자동 크기 조정 구현에 추가되었습니다.
+- 已向自动缩放实现添加与布局管理器（如 <xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel>）的兼容性。
 
-- 이제 배율 인수가 일반적으로 <xref:System.Drawing.SizeF> 구조체를 사용하여 부동 소수점 값으로 표시되므로 반올림 오류가 거의 제거되었습니다.
+- 缩放比例现在表示为浮点值，（通常采用 <xref:System.Drawing.SizeF> 结构），以便几乎消除舍入误差。
 
 > [!CAUTION]
-> DPI 및 글꼴 크기 조정 모드의 임의 혼합은 지원되지 않습니다. 특정 모드(예: DPI)를 사용하여 사용자 정의 컨트롤의 크기를 조정하고 다른 모드(글꼴)를 사용하여 폼에 배치하는 것은 아무 문제가 없지만 특정 모드의 기본 폼과 다른 모드의 파생 폼을 혼합하면 예기치 않은 결과가 발생할 수 있습니다.
+> 不支持任意混合的 DPI 和字体缩放模式。 虽然你可能成功使用某种模式（例如 DPI）缩放用户控件并以另一种模式（字体）将其放在窗体上，但混合使用一种模式下的基窗体和其他模式下的派生窗体时可能导致意外结果。
 
 ### <a name="automatic-scaling-in-action"></a>自动缩放操作
 
-이제 Windows Forms에서 다음 논리를 사용하여 폼과 해당 내용의 크기를 자동으로 조정합니다.
+Windows 窗体现在使用以下逻辑自动缩放窗体及其内容：
 
-1. 디자인 타임에 각 <xref:System.Windows.Forms.ContainerControl>이 크기 조정 모드와 현재 해상도를 <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> 및 <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>에 각각 기록합니다.
+1. 在设计时，每个 <xref:System.Windows.Forms.ContainerControl> 分别在 <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> 和 <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> 中记录缩放模式及其当前的分辨率。
 
-2. 런타임에 실제 해상도가 <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> 속성에 저장됩니다. <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A> 속성이 런타임 및 디자인 타임 크기 조정 해상도 간의 비율을 동적으로 계산합니다.
+2. 在运行时，实际的分辨率存储在 <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> 属性中。 <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A> 属性动态计算运行时和设计时缩放分辨率之间的比率。
 
-3. 폼이 로드될 때 <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> 및 <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>의 값이 서로 다르면 <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> 메서드가 호출되어 컨트롤 및 해당 자식의 크기를 조정합니다. 이 메서드는 레이아웃을 일시 중단하고 <xref:System.Windows.Forms.Control.Scale%2A> 메서드를 호출하여 실제 크기 조정을 수행합니다. 그 후에 <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> 값이 업데이트되어 점진적 크기 조정을 방지합니다.
+3. 窗体加载时，如果 <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> 和 <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> 的值不同，则调用 <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> 方法来缩放控件及其子项。 此方法将挂起布局并调用 <xref:System.Windows.Forms.Control.Scale%2A> 方法来执行实际缩放。 随后将更新 <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> 的值以避免渐进式缩放。
 
-4. 다음 상황에서는 <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>도 자동으로 호출됩니다.
+4. 在以下情况下也可自动调用 <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>：
 
-    - 크기 조정 모드가 <xref:System.Windows.Forms.AutoScaleMode.Font>인 경우 <xref:System.Windows.Forms.Control.OnFontChanged%2A> 이벤트에 대한 응답으로
+    - 如果缩放模式为 <xref:System.Windows.Forms.Control.OnFontChanged%2A>，则响应 <xref:System.Windows.Forms.AutoScaleMode.Font> 事件。
 
-    - 컨테이너 컨트롤의 레이아웃이 다시 시작되고 <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> 또는 <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> 속성에서 변경 내용이 검색되는 경우
+    - 当容器控件的布局继续执行并在 <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> 或 <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> 属性中检测到更改时。
 
-    - 위에서 암시한 대로 부모 <xref:System.Windows.Forms.ContainerControl>의 크기가 조정되는 경우 각 컨테이너 컨트롤은 부모 컨테이너의 배율 인수가 아니라 고유한 배율 인수를 사용하여 자식의 크기를 조정해야 합니다.
+    - 如上所述，当父 <xref:System.Windows.Forms.ContainerControl> 正在缩放时。 每个容器控件负责使用自己的比例因子（而不是其父容器的比例因子）缩放其子控件。
 
-5. 자식 컨트롤은 다음과 같은 여러 수단을 통해 해당 크기 조정 동작을 수정할 수 있습니다.
+5. 子控件可通过多种方式修改其缩放行为：
 
-    - <xref:System.Windows.Forms.Control.ScaleChildren%2A> 속성을 재정의하여 해당 자식 컨트롤의 크기를 조정할지 여부를 결정할 수 있습니다.
+    - 可重写 <xref:System.Windows.Forms.Control.ScaleChildren%2A> 属性以确定是否应缩放其子控件。
 
-    - <xref:System.Windows.Forms.Control.GetScaledBounds%2A> 메서드를 재정의하여 컨트롤의 크기가 조정되는 범위를 조정할 수 있지만 크기 조정 논리는 조정할 수 없습니다.
+    - 可重写 <xref:System.Windows.Forms.Control.GetScaledBounds%2A> 方法以调整控件缩放到的边界，但不是调整缩放逻辑。
 
-    - <xref:System.Windows.Forms.Control.ScaleControl%2A> 메서드를 재정의하여 현재 컨트롤에 대한 크기 조정 논리를 변경할 수 있습니다.
+    - 可重写 <xref:System.Windows.Forms.Control.ScaleControl%2A> 方法以更改当前控件的缩放逻辑。
 
 ## <a name="see-also"></a>另请参阅
 
@@ -104,5 +104,5 @@ ms.locfileid: "76732375"
 - <xref:System.Windows.Forms.Control.Scale%2A>
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>
-- [비주얼 스타일을 사용하여 컨트롤 렌더링](./controls/rendering-controls-with-visual-styles.md)
-- [방법: 자동 크기 조정 없이 성능 향상](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+- [使用视觉样式呈现控件](./controls/rendering-controls-with-visual-styles.md)
+- [如何：通过避免自动缩放改善性能](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

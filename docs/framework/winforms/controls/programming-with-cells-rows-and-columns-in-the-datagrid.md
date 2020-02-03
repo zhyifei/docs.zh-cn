@@ -37,7 +37,7 @@ ms.locfileid: "76741345"
  [如何：使用 Windows 窗体 DataGridView 控件中的图像列](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
  描述如何用 `DataGridViewImageColumn` 类进行编程。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.DataGridView>  
  提供关于 <xref:System.Windows.Forms.DataGridView> 控件的参考文档。  
   

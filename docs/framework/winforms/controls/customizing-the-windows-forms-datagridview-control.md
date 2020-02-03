@@ -33,7 +33,7 @@ ms.locfileid: "76744024"
  [如何：在 Windows 窗体 DataGridView 单元格中托管控件](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
  描述如何实现 `IDataGridViewEditingControl` 接口，并创建从 `DataGridViewCell` 和 `DataGridViewColumn` 派生的自定义类型，以便在单元格处于编辑模式时显示 <xref:System.Windows.Forms.DateTimePicker> 控件。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.DataGridView>  
  提供关于 <xref:System.Windows.Forms.DataGridView> 控件的参考文档。  
   

@@ -14,7 +14,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732252"
 ---
-# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms TreeView 컨트롤에서 노드 추가 및 제거
+# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>如何：使用设计器用 Windows 窗体 TreeView 控件添加和移除节点
 
 由于 Windows 窗体 <xref:System.Windows.Forms.TreeView> 控件以分层方式显示节点，因此在添加节点时，必须注意其父节点。
 
@@ -22,7 +22,7 @@ ms.locfileid: "76732252"
 
 ### <a name="to-add-or-remove-nodes-in-the-designer"></a>在设计器中添加或删除节点
 
-1. <xref:System.Windows.Forms.TreeView> 컨트롤을 선택합니다.
+1. 选择 <xref:System.Windows.Forms.TreeView> 控件。
 
 2. 在 "**属性**" 窗口中，单击 "<xref:System.Windows.Forms.TreeView.Nodes%2A>" 属性旁边的**省略号**按钮（!["Visual](./media/visual-studio-ellipsis-button.png)Studio 的属性窗口中的省略号按钮（...）"。
 
@@ -34,9 +34,9 @@ ms.locfileid: "76732252"
 
 ## <a name="see-also"></a>另请参阅
 
-- [TreeView 컨트롤](treeview-control-windows-forms.md)
-- [TreeView 컨트롤 개요](treeview-control-overview-windows-forms.md)
-- [방법: Windows Forms TreeView 컨트롤의 아이콘 설정](how-to-set-icons-for-the-windows-forms-treeview-control.md)
-- [방법: Windows Forms TreeView 컨트롤의 노드 전체 반복](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [방법: 클릭한 TreeView 노드 확인](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [방법: TreeView 또는 ListView 컨트롤에 사용자 지정 정보 추가(Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [TreeView 控件](treeview-control-windows-forms.md)
+- [TreeView 控件概述](treeview-control-overview-windows-forms.md)
+- [如何：设置 Windows 窗体 TreeView 控件的图标](how-to-set-icons-for-the-windows-forms-treeview-control.md)
+- [如何：循环访问 Windows 窗体 TreeView 控件的所有节点](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [如何：确定哪个 TreeView 节点获得了单击](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [如何：向 TreeView 或 ListView 控件（Windows 窗体）添加自定义信息](add-custom-information-to-a-treeview-or-listview-control-wf.md)

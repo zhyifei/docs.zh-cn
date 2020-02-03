@@ -1,5 +1,5 @@
 ---
-title: 생성자 디자인
+title: 构造函数设计
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -19,7 +19,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741735"
 ---
-# <a name="constructor-design"></a>생성자 디자인
+# <a name="constructor-design"></a>构造函数设计
 
 有两种类型的构造函数：类型构造函数和实例构造函数。
 
@@ -77,9 +77,9 @@ ms.locfileid: "76741735"
 
 *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
-*Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
+*在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。
 
 ## <a name="see-also"></a>另请参阅
 
-- [멤버 디자인 지침](../../../docs/standard/design-guidelines/member.md)
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
+- [成员设计准则](../../../docs/standard/design-guidelines/member.md)
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)

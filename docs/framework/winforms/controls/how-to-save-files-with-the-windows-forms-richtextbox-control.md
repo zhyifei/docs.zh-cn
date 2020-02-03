@@ -22,11 +22,11 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744817"
 ---
-# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤을 사용하여 파일 저장
+# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>如何：在 Windows 窗体 RichTextBox 控件中保存文件
 
 Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件可以编写它所显示的信息，其中一种格式如下：
 
-- 일반 텍스트
+- 纯文本
 
 - Unicode 纯文本
 
@@ -36,7 +36,7 @@ Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件可以编写它所�
 
 - 带有 OLE 对象的文本化表示形式的纯文本
 
-若要保存文件，请调用 <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> 方法。 还可以使用**SaveFile**方法将数据保存到流中。 자세한 내용은 <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>를 참조하세요.
+若要保存文件，请调用 <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> 方法。 还可以使用**SaveFile**方法将数据保存到流中。 有关详细信息，请参阅 <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。
 
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>将控件的内容保存到文件中
 
@@ -44,7 +44,7 @@ Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件可以编写它所�
 
     若要在实际应用程序中执行此操作，通常要使用 <xref:System.Windows.Forms.SaveFileDialog> 组件。 有关概述，请参阅[SaveFileDialog 组件概述](savefiledialog-component-overview-windows-forms.md)。
 
-2. 调用 <xref:System.Windows.Forms.RichTextBox> 控件的 <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> 方法，并指定要保存的文件，还可以指定一个文件类型。 如果调用方法时将文件名作为其唯一参数，则该文件将保存为 RTF 格式。 다른 파일 형식을 지정하려면 <xref:System.Windows.Forms.RichTextBoxStreamType> 열거형의 값을 두 번째 인수로 사용하여 메서드를 호출합니다.
+2. 调用 <xref:System.Windows.Forms.RichTextBox> 控件的 <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> 方法，并指定要保存的文件，还可以指定一个文件类型。 如果调用方法时将文件名作为其唯一参数，则该文件将保存为 RTF 格式。 若要指定其他文件类型，请使用 <xref:System.Windows.Forms.RichTextBoxStreamType> 枚举的值作为其第二个参数来调用该方法。
 
     在下面的示例中，为 rtf 文件的位置设置的路径是 "**我的文档**" 文件夹。 使用此位置的原因是，你可以假定大多数运行 Windows 操作系统的计算机都包含此文件夹。 选择此位置还允许具有最低系统访问级别的用户安全运行该应用程序。 下面的示例假定已添加 <xref:System.Windows.Forms.RichTextBox> 控件的窗体。
 
@@ -86,11 +86,11 @@ Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件可以编写它所�
     ```
 
     > [!IMPORTANT]
-    > 이 예제에서는 파일이 아직 없는 경우 새 파일을 만듭니다. 如果应用程序需要创建文件，则该应用程序需要为该文件夹创建访问权限。 권한은 액세스 제어 목록을 사용하여 설정됩니다. 如果该文件已存在，则该应用程序只需一个较小的权限。 如果可能，在部署过程中创建文件并只授予对单个文件的读取访问权限，而不是创建对文件夹的访问权限，则更安全。 또한 루트 폴더나 Program Files 폴더보다 사용자 폴더에 데이터를 쓰는 것이 더 안전합니다.
+    > 此示例在文件尚未存在时创建新文件。 如果应用程序需要创建文件，则该应用程序需要为该文件夹创建访问权限。 可使用访问控制列表设置权限。 如果该文件已存在，则该应用程序只需一个较小的权限。 如果可能，在部署过程中创建文件并只授予对单个文件的读取访问权限，而不是创建对文件夹的访问权限，则更安全。 此外，较安全的做法是将数据写入用户文件夹，而不是根文件夹或“Program Files”文件夹。
 
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [RichTextBox 控件](richtextbox-control-windows-forms.md)
+- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

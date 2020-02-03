@@ -17,13 +17,13 @@ ms.locfileid: "76742696"
   
  ![显示具有基本身份验证的传输安全的屏幕截图。](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
 |安全模式|Transport|  
 |互操作性|与现有的 Web 服务客户端和服务进行互操作|  
 |身份验证（服务器）<br /><br /> 身份验证（客户端）|是（使用 HTTPS）<br /><br /> 是（通过用户名/密码）|  
 |完整性|是|  
-|保密性|是|  
+|机密性|是|  
 |Transport|HTTPS|  
 |绑定|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -69,7 +69,7 @@ ms.locfileid: "76742696"
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>客户端  
   
 ### <a name="code"></a>代码  
  下面的代码演示包括用户名和密码在内的客户端代码。 请注意，此用户必须提供一个有效的 Windows 用户名和密码。 此处不显示用于返回用户名和密码的代码。 使用对话框或其他界面来查询用户的相关信息。  
@@ -116,6 +116,6 @@ ms.locfileid: "76742696"
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+- [安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
 - [Windows Server App Fabric 的安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

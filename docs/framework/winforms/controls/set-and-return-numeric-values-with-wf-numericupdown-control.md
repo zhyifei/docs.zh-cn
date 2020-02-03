@@ -18,7 +18,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743021"
 ---
-# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>방법: Windows Forms NumericUpDown 컨트롤을 사용하여 숫자 값 설정 및 반환
+# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>如何：使用 Windows 窗体 NumericUpDown 控件设置和返回数值
 Windows 窗体 <xref:System.Windows.Forms.NumericUpDown> 控件的数值由其 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 属性确定。 您可以为控件的值编写条件测试，就像对任何其他属性一样。 设置 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 属性后，可以通过编写代码对其执行操作来直接调整该属性，也可以调用 <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> 和 <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> 方法。  
   
 ### <a name="to-set-the-numeric-value"></a>设置数值  
@@ -37,7 +37,7 @@ Windows 窗体 <xref:System.Windows.Forms.NumericUpDown> 控件的数值由其 <
     numericUpDown1->Value = 55;  
     ```  
   
-     -또는-  
+     \- 或 -  
   
 2. 调用 <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> 或 <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> 方法，按 <xref:System.Windows.Forms.NumericUpDown.Increment%2A> 属性中指定的数量增加或减少该值。  
   
@@ -96,5 +96,5 @@ Windows 窗体 <xref:System.Windows.Forms.NumericUpDown> 控件的数值由其 <
 - <xref:System.Windows.Forms.NumericUpDown.Increment%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.UpButton%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.DownButton%2A?displayProperty=nameWithType>
-- [NumericUpDown 컨트롤](numericupdown-control-windows-forms.md)
-- [NumericUpDown 컨트롤 개요](numericupdown-control-overview-windows-forms.md)
+- [NumericUpDown 控件](numericupdown-control-windows-forms.md)
+- [NumericUpDown 控件概述](numericupdown-control-overview-windows-forms.md)

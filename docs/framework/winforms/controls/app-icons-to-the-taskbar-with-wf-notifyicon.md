@@ -20,7 +20,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746246"
 ---
-# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>방법: Windows Forms NotifyIcon 구성 요소를 사용하여 작업 표시줄에 애플리케이션 아이콘 추가
+# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>如何：使用 Windows 窗体 NotifyIcon 组件向任务栏添加应用程序图标
 
 Windows 窗体 <xref:System.Windows.Forms.NotifyIcon> 组件在任务栏的状态通知区域中显示一个图标。 若要在 "状态" 区域中显示多个图标，你的窗体上必须有多个 <xref:System.Windows.Forms.NotifyIcon> 组件。 若要设置为控件显示的图标，请使用 <xref:System.Windows.Forms.NotifyIcon.Icon%2A> 属性。 你还可以在 <xref:System.Windows.Forms.NotifyIcon.DoubleClick> 事件处理程序中编写代码，以便用户双击该图标时发生某些情况。 例如，您可以为用户显示一个对话框，以便配置由该图标表示的后台进程。
 
@@ -31,7 +31,7 @@ Windows 窗体 <xref:System.Windows.Forms.NotifyIcon> 组件在任务栏的状�
 
 1. 为 <xref:System.Windows.Forms.NotifyIcon.Icon%2A> 属性赋值。 该值必须是 `System.Drawing.Icon` 类型并且可以从 .ico 文件加载。 您可以在代码中指定图标文件，也可以通过单击 "**属性**" 窗口中 "<xref:System.Windows.Forms.NotifyIcon.Icon%2A>" 属性旁边的省略号按钮（![省略号按钮（...](./media/visual-studio-ellipsis-button.png)属性窗口），然后在出现的 "**打开**" 对话框中选择该文件。
 
-2. <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 속성을 `true`으로 설정합니다.
+2. 将 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 属性设置为 `true`。
 
 3. 将 <xref:System.Windows.Forms.NotifyIcon.Text%2A> 属性设置为相应的工具提示字符串。
 
@@ -76,6 +76,6 @@ Windows 窗体 <xref:System.Windows.Forms.NotifyIcon> 组件在任务栏的状�
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [방법: Windows Forms NotifyIcon 구성 요소에 바로 가기 메뉴 연결](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
-- [NotifyIcon 구성 요소](notifyicon-component-windows-forms.md)
-- [NotifyIcon 구성 요소 개요](notifyicon-component-overview-windows-forms.md)
+- [如何：关联快捷菜单和 Windows 窗体 NotifyIcon 组件](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
+- [NotifyIcon 组件](notifyicon-component-windows-forms.md)
+- [NotifyIcon 组件概述](notifyicon-component-overview-windows-forms.md)

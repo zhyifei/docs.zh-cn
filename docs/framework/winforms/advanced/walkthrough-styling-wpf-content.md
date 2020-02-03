@@ -55,7 +55,7 @@ ms.locfileid: "76732541"
 
 1. 在 "**工具箱**" 中，双击 "`UserControl1`" 以在窗体上创建 `UserControl1` 的实例。
 
-   `UserControl1` 的实例托管在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。
+   `UserControl1` 的实例托管在名为 <xref:System.Windows.Forms.Integration.ElementHost> 的新 `elementHost1` 控件中。
 
 1. 在 `elementHost1`的智能标记面板中，单击下拉列表中的 "**编辑承载的内容**"。
 

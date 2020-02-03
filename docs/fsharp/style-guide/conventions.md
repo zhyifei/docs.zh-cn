@@ -1,5 +1,5 @@
 ---
-title: F# 코딩 규칙
+title: F# 编码约定
 description: 编写F#代码时，请了解一般准则和惯例。
 ms.date: 01/15/2020
 ms.openlocfilehash: ca86bcf714d2fb4ee5f173ee54ba12c317f9abe7
@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737820"
 ---
-# <a name="f-coding-conventions"></a>F# 코딩 규칙
+# <a name="f-coding-conventions"></a>F# 编码约定
 
 以下约定是从使用大型F#基本代码的经验中制定的。 [好F#代码的五大原则](index.md#five-principles-of-good-f-code)是每个建议的基础。 它们与[ F#组件设计准则](component-design-guidelines.md)相关，但适用于任何F#代码，不仅仅是库等组件。
 
@@ -189,7 +189,7 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>表示域内部类型的错误事例和非法状态
 
-利用可[区分联合](../language-reference/discriminated-unions.md)， F#可以在类型系统中表示有问题的程序状态。 예를 들면 다음과 같습니다.:
+利用可[区分联合](../language-reference/discriminated-unions.md)， F#可以在类型系统中表示有问题的程序状态。 例如：
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -224,7 +224,7 @@ let handleWithdrawal amount =
 
 中F#可用于引发异常的主构造应按以下优先顺序考虑：
 
-| 기능 | 구문 | 용도 |
+| 函数 | 语法 | 目的 |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | 使用指定的参数名引发 `System.ArgumentNullException`。 |
 | `invalidArg` | `invalidArg "argumentName" "message"` | 使用指定的参数名称和消息引发 `System.ArgumentException`。 |
@@ -415,7 +415,7 @@ let ``Test withdrawal transaction with 0.0 for balance``() =
 
 不应将此方法广泛应用于整个基本代码，但这是减少复杂内部和这些内部测试单元的样本的好办法。
 
-## <a name="access-control"></a>액세스 제어
+## <a name="access-control"></a>访问控制
 
 F#具有多个用于[访问控制](../language-reference/access-control.md)的选项，这些选项是从 .net 运行时中的可用项继承而来的。 这些类型不仅可用于类型，还可以将它们用于函数。
 
@@ -441,7 +441,7 @@ F#具有多个用于[访问控制](../language-reference/access-control.md)的�
 
 最后，对于新的F#或大的基本代码，自动通用化并非始终是 boon 的。 使用通用组件时存在认知开销。 此外，如果自动通用化的函数不用于不同的输入类型（如果打算将其用作这样的类型），则这些函数在该时间点是泛型的。 如果要编写的代码实际上是泛型的，则应始终考虑。
 
-## <a name="performance"></a>성능
+## <a name="performance"></a>性能
 
 ### <a name="prefer-structs-for-small-data-types"></a>更倾向于小型数据类型的结构
 
@@ -523,7 +523,7 @@ let rec processStructPoint (p: SPoint) offset times =
 
 #### <a name="prefer-struct-discriminated-unions-when-the-data-type-is-small"></a>当数据类型为小时，首选结构可区分联合
 
-前面对结构元组和记录的性能的观测值还适用于[ F#可区分联合](../language-reference/discriminated-unions.md)。 다음 코드를 살펴보세요.
+前面对结构元组和记录的性能的观测值还适用于[ F#可区分联合](../language-reference/discriminated-unions.md)。 考虑下列代码：
 
 ```fsharp
     type Name = Name of string
@@ -620,7 +620,7 @@ type Closure1Table() =
 
 #### <a name="prefer-let-mutable-to-reference-cells"></a>首选 `let mutable` 引用单元格
 
-引用单元是表示对值（而不是值本身）的引用的一种方法。 尽管它们可用于性能关键代码，但不建议这样做。 다음 예제를 참조하세요.
+引用单元是表示对值（而不是值本身）的引用的一种方法。 尽管它们可用于性能关键代码，但不建议这样做。 请考虑以下示例：
 
 ```fsharp
 let kernels =
@@ -659,23 +659,23 @@ F#完全支持对象和面向对象的（OO）概念。 尽管许多 OO 概念�
 * 点表示法（`x.Length`）
 * 实例成员
 * 隐式构造函数
-* 정적 멤버
+* 静态成员
 * 索引器表示法（`arr.[x]`）
 * 命名参数和可选参数
 * 接口和接口实现
 
 **不要首先接触这些功能，但在解决问题时，请慎用这些功能：**
 
-* 메서드 오버로드
+* 方法重载
 * 封装的可变数据
 * 类型上的运算符
 * 自动属性
 * 实现 `IDisposable` 和 `IEnumerable`
 * 类型扩展
-* 이벤트
-* Structs
-* 대리자
-* 열거형
+* Events
+* 结构
+* 委派
+* 枚举
 
 **通常，请避免使用这些功能，除非您必须使用这些功能：**
 

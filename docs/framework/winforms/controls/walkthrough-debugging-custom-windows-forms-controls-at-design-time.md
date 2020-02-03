@@ -113,7 +113,7 @@ ms.locfileid: "76740196"
 
      在 "**启动操作**" 部分中，选择 "**启动外部程序**"。 你将调试一个单独的 Visual Studio 实例，因此单击 "Visual Studio](./media/visual-studio-ellipsis-button.png)" 属性窗口中的省略号（![省略号按钮（...），浏览 Visual Studio IDE。 可执行文件的名称为**devenv**，如果安装到默认位置，其路径为 *% ProgramFiles （x86）% \ Microsoft Visual Studio\2019\\\<edition > \Common7\IDE*。
 
-3. 选择“确定”关闭对话框。
+3. 选择“确定”以关闭该对话框。
 
 4. 右键单击 " **DebugControlLibrary** " 项目，然后选择 "**设为启动项目**" 来启用此调试配置。
 

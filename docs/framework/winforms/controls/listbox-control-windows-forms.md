@@ -23,7 +23,7 @@ Windows 窗体 `ListBox` 控件将显示用户可从中选择一个或多个项�
  [ListBox 控件概述](listbox-control-overview-windows-forms.md)  
  说明此控件的本质及其主要功能和属性。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.ListBox> 类  
  对此类进行描述，并提供指向其所有成员的链接。  
   

@@ -75,7 +75,7 @@ ms.locfileid: "76740172"
   
 #### <a name="to-test-the-form"></a>测试窗体  
   
-- 按“F5”运行应用程序。  
+- 按 F5 运行应用程序。  
   
      你将看到一个 <xref:System.Windows.Forms.DataGridView> 控件，该控件显示 `PopulateDataGridView`中列出的歌曲。 您可以通过 "**添加行**" 按钮添加新行，并且可以通过 "**删除行**" 按钮删除所选行。 未绑定的 <xref:System.Windows.Forms.DataGridView> 控件是数据存储区，其数据独立于任何外部源，如 <xref:System.Data.DataSet> 或数组。  
   

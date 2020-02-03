@@ -16,7 +16,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742184"
 ---
-# <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>방법: Windows Forms NumericUpDown 컨트롤의 형식 설정
+# <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>如何：设置 Windows 窗体 NumericUpDown 控件的格式
 你可以配置值在 Windows 窗体 <xref:System.Windows.Forms.NumericUpDown> 控件中的显示方式。 <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> 属性确定小数点后显示的数字数;默认值为0。 <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> 属性确定是否在每三位十进制数之间插入分隔符;默认值为 `false`。 如果 <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> 属性设置为 `true`，则控件可以以十六进制而不是十进制格式显示值;默认值为 `false`。  
   
 ### <a name="to-format-the-numeric-value"></a>设置数值的格式  
@@ -38,7 +38,7 @@ ms.locfileid: "76742184"
     numericUpDown1->ThousandsSeparator = true;  
     ```  
   
-     -또는-  
+     \- 或 -  
   
 - 通过将 <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> 属性设置为 `true`来显示十六进制值。  
   
@@ -60,5 +60,5 @@ ms.locfileid: "76742184"
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.NumericUpDown>
-- [NumericUpDown 컨트롤](numericupdown-control-windows-forms.md)
-- [NumericUpDown 컨트롤 개요](numericupdown-control-overview-windows-forms.md)
+- [NumericUpDown 控件](numericupdown-control-windows-forms.md)
+- [NumericUpDown 控件概述](numericupdown-control-overview-windows-forms.md)

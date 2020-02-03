@@ -17,11 +17,11 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744100"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>BindingNavigator 控件概述（Windows 窗体）
-你可以使用 <xref:System.Windows.Forms.BindingNavigator> 控件来创建标准化的方法，以便用户搜索和更改 Windows 窗体上的数据。 频繁对 <xref:System.Windows.Forms.BindingSource> 组件使用 <xref:System.Windows.Forms.BindingNavigator>，以便用户能够在窗体上数据记录之间移动并与记录进行交互。  
+你可以使用 <xref:System.Windows.Forms.BindingNavigator> 控件来创建标准化的方法，以便用户搜索和更改 Windows 窗体上的数据。 频繁对 <xref:System.Windows.Forms.BindingNavigator> 组件使用 <xref:System.Windows.Forms.BindingSource>，以便用户能够在窗体上数据记录之间移动并与记录进行交互。  
   
 ## <a name="how-the-bindingnavigator-works"></a>BindingNavigator 的工作原理  
 
- <xref:System.Windows.Forms.BindingNavigator> 控件由包含一系列 <xref:System.Windows.Forms.ToolStripItem> 对象的 <xref:System.Windows.Forms.ToolStrip> 组成，以执行大部分常见的与数据相关的操作：添加数据、删除数据，以及在数据中导航。 默认情况下，<xref:System.Windows.Forms.BindingNavigator> 控件包含这些标准按钮。 以下屏幕截图显示了窗体上的 <xref:System.Windows.Forms.BindingNavigator> 控件：
+ <xref:System.Windows.Forms.BindingNavigator> 控件由包含一系列 <xref:System.Windows.Forms.ToolStrip> 对象的 <xref:System.Windows.Forms.ToolStripItem> 组成，以执行大部分常见的与数据相关的操作：添加数据、删除数据，以及在数据中导航。 默认情况下，<xref:System.Windows.Forms.BindingNavigator> 控件包含这些标准按钮。 以下屏幕截图显示了窗体上的 <xref:System.Windows.Forms.BindingNavigator> 控件：
   
  ![显示 BindingNavigator 控件的屏幕截图。](./media/bindingnavigator-control-overview-windows-forms/bindingnavigator-control-form.gif)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "76744100"
 |<xref:System.Windows.Forms.BindingNavigator.PositionItem%2A> 文本框|返回基础数据源中的当前位置。|  
 |<xref:System.Windows.Forms.BindingNavigator.CountItem%2A> 文本框|返回基础数据源中的总项数。|  
   
- 对于此集合中每个控件，都有相应的以编程方式提供相同功能的 <xref:System.Windows.Forms.BindingSource> 组件成员。 例如，<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> 按钮对应 <xref:System.Windows.Forms.BindingSource> 组件的 <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> 方法，<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> 按钮对应 <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> 方法，依次类推。  
+ 对于此集合中每个控件，都有相应的以编程方式提供相同功能的 <xref:System.Windows.Forms.BindingSource> 组件成员。 例如，<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> 按钮对应 <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> 组件的 <xref:System.Windows.Forms.BindingSource> 方法，<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> 按钮对应 <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> 方法，依次类推。  
   
  如果默认按钮不适合你的应用程序，或者如果你需要其他按钮来支持其他类型的功能，则可以提供你自己的 <xref:System.Windows.Forms.ToolStrip> 按钮。 另请参阅[如何：向 Windows 窗体 BindingNavigator 控件添加“加载”、“保存”和“取消”按钮](load-save-and-cancel-bindingnavigator.md)。  
   

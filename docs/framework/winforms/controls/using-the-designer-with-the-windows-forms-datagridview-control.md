@@ -50,7 +50,7 @@ Visual Studio 为 `DataGridView` 控件提供设计器支持，使你能够在�
  [如何：使用设计器设置 Windows 窗体 DataGridView 控件的默认单元格样式和数据格式](default-cell-styles-datagridview.md)  
  介绍如何使用 " **CellStyle 生成器**" 对话框设置控件的基本外观和数据显示格式。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.DataGridView>  
  提供关于 <xref:System.Windows.Forms.DataGridView> 控件的参考文档。  
   

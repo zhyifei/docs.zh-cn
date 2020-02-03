@@ -36,7 +36,7 @@ ms.locfileid: "76728333"
 ## <a name="visual-customization-of-the-row-for-new-records"></a>新记录的行的可视化自定义  
  当创建新记录行时，将基于 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> 属性指定的行。 未为此行指定的任何单元格样式将从其他属性继承。 有关单元样式继承的详细信息，请参阅[Windows 窗体 DataGridView 控件中的单元格样式](cell-styles-in-the-windows-forms-datagridview-control.md)。  
   
- 将从每个单元格的 <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> 属性检索新记录所在行中的单元格显示的初始值。 对于类型 <xref:System.Windows.Forms.DataGridViewImageCell>的单元格，此属性将返回占位符图像。 否则，此属性将返回 `null`。 您可以重写此属性以返回自定义值。 但是，当焦点进入新记录行时，这些初始值可以由 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 事件处理程序替换。  
+ 将从每个单元格的 <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> 属性检索新记录所在行中的单元格显示的初始值。 对于类型 <xref:System.Windows.Forms.DataGridViewImageCell>的单元格，此属性将返回占位符图像。 对于其他类型的单元格，此属性返回 `null`。 您可以重写此属性以返回自定义值。 但是，当焦点进入新记录行时，这些初始值可以由 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 事件处理程序替换。  
   
  此行标题的标准图标（箭头或星号）不公开公开。 如果要自定义图标，将需要创建一个自定义 <xref:System.Windows.Forms.DataGridViewRowHeaderCell> 类。  
   

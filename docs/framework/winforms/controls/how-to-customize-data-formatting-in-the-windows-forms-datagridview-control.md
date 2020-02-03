@@ -28,7 +28,7 @@ ms.locfileid: "76746786"
   
  包含负数的 `Balance` 列中的单元格的背景颜色设为红色。 也可将这些单元格的格式设置为货币，以显示负值两边的括号。 有关详细信息，请参阅[如何：设置 Windows 窗体 DataGridView 控件中的数据格式](how-to-format-data-in-the-windows-forms-datagridview-control.md)。  
   
- `Priority` 列中的单元格显示图像以代替对应文本单元格值。 <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> 的 <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> 属性同时用于获取文本单元格的值以及设置相应的图像显示值。  
+ `Priority` 列中的单元格显示图像以代替对应文本单元格值。 <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> 的 <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> 属性同时用于获取文本单元格的值以及设置相应的图像显示值。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/cs/customFormatting.cs#00)]
@@ -39,7 +39,7 @@ ms.locfileid: "76746786"
   
 - 对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
-- 名为 `highPri.bmp`、`mediumPri.bmp` 和 `lowPri.bmp` 的 <xref:System.Drawing.Bitmap> 图像，这些图像与可执行文件驻留在相同的目录中。  
+- 名为 <xref:System.Drawing.Bitmap>、`highPri.bmp` 和 `mediumPri.bmp` 的 `lowPri.bmp` 图像，这些图像与可执行文件驻留在相同的目录中。  
   
 ## <a name="see-also"></a>另请参阅
 

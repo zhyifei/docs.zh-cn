@@ -1,5 +1,5 @@
 ---
-title: 컨트롤 고정
+title: 定位控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Anchor property [Windows Forms], enabling resizable forms
@@ -56,9 +56,9 @@ ms.locfileid: "76747180"
 
 ## <a name="see-also"></a>另请参阅
 
-- [Windows Forms 컨트롤](index.md)
-- [AutoSize 속성 개요](autosize-property-overview.md)
-- [방법: Windows Forms에서 컨트롤 고정](how-to-dock-controls-on-windows-forms.md)
-- [연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [연습: Padding, Margins 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃](windows-forms-controls-padding-autosize.md)
+- [Windows 窗体控件](index.md)
+- [AutoSize 属性概述](autosize-property-overview.md)
+- [如何：在 Windows 窗体上停靠控件](how-to-dock-controls-on-windows-forms.md)
+- [演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [演练：使用 Padding、Margins 和 AutoSize 属性对 Windows 窗体控件进行布局](windows-forms-controls-padding-autosize.md)

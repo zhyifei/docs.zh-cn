@@ -41,7 +41,7 @@ ms.locfileid: "76736792"
 
 2. 根据需要，在 "**属性**" 窗口中设置以下属性。
 
-    |Property|描述|
+    |属性|说明|
     |--------------|-----------------|
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|`BackColor` 属性定义网格中偶数行的颜色。 将 <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> 属性设置为其他颜色时，会将每个其他行设置为此新颜色（第1行、第3、第5行等）。|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|网格中偶数行的背景色（行0、2、4、6，等等）。|

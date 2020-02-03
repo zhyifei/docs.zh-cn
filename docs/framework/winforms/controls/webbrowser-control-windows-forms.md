@@ -41,7 +41,7 @@ Windows 窗体 `WebBrowser` 控件承载网页，并向应用程序提供 Web �
  [使用托管 HTML 文档对象模型](using-the-managed-html-document-object-model.md)  
  提供一些主题，这些主题描述如何操作或创建由 <xref:System.Windows.Forms.WebBrowser> 控件托管的 HTML 页面。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.WebBrowser> 类  
  对此类进行描述，并提供指向其所有成员的链接。  
   

@@ -24,7 +24,7 @@ Windows Presentation Foundation （WPF）具有一项墨迹功能，使你可以
 
 若要使用以下示例，请先安装[Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 它还有助于了解如何编写基本的 WPF 应用程序。 有关 WPF 入门的帮助，请参阅[演练：我的第一个 wpf 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。
 
-## <a name="quick-start"></a>빠른 시작
+## <a name="quick-start"></a>快速启动
 
 本节可帮助您编写一个收集墨迹的简单 WPF 应用程序。
 
@@ -32,7 +32,7 @@ Windows Presentation Foundation （WPF）具有一项墨迹功能，使你可以
 
 若要创建支持墨迹的 WPF 应用，请执行以下操作：
 
-1. Visual Studio를 엽니다.
+1. 打开 Visual Studio。
 
 2. 创建新的**WPF 应用程序**。
 
@@ -85,7 +85,7 @@ Windows Presentation Foundation （WPF）具有一项墨迹功能，使你可以
    [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
    [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
-1. 응용 프로그램을 실행합니다. 添加一些墨迹，然后用鼠标右键单击或执行与触笔等效的按压操作。
+1. 运行该应用程序。 添加一些墨迹，然后用鼠标右键单击或执行与触笔等效的按压操作。
 
    每次单击鼠标右键时，都会显示 "放大"。
 
@@ -110,7 +110,7 @@ Windows Presentation Foundation （WPF）具有一项墨迹功能，使你可以
 
 ## <a name="see-also"></a>另请参阅
 
-- [디지털 잉크](digital-ink.md)
-- [잉크 수집](collecting-ink.md)
-- [필기 인식](handwriting-recognition.md)
-- [잉크 저장](storing-ink.md)
+- [数字墨迹](digital-ink.md)
+- [收集墨迹](collecting-ink.md)
+- [手写识别](handwriting-recognition.md)
+- [存储墨迹](storing-ink.md)

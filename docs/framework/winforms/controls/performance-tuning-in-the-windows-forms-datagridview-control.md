@@ -29,7 +29,7 @@ ms.locfileid: "76744274"
  [在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
  描述如何按需加载数据，当要显示的数据多于可用客户端内存可以存储的数据时，这非常有用。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.DataGridView>  
  提供关于 <xref:System.Windows.Forms.DataGridView> 控件的参考文档。  
   

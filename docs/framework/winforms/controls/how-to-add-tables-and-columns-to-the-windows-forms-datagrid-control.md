@@ -17,10 +17,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76747209"
 ---
-# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤에 테이블과 열 추가
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>如何：向 Windows 窗体 DataGrid 控件添加表和列
 
 > [!NOTE]
-> <xref:System.Windows.Forms.DataGridView> 控件将替换功能并将其添加到 <xref:System.Windows.Forms.DataGrid> 控件;但是，如果您选择，则会保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容性和将来使用。 자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하세요.
+> <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。
 
 可以通过创建**DataGridTableStyle**对象并将这些对象添加到**system.windows.forms.gridtablestylescollection>** 对象（可通过 <xref:System.Windows.Forms.DataGrid> 控件的**system.windows.forms.datagrid.tablestyles**属性访问）来在表和列中显示 Windows 窗体 <xref:System.Windows.Forms.DataGrid> 控件中的数据。 每个表样式显示在**DataGridTableStyle**对象的**MappingName**属性中指定的任何数据表的内容。 默认情况下，未指定列样式的表样式将显示该数据表中的所有列。 可以通过将**system.windows.forms.datagridcolumnstyle>** 对象添加到**system.windows.forms.gridcolumnstylescollection>** 对象（通过每个**DataGridTableStyle**对象的**system.windows.forms.datagridtablestyle.gridcolumnstyles**属性访问）来限制显示表中的哪些列。
 
@@ -98,5 +98,5 @@ ms.locfileid: "76747209"
 
 ## <a name="see-also"></a>另请参阅
 
-- [DataGrid 컨트롤](datagrid-control-windows-forms.md)
-- [방법: Windows Forms DataGrid 컨트롤에서 열 삭제 또는 숨기기](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [DataGrid 控件](datagrid-control-windows-forms.md)
+- [如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

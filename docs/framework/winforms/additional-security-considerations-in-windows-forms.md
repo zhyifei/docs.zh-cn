@@ -22,7 +22,7 @@ ms.locfileid: "76739817"
 ## <a name="clipboard-access"></a>剪贴板访问  
  <xref:System.Security.Permissions.UIPermission> 类控制对剪贴板的访问，关联的 <xref:System.Security.Permissions.UIPermissionClipboard> 枚举值指示访问级别。 下表显示可能的权限级别。  
   
-|UIPermissionClipboard 值|描述|  
+|UIPermissionClipboard 值|说明|  
 |---------------------------------|-----------------|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard>|可以不受限制地使用剪贴板。|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>|使用剪贴板时有某些限制。 将数据放置到剪贴板中的能力（“复制”或“剪切”命令操作）是不受限制的。 接受粘贴的固有控件（例如文本框）可接受剪贴板数据，但用户控件无法以编程方式从剪贴板读取数据。|  
@@ -35,7 +35,7 @@ ms.locfileid: "76739817"
   
  默认情况下，本地 Intranet 区域接收 <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> 访问权限，Internet 区域接收 <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> 访问权限。 这意味着，在“Internet”区域中，应用程序可以执行大多数窗口操作和 UI 操作，但窗口的外观将被修改。 修改后的窗口在第一次运行时会显示一条气球状通知，包含修改的标题栏文本，并需要标题栏上有一个关闭按钮。 气球状通知和标题栏会向应用程序的用户指示：应用程序正在部分信任环境下运行。  
   
-|UIPermissionWindow 值|描述|  
+|UIPermissionWindow 值|说明|  
 |------------------------------|-----------------|  
 |<xref:System.Security.Permissions.UIPermissionWindow.AllWindows>|用户可以不受限制地使用所有窗口和用户输入事件。|  
 |<xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows>|用户只能使用较安全的顶级窗口和子窗口进行绘制，并且只能在这些顶级窗口和子窗口中使用用户界面的用户输入事件。 这些较安全窗口具有明显的标签，并具有最小化和最大化限制。 此限制可防止潜在的有害欺骗攻击（如模拟系统登录屏幕或系统桌面），并限制对父窗口、与焦点相关的 Api 以及使用 <xref:System.Windows.Forms.ToolTip> 控件的编程访问。|  

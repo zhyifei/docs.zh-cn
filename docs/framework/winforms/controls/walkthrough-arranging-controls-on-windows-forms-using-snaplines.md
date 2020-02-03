@@ -182,7 +182,7 @@ ms.locfileid: "76740217"
 
 ## <a name="next-steps"></a>后续步骤
 
-对齐线提供了在窗体上对齐控件的直观方式。 有关进一步探索的建议包括：
+对齐线提供了在窗体上对齐控件的直观方式。 建议了解的其他内容包括：
 
 - 尝试在另一个 <xref:System.Windows.Forms.GroupBox> 控件中嵌套 <xref:System.Windows.Forms.GroupBox> 控件。 将 <xref:System.Windows.Forms.Button> 控件置于子 <xref:System.Windows.Forms.GroupBox> 控件内，并将其放置在父 <xref:System.Windows.Forms.GroupBox> 控件中。 移动 <xref:System.Windows.Forms.Button> 控件以查看对齐线跨容器边界的方式。
 

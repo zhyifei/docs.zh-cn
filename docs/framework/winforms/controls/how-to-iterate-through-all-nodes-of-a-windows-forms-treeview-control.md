@@ -26,7 +26,7 @@ ms.locfileid: "76736364"
   
 1. 创建测试每个节点的递归过程（C# 和 C++ 中为递归方法）。  
   
-2. 调用过程。  
+2. 调用该过程。  
   
      下面的示例演示如何打印每个 <xref:System.Windows.Forms.TreeNode> 对象的 <xref:System.Windows.Forms.TreeNode.Text%2A> 属性：  
   

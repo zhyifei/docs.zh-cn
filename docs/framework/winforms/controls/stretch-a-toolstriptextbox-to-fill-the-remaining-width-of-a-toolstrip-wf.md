@@ -1,5 +1,5 @@
 ---
-title: '방법: ToolStripTextBox를 늘려 ToolStrip의 나머지 너비 채우기'
+title: 如何：拉伸 ToolStripTextBox 以填充 ToolStrip 的其余宽度
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,7 +15,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742840"
 ---
-# <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>방법: ToolStripTextBox를 늘려 ToolStrip의 나머지 너비 채우기(Windows Forms)
+# <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>如何：拉伸 ToolStripTextBox 以填充 ToolStrip 的其余宽度（Windows 窗体）
 将 <xref:System.Windows.Forms.ToolStrip> 控件的 <xref:System.Windows.Forms.ToolStrip.Stretch%2A> 属性设置为 `true`时，控件将从端向端填充其容器，并在其容器调整大小时调整其大小。 在此配置中，你可能会发现在控件中拉伸项（如 <xref:System.Windows.Forms.ToolStripTextBox>）可以填充可用空间并在控件调整大小时调整大小。 例如，如果想要获得与 Microsoft® Internet Explorer 中的地址栏类似的外观和行为，此拉伸很有用。  
   
 ## <a name="example"></a>示例  
@@ -24,10 +24,10 @@ ms.locfileid: "76742840"
  [!code-csharp[ToolStripSpringTextBox#00](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripSpringTextBox/cs/ToolStripSpringTextBox.cs#00)]
  [!code-vb[ToolStripSpringTextBox#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripSpringTextBox/vb/ToolStripSpringTextBox.vb#00)]  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
- 이 예제에는 다음 사항이 필요합니다.  
+## <a name="compiling-the-code"></a>编译代码  
+ 此示例需要：  
   
-- System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
+- 对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
 ## <a name="see-also"></a>另请参阅
 
@@ -35,5 +35,5 @@ ms.locfileid: "76742840"
 - <xref:System.Windows.Forms.ToolStrip.Stretch%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ToolStripTextBox>
 - <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A?displayProperty=nameWithType>
-- [ToolStrip 컨트롤 아키텍처](toolstrip-control-architecture.md)
-- [방법: StatusStrip에서 대화형으로 Spring 속성 사용](how-to-use-the-spring-property-interactively-in-a-statusstrip.md)
+- [ToolStrip 控件体系结构](toolstrip-control-architecture.md)
+- [如何：在 StatusStrip 中以交互方式使用 Spring 属性](how-to-use-the-spring-property-interactively-in-a-statusstrip.md)

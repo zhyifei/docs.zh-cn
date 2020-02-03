@@ -34,7 +34,7 @@ Windows 窗体控件将继承基类 <xref:System.Windows.Forms.Control?displayPr
  [自定义控件中的方法实现](method-implementation-in-custom-controls.md)  
  介绍如何在自定义控件和组件中实现方法。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.UserControl>  
  介绍用于实现复合控件的基类。  
   

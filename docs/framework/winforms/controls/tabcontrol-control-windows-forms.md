@@ -38,7 +38,7 @@ Windows 窗体 `TabControl` 显示多个选项卡，就像笔记本中的分隔�
   
  另请参阅[如何：使用设计器添加和移除 Windows 窗体 TabControl 的选项卡](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md)，[如何：使用设计器向选项卡页添加控件](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.TabControl> 类  
  对此类进行描述，并提供指向其所有成员的链接。  
   

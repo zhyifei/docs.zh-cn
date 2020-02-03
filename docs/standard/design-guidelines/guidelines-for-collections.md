@@ -1,5 +1,5 @@
 ---
-title: 컬렉션에 대한 지침
+title: 集合准则
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
@@ -10,8 +10,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741863"
 ---
-# <a name="guidelines-for-collections"></a>컬렉션에 대한 지침
-可将任何专门设计用于操作一组具有一些共同特征的对象的类型视为一个集合。 这些类型几乎总适合用于实现 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>，因此在本节中，我们只将实现其中一个或两个接口的类型视为集合。
+# <a name="guidelines-for-collections"></a>集合准则
+可将任何专门设计用于操作一组具有一些共同特征的对象的类型视为一个集合。 几乎始终适合这种类型 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>实现，因此在本部分中，我们只考虑实现其中一个或两个接口都是集合的类型。
 
  ❌ 不要在公共 Api 中使用弱类型集合。
 
@@ -19,39 +19,39 @@ ms.locfileid: "76741863"
 
  ❌ 在公共 Api 中不使用 <xref:System.Collections.ArrayList> 或 <xref:System.Collections.Generic.List%601>。
 
- 这些类型是设计用于内部实现而非公共 API 的数据结构。 `List<T>` 以 API 的清洁度和灵活性为代价，针对性能和功耗进行了优化。 例如，如果你返回 `List<T>`，则在客户端代码修改集合时，你无法接收通知。 此外，`List<T>` 公开了许多在许多情况下无用或不适用的成员（比如 <xref:System.Collections.Generic.List%601.BinarySearch%2A>）。 以下两节介绍了专门设计用于公共 API 的类型（抽象）。
+ 这些类型是设计用于内部实现而非公共 API 的数据结构。 `List<T>` 经过优化，可实现更高的性能和功能，同时 cleanness Api 和灵活性。 例如，如果你返回 `List<T>`，则当客户端代码修改集合时，你将不会收到通知。 此外，`List<T>` 公开许多成员，如 <xref:System.Collections.Generic.List%601.BinarySearch%2A>，这在许多情况下并不有用或适用。 以下两节介绍了专门设计用于公共 API 的类型（抽象）。
 
  ❌ 在公共 Api 中不使用 `Hashtable` 或 `Dictionary<TKey,TValue>`。
 
- 这些类型是设计用于内部实现的数据结构。 公共 API 应该使用 <xref:System.Collections.IDictionary>、`IDictionary <TKey, TValue>` 或实现两个接口其中之一或两者的自定义类型。
+ 这些类型是设计用于内部实现的数据结构。 公共 Api 应使用 <xref:System.Collections.IDictionary>、`IDictionary <TKey, TValue>`或实现一个或两个接口的自定义类型。
 
  ❌ 不使用任何实现这些接口的 <xref:System.Collections.Generic.IEnumerator%601>、<xref:System.Collections.IEnumerator>或任何其他类型，但 `GetEnumerator` 方法的返回类型除外。
 
- 从 `GetEnumerator` 以外的方法返回枚举器的类型不能用于 `foreach` 语句。
+ 从 `GetEnumerator` 以外的方法返回枚举器的类型不能与 `foreach` 语句一起使用。
 
- ❌ 不会在同一类型上同时实现 `IEnumerator<T>` 和 `IEnumerable<T>`。 这同样适用于非通用接口`IEnumerator`和`IEnumerable`。
+ ❌ 不会在同一类型上同时实现 `IEnumerator<T>` 和 `IEnumerable<T>`。 这同样适用于非泛型接口 `IEnumerator` 和 `IEnumerable`。
 
 ## <a name="collection-parameters"></a>集合参数
- ✔️确实使用最小专用类型作为参数类型。 将集合作为参数的大多数成员使用 `IEnumerable<T>` 接口。
+ ✔️确实使用最小专用类型作为参数类型。 将集合作为参数的大多数成员均使用 `IEnumerable<T>` 接口。
 
  ❌ 避免使用 <xref:System.Collections.Generic.ICollection%601> 或 <xref:System.Collections.ICollection> 作为参数，只是为了访问 `Count` 属性。
 
- 而可考虑使用 `IEnumerable<T>` 或 `IEnumerable`，并动态地检查对象是实现了 `ICollection<T>` 还是 `ICollection`。
+ 请考虑使用 `IEnumerable<T>` 或 `IEnumerable` 并动态检查该对象是否实现 `ICollection<T>` 或 `ICollection`。
 
 ## <a name="collection-properties-and-return-values"></a>集合属性和返回值
  ❌ 不提供可设置的集合属性。
 
- 用户可以先清除集合，然后添加新的内容，从而替换集合的内容。 如果替换整个集合是一种常见的情况，请考虑对该集合提供 `AddRange` 方法。
+ 用户可以先清除集合，然后添加新的内容，从而替换集合的内容。 如果替换整个集合是一个常见方案，请考虑在集合上提供 `AddRange` 方法。
 
  ✔️确实要对表示读/写集合的属性或返回值使用 `Collection<T>` 或 `Collection<T>` 的子类。
 
- 如果 `Collection<T>` 不符合某些要求（例如，集合不得实现 <xref:System.Collections.IList>），请通过实现 `IEnumerable<T>`、`ICollection<T>` 或 <xref:System.Collections.Generic.IList%601> 来使用自定义集合。
+ 如果 `Collection<T>` 不满足某些要求（例如，集合不得实现 <xref:System.Collections.IList>），则通过实现 `IEnumerable<T>`、`ICollection<T>`或 <xref:System.Collections.Generic.IList%601>来使用自定义集合。
 
  ✔️使用 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>、`ReadOnlyCollection<T>`的子类或在极少数情况下 `IEnumerable<T>` 表示只读集合的属性或返回值。
 
- 一般情况下，更倾向于使用 `ReadOnlyCollection<T>`。 如果它不符合某些要求（例如，集合不得实现 `IList`），请实现 `IEnumerable<T>`、`ICollection<T>` 或 `IList<T>` 来使用自定义集合。 如果实现了自定义只读集合，请实现 `ICollection<T>.IsReadOnly` 以返回 `true`。
+ 通常情况下，首选 `ReadOnlyCollection<T>`。 如果它不满足某些要求（例如，集合不得实现 `IList`），请通过实现 `IEnumerable<T>`、`ICollection<T>`或 `IList<T>`来使用自定义集合。 如果实现自定义的只读集合，则实现 `ICollection<T>.IsReadOnly` 以返回 `true`。
 
- 如果你确定唯一需提供支持的情况是仅正向迭代，则只需使用 `IEnumerable<T>` 即可。
+ 如果你确定要支持的唯一方案是只进迭代，只需使用 `IEnumerable<T>`即可。
 
  ✔️考虑使用泛型基集合的子类，而不是直接使用集合。
 
@@ -61,7 +61,7 @@ ms.locfileid: "76741863"
 
  通过此操作，可在将来添加辅助方法或更改集合实现。
 
- ✔️如果集合中存储的项具有唯一键（名称、Id 等），请考虑使用键控集合。 键控集合是可以由整数和键索引的集合，通常通过继承自`KeyedCollection<TKey,TItem>` 进行实现。
+ ✔️如果集合中存储的项具有唯一键（名称、Id 等），请考虑使用键控集合。 键控集合是可以由整数和密钥编制索引的集合，通常通过继承 `KeyedCollection<TKey,TItem>`来实现。
 
  键控集合的内存占用通常较大，并且如果内存开销超过了使用键的益处，则不应使用键控集合。
 
@@ -70,7 +70,7 @@ ms.locfileid: "76741863"
  原则上，应将 null 和空（0 项）集合或数组视为相同。
 
 ### <a name="snapshots-versus-live-collections"></a>快照集合与实时集合
- 表示某个时间点的状态的集合称为快照集合。 例如，包含从数据库查询返回的行的集合是快照集合。 始终表示当前状态的集合称为实时集合。 例如，`ComboBox` 项的集合就是一个实时集合。
+ 表示某个时间点的状态的集合称为快照集合。 例如，包含从数据库查询返回的行的集合是快照集合。 始终表示当前状态的集合称为实时集合。 例如，`ComboBox` 项的集合为活动集合。
 
  ❌ 不从属性返回快照集合。 属性应返回实时集合。
 
@@ -96,18 +96,18 @@ ms.locfileid: "76741863"
 ## <a name="implementing-custom-collections"></a>实现自定义集合
  ✔️考虑在设计新集合时从 `Collection<T>`、`ReadOnlyCollection<T>`或 `KeyedCollection<TKey,TItem>` 继承。
 
- ✔️在设计新集合时实现 `IEnumerable<T>`。 当有需要时，考虑实现 `ICollection<T>` 甚至 `IList<T>`。
+ ✔️在设计新集合时实现 `IEnumerable<T>`。 请考虑实现 `ICollection<T>` 甚至 `IList<T>`。
 
- 在实现此类自定义集合时，请尽可能遵循 `Collection<T>` 和 `ReadOnlyCollection<T>` 建立的 API 模式。 也就是说，显式实现相同的成员，以及命名参数（与这两个集合命名它们的方式类似）等。
+ 实现此类自定义集合时，请遵循 `Collection<T>` 和 `ReadOnlyCollection<T>` 建立的 API 模式。 也就是说，显式实现相同的成员，以及命名参数（与这两个集合命名它们的方式类似）等。
 
  ✔️如果集合经常传递到采用这些接口作为输入的 Api，则可考虑实现非泛型集合接口（`IList` 和 `ICollection`）。
 
  ❌ 避免使用与集合概念无关的复杂 Api 在类型上实现集合接口。
 
- ❌ 不从非泛型基集合继承，如 `CollectionBase`。 相反，使用 `Collection<T>`、`ReadOnlyCollection<T>` 和 `KeyedCollection<TKey,TItem>`。
+ ❌ 不从非泛型基集合继承，如 `CollectionBase`。 改为使用 `Collection<T>`、`ReadOnlyCollection<T>`和 `KeyedCollection<TKey,TItem>`。
 
 ### <a name="naming-custom-collections"></a>命名自定义集合
- 创建集合（实现 `IEnumerable` 的类型）主要有两个原因：(1) 创建具有结构特定操作的新数据结构，并且通常具有与现有数据结构不同的性能特征（例如，<xref:System.Collections.Generic.List%601>、<xref:System.Collections.Generic.LinkedList%601>、<xref:System.Collections.Generic.Stack%601>） 以及 (2) 创建用于保存一组特定的项的专用的集合（例如，<xref:System.Collections.Specialized.StringCollection>）。 数据结构最常用于应用程序和库的内部实现。 专用集合主要在 API 中公开（作为属性和参数类型）。
+ 创建集合（实现 `IEnumerable`的类型）主要有两个原因：（1）若要创建一个具有特定结构的操作的新数据结构，并且通常与现有数据结构（例如，<xref:System.Collections.Generic.List%601>、<xref:System.Collections.Generic.LinkedList%601>、<xref:System.Collections.Generic.Stack%601>）具有不同的性能特征，请使用（2）创建用于保存一组特定项（例如，<xref:System.Collections.Specialized.StringCollection>）的专用集合。 数据结构最常用于应用程序和库的内部实现。 专用集合主要在 API 中公开（作为属性和参数类型）。
 
  ✔️在实现 `IDictionary` 或 `IDictionary<TKey,TValue>`的抽象名称中使用 "Dictionary" 后缀。
 
@@ -117,17 +117,17 @@ ms.locfileid: "76741863"
 
  ❌ 避免使用任何后缀来指定集合抽象名称中的特定实现，如 "LinkedList" 或 "哈希表"。
 
- ✔️考虑为集合名称加上项类型的名称。 例如，存储类型为 `Address` 的项的集合（实现 `IEnumerable<Address>`）应该命名为 `AddressCollection`。 如果项类型是接口，则可以省略项类型的 “I” 前缀。 因此，<xref:System.IDisposable> 项的集合可以称为 `DisposableCollection`。
+ ✔️考虑为集合名称加上项类型的名称。 例如，存储类型 `Address` （实现 `IEnumerable<Address>`）的项的集合应命名为 `AddressCollection`。 如果项类型是接口，则可以省略项类型的 “I” 前缀。 因此，可以 `DisposableCollection`调用 <xref:System.IDisposable> 项的集合。
 
  如果可在框架中添加或已存在相应的可写集合，则✔️考虑在只读集合的名称中使用 "ReadOnly" 前缀。
 
- 例如，只读字符串集合应称为 `ReadOnlyStringCollection`。
+ 例如，应 `ReadOnlyStringCollection`调用字符串的只读集合。
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。
 
 ## <a name="see-also"></a>另请参阅
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
-- [사용 지침](../../../docs/standard/design-guidelines/usage-guidelines.md)
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
+- [使用准则](../../../docs/standard/design-guidelines/usage-guidelines.md)

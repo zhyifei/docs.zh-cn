@@ -93,7 +93,7 @@ ms.locfileid: "76735225"
 8. 通过使用存储在静态字段中的引用设置属性、调用方法等，与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容对象进行通信。
 
 > [!NOTE]
-> 如果生成一个单独的程序集然后对其进行引用，对于步骤 1，可使用内容类的默认分部类在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中完成部分或全部 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容类定义。 虽然在将 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 编译到程序集中时通常包含一个 <xref:System.Windows.Application> 对象，但最终不会使用该 <xref:System.Windows.Application> 作为互操作的一部分，只需对应用程序所引用的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件使用一个或多个根类，并引用其分部类。 该过程的其余部分基本与上述相似。
+> 如果生成一个单独的程序集然后对其进行引用，对于步骤 1，可使用内容类的默认分部类在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中完成部分或全部 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 内容类定义。 虽然在将 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 编译到程序集中时通常包含一个 <xref:System.Windows.Application> 对象，但最终不会使用该 <xref:System.Windows.Application> 作为互操作的一部分，只需对应用程序所引用的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件使用一个或多个根类，并引用其分部类。 该过程的其余部分基本与上述相似。
 >
 > [演练：在 Win32 中承载 WPF 内容](walkthrough-hosting-wpf-content-in-win32.md)主题中对这些每个步骤通过代码进行了说明。
 

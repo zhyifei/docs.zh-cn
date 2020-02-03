@@ -62,10 +62,10 @@ ms.locfileid: "76744804"
 ### <a name="drawing-content-in-visual-objects"></a>视觉对象中的绘图内容  
  <xref:System.Windows.Media.Visual> 对象将其呈现数据存储为**矢量图形指令列表**。 指令列表中的每一项都以序列化格式表示一组低级别的图形数据及其相关资源。 共有四种不同类型的呈现数据可以包含绘图内容。  
   
-|绘图内容类型|描述|  
+|绘图内容类型|说明|  
 |--------------------------|-----------------|  
 |矢量图形|表示向量图形数据以及任何关联的 <xref:System.Windows.Media.Brush> 和 <xref:System.Windows.Media.Pen> 信息。|  
-|Image|表示 <xref:System.Windows.Rect>所定义区域内的图像。|  
+|映像|表示 <xref:System.Windows.Rect>所定义区域内的图像。|  
 |标志符号|表示一个呈现 <xref:System.Windows.Media.GlyphRun>的绘图，它是指定的字体资源中的一系列字形。 这是文本的表示方式。|  
 |视频|表示用于呈现视频的绘图。|  
   

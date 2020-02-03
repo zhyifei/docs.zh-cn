@@ -29,7 +29,7 @@ ms.locfileid: "76745277"
  [如何：重设 Windows 窗体 Label 控件大小以适应其内容](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
  说明如何调整标签控件的标题大小。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.Label>  
  对此类进行描述，并提供指向其所有成员的链接。  
   

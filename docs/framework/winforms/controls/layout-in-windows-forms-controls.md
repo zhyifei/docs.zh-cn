@@ -35,7 +35,7 @@ ms.locfileid: "76745248"
 [如何：实现自定义布局引擎](how-to-implement-a-custom-layout-engine.md)\
 演示如何实现 <xref:System.Windows.Forms.Layout.LayoutEngine> 以便排列 Windows 窗体控件。
 
-## <a name="reference"></a>引用
+## <a name="reference"></a>参考
 
 <xref:System.Windows.Forms.TableLayoutPanel>\
 提供关于 <xref:System.Windows.Forms.TableLayoutPanel> 控件的参考文档。

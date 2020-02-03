@@ -172,7 +172,7 @@ ms.locfileid: "76745399"
 6. 释放鼠标按钮。 请注意，这三个 <xref:System.Windows.Forms.Button> 控件插入到 <xref:System.Windows.Forms.FlowLayoutPanel> 控件中。
 
 ## <a name="next-steps"></a>后续步骤
- 可使用布局面板和控件的组合实现复杂布局。 有关进一步探索的建议包括：
+ 可使用布局面板和控件的组合实现复杂布局。 建议了解的其他内容包括：
 
 - 将其中一个 <xref:System.Windows.Forms.Button> 控件调整为更大的大小，并注意对布局产生的效果。
 

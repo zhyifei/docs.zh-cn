@@ -35,7 +35,7 @@ ms.locfileid: "76743613"
 
  ✔️在值类型上实现 <xref:System.IEquatable%601>。
 
- 值类型的 <xref:System.Object.Equals%2A?displayProperty=nameWithType> 方法会导致装箱，并且其默认实现效率不高，因为它使用反射。 <xref:System.IEquatable%601.Equals%2A> 可以有更好的性能，并且可以进行实现，这样它就不会导致装箱。
+ 值类型上的 <xref:System.Object.Equals%2A?displayProperty=nameWithType> 方法会导致装箱，其默认实现不太有效，因为它使用反射。 <xref:System.IEquatable%601.Equals%2A> 可以具有更好的性能，并且可以实现，以便它不会导致装箱。
 
  ❌ 不会显式扩展 <xref:System.ValueType>。 实际上，大多数语言禁止此行为。
 

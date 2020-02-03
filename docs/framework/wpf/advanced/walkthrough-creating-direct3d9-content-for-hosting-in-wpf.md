@@ -17,7 +17,7 @@ ms.locfileid: "76727915"
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>演练：创建在 WPF 中承载的 Direct3D9 内容
 本演练演示如何创建适用于在 Windows Presentation Foundation （WPF）应用程序中承载的 Direct3D9 内容。 有关在 WPF 应用程序中承载 Direct3D9 内容的详细信息，请参阅[wpf 和 Direct3D9 互操作](wpf-and-direct3d9-interoperation.md)。
 
- 在本演练中，你将要执行以下任务：
+ 在本演练中，您将执行下列任务：
 
 - 创建 Direct3D9 项目。
 
@@ -26,7 +26,7 @@ ms.locfileid: "76727915"
  完成后，将拥有一个包含 Direct3D9 内容的 DLL，以便在 WPF 应用程序中使用。
 
 ## <a name="prerequisites"></a>先决条件
- 你需要以下组件来完成本演练：
+ 您需要满足以下条件才能完成本演练：
 
 - Visual Studio 2010。
 

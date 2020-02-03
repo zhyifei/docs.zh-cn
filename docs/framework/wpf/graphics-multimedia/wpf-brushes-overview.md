@@ -14,8 +14,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746204"
 ---
-# <a name="wpf-brushes-overview"></a>WPF 브러시 개요
-屏幕上可见的所有内容都可见，因为它是由画笔绘制的。 例如，画笔用于描述按钮的背景、文本的前景和形状的填充效果。 本主题介绍与 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 画笔进行绘制的概念，并提供示例。 브러시를 사용하여 간단한 단색부터 복잡한 패턴 및 이미지 집합에 이르는 모든 방식으로 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 개체를 그릴 수 있습니다.  
+# <a name="wpf-brushes-overview"></a>WPF 画笔概述
+屏幕上可见的所有内容都可见，因为它是由画笔绘制的。 例如，画笔用于描述按钮的背景、文本的前景和形状的填充效果。 本主题介绍与 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 画笔进行绘制的概念，并提供示例。 借助画笔，可以利用任意内容（从简单的纯色到复杂的图案和图像集）绘制 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 对象。  
   
 <a name="paintingwithbrush"></a>   
 ## <a name="painting-with-a-brush"></a>使用画笔进行绘制  
@@ -26,13 +26,13 @@ ms.locfileid: "76746204"
   
  大多数视觉对象使您能够指定如何绘制它们。 下表列出了一些可以使用 <xref:System.Windows.Media.Brush>的常见对象和属性。  
   
-|클래스|브러시 속성|  
+|类|画笔属性|  
 |-----------|----------------------|  
-|<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A>|  
-|<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>|  
+|<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>、<xref:System.Windows.Controls.Border.Background%2A>|  
+|<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>、<xref:System.Windows.Controls.Control.Foreground%2A>|  
 |<xref:System.Windows.Controls.Panel>|<xref:System.Windows.Controls.Panel.Background%2A>|  
 |<xref:System.Windows.Media.Pen>|<xref:System.Windows.Media.Pen.Brush%2A>|  
-|<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>|  
+|<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>、<xref:System.Windows.Shapes.Shape.Stroke%2A>|  
 |<xref:System.Windows.Controls.TextBlock>|<xref:System.Windows.Controls.TextBlock.Background%2A>|  
   
  以下各节介绍了不同的 <xref:System.Windows.Media.Brush> 类型，并提供了每种类型的示例。  
@@ -150,13 +150,13 @@ ms.locfileid: "76746204"
   
  您可以使用画笔的 <xref:System.Windows.Media.Brush.Transform%2A> 或 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 属性来旋转、缩放、倾斜和平移画笔的内容。 有关详细信息，请参阅[刷子转换概述](brush-transformation-overview.md)。  
   
- 因为它们是 <xref:System.Windows.Media.Animation.Animatable> 对象，所以可以对 <xref:System.Windows.Media.Brush> 对象进行动画处理。 자세한 내용은 [애니메이션 개요](animation-overview.md)를 참조하세요.  
+ 因为它们是 <xref:System.Windows.Media.Animation.Animatable> 对象，所以可以对 <xref:System.Windows.Media.Brush> 对象进行动画处理。 有关详细信息，请参阅 [动画概述](animation-overview.md)。  
   
 <a name="freezable_features"></a>   
-### <a name="freezable-features"></a>Freezable 기능  
+### <a name="freezable-features"></a>Freezable 功能  
  因为它继承自 <xref:System.Windows.Freezable> 类，所以 <xref:System.Windows.Media.Brush> 类提供若干特殊功能： <xref:System.Windows.Media.Brush> 对象可以声明为[资源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)、在多个对象之间共享以及进行克隆。 此外，除 <xref:System.Windows.Media.VisualBrush> 之外的所有 <xref:System.Windows.Media.Brush> 类型都可以变为只读，以提高性能并使其成为线程安全的。  
   
- 제공 하는 다른 기능에 대 한 자세한 내용은 <xref:System.Windows.Freezable> 개체를 참조 하세요 [Freezable 개체 개요](../advanced/freezable-objects-overview.md)합니다.  
+ 有关 <xref:System.Windows.Freezable> 对象提供的不同功能的详细信息，请参阅可[冻结对象概述](../advanced/freezable-objects-overview.md)。  
   
  有关无法冻结 <xref:System.Windows.Media.VisualBrush> 对象的原因的详细信息，请参阅 <xref:System.Windows.Media.VisualBrush> 类型 "页。  
   
@@ -164,11 +164,11 @@ ms.locfileid: "76746204"
 
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
-- [단색 및 그라데이션을 사용한 그리기 개요](painting-with-solid-colors-and-gradients-overview.md)
-- [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)
-- [Freezable 개체 개요](../advanced/freezable-objects-overview.md)
-- [브러시 샘플](https://go.microsoft.com/fwlink/?LinkID=159973)
+- [使用纯色和渐变进行绘制概述](painting-with-solid-colors-and-gradients-overview.md)
+- [使用图像、绘图和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
+- [Freezable 对象概述](../advanced/freezable-objects-overview.md)
+- [画笔示例](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [System.windows.media.imagebrush> 示例](https://go.microsoft.com/fwlink/?LinkID=160005)
-- [VisualBrush 샘플](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [방법 항목](brushes-how-to-topics.md)
-- [기타 성능 권장 사항](../advanced/optimizing-performance-other-recommendations.md)
+- [VisualBrush 示例](https://go.microsoft.com/fwlink/?LinkID=160049)
+- [帮助主题](brushes-how-to-topics.md)
+- [其他性能建议](../advanced/optimizing-performance-other-recommendations.md)

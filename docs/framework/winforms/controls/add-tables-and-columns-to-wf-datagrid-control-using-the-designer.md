@@ -13,10 +13,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746261"
 ---
-# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤에 테이블 및 열 추가
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>如何：使用设计器向 Windows 窗体 DataGrid 控件添加表和列
 
 > [!NOTE]
-> <xref:System.Windows.Forms.DataGridView> 控件将替换功能并将其添加到 <xref:System.Windows.Forms.DataGrid> 控件;但是，如果您选择，则会保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容性和将来使用。 자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하세요.
+> <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。
 
 通过创建 <xref:System.Windows.Forms.DataGridTableStyle> 对象并将其添加到 <xref:System.Windows.Forms.GridTableStylesCollection> 对象（通过 <xref:System.Windows.Forms.DataGrid> 控件的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 属性访问），可以在表和列的 Windows 窗体 <xref:System.Windows.Forms.DataGrid> 控件中显示数据。 每个表样式显示在 <xref:System.Windows.Forms.DataGridTableStyle>的 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 属性中指定的任何数据表的内容。 默认情况下，未指定列样式的表样式将显示该数据表中的所有列。 您可以通过将 <xref:System.Windows.Forms.DataGridColumnStyle> 对象添加到 <xref:System.Windows.Forms.GridColumnStylesCollection>中来限制表中的哪些列的显示，这可通过每个 <xref:System.Windows.Forms.DataGridTableStyle>的 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 属性进行访问。
 
@@ -26,7 +26,7 @@ ms.locfileid: "76746261"
 
 1. 若要在表中显示数据，必须首先将 <xref:System.Windows.Forms.DataGrid> 控件绑定到数据集。 有关详细信息，请参阅[如何：使用设计器将 Windows 窗体 DataGrid 控件绑定到数据源](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)。
 
-2. 选择属性窗口中 <xref:System.Windows.Forms.DataGrid> 控件的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 属性，然后单击省略号按钮（![中的省略号按钮（...），以显示 " **DataGridTableStyle 集合编辑器**" 的属性旁的 "属性窗口"。
+2. 选择属性窗口中 <xref:System.Windows.Forms.DataGrid> 控件的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 属性，然后单击省略号按钮（![中的省略号按钮（...），以显示 " **DataGridTableStyle 集合编辑器**" 的属性旁的 "属性窗口"。](./media/visual-studio-ellipsis-button.png)
 
 3. 在集合编辑器中，单击 "**添加**" 以插入表样式。
 
@@ -56,5 +56,5 @@ ms.locfileid: "76746261"
 
 ## <a name="see-also"></a>另请参阅
 
-- [DataGrid 컨트롤](datagrid-control-windows-forms.md)
-- [방법: Windows Forms DataGrid 컨트롤에서 열 삭제 또는 숨기기](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [DataGrid 控件](datagrid-control-windows-forms.md)
+- [如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

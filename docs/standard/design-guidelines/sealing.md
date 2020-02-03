@@ -22,7 +22,7 @@ ms.locfileid: "76743621"
 
  ❌ 不要密封类，而不会有充分的理由。
 
- 因为无法预料到可扩展性场景而密封一个类并不是一个充分的理由。 框架用户喜欢因各种非显而易见的原因继承类，比如添加一些便利的成员。 有关用户希望从类型进行继承的非显而易见的原因的示例，请参阅[未密封类](../../../docs/standard/design-guidelines/unsealed-classes.md)。
+ 因为无法预料到可扩展性场景而密封一个类并不是一个充分的理由。 框架用户喜欢因各种非显而易见的原因继承类，比如添加一些便利的成员。 有关用户要从类型继承的 nonobvious 原因的示例，请参阅未[密封类](../../../docs/standard/design-guidelines/unsealed-classes.md)。
 
  对类进行密封的充足理由包括：
 
@@ -40,7 +40,7 @@ ms.locfileid: "76743621"
 
  ✔️考虑密封重写的成员。
 
- 引入虚拟成员可能导致的问题（在[虚拟成员](../../../docs/standard/design-guidelines/virtual-members.md)中讨论）也适用于重写，尽管程度较低。 密封重写可以防止这些继承层次结构中的问题。
+ 引入虚拟成员（在[虚拟成员](../../../docs/standard/design-guidelines/virtual-members.md)中讨论）可能会产生的问题也适用于重写，尽管稍微略低一些。 密封重写可以防止这些继承层次结构中的问题。
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 

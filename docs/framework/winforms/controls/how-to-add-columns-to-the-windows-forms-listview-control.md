@@ -16,7 +16,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744583"
 ---
-# <a name="how-to-add-columns-to-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤에 열 추가
+# <a name="how-to-add-columns-to-the-windows-forms-listview-control"></a>如何：向 Windows 窗体 ListView 控件添加列
 在详细信息视图中，<xref:System.Windows.Forms.ListView> 控件可以显示每个列表项的多个列。 您可以使用这些列向用户显示有关每个列表项的多种类型的信息。 例如，文件列表可以显示文件的名称、文件类型、大小和文件的上次修改日期。 有关在创建列后对其进行填充的信息，请参阅[如何：用 Windows 窗体 ListView 控件在列中显示子项](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)。  
   
 ### <a name="to-add-columns-programmatically"></a>以编程方式添加列  
@@ -31,5 +31,5 @@ ms.locfileid: "76744583"
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.ListView>
-- [ListView 컨트롤](listview-control-windows-forms.md)
-- [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)
+- [ListView 控件](listview-control-windows-forms.md)
+- [ListView 控件概述](listview-control-overview-windows-forms.md)

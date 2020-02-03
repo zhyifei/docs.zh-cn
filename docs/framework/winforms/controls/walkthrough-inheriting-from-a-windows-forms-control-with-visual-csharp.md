@@ -30,7 +30,7 @@ ms.locfileid: "76740134"
 
 1. 在 Visual Studio 中，创建一个新的**Windows 窗体控件库**项目，并将其命名为**ValueButtonLib**。
 
-     默认情况下，项目名称 `ValueButtonLib` 也会分配到根命名空间中。 根命名空间用于限定程序集中的组件名。 例如，如果两个程序集都提供名为 `ValueButton` 的组件，则可以使用 `ValueButtonLib.ValueButton` 指定 `ValueButton` 组件。 有关详细信息，请参阅[命名空间](../../../csharp/programming-guide/namespaces/index.md)。
+     默认情况下，项目名称 `ValueButtonLib` 也会分配到根命名空间中。 根命名空间用于限定程序集中的组件名。 例如，如果两个程序集都提供名为 `ValueButton` 的组件，则可以使用 `ValueButton` 指定 `ValueButtonLib.ValueButton` 组件。 有关详细信息，请参阅[命名空间](../../../csharp/programming-guide/namespaces/index.md)。
 
 2. 在“解决方案资源管理器”中，右键单击“UserControl1.cs”，然后从快捷菜单中选择“重命名”。 将文件名更改为**ValueButton.cs**。 询问是否希望重命名对代码元素“ **”的所有引用时，单击“是”** `UserControl1`按钮。
 
@@ -87,7 +87,7 @@ ms.locfileid: "76740134"
 
 ### <a name="to-build-your-control"></a>生成控件
 
-在 **“生成”** 菜单上，单击 **“生成解决方案”** 。 生成应会成功，且没有任何编译器错误或警告。
+在“生成”菜单中，单击“生成解决方案”。 生成应会成功，且没有任何编译器错误或警告。
 
 ### <a name="to-create-a-test-project"></a>创建测试项目
 
@@ -139,7 +139,7 @@ ms.locfileid: "76740134"
 
 12. 单击 `valueButton1`。
 
-     `label1` 中显示数字“5”，表明继承的控件的 `ButtonValue` 属性已通过 `valueButton1_Click` 方法传递给 `label1`。 这样，`ValueButton` 控件便继承了标准 Windows 窗体按钮的所有功能，但是公开了一个附加的自定义属性。
+     `label1` 中显示数字“5”，表明继承的控件的 `ButtonValue` 属性已通过 `label1` 方法传递给 `valueButton1_Click`。 这样，`ValueButton` 控件便继承了标准 Windows 窗体按钮的所有功能，但是公开了一个附加的自定义属性。
 
 ## <a name="see-also"></a>另请参阅
 

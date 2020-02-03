@@ -14,7 +14,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744216"
 ---
-# <a name="native-wpf-browser-hosting-support-apis"></a>네이티브 WPF 브라우저 호스팅 지원 API
+# <a name="native-wpf-browser-hosting-support-apis"></a>承载支持 API 的本机 WPF 浏览器
 在 Web 浏览器中承载 WPF 应用程序是从 WPF 宿主注册的活动文档服务器（也称为 DocObject）。 Internet Explorer 可以直接激活并与活动文档集成。 为了在 Mozilla 浏览器中承载 Xbap 和松散 XAML 文档，WPF 提供了一个 NPAPI 插件，该插件提供与 Internet Explorer 相同的 WPF 活动文档服务器的宿主环境。 但是，在其他浏览器和独立应用程序中托管 Xbap 和 XAML 文档的最简单的方法是通过 Internet Explorer Web 浏览器控件。 Web 浏览器控件提供了复杂的活动文档服务器宿主环境，同时它还允许自己的主机自定义和扩展该环境，并直接与当前活动文档对象进行通信。  
   
  WPF 活动文档服务器实现了几个常见的宿主接口，包括[IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049)、 [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050)、 [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051)、 [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045)、 [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)。 在 Web 浏览器控件中承载时，可以从[IWebBrowser2：:D 文档](https://go.microsoft.com/fwlink/?LinkId=162048)属性返回的对象查询这些接口。  
@@ -31,6 +31,6 @@ enum PresentationHostCommands {
   
  PHCMDID_TABINTO 指示 Presentationhost.exe 将焦点切换到其内容中的第一个或最后一个可设定焦点的元素，具体取决于 Shift 键的状态。  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>本节内容  
  [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)  
  [IWpfHostSupport](iwpfhostsupport.md)

@@ -18,7 +18,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746045"
 ---
-# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤에서 서식 특성의 변경 시기 결정
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>如何：确定 Windows 窗体 RichTextBox 控件中的格式设置特性何时更改
 Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件的常见用法是使用字体选项或段落样式等特性设置文本格式。 您的应用程序可能需要跟踪文本格式设置的任何更改，以便显示工具栏，这与在许多字处理应用程序中一样。  
   
 ### <a name="to-respond-to-changes-in-formatting-attributes"></a>响应格式设置特性的更改  
@@ -84,5 +84,5 @@ Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件的常见用法是�
 
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [RichTextBox 控件](richtextbox-control-windows-forms.md)
+- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

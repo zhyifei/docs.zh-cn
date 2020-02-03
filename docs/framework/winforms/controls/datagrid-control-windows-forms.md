@@ -66,7 +66,7 @@ ms.locfileid: "76742512"
  [如何：用 Windows 窗体 DataGrid 控件验证输入](how-to-validate-input-with-the-windows-forms-datagrid-control.md)  
  描述如何验证绑定到 `DataGrid` 控件的数据集中的输入。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.DataGrid>  
  提供 <xref:System.Windows.Forms.DataGrid> 类的概述。  
   
