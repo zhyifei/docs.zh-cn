@@ -5,19 +5,20 @@ ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
 no-loc:
 - Join
 - GroupJoin
-ms.openlocfilehash: d4bf9fe76238d8824c5255df8910c1000503dcdf
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6e2ec1a0c8120f6869b7c0a196b77d118762a8dd
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746967"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868000"
 ---
-# <a name="opno-locjoin-operations-c"></a>[!OP.NO-LOC(Join)] 操作（C#）
+# <a name="join-operations-c"></a>联接运算 (C#)
+
 联接  两个数据源就是将一个数据源中的对象与另一个数据源中具有相同公共属性的对象相关联。  
   
  当查询所面向的数据源相互之间具有无法直接领会的关系时，联接就成为一项重要的运算。 在面向对象的编程中，这可能意味着在未建模对象之间进行关联，例如对单向关系进行反向推理。 下面是单向关系的一个示例：Customer 类有一个类型为 City 的属性，但 City 类没有作为 Customer 对象集合的属性。 如果你具有一个 City 对象列表，并且要查找每个城市中的所有客户，则可以使用联接运算完成此项查找。  
   
- LINQ 框架中提供的 join 方法包括 <xref:System.Linq.Enumerable.[!OP.NO-LOC(Join)]%2A> 和 <xref:System.Linq.Enumerable.[!OP.NO-LOC(GroupJoin)]%2A>。 这些方法执行同等联接，即根据 2 个数据源的键是否相等来匹配这 2 个数据源的联接。 （与此相较，Transact-SQL 支持除“等于”之外的联接运算符，例如“小于”运算符。）用关系数据库术语表达，就是说 <xref:System.Linq.Enumerable.[!OP.NO-LOC(Join)]%2A> 实现了内部联接，这种联接只返回那些在另一个数据集中具有匹配项的对象。 <xref:System.Linq.Enumerable.[!OP.NO-LOC(GroupJoin)]%2A> 方法在关系数据库术语中没有直接等效项，但实现了内部联接和左外部联接的超集。 左外部联接是指返回第一个（左侧）数据源的每个元素的联接，即使其他数据源中没有关联元素。  
+ LINQ 框架中提供的 join 方法包括 <xref:System.Linq.Enumerable.Join%2A> 和 <xref:System.Linq.Enumerable.GroupJoin%2A>。 这些方法执行同等联接，即根据 2 个数据源的键是否相等来匹配这 2 个数据源的联接。 （与此相较，Transact-SQL 支持除“等于”之外的联接运算符，例如“小于”运算符。）用关系数据库术语表达，就是说 <xref:System.Linq.Enumerable.Join%2A> 实现了内部联接，这种联接只返回那些在另一个数据集中具有匹配项的对象。 <xref:System.Linq.Enumerable.GroupJoin%2A> 方法在关系数据库术语中没有直接等效项，但实现了内部联接和左外部联接的超集。 左外部联接是指返回第一个（左侧）数据源的每个元素的联接，即使其他数据源中没有关联元素。  
   
  下图显示了一个概念性视图，其中包含两个集合以及这两个集合中的包含在内部联接或左外部联接中的元素。  
   
@@ -36,13 +37,13 @@ ms.locfileid: "76746967"
   
 下面的示例使用 `join … in … on … equals …` 子句基于特定值联接两个序列：
   
-[!code-csharp[Join](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQJoin/CS/JoinOperation.cs#Join)]  
+[!code-csharp[Join](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csLINQJoinOperation/CS/JoinOperation.cs#Join)]  
 
 ### GroupJoin  
 
 下面的示例使用 `join … in … on … equals … into …` 子句基于特定值联接两个序列，并对每个元素的结果匹配项进行分组：
   
-[!code-csharp[GroupJoin](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQJoin/CS/JoinOperation.cs#GroupJoin)]  
+[!code-csharp[GroupJoin](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csLINQJoinOperation/CS/JoinOperation.cs#GroupJoin)]  
   
 ## <a name="see-also"></a>请参阅
 

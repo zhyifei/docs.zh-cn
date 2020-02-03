@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 538806627a31366d4b8597eb010a4bbe3f8f9202
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: c38127281139d0c85b54a5d5077034804f1102a8
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76860954"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76966005"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 
@@ -46,9 +46,9 @@ ms.locfileid: "76860954"
 
 可以从下列位置下载 .NET Framework 4.8：
 
-- [.NET Framework 4.8 Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=2085155)
+- [.NET Framework 4.8 Web 安装程序](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-- [NET Framework 4.8 脱机安装程序](https://go.microsoft.com/fwlink/?linkid=2088631)
+- [NET Framework 4.8 脱机安装程序](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 可以在 Windows 10、Windows 8.1、Windows 7 SP1 和对应的服务器平台（版本不低于 Windows Server 2008 R2 SP1）上安装 .NET Framework 4.8。 可以使用 Web 安装程序或脱机安装程序来安装 .NET Framework 4.8。 适用于大多数用户的建议方法是使用 Web 安装程序。
 
@@ -94,7 +94,7 @@ ms.locfileid: "76860954"
 
 运行状况终结点由业务流程工具广泛使用以基于其运行状况状态来管理服务。 运行状况检查还可由监视工具使用以跟踪并提供有关服务的可用性和性能的通知。
 
- ServiceHealthBehavior 是一个 WCF 服务行为，该行为可扩展 <xref:System.ServiceModel.Description.IServiceBehavior>。  添加到 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType> 集合后，服务行为会执行以下操作：
+ServiceHealthBehavior 是一个 WCF 服务行为，该行为可扩展 <xref:System.ServiceModel.Description.IServiceBehavior>。  添加到 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType> 集合后，服务行为会执行以下操作：
 
 - 返回带有 HTTP 响应代码的服务运行状况状态。 可以在查询字符串中指定 HTTP/GET 运行状况探测请求的 HTTP 状态代码。
 
@@ -503,7 +503,7 @@ NET Framework 4.7.2 为基于 enclave 的 Always Encrypted 添加支持。 Alway
 <ResourceDictionary Source="MyRD.xaml">
 ```
 
-编辑 MyRD.xaml    中的原始标记的诊断助手可以使用新功能来找到字典。 此功能通过新的静态方法 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType> 实现。 诊断助手使用标识原始标记的绝对 URI 调用新方法，如以下代码所示：
+编辑 MyRD.xaml  中的原始标记的诊断助手可以使用新功能来找到字典。 此功能通过新的静态方法 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType> 实现。 诊断助手使用标识原始标记的绝对 URI 调用新方法，如以下代码所示：
 
 ```csharp
 IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(new Uri("pack://application:,,,/MyApp;component/MyRD.xaml"));
@@ -1236,7 +1236,7 @@ Windows 现在提供将现有 Windows 桌面应用（包括 WPF 和 Windows 窗�
 
 ### <a name="debugging-improvements"></a>调试改进
 
-非托管调试 API 在 .NET Framework 4.6.2 中得到了增强，可在引发 <xref:System.NullReferenceException> 时执行附加分析，让你能够确定单行源代码中哪个变量是 `null`  。   为支持此方案，已将以下 API 添加到非托管调试 API。
+非托管调试 API 在 .NET Framework 4.6.2 中得到了增强，可在引发 <xref:System.NullReferenceException> 时执行附加分析，让你能够确定单行源代码中哪个变量是 `null`。   为支持此方案，已将以下 API 添加到非托管调试 API。
 
 - [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md)、[ICorDebugVariableHome](../unmanaged-api/debugging/icordebugvariablehome-interface.md) 和 [ICorDebugVariableHomeEnum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) 接口，它们公开托管变量的本机位置。 这使调试器能够在 <xref:System.NullReferenceException> 发生时执行某些代码流分析并逆向工作，以确定对应于为 `null` 的本机位置的托管变量。
 
@@ -1944,7 +1944,7 @@ Windows 窗体的改进包括：
 
 - 多个范围。
 
-- 创建 Windows 8.x 应用商店应用时可以使用一部分 MEF。 此子集可作为 NuGet 库中的[可下载程序包](https://www.nuget.org/packages/Microsoft.Composition)提供。 若要安装此程序包，请在 Visual Studio 中打开项目，从“项目”  菜单中选择“管理 NuGet 包”  ，然后联机搜索 `Microsoft.Composition` 程序包。
+- 创建 Windows 8.x 应用商店应用时可以使用一部分 MEF。 此子集可作为 NuGet 库中的[可下载程序包](https://www.nuget.org/packages/Microsoft.Composition)提供。 若要安装此程序包，请在 Visual Studio 中打开项目，从“项目”菜单中选择“管理 NuGet 包”，然后联机搜索 `Microsoft.Composition` 程序包。
 
 有关详细信息，请参阅 [Managed Extensibility Framework (MEF)](../mef/index.md)。
 
@@ -2078,13 +2078,13 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 
 - 增强的工作流设计器功能如下:
 
-  - Visual Studio 中增强的工作流搜索功能，包括“快速查找”  和“在文件中查找”  。
+  - Visual Studio 中增强的工作流搜索功能，包括“快速查找”和“在文件中查找”。
 
   - 将第二个子活动添加到容器活动中时自动创建“序列”活动以及在“序列”活动中包括这两个活动的能力。
 
   - 平移支持，可让工作流的可见部分发生更改，而无需使用滚动条。
 
-  - 新“文档大纲”  视图，它在树样式的大纲视图中显示工作流组件并允许在“文档大纲”  视图中选择组件。
+  - 新“文档大纲”视图，它在树样式的大纲视图中显示工作流组件并允许在“文档大纲”视图中选择组件。
 
   - 向活动中添加批注的能力。
 
@@ -2132,3 +2132,4 @@ Windows 8.x 应用商店应用专为特定外形规格而设计，并利用 Wind
 - [Visual Studio 2019 中的新增功能](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Visual Studio 中的 C++ 新变化](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
+ 

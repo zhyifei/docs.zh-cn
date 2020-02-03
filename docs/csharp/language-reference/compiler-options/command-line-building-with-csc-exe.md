@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: c2b674ba17360c6ee9d2b21683560e840063f17d
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: f692e66672b1804a309c6ac04c158af948a1b1ab
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636050"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789860"
 ---
 # <a name="command-line-build-with-cscexe"></a>使用 csc.exe 实现命令行生成
 
@@ -59,41 +59,42 @@ csc.exe  可执行文件通常位于 Windows  目录下的 Microsoft.NET\Framewo
 
 - 编译生成 File.exe  的 File.cs  ：
 
-```console
-csc File.cs
-```
+  ```console
+  csc File.cs
+  ```
 
 - 编译生成 File.dll  的 File.cs  ：
 
-```console
-csc -target:library File.cs
-```
+  ```console
+  csc -target:library File.cs
+  ```
 
 - 编译 File.cs  并创建 My.exe  ：
 
-```console
-csc -out:My.exe File.cs
-```
+  ```console
+  csc -out:My.exe File.cs
+  ```
 
 - 编译当前目录中的所有 C# 文件，对其进行优化并定义 DEBUG 符号。 输出为 File2.exe  ：
 
-```console
-csc -define:DEBUG -optimize -out:File2.exe *.cs
-```
+  ```console
+  csc -define:DEBUG -optimize -out:File2.exe *.cs
+  ```
 
 - 编译当前目录中的所有 C# 文件，生成 File2.dll  的调试版本。 不显示徽标和警告：
 
-```console
-csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
-```
+  ```console
+  csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
+  ```
 
 - 将当前目录中的所有 C# 文件编译为 Something.xyz  (DLL)：
 
-```console
-csc -target:library -out:Something.xyz *.cs
-```
+  ```console
+  csc -target:library -out:Something.xyz *.cs
+  ```
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>C# 编译器和 C++ 编译器输出之间的差异
+
 调用 C# 编译器时，不会创建任何对象 (.obj)  文件，而是直接创建输出文件。 因此，C# 编译器不需要链接器。
 
 ## <a name="see-also"></a>请参阅

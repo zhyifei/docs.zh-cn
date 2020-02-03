@@ -4,12 +4,12 @@ description: 通过访问从映像处理到移动后端和 ETL 管道的示例�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5f0d7a4c5cd736d1168ec76c1c0ea19627505f15
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72522390"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787892"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>无服务器业务方案和用例
 
@@ -33,7 +33,7 @@ ms.locfileid: "72522390"
 
 请参阅如何在 Azure 门户网站或 Visual Studio 中实现简单的无服务器 Azure 函数。 使用在 Android、iOS 和 Windows 上运行的 Xamarin. Forms 生成客户端。 然后，优化应用程序以将 JavaScript 对象表示法 (JSON) 用作服务器与带无服务器后端的移动客户端之间的通信媒介。
 
-有关详细信息，请参阅[通过 Xamarin.Forms 客户端执行单个 Azure 函数](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)。
+有关详细信息，请参阅[通过 Xamarin.Forms 客户端执行单个 Azure 函数](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)。
 
 ## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>使用无服务器映像识别生成照片马赛克
 
@@ -43,7 +43,7 @@ ms.locfileid: "72522390"
 
 例如，可以使用奥兰多地标（奥兰多之眼）来训练模型。 自定义视觉将识别奥兰多之眼的图像，此函数将创建由必应关于“奥兰多之眼”图像搜索结果组成的照片马赛克。
 
-有关详细信息，请参阅 [Azure Functions 照片马赛克生成器](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)。
+有关详细信息，请参阅 [Azure Functions 照片马赛克生成器](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic)。
 
 ## <a name="migrate-an-existing-application-to-the-cloud"></a>将现有应用程序迁移到云
 
@@ -83,17 +83,17 @@ Azure Functions 用于提供单个页面应用程序 (SPA)，此应用程序允�
 
 此示例包含 Azure IoT 中心和 Azure 函数。 IoT 中心上的新消息将触发 Azure 函数。 无服务器代码会将相同的消息内容发送回发送设备。 项目具有解决方案所需的所有代码和部署配置。
 
-有关详细信息，请参阅 [Azure IoT 中心 ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)。
+有关详细信息，请参阅 [Azure IoT 中心 ping](https://github.com/Azure-Samples/iot-hub-node-ping)。
 
 ## <a name="recommended-resources"></a>推荐的资源
 
-- [Azure Functions 照片马赛克生成器](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-- [Azure IoT 中心 ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
+- [Azure Functions 照片马赛克生成器](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic)
+- [Azure IoT 中心 ping](https://github.com/Azure-Samples/iot-hub-node-ping)
 - [数分钟即可为无服务器 .NET 应用实现 Azure 存储](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
 - [自带应用](https://github.com/JeremyLikness/bring-own-app-connect-17)
 - [CSV 导入实验室](https://github.com/JeremyLikness/azure-fn-file-process-hol)
 - [事件网格粘附](https://github.com/JeremyLikness/Event-Grid-Glue)
-- [通过 Xamarin.Forms 客户端执行单个 Azure 函数](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+- [通过 Xamarin.Forms 客户端执行单个 Azure 函数](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
 - [使用无服务器 Azure 函数直接迁移](https://channel9.msdn.com/Events/Connect/2017/E102)
 - [无服务器 URL 缩短符](https://github.com/jeremylikness/serverless-url-shortener)
 

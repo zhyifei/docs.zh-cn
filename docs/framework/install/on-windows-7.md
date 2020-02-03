@@ -3,12 +3,12 @@ title: 在 Windows 7 SP1 上安装 .NET Framework
 ms.custom: updateeachrelease
 description: 了解如何在 Windows 7 SP1 上安装 .NET Framework。
 ms.date: 04/18/2019
-ms.openlocfilehash: 729e1ca86d6f7b4268ce2c8b601b700817501128
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 77177b8c4a40f68eb139f5d765bcb421a4d6bb49
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716355"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965849"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>在 Windows 7 SP1 和 Windows Server 2008 R2 上安装 .NET Framework
 
@@ -27,7 +27,7 @@ ms.locfileid: "75716355"
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
-[.NET Framework 3.5](https://www.microsoft.com/download/details.aspx?id=21) 包含在 Windows 7 中。
+[.NET Framework 3.5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) 包含在 Windows 7 中。
 
 .NET Framework 3.5 支持为 .NET Framework 1.0 到 3.5 生成的应用。
 
