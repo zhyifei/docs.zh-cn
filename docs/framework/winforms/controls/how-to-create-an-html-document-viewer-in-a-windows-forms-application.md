@@ -17,34 +17,34 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732845"
 ---
-# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a><span data-ttu-id="973ce-102">방법: Windows Forms 애플리케이션에서 HTML 문서 뷰어 만들기</span><span class="sxs-lookup"><span data-stu-id="973ce-102">How to: Create an HTML Document Viewer in a Windows Forms Application</span></span>
-<span data-ttu-id="973ce-103">您可以使用 <xref:System.Windows.Forms.WebBrowser> 控件来显示和打印 HTML 文档，而无需提供 Internet Web 浏览器的完整功能。</span><span class="sxs-lookup"><span data-stu-id="973ce-103">You can use the <xref:System.Windows.Forms.WebBrowser> control to display and print HTML documents without providing the full functionality of an Internet Web browser.</span></span> <span data-ttu-id="973ce-104">当你希望利用 HTML 的格式设置功能，但不希望你的用户加载可能包含不受信任的 Web 控件或可能是恶意脚本代码的任意网页时，这非常有用。</span><span class="sxs-lookup"><span data-stu-id="973ce-104">This is useful when you want to take advantage of the formatting capabilities of HTML but do not want your users to load arbitrary Web pages that may contain untrusted Web controls or potentially malicious script code.</span></span> <span data-ttu-id="973ce-105">例如，你可能想要以这种方式限制 <xref:System.Windows.Forms.WebBrowser> 控件的功能，例如，将其用作 HTML 电子邮件查看器或在应用程序中提供 HTML 格式的帮助。</span><span class="sxs-lookup"><span data-stu-id="973ce-105">You might want to restrict the capability of the <xref:System.Windows.Forms.WebBrowser> control in this manner, for example, to use it as an HTML email viewer or to provide HTML-formatted help in your application.</span></span>  
+# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a><span data-ttu-id="40df2-102">如何：在 Windows 窗体应用程序中创建 HTML 文档查看器</span><span class="sxs-lookup"><span data-stu-id="40df2-102">How to: Create an HTML Document Viewer in a Windows Forms Application</span></span>
+<span data-ttu-id="40df2-103">您可以使用 <xref:System.Windows.Forms.WebBrowser> 控件来显示和打印 HTML 文档，而无需提供 Internet Web 浏览器的完整功能。</span><span class="sxs-lookup"><span data-stu-id="40df2-103">You can use the <xref:System.Windows.Forms.WebBrowser> control to display and print HTML documents without providing the full functionality of an Internet Web browser.</span></span> <span data-ttu-id="40df2-104">当你希望利用 HTML 的格式设置功能，但不希望你的用户加载可能包含不受信任的 Web 控件或可能是恶意脚本代码的任意网页时，这非常有用。</span><span class="sxs-lookup"><span data-stu-id="40df2-104">This is useful when you want to take advantage of the formatting capabilities of HTML but do not want your users to load arbitrary Web pages that may contain untrusted Web controls or potentially malicious script code.</span></span> <span data-ttu-id="40df2-105">例如，你可能想要以这种方式限制 <xref:System.Windows.Forms.WebBrowser> 控件的功能，例如，将其用作 HTML 电子邮件查看器或在应用程序中提供 HTML 格式的帮助。</span><span class="sxs-lookup"><span data-stu-id="40df2-105">You might want to restrict the capability of the <xref:System.Windows.Forms.WebBrowser> control in this manner, for example, to use it as an HTML email viewer or to provide HTML-formatted help in your application.</span></span>  
   
-### <a name="to-create-an-html-document-viewer"></a><span data-ttu-id="973ce-106">创建 HTML 文档查看器</span><span class="sxs-lookup"><span data-stu-id="973ce-106">To create an HTML document viewer</span></span>  
+### <a name="to-create-an-html-document-viewer"></a><span data-ttu-id="40df2-106">创建 HTML 文档查看器</span><span class="sxs-lookup"><span data-stu-id="40df2-106">To create an HTML document viewer</span></span>  
   
-1. <span data-ttu-id="973ce-107">将 <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> 属性设置为 "`false`，以防止 <xref:System.Windows.Forms.WebBrowser> 控件打开拖放到它上面的文件。</span><span class="sxs-lookup"><span data-stu-id="973ce-107">Set the <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> property to `false` to prevent the <xref:System.Windows.Forms.WebBrowser> control from opening files dropped onto it.</span></span>  
+1. <span data-ttu-id="40df2-107">将 <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> 属性设置为 "`false`，以防止 <xref:System.Windows.Forms.WebBrowser> 控件打开拖放到它上面的文件。</span><span class="sxs-lookup"><span data-stu-id="40df2-107">Set the <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> property to `false` to prevent the <xref:System.Windows.Forms.WebBrowser> control from opening files dropped onto it.</span></span>  
   
      [!code-csharp[WebBrowserMisc#20](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#20)]
      [!code-vb[WebBrowserMisc#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#20)]  
   
-2. <span data-ttu-id="973ce-108">将 <xref:System.Windows.Forms.WebBrowser.Url%2A> 属性设置为要显示的初始文件的位置。</span><span class="sxs-lookup"><span data-stu-id="973ce-108">Set the <xref:System.Windows.Forms.WebBrowser.Url%2A> property to the location of the initial file to display.</span></span>  
+2. <span data-ttu-id="40df2-108">将 <xref:System.Windows.Forms.WebBrowser.Url%2A> 属性设置为要显示的初始文件的位置。</span><span class="sxs-lookup"><span data-stu-id="40df2-108">Set the <xref:System.Windows.Forms.WebBrowser.Url%2A> property to the location of the initial file to display.</span></span>  
   
      [!code-csharp[WebBrowserMisc#21](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#21)]
      [!code-vb[WebBrowserMisc#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#21)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="973ce-109">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="973ce-109">Compiling the Code</span></span>  
- <span data-ttu-id="973ce-110">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="973ce-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="40df2-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="40df2-109">Compiling the Code</span></span>  
+ <span data-ttu-id="40df2-110">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="40df2-110">This example requires:</span></span>  
   
-- <span data-ttu-id="973ce-111">`webBrowser1`이라는 <xref:System.Windows.Forms.WebBrowser> 컨트롤</span><span class="sxs-lookup"><span data-stu-id="973ce-111">A <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1`.</span></span>  
+- <span data-ttu-id="40df2-111">名为 <xref:System.Windows.Forms.WebBrowser> 的 `webBrowser1` 控件。</span><span class="sxs-lookup"><span data-stu-id="40df2-111">A <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1`.</span></span>  
   
-- <span data-ttu-id="973ce-112">`System` 및 `System.Windows.Forms` 어셈블리에 대한 참조</span><span class="sxs-lookup"><span data-stu-id="973ce-112">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
+- <span data-ttu-id="40df2-112">对 `System` 和 `System.Windows.Forms` 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="40df2-112">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="973ce-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="973ce-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="40df2-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="40df2-113">See also</span></span>
 
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
-- [<span data-ttu-id="973ce-114">WebBrowser 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="973ce-114">WebBrowser Control Overview</span></span>](webbrowser-control-overview.md)
-- [<span data-ttu-id="973ce-115">WebBrowser 보안</span><span class="sxs-lookup"><span data-stu-id="973ce-115">WebBrowser Security</span></span>](webbrowser-security.md)
-- [<span data-ttu-id="973ce-116">방법: WebBrowser 컨트롤을 사용하여 URL 탐색</span><span class="sxs-lookup"><span data-stu-id="973ce-116">How to: Navigate to a URL with the WebBrowser Control</span></span>](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [<span data-ttu-id="973ce-117">방법: WebBrowser 컨트롤을 사용하여 인쇄</span><span class="sxs-lookup"><span data-stu-id="973ce-117">How to: Print with a WebBrowser Control</span></span>](how-to-print-with-a-webbrowser-control.md)
+- [<span data-ttu-id="40df2-114">WebBrowser 控件概述</span><span class="sxs-lookup"><span data-stu-id="40df2-114">WebBrowser Control Overview</span></span>](webbrowser-control-overview.md)
+- [<span data-ttu-id="40df2-115">WebBrowser 安全</span><span class="sxs-lookup"><span data-stu-id="40df2-115">WebBrowser Security</span></span>](webbrowser-security.md)
+- [<span data-ttu-id="40df2-116">如何：使用 WebBrowser 控件转到 URL</span><span class="sxs-lookup"><span data-stu-id="40df2-116">How to: Navigate to a URL with the WebBrowser Control</span></span>](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [<span data-ttu-id="40df2-117">如何：使用 WebBrowser 控件进行打印</span><span class="sxs-lookup"><span data-stu-id="40df2-117">How to: Print with a WebBrowser Control</span></span>](how-to-print-with-a-webbrowser-control.md)

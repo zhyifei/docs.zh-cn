@@ -15,10 +15,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746074"
 ---
-# <a name="defining-an-event-in-windows-forms-controls"></a><span data-ttu-id="1d721-102">Windows Forms 컨트롤에서 이벤트 정의</span><span class="sxs-lookup"><span data-stu-id="1d721-102">Defining an Event in Windows Forms Controls</span></span>
-<span data-ttu-id="1d721-103">有关定义自定义事件的详细信息，请参阅[事件](../../../standard/events/index.md)。</span><span class="sxs-lookup"><span data-stu-id="1d721-103">For details about defining custom events, see [Events](../../../standard/events/index.md).</span></span> <span data-ttu-id="1d721-104">연결된 데이터가 없는 이벤트를 정의하는 경우에는 이벤트 데이터의 기본 형식인 <xref:System.EventArgs>를 사용하고 이벤트 대리자로 <xref:System.EventHandler>를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="1d721-104">If you define an event that does not have any associated data, use the base type for event data, <xref:System.EventArgs>, and use <xref:System.EventHandler> as the event delegate.</span></span> <span data-ttu-id="1d721-105">剩下的工作就是定义一个事件成员和一个引发该事件的受保护 `On`事件*名*方法。</span><span class="sxs-lookup"><span data-stu-id="1d721-105">All that remains to do is to define an event member and a protected `On`*EventName* method that raises the event.</span></span>  
+# <a name="defining-an-event-in-windows-forms-controls"></a><span data-ttu-id="3e95b-102">在 Windows 窗体控件中定义事件</span><span class="sxs-lookup"><span data-stu-id="3e95b-102">Defining an Event in Windows Forms Controls</span></span>
+<span data-ttu-id="3e95b-103">有关定义自定义事件的详细信息，请参阅[事件](../../../standard/events/index.md)。</span><span class="sxs-lookup"><span data-stu-id="3e95b-103">For details about defining custom events, see [Events](../../../standard/events/index.md).</span></span> <span data-ttu-id="3e95b-104">如果你定义的事件没有任何关联的数据，则使用事件数据的基类型 <xref:System.EventArgs>，并使用 <xref:System.EventHandler> 作为事件委托。</span><span class="sxs-lookup"><span data-stu-id="3e95b-104">If you define an event that does not have any associated data, use the base type for event data, <xref:System.EventArgs>, and use <xref:System.EventHandler> as the event delegate.</span></span> <span data-ttu-id="3e95b-105">剩下的工作就是定义一个事件成员和一个引发该事件的受保护 `On`事件*名*方法。</span><span class="sxs-lookup"><span data-stu-id="3e95b-105">All that remains to do is to define an event member and a protected `On`*EventName* method that raises the event.</span></span>  
   
- <span data-ttu-id="1d721-106">다음 코드 조각은 `FlashTrackBar` 사용자 지정 컨트롤이 사용자 지정 이벤트 `ValueChanged`를 정의하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="1d721-106">The following code fragment shows how the `FlashTrackBar` custom control defines a custom event, `ValueChanged`.</span></span> <span data-ttu-id="1d721-107">有关 `FlashTrackBar` 示例的完整代码，请参阅[如何：创建显示进度的 Windows 窗体控件](how-to-create-a-windows-forms-control-that-shows-progress.md)。</span><span class="sxs-lookup"><span data-stu-id="1d721-107">For the complete code for the `FlashTrackBar` sample, see the [How to: Create a Windows Forms Control That Shows Progress](how-to-create-a-windows-forms-control-that-shows-progress.md).</span></span>  
+ <span data-ttu-id="3e95b-106">以下代码段显示了 `FlashTrackBar` 自定义控件如何定义自定义事件 `ValueChanged`。</span><span class="sxs-lookup"><span data-stu-id="3e95b-106">The following code fragment shows how the `FlashTrackBar` custom control defines a custom event, `ValueChanged`.</span></span> <span data-ttu-id="3e95b-107">有关 `FlashTrackBar` 示例的完整代码，请参阅[如何：创建显示进度的 Windows 窗体控件](how-to-create-a-windows-forms-control-that-shows-progress.md)。</span><span class="sxs-lookup"><span data-stu-id="3e95b-107">For the complete code for the `FlashTrackBar` sample, see the [How to: Create a Windows Forms Control That Shows Progress](how-to-create-a-windows-forms-control-that-shows-progress.md).</span></span>  
   
 ```vb  
 Option Explicit  
@@ -76,7 +76,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1d721-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1d721-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3e95b-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3e95b-108">See also</span></span>
 
-- [<span data-ttu-id="1d721-109">Windows Forms 컨트롤의 이벤트</span><span class="sxs-lookup"><span data-stu-id="1d721-109">Events in Windows Forms Controls</span></span>](events-in-windows-forms-controls.md)
-- [<span data-ttu-id="1d721-110">이벤트</span><span class="sxs-lookup"><span data-stu-id="1d721-110">Events</span></span>](../../../standard/events/index.md)
+- [<span data-ttu-id="3e95b-109">Windows 窗体控件中的事件</span><span class="sxs-lookup"><span data-stu-id="3e95b-109">Events in Windows Forms Controls</span></span>](events-in-windows-forms-controls.md)
+- [<span data-ttu-id="3e95b-110">事件</span><span class="sxs-lookup"><span data-stu-id="3e95b-110">Events</span></span>](../../../standard/events/index.md)

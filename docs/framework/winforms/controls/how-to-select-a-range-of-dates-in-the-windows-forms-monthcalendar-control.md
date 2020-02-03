@@ -18,12 +18,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732895"
 ---
-# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a><span data-ttu-id="8398b-102">방법: Windows Forms MonthCalendar 컨트롤에서 날짜 범위 선택</span><span class="sxs-lookup"><span data-stu-id="8398b-102">How to: Select a Range of Dates in the Windows Forms MonthCalendar Control</span></span>
-<span data-ttu-id="8398b-103">Windows 窗体 <xref:System.Windows.Forms.MonthCalendar> 控件的一项重要功能是用户可以选择日期范围。</span><span class="sxs-lookup"><span data-stu-id="8398b-103">An important feature of the Windows Forms <xref:System.Windows.Forms.MonthCalendar> control is that the user can select a range of dates.</span></span> <span data-ttu-id="8398b-104">此功能优于 <xref:System.Windows.Forms.DateTimePicker> 控件的日期选择功能，只允许用户选择单个日期/时间值。</span><span class="sxs-lookup"><span data-stu-id="8398b-104">This feature is an improvement over the date-selection feature of the <xref:System.Windows.Forms.DateTimePicker> control, which only enables the user to select a single date/time value.</span></span> <span data-ttu-id="8398b-105">您可以通过使用 <xref:System.Windows.Forms.MonthCalendar> 控件的属性来设置日期范围或获取由用户设置的选择范围。</span><span class="sxs-lookup"><span data-stu-id="8398b-105">You can set a range of dates or get a selection range set by the user by using properties of the <xref:System.Windows.Forms.MonthCalendar> control.</span></span> <span data-ttu-id="8398b-106">下面的代码示例演示如何设置选择范围。</span><span class="sxs-lookup"><span data-stu-id="8398b-106">The following code example demonstrates how to set a selection range.</span></span>  
+# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a><span data-ttu-id="d0a6e-102">如何：在 Windows 窗体 MonthCalendar 控件中选择日期范围</span><span class="sxs-lookup"><span data-stu-id="d0a6e-102">How to: Select a Range of Dates in the Windows Forms MonthCalendar Control</span></span>
+<span data-ttu-id="d0a6e-103">Windows 窗体 <xref:System.Windows.Forms.MonthCalendar> 控件的一项重要功能是用户可以选择日期范围。</span><span class="sxs-lookup"><span data-stu-id="d0a6e-103">An important feature of the Windows Forms <xref:System.Windows.Forms.MonthCalendar> control is that the user can select a range of dates.</span></span> <span data-ttu-id="d0a6e-104">此功能优于 <xref:System.Windows.Forms.DateTimePicker> 控件的日期选择功能，只允许用户选择单个日期/时间值。</span><span class="sxs-lookup"><span data-stu-id="d0a6e-104">This feature is an improvement over the date-selection feature of the <xref:System.Windows.Forms.DateTimePicker> control, which only enables the user to select a single date/time value.</span></span> <span data-ttu-id="d0a6e-105">您可以通过使用 <xref:System.Windows.Forms.MonthCalendar> 控件的属性来设置日期范围或获取由用户设置的选择范围。</span><span class="sxs-lookup"><span data-stu-id="d0a6e-105">You can set a range of dates or get a selection range set by the user by using properties of the <xref:System.Windows.Forms.MonthCalendar> control.</span></span> <span data-ttu-id="d0a6e-106">下面的代码示例演示如何设置选择范围。</span><span class="sxs-lookup"><span data-stu-id="d0a6e-106">The following code example demonstrates how to set a selection range.</span></span>  
   
-### <a name="to-select-a-range-of-dates"></a><span data-ttu-id="8398b-107">选择日期范围</span><span class="sxs-lookup"><span data-stu-id="8398b-107">To select a range of dates</span></span>  
+### <a name="to-select-a-range-of-dates"></a><span data-ttu-id="d0a6e-107">选择日期范围</span><span class="sxs-lookup"><span data-stu-id="d0a6e-107">To select a range of dates</span></span>  
   
-1. <span data-ttu-id="8398b-108">创建表示范围中第一个和最后一个日期的 <xref:System.DateTime> 对象。</span><span class="sxs-lookup"><span data-stu-id="8398b-108">Create <xref:System.DateTime> objects that represent the first and last dates in a range.</span></span>  
+1. <span data-ttu-id="d0a6e-108">创建表示范围中第一个和最后一个日期的 <xref:System.DateTime> 对象。</span><span class="sxs-lookup"><span data-stu-id="d0a6e-108">Create <xref:System.DateTime> objects that represent the first and last dates in a range.</span></span>  
   
     ```vb  
     Dim projectStart As Date = New DateTime(2001, 2, 13)  
@@ -40,7 +40,7 @@ ms.locfileid: "76732895"
     DateTime projectEnd = DateTime(2001, 2, 28);  
     ```  
   
-2. <span data-ttu-id="8398b-109"><xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="8398b-109">Set the <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> property.</span></span>  
+2. <span data-ttu-id="d0a6e-109">设置 <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="d0a6e-109">Set the <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> property.</span></span>  
   
     ```vb  
     MonthCalendar1.SelectionRange = New SelectionRange(projectStart, projectEnd)  
@@ -55,9 +55,9 @@ ms.locfileid: "76732895"
        SelectionRange(projectStart, projectEnd);  
     ```  
   
-     <span data-ttu-id="8398b-110">– 또는 –</span><span class="sxs-lookup"><span data-stu-id="8398b-110">–or–</span></span>  
+     <span data-ttu-id="d0a6e-110">\- 或 -</span><span class="sxs-lookup"><span data-stu-id="d0a6e-110">–or–</span></span>  
   
-     <span data-ttu-id="8398b-111"><xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> 및 <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="8398b-111">Set the <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> and <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> properties.</span></span>  
+     <span data-ttu-id="d0a6e-111">设置 <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> 和 <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="d0a6e-111">Set the <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> and <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> properties.</span></span>  
   
     ```vb  
     MonthCalendar1.SelectionStart = projectStart  
@@ -74,9 +74,9 @@ ms.locfileid: "76732895"
     monthCalendar1->SelectionEnd = projectEnd;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="8398b-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8398b-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0a6e-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d0a6e-112">See also</span></span>
 
-- [<span data-ttu-id="8398b-113">MonthCalendar 컨트롤</span><span class="sxs-lookup"><span data-stu-id="8398b-113">MonthCalendar Control</span></span>](monthcalendar-control-windows-forms.md)
-- [<span data-ttu-id="8398b-114">방법: Windows Forms MonthCalendar 컨트롤의 모양 변경</span><span class="sxs-lookup"><span data-stu-id="8398b-114">How to: Change the Windows Forms MonthCalendar Control's Appearance</span></span>](how-to-change-monthcalendar-control-appearance.md)
-- [<span data-ttu-id="8398b-115">방법: Windows Forms MonthCalendar 컨트롤을 사용하여 특정 날짜를 굵게 표시</span><span class="sxs-lookup"><span data-stu-id="8398b-115">How to: Display Specific Days in Bold with the Windows Forms MonthCalendar Control</span></span>](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [<span data-ttu-id="8398b-116">방법: Windows Forms MonthCalendar 컨트롤에서 여러 달 표시</span><span class="sxs-lookup"><span data-stu-id="8398b-116">How to: Display More than One Month in the Windows Forms MonthCalendar Control</span></span>](display-more-than-one-month-wf-monthcalendar-control.md)
+- [<span data-ttu-id="d0a6e-113">MonthCalendar 控件</span><span class="sxs-lookup"><span data-stu-id="d0a6e-113">MonthCalendar Control</span></span>](monthcalendar-control-windows-forms.md)
+- [<span data-ttu-id="d0a6e-114">如何：更改 Windows 窗体 MonthCalendar 控件的外观</span><span class="sxs-lookup"><span data-stu-id="d0a6e-114">How to: Change the Windows Forms MonthCalendar Control's Appearance</span></span>](how-to-change-monthcalendar-control-appearance.md)
+- [<span data-ttu-id="d0a6e-115">如何：使用 Windows 窗体 MonthCalendar 控件以粗体显示具体日期</span><span class="sxs-lookup"><span data-stu-id="d0a6e-115">How to: Display Specific Days in Bold with the Windows Forms MonthCalendar Control</span></span>](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [<span data-ttu-id="d0a6e-116">如何：在 Windows 窗体 MonthCalendar 控件中显示多个月份</span><span class="sxs-lookup"><span data-stu-id="d0a6e-116">How to: Display More than One Month in the Windows Forms MonthCalendar Control</span></span>](display-more-than-one-month-wf-monthcalendar-control.md)

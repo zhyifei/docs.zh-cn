@@ -15,21 +15,21 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739008"
 ---
-# <a name="windows-in-wpf-applications"></a><span data-ttu-id="155f0-102">WPF 애플리케이션의 창</span><span class="sxs-lookup"><span data-stu-id="155f0-102">Windows in WPF Applications</span></span>
-<span data-ttu-id="155f0-103">用户通过 windows 与应用程序进行交互。</span><span class="sxs-lookup"><span data-stu-id="155f0-103">Users interact with applications through windows.</span></span> <span data-ttu-id="155f0-104">窗口的基本用途是宿主并显示内容。</span><span class="sxs-lookup"><span data-stu-id="155f0-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="155f0-105">窗口承载的内容的类型取决于应用程序所操作的数据类型，该类型可以包括媒体、Extensible Application Markup Language （XAML）页、网页、文档、数据库表和记录以及系统信息。</span><span class="sxs-lookup"><span data-stu-id="155f0-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
+# <a name="windows-in-wpf-applications"></a><span data-ttu-id="cc0f9-102">WPF 应用程序中的窗口</span><span class="sxs-lookup"><span data-stu-id="cc0f9-102">Windows in WPF Applications</span></span>
+<span data-ttu-id="cc0f9-103">用户通过 windows 与应用程序进行交互。</span><span class="sxs-lookup"><span data-stu-id="cc0f9-103">Users interact with applications through windows.</span></span> <span data-ttu-id="cc0f9-104">窗口的基本用途是宿主并显示内容。</span><span class="sxs-lookup"><span data-stu-id="cc0f9-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="cc0f9-105">窗口承载的内容的类型取决于应用程序所操作的数据类型，该类型可以包括媒体、Extensible Application Markup Language （XAML）页、网页、文档、数据库表和记录以及系统信息。</span><span class="sxs-lookup"><span data-stu-id="cc0f9-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="155f0-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="155f0-106">In This Section</span></span>  
- [<span data-ttu-id="155f0-107">WPF 창 개요</span><span class="sxs-lookup"><span data-stu-id="155f0-107">WPF Windows Overview</span></span>](wpf-windows-overview.md)  
- [<span data-ttu-id="155f0-108">대화 상자 개요</span><span class="sxs-lookup"><span data-stu-id="155f0-108">Dialog Boxes Overview</span></span>](dialog-boxes-overview.md)  
- [<span data-ttu-id="155f0-109">방법 항목</span><span class="sxs-lookup"><span data-stu-id="155f0-109">How-to Topics</span></span>](window-management-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cc0f9-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="cc0f9-106">In This Section</span></span>  
+ [<span data-ttu-id="cc0f9-107">WPF 窗口概述</span><span class="sxs-lookup"><span data-stu-id="cc0f9-107">WPF Windows Overview</span></span>](wpf-windows-overview.md)  
+ [<span data-ttu-id="cc0f9-108">对话框概述</span><span class="sxs-lookup"><span data-stu-id="cc0f9-108">Dialog Boxes Overview</span></span>](dialog-boxes-overview.md)  
+ [<span data-ttu-id="cc0f9-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="cc0f9-109">How-to Topics</span></span>](window-management-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="155f0-110">참조</span><span class="sxs-lookup"><span data-stu-id="155f0-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="cc0f9-110">参考</span><span class="sxs-lookup"><span data-stu-id="cc0f9-110">Reference</span></span>  
  <xref:System.Windows.Window>  
   
  <xref:System.Windows.Navigation.NavigationWindow>  
   
-## <a name="related-sections"></a><span data-ttu-id="155f0-111">관련 섹션</span><span class="sxs-lookup"><span data-stu-id="155f0-111">Related Sections</span></span>  
- [<span data-ttu-id="155f0-112">애플리케이션 관리 개요</span><span class="sxs-lookup"><span data-stu-id="155f0-112">Application Management Overview</span></span>](application-management-overview.md)  
-  [<span data-ttu-id="155f0-113">탐색 개요</span><span class="sxs-lookup"><span data-stu-id="155f0-113">Navigation Overview</span></span>](navigation-overview.md)  
-  [<span data-ttu-id="155f0-114">호스팅</span><span class="sxs-lookup"><span data-stu-id="155f0-114">Hosting</span></span>](hosting-wpf-applications.md)  
-  [<span data-ttu-id="155f0-115">빌드 및 배포</span><span class="sxs-lookup"><span data-stu-id="155f0-115">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="cc0f9-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="cc0f9-111">Related Sections</span></span>  
+ [<span data-ttu-id="cc0f9-112">应用程序管理概述</span><span class="sxs-lookup"><span data-stu-id="cc0f9-112">Application Management Overview</span></span>](application-management-overview.md)  
+  [<span data-ttu-id="cc0f9-113">导航概述</span><span class="sxs-lookup"><span data-stu-id="cc0f9-113">Navigation Overview</span></span>](navigation-overview.md)  
+  [<span data-ttu-id="cc0f9-114">承载</span><span class="sxs-lookup"><span data-stu-id="cc0f9-114">Hosting</span></span>](hosting-wpf-applications.md)  
+  [<span data-ttu-id="cc0f9-115">生成和部署</span><span class="sxs-lookup"><span data-stu-id="cc0f9-115">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)

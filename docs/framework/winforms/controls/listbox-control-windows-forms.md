@@ -16,17 +16,17 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745175"
 ---
-# <a name="listbox-control-windows-forms"></a><span data-ttu-id="414db-102">ListBox 控件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="414db-102">ListBox Control (Windows Forms)</span></span>
-<span data-ttu-id="414db-103">Windows 窗体 `ListBox` 控件将显示用户可从中选择一个或多个项的列表。</span><span class="sxs-lookup"><span data-stu-id="414db-103">A Windows Forms `ListBox` control displays a list of items from which the user can select one or more.</span></span>  
+# <a name="listbox-control-windows-forms"></a><span data-ttu-id="e62a0-102">ListBox 控件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="e62a0-102">ListBox Control (Windows Forms)</span></span>
+<span data-ttu-id="e62a0-103">Windows 窗体 `ListBox` 控件将显示用户可从中选择一个或多个项的列表。</span><span class="sxs-lookup"><span data-stu-id="e62a0-103">A Windows Forms `ListBox` control displays a list of items from which the user can select one or more.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="414db-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="414db-104">In This Section</span></span>  
- [<span data-ttu-id="414db-105">ListBox 控件概述</span><span class="sxs-lookup"><span data-stu-id="414db-105">ListBox Control Overview</span></span>](listbox-control-overview-windows-forms.md)  
- <span data-ttu-id="414db-106">说明此控件的本质及其主要功能和属性。</span><span class="sxs-lookup"><span data-stu-id="414db-106">Explains what this control is and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="e62a0-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="e62a0-104">In This Section</span></span>  
+ [<span data-ttu-id="e62a0-105">ListBox 控件概述</span><span class="sxs-lookup"><span data-stu-id="e62a0-105">ListBox Control Overview</span></span>](listbox-control-overview-windows-forms.md)  
+ <span data-ttu-id="e62a0-106">说明此控件的本质及其主要功能和属性。</span><span class="sxs-lookup"><span data-stu-id="e62a0-106">Explains what this control is and its key features and properties.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="414db-107">引用</span><span class="sxs-lookup"><span data-stu-id="414db-107">Reference</span></span>  
- <span data-ttu-id="414db-108"><xref:System.Windows.Forms.ListBox> 类</span><span class="sxs-lookup"><span data-stu-id="414db-108"><xref:System.Windows.Forms.ListBox> class</span></span>  
- <span data-ttu-id="414db-109">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="414db-109">Describes this class and has links to all its members.</span></span>  
+## <a name="reference"></a><span data-ttu-id="e62a0-107">参考</span><span class="sxs-lookup"><span data-stu-id="e62a0-107">Reference</span></span>  
+ <span data-ttu-id="e62a0-108"><xref:System.Windows.Forms.ListBox> 类</span><span class="sxs-lookup"><span data-stu-id="e62a0-108"><xref:System.Windows.Forms.ListBox> class</span></span>  
+ <span data-ttu-id="e62a0-109">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="e62a0-109">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="414db-110">相关章节</span><span class="sxs-lookup"><span data-stu-id="414db-110">Related Sections</span></span>  
- [<span data-ttu-id="414db-111">用于列出选项的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="414db-111">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)  
- <span data-ttu-id="414db-112">提供可对列表框、组合框和选中的列表框执行的操作的列表。</span><span class="sxs-lookup"><span data-stu-id="414db-112">Provides a list of things you can do with list boxes, combo boxes, and checked list boxes.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="e62a0-110">相关章节</span><span class="sxs-lookup"><span data-stu-id="e62a0-110">Related Sections</span></span>  
+ [<span data-ttu-id="e62a0-111">用于列出选项的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="e62a0-111">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)  
+ <span data-ttu-id="e62a0-112">提供可对列表框、组合框和选中的列表框执行的操作的列表。</span><span class="sxs-lookup"><span data-stu-id="e62a0-112">Provides a list of things you can do with list boxes, combo boxes, and checked list boxes.</span></span>

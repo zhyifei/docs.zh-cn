@@ -18,12 +18,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743021"
 ---
-# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a><span data-ttu-id="f3929-102">방법: Windows Forms NumericUpDown 컨트롤을 사용하여 숫자 값 설정 및 반환</span><span class="sxs-lookup"><span data-stu-id="f3929-102">How to: Set and Return Numeric Values with the Windows Forms NumericUpDown Control</span></span>
-<span data-ttu-id="f3929-103">Windows 窗体 <xref:System.Windows.Forms.NumericUpDown> 控件的数值由其 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 属性确定。</span><span class="sxs-lookup"><span data-stu-id="f3929-103">The numeric value of the Windows Forms <xref:System.Windows.Forms.NumericUpDown> control is determined by its <xref:System.Windows.Forms.NumericUpDown.Value%2A> property.</span></span> <span data-ttu-id="f3929-104">您可以为控件的值编写条件测试，就像对任何其他属性一样。</span><span class="sxs-lookup"><span data-stu-id="f3929-104">You can write conditional tests for the control's value just as with any other property.</span></span> <span data-ttu-id="f3929-105">设置 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 属性后，可以通过编写代码对其执行操作来直接调整该属性，也可以调用 <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> 和 <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="f3929-105">Once the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property is set, you can adjust it directly by writing code to perform operations on it, or you can call the <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> and <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> methods.</span></span>  
+# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a><span data-ttu-id="68b84-102">如何：使用 Windows 窗体 NumericUpDown 控件设置和返回数值</span><span class="sxs-lookup"><span data-stu-id="68b84-102">How to: Set and Return Numeric Values with the Windows Forms NumericUpDown Control</span></span>
+<span data-ttu-id="68b84-103">Windows 窗体 <xref:System.Windows.Forms.NumericUpDown> 控件的数值由其 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 属性确定。</span><span class="sxs-lookup"><span data-stu-id="68b84-103">The numeric value of the Windows Forms <xref:System.Windows.Forms.NumericUpDown> control is determined by its <xref:System.Windows.Forms.NumericUpDown.Value%2A> property.</span></span> <span data-ttu-id="68b84-104">您可以为控件的值编写条件测试，就像对任何其他属性一样。</span><span class="sxs-lookup"><span data-stu-id="68b84-104">You can write conditional tests for the control's value just as with any other property.</span></span> <span data-ttu-id="68b84-105">设置 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 属性后，可以通过编写代码对其执行操作来直接调整该属性，也可以调用 <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> 和 <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="68b84-105">Once the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property is set, you can adjust it directly by writing code to perform operations on it, or you can call the <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> and <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> methods.</span></span>  
   
-### <a name="to-set-the-numeric-value"></a><span data-ttu-id="f3929-106">设置数值</span><span class="sxs-lookup"><span data-stu-id="f3929-106">To set the numeric value</span></span>  
+### <a name="to-set-the-numeric-value"></a><span data-ttu-id="68b84-106">设置数值</span><span class="sxs-lookup"><span data-stu-id="68b84-106">To set the numeric value</span></span>  
   
-1. <span data-ttu-id="f3929-107">在代码或属性窗口中为 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 属性赋值。</span><span class="sxs-lookup"><span data-stu-id="f3929-107">Assign a value to the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property in code or in the Properties window.</span></span>  
+1. <span data-ttu-id="68b84-107">在代码或属性窗口中为 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 属性赋值。</span><span class="sxs-lookup"><span data-stu-id="68b84-107">Assign a value to the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property in code or in the Properties window.</span></span>  
   
     ```vb  
     NumericUpDown1.Value = 55  
@@ -37,9 +37,9 @@ ms.locfileid: "76743021"
     numericUpDown1->Value = 55;  
     ```  
   
-     <span data-ttu-id="f3929-108">-또는-</span><span class="sxs-lookup"><span data-stu-id="f3929-108">-or-</span></span>  
+     <span data-ttu-id="68b84-108">\- 或 -</span><span class="sxs-lookup"><span data-stu-id="68b84-108">-or-</span></span>  
   
-2. <span data-ttu-id="f3929-109">调用 <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> 或 <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> 方法，按 <xref:System.Windows.Forms.NumericUpDown.Increment%2A> 属性中指定的数量增加或减少该值。</span><span class="sxs-lookup"><span data-stu-id="f3929-109">Call the <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> or <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> method to increase or decrease the value by the amount specified in the <xref:System.Windows.Forms.NumericUpDown.Increment%2A> property.</span></span>  
+2. <span data-ttu-id="68b84-109">调用 <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> 或 <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> 方法，按 <xref:System.Windows.Forms.NumericUpDown.Increment%2A> 属性中指定的数量增加或减少该值。</span><span class="sxs-lookup"><span data-stu-id="68b84-109">Call the <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> or <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> method to increase or decrease the value by the amount specified in the <xref:System.Windows.Forms.NumericUpDown.Increment%2A> property.</span></span>  
   
     ```vb  
     NumericUpDown1.UpButton()  
@@ -53,9 +53,9 @@ ms.locfileid: "76743021"
     numericUpDown1->UpButton();  
     ```  
   
-### <a name="to-return-the-numeric-value"></a><span data-ttu-id="f3929-110">返回数值</span><span class="sxs-lookup"><span data-stu-id="f3929-110">To return the numeric value</span></span>  
+### <a name="to-return-the-numeric-value"></a><span data-ttu-id="68b84-110">返回数值</span><span class="sxs-lookup"><span data-stu-id="68b84-110">To return the numeric value</span></span>  
   
-- <span data-ttu-id="f3929-111">访问代码中的 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="f3929-111">Access the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property in code.</span></span>  
+- <span data-ttu-id="68b84-111">访问代码中的 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="68b84-111">Access the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property in code.</span></span>  
   
     ```vb  
     If NumericUpDown1.Value >= 65 Then  
@@ -89,12 +89,12 @@ ms.locfileid: "76743021"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="f3929-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f3929-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="68b84-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="68b84-112">See also</span></span>
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.Increment%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.UpButton%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.DownButton%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="f3929-113">NumericUpDown 컨트롤</span><span class="sxs-lookup"><span data-stu-id="f3929-113">NumericUpDown Control</span></span>](numericupdown-control-windows-forms.md)
-- [<span data-ttu-id="f3929-114">NumericUpDown 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="f3929-114">NumericUpDown Control Overview</span></span>](numericupdown-control-overview-windows-forms.md)
+- [<span data-ttu-id="68b84-113">NumericUpDown 控件</span><span class="sxs-lookup"><span data-stu-id="68b84-113">NumericUpDown Control</span></span>](numericupdown-control-windows-forms.md)
+- [<span data-ttu-id="68b84-114">NumericUpDown 控件概述</span><span class="sxs-lookup"><span data-stu-id="68b84-114">NumericUpDown Control Overview</span></span>](numericupdown-control-overview-windows-forms.md)

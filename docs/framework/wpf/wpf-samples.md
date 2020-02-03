@@ -1,5 +1,5 @@
 ---
-title: 예제
+title: 示例
 ms.date: 11/02/2017
 helpviewer_keywords:
 - WPF samples [WPF]
@@ -12,6 +12,6 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743306"
 ---
-# <a name="wpf-samples"></a><span data-ttu-id="899cb-102">WPF 샘플</span><span class="sxs-lookup"><span data-stu-id="899cb-102">WPF Samples</span></span>
+# <a name="wpf-samples"></a><span data-ttu-id="d3426-102">WPF 示例</span><span class="sxs-lookup"><span data-stu-id="d3426-102">WPF Samples</span></span>
 
-<span data-ttu-id="899cb-103">有关演示 Windows Presentation Foundation （WPF）的示例，请参阅 GitHub 上的[Microsoft/WPF 示例](https://github.com/Microsoft/WPF-Samples)存储库。</span><span class="sxs-lookup"><span data-stu-id="899cb-103">For samples that demonstrate Windows Presentation Foundation (WPF), see the [Microsoft/WPF-Samples repo](https://github.com/Microsoft/WPF-Samples) on GitHub.</span></span>
+<span data-ttu-id="d3426-103">有关演示 Windows Presentation Foundation （WPF）的示例，请参阅 GitHub 上的[Microsoft/WPF 示例](https://github.com/Microsoft/WPF-Samples)存储库。</span><span class="sxs-lookup"><span data-stu-id="d3426-103">For samples that demonstrate Windows Presentation Foundation (WPF), see the [Microsoft/WPF-Samples repo](https://github.com/Microsoft/WPF-Samples) on GitHub.</span></span>

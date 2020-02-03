@@ -1,5 +1,5 @@
 ---
-title: '방법: 서비스 모니커 등록 및 구성'
+title: 如何：注册和配置服务标记
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
@@ -12,34 +12,34 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76747090"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a><span data-ttu-id="db8e8-102">방법: 서비스 모니커 등록 및 구성</span><span class="sxs-lookup"><span data-stu-id="db8e8-102">How to: Register and Configure a Service Moniker</span></span>
+# <a name="how-to-register-and-configure-a-service-moniker"></a><span data-ttu-id="119c2-102">如何：注册和配置服务标记</span><span class="sxs-lookup"><span data-stu-id="119c2-102">How to: Register and Configure a Service Moniker</span></span>
 
-<span data-ttu-id="db8e8-103">在使用具有类型协定的 COM 应用程序中使用 Windows Communication Foundation （WCF）服务名字对象之前，必须使用 COM 注册所需的属性化类型，并使用所需的绑定配置 COM 应用程序和名字对象configuration.</span><span class="sxs-lookup"><span data-stu-id="db8e8-103">Before using the Windows Communication Foundation (WCF) service moniker within a COM application with a typed contract, you must register the required attributed types with COM, and configure the COM application and the moniker with the required binding configuration.</span></span>
+<span data-ttu-id="119c2-103">在使用具有类型协定的 COM 应用程序中使用 Windows Communication Foundation （WCF）服务名字对象之前，必须使用 COM 注册所需的属性化类型，并使用所需的绑定配置 COM 应用程序和名字对象configuration.</span><span class="sxs-lookup"><span data-stu-id="119c2-103">Before using the Windows Communication Foundation (WCF) service moniker within a COM application with a typed contract, you must register the required attributed types with COM, and configure the COM application and the moniker with the required binding configuration.</span></span>
 
-## <a name="register-the-required-attributed-types-with-com"></a><span data-ttu-id="db8e8-104">向 COM 注册所需的属性化类型</span><span class="sxs-lookup"><span data-stu-id="db8e8-104">Register the required attributed types with COM</span></span>
+## <a name="register-the-required-attributed-types-with-com"></a><span data-ttu-id="119c2-104">向 COM 注册所需的属性化类型</span><span class="sxs-lookup"><span data-stu-id="119c2-104">Register the required attributed types with COM</span></span>
 
-1. <span data-ttu-id="db8e8-105">使用 "工作的[元数据实用工具（svcutil.exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md) " 工具从 WCF 服务中检索元数据协定。</span><span class="sxs-lookup"><span data-stu-id="db8e8-105">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) tool to retrieve the metadata contract from the WCF service.</span></span> <span data-ttu-id="db8e8-106">这会生成 WCF 客户端程序集和客户端应用程序配置文件的源代码。</span><span class="sxs-lookup"><span data-stu-id="db8e8-106">This generates the source code for a WCF client assembly and a client application configuration file.</span></span>
+1. <span data-ttu-id="119c2-105">使用 "工作的[元数据实用工具（svcutil.exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md) " 工具从 WCF 服务中检索元数据协定。</span><span class="sxs-lookup"><span data-stu-id="119c2-105">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) tool to retrieve the metadata contract from the WCF service.</span></span> <span data-ttu-id="119c2-106">这会生成 WCF 客户端程序集和客户端应用程序配置文件的源代码。</span><span class="sxs-lookup"><span data-stu-id="119c2-106">This generates the source code for a WCF client assembly and a client application configuration file.</span></span>
 
-2. <span data-ttu-id="db8e8-107">어셈블리의 형식이 `ComVisible`로 표시되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-107">Ensure that the types in the assembly are marked as `ComVisible`.</span></span> <span data-ttu-id="db8e8-108">为此，请将以下属性添加到 Visual Studio 项目中的*AssemblyInfo.cs*文件。</span><span class="sxs-lookup"><span data-stu-id="db8e8-108">To do so, add the following attribute to the *AssemblyInfo.cs* file in your Visual Studio project.</span></span>
+2. <span data-ttu-id="119c2-107">确保将程序集中的类型标记为 `ComVisible`。</span><span class="sxs-lookup"><span data-stu-id="119c2-107">Ensure that the types in the assembly are marked as `ComVisible`.</span></span> <span data-ttu-id="119c2-108">为此，请将以下属性添加到 Visual Studio 项目中的*AssemblyInfo.cs*文件。</span><span class="sxs-lookup"><span data-stu-id="119c2-108">To do so, add the following attribute to the *AssemblyInfo.cs* file in your Visual Studio project.</span></span>
 
     ```csharp
     [assembly: ComVisible(true)]
     ```
 
-3. <span data-ttu-id="db8e8-109">将托管 WCF 客户端编译为具有强名称的程序集。</span><span class="sxs-lookup"><span data-stu-id="db8e8-109">Compile the managed WCF client as a strong-named assembly.</span></span> <span data-ttu-id="db8e8-110">이렇게 하려면 암호화된 키 쌍으로 서명해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-110">This requires signing with a cryptographic key pair.</span></span> <span data-ttu-id="db8e8-111">자세한 내용은 [강력한 이름으로 어셈블리 서명](../../../standard/assembly/sign-strong-name.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="db8e8-111">For more information, see [Signing an Assembly with a Strong Name](../../../standard/assembly/sign-strong-name.md).</span></span>
+3. <span data-ttu-id="119c2-109">将托管 WCF 客户端编译为具有强名称的程序集。</span><span class="sxs-lookup"><span data-stu-id="119c2-109">Compile the managed WCF client as a strong-named assembly.</span></span> <span data-ttu-id="119c2-110">这要求使用加密密钥对进行签名。</span><span class="sxs-lookup"><span data-stu-id="119c2-110">This requires signing with a cryptographic key pair.</span></span> <span data-ttu-id="119c2-111">有关详细信息，请参阅[使用强名称为程序集签名](../../../standard/assembly/sign-strong-name.md)。</span><span class="sxs-lookup"><span data-stu-id="119c2-111">For more information, see [Signing an Assembly with a Strong Name](../../../standard/assembly/sign-strong-name.md).</span></span>
 
-4. <span data-ttu-id="db8e8-112">어셈블리 등록(Regasm.exe) 도구에 `-tlb` 옵션을 사용하여 어셈블리의 형식을 COM에 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-112">Use the Assembly Registration (Regasm.exe) tool with the `-tlb` option to register the types in the assembly with COM.</span></span>
+4. <span data-ttu-id="119c2-112">使用带有 `-tlb` 选项的程序集注册 (Regasm.exe) 工具向 COM 注册程序集中的类型。</span><span class="sxs-lookup"><span data-stu-id="119c2-112">Use the Assembly Registration (Regasm.exe) tool with the `-tlb` option to register the types in the assembly with COM.</span></span>
 
-5. <span data-ttu-id="db8e8-113">전역 어셈블리 캐시(Gacutil.exe) 도구를 사용하여 어셈블리를 전역 어셈블리 캐시에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-113">Use the Global Assembly Cache (Gacutil.exe) tool to add the assembly to the global assembly cache.</span></span>
+5. <span data-ttu-id="119c2-113">使用全局程序集缓存 (Gacutil.exe) 工具将该程序集添加到全局程序集缓存中。</span><span class="sxs-lookup"><span data-stu-id="119c2-113">Use the Global Assembly Cache (Gacutil.exe) tool to add the assembly to the global assembly cache.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="db8e8-114">어셈블리에 서명하고 전역 어셈블리 캐시에 추가하는 것은 선택적 단계이지만 런타임에 올바른 위치에서 어셈블리를 로드하는 프로세스를 단순화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-114">Signing the assembly and adding it to the Global Assembly Cache are optional steps, but they can simplify the process of loading the assembly from the correct location at runtime.</span></span>
+    > <span data-ttu-id="119c2-114">对程序集进行签名并将其添加到全局程序集缓存中是可选步骤，不过，这两个步骤可以简化在运行时从正确位置加载程序集的过程。</span><span class="sxs-lookup"><span data-stu-id="119c2-114">Signing the assembly and adding it to the Global Assembly Cache are optional steps, but they can simplify the process of loading the assembly from the correct location at runtime.</span></span>
 
-## <a name="configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a><span data-ttu-id="db8e8-115">用所需的绑定配置配置 COM 应用程序和名字对象</span><span class="sxs-lookup"><span data-stu-id="db8e8-115">Configure the COM application and the moniker with the required binding configuration</span></span>
+## <a name="configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a><span data-ttu-id="119c2-115">用所需的绑定配置配置 COM 应用程序和名字对象</span><span class="sxs-lookup"><span data-stu-id="119c2-115">Configure the COM application and the moniker with the required binding configuration</span></span>
 
-- <span data-ttu-id="db8e8-116">在客户端应用程序的配置文件中，将配置文件（在生成的客户端应用程序配置文件中）生成（由配置的[元数据实用工具（svcutil.exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)生成）。</span><span class="sxs-lookup"><span data-stu-id="db8e8-116">Place the binding definitions (generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) in the generated client application configuration file) in the client application's configuration file.</span></span> <span data-ttu-id="db8e8-117">예를 들어 이름이 CallCenterClient.exe인 Visual Basic 6.0 실행 파일에 대해 실행 파일과 동일한 디렉터리 내의 CallCenterConfig.exe.config 파일에 구성을 저장해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-117">For example, for a Visual Basic 6.0 executable named CallCenterClient.exe, the configuration should be placed in a file named CallCenterConfig.exe.config within the same directory as the executable.</span></span> <span data-ttu-id="db8e8-118">이제 클라이언트 애플리케이션에서 모니커를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-118">The client application can now use the moniker.</span></span> <span data-ttu-id="db8e8-119">请注意，如果使用 WCF 提供的标准绑定类型之一，则不需要绑定配置。</span><span class="sxs-lookup"><span data-stu-id="db8e8-119">Note that the binding configuration is not required if using one of the standard binding types provided by WCF.</span></span>
+- <span data-ttu-id="119c2-116">在客户端应用程序的配置文件中，将配置文件（在生成的客户端应用程序配置文件中）生成（由配置的[元数据实用工具（svcutil.exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)生成）。</span><span class="sxs-lookup"><span data-stu-id="119c2-116">Place the binding definitions (generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) in the generated client application configuration file) in the client application's configuration file.</span></span> <span data-ttu-id="119c2-117">例如，对于名为 CallCenterClient.exe 的 Visual Basic 6.0 可执行文件，配置应放置到该可执行文件所在目录中名为 CallCenterConfig.exe.config 的文件中。</span><span class="sxs-lookup"><span data-stu-id="119c2-117">For example, for a Visual Basic 6.0 executable named CallCenterClient.exe, the configuration should be placed in a file named CallCenterConfig.exe.config within the same directory as the executable.</span></span> <span data-ttu-id="119c2-118">此时，客户端应用程序就可以使用标记了。</span><span class="sxs-lookup"><span data-stu-id="119c2-118">The client application can now use the moniker.</span></span> <span data-ttu-id="119c2-119">请注意，如果使用 WCF 提供的标准绑定类型之一，则不需要绑定配置。</span><span class="sxs-lookup"><span data-stu-id="119c2-119">Note that the binding configuration is not required if using one of the standard binding types provided by WCF.</span></span>
 
-     <span data-ttu-id="db8e8-120">다음 형식이 등록됩니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-120">The following type is registered.</span></span>
+     <span data-ttu-id="119c2-120">注册下面的类型。</span><span class="sxs-lookup"><span data-stu-id="119c2-120">The following type is registered.</span></span>
 
     ```csharp
     using System.ServiceModel;
@@ -54,19 +54,19 @@ ms.locfileid: "76747090"
     }
     ```
 
-     <span data-ttu-id="db8e8-121">애플리케이션은 `wsHttpBinding` 바인딩을 사용하여 노출됩니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-121">The application is exposed using a `wsHttpBinding` binding.</span></span> <span data-ttu-id="db8e8-122">지정된 형식과 애플리케이션 구성에 대해 다음 예제 모니커 문자열이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-122">For the given type and application configuration, the following example moniker strings are used.</span></span>
+     <span data-ttu-id="119c2-121">使用 `wsHttpBinding` 绑定来公开应用程序。</span><span class="sxs-lookup"><span data-stu-id="119c2-121">The application is exposed using a `wsHttpBinding` binding.</span></span> <span data-ttu-id="119c2-122">对于给定的类型和应用程序配置，将使用以下的示例标记字符串。</span><span class="sxs-lookup"><span data-stu-id="119c2-122">For the given type and application configuration, the following example moniker strings are used.</span></span>
 
     ```
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1
     ```
 
-     <span data-ttu-id="db8e8-123">또는</span><span class="sxs-lookup"><span data-stu-id="db8e8-123">or</span></span>
+     <span data-ttu-id="119c2-123">或</span><span class="sxs-lookup"><span data-stu-id="119c2-123">or</span></span>
 
     ```
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1, contract={36ADAD5A-A944-4d5c-9B7C-967E4F00A090}
     ```
 
-     <span data-ttu-id="db8e8-124">다음 샘플 코드와 같이 `IMathService` 형식을 포함하는 어셈블리에 대한 참조를 추가한 후 Visual Basic 6.0 애플리케이션 내에서 이러한 모니커 문자열 중 하나를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-124">You can use either of these moniker strings from within a Visual Basic 6.0 application, after adding a reference to the assembly that contains the `IMathService` types, as shown in the following sample code.</span></span>
+     <span data-ttu-id="119c2-124">在将引用添加到包含 `IMathService` 类型的程序集后，你可以使用 Visual Basic 6.0 应用程序中的这些标记字符串中的任何一个，如下面的示例代码中所示。</span><span class="sxs-lookup"><span data-stu-id="119c2-124">You can use either of these moniker strings from within a Visual Basic 6.0 application, after adding a reference to the assembly that contains the `IMathService` types, as shown in the following sample code.</span></span>
 
     ```vb
     Dim mathProxy As IMathService
@@ -80,22 +80,22 @@ ms.locfileid: "76747090"
     result = mathProxy.Add(3, 5)
     ```
 
-     <span data-ttu-id="db8e8-125">在此示例中，绑定配置 `Binding1` 的定义存储在客户端应用程序的适当命名的配置文件中，如*vb6appname*。</span><span class="sxs-lookup"><span data-stu-id="db8e8-125">In this example, the definition for the binding configuration `Binding1` is stored in a suitably named configuration file for the client application, such as *vb6appname.exe.config*.</span></span>
+     <span data-ttu-id="119c2-125">在此示例中，绑定配置 `Binding1` 的定义存储在客户端应用程序的适当命名的配置文件中，如*vb6appname*。</span><span class="sxs-lookup"><span data-stu-id="119c2-125">In this example, the definition for the binding configuration `Binding1` is stored in a suitably named configuration file for the client application, such as *vb6appname.exe.config*.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="db8e8-126">C#, C++ 또는 다른 모든 .NET 언어 애플리케이션으로 유사한 코드를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-126">You can use similar code in a C#, a C++, or any other .NET Language application.</span></span>
+    > <span data-ttu-id="119c2-126">你可以在 C#、C++ 或其他任何 .NET 语言的应用程序中使用类似的代码。</span><span class="sxs-lookup"><span data-stu-id="119c2-126">You can use similar code in a C#, a C++, or any other .NET Language application.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="db8e8-127">如果名字对象格式不正确，或者服务不可用，则对 `GetObject` 的调用将返回错误 "语法无效"。</span><span class="sxs-lookup"><span data-stu-id="db8e8-127">If the moniker is malformed or if the service is unavailable, the call to `GetObject` returns an error of "Invalid Syntax".</span></span> <span data-ttu-id="db8e8-128">이 오류가 발생하면 사용하고 있는 모니커가 올바르고 서비스를 사용할 수 있는지 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="db8e8-128">If you receive this error, make sure the moniker you are using is correct and the service is available.</span></span>
+    > <span data-ttu-id="119c2-127">如果名字对象格式不正确，或者服务不可用，则对 `GetObject` 的调用将返回错误 "语法无效"。</span><span class="sxs-lookup"><span data-stu-id="119c2-127">If the moniker is malformed or if the service is unavailable, the call to `GetObject` returns an error of "Invalid Syntax".</span></span> <span data-ttu-id="119c2-128">如果您收到此错误，请确保所使用的标记正确无误且服务可用。</span><span class="sxs-lookup"><span data-stu-id="119c2-128">If you receive this error, make sure the moniker you are using is correct and the service is available.</span></span>
 
-     <span data-ttu-id="db8e8-129">尽管本主题重点介绍如何将服务名字对象用于 Visual Basic 6.0 代码，但你可以使用其他语言的服务名字对象。</span><span class="sxs-lookup"><span data-stu-id="db8e8-129">Although this topic focuses on using the service moniker from Visual Basic 6.0 code, you can use a service moniker from other languages.</span></span> <span data-ttu-id="db8e8-130">C++ 코드에서 모니커를 사용하는 경우 다음 코드와 같이 "no_namespace named_guids raw_interfaces_only"를 사용하여 Svcutil.exe에서 생성된 어셈블리를  가져와야 합니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-130">When using a moniker from C++ code the Svcutil.exe generated assembly should be imported with "no_namespace named_guids raw_interfaces_only" as shown in the following code.</span></span>
+     <span data-ttu-id="119c2-129">尽管本主题重点介绍如何将服务名字对象用于 Visual Basic 6.0 代码，但你可以使用其他语言的服务名字对象。</span><span class="sxs-lookup"><span data-stu-id="119c2-129">Although this topic focuses on using the service moniker from Visual Basic 6.0 code, you can use a service moniker from other languages.</span></span> <span data-ttu-id="119c2-130">当通过 C++ 代码使用标记时，应使用“no_namespace named_guids raw_interfaces_only”导入 Svcutil.exe 生成的程序集，如下面的代码中所示。</span><span class="sxs-lookup"><span data-stu-id="119c2-130">When using a moniker from C++ code the Svcutil.exe generated assembly should be imported with "no_namespace named_guids raw_interfaces_only" as shown in the following code.</span></span>
 
     ```cpp
     #import "ComTestProxy.tlb" no_namespace named_guids
     ```
 
-     <span data-ttu-id="db8e8-131">모든 메서드에서 `HResult`를 반환하도록 가져온 인터페이스 정의를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-131">This modifies the imported interface definitions so that all methods return an `HResult`.</span></span> <span data-ttu-id="db8e8-132">다른 모든 반환 값은 출력 매개 변수로 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-132">Any other return values are converted into out parameters.</span></span> <span data-ttu-id="db8e8-133">전체 메서드 실행은 동일하게 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-133">The overall execution of the methods remains the same.</span></span> <span data-ttu-id="db8e8-134">이 경우 프록시에서 메서드를 호출할 때 예외의 원인을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-134">This allows you to determine the cause of an exception when calling a method on the proxy.</span></span> <span data-ttu-id="db8e8-135">이 기능은 C++ 코드에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="db8e8-135">This functionality is only available from C++ code.</span></span>
+     <span data-ttu-id="119c2-131">这会修改导入的接口定义，以便所有方法均会返回一个 `HResult`。</span><span class="sxs-lookup"><span data-stu-id="119c2-131">This modifies the imported interface definitions so that all methods return an `HResult`.</span></span> <span data-ttu-id="119c2-132">其他任何返回值都将转换为 out 参数。</span><span class="sxs-lookup"><span data-stu-id="119c2-132">Any other return values are converted into out parameters.</span></span> <span data-ttu-id="119c2-133">方法的总体执行情况保持不变。</span><span class="sxs-lookup"><span data-stu-id="119c2-133">The overall execution of the methods remains the same.</span></span> <span data-ttu-id="119c2-134">这将允许您确定在代理上调用方法时出现异常的原因。</span><span class="sxs-lookup"><span data-stu-id="119c2-134">This allows you to determine the cause of an exception when calling a method on the proxy.</span></span> <span data-ttu-id="119c2-135">仅可通过 C++ 代码来使用此功能。</span><span class="sxs-lookup"><span data-stu-id="119c2-135">This functionality is only available from C++ code.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="db8e8-136">另请参阅</span><span class="sxs-lookup"><span data-stu-id="db8e8-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="119c2-136">另请参阅</span><span class="sxs-lookup"><span data-stu-id="119c2-136">See also</span></span>
 
-- [<span data-ttu-id="db8e8-137">ServiceModel Metadata 유틸리티 도구(Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="db8e8-137">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [<span data-ttu-id="119c2-137">ServiceModel 元数据实用工具 (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="119c2-137">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../servicemodel-metadata-utility-tool-svcutil-exe.md)
