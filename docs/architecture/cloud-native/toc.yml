@@ -44,12 +44,16 @@
         - name: 服务网格通信基础结构
           href: service-mesh-communication-infrastructure.md
     - name: 分布式数据
-      href: distributed-data.md
+      href: null
       items:
-        - name: 云本机数据模式
-          href: data-patterns.md
-        - name: Azure 中的数据存储
-          href: azure-data-storage.md
+        - name: 每个微服务的数据库
+          href: database-per-microservice.md
+        - name: 关系与NoSQL 数据
+          href: relational-vs-nosql-data.md
+        - name: 缓存在云本机应用程序中
+          href: azure-caching.md
+        - name: Azure 中的 Elasticsearch
+          href: elastic-search-in-azure.md
     - name: 云本机复原能力
       href: resiliency.md
       items:

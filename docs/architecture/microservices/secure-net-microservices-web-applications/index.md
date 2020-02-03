@@ -4,12 +4,12 @@ description: .NET 微服务和 Web 应用中的安全性 - 了解 ASP.NET Core W
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: b25f02140915ce87c5c478d8a8a5fe28ba7693b3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 6d318f4efc6958610947f164d6ca63634f3d7db5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736946"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777214"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>确保 .NET 微服务和 Web 应用的安全性
 
@@ -121,7 +121,7 @@ else
 }
 ```
 
-在 Visual Studio 中创建 ASP.NET 代码 Web 应用程序项目时，如果选择“单个用户帐户”  身份验证选项，则使用外部提供程序进行登录所需的所有代码已在项目中，如图 9-3 所示。
+在 Visual Studio 中创建 ASP.NET Core Web 应用程序项目时，如果选择“单个用户帐户”  身份验证选项，则使用外部提供程序进行登录所需的所有代码已在项目中，如图 9-3 所示。
 
 ![“新建 ASP.NET Core Web 应用程序”对话框的屏幕截图。](./media/index/select-external-authentication-option.png)
 
