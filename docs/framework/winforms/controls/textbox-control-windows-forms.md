@@ -37,7 +37,7 @@ Windows 窗体文本框用于获取用户的输入或显示文本。 `TextBox` �
  [如何：在 Windows 窗体 TextBox 控件中查看多个行](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
  描述如何使文本框可滚动。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.TextBox> 类  
  对此类进行描述，并提供指向其所有成员的链接。  
   

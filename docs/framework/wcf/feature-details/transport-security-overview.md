@@ -46,20 +46,20 @@ Windows Communication Foundation （WCF）中的传输安全机制取决于所�
   
  以下几节讨论其他客户端凭据类型。  
   
-#### <a name="basic"></a>Basic  
+#### <a name="basic"></a>基本  
  这对应于 IIS 中的基本身份验证方法。 使用此模式时，必须为 IIS 服务器配置 Windows 用户帐户和适当的 NTFS 文件系统权限。 有关 IIS 6.0 的详细信息，请参阅[启用基本身份验证和配置领域名称](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc785293(v=ws.10))。 有关 IIS 7.0 的详细信息，请参阅[配置基本身份验证（IIS 7）](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772009(v=ws.10))。  
   
-#### <a name="certificate"></a>Certificate  
+#### <a name="certificate"></a>证书  
  IIS 有一个要求客户端使用证书进行登录的选项。 此功能还可以使 IIS 将客户端证书映射到 Windows 帐户。 有关 IIS 6.0 的详细信息，请参阅[在 iis 6.0 中启用客户端证书](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc727994(v=ws.10))。 有关 IIS 7.0 的详细信息，请参阅[在 iis 7 中配置服务器证书](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))。  
   
-#### <a name="digest"></a>Digest  
+#### <a name="digest"></a>摘要  
  摘要式身份验证类似于基本身份验证，但其具有以哈希形式而不是明文形式发送凭据的优点。 有关 IIS 6.0 的详细信息，请参阅[iis 6.0 中的摘要式身份验证](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10))。 有关 IIS 7.0 的详细信息，请参阅[配置摘要式身份验证（IIS 7）](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754104(v=ws.10))。  
   
 #### <a name="windows"></a>Windows  
  这对应于 IIS 中的集成 Windows 身份验证。 设置为此值时，还需要服务器位于使用 Kerberos 协议作为其域控制器的 Windows 域中。 如果服务器不在支持 Kerberos 的域中，或者如果 Kerberos 系统失败，您可以使用下一节中说明的 NT LAN Manager (NTLM) 值。 有关 IIS 6.0 的详细信息，请参阅[iis 6.0 中的集成 Windows 身份验证](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc738016(v=ws.10))。 有关 IIS 7.0 的详细信息，请参阅[在 iis 7 中配置服务器证书](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))。
   
 #### <a name="ntlm"></a>NTLM  
- 这使服务器可以在 Kerberos 协议失败时使用 NTLM 进行身份验证。 有关在 IIS 6.0 中配置 IIS 的详细信息，请参阅[强制 NTLM 身份验证](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786486(v=ws.10))。 对于 IIS 7.0，Windows 身份验证包括 NTLM 身份验证。 有关详细信息，请参阅[在 IIS 7 中配置服务器证书](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))。
+ 这使服务器可以在 Kerberos 协议失败时使用 NTLM 进行身份验证。 有关在 IIS 6.0 中配置 IIS 的详细信息，请参阅[强制 NTLM 身份验证](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786486(v=ws.10))。 对于 IIS 7.0，Windows 身份验证包括 NTLM 身份验证。 有关详细信息，请参阅 [在 IIS 7 中配置服务器证书](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))。
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
  <xref:System.ServiceModel.WSHttpBinding> 类专用于与实现 WS* 规范的服务进行互操作。 此绑定的传输安全为 HTTP 上的安全套接字层 (SSL)，即 HTTPS。 若要创建使用 SSL 的 WCF 应用程序，请使用 IIS 来承载应用程序。 或者，如果您要创建自承载的应用程序，请使用 HttpCfg.exe 工具将 X.509 证书绑定到计算机上的特定端口。 端口号被指定为 WCF 应用程序的一部分作为终结点地址。 使用传输模式时，终结点地址必须包括 HTTPS 协议，否则运行时将引发异常。 有关详细信息，请参阅[HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
@@ -82,7 +82,7 @@ Windows Communication Foundation （WCF）中的传输安全机制取决于所�
  [!code-csharp[c_ProgrammingSecurity#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#12)]
  [!code-vb[c_ProgrammingSecurity#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#12)]  
   
-#### <a name="client"></a>Client  
+#### <a name="client"></a>客户端  
  在客户端，必须使用 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 类的 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> 方法指定证书。  
   
 > [!NOTE]

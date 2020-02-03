@@ -29,7 +29,7 @@ ms.locfileid: "76745464"
   
 ### <a name="to-set-tile-view-programmatically"></a>若要以编程方式设置磁贴视图  
   
-1. 使用 <xref:System.Windows.Forms.ListView> 控件的 <xref:System.Windows.Forms.View> 枚举。  
+1. 使用 <xref:System.Windows.Forms.View> 控件的 <xref:System.Windows.Forms.ListView> 枚举。  
   
     ```vb  
     ListView1.View = View.Tile  

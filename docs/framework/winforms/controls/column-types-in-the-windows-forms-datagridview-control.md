@@ -22,7 +22,7 @@ ms.locfileid: "76743850"
   
  下表描述了可在 <xref:System.Windows.Forms.DataGridView> 控件中使用的各种列类。  
   
-|类|描述|  
+|类|说明|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|与基于文本的值一起使用。 当绑定到数字和字符串时自动生成。|  
 |<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|与 <xref:System.Boolean> 和 <xref:System.Windows.Forms.CheckState> 值一起使用。 当绑定到这些类型的值时自动生成。|  

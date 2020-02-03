@@ -49,7 +49,7 @@ ms.locfileid: "76743746"
   
  显示文件对话框的权限不会授予应用程序对 <xref:System.Windows.Forms.FileDialog>、<xref:System.Windows.Forms.OpenFileDialog> 和 <xref:System.Windows.Forms.SaveFileDialog> 类所有成员的完全访问权限。 有关调用每个方法所需的确切权限，请参阅 .NET Framework 类库文档中该方法的参考主题。  
   
- 以下代码示例使用 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 方法将用户指定的文件打开为 <xref:System.Windows.Forms.RichTextBox> 控件。 该示例需要 <xref:System.Security.Permissions.FileDialogPermission> 和关联的 <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> 枚举值。 该示例演示如何处理 <xref:System.Security.SecurityException> 以确定是否应禁用保存功能。 此示例要求你的 <xref:System.Windows.Forms.Form> 具有名为 `ButtonOpen` 的 <xref:System.Windows.Forms.Button> 控件和名为 `RtfBoxMain` 的 <xref:System.Windows.Forms.RichTextBox> 控件。  
+ 以下代码示例使用 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 方法将用户指定的文件打开为 <xref:System.Windows.Forms.RichTextBox> 控件。 该示例需要 <xref:System.Security.Permissions.FileDialogPermission> 和关联的 <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> 枚举值。 该示例演示如何处理 <xref:System.Security.SecurityException> 以确定是否应禁用保存功能。 此示例要求你的 <xref:System.Windows.Forms.Form> 具有名为 <xref:System.Windows.Forms.Button> 的 `ButtonOpen` 控件和名为 <xref:System.Windows.Forms.RichTextBox> 的 `RtfBoxMain` 控件。  
   
 > [!NOTE]
 > 在示例中未展示保存功能的编程逻辑。  
@@ -135,7 +135,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 > [!NOTE]
 > 在视觉C#对象中，确保添加代码以启用事件处理程序。 通过使用上一示例中的代码，以下代码显示了如何启用事件处理程序。`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
-### <a name="other-files"></a>其他文件  
+### <a name="other-files"></a>Other Files  
  有时你将需要读取或写入到用户未指定的文件，例如当你必须保存应用程序设置时。 在本地 Intranet 和 Internet 区域中，你的应用程序将无权在本地文件中存储数据。 但是，它将能够在独立存储中存储数据。 独立存储是一个抽象的数据隔离舱（而非具体的存储位置），它包含一个或多个独立存储文件（称为存储区），这些文件包含存储数据的实际目录位置。 文件访问权限（如 <xref:System.Security.Permissions.FileIOPermission>）不是必须具有的权限；<xref:System.Security.Permissions.IsolatedStoragePermission> 类控制独立存储权限。 默认情况下，在本地 Intranet 和 Internet 区域中运行的应用程序可以使用独立存储来存储数据；但是，磁盘配额等设置可能有所不同。 有关独立存储的详细信息，请参阅[独立存储](../../standard/io/isolated-storage.md)。  
   
  下面的示例使用独立存储将数据写入位于某个存储区中的文件。 该示例需要 <xref:System.Security.Permissions.IsolatedStorageFilePermission> 和 <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser> 枚举值。 该示例演示了将 <xref:System.Windows.Forms.Button> 控件的某些属性值读取和写入到独立存储中的文件。 应用程序启动后将调用 `Read` 函数，将在应用程序结束之前调用 `Write` 函数。 该示例要求 `Read` 和 `Write` 函数作为包含名为 `MainButton`<xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Form> 的成员存在。  
@@ -348,7 +348,7 @@ public void Write()
 }  
 ```  
   
-## <a name="database-access"></a>数据库访问权限  
+## <a name="database-access"></a>数据库访问  
  访问数据库所需的权限因数据库提供程序而异；但是，只有使用相应权限运行的应用程序可以通过数据连接访问数据库。 有关访问数据库所需权限的详细信息，请参阅[代码访问安全性和 ADO.NET](../data/adonet/code-access-security.md)。  
   
  如果因为要使应用程序以部分信任权限运行而不能直接访问数据库，作为一种替代方法，可将 Web 服务作为备份方法来访问你的数据。 Web 服务是一种软件，可通过网络以编程方式进行访问。 通过 Web 服务，应用程序可以跨代码组区域共享数据。 默认情况下，本地 Intranet 和 Internet 区域中的应用程序被授予了访问其源站点的权限，使其能够调用同一台服务器上托管的 Web 服务。 有关详细信息，请参阅 ASP.NET AJAX 或[Windows Communication Foundation](../wcf/index.md)[中的 Web 服务](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100))。  

@@ -40,7 +40,7 @@ ms.locfileid: "76742026"
       > [!NOTE]
       > 如果要绑定到框架或 Microsoft 程序集中的类型，请清除“隐藏以 Microsoft 或 System 开头的程序集”复选框。
 
-7. 单击“下一步”，再单击“完成”。
+7. 单击“下一步”，然后单击“完成”。
 
 ### <a name="to-bind-the-control-to-the-bindingsource"></a>将控件绑定到 BindingSource
 

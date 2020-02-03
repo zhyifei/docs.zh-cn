@@ -1,5 +1,5 @@
 ---
-title: 패널 배경 설정
+title: 设置 Panel 控件的背景
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,7 +18,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744744"
 ---
-# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>방법: Windows Forms 패널의 배경 설정
+# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>如何：设置 Windows 窗体面板的背景
 Windows 窗体 <xref:System.Windows.Forms.Panel> 控件可以同时显示背景色和背景图像。 <xref:System.Windows.Forms.Control.BackColor%2A> 属性设置所包含控件（如标签和单选按钮）的背景色。 如果未设置 <xref:System.Windows.Forms.Control.BackgroundImage%2A> 属性，则 <xref:System.Windows.Forms.Control.BackColor%2A> 选择将填充整个面板。 如果设置了 <xref:System.Windows.Forms.Control.BackgroundImage%2A> 属性，则该图像将显示在包含的控件后。  
   
 ### <a name="to-set-the-background-programmatically"></a>以编程方式设置背景  
@@ -71,5 +71,5 @@ Windows 窗体 <xref:System.Windows.Forms.Panel> 控件可以同时显示背景�
 
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
-- [Panel 컨트롤](panel-control-windows-forms.md)
-- [Panel 컨트롤 개요](panel-control-overview-windows-forms.md)
+- [Panel 控件](panel-control-windows-forms.md)
+- [Panel 控件概述](panel-control-overview-windows-forms.md)

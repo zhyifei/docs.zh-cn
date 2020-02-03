@@ -13,10 +13,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743383"
 ---
-# <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤에 마스터-세부 목록 만들기
+# <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>如何：使用设计器用 Windows 窗体 DataGrid 控件创建主/详细信息列表
 
 > [!NOTE]
-> <xref:System.Windows.Forms.DataGridView> 控件将替换功能并将其添加到 <xref:System.Windows.Forms.DataGrid> 控件;但是，如果您选择，则会保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容性和将来使用。 자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하세요.
+> <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。
 
  如果您的 <xref:System.Data.DataSet> 包含一系列相关表，则您可以使用两个 <xref:System.Windows.Forms.DataGrid> 控件以主-详细信息格式显示数据。 一个 <xref:System.Windows.Forms.DataGrid> 指定为主网格，第二个指定为详细信息网格。 当你在 "主列表" 中选择条目时，所有相关的子项都显示在 "详细信息" 列表中。 例如，如果您的 <xref:System.Data.DataSet> 包含 Customers 表和相关订单表，则您可以将 Customers 表指定为主网格，将 Orders 表指定为详细信息网格。 从主网格中选择客户时，"订单" 表中与该客户关联的所有订单都将显示在 "详细信息" 网格中。
 
@@ -51,7 +51,7 @@ ms.locfileid: "76743383"
 
 ## <a name="see-also"></a>另请参阅
 
-- [DataGrid 컨트롤](datagrid-control-windows-forms.md)
-- [DataGrid 컨트롤 개요](datagrid-control-overview-windows-forms.md)
-- [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
-- [Visual Studio에서 데이터에 컨트롤 바인딩](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
+- [DataGrid 控件](datagrid-control-windows-forms.md)
+- [DataGrid 控件概述](datagrid-control-overview-windows-forms.md)
+- [如何：将 Windows 窗体 DataGrid 控件绑定到数据源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [在 Visual Studio 中将控件绑定到数据](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

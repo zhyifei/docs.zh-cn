@@ -22,7 +22,7 @@ ms.locfileid: "76730829"
  [安全术语](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
  讨论 WCF 安全时使用的术语词汇表。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -38,6 +38,6 @@ ms.locfileid: "76730829"
   
 ## <a name="see-also"></a>另请参阅
 
-- [安全](../../../../docs/framework/wcf/feature-details/security.md)
-- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [安全性](../../../../docs/framework/wcf/feature-details/security.md)
+- [安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server App Fabric 的安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

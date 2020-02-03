@@ -31,7 +31,7 @@ ms.locfileid: "76745190"
  [如何：通过 Windows 窗体 LinkLabel 控件显示网页 (Visual Basic)](display-a-web-page-from-a-wf-linklabel-control-visual-basic.md)  
  演示如何在用户单击 Windows 窗体 `LinkLabel` 控件时在默认浏览器中显示网页。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.LinkLabel> 类  
  对此类进行描述，并提供指向其所有成员的链接。  
   

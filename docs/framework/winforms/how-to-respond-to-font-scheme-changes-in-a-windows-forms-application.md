@@ -15,7 +15,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739223"
 ---
-# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>방법: Windows Forms 애플리케이션에서 글꼴 구성표 변경에 응답
+# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>如何：在 Windows 窗体应用程序中响应字体方案更改
 在 Windows 操作系统中，用户可以更改系统范围的字体设置，使默认字体显得更大或更小。 更改这些字体设置对于视觉障碍的用户非常重要，需要更大的类型才能在屏幕上读取文本。 可以通过增加或减少窗体的大小和所有包含的文本，只要字体方案发生更改，就可以调整 Windows 窗体应用程序来做出这些更改。 如果希望窗体动态地适应字体大小的变化，则可以将代码添加到窗体中。  
   
  通常，Windows 窗体使用的默认字体是 <xref:Microsoft.Win32> 命名空间调用 `GetStockObject(DEFAULT_GUI_FONT)`返回的字体。 此调用返回的字体仅在屏幕分辨率发生更改时才会更改。 如下面的过程所示，你的代码必须将默认字体更改为 <xref:System.Drawing.SystemFonts.IconTitleFont%2A>，以响应字号更改。  
@@ -47,7 +47,7 @@ ms.locfileid: "76739223"
      [!code-csharp[WinFormsAutoScaling#5](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
      [!code-vb[WinFormsAutoScaling#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
-6. 코드를 컴파일하고 실행합니다.  
+6. 编译并运行该代码。  
   
 ### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>在 Windows XP 中手动更改字体方案  
   
@@ -68,4 +68,4 @@ ms.locfileid: "76739223"
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
-- [Windows Forms의 자동 크기 조정](automatic-scaling-in-windows-forms.md)
+- [Windows 窗体中的自动缩放](automatic-scaling-in-windows-forms.md)

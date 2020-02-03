@@ -25,7 +25,7 @@ Windows 窗体 `RadioButton` 控件向用户提供两个或更多个互斥选项
  [如何：按功能分组 Windows 窗体 RadioButton 控件](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
  说明如何将单选按钮分组为一组，只能选择其中一项。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.RadioButton> 类  
  对此类进行描述，并提供指向其所有成员的链接。  
   

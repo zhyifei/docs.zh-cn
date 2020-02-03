@@ -36,7 +36,7 @@ ms.locfileid: "76735463"
   
  另请参阅[如何：使用设计器定义工具栏按钮的图标](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md)，[如何：使用设计器将按钮添加到工具栏控件](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md)。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.ToolBar> 类  
  提供类及其成员的相关引用信息。  
   

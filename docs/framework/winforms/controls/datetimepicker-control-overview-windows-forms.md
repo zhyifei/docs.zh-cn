@@ -1,5 +1,5 @@
 ---
-title: DateTimePicker 컨트롤 개요
+title: DateTimePicker 控件概述
 ms.date: 03/30/2017
 f1_keywords:
 - DateTimePicker
@@ -14,10 +14,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746943"
 ---
-# <a name="datetimepicker-control-overview-windows-forms"></a>DateTimePicker 컨트롤 개요(Windows Forms)
+# <a name="datetimepicker-control-overview-windows-forms"></a>DateTimePicker 控件概述（Windows 窗体）
 使用 Windows 窗体 <xref:System.Windows.Forms.DateTimePicker> 控件，用户可从日期或时间列表中选择单个项。 用于表示日期时，它显示在两个部分：一个下拉列表，其中包含以文本表示的日期，当您单击列表旁边的向下箭头时，将显示网格。 网格看起来像 <xref:System.Windows.Forms.MonthCalendar> 控件，该控件可用于选择多个日期。 有关 <xref:System.Windows.Forms.MonthCalendar> 控件的详细信息，请参阅[MonthCalendar 控件概述](monthcalendar-control-overview-windows-forms.md)。  
   
-## <a name="key-properties"></a>키 속성  
+## <a name="key-properties"></a>键属性  
  如果希望 <xref:System.Windows.Forms.DateTimePicker> 显示为用于选取或编辑时间的控件而不是日期，请将 <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> 属性设置为 `true`，并将 <xref:System.Windows.Forms.DateTimePicker.Format%2A> 属性设置为 <xref:System.Windows.Forms.DateTimePickerFormat.Time>。 有关详细信息，请参阅[如何：在 DateTimePicker 控件中显示时间](how-to-display-time-with-the-datetimepicker-control.md)。  
   
  <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> 属性设置为 `true`时，控件中的选定日期旁边将显示一个复选框。 选中此复选框后，可以更新所选的日期时间值。 如果复选框为空，则该值显示为 "不可用"。  
@@ -26,5 +26,5 @@ ms.locfileid: "76746943"
   
 ## <a name="see-also"></a>另请参阅
 
-- [방법: Windows Forms DateTimePicker 컨트롤을 사용하여 날짜를 사용자 지정 형식으로 표시](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
-- [방법: Windows Forms DateTimePicker 컨트롤을 사용하여 날짜 설정 및 반환](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+- [如何：使用 Windows 窗体 DateTimePicker 控件显示自定义格式的日期](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [如何：使用 Windows 窗体 DateTimePicker 控件设置和返回日期](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

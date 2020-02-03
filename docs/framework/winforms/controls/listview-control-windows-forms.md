@@ -62,7 +62,7 @@ Windows 窗体 `ListView` 控件显示带图标的项列表。 你可以使用�
   
 - [演练：使用设计器创建带有 ListView 和 TreeView 控件的资源管理器样式界面](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.ListView> 类  
  对此类进行描述，并提供指向其所有成员的链接。  
   

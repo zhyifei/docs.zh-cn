@@ -22,9 +22,9 @@ ms.locfileid: "76745562"
   
 2. 将 <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> 属性设置为 <xref:System.Windows.Forms.RichTextBoxScrollBars> 枚举的适当值。  
   
-    |{2&gt;值&lt;2}|描述|  
+    |值|说明|  
     |-----------|-----------------|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both>（默认）|仅当文本超过控件的宽度或长度时，显示水平或垂直滚动条，或同时显示两者。|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both>（默认值）|仅当文本超过控件的宽度或长度时，显示水平或垂直滚动条，或同时显示两者。|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|永远不会显示任何类型的滚动条。|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Horizontal>|仅当文本超过控件的宽度时，才显示水平滚动条。 （为此，必须将 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 属性设置为 `false`。）|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Vertical>|仅当文本超过控件的高度时显示垂直滚动条。|  
@@ -34,10 +34,10 @@ ms.locfileid: "76745562"
   
 3. 将 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 属性设置为适当的值。  
   
-    |{2&gt;值&lt;2}|描述|  
+    |值|说明|  
     |-----------|-----------------|  
     |`false`|控件中的文本不会自动调整以适应控件的宽度，因此它将向右滚动，直至到达换行符。 如果选择了 "水平滚动条" 或以上两者，请使用此值。|  
-    |`true`（默认）|控件中的文本会自动调整以适应控件的宽度。 不会显示水平滚动条。 如果选择了 "垂直滚动条" 或 "无"，则使用此值来显示一个或多个段落。|  
+    |`true`（默认值）|控件中的文本会自动调整以适应控件的宽度。 不会显示水平滚动条。 如果选择了 "垂直滚动条" 或 "无"，则使用此值来显示一个或多个段落。|  
   
 ## <a name="see-also"></a>另请参阅
 

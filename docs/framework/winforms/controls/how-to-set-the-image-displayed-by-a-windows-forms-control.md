@@ -54,7 +54,7 @@ pictureBox1->Image = Image::FromFile(String::Concat
    "\\Image.gif"));
 ```
 
-## <a name="designer"></a>Designer
+## <a name="designer"></a>设计器
 
 1. 在 Visual Studio 的 "**属性**" 窗口中，选择控件的**Image**或**BackgroundImage**属性，然后选择省略号（Visual Studio](./media/visual-studio-ellipsis-button.png)中![省略号按钮）以显示 "**选择资源**" 对话框。
 

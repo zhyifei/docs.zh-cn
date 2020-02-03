@@ -35,18 +35,18 @@ ms.locfileid: "76742328"
 ## <a name="types-of-data-binding"></a>数据绑定的类型  
  Windows 窗体可以利用两种类型的数据绑定：简单绑定和复杂绑定。 每一种都有不同的优势。  
   
-|数据绑定的类型|描述|  
+|数据绑定的类型|说明|  
 |--------------------------|-----------------|  
 |简单数据绑定|控件绑定到单个数据元素（如数据集表的列中的值）的能力。 对于诸如 <xref:System.Windows.Forms.TextBox> 控件或 <xref:System.Windows.Forms.Label> 控件的控件，即通常只显示单个值的控件，通常使用这种绑定。 事实上，控件上的任何属性都可以绑定到数据库中的字段。 Visual Studio 中提供了此功能的广泛支持。<br /><br /> 有关详细信息，请参阅：<br /><br /> [与数据绑定相关的 -   接口](interfaces-related-to-data-binding.md)<br />-   [如何：在 Windows 窗体中导航数据](how-to-navigate-data-in-windows-forms.md)<br />-   [如何：在 Windows 窗体上创建简单绑定控件](how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
 |复杂数据绑定|控件绑定一个以上数据元素（通常为一个数据库中的一个以上的记录）的能力。 复杂绑定也称基于列表的绑定。 支持复杂绑定的控件示例为 <xref:System.Windows.Forms.DataGridView>、<xref:System.Windows.Forms.ListBox> 和 <xref:System.Windows.Forms.ComboBox> 控件。 有关复杂数据绑定的示例，请参阅[如何：将 Windows 窗体 ComboBox 或 ListBox 控件绑定到数据](./controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)。|  
   
-## <a name="bindingsource-component"></a>{2&gt;BindingSource 组件&lt;2}  
+## <a name="bindingsource-component"></a>BindingSource 组件  
  为了简化数据绑定，Windows 窗体让你可将数据源绑定到 <xref:System.Windows.Forms.BindingSource> 组件，然后将控件绑定到 <xref:System.Windows.Forms.BindingSource>。 你可以在简单或复杂绑定方案中使用 <xref:System.Windows.Forms.BindingSource>。 在任一种情况下，<xref:System.Windows.Forms.BindingSource> 均充当数据源和绑定控件的中介，提供更改通知货币管理和其他服务。  
   
 ## <a name="common-scenarios-that-employ-data-binding"></a>采用数据绑定的常见方案  
  几乎每个商业应用程序都使用读取自一种类型或另一种类型的数据源的信息，方法通常是数据绑定。 以下列表显示了几个最常见的利用数据绑定作为数据表示和操作方法的方案。  
   
-|方案|描述|  
+|场景|说明|  
 |--------------|-----------------|  
 |Reporting|报表为你提供了一种灵活的方式来显示和汇总打印出的文档中的数据。 一种很常见的做法是：创建一个将数据源的选定内容打印到屏幕或打印机的报表。 常见的报表包括列表、发票和摘要。 通常将项格式化成列表的列，在每个列表项下组织子项，但你应选择最适合数据的布局。|  
 |数据输入|输入大量相关数据或提示用户输入信息的常用方法是使用数据输入表单。 用户可以使用文本框、选项按钮、下拉列表和复选框来输入信息或选择选项。 然后提交信息并将其存储在数据库中，数据库结构基于所输入的信息。|  

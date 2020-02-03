@@ -29,7 +29,7 @@ Windows 窗体 `Panel` 控件用于为其他控件提供可识别的分组。 �
  [如何：设置 Panel 控件的背景](how-to-set-the-background-of-a-windows-forms-panel.md)  
  描述如何在面板上显示背景色和背景图像。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.Panel>  
  对此类进行描述，并提供指向其所有成员的链接。  
   

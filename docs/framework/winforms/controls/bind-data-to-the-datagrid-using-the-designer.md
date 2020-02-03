@@ -30,7 +30,7 @@ ms.locfileid: "76744117"
 
 3. 如果项目尚没有数据源，请单击“添加项目数据源”，按照向导指示的步骤进行操作。
 
-     有关详细信息，请参阅[数据源配置向导](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120))。 新数据源将显示在“选择数据源”下拉窗口中。 如果新数据源只包含一个成员（例如单个数据库表），控件将自动绑定到该成员。 否则，请记住执行下一步。
+     有关详细信息，请参阅[数据源配置向导](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120))。 新数据源将显示在“选择数据源”下拉窗口中。 如果新数据源只包含一个成员（例如单个数据库表），控件将自动绑定到该成员。 否则，继续执行下一步。
 
 4. 如果尚未展开，则展开“其他数据源”和“项目数据源”节点，然后选择绑定控件的数据源。
 

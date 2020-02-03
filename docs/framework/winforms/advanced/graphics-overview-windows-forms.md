@@ -28,7 +28,7 @@ GDI + 是一图形设备接口使程序员能够编写与设备无关的应用�
  [图形界面的结构](structure-of-the-graphics-interface.md)  
  介绍 GDI + 的托管类接口。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Drawing>  
  提供对 GDI + 基本图形功能的访问权限。  
   

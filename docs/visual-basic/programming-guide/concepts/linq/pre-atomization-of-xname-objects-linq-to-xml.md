@@ -33,7 +33,7 @@ Dim root2 As New XElement(root1, New XElement(data, New XAttribute(id, "1"), "4,
 Console.WriteLine(root2)
 ```
 
-该示例产生下面的输出：
+此示例生成以下输出：
 
 ```xml
 <Root>
@@ -59,7 +59,7 @@ Dim root2 As New XElement(root1, New XAttribute(XNamespace.Xmlns + "aw", aw),
 Console.WriteLine(root2)
 ```
 
-该示例产生下面的输出：
+此示例生成以下输出：
 
 ```xml
 <aw:Root xmlns:aw="http://www.adventure-works.com">

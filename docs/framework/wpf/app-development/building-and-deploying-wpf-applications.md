@@ -15,7 +15,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742099"
 ---
-# <a name="building-and-deploying-wpf-applications"></a>WPF 애플리케이션 빌드 및 배포
+# <a name="building-and-deploying-wpf-applications"></a>生成和部署 WPF 应用程序
 生成和部署模型提供了在本地和远程构建和部署应用程序的功能，其中包括：  
   
 - MSBuild：位于 system.web 命名空间中的 .NET 生成系统。  
@@ -24,17 +24,17 @@ ms.locfileid: "76742099"
   
 - ClickOnce 部署： .NET 发布和部署系统。  
   
-## <a name="in-this-section"></a>섹션 내용  
- [WPF 애플리케이션 빌드](building-a-wpf-application-wpf.md)  
- [WPF 애플리케이션 배포](deploying-a-wpf-application-wpf.md)  
- [방법 항목](build-and-deploy-how-to-topics.md)  
+## <a name="in-this-section"></a>本节内容  
+ [生成 WPF 应用程序](building-a-wpf-application-wpf.md)  
+ [部署 WPF 应用程序](deploying-a-wpf-application-wpf.md)  
+ [帮助主题](build-and-deploy-how-to-topics.md)  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>参考  
  MSBuild  
   
-## <a name="related-sections"></a>관련 섹션  
- [애플리케이션 관리 개요](application-management-overview.md)  
-  [WPF의 창](windows-in-wpf-applications.md)  
-  [탐색 개요](navigation-overview.md)  
-  [WPF XAML 브라우저 애플리케이션 개요](wpf-xaml-browser-applications-overview.md)  
-  [호스팅](hosting-wpf-applications.md)
+## <a name="related-sections"></a>相关章节  
+ [应用程序管理概述](application-management-overview.md)  
+  [WPF 中的窗口](windows-in-wpf-applications.md)  
+  [导航概述](navigation-overview.md)  
+  [WPF XAML Browser Applications Overview](wpf-xaml-browser-applications-overview.md)（WPF XAML 浏览器应用程序概述）  
+  [承载](hosting-wpf-applications.md)

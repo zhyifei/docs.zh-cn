@@ -48,7 +48,7 @@ ms.locfileid: "76735895"
        }  
     ```  
   
-     或  
+     \- 或 -  
   
 2. 插入 ASCII 字符或 Unicode 字符表示引号。 在 Visual Basic 中，使用 ASCII 字符（34）。 在视觉C#对象中，使用 Unicode 字符（\u0022）。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "76735895"
     > [!NOTE]
     > 在本示例中，不能使用 \u0022，因为不能使用指定基本字符集中字符的通用字符名。 否则，将产生 C3851。 有关详细信息，请参阅[编译器错误 C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851)。  
   
-     或  
+     \- 或 -  
   
 3. 还可以为该字符定义一个常数，然后在需要时使用。  
   

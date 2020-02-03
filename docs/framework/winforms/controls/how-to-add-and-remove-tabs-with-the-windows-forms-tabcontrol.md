@@ -49,7 +49,7 @@ ms.locfileid: "76732716"
   
 - 若要删除选定的选项卡，请使用 <xref:System.Windows.Forms.TabControl.TabPages%2A> 属性的 <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> 方法。  
   
-     或  
+     \- 或 -  
   
 - 若要删除所有选项卡，请使用 <xref:System.Windows.Forms.TabControl.TabPages%2A> 属性的 <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> 方法。  
   

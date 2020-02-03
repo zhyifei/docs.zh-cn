@@ -47,15 +47,15 @@ ms.locfileid: "76742310"
  ADO.NET 数据对象  
  ADO.NET 提供了一些适合绑定到的数据结构。 每个变量的复杂程度和复杂性各不相同。  
   
-- <xref:System.Data.DataColumn>。 <xref:System.Data.DataColumn> 是 <xref:System.Data.DataTable>的基本构建基块，因为许多列包含一个表。 每个 <xref:System.Data.DataColumn> 都有一个 <xref:System.Data.DataColumn.DataType%2A> 属性，该属性确定列包含的数据类型（例如，在描述汽车的表中创建汽车的类型）。 您可以简单地将控件（如 <xref:System.Windows.Forms.TextBox> 控件的 <xref:System.Windows.Forms.Control.Text%2A> 属性）绑定到数据表中的列。  
+- <xref:System.Data.DataColumn> 列中的一个值匹配。 <xref:System.Data.DataColumn> 是 <xref:System.Data.DataTable>的基本构建基块，因为许多列包含一个表。 每个 <xref:System.Data.DataColumn> 都有一个 <xref:System.Data.DataColumn.DataType%2A> 属性，该属性确定列包含的数据类型（例如，在描述汽车的表中创建汽车的类型）。 您可以简单地将控件（如 <xref:System.Windows.Forms.TextBox> 控件的 <xref:System.Windows.Forms.Control.Text%2A> 属性）绑定到数据表中的列。  
   
-- <xref:System.Data.DataTable>。 <xref:System.Data.DataTable> 是 ADO.NET 中具有行和列的表的表示形式。 数据表包含两个集合： <xref:System.Data.DataColumn>，表示给定表中的数据列（最终确定可输入到该表中的数据类型）和 <xref:System.Data.DataRow>，表示给定表中的数据行。 您可以将控件复杂地绑定到数据表中包含的信息（例如，将 <xref:System.Windows.Forms.DataGridView> 控件绑定到数据表）。 但是，当您绑定到 <xref:System.Data.DataTable>时，实际上就是绑定到表的默认视图。  
+- <xref:System.Data.DataTable> 列中的一个值匹配。 <xref:System.Data.DataTable> 是 ADO.NET 中具有行和列的表的表示形式。 数据表包含两个集合： <xref:System.Data.DataColumn>，表示给定表中的数据列（最终确定可输入到该表中的数据类型）和 <xref:System.Data.DataRow>，表示给定表中的数据行。 您可以将控件复杂地绑定到数据表中包含的信息（例如，将 <xref:System.Windows.Forms.DataGridView> 控件绑定到数据表）。 但是，当您绑定到 <xref:System.Data.DataTable>时，实际上就是绑定到表的默认视图。  
   
-- <xref:System.Data.DataView>。 <xref:System.Data.DataView> 是可以进行筛选或排序的单个数据表的自定义视图。 数据视图是复杂绑定控件使用的数据 "快照"。 您可以简单绑定或复杂地绑定到数据视图中的数据，但请注意，您要绑定到数据的固定 "图片"，而不是清除、更新数据源。  
+- <xref:System.Data.DataView> 列中的一个值匹配。 <xref:System.Data.DataView> 是可以进行筛选或排序的单个数据表的自定义视图。 数据视图是复杂绑定控件使用的数据 "快照"。 您可以简单绑定或复杂地绑定到数据视图中的数据，但请注意，您要绑定到数据的固定 "图片"，而不是清除、更新数据源。  
   
-- <xref:System.Data.DataSet>。 "<xref:System.Data.DataSet>" 是指数据库中数据的表、关系和约束的集合。 您可以简单地绑定或复杂绑定到数据集中的数据，但请注意，您要绑定到 <xref:System.Data.DataSet> 的默认 <xref:System.Data.DataViewManager> （请参阅下一个项目符号）。  
+- <xref:System.Data.DataSet> 列中的一个值匹配。 "<xref:System.Data.DataSet>" 是指数据库中数据的表、关系和约束的集合。 您可以简单地绑定或复杂绑定到数据集中的数据，但请注意，您要绑定到 <xref:System.Data.DataSet> 的默认 <xref:System.Data.DataViewManager> （请参阅下一个项目符号）。  
   
-- <xref:System.Data.DataViewManager>。 <xref:System.Data.DataViewManager> 是整个 <xref:System.Data.DataSet>的自定义视图，与 <xref:System.Data.DataView>相似，但包含关系。 使用 <xref:System.Data.DataViewManager.DataViewSettings%2A> 集合，可以为给定表的 <xref:System.Data.DataViewManager> 的任何视图设置默认筛选器和排序选项。  
+- <xref:System.Data.DataViewManager> 列中的一个值匹配。 <xref:System.Data.DataViewManager> 是整个 <xref:System.Data.DataSet>的自定义视图，与 <xref:System.Data.DataView>相似，但包含关系。 使用 <xref:System.Data.DataViewManager.DataViewSettings%2A> 集合，可以为给定表的 <xref:System.Data.DataViewManager> 的任何视图设置默认筛选器和排序选项。  
   
 ## <a name="see-also"></a>另请参阅
 

@@ -23,25 +23,25 @@ ms.locfileid: "76746149"
 ## <a name="transport-credential-types"></a>传输凭据类型  
  下表列出了在传输安全模式下可以由绑定使用的客户端凭据的可能类型。 创建服务时，将 `ClientCredentialType` 属性设置为这些值之一以指定凭据类型，客户端必须提供该凭据才能与您的服务进行通信。 可以在代码或配置文件中设置这些类型。  
   
-|设置|描述|  
+|设置|说明|  
 |-------------|-----------------|  
 |无|指定客户端不需要提供任何凭据。 这相当于匿名客户端。|  
-|Basic|为客户端指定基本身份验证。 有关其他信息，请参阅 RFC2617-[HTTP authentication：基本和摘要式身份验证](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt)。|  
-|Digest|为客户端指定摘要式身份验证。 有关其他信息，请参阅 RFC2617-[HTTP authentication：基本和摘要式身份验证](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt)。|  
+|基本|为客户端指定基本身份验证。 有关其他信息，请参阅 RFC2617-[HTTP authentication：基本和摘要式身份验证](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt)。|  
+|摘要|为客户端指定摘要式身份验证。 有关其他信息，请参阅 RFC2617-[HTTP authentication：基本和摘要式身份验证](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt)。|  
 |Ntlm|指定 NT LAN Manager (NTLM) 身份验证。 在由于某种原因无法使用 Kerberos 身份验证时使用。 你还可以通过将 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 属性设置为 `false`来禁用其用作回退，这将导致 WCF 在使用 NTLM 时尽力引发异常。 请注意，将此属性设置为 `false` 可能不阻止通过网络发送 NTLM 凭据。|  
 |Windows|指定 Windows 身份验证。 若要在 Windows 域上仅指定 Kerberos 协议，则将 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 属性设置为 `false`（默认值为 `true`）。|  
-|Certificate|使用 X.509 证书执行客户端身份验证。|  
+|证书|使用 X.509 证书执行客户端身份验证。|  
 |密码|用户必须提供用户名和密码。 使用 Windows 身份验证或其他自定义解决方案验证用户名/密码对。|  
   
 ### <a name="message-client-credential-types"></a>消息客户端凭据类型  
  下表列出了在创建使用消息安全的应用程序时可以使用的可能的凭据类型。 可以在代码或配置文件中使用这些值。  
   
-|设置|描述|  
+|设置|说明|  
 |-------------|-----------------|  
 |无|指定客户端不需要提供凭据。 这相当于匿名客户端。|  
 |Windows|允许在使用 Windows 凭据建立的安全上下文中交换 SOAP 消息。|  
 |用户名|允许服务可以要求使用用户名凭据对客户端进行身份验证。 请注意，WCF 不允许对用户名进行任何加密操作，例如生成签名或加密数据。 WCF 可确保在使用用户名凭据时确保传输的安全性。|  
-|Certificate|允许服务可以要求使用 X.509 证书对客户端进行身份验证。|  
+|证书|允许服务可以要求使用 X.509 证书对客户端进行身份验证。|  
 |已颁发的令牌|根据安全策略配置的自定义令牌类型。 默认令牌类型为安全断言标记语言 (SAML)。 令牌由安全令牌服务颁发。 有关详细信息，请参阅[联合和颁发的令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>服务凭据的协商模型  
@@ -111,6 +111,6 @@ ms.locfileid: "76746149"
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
 - [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [WCF 安全编程](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [HTTP 传输安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

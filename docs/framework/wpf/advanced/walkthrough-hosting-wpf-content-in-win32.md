@@ -20,7 +20,7 @@ ms.locfileid: "76735321"
  本教程介绍如何编写示例应用程序，[在 Win32 窗口示例中承载 WPF 内容](https://go.microsoft.com/fwlink/?LinkID=160004)，该示例在 win32 窗口中承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。 你可以扩展此示例来托管任何 Win32 窗口。 由于它涉及混合托管代码和非托管代码，因此该应用C++程序是以/cli 编写的。  
 
 <a name="requirements"></a>   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  本教程假定你基本熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 Win32 编程。 有关 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 编程的基本简介，请参阅[入门](../getting-started/index.md)。 有关 Win32 编程的简介，你应在主题上通过 Charles Petzold 在特定*编程窗口*中引用任意一本书。  
   
  由于本教程随附的示例是在/Cli 中C++实现的，因此本教程假定你熟悉使用C++来对 Windows API 进行编程，并了解托管代码编程。 熟悉C++/cli 非常有用，但不是必需的。  

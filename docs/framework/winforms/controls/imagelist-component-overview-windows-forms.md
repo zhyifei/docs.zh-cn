@@ -17,7 +17,7 @@ ms.locfileid: "76728100"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList 组件概述（Windows 窗体）
 
-Windows 窗体 <xref:System.Windows.Forms.ImageList> 组件用于存储图像，此图像之后可由控件显示。 借助图像列表，你可为图像的单个一致目录编写代码。 例如，只需更改按钮的 <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> 或 <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> 属性，即可旋转 <xref:System.Windows.Forms.Button> 控件显示的图像。 还可将相同图像列表与多个控件关联。 例如，如果同时使用 <xref:System.Windows.Forms.ListView> 控件和 <xref:System.Windows.Forms.TreeView> 控件来显示相同的文件列表，更改文件在图像列表中的图标将导致新图标显示在这两个视图中。
+Windows 窗体 <xref:System.Windows.Forms.ImageList> 组件用于存储图像，此图像之后可由控件显示。 借助图像列表，你可为图像的单个一致目录编写代码。 例如，只需更改按钮的 <xref:System.Windows.Forms.Button> 或 <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> 属性，即可旋转 <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> 控件显示的图像。 还可将相同图像列表与多个控件关联。 例如，如果同时使用 <xref:System.Windows.Forms.ListView> 控件和 <xref:System.Windows.Forms.TreeView> 控件来显示相同的文件列表，更改文件在图像列表中的图标将导致新图标显示在这两个视图中。
 
 ## <a name="using-imagelist-with-controls"></a>将 ImageList 与控件一起使用
 

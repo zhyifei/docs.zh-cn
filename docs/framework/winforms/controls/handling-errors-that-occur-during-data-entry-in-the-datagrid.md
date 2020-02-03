@@ -19,7 +19,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76738733"
 ---
-# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>연습: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생하는 오류 처리
+# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>演练：处理在 Windows 窗体 DataGridView 控件中输入数据时发生的错误
 
 处理基础数据存储区中的错误是数据输入应用程序所必需的功能。 Windows 窗体 <xref:System.Windows.Forms.DataGridView> 控件通过公开 <xref:System.Windows.Forms.DataGridView.DataError> 事件实现此功能，该事件是在数据存储区检测到违反约束或违反业务规则时引发的。
 
@@ -29,11 +29,11 @@ ms.locfileid: "76738733"
 
 ## <a name="prerequisites"></a>先决条件
 
-이 연습을 완료하려면 다음 사항이 필요합니다.
+为了完成本演练，您需要：
 
 - 访问包含 Northwind SQL Server 示例数据库的服务器。
 
-## <a name="creating-the-form"></a>폼 만들기
+## <a name="creating-the-form"></a>创建窗体
 
 #### <a name="to-handle-data-entry-errors-in-the-datagridview-control"></a>处理 DataGridView 控件中的数据输入错误
 
@@ -51,7 +51,7 @@ ms.locfileid: "76738733"
     此代码示例使用 `GetData` 方法，该方法返回填充的 <xref:System.Data.DataTable> 对象。 请确保将 `connectionString` 变量设置为适合数据库的值。
 
     > [!IMPORTANT]
-    > 암호와 같은 중요한 정보를 연결 문자열 내에 저장하면 애플리케이션 보안 문제가 발생할 수 있습니다. 데이터베이스 액세스를 제어할 경우에는 통합 보안이라고도 하는 Windows 인증을 사용하는 방법이 더 안전합니다. 자세한 내용은 [연결 정보 보호](../../data/adonet/protecting-connection-information.md)를 참조하세요.
+    > 将敏感信息（如密码）存储在连接字符串中可能会影响应用程序的安全性。 若要控制对数据库的访问，一种较为安全的方法是使用 Windows 身份验证（也称为集成安全性）。 有关详细信息，请参阅[保护连接信息](../../data/adonet/protecting-connection-information.md)。
 
     [!code-csharp[System.Windows.Forms.DataGridView.DataError#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#30)]
     [!code-vb[System.Windows.Forms.DataGridView.DataError#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#30)]
@@ -74,7 +74,7 @@ ms.locfileid: "76738733"
 
 #### <a name="to-test-the-form"></a>测试窗体
 
-- F5 키를 눌러 응용 프로그램을 실행합니다.
+- 按 F5 运行应用程序。
 
   你将看到一个使用 Customers 表中的数据填充的 <xref:System.Windows.Forms.DataGridView> 控件。 如果为 `CustomerID` 输入重复的值并提交编辑，则单元值将自动还原，并且你将看到一个显示数据输入错误的 <xref:System.Windows.Forms.MessageBox>。
 
@@ -96,7 +96,7 @@ ms.locfileid: "76738733"
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Windows Forms DataGridView 컨트롤의 데이터 입력](data-entry-in-the-windows-forms-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생하는 오류 처리](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
-- [연습: Windows Forms DataGridView 컨트롤의 데이터 유효성 검사](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
-- [연결 정보 보호](../../data/adonet/protecting-connection-information.md)
+- [Windows 窗体 DataGridView 控件中的数据输入](data-entry-in-the-windows-forms-datagridview-control.md)
+- [如何：处理在 Windows 窗体 DataGridView 控件有数据输入时发生的错误](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [演练：在 Windows 窗体 DataGridView 控件中验证数据](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [保护连接信息](../../data/adonet/protecting-connection-information.md)

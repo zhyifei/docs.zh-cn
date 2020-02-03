@@ -63,7 +63,7 @@ ms.locfileid: "76746814"
 
 5. 在 "**工具箱**" 中，双击 `UserControl1` 在 <xref:System.Windows.Forms.TableLayoutPanel> 控件的第一个单元格中创建 `UserControl1` 的实例。
 
-   `UserControl1` 的实例承载在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。
+   `UserControl1` 的实例承载在名为 <xref:System.Windows.Forms.Integration.ElementHost> 的新 `elementHost1` 控件中。
 
 6. 在 "**工具箱**" 中，双击 `UserControl1` 在 <xref:System.Windows.Forms.TableLayoutPanel> 控件的第二个单元格中创建另一个实例。
 
@@ -79,17 +79,17 @@ ms.locfileid: "76746814"
 
 1. 从 "**工具箱**" 中，将 `UserControl1` 的实例拖到窗体上，并将其放在 <xref:System.Windows.Forms.TableLayoutPanel> 控件下的空间中。
 
-   `UserControl1` 的实例承载在名为 `elementHost3` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。
+   `UserControl1` 的实例承载在名为 <xref:System.Windows.Forms.Integration.ElementHost> 的新 `elementHost3` 控件中。
 
 2. 使用对齐线，将 `elementHost3` 的左边缘与 <xref:System.Windows.Forms.TableLayoutPanel> 控件的左边缘对齐。
 
 3. 使用对齐线，将 `elementHost3` 按与 <xref:System.Windows.Forms.TableLayoutPanel> 控件相同的宽度排列。
 
-4. 朝着 <xref:System.Windows.Forms.TableLayoutPanel> 控件移动 `elementHost3`，直到控件间显示居中对齐线。
+4. 朝着 `elementHost3` 控件移动 <xref:System.Windows.Forms.TableLayoutPanel>，直到控件间显示居中对齐线。
 
 5. 在 "**属性**" 窗口中，将 "Margin" 属性的值设置为**20、20、20、20**。
 
-6. 向远离 <xref:System.Windows.Forms.TableLayoutPanel> 控件的方向移动 `elementHost3`，直到再次显示居中对齐线。 现在，居中对齐线指示边距为 20。
+6. 向远离 `elementHost3` 控件的方向移动 <xref:System.Windows.Forms.TableLayoutPanel>，直到再次显示居中对齐线。 现在，居中对齐线指示边距为 20。
 
 7. 将 `elementHost3` 向右移动，直到其左边缘与 `elementHost1`左边缘对齐。
 

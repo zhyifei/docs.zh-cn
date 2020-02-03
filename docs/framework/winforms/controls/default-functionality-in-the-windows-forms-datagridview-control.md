@@ -12,7 +12,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746131"
 ---
-# <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 기본 기능
+# <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的默认功能
 Windows 窗体 <xref:System.Windows.Forms.DataGridView> 控件可为用户提供大量的默认功能。  
   
 ## <a name="default-functionality"></a>默认功能  
@@ -49,4 +49,4 @@ Windows 窗体 <xref:System.Windows.Forms.DataGridView> 控件可为用户提供
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.DataGridView>
-- [DataGridView 컨트롤](datagridview-control-windows-forms.md)
+- [DataGridView 控件](datagridview-control-windows-forms.md)

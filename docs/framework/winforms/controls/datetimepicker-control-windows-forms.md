@@ -30,7 +30,7 @@ ms.locfileid: "76731969"
  [如何：使用 DateTimePicker 控件显示时间](how-to-display-time-with-the-datetimepicker-control.md)  
  显示 `DateTimePicker` 仅显示时间的步骤。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.DateTimePicker>  
  对此类进行描述，并提供指向其所有成员的链接。  
   

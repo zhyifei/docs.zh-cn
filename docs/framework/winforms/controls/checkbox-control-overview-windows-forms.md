@@ -1,5 +1,5 @@
 ---
-title: CheckBox 컨트롤 개요
+title: CheckBox 控件概述
 ms.date: 03/30/2017
 f1_keywords:
 - CheckBox
@@ -15,8 +15,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737091"
 ---
-# <a name="checkbox-control-overview-windows-forms"></a>CheckBox 컨트롤 개요(Windows Forms)
-Windows Forms <xref:System.Windows.Forms.CheckBox> 컨트롤은 특정 조건이 설정 또는 해제되었는지를 나타냅니다. 일반적으로 예/아니요 또는 True/False 선택을 사용자에게 제공하는 데 사용됩니다. 확인란 컨트롤을 그룹으로 사용하여 사용자가 하나 이상 선택할 수 있는 여러 선택 항목을 표시할 수 있습니다.  
+# <a name="checkbox-control-overview-windows-forms"></a>CheckBox 控件概述（Windows 窗体）
+Windows 窗体 <xref:System.Windows.Forms.CheckBox> 控件指示特定条件处于打开开始关闭状态。 通常用于向用户显示 Yes/No 或 True/False 选项。 可以使用组中的复选框控件来显示用户可从中选择一个或多选的多个选项。  
   
  复选框控件类似于单选按钮控件，其中每个控件用于指示用户所做的选择。 它们的区别在于，一次只能选择一个组中的一个单选按钮。 但对于复选框控件，可能会选择任意数量的复选框。  
   
@@ -27,6 +27,6 @@ Windows Forms <xref:System.Windows.Forms.CheckBox> 컨트롤은 특정 조건이
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.CheckBox>
-- [방법: Windows Forms CheckBox 컨트롤을 사용하여 옵션 설정](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [방법: Windows Forms CheckBox 클릭에 응답](how-to-respond-to-windows-forms-checkbox-clicks.md)
-- [CheckBox 컨트롤](checkbox-control-windows-forms.md)
+- [如何：使用 Windows 窗体 CheckBox 控件设置选项](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [如何：响应 Windows 窗体 CheckBox 控件单击](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [CheckBox 控件](checkbox-control-windows-forms.md)

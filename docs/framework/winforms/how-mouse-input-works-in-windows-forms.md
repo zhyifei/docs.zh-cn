@@ -21,7 +21,7 @@ ms.locfileid: "76739632"
 ## <a name="mouse-events"></a>鼠标事件  
  响应鼠标输入的主要方法是处理鼠标事件。 下表显示了鼠标事件，并说明了何时引发这些事件。  
   
-|鼠标事件|描述|  
+|鼠标事件|说明|  
 |-----------------|-----------------|  
 |<xref:System.Windows.Forms.Control.Click>|此事件在释放鼠标按钮时发生，通常在 <xref:System.Windows.Forms.Control.MouseUp> 事件之前发生。 此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。 当只需要确定何时发生单击时，处理此事件。|  
 |<xref:System.Windows.Forms.Control.MouseClick>|当用户用鼠标单击控件时发生此事件。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。 当你需要在单击时获取有关鼠标的信息时，请处理此事件。|  
@@ -38,7 +38,7 @@ ms.locfileid: "76739632"
 ## <a name="changing-mouse-input-and-detecting-system-settings"></a>更改鼠标输入和检测系统设置  
  您可以通过从控件派生并使用 <xref:System.Windows.Forms.Control.GetStyle%2A> 和 <xref:System.Windows.Forms.Control.SetStyle%2A> 方法，检测并更改控件处理鼠标输入的方式。 <xref:System.Windows.Forms.Control.SetStyle%2A> 方法使用 <xref:System.Windows.Forms.ControlStyles> 值的按位组合来确定控件是具有标准单击还是双击行为，或者控件是否将处理其自己的鼠标处理。 此外，<xref:System.Windows.Forms.SystemInformation> 类包括描述鼠标功能的属性，并指定鼠标如何与操作系统交互。 下表汇总了这些属性。  
   
-|Property|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>|获取一个区域的尺寸（以像素为单位），用户必须在该区域中单击两次，操作系统才将这两次单击视为双击。|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A>|获取在第一次单击与第二次单击之间可以经过的最大毫秒数，以使操作系统将鼠标操作视为双击。|  

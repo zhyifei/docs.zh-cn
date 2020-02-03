@@ -138,7 +138,7 @@ ms.locfileid: "76744073"
 
 3. 在 "**启动操作**" 部分中，选择 "**启动外部程序**"。 你将调试一个单独的 Visual Studio 实例，因此单击 "Visual Studio](./media/visual-studio-ellipsis-button.png)" 属性窗口中的省略号（![省略号按钮（...），浏览 Visual Studio IDE。 可执行文件的名称为 devenv，如果安装到默认位置，其路径为 *% ProgramFiles （x86）% \ Microsoft Visual Studio\2019\\\<edition > \Common7\IDE\devenv.exe*。
 
-4. 选择“确定”关闭对话框。
+4. 选择“确定”以关闭该对话框。
 
 5. 右键单击 "MarqueeControlLibrary" 项目，然后选择 "**设为启动项目**" 来启用此调试配置。
 
@@ -261,7 +261,7 @@ ms.locfileid: "76744073"
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#170)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#170)]
 
-14. 按**F6**生成解决方案。
+14. 按 **F6** 以生成解决方案。
 
 ## <a name="create-the-marqueeborder-child-control"></a>创建 MarqueeBorder 子控件
 
@@ -430,7 +430,7 @@ ms.locfileid: "76744073"
 
 ## <a name="add-designer-verbs-to-your-custom-designer"></a>将设计器谓词添加到自定义设计器
 
-设计器谓词是链接到事件处理程序的菜单命令。 设计器谓词在设计时添加到组件的快捷菜单中。 有关更多信息，请参见<xref:System.ComponentModel.Design.DesignerVerb>。
+设计器谓词是与事件处理程序链接的菜单命令。 设计器谓词在设计时添加到组件的快捷菜单中。 有关详细信息，请参阅 <xref:System.ComponentModel.Design.DesignerVerb>。
 
 你将向设计器添加两个设计器谓词：**运行测试**和**停止测试**。 这些谓词允许您在设计时查看 `MarqueeControl` 的运行时行为。 这些谓词将添加到 `MarqueeControlRootDesigner`。
 

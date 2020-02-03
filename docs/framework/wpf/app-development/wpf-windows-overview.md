@@ -167,7 +167,7 @@ ms.locfileid: "76742358"
   
 - 在不影响另一个窗口的情况下最小化、最大化和还原。  
   
- 某些窗口要求与打开它们的窗口保持某种关系。 例如，集成开发环境（IDE）应用程序可以打开属性窗口和工具窗口，其典型行为是涵盖创建它们的窗口。 此外，此类窗口应始终与创建它们的窗口一起关闭、最小化、最大化和还原。 这种关系可通过使一个窗口成为一个*窗口而*建立，并且通过设置*拥有的窗口*的 <xref:System.Windows.Window.Owner%2A> 属性以及对*所有者窗口*的引用来实现。 这在下面的示例中显示。  
+ 某些窗口要求与打开它们的窗口保持某种关系。 例如，集成开发环境（IDE）应用程序可以打开属性窗口和工具窗口，其典型行为是涵盖创建它们的窗口。 此外，此类窗口应始终与创建它们的窗口一起关闭、最小化、最大化和还原。 这种关系可通过使一个窗口成为一个*窗口而*建立，并且通过设置*拥有的窗口*的 <xref:System.Windows.Window.Owner%2A> 属性以及对*所有者窗口*的引用来实现。 下面的示例说明了这一点。  
   
  [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
  [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
@@ -190,7 +190,7 @@ ms.locfileid: "76742358"
   
 - 当前激活的窗口保持激活状态。  
   
- 但是，只要用户通过单击工作区或非工作区激活了窗口，窗口就会变为激活状态。 这种情况下：  
+ 但是，只要用户通过单击工作区或非工作区激活了窗口，窗口就会变为激活状态。 在这种情况下：  
   
 - 已激活窗口。  
   
@@ -293,7 +293,7 @@ ms.locfileid: "76742358"
   
  你还可以通过将 <xref:System.Windows.Window.WindowStartupLocation%2A> 属性设置为以下 <xref:System.Windows.WindowStartupLocation> 枚举值之一，指定 <xref:System.Windows.Window> 首次显示的位置：  
   
-- <xref:System.Windows.WindowStartupLocation.CenterOwner>（默认）  
+- <xref:System.Windows.WindowStartupLocation.CenterOwner>（默认值）  
   
 - <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -325,13 +325,13 @@ ms.locfileid: "76742358"
   
  如果希望窗口的宽度和高度与窗口内容大小相适应，可以使用 "<xref:System.Windows.Window.SizeToContent%2A>" 属性，该属性具有以下各值：  
   
-- <xref:System.Windows.SizeToContent.Manual>。 不起作用（默认值）。  
+- <xref:System.Windows.SizeToContent.Manual> 列中的一个值匹配。 不起作用（默认值）。  
   
-- <xref:System.Windows.SizeToContent.Width>。 适应内容宽度，其效果与将 <xref:System.Windows.FrameworkElement.MinWidth%2A> 和 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 设置为内容的宽度相同。  
+- <xref:System.Windows.SizeToContent.Width> 列中的一个值匹配。 适应内容宽度，其效果与将 <xref:System.Windows.FrameworkElement.MinWidth%2A> 和 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 设置为内容的宽度相同。  
   
-- <xref:System.Windows.SizeToContent.Height>。 适应内容高度，其效果与将 <xref:System.Windows.FrameworkElement.MinHeight%2A> 和 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 设置为内容的高度相同。  
+- <xref:System.Windows.SizeToContent.Height> 列中的一个值匹配。 适应内容高度，其效果与将 <xref:System.Windows.FrameworkElement.MinHeight%2A> 和 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 设置为内容的高度相同。  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight>。 适应内容宽度和高度，其效果与将 <xref:System.Windows.FrameworkElement.MinHeight%2A> 和 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 设置为内容的高度相同，同时将 <xref:System.Windows.FrameworkElement.MinWidth%2A> 和 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 设置为内容的宽度。  
+- <xref:System.Windows.SizeToContent.WidthAndHeight> 列中的一个值匹配。 适应内容宽度和高度，其效果与将 <xref:System.Windows.FrameworkElement.MinHeight%2A> 和 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 设置为内容的高度相同，同时将 <xref:System.Windows.FrameworkElement.MinWidth%2A> 和 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 设置为内容的宽度。  
   
  以下示例显示了一个窗口，它在第一次显示时即自动调整垂直方向和水平方向上的大小以适应内容。  
   
@@ -381,7 +381,7 @@ ms.locfileid: "76742358"
   
  可以通过设置其 <xref:System.Windows.Window.WindowState%2A> 属性来配置窗口的状态，此属性可以具有以下 <xref:System.Windows.WindowState> 枚举值之一：  
   
-- <xref:System.Windows.WindowState.Normal>（默认）  
+- <xref:System.Windows.WindowState.Normal>（默认值）  
   
 - <xref:System.Windows.WindowState.Maximized>  
   
@@ -409,7 +409,7 @@ ms.locfileid: "76742358"
   
 - <xref:System.Windows.ResizeMode.CanMinimize>  
   
-- <xref:System.Windows.ResizeMode.CanResize>（默认）  
+- <xref:System.Windows.ResizeMode.CanResize>（默认值）  
   
 - <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -427,7 +427,7 @@ ms.locfileid: "76742358"
   
 - <xref:System.Windows.WindowStyle.None>  
   
-- <xref:System.Windows.WindowStyle.SingleBorderWindow>（默认）  
+- <xref:System.Windows.WindowStyle.SingleBorderWindow>（默认值）  
   
 - <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
@@ -466,7 +466,7 @@ ms.locfileid: "76742358"
  [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
   
 <a name="SecurityConsiderations"></a>   
-## <a name="security-considerations"></a>需要考虑的安全性因素  
+## <a name="security-considerations"></a>安全注意事项  
  <xref:System.Windows.Window> 需要实例化 `UnmanagedCode` 安全权限。 对于从本地计算机安装并启动的应用程序，此权限在授予应用程序的权限集中。  
   
  但是，这超出了向使用 ClickOnce 从 Internet 或本地 intranet 区域启动的应用程序授予的权限集。 因此，用户将收到 ClickOnce 安全警告，需要将应用程序的权限集提升到完全信任。  

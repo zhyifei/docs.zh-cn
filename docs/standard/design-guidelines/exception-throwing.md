@@ -1,5 +1,5 @@
 ---
-title: 예외 Throw
+title: 引发异常
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,8 +14,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741676"
 ---
-# <a name="exception-throwing"></a>예외 Throw
-本部分介绍的异常引发准则要求对执行失败的含义进行明确定义。 只要成员无法执行其指定操作（成员名称所体现的含义），就会导致执行失败。 例如，如果 `OpenFile` 方法无法将打开的文件句柄返回给调用方，则视为执行失败。
+# <a name="exception-throwing"></a>引发异常
+本部分介绍的异常引发准则要求对执行失败的含义进行明确定义。 只要成员无法执行其指定操作（成员名称所体现的含义），就会导致执行失败。 例如，如果 `OpenFile` 方法无法向调用方返回打开的文件句柄，则会将其视为执行失败。
 
  大多数开发人员已经习惯使用异常来处理用法错误，例如除零或空引用。 在框架中，异常用于所有错误情况，包括执行错误。
 
@@ -33,7 +33,7 @@ ms.locfileid: "76741676"
 
  用于检查另一个成员的前提条件的成员通常被称为 tester（测试者），实际执行该工作的成员称为 doer（实施者）。
 
- 有些情况下，Tester-Doer 模式可能会产生不可接受的性能开销。 在这种情况下，应考虑使用所谓的 Try-Parse 模式（有关详细信息，请参阅[异常和性能](../../../docs/standard/design-guidelines/exceptions-and-performance.md)）。
+ 有些情况下，Tester-Doer 模式可能会产生不可接受的性能开销。 在这种情况下，应考虑所谓的试用分析模式（有关详细信息，请参阅[异常和性能](../../../docs/standard/design-guidelines/exceptions-and-performance.md)）。
 
  ✔️考虑引发异常的性能影响。 每秒以上100的引发率可能会显著影响大多数应用程序的性能。
 
@@ -61,9 +61,9 @@ ms.locfileid: "76741676"
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。
 
 ## <a name="see-also"></a>另请参阅
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
-- [예외 디자인 지침](../../../docs/standard/design-guidelines/exceptions.md)
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
+- [异常的设计准则](../../../docs/standard/design-guidelines/exceptions.md)

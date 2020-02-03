@@ -18,7 +18,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743269"
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>방법: Windows Forms Button을 적용 단추로 지정
+# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>如何：将 Windows 窗体按钮指定为“接受”按钮
 在任意 Windows 窗体上，可以将 <xref:System.Windows.Forms.Button> 控件指定为 "接受" 按钮，也称为 "默认" 按钮。 用户按 ENTER 键时，将单击默认按钮，而不考虑窗体上的其他哪个控件具有焦点。  
   
 > [!NOTE]
@@ -52,8 +52,8 @@ ms.locfileid: "76743269"
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
-- [Button 컨트롤 개요](button-control-overview-windows-forms.md)
-- [Windows Forms Button 컨트롤 선택 방법](ways-to-select-a-windows-forms-button-control.md)
-- [방법: Windows Forms 단추 클릭에 응답](how-to-respond-to-windows-forms-button-clicks.md)
-- [방법: Windows Forms Button을 취소 단추로 지정](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
-- [Button 컨트롤](button-control-windows-forms.md)
+- [Button 控件概述](button-control-overview-windows-forms.md)
+- [如何选择 Windows 窗体 Button 控件](ways-to-select-a-windows-forms-button-control.md)
+- [如何：响应 Windows 窗体 Button 控件单击](how-to-respond-to-windows-forms-button-clicks.md)
+- [如何：将 Windows 窗体 Button 控件指定为“取消”按钮](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
+- [Button 控件](button-control-windows-forms.md)

@@ -12,7 +12,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732299"
 ---
-# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms ListView 컨트롤에서 항목 추가 및 제거
+# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control-using-the-designer"></a>如何：使用设计器用 Windows 窗体 ListView 控件添加和移除项
 
 将项添加到 Windows 窗体 <xref:System.Windows.Forms.ListView> 控件的过程主要包含指定项并为其分配属性。 可以随时添加或删除列表项。
 
@@ -20,7 +20,7 @@ ms.locfileid: "76732299"
 
 ### <a name="to-add-or-remove-items-using-the-designer"></a>使用设计器添加或删除项
 
-1. <xref:System.Windows.Forms.ListView> 컨트롤을 선택합니다.
+1. 选择 <xref:System.Windows.Forms.ListView> 控件。
 
 2. 在 "**属性**" 窗口中，单击 "<xref:System.Windows.Forms.ListView.Items%2A>" 属性旁边的**省略号**按钮（!["Visual](./media/visual-studio-ellipsis-button.png)Studio 的属性窗口中的省略号按钮（...）"。
 
@@ -32,9 +32,9 @@ ms.locfileid: "76732299"
 
 ## <a name="see-also"></a>另请参阅
 
-- [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)
-- [방법: Windows Forms ListView 컨트롤에 열 추가](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [방법: Windows Forms ListView 컨트롤을 사용하여 열에 하위 항목 표시](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
-- [방법: Windows Forms ListView 컨트롤의 아이콘 표시](how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [방법: TreeView 또는 ListView 컨트롤에 사용자 지정 정보 추가(Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
-- [방법: Windows Forms ListView 컨트롤에서 항목 그룹화](how-to-group-items-in-a-windows-forms-listview-control.md)
+- [ListView 控件概述](listview-control-overview-windows-forms.md)
+- [如何：向 Windows 窗体 ListView 控件添加列](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [如何：使用 Windows 窗体 ListView 控件在列中显示子项](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [如何：显示 Windows 窗体 ListView 控件的图标](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [如何：向 TreeView 或 ListView 控件（Windows 窗体）添加自定义信息](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [如何：在 Windows 窗体 ListView 控件中对项进行分组](how-to-group-items-in-a-windows-forms-listview-control.md)

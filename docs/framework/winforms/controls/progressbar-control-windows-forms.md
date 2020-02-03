@@ -25,7 +25,7 @@ ms.locfileid: "76741211"
  [如何：设置 Windows 窗体 ProgressBar 控件显示的值](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
  讨论了几种不同的方法来增加 <xref:System.Windows.Forms.ProgressBar> 控件显示的值。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.ProgressBar>  
  提供类及其成员的相关引用信息。  
   

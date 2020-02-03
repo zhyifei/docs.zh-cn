@@ -25,7 +25,7 @@ ms.locfileid: "76746595"
   
 ### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a>定义 ToolStripItem 上显示的内容  
   
-- 将 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 属性设置为所需的值。 可能 `Image`、`ImageAndText`、`None`和 `Text`。 默认值为 `ImageAndText`。  
+- 将 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 属性设置为所需的值。 可能 `Image`、`ImageAndText`、`None`和 `Text`。 默认为 `ImageAndText`。  
   
     ```vb  
     ToolStripButton2.DisplayStyle = _  
@@ -38,7 +38,7 @@ ms.locfileid: "76746595"
   
 ### <a name="to-align-text-on-a-toolstripitem"></a>对齐 ToolStripItem 上的文本  
   
-- 将 <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> 属性设置为所需的值。 最可能的是上、中、下、左、上、右的任意组合。 默认值为 `MiddleCenter`。  
+- 将 <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> 属性设置为所需的值。 最可能的是上、中、下、左、上、右的任意组合。 默认为 `MiddleCenter`。  
   
     ```vb  
     ToolStripSplitButton1.TextAlign = _  
@@ -51,7 +51,7 @@ ms.locfileid: "76746595"
   
 ### <a name="to-align-an-image-on-a-toolstripitem"></a>对齐 ToolStripItem 上的图像  
   
-- 将 <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> 属性设置为所需的值。 最可能的是上、中、下、左、上、右的任意组合。 默认值为 `MiddleLeft`。  
+- 将 <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> 属性设置为所需的值。 最可能的是上、中、下、左、上、右的任意组合。 默认为 `MiddleLeft`。  
   
     ```vb  
     ToolStripSplitButton1.ImageAlign = _  
@@ -64,7 +64,7 @@ ms.locfileid: "76746595"
   
 ### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a>定义 ToolStripItem 文本和图像相对于彼此的显示方式  
   
-- 将 <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> 属性设置为所需的值。 可能 `ImageAboveText`、`ImageBeforeText`、`Overlay`、`TextAboveImage`和 `TextBeforeImage`。 默认值为 `ImageBeforeText`。  
+- 将 <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> 属性设置为所需的值。 可能的值为 `ImageAboveText`、`ImageBeforeText`、`Overlay`、`TextAboveImage` 和 `TextBeforeImage`。 默认为 `ImageBeforeText`。  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  

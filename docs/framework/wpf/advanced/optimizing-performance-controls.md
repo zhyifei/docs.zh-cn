@@ -66,8 +66,8 @@ UI 虚拟化是列表控件的一个重要方面。 不应混淆 UI 虚拟化和
 |<xref:System.Windows.Controls.ComboBox>|可启用|可启用|可启用|
 |<xref:System.Windows.Controls.ContextMenu>|可启用|可启用|可启用|
 |<xref:System.Windows.Controls.DocumentViewer>|不可用|不可用|可启用|
-|<xref:System.Windows.Controls.ListBox>|默认值|可启用|可启用|
-|<xref:System.Windows.Controls.ListView>|默认值|可启用|可启用|
+|<xref:System.Windows.Controls.ListBox>|默认|可启用|可启用|
+|<xref:System.Windows.Controls.ListView>|默认|可启用|可启用|
 |<xref:System.Windows.Controls.TreeView>|可启用|可启用|可启用|
 |<xref:System.Windows.Controls.ToolBar>|不可用|不可用|可启用|
 
@@ -77,8 +77,8 @@ UI 虚拟化是列表控件的一个重要方面。 不应混淆 UI 虚拟化和
 ## <a name="see-also"></a>另请参阅
 
 - [布局](layout.md)
-- [布局和示例](optimizing-performance-layout-and-design.md)
+- [布局和设计](optimizing-performance-layout-and-design.md)
 - [数据绑定](optimizing-performance-data-binding.md)
-- [控件](../controls/index.md)
+- [控制](../controls/index.md)
 - [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [演练：在 WPF 应用程序中缓存应用程序数据](walkthrough-caching-application-data-in-a-wpf-application.md)

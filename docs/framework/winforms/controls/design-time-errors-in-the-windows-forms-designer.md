@@ -42,7 +42,7 @@ ms.locfileid: "76746098"
 
 如果有针对错误的帮助主题，请单击**MSDN 帮助**链接，直接转到 docs.microsoft.com 上的帮助页面。
 
-## <a name="forum-posts-about-this-error"></a>이 오류에 대한 포럼 게시물
+## <a name="forum-posts-about-this-error"></a>有关此错误的论坛帖子
 
 单击 "在**MSDN 论坛中搜索与此错误相关的帖子**" 链接以导航到 Microsoft 开发人员网络论坛。 你可能想要专门搜索[Windows 窗体设计器](https://social.msdn.microsoft.com/Forums/windows/home?forum=winformsdesigner)或[Windows 窗体](https://social.msdn.microsoft.com/Forums/windows/home?category=windowsforms)论坛。
 
@@ -64,13 +64,13 @@ ms.locfileid: "76746098"
 
 第三方设计器已尝试访问不存在的工具箱中的选项卡。 请与组件供应商联系。
 
-### <a name="a-requested-language-parser-is-not-installed"></a>요청한 언어 파서가 설치되어 있지 않습니다.
+### <a name="a-requested-language-parser-is-not-installed"></a>请求的语言分析器未安装
 
 错误消息： "未安装请求的语言分析器。 语言分析器名称为 "{0}"。
 
 Visual Studio 尝试加载已为文件类型注册但无法加载的设计器。 这很可能是由于安装过程中出现错误引起的。 请与要用于修复的语言的供应商联系。
 
-### <a name="a-service-required-for-generating-and-parsing-source-code-is-missing"></a>소스 코드를 생성하고 구문 분석하는 데 필요한 서비스가 없습니다.
+### <a name="a-service-required-for-generating-and-parsing-source-code-is-missing"></a>缺少生成和分析源代码所需的服务
 
 这是第三方组件的问题。 请与组件供应商联系。
 
@@ -90,7 +90,7 @@ Visual Studio 尝试加载已为文件类型注册但无法加载的设计器。
 
 关闭并重新打开设计器，以使更改生效。 通常情况下，Visual Studio 会在更改完成后自动重新加载设计器。 但是，其他设计器（如第三方组件设计器）可能不支持重载行为。 在这种情况下，Visual Studio 会提示您手动关闭并重新打开设计器。
 
-### <a name="another-editor-has-the-file-open-in-an-incompatible-mode"></a>다른 편집기에서 파일이 호환되지 않는 모드로 열려 있습니다.
+### <a name="another-editor-has-the-file-open-in-an-incompatible-mode"></a>另一个编辑器以不兼容的模式打开了此文件
 
 错误消息： "另一个编辑器以不兼容模式打开了该文件。 请关闭编辑器，然后重试此操作。 "
 
@@ -110,7 +110,7 @@ Visual Studio 仅支持由设计器分析的代码块中的单维度数组。 �
 
 这是第三方组件的问题。 请与组件供应商联系。
 
-### <a name="cannot-access-the-visual-studio-toolbox-at-this-time"></a>지금은 Visual Studio 도구 상자에 액세스할 수 없습니다.
+### <a name="cannot-access-the-visual-studio-toolbox-at-this-time"></a>此时无法访问 Visual Studio 工具箱
 
 Visual Studio 调用了 "工具箱"，此操作不可用。 如果看到此错误，请查看此错误，请使用[报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)记录问题。
 
@@ -118,7 +118,7 @@ Visual Studio 调用了 "工具箱"，此操作不可用。 如果看到此错�
 
 如果尝试将事件连接到从基类继承的控件，则会出现此错误。 如果控件的成员变量是私有的，则 Visual Studio 不能将事件连接到方法。 私下继承的控件不能具有绑定到它们的附加事件。
 
-### <a name="cannot-create-a-method-name-for-the-requested-component-because-it-is-not-a-member-of-the-design-container"></a>디자인 컨테이너의 멤버가 아니므로 요청한 구성 요소에 대한 메서드 이름을 만들 수 없습니다.
+### <a name="cannot-create-a-method-name-for-the-requested-component-because-it-is-not-a-member-of-the-design-container"></a>请求的组件不是设计容器的成员，因此无法创建该组件的方法名
 
 Visual Studio 尝试将事件处理程序添加到设计器中没有成员变量的组件。 请与组件供应商联系。
 
@@ -148,7 +148,7 @@ Visual Studio 尝试将事件处理程序添加到设计器中没有成员变量
 
 若要更正此错误，请与组件供应商联系。 或者，如果它是您创建的组件，请在组件的构造函数中调用 `IContainer.Add` 方法。
 
-### <a name="component-name-cannot-be-empty"></a>구성 요소 이름은 비워 둘 수 없습니다.
+### <a name="component-name-cannot-be-empty"></a>组件名称不能为空
 
 当你尝试将组件重命名为空值时，会出现此错误。
 
@@ -170,7 +170,7 @@ Visual Studio 尝试将事件处理程序添加到设计器中没有成员变量
 
 Visual Studio 尝试连接事件处理方法，但找不到方法的一个或多个参数类型。 这通常是由于缺少引用引起的。 若要更正此错误，请将包含该类型的引用添加到该项目，然后重试。
 
-### <a name="could-not-locate-the-project-item-templates-for-inherited-components"></a>상속된 구성 요소에 대한 프로젝트 항목 템플릿을 찾을 수 없습니다.
+### <a name="could-not-locate-the-project-item-templates-for-inherited-components"></a>未能找到继承的组件的项目项模板
 
 Visual Studio 中的继承窗体的模板不可用。 如果看到此错误，请使用[报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)记录问题。
 
@@ -186,7 +186,7 @@ Visual Studio 已尝试创建事件处理程序，但事件类型出现错误。
 
 如果项目中存在错误的 .resx 文件，则会发生此错误。
 
-이 오류를 해결하려면 다음 단계를 수행합니다.
+更正此错误的步骤：
 
 1. 单击解决方案资源管理器中的 "**显示所有文件**" 按钮，查看与该解决方案相关联的 .resx 文件。
 2. 右键单击 .resx 文件，然后选择 "**打开**"，在 XML 编辑器中加载 .resx 文件。
@@ -196,7 +196,7 @@ Visual Studio 已尝试创建事件处理程序，但事件类型出现错误。
 
 如果默认区域性的项目中有无效的 .resx 文件，则会发生此错误。
 
-이 오류를 해결하려면 다음 단계를 수행합니다.
+更正此错误的步骤：
 
 1. 单击解决方案资源管理器中的 "**显示所有文件**" 按钮，查看与该解决方案相关联的 .resx 文件。
 2. 右键单击 .resx 文件，然后选择 "**打开**"，在 XML 编辑器中加载 .resx 文件。
@@ -240,7 +240,7 @@ Visual Studio 加载了类，但无法设计该类，因为该类的实施者未
 
 此控件或组件的设计器不支持 Visual Studio 所用的相同类型。 请与组件供应商联系。
 
-### <a name="the-class-name-is-not-a-valid-identifier-for-this-language"></a>클래스 이름이 이 언어에 대한 올바른 식별자가 아닙니다.
+### <a name="the-class-name-is-not-a-valid-identifier-for-this-language"></a>该类名不是此语言的有效标识符
 
 用户创建的源代码的类名称对所使用的语言无效。 若要更正此错误，请将类命名为符合语言要求。
 
@@ -248,11 +248,11 @@ Visual Studio 加载了类，但无法设计该类，因为该类的实施者未
 
 不能将控件或组件添加到其自身。 如果出现这种情况，则可能会发生这种情况：在 InitializeComponent 方法中，有一个创建另一个 Form1 实例的窗体的代码。
 
-### <a name="the-designer-cannot-be-modified-at-this-time"></a>지금은 디자이너를 수정할 수 없습니다.
+### <a name="the-designer-cannot-be-modified-at-this-time"></a>此时无法修改设计器
 
 当编辑器中的文件标记为只读时，会发生此错误。 确保该文件未标记为只读并且应用程序未运行。
 
-### <a name="the-designer-could-not-be-shown-for-this-file-because-none-of-the-classes-within-it-can-be-designed"></a>이 파일에 디자인할 수 있는 클래스가 없으므로 디자이너에서 이 파일을 표시할 수 없습니다.
+### <a name="the-designer-could-not-be-shown-for-this-file-because-none-of-the-classes-within-it-can-be-designed"></a>文件中的类都不能进行设计，因此未能为该文件显示设计器
 
 当 Visual Studio 找不到满足设计器要求的基类时，将发生此错误。 窗体和控件必须派生自支持设计器的基类。 如果要从继承的窗体或控件派生，请确保已生成项目。
 
@@ -264,11 +264,11 @@ Visual Studio 无法加载类的设计器。 如果看到此错误，请使用[�
 
 发生此错误的原因是，传递到设计器的对象的基类是[抽象](../../../csharp/language-reference/keywords/abstract.md)的，这是不允许的。
 
-### <a name="the-file-could-not-be-loaded-in-the-designer"></a>파일을 디자이너에 로드할 수 없습니다.
+### <a name="the-file-could-not-be-loaded-in-the-designer"></a>未能在设计器中加载该文件
 
 此文件的基类不支持任何设计器。 作为一种解决方法，使用代码视图处理该文件。 在解决方案资源管理器中右键单击该文件，然后选择 "**查看代码**"。
 
-### <a name="the-language-for-this-file-does-not-support-the-necessary-code-parsing-and-generation-services"></a>이 파일의 언어는 필요한 코드 구문 분석 및 생성 서비스를 지원하지 않습니다.
+### <a name="the-language-for-this-file-does-not-support-the-necessary-code-parsing-and-generation-services"></a>该文件的语言不支持必需的代码分析和生成服务
 
 错误消息： "此文件的语言不支持必要的代码分析和生成服务。 请确保正在打开的文件是项目的成员，然后再次尝试打开该文件。 "
 
@@ -294,7 +294,7 @@ Visual Studio 尝试创建组件，但所创建的对象未实现 <xref:System.C
 
 若要更正此错误，请确保错误中指定的属性不为 null。
 
-### <a name="the-serialization-data-object-is-not-of-the-proper-type"></a>serialization 데이터 개체는 올바른 형식이 아닙니다.
+### <a name="the-serialization-data-object-is-not-of-the-proper-type"></a>序列化数据对象的类型不正确
 
 序列化程序提供的数据对象不是与当前正在使用的序列化程序匹配的类型的实例。 请与组件供应商联系。
 
@@ -308,13 +308,13 @@ Visual Studio 所需的服务不可用。 如果尝试加载的项目不支持�
 
 此错误表示组件或组件设计器调用了**AddService**方法，该方法需要接口和对象，但指定的对象未实现指定的接口。 请与组件供应商联系。
 
-### <a name="the-text-in-the-code-window-could-not-be-modified"></a>코드 창의 텍스트를 수정할 수 없습니다.
+### <a name="the-text-in-the-code-window-could-not-be-modified"></a>未能修改代码窗口中的文本
 
 错误消息： "无法修改代码窗口中的文本。 请检查该文件是否不是只读的，以及是否有足够的磁盘空间。 "
 
 由于磁盘空间或内存问题导致 Visual Studio 无法编辑文件，或者文件被标记为只读时，会出现此错误。
 
-### <a name="the-toolbox-enumerator-object-only-supports-retrieving-one-item-at-a-time"></a>도구 상자 열거자 개체에서는 한 번에 하나의 항목만 검색할 수 있습니다.
+### <a name="the-toolbox-enumerator-object-only-supports-retrieving-one-item-at-a-time"></a>工具箱枚举数对象仅支持一次检索一个项
 
 如果看到此错误，请查看此错误，请使用[报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)记录问题。
 
@@ -336,7 +336,7 @@ Visual Studio 所需的服务不可用。 如果尝试加载的项目不支持�
 
 加载设计器时，Visual Studio 找不到类型。 确保引用包含该类型的程序集。 如果程序集是当前开发项目的一部分，请确保已生成项目。
 
-### <a name="the-type-resolution-service-may-only-be-called-from-the-main-application-thread"></a>형식 확인 서비스는 기본 응용 프로그램 스레드에서만 호출할 수 있습니다.
+### <a name="the-type-resolution-service-may-only-be-called-from-the-main-application-thread"></a>只能从主应用程序线程调用类型解析服务
 
 Visual Studio 尝试从错误的线程访问所需资源。 当用于创建设计器的代码从主应用程序线程以外的线程调用类型解析服务时，将显示此错误。 若要更正此错误，请从正确的线程调用服务，或与组件供应商联系。
 
@@ -358,7 +358,7 @@ Visual Studio 尝试从错误的线程访问所需资源。 当用于创建设�
 
 第三方组件对 "工具箱" 选项卡上的项进行了回调，但该项已经包含了一个回调。 请与组件供应商联系。
 
-### <a name="this-language-engine-does-not-support-a-codemodel-with-which-to-load-a-designer"></a>이 언어 엔진에서 디자이너를 로드할 수 있는 CodeModel을 지원하지 않습니다.
+### <a name="this-language-engine-does-not-support-a-codemodel-with-which-to-load-a-designer"></a>此语言引擎不支持用于加载设计器的 CodeModel
 
 此消息类似于 "此文件的语言不支持必要的代码分析和生成服务"，但此消息涉及内部注册问题。 如果看到此错误，请查看此错误，请使用[报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)记录问题。
 
@@ -374,7 +374,7 @@ Visual Studio 找不到具有匹配参数的[构造函数](../../../csharp/progr
 
 Visual Studio 无法添加引用。 若要更正此错误，请检查是否已引用不同版本的引用。
 
-### <a name="unable-to-check-out-the-current-file"></a>현재 파일을 체크 아웃할 수 없습니다.
+### <a name="unable-to-check-out-the-current-file"></a>无法签出当前文件
 
 错误消息： "无法签出当前文件。 文件可能已被锁定，或者可能需要手动签出文件。 "
 
@@ -388,9 +388,9 @@ Visual Studio 无法添加引用。 若要更正此错误，请检查是否已�
 
 当组件设计器请求从 "选项" 对话框访问页面上的特定值，但该值不存在时，会出现此错误。 请与组件供应商联系。
 
-### <a name="visual-studio-cannot-open-a-designer-for-the-file-because-the-class-within-it-does-not-inherit-from-a-class-that-can-be-visually-designed"></a>파일 내부에 있는 클래스가 시각적으로 디자인할 수 있는 클래스에서 상속되지 않으므로 Visual Studio에서 해당 파일에 대한 디자이너를 열 수 없습니다.
+### <a name="visual-studio-cannot-open-a-designer-for-the-file-because-the-class-within-it-does-not-inherit-from-a-class-that-can-be-visually-designed"></a>该文件内的类不是从可进行可视化设计的类继承，因此 Visual Studio 无法为该文件打开设计器
 
-Visual Studio에서 클래스를 로드했는데 해당 클래스의 디자이너는 로드할 수 없습니다. Visual Studio 要求设计器使用文件中的第一个类。 若要更正此错误，请移动类代码，使其成为文件中的第一个类，然后再次加载设计器。
+Visual Studio 加载了类，但未能加载该类的设计器。 Visual Studio 要求设计器使用文件中的第一个类。 若要更正此错误，请移动类代码，使其成为文件中的第一个类，然后再次加载设计器。
 
 ### <a name="visual-studio-cannot-save-or-load-instances-of-the-type-type-name"></a>Visual Studio 无法保存或加载类型为 "\<类型名称 >" 的实例
 

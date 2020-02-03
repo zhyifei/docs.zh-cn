@@ -19,7 +19,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745069"
 ---
-# <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 Just-In-Time 데이터 로드를 사용하여 가상 모드 구현
+# <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式
 在 <xref:System.Windows.Forms.DataGridView> 控件中实现虚拟模式的一个原因是只在需要时才检索数据。 这称为 *"实时数据加载"* 。  
   
  例如，如果您在远程数据库中使用非常大的表，则您可能希望仅在用户将新行滚动到视图中时，只检索显示和检索其他数据所需的数据，从而避免启动延迟。 如果运行应用程序的客户端计算机有有限数量的内存可用于存储数据，则在从数据库检索新值时，您可能还需要丢弃未使用的数据。  
@@ -34,7 +34,7 @@ ms.locfileid: "76745069"
  本主题后面将介绍 `IDataPageRetriever`、`DataRetriever`和 `Cache` 类型。  
   
 > [!NOTE]
-> 암호와 같은 중요한 정보를 연결 문자열 내에 저장하면 애플리케이션 보안 문제가 발생할 수 있습니다. 데이터베이스 액세스를 제어할 경우에는 통합 보안이라고도 하는 Windows 인증을 사용하는 방법이 더 안전합니다. 자세한 내용은 [연결 정보 보호](../../data/adonet/protecting-connection-information.md)를 참조하세요.  
+> 将敏感信息（如密码）存储在连接字符串中可能会影响应用程序的安全性。 若要控制对数据库的访问，一种较为安全的方法是使用 Windows 身份验证（也称为集成安全性）。 有关详细信息，请参阅[保护连接信息](../../data/adonet/protecting-connection-information.md)。  
   
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#100)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#100)]  
@@ -63,7 +63,7 @@ ms.locfileid: "76745069"
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#300)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#300)]  
   
-## <a name="additional-considerations"></a>추가 고려 사항  
+## <a name="additional-considerations"></a>其他注意事项  
  前面的代码示例作为实时数据加载的演示提供。 你需要根据自己的需要修改代码以获得最大效率。 至少需要为缓存中每页数据的行数选择适当的值。 此值将传递到 `Cache` 构造函数。 每页的行数应小于 <xref:System.Windows.Forms.DataGridView> 控件中可同时显示的行数。  
   
  为了获得最佳结果，你将需要执行性能测试和可用性测试，以确定你的系统和用户的要求。 需要考虑的几个因素包括运行应用程序的客户端计算机上的内存量、所用网络连接的可用带宽，以及所使用服务器的延迟时间。 带宽和延迟应在高峰使用时间进行确定。  
@@ -74,8 +74,8 @@ ms.locfileid: "76745069"
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Windows Forms DataGridView 컨트롤의 성능 조정](performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 크기를 조정하는 최선의 방법](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 가상 모드](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [연습: Windows Forms DataGridView 컨트롤에서 가상 모드 구현](implementing-virtual-mode-wf-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤에서 Just-In-Time 데이터 로드를 사용하여 가상 모드 구현](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+- [Windows 窗体 DataGridView 控件中的性能调整](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [有关缩放 Windows 窗体 DataGridView 控件的最佳做法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的虚拟模式](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式](implementing-virtual-mode-wf-datagridview-control.md)
+- [如何：在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

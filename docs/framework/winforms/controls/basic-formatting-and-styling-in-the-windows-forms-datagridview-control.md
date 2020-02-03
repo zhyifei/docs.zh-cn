@@ -37,7 +37,7 @@ ms.locfileid: "76731995"
  [如何：使用行模板在 Windows 窗体 DataGridView 控件中自定义行](use-the-row-template-to-customize-rows-in-the-datagrid.md)  
  描述如何使用 `RowTemplate` 属性设置将用于控件中所有行的行属性。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.DataGridView>  
  提供关于 <xref:System.Windows.Forms.DataGridView> 控件的参考文档。  
   

@@ -14,7 +14,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732347"
 ---
-# <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 추가 및 제거
+# <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器添加和移除 Windows 窗体 DataGridView 控件中的列
 Windows 窗体 <xref:System.Windows.Forms.DataGridView> 控件必须包含列才能显示数据。 如果你计划手动填充控件，则必须自行添加列。 或者，您可以将控件绑定到数据源，该数据源会自动生成并填充列。 如果数据源包含的列多于要显示的列数，则可以删除不需要的列。
 
  以下过程需要一个**Windows 应用程序**项目，其中包含一个包含 <xref:System.Windows.Forms.DataGridView> 控件的窗体。 有关设置此类项目的信息，请参阅[如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[如何：将控件添加到 Windows 窗体](how-to-add-controls-to-windows-forms.md)。
@@ -42,4 +42,4 @@ Windows 窗体 <xref:System.Windows.Forms.DataGridView> 控件必须包含列才
 
 - <xref:System.Windows.Forms.DataGridView>
 - [如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)
+- [如何：向 Windows 窗体添加控件](how-to-add-controls-to-windows-forms.md)

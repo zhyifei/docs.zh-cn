@@ -1,5 +1,5 @@
 ---
-title: DataGridView 控件方案
+title: DataGridView 控件应用方案
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], displaying in tabular format

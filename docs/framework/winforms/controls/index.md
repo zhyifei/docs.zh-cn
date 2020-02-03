@@ -17,7 +17,7 @@ ms.locfileid: "76745296"
 
 设计和修改 Windows 窗体应用程序的用户界面时，需要添加、对齐和定位控件。 控件是窗体对象内包含的对象。 每种类型的控件都有自己的一组属性、方法和事件，使其适用于特定用途。 可以在设计器中控制控件，并将代码编写为在运行时动态添加控件。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
 [将控件放在 Windows 窗体上](putting-controls-on-windows-forms.md)\
 收录了有关将控件置于窗体上的链接。

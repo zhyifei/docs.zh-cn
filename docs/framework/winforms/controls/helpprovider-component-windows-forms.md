@@ -22,7 +22,7 @@ Windows 窗体 `HelpProvider` 组件用于将基于 Windows 的应用程序与 H
   
  请参阅[Windows 窗体应用程序中的帮助系统](../advanced/help-systems-in-windows-forms-applications.md)。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.HelpProvider>  
  对此类进行描述，并提供指向其所有成员的链接。  
   

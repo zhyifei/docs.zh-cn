@@ -26,7 +26,7 @@ ms.locfileid: "76739788"
  [Windows 窗体   中的高 DPI 支持](high-dpi-support-in-windows-forms.md)  
  讨论 Windows 窗体对高 DPI 和动态缩放的支持。 
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Drawing.Size>  
  对此类进行描述，并提供指向其所有成员的链接。  
   

@@ -13,12 +13,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745966"
 ---
-# <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점
+# <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Windows 窗体 DataGridView 控件和 DataGrid 控件之间的区别
 <xref:System.Windows.Forms.DataGridView> 控件是替换 <xref:System.Windows.Forms.DataGrid> 控件的新控件。 <xref:System.Windows.Forms.DataGridView> 控件提供了许多在 <xref:System.Windows.Forms.DataGrid> 控件中缺少的基本和高级功能。 此外，<xref:System.Windows.Forms.DataGridView> 控件的体系结构可以比 <xref:System.Windows.Forms.DataGrid> 控件更轻松地进行扩展和自定义。  
   
  下表描述了 <xref:System.Windows.Forms.DataGrid> 控件中缺少 <xref:System.Windows.Forms.DataGridView> 控件中提供的几个主要功能。  
   
-|DataGridView 控件功能|설명|  
+|DataGridView 控件功能|说明|  
 |----------------------------------|-----------------|  
 |多列类型|<xref:System.Windows.Forms.DataGridView> 控件提供的内置列类型比 <xref:System.Windows.Forms.DataGrid> 控件的更多。 这些列类型满足最常见方案的需求，但在 <xref:System.Windows.Forms.DataGrid> 控件中扩展或替换列类型也更容易。 有关详细信息，请参阅[Windows 窗体 DataGridView 控件中的列类型](column-types-in-the-windows-forms-datagridview-control.md)。|  
 |显示数据的多种方式|<xref:System.Windows.Forms.DataGrid> 控件仅用于显示来自外部数据源的数据。 但 <xref:System.Windows.Forms.DataGridView> 控件可以显示存储在控件中的未绑定数据、绑定数据源中的数据，或者将绑定和未绑定的数据组合在一起。 你还可以在 <xref:System.Windows.Forms.DataGridView> 控件中实现虚拟模式，以提供自定义数据管理。 有关详细信息，请参阅[Windows 窗体 DataGridView 控件中的数据显示模式](data-display-modes-in-the-windows-forms-datagridview-control.md)。|  
@@ -37,14 +37,14 @@ ms.locfileid: "76745966"
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Windows.Forms.BindingSource>
-- [DataGridView 컨트롤](datagridview-control-windows-forms.md)
-- [DataGrid 컨트롤](datagrid-control-windows-forms.md)
-- [BindingSource 구성 요소](bindingsource-component.md)
-- [Windows Forms DataGridView 컨트롤의 열 형식](column-types-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 데이터 디스플레이 모드](data-display-modes-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 데이터 형식 지정](data-formatting-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 크기 조정 옵션](sizing-options-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 열 정렬 모드](column-sort-modes-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 선택 모드](selection-modes-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤 사용자 지정](customizing-the-windows-forms-datagridview-control.md)
+- [DataGridView 控件](datagridview-control-windows-forms.md)
+- [DataGrid 控件](datagrid-control-windows-forms.md)
+- [BindingSource 组件](bindingsource-component.md)
+- [Windows 窗体 DataGridView 控件中的列类型](column-types-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的单元格样式](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的数据显示模式](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的数据格式设置](data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的重设大小选项](sizing-options-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的列排序模式](column-sort-modes-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的选择模式](selection-modes-in-the-windows-forms-datagridview-control.md)
+- [自定义 Windows 窗体 DataGridView 控件](customizing-the-windows-forms-datagridview-control.md)

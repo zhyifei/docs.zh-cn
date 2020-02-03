@@ -19,7 +19,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745927"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>방법: Windows Forms LinkLabel 컨트롤에서 웹 페이지 표시(Visual Basic)
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>如何：通过 Windows 窗体 LinkLabel 控件显示网页 (Visual Basic)
 当用户单击 <xref:System.Windows.Forms.LinkLabel> 控件的 Windows 窗体时，此示例将在默认浏览器中显示网页。  
   
 ## <a name="example"></a>示例  
@@ -37,19 +37,19 @@ LinkLabel1.LinkClicked
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
- 이 예제에는 다음 사항이 필요합니다.  
+## <a name="compiling-the-code"></a>编译代码  
+ 此示例需要：  
   
 - 名为 `Form1`的 Windows 窗体。  
   
-- `LinkLabel1`이라는 <xref:System.Windows.Forms.LinkLabel> 컨트롤  
+- 名为 <xref:System.Windows.Forms.LinkLabel> 的 `LinkLabel1` 控件。  
   
 - 活动 Internet 连接。  
   
-## <a name="net-framework-security"></a>.NET Framework 보안  
- 调用 <xref:System.Diagnostics.Process.Start%2A> 方法需要完全信任。 자세한 내용은 <xref:System.Security.SecurityException>를 참조하세요.  
+## <a name="net-framework-security"></a>.NET Framework 安全性  
+ 调用 <xref:System.Diagnostics.Process.Start%2A> 方法需要完全信任。 有关详细信息，请参阅 <xref:System.Security.SecurityException>。  
   
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.LinkLabel>
-- [LinkLabel 컨트롤](linklabel-control-windows-forms.md)
+- [LinkLabel 控件](linklabel-control-windows-forms.md)

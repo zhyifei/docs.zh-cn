@@ -35,7 +35,7 @@ ms.locfileid: "76735765"
     domainUpDown1->Items->Remove("noodles");  
     ```  
   
-     或  
+     \- 或 -  
   
 - 使用 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> 方法按项的位置删除项。  
   

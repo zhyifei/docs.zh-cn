@@ -20,12 +20,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743016"
 ---
-# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤을 사용하여 들여쓰기, 내어쓰기 및 글머리 기호 단락 설정
+# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>如何：在 Windows 窗体 RichTextBox 控件中设置缩进、悬挂缩进和带项目符号的段落
 Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件有很多用于设置其显示文本格式的选项。 通过设置 "<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>" 属性，可以将所选段落设置为项目符号列表格式。 你还可以使用 <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>、<xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>和 <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> 属性设置段落的缩进量（相对于控件的左边缘和右边缘以及其他文本行的左边缘）。  
   
-### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>단락의 서식을 글머리 기호 목록으로 지정하려면  
+### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>将段落的格式设置为项目符号列表  
   
-1. <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 속성을 `true`으로 설정합니다.  
+1. 将 <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 属性设置为 `true`。  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  
@@ -39,7 +39,7 @@ Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件有很多用于设�
     richTextBox1->SelectionBullet = true;  
     ```  
   
-### <a name="to-indent-a-paragraph"></a>단락을 들여쓰려면  
+### <a name="to-indent-a-paragraph"></a>缩进段落  
   
 1. 将 <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> 属性设置为一个整数，该整数表示控件左边缘与文本左边缘之间的距离（以像素为单位）。  
   
@@ -66,10 +66,10 @@ Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件有很多用于设�
     ```  
   
     > [!NOTE]
-    > 이러한 모든 속성은 선택한 텍스트가 포함된 단락에 적용되며, 현재 삽입 지점 이후로 입력된 텍스트에도 적용됩니다. 예를 들어 사용자가 단락 내의 단어를 선택한 다음 들여쓰기를 조정하면, 이 단어가 포함된 전체 단락뿐만 아니라 선택한 단락 이후에 입력되는 모든 단락에도 새 설정이 적용됩니다. 有关以编程方式选择文本的信息，请参阅 <xref:System.Windows.Forms.TextBoxBase.Select%2A>。  
+    > 所有上述属性均影响包含所选文本的任何段落，还会影响在当前插入点之后键入的文本。 例如，当用户在段落中选择一个词然后调整缩进时，新的设置将应用于包含该词的整个段落，还会应用于随后在所选段落之后输入的任何段落。 有关以编程方式选择文本的信息，请参阅 <xref:System.Windows.Forms.TextBoxBase.Select%2A>。  
   
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [RichTextBox 控件](richtextbox-control-windows-forms.md)
+- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

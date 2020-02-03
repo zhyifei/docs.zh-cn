@@ -22,7 +22,7 @@ ms.locfileid: "76743766"
   
 - 已启用 <xref:System.Windows.Forms.DataGridView> 控件。  
   
-- 不 <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically><xref:System.Windows.Forms.DataGridView.EditMode%2A> 属性值。  
+- <xref:System.Windows.Forms.DataGridView.EditMode%2A> 属性值不为 <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>。  
   
 - 单元格、行、列和控件的 `ReadOnly` 属性都设置为 `false`。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "76743766"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
-- 名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件。  
+- 名为 <xref:System.Windows.Forms.DataGridView> 的 `dataGridView1` 控件。  
   
 - 对 <xref:System> 和 <xref:System.Windows.Forms> 程序集的引用。  
   

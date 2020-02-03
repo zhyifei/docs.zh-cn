@@ -1,5 +1,5 @@
 ---
-title: 열거형 디자인
+title: 枚举设计
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741711"
 ---
-# <a name="enum-design"></a>열거형 디자인
+# <a name="enum-design"></a>枚举设计
 
 枚举是一种特殊的值类型。 枚举分为两种类型：简单枚举和标志枚举。
 
@@ -32,7 +32,7 @@ ms.locfileid: "76741711"
 
 ❌ 不提供旨在供将来使用的保留枚举值。
 
-在后面的阶段，可以随时向现有枚举添加值。 有关向枚举添加值的更多详细信息，请参阅[向枚举添加值](#add_value)。 保留值只会污染实际的值集，并往往会导致用户错误。
+在后面的阶段，可以随时向现有枚举添加值。 有关向枚举添加值的详细信息，请参阅[将值添加到枚举](#add_value)。 保留值只会污染实际的值集，并往往会导致用户错误。
 
 ❌ 避免公开只包含一个值的枚举。
 
@@ -50,7 +50,7 @@ ms.locfileid: "76741711"
 
 - 枚举是一个标志枚举，包含 32 个以上标志，或者将来可能有更多标志。
 
-- 在枚举可能大小各不相同的情况下，基础类型需要与 <xref:System.Int32> 不同，以便更容易地与非托管代码进行互操作。
+- 基础类型需要不同于 <xref:System.Int32> 以便于与需要不同大小枚举的非托管代码进行互操作。
 
 - 较小的基础类型将大大节省空间。 如果希望将枚举主要用作控制流的参数，则大小差别不大。 如果符合以下条件，则可以大大节省空间：
 
@@ -60,13 +60,13 @@ ms.locfileid: "76741711"
 
   - 希望序列化大量枚举实例。
 
-对于内存中的用，请注意托管对象始终是 `DWORD` 对齐的，因此您需要在实例中有效地使用多个枚举或其他较小的结构来打包较小的枚举，这很重要，因为总实例大小总是要四舍五入到 `DWORD`。
+对于内存中使用，请注意，托管对象始终 `DWORD`对齐，因此，在实例中有效地需要多个枚举或其他小型结构，以便将较小的枚举打包，以便进行不同的更改，因为总实例大小始终会向上舍入到 `DWORD`。
 
 ✔️用名词或名词短语复数和简单枚举作为名词或名词短语来命名标志枚举。
 
 ❌ 不会直接扩展 <xref:System.Enum?displayProperty=nameWithType>。
 
-<xref:System.Enum?displayProperty=nameWithType> 是 CLR 用于创建用户定义的枚举的特殊类型。 大多数编程语言都提供了一个编程元素，来使你可以使用此功能。 例如，在 C# 中，`enum` 关键字用于定义枚举。
+<xref:System.Enum?displayProperty=nameWithType> 是 CLR 用来创建用户定义的枚举的特殊类型。 大多数编程语言都提供了一个编程元素，来使你可以使用此功能。 例如，在C# `enum` 关键字用于定义枚举。
 
 <a name="design"></a>
 
@@ -78,7 +78,7 @@ ms.locfileid: "76741711"
 
 ✔️考虑为常用的标志组合提供特殊的枚举值。
 
-按位运算是一种高级概念，简单任务应无需使用。 <xref:System.IO.FileAccess.ReadWrite> 就是这种特殊值的一个例子。
+按位运算是一种高级概念，简单任务应无需使用。 <xref:System.IO.FileAccess.ReadWrite> 是这种特殊值的示例。
 
 ❌ 避免创建标志枚举，其中某些值的组合无效。
 
@@ -98,9 +98,9 @@ ms.locfileid: "76741711"
 
 *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
-*Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
+*在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。
 
 ## <a name="see-also"></a>另请参阅
 
-- [형식 디자인 지침](../../../docs/standard/design-guidelines/type.md)
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
+- [类型设计准则](../../../docs/standard/design-guidelines/type.md)
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)

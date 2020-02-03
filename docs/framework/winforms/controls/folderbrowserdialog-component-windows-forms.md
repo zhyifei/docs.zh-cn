@@ -24,7 +24,7 @@ ms.locfileid: "76745720"
  [如何：使用 Windows 窗体 FolderBrowserDialog 组件选择文件夹](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
  说明如何以编程方式从对话框中提取所选文件夹，以及如何使用该组件的一些其他可选属性。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.FolderBrowserDialog>  
  对此类进行描述，并提供指向其所有成员的链接。  
   

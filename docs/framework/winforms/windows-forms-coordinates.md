@@ -1,5 +1,5 @@
 ---
-title: 一致
+title: 坐标
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms coordinates
@@ -14,7 +14,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76734660"
 ---
-# <a name="windows-forms-coordinates"></a>Windows Forms 좌표
+# <a name="windows-forms-coordinates"></a>Windows 窗体坐标
 Windows 窗体的坐标系统基于设备坐标，在 Windows 窗体中绘制时的基本度量单位是设备单位（通常为像素）。 屏幕上的点按 x 和 y 坐标对进行说明，其中 x 坐标向右递增，y 坐标从上到下递增。 根据您指定的是屏幕坐标还是工作区坐标，原点相对于屏幕的位置会有所不同。  
   
 ## <a name="screen-coordinates"></a>屏幕坐标  

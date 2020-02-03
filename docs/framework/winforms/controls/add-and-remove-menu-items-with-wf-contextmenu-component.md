@@ -23,7 +23,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746280"
 ---
-# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>방법: Windows Forms ContextMenu 구성 요소를 사용하여 메뉴 항목 추가 및 제거
+# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>如何：使用 Windows 窗体 ContextMenu 组件添加和移除菜单项
 说明如何在 Windows 窗体中添加和移除快捷菜单项。  
   
  Windows 窗体 <xref:System.Windows.Forms.ContextMenu> 组件提供了与所选对象相关的常用命令的菜单。 可以通过将 <xref:System.Windows.Forms.MenuItem> 对象添加到 <xref:System.Windows.Forms.Menu.MenuItems%2A> 集合来向快捷菜单添加项。  
@@ -58,7 +58,7 @@ ms.locfileid: "76746280"
     contextMenu1->MenuItems->Remove(mnuItemNew);  
     ```  
   
-     -또는-  
+     \- 或 -  
   
 2. 使用 <xref:System.Windows.Forms.ContextMenu> 组件的 `MenuItems` 集合的 `Clear` 方法从菜单中删除所有项。  
   
@@ -77,5 +77,5 @@ ms.locfileid: "76746280"
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.ContextMenu>
-- [ContextMenu 구성 요소](contextmenu-component-windows-forms.md)
-- [ContextMenu 구성 요소 개요](contextmenu-component-overview-windows-forms.md)
+- [ContextMenu 组件](contextmenu-component-windows-forms.md)
+- [ContextMenu 组件概述](contextmenu-component-overview-windows-forms.md)

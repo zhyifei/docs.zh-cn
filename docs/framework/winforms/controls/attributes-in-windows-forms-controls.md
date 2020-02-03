@@ -20,7 +20,7 @@ ms.locfileid: "76732127"
 ## <a name="attributes-for-control-and-component-properties"></a>控件和组件属性的特性  
  下表显示了可应用于自定义控件和组件的属性或其他成员的特性。 请参阅[如何：在 Windows 窗体控件中应用特性](how-to-apply-attributes-in-windows-forms-controls.md)，获取一个使用了其中许多特性的示例。  
   
-|属性|描述|  
+|属性|说明|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|指定要传递给属性的值，以使该属性从另一个源中获取其值。 这称为“环境”。|  
 |<xref:System.ComponentModel.BrowsableAttribute>|指定属性或事件是否应在“属性”窗口中显示。|  
@@ -30,7 +30,7 @@ ms.locfileid: "76732127"
 |<xref:System.ComponentModel.DisplayNameAttribute>|为属性、事件或不采用参数的 `public void` 方法指定显示名称。|  
 |<xref:System.ComponentModel.EditorAttribute>|指定用于更改属性的编辑器。|  
 |<xref:System.ComponentModel.EditorBrowsableAttribute>|指定可在编辑器中查看的属性或方法。|  
-|<xref:System.ComponentModel.Design.HelpKeywordAttribute>|指定类或成员的上下文关键字。|  
+|<xref:System.ComponentModel.Design.HelpKeywordAttribute>|为类或成员指定上下文关键字。|  
 |<xref:System.ComponentModel.LocalizableAttribute>|指定是否应本地化某一属性。|  
 |<xref:System.ComponentModel.PasswordPropertyTextAttribute>|指示对象的文本表示形式被星号等字符隐匿。|  
 |<xref:System.ComponentModel.ReadOnlyAttribute>|指定此特性绑定到的属性在设计时是只读还是可读/写。|  
@@ -40,7 +40,7 @@ ms.locfileid: "76732127"
 ## <a name="attributes-for-data-binding-properties"></a>数据绑定属性的特性  
  下表显示了可用于指定自定义控件和组件如何与数据绑定之间进行交互的特性。  
   
-|属性|描述|  
+|属性|说明|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.BindableAttribute>|指定属性是否通常用于绑定。|  
 |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|指定组件的数据源和数据成员属性。|  
@@ -51,7 +51,7 @@ ms.locfileid: "76732127"
 ## <a name="attributes-for-classes"></a>类的特性  
  下表显示了可用于在设计时指定自定义控件和组件的行为的特性。  
   
-|属性|描述|  
+|属性|说明|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.DefaultEventAttribute>|指定组件的默认事件。|  
 |<xref:System.ComponentModel.DefaultPropertyAttribute>|指定组件的默认属性。|  

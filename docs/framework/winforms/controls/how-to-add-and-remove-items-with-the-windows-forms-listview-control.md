@@ -16,7 +16,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743140"
 ---
-# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤을 사용하여 항목 추가 및 제거
+# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>如何：使用 Windows 窗体 ListView 控件添加和移除项
 将项添加到 Windows 窗体 <xref:System.Windows.Forms.ListView> 控件的过程主要包含指定项并为其分配属性。 可以随时添加或删除列表项。  
   
 ### <a name="to-add-items-programmatically"></a>以编程方式添加项  
@@ -36,5 +36,5 @@ ms.locfileid: "76743140"
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.ListView>
-- [ListView 컨트롤](listview-control-windows-forms.md)
-- [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)
+- [ListView 控件](listview-control-windows-forms.md)
+- [ListView 控件概述](listview-control-overview-windows-forms.md)

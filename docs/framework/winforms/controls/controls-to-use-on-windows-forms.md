@@ -109,13 +109,13 @@ ms.locfileid: "76737442"
  按照 Windows 资源管理器的方式显示带图标的项列表。  
   
  [MainMenu 组件](mainmenu-component-windows-forms.md)  
- 在运行时显示菜单。 尽管 <xref:System.Windows.Forms.MenuStrip> 替换先前版本的 <xref:System.Windows.Forms.MainMenu> 控件并添加功能，但如果你选择，将保留 <xref:System.Windows.Forms.MainMenu> 以实现向后兼容性和将来使用。  
+ 在运行时显示菜单。 尽管 <xref:System.Windows.Forms.MenuStrip> 替换了早期版本的 <xref:System.Windows.Forms.MainMenu> 控件并添加了功能；但是也可选择保留 <xref:System.Windows.Forms.MainMenu> 以备向后兼容和将来使用。  
   
  [MaskedTextBox 控件](maskedtextbox-control-windows-forms.md)  
  约束窗体中用户输入的格式。  
   
  [MenuStrip 控件](menustrip-control-windows-forms.md)  
- 为窗体提供菜单系统。 尽管 <xref:System.Windows.Forms.MenuStrip> 替换先前版本的 <xref:System.Windows.Forms.MainMenu> 控件并添加功能，但如果你选择，将保留 <xref:System.Windows.Forms.MainMenu> 以实现向后兼容性和将来使用。  
+ 为窗体提供菜单系统。 尽管 <xref:System.Windows.Forms.MenuStrip> 替换了早期版本的 <xref:System.Windows.Forms.MainMenu> 控件并添加了功能；但是也可选择保留 <xref:System.Windows.Forms.MainMenu> 以备向后兼容和将来使用。  
   
  [MonthCalendar 控件](monthcalendar-control-windows-forms.md)  
  显示直观的图形界面，供用户查看和设置日期信息。  
@@ -129,7 +129,7 @@ ms.locfileid: "76737442"
  [OpenFileDialog 组件](openfiledialog-component-windows-forms.md)  
  允许用户通过预先配置的对话框打开文件。  
   
- [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)  
+ [PageSetupDialog 组件](pagesetupdialog-component-windows-forms.md)  
  通过预先配置的对话框设置供打印的页详细信息。  
   
  [Panel 控件](panel-control-windows-forms.md)  
@@ -189,10 +189,10 @@ ms.locfileid: "76737442"
  按固定间隔引发事件。  
   
  [ToolBar 控件](toolbar-control-windows-forms.md)  
- 显示激活命令的菜单和位图化按钮。 可扩展此控件的功能，并修改其外观和行为。 尽管 <xref:System.Windows.Forms.ToolStrip> 替换先前版本的 <xref:System.Windows.Forms.ToolBar> 控件并添加功能，但如果你选择，将保留 <xref:System.Windows.Forms.ToolBar> 以实现向后兼容性和将来使用。  
+ 显示激活命令的菜单和位图化按钮。 可扩展此控件的功能，并修改其外观和行为。 尽管 <xref:System.Windows.Forms.ToolStrip> 替换了早期版本的 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是也可选择保留 <xref:System.Windows.Forms.ToolBar> 以备向后兼容和将来使用。  
   
  [ToolStrip 控件](toolstrip-control-windows-forms.md)  
- 在 Windows 窗体应用程序中创建自定义工具栏和菜单。 尽管 <xref:System.Windows.Forms.ToolStrip> 替换先前版本的 <xref:System.Windows.Forms.ToolBar> 控件并添加功能，但如果你选择，将保留 <xref:System.Windows.Forms.ToolBar> 以实现向后兼容性和将来使用。  
+ 在 Windows 窗体应用程序中创建自定义工具栏和菜单。 尽管 <xref:System.Windows.Forms.ToolStrip> 替换了早期版本的 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是也可选择保留 <xref:System.Windows.Forms.ToolBar> 以备向后兼容和将来使用。  
   
  [ToolStripContainer 控件](toolstripcontainer-control.md)  
  在窗体的每一侧提供面板，用于停靠、漂浮和排列 <xref:System.Windows.Forms.ToolStrip> 控件以及传统控件的中心 <xref:System.Windows.Forms.ToolStripContentPanel>。  

@@ -68,7 +68,7 @@ Visual Studio 调试器通过使用消息引发 <xref:System.InvalidOperationExc
 
 你可以从C#或 Visual Basic 命令行 .NET Framework 应用生成并运行这些示例。 有关详细信息，请参阅[通过 csc 生成命令行](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)或[从命令行生成（Visual Basic）](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。 
 
-从.NET Core 3.0 开始，你还可以生成并运行示例作为 Windows.NET Core 应用程序从具有.NET Core Windows 窗体的文件夹 *\<文件夹名称>.csproj* 项目文件。 
+从 .NET Core 3.0 开始，还可以从具有 .NET Core Windows 窗体 *\<文件夹名称 > .csproj*项目文件的文件夹生成并运行示例作为 Windows .net core 应用。 
 
 ## <a name="example-use-the-invoke-method-with-a-delegate"></a>示例：对委托使用 Invoke 方法
 

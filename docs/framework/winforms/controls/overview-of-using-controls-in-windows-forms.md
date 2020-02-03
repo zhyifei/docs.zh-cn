@@ -16,7 +16,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744349"
 ---
-# <a name="overview-of-using-controls-in-windows-forms"></a>Windows Forms에서 컨트롤 사용 개요
+# <a name="overview-of-using-controls-in-windows-forms"></a>在“Windows 窗体”中使用控件的概述
 本主题介绍 Windows 窗体应用程序的基本元素，并提供一个简单的示例，该示例使用控件并在 Windows 窗体应用程序中处理事件。  
   
 ## <a name="simple-windows-forms-applications"></a>简单的 Windows 窗体应用程序  
@@ -225,5 +225,5 @@ public class MyForm : Form {
   
 ## <a name="see-also"></a>另请参阅
 
-- [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)
-- [Windows Forms 컨트롤 개발 기본 사항](windows-forms-control-development-basics.md)
+- [使用 .NET Framework 开发自定义 Windows 窗体控件](developing-custom-windows-forms-controls.md)
+- [Windows 窗体控件开发基础知识](windows-forms-control-development-basics.md)

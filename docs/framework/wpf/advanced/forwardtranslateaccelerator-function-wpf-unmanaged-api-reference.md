@@ -37,7 +37,7 @@ HRESULT ForwardTranslateAccelerator(
  appUnhandled  
  当应用程序有机会处理输入消息但尚未处理时 `true`;否则，`false`。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **平台：** 请参阅[.NET Framework 系统要求](../../get-started/system-requirements.md)。  
   
  **.DLL**  

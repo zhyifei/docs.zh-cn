@@ -26,14 +26,14 @@ ms.locfileid: "76737365"
   
 ### <a name="orderdetailstable"></a>OrderDetailsTable  
   
-|OrderID|ItemID|Quantity|  
+|OrderID|ItemID|数量|  
 |-------------|------------|--------------|  
 |4085|12|1|  
 |4086|13|3|  
   
 ### <a name="itemtable"></a>ItemTable  
   
-|ID|Name|  
+|ID|名称|  
 |--------|----------|  
 |12|Potato|  
 |13|Chicken|  
@@ -54,13 +54,13 @@ ms.locfileid: "76737365"
   
 4. 设置以下属性： 以下属性可在代码或设计器中设置。  
   
-    |Property|设置|  
+    |属性|设置|  
     |--------------|-------------|  
     |<xref:System.Windows.Forms.ListControl.DataSource%2A>|包含有关哪个 ID 号等同于哪一项的信息的表。 在前面的方案中，这是 `ItemTable`。|  
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|你想要在控件中显示的源数据表的列。 在前面的方案中，这是 `"Name"` （在代码中设置，使用引号）。|  
     |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|包含所存储信息的源数据表的列。 在前面的方案中，这是 `"ID"` （在代码中设置，使用引号）。|  
   
-5. 在过程中，调用 <xref:System.Windows.Forms.ControlBindingsCollection> 类的 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 方法，以将控件的 <xref:System.Windows.Forms.ListControl.SelectedValue%2A> 属性绑定到记录窗体输入的表。 您也可以在设计器中，而不是在代码中执行此操作，方法是在 "**属性**" 窗口中访问控件的 <xref:System.Windows.Forms.Control.DataBindings%2A> 属性。 在前面的方案中，这是 `OrderDetailsTable`的，列是 `"ItemID"`的。  
+5. 在过程中，调用 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 类的 <xref:System.Windows.Forms.ControlBindingsCollection> 方法，以将控件的 <xref:System.Windows.Forms.ListControl.SelectedValue%2A> 属性绑定到记录窗体输入的表。 您也可以在设计器中，而不是在代码中执行此操作，方法是在 "**属性**" 窗口中访问控件的 <xref:System.Windows.Forms.Control.DataBindings%2A> 属性。 在前面的方案中，这是 `OrderDetailsTable`的，列是 `"ItemID"`的。  
   
     ```vb  
     ListBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID")  

@@ -35,7 +35,7 @@ ms.locfileid: "76745589"
     domainUpDown1->Items->Add("noodles");  
     ```  
   
-     或  
+     \- 或 -  
   
 2. 使用 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> 方法可在列表中的指定位置插入项。  
   

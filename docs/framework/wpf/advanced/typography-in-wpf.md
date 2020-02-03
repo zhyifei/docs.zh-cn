@@ -156,5 +156,5 @@ ms.locfileid: "76735533"
 - [OpenType 字体功能](opentype-font-features.md)
 - [绘制格式化文本](drawing-formatted-text.md)
 - [高级文本格式设置](advanced-text-formatting.md)
-- [“文本”](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [Microsoft 版式](https://docs.microsoft.com/typography/)

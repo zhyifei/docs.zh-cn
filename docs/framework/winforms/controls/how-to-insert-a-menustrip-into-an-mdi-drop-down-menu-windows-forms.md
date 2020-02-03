@@ -25,7 +25,7 @@ ms.locfileid: "76736412"
   
 1. 创建一个窗体并将其 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 属性设置为 `true`。  
   
-2. 将 <xref:System.Windows.Forms.MenuStrip> 添加到 `Form1` 并将 <xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 属性设置为 `true`。  
+2. 将 <xref:System.Windows.Forms.MenuStrip> 添加到 `Form1` 并将 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 的 <xref:System.Windows.Forms.MenuStrip> 属性设置为 `true`。  
   
 3. 将顶级菜单项添加到 `Form1`<xref:System.Windows.Forms.MenuStrip> 并将其 <xref:System.Windows.Forms.Control.Text%2A> 属性设置为 `&File`。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "76736412"
   
 5. 将两个子菜单项添加到 `&Import from` 子菜单项，并将其 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为 `&Word` 和 `&Excel`。  
   
-6. 将窗体添加到项目，将 <xref:System.Windows.Forms.MenuStrip> 添加该窗体，并将 `Form2`<xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 属性设置为 `true`。  
+6. 将窗体添加到项目，将 <xref:System.Windows.Forms.MenuStrip> 添加该窗体，并将 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>`Form2` 的 <xref:System.Windows.Forms.MenuStrip> 属性设置为 `true`。  
   
 7. 将顶级菜单项添加到 `Form2`<xref:System.Windows.Forms.MenuStrip> 并将其 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为 `&File`。  
   
@@ -43,13 +43,13 @@ ms.locfileid: "76736412"
   
     |Form2 菜单项|MergeAction 值|MergeIndex 值|  
     |---------------------|-----------------------|----------------------|  
-    |File|MatchOnly|-1|  
-    |Separator|插入|2|  
-    |“保存”|插入|3|  
+    |文件|MatchOnly|-1|  
+    |分隔符|插入|2|  
+    |保存|插入|3|  
     |保存并关闭|插入|4|  
-    |Separator|插入|5|  
+    |分隔符|插入|5|  
   
-10. 为 `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> 的 <xref:System.Windows.Forms.Control.Click> 事件创建一个事件处理程序。  
+10. 为 <xref:System.Windows.Forms.Control.Click>`&Open` 的 <xref:System.Windows.Forms.ToolStripMenuItem> 事件创建一个事件处理程序。  
   
 11. 在事件处理程序内，插入类似于以下示例代码的代码，从而将 `Form2` 的新实例创建和显示为 `Form1` 的 MDI 子级。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "76736412"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
-- 名为 `Form1` 和 `Form2` 的两个 <xref:System.Windows.Forms.Form> 控件。  
+- 名为 <xref:System.Windows.Forms.Form> 和 `Form1` 的两个 `Form2` 控件。  
   
-- `Form1` 上名为 `menuStrip1` 的 <xref:System.Windows.Forms.MenuStrip> 控件和 `Form2` 上名为 `menuStrip2` 的 <xref:System.Windows.Forms.MenuStrip> 控件。  
+- <xref:System.Windows.Forms.MenuStrip> 上名为 `Form1` 的 `menuStrip1` 控件和 <xref:System.Windows.Forms.MenuStrip> 上名为 `Form2` 的 `menuStrip2` 控件。  
   
 - 对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   

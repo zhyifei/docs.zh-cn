@@ -103,7 +103,7 @@ Windows Communication Foundation （WCF）是基于 SOAP 消息的分布式编�
 - [保护服务](../../../../docs/framework/wcf/securing-services.md)
 - [常用安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [绑定与安全](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [身份验证](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
 - [授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [联合令牌与颁发的令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

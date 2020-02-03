@@ -27,6 +27,6 @@ ms.locfileid: "76745740"
   
  另请参阅[演练：使用 FlowLayoutPanel 排列 Windows 窗体上的控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.FlowLayoutPanel>  
  提供关于 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的参考文档。

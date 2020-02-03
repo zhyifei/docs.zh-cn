@@ -24,7 +24,7 @@ Windows 窗体 `ImageList` 组件用于存储图像，此图像之后可由控�
   
  另请参阅[如何：在设计器中添加或删除 ImageList 映像](how-to-add-or-remove-imagelist-images-with-the-designer.md)。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.ImageList>  
  对此类进行描述，并提供指向其所有成员的链接。  
   

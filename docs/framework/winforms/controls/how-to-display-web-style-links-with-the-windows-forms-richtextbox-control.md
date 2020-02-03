@@ -34,7 +34,7 @@ Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件可以将 Web 链�
     在下面的示例中，<xref:System.Windows.Forms.RichTextBox.LinkClicked> 事件会打开 Internet Explorer 的一个实例，该实例指向 <xref:System.Windows.Forms.RichTextBox> 控件的 <xref:System.Windows.Forms.RichTextBox.Text%2A> 属性中指定的 URL。 此示例假设窗体具有 <xref:System.Windows.Forms.RichTextBox> 控件。
 
     > [!IMPORTANT]
-    > 在调用 <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> 方法时，如果在部分信任上下文中运行代码，则会遇到 <xref:System.Security.SecurityException> 异常，因为权限不足。 有关详细信息，请参阅[代码访问安全性基础知识](../../misc/code-access-security-basics.md)。
+    > 在调用 <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> 方法时，如果在部分信任上下文中运行代码，则会遇到 <xref:System.Security.SecurityException> 异常，因为权限不足。 有关详细信息，请参阅 [Code Access Security Basics](../../misc/code-access-security-basics.md)。
 
     ```vb
     Public p As New System.Diagnostics.Process

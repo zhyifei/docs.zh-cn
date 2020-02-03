@@ -1,5 +1,5 @@
 ---
-title: 보안
+title: 安全性
 ms.date: 03/30/2017
 helpviewer_keywords:
 - designer access security [Windows Forms]
@@ -16,23 +16,23 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76734500"
 ---
-# <a name="windows-forms-security"></a>Windows Forms 보안
+# <a name="windows-forms-security"></a>Windows 窗体安全
 Windows 窗体功能是基于代码的安全模型（为代码设置安全级别，而不考虑运行代码的用户）。 这是对你的计算机系统上已有的任何安全架构的补充。 这些功能可能包括在浏览器中（例如 Internet Explorer 中提供的基于区域的安全性）或操作系统（例如，Windows NT 基于凭据的安全）。  
   
-## <a name="in-this-section"></a>섹션 내용  
- [Windows Forms의 보안 개요](security-in-windows-forms-overview.md)  
+## <a name="in-this-section"></a>本节内容  
+ [Windows 窗体中的安全性概述](security-in-windows-forms-overview.md)  
  简要说明 .NET Framework 安全模型和确保你的应用程序中的 Windows 窗体安全所需的基本步骤。  
   
- [Windows Forms의 파일 및 데이터 액세스 추가 보안](more-secure-file-and-data-access-in-windows-forms.md)  
+ [在 Windows 窗体中提高文件和数据访问的安全性](more-secure-file-and-data-access-in-windows-forms.md)  
  描述如何在不完全受信任的环境中访问文件和数据。  
   
- [Windows Forms의 인쇄 추가 보안](more-secure-printing-in-windows-forms.md)  
+ [Windows 窗体中更加安全的打印](more-secure-printing-in-windows-forms.md)  
  介绍如何在不完全受信任的环境中访问打印功能。  
   
- [Windows Forms의 추가 보안 고려 사항](additional-security-considerations-in-windows-forms.md)  
+ [Windows 窗体中额外的安全注意事项](additional-security-considerations-in-windows-forms.md)  
  介绍如何在不完全受信任的环境中执行窗口操作、使用剪贴板和调用非托管代码。  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>相关章节  
  [默认安全策略](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))  
  列出在完全信任、本地 Intranet 和 Internet 权限集中授予的默认权限。  
   
@@ -42,16 +42,16 @@ Windows 窗体功能是基于代码的安全模型（为代码设置安全级别
  [危险权限和策略管理](../misc/dangerous-permissions-and-policy-administration.md)  
  讨论某些 the.NET 框架权限，这些权限可能允许规避安全系统。  
   
- [보안 코딩 지침](../../standard/security/secure-coding-guidelines.md)  
+ [安全编码准则](../../standard/security/secure-coding-guidelines.md)  
  相关主题的链接，这些主题说明了针对 .NET Framework 安全地编写代码的最佳做法。  
   
  [请求权限](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))  
  讨论特性的用法，使运行时知道您的代码运行所需的权限。  
   
- [주요 보안 개념](../../standard/security/key-security-concepts.md)  
+ [安全性的基础概念](../../standard/security/key-security-concepts.md)  
  指向涵盖代码安全性基本方面的主题的链接。  
   
- [코드 액세스 보안 기본 사항](../misc/code-access-security-basics.md)  
+ [代码访问安全性基础知识](../misc/code-access-security-basics.md)  
  讨论使用 .NET Framework 运行时安全策略的基本知识。  
   
  [确定何时修改安全策略](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xky659fc(v=vs.100))  

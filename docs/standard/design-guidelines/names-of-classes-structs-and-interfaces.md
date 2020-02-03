@@ -34,11 +34,11 @@ ms.locfileid: "76727785"
 
  ✔️考虑用基类的名称结束派生类的名称。
 
- 这样可让名称非常易读，并清楚体现了关系。 代码中的相关例子有：`ArgumentOutOfRangeException`，这是一种 `Exception`，还有 `SerializableAttribute`，这是一种 `Attribute`。 但是，在应用此准则时，务必应进行合理判断；例如，`Button` 类是一种 `Control` 事件，尽管其名称中并未出现 `Control`。
+ 这样可让名称非常易读，并清楚体现了关系。 代码中的一些示例包括： `ArgumentOutOfRangeException`，这是一种 `Exception`，`SerializableAttribute`，这是一种 `Attribute`。 但是，在应用此准则时使用合理的判断非常重要;例如，`Button` 类是一种 `Control` 事件，尽管 `Control` 不会在其名称中出现。
 
  ✔️使用字母 I 来为接口名称加上前缀，以指示该类型是接口。
 
- 例如，`IComponent`（描述性名词），`ICustomAttributeProvider`（名词短语）和 `IPersistable`（形容词）是合适的接口名称。与其他类型名称一样，应避免使用缩略形式。 对于其他类型名称，请避免缩写形式。
+ 例如，`IComponent` （描述性名词）、`ICustomAttributeProvider` （名词短语）和 `IPersistable` （形容词）均为适当的接口名称。 对于其他类型名称，请避免缩写形式。
 
  ✔️确保在定义类接口对（其中类是接口的标准实现）时，接口名称上的 "I" 前缀仅有不同的名称。
 
@@ -65,7 +65,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 
  ✔️考虑，指示对参数名称中的类型参数施加的约束。
 
- 例如，被限制为 `ISession` 的参数可能名为 `TSession`。
+ 例如，可能会 `TSession`中调用约束为 `ISession` 的参数。
 
 ## <a name="names-of-common-types"></a>常见类型的名称
  当命名类型派生自或实现某些 .NET Framework 类型时，✔️按照下表中所述的指导原则进行操作。
@@ -77,7 +77,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 |`System.EventArgs`|✔️添加后缀 "EventArgs"。|
 |`System.Enum`|❌ 不从此类派生;改为使用您的语言支持的关键字;例如，在中C#，请使用 `enum` 关键字。<br /><br /> ❌ 不要添加后缀 "Enum" 或 "标志"。|
 |`System.Exception`|✔️添加后缀 "Exception"。|
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|✔️添加后缀 "Dictionary"。 请注意，`IDictionary` 是一种特定类型的集合，但此准则优先于后面更宽泛的集合准则。|
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|✔️添加后缀 "Dictionary"。 请注意，`IDictionary` 是特定类型的集合，但是此准则优先于下面更常见的集合原则。|
 |`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|✔️添加后缀 "Collection"。|
 |`System.IO.Stream`|✔️添加后缀 "Stream"。|
 |`CodeAccessPermission IPermission`|✔️添加后缀 "权限"。|

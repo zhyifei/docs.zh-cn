@@ -27,14 +27,14 @@ ms.locfileid: "76736789"
   
 ### <a name="to-format-currency-and-date-values"></a>设置货币和日期值的格式  
   
-- 设置 <xref:System.Windows.Forms.DataGridViewCellStyle> 的 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 属性。 下面的代码示例使用列的 <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> 属性设置特定列的格式。 "`UnitPrice`" 列中的值以当前特定于区域性的货币格式显示，其中负值括在括号中。 "`ShipDate`" 列中的值以当前特定于区域性的短日期格式显示。 有关 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 值的详细信息，请参阅[格式设置类型](../../../standard/base-types/formatting-types.md)。  
+- 设置 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 的 <xref:System.Windows.Forms.DataGridViewCellStyle> 属性。 下面的代码示例使用列的 <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> 属性设置特定列的格式。 "`UnitPrice`" 列中的值以当前特定于区域性的货币格式显示，其中负值括在括号中。 "`ShipDate`" 列中的值以当前特定于区域性的短日期格式显示。 有关 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 值的详细信息，请参阅[格式设置类型](../../../standard/base-types/formatting-types.md)。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#071](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#071)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#071](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#071)]  
   
 ### <a name="to-customize-the-display-of-null-database-values"></a>自定义 null 数据库值的显示  
   
-- 设置 <xref:System.Windows.Forms.DataGridViewCellStyle> 的 <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> 属性。 下面的代码示例使用 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> 属性在包含等于 <xref:System.DBNull.Value?displayProperty=nameWithType>的值的所有单元格中显示 "no entry"。  
+- 设置 <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> 的 <xref:System.Windows.Forms.DataGridViewCellStyle> 属性。 下面的代码示例使用 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> 属性在包含等于 <xref:System.DBNull.Value?displayProperty=nameWithType>的值的所有单元格中显示 "no entry"。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#073](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#073)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#073](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#073)]  
@@ -65,7 +65,7 @@ ms.locfileid: "76736789"
 - 对 <xref:System?displayProperty=nameWithType><xref:System.Drawing?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   
 ## <a name="robust-programming"></a>可靠的编程  
- 为了获得最大的可伸缩性，你应跨多个使用相同样式的行、列或单元格共享 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象，而不是单独设置每个元素的样式属性。 有关详细信息，请参阅[缩放 Windows 窗体 DataGridView 控件的最佳做法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
+ 为了获得最大的可伸缩性，你应跨多个使用相同样式的行、列或单元格共享 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象，而不是单独设置每个元素的样式属性。 有关详细信息，请参阅 [缩放 Windows 窗体 DataGridView 控件的最佳做法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="see-also"></a>另请参阅
 

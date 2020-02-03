@@ -19,7 +19,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746766"
 ---
-# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>如何： 使用 Windows 窗体复选框控件设置选项
+# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>如何：使用 Windows 窗体 CheckBox 控件设置选项
 Windows 窗体 <xref:System.Windows.Forms.CheckBox> 控件用于向用户授予 True/False 或 Yes/No 选项。 选中时，控件将显示复选标记。  
   
 ### <a name="to-set-options-with-checkbox-controls"></a>用 CheckBox 控件设置选项  

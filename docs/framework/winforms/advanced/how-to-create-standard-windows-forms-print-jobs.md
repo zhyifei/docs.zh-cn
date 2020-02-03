@@ -17,14 +17,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741515"
 ---
-# <a name="how-to-create-standard-windows-forms-print-jobs"></a>방법: 표준 Windows Forms 인쇄 작업 만들기
+# <a name="how-to-create-standard-windows-forms-print-jobs"></a>如何：创建标准的 Windows 窗体打印作业
 Windows 窗体中打印的基础是 <xref:System.Drawing.Printing.PrintDocument> 组件—更具体地说，<xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件。 通过编写代码来处理 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件，您可以指定要打印的内容以及打印方式。  
   
 ### <a name="to-create-a-print-job"></a>创建打印作业  
   
 1. 将 <xref:System.Drawing.Printing.PrintDocument> 组件添加到窗体。  
   
-2. <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트를 처리할 코드를 작성합니다.  
+2. 编写代码以处理 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件。  
   
      您必须编写自己的打印逻辑代码。 此外，您还必须指定要打印的材料。  
   
@@ -79,4 +79,4 @@ Windows 窗体中打印的基础是 <xref:System.Drawing.Printing.PrintDocument>
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Windows Forms 인쇄 지원](windows-forms-print-support.md)
+- [Windows 窗体打印支持](windows-forms-print-support.md)

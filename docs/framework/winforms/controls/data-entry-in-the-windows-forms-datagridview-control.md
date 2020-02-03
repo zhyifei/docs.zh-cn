@@ -32,7 +32,7 @@ ms.locfileid: "76743998"
  [演练：处理在 Windows 窗体 DataGridView 控件有数据输入时发生的错误](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
  描述如何在用户尝试提交新值时处理源自数据源的数据输入错误。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.DataGridView>  
  提供关于 <xref:System.Windows.Forms.DataGridView> 控件的参考文档。  
   

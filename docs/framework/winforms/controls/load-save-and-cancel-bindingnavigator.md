@@ -49,7 +49,7 @@ ms.locfileid: "76745125"
 
     4. 将每个按钮的 "<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>" 属性设置为 "**文本**"。 或者，您可以将此属性设置为**image**或**ImageAndText**，并将该图像设置为显示在 <xref:System.Windows.Forms.ToolStripItem.Image%2A> 属性中。
 
-    5. 单击“确定”关闭对话框。 这些按钮将添加到 <xref:System.Windows.Forms.ToolStrip>。
+    5. 单击 **“确定”** 关闭对话框。 这些按钮将添加到 <xref:System.Windows.Forms.ToolStrip>。
 
 8. 右键单击窗体，然后选择 "**查看代码**"。
 

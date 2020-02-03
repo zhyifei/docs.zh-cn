@@ -24,19 +24,19 @@ ms.locfileid: "76743683"
 
  ✔️考虑在应感觉为基元类型的类型中定义运算符重载。
 
- 例如，<xref:System.String?displayProperty=nameWithType> 定义 `operator==` 和 `operator!=`。
+ 例如，<xref:System.String?displayProperty=nameWithType> 已定义 `operator==` 并 `operator!=`。
 
  ✔️在表示数字的结构（如 <xref:System.Decimal?displayProperty=nameWithType>）中定义运算符重载。
 
  定义运算符重载时，❌ 不太刻意。
 
- 如果操作结果直观而明显，则运算符重载非常有用。 例如，能够从一个 <xref:System.DateTime> 中减去另一个 `DateTime`，并得到 <xref:System.TimeSpan>，这是有意义的。 但是，使用逻辑 union 运算符来合并两个数据库查询或使用 shift 运算符写入流则是不合适的。
+ 如果操作结果直观而明显，则运算符重载非常有用。 例如，能够从另一个 `DateTime` 中减去一个 <xref:System.DateTime> 并获得一个 <xref:System.TimeSpan>是有意义的。 但是，使用逻辑 union 运算符来合并两个数据库查询或使用 shift 运算符写入流则是不合适的。
 
  除非至少一个操作数为定义重载的类型，否则 ❌ 不提供运算符重载。
 
  ✔️以对称方式重载运算符。
 
- 例如，如果重载了 `operator==`，则还应该重载 `operator!=`。 同样，如果重载了 `operator<`，则还应该重载 `operator>`，以此类推。
+ 例如，如果重载 `operator==`，还应重载 `operator!=`。 同样，如果你重载 `operator<`，还应重载 `operator>`，依此类推。
 
  ✔️考虑为具有对应于每个重载运算符的友好名称提供方法。
 
@@ -86,7 +86,7 @@ ms.locfileid: "76743683"
 |`~`|`op_OnesComplement`|`OnesComplement`|
 
 ### <a name="overloading-operator-"></a>重载运算符 ==
- 重载 `operator ==` 非常复杂。 运算符的语义需要与其他几个其他成员兼容，如 <xref:System.Object.Equals%2A?displayProperty=nameWithType>。
+ 重载 `operator ==` 非常复杂。 运算符的语义需要与其他一些成员（如 <xref:System.Object.Equals%2A?displayProperty=nameWithType>）兼容。
 
 ### <a name="conversion-operators"></a>转换运算符
  转换运算符是一元运算符，允许从一种类型转换为另一种类型。 必须在操作数或返回类型上将运算符定义为静态成员。 有两种类型的转换运算符：隐式和显式。
@@ -95,11 +95,11 @@ ms.locfileid: "76743683"
 
  ❌ 不会在类型的域外部定义转换运算符。
 
- 例如， <xref:System.Int32>、<xref:System.Double> 和 <xref:System.Decimal> 都是数字类型，而 <xref:System.DateTime> 不是。 因此，不应该存在将 `Double(long)` 转换到 `DateTime` 的转换运算符。 在这种情况中，应该首选构造函数。
+ 例如，<xref:System.Int32>、<xref:System.Double>和 <xref:System.Decimal> 均为数值类型，而 <xref:System.DateTime> 则不是。 因此，不应使用转换运算符将 `Double(long)` 转换为 `DateTime`。 在这种情况中，应该首选构造函数。
 
  如果转换可能有损，❌ 不提供隐式转换运算符。
 
- 例如，不应该存在从 `Double` 到 `Int32` 的隐式转换，因为 `Double` 比 `Int32` 的范围更大。 可以提供显式转换运算符，即使转换可能产生损耗。
+ 例如，不应有从 `Double` 到 `Int32` 的隐式转换，因为 `Double` 的范围超出了 `Int32`。 可以提供显式转换运算符，即使转换可能产生损耗。
 
  ❌ 不会从隐式转换中引发异常。
 

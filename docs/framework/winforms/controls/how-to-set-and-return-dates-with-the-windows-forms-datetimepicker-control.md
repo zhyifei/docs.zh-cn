@@ -18,17 +18,17 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76747112"
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>如何：使用 Windows 窗体 DateTimePicker 控件设置和返回日期
-Windows Forms <xref:System.Windows.Forms.DateTimePicker> 컨트롤의 현재 선택된 날짜 또는 시간은 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 속성에 의해 결정됩니다. 컨트롤이 표시되기 전에(예: 디자인 타임에 또는 폼의 <xref:System.Windows.Forms.Form.Load> 이벤트에서) <xref:System.Windows.Forms.DateTimePicker.Value%2A> 속성을 설정하여 컨트롤에서 초기에 선택되는 날짜를 결정할 수 있습니다. 기본적으로 컨트롤의 <xref:System.Windows.Forms.DateTimePicker.Value%2A>는 현재 날짜로 설정됩니다. 코드에서 컨트롤의 <xref:System.Windows.Forms.DateTimePicker.Value%2A>를 변경하는 경우 폼의 컨트롤이 새 설정을 반영하도록 자동으로 업데이트됩니다.  
+Windows 窗体 <xref:System.Windows.Forms.DateTimePicker> 控件中的当前所选日期或时间由 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 属性确定。 可在显示控件前（例如，在设计时或在窗体的 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 事件中）设置 <xref:System.Windows.Forms.Form.Load> 属性来确定控件中最初将选定的日期。 默认情况下，该控件的 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 设置为当前日期。 如果更改代码中控件的 <xref:System.Windows.Forms.DateTimePicker.Value%2A>，该控件将自动在窗体上更新以反映新设置。  
   
- <xref:System.Windows.Forms.DateTimePicker.Value%2A> 속성은 <xref:System.DateTime> 구조체를 해당 값으로 반환합니다. 표시된 날짜에 대한 특정 정보를 반환하는 <xref:System.DateTime> 구조체의 여러 속성이 있습니다. 이러한 속성은 값을 반환하는 데만 사용할 수 있습니다. 값을 설정하는 데 사용하지 마세요.  
+ <xref:System.Windows.Forms.DateTimePicker.Value%2A> 属性返回 <xref:System.DateTime> 结构作为其值。 存在几个 <xref:System.DateTime> 结构的属性，这些属性返回有关所显示日期的特定信息。 这些属性仅可用于返回值；不要使用它们来设置值。  
   
-- 날짜 값의 경우 <xref:System.DateTime.Month%2A>, <xref:System.DateTime.Day%2A> 및 <xref:System.DateTime.Year%2A> 속성은 선택한 날짜의 해당 시간 단위에 대한 정수 값을 반환합니다. <xref:System.DateTime.DayOfWeek%2A> 속성은 선택한 요일을 나타내는 값을 반환합니다(가능한 값은 <xref:System.DayOfWeek> 열거형에 나열되어 있음).  
+- 对于日期值，<xref:System.DateTime.Month%2A>、<xref:System.DateTime.Day%2A> 和 <xref:System.DateTime.Year%2A> 属性为这些所选日期的时间单位返回整数值。 <xref:System.DateTime.DayOfWeek%2A> 属性返回的值指示所选的日期是星期几（<xref:System.DayOfWeek> 枚举中列出了可能的值）。  
   
-- 시간 값의 경우 <xref:System.DateTime.Hour%2A>, <xref:System.DateTime.Minute%2A>, <xref:System.DateTime.Second%2A> 및 <xref:System.DateTime.Millisecond%2A> 속성은 해당 시간 단위에 대한 정수 값을 반환합니다. 若要配置控件以显示时间，请参阅[如何：在 DateTimePicker 控件中显示时间](how-to-display-time-with-the-datetimepicker-control.md)。  
+- 对于时间值，<xref:System.DateTime.Hour%2A>、<xref:System.DateTime.Minute%2A>、<xref:System.DateTime.Second%2A> 和 <xref:System.DateTime.Millisecond%2A> 属性为这些时间单位返回整数值。 若要配置控件以显示时间，请参阅[如何：在 DateTimePicker 控件中显示时间](how-to-display-time-with-the-datetimepicker-control.md)。  
   
-### <a name="to-set-the-date-and-time-value-of-the-control"></a>컨트롤의 날짜 및 시간 값을 설정하려면  
+### <a name="to-set-the-date-and-time-value-of-the-control"></a>设置控件的日期和时间值  
   
-- <xref:System.Windows.Forms.DateTimePicker.Value%2A> 속성을 날짜 또는 시간 값으로 설정합니다.  
+- 将 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 属性设置为日期或时间值。  
   
     ```vb  
     DateTimePicker1.Value = New DateTime(2001, 10, 20)  
@@ -42,9 +42,9 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> 컨트롤의 현재 선
     dateTimePicker1->Value = DateTime(2001, 10, 20);  
     ```  
   
-### <a name="to-return-the-date-and-time-value"></a>날짜 및 시간 값을 반환하려면  
+### <a name="to-return-the-date-and-time-value"></a>返回日期和时间值  
   
-- <xref:System.Windows.Forms.DateTimePicker.Text%2A> 속성을 호출하여 컨트롤에서 지정된 형식의 전체 값을 반환하거나, <xref:System.Windows.Forms.DateTimePicker.Value%2A> 값의 적절한 메서드를 호출하여 값의 일부를 반환합니다. <xref:System.Windows.Forms.DateTimePicker.ToString%2A>을 통해 사용자에게 표시할 수 있는 문자열로 정보를 변환합니다.  
+- 调用 <xref:System.Windows.Forms.DateTimePicker.Text%2A> 属性以按照控件中设置的格式返回完整值，或调用 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 属性的合适方法以返回值的一部分。 使用 <xref:System.Windows.Forms.DateTimePicker.ToString%2A> 将信息转换为可向用户显示的字符串。  
   
     ```vb  
     MessageBox.Show("The selected value is ", DateTimePicker1.Text)  
@@ -74,5 +74,5 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> 컨트롤의 현재 선
   
 ## <a name="see-also"></a>另请参阅
 
-- [DateTimePicker 컨트롤](datetimepicker-control-windows-forms.md)
-- [방법: Windows Forms DateTimePicker 컨트롤을 사용하여 날짜를 사용자 지정 형식으로 표시](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [DateTimePicker 控件](datetimepicker-control-windows-forms.md)
+- [如何：使用 Windows 窗体 DateTimePicker 控件显示自定义格式的日期](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

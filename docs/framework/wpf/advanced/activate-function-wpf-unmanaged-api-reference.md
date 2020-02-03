@@ -22,7 +22,7 @@ ms.locfileid: "76734508"
 
 由用于 Windows 管理的 Windows Presentation Foundation （WPF）基础结构使用。
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>语法
 
 ```cpp
 void Activate(
@@ -31,7 +31,7 @@ void Activate(
     );
 ```
 
-## <a name="parameters"></a>매개 변수
+## <a name="parameters"></a>参数
 
 `pParameters`\
 指向窗口的激活参数的指针。
@@ -39,7 +39,7 @@ void Activate(
 `ppInner`\
 指向单个元素缓冲区的地址的指针，该缓冲区包含指向 <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument> 对象的指针。
 
-## <a name="requirements"></a>요구 사항
+## <a name="requirements"></a>要求
 
 **平台：** 请参阅[.NET Framework 系统要求](../../get-started/system-requirements.md)。
 
@@ -53,4 +53,4 @@ void Activate(
 
 ## <a name="see-also"></a>另请参阅
 
-- [F 관리되지 않는 API 참조](wpf-unmanaged-api-reference.md)
+- [WPF 非托管 API 参考](wpf-unmanaged-api-reference.md)

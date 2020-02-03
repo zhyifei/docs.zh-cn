@@ -36,7 +36,7 @@ ms.locfileid: "76731849"
 - [XAML 加载和依赖项属性](xaml-loading-and-dependency-properties.md)
 - [帮助主题](properties-how-to-topics.md)
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  

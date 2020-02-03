@@ -1,5 +1,5 @@
 ---
-title: 관리되지 않는 앱
+title: 非托管应用
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ActiveX controls [Windows Forms]
@@ -15,31 +15,31 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746368"
 ---
-# <a name="windows-forms-and-unmanaged-applications"></a>Windows Forms 및 관리되지 않는 응용 프로그램
-Windows Forms 애플리케이션과 컨트롤은 관리되지 않는 애플리케이션과 상호 운용될 수 있지만 몇 가지 주의할 사항이 있습니다. 다음 섹션에서는 Windows Forms 애플리케이션과 컨트롤이 지원하는 시나리오 및 구성과 지원하지 않는 시나리오 및 구성을 설명합니다.  
+# <a name="windows-forms-and-unmanaged-applications"></a>Windows 窗体和非托管应用程序
+Windows 窗体应用程序和控件可以与非托管应用程序进行互操作，但有一些需要注意的问题。 以下各节将介绍 Windows 窗体应用程序和控件支持和不支持的方案和配置。  
   
-## <a name="in-this-section"></a>섹션 내용  
- [Windows Forms 및 관리되지 않는 애플리케이션 개요](windows-forms-and-unmanaged-applications-overview.md)  
- 관리되지 않는 애플리케이션에서 작동하는 Windows Forms 컨트롤을 사용 및 구현하는 방법에 대한 일반적인 정보를 제공합니다.  
+## <a name="in-this-section"></a>本节内容  
+ [Windows 窗体和非托管应用程序概述](windows-forms-and-unmanaged-applications-overview.md)  
+ 提供有关如何使用和实现运用非托管应用程序的 Windows 窗体控件的常规信息。  
   
- [방법: ShowDialog 메서드로 Windows Form을 표시하여 COM Interop 지원](com-interop-by-displaying-a-windows-form-shadow.md)  
- <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 메서드를 사용하여 관리되지 않는 애플리케이션에서 Windows Form을 실행하는 방법을 보여 주는 코드 예제를 제공합니다.  
+ [如何：通过使用 ShowDialog 方法显示 Windows 窗体来支持 COM 互操作](com-interop-by-displaying-a-windows-form-shadow.md)  
+ 提供显示如何使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法在非托管应用程序中运行 Windows 窗体的代码示例。  
   
  [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
- 고유한 스레드에서 Windows Form을 실행하는 방법을 보여 주는 코드 예제를 제공합니다.  
+ 提供显示如何在各自的线程上运行 Windows 窗体的代码示例。  
   
- [연습: 각 Windows Form을 별개의 스레드에서 표시하여 COM Interop 지원](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100))을 참조하세요.  
+ 另请参阅 [演练：通过在每个 Windows 窗体各自的线程上显示该 Windows 窗体来支持 COM 互操作](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100))。  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType>  
- Windows Form에 대한 별도 스레드를 만드는 데 사용됩니다.  
+ 用于为 Windows 窗体中创建单独线程。  
   
  <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>  
- 스레드에 대한 메시지 루프를 시작합니다.  
+ 启动线程的消息循环。  
   
  <xref:System.Windows.Forms.Control.Invoke%2A>  
- 관리되지 않는 애플리케이션에서의 폼 호출을 마샬링합니다.  
+ 将来自非托管应用程序的调用封送到窗体。  
   
-## <a name="related-sections"></a>관련 섹션  
- [.NET Framework 구성 요소를 COM에 노출](../../interop/exposing-dotnet-components-to-com.md)  
- 관리되지 않는 애플리케이션에서 .NET Framework 형식을 사용하는 방법에 대한 일반적인 정보를 제공합니다.
+## <a name="related-sections"></a>相关章节  
+ [向 COM 公开 .NET Framework 组件](../../interop/exposing-dotnet-components-to-com.md)  
+ 提供有关如何在非托管应用程序中使用 .NET Framework 类型的常规信息。

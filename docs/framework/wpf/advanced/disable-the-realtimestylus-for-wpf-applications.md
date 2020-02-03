@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737935"
 ---
-# <a name="disable-the-realtimestylus-for-wpf-applications"></a>WPF 애플리케이션에 대해 RealTimeStylus를 사용하지 않도록 설정
+# <a name="disable-the-realtimestylus-for-wpf-applications"></a>禁用用于 WPF 应用程序的 RealTimeStylus
 
 Windows Presentation Foundation （WPF）内置支持处理 Windows 7 触控输入。 此支持通过 tablet 平台的实时触笔输入来完成 <xref:System.Windows.UIElement.OnStylusDown%2A>、<xref:System.Windows.UIElement.OnStylusUp%2A>和 <xref:System.Windows.UIElement.OnStylusMove%2A> 事件。 Windows 7 还提供多点触控输入作为 Win32 WM_TOUCH 窗口消息。 这两个 Api 在同一 HWND 上相互排斥。 通过 tablet 平台（WPF 应用程序的默认设置）启用触控输入会禁用 WM_TOUCH 消息。 因此，若要使用 WM_TOUCH 从 WPF 窗口接收触摸消息，您必须禁用 WPF 中的内置触笔支持。 这适用于一个方案，例如 WPF 窗口，该窗口承载使用 WM_TOUCH 的组件。  
   
@@ -55,4 +55,4 @@ public static void DisableWPFTabletSupport()
   
 ## <a name="see-also"></a>另请参阅
 
-- [스타일러스에서 입력 가로채기](intercepting-input-from-the-stylus.md)
+- [截获触笔输入](intercepting-input-from-the-stylus.md)

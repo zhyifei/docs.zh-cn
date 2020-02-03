@@ -82,7 +82,7 @@ ms.locfileid: "76730951"
   
 - 将有效 URI 添加到此集合，以指定有效 URI 集。 为此，请插入[\<添加](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)每个 URI 的 >  
   
- 有关更多信息，请参见<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>。  
+ 有关详细信息，请参阅 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>。  
   
  有关使用此配置元素的详细信息，请参阅[如何：在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
   
@@ -117,16 +117,16 @@ ms.locfileid: "76730951"
 #### <a name="clientcertificate-element"></a>\<clientCertificate > 元素  
  可以使用此元素设置用于对客户端进行身份验证的证书。 有关详细信息，请参阅[如何：指定客户端凭据值](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
-#### <a name="httpdigest"></a>\<httpDigest>  
+#### <a name="httpdigest"></a>\<httpDigest >  
  必须使用 Windows 上的 Active Directory 和 Internet 信息服务 (IIS) 启用此功能。 有关详细信息，请参阅[IIS 6.0 中的摘要式身份验证](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10))。  
   
 #### <a name="issuedtoken-element"></a>\<issuedToken > 元素  
  [\<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)包含用于配置令牌的本地颁发者的元素，或与 security token service 一起使用的行为。 有关将客户端配置为使用本地颁发者的说明，请参阅[如何：配置本地颁发者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。  
   
-#### <a name="localissueraddress"></a>\<localIssuerAddress>  
+#### <a name="localissueraddress"></a>\<localIssuerAddress >  
  指定默认的安全令牌服务地址。 当 <xref:System.ServiceModel.WSFederationHttpBinding> 不提供 security token service 的 URL 时，或者联合绑定的颁发者地址 `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` 或 `null`时，将使用此功能。 在这些情况下，必须使用本地颁发机构的地址和用来与该颁发机构进行通信的绑定来配置 <xref:System.ServiceModel.Description.ClientCredentials>。  
   
-#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors>  
+#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
  使用[\<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)添加与 security token service 通信时所使用的 WCF 客户端行为。 在[\<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) "部分中定义客户端行为。 若要使用已定义的行为，请将 <`add`> 元素添加到具有两个属性的 `<issuerChannelBehaviors>` 元素。 将 `issuerAddress` 设置为安全令牌服务的 URL，将 `behaviorConfiguration` 特性设置为已定义终结点行为的名称，如下面的示例所示。  
   
 ```xml  

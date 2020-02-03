@@ -31,9 +31,9 @@ void __stdcall SetFakeActiveWindow(
   
 ## <a name="parameters"></a>参数  
  hwnd  
- 窗口句柄。  
+ 一个窗口句柄。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **平台：** 请参阅[.NET Framework 系统要求](../../get-started/system-requirements.md)。  
   
  **DLL：** PresentationHost_v0400 .dll  

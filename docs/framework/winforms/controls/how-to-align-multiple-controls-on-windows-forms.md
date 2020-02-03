@@ -1,5 +1,5 @@
 ---
-title: 여러 컨트롤 맞춤
+title: 对齐多个控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forms [Windows Forms], aligning controls
@@ -17,7 +17,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76747191"
 ---
-# <a name="how-to-align-multiple-controls-on-windows-forms"></a>방법: Windows Forms에서 여러 컨트롤 맞춤
+# <a name="how-to-align-multiple-controls-on-windows-forms"></a>如何：在 Windows 窗体上对齐多个控件
 
 若要标准化基于 Windows 的应用程序的用户界面（UI）的布局，可以使用单个命令定位控件组。
 
@@ -31,11 +31,11 @@ ms.locfileid: "76747191"
 
 ## <a name="see-also"></a>另请参阅
 
-- [Windows Forms 컨트롤](index.md)
-- [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
-- [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)
-- [연습: Windows Forms에서 맞춤선을 사용하여 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [방법: 다른 부모에 기존 컨트롤 다시 할당](how-to-reassign-existing-controls-to-a-different-parent.md)
+- [Windows 窗体控件](index.md)
+- [如何：向 Windows 窗体添加控件](how-to-add-controls-to-windows-forms.md)
+- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
+- [按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)
+- [演练：使用对齐线在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [如何：将现有控件重新分配给另一个父控件](how-to-reassign-existing-controls-to-a-different-parent.md)

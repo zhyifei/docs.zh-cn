@@ -1,5 +1,5 @@
 ---
-title: 가상 멤버
+title: 虚拟成员
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,7 +14,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743528"
 ---
-# <a name="virtual-members"></a>가상 멤버
+# <a name="virtual-members"></a>虚拟成员
 可以重写虚拟成员，从而改变子类的行为。 就提供的可扩展性而言，它们与回调非常相似，但在执行性能和内存消耗方面有更好的表现。 此外，虚拟成员在需要创建特殊类型的现有类型（特化）的场景中感觉更自然。
 
  虚拟成员的性能优于回调和事件，但不如非虚拟方法。
@@ -35,9 +35,9 @@ ms.locfileid: "76743528"
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。
 
 ## <a name="see-also"></a>另请参阅
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
-- [확장성을 위한 디자인](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
+- [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

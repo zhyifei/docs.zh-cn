@@ -1,5 +1,5 @@
 ---
-title: System.Xml 使用情况
+title: System.Xml 用法
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 82302f0d-a621-4c6f-b57d-999bd61f21a6
@@ -10,14 +10,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743581"
 ---
-# <a name="systemxml-usage"></a>System.Xml 使用情况
-本部分介绍 <xref:System.Xml?displayProperty=nameWithType> 命名空间中的可以用于表示 XML 数据的几种类型的用法。
+# <a name="systemxml-usage"></a>System.Xml 用法
+本部分介绍如何使用可用于表示 XML 数据的 <xref:System.Xml?displayProperty=nameWithType> 命名空间中的多个类型。
 
- ❌ 不使用 <xref:System.Xml.XmlNode> 或 <xref:System.Xml.XmlDocument> 来表示 XML 数据。 相反，倾向使用 <xref:System.Xml.XPath.IXPathNavigable>、<xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter> 或 <xref:System.Xml.Linq.XNode> 的子类型。 `XmlNode` 和 `XmlDocument` 不是为在公共 API 中公开而设计的。
+ ❌ 不使用 <xref:System.Xml.XmlNode> 或 <xref:System.Xml.XmlDocument> 来表示 XML 数据。 优选改用 <xref:System.Xml.Linq.XNode> <xref:System.Xml.XPath.IXPathNavigable>、<xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter>或子类型的实例。 `XmlNode` 和 `XmlDocument` 不用于公开公共 Api。
 
  ✔️确实使用 `XNode` 的 `XmlReader`、`IXPathNavigable`或子类型作为接受或返回 XML 的成员的输入或输出。
 
- 使用这些抽象的项，而不是 `XmlDocument`、`XmlNode` 或 <xref:System.Xml.XPath.XPathDocument>，因为这将方法与内存中 XML 文档的特定实现解耦，并允许它们与公开 `XNode`、`XmlReader` 或 <xref:System.Xml.XPath.XPathNavigator> 的虚拟 XML 数据源一起使用。
+ 使用这些抽象，而不是 `XmlDocument`、`XmlNode`或 <xref:System.Xml.XPath.XPathDocument>，因为这会将方法与内存中 XML 文档的特定实现分离，并允许它们使用公开 `XNode`、`XmlReader`或 <xref:System.Xml.XPath.XPathNavigator>的虚拟 XML 数据源。
 
  如果您想要创建一个表示基础对象模型或数据源的 XML 视图的类型，❌ 不 `XmlDocument` 子类。
 

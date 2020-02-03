@@ -34,44 +34,44 @@ ms.locfileid: "76744138"
 
  ✔️考虑在适当的情况下使用复数命名空间名称。
 
- 例如，请使用 `System.Collections` 而不是 `System.Collection`。 但此规则不适用于品牌名称和首字母缩写词。 例如，请使用 `System.IO` 而不是 `System.IOs`。
+ 例如，使用 `System.Collections` 而不是 `System.Collection`。 但此规则不适用于品牌名称和首字母缩写词。 例如，使用 `System.IO` 而不是 `System.IOs`。
 
  对于命名空间和该命名空间中的类型，❌ 不要使用相同的名称。
 
- 例如，如果将命名空间命名为 `Debug`，就不应在该命名空间中提供一个名为 `Debug` 的类。 某些编译器要求这些类型为完全限定类型。
+ 例如，不要将 `Debug` 用作命名空间名称，然后在相同的命名空间中提供名为 `Debug` 的类。 某些编译器要求这些类型为完全限定类型。
 
 ### <a name="namespaces-and-type-name-conflicts"></a>命名空间和类型名称冲突
  ❌ 不会引入泛型类型名称，如 `Element`、`Node`、`Log`和 `Message`。
 
- 很多情况下，这样做会导致在常见方案中发生类型名称冲突。 一般情况下，这样做很可能会导致类型名称冲突。应限定泛型类型名称（`FormElement`、`XmlNode`、`EventLog`、`SoapMessage`）。
+ 很多情况下，这样做会导致在常见方案中发生类型名称冲突。 应限定泛型类型名称（`FormElement`、`XmlNode`、`EventLog``SoapMessage`）。
 
  针对不同类别的命名空间，存在避免类型名称冲突的特定准则。
 
 - **应用程序模型命名空间**
 
-     属于同一应用程序模型的命名空间经常一起使用，但它们几乎从不与其他应用程序模型的命名空间一起使用。 例如，<xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间很少与 <xref:System.Web.UI?displayProperty=nameWithType> 命名空间一起使用。以下是一个常见的应用程序模型命名空间组的列表： 下面列出了众所周知的应用程序模型命名空间组：
+     属于同一应用程序模型的命名空间经常一起使用，但它们几乎从不与其他应用程序模型的命名空间一起使用。 例如，<xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间非常少与 <xref:System.Web.UI?displayProperty=nameWithType> 命名空间一起使用。 下面列出了众所周知的应用程序模型命名空间组：
 
      `System.Windows*` `System.Web.UI*`
 
      ❌ 不要为单个应用程序模型中的命名空间中的类型指定相同的名称。
 
-     例如，不要在 <xref:System.Web.UI.Adapters?displayProperty=nameWithType> 命名空间中添加名为 `Page` 的类型，因为 <xref:System.Web.UI?displayProperty=nameWithType> 命名空间已包含名为 `Page` 的类型。
+     例如，不要将名为 `Page` 的类型添加到 <xref:System.Web.UI.Adapters?displayProperty=nameWithType> 命名空间，因为 <xref:System.Web.UI?displayProperty=nameWithType> 命名空间已经包含名为 `Page`的类型。
 
 - **基础结构命名空间**
 
-     该组包含在开发常见应用程序期间鲜少导入的命名空间。 例如，`.Design` 命名空间主要用于开发编程工具。 避免与这些命名空间中的类型发生冲突并不重要。
+     该组包含在开发常见应用程序期间鲜少导入的命名空间。 例如，`.Design` 命名空间主要在开发编程工具时使用。 避免与这些命名空间中的类型发生冲突并不重要。
 
 - **核心命名空间**
 
-     核心命名空间包括所有 `System` 命名空间，不包括应用程序模型命名空间和基础结构命名空间。 核心命名空间包括 `System`、`System.IO`、`System.Xml` 和 `System.Net` 等。
+     核心命名空间包括所有 `System` 命名空间（不包括应用程序模型的命名空间和基础结构命名空间）。 核心命名空间包括其他 `System`、`System.IO`、`System.Xml`和 `System.Net`。
 
      ❌ 不要提供会与核心命名空间中的任何类型发生冲突的类型名称。
 
-     例如，永远不要将 `Stream` 用作类型名称。 它会与十分常用的类型 <xref:System.IO.Stream?displayProperty=nameWithType> 相冲突。
+     例如，切勿将 `Stream` 用作类型名称。 它会与 <xref:System.IO.Stream?displayProperty=nameWithType>（一种非常常用的类型）冲突。
 
 - **技术命名空间组**
 
-     此类别包括前两个命名空间节点一致 (`(<Company>.<Technology>*`) 的所有命名空间，例如 `Microsoft.Build.Utilities` 和 `Microsoft.Build.Tasks`。 属于同一单一技术的类型之间不能相互冲突，这一点很重要。
+     此类别包括 `(<Company>.<Technology>*`的前两个命名空间节点相同的所有命名空间，如 `Microsoft.Build.Utilities` 和 `Microsoft.Build.Tasks`。 属于同一单一技术的类型之间不能相互冲突，这一点很重要。
 
      ❌ 不分配与单个技术中的其他类型冲突的类型名称。
 

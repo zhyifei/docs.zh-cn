@@ -1,5 +1,5 @@
 ---
-title: 이벤트 및 콜백
+title: 事件和回调
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -15,10 +15,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741653"
 ---
-# <a name="events-and-callbacks"></a>이벤트 및 콜백
+# <a name="events-and-callbacks"></a>事件和回调
 回调允许框架通过委托回调用户代码来实现可扩展性。 这些委托通常通过方法的参数传递给框架。
 
- 事件是回调的一种特殊情况，它支持通过便捷且一致的语法来提供委托（事件处理程序）。 此外，可以借助 Visual Studio 的语句完成和设计器功能来使用基于事件的 API。 (请参阅[事件设计](../../../docs/standard/design-guidelines/event.md)。)
+ 事件是回调的一种特殊情况，它支持通过便捷且一致的语法来提供委托（事件处理程序）。 此外，可以借助 Visual Studio 的语句完成和设计器功能来使用基于事件的 API。 （请参阅[事件设计](../../../docs/standard/design-guidelines/event.md)。）
 
  ✔️考虑使用回调来允许用户提供要由框架执行的自定义代码。
 
@@ -40,9 +40,9 @@ ms.locfileid: "76741653"
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。
 
 ## <a name="see-also"></a>另请参阅
 
-- [확장성을 위한 디자인](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
+- [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)

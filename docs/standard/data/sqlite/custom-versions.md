@@ -1,5 +1,5 @@
 ---
-title: 사용자 지정 SQLite 버전
+title: 自定义 SQLite 版本
 ms.date: 12/13/2019
 description: 了解如何使用本机 SQLite 库的自定义版本。
 ms.openlocfilehash: dd27278c1dbe17b12e5067d04d19043bf259b1e8
@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746989"
 ---
-# <a name="custom-sqlite-versions"></a>사용자 지정 SQLite 버전
+# <a name="custom-sqlite-versions"></a>自定义 SQLite 版本
 
 SQLitePCLRaw 构建在其基础之上。 可以通过使用捆绑或配置 SQLitePCLRaw 提供程序来使用本机 SQLite 库的自定义版本。
 
@@ -21,9 +21,9 @@ SQLitePCLRaw 提供捆绑包，使你可以轻松地在不同平台之间引入�
 
 若要使用不同的捆绑包，请改为安装 `Microsoft.Data.Sqlite.Core` 包以及要使用的捆绑包。 绑定由 Microsoft 自动初始化。
 
-| 软件包 | 설명 |
+| 捆绑 | 说明 |
 | --- | --- |
-| SQLitePCLRaw bundle_e_sqlite3 | 在所有平台上提供一致版本的 SQLite。 包括 FTS4、FTS5、JSON1 和 R * 树扩展。 이것이 기본값입니다. |
+| SQLitePCLRaw bundle_e_sqlite3 | 在所有平台上提供一致版本的 SQLite。 包括 FTS4、FTS5、JSON1 和 R * 树扩展。 这是默认值。 |
 | SQLitePCLRaw bundle_green | 与 bundle_e_sqlite3 相同，不同之处在于使用系统 SQLite 库的 iOS。 |
 | SQLitePCLRaw bundle_zetetic | 使用 Zetetic 中的官方 SQLCipher 生成（不包括在内）。 |
 | SQLitePCLRaw bundle_winsqlite3 | 使用 Windows 10 上的 winsqlite3 系统 SQLite 库。 |

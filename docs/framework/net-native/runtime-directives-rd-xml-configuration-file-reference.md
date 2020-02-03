@@ -1,5 +1,5 @@
 ---
-title: 런타임 지시문(rd.xml) 구성 파일 참조
+title: 运行时指令 (rd.xml) 配置文件引用
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 ms.openlocfilehash: e74d34693446cca645003a9f93bc1777849e3182
@@ -9,9 +9,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76738406"
 ---
-# <a name="runtime-directives-rdxml-configuration-file-reference"></a>런타임 지시문(rd.xml) 구성 파일 참조
+# <a name="runtime-directives-rdxml-configuration-file-reference"></a>运行时指令 (rd.xml) 配置文件引用
 
-런타임 지시문(.rd.xml) 파일은 지정된 프로그램 요소를 리플렉션에 사용할 수 있는지 여부를 지정하는 XML 구성 파일입니다. 런타임 지시문 파일의 예는 다음과 같습니다.
+运行时指令 (.rd.xml) 文件是一个 XML 配置文件，它指定了指定程序元素是否适用于反射。 运行时指令文件的示例如下所示：
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -31,81 +31,81 @@ ms.locfileid: "76738406"
 </Directives>
 ```
 
-## <a name="the-structure-of-a-runtime-directives-file"></a>지시문 런타임 파일의 구조
+## <a name="the-structure-of-a-runtime-directives-file"></a>运行时指令文件的结构
 
-런타임 지시문 파일은 `http://schemas.microsoft.com/netfx/2013/01/metadata` 네임스페이스를 사용합니다.
+运行时指令文件使用 `http://schemas.microsoft.com/netfx/2013/01/metadata` 命名空间。
 
-루트 요소는 [Directives](directives-element-net-native.md) 요소입니다. 이 요소는 다음 구조에 나와 있는 것처럼 [Library](library-element-net-native.md) 요소와 [Application](application-element-net-native.md) 요소를 포함하지 않을 수도 있고 포함할 수도 있습니다. [Application](application-element-net-native.md) 요소의 특성은 애플리케이션 전체 런타임 리플렉션 정책을 정의할 수도 있고 자식 요소의 컨테이너로 사용될 수도 있습니다. 반면 [Library](library-element-net-native.md) 요소는 단순한 컨테이너입니다. [Application](application-element-net-native.md) 및 [Library](library-element-net-native.md) 요소의 자식은 리플렉션에 사용할 수 있는 형식, 메서드, 필드, 속성 및 이벤트를 정의합니다.
+根元素为 [Directives](directives-element-net-native.md) 元素。 它可以包含零个或更多个 [Library](library-element-net-native.md) 元素，以及零个或一个 [Application](application-element-net-native.md) 元素，如以下结构中所示。 [Application](application-element-net-native.md) 元素的特性可定义应用程序范围的运行时反射策略，或可充当子元素的容器。 而 [Library](library-element-net-native.md) 元素则仅仅是一个容器。 [Application](application-element-net-native.md) 和 [Library](library-element-net-native.md) 元素的子级定义了适用于反射的类型、方法、字段、属性和事件。
 
-참조 정보를 확인하려면 다음 구조체의 요소를 선택하거나 [런타임 지시문 요소](runtime-directive-elements.md)를 참조하세요. 다음 계층 구조에서 줄임표는 재귀 구조를 표시합니다. 괄호 안의 정보는 해당 요소가 필수 항목인지 선택적 항목인지와 요소가 사용되는 경우 허용되는 인스턴스 수(하나 또는 여러 개)를 나타냅니다.
+有关引用信息，请从以下结构中选择元素或参阅[运行时指令元素](runtime-directive-elements.md)。 在以下层次结构中，省略号表示递归结构。 括号中的信息表明元素是可选项还是必需项，以及如果使用该元素，将允许多少个实例（一个或多个）。
 
 - [Directives](directives-element-net-native.md) [1:1]
   - [Application](application-element-net-native.md) [0:1]
     - [Assembly](assembly-element-net-native.md) [0:M]
-      - [命名空间](namespace-element-net-native.md)[0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
-      - [类型](type-element-net-native.md)[0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
-      - [类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [命名空间](namespace-element-net-native.md)[0： M]。 . .
+      - [类型](type-element-net-native.md)[0： M]。 . .
+      - [类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 . .
     - [Namespace](namespace-element-net-native.md) [0:M]
-      - [命名空间](namespace-element-net-native.md)[0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
-      - [类型](type-element-net-native.md)[0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
-      - [类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [命名空间](namespace-element-net-native.md)[0： M]。 . .
+      - [类型](type-element-net-native.md)[0： M]。 . .
+      - [类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 . .
     - [Type](type-element-net-native.md) [0:M]
-      - [Subtypes](subtypes-element-net-native.md)(포함 형식의 하위 클래스) [O:1]
-      - [类型](type-element-net-native.md)[0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
-      - [类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
-      - [AttributeImplies](attributeimplies-element-net-native.md)(포함 형식이 특성임) [O:1]
+      - [Subtypes](subtypes-element-net-native.md)（包含类型的子类）[O:1]
+      - [类型](type-element-net-native.md)[0： M]。 . .
+      - [类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 . .
+      - [AttributeImplies](attributeimplies-element-net-native.md)（包含类型是一种特性）[O:1]
       - [GenericParameter](genericparameter-element-net-native.md) [0:M]
       - [Method](method-element-net-native.md) [0:M]
         - [Parameter](parameter-element-net-native.md) [0:M]
         - [TypeParameter](typeparameter-element-net-native.md) [0:M]
         - [GenericParameter](genericparameter-element-net-native.md) [0:M]
-      - [MethodInstantiation](methodinstantiation-element-net-native.md)(생성된 제네릭 메서드) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md)（构造泛型方法）[0:M]
       - [Property](property-element-net-native.md) [0:M]
       - [Field](field-element-net-native.md) [0:M]
       - [Event](event-element-net-native.md) [0:M]
-    - [TypeInstantiation](typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]
-      - [类型](type-element-net-native.md)[0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
-      - [类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
+    - [TypeInstantiation](typeinstantiation-element-net-native.md)（构造泛型类型）[0:M]
+      - [类型](type-element-net-native.md)[0： M]。 . .
+      - [类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 . .
       - [Method](method-element-net-native.md) [0:M]
         - [Parameter](parameter-element-net-native.md) [0:M]
         - [TypeParameter](typeparameter-element-net-native.md) [0:M]
         - [GenericParameter](genericparameter-element-net-native.md) [0:M]
-      - [MethodInstantiation](methodinstantiation-element-net-native.md)(생성된 제네릭 메서드) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md)（构造泛型方法）[0:M]
       - [Property](property-element-net-native.md) [0:M]
       - [Field](field-element-net-native.md) [0:M]
       - [Event](event-element-net-native.md) [0:M]
   - [Library](library-element-net-native.md) [0:M]
     - [Assembly](assembly-element-net-native.md) [0:M]
-      - [命名空间](namespace-element-net-native.md)[0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
-      - [类型](type-element-net-native.md)[0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
-      - [类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [命名空间](namespace-element-net-native.md)[0： M]。 . .
+      - [类型](type-element-net-native.md)[0： M]。 . .
+      - [类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 . .
     - [Namespace](namespace-element-net-native.md) [0:M]
-      - [命名空间](namespace-element-net-native.md)[0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
-      - [类型](type-element-net-native.md)[0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
-      - [类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [命名空间](namespace-element-net-native.md)[0： M]。 . .
+      - [类型](type-element-net-native.md)[0： M]。 . .
+      - [类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 . .
     - [Type](type-element-net-native.md) [0:M]
-      - [Subtypes](subtypes-element-net-native.md)(포함 형식의 하위 클래스) [O:1]
-      - [类型](type-element-net-native.md)[0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
-      - [类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
-      - [AttributeImplies](attributeimplies-element-net-native.md)(포함 형식이 특성임) [O:1]
+      - [Subtypes](subtypes-element-net-native.md)（包含类型的子类）[O:1]
+      - [类型](type-element-net-native.md)[0： M]。 . .
+      - [类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 . .
+      - [AttributeImplies](attributeimplies-element-net-native.md)（包含类型是一种特性）[O:1]
       - [GenericParameter](genericparameter-element-net-native.md) [0:M]
       - [Method](method-element-net-native.md) [0:M]
-      - [MethodInstantiation](methodinstantiation-element-net-native.md)(생성된 제네릭 메서드) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md)（构造泛型方法）[0:M]
       - [Property](property-element-net-native.md) [0:M]
       - [Field](field-element-net-native.md) [0:M]
       - [Event](event-element-net-native.md) [0:M]
-    - [TypeInstantiation](typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]
-      - [类型](type-element-net-native.md)[0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
-      - [类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 의 기본 클래스입니다. 의 기본 클래스입니다.
+    - [TypeInstantiation](typeinstantiation-element-net-native.md)（构造泛型类型）[0:M]
+      - [类型](type-element-net-native.md)[0： M]。 . .
+      - [类型实例化](typeinstantiation-element-net-native.md)（构造泛型类型） [0： M]。 . .
       - [Method](method-element-net-native.md) [0:M]
-      - [MethodInstantiation](methodinstantiation-element-net-native.md)(생성된 제네릭 메서드) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md)（构造泛型方法）[0:M]
       - [Property](property-element-net-native.md) [0:M]
       - [Field](field-element-net-native.md) [0:M]
       - [Event](event-element-net-native.md) [0:M]
 
-[Application](application-element-net-native.md) 요소는 특성을 포함할 수 없거나 [런타임 지시문 및 정책 섹션](#Directives)에서 설명하는 정책 특성을 포함할 수 있습니다.
+[Application](application-element-net-native.md) 元素可以不具任何属性，也可以具备在[“运行时指令和策略”部分](#Directives)中所讨论的策略属性。
 
-[Library](library-element-net-native.md) 요소는 파일 이름 확장명을 포함하지 않는 라이브러리나 어셈블리의 이름을 지정하는 단일 특성(`Name`)을 포함합니다. 예를 들어 다음 [Library](library-element-net-native.md) 요소는 Extensions.dll 어셈블리에 적용되는 요소입니다.
+[Library](library-element-net-native.md) 元素具有单个属性 `Name`，该属性指定了库名或程序集名（不带文件扩展名）。 例如，以下 [Library](library-element-net-native.md) 元素适用于名为 Extensions.dll 的程序集。
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -120,57 +120,57 @@ ms.locfileid: "76738406"
 
 <a name="Directives"></a>
 
-## <a name="runtime-directives-and-policy"></a>런타임 지시문 및 정책
+## <a name="runtime-directives-and-policy"></a>运行时指令和策略
 
-[Application](application-element-net-native.md) 요소 자체와 [Library](library-element-net-native.md) 및 [Application](application-element-net-native.md) 요소의 자식 요소는 정책을 표현합니다. 즉, 앱이 프로그램 요소에 리플렉션을 적용할 수 있는 방식을 정의합니다. 정책 형식은 요소의 특성에 의해 정의됩니다(예: `Serialize`). 정책 값은 특성의 값으로 정의됩니다(예: `Serialize="Required"`).
+[Application](application-element-net-native.md) 元素本身以及 [Library](library-element-net-native.md) 和 [Application](application-element-net-native.md) 元素的子元素表示策略，也就是说，它们定义了应用可将反射应用于程序元素的方式。 策略类型由元素属性定义（例如，`Serialize`）。 策略值由属性值定义（例如，`Serialize="Required"`）。
 
-요소의 특성으로 지정된 정책은 해당 정책에 대해 값을 지정하지 않는 모든 자식 요소에 적용됩니다. 예를 들어 정책이 [Type](type-element-net-native.md) 요소로 지정된 경우 정책이 명시적으로 지정되지 않은 모든 포함된 형식 및 멤버에 해당 정책이 적용됩니다.
+任何由元素属性指定的策略均适用于未对该策略指定值的子元素。 例如，如果策略由 [Type](type-element-net-native.md) 元素指定，则该策略适用于包含的所有尚未显式指定策略的类型和成员。
 
-[Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) 및 [Type](type-element-net-native.md) 요소로 표현할 수 있는 정책은 [Method](method-element-net-native.md), [Property](property-element-net-native.md), [Field](field-element-net-native.md) 및 [Event](event-element-net-native.md) 요소로 개별 멤버에 대해 표현할 수 있는 정책과는 다릅니다.
+可通过 [Application](application-element-net-native.md)、[Assembly](assembly-element-net-native.md)、[AttributeImplies](attributeimplies-element-net-native.md)、[Namespace](namespace-element-net-native.md)、[Subtypes](subtypes-element-net-native.md) 和 [Type](type-element-net-native.md) 元素表示的策略有别于可针对每个成员表示的策略（通过 [Method](method-element-net-native.md)、[Property](property-element-net-native.md)、[Field](field-element-net-native.md) 和 [Event](event-element-net-native.md) 元素来表示）。
 
-### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a>어셈블리, 네임스페이스 및 형식에 대한 정책 지정
+### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a>为程序集、命名空间和类型指定策略
 
-[Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) 및 [Type](type-element-net-native.md) 요소는 다음 정책 형식을 지원합니다.
+[Application](application-element-net-native.md)、[Assembly](assembly-element-net-native.md)、[AttributeImplies](attributeimplies-element-net-native.md)、[Namespace](namespace-element-net-native.md)、[Subtypes](subtypes-element-net-native.md) 和 [Type](type-element-net-native.md) 元素支持下列策略类型：
 
-- `Activate`. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.
+- `Activate` 列中的一个值匹配。 控制运行时对构造函数的访问，以启用实例激活。
 
-- `Browse`. 프로그램 요소에 대한 정보 쿼리를 제어하지만 런타임 액세스를 사용하도록 설정하지는 않습니다.
+- `Browse` 列中的一个值匹配。 控制对有关程序元素信息的查询，但并不启用任何运行时访问。
 
-- `Dynamic`. 동적 프로그래밍을 수행할 수 있도록 생성자, 메서드, 필드, 속성 및 이벤트를 비롯한 모든 형식 멤버에 대한 런타임 액세스를 제어합니다.
+- `Dynamic` 列中的一个值匹配。 控制运行时对所有类型成员的访问，包括构造函数、方法、字段、属性和事件，以启用动态编程。
 
-- `Serialize`. Newtonsoft JSON serializer 등의 타사 라이브러리를 통해 형식 인스턴스를 serialize 및 deserialize할 수 있도록 생성자, 필드 및 속성에 대한 런타임 액세스를 제어합니다.
+- `Serialize` 列中的一个值匹配。 控制运行时对构造函数、字段和属性的访问，以便通过 Newtonsoft JSON 序列化程序等第三方库实现类型实例的序列化。
 
-- `DataContractSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 serialization에 대한 정책을 제어합니다.
+- `DataContractSerializer` 列中的一个值匹配。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 类的序列化策略。
 
-- `DataContractJsonSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 JSON serialization에 대한 정책을 제어합니다.
+- `DataContractJsonSerializer` 列中的一个值匹配。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 类的 JSON 序列化策略。
 
-- `XmlSerializer`. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 클래스를 사용하는 XML serialization에 대한 정책을 제어합니다.
+- `XmlSerializer` 列中的一个值匹配。 控制使用 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 类的 XML 序列化策略。
 
-- `MarshalObject`. WinRT 및 COM에 대한 참조 형식을 마샬링하는 정책을 제어합니다.
+- `MarshalObject` 列中的一个值匹配。 控制将引用类型封送到 WinRT 和 COM 的策略。
 
-- `MarshalDelegate`. 네이티브 코드에 대한 함수 포인터로 대리자 형식을 마샬링하는 정책을 제어합니다.
+- `MarshalDelegate` 列中的一个值匹配。 控制将委托类型作为函数指针封送到本机代码的策略。
 
-- `MarshalStructure` . 구조체를 네이티브 코드로 마샬링하는 정책을 제어합니다.
+- `MarshalStructure`。 控制封送结构到本机代码的策略。
 
-이러한 정책 형식과 연관된 설정은 다음과 같습니다.
+与这些策略类型有关的设置如下：
 
-- `All`. 도구 체인에서 제거하지 않는 모든 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
+- `All` 列中的一个值匹配。 为工具链未删除的所有类型和成员启用策略。
 
-- `Auto`. 기본 동작을 사용합니다. 정책을 지정하지 않는 것은 부모 요소에 의해 정책이 재정의되는 등의 경우를 제외하면 해당 정책을 `Auto`로 설정하는 것과 같습니다.
+- `Auto` 列中的一个值匹配。 使用默认行为。 （未指定策略等同于将该策略设置为 `Auto`，除非该策略被替代，例如被父元素替代。）
 
-- `Excluded`. 프로그램 요소에 대한 정책을 사용하지 않도록 설정합니다.
+- `Excluded` 列中的一个值匹配。 禁用程序元素策略。
 
-- `Public`. 도구 체인이 멤버를 불필요한 것으로 결정하여 제거하는 경우가 아니면 public 형식 또는 멤버에 대해서는 정책을 사용하도록 설정합니다. 멤버가 제거되는 경우에는 `Required Public`을 사용하여 멤버를 유지하고 리플렉션 기능이 포함되도록 해야 합니다.
+- `Public` 列中的一个值匹配。 启用公共类型或成员策略，除非工具链确定该成员为多余并因此将其删除。 （在后一种情况下，你必须使用 `Required Public`，以确保该成员已被保留并且具有反射功能。）
 
-- `PublicAndInternal`. 도구 체인에서 제거하지 않는 public 및 내부 형식이나 멤버에 대해 정책을 사용하도록 설정합니다.
+- `PublicAndInternal` 列中的一个值匹配。 如果工具链未将公共和内部类型或成员删除，则为它们启用策略。
 
-- `Required Public`. 사용 여부에 관계없이 도구 체인이 public 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
+- `Required Public` 列中的一个值匹配。 不管公共类型和成员是否处于占用状态，工具链均须将它们保留下来，并为它们启用策略。
 
-- `Required PublicAndInternal`. 사용 여부에 관계없이 도구 체인이 public 및 내부 형식과 멤버를 모두 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
+- `Required PublicAndInternal` 列中的一个值匹配。 不管公共和内部类型和成员是否处于占用状态，工具链均须将它们保留下来，并为它们启用策略。
 
-- `Required All`. 사용 여부에 관계없이 도구 체인이 모든 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
+- `Required All` 列中的一个值匹配。 不管所有类型和成员是否处于占用状态，工具链均须将它们保留下来，并为它们启用策略。
 
-예를 들어 다음 런타임 지시문 파일은 DataClasses.dll 어셈블리의 모든 형식과 멤버에 대한 정책을 정의합니다. 이 정책은 모든 public 속성의 serialization에 대해 리플렉션을 사용하도록 설정하고, 모든 형식 및 형식 멤버를 검색할 수 있도록 설정하고, `Dynamic` 특성을 통해 모든 형식을 활성화할 수 있도록 설정하고, 모든 public 형식 및 멤버에 대해 리플렉션을 사용하도록 설정합니다.
+例如，以下运行时指令文件为程序集 DataClasses.dll 中的所有类型和成员定义了策略。 借此可以实现对所有公共属性的序列化反射；可实现对所有类型和类型成员进行浏览；可实现对所有类型的激活（由于具有 `Dynamic` 属性）；还可实现对所有公共类型和成员的反射。
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -185,53 +185,53 @@ ms.locfileid: "76738406"
 </Directives>
 ```
 
-### <a name="specifying-policy-for-members"></a>멤버에 대한 정책 지정
+### <a name="specifying-policy-for-members"></a>为成员指定策略
 
-[Property](property-element-net-native.md) 및 [Field](field-element-net-native.md) 요소는 다음 정책 형식을 지원합니다.
+[Property](property-element-net-native.md) 和 [Field](field-element-net-native.md) 元素支持下列策略类型：
 
-- `Browse` - 이 멤버에 대한 정보 쿼리는 제어하지만 런타임 액세스를 사용하도록 설정하지는 않습니다.
+- `Browse` - 控制查询有关此成员的信息，但并不启用任何运行时访问。
 
-- `Dynamic` - 동적 프로그래밍을 수행할 수 있도록 생성자, 메서드, 필드, 속성 및 이벤트를 비롯한 모든 형식 멤버에 대한 런타임 액세스를 제어합니다. 또한 포함 형식에 대한 정보 쿼리도 제어합니다.
+- `Dynamic` - 控制运行时访问所有类型的成员，包括构造函数、方法、字段、属性和事件，以启用动态编程。 还控制查询有关包含类型的信息。
 
-- `Serialize` - Newtonsoft JSON serializer 등의 라이브러리를 통해 형식 인스턴스를 직렬화 및 역직렬화할 수 있도록 멤버에 대한 런타임 액세스를 제어합니다. 이 정책은 생성자, 필드 및 속성에 적용할 수 있습니다.
+- `Serialize` - 控制运行时访问成员，以便通过 Newtonsoft JSON 序列化程序等库实现类型实例的序列化和反序列化。 此策略可应用于构造函数、字段和属性。
 
-[Method](method-element-net-native.md) 및 [Event](event-element-net-native.md) 요소는 다음 정책 형식을 지원합니다.
+[Method](method-element-net-native.md) 和 [Event](event-element-net-native.md) 元素支持下列策略类型：
 
-- `Browse` - 이 멤버에 대한 정보 쿼리는 제어하지만 런타임 액세스를 사용하도록 설정하지는 않습니다.
+- `Browse` - 控制查询有关此成员的信息，但并不启用任何运行时访问。
 
-- `Dynamic` - 동적 프로그래밍을 수행할 수 있도록 생성자, 메서드, 필드, 속성 및 이벤트를 비롯한 모든 형식 멤버에 대한 런타임 액세스를 제어합니다. 또한 포함 형식에 대한 정보 쿼리도 제어합니다.
+- `Dynamic` - 控制运行时访问所有类型的成员，包括构造函数、方法、字段、属性和事件，以启用动态编程。 还控制查询有关包含类型的信息。
 
- 이러한 정책 형식과 연관된 설정은 다음과 같습니다.
+ 与这些策略类型有关的设置如下：
 
-- `Auto` - 기본 동작을 사용합니다. 특정 요소가 정책을 재정의하는 경우를 제외하면 정책을 지정하지 않는 것은 정책을 `Auto`로 설정하는 것과 같습니다.
+- `Auto` - 使用默认行为。 （未指定策略等同于将该策略设置为 `Auto`，除非某些内容将该策略替代。）
 
-- `Excluded` - 멤버에 대한 메타데이터를 포함하지 않습니다.
+- `Excluded` - 始终不包括成员的元数据。
 
-- `Included` - 출력에 부모 형식이 있으면 정책을 사용하도록 설정합니다.
+- `Included` - 如果输出中存在父类型，则启用策略。
 
-- `Required` - 특정 멤버가 사용되지 않는 것으로 확인되더라도 도구 체인이 해당 멤버를 유지해야 하도록 지정하고 해당 멤버에 대해 정책을 사용하도록 설정합니다.
+- `Required` - 即便该成员显示为未使用，工具链也必须将它保留下来，并为它启用策略。
 
-## <a name="runtime-directives-file-semantics"></a>런타임 지시문 파일 의미
+## <a name="runtime-directives-file-semantics"></a>运行时指令文件语义
 
-상위 및 하위 요소 둘 다에 대해 정책을 동시에 정의할 수 있습니다. 예를 들어 어셈블리 및 해당 어셈블리에 포함된 일부 형식에 대한 정책을 정의할 수 있습니다. 표시되지 않는 특정 하위 요소는 부모의 정책을 상속합니다. 예를 들어 `Assembly` 요소는 있는데 `Type` 요소는 없으면 `Assembly` 요소에 지정된 정책이 어셈블리의 각 형식에 적용됩니다. 또한 여러 요소가 같은 프로그램 요소에 정책을 적용할 수도 있습니다. 예를 들어 개별 [Assembly](assembly-element-net-native.md) 요소가 같은 어셈블리에 대해 같은 정책 요소를 각기 다르게 정의할 수 있습니다. 다음 섹션에서는 이러한 경우 특정 형식에 대한 정책을 확인하는 방법을 설명합니다.
+可同时为较高级别和较低级别元素定义策略。 例如，我们可为程序集以及其中包含的一些类型定义策略。 如果无法表示特定的较低级别元素，则说明该元素继承了其父级的策略。 例如，如果存在 `Assembly` 元素却不存在 `Type` 元素，则说明在 `Assembly` 中指定的策略适用于数据集中的每一个类型。 多个元素也可将策略应用到同一个程序元素。 例如，不同的 [Assembly](assembly-element-net-native.md) 元素可能会以不同的方式为同一个数据集定义同一个策略元素。 以下部分将分别说明在下列情况下应如何处理特定类型策略。
 
-제네릭 형식이나 메서드의 [Type](type-element-net-native.md) 또는 [Method](method-element-net-native.md) 요소는 자체 정책을 포함하지 않는 모든 인스턴스화에 해당 정책을 적용합니다. 예를 들어 `Type`에 대해 정책을 지정하는 <xref:System.Collections.Generic.List%601> 요소는 해당 제네릭 형식의 생성된 모든 인스턴스에 적용됩니다. 단, `List<Int32>` 요소가 `TypeInstantiation`와 같은 생성된 특정 제네릭 형식에 대해 정책을 재정의하는 경우는 예외입니다. 이러한 경우가 아니면 요소는 명명된 프로그램 요소에 대해 정책을 정의합니다.
+泛型类型或方法的一个 [Type](type-element-net-native.md) 或 [Method](method-element-net-native.md) 元素将它的策略应用到所有不具备自身策略的实例化。 例如，为 `Type` 指定了策略的 <xref:System.Collections.Generic.List%601> 元素适用于该泛型类型的所有构造实例，除非 `List<Int32>` 元素将其替代为特殊构造的泛型类型（例如 `TypeInstantiation`）。 否则，元素将为指定的程序元素定义策略。
 
-요소가 모호한 경우 엔진은 일치하는 항목을 찾으며 정확히 일치하는 항목이 발견되면 해당 항목을 사용합니다. 일치하는 항목이 여러 개이면 경고나 오류가 표시됩니다.
+元素不明确时，引擎将查找匹配项，如果发现完全匹配就将使用该条匹配。 如果发现多条匹配，将出现警告或错误。
 
-### <a name="if-two-directives-apply-policy-to-the-same-program-element"></a>두 지시문이 같은 프로그램 요소에 정책을 적용하는 경우
+### <a name="if-two-directives-apply-policy-to-the-same-program-element"></a>如果两条指令将策略应用于同一个程序元素
 
-서로 다른 런타임 지시문 파일의 두 요소가 어셈블리나 형식 등의 같은 프로그램 요소에 대한 동일 정책 형식을 각기 다른 값으로 설정하려는 경우에는 다음과 같은 방법으로 충돌을 해결합니다.
+如果不同运行时指令文件中的两个元素尝试将同一程序元素（例如程序集或类型）的同一策略类型设置为不同的值，则解决冲突的方法如下：
 
-1. `Excluded` 요소가 있으면 우선적으로 적용됩니다.
+1. 如果存在 `Excluded` 元素，则该元素优先。
 
-2. `Required`인 항목이 `Required`가 아닌 항목보다 우선적으로 적용됩니다.
+2. `Required` 优先于非 `Required`。
 
-3. `All`, `PublicAndInternal`, `Public`이 순서대로 적용됩니다.
+3. `All` 优先于 `PublicAndInternal`，而后者又优先于 `Public`。
 
-4. 명시적 설정이 `Auto`보다 우선적으로 적용됩니다.
+4. 任何显式设置均优先于 `Auto`。
 
-예를 들어 프로젝트 하나에 다음과 같은 두 런타임 지시문 파일이 포함되어 있으면 DataClasses.dll의 serialization 정책이 `Required Public` 및 `All` 둘 다로 설정됩니다. 이 경우 serialization 정책은 `Required All`로 확인됩니다.
+例如，如果单个项目包含以下两种运行时指令文件，DataClasses.dll 的序列化策略将设置为 `Required Public` 和 `All`。 在此情况下，序列化策略将被处理为 `Required All`。
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -255,13 +255,13 @@ ms.locfileid: "76738406"
 </Directives>
 ```
 
-그러나 단일 런타임 지시문 파일의 두 지시문이 같은 프로그램 요소에 대해 같은 정책 형식을 설정하려고 하면 XML 스키마 정의 도구에 오류 메시지가 표시됩니다.
+但如果单个运行时指令文件中的两个指令尝试设置同一程序元素的同一策略类型，则 XML Scheme Definition 工具将显示错误消息。
 
-### <a name="if-child-and-parent-elements-apply-the-same-policy-type"></a>자식 및 부모 요소가 같은 정책 형식을 적용하는 경우
+### <a name="if-child-and-parent-elements-apply-the-same-policy-type"></a>如果子元素和父元素应用的是同一策略类型
 
-자식 요소는 `Excluded` 설정을 포함하여 부모 요소를 재정의합니다. 대개 이러한 재정의로 인해 `Auto`를 지정하게 됩니다.
+子元素将替代其父元素，包括 `Excluded` 设置。 你想要指定 `Auto` 的主要原因就是要执行替代操作。
 
-다음 예에서는 `DataClasses`에 포함되어 있지 않은 `DataClasses.ViewModels`의 모든 항목에 대한 serialization 정책 설정은 `Required Public`이 되고 `DataClasses` 및 `DataClasses.ViewModels`에 모두 포함되어 있는 모든 항목에 대한 serialization 정책 설정은 `All`이 됩니다.
+在以下示例中，`DataClasses` 中所有内容（`DataClasses.ViewModels` 中不含这些内容）的序列化策略设置将为 `Required Public`，而 `DataClasses` 和 `DataClasses.ViewModels` 中所有内容的序列化策略设置将为 `All`。
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -276,9 +276,9 @@ ms.locfileid: "76738406"
 </Directives>
 ```
 
-### <a name="if-open-generics-and-instantiated-elements-apply-the-same-policy-type"></a>개방형 제네릭 및 인스턴스화된 요소 형식이 같은 정책을 적용하는 경우
+### <a name="if-open-generics-and-instantiated-elements-apply-the-same-policy-type"></a>如果开放式泛型元素和已实例化的元素应用的是同一策略类型
 
-다음 예제에서는 엔진이 다른 이유로 인해 `Dictionary<int,int>` 정책을 적용해야 하는 경우에만 `Browse`에 `Browse` 정책이 할당됩니다(그렇지 않으면 이 정책이 기본 동작임). <xref:System.Collections.Generic.Dictionary%602>의 다른 모든 인스턴스화에서는 모든 구성원을 검색할 수 있습니다.
+在以下示例中，只有当引擎出于其他原因提供 `Dictionary<int,int>` 策略时（亦可为默认行为），才会为 `Browse` 分配 `Browse` 策略；<xref:System.Collections.Generic.Dictionary%602> 的所有其他实例化将具有所有可浏览的成员。
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -297,163 +297,163 @@ ms.locfileid: "76738406"
 </Directives>
 ```
 
-### <a name="how-policy-is-inferred"></a>정책을 유추하는 방법
+### <a name="how-policy-is-inferred"></a>如何推断出策略
 
-각 정책 형식에는 해당 정책 형식의 유무가 다른 구문에 주는 영향을 결정하는 여러 규칙 집합이 있습니다.
+每个策略类型均具有一组不同的规则，这些规则决定了该策略类型的存在如何对其他构造造成影响。
 
-#### <a name="the-effect-of-browse-policy"></a>Browse 정책의 영향
+#### <a name="the-effect-of-browse-policy"></a>“浏览”策略的效果
 
-형식에 `Browse` 정책을 적용하면 정책이 다음과 같이 변경됩니다.
+将 `Browse` 策略应用于类型涉及下列策略更改：
 
-- 해당 형식의 기본 형식이 `Browse` 정책으로 표시됩니다.
+- 类型的基类型标有 `Browse` 策略。
 
-- 형식이 인스턴스화된 제네릭인 경우 인스턴스화되지 않은 형식 버전이 `Browse` 정책으로 표시됩니다.
+- 如果类型为实例化泛型类型，则该类型的未实例化版本将标有 `Browse` 策略。
 
-- 형식이 대리자인 경우에는 형식의 `Invoke` 메서드가 `Dynamic` 정책으로 표시됩니다.
+- 如果类型为委托类型，则针对该类型的 `Invoke` 方法将标有 `Dynamic` 策略。
 
-- 형식의 각 인터페이스가 `Browse` 정책으로 표시됩니다.
+- 每个类型接口将标有 `Browse` 策略。
 
-- 형식에 적용된 각 특성의 형식이 `Browse` 정책으로 표시됩니다.
+- 应用于类型的每个属性类型将标有 `Browse` 策略。
 
-- 형식이 제네릭인 경우 각 제약 조건 형식이 `Browse` 정책으로 표시됩니다.
+- 如果类型为泛型，则每个约束类型将标有 `Browse` 策略。
 
-- 형식이 제네릭이면 해당 형식이 인스턴스화되는 형식이 `Browse` 정책으로 표시됩니다.
+- 如果类型为泛型，则实例化该类型所采用的类型将标有 `Browse` 策略。
 
-메서드에 `Browse` 정책을 적용하면 정책이 다음과 같이 변경됩니다.
+将 `Browse` 策略应用于方法涉及下列策略更改：
 
-- 메서드의 각 매개 변수 형식이 `Browse` 정책으로 표시됩니다.
+- 方法的每个参数类型将标有 `Browse` 策略。
 
-- 해당 메서드의 반환 형식이 `Browse` 정책으로 표시됩니다.
+- 方法的返回类型将标有 `Browse` 策略。
 
-- 해당 메서드의 포함 형식이 `Browse` 정책으로 표시됩니다.
+- 方法的包含类型将标有 `Browse` 策略。
 
-- 메서드가 인스턴스화된 제네릭 메서드인 경우 인스턴스화되지 않은 제네릭 메서드가 `Browse` 정책으로 표시됩니다.
+- 如果方法为实例化泛型方法，则未实例化泛型方法将标有 `Browse` 策略。
 
-- 메서드에 적용된 각 특성의 형식이 `Browse` 정책으로 표시됩니다.
+- 应用于方法的每个属性类型将标有 `Browse` 策略。
 
-- 메서드가 제네릭인 경우 각 제약 조건 형식이 `Browse` 정책으로 표시됩니다.
+- 如果方法为泛型，则每个约束类型将标有 `Browse` 策略。
 
-- 메서드가 제네릭이면 해당 메서드가 인스턴스화되는 형식이 `Browse` 정책으로 표시됩니다.
+- 如果方法为泛型，则实例化该方法所采用的类型将标有 `Browse` 策略。
 
-필드에 `Browse` 정책을 적용하면 정책이 다음과 같이 변경됩니다.
+将 `Browse` 策略应用于字段涉及下列策略更改：
 
-- 필드에 적용된 각 특성의 형식이 `Browse` 정책으로 표시됩니다.
+- 应用于字段的每个属性类型将标有 `Browse` 策略。
 
-- 필드의 형식이 `Browse` 정책으로 표시됩니다.
+- 字段类型将标有 `Browse` 策略。
 
-- 필드가 속하는 형식이 `Browse` 정책으로 표시됩니다.
+- 字段从属的类型将标有 `Browse` 策略。
 
-#### <a name="the-effect-of-dynamic-policy"></a>Dynamic 정책의 영향
+#### <a name="the-effect-of-dynamic-policy"></a>“动态”策略的效果
 
-형식에 `Dynamic` 정책을 적용하면 정책이 다음과 같이 변경됩니다.
+将 `Dynamic` 策略应用于类型涉及下列策略更改：
 
-- 해당 형식의 기본 형식이 `Dynamic` 정책으로 표시됩니다.
+- 类型的基类型标有 `Dynamic` 策略。
 
-- 형식이 인스턴스화된 제네릭인 경우 인스턴스화되지 않은 형식 버전이 `Dynamic` 정책으로 표시됩니다.
+- 如果类型为实例化泛型类型，则该类型的未实例化版本将标有 `Dynamic` 策略。
 
-- 형식이 대리자 형식인 경우에는 형식의 `Invoke` 메서드가 `Dynamic` 정책으로 표시됩니다.
+- 如果类型为委托类型，则针对该类型的 `Invoke` 方法将标有 `Dynamic` 策略。
 
-- 형식의 각 인터페이스가 `Browse` 정책으로 표시됩니다.
+- 每个类型接口将标有 `Browse` 策略。
 
-- 형식에 적용된 각 특성의 형식이 `Browse` 정책으로 표시됩니다.
+- 应用于类型的每个属性类型将标有 `Browse` 策略。
 
-- 형식이 제네릭인 경우 각 제약 조건 형식이 `Browse` 정책으로 표시됩니다.
+- 如果类型为泛型，则每个约束类型将标有 `Browse` 策略。
 
-- 형식이 제네릭이면 해당 형식이 인스턴스화되는 형식이 `Browse` 정책으로 표시됩니다.
+- 如果类型为泛型，则实例化该类型所采用的类型将标有 `Browse` 策略。
 
-메서드에 `Dynamic` 정책을 적용하면 정책이 다음과 같이 변경됩니다.
+将 `Dynamic` 策略应用于方法涉及下列策略更改：
 
-- 메서드의 각 매개 변수 형식이 `Browse` 정책으로 표시됩니다.
+- 方法的每个参数类型将标有 `Browse` 策略。
 
-- 해당 메서드의 반환 형식이 `Dynamic` 정책으로 표시됩니다.
+- 方法的返回类型将标有 `Dynamic` 策略。
 
-- 해당 메서드의 포함 형식이 `Dynamic` 정책으로 표시됩니다.
+- 方法的包含类型将标有 `Dynamic` 策略。
 
-- 메서드가 인스턴스화된 제네릭 메서드인 경우 인스턴스화되지 않은 제네릭 메서드가 `Browse` 정책으로 표시됩니다.
+- 如果方法为实例化泛型方法，则未实例化泛型方法将标有 `Browse` 策略。
 
-- 메서드에 적용된 각 특성의 형식이 `Browse` 정책으로 표시됩니다.
+- 应用于方法的每个属性类型将标有 `Browse` 策略。
 
-- 메서드가 제네릭인 경우 각 제약 조건 형식이 `Browse` 정책으로 표시됩니다.
+- 如果方法为泛型，则每个约束类型将标有 `Browse` 策略。
 
-- 메서드가 제네릭이면 해당 메서드가 인스턴스화되는 형식이 `Browse` 정책으로 표시됩니다.
+- 如果方法为泛型，则实例化该方法所采用的类型将标有 `Browse` 策略。
 
-- `MethodInfo.Invoke`를 통해 메서드를 호출할 수 있으며 <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>를 통해 대리자를 만들 수 있습니다.
+- `MethodInfo.Invoke` 可调用方法，并且可通过 <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType> 进行委托创建。
 
-필드에 `Dynamic` 정책을 적용하면 정책이 다음과 같이 변경됩니다.
+将 `Dynamic` 策略应用于字段涉及下列策略更改：
 
-- 필드에 적용된 각 특성의 형식이 `Browse` 정책으로 표시됩니다.
+- 应用于字段的每个属性类型将标有 `Browse` 策略。
 
-- 필드의 형식이 `Dynamic` 정책으로 표시됩니다.
+- 字段类型将标有 `Dynamic` 策略。
 
-- 필드가 속하는 형식이 `Dynamic` 정책으로 표시됩니다.
+- 字段从属的类型将标有 `Dynamic` 策略。
 
-#### <a name="the-effect-of-activation-policy"></a>Activation 정책의 영향
+#### <a name="the-effect-of-activation-policy"></a>“激活”策略的效果
 
-형식에 Activation 정책을 적용하면 정책이 다음과 같이 변경됩니다.
+将“激活”策略应用于类型涉及下列策略更改：
 
-- 형식이 인스턴스화된 제네릭인 경우 인스턴스화되지 않은 형식 버전이 `Browse` 정책으로 표시됩니다.
+- 如果类型为实例化泛型类型，则该类型的未实例化版本将标有 `Browse` 策略。
 
-- 형식이 대리자 형식인 경우에는 형식의 `Invoke` 메서드가 `Dynamic` 정책으로 표시됩니다.
+- 如果类型为委托类型，则针对该类型的 `Invoke` 方法将标有 `Dynamic` 策略。
 
-- 형식의 생성자가 `Activation` 정책으로 표시됩니다.
+- 类型的构造函数标有 `Activation` 策略。
 
-메서드에 `Activation` 정책을 적용하면 정책이 다음과 같이 변경됩니다.
+将 `Activation` 策略应用于方法涉及下列策略更改：
 
-- <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> 및 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 메서드를 통해 생성자를 호출할 수 있습니다. 메서드의 경우에는 `Activation` 정책이 생성자에만 적용됩니다.
+- <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> 和 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 方法可调用构造函数。 对于方法而言，`Activation` 策略仅会影响构造函数。
 
-필드에는 `Activation` 정책을 적용해도 아무런 영향이 없습니다.
+将 `Activation` 策略应用于字段未产生任何效果。
 
-#### <a name="the-effect-of-serialize-policy"></a>Serialize 정책의 영향
+#### <a name="the-effect-of-serialize-policy"></a>“序列化”策略的效果
 
-`Serialize` 정책을 적용하면 일반적인 리플렉션 기반 serializer를 사용할 수 있습니다. 그러나 Microsoft는 타사 serializer의 정확한 리플렉션 액세스 패턴을 확인할 수 없으므로 이 정책이 완전히 적용되지 않을 수도 있습니다.
+`Serialize` 策略可启用基于反射的常用序列化程序。 但由于 Microsoft 不清楚非 Microsoft 序列化程序的确切反射访问模式，该策略可能无法完全生效。
 
-형식에 `Serialize` 정책을 적용하면 정책이 다음과 같이 변경됩니다.
+将 `Serialize` 策略应用于类型涉及下列策略更改：
 
-- 해당 형식의 기본 형식이 `Serialize` 정책으로 표시됩니다.
+- 类型的基类型标有 `Serialize` 策略。
 
-- 형식이 인스턴스화된 제네릭인 경우 인스턴스화되지 않은 형식 버전이 `Browse` 정책으로 표시됩니다.
+- 如果类型为实例化泛型类型，则该类型的未实例化版本将标有 `Browse` 策略。
 
-- 형식이 대리자 형식인 경우에는 형식의 `Invoke` 메서드가 `Dynamic` 정책으로 표시됩니다.
+- 如果类型为委托类型，则针对该类型的 `Invoke` 方法将标有 `Dynamic` 策略。
 
-- 형식이 열거형이면 해당 형식의 배열이 `Serialize` 정책으로 표시됩니다.
+- 如果类型为枚举，则类型数组将标有 `Serialize` 策略。
 
-- 형식이 <xref:System.Collections.Generic.IEnumerable%601>를 구현하는 경우 `T`가 `Serialize` 정책으로 표시됩니다.
+- 如果类型实施 <xref:System.Collections.Generic.IEnumerable%601>，则 `T` 将标有 `Serialize` 策略。
 
-- 형식이 <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IList%601>, <xref:System.Collections.Generic.ICollection%601>, <xref:System.Collections.Generic.IReadOnlyCollection%601> 또는 <xref:System.Collections.Generic.IReadOnlyList%601>이면 `T[]` 및 <xref:System.Collections.Generic.List%601>는 `Serialize` 정책으로 표시되지만 인터페이스 형식의 멤버는 `Serialize` 정책으로 표시되지 않습니다.
+- 如果类型为 <xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.Generic.IList%601>、<xref:System.Collections.Generic.ICollection%601>、<xref:System.Collections.Generic.IReadOnlyCollection%601>或 <xref:System.Collections.Generic.IReadOnlyList%601>，则 `T[]` 和 <xref:System.Collections.Generic.List%601> 将标有 `Serialize` 策略，但接口类型的所有成员均未标有 `Serialize` 策略。
 
-- 형식이 <xref:System.Collections.Generic.List%601>이면 형식의 멤버는 `Serialize` 정책으로 표시되지 않습니다.
+- 如果类型为 <xref:System.Collections.Generic.List%601>，则该类型的所有成员均未标有 `Serialize` 策略。
 
-- 형식이 <xref:System.Collections.Generic.IDictionary%602>이면 <xref:System.Collections.Generic.Dictionary%602>가 `Serialize` 정책으로 표시됩니다. 그러나 형식의 멤버는 `Serialize` 정책으로 표시되지 않습니다.
+- 如果类型为 <xref:System.Collections.Generic.IDictionary%602>，则 <xref:System.Collections.Generic.Dictionary%602> 将标有 `Serialize` 策略。 但该类型的所有成员均未标有 `Serialize` 策略。
 
-- 형식이 <xref:System.Collections.Generic.Dictionary%602>이면 형식의 멤버는 `Serialize` 정책으로 표시되지 않습니다.
+- 如果类型为 <xref:System.Collections.Generic.Dictionary%602>，则该类型的所有成员均未标有 `Serialize` 策略。
 
-- 형식이 <xref:System.Collections.Generic.IDictionary%602>를 구현하는 경우 `TKey` 및 `TValue`는 `Serialize` 정책으로 표시됩니다.
+- 如果类型实施 <xref:System.Collections.Generic.IDictionary%602>，则 `TKey` 和 `TValue` 均标有 `Serialize` 策略。
 
-- 각 생성자, 각 속성 접근자 및 각 필드가 `Serialize` 정책으로 표시됩니다.
+- 每个构造函数、属性访问器和字段均标有 `Serialize` 策略。
 
-메서드에 `Serialize` 정책을 적용하면 정책이 다음과 같이 변경됩니다.
+将 `Serialize` 策略应用于方法涉及下列策略更改：
 
-- 포함 형식이 `Serialize` 정책으로 표시됩니다.
+- 包含类型将标有 `Serialize` 策略。
 
-- 해당 메서드의 반환 형식이 `Serialize` 정책으로 표시됩니다.
+- 方法的返回类型将标有 `Serialize` 策略。
 
-필드에 `Serialize` 정책을 적용하면 정책이 다음과 같이 변경됩니다.
+将 `Serialize` 策略应用于字段涉及下列策略更改：
 
-- 포함 형식이 `Serialize` 정책으로 표시됩니다.
+- 包含类型将标有 `Serialize` 策略。
 
-- 필드의 형식이 `Serialize` 정책으로 표시됩니다.
+- 字段类型将标有 `Serialize` 策略。
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>XmlSerializer、DataContractSerializer 和 DataContractJsonSerializer 策略的影响
 
-与用于基于反射的序列化程序的 `Serialize` 策略不同，<xref:System.Xml.Serialization.XmlSerializer>、<xref:System.Runtime.Serialization.DataContractSerializer>和 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 策略用于启用一组在 .NET Native 工具链中已知的序列化程序。 이러한 serializer는 리플렉션을 사용하여 구현되지 않으며 런타임에 serialize할 수 있는 형식 집합은 리플렉션 가능한 형식과 비슷한 방식으로 결정됩니다.
+与用于基于反射的序列化程序的 `Serialize` 策略不同，<xref:System.Xml.Serialization.XmlSerializer>、<xref:System.Runtime.Serialization.DataContractSerializer>和 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 策略用于启用一组在 .NET Native 工具链中已知的序列化程序。 这些序列化程序并非通过反射实施，但却按照与确定可反射类型的设置类似的方式来确定可在运行时实现序列化的类型的设置。
 
-이러한 정책 중 하나를 형식에 적용하면 일치하는 serializer를 사용하여 형식을 serialize할 수 있습니다. 또한 serialization 엔진이 serialization을 수행해야 한다고 정적으로 확인할 수 있는 모든 형식도 serialize할 수 있습니다.
+将这些策略之一应用于类型，该类型便可借助匹配的序列化程序实现序列化。 同样，任何序列化引擎可静态确定为需要序列化的类型也可实现序列化。
 
-이러한 정책은 메서드 또는 필드에는 영향을 주지 않습니다.
+这些策略对方法或字段无效。
 
-자세한 내용은 [Windows 스토어 앱을 .NET 네이티브로 마이그레이션](migrating-your-windows-store-app-to-net-native.md)에서 “직렬 변환기의 차이점” 섹션을 참조하세요.
+有关详细信息，请参阅[将 Windows 应用商店应用迁移到 .NET Native](migrating-your-windows-store-app-to-net-native.md) 中的“序列化程序的差异”一节。
 
 ## <a name="see-also"></a>另请参阅
 
-- [런타임 지시문 요소](runtime-directive-elements.md)
-- [리플렉션 및 .NET 네이티브](reflection-and-net-native.md)
+- [运行时指令元素](runtime-directive-elements.md)
+- [反射和 .NET Native](reflection-and-net-native.md)

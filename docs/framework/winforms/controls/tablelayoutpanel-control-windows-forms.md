@@ -46,7 +46,7 @@ ms.locfileid: "76735504"
   
 4. [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.TableLayoutPanel>  
  提供关于 <xref:System.Windows.Forms.TableLayoutPanel> 控件的参考文档。  
   

@@ -1,5 +1,5 @@
 ---
-title: ToolTip 구성 요소
+title: ToolTip 组件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tooltips [Windows Forms]
@@ -13,25 +13,25 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76747243"
 ---
 # <a name="tooltip-component-windows-forms"></a>ToolTip 组件（Windows 窗体）
-Windows Forms <xref:System.Windows.Forms.ToolTip> 구성 요소는 사용자가 컨트롤을 가리킬 때 텍스트를 표시합니다. 도구 설명은 모든 컨트롤에 연결될 수 있습니다. 이 컨트롤의 사용 예: 폼의 공간을 절약하기 위해 단추에 작은 아이콘을 표시하고 도구 설명을 사용하여 단추의 기능을 설명할 수 있습니다.  
+Windows 窗体 <xref:System.Windows.Forms.ToolTip> 组件在用户指向控件时显示文本。 ToolTip 可与任何控件关联。 此控件的一个用法示例：为了节省窗体上的空间，可在按钮上显示一个小图标，并使用 ToolTip 来解释按钮功能。  
   
-## <a name="in-this-section"></a>섹션 내용  
- [ToolTip 구성 요소 개요](tooltip-component-overview-windows-forms.md)  
- 사용자가 컨트롤을 마우스로 가리킬 때 텍스트를 볼 수 있게 해주는 <xref:System.Windows.Forms.ToolTip> 구성 요소의 일반적인 개념을 소개합니다.  
+## <a name="in-this-section"></a>本节内容  
+ [ToolTip 组件概述](tooltip-component-overview-windows-forms.md)  
+ 介绍 <xref:System.Windows.Forms.ToolTip> 组件的一般概念，此组件使用户可以在将鼠标指向控件时查看文本。  
   
- [방법: 디자인 타임에 Windows Form의 컨트롤에 도구 설명 설정](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)  
- 코드 또는 디자이너에서 도구 설명을 설정하는 방법을 설명합니다.  
+ [如何：在设计时设置 Windows 窗体控件的工具提示](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)  
+ 介绍如何在代码或设计器中设置工具提示。  
   
- [방법: Windows Forms ToolTip 구성 요소의 지연 변경](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
- 도구 설명이 표시되는 데 걸리는 시간 및 표시되는 기간을 제어하는 값을 설정하는 방법을 설명합니다.  
+ [如何：更改 Windows 窗体 ToolTip 组件的延迟](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
+ 介绍如何设置可控制 ToolTip 启动时间和显示时间的值。  
   
-## <a name="reference"></a>참조  
- <xref:System.Windows.Forms.ToolTip> 클래스  
- 클래스 및 해당 멤버에 대한 참조 정보를 제공합니다.  
+## <a name="reference"></a>参考  
+ <xref:System.Windows.Forms.ToolTip> 类  
+ 提供类及其成员的相关引用信息。  
   
-## <a name="related-sections"></a>관련 섹션  
- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
- 사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.  
+## <a name="related-sections"></a>相关章节  
+ [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)  
+ 提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。  
   
- [ToolTip을 사용한 컨트롤 도움말](../advanced/control-help-using-tooltips.md)  
- Windows Forms의 개별 컨트롤에 대한 간략하고 특수화된 도움말 메시지를 만드는 방법으로서 도구 설명을 설명합니다.
+ [使用工具提示的控件帮助](../advanced/control-help-using-tooltips.md)  
+ 讨论工具提示如何为 Windows 窗体上的单个控件生成简短专用的帮助消息。

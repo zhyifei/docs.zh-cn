@@ -21,7 +21,7 @@ ms.locfileid: "76738028"
   
  由 Windows Presentation Foundation （WPF）基础结构用于线程和 Windows 管理。  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT CreateIDispatchSTAForwarder(  
@@ -30,16 +30,16 @@ HRESULT CreateIDispatchSTAForwarder(
 )  
 ```  
   
-## <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>参数  
   
-## <a name="property-valuereturn-value"></a>속성 값/반환 값  
+## <a name="property-valuereturn-value"></a>属性值/返回值  
  pDispatchDelegate  
  指向 `IDispatch` 接口的指针。  
   
  ppForwarder  
  指向 `IDispatch` 接口的地址的指针。  
   
-## <a name="requirements"></a>요구 사항  
+## <a name="requirements"></a>要求  
  **平台：** 请参阅[.NET Framework 系统要求](../../get-started/system-requirements.md)。  
   
  **.DLL**  
@@ -52,4 +52,4 @@ HRESULT CreateIDispatchSTAForwarder(
   
 ## <a name="see-also"></a>另请参阅
 
-- [F 관리되지 않는 API 참조](wpf-unmanaged-api-reference.md)
+- [WPF 非托管 API 参考](wpf-unmanaged-api-reference.md)

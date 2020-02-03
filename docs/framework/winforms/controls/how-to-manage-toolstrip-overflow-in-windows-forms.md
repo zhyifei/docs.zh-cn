@@ -25,13 +25,13 @@ ms.locfileid: "76736144"
 
 ## <a name="to-enable-overflow-on-a-toolstrip-control"></a>对 ToolStrip 控件启用溢出
 
-- 确保 <xref:System.Windows.Forms.ToolStrip><xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> 属性未设置为 `false`。 默认值为 `True`。
+- 确保 <xref:System.Windows.Forms.ToolStrip><xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> 属性未设置为 `false`。 默认为 `True`。
 
      当 <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> 为 `True` （默认值）时，当 <xref:System.Windows.Forms.ToolStripItem> 的内容超出水平 <xref:System.Windows.Forms.ToolStrip> 的宽度或垂直 <xref:System.Windows.Forms.ToolStrip>的高度时，会将 <xref:System.Windows.Forms.ToolStripItem> 发送到下拉溢出菜单。
 
 ## <a name="to-specify-overflow-behavior-of-a-specific-toolstripitem"></a>指定特定 ToolStripItem 的溢出行为
 
-- 将 <xref:System.Windows.Forms.ToolStripItem> 的 <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> 属性设置为所需的值。 可能 `Always`、`Never`和 `AsNeeded`。 默认值为 `AsNeeded`。
+- 将 <xref:System.Windows.Forms.ToolStripItem> 的 <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> 属性设置为所需的值。 可能 `Always`、`Never`和 `AsNeeded`。 默认为 `AsNeeded`。
 
     ```vb
     toolStripTextBox1.Overflow = _

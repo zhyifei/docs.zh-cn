@@ -29,7 +29,7 @@ Windows 窗体 `NumericUpDown` 控件看起来像是一个文本框与一对箭�
  [如何：设置 Windows 窗体 NumericUpDown 控件的格式](how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
  描述如何配置在控件中显示值的方式。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.NumericUpDown>  
  提供有关 <xref:System.Windows.Forms.NumericUpDown> 类及其成员的引用信息。  
   

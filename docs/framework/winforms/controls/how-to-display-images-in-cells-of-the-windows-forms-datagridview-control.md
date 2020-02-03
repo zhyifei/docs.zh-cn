@@ -33,7 +33,7 @@ ms.locfileid: "76740283"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
-- 名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件。  
+- 名为 <xref:System.Windows.Forms.DataGridView> 的 `dataGridView1` 控件。  
   
 - 名为 `tree.ico`的嵌入图标资源。  
   

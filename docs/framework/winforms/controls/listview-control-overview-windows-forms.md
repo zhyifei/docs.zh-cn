@@ -34,12 +34,12 @@ Windows 窗体 <xref:System.Windows.Forms.ListView> 控件显示带图标的项�
 |<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A> 方法|<xref:System.Windows.Forms.View.Details>|  
 |<xref:System.Windows.Forms.ListView.Columns%2A> 属性|<xref:System.Windows.Forms.View.Details> 或 <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.DrawSubItem> 事件|<xref:System.Windows.Forms.View.Details>|  
-|<xref:System.Windows.Forms.ListView.FindItemWithText%2A> 方法|<xref:System.Windows.Forms.View.Details>、 <xref:System.Windows.Forms.View.List>或 <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.FindItemWithText%2A> 方法|<xref:System.Windows.Forms.View.Details>、<xref:System.Windows.Forms.View.List> 或 <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.FindNearestItem%2A> 方法|<xref:System.Windows.Forms.View.SmallIcon> 或 <xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.GetItemAt%2A> 方法|<xref:System.Windows.Forms.View.Details> 或 <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.Groups%2A> 属性|除 <xref:System.Windows.Forms.View.List> 之外的所有视图|  
-|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> 属性|<xref:System.Windows.Forms.View.Details>。|  
-|<xref:System.Windows.Forms.ListView.InsertionMark%2A> 属性|<xref:System.Windows.Forms.View.LargeIcon>、 <xref:System.Windows.Forms.View.SmallIcon>或 <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> 属性|<xref:System.Windows.Forms.View.Details> 列中的一个值匹配。|  
+|<xref:System.Windows.Forms.ListView.InsertionMark%2A> 属性|<xref:System.Windows.Forms.View.LargeIcon>、<xref:System.Windows.Forms.View.SmallIcon> 或 <xref:System.Windows.Forms.View.Tile>|  
   
  <xref:System.Windows.Forms.ListView> 控件的键属性是 <xref:System.Windows.Forms.ListView.Items%2A>，它包含控件所显示的项。 <xref:System.Windows.Forms.ListView.SelectedItems%2A> 属性包含控件中当前选定项的集合。 如果 <xref:System.Windows.Forms.ListView.MultiSelect%2A> 属性设置为 `true`，则用户可以选择多个项，例如，将多个项一次拖放到另一个控件。 如果 <xref:System.Windows.Forms.ListView.CheckBoxes%2A> 属性设置为 `true`，则 <xref:System.Windows.Forms.ListView> 控件可以在项旁边显示复选框。  
   

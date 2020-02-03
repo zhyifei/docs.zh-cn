@@ -51,7 +51,7 @@ ms.locfileid: "76740318"
 
 第一步是创建项目并设置窗体。
 
-#### <a name="to-create-the-project"></a>创建项目
+#### <a name="to-create-the-project"></a>要创建项目
 
 1. 创建名为 "TableLayoutPanelExample" 的 Windows 应用程序项目。 有关详细信息，请参阅[如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)。
 
@@ -99,11 +99,11 @@ ms.locfileid: "76740318"
 
 2. 在 "**属性**" 窗口中，通过![单击 "**列**" 项旁边的 "Visual Studio](./media/visual-studio-ellipsis-button.png)" 按钮的 "属性窗口的省略号按钮（...）来打开 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 集合。
 
-3. 选择第一列，并将其 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 属性的值更改为 "<xref:System.Windows.Forms.SizeType.AutoSize>"。 单击 **"确定"** 以接受更改。 请注意，第一列的宽度会缩小以适应 <xref:System.Windows.Forms.Button> 控件。 另请注意，列的宽度不可调整大小。
+3. 选择第一列，并将其 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 属性的值更改为 "<xref:System.Windows.Forms.SizeType.AutoSize>"。 单击 **“确定”** 接受此更改。 请注意，第一列的宽度会缩小以适应 <xref:System.Windows.Forms.Button> 控件。 另请注意，列的宽度不可调整大小。
 
-4. 在 "**属性**" 窗口中，打开 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 集合并选择第一列。 将其 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 属性的值更改为 <xref:System.Windows.Forms.SizeType.Percent>。 单击 **"确定"** 以接受更改。 将 <xref:System.Windows.Forms.TableLayoutPanel> 控件的大小调整为更大的宽度，并注意第一列的宽度将展开。 将 <xref:System.Windows.Forms.TableLayoutPanel> 控件调整为较小的宽度，并注意，第一列中的按钮将调整大小以适合该单元格。 另请注意，列的宽度可调整大小。
+4. 在 "**属性**" 窗口中，打开 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 集合并选择第一列。 将其 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 属性的值更改为 <xref:System.Windows.Forms.SizeType.Percent>。 单击 **“确定”** 接受此更改。 将 <xref:System.Windows.Forms.TableLayoutPanel> 控件的大小调整为更大的宽度，并注意第一列的宽度将展开。 将 <xref:System.Windows.Forms.TableLayoutPanel> 控件调整为较小的宽度，并注意，第一列中的按钮将调整大小以适合该单元格。 另请注意，列的宽度可调整大小。
 
-5. 在 "**属性**" 窗口中，打开 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 集合，然后选择所有列出的列。 将每个 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 属性的值设置为 <xref:System.Windows.Forms.SizeType.Percent>。 单击 **"确定"** 以接受更改。 对 <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> 集合重复此操作。
+5. 在 "**属性**" 窗口中，打开 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 集合，然后选择所有列出的列。 将每个 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 属性的值设置为 <xref:System.Windows.Forms.SizeType.Percent>。 单击 **“确定”** 接受此更改。 对 <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> 集合重复此操作。
 
 6. 抓住其中一个角调整控点，并调整 <xref:System.Windows.Forms.TableLayoutPanel> 控件的宽度和高度。 请注意，在 <xref:System.Windows.Forms.TableLayoutPanel> 控件大小发生变化时，将调整行和列的大小。 另请注意，行和列可通过水平和垂直大小调整控点进行调整。
 
@@ -177,7 +177,7 @@ ms.locfileid: "76740318"
 
 ## <a name="next-steps"></a>后续步骤
 
-可使用布局面板和控件的组合实现复杂布局。 有关进一步探索的建议包括：
+可使用布局面板和控件的组合实现复杂布局。 建议了解的其他内容包括：
 
 - 尝试将其中一个 <xref:System.Windows.Forms.Button> 控件调整到更大的大小，并注意对布局的影响。
 
