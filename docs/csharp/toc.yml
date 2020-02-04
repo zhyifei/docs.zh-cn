@@ -1365,8 +1365,6 @@
               items:
                 - name: 内置类型表
                   href: language-reference/keywords/built-in-types-table.md
-                - name: 设置数值结果表的格式
-                  href: language-reference/keywords/formatting-numeric-results-table.md
         - name: 修饰符
           items:
             - name: 访问修饰符
