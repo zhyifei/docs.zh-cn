@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f0c00e4cc866c537fe26dd1ad466d6cde95bc608
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 964c63e01a6b09e63e305e9a10dca46e62c18648
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706222"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965953"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET framework 加密模型
 
@@ -33,15 +33,11 @@ ms.locfileid: "75706222"
 
 作为可用于一种算法的不同实现的示例，请考虑对称算法。 所有对称算法都基于 <xref:System.Security.Cryptography.SymmetricAlgorithm>，它由以下算法继承：
 
-1. <xref:System.Security.Cryptography.Aes>
-
-2. <xref:System.Security.Cryptography.DES>
-
-3. <xref:System.Security.Cryptography.RC2>
-
-4. <xref:System.Security.Cryptography.Rijndael>
-
-5. <xref:System.Security.Cryptography.TripleDES>
+* <xref:System.Security.Cryptography.Aes>
+* <xref:System.Security.Cryptography.DES>
+* <xref:System.Security.Cryptography.RC2>
+* <xref:System.Security.Cryptography.Rijndael>
+* <xref:System.Security.Cryptography.TripleDES>
 
 <xref:System.Security.Cryptography.Aes> 由两个类继承：<xref:System.Security.Cryptography.AesCryptoServiceProvider> 和 <xref:System.Security.Cryptography.AesManaged>。 <xref:System.Security.Cryptography.AesCryptoServiceProvider> 类是围绕 Aes 的 Windows 加密 API (CAPI) 实现的包装器，而 <xref:System.Security.Cryptography.AesManaged> 类完全用托管代码编写。 除托管和 CAPI 实现外，还有第三种类型的实现，即下一代加密技术 (CNG)。 CNG 算法的一个示例是 <xref:System.Security.Cryptography.ECDiffieHellmanCng>。 CNG 算法在 Windows Vista 和更高版本中都可用。
 
@@ -62,35 +58,22 @@ ms.locfileid: "75706222"
 下面是按应用程序分类的建议算法列表：
 
 - 数据隐私：
-
   - <xref:System.Security.Cryptography.Aes>
-
 - 数据完整性：
-
   - <xref:System.Security.Cryptography.HMACSHA256>
-
   - <xref:System.Security.Cryptography.HMACSHA512>
-
 - 数字签名：
-
   - <xref:System.Security.Cryptography.ECDsa>
-
   - <xref:System.Security.Cryptography.RSA>
-
 - 密钥交换：
-
   - <xref:System.Security.Cryptography.ECDiffieHellman>
-
   - <xref:System.Security.Cryptography.RSA>
-
 - 随机数生成：
-
   - <xref:System.Security.Cryptography.RNGCryptoServiceProvider>
-
 - 从密码生成密钥：
-
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
 ## <a name="see-also"></a>另请参阅
 
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [使用 C 中的 Bruce Schneier 应用加密协议、算法和源代码](https://www.schneier.com/books/applied_cryptography/)

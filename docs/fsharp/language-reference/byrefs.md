@@ -2,12 +2,12 @@
 title: Byref
 description: 了解用于低级别编程的中F#的 byref 和 byref 类型（如）。
 ms.date: 11/04/2019
-ms.openlocfilehash: 5aaee1e4eac9ce0d7e9ba89a2ab5f745d31367a0
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 05a40059ad5b72829233b0c4135c76eb1cff4da5
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901314"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965810"
 ---
 # <a name="byrefs"></a>Byref
 
@@ -182,14 +182,20 @@ type S(count1: Span<int>, count2: Span<int>) =
 可以生成和F#使用来自函数或成员的 Byref 返回。 使用返回 `byref`方法时，会隐式取消引用该值。 例如：
 
 ```fsharp
-let safeSum(bytes: Span<byte>) =
-    let mutable sum = 0
+let squareAndPrint (data : byref<int>) = 
+    let squared = data*data    // data is implicitly dereferenced
+    printfn "%d" squared
+```
+
+若要返回值 byref，则包含值的变量的生存期必须长于当前范围。
+此外，若要返回 byref，请使用 & 值（其中 value 是生存时间比当前范围长的变量）。
+
+```fsharp
+let mutable sum = 0
+let safeSum (bytes: Span<byte>) =
     for i in 0 .. bytes.Length - 1 do
         sum <- sum + int bytes.[i]
-    sum
-
-let sum = safeSum(mySpanOfBytes)
-printfn "%d" sum // 'sum' is of type 'int'
+    &sum  // sum lives longer than the scope of this function.
 ```
 
 若要避免隐式取消引用（如通过多个链式调用传递引用），请使用 `&x` （其中 `x` 是值）。
