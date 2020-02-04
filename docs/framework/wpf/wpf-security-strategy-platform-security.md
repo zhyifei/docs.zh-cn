@@ -17,32 +17,32 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1ef705fcf046af1f4136ddcf1b29f417c0d72c83
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4fa01922c5c3097adb124d67272b9f449b70ada3
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741852"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979867"
 ---
-# <a name="wpf-security-strategy---platform-security"></a>WPF 安全策略 — 平台安全性
+# <a name="wpf-security-strategy---platform-security"></a>WPF 安全策略 - 平台安全性
 虽然 Windows Presentation Foundation （WPF）提供各种安全服务，但它还利用基础平台（包括操作系统、CLR 和 Internet Explorer）的安全功能。 这些层组合在一起为 WPF 提供强大的深层防御安全模型，尝试避免任何单点故障，如下图所示：  
   
  ![显示 WPF 安全模型的关系图。](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
  本主题的其余部分将讨论专门适用于 WPF 的每个层中的功能。  
 
-## <a name="operating-system-security"></a>操作系统安全性  
+## <a name="operating-system-security"></a>操作系统安全  
 Windows 的核心提供了几种安全功能，这些功能构成了所有 Windows 应用程序（包括用 WPF 构建的应用程序）的安全基础。 本主题讨论了对 WPF 重要的这些安全功能的广度，以及 WPF 如何与它们集成以提供进一步的深层防御。  
   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
- 除了对 Windows 进行一般检查和强化外，本主题还将讨论 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] 三个关键功能：  
+ 除了对 Windows 进行一般的检查和强化外，本主题还介绍了 Windows XP SP2 中的三项重要功能：  
   
 - /GS 编译  
   
 - Microsoft Windows 更新。  
   
 #### <a name="gs-compilation"></a>/GS 编译  
- [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] 通过重新编译许多核心系统库（包括所有 WPF 依赖项（如 CLR）来提供保护，以帮助缓解缓冲区溢出。 通过使用/GS 形参和 C/C++ 命令行编译器可实现这一点。 虽然应显式避免缓冲区溢出，但 /GS 编译针对由它们无意或恶意创建的潜在漏洞提供了深层防御示例。  
+ Windows XP SP2 通过重新编译许多核心系统库（包括所有 WPF 依赖项（如 CLR）来提供保护，以帮助缓解缓冲区溢出。 通过使用/GS 形参和 C/C++ 命令行编译器可实现这一点。 虽然应显式避免缓冲区溢出，但 /GS 编译针对由它们无意或恶意创建的潜在漏洞提供了深层防御示例。  
   
  以前，缓冲区溢出已导致出现了许多影响较大的安全漏洞。 当攻击者利用代码漏洞时就会发生缓冲区溢出，代码漏洞可让注入的恶意代码通过缓冲区边界写入。 从而让攻击者可以通过重写导致执行攻击者代码的函数返回地址执行代码进程。 结果，恶意代码可以执行具有截获进程相同特权的任意代码。  
   
@@ -109,7 +109,7 @@ Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功�
   
 - **不受信任的站点**。 由不受信任的用户标识的应用程序。 （不受信任）。  
   
- 对于其中的每个区域，CA 都提供预定义的权限集，该权限集包含与每个相关联的信任级别相匹配的权限。 其中包括：  
+ 对于其中的每个区域，CA 都提供预定义的权限集，该权限集包含与每个相关联的信任级别相匹配的权限。 这些方法包括：  
   
 - **FullTrust**。 对于从**我的电脑**区域启动的应用程序。 将授予全部可能的权限。  
   
@@ -189,6 +189,6 @@ Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功�
 ## <a name="see-also"></a>另请参阅
 
 - [代码访问安全性](../misc/code-access-security.md)
-- [安全性](security-wpf.md)
+- [安全](security-wpf.md)
 - [WPF 部分信任安全](wpf-partial-trust-security.md)
 - [WPF 安全策略 - 安全工程](wpf-security-strategy-security-engineering.md)

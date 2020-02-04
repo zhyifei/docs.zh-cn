@@ -1,13 +1,13 @@
 ---
-title: ADO.NET 数据集
+title: DataSets
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 85c0df88d7e919649eae8d2b4e551b26cc684dd8
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 86c14f516ff82e4d9acf7cc3078e04590971a8a1
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634932"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980296"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 数据集
 <xref:System.Data.DataSet> 对象是支持通过 ADO.NET 断开连接的分布式数据方案的核心。 数据**集**是数据的内存驻留表示形式，可提供一致的关系编程模型，而不考虑数据源。 它可以用于多种不同的数据源，用于 XML 数据，或用于管理应用程序本地的数据。 **数据集**表示一组完整的数据，包括相关表、约束和表之间的关系。 下图显示了**数据集**对象模型。  

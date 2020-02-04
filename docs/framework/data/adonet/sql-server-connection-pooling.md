@@ -1,16 +1,16 @@
 ---
-title: SQL Server 连接池 (ADO.NET)
+title: SQL Server 连接池
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 2c73bec644a9a76ba05d3299183e8f1643c8e870
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3bf0ce98b9b16b8d698a814f3bf2c4f442f3bf06
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794314"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980036"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 连接池 (ADO.NET)
 连接到数据库服务器通常由几个需要很长时间的步骤组成。 必须建立物理通道（例如套接字或命名管道），必须与服务器进行初次握手，必须分析连接字符串信息，必须由服务器对连接进行身份验证，必须运行检查以便在当前事务中登记，等等。  
@@ -24,7 +24,7 @@ ms.locfileid: "70794314"
  池连接可以显著提高应用程序的性能和可缩放性。 默认情况下，在 ADO.NET 中启用连接池。 除非显式禁用，否则，在应用程序中打开和关闭连接时，池进程会对连接进行优化。 还可以提供几个连接字符串修饰符来控制连接池的行为。 有关更多信息，请参见本主题后面的“使用连接字符串关键字控制连接池”。  
   
 > [!NOTE]
-> 启用连接池后，如果发生超时错误或其他登录错误，则将引发异常，并且在接下来的五秒内进行的后续连接尝试将失败，此段时间称为“阻塞期”。 如果应用程序尝试在阻塞期内进行连接，则将再次引发第一个异常。 阻塞期结束后的后续失败将导致新的阻塞期，该阻塞期的持续时间是上一个阻塞期的两倍，最长为一分钟。  
+> 启用连接池后，如果发生超时错误或其他登录错误，则将引发异常，并且在接下来的五秒内进行的后续连接尝试将失败，此段时间称为“阻塞期”。 如果应用程序尝试在阻塞期内连接，将再次引发第一个异常。 阻塞期结束后的后续失败将导致新的阻塞期，该阻塞期的持续时间是上一个阻塞期的两倍，最长为一分钟。  
   
 ## <a name="pool-creation-and-assignment"></a>池的创建和分配  
  在初次打开连接时，将根据完全匹配算法创建连接池，该算法将池与连接中的连接字符串关联。 每个连接池都与一个不同的连接字符串相关联。 打开新连接时，如果连接字符串并非与现有池完全匹配，将创建一个新池。 按进程、应用程序域、连接字符串以及 Windows 标识（在使用集成的安全性时）来建立池连接。 连接字符串还必须是完全匹配的；按不同顺序为同一连接提供的关键字将分到单独的池中。  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  连接池进程通过在连接释放回池中时重新分配连接，来满足这些连接请求。 如果已达到最大池大小且不存在可用的连接，则该请求将会排队。 然后，池进程尝试重新建立任何连接，直至到达超时时间（默认值为 15 秒）。 如果池进程在连接超时之前无法满足请求，将引发异常。  
   
 > [!CAUTION]
-> 我们强烈建议您在使用完连接时一定要关闭连接，以便连接可以返回池。 您`Close`可以使用`Connection`对象的或`Dispose`方法`using` ，或者通过打开中C#语句内的所有`Using`连接或 Visual Basic 中的语句来执行此操作。 不是显式关闭的连接可能不会添加或返回到池中。 有关详细信息，请参阅[using 语句](../../../csharp/language-reference/keywords/using-statement.md)或[如何：处置 Visual Basic 的系统资源](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) 。  
+> 我们强烈建议您在使用完连接时一定要关闭连接，以便连接可以返回池。 您可以使用 `Connection` 对象的 `Close` 或 `Dispose` 方法来执行此操作，也可以通过打开中C#`using` 语句内的所有连接或 `Using` 中的 Visual Basic 语句来执行此操作。 不是显式关闭的连接可能不会添加或返回到池中。 有关详细信息，请参阅[Using 语句](../../../csharp/language-reference/keywords/using-statement.md)或[如何：处置 Visual Basic 的系统资源](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)。  
   
 > [!NOTE]
 > 不要在类的 `Close` 方法中对 `Dispose`、`Connection` 或任何其他托管对象调用 `DataReader` 或 `Finalize`。 在终结器中，仅释放类直接拥有的非托管资源。 如果类不拥有任何非托管资源，则不要在类定义中包含 `Finalize` 方法。 有关详细信息，请参阅[垃圾回收](../../../standard/garbage-collection/index.md)。  
@@ -80,7 +80,7 @@ using (SqlConnection connection = new SqlConnection(
  如果存在一个与已消失的服务器的连接，即使连接池进程尚未检测到断开的连接，也可以从池中取出此连接并将连接标记为无效。 这种情况是因为检查连接是否仍有效的系统开销将造成与服务器的另一次往返，从而抵消了池进程的优势。 发生此情况时，初次尝试使用该连接将检测连接是否曾断开，并引发异常。  
   
 ## <a name="clearing-the-pool"></a>清除池  
- ADO.NET 2.0 引入了两种新的方法来清除<xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A>池<xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>：和。 `ClearAllPools` 清除指定提供程序的连接池，`ClearPool` 清除与特定连接关联的连接池。 如果在调用时连接正在使用，将对它们进行相应的标记。 连接关闭时，将被丢弃，而不是返回池中。  
+ ADO.NET 2.0 引入了两种新的方法来清除池： <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> 和 <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>。 `ClearAllPools` 清除指定提供程序的连接池，`ClearPool` 清除与特定连接关联的连接池。 如果在调用时连接正在使用，将对它们进行相应的标记。 连接关闭时，将被丢弃，而不是返回池中。  
   
 ## <a name="transaction-support"></a>事务支持  
  连接是根据事务上下文来从池中取出并进行分配的。 除非在连接字符串中指定了 `Enlist=false`，否则连接池将确保连接在 <xref:System.Transactions.Transaction.Current%2A> 上下文中登记。 如果连接使用登记的 `System.Transactions` 事务关闭并返回到池中，连接将保留在池中，以便使用相同 `System.Transactions` 事务对该连接池的下一次请求将返回相同的连接（如果可用）。 如果发出这样的请求，而没有可用的池连接，则会从池的非事务性部分取出一个连接并登记。 如果在池的每个区域都没有可用的连接，则会创建一个新的连接并登记。  
@@ -88,7 +88,7 @@ using (SqlConnection connection = new SqlConnection(
  当连接关闭时，它将被释放回池中，并根据其事务上下文放入相应的子部分。 因此，即使分布式事务仍然挂起，仍可以关闭该连接而不会生成错误。 这样，你就可以在之后提交或中止分布式事务。  
   
 ## <a name="controlling-connection-pooling-with-connection-string-keywords"></a>使用连接字符串关键字控制连接池  
- `ConnectionString` 对象的 <xref:System.Data.SqlClient.SqlConnection> 属性支持连接字符串键/值对，可以用于调整连接池逻辑的行为。 有关详细信息，请参阅 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
+ `ConnectionString` 对象的 <xref:System.Data.SqlClient.SqlConnection> 属性支持连接字符串键/值对，可以用于调整连接池逻辑的行为。 有关更多信息，请参见<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
   
 ## <a name="pool-fragmentation"></a>池碎片  
  池碎片是许多 Web 应用程序中的一个常见问题，应用程序可能会创建大量在进程退出后才会释放的池。 这样，将打开大量的连接，占用许多内存，从而导致性能降低。  
@@ -129,9 +129,9 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="application-role-alternatives"></a>应用程序角色替代项  
  建议您利用可以使用的安全机制，而不使用应用程序角色。 有关详细信息，请参阅[在 SQL Server 中创建应用程序角色](./sql/creating-application-roles-in-sql-server.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [连接池](connection-pooling.md)
 - [SQL Server 和 ADO.NET](./sql/index.md)
-- [性能计数器](performance-counters.md)
+- [Performance Counters](performance-counters.md)
 - [ADO.NET 概述](ado-net-overview.md)

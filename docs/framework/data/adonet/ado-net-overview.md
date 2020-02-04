@@ -1,13 +1,13 @@
 ---
-title: ADO.NET 概述
+title: 概述
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 2d21e5b73757280b679a9c5cd04a56339e7e967e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d5dc9cf7081c6876118914a0b95853a5a7ca5e57
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785107"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980335"
 ---
 # <a name="adonet-overview"></a>ADO.NET 概述
 ADO.NET 提供对诸如 SQL Server 和 XML 这样的数据源以及通过 OLE DB 和 ODBC 公开的数据源的一致访问。 共享数据的使用方应用程序可以使用 ADO.NET 连接到这些数据源，并可以检索、处理和更新其中包含的数据。  
@@ -20,7 +20,7 @@ ADO.NET 提供对诸如 SQL Server 和 XML 这样的数据源以及通过 OLE DB
   
  ADO.NET 在 .NET Framework 中提供最直接的数据访问方法。 若要使应用程序能够使用概念模型而不是基础存储模型，请参阅[ADO.NET 实体框架](./ef/index.md)。  
   
- **隐私声明**：System.Data.dll、System.Data.Design.dll、System.Data.OracleClient.dll、System.Data.SqlXml.dll、System.Data.Linq.dll、System.Data.SqlServerCe.dll 和 System.Data.DataSetExtensions.dll 程序集不区分用户的隐私数据和非隐私数据。  这些程序集不收集、存储或传输任何用户隐私数据。 不过，第三方应用程序可能会使用这些程序集收集、存储或传输用户的隐私数据。  
+ 隐私声明： System.data.oracleclient、System.data.sqlserverce、和 System.data.datasetextensions.dll 程序集不区分用户的专用数据和非专用的数据，这种情况下，将不区分用户的专用数据和非私有数据。 "）的情况下，不区分用户的**隐私性**和数据的数据集。  这些程序集不收集、存储或传输任何用户隐私数据。 不过，第三方应用程序可能会使用这些程序集收集、存储或传输用户的隐私数据。  
   
 ## <a name="in-this-section"></a>本节内容  
  [ADO.NET 体系结构](ado-net-architecture.md)  
@@ -57,7 +57,7 @@ ADO.NET 提供对诸如 SQL Server 和 XML 这样的数据源以及通过 OLE DB
  [在 ADO.NET 中检索和修改数据](retrieving-and-modifying-data.md)  
  说明如何连接到数据源、检索数据和修改数据。 这包括 `DataReaders` 和 `DataAdapters`。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ADO.NET](index.md)
 - [在 Visual Studio 中访问数据](/visualstudio/data-tools/accessing-data-in-visual-studio)

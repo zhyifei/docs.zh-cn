@@ -1,13 +1,14 @@
 ---
 title: LINQ 和 ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: f6b956aa4d19a5bf558681975da3125b45b36c5f
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: e24473f68fe5ccd993c5d205660ea8f397b6f797
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634841"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980088"
 ---
 # <a name="linq-and-adonet"></a>LINQ 和 ADO.NET
 如今，许多业务开发人员都必须使用两种或多种编程语言：用于业务逻辑和表示层（如视觉对象C#或 Visual Basic）的高级语言，以及与数据库交互的查询语言（如 transact-sql）。 这要求开发人员精通多种语言才能奏效，同时也导致在开发环境中语言不匹配。 例如，使用数据访问 API 对数据库执行查询的应用程序会将查询指定为用引号括起的字符串。 编译器不能读取此查询字符串，因此不会检查是否有错误，如语法无效或引用的列或行是否实际存在。 不会检查查询参数的类型，也不支持 `IntelliSense`。  
@@ -37,7 +38,7 @@ ms.locfileid: "75634841"
 ## <a name="linq-to-entities"></a>LINQ to Entities  
  大多数应用程序目前是在关系数据库之上编写的。 有时这些应用程序将需要与以关系形式表示的数据进行交互。 数据库架构并不总是构建应用程序的理想选择，并且应用程序的概念模型与数据库的逻辑模型不同。 实体数据模型是一种概念数据模型，可用于对特定域的数据进行建模，使应用程序能够以对象的形式与数据进行交互。 有关详细信息，请参阅[ADO.NET 实体框架](./ef/index.md)。  
   
- 通过实体数据模型，在 .NET 环境中将关系数据作为对象公开。 这使得对象层成为 LINQ 支持的理想目标，从而使开发人员能够根据构建业务逻辑所用的语言来构建数据库查询。 此功能称为 LINQ to Entities。 有关详细信息，请参阅 [LINQ to Entities](./ef/language-reference/linq-to-entities.md)。  
+ 通过实体数据模型，在 .NET 环境中将关系数据作为对象公开。 这使得对象层成为实现 LINQ 支持的理想目标，开发人员可以采用生成业务逻辑所用的语言来构建数据库查询。 此功能称为 LINQ to Entities。 有关详细信息，请参阅 [LINQ to Entities](./ef/language-reference/linq-to-entities.md)。  
   
 ## <a name="see-also"></a>另请参阅
 

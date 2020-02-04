@@ -2,12 +2,12 @@
 title: Visual Studio Code 中的 F# 入门
 description: 了解如何与 Visual Studio Code F#和 ionide 入门插件套件一起使用。
 ms.date: 12/23/2018
-ms.openlocfilehash: 91265303c2954387df0f500940c9af68b3c97dac
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 2aa62bb1afc220348f884865e55c4d7de4359b7f
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559659"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980348"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code 中的 F# 入门
 
@@ -42,7 +42,7 @@ code .
 
 目前这是必需的，因为在基于 .NET Framework 的脚本中，某些旧行为不能用于 .NET Core 脚本，Ionide 入门目前正在努力实现这种向后兼容性。 未来，.NET Core 脚本将成为默认值。
 
-### <a name="write-your-first-script"></a>编写你的第一个脚本
+### <a name="write-your-first-script"></a>编写您的第一个脚本
 
 将 Visual Studio Code 配置为使用 .NET Core 脚本后，请导航到 Visual Studio Code 中的资源管理器视图，并创建新文件。 将其命名为*MyFirstScript. .fsx*。
 
@@ -68,7 +68,7 @@ code .
 toPigLatin "banana";;
 ```
 
-应该会看到以下结果：
+你应看到以下结果：
 
 ```fsharp
 val it : string = "ananabay"
@@ -80,7 +80,7 @@ val it : string = "ananabay"
 toPigLatin "apple";;
 ```
 
-应该会看到以下结果：
+你应看到以下结果：
 
 ```fsharp
 val it : string = "appleyay"
@@ -121,7 +121,7 @@ val toPigLatin : word:string -> string
 
 检查输入词的第一个字符是否为元音。 如果是，请将 "yay" 附加到单词的结尾。 否则，将第一个字符移动到单词末尾，并向其添加 "ay"。
 
-最后要注意的一点是：没有从函数返回的显式说明，这不同于其他许多语言。 这是因为F#基于表达式，而函数主体中的最后一个表达式是返回值。 由于 `if..then..else` 本身是一个表达式，将根据输入值返回 `then` 块的主体或 `else` 块的正文。
+需要注意的一点是：在中F#，没有从函数返回的显式指令。 这是因为F#是基于表达式的，并且在函数的主体中计算的最后一个表达式确定该函数的返回值。 由于 `if..then..else` 本身是一个表达式，因此对 `then` 块体或主体 `else` 块的计算确定了 `toPigLatin` 函数返回的值。
 
 ## <a name="turn-the-console-app-into-a-pig-latin-generator"></a>将控制台应用程序转换为 Pig 拉丁语生成器
 

@@ -1,13 +1,14 @@
 ---
 title: ADO.NET 的 SQL Server 进程内特定行为
+titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 4f223948-ae8f-4c16-bdc2-4acc6debed3f
-ms.openlocfilehash: a3a0bf59bea7d5d947c305d0958fed8cc99f4b84
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3976b7b7c0290355be4731807a1821412a322dcb
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780804"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979802"
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>ADO.NET 的 SQL Server 进程内特定行为
 在 <xref:Microsoft.SqlServer.Server> 命名空间中可以发现，对 ADO.NET 主要功能的扩展有四种，是专门供进程中使用的：<xref:Microsoft.SqlServer.Server.SqlContext>、<xref:Microsoft.SqlServer.Server.SqlPipe>、<xref:Microsoft.SqlServer.Server.SqlTriggerContext> 和 <xref:Microsoft.SqlServer.Server.SqlDataRecord>。  
@@ -18,6 +19,6 @@ ms.locfileid: "70780804"
   
 1. [SQL Server ADO.NET 中特定于进程的扩展](https://go.microsoft.com/fwlink/?LinkId=115403)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ADO.NET 概述](../ado-net-overview.md)

@@ -1,13 +1,13 @@
 ---
-title: 在 ADO.NET 中的连接字符串
+title: 连接字符串
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: bf053c7c26435bea5b2368c81c89b73e8949b74a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: cb0b2831a22f3fe51dd7c5bfbe51e72f266a0003
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040138"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980231"
 ---
 # <a name="connection-strings-in-adonet"></a>在 ADO.NET 中的连接字符串
 
@@ -23,7 +23,7 @@ keyword1=value; keyword2=value;
 
 关键字不区分大小写。 但是，值可能区分大小写，具体取决于数据源。 关键字和值可以包含[空格字符](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)。 关键字和无引号值中会忽略前导空格和尾随空格。
 
-如果值包含分号、 [Unicode 控制字符](https://en.wikipedia.org/wiki/Unicode_control_characters)或前导或尾随空格，则必须用单引号或双引号将其引起来。 例如:
+如果值包含分号、 [Unicode 控制字符](https://en.wikipedia.org/wiki/Unicode_control_characters)或前导或尾随空格，则必须用单引号或双引号将其引起来。 例如：
 
 ```csharp
 Keyword=" whitespace  ";
@@ -73,7 +73,7 @@ Keyword=a=b=c
 [保护连接信息](protecting-connection-information.md)\
 演示保护用于连接到数据源的信息的各项技术。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [连接到数据源](/cpp/data/odbc/connecting-to-a-data-source)
 - [ADO.NET 概述](ado-net-overview.md)

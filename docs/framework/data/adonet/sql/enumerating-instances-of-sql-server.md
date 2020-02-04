@@ -1,19 +1,19 @@
 ---
-title: 枚举 SQL Server 的实例 (ADO.NET)
+title: 枚举 SQL Server 的实例
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: c464762e82a24aab399a23ecb26420b5dce61f55
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c59db5869ed848071611cdbf985b45dc59790d69
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782385"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979984"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>枚举 SQL Server 的实例 (ADO.NET)
-SQL Server 允许应用程序在当前网络中查找 SQL Server 实例。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 类向应用程序开发人员公开此信息，提供包含所有可见服务器的信息的 <xref:System.Data.DataTable>。 此返回的表包含网络上可用的服务器实例的列表，该列表与用户尝试创建新连接时提供的列表匹配，并展开包含连接属性上所有可用服务器的下拉列表。对话框。 显示的结果并非总是完整的。  
+SQL Server 允许应用程序在当前网络中查找 SQL Server 实例。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 类向应用程序开发人员公开此信息，提供包含所有可见服务器的信息的 <xref:System.Data.DataTable>。 此返回的表包含网络上可用的服务器实例的列表，该列表与用户尝试创建新连接时提供的列表匹配，并在 "**连接属性**" 对话框中展开包含所有可用服务器的下拉列表。 显示的结果并非总是完整的。  
   
 > [!NOTE]
 > 与大多数 Windows 服务一样，最好使用尽可能少的权限运行 SQL 浏览器服务。 有关 SQL 浏览器服务以及如何管理其行为的更多信息，请参见“SQL Server 联机图书”。  
@@ -48,7 +48,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 |**ServerName**|服务器的名称。|  
 |**InstanceName**|服务器实例的名称。 如果服务器作为默认实例运行，则为空白。|  
 |**IsClustered**|指示服务器是否属于群集。|  
-|**Version**|服务器的版本。 例如:<br /><br /> -9.00 （SQL Server 2005）<br />-10.0. xx （SQL Server 2008）<br />-10.50 （SQL Server 2008 R2）<br />-11.0. xx （SQL Server 2012）|  
+|**Version**|服务器的版本。 例如：<br /><br /> -9.00 （SQL Server 2005）<br />-10.0. xx （SQL Server 2008）<br />-10.50 （SQL Server 2008 R2）<br />-11.0. xx （SQL Server 2012）|  
   
 ## <a name="enumeration-limitations"></a>枚举限制  
  所有可用服务器可能会列出，也可能不会列出。 根据超时和网络通信量等因素，列表可能会有所不同。 这可能会使两个连续调用生成不同的列表。 只会列出相同网络上的服务器。 广播包通常不会遍历路由器，这也就是可能会看不到某个服务器列出的原因，但是在各个调用之间是稳定的。  
@@ -58,7 +58,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 > [!NOTE]
 > 只有以完全信任模式运行时，才可以使用服务器枚举。 在部分信任的环境中运行的程序集将无法使用服务器枚举，即使这些程序集具有 <xref:System.Data.SqlClient.SqlClientPermission> 代码访问安全性 (CAS) 权限。  
   
- SQL Server 通过使用名为<xref:System.Data.Sql.SqlDataSourceEnumerator> SQL Browser 的外部 Windows 服务提供有关的信息。 默认情况下启用此服务，但是管理员可以关闭或禁用此服务，使服务器实例对此类是不可见的。  
+ SQL Server 通过使用名为 SQL Browser 的外部 Windows 服务提供 <xref:System.Data.Sql.SqlDataSourceEnumerator> 的信息。 默认情况下启用此服务，但是管理员可以关闭或禁用此服务，使服务器实例对此类是不可见的。  
   
 ## <a name="example"></a>示例  
  以下控制台应用程序检索所有可见 SQL Server 实例的信息并在控制台窗口中显示该信息。  
@@ -124,7 +124,7 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [SQL Server 和 ADO.NET](index.md)
 - [ADO.NET 概述](../ado-net-overview.md)

@@ -1,13 +1,14 @@
 ---
 title: SQL Server 数据类型和 ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 642fe0d541aca01d6ffb2d9279c4d0fa91eadb63
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9baffc7a439c851ead7ec0e12899adf418174e22
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780846"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979854"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 数据类型和 ADO.NET
 SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在的数据丢失。 为了保持数据的完整性，适用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient>) 提供了用于处理 SQL Server 数据的类型化访问器方法。 可以使用 <xref:System.Data.SqlDbType> 类中的枚举来指定 <xref:System.Data.SqlClient.SqlParameter> 数据类型。  
@@ -41,7 +42,7 @@ SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在�
  [SQL Server 中的 XML 数据](xml-data-in-sql-server.md)  
  说明如何使用从 SQL Server 中检索的 XML 数据。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Data.DataSet>  
  描述 `DataSet` 类及其所有成员。  
   
@@ -54,7 +55,7 @@ SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在�
  <xref:System.Data.DbType>  
  说明 `DbType` 枚举及其所有成员。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [SQL Server 数据类型映射](../sql-server-data-type-mappings.md)
 - [配置参数和参数数据类型](../configuring-parameters-and-parameter-data-types.md)
