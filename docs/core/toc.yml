@@ -97,7 +97,7 @@
       href: tutorials/using-on-mac-vs.md
     - name: 在 macOS 上构建完整的 .NET Core 解决方案
       href: tutorials/using-on-mac-vs-full-solution.md
-    - name: 使用 CLI 工具实现 .NET Core 入门
+    - name: 通过 CLI 开始使用 .NET Core
       href: tutorials/cli-create-console-app.md
     - name: 使用 .NET Core CLI 组织和测试项目
       href: tutorials/testing-with-cli.md
@@ -151,11 +151,11 @@
 - name: 应用程序部署
   href: deploying/index.md
   items:
-    - name: 使用 CLI 工具部署应用
+    - name: 使用 CLI 发布应用
       href: deploying/deploy-with-cli.md
     - name: 使用 Visual Studio 部署应用
       href: deploying/deploy-with-vs.md
-    - name: 使用跨平台工具创建 NuGet 包
+    - name: 使用 CLI 创建 NuGet 包
       href: deploying/creating-nuget-packages.md
     - name: 自包含部署运行时前滚
       href: deploying/runtime-patch-selection.md

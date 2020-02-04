@@ -1,26 +1,20 @@
 ---
-title: .NET Core 命令行接口 (CLI) 工具
-description: 概述了 .NET Core 命令行接口 (CLI) 工具和功能。
+title: .NET Core CLI
+titleSuffix: ''
+description: .NET Core CLI 及其功能概述。
 ms.date: 08/14/2017
-ms.openlocfilehash: f19dcb19fb9d0203b3d3795c3fdc0b026c4c60e3
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: b0a8e0dd8cf77bb6f7567c27e9972f62515ec0f2
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163210"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920485"
 ---
-# <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令行接口 (CLI) 工具
+# <a name="net-core-cli-overview"></a>.NET Core CLI 概述
 
-.NET Core 命令行接口 (CLI) 是用于开发 .NET 应用程序的跨平台工具链。 CLI 是更高级别的工具（如集成开发环境 (IDE)、编辑器和生成协调程序）可以驻留的基础。
+.NET Core 命令行接口 (CLI) 工具是用于开发、生成、运行和发布 .NET Core 应用程序的跨平台工具链。
 
-## <a name="installation"></a>安装
-
-使用本机安装程序或使用安装 shell 脚本：
-
-- 本机安装程序主要用于开发人员的计算机，并使用每个受支持的平台的本机安装机制，例如，Ubuntu 上的 DEB 程序包或 Windows 上的 MSI 捆绑包。 这些安装程序安装并配置环境，供开发人员立即使用，但是需要具有该计算机上的管理权限。 可以在 [.NET Core 安装指南](https://aka.ms/dotnetcoregs)中查看安装说明。
-- Shell 脚本主要用于设置生成服务器或希望安装工具但没有管理权限的情况。 安装脚本不会在计算机上安装先决条件，必须手动安装它。 有关详细信息，请参阅[安装脚本引用主题](dotnet-install-script.md)。 有关如何在你的持续集成 (CI) 生成服务器上设置 CLI 的信息，请参阅[在持续集成 (CI) 中使用 .NET Core SDK 和工具](using-ci-with-cli.md)。
-
-在默认情况下，SLI 以并行 (SxS) 方式安装，因此，因此，CLI 工具的多个版本可以在一个计算机上共存。 有关确定在安装了多个版本的计算机上所使用的版本的类型，在[驱动程序](#driver)部分中对此有更详尽的介绍。
+.NET Core CLI 包含在 [.NET Core SDK](../sdk.md) 中。 若要了解如何安装 .NET Core SDK，请参阅[安装 .NET Core SDK](../install/sdk.md)。
 
 ## <a name="cli-commands"></a>CLI 命令
 
@@ -153,5 +147,5 @@ dotnet build
 
 ## <a name="see-also"></a>请参阅
 
-- [dotnet/CLI GitHub 存储库](https://github.com/dotnet/cli/)
+- [dotnet/sdk GitHub 存储库](https://github.com/dotnet/sdk/)
 - [.NET Core 安装指南](https://aka.ms/dotnetcoregs)

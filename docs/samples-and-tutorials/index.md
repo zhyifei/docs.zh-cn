@@ -4,12 +4,12 @@ description: 有关可帮助了解 .NET 的 .NET Core、ASP.NET Core 和 C# 语�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: e64d0fdd02b28a1c9f21f06305f5ef278fb2827b
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9a161d5325125fba8d4f4e53a0a306c989ed6bc5
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901039"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921395"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 示例和教程
 
@@ -25,13 +25,13 @@ ms.locfileid: "75901039"
 
 ### <a name="tutorials"></a>教程
 
-**[使用 CLI 工具编写 .NET Core 控制台应用：分步指南](../core/tutorials/cli-create-console-app.md)**
+**[使用 .NET Core CLI 编写 .NET Core 控制台应用：分步指南](../core/tutorials/cli-create-console-app.md)**
 
 本指南介绍如何使用 .NET Core CLI 工具生成跨平台控制台应用。 将从基本的控制台应用开始介绍，最终涵盖包括测试在内的多个项目。 逐步添加功能，不断地增长知识。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/core/console-apps)。
 
 **[使用跨平台工具编写库](../core/tutorials/libraries.md)**
 
-本示例介绍如何使用跨平台 CLI 工具编写 .NET 的库。 这些工具提供可跨任何支持的操作系统工作的高效率、低级别体验。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library)。
+本示例介绍如何使用 .NET Core CLI 编写 .NET 的库。 这些工具提供可跨任何支持的操作系统工作的高效率、低级别体验。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library)。
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
@@ -111,7 +111,7 @@ ms.locfileid: "75901039"
    * 以本地方式克隆存储库。 如果你将文档存储库直接克隆到本地系统，则无法直接提交到官方存储库，因此稍后将无法参与文档创作。 如果你希望保留以后参与文档创作的机会，请使用之前介绍的分叉和克隆过程。
 1. 在存储库的文件夹中导航到示例的位置。 当你点击示例链接时，示例位置的相对路径将显示在浏览器的地址栏中。
 1. 要运行示例，你有多个选择：
-   * 使用 [dotnet CLI 工具](../core/tools/index.md)：在控制台窗口中，导航到示例的文件夹，然后使用 dotnet CLI 命令。
+   * 使用 [.NET Core CLI](../core/tools/index.md)：在控制台窗口中，导航到示例的文件夹，然后使用 dotnet CLI 命令。
    * 退出 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 或 [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)：从菜单栏中依次选择“文件”>“打开”>“项目/解决方案”来打开示例，导航到示例项目文件夹，然后选择项目文件（.csproj 或 .fsproj）    。
    * 使用 [Visual Studio Code](https://code.visualstudio.com/)：从菜单栏中选择“文件”>“打开文件夹”来打开示例，然后选择示例的项目文件夹  。
    * 使用支持 .NET Core 项目的其他 IDE。

@@ -31,6 +31,10 @@
       href: how-to-guides/databricks-deploy-methods.md
     - name: 部署辅助角色和 UDF 二进制文件
       href: how-to-guides/deploy-worker-udf-binaries.md
+    - name: 在 Ubuntu 上生成应用程序
+      href: how-to-guides/ubuntu-instructions.md
+    - name: 在 Windows 上生成应用程序
+      href: how-to-guides/windows-instructions.md
 - name: 参考
   items:
     - name: API 参考

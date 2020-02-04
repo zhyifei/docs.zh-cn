@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 968eaf2befb44eb893699d1114b315a4f5df3097
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900598"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921374"
 ---
 # <a name="assemblies-in-net"></a>.NET 中的程序集
 
@@ -63,7 +63,7 @@ ms.locfileid: "75900598"
 
 有几种创建程序集的方法。 你可以使用可创建 .dll 或 .exe 文件的开发工具，例如 Visual Studio   。 可以使用 Windows SDK 中的工具创建具有从其他开发环境中创建的模块的程序集。 还可以使用公共语言运行时 API（例如 <xref:System.Reflection.Emit?displayProperty=nameWithType>）来创建动态程序集。
 
-可以采用以下方法编译程序集：在 Visual Studio 中生成程序集、使用 .NET Core 命令行接口工具生成程序集，或使用命令行编译器生成 .NET Framework 程序集。 有关使用 .NET Core 命令行接口工具生成程序集的详细信息，请参阅 [.NET Core 命令行接口工具](../../core/tools/index.md)。 要了解如何使用命令行编译器生成程序集，请参阅[使用 csc.exe 的命令行生成](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)（适用于 C#），或者[从命令行生成](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)（适用于 Visual Basic）。
+可以采用以下方法编译程序集：在 Visual Studio 中生成程序集、使用 .NET Core 命令行接口工具生成程序集，或使用命令行编译器生成 .NET Framework 程序集。 要详细了解如何使用 .NET Core CLI 生成程序集，请参阅 [.NET Core CLI 概述](../../core/tools/index.md)。 要了解如何使用命令行编译器生成程序集，请参阅[使用 csc.exe 的命令行生成](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)（适用于 C#），或者[从命令行生成](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)（适用于 Visual Basic）。
 
 > [!NOTE]
 > 若要在 Visual Studio 中生成程序集，请在“生成”菜单上选择“生成”   。

@@ -13,13 +13,13 @@ ms.locfileid: "76742746"
 
 .NET 提供了多种方式来自定义本机互操作性代码。 本文包括 Microsoft .NET 团队为实现本机互操作性而遵循的指南。
 
-## <a name="general-guidance"></a>通用指南
+## <a name="general-guidance"></a>一般指南
 
 本部分中的指南适用于所有互操作方案。
 
 - ✔️对方法和参数使用与要调用的本机方法相同的命名和大写。
 - ✔️考虑对常数值使用相同的命名和大写。
-- ✔️使用最接近本机类型的 .NET 类型。 例如，在 C# 中，当本机类型为 `unsigned int` 时使用 `uint`。
+- ✔️使用最接近本机类型的 .NET 类型。 例如，在 C# 中，当本机类型为 `uint` 时使用 `unsigned int`。
 - 当所需的行为不同于默认行为时，✔️仅使用 `[In]` 和 `[Out]` 特性。
 - ✔️考虑使用 <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> 来池本机数组缓冲区。
 - ✔️考虑将您的 P/Invoke 声明包装在与本机库具有相同名称和大小写的类中。
@@ -27,11 +27,11 @@ ms.locfileid: "76742746"
 
 ## <a name="dllimport-attribute-settings"></a>DllImport 属性设置
 
-| 设置 | 默认值 | 建议 | 详细信息 |
+| 设置 | 默认 | 建议 | 详细信息 |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  保留默认设置  | 将其显式设置为 False 时，失败的 HRESULT 返回值将变为异常（因此，定义中的返回值将变为 Null）。|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | 取决于 API  | 如果 API 使用 GetLastError，并使用 Marshal.GetLastWin32Error 获取值，则将其设置为 True。 如果 API 设置一个表示其有错误的条件，则在进行其他调用之前获取错误以避免无意覆盖该错误。|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`，这会退回到 `CharSet.Ansi` 行为  | 定义中存在字符串或字符时显式使用 `CharSet.Unicode` 或 `CharSet.Ansi` | 这将指定字符串的封送行为以及为 `false` 时 `ExactSpelling` 的操作。 请注意，`CharSet.Ansi` 在 Unix 上实际为 UTF8。 大部分时间，Windows 使用 Unicode，而 Unix 使用 UTF8。 有关更多信息，请查看[有关字符集的文档](./charset.md)。 |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`，这会退回到 `CharSet.Ansi` 行为  | 定义中存在字符串或字符时显式使用 `CharSet.Unicode` 或 `CharSet.Ansi` | 这将指定字符串的封送行为以及为 `ExactSpelling` 时 `false` 的操作。 请注意，`CharSet.Ansi` 在 Unix 上实际为 UTF8。 大部分时间，Windows 使用 Unicode，而 Unix 使用 UTF8。 有关更多信息，请查看[有关字符集的文档](./charset.md)。 |
 | <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | 将其设置为 True 并在运行时获得些许性能优势不会查找后缀为“A”或“W”的备用函数名称，具体取决于 `CharSet` 设置的值（“A”用于 `CharSet.Ansi`，“W”用于 `CharSet.Unicode`）。 |
 
 ## <a name="string-parameters"></a>字符串参数
@@ -49,9 +49,9 @@ ms.locfileid: "76742746"
    1. 分配本机缓冲区 **{2}**
    2. 如果 `[In]`，则复制内容 _（`StringBuilder` 参数的默认值）_
    3. 如果 `[Out]` **{3}** _（也是 `StringBuilder`的默认值）_ ，则将本机缓冲区复制到新分配的托管数组
-3. `ToString()` 分配其他托管数组{4}
+3. `ToString()` 分配其他托管数组 **** **
 
-这是 {4} 分配，可从本机代码中获取字符串。 可用来限制此操作的最佳方法是在其他调用中重用 `StringBuilder`，但这仍只能保存 1 个分配。 最好从 `ArrayPool` 使用并缓存字符缓冲区 - 然后可以在后续调用中直接获得 `ToString()` 的分配。
+这是 *{4}* 分配，可从本机代码中获取字符串。 可用来限制此操作的最佳方法是在其他调用中重用 `StringBuilder`，但这仍只能保存 1 个分配。 最好从 `ArrayPool` 使用并缓存字符缓冲区 - 然后可以在后续调用中直接获得 `ToString()` 的分配。
 
 `StringBuilder` 的另一个问题是它始终会将返回缓冲区备份复制到第一个 Null。 如果传递的返回字符串未终止或为双 Null 终止字符串，则 P/Invoke 很可能不正确。
 
@@ -100,11 +100,11 @@ Blittable 类型是托管代码和本机代码中具有相同位级别表示形�
 
 **有时为 blittable：**
 
-- `char`, `string`
+- `char`、`string`
 
 通过引用传递 blittable 类型时，这些类型只会被封送处理程序固定，而不会复制到中间缓冲区。 （类在本质上通过引用传递，结构在与 `ref` 或 `out` 结合使用时会通过引用传递。）
 
-如果 `char` 位于一维数组中，或者如果它是包含使用 `CharSet = CharSet.Unicode` 的 `[StructLayout]` 显式标记的类型的一部分，则该类型为 blittable。
+如果 `char` 位于一维数组中，或者如果它是包含使用 `[StructLayout]` 的 `CharSet = CharSet.Unicode` 显式标记的类型的一部分，则该类型为 blittable。
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
