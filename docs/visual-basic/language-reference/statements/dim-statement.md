@@ -1,5 +1,5 @@
 ---
-title: Dim 문
+title: Dim 语句
 ms.date: 05/12/2018
 f1_keywords:
 - vb.Dim
@@ -40,79 +40,79 @@ ms.locfileid: "76744723"
 
 声明和分配一个或多个变量的存储空间。
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>语法
 
 ```vb
 [ <attributelist> ] [ accessmodifier ] [[ Shared ] [ Shadows ] | [ Static ]] [ ReadOnly ]
 Dim [ WithEvents ] variablelist
 ```
 
-## <a name="parts"></a>구성 요소
+## <a name="parts"></a>组成部分
 
 - `attributelist`
 
-  옵션. 请参阅[特性列表](attribute-list.md)。
+  可选。 请参阅[特性列表](attribute-list.md)。
 
 - `accessmodifier`
 
-  옵션. 다음 중 하나일 수 있습니다.
+  可选。 可以是以下值之一：
 
-  - [Public](../modifiers/public.md)
+  - 公共[Public](../modifiers/public.md)
 
-  - [보호됨](../modifiers/protected.md)
+  - [Protected](../modifiers/protected.md)
 
   - [Friend](../modifiers/friend.md)
 
-  - [전용](../modifiers/private.md)
+  - 专用[Private](../modifiers/private.md)
 
   - [Protected Friend](../modifiers/protected-friend.md)
 
   - [Private Protected](../modifiers/private-protected.md)
 
-  [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조하세요.
+  请参阅 [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)。
 
 - `Shared`
 
-  옵션. 请参阅[共享](../modifiers/shared.md)。
+  可选。 请参阅[共享](../modifiers/shared.md)。
 
 - `Shadows`
 
-  옵션. 请参阅[阴影](../modifiers/shadows.md)。
+  可选。 请参阅[阴影](../modifiers/shadows.md)。
 
 - `Static`
 
-  옵션. 请参阅[静态](../modifiers/static.md)。
+  可选。 请参阅[静态](../modifiers/static.md)。
 
 - `ReadOnly`
 
-  옵션. 请参阅[ReadOnly](../modifiers/readonly.md)。
+  可选。 请参阅[ReadOnly](../modifiers/readonly.md)。
 
 - `WithEvents`
 
-  옵션. 指定这些对象变量引用可以引发事件的类的实例。 请参阅[WithEvents](../modifiers/withevents.md)。
+  可选。 指定这些对象变量引用可以引发事件的类的实例。 请参阅[WithEvents](../modifiers/withevents.md)。
 
 - `variablelist`
 
-  필수 在此语句中声明的变量的列表。
+  必需。 在此语句中声明的变量的列表。
 
   `variable [ , variable ... ]`
 
-  각 `variable`에는 다음과 같은 구문과 요소가 있습니다.
+  每个 `variable` 都具有以下语法和部件：
 
   `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`
 
-  |구성 요소|설명|
+  |组成部分|说明|
   |---|---|
-  |`variablename`|필수 변수의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.|
-  |`boundslist`|옵션. 数组变量的每个维度的界限列表。|
-  |`New`|옵션. 当 `Dim` 语句运行时，创建类的新实例。|
-  |`datatype`|옵션. 变量的数据类型。|
-  |`With`|옵션. 引入对象初始值设定项列表。|
-  |`propertyname`|옵션. 要生成其实例的类中的属性的名称。|
+  |`variablename`|必需。 变量的名称。 请参阅 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)。|
+  |`boundslist`|可选。 数组变量的每个维度的界限列表。|
+  |`New`|可选。 当 `Dim` 语句运行时，创建类的新实例。|
+  |`datatype`|可选。 变量的数据类型。|
+  |`With`|可选。 引入对象初始值设定项列表。|
+  |`propertyname`|可选。 要生成其实例的类中的属性的名称。|
   |`propinitializer`|`propertyname` = 后必需。 计算并分配给属性名称的表达式。|
   |`initializer`|如果未指定 `New`，则为可选。 创建变量时计算并分配给该变量的表达式。|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>备注
 
 Visual Basic 编译器使用 `Dim` 语句来确定变量的数据类型和其他信息，例如哪些代码可以访问该变量。 下面的示例声明一个变量以保存 `Integer` 值。
 
@@ -133,7 +133,7 @@ Dim monitorBox As System.Windows.Forms.Form
 Dim bottomLabel As New System.Windows.Forms.Label
 ```
 
-您可以在过程、块、类、结构或模块中声明变量。 不能在源文件、命名空间或接口中声明变量。 자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](declaration-contexts-and-default-access-levels.md)을 참조하세요.
+您可以在过程、块、类、结构或模块中声明变量。 不能在源文件、命名空间或接口中声明变量。 有关详细信息，请参阅[声明上下文和默认访问级别](declaration-contexts-and-default-access-levels.md)。
 
 在模块级别，在任何过程外部声明的变量是*成员变量*或*字段*。 成员变量在其类、结构或模块中的作用域内。 在过程级别声明的变量是*局部变量*。 局部变量仅在其过程或块范围内。
 
@@ -184,7 +184,7 @@ Dim student1 As New Student With {.First = "Michael",
 
 ## <a name="declaring-multiple-variables"></a>声明多个变量
 
-可以在一个声明语句中声明多个变量，并为每个变量指定变量名称，并在每个数组名称后面加上括号。 여러 변수는 쉼표로 구분됩니다.
+可以在一个声明语句中声明多个变量，并为每个变量指定变量名称，并在每个数组名称后面加上括号。 以逗号分隔多个变量。
 
 ```vb
 Dim lastTime, nextTime, allTimes() As Date
@@ -199,9 +199,9 @@ Dim a, b, c As Single, x, y As Double, i As Integer
 ' a, b, and c are all Single; x and y are both Double
 ```
 
-## <a name="arrays"></a>배열
+## <a name="arrays"></a>阵列
 
-您可以声明一个变量来保存一个*数组*，该数组可以包含多个值。 若要指定某个变量包含数组，请在其 `variablename` 后跟括号。 배열에 대한 자세한 내용은 [배열](../../programming-guide/language-features/arrays/index.md)을 참조하세요.
+您可以声明一个变量来保存一个*数组*，该数组可以包含多个值。 若要指定某个变量包含数组，请在其 `variablename` 后跟括号。 有关数组的详细信息，请参阅[数组](../../programming-guide/language-features/arrays/index.md)。
 
 您可以指定数组的每个维度的下限和上限。 为此，请在括号内包含一个 `boundslist`。 对于每个维度，`boundslist` 指定上限，还可以选择下限。 无论是否指定，下限始终为零。 每个索引的大小均为0到其上限值。
 
@@ -235,7 +235,7 @@ ReDim messages(4)
 Dim oneDimension(), twoDimensions(,), threeDimensions(,,) As Byte
 ```
 
-可以通过将数组的一个维度声明为-1，来声明*长度为零的数组*。 保存零长度数组的变量不具有 `Nothing`的值。 某些公共语言运行时函数需要零长度数组。 如果尝试访问此类数组，则会发生运行时异常。 자세한 내용은 [배열](../../programming-guide/language-features/arrays/index.md)을 참조하세요.
+可以通过将数组的一个维度声明为-1，来声明*长度为零的数组*。 保存零长度数组的变量不具有 `Nothing`的值。 某些公共语言运行时函数需要零长度数组。 如果尝试访问此类数组，则会发生运行时异常。 有关详细信息，请参阅 [array](../../programming-guide/language-features/arrays/index.md)。
 
 可以通过使用数组文本初始化数组的值。 为此，请将初始化值用大括号（`{}`）括起来。
 
@@ -253,18 +253,18 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 ## <a name="default"></a>默认数据类型和值
 
-다음 테이블에는 `Dim` 문에서 데이터 형식과 이니셜라이저를 지정하는 다양한 조합의 결과에 대한 설명이 나와 있습니다.
+下表描述了指定 `Dim` 语句中数据类型和初始值设定项的各种组合的结果。
 
-|데이터 형식 지정 여부|이니셜라이저 지정 여부|示例|결과|
+|是否指定数据类型？|是否指定初始值设定项？|示例|结果|
 |---|---|---|---|
-|否|否|`Dim qty`|如果[Option Strict](option-strict-statement.md)为 off （默认值），则变量设置为 `Nothing`。<br /><br /> `Option Strict`가 on이면 컴파일 시간 오류가 발생합니다.|
-|否|예|`Dim qty = 5`|如果[选项推断](option-infer-statement.md)为 on （默认值），则变量使用初始值设定项的数据类型。 请参阅[局部类型推理](../../programming-guide/language-features/variables/local-type-inference.md)。<br /><br /> `Option Infer`가 off이고 `Option Strict`고 off이면 변수가 `Object`의 데이터 형식을 사용합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`는 on이면 컴파일 시간 오류가 발생합니다.|
-|예|否|`Dim qty As Integer`|변수는 데이터 형식의 기본값으로 초기화됩니다. 请参阅本部分后面的表。|
-|예|예|`Dim qty  As Integer = 5`|이니셜라이저의 데이터 형식을 지정한 데이터 형식으로 변환할 수 없으면 컴파일 시간 오류가 발생합니다.|
+|是|是|`Dim qty`|如果[Option Strict](option-strict-statement.md)为 off （默认值），则变量设置为 `Nothing`。<br /><br /> 如果 `Option Strict` 处于打开状态，则发生编译时错误。|
+|是|是|`Dim qty = 5`|如果[选项推断](option-infer-statement.md)为 on （默认值），则变量使用初始值设定项的数据类型。 请参阅[局部类型推理](../../programming-guide/language-features/variables/local-type-inference.md)。<br /><br /> 如果 `Option Infer` 和 `Option Strict` 均处于关闭状态，则变量采用 `Object` 的数据类型。<br /><br /> 如果 `Option Infer` 处于关闭状态但 `Option Strict` 处于打开状态，则发生编译时错误。|
+|是|是|`Dim qty As Integer`|将变量初始化为数据类型的默认值。 请参阅本部分后面的表。|
+|是|是|`Dim qty  As Integer = 5`|如果初始值设定项的数据类型不可转换为指定数据类型，则会发生编译时错误。|
 
 如果指定数据类型但未指定初始值设定项，Visual Basic 会将变量初始化为其数据类型的默认值。 下表显示了默认的初始化值。
 
-|데이터 형식|기본값|
+|数据类型|默认值|
 |---|---|
 |所有数值类型（包括 `Byte` 和 `SByte`）|0|
 |`Char`|二进制0|
@@ -303,7 +303,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 如果类包含在特别宝贵的资源（例如数据库连接或文件句柄）上，则您可能不希望等到下一次垃圾回收来清理不再使用的类实例。 类可以实现 <xref:System.IDisposable> 接口，以提供一种在垃圾回收之前释放资源的方法。 实现该接口的类公开了一个 `Dispose` 方法，可以调用该方法来强制立即释放有价值的资源。
 
-`Using` 语句会自动获取资源，执行一组语句，然后释放资源。 但是，资源必须实现 <xref:System.IDisposable> 接口。 자세한 내용은 [using 문](using-statement.md)을 참조하세요.
+`Using` 语句会自动获取资源，执行一组语句，然后释放资源。 但是，资源必须实现 <xref:System.IDisposable> 接口。 有关详细信息，请参阅 [Using 语句](using-statement.md)。
 
 ## <a name="example"></a>示例
 
@@ -327,16 +327,16 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 ## <a name="see-also"></a>另请参阅
 
-- [Const 문](const-statement.md)
-- [ReDim 문](redim-statement.md)
-- [Option Explicit 문](option-explicit-statement.md)
-- [Option Infer 문](option-infer-statement.md)
-- [Option Strict 문](option-strict-statement.md)
-- [프로젝트 디자이너, 컴파일 페이지(Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
-- [변수 선언](../../programming-guide/language-features/variables/variable-declaration.md)
-- [배열](../../programming-guide/language-features/arrays/index.md)
-- [개체 이니셜라이저: 명명된 형식과 익명 형식](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [익명 형식](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [개체 이니셜라이저: 명명된 형식과 익명 형식](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [방법: 개체 이니셜라이저를 사용하여 개체 선언](../../programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
-- [지역 형식 유추](../../programming-guide/language-features/variables/local-type-inference.md)
+- [Const 语句](const-statement.md)
+- [ReDim 语句](redim-statement.md)
+- [Option Explicit 语句](option-explicit-statement.md)
+- [Option Infer 语句](option-infer-statement.md)
+- [Option Strict 语句](option-strict-statement.md)
+- [“项目设计器”->“编译”页 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [变量声明](../../programming-guide/language-features/variables/variable-declaration.md)
+- [数组](../../programming-guide/language-features/arrays/index.md)
+- [对象初始值设定项：命名类型和匿名类型](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [匿名类型](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [对象初始值设定项：命名类型和匿名类型](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [如何：使用对象初始值设定项声明对象](../../programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+- [局部类型推理](../../programming-guide/language-features/variables/local-type-inference.md)
