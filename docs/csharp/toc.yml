@@ -1536,7 +1536,7 @@
               href: language-reference/keywords/add.md
             - name: get
               href: language-reference/keywords/get.md
-            - name: 分部（类型）
+            - name: partial（类型）
               href: language-reference/keywords/partial-type.md
             - name: partial（方法）
               href: language-reference/keywords/partial-method.md
@@ -1642,10 +1642,10 @@
         - name: Await 运算符
           href: language-reference/operators/await.md
           displayName: async
-        - name: 默认运算符
+        - name: default 运算符
           href: language-reference/operators/default.md
           displayName: 'default value, default literal, type default'
-        - name: 委托运算符
+        - name: delegate 运算符
           href: language-reference/operators/delegate-operator.md
           displayName: anonymous
         - name: nameof 运算符
