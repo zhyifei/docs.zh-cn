@@ -4,12 +4,12 @@ description: 使用包管理器在 Fedora 31 上安装 .NET Core SDK 和运行�
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2019
-ms.openlocfilehash: 25c670694ed2d9e89fe37cedf0b06efd8bc93293
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 28bda3676f99037e565080e1ff3f9d89a67d0d69
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116950"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920787"
 ---
 # <a name="fedora-31-package-manager---install-net-core"></a>Fedora 31 包管理器 - 安装 .NET Core
 
@@ -61,3 +61,11 @@ sudo dnf install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>如何安装其他版本
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>包管理器疑难解答
+
+本部分提供有关使用程序包管理器安装 .NET Core 时可能会遇到的常见错误的信息。
+
+### <a name="failed-to-fetch"></a>未能提取
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

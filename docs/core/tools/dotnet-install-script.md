@@ -2,12 +2,12 @@
 title: dotnet-install 脚本
 description: 了解用于安装 .NET Core SDK 和共享运行时的 dotnet-install 脚本。
 ms.date: 01/23/2020
-ms.openlocfilehash: 169991ac4cd24ccab90634ff265c3ae5b603f8e9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 76055627c6b2016396209c9594dba36e56eb841c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734216"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920579"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 脚本引用
 
@@ -35,7 +35,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 ## <a name="description"></a>描述
 
-`dotnet-install` 脚本用于执行 .NET Core SDK 的非管理员安装，其中包含 .NET Core CLI 工具和共享运行时。
+`dotnet-install` 脚本用于执行 .NET Core SDK 的非管理员安装，其中包含 .NET Core CLI 和共享运行时。
 
 建议使用脚本的稳定版本：
 
@@ -108,7 +108,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 - **`-NoPath|--no-path`**
 
-  如果设定，不会将安装文件夹导出到当前会话的路径。 默认情况下，该脚本会修改 PATH，这会使 CLI 工具在安装后立即可用。
+  如果设定，不会将安装文件夹导出到当前会话的路径。 默认情况下，该脚本会修改 PATH，这会使 .NET Core CLI 在安装后立即可用。
 
 - **`-Verbose|--verbose`**
 

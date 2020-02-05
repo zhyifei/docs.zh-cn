@@ -4,12 +4,12 @@ description: Azure 函数跨多种语言（C#、JavaScript、Java）和平台提
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5e8187b3752a0f0d0bcf8e15f2ce440dc5a64e45
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 8764e6a33f3fdd53e60fa767d0fb584a9c07de7e
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72522878"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920964"
 ---
 # <a name="azure-functions"></a>Azure Functions
 
@@ -61,7 +61,7 @@ Azure Functions 运行时有两个版本：1.x 和 2.x。 版本 1.x 推出了�
 可以通过三种常用方法创建函数应用。
 
 - 门户中的脚本函数。
-- 使用 Azure 命令行接口 (CLI) 创建必要的资源。
+- 使用 Azure CLI 创建必要的资源。
 - 使用最喜欢的 IDE 在本地生成函数并将其发布到 Azure。
 
 有关在门户中创建脚本函数的详细信息，请参阅[在 Azure 门户中创建第一个函数](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)。

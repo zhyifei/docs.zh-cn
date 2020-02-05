@@ -1,20 +1,20 @@
 ---
-title: 使用 CLI 发布 .NET Core 应用
-description: 了解如何使用 .NET Core SDK 命令行接口 (CLI) 工具发布 .NET Core 应用。
+title: 使用 .NET Core CLI 发布应用
+description: 了解如何使用 .NET Core CLI 命令发布 .NET Core 应用。
 author: thraka
 ms.author: adegeo
 ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 98f1e96ac087727e711f9ebf3d3eaf86c4d4eec9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f4c2a4ccf551c53e4aa4e125cb5720d6f1cc9601
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740854"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920899"
 ---
-# <a name="publish-net-core-apps-with-the-cli"></a>使用 CLI 发布 .NET Core 应用
+# <a name="publish-net-core-apps-with-the-net-core-cli"></a>使用 .NET Core CLI 发布 .NET Core 应用
 
 本文演示了如何使用命令行发布 .NET Core 应用程序。 .NET Core 提供了三种发布应用程序的方式。 依赖于框架的部署生成一个跨平台 .dll 文件，该文件使用本地安装的 .NET Core 运行时。 依赖于框架的可执行文件生成特定于平台的可执行文件，后者使用本地安装的 .NET Core 运行时。 独立可执行文件生成特定于平台的可执行文件，并包含 .NET Core 运行时的本地副本。
 
@@ -32,7 +32,7 @@ ms.locfileid: "75740854"
 |                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
 
-\* 使用 SDK 版本 3.0 时，框架依赖可执行文件是运行基本 `dotnet publish` 命令时的默认发布模式。 仅当项目定目标到 .NET Core 2.1 或 .NET Core 3.0 时，这才适用。
+\* 使用 SDK 版本 3.0 时，框架依赖可执行文件是运行基本 `dotnet publish` 命令时的默认发布模式。 仅当项目定目标到 .NET Core 2.1  或 .NET Core 3.0  时，这才适用。
 
 ## <a name="publishing-basics"></a>发布基本知识
 
@@ -40,7 +40,7 @@ ms.locfileid: "75740854"
 
 如果要以多个框架为目标，可以将 `<TargetFrameworks>` 设置设置为多个以分号分隔的 TFM 值。 可以使用 `dotnet publish -f <TFM>` 命令发布其中一个框架。 例如，如果有 `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` 并运行 `dotnet publish -f netcoreapp2.1`，则会创建面向 .NET Core 2.1 的二进制文件。
 
-除非另有设置，否则 [`dotnet publish`](../tools/dotnet-publish.md) 命令的输出目录为 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`。 除非使用 `-c` 参数进行更改，否则默认的 BUILD-CONFIGURATION 模式为 Debug。 例如，`dotnet publish -c Release -f netcoreapp2.1` 发布到 `myfolder/bin/Release/netcoreapp2.1/publish/`。
+除非另有设置，否则 [`dotnet publish`](../tools/dotnet-publish.md) 命令的输出目录为 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`。 除非使用 `-c` 参数进行更改，否则默认的 BUILD-CONFIGURATION 模式为 Debug   。 例如，`dotnet publish -c Release -f netcoreapp2.1` 发布到 `myfolder/bin/Release/netcoreapp2.1/publish/`。
 
 如果使用 .NET Core SDK 3.0 或更高版本，则面向 .NET Core 版本 2.1、2.2、3.0 或更高版本的应用的默认发布模式为依赖于框架的可执行文件。
 
@@ -134,7 +134,7 @@ End Module
 如果使用[示例应用](#sample-app)，请运行 `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`。 此命令将创建以下可执行文件：`./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
-> 可以通过启用全局固定模式来降低部署的总大小。 此模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。 有关全局固定模式及其启用方式的详细信息，请参阅 [.NET Core 全局固定模式](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)。
+> 可以通过启用全局固定模式来降低部署的总大小  。 此模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。 有关全局固定模式及其启用方式的详细信息，请参阅 [.NET Core 全局固定模式](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)  。
 
 ## <a name="self-contained-deployment"></a>独立部署
 
@@ -149,7 +149,7 @@ End Module
 - `--self-contained true` 此开关告知 .NET Core SDK 创建可执行文件作为 SCD。
 
 > [!NOTE]
-> 可以通过启用全局固定模式来降低部署的总大小。 此模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。 有关全局固定模式及其启用方式的详细信息，请参阅 [.NET Core 全局固定模式](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)。
+> 可以通过启用全局固定模式来降低部署的总大小  。 此模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。 有关全局固定模式及其启用方式的详细信息，请参阅 [.NET Core 全局固定模式](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)  。
 
 ## <a name="see-also"></a>请参阅
 

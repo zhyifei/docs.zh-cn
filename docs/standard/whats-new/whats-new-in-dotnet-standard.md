@@ -4,12 +4,12 @@ description: 本文总结了所有新版 .NET Standard 中的新功能和增强�
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ebf656c4a5499fff54cb5a70a93c4e8cc9c82d0a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a90df0360211c3b02f4f2d8697890180099c5807
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73101756"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921061"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard 中的新增功能
 
@@ -63,7 +63,7 @@ ms.locfileid: "73101756"
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>.NET Standard 库的工具支持
 
-随着 .NET Core 2.0 和 .NET Standard 2.0 发布，Visual Studio 2017 和 [.NET Core 命令行接口 (CLI)](../../core/tools/index.md) 均包含创建 .NET Standard 库所需的工具支持。
+随着 .NET Core 2.0 和 .NET Standard 2.0 发布，Visual Studio 2017 和 [.NET Core CLI](../../core/tools/index.md) 均包含创建 .NET Standard 库所需的工具支持。
 
 如果安装含 .NET Core 跨平台开发工作负荷  的 Visual Studio，可以使用项目模板创建 .NET Standard 2.0 库项目，如下图所示：
 

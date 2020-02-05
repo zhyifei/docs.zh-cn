@@ -2,12 +2,12 @@
 title: 关于 .NET Core
 description: 了解 .NET Core。
 ms.date: 09/17/2019
-ms.openlocfilehash: 12611c2cd0b872a683d070ff17dcf9f111578627
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e5460fd1d968a49478a1bdc5f18962de2c7cbbe0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900622"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920962"
 ---
 # <a name="about-net-core"></a>关于 .NET Core
 
@@ -17,9 +17,9 @@ ms.locfileid: "75900622"
 - **跨体系结构保持一致：** 在多个体系结构（包括 x64、x86 和 ARM）上以相同的行为运行代码。
 - **命令行工具：** 包括可用于本地开发和持续集成方案中的易于使用的命令行工具。
 - **部署灵活：** 可以包含在应用或已安装的并行（用户或系统范围安装）中。 可搭配 [Docker 容器](docker/introduction.md)使用。
-- **兼容性：**.NET Core 通过 [.NET Standard](../standard/net-standard.md) 与 .NET Framework、Xamarin 和 Mono 兼容。
-- **开放源代码：**.NET Core 平台是开放源代码，使用 MIT 和 Apache 2 许可证。 .NET Core 是一个 [.NET Foundation](https://dotnetfoundation.org/) 项目。
-- **由 Microsoft 支持：**.NET Core 由 Microsoft 依据 [.NET Core 支持](https://dotnet.microsoft.com/platform/support/policy)提供支持。
+- **兼容性：** .NET Core 通过 [.NET Standard](../standard/net-standard.md) 与 .NET Framework、Xamarin 和 Mono 兼容。
+- **开放源代码：** .NET Core 平台是开放源代码，使用 MIT 和 Apache 2 许可证。 .NET Core 是一个 [.NET Foundation](https://dotnetfoundation.org/) 项目。
+- **由 Microsoft 支持：** .NET Core 由 Microsoft 依据 [.NET Core 支持](https://dotnet.microsoft.com/platform/support/policy)提供支持。
 
 ## <a name="languages"></a>语言
 
@@ -58,14 +58,14 @@ ms.locfileid: "75900622"
 
 - [.NET Core 运行时](https://github.com/dotnet/runtime/tree/master/src/coreclr)：提供类型系统、程序集加载、垃圾回收器、本机互操作和其他基本服务。 [.NET Core 框架库](https://github.com/dotnet/runtime/tree/master/src/libraries)：提供基元数据类型、应用编写类型和基本实用程序。
 - [ASP.NET Core 运行时](https://github.com/dotnet/aspnetcore)：提供一个框架来生成基于云且连接到 Internet 的新式应用程序，例如 Web 应用、IoT 应用和移动后端。
-- [.NET Core CLI 工具](https://github.com/dotnet/sdk)和语言编译器（[Roslyn](https://github.com/dotnet/roslyn) 和 [F#](https://github.com/microsoft/visualfsharp)）：提供 .NET Core 开发人员体验。
-- [dotnet 工具](https://github.com/dotnet/core-setup)：用于启动 .NET Core 应用和 CLI 工具。 它选择运行时并托管运行时，提供程序集加载策略并启动应用和工具。
+- [.NET Core SDK](https://github.com/dotnet/sdk) 和语言编译器（[Roslyn](https://github.com/dotnet/roslyn) 和 [F#](https://github.com/microsoft/visualfsharp)）：提供 .NET Core 开发人员体验。
+- [dotnet 命令](./tools/dotnet.md)：用于启动 .NET Core 应用和 CLI 命令。 它选择运行时并托管运行时，提供程序集加载策略并启动应用和工具。
 
 这些组件采用以下方式分布：
 
 - [.NET Core 运行时](https://dotnet.microsoft.com/download) -- 包括 .NET Core 运行时和框架库。
 - [ASP.NET Core 运行时](https://dotnet.microsoft.com/download) -- 包括 ASP.NET Core 和 .NET Core 运行时以及框架库。
-- [.NET Core SDK](https://dotnet.microsoft.com/download) -- 包括 .NET CLI 工具、ASP.NET Core 运行时以及 .NET Core 运行时和框架。
+- [.NET Core SDK](https://dotnet.microsoft.com/download) -- 包括 .NET Core CLI、ASP.NET Core 运行时以及 .NET Core 运行时和框架。
 
 ### <a name="open-source"></a>开源
 

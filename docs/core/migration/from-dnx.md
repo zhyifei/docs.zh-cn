@@ -2,12 +2,12 @@
 title: 从 DNX 迁移到 .NET Core CLI
 description: 从使用 DNX 工具迁移到 .NET Core CLI 工具。
 ms.date: 06/20/2016
-ms.openlocfilehash: 91a43ffda31b34332d2e545a90c857221aa162c4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e15e7ce10bb7a36deb2acd2abb9a0bd4ec8cd4a9
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715529"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920629"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>从 DNX 迁移到 .NET Core CLI (project.json)
 
@@ -32,7 +32,7 @@ DNVM（DotNet 版本管理器  的简称），是用于在计算机上安装 DNX
 
 DNVM 现已停用，因为其功能集可能由于 .NET Core CLI 即将推出的更改变得冗余。
 
-可以通过以下两种主要方式打包 CLI 工具：
+可以通过以下两种主要方式打包 CLI：
 
 1. 给定平台的本机安装程序
 2. 用于其他情形（如 CI 服务器）的安装脚本
@@ -69,7 +69,7 @@ DNU 附带称为“全局命令”的概念。 从本质上来说，这些都是
 CLI 不支持此概念。 但是，它确实支持添加所有项目命令的这一概念，这些命令可以使用熟悉的 `dotnet <command>` 语法调用。
 
 ### <a name="installing-dependencies"></a>安装依赖项
-自 v1 起，.NET Core CLI 工具就没有用于安装依赖项的 `install` 命令。 为了从 NuGet 安装包，需要将其作为依赖项添加到 `project.json` 文件，然后运行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）。
+自 v1 起，.NET Core CLI 就没有用于安装依赖项的 `install` 命令。 为了从 NuGet 安装包，需要将其作为依赖项添加到 `project.json` 文件，然后运行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）。
 
 ### <a name="running-your-code"></a>运行代码
 运行代码主要有两种方法。 一种是从源中使用 `dotnet run` 运行。 与 `dnx run` 不同，这种方法不能执行任何内存中编译。 实际上，它将调用 `dotnet build` 生成代码，然后运行生成的二进制文件。
@@ -84,7 +84,7 @@ CLI 不支持此概念。 但是，它确实支持添加所有项目命令的这
 3. 将任何 DNX API 迁移到 BCL 对应项。
 
 ### <a name="changing-the-globaljson-file"></a>更改 global.json 文件
-对于 RC1 和 RC2（或更高版本）项目，`global.json` 文件充当两者的解决方案文件。 为了在 RC1 和更高版本间区分 CLI 工具（以及 Visual Studio），可以使用 `"sdk": { "version" }` 属性来区分哪个项目是 RC1 或更高版本。 如果 `global.json` 根本无此节点，则假定为最新版本。
+对于 RC1 和 RC2（或更高版本）项目，`global.json` 文件充当两者的解决方案文件。 为了在 RC1 和更高版本间区分 .NET Core CLI（以及 Visual Studio），可以使用 `"sdk": { "version" }` 属性来区分哪个项目是 RC1 或更高版本。 如果 `global.json` 根本无此节点，则假定为最新版本。
 
 为了更新 `global.json` 文件，可以删除此属性或将其设置为想要使用的工具的确切版本，在本示例中为 **1.0.0-preview2-003121**：
 

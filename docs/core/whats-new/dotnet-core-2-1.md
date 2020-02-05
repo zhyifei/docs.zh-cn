@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 603e7ae4ffb9e6a4bb477af9597d6948bd63f55e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100747"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920385"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新增功能
 
@@ -67,7 +67,7 @@ ms.locfileid: "73100747"
 
 .NET Core 2.1 支持全局工具  ，即，可通过命令行在全局范围内使用的自定义工具。 以前版本的 .NET Core 中的扩展性模型只能通过使用 [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools) 在每个项目的基础上提供自定义工具。
 
-若要安装全局工具，请使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令。 例如:
+若要安装全局工具，请使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令。 例如：
 
 ```dotnetcli
 dotnet tool install -g dotnetsay
@@ -112,7 +112,7 @@ dotnet tool install -g dotnetsay
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- 使用 [.NET Core CLI 工具](../tools/index.md)时，请使用所需的值将下列选项添加到 .NET Core 命令，例如 `run`：
+- 使用 [.NET Core CLI](../tools/index.md) 时，请使用所需的值将下列选项添加到 .NET Core 命令，例如 `run`：
 
    ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0

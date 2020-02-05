@@ -4,12 +4,12 @@ description: 使用包管理器在 Ubuntu 16.04 上安装 .NET Core SDK 和运�
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: eae847232f5f89e81acfb90027c555d8ccd1a0b8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 6038e64a2aa50d09923454e346f05c58a6c1e2fb
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740626"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920701"
 ---
 # <a name="ubuntu-1604-package-manager---install-net-core"></a>Ubuntu 16.04 包管理器 - 安装 .NET Core
 
@@ -46,7 +46,7 @@ sudo apt-get install dotnet-sdk-3.1
 ```
 
 > [!IMPORTANT]
-> 如果收到类似于“找不到包 dotnet-sdk-3.1”的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。
+> 如果收到类似于“找不到包 dotnet-sdk-3.1”  的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。
 
 ## <a name="install-the-aspnet-core-runtime"></a>安装 ASP.NET Core 运行时
 
@@ -60,7 +60,7 @@ sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> 如果收到类似于“找不到包 aspnetcore-runtime-3.1”的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。
+> 如果收到类似于“找不到包 aspnetcore-runtime-3.1”  的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。
 
 ## <a name="install-the-net-core-runtime"></a>安装 .NET Core 运行时
 
@@ -74,7 +74,7 @@ sudo apt-get install dotnet-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> 如果收到类似于“找不到包 dotnet-runtime-3.1”的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。
+> 如果收到类似于“找不到包 dotnet-runtime-3.1”  的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。
 
 ## <a name="how-to-install-other-versions"></a>如何安装其他版本
 
@@ -82,7 +82,11 @@ sudo apt-get install dotnet-runtime-3.1
 
 ## <a name="troubleshoot-the-package-manager"></a>包管理器疑难解答
 
-如果收到类似于“找不到包 {.NET Core 包}”的错误消息，请运行以下命令。
+本部分提供有关使用程序包管理器安装 .NET Core 时可能会遇到的常见错误的信息。
+
+### <a name="unable-to-locate"></a>无法定位
+
+如果收到类似于“找不到包 {.NET Core 包}”  的错误消息，请运行以下命令。
 
 ```bash
 sudo dpkg --purge packages-microsoft-prod && sudo dpkg -i packages-microsoft-prod.deb
@@ -104,3 +108,7 @@ sudo apt-get install -y apt-transport-https
 sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
+
+### <a name="failed-to-fetch"></a>未能提取
+
+[!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]

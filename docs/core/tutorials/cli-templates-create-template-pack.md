@@ -5,12 +5,12 @@ author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3a72f68f5634c9ee5b137baf12a279130861e61a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340174"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787841"
 ---
 # <a name="tutorial-create-a-template-pack"></a>教程：创建模板包
 
@@ -49,7 +49,7 @@ ms.locfileid: "75340174"
 dotnet new console -n templatepack -o .
 ```
 
-`-n` 参数将 .csproj  文件名设置为 templatepack.csproj，  `-o` 参数在当前目录中创建文件。 应看到类似于以下输出的结果。
+`-n` 参数将 .csproj  文件名设置为 templatepack.csproj  。 `-o` 参数将在当前目录中创建文件。 应看到类似于以下输出的结果。
 
 ```console
 C:\working> dotnet new console -n templatepack -o .
@@ -91,7 +91,7 @@ Restore succeeded.
 </Project>
 ```
 
-上面的 XML 中的 `<PropertyGroup>` 设置分为三组。 第一组处理 NuGet 包所需的属性。 三个 `<Package` 设置与 NuGet 包属性相关，用于在 NuGet 源上标识你的包。 具体来说，`<PacakgeId>` 值用于通过单个名称而不是目录路径卸载模板包。 它还可用于从 NuGet 源安装模板包。 其余的设置，如 `<Title>` 和 `<Tags>`，它们与 NuGet 源上显示的元数据相关。 有关 NuGet 设置的详细信息，请参阅 [NuGet 和 MSBuild 属性](/nuget/reference/msbuild-targets)。
+上面的 XML 中的 `<PropertyGroup>` 设置分为三组。 第一组处理 NuGet 包所需的属性。 三个 `<Package` 设置与 NuGet 包属性相关，用于在 NuGet 源上标识你的包。 具体来说，`<PackageId>` 值用于通过单个名称而不是目录路径卸载模板包。 它还可用于从 NuGet 源安装模板包。 其余的设置，如 `<Title>` 和 `<PackageTags>`，它们与 NuGet 源上显示的元数据相关。 有关 NuGet 设置的详细信息，请参阅 [NuGet 和 MSBuild 属性](/nuget/reference/msbuild-targets)。
 
 必须设置 `<TargetFramework>` 设置，以便在运行 pack 命令编译和打包项目时 MSBuild 正常运行。
 
@@ -178,7 +178,7 @@ Currently installed items:
 
 运行 `dotnet new -u AdatumCorporation.Utility.Templates` 以卸载模板。 `dotnet new` 命令将输出应忽略先前安装的模板的帮助信息。
 
-祝贺你！ 你已安装，并卸载了模板包。 
+祝贺你！ 你已安装，并卸载了模板包。
 
 ## <a name="next-steps"></a>后续步骤
 

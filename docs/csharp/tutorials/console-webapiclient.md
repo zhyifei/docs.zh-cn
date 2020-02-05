@@ -3,20 +3,18 @@ title: 使用 .NET Core 创建 REST 客户端
 description: 此教程将介绍 .NET Core 和 C# 语言的许多功能。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 09eda08f82490070c66d0b290359872c1043b0c2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: eb7946d669de60c3469ca8098e40b159082ea270
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737575"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921090"
 ---
 # <a name="rest-client"></a>REST 客户端
 
-## <a name="introduction"></a>介绍
-
 此教程将介绍 .NET Core 和 C# 语言的许多功能。 你将了解：
 
-* .NET Core 命令行接口 (CLI) 的基础知识。
+* .NET Core CLI 的基础知识。
 * C# 语言功能概述。
 * 如何使用 NuGet 管理依赖项
 * HTTP 通信
@@ -154,7 +152,7 @@ namespace WebAPIClient
 {
     public class Repository
     {
-        public string name { get; set; };
+        public string name { get; set; }
     }
 }
 ```
@@ -170,7 +168,6 @@ JSON 序列化程序将忽略所使用的类类型未包含的信息。
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
 var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);
-return repositories;
 ```
 
 你使用的是新命名空间，因此，还需要将其添加到文件顶部：
@@ -231,7 +228,8 @@ private static async Task<List<Repository>> ProcessRepositories()
 然后，在处理 JSON 响应后仅返回存储库：
 
 ```csharp
-var repositories = serializer.ReadObject(await streamTask) as List<Repository>;
+var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
+var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);
 return repositories;
 ```
 
@@ -255,16 +253,16 @@ public static async Task Main(string[] args)
 首先，将其他一些简单类型添加到 `Repository` 类定义中。 将这些属性添加到此类：
 
 ```csharp
-[JsonPropertyName(Name="description")]
+[JsonPropertyName("description")]
 public string Description { get; set; }
 
-[JsonPropertyName(Name="html_url")]
+[JsonPropertyName("html_url")]
 public Uri GitHubHomeUrl { get; set; }
 
-[JsonPropertyName(Name="homepage")]
+[JsonPropertyName("homepage")]
 public Uri Homepage { get; set; }
 
-[JsonPropertyName(Name="watchers")]
+[JsonPropertyName("watchers")]
 public int Watchers { get; set; }
 ```
 
@@ -293,7 +291,7 @@ foreach (var repo in repositories)
 此格式不符合任何标准 .NET <xref:System.DateTime> 格式。 因此，需要编写一个自定义转换方法。 你可能也不希望向 `Repository` 类的用户公开原始字符串。 特性还有助于控制此情况。 首先，定义一个 `public` 属性，该属性将保存 `Repository` 类中日期和时间的字符串表示形式，并定义一个 `LastPush` `readonly` 属性，该属性返回表示返回日期的格式化字符串：
 
 ```csharp
-[JsonPropertyName(Name="pushed_at")]
+[JsonPropertyName("pushed_at")]
 public string JsonDate { get; set; }
 
 public DateTime LastPush =>

@@ -3,20 +3,20 @@ title: WCF svcutil 工具概述
 description: Microsoft WCF dotnet-svcutil 工具概述，该工具添加了 .NET Core 和 ASP.NET Core 项目的功能，类似于 .NET Framework 项目的 WCF svcutil 工具。
 author: mlacouture
 ms.date: 02/22/2019
-ms.openlocfilehash: d204576f27227ce6e65d61471f19cdf3ec4df37a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0607c73935f319f2cc0d8d9f92d96a4c71c54edf
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714565"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920938"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core 的 WCF dotnet-svcutil 工具
 
-Windows Communication Foundation (WCF) dotnet-svcutil  工具是一种 .NET Core CLI 工具，此工具从网络位置上的 Web 服务中或从 WSDL 文件中检索元数据，并生成包含访问 Web 服务操作的客户端代理方法的 WCF 类。
+Windows Communication Foundation (WCF) dotnet-svcutil  工具是一种 .NET 工具，此工具从网络位置上的 Web 服务中或从 WSDL 文件中检索元数据，并生成包含访问 Web 服务操作的客户端代理方法的 WCF 类。
 
 类似于 .NET Framework 项目的[服务模型元数据 - svcutil  ](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 工具，dotnet svcutil  是用于生成 Web 服务引用的命令行工具，与 .NET Core 和 .NET Standard 项目兼容。
 
-dotnet-svcutil 工具是 [WCF Web 服务引用](wcf-web-service-reference-guide.md) Visual Studio 连接服务提供程序（随 Visual Studio 2017 版本 15.5 首次推出）的替代选项   。 dotnet-svcutil  工具作为一种 .NET Core CLI 工具，可跨平台地用于 Linux、macOS 和 Windows。
+dotnet-svcutil 工具是 [WCF Web 服务引用](wcf-web-service-reference-guide.md) Visual Studio 连接服务提供程序（随 Visual Studio 2017 版本 15.5 首次推出）的替代选项   。 dotnet-svcutil  工具作为一种 .NET 工具，可跨平台用于 Linux、macOS 和 Windows。
 
 > [!IMPORTANT]
 > 应仅从受信任源引用服务。 从不受信任的源添加引用可能会危及安全性。

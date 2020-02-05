@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 5de94b1f1ab44f954b5bab9f8b5212c33325c19d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 57034fb835d4c82b5bf658e61ec78ef226c2551e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696709"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789775"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>如何使用 XML 文档功能
 
@@ -20,7 +20,7 @@ ms.locfileid: "75696709"
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-该示例生成一个包含以下内容的 .xml 文件：
+该示例生成一个包含以下内容的 .xml  文件。
 
 ```xml
 <?xml version="1.0"?>
@@ -120,7 +120,7 @@ XML 文档以 /// 开头。 创建新项目时，向导会放置一些以 /// �
 
 - 文档必须是格式正确的 XML。 如果 XML 格式不正确，则会生成警告，并且文档文件将包含一条注释，指出遇到错误。
 
-- 开发人员可以随意创建自己的标记集。 推荐的标记集（请参阅[建议的文档注释标记](recommended-tags-for-documentation-comments.md)）。 部分建议标记具有特殊含义：
+- 开发人员可以随意创建自己的标记集。 有一组[推荐的标记](recommended-tags-for-documentation-comments.md)。 部分建议标记具有特殊含义：
 
   - \<param> 标记用于描述参数。 如果已使用，编译器会验证该参数是否存在，以及文档是否描述了所有参数。 如果验证失败，编译器会发出警告。
 

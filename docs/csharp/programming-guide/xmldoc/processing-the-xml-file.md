@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 2c3ba0e12d0d7e6a568c4c3741d99b901fca2722
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bc72cade9ce6edddb88d741a3424405bba0a7ad8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696514"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793393"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>处理 XML 文件（C# 编程指南）
 
@@ -27,11 +27,11 @@ XML 文件不是代码的分层表示形式；它是具有每个元素生成的 
     |字符|描述|
     |---------------|-----------------|
     |N|namespace<br /><br /> 无法将文档注释添加到命名空间中，但可以在支持的情况下对它们进行 cref 引用。|
-    |T|类型：类、接口、结构、枚举、委托|
+    |T|类型：类、接口、结构、枚举或委托|
     |F|Field — 字段|
     |P|属性（包括索引器或其他的索引属性）|
     |M|方法（包括构造函数、运算符等特殊方法）|
-    |E|事件|
+    |E|event|
     |!|错误字符串<br /><br /> 字符串的其余部分提供有关错误的信息。 C# 编译器将生成无法解析的链接的错误信息。|
 
 - 该字符串的第二部分是项目的完全限定名称，从命名空间的根开始。 用句点分隔项目名称、其封闭类型和命名空间。 如果项目名称本身包含句点，会将其替换为哈希符号 ('#')。 假定没有名称中恰好包含哈希符号的项目。 例如，String 构造函数的完全限定名称将是“System.String.#ctor”。

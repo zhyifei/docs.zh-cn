@@ -3,12 +3,12 @@ title: 使用默认接口方法创建 mixin 类型
 description: 使用默认接口成员，可以通过实现器的可选默认实现来扩展接口。
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f97410124a4ca5bbb10972ab5e7942fa4af68d72
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140844"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921443"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>教程：当通过默认接口方法创建使用接口的类时实现的混入功能
 
@@ -22,9 +22,9 @@ ms.locfileid: "74140844"
 > * 创建使用默认实现的类。
 > * 创建用于替代部分或全部默认实现的类。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
-需要将计算机设置为运行 .NET Core，包括 C# 8.0 编译器。 自 [Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或 [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 或更高版本起，可以使用 C# 8.0 编译器。
+需要将计算机设置为运行 .NET Core，包括 C# 8.0 编译器。 自 [Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或 [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 或更高版本起，开始随附 C# 8.0 编译器。
 
 ## <a name="limitations-of-extension-methods"></a>扩展方法的限制
 
@@ -45,7 +45,7 @@ ms.locfileid: "74140844"
 
 在支持最小集的设备中，可以模拟其中的某些扩展功能。 这表示提供了默认实现。 对于内置了更多功能的设备，设备软件将使用本机功能。 对于其他灯，它们可以选择实现接口并使用默认实现。
 
-对于此方案，默认接口成员是比扩展方法更好的解决方案。 类创建者可以控制它们选择实现的接口。 它们选择的接口可用作方法。 此外，由于默认情况下默认的接口方法是虚拟的，因此该方法调度始终选择类中的实现。 
+对于此方案，默认接口成员是比扩展方法更好的解决方案。 类创建者可以控制它们选择实现的接口。 它们选择的接口可用作方法。 此外，由于默认情况下默认的接口方法是虚拟的，因此该方法调度始终选择类中的实现。
 
 我们创建代码来演示这些差异。
 
@@ -79,7 +79,7 @@ public class OverheadLight : ITimerLight { }
 
 [!code-csharp[Override the timer function](~/samples/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
 
-与替代虚拟类方法不同，`HalogenLight` 类中 `TurnOnFor` 的声明不使用 `override` 关键字。 
+与替代虚拟类方法不同，`HalogenLight` 类中 `TurnOnFor` 的声明不使用 `override` 关键字。
 
 ## <a name="mix-and-match-capabilities"></a>混合和匹配功能
 

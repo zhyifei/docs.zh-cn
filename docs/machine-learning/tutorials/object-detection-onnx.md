@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 04d7dedf9f882d9f0e0396949c71e4941c207fe3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6aaf5acc605067f378ff5d42f713fe1c63d91e46
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345026"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794625"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教程：在 ML.NET 中使用 ONNX 检测对象
 
@@ -213,7 +213,7 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 
     [!code-csharp [DimensionsBaseClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/DimensionsBase.cs#L3-L9)]
 
-    `DimensionsBase` 具有以下 `float` 字段：
+    `DimensionsBase` 具有以下 `float` 属性：
 
     - `X`：包含对象沿 x 轴的位置。
     - `Y`：包含对象沿 y 轴的位置。
@@ -237,7 +237,7 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 
     [!code-csharp [YoloBoundingBoxClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L7-L21)]
 
-    `YoloBoundingBox` 具有以下字段：
+    `YoloBoundingBox` 具有以下属性：
 
     - `Dimensions`：包含边界框的维度。
     - `Label`：包含在边界框内检测到的对象类。

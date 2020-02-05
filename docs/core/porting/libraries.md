@@ -3,12 +3,12 @@ title: 将库移植到 .NET Core
 description: 了解如何将 .NET Framework 中的库项目移植到 .NET Core。
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 6ff38647f77bbe1d25dd1d0065c4b32c60f87fcd
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 646587120de2e51280c2af4de36bf3a6b0f60c2d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777352"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920612"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>将 .NET Framework 库移植到 .NET Core
 
@@ -31,7 +31,7 @@ ms.locfileid: "75777352"
 这篇文章介绍了 .NET Core 如何定义和使用包，以及包如何支持多个 .NET 实现代码。
 
 [使用跨平台工具开发库](../tutorials/libraries.md)\
-本文介绍了如何使用跨平台 CLI 工具编写 .NET 的库。
+本文介绍如何使用 .NET Core CLI 编写库。
 
 [.NET Core 的 csproj  格式的新增内容](../tools/csproj.md)\
 本文概述了作为从移动到 csproj  和 MSBuild 的一部分，添加到项目文件的更改。

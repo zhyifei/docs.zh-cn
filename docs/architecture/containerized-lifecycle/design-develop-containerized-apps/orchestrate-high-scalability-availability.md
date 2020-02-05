@@ -2,12 +2,12 @@
 title: 协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 description: 必须使用处理所有容器的运行状况、工作负载和生命周期的业务流程协调程序来部署和管理实际的生产应用程序。
 ms.date: 02/15/2019
-ms.openlocfilehash: eb02a89a58b7df449edc05461e11fbeeec86b4a1
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e548e6b3816dec1e56c273c53c9fd052443eb09b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771091"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919544"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 
@@ -21,7 +21,7 @@ ms.locfileid: "72771091"
 
 它看上去类似于逻辑方法。 但是如何处理负载均衡、路由以及如何协调安排这些组合式应用程序呢？
 
-Docker 命令行接口 (CLI) 满足在一台主机上管理一个容器的需求，但若要管理针对更复杂的分布式应用程序在多台主机上部署的多个容器，则无法满足需求。 大多数情况下，需要一个管理平台，该平台能自动启动容器、横向扩展容器（每个映像具有多个实例）、必要时暂停或关闭容器，并且在理想情况下还能控制资源（如网络和数据存储）访问方式。
+Docker CLI 满足在一台主机上管理一个容器的需求，但若要管理针对更复杂的分布式应用程序在多台主机上部署的多个容器，则无法满足需求。 大多数情况下，需要一个管理平台，该平台能自动启动容器、横向扩展容器（每个映像具有多个实例）、必要时暂停或关闭容器，并且在理想情况下还能控制资源（如网络和数据存储）访问方式。
 
 如果不仅要管理个别容器或简单的组合式应用，还要进一步管理使用微服务的较大型企业应用程序，则必须转向业务流程和群集平台。
 

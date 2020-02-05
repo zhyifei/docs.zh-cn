@@ -4,12 +4,12 @@ description: 使用包管理器在 openSUSE 15 上安装 .NET Core SDK 和运行
 author: thraka
 ms.author: adegeo
 ms.date: 12/26/2019
-ms.openlocfilehash: ae0f6664c0545ceb047cd9b110fe3f26740e5816
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: aaece5e3554ab567cf82c23265c8fba1656298d8
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116170"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920772"
 ---
 # <a name="opensuse-15-package-manager---install-net-core"></a>openSUSE 15 包管理器 - 安装 .NET Core
 
@@ -64,3 +64,11 @@ sudo zypper install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>如何安装其他版本
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>包管理器疑难解答
+
+本部分提供有关使用程序包管理器安装 .NET Core 时可能会遇到的常见错误的信息。
+
+### <a name="failed-to-fetch"></a>未能提取
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

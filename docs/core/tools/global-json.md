@@ -3,18 +3,18 @@ title: global.json 概述
 description: 了解如何在运行 .NET Core CLI 命令时使用 global.json 文件设置 .NET Core SDK 版本。
 ms.date: 01/14/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: f02c9129a707ddddb2c5e1975b75cc35abc5cd55
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8582c495be58e38ca19320f14e20f8c511a9c821
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733973"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920512"
 ---
 # <a name="globaljson-overview"></a>global.json 概述
 
  本文适用于： ✔️ .NET Core 2.0 SDK 及更高版本
 
-通过 global.json 文件，可定义在运行 .NET Core CLI 命令时使用的 .NET Core SDK 版本  。 选择 .NET Core SDK 与指定项目所面向的运行时无关。 .NET Core SDK 版本指示使用哪个版本的 .NET Core CLI 工具。
+通过 global.json 文件，可定义在运行 .NET Core CLI 命令时使用的 .NET Core SDK 版本  。 选择 .NET Core SDK 与指定项目所面向的运行时无关。 .NET Core SDK 版本指示使用哪个版本的 .NET Core CLI。
 
 通常会使用最新版 SDK 工具，因此不需要 global.json 文件  。 在某些高级方案中，你可能需要控制 SDK 工具的版本，本文对如何完成此操作进行了介绍。
 

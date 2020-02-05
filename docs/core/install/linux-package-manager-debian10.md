@@ -4,12 +4,12 @@ description: 使用包管理器在 Debian 10 上安装 .NET Core SDK 和运行�
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 2f3f04ef67115b28b1be91909e88c7ae714260db
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 94bcb493536bdee71ba83053d9e671d529226ac3
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740724"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920836"
 ---
 # <a name="debian-10-package-manager---install-net-core"></a>Debian 10 包管理器 - 安装 .NET Core
 
@@ -74,3 +74,11 @@ sudo apt-get install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>如何安装其他版本
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>包管理器疑难解答
+
+本部分提供有关使用程序包管理器安装 .NET Core 时可能会遇到的常见错误的信息。
+
+### <a name="failed-to-fetch"></a>未能提取
+
+[!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]

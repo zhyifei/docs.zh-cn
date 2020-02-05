@@ -2,12 +2,12 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet-restore 命令还原依赖项和特定于项目的工具。
 ms.date: 05/29/2018
-ms.openlocfilehash: 82dd85e340a4cb520f781d977b0798b0f532a088
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dc73b7b2482d25872be922e68103fb86067146f7
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340440"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920558"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -45,7 +45,7 @@ dotnet restore [-h|--help]
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-为了还原依赖项，NuGet 需要包所在的源。 通常通过“nuGet.config”配置文件提供源  。 安装 CLI 工具时提供一个默认的配置文件。 可以通过在项目目录中创建自己的 nuGet.config 文件来指定其他源  。 可以使用 `-s` 选项替代 nuget.config  源。
+为了还原依赖项，NuGet 需要包所在的源。 通常通过“nuGet.config”配置文件提供源  。 安装 .NET Core SDK 时提供一个默认的配置文件。 可以通过在项目目录中创建自己的 nuGet.config 文件来指定其他源  。 可以使用 `-s` 选项替代 nuget.config  源。
 
 对于依赖项，使用 `--packages` 参数指定还原操作期间放置还原包的位置。 如未指定，将使用默认的 NuGet 包缓存，可在所有操作系统上的用户主目录中的 `.nuget/packages` 目录找到它。 例如 Linux 上的 /home/user1 或 Windows 上的 C:\Users\user1   。
 

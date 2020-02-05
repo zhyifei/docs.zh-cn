@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 9588ec73250e8745426f6f6020c8d555a174d627
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 007b10f6f27233c43caad4c1910e3d1158682950
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422961"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920369"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion（C# 编译器选项）
 
@@ -27,13 +27,14 @@ ms.locfileid: "73422961"
 
 ## <a name="arguments"></a>自变量
 
- `option`  
- 以下为有效值：
+`option`
+
+以下为有效值：
 
 |选项|含义|
 |------------|-------------|
 |preview|编译器接受它可支持的最新预览版本中的所有有效语言语法。|
-|最新|编译器接受它可支持的最新版本（包括次要版本）中的所有有效语言语法。|
+|latest|编译器接受它可支持的最新版本（包括次要版本）中的所有有效语言语法。|
 |latestMajor|编译器接受它可支持的最新主版本中的所有有效语言语法。|
 |8.0|编译器只接受 C# 8.0 或更低版本中所含的语法。|
 |7.3|编译器只接受 C# 7.3 或更低版本中所含的语法。|
@@ -52,12 +53,12 @@ ms.locfileid: "73422961"
 ## <a name="remarks"></a>备注
 
 C# 应用程序引用的元数据不受 -langversion 编译器选项约束  。
-  
+
 每个版本的 C# 编译器都包含语言规范的扩展，因此 -langversion 不提供早期版本编译器的同等功能  。
 
 此外，虽然 C# 版本更新通常与主要的 .NET Framework 版本一致，但新的语法和功能不一定绑定到该特定的 Framework 版本。 虽然新功能肯定需要与 C# 修订版一起发布的新编译器更新，但每项具体功能都有自己的最小 .NET API 或公共语言运行时要求，这些要求通过包括 NuGet 包或其他库允许功能在下层框架上运行。
 
-无论使用哪一项 -langversion 设置，都将使用当前版本的公共语言运行时来创建 .exe 或 .dll  。 友元程序集和 [-moduleassemblyname（C# 编译器选项）](./moduleassemblyname-compiler-option.md)是一个例外，它们在 -langversion:ISO-1 下工作  。  
+无论使用哪一项 -langversion  设置，请使用当前版本的公共语言运行时来创建 .exe 或 .dll。 友元程序集和 [-moduleassemblyname（C# 编译器选项）](./moduleassemblyname-compiler-option.md)是一个例外，它们在 -langversion:ISO-1 下工作  。
 
 如需了解指定 C# 语言版本的其他方式，请参阅[选择 C# 语言版本](../configure-language-version.md)一文。
 
@@ -65,7 +66,7 @@ C# 应用程序引用的元数据不受 -langversion 编译器选项约束  。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-|Version|链接|说明|
+|Version|链接|描述|
 |-------|----|-----------|
 |C# 7.0 和更高版本||当前不可用|
 |C# 6.0|[链接](/dotnet/csharp/language-reference/language-specification/introduction)|C# 语言规范版本 6 - 非官方草稿：.NET Foundation|

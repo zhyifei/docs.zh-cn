@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用 | 在 ASP.NET
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: fa30deb16be323f059aa0ec12df08793598a6da2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d3c91f594eedd2636cbf08285f0dee352bc4835a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738356"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777119"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>在 ASP.NET Core 应用中使用数据
 
@@ -55,7 +55,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-DbContext 必须包含可接受 DbContextOptions 的构造函数，可将此参数传递给基础 DbContext 构造函数。 注意：如果应用程序中只有一个 DbContext，可传递 DbContextOptions 的实例，但如果有多个 DbContext，则必须使用泛型 DbContextOptions\<T>，在 DbContext 类型中作为泛型参数传递。
+DbContext 必须包含可接受 DbContextOptions 的构造函数，可将此参数传递给基础 DbContext 构造函数。 如果应用程序中只有一个 DbContext，可传递 DbContextOptions 的实例，但如果有多个 DbContext，则必须使用泛型 DbContextOptions\<T>，在 DbContext 类型中作为泛型参数传递。
 
 ### <a name="configuring-ef-core"></a>配置 EF Core
 
@@ -180,7 +180,7 @@ public class Basket : BaseEntity
 }
 ```
 
-请注意，此实体类型不公开公共 `List` 或 `ICollection` 属性，而是公开包装有基础列表类型的 `IReadOnlyCollection` 类型。 使用此模式时，可以指示 Entity Framework Core 使用支持字段，如下所示：
+此实体类型不公开公共 `List` 或 `ICollection` 属性，而是公开包装有基础列表类型的 `IReadOnlyCollection` 类型。 使用此模式时，可以指示 Entity Framework Core 使用支持字段，如下所示：
 
 ```csharp
 private void ConfigureBasket(EntityTypeBuilder<Basket> builder)
@@ -240,7 +240,7 @@ public class Startup
 
 但是，如果代码使用 BeginTransaction 启动事务，这表示在定义一组自己的操作，这些操作需要被视为一个单元；如果发生故障，事务内的所有内容都会回退。 如果在使用 EF 执行策略（重试策略）时尝试执行该事务，并且事务中包含一些来自多个 DbContext 的 SaveChanges，则会看到与下列情况类似的异常。
 
-System.InvalidOperationException：已配置的执行策略“SqlServerRetryingExecutionStrategy”不支持用户启动的事务。 使用由“DbContext.Database.CreateExecutionStrategy()”返回的执行策略执行事务（作为一个可回溯单元）中的所有操作。
+System.InvalidOperationException：已配置的执行策略“SqlServerRetryingExecutionStrategy”不支持用户启动的事务。 使用由“DbContext.Database.CreateExecutionStrategy()”返回的执行策略执行事务（作为一个可重试单元）中的所有操作。
 
 该解决方案通过代表所有需要执行的委托来手动调用 EF 执行策略。 如果发生暂时性故障，执行策略会再次调用委托。 下面的代码演示如何实现此方法：
 
@@ -271,11 +271,11 @@ await strategy.ExecuteAsync(async () =>
 
 > ### <a name="references--entity-framework-core"></a>引用 - Entity Framework Core
 >
-> - **EF Core 文档**  
+> - **EF Core 文档**
 >   <https://docs.microsoft.com/ef/>
-> - **EF Core：关联数据**  
+> - **EF Core：关联数据**
 >   <https://docs.microsoft.com/ef/core/querying/related-data>
-> - **避免延迟加载 ASPNET 应用程序中的实体**  
+> - **避免延迟加载 ASPNET 应用程序中的实体**
 >   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>选择 EF Core 还是微型 ORM？
@@ -332,7 +332,7 @@ var data = connection.Query<Post, User, Post>(sql,
 
 ## <a name="sql-or-nosql"></a>选择 SQL 还是 NoSQL
 
-传统上，SQL Server 等关系数据库占领了持久性数据存储的市场，但它们不是唯一可用的解决方案。 NoSQL 数据库（如 [MongoDB](https://www.mongodb.com/what-is-mongodb)）可提供用于存储对象的不同方法。 另一种选择是序列化整个对象图并存储结果，而不是将对象映射到表格和行。 此方法的优点（至少在起初阶段）是简单和高性能。 使用密钥存储单个序列化对象当然比将对象分解为多个表格（其中的关系以及更新和行可能自上次从数据库中检索该对象以来已更改）更简单。 同样，从基于密钥的存储中提取和反序列化单个对象通常比复杂联接或多个数据库查询（完全编写关系数据库中的相同对象所需）更快速、更简单。 此外，由于缺少锁定、事务或固定的架构，这使得 NoSQL 数据库非常适合在多台计算机中缩放，以支持大型数据集。
+传统上，SQL Server 等关系数据库占领了持久性数据存储的市场，但它们不是唯一可用的解决方案。 NoSQL 数据库（如 [MongoDB](https://www.mongodb.com/what-is-mongodb)）可提供用于存储对象的不同方法。 另一种选择是序列化整个对象图并存储结果，而不是将对象映射到表格和行。 此方法的优点（至少在起初阶段）是简单和高性能。 使用密钥存储单个序列化对象当然比将对象分解为多个表格（其中的关系以及更新和行可能自上次从数据库中检索该对象以来已更改）更简单。 同样，从基于密钥的存储中提取和反序列化单个对象通常比复杂联接或多个数据库查询（完全编写关系数据库中的相同对象所需）更快速、更简单。 此外，由于缺少锁定、事务或固定的架构，这使得 NoSQL 数据库适合在多台计算机中缩放，以支持大型数据集。
 
 但是，NoSQL 数据库（人们通常这么称呼该数据库）也有其缺点。 关系数据库利用规范化强制实施一致性并避免数据重复。 这可减少数据库的总大小，确保共享数据更新在整个数据库中立即可用。 在关系数据库中，“地址”表可能按 ID 引用“国家/地区”表，这样一来，如果国家/地区名称发生更改，地址记录将受益于更新，而无需自行更新。 但是，对于 NoSQL 数据库，众多存储对象中的“地址”及其相关的“国家/地区”可能会被序列化。 如果对国家/地区或区域名称进行更新，将需要更新所有此类对象，而不是单独的某行。 关系数据库还可通过强制实施外键等规则，确保关系完整性。 NoSQL 数据库通常不提供此类数据约束。
 
@@ -354,8 +354,7 @@ Azure Cosmos DB 查询语言是一种用于查询 JSON 文档的简单而强大�
 
 参考 – Azure Cosmos DB 
 
-- Azure Cosmos DB 简介  
-  <https://docs.microsoft.com/azure/cosmos-db/introduction>
+- Azure Cosmos DB 简介 <https://docs.microsoft.com/azure/cosmos-db/introduction>
 
 ## <a name="other-persistence-options"></a>其他持久性选项
 
@@ -371,8 +370,7 @@ Azure Cosmos DB 查询语言是一种用于查询 JSON 文档的简单而强大�
 
 **参考 – Azure 存储**
 
-- Azure 存储简介  
-  <https://docs.microsoft.com/azure/storage/storage-introduction>
+- Azure 存储简介 <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>缓存
 
@@ -486,7 +484,7 @@ services.AddScoped<CatalogService>();
 
 完成以上操作后，将每分钟执行一次提取目录数据的数据库调用，而不是对每个请求执行。 这可能对向数据库提出的查询数，以及当前依赖于此服务公开的所有三个查询的主页平均加载时间产生非常大的影响，具体取决于网站的流量。
 
-缓存实现时将引发的问题是“数据过时”。也就是说，源中的数据已经更改，但缓存中保留的是过期版本的数据  。 缓解此问题的简单方法是使用较短的缓存持续时间，因此对于一个繁忙的应用程序而言，延长数据缓存时长的其他好处非常有限。 例如，假设有一个进行单一数据库查询的网页，每秒对其请求 10 次。 如果此网页缓存一分钟，每分钟执行的数据库查询数将从 600 降为 1，减少了 99.8%。 如果缓存持续时间改为 1 小时，将整体减少 99.997%，但此时过时数据的可能性和潜在期限都可能大幅增加。
+缓存实现时将引发的问题是“数据过时”  。也就是说，源中的数据已经更改，但缓存中保留的是过期版本的数据。 缓解此问题的简单方法是使用较短的缓存持续时间，因此对于一个繁忙的应用程序而言，延长数据缓存时长的其他好处非常有限。 例如，假设有一个进行单一数据库查询的网页，每秒对其请求 10 次。 如果此网页缓存一分钟，每分钟执行的数据库查询数将从 600 降为 1，减少了 99.8%。 如果缓存持续时间改为 1 小时，将整体减少 99.997%，但此时过时数据的可能性和潜在期限都可能大幅增加。
 
 另一种方法是在包含的数据更新时主动删除缓存条目。 如果其键已知，可删除任何条目：
 

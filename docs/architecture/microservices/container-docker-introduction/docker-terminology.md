@@ -2,12 +2,12 @@
 title: Docker 术语
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | Docker 术语
 ms.date: 01/07/2019
-ms.openlocfilehash: 2735188c508a7bbb0101946429faec122b13a17b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 33f2918df5b63cc4bd54ddb84900c6bd91e9f77e
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090051"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921008"
 ---
 # <a name="docker-terminology"></a>Docker 术语
 
@@ -47,7 +47,7 @@ ms.locfileid: "73090051"
 
 **群集**：Docker 主机集合像单一虚拟 Docker 主机一样公开，以便应用程序可以扩展到服务分布在群集中多个主机的多个实例。 Docker 群集可以使用 Kubernetes、Azure Service Fabric、Docker Swarm 和 Mesosphere DC/OS创建。
 
-**业务流程协调程序**：简化群集和 Docker 主机管理的工具。 通过命令行界面 (CLI) 或图形用户界面，业务流程协调程序能够管理其映像、容器和主机。 可以管理容器网络、配置、负载均衡、服务发现、高可用性、Docker 主机配置等。 业务流程协调程序负责跨节点集合运行、分发、缩放和修复工作负荷。 通常情况下，业务流程协调程序产品是提供群集基础结构的同一产品，如 Kubernetes 和 Azure Service Fabric，以及市场中的其他产品/服务。
+**业务流程协调程序**：简化群集和 Docker 主机管理的工具。 通过 CLI 或图形 UI，业务流程协调程序能够管理其映像、容器和主机。 可以管理容器网络、配置、负载均衡、服务发现、高可用性、Docker 主机配置等。 业务流程协调程序负责跨节点集合运行、分发、缩放和修复工作负荷。 通常情况下，业务流程协调程序产品是提供群集基础结构的同一产品，如 Kubernetes 和 Azure Service Fabric，以及市场中的其他产品/服务。
 
 >[!div class="step-by-step"]
 >[上一页](docker-defined.md)

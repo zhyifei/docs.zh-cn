@@ -4,12 +4,12 @@ description: 关于在 .NET 中生成服务器应用时应考虑使用哪种 .NE
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: b2b9e15cfdfd63d070ae94c29a9f2d1a5b5c87b2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: c280e22341a45260a816a36c1148dc8c4f76db09
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738664"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921422"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
@@ -38,7 +38,7 @@ ms.locfileid: "75738664"
 
 如果应用程序（Web/服务）需要在多个平台（Windows、Linux 和 macOS）上运行，请使用 .NET Core。
 
-.NET Core 作为开发工作站支持前面提到的操作系统。 Visual Studio 提供了适用于 Windows 和 macOS 的集成开发环境 (IDE)。 还可使用运行于 macOS、Linux 和 Windows 上的 Visual Studio Code。 Visual Studio Code 支持 .NET Core，包括 IntelliSense 和调试。 大多数第三方编辑器（如 Sublime、Emacs 和 VI）都可搭配 .NET Core 使用。 这些第三方编辑器可使用 [Omnisharp](https://www.omnisharp.net/) 获取编辑器 IntelliSense。 也可不使用任何代码编辑器，直接使用适用于所有支持平台的 [.NET Core CLI 工具](../core/tools/index.md)。
+.NET Core 作为开发工作站支持前面提到的操作系统。 Visual Studio 提供了适用于 Windows 和 macOS 的集成开发环境 (IDE)。 还可使用运行于 macOS、Linux 和 Windows 上的 Visual Studio Code。 Visual Studio Code 支持 .NET Core，包括 IntelliSense 和调试。 大多数第三方编辑器（如 Sublime、Emacs 和 VI）都可搭配 .NET Core 使用。 这些第三方编辑器可使用 [Omnisharp](https://www.omnisharp.net/) 获取编辑器 IntelliSense。 也可不使用任何代码编辑器，直接使用适用于所有支持平台的 [.NET Core CLI](../core/tools/index.md)。
 
 ### <a name="microservices-architecture"></a>微服务体系结构
 

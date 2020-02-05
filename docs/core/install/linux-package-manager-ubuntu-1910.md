@@ -4,12 +4,12 @@ description: 使用包管理器在 Ubuntu 19.10 上安装 .NET Core SDK 和运�
 author: thraka
 ms.author: adegeo
 ms.date: 01/16/2020
-ms.openlocfilehash: afba761e2237ed84528157841e538a9b44d9a966
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: b8fec2afa6f03e3dabbf1ff449431759087163ba
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76164068"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920655"
 ---
 # <a name="ubuntu-1910-package-manager---install-net-core"></a>Ubuntu 19.10 包管理器 - 安装 .NET Core
 
@@ -82,6 +82,10 @@ sudo apt-get install dotnet-runtime-3.1
 
 ## <a name="troubleshoot-the-package-manager"></a>包管理器疑难解答
 
+本部分提供有关使用程序包管理器安装 .NET Core 时可能会遇到的常见错误的信息。
+
+### <a name="unable-to-locate"></a>无法定位
+
 如果收到类似于“找不到包 {.NET Core 包}”  的错误消息，请运行以下命令。
 
 ```bash
@@ -104,3 +108,7 @@ sudo apt-get install -y apt-transport-https
 sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
+
+### <a name="failed-to-fetch"></a>未能提取
+
+[!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]

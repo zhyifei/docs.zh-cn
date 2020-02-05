@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: c2f2484f37c0e99f45b3f10951540c2bb3a4cb8d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134179"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921218"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>如何：编写简单的 Parallel.ForEach 循环
 
@@ -47,7 +47,7 @@ ms.locfileid: "73134179"
 
 Visual Studio 中有适用于 Windows 桌面和 .NET Core 的 Visual Basic 和 C# 控制台应用程序模板。
 
-从命令行，可使用 .NET Core 及其 CLI 工具（例如 `dotnet new console` 或 `dotnet new console -lang vb`），或者可创建文件并使用 .NET Framework 应用程序提供的命令行编译器。
+从命令行，可使用 .NET Core CLI 命令（例如 `dotnet new console` 或 `dotnet new console -lang vb`），或者可创建文件并使用 .NET Framework 应用程序提供的命令行编译器。
 
 对于.NET Core 项目，必须引用 System.Drawing.Common  NuGet 包。 在 Visual Studio 中，使用 NuGet 包管理器安装该包。 或者，也可以在 \*.csproj 或 \*.vbproj 文件中添加对包的引用：
  

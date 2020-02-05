@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 常�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 4dd747293fba4c18c2d10738d36f4d98cfd3f5b9
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0e5f3578edc723e2e2a32b9b3a1d8a7dcabd2909
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926497"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965745"
 ---
 # <a name="common-client-side-web-technologies"></a>常用客户端 Web 技术
 
@@ -58,7 +58,7 @@ JavaScript 是动态的解释性编程语言，已在 ECMAScript 语言规范中
 
 ### <a name="legacy-web-apps-with-jquery"></a>使用 jQuery 的旧版 Web 应用
 
-尽管 jQuery 基于古老的 JavaScript 框架标准，但它仍然是十分常用的库，用于处理 HTML/CSS 和生成对 Web API 进行 AJAX 调用的应用程序。 但是，jQuery 按浏览器文档对象模型 (DOM) 级别操作，并默认只提供命令性，而不是声明性的模型。
+尽管 jQuery 基于古老的 JavaScript 框架标准，但它仍然是常用的库，用于处理 HTML/CSS 和生成对 Web API 进行 AJAX 调用的应用程序。 但是，jQuery 按浏览器文档对象模型 (DOM) 级别操作，并默认只提供命令性，而不是声明性的模型。
 
 例如，假设一个文本框的值超过 10，则应使页面上的元素可见。 在 jQuery 中，此操作通常通过使用检查文本框的值，并根据该值设置目标元素可见性的代码编写事件处理程序来实现。 这是一种基于代码的命令性方法。 另一种框架可能转而使用数据绑定，以声明的方式将元素的可见性与文本框值绑定。 这种方法不需要编写任何代码，改为只需要修饰数据绑定属性涉及的元素。 随着客户端行为变得更加复杂，数据绑定方法经常成为更简单的解决方案，其包含的代码和条件复杂性也较少。
 
@@ -73,7 +73,7 @@ JavaScript 是动态的解释性编程语言，已在 ECMAScript 语言规范中
 | 模板化 | **否** | **是** |
 | 深层链接路由 | **否** | **是** |
 
-本质上，jQuery 缺少的大多数功能均可通过添加其他库进行添加。 但是，SPA 框架（如 Angular）以更集中的方式提供这些功能，因为它从一开始设计的时候就考虑到了这一点。 此外，jQuery 是一种命令性十分明显的库，这意味着你需要调用 jQuery 函数才能使用 jQuery 执行任何任务。 SPA 框架提供的很多工作和功能都可以声明的方式完成，无需编写任何实际代码。
+本质上，jQuery 缺少的大多数功能均可通过添加其他库进行添加。 但是，SPA 框架（如 Angular）以更集中的方式提供这些功能，因为它从一开始设计的时候就考虑到了这一点。 此外，jQuery 是一种命令性库，这意味着你需要调用 jQuery 函数才能使用 jQuery 执行任何任务。 SPA 框架提供的很多工作和功能都可以声明的方式完成，无需编写任何实际代码。
 
 数据绑定便是一个很好的示例。 在 jQuery 中，通常只需要一个代码行就能获得 DOM 元素的值或设置某元素的值。 但是，你必须在需要更改元素值的任何时候编写此代码，有时，一个页面的多项功能中会发生此情况。 另一常见示例是元素可见性。 在 jQuery 中，可能存在不同的位置，需要编写代码控制特定元素是否可见。 每这两种情况中，如果使用数据绑定，便无需编写任何代码。 只需将元素可见性的值绑定到页面的 viewmodel 即可，对该 viewmodel 做出的任何更改都会自动反映在绑定元素中  。
 
@@ -98,7 +98,7 @@ export class AppComponent { name = 'Angular'; }
 
 通过使用组件和模板，而不是 DOM 元素，Angular 应用可以更高的抽象级别操作，且比单独使用 JavaScript（也称为“vanilla JS”）或 jQuery 编写的应用具有更少的总体代码。 Angular 还强加了有关如何组织客户端脚本文件的特定顺序。 按照约定，Angular 应用使用常用文件夹结构，同时模块和组件脚本文件位于应用文件夹中。 与生成、部署和测试应用相关的 Angular 脚本通常位于更高级别的文件夹中。
 
-Angular 还可充分利用命令行接口 (CLI) 工具。 从本地入门 Angular 开发（假设已安装 git 和 npm）包括简单地从 GitHub 中克隆存储库以及运行 `npm install` 和 `npm start`。 除此之外，Angular 附带自己的 CLI 工具，可用于创建项目、添加工具，并协助测试、打包和部署任务。 这种 CLI 工具友好性也使 Angular 特别兼容 ASP.NET Core，后者也可提供很好的 CLI 支持。
+可以使用 CLI 开发 Angular 应用。 从本地入门 Angular 开发（假设已安装 git 和 npm）包括简单地从 GitHub 中克隆存储库以及运行 `npm install` 和 `npm start`。 除此之外，Angular 附带自己的 CLI，可用于创建项目、添加工具，并协助测试、打包和部署任务。 这种 CLI 友好性也使 Angular 特别兼容 ASP.NET Core，后者也可提供很好的 CLI 支持。
 
 Microsoft 开发了一个参考应用程序，[eShopOnContainers](https://aka.ms/MicroservicesArchitecture)，其中包含 Angular SPA 实现。 此应用包含 Angular 模块，可用于管理在线商店的购物篮，加载和显示其目录中的商品并处理订单创建。 可以在 [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA) 中查看和下载该示例应用程序。
 
@@ -108,7 +108,7 @@ Microsoft 开发了一个参考应用程序，[eShopOnContainers](https://aka.ms
 
 React 最重要的特征之一是使用虚拟 DOM。 虚拟 DOM 可向 React 提供多项好处，包括性能（虚拟 DOM 可优化实际 DOM 的哪部分需要更新）和可测试性（无需使用浏览器即可测试 React 和它与虚拟 DOM 的交互）。
 
-React 很少使用与 HTML 配合的方式。 React 直接在其 JavaScript 代码中以 JSX 的形式添加 HTML，而没有代码和标记（可能引用 HTML 属性中出现的 JavaScript）之间的严格分离。 JSX 是类似 HTML 的语法，可向下编译为纯 JavaScript。 例如:
+React 很少使用与 HTML 配合的方式。 React 直接在其 JavaScript 代码中以 JSX 的形式添加 HTML，而没有代码和标记（可能引用 HTML 属性中出现的 JavaScript）之间的严格分离。 JSX 是类似 HTML 的语法，可向下编译为纯 JavaScript。 例如：
 
 ```js
 <ul>
@@ -132,7 +132,7 @@ React 很少使用与 HTML 配合的方式。 React 直接在其 JavaScript 代�
 
 - 它（或伴随库）是否包括应用需要的所有功能？
 
-- 是否有大量文件可查？
+- 是否有详细的文档记录？
 
 - 它在社区中的活跃程度？ 新项目是否使用它生成？
 

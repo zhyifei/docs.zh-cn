@@ -1,18 +1,18 @@
 ---
-title: 使用跨平台工具开发库
-description: 了解如何使用 .NET Core CLI 工具创建 .NET Core 库。 将创建一个支持多个框架的库。
+title: 使用 .NET Core CLI 开发库
+description: 了解如何使用 .NET Core CLI 创建 .NET Core 库。 将创建一个支持多个框架的库。
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: 4132113037e6c5ec555d2d1859b8217a1a53d07f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714030"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920449"
 ---
-# <a name="develop-libraries-with-cross-platform-tools"></a>使用跨平台工具开发库
+# <a name="develop-libraries-with-the-net-core-cli"></a>使用 .NET Core CLI 开发库
 
-本文介绍如何使用跨平台 CLI 工具编写 .NET 的库。 CLI 提供可跨任何支持的 OS 工作的高效低级别体验。 仍可使用 Visual Studio 生成库，如果你首选这种体验，请[参阅 Visual Studio 指南](library-with-visual-studio.md)。
+本文介绍如何使用 .NET Core CLI 编写 .NET 的库。 CLI 提供可跨任何支持的 OS 工作的高效低级别体验。 仍可使用 Visual Studio 生成库，如果你首选这种体验，请[参阅 Visual Studio 指南](library-with-visual-studio.md)。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -216,7 +216,7 @@ netstandard1.4/
 能够跨平台进行测试至关重要。 可使用现成的 [xUnit](https://xunit.github.io/) 或 MSTest。 它们都十分适合在 .NET Core 上对库进行单元测试。 如何使用测试项目设置解决方案取决于[解决方案的结构](#structuring-a-solution)。 下面的示例假设测试和源目录位于同一顶级目录下。
 
 > [!NOTE]
-> 此示例将使用某些 [.NET Core CLI 命令](../tools/index.md)。 有关详细信息，请参阅 [dotnet new](../tools/dotnet-new.md) 和 [dotnet sln](../tools/dotnet-sln.md)。
+> 此示例将使用某些 [.NET Core CLI](../tools/index.md) 命令。 有关详细信息，请参阅 [dotnet new](../tools/dotnet-new.md) 和 [dotnet sln](../tools/dotnet-sln.md)。
 
 1. 设置解决方案。 可使用以下命令实现此目的：
 

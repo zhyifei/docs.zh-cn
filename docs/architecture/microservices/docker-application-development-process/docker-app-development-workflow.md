@@ -2,12 +2,12 @@
 title: Docker 应用开发工作流
 description: 了解用于开发基于 Docker 的应用程序的工作流的详细信息。 分步深入了解有关优化 Dockerfile 的详细信息，最后了解使用 Visual Studio 时使用的简化工作流。
 ms.date: 01/07/2019
-ms.openlocfilehash: 0c2789377bc388b8ac7373ee7fa46e3141f1b518
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 53675bf974069e9052d6d03b2743314af6f13cf9
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "73740355"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965784"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 应用开发工作流
 
@@ -409,7 +409,7 @@ docker-compose.yml 文件不仅指定正在使用的容器，还指定如何单�
 
 ### <a name="working-with-docker-composeyml-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 docker-compose.yml
 
-除了向项目添加 Dockerfile，如前所述，Visual Studio 2017（从 15.8 开始）还可以向解决方案添加对 Docker Compose 的业务流程协调程序支持。
+除了向项目添加 Dockerfile，如前所述，Visual Studio 2017（从版本 15.8 开始）还可以向解决方案添加对 Docker Compose 的业务流程协调程序支持。
 
 添加容器业务流程协调程序支持（如图 5-7 所示）时，Visual Studio 将首次为项目创建 Dockerfile，并在解决方案中使用几个全局 `docker-compose*.yml` 文件创建新的（服务部分）项目，然后将项目添加到这些文件。 随后可打开 docker-compose.yml 文件并对其进行更新，增加新的功能。
 
@@ -442,7 +442,7 @@ docker-compose.yml 文件不仅指定正在使用的容器，还指定如何单�
 可使用 `docker run` 命令运行 Docker 容器，如图 5-9 所示：
 
 ```console
-  docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
+docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 ```
 
 上面的命令将在每次运行时从指定的映像创建新的容器实例。 可以使用 `--name` 参数为容器指定名称，然后使用 `docker start {name}`（或者使用容器 ID 或自动名称）运行现有的容器实例。

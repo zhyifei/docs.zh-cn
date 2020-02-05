@@ -1,13 +1,13 @@
 ---
 title: dotnet 命令
-description: 了解 dotnet 命令（.NET Core CLI 工具的通用驱动程序）及其用法。
+description: 了解 dotnet 命令（.NET Core CLI 的通用驱动程序）及其用法。
 ms.date: 06/04/2018
-ms.openlocfilehash: fe90968560b58471c279fcd2097741ea476cef0b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7674529980623caa2291987bdeba52f50ce2fc2c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734064"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920553"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 

@@ -3,12 +3,12 @@ title: Docker 简介
 description: 本文简要概述 .NET Core 应用程序上下文中的 Docker。
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: 278c921de83282d61b25f4d44e91535981285e83
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 40c8a3c8d81d23c621ccb83a283f49aa34a58ac1
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715554"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920826"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 简介
 
@@ -18,7 +18,7 @@ ms.locfileid: "75715554"
 
 ## <a name="docker-basics"></a>Docker 基础知识
 
-首先来熟悉几个概念。 Docker 客户端具有命令行接口程序，用于管理映像和容器。 如前文所述，应花时间通读 [Docker 概述](https://docs.docker.com/engine/docker-overview/)文档。 
+首先来熟悉几个概念。 Docker 客户端具有可用于管理映像和容器的 CLI。 如前文所述，应花时间通读 [Docker 概述](https://docs.docker.com/engine/docker-overview/)文档。 
 
 ### <a name="images"></a>映像
 

@@ -5,13 +5,13 @@ dev_langs:
 - csharp
 author: thraka
 ms.author: adegeo
-ms.date: 10/22/2019
-ms.openlocfilehash: 4bf1c4826273535bfe824828f0fad96998b29483
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 01/27/2020
+ms.openlocfilehash: 92d97ca3efe761c879d0940a02342edb5a8180f0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742600"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920381"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新增功能
 
@@ -180,7 +180,7 @@ ReadyToRun 编译器当前不支持跨目标。 必须在给定的目标上编�
 
 ## <a name="runtimesdk"></a>运行时/SDK
 
-### <a name="major-version-roll-forward"></a>主要版本前滚
+### <a name="major-version-runtime-roll-forward"></a>主要版本运行时前滚
 
 .NET Core 3.0 引入了一项选择加入功能，该功能允许应用前滚到 .NET Core 最新的主要版本。 此外，还添加了一项新设置来控制如何将前滚应用于应用。 这可以通过以下方式配置：
 
@@ -226,6 +226,15 @@ ReadyToRun 编译器当前不支持跨目标。 必须在给定的目标上编�
 本地工具依赖于当前目录中名为 `dotnet-tools.json` 的清单文件。 此清单文件定义在该文件夹和以下文件夹中可用的工具。 你可以随代码一起分发清单文件，以确保使用代码的任何人都可以还原和使用相同的工具。
 
 对于全局工具和本地工具，需要一个兼容的运行时版本。 目前，NuGet.org 上的许多工具都面向 .NET Core Runtime 2.1。 若要在全局范围或本地安装这些工具，仍需要安装 [NET Core 2.1 运行时](https://dotnet.microsoft.com/download/dotnet-core/2.1)。
+
+### <a name="new-globaljson-options"></a>新 global.json 选项
+
+global.json  文件包含新选项，当你尝试定义所使用的 .NET Core SDK 版本时，这些选项可提供更大的灵活性。 新选项包括：
+
+- `allowPrerelease`：指示在选择要使用的 SDK 版本时，SDK 解析程序是否应考虑预发布版本。
+- `rollForward`：指示选择 SDK 版本时要使用的前滚策略，可作为特定 SDK 版本缺失时的回退，或者作为使用更高版本的指令。
+
+有关这些更改的详细信息（包括默认值、支持的值和新的匹配规则），请参阅 [global.json 概述](../tools/global-json.md)。
 
 ### <a name="smaller-garbage-collection-heap-sizes"></a>垃圾回收堆大小减小
 
@@ -458,7 +467,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 相当于返回（以 2 为底）对数的 `log2` IEEE 运算。 它会最小化舍入错误。
 
 - <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
-相当于执行乘法加法混合的 `fma` IEEE 运算。 也就是说，它以单个运算的形式执行 `(x * y) + z`，从而最小化舍入错误。 有关示例是返回 `1e308` 的 `FusedMultiplyAdd(1e308, 2.0, -1e308)`。 常规 `(1e308 * 2.0) - 1e308` 返回 `double.PositiveInfinity`。
+相当于执行乘法加法混合的 `fma` IEEE 运算。 也就是说，它以单个运算的形式执行 `(x * y) + z`，从而最小化舍入错误。 例如，`FusedMultiplyAdd(1e308, 2.0, -1e308)` 返回 `1e308`。 常规 `(1e308 * 2.0) - 1e308` 返回 `double.PositiveInfinity`。
 
 - <xref:System.Math.CopySign(System.Double,System.Double)>\
 相当于 `copySign` IEEE 运算，它返回 `x` 的值但带有符号 `y`。

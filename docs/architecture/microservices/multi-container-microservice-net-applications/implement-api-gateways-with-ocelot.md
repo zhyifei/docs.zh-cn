@@ -2,12 +2,12 @@
 title: 通过 Ocelot 实现 API 网关
 description: 了解如何通过 Ocelot 实现 API 网关以及如何在基于容器的环境中使用 Ocelot。
 ms.date: 10/02/2018
-ms.openlocfilehash: 1ade05cc6935ce6a1bc74e6d6e4cdd5ef9fc6873
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: c0bcd240b6bd190dd02266c7faaf9fd668eb23bb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734605"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777296"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>通过 Ocelot 实现 API 网关
 

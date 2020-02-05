@@ -4,12 +4,12 @@ description: 了解如何创建支持插件的 .NET Core 应用程序。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 16fc9d3c721ddd0618c980c7dc406b7ad7864ff5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 32205a507bc95b2f8a2f75368aab3fde710249ee
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739696"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787857"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>使用插件创建 .NET Core 应用程序
 
@@ -20,7 +20,7 @@ ms.locfileid: "73739696"
 - 使用 <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName> 类型允许插件具有依赖项。
 - 只需复制生成项目就可以轻松部署的作者插件。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - 安装 [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) 或更高版本。
 
@@ -250,15 +250,18 @@ static Assembly LoadPlugin(string relativePath)
 
 ```xml
 <ItemGroup>
-<ProjectReference Include="..\PluginBase\PluginBase.csproj">
-    <Private>false</Private>
-</ProjectReference>
+    <ProjectReference Include="..\PluginBase\PluginBase.csproj">
+        <Private>false</Private>
+        <ExcludeAssets>runtime</ExcludeAssets>
+    </ProjectReference>
 </ItemGroup>
 ```
 
 `<Private>false</Private>` 元素很重要。 它告知 MSBuild 不要将 PluginBase.dll 复制到 HelloPlugin 的输出目录  。 如果 PluginBase.dll 程序集出现在输出目录中，`PluginLoadContext` 将在那里查找到该程序集并在加载 HelloPlugin.dll 程序集时加载它   。 此时，`HelloPlugin.HelloCommand` 类型将从 `HelloPlugin` 项目的输出目录中的 PluginBase.dll 实现 `ICommand` 接口，而不是加载到默认加载上下文中的 `ICommand` 接口  。 因为运行时将这两种类型视为不同程序集的不同类型，所以 `AppWithPlugin.Program.CreateCommands` 方法找不到命令。 因此，对包含插件接口的程序集的引用需要 `<Private>false</Private>` 元数据。
 
-因为 `HelloPlugin` 项目已完成，所以我们应该更新 `AppWithPlugin` 项目，以确认可以找到 `HelloPlugin` 插件的位置。 在 `// Paths to plugins to load` 注释之后，添加 `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` 作为 `pluginPaths` 数组的元素。
+同样，如果 `PluginBase` 引用其他包，则 `<ExcludeAssets>runtime</ExcludeAssets>` 元素也很重要。 此设置与 `<Private>false</Private>` 的效果相同，但适用于 `PluginBase` 项目或它的某个依赖项可能包括的包引用。
+
+因为 `HelloPlugin` 项目已完成，所以应该更新 `AppWithPlugin` 项目，以确认可以找到 `HelloPlugin` 插件的位置。 在 `// Paths to plugins to load` 注释之后，添加 `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` 作为 `pluginPaths` 数组的元素。
 
 ## <a name="plugin-with-library-dependencies"></a>具有库依赖项的插件
 
@@ -268,7 +271,7 @@ static Assembly LoadPlugin(string relativePath)
 
 可以在 [dotnet/samples 存储库](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)中找到本教程的完整源代码。 完成的示例包括 `AssemblyDependencyResolver` 行为的一些其他示例。 例如，`AssemblyDependencyResolver` 对象还可以解析本机库和 NuGet 包中所包含的已本地化的附属程序集。 示例存储库中的 `UVPlugin` 和 `FrenchPlugin` 演示了这些方案。
 
-## <a name="reference-a-plugin-from-a-nuget-package"></a>从 NuGet 包引用插件
+## <a name="reference-a-plugin-interface-from-a-nuget-package"></a>从 NuGet 包引用插件接口
 
 假设存在应用 A，它具有 NuGet 包（名为 `A.PluginBase`）中定义的插件接口。 如何在插件项目中正确引用包？ 对于项目引用，使用项目文件的 `ProjectReference` 元素上的 `<Private>false</Private>` 元数据会阻止将 dll 复制到输出。
 

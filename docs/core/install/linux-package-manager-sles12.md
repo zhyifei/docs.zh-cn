@@ -4,12 +4,12 @@ description: 使用包管理器在 SLES 12 上安装 .NET Core SDK 和运行时�
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: a40180881ec0962d89f03c2c9d7aad9bbb052d2a
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: a6c10c6b11bc57ae4bbe814c66c563b85ce3c22b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740663"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920735"
 ---
 # <a name="sles-12-package-manager---install-net-core"></a>SLES 12 包管理器 - 安装 .NET Core
 
@@ -60,3 +60,11 @@ sudo zypper install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>如何安装其他版本
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>包管理器疑难解答
+
+本部分提供有关使用程序包管理器安装 .NET Core 时可能会遇到的常见错误的信息。
+
+### <a name="failed-to-fetch"></a>未能提取
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

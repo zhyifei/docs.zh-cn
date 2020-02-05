@@ -2,12 +2,12 @@
 title: .NET Core 的 csproj 格式的新增内容
 description: 了解现有文件和 .NET Core csproj 文件之间的区别
 ms.date: 04/08/2019
-ms.openlocfilehash: 9d6a7a388cb51bf08996adc654db5722a5ef1303
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 126f5b10999e65d9715e9b52cb54a2bf1dbd3933
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733342"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787882"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
@@ -15,7 +15,7 @@ ms.locfileid: "76733342"
 
 ## <a name="implicit-package-references"></a>隐式包引用
 
-基于项目文件的 `<TargetFramework>` 或 `<TargetFrameworks>` 属性中指定的目标框架对元包进行隐式引用。 如果指定了 `<TargetFramework>`，则忽略 `<TargetFrameworks>`，而与顺序无关。 有关详细信息，请参阅[包、元包和框架](../packages.md)。 
+基于项目文件的 `<TargetFramework>` 或 `<TargetFrameworks>` 属性中指定的目标框架对元包进行隐式引用。 如果指定了 `<TargetFramework>`，则忽略 `<TargetFrameworks>`，而与顺序无关。 有关详细信息，请参阅[包、元包和框架](../packages.md)。
 
 ```xml
  <PropertyGroup>
@@ -248,7 +248,7 @@ RID 允许发布独立部署。
 ```
 
 > [!NOTE]
->可对 MSBuild 目标使用任何名称，但 Visual Studio IDE 会识别 `PreBuild` 和 `PostBuild` 目标，因此建议使用这些名称，以便可在 Visual Studio IDE 中编辑命令。 
+>可对 MSBuild 目标使用任何名称，但 Visual Studio IDE 会识别 `PreBuild` 和 `PostBuild` 目标，因此建议使用这些名称，以便可在 Visual Studio IDE 中编辑命令。
 
 ## <a name="nuget-metadata-properties"></a>NugetMetadataProperties
 
@@ -321,7 +321,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 如果使用的许可证没有分配 SPDX 标识符，或者它是自定义许可证，则它是包中许可证文件的路径（否则，优先选择 `PackageLicenseExpression`）
 
-替换 `PackageLicenseUrl`，不能与 `PackageLicenseExpression` 结合使用，并且需要 Visual Studio 15.9.4、.NET SDK 2.1.502 或 2.2.101 或更高版本。
+替换 `PackageLicenseUrl`，不能与 `PackageLicenseExpression` 结合使用，并且需要 Visual Studio 版本 15.9.4 和 .NET SDK 2.1.502 或 2.2.101 或更高版本。
 
 将需要通过显式地将许可证文件添加到项目中来确保许可证文件已打包，示例用法如下：
 
@@ -427,7 +427,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ### <a name="properties-per-attribute"></a>PropertiesPerAttribute
 
-每个特性都有一个可控制其内容的属性，还有一个可以禁用其生成的属性，如下表所示：
+如下表所示，每个特性都有一个可控制其内容的属性，还有一个可以禁用其生成的属性：
 
 | 特性                                                      | Property               | 要禁用的属性                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|

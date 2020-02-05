@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4781e39a0c8827adb6ab0155d5215645242208a5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2dfa3cdab9de47b55f7a3f73f0d6e9460390700c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348146"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920099"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>教程：通过 ML.NET 图像分类 API 使用迁移学习自动进行肉眼检查
 
@@ -28,7 +28,7 @@ ms.locfileid: "75348146"
 
 ## <a name="prerequisites"></a>先决条件
 
-- 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
+- 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
 
 ## <a name="image-classification-transfer-learning-sample-overview"></a>图像分类迁移学习示例概述
 
@@ -140,10 +140,10 @@ SDNET2018 是一个图像数据集，其中包含有裂缝和无裂缝混凝土�
 
         `ModelInput` 包含以下属性：
 
-        - `ImagePath` 是存储图像的完全限定的路径。
-        - `Label` 是图像所属的类别。 这是要预测的值。
         - `Image` 是图像的 `byte[]` 表示形式。 模型需要此类型的图像数据以供训练。
         - `LabelAsKey` 是 `Label` 的数值表示形式。
+        - `ImagePath` 是存储图像的完全限定的路径。
+        - `Label` 是图像所属的类别。 这是要预测的值。
 
         仅 `Image` 和 `LabelAsKey` 用于训练模型和进行预测。 已保留 `ImagePath` 和 `Label` 属性，以方便访问原始图像文件名称和类别。
 
@@ -171,7 +171,7 @@ SDNET2018 是一个图像数据集，其中包含有裂缝和无裂缝混凝土�
 
     [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L17)]
 
-1. 然后，使用 [MLContext](xref:Microsoft.ML.MLContext) 的新实例初始化 `mlContext` 变量。
+1. 使用 [MLContext](xref:Microsoft.ML.MLContext) 的新实例初始化 `mlContext` 变量。
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L19)]
 
@@ -253,7 +253,7 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 模型训练包含以下几个步骤。 首先，使用图像分类 API 来训练模型。 然后，使用 `MapKeyToValue` 转换将 `PredictedLabel` 列中的编码标签转换回其原始分类值。
 
-1. 创建新变量以存储 `ImageClassificationTrainer` 的一组必需参数和可选参数。 
+1. 创建新变量以存储 `ImageClassificationTrainer` 的一组必需参数和可选参数。
 
     [!code-csharp [ClassifierOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L46-L57)]
 

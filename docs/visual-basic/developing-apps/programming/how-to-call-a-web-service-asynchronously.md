@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: 0eeb358ba38836ba6302f98f9e3e0314b83510f0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d288cc1f2991a8f504dc9f1b206bba76fa378b75
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352125"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794555"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>如何：异步调用 Web 服务 (Visual Basic)
 
@@ -23,11 +23,11 @@ ms.locfileid: "74352125"
 > [!NOTE]
 > 因为 ASP.NET 不支持 `My.WebServices` 对象，所以这段代码不适用于 Web 应用程序。
 
-### <a name="to-call-a-web-service-asynchronously"></a>以异步方式调用 Web 服务
+## <a name="call-a-web-service-asynchronously"></a>以异步方式调用 Web 服务
 
 1. 引用 DemoTemperatureService Web 服务（位于 `http://www.xmethods.net`）。 网址为
 
-    ```
+    ```http
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl
     ```
 
@@ -68,5 +68,5 @@ ms.locfileid: "74352125"
 
 ## <a name="see-also"></a>请参阅
 
-- [访问应用程序 Web 服务](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
-- [My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [访问应用程序 Web 服务](accessing-application-web-services.md)
+- [My.WebServices 对象](../../language-reference/objects/my-webservices-object.md)

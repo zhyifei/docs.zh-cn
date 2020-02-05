@@ -4,18 +4,18 @@ description: 此教程将介绍 .NET Core 和 C# 语言的许多功能。
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 921c8fc7824bdb48f08e4d9f5a276bf2284f8a17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 09ce36e7a61f576dc4449976ce676701dc57c9cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714600"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921125"
 ---
 # <a name="console-app"></a>控制台应用
 
 此教程将介绍 .NET Core 和 C# 语言的许多功能。 你将了解：
 
-- .NET Core 命令行接口 (CLI) 的基础知识
+- .NET Core CLI 的基础知识
 - C# 控制台应用程序的结构
 - 控制台 I/O
 - .NET 中文件 I/O API 的基础知识
@@ -311,6 +311,6 @@ RunTeleprompter().Wait();
 
 ## <a name="conclusion"></a>结束语
 
-此教程介绍了与处理控制台应用程序相关的许多 C# 语言和 .NET Core 库功能。 可以在此教程的基础上进一步探索语言和本文介绍的类。 你已了解文件和控制台 I/O 的基础知识、基于任务的异步编程的阻止性和非阻止性用途、C# 语言介绍、C# 程序的组织结构，以及 .NET Core 命令行接口和工具。
+此教程介绍了与处理控制台应用程序相关的许多 C# 语言和 .NET Core 库功能。 可以在此教程的基础上进一步探索语言和本文介绍的类。 你已了解文件和控制台 I/O 的基础知识、基于任务的异步编程的阻止性和非阻止性用途、C# 语言介绍、C# 程序的组织结构，以及 .NET Core CLI。
 
 有关文件 I/O 的详细信息，请参阅[文件和流 I/O](../../standard/io/index.md) 主题。 有关本教程中使用的异步编程模型的详细信息，请参阅[基于任务的异步编程](../..//standard/parallel-programming/task-based-asynchronous-programming.md)主题和[异步编程](../async.md)主题。

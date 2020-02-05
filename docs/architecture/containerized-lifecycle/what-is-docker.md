@@ -2,12 +2,12 @@
 title: 什么是 Docker？
 description: 深入了解 Docker，这里的一个简单类比可能会对你有所帮助。
 ms.date: 02/15/2019
-ms.openlocfilehash: 8636ae3b1ad32158e10ce2aa58423f9c9824d8c0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e3b3685f2fc6d5a9d33bb176d04ca910f0289344
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738160"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919881"
 ---
 # <a name="what-is-docker"></a>什么是 Docker？
 
@@ -19,7 +19,7 @@ ms.locfileid: "73738160"
 
 如上图所述，Docker 容器可以在任意位置运行：在客户数据中心本地、在外部服务提供商或在 Azure 云中。 Docker 映像容器还可以在 Linux 和 Windows 上本机运行。 但是，Windows 映像仅能在 Windows 主机上运行，Linux 映像可以在 Linux 主机和 Windows 主机上运行（到目前为止，使用 Hyper-V Linux VM），其中主机是指服务器或 VM。
 
-开发人员可以在 Windows、Linux 或 macOS 上使用开发环境。 在开发计算机上，开发人员运行部署了 Docker 映像（包括应用及其依赖项）的 Docker 主机。 在 Linux 或 Mac 上进行开发的开发人员使用基于 Linux 的 Docker 主机，并且他们可以仅为 Linux 容器创建映像。 （在 Mac 上进行开发的开发人员可以从 macOS 中编辑代码或运行 Docker 命令行接口 (CLI)，但在撰写本文时，容器不在 macOS 上直接运行。）在 Windows 上进行开发的开发人员可以为 Linux 或 Windows 容器创建映像。
+开发人员可以在 Windows、Linux 或 macOS 上使用开发环境。 在开发计算机上，开发人员运行部署了 Docker 映像（包括应用及其依赖项）的 Docker 主机。 在 Linux 或 Mac 上进行开发的开发人员使用基于 Linux 的 Docker 主机，并且他们可以仅为 Linux 容器创建映像。 （在 Mac 上进行开发的开发人员可以从 macOS 中编辑代码或运行 Docker CLI，但在撰写本文时，容器不在 macOS 上直接运行。）在 Windows 上进行开发的开发人员可以为 Linux 或 Windows 容器创建映像。
 
 为了在开发环境中承载容器，并提供其他开发人员工具，Docker 为 Windows 或 macOS 提供了 [Docker 社区版 (CE)](https://www.docker.com/community-edition)。 这些产品安装了承载容器所需的 VM（Docker 主机）。 Docker 还提供 [Docker 企业版 (EE)](https://www.docker.com/enterprise-edition)，该版本专为企业开发而设计，供生成、交付和在生产中运行大型业务关键型应用程序的 IT 团队使用。
 

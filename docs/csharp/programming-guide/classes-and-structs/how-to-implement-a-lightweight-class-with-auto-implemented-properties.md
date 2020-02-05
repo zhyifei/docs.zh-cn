@@ -5,12 +5,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 170a36e2a10896d9e4d29af602694700fa122e69
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c2d4fbd2f9e8a343a81d88bacc54a53335e170ec
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714915"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867381"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>如何使用自动实现的属性实现轻量类（C# 编程指南）
 
@@ -23,6 +23,29 @@ ms.locfileid: "75714915"
   当你声明一个 private `set` 取值函数时，你无法使用对象初始值设定项来初始化属性。 你必须使用构造函数或工厂方法。
 - 也可以仅声明 [get](../../language-reference/keywords/get.md) 访问器，使属性除了能在该类型的构造函数中可变，在其他任何位置都不可变。
 
+下面的示例显示了只有 get 访问器的属性与具有 get 和 private set 的属性的区别。
+
+```csharp
+class Contact
+{
+    public string Name { get; }
+    public string Address { get; private set; }
+
+    public Contact(string contactName, string contactAddress)
+    {
+        // Both properties are accessible in the constructor.
+        Name = contactName;
+        Address = contactAddress;
+    }
+
+    // Name isn't assignable here. This will generate a compile error.
+    //public void ChangeName(string newName) => Name = newName; 
+
+    // Address is assignable here.
+    public void ChangeAddress(string newAddress) => Address = newAddress
+}
+```
+
 ## <a name="example"></a>示例
 
 下面的示例演示了实现具有自动实现属性的不可变类的两种方法。 这两种方法均使用 private `set` 声明其中一个属性，使用单独的 `get` 声明另一个属性。  第一个类仅使用构造函数来初始化属性，第二个类则使用可调用构造函数的静态工厂方法。
@@ -33,8 +56,10 @@ ms.locfileid: "75714915"
 // constructor to initialize its properties.
 class Contact
 {
-    // Read-only properties.
+    // Read-only property.
     public string Name { get; }
+
+    // Read-write property with a private set accessor.
     public string Address { get; private set; }
 
     // Public constructor.
@@ -50,8 +75,10 @@ class Contact
 // static method and private constructor to initialize its properties.
 public class Contact2
 {
-    // Read-only properties.
+    // Read-write property with a private set accessor.
     public string Name { get; private set; }
+
+    // Read-only property.
     public string Address { get; }
 
     // Private constructor.

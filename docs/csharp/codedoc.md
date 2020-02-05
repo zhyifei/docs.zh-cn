@@ -1,15 +1,15 @@
 ---
 title: 使用 XML 注释来记录代码
 description: 了解如何使用 XML 文档注释来记录代码和在编译时生成 XML 文档文件。
-ms.date: 02/14/2017
+ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 6aa52030e20f61b26311347a57629658ebe0e609
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1ec088db1de7c953bdb20b1129c5fd40f9e31454
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713942"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965927"
 ---
 # <a name="document-your-code-with-xml-comments"></a>使用 XML 注释记录代码
 
@@ -49,7 +49,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 [!code-csharp[Sample Library](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
-示例库支持 `int` 和 `double` 数据类型的四种主要算术运算：`add`、`subtract`、`multiply` 和 `divide`。
+示例库支持 `int` 和 `double` 数据类型的四种主要算术运算（`add`、`subtract`、`multiply` 和 `divide`）。
 
 现在，希望能够从代码中为使用库但无源代码访问权限的第三方开发人员创建 API 引用文档。
 如前面所述，XML 文档标记可用于实现此目的。 现在介绍 C# 编译器支持的标准 XML 标记。
@@ -61,7 +61,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 [!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-`<summary>` 标记非常重要，建议包含，因为其内容是 IntelliSense 或 API 参考文档中的类型或成员信息的主要来源。
+`<summary>` 标记很重要，建议包含，因为其内容是 IntelliSense 或 API 参考文档中的类型或成员信息的主要来源。
 
 ## <a name="remarks"></a>\<remarks>
 
@@ -150,7 +150,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 ## <a name="paramref"></a>\<paramref>
 
-有时可能正在通过一个 `<summary>` 标记描述一个方法的作用，并且想要引用一个参数。 这时 `<paramref>` 标记就很适合用来实现这一目的。 现在来更新双基 `Add` 方法的摘要。 与 `<param>` 标记一样，参数名称在必需的 `name` 属性中指定  。
+有时可能正在通过一个 `<summary>` 标记描述一个方法的作用，并且想要引用一个参数。 这时 `<paramref>` 标记就很适合用来实现这一目的。 现在来更新双基 `Add` 方法的摘要。 与 `<param>` 标记一样，参数名称在必需  的 `name` 属性中指定。
 
 [!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
@@ -163,12 +163,17 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 ## <a name="list"></a>\<list>
 
-使用 `<list>` 标记可将文档信息格式化为有序列表、无序列表或表格。
-制作 `Math` 库支持的所有数学操作的无序列表。
+使用 `<list>` 标记可将文档信息格式化为有序列表、无序列表或表格。 制作 `Math` 库支持的所有数学操作的无序列表。
 
 [!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
 可以通过将 `type` 属性分别改为 `number` 或 `table` 来制作有序列表或表格。
+
+## <a name="inheritdoc"></a>\<inheritdoc >
+
+可以使用 `<inheritdoc>` 标记继承基类、接口和类似方法中的 XML 注释。 这样不必复制和粘贴重复的 XML 注释，并自动保持 XML 注释同步。
+
+[!code-csharp-interactive[InheritDoc Tag](~/samples/snippets/csharp/concepts/codedoc/inheritdoc-tag.cs)]
 
 ### <a name="put-it-all-together"></a>将其放在一起
 

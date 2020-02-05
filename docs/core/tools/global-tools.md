@@ -3,12 +3,12 @@ title: .NET Core 全局工具
 description: 概述：介绍 .NET Core 全局工具及其适用的 .NET Core CLI 命令。
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.openlocfilehash: 0df3c1b615adfeaaf41542dc8252a8f14f49f6f9
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 1531df48b7ca9c816b897d06e725ec375f6cae31
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899868"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920495"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core 全局工具概述
 
@@ -30,7 +30,7 @@ ms.locfileid: "75899868"
 
 ## <a name="find-a-net-core-global-tool"></a>查找 .NET Core 全局工具
 
-目前，.NET Core 命令行接口 (CLI) 中没有全局工具搜索功能。 下面提供有关如何查找工具的一些建议：
+目前，.NET Core CLI 中没有全局工具搜索功能。 下面提供有关如何查找工具的一些建议：
 
 * 可在 [NuGet](https://www.nuget.org) 上查找 .NET Core 全局工具。 但是 NuGet 尚不能专门针对 .NET Core 全局工具进行搜索。
 * 可在博客文章或 [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub 存储库中找到工具建议。

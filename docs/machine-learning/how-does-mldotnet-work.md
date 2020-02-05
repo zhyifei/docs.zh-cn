@@ -4,16 +4,16 @@ description: ML.NET 使你能够在联机或脱机场景中将机器学习添加
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 98251c39a4bdaba8203c26c6a781a86efc46efa4
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: bc157b22201c66bceecf78aaa36b9c653fe6a131
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740091"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794571"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什么是 ML.NET 以及它如何工作？
 
-ML.NET 使你能够在联机或脱机场景中将机器学习添加到 .NET 应用程序中。 借助此功能，可以使用应用程序的可用数据进行自动预测。
+ML.NET 使你能够在联机或脱机场景中将机器学习添加到 .NET 应用程序中。 借助此功能，可以使用应用程序的可用数据进行自动预测。 机器学习应用程序利用数据中的模式来进行预测，而不需要进行显式编程。
 
 ML.NET 的核心是机器学习模型  。 该模型指定将输入数据转换为预测所需的步骤。 借助 ML.NET，可以通过指定算法来训练自定义模型，也可以导入预训练的 TensorFlow 和 ONNX 模型。
 
