@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 7bd56d44eeb6af70b94cdde77d48e917ef8afb9a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 30ea92f09bc655796b6bc268212b6d9e0e05bd9b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347779"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919336"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隐私信息
 Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foundation （WCF）版本3.0 生成应用程序时，应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向您的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 WCF 不会从你的应用程序向 Microsoft 发送任何信息，除非你或最终用户选择将其发送给我们。  
@@ -21,14 +21,14 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  标头可能包含消息路由、安全信息、事务和其他信息，具体取决于应用程序所使用的服务。 默认情况下，消息通常要进行加密。 一个例外的情况是使用 `BasicHttpBinding`（它适用于不受保护的旧式 Web 服务）。 作为应用程序设计人员，您负责进行最终设计。 SOAP 正文中的消息包含特定于应用程序的数据;不过，这些数据（如应用程序定义的个人信息）可以通过使用 WCF 加密或机密性功能来保护。 以下几节将描述可能对隐私造成影响的功能。  
   
-## <a name="messaging"></a>消息  
+## <a name="messaging"></a>消息传递  
  每个 WCF 消息都有一个地址标头，该标头指定消息目标和答复的目标位置。  
   
  终结点地址的地址部分是一个标识该终结点的统一资源标识符 (URI)。 该地址可以是网络地址，也可以是逻辑地址。 该地址可能包含计算机名称（主机名、完全限定域名）和一个 IP 地址。 终结点地址还可能包含一个用于进行临时寻址的全局唯一标识符 (GUID) 或 GUID 集合，以便辨别每个地址。 每个消息都包含一个消息 ID，该消息 ID 是 GUID。 此功能遵循 WS-Addressing 引用标准。  
   
  WCF 消息传递层不会向本地计算机写入任何个人信息。 但是，如果服务开发人员创建了公开此类信息的服务（例如，通过在终结点名称中使用个人姓名，或者将个人信息包含在终结点的 Web 服务描述语言中，但不要求客户端使用 https 来访问 WSDL），则消息传递层可能会在网络级传播个人信息。 此外，如果开发人员针对公开个人信息的终结点运行 " [Svcutil.exe 元数据实用工具（）](servicemodel-metadata-utility-tool-svcutil-exe.md) " 工具，则该工具的输出可能包含该信息，并且输出文件将写入本地硬盘。  
   
-## <a name="hosting"></a>宿主  
+## <a name="hosting"></a>托管  
  WCF 中的托管功能使应用程序可以按需启动，或者允许在多个应用程序之间共享端口。 WCF 应用程序可以在 Internet Information Services （IIS）中承载，类似于 ASP.NET。  
   
  承载功能不会在网路上公开任何特定信息，也不会在计算机上保留数据。  
@@ -44,7 +44,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  身份验证可以导致在相互通信的终结点之间建立安全会话。 会话由 GUID 标识，而 GUID 能够在安全会话的整个生存期保持有效。 下表显示保留的内容和保留位置。  
   
-|Data|存储|  
+|数据|存储区|  
 |----------|-------------|  
 |表示凭据，例如用户名、X.509 证书、Kerberos 令牌和对凭据的引用。|标准 Windows 凭据管理机制，例如 Windows 证书存储区。|  
 |用户成员资格信息，例如用户名和密码。|ASP.NET 成员资格提供程序。|  
@@ -54,7 +54,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
 ## <a name="auditing"></a>审核  
  审核功能用于记录身份验证和授权事件的成功和失败。 审核记录包含以下数据：服务 URI、操作 URI 和调用方的标识。  
   
- 审核功能还记录管理员修改消息日志记录的配置（启用或禁用）的时间，因为消息日志记录可能记录标头或正文中特定于应用程序的数据。 对于 [!INCLUDE[wxp](../../../includes/wxp-md.md)]，记录将写入应用程序事件日志。 对于 Windows Vista 和 Windows Server 2003，会在安全事件日志中记录一条记录。  
+ 审核功能还记录管理员修改消息日志记录的配置（启用或禁用）的时间，因为消息日志记录可能记录标头或正文中特定于应用程序的数据。 对于 Windows XP，记录记录在应用程序事件日志中。 对于 Windows Vista 和 Windows Server 2003，会在安全事件日志中记录一条记录。  
   
 ## <a name="transactions"></a>事务  
  事务功能为 WCF 应用程序提供事务性服务。  
@@ -95,7 +95,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
 ### <a name="tracing"></a>跟踪  
  WCF 基础结构的诊断功能记录传递到传输和服务模型层的消息，以及与这些消息关联的活动和事件。 默认情况下，此功能被禁用。 使用应用程序的配置文件启用此功能，并且可以在运行时使用 WCF WMI 提供程序修改跟踪行为。 在启用此功能后，跟踪基础结构会向已配置的侦听器发出包含消息、活动和处理事件的诊断跟踪。 输出的格式和位置由管理员的侦听器配置选择确定，但通常是 XML 格式化文件。 管理员负责设置跟踪文件上的访问控制列表 (ACL)。 具体而言，在由 Windows 激活系统 (WAS) 进行承载时，管理员应确保不是从公共虚拟根目录提供这些文件（如果不需要）。  
   
- 有两种类型的跟踪：消息日志记录和服务模式诊断跟踪，如下一节中所述。 每种类型都通过其自身的跟踪源进行配置，它们分别是 <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> 和 <xref:System.ServiceModel>。 这两种日志记录跟踪源都捕获应用程序本地的数据。  
+ 有两种类型的跟踪：消息日志记录和服务模型诊断跟踪，下一节将对其进行介绍。 每种类型都通过其自身的跟踪源进行配置，它们分别是 <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> 和 <xref:System.ServiceModel>。 这两种日志记录跟踪源都捕获应用程序本地的数据。  
   
 ### <a name="message-logging"></a>消息日志记录  
  消息日志记录跟踪源（<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>）使管理员可以记录流经系统的消息。 通过配置，用户可以决定是记录完整的消息还是仅记录消息头、是否在传输和/或服务模型层记录以及是否包括格式不正确的消息。 另外，用户可以配置筛选来限制要记录的消息范围。  
@@ -127,13 +127,13 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  被删除的密钥：  
   
- \-xmlns： wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns： wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" 的   
+ xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" 的 \-  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \-xmlns： wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns： wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的   
+ xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的 \-  
   
  wsse:Password  
   
@@ -141,13 +141,13 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  被删除的潜在个人信息：  
   
- \-\xmlns： wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns： wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的   
+ xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的 \-  
   
  wsse:Username  
   
  wsse:BinarySecurityToken  
   
- \-xmlns： saml = "urn： oasis： names： tc： SAML：1.0： assertion" 的  会删除粗体项（如下所示）：  
+ xmlns： saml = "urn： oasis： names： tc： SAML：1.0： assertion" 的 \- 会删除粗体项（如下所示）：  
   
  \<断言  
   
@@ -304,7 +304,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  对于下列命名空间：  
   
- xmlns： wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns： wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" （例如，如果没有可用的操作）  
+ xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" （例如，如果没有可用的操作）  
   
  删除那些涉及密钥交换的正文元素的信息：  
   
@@ -401,7 +401,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  Web 服务描述语言 (WSDL) 包含端口的定义。 每个端口都具有一个终结点地址和一个表示应用程序所使用的服务的绑定。 可以使用配置禁用公开 WSDL。 计算机上不会保留任何信息。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Windows Communication Foundation](index.md)
-- [安全性](./feature-details/security.md)
+- [安全](./feature-details/security.md)
