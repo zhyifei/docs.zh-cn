@@ -3,139 +3,139 @@ title: .NET Core 全局工具
 description: 概述：介绍 .NET Core 全局工具及其适用的 .NET Core CLI 命令。
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.openlocfilehash: 0df3c1b615adfeaaf41542dc8252a8f14f49f6f9
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 1531df48b7ca9c816b897d06e725ec375f6cae31
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899868"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920495"
 ---
-# <a name="net-core-global-tools-overview"></a><span data-ttu-id="d20d6-103">.NET Core 全局工具概述</span><span class="sxs-lookup"><span data-stu-id="d20d6-103">.NET Core Global Tools overview</span></span>
+# <a name="net-core-global-tools-overview"></a><span data-ttu-id="789e1-103">.NET Core 全局工具概述</span><span class="sxs-lookup"><span data-stu-id="789e1-103">.NET Core Global Tools overview</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
-<span data-ttu-id="d20d6-104">.NET Core 全局工具是一种特殊的 NuGet 包，其中包含控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="d20d6-104">A .NET Core Global Tool is a special NuGet package that contains a console application.</span></span> <span data-ttu-id="d20d6-105">全局工具可安装在计算机上的默认位置（包含在 PATH 环境变量中）或自定义位置。</span><span class="sxs-lookup"><span data-stu-id="d20d6-105">A Global Tool can be installed on your machine on a default location that is included in the PATH environment variable or on a custom location.</span></span>
+<span data-ttu-id="789e1-104">.NET Core 全局工具是一种特殊的 NuGet 包，其中包含控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="789e1-104">A .NET Core Global Tool is a special NuGet package that contains a console application.</span></span> <span data-ttu-id="789e1-105">全局工具可安装在计算机上的默认位置（包含在 PATH 环境变量中）或自定义位置。</span><span class="sxs-lookup"><span data-stu-id="789e1-105">A Global Tool can be installed on your machine on a default location that is included in the PATH environment variable or on a custom location.</span></span>
 
-<span data-ttu-id="d20d6-106">若要使用 .NET Core 全局工具，请执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="d20d6-106">If you want to use a .NET Core Global Tool:</span></span>
+<span data-ttu-id="789e1-106">若要使用 .NET Core 全局工具，请执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="789e1-106">If you want to use a .NET Core Global Tool:</span></span>
 
-* <span data-ttu-id="d20d6-107">查找该工具的相关信息（通常是一个网站或 GitHub 页面）。</span><span class="sxs-lookup"><span data-stu-id="d20d6-107">Find information about the tool (usually a website or GitHub page).</span></span>
-* <span data-ttu-id="d20d6-108">在源的主页（通常为 NuGet.org）查看作者和统计信息。</span><span class="sxs-lookup"><span data-stu-id="d20d6-108">Check the author and statistics in the home for the feed (usually NuGet.org).</span></span>
-* <span data-ttu-id="d20d6-109">安装该工具。</span><span class="sxs-lookup"><span data-stu-id="d20d6-109">Install the tool.</span></span>
-* <span data-ttu-id="d20d6-110">调用该工具。</span><span class="sxs-lookup"><span data-stu-id="d20d6-110">Call the tool.</span></span>
-* <span data-ttu-id="d20d6-111">更新该工具。</span><span class="sxs-lookup"><span data-stu-id="d20d6-111">Update the tool.</span></span>
-* <span data-ttu-id="d20d6-112">卸载该工具。</span><span class="sxs-lookup"><span data-stu-id="d20d6-112">Uninstall the tool.</span></span>
+* <span data-ttu-id="789e1-107">查找该工具的相关信息（通常是一个网站或 GitHub 页面）。</span><span class="sxs-lookup"><span data-stu-id="789e1-107">Find information about the tool (usually a website or GitHub page).</span></span>
+* <span data-ttu-id="789e1-108">在源的主页（通常为 NuGet.org）查看作者和统计信息。</span><span class="sxs-lookup"><span data-stu-id="789e1-108">Check the author and statistics in the home for the feed (usually NuGet.org).</span></span>
+* <span data-ttu-id="789e1-109">安装该工具。</span><span class="sxs-lookup"><span data-stu-id="789e1-109">Install the tool.</span></span>
+* <span data-ttu-id="789e1-110">调用该工具。</span><span class="sxs-lookup"><span data-stu-id="789e1-110">Call the tool.</span></span>
+* <span data-ttu-id="789e1-111">更新该工具。</span><span class="sxs-lookup"><span data-stu-id="789e1-111">Update the tool.</span></span>
+* <span data-ttu-id="789e1-112">卸载该工具。</span><span class="sxs-lookup"><span data-stu-id="789e1-112">Uninstall the tool.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="d20d6-113">.NET Core 全局工具在路径中显示，且以完全信任的方式运行。</span><span class="sxs-lookup"><span data-stu-id="d20d6-113">.NET Core Global Tools appear on your path and run in full trust.</span></span> <span data-ttu-id="d20d6-114">除非你信任工具作者，否则请勿安装 .NET Core 全局工具。</span><span class="sxs-lookup"><span data-stu-id="d20d6-114">Do not install .NET Core Global Tools unless you trust the author.</span></span>
+> <span data-ttu-id="789e1-113">.NET Core 全局工具在路径中显示，且以完全信任的方式运行。</span><span class="sxs-lookup"><span data-stu-id="789e1-113">.NET Core Global Tools appear on your path and run in full trust.</span></span> <span data-ttu-id="789e1-114">除非你信任工具作者，否则请勿安装 .NET Core 全局工具。</span><span class="sxs-lookup"><span data-stu-id="789e1-114">Do not install .NET Core Global Tools unless you trust the author.</span></span>
 
-## <a name="find-a-net-core-global-tool"></a><span data-ttu-id="d20d6-115">查找 .NET Core 全局工具</span><span class="sxs-lookup"><span data-stu-id="d20d6-115">Find a .NET Core Global Tool</span></span>
+## <a name="find-a-net-core-global-tool"></a><span data-ttu-id="789e1-115">查找 .NET Core 全局工具</span><span class="sxs-lookup"><span data-stu-id="789e1-115">Find a .NET Core Global Tool</span></span>
 
-<span data-ttu-id="d20d6-116">目前，.NET Core 命令行接口 (CLI) 中没有全局工具搜索功能。</span><span class="sxs-lookup"><span data-stu-id="d20d6-116">Currently, there isn't a Global Tool search feature in the .NET Core Command-line Interface (CLI).</span></span> <span data-ttu-id="d20d6-117">下面提供有关如何查找工具的一些建议：</span><span class="sxs-lookup"><span data-stu-id="d20d6-117">The following are some recommendations on how to find tools:</span></span>
+<span data-ttu-id="789e1-116">目前，.NET Core CLI 中没有全局工具搜索功能。</span><span class="sxs-lookup"><span data-stu-id="789e1-116">Currently, there isn't a Global Tool search feature in the .NET Core CLI.</span></span> <span data-ttu-id="789e1-117">下面提供有关如何查找工具的一些建议：</span><span class="sxs-lookup"><span data-stu-id="789e1-117">The following are some recommendations on how to find tools:</span></span>
 
-* <span data-ttu-id="d20d6-118">可在 [NuGet](https://www.nuget.org) 上查找 .NET Core 全局工具。</span><span class="sxs-lookup"><span data-stu-id="d20d6-118">You can find .NET Core Global Tools on [NuGet](https://www.nuget.org).</span></span> <span data-ttu-id="d20d6-119">但是 NuGet 尚不能专门针对 .NET Core 全局工具进行搜索。</span><span class="sxs-lookup"><span data-stu-id="d20d6-119">However, NuGet doesn't yet allow you to search specifically for .NET Core Global Tools.</span></span>
-* <span data-ttu-id="d20d6-120">可在博客文章或 [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub 存储库中找到工具建议。</span><span class="sxs-lookup"><span data-stu-id="d20d6-120">You may find tool recommendations in blog posts or in the [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub repository.</span></span>
-* <span data-ttu-id="d20d6-121">可以在 [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) GitHub 存储库查看 ASP.NET 团队创建的全局工具的源代码。</span><span class="sxs-lookup"><span data-stu-id="d20d6-121">You can see the source code for the Global Tools created by the ASP.NET team at the [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) GitHub repository.</span></span>
-* <span data-ttu-id="d20d6-122">可以在 [.NET Core dotnet 诊断全局工具](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)中了解诊断工具。</span><span class="sxs-lookup"><span data-stu-id="d20d6-122">You can learn about diagnostic tools at [.NET Core dotnet diagnostic Global Tools](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).</span></span>
+* <span data-ttu-id="789e1-118">可在 [NuGet](https://www.nuget.org) 上查找 .NET Core 全局工具。</span><span class="sxs-lookup"><span data-stu-id="789e1-118">You can find .NET Core Global Tools on [NuGet](https://www.nuget.org).</span></span> <span data-ttu-id="789e1-119">但是 NuGet 尚不能专门针对 .NET Core 全局工具进行搜索。</span><span class="sxs-lookup"><span data-stu-id="789e1-119">However, NuGet doesn't yet allow you to search specifically for .NET Core Global Tools.</span></span>
+* <span data-ttu-id="789e1-120">可在博客文章或 [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub 存储库中找到工具建议。</span><span class="sxs-lookup"><span data-stu-id="789e1-120">You may find tool recommendations in blog posts or in the [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub repository.</span></span>
+* <span data-ttu-id="789e1-121">可以在 [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) GitHub 存储库查看 ASP.NET 团队创建的全局工具的源代码。</span><span class="sxs-lookup"><span data-stu-id="789e1-121">You can see the source code for the Global Tools created by the ASP.NET team at the [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) GitHub repository.</span></span>
+* <span data-ttu-id="789e1-122">可以在 [.NET Core dotnet 诊断全局工具](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)中了解诊断工具。</span><span class="sxs-lookup"><span data-stu-id="789e1-122">You can learn about diagnostic tools at [.NET Core dotnet diagnostic Global Tools](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).</span></span>
 
-## <a name="check-the-author-and-statistics"></a><span data-ttu-id="d20d6-123">查看作者和统计信息</span><span class="sxs-lookup"><span data-stu-id="d20d6-123">Check the author and statistics</span></span>
+## <a name="check-the-author-and-statistics"></a><span data-ttu-id="789e1-123">查看作者和统计信息</span><span class="sxs-lookup"><span data-stu-id="789e1-123">Check the author and statistics</span></span>
 
-<span data-ttu-id="d20d6-124">由于 .NET Core 全局工具以完全信任的方式运行且通常安装在你的路径中，所以它们的作用会很强大。</span><span class="sxs-lookup"><span data-stu-id="d20d6-124">Since .NET Core Global Tools run in full trust and are generally installed on your path, they can be very powerful.</span></span> <span data-ttu-id="d20d6-125">请勿下载不信任的人提供的工具。</span><span class="sxs-lookup"><span data-stu-id="d20d6-125">Don't download tools from people you don't trust.</span></span>
+<span data-ttu-id="789e1-124">由于 .NET Core 全局工具以完全信任的方式运行且通常安装在你的路径中，所以它们的作用会很强大。</span><span class="sxs-lookup"><span data-stu-id="789e1-124">Since .NET Core Global Tools run in full trust and are generally installed on your path, they can be very powerful.</span></span> <span data-ttu-id="789e1-125">请勿下载不信任的人提供的工具。</span><span class="sxs-lookup"><span data-stu-id="789e1-125">Don't download tools from people you don't trust.</span></span>
 
-<span data-ttu-id="d20d6-126">如果该工具在 NuGet 中托管，可以通过搜索该工具来查看作者和统计信息。</span><span class="sxs-lookup"><span data-stu-id="d20d6-126">If the tool is hosted on NuGet, you can check the author and statistics by searching for the tool.</span></span>
+<span data-ttu-id="789e1-126">如果该工具在 NuGet 中托管，可以通过搜索该工具来查看作者和统计信息。</span><span class="sxs-lookup"><span data-stu-id="789e1-126">If the tool is hosted on NuGet, you can check the author and statistics by searching for the tool.</span></span>
 
-## <a name="install-a-global-tool"></a><span data-ttu-id="d20d6-127">安装全局工具</span><span class="sxs-lookup"><span data-stu-id="d20d6-127">Install a Global Tool</span></span>
+## <a name="install-a-global-tool"></a><span data-ttu-id="789e1-127">安装全局工具</span><span class="sxs-lookup"><span data-stu-id="789e1-127">Install a Global Tool</span></span>
 
-<span data-ttu-id="d20d6-128">若要安装全局工具，请使用 [dotnet tool install](dotnet-tool-install.md) .NET Core CLI 命令。</span><span class="sxs-lookup"><span data-stu-id="d20d6-128">To install a Global Tool, you use the [dotnet tool install](dotnet-tool-install.md) .NET Core CLI command.</span></span> <span data-ttu-id="d20d6-129">下面的示例演示如何在默认位置安装全局工具：</span><span class="sxs-lookup"><span data-stu-id="d20d6-129">The following example shows how to install a Global Tool in the default location:</span></span>
+<span data-ttu-id="789e1-128">若要安装全局工具，请使用 [dotnet tool install](dotnet-tool-install.md) .NET Core CLI 命令。</span><span class="sxs-lookup"><span data-stu-id="789e1-128">To install a Global Tool, you use the [dotnet tool install](dotnet-tool-install.md) .NET Core CLI command.</span></span> <span data-ttu-id="789e1-129">下面的示例演示如何在默认位置安装全局工具：</span><span class="sxs-lookup"><span data-stu-id="789e1-129">The following example shows how to install a Global Tool in the default location:</span></span>
 
 ```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
-<span data-ttu-id="d20d6-130">如果无法安装该工具，则会显示错误消息。</span><span class="sxs-lookup"><span data-stu-id="d20d6-130">If the tool can't be installed, error messages are displayed.</span></span> <span data-ttu-id="d20d6-131">检查所需源是否正在被检查。</span><span class="sxs-lookup"><span data-stu-id="d20d6-131">Check that the feeds you expected are being checked.</span></span>
+<span data-ttu-id="789e1-130">如果无法安装该工具，则会显示错误消息。</span><span class="sxs-lookup"><span data-stu-id="789e1-130">If the tool can't be installed, error messages are displayed.</span></span> <span data-ttu-id="789e1-131">检查所需源是否正在被检查。</span><span class="sxs-lookup"><span data-stu-id="789e1-131">Check that the feeds you expected are being checked.</span></span>
 
-<span data-ttu-id="d20d6-132">如果想安装工具的预发布版本或特定版本，可以采用以下格式指定版本号：</span><span class="sxs-lookup"><span data-stu-id="d20d6-132">If you're trying to install a pre-release version or a specific version of the tool, you can specify the version number using the following format:</span></span>
+<span data-ttu-id="789e1-132">如果想安装工具的预发布版本或特定版本，可以采用以下格式指定版本号：</span><span class="sxs-lookup"><span data-stu-id="789e1-132">If you're trying to install a pre-release version or a specific version of the tool, you can specify the version number using the following format:</span></span>
 
 ```dotnetcli
 dotnet tool install -g <package-name> --version <version-number>
 ```
 
-<span data-ttu-id="d20d6-133">如果安装成功，会出现一条消息，显示用于调用工具的命令以及所安装的版本，类似于以下示例：</span><span class="sxs-lookup"><span data-stu-id="d20d6-133">If installation is successful, a message is displayed showing the command used to call the tool and the version installed, similar to the following example:</span></span>
+<span data-ttu-id="789e1-133">如果安装成功，会出现一条消息，显示用于调用工具的命令以及所安装的版本，类似于以下示例：</span><span class="sxs-lookup"><span data-stu-id="789e1-133">If installation is successful, a message is displayed showing the command used to call the tool and the version installed, similar to the following example:</span></span>
 
 ```output
 You can invoke the tool using the following command: dotnetsay
 Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 ```
 
-<span data-ttu-id="d20d6-134">全局工具可安装在默认目录或特定位置中。</span><span class="sxs-lookup"><span data-stu-id="d20d6-134">Global Tools can be installed in the default directory or in a specific location.</span></span> <span data-ttu-id="d20d6-135">默认目录为：</span><span class="sxs-lookup"><span data-stu-id="d20d6-135">The default directories are:</span></span>
+<span data-ttu-id="789e1-134">全局工具可安装在默认目录或特定位置中。</span><span class="sxs-lookup"><span data-stu-id="789e1-134">Global Tools can be installed in the default directory or in a specific location.</span></span> <span data-ttu-id="789e1-135">默认目录为：</span><span class="sxs-lookup"><span data-stu-id="789e1-135">The default directories are:</span></span>
 
-| <span data-ttu-id="d20d6-136">(OS)</span><span class="sxs-lookup"><span data-stu-id="d20d6-136">OS</span></span>          | <span data-ttu-id="d20d6-137">路径</span><span class="sxs-lookup"><span data-stu-id="d20d6-137">Path</span></span>                          |
+| <span data-ttu-id="789e1-136">(OS)</span><span class="sxs-lookup"><span data-stu-id="789e1-136">OS</span></span>          | <span data-ttu-id="789e1-137">路径</span><span class="sxs-lookup"><span data-stu-id="789e1-137">Path</span></span>                          |
 |-------------|-------------------------------|
-| <span data-ttu-id="d20d6-138">Linux/macOS</span><span class="sxs-lookup"><span data-stu-id="d20d6-138">Linux/macOS</span></span> | `$HOME/.dotnet/tools`         |
-| <span data-ttu-id="d20d6-139">Windows</span><span class="sxs-lookup"><span data-stu-id="d20d6-139">Windows</span></span>     | `%USERPROFILE%\.dotnet\tools` |
+| <span data-ttu-id="789e1-138">Linux/macOS</span><span class="sxs-lookup"><span data-stu-id="789e1-138">Linux/macOS</span></span> | `$HOME/.dotnet/tools`         |
+| <span data-ttu-id="789e1-139">Windows</span><span class="sxs-lookup"><span data-stu-id="789e1-139">Windows</span></span>     | `%USERPROFILE%\.dotnet\tools` |
 
-<span data-ttu-id="d20d6-140">这些位置在首次运行 SDK 时添加到用户的路径，所以可以直接调用安装在这里的全局工具。</span><span class="sxs-lookup"><span data-stu-id="d20d6-140">These locations are added to the user's path when the SDK is first run, so Global Tools installed there can be called directly.</span></span>
+<span data-ttu-id="789e1-140">这些位置在首次运行 SDK 时添加到用户的路径，所以可以直接调用安装在这里的全局工具。</span><span class="sxs-lookup"><span data-stu-id="789e1-140">These locations are added to the user's path when the SDK is first run, so Global Tools installed there can be called directly.</span></span>
 
-<span data-ttu-id="d20d6-141">请注意，全局工具是特定于用户的，而不是针对计算机全局的。</span><span class="sxs-lookup"><span data-stu-id="d20d6-141">Note that the Global Tools are user-specific, not machine global.</span></span> <span data-ttu-id="d20d6-142">特定于用户的意思是无法在一台计算机上安装所有用户都可用的全局工具。</span><span class="sxs-lookup"><span data-stu-id="d20d6-142">Being user-specific means you cannot install a Global Tool that is available to all users of the machine.</span></span> <span data-ttu-id="d20d6-143">只有安装了该工具的用户配置文件才能使用它。</span><span class="sxs-lookup"><span data-stu-id="d20d6-143">The tool is only available for each user profile where the tool was installed.</span></span>
+<span data-ttu-id="789e1-141">请注意，全局工具是特定于用户的，而不是针对计算机全局的。</span><span class="sxs-lookup"><span data-stu-id="789e1-141">Note that the Global Tools are user-specific, not machine global.</span></span> <span data-ttu-id="789e1-142">特定于用户的意思是无法在一台计算机上安装所有用户都可用的全局工具。</span><span class="sxs-lookup"><span data-stu-id="789e1-142">Being user-specific means you cannot install a Global Tool that is available to all users of the machine.</span></span> <span data-ttu-id="789e1-143">只有安装了该工具的用户配置文件才能使用它。</span><span class="sxs-lookup"><span data-stu-id="789e1-143">The tool is only available for each user profile where the tool was installed.</span></span>
 
-<span data-ttu-id="d20d6-144">也可在特定目录安装全局工具。</span><span class="sxs-lookup"><span data-stu-id="d20d6-144">Global Tools can also be installed in a specific directory.</span></span> <span data-ttu-id="d20d6-145">如果在特定目录安装全局工具，用户必须确保命令是可用的，方法是将该目录添加至路径、使用指定目录调用命令或从特定目录调用该工具。</span><span class="sxs-lookup"><span data-stu-id="d20d6-145">When installed in a specific directory, the user must ensure the command is available, by including that directory in the path, by calling the command with the directory specified, or calling the tool from within the specified directory.</span></span>
-<span data-ttu-id="d20d6-146">在这种情况下，.NET Core CLI 不将此地址自动添加至 PATH 环境变量。</span><span class="sxs-lookup"><span data-stu-id="d20d6-146">In this case, the .NET Core CLI doesn't add this location automatically to the PATH environment variable.</span></span>
+<span data-ttu-id="789e1-144">也可在特定目录安装全局工具。</span><span class="sxs-lookup"><span data-stu-id="789e1-144">Global Tools can also be installed in a specific directory.</span></span> <span data-ttu-id="789e1-145">如果在特定目录安装全局工具，用户必须确保命令是可用的，方法是将该目录添加至路径、使用指定目录调用命令或从特定目录调用该工具。</span><span class="sxs-lookup"><span data-stu-id="789e1-145">When installed in a specific directory, the user must ensure the command is available, by including that directory in the path, by calling the command with the directory specified, or calling the tool from within the specified directory.</span></span>
+<span data-ttu-id="789e1-146">在这种情况下，.NET Core CLI 不将此地址自动添加至 PATH 环境变量。</span><span class="sxs-lookup"><span data-stu-id="789e1-146">In this case, the .NET Core CLI doesn't add this location automatically to the PATH environment variable.</span></span>
 
-## <a name="use-the-tool"></a><span data-ttu-id="d20d6-147">使用该工具</span><span class="sxs-lookup"><span data-stu-id="d20d6-147">Use the tool</span></span>
+## <a name="use-the-tool"></a><span data-ttu-id="789e1-147">使用该工具</span><span class="sxs-lookup"><span data-stu-id="789e1-147">Use the tool</span></span>
 
-<span data-ttu-id="d20d6-148">安装工具后，可以使用它的命令来调用它。</span><span class="sxs-lookup"><span data-stu-id="d20d6-148">Once the tool is installed, you can call it by using its command.</span></span> <span data-ttu-id="d20d6-149">注意，该命令可能和包名称不同。</span><span class="sxs-lookup"><span data-stu-id="d20d6-149">Note that the command may not be the same as the package name.</span></span>
+<span data-ttu-id="789e1-148">安装工具后，可以使用它的命令来调用它。</span><span class="sxs-lookup"><span data-stu-id="789e1-148">Once the tool is installed, you can call it by using its command.</span></span> <span data-ttu-id="789e1-149">注意，该命令可能和包名称不同。</span><span class="sxs-lookup"><span data-stu-id="789e1-149">Note that the command may not be the same as the package name.</span></span>
 
-<span data-ttu-id="d20d6-150">如果该命令为 `dotnetsay`，可以使用以下内容调用它：</span><span class="sxs-lookup"><span data-stu-id="d20d6-150">If the command is `dotnetsay`, you call it with:</span></span>
+<span data-ttu-id="789e1-150">如果该命令为 `dotnetsay`，可以使用以下内容调用它：</span><span class="sxs-lookup"><span data-stu-id="789e1-150">If the command is `dotnetsay`, you call it with:</span></span>
 
 ```console
 dotnetsay
 ```
 
-<span data-ttu-id="d20d6-151">如果工具作者希望工具出现在 `dotnet` 提示符的上下文中，他们可能采用称为 `dotnet <command>` 的方式进行编写，例如：</span><span class="sxs-lookup"><span data-stu-id="d20d6-151">If the tool author wanted the tool to appear in the context of the `dotnet` prompt, they may have written it in a way that you call it as `dotnet <command>`, such as:</span></span>
+<span data-ttu-id="789e1-151">如果工具作者希望工具出现在 `dotnet` 提示符的上下文中，他们可能采用称为 `dotnet <command>` 的方式进行编写，例如：</span><span class="sxs-lookup"><span data-stu-id="789e1-151">If the tool author wanted the tool to appear in the context of the `dotnet` prompt, they may have written it in a way that you call it as `dotnet <command>`, such as:</span></span>
 
 ```dotnetcli
 dotnet doc
 ```
 
-<span data-ttu-id="d20d6-152">若要查找安装的全局工具包中包含哪些工具，可以使用 [dotnet tool list](dotnet-tool-list.md) 命令列出安装的包。</span><span class="sxs-lookup"><span data-stu-id="d20d6-152">You can find which tools are included in an installed Global Tool package by listing the installed packages using the [dotnet tool list](dotnet-tool-list.md) command.</span></span>
+<span data-ttu-id="789e1-152">若要查找安装的全局工具包中包含哪些工具，可以使用 [dotnet tool list](dotnet-tool-list.md) 命令列出安装的包。</span><span class="sxs-lookup"><span data-stu-id="789e1-152">You can find which tools are included in an installed Global Tool package by listing the installed packages using the [dotnet tool list](dotnet-tool-list.md) command.</span></span>
 
-<span data-ttu-id="d20d6-153">若要查看使用说明，可以访问工具的网站或键入下列命令之一：</span><span class="sxs-lookup"><span data-stu-id="d20d6-153">You can also look for usage instructions at the tool's website or by typing one of the following commands:</span></span>
+<span data-ttu-id="789e1-153">若要查看使用说明，可以访问工具的网站或键入下列命令之一：</span><span class="sxs-lookup"><span data-stu-id="789e1-153">You can also look for usage instructions at the tool's website or by typing one of the following commands:</span></span>
 
 ```console
 <command> --help
 dotnet <command> --help
 ```
 
-## <a name="other-cli-commands"></a><span data-ttu-id="d20d6-154">其他 CLI 命令</span><span class="sxs-lookup"><span data-stu-id="d20d6-154">Other CLI commands</span></span>
+## <a name="other-cli-commands"></a><span data-ttu-id="789e1-154">其他 CLI 命令</span><span class="sxs-lookup"><span data-stu-id="789e1-154">Other CLI commands</span></span>
 
-<span data-ttu-id="d20d6-155">.NET Core SDK 包含支持 .NET Core 全局工具的其他命令。</span><span class="sxs-lookup"><span data-stu-id="d20d6-155">The .NET Core SDK contains other commands that support .NET Core Global Tools.</span></span> <span data-ttu-id="d20d6-156">将 `dotnet tool` 命令用于以下选项之一：</span><span class="sxs-lookup"><span data-stu-id="d20d6-156">Use any of the `dotnet tool` commands with one of the following options:</span></span>
+<span data-ttu-id="789e1-155">.NET Core SDK 包含支持 .NET Core 全局工具的其他命令。</span><span class="sxs-lookup"><span data-stu-id="789e1-155">The .NET Core SDK contains other commands that support .NET Core Global Tools.</span></span> <span data-ttu-id="789e1-156">将 `dotnet tool` 命令用于以下选项之一：</span><span class="sxs-lookup"><span data-stu-id="789e1-156">Use any of the `dotnet tool` commands with one of the following options:</span></span>
 
-* <span data-ttu-id="d20d6-157">`--global` 或 `-g` 指定命令用于用户范围的全局工具。</span><span class="sxs-lookup"><span data-stu-id="d20d6-157">`--global` or `-g` specifies that the command is applicable to user-wide Global Tools.</span></span>
-* <span data-ttu-id="d20d6-158">`--tool-path` 指定全局工具的自定义位置。</span><span class="sxs-lookup"><span data-stu-id="d20d6-158">`--tool-path` specifies a custom location for Global Tools.</span></span>
+* <span data-ttu-id="789e1-157">`--global` 或 `-g` 指定命令用于用户范围的全局工具。</span><span class="sxs-lookup"><span data-stu-id="789e1-157">`--global` or `-g` specifies that the command is applicable to user-wide Global Tools.</span></span>
+* <span data-ttu-id="789e1-158">`--tool-path` 指定全局工具的自定义位置。</span><span class="sxs-lookup"><span data-stu-id="789e1-158">`--tool-path` specifies a custom location for Global Tools.</span></span>
 
-<span data-ttu-id="d20d6-159">若要了解哪些命令可用于全局工具：</span><span class="sxs-lookup"><span data-stu-id="d20d6-159">To find out which commands are available for Global Tools:</span></span>
+<span data-ttu-id="789e1-159">若要了解哪些命令可用于全局工具：</span><span class="sxs-lookup"><span data-stu-id="789e1-159">To find out which commands are available for Global Tools:</span></span>
 
 ```dotnetcli
 dotnet tool --help
 ```
 
-<span data-ttu-id="d20d6-160">更新全局工具涉及卸载该工具并重新安装它的最新稳定版。</span><span class="sxs-lookup"><span data-stu-id="d20d6-160">Updating a Global Tool involves uninstalling and reinstalling it with the latest stable version.</span></span> <span data-ttu-id="d20d6-161">若要更新全局工具，请使用 [dotnet tool update](dotnet-tool-update.md) 命令：</span><span class="sxs-lookup"><span data-stu-id="d20d6-161">To update a Global Tool, use the [dotnet tool update](dotnet-tool-update.md) command:</span></span>
+<span data-ttu-id="789e1-160">更新全局工具涉及卸载该工具并重新安装它的最新稳定版。</span><span class="sxs-lookup"><span data-stu-id="789e1-160">Updating a Global Tool involves uninstalling and reinstalling it with the latest stable version.</span></span> <span data-ttu-id="789e1-161">若要更新全局工具，请使用 [dotnet tool update](dotnet-tool-update.md) 命令：</span><span class="sxs-lookup"><span data-stu-id="789e1-161">To update a Global Tool, use the [dotnet tool update](dotnet-tool-update.md) command:</span></span>
 
 ```dotnetcli
 dotnet tool update -g <packagename>
 ```
 
-<span data-ttu-id="d20d6-162">使用 [dotnet tool uninstall](dotnet-tool-uninstall.md) 命令删除全局工具：</span><span class="sxs-lookup"><span data-stu-id="d20d6-162">Remove a Global Tool using the [dotnet tool uninstall](dotnet-tool-uninstall.md):</span></span>
+<span data-ttu-id="789e1-162">使用 [dotnet tool uninstall](dotnet-tool-uninstall.md) 命令删除全局工具：</span><span class="sxs-lookup"><span data-stu-id="789e1-162">Remove a Global Tool using the [dotnet tool uninstall](dotnet-tool-uninstall.md):</span></span>
 
 ```dotnetcli
 dotnet tool uninstall -g <packagename>
 ```
 
-<span data-ttu-id="d20d6-163">若要显示计算机上目前安装的所有全局工具及其版本和命令，请使用 [dotnet tool list](dotnet-tool-list.md) 命令：</span><span class="sxs-lookup"><span data-stu-id="d20d6-163">To display all of the Global Tools currently installed on the machine, along with their version and commands, use the [dotnet tool list](dotnet-tool-list.md) command:</span></span>
+<span data-ttu-id="789e1-163">若要显示计算机上目前安装的所有全局工具及其版本和命令，请使用 [dotnet tool list](dotnet-tool-list.md) 命令：</span><span class="sxs-lookup"><span data-stu-id="789e1-163">To display all of the Global Tools currently installed on the machine, along with their version and commands, use the [dotnet tool list](dotnet-tool-list.md) command:</span></span>
 
 ```dotnetcli
 dotnet tool list -g
 ```
 
-## <a name="see-also"></a><span data-ttu-id="d20d6-164">请参阅</span><span class="sxs-lookup"><span data-stu-id="d20d6-164">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="789e1-164">请参阅</span><span class="sxs-lookup"><span data-stu-id="789e1-164">See also</span></span>
 
-* [<span data-ttu-id="d20d6-165">排查 .NET Core 工具使用问题</span><span class="sxs-lookup"><span data-stu-id="d20d6-165">Troubleshoot .NET Core tool usage issues</span></span>](troubleshoot-usage-issues.md)
+* [<span data-ttu-id="789e1-165">排查 .NET Core 工具使用问题</span><span class="sxs-lookup"><span data-stu-id="789e1-165">Troubleshoot .NET Core tool usage issues</span></span>](troubleshoot-usage-issues.md)
