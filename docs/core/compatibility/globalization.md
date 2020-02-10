@@ -1,21 +1,21 @@
 ---
-title: 全球化中断性变更 - .NET Core
+title: 全球化中断性变更
 description: 列出 .NET Core 中全球化过程内的中断性变更。
 ms.date: 09/20/2019
-ms.openlocfilehash: 6eb979c0bdf366d6b8522aec0c2176a46128106e
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: eebab2b43c1fc852cd728636518c6ac2ceef2d74
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116439"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093001"
 ---
-# <a name="globalization-breaking-changes"></a><span data-ttu-id="47f8e-103">全球化中断性变更</span><span class="sxs-lookup"><span data-stu-id="47f8e-103">Globalization breaking changes</span></span>
+# <a name="globalization-breaking-changes"></a><span data-ttu-id="f49b0-103">全球化中断性变更</span><span class="sxs-lookup"><span data-stu-id="f49b0-103">Globalization breaking changes</span></span>
 
-<span data-ttu-id="47f8e-104">本页记录了以下中断性变更：</span><span class="sxs-lookup"><span data-stu-id="47f8e-104">The following breaking changes are documented on this page:</span></span>
+<span data-ttu-id="f49b0-104">本页记录了以下中断性变更：</span><span class="sxs-lookup"><span data-stu-id="f49b0-104">The following breaking changes are documented on this page:</span></span>
 
-- [<span data-ttu-id="47f8e-105">“C”区域设置映射到固定区域设置</span><span class="sxs-lookup"><span data-stu-id="47f8e-105">"C" locale maps to the invariant locale</span></span>](#c-locale-maps-to-the-invariant-locale)
+- [<span data-ttu-id="f49b0-105">“C”区域设置映射到固定区域设置</span><span class="sxs-lookup"><span data-stu-id="f49b0-105">"C" locale maps to the invariant locale</span></span>](#c-locale-maps-to-the-invariant-locale)
 
-## <a name="net-core-30"></a><span data-ttu-id="47f8e-106">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="47f8e-106">.NET Core 3.0</span></span>
+## <a name="net-core-30"></a><span data-ttu-id="f49b0-106">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="f49b0-106">.NET Core 3.0</span></span>
 
 [!INCLUDE["C" locale maps to the invariant locale](~/includes/core-changes/globalization/3.0/c-locale-maps-to-invariant-locale.md)]
 
