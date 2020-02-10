@@ -1,13 +1,13 @@
 ---
 title: 类型扩展
 description: 了解如何F#通过类型扩展将新成员添加到之前定义的对象类型。
-ms.date: 11/04/2019
-ms.openlocfilehash: 3e2c6971156bd562ed5d5428e6b7ffdc520c4cf5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.date: 02/05/2020
+ms.openlocfilehash: 9ab3a007783f67fd8d80cff840ac3085fdcd60f7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341572"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092676"
 ---
 # <a name="type-extensions"></a>类型扩展
 
@@ -33,7 +33,8 @@ open System.Runtime.CompilerServices
 
 [<Extension>]
 type Extensions() =
-    [static] member self-identifier.extension-name (ty: typename, [args]) =
+    [<Extension>]
+    static member self-identifier.extension-name (ty: typename, [args]) =
         body
     ...
 ```
@@ -136,12 +137,21 @@ namespace Extensions
 open System.Runtime.CompilerServices
 
 [<Extension>]
-type IEnumerableExtensions() =
+type IEnumerableExtensions =
     [<Extension>]
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
 使用时，此代码将使其看起来就像 <xref:System.Collections.Generic.IEnumerable%601>上定义 `Sum`，只要 `Extensions` 已打开或在范围内。
+
+为了使扩展可用于 VB.NET 代码，需要在程序集级别上额外 `ExtensionAttribute`：
+
+```fsharp
+module AssemblyInfo
+open System.Runtime.CompilerServices
+[<assembly:Extension>]
+do ()
+```
 
 ## <a name="other-remarks"></a>其他备注
 
@@ -149,7 +159,7 @@ type IEnumerableExtensions() =
 
 - 可访问的任何类型都可以进行扩展。
 - 内部和可选类型扩展可以定义_任何_成员类型，而不仅仅是方法。 例如，也可以扩展属性。
-- [语法](type-extensions.md#syntax)中的`self-identifier`标记表示正在调用的类型的实例, 就像普通成员一样。
+- [语法](type-extensions.md#syntax)中的 `self-identifier` 标记表示正在调用的类型的实例，就像普通成员一样。
 - 扩展成员可以是静态成员或实例成员。
 - 类型扩展上的类型变量必须与声明类型的约束匹配。
 

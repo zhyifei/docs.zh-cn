@@ -2,12 +2,12 @@
 title: 安全性验证
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: e264f866c459d185f7d324390bf3328a4fa39032
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c47f8910076590dae1ee6aabbddcb072d76bfc27
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716331"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094925"
 ---
 # <a name="security-validation"></a>安全性验证
 此示例演示如何使用自定义行为来验证计算机上的服务，以确保服务符合特定条件。 在此示例中，自定义行为通过以下方法验证服务：扫描服务上的每个终结点，并查看这些终结点是否包含安全的绑定元素。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -83,7 +83,7 @@ public void Validate(ServiceDescription serviceDescription,
   
 1. 单击 "**开始**" 菜单，然后选择 "**运行 ...** "。  
   
-2. 键入 `eventvwr` 然后单击 **"确定"** 。  
+2. 键入 `eventvwr` ，然后单击 **“确定”** 。  
   
 3. 在事件查看器 "窗口中，单击"**应用程序**"。  
   
@@ -108,4 +108,4 @@ public void Validate(ServiceDescription serviceDescription,
   
 ## <a name="see-also"></a>另请参阅
 
-- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 监视示例](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

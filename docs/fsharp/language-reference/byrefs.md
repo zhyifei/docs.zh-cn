@@ -2,12 +2,12 @@
 title: Byref
 description: 了解用于低级别编程的中F#的 byref 和 byref 类型（如）。
 ms.date: 11/04/2019
-ms.openlocfilehash: 05a40059ad5b72829233b0c4135c76eb1cff4da5
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 2d98d325dc4ad26548fb2cc6aa5b872e152ee0a8
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965810"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092783"
 ---
 # <a name="byrefs"></a>Byref
 
@@ -152,7 +152,7 @@ let v2 =  C.M2(res, 4)
 
 ## <a name="byref-like-structs"></a>类似 Byref 的结构
 
-除了 `byref`/`inref`/`outref` 三个，还可以定义自己的结构，该结构可以遵循与 `byref`类似的语义。 此操作通过 <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> 属性实现：
+除了 `byref`/`inref`/`outref` 三个，还可以定义自己的结构，该结构可以遵循与 `byref`类似的语义。 这是通过 <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> 属性完成的：
 
 ```fsharp
 open System
@@ -188,7 +188,7 @@ let squareAndPrint (data : byref<int>) =
 ```
 
 若要返回值 byref，则包含值的变量的生存期必须长于当前范围。
-此外，若要返回 byref，请使用 & 值（其中 value 是生存时间比当前范围长的变量）。
+此外，若要返回 byref，请使用 `&value` （其中 value 是生存时间比当前范围长的变量）。
 
 ```fsharp
 let mutable sum = 0
@@ -252,4 +252,4 @@ let test () =
     ()
 ```
 
-这会阻止你获取不同的结果，具体取决于你在编译时是启用还是禁用优化。
+这会阻止你获取不同的结果，具体取决于你是否编译了优化。

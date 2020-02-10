@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 755240859829042e9790b9c89e47bb7a2013ceef
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: b1887afd19407898d8de1d92252e29778899fb89
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460450"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095185"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 对象概述
 
@@ -170,11 +170,11 @@ mc:Ignorable="PresentationOptions"
 > [!NOTE]
 > 使用对基实现的调用来开始每个 <xref:System.Windows.Freezable> 方法，这一点非常重要。
 
-有关自定义 <xref:System.Windows.Freezable> 类的示例，请参阅[自定义动画示例](https://go.microsoft.com/fwlink/?LinkID=159981)。
+有关自定义 <xref:System.Windows.Freezable> 类的示例，请参阅[自定义动画示例](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/CustomAnimation)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Freezable>
-- [自定义动画示例](https://go.microsoft.com/fwlink/?LinkID=159981)
+- [自定义动画示例](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/CustomAnimation)
 - [依赖项属性概述](dependency-properties-overview.md)
 - [自定义依赖属性](custom-dependency-properties.md)

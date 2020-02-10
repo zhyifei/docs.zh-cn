@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 577ccd3bb9a20964dcdfc79ef2028854e4a55dc6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 720ece2f7f47961e0ab6ebf03c8afeb5fa3a6271
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342695"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093261"
 ---
 # <a name="bool-c-reference"></a>bool（C# 参考）
 
@@ -46,5 +46,5 @@ C# 仅提供了两个涉及 `bool` 类型的转换。 它们是对相应的可�
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
-- [内置类型表](../keywords/built-in-types-table.md)
+- [值类型](value-types.md)
 - [true 和 false 运算符](../operators/true-false-operators.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: aac6c347886b2c29e599952d7642fbe76441b617
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 6b8b58228e94ed12557e97406e55cc4165753076
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458908"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095081"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters 和 XAML
 本主题介绍将从字符串进行的类型转换作为常规 XAML 语言功能的用途。 在 .NET Framework 中，<xref:System.ComponentModel.TypeConverter> 类作为托管自定义类的实现的一部分提供特定用途，该托管自定义类可用作 XAML 特性用法中的属性值。 如果你编写自定义类，并且你希望类的实例可以用作 XAML 可设置属性值，则可能需要将 <xref:System.ComponentModel.TypeConverterAttribute> 应用到类、编写自定义 <xref:System.ComponentModel.TypeConverter> 类或同时使用这两种方法。  
@@ -55,7 +55,7 @@ ms.locfileid: "73458908"
 ## <a name="implementing-a-type-converter"></a>实现类型转换器  
   
 ### <a name="typeconverter"></a>TypeConverter  
- 在前面给出的 <xref:System.Windows.Point> 示例中，提到了类 <xref:System.Windows.PointConverter>。 对于 XAML 的 .NET 实现，用于 XAML 用途的所有类型转换器都是从基类派生的类 <xref:System.ComponentModel.TypeConverter>。 <xref:System.ComponentModel.TypeConverter> 类存在于 XAML 存在之前的 .NET Framework 版本中：其原始用法之一是在可视化设计器中为属性对话框提供字符串转换。 对于 XAML，将展开 <xref:System.ComponentModel.TypeConverter> 的角色，以将其作为字符串的基类和字符串转换的基类，这些转换允许分析字符串属性值，并且可能将特定对象属性的运行时值处理回作为属性的序列化。  
+ 在前面给出的 <xref:System.Windows.Point> 示例中，提到了类 <xref:System.Windows.PointConverter>。 对于 XAML 的 .NET 实现，用于 XAML 用途的所有类型转换器都是从基类派生的类 <xref:System.ComponentModel.TypeConverter>。 <xref:System.ComponentModel.TypeConverter> 类存在于 XAML 存在之前的 .NET Framework 版本中：其原始用法之一是在可视化设计器中为属性对话框提供字符串转换。 对于 XAML，将扩展 <xref:System.ComponentModel.TypeConverter> 的角色，以使其包含允许分析字符串属性值并将特定对象属性的运行时值作为属性进行序列化的字符串转换的基类和字符串转换。  
   
  <xref:System.ComponentModel.TypeConverter> 定义了四个成员，它们与字符串之间的相互转换相关，用于 XAML 处理目的：  
   
@@ -67,14 +67,15 @@ ms.locfileid: "73458908"
   
 - <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
   
- 其中，最重要的方法是 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>。 此方法将输入字符串转换为所需的对象类型。 严格地说，可以实现 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 方法，以将范围更广的类型转换为转换器的预期目标类型，进而实现超出 XAML （如支持运行时转换）的目的，但对于 XAML 而言，它是仅可处理重要的 <xref:System.String> 输入的代码路径。  
+ 其中，最重要的方法是 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>。 此方法将输入字符串转换为所需的对象类型。 严格地说，可以实现 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 方法，以将范围更广泛的类型转换为转换器的预期目标类型，从而为超出 XAML （如支持运行时转换）的目的提供支持，但对于 XAML 而言，这只是可以处理 <xref:System.String> 输入的代码路径。  
   
  下一个最重要的方法是 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>。 如果将应用程序转换为标记表示形式（例如，如果它作为文件保存到 XAML），<xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 负责生成标记表示形式。 在这种情况下，对 XAML 重要的代码路径是传递 <xref:System.String> 的 `destinationType`。  
   
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 和 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 是在服务查询 <xref:System.ComponentModel.TypeConverter> 实现的功能时使用的支持方法。 必须实现这些方法以便为转换器的等效转换方法支持的特定于类型的情况返回 `true` 。 对于 XAML 用途，这通常意味着 <xref:System.String> 类型。  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>XAML 的区域性信息和类型转换器  
- 每个 <xref:System.ComponentModel.TypeConverter> 实现都可以对构成转换的有效字符串的内容进行自己的解释，还可以使用或忽略作为参数传递的类型说明。 对于区域性和 XAML 类型转换，有一个重要的注意事项。 XAML 完全支持使用可本地化的字符串作为特性值。 但不支持将该可本地化字符串用作具有特定区域性要求的类型转换器输入，因为 XAML 特性值的类型转换器包含一个必要的固定语言分析行为，该行为使用 `en-US` 区域性。 有关此限制的设计原因的更多信息，请查阅 XAML 语言规范 ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525))。  
+
+ 每个 <xref:System.ComponentModel.TypeConverter> 实现都可以对构成转换的有效字符串的内容进行自己的解释，还可以使用或忽略作为参数传递的类型说明。 对于区域性和 XAML 类型转换，有一个重要的注意事项。 XAML 完全支持使用可本地化的字符串作为特性值。 但不支持将该可本地化字符串用作具有特定区域性要求的类型转换器输入，因为 XAML 特性值的类型转换器包含一个必要的固定语言分析行为，该行为使用 `en-US` 区域性。 有关此限制的设计原因的详细信息，请参阅 XAML 语言规范（[\[的\]](https://download.microsoft.com/download/0/A/6/0A6F7755-9AF5-448B-907D-13985ACCF53E/[MS-XAML].pdf)。  
   
  区域性可能会产生问题的示例之一是，某些区域性使用逗号作为数字的小数点分隔符。 这将与许多 WPF XAML 类型转换器所具有的使用逗号作为分隔符的行为发生冲突（根据常用的 X,Y 形式等过去的先例，或逗号分隔的列表）。 即使在周围的 XAML 中传递区域性（将 `Language` 或 `xml:lang` 设置为 `sl-SI` 区域性，以此方式使用逗号作为小数点的区域性的一个示例）也不能解决此问题。  
   
@@ -107,7 +108,7 @@ ms.locfileid: "73458908"
   
  还可以基于每个属性提供类型转换器。 不要将 <xref:System.ComponentModel.TypeConverterAttribute> 应用到类定义，而是将其应用于属性定义（主定义，而不是 `get`/`set` 实现中）。 属性的类型必须与自定义类型转换器处理的类型匹配。 应用此特性时，当 XAML 处理器处理该属性的值时，它可以处理输入字符串并返回对象实例。 如果选择使用 Microsoft .NET 框架中的属性类型或不能控制类定义并且无法应用 <xref:System.ComponentModel.TypeConverterAttribute> 的其他库，则每属性类型转换器方法特别有用。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ComponentModel.TypeConverter>
 - [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

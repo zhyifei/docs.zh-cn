@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 30ea92f09bc655796b6bc268212b6d9e0e05bd9b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: b724ff1ce85442f64980fdc972188705992d5a4f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919336"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094977"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隐私信息
 Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foundation （WCF）版本3.0 生成应用程序时，应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向您的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 WCF 不会从你的应用程序向 Microsoft 发送任何信息，除非你或最终用户选择将其发送给我们。  
@@ -28,7 +28,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  WCF 消息传递层不会向本地计算机写入任何个人信息。 但是，如果服务开发人员创建了公开此类信息的服务（例如，通过在终结点名称中使用个人姓名，或者将个人信息包含在终结点的 Web 服务描述语言中，但不要求客户端使用 https 来访问 WSDL），则消息传递层可能会在网络级传播个人信息。 此外，如果开发人员针对公开个人信息的终结点运行 " [Svcutil.exe 元数据实用工具（）](servicemodel-metadata-utility-tool-svcutil-exe.md) " 工具，则该工具的输出可能包含该信息，并且输出文件将写入本地硬盘。  
   
-## <a name="hosting"></a>托管  
+## <a name="hosting"></a>Hosting  
  WCF 中的托管功能使应用程序可以按需启动，或者允许在多个应用程序之间共享端口。 WCF 应用程序可以在 Internet Information Services （IIS）中承载，类似于 ASP.NET。  
   
  承载功能不会在网路上公开任何特定信息，也不会在计算机上保留数据。  
@@ -44,7 +44,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  身份验证可以导致在相互通信的终结点之间建立安全会话。 会话由 GUID 标识，而 GUID 能够在安全会话的整个生存期保持有效。 下表显示保留的内容和保留位置。  
   
-|数据|存储区|  
+|data|存储|  
 |----------|-------------|  
 |表示凭据，例如用户名、X.509 证书、Kerberos 令牌和对凭据的引用。|标准 Windows 凭据管理机制，例如 Windows 证书存储区。|  
 |用户成员资格信息，例如用户名和密码。|ASP.NET 成员资格提供程序。|  
@@ -77,7 +77,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  排队通道功能不会向消息中添加标头。 相反，它会创建一个具有适当的消息队列消息属性集的消息队列消息，并调用消息队列方法来将消息放入“消息队列”队列中。 消息队列是一个可选组件，它随 Windows 一起提供。  
   
- 排队通道功能不会在最终用户的计算机上保留任何信息，因为它使用消息队列作为队列基础结构。  
+ 排队通道功能不会将任何信息保留在最终用户的计算机上，因为它使用消息队列作为队列基础结构。  
   
 ## <a name="com-integration"></a>COM+ 集成  
  此功能包装现有的 COM 和 COM + 功能，以创建与 WCF 服务兼容的服务。 此功能不使用特定的标头，并且不会在最终用户的计算机上保留数据。  
@@ -88,7 +88,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
 ## <a name="peer-channel"></a>对等通道  
  对等通道允许使用 WCF 开发多方应用程序。 多方消息传递发生在网格环境中。 网格由节点可以加入的名称来标识。 对等通道中的每个节点都在用户指定的端口创建一个 TCP 侦听器，并与网格中的其他节点建立连接以确保连接的弹性。 为了与网格中的其他节点进行连接，节点还会与网格中的其他节点交换一些数据，包括侦听器地址和计算机的 IP 地址。 在网格中四处发送的消息可能包含与发送方相关的安全信息，以防止发生消息欺骗和篡改。  
   
- 最终用户的计算机上不会存储任何个人信息。  
+ 最终用户的计算机上不存储任何个人信息。  
   
 ## <a name="it-professional-experience"></a>IT 专业经验  
   
@@ -127,13 +127,13 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  被删除的密钥：  
   
- xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" 的 \-  
+ xmlns： wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns： wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" 的 \-  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的 \-  
+ xmlns： wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns： wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的 \-  
   
  wsse:Password  
   
@@ -141,7 +141,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  被删除的潜在个人信息：  
   
- xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的 \-  
+ xmlns： wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns： wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的 \-  
   
  wsse:Username  
   
@@ -163,13 +163,13 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  >  
   
- \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
+ \<条件 NotBefore = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
   
- \<AudienceRestrictionCondition>  
+ \<AudienceRestrictionCondition >  
   
  \<受众 > [uri]\</Audience > +  
   
- \</AudienceRestrictionCondition>*  
+ \</AudienceRestrictionCondition > *  
   
  \<DoNotCacheCondition/> *  
   
@@ -183,7 +183,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  \<建议 >  
   
- \<AssertionIDReference>[ID]\</AssertionIDReference>*  
+ \<Assertionidreference&gt; & > [ID]\</AssertionIDReference > *  
   
  \<断言 > [Assertion]\</Assertion > *  
   
@@ -195,7 +195,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  \<语句/> *  
   
- \<SubjectStatement>  
+ \<SubjectStatement >  
   
  \<主题 >  
   
@@ -211,19 +211,19 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation>  
+ \<SubjectConfirmation >  
   
- \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
+ \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
   
- \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
+ \<SubjectConfirmationData > [any]\</SubjectConfirmationData >？  
   
  \<ds： KeyInfo > ...\</ds： KeyInfo >？  
   
- \</SubjectConfirmation>?  
+ \</SubjectConfirmation >？  
   
- \</Subject>  
+ \</Subject >  
   
- \</SubjectStatement>*  
+ \</SubjectStatement > *  
   
  -->  
   
@@ -255,9 +255,9 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  />*  
   
- \</AuthenticationStatement>*  
+ \</AuthenticationStatement > *  
   
- \<AttributeStatement>  
+ \<AttributeStatement >  
   
  [Subject]  
   
@@ -273,7 +273,7 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  \</Attribute > +  
   
- \</AttributeStatement>*  
+ \</AttributeStatement > *  
   
  \<AuthorizationDecisionStatement  
   
@@ -289,22 +289,22 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
   
  \<证据 >  
   
- \<AssertionIDReference>[ID]\</AssertionIDReference>+  
+ \<Assertionidreference&gt; & > [ID]\</AssertionIDReference > +  
   
  \<断言 > [Assertion]\</Assertion > +  
   
  \</Evidence >？  
   
- \</AuthorizationDecisionStatement>*  
+ \</AuthorizationDecisionStatement > *  
   
- \</Assertion>  
+ \</Assertion >  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>在记录解密/未加密消息时从消息正文中删除的信息  
  如前所述，WCF 从消息头中删除已记录的解密/未加密消息的密钥和已知的潜在个人信息。 另外，WCF 将从以下列表中的正文元素和操作的消息正文中删除密钥和已知的潜在个人信息，其中描述了密钥交换中涉及的安全消息。  
   
  对于下列命名空间：  
   
- xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" （例如，如果没有可用的操作）  
+ xmlns： wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns： wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" （例如，如果没有可用的操作）  
   
  删除那些涉及密钥交换的正文元素的信息：  
   
@@ -359,17 +359,17 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>不会从特定于应用程序的标头和正文数据中删除任何信息  
  WCF 不跟踪特定于应用程序的标头中的个人信息（例如查询字符串）或正文数据（例如，信用卡号）。  
   
- 启用消息日志记录后，特定于应用程序的标头中的个人信息和正文信息在日志中可见。 同样，应用程序部署人员负责设置配置和日志文件上的 ACL。 如果他不希望让这些信息可见，他还可以禁用日志记录，或者在记录这些信息之后将其从日志文件中筛选掉。  
+ 启用消息日志记录后，特定于应用程序的标头中的个人信息和正文信息在日志中可见。 同样，应用程序部署人员负责设置配置和日志文件上的 ACL。 如果不希望此信息可见，还可以关闭日志记录，或者在记录日志文件后从日志文件中筛选出此信息。  
   
 ### <a name="service-model-tracing"></a>服务模型跟踪  
  使用服务模型跟踪源（<xref:System.ServiceModel>）可以对与消息处理相关的活动和事件进行跟踪。 此功能使用 <xref:System.Diagnostics> 中的 .NET Framework 诊断功能。 就像 <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> 属性一样，用户可以使用 .NET Framework 应用程序配置文件对其位置和 ACL 进行配置。 与消息日志记录一样，文件位置总是在管理员启用跟踪时进行配置，这样，管理员便可以控制 ACL。  
   
- 当消息在范围内时，跟踪包含消息头。 上一节中描述的有关隐藏消息头中的潜在个人信息的相同规则同样适用：默认情况下，将先前标识的个人信息从跟踪中包含的标头中删除。 计算机管理员和应用程序部署人员都必须修改配置，以便记录潜在的个人信息。 但是，跟踪中会记录特定于应用程序的标头中包含的个人信息。 应用程序部署人员负责设置配置和跟踪文件上的 ACL。 如果他不希望让这些信息可见，他还可以禁用跟踪记录，或者在记录这些信息之后将其从跟踪文件中筛选掉。  
+ 当消息在范围内时，跟踪包含消息头。 上一节中描述的有关隐藏消息头中的潜在个人信息的相同规则同样适用：默认情况下，将先前标识的个人信息从跟踪中包含的标头中删除。 计算机管理员和应用程序部署人员都必须修改配置，以便记录潜在的个人信息。 但是，跟踪中会记录特定于应用程序的标头中包含的个人信息。 应用程序部署人员负责设置配置和跟踪文件上的 ACL。 它们还可以禁用跟踪来隐藏此信息，或在记录后从跟踪文件中筛选出此信息。  
   
  作为服务模型跟踪的一部分，当消息流经基础结构的不同部分时，由唯一的 ID（称为活动 ID，通常是 GUID）将不同的活动链接到一起。  
   
 #### <a name="custom-trace-listeners"></a>自定义跟踪侦听器  
- 对于消息日志记录和跟踪记录，可以配置一个自定义跟踪侦听器，该侦听器可以在网络上发送跟踪和消息（例如，向远程数据库发送）。 应用程序部署人员负责配置自定义侦听器或授权用户执行这一操作。 他还对在远程位置公开的所有个人信息负有责任，并负责将 ACL 正确应用到此位置。  
+ 对于消息日志记录和跟踪记录，可以配置一个自定义跟踪侦听器，该侦听器可以在网络上发送跟踪和消息（例如，向远程数据库发送）。 应用程序部署人员负责配置自定义侦听器或授权用户执行这一操作。 它们还负责在远程位置公开的任何个人信息，并将 Acl 正确地应用到此位置。  
   
 ### <a name="other-features-for-it-professionals"></a>IT 专业人员的其他作用  
  WCF 有一个 WMI 提供程序，该提供程序通过 WMI （随 Windows 一起提供）公开 WCF 基础结构配置信息。 默认情况下，WMI 接口可供管理员使用。  
@@ -404,4 +404,4 @@ Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foun
 ## <a name="see-also"></a>另请参阅
 
 - [Windows Communication Foundation](index.md)
-- [安全](./feature-details/security.md)
+- [安全性](./feature-details/security.md)

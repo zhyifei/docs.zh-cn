@@ -3,14 +3,15 @@ title: ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: a803c0592cd44801c55a699b56a9a498781a6593
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: cca3075a73a7bb45fd6154f760adfcda9064345c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980101"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094392"
 ---
 # <a name="adonet"></a>ADO.NET
+
 ADO.NET 是一组向 .NET Framework 程序员公开数据访问服务的类。 ADO.NET 为创建分布式数据共享应用程序提供了一组丰富的组件。 它提供了对关系数据、XML 和应用程序数据的访问，因此是 .NET Framework 中不可缺少的一部分。 ADO.NET 支持多种开发需求，包括创建由应用程序、工具、语言或 Internet 浏览器使用的前端数据库客户端和中间层业务对象。  
   
 ## <a name="in-this-section"></a>本节内容  
@@ -20,7 +21,7 @@ ADO.NET 是一组向 .NET Framework 程序员公开数据访问服务的类。 A
  [ADO.NET 概述](ado-net-overview.md)  
  提供对 ADO.NET 设计和组件的介绍。  
   
- [Entity Framework](/ef/ef6/index)  
+ [实体框架](/ef/ef6/index)  
  描述如何使用实体框架创建应用程序。  
   
  [保证 ADO.NET 应用程序的安全](securing-ado-net-applications.md)  
@@ -36,7 +37,7 @@ ADO.NET 是一组向 .NET Framework 程序员公开数据访问服务的类。 A
  提供有关 LINQ to DataSet 的信息，包括编程示例。  
   
  [在 ADO.NET 中检索和修改数据](retrieving-and-modifying-data.md)  
- 描述如何连接到数据源以及如何使用 `Commands`、`DataReaders` 和 `DataAdapters` 检索和修改数据。  
+ 描述如何连接到数据源以及如何使用 `Commands`、`DataReaders`和 `DataAdapters`检索和修改数据。  
   
  [SQL Server 和 ADO.NET](./sql/index.md)  
  描述如何使用 SQL Server 特定的功能。  

@@ -2,20 +2,20 @@
 title: .NET Framework 4.5 中的外部化策略活动
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 9184386751bb44e89dfdcedd34ab0ab84a27323e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8fd08c9c29f7a268170aaa101a9bdb85250157dc
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710917"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094626"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的外部化策略活动
 
-此示例演示了 ExternalizedPolicy4 活动如何通过使用在 WF 3.5 中随附的规则引擎，直接执行 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation （WF 4.5）中的现有 .NET Framework 3.5 Windows Workflow Foundation （WF 3.5） <xref:System.Workflow.Activities.Rules.RuleSet> 对象。 通过使用此活动，可以打开并执行任何现有 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 有关 Windows Workflow Foundation 中包含的 WF 3.5 规则引擎的详细信息，请阅读[Windows Workflow Foundation 规则引擎简介](https://go.microsoft.com/fwlink/?LinkId=166079)。 有关将规则迁移到 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]中的 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 的详细信息，请参阅[迁移指南](../migration-guidance.md)。
+此示例演示了 ExternalizedPolicy4 活动如何通过使用在 WF 3.5 中随附的规则引擎，直接执行 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation （WF 4.5）中的现有 .NET Framework 3.5 Windows Workflow Foundation （WF 3.5） <xref:System.Workflow.Activities.Rules.RuleSet> 对象。 通过使用此活动，可以打开并执行任何现有 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 有关 Windows Workflow Foundation 中包含的 WF 3.5 规则引擎的详细信息，请阅读[Windows Workflow Foundation 规则引擎简介](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480193(v=msdn.10))。 有关将规则迁移到 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]中的 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 的详细信息，请参阅[迁移指南](../migration-guidance.md)。
 
 ## <a name="projects-in-this-sample"></a>此示例中的项目
 
-|项目名称|描述|主要文件|
+|项目名称|说明|主要文件|
 |-|-|-|
 |ExternalizedPolicy4|包含 ExternalizedPolicy4 活动及其 WF 4.5 设计器。|**ExternalizedPolicy4.cs**：活动定义。<br /><br /> **ExternalizedPolicy4Designer**： ExternalizedPolicy4 活动的自定义设计器。 它使用来自 WF 3.5 规则引擎的规则编辑器 (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>)。|
 |ImperativeCodeClientSample|一个示例客户端应用程序，它使用命令性 C# 代码（未使用设计器）配置和运行使用 ExternalizedPolicy4 应用程序的工作流。|**Applydiscount.rules**：包含 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 规则定义的文件。<br /><br /> **Order.cs**：表示客户订单的类型。 规则适用于此类型的对象。<br /><br /> **Program.cs**：配置和运行具有 Policy4 活动的工作流，以将 applydiscount.rules 中定义的规则应用到 Order 对象的实例。<br /><br /> App.config：带有规则文件的路径的配置文件。|
@@ -42,7 +42,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 }
 ```
 
-|Property|描述|
+|properties|说明|
 |-|-|
 |RuleSetFilePath|执行活动时要计算的 .NET Framework 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> 文件的路径。|
 |RuleSetName|要在 .rules 文件中使用的 <xref:System.Workflow.Activities.Rules.RuleSet> 的名称。|

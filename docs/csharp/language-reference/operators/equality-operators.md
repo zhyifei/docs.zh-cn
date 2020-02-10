@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 6771edcca8159b0805018c16167b25c287d3152c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 14bb8227a4a6c8beff6ab04c58d8e1a43db69856
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743740"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093131"
 ---
 # <a name="equality-operators-c-reference"></a>相等运算符（C# 参考）
 
@@ -75,7 +75,7 @@ ms.locfileid: "76743740"
 
 ## <a name="inequality-operator-"></a>不等运算符 !=
 
-如果操作数不相等，不等于运算符 `!=` 返回 `true`，否则返回 `false`。 对于[内置类型](../keywords/built-in-types-table.md)的操作数，表达式 `x != y` 生成与表达式 `!(x == y)` 相同的结果。 有关类型相等性的更多信息，请参阅[相等运算符](#equality-operator-)部分。
+如果操作数不相等，不等于运算符 `!=` 返回 `true`，否则返回 `false`。 对于[内置类型](../builtin-types/built-in-types.md)的操作数，表达式 `x != y` 生成与表达式 `!(x == y)` 相同的结果。 有关类型相等性的更多信息，请参阅[相等运算符](#equality-operator-)部分。
 
 下面的示例演示 `!=` 运算符的用法：
 

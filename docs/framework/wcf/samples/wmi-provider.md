@@ -2,12 +2,12 @@
 title: WMI 提供程序
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 4db8873397b0136de88d00ebe62c429aee260911
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: a170a20212791d789af589c1ff99dcd1abad1c9e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715010"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094769"
 ---
 # <a name="wmi-provider"></a>WMI 提供程序
 此示例演示如何使用 WCF 中内置的 Windows Management Instrumentation （WMI）提供程序在运行时从 Windows Communication Foundation （WCF）服务中收集数据。 另外，此示例还演示如何向服务添加用户定义的 WMI 对象。 该示例将激活[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)的 WMI 提供程序，并演示如何在运行时从 `ICalculator` 服务收集数据。  
@@ -32,7 +32,8 @@ ms.locfileid: "74715010"
  将 WMI 对象添加到服务，可以显示用户定义的信息以及内置的 WMI 提供程序信息。 这可以通过使用 Installutil.exe 应用程序将服务方案发布到 WMI 来实现。 本主题末尾的安装说明介绍了如何实现上述操作的说明以及更详细的信息。  
   
 ## <a name="accessing-wmi-information"></a>访问 WMI 信息  
- 可以采用多种不同方式访问 WMI 数据。 Microsoft 为脚本、Visual Basic 应用程序、 C++应用程序和 .NET Framework （ https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi) 提供 WMI api。  
+
+可以采用多种不同方式访问 WMI 数据。 Microsoft 为脚本、Visual Basic 应用程序、 C++应用程序和 .NET FRAMEWORK 提供 WMI api。 有关详细信息，请参阅[使用 WMI](/windows/desktop/wmisdk/using-wmi)。
   
  此示例使用两个 Java 脚本：一个脚本用于枚举在计算机上运行的服务及其某些属性，另一个脚本用于查看用户定义的 WMI 数据。 该脚本打开与 WMI 提供程序的连接、分析数据并显示所收集的数据。  
   
@@ -145,4 +146,4 @@ cscript EnumerateCustomObjects.js
   
 ## <a name="see-also"></a>另请参阅
 
-- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 监视示例](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

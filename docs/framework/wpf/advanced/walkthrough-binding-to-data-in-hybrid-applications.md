@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0d1e66a1277e6a04d2f49ac91691160f70fb56e4
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794223"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095068"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>演练：绑定到混合应用程序中的数据
 
@@ -35,15 +35,15 @@ ms.locfileid: "76794223"
 
 - 绑定到数据源。
 
-有关本演练中所述任务的完整代码列表，请参阅[混合应用程序中的数据绑定示例](https://go.microsoft.com/fwlink/?LinkID=159983)。
+有关本演练中所述任务的完整代码列表，请参阅[混合应用程序中的数据绑定示例](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFWithWFAndDatabinding)。
 
 完成本演练后，你将对混合应用程序中的数据绑定功能有所了解。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-你需要以下组件来完成本演练：
+您需要满足以下条件才能完成本演练：
 
-- 。
+- Visual Studio。
 
 - 访问 Microsoft SQL Server 上运行的 Northwind 示例数据库。
 
@@ -179,13 +179,13 @@ ms.locfileid: "76794223"
      [!code-csharp[WPFWithWFAndDatabinding#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
      [!code-vb[WPFWithWFAndDatabinding#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]
 
-10. 按 F5 生成并运行该应用程序。
+10. 按 F5 生成并运行应用程序。
 
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [在 Visual Studio 中设计 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
-- [混合应用程序中的数据绑定示例](https://go.microsoft.com/fwlink/?LinkID=159983)
+- [混合应用程序中的数据绑定示例](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFWithWFAndDatabinding)
 - [演练：在 WPF 中托管 Windows 窗体复合控件](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [演练：在 Windows 窗体中承载 WPF 复合控件](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 550ba74c7ceba16c2040932918364ae2a59ea665
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 87dcfa22bcce730c5a9b61721c3a846a08146475
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794275"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094496"
 ---
 # <a name="threading-model"></a>线程处理模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 旨在帮助开发人员处理复杂的线程处理问题。 因此，大多数 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 开发人员无需编写使用多个线程的接口。 由于多线程程序既复杂又难以调试，因此当存在单线程解决方案时，应避免使用多线程程序。
@@ -58,7 +58,7 @@ ms.locfileid: "76794275"
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>具有长时间运行计算的单线程应用程序
  大多数图形用户界面（Gui）在等待为响应用户交互而生成的事件时，花费了大量时间空闲。 在对此空闲时间进行仔细编程时，可以建设性地使用，而不会影响 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的响应能力。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 线程模型不允许输入中断 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 线程中发生的操作。 这意味着，你必须确保定期返回 <xref:System.Windows.Threading.Dispatcher>，以在挂起输入事件过期之前对其进行处理。
 
- 请看下面的示例：
+ 请考虑以下示例：
 
  ![显示质数线程的屏幕截图。](./media/threading-model/threading-prime-numbers.png)
 
@@ -99,7 +99,7 @@ ms.locfileid: "76794275"
 
  此方法检查下一个奇数是否是质数。 如果它是质数，则方法会直接更新 `bigPrime`<xref:System.Windows.Controls.TextBlock>，以反映它的发现。 可以如此操作的原因是，该计算发生在用于创建组件的相同线程中。 如果我们选择使用单独的线程进行计算，则必须使用更复杂的同步机制并在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 线程中执行更新。 我们将在下一步中演示这种情况。
 
- 有关此示例的完整源代码，请参阅[具有长时间运行计算的单线程应用程序示例](https://go.microsoft.com/fwlink/?LinkID=160038)
+ 有关此示例的完整源代码，请参阅[具有长时间运行计算的单线程应用程序示例](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication)
 
 <a name="weather_sim"></a>
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>使用后台线程处理阻塞操作
@@ -217,4 +217,4 @@ ms.locfileid: "76794275"
 
 ## <a name="see-also"></a>另请参阅
 
-- [具有长时间运行计算的单线程应用程序示例](https://go.microsoft.com/fwlink/?LinkID=160038)
+- [具有长时间运行计算的单线程应用程序示例](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication)

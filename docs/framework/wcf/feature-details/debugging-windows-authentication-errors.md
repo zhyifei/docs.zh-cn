@@ -8,14 +8,15 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 9dbf9eee6e4222f899d77a4457bc78132ec7f092
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 4a5e56f6b7f33a4c6f29aa384635737eeee37ddd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920234"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095029"
 ---
-# <a name="debugging-windows-authentication-errors"></a>调试 Windows 身份验证错误
+# <a name="debug-windows-authentication-errors"></a>调试 Windows 身份验证错误
+
 使用 Windows 验证身份作为安全机制时，安全支持提供程序接口 (SSPI) 将处理安全进程。 当 SSPI 层发生安全错误时，它们将由 Windows Communication Foundation （WCF）呈现。 本主题提供一组问题以帮助诊断这些错误。  
   
  有关 Kerberos 协议的概述，请参阅[Kerberos 说明](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10));有关 SSPI 的概述，请参阅[sspi](/windows/win32/secauthn/sspi)。  
@@ -36,16 +37,16 @@ ms.locfileid: "76920234"
   
  表的标题显示服务器可能使用的帐户类型。 左列显示客户端可能使用的帐户类型。  
   
-||本地用户|本地系统|域用户|域计算机|  
+||本地用户|Local System|域用户|域计算机|  
 |-|----------------|------------------|-----------------|--------------------|  
 |本地用户|NTLM|NTLM|NTLM|NTLM|  
-|本地系统|匿名 NTLM|匿名 NTLM|匿名 NTLM|匿名 NTLM|  
+|Local System|匿名 NTLM|匿名 NTLM|匿名 NTLM|匿名 NTLM|  
 |域用户|NTLM|NTLM|Kerberos|Kerberos|  
 |域计算机|NTLM|NTLM|Kerberos|Kerberos|  
   
  具体地说，四种帐户类型包括：  
   
-- 本地用户：仅计算机用户配置文件。 例如 `MachineName\Administrator` 或 `MachineName\ProfileName`。  
+- 本地用户：仅计算机用户配置文件。 例如： `MachineName\Administrator` 或 `MachineName\ProfileName` 。  
   
 - 本地系统：未加入域的计算机上的内置帐户 SYSTEM。  
   
@@ -98,7 +99,7 @@ ms.locfileid: "76920234"
 ### <a name="ntlm-protocol"></a>NTLM 协议  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>协商 SSP 回退到 NTLM，但 NTLM 已被禁用  
- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 属性设置为 `false`，这会使 Windows Communication Foundation （WCF）在使用 NTLM 时尽力引发异常。 请注意，将此属性设置为 `false` 可能不阻止通过网络发送 NTLM 凭据。  
+ <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 属性设置为 `false`，这会使 Windows Communication Foundation （WCF）在使用 NTLM 时尽力引发异常。 将此属性设置为 `false` 可能不会阻止通过网络发送 NTLM 凭据。  
   
  下面演示了如何禁用回退到 NTLM。  
   
@@ -142,7 +143,7 @@ ms.locfileid: "76920234"
  以下操作系统不支持使用 Windows 身份验证作为服务器： Windows XP Home Edition、Windows XP Media Center Edition 和 Windows Vista Home 版本。  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>使用不同的标识开发和部署  
- 如果在一台计算机上开发应用程序，并在另一台计算机上部署它，然后在每台计算机上使用不同的帐户类型进行身份验证，则可能遇到不同的行为。 例如，假定使用 `SSPI Negotiated` 身份验证模式，在 Windows XP Pro 计算机上开发应用程序。 如果使用本地用户帐户进行身份验证，则会使用 NTLM 协议。 在开发应用程序后，将服务部署到使用域帐户运行它的 Windows Server 2003 计算机。 此时，客户端将无法对服务进行身份验证，因为它正在使用 Kerberos 和域控制器。  
+ 如果在一台计算机上开发应用程序，并在另一台计算机上部署它，然后在每台计算机上使用不同的帐户类型进行身份验证，则可能遇到不同的行为。 例如，假定使用 `SSPI Negotiated` 身份验证模式，在 Windows XP Pro 计算机上开发应用程序。 如果使用本地用户帐户进行身份验证，则会使用 NTLM 协议。 在开发应用程序后，将服务部署到使用域帐户运行它的 Windows Server 2003 计算机。 此时，客户端将无法对服务进行身份验证，因为它将使用 Kerberos 和域控制器。  
   
 ## <a name="see-also"></a>另请参阅
 

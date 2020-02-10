@@ -2,12 +2,12 @@
 title: 针对 Windows 的 WCF 服务和事件跟踪
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 93663cbc33b6fab9b34bb02187e5b04192f5c13d
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 5bf965ad6a9997ec0603325f246679cf42662a52
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715266"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094808"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>针对 Windows 的 WCF 服务和事件跟踪
 此示例演示如何使用 Windows Communication Foundation （WCF）中的分析跟踪在 Windows 事件跟踪（ETW）中发出事件。 分析跟踪是在 WCF 堆栈中的关键点处发出的事件，可用于在生产环境中对 WCF 服务进行故障排除。
@@ -34,7 +34,7 @@ ms.locfileid: "74715266"
 
 5. 在 WCF 测试客户端中，通过依次选择 "**文件**" 和 "**添加服务**" 来添加服务。
 
-     在输入框中添加终结点地址。 默认值为 `http://localhost:1378/Calculator.svc`。
+     在输入框中添加终结点地址。 默认为 `http://localhost:1378/Calculator.svc`。
 
 6. 打开事件查看器应用程序。
 
@@ -89,4 +89,4 @@ ms.locfileid: "74715266"
   
 ## <a name="see-also"></a>另请参阅
 
-- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 监视示例](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

@@ -2,41 +2,41 @@
 title: SendMail 自定义活动
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: b1e2d58a09362569d4d408f6e1c9e589aa6bda76
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 90b3192d931b216345b50ba49465455427e43a64
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715579"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094600"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 自定义活动
 本示例演示如何创建派生自 <xref:System.Activities.AsyncCodeActivity> 的自定义活动，以使用 SMTP 发送邮件供在工作流应用程序内使用。 自定义活动使用 <xref:System.Net.Mail.SmtpClient> 的功能以异步方式发送电子邮件，并通过身份验证发送邮件。 它还提供一些最终用户功能，例如测试模式、标记替换、文件模板和测试放置路径。  
   
  下表详细描述了 `SendMail` 活动的自变量。  
   
-|Name|类型|描述|  
+|名称|类型|说明|  
 |-|-|-|  
-|Host|字符串|SMTP 服务器主机的地址。|  
-|Port|字符串|主机中 SMTP 服务的端口。|  
-|EnableSsl|布尔|指定 <xref:System.Net.Mail.SmtpClient> 是否使用安全套接字层 (SSL) 来对连接进行加密。|  
-|用户名|字符串|设置用于验证发件人 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 属性的凭据的用户名。|  
-|密码|字符串|设置用于验证发件人 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 属性的凭据的密码。|  
-|Subject|<xref:System.Activities.InArgument%601>\<字符串 >|邮件主题。|  
-|正文|<xref:System.Activities.InArgument%601>\<字符串 >|邮件正文。|  
-|附件|<xref:System.Activities.InArgument%601>\<字符串 >|用于存储附加到此电子邮件的数据的附件集合。|  
-|通过|<xref:System.Net.Mail.MailAddress>|此电子邮件的发件人地址。|  
-|要执行的操作|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此电子邮件的收件人的地址集合。|  
+|主机|String|SMTP 服务器主机的地址。|  
+|端口|String|主机中 SMTP 服务的端口。|  
+|EnableSsl|bool|指定 <xref:System.Net.Mail.SmtpClient> 是否使用安全套接字层 (SSL) 来对连接进行加密。|  
+|UserName|String|设置用于验证发件人 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 属性的凭据的用户名。|  
+|密码|String|设置用于验证发件人 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 属性的凭据的密码。|  
+|主题|<xref:System.Activities.InArgument%601>\<字符串 >|邮件主题。|  
+|Body|<xref:System.Activities.InArgument%601>\<字符串 >|邮件正文。|  
+|Attachments|<xref:System.Activities.InArgument%601>\<字符串 >|用于存储附加到此电子邮件的数据的附件集合。|  
+|源|<xref:System.Net.Mail.MailAddress>|此电子邮件的发件人地址。|  
+|目标|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此电子邮件的收件人的地址集合。|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此电子邮件的抄送（CC）收件人的地址集合。|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此电子邮件的密件抄送（BCC）收件人的地址集合。|  
-|标记|<xref:System.Activities.InArgument%601>< IDictionary\<string、string > >|会在正文中进行替换的标记。 此功能允许用户在正文中指定一些值，这些值稍后可由使用此属性提供的标记进行替换。|  
-|BodyTemplateFilePath|字符串|正文模板的路径。 `SendMail` 活动将此文件的内容复制到其 body 属性中。<br /><br /> 此模板可包含由 tokens 属性的内容替换的标记。|  
+|令牌|<xref:System.Activities.InArgument%601>< IDictionary\<string、string > >|会在正文中进行替换的标记。 此功能允许用户在正文中指定一些值，这些值稍后可由使用此属性提供的标记进行替换。|  
+|BodyTemplateFilePath|String|正文模板的路径。 `SendMail` 活动将此文件的内容复制到其 body 属性中。<br /><br /> 此模板可包含由 tokens 属性的内容替换的标记。|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|如果设置此属性，则会将所有电子邮件发送到其中指定的地址。<br /><br /> 此属性应在测试工作流时使用。 例如，当你想要确保发送所有电子邮件，而不将其发送到实际的收件人。|  
-|TestDropPath|字符串|设置此属性后，还会将所有电子邮件保存在指定的文件中。<br /><br /> 此属性应在测试或调试工作流时使用，以确保传出电子邮件的格式和内容正确。|  
+|TestDropPath|String|设置此属性后，还会将所有电子邮件保存在指定的文件中。<br /><br /> 此属性应在测试或调试工作流时使用，以确保传出电子邮件的格式和内容正确。|  
   
 ## <a name="solution-contents"></a>解决方案内容  
  解决方案包含两个项目。  
   
-|项目|描述|重要文件|  
+|Project|说明|重要文件|  
 |-------------|-----------------|---------------------|  
 |SendMail|SendMail 活动|1. SendMail.cs：主活动的实现<br />SendMailDesigner 和 SendMailDesigner.xaml.cs： SendMail 活动的设计器<br />3. MailTemplateBody：要发送的电子邮件的模板。|  
 |SendMailTestClient|测试 SendMail 活动的客户端。  此项目演示两种调用 SendMail 活动的方式：声明方式和编程方式。|1. sequence1.xaml：调用 SendMail 活动的工作流。<br />Program.cs：调用 Sequence1.xaml，并使用 SendMail 以编程方式创建工作流。|  
@@ -107,17 +107,15 @@ new SendMail
   
  有关设置 SMTP 服务器的详细信息，请参阅以下链接。  
   
-- [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [配置 SMTP 服务（IIS 6.0）](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784968(v=ws.10))  
   
-- [配置 SMTP 服务（IIS 6.0）](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [IIS 7.0：配置 SMTP 电子邮件](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772058(v=ws.10))  
   
-- [IIS 7.0：配置 SMTP 电子邮件](https://go.microsoft.com/fwlink/?LinkId=150457)  
-  
-- [如何安装 SMTP 服务](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [如何安装 SMTP 服务](https://docs.microsoft.com/previous-versions/tn-archive/aa997480(v=exchg.65))  
   
  可下载第三方提供的 SMTP 模拟器。  
   
-##### <a name="to-run-this-sample"></a>运行此示例  
+##### <a name="to-run-this-sample"></a>运行本示例的步骤  
   
 1. 使用 Visual Studio 2010，打开 SendMail 解决方案文件。  
   

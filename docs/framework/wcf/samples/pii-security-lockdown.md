@@ -2,12 +2,12 @@
 title: PII 安全锁定
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 63410ecc19e94e57f943e5d7dc13a6098bd91d51
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 56c8acbe53f1e0243f7c679da6ef04f7135bcd3a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714630"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094964"
 ---
 # <a name="pii-security-lockdown"></a>PII 安全锁定
 此示例演示如何通过以下方法控制 Windows Communication Foundation （WCF）服务的多个安全相关功能：  
@@ -27,7 +27,7 @@ ms.locfileid: "74714630"
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
-## <a name="discussion"></a>讨论  
+## <a name="discussion"></a>讨论区  
  这些功能中的每种功能都可以单独使用，也可以一起使用来控制服务安全的各个方面。 这不是用于保护 WCF 服务的权威指南。  
   
  .NET Framework 配置文件可以包含敏感信息，如用于连接到数据库的连接字符串。 在 Web 承载的共享方案中，可能需要对服务配置文件中的此信息进行加密，以避免他人无意中查看配置文件中包含的数据。 .NET Framework 2.0 和更高版本可以通过使用 Windows 数据保护应用程序编程接口 (DPAPI) 或 RSA 加密提供程序对配置文件的部分进行加密。 使用 DPAPI 或 RSA 的 aspnet_regiis.exe 可以对配置文件的选择部分进行加密。  
@@ -47,7 +47,7 @@ ms.locfileid: "74714630"
   
 3. 通过发出下面的命令对 Web.config 文件夹中的 appSettings 配置设置进行加密：`aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`。  
   
- 有关配置文件加密节的详细信息，请参阅 ASP.NET 配置中的操作方法（[构建安全 ASP.NET 应用程序：身份验证、授权和安全通信](https://go.microsoft.com/fwlink/?LinkId=95137)）和 ASP.NET 配置中的 Rsa （[如何：使用 RSA 加密 ASP.NET 2.0 中的配置节](https://go.microsoft.com/fwlink/?LinkId=95138)）。  
+ 有关配置文件加密节的详细信息，请参阅 ASP.NET 配置中的操作方法（[构建安全 ASP.NET 应用程序：身份验证、授权和安全通信](https://docs.microsoft.com/previous-versions/msp-n-p/ff649248(v=pandp.10))）和 ASP.NET 配置中的 Rsa （[如何：使用 RSA 加密 ASP.NET 2.0 中的配置节](https://docs.microsoft.com/previous-versions/msp-n-p/ff650304(v=pandp.10))）。  
   
 ## <a name="locking-configuration-file-elements"></a>锁定配置文件元素  
  在 Web 承载的方案中，可以使服务位于其他服务的子目录中。 在这些情况下，通过检查 Machine.config 中的值并依次与父目录中的任何 Web.config 文件合并，然后沿目录树向下移动，最后合并包含该服务的目录中的 Web.config 文件，来计算子目录中服务的配置值。 多数配置元素的默认行为都允许子目录中的配置文件重写父目录中设置的值。 在特定情况下，可能需要阻止子目录中的配置文件重写父目录配置中设置的值。  
@@ -122,11 +122,11 @@ ms.locfileid: "74714630"
 > [!IMPORTANT]
 > 若要运行此示例，需要手动修改 Machine.config。修改 Machine.config 时应谨慎，因为错误的值或语法可能会阻止所有 .NET Framework 的应用程序运行。  
   
- 使用 DPAPI 和 RSA 也可以对配置文件元素进行加密。 有关更多信息，请参见以下链接：  
+ 使用 DPAPI 和 RSA 也可以对配置文件元素进行加密。 有关更多信息，请参见下列链接：  
   
-- [构建安全的 ASP.NET 应用程序：身份验证、授权和安全通信](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [构建安全的 ASP.NET 应用程序：身份验证、授权和安全通信](https://docs.microsoft.com/previous-versions/msp-n-p/ff649248(v=pandp.10))  
   
-- [如何：使用 RSA 加密 ASP.NET 2.0 中的配置节](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [如何：使用 RSA 加密 ASP.NET 2.0 中的配置节](https://docs.microsoft.com/previous-versions/msp-n-p/ff650304(v=pandp.10))  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
@@ -144,4 +144,4 @@ ms.locfileid: "74714630"
   
 ## <a name="see-also"></a>另请参阅
 
-- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 监视示例](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

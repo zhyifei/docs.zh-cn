@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: eee26165e17b3327166a160e7c4ee3726215dcfc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5cf48b347be2d0ca6a9b55f3e19affb8b471aa2b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794247"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095094"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>演练：在 WPF 中排列 Windows 窗体控件
 
@@ -37,11 +37,11 @@ ms.locfileid: "76794247"
 - 设置填充和边距。
 - 使用动态布局容器。
 
-有关本演练中所述任务的完整代码列表，请参阅[在 WPF 中排列 Windows 窗体控件示例](https://go.microsoft.com/fwlink/?LinkID=159971)。
+有关本演练中所述任务的完整代码列表，请参阅[在 WPF 中排列 Windows 窗体控件示例](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml)。
 
 完成后，你将了解基于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的应用程序中 Windows 窗体布局功能。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 若要完成本演练，必须具有 Visual Studio。
 
@@ -195,7 +195,7 @@ ms.locfileid: "76794247"
 
 2. 按 F5 生成并运行该应用程序<kbd></kbd>。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素在网格行的中心，但不会拉伸以填充可用空间。 如果窗口足够大，则可能会看到宿主 <xref:System.Windows.Forms.MonthCalendar> 控件显示两个或更多月份，但这些月份位于行的中心。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 布局引擎集中元素，这些元素无法调整大小以填充可用空间。
 
-## <a name="scaling"></a>缩放
+## <a name="scaling"></a>扩展
 
 与 WPF 元素不同，大多数 Windows 窗体控件不是持续缩放的。 若要提供自定义缩放，请重写 <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A?displayProperty=nameWithType> 方法。
 
@@ -262,6 +262,6 @@ Windows 窗体提供了两个动态布局容器，<xref:System.Windows.Forms.Flo
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [在 Visual Studio 中设计 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [WindowsFormsHost 元素的布局注意事项](layout-considerations-for-the-windowsformshost-element.md)
-- [在 WPF 中排列 Windows 窗体控件示例](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [在 WPF 中排列 Windows 窗体控件示例](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml)
 - [演练：在 WPF 中托管 Windows 窗体复合控件](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [演练：在 Windows 窗体中承载 WPF 复合控件](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

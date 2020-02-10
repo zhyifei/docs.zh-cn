@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: d509de02cd1b3f645ee439c0b0eb33fd1ddbdb07
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 26ee3c2b8a431200c3dc04130deb2247b6c1446d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636102"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095237"
 ---
 # <a name="advanced-text-formatting"></a>高级文本格式设置
 Windows Presentation Foundation （WPF）提供了一组可靠的 Api，用于在应用程序中包含文本。 布局和 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Api，如 <xref:System.Windows.Controls.TextBlock>，为文本演示提供最常见和最常用的元素。 绘图 Api （如 <xref:System.Windows.Media.GlyphRunDrawing> 和 <xref:System.Windows.Media.FormattedText>）提供了一种在绘图中包含格式化文本的方法。 在最高级级别，WPF 提供了一个可扩展的文本格式引擎来控制文本显示的每个方面，如文本存储管理、文本运行格式管理和嵌入的对象管理。  
@@ -22,10 +22,10 @@ Windows Presentation Foundation （WPF）提供了一组可靠的 Api，用于�
  本主题介绍 WPF 文本格式设置。 它重点介绍了如何实现和使用 WPF 文本格式引擎。  
   
 > [!NOTE]
-> 此文档中的所有代码示例都可以在[高级文本格式设置示例](https://go.microsoft.com/fwlink/?LinkID=159965)中找到。  
+> 此文档中的所有代码示例都可以在[高级文本格式设置示例](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI/TextFormatting)中找到。  
 
 <a name="prereq"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  本主题假定您熟悉用于文本呈现的更高级 Api。 大多数用户方案都不需要本主题中讨论的高级文本格式设置 Api。 有关不同文本 Api 的介绍，请参阅[WPF 中的文档](documents-in-wpf.md)。  
   
 <a name="section1"></a>   
@@ -67,7 +67,7 @@ Windows Presentation Foundation （WPF）提供了一组可靠的 Api，用于�
   
  下表显示了一些预定义的 <xref:System.Windows.Media.TextFormatting.TextRun> 对象。  
   
-|TextRun 类型|用量|  
+|TextRun 类型|使用情况|  
 |------------------|-----------|  
 |<xref:System.Windows.Media.TextFormatting.TextCharacters>|专用文本运行，用于将字符标志符号的表示形式传回给文本格式化程序。|  
 |<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|专用文本运行，用于提供其中的度量、命中测试和绘制将作为整体执行的内容，例如文本中的按钮或图像。|  

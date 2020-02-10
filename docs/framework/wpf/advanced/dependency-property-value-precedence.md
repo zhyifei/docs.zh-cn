@@ -7,18 +7,18 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 178145b06cb937fb677b8454357bed774ed3003b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a9ff3a4f6ac08a0f7ec6dd9fc26bf190f43f3584
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740847"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095198"
 ---
 # <a name="dependency-property-value-precedence"></a>依赖项属性值优先级
 <a name="introduction"></a> 本主题说明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统的工作机制如何影响依赖属性的值，并介绍应用于属性有效值的属性系统的各方面所依据的优先级。  
 
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必备条件  
  本主题假定你从 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 类的现有依赖属性的使用者角度了解依赖属性，并且已阅读[依赖属性概述](dependency-properties-overview.md)。 若要采用本主题中的示例，还应当了解[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 并知道如何编写 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序。  
   
 <a name="intro"></a>   
@@ -71,7 +71,7 @@ ms.locfileid: "73740847"
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  
- TemplatedParent 作为一个优先级项并不应用于在标准应用程序标记中直接声明的元素的任何属性。 只有对于通过应用模板而产生的可视化树中的子项而言，才存在 TemplatedParent 概念。 当属性系统在 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 模板搜索某个值时，它会搜索创建该元素的模板。 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 模板中的属性值通常的作用就像是在子元素上将其设置为本地值，但这种优先级要低于本地值，因为模板可能会共享。 有关详细信息，请参阅 <xref:System.Windows.FrameworkElement.TemplatedParent%2A>。  
+ TemplatedParent 作为一个优先级项并不应用于在标准应用程序标记中直接声明的元素的任何属性。 只有对于通过应用模板而产生的可视化树中的子项而言，才存在 TemplatedParent 概念。 当属性系统在 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 模板搜索某个值时，它会搜索创建该元素的模板。 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 模板中的属性值通常的作用就像是在子元素上将其设置为本地值，但这种优先级要低于本地值，因为模板可能会共享。 有关详细信息，请参阅<xref:System.Windows.FrameworkElement.TemplatedParent%2A>。  
   
 <a name="style_property"></a>   
 ## <a name="the-style-property"></a>Style 属性  
@@ -93,7 +93,7 @@ ms.locfileid: "73740847"
   
  <xref:System.Windows.Controls.Primitives.Thumb> 具有一些可自定义的属性。 <xref:System.Windows.Controls.Primitives.Thumb> 的默认模板创建包含多个嵌套 <xref:System.Windows.Controls.Border> 组件的基本结构/可视化树，以创建凹凸效果。 如果要公开作为模板的一部分的属性以便由 <xref:System.Windows.Controls.Primitives.Thumb> 类进行自定义，则该属性必须由模板中的[TemplateBinding](templatebinding-markup-extension.md)公开。 在 <xref:System.Windows.Controls.Primitives.Thumb>的情况下，这些边框的各种属性共享模板绑定到属性（如 <xref:System.Windows.Controls.Border.Background%2A> 或 <xref:System.Windows.Controls.Border.BorderThickness%2A>）。 但是其他某些属性或可视化排列被硬编码到控件模板中，或者绑定到直接来自主题的值，除了替换整个模板外，不能对其进行更改。 一般而言，如果属性来自模板化的父元素，并且不是通过模板绑定公开的，则不能通过样式进行调整，因为没有简单的方法可以将其设置为目标。 但是，该属性仍然可能受所应用的模板中的属性值继承的影响，或受默认值的影响。  
   
- 主题样式将类型用作其定义中的键。 但是，当主题应用于给定的元素实例时，将通过检查控件的 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> 属性来执行主题查找此类型。 这与使用文本类型的隐式样式正好相反。 即使执行器没有更改派生类，<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> 的值也将继承到派生类（更改属性的预期方式不会在属性级别重写它，而是改为在属性元数据中更改其默认值）。 这种间接方式使基类可以为没有样式（或者该样式中没有模板，因此根本没有默认的可视化外观，这一点更为重要）的派生元素定义主题样式。 因此，您可以从 <xref:System.Windows.Controls.Button> 派生 `MyButton` 并且仍将获取 <xref:System.Windows.Controls.Button> 默认模板。 如果你是 `MyButton` 的控件作者，并且需要不同的行为，则可以重写 `MyButton` 上的 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> 的依赖项属性元数据以返回不同的键，然后定义相关的主题样式，包括 `MyButton` 的模板必须与 `MyButton` 控件打包。 有关主题、样式和控件创作的更多详细信息，请参阅[控件创作概述](../controls/control-authoring-overview.md)。  
+ 主题样式将类型用作其定义中的键。 但是，当主题应用于给定的元素实例时，将通过检查控件的 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> 属性来执行主题查找此类型。 这与使用文本类型的隐式样式正好相反。 即使执行器没有更改派生类，<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> 的值也将继承到派生类（更改属性的预期方式不会在属性级别重写它，而是改为在属性元数据中更改其默认值）。 这种间接方式使基类可以为没有样式（或者该样式中没有模板，因此根本没有默认的可视化外观，这一点更为重要）的派生元素定义主题样式。 因此，您可以从 <xref:System.Windows.Controls.Button> 派生 `MyButton` 并且仍将获取 <xref:System.Windows.Controls.Button> 默认模板。 如果你是 `MyButton` 的控件作者并且需要不同的行为，则可以重写 `MyButton` 上的 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> 的依赖项属性元数据以返回不同的键，然后定义相关主题样式，包括你必须与 `MyButton` 控件打包的 `MyButton` 模板。 有关主题、样式和控件创作的更多详细信息，请参阅[控件创作概述](../controls/control-authoring-overview.md)。  
   
 <a name="resources"></a>   
 ## <a name="dynamic-resource-references-and-binding"></a>动态资源引用和绑定  
@@ -111,7 +111,7 @@ ms.locfileid: "73740847"
 ## <a name="coercion-animations-and-base-value"></a>强制、动画和基值  
  强制和动画都作用于在整个 SDK 中称为 "基值" 的值。 因此，基值是在各项中通过向上计算一直到第 2 项为止而确定的任何值。  
   
- 对于动画，如果没有为某些行为指定“From”和“To”值，或者动画在完成时故意还原为基值，那么基值将影响动画值。 若要了解实际效果，请运行 [From, To, and By Animation Target Values Sample](https://go.microsoft.com/fwlink/?LinkID=159988)（From、To 和 By 动画目标值示例）。 尝试为示例中的矩形高度设置本地值，使初始本地值不同于动画中的任何“From”值。 你会注意到动画立即使用“From”值开始，并在开始后替换基值。 动画完成后，可能会指定返回到在动画完成之前找到的值，方法是指定停止 <xref:System.Windows.Media.Animation.FillBehavior>。 然后，根据正常优先级来确定基值。  
+ 对于动画，如果没有为某些行为指定“From”和“To”值，或者动画在完成时故意还原为基值，那么基值将影响动画值。 若要了解实际效果，请运行 [From, To, and By Animation Target Values Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)（From、To 和 By 动画目标值示例）。 尝试为示例中的矩形高度设置本地值，使初始本地值不同于动画中的任何“From”值。 你会注意到动画立即使用“From”值开始，并在开始后替换基值。 动画完成后，可能会指定返回到在动画完成之前找到的值，方法是指定停止 <xref:System.Windows.Media.Animation.FillBehavior>。 然后，根据正常优先级来确定基值。  
   
  多个动画可能应用于一个属性，而每个动画可能是从值优先级中的不同点进行定义的。 但是，这些动画的值可能会组合起来，而不仅仅是从较高的优先级开始应用动画。 这完全取决于动画的定义方式以及进行动画处理的值类型。 有关对属性进行动画处理的详细信息，请参阅[动画概述](../graphics-multimedia/animation-overview.md)。  
   
@@ -123,9 +123,9 @@ ms.locfileid: "73740847"
   
 <a name="clearvalue"></a>   
 ## <a name="clearvalue-and-value-precedence"></a>ClearValue 和值优先级  
- <xref:System.Windows.DependencyObject.ClearValue%2A> 方法提供了一个有利方法，用于从在元素上设置的依赖项属性清除任何本地应用的值。 但是，调用 <xref:System.Windows.DependencyObject.ClearValue%2A> 不能保证在属性注册期间在元数据中建立的默认值为新的有效值。 值优先级中的所有其他参与者仍然有效。 只有在本地设置的值才会从优先级序列中删除。 例如，如果对某个属性调用 <xref:System.Windows.DependencyObject.ClearValue%2A>，而该属性也是通过主题样式设置的，则会将主题值应用为新值，而不是基于元数据的默认值。 如果要将所有属性值参与者移出进程，并将值设置为已注册的元数据默认值，则可以通过查询依赖属性元数据来明确地获取该默认值，然后可以使用默认值进行本地使用对 <xref:System.Windows.DependencyObject.SetValue%2A>的调用设置属性。  
+ <xref:System.Windows.DependencyObject.ClearValue%2A> 方法提供了一个有利方法，用于从在元素上设置的依赖项属性清除任何本地应用的值。 但是，调用 <xref:System.Windows.DependencyObject.ClearValue%2A> 不能保证在属性注册期间在元数据中建立的默认值为新的有效值。 值优先级中的所有其他参与者仍然有效。 只有在本地设置的值才会从优先级序列中删除。 例如，如果对某个属性调用 <xref:System.Windows.DependencyObject.ClearValue%2A>，而该属性也是通过主题样式设置的，则会将主题值应用为新值，而不是基于元数据的默认值。 如果要将所有属性值参与者移出进程，并将值设置为已注册的元数据默认值，可以通过查询依赖属性元数据来明确地获取该默认值，然后可以使用默认值在本地设置属性，同时调用 <xref:System.Windows.DependencyObject.SetValue%2A>。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>

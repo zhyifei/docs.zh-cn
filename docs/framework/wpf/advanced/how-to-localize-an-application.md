@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 26c09e547205e7819ebb43d6e34b6e18d6d9ff98
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7e034e92e1ff2b9bec0eaf8e0f3330f7a832a7e5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460834"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095159"
 ---
 # <a name="how-to-localize-an-application"></a>如何：对应用程序进行本地化
 本教程介绍如何通过使用 LocBaml 工具创建本地化应用程序。  
@@ -64,7 +64,7 @@ ms.locfileid: "73460834"
   
 <a name="create_dll"></a>   
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>创建非特定语言资源附属程序集  
- 将应用程序配置为生成非特定语言资源附属程序集后，则可生成应用程序。 这会生成主应用程序程序集，以及 LocBaml 本地化所需的非特定语言资源附属程序集。 若要生成应用程序：  
+ 将应用程序配置为生成非特定语言资源附属程序集后，则可生成应用程序。 这会生成主应用程序程序集，以及 LocBaml 本地化所需的非特定语言资源附属程序集。 若要生成应用程序，请执行以下操作：  
   
 1. 编译 Helloapp.resources.dll 以创建动态链接库（DLL）：  
   
@@ -81,7 +81,7 @@ ms.locfileid: "73460834"
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>生成 LocBaml 工具  
   
-1. 生成 LocBaml 所需的所有文件都位于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 示例中。 从C# [LocBaml 工具示例](https://go.microsoft.com/fwlink/?LinkID=160016)下载文件。  
+1. 生成 LocBaml 所需的所有文件都位于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 示例中。 从C# [LocBaml 工具示例](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)下载文件。  
   
 2. 从命令行运行项目文件 (locbaml.csproj) 来生成该工具：  
   
@@ -149,11 +149,11 @@ ms.locfileid: "73460834"
   
    下表显示了这些字段映射到 .csv 文件的分隔值的方式：  
   
-   |BAML 名称|资源键|类别|可读性|可修改性|注释|“值”|  
+   |BAML 名称|资源键|类别|可读性|可修改性|注释|值|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|忽略|false|false||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|true|true||Hello World|
-   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|None|true|true||Goodbye World|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|忽略|FALSE|FALSE||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|无|TRUE|TRUE||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|无|TRUE|TRUE||Goodbye World|
   
    请注意，**注释**字段的所有值不包含任何值;如果字段没有值，则为空。 另请注意，第一行中的项既不可读也不可修改，并且具有 "Ignore" 作为其**类别**值，所有这些都指示该值不可本地化。  
   
@@ -206,10 +206,10 @@ ms.locfileid: "73460834"
 - 本地化的资源 DLL 的版本需与主程序集进行同步。  
   
 <a name="Whats_Next"></a>   
-## <a name="whats-next"></a>下一步  
+## <a name="whats-next"></a>后续步骤  
  现在，你应该对如何使用 LocBaml 工具有了一个基本的了解。  你应该能够制作包含 Uid 的文件。 通过使用 LocBaml 工具，你应该能够分析文件以提取可本地化的内容，并且在内容翻译后，你应该能够生成一个合并已翻译内容的 resources.dll 文件。 本主题不包括每个可能的细节，但现在你已经掌握了使用 LocBaml 对应用程序进行本地化的必要知识。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [WPF 全球化](globalization-for-wpf.md)
+- [WPF 的全球化](globalization-for-wpf.md)
 - [使用自动布局概述](use-automatic-layout-overview.md)

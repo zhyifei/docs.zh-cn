@@ -2,12 +2,12 @@
 title: 自定义跟踪
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: 0d9bd9262c6fc13a36fb7736245fa244ee61d8c3
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 9a2ad2004c47ce76dcc35baf4ca28aa174409581
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710886"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094652"
 ---
 # <a name="custom-tracking"></a>自定义跟踪
 此示例演示如何创建自定义跟踪参与者并将跟踪数据的内容写入控制台。 另外，此示例还演示如何发出使用用户定义的数据填充的 <xref:System.Activities.Tracking.CustomTrackingRecord> 对象。 基于控制台的跟踪参与者将使用代码中创建的跟踪配置文件对象来筛选由工作流发出的 <xref:System.Activities.Tracking.TrackingRecord> 对象。
@@ -15,7 +15,7 @@ ms.locfileid: "74710886"
 ## <a name="sample-details"></a>示例详细信息
  Windows Workflow Foundation （WF）提供了跟踪基础结构，用于跟踪工作流实例的执行。 跟踪运行时实现一个工作流实例，以便发出与工作流生命周期有关的事件、来自工作流活动的事件和自定义跟踪事件。 下表详细介绍了跟踪基础结构的主要组件。
 
-|组件|描述|
+|组件|说明|
 |---------------|-----------------|
 |跟踪运行时|提供基础结构以发出跟踪记录。|
 |跟踪参与者|使用跟踪记录。 .NET Framework 4 附带了一个跟踪参与者，该参与者将跟踪记录作为 Windows 事件跟踪（ETW）事件写入。|
@@ -23,7 +23,7 @@ ms.locfileid: "74710886"
 
  下表详细介绍工作流运行时发出的跟踪记录。
 
-|跟踪记录|描述|
+|跟踪记录|说明|
 |---------------------|-----------------|
 |工作流实例跟踪记录。|描述工作流实例的生命周期。 例如，当工作流启动或完成时发出一个实例记录。|
 |活动状态跟踪记录。|详细说明活动执行情况。 这些记录指示工作流活动的状态，例如，当安排活动时、活动完成时或引发错误时。|
@@ -150,4 +150,4 @@ context.Track(customRecord);
   
 ## <a name="see-also"></a>另请参阅
 
-- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 监视示例](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 9f97639447284b792d52cf4aa25b81f584d7291a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 89ed57a787b93a1326b4accd3bb1bc5ff9a825fd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787907"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095146"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 元素的布局注意事项
 本主题介绍 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素如何与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 布局系统交互。  
@@ -28,11 +28,11 @@ ms.locfileid: "76787907"
   
  Windows 窗体中的布局取决于设备，并且更有可能是静态的。 通常，Windows 窗体控件在窗体上绝对定位在硬件像素中指定的维度。 不过，Windows 窗体支持一些动态布局功能，如下表所示。  
   
-|布局功能|描述|  
+|布局功能|说明|  
 |--------------------|-----------------|  
 |自动调整|某些 Windows 窗体控件调整其大小以正确显示其内容。 有关详细信息，请参阅[AutoSize 属性概述](../../winforms/controls/autosize-property-overview.md)。|  
-|锚定和停靠|Windows 窗体控件支持根据父容器定位和调整大小。 有关详细信息，请参阅 <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>和<xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>。|  
-|自动扩展|容器控件根据输出设备的分辨率或默认容器字体的大小（以像素为单位）调整自身及其子控件的大小。 有关详细信息，请参阅[Windows 窗体中的自动缩放](../../winforms/automatic-scaling-in-windows-forms.md)。|  
+|锚定和停靠|Windows 窗体控件支持根据父容器定位和调整大小。 有关详细信息，请参阅 <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>。|  
+|自动缩放|容器控件根据输出设备的分辨率或默认容器字体的大小（以像素为单位）调整自身及其子控件的大小。 有关详细信息，请参阅[Windows 窗体中的自动缩放](../../winforms/automatic-scaling-in-windows-forms.md)。|  
 |布局容器|<xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel> 控件根据其内容排列子控件并调整其自身大小。|  
   
 ## <a name="layout-limitations"></a>布局限制  
@@ -67,7 +67,7 @@ ms.locfileid: "76787907"
   
  除缩放外，<xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素还处理舍入和溢出事例，如下表所述。  
   
-|转换问题|描述|  
+|转换问题|说明|  
 |----------------------|-----------------|  
 |Rounding|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 与设备无关的像素尺寸指定为 `double`，Windows 窗体硬件像素尺寸指定为 `int`。 如果基于 `double`的维度转换为基于 `int`的维度，<xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素将使用标准舍入，以使小于0.5 的小数值向下舍入为0。|  
 |溢出|<xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素从 `double` 值转换为 `int` 值时，可能会发生溢出。 大于 <xref:System.Int32.MaxValue> 的值将设置为 <xref:System.Int32.MaxValue>。|  
@@ -103,6 +103,6 @@ ms.locfileid: "76787907"
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [演练：在 WPF 中排列 Windows 窗体控件](walkthrough-arranging-windows-forms-controls-in-wpf.md)
-- [在 WPF 中排列 Windows 窗体控件示例](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [在 WPF 中排列 Windows 窗体控件示例](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml)
 - [Windows 窗体和 WPF 属性映射](windows-forms-and-wpf-property-mapping.md)
 - [迁移和互操作性](migration-and-interoperability.md)

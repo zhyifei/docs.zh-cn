@@ -1,5 +1,5 @@
 ---
-title: 委托运算符 - C# 参考
+title: delegate 运算符 - C# 参考
 ms.date: 07/18/2019
 helpviewer_keywords:
 - delegate [C#]
@@ -11,7 +11,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73039046"
 ---
-# <a name="delegate-operator-c-reference"></a>委托运算符 -（C# 参考）
+# <a name="delegate-operator-c-reference"></a>delegate 运算符 -（C# 参考）
 
 `delegate` 运算符创建一个可以转换为委托类型的匿名方法：
 

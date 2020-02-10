@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: ff0555105f219db5ed891c02400b0587c825718e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6703825d4453b2e0e65036fa2d9c856139ee473c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974650"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094561"
 ---
 # <a name="document-serialization-and-storage"></a>文档序列化和存储
 
@@ -81,11 +81,11 @@ Microsoft .NET Framework XPS 打印路径还提供了一种可扩展的机制，
 
 3. 创建插件序列化程序之后，实现安装脚本以分发和安装（以及卸载）插件（请参阅上面的“[安装插件序列化程序](#InstallingPluginSerializers)”）。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Documents.Serialization>
 - <xref:System.Windows.Xps.XpsDocumentWriter>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
 - [WPF 中的文档](documents-in-wpf.md)
 - [打印概述](printing-overview.md)
-- [XML 纸张规范：概述](https://go.microsoft.com/fwlink?LinkID=106246)
+- [XML 纸张规范](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)

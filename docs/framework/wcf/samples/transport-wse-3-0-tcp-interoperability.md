@@ -2,12 +2,12 @@
 title: 传输：WSE 3.0 TCP 互操作性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 8166e1c378bc745eb8c9f37d6982642e754813cb
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 8e95d7e75ac49aea4b823ee3434f53ed5df11fb0
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544621"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094847"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>传输：WSE 3.0 TCP 互操作性
 WSE 3.0 TCP 互操作性传输示例演示如何将 TCP 双工会话实现为自定义 Windows Communication Foundation （WCF）传输。 还演示如何通过网络，使用通道层的扩展性与已经过部署的现有系统进行交互。 以下步骤演示如何生成此自定义 WCF 传输：  
@@ -37,7 +37,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何将 TCP 双工会话实现为自
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- 一旦将 <xref:System.ServiceModel.Channels.Message> 编码为字节，就必须通过线路传输它。 这要求系统定义消息边界。 WSE 3.0 使用某个版本的[DIME](https://go.microsoft.com/fwlink/?LinkId=94999)作为其帧协议。 `WriteData` 封装框架逻辑以便将 byte[] 包装到一组 DIME 记录中。  
+ 一旦将 <xref:System.ServiceModel.Channels.Message> 编码为字节，就必须通过线路传输它。 这要求系统定义消息边界。 WSE 3.0 使用某个版本的[DIME](https://docs.microsoft.com/archive/msdn-magazine/2002/december/sending-files-attachments-and-soap-messages-via-dime)作为其帧协议。 `WriteData` 封装框架逻辑以便将 byte[] 包装到一组 DIME 记录中。  
   
  用来接收消息的逻辑与组帧逻辑非常相似。 其复杂性主要在于，处理读取套接字时所返回的字节数比已请求的更少这一情况。 若要接收消息，`WseTcpDuplexSessionChannel` 读取网络中的字节，对 DIME 组帧进行解码，然后使用 <xref:System.ServiceModel.Channels.MessageEncoder> 将 byte[] 转换为 <xref:System.ServiceModel.Channels.Message>。  
   
@@ -133,7 +133,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何将 TCP 双工会话实现为自
   
  运行此示例时，应生成下面的输出。  
   
- 客户端：  
+ Client：  
   
 ```console  
 Calling soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
@@ -157,7 +157,7 @@ Received Body: to me.
 Press enter.  
 ```  
   
- 服务器：  
+ 服务器:  
   
 ```console  
 Listening for messages at soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  

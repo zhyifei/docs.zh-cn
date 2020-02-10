@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 2fef4c7b00fd6a1ed8f85a8bfa01ef9cfffa1bbb
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: d1cae7ad2ac0fdf963d11911484b1bd534cbc129
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919942"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094730"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑难解答快速入门
 本主题列出了一些客户开发 WCF 客户端和服务时所遇到的已知问题。 如果您遇到的问题不在此列表中，我们建议您为您的服务配置跟踪。 这将生成一个跟踪文件，您可以使用跟踪文件查看器查看它并获取有关服务中可能发生的异常的详细信息。 有关配置跟踪的详细信息，请参阅： [Configuring Tracing](./diagnostics/tracing/configuring-tracing.md)。 有关跟踪文件查看器的详细信息，请参阅： [Service Trace Viewer Tool (SvcTraceViewer.exe)](service-trace-viewer-tool-svctraceviewer-exe.md)。  
@@ -47,19 +47,19 @@ ms.locfileid: "76919942"
   
  HTTP 错误 404.3 – 找不到：由于扩展配置，无法提供您请求的页面。 如果此页是脚本，请添加处理程序。 如果应下载文件，请添加 MIME 映射。 详细错误 InformationModule StaticFileModule。  
   
- 当未在控制面板中显式设置 "Windows Communication Foundation HTTP 激活" 时，会出现此错误消息。 若要设置此项，请转到控制面板，并在窗口的左下角单击“程序”。 单击“打开或关闭 Windows 功能”。 展开 Microsoft .NET Framework 3.5.1，选中“Windows Communication Foundation HTTP 激活”。  
+ 当未在控制面板中显式设置 "Windows Communication Foundation HTTP 激活" 时，会出现此错误消息。 若要设置此项，请在窗口的左下角单击 "程序"。 单击“打开或关闭 Windows 功能”。 展开 Microsoft .NET Framework 3.5.1，选中“Windows Communication Foundation HTTP 激活”。  
   
 <a name="BKMK_q1"></a>   
-## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>如果我的客户端在第一次请求后暂时处于空闲，有时我会在第二次请求时收到 MessageSecurityException。 发生了什么情况？  
+## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>如果我的客户端在第一次请求后暂时处于空闲，有时我会在第二次请求时收到 MessageSecurityException。 发生了什么？  
  第二次请求失败主要有两个原因：(1) 会话已超时或 (2) 承载服务的 Web 服务器被回收。 在第一种情况下，会话始终有效，直到服务超时。如果服务在服务绑定（<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>）中指定的时间段内未收到来自客户端的请求，则该服务将终止安全会话。 后续客户端消息会导致 <xref:System.ServiceModel.Security.MessageSecurityException>。 客户端必须重新建立与服务的安全会话，才能发送以后的消息或使用有状态安全上下文令牌。 有状态的安全上下文令牌还允许安全会话在回收 Web 服务器后存在。 有关在安全会话中使用有状态安全上下文令牌的详细信息，请参阅[如何：为安全会话创建安全上下文令牌](./feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。 或者，也可禁用安全会话。 使用[\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md)绑定时，可以将 `establishSecurityContext` 属性设置为 `false` 以禁用安全会话。 若要为其他绑定禁用安全会话，必须创建自定义绑定。 有关创建自定义绑定的详细信息，请参阅 [How to: Create a Custom Binding Using the SecurityBindingElement](./feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。 在应用任何这些选择前，您必须先了解应用程序的安全要求。  
   
 <a name="BKMK_q2"></a>   
-## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>大约有 10 个客户端与我的服务交互后，我的服务开始拒绝新的客户端。 发生了什么情况？  
+## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>大约有 10 个客户端与我的服务交互后，我的服务开始拒绝新的客户端。 发生了什么？  
  默认情况下，服务最多只能有 10 个并发会话。 因此，如果服务绑定使用会话，则服务将接受新的客户端连接，直到到达该数目；之后，它将拒绝新的客户端连接，直到当前会话之一结束。 可以通过多种方式支持更多的客户端。 如果你的服务不要求会话，则不要使用会话绑定。 （有关详细信息，请参阅[使用会话](using-sessions.md)。）另一种方法是通过将 "<xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>" 属性的值更改为适合您的情况的数字来增加会话限制。  
   
 <a name="BKMK_q3"></a>   
 ## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>我是否可以从 WCF 应用程序的配置文件以外的某处加载我的服务配置？  
- 是。不过，您必须创建自定义 <xref:System.ServiceModel.ServiceHost> 类，并重写 <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> 方法。 在此方法内，您可以调用 base 先加载配置（如果您还要加载标准配置信息），但是也可以整个替换配置加载系统。 请注意，如果要从一个不同于应用程序配置文件的配置文件中加载配置，则必须自行分析配置文件，然后加载配置。  
+ 是。不过，您必须创建自定义 <xref:System.ServiceModel.ServiceHost> 类，并重写 <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> 方法。 在此方法内，您可以调用 base 先加载配置（如果您还要加载标准配置信息），但是也可以整个替换配置加载系统。 如果要从不同于应用程序配置文件的配置文件中加载配置，则必须自行分析配置文件，然后加载配置。  
   
  下面的代码示例演示如何重写 <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> 方法以及直接配置终结点。  
   
@@ -130,7 +130,7 @@ public class MyServiceHost : ServiceHost
   
     3. 在 Internet 信息服务 (IIS) 下承载服务，默认情况下，IIS 使用服务主体名称 (SPN) 帐户。  
   
-    4. 使用 SetSPN 在域中注册一个新的 SPN。 请注意，您需要具有域管理员的身份才能执行此操作。  
+    4. 使用 SetSPN 在域中注册一个新的 SPN。 你需要是域管理员才能执行此操作。  
   
  有关 Kerberos 协议的详细信息，请参阅[WCF 中使用的安全概念](./feature-details/security-concepts-used-in-wcf.md)和：  
   
@@ -166,7 +166,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>我将操作的第一个参数从大写更改为了小写，现在我的客户端引发一个异常。 发生了什么情况？  
- 操作签名中的参数名称值是协定的一部分且区分大小写。 当需要区分本地参数名称与描述客户端应用程序操作的元数据时，请使用 <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType> 属性。  
+ 操作签名中的参数名称值是协定的一部分，并区分大小写。 当需要区分本地参数名称与描述客户端应用程序操作的元数据时，请使用 <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType> 属性。  
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>我正在使用我的跟踪工具之一，并且获得一个 EndpointNotFoundException。 发生了什么情况？  
@@ -237,7 +237,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>从 WCF SOAP 应用程序调用 WCF Web HTTP 应用程序时，服务返回以下错误：405 不允许的方法  
- 从 WCF 服务调用 WCF Web HTTP 应用程序（使用 <xref:System.ServiceModel.WebHttpBinding> 和 <xref:System.ServiceModel.Description.WebHttpBehavior>）可能会生成以下异常： `Unhandled Exception: System.ServiceModel.FaultException`1 [ExceptionDetail]：远程服务器返回了意外响应：（405） "不允许的方法"。之所以发生此异常，是因为 WCF 使用传入 <xref:System.ServiceModel.OperationContext>覆盖传出的 <xref:System.ServiceModel.OperationContext>。 若要解决此问题，请在 WCF Web HTTP 服务操作内创建 <xref:System.ServiceModel.OperationContextScope> 。 例如：  
+ 从 WCF 服务调用 WCF Web HTTP 应用程序（使用 <xref:System.ServiceModel.WebHttpBinding> 和 <xref:System.ServiceModel.Description.WebHttpBehavior>）可能会生成以下异常： ``Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The remote server returned an unexpected response: (405) Method Not Allowed.`` 发生此异常的原因是 WCF 使用传入 <xref:System.ServiceModel.OperationContext>覆盖传出 <xref:System.ServiceModel.OperationContext>。 若要解决此问题，请在 WCF Web HTTP 服务操作中创建 <xref:System.ServiceModel.OperationContextScope>。 例如：  
   
 ```csharp
 public string Echo(string input)  

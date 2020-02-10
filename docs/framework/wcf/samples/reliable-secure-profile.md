@@ -2,15 +2,16 @@
 title: 可靠安全配置文件
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: ee94dc5be2c50f9e383a42d435996b2fd35df4a4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ef4680673f37655603a42f6da8aaf7eceaa01f56
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716501"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094938"
 ---
 # <a name="reliable-secure-profile"></a>可靠安全配置文件
-此示例演示如何撰写 WCF 和[可靠安全配置文件](https://go.microsoft.com/fwlink/?LinkId=178140)（RSP）。 此示例演示如何实现[建立连接](https://go.microsoft.com/fwlink/?LinkId=178141)通道，该通道可以与可靠的消息传送组合在一起，还可以选择使用安全通道来创建基于 RSP 规范的可靠安全绑定。  
+
+此示例演示如何撰写 WCF 和[可靠安全配置文件（RSP）](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html)。 此示例演示如何实现[建立连接](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf)通道，该通道可以与可靠的消息传送组合在一起，还可以选择使用安全通道，根据 RSP 规范创建可靠的安全绑定。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -21,7 +22,7 @@ ms.locfileid: "74716501"
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
-## <a name="discussion"></a>讨论  
+## <a name="discussion"></a>讨论区  
  此示例演示可靠的异步双向消息交换方案。 该服务有双工协定，客户端实现双工回调协定。 客户端向服务发出请求，应在单独的连接上响应该请求。 会以可靠方式发送请求消息。 客户端不希望在其关闭时打开侦听终结点。 因此，它将轮询具有“建立连接”请求的服务，以使服务在此“建立连接”请求的反向通道上发送回响应。 此示例演示如何通过 HTTP 进行安全可靠的双工通信，而无需客户端公开侦听终结点（并创建防火墙例外）。  
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  

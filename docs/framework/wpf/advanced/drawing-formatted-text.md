@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: c786137a471e0199a8ac60f8d82b4ce440e33b7e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f23f54283849ddaa827a98f0f28a39a72305dc1d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740396"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095224"
 ---
 # <a name="drawing-formatted-text"></a>绘制格式化文本
 本主题概述了 <xref:System.Windows.Media.FormattedText> 对象的功能。 此对象为在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中绘制文本提供低级别控制。  
@@ -33,7 +33,7 @@ ms.locfileid: "75740396"
   
  <xref:System.Windows.Media.FormattedText> 对象比 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 文本控件提供了更大的文本格式功能，并且在要使用文本作为装饰元素时非常有用。 有关详细信息，请参阅下一节[将格式化文本转换为几何图形](#converting_formatted_text)。  
   
- 此外，<xref:System.Windows.Media.FormattedText> 对象对于创建面向文本的 <xref:System.Windows.Media.DrawingVisual>派生对象非常有用。 <xref:System.Windows.Media.DrawingVisual> 是一种轻量绘图类，用于呈现形状、图像或文本。 有关详细信息，请参阅[使用 DrawingVisuals 执行测试示例](https://go.microsoft.com/fwlink/?LinkID=159994)。  
+ 此外，<xref:System.Windows.Media.FormattedText> 对象对于创建面向文本的 <xref:System.Windows.Media.DrawingVisual>派生对象非常有用。 <xref:System.Windows.Media.DrawingVisual> 是一种轻量绘图类，用于呈现形状、图像或文本。 有关详细信息，请参阅[使用 DrawingVisuals 执行测试示例](https://github.com/Microsoft/WPF-Samples/tree/master/Visual%20Layer/DrawingVisual)。  
   
 ## <a name="using-the-formattedtext-object"></a>使用 FormattedText 对象  
  若要创建格式化文本，请调用 <xref:System.Windows.Media.FormattedText.%23ctor%2A> 构造函数以创建 <xref:System.Windows.Media.FormattedText> 对象。 创建初始格式化文本字符串后，便可应用某一范围的格式样式。  
@@ -88,31 +88,31 @@ ms.locfileid: "75740396"
 ## <a name="win32-migration"></a>Win32 迁移  
  用于绘制文本的 <xref:System.Windows.Media.FormattedText> 的功能与 Win32 DrawText 函数的功能类似。 对于从 Win32 API 迁移的开发人员，下表列出了 Win32 DrawText 标志和 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]中的近似等效项。  
   
-|DrawText 标志|WPF 等效项|注释|  
+|DrawText 标志|WPF 等效项|说明|  
 |-------------------|--------------------|-----------|  
 |DT_BOTTOM|<xref:System.Windows.Media.FormattedText.Height%2A>|使用 <xref:System.Windows.Media.FormattedText.Height%2A> 属性计算相应的 Win32 DrawText "y" 位置。|  
-|DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>, <xref:System.Windows.Media.FormattedText.Width%2A>|使用 "<xref:System.Windows.Media.FormattedText.Height%2A>" 和 "<xref:System.Windows.Media.FormattedText.Width%2A>" 属性来计算输出矩形。|  
+|DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>、<xref:System.Windows.Media.FormattedText.Width%2A>|使用 "<xref:System.Windows.Media.FormattedText.Height%2A>" 和 "<xref:System.Windows.Media.FormattedText.Width%2A>" 属性来计算输出矩形。|  
 |DT_CENTER|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|使用 <xref:System.Windows.Media.FormattedText.TextAlignment%2A> 属性，并将值设置为 <xref:System.Windows.TextAlignment.Center>。|  
-|DT_EDITCONTROL|无|不是必需的。 间距宽度和最后一行的呈现与框架编辑控件中的相同。|  
+|DT_EDITCONTROL|无|非必需。 间距宽度和最后一行的呈现与框架编辑控件中的相同。|  
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|使用值为 <xref:System.Windows.TextTrimming.CharacterEllipsis>的 <xref:System.Windows.Media.FormattedText.Trimming%2A> 属性。<br /><br /> 使用 <xref:System.Windows.TextTrimming.WordEllipsis> 获取具有 DT_WORD_ELIPSIS 结尾省略号的 Win32 DT_END_ELLIPSIS，在这种情况下，字符省略号只发生在不能放在单个行中的单词上。|  
-|DT_EXPAND_TABS|无|不是必需的。 制表符自动扩展为在每 4 个 em 后停止，这大约为 8 个与语言无关的字符的宽度。|  
-|DT_EXTERNALLEADING|无|不是必需的。 行距中始终包括外部间隙。 使用 <xref:System.Windows.Media.FormattedText.LineHeight%2A> 属性可创建用户定义的行距。|  
+|DT_EXPAND_TABS|无|非必需。 制表符自动扩展为在每 4 个 em 后停止，这大约为 8 个与语言无关的字符的宽度。|  
+|DT_EXTERNALLEADING|无|非必需。 行距中始终包括外部间隙。 使用 <xref:System.Windows.Media.FormattedText.LineHeight%2A> 属性可创建用户定义的行距。|  
 |DT_HIDEPREFIX|无|不支持。 在构造 <xref:System.Windows.Media.FormattedText> 对象之前，请从字符串中删除 "&"。|  
 |DT_LEFT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|这是默认文本对齐方式。 使用 <xref:System.Windows.Media.FormattedText.TextAlignment%2A> 属性，并将值设置为 <xref:System.Windows.TextAlignment.Left>。 （仅限 WPF）|  
 |DT_MODIFYSTRING|无|不支持。|  
 |DT_NOCLIP|<xref:System.Windows.Media.Visual.VisualClip%2A>|剪辑不会自动发生。 如果要剪裁文本，请使用 <xref:System.Windows.Media.Visual.VisualClip%2A> 属性。|  
 |DT_NOFULLWIDTHCHARBREAK|无|不支持。|  
-|DT_NOPREFIX|无|不是必需的。 字符串中的“&”字符始终作为正常字符处理。|  
+|DT_NOPREFIX|无|非必需。 字符串中的“&”字符始终作为正常字符处理。|  
 |DT_PATHELLIPSIS|无|使用值为 <xref:System.Windows.TextTrimming.WordEllipsis>的 <xref:System.Windows.Media.FormattedText.Trimming%2A> 属性。|  
 |DT_PREFIX|无|不支持。 如果要将下划线用于文本（如快捷键或链接），请使用 <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> 方法。|  
 |DT_PREFIXONLY|无|不支持。|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|使用 <xref:System.Windows.Media.FormattedText.TextAlignment%2A> 属性，并将值设置为 <xref:System.Windows.TextAlignment.Right>。 （仅限 WPF）|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|将 <xref:System.Windows.Media.FormattedText.FlowDirection%2A> 属性设置为 <xref:System.Windows.FlowDirection.RightToLeft>。|  
-|DT_SINGLELINE|无|不是必需的。 除非设置了 <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> 属性，或者文本包含回车符/换行符（CR/LF），否则 <xref:System.Windows.Media.FormattedText> 对象将表现为单行控件。|  
+|DT_SINGLELINE|无|非必需。 除非设置了 <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> 属性，或者文本包含回车符/换行符（CR/LF），否则 <xref:System.Windows.Media.FormattedText> 对象将表现为单行控件。|  
 |DT_TABSTOP|无|不支持用户定义的制表位位置。|  
-|DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|不是必需的。 上对齐是默认设置。 可以通过使用 <xref:System.Windows.Media.FormattedText.Height%2A> 属性来定义其他垂直定位值，以便计算合适的 Win32 DrawText "y" 位置。|  
+|DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|非必需。 上对齐是默认设置。 可以通过使用 <xref:System.Windows.Media.FormattedText.Height%2A> 属性来定义其他垂直定位值，以便计算合适的 Win32 DrawText "y" 位置。|  
 |DT_VCENTER|<xref:System.Windows.Media.FormattedText.Height%2A>|使用 <xref:System.Windows.Media.FormattedText.Height%2A> 属性计算相应的 Win32 DrawText "y" 位置。|  
-|DT_WORDBREAK|无|不是必需的。 <xref:System.Windows.Media.FormattedText> 对象自动进行断字。 无法禁用它。|  
+|DT_WORDBREAK|无|非必需。 <xref:System.Windows.Media.FormattedText> 对象自动进行断字。 无法禁用它。|  
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|使用值为 <xref:System.Windows.TextTrimming.WordEllipsis>的 <xref:System.Windows.Media.FormattedText.Trimming%2A> 属性。|  
   
 ## <a name="see-also"></a>另请参阅

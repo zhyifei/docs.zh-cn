@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: db23c250014006655fa51ee5a2e5b54e15e4f964
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 781934e9ab27f761e71841c2edc509f9b8022aa7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714589"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094743"
 ---
 # <a name="ws-transaction-flow"></a>WS 事务流
 本示例演示客户端协调事务和使用 WS-Atomic 事务或 OleTransactions 协议的事务流的客户端和服务器选项的用法。 此示例基于实现计算器服务的[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，但操作的作用是说明如何 `TransactionFlowAttribute` 使用**TransactionFlowOption**枚举来确定启用了事务流的程度。 在流事务范围内，请求操作的日志将写入数据库并保存，直到客户端协调事务完成。如果客户端事务没有完成，则 Web 服务事务确保不提交对数据库的相应更新。  
@@ -230,7 +230,7 @@ Press <ENTER> to terminate the service.
 3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
   
     > [!NOTE]
-    > 对于跨计算机配置，请按照下面的说明操作来启用分布式事务处理协调器，并使用 Windows SDK 中的 WsatConfig.exe 工具来启用 WCF 事务网络支持。 有关设置 Wsatconfig.exe 的信息，请参阅[配置 WS 原子事务支持](https://go.microsoft.com/fwlink/?LinkId=190370)。  
+    > 对于跨计算机配置，请按照下面的说明操作来启用分布式事务处理协调器，并使用 Windows SDK 中的 WsatConfig.exe 工具来启用 WCF 事务网络支持。 有关设置 Wsatconfig.exe 的信息，请参阅[配置 WS 原子事务支持](../feature-details/configuring-ws-atomic-transaction-support.md)。  
   
  无论是在同一台计算机上还是在不同的计算机上运行此示例，都必须配置 Microsoft 分布式事务处理协调器（MSDTC）以启用网络事务流，并使用 Wsatconfig.exe 工具启用 WCF 事务网络支持。  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate the service.
   
     6. 单击 **"确定**"，然后单击 **"是**" 以重新启动 MSDTC 服务。  
   
-    7. 单击“确定”关闭对话框。  
+    7. 单击 **“确定”** 关闭对话框。  
   
 2. 在运行 Windows Server 2008 或 Windows Vista 的服务计算机上，按以下说明配置 MSDTC 以允许传入网络事务。  
   
@@ -264,7 +264,7 @@ Press <ENTER> to terminate the service.
   
     5. 单击 **"确定**"，然后单击 **"是**" 以重新启动 MSDTC 服务。  
   
-    6. 单击“确定”关闭对话框。  
+    6. 单击 **“确定”** 关闭对话框。  
   
 3. 在客户端计算机上，配置 MSDTC 以允许传出网络事务：  
   
@@ -278,7 +278,7 @@ Press <ENTER> to terminate the service.
   
     5. 单击 **"确定**"，然后单击 **"是**" 以重新启动 MSDTC 服务。  
   
-    6. 单击“确定”关闭对话框。  
+    6. 单击 **“确定”** 关闭对话框。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

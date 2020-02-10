@@ -2,26 +2,26 @@
 title: MSMQ 4.0 中的病毒消息处理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: cc4da0deea0de2cd8b3bb8e8f2ba9b8a17e3cc60
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 0a9d4ec9657bacdbcb1273791dc7a593a9565c25
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919398"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094951"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 中的病毒消息处理
 本示例演示如何在服务中执行病毒消息处理。 此示例基于已进行[事务处理的 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。 其中使用到了 `netMsmqBinding`。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。
 
  在排队通信中，客户端使用队列与服务进行通信。 更确切地说，客户端向队列发送消息。 服务从队列接收消息。 因此不必同时运行服务和客户端便可使用队列进行通信。
 
- 病毒消息是一类当服务读取消息时不能对消息进行处理，并因此终止从中读取消息的事务时从队列重复读取的消息。 在这种情况下，将再次重试消息。 如果消息出现问题，这种情况在理论上将永远继续下去。 注意，这种情况仅在您使用事务从队列中读取消息并调用服务操作时发生。
+ 病毒消息是一类当服务读取消息时不能对消息进行处理，并因此终止从中读取消息的事务时从队列重复读取的消息。 在这种情况下，将再次重试消息。 如果消息出现问题，这种情况在理论上将永远继续下去。 仅当使用事务从队列中读取并调用服务操作时，才会发生这种情况。
 
  根据 MSMQ 版本，NetMsmqBinding 支持对病毒消息进行有限检测和完全检测。 在已经将消息检测为病毒后，可以通过多种方式对消息进行处理。 同样，根据 MSMQ 版本，NetMsmqBinding 支持对病毒消息进行有限处理和完全处理。
 
- 此示例演示了 windows Server 2003 和 Windows XP 平台上提供的有限病毒功能，以及 Windows Vista 上提供的完整病毒功能。 在这两个示例中，目的是将病毒消息从一个队列移出到另一个队列，然后由病毒消息服务对其进行处理。
+ 此示例演示了 windows Server 2003 和 Windows XP 平台上提供的有限病毒功能，以及 Windows Vista 上提供的完整病毒功能。 在这两个示例中，目标是将病毒消息从队列移出到另一个队列。 然后，可以通过病毒消息服务来处理该队列。
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 病毒处理示例
- 在 Windows Vista 中，MSMQ 提供了可用于存储病毒消息的病毒子队列设备。 此示例演示使用 Windows Vista 处理病毒消息的最佳实践。
+ 在 Windows Vista 中，MSMQ 提供了一个可用于存储病毒消息的病毒子队列设备。 此示例演示使用 Windows Vista 处理病毒消息的最佳实践。
 
  Windows Vista 中的病毒消息检测功能非常复杂。 有 3 属性可帮助检测。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 是重新从队列中读取给定消息并将其调度到应用程序中以进行处理的次数。 当由于某一消息无法调度到应用程序或应用程序在服务操作中回滚事务，该消息返回到队列中时，即会从队列中重新读取该消息。 <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> 是将消息移动到重试队列的次数。 当达到 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 时，即会将该消息移动到重试队列。 属性 <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> 是将消息从重试队列移回到主队列之前的时间延迟。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 重置为 0。 再次尝试消息。 如果读取消息的所有尝试都失败，则会将该消息标记为已中毒。
 
@@ -31,11 +31,11 @@ ms.locfileid: "76919398"
 
 - 放置：将放置消息。
 
-- Move：将消息移到病毒消息子队列中。 此值仅适用于 Windows Vista。
+- Move：将消息移动到病毒消息子队列。 此值仅适用于 Windows Vista。
 
 - Reject：要通过将消息发送回发送方死信队列来拒绝消息。 此值仅适用于 Windows Vista。
 
- 示例演示了如何使用 `Move` 处理病毒消息。 `Move` 可使消息移动到病毒子队列中。
+ 示例演示了如何使用 `Move` 处理病毒消息。 `Move` 会使消息移动到病毒子队列。
 
  服务协定是 `IOrderProcessor`，它定义了适合与队列一起使用的单向服务。
 
@@ -48,7 +48,7 @@ public interface IOrderProcessor
 }
 ```
 
- 该服务操作显示一条指示它正在处理订单的消息。 为了演示病毒消息功能，`SubmitPurchaseOrder` 服务操作将引发异常，以便在任意一次调用服务时回滚事务。 这将导致消息被放回队列中。 并最终将消息标记为病毒。 配置设置为将病毒消息移到病毒子队列。
+ 该服务操作显示一条指示它正在处理订单的消息。 为了演示病毒消息功能，`SubmitPurchaseOrder` 服务操作将引发异常，以便在服务的随机调用中回滚事务。 这将导致消息被放回队列中。 并最终将消息标记为病毒。 将该配置设置为将病毒消息移动到病毒子队列。
 
 ```csharp
 // Service class that implements the service contract.
@@ -206,7 +206,7 @@ public class OrderProcessorService : IOrderProcessor
     }
 ```
 
- 与从订单队列中读取消息的订单处理服务不同，病毒消息服务从病毒子队列中读取消息。 病毒队列是主队列的子队列，其名称为“poison”，由 MSMQ 自动生成。 若要访问该队列，请提供主队列名称，后接“;”并在子队列为“poison”的情况下提供子队列名称，如下面的示例配置中所示。
+ 不同于从订单队列读取消息的订单处理服务，病毒消息服务从病毒子队列读取消息。 病毒队列是主队列的子队列，名为 "有害"，由 MSMQ 自动生成。 若要访问它，请提供主队列名称，后跟一个 ";" 和子队列名称，在本例中为 "有害"，如下面的示例配置中所示。
 
 > [!NOTE]
 > 在 MSMQ 3.0 版的示例中，病毒队列名称不是子队列，而是将消息移动到的队列。
@@ -309,7 +309,7 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
      确保通过设置终结点的 bindingConfiguration 属性将终结点与绑定关联。
 
-2. 确保在运行示例前更改 PoisonMessageServer、服务器和客户端上的配置。
+2. 请确保在运行示例前更改 PoisonMessageServer、服务器和客户端上的配置。
 
     > [!NOTE]
     > 将 `security mode` 设置为 `None` 等效于将 `MsmqAuthenticationMode`、`MsmqProtectionLevel` 和 `Message` 安全设置为 `None`。  

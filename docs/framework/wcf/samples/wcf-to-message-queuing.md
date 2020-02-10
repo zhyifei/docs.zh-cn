@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 到消息队列
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 2e37a6efac6b979645b2dbb338b64f698b3b97e0
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: beb4382d61804e9b9ea12e1d191f3e96a637f871
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344617"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094795"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation 到消息队列
 
@@ -131,7 +131,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
  运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。 您可以看到服务从客户端接收消息。 在每个控制台窗口中按 Enter 可以关闭服务和客户端。 请注意：由于正在使用队列，因此不必同时启动和运行客户端和服务。 例如，可以先运行客户端，再将其关闭，然后启动服务，这样服务仍然会收到客户端的消息。
 
 > [!NOTE]
-> 此示例要求安装 Message Queuing（消息队列）。 请参阅[消息队列](https://go.microsoft.com/fwlink/?LinkId=94968)中的安装说明。
+> 此示例要求安装 Message Queuing（消息队列）。 请参阅[消息队列](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))中的安装说明。
 
 ## <a name="set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
@@ -177,4 +177,4 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 ## <a name="see-also"></a>另请参阅
 
 - [如何：与 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [消息队列](https://go.microsoft.com/fwlink/?LinkId=94968)
+- [消息队列](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

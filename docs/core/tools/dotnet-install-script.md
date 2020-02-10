@@ -2,12 +2,12 @@
 title: dotnet-install 脚本
 description: 了解用于安装 .NET Core SDK 和共享运行时的 dotnet-install 脚本。
 ms.date: 01/23/2020
-ms.openlocfilehash: 76055627c6b2016396209c9594dba36e56eb841c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: bf28f872be3ac2b4115b1d5e5c06e32afec0b49e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920579"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092858"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 脚本引用
 
@@ -213,7 +213,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
   macOS/Linux：
 
   ```bash
-  curl -ssl https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
+  curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
 ## <a name="see-also"></a>请参阅

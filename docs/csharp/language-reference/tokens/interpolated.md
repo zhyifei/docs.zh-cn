@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: b32bbbb0bd99878822d7ca5abdba80b46539846a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 97bc606569b83bd14cd3b32495deb8e529747e9c
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715086"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980114"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 字符串内插（C# 参考）
 
@@ -101,6 +101,6 @@ ms.locfileid: "75715086"
 - [C# 参考](../index.md)
 - [C# 特殊字符](index.md)
 - [字符串](../../programming-guide/strings/index.md)
-- [设置数值结果表的格式](../keywords/formatting-numeric-results-table.md)
+- [标准数字格式字符串](../../../standard/base-types/standard-numeric-format-strings.md)
 - [复合格式设置](../../../standard/base-types/composite-formatting.md)
 - <xref:System.String.Format%2A?displayProperty=nameWithType>

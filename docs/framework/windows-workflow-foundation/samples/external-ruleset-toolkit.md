@@ -2,12 +2,12 @@
 title: 外部 RuleSet 工具包
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: b07d2b63d9f3d98b8f08eb697a8d688d8fac1962
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: eb59b02d469788b23126f4e02c5b7ae5a63081f0
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710901"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094665"
 ---
 # <a name="external-ruleset-toolkit"></a>外部 RuleSet 工具包
 
@@ -16,7 +16,7 @@ ms.locfileid: "74710901"
 外部 RuleSet 工具包示例包含一个基于 Windows 窗体的工具，您可以使用它来管理和编辑数据库中的 RuleSet 版本。 它还包括一个活动和一个宿主服务，用以执行这些规则。
 
 > [!NOTE]
-> 此示例需要[Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=96181)。
+> 此示例需要[Microsoft SQL Server](/sql)。
 
 Visual Studio 提供了一个规则集编辑器作为 Windows Workflow Foundation （WF）的一部分。 双击工作流中的 `Policy` 活动可以启动此编辑器。它将已定义的 RuleSet 对象序列化为与工作流相关联的 .rules 文件（`Policy` 活动依据工作流运行 RuleSet 实例）。 在生成工作流项目时，此 .rules 文件将作为资源编译到程序集中。
 

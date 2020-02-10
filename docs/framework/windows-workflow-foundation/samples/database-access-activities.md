@@ -2,16 +2,16 @@
 title: 数据库访问活动
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: eec368803eeacb2bab729bcd6d57cc7fc6107256
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ed3f0ad3f2fd19f622c9cb0faf7d5cd864b81995
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710863"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094639"
 ---
 # <a name="database-access-activities"></a>数据库访问活动
 
-数据库访问活动可用于在一个工作流内访问数据库。 这些活动允许访问数据库以检索或修改信息，并使用[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)来访问数据库。
+数据库访问活动可用于在一个工作流内访问数据库。 这些活动允许访问数据库以检索或修改信息，并使用[ADO.NET](../../data/adonet/index.md)来访问数据库。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：
@@ -72,14 +72,14 @@ Public class DbUpdate: AsyncCodeActivity
 }
 ```
 
-|自变量|描述|
+|参数|说明|
 |-|-|
 |ProviderName|ADO.NET 提供程序固定名称。 如果设置此自变量，则必须还要设置 `ConnectionString`。|
 |ConnectionString|用于连接到数据库的连接字符串。 如果设置此自变量，则必须还要设置 `ProviderName`。|
 |ConfigName|存储连接信息的配置文件部分的名称。 设置此自变量之后，将不再需要 `ProviderName` 和 `ConnectionString`。|
 |CommandType|要执行的 <xref:System.Data.Common.DbCommand> 的类型。|
 |Sql|要执行的 SQL 命令。|
-|参数|SQL 查询的参数集合。|
+|parameters|SQL 查询的参数集合。|
 |AffectedRecords|最后一个操作影响的记录的数量。|
 
 ## <a name="dbqueryscalar"></a>DbQueryScalar
@@ -126,14 +126,14 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 }
 ```
 
-|自变量|描述|
+|参数|说明|
 |-|-|
 |ProviderName|ADO.NET 提供程序固定名称。 如果设置此自变量，则必须还要设置 `ConnectionString`。|
 |ConnectionString|用于连接到数据库的连接字符串。 如果设置此自变量，则必须还要设置 `ProviderName`。|
 |ConfigName|存储连接信息的配置文件部分的名称。 设置此自变量之后，将不再需要 `ProviderName` 和 `ConnectionString`。|
 |CommandType|要执行的 <xref:System.Data.Common.DbCommand> 的类型。|
 |Sql|要执行的 SQL 命令。|
-|参数|SQL 查询的参数集合。|
+|parameters|SQL 查询的参数集合。|
 |结果|执行查询后获得的标量。 此自变量的类型为 `TResult`。|
 
 ## <a name="dbquery"></a>DbQuery
@@ -186,14 +186,14 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 }
 ```
 
-|自变量|描述|
+|参数|说明|
 |-|-|
 |ProviderName|ADO.NET 提供程序固定名称。 如果设置此自变量，则必须还要设置 `ConnectionString`。|
 |ConnectionString|用于连接到数据库的连接字符串。 如果设置此自变量，则必须还要设置 `ProviderName`。|
 |ConfigName|存储连接信息的配置文件部分的名称。 设置此自变量之后，将不再需要 `ProviderName` 和 `ConnectionString`。|
 |CommandType|要执行的 <xref:System.Data.Common.DbCommand> 的类型。|
 |Sql|要执行的 SQL 命令。|
-|参数|SQL 查询的参数集合。|
+|parameters|SQL 查询的参数集合。|
 |Mapper|映射函数（<xref:System.Func%601><`DbDataReader`，`TResult`>），该函数采用在执行查询后获得的 `DataReader` 中的记录，并返回要添加到 `TResult` 集合的类型 `Result` 的对象的实例。<br /><br /> 在这种情况下，将在单个执行脉冲中完成映射，但不能使用设计器以声明方式创作它。|
 |MapperFunc|映射函数（<xref:System.Activities.ActivityFunc%601><`DbDataReader`，`TResult`>），该函数采用在执行查询后获得的 `DataReader` 中的记录，并返回要添加到 `TResult` 集合的类型 `Result` 的对象的实例。<br /><br /> 在这种情况下，将在多个执行脉冲中完成映射。 此函数可序列化为 XAML，并以声明方式进行创作（任何现有活动均可参与映射）。|
 |结果|对象列表，这些对象是通过执行查询并对 `DataReader` 中的每个记录执行映射函数得到的。|
@@ -240,14 +240,14 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 }
 ```
 
-|自变量|描述|
+|参数|说明|
 |-|-|
 |ProviderName|ADO.NET 提供程序固定名称。 如果设置此自变量，则必须还要设置 `ConnectionString`。|
 |ConnectionString|用于连接到数据库的连接字符串。 如果设置此自变量，则必须还要设置 `ProviderName`。|
 |ConfigName|存储连接信息的配置文件部分的名称。 设置此自变量之后，将不再需要 `ProviderName` 和 `ConnectionString`。|
 |CommandType|要执行的 <xref:System.Data.Common.DbCommand> 的类型。|
 |Sql|要执行的 SQL 命令。|
-|参数|SQL 查询的参数集合。|
+|parameters|SQL 查询的参数集合。|
 |结果|执行查询后获得的 <xref:System.Data.DataSet>。|
 
 ## <a name="configuring-connection-information"></a>配置连接信息
@@ -307,7 +307,7 @@ Setup.cmd 脚本调用 CreateDb.sql 脚本文件，该文件包含可执行下�
 
 ##### <a name="to-run-setupcmd"></a>运行 Setup.cmd
 
-1. 打开命令提示。
+1. 打开命令提示符。
 
 2. 转到 DbActivities 示例文件夹。
 

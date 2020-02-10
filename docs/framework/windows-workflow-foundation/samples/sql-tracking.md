@@ -2,12 +2,12 @@
 title: SQL 跟踪
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: c1bb4492695df3ff803dff893de24453d7c03dfb
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 88f44e5362684f755695aab154842fad2274134d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715570"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094587"
 ---
 # <a name="sql-tracking"></a>SQL 跟踪
 此示例演示如何编写一个自定义 SQL 跟踪参与者，该参与者将跟踪记录写入 SQL 数据库。 Windows Workflow Foundation （WF）提供工作流跟踪，以查看工作流实例的执行情况。 跟踪运行时在工作流执行过程中会发出工作流跟踪记录。 有关工作流跟踪的详细信息，请参阅[工作流跟踪和跟踪](../workflow-tracking-and-tracing.md)。
@@ -23,9 +23,9 @@ ms.locfileid: "74715570"
 
 3. 在 Visual Studio 2010 中打开 SqlTrackingSample。
 
-4. 按 Ctrl+Shift+B 生成解决方案。
+4. 按 CTRL+SHIFT+B 生成解决方案。
 
-5. 按“F5”运行应用程序。
+5. 按 F5 运行应用程序。
 
      浏览器窗口打开和显示侦听应用程序的目录。
 
@@ -37,11 +37,11 @@ ms.locfileid: "74715570"
 
 8. 使用文件资源管理器运行 WCF 测试客户端（Wcftestclient.exe）。 它位于 Microsoft Visual Studio 10.0\Common7\IDE 目录下。
 
-9. 在 WCF 测试客户端中，单击 "**文件**" 菜单，然后选择 "**添加服务**"。 将本地服务地址粘贴到文本框中。 单击 **"确定"** 以关闭对话框。
+9. 在 WCF 测试客户端中，单击 "**文件**" 菜单，然后选择 "**添加服务**"。 将本地服务地址粘贴到文本框中。 单击 **“确定”** ，关闭对话框。
 
 10. 在 WCF 测试客户端中，双击 " **GetStockPrice**"。 这会打开 `GetStockPrice` 操作，该操作采用一个参数，键入值 `Contoso` 并单击 "**调用**"。
 
-11. 发出的跟踪记录将写入一个 SQL 数据库中。 若要查看跟踪记录，请在 SQL Management Studio 中打开 TrackingSample 数据库，然后导航到表。 有关 SQL Server Management Studio 的详细信息，请参阅[SQL Server Management Studio 简介](https://go.microsoft.com/fwlink/?LinkId=165645)。 可在[此处](https://go.microsoft.com/fwlink/?LinkId=180520)下载 SQL Server 2008 Management Studio Express。 对表运行一个选择查询，将显示存储在相关表中的跟踪记录内的数据。
+11. 发出的跟踪记录将写入一个 SQL 数据库中。 若要查看跟踪记录，请在 SQL Management Studio 中打开 TrackingSample 数据库，然后导航到表。 有关 SQL Server Management Studio 的详细信息，请参阅[SQL Server Management Studio 简介](/sql/ssms/sql-server-management-studio-ssms)。 可在[此处](https://www.microsoft.com/download/details.aspx?id=7593)下载 SQL Server 2008 Management Studio Express。 对表运行一个选择查询，将显示存储在相关表中的跟踪记录内的数据。
 
 #### <a name="to-uninstall-the-sample"></a>卸载此示例
 
@@ -61,4 +61,4 @@ ms.locfileid: "74715570"
 
 ## <a name="see-also"></a>另请参阅
 
-- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 监视示例](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

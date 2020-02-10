@@ -1,13 +1,13 @@
 ---
-title: 中断性变更类型 - .NET Core
+title: 重大更改的类型
 description: 了解 .NET Core 如何试着保证开发人员在不同的 .NET 版本中享有兼容性，以及哪种类型的变更被视为中断性变更。
 ms.date: 06/10/2019
-ms.openlocfilehash: 76d04504c4476f0f7517a633cfbf1c0aa9d5797e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738584"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092975"
 ---
 # <a name="changes-that-affect-compatibility"></a>会影响兼容性的变更
 

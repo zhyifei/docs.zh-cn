@@ -8,12 +8,12 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: 6d7bc322079718d17a921ef34af79145b021e3a7
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: f7ef3312d876324b44b055d70fd22e3fba075ec6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636089"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095166"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>如何：调用打印对话框
 若要提供从应用程序打印的功能，只需创建并打开 <xref:System.Windows.Controls.PrintDialog> 对象即可。  
@@ -24,7 +24,7 @@ ms.locfileid: "75636089"
  [!code-csharp[printdialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintDialog/CSharp/Window1.xaml.cs#1)]
  [!code-vb[printdialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintDialog/visualbasic/window1.xaml.vb#1)]  
   
- 对话框打开后，用户将能够从其计算机上安装的打印机中进行选择。 他们还可以选择[MICROSOFT XPS 文档编写器](https://go.microsoft.com/fwlink/?LinkId=147319)来创建 XML 纸张规范（XPS）文件而不是打印。  
+ 对话框打开后，用户将能够从其计算机上安装的打印机中进行选择。 他们还可以选择[MICROSOFT XPS 文档编写器](/windows/win32/printdocs/microsoft-xps-document-writer)来创建 XML 纸张规范（XPS）文件而不是打印。  
   
 > [!NOTE]
 > 本主题中讨论的 WPF <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> 控件不应与 Windows 窗体的 <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> 组件混淆。  
@@ -36,4 +36,4 @@ ms.locfileid: "75636089"
 - <xref:System.Windows.Controls.PrintDialog>
 - [WPF 中的文档](documents-in-wpf.md)
 - [打印概述](printing-overview.md)
-- [Microsoft XPS 文档编写器](https://go.microsoft.com/fwlink/?LinkId=147319)
+- [Microsoft XPS 文档编写器](/windows/win32/printdocs/microsoft-xps-document-writer)

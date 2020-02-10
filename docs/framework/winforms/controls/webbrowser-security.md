@@ -5,20 +5,20 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], security
 - security [Windows Forms], WebBrowser control
 ms.assetid: 0968846e-48ee-485a-9797-65b5b9a622f8
-ms.openlocfilehash: 1e658c25ea19f966ac67402c6f3c7693c784d029
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b25cabca050d06dbfe97c563eb56622d1f21be54
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792114"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095250"
 ---
 # <a name="webbrowser-security"></a>WebBrowser 安全
-<xref:System.Windows.Forms.WebBrowser>控件旨在以完全信任权限。 在控件中显示的 HTML 内容可以来自外部 Web 服务器，并且可以包含在脚本或 Web 控件的窗体中的非托管的代码。 如果您使用<xref:System.Windows.Forms.WebBrowser>这种情况下，该控件中的控件将不达到安全标准是 Internet Explorer，但托管<xref:System.Windows.Forms.WebBrowser>控件不会阻止运行此类非托管的代码。  
+<xref:System.Windows.Forms.WebBrowser> 控件设计为仅在完全信任环境中运行。 控件中显示的 HTML 内容可以来自外部 Web 服务器，并且可能包含脚本或 Web 控件形式的非托管代码。 如果在这种情况下使用 <xref:System.Windows.Forms.WebBrowser> 控件，则该控件的安全性不如 Internet Explorer 那么安全，但是托管的 <xref:System.Windows.Forms.WebBrowser> 控件不会阻止此类非托管代码运行。  
   
- 详细了解安全问题与基础 ActiveX`WebBrowser`控件，请参阅[WebBrowser 控件](https://go.microsoft.com/fwlink/?LinkId=198812)。  
+ 有关与基础 ActiveX `WebBrowser` 控件相关的安全问题的详细信息，请参阅[WebBrowser 控件](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752040(v=vs.85))。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.WebBrowser>
 - [WebBrowser 控件概述](webbrowser-control-overview.md)
-- [WebBrowser 控件](https://go.microsoft.com/fwlink/?LinkId=198812)
+- [WebBrowser 控件](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752040(v=vs.85))

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 4d5e29f51ab49c142beb97060b719f26b050e767
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ab1effe93a1572f5d4ce5296bba99dad24f9cbca
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715018"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094782"
 ---
 # <a name="windows-service-host"></a>Windows 服务主机
 此示例演示在托管 Windows 服务中承载的 Windows Communication Foundation （WCF）服务。 Windows 服务是使用**控制面板**中的 "服务" 小程序控制的，并且可以配置为在系统重新启动之后自动启动。 此示例包含一个客户端程序和一个 Windows 服务程序。 服务作为一个 .exe 程序实现，并包含其自己的主机代码。 在其他承载环境（如 Windows 进程激活服务 (WAS) 或 Internet Information Services (IIS)）中，你没有必要编写承载代码。
@@ -65,4 +65,4 @@ ms.locfileid: "74715018"
   
 ## <a name="see-also"></a>另请参阅
 
-- [AppFabric 宿主和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric 宿主和持久性示例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
