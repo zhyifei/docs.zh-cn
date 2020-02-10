@@ -51,7 +51,7 @@ ms.locfileid: "75711605"
 
 1. 下载 [UCI Sentiment Labeled Sentences 数据集 zip 文件](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)并解压缩。
 
-2. 将 `yelp_labelled.txt` 文件复制到已创建的“数据”  目录中。
+2. 将 `yelp_labelled.txt` 文件复制到已创建的“Data”  目录中。
 
 3. 在“解决方案资源管理器”中，右键单击 `yelp_labeled.txt` 文件并选择“属性”  。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
