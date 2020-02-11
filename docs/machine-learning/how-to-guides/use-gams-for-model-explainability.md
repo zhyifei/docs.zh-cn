@@ -1,25 +1,20 @@
 ---
-title: 使用广义加性模型和形状函数来解释模型
+title: 使用广义加性模型解释 ML.NET 模型
 description: 在 ML.NET 中使用广义加性模型和形状函数来解释模型
-ms.date: 03/05/2019
+ms.date: 01/30/2020
 ms.custom: mvc,how-to
-ms.openlocfilehash: c58cf823007196c35da093fab7423c1e40ba1158
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6df19eff4fec98c5815a9f8f4d8e4e9a80cba6ed
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855605"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092468"
 ---
-# <a name="use-generalized-additive-models-and-shape-functions-for-model-explainability-in-mlnet"></a>在 ML.NET 中使用广义加性模型和形状函数来解释模型
+# <a name="use-generalized-additive-models-and-shape-functions-for-model-interpretability-in-mlnet"></a>在 ML.NET 中使用广义加性模型和形状函数来解释模型
 
-> [!NOTE]
-> 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请访问 [ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) 页。
+在创建机器学习模型时，仅仅进行预测通常是不够的。 机器学习开发人员、决策者以及受模型影响的人员通常需要了解机器学习模型如何做出决策，以及哪些特性有助于提高其性能。 广义加性模型 (GAM)  在 Microsoft 内部用于解释模型，帮助机器学习开发人员创建易于由他人解释的高容量模型。
 
-此操作说明和相关示例目前使用的是 ML.NET 版本 0.10。 有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。
-
-在创建机器学习模型时，仅仅进行预测通常是不够的。 机器学习开发人员、决策者以及受模型影响的人员通常需要了解机器学习模型如何做出决策，以及哪些特性有助于提高其性能。 广义加性模型 (GAM) 在 Microsoft 内部用于解释模型，帮助机器学习开发人员创建易于由他人解释的高容量模型。
-
-GAM 是一类可解释模型，为线性模型，其中的项是非线性函数，称为单个变量的“形状函数”。 作为线性模型，它们易于解释，但由于模型学习的是特性函数，而不是单一权重，因此它们可以建立比简单线性模型更复杂的关系模型。 生成的 GAM 预测器有一个表示定型集平均预测的截距项，以及表示与平均预测偏差的形状函数。 可目测检查形状函数，以查看模型对某个特性的不同值的响应，并将其可视化，如以下在代码示例结束时创建的图表所示。 ML.NET 中的 GAM 定型程序的实施是使用浅层梯度推进树（例如树桩）来学习非参数形状函数，它基于 Lou、Caruana 和 Gehrke 在[分类和回归的可识别模型](https://www.cs.cornell.edu/~yinlou/papers/lou-kdd12.pdf)中所述的方法。
+GAM 是一类可解释模型  ，为线性模型，其中的项是非线性函数，称为单个变量的“形状函数”。 作为线性模型，它们易于解释，但由于模型学习的是特性函数，而不是单一权重，因此它们可以建立比简单线性模型更复杂的关系模型。 生成的 GAM 预测器有一个表示定型集平均预测的截距项，以及表示与平均预测偏差的形状函数。 可目测检查形状函数，以查看模型对某个特性的不同值的响应，并将其可视化，如以下在代码示例结束时创建的图表所示。 ML.NET 中的 GAM 定型程序的实施是使用浅层梯度推进树（例如树桩）来学习非参数形状函数，它基于 Lou、Caruana 和 Gehrke 在[分类和回归的可识别模型](https://www.cs.cornell.edu/~yinlou/papers/lou-kdd12.pdf)中所述的方法。
 
 ```csharp
 // Train the Generalized Additive Model

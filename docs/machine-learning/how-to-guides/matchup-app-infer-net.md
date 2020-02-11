@@ -1,14 +1,14 @@
 ---
-title: 使用 Infer.NET 和概率性编程创建游戏匹配列表
+title: Infer.NET 游戏匹配应用 - 概率性编程
 description: 了解如何使用概率性编程和 Infer.NET 创建基于简化版 TrueSkill 的游戏匹配列表应用。
-ms.date: 05/06/2019
+ms.date: 01/30/2020
 ms.custom: mvc,how-to
-ms.openlocfilehash: 69515c7b3518c35bf84335c453408b1466f93f34
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8e489d61c5e6cca53ba12b13fddd0b73c7f85ef9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774543"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092598"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>使用 Infer.NET 和概率性编程创建游戏匹配列表
 
@@ -18,7 +18,7 @@ ms.locfileid: "72774543"
 
 借助概率性编程，可创建真实过程的统计模型。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - 本地开发环境设置
 

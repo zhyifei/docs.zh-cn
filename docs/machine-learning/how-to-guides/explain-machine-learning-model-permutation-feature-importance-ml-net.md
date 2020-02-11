@@ -1,20 +1,20 @@
 ---
-title: 使用排列特征重要性解释模型预测
+title: 用排列特征重要性解释 ML.NET 模型
 description: 在 ML.NET 中使用排列功能的重要性来理解模型功能的重要性
-ms.date: 08/29/2019
+ms.date: 01/30/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4bad8b0ed17a34ba290bf9c00d65cc3f000a2acf
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c1163a41cd2feb0e8785ae9d4c6a71dfbedf3f12
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976685"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092611"
 ---
-# <a name="explain-model-predictions-using-permutation-feature-importance"></a>使用排列特征重要性解释模型预测
+# <a name="interpret-model-predictions-using-permutation-feature-importance"></a>使用排列特征重要性解释模型预测
 
-借助排列特征重要性 (PFI) 理解特征对预测的贡献，了解如何解释 ML.NET 机器学习模型预测。
+使用排列特征重要性 (PFI)，了解如何解释 ML.NET 机器学习模型预测。 PFI 可表示每个特征对预测的相对贡献。
 
 机器学习模型通常被视为黑盒，它们接收输入并生成输出。 人们对影响输出的中间步骤或特征之间的交互了解甚少。 随着机器学习被引入日常生活的更多方面（例如医疗保健），理解机器学习模型为何做出其决策变得至关重要。 例如，如果诊断由机器学习模型做出，则医疗保健专业人员需要查看影响做出诊断的因素的方法。 提供正确的诊断可以对患者是否快速康复产生重大影响。 因此，模型的可解释性水平越高，医疗保健专业人员就越有信心接受或拒绝模型做出的决策。
 
@@ -26,7 +26,7 @@ ms.locfileid: "73976685"
 
 数据集中用于此示例的特征位于列 1-12 中。 目标在于预测 `Price`。
 
-| 列 | 功能 | 说明
+| 列 | 功能 | 描述
 | --- | --- | --- |
 | 1 | CrimeRate | 人均犯罪率
 | 2 | ResidentialZones | 城镇住宅区

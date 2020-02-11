@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 常�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 0e5f3578edc723e2e2a32b9b3a1d8a7dcabd2909
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 7dd3765b1b71d8c1ef22d714a00be3e171fab523
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965745"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093118"
 ---
 # <a name="common-client-side-web-technologies"></a>常用客户端 Web 技术
 
@@ -18,7 +18,7 @@ ms.locfileid: "76965745"
 
 ASP.NET Core 应用程序属于 Web 应用程序，并且通常依赖于 HTML、CSS 和 JavaScript 等客户端 Web 技术。 通过将页面 (HTML) 内容从其布局和样式 (CSS) 以及行为 (JavaScript) 中分离出来，复杂的 Web 应用也可以利用“关注分离”原则。 将来，当这些关注点不相互交织时，可以更轻松地对应用程序的结构、设计或行为进行更改。
 
-尽管 HTML 和 CSS 相对稳定，但应用程序框架和实用程序开发人员用于生成基于 Web 的应用程序的 JavaScript，正以惊人的速度发展。 本章介绍 Web 开发人员在开发应用程序中使用 JavaScript 的几种方式，同时提供有关 Angular 和 React 客户端库的高级概述。
+尽管 HTML 和 CSS 相对稳定，但应用程序框架和实用程序开发人员用于生成基于 Web 的应用程序的 JavaScript，正以惊人的速度发展。 本章介绍 Web 开发人员使用 JavaScript 的几种方式，并提供 Angular 和 React 客户端库的简要概述。
 
 ## <a name="html"></a>HTML
 
@@ -75,7 +75,7 @@ JavaScript 是动态的解释性编程语言，已在 ECMAScript 语言规范中
 
 本质上，jQuery 缺少的大多数功能均可通过添加其他库进行添加。 但是，SPA 框架（如 Angular）以更集中的方式提供这些功能，因为它从一开始设计的时候就考虑到了这一点。 此外，jQuery 是一种命令性库，这意味着你需要调用 jQuery 函数才能使用 jQuery 执行任何任务。 SPA 框架提供的很多工作和功能都可以声明的方式完成，无需编写任何实际代码。
 
-数据绑定便是一个很好的示例。 在 jQuery 中，通常只需要一个代码行就能获得 DOM 元素的值或设置某元素的值。 但是，你必须在需要更改元素值的任何时候编写此代码，有时，一个页面的多项功能中会发生此情况。 另一常见示例是元素可见性。 在 jQuery 中，可能存在不同的位置，需要编写代码控制特定元素是否可见。 每这两种情况中，如果使用数据绑定，便无需编写任何代码。 只需将元素可见性的值绑定到页面的 viewmodel 即可，对该 viewmodel 做出的任何更改都会自动反映在绑定元素中  。
+数据绑定便是一个很好的示例。 在 jQuery 中，通常只需要一个代码行就能获得 DOM 元素的值或设置某元素的值。 但是，一旦需要更改元素值就需要编写此行代码，有时这会出现在一个页面上的多个函数中。 另一常见示例是元素可见性。 在 jQuery 中，可能需要在很多位置编写代码来控制特定元素是否可见。 每这两种情况中，如果使用数据绑定，便无需编写任何代码。 只需将相关元素的值或可见性绑定到页面上的 viewmodel 即可，对该 viewmodel 的任何更改都会自动反映在绑定的元素中  。
 
 ### <a name="angular-spas"></a>Angular SPA
 

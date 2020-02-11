@@ -7,16 +7,16 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-ms.openlocfilehash: 6b3e8068be2f5ed82c483b760fe100ea0a751588
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 023c38f66611bd0022699d3f62d90c3923585012
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457860"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094470"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>缓解：基于指针的触控和触笔支持
 
-对于定位 .NET Framework 4.7 且在 Windows 10 创意者更新及更高版本的 Windows 系统上运行的 WPF 应用程序，可以启用可选的基于 `WM_POINTER` 的 WPF 触控/触笔堆栈。
+对于面向 .NET Framework 4.7 且在 Windows 10 创意者更新及更高版本的 Windows 上运行的 WPF 应用程序，可以启用基于 `WM_POINTER` 的可选 WPF 触控/触笔堆栈。
 
 ## <a name="impact"></a>影响
 
@@ -40,7 +40,7 @@ ms.locfileid: "73457860"
 
 ## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>选择启用基于 WM_POINTER 的触控/触笔支持
 
-要启用此堆栈的开发者可以在应用程序的 app.config 文件中添加下面的代码：
+要启用此堆栈的开发者可以在应用程序的 app.config 文件中添加下面的代码。 
 
 ```xml
 <configuration>

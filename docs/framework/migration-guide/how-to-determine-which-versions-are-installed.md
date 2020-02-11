@@ -1,6 +1,7 @@
 ---
 title: 确定已安装的 .NET Framework 版本
-ms.date: 04/18/2019
+description: 使用代码、regedit.exe 或 PowerShell，通过查询 Windows 注册表来检测在计算机上安装了哪些版本的 .NET Framework。
+ms.date: 02/03/2020
 dev_langs:
 - csharp
 - vb
@@ -9,129 +10,108 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: b860aac01780acb67c53e822eff478b78198996b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 8469f977c6ed9691c81a2a8354935557b5c27171
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738188"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093821"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：确定已安装的 .NET Framework 版本
 
-用户可在他们的计算机上[安装](../install/index.md)和运行 .NET Framework 的多个版本。 当你开发或部署应用时，你可能需要知道用户的计算机上安装了哪些 .NET Framework 版本。
+用户可在他们的计算机上[安装](../install/index.md)和运行 .NET Framework 的多个版本。 当你开发或部署应用时，你可能需要知道用户的计算机上安装了哪些 .NET Framework 版本。 注册表包含计算机上安装的 .NET Framework 版本列表。
 
 .NET Framework 由两个采用不同版本的主要组件构成：
 
-- 一组程序集，它们是为应用提供功能的类型与资源的集合。 .NET Framework 和程序集使用相同的版本号。
+- 一组程序集，它们是为应用提供功能的类型与资源的集合。 .NET Framework 和程序集使用相同的版本号。 例如，.NET Framework 版本包括 4.5、4.6.1 和 4.7.2。
 
-- 公共语言运行时 (CLR)，可管理并执行应用代码。 CLR 按其自己的版本号标识（请参阅[版本和依赖关系](versions-and-dependencies.md)）。
+- 公共语言运行时 (CLR)，可管理并执行应用代码。 单个 CLR 版本通常可支持多个 .NET Framework 版本。 例如，CLR 版本4.0.30319.xxxxx（其中 xxxxx 小于42000）支持 .NET Framework 版本 4 到 4.5.2。   大于或等于4.0.30319.42000 的 CLR 版本支持从 .NET Framework 4.6 开始的 .NET Framework 版本。
 
-> [!NOTE]
-> 每个 .NET Framework 的新版本都会保留早期版本中的功能并会添加新功能。 可在同一台计算机上同时加载多个版本的 .NET Framework，这意味着可安装 .NET Framework 而无需卸载以前的版本。 通常，你不应卸载以前版本的 .NET Framework，因为你使用的应用程序可能依赖于某个特定版本，如果删除该版本，应用程序可能会中断。
->
-> .NET Framework 版本和 CLR 版本之间存在差异：
->
-> - .NET Framework 版本基于构成 .Net Framework 类库的一组程序集。 例如，.NET Framework 版本包括 4.5、4.6.1 和 4.7.2。
-> - CLR 版本基于 .NET Framework 应用程序执行的运行时。 单个 CLR 版本通常可支持多个 .NET Framework 版本。 例如，CLR 版本 4.0.30319.*xxxxx* 支持 .NET Framework 版本 4 到 4.5.2（其中 *xxxxx* 小于 42000），而 CLR 版本 4.0.30319.42000 支持从 .NET Framework 4.6 开始的 .NET Framework 版本。
->
-> 有关版本的详细信息，请参见 [.NET Framework 版本和依赖关系](versions-and-dependencies.md)。
+可使用社区维护的工具帮助检测安装了哪些 .NET Framework 版本：
 
-注册表包含计算机上安装的 .NET Framework 版本列表。 可使用注册表编辑器查看注册表或使用代码进行查询：
+- [https://github.com/jmalarcon/DotNetVersions](https://github.com/jmalarcon/DotNetVersions)
 
-- 查找较新的 .NET Framework 版本（4.5 及更高版本）：
+  .NET 2.0 命令行工具。
 
-  - [使用注册表编辑器查找 .NET Framework 版本](#net_b)
-  - [使用代码查询注册表以获取 .NET Framework 版本](#net_d)
-  - [使用 PowerShell 查询注册表以获取 .NET Framework 版本](#ps_a)
+- [https://github.com/EliteLoser/DotNetVersionLister](https://github.com/EliteLoser/DotNetVersionLister)
 
-- 查找较旧的 .NET Framework 版本 (1-4)：
-
-  - [使用注册表编辑器查找 .NET Framework 版本](#net_a)
-  - [使用代码查询注册表以获取 .NET Framework 版本](#net_c)
-
-若要获取计算机上安装的 CLR 版本列表，请使用工具或代码：
-
-- [使用 Clrver 工具](#clr_a)
-- [使用代码查询 Environment 类](#clr_b)
+  PowerShell 2.0 模块。
 
 有关检测安装的每个 .NET Framework 版本的更新的信息，请参阅[如何：确定已安装的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)。
 
-## <a name="find-newer-net-framework-versions-45-and-later"></a>查找较新的 .NET Framework 版本（4.5 及更高版本）
+## <a name="detect-net-framework-45-and-later-versions"></a>检测 .NET Framework 4.5 及更高版本
 
-可使用注册表编辑器在注册表中查找版本信息，也可以通过编程方式查询注册表。
+计算机上安装的 .NET Framework 版本（4.5 及更高版本）列出在注册表中，位于  HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full。 如果缺少 Full  子项，则未安装 .NET Framework 4.5 或更高版本。
 
-<a name="net_b"></a>
+> [!NOTE]
+> 注册表路径中的 .NET Framework Setup  子项不以句点开头  。
 
-### <a name="use-registry-editor"></a>使用注册表编辑器
-
-1. 在“开始”菜单中，选择“运行”，输入 regedit，然后选择“确定”     。
-
-     必须具有管理凭据才能运行 regedit。
-
-2. 在注册表编辑器中，打开以下子项：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full**. 如果“完整”子项不存在，则表示尚未安装 .NET Framework 4.5 或更高版本  。
-
-    > [!NOTE]
-    > 注册表中的“.NET Framework 安装程序”  文件夹不以句点开头  。
-
-3. 请检查名为“Release”的 DWORD 条目  。 如果存在，则已安装 .NET Framework 4.5 或更高版本。 其值是对应于特定版本的 .NET Framework 的版本密钥。 以下图为例，“Release”条目的值为 378389，这是 .NET Framework 4.5 的版本密钥  。
-
-   ![.NET Framework 4.5 的注册表项](./media/clr-installdir.png ".NET Framework 4.5 的注册表项")
-
-下表列出了 .NET Framework 4.5 及更高版本的独立操作系统的  Release DWORD 的值。
-
-[!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
+注册表中的 **Release** REG_DWORD 值代表已安装的 .NET Framework 版本。
 
 <a name="version_table"></a>
 
-|.NET Framework 版本|Release DWORD 的值|
-|--------------------------------|-------------|
-|.NET Framework 4.5|所有 Windows 操作系统：378389|
-|.NET Framework 4.5.1|在 Windows 8.1 和 Windows Server 2012 R2 上：378675<br />在所有其他 Windows 操作系统上：378758|
-|.NET Framework 4.5.2|所有 Windows 操作系统：379893|
-|.NET Framework 4.6|在 Windows 10 上：393295<br />在所有其他 Windows 操作系统上：393297|
-|.NET Framework 4.6.1|在 Windows 10 11 月更新系统上：394254<br />在所有其他 Windows 操作系统（包括 Windows 10）上：394271|
-|.NET Framework 4.6.2|在 Windows 10 周年更新和 Windows Server 2016 上：394802<br />在所有其他 Windows 操作系统（包括其他 Windows 10 操作系统）上：394806|
-|.NET Framework 4.7|在 Windows 10 创意者更新上：460798<br />在所有其他 Windows 操作系统（包括其他 Windows 10 操作系统）上：460805|
-|.NET Framework 4.7.1|在 Windows 10 Fall Creators Update 和 Windows Server 版本 1709 上：461308<br/>在所有其他 Windows 操作系统（包括其他 Windows 10 操作系统）上：461310|
-|.NET Framework 4.7.2|在 Windows 10 2018 年 4 月更新和 Windows Server 版本 1803 上：461808<br/>在除 Windows 10 2018 年 4 月更新和 Windows Server 版本 1803 之外的所有 Windows 操作系统上：461814|
-|.NET Framework 4.8|在 Windows 10 2019 年 5 月更新和 Windows 10 2019 年 11 月更新上：528040<br/>在所有其他 Windows 操作系统（包括其他 Windows 10 操作系统）上：528049|
+| .NET Framework 版本 | Release 的值  |
+| ---------------------- | -------------------------- |
+| .NET Framework 4.5     | 所有 Windows 操作系统：378389 |
+| .NET Framework 4.5.1   | 在 Windows 8.1 和 Windows Server 2012 R2 上：378675<br />在所有其他 Windows 操作系统上：378758 |
+| .NET Framework 4.5.2   | 所有 Windows 操作系统：379893 |
+| .NET Framework 4.6     | 在 Windows 10 上：393295<br />在所有其他 Windows 操作系统上：393297 |
+| .NET Framework 4.6.1   | 在 Windows 10 11 月更新系统上：394254<br />在所有其他 Windows 操作系统（包括 Windows 10）上：394271 |
+| .NET Framework 4.6.2   | 在 Windows 10 周年更新和 Windows Server 2016 上：394802<br />在所有其他 Windows 操作系统（包括其他 Windows 10 操作系统）上：394806 |
+| .NET Framework 4.7     | 在 Windows 10 创意者更新上：460798<br />在所有其他 Windows 操作系统（包括其他 Windows 10 操作系统）上：460805 |
+| .NET Framework 4.7.1   | 在 Windows 10 Fall Creators Update 和 Windows Server 版本 1709 上：461308<br/>在所有其他 Windows 操作系统（包括其他 Windows 10 操作系统）上：461310 |
+| .NET Framework 4.7.2   | 在 Windows 10 2018 年 4 月更新和 Windows Server 版本 1803 上：461808<br/>在除 Windows 10 2018 年 4 月更新和 Windows Server 版本 1803 之外的所有 Windows 操作系统上：461814 |
+| .NET Framework 4.8     | 在 Windows 10 2019 年 5 月更新和 Windows 10 2019 年 11 月更新上：528040<br/>在 Windows 10 和 Windows Server 版本 1909 上：528209<br/>在所有其他 Windows 操作系统（包括其他 Windows 10 操作系统）上：528049 |
 
-#### <a name="specific-version"></a>特定版本
+### <a name="minimum-version"></a>最低版本
 
-若要确定特定 Windows 操作系统版本上是否安装了特定版本的 .NET Framework，请测试 Release DWORD 值是否等于表中列出的值    。 例如，若要确定 Windows 10 系统上是否安装了 .NET Framework 4.6，请测试 Release 值是否等于  393295  。
+若要确定是否安装了最低版本的 .NET Framework，请使用上表中最小的 Release REG_DWORD 值来指示该版本   。
 
-#### <a name="minimum-version"></a>最低版本
+例如，如果应用程序在 .NET Framework 4.8 或更高版本下运行，请测试 Release REG_DWORD 值是否大于或等于 528040   。
 
-若要确定是否安装了最低版本的 .NET Framework，请对该版本使用上个表中最小的 RELEASE DWORD 值   。 （为方便起见，后续表中也列出了最小值。）
+| .NET Framework 版本 | 最小值 |
+| ---------------------- | ------------- |
+| .NET Framework 4.5     | 378389 |
+| .NET Framework 4.5.1   | 378675 |
+| .NET Framework 4.5.2   | 379893 |
+| .NET Framework 4.6     | 393295 |
+| .NET Framework 4.6.1   | 394254 |
+| .NET Framework 4.6.2   | 394802 |
+| .NET Framework 4.7     | 460798 |
+| .NET Framework 4.7.1   | 461308 |
+| .NET Framework 4.7.2   | 461808 |
+| .NET Framework 4.8     | 528040 |
 
-例如，如果应用程序在 .NET Framework 4.8 或更高版本下运行，请测试 RELEASE DWORD 值是否大于或等于 528040   。
+### <a name="use-registry-editor"></a>使用注册表编辑器
 
-|.NET Framework 版本|Release DWORD 的最小值|
-|--------------------------------|-------------|
-|.NET Framework 4.5|378389|
-|.NET Framework 4.5.1|378675|
-|.NET Framework 4.5.2|379893|
-|.NET Framework 4.6|393295|
-|.NET Framework 4.6.1|394254|
-|.NET Framework 4.6.2|394802|
-|.NET Framework 4.7|460798|
-|.NET Framework 4.7.1|461308|
-|.NET Framework 4.7.2|461808|
-|.NET Framework 4.8|528040|
+01. 在“开始”菜单中，选择“运行”，输入 regedit，然后选择“确定”     。
 
-#### <a name="multiple-versions"></a>多个版本
+    必须具有管理凭据才能运行 regedit。
 
-若要测试多个版本，请先测试值是否大于或等于最新 .NET Framework 版本的较小 DWORD 值，然后将该值与每个连续较旧版本的较小 DWORD 值进行比较  。 例如，如果应用程序需要 .NET Framework 4.7 或更高版本，且你希望确定是否安装了特定版本的 .NET Framework，请先测试 RELEASE DWORD 值是否大于或等于 461808   （.NET Framework 4.7.2 的较小 DWORD 值）。 然后，将 RELEASE  DWORD 值与每个更新版本的 .NET Framework 的较小值进行比较。
+01. 在注册表编辑器中，打开以下子项：  HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full。 如果“完整”子项不存在，则表示尚未安装 .NET Framework 4.5 或更高版本  。
 
-<a name="net_d"></a>
+01. 请检查名为“Release”的 REG_DWORD 条目  。 如果存在，则已安装 .NET Framework 4.5 或更高版本。 其值对应于 .NET Framework 的特定版本。 以下图为例，“Release”条目的值为 528040，这是 .NET Framework 4.8 的版本密钥  。
+
+    ![.NET Framework 4.5 的注册表项](./media/clr-installdir.png ".NET Framework 4.5 的注册表项")
+
+### <a name="use-powershell-to-check-for-a-minimum-version"></a>使用 PowerShell 检查最低版本
+
+使用 PowerShell 命令检查 HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full  子项“Release”条目的值\\  。
+
+以下示例检查“Release”条目的值，以确定是否已安装 .NET Framework 4.6.2 或更高版本  。 如果安装了此代码，则返回 `True`，否则返回 `False`。
+
+```PowerShell
+(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
+```
 
 ### <a name="query-the-registry-using-code"></a>使用代码查询注册表
 
-1. 使用 <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A?displayProperty=nameWithType> 和 <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A?displayProperty=nameWithType> 方法访问 Windows 注册表中的“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full”子项  。
+01. 使用 <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A?displayProperty=nameWithType> 和 <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A?displayProperty=nameWithType> 方法访问 Windows 注册表中的  HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full 子项。
 
-   “HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full”子项中存在“Release”DWORD 条目表示已在电脑上安装 .NET Framework 4.5 或更高版本   。
+    > [!IMPORTANT]
+    > 如果运行的应用是 32 位且在 64 位 Windows 中运行，则注册表路径与前面列出的不同。 可在 HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\  子项中找到 64 位注册表。 例如，.NET Framework 4.5 的注册表子项为 HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full  。
 
-2. 检查“Release”条目的值以确定安装的版本  。 为了向前兼容，可检查是否有一个值大于或等于 [.NET Framework 版本表](#version_table)中所列的值。
+01. 检查 Release REG_DWORD 值以确定已安装的版本  。 为了向前兼容，可检查是否有一个值大于或等于 [.NET Framework 版本表](#version_table)中所列的值。
 
 下例检查注册表中“Release”条目的值，以查找已安装的 .NET Framework 4.5 及更高版本  ：
 
@@ -141,51 +121,48 @@ ms.locfileid: "73738188"
 此示例遵循版本检查的建议做法：
 
 - 检查“Release”条目的值是否大于或等于已知版本密钥的值   。
-
 - 按从最新版本到最早版本的顺序检查。
 
-<a name="ps_a"></a>
+## <a name="detect-net-framework-10-through-40"></a>检测 .NET Framework 1.0 到 4.0
 
-### <a name="use-powershell-to-check-for-a-minimum-required-version"></a>使用 PowerShell 检查最低支持的版本
+.NET Framework 1.1 到 4.0 的每个版本都作为子项列出在 HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP  。 下表列出了每个 .NET Framework 版本的路径。 对于大多数版本，都有 Install  REG_DWORD 值 `1`指示已安装此版本。 在这些子项中，还有一个包含版本字符串的 Version  REG_SZ 值。
 
-使用 PowerShell 命令检查“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full”子项的“Release”条目的值   。
+> [!NOTE]
+> 注册表路径中的 .NET Framework Setup  子项不以句点开头  。
 
-以下示例检查“Release”条目的值，以确定是否已安装 .NET Framework 4.6.2 或更高版本  。 如果安装了此代码，则返回 `True`，否则返回 `False`。
+| Framework 版本  | 注册表子项 | “值” |
+| ------------------ | --------------- | ----- |
+| 1.0                | **HKLM\\Software\\Microsoft\\.NETFramework\\Policy\\v1.0\\3705**     | **Install** REG_SZ 等于 `1` |
+| 1.1                | **HKLM\\Software\\Microsoft\\NET Framework Setup\\NDP\\v1.1.4322**   | **Install** REG_DWORD 等于 `1` |
+| 2.0                | **HKLM\\Software\\Microsoft\\NET Framework Setup\\NDP\\v2.0.50727**  | **Install** REG_DWORD 等于 `1` |
+| 3.0                | **HKLM\\Software\\Microsoft\\NET Framework Setup\\NDP\\v3.0\\Setup** | **InstallSuccess** REG_DWORD 等于 `1` |
+| 3.5                | **HKLM\\Software\\Microsoft\\NET Framework Setup\\NDP\\v3.5**        | **Install** REG_DWORD 等于 `1` |
+| 4.0 客户端配置文件 | **HKLM\\Software\\Microsoft\\NET Framework Setup\\NDP\\v4\\Client**  | **Install** REG_DWORD 等于 `1` |
+| 4.0 完整配置文件   | **HKLM\\Software\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full**    | **Install** REG_DWORD 等于 `1` |
 
-```PowerShell
-(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
-```
+> [!IMPORTANT]
+> 如果运行的应用是 32 位且在 64 位 Windows 中运行，则注册表路径与前面列出的不同。 可在 HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\  子项中找到 64 位注册表。 例如，.NET Framework 3.5 的注册表子项为 HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\NET Framework Setup\\NDP\\v3.5  。
 
-若要检查其他要求的最低 .NET Framework 版本，请使用 [.NET Framework 版本表](#version_table)中的值替换 `394802`。 使用所示的该版本的最小值。
-
-## <a name="find-older-net-framework-versions-1-through-4"></a>查找较旧的 .NET Framework 版本 (1-4)
-
-<a name="net_a"></a>
+请注意，.NET Framework 1.0 子项的注册表路径与其他子项不同。
 
 ### <a name="use-registry-editor-older-framework-versions"></a>使用注册表编辑器（较旧的框架版本）
 
-1. 在“开始”菜单中，选择“运行”，输入 regedit，然后选择“确定”     。
+01. 在“开始”菜单中，选择“运行”，输入 regedit，然后选择“确定”     。
 
     必须具有管理凭据才能运行 regedit。
 
-2. 在注册表编辑器中，打开以下子项：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP**：
+01. 打开与要检查的版本匹配的子项。 使用[检测 .NET Framework 1.0 到 4.0](#detect-net-framework-10-through-40)部分列出的表。
 
-    - 对于 .NET Framework 1.1 到 3.5 版，每个安装的版本都在“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP”子项下列为子项  。 例如，“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v3.5”  。 版本号存储为版本子项的“Version”条目中的值  。
-
-    - 对于 .NET Framework 4，“Version”条目位于“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4.0\Client”或“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4.0\Full”子项下，或同时位于这两个子项下    。
-
-    > [!NOTE]
-    > 注册表中的“.NET Framework 安装程序”文件夹不以句点开头  。
-
-    下图显示了 .NET Framework 3.5 的子项及其“Version”条目  。
+    下图显示了 .NET Framework 3.5 的子项及其 Version  值。
 
     ![.NET Framework 3.5 的注册表项。](./media/net-4-and-earlier.png ".NET Framework 3.5 及早期版本")
 
-<a name="net_c"></a>
-
 ### <a name="query-the-registry-using-code-older-framework-versions"></a>使用代码查询注册表（较旧的框架版本）
 
-使用 <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> 类访问 Windows 注册表中的“HKEY_LOCAL_MACHINE\Software\Microsoft\NET Framework Setup\NDP”子项  。
+使用 <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> 类访问 Windows 注册表中的 HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP  子项。
+
+> [!IMPORTANT]
+> 如果运行的应用是 32 位且在 64 位 Windows 中运行，则注册表路径与前面列出的不同。 可在 HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\  子项中找到 64 位注册表。 例如，.NET Framework 3.5 的注册表子项为 HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\NET Framework Setup\\NDP\\v3.5  。
 
 以下示例查找已安装的 .NET Framework 1-4 版本：
 
@@ -194,47 +171,43 @@ ms.locfileid: "73738188"
 
 ## <a name="find-clr-versions"></a>查找 CLR 版本
 
-<a name="clr_a"></a>
+随 .NET Framework 一起安装 .NET Framework CLR 单独进行版本控制。 可通过两种方式检测 .NET Framework CLR 的版本：
 
-### <a name="use-clrverexe"></a>使用 Clrver.exe
+- **Clrver 工具**
 
-使用 [CLR 版本工具 (Clrver.exe)](../tools/clrver-exe-clr-version-tool.md) 确定计算机上安装了哪些版本的 CLR：
+  使用 [CLR 版本工具 (Clrver.exe)](../tools/clrver-exe-clr-version-tool.md) 确定计算机上安装了哪些版本的 CLR。 打开 [Visual Studio 开发人员命令提示](../tools/developer-command-prompt-for-vs.md)并输入 `clrver`。
 
-- 从 [Visual Studio 的开发人员命令提示](../tools/developer-command-prompt-for-vs.md)，输入 `clrver`。
+  示例输出：
 
-    示例输出：
+  ```console
+  Versions installed on the machine:
+  v2.0.50727
+  v4.0.30319
+  ```
 
-    ```console
-    Versions installed on the machine:
-    v2.0.50727
-    v4.0.30319
-    ```
+- **`Environment` 类**
 
-<a name="clr_b"></a>
+  > [!IMPORTANT]
+  > 对于 .NET Framework 4.5 及更高版本，请勿使用 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 属性来检测 CLR 的版本。 而应按照[检测 .NET Framework 4.5 及更高版本](#detect-net-framework-45-and-later-versions)中所述查询注册表。
+  
+  01. 查询 <xref:System.Environment.Version?displayProperty=nameWithType> 属性以检索 <xref:System.Version> 对象。
+  
+      返回的 `System.Version` 对象标识当前正在执行代码的运行时版本。 它不返回可能已安装在计算机上的程序集版本或其他运行时版本。
+  
+      对于 .NET Framework 版本 4、4.5、4.5.1 和 4.5.2，返回的 <xref:System.Version>   对象的字符串表示形式为 4.0.30319.xxxxx，其中 xxxxx 小于 42000。 对于 .NET Framework 4.6 及更高版本，它的格式为 4.0.30319.42000。
+  
+  01. 获得 Version  对象后，按如下方式查询：
+  
+      - 对于主要版本标识符（例如，4 表示版本 4.0），请使用 <xref:System.Version.Major%2A?displayProperty=nameWithType> 属性  。
+  
+      - 对于次要版本标识符（例如，0 表示版本 4.0），请使用 <xref:System.Version.Minor%2A?displayProperty=nameWithType> 属性 
+  
+      - 对于整个版本字符串（例如，4.0.30319.18010），请使用 <xref:System.Version.ToString%2A?displayProperty=nameWithType> 方法  。 此方法返回一个值，该值反映正在执行代码的运行时的版本。 它不返回可能安装在计算机上的程序集版本或其他运行时版本。
 
-### <a name="use-the-environment-class"></a>使用 Environment 类
-
-> [!IMPORTANT]
-> 对于 .NET Framework 4.5 及更高版本，请勿使用 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 属性来检测 CLR 的版本。 而应按照[使用代码查找 .NET Framework 4.5 及更高版本](#net_d)中所述查询注册表。
-
-1. 查询 <xref:System.Environment.Version?displayProperty=nameWithType> 属性以检索 <xref:System.Version> 对象。
-
-    返回的 `System.Version` 对象标识当前正在执行代码的运行时版本。 它不返回可能已安装在计算机上的程序集版本或其他运行时版本。
-
-    对于 .NET Framework 版本 4、4.5、4.5.1 和 4.5.2，返回的 <xref:System.Version> 对象的字符串表示形式为 4.0.30319. *xxxxx*（其中 *xxxxx* 小于 42000）。 对于 .NET Framework 4.6 及更高版本，它的格式为 4.0.30319.42000。
-
-2. 获得 `Version` 对象后，按如下方式查询：
-
-   - 对于主要版本标识符（例如，4 表示版本 4.0），请使用 <xref:System.Version.Major%2A?displayProperty=nameWithType> 属性  。
-
-   - 对于次要版本标识符（例如，0 表示版本 4.0），请使用 <xref:System.Version.Minor%2A?displayProperty=nameWithType> 属性 
-
-   - 对于整个版本字符串（例如，4.0.30319.18010），请使用 <xref:System.Version.ToString%2A?displayProperty=nameWithType> 方法  。 此方法返回一个值，该值反映正在执行代码的运行时的版本。 它不返回可能安装在计算机上的程序集版本或其他运行时版本。
-
-以下示例使用 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 属性检索 CLR 版本信息：
-
-[!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
-[!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
+  以下示例使用 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 属性检索 CLR 版本信息：
+  
+  [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
+  [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
 
 ## <a name="see-also"></a>请参阅
 
