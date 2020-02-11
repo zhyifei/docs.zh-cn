@@ -1,16 +1,14 @@
 ---
 title: 欢迎使用 .NET
 description: .NET 系列技术入门。
-author: mairaw
-ms.author: mairaw
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 15daaafed02ab1132a3c82c12efa6fad0e0a6db2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838125"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124216"
 ---
 # <a name="welcome-to-net"></a>欢迎使用 .NET
 
@@ -48,7 +46,7 @@ ms.locfileid: "74838125"
 - [.NET Core 指南](core/index.md)
 - [.NET Framework 指南](framework/index.md)
 - [C# 指南](csharp/index.yml)
-- [F# 指南](fsharp/index.yml)
+- [F # 指南](fsharp/index.yml)
 - [Visual Basic 指南](visual-basic/index.yml)
 - [ML.NET 指南](machine-learning/index.yml)
 - [.NET for Apache Spark](spark/index.yml)
@@ -62,7 +60,7 @@ ms.locfileid: "74838125"
 
 [.NET 101 视频系列](https://dotnet.microsoft.com/learn/videos)
 
-## <a name="open-source"></a>开源
+## <a name="open-source"></a>开放源
 
 此文档是完全[开源](https://github.com/dotnet/docs)的。 可通过任何方式参与此文档，如创建问题、编写文档等。 此外，许多 .NET 本身也是开源的。 下表显示了主要的 .NET GitHub 存储库：
 
