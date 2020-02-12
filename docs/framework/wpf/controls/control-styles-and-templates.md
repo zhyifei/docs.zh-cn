@@ -10,17 +10,17 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 01b8dc50860757b0eddee477219db1e19d27f40f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460409"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124398"
 ---
 # <a name="control-styles-and-templates"></a>Control 样式和模板
 Windows Presentation Foundation （WPF）中的控件具有一个包含该控件的可视化树的 <xref:System.Windows.Controls.ControlTemplate>。 可以通过修改控件的 <xref:System.Windows.Controls.ControlTemplate> 来更改该控件的结构和外观。 无法仅替换控件的可视化树的一部分;若要更改控件的可视化树，必须将控件的 <xref:System.Windows.Controls.Control.Template%2A> 属性设置为其新的和完整的 <xref:System.Windows.Controls.ControlTemplate>。  
   
- 桌面主题确定使用的资源字典。 若要为桌面主题获取资源字典，请参阅[默认的 WPF 主题](https://go.microsoft.com/fwlink/?LinkID=158252)。  
+ 桌面主题确定使用的资源字典。 若要为桌面主题获取资源字典，请参阅[默认的 WPF 主题](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)。  
   
  下表描述了资源字典文件名及其相应的桌面主题。  
   

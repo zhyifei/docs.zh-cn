@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: d3d5116a2fa2198661050a1c1adbae9512cd078a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82da07620135224b5f7353f2acce087d939c1855
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790879"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124229"
 ---
 # <a name="textbox-how-to-topics"></a>TextBox 帮助主题
-本部分提供示例来演示如何完成常见任务使用<xref:System.Windows.Controls.TextBox>控件。  
+本部分提供的示例演示如何使用 <xref:System.Windows.Controls.TextBox> 控件完成常见任务。  
   
 ## <a name="in-this-section"></a>本节内容  
  [创建多行 TextBox 控件](how-to-create-a-multiline-textbox-control.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "61790879"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [WPF 控件库示例](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
 - [TextBox 样式和模板](textbox-styles-and-templates.md)

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, and Windows Store apps
 - .NET Framework, and Windows Runtime
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd7e045bf54b09fe2a229efefc0218eb3f2f731a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 56c9cb60ab46a583c34f898d20abf85f5ff0fe4c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802747"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123696"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>.NET Framework 对 Windows 应用商店应用程序和 Windows 运行时的支持情况
 
@@ -30,7 +28,7 @@ ms.locfileid: "74802747"
 
 本主题概述 .NET Framework 为所有三个类别提供的支持，并介绍 Windows 运行时组件的方案。 第一部分包含有关 .NET Framework 与 Windows 运行时之间的关系的基本信息，并说明了在帮助系统和 IDE 中可能会遇到的一些问题。 [第二部分](#WindowsRuntimeComponents)讨论用于开发 Windows 运行时组件的方案。
 
-## <a name="the-basics"></a>基本知识
+## <a name="the-basics"></a>基础知识
 
 .NET Framework 通过提供适用于 Windows 8.x 应用商店应用的 .NET，并支持 Windows 运行时本身，来支持前面列出的三种开发方案。
 
@@ -98,9 +96,9 @@ Windows 运行时和 .NET Framework 文档集是独立的。 如果按 F1 显示
 
 - 对于 Windows 运行时基元 `Int32`、`Int64`、`Single`、`Double`、`Boolean`、`String` （Unicode 字符的不可变集合）、`Enum`、`UInt32`、`UInt64`和 `Guid`，请使用 `System` 命名空间中具有相同名称的类型。
 
-- 对于 `UInt8`，使用 `System.Byte`。
+- 对于 `UInt8`，请使用 `System.Byte`。
 
-- 对于 `Char16`，使用 `System.Char`。
+- 对于 `Char16`，请使用 `System.Char`。
 
 - 对于 `IInspectable` 接口，使用 `System.Object`。
 
@@ -112,7 +110,7 @@ Windows 运行时和 .NET Framework 文档集是独立的。 如果按 F1 显示
 
 ### <a name="other-differences"></a>其他差异
 
-在少数情况下，.NET Framework 类型会显示在代码中，而不是 Windows 运行时类型需要对你的操作。 例如，<xref:Windows.Foundation.Uri?displayProperty=nameWithType> 类在 .NET Framework 代码中显示为 <xref:System.Uri?displayProperty=nameWithType>。 <xref:System.Uri?displayProperty=nameWithType> 允许使用相对 URI，但 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 需要绝对 URI。 因此，当您将 URI 传递到 Windows 运行时方法时，必须确保它是绝对的。 请参阅 [将 URI 传递给 Windows 运行时](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)。
+在少数情况下，.NET Framework 类型会显示在代码中，而不是 Windows 运行时类型需要对你的操作。 例如，<xref:Windows.Foundation.Uri?displayProperty=nameWithType> 类在 .NET Framework 代码中显示为 <xref:System.Uri?displayProperty=nameWithType>。 <xref:System.Uri?displayProperty=nameWithType> 允许使用相对 URI，但 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 需要绝对 URI。 因此，当您将 URI 传递到 Windows 运行时方法时，必须确保它是绝对的。 请参阅[将 URI 传递到 Windows 运行时](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)。
 
 <a name="WindowsRuntimeComponents"></a>
 
@@ -157,7 +155,7 @@ Windows 运行时和 .NET Framework 文档集是独立的。 如果按 F1 显示
 
 ## <a name="related-topics"></a>相关主题
 
-|职务|描述|
+|职务|说明|
 |-----------|-----------------|
 |[适用于 Microsoft Store 应用的 .NET 概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|描述可用于创建 Windows 8.x 应用商店应用和 Windows RuntimeComponents 的 .NET Framework 类型和成员。 （位于 Windows 开发中心。）|
 |[使用C#或 Visual Basic 的 Windows 应用商店应用的路线图](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|提供了一些关键资源来帮助您开始使用C#或 Visual Basic 开发 Windows 8.X 应用商店应用程序，其中包括许多快速入门主题、指导原则和最佳实践。 （位于 Windows 开发中心。）|

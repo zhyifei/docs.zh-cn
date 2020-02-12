@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: bec7e14ceed867e89c3117efbc245938356b9d78
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 825b689dea145d18035344cd902ea1b8a50e82c3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742278"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124203"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 浏览器应用程序概述
 <a name="introduction"></a>XAML 浏览器应用程序（Xbap）结合了 Web 应用程序和丰富客户端应用程序的功能。 与 Web 应用程序类似，可以将 XBAP 部署到 Web 服务器并从 Internet Explorer 或 Firefox 启动。 与胖客户端应用程序一样，Xbap 可以利用 WPF 的功能。 开发 XBAP 也与开发丰富客户端类似。 本主题提供简单、高级的 XBAP 开发简介，并介绍 XBAP 开发与标准的丰富客户端开发的不同之处。
@@ -91,7 +91,7 @@ ms.locfileid: "76742278"
 
 <a name="communicating_with_the_host_web_page"></a>
 ## <a name="communicating-with-the-host-web-page"></a>与宿主网页通信
- 当在 HTML 框架中承载应用程序时，可以与包含 XBAP 的网页进行通信。 可以通过检索 <xref:System.Windows.Interop.BrowserInteropHelper>的 <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> 属性来执行此操作。 此属性返回一个表示 HTML 窗口的脚本对象。 然后可以通过使用常规的点语法访问 [window object](https://go.microsoft.com/fwlink/?LinkId=160274)（window 对象）上的属性、方法和事件。 还可以访问脚本方法和全局变量。 以下示例演示如何检索脚本对象和关闭浏览器。
+ 当在 HTML 框架中承载应用程序时，可以与包含 XBAP 的网页进行通信。 可以通过检索 <xref:System.Windows.Interop.BrowserInteropHelper>的 <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> 属性来执行此操作。 此属性返回一个表示 HTML 窗口的脚本对象。 然后可以通过使用常规的点语法访问 [window object](https://developer.mozilla.org/en-US/docs/Web/API/Window)（window 对象）上的属性、方法和事件。 还可以访问脚本方法和全局变量。 以下示例演示如何检索脚本对象和关闭浏览器。
 
  [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]
@@ -175,7 +175,7 @@ ms.locfileid: "76742278"
 > [!NOTE]
 > 上表中描述的行为针对的是不遵循 ClickOnce 受信任部署模型的完全信任的 XBAP。
 
- 建议使用 ClickOnce 受信任部署模型部署完全信任的 XBAP。 此模型允许自动向 XBAP 授予完全信任（与安全区域无关），这样用户便不会收到提示。 作为此模型的一部分，必须使用来自受信任发行者提供的证书来对应用程序进行签名。 有关详细信息，请参阅[受信任的应用程序部署概述](/visualstudio/deployment/trusted-application-deployment-overview)和 [Introduction to Code Signing](https://go.microsoft.com/fwlink/?LinkId=166327)（代码签名简介）。
+ 建议使用 ClickOnce 受信任部署模型部署完全信任的 XBAP。 此模型允许自动向 XBAP 授予完全信任（与安全区域无关），这样用户便不会收到提示。 作为此模型的一部分，必须使用来自受信任发行者提供的证书来对应用程序进行签名。 有关详细信息，请参阅[受信任的应用程序部署概述](/visualstudio/deployment/trusted-application-deployment-overview)和 [Introduction to Code Signing](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85))（代码签名简介）。
 
 <a name="xbap_start_time_performance_considerations"></a>
 ## <a name="xbap-start-time-performance-considerations"></a>XBAP 启动时间性能注意事项

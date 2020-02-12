@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 1fdc0c9ccf1464d7519a4c5935520de1206ca9bb
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0aecde96d182e12ab72b1a6cba129ab1d8a28391
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794162"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123774"
 ---
 # <a name="walkthrough-host-a-wpf-clock-in-win32"></a>演练：在 Win32 中承载 WPF 时钟
 
@@ -24,7 +24,7 @@ ms.locfileid: "76794162"
 
 ## <a name="how-to-use-this-tutorial"></a>如何使用本教程
 
-本教程重点介绍生成互操作应用程序的重要步骤。 本教程通过示例[Win32 时钟互操作示例](https://go.microsoft.com/fwlink/?LinkID=160051)进行了支持，但该示例反射了最终产品。 本教程介绍的步骤如下所示：从自己的现有 Win32 项目开始（可能是预先存在的项目），并向应用程序添加托管的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 可以将最终产品与[Win32 时钟互操作示例](https://go.microsoft.com/fwlink/?LinkID=160051)进行比较。
+本教程重点介绍生成互操作应用程序的重要步骤。 本教程通过示例[Win32 时钟互操作示例](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)进行了支持，但该示例反射了最终产品。 本教程介绍的步骤如下所示：从自己的现有 Win32 项目开始（可能是预先存在的项目），并向应用程序添加托管的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 可以将最终产品与[Win32 时钟互操作示例](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)进行比较。
 
 ## <a name="a-walkthrough-of-windows-presentation-framework-inside-win32-hwndsource"></a>Win32 中的 Windows Presentation Framework 的演练 (HwndSource)
 
@@ -232,10 +232,10 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
 
 !["最终结果日期和时间属性" 对话框](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
-若要将最终结果与生成此屏幕截图的代码进行比较，请参阅[Win32 时钟互操作示例](https://go.microsoft.com/fwlink/?LinkID=160051)。
+若要将最终结果与生成此屏幕截图的代码进行比较，请参阅[Win32 时钟互操作示例](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)。
 
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Interop.HwndSource>
 - [WPF 和 Win32 互操作](wpf-and-win32-interoperation.md)
-- [Win32 时钟互操作示例](https://go.microsoft.com/fwlink/?LinkID=160051)
+- [Win32 时钟互操作示例](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)

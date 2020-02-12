@@ -7,44 +7,42 @@ helpviewer_keywords:
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5b6a32aa465700fb316bf2269c4d057ff823443
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd5e5612de15a499c0dce34dc30faa6fd5731c17
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590339"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124528"
 ---
-# <a name="cross-platform-development-with-the-portable-class-library"></a>使用可移植类库的跨平台开发
+# <a name="cross-platform-development-with-the-portable-class-library"></a>具有可移植类库的跨平台开发
 
-在 Visual Studio 中的可移植类库项目类型可帮助你快速轻松地构建跨平台应用和 Microsoft 平台的库。
+Visual Studio 中的可移植类库项目类型可帮助你快速轻松地为 Microsoft 平台构建跨平台应用程序和库。
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
-可移植类库可以帮助你减少开发和测试代码的时间和成本。 使用此项目类型来编写和生成可移植.NET Framework 程序集，然后从面向.NET Framework、 iOS 或 mac。 如多个平台的应用中引用这些程序集
+可移植类库可以帮助你减少开发和测试代码的时间和成本。 使用此项目类型来编写和生成可移植的 .NET Framework 程序集，然后从面向多个平台（如 .NET Framework、iOS 或 Mac）的应用程序中引用这些程序集。
 
-即使是在 Visual Studio 中创建可移植类库项目并开始开发它之后，你仍然可以更改目标平台。 Visual Studio 将编译成库与新的程序集，可帮助您找到您需要在代码中进行的更改。
+即使是在 Visual Studio 中创建可移植类库项目并开始开发它之后，你仍然可以更改目标平台。 Visual Studio 会将你的库与新的程序集一起编译，这有助于识别你需要在代码中进行的更改。
 
 ## <a name="create-a-portable-class-library-project"></a>创建可移植类库项目
 
-若要创建可移植类库，请使用 Visual Studio 中提供的模板。 创建新的项目 (**文件** > **新建项目**)，然后在**新建项目**对话框框中，选择您的编程语言 （Visual C# 或 Visual Basic）。 然后，选择**类库 （旧版可移植）** 模板。 输入你的项目的名称，然后选择**确定**。
+若要创建可移植类库，请使用 Visual Studio 中提供的模板。 创建新项目（**文件** > "**新建项目**"），然后在 "**新建项目**" 对话框中，选择您的编程C#语言（视觉对象或 Visual Basic）。 然后，选择 "类库 **（旧版可移植）** " 模板。 输入项目的名称，然后选择 **"确定"** 。
 
-**添加可移植类库**对话框随即出现。 选择两个或多个目标，然后选择**确定**。
+此时将显示 "**添加可移植类库**" 对话框。 选择两个或多个目标，然后选择 **"确定"** 。
 
-![在 Visual Studio 中添加可移植库目标](media/add-portable-class-library.png)
+![在 Visual Studio 中添加可移植类库目标](media/add-portable-class-library.png)
 
 ## <a name="change-targets"></a>更改目标
 
-在创建时或之后开始开发，可以更改目标平台的可移植类库项目。 如果你想要在创建你的项目后更改目标**解决方案资源管理器**，打开 （不是解决方案），你可移植类库项目的快捷菜单，然后选择**属性**. 在项目属性页上，**库**选项卡将显示你的项目当前针对的平台。
+您可以在创建可移植类库项目时或在开始开发后更改该项目的目标平台。 如果要在创建项目后更改目标，请在**解决方案资源管理器**中打开可移植类库项目（而非解决方案）的快捷菜单，然后选择 "**属性**"。 在 "项目属性" 页上，"**库**" 选项卡显示项目当前针对的平台。
 
-![在 Visual Studio 中的可移植类库的项目属性](media/pcl-project-properties.png)
+![Visual Studio 中可移植类库的项目属性](media/pcl-project-properties.png)
 
-若要添加或删除的目标，请选择**更改**按钮，然后选择和清除相应的复选框。
+若要添加或删除目标，请选择 "**更改**" 按钮，然后选中并清除相应的复选框。
 
 在你更改目标时，供你在开发项目时使用的 API 也将发生更改以匹配你的选择。 Visual Studio 报告因目标更改而可能导致的错误和警告。
 
-如果您想要评估可移植性的程序集之前在 Visual Studio 中进行更改，可以使用[.NET 可移植性分析器](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)。
+如果要在 Visual Studio 中进行更改之前评估程序集的可移植性，可以使用[.net 可移植性分析器](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)。
 
 ## <a name="supported-types-and-members"></a>支持的类型和成员
 
@@ -72,19 +70,19 @@ ms.locfileid: "64590339"
 
 ### <a name="deploy-a-universal-windows-app"></a>部署通用 Windows 应用
 
-创建通用 Windows 应用时引用可移植类库程序集、 部署应用程序所需的一切尽在应用包和再执行其他步骤所需。
+当你创建一个引用可移植类库程序集的通用 Windows 应用程序时，应用包中将包含你部署该应用所需的所有内容，并且无需执行其他步骤。
 
-### <a name="deploy-a-net-framework-app"></a>部署.NET Framework 应用程序
+### <a name="deploy-a-net-framework-app"></a>部署 .NET Framework 应用
 
 部署引用可移植类库程序集的 .NET Framework 应用时，你必须指定一个对 .NET Framework 正确版本的依赖项。 通过指定此依赖项，可确保与你的应用程序一起安装所需的版本。
 
-- 若要创建 ClickOnce 部署的依赖项：在中**解决方案资源管理器**，选择想要发布的项目的项目节点。 （这是引用了可移植类库项目的项目）在菜单栏上依次选择**项目** > **属性**，然后选择**发布**选项卡。上**发布**页上，选择**先决条件**。 选择所需 .NET Framework 版本作为系统必备组件。
+- 使用 ClickOnce 部署创建依赖项：在**解决方案资源管理器**中，选择要发布的项目的项目节点。 （这是引用可移植类库项目的项目。）在菜单栏上，选择 "**项目**" " > **属性**"，然后选择 "**发布**" 选项卡。在 "**发布**" 页上，选择 "**系统必备**"。 选择所需 .NET Framework 版本作为系统必备组件。
 
-- 若要创建安装项目的依赖项：在中**解决方案资源管理器**，选择安装项目。 在菜单栏上依次选择**项目** > **属性** > **先决条件**。 选择所需 .NET Framework 版本作为系统必备组件。
+- 若要创建与安装项目的依赖项：在**解决方案资源管理器**中，选择 "安装" 项目。 在菜单栏上，选择 "**项目** > **属性**" > **必备组件**"。 选择所需 .NET Framework 版本作为系统必备组件。
 
-有关部署.NET Framework 应用程序的详细信息，请参阅[开发人员部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)。
+有关部署 .NET Framework 应用的详细信息，请参阅面向[开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [将可移植类库与 MVVM 配合使用](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)
 - [面向多个平台的库的应用资源](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)
