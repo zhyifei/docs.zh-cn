@@ -2,12 +2,12 @@
 title: C# 语言版本控制 - C# 指南
 description: 了解如何根据项目确定 C# 语言版本，以及可以手动调整的不同值。
 ms.date: 07/10/2019
-ms.openlocfilehash: 90624816a68de694cacd0017c6d3162f6a89431c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3c1035d983660ea0a945e4d4b7b72c69736c90cb
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713878"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980127"
 ---
 # <a name="c-language-versioning"></a>C# 语言版本控制
 
@@ -54,7 +54,7 @@ ms.locfileid: "75713878"
 
 ### <a name="configure-multiple-projects"></a>配置多个项目
 
-可以创建包含 `<LangVersion>` 元素的 Directory.Build.props  文件来配置多个目录。 通常是在解决方案目录中完成这件事。 将以下内容添加到解决方案目录中的 Directory.Build.props  文件：
+若要配置多个目录，可以创建包含 `<LangVersion>` 元素的 Directory.Build.props  文件。 通常是在解决方案目录中完成这件事。 将以下内容添加到解决方案目录中的 Directory.Build.props  文件：
 
 ```xml
 <Project>
@@ -84,5 +84,5 @@ ms.locfileid: "75713878"
 |5|编译器只接受 C# 5.0 或更低版本中所含的语法。|
 |4|编译器只接受 C# 4.0 或更低版本中所含的语法。|
 |3|编译器只接受 C# 3.0 或更低版本中所含的语法。|
-|ISO-2|编译器只接受 ISO/IEC 23270:2006 C# (2.0) 中所含的语法 |
-|ISO-1|编译器只接受 ISO/IEC 23270:2003 C# (1.0/1.2) 中所含的语法 |
+|ISO-2|编译器只接受 ISO/IEC 23270:2006 C# (2.0) 中所含的语法。 |
+|ISO-1|编译器只接受 ISO/IEC 23270:2003 C# (1.0/1.2) 中所含的语法。 |

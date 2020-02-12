@@ -4,12 +4,12 @@ description: 本高级教程演示如何使用可为 null 的引用类型迁移�
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 4edeab7b2a4211d50c424f567ad7df6ced0bf4ce
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740462"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093300"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教程：使用可为空引用类型迁移现有代码
 
@@ -40,7 +40,7 @@ C# 8 引入了  可为空引用类型，它们以与可为空值类型补充值�
 
 ## <a name="upgrade-the-projects-to-c-8"></a>将项目升级到 C#8
 
-第一步建议确定迁移任务的范围。 首先将项目升级到 C# 8.0（或更高版本）。 将 `LangVersion` 元素添加到 Web 项目和单元测试项目的 csproj 文件中：
+第一步建议确定迁移任务的范围。 首先将项目升级到 C# 8.0（或更高版本）。 将 `LangVersion` 元素同时添加到 Web 项目和单元测试项目的 csproj 文件中的 PropertyGroup：
 
 ```xml
 <LangVersion>8.0</LangVersion>

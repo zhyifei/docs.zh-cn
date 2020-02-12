@@ -4,16 +4,16 @@ description: 了解 C# 中可以为 null 的值类型及其使用方法
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bd90a0b1b77349efe581eb8aae44c58802ba756d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740945"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093183"
 ---
 # <a name="nullable-value-types-c-reference"></a>可为空的值类型（C# 参考）
 
-可为空的值类型 `T?` 表示其基础[值类型](value-types.md)`T` 的所有值，还可表示附加的 [null](../keywords/null.md) 值。 例如，可以将以下三个值中的任意一个指定给 `bool?` 变量：`true`、`false` 或 `null`。 基础值类型 `T` 本身不能是可为空的值类型。
+可为 null 值类型  `T?` 表示其基础[值类型](value-types.md) `T` 的所有值及额外的 [null](../keywords/null.md) 值。 例如，可以将以下三个值中的任意一个指定给 `bool?` 变量：`true`、`false` 或 `null`。 基础值类型 `T` 本身不能是可为空的值类型。
 
 > [!NOTE]
 > C# 8.0 引入了可为空引用类型功能。 有关详细信息，请参阅[可为空引用类型](../../nullable-references.md)。 从 C# 2 开始，提供可为空的值类型。
@@ -68,7 +68,7 @@ ms.locfileid: "76740945"
 
 ## <a name="lifted-operators"></a>提升的运算符
 
-预定义的一元运算符和二元运算符或值类型 `T` 支持的任何重载运算符也受相应的可为空值类型 `T?` 支持。 如果一个或全部两个操作数为 `null`  ，则这些运算符（也称为提升的运算符）将生成 `null`；否则，运算符使用其操作数所包含的值来计算结果。 例如：
+预定义的一元运算符和二元[运算符](../operators/index.md)或值类型 `T` 支持的任何重载运算符也受相应的可为空值类型 `T?` 支持。 如果一个或全部两个操作数为 `null`  ，则这些运算符（也称为提升的运算符）将生成 `null`；否则，运算符使用其操作数所包含的值来计算结果。 例如：
 
 [!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
@@ -82,7 +82,9 @@ ms.locfileid: "76740945"
 
 [!code-csharp-interactive[relational and equality operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
 
-以上示例还表明，对两个均为 `null` 的可为空的值类型实例进行相等比较，其计算结果为 `true`。
+对于[相等运算符](../operators/equality-operators.md#equality-operator-) `==`，如果两个操作数都为 `null`，则结果为 `true`；如果只有一个操作数为 `null`，则结果为 `false`；否则，将比较操作数的包含值。
+
+对于[不等运算符](../operators/equality-operators.md#inequality-operator-) `!=`，如果两个操作数都为 `null`，则结果为 `false`；如果只有一个操作数为 `null`，则结果为 `true`；否则，将比较操作数的包含值。
 
 如果在两个值类型之间存在[用户定义的转换](../operators/user-defined-conversion-operators.md)，则还可在相应的可为空值类型之间使用同一转换。
 

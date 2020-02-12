@@ -3,19 +3,19 @@ title: 编译配置设置
 description: 了解用于为 .NET Core 应用配置 JIT 编译器工作原理的运行时设置。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 0dab3b7b7726a232cf293e338308cf898b370759
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: adf1f01dba7387b89ee56784e33653d6a132c0e3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733534"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092884"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>用于编译的运行时配置选项
 
 ## <a name="tiered-compilation"></a>分层编译
 
 - 配置实时 (JIT) 编译器是否使用[分层编译](../whats-new/dotnet-core-3-0.md#tiered-compilation)。 分层编译将方法转换到两个层级：
-  - 第一层可以更快速地生成代码（[快速 JIT](#quick-jit)）或加载预编译的代码 ([ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images))。
+  - 第一层可以更快速地生成代码（[快速 JIT](#quick-jit)）或加载预编译的代码 ([ReadyToRun](#readytorun))。
   - 第二层在后台生成优化的代码（“优化 JIT”）。
 - 在 NET Core 3.0 及更高版本中，默认情况下已启用分层编译。
 - 在 NET Core 2.1 和 2.2 中，默认情况下已禁用分层编译。
@@ -57,7 +57,7 @@ runtimeconfig.json 文件：
 
 - 配置 JIT 编译器是否使用快速 JIT。  对于不包含循环且不可使用预编译代码的方法，快速 JIT 可以更快完成编译，但不会进行优化。
 - 启用快速 JIT 会缩短启动时间，但可能会生成性能下降的代码。 例如，代码可能会使用更多堆栈空间、分配更多内存并以更慢的速度运行。
-- 如果禁用了快速 JIT 但启用了[分层编译](#tiered-compilation)，则只有预编译的代码参与分层编译。 如果未使用 [ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images) 预编译方法，则 JIT 行为与禁用[分层编译](#tiered-compilation)时相同。
+- 如果禁用了快速 JIT 但启用了[分层编译](#tiered-compilation)，则只有预编译的代码参与分层编译。 如果未使用 [ReadyToRun](#readytorun) 预编译方法，则 JIT 行为与禁用[分层编译](#tiered-compilation)时相同。
 - 在 NET Core 3.0 及更高版本中，默认启用快速 JIT。
 - 在 NET Core 2.1 和 2.2 中，默认禁用快速 JIT。
 
@@ -131,3 +131,13 @@ runtimeconfig.json 文件：
 
 </Project>
 ```
+
+## <a name="readytorun"></a>ReadyToRun
+
+- 配置 .NET Core 运行时是否要为具有可用 ReadyToRun 数据的映像使用预编译代码。 如果禁用此选项，会强制运行时对框架代码进行 JIT 编译。
+- 有关详细信息，请参阅 [ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images)。
+- 默认：启用 (`1`)。
+
+| | 设置名 | 值 |
+| - | - | - |
+| **环境变量** | `COMPlus_ReadyToRun` | `1` - 启用<br/>`0` - 禁用 |

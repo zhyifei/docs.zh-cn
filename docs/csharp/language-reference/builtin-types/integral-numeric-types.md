@@ -32,16 +32,16 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 058e75c81c18f0ec73140f6fc13a91f4e0012a61
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036361"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093196"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整型数值类型（C# 参考）
 
-“整型数值类型”是“简单类型”的子集，可以使用[文本](#integer-literals)**进行初始化**   。 所有整型类型同时也是值类型。 所有整型数值类型都支持[算术](../operators/arithmetic-operators.md)、[位逻辑](../operators/bitwise-and-shift-operators.md)、[比较](../operators/comparison-operators.md)和[相等](../operators/equality-operators.md)运算符。
+整型数值类型  表示整数。 所有的整型数值类型均为[值类型](value-types.md)。 它们还是[简单类型](value-types.md#built-in-value-types)，可以使用[文本](#integer-literals)进行初始化。 所有整型数值类型都支持[算术](../operators/arithmetic-operators.md)、[位逻辑](../operators/bitwise-and-shift-operators.md)、[比较](../operators/comparison-operators.md)和[相等](../operators/equality-operators.md)运算符。
 
 ## <a name="characteristics-of-the-integral-types"></a>整型类型的特征
 
@@ -130,7 +130,7 @@ var longVariable = (long)42;
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
-- [内置类型表](../keywords/built-in-types-table.md)
+- [值类型](value-types.md)
 - [浮点类型](floating-point-numeric-types.md)
-- [设置数值结果表的格式](../keywords/formatting-numeric-results-table.md)
+- [标准数字格式字符串](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET 中的数字](../../../standard/numerics.md)

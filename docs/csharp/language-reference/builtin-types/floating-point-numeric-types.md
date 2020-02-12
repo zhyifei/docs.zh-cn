@@ -18,16 +18,16 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 23aa33c6887db48a12f995efc5e1e2220d30216c
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552283"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093209"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮点数值类型（C# 引用）
 
-“浮点类型”是“简单类型”的子集，可以使用[文本](#real-literals)**进行初始化**   。 所有浮点类型也是值类型。 所有浮点数值类型都支持[算术](../operators/arithmetic-operators.md)、[比较](../operators/comparison-operators.md)和[相等](../operators/equality-operators.md)运算符。
+浮点数值类型  表示实数。 所有浮点型数值类型均为[值类型](value-types.md)。 它们还是[简单类型](value-types.md#built-in-value-types)，可以使用[文本](#real-literals)进行初始化。 所有浮点数值类型都支持[算术](../operators/arithmetic-operators.md)、[比较](../operators/comparison-operators.md)和[相等](../operators/equality-operators.md)运算符。
 
 ## <a name="characteristics-of-the-floating-point-types"></a>浮点类型的特征
 
@@ -118,9 +118,8 @@ Console.WriteLine(m);  // output: 1500000
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
-- [内置类型表](../keywords/built-in-types-table.md)
+- [值类型](value-types.md)
 - [整型类型](integral-numeric-types.md)
-- [设置数值结果表的格式](../keywords/formatting-numeric-results-table.md)
 - [标准数字格式字符串](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET 中的数字](../../../standard/numerics.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>

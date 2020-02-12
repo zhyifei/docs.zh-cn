@@ -2,12 +2,12 @@
 title: 在 .NET Core 工具中管理依赖项
 description: 介绍如何使用 .NET Core 工具管理依赖项。
 ms.date: 03/06/2017
-ms.openlocfilehash: 28280dc05e746cdef4e90870cd4cb528382c45bd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 916daca0240c10dc63ca96048590a426bc51d450
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787858"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965615"
 ---
 # <a name="manage-dependencies-with-net-core-sdk-10"></a>使用 .NET Core SDK 1.0 管理依赖项
 
@@ -26,21 +26,21 @@ ms.locfileid: "76787858"
 如果你熟悉 MSBuild，则它看起来和已有的引用类型很相似。 关键是 `Include` 语句，它指定要添加到项目的包 ID。 `<Version>` 子元素指定要获取的版本。 根据 [NuGet 版本规则](/nuget/create-packages/dependency-versions#version-ranges)指定版本。
 
 > [!NOTE]
-> 如果不熟悉整体 `csproj` 语法，可参阅 [MSBuild 项目参考](/visualstudio/msbuild/msbuild-project-file-schema-reference)文档了解详细信息。
+> 如果不熟悉“项目-文件”语法，可参阅 [MSBuild 项目参考](/visualstudio/msbuild/msbuild-project-file-schema-reference)文档了解详细信息。
 
-使用类似以下示例中的条件添加仅在特定目标中可用的依赖项：
+使用条件来添加仅在特定目标中可用的依赖项，如以下示例所示：
 
 ```xml
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-上面的意思是，依赖项只有在对给定目标生成时才有效。 条件中的 `$(TargetFramework)` 是将在项目中设置的 MSBuild 属性。 对于大多数常见的 .NET Core 应用程序，无需这样做。
+依赖项只有在对给定目标生成时才有效。 条件中的 `$(TargetFramework)` 是将在项目中设置的 MSBuild 属性。 对于大多数常见的 .NET Core 应用程序，无需这样做。
 
 ## <a name="add-a-dependency-to-the-project"></a>向项目添加依赖项
 
 向项目添加依赖项非常简单。 下面是如何向项目添加 Json.NET 版本 `9.0.1` 的示例。 当然，它也适用于其他任意 NuGet 依赖项。
 
-打开项目文件时，将看到两个或多个 `<ItemGroup>` 节点。 你会注意到其中一个节点已有 `<PackageReference>` 元素。 可以向此节点添加新的依赖项，或创建一个新的依赖项；这取决于你，因为结果将是一样的。
+你的项目文件有两个或多个 `<ItemGroup>` 节点。 其中一个节点已有 `<PackageReference>` 元素。 可以向此节点添加新的依赖项，或创建一个新的依赖项；结果将是一样的。
 
 下面的示例使用 `dotnet new console` 删除的默认模板。 这是一个简单的控制台应用程序。 打开项目时，将找到 `<ItemGroup>`，其中包含已存在的 `<PackageReference>`。 在其中添加以下代码：
 

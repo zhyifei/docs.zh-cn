@@ -2,12 +2,12 @@
 title: 关于 .NET Core
 description: 了解 .NET Core。
 ms.date: 09/17/2019
-ms.openlocfilehash: e5460fd1d968a49478a1bdc5f18962de2c7cbbe0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 7908cf70e91dcd68668008c2c3082dc293330ec1
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920962"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965836"
 ---
 # <a name="about-net-core"></a>关于 .NET Core
 
@@ -73,7 +73,7 @@ ms.locfileid: "76920962"
 
 ### <a name="designed-for-adaptability"></a>针对适应性而设计
 
-经过构建，.NET Core 与其他 .NET 产品非常相似，但也存在独特性。 它旨在实现对新平台和工作负荷广泛的适应性，还提供了多个 OS 和 CPU 端口（且可能会移植到更多端口上）。
+经过构建，.NET Core 与其他 .NET 产品相似，但也存在独特性。 它旨在实现对新平台和工作负荷广泛的适应性，还提供了多个 OS 和 CPU 端口（且可能会移植到更多端口上）。
 
 该产品分为几个部分，使各个部件能够在不同的时间适应新的平台。 必须将运行时和特定于平台的基础库作为一个单元进行移植。 与平台无关的库应在所有平台上按照构建的原样运行。 在减少特定于平台的实现来提高开发人员效率方面存在项目偏差，但每当可以此方式全部或部分实现算法或 API 时，都应首选与平台无关的 C# 代码。
 

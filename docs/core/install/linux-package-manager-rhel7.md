@@ -4,18 +4,18 @@ description: 使用包管理器在 RHEL 7 上安装 .NET Core SDK 和运行时�
 author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
-ms.openlocfilehash: bcc41bfcd7c6d03038952e3faaf07952c3deb69d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4f85ed3da8a434fcd5b6ee88491daf623c3c8b31
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715533"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980179"
 ---
 # <a name="rhel-7-package-manager---install-net-core"></a>RHEL 7 包管理器 - 安装 .NET Core
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
-本文介绍如何使用包管理器在 RHEL 7 上安装 .NET Core。 对于 RHEL 7，.NET Core 3.1 尚不可用。
+本文介绍如何使用包管理器在 RHEL 7 上安装 .NET Core。
 
 ## <a name="register-your-red-hat-subscription"></a>注册 Red Hat 订阅
 
@@ -27,8 +27,8 @@ ms.locfileid: "75715533"
 
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-yum install rh-dotnet30 -y
-scl enable rh-dotnet30 bash
+yum install rh-dotnet31 -y
+scl enable rh-dotnet31 bash
 ```
 
 ## <a name="install-the-aspnet-core-runtime"></a>安装 ASP.NET Core 运行时
@@ -37,8 +37,8 @@ scl enable rh-dotnet30 bash
 
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-yum install rh-dotnet30-aspnetcore-runtime-3.0 -y
-scl enable rh-dotnet30 bash
+yum install rh-dotnet31-aspnetcore-runtime-3.1 -y
+scl enable rh-dotnet31 bash
 ```
 
 ## <a name="install-the-net-core-runtime"></a>安装 .NET Core 运行时
@@ -47,10 +47,10 @@ scl enable rh-dotnet30 bash
 
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-yum install rh-dotnet30-dotnet-runtime-3.0 -y
-scl enable rh-dotnet30 bash
+yum install rh-dotnet31-dotnet-runtime-3.1 -y
+scl enable rh-dotnet31 bash
 ```
 
 ## <a name="see-also"></a>请参阅
 
-- [在 Red Hat Enterprise Linux 7 上使用 .NET Core 3.0](https://access.redhat.com/documentation/en-us/net_core/3.0/html/getting_started_guide/gs_install_dotnet)
+- [在 Red Hat Enterprise Linux 7 上使用 .NET Core 3.1](https://access.redhat.com/documentation/en-us/net_core/3.1/html/getting_started_guide/gs_install_dotnet)

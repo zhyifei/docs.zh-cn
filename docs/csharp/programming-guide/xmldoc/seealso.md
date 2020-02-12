@@ -12,12 +12,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: ad22b423d085a152f47c4e34d7ee4247ef9836b8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e24d5910ab21f01aebb5a32ce7646cf56886a81a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789683"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093456"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso>（C# 编程指南）
 
@@ -33,7 +33,7 @@ ms.locfileid: "76789683"
 
   对可从当前编译环境调用的成员或字段的引用。 编译器检查是否存在给定的码位元素，并将 `member` 传递到输出 XML 中的元素名称。`member` 必须在双引号 (" ") 内。
 
-  有关如何创建对泛型类型的 cref 引用的信息，请参阅 [\<see>](./see.md)。
+  有关如何创建对泛型类型的 cref 引用的信息，请参阅 [cref 特性](./cref-attribute.md)。
 
 ## <a name="remarks"></a>备注
 
