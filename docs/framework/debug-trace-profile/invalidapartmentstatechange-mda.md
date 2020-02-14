@@ -11,46 +11,44 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ed4933ae59223c0674d2e36428894cbc3a07933f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8acafcc2fba9a7d30cc77f25f06adaca7c79db32
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052666"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217418"
 ---
-# <a name="invalidapartmentstatechange-mda"></a><span data-ttu-id="ae55e-102">invalidApartmentStateChange MDA</span><span class="sxs-lookup"><span data-stu-id="ae55e-102">invalidApartmentStateChange MDA</span></span>
-<span data-ttu-id="ae55e-103">`invalidApartmentStateChange` 托管调试助手 (MDS) 通过以下两种问题中的任何一种激活：</span><span class="sxs-lookup"><span data-stu-id="ae55e-103">The `invalidApartmentStateChange` managed debugging assistant (MDS) is activated by either of two problems:</span></span>  
+# <a name="invalidapartmentstatechange-mda"></a><span data-ttu-id="20f19-102">invalidApartmentStateChange MDA</span><span class="sxs-lookup"><span data-stu-id="20f19-102">invalidApartmentStateChange MDA</span></span>
+<span data-ttu-id="20f19-103">`invalidApartmentStateChange` 托管调试助手 (MDS) 通过以下两种问题中的任何一种激活：</span><span class="sxs-lookup"><span data-stu-id="20f19-103">The `invalidApartmentStateChange` managed debugging assistant (MDS) is activated by either of two problems:</span></span>  
   
-- <span data-ttu-id="ae55e-104">尝试将已由 COM 初始化的线程的 COM 单元状态更改为不同的单元状态。</span><span class="sxs-lookup"><span data-stu-id="ae55e-104">An attempt is made to change the COM apartment state of a thread that has already been initialized by COM to a different apartment state.</span></span>  
+- <span data-ttu-id="20f19-104">尝试将已由 COM 初始化的线程的 COM 单元状态更改为不同的单元状态。</span><span class="sxs-lookup"><span data-stu-id="20f19-104">An attempt is made to change the COM apartment state of a thread that has already been initialized by COM to a different apartment state.</span></span>  
   
-- <span data-ttu-id="ae55e-105">线程的 COM 单元状态意外更改。</span><span class="sxs-lookup"><span data-stu-id="ae55e-105">The COM apartment state of a thread changes unexpectedly.</span></span>  
+- <span data-ttu-id="20f19-105">线程的 COM 单元状态意外更改。</span><span class="sxs-lookup"><span data-stu-id="20f19-105">The COM apartment state of a thread changes unexpectedly.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="ae55e-106">症状</span><span class="sxs-lookup"><span data-stu-id="ae55e-106">Symptoms</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="20f19-106">症状</span><span class="sxs-lookup"><span data-stu-id="20f19-106">Symptoms</span></span>  
   
-- <span data-ttu-id="ae55e-107">线程的 COM 单元状态不符合请求。</span><span class="sxs-lookup"><span data-stu-id="ae55e-107">A thread's COM apartment state is not what was requested.</span></span> <span data-ttu-id="ae55e-108">这可能造成用于已有线程模型的 COM 组件的代理不同于现有代理。</span><span class="sxs-lookup"><span data-stu-id="ae55e-108">This may cause proxies to be used for COM components that have a threading model different from the current one.</span></span> <span data-ttu-id="ae55e-109">进而可能导致在通过未设置为跨单元封送的接口调用 COM 对象时，引发 <xref:System.InvalidCastException>。</span><span class="sxs-lookup"><span data-stu-id="ae55e-109">This in turn may cause an <xref:System.InvalidCastException> to be thrown when calling the COM object through interfaces that are not set up for cross-apartment marshaling.</span></span>  
+- <span data-ttu-id="20f19-107">线程的 COM 单元状态不符合请求。</span><span class="sxs-lookup"><span data-stu-id="20f19-107">A thread's COM apartment state is not what was requested.</span></span> <span data-ttu-id="20f19-108">这可能造成用于已有线程模型的 COM 组件的代理不同于现有代理。</span><span class="sxs-lookup"><span data-stu-id="20f19-108">This may cause proxies to be used for COM components that have a threading model different from the current one.</span></span> <span data-ttu-id="20f19-109">进而可能导致在通过未设置为跨单元封送的接口调用 COM 对象时，引发 <xref:System.InvalidCastException>。</span><span class="sxs-lookup"><span data-stu-id="20f19-109">This in turn may cause an <xref:System.InvalidCastException> to be thrown when calling the COM object through interfaces that are not set up for cross-apartment marshaling.</span></span>  
   
-- <span data-ttu-id="ae55e-110">线程的 COM 单元状态不同于预期。</span><span class="sxs-lookup"><span data-stu-id="ae55e-110">The COM apartment state of the thread is different than expected.</span></span> <span data-ttu-id="ae55e-111">这可能造成调用[运行时可调用包装器](../../standard/native-interop/runtime-callable-wrapper.md) (RCW) 时，出现 <xref:System.Runtime.InteropServices.COMException>、RPC_E_WRONG_THREAD 返回 HRESULT 以及 <xref:System.InvalidCastException>。</span><span class="sxs-lookup"><span data-stu-id="ae55e-111">This can cause a <xref:System.Runtime.InteropServices.COMException> with an HRESULT of RPC_E_WRONG_THREAD as well as a <xref:System.InvalidCastException> when making calls on a [Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md) (RCW).</span></span> <span data-ttu-id="ae55e-112">这也可能造成部分单线程 COM 组件由多个线程同时访问，进而导致损坏或数据丢失。</span><span class="sxs-lookup"><span data-stu-id="ae55e-112">This can also cause some single-threaded COM components to be accessed by multiple threads at the same time, which can lead to corruption or data loss.</span></span>  
+- <span data-ttu-id="20f19-110">线程的 COM 单元状态不同于预期。</span><span class="sxs-lookup"><span data-stu-id="20f19-110">The COM apartment state of the thread is different than expected.</span></span> <span data-ttu-id="20f19-111">这可能造成调用<xref:System.Runtime.InteropServices.COMException>运行时可调用包装器<xref:System.InvalidCastException> (RCW) 时，出现 [、RPC_E_WRONG_THREAD 返回 HRESULT 以及 ](../../standard/native-interop/runtime-callable-wrapper.md)。</span><span class="sxs-lookup"><span data-stu-id="20f19-111">This can cause a <xref:System.Runtime.InteropServices.COMException> with an HRESULT of RPC_E_WRONG_THREAD as well as a <xref:System.InvalidCastException> when making calls on a [Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md) (RCW).</span></span> <span data-ttu-id="20f19-112">这也可能造成部分单线程 COM 组件由多个线程同时访问，进而导致损坏或数据丢失。</span><span class="sxs-lookup"><span data-stu-id="20f19-112">This can also cause some single-threaded COM components to be accessed by multiple threads at the same time, which can lead to corruption or data loss.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="ae55e-113">原因</span><span class="sxs-lookup"><span data-stu-id="ae55e-113">Cause</span></span>  
+## <a name="cause"></a><span data-ttu-id="20f19-113">原因</span><span class="sxs-lookup"><span data-stu-id="20f19-113">Cause</span></span>  
   
-- <span data-ttu-id="ae55e-114">该线程之前已初始化为不同的 COM 单元状态。</span><span class="sxs-lookup"><span data-stu-id="ae55e-114">The thread was previously initialized to a different COM apartment state.</span></span> <span data-ttu-id="ae55e-115">请注意，可显式或隐式设置线程的单元状态。</span><span class="sxs-lookup"><span data-stu-id="ae55e-115">Note that the apartment state of a thread can be set either explicitly or implicitly.</span></span> <span data-ttu-id="ae55e-116">显式操作包括 <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 属性以及 <xref:System.Threading.Thread.SetApartmentState%2A> 和 <xref:System.Threading.Thread.TrySetApartmentState%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="ae55e-116">The explicit operations include the <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> property and the <xref:System.Threading.Thread.SetApartmentState%2A> and <xref:System.Threading.Thread.TrySetApartmentState%2A> methods.</span></span> <span data-ttu-id="ae55e-117">通过 <xref:System.Threading.Thread.Start%2A> 方法创建的线程可隐式设置为 <xref:System.Threading.ApartmentState.MTA>，除非 <xref:System.Threading.Thread.SetApartmentState%2A> 在线程创建之前就已调用。</span><span class="sxs-lookup"><span data-stu-id="ae55e-117">A thread created using the <xref:System.Threading.Thread.Start%2A> method is implicitly set to <xref:System.Threading.ApartmentState.MTA> unless <xref:System.Threading.Thread.SetApartmentState%2A> is called before the thread is started.</span></span> <span data-ttu-id="ae55e-118">应用程序主线程同样可隐式初始化为 <xref:System.Threading.ApartmentState.MTA>，除非在主方法上指定了 <xref:System.STAThreadAttribute> 属性。</span><span class="sxs-lookup"><span data-stu-id="ae55e-118">The main thread of the application is also implicitly initialized to <xref:System.Threading.ApartmentState.MTA> unless the <xref:System.STAThreadAttribute> attribute is specified on the main method.</span></span>  
+- <span data-ttu-id="20f19-114">该线程之前已初始化为不同的 COM 单元状态。</span><span class="sxs-lookup"><span data-stu-id="20f19-114">The thread was previously initialized to a different COM apartment state.</span></span> <span data-ttu-id="20f19-115">请注意，可显式或隐式设置线程的单元状态。</span><span class="sxs-lookup"><span data-stu-id="20f19-115">Note that the apartment state of a thread can be set either explicitly or implicitly.</span></span> <span data-ttu-id="20f19-116">显式操作包括 <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 属性以及 <xref:System.Threading.Thread.SetApartmentState%2A> 和 <xref:System.Threading.Thread.TrySetApartmentState%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="20f19-116">The explicit operations include the <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> property and the <xref:System.Threading.Thread.SetApartmentState%2A> and <xref:System.Threading.Thread.TrySetApartmentState%2A> methods.</span></span> <span data-ttu-id="20f19-117">通过 <xref:System.Threading.Thread.Start%2A> 方法创建的线程可隐式设置为 <xref:System.Threading.ApartmentState.MTA>，除非 <xref:System.Threading.Thread.SetApartmentState%2A> 在线程创建之前就已调用。</span><span class="sxs-lookup"><span data-stu-id="20f19-117">A thread created using the <xref:System.Threading.Thread.Start%2A> method is implicitly set to <xref:System.Threading.ApartmentState.MTA> unless <xref:System.Threading.Thread.SetApartmentState%2A> is called before the thread is started.</span></span> <span data-ttu-id="20f19-118">应用程序主线程同样可隐式初始化为 <xref:System.Threading.ApartmentState.MTA>，除非在主方法上指定了 <xref:System.STAThreadAttribute> 属性。</span><span class="sxs-lookup"><span data-stu-id="20f19-118">The main thread of the application is also implicitly initialized to <xref:System.Threading.ApartmentState.MTA> unless the <xref:System.STAThreadAttribute> attribute is specified on the main method.</span></span>  
   
-- <span data-ttu-id="ae55e-119">在线程上调用具有不同并发模型的 `CoUninitialize` 方法（或 `CoInitializeEx` 方法）。</span><span class="sxs-lookup"><span data-stu-id="ae55e-119">The `CoUninitialize` method (or the `CoInitializeEx` method) with a different concurrency model is called on the thread.</span></span>  
+- <span data-ttu-id="20f19-119">在线程上调用具有不同并发模型的 `CoUninitialize` 方法（或 `CoInitializeEx` 方法）。</span><span class="sxs-lookup"><span data-stu-id="20f19-119">The `CoUninitialize` method (or the `CoInitializeEx` method) with a different concurrency model is called on the thread.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="ae55e-120">解决方法</span><span class="sxs-lookup"><span data-stu-id="ae55e-120">Resolution</span></span>  
- <span data-ttu-id="ae55e-121">在单元状态开始执行前对其进行设置，或将 <xref:System.STAThreadAttribute> 属性或 <xref:System.MTAThreadAttribute> 属性应用到应用程序的主方法。</span><span class="sxs-lookup"><span data-stu-id="ae55e-121">Set the apartment state of the thread before it begins executing, or apply either the <xref:System.STAThreadAttribute> attribute or the <xref:System.MTAThreadAttribute> attribute to the main method of the application.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="20f19-120">解决方法</span><span class="sxs-lookup"><span data-stu-id="20f19-120">Resolution</span></span>  
+ <span data-ttu-id="20f19-121">在单元状态开始执行前对其进行设置，或将 <xref:System.STAThreadAttribute> 属性或 <xref:System.MTAThreadAttribute> 属性应用到应用程序的主方法。</span><span class="sxs-lookup"><span data-stu-id="20f19-121">Set the apartment state of the thread before it begins executing, or apply either the <xref:System.STAThreadAttribute> attribute or the <xref:System.MTAThreadAttribute> attribute to the main method of the application.</span></span>  
   
- <span data-ttu-id="ae55e-122">对于第二种结果，理想情况下，需要将调用 `CoUninitialize` 方法的代码修改为延迟调用，直到线程即将终止并且该线程停止使用 RCW 及其基础 COM 组件。</span><span class="sxs-lookup"><span data-stu-id="ae55e-122">For the second cause, ideally, the code that calls the `CoUninitialize` method should be modified to delay the call until the thread is about to terminate and there are no RCWs and their underlying COM components still in use by the thread.</span></span> <span data-ttu-id="ae55e-123">但是，如果无法修改调用 `CoUninitialize` 方法的代码，则未采用此方法进行初始化的线程不能使用任何 RCW。</span><span class="sxs-lookup"><span data-stu-id="ae55e-123">However, if it is not possible to modify the code that calls the `CoUninitialize` method, then no RCWs should be used from threads that are uninitialized in this way.</span></span>  
+ <span data-ttu-id="20f19-122">对于第二种结果，理想情况下，需要将调用 `CoUninitialize` 方法的代码修改为延迟调用，直到线程即将终止并且该线程停止使用 RCW 及其基础 COM 组件。</span><span class="sxs-lookup"><span data-stu-id="20f19-122">For the second cause, ideally, the code that calls the `CoUninitialize` method should be modified to delay the call until the thread is about to terminate and there are no RCWs and their underlying COM components still in use by the thread.</span></span> <span data-ttu-id="20f19-123">但是，如果无法修改调用 `CoUninitialize` 方法的代码，则未采用此方法进行初始化的线程不能使用任何 RCW。</span><span class="sxs-lookup"><span data-stu-id="20f19-123">However, if it is not possible to modify the code that calls the `CoUninitialize` method, then no RCWs should be used from threads that are uninitialized in this way.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="ae55e-124">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="ae55e-124">Effect on the Runtime</span></span>  
- <span data-ttu-id="ae55e-125">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="ae55e-125">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="20f19-124">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="20f19-124">Effect on the Runtime</span></span>  
+ <span data-ttu-id="20f19-125">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="20f19-125">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="ae55e-126">Output</span><span class="sxs-lookup"><span data-stu-id="ae55e-126">Output</span></span>  
- <span data-ttu-id="ae55e-127">当前线程的 COM 单元状态和试图应用的代码状态。</span><span class="sxs-lookup"><span data-stu-id="ae55e-127">The COM apartment state of the current thread, and the state that the code was attempting to apply.</span></span>  
+## <a name="output"></a><span data-ttu-id="20f19-126">输出</span><span class="sxs-lookup"><span data-stu-id="20f19-126">Output</span></span>  
+ <span data-ttu-id="20f19-127">当前线程的 COM 单元状态和试图应用的代码状态。</span><span class="sxs-lookup"><span data-stu-id="20f19-127">The COM apartment state of the current thread, and the state that the code was attempting to apply.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="ae55e-128">配置</span><span class="sxs-lookup"><span data-stu-id="ae55e-128">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="20f19-128">配置</span><span class="sxs-lookup"><span data-stu-id="20f19-128">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -60,8 +58,8 @@ ms.locfileid: "71052666"
 </mdaConfig>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="ae55e-129">示例</span><span class="sxs-lookup"><span data-stu-id="ae55e-129">Example</span></span>  
- <span data-ttu-id="ae55e-130">以下代码示例展示了一种可激活该 MDA 的情况。</span><span class="sxs-lookup"><span data-stu-id="ae55e-130">The following code example demonstrates a situation that can activate this MDA.</span></span>  
+## <a name="example"></a><span data-ttu-id="20f19-129">示例</span><span class="sxs-lookup"><span data-stu-id="20f19-129">Example</span></span>  
+ <span data-ttu-id="20f19-130">以下代码示例展示了一种可激活该 MDA 的情况。</span><span class="sxs-lookup"><span data-stu-id="20f19-130">The following code example demonstrates a situation that can activate this MDA.</span></span>  
   
 ```csharp
 using System.Threading;  
@@ -77,8 +75,8 @@ namespace ApartmentStateMDA
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ae55e-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="ae55e-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="20f19-131">另请参阅</span><span class="sxs-lookup"><span data-stu-id="20f19-131">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="ae55e-132">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="ae55e-132">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="ae55e-133">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="ae55e-133">Interop Marshaling</span></span>](../interop/interop-marshaling.md)
+- [<span data-ttu-id="20f19-132">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="20f19-132">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="20f19-133">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="20f19-133">Interop Marshaling</span></span>](../interop/interop-marshaling.md)

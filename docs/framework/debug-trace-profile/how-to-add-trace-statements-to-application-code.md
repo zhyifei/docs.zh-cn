@@ -13,25 +13,23 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4517da87603dcdd398d536cd9bf9e441430be375
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 21df0e8129505e50e6b7f29c4f4f5aea94f380e3
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052742"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217472"
 ---
-# <a name="how-to-add-trace-statements-to-application-code"></a><span data-ttu-id="794d6-102">如何：向应用程序代码添加跟踪语句</span><span class="sxs-lookup"><span data-stu-id="794d6-102">How to: Add Trace Statements to Application Code</span></span>
-<span data-ttu-id="794d6-103">跟踪使用最常用的方法是将输出写入侦听器的方法：**Write**、 **WriteIf**、 **WriteLine**、 **WriteLineIf**、 **Assert**和**Fail**。</span><span class="sxs-lookup"><span data-stu-id="794d6-103">The methods used most often for tracing are the methods for writing output to listeners: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, and **Fail**.</span></span> <span data-ttu-id="794d6-104">这些方法可以分为两个类别：以无条件的形式**写入**、 **WriteLine**和**失败**所有发出输出，而**WriteIf**、 **WriteLineIf**和**Assert**则测试布尔条件，并根据条件的值来写入或不写入。</span><span class="sxs-lookup"><span data-stu-id="794d6-104">These methods can be divided into two categories: **Write**, **WriteLine**, and **Fail** all emit output unconditionally, whereas **WriteIf**, **WriteLineIf**, and **Assert** test a Boolean condition, and write or do not write based on the value of the condition.</span></span> <span data-ttu-id="794d6-105">WriteIf 和 WriteLineIf 在条件为 `true` 时发出输出，而 Assert 在条件为 `false` 时发出输出。</span><span class="sxs-lookup"><span data-stu-id="794d6-105">**WriteIf** and **WriteLineIf** emit output if the condition is `true`, and **Assert** emits output if the condition is `false`.</span></span>  
+# <a name="how-to-add-trace-statements-to-application-code"></a><span data-ttu-id="57f76-102">如何：向应用程序代码添加跟踪语句</span><span class="sxs-lookup"><span data-stu-id="57f76-102">How to: Add Trace Statements to Application Code</span></span>
+<span data-ttu-id="57f76-103">最常用于跟踪的方法是用于将输出写入侦听器的以下方法：Write、WriteIf、WriteLine、WriteLineIf、Assert 和 Fail。</span><span class="sxs-lookup"><span data-stu-id="57f76-103">The methods used most often for tracing are the methods for writing output to listeners: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, and **Fail**.</span></span> <span data-ttu-id="57f76-104">这些方法可以分为两类：Write、WriteLine 和 Fail 都无条件地发出输出，而 WriteIf、WriteLineIf 和 Assert 则测试 Boolean 条件并根据条件的值来写入或不写入。</span><span class="sxs-lookup"><span data-stu-id="57f76-104">These methods can be divided into two categories: **Write**, **WriteLine**, and **Fail** all emit output unconditionally, whereas **WriteIf**, **WriteLineIf**, and **Assert** test a Boolean condition, and write or do not write based on the value of the condition.</span></span> <span data-ttu-id="57f76-105">WriteIf 和 WriteLineIf 在条件为 **时发出输出，而 Assert 在条件为** 时发出输出`true``false`。</span><span class="sxs-lookup"><span data-stu-id="57f76-105">**WriteIf** and **WriteLineIf** emit output if the condition is `true`, and **Assert** emits output if the condition is `false`.</span></span>  
   
- <span data-ttu-id="794d6-106">当设计跟踪和调试策略时，应考虑所需的输出形式。</span><span class="sxs-lookup"><span data-stu-id="794d6-106">When designing your tracing and debugging strategy, you should think about how you want the output to look.</span></span> <span data-ttu-id="794d6-107">填充不相关信息的多个 Write 语句将创建难以读取的日志。</span><span class="sxs-lookup"><span data-stu-id="794d6-107">Multiple **Write** statements filled with unrelated information will create a log that is difficult to read.</span></span> <span data-ttu-id="794d6-108">另一方面，如果使用 WriteLine 将相关语句放置在单独的行上，可能会难以区分哪些信息应该在一起。</span><span class="sxs-lookup"><span data-stu-id="794d6-108">On the other hand, using **WriteLine** to put related statements on separate lines may make it difficult to distinguish what information belongs together.</span></span> <span data-ttu-id="794d6-109">通常，当需要将来自多个源的信息组合起来创建单个信息性消息时，使用多个 Write；当需要创建单个完整消息时，则使用 WriteLine 语句。</span><span class="sxs-lookup"><span data-stu-id="794d6-109">In general, use multiple **Write** statements when you want to combine information from multiple sources to create a single informative message, and use the **WriteLine** statement when you want to create a single, complete message.</span></span>  
+ <span data-ttu-id="57f76-106">当设计跟踪和调试策略时，应考虑所需的输出形式。</span><span class="sxs-lookup"><span data-stu-id="57f76-106">When designing your tracing and debugging strategy, you should think about how you want the output to look.</span></span> <span data-ttu-id="57f76-107">填充不相关信息的多个 Write 语句将创建难以读取的日志。</span><span class="sxs-lookup"><span data-stu-id="57f76-107">Multiple **Write** statements filled with unrelated information will create a log that is difficult to read.</span></span> <span data-ttu-id="57f76-108">另一方面，如果使用 WriteLine 将相关语句放置在单独的行上，可能会难以区分哪些信息应该在一起。</span><span class="sxs-lookup"><span data-stu-id="57f76-108">On the other hand, using **WriteLine** to put related statements on separate lines may make it difficult to distinguish what information belongs together.</span></span> <span data-ttu-id="57f76-109">通常，当需要将来自多个源的信息组合起来创建单个信息性消息时，使用多个 Write；当需要创建单个完整消息时，则使用 WriteLine 语句。</span><span class="sxs-lookup"><span data-stu-id="57f76-109">In general, use multiple **Write** statements when you want to combine information from multiple sources to create a single informative message, and use the **WriteLine** statement when you want to create a single, complete message.</span></span>  
   
-### <a name="to-write-a-complete-line"></a><span data-ttu-id="794d6-110">写入完整的行</span><span class="sxs-lookup"><span data-stu-id="794d6-110">To write a complete line</span></span>  
+### <a name="to-write-a-complete-line"></a><span data-ttu-id="57f76-110">写入完整的行</span><span class="sxs-lookup"><span data-stu-id="57f76-110">To write a complete line</span></span>  
   
-1. <span data-ttu-id="794d6-111">调用 <xref:System.Diagnostics.Trace.WriteLine%2A> 或 <xref:System.Diagnostics.Trace.WriteLineIf%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="794d6-111">Call the <xref:System.Diagnostics.Trace.WriteLine%2A> or <xref:System.Diagnostics.Trace.WriteLineIf%2A> method.</span></span>  
+1. <span data-ttu-id="57f76-111">调用 <xref:System.Diagnostics.Trace.WriteLine%2A> 或 <xref:System.Diagnostics.Trace.WriteLineIf%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="57f76-111">Call the <xref:System.Diagnostics.Trace.WriteLine%2A> or <xref:System.Diagnostics.Trace.WriteLineIf%2A> method.</span></span>  
   
-     <span data-ttu-id="794d6-112">一个回车符会被追加到此方法返回的消息末尾，使 Write、WriteIf、WriteLine 或 WriteLineIf 返回的下一条消息将从以下行开始：</span><span class="sxs-lookup"><span data-stu-id="794d6-112">A carriage return is appended to the end of the message this method returns, so that the next message returned by **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the following line:</span></span>  
+     <span data-ttu-id="57f76-112">一个回车符会被追加到此方法返回的消息末尾，使 Write、WriteIf、WriteLine 或 WriteLineIf 返回的下一条消息将从以下行开始：</span><span class="sxs-lookup"><span data-stu-id="57f76-112">A carriage return is appended to the end of the message this method returns, so that the next message returned by **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the following line:</span></span>  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -46,11 +44,11 @@ ms.locfileid: "71052742"
        "Error in AppendData procedure.");  
     ```  
   
-### <a name="to-write-a-partial-line"></a><span data-ttu-id="794d6-113">写入部分行</span><span class="sxs-lookup"><span data-stu-id="794d6-113">To write a partial line</span></span>  
+### <a name="to-write-a-partial-line"></a><span data-ttu-id="57f76-113">写入部分行</span><span class="sxs-lookup"><span data-stu-id="57f76-113">To write a partial line</span></span>  
   
-1. <span data-ttu-id="794d6-114">调用 <xref:System.Diagnostics.Trace.Write%2A> 或 <xref:System.Diagnostics.Trace.WriteIf%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="794d6-114">Call the <xref:System.Diagnostics.Trace.Write%2A> or <xref:System.Diagnostics.Trace.WriteIf%2A> method.</span></span>  
+1. <span data-ttu-id="57f76-114">调用 <xref:System.Diagnostics.Trace.Write%2A> 或 <xref:System.Diagnostics.Trace.WriteIf%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="57f76-114">Call the <xref:System.Diagnostics.Trace.Write%2A> or <xref:System.Diagnostics.Trace.WriteIf%2A> method.</span></span>  
   
-     <span data-ttu-id="794d6-115">由 Write、WriteIf、WriteLine 或 WriteLineIf 生成的下一条消息将从由 Write 或 WriteIf 语句生成的消息所在的同一行上开始：</span><span class="sxs-lookup"><span data-stu-id="794d6-115">The next message put out by a **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the same line as the message put out by the **Write** or **WriteIf** statement:</span></span>  
+     <span data-ttu-id="57f76-115">由 Write、WriteIf、WriteLine 或 WriteLineIf 生成的下一条消息将从由 Write 或 WriteIf 语句生成的消息所在的同一行上开始：</span><span class="sxs-lookup"><span data-stu-id="57f76-115">The next message put out by a **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the same line as the message put out by the **Write** or **WriteIf** statement:</span></span>  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -67,9 +65,9 @@ ms.locfileid: "71052742"
     Trace.Write("Invalid value for data request");  
     ```  
   
-### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a><span data-ttu-id="794d6-116">验证特定条件在执行方法之前或之后存在</span><span class="sxs-lookup"><span data-stu-id="794d6-116">To verify that certain conditions exist either before or after you execute a method</span></span>  
+### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a><span data-ttu-id="57f76-116">验证特定条件在执行方法之前或之后存在</span><span class="sxs-lookup"><span data-stu-id="57f76-116">To verify that certain conditions exist either before or after you execute a method</span></span>  
   
-1. <span data-ttu-id="794d6-117">调用 <xref:System.Diagnostics.Trace.Assert%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="794d6-117">Call the <xref:System.Diagnostics.Trace.Assert%2A> method.</span></span>  
+1. <span data-ttu-id="57f76-117">调用 <xref:System.Diagnostics.Trace.Assert%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="57f76-117">Call the <xref:System.Diagnostics.Trace.Assert%2A> method.</span></span>  
   
     ```vb  
     Dim i As Integer = 4  
@@ -82,15 +80,15 @@ ms.locfileid: "71052742"
     ```  
   
     > [!NOTE]
-    > <span data-ttu-id="794d6-118">可以将 Assert 用于跟踪和调试。</span><span class="sxs-lookup"><span data-stu-id="794d6-118">You can use **Assert** with both tracing and debugging.</span></span> <span data-ttu-id="794d6-119">此示例将调用堆栈输出到 Listeners 集合中的任意侦听器。</span><span class="sxs-lookup"><span data-stu-id="794d6-119">This example outputs the call stack to any listener in the **Listeners** collection.</span></span> <span data-ttu-id="794d6-120">有关详细信息，请参阅[托管代码中的断言<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>和 ](/visualstudio/debugger/assertions-in-managed-code)。</span><span class="sxs-lookup"><span data-stu-id="794d6-120">For more information, see [Assertions in Managed Code](/visualstudio/debugger/assertions-in-managed-code) and <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.</span></span>  
+    > <span data-ttu-id="57f76-118">可以将 Assert 用于跟踪和调试。</span><span class="sxs-lookup"><span data-stu-id="57f76-118">You can use **Assert** with both tracing and debugging.</span></span> <span data-ttu-id="57f76-119">此示例将调用堆栈输出到 Listeners 集合中的任意侦听器。</span><span class="sxs-lookup"><span data-stu-id="57f76-119">This example outputs the call stack to any listener in the **Listeners** collection.</span></span> <span data-ttu-id="57f76-120">有关详细信息，请参阅[托管代码中的断言](/visualstudio/debugger/assertions-in-managed-code)和 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="57f76-120">For more information, see [Assertions in Managed Code](/visualstudio/debugger/assertions-in-managed-code) and <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="794d6-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="794d6-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57f76-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="57f76-121">See also</span></span>
 
 - <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="794d6-122">跟踪应用程序和在应用程序中插入检测点</span><span class="sxs-lookup"><span data-stu-id="794d6-122">Tracing and Instrumenting Applications</span></span>](tracing-and-instrumenting-applications.md)
-- [<span data-ttu-id="794d6-123">如何：创建、初始化和配置跟踪开关</span><span class="sxs-lookup"><span data-stu-id="794d6-123">How to: Create, Initialize and Configure Trace Switches</span></span>](how-to-create-initialize-and-configure-trace-switches.md)
-- [<span data-ttu-id="794d6-124">跟踪开关</span><span class="sxs-lookup"><span data-stu-id="794d6-124">Trace Switches</span></span>](trace-switches.md)
-- [<span data-ttu-id="794d6-125">跟踪侦听器</span><span class="sxs-lookup"><span data-stu-id="794d6-125">Trace Listeners</span></span>](trace-listeners.md)
+- [<span data-ttu-id="57f76-122">跟踪应用程序和在应用程序中插入检测点</span><span class="sxs-lookup"><span data-stu-id="57f76-122">Tracing and Instrumenting Applications</span></span>](tracing-and-instrumenting-applications.md)
+- [<span data-ttu-id="57f76-123">如何：创建、初始化和配置跟踪开关</span><span class="sxs-lookup"><span data-stu-id="57f76-123">How to: Create, Initialize and Configure Trace Switches</span></span>](how-to-create-initialize-and-configure-trace-switches.md)
+- [<span data-ttu-id="57f76-124">跟踪开关</span><span class="sxs-lookup"><span data-stu-id="57f76-124">Trace Switches</span></span>](trace-switches.md)
+- [<span data-ttu-id="57f76-125">跟踪侦听器</span><span class="sxs-lookup"><span data-stu-id="57f76-125">Trace Listeners</span></span>](trace-listeners.md)
