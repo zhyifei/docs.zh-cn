@@ -7,22 +7,20 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a45572d0dcb2737558e11f5c38ac2ccc338c754a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8c9b0479bba839a74dff300f0766838b5d99c8d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119086"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214842"
 ---
 # <a name="clear-element-for-configsections"></a>\<清除 \<configSections > 元素 >
 
 清除所有之前定义的部分和节组。
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
+&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
 
 ## <a name="syntax"></a>语法
 
@@ -30,11 +28,11 @@ ms.locfileid: "73119086"
 <clear/>
 ```
 
-## <a name="attribute"></a>属性
+## <a name="attribute"></a>Attribute
 
 |           | 说明 |
 | --------- | ----------- |
-| **name**  | 必需的特性。<br><br>指定要删除的节或节组的名称。 |
+| name  | 必需的特性。<br><br>指定要删除的节或节组的名称。 |
 
 ## <a name="parent-element"></a>父元素
 

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9bde6f6e625476712c5af516491ab9dd29b7dea3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d0c78e6d52ae4a5b3a24e0bb4278b2e8a1b98751
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052965"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217583"
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort MDA
 当线程尝试将异步中止引入到另一个线程时，将激活 `asynchronousThreadAbort` 托管调试助手 (MDA)。 同步线程中止不会激活 `asynchronousThreadAbort` MDA。
@@ -42,7 +40,7 @@ ms.locfileid: "71052965"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响
  此 MDA 对 CLR 无任何影响。 它只报告有关异步线程中止的数据。
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
  MDA 报告执行中止的线程 ID 以及作为此中止目标的线程 ID。 这两项绝对不会相同，因为这被限制为异步中止。
 
 ## <a name="configuration"></a>配置
@@ -70,7 +68,7 @@ void FireMda()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.Thread>
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

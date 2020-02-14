@@ -7,17 +7,15 @@ helpviewer_keywords:
 - DllMain function
 - MDAs (managed debugging assistants), DllMain returns false
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: adc05ae9bd357c142ff09de069aff446b5ea60e8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0b413521e0a2dc06c2ff0be642f080eaf541202f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052859"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216442"
 ---
 # <a name="dllmainreturnsfalse-mda"></a>dllMainReturnsFalse MDA
-如果用户程序集的托管 `DllMain` 函数（因 DLL_PROCESS_ATTACH 原因而调用）返回 FALSE，则将激活 `dllMainReturnsFalse` 托管调试助手 (MDA)。  
+如果用户程序集的托管 `dllMainReturnsFalse` 函数（因 DLL_PROCESS_ATTACH 原因而调用）返回 FALSE，则将激活 `DllMain` 托管调试助手 (MDA)。  
   
 ## <a name="symptoms"></a>症状  
  `DllMain` 函数返回 FALSE，表示其未正确执行。 这会导致一些未确定的问题，因为 `DllMain` 函数通常包含重要的初始化代码。  
@@ -31,7 +29,7 @@ ms.locfileid: "71052859"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  此 MDA 对 CLR 无任何影响。 它只报告有关 `DllMain` 的返回值的数据。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>输出  
  一条指示 `DllMain` 函数（因 DLL_PROCESS_ATTACH 原因调用）返回 FALSE 的消息。 请注意，此 MDA 仅在托管代码中实现 `DllMain` 时才激活。  
   
 ## <a name="configuration"></a>配置  
@@ -44,6 +42,6 @@ ms.locfileid: "71052859"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

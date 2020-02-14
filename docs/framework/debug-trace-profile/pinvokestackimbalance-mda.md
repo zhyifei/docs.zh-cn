@@ -10,14 +10,12 @@ helpviewer_keywords:
 - PInvokeStackImbalance MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 117e0838f78d43bf9ffa555947bf8749830c9840
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c789e8cb409bd4c59c91d6b646efe428afe7c86d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801995"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217247"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance MDA
 
@@ -44,7 +42,7 @@ ms.locfileid: "74801995"
 
 强制所有平台 invoke 调用都采用 CLR 中的非优化路径。
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 MDA 消息会提供正导致堆栈不平衡的平台 invoke 方法调用的名称。 方法 `SampleMethod` 上的平台 invoke 调用的示例消息为：
 

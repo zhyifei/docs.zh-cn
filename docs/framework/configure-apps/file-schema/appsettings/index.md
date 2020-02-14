@@ -7,14 +7,12 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 609ddba9cd4d58f9c388cf669039ee128e87efd0
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 0a3363b35a6fc8bd27753eb034f8a1e95feb5292
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088079"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215429"
 ---
 # <a name="app-settings-schema"></a>应用设置架构
 
@@ -26,7 +24,7 @@ ms.locfileid: "74088079"
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](clear-element-for-appsettings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](remove-element-for-appsettings.md)
 
-| 元素 | 描述 |
+| 元素 | 说明 |
 | ------- | ----------- |
 | [ **\<appSettings>** ](appsettings-element-for-configuration.md) | 包含 **\<add>** 、 **\<clear>** 和 **\<remove>** 标记，用于控制应用程序设置。 具有可选的“file”属性。 |
 | [ **\<add>** ](add-element-for-appsettings.md) | 定义设置。 **\<appSettings>** 的子级。 需要“key”和“value”属性。 |
@@ -70,7 +68,7 @@ ms.locfileid: "74088079"
 </configuration>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [应用程序设置概述](../../../winforms/advanced/application-settings-overview.md)
 - [应用程序设置体系结构](../../../winforms/advanced/application-settings-architecture.md)

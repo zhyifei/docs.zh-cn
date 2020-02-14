@@ -8,17 +8,15 @@ helpviewer_keywords:
 - IUnknown pointers
 - managed debugging assistants (MDAs), invalid IUnknown pointer
 ms.assetid: c7924771-a16b-40fe-b337-ce51dcdf6a12
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea7f48ab61c16cb0430717074f1b1feab4827763
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5df9a3f506d8c2de6f1a3125459adc2d59d510bf
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052593"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217367"
 ---
 # <a name="invalidiunknown-mda"></a>invalidIUnknown MDA
-当将无效的`IUnknown` 指针从本地代码传递到托管代码时，`invalidIUnknown`托管调试助手 (MDA) 将被激活。 当查询 `IUnknown` 接口时，`IUnknown` 将无法成功返回。  
+当将无效的`invalidIUnknown` 指针从本地代码传递到托管代码时，`IUnknown`托管调试助手 (MDA) 将被激活。 当查询 `IUnknown` 接口时，`IUnknown` 将无法成功返回。  
   
 ## <a name="symptoms"></a>症状  
  参数封送处理期间，封送处理某个 COM 接口指针时，发生意外错误。  
@@ -32,8 +30,8 @@ ms.locfileid: "71052593"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  此 MDA 对 CLR 无任何影响。  
   
-## <a name="output"></a>Output  
- 错误说明。  
+## <a name="output"></a>输出  
+ 对错误的说明。  
   
 ## <a name="configuration"></a>配置  
   
@@ -45,7 +43,7 @@ ms.locfileid: "71052593"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

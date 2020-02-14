@@ -10,14 +10,12 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a2cb2ef473d6870da47e0e4c00fecf6bd60707f3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2c3ec54535319f4c7507563a5976038ca40d20aa
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975574"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217455"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>如何：使用跟踪和调试进行条件编译
 在开发过程中调试应用程序时，跟踪和调试输出都会出现在 Visual Studio 的“输出”窗口中。 但是，若要在已部署的应用程序中包含跟踪功能，则必须在 TRACE 编译器指令处于启动状态下编译已检测应用程序。 这样就可以将跟踪代码编译成应用程序的发布版本。 如果未启用 TRACE 指令，将在编译过程中忽略所有跟踪代码，并且不会将其包含在将部署的可执行代码中。  
@@ -73,9 +71,9 @@ ms.locfileid: "73975574"
   
 1. 在源代码文件的顶部键入对应于编程语言的适当语句。  
   
-    |语言|Statement|结果|  
+    |语言|语句|结果|  
     |--------------|---------------|------------|  
-    |**Visual Basic**|#CONST TRACE = true|启用跟踪|  
+    |Visual Basic|#CONST TRACE = true|启用跟踪|  
     ||#CONST TRACE = false|禁用跟踪|  
     ||#CONST DEBUG = true|启用调试|  
     ||#CONST DEBUG = false|禁用调试|  
@@ -95,7 +93,7 @@ ms.locfileid: "73975574"
 > [!NOTE]
 > 准备进行编译时，可从“生成”菜单中选择“生成”，也可使用命令行方法但不键入 d:，以定义条件编译符号。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [跟踪应用程序和在应用程序中插入检测点](tracing-and-instrumenting-applications.md)
 - [如何：创建、初始化和配置跟踪开关](how-to-create-initialize-and-configure-trace-switches.md)

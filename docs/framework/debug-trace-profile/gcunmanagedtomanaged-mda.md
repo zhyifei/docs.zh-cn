@@ -12,14 +12,12 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - unmanaged to managed garbage collection
 ms.assetid: 103eb3a3-1cf0-4406-8a9a-a7798fdc22d1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1679f87276262a08f5717ea81d263f4600542971
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dd4080870ae88da8d4e2055369cd36f3981f2eac
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052766"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216458"
 ---
 # <a name="gcunmanagedtomanaged-mda"></a>gcUnmanagedToManaged MDA
 每当一个线程从托管代码转换到非托管代码，`gcUnmanagedToManaged` 托管调试助手 (MDA) 就会导致垃圾回收。  
@@ -36,7 +34,7 @@ ms.locfileid: "71052766"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  导致每当发生从非托管代码到托管代码的线程转换时都进行垃圾回收。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>输出  
  此 MDA 不会产生任何输出。  
   
 ## <a name="configuration"></a>配置  
@@ -49,7 +47,7 @@ ms.locfileid: "71052766"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

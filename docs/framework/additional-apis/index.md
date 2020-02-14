@@ -7,15 +7,13 @@ helpviewer_keywords:
 - .NET Framework out-of-band releases
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
-author: mairaw
-ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: e1e2af584c73b1c0b2548cdd3fcbd8517dfa330d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3a5134aa4407598e223fd2c938bfaac02cf9178c
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429337"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215534"
 ---
 # <a name="additional-class-libraries-and-apis"></a>其他类库和 API
 
@@ -25,7 +23,7 @@ ms.locfileid: "74429337"
   
 ## <a name="oob-projects"></a>OOB 项目
   
-| 项目 | 说明 |  
+| Project | 说明 |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | 提供的集合数是线程安全的，并且保证决不会更改该集合的内容。 |
 | <xref:System.Net.Http.WinHttpHandler> | 基于 Windows 的 WinHTTP 接口为 <xref:System.Net.Http.HttpClient> 提供消息处理程序。 |
@@ -34,7 +32,7 @@ ms.locfileid: "74429337"
 
 ## <a name="platform-specific-libraries"></a>特定于平台的库
   
-| 项目 | 说明 |  
+| Project | 说明 |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | 扩展 <xref:System.Text.EncodingProvider> 类，使代码页编码可用于面向通用 Windows 平台的应用程序。 |  
   

@@ -10,17 +10,15 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), cache
 - MemberInfo cache
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d3b65ecc226c1caf7b53d746f0583e1f57c7d8c1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e5dbc769bd634afae06582ee614addafd611fad9
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052470"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217316"
 ---
 # <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation MDA
-创建 <xref:System.Reflection.MemberInfo> 缓存时，将激活 `memberInfoCacheCreation` 托管调试助手 (MDA)。 这一点强烈表明程序正在使用资源昂贵的反射功能。  
+创建 `memberInfoCacheCreation` 缓存时，将激活 <xref:System.Reflection.MemberInfo> 托管调试助手 (MDA)。 这一点强烈表明程序正在使用资源昂贵的反射功能。  
   
 ## <a name="symptoms"></a>症状  
  由于程序正在使用资源昂贵的反射，所以程序的工作集增加。  
@@ -36,7 +34,7 @@ ms.locfileid: "71052470"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  创建的每个 <xref:System.Reflection.MemberInfo> 缓存都可激活此 MDA。 性能影响可以忽略不计。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>输出  
  该 MDA 输出一条消息，指示已创建 <xref:System.Reflection.MemberInfo> 缓存。 使用调试程序器获取堆栈跟踪，堆栈跟踪显示程序正在使用反射的位置。  
   
 ## <a name="configuration"></a>配置  
@@ -64,7 +62,7 @@ public class Exe
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Reflection.MemberInfo>
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

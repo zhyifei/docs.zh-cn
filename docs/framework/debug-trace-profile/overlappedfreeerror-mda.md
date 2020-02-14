@@ -9,17 +9,15 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), overlapped structures
 - freeing overlapped structures
 ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 70d31bc187cabe49351e86a20023e2ec65e87b94
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8a0c72cf26ef8434719ff6661ef15a44f51c8740
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052404"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217262"
 ---
 # <a name="overlappedfreeerror-mda"></a>overlappedFreeError MDA
-如果在重叠操作完成之前调用 <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> 方法，将激活 `overlappedFreeError` 托管调试助手 (MDA)。  
+如果在重叠操作完成之前调用 `overlappedFreeError` 方法，将激活 <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> 托管调试助手 (MDA)。  
   
 ## <a name="symptoms"></a>症状  
  访问冲突或垃圾回收堆损坏。  
@@ -35,7 +33,7 @@ ms.locfileid: "71052404"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  此 MDA 对 CLR 无任何影响。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>输出  
  以下是此 MDA 的示例输出。  
   
  `An overlapped pointer (0x00ea3430) that was not allocated on the GC heap was passed via Pinvoke to the win32 function 'WriteFile' in module 'KERNEL32.DLL'. If the AppDomain is shut down, this can cause heap corruption when the async I/O completes. The best solution is to pass a NativeOverlappedStructure retrieved from a call to System.Threading.Overlapped.Pack(). If the AppDomain exits, the CLR will keep this structure alive and pinned until the I/O completes.`  
@@ -50,7 +48,7 @@ ms.locfileid: "71052404"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -6,14 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d73c07d58bb226346cb99a1fe50b12bb0e7e746e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e5c5c6cf5744aa385e6f6700cad623751a4d7427
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118532"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215476"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler 和 DictionarySectionHandler 的自定义元素
 
@@ -22,19 +20,19 @@ ms.locfileid: "73118532"
 [ **\<configuration>** ](configuration-element.md)\
 &nbsp;&nbsp; **\<sectionName >**
 
-## <a name="attributes"></a>特性
+## <a name="attributes"></a>属性
 
-None
+无
 
 ## <a name="parent-element"></a>父元素
 
-|     | 描述 |
+|     | 说明 |
 | --- | ----------- |
 | [ **\<configuration>** ](configuration-element.md) | 公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。 |
 
 ## <a name="child-elements"></a>子元素
 
-|     | 描述 |
+|     | 说明 |
 | --- | ----------- |
 | \<为 <xref:System.Configuration.NameValueSectionHandler> 和 <xref:System.Configuration.DictionarySectionHandler>[**添加 >** ](add-element-for-custom-2.md)  | 添加自定义应用程序设置。 |
 | [ **\<删除**](remove-element-for-custom-2.md)<xref:System.Configuration.NameValueSectionHandler> 和 <xref:System.Configuration.DictionarySectionHandler> 的 > | 删除以前定义的设置。 |
@@ -80,6 +78,6 @@ None
 
 此元素可用于应用程序配置文件、计算机配置文件（*machine.config*）和不在应用程序目录级别的*web.config 文件。*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Framework 的配置文件架构](index.md)

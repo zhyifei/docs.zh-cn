@@ -9,14 +9,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), binding failures
 - BindingFailure MDA
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 93c426cce792c8f30a3551e2d4626736dd67278f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e3a9a915d25cbe5f052f039055167cf3ae4bf424
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052941"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216918"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 
@@ -64,7 +62,7 @@ ms.locfileid: "71052941"
 
 此 MDA 对 CLR 无任何影响。 它只报告与绑定失败有关的数据。
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 MDA 会报告加载失败的程序集，包括请求的路径和/或显示名称、绑定上下文、请求加载的应用程序域，以及失败的原因。
 
@@ -105,6 +103,6 @@ namespace ConsoleApplication1
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

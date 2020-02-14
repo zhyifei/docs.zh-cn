@@ -1,5 +1,5 @@
 ---
-title: <configSections> 的 <remove> 元素
+title: <remove> 的 <configSections> 元素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/remove
@@ -7,14 +7,12 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: efc7208aa51cbf6abdb2fe151d48071c0aa95b5c
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 99d67bd621390789993caa4862e5ce379135eb92
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089049"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215392"
 ---
 # <a name="remove-element-for-configsections"></a>\<删除 \<configSections > 元素 >
 
@@ -30,21 +28,21 @@ ms.locfileid: "74089049"
 <remove name="section name or section group name" />
 ```
 
-## <a name="attribute"></a>特性
+## <a name="attribute"></a>Attribute
 
-|           | 描述 |
+|           | 说明 |
 | --------- | ----------- |
-| **name**  | 必需的特性。<br><br>指定要删除的节或节组的名称。 |
+| name  | 必需的特性。<br><br>指定要删除的节或节组的名称。 |
 
 ## <a name="parent-element"></a>父元素
 
-|     | 描述 |
+|     | 说明 |
 | --- | ----------- |
 | [ **\<configSections >** Element](configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
 
 ## <a name="child-elements"></a>子元素
 
-None
+无
 
 ## <a name="remarks"></a>备注
 
@@ -84,6 +82,6 @@ None
 
 此元素可用于应用程序配置文件、计算机配置文件（*machine.config*）和不在应用程序目录级别的*web.config 文件。*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Framework 的配置文件架构](index.md)

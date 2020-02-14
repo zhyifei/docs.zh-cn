@@ -7,14 +7,12 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea782b346f6c53664a8aeb736c7d7a4509d83985
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7ac5660c2c431505f4992f5e687974c2b9d06672
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974948"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217000"
 ---
 # <a name="security-transparent-code-level-2"></a>安全透明的代码，级别 2
 
@@ -72,7 +70,7 @@ ms.locfileid: "73974948"
 
 下表将级别2的程序集级别行为与第1级比较。
 
-|Assembly 特性|级别2|等级 1|
+|程序集属性|级别 2|级别 1|
 |------------------------|-------------|-------------|
 |部分信任的程序集上无特性|类型和成员默认是透明的，但可以是安全关键或安全可靠关键的。|所有类型和成员都是透明的。|
 |无特性|指定无特性会导致公用语言运行时为你确定透明度规则。 所有类型和成员都是安全关键的，除非安全关键违反继承规则。|在完全信任的程序集上（在全局程序缓集缓存或 `AppDomain` 中标识为完全信任的程序集中），所有类型都是透明的，所有成员都是安全可靠关键的。|
@@ -160,7 +158,7 @@ ms.locfileid: "73974948"
 
 2 级透明度模型将 <xref:System.Security.Permissions.SecurityAction.LinkDemand> 替换为 <xref:System.Security.SecurityCriticalAttribute> 特性。 在遗留（1 级）代码中，<xref:System.Security.Permissions.SecurityAction.LinkDemand> 自动被视为 <xref:System.Security.Permissions.SecurityAction.Demand>。
 
-### <a name="reflection"></a>映像
+### <a name="reflection"></a>反射
 
 调用关键方法或读取关键字段会触发对完全信任权限的要求（就像调用私有方法或字段一样）。 因此，完全信任的代码可以调用关键方法，而部分信任的代码则不能。
 
@@ -173,13 +171,13 @@ ms.locfileid: "73974948"
 
 ### <a name="skip-verification-in-full-trust"></a>在完全信任的环境中跳过验证
 
-你可以通过在 <xref:System.Security.SecurityRulesAttribute> 特性中将 <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 属性设置为 `true`，跳过完全信任的透明程序集的验证。
+你可以通过在 <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 特性中将 `true` 属性设置为 <xref:System.Security.SecurityRulesAttribute>，跳过完全信任的透明程序集的验证。
 
 `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`
 
 <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 属性默认为 `false`，因此该属性必须设置为 `true` 才能跳过验证。 只能出于优化目的跳过验证。 应通过使用[peverify.exe 工具](../tools/peverify-exe-peverify-tool.md)中的 `transparent` 选项来确保程序集中的透明代码是可验证的。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全透明代码，级别1](security-transparent-code-level-1.md)
 - [安全更改](../security/security-changes.md)

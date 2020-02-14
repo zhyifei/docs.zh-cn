@@ -5,14 +5,12 @@ helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f90b64b5e9ab5a167333a594ace7f247b1b2b7e7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ca251ec3084d40269b107e7bd8bef708e8d49622
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975528"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215836"
 ---
 # <a name="security-transparent-code"></a>安全透明的代码
 
@@ -96,7 +94,7 @@ ms.locfileid: "73975528"
 
 在计算透明度之前，不会强制执行透明度规则。 那时，如果违反了透明度规则，则将引发 <xref:System.InvalidOperationException>。 计算透明度的时间取决于多种因素，并且无法预测。 应尽可能晚地计算。 在 .NET Framework 4 中，程序集级别的透明度计算比 .NET Framework 2.0 更早。 只能保证透明度计算将在需要的时间之前发生。 这类似于在编译某种方法且在该方法中检测到错误时实时 (JIT) 编译器将如何更改时间点。 如果你的代码没有透明度错误，则透明度计算是不可见的。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全透明代码，级别1](security-transparent-code-level-1.md)
 - [安全透明代码，级别2](security-transparent-code-level-2.md)
