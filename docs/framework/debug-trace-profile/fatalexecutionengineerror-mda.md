@@ -12,14 +12,12 @@ helpviewer_keywords:
 - FatalExecutionEngineError MDA
 - managed debugging assistants (MDAs), fatal errors
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3fd58ae8f73fd932df641ea96a44ff618dd139e2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e25c9ef6ec43089f1d85479d1afe301232ed1d4f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052809"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217491"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError MDA
 在公共语言运行时 (CLR) 中检测到灾难性错误时，会激活 `fatalExecutionEngineError` 托管调试助手 (MDA)。 进程会终止。  
@@ -60,7 +58,7 @@ ms.locfileid: "71052809"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  此 MDA 对运行时无任何影响。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>输出  
  造成灾难性错误的 CLR 函数的地址，发生错误的线程的 ID，以及错误代码。  
   
 ## <a name="configuration"></a>配置  
@@ -73,7 +71,7 @@ ms.locfileid: "71052809"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution.Cer>

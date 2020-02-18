@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 2c6a8662236b614545e7fb8545b7b60e1b08b6bd
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 38c77086075e79c0ec5b4b1564ed753eded23b34
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559828"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124489"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 语法详述
 本主题定义用于描述 XAML 语法元素的术语。 在本文档的其余部分中经常使用这些术语，这两个术语分别适用于 WPF 文档，适用于使用 XAML 的其他框架或由 system.exception 级别的 XAML 语言支持启用的基本 XAML 概念。 本主题概述了在主题[XAML 概述（WPF）](../../../desktop-wpf/fundamentals/xaml.md)中引入的基本术语。  
@@ -43,7 +43,7 @@ ms.locfileid: "75559828"
 ## <a name="the-xaml-language-specification"></a>XAML 语言规范  
  此处定义的 XAML 语法术语也是在 XAML 语言规范中定义或引用的。 XAML 是一种基于 XML 的语言，并在 XML 结构规则后跟随或展开。 其中一些术语是从或中共享的，它基于在描述 XML 语言或 XML 文档对象模型时常用的术语。  
   
- 有关 XAML 语言规范的详细信息，请从 Microsoft 下载中心下载[\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525) 。  
+ 有关 XAML 语言规范的详细信息，请从 Microsoft 下载中心下载[\[MS-XAML\]](https://download.microsoft.com/download/0/A/6/0A6F7755-9AF5-448B-907D-13985ACCF53E/[MS-XAML].pdf) 。  
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML 和 CLR  
@@ -72,7 +72,7 @@ ms.locfileid: "75559828"
   
  [!code-xaml[XAMLOvwSupport#ThisIsATextBox](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#thisisatextbox)]  
   
-### <a name="content-models"></a>内容模型  
+### <a name="content-models"></a>内容模型：  
  类在语法方面可能支持使用作为 XAML 对象元素，但当该元素置于整体内容模型或元素树的预期位置时，它将仅在应用程序或页中正常运行。 例如，<xref:System.Windows.Controls.MenuItem> 通常只应作为 <xref:System.Windows.Controls.Primitives.MenuBase> 派生类（如 <xref:System.Windows.Controls.Menu>）的子级。 特定元素的内容模型记录为控件的类页和其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 类的注释的一部分，这些类可用作 XAML 元素。  
   
 <a name="properties_of_object_elements"></a>   
@@ -259,7 +259,7 @@ ms.locfileid: "75559828"
  有关标记扩展的详细信息，请参阅[标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)。 有关在常规 .NET XAML 实现中启用的标记扩展和其他 XAML 编程功能的引用，请参阅[XAML 命名空间（x：）语言功能](../../../desktop-wpf/xaml-services/namespace-language-features.md)。 有关特定于 WPF 的标记扩展，请参阅[WPF XAML 扩展](wpf-xaml-extensions.md)。  
   
 <a name="attached_properties"></a>   
-## <a name="attached-properties"></a>附加屬性  
+## <a name="attached-properties"></a>附加属性  
  附加属性是 XAML 中引入的一种编程概念，其中属性可由特定类型拥有和定义，但设置为任意元素上的特性或属性元素。 附加属性的主要方案是允许标记结构中的子元素向父元素报告信息，而无需跨所有元素广泛共享对象模型。 相反，附加属性可由父元素用来向子元素报告信息。 有关附加属性以及如何创建您自己的附加属性的详细信息，请参阅[附加属性概述](attached-properties-overview.md)。  
   
  附加属性使用的语法在表面上类似于属性元素语法，因为你还需要指定*typeName*。*propertyName*组合。 有两个重要的差异：  

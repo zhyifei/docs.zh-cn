@@ -7,21 +7,19 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6112d87afcca8b2f54508d03d3ea4c0781d7e475
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 47d7648aae08544890a4dd2e42cedbf68a8acc72
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119271"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214739"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<配置 \<appSettings > 元素 >
 
 包含自定义应用程序设置。 这是 .NET Framework 提供的预定义的配置节。
 
 [ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp; **\<appSettings>**
+&nbsp;&nbsp; **\<appSettings >**
 
 ## <a name="syntax"></a>语法
 
@@ -31,11 +29,11 @@ ms.locfileid: "73119271"
 </appSettings>
 ```
 
-## <a name="attribute"></a>属性
+## <a name="attribute"></a>Attribute
 
 |           | 说明 |
 | --------- | ----------- |
-| 文件  | 可选特性。<br><br>指定包含自定义应用程序配置设置的外部文件的相对路径。 指定的文件是否包含相同类型的设置中指定 **\<添加 >** ， **\<删除 >** ，以及 **\<清除 >** 元素，并使用同一个键/值对的格式设置为这些元素。<br><br>指定的路径相对于主配置文件。 对于 Windows 窗体应用程序，这是二进制文件夹（如 */bin/debug*），而不是应用程序配置文件的位置。 对于 Web 窗体应用程序，该路径相对于在其中找到*web.config*文件的应用程序根目录。<br><br>请注意，如果找不到指定的文件，则运行时将忽略属性。 |
+| **file**  | 可选特性。<br><br>指定包含自定义应用程序配置设置的外部文件的相对路径。 指定的文件包含相同类型的设置，这些设置在 **\<添加 >** 中指定， **\<删除 >** ， **\<明文 >** 元素，并使用与这些元素相同的键/值对格式。<br><br>指定的路径相对于主配置文件。 对于 Windows 窗体应用程序，这是二进制文件夹（如 */bin/debug*），而不是应用程序配置文件的位置。 对于 Web 窗体应用程序，该路径相对于在其中找到*web.config*文件的应用程序根目录。<br><br>请注意，如果找不到指定的文件，则运行时将忽略属性。 |
 
 ## <a name="parent-element"></a>父元素
 
@@ -57,7 +55,7 @@ ms.locfileid: "73119271"
 
 您可以使用*web.config 和应用*程序配置文件的 **\<appSettings >** 元素中的**文件**属性。 此属性指定一个配置文件，该配置文件提供其他设置或替代 **\<appSettings >** 元素中指定的设置。 **文件**属性可用于源代码管理团队开发方案，例如当用户想要重写应用程序配置文件中指定的项目设置时。
 
-指定的配置文件 **文件** 属性必须具有的根节点 **\<appSettings >** 而非 **\<配置 >** .
+**文件**属性指定的配置文件必须具有 **\<appSettings >** 的根节点，而不是 **\<配置 >** 。
 
 ## <a name="example"></a>示例
 

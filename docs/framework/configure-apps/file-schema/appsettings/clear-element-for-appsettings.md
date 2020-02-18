@@ -1,5 +1,5 @@
 ---
-title: <appSettings> 的 <clear> 元素
+title: <clear> 的 <appSettings> 元素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/clear
@@ -7,14 +7,12 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d321f3169344e9aa40d65b1722a533549de5315a
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 266d32ccb8b322f0472e0f552f9c0fc877c9a78e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088737"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214814"
 ---
 # <a name="clear-element-for-appsettings"></a>\<清除 \<appSettings > 元素 >
 
@@ -32,19 +30,19 @@ ms.locfileid: "74088737"
 </appSettings>
 ```
 
-## <a name="attributes"></a>特性
+## <a name="attributes"></a>属性
 
-None
+无
 
 ## <a name="parent-element"></a>父元素
 
-|     | 描述 |
+|     | 说明 |
 | --- | ----------- |
 | [ **\<appSettings>** ](appsettings-element-for-configuration.md) | 包含自定义应用程序设置，如文件路径、XML Web service Url 或任何其他自定义应用程序配置信息。 |
 
 ## <a name="child-elements"></a>子元素
 
-None
+无
 
 ## <a name="example"></a>示例
 
@@ -56,6 +54,6 @@ None
 </appSettings>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Framework 的配置文件架构](../index.md)

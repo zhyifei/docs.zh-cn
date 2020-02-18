@@ -14,14 +14,12 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - delegates [.NET Framework], garbage collection
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7f5a6ef2d4e8d4a987ed74a6a04e31f87cc46f3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: eb14e0df5396d92eb223dde2e562684c4c318295
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052933"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217572"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate MDA
 如果委托作为函数指针从托管代码封送到非托管代码，并且对委托进行垃圾回收后在该函数指针上放置了一个回调，则 `callbackOnCollectedDelegate` 托管调试助手 (MDA) 被激活。  
@@ -44,7 +42,7 @@ ms.locfileid: "71052933"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  将委托作为指针函数封送时，运行时分配一个 thunk，用于执行从非托管到托管的转换。 此 thunk 是非托管代码在最终调用托管委托前实际调用的对象。 如果未启用 `callbackOnCollectedDelegate` MDA，收集委托时将删除非托管封送处理代码。 如果启用了 `callbackOnCollectedDelegate` MDA，收集委托时不会立即删除非托管封送处理代码。 相反，在默认情况下，最后 1000 个实例都保持活动状态，然后在调用时更改以激活 MDA。 在收集了另外 1001 个封送的委托后，将最终删除此 thunk。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>输出  
  MDA 报告委托的类型名称，在尝试调用该委托的非托管函数指针前，收集该委托。  
   
 ## <a name="configuration"></a>配置  
@@ -111,7 +109,7 @@ public class Entry
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

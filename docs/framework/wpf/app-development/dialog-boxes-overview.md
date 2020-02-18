@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 9ec6716fefdc8de75d7e523c56ae0b3a02c8cf02
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bce2eed5f0e78c16b85b399e588c3d0d68ce7cb7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424646"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123709"
 ---
 # <a name="dialog-boxes-overview"></a>对话框概述
 独立应用程序通常具有主窗口，该窗口显示应用程序操作的主数据，并通过 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 机制（例如菜单栏、工具栏和状态栏）公开用于处理数据的功能。 重要的应用程序可能还会显示其他窗口来执行以下操作：  
@@ -32,7 +32,7 @@ ms.locfileid: "73424646"
   
  另一方面，*无模式*对话框不会阻止用户在打开时激活其他窗口。 例如，如果用户想要在某个文档中查找特定字的出现次数，主窗口通常会打开一个对话框，询问用户要查找的字是什么。 查找字并不会防止用户编辑文档，因此对话框无需为模式对话框。 无模式对话框至少提供了一个关闭对话框的 "**关闭**" 按钮，还可以提供用于执行特定功能的其他按钮，如 "**查找下**一个" 按钮，以查找下一个与搜索条件匹配的单词。  
   
- Windows Presentation Foundation （WPF）允许您创建几种类型的对话框，包括消息框、通用对话框和自定义对话框。 本主题将讨论每个，[对话框示例](https://go.microsoft.com/fwlink/?LinkID=159984)提供了匹配的示例。  
+ Windows Presentation Foundation （WPF）允许您创建几种类型的对话框，包括消息框、通用对话框和自定义对话框。 本主题将讨论每个，[对话框示例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)提供了匹配的示例。  
 
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>消息框  
@@ -55,9 +55,9 @@ ms.locfileid: "73424646"
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowandresultcodebehind1)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowandresultcodebehind1)]  
   
- 有关使用消息框的详细信息，请参阅 <xref:System.Windows.MessageBox>、 [MessageBox 示例](https://go.microsoft.com/fwlink/?LinkID=160023)和[对话框示例](https://go.microsoft.com/fwlink/?LinkID=159984)。  
+ 有关使用消息框的详细信息，请参阅 <xref:System.Windows.MessageBox>、 [MessageBox 示例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/MessageBox)和[对话框示例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)。  
   
- 尽管 <xref:System.Windows.MessageBox> 可能提供了一个简单的对话框用户体验，但使用 <xref:System.Windows.MessageBox> 的优点是，这是可由在部分信任安全沙箱中运行的应用程序（请参阅[安全性](../security-wpf.md)）（如 XAML 浏览器）显示的唯一窗口类型。应用程序（Xbap）。  
+ 尽管 <xref:System.Windows.MessageBox> 可能提供了一个简单的对话框用户体验，但使用 <xref:System.Windows.MessageBox> 的优点是，这是唯一可以由在部分信任安全沙箱中运行的应用程序（请参阅[安全性](../security-wpf.md)）（如 XAML 浏览器应用程序（xbap））显示的窗口类型。  
   
  大多数对话框显示和收集比消息框结果更复杂的数据，包括文本、选项（复选框）、互斥选项（单选按钮）和列表选项（列表框、组合框、下拉列表框）。 对于这些应用程序，Windows Presentation Foundation （WPF）提供了几个常见对话框，并允许您创建自己的对话框，但使用完全信任的应用程序仅限于运行的应用程序。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "73424646"
   
  ![显示要检索文件的位置的打开对话框。](./media/dialog-boxes-overview/open-file-dialog-box.png)  
   
- 通用的 "打开文件" 对话框作为 <xref:Microsoft.Win32.OpenFileDialog> 类实现，位于 <xref:Microsoft.Win32> 命名空间中。 以下代码显示了如何创建、配置和显示打开文件对话框以及如何处理结果。  
+ 通用的 "打开文件" 对话框作为 <xref:Microsoft.Win32.OpenFileDialog> 类实现，位于 <xref:Microsoft.Win32> 命名空间中。 以下代码显示了如何创建、配置和显示保存文件对话框以及如何处理结果。  
   
  [!code-csharp[DialogBoxesOverviewSnippets#OpenFileDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#openfiledialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#OpenFileDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#openfiledialogboxcodebehind)]  
@@ -89,7 +89,7 @@ ms.locfileid: "73424646"
   
  ![显示文件保存位置的 "另存为" 对话框。](./media/dialog-boxes-overview/save-file-dialog-box.png)  
   
- 常见的 "保存文件" 对话框作为 <xref:Microsoft.Win32.SaveFileDialog> 类实现，位于 <xref:Microsoft.Win32> 命名空间中。 以下代码显示了如何创建、配置和显示打开文件对话框以及如何处理结果。  
+ 常见的 "保存文件" 对话框作为 <xref:Microsoft.Win32.SaveFileDialog> 类实现，位于 <xref:Microsoft.Win32> 命名空间中。 以下代码显示了如何创建、配置和显示保存文件对话框以及如何处理结果。  
   
  [!code-csharp[DialogBoxesOverviewSnippets#SaveFileDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#savefiledialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#SaveFileDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#savefiledialogboxcodebehind)]  
@@ -118,7 +118,7 @@ ms.locfileid: "73424646"
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>创建模式自定义对话框
 
-本主题说明如何使用 <xref:System.Windows.Window> 来创建典型的模式对话框实现，使用 "`Margins`" 对话框作为示例（请参阅[对话框示例](https://go.microsoft.com/fwlink/?LinkID=159984)）。 下图显示了 "`Margins`" 对话框。  
+本主题说明如何使用 <xref:System.Windows.Window> 来创建典型的模式对话框实现，使用 "`Margins`" 对话框作为示例（请参阅[对话框示例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)）。 下图显示了 "`Margins`" 对话框。  
   
  !["边距" 对话框，其中包含用于定义左边距、上边距、右边距和下边距的字段。](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
@@ -304,7 +304,7 @@ ms.locfileid: "73424646"
 [!code-csharp[Calling the Close method](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,119-126)]
 [!code-vb[Calling the Close method](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,99-103)]  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Popup 概述](../controls/popup-overview.md)
-- [对话框示例](https://go.microsoft.com/fwlink/?LinkID=159984)
+- [对话框示例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)

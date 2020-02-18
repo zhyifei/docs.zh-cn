@@ -1,7 +1,5 @@
 ---
 title: PrepForRemoting 方法（系统）
-author: mairaw
-ms.author: mairaw
 ms.date: 10/08/2019
 topic_type:
 - apiref
@@ -11,14 +9,14 @@ api_location:
 - mscorlib.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 057390d64f70d3cb8eba7d4b29b94570fdca77e3
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: ce1c24578690a1643b7f5af0e44eaae95ed7b0a2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72405896"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214887"
 ---
-# <a name="exceptionprepforremoting-method"></a>PrepForRemoting 方法
+# <a name="exceptionprepforremoting-method"></a>Exception.PrepForRemoting 方法
 
 保留服务器端堆栈跟踪，方法是将其追加到消息，然后在客户端调用站点重新引发异常。
 
@@ -34,7 +32,7 @@ internal Exception PrepForRemoting();
 ## <a name="remarks"></a>备注
 
 > [!WARNING]
-> @No__t-0 方法是内部的，不应在代码中直接使用。
+> `Exception.PrepForRemoting` 方法是内部的，不应在代码中直接使用。
 >
 > 在任何情况下，Microsoft 不支持在生产应用程序中使用此方法。
 

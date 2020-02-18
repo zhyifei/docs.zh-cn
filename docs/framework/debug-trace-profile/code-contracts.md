@@ -7,14 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 103d668dd7a7436fd1acdccdc0afc2431ed8372a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b60f992cf9d934ed622c89a49c491a80377fb6fe
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975013"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216719"
 ---
 # <a name="code-contracts"></a>代码协定
 
@@ -38,7 +36,7 @@ ms.locfileid: "73975013"
 
 有关使用代码协定的工具和详细说明，请参阅 Visual Studio marketplace 网站上的[代码协定](https://marketplace.visualstudio.com/items?itemName=RiSEResearchinSoftwareEngineering.CodeContractsforNET)。
 
-## <a name="preconditions"></a>前置条件
+## <a name="preconditions"></a>Preconditions
 
 可使用 <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType> 方法表达前置条件。 前置条件在方法被调用时指定状态。 它们通常用于指定有效的参数值。 前置条件中提到的所有成员至少都必须与方法本身一样可以访问；否则，方法的调用方可能无法理解此前置条件。 条件必须无副作用。 运行时分析器确定前置条件失败时的运行时行为。
 
@@ -93,9 +91,9 @@ Contract.Ensures(this.F > 0);
 Contract.EnsuresOnThrow<T>(this.F > 0);
 ```
 
-自变量是指每次引发作为 `T` 的子类型的异常时必须为 `true` 的条件。
+自变量是指每次引发作为 `true` 的子类型的异常时必须为 `T` 的条件。
 
-有一些异常类型很难在异常后置条件中使用。 例如，若要使用 `T` 的 <xref:System.Exception> 类型，则无论引发的异常类型如何（即使是堆栈溢出或其他不可控制的异常），方法都必须保证条件。 应仅将异常后置条件用于调用成员时可能引发的特定异常，例如，当对 <xref:System.TimeZoneInfo> 方法调用引发 <xref:System.InvalidTimeZoneException> 时。
+有一些异常类型很难在异常后置条件中使用。 例如，若要使用 <xref:System.Exception> 的 `T` 类型，则无论引发的异常类型如何（即使是堆栈溢出或其他不可控制的异常），方法都必须保证条件。 应仅将异常后置条件用于调用成员时可能引发的特定异常，例如，当对 <xref:System.InvalidTimeZoneException> 方法调用引发 <xref:System.TimeZoneInfo> 时。
 
 ### <a name="special-postconditions"></a>特殊后置条件
 
@@ -169,7 +167,7 @@ protected void ObjectInvariant ()
 
 <a name="usage_guidelines"></a>
 
-## <a name="usage-guidelines"></a>使用准则
+## <a name="usage-guidelines"></a>使用指南
 
 ### <a name="contract-ordering"></a>协定顺序
 

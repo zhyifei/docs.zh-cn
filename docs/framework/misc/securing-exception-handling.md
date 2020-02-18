@@ -9,14 +9,12 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 256d9c9b825081e3bcfafd6e0e09de825d046d20
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e0465f2eb6be61e161f5e6b8cadf629a53f11906
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894544"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215789"
 ---
 # <a name="securing-exception-handling"></a>保护异常处理
 在 Visual C++和 Visual Basic 中，堆栈中的一个筛选器表达式将在任何**finally**语句之前运行。 与该筛选器相关联的**catch**块在**finally**语句之后运行。 有关详细信息，请参阅[使用用户筛选的异常](../../standard/exceptions/using-user-filtered-exception-handlers.md)。 本部分将介绍此顺序的安全隐患。 请考虑以下伪代码示例，该示例演示 filter 语句和**finally**语句的运行顺序。  
@@ -60,7 +58,7 @@ Finally
 Catch  
 ```  
   
- 该筛选器在**finally**语句之前运行，因此，在执行其他代码的情况下，可能会发生状态更改的任何内容引入安全问题。 例如:  
+ 该筛选器在**finally**语句之前运行，因此，在执行其他代码的情况下，可能会发生状态更改的任何内容引入安全问题。 例如：  
   
 ```cpp  
 try   
@@ -116,7 +114,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- 在这种情况下，正确的修复方法是在**try**/**catch**块中包装现有**try**/**finally**块。 只需将**catch throw**子句引入现有**try**/**finally**块中，就不能解决问题，如以下示例中所示。  
+ 在这种情况下，正确的修复方法是在**try**/**catch**块中包装现有**try**/**finally**块。 只需在现有**try**/**finally**块中引入**catch throw**子句，就不能解决问题，如以下示例中所示。  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,7 +134,7 @@ YourObject.YourMethod()
 }  
 ```  
   
- 这并不能解决此问题，因为在`FilterFunc`获取控件之前，finally 语句尚未运行。  
+ 这并不能解决此问题，因为在 `FilterFunc` 获取控件之前， **finally**语句尚未运行。  
   
  下面的示例通过确保在将异常提供给调用方的异常筛选器块之前执行了**finally**子句来解决此问题。  
   
@@ -160,6 +158,6 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全编码准则](../../standard/security/secure-coding-guidelines.md)

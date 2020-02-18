@@ -8,20 +8,18 @@ helpviewer_keywords:
 - secure coding, dangerous permissions
 - permissions [.NET Framework], dangerous
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ffe4f3e000c80610d5a105dddef90f9cfd51f0dc
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 026697feec7afe950628639c5e595ba0a0220b97
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205583"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217146"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>危险权限和策略管理
 .NET Framework 为其提供权限的多个受保护的操作可能允许绕过安全系统。 应仅对可信的代码，并且仅在必要的时候授予这些危险的权限。 如果它被授予这些权限，通常会对恶意代码没有任何防范。  
   
 > [!NOTE]
-> 在 .NET Framework 4 中, 对 .NET Framework 安全模型和术语进行了重大更改。 有关这些更改的详细信息, 请参阅[安全更改](../security/security-changes.md)。  
+> 在 .NET Framework 4 中，对 .NET Framework 安全模型和术语进行了重大更改。 有关这些更改的详细信息，请参阅[安全更改](../security/security-changes.md)。  
   
  下表介绍了危险权限。  
   
@@ -38,6 +36,6 @@ ms.locfileid: "70205583"
 |<xref:System.Security.Permissions.ReflectionPermission>||  
 |<xref:System.MemberAccessException>|可以使用私有成员来攻克可访问性机制。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全编码准则](../../standard/security/secure-coding-guidelines.md)

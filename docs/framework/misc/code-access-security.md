@@ -15,28 +15,26 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bdb4e84170d4d3b95b8b51f12e0787937aaaf961
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a8021fade8df2c8bee5e3bf26da784a91526540f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205657"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215897"
 ---
 # <a name="code-access-security"></a>代码访问安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 当今高度连接的计算机系统频繁地暴露来自各种可能未知源的代码中。 可以将代码附加到电子邮件, 包含在文档中或通过 Internet 下载。 不幸的是，许多计算机用户都亲身经历了恶意移动代码（包括病毒和蠕虫）所带来的影响，这些代码可能损坏或破坏数据、花费时间和资金。  
+ 当今高度连接的计算机系统频繁地暴露来自各种可能未知源的代码中。 可以将代码附加到电子邮件，包含在文档中或通过 Internet 下载。 不幸的是，许多计算机用户都亲身经历了恶意移动代码（包括病毒和蠕虫）所带来的影响，这些代码可能损坏或破坏数据、花费时间和资金。  
   
  最常见的安全机制是根据用户的登录凭据（通常为密码）授予用户权限，以及限制允许用户访问的资源（通常为目录和文件）。 然而，这种方法无法解决以下几个问题：用户从许多来源获取代码，其中一些来源可能不可靠；代码包含 bug 或漏洞，被恶意代码所利用；代码有时会执行一些用户不知道的操作。 因此，当谨慎且值得信赖的用户运行恶意或有错的软件时，计算机系统可能会受到损坏并泄露私有数据。 大多数操作系统安全机制要求每一段代码必须完全可信方能运行（Web 页面上的脚本除外）。 因此，仍需要一个广泛适用的安全机制来允许源自一个计算机系统的代码在另一个系统中受保护运行，即使这两个系统之间没有信任关系。  
   
  .NET Framework 提供了一种安全机制，称为代码访问安全性。该机制可帮助保护计算机系统免受恶意移动代码的侵害，允许来自未知源的代码在实施保护的情况下运行，并帮助防止受信任的代码免受有意或无意安全性折损影响。 代码访问安全性使代码可以根据它所来自的位置以及代码标识的其他方面，获得不同等级的受信度。 代码访问安全性还对代码强制实施不同的信任级别，从而最大程度地减少必须完全可信方能运行的代码数量。 使用代码访问安全性可以降低恶意或有错代码滥用代码的可能性。 它可以减少责任，因为你可以指定允许代码执行的操作。 代码访问安全性还可以最大程度地减少代码安全漏洞所产生的损害。  
   
 > [!NOTE]
-> 已对 .NET Framework 4 中的代码访问安全性进行了重大更改。 最值得注意的更改是[安全透明](security-transparent-code.md)的, 但也有其他重大更改会影响代码访问安全性。 有关这些更改的信息, 请参阅[安全更改](../security/security-changes.md)。  
+> 已对 .NET Framework 4 中的代码访问安全性进行了重大更改。 最值得注意的更改是[安全透明](security-transparent-code.md)的，但也有其他重大更改会影响代码访问安全性。 有关这些更改的信息，请参阅[安全更改](../security/security-changes.md)。  
   
- 代码访问安全性主要影响库代码和部分受信任的应用程序。 库开发人员必须防止部分受信任的应用程序在未经授权的情况下访问其代码。 部分受信任的应用程序是从外部源（如 Internet）中加载的应用程序。 台式机或本地局域网中安装的应用程序完全受信任并可运行。 完全信任的应用程序不受代码访问安全性的影响, 除非它们被标记为[安全透明](security-transparent-code.md), 因为这些应用程序完全受信任。 完全受信任应用程序的唯一限制是，标记有 <xref:System.Security.SecurityTransparentAttribute> 特性的应用程序无法调用标记有 <xref:System.Security.SecurityCriticalAttribute> 特性的代码。 部分受信任的应用程序必须在沙盒（如 Internet Explorer）中运行，以确保应用代码访问安全性。 如果从 Internet 下载应用程序并尝试从桌面上运行该应用程序, 将收到一<xref:System.NotSupportedException>条包含以下消息的:"尝试从网络位置加载程序集, 这会导致在以前版本的 .NET Framework 中对程序集进行沙盒处理。 此版本的 .NET Framework 默认不启用 CAS 策略，因此加载可能存在危险。” 如果你确定可以信任该应用程序, 则可以通过使用[ \<loadFromRemoteSources > 元素](../configure-apps/file-schema/runtime/loadfromremotesources-element.md)使其能够作为完全信任运行。 有关在沙盒中运行应用程序的信息, 请[参阅如何:运行沙盒中部分受信任的代码](how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。  
+ 代码访问安全性主要影响库代码和部分受信任的应用程序。 库开发人员必须防止部分受信任的应用程序在未经授权的情况下访问其代码。 部分受信任的应用程序是从外部源（如 Internet）中加载的应用程序。 台式机或本地局域网中安装的应用程序完全受信任并可运行。 完全信任的应用程序不受代码访问安全性的影响，除非它们被标记为[安全透明](security-transparent-code.md)，因为这些应用程序完全受信任。 完全受信任应用程序的唯一限制是，标记有 <xref:System.Security.SecurityTransparentAttribute> 特性的应用程序无法调用标记有 <xref:System.Security.SecurityCriticalAttribute> 特性的代码。 部分受信任的应用程序必须在沙盒（如 Internet Explorer）中运行，以确保应用代码访问安全性。 如果从 Internet 下载一个应用程序并尝试在台式机中运行该应用程序，那么将收到 <xref:System.NotSupportedException> 并且系统将显示消息：“尝试从网络地址加载程序集，这可能会导致程序集在旧版 .NET Framework 中进行沙盒处理。 此版本的 .NET Framework 默认不启用 CAS 策略，因此加载可能存在危险。” 如果你确定可以信任该应用程序，则可以通过使用[\<loadFromRemoteSources > 元素](../configure-apps/file-schema/runtime/loadfromremotesources-element.md)使其能够作为完全信任运行。 有关在沙盒中运行应用程序的信息，请参阅[如何：在沙盒中运行部分受信任的代码](how-to-run-partially-trusted-code-in-a-sandbox.md)。  
   
  面向公共语言运行时的所有托管代码都受益于代码访问安全性，即使该代码不调用单个代码访问安全性。 有关详细信息，请参阅[代码访问安全性基础知识](code-access-security-basics.md)。  
   
@@ -64,11 +62,11 @@ ms.locfileid: "70205657"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|描述|  
+|标题|说明|  
 |-----------|-----------------|  
 |[代码访问安全性基础知识](code-access-security-basics.md)|描述代码访问安全性及其最常见的用途。|  
-|[安全透明代码, 级别2](security-transparent-code-level-2.md)|描述 .NET Framework 4 中的安全透明度模型。|  
+|[安全透明代码，级别2](security-transparent-code-level-2.md)|描述 .NET Framework 4 中的安全透明度模型。|  
 |[通过部分受信任的代码使用库](using-libraries-from-partially-trusted-code.md)|描述如何借助非托管代码启用库以及如何从非托管代码中使用库。|  
 |[安全性的基础概念](../../standard/security/key-security-concepts.md)|概述 .NET Framework 安全性系统中使用的许多关键术语和概念。|  
 |[基于角色的安全性](../../standard/security/role-based-security.md)|描述如何合并基于角色的安全性。|  
-|[Cryptographic Services](../../standard/security/cryptographic-services.md)|描述如何将加密合并到应用程序。|
+|[加密服务](../../standard/security/cryptographic-services.md)|描述如何将加密合并到应用程序。|

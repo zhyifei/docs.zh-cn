@@ -2,15 +2,14 @@
 title: .NET 体系结构组件
 description: 描述 .NET 体系结构组件，例如 .NET Standard、.NET 实现和工具。
 author: cartermp
-ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4f52a89179e241dcfce5c888e03518d878009175
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: af28863ac98ff5ffb5a8133fb98f2f1e7036985d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348063"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124385"
 ---
 # <a name="net-architectural-components"></a>.NET 体系结构组件
 
@@ -104,12 +103,12 @@ C# 语言和公共语言基础结构 (CLI) 规范通过 [Ecma International®](h
 - **信息技术 - 公共语言基础结构 (CLI) 分区 I 到 VI**：[ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
 - **信息技术 - 公共语言基础结构 (CLI) - 有关派生自分区 IV XML 文件的信息的技术报告**：[ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [为服务器应用选择 .NET Core 或 .NET Framework](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
 - [.NET Core 指南](../core/index.md)
 - [.NET Framework 指南](../framework/index.md)
 - [C# 指南](../csharp/index.yml)
-- [F# 指南](../fsharp/index.yml)
+- [F # 指南](../fsharp/index.yml)
 - [Visual Basic 指南](../visual-basic/index.yml)

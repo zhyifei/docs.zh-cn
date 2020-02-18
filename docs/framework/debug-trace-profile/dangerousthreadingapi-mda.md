@@ -10,17 +10,15 @@ helpviewer_keywords:
 - Suspend method
 - threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 860f524820e6b92e58f4a593e2ddf651a5e7094d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4e7e858dfb85eeccbadb23da60d081d1407e89d8
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052913"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216674"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
-如果在当前线程以外的线程上调用 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> 方法，将激活 `dangerousThreadingAPI` 托管调试助手 (MDA)。  
+如果在当前线程以外的线程上调用 `dangerousThreadingAPI` 方法，将激活 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> 托管调试助手 (MDA)。  
   
 ## <a name="symptoms"></a>症状  
  应用程序无响应或无限期挂起。 系统数据或应用程序数据可能暂时处于不可预知状态，甚至在应用程序关闭之后也可能处于不可预知状态。 某些操作未按预期完成。  
@@ -38,7 +36,7 @@ ms.locfileid: "71052913"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  此 MDA 对 CLR 无任何影响。 它只报告有关危险线程处理操作的数据。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>输出  
  MDA 识别导致其激活的危险线程处理方法。  
   
 ## <a name="configuration"></a>配置  
@@ -52,7 +50,7 @@ ms.locfileid: "71052913"
 ```  
   
 ## <a name="example"></a>示例  
- 以下代码示例演示对造成 `dangerousThreadingAPI` 激活的 <xref:System.Threading.Thread.Suspend%2A> 方法的调用。  
+ 以下代码示例演示对造成 <xref:System.Threading.Thread.Suspend%2A> 激活的 `dangerousThreadingAPI` 方法的调用。  
   
 ```csharp
 using System.Threading;  
@@ -67,7 +65,7 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.Thread>
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

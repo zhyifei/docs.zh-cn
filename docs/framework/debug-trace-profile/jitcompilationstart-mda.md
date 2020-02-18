@@ -7,14 +7,12 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fa6d3832dcd842631d290e046b5e32908ce4bb7e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9cae942bc01e9263720dbfe9acfb21bbb70bc548
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052526"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216263"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
 激活 `jitCompilationStart` 托管调试助手 (MDA) 以报告实时 (MDA) 编译器何时开始编译函数。  
@@ -31,7 +29,7 @@ ms.locfileid: "71052526"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  此 MDA 在方法进行 JIT 编译前记录消息，因此启用此 MDA 会对性能产生重大影响。 请注意，如果方法是内联的，此 MDA 不会生成单独的消息。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>输出  
  下面的代码示例显示了示例输出。 在此情况下，输出显示在程序集测试中，类“ns2.CO”上的方法“m”是 JIT 编译。  
   
 ```output
@@ -39,7 +37,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="configuration"></a>配置  
- 以下配置文件显示多种筛选器，可筛选出首次 JIT 编译时，报告哪些方法。 您可以通过将 name 特性的值设置为来\*指定报告所有方法。  
+ 以下配置文件显示多种筛选器，可筛选出首次 JIT 编译时，报告哪些方法。 您可以通过将 name 属性的值设置为 \*来指定报告所有方法。  
   
 ```xml  
 <mdaConfig>  
@@ -157,7 +155,7 @@ namespace ns2
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 0fec72bdedbcc2c84d8bc65e72391366e42d82be
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a98c97a4aa95fb956a2ca6d417e009a281a938b6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739158"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124476"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF 中的 Pack URI
 
@@ -44,7 +44,7 @@ ms.locfileid: "76739158"
 
 ## <a name="the-pack-uri-scheme"></a>Pack URI 方案
 
-Pack URI 方案由[开放式打包约定](https://go.microsoft.com/fwlink/?LinkID=71255)（OPC）规范使用，此规范描述了用于组织和标识内容的模型。 此模型的关键元素是包和部件，其中，*包*是一个或多个逻辑*部分*的逻辑容器。 下图阐释了此概念。
+Pack URI 方案由[开放式打包约定](https://www.ecma-international.org/publications/standards/Ecma-376.htm)（OPC）规范使用，此规范描述了用于组织和标识内容的模型。 此模型的关键元素是包和部件，其中，*包*是一个或多个逻辑*部分*的逻辑容器。 下图阐释了此概念。
 
 ![包和部件示意图](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)
 

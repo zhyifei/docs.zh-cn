@@ -1,5 +1,5 @@
 ---
-title: <configSections> 的 <sectionGroup> 元素
+title: <sectionGroup> 的 <configSections> 元素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/sectionGroup
@@ -7,14 +7,12 @@ helpviewer_keywords:
 - sectionGroup Element
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 746a997e162b0fd370a249b8d039be623b57d77f
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: eb221027470fe6e485f8fcc4b939b71e4f219712
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089008"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215264"
 ---
 # <a name="sectiongroup-element-for-configsections"></a>\<configSections \<sectionGroup > 元素 >
 
@@ -32,21 +30,21 @@ ms.locfileid: "74089008"
 </sectionGroup>
 ```
 
-## <a name="attribute"></a>特性
+## <a name="attribute"></a>Attribute
 
-|           | 描述 |
+|           | 说明 |
 | --------- | ----------- |
-| **name**  | 必需的特性。<br><br>指定正在定义的节组的名称。 |
+| name  | 必需的特性。<br><br>指定正在定义的节组的名称。 |
 
 ## <a name="parent-element"></a>父元素
 
-|     | 描述 |
+|     | 说明 |
 | --- | ----------- |
 | [ **\<configSections >** Element](configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
 
 ## <a name="child-elements"></a>子元素
 
-|     | 描述 |
+|     | 说明 |
 | --- | ----------- |
 | [ **\<部分 >** ](section-element.md) | 包含配置节声明。 |
 
@@ -78,6 +76,6 @@ ms.locfileid: "74089008"
 
 此元素可用于应用程序配置文件、计算机配置文件（*machine.config*）和不在应用程序目录级别的*web.config 文件。*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Framework 的配置文件架构](index.md)

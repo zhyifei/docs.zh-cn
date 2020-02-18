@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: ff95b330ff67e916a4d27ef841e757998d847c8b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 418c5a4708a7842e5e441235738b73a009c9c956
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735321"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124541"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>演练：在 Win32 中承载 WPF 内容
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但在 Win32 代码中有大量投资时，将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能添加到应用程序，而不是重写原始代码，这可能更有效。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一种直接的机制，用于在 Win32 窗口中承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。  
   
- 本教程介绍如何编写示例应用程序，[在 Win32 窗口示例中承载 WPF 内容](https://go.microsoft.com/fwlink/?LinkID=160004)，该示例在 win32 窗口中承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。 你可以扩展此示例来托管任何 Win32 窗口。 由于它涉及混合托管代码和非托管代码，因此该应用C++程序是以/cli 编写的。  
+ 本教程介绍如何编写示例应用程序，[在 Win32 窗口示例中承载 WPF 内容](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage)，该示例在 win32 窗口中承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。 你可以扩展此示例来托管任何 Win32 窗口。 由于它涉及混合托管代码和非托管代码，因此该应用C++程序是以/cli 编写的。  
 
 <a name="requirements"></a>   
 ## <a name="requirements"></a>要求  
@@ -26,7 +26,7 @@ ms.locfileid: "76735321"
  由于本教程随附的示例是在/Cli 中C++实现的，因此本教程假定你熟悉使用C++来对 Windows API 进行编程，并了解托管代码编程。 熟悉C++/cli 非常有用，但不是必需的。  
   
 > [!NOTE]
-> 本教程包括来自相关示例的一些代码示例。 但是，出于可读性考虑，不包括完整的示例代码。 有关完整的示例代码，请参阅[在 Win32 窗口中承载 WPF 内容示例](https://go.microsoft.com/fwlink/?LinkID=160004)。  
+> 本教程包括来自相关示例的一些代码示例。 但是，出于可读性考虑，不包括完整的示例代码。 有关完整的示例代码，请参阅[在 Win32 窗口中承载 WPF 内容示例](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage)。  
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>基本过程  

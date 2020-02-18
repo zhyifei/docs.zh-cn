@@ -7,14 +7,12 @@ helpviewer_keywords:
 - executable image for debugging
 - debugging [.NET Framework], executable images for
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1b64bd1e112932f394bb473a21642d37e28e39d3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 44d512a8ebec0e21e33f51c07428331e5e22b7bf
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052504"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217332"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>使映像更易于在 .NET 中进行调试
 
@@ -42,7 +40,7 @@ AllowOptimize=0
 
 可将每个选项的值设置为 0 或 1，任何不存在选项默认为 0。 将 `GenerateTrackingInfo` 设为 1、`AllowOptimize` 设为 0，这可提供最简单的调试。
 
-从 .NET Framework 版本2.0 开始，JIT 编译器将始终生成跟踪信息，而不考虑的值`GenerateTrackingInfo`; 但是`AllowOptimize` ，该值仍有效果。 如果使用 [Ngen.exe（本机映像生成器）](../tools/ngen-exe-native-image-generator.md)预编译本机映像而不进行优化，Ngen.exe 执行时 .ini 文件必须存在于 `AllowOptimize=0` 的目标文件夹。 如果在未优化的情况下预编译程序集，则必须先使用 Ngen.exe **/uninstall**选项删除预编译代码，然后再重新运行 ngen.exe，以将代码预编译为优化。 如果文件夹中不存在 .ini 文件，则默认情况下，Ngen.exe 将代码预编译为优化。
+从 .NET Framework 版本2.0 开始，JIT 编译器将始终生成跟踪信息，而不考虑 `GenerateTrackingInfo`的值;但 `AllowOptimize` 值仍然有效。 如果使用 [Ngen.exe（本机映像生成器）](../tools/ngen-exe-native-image-generator.md)预编译本机映像而不进行优化，Ngen.exe 执行时 .ini 文件必须存在于 `AllowOptimize=0` 的目标文件夹。 如果在未优化的情况下预编译程序集，则必须先使用 Ngen.exe **/uninstall**选项删除预编译代码，然后再重新运行 ngen.exe，以将代码预编译为优化。 如果文件夹中不存在 .ini 文件，则默认情况下，Ngen.exe 将代码预编译为优化。
 
 <xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType> 控制程序集的设置。 **DebuggableAttribute**包含两个字段，用于控制 JIT 编译器是否应优化和/或生成跟踪信息。 从 .NET Framework 版本2.0 开始，JIT 编译器将始终生成跟踪信息。
 
@@ -53,7 +51,7 @@ DebuggableAttribute 一次应用于整个程序集，而不是应用于程序集
 > [!NOTE]
 > 在 .NET Framework 1.0 版本中，当指定 /clr 和 /Zi 编译器选项时，Microsoft Visual C++ 编译器将添加 DebuggableAttribute。 在 .NET Framework 版本1.1 中，你必须在代码中手动添加**DebuggableAttribute** ，或使用 **/ASSEMBLYDEBUG**链接器选项。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试、跟踪和分析](index.md)
 - [启用 JIT 附加调试](enabling-jit-attach-debugging.md)

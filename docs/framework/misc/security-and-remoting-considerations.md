@@ -7,21 +7,19 @@ helpviewer_keywords:
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2d4d3b009e5792685ea39a3bcc2a15e082e1b8de
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 7a56c9894da88382f40dcd475e89776a83a59322
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206096"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215771"
 ---
 # <a name="security-and-remoting-considerations"></a>安全性和远程处理注意事项
 利用远程处理，你可以在应用程序域、进程或计算机之间设置透明的调用。 但是，代码访问安全堆栈审核不能跨越进程边界或计算机边界（它确实应用于同一进程的不同应用程序域之间）。  
   
  任何可远程处理的类（从 <xref:System.MarshalByRefObject> 类派生）都需要对安全负责。 要么只将代码用于封闭式安全环境中，在这种环境中可以隐式信任调用代码；要么相应地设计远程处理调用，以免这些调用会让受保护代码受到可能会被恶意使用的外部侵入的影响。  
   
- 通常, 不应公开受声明性[LinkDemand](link-demands.md)和<xref:System.Security.Permissions.SecurityAction.InheritanceDemand>安全检查保护的方法、属性或事件。 使用远程处理时，不会强制执行这些检查。 其他安全检查 (如<xref:System.Security.Permissions.SecurityAction.Demand>、[断言](using-the-assert-method.md)等) 在进程内的应用程序域之间工作, 但不能在跨进程或跨计算机方案中运行。  
+ 通常，绝不应公开受声明性[LinkDemand](link-demands.md)保护的方法、属性或事件，并 <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> 安全检查。 使用远程处理时，不会强制执行这些检查。 其他安全检查（例如 <xref:System.Security.Permissions.SecurityAction.Demand>、[断言](using-the-assert-method.md)等）在进程内的应用程序域之间工作，但在跨进程或跨计算机方案中不起作用。  
   
 ## <a name="protected-objects"></a>受保护的对象  
  某些对象自己保持安全状态。 不应将这些对象传递给不受信任的代码，否则这样的代码将会获得超越其自身权限的安全授权。  
@@ -37,6 +35,6 @@ ms.locfileid: "70206096"
   
  通常，默认的应用程序域将创建子应用程序域，每一个子域中带有一个控件对象。 控件对象管理新的应用程序域，它有时从默认应用程序域接受命令，但实际上它不能直接与该域联系。 有时，默认的应用程序域将针对控件对象调用其代理。 但是，有时候控件对象可能需要回调到默认的应用程序域。 在这些情况下，默认的应用程序域向控件对象的构造函数传递一个引用封送回调对象。 控件对象负责保护此代理。 如果控件对象要在公共类的公共静态字段上放置此代理，或者以其他方式公开此代理，则会形成一种危险情形：其他代码将回调到默认的应用程序域。 因此，为使代理保持为私有的，总是隐式信任控件对象。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全编码准则](../../standard/security/secure-coding-guidelines.md)

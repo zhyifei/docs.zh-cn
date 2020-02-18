@@ -12,14 +12,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - garbage collection, run-time errors
 ms.assetid: 7417f837-805e-4fed-a430-ca919c8421dc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: afc0fd47e51723a7b3ba1b07dffc49260f88917d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f7e6334e20a6e0db1d52307a833de0ecd0d74cc4
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052773"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217477"
 ---
 # <a name="gcmanagedtounmanaged-mda"></a>gcManagedToUnmanaged MDA
 每当线程从托管代码转换到非托管代码时，`gcManagedToUnmanaged` 托管调试助手 (MDA) 都会引起垃圾回收。  
@@ -36,7 +34,7 @@ ms.locfileid: "71052773"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  每当线程从托管代码转换到非托管代码时，都会引起垃圾回收。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>输出  
  此 MDA 不会产生任何输出。  
   
 ## <a name="configuration"></a>配置  
@@ -49,7 +47,7 @@ ms.locfileid: "71052773"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

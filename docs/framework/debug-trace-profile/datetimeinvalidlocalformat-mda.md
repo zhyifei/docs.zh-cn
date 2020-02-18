@@ -12,17 +12,15 @@ helpviewer_keywords:
 - time formatting
 - UTC formatting
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 32217b9e681179c246560ff5b51b65b4f4e044d5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2fdace8a9c7bcc090fd801be3bd717e4a2b34a87
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052884"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217540"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
-使用只打算用于本地 <xref:System.DateTime> 实例的格式对存储为协调世界时 (UTC) 的 <xref:System.DateTime> 实例设置格式时，将激活 `dateTimeInvalidLocalFormat` MDA。 对于未指定的或默认的 <xref:System.DateTime> 实例，不激活此 MDA。  
+使用只打算用于本地 `dateTimeInvalidLocalFormat` 实例的格式对存储为协调世界时 (UTC) 的 <xref:System.DateTime> 实例设置格式时，将激活 <xref:System.DateTime> MDA。 对于未指定的或默认的 <xref:System.DateTime> 实例，不激活此 MDA。  
   
 ## <a name="symptom"></a>症状  
  应用程序使用本地格式手动序列化 UTC <xref:System.DateTime> 实例：  
@@ -43,7 +41,7 @@ DateTime myDateTime = DateTime.UtcNow;
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffZ"));  
 ```  
   
- 还有一种利用正确序列化的 <xref:System.DateTime.Kind%2A> 属性序列化 <xref:System.DateTime> 的“o”格式，而不管实例是本地时间、UTC 时间还是未指定的时间：  
+ 还有一种利用正确序列化的 <xref:System.DateTime> 属性序列化 <xref:System.DateTime.Kind%2A> 的“o”格式，而不管实例是本地时间、UTC 时间还是未指定的时间：  
   
 ```csharp
 DateTime myDateTime = DateTime.UtcNow;  
@@ -53,7 +51,7 @@ Serialize(myDateTime.ToString("o"));
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  此 MDA 不影响运行时。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>输出  
  不存在作为此 MDA 激活的结果的特殊输出。但是，可使用调用堆栈确定激活此 MDA 的 <xref:System.DateTime.ToString%2A> 调用的位置。  
   
 ## <a name="configuration"></a>配置  
@@ -67,7 +65,7 @@ Serialize(myDateTime.ToString("o"));
 ```  
   
 ## <a name="example"></a>示例  
- 假设应用程序按以下方式使用 <xref:System.Xml.XmlConvert> 或 <xref:System.Data.DataSet> 类间接序列化 UTC <xref:System.DateTime> 值。  
+ 假设应用程序按以下方式使用 <xref:System.DateTime> 或 <xref:System.Xml.XmlConvert> 类间接序列化 UTC <xref:System.Data.DataSet> 值。  
   
 ```csharp
 DateTime myDateTime = DateTime.UtcNow;  
@@ -76,9 +74,9 @@ String serialized = XMLConvert.ToString(myDateTime);
   
  <xref:System.Xml.XmlConvert> 和 <xref:System.Data.DataSet> 序列化默认使用本地格式进行序列化。 序列化其他种类的 <xref:System.DateTime> 值（例如 UTC）需要其他选项。  
   
- 对于此特定示例，将 `XmlDateTimeSerializationMode.RoundtripKind` 传递给 `XmlConvert` 上的 `ToString` 调用。 这会将数据序列化为 UTC 时间。  
+ 对于此特定示例，将 `XmlDateTimeSerializationMode.RoundtripKind` 传递给 `ToString` 上的 `XmlConvert` 调用。 这会将数据序列化为 UTC 时间。  
   
- 如果使用 <xref:System.Data.DataSet>，则将 <xref:System.Data.DataColumn> 对象上的 <xref:System.Data.DataColumn.DateTimeMode%2A> 属性设置为 <xref:System.Data.DataSetDateTime.Utc>。  
+ 如果使用 <xref:System.Data.DataSet>，则将 <xref:System.Data.DataColumn.DateTimeMode%2A> 对象上的 <xref:System.Data.DataColumn> 属性设置为 <xref:System.Data.DataSetDateTime.Utc>。  
   
 ```csharp
 DateTime myDateTime = DateTime.UtcNow;  
@@ -86,7 +84,7 @@ String serialized = XmlConvert.ToString(myDateTime,
     XmlDateTimeSerializationMode.RoundtripKind);  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Globalization.DateTimeFormatInfo>
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

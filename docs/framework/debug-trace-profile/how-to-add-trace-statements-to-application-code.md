@@ -13,17 +13,15 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4517da87603dcdd398d536cd9bf9e441430be375
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 21df0e8129505e50e6b7f29c4f4f5aea94f380e3
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052742"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217472"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>如何：向应用程序代码添加跟踪语句
-跟踪使用最常用的方法是将输出写入侦听器的方法：**Write**、 **WriteIf**、 **WriteLine**、 **WriteLineIf**、 **Assert**和**Fail**。 这些方法可以分为两个类别：以无条件的形式**写入**、 **WriteLine**和**失败**所有发出输出，而**WriteIf**、 **WriteLineIf**和**Assert**则测试布尔条件，并根据条件的值来写入或不写入。 WriteIf 和 WriteLineIf 在条件为 `true` 时发出输出，而 Assert 在条件为 `false` 时发出输出。  
+最常用于跟踪的方法是用于将输出写入侦听器的以下方法：Write、WriteIf、WriteLine、WriteLineIf、Assert 和 Fail。 这些方法可以分为两类：Write、WriteLine 和 Fail 都无条件地发出输出，而 WriteIf、WriteLineIf 和 Assert 则测试 Boolean 条件并根据条件的值来写入或不写入。 WriteIf 和 WriteLineIf 在条件为 **时发出输出，而 Assert 在条件为** 时发出输出`true``false`。  
   
  当设计跟踪和调试策略时，应考虑所需的输出形式。 填充不相关信息的多个 Write 语句将创建难以读取的日志。 另一方面，如果使用 WriteLine 将相关语句放置在单独的行上，可能会难以区分哪些信息应该在一起。 通常，当需要将来自多个源的信息组合起来创建单个信息性消息时，使用多个 Write；当需要创建单个完整消息时，则使用 WriteLine 语句。  
   
@@ -82,9 +80,9 @@ ms.locfileid: "71052742"
     ```  
   
     > [!NOTE]
-    > 可以将 Assert 用于跟踪和调试。 此示例将调用堆栈输出到 Listeners 集合中的任意侦听器。 有关详细信息，请参阅[托管代码中的断言<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>和 ](/visualstudio/debugger/assertions-in-managed-code)。  
+    > 可以将 Assert 用于跟踪和调试。 此示例将调用堆栈输出到 Listeners 集合中的任意侦听器。 有关详细信息，请参阅[托管代码中的断言](/visualstudio/debugger/assertions-in-managed-code)和 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>

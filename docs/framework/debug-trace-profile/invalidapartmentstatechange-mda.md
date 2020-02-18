@@ -11,14 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ed4933ae59223c0674d2e36428894cbc3a07933f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8acafcc2fba9a7d30cc77f25f06adaca7c79db32
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052666"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217418"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
 `invalidApartmentStateChange` 托管调试助手 (MDS) 通过以下两种问题中的任何一种激活：  
@@ -31,7 +29,7 @@ ms.locfileid: "71052666"
   
 - 线程的 COM 单元状态不符合请求。 这可能造成用于已有线程模型的 COM 组件的代理不同于现有代理。 进而可能导致在通过未设置为跨单元封送的接口调用 COM 对象时，引发 <xref:System.InvalidCastException>。  
   
-- 线程的 COM 单元状态不同于预期。 这可能造成调用[运行时可调用包装器](../../standard/native-interop/runtime-callable-wrapper.md) (RCW) 时，出现 <xref:System.Runtime.InteropServices.COMException>、RPC_E_WRONG_THREAD 返回 HRESULT 以及 <xref:System.InvalidCastException>。 这也可能造成部分单线程 COM 组件由多个线程同时访问，进而导致损坏或数据丢失。  
+- 线程的 COM 单元状态不同于预期。 这可能造成调用<xref:System.Runtime.InteropServices.COMException>运行时可调用包装器<xref:System.InvalidCastException> (RCW) 时，出现 [、RPC_E_WRONG_THREAD 返回 HRESULT 以及 ](../../standard/native-interop/runtime-callable-wrapper.md)。 这也可能造成部分单线程 COM 组件由多个线程同时访问，进而导致损坏或数据丢失。  
   
 ## <a name="cause"></a>原因  
   
@@ -47,7 +45,7 @@ ms.locfileid: "71052666"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  此 MDA 对 CLR 无任何影响。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>输出  
  当前线程的 COM 单元状态和试图应用的代码状态。  
   
 ## <a name="configuration"></a>配置  
@@ -77,7 +75,7 @@ namespace ApartmentStateMDA
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

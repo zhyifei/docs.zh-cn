@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: d77ce78fe914bf300c5b33019d7cf67aa4ad74c3
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d0962793854a6066112eb987fbdb3f703617787f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291457"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124411"
 ---
 # <a name="panels-overview"></a>面板概述
 <xref:System.Windows.Controls.Panel> 元素是控制元素的呈现（其大小和尺寸、位置以及其子内容排列）的组件。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了许多预定义的 <xref:System.Windows.Controls.Panel> 元素以及构造自定义 <xref:System.Windows.Controls.Panel> 元素的功能。  
@@ -101,7 +101,7 @@ ms.locfileid: "72291457"
 #### <a name="cliptobounds-within-a-canvas"></a>Canvas 内 ClipToBounds  
  <xref:System.Windows.Controls.Canvas> 可以在屏幕上的任何位置（甚至是在其自身定义的 <xref:System.Windows.FrameworkElement.Height%2A> 和 <xref:System.Windows.FrameworkElement.Width%2A>之外的坐标）定位子元素。 而且，<xref:System.Windows.Controls.Canvas> 不受其子级的大小的影响。 因此，子元素可以过度绘制父 <xref:System.Windows.Controls.Canvas>的边框之外的其他元素。 <xref:System.Windows.Controls.Canvas> 的默认行为是允许在父 <xref:System.Windows.Controls.Canvas>的边界之外绘制子对象。 如果不需要此行为，则可以将 <xref:System.Windows.UIElement.ClipToBounds%2A> 属性设置为 `true`。 这会导致 <xref:System.Windows.Controls.Canvas> 剪裁到其自身大小。 <xref:System.Windows.Controls.Canvas> 是唯一的布局元素，它允许在其边界外绘制子级。  
   
- [宽度属性比较示例](https://go.microsoft.com/fwlink/?LinkID=160050)中以图形方式展示了此行为。  
+ [宽度属性比较示例](https://github.com/Microsoft/WPF-Samples/tree/master/Elements/WidthProperties)中以图形方式展示了此行为。  
   
 #### <a name="defining-and-using-a-canvas"></a>定义和使用 Canvas  
  只需使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 或代码，即可实例化 <xref:System.Windows.Controls.Canvas>。 下面的示例演示如何使用 <xref:System.Windows.Controls.Canvas> 来绝对定位内容。 此代码生成三个 100 像素正方形。 第一个正方形为红色，其左上角的 (*x, y*) 位置指定为 (0, 0)。 第二个正方形为绿色，其左上角位置为 (100, 100)，在第一个正方形的右下方。 第三个正方形为蓝色，其左上角为 (50, 50)，因此包含了第一个正方形的右下四分之一部分和第二个正方形的左上四分之一部分。 由于第三个正方形最后布置，因此它看起来在另外两个正方形上方，即，重叠部分采用第三个正方形的颜色。  
@@ -136,7 +136,7 @@ ms.locfileid: "72291457"
   
  经编译的应用程序产生新的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，外观如下。  
   
- ![典型的 DockPanel 方案。](./media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
+ ![典型的 System.windows.controls.dockpanel> 方案。](./media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
   
 <a name="Panels_overview_Grid_subsection"></a>   
 ### <a name="grid"></a>网格  
@@ -156,7 +156,7 @@ ms.locfileid: "72291457"
   
  经编译的应用程序产生新的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，外观如下。  
   
- ![典型的 Grid 元素。](./media/avalon-run-dialog.PNG "avalon_run_dialog")  
+ ![典型的网格元素。](./media/avalon-run-dialog.PNG "avalon_run_dialog")  
   
 <a name="Panels_overview_StackPanel_subsection"></a>   
 ### <a name="stackpanel"></a>StackPanel  
@@ -174,7 +174,7 @@ ms.locfileid: "72291457"
   
  通过此图像可以看到呈现行为的区别。  
   
- ![屏幕快照： system.windows.controls.stackpanel> 和 system.windows.controls.dockpanel> 屏幕快照](./media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
+ ![屏幕快照： System.windows.controls.stackpanel> 与 System.windows.controls.dockpanel> 屏幕快照](./media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
   
 #### <a name="defining-and-using-a-stackpanel"></a>定义和使用 StackPanel  
  下面的示例演示如何使用 <xref:System.Windows.Controls.StackPanel> 创建一组垂直定位的按钮。 对于水平定位，请将 <xref:System.Windows.Controls.StackPanel.Orientation%2A> 属性设置为 <xref:System.Windows.Controls.Orientation.Horizontal>。  
@@ -184,7 +184,7 @@ ms.locfileid: "72291457"
   
  经编译的应用程序产生新的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，外观如下。  
   
- ![典型的 StackPanel 元素。](./media/panel-intro-stackpanel.PNG "panel_intro_stackpanel")  
+ ![典型的 System.windows.controls.stackpanel> 元素。](./media/panel-intro-stackpanel.PNG "panel_intro_stackpanel")  
   
 <a name="Panels_overview_VirtualizingStackPanel_subsection"></a>   
 #### <a name="virtualizingstackpanel"></a>VirtualizingStackPanel  
@@ -209,7 +209,7 @@ ms.locfileid: "72291457"
   
  经编译的应用程序产生新的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，外观如下。  
   
- ![典型 WrapPanel 元素。](./media/wrappanel-element.PNG "WrapPanel_Element")  
+ ![典型的 WrapPanel 元素。](./media/wrappanel-element.PNG "WrapPanel_Element")  
   
 <a name="Panels_nested_panel_elements"></a>   
 ## <a name="nested-panel-elements"></a>嵌套 Panel 元素  
@@ -224,7 +224,7 @@ ms.locfileid: "72291457"
   
  经编译的应用程序产生新的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，外观如下。  
   
- ![充分利用嵌套面板的 UI。](./media/nested-panels.PNG "nested_panels")  
+ ![利用嵌套面板的 UI。](./media/nested-panels.PNG "nested_panels")  
   
 <a name="Panels_custom_panel_elements"></a>   
 ## <a name="custom-panel-elements"></a>自定义 Panel 元素  
@@ -257,7 +257,7 @@ ms.locfileid: "72291457"
 - [演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [WPF 布局库示例](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [布局](../advanced/layout.md)
-- [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [WPF 控件库示例](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
 - [对齐、边距和填充概述](../advanced/alignment-margins-and-padding-overview.md)
 - [创建自定义内容换行面板示例](https://go.microsoft.com/fwlink/?LinkID=159979)
 - [附加属性概述](../advanced/attached-properties-overview.md)

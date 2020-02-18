@@ -8,31 +8,29 @@ helpviewer_keywords:
 - InvalidGCHandleCookie MDA
 - invalid cookies
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7452ae28d63c89845b45bf500c02e771f0b8f4df
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c1d8fab863c34313c0cdb778136c6f69a64defeb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052613"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216311"
 ---
 # <a name="invalidgchandlecookie-mda"></a>invalidGCHandleCookie MDA
-尝试将无效的 <xref:System.IntPtr> Cookie 转换为 <xref:System.Runtime.InteropServices.GCHandle> 时，将激活 `invalidGCHandleCookie` 托管调试助手（MDA）。  
+尝试将无效的 `invalidGCHandleCookie` Cookie 转换为 <xref:System.IntPtr> 时，将激活 <xref:System.Runtime.InteropServices.GCHandle> 托管调试助手（MDA）。  
   
 ## <a name="symptoms"></a>症状  
- 尝试从 <xref:System.IntPtr> 使用或检索 <xref:System.Runtime.InteropServices.GCHandle> 时，发生未定义的行为，如访问冲突和内存损坏。  
+ 尝试从 <xref:System.Runtime.InteropServices.GCHandle> 使用或检索 <xref:System.IntPtr> 时，发生未定义的行为，如访问冲突和内存损坏。  
   
 ## <a name="cause"></a>原因  
  该 Cookie 可能是无效的，因为它原本不是从 <xref:System.Runtime.InteropServices.GCHandle> 创建的。它表示已被释放的 <xref:System.Runtime.InteropServices.GCHandle>，是不同应用程序域中 <xref:System.Runtime.InteropServices.GCHandle> 的 Cookie，或者作为 <xref:System.Runtime.InteropServices.GCHandle> 被封送到了本机代码、但作为 <xref:System.IntPtr> 被传回到了 CLR，在那里尝试了转换。  
   
 ## <a name="resolution"></a>解决方法  
- 为 <xref:System.Runtime.InteropServices.GCHandle> 指定有效的 <xref:System.IntPtr> Cookie。  
+ 为 <xref:System.IntPtr> 指定有效的 <xref:System.Runtime.InteropServices.GCHandle> Cookie。  
   
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  此 MDA 启用后，调试程序不再能从根源追溯到对象，因为传回的 Cookie 值与 MDA 未启用时返回的值不同。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>输出  
  报告无效的 <xref:System.IntPtr> Cookie 值。  
   
 ## <a name="configuration"></a>配置  
@@ -45,7 +43,7 @@ ms.locfileid: "71052613"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>
 - <xref:System.Runtime.InteropServices.GCHandle>

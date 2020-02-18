@@ -7,14 +7,12 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6cdd5833e14da1ab5185e56dce1190adfee4a2bf
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: d1e4f3478f6afd6a20c01c6b57a137020ee88f5f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089031"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214760"
 ---
 # <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<删除 NameValueSectionHandler 和 DictionarySectionHandler 的 > 元素
 
@@ -30,21 +28,21 @@ ms.locfileid: "74089031"
 <add remove="key" />
 ```
 
-## <a name="attribute"></a>特性
+## <a name="attribute"></a>Attribute
 
-|           | 描述 |
+|           | 说明 |
 | --------- | ----------- |
-| **key**   | 必需的特性。<br><br>指定要删除的设置的名称。 |
+| **键**   | 必需的特性。<br><br>指定要删除的设置的名称。 |
 
 ## <a name="parent-element"></a>父元素
 
-| 元素 | 描述 |
+| 元素 | 说明 |
 | ------- | ------------|
 | [ **\<sectionName >** Element](custom-element-2.md) | 定义使用 <xref:System.Configuration.NameValueSectionHandler> 和 <xref:System.Configuration.DictionarySectionHandler> 类的自定义配置节的设置。 |
 
 ## <a name="child-elements"></a>子元素
 
-None
+无
 
 ## <a name="remarks"></a>备注
 
@@ -84,6 +82,6 @@ None
 
 此元素可用于应用程序配置文件、计算机配置文件（*machine.config*）和不在应用程序目录级别的*web.config 文件。*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Framework 的配置文件架构](index.md)

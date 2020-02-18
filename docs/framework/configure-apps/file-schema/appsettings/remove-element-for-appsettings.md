@@ -1,5 +1,5 @@
 ---
-title: <appSettings> 的 <remove> 元素
+title: <remove> 的 <appSettings> 元素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/remove
@@ -7,14 +7,12 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0fcdb75aa733a9d7634ec1c3b31dcbbb87e090e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 83abbdbf0d3e4dfd16c0e8c649200c4ecc7329f7
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088717"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215495"
 ---
 # <a name="remove-element-for-appsettings"></a>\<删除 \<appSettings > 元素 >
 
@@ -32,21 +30,21 @@ ms.locfileid: "74088717"
 </appSettings>
 ```
 
-### <a name="attribute"></a>特性
+### <a name="attribute"></a>Attribute
 
-|         | 描述 |
+|         | 说明 |
 | ------- | ----------- |
-| **key** | 必需的特性。<br><br>指定要删除的密钥的名称。 |
+| **键** | 必需的特性。<br><br>指定要删除的密钥的名称。 |
 
 ### <a name="parent-element"></a>父元素
 
-|     | 描述 |
+|     | 说明 |
 | --- | ----------- |
 | [ **\<appSettings>** ](appsettings-element-for-configuration.md) | 包含自定义应用程序设置，如文件路径、XML Web service URL 或应用程序的任何其他自定义配置信息。 |
 
 ## <a name="child-elements"></a>子元素
 
-None
+无
 
 ## <a name="example"></a>示例
 
@@ -58,6 +56,6 @@ None
 </appSettings>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Framework 的配置文件架构](../index.md)

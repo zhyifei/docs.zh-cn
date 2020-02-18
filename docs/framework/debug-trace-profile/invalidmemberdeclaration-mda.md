@@ -8,14 +8,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), marshaling
 - MDAs (managed debugging assistants), marshaling
 ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fe15d718a9c5f91bfae4f37c04e726990e2fbd45
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6033cd4178b2bc493794b5dcc527bc543ba24284
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052589"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216301"
 ---
 # <a name="invalidmemberdeclaration-mda"></a>invalidMemberDeclaration MDA
 激活 `invalidMemberDeclaration` 托管调试助手 (MDA) 以报告在确定如何封送要从 COM 调用的成员的参数期间发生的错误。  
@@ -32,7 +30,7 @@ ms.locfileid: "71052589"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  此 MDA 对 CLR 无任何影响。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>输出  
  信息性消息包括成员名称、类型名称和错误消息。  
   
 ## <a name="configuration"></a>配置  
@@ -45,7 +43,7 @@ ms.locfileid: "71052589"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

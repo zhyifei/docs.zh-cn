@@ -1,5 +1,5 @@
 ---
-title: <section> 元素
+title: <section> element
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/section
@@ -8,14 +8,12 @@ helpviewer_keywords:
 - section Element
 - <section> Element
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8c1675540df6844f98572c11cfb140bff23b31a8
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 8785523d664294e3ca3792fb0f84d739d1f1a376
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089021"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215720"
 ---
 # <a name="section-element"></a>\<节 > 元素
 
@@ -39,25 +37,25 @@ ms.locfileid: "74089021"
          allowLocation="true|false" />
 ```
 
-## <a name="required-attributes"></a>必需的特性
+## <a name="required-attributes"></a>必需属性
 
-|           | 描述 |
+|           | 说明 |
 | --------- | ----------- |
-| **name**  | 指定配置节的名称。 |
-| **type**  | 指定从配置文件读取节的配置节处理程序类的名称。 类型值具有语法 "完全限定的节-名称、简单程序集名称"。 简单程序集名称是没有 *.dll*文件扩展名的根文件名。 |
+| name  | 指定配置节的名称。 |
+| type  | 指定从配置文件读取节的配置节处理程序类的名称。 类型值具有语法 "完全限定的节-名称、简单程序集名称"。 简单程序集名称是没有 *.dll*文件扩展名的根文件名。 |
 
 ## <a name="optional-attributes"></a>可选属性
 
 以下属性仅适用于 ASP.NET 应用程序。 对于其他应用程序类型，配置系统将忽略这些属性。
 
-|                     | 描述 |
+|                     | 说明 |
 | ------------------- | ----------- |
-| **allowDefinition** | 指定可在其中使用节的配置文件。 使用下列值之一：<br><br>**Everywhere**<br>允许在任何配置文件中使用节。 这是默认设置。<br>**MachineOnly**<br>允许部分仅在计算机配置文件（*machine.config*）中使用。<br>**MachineToApplication**<br>允许在计算机配置文件或应用程序配置文件中使用部分。 |
-| **allowLocation**   | 确定是否可以在 **\<位置 >** 元素中使用节。 使用下列值之一：<br><br>**true**<br>允许在 **\<位置 >** 元素中使用部分。 这是默认设置。<br>**false**<br>不允许在 **\<位置 >** 元素中使用节。 |
+| **allowDefinition** | 指定可在其中使用节的配置文件。 使用以下值之一：<br><br>**Everywhere**<br>允许在任何配置文件中使用节。 这是默认值。<br>**MachineOnly**<br>允许部分仅在计算机配置文件（*machine.config*）中使用。<br>**MachineToApplication**<br>允许在计算机配置文件或应用程序配置文件中使用部分。 |
+| **allowLocation**   | 确定是否可以在 **\<位置 >** 元素中使用节。 使用以下值之一：<br><br>true<br>允许在 **\<位置 >** 元素中使用部分。 这是默认值。<br>**false**<br>不允许在 **\<位置 >** 元素中使用节。 |
 
 ## <a name="parent-elements"></a>父元素
 
-|     | 描述 |
+|     | 说明 |
 | --- | ----------- |
 | [ **\<configSections >** Element](configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
 | [ **\<sectionGroup >** Element](sectiongroup-element-for-configsections.md) | 定义配置节的命名空间。 |
@@ -67,7 +65,7 @@ ms.locfileid: "74089021"
 
 ## <a name="child-elements"></a>子元素
 
-None
+无
 
 ## <a name="remarks"></a>备注
 
@@ -96,6 +94,6 @@ None
 
 此元素可用于应用程序配置文件、计算机配置文件（*machine.config*）和不在应用程序目录级别的*web.config 文件。*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Framework 的配置文件架构](index.md)
