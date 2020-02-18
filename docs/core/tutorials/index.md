@@ -4,12 +4,12 @@ description: 请按照教程学习了解 .NET Core 以在 Mac、Linux 和 Window
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 4e0acc357453d3bd3fb877e357264cc1aa715e4c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: e9fc5544904fc5a1304dcce135e01b1895d3446b
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920424"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215179"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>通过探讨这些教程来学习 .NET Core 和 .NET Core SDK 工具
 
@@ -47,6 +47,6 @@ ms.locfileid: "76920424"
 - [使用 MSTest 和 .NET Core 执行单元测试](../testing/unit-testing-with-mstest.md)
 - [使用跨平台工具开发库](libraries.md)
 - [从本机代码承载 .NET Core](netcore-hosting.md)
-- [创建 dotnet new 自定义模板](cli-templates-create-item-template.md)
+- [创建 CLI 的模板](cli-templates-create-item-template.md)
 
 有关开发 ASP.NET Core Web 应用程序的教程，请参阅 [ASP.NET Core 文档](/aspnet/core/)。
