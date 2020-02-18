@@ -1,18 +1,16 @@
 ---
 title: .NET Standard
 description: 了解 .NET Standard 及其版本以及支持它的 .NET 实现。
-author: mairaw
-ms.author: mairaw
 ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 6a4406775056b76dfa789911b8bb14e84dbc8eea
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 25490d5063a1f6c31b76af30ac6d37de6cb8c07f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738651"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124632"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -60,7 +58,7 @@ ms.locfileid: "75738651"
 - 累加性：.NET Standard 版本在逻辑上形成同心圆。也就是说，较高的版本包含较低版本的所有 API。 版本之间没有重大更改。
 - 不可变：一旦发布，.NET Standard 版本就会冻结起来。 新 API 首先会在特定的 .NET 实现（如 .NET Core）中可用。 如果 .NET Standard 评审委员会认为新 API 应可用于所有 .NET 实现，则会将它们添加到新的 .NET Standard 版本中。
 
-## <a name="specification"></a>规范
+## <a name="specification"></a>规格
 
 .NET Standard 规范是一组标准化的 API。 此规范由 .NET 实现者（具体而言，由 Microsoft（包括 .NET Framework、NET Core 和 Mono）和 Unity）进行维护。 在通过 [GitHub](https://github.com/dotnet/standard) 建立新 .NET Standard 版本的过程中，采用公众反馈流程。
 
@@ -88,7 +86,7 @@ NuGet 包面向一个或多个[框架](frameworks.md)。 .NET Standard 包定位
 
 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) 元包引用定义 .NET Standard 的一整套 NuGet 包。  要指定 `netstandard` 作为目标，最常见的方法是引用此元包。 它描述并提供了对大约 40 个 .NET 库及定义 .Net Standard 的相关 API 的访问权限。 可以引用以 `netstandard` 为目标的其他包来使用其他 API。
 
-### <a name="versioning"></a>版本管理
+### <a name="versioning"></a>版本控制
 
 规范并不是单一的，而是一组版本不断线性递增的 API。 该标准的第一个版本建立了一组基准 API。 后续版本将添加 API，并继承以前的版本定义的 API。 在从标准中移除 API 方面，并没有成文的规定。
 
@@ -161,7 +159,7 @@ NuGet 包面向一个或多个[框架](frameworks.md)。 .NET Standard 包定位
 | Profile157  | 1.0           | Windows 8.1、Windows Phone 8.1、Windows Phone Silverlight 8.1
 | Profile259  | 1.0           | .NET Framework 4.5、Windows 8, Windows Phone 8.1、Windows Phone Silverlight 8
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Standard 版本](https://github.com/dotnet/standard/blob/master/docs/versions.md)
 - [生成 .NET Standard 库](../core/tutorials/library-with-visual-studio.md)
