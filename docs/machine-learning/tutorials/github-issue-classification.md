@@ -40,13 +40,13 @@ ms.locfileid: "77092520"
 
 1. 打开 Visual Studio 2017。 从菜单栏中选择“文件”   > “新建”   > “项目”  。 在“新项目”  对话框中，依次选择“Visual C#”  和“.NET Core”  节点。 然后，选择“控制台应用程序(.NET Core)”  项目模板。 在“名称”  文本框中，键入“GitHubIssueClassification”，然后选择“确定”  按钮。
 
-2. 在项目中创建一个名为“数据”  的目录来保存数据集文件：
+2. 在项目中创建一个名为“Data”  的目录来保存数据集文件：
 
     在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新文件夹”  。 键入“Data”，然后按 Enter。
 
-3. 在项目中创建一个名为“模型”的目录来保存模型  ：
+3. 在项目中创建一个名为“Models”的目录来保存模型  ：
 
-    在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新文件夹”  。 键入“模型”，然后按 Enter。
+    在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新文件夹”  。 键入“Models”，然后按 Enter。
 
 4. 安装“Microsoft.ML NuGet 包”  ：
 
@@ -54,7 +54,7 @@ ms.locfileid: "77092520"
 
 ### <a name="prepare-your-data"></a>准备数据
 
-1. 下载 [issues_train.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) 和 [issues_test.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) 数据集，并将它们保存到先前创建的“数据”文件夹  。 第一个数据集定型机器学习模型，第二个数据集可用来评估模型的准确度。
+1. 下载 [issues_train.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) 和 [issues_test.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) 数据集，并将它们保存到先前创建的“Data”文件夹  。 第一个数据集用于定型机器学习模型，第二个数据集可用来评估模型的准确度。
 
 2. 在“解决方案资源管理器”中，右键单击每个 \*.tsv 文件，然后选择“属性”  。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
