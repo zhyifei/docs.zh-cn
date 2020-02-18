@@ -54,7 +54,9 @@ ms.locfileid: "77092520"
 
 ### <a name="prepare-your-data"></a>准备数据
 
-1. 下载 [issues_train.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) 和 [issues_test.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) 数据集，并将它们保存到先前创建的“Data”文件夹  。 第一个数据集用于定型机器学习模型，第二个数据集可用来评估模型的准确度。
+
+1. 下载 [issues_train.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) 和 [issues_test.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) 数据集，并将它们保存到先前创建的“Data”文件夹 。 第一个数据集用于定型机器学习模型，第二个数据集可用来评估模型的准确度。
+
 
 2. 在“解决方案资源管理器”中，右键单击每个 \*.tsv 文件，然后选择“属性”  。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
