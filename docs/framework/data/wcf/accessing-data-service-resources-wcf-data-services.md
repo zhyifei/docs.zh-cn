@@ -52,7 +52,7 @@ WCF 数据服务支持 Open Data Protocol （OData）将数据公开为包含可
 ## <a name="system-query-options"></a>系统查询选项  
  OData 定义一组系统查询选项，这些选项可用于对资源执行传统的查询操作，如筛选、排序和分页。 例如，下面的 URI 返回所有 `Order` 实体的集合，以及相关的 `Order_Detail` 实体，其邮政编码不 `100`结尾：  
   
-<https://services.odata.org/Northwind/Northwind.svc/Orders? $filter = not endswith （ShipPostalCode，' 100 '） & $expand = Order_Details & $orderby = 货主国家 >
+<https://services.odata.org/Northwind/Northwind.svc/Orders? $filter = not endswith （ShipPostalCode，' 100 '） & $expand = Order_Details & $orderby = 货主国家/地区 >
   
  返回源中的各项还按订单的 ShipCity 属性值进行排序。  
   

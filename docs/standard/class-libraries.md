@@ -2,16 +2,15 @@
 title: .NET 类库
 description: 了解如何通过 .NET 类库，将实用功能组合为可供多个应用程序使用的模块。
 author: richlander
-ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: c918883d8620513749826680f9f1b6d89ae87585
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b7934e5def202760ab05d363ee5fcda5d012ca72
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664599"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124580"
 ---
 # <a name="net-class-libraries"></a>.NET 类库
 
@@ -21,7 +20,7 @@ ms.locfileid: "64664599"
 
 * **平台特定**的类库可访问给定平台（例如，.NET Framework、Xamarin、iOS）中的所有 API，但只有面向该平台的应用和库可使用该类库。
 * **可移植**类库可访问 API 的子集，并且可供面向多个平台的应用和库使用。
-* .NET Standard 类库将平台专用库概念和可移植库概念合并到一个模型中，以同时获取两方面的优势。
+* .NET Standard  类库将平台专用库概念和可移植库概念合并到一个模型中，以同时获取两方面的优势。
 
 ## <a name="platform-specific-class-libraries"></a>平台特定的类库
 
@@ -43,7 +42,7 @@ ms.locfileid: "64664599"
 
 .NET Standard 库是平台特定的库和可移植库概念的替代。 .NET Core 库可从基础平台公开所有功能（无合成平台或平台交集），就此而言，它是平台特定的库。 该库可在所有支持平台上运行，就此而言，它是可移植库。
 
-.NET Standard 公开一组库协定。 .NET 实现必须完全支持每个协定，否则就全都不支持。 因此，每个实现都支持一组 .NET Standard 协定。 得出的必然结果是，.NET Standard 类库在支持其协定依赖项的平台上受到支持。
+.NET Standard 公开一组库协定  。 .NET 实现必须完全支持每个协定，否则就全都不支持。 因此，每个实现都支持一组 .NET Standard 协定。 得出的必然结果是，.NET Standard 类库在支持其协定依赖项的平台上受到支持。
 
 .NET Standard 不公开整个 .NET Framework 的功能（也不将此作为目标），但相比可移植类库，其公开的 API 更多。 随着时间推移，将添加更多的 API。
 

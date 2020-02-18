@@ -1,17 +1,15 @@
 ---
 title: SDK 样式项目中的目标框架 - .NET
 description: 了解用于 .NET Core 应用和库的目标框架。
-author: mairaw
-ms.author: mairaw
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 957671644ae333180b0c1ba4aae6d6e17ae6478b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838205"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124593"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK 样式项目中的目标框架
 
@@ -31,7 +29,7 @@ ms.locfileid: "74838205"
 
 | 目标 Framework      | 最新 <br/> 稳定版本 | 目标框架名字对象 (TFM) | 已实现 <br/> .NET Standard 版本 |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.1                         | netstandard2.1                 | 不可用                                     |
+| .NET Standard         | 2.1                         | netstandard2.1                 | 空值                                     |
 | .NET Core             | 3.1                         | netcoreapp3.1                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
@@ -118,7 +116,7 @@ public class MyClass
 
 以下目标框架已弃用。 以这些目标框架为目标的包应迁移到指明的替代框架。
 
-| 已弃用的 TFM                                                                             | Replacement |
+| 已弃用的 TFM                                                                             | 替代功能 |
 | ------------------------------------------------------------------------------------------ | ----------- |
 | aspnet50<br>aspnetcore50<br>dnxcore50<br>dnx<br>dnx45<br>dnx451<br>dnx452                  | netcoreapp  |
 | dotnet<br>dotnet50<br>dotnet51<br>dotnet52<br>dotnet53<br>dotnet54<br>dotnet55<br>dotnet56 | netstandard |
@@ -129,7 +127,7 @@ public class MyClass
 | win10                                                                                      | uap10.0     |
 | winrt                                                                                      | netcore45   |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [包、元包和框架](../core/packages.md)
 - [使用跨平台工具开发库](../core/tutorials/libraries.md)
