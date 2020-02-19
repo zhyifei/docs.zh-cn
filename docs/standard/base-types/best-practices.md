@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: cb1764d1a6f363f3011268eae5fbcb2c76d9cc89
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 9b09f5a2505888c6154a58a3512c94c51f89295b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938004"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124417"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中的正则表达式最佳做法
 
@@ -102,7 +102,7 @@ ms.locfileid: "75938004"
 
 此示例中使用的正则表达式 `\p{Sc}+\s*\d+` 可验证输入字符串是否包含一个货币符号和至少一个十进制数。 模式的定义如下表所示。
 
-|模式|描述|
+|模式|说明|
 |-------------|-----------------|
 |`\p{Sc}+`|与 Unicode 符号、货币类别中的一个或多个字符匹配。|
 |`\s*`|匹配零个或多个空白字符。|
@@ -116,14 +116,14 @@ ms.locfileid: "75938004"
 
 简言之，当你使用特定正则表达式调用正则表达式方法相对不频繁时，建议使用已解释的正则表达式。 当你使用特定正则表达式调用正则表达式方法相对频繁时，应使用已编译的正则表达式。 很难确定已解释的正则表达式执行速度减慢超出启动时间减少带来的性能增益的确切阈值，或已编译的正则表达式启动速度减慢超出执行速度加快带来的性能增益的阈值。 这依赖于各种因素，包括正则表达式的复杂程度和它处理的特定数据。 若要确定已解释或已编译的正则表达式是否可为特定应用程序方案提供最佳性能，可以使用 <xref:System.Diagnostics.Stopwatch> 类来比较其执行时间。
 
-下面的示例比较了已编译和已解释正则表达式在读取 Theodore Dreiser 所著《金融家》  中前十句文本和所有句文本时的性能。 如示例输出所示，当只对匹配方法的正则表达式进行十次调用时，已解释的正则表达式与已编译的正则表达式相比，可提供更好的性能。 但是，当进行大量调用（在此示例中，超过 13,000 次调用）时，已编译的正则表达式可提供更好的性能。
+下面的示例比较了已编译和已解释正则表达式在读取 Theodore Dreiser 所著《金融家》中前十句文本和所有句文本时的性能。 如示例输出所示，当只对匹配方法的正则表达式进行十次调用时，已解释的正则表达式与已编译的正则表达式相比，可提供更好的性能。 但是，当进行大量调用（在此示例中，超过 13,000 次调用）时，已编译的正则表达式可提供更好的性能。
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/compare1.cs#5)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/compare1.vb#5)]
 
 该示例中使用的正则表达式模式 `\b(\w+((\r?\n)|,?\s))*\w+[.?:;!]` 的定义如下表所示。
 
-|模式|描述|
+|模式|说明|
 |-------------|-----------------|
 |`\b`|在单词边界处开始匹配。|
 |`\w+`|匹配一个或多个单词字符。|
@@ -151,7 +151,7 @@ ms.locfileid: "75938004"
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/compile1.cs#6)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/compile1.vb#6)]
 
-在将示例编译为可执行文件并运行时，它会创建一个名为 `RegexLib.dll` 的程序集。 正则表达式用名为 `Utilities.RegularExpressions.SentencePattern` 并由 <xref:System.Text.RegularExpressions.Regex> 派生的类来表示。 然后，下面的示例使用已编译正则表达式，从 Theodore Dreiser 所著《金融家》  文本中提取句子。
+在将示例编译为可执行文件并运行时，它会创建一个名为 `RegexLib.dll` 的程序集。 正则表达式用名为 `Utilities.RegularExpressions.SentencePattern` 并由 <xref:System.Text.RegularExpressions.Regex> 派生的类来表示。 然后，下面的示例使用已编译正则表达式，从 Theodore Dreiser 所著《金融家》文本中提取句子。
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/compile2.cs#7)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/compile2.vb#7)]
@@ -167,7 +167,7 @@ ms.locfileid: "75938004"
 
 通常，尽管回溯不是匹配所必需的，但应用程序会因使用回溯而对性能产生负面影响。 例如，正则表达式 `\b\p{Lu}\w*\b` 将匹配以大写字符开头的所有单词，如下表所示。
 
-|模式|描述|
+|模式|说明|
 |-|-|
 |`\b`|在单词边界处开始匹配。|
 |`\p{Lu}`|匹配大写字符。|
@@ -176,7 +176,7 @@ ms.locfileid: "75938004"
 
 由于单词边界与单词字符不同也不是其子集，因此正则表达式引擎在匹配单词字符时无法跨越单词边界。 这意味着，对于此正则表达式而言，回溯对任何匹配的总体成功不会有任何贡献 -- 由于正则表达式引擎被强制为单词字符的每个成功的初步匹配保存其状态，因此它只会降低性能。
 
-如果确定不需要回溯，可以使用 `(?>subexpression)` 语言元素禁用它。 下面的示例通过使用两个正则表达式来分析输入字符串。 第一个正则表达式 `\b\p{Lu}\w*\b` 依赖于回溯。 第二个正则表达式 `\b\p{Lu}(?>\w*)\b` 禁用回溯。 如示例输出所示，这两个正则表达式产生的结果相同。
+如果确定不需要回溯，可使用 `(?>subexpression)` 语言元素（被称为原子组）来禁用它。 下面的示例通过使用两个正则表达式来分析输入字符串。 第一个正则表达式 `\b\p{Lu}\w*\b` 依赖于回溯。 第二个正则表达式 `\b\p{Lu}(?>\w*)\b` 禁用回溯。 如示例输出所示，这两个正则表达式产生的结果相同。
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]
@@ -190,7 +190,7 @@ ms.locfileid: "75938004"
 
 在这些情况下，可通过移除嵌套限定符并将外部子表达式替换为零宽度预测先行和回顾断言来优化正则表达式性能。 预测先行和回顾断言是定位点；它们不在输入字符串中移动指针，而是通过预测先行或回顾来检查是否满足指定条件。 例如，可将部件号正则表达式重写为 `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`。 此正则表达式模式的定义如下表所示。
 
-|模式|描述|
+|模式|说明|
 |-------------|-----------------|
 |`^`|从输入字符串的开头部分开始匹配。|
 |`[0-9A-Z]`|匹配字母数字字符。 部件号至少要包含此字符。|
@@ -206,7 +206,7 @@ ms.locfileid: "75938004"
 
 .NET 中的正则表达式语言包括以下可用于消除嵌套限定符的语言元素。 有关详细信息，请参阅 [分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
-|语言元素|描述|
+|语言元素|说明|
 |----------------------|-----------------|
 |`(?=` `subexpression` `)`|零宽度正预测先行。 预测先行当前位置，以确定 `subexpression` 是否与输入字符串匹配。|
 |`(?!` `subexpression` `)`|零宽度负预测先行。 预测先行当前位置，以确定 `subexpression` 是否不与输入字符串匹配。|
@@ -234,13 +234,13 @@ ms.locfileid: "75938004"
 
 ## <a name="capture-only-when-necessary"></a>只在必要时捕获
 
-.NET 中的正则表达式支持许多分组构造，这样，便可以将正则表达式模式分组为一个或多个子表达式。 .NET 正则表达式语言中最常用的分组构造为 `(`subexpression  `)`（用于定义编号捕获组）和 `(?<`name  `>`subexpression  `)`（用于定义命名捕获组）。 分组构造是创建反向引用和定义要应用限定符的子表达式时所必需的。
+.NET 中的正则表达式支持许多分组构造，这样，便可以将正则表达式模式分组为一个或多个子表达式。 .NET 正则表达式语言中最常用的分组构造为 `(`subexpression`)`（用于定义编号捕获组）和 `(?<`name`>`subexpression`)`（用于定义命名捕获组）。 分组构造是创建反向引用和定义要应用限定符的子表达式时所必需的。
 
 但是，使用这些语言元素会产生一定的开销。 它们会导致用最近的未命名或已命名捕获来填充 <xref:System.Text.RegularExpressions.GroupCollection> 属性返回的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 对象，如果单个分组构造已捕获输入字符串中的多个子字符串，则还会填充包含多个 <xref:System.Text.RegularExpressions.CaptureCollection> 对象的特定捕获组的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 属性返回的 <xref:System.Text.RegularExpressions.Capture> 对象。
 
 通常，只在正则表达式中使用分组构造，这样可对其应用限定符，而且以后不会使用这些子表达式捕获的组。 例如，正则表达式 `\b(\w+[;,]?\s?)+[.?!]` 用于捕获整个句子。 下表描述了此正则表达式模式中的语言元素及其对 <xref:System.Text.RegularExpressions.Match> 对象的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合的影响。
 
-|模式|描述|
+|模式|说明|
 |-------------|-----------------|
 |`\b`|在单词边界处开始匹配。|
 |`\w+`|匹配一个或多个单词字符。|
@@ -271,7 +271,7 @@ ms.locfileid: "75938004"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|标题|说明|
 |-----------|-----------------|
 |[正则表达式行为的详细信息](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|在 .NET 中检查正则表达式引擎的实现。 该主题重点介绍正则表达式的灵活性，并说明开发人员确保正则表达式引擎高效、强健运行的职责。|
 |[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|说明何为回溯及其对正则表达式性能有何影响，并检查为回溯提供替代项的语言元素。|

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: af812e1e42d57c349e94b5992b768636857d2a0c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348283"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124346"
 ---
 # <a name="details-of-regular-expression-behavior"></a>正则表达式行为的详细信息
 
@@ -46,7 +46,7 @@ ms.locfileid: "75348283"
 
      下表定义了此正则表达式的贪婪和惰性版本：
 
-    |模式|描述|
+    |模式|说明|
     |-------------|-----------------|
     |`.+`（贪婪限定符）|匹配任何字符的至少一个匹配项。 这会导致正则表达式引擎匹配整个字符串，然后根据需要进行回溯以匹配模式的其余部分。|
     |`.+?`（惰性限定符）|匹配任何字符的至少一个匹配项，但匹配尽可能少。|
@@ -62,7 +62,7 @@ ms.locfileid: "75348283"
 
      正则表达式 `\b[A-Z]+\b(?=\P{P})` 的定义如下表所示。
 
-    |模式|描述|
+    |模式|说明|
     |-------------|-----------------|
     |`\b`|在单词边界处开始匹配。|
     |`[A-Z]+`|匹配任何字母字符一次或多次。 由于 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 选项进行调用，因此比较不区分大小写。|
@@ -78,7 +78,7 @@ ms.locfileid: "75348283"
 
      正则表达式模式 `\b(?!non)\w+\b` 的定义如下表所示。
 
-    |模式|描述|
+    |模式|说明|
     |-------------|-----------------|
     |`\b`|在单词边界处开始匹配。|
     |`(?!non)`|预测先行以确保当前字符串不以“non”开头。 如果以“non”开头，则匹配失败。|
@@ -94,7 +94,7 @@ ms.locfileid: "75348283"
 
      正则表达式模式的定义如下表所示。
 
-    |模式|描述|
+    |模式|说明|
     |-------------|-----------------|
     |`^`|从行的开头开始匹配。|
     |`(?<Pvt>\<PRIVATE\>\s)?`|匹配后跟一个空白字符的字符串 `<PRIVATE>` 的零个或一个匹配项。 将匹配项分配给 `Pvt` 捕获组。|
@@ -106,7 +106,7 @@ ms.locfileid: "75348283"
 
 - 平衡组定义：`(?<`*name1*`-`*name2*`>` *subexpression*`)`。 此功能允许正则表达式引擎跟踪嵌套构造（如圆括号或者左方括号和右方括号）。 有关示例，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
-- 非回溯子表达式（亦称为“贪婪子表达式”）：`(?>`subexpression`)`。 此功能允许回溯引擎保证子表达式仅匹配为该子表达式找到的第一个匹配项，就如同该表达式独立于其包含表达式运行一样。 如果不使用此构造，则来自较大表达式的回溯搜索可能会更改子表达式的行为。 例如，正则表达式 `(a+)\w` 匹配一个或多个“a”字符以及跟在“a”字符序列后面的单词字符，并将“a”字符序列分配给第一个捕获组，但是，如果输入字符串的最后一个字符也是“a”，则它按 `\w` 语言元素进行匹配，不包含在捕获组中。
+- 原子组：`(?>`subexpression`)`。 此功能允许回溯引擎保证子表达式仅匹配为该子表达式找到的第一个匹配项，就如同该表达式独立于其包含表达式运行一样。 如果不使用此构造，则来自较大表达式的回溯搜索可能会更改子表达式的行为。 例如，正则表达式 `(a+)\w` 除了一系列“a”字符后面的单词字符匹配，还与一个或多个“a”字符相匹配，并且它将该系列“a”字符分配给第一个捕获组。 但是，如果输入字符串的最后一个字符也是“a“，则它由 `\w` 语言元素匹配且不包含在捕获的组中。
 
      [!code-csharp[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking2.vb#7)]
@@ -116,7 +116,7 @@ ms.locfileid: "75348283"
      [!code-csharp[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking1.cs#8)]
      [!code-vb[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking1.vb#8)]
 
-     若要详细了解非回溯子表达式，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
+     要详细了解原子组，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
 - 从右到左匹配：指定方式为向 <xref:System.Text.RegularExpressions.Regex> 类构造函数或静态实例匹配方法提供 <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 选项。 当从右到左（而不是从左到右）进行搜索时，或是在从模式右侧部分（而不是左侧部分）开始匹配效率更高的情况下，此功能非常有用。 如下面的示例所示，使用从右到左匹配可以更改贪婪限定符的行为。 该示例对以数字结尾的句子执行两个搜索。 使用贪婪限定符 `+` 的从左到右搜索匹配句子中六个数字之一，而从右到左搜索匹配所有六个数字。 有关正则表达式模式的介绍，请参见此部分前面说明惰性限定符的示例。
 
@@ -132,7 +132,7 @@ ms.locfileid: "75348283"
 
      正则表达式 ``^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$`` 的定义如下表所示。
 
-    |模式|描述|
+    |模式|说明|
     |-------------|-----------------|
     |`^`|从字符串开头开始匹配。|
     |`[A-Z0-9]`|匹配任意数字或字母数字字符。 （比较不区分大小写。）|
@@ -144,7 +144,7 @@ ms.locfileid: "75348283"
 
 ## <a name="related-articles"></a>相关文章
 
-|Title|描述|
+|标题|说明|
 |-----------|-----------------|
 |[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|提供有关正则表达式回溯如何进行分支以查找替代匹配的信息。|
 |[编译和重用](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|提供有关编译和重复使用正则表达式以提高性能的信息。|

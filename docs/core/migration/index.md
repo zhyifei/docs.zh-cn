@@ -2,12 +2,12 @@
 title: 从 project.json 迁移 .NET Core
 description: 了解如何使用 project.json 迁移较旧的 .NET Core 项目
 ms.date: 07/19/2017
-ms.openlocfilehash: f81d01c052c3632c48a5f961be86eab686c2074e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8a9dc05c82fd5476a70ee36a294a287abbfb68c4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714359"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450682"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>从 project.json 迁移 .NET Core 项目
 
@@ -65,7 +65,7 @@ Visual Studio 自动迁移所选的项目。 迁移解决方案时，如果不�
 如果仍在使用 DNX 进行 .NET Core 开发，则应分两个阶段完成迁移过程：
 
 1. 使用[现有 DNX 迁移指南](from-dnx.md)从 DNX 迁移到启用了 project-json 的 CLI。
-2. 请按照上一部分中的步骤，从 project.json  迁移到 .csproj  。  
+2. 请按照上一部分中的步骤，从 project.json  迁移到 .csproj  。
 
 > [!NOTE]
 > 已于 .NET Core CLI 的预览版 1 发布期间正式弃用 DNX。
@@ -80,7 +80,7 @@ Visual Studio 自动迁移所选的项目。 迁移解决方案时，如果不�
 - 从项目的顶部和底部删除 `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` 和 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` 语句。 SDK 隐含这些 import 语句，因此项目中不需要这些语句。
 - 如果项目中含 `Microsoft.NETCore.App` 或 `NETStandard.Library``<PackageReference>` 项，应将其删除。 [SDK 隐含](https://aka.ms/sdkimplicitrefs)这些包引用。
 - 删除 `Microsoft.NET.Sdk` `<PackageReference>` 元素（如果存在）。 SDK 引用来自 `<Project>` 元素上的 `Sdk` 属性。
-- 删除 [SDK](../tools/csproj.md#default-compilation-includes-in-net-core-projects) 隐含的 [glob](https://en.wikipedia.org/wiki/Glob_(programming))。 在项目中留下这些 glob 会引发生成错误，因为编译项会发生重复。
+- 删除 [SDK](../project-sdk/overview.md#default-compilation-includes) 隐含的 [glob](https://en.wikipedia.org/wiki/Glob_(programming))。 在项目中留下这些 glob 会引发生成错误，因为编译项会发生重复。
 
 完成这些步骤后，项目应与 RTM .NET Core csproj 格式完全兼容。
 

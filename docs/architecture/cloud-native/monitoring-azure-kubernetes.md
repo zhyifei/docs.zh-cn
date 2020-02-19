@@ -1,13 +1,13 @@
 ---
 title: 在 Azure Kubernetes 服务中进行监视
 description: 在 Azure Kubernetes 服务中进行监视
-ms.date: 09/23/2019
-ms.openlocfilehash: fc9d84fd738ff1c40d25860680e14313c9323517
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.date: 02/05/2020
+ms.openlocfilehash: 5c46b9e8599f70d430ad26cf1364343454d30a16
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711644"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450058"
 ---
 # <a name="monitoring-in-azure-kubernetes-services"></a>在 Azure Kubernetes 服务中进行监视
 
@@ -15,28 +15,14 @@ ms.locfileid: "75711644"
 
 Kubernetes 中的内置日志记录为基元。 但是，有一些极佳的选项可让你从 Kubernetes 中取出日志，并将其放在正确分析的位置。 如果需要监视 AKS 群集，为 Kubernetes 配置弹性堆栈是一种很好的解决方案。
 
-## <a name="elastic-stack"></a>弹性堆栈
+## <a name="azure-monitor-for-containers"></a>用于容器的 Azure Monitor
 
-弹性堆栈是一个功能强大的选项，可用于从 Kubernetes 群集中收集信息。 Kubernetes 支持将日志发送到 Elasticsearch 终结点，而在[大多数情况](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/)下，你只需设置环境变量，如图7-5 所示：
-
-```kubernetes
-KUBE_LOGGING_DESTINATION=elasticsearch
-KUBE_ENABLE_NODE_LOGGING=true
-```
-
-**图 7-5** -Kubernetes 的配置变量
-
-这会在群集上安装 Elasticsearch，并将所有群集日志发送到该群集。
-
-![一个 Kibana 仪表板示例，其中显示了引入 from Kubernetes **7-6**](./media/kibana-dashboard.png)
-的针对日志的查询结果。 Kibana 仪表板的一个示例，显示针对引入 from Kubernetes 中的日志查询的结果
-
-## <a name="azure-container-monitoring"></a>Azure 容器监视
-
-Azure 容器监视不仅支持从 Kubernetes 使用日志，还支持从其他业务流程引擎（例如 DC/OS、Docker Swarm 和 Red Hat OpenShift）使用日志。
+[容器 Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview)不仅支持从 Kubernetes 使用日志，还支持从其他业务流程引擎（例如 DC/OS、Docker Swarm 和 Red Hat OpenShift）使用日志。
 
 ![从不同容器使用日志](./media/containers-diagram.png)
-**图 7-7**。  使用不同容器中的日志
+**图 7-10**。 使用不同容器中的日志
+
+[Prometheus](https://prometheus.io/)是一个流行的开源指标监视解决方案。 它属于云本机计算基础。 通常，使用 Prometheus 需要使用其自己的存储管理 Prometheus 服务器。 但是，[为容器 Azure Monitor 提供与 Prometheus 指标端点的直接集成](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-prometheus-integration)，因此不需要单独的服务器。
 
 日志和指标信息不只是从群集中运行的容器中收集，而是由群集本身进行收集。 它允许将日志信息与这两者进行关联，这使得跟踪错误变得更加容易。
 
@@ -45,7 +31,7 @@ Azure 容器监视不仅支持从 Kubernetes 使用日志，还支持从其他�
 无论哪个协调器或操作系统运行 Azure Monitor 守护程序，日志信息都将转发到与用户熟悉的 Azure Monitor 工具。 这可确保在混合不同的日志源（如混合 Kubernetes/Azure Functions 环境）的环境中获得并行体验。
 
 ![一个示例仪表板，其中显示了多个正在运行的容器中的日志记录和指标信息。](./media/containers-dashboard.png)
-**图 7-8**。 显示多个正在运行的容器中的日志记录和指标信息的示例仪表板。
+**图 7-11**。 显示多个正在运行的容器中的日志记录和指标信息的示例仪表板。
 
 ## <a name="logfinalize"></a>Log Finalize （）
 

@@ -1,20 +1,37 @@
 ---
 title: 使用弹性堆栈进行日志记录
 description: 使用弹性堆栈、Logstash 和 Kibana 进行日志记录
-ms.date: 09/23/2019
-ms.openlocfilehash: 989834925bc08541bf484e1a4567a56ac324872f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 02/05/2020
+ms.openlocfilehash: 6863c66b63854fe3ecaabe2919beded2926ea64c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841737"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448902"
 ---
 # <a name="logging-with-elastic-stack"></a>使用弹性堆栈进行日志记录
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 有很多非常好的集中式日志记录工具，从免费的开源工具到成本较高的选项，这些工具的成本会有所不同。 在许多情况下，免费的工具与付费的产品/服务非常好。 一个此类工具是三个开源组件的组合：弹性搜索、Logstash 和 Kibana。
+
 这些工具共同称为弹性堆栈或 ELK 堆栈。
+
+## <a name="elastic-stack"></a>弹性堆栈
+
+弹性堆栈是一个功能强大的选项，可用于从 Kubernetes 群集中收集信息。 Kubernetes 支持将日志发送到 Elasticsearch 终结点，而在[大多数情况](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/)下，你只需设置环境变量，如图7-5 所示：
+
+```kubernetes
+KUBE_LOGGING_DESTINATION=elasticsearch
+KUBE_ENABLE_NODE_LOGGING=true
+```
+
+**图 7-5**。 Kubernetes 的配置变量
+
+这会在群集上安装 Elasticsearch，并将所有群集日志发送到该群集。
+
+![一个 Kibana 仪表板示例，其中显示了引入 from Kubernetes **7-6**](./media/kibana-dashboard.png)
+的针对日志的查询结果。 Kibana 仪表板的一个示例，显示针对引入 from Kubernetes 中的日志查询的结果
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>弹性堆栈的优点是什么？
 
@@ -24,7 +41,7 @@ ms.locfileid: "73841737"
 
 第一个组件为[Logstash](https://www.elastic.co/products/logstash)。 此工具用于从大量不同的源收集日志信息。 例如，Logstash 可以从磁盘读取日志，还可以从日志记录库（如[Serilog](https://serilog.net/)）接收消息。 Logstash 可以在日志到达时对其执行一些基本筛选和扩展。 例如，如果日志包含 IP 地址，则可以将 Logstash 配置为执行地理查找，并获取该邮件的国家/地区或甚至是源城市。
 
-Serilog 是用于 .NET 语言的日志记录库，用于实现参数化日志记录。 参数不会生成嵌入字段的文本日志消息，而是将参数保持独立。 这允许更智能的筛选和搜索。 图7-2 显示了用于写入 Logstash 的示例 Serilog 配置。
+Serilog 是用于 .NET 语言的日志记录库，用于实现参数化日志记录。 参数不会生成嵌入字段的文本日志消息，而是将参数保持独立。 这允许更智能的筛选和搜索。 图7-7 显示了用于写入 Logstash 的示例 Serilog 配置。
 
 ```csharp
 var log = new LoggerConfiguration()
@@ -32,9 +49,9 @@ var log = new LoggerConfiguration()
          .CreateLogger();
 ```
 
-**图 7-2**用于将日志信息直接写入 logstash over HTTP 的 Serilog config
+**图 7-7**。 用于将日志信息直接写入 logstash over HTTP 的 Serilog config
 
-Logstash 将使用如图7-3 中所示的配置。
+Logstash 将使用如图7-8 中所示的配置。
 
 ```
 input {
@@ -52,7 +69,7 @@ output {
 }
 ```
 
-**图 7-3** -使用 Serilog 的日志的 Logstash 配置
+**图 7-8**。 使用 Serilog 中的日志的 Logstash 配置
 
 对于不需要进行大量的日志操作的情况，有一种替代方法 Logstash 称为[节拍](https://www.elastic.co/products/beats)。 节拍是一系列工具，可以将各种数据从日志收集到网络数据和正常运行时间信息。 许多应用程序将同时使用 Logstash 和节拍。
 
@@ -64,7 +81,7 @@ Logstash 收集了日志后，需要将其放在某个位置。 尽管 Logstash 
 
 精心设计为包含参数或通过 Logstash 处理将参数拆分为包含参数的日志消息可以直接查询，因为 Elasticsearch 会保留此信息。
 
-在图7-4 中搜索 `jill@example.com`访问的前10页的查询。
+在图7-9 中搜索 `jill@example.com`访问的前10页的查询。
 
 ```
 "query": {
@@ -82,7 +99,7 @@ Logstash 收集了日志后，需要将其放在某个位置。 尽管 Logstash 
   }
 ```
 
-**图 7-4** -查找用户访问的前10页的 Elasticsearch 查询
+**图 7-9**。 用于查找用户访问的前10页的 Elasticsearch 查询
 
 ## <a name="visualizing-information-with-kibana-web-dashboards"></a>通过 Kibana web 仪表板可视化信息
 

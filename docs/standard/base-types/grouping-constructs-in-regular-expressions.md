@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 8bf6870e3eb3ef65b498f431cb2b8805eee7ec3c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 87cc3d53cf06457191d9c87020c4151e3f848c51
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140112"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124320"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>正则表达式中的分组构造
 分组构造描述了正则表达式的子表达式，用于捕获输入字符串的子字符串。 你可以使用分组构造来完成下列任务：  
@@ -44,7 +44,7 @@ ms.locfileid: "73140112"
 |[零宽度负预测先行断言](#zerowidth_negative_lookahead_assertion)|非捕获|  
 |[零宽度正回顾后发断言](#zerowidth_positive_lookbehind_assertion)|非捕获|  
 |[零宽度负回顾后发断言](#zerowidth_negative_lookbehind_assertion)|非捕获|  
-|[非回溯子表达式](#nonbacktracking_subexpression)|非捕获|  
+|[原子组](#atomic_groups)|非捕获|  
   
  有关组和正则表达式对象模型的信息，请参见 [分组构造和正则表达式对象](#Objects)。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73140112"
 ## <a name="matched-subexpressions"></a>匹配的子表达式  
  以下分组构造捕获匹配的子表达式：  
   
- `(` *子表达式* `)`  
+ `(` subexpression `)`  
   
  其中 *子表达式* 为任何有效正则表达式模式。 使用括号的捕获按正则表达式中左括号的顺序从一开始从左到右自动编号。 捕获元素编号为零的捕获是由整个正则表达式模式匹配的文本。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "73140112"
   
 `(?<name>subexpression)`  
   
- 或：  
+ 或者：  
   
 `(?'name'subexpression)`  
   
@@ -110,7 +110,7 @@ ms.locfileid: "73140112"
   
 - 通过使用 `${`*name*`}` $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 替换序列，其中 *name* 是捕获子表达式的名称。  
   
-- 通过在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法调用中使用 `$`数字  替换序列，其中“数字”  为捕获的子表达式的序号。  
+- 通过在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法调用中使用 `$`数字 替换序列，其中“数字”为捕获的子表达式的序号。  
   
 - 以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 集合中位置零上的成员表示正则表达式匹配。 每个后续成员表示匹配的子表达式。 已命名的捕获组在集合中存储在已编号的捕获组后面。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "73140112"
   
  简单的正则表达式模式会阐释如何编号（未命名），并且可以以编程方式或通过正则表达式语言语法引用已命名的组。 正则表达式 `((?<One>abc)\d+)?(?<Two>xyz)(.*)` 按编号和名称产生下列捕获组。 编号为 0 的第一个捕获组总是指整个模式。  
   
-|数字|name|模式|  
+|Number|名称|模式|  
 |------------|----------|-------------|  
 |0|0（默认名称）|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
 |1|1（默认名称）|`((?<One>abc)\d+)`|  
@@ -167,13 +167,13 @@ ms.locfileid: "73140112"
   
 `(?<name1-name2>subexpression)`  
   
- 或：  
+ 或者：  
   
 `(?'name1-name2' subexpression)`
   
  *name1* 位置是当前的组（可选）， *name2* 是一个以前定义的组，而 *子表达式* 是任何有效的正则表达式模式。 平衡组定义删除 *name2* 的定义并在 *name1* 中保存 *name2* 和 *name1*之间的间隔。 如果未定义 *name2* 组，则匹配将回溯。 由于删除 *name2* 的最后一个定义会显示 *name2*以前的定义，因此该构造允许将 *name2* 组的捕获堆栈用作计数器，用于跟踪嵌套构造（如括号或者左括号和右括号）。  
   
- 平衡组定义将 *name2* 作为堆栈使用。 将每个嵌套构造的开头字符放在组中，并放在其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合中。 当匹配结束字符时，从组中删除其相应的开始字符，并且 <xref:System.Text.RegularExpressions.Group.Captures%2A> 集合减少 1。 所有嵌套构造的开始和结束字符匹配完后，name2  为空。  
+ 平衡组定义将 *name2* 作为堆栈使用。 将每个嵌套构造的开头字符放在组中，并放在其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合中。 当匹配结束字符时，从组中删除其相应的开始字符，并且 <xref:System.Text.RegularExpressions.Group.Captures%2A> 集合减少 1。 所有嵌套构造的开始和结束字符匹配完后，name2 为空。  
   
 > [!NOTE]
 > 通过修改下面示例中的正则表达式来使用合适的嵌套构造的开始和结束字符后，你可以用它来处理多数嵌套构造，如数学表达式或包括多个嵌套方法调用的程序代码行。  
@@ -264,7 +264,7 @@ ms.locfileid: "73140112"
 ## <a name="group-options"></a>组选项  
  以下分组构造应用或禁用子表达式中指定的选项：  
   
- `(?imnsx-imnsx:` *子表达式* `)`  
+ `(?imnsx-imnsx:` subexpression `)`  
   
  其中 *子表达式* 为任何有效正则表达式模式。 例如， `(?i-s:)` 将打开不区分大小写并禁用单行模式。 有关可以指定的内联选项的更多信息，请参见 [正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)。  
   
@@ -288,7 +288,7 @@ ms.locfileid: "73140112"
 ## <a name="zero-width-positive-lookahead-assertions"></a>零宽度正预测先行断言  
  以下分组构造定义零宽度正预测先行断言：  
   
- `(?=` *子表达式* `)`  
+ `(?=` subexpression `)`  
   
  其中 *子表达式* 为任何正则表达式模式。 若要成功匹配，则输入字符串必须匹配 *子表达式*中的正则表达式模式，尽管匹配的子字符串未包含在匹配结果中。 零宽度正预测先行断言不会回溯。  
   
@@ -311,7 +311,7 @@ ms.locfileid: "73140112"
 ## <a name="zero-width-negative-lookahead-assertions"></a>零宽度负预测先行断言  
  以下分组构造定义零宽度负预测先行断言：  
   
- `(?!` *子表达式* `)`  
+ `(?!` subexpression `)`  
   
  其中 *子表达式* 为任何正则表达式模式。 若要成功匹配，则输入字符串不得匹配 *子表达式*中的正则表达式模式，尽管匹配的子字符串未包含在匹配结果中。  
   
@@ -349,7 +349,7 @@ ms.locfileid: "73140112"
 ## <a name="zero-width-positive-lookbehind-assertions"></a>零宽度正回顾后发断言  
  以下分组构造定义零宽度正回顾后发断言：  
   
- `(?<=` *子表达式* `)`  
+ `(?<=` subexpression `)`  
   
  其中 *子表达式* 为任何正则表达式模式。 若要成功匹配，则 *子表达式* 必须在输入字符串当前位置左侧出现，尽管 `subexpression` 未包含在匹配结果中。 零宽度正回顾后发断言不会回溯。  
   
@@ -374,7 +374,7 @@ ms.locfileid: "73140112"
 ## <a name="zero-width-negative-lookbehind-assertions"></a>零宽度负回顾后发断言  
  以下组构造定义零宽度负回顾后发断言：  
   
- `(?<!` *子表达式* `)`  
+ `(?<!` subexpression `)`  
   
  其中 *子表达式* 为任何正则表达式模式。 若要成功匹配，则 *子表达式* 不得在输入字符串当前位置的左侧出现。 但是，任何不匹配 `subexpression` 的子字符串不包含在匹配结果中。  
   
@@ -395,11 +395,11 @@ ms.locfileid: "73140112"
 |`\d{4}\b`|匹配四个十进制数字并在单词边界处结束匹配。|  
 |<code>(?<!(Saturday&#124;Sunday) )</code>|如果匹配以字符串“星期六”或者“星期日”开头，后跟一个空格，则匹配成功。|  
   
-<a name="nonbacktracking_subexpression"></a>   
-## <a name="nonbacktracking-subexpressions"></a>非回溯子表达式  
- 以下分组构造表示非回溯子表达式（也称为一个“贪婪”子表达式）：  
+<a name="atomic_groups"></a>   
+## <a name="atomic-groups"></a>原子组  
+ 以下分组构造表示原子组（在其他一些正则表达式引擎中称为非回溯子表达式、原子子表达式或一次性子表达式）：
   
- `(?>` *子表达式* `)`  
+ `(?>` subexpression `)`  
   
  其中 *子表达式* 为任何正则表达式模式。  
   
@@ -409,7 +409,7 @@ ms.locfileid: "73140112"
   
  如果你知道回溯不会成功，则建议使用此选项。 防止正则表达式引擎执行不需要的搜索可以提高性能。  
   
- 下面的示例阐释非回溯子表达式如何修改模式匹配的结果。 回溯正则表达式成功匹配一系列重复字符，在字边界上其后为相同字符，但非回溯正则表达式不会匹配。  
+ 以下示例展示了原子组如何修改模式匹配的结果。 回溯正则表达式成功匹配一系列重复字符，在字边界上其后为相同字符，但非回溯正则表达式不会匹配。  
   
  [!code-csharp[RegularExpressions.Language.Grouping#11](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/nonbacktracking1.cs#11)]
  [!code-vb[RegularExpressions.Language.Grouping#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/nonbacktracking1.vb#11)]  
@@ -452,7 +452,7 @@ ms.locfileid: "73140112"
   
  第二个捕获组匹配句子的每个单词。 第一个捕获组匹配每个单词，连同标点符号和该单词后的空白区域。 <xref:System.Text.RegularExpressions.Group> 对象的索引是 2，提供了有关由第二个捕获组匹配的文本的信息。 可从 <xref:System.Text.RegularExpressions.CaptureCollection> 对象获取捕获组捕获的整组单词，该对象由 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 属性返回。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
