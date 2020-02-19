@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 76fa13d4a12362d04c832fd59ee69db5a6811029
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3a3f6edc974448ddab9fe30e97bdc1130d3b97dc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454458"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449967"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>如何：绑定到 Web 服务
 此示例演示如何绑定到由 Web 服务方法调用返回的对象。  
   
 ## <a name="example"></a>示例  
- 此示例使用[MSDN/TechNet 发布系统（MTPS）内容服务](https://go.microsoft.com/fwlink/?LinkId=95677)检索指定文档支持的语言列表。  
+ 此示例使用 MSDN/TechNet 发布系统（MTPS）内容服务检索指定文档支持的语言列表。  
   
  在调用 Web 服务之前，需要创建对它的引用。 若要使用 Visual Studio 创建对 MTPS 服务的 Web 引用，请执行以下步骤：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73454458"
   
  有关 `getContentResponse`结构的信息，请参阅[内容服务文档](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)
 - [绑定源概述](binding-sources-overview.md)

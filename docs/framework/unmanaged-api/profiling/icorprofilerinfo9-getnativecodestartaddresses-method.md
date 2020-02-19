@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 8412020fb98fde245b873a2f0c6a355f6436f712
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 99706fdc3d60a5e1a7f85400c1184d5acc808e42
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868273"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449721"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9：： GetNativeCodeStartAddresses 方法
 
@@ -58,9 +58,9 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
 启用分层编译后，函数可能有多个本机代码体。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-**平台：** 请参阅[支持 .Net Core 的操作系统](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)。
+**平台：** 请参阅[支持 .Net Core 的操作系统](../../../core/install/dependencies.md?pivots=os-windows)。
 
 **头文件：** CorProf.idl、CorProf.h
 

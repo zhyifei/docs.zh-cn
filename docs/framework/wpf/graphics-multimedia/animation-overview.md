@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 00f01b63cdf9397fe25f28fff08767dfc3a83e69
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559711"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453112"
 ---
 # <a name="animation-overview"></a>动画概述
 
@@ -248,7 +248,7 @@ ms.locfileid: "75559711"
 
 #### <a name="the-duration-property"></a>Duration 属性
 
-如前文所述，时间线表示时间段。 该时间段的长度由时间线的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 确定，通常使用 <xref:System.Windows.Duration.TimeSpan%2A> 值来指定该时间线。 当时间线达到其持续时间的终点时，表示时间线完成了一次迭代。
+如前文所述，时间线表示一个时间段。 该时间段的长度由时间线的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 确定，通常使用 <xref:System.Windows.Duration.TimeSpan%2A> 值来指定该时间线。 当时间线达到其持续时间的终点时，表示时间线完成了一次迭代。
 
 动画使用其 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 属性来确定其当前值。 如果没有为动画指定 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 值，则使用默认值1秒。
 
@@ -341,7 +341,7 @@ ms.locfileid: "75559711"
 
 若要使动画反映数据绑定或动画更改，必须重新生成时钟。 系统不会自动生成时钟。 若要使动画反映更改，请使用 <xref:System.Windows.Media.Animation.BeginStoryboard> 或 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法重新应用它的情节提要。 当使用其中一种方法时，动画将重新启动。 在代码中，可以使用 <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> 方法将演示图板移回其之前的位置。
 
-有关数据绑定动画的示例，请参阅[主要曲线动画示例](https://go.microsoft.com/fwlink/?LinkID=160011)。 有关动画和计时系统的工作原理的详细信息，请参阅[动画和计时系统概述](animation-and-timing-system-overview.md)。
+有关数据绑定动画的示例，请参阅[主要曲线动画示例](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations)。 有关动画和计时系统的工作原理的详细信息，请参阅[动画和计时系统概述](animation-and-timing-system-overview.md)。
 
 <a name="otherWaysToAnimateSection"></a>
 
@@ -355,11 +355,11 @@ ms.locfileid: "75559711"
 
 以下示例有助于开始向应用程序添加动画。
 
-- [From、To 和 By 动画目标值示例](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [From、To 和 By 动画目标值示例](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)
 
   演示不同的 From/To/By 设置。
 
-- [动画计时行为示例](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [动画计时行为示例](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationTiming)
 
   演示可控制动画计时行为的不同方法。 此示例还演示如何对动画的目标值进行数据绑定。
 
@@ -367,7 +367,7 @@ ms.locfileid: "75559711"
 
 ## <a name="related-topics"></a>相关主题
 
-|职务|描述|
+|职务|说明|
 |-----------|-----------------|
 |[动画和计时系统概述](animation-and-timing-system-overview.md)|介绍计时系统如何使用 <xref:System.Windows.Media.Animation.Timeline> 和 <xref:System.Windows.Media.Animation.Clock> 类，这允许您创建动画。|
 |[动画提示和技巧](animation-tips-and-tricks.md)|列出用于解决与动画有关的问题（如性能）的有用提示。|
@@ -377,7 +377,7 @@ ms.locfileid: "75559711"
 |[缓动函数](easing-functions.md)|说明如何将数学公式应用于动画以获得真实行为（如反弹）。|
 |[路径动画概述](path-animations-overview.md)|描述如何沿复杂路径移动或旋转对象。|
 |[属性动画技术概述](property-animation-techniques-overview.md)|描述使用演示图板、本地动画、时钟以及逐帧动画的属性动画。|
-|[情节提要概述](storyboards-overview.md)|描述如何将演示图板与多个时间线一起使用，以创建复杂动画。|
+|[演示图板概述](storyboards-overview.md)|描述如何将演示图板与多个时间线一起使用，以创建复杂动画。|
 |[计时行为概述](timing-behaviors-overview.md)|介绍动画中使用的 <xref:System.Windows.Media.Animation.Timeline> 类型和属性。|
 |[计时事件概述](timing-events-overview.md)|介绍 <xref:System.Windows.Media.Animation.Timeline> 上可用的事件，以及在时间线中执行代码的 <xref:System.Windows.Media.Animation.Clock> 对象，如开始、暂停、继续、跳过或停止。|
 |[帮助主题](animation-and-timing-how-to-topics.md)|包含演示在应用程序中使用动画和时间线的代码示例。|
@@ -387,7 +387,7 @@ ms.locfileid: "75559711"
 
 <a name="reference"></a>
 
-## <a name="reference"></a>引用
+## <a name="reference"></a>参考
 
 - <xref:System.Windows.Media.Animation.Timeline>
 

@@ -2,12 +2,12 @@
 title: 处理异步应用程序中的重入
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: cd8b43aa9b2373b5ce038e5007678778201f0746
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 44c2cdbadd02aef6b2bbb32bde8bcb9b19f8360d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354268"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452573"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>处理异步应用中的重新进入（Visual Basic）
 
@@ -17,7 +17,7 @@ ms.locfileid: "74354268"
 > 若要运行该示例，计算机上必须安装 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。
 
 > [!NOTE]
-> 传输层安全性 (TLS) 版本 1.2 现在是在应用开发中使用的最低版本。 如果应用面向低于 4.7 的 .NET Framework 版本，请参阅以下文章，了解 [.NET Framework 传输层安全性 (TLS) 的最佳做法](../../../../framework/network-programming/tls.md) 
+> 传输层安全性 (TLS) 版本 1.2 现在是在应用开发中使用的最低版本。 如果你的应用面向的 .NET Framework 版本低于4.7，请参阅以下文章，了解有关[.NET Framework 的传输层安全性（TLS）最佳实践](../../../../framework/network-programming/tls.md)。
 
 ## <a name="BKMK_RecognizingReentrancy"></a>识别重新进入
 

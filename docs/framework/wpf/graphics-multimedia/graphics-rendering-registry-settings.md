@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 53f25be3bc38d88aa7723f6a0858317ee5ce6143
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 04bf2d2ec78a02e8fd3d71200c64a807b874bc97
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559646"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452599"
 ---
 # <a name="graphics-rendering-registry-settings"></a>图形呈现注册表设置
 本主题概述了影响 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 图形呈现注册表设置。  
@@ -24,13 +24,13 @@ ms.locfileid: "75559646"
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>什么是 XPDM 和 WDDM？  
- 某些图形呈现注册表设置具有不同的默认值，具体取决于视频卡使用的是 XPDM 还是 WDDM 驱动程序。 XPDM 是 Microsoft Windows XP 显示驱动程序模型，而 WDDM 是 Windows 显示器驱动程序模型。 WDDM 在运行 Windows Vista 和 Windows 7 的计算机上可用。 在运行 Windows Vista、Microsoft Windows XP 和 Microsoft Windows Server 2003 的计算机上，可以使用 XPDM。 有关 WDDM 的详细信息，请参阅 [Windows Vista 显示驱动程序模式设计指南](https://go.microsoft.com/fwlink/?LinkId=178394)。  
+ 某些图形呈现注册表设置具有不同的默认值，具体取决于视频卡使用的是 XPDM 还是 WDDM 驱动程序。 XPDM 是 Microsoft Windows XP 显示驱动程序模型，而 WDDM 是 Windows 显示器驱动程序模型。 WDDM 在运行 Windows Vista 和 Windows 7 的计算机上可用。 在运行 Windows Vista、Microsoft Windows XP 和 Microsoft Windows Server 2003 的计算机上，可以使用 XPDM。 有关 WDDM 的详细信息，请参阅[Windows 显示驱动程序模型（WDDM）设计指南](/windows-hardware/drivers/display/windows-vista-display-driver-model-design-guide)。  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>注册表设置  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了 4 个注册表设置来控制 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 呈现：  
   
-|设置|描述|  
+|设置|说明|  
 |-------------|-----------------|  
 |**禁用硬件加速选项**|指定是否应启用硬件加速。|  
 |**最大多重采样值**|指定用于对三维内容进行抗锯齿的多级分级。|  
@@ -68,7 +68,7 @@ ms.locfileid: "75559646"
   
 |注册表项|值类型|  
 |------------------|----------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|字符串|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|String|  
   
  2004年11月，Microsoft 发布了新版本的驱动程序测试指南;此日期之后编写的驱动程序提供更好的稳定性。 默认情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 将为这些驱动程序使用硬件加速管道，并将回退到此日期之前发布的 XPDM 驱动程序的软件呈现。  
   

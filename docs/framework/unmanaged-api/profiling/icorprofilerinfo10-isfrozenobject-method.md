@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: b6dabefceba038a129148f7ba36d4ffcfc425c80
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 21f9cb415f913a9c865a487f6e80523344db811e
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790039"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452183"
 ---
 # <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10：： IsFrozenObject 方法
 
@@ -39,9 +39,9 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 
   \[out] 一个 `BOOL`，该值指示对象是否位于只读段中。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-**平台：** 请参阅[支持 .Net Core 的操作系统](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)。
+**平台：** 请参阅[支持 .Net Core 的操作系统](../../../core/install/dependencies.md?pivots=os-windows)。
 
 **头文件：** CorProf.idl、CorProf.h
 

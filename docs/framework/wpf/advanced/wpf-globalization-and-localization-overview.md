@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 665daa14b543a357b17747a7d9d34dac2224711d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ba49b3ec0f6edebff6278f4e90ae22baba9f1edf
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124552"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452664"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和本地化概述
 
@@ -183,7 +183,7 @@ ms.locfileid: "77124552"
 |Button_1:System.Windows.Controls.Button.$Content|按钮|确定|
 |Button_2:System.Windows.Controls.Button.$Content|按钮|取消|
 |Button_3:System.Windows.Controls.Button.$Content|按钮|浏览...|
-|ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
+|ComboBox_1:System.Windows.Controls.ComboBox.$Content|组合框||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|文本|Windows 将根据您所输入的名称，为您打开相应的程序、文件夹、文档或 Internet 资源。|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|文本|打开:|
 |Window_1:System.Windows.Window.Title|职务|运行|
@@ -195,12 +195,12 @@ ms.locfileid: "77124552"
 |Button_1:System.Windows.Controls.Button.$Content|按钮|确定|
 |Button_2:System.Windows.Controls.Button.$Content|按钮|Abbrechen|
 |Button_3:System.Windows.Controls.Button.$Content|按钮|Durchsuchen…|
-|ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
+|ComboBox_1:System.Windows.Controls.ComboBox.$Content|组合框||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|文本|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|文本|打开：|
 |Window_1:System.Windows.Window.Title|职务|运行|
 
-**Generate**
+**生成**
 
 本地化的最后一步涉及创建新进行本地化的附属程序集。 可以使用下面的 LocBaml 命令完成此操作：
 
@@ -215,11 +215,11 @@ ms.locfileid: "77124552"
 |代码|原始英语版 BAML|本地化的 BAML|
 |非特定区域性资源|其他英语资源|已本地化为德语的其他资源|
 
-.NET framework 会根据应用程序的 `Thread.CurrentThread.CurrentUICulture`自动选择要加载的附属资源程序集。 此值默认为 Windows OS 的区域性。 因此，如果您使用的是德语 Windows，则会加载 de-DE\MyDialog.resources.dll，如果您使用的是英语 Windows，则 en-US\MyDialog.resources.dll 会加载。 通过在项目的 AssemblyInfo 中指定 NeutralResourcesLanguage，可以设置应用程序的最终回退资源。\* 例如，如果指定：
+.NET 会根据应用程序的 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>自动选择要加载的附属资源程序集。 此值默认为 Windows OS 的区域性。 如果使用的是德语 Windows，则会加载*de-DE\MyDialog.resources.dll*文件。 如果使用的是英语 Windows，则会加载*en-US\MyDialog.resources.dll*文件。 通过在项目的*AssemblyInfo*文件中指定 `NeutralResourcesLanguage` 特性，可以设置应用程序的最终回退资源。 例如，如果指定：
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
-如果 de-DE\MyDialog.resources.dll 和 de\MyDialog.resources.dll 都不可用，则德语版 Windows 将使用 en-US\MyDialog.resources.dll。
+如果以下两个文件都不可用，则*en-US\MyDialog.resources.dll*文件将与德语版结合使用： *de-DE\MyDialog.resources.dll*或*DE\MyDialog.resources.dll*。
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Microsoft 沙特阿拉伯主页
 

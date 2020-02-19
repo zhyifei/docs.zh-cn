@@ -2,12 +2,12 @@
 title: WCF 简化功能
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: dd944ad2963e29fd3aa9254f3a37f2c2b98ce70d
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 28a05053fda8380b55a1a9eee20119b8c4cfccfe
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802383"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452651"
 ---
 # <a name="wcf-simplification-features"></a>WCF 简化功能
 
@@ -78,7 +78,7 @@ WCF 现在支持协定优先开发。 Svcutil.exe 工具具有/serviceContract �
 
 ## <a name="add-service-reference-from-a-portable-subset-project"></a>从可移植子集项目添加服务引用
 
-可移植子集项目使 .NET 程序集编程人员能够维护单个源树和生成系统，同时仍然支持多个 .NET 实现（桌面、Silverlight、Windows Phone 和 XBOX）。 可移植子集项目仅引用 .NET 可移植库，这是可用于任何 .NET 实现的 .NET framework 程序集。 开发人员的体验与添加任何其他 WCF 客户端应用程序内的服务引用相同。 有关详细信息，请参阅[可移植子集项目中的添加服务引用](add-service-reference-in-a-portable-subset-project.md)。
+可移植子集项目使 .NET 程序集编程人员能够维护单个源树和生成系统，同时仍然支持多个 .NET 实现（桌面、Silverlight、Windows Phone 和 Xbox）。 可移植子集项目仅引用可以在任何 .NET 实现上使用的程序集的 .NET 可移植库。 开发人员的体验与添加任何其他 WCF 客户端应用程序内的服务引用相同。 有关详细信息，请参阅[可移植子集项目中的添加服务引用](add-service-reference-in-a-portable-subset-project.md)。
 
 ## <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 兼容模式默认值已更改
 
@@ -94,7 +94,7 @@ WCF 提供了 ASP.NET 兼容模式，以向开发人员授予编写 WCF 服务�
 
 下表描述了已更改的设置以及可在何处找到其他信息。
 
-|Property|On|新默认值|详细信息|
+|属性|On|新默认值|详细信息|
 |--------------|--------|-----------------|----------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|此属性可确定 TCP 连接使用 .NET 组帧协议对自身进行身份验证所需的时间。 客户端需要发送一些初始数据，然后服务器才有足够的信息来执行身份验证。 此超时被有意设置为小于 ReceiveTimeout（10 分钟），这样，未经身份验证的恶意客户端就无法长时间保持绑到该服务器的连接。 默认值为 30 秒。 有关 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A> 的详细信息|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * 处理器数|此套接字级别的属性描述了要排队的“挂起接受”请求的数目。 如果侦听积压工作 (backlog) 队列已满，则会拒绝新的套接字请求。 有关 <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A> 的详细信息|
@@ -109,7 +109,7 @@ WCF 提供了 ASP.NET 兼容模式，以向开发人员授予编写 WCF 服务�
 
 <xref:System.Xml.XmlDictionaryReaderQuotas> 包含用于 XML 字典读取器的可配置配额值，这些配额值会限制创建消息时由编码器使用的内存量。 虽然这些配额是可配置的，但默认值已更改，以减小开发人员需要显式设置这些默认值的可能性。 `MaxReceivedMessageSize` 配额未更改，这样它仍可以限制内存消耗，从而您无需处理 <xref:System.Xml.XmlDictionaryReaderQuotas> 的复杂性。 下表显示了配额及其新默认值，并简要说明了每个配额的用途。
 
-|配额名称|默认值|描述|
+|配额名称|默认值|说明|
 |----------------|-------------------|-----------------|
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|获取并设置允许的最大数组长度。 此配额限制 XML 读取器返回的基元数组（包括字节数组）的最大大小。 此配额不限制 XML 读取器本身的内存消耗，但限制使用该读取器的所有组件的内存消耗。 例如，当 <xref:System.Runtime.Serialization.DataContractSerializer> 使用一个以 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>保护的读取器时，将不会反序列化大于此配额的字节数组。|
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|获取并设置允许每次读取返回的最大字节数。 此配额限制在当读取元素开始标记及其属性时在一次 Read 操作中读取的字节数目。 （在非流模式情况下，不会根据配额对元素名称本身进行计数）。 具有太多的 XML 特性可能会耗用过长的处理时间，因为必须检查特性名称的唯一性。 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> 可缓解这一威胁。|

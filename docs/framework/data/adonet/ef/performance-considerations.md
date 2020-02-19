@@ -2,12 +2,12 @@
 title: 性能注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 2b116a22c0f422377246d8cc0b2d647fd78a289b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 6cd0adb7963b3cfc05fcd6f30d8a7039a50f9485
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039854"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452456"
 ---
 # <a name="performance-considerations-entity-framework"></a>性能注意事项（实体框架）
 本主题介绍 ADO.NET 实体框架的性能特征，并提供一些注意事项帮助改善实体框架应用程序的性能。  
@@ -15,7 +15,7 @@ ms.locfileid: "73039854"
 ## <a name="stages-of-query-execution"></a>查询执行的各个阶段  
  为了更好地了解查询在实体框架中的性能，了解当查询针对概念模型执行并将数据作为对象返回时发生的操作将很有帮助。 下表描述这一系列操作。  
   
-|操作|相对成本|频率|注释|  
+|操作|相对成本|频率|Comments|  
 |---------------|-------------------|---------------|--------------|  
 |加载元数据|中等|在每个应用程序域中一次。|实体框架使用的模型和映射元数据加载到 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 中。 此元数据全局缓存，并可用于同一个应用程序域中的其他 <xref:System.Data.Objects.ObjectContext> 实例。|  
 |打开数据库连接|中等<sup>1</sup>|根据需要。|由于与数据库的开放式连接会占用宝贵的资源，因此实体框架会根据需要打开和关闭数据库连接。 还可以显式打开连接。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。|  
@@ -128,7 +128,7 @@ ms.locfileid: "73039854"
   
  在使用非常大的模型时，适用以下注意事项：  
   
- .NET 元数据格式将一个给定的二进制文件中的用户字符串字符数限定为 16,777,215 (0xFFFFFF)。 如果你正在为非常大的模型生成视图，并且该视图文件达到此大小限制，则你将收到 "没有剩余的逻辑空间来创建更多用户字符串。" 编译错误。 此大小限制适用于所有托管二进制文件。 有关详细信息，请参阅[博客](https://go.microsoft.com/fwlink/?LinkId=201476)，其中演示了在处理大型和复杂模型时如何避免此错误。  
+ .NET 元数据格式将一个给定的二进制文件中的用户字符串字符数限定为 16,777,215 (0xFFFFFF)。 如果你正在为非常大的模型生成视图，并且该视图文件达到此大小限制，则你将收到 "没有剩余的逻辑空间来创建更多用户字符串。" 编译错误。 此大小限制适用于所有托管二进制文件。 有关详细信息，请参阅[博客](https://docs.microsoft.com/archive/blogs/appfabriccat/solving-the-no-logical-space-left-to-create-more-user-strings-error-and-improving-performance-of-pre-generated-views-in-visual-studio-net4-entity-framework)，其中演示了在处理大型和复杂模型时如何避免此错误。  
   
 #### <a name="consider-using-the-notracking-merge-option-for-queries"></a>考虑对查询使用 NoTracking 合并选项  
  跟踪对象上下文中返回的对象会引发成本。 检测对象更改以及确保对于同一个逻辑实体的多个请求返回相同的对象实例均要求将对象附加到 <xref:System.Data.Objects.ObjectContext> 实例。 如果不打算对对象进行更新或删除操作，并且不需要标识管理，请考虑在执行查询时使用 <xref:System.Data.Objects.MergeOption.NoTracking> 合并选项。  
@@ -145,14 +145,14 @@ ms.locfileid: "73039854"
  当你的应用程序执行一系列对象查询或频繁调用 <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> 以将创建、更新和删除操作持久保存到数据源时，实体框架必须持续打开并关闭与数据源的连接。 在这类情况下，请考虑在开始这些操作时手动打开连接，并在操作完成后关闭或释放连接。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
 ## <a name="performance-data"></a>性能数据  
- [ADO.NET 团队博客](https://go.microsoft.com/fwlink/?LinkId=91905)上的以下文章中发布了实体框架的一些性能数据：  
+ [ADO.NET 团队博客](https://docs.microsoft.com/archive/blogs/adonet/)上的以下文章中发布了实体框架的一些性能数据：  
   
-- [探索实体框架 ADO.NET 的性能-第1部分](https://go.microsoft.com/fwlink/?LinkId=123907)  
+- [探索实体框架 ADO.NET 的性能-第1部分](https://docs.microsoft.com/archive/blogs/adonet/exploring-the-performance-of-the-ado-net-entity-framework-part-1)  
   
-- [探索 ADO.NET 实体框架的性能-第2部分](https://go.microsoft.com/fwlink/?LinkId=123909)  
+- [探索 ADO.NET 实体框架的性能-第2部分](https://docs.microsoft.com/archive/blogs/adonet/exploring-the-performance-of-the-ado-net-entity-framework-part-2)  
   
-- [ADO.NET 实体框架性能比较](https://go.microsoft.com/fwlink/?LinkID=123913)  
+- [ADO.NET 实体框架性能比较](https://docs.microsoft.com/archive/blogs/adonet/ado-net-entity-framework-performance-comparison)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [开发和部署注意事项](development-and-deployment-considerations.md)

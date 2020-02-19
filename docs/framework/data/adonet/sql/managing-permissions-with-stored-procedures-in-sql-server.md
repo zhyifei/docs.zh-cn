@@ -2,12 +2,12 @@
 title: 在 SQL Server 中使用存储过程管理权限
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 412d2a0a292e2ac83e6c42cf721c83e63633408c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 85383c46dd029db825d24d2f67d2dbda00f3bc95
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780953"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452378"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>在 SQL Server 中使用存储过程管理权限
 为数据库创建多道防线的一个方法是使用存储过程或用户定义的函数实现所有数据访问。 撤消或拒绝对基础对象（如表）的所有权限，并授予对存储过程的 EXECUTE 权限。 这会为数据和数据库对象有效创建安全外围防线。  
@@ -32,7 +32,7 @@ ms.locfileid: "70780953"
 ## <a name="stored-procedure-execution"></a>存储过程的执行  
  存储过程利用所有权链接来提供对数据的访问，这样，用户就不必拥有访问数据库对象的显式权限。 如果按顺序相互访问的对象由同一个用户所拥有，就会存在所有权链接。 例如，存储过程可以调用其他存储过程，或者存储过程可访问多个表。 如果执行链中的所有对象的所有者相同，则 SQL Server 只检查调用方的 EXECUTE 权限，而不检查调用方对其他对象的权限。 因此，只需对存储过程授予 EXECUTE 权限；可以撤消或拒绝对基础表的所有权限。  
   
-## <a name="best-practices"></a>最佳做法  
+## <a name="best-practices"></a>最佳实践  
  仅编写存储过程不足以保证应用程序的安全， 还应当考虑以下潜在的安全漏洞。  
   
 - 为您希望其能够访问数据的数据库角色授予对存储过程的 EXECUTE 权限。  
@@ -49,14 +49,14 @@ ms.locfileid: "70780953"
   
 - 除非绝对必要，否则应避免使用动态 SQL。 使用 Transact-SQL QUOTENAME() 函数可分隔字符串值，并对输入字符串中的任何分隔符进行转义。  
   
-## <a name="external-resources"></a>外部资源  
+## <a name="external-resources"></a>外部資源  
  有关更多信息，请参见以下资源。  
   
-|资源|描述|  
+|资源|说明|  
 |--------------|-----------------|  
-|SQL Server 联机丛书中的[存储过程](/sql/relational-databases/stored-procedures/stored-procedures-database-engine)和 [SQL 注入](https://go.microsoft.com/fwlink/?LinkId=98234)|说明如何创建存储过程和 SQL 注入工作原理的主题。|  
+|[存储过程](/sql/relational-databases/stored-procedures/stored-procedures-database-engine)和[SQL 注入](/sql/relational-databases/security/sql-injection)|本文介绍如何创建存储过程和 SQL 注入的工作方式。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [保证 ADO.NET 应用程序的安全](../securing-ado-net-applications.md)
 - [SQL Server 安全性概述](overview-of-sql-server-security.md)

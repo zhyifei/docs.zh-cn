@@ -2,12 +2,12 @@
 title: SQL Server 公共语言运行时集成
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: 77b40c6a1576b87d9bb4a7eb4b1ee3df8828b892
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 12ae15d72644e314aa694f8d169bc8f45fa284a2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780858"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452339"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server 公共语言运行时集成
 SQL Server 2005 引入了 Microsoft Windows 的 .NET Framework 的公共语言运行库 (CLR) 组件的集成。 这意味着您可以使用任意 .NET Framework 语言（包括 Microsoft Visual Basic .NET 和 Microsoft Visual C#）编写存储过程、触发器、用户定义类型、用户定义函数、用户定义聚合函数以及流处理表值函数。 <xref:Microsoft.SqlServer.Server> 命名空间包含一组新的应用程序编程接口 (API)，使托管代码可以与 Microsoft SQL Server 环境交互。  
@@ -16,9 +16,9 @@ SQL Server 2005 引入了 Microsoft Windows 的 .NET Framework 的公共语言�
   
  本节只是为了提供足够的信息，以便开始使用 SQL Server CLR 集成编程，而并非为了提供完整的信息。 有关更多详细信息，请参见您正在使用的 SQL Server 版本的“SQL Server 联机丛书”版本。  
   
- **SQL Server 联机丛书**  
+ **SQL Server 文档**  
   
-1. [公共语言运行时（CLR）集成编程概念](https://go.microsoft.com/fwlink/?LinkId=115240)  
+1. [公共语言运行时 (CLR) 集成编程概念](/sql/relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts)  
   
 ## <a name="in-this-section"></a>本节内容  
  [SQL Server CLR 集成简介](introduction-to-sql-server-clr-integration.md)  
@@ -42,7 +42,7 @@ SQL Server 2005 引入了 Microsoft Windows 的 .NET Framework 的公共语言�
  [ADO.NET 的 SQL Server 进程内特定行为](sql-server-in-process-specific-behavior-of-adonet.md)  
  介绍 SQL Server 进程中专用的 ADO.NET 扩展以及上下文连接。 提供指向其他主题的链接。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [SQL Server 和 ADO.NET](index.md)
 - [ADO.NET 概述](../ado-net-overview.md)

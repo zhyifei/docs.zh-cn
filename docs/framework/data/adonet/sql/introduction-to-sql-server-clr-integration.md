@@ -2,12 +2,12 @@
 title: SQL Server CLR 集成简介
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 76c6fb4cb37807f286f1f1f2aeedbdea6c74fe38
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 41dd89af4f45c673cf6b7283fc39aaf91fd9963c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002144"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452404"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR 集成简介
 公共语言运行库 (CLR) 是 Microsoft .NET Framework 的核心，为所有 .NET Framework 代码提供执行环境。 在 CLR 中运行的代码称为托管代码。 CLR 提供执行程序所需的各种函数和服务，包括实时 (JIT) 编译、分配和管理内存、强制类型安全性、异常处理、线程管理和安全性。  
@@ -18,9 +18,9 @@ ms.locfileid: "72002144"
   
  本节只是为了提供足够的信息，以便开始使用 SQL Server CLR 集成编程，而并非为了提供完整的信息。 有关更多详细信息，请参见您正在使用的 SQL Server 版本的“SQL Server 联机丛书”版本。  
   
- **SQL Server 联机丛书**  
+ **SQL Server 文档**  
   
-- [公共语言运行时（CLR）集成概述](https://go.microsoft.com/fwlink/?LinkId=115242)  
+- [公共语言运行时 (CLR) 集成概述](/sql/relational-databases/clr-integration/common-language-runtime-integration-overview)  
   
 ## <a name="enabling-clr-integration"></a>启用 CLR 集成  
  默认情况下，Microsoft SQL Server 中禁用公共语言运行库 (CLR) 集成功能，必须启用才能使用通过 CLR 集成实现的对象。 要使用 Transact-SQL 启用 CLR 集成，请使用如下所示的 `clr enabled` 存储过程的 `sp_configure` 选项：  
@@ -36,36 +36,36 @@ GO
   
  有关更多详细信息，请参见您正在使用的 SQL Server 版本的“SQL Server 联机丛书”版本。  
   
- **SQL Server 联机丛书**  
+ **SQL Server 文档**  
   
-- [启用 CLR 集成](https://go.microsoft.com/fwlink/?LinkId=115230)  
+- [启用 CLR 集成](/sql/relational-databases/clr-integration/clr-integration-enabling)  
   
 ## <a name="deploying-a-clr-assembly"></a>部署 CLR 程序集  
- 在测试服务器上测试和验证 CLR 方法后，可以使用部署脚本将其分发到生产服务器。 部署脚本可以通过手动或使用 SQL Server Management Studio 生成。 有关更多详细信息，请参见您正在使用的 SQL Server 版本的“SQL Server 联机丛书”版本。  
+ 在测试服务器上测试和验证 CLR 方法后，可以使用部署脚本将其分发到生产服务器。 部署脚本可以通过手动或使用 SQL Server Management Studio 生成。 有关更多详细信息，请参阅所使用 SQL Server 版本的 SQL Server 文档版本。  
   
- **SQL Server 联机丛书**  
+ **SQL Server 文档**  
   
-1. [部署 CLR 数据库对象](https://go.microsoft.com/fwlink/?LinkId=115232)  
+1. [部署 CLR 数据库对象](/sql/relational-databases/clr-integration/deploying-clr-database-objects)  
   
 ## <a name="clr-integration-security"></a>CLR 集成安全性  
  Microsoft SQL Server 与 Microsoft .NET Framework 公共语言运行库 (CLR) 相集成，这种安全模型可管理和保护 SQL Server 中运行的不同类型 CLR 和非 CLR 对象之间的访问。 这些对象可以通过 Transact-SQL 语句或服务器中运行的其他 CLR 对象进行调用。  
   
  有关更多详细信息，请参见您正在使用的 SQL Server 版本的“SQL Server 联机丛书”版本。  
   
- **SQL Server 联机丛书**  
+ **SQL Server 文档**  
   
-- [CLR 集成安全性](https://go.microsoft.com/fwlink/?LinkId=115234)  
+- [CLR 集成安全性](/sql/relational-databases/clr-integration/security/clr-integration-security)  
   
 ## <a name="debugging-a-clr-assembly"></a>调试 CLR 程序集  
  Microsoft SQL Server 支持调试数据库中的 Transact-SQL 和公共语言运行库 (CLR) 对象。 跨语言调试工作：用户可以从 Transact-SQL 无缝地进入并单步执行 CLR 对象，反之亦然。  
   
  有关更多详细信息，请参见您正在使用的 SQL Server 版本的“SQL Server 联机丛书”版本。  
   
- **SQL Server 联机丛书**  
+ **SQL Server 文档**  
   
-- [调试 CLR 数据库对象](https://go.microsoft.com/fwlink/?LinkId=115236)  
+- [调试 CLR 数据库对象](/sql/relational-databases/clr-integration/debugging-clr-database-objects)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码访问安全性和 ADO.NET](../code-access-security.md)
 - [ADO.NET 概述](../ado-net-overview.md)

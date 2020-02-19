@@ -5,12 +5,12 @@ helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-ms.openlocfilehash: a4dbcd0a0b848e5ef57965b5b3f4fcee9161b724
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 454314bf1002a9648f669cc708c8ac42461fccaf
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116565"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452261"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > 元素
 指定是否应在 .NET Framework 4 及更高版本中将从远程源加载的程序集授予完全信任。
@@ -19,7 +19,7 @@ ms.locfileid: "73116565"
 > 如果由于 Visual Studio 项目错误列表中的错误消息或生成错误而定向到本文，请参阅[如何：在 Visual studio 中使用 Web 程序集](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<loadFromRemoteSources >**  
   
 ## <a name="syntax"></a>语法  
@@ -32,15 +32,15 @@ ms.locfileid: "73116565"
 ## <a name="attributes-and-elements"></a>特性和元素
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>Attributes  
   
-|特性|描述|  
+|属性|说明|  
 |---------------|-----------------|  
 |`enabled`|必需的特性。<br /><br /> 指定是否应向从远程源加载的程序集授予完全信任。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`false`|不要向远程源的应用程序授予完全信任。 这是默认设置。|  
 |`true`|向远程源的应用程序授予完全信任。|  
@@ -50,7 +50,7 @@ ms.locfileid: "73116565"
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关运行时初始化选项的信息。|  
@@ -95,11 +95,11 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 - 如果应用程序是从 Web 复制而来，Windows 会将其标记为 Web 应用程序，即使它驻留在本地计算机上也不例外。 您可以通过更改其文件属性来更改该指定，也可以使用 `<loadFromRemoteSources>` 元素向程序集授予完全信任权限。 对于操作系统标记为从 Web 加载的本地程序集，也可以使用 <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> 方法进行加载。
 
-- 你可能会在运行在 Windows Virtual PC 应用程序中的应用程序中获取 <xref:System.IO.FileLoadException>。 当你尝试从宿主计算机上的链接文件夹中加载文件时，会发生这种情况。 当你尝试从链接在[远程桌面服务](https://go.microsoft.com/fwlink/?LinkId=182775)（终端服务）的文件夹中加载文件时，也会发生此问题。 若要避免此异常，请将 `enabled` 设置为 `true`。
+- 你可能会在运行在 Windows Virtual PC 应用程序中的应用程序中获取 <xref:System.IO.FileLoadException>。 当你尝试从宿主计算机上的链接文件夹中加载文件时，会发生这种情况。 当你尝试从链接在[远程桌面服务](/windows/win32/termserv/terminal-services-portal)（终端服务）的文件夹中加载文件时，也会发生此问题。 若要避免此异常，请将 `enabled` 设置为 `true`。
 
 ## <a name="configuration-file"></a>配置文件
 
-此元素通常用在应用程序配置文件中，但可根据上下文用于其他配置文件。 有关详细信息，请参阅 .NET Security 博客中的[更隐式使用 CAS 策略： loadFromRemoteSources 一](https://go.microsoft.com/fwlink/p/?LinkId=266839)文。  
+此元素通常用在应用程序配置文件中，但可根据上下文用于其他配置文件。 有关详细信息，请参阅 .NET Security 博客中的[更隐式使用 CAS 策略： loadFromRemoteSources 一](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)文。  
 
 ## <a name="example"></a>示例
 
@@ -113,9 +113,9 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 </configuration>  
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [CAS 策略的更隐式使用： loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
+- [CAS 策略的更隐式使用： loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)
 - [如何：运行沙盒中部分受信任的代码](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [运行时设置架构](index.md)
 - [配置文件架构](../index.md)

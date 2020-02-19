@@ -1,20 +1,20 @@
 ---
-title: 如何：使用线性渐变绘制区域
+title: 如何：绘制带有线性渐变的区域
 ms.date: 03/30/2017
 helpviewer_keywords:
 - linear gradients [WPF], painting with
 - brushes [WPF], painting with linear gradients
 - painting [WPF], with linear gradients
 ms.assetid: 00e0cd04-48c0-4ec5-850e-d321beb37a34
-ms.openlocfilehash: 92c9ccd846dbbce043d13e6ba82b9fa8e72fa8b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 76c491632911c48db34d932ba3895278591378a5
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916161"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452761"
 ---
-# <a name="how-to-paint-an-area-with-a-linear-gradient"></a>如何：使用线性渐变绘制区域
-此示例演示如何使用<xref:System.Windows.Media.LinearGradientBrush>类绘制带有线性渐变的区域。 在下面的示例中, <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle>的将使用从黄色到红色转换为蓝色到浅绿色的对角线性渐变进行绘制。  
+# <a name="how-to-paint-an-area-with-a-linear-gradient"></a>如何：绘制带有线性渐变的区域
+此示例演示如何使用 <xref:System.Windows.Media.LinearGradientBrush> 类绘制带有线性渐变的区域。 在下面的示例中，<xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.Shapes.Shape.Fill%2A> 用对角线性渐变进行绘制，该渐变从黄色转换为蓝色到浅绿色。  
   
 ## <a name="example"></a>示例  
  [!code-xaml[GradientBrushExamples_snip#DiagonalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#diagonalgradient1xaml)]  
@@ -25,7 +25,7 @@ ms.locfileid: "69916161"
   
  ![对角线方向线性渐变](./media/graphicsmm-diagonallgb.jpg "graphicsmm_DiagonalLGB")  
   
- 若要创建水平线性渐变, 请将<xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A>的<xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> <xref:System.Windows.Media.LinearGradientBrush>和更改为 (0, 0.5) 和 (1, 0.5)。 在下面的示例中, <xref:System.Windows.Shapes.Rectangle>使用水平线性渐变绘制。  
+ 若要创建水平线性渐变，请将 <xref:System.Windows.Media.LinearGradientBrush> 的 <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> 和 <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> 更改为（0，0.5）和（1，0.5）。 在下面的示例中，使用水平线性渐变来绘制 <xref:System.Windows.Shapes.Rectangle>。  
   
  [!code-xaml[GradientBrushExamples_snip#HorizontalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#horizontalgradient1xaml)]  
   
@@ -35,7 +35,7 @@ ms.locfileid: "69916161"
   
  ![水平线性渐变](./media/graphicsmm-horizontallgb.jpg "graphicsmm_HorizontalLGB")  
   
- 若要创建垂直线性渐变, 请将<xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A>的<xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> <xref:System.Windows.Media.LinearGradientBrush>和更改为 (0.5, 0) 和 (0.5, 1)。 在下面的示例中, <xref:System.Windows.Shapes.Rectangle>用垂直线性渐变绘制。  
+ 若要创建垂直线性渐变，请将 <xref:System.Windows.Media.LinearGradientBrush> 的 <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> 和 <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> 更改为（0.5，0）和（0.5，1）。 在下面的示例中，使用垂直线性渐变来绘制 <xref:System.Windows.Shapes.Rectangle>。  
   
  [!code-xaml[GradientBrushExamples_snip#VerticalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#verticalgradient1xaml)]  
   
@@ -46,6 +46,6 @@ ms.locfileid: "69916161"
  ![垂直线性渐变](./media/graphicsmm-verticallgb.jpg "graphicsmm_VerticalLGB")  
   
 > [!NOTE]
-> 本主题中的示例使用默认坐标系统来设置起始点和终结点。 默认坐标系与边界框相关:0 表示边界框为 0%，1 表示边界框为 100%。 您可以通过将<xref:System.Windows.Media.GradientBrush.MappingMode%2A>属性设置为值<xref:System.Windows.Media.BrushMappingMode.Absolute?displayProperty=nameWithType>来更改此坐标系统。 绝对坐标系与范围框无关。 值直接在本地空间中解释。  
+> 本主题中的示例使用默认坐标系统来设置起始点和终结点。 默认坐标系与边界框相关：0指示边界框的0%，1指示边界框的100%。 您可以通过将 <xref:System.Windows.Media.GradientBrush.MappingMode%2A> 属性设置为 <xref:System.Windows.Media.BrushMappingMode.Absolute?displayProperty=nameWithType>值来更改此坐标系统。 绝对坐标系与范围框无关。 值直接在本地空间中解释。  
   
- 有关其他示例, 请参阅[画笔示例](https://go.microsoft.com/fwlink/?LinkID=159973)。 有关渐变和其他类型画笔的详细信息, 请参阅[采用纯色和渐变进行绘制概述](painting-with-solid-colors-and-gradients-overview.md)。
+ 有关其他示例，请参阅[画笔示例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Brushes)。 有关渐变和其他类型画笔的详细信息，请参阅[采用纯色和渐变进行绘制概述](painting-with-solid-colors-and-gradients-overview.md)。

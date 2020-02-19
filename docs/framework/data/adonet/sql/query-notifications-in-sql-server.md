@@ -2,12 +2,12 @@
 title: SQL Server 中的查询通知
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 94171c8dac59fc17b0dd699d87fc043651fa5b7a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 11d9a1a800bea4224853a57b128ca89c9f2cf781
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791765"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452365"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server 中的查询通知
 查询通知建立在 Service Broker 基础结构的基础上，使应用程序可以在数据更改时收到通知。 如果应用程序提供数据库中信息的缓存（例如 Web 应用程序），需要在源数据更改时接收通知，此功能特别有用。  
@@ -22,21 +22,21 @@ ms.locfileid: "70791765"
   
  如果应用程序需要通过刷新显示或缓存来响应基础数据中的更改，查询通知非常有用。 如果执行相同命令生成的结果集与最初检索到的结果集不同，则 Microsoft SQL Server 可允许 .NET Framework 应用程序向 SQL Server 发送命令和请求通知。 服务器上生成的通知通过队列发送，供以后处理。  
   
- 您可以为 SELECT 和 EXECUTE 语句设置通知。 使用 EXECUTE 语句时，SQL Server 会为执行的命令而不是 EXECUTE 语句本身注册通知。 该命令必须满足 SELECT 语句的要求和限制。 当注册通知的命令包含多个语句时，数据库引擎会为批处理中的每个语句创建一个通知。  
+ 您可以为 SELECT 和 EXECUTE 语句设置通知。 使用 EXECUTE 语句时，SQL Server 会为执行的命令而不是 EXECUTE 语句本身注册通知。 命令必须满足 SELECT 语句的要求和限制。 当注册通知的命令包含多个语句时，数据库引擎会为批处理中的每个语句创建一个通知。  
   
- 如果你正在开发的应用程序在数据更改时需要可靠的第二秒通知，请查看**规划有效查询通知策略**的部分和计划中的**查询通知的替代方法** [。](https://go.microsoft.com/fwlink/?LinkId=211984)SQL Server 联机丛书中的通知主题。 有关查询通知和 SQL Server Service Broker 的更多信息，请参见以下指向“SQL Server 联机丛书”中的主题的链接。  
+ 如果正在开发的应用程序在数据更改时需要可靠的第二秒通知，请查看规划[通知](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms187528(v=sql.105))一文中的 "**规划有效的查询通知策略**" 和 "**查询通知的替代方案**" 部分。 有关查询通知和 SQL Server Service Broker 的详细信息，请参阅 SQL Server 文档中的以下文章链接。  
   
  **SQL Server 文档**  
   
 - [使用查询通知](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
-- [创建通知查询](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [为通知创建查询](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [开发（Service Broker）](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
+- [开发 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
 - [Service Broker 开发人员信息中心](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [开发人员指南（Service Broker）](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [开发人员指南 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>本节内容  
  [启用查询通知](enabling-query-notifications.md)  
@@ -61,7 +61,7 @@ ms.locfileid: "70791765"
  <xref:System.Web.Caching.SqlCacheDependency>  
  描述 <xref:System.Web.Caching.SqlCacheDependency> 类及其所有成员。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [SQL Server 和 ADO.NET](index.md)
 - [ADO.NET 概述](../ado-net-overview.md)

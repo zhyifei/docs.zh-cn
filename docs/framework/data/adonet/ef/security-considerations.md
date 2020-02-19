@@ -2,15 +2,15 @@
 title: 安全注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e2e1fc75049d41b50aa59092fe1aa21e8cdab659
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968407"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452482"
 ---
 # <a name="security-considerations-entity-framework"></a>安全注意事项（实体框架）
-本主题介绍特定于开发、部署和运行实体框架应用程序的安全注意事项。 还应遵循创建安全 .NET Framework 应用程序的建议。 有关详细信息，请参阅[安全性概述](../security-overview.md)。  
+本主题介绍特定于开发、部署和运行实体框架应用程序的安全注意事项。 还应遵循创建安全 .NET Framework 应用程序的建议。 有关详细信息，请参阅[安全概述](../security-overview.md)。  
   
 ## <a name="general-security-considerations"></a>一般安全注意事项  
  以下安全注意事项适用于所有使用实体框架的应用程序。  
@@ -27,7 +27,7 @@ ms.locfileid: "73968407"
  在登录操作过程中，将通过基础数据源的网络库将基于用户密码的信息传递给服务器。 恶意提供程序可能窃取用户凭据，生成恶意查询或篡改结果集。  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>对连接进行加密以保护敏感数据。  
- 实体框架不会直接处理数据加密。 如果用户通过公共网络访问数据，应用程序应建立到数据源的加密连接以提高安全性。 有关详细信息，请参见关于您所用数据源的安全性方面的文档。 有关 SQL Server 数据源，请参阅[加密到 SQL Server 的连接](https://go.microsoft.com/fwlink/?LinkId=119544)。  
+ 实体框架不会直接处理数据加密。 如果用户通过公共网络访问数据，应用程序应建立到数据源的加密连接以提高安全性。 有关详细信息，请参见关于您所用数据源的安全性方面的文档。 有关 SQL Server 数据源，请参阅[加密到 SQL Server 的连接](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105))。  
   
 #### <a name="secure-the-connection-string"></a>保护连接字符串。  
  保护应用程序时，最重要的目标之一是保护对数据源的访问。 不受保护或构造不当的连接字符串会构成潜在的安全漏洞。 如果以纯文本形式存储连接信息或者将其保留在内存中，则可能危及整个系统的安全。 建议采用以下方法保护连接字符串：  
@@ -81,7 +81,7 @@ ms.locfileid: "73968407"
  实体框架不会强制实施任何安全权限，并将在进程中调用任何用户提供的数据对象代码，而不管它是否受信任。 确保数据存储和应用程序执行客户端身份验证和授权。  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>限制对所有配置文件的访问。  
- 管理员必须限制对指定应用程序配置的所有文件的写访问权限，包括 enterprisesec、security .config、machine.config 和应用程序配置文件 \<*应用程序*>。exe。  
+ 管理员必须限制对指定应用程序配置的所有文件的写访问权限，包括 enterprisesec、security .config、machine.config 和应用程序配置文件 \<*应用程序*>。  
   
  可在 app.config 中修改提供程序固定名称。客户端应用程序必须负责使用强名称通过标准提供程序工厂模型访问基础提供程序。  
   
@@ -162,7 +162,7 @@ ADO.NET 元数据服务组件不记录任何专用信息。 如果由于访问�
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>不要接受来自不可信源的 MetadataWorkspace 对象。  
  应用程序不应接受来自不可信源的 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 类的实例。 正确的做法是从这样的源显式构造并填充工作区。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [保证 ADO.NET 应用程序的安全](../securing-ado-net-applications.md)
 - [部署注意事项](deployment-considerations.md)

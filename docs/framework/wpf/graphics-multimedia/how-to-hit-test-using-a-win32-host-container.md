@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Win32 host containers [WPF], hit tests using
 ms.assetid: 9491f7f3-d8ba-4573-a888-2f064d1349dc
-ms.openlocfilehash: b71783f2d061c9139de4449d8e0106eb00345894
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: a86c1c36f75fa232d52731959371268a8b2593d7
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740175"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452800"
 ---
 # <a name="how-to-hit-test-using-a-win32-host-container"></a>如何：使用 Win32 宿主容器执行命中测试
 可以通过为视觉对象提供主机窗口容器，在 Win32 窗口中创建视觉对象。 若要为包含的视觉对象提供事件处理，需要处理传递到宿主窗口容器的消息筛选器循环的消息。 有关如何在 Win32 窗口中承载视觉对象的详细信息，请参阅[教程：在 Win32 应用程序中承载视觉对象](tutorial-hosting-visual-objects-in-a-win32-application.md)。  
@@ -32,7 +32,7 @@ ms.locfileid: "75740175"
   
  <xref:System.Windows.Interop.HwndSource> 对象在 Win32 窗口中提供 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 内容。 <xref:System.Windows.Interop.HwndSource> 对象的 <xref:System.Windows.Interop.HwndSource.RootVisual%2A> 属性的值表示可视化树层次结构中最顶层的节点。  
   
- 有关使用 Win32 主机容器命中测试对象的完整示例，请参阅[使用 Win32 互操作进行命中测试示例](https://go.microsoft.com/fwlink/?LinkID=159995)。  
+ 有关使用 Win32 主机容器命中测试对象的完整示例，请参阅[使用 Win32 互操作进行命中测试示例](https://github.com/microsoft/WPF-Samples/tree/master/Visual%20Layer/VisualsHitTesting)。  
   
 ## <a name="see-also"></a>另请参阅
 

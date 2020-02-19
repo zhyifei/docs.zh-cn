@@ -2,22 +2,22 @@
 title: 在 SQL Server 中对存储过程签名
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 8dc62527be7273d3ce3222d4d261b81bc40b1e19
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0131655d06a6ef543ea460d04739401538cac04b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791808"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452352"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>在 SQL Server 中对存储过程签名
 
-数字签名是用签名人的私钥加密的数据摘要。 该私钥可确保数字签名对于其持有者或所有者是唯一的。 您可以对存储过程、函数（内联表值函数除外）、触发器和程序集进行签名。
+数字签名是指使用签名人私钥加密的数据摘要。 私钥可确保数字签名是其持有人或所有者所特有的。 您可以对存储过程、函数（内联表值函数除外）、触发器和程序集进行签名。
 
 您可以使用证书或非对称密钥为存储过程签名。 此设计适用于无法通过所属权链继承权限或所属权链中断的方案，如动态 SQL。 然后，你可以创建一个映射到该证书的用户，并为该存储过程需要访问的对象授予证书用户权限。
 
-您还可以创建一个映射到同一个证书的登录名，然后向该登录名授予任何必需的服务器级权限，或者将该登录名添加到一个或多个固定服务器角色中。 这是为了避免在需要更`TRUSTWORTHY`高级别权限的情况下启用数据库设置。
+您还可以创建一个映射到同一个证书的登录名，然后向该登录名授予任何必需的服务器级权限，或者将该登录名添加到一个或多个固定服务器角色中。 这是为了避免在需要更高级别权限的情况下启用 `TRUSTWORTHY` 数据库设置。
 
-执行存储过程时，SQL Server 会将证书用户和/或登录的权限与调用方的权限进行组合。 `EXECUTE AS`与子句不同，它不会更改过程的执行上下文。 返回登录名和用户名的内置函数会返回调用方的名称，而不是证书用户的名称。
+执行存储过程时，SQL Server 会将证书用户和/或登录的权限与调用方的权限进行组合。 与 `EXECUTE AS` 子句不同，它不会更改过程的执行上下文。 返回登录名和用户名的内置函数会返回调用方的名称，而不是证书用户的名称。
 
 ## <a name="creating-certificates"></a>创建证书
 
@@ -39,25 +39,25 @@ ms.locfileid: "70791808"
 
 如果模块需要其他服务器级别权限：
 
-1. 将证书复制到`master`数据库。
+1. 将证书复制到 `master` 数据库。
 
-1. 使用 transact-sql `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]`语句创建与该证书关联的登录名。
+1. 使用 Transact-sql `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` 语句创建与该证书关联的登录名。
 
 1. 向证书登录名授予必需的服务器级权限。
 
 > [!NOTE]
 > 证书不能向用户授予已经使用 DENY 语句撤消的权限。 DENY 始终优先于 GRANT，以防止调用方继承授予给证书用户的权限。
 
-## <a name="external-resources"></a>外部资源
+## <a name="external-resources"></a>外部資源
 
 有关更多信息，请参见以下资源。
 
-|资源|描述|
+|资源|说明|
 |--------------|-----------------|
-|[模块登录](https://go.microsoft.com/fwlink/?LinkId=98590)SQL Server 联机丛书|说明模块签名，提供示例方案和到相关 Transact-SQL 主题的链接。|
-|在 SQL Server 联机丛书中[使用证书对存储过程进行签名](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate)|提供有关使用证书为存储过程签名的教程。|
+|[模块签名](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms345102(v=sql.100))|介绍模块签名，并提供示例方案和相关 Transact-sql 文章的链接。|
+|[使用证书为存储过程签名](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate)|提供有关使用证书为存储过程签名的教程。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [保证 ADO.NET 应用程序的安全](../securing-ado-net-applications.md)
 - [SQL Server 安全性概述](overview-of-sql-server-security.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-ms.openlocfilehash: 47d7648aae08544890a4dd2e42cedbf68a8acc72
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: e1f285aae10a89fa49846534d5b47e15920294ea
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214739"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452274"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<配置 \<appSettings > 元素 >
 
@@ -29,11 +29,11 @@ ms.locfileid: "77214739"
 </appSettings>
 ```
 
-## <a name="attribute"></a>Attribute
+## <a name="attribute"></a>属性
 
 |           | 说明 |
 | --------- | ----------- |
-| **file**  | 可选特性。<br><br>指定包含自定义应用程序配置设置的外部文件的相对路径。 指定的文件包含相同类型的设置，这些设置在 **\<添加 >** 中指定， **\<删除 >** ， **\<明文 >** 元素，并使用与这些元素相同的键/值对格式。<br><br>指定的路径相对于主配置文件。 对于 Windows 窗体应用程序，这是二进制文件夹（如 */bin/debug*），而不是应用程序配置文件的位置。 对于 Web 窗体应用程序，该路径相对于在其中找到*web.config*文件的应用程序根目录。<br><br>请注意，如果找不到指定的文件，则运行时将忽略属性。 |
+| 文件  | 可选特性。<br><br>指定包含自定义应用程序配置设置的外部文件的相对路径。 指定的文件包含相同类型的设置，这些设置在 **\<添加 >** 中指定， **\<删除 >** ， **\<明文 >** 元素，并使用与这些元素相同的键/值对格式。<br><br>指定的路径相对于主配置文件。 对于 Windows 窗体应用程序，这是二进制文件夹（如 */bin/debug*），而不是应用程序配置文件的位置。 对于 Web 窗体应用程序，该路径相对于在其中找到*web.config*文件的应用程序根目录。<br><br>如果找不到指定的文件，则运行时将忽略该特性。 |
 
 ## <a name="parent-element"></a>父元素
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: e01b3a39a004e963e5bb66c5fa71433cb4e7204a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b22266efe2e775acd04c400cf9da50bffab28183
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802370"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449499"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5 中的新增功能
 
@@ -36,7 +36,7 @@ WCF 现在支持协定优先开发。 Svcutil.exe 具有/serviceContract 开关�
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>从可移植子集项目添加服务引用
 
-通过可移植子集项目，.NET 程序集程序员可以维护单个源树并生成系统，同时仍支持多个 .NET 平台（桌面、Silverlight、Windows Phone 和 XBOX）。 可移植子集项目仅引用 .NET 可移植库，这是可在任何 .NET 平台上使用的 .NET framework 程序集。 开发人员的体验与添加任何其他 WCF 客户端应用程序内的服务引用相同。 有关详细信息，请参阅[可移植子集项目中的添加服务引用](add-service-reference-in-a-portable-subset-project.md)。
+可移植子集项目使 .NET 程序集编程人员能够维护单个源树和生成系统，同时仍然支持多个 .NET 平台（桌面、Silverlight、Windows Phone 和 Xbox）。 可移植子集项目仅引用可以在任何 .NET 平台上使用的程序集的 .NET 可移植库。 开发人员的体验与添加任何其他 WCF 客户端应用程序内的服务引用相同。 有关详细信息，请参阅[可移植子集项目中的添加服务引用](add-service-reference-in-a-portable-subset-project.md)。
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 兼容模式默认值已更改
 
@@ -78,7 +78,7 @@ WebSocket 是一种通过端口 80 和 443 提供真正双向通信的技术，�
 
 下表描述了已更改的设置以及可在何处找到其他信息。
 
-|Property|On|新默认值|有关详细信息，请参阅。|
+|属性|On|新默认值|有关更多信息，请参见|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * 处理器数目|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|

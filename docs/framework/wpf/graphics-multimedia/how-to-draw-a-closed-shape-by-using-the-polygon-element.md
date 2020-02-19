@@ -1,5 +1,5 @@
 ---
-title: 如何：使用多边形元素绘制闭合形状
+title: 如何：使用多边形元素来绘制闭合形状
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], Polygon elements
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - Polygon elements [WPF]
 - drawing [WPF], closed shapes with Polygon elements
 ms.assetid: 4b0ca008-29ce-48dd-8bc3-f3a20ffca6a6
-ms.openlocfilehash: 533c341e2fae528ec896bf38bafa13974af1d127
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 324a5623ee658789b8600a43a89ce26cab7cd6cd
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003231"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452969"
 ---
-# <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>如何：使用多边形元素绘制闭合形状
-此示例演示如何使用来绘制闭合的形状<xref:System.Windows.Shapes.Polygon>元素。 若要绘制闭合的形状，创建<xref:System.Windows.Shapes.Polygon>元素，并使用其<xref:System.Windows.Shapes.Polygon.Points%2A>属性指定形状顶点。 自动绘制连接的第一个和最后一个点行。 最后，指定<xref:System.Windows.Shapes.Shape.Fill%2A>、 <xref:System.Windows.Shapes.Shape.Stroke%2A>，和 / 或。  
+# <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>如何：使用多边形元素来绘制闭合形状
+此示例演示如何使用 <xref:System.Windows.Shapes.Polygon> 元素绘制闭合形状。 若要绘制闭合形状，请创建 <xref:System.Windows.Shapes.Polygon> 元素，并使用其 <xref:System.Windows.Shapes.Polygon.Points%2A> 属性指定形状的顶点。 将自动绘制一条线，用于连接第一个点和最后一个点。 最后，指定 <xref:System.Windows.Shapes.Shape.Fill%2A>和/或 <xref:System.Windows.Shapes.Shape.Stroke%2A>。  
   
 ## <a name="example"></a>示例  
- 在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，点的有效语法是以逗号分隔的 x 和 y 坐标对的空格分隔列表。  
+ 在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]中，点的有效语法为以空格分隔的、以逗号分隔的 x 和 y 坐标对的列表。  
   
  [!code-xaml[drawingwithshapeelements#PolygonExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polygonexample.xaml#polygonexample1)]  
   
- 尽管该示例使用<xref:System.Windows.Controls.Canvas>来包含多边形，但是您可以使用多边形元素 （和所有其他形状元素） 以及任何<xref:System.Windows.Controls.Panel>或<xref:System.Windows.Controls.Control>支持非文本内容。  
+ 尽管该示例使用了一个包含多边形的 <xref:System.Windows.Controls.Canvas>，但您可以使用任何支持非文本内容的 <xref:System.Windows.Controls.Panel> 或 <xref:System.Windows.Controls.Control> 的多边形元素（以及其他所有形状元素）。  
   
- 此示例摘自一个更大的示例;有关完整示例，请参阅[形状元素示例](https://go.microsoft.com/fwlink/?LinkID=160037)。
+ 此示例摘自一个更大的示例;有关完整示例，请参阅[形状元素示例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements)。

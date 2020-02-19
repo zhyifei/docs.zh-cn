@@ -2,15 +2,16 @@
 title: 在可移植子集项目中添加服务引用
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 764ce487d8f2673eb2c75f8cd05da4ccbae3c935
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 8bedfb44523b4f67845d40fadfaa72d64622ba26
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320842"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449473"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>在可移植子集项目中添加服务引用
-可移植子集项目使 .NET 程序集编程人员能够维护单个源树和生成系统，同时仍然支持多个 .NET 实现（桌面、Silverlight、Windows Phone 和 XBOX）。 可移植子集项目仅引用 .NET 可移植库，这是可用于任何 .NET 实现的 .NET framework 程序集。  
+
+可移植子集项目使 .NET 程序集编程人员能够维护单个源树和生成系统，同时仍然支持多个 .NET 实现（桌面、Silverlight、Windows Phone 和 Xbox）。 可移植子集项目仅引用可在任何 .NET 实现上使用的 .NET 程序集的可移植库。
   
 ## <a name="add-service-reference-details"></a>添加服务引用详细信息  
  在可移植子集项目中添加服务引用时，将强制执行以下限制：  
@@ -43,7 +44,7 @@ ms.locfileid: "72320842"
   
 14. 可移植子集项目中不支持 <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A>。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 WCF 客户端访问服务](accessing-services-using-a-wcf-client.md)
 - [可移植类库](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

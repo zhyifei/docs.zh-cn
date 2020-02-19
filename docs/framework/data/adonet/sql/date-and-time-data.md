@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 90a70eaa2b5aeb8ef1f1659d7912b9ae5abc4eca
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bdcbaffe1be4933b89c7bf0d3a11e1bb871bc2bd
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794239"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450293"
 ---
 # <a name="date-and-time-data"></a>日期和时间数据
 SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 新的数据类型包括单独的日期和时间类型以及具有更大范围、更高精度和更强时区感知能力的扩展数据类型。 从 .NET Framework 3.5 Service Pack (SP) 1 开始，适用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient>) 完全支持 SQL Server 2008 数据库引擎的所有新功能。 您必须安装 .NET Framework 3.5 SP1（或更高版本）才能将这些新功能与 SqlClient 一起使用。  
@@ -19,19 +19,19 @@ SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 
   
  有关 SQL Server 数据类型的完整文档可从 SQL Server 联机丛书中获得。 下表列出了有关日期和时间数据的因版本而异的入门级主题。  
   
- **SQL Server 联机丛书**  
+ **SQL Server 文档**  
   
-1. [使用日期和时间数据](https://go.microsoft.com/fwlink/?LinkID=98361)  
+1. [使用日期和时间数据](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>SQL Server 2008 中引入的日期/时间数据类型  
  下表描述了新的日期和时间数据类型。  
   
-|SQL Server 数据类型|描述|  
+|SQL Server 数据类型|说明|  
 |--------------------------|-----------------|  
 |`date`|`date` 数据类型的范围从 01 年 1 月 1 日到 9999 年 12 月 31 日，精度为 1 天。 默认值为 1900 年 1月 1日。 存储大小为 3 字节。|  
 |`time`|`time` 数据类型仅存储时间值，并且采用 24 小时制。 `time` 数据类型的范围从 00:00:00.0000000 到 23:59:59.9999999，精确到 100 毫微秒。 默认值为 00:00:00.0000000（午夜）。 `time` 数据类型支持用户定义的小数秒精度，存储大小根据指定的精度在 3 字节到 6 字节之间变化。|  
 |`datetime2`|`datetime2` 数据类型将 `date` 和 `time` 数据类型的范围和精度组合成单个数据类型。<br /><br /> 默认值和字符串格式与 `date` 和 `time` 数据类型中定义的相同。|  
-|`datetimeoffset`|`datetimeoffset` 数据类型具有 `datetime2` 的所有功能，并附加了时区偏移量。 时区偏移量表示为 [+&#124;-] HH： MM。 HH 是范围从 00 到 14 的 2 位数，表示时区偏移量的小时数。 MM 是范围从 00 到 59 的 2 位数，表示时区偏移量的附加分钟数。 时间格式支持的精度为 100 毫微秒。 必需的 + 或 - 符号指示在 UTC（通用协调时间或格林尼治标准时间）中是加上还是减去时区偏移量以获取本地时间。|  
+|`datetimeoffset`|`datetimeoffset` 数据类型具有 `datetime2` 的所有功能，并附加了时区偏移量。 时区偏移量表示为 [+&#124;-] HH:MM。 HH 是范围从 00 到 14 的 2 位数，表示时区偏移量的小时数。 MM 是范围从 00 到 59 的 2 位数，表示时区偏移量的附加分钟数。 时间格式支持的精度为 100 毫微秒。 必需的 + 或 - 符号指示在 UTC（通用协调时间或格林尼治标准时间）中是加上还是减去时区偏移量以获取本地时间。|  
   
 > [!NOTE]
 > 有关使用 `Type System Version` 关键字的更多信息，请参见 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
@@ -41,12 +41,12 @@ SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 
   
  Transact-SQL SET LANGUAGE 语句隐式设置可确定日期各个部分的顺序的 DATEFORMAT。 可以对连接使用 SET DATEFORMAT Transact-SQL 语句，通过按 MDY、DMY、YMD、YDM、MYD 或 DYM 顺序对日期的各个部分进行排序来消除日期值的歧义。  
   
- 如果没有为连接指定任何 DATEFORMAT，则 SQL Server 将使用与连接关联的默认语言。 例如，在使用美国英语语言设置的服务器上，日期字符串“01/02/03”将解释为 MDY（2003 年 1 月 2 日），而在使用英国英语语言设置的服务器上，将解释为 DMY（2003 年 2 月 1 日）。 年份是通过使用 SQL Server 的截止年份规则确定的，该规则定义用于分配世纪值的截止日期。 有关详细信息，请参阅 SQL Server 联机丛书中的[两位数年份截止选项](https://go.microsoft.com/fwlink/?LinkId=120473)。  
+ 如果没有为连接指定任何 DATEFORMAT，则 SQL Server 将使用与连接关联的默认语言。 例如，在使用美国英语语言设置的服务器上，日期字符串“01/02/03”将解释为 MDY（2003 年 1 月 2 日），而在使用英国英语语言设置的服务器上，将解释为 DMY（2003 年 2 月 1 日）。 年份是通过使用 SQL Server 的截止年份规则确定的，该规则定义用于分配世纪值的截止日期。 有关详细信息，请参阅[两位数年份截止选项](/sql/database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option)。  
   
 > [!NOTE]
 > 从字符串格式转换为 `date`、`time`、`datetime2` 或 `datetimeoffset` 时不支持 YDM 日期格式。  
   
- 有关 SQL Server 如何解释日期和时间数据的详细信息，请参阅 SQL Server 2008 联机丛书中的[使用日期和时间数据](https://go.microsoft.com/fwlink/?LinkID=98361)。  
+ 有关 SQL Server 如何解释日期和时间数据的详细信息，请参阅[使用日期和时间数据](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))。  
   
 ## <a name="datetime-data-types-and-parameters"></a>日期/时间数据类型和参数  
  <xref:System.Data.SqlDbType> 中已添加了下面的枚举，以支持新的日期和时间数据类型。  
@@ -59,10 +59,10 @@ SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 
   
 - `SqlDbType.DateTimeOffSet`  
 
-您可以使用前面<xref:System.Data.SqlClient.SqlParameter> <xref:System.Data.SqlDbType>的枚举之一来指定的数据类型。 
+通过使用 <xref:System.Data.SqlClient.SqlParameter> 枚举之一，可以指定 <xref:System.Data.SqlDbType> 的数据类型。 
 
 > [!NOTE]
-> 不能将的`DbType`属性`SqlParameter`设置为`SqlDbType.Date`。
+> 不能将 `SqlParameter` 的 `DbType` 属性设置为 `SqlDbType.Date`。
 
  也可以通过将 <xref:System.Data.SqlClient.SqlParameter> 对象的 <xref:System.Data.SqlClient.SqlParameter.DbType%2A> 属性设置为特定的 `SqlParameter` 枚举值，按照通常的方式来指定 <xref:System.Data.DbType> 的类型。 <xref:System.Data.DbType> 中已添加了下面的枚举值，以支持 `datetime2` 和 `datetimeoffset` 数据类型：  
   
@@ -80,17 +80,17 @@ SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 
 |time|System.TimeSpan|时间|时间|  
 |datetime2|System.DateTime|DateTime2|DateTime2|  
 |datetimeoffset|System.DateTimeOffset|DateTimeOffset|DateTimeOffset|  
-|DATETIME|System.DateTime|DateTime|DateTime|  
+|datetime|System.DateTime|DateTime|DateTime|  
 |smalldatetime|System.DateTime|DateTime|DateTime|  
   
 ### <a name="sqlparameter-properties"></a>SqlParameter 属性  
  下表描述了与日期和时间数据类型相关的 `SqlParameter` 属性。  
   
-|属性|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|获取或设置值是否可以为 null。 在向服务器发送 null 参数值时，必须指定 <xref:System.DBNull> 而非 `null`（在 Visual Basic 中为 `Nothing`）。 有关数据库 null 值的详细信息，请参阅 [Handling Null Values](handling-null-values.md)。|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|获取或设置用来表示值的最大位数。 对于日期和时间数据类型，忽略此设置。|  
-|<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|获取或设置要为`Time`、 `DateTime2`和`DateTimeOffset`解析的值的时间部分的小数位数。 默认值为 0。这意味着实际小数位数从值推断出来并发送给服务器。|  
+|<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|获取或设置要将 `Time`、`DateTime2` 和 `DateTimeOffset` 值的时间部分解析到的小数位数。 默认值为 0。这意味着实际小数位数从值推断出来并发送给服务器。|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|对于日期和时间数据类型，忽略此设置。|  
 |<xref:System.Data.SqlClient.SqlParameter.Value%2A>|获取或设置参数值。|  
 |<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|获取或设置参数值。|  
@@ -184,7 +184,7 @@ command.Parameters.AddWithValue( _
     "@date", DateTimeOffset.Parse("16660902"))  
 ```  
   
- 参数可以映射到服务器上`date`的`datetime`、或`datetime2`数据类型。 `@date` 使用新的 `datetime` 数据类型时，必须将参数的 <xref:System.Data.SqlDbType> 属性显式设置为实例的数据类型。 如果使用 <xref:System.Data.SqlDbType.Variant> 或隐式提供参数值，则会导致与 `datetime` 和 `smalldatetime` 数据类型的向后兼容问题。  
+ `@date` 参数可映射到服务器上的 `date`、`datetime` 或 `datetime2` 数据类型。 使用新的 `datetime` 数据类型时，必须将参数的 <xref:System.Data.SqlDbType> 属性显式设置为实例的数据类型。 如果使用 <xref:System.Data.SqlDbType.Variant> 或隐式提供参数值，则会导致与 `datetime` 和 `smalldatetime` 数据类型的向后兼容问题。  
   
  下表显示可从哪些 CLR 类型中推断出哪些 `SqlDbTypes`：  
   
@@ -197,7 +197,7 @@ command.Parameters.AddWithValue( _
 ## <a name="retrieving-date-and-time-data"></a>检索日期和时间数据  
  下表说明可用于检索 SQL Server 2008 日期和时间值的方法。  
   
-|SqlClient 方法|描述|  
+|SqlClient 方法|说明|  
 |----------------------|-----------------|  
 |<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|以 <xref:System.DateTime> 结构形式检索指定的列值。|  
 |<xref:System.Data.SqlClient.SqlDataReader.GetDateTimeOffset%2A>|以 <xref:System.DateTimeOffset> 结构形式检索指定的列值。|  
@@ -230,16 +230,16 @@ command.Parameters.AddWithValue( _
   
  小于 0 或大于等于 24 小时的时间值将引发 <xref:System.ArgumentException>。  
   
-## <a name="resources-in-sql-server-2008-books-online"></a>SQL Server 2008 联机丛书中的资源  
- 有关如何在 SQL Server 2008 中使用日期和时间值的更多信息，请参见 SQL Server 2008 联机丛书中的以下资源。  
+## <a name="resources-in-sql-server-books-online"></a>SQL Server 联机丛书中的资源  
+ 有关使用 SQL Server 中的日期和时间值的详细信息，请参阅 SQL Server 联机丛书中的以下资源。  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
-|[日期和时间数据类型及函数（Transact-sql）](https://go.microsoft.com/fwlink/?LinkId=98360)|概述所有 Transact-SQL 日期和时间数据类型和函数。|  
-|[使用日期和时间数据](https://go.microsoft.com/fwlink/?LinkId=98361)|提供有关日期和时间数据类型和函数的信息及相应的用法示例。|  
-|[数据类型（Transact-sql）](https://go.microsoft.com/fwlink/?LinkId=98362)|介绍 SQL Server 2008 中的系统数据类型。|  
+|[日期和时间数据类型及函数 (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|概述所有 Transact-SQL 日期和时间数据类型和函数。|  
+|[使用日期和时间数据](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|提供有关日期和时间数据类型和函数的信息及相应的用法示例。|  
+|[数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)|介绍 SQL Server 中的系统数据类型。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [SQL Server 数据类型映射](../sql-server-data-type-mappings.md)
 - [配置参数和参数数据类型](../configuring-parameters-and-parameter-data-types.md)

@@ -3,12 +3,12 @@ title: SQL Server 数据类型和 ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 9baffc7a439c851ead7ec0e12899adf418174e22
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: f727c69b1dd5c23c6a89911005256de70255fd4c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76979854"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452326"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 数据类型和 ADO.NET
 SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在的数据丢失。 为了保持数据的完整性，适用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient>) 提供了用于处理 SQL Server 数据的类型化访问器方法。 可以使用 <xref:System.Data.SqlDbType> 类中的枚举来指定 <xref:System.Data.SqlClient.SqlParameter> 数据类型。  
@@ -19,9 +19,9 @@ SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在�
   
  可在应用程序中使用的 SQL Server 数据类型取决于您正在使用的 SQL Server 版本。 有关更多信息，请参见下表中的相关版本的 SQL Server 联机丛书。  
   
- **SQL Server 联机丛书**  
+ **SQL Server 文档**  
   
-1. [数据类型（数据库引擎）](https://go.microsoft.com/fwlink/?LinkID=107468)  
+1. [数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)  
   
 ## <a name="in-this-section"></a>本节内容  
  [SqlTypes 和数据集](sqltypes-and-the-dataset.md)  
@@ -42,7 +42,7 @@ SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在�
  [SQL Server 中的 XML 数据](xml-data-in-sql-server.md)  
  说明如何使用从 SQL Server 中检索的 XML 数据。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Data.DataSet>  
  描述 `DataSet` 类及其所有成员。  
   

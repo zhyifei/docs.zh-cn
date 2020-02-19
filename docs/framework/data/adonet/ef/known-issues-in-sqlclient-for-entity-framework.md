@@ -2,12 +2,12 @@
 title: SqlClient 中的已知问题（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: f42ef8dfa1c3041faf7179665cced3c2b9fcf3a6
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 32a1dd22111498ab5b3b75940f5485b2957367e8
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039976"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452495"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>SqlClient 中的已知问题（实体框架）
 本节介绍与 SQL Server .NET Framework 数据提供程序 (SqlClient) 有关的已知问题。  
@@ -43,9 +43,9 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>以正确的 SQL Server 版本为目标  
- 实体框架根据存储模型（ssdl）文件中 Schema 元素的 `ProviderManifestToken` 特性中指定的 SQL Server 版本来面向 Transact-sql 查询。 您实际连接到的 SQL Server 的版本可能不是这一版本。 例如，如果使用 SQL Server 2005，但 `ProviderManifestToken` 特性设置为2008，则生成的 Transact-sql 查询可能无法在服务器上执行。 例如，在 SQL Server 的早期版本上，无法执行使用了 SQL Server 2008 所引入的新日期时间类型的查询。 如果使用 SQL Server 2005，但 `ProviderManifestToken` 属性设置为2000，则生成的 Transact-sql 查询可能比较少，或者可能会出现异常，指出不支持该查询。 有关详细信息，请参阅本主题前面的 "跨和外部 APPLY 运算符" 部分。  
+ 实体框架根据存储模型（ssdl）文件中 Schema 元素的 `ProviderManifestToken` 特性中指定的 SQL Server 版本来面向 Transact-sql 查询。 您实际连接到的 SQL Server 的版本可能不是这一版本。 例如，如果使用 SQL Server 2005，但 `ProviderManifestToken` 属性设置为2008，则生成的 Transact-sql 查询可能不会在服务器上执行。 例如，在 SQL Server 的早期版本上，无法执行使用了 SQL Server 2008 所引入的新日期时间类型的查询。 如果使用 SQL Server 2005，但 `ProviderManifestToken` 属性设置为2000，则生成的 Transact-sql 查询可能比较少，或者可能会出现异常，指出不支持该查询。 有关详细信息，请参阅本主题前面的 "跨和外部 APPLY 运算符" 部分。  
   
- 某些数据库行为取决于为数据库设置的兼容级别。 如果 `ProviderManifestToken` 特性设置为2005，并且你的 SQL Server 版本为2005，但数据库的兼容级别设置为 "80" （SQL Server 2000），则生成的 Transact-sql 将面向 SQL Server 2005，但可能无法按预期执行，因为兼容级别设置。 例如，如果 ORDER BY 列表中的列名与选择器中的列名相同，则可能会丢失排序信息。  
+ 某些数据库行为取决于为数据库设置的兼容级别。 如果 `ProviderManifestToken` 特性设置为2005，并且你的 SQL Server 版本为2005，但数据库的兼容级别设置为 "80" （SQL Server 2000），则生成的 Transact-sql 将面向 SQL Server 2005，但可能无法按预期执行，因为兼容性级别设置。 例如，如果 ORDER BY 列表中的列名与选择器中的列名相同，则可能会丢失排序信息。  
   
 ## <a name="nested-queries-in-projection"></a>投影中的嵌套查询  
  投影子句中的嵌套查询可在服务器上转换为笛卡尔积查询。 在某些后端服务器（包括 SQL Server）上，这会导致 TempDB 表变得很大。 这样会降低服务器性能。  
@@ -57,9 +57,9 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>服务器生成的 GUID 标识值  
- 实体框架支持服务器生成的 GUID 类型标识值，但提供程序必须支持在插入行后返回服务器生成的标识值。 从 SQL Server 2005 开始，可以通过[OUTPUT 子句](https://go.microsoft.com/fwlink/?LinkId=169400)返回 SQL Server 数据库中服务器生成的 GUID 类型。  
+ 实体框架支持服务器生成的 GUID 类型标识值，但提供程序必须支持在插入行后返回服务器生成的标识值。 从 SQL Server 2005 开始，可以通过[OUTPUT 子句](/sql/t-sql/queries/output-clause-transact-sql)返回 SQL Server 数据库中服务器生成的 GUID 类型。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [用于实体框架的 SqlClient](sqlclient-for-the-entity-framework.md)
 - [LINQ to Entities 中的已知问题和注意事项](./language-reference/known-issues-and-considerations-in-linq-to-entities.md)
