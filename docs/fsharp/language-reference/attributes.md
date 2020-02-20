@@ -1,15 +1,15 @@
 ---
-title: 特性
+title: 属性
 description: 了解属性F#如何使元数据应用于编程构造。
 ms.date: 05/16/2016
-ms.openlocfilehash: 223263f5789b0fc7eb2b3ef2905f6436980bd14a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1e42dc61d44f31930a7b34799f28a68a2db69c8c
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424801"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504113"
 ---
-# <a name="attributes"></a>特性
+# <a name="attributes"></a>属性
 
 特性使元数据可以应用于编程构造。
 
@@ -39,7 +39,7 @@ property-name = property-value
 
 特性是一个 .NET 编程构造，使称为*属性*的对象可与类型或其他程序元素相关联。 应用特性的程序元素称为*属性目标*。 该属性通常包含有关其目标的元数据。 在这种情况下，元数据可以是除字段和成员之外的任何类型的数据。
 
-中F#的属性可应用于以下编程构造：函数、方法、程序集、模块、类型（类、记录、结构、接口、委托、枚举、联合等等）、构造函数、属性、字段、参数、类型参数和返回值。 不允许在类、表达式或工作流表达式中的 `let` 绑定上使用特性。
+中F#的属性可应用于以下编程构造：函数、方法、程序集、模块、类型（类、记录、结构、接口、委托、枚举、联合等）、构造函数、属性、字段、参数、类型参数和返回值。 不允许在类、表达式或工作流表达式中的 `let` 绑定上使用特性。
 
 通常，特性声明直接出现在属性目标的声明之前。 可以将多个属性声明一起使用，如下所示：
 
@@ -73,11 +73,11 @@ property-name = property-value
     <td><pre lang="fsharp"><code>[&lt;assembly: AssemblyVersionAttribute("1.0.0.0")&gt;]</code></pre></td>
   </tr>
   <tr>
-    <td>return</td>
+    <td>返回</td>
     <td><pre lang="fsharp"><code>let function1 x : [&lt;return: Obsolete&gt;] int = x + 1</code></pre></td>
   </tr>
   <tr>
-    <td>Field — 字段</td>
+    <td>字段</td>
     <td><pre lang="fsharp"><code>[&lt;field: DefaultValue&gt;] val mutable x: int</code></pre></td>
   </tr>
   <tr>
@@ -89,19 +89,19 @@ property-name = property-value
     <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10</code></pre></td>
   </tr>
   <tr>
-    <td>类型</td>
+    <td>type</td>
     <td>
         <pre lang="fsharp"><code>
-[&lt;type: StructLayout(Sequential)&gt;]
+[&lt;type: StructLayout(LayoutKind.Sequential)&gt;]
 type MyStruct =
-struct
-x : byte
-y : int
-end</code></pre>
+  struct
+    val x : byte
+    val y : int
+  end</code></pre>
     </td>
   </tr>
 </table>
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [F# 语言参考](index.md)

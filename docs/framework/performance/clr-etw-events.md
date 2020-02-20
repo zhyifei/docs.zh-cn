@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: 3763e93ff3a14819f59102a01cf3285e85afd12d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e879dcf385acbc522c0a3573cfa374550ea23333
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716202"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504135"
 ---
 # <a name="clr-etw-events"></a>CLR ETW 事件
 本部分的主题介绍 Windows (ETW) 事件的事件跟踪。 每个事件都有关联的关键字和级别，详见 [CLR ETW 关键字和级别](clr-etw-keywords-and-levels.md)主题。 CLR 有两个事件提供程序：  
@@ -62,7 +62,6 @@ ms.locfileid: "75716202"
 ## <a name="see-also"></a>另请参阅
 
 - [使用 ETW 改善调试和性能优化](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
-- [Windows 性能博客](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
 - [控制 .NET Framework 日志记录](controlling-logging.md)
 - [CLR ETW 提供程序](clr-etw-providers.md)
 - [CLR ETW 关键字和级别](clr-etw-keywords-and-levels.md)

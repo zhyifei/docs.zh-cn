@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: 180cce516a1209711430429a46cb5b718b29f1d9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e7d7d6e60b2f582a579f5811225f4027c37c7876
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716107"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504097"
 ---
 # <a name="controlling-net-framework-logging"></a>控制 .NET Framework 日志记录
 
@@ -17,7 +17,7 @@ ms.locfileid: "75716107"
 
 - Windows 操作系统附带的 [Logman](/windows-server/administration/windows-commands/logman) 和 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 命令行工具。
 
-- [Windows 性能工具包](/windows-hardware/test/wpt/)中的 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 工具。 有关 Xperf 的详细信息，请参阅 [Windows 性能博客](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)。
+- [Windows 性能工具包](/windows-hardware/test/wpt/xperf-command-line-reference)中的 [Xperf](/windows-hardware/test/wpt/) 工具。 有关 Xperf 的详细信息，请参阅 [Windows 性能博客](https://docs.microsoft.com/archive/blogs/pigscanfly/)。
 
 若要捕获 CLR 事件信息，必须在计算机上安装 CLR 提供程序。 若要确认该提供程序已安装，请在命令提示符处键入 `logman query providers`。 将显示提供程序的列表。 此列表应包含与 CLR 提供程序对应的项，如下所示。
 
@@ -27,7 +27,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-如果未列出 CLR 提供程序，则可以通过使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令行工具在 Windows Vista 和更高版本的操作系统上安装该提供程序。 以管理员身份打开命令提示符窗口。 将提示目录更改为 .NET Framework 4 文件夹（%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET 版本 > \）。 此文件夹包含 CLR-ETW.man 文件。 在命令提示符处，键入以下命令来安装 CLR 提供程序：
+如果未列出 CLR 提供程序，则可以通过使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令行工具在 Windows Vista 和更高版本的操作系统上安装该提供程序。 以管理员身份打开“命令提示符”窗口。 将提示目录更改为 .NET Framework 4 文件夹（%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET 版本 > \）。 此文件夹包含 CLR-ETW.man 文件。 在命令提示符处，键入以下命令来安装 CLR 提供程序：
 
 `wevtutil im CLR-ETW.man`
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: e34f7c8a0194e3901453923530a5cd07202801f6
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 1a017267c034fa1d6ea522855b7e0e7f056637ac
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937463"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504023"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>开发和部署 WCF 数据服务
 
@@ -26,7 +26,7 @@ ms.locfileid: "75937463"
 
      WCF 数据服务支持各种数据服务提供程序，这些提供程序使你能够基于来自各种数据源（从关系数据库到后期绑定数据类型）的数据定义数据模型。 有关详细信息，请参阅[数据服务提供程序](data-services-providers-wcf-data-services.md)。
 
-2. **创建数据服务**
+2. **Create the data service**
 
      大多数基本数据服务公开一个从 <xref:System.Data.Services.DataService%601> 类继承的类和一个作为实体容器的命名空间限定名称的 `T` 类型。 有关详细信息，请参阅 [Defining WCF Data Services](defining-wcf-data-services.md)的信息。
 
@@ -80,7 +80,7 @@ ms.locfileid: "75937463"
 
 - HTTP 检查程序在调试数据服务时会非常有帮助，通过它可以检查请求和响应消息的内容。 可以使用任何可显示原始数据包的网络数据包分析器检查发向数据服务的 HTTP 请求和来自数据服务的响应。
 
-- 调试数据服务时，您可能需要从数据服务获取与常规操作过程中的错误有关的详细信息。 通过将 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 属性设置为 `true` 并将数据服务类的 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 特性的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 属性设置为 `true`，可以从数据服务获取其他错误信息。 有关详细信息，请参阅[调试后 WCF 数据服务](https://blogs.msdn.microsoft.com/phaniraj/?m=20086)。 你还可以在 WCF 中启用跟踪，以查看 HTTP 消息层中出现的异常。 有关更多信息，请参见 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)。
+- 调试数据服务时，您可能需要从数据服务获取与常规操作过程中的错误有关的详细信息。 通过将 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 属性设置为 `true` 并将数据服务类的 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 特性的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 属性设置为 `true`，可以从数据服务获取其他错误信息。 有关详细信息，请参阅[调试后 WCF 数据服务](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services)。 你还可以在 WCF 中启用跟踪，以查看 HTTP 消息层中出现的异常。 有关更多信息，请参见 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)。
 
 - 数据服务通常开发为 ASP.NET 应用程序项目，但也可以在 Visual Studio 中将数据服务创建为 ASP.NET 网站项目。 有关这两种类型的项目之间的差异的信息，请参阅[Web 应用程序项目与 Visual Studio 中](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110))的网站项目。
 
@@ -129,4 +129,4 @@ WCF 数据服务在选择承载数据服务的过程方面很灵活。 可以使
 
 - [承载数据服务](hosting-the-data-service-wcf-data-services.md)
 - [确保 WCF Data Services 的安全](securing-wcf-data-services.md)
-- [定义 WCF Data Services](defining-wcf-data-services.md)
+- [Defining WCF Data Services](defining-wcf-data-services.md)
