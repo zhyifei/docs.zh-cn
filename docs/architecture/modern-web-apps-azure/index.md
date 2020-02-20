@@ -3,17 +3,19 @@ title: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序
 description: 本指南提供了使用 ASP.NET Core 和 Azure 生成单片式 Web 应用的端到端指导。
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 739dd607aaa45f73e777a30c6495e329236fee17
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 12/4/2019
+ms.openlocfilehash: c19e5e90cfb96463f744cfb064abe72ee5db2e9f
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295167"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449318"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序
 
-![“架构新式 Web 应用程序”指南的封面图像。](./media/index/web-application-guide-cover-image.png)
+![《架构新式 Web 应用程序》指南的书籍封面图像。](./media/index/web-application-guide-cover-image.png)
+
+**版本 v3.1** - 已更新到 ASP.NET Core v3.1
 
 发布者
 
@@ -25,7 +27,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-版权所有 © 2019 Microsoft Corporation
+版权所有 © 2020 Microsoft Corporation
 
 保留所有权利。 未经发布者书面许可，不得以任何形式或任何方式复制或传播本书中的任何内容。
 
@@ -104,7 +106,7 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 
 请将本指南转发到团队中，这有助于确保对这些注意事项和机会的共同理解。 确保每个人使用共同的术语和基础原则工作，这有助于构建模式和做法的一致应用。
 
-## <a name="references"></a>参考资料
+## <a name="references"></a>reference
 
 - **为服务器应用选择 .NET Core 或 .NET Framework**  
   [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../../standard/choosing-core-framework-server.md)
