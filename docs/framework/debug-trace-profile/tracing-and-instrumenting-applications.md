@@ -13,15 +13,15 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-ms.openlocfilehash: 1dd7317e38b6bee44dda75319c9f7c2a6567e3b4
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2dcdbaf50ed053d43fc2df2c80fe7688e7b3e51f
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216042"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542606"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>跟踪应用程序和在应用程序中插入检测点
-跟踪是在应用程序运行时监视其执行情况的一种方式。 可在开发 .NET Framework 应用程序时向其添加跟踪和调试检测，也可在开发应用程序时或在部署此应用程序之后使用此检测。 可使用 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType>和 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 类将错误和应用程序执行的相关信息记录在日志、文本文件或其他设备中，以供将来分析。  
+跟踪是指应用程序正在运行时监视其执行情况的方式。 可在开发 .NET Framework 应用程序时向其添加跟踪和调试检测，也可在开发应用程序时或在部署此应用程序之后使用此检测。 可使用 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType>和 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 类将错误和应用程序执行的相关信息记录在日志、文本文件或其他设备中，以供将来分析。  
   
  术语“检测”是指监视或测量产品的性能级别和诊断错误的功能。 在编程中，即指应用程序合并以下功能的能力：  
   
@@ -29,7 +29,7 @@ ms.locfileid: "77216042"
   
 - 调试 - 跟踪并修复开发中的应用程序的编程错误。 有关详细信息，请参阅[调试](/visualstudio/debugger/debugger-feature-tour)。  
   
-- 性能计数器 - 可用于跟踪应用程序性能的组件。 有关详细信息，请参阅 [性能计时器](performance-counters.md)。  
+- 性能计数器 - 可用于跟踪应用程序性能的组件。 有关更多信息，请参阅[性能计数器](performance-counters.md)。  
   
 - 事件日志 - 可用于接收和跟踪应用程序执行过程中重要事件的组件。 有关更多信息，请参见 <xref:System.Diagnostics.EventLog> 类。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "77216042"
  <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 类提供了在开发期间或部署之后监视和检查应用程序性能的方法。 例如，您可以使用 <xref:System.Diagnostics.Trace> 类跟踪在已部署的应用程序中发生的特定类型的操作（例如新建数据库连接），因而可以监视该应用程序的效率。  
   
 ## <a name="code-tracing-and-debugging"></a>代码跟踪和调试  
- 在开发过程中，使用 <xref:System.Diagnostics.Debug> 类的输出方法，可以在 Visual Studio 集成开发环境 (IDE) 的“输出”窗口中显示消息。 例如：  
+ 在开发过程中，使用 <xref:System.Diagnostics.Debug> 类的输出方法，可以在 Visual Studio 集成开发环境 (IDE) 的“输出”窗口中显示消息。 例如:  
   
 ```vb  
 Trace.WriteLine("Hello World!")  
@@ -58,7 +58,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  由此，你可以根据应用程序在测试环境中的行为对它进行调试并优化其性能。 在调试版本中调试应用程序时，可以打开 <xref:System.Diagnostics.Debug> 条件特性，以便接收所有调试输出。 当您的应用程序准备好发布时，可以在关闭 <xref:System.Diagnostics.Debug> 条件特性的情况下编译您的发布版本，使编译器不会在最终可执行文件中包含调试代码。 有关详细信息，请参阅[如何：使用跟踪和调试进行条件编译](how-to-compile-conditionally-with-trace-and-debug.md)。 有关应用程序的不同生成配置的详细信息，请参阅[编译和生成](/visualstudio/ide/compiling-and-building-in-visual-studio)。  
   
- 你也可以使用 <xref:System.Diagnostics.Trace> 类的方法来跟踪已安装的应用程序中的代码执行情况。 可以将 [Trace 开关](trace-switches.md)放置到代码中，从而控制是否进行跟踪以及跟踪的范围。 这样即可在生产环境中监视应用程序的状态。 这在业务应用程序中特别重要，因为业务应用程序会在多个计算机中使用多个运行的组件。 可通过配置文件控制如何在部署后使用开关。 有关详细信息，请参阅[如何：创建、初始化和配置跟踪开关](how-to-create-initialize-and-configure-trace-switches.md)。  
+ 你也可以使用 <xref:System.Diagnostics.Trace> 类的方法来跟踪已安装的应用程序中的代码执行情况。 通过将[跟踪开关](trace-switches.md)置于代码中，可控制是否执行跟踪以及执行的范围。 这使你可以监视应用程序在生产环境中的状态。 对使用在多台计算机上运行的多个组件的业务应用程序而言，这一点尤其重要。 可通过配置文件控制如何在部署后使用开关。 有关详细信息，请参阅[如何：创建、初始化和配置跟踪开关](how-to-create-initialize-and-configure-trace-switches.md)。  
   
  开发要对其使用跟踪的应用程序时，应用程序代码中通常要包含跟踪和调试消息。 准备好部署应用程序时，无需打开“调试”条件属性就可编译发布版本。 但是，也可以打开“跟踪”条件属性，以便编译器将跟踪代码包括到可执行文件中。 有关详细信息，请参阅[如何：使用跟踪和调试进行条件编译](how-to-compile-conditionally-with-trace-and-debug.md)。  
   
@@ -79,7 +79,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 1. 请思考部署应用程序后想要现场接收哪种跟踪输出。  
   
-2. 创建一组开关。 有关详细信息，请参阅[如何：配置 Trace 开关](how-to-create-initialize-and-configure-trace-switches.md)。  
+2. 创建一组开关。 有关详细信息，请参阅[如何：配置跟踪开关](how-to-create-initialize-and-configure-trace-switches.md)。  
   
 3. 向应用程序代码添加跟踪语句。  
   
@@ -97,7 +97,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 7. 如果在运行时出现问题，请打开相应的跟踪开关。 有关详细信息，请参阅[配置跟踪开关](how-to-create-initialize-and-configure-trace-switches.md)。  
   
-     跟踪代码向指定目标写入跟踪消息，如屏幕、文本文件或事件日志。 跟踪侦听器集合中附带的侦听器类型确定目标。  
+     跟踪代码向指定目标写入跟踪消息，如屏幕、文本文件或事件日志。 <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> 集合中包含的侦听器类型确定目标。  
   
 8. 分析跟踪消息以确定和了解应用程序中的问题。  
   
@@ -118,20 +118,20 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  下表列出了六个写入跟踪信息的 <xref:System.Diagnostics.Debug> 成员和 <xref:System.Diagnostics.Trace> 方法。  
   
-|方法|输出|  
+|方法|Output|  
 |------------|------------|  
-|**ActualRebinds**|指定的文本；若未指定，则为调用堆栈。 只有指定为“Assert”语句中的自变量的条件为“false”时，才写入输出。|  
-|**失败**|指定的文本；若未指定，则为调用堆栈。|  
-|**写入**|指定的文本。|  
-|WriteIf|如果满足指定为“WriteIf”语句中的自变量的条件，则为指定的文本。|  
-|**WriteLine**|指定的文本和一个回车符。|  
-|WriteLineIf|如果满足指定为“WriteIf”语句中的自变量的条件，则为指定的文本和一个回车符。|  
+|`Assert`|指定的文本；若未指定，则为调用堆栈。 仅当指定为 `Assert` 语句中的参数的条件为**false**时，才写入输出。|  
+|`Fail`|指定的文本；若未指定，则为调用堆栈。|  
+|`Write`|指定的文本。|  
+|`WriteIf`|如果满足指定为 `WriteIf` 语句中的参数的条件，则为指定的文本。|  
+|`WriteLine`|指定的文本和一个回车符。|  
+|`WriteLineIf`|如果满足指定为 `WriteLineIf` 语句中的参数的条件，则为指定的文本和一个回车符。|  
   
- <xref:System.Diagnostics.Trace.Listeners%2A> 集合中所有的侦听器都会接收到上表中介绍的消息，但种类不同的侦听器在接到消息后所执行的操作可能也不同。 例如，<xref:System.Diagnostics.DefaultTraceListener> 将在接收到“Fail”或失败的“Assert”通知时显示一个断言对话框，而 <xref:System.Diagnostics.TextWriterTraceListener> 仅将输出写入它的流中。  
+ <xref:System.Diagnostics.Trace.Listeners%2A> 集合中所有的侦听器都会接收到上表中介绍的消息，但种类不同的侦听器在接到消息后所执行的操作可能也不同。 例如，<xref:System.Diagnostics.DefaultTraceListener> 在收到 `Fail` 或 `Assert` 通知时显示一个断言对话框，但 <xref:System.Diagnostics.TextWriterTraceListener> 只是将输出写入到其流。  
   
  可通过实现自己的侦听器生成自定义结果。 例如，自定义跟踪侦听器可能将消息显示给消息框，或连接到数据库以将消息添加到表中。 所有自定义侦听器都应支持上述 6 种方法。 有关创建开发人员定义的侦听器的详细信息，请参阅 .NET Framework 参考中的 <xref:System.Diagnostics.TraceListener>。  
   
- “Write”和“WriteLine”方法始终写入指定的文本。 “Assert”、“WriteIf”和“WriteLineIf”需要布尔型自变量，该自变量控制它们是否写入指定的文本；只有在表达式为“true”（对于“WriteIf”和“WriteLineIf”），或“false”（对于“Assert”）时，它们才会写入指定的文本。 “Fail”方法始终写入指定的文本。 有关详细信息，请参阅[如何：向应用程序代码添加跟踪语句](how-to-add-trace-statements-to-application-code.md)和 .NET Framework 参考。  
+ `Write` 和 `WriteLine` 方法始终写入指定的文本。 `Assert`、`WriteIf`和 `WriteLineIf` 需要一个布尔参数，用于控制它们是否写入指定的文本;仅当表达式为**true** （对于 `WriteIf` 和 `WriteLineIf`）或**false** （对于 `Assert`）时，它们才会写入指定的文本。 `Fail` 方法始终写入指定的文本。 有关详细信息，请参阅[如何：向应用程序代码添加跟踪语句](how-to-add-trace-statements-to-application-code.md)和 .NET Framework 参考。  
   
 ## <a name="security-concerns"></a>安全问题  
  如果在部署 ASP.NET 应用程序之前未禁用跟踪和调试，你的应用程序可能会泄漏自身的相关信息，从而被恶意程序利用。 有关详细信息，请参阅[如何：使用跟踪和调试进行条件编译](how-to-compile-conditionally-with-trace-and-debug.md)、[编译和生成](/visualstudio/ide/compiling-and-building-in-visual-studio)和[如何：创建、初始化和配置跟踪开关](how-to-create-initialize-and-configure-trace-switches.md)。 也可通过 Internet 信息服务 (IIS) 配置调试。  
