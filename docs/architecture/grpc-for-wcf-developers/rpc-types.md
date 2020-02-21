@@ -2,12 +2,12 @@
 title: 适用于 WCF 开发人员的 gRPC 类型
 description: 查看 WCF 支持的远程过程调用的类型以及它们在 gRPC 中的等效项
 ms.date: 09/02/2019
-ms.openlocfilehash: 64375236da17c0aedbafe1cb441e72a144203358
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 58f097bac61395e6810155e8ae9a6bbf2219ec5e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967273"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503439"
 ---
 # <a name="types-of-rpc"></a>RPC 类型
 
@@ -19,7 +19,7 @@ ms.locfileid: "73967273"
   - 带会话的全双工
 - 单向
 
-可以非常自然地将这些 RPC 类型映射到现有的 gRPC 概念，本章将依次查看每个区域。 [第5章](migrate-wcf-to-grpc.md)将更深入地探讨类似的示例。
+可以非常自然地将这些 RPC 类型映射到现有的 gRPC 概念。 本章将依次介绍每个区域。 [第5章](migrate-wcf-to-grpc.md)将更深入地探讨相似的示例。
 
 | WCF | gRPC |
 | --- | ---- |
@@ -57,19 +57,21 @@ public async Task ShowThing(int thingId)
 }
 ```
 
-如您所见，实现 gRPC 一元 RPC 服务方法与实现 WCF 操作非常相似，不同之处在于使用 gRPC 可以重写基类方法而不是实现接口。 请注意，在服务器上，gRPC 基方法始终返回 <xref:System.Threading.Tasks.Task%601>，不过，客户端同时提供 async 和阻塞方法来调用服务。
+如您所见，实现 gRPC 一元 RPC 服务方法与实现 WCF 操作类似。 不同之处在于，使用 gRPC 时，可以重写基类方法，而不是实现接口。 在服务器上，gRPC 基方法始终返回 <xref:System.Threading.Tasks.Task%601>，尽管客户端同时提供异步和阻塞方法来调用服务。
 
-## <a name="wcf-duplex-one-way-to-client"></a>WCF 双工，客户端单向
+## <a name="wcf-duplex-one-way-to-client"></a>WCF 双工，一种对客户端的方法
 
-WCF 应用程序（具有某些绑定）可以在客户端和服务器之间创建持久性连接，并且在使用 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 属性中指定的*回调接口*关闭连接之前，服务器可以将数据异步发送到客户端。
+WCF 应用程序（具有某些绑定）可以在客户端和服务器之间创建持久性连接。 在连接关闭之前，服务器可以通过使用 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 属性中指定的*回调接口*，将数据异步发送到客户端。
 
-gRPC services 提供类似于消息流的功能。 流在实现方面并不*完全*映射到 WCF 双工服务，但也可以实现相同的结果。
+gRPC services 提供类似于消息流的功能。 流在实现方面并不*完全*映射到 WCF 双工服务，但你可以获得相同的结果。
 
 ### <a name="grpc-streaming"></a>gRPC 流式处理
 
-gRPC 支持从客户端到服务器以及从服务器到客户端创建持久流。 这两种类型的流可以同时处于活动状态;这称为双向流式处理。 流可用于随时间推移的任意异步消息传送，或者用于传递太大的数据集，以便在单个请求或响应中生成和发送。
+gRPC 支持从客户端到服务器以及从服务器到客户端创建持久流。 这两种类型的流可以同时处于活动状态。 此功能称为双向流式处理。 
 
-下面的示例演示了服务器流式处理 RPC。
+可以将流用于一段时间内的任意异步消息传送。 也可以将其用于传递太大的数据集，以便在单个请求或响应中生成和发送。
+
+下面的示例演示了一个服务器流 RPC。
 
 ```protobuf
 service ClockStreamer {
@@ -113,17 +115,17 @@ public async Task TellTheTimeAsync(CancellationToken token)
 ```
 
 > [!NOTE]
-> 服务器流式处理 Rpc 对于订阅样式服务非常有用，还用于发送非常大的数据集，但在内存中生成整个数据集是低效或可能造成的。 但是，流响应的速度不如在单个消息中发送 `repeated` 字段快，因此，不应将规则流式处理用于小型数据集。
+> 服务器流 Rpc 适用于订阅样式服务。 如果在内存中生成整个数据集的效率低下或不可能，则它们也适用于发送大型数据集。 但是，流响应的速度不如在单个消息中发送 `repeated` 字段快。 作为一种规则，流不应用于小型数据集。
 
-### <a name="differences-to-wcf"></a>与 WCF 的差异
+### <a name="differences-from-wcf"></a>与 WCF 的差异
 
 WCF 双工服务使用可具有多个方法的客户端回调接口。 GRPC 服务器流式处理服务只能通过单个流发送消息。 如果需要多个方法，请将消息类型与[Any 字段或字段之一](protobuf-any-oneof.md)一起使用，以发送不同的消息，并在客户端中编写代码来处理这些消息。
 
-在 WCF 中，具有会话的[ServiceContract](xref:System.ServiceModel.ServiceContractAttribute)类将一直保持活动状态，直到关闭连接，并在会话中调用多个方法。 在 gRPC 中，实现方法返回的 `Task` 不应完成，直到关闭连接。
+在 WCF 中，具有会话的[ServiceContract](xref:System.ServiceModel.ServiceContractAttribute)类保持活动状态，直到关闭连接。 可以在会话中调用多个方法。 在 gRPC 中，实现方法返回的 `Task` 不应完成，直到关闭连接。
 
 ## <a name="wcf-one-way-operations-and-grpc-client-streaming"></a>WCF 单向操作和 gRPC 客户端流式处理
 
-WCF 提供返回传输特定确认的单向操作（标记为 `[OperationContract(IsOneWay = true)]`）。 gRPC 服务方法始终返回响应（即使它是空的），并且客户端应始终等待该响应。 对于 gRPC 中的 "火灾和遗忘" 样式消息，可以创建客户端流式处理服务。
+WCF 提供返回传输特定确认的单向操作（标记为 `[OperationContract(IsOneWay = true)]`）。 gRPC 服务方法始终返回响应，即使它为空也是如此。 客户端应始终等待该响应。 对于 gRPC 中的消息传递 "暂时" 样式，您可以创建客户端流式处理服务。
 
 ### <a name="thing_logproto"></a>thing_log proto
 
@@ -187,11 +189,11 @@ public class ThingLogger : IAsyncDisposable
 }
 ```
 
-同样，可以将客户端流式处理 Rpc 用于前面的示例中所示的暂时消息传递 Rpc，还可以将非常大的数据集发送到服务器。 适用于性能的相同警告：对于较小的数据集，请使用 `repeated` 常规消息中的字段。
+如前面的示例所示，可以将客户端流式处理 Rpc 用于暂时消息消息处理。 你还可以使用它们向服务器发送非常大的数据集。 适用于性能的相同警告：对于较小的数据集，请使用 `repeated` 常规消息中的字段。
 
 ## <a name="wcf-full-duplex-services"></a>WCF 全双工服务
 
-WCF 双工绑定支持服务接口和客户端回调接口上的多个单向操作，允许在客户端和服务器之间进行正在进行的会话。 gRPC 支持类似于双向流式处理 Rpc 的内容，其中，两个参数都标记有 `stream` 修饰符。
+在服务接口和客户端回调接口上，WCF 双工绑定支持多个单向操作。 此支持允许在客户端和服务器之间进行正在进行的会话。 gRPC 支持类似于双向流式处理 Rpc 的内容，其中，两个参数都标记有 `stream` 修饰符。
 
 ### <a name="chatproto"></a>chat
 
@@ -226,7 +228,7 @@ public class ChatterService : Chatter.ChatterBase
 }
 ```
 
-在上面的示例中，你可以看到，实现方法接收请求流（`IAsyncStreamReader<MessageRequest>`）和响应流（`IServerStreamWriter<MessageResponse>`），并可以在连接关闭之前读取和写入消息。
+在上面的示例中，你可以看到，实现方法收到请求流（`IAsyncStreamReader<MessageRequest>`）和响应流（`IServerStreamWriter<MessageResponse>`）。 方法可以读取和写入消息，直到关闭连接。
 
 ### <a name="chatter-client"></a>Chatter 客户端
 

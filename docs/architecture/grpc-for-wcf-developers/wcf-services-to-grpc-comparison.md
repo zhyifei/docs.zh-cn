@@ -2,22 +2,22 @@
 title: 为 WCF 开发人员比较 WCF 与 gRPC-gRPC
 description: 用于生成分布式应用程序的 WCF 和 gRPC 框架比较。
 ms.date: 09/02/2019
-ms.openlocfilehash: 312492dcce4bdef61feff0bf924c6df287b9c676
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4f54db76c9512b770b4dd993496d95437dd89753
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966955"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503340"
 ---
 # <a name="comparing-wcf-to-grpc"></a>将 WCF 与 gRPC 进行比较
 
-上一章应为你提供一个很好的 Protobuf，以及 gRPC 如何处理消息。 在处理从 WCF 到 gRPC 的详细转换之前，请务必了解 WCF 中当前可用的功能范围如何在 gRPC 中进行处理，以及当没有 gRPC 等效项时可以使用的解决方法。 具体而言，本章将涵盖以下主题：
+上一章介绍了 Protobuf 和 gRPC 如何处理消息。 在处理从 Windows Communication Foundation （WCF）到 gRPC 的详细转换之前，请务必了解 WCF 中的功能在 gRPC 中的处理方式，以及在没有 gRPC 等效项时可以使用的解决方法。 具体而言，本章将涵盖以下主题：
 
 - 操作和方法
 - 绑定和传输
 - RPC 类型
 - 元数据
-- 错误处理
+- 错误处理。
 - WS\* 协议
 
 ## <a name="grpc-example"></a>gRPC 示例
@@ -37,12 +37,12 @@ service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply);
 }
 
-// The request message containing the user's name.
+// The request message that contains the user's name.
 message HelloRequest {
   string name = 1;
 }
 
-// The response message containing the greetings.
+// The response message that contains the greetings.
 message HelloReply {
   string message = 1;
 }
@@ -74,7 +74,7 @@ namespace HelloGrpc
 }
 ```
 
-本章介绍了 gRPC 的各种概念和功能。
+本章介绍了 gRPC 的不同概念和功能。
 
 >[!div class="step-by-step"]
 >[上一页](protobuf-maps.md)
