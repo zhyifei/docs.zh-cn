@@ -2,12 +2,12 @@
 title: .NET Core 运行时标识符 (RID) 目录
 description: 了解运行时标识符 (RID) 及如何在 .NET Core 中使用 RID。
 ms.date: 02/22/2019
-ms.openlocfilehash: 4369e263f1f46c73f04c65e4124f63c68d133520
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: feb19632f16a047ecfb2dcb697a9b837824a1929
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789906"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451728"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 目录
 
@@ -108,7 +108,7 @@ NuGet 还原包时，它将尝试找到指定运行时的完全匹配项。
   - `win10-arm`
   - `win10-arm64`
 
-有关详细信息，请参阅 [.NET Core 依赖项和要求](install/dependencies.md?tabs=netcore30&pivots=os-windows)。
+有关详细信息，请参阅 [.NET Core 依赖项和要求](install/dependencies.md?pivots=os-windows)。
 
 ## <a name="linux-rids"></a>Linux RID
 
@@ -126,7 +126,7 @@ NuGet 还原包时，它将尝试找到指定运行时的完全匹配项。
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-有关详细信息，请参阅 [.NET Core 依赖项和要求](install/dependencies.md?tabs=netcore30&pivots=os-linux)。
+有关详细信息，请参阅 [.NET Core 依赖项和要求](install/dependencies.md?pivots=os-linux)。
 
 ## <a name="macos-rids"></a>macOS RID
 
@@ -145,7 +145,7 @@ macOS RID 使用较早的“OSX”品牌。 仅列出了公共值。 若要获�
 - macOS 10.14 Mojave（.NET Core 1.1 或更高版本）
   - `osx.10.14-x64`
 
-有关详细信息，请参阅 [.NET Core 依赖项和要求](install/dependencies.md?tabs=netcore30&pivots=os-macos)。
+有关详细信息，请参阅 [.NET Core 依赖项和要求](install/dependencies.md?pivots=os-macos)。
 
 ## <a name="see-also"></a>请参阅
 

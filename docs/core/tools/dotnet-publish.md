@@ -2,18 +2,18 @@
 title: dotnet publish 命令
 description: dotnet publish 命令可将 .NET Core 项目发布到目录。
 ms.date: 05/29/2018
-ms.openlocfilehash: 4612c8cd1f63550905ef7c6d94af050892b1620c
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 0653a7b1e1abd6d7ffd3d21a0410279235b43a28
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117610"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451287"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet publish` - 将应用程序及其依赖项打包到文件夹以部署到托管系统。
 
@@ -21,7 +21,7 @@ ms.locfileid: "71117610"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
@@ -29,7 +29,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies]
@@ -37,7 +37,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
@@ -47,7 +47,7 @@ dotnet publish [-h|--help]
 
 ---
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 `dotnet publish` 编译应用程序、读取 project 文件中指定的所有依赖项并将生成的文件集发布到目录。 输出包括以下资产：
 
@@ -68,7 +68,7 @@ dotnet publish [-h|--help]
 
 ## <a name="options"></a>选项
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `-c|--configuration {Debug|Release}`
 
@@ -113,7 +113,7 @@ dotnet publish [-h|--help]
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-发布针对给定运行时的应用程序。 这将在创建[独立部署 (SCD)](../deploying/index.md#self-contained-deployments-scd) 时使用。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。 默认为发布[依赖于框架的部署 (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)。
+发布针对给定运行时的应用程序。 这将在创建[独立部署 (SCD)](../deploying/index.md#publish-self-contained) 时使用。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。 默认为发布[依赖于框架的部署 (FDD)](../deploying/index.md#publish-runtime-dependent)。
 
 `-v|--verbosity <LEVEL>`
 
@@ -123,7 +123,7 @@ dotnet publish [-h|--help]
 
 定义版本后缀来替换项目文件的版本字段中的星号 (`*`)。
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-c|--configuration {Debug|Release}`
 
@@ -164,7 +164,7 @@ dotnet publish [-h|--help]
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-发布针对给定运行时的应用程序。 这将在创建[独立部署 (SCD)](../deploying/index.md#self-contained-deployments-scd) 时使用。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。 默认为发布[依赖于框架的部署 (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)。
+发布针对给定运行时的应用程序。 这将在创建[独立部署 (SCD)](../deploying/index.md#publish-self-contained) 时使用。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。 默认为发布[依赖于框架的部署 (FDD)](../deploying/index.md#publish-runtime-dependent)。
 
 `-v|--verbosity <LEVEL>`
 
@@ -174,7 +174,7 @@ dotnet publish [-h|--help]
 
 定义版本后缀来替换项目文件的版本字段中的星号 (`*`)。
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
@@ -199,7 +199,7 @@ dotnet publish [-h|--help]
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-发布针对给定运行时的应用程序。 这将在创建[独立部署 (SCD)](../deploying/index.md#self-contained-deployments-scd) 时使用。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。 默认为发布[依赖于框架的部署 (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)。
+发布针对给定运行时的应用程序。 这将在创建[独立部署 (SCD)](../deploying/index.md#publish-self-contained) 时使用。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。 默认为发布[依赖于框架的部署 (FDD)](../deploying/index.md#publish-runtime-dependent)。
 
 `-v|--verbosity <LEVEL>`
 

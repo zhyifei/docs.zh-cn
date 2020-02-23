@@ -2,12 +2,12 @@
 title: .NET Core CLI 扩展性模型
 description: 了解如何扩展 .NET Core CLI。
 ms.date: 04/12/2017
-ms.openlocfilehash: 74da895fb3a3f6c77640a2b9a64acdb2894a954b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 56a9cedc090ddca446c0ee1a60f2ca49590e7635
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920519"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451150"
 ---
 # <a name="net-core-cli-extensibility-model"></a>.NET Core CLI 扩展性模型
 
@@ -32,7 +32,7 @@ ms.locfileid: "76920519"
 上方列出的三种扩展性机制并不相互排斥。 可以单独使用、同时使用或结合使用。 选择何种机制很大程度上取决于希望通过扩展实现的目标。
 
 ## <a name="per-project-based-extensibility"></a>基于每个项目的扩展性
-基于项目的工具是作为 NuGet 包分布的[依赖框架的部署](../deploying/index.md#framework-dependent-deployments-fdd)。 工具仅在项目的上下文中可用，这些工具被该项目引用或为该项目还原。 项目上下文外（例如，包含该项目的目录外）的调用将因无法找到命令而失败。
+基于项目的工具是作为 NuGet 包分布的[依赖框架的部署](../deploying/index.md#publish-runtime-dependent)。 工具仅在项目的上下文中可用，这些工具被该项目引用或为该项目还原。 项目上下文外（例如，包含该项目的目录外）的调用将因无法找到命令而失败。
 
 这些工具非常适合生成服务器，因为除项目文件外不需要任何条件。 生成过程会对所生成的项目运行还原操作，并且工具可用。 语言项目（如 F#）也属于此类别；因为只能采用某种特定语言编写每个项目。
 

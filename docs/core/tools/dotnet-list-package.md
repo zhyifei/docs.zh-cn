@@ -1,19 +1,19 @@
 ---
 title: dotnet list package 命令
 description: 使用“dotnet list package”命令，可以方便地列出项目或解决方案的包引用。
-ms.date: 06/26/2019
-ms.openlocfilehash: fe95f3898c5bd85956f4312eb4d20259227e9ff0
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 02/14/2020
+ms.openlocfilehash: bd275c308c3a213661d5cc6c7e60817620f076a5
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117728"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503737"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
-[!INCLUDE [topic-appliesto-net-core-22plus](../../../includes/topic-appliesto-net-core-22plus.md)]
+ 本文适用于： ✔️ .NET Core 2.2 SDK 及更高版本
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet list package` - 列出项目或解决方案的包引用。
 
@@ -25,7 +25,7 @@ dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-m
 dotnet list package [-h|--help]
 ```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 使用 `dotnet list package` 命令，可以方便地列出特定项目或解决方案的所有 NuGet 包引用。 首先，需要生成项目，以提供必需资产以供此命令处理。 下面的示例展示了 [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 项目的 `dotnet list package` 命令输出：
 
@@ -33,7 +33,7 @@ dotnet list package [-h|--help]
 Project 'SentimentAnalysis' has the following package references
    [netcoreapp2.1]:
    Top-level Package               Requested   Resolved
-   > Microsoft.ML                  0.11.0      0.11.0
+   > Microsoft.ML                  1.4.0       1.4.0
    > Microsoft.NETCore.App   (A)   [2.1.0, )   2.1.0
 
 (A) : Auto-referenced package.
@@ -46,11 +46,12 @@ Project 'SentimentAnalysis' has the following package references
 ```output
 The following sources were used:
    https://api.nuget.org/v3/index.json
+   C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\
 
 Project `SentimentAnalysis` has the following updates to its packages
    [netcoreapp2.1]:
    Top-level Package      Requested   Resolved   Latest
-   > Microsoft.ML         0.11.0      0.11.0     1.0.0-preview
+   > Microsoft.ML         1.4.0       1.4.0      1.5.0-preview
 ```
 
 如果需要确定项目是否有可传递依赖关系，请使用 `--include-transitive` 选项。 如果在项目中添加包，它转而又依赖另一个包，就会出现可传递依赖关系。 下面的示例展示了 [HelloPlugin](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) 项目的 `dotnet list package --include-transitive` 命令运行输出，其中显示顶级包及其依赖的包：
@@ -58,15 +59,8 @@ Project `SentimentAnalysis` has the following updates to its packages
 ```output
 Project 'HelloPlugin' has the following package references
    [netcoreapp3.0]:
-   Top-level Package                      Requested                    Resolved
-   > Microsoft.NETCore.Platforms    (A)   [3.0.0-preview3.19128.7, )   3.0.0-preview3.19128.7
-   > Microsoft.WindowsDesktop.App   (A)   [3.0.0-preview3-27504-2, )   3.0.0-preview3-27504-2
-
-   Transitive Package               Resolved
-   > Microsoft.NETCore.Targets      2.0.0
-   > PluginBase                     1.0.0
-
-(A) : Auto-referenced package.
+   Transitive Package      Resolved
+   > PluginBase            1.0.0
 ```
 
 ## <a name="arguments"></a>自变量
@@ -77,61 +71,61 @@ Project 'HelloPlugin' has the following package references
 
 ## <a name="options"></a>选项
 
-* **`--config <SOURCE>`**
+- **`--config <SOURCE>`**
 
   在搜索版本更高的包时，要使用的 NuGet 源。 需要使用 `--outdated` 选项。
 
-* **`--framework <FRAMEWORK>`**
+- **`--framework <FRAMEWORK>`**
 
   只显示适用于指定[目标框架](../../standard/frameworks.md)的包。 若要指定多个框架，请多次重复此选项。 例如：`--framework netcoreapp2.2 --framework netstandard2.0`。
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   打印出有关命令的简短帮助。
 
-* **`--highest-minor`**
+- **`--highest-minor`**
 
   在搜索版本更高的包时，仅考虑有匹配的主版本号的包。 需要使用 `--outdated` 选项。
 
-* **`--highest-patch`**
+- **`--highest-patch`**
 
   在搜索版本更高的包时，仅考虑有匹配的主版本号和次要版本号的包。 需要使用 `--outdated` 选项。
 
-* **`--include-prerelease`**
+- **`--include-prerelease`**
 
   在搜索版本更高的包时，考虑有预发行版本的包。 需要使用 `--outdated` 选项。
 
-* **`--include-transitive`**
+- **`--include-transitive`**
 
   除了顶级包之外，还列出可传递包。 如果指定此选项，可以获取顶级包所依赖的包列表。
 
-* **`--interactive`**
+- **`--interactive`**
 
   允许命令停止并等待用户输入或操作。 例如，完成身份验证。 自 .NET Core 3.0 SDK 起可用。
 
-* **`--outdated`**
+- **`--outdated`**
 
   列出版本更高的包。
 
-* **`-s|--source <SOURCE>`**
+- **`-s|--source <SOURCE>`**
 
   在搜索版本更高的包时，要使用的 NuGet 源。 需要使用 `--outdated` 选项。
 
 ## <a name="examples"></a>示例
 
-* 列出特定项目的包引用：
+- 列出特定项目的包引用：
 
   ```dotnetcli
   dotnet list SentimentAnalysis.csproj package
   ```
 
-* 列出有更高版本（包括预发行版本）的包引用：
+- 列出有更高版本（包括预发行版本）的包引用：
 
   ```dotnetcli
   dotnet list package --outdated --include-prerelease
   ```
 
-* 列出特定目标框架的包引用：
+- 列出特定目标框架的包引用：
 
   ```dotnetcli
   dotnet list package --framework netcoreapp3.0

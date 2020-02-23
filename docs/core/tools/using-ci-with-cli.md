@@ -2,12 +2,12 @@
 title: 在持续集成 (CI) 中使用 .NET Core SDK 和工具
 description: 了解如何在具有持续集成的生成服务器上使用 .NET Core SDK 及其工具。
 ms.date: 05/18/2017
-ms.openlocfilehash: bdb3913cbe588377d9fbee0f1c054e682629ac96
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6e23a21dd36422a095e56519c9aa28ce2549f7b2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215236"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451033"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持续集成 (CI) 中使用 .NET Core SDK 和工具
 
@@ -32,7 +32,7 @@ macOS 用户应使用 PKG 安装程序。 在 Linux 上，可选择使用基于�
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> 使用安装程序脚本时，不会自动安装本机依赖项。 如果操作系统没有本机依赖项，必须手动安装。 有关详细信息，请参阅 [.NET Core 依赖项和要求](../install/dependencies.md?tabs=netcore30&pivots=os-linux)。
+> 使用安装程序脚本时，不会自动安装本机依赖项。 如果操作系统没有本机依赖项，必须手动安装。 有关详细信息，请参阅 [.NET Core 依赖项和要求](../install/dependencies.md)。
 
 ## <a name="ci-setup-examples"></a>CI 安装示例
 

@@ -2,12 +2,12 @@
 title: 从 DNX 迁移到 .NET Core CLI
 description: 从使用 DNX 工具迁移到 .NET Core CLI 工具。
 ms.date: 06/20/2016
-ms.openlocfilehash: e15e7ce10bb7a36deb2acd2abb9a0bd4ec8cd4a9
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920629"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503829"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>从 DNX 迁移到 .NET Core CLI (project.json)
 
@@ -48,13 +48,13 @@ DNVM 现已停用，因为其功能集可能由于 .NET Core CLI 即将推出的
 
 | DNX 命令                    | CLI 命令    | 描述                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
-| dnx 运行                        | dotnet 运行     | 从源运行代码。                                                                                           |
-| dnu 生成                      | dotnet 生成   | 生成代码的 IL 二进制。                                                                                |
-| dnu 包                       | dotnet 包    | 打包代码的 NuGet 包。                                                                        |
+| dnx 运行                        | `dotnet run`     | 从源运行代码。                                                                                           |
+| dnu 生成                      | `dotnet build`   | 生成代码的 IL 二进制。                                                                                |
+| dnu 包                       | `dotnet pack`    | 打包代码的 NuGet 包。                                                                        |
 | dnx \[command]（例如，“dnx web”） | 不适用\*          | 在 DNX 领域中，按照 project.json 中的定义运行命令。                                                     |
 | dnu 安装                    | 不适用\*          | 在 DNX 领域中，将包安装为一个依赖项。                                                            |
-| dnu 还原                    | dotnet 还原 | 还原 project.json 中指定的依赖项。 （[请参阅注释](#dotnet-restore-note)）                                                            |
-| dnu 发布                    | dotnet 发布 | 使用三种形式（可移植、本机可移植和独立形式）之一发布应用程序以进行部署。 |
+| dnu 还原                    | `dotnet restore` | 还原 project.json 中指定的依赖项。 （[请参阅注释](#dotnet-restore-note)）                                                            |
+| dnu 发布                    | `dotnet publish` | 使用三种形式（可移植、本机可移植和独立形式）之一发布应用程序以进行部署。 |
 | dnu 包装                       | 不适用\*          | 在 DNX 领域中，包装 csproj 中的 project.json。                                                                    |
 | dnu 命令                   | 不适用\*          | 在 DNX 领域中，管理全局安装的命令。                                                           |
 

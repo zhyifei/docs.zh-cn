@@ -3,12 +3,12 @@ title: C# 和 Visual Studio Code 入门
 description: 了解如何使用 Visual Studio Code 创建和调试首个 C# .NET Core 应用。
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: fdf26d67ca06ffb5ae9f8c12aa29819280770d5c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: acd1c300545bc6c107552576180afd7dec6b7382
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715309"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503524"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 和 Visual Studio Code 入门
 
@@ -129,8 +129,13 @@ ms.locfileid: "75715309"
 
 5. 保存更改并再次运行程序。 新消息应显示追加的字符串。
 
+    ```dotnetcli
+    dotnet run
+    ```
+
+    将返回以下输出：
+
     ```console
-    > dotnet run
     Hello World! Happy coding!
     ```
 

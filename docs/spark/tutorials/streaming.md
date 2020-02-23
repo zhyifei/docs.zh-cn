@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/04/2019
 ms.topic: tutorial
-ms.openlocfilehash: d0fe79ef79125c06be9acd8ba80001a33e150adb
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 83d44af080d95ab6f9311ddd3ca4860806757436
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802857"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504041"
 ---
 # <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>教程：使用 .NET for Apache Spark 进行结构化流式处理 
 
@@ -24,7 +24,7 @@ ms.locfileid: "74802857"
 > * 使用 netcat 创建数据流
 > * 使用用户定义的函数和 SparkSQL 分析流式处理数据
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 如果这是你的第一个 .NET for Apache Spark 应用程序，请开始使用[入门教程](get-started.md)以熟悉基础知识。
 
@@ -32,7 +32,7 @@ ms.locfileid: "74802857"
 
 1. 在命令提示符处，运行以下命令来创建新的控制台应用程序：
 
-   ```console
+   ```dotnetcli
    dotnet new console -o mySparkStreamingApp
    cd mySparkStreamingApp
    ```
@@ -41,7 +41,7 @@ ms.locfileid: "74802857"
 
 1. 要在应用中使用 .NET for Apache Spark，请安装 Microsoft.Spark 包。 在控制台中运行以下命令：
 
-   ```console
+   ```dotnetcli
    dotnet add package Microsoft.Spark
    ```
 

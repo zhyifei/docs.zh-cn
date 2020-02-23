@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 92d97ca3efe761c879d0940a02342edb5a8180f0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 60794c4f8a5f9aeb7a4b3cd58c0c9f00e03fa9e7
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920381"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450975"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新增功能
 
@@ -54,7 +54,7 @@ C# 8.0 也是该发布的一部分，包含[可为空引用类型](../../csharp/
 
 ### <a name="default-executables"></a>默认可执行文件
 
-.NET Core 现在默认生成[依赖于框架的可执行文件](../deploying/index.md#framework-dependent-executables-fde)。 对于使用全局安装的 .NET Core 版本的应用程序而言，这是一种新行为。 以前，仅[独立部署](../deploying/index.md#self-contained-deployments-scd)会生成可执行文件。
+.NET Core 现在默认生成[依赖于框架的可执行文件](../deploying/index.md#publish-runtime-dependent)。 对于使用全局安装的 .NET Core 版本的应用程序而言，这是一种新行为。 以前，仅[独立部署](../deploying/index.md#publish-self-contained)会生成可执行文件。
 
 在 `dotnet build` 或 `dotnet publish` 期间，将创建一个与你使用的 SDK 的环境和平台相匹配的可执行文件。 和其他本机可执行文件一样，可以使用这些可执行文件执行相同操作，例如：
 
@@ -301,7 +301,7 @@ Windows 提供丰富的本机 API，包括平面 C API、COM 和 WinRT 的形式
 
 [MSIX](https://docs.microsoft.com/windows/msix/) 是新的 Windows 应用程序包格式。 可以使用它将 .NET Core 3.0 桌面应用程序部署到 Windows 10。
 
-使用 Visual Studio 2019 中的 [Windows 应用打包项目](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)，可以创建包含[独立式](../deploying/index.md#self-contained-deployments-scd) .NET Core 应用的 MSIX 包。
+使用 Visual Studio 2019 中的 [Windows 应用打包项目](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)，可以创建包含[独立式](../deploying/index.md#publish-self-contained) .NET Core 应用的 MSIX 包。
 
 .NET Core 项目文件必须在 `<RuntimeIdentifiers>` 属性中指定支持的运行时：
 

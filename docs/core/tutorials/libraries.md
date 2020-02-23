@@ -3,12 +3,12 @@ title: 使用 .NET Core CLI 开发库
 description: 了解如何使用 .NET Core CLI 创建 .NET Core 库。 将创建一个支持多个框架的库。
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920449"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503504"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>使用 .NET Core CLI 开发库
 
@@ -220,7 +220,7 @@ netstandard1.4/
 
 1. 设置解决方案。 可使用以下命令实现此目的：
 
-   ```bash
+   ```dotnetcli
    mkdir SolutionWithSrcAndTest
    cd SolutionWithSrcAndTest
    dotnet new sln
@@ -241,7 +241,7 @@ netstandard1.4/
 
 1. 导航到测试项目的目录，然后添加对 `MyProject` 中的 `MyProject.Test` 的引用。
 
-   ```bash
+   ```dotnetcli
    cd MyProject.Test
    dotnet add reference ../MyProject/MyProject.csproj
    ```
@@ -300,7 +300,7 @@ let doWork data = async {
 
 可在终端运行下列命令，生成与下列指南相同的结构：
 
-```console
+```dotnetcli
 mkdir AwesomeLibrary && cd AwesomeLibrary
 dotnet new sln
 mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib

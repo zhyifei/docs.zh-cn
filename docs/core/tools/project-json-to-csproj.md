@@ -3,12 +3,12 @@ title: 比较 project.json 和 csproj
 description: 查看 project.json 和 csproj 元素之间的映射。
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714138"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451100"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 和 csproj 属性之间的映射
 
@@ -337,7 +337,7 @@ csproj 中没有等效项。
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
-有关详细信息，请参阅[独立部署 (SCD)](../deploying/index.md#self-contained-deployments-scd)。
+有关详细信息，请参阅[独立部署 (SCD)](../deploying/index.md#publish-self-contained)。
 
 ## <a name="tools"></a>工具
 

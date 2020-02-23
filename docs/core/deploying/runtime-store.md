@@ -2,12 +2,12 @@
 title: 运行时包存储区
 description: 了解如何使用 .NET Core 使用的运行时包存储以面向清单。
 ms.date: 08/12/2017
-ms.openlocfilehash: 8c58ccdb90e5ae9830313f52c19f58629ea5b0a2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737785"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448953"
 ---
 # <a name="runtime-package-store"></a>运行时包存储区
 
@@ -122,11 +122,11 @@ dotnet publish --manifest manifest.xml
 
 ASP.NET Core 隐式存储仅适用于 ASP.NET Core 2.0。 我们强烈建议应用程序使用 ASP.NET Core 2.1 及更高版本，这些版本不使用隐式存储  。 ASP.NET Core 2.1 及更高版本使用共享框架。
 
-当 ASP.NET Core 应用程序部署为[从属框架部署 (FDD)](index.md#framework-dependent-deployments-fdd) 应用程序时，应用程序会隐式使用运行时包存储区功能。 [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) 中的目标包括引用目标系统上的隐式包存储区的清单。 此外，如果 FDD 应用程序依赖 `Microsoft.AspNetCore.All` 包，则会生成仅包含应用程序及其资产的已发布应用程序，而不是 `Microsoft.AspNetCore.All` 元包中列出的包。 假定这些包都位于目标系统上。
+当 ASP.NET Core 应用程序部署为[从属框架部署 (FDD)](index.md#publish-runtime-dependent) 应用程序时，应用程序会隐式使用运行时包存储区功能。 [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) 中的目标包括引用目标系统上的隐式包存储区的清单。 此外，如果 FDD 应用程序依赖 `Microsoft.AspNetCore.All` 包，则会生成仅包含应用程序及其资产的已发布应用程序，而不是 `Microsoft.AspNetCore.All` 元包中列出的包。 假定这些包都位于目标系统上。
 
 安装 .NET Core SDK 后，便会在主机上安装运行时包存储区。 其他安装程序可能会提供运行时包存储区，包括 .NET Core SDK 的 Zip/tarball 安装、`apt-get`、Red Hat Yum、.NET Core Windows Server Hosting 捆绑包和手动运行时包存储区安装。
 
-部署[从属框架部署 (FDD)](index.md#framework-dependent-deployments-fdd) 应用程序时，请确保目标环境中已安装 .NET Core SDK。 如果应用程序部署环境中未安装 ASP.NET Core，可以在项目文件中指定将 \<PublishWithAspNetCoreTargetManifest>  设置为 `false`，从而选择退出隐式存储区，如以下示例所示：
+部署[从属框架部署 (FDD)](index.md#publish-runtime-dependent) 应用程序时，请确保目标环境中已安装 .NET Core SDK。 如果应用程序部署环境中未安装 ASP.NET Core，可以在项目文件中指定将 \<PublishWithAspNetCoreTargetManifest>  设置为 `false`，从而选择退出隐式存储区，如以下示例所示：
 
 ```xml
 <PropertyGroup>
@@ -135,7 +135,7 @@ ASP.NET Core 隐式存储仅适用于 ASP.NET Core 2.0。 我们强烈建议应�
 ```
 
 > [!NOTE]
-> 对于[独立部署 (SCD)](index.md#self-contained-deployments-scd) 应用程序，假定目标系统不一定包含所需的清单包。 因此，对于 SCD 应用程序，不能将 \<PublishWithAspNetCoreTargetManifest>  设置为 `true`。
+> 对于[独立部署 (SCD)](index.md#publish-self-contained) 应用程序，假定目标系统不一定包含所需的清单包。 因此，对于 SCD 应用程序，不能将 \<PublishWithAspNetCoreTargetManifest>  设置为 `true`。
 
 如果使用部署中的清单依赖项（程序集位于 bin  文件夹中）部署应用程序，运行时包存储区不会  在主机上用于相应程序集。 将使用 bin  文件夹程序集，无论它是否位于主机上的运行时包存储区中。
 

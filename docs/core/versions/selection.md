@@ -4,12 +4,12 @@ description: 了解 .NET Core 如何自动查找和选择适用于程序的运�
 author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
-ms.openlocfilehash: 546725db907937dea6fe0739656fb585a8855644
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713976"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450994"
 ---
 # <a name="select-the-net-core-version-to-use"></a>选择要使用的 .NET Core 版本
 
@@ -78,7 +78,7 @@ SDK 命令包括 `dotnet new` 和 `dotnet run`。 .NET Core CLI 必须为每个 
 
 ## <a name="framework-dependent-apps-roll-forward"></a>依赖于框架的应用会前滚
 
-在使用 [`dotnet run`](../tools/dotnet-run.md) 从源运行应用程序时，在使用 [`dotnet myapp.dll`](../tools/dotnet.md#description) 从[框架相关部署  ](../deploying/index.md#framework-dependent-deployments-fdd)运行应用程序时，或使用 `myapp.exe` 从[框架相关可执行文件  ](../deploying/index.md#framework-dependent-executables-fde)运行应用程序时，`dotnet` 可执行文件是应用程序的主机  。
+在使用 [`dotnet run`](../tools/dotnet-run.md) 从源运行应用程序时，在使用 [`dotnet myapp.dll`](../tools/dotnet.md#description) 从[框架相关部署  ](../deploying/index.md#publish-runtime-dependent)运行应用程序时，或使用 `myapp.exe` 从[框架相关可执行文件  ](../deploying/index.md#publish-runtime-dependent)运行应用程序时，`dotnet` 可执行文件是应用程序的主机  。
 
 该主机选择计算机上安装的最新修补程序版本。 例如，如果在项目文件中指定 `netcoreapp2.0`，并且 `2.0.4` 是安装的最新 .NET 运行时，则使用 `2.0.4` 运行时。
 
@@ -101,7 +101,7 @@ SDK 命令包括 `dotnet new` 和 `dotnet run`。 .NET Core CLI 必须为每个 
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>独立部署包括所选的运行时
 
-可以将应用程序作为[独立分发](../deploying/index.md#self-contained-deployments-scd)进行发布  。 此方法可将 .NET Core 运行时和库与应用程序进行捆绑。 独立部署不具有对运行时环境的依赖关系。 在发布时（而不是运行时）选择运行时版本。
+可以将应用程序作为[独立分发](../deploying/index.md#publish-self-contained)进行发布  。 此方法可将 .NET Core 运行时和库与应用程序进行捆绑。 独立部署不具有对运行时环境的依赖关系。 在发布时（而不是运行时）选择运行时版本。
 
 发布进程将选择给定运行时系列中的最新修补程序版本。 例如，`dotnet publish` 将选择 .NET Core 2.0.4（如果它是 .NET Core 2.0 运行时系列中的最新修补程序版本）。 目标框架（包括最新安装的安全修补程序）与应用程序捆绑打包。
 
