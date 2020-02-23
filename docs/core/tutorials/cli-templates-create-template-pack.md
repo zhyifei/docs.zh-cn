@@ -5,12 +5,12 @@ author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 3a72f68f5634c9ee5b137baf12a279130861e61a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5bc926861dd6a501d7c2d24bd5f7c4116cc78b2c
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787841"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503487"
 ---
 # <a name="tutorial-create-a-template-pack"></a>教程：创建模板包
 
@@ -51,8 +51,11 @@ dotnet new console -n templatepack -o .
 
 `-n` 参数将 .csproj  文件名设置为 templatepack.csproj  。 `-o` 参数将在当前目录中创建文件。 应看到类似于以下输出的结果。
 
+```dotnetcli
+dotnet new console -n templatepack -o .
+```
+
 ```console
-C:\working> dotnet new console -n templatepack -o .
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -109,8 +112,11 @@ dotnet pack
 
 此命令将生成项目并在其中创建一个 NuGet 包，具体应为 working\bin\Debug  文件夹。
 
+```dotnetcli
+dotnet pack
+```
+
 ```console
-C:\working> dotnet pack
 Microsoft (R) Build Engine version 16.2.0-preview-19278-01+d635043bd for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -146,8 +152,11 @@ Class library                                     classlib              [C#], F#
 
 无论如何安装模板包，即无论是直接使用 .nupkg  文件还是通过 NuGet 源安装，删除模板包的操作都是一样的。 使用要卸载的模板的 `<PackageId>`。 可以通过运行 `dotnet new -u` 命令获取已安装的模板列表。
 
+```dotnetcli
+dotnet new -u
+```
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
