@@ -2,14 +2,13 @@
 title: 关于 .NET 微服务和 Web 应用中的授权
 description: .NET 微服务和 Web 应用程序中的安全性 - 了解 ASP .NET Core 应用程序中的主要授权选项（基于角色和基于策略）。
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: 36cd8eaf7ffe78a29762398044dc1803adc1b200
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 01/30/2020
+ms.openlocfilehash: f6b69faceac9a9b4819212cc04f89080f3ddad56
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675654"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501767"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>关于 .NET 微服务和 Web 应用中的授权
 
@@ -86,8 +85,10 @@ services.AddAuthorization(options =>
 {
     options.AddPolicy("AdministratorsOnly", policy =>
         policy.RequireRole("Administrator"));
+
     options.AddPolicy("EmployeesOnly", policy =>
         policy.RequireClaim("EmployeeNumber"));
+
     options.AddPolicy("Over21", policy =>
         policy.Requirements.Add(new MinimumAgeRequirement(21)));
 });
