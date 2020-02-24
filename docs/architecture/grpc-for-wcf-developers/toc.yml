@@ -12,7 +12,7 @@
           href: interface-definition-language.md
         - name: 网络协议
           href: network-protocols.md
-        - name: 为什么向 WCF 开发人员推荐 gRPC
+        - name: 我们为什么建议适用于 WCF 开发人员的 gRPC
           href: Why-grpc.md
     - name: 协议缓冲区
       href: protocol-buffers.md
@@ -79,7 +79,7 @@
           href: docker.md
         - name: Kubernetes
           href: kubernetes.md
-        - name: gRPC 和服务网格
+        - name: 服务网格
           href: service-mesh.md
         - name: 负载均衡
           href: load-balancing.md
