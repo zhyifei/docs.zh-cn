@@ -2,14 +2,13 @@
 title: 保护 .NET 微服务和 Web 应用程序
 description: .NET 微服务和 Web 应用中的安全性 - 了解 ASP.NET Core Web 应用中的身份验证选项。
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: 6d318f4efc6958610947f164d6ca63634f3d7db5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 01/30/2020
+ms.openlocfilehash: f82212956f5492a51ec99d092e1a5131d1b31313
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777214"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501652"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>确保 .NET 微服务和 Web 应用的安全性
 
@@ -37,17 +36,48 @@ ms.locfileid: "76777214"
 
 在 ASP.NET Core 中用于标识应用程序用户的主要机制是 [ASP.NET Core 标识](/aspnet/core/security/authentication/identity)成员身份系统。 ASP.NET Core 标识会将用户信息（包括登录信息、角色和声明）存储在由开发人员配置的数据存储中。 通常情况下，ASP.NET Core 标识数据存储是 `Microsoft.AspNetCore.Identity.EntityFrameworkCore` 包中提供的实体框架存储。 但是，自定义存储或其他第三方包可用于将标识信息存储在 Azure 表存储、CosmosDB 或其他位置。
 
-下面的代码来自选中单个用户帐户身份验证的 ASP.NET Core Web 应用程序项目模板。 它演示如何使用 Startup.ConfigureServices 方法中的 EntityFramework.Core 配置 ASP.NET Core 标识。
+> [!TIP]
+> ASP.NET Core 2.1 及更高版本提供了 [ASP.NET Core 标识](/aspnet/core/security/authentication/identity)作为 [Razor 类库](/aspnet/core/razor-pages/ui-class)，因此项目中不会有很多必要的代码，这与以前版本的情况相同。 有关如何根据需要自定义标识代码的详细信息，请参阅 [ASP.NET Core 项目中的基架标识](/aspnet/core/security/authentication/scaffold-identity)。
+
+下面的代码来自选中单个用户帐户身份验证的 ASP.NET Core Web 应用程序 MVC 3.1 项目模板。 它演示如何使用 `Startup.ConfigureServices` 方法中的 Entity Framework Core 配置 ASP.NET Core 标识。
 
 ```csharp
-services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-    services.AddIdentity<ApplicationUser, IdentityRole>()
-        .AddEntityFrameworkStores<ApplicationDbContext>()
-        .AddDefaultTokenProviders();
+public void ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddDbContext<ApplicationDbContext>(options =>
+        options.UseSqlServer(
+            Configuration.GetConnectionString("DefaultConnection")));
+
+    services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+        .AddEntityFrameworkStores<ApplicationDbContext>();
+
+    services.AddRazorPages();
+    //...
+}
 ```
 
-配置 ASP.NET Core 标识后，可以通过调用服务的 `Startup.Configure` 方法中的 app.UseIdentity，启用该标识。
+配置 ASP.NET Core 标识后，可以通过添加服务的 `Startup.Configure` 方法中的以下代码所示的 `app.UseAuthentication()` 和 `endpoints.MapRazorPages()`，启用该标识：
+
+```csharp
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    //...
+    app.UseRouting();
+
+    app.UseAuthentication();
+    app.UseAuthorization();
+
+    app.UseEndpoints(endpoints =>
+    {
+        endpoints.MapRazorPages();
+    });
+    //...
+}
+```
+
+> [!IMPORTANT]
+> 上述代码中的行必须采用标识所示的顺序才能正常工作  。
 
 使用 ASP.NET Core 标识可支持多个方案：
 
@@ -65,7 +95,27 @@ ASP.NET Core 标识还支持[双因素身份验证](/aspnet/core/security/authen
 
 ASP.NET Core 还支持使用[外部身份验证提供程序](/aspnet/core/security/authentication/social/)，使用户通过 [OAuth 2.0](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2) 流登录。 这意味着用户可从 Microsoft、Google、Facebook 或 Twitter 等提供程序中使用现有身份验证流程登录，并将这些标识与应用程序中的 ASP.NET Core 标识相关联。
 
-若要使用外部身份验证，请在应用程序的 HTTP 请求处理管道中包括相应的身份验证中间件。 此中间件负责处理从身份验证提供程序返回 URI 路由的请求，捕获标识信息，并实现通过 SignInManager.GetExternalLoginInfo 方法提供该信息。
+若要使用外部身份验证，除了包括在使用 `app.UseAuthentication()` 方法之前提到的身份验证中间件以外，还必须在 `Startup` 中注册外部提供程序，如以下示例中所示：
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+        .AddEntityFrameworkStores<ApplicationDbContext>();
+
+    services.AddAuthentication()
+        .AddMicrosoftAccount(microsoftOptions =>
+        {
+            microsoftOptions.ClientId = Configuration["Authentication:Microsoft:ClientId"];
+            microsoftOptions.ClientSecret = Configuration["Authentication:Microsoft:ClientSecret"];
+        })
+        .AddGoogle(googleOptions => { ... })
+        .AddTwitter(twitterOptions => { ... })
+        .AddFacebook(facebookOptions => { ... });
+    //...
+}
+```
 
 下表显示常用的外部身份验证提供程序及其关联的 NuGet 包：
 
@@ -76,56 +126,21 @@ ASP.NET Core 还支持使用[外部身份验证提供程序](/aspnet/core/securi
 | **Facebook**  | **Microsoft.AspNetCore.Authentication.Facebook**         |
 | **Twitter**   | **Microsoft.AspNetCore.Authentication.Twitter**          |
 
-在所有情况下，中间件注册与 `Startup.Configure` 中的 `app.Use{ExternalProvider}Authentication` 类似的对注册方法的调用。 根据提供程序的需要，这些注册方法会采用包含应用程序 ID 和机密信息（例如密码）的选项对象。 外部身份验证提供程序要求注册应用程序（如 [ASP.NET Core 文档](/aspnet/core/security/authentication/social/)所述），以便通知用户哪些应用程序正在请求访问其标识。
+在所有情况下，必须完成与供应商相关的应用程序注册过程，并且通常涉及：
 
-在 `Startup.Configure` 中注册中间件后，即可提示用户通过任何控制器操作进行登录。 若要执行此操作，可以创建 `AuthenticationProperties` 对象，其中包含身份验证提供程序的名称和重定向 URL。 随后，可返回一个传递 `AuthenticationProperties` 对象的质询响应。 下面的代码显示此响应的示例。
+1. 获取客户端应用程序 ID。
+2. 获取客户端应用程序密码。
+3. 配置由授权中间件和注册的提供程序处理的重定向 URL
+4. （可选）配置注销 URL 以正确处理单一登录 (SSO) 方案中的注销。
 
-```csharp
-var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider,
-    redirectUrl);
-return Challenge(properties, provider);
-```
+有关为外部提供程序配置应用的详细信息，请参阅 [ASP.NET Core 文档中的外部提供程序身份验证](/aspnet/core/security/authentication/social/)。
 
-redirectUrl 参数包括用户通过身份验证后，外部提供程序应重定向到的 URL。 该 URL 应表示基于外部标识信息使用户登录的操作，如以下简化示例所示：
+> [!TIP]
+所有详细信息都由之前提到的授权中间件和服务处理。 因此，除了注册之前提到的身份验证提供程序之外，在 Visual Studio 中创建 ASP.NET 代码 Web 应用程序项目时，必须选择“单个用户帐户”  身份验证选项，如图 9-3 所示。
 
-```csharp
-// Sign in the user with this external login provider if the user
-// already has a login.
-var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false);
+![“新建 ASP.NET Core Web 应用程序”对话框的屏幕截图。](./media/index/select-individual-user-account-authentication-option.png)
 
-if (result.Succeeded)
-{
-    return RedirectToLocal(returnUrl);
-}
-else
-{
-    ApplicationUser newUser = new ApplicationUser
-    {
-        // The user object can be constructed with claims from the
-        // external authentication provider, combined with information
-        // supplied by the user after they have authenticated with
-        // the external provider.
-        UserName = info.Principal.FindFirstValue(ClaimTypes.Name),
-        Email = info.Principal.FindFirstValue(ClaimTypes.Email)
-    };
-    var identityResult = await _userManager.CreateAsync(newUser);
-    if (identityResult.Succeeded)
-    {
-        identityResult = await _userManager.AddLoginAsync(newUser, info);
-        if (identityResult.Succeeded)
-        {
-            await _signInManager.SignInAsync(newUser, isPersistent: false);
-        }
-        return RedirectToLocal(returnUrl);
-    }
-}
-```
-
-在 Visual Studio 中创建 ASP.NET Core Web 应用程序项目时，如果选择“单个用户帐户”  身份验证选项，则使用外部提供程序进行登录所需的所有代码已在项目中，如图 9-3 所示。
-
-![“新建 ASP.NET Core Web 应用程序”对话框的屏幕截图。](./media/index/select-external-authentication-option.png)
-
-**图 9-3**。 创建 Web 应用程序项目时，选择一个用于使用外部身份验证的选项
+**图 9-3**。 在 Visual Studio 2019 中创建 Web 应用程序项目时，选择用于使用外部身份验证的“单个用户帐户”选项。
 
 除了之前列出的外部身份验证提供程序外，还提供第三方包，其中提供可用于使用多个外部身份验证提供程序的中间件。 有关列表，请参阅 GitHub 上的 [AspNet.Security.OAuth.Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) 存储库。
 
@@ -147,31 +162,36 @@ else
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     //…
-    // Configure the pipeline to use authentication
     app.UseAuthentication();
     //…
-    app.UseMvc();
+    app.UseEndpoints(endpoints =>
+    {
+        //...
+    });
 }
 
 public void ConfigureServices(IServiceCollection services)
 {
     var identityUrl = Configuration.GetValue<string>("IdentityUrl");
     var callBackUrl = Configuration.GetValue<string>("CallBackUrl");
+    var sessionCookieLifetime = configuration.GetValue("SessionCookieLifetimeMinutes", 60);
 
     // Add Authentication services
 
     services.AddAuthentication(options =>
     {
         options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     })
-    .AddCookie()
+    .AddCookie(setup => setup.ExpireTimeSpan = TimeSpan.FromMinutes(sessionCookieLifetime))
     .AddOpenIdConnect(options =>
     {
         options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-        options.Authority = identityUrl;
-        options.SignedOutRedirectUri = callBackUrl;
+        options.Authority = identityUrl.ToString();
+        options.SignedOutRedirectUri = callBackUrl.ToString();
+        options.ClientId = useLoadTest ? "mvctest" : "mvc";
         options.ClientSecret = "secret";
+        options.ResponseType = useLoadTest ? "code id_token token" : "code id_token";
         options.SaveTokens = true;
         options.GetClaimsFromUserInfoEndpoint = true;
         options.RequireHttpsMetadata = false;
@@ -218,12 +238,16 @@ public void ConfigureServices(IServiceCollection services)
 IdentityServer4 使用自定义 IClientStore 类型提供的内存中资源和客户端的示例配置可能类似于以下示例：
 
 ```csharp
-// Add IdentityServer services
-services.AddSingleton<IClientStore, CustomClientStore>();
-services.AddIdentityServer()
-    .AddSigningCredential("CN=sts")
-    .AddInMemoryApiResources(MyApiResourceProvider.GetAllResources())
-    .AddAspNetIdentity<ApplicationUser>();
+public IServiceProvider ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddSingleton<IClientStore, CustomClientStore>();
+    services.AddIdentityServer()
+        .AddSigningCredential("CN=sts")
+        .AddInMemoryApiResources(MyApiResourceProvider.GetAllResources())
+        .AddAspNetIdentity<ApplicationUser>();
+    //...
+}
 ```
 
 ### <a name="consume-security-tokens"></a>使用安全令牌
@@ -241,7 +265,10 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     // Configure the pipeline to use authentication
     app.UseAuthentication();
     //…
-    app.UseMvc();
+    app.UseEndpoints(endpoints =>
+    {
+        //...
+    });
 }
 
 public void ConfigureServices(IServiceCollection services)
@@ -252,8 +279,8 @@ public void ConfigureServices(IServiceCollection services)
 
     services.AddAuthentication(options =>
     {
-        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultAuthenticateScheme = AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme;
 
     }).AddJwtBearer(options =>
     {

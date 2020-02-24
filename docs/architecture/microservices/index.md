@@ -1,19 +1,19 @@
 ---
 title: .NET 微服务。 适用于容器化 .NET 应用程序的体系结构
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务可是模块化且可独立部署的服务。 （适用于 Linux 和 Windows）的 Docker 容器可将服务及其依赖项绑定到单个单元，使该单元在一个独立的环境中运行，因而可简化部署和测试。
-ms.date: 01/07/2019
-ms.openlocfilehash: 7fa4935fe56ca873a5311812637964083e34170e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 01/30/2020
+ms.openlocfilehash: 5da167de1ffd2169aea44b9872281e71c87927b1
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089912"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502628"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服务：适用于容器化 .NET 应用程序的体系结构
 
 ![封面](./media/cover-small.png)
 
-**版本 v2.2** - 已更新到 ASP.NET Core 2.2
+**版本 v3.1** - 已更新到 ASP.NET Core v3.1
 
 本指南介绍如何使用容器开发基于微服务的应用程序并对其进行管理。 本指南探讨使用 .NET Core 和 Docker 容器的体系结构设计和实现方法。
 
@@ -47,7 +47,7 @@ Docker 正在逐渐成为容器行业的事实标准，受到 Windows 和 Linux 
 
 ## <a name="version"></a>Version
 
-本指南已进行了修订，涵盖 .NET Core 2.2 版本以及与 .NET Core 2.2 同期的同一“批”技术  （即 Azure 和其他第三方技术）的许多其他更新。 这就是书本版本也更新到 2.2 的原因  。
+本指南已进行了修订，涵盖 .NET Core 3.1  版本以及与 .NET Core 3.1 同期的同一“批”技术（即 Azure 和其他第三方技术）的许多其他更新。 这就是书本版本也更新到 3.1 的原因  。
 
 ## <a name="what-this-guide-does-not-cover"></a>本指南未涵盖的内容
 
@@ -124,7 +124,7 @@ eShopOnContainers 应用程序是用于 .NET Core 和旨在使用 Docker 容器�
 >
 > Microsoft .NET 团队高级项目经理 Nish Anil 
 >
-> **Dylan Reisenberger**，Polly 的架构师兼开发主管
+> **Dylan Reisenberger**，Polly的架构师兼开发主管
 >
 > **Steve "ardalis" Smith** - 软件设计师及培训师 - [Ardalis.com](https://ardalis.com)
 >
@@ -146,7 +146,7 @@ eShopOnContainers 应用程序是用于 .NET Core 和旨在使用 Docker 容器�
 >
 > **Charles Lowell**，Microsoft VS CAT 团队的软件工程师
 >
-> **Miguel Veloso**，Turing Challenge 的高级顾问
+> **Miguel Veloso**，Plain Concepts 的软件开发工程师
 
 ## <a name="copyright"></a>Copyright
 
@@ -162,7 +162,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-版权所有 © 2019 Microsoft Corporation
+版权所有 © 2020 Microsoft Corporation
 
 保留所有权利。 未经发布者书面许可，不得以任何形式或任何方式复制或传播本书中的任何内容。
 
@@ -179,4 +179,4 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 所有其他标记和徽标均为其各自所有者的财产。
 
 >[!div class="step-by-step"]
->[下一篇](container-docker-introduction/index.md)
+>[下一页](container-docker-introduction/index.md)

@@ -1,13 +1,13 @@
 ---
-title: 实现具有恢复能力的应用程序
-description: 了解恢复能力，这是微服务体系结构中的核心概念。 必须了解如何适当地处理瞬间失败，因为将会发生这些失败。
-ms.date: 10/16/2018
-ms.openlocfilehash: 766349e72389f848b0a741b020707cc7acf3410d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+title: 实现可复原的应用程序
+description: 了解恢复能力，这是微服务体系结构中的核心概念。 必须了解如何在发生瞬间失败时进行适当的处理。
+ms.date: 01/30/2020
+ms.openlocfilehash: ccdb2470c727ad4bd89c4e0634da8564b8010e63
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295125"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502655"
 ---
 # <a name="implement-resilient-applications"></a>实现可复原的应用程序
 
@@ -18,6 +18,16 @@ ms.locfileid: "70295125"
 设计和部署基于微服务的应用程序已经非常具有挑战性。 然而还需要让应用程序在必然发生某种故障的环境中保持正常运行。 因此，应用程序应具有恢复能力。 应将其设计为能够处理部分故障，如网络中断或者云中节点或 VM 故障。 甚至将微服务（容器）移动到群集内的另一个节点，也可能导致应用程序出现间歇性的功能短缺故障。
 
 应用程序的各个组件还应涵盖运行状况监视功能。 遵循本章节中的准则，可创建这样的应用程序：即使在基于云的复杂部署中出现短暂停机或暂时中断，它也能平稳运行。
+
+>[!IMPORTANT]
+> 在版本 3.0.0 之前，eShopOnContainer 一直在使用 [Polly 库](http://www.thepollyproject.org/)通过[类型化客户端](./use-httpclientfactory-to-implement-resilient-http-requests.md)实现复原。
+>
+> 从版本 3.0.0 开始，HTTP 调用复原通过使用 [Linkerd 网格](https://linkerd.io/)来实现，该网格在 Kubernetes 群集内以透明且可配置的方式处理重试，而不必在代码中处理这些问题。
+>
+> Polly 库仍用于向数据库连接添加复原能力，尤其是在启动服务时。
+
+>[!WARNING]
+> 本部分中的所有代码示例在使用 Linkerd 之前都是有效的，不会进行更新以反映当前实际代码。 因此，它们在本部分的上下文中是有意义的。
 
 >[!div class="step-by-step"]
 >[上一页](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)

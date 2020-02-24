@@ -250,17 +250,23 @@
   items:
     - name: 概述
       href: tools/index.md
-    - name: 工具
+    - name: 全局和本地工具
       expanded: true
       items:
-        - name: 全局工具
-          expanded: true
+        - name: 工具管理方式
+          href: tools/global-tools.md
+        - name: 教程
           items:
-            - name: 概述
-              href: tools/global-tools.md
-            - name: 创建全局工具
+            - name: 创建工具
+              displayName: tools
               href: tools/global-tools-how-to-create.md
-        - name: 排查工具使用问题
+            - name: 安装和使用全局工具
+              displayName: tools
+              href: tools/global-tools-how-to-use.md
+            - name: 安装和使用本地工具
+              displayName: tools
+              href: tools/local-tools-how-to-use.md
+        - name: 排查工具问题
           href: tools/troubleshoot-usage-issues.md
     - name: 提升的访问权限
       href: tools/elevated-access.md
@@ -320,6 +326,10 @@
               href: tools/dotnet-tool-install.md
             - name: dotnet tool list
               href: tools/dotnet-tool-list.md
+            - name: dotnet tool restore
+              href: tools/dotnet-tool-restore.md
+            - name: dotnet tool run
+              href: tools/dotnet-tool-run.md
             - name: dotnet tool uninstall
               href: tools/dotnet-tool-uninstall.md
             - name: dotnet tool update
