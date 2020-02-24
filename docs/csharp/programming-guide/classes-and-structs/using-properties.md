@@ -6,12 +6,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 5f4697ea518e7fe03df4ecac9d748386a8ac6313
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d873f626b660bb6bd94710add4543e21e11823d6
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705400"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452014"
 ---
 # <a name="using-properties-c-programming-guide"></a>使用属性（C# 编程指南）
 
@@ -53,7 +53,7 @@ ms.locfileid: "75705400"
 
 ## <a name="the-set-accessor"></a>set 访问器
 
-`set` 访问器类似于返回类型为 [void](../../language-reference/keywords/void.md) 的方法。 它使用名为 `value` 的隐式参数，该参数的类型为属性的类型。 在下面的示例中，将 `set` 访问器添加到 `Name` 属性：
+`set` 访问器类似于返回类型为 [void](../../language-reference/builtin-types/void.md) 的方法。 它使用名为 `value` 的隐式参数，该参数的类型为属性的类型。 在下面的示例中，将 `set` 访问器添加到 `Name` 属性：
 
 [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]
 

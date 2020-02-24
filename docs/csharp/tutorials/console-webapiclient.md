@@ -3,12 +3,12 @@ title: 使用 .NET Core 创建 REST 客户端
 description: 此教程将介绍 .NET Core 和 C# 语言的许多功能。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: eb7946d669de60c3469ca8098e40b159082ea270
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: f85d50b222d06caa045e22b452d0902aaac66088
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921090"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503975"
 ---
 # <a name="rest-client"></a>REST 客户端
 
@@ -51,7 +51,7 @@ dotnet new console --name WebApiClient
 
 你将需要此应用程序的 `System.Runtime.Serialization.Json` 包。 通过运行以下 [.NET CLI](../../core/tools/dotnet-add-package.md) 命令，将其添加到项目：
 
-```console
+```dotnetcli
 dotnet add package System.Text.Json
 ```
 

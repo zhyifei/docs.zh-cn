@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: caf12296b208b3d2e57c3a74300cced225e4db66
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 38ca93f62a066bade988a89b704fca26368b0b2b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738754"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504157"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>使用 ML.NET CLI 分析情绪
 
@@ -83,7 +83,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
 1. 运行以下 ML.NET CLI 命令：
 
     ```console
-    mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
+    mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
     ```
 
     此命令运行 **`mlnet auto-train` 命令**：
@@ -97,11 +97,11 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
 
     <!-- markdownlint-disable MD023 MD025 -->
 
-    # <a name="windowstabwindows"></a>[Windows](#tab/windows)
+    # <a name="windows"></a>[Windows](#tab/windows)
 
     ![PowerShell 上的 ML.NET CLI auto-train](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)
 
-    # <a name="macos-bashtabmacosbash"></a>[macOS Bash](#tab/macosbash)
+    # <a name="macos-bash"></a>[macOS Bash](#tab/macosbash)
 
     ![PowerShell 上的 ML.NET CLI auto-train](./media/mlnet-cli/mlnet-auto-train-binary-classification-bash.gif)
 
@@ -174,42 +174,42 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
     }
     ```
 
-- 第一行代码创建运行 ML.NET 代码时需要的 `MLContext` 对象。
+    - 第一行代码创建运行 ML.NET 代码时需要的 `MLContext` 对象。
 
-- 第二行代码因不需要训练模型而被注释，这是因为模型已经由 CLI 工具进行训练并保存到模型的序列化 .zip 文件中。 但是，如果想要查看 CLI *“如何训练模型”* ，可以取消注释该行并运行/调试用于该特定 ML 模型的训练代码。
+    - 第二行代码因不需要训练模型而被注释，这是因为模型已经由 CLI 工具进行训练并保存到模型的序列化 .zip 文件中。 但是，如果想要查看 CLI *“如何训练模型”* ，可以取消注释该行并运行/调试用于该特定 ML 模型的训练代码。
 
-- 在第三行代码中，通过提供序列化模型 .zip 文件的路径，使用 `mlContext.Model.Load()` API 从模型 .zip 文件加载模型。
+    - 在第三行代码中，通过提供序列化模型 .zip 文件的路径，使用 `mlContext.Model.Load()` API 从模型 .zip 文件加载模型。
 
-- 在第四行代码中，使用 `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` API 加载/创建 `PredictionEngine` 对象。 无论何时想要针对单个数据示例（在本例中，一段用于预测其情绪的文本）进行预测，都需要 `PredictionEngine` 对象。
+    - 在第四行代码中，使用 `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` API 加载/创建 `PredictionEngine` 对象。 无论何时想要针对单个数据示例（在本例中，一段用于预测其情绪的文本）进行预测，都需要 `PredictionEngine` 对象。
 
-- 第五行代码是通过调用函数 `CreateSingleDataSample()` 来创建要用于预测的*单一示例数据*的位置。 由于 CLI 工具不知道要使用哪种示例数据，它在该函数中将加载数据集的第一行。 但是，对于本例，还可以通过更新实现 `CreateSingleDataSample()` 函数的更简单代码来创建自己的“硬编码”数据，而不是该函数的当前实现：
+    - 第五行代码是通过调用函数 `CreateSingleDataSample()` 来创建要用于预测的*单一示例数据*的位置。 由于 CLI 工具不知道要使用哪种示例数据，它在该函数中将加载数据集的第一行。 但是，对于本例，还可以通过更新实现 `CreateSingleDataSample()` 函数的更简单代码来创建自己的“硬编码”数据，而不是该函数的当前实现：
 
-    ```csharp
-    private static ModelInput CreateSingleDataSample()
-    {
-        ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
-        return sampleForPrediction;
-    }
-    ```
+        ```csharp
+        private static ModelInput CreateSingleDataSample()
+        {
+            ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
+            return sampleForPrediction;
+        }
+        ```
 
 1. 使用从数据集第一行加载的原始示例数据或通过提供自己的自定义硬编码示例数据来运行项目。 应该获得与以下内容相当的预测：
 
-    # <a name="windowstabwindows"></a>[Windows](#tab/windows)
+    # <a name="windows"></a>[Windows](#tab/windows)
 
     通过点击 F5（“播放”按钮），从 Visual Studio 运行控制台应用：
 
     ![PowerShell 上的 ML.NET CLI auto-train](./media/mlnet-cli/sample-cli-prediction-execution.png))
 
-    # <a name="macos-bashtabmacosbash"></a>[macOS Bash](#tab/macosbash)
+    # <a name="macos-bash"></a>[macOS Bash](#tab/macosbash)
 
     通过键入以下命令，从命令行提示符运行控制台应用：
 
-     ```bash
-     cd SampleBinaryClassification
-     cd SampleBinaryClassification.ConsoleApp
+    ```dotnetcli
+    cd SampleBinaryClassification
+    cd SampleBinaryClassification.ConsoleApp
 
-     dotnet run
-     ```
+    dotnet run
+    ```
 
     ![PowerShell 上的 ML.NET CLI auto-train](./media/mlnet-cli/sample-cli-prediction-execution-bash.png))
 

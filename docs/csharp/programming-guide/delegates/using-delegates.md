@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 643e2fad1fd07ecb48c66452533cd80af7557be0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dcc73aba738d6296a44c48aad8b66cd6fc7f4a7b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712346"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448434"
 ---
 # <a name="using-delegates-c-programming-guide"></a>使用委托（C# 编程指南）
 
-[委托](../../language-reference/builtin-types/reference-types.md)是安全封装方法的类型，类似于 C 和 C++ 中的函数指针。 与 C 函数指针不同的是，委托是面向对象的、类型安全的和可靠的。 委托的类型由委托的名称确定。 以下示例声明名为 `Del` 的委托，该委托可以封装采用[字符串](../../language-reference/builtin-types/reference-types.md)作为参数并返回 [void](../../language-reference/keywords/void.md) 的方法：
+[委托](../../language-reference/builtin-types/reference-types.md)是安全封装方法的类型，类似于 C 和 C++ 中的函数指针。 与 C 函数指针不同的是，委托是面向对象的、类型安全的和可靠的。 委托的类型由委托的名称确定。 以下示例声明名为 `Del` 的委托，该委托可以封装采用[字符串](../../language-reference/builtin-types/reference-types.md)作为参数并返回 [void](../../language-reference/builtin-types/void.md) 的方法：
 
 [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]
 

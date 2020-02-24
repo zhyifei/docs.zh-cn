@@ -4,12 +4,12 @@ description: 了解结构类型及其创建方式
 ms.date: 10/12/2016
 ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: cdfe2a763058b8f568ede2ff93c918c2dae874f7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 540742ea6a215e09f0cc31b218ac10fbf6192352
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346906"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503987"
 ---
 # <a name="structs"></a>结构
 
@@ -46,9 +46,6 @@ ms.locfileid: "75346906"
 - 结构是值类型，而类是引用类型。
 
 - 与类不同，无需使用 `new` 运算符即可对结构进行实例化。
-
-   > [!NOTE]
-   > 在 .NET Core 2.1 及更高版本中，必须使用 [new 运算符](language-reference/operators/new-operator.md)或[默认文本](language-reference/operators/default.md#default-literal)，或者通过初始化每个私有字段来实例化结构类型。 有关详细信息，请参阅[从版本 2.0 迁移到 2.1 的中断性变更](../core/compatibility/2.0-2.1.md#corefx)。
 
 - 结构可以声明具有参数的构造函数。
 
