@@ -2,12 +2,12 @@
 title: 自承载 gRPC 应用程序-WCF 开发人员 gRPC
 description: 将 ASP.NET Core gRPC 应用程序部署为自承载服务。
 ms.date: 09/02/2019
-ms.openlocfilehash: 2244f161ad4b5d60138ae0f7b4d6a9c8c8829aa8
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ee370ba1893b060505b38ddf84235bd84433ad32
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503397"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542984"
 ---
 # <a name="self-hosted-grpc-applications"></a>自承载的 gRPC 应用程序
 
@@ -90,6 +90,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
   ```dotnetcli
   dotnet publish -c Release -r linux-x64 -o ./publish
   ```
+  
 将 `publish` 目录的完整内容复制到 Linux 主机上的安装文件夹中。 注册服务需要将一个名为*unit file*的特殊文件添加到 `/etc/systemd/system` 目录。 你需要 root 权限才能在此文件夹中创建文件。 使用要 `systemd` 使用的标识符和 `.service` 扩展名来命名该文件。 例如，使用 `/etc/systemd/system/myapp.service`。
 
 服务文件使用 INI 格式，如以下示例中所示：

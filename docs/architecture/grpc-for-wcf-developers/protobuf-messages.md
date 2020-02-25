@@ -2,20 +2,22 @@
 title: Protobuf 消息-WCF 开发人员 gRPC
 description: 了解 Protobuf 消息是如何在 IDL 中定义并在中C#生成的。
 ms.date: 09/09/2019
-ms.openlocfilehash: 4d543fe88c21999cd820a0bb98073d58a229913a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c7375bafb7572b0eaa0458b0310a0114e3fd078c
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967440"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543035"
 ---
 # <a name="protobuf-messages"></a>Protobuf 消息
 
-本部分介绍如何在 `.proto` 文件中声明 Protobuf 消息，说明字段编号和类型的基本概念，并查看 `protoc` 编译器生成C#的代码。 本章的其余部分将更详细地介绍如何在 Protobuf 中表示不同类型的数据。
+本部分介绍如何在 `.proto` 文件中声明协议缓冲区（Protobuf）消息。 它介绍了字段编号和类型的基本概念，并查看了 `protoc` 编译器C#生成的代码。 
+
+本章的其余部分将更详细地介绍如何在 Protobuf 中表示不同类型的数据。
 
 ## <a name="declaring-a-message"></a>声明消息
 
-在 WCF 中，可以按以下示例所示定义股票市场贸易应用程序的 `Stock` 类：
+在 Windows Communication Foundation （WCF）中，可按以下示例所示定义股票市场贸易应用程序的 `Stock` 类：
 
 ```csharp
 namespace TraderSys
@@ -52,24 +54,24 @@ message Stock {
 }  
 ```
 
-第一行声明所使用的语法版本。 语言版本3在2016中发布，是 gRPC services 的建议版本。
+第一行声明所使用的语法版本。 语言版本3在2016中发布。 这是我们建议用于 gRPC 服务的版本。
 
 `option csharp_namespace` 行指定要用于生成C#的类型的命名空间。 为其他语言编译 `.proto` 文件时，将忽略此选项。 Protobuf 文件通常包含多种语言的特定于语言的选项。
 
-`Stock` 消息定义指定四个字段，每个字段都有类型、名称和字段编号。
+`Stock` 消息定义指定了四个字段。 每个都有类型、名称和字段编号。
 
 ## <a name="field-numbers"></a>字段编号
 
-字段编号是 Protobuf 的重要组成部分。 它们用于标识二进制编码数据中的字段，这意味着它们不能从版本更改为服务版本。 优点是可以向后和向前兼容。 只要处理丢失值的可能性，客户端和服务就会忽略他们不知道的字段号。
+字段编号是 Protobuf 的重要组成部分。 它们用于标识二进制编码数据中的字段，这意味着它们不能从版本更改为服务版本。 优点在于可以实现向后兼容性和向前兼容性。 只要处理丢失值的可能性，客户端和服务就会忽略他们不知道的字段编号。
 
-在二进制格式中，字段号与类型标识符组合在一起。 1到15之间的字段编号可以通过其类型编码为单字节;从16到2047的数字需要2个字节。 如果出于任何原因需要将超过2047个字段，则可以更高。 字段号1到15的单字节标识符提供更好的性能，因此，你应将其用于最基本的常用字段。
+在二进制格式中，字段号与类型标识符组合在一起。 1到15之间的字段编号可以使用其类型编码为单字节。 从16到2047的数字需要2个字节。 如果出于任何原因需要将超过2047个字段，则可以更高。 字段号1到15的单字节标识符提供更好的性能，因此，你应将其用于最基本的常用字段。
 
 ## <a name="types"></a>类型
 
 类型声明使用 Protobuf 的本机标量数据类型，[下一部分](protobuf-data-types.md)将对此进行更详细的讨论。 本章的其余部分将介绍 Protobuf 的内置类型，并说明它们如何与常见的 .NET 类型相关。
 
 > [!NOTE]
-> Protobuf 不能以本机方式支持 `decimal` 类型，因此改用 double。 对于需要完全小数精度的应用程序，请参阅本章下一部分中[有关小数部分的部分](protobuf-data-types.md#decimals)。
+> Protobuf 不能以本机方式支持 `decimal` 类型，因此改为使用 `double`。 对于需要完全小数精度的应用程序，请参阅本章下一部分中[有关小数部分的部分](protobuf-data-types.md#decimals)。
 
 ## <a name="the-generated-code"></a>生成的代码
 
@@ -85,7 +87,7 @@ public class Stock
 }
 ```
 
-由于每个类都包含序列化并将自身反序列化为二进制网络格式所需的所有代码，因此生成的实际代码远复杂。
+生成的实际代码比此要复杂得多。 原因在于，每个类都包含序列化并将自身反序列化为二进制线路格式所需的所有代码。
 
 ### <a name="property-names"></a>属性名称
 

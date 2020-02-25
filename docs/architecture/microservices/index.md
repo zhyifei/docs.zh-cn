@@ -2,12 +2,12 @@
 title: .NET 微服务。 适用于容器化 .NET 应用程序的体系结构
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务可是模块化且可独立部署的服务。 （适用于 Linux 和 Windows）的 Docker 容器可将服务及其依赖项绑定到单个单元，使该单元在一个独立的环境中运行，因而可简化部署和测试。
 ms.date: 01/30/2020
-ms.openlocfilehash: 5da167de1ffd2169aea44b9872281e71c87927b1
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 1337fe56e78e03a85627737bd52a089fd946b842
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502628"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543529"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服务：适用于容器化 .NET 应用程序的体系结构
 
@@ -21,7 +21,7 @@ ms.locfileid: "77502628"
 
 ## <a name="action-links"></a>操作链接
 
-- 下载你选择的格式的此电子书（仅限英文版）：| [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
+- 此电子书还提供 PDF 格式（仅限英文）[下载](https://aka.ms/microservicesebook)
 
 - 克隆参考应用程序 [GitHub 上的 eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 或为其创建分支
 
@@ -78,9 +78,7 @@ eShopOnContainers 应用程序是用于 .NET Core 和旨在使用 Docker 容器�
 
 ## <a name="send-us-your-feedback"></a>向我们发送反馈！
 
-本指南旨在帮助用户了解 .NET 中容器化应用程序和微服务的体系结构。 本指南和相关的参考应用程序会不断更新，欢迎你提供宝贵意见！ 如有关于本指南的改进建议，请发送到：
-
-[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com)
+本指南旨在帮助用户了解 .NET 中容器化应用程序和微服务的体系结构。 本指南和相关的参考应用程序会不断更新，欢迎你提供宝贵意见！ 如有关于本指南的改进建议，请在 <https://aka.ms/ebookfeedback> 提交反馈。
 
 ## <a name="credits"></a>信用
 
@@ -149,8 +147,6 @@ eShopOnContainers 应用程序是用于 .NET Core 和旨在使用 Docker 容器�
 > **Miguel Veloso**，Plain Concepts 的软件开发工程师
 
 ## <a name="copyright"></a>Copyright
-
-下载地址：<https://aka.ms/microservicesebook>
 
 发布者
 

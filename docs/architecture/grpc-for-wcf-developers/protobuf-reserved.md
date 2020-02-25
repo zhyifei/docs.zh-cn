@@ -2,16 +2,18 @@
 title: Protobuf 保留字段-WCF 开发人员 gRPC
 description: 了解有关跨版本兼容性的保留字段。
 ms.date: 09/09/2019
-ms.openlocfilehash: e589cd38a712ce014fa2c4d847fbde359d538dd0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 50082a1aab2e7707a1839b9d56455124a9e4a6a1
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967315"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542971"
 ---
 # <a name="protobuf-reserved-fields"></a>Protobuf 保留字段
 
-Protobuf 的后向兼容性保证依赖于字段编号始终表示相同的数据项。 如果从服务的新版本的消息中删除字段，则永远不应重复使用该字段号。 这可以使用 `reserved` 关键字来强制执行。 如果从前面定义的 `Stock` 消息中删除了 "`displayName`" 和 "`marketId`" 字段，则应该保留其字段编号，如以下示例中所示。
+协议缓冲区（Protobuf）中的向后兼容性保证依赖于字段编号始终表示相同的数据项。 如果从服务的新版本的消息中删除字段，则永远不应重复使用该字段号。 可以使用 `reserved` 关键字强制此。 
+
+如果从前面定义的 `Stock` 消息中删除了 "`displayName`" 和 "`marketId`" 字段，则应该保留其字段编号，如以下示例中所示。
 
 ```protobuf
 syntax "proto3";
@@ -25,7 +27,7 @@ message Stock {
 }
 ```
 
-`reserved` 关键字还可用作将来可能添加的字段的占位符。 可以使用 `to` 关键字将连续的字段编号表示为范围。
+你还可以使用 `reserved` 关键字作为以后可能添加的字段的占位符。 可以通过使用 `to` 关键字将连续的字段编号表示为范围。
 
 ```protobuf
 syntax "proto3";
