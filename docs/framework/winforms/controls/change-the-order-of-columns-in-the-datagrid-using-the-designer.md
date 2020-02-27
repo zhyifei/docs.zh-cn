@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, columns
 - data [Windows Forms], displaying
 ms.assetid: 7fe52a98-75d6-448c-97a5-65ca2c568c1a
-ms.openlocfilehash: be4f67ca6530b74fc90cb50a10463b2378edb933
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7540203fb1c0465caeb045275734d1a7c6f25ee8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743153"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628743"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器更改 Windows 窗体 DataGridView 控件中列的顺序
 
@@ -22,7 +22,7 @@ ms.locfileid: "76743153"
 
 ## <a name="to-change-the-column-order-using-the-designer"></a>使用设计器更改列顺序
 
-1. 单击 <xref:System.Windows.Forms.DataGridView> 控件右上角的智能标记标志符号（![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")），然后选择 "**编辑列**"。
+1. 单击 <xref:System.Windows.Forms.DataGridView> 控件右上角的设计器操作标志符号（![小号黑色箭头](./media/designer-actions-glyph.gif)），然后选择 "**编辑列**"。
 
 2. 从 "**选定的列**" 列表中选择一列。
 

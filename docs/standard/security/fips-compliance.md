@@ -4,12 +4,12 @@ description: 介绍 .NET Core 美国联邦信息处理标准（FIPS）符合性�
 ms.date: 11/20/2019
 author: Rick-Anderson
 ms.author: riande
-ms.openlocfilehash: cf640c857e79ae811dd38d57a0e5301b7bc96572
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 84d6edc6975af0484bb67999ad5891eaf4db057d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74205076"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626953"
 ---
 # <a name="net-core-federal-information-processing-standard-fips-compliance"></a>.NET Core 美国联邦信息处理标准（FIPS）符合性
 
@@ -28,4 +28,4 @@ ms.locfileid: "74205076"
 
 * [Windows FIPS 相容性](/windows/security/threat-protection/fips-140-validation)
 * [针对 FIPS 相容性配置 Windows](/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing)
-* [10.2. 联邦信息处理标准（FIPS）](https://access.redhat.com/documentation/red_hat_enterprise_linux/6/html/security_guide/sect-security_guide-federal_standards_and_regulations-federal_information_processing_standard)
+* [第8章：联邦标准和法规 Red Hat Enterprise Linux 7](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/chap-federal_standards_and_regulations)

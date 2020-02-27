@@ -12,12 +12,12 @@ ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dac049ea6a51037daa0e23dc93476e4410b2df06
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7626e1efbb30ef3bfe9b5b1278c0adb18dd5944b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745988"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628704"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>在设计时开发 Windows 窗体控件
 
@@ -36,7 +36,7 @@ ms.locfileid: "76745988"
 [演练：从 Windows 窗体控件继承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
 演示如何在 C# 中使用继承创建简单的 Windows 窗体控件。
 
-[演练：使用 Windows 窗体控件上的智能标记执行常见任务](performing-common-tasks-using-smart-tags-on-wf-controls.md)\
+[演练：使用设计器操作执行常见任务](perform-common-tasks-design-actions.md)\
 演示如何在 Windows 窗体控件上使用智能标记功能。
 
 [演练：用 DesignerSerializationVisibilityAttribute\ 序列化标准类型的集合](serializing-collections-designerserializationvisibilityattribute.md)

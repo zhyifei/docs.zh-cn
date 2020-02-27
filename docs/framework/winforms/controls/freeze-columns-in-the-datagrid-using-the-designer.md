@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column freezing
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
-ms.openlocfilehash: af8e07d7b1b0524e33688fd9d879818aa13be041
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 469b32d41798089e3acf4bd62c2ae1172a3ab740
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745677"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628821"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器冻结 Windows 窗体 DataGridView 控件中的列
 用户查看 Windows 窗体 <xref:System.Windows.Forms.DataGridView> 控件中显示的数据时，有时需要频繁地引用单个列或列集。 例如，当你显示包含多个列的客户信息表时，你可以在任何时候显示客户名称，同时允许其他列在可见区域外滚动。
@@ -23,7 +23,7 @@ ms.locfileid: "76745677"
 
 ## <a name="to-freeze-a-column-using-the-designer"></a>使用设计器冻结列
 
-1. 单击 <xref:System.Windows.Forms.DataGridView> 控件右上角的智能标记标志符号（![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")），然后选择 "**编辑列**"。
+1. 单击 <xref:System.Windows.Forms.DataGridView> 控件右上角的设计器操作标志符号（![小号黑色箭头](./media/designer-actions-glyph.gif)），然后选择 "**编辑列**"。
 
 2. 从 "**选定的列**" 列表中选择一列。
 

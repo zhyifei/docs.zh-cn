@@ -10,12 +10,12 @@ ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3b88f64fca8d3f11308f1cbfde97de2e6c2f22cc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0b68a70b55cbf03d480fd388a637a4caf78b6eaa
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740217"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628795"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>演练：使用对齐线排列 Windows 窗体上的控件
 
@@ -124,7 +124,7 @@ ms.locfileid: "76740217"
 
 ## <a name="align-a-label-to-a-controls-text"></a>将标签与控件的文本对齐
 
-1. 从 <xref:System.Windows.Forms.TextBox> “工具箱” **将** 控件拖到你的窗体上。 将 <xref:System.Windows.Forms.TextBox> 控件放到窗体上时，单击智能标记的符号，然后选择 "**将文本设置为 textBox1** " 选项。 有关详细信息，请参阅[演练：使用智能标记在 Windows 窗体控件上执行常见任务](performing-common-tasks-using-smart-tags-on-wf-controls.md)。
+1. 从 <xref:System.Windows.Forms.TextBox> “工具箱” **将** 控件拖到你的窗体上。 将 <xref:System.Windows.Forms.TextBox> 控件放到窗体上时，单击智能标记的符号，然后选择 "**将文本设置为 textBox1** " 选项。 有关详细信息，请参阅[演练：使用设计器操作执行常见任务](perform-common-tasks-design-actions.md)。
 
 2. 从 <xref:System.Windows.Forms.Label> “工具箱” **将** 控件拖到你的窗体上。
 

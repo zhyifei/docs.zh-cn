@@ -5,17 +5,15 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: 12408bd9f10e7ed147a6c1adc0497d3b8d797e42
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 705e571e11fa7c8276fcb48d15ed0160fbda2bc5
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319825"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628756"
 ---
 # <a name="guide-to-the-documentation"></a>文档指南
 此处提供了有关 Windows Communication Foundation （WCF）文档的指南。 建议从链接的文档开始，它们按照特定的兴趣和专业技术水平进行分组。  
-  
- 若要安装文档和帮助查看器的独立版本，请下载[Microsoft Windows SDK v 7.1](https://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409)。  
   
 ## <a name="new-to-windows-communication-foundation-programming"></a>不熟悉 Windows Communication Foundation 编程  
   
@@ -39,7 +37,7 @@ ms.locfileid: "72319825"
   
 - 使用 XML 文件进行的配置是编程 WCF 服务和客户端的主要方式。 有关配置文件中使用的 XML 元素的参考文档，请参阅[WCF 配置架构](../configure-apps/file-schema/wcf/index.md)。  
   
-## <a name="troubleshooting"></a>疑难解答  
+## <a name="troubleshooting"></a>故障排除  
  有关排查常见 WCF 问题的信息，请参阅[WCF 疑难解答快速入门](wcf-troubleshooting-quickstart.md)。  
   
 ## <a name="using-windows-communication-foundation-with-other-technologies"></a>与其他技术一起使用 Windows Communication Foundation  
@@ -61,7 +59,7 @@ ms.locfileid: "72319825"
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Windows Communication Foundation 中支持的 WS-* 协议  
  若要查看系统提供的绑定中支持的协议的列表，请参阅[系统提供的互操作性绑定支持的 Web 服务协议](./feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)。 若要查看系统提供的绑定的列表，请参阅[系统提供的绑定](system-provided-bindings.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Windows Communication Foundation 示例](./samples/index.md)
 - [概念性概述](conceptual-overview.md)

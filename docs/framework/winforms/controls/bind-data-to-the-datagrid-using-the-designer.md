@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: d5fab6acc53e5b8be247e958bdba78f0d3647fdc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d49a718e42a989c731cdf748fb63a6305ee096bf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744117"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626317"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器将数据绑定到 Windows 窗体的 DataGridView 控件
 您可以使用设计器将 <xref:System.Windows.Forms.DataGridView> 控件连接到多种不同种类（包括数据库、业务对象或 Web 服务）的数据源。 使用设计器将控件绑定到数据源时，控件将自动绑定到表示数据源的 <xref:System.Windows.Forms.BindingSource> 组件。 此外，会在控件中自动生成列以匹配数据源提供的架构信息。
@@ -24,7 +24,7 @@ ms.locfileid: "76744117"
 
 ## <a name="to-bind-the-control-to-a-data-source"></a>将控件绑定到数据源
 
-1. 单击 <xref:System.Windows.Forms.DataGridView> 控件右上角的智能标记标志符号（![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")）。
+1. 单击 <xref:System.Windows.Forms.DataGridView> 控件右上角的设计器操作标志符号（![小黑色箭头](./media/designer-actions-glyph.gif)）。
 
 2. 单击“选择数据源”选项的下拉箭头。
 

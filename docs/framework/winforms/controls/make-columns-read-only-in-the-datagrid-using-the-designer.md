@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 - columns [Windows Forms], read-only
 ms.assetid: b4ef7a75-ab33-4ee3-b2cf-201530e454e9
-ms.openlocfilehash: 51d9488ef83f7d2c1c01c9ffd756edf8944d738d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 2dd3f8bfcad39ca3d530c79a6e6a8170585f7adf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744974"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627950"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器使 Windows 窗体 DataGridView 控件中的列成为只读
 默认情况下，用户可以修改 Windows 窗体 <xref:System.Windows.Forms.DataGridView> 控件中显示的文本和数字数据。 如果要显示不用于修改的数据，则必须将包含数据的列设置为只读。 有关如何使控件完全成为只读控件的信息，请参阅[如何：使用设计器防止 Windows 窗体 DataGridView 控件中添加和删除行](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)。
@@ -21,7 +21,7 @@ ms.locfileid: "76744974"
 
 ## <a name="to-make-a-column-read-only-by-using-the-designer"></a>使用设计器使列成为只读的
 
-1. 单击 <xref:System.Windows.Forms.DataGridView> 控件右上角的智能标记标志符号（![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")），然后选择 "**编辑列**"。
+1. 单击 <xref:System.Windows.Forms.DataGridView> 控件右上角的设计器操作标志符号（![小号黑色箭头](./media/designer-actions-glyph.gif)），然后选择 "**编辑列**"。
 
 2. 从 "**选定的列**" 列表中选择一列。
 

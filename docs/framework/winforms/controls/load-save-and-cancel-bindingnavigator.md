@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: ac862d163f1bd8b66f29160d836bc459e4bf4081
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0305df5e7566f9441ce09fa3346a8b2dc67c8943
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745125"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627963"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>如何：向 Windows 窗体 BindingNavigator 控件添加“加载”、“保存”和“取消”按钮
 
@@ -35,7 +35,7 @@ ms.locfileid: "76745125"
 
 5. 选择 <xref:System.Windows.Forms.BindingNavigator> 控件。
 
-6. 单击智能标记标志符号（![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")），此时将显示 " **BindingNavigator 任务**" 对话框，然后选择 "**编辑项目**"。
+6. 单击 "设计器操作" 标志符号（![小号黑色箭头](./media/designer-actions-glyph.gif)），以便显示 " **BindingNavigator 任务**" 对话框，然后选择 "**编辑项目**"。
 
      **项集合编辑器**随即出现。
 

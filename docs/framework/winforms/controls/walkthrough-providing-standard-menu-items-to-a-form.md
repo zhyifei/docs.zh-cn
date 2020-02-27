@@ -10,106 +10,106 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-ms.openlocfilehash: ebfacadfee3ea069359a72ea0402751e9e6280d7
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: ee80aad445c00bb4b98b49c80495fa512150bcef
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211501"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628769"
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>演练：向窗体提供标准菜单项
 
 可使用 <xref:System.Windows.Forms.MenuStrip> 控件向窗体提供标准菜单。
 
-本演练演示如何使用<xref:System.Windows.Forms.MenuStrip>控件创建标准菜单。 在窗体还时用户选择菜单项的响应。 在本演练阐释了以下任务：
+本演练演示如何使用 <xref:System.Windows.Forms.MenuStrip> 控件创建标准菜单。 窗体还在用户选择菜单项时做出响应。 此演练演示了下列任务：
 
-- 创建一个 Windows 窗体项目。
+- 创建 Windows 窗体项目。
 
 - 创建标准菜单。
 
-- 创建<xref:System.Windows.Forms.StatusStrip>控件。
+- 创建 <xref:System.Windows.Forms.StatusStrip> 控件。
 
-- 处理菜单项的选择。
+- 处理菜单项选择。
 
-完成，你将拥有带有标准菜单显示菜单项选择中的窗体<xref:System.Windows.Forms.StatusStrip>控件。
+完成后，将获得一个带有标准菜单的窗体，其中显示了 <xref:System.Windows.Forms.StatusStrip> 控件中的菜单项选择。
 
-要将本主题中的代码作为单个列表进行复制，请参阅[如何：向窗体提供标准菜单项](how-to-provide-standard-menu-items-to-a-form.md)。
+若要将本主题中的代码复制为单个列表，请参阅[如何：向窗体提供标准菜单项](how-to-provide-standard-menu-items-to-a-form.md)。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>必备条件
 
-你将需要 Visual Studio 来完成本演练。
+需要 Visual Studio 才能完成此演练。
 
 ## <a name="create-the-project"></a>创建项目
 
-1. 在 Visual Studio 中，创建一个名为 Windows 应用程序项目**StandardMenuForm** (**文件** > **新建** > **项目**  >  **Visual C#** 或**Visual Basic** > **经典桌面** >  **Windows 窗体应用程序**)。
+1. 在 visual Studio 中，创建一个名为 " **StandardMenuForm** " 的 Windows 应用程序项目（**文件** > **新**的 > **项目** > **视觉C#对象**或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**）。
 
 2. 在 Windows 窗体设计器中，选择窗体。
 
 ## <a name="create-a-standard-menu"></a>创建标准菜单
 
-Windows 窗体设计器可以自动填充<xref:System.Windows.Forms.MenuStrip>带有标准菜单项控件。
+Windows 窗体设计器可以使用标准菜单项自动填充 <xref:System.Windows.Forms.MenuStrip> 控件。
 
-1. 从**工具箱**，拖动<xref:System.Windows.Forms.MenuStrip>控件拖到窗体上的。
+1. 从 "**工具箱**" 中，将 "<xref:System.Windows.Forms.MenuStrip>" 控件拖动到窗体上。
 
-2. 单击<xref:System.Windows.Forms.MenuStrip>控件的智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，然后选择**插入标准项**。
+2. 单击 <xref:System.Windows.Forms.MenuStrip> 控件的设计器操作标志符号（![小黑色箭头](./media/designer-actions-glyph.gif)），然后选择 "**插入标准项**"。
 
-     <xref:System.Windows.Forms.MenuStrip>使用标准菜单项填充控件。
+     <xref:System.Windows.Forms.MenuStrip> 控件将用标准菜单项进行填充。
 
-3. 单击**文件**菜单项以查看其默认菜单项和对应的图标。
+3. 单击 "**文件**" 菜单项可查看其默认菜单项和相应的图标。
 
 ## <a name="create-a-statusstrip-control"></a>创建 StatusStrip 控件
 
-使用<xref:System.Windows.Forms.StatusStrip>控件来显示 Windows 窗体应用程序的状态。 在本示例中，用户选择菜单项显示在<xref:System.Windows.Forms.StatusStrip>控件。
+使用 <xref:System.Windows.Forms.StatusStrip> 控件显示 Windows 窗体应用程序的状态。 在当前的示例中，用户选择的菜单项显示在 <xref:System.Windows.Forms.StatusStrip> 控件中。
 
-1. 从**工具箱**，拖动<xref:System.Windows.Forms.StatusStrip>控件拖到窗体上的。
+1. 从 "**工具箱**" 中，将 "<xref:System.Windows.Forms.StatusStrip>" 控件拖动到窗体上。
 
-     <xref:System.Windows.Forms.StatusStrip>控件自动将停靠到窗体的底部。
+     <xref:System.Windows.Forms.StatusStrip> 控件会自动停靠到窗体的底部。
 
-2. 单击<xref:System.Windows.Forms.StatusStrip>控件的下拉按钮并选择**statuslabel 设置**以添加<xref:System.Windows.Forms.ToolStripStatusLabel>控制对<xref:System.Windows.Forms.StatusStrip>控件。
+2. 单击 <xref:System.Windows.Forms.StatusStrip> 控件的下拉按钮，然后选择 " **statuslabel 设置**"，将 <xref:System.Windows.Forms.ToolStripStatusLabel> 控件添加到 <xref:System.Windows.Forms.StatusStrip> 控件。
 
 ## <a name="handle-item-selection"></a>处理项选择
 
-处理<xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>事件，当用户选择菜单项时进行响应。
+处理 <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> 事件，以便在用户选择菜单项时做出响应。
 
-1. 单击**文件**菜单项，在创建创建标准菜单部分。
+1. 单击在创建标准菜单部分中创建的 "**文件**" 菜单项。
 
 2. 在“属性”窗口中，单击“事件”。
 
-3. 双击<xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>事件。
+3. 双击 "<xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>" 事件。
 
-     Windows 窗体设计器生成的事件处理程序<xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>事件。
+     Windows 窗体设计器生成 <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> 事件的事件处理程序。
 
-4. 以下代码插入到的事件处理程序。
+4. 将以下代码插入到事件处理程序中。
 
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#3)]
 
-5. 插入`UpdateStatus`到窗体的实用程序方法定义。
+5. 将 `UpdateStatus` 实用工具方法定义插入窗体中。
 
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#2)]
 
-## <a name="checkpoint--test-your-form"></a>检查点-测试你的窗体
+## <a name="checkpoint--test-your-form"></a>检查点-测试窗体
 
-1. 按**F5**编译并运行你的窗体。
+1. 按**F5**编译并运行您的窗体。
 
-2. 单击**文件**要打开的菜单的菜单项。
+2. 单击 "**文件**" 菜单项，打开菜单。
 
-3. 上**文件**菜单中，单击某一项以将其选中。
+3. 在 "**文件**" 菜单上，单击其中一个项目以将其选中。
 
-     <xref:System.Windows.Forms.StatusStrip>控件显示所选的项。
+     <xref:System.Windows.Forms.StatusStrip> 控件显示选定项。
 
 ## <a name="next-steps"></a>后续步骤
 
-在本演练中，已创建带有标准菜单窗体。 可以使用<xref:System.Windows.Forms.ToolStrip>实现多种其他用途的控件的系列：
+在本演练中，您已创建了一个带有标准菜单的窗体。 您可以使用 <xref:System.Windows.Forms.ToolStrip> 系列控件来实现多种其他用途：
 
-- 创建与控件的快捷菜单<xref:System.Windows.Forms.ContextMenuStrip>。 有关详细信息，请参阅[ContextMenu 组件概述](contextmenu-component-overview-windows-forms.md)。
+- 创建具有 <xref:System.Windows.Forms.ContextMenuStrip>的控件的快捷菜单。 有关详细信息，请参阅[ContextMenu 组件概述](contextmenu-component-overview-windows-forms.md)。
 
-- 创建多文档界面 (MDI) 窗体通过停靠<xref:System.Windows.Forms.ToolStrip>控件。 有关详细信息，请参见[演练：创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。
+- 使用停靠 <xref:System.Windows.Forms.ToolStrip> 控件创建多文档界面（MDI）窗体。 有关详细信息，请参阅[演练：创建具有菜单合并和 ToolStrip 控件的 MDI 窗体](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。
 
-- 提供你<xref:System.Windows.Forms.ToolStrip>控件专业的外观。 有关详细信息，请参阅[如何：设置 ToolStrip 呈现程序](how-to-set-the-toolstrip-renderer-for-an-application.md)。
+- 为您的 <xref:System.Windows.Forms.ToolStrip> 控制专业外观。 有关详细信息，请参阅[如何：为应用程序设置 ToolStrip 呈现](how-to-set-the-toolstrip-renderer-for-an-application.md)器。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>

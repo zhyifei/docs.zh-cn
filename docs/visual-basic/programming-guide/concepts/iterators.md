@@ -2,12 +2,12 @@
 title: 迭代器
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 465a8e6650c3d015520164030a146c9502ebe603
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2789ac66690ebfd472b9bae5ccf08b1bdfaa0922
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353741"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628730"
 ---
 # <a name="iterators-visual-basic"></a>迭代器（Visual Basic）
 
@@ -43,7 +43,7 @@ Visual Basic 迭代器函数或 `get` 访问器声明包含[iterator](../../../v
 
 迭代器是在 Visual Studio 2012 Visual Basic 中引入的。
 
-**主题内容**
+**本主题内容**
 
 - [简单迭代器](#BKMK_SimpleIterator)
 
@@ -259,7 +259,7 @@ End Function
 
 ## <a name="BKMK_AnonymousMethods"></a>匿名方法
 
-在 Visual Basic 中，匿名函数可以是迭代器函数。 下面的示例阐释了这一点。
+在 Visual Basic 中，匿名函数可以是迭代器函数。 下面的示例对此进行了演示。
 
 ```vb
 Dim iterateSequence = Iterator Function() _
@@ -435,7 +435,7 @@ End Class
 
 若要查看编译器执行的操作，可使用 Ildasm.exe 工具查看为迭代器方法生成的 Microsoft 中间语言代码。
 
-为[类](../../../csharp/language-reference/keywords/class.md)或[结构](../../../csharp/language-reference/keywords/struct.md)创建迭代器时，不必实现整个 <xref:System.Collections.IEnumerator> 接口。 编译器检测到迭代器时，会自动生成 `Current` 或 `MoveNext` 接口的 `Dispose`、<xref:System.Collections.IEnumerator> 和 <xref:System.Collections.Generic.IEnumerator%601> 方法。
+为[类](../../language-reference/statements/class-statement.md)或[结构](../../language-reference/statements/structure-statement.md)创建迭代器时，不必实现整个 <xref:System.Collections.IEnumerator> 接口。 编译器检测到迭代器时，会自动生成 `Current` 或 `MoveNext` 接口的 `Dispose`、<xref:System.Collections.IEnumerator> 和 <xref:System.Collections.Generic.IEnumerator%601> 方法。
 
 在 `For Each…Next` 循环（或对 `IEnumerator.MoveNext` 的直接调用）的每次后续迭代中，下一个迭代器代码体都会在上一个 `Yield` 语句之后恢复。 然后，它将继续执行下一个 `Yield` 语句，直到达到迭代器主体的末尾，或者遇到 `Exit Function` 或 `Return` 语句为止。
 
@@ -459,4 +459,4 @@ End Class
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [For Each...Next 语句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
 - [Yield 语句](../../../visual-basic/language-reference/statements/yield-statement.md)
-- [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)
+- [迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)

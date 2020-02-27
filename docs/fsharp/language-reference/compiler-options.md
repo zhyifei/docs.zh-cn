@@ -2,22 +2,24 @@
 title: 编译器选项
 description: 使用F#编译器命令行选项来控制F#应用和库的编译。
 ms.date: 12/10/2018
-ms.openlocfilehash: d0f4d1ca5ae45af25d6c304a2920d5c457700b1a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ecaae538a5db2f5dfefa79cb8e7b8b51d39c440d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424760"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628873"
 ---
 # <a name="compiler-options"></a>编译器选项
 
-本主题介绍编译器的编译器命令行选项F# fsc.exe。 还可以通过设置项目属性来控制编译环境。
+本主题介绍编译器的编译器命令行选项F# fsc.exe。
+
+还可以通过设置项目属性来控制编译环境。 对于以 .NET Core 为目标的项目，`.fsproj`中 `<OtherFlags>...</OtherFlags>` 的 "其他 flags" 属性用于指定额外的命令行选项。
 
 ## <a name="compiler-options-listed-alphabetically"></a>按字母顺序列出的编译器选项
 
 下表显示了按字母顺序列出的编译器选项。 一些F#编译器选项类似于C#编译器选项。 如果是这种情况，则提供C#编译器选项主题的链接。
 
-|编译器选项|描述|
+|编译器选项|说明|
 |---------------|-----------|
 |`-a filename.fs`|从指定的文件生成一个库。 此选项是 `--target:library filename.fs`的一种简短形式。|
 |`--baseaddress:address`|指定要加载 DLL 的首选基址。<br /><br />此编译器选项等效于同名的C#编译器选项。 有关详细信息，请[ &#47;参阅&#40;baseaddress&#35; C 编译器&#41;Options](https://msdn.microsoft.com/library/2fdbz5xd.aspx)。|
@@ -57,7 +59,7 @@ ms.locfileid: "73424760"
 |`--standalone`|指定生成一个程序集，该程序集包含其所有依赖项，以便在不需要其他程序集（如F#库）的情况下单独运行。|
 |`--staticlink:assembly-name`|以静态方式链接给定的程序集和依赖于此程序集的所有引用的 Dll。 使用程序集名称，而不是 DLL 名称。|
 |`--subsystemversion`|指定生成的可执行文件要使用的 OS 子系统的版本。 将6.02 用于 Windows 8.1，6.01 用于 Windows 7，6.00 适用于 Windows Vista。 此选项仅适用于可执行文件，而不适用于 Dll，并且仅当你的应用程序依赖于特定操作系统版本上可用的特定安全功能时才需要使用。 如果使用此选项，并且用户尝试在较低版本的操作系统上执行应用程序，则会失败并出现一条错误消息。|
-|<code>--tailcalls[+&#124;-]</code>|启用或禁用 tail IL 指令，这将导致为尾递归函数重用堆栈帧。 默认情况下会启用此选项。|
+|<code>--tailcalls[+&#124;-]</code>|启用或禁用 tail IL 指令，这将导致为尾递归函数重用堆栈帧。 默认情况下该选项处于启用状态。|
 |<code>--target:[exe&#124;winexe&#124;library&#124;module] filename</code>|指定生成的已编译代码的类型和文件名。<ul><li>`exe` 表示一个控制台应用程序。<br /></li><li>`winexe` 表示 Windows 应用程序，该应用程序与控制台应用程序不同，因为它未定义标准输入/输出流（stdin、stdout 和 stderr）。<br /></li><li>`library` 是没有入口点的程序集。<br /></li><li>`module` 是 .NET Framework 模块（. .netmodule），稍后可将其与其他模块组合到一个程序集中。<br /></li><ul/>此编译器选项等效于同名的C#编译器选项。 有关详细信息，请[ &#47;参阅&#40;目标&#35; C 编译器&#41;选项](https://msdn.microsoft.com/library/6h25dztx.aspx)。|
 |`--times`|显示编译的计时信息。|
 |`--utf8output`|启用以 utf-8 编码格式输出编译器。|
@@ -69,7 +71,7 @@ ms.locfileid: "73424760"
 
 ## <a name="related-articles"></a>相关文章
 
-|Title|描述|
+|标题|说明|
 |-----|-----------|
 |[F# Interactive 选项](fsharp-interactive-options.md)|介绍F#解释器（fsi.exe）支持的命令行选项。|
 |[项目属性引用](/visualstudio/ide/reference/project-properties-reference)|介绍项目的 UI，包括提供生成选项的项目属性页。|
