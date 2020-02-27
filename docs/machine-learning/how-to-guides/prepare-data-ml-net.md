@@ -3,26 +3,26 @@ title: 准备建模的数据
 description: 了解如何在 ML.NET 中使用转换来操作和准备数据用于进行其他处理或建模。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 09/11/2019
+ms.date: 01/29/2020
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: e9bfad4724b353b0f3bfc615a40f1d72b80a2cd4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 12f933253af9ea519d711c20227fe075fed003de
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976983"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452982"
 ---
-# <a name="prepare-data-for-building-a-model"></a><span data-ttu-id="79834-103">准备建模的数据</span><span class="sxs-lookup"><span data-stu-id="79834-103">Prepare data for building a model</span></span>
+# <a name="prepare-data-for-building-a-model"></a><span data-ttu-id="81437-103">准备建模的数据</span><span class="sxs-lookup"><span data-stu-id="81437-103">Prepare data for building a model</span></span>
 
-<span data-ttu-id="79834-104">了解如何使用 ML.NET 来准备数据用于进行其他处理或生成模型。</span><span class="sxs-lookup"><span data-stu-id="79834-104">Learn how to use ML.NET to prepare data for additional processing or building a model.</span></span>
+<span data-ttu-id="81437-104">了解如何使用 ML.NET 来准备数据用于进行其他处理或生成模型。</span><span class="sxs-lookup"><span data-stu-id="81437-104">Learn how to use ML.NET to prepare data for additional processing or building a model.</span></span>
 
-<span data-ttu-id="79834-105">数据通常是不干净的和稀疏的。</span><span class="sxs-lookup"><span data-stu-id="79834-105">Data is often unclean and sparse.</span></span> <span data-ttu-id="79834-106">ML.NET 机器学习算法期望输入或特征位于单个数字向量中。</span><span class="sxs-lookup"><span data-stu-id="79834-106">ML.NET machine learning algorithms expect input or features to be in a single numerical vector.</span></span> <span data-ttu-id="79834-107">同样，必须对要预测的值（标签）进行编码，尤其当该值是分类数据时。</span><span class="sxs-lookup"><span data-stu-id="79834-107">Similarly, the value to predict (label), especially when it's categorical data, has to be encoded.</span></span> <span data-ttu-id="79834-108">因此，数据准备的目标之一是将数据转换为 ML.NET 算法所期望的格式。</span><span class="sxs-lookup"><span data-stu-id="79834-108">Therefore one of the goals of data preparation is to get the data into the format expected by ML.NET algorithms.</span></span>
+<span data-ttu-id="81437-105">数据通常是不干净的和稀疏的。</span><span class="sxs-lookup"><span data-stu-id="81437-105">Data is often unclean and sparse.</span></span> <span data-ttu-id="81437-106">ML.NET 机器学习算法期望输入或特征位于单个数字向量中。</span><span class="sxs-lookup"><span data-stu-id="81437-106">ML.NET machine learning algorithms expect input or features to be in a single numerical vector.</span></span> <span data-ttu-id="81437-107">同样，必须对要预测的值（标签）进行编码，尤其当该值是分类数据时。</span><span class="sxs-lookup"><span data-stu-id="81437-107">Similarly, the value to predict (label), especially when it's categorical data, has to be encoded.</span></span> <span data-ttu-id="81437-108">因此，数据准备的目标之一是将数据转换为 ML.NET 算法所期望的格式。</span><span class="sxs-lookup"><span data-stu-id="81437-108">Therefore one of the goals of data preparation is to get the data into the format expected by ML.NET algorithms.</span></span>
 
-## <a name="filter-data"></a><span data-ttu-id="79834-109">筛选数据</span><span class="sxs-lookup"><span data-stu-id="79834-109">Filter data</span></span>
+## <a name="filter-data"></a><span data-ttu-id="81437-109">筛选数据</span><span class="sxs-lookup"><span data-stu-id="81437-109">Filter data</span></span>
 
-<span data-ttu-id="79834-110">有时，并非数据集中的所有数据都与分析相关。</span><span class="sxs-lookup"><span data-stu-id="79834-110">Sometimes, not all data in a dataset is relevant for analysis.</span></span> <span data-ttu-id="79834-111">删除不相关数据的方法之一是筛选。</span><span class="sxs-lookup"><span data-stu-id="79834-111">An approach to remove irrelevant data is filtering.</span></span> <span data-ttu-id="79834-112">[`DataOperationsCatalog`](xref:Microsoft.ML.DataOperationsCatalog) 包含一组筛选操作，这些操作接收包含所有数据的 [`IDataView`](xref:Microsoft.ML.IDataView)，并返回仅包含关注数据点的 [IDataView](xref:Microsoft.ML.IDataView)。</span><span class="sxs-lookup"><span data-stu-id="79834-112">The [`DataOperationsCatalog`](xref:Microsoft.ML.DataOperationsCatalog) contains a set of filter operations that take in an [`IDataView`](xref:Microsoft.ML.IDataView) containing all of the data and return an [IDataView](xref:Microsoft.ML.IDataView) containing only the data points of interest.</span></span> <span data-ttu-id="79834-113">值得注意的是，因为筛选操作不像 [`TransformsCatalog`](xref:Microsoft.ML.TransformsCatalog) 中的操作那样是 [`IEstimator`](xref:Microsoft.ML.IEstimator%601) 或 [`ITransformer`](xref:Microsoft.ML.ITransformer)，所以它们不能作为 [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) 或 [`TransformerChain`](xref:Microsoft.ML.Data.TransformerChain%601) 数据准备管道的一部分包含在内。</span><span class="sxs-lookup"><span data-stu-id="79834-113">It's important to note that because filter operations are not an [`IEstimator`](xref:Microsoft.ML.IEstimator%601) or [`ITransformer`](xref:Microsoft.ML.ITransformer) like those in the [`TransformsCatalog`](xref:Microsoft.ML.TransformsCatalog), they cannot be included as part of an [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) or [`TransformerChain`](xref:Microsoft.ML.Data.TransformerChain%601) data preparation pipeline.</span></span>
+<span data-ttu-id="81437-110">有时，并非数据集中的所有数据都与分析相关。</span><span class="sxs-lookup"><span data-stu-id="81437-110">Sometimes, not all data in a dataset is relevant for analysis.</span></span> <span data-ttu-id="81437-111">删除不相关数据的方法之一是筛选。</span><span class="sxs-lookup"><span data-stu-id="81437-111">An approach to remove irrelevant data is filtering.</span></span> <span data-ttu-id="81437-112">[`DataOperationsCatalog`](xref:Microsoft.ML.DataOperationsCatalog) 包含一组筛选操作，这些操作接收包含所有数据的 [`IDataView`](xref:Microsoft.ML.IDataView)，并返回仅包含关注数据点的 [IDataView](xref:Microsoft.ML.IDataView)。</span><span class="sxs-lookup"><span data-stu-id="81437-112">The [`DataOperationsCatalog`](xref:Microsoft.ML.DataOperationsCatalog) contains a set of filter operations that take in an [`IDataView`](xref:Microsoft.ML.IDataView) containing all of the data and return an [IDataView](xref:Microsoft.ML.IDataView) containing only the data points of interest.</span></span> <span data-ttu-id="81437-113">值得注意的是，因为筛选操作不像 [`TransformsCatalog`](xref:Microsoft.ML.TransformsCatalog) 中的操作那样是 [`IEstimator`](xref:Microsoft.ML.IEstimator%601) 或 [`ITransformer`](xref:Microsoft.ML.ITransformer)，所以它们不能作为 [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) 或 [`TransformerChain`](xref:Microsoft.ML.Data.TransformerChain%601) 数据准备管道的一部分包含在内。</span><span class="sxs-lookup"><span data-stu-id="81437-113">It's important to note that because filter operations are not an [`IEstimator`](xref:Microsoft.ML.IEstimator%601) or [`ITransformer`](xref:Microsoft.ML.ITransformer) like those in the [`TransformsCatalog`](xref:Microsoft.ML.TransformsCatalog), they cannot be included as part of an [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) or [`TransformerChain`](xref:Microsoft.ML.Data.TransformerChain%601) data preparation pipeline.</span></span>
 
-<span data-ttu-id="79834-114">使用加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中的以下输入数据：</span><span class="sxs-lookup"><span data-stu-id="79834-114">Using the following input data which is loaded into an [`IDataView`](xref:Microsoft.ML.IDataView):</span></span>
+<span data-ttu-id="81437-114">获取以下输入数据并将其加载到名为 `data` 的 [`IDataView`](xref:Microsoft.ML.IDataView)：</span><span class="sxs-lookup"><span data-stu-id="81437-114">Take the following input data and load it into an [`IDataView`](xref:Microsoft.ML.IDataView) called `data`:</span></span>
 
 ```csharp
 HomeData[] homeDataList = new HomeData[]
@@ -45,20 +45,20 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-<span data-ttu-id="79834-115">若要根据列的值筛选数据，请使用 [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) 方法。</span><span class="sxs-lookup"><span data-stu-id="79834-115">To filter data based on the value of a column, use the [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) method.</span></span>
+<span data-ttu-id="81437-115">若要根据列的值筛选数据，请使用 [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn%2A) 方法。</span><span class="sxs-lookup"><span data-stu-id="81437-115">To filter data based on the value of a column, use the [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn%2A) method.</span></span>
 
 ```csharp
 // Apply filter
 IDataView filteredData = mlContext.Data.FilterRowsByColumn(data, "Price", lowerBound: 200000, upperBound: 1000000);
 ```
 
-<span data-ttu-id="79834-116">上述示例采用数据集中价格介于 200,000 和 1,000,000 之间的行。</span><span class="sxs-lookup"><span data-stu-id="79834-116">The sample above takes rows in the dataset with a price between 200000 and 1000000.</span></span> <span data-ttu-id="79834-117">应用此筛选器的结果为，将仅返回数据中的最后两行，并排除第一行，因为其价格为 100,000，不在指定范围之间。</span><span class="sxs-lookup"><span data-stu-id="79834-117">The result of applying this filter would return only the last two rows in the data and exclude the first row because its price is 100000 and not between the specified range.</span></span>
+<span data-ttu-id="81437-116">上述示例采用数据集中价格介于 200,000 和 1,000,000 之间的行。</span><span class="sxs-lookup"><span data-stu-id="81437-116">The sample above takes rows in the dataset with a price between 200000 and 1000000.</span></span> <span data-ttu-id="81437-117">应用此筛选器的结果为，将仅返回数据中的最后两行，并排除第一行，因为其价格为 100,000，不在指定范围之间。</span><span class="sxs-lookup"><span data-stu-id="81437-117">The result of applying this filter would return only the last two rows in the data and exclude the first row because its price is 100000 and not between the specified range.</span></span>
 
-## <a name="replace-missing-values"></a><span data-ttu-id="79834-118">替换缺失值</span><span class="sxs-lookup"><span data-stu-id="79834-118">Replace missing values</span></span>
+## <a name="replace-missing-values"></a><span data-ttu-id="81437-118">替换缺失值</span><span class="sxs-lookup"><span data-stu-id="81437-118">Replace missing values</span></span>
 
-<span data-ttu-id="79834-119">缺失值在数据集中是常见现象。</span><span class="sxs-lookup"><span data-stu-id="79834-119">Missing values are a common occurrence in datasets.</span></span> <span data-ttu-id="79834-120">处理缺失值的一种方法是使用给定类型的默认值（如有）或其他有意义的值（例如数据中的平均值）替换它们。</span><span class="sxs-lookup"><span data-stu-id="79834-120">One approach to dealing with missing values is to replace them with the default value for the given type if any or another meaningful value such as the mean value in the data.</span></span>
+<span data-ttu-id="81437-119">缺失值在数据集中是常见现象。</span><span class="sxs-lookup"><span data-stu-id="81437-119">Missing values are a common occurrence in datasets.</span></span> <span data-ttu-id="81437-120">处理缺失值的一种方法是使用给定类型的默认值（如有）或其他有意义的值（例如数据中的平均值）替换它们。</span><span class="sxs-lookup"><span data-stu-id="81437-120">One approach to dealing with missing values is to replace them with the default value for the given type if any or another meaningful value such as the mean value in the data.</span></span>
 
-<span data-ttu-id="79834-121">使用加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中的以下输入数据：</span><span class="sxs-lookup"><span data-stu-id="79834-121">Using the following input data which is loaded into an [`IDataView`](xref:Microsoft.ML.IDataView):</span></span>
+<span data-ttu-id="81437-121">获取以下输入数据并将其加载到名为 `data` 的 [`IDataView`](xref:Microsoft.ML.IDataView)：</span><span class="sxs-lookup"><span data-stu-id="81437-121">Take the following input data and load it into an [`IDataView`](xref:Microsoft.ML.IDataView) called `data`:</span></span>
 
 ```csharp
 HomeData[] homeDataList = new HomeData[]
@@ -81,10 +81,10 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-<span data-ttu-id="79834-122">请注意，列表中最后一个元素的 `Price` 缺失值。</span><span class="sxs-lookup"><span data-stu-id="79834-122">Notice that the last element in our list has a missing value for `Price`.</span></span> <span data-ttu-id="79834-123">若要替换 `Price` 列中的缺失值，请使用 [`ReplaceMissingValues`](xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues*) 方法填充该缺失值。</span><span class="sxs-lookup"><span data-stu-id="79834-123">To replace the missing values in the `Price` column, use the [`ReplaceMissingValues`](xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues*) method to fill in that missing value.</span></span>
+<span data-ttu-id="81437-122">请注意，列表中最后一个元素的 `Price` 缺失值。</span><span class="sxs-lookup"><span data-stu-id="81437-122">Notice that the last element in our list has a missing value for `Price`.</span></span> <span data-ttu-id="81437-123">若要替换 `Price` 列中的缺失值，请使用 [`ReplaceMissingValues`](xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues%2A) 方法填充该缺失值。</span><span class="sxs-lookup"><span data-stu-id="81437-123">To replace the missing values in the `Price` column, use the [`ReplaceMissingValues`](xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues%2A) method to fill in that missing value.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="79834-124">[`ReplaceMissingValue`](xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues*) 仅适用于数字数据。</span><span class="sxs-lookup"><span data-stu-id="79834-124">[`ReplaceMissingValue`](xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues*) only works with numerical data.</span></span>
+> <span data-ttu-id="81437-124">[`ReplaceMissingValue`](xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues%2A) 仅适用于数字数据。</span><span class="sxs-lookup"><span data-stu-id="81437-124">[`ReplaceMissingValue`](xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues%2A) only works with numerical data.</span></span>
 
 ```csharp
 // Define replacement estimator
@@ -98,15 +98,15 @@ ITransformer replacementTransformer = replacementEstimator.Fit(data);
 IDataView transformedData = replacementTransformer.Transform(data);
 ```
 
-<span data-ttu-id="79834-125">ML.NET 支持各种[替换模式](xref:Microsoft.ML.Transforms.MissingValueReplacingEstimator.ReplacementMode)。</span><span class="sxs-lookup"><span data-stu-id="79834-125">ML.NET supports various [replacement modes](xref:Microsoft.ML.Transforms.MissingValueReplacingEstimator.ReplacementMode).</span></span> <span data-ttu-id="79834-126">上述示例使用 `Mean` 替换模式，该模式将使用该列的平均值填充缺失值。</span><span class="sxs-lookup"><span data-stu-id="79834-126">The sample above uses the `Mean` replacement mode which will fill in the missing value with that column's average value.</span></span> <span data-ttu-id="79834-127">替换的结果使用 200,000 填充数据中最后一个元素的 `Price` 属性，因为它是 100,000 和 300,000 的平均值。</span><span class="sxs-lookup"><span data-stu-id="79834-127">The replacement 's result fills in the `Price` property for the last element in our data with 200,000 since it's the average of 100,000 and 300,000.</span></span>
+<span data-ttu-id="81437-125">ML.NET 支持各种[替换模式](xref:Microsoft.ML.Transforms.MissingValueReplacingEstimator.ReplacementMode)。</span><span class="sxs-lookup"><span data-stu-id="81437-125">ML.NET supports various [replacement modes](xref:Microsoft.ML.Transforms.MissingValueReplacingEstimator.ReplacementMode).</span></span> <span data-ttu-id="81437-126">上述示例使用 `Mean` 替换模式，该模式将使用该列的平均值填充缺失值。</span><span class="sxs-lookup"><span data-stu-id="81437-126">The sample above uses the `Mean` replacement mode, which fills in the missing value with that column's average value.</span></span> <span data-ttu-id="81437-127">替换的结果使用 200,000 填充数据中最后一个元素的 `Price` 属性，因为它是 100,000 和 300,000 的平均值。</span><span class="sxs-lookup"><span data-stu-id="81437-127">The replacement 's result fills in the `Price` property for the last element in our data with 200,000 since it's the average of 100,000 and 300,000.</span></span>
 
-## <a name="use-normalizers"></a><span data-ttu-id="79834-128">使用规范化程序</span><span class="sxs-lookup"><span data-stu-id="79834-128">Use normalizers</span></span>
+## <a name="use-normalizers"></a><span data-ttu-id="81437-128">使用规范化程序</span><span class="sxs-lookup"><span data-stu-id="81437-128">Use normalizers</span></span>
 
-<span data-ttu-id="79834-129">[规范化](https://en.wikipedia.org/wiki/Feature_scaling)是一种数据预处理技术，用于标准化比例不同的特征，这有助于算法更快地融合。</span><span class="sxs-lookup"><span data-stu-id="79834-129">[Normalization](https://en.wikipedia.org/wiki/Feature_scaling) is a data pre-processing technique used to standardize features that are not on the same scale which helps algorithms converge faster.</span></span> <span data-ttu-id="79834-130">例如，年龄和收入等值的范围存在明显差异，年龄的范围通常为 0-100，而收入的范围通常为零到数千。</span><span class="sxs-lookup"><span data-stu-id="79834-130">For example, the ranges for values like age and income vary significantly with age generally being in the range of 0-100 and income generally being in the range of zero to thousands.</span></span> <span data-ttu-id="79834-131">访问[转换页面](../resources/transforms.md)，获取更详细的规范化转换列表和说明。</span><span class="sxs-lookup"><span data-stu-id="79834-131">Visit the [transforms page](../resources/transforms.md) for a more detailed list and description of normalization transforms.</span></span>
+<span data-ttu-id="81437-129">[规范化](https://en.wikipedia.org/wiki/Feature_scaling)是一种数据预处理方法，用于将特征扩展到同一范围（通常介于 0 和 1 之间），这样机器学习算法可以更准确地处理这些特征。</span><span class="sxs-lookup"><span data-stu-id="81437-129">[Normalization](https://en.wikipedia.org/wiki/Feature_scaling) is a data pre-processing technique used to scale features to be in the same range, usually between 0 and 1, so that they can be more accurately processed by a machine learning algorithm.</span></span> <span data-ttu-id="81437-130">例如，年龄和收入的范围存在明显差异，年龄的范围通常为 0-100，而收入的范围通常为零到数千。</span><span class="sxs-lookup"><span data-stu-id="81437-130">For example, the ranges for age and income vary significantly with age generally being in the range of 0-100 and income generally being in the range of zero to thousands.</span></span> <span data-ttu-id="81437-131">访问[转换页面](../resources/transforms.md)，获取更详细的规范化转换列表和说明。</span><span class="sxs-lookup"><span data-stu-id="81437-131">Visit the [transforms page](../resources/transforms.md) for a more detailed list and description of normalization transforms.</span></span>
 
-### <a name="min-max-normalization"></a><span data-ttu-id="79834-132">最小-最大规范化</span><span class="sxs-lookup"><span data-stu-id="79834-132">Min-Max normalization</span></span>
+### <a name="min-max-normalization"></a><span data-ttu-id="81437-132">最小-最大规范化</span><span class="sxs-lookup"><span data-stu-id="81437-132">Min-Max normalization</span></span>
 
-<span data-ttu-id="79834-133">使用加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中的以下输入数据：</span><span class="sxs-lookup"><span data-stu-id="79834-133">Using the following input data which is loaded into an [`IDataView`](xref:Microsoft.ML.IDataView):</span></span>
+<span data-ttu-id="81437-133">获取以下输入数据并将其加载到名为 `data` 的 [`IDataView`](xref:Microsoft.ML.IDataView)：</span><span class="sxs-lookup"><span data-stu-id="81437-133">Take the following input data and load it into an [`IDataView`](xref:Microsoft.ML.IDataView) called `data`:</span></span>
 
 ```csharp
 HomeData[] homeDataList = new HomeData[]
@@ -124,7 +124,7 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-<span data-ttu-id="79834-134">可以向包含单个数值及矢量的列应用规范化。</span><span class="sxs-lookup"><span data-stu-id="79834-134">Normalization can be applied to columns with single numerical values as well as vectors.</span></span> <span data-ttu-id="79834-135">使用 [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) 方法通过最小-最大规范化来规范化 `Price` 列中的数据。</span><span class="sxs-lookup"><span data-stu-id="79834-135">Normalize the data in the `Price` column using min-max normalization with the [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) method.</span></span>
+<span data-ttu-id="81437-134">可以向包含单个数值及矢量的列应用规范化。</span><span class="sxs-lookup"><span data-stu-id="81437-134">Normalization can be applied to columns with single numerical values as well as vectors.</span></span> <span data-ttu-id="81437-135">使用 [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax%2A) 方法通过最小-最大规范化来规范化 `Price` 列中的数据。</span><span class="sxs-lookup"><span data-stu-id="81437-135">Normalize the data in the `Price` column using min-max normalization with the [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax%2A) method.</span></span>
 
 ```csharp
 // Define min-max estimator
@@ -138,13 +138,13 @@ ITransformer minMaxTransformer = minMaxEstimator.Fit(data);
 IDataView transformedData = minMaxTransformer.Transform(data);
 ```
 
-<span data-ttu-id="79834-136">原始价格值 `[200000,100000]` 使用 `MinMax` 规范化公式转换为 `[ 1, 0.5 ]`，该公式生成范围在 0-1 之间的输出值。</span><span class="sxs-lookup"><span data-stu-id="79834-136">The original price values `[200000,100000]` are converted to `[ 1, 0.5 ]` using the `MinMax` normalization formula which generates output values in the range of 0-1.</span></span>
+<span data-ttu-id="81437-136">原始价格值 `[200000,100000]` 使用 `MinMax` 规范化公式转换为 `[ 1, 0.5 ]`，该公式生成范围在 0-1 之间的输出值。</span><span class="sxs-lookup"><span data-stu-id="81437-136">The original price values `[200000,100000]` are converted to `[ 1, 0.5 ]` using the `MinMax` normalization formula that generates output values in the range of 0-1.</span></span>
 
-### <a name="binning"></a><span data-ttu-id="79834-137">分箱</span><span class="sxs-lookup"><span data-stu-id="79834-137">Binning</span></span>
+### <a name="binning"></a><span data-ttu-id="81437-137">分箱</span><span class="sxs-lookup"><span data-stu-id="81437-137">Binning</span></span>
 
-<span data-ttu-id="79834-138">[分箱](https://en.wikipedia.org/wiki/Data_binning)将连续值转换为输入的离散表示形式。</span><span class="sxs-lookup"><span data-stu-id="79834-138">[Binning](https://en.wikipedia.org/wiki/Data_binning) converts continuous values into a discrete representation of the input.</span></span> <span data-ttu-id="79834-139">例如，假设某个特征为年龄。</span><span class="sxs-lookup"><span data-stu-id="79834-139">For example, suppose one of your features is age.</span></span> <span data-ttu-id="79834-140">分箱不使用实际年龄值，而是为该值创建范围。</span><span class="sxs-lookup"><span data-stu-id="79834-140">Instead of using the actual age value,  binning creates ranges for that value.</span></span> <span data-ttu-id="79834-141">0-18 可以是一个箱，另一个箱可以是 19-35，依此类推。</span><span class="sxs-lookup"><span data-stu-id="79834-141">0-18 could be one bin, another could be 19-35 and so on.</span></span>
+<span data-ttu-id="81437-138">[分箱](https://en.wikipedia.org/wiki/Data_binning)将连续值转换为输入的离散表示形式。</span><span class="sxs-lookup"><span data-stu-id="81437-138">[Binning](https://en.wikipedia.org/wiki/Data_binning) converts continuous values into a discrete representation of the input.</span></span> <span data-ttu-id="81437-139">例如，假设某个特征为年龄。</span><span class="sxs-lookup"><span data-stu-id="81437-139">For example, suppose one of your features is age.</span></span> <span data-ttu-id="81437-140">分箱不使用实际年龄值，而是为该值创建范围。</span><span class="sxs-lookup"><span data-stu-id="81437-140">Instead of using the actual age value,  binning creates ranges for that value.</span></span> <span data-ttu-id="81437-141">0-18 可以是一个箱，另一个箱可以是 19-35，依此类推。</span><span class="sxs-lookup"><span data-stu-id="81437-141">0-18 could be one bin, another could be 19-35 and so on.</span></span>
 
-<span data-ttu-id="79834-142">使用加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中的以下输入数据：</span><span class="sxs-lookup"><span data-stu-id="79834-142">Using the following input data which is loaded into an [`IDataView`](xref:Microsoft.ML.IDataView):</span></span>
+<span data-ttu-id="81437-142">获取以下输入数据并将其加载到名为 `data` 的 [`IDataView`](xref:Microsoft.ML.IDataView)：</span><span class="sxs-lookup"><span data-stu-id="81437-142">Take the following input data and load it into an [`IDataView`](xref:Microsoft.ML.IDataView) called `data`:</span></span>
 
 ```csharp
 HomeData[] homeDataList = new HomeData[]
@@ -167,7 +167,7 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-<span data-ttu-id="79834-143">使用 [`NormalizeBinning`](xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning*) 方法将数据规范化为箱。</span><span class="sxs-lookup"><span data-stu-id="79834-143">Normalize the data into bins using the [`NormalizeBinning`](xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning*) method.</span></span> <span data-ttu-id="79834-144">`maximumBinCount` 参数使你可以指定对数据进行分类所需的箱数。</span><span class="sxs-lookup"><span data-stu-id="79834-144">The `maximumBinCount` parameter enables you to specify the number of bins needed to classify your data.</span></span> <span data-ttu-id="79834-145">在此示例中，数据将放入两个箱中。</span><span class="sxs-lookup"><span data-stu-id="79834-145">In this example, data will be put into two bins.</span></span>
+<span data-ttu-id="81437-143">使用 [`NormalizeBinning`](xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning%2A) 方法将数据规范化为箱。</span><span class="sxs-lookup"><span data-stu-id="81437-143">Normalize the data into bins using the [`NormalizeBinning`](xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning%2A) method.</span></span> <span data-ttu-id="81437-144">`maximumBinCount` 参数使你可以指定对数据进行分类所需的箱数。</span><span class="sxs-lookup"><span data-stu-id="81437-144">The `maximumBinCount` parameter enables you to specify the number of bins needed to classify your data.</span></span> <span data-ttu-id="81437-145">在此示例中，数据将放入两个箱中。</span><span class="sxs-lookup"><span data-stu-id="81437-145">In this example, data will be put into two bins.</span></span>
 
 ```csharp
 // Define binning estimator
@@ -181,64 +181,44 @@ var binningTransformer = binningEstimator.Fit(data);
 IDataView transformedData = binningTransformer.Transform(data);
 ```
 
-<span data-ttu-id="79834-146">分箱的结果为创建 `[0,200000,Infinity]` 的分箱边界。</span><span class="sxs-lookup"><span data-stu-id="79834-146">The result of binning creates bin bounds of `[0,200000,Infinity]`.</span></span> <span data-ttu-id="79834-147">因此，所得到的箱为 `[0,1,1]`，因为第一个观测在 0-200,000 之间，而其他观测则大于 200,000 但小于无穷大。</span><span class="sxs-lookup"><span data-stu-id="79834-147">Therefore the resulting bins are `[0,1,1]` because the first observation is between 0-200000 and the others are greater than 200000 but less than infinity.</span></span>
+<span data-ttu-id="81437-146">分箱的结果为创建 `[0,200000,Infinity]` 的分箱边界。</span><span class="sxs-lookup"><span data-stu-id="81437-146">The result of binning creates bin bounds of `[0,200000,Infinity]`.</span></span> <span data-ttu-id="81437-147">因此，所得到的箱为 `[0,1,1]`，因为第一个观测在 0-200,000 之间，而其他观测则大于 200,000 但小于无穷大。</span><span class="sxs-lookup"><span data-stu-id="81437-147">Therefore the resulting bins are `[0,1,1]` because the first observation is between 0-200000 and the others are greater than 200000 but less than infinity.</span></span>
 
-## <a name="work-with-categorical-data"></a><span data-ttu-id="79834-148">使用分类数据</span><span class="sxs-lookup"><span data-stu-id="79834-148">Work with categorical data</span></span>
+## <a name="work-with-categorical-data"></a><span data-ttu-id="81437-148">使用分类数据</span><span class="sxs-lookup"><span data-stu-id="81437-148">Work with categorical data</span></span>
 
-<span data-ttu-id="79834-149">在用于生成机器学习模型之前，需要将非数字分类数据转换为数字。</span><span class="sxs-lookup"><span data-stu-id="79834-149">Non-numeric categorical data needs to be converted to a number before being used to build a machine learning model.</span></span>
+<span data-ttu-id="81437-149">最常见的数据类型之一是分类数据。</span><span class="sxs-lookup"><span data-stu-id="81437-149">One of the most common types of data is categorical data.</span></span> <span data-ttu-id="81437-150">分类数据具有有限数量的类别。</span><span class="sxs-lookup"><span data-stu-id="81437-150">Categorical data has a finite number of categories.</span></span> <span data-ttu-id="81437-151">例如，美国的州或一组照片中发现的动物类型列表。</span><span class="sxs-lookup"><span data-stu-id="81437-151">For example, the states of the USA, or a list of the types of animals found in a set of pictures.</span></span> <span data-ttu-id="81437-152">无论分类数据是特征还是标签，都必须映射到数值，以便它们可用于生成机器学习模型。</span><span class="sxs-lookup"><span data-stu-id="81437-152">Whether the categorical data are features or labels, they must be mapped onto a numerical value so they can be used to generate a machine learning model.</span></span> <span data-ttu-id="81437-153">在 ML.NET 中使用分类数据的方法有很多，具体取决于要解决的问题。</span><span class="sxs-lookup"><span data-stu-id="81437-153">There are a number of ways of working with categorical data in ML.NET, depending on the problem you are solving.</span></span>
 
-<span data-ttu-id="79834-150">使用加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中的以下输入数据：</span><span class="sxs-lookup"><span data-stu-id="79834-150">Using the following input data which is loaded into an [`IDataView`](xref:Microsoft.ML.IDataView):</span></span>
+### <a name="key-value-mapping"></a><span data-ttu-id="81437-154">键值映射</span><span class="sxs-lookup"><span data-stu-id="81437-154">Key value mapping</span></span>
 
-```csharp
-CarData[] cars = new CarData[]
-{
-    new CarData
-    {
-        Color="Red",
-        VehicleType="SUV"
-    },
-    new CarData
-    {
-        Color="Blue",
-        VehicleType="Sedan"
-    },
-    new CarData
-    {
-        Color="Black",
-        VehicleType="SUV"
-    }
-};
-```
+<span data-ttu-id="81437-155">在 ML.NET 中，键是表示类别的整数值。</span><span class="sxs-lookup"><span data-stu-id="81437-155">In ML.NET, a key is an integer value that represents a category.</span></span> <span data-ttu-id="81437-156">键值映射最常用于将字符串标签映射为训练的唯一整数值，并在使用模型进行预测时映射回它们的字符串值。</span><span class="sxs-lookup"><span data-stu-id="81437-156">Key value mapping is most often used to map string labels into unique integer values for training, then back to their string values when the model is used to make a prediction.</span></span>
 
-<span data-ttu-id="79834-151">分类 `VehicleType` 属性可以使用 [`OneHotEncoding`](xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*) 方法转换为数字。</span><span class="sxs-lookup"><span data-stu-id="79834-151">The categorical `VehicleType` property can be converted into a number using the [`OneHotEncoding`](xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*) method.</span></span>
+<span data-ttu-id="81437-157">用于执行键值映射的转换是 [MapValueToKey](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) 和 [MapKeyToValue](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapKeyToValue%2A)。</span><span class="sxs-lookup"><span data-stu-id="81437-157">The transforms used to perform key value mapping are [MapValueToKey](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) and [MapKeyToValue](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapKeyToValue%2A).</span></span>
 
-```csharp
-// Define categorical transform estimator
-var categoricalEstimator = mlContext.Transforms.Categorical.OneHotEncoding("VehicleType");
+<span data-ttu-id="81437-158">`MapValueToKey` 在模型中添加映射字典，以便 `MapKeyToValue` 可以在进行预测时执行反向转换。</span><span class="sxs-lookup"><span data-stu-id="81437-158">`MapValueToKey` adds a dictionary of mappings in the model, so that `MapKeyToValue` can perform the reverse transform when making a prediction.</span></span>
 
-// Fit data to estimator
-// Fitting generates a transformer that applies the operations of defined by estimator
-ITransformer categoricalTransformer = categoricalEstimator.Fit(data);
+### <a name="one-hot-encoding"></a><span data-ttu-id="81437-159">一个热编码</span><span class="sxs-lookup"><span data-stu-id="81437-159">One hot encoding</span></span>
 
-// Transform Data
-IDataView transformedData = categoricalTransformer.Transform(data);
-```
+<span data-ttu-id="81437-160">一个热编码使用一组有限的值，并将它们映射到整数，这些整数的二进制表示形式在字符串中的唯一位置有一个 `1` 值。</span><span class="sxs-lookup"><span data-stu-id="81437-160">One hot encoding takes a finite set of values and maps them onto integers whose binary representation has a single `1` value in unique positions in the string.</span></span> <span data-ttu-id="81437-161">如果没有对分类数据进行隐式排序，则一个热编码可能是最佳选择。</span><span class="sxs-lookup"><span data-stu-id="81437-161">One hot encoding can be the best choice if there is no implicit ordering of the categorical data.</span></span> <span data-ttu-id="81437-162">下表显示了一个示例，其中邮政编码为原始值。</span><span class="sxs-lookup"><span data-stu-id="81437-162">The following table shows an example with zip codes as raw values.</span></span>
 
-<span data-ttu-id="79834-152">生成的转换将 `VehicleType` 的文本值转换为数字。</span><span class="sxs-lookup"><span data-stu-id="79834-152">The resulting transform converts the text value of `VehicleType` to a number.</span></span> <span data-ttu-id="79834-153">应用转换后，`VehicleType` 列中的条目将变为以下内容：</span><span class="sxs-lookup"><span data-stu-id="79834-153">The entries in the `VehicleType` column become the following when the transform is applied:</span></span>
+|<span data-ttu-id="81437-163">原始值</span><span class="sxs-lookup"><span data-stu-id="81437-163">Raw value</span></span>|<span data-ttu-id="81437-164">一个热编码值</span><span class="sxs-lookup"><span data-stu-id="81437-164">One hot encoded value</span></span>|
+|---------|---------------------|
+|<span data-ttu-id="81437-165">98052</span><span class="sxs-lookup"><span data-stu-id="81437-165">98052</span></span>|<span data-ttu-id="81437-166">00...01</span><span class="sxs-lookup"><span data-stu-id="81437-166">00...01</span></span>|
+|<span data-ttu-id="81437-167">98100</span><span class="sxs-lookup"><span data-stu-id="81437-167">98100</span></span>|<span data-ttu-id="81437-168">00...10</span><span class="sxs-lookup"><span data-stu-id="81437-168">00...10</span></span>|
+|<span data-ttu-id="81437-169">...</span><span class="sxs-lookup"><span data-stu-id="81437-169">...</span></span>|<span data-ttu-id="81437-170">...</span><span class="sxs-lookup"><span data-stu-id="81437-170">...</span></span>|
+|<span data-ttu-id="81437-171">98109</span><span class="sxs-lookup"><span data-stu-id="81437-171">98109</span></span>|<span data-ttu-id="81437-172">10...00</span><span class="sxs-lookup"><span data-stu-id="81437-172">10...00</span></span>|
 
-```text
-[
-    1, // SUV
-    2, // Sedan
-    1 // SUV
-]
-```
+<span data-ttu-id="81437-173">将分类数据转换为一个热编码数字的转换是 [`OneHotEncoding`](xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding%2A)。</span><span class="sxs-lookup"><span data-stu-id="81437-173">The transform to convert categorical data to one-hot encoded numbers is [`OneHotEncoding`](xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding%2A).</span></span>
 
-## <a name="work-with-text-data"></a><span data-ttu-id="79834-154">使用文本数据</span><span class="sxs-lookup"><span data-stu-id="79834-154">Work with text data</span></span>
+### <a name="hashing"></a><span data-ttu-id="81437-174">哈希</span><span class="sxs-lookup"><span data-stu-id="81437-174">Hashing</span></span>
 
-<span data-ttu-id="79834-155">在用于生成机器学习模型之前，需要将文本数据转换为数字。</span><span class="sxs-lookup"><span data-stu-id="79834-155">Text data needs to be transformed into numbers before using it to build a machine learning model.</span></span> <span data-ttu-id="79834-156">访问[转换页面](../resources/transforms.md)，获取更详细的文本转换列表和说明。</span><span class="sxs-lookup"><span data-stu-id="79834-156">Visit the [transforms page](../resources/transforms.md) for a more detailed list and description of text transforms.</span></span>
+<span data-ttu-id="81437-175">哈希是将分类数据转换为数字的另一种方法。</span><span class="sxs-lookup"><span data-stu-id="81437-175">Hashing is another way to convert categorical data to numbers.</span></span> <span data-ttu-id="81437-176">哈希函数将任意大小（例如文本字符串）的数据映射到具有固定范围的数字。</span><span class="sxs-lookup"><span data-stu-id="81437-176">A hash function maps data of an arbitrary size (a string of text for example) onto a number with a fixed range.</span></span> <span data-ttu-id="81437-177">哈希是一种快速且节省空间的向量化特征的方法。</span><span class="sxs-lookup"><span data-stu-id="81437-177">Hashing can be a fast and space-efficient way of vectorizing features.</span></span> <span data-ttu-id="81437-178">机器学习中的哈希的一个显著示例是垃圾邮件筛选，它不是维护一个包含已知单词的字典，而是对电子邮件中的每个单词进行哈希处理并将其添加到一个大型特征向量中。</span><span class="sxs-lookup"><span data-stu-id="81437-178">One notable example of hashing in machine learning is email spam filtering where, instead of maintaining a dictionary of known words, every word in the email is hashed and added to a large feature vector.</span></span> <span data-ttu-id="81437-179">以此方式使用哈希，可以通过使用不在字典中的单词来避免恶意垃圾邮件筛选规避的问题。</span><span class="sxs-lookup"><span data-stu-id="81437-179">Using hashing in this way avoids the problem of malicious spam filtering circumvention by the use of words that are not in the dictionary.</span></span>
 
-<span data-ttu-id="79834-157">使用类似以下已加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中的数据的数据：</span><span class="sxs-lookup"><span data-stu-id="79834-157">Using data like the data below that has been loaded into an [`IDataView`](xref:Microsoft.ML.IDataView):</span></span>
+<span data-ttu-id="81437-180">ML.NET 提供[哈希](xref:Microsoft.ML.ConversionsExtensionsCatalog.Hash%2A)转换，对文本、日期和数值数据执行哈希处理。</span><span class="sxs-lookup"><span data-stu-id="81437-180">ML.NET provides [Hash](xref:Microsoft.ML.ConversionsExtensionsCatalog.Hash%2A) transform to perform hashing on text, dates, and numerical data.</span></span> <span data-ttu-id="81437-181">类似于值键映射，哈希转换输出为键类型。</span><span class="sxs-lookup"><span data-stu-id="81437-181">Like value key mapping, the outputs of the hash transform are key types.</span></span>
+
+## <a name="work-with-text-data"></a><span data-ttu-id="81437-182">使用文本数据</span><span class="sxs-lookup"><span data-stu-id="81437-182">Work with text data</span></span>
+
+<span data-ttu-id="81437-183">类似于分类数据，在用于生成机器学习模型之前，需要将文本数据转换为数字特征。</span><span class="sxs-lookup"><span data-stu-id="81437-183">Like categorical data, text data needs to be transformed into numerical features before using it to build a machine learning model.</span></span> <span data-ttu-id="81437-184">访问[转换页面](../resources/transforms.md)，获取更详细的文本转换列表和说明。</span><span class="sxs-lookup"><span data-stu-id="81437-184">Visit the [transforms page](../resources/transforms.md) for a more detailed list and description of text transforms.</span></span>
+
+<span data-ttu-id="81437-185">使用类似以下已加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中的数据的数据：</span><span class="sxs-lookup"><span data-stu-id="81437-185">Using data like the data below that has been loaded into an [`IDataView`](xref:Microsoft.ML.IDataView):</span></span>
 
 ```csharp
 ReviewData[] reviews = new ReviewData[]
@@ -256,7 +236,7 @@ ReviewData[] reviews = new ReviewData[]
 };
 ```
 
-<span data-ttu-id="79834-158">将文本转换为数字向量表示形式的最简单步骤是使用 [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) 方法。</span><span class="sxs-lookup"><span data-stu-id="79834-158">The minimum step to convert text to a numerical vector representation is to use the [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) method.</span></span> <span data-ttu-id="79834-159">通过使用 [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) 转换，将一系列转换应用于输入文本列，从而生成表示 lp 规范化字词和 n 元语法的数字向量。</span><span class="sxs-lookup"><span data-stu-id="79834-159">By using the [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) transform, a series of transformations is applied to the input text column resulting in a numerical vector representing the lp-normalized word and character ngrams.</span></span>
+<span data-ttu-id="81437-186">ML.NET 提供 [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText%2A) 转换，该转换采用文本的字符串值，并通过应用一系列单个转换从文本创建一组特征。</span><span class="sxs-lookup"><span data-stu-id="81437-186">ML.NET provides the [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText%2A) transform that takes a text's string value and creates a set of features from the text, by applying a series of individual transforms.</span></span>
 
 ```csharp
 // Define text transform estimator
@@ -270,13 +250,13 @@ ITransformer textTransformer = textEstimator.Fit(data);
 IDataView transformedData = textTransformer.Transform(data);
 ```
 
-<span data-ttu-id="79834-160">生成的转换会将 `Description` 列中的文本值转换为类似以下输出的数字向量：</span><span class="sxs-lookup"><span data-stu-id="79834-160">The resulting transform would convert the text values in the `Description` column to a numerical vector that looks similar to the output below:</span></span>
+<span data-ttu-id="81437-187">生成的转换会将 `Description` 列中的文本值转换为类似以下输出的数字向量：</span><span class="sxs-lookup"><span data-stu-id="81437-187">The resulting transform converts the text values in the `Description` column to a numerical vector that looks similar to the output below:</span></span>
 
 ```text
 [ 0.2041241, 0.2041241, 0.2041241, 0.4082483, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0, 0, 0, 0, 0.4472136, 0.4472136, 0.4472136, 0.4472136, 0.4472136, 0 ]
 ```
 
-<span data-ttu-id="79834-161">将复杂的文本处理步骤合并到一个 [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) 中以消除干扰，并可能根据需要减少所需的处理资源量。</span><span class="sxs-lookup"><span data-stu-id="79834-161">Combine complex text processing steps into an [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) to remove noise and potentially reduce the amount of required processing resources as needed.</span></span>
+<span data-ttu-id="81437-188">还可以单独应用组成 `FeaturizeText` 的转换，对特征生成进行更精细的控制。</span><span class="sxs-lookup"><span data-stu-id="81437-188">The transforms that make up `FeaturizeText` can also be applied individually for finer grain control over feature generation.</span></span>
 
 ```csharp
 // Define text transform estimator
@@ -288,17 +268,17 @@ var textEstimator = mlContext.Transforms.Text.NormalizeText("Description")
     .Append(mlContext.Transforms.NormalizeLpNorm("Description"));
 ```
 
-<span data-ttu-id="79834-162">`textEstimator` 包含 [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) 方法执行的一组操作。</span><span class="sxs-lookup"><span data-stu-id="79834-162">`textEstimator` contains a subset of operations performed by the [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) method.</span></span> <span data-ttu-id="79834-163">更复杂管道的好处在于对应用于数据的转换的控制和可见性。</span><span class="sxs-lookup"><span data-stu-id="79834-163">The benefit of a more complex pipeline is control and visibility over the transformations applied to the data.</span></span>
+<span data-ttu-id="81437-189">`textEstimator` 包含 [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText%2A) 方法执行的一组操作。</span><span class="sxs-lookup"><span data-stu-id="81437-189">`textEstimator` contains a subset of operations performed by the [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText%2A) method.</span></span> <span data-ttu-id="81437-190">更复杂管道的好处在于对应用于数据的转换的控制和可见性。</span><span class="sxs-lookup"><span data-stu-id="81437-190">The benefit of a more complex pipeline is control and visibility over the transformations applied to the data.</span></span>
 
-<span data-ttu-id="79834-164">以第一个条目为例，以下是对 `textEstimator` 定义的转换步骤产生的结果的详细说明：</span><span class="sxs-lookup"><span data-stu-id="79834-164">Using the first entry as an example, the following is a detailed description of the results produced by the transformation steps defined by `textEstimator`:</span></span>
+<span data-ttu-id="81437-191">以第一个条目为例，以下是对 `textEstimator` 定义的转换步骤产生的结果的详细说明：</span><span class="sxs-lookup"><span data-stu-id="81437-191">Using the first entry as an example, the following is a detailed description of the results produced by the transformation steps defined by `textEstimator`:</span></span>
 
-<span data-ttu-id="79834-165">**原始文本：This is a good product**</span><span class="sxs-lookup"><span data-stu-id="79834-165">**Original Text: This is a good product**</span></span>
+<span data-ttu-id="81437-192">**原始文本：This is a good product**</span><span class="sxs-lookup"><span data-stu-id="81437-192">**Original Text: This is a good product**</span></span>
 
-|<span data-ttu-id="79834-166">Transform</span><span class="sxs-lookup"><span data-stu-id="79834-166">Transform</span></span> | <span data-ttu-id="79834-167">说明</span><span class="sxs-lookup"><span data-stu-id="79834-167">Description</span></span> | <span data-ttu-id="79834-168">结果</span><span class="sxs-lookup"><span data-stu-id="79834-168">Result</span></span>
+|<span data-ttu-id="81437-193">Transform</span><span class="sxs-lookup"><span data-stu-id="81437-193">Transform</span></span> | <span data-ttu-id="81437-194">描述</span><span class="sxs-lookup"><span data-stu-id="81437-194">Description</span></span> | <span data-ttu-id="81437-195">结果</span><span class="sxs-lookup"><span data-stu-id="81437-195">Result</span></span>
 |--|--|--|
-|<span data-ttu-id="79834-169">1.NormalizeText</span><span class="sxs-lookup"><span data-stu-id="79834-169">1. NormalizeText</span></span> | <span data-ttu-id="79834-170">默认情况下将所有字母转换为小写字母</span><span class="sxs-lookup"><span data-stu-id="79834-170">Converts all letters to lowercase by default</span></span> | <span data-ttu-id="79834-171">this is a good product</span><span class="sxs-lookup"><span data-stu-id="79834-171">this is a good product</span></span>
-|<span data-ttu-id="79834-172">2.TokenizeWords</span><span class="sxs-lookup"><span data-stu-id="79834-172">2. TokenizeWords</span></span> | <span data-ttu-id="79834-173">将字符串拆分为单独的字词</span><span class="sxs-lookup"><span data-stu-id="79834-173">Splits string into individual words</span></span> | <span data-ttu-id="79834-174">["this","is","a","good","product"]</span><span class="sxs-lookup"><span data-stu-id="79834-174">["this","is","a","good","product"]</span></span>
-|<span data-ttu-id="79834-175">3.RemoveDefaultStopWords</span><span class="sxs-lookup"><span data-stu-id="79834-175">3. RemoveDefaultStopWords</span></span> | <span data-ttu-id="79834-176">删除 *is* 和 *a* 等非索引字</span><span class="sxs-lookup"><span data-stu-id="79834-176">Removes stopwords like *is* and *a*.</span></span> | <span data-ttu-id="79834-177">["good","product"]</span><span class="sxs-lookup"><span data-stu-id="79834-177">["good","product"]</span></span>
-|<span data-ttu-id="79834-178">4.MapValueToKey</span><span class="sxs-lookup"><span data-stu-id="79834-178">4. MapValueToKey</span></span> | <span data-ttu-id="79834-179">根据输入数据将值映射到键（类别）</span><span class="sxs-lookup"><span data-stu-id="79834-179">Maps the values to keys (categories) based on the input data</span></span> |  <span data-ttu-id="79834-180">[1,2]</span><span class="sxs-lookup"><span data-stu-id="79834-180">[1,2]</span></span>
-|<span data-ttu-id="79834-181">5.ProduceNGrams</span><span class="sxs-lookup"><span data-stu-id="79834-181">5. ProduceNGrams</span></span> | <span data-ttu-id="79834-182">将文本转换为连续单词的序列</span><span class="sxs-lookup"><span data-stu-id="79834-182">Transforms text into sequence of consecutive words</span></span> | <span data-ttu-id="79834-183">[1,1,1,0,0]</span><span class="sxs-lookup"><span data-stu-id="79834-183">[1,1,1,0,0]</span></span>
-|<span data-ttu-id="79834-184">6.NormalizeLpNorm</span><span class="sxs-lookup"><span data-stu-id="79834-184">6. NormalizeLpNorm</span></span> | <span data-ttu-id="79834-185">按缩放的 lp 规范缩放输入</span><span class="sxs-lookup"><span data-stu-id="79834-185">Scale inputs by their lp-norm</span></span> | <span data-ttu-id="79834-186">[ 0.577350529, 0.577350529, 0.577350529, 0, 0 ]</span><span class="sxs-lookup"><span data-stu-id="79834-186">[ 0.577350529, 0.577350529, 0.577350529, 0, 0 ]</span></span>
+|<span data-ttu-id="81437-196">1.NormalizeText</span><span class="sxs-lookup"><span data-stu-id="81437-196">1. NormalizeText</span></span> | <span data-ttu-id="81437-197">默认情况下将所有字母转换为小写字母</span><span class="sxs-lookup"><span data-stu-id="81437-197">Converts all letters to lowercase by default</span></span> | <span data-ttu-id="81437-198">this is a good product</span><span class="sxs-lookup"><span data-stu-id="81437-198">this is a good product</span></span>
+|<span data-ttu-id="81437-199">2.TokenizeWords</span><span class="sxs-lookup"><span data-stu-id="81437-199">2. TokenizeWords</span></span> | <span data-ttu-id="81437-200">将字符串拆分为单独的字词</span><span class="sxs-lookup"><span data-stu-id="81437-200">Splits string into individual words</span></span> | <span data-ttu-id="81437-201">["this","is","a","good","product"]</span><span class="sxs-lookup"><span data-stu-id="81437-201">["this","is","a","good","product"]</span></span>
+|<span data-ttu-id="81437-202">3.RemoveDefaultStopWords</span><span class="sxs-lookup"><span data-stu-id="81437-202">3. RemoveDefaultStopWords</span></span> | <span data-ttu-id="81437-203">删除 *is* 和 *a* 等非索引字</span><span class="sxs-lookup"><span data-stu-id="81437-203">Removes stopwords like *is* and *a*.</span></span> | <span data-ttu-id="81437-204">["good","product"]</span><span class="sxs-lookup"><span data-stu-id="81437-204">["good","product"]</span></span>
+|<span data-ttu-id="81437-205">4.MapValueToKey</span><span class="sxs-lookup"><span data-stu-id="81437-205">4. MapValueToKey</span></span> | <span data-ttu-id="81437-206">根据输入数据将值映射到键（类别）</span><span class="sxs-lookup"><span data-stu-id="81437-206">Maps the values to keys (categories) based on the input data</span></span> |  <span data-ttu-id="81437-207">[1,2]</span><span class="sxs-lookup"><span data-stu-id="81437-207">[1,2]</span></span>
+|<span data-ttu-id="81437-208">5.ProduceNGrams</span><span class="sxs-lookup"><span data-stu-id="81437-208">5. ProduceNGrams</span></span> | <span data-ttu-id="81437-209">将文本转换为连续单词的序列</span><span class="sxs-lookup"><span data-stu-id="81437-209">Transforms text into sequence of consecutive words</span></span> | <span data-ttu-id="81437-210">[1,1,1,0,0]</span><span class="sxs-lookup"><span data-stu-id="81437-210">[1,1,1,0,0]</span></span>
+|<span data-ttu-id="81437-211">6.NormalizeLpNorm</span><span class="sxs-lookup"><span data-stu-id="81437-211">6. NormalizeLpNorm</span></span> | <span data-ttu-id="81437-212">按缩放的 lp 规范缩放输入</span><span class="sxs-lookup"><span data-stu-id="81437-212">Scale inputs by their lp-norm</span></span> | <span data-ttu-id="81437-213">[ 0.577350529, 0.577350529, 0.577350529, 0, 0 ]</span><span class="sxs-lookup"><span data-stu-id="81437-213">[ 0.577350529, 0.577350529, 0.577350529, 0, 0 ]</span></span>
