@@ -1,17 +1,17 @@
 ---
 title: dotnet msbuild 命令
 description: dotnet msbuild 命令可提供对 MSBuild 命令行的访问权限。
-ms.date: 12/03/2018
-ms.openlocfilehash: dae1e9f0ca355166d41c11fbafb80c7c9fb29748
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733198"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503676"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
 ## <a name="name"></a>“属性”
 
@@ -31,25 +31,25 @@ ms.locfileid: "76733198"
 
 ## <a name="examples"></a>示例
 
-* 生成项目及其依赖项：
+- 生成项目及其依赖项：
 
   ```dotnetcli
   dotnet msbuild
   ```
 
-* 使用“发布”配置生成项目及其依赖项：
+- 使用“发布”配置生成项目及其依赖项：
 
   ```dotnetcli
   dotnet msbuild -property:Configuration=Release
   ```
 
-* 运行发布目标并发布 `osx.10.11-x64` RID：
+- 运行发布目标并发布 `osx.10.11-x64` RID：
 
   ```dotnetcli
   dotnet msbuild -target:Publish -property:RuntimeIdentifiers=osx.10.11-x64
   ```
 
-* 请参阅包含 SDK 添加的所有目标的整个项目：
+- 请参阅包含 SDK 添加的所有目标的整个项目：
 
   ```dotnetcli
   dotnet msbuild -preprocess

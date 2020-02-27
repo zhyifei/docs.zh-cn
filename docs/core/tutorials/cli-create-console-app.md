@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6e1c7881aa415ea54307d80214001a2f0fe5b4a6
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: af1b374cd14d5070194c035024ce2328c9016646
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920470"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503539"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>使用 .NET Core CLI 实现 .NET Core 入门
 
@@ -28,7 +28,7 @@ ms.locfileid: "76920470"
 
 若要[查看或下载示例代码](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild)，可以访问 dotnet/samples GitHub 存储库。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-打开命令提示符，创建一个名为“Hello”  的文件夹。 导航到创建的文件夹，键入下列内容：
+打开命令提示符，创建一个名为“Hello”  的文件夹。 导航到创建的文件夹，键入下列内容。
 
 ```dotnetcli
 dotnet new console
@@ -64,17 +64,25 @@ dotnet run
 
     [dotnet run](../tools/dotnet-run.md) 调用 [dotnet build](../tools/dotnet-build.md) 来确保已生成要生成的目标，然后调用 `dotnet <assembly.dll>` 运行目标应用程序。
     
-    ```console
+    ```dotnetcli
     dotnet run
+    ```
 
+    将获得以下输出。
+
+    ```console
     Hello World!
     ```
     
     或者，还可以运行 `dotnet build` 来编译代码，无需运行已生成的控制台应用程序。 这会基于项目的名称将已编译的应用程序作为 DLL 文件生成。 在这种情况下，创建的文件命名为 Hello.dll  。 此应用可以使用 Windows 上的 `dotnet bin\Debug\netcoreapp3.1\Hello.dll` 运行（非 Windows 系统使用 `/`）。
     
-    ```console
+    ```dotnetcli
     dotnet bin\Debug\netcoreapp3.1\Hello.dll
+    ```
 
+    将获得以下输出。
+
+    ```console
     Hello World!
     ```
     
@@ -98,8 +106,13 @@ dotnet run
 
 03. 运行向应用传递参数的程序。 使用 `dotnet` 命令运行应用时，将 `--` 添加到末尾。 `--` 右侧的任何内容都将作为参数传递到应用。 在下面的示例中，值 `John` 传递到应用。
 
+    ```dotnetcli
+    dotnet run -- John
+    ```
+
+    将获得以下输出。
+
     ```console
-    $ dotnet run -- John
     Hello John!
     Fibonacci Numbers 1-15:
     1: 0
@@ -135,10 +148,15 @@ dotnet run
 
 03. 运行 [dotnet build](../tools/dotnet-build.md) 以编译更改。
 
-04. 通过执行 [dotnet run](../tools/dotnet-run.md) 来运行应用。 以下是程序输出：
+04. 通过执行 [dotnet run](../tools/dotnet-run.md) 来运行应用。
+
+    ```dotnetcli
+    dotnet run
+    ```
+
+    将获得以下输出。
 
     ```console
-    $ dotnet run
     0
     1
     1
@@ -160,8 +178,13 @@ dotnet run
 
 准备好分发应用后，使用 [dotnet publish](../tools/dotnet-publish.md) 命令在 bin\\debug\\netcoreapp3.1\\publish\\（非 Windows 系统使用 `/`）处生成 publish 文件夹   。 可以将 publish  文件夹的内容分发到其他平台，只要这些平台安装了 dotnet 运行时即可。
 
-```console
+```dotnetcli
 dotnet publish
+```
+
+将获得类似于下面的输出。
+
+```console
 Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -174,9 +197,13 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 
 可以使用 [dotnet](../tools/dotnet.md) 命令运行已发布的应用：
 
-```console
+```dotnetcli
 dotnet bin\Debug\netcoreapp3.1\publish\Hello.dll
+```
 
+将获得以下输出。
+
+```console
 Hello World!
 ```
 

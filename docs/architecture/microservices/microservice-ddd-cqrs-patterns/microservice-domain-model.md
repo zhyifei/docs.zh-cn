@@ -1,13 +1,13 @@
 ---
 title: 设计微服务域模型
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解设计面向 DDD 的域模型时的关键概念。
-ms.date: 10/08/2018
-ms.openlocfilehash: 3a02059064305ca148b7909923e2f51e60ee54d5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 628fb5c76362ec8f48367b3d69d16ea6ebd24f09
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737382"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502324"
 ---
 # <a name="design-a-microservice-domain-model"></a>设计微服务域模型
 
@@ -74,9 +74,9 @@ Martin Fowler 在他的博客文章 [AnemicDomainModel](https://martinfowler.com
 
 有名字和姓氏的人通常是一个实体，因为这个人具有标识，即使其名字和姓氏与另一组值重合（例如这些名字还指另一个人）也是如此。
 
-值对象在关系数据库和 ORM（如 EF）中很难管理，而在面向文档的数据库中，它们更易于实现和使用。
+值对象在关系数据库和 ORM（如 Entity Framework (EF)）中很难管理，而在面向文档的数据库中，它们更易于实现和使用。
 
-EF Core 2.0 包含[实体](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting)功能，这样可以更易于处理值对象，如我们稍后详细介绍的一样。
+EF Core 2.0 及更高版本包含[从属实体](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting)功能，这样可以更易于处理值对象，如我们稍后详细介绍的一样。
 
 #### <a name="additional-resources"></a>其他资源
 

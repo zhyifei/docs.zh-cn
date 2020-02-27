@@ -1,21 +1,17 @@
 ---
 title: dotnet pack 命令
 description: dotnet pack 命令可为 .NET Core 项目创建 NuGet 包。
-ms.date: 08/08/2019
-ms.openlocfilehash: 057d1029e5c933912c43c178b6db8a8498f2ed57
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734121"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503643"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
- 本文适用于：✔️ .NET Core 1.x SDK 及更高版本
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
 ## <a name="name"></a>“属性”
 
@@ -63,13 +59,13 @@ dotnet pack [-h|--help]
 
 ## <a name="options"></a>选项
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
-  定义生成配置。 默认值为 `Debug`。
+  定义生成配置。 大多数项目的默认配置为 `Debug`，但你可以覆盖项目中的生成配置设置。
 
 - **`--force`**
 
-  强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件  。 自 .NET Core 2.0 SDK 起可用的选项。
+  强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件  。
 
 - **`-h|--help`**
 
@@ -93,11 +89,11 @@ dotnet pack [-h|--help]
 
 - **`--no-dependencies`**
 
-  忽略项目间引用，仅还原根项目。 自 .NET Core 2.0 SDK 起可用的选项。
+  忽略项目间引用，仅还原根项目。
 
 - **`--no-restore`**
 
-  运行此命令时不执行隐式还原。 自 .NET Core 2.0 SDK 起可用的选项。
+  运行此命令时不执行隐式还原。
 
 - **`--nologo`**
 
@@ -109,7 +105,7 @@ dotnet pack [-h|--help]
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  指定要为其还原包的目标运行时。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。 自 .NET Core 2.0 SDK 起可用的选项。
+  指定要为其还原包的目标运行时。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。
 
 - **`-s|--serviceable`**
 
@@ -167,7 +163,7 @@ dotnet pack [-h|--help]
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-- 打包项目，并使用特定运行时 (Windows 10) 进行还原操作（.NET Core SDK 2.0 及更高版本）：
+- 打包项目，并使用特定运行时 (Windows 10) 进行还原操作：
 
   ```dotnetcli
   dotnet pack --runtime win10-x64

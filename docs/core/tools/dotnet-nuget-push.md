@@ -2,21 +2,17 @@
 title: dotnet nuget push 命令
 description: dotnet nuget push 命令可将包推送到服务器并发布。
 author: karann-msft
-ms.date: 12/04/2019
-ms.openlocfilehash: a352120efa199b871e67eb8ba2442bd69a9fc4ed
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 02/14/2020
+ms.openlocfilehash: d4ef8e58908fe488c712debff3b313ac0908b43e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789881"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503655"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
- 本文适用于：✔️ .NET Core 1.x SDK 及更高版本
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
 ## <a name="name"></a>“属性”
 
@@ -36,69 +32,69 @@ dotnet nuget push [-h|--help]
 
 ## <a name="arguments"></a>自变量
 
-* **`ROOT`**
+- **`ROOT`**
 
   指定要推送的包的文件路径。
 
 ## <a name="options"></a>选项
 
-* **`-d|--disable-buffering`**
+- **`-d|--disable-buffering`**
 
   当推送到 HTTP(S) 服务器以减少内存使用率时，禁用缓冲。
 
-* **`--force-english-output`**
+- **`--force-english-output`**
 
   使用固定的、基于英语的区域性强制运行应用程序。
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   打印出有关命令的简短帮助。
 
-* **`--interactive`**
+- **`--interactive`**
 
   对于身份验证等操作，允许命令阻止并要求手动操作。 自 .NET Core 2.2 SDK 起可用的选项。
 
-* **`-k|--api-key <API_KEY>`**
+- **`-k|--api-key <API_KEY>`**
 
   服务器的 API 密钥。
 
-* **`-n|--no-symbols`**
+- **`-n|--no-symbols`**
 
   不推送符号（即使存在）。
 
-* **`--no-service-endpoint`**
+- **`--no-service-endpoint`**
 
   不将“api/v2/package”追加至源 URL。 自 .NET Core 2.1 SDK 起可用的选项。
 
-* **`-s|--source <SOURCE>`**
+- **`-s|--source <SOURCE>`**
 
   指定服务器 URL。 除非在 NuGet 配置文件中设置了 `DefaultPushSource` 配置值，否则此选项是必需的。
 
-* **`--skip-duplicate`**
+- **`--skip-duplicate`**
 
   将多个包推送到 HTTP(S) 服务器时，将任何 409 冲突响应视为警告，以便可以继续推送。 自 .NET Core 3.1 SDK 起可用。
 
-* **`-sk|--symbol-api-key <API_KEY>`**
+- **`-sk|--symbol-api-key <API_KEY>`**
 
   符号服务器的 API 密钥。
 
-* **`-ss|--symbol-source <SOURCE>`**
+- **`-ss|--symbol-source <SOURCE>`**
 
   指定符号服务器 URL。
 
-* **`-t|--timeout <TIMEOUT>`**
+- **`-t|--timeout <TIMEOUT>`**
 
   指定推送到服务器的超时（秒）。 默认值为 300 秒（5 分钟）。 指定为 0（零秒）将应用默认值。
 
 ## <a name="examples"></a>示例
 
-* 将 foo.nupkg 推送到默认推送源（指定 API 密钥）  ：
+- 将 foo.nupkg 推送到默认推送源（指定 API 密钥）  ：
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-* 将 foo.nupkg  推送到官方 NuGet 服务器，以指定 API 密钥：
+- 将 foo.nupkg  推送到官方 NuGet 服务器，以指定 API 密钥：
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
@@ -110,25 +106,25 @@ dotnet nuget push [-h|--help]
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-* 将 *foo.nupkg* 推送到默认推送源：
+- 将 *foo.nupkg* 推送到默认推送源：
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
-* 将 *foo.symbols.nupkg* 推送到默认符号源：
+- 将 *foo.symbols.nupkg* 推送到默认符号源：
 
   ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
-* 将 foo.nupkg 推送到默认推送源（指定 360 秒超时时间）  ：
+- 将 foo.nupkg 推送到默认推送源（指定 360 秒超时时间）  ：
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-* 将当前目录中的所有 *.nupkg* 文件推送到默认推送源：
+- 将当前目录中的所有 *.nupkg* 文件推送到默认推送源：
 
   ```dotnetcli
   dotnet nuget push *.nupkg
@@ -138,7 +134,7 @@ dotnet nuget push [-h|--help]
   > 如果此命令不起作用，则可能是较旧版本的 SDK（.NET Core 2.1 SDK 及更早版本）中的 bug 导致的。
   > 要解决此问题，请升级 SDK 版本或改为运行以下命令：`dotnet nuget push **/*.nupkg`
 
-* 推送所有 .nupkg 文件，即使 HTTP(S) 服务器返回了 409 冲突响应也是如此  ：
+- 推送所有 .nupkg 文件，即使 HTTP(S) 服务器返回了 409 冲突响应也是如此  ：
 
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate

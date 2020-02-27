@@ -1,99 +1,118 @@
 ---
 title: dotnet tool install 命令
-description: dotnet tool install 命令在计算机上安装指定的 .NET Core 全局工具。
-ms.date: 05/29/2018
-ms.openlocfilehash: d6f691117e93a39c9837b282dca19e452515c80a
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+description: dotnet tool install 命令在计算机上安装指定的 .NET Core 工具。
+ms.date: 02/14/2020
+ms.openlocfilehash: 2705defe9b77009ca1411da28dd86d144ccc19e6
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117471"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543464"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+ 本文适用于： ✔️ .NET Core 2.1 SDK 及更高版本
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
-`dotnet tool install` - 在计算机上安装指定的 [.NET Core 全局工具](global-tools.md)。
+`dotnet tool install` - 在计算机上安装指定的 [.NET Core 工具](global-tools.md)。
 
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
 dotnet tool install <PACKAGE_NAME> <-g|--global> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <PACKAGE_NAME> <--tool-path> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
+dotnet tool install <PACKAGE_NAME> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <-h|--help>
 ```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
-`dotnet tool install` 为用户提供一种在计算机上安装 .NET Core 全局工具的方法。 若要使用此命令，需要使用 `--global` 选项指定用户范围的安装或者使用 `--tool-path` 选项指定安装路径。
+`dotnet tool install` 命令为用户提供一种在计算机上安装 .NET Core 工具的方法。 若要使用命令，请指定以下安装选项之一：
 
-指定 `-g`（或 `--global`）选项时，全局工具默认安装在以下目录中：
+* 若要在默认位置中安装全局工具，请使用 `--tool-path` 选项。
+* 若要在自定义位置中安装全局工具，请使用 `--tool-path` 选项。
+* 若要安装本地工具，请省略 `--global` 和 `--tool-path` 选项。
+
+**本地工具从 .NET Core SDK 3.0 开始可用。**
+
+指定 `-g` 或 `--global` 选项时，全局工具默认安装在以下目录中：
 
 | (OS)          | 路径                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
+本地工具将添加到当前目录下的 .config 目录中的 tool-manifest.json 文件中   。 如果清单文件尚不存在，请通过运行以下命令来创建它：
+
+```dotnetcli
+dotnet new tool-manifest
+```
+
+有关详细信息，请参阅[安装本地工具](global-tools.md#install-a-local-tool)。
+
 ## <a name="arguments"></a>自变量
 
-`PACKAGE_NAME`
+- **`PACKAGE_NAME`**
 
-包含要安装的 .NET Core 全局工具的 NuGet 包的名称/ID。
+  包含要安装的 .NET Core 工具的 NuGet 包的名称/ID。
 
 ## <a name="options"></a>选项
 
-`--add-source <SOURCE>`
+- **`add-source <SOURCE>`**
 
-添加安装过程中要使用的其他 NuGet 包源。
+  添加安装过程中要使用的其他 NuGet 包源。
 
-`--configfile <FILE>`
+- **`configfile <FILE>`**
 
-要使用的 NuGet 配置 (nuget.config) 文件  。
+  要使用的 NuGet 配置 (nuget.config) 文件  。
 
-`--framework <FRAMEWORK>`
+- **`framework <FRAMEWORK>`**
 
-指定要安装工具的[目标框架](../../standard/frameworks.md)。 默认情况下，.NET Core SDK 尝试选择最合适的目标框架。
+  指定要安装工具的[目标框架](../../standard/frameworks.md)。 默认情况下，.NET Core SDK 尝试选择最合适的目标框架。
 
-`-g|--global`
+- **`-g|--global`**
 
-指定安装是用户范围的。 不能与 `--tool-path` 选项一起使用。 如果不指定此选项，则必须指定 `--tool-path` 选项。
+  指定安装是用户范围的。 不能与 `--tool-path` 选项一起使用。 省略 `--global` 和 `--tool-path` 指定本地工具安装。 
 
-`-h|--help`
+- **`-h|--help`**
 
-打印出有关命令的简短帮助。
+  打印出有关命令的简短帮助。
 
-`--tool-path <PATH>`
+- **`tool-path <PATH>`**
 
-指定全局工具的安装位置。 路径可以是绝对的，也可以是相对的。 如果路径不存在，命令会尝试创建它。 不能与 `--global` 选项一起使用。 如果不指定此选项，则必须指定 `--global` 选项。
+  指定全局工具的安装位置。 路径可以是绝对的，也可以是相对的。 如果路径不存在，命令会尝试创建它。 省略 `--global` 和 `--tool-path` 指定本地工具安装。 
 
-`-v|--verbosity <LEVEL>`
+- **`-v|--verbosity <LEVEL>`**
 
-设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+  设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
-`--version <VERSION_NUMBER>`
+- **`--version <VERSION_NUMBER>`**
 
-要安装的工具版本。 默认情况下，安装最新的稳定包版本。 使用此选项安装工具的预览版或较旧版本。
+  要安装的工具版本。 默认情况下，安装最新的稳定包版本。 使用此选项安装工具的预览版或较旧版本。
 
 ## <a name="examples"></a>示例
 
-在默认位置安装 [dotnetsay](https://www.nuget.org/packages/dotnetsay/) 全局工具：
+- **`dotnet tool install -g dotnetsay`**
 
-`dotnet tool install -g dotnetsay`
+  在默认位置中安装 [dotnetsay](https://www.nuget.org/packages/dotnetsay/) 全局工具。
 
-在特定 Windows 文件夹安装 [dotnetsay](https://www.nuget.org/packages/dotnetsay/) 全局工具：
+- **`dotnet tool install dotnetsay --tool-path c:\global-tools`**
 
-`dotnet tool install dotnetsay --tool-path c:\global-tools`
+  在特定 Windows 目录中安装 [dotnetsay](https://www.nuget.org/packages/dotnetsay/) 全局工具。
 
-在特定 Linux/macOS 文件夹安装 [dotnetsay](https://www.nuget.org/packages/dotnetsay/) 全局工具：
+- **`dotnet tool install dotnetsay --tool-path ~/bin`**
 
-`dotnet tool install dotnetsay --tool-path ~/bin`
+  在特定 Linux/macOS 目录中安装 [dotnetsay](https://www.nuget.org/packages/dotnetsay/) 全局工具。
 
-安装 2.0.0 版的 [dotnetsay](https://www.nuget.org/packages/dotnetsay/) 全局工具：
+- **`dotnet tool install -g dotnetsay --version 2.0.0`**
 
-`dotnet tool install -g dotnetsay --version 2.0.0`
+  安装 2.0.0 版的 [dotnetsay](https://www.nuget.org/packages/dotnetsay/) 全局工具。
+
+- **`dotnet tool install dotnetsay`**
+
+  在当前目录中安装 [dotnetsay](https://www.nuget.org/packages/dotnetsay/) 本地工具。
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Core 全局工具](global-tools.md)
+- [.NET Core 工具](global-tools.md)

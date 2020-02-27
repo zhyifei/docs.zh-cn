@@ -1,777 +1,729 @@
 ---
 title: dotnet new 命令
 description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
-ms.date: 05/06/2019
-ms.openlocfilehash: c9529e135f48c80f445c91038294a3e7266486f1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 02/13/2020
+ms.openlocfilehash: f11512acf5a1fdc4bde49b3d1212ccf6335dff8b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420481"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451325"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+ 本文适用于： ✔️ .NET Core 2.0 SDK 及更高版本
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet new` - 根据指定的模板，创建新的项目、配置文件或解决方案。
 
 ## <a name="synopsis"></a>摘要
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
-
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output] [-u|--uninstall] [Template options]
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] 
+    [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+## <a name="description"></a>描述
 
-```dotnetcli
-dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output] [-u|--uninstall] [Template options]
-dotnet new <TEMPLATE> [-l|--list] [--type]
-dotnet new [-h|--help]
-```
-
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-
-```dotnetcli
-dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
-dotnet new <TEMPLATE> [-l|--list] [--type]
-dotnet new [-h|--help]
-```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```dotnetcli
-dotnet new <TEMPLATE> [-lang|--language] [-n|--name] [-o|--output] [-all|--show-all] [-h|--help] [Template options]
-dotnet new <TEMPLATE> [-l|--list]
-dotnet new [-all|--show-all]
-dotnet new [-h|--help]
-```
-
----
-
-## <a name="description"></a>说明
-
-`dotnet new` 命令为初始化有效的 .NET Core 项目提供了便捷方法。
+`dotnet new` 命令基于模板创建 .NET Core 项目或其他项目。
 
 命令调用[模板引擎](https://github.com/dotnet/templating)，以根据指定的模板和选项在磁盘上创建项目。
 
 ## <a name="arguments"></a>自变量
 
-`TEMPLATE`
+- **`TEMPLATE`**
 
-调用命令时要实例化的模板。 每个模板可能具有可传递的特定选项。 有关详细信息，请参阅[模板选项](#template-options)。
+  调用命令时要实例化的模板。 每个模板可能具有可传递的特定选项。 有关详细信息，请参阅[模板选项](#template-options)。
 
-如果 `TEMPLATE` 值与“模板”或“短名称”列中的文本不完全匹配，则会对这两列执行 substring 匹配   。
+  可以运行 `dotnet new --list` 以查看所有已安装模板的列表。 如果 `TEMPLATE` 值与返回表中的“模板”  或“短名称”  列中的文本不完全匹配，则会对这两列执行 substring 匹配。
 
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+  从 .NET Core 3.0 SDK 开始，当你在以下情况下调用 `dotnet new` 命令时，CLI 将在 NuGet.org 中搜索模板：
 
-此命令包含默认的模板列表。 使用 `dotnet new -l` 获取可用模板的列表。 下表显示了随 .NET Core SDK 2.2.100 一起预安装的模板。 模板的默认语言显示在括号内。
+  - 如果在调用 `dotnet new` 时 CLI 找不到模板匹配项，即使是部分匹配也不行。
+  - 如果有较新版本的模板可用。 在这种情况下，将创建项目或工件，但 CLI 会就模板的更新版本发出警告。
 
-| 模板                                    | 短名称        | 语言     | Tags                                  |
-|----------------------------------------------|-------------------|--------------|---------------------------------------|
-| 控制台应用程序                          | `console`         | [C#]、F#、VB | 常用/控制台                        |
-| 类库                                | `classlib`        | [C#]、F#、VB | 常用/库                        |
-| 单元测试项目                            | `mstest`          | [C#]、F#、VB | 测试/MSTest                           |
-| NUnit 3 测试项目                         | `nunit`           | [C#]、F#、VB | 测试/NUnit                            |
-| NUnit 3 测试项                            | `nunit-test`      | [C#]、F#、VB | 测试/NUnit                            |
-| xUnit 测试项目                           | `xunit`           | [C#]、F#、VB | 测试/xUnit                            |
-| Razor 页                                   | `page`            | [C#]         | Web/ASP.NET                           |
-| MVC ViewImports                              | `viewimports`     | [C#]         | Web/ASP.NET                           |
-| MVC ViewStart                                | `viewstart`       | [C#]         | Web/ASP.NET                           |
-| ASP.NET Core 空                           | `web`             | [C#]，F#     | Web/空                             |
-| ASP.NET Core Web 应用程序 (Model-View-Controller) | `mvc`             | [C#]，F#     | Web/MVC                               |
-| ASP.NET Core Web 应用程序                         | `webapp`， `razor` | [C#]         | Web/MVC/Razor Pages                   |
-| 含 Angular 的 ASP.NET Core                    | `angular`         | [C#]         | Web/MVC/SPA                           |
-| 含 React.js 的 ASP.NET Core                   | `react`           | [C#]         | Web/MVC/SPA                           |
-| 含 React.js 和 Redux 的 ASP.NET Core         | `reactredux`      | [C#]         | Web/MVC/SPA                           |
-| Razor 类库                          | `razorclasslib`   | [C#]         | Web/Razor/库/Razor 类库 |
-| ASP.NET Core Web API                         | `webapi`          | [C#]，F#     | Web/WebAPI                            |
-| global.json 文件                             | `globaljson`      |              | 配置                                |
-| NuGet 配置                                 | `nugetconfig`     |              | 配置                                |
-| Web 配置                                   | `webconfig`       |              | 配置                                |
-| 解决方案文件                                | `sln`             |              | 解决方案                              |
+  此命令包含默认的模板列表。 使用 `dotnet new -l` 获取可用模板的列表。 下表显示了随 .NET Core SDK 一起预安装的模板。 模板的默认语言显示在括号内。 单击短名称链接可查看特定的模板选项。
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-
-此命令包含默认的模板列表。 使用 `dotnet new -l` 获取可用模板的列表。 下表列出了随 .NET Core SDK 2.1.300 一起预安装的模板。 模板的默认语言显示在括号内。
-
-| 模板                                    | 短名称      | 语言     | Tags                                  |
-|----------------------------------------------|-----------------|--------------|---------------------------------------|
-| 控制台应用程序                          | `console`       | [C#]、F#、VB | 常用/控制台                        |
-| 类库                                | `classlib`      | [C#]、F#、VB | 常用/库                        |
-| 单元测试项目                            | `mstest`        | [C#]、F#、VB | 测试/MSTest                           |
-| xUnit 测试项目                           | `xunit`         | [C#]、F#、VB | 测试/xUnit                            |
-| Razor 页                                   | `page`          | [C#]         | Web/ASP.NET                           |
-| MVC ViewImports                              | `viewimports`   | [C#]         | Web/ASP.NET                           |
-| MVC ViewStart                                | `viewstart`     | [C#]         | Web/ASP.NET                           |
-| ASP.NET Core 空                           | `web`           | [C#]，F#     | Web/空                             |
-| ASP.NET Core Web 应用程序 (Model-View-Controller) | `mvc`           | [C#]，F#     | Web/MVC                               |
-| ASP.NET Core Web 应用程序                         | `razor`         | [C#]         | Web/MVC/Razor Pages                   |
-| 含 Angular 的 ASP.NET Core                    | `angular`       | [C#]         | Web/MVC/SPA                           |
-| 含 React.js 的 ASP.NET Core                   | `react`         | [C#]         | Web/MVC/SPA                           |
-| 含 React.js 和 Redux 的 ASP.NET Core         | `reactredux`    | [C#]         | Web/MVC/SPA                           | 
-| Razor 类库                          | `razorclasslib` | [C#]         | Web/Razor/库/Razor 类库 |
-| ASP.NET Core Web API                         | `webapi`        | [C#]，F#     | Web/WebAPI                            |
-| global.json 文件                             | `globaljson`    |              | 配置                                |
-| NuGet 配置                                 | `nugetconfig`   |              | 配置                                |
-| Web 配置                                   | `webconfig`     |              | 配置                                |
-| 解决方案文件                                | `sln`           |              | 解决方案                              |
-
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-
-此命令包含默认的模板列表。 使用 `dotnet new -l` 获取可用模板的列表。 下表显示了随 .NET Core SDK 2.0.0 一起预安装的模板。 模板的默认语言显示在括号内。
-
-| 模板                                    | 短名称    | 语言     | Tags                |
-|----------------------------------------------|---------------|--------------|---------------------|
-| 控制台应用程序                          | `console`     | [C#]、F#、VB | 常用/控制台      |
-| 类库                                | `classlib`    | [C#]、F#、VB | 常用/库      |
-| 单元测试项目                            | `mstest`      | [C#]、F#、VB | 测试/MSTest         |
-| xUnit 测试项目                           | `xunit`       | [C#]、F#、VB | 测试/xUnit          |
-| ASP.NET Core 空                           | `web`         | [C#]，F#     | Web/空           |
-| ASP.NET Core Web 应用程序 (Model-View-Controller) | `mvc`         | [C#]，F#     | Web/MVC             |
-| ASP.NET Core Web 应用程序                         | `razor`       | [C#]         | Web/MVC/Razor Pages |
-| 含 Angular 的 ASP.NET Core                    | `angular`     | [C#]         | Web/MVC/SPA         |
-| 含 React.js 的 ASP.NET Core                   | `react`       | [C#]         | Web/MVC/SPA         |
-| 含 React.js 和 Redux 的 ASP.NET Core         | `reactredux`  | [C#]         | Web/MVC/SPA         |
-| ASP.NET Core Web API                         | `webapi`      | [C#]，F#     | Web/WebAPI          |
-| global.json 文件                             | `globaljson`  |              | 配置              |
-| Nuget 配置                                 | `nugetconfig` |              | 配置              |
-| Web 配置                                   | `webconfig`   |              | 配置              |
-| 解决方案文件                                | `sln`         |              | 解决方案            |
-| Razor 页                                   | `page`        |              | Web/ASP.NET         |
-| MVC ViewImports                              | `viewimports` |              | Web/ASP.NET         |
-| MVC ViewStart                                | `viewstart`   |              | Web/ASP.NET         |
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-此命令包含默认的模板列表。 使用 `dotnet new -all` 获取可用模板的列表。 下表显示了随 .NET Core SDK 1.0.1 一起预安装的模板。 模板的默认语言显示在括号内。
-
-| 模板            | 短名称    | 语言 | Tags           |
-|----------------------|---------------|----------|----------------|
-| 控制台应用程序  | `console`     | [C#]，F# | 常用/控制台 |
-| 类库        | `classlib`    | [C#]，F# | 常用/库 |
-| 单元测试项目    | `mstest`      | [C#]，F# | 测试/MSTest    |
-| xUnit 测试项目   | `xunit`       | [C#]，F# | 测试/xUnit     |
-| ASP.NET Core 空   | `web`         | [C#]     | Web/空      |
-| ASP.NET Core Web 应用程序 | `mvc`         | [C#]，F# | Web/MVC        |
-| ASP.NET Core Web API | `webapi`      | [C#]     | Web/WebAPI     |
-| Nuget 配置         | `nugetconfig` |          | 配置         |
-| Web 配置           | `webconfig`   |          | 配置         |
-| 解决方案文件        | `sln`         |          | 解决方案       |
-
----
+| 模板                                    | 短名称                      | 语言     | Tags                                  | 已引入 |
+|----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
+| 控制台应用程序                          | [控制台](#console)             | [C#]、F#、VB | 常用/控制台                        | 1.0        |
+| 类库                                | [classlib](#classlib)           | [C#]、F#、VB | 常用/库                        | 1.0        |
+| WPF 应用程序                              | [wpf](#wpf)                     | [C#]         | 常用/WPF                            | 3.0        |
+| WPF 类库                            | [wpflib](#wpf)                  | [C#]         | 常用/WPF                            | 3.0        |
+| WPF 自定义控件库                   | [wpfcustomcontrollib](#wpf)     | [C#]         | 常用/WPF                            | 3.0        |
+| WPF 用户控件库                     | [wpfusercontrollib](#wpf)       | [C#]         | 常用/WPF                            | 3.0        |
+| Windows 窗体 (WinForms) 应用程序         | [winforms](#winforms)           | [C#]         | 常用/WinForms                       | 3.0        |
+| Windows 窗体 (WinForms) 类库       | [winformslib](#winforms)        | [C#]         | 常用/WinForms                       | 3.0        |
+| Worker Service                               | [worker](#web-others)           | [C#]         | 常用/Worker/Web                     | 3.0        |
+| 单元测试项目                            | [mstest](#test)                 | [C#]、F#、VB | 测试/MSTest                           | 1.0        |
+| NUnit 3 测试项目                         | [nunit](#nunit)                  | [C#]、F#、VB | 测试/NUnit                            | 2.1.400    |
+| NUnit 3 测试项                            | `nunit-test`                    | [C#]、F#、VB | 测试/NUnit                            | 2.2        |
+| xUnit 测试项目                           | [xunit](#test)                  | [C#]、F#、VB | 测试/xUnit                            | 1.0        |
+| Razor 组件                              | `razorcomponent`                | [C#]         | Web/ASP.NET                           | 3.0        |
+| Razor 页                                   | [page](#page)                   | [C#]         | Web/ASP.NET                           | 2.0        |
+| MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
+| MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
+| Blazor Server 应用                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
+| ASP.NET Core 空                           | [web](#web)                     | [C#]，F#     | Web/空                             | 1.0        |
+| ASP.NET Core Web 应用程序 (Model-View-Controller) | [mvc](#web-options)             | [C#]，F#     | Web/MVC                               | 1.0        |
+| ASP.NET Core Web 应用程序                         | [webapp、razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2、2.0   |
+| 含 Angular 的 ASP.NET Core                    | [angular](#spa)                 | [C#]         | Web/MVC/SPA                           | 2.0        |
+| 含 React.js 的 ASP.NET Core                   | [react](#spa)                   | [C#]         | Web/MVC/SPA                           | 2.0        |
+| 含 React.js 和 Redux 的 ASP.NET Core         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2.0        |
+| Razor 类库                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/库/Razor 类库 | 2.1        |
+| ASP.NET Core Web API                         | [webapi](#webapi)               | [C#]，F#     | Web/WebAPI                            | 1.0        |
+| ASP.NET Core gRPC 服务                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
+| 协议缓冲区文件                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
+| dotnet gitignore 文件                        | `gitignore`                     |              | 配置                                | 3.0        |
+| global.json 文件                             | [globaljson](#globaljson)       |              | 配置                                | 2.0        |
+| NuGet 配置                                 | `nugetconfig`                   |              | 配置                                | 1.0        |
+| dotnet 本地工具清单文件              | `tool-manifest`                 |              | 配置                                | 3.0        |
+| Web 配置                                   | `webconfig`                     |              | 配置                                | 1.0        |
+| 解决方案文件                                | `sln`                           |              | 解决方案                              | 1.0        |
 
 ## <a name="options"></a>选项
 
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+- **`--dry-run`**
 
-`--dry-run`
+  显示有关以下内容的摘要：给定命令运行时发生的情况。 自 .NET Core 2.2 SDK 起可用。
 
-显示有关以下内容的摘要：给定命令运行导致模板创建时发生的情况。
+- **`--force`**
 
-`--force`
+  强制生成内容，即使会更改现有文件，也不例外。 当选择的模板将覆盖输出目录中的现有文件时，需要执行此操作。
 
-强制生成内容，即使会更改现有文件，也不例外。 输出目录已包含一个项目时，可能需要此操作。
+- **`-h|--help`**
 
-`-h|--help`
+  打印命令帮助。 可针对 `dotnet new` 命令本身或任何模板调用它。 例如 `dotnet new mvc --help`。
 
-打印命令帮助。 可针对 `dotnet new` 命令本身或任何模板（如 `dotnet new mvc --help`）调用它。
+- **`-i|--install <PATH|NUGET_ID>`**
 
-`-i|--install <PATH|NUGET_ID>`
+  从提供的 `PATH` 或 `NUGET_ID` 安装模板包。 若要安装模板包的预发布版本，需要以 `<package-name>::<package-version>` 格式指定该版本。 默认情况下，`dotnet new` 为该版本传递 \*，它表示最新的稳定包版本。 请在[示例](#examples)部分查看示例。
+  
+  如果在运行此命令时已经安装了模板的某个版本，则该模板将更新到指定版本，如果没有指定版本，则将更新到最新的稳定版本。
 
-从提供的 `PATH` 或 `NUGET_ID` 安装源或模板包。 若要安装模板包的预发布版本，需要以 `<package-name>::<package-version>` 格式指定该版本。 默认情况下，`dotnet new` 为该版本传递 \*，表示最后一个稳定的包版本。 请在[示例](#examples)部分查看示例。
+  若要了解如何创建自定义模板，请参阅 [dotnet new 自定义模板](custom-templates.md)。
 
-若要了解如何创建自定义模板，请参阅 [dotnet new 自定义模板](custom-templates.md)。
+- **`-l|--list`**
 
-`-l|--list`
+  列出包含指定名称的模板。 如果未指定名称，则列出所有模板。
 
-列出包含指定名称的模板。 如果针对 `dotnet new` 命令调用，则它列出可能对给定的目录可用的模板。 例如，如果该目录已包含一个项目，则它不会列出所有项目模板。
+- **`-lang|--language {C#|F#|VB}`**
 
-`-lang|--language {C#|F#|VB}`
+  要创建的模板的语言。 接受的语言因模板而异（请参阅[参数](#arguments)部分中的默认值）。 对于某些模板无效。
 
-要创建的模板的语言。 接受的语言因模板而异（请参阅[参数](#arguments)部分中的默认值）。 对于某些模板无效。
+  > [!NOTE]
+  > 某些 shell 将 `#` 解释为特殊字符。 在这些情况下，请将语言参数值括在引号中。 例如 `dotnet new console -lang "F#"`。
 
-> [!NOTE]
-> 某些 shell 将 `#` 解释为特殊字符。 在这些情况下，需要括住语言参数值，如 `dotnet new console -lang "F#"`。
+- **`-n|--name <OUTPUT_NAME>`**
 
-`-n|--name <OUTPUT_NAME>`
+  所创建的输出的名称。 如果未指定名称，使用的是当前目录的名称。
 
-所创建的输出的名称。 如果未指定名称，使用的是当前目录的名称。
+- **`--nuget-source`**
 
-`--nuget-source`
+  指定在安装期间要使用的 NuGet 源。 自 .NET Core 2.1 SDK 起可用。
 
-指定在安装期间要使用的 NuGet 源。
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
-`-o|--output <OUTPUT_DIRECTORY>`
+  用于放置生成的输出的位置。 默认为当前目录。
 
-用于放置生成的输出的位置。 默认为当前目录。
+- **`--type`**
 
-`--type`
+  根据可用类型筛选模板。 预定义的值为“项目”、“项”或“其他”。
 
-根据可用类型筛选模板。 预定义的值为“项目”、“项”或“其他”。
+- **`-u|--uninstall [PATH|NUGET_ID]`**
 
-`-u|--uninstall <PATH|NUGET_ID>`
+  在提供的 `PATH` 或 `NUGET_ID` 中卸载模板包。 如果未指定 `<PATH|NUGET_ID>` 值，将显示所有当前安装的模板包及其关联的模板。 指定 `NUGET_ID` 时，请勿包含版本号。
 
-从提供的 `PATH` 或 `NUGET_ID` 卸载源或模板包。 如果排除 `<PATH|NUGET_ID>` 值，将显示所有当前安装的模板包及其关联的模板。
+  如果未指定此选项的参数，该命令将列出已安装的模板及其详细信息。
 
-> [!NOTE]
-> 若要使用 `PATH` 卸载模板，需要完全限定路径。 例如，C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp  有效，但是包含文件夹中的 ./GarciaSoftware.ConsoleTemplate.CSharp  无效。
-> 此外，模板路径中不要包含最后的终止目录斜杠。
+  > [!NOTE]
+  > 若要使用 `PATH` 卸载模板，需要完全限定路径。 例如，C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp  有效，但是包含文件夹中的 ./GarciaSoftware.ConsoleTemplate.CSharp  无效。
+  > 模板路径中不要包含最后的终止目录斜杠。
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+- **`--update-apply`**
 
-`--force`
+  检查是否有可用于当前安装的模板包的更新并安装这些更新。 自 .NET Core 3.0 SDK 起可用。
 
-强制生成内容，即使会更改现有文件，也不例外。 输出目录已包含一个项目时，可能需要此操作。
+- **`--update-check`**
 
-`-h|--help`
-
-打印命令帮助。 可针对 `dotnet new` 命令本身或任何模板（如 `dotnet new mvc --help`）调用它。
-
-`-i|--install <PATH|NUGET_ID>`
-
-从提供的 `PATH` 或 `NUGET_ID` 安装源或模板包。 若要安装模板包的预发布版本，需要以 `<package-name>::<package-version>` 格式指定该版本。 默认情况下，`dotnet new` 为该版本传递 \*，表示最后一个稳定的包版本。 请在[示例](#examples)部分查看示例。
-
-若要了解如何创建自定义模板，请参阅 [dotnet new 自定义模板](custom-templates.md)。
-
-`-l|--list`
-
-列出包含指定名称的模板。 如果针对 `dotnet new` 命令调用，则它列出可能对给定的目录可用的模板。 例如，如果该目录已包含一个项目，则它不会列出所有项目模板。
-
-`-lang|--language {C#|F#|VB}`
-
-要创建的模板的语言。 接受的语言因模板而异（请参阅[参数](#arguments)部分中的默认值）。 对于某些模板无效。
-
-> [!NOTE]
-> 某些 shell 将 `#` 解释为特殊字符。 在这些情况下，需要括住语言参数值，如 `dotnet new console -lang "F#"`。
-
-`-n|--name <OUTPUT_NAME>`
-
-所创建的输出的名称。 如果未指定名称，使用的是当前目录的名称。
-
-`--nuget-source`
-
-指定在安装期间要使用的 NuGet 源。
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-用于放置生成的输出的位置。 默认为当前目录。
-
-`--type`
-
-根据可用类型筛选模板。 预定义值为“project”、“item”或“other”。
-
-`-u|--uninstall <PATH|NUGET_ID>`
-
-从提供的 `PATH` 或 `NUGET_ID` 卸载源或模板包。
-
-> [!NOTE]
-> 若要使用 `PATH` 卸载模板，需要完全限定路径。 例如，C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp  有效，但是包含文件夹中的 ./GarciaSoftware.ConsoleTemplate.CSharp  无效。
-> 此外，模板路径中不要包含最后的终止目录斜杠。
-
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-
-`--force`
-
-强制生成内容，即使会更改现有文件，也不例外。 输出目录已包含一个项目时，可能需要此操作。
-
-`-h|--help`
-
-打印命令帮助。 可针对 `dotnet new` 命令本身或任何模板（如 `dotnet new mvc --help`）调用它。
-
-`-i|--install <PATH|NUGET_ID>`
-
-从提供的 `PATH` 或 `NUGET_ID` 安装源或模板包。 若要安装模板包的预发布版本，需要以 `<package-name>::<package-version>` 格式指定该版本。 默认情况下，`dotnet new` 为该版本传递 \*，表示最后一个稳定的包版本。 请在[示例](#examples)部分查看示例。
-
-若要了解如何创建自定义模板，请参阅 [dotnet new 自定义模板](custom-templates.md)。
-
-`-l|--list`
-
-列出包含指定名称的模板。 如果针对 `dotnet new` 命令调用，则它列出可能对给定的目录可用的模板。 例如，如果该目录已包含一个项目，则它不会列出所有项目模板。
-
-`-lang|--language {C#|F#|VB}`
-
-要创建的模板的语言。 接受的语言因模板而异（请参阅[参数](#arguments)部分中的默认值）。 对于某些模板无效。
-
-> [!NOTE]
-> 某些 shell 将 `#` 解释为特殊字符。 在这些情况下，需要括住语言参数值，如 `dotnet new console -lang "F#"`。
-
-`-n|--name <OUTPUT_NAME>`
-
-所创建的输出的名称。 如果未指定名称，使用的是当前目录的名称。
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-用于放置生成的输出的位置。 默认为当前目录。
-
-`--type`
-
-根据可用类型筛选模板。 预定义值为“project”、“item”或“other”。
-
-`-u|--uninstall <PATH|NUGET_ID>`
-
-从提供的 `PATH` 或 `NUGET_ID` 卸载源或模板包。
-
-> [!NOTE]
-> 若要使用源 `PATH` 卸载模板，需要完全限定路径。 例如，C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp  有效，但是包含文件夹中的 ./GarciaSoftware.ConsoleTemplate.CSharp  无效。 此外，模板路径中不要包含最后的终止目录斜杠。
-> 
-> 如果无法确定卸载模板所需的 `PATH` 或 `NUGET_ID` 参数，则在没有参数的情况下运行 `dotnet new --uninstall` 将列出所有已安装的模板以及卸载它们所需的参数。
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-`-all|--show-all`
-
-单独在 `dotnet new` 命令的上下文中运行时，显示特定类型的项目的所有模板。 在特定模板（如 `dotnet new web -all`）的上下文中运行时，`-all` 解释为一个强制创建标记。 输出目录已包含一个项目时，可能需要此操作。
-
-`-h|--help`
-
-打印命令帮助。 可针对 `dotnet new` 命令本身或任何模板（如 `dotnet new mvc --help`）调用它。
-
-`-l|--list`
-
-列出包含指定名称的模板。 如果针对 `dotnet new` 命令调用，则它列出可能对给定的目录可用的模板。 例如，如果该目录已包含一个项目，则它不会列出所有项目模板。
-
-`-lang|--language {C#|F#}`
-
-要创建的模板的语言。 接受的语言因模板而异（请参阅[参数](#arguments)部分中的默认值）。 对于某些模板无效。
-
-> [!NOTE]
-> 某些 shell 将 `#` 解释为特殊字符。 在这些情况下，需要括住语言参数值，如 `dotnet new console -lang "F#"`。
-
-`-n|--name <OUTPUT_NAME>`
-
-所创建的输出的名称。 如果未指定名称，使用的是当前目录的名称。
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-用于放置生成的输出的位置。 默认为当前目录。
-
----
+  检查是否有可用于当前安装的模板包的更新。 自 .NET Core 3.0 SDK 起可用。
 
 ## <a name="template-options"></a>模板选项
 
 每个项目模板都可能有附加选项。 核心模板有以下附加选项：
 
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+### <a name="console"></a>控制台
 
-**控制台**
+- **`-f|--framework <FRAMEWORK>`**
 
-`--langVersion <VERSION_NUMBER>` - 在已创建的项目文件中设置 `LangVersion` 属性。 例如，使用 `--langVersion 7.3` 以使用 C# 7.3。 不支持 F#。
+  指定目标[框架](../../standard/frameworks.md)。 自 .NET Core 3.0 SDK 起可用。
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+  下表根据所使用的 SDK 版本号列出了默认值：
 
-**angular、react、reactredux**
+  | SDK 版本 | 默认值   |
+  |-------------|-----------------|
+  | 3.1         | `netcoreapp3.1` |
+  | 3.0         | `netcoreapp3.0` |
 
-`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json  。
+- **`--langVersion <VERSION_NUMBER>`**
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+  在已创建的项目文件中设置 `LangVersion` 属性。 例如，使用 `--langVersion 7.3` 以使用 C# 7.3。 不支持 F#。 自 .NET Core 2.2 SDK 起可用。
 
-`--no-https` - 项目不需要 HTTPS。 此选项仅适用于未使用 `IndividualAuth` 或 `OrganizationalAuth` 的情况。
+  有关默认的 C# 版本列表，请参阅[默认](../../csharp/language-reference/configure-language-version.md#defaults)。
 
-**razorclasslib**
+- **`--no-restore`** 
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+  如已指定，则在项目创建期间不执行隐式还原。 自 .NET Core 2.2 SDK 起可用。
 
-**classlib**
+***
 
-`-f|--framework <FRAMEWORK>` - 指定目标[框架](../../standard/frameworks.md)。 值：`netcoreapp2.2`（要创建 .NET Core 类库的话）或 `netstandard2.0`（要创建 .NET Standard 类库的话）。 默认值为 `netstandard2.0`。
+### <a name="classlib"></a>classlib
 
-`--langVersion <VERSION_NUMBER>` - 在已创建的项目文件中设置 `LangVersion` 属性。 例如，使用 `--langVersion 7.3` 以使用 C# 7.3。 不支持 F#。
+- **`-f|--framework <FRAMEWORK>`**
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+  指定目标[框架](../../standard/frameworks.md)。 值：`netcoreapp<version>`（要创建 .NET Core 类库的话）或 `netstandard<version>`（要创建 .NET Standard 类库的话）。 默认值为 `netstandard2.0`。
 
-**mstest、xunit**
+- **`--langVersion <VERSION_NUMBER>`**
 
-`-p|--enable-pack` - 允许使用 [dotnet pack](dotnet-pack.md) 为项目打包。
+  在已创建的项目文件中设置 `LangVersion` 属性。 例如，使用 `--langVersion 7.3` 以使用 C# 7.3。 不支持 F#。 自 .NET Core 2.2 SDK 起可用。
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+  有关默认的 C# 版本列表，请参阅[默认](../../csharp/language-reference/configure-language-version.md#defaults)。
 
-**nunit**
+- **`--no-restore`**
 
-`-f|--framework <FRAMEWORK>` - 指定目标[框架](../../standard/frameworks.md)。 默认值为 `netcoreapp2.1`。
+  在项目创建期间不执行隐式还原。
 
-`-p|--enable-pack` - 允许使用 [dotnet pack](dotnet-pack.md) 为项目打包。
+***
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+### <a name="wpf"></a> wpf、wpflib、wpfcustomcontrollib、wpfusercontrollib
 
-**page**
+- **`-f|--framework <FRAMEWORK>`**
 
-`-na|--namespace <NAMESPACE_NAME>` - 已生成代码的命名空间。 默认值为 `MyApp.Namespace`。
+  指定目标[框架](../../standard/frameworks.md)。 默认值为 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起可用。 
 
-`-np|--no-pagemodel` - 创建不含 PageModel 的页。
+- **`--langVersion <VERSION_NUMBER>`**
 
-**viewimports**
+  在已创建的项目文件中设置 `LangVersion` 属性。 例如，使用 `--langVersion 7.3` 以使用 C# 7.3。
 
-`-na|--namespace <NAMESPACE_NAME>` - 已生成代码的命名空间。 默认值为 `MyApp.Namespace`。
+  有关默认的 C# 版本列表，请参阅[默认](../../csharp/language-reference/configure-language-version.md#defaults)。
 
-**web**
+- **`--no-restore`**
 
-`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json  。
+  在项目创建期间不执行隐式还原。
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+***
 
-`--no-https` - 项目不需要 HTTPS。 此选项仅适用于未使用 `IndividualAuth` 或 `OrganizationalAuth` 的情况。
+### <a name="winforms"></a> winforms、winformslib
 
-**mvc、webapp**
+- **`--langVersion <VERSION_NUMBER>`**
 
-`-au|--auth <AUTHENTICATION_TYPE>` - 要使用的身份验证类型。 可能的值为：
+  在已创建的项目文件中设置 `LangVersion` 属性。 例如，使用 `--langVersion 7.3` 以使用 C# 7.3。
 
-- `None` - 不进行身份验证（默认）。
-- `Individual` - 个人身份验证。
-- `IndividualB2C` - 使用 Azure AD B2C 进行个人身份验证。
-- `SingleOrg` - 对一个租户进行组织身份验证。
-- `MultiOrg` - 对多个租户进行组织身份验证。
-- `Windows` - Windows 身份验证。
+  有关默认的 C# 版本列表，请参阅[默认](../../csharp/language-reference/configure-language-version.md#defaults)。
 
-`--aad-b2c-instance <INSTANCE>` - 要连接到的 Azure Active Directory B2C 实例。 与 `IndividualB2C` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/tfp/`。
+- **`--no-restore`**
 
-`-ssp|--susi-policy-id <ID>` - 此项目的登录和注册策略 ID。 与 `IndividualB2C` 身份验证结合使用。
+  在项目创建期间不执行隐式还原。
 
-`-rp|--reset-password-policy-id <ID>` - 此项目的重置密码策略 ID。 与 `IndividualB2C` 身份验证结合使用。
+***
 
-`-ep|--edit-profile-policy-id <ID>` - 此项目的编辑配置文件策略 ID。 与 `IndividualB2C` 身份验证结合使用。
+### <a name="web-others"></a> worker、grpc
 
-`--aad-instance <INSTANCE>` - 要连接到的 Azure Active Directory 实例。 与 `SingleOrg` 或 `MultiOrg` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/`。
+- **`-f|--framework <FRAMEWORK>`**
 
-`--client-id <ID>` - 此项目的客户端 ID。 与 `IndividualB2C`、`SingleOrg` 或 `MultiOrg` 身份验证结合使用。 默认值为 `11111111-1111-1111-11111111111111111`。
+  指定目标[框架](../../standard/frameworks.md)。 默认值为 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起可用。 
 
-`--domain <DOMAIN>` - 目录租户的域。 与 `SingleOrg` 或 `IndividualB2C` 身份验证结合使用。 默认值为 `qualified.domain.name`。
+- **`--exclude-launch-settings`**
 
-`--tenant-id <ID>` - 要连接到的目录的 TenantId ID。 与 `SingleOrg` 身份验证结合使用。 默认值为 `22222222-2222-2222-2222-222222222222`。
+  从生成的模板中排除 launchSettings.json  。
 
-`--callback-path <PATH>` - 重定向 URI 的应用程序基路径中的请求路径。 与 `SingleOrg` 或 `IndividualB2C` 身份验证结合使用。 默认值为 `/signin-oidc`。
+- **`--no-restore`**
 
-`-r|--org-read-access` - 允许此应用程序对目录进行读取访问。 仅适用于 `SingleOrg` 或 `MultiOrg` 身份验证。
+  在项目创建期间不执行隐式还原。
 
-`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json  。
+***
 
-`--no-https` - 项目不需要 HTTPS。 `app.UseHsts` 和 `app.UseHttpsRedirection` 未添加到 `Startup.Configure` 中。 此选项仅适用于未使用 `Individual`、`IndividualB2C`、`SingleOrg` 和 `MultiOrg` 的情况。
+### <a name="test"></a> mstest、xunit
 
-`-uld|--use-local-db` - 指定应使用 LocalDB，而不使用 SQLite。 仅适用于 `Individual` 或 `IndividualB2C` 身份验证。
+- **`-f|--framework <FRAMEWORK>`**
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+  指定目标[框架](../../standard/frameworks.md)。 自 .NET Core 3.0 SDK 起可用的选项。
 
-**webapi**
+  下表根据所使用的 SDK 版本号列出了默认值：
 
-`-au|--auth <AUTHENTICATION_TYPE>` - 要使用的身份验证类型。 可能的值为：
+  | SDK 版本 | 默认值   |
+  |-------------|-----------------|
+  | 3.1         | `netcoreapp3.1` |
+  | 3.0         | `netcoreapp3.0` |
 
-- `None` - 不进行身份验证（默认）。
-- `IndividualB2C` - 使用 Azure AD B2C 进行个人身份验证。
-- `SingleOrg` - 对一个租户进行组织身份验证。
-- `Windows` - Windows 身份验证。
+- **`-p|--enable-pack`**
 
-`--aad-b2c-instance <INSTANCE>` - 要连接到的 Azure Active Directory B2C 实例。 与 `IndividualB2C` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/tfp/`。
+  允许使用 [dotnet pack](dotnet-pack.md) 为项目打包。
 
-`-ssp|--susi-policy-id <ID>` - 此项目的登录和注册策略 ID。 与 `IndividualB2C` 身份验证结合使用。
+- **`--no-restore`**
 
-`--aad-instance <INSTANCE>` - 要连接到的 Azure Active Directory 实例。 与 `SingleOrg` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/`。
+  在项目创建期间不执行隐式还原。
 
-`--client-id <ID>` - 此项目的客户端 ID。 与 `IndividualB2C` 或 `SingleOrg` 身份验证结合使用。 默认值为 `11111111-1111-1111-11111111111111111`。
+***
 
-`--domain <DOMAIN>` - 目录租户的域。 与 `SingleOrg` 或 `IndividualB2C` 身份验证结合使用。 默认值为 `qualified.domain.name`。
+### <a name="nunit"></a>nunit
 
-`--tenant-id <ID>` - 要连接到的目录的 TenantId ID。 与 `SingleOrg` 身份验证结合使用。 默认值为 `22222222-2222-2222-2222-222222222222`。
+- **`-f|--framework <FRAMEWORK>`**
 
-`-r|--org-read-access` - 允许此应用程序对目录进行读取访问。 仅适用于 `SingleOrg` 或 `MultiOrg` 身份验证。
+  指定目标[框架](../../standard/frameworks.md)。
 
-`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json  。
+  下表根据所使用的 SDK 版本号列出了默认值：
 
-`--no-https` - 项目不需要 HTTPS。 `app.UseHsts` 和 `app.UseHttpsRedirection` 未添加到 `Startup.Configure` 中。 此选项仅适用于未使用 `Individual`、`IndividualB2C`、`SingleOrg` 和 `MultiOrg` 的情况。
+  | SDK 版本 | 默认值   |
+  |-------------|-----------------|
+  | 3.1         | `netcoreapp3.1` |
+  | 3.0         | `netcoreapp3.0` |
+  | 2.2         | `netcoreapp2.2` |
+  | 2.1         | `netcoreapp2.1` |
 
-`-uld|--use-local-db` - 指定应使用 LocalDB，而不使用 SQLite。 仅适用于 `Individual` 或 `IndividualB2C` 身份验证。
+- **`-p|--enable-pack`**
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+  允许使用 [dotnet pack](dotnet-pack.md) 为项目打包。
 
-**globaljson**
+- **`--no-restore`**
 
-`--sdk-version <VERSION_NUMBER>` - 指定要在 global.json  文件中使用的 .NET Core SDK 版本。
+  在项目创建期间不执行隐式还原。
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+***
 
-console、angular、react、reactredux、razorclasslib 
+### <a name="page"></a>页
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+- **`-na|--namespace <NAMESPACE_NAME>`**
 
-**classlib**
+  已生成代码的命名空间。 默认值为 `MyApp.Namespace`。
 
-`-f|--framework <FRAMEWORK>` - 指定目标[框架](../../standard/frameworks.md)。 值：`netcoreapp2.1`（要创建 .NET Core 类库的话）或 `netstandard2.0`（要创建 .NET Standard 类库的话）。 默认值为 `netstandard2.0`。
+- **`-np|--no-pagemodel`**
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+  创建不含 PageModel 的页。
 
-**mstest、xunit**
+***
 
-`-p|--enable-pack` - 允许使用 [dotnet pack](dotnet-pack.md) 为项目打包。
+### <a name="namespace"></a> viewimports、proto
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+- **`-na|--namespace <NAMESPACE_NAME>`**
 
-**globaljson**
+  已生成代码的命名空间。 默认值为 `MyApp.Namespace`。
 
-`--sdk-version <VERSION_NUMBER>` - 指定要在 global.json  文件中使用的 .NET Core SDK 版本。
+***
 
-**web**
+### <a name="blazorserver"></a>blazorserver
 
-`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json  。
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+  要使用的身份验证类型。 可能的值为：
 
-`--no-https` - 项目不需要 HTTPS。 此选项仅适用于未使用 `IndividualAuth` 或 `OrganizationalAuth` 的情况。
+  - `None` - 不进行身份验证（默认）。
+  - `Individual` - 个人身份验证。
+  - `IndividualB2C` - 使用 Azure AD B2C 进行个人身份验证。
+  - `SingleOrg` - 对一个租户进行组织身份验证。
+  - `MultiOrg` - 对多个租户进行组织身份验证。
+  - `Windows` - Windows 身份验证。
 
-**webapi**
+- **`--aad-b2c-instance <INSTANCE>`**
 
-`-au|--auth <AUTHENTICATION_TYPE>` - 要使用的身份验证类型。 可能的值为：
+  要连接到的 Azure Active Directory B2C 实例。 与 `IndividualB2C` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/tfp/`。
 
-- `None` - 不进行身份验证（默认）。
-- `IndividualB2C` - 使用 Azure AD B2C 进行个人身份验证。
-- `SingleOrg` - 对一个租户进行组织身份验证。
-- `Windows` - Windows 身份验证。
+- **`-ssp|--susi-policy-id <ID>`**
 
-`--aad-b2c-instance <INSTANCE>` - 要连接到的 Azure Active Directory B2C 实例。 与 `IndividualB2C` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/tfp/`。
+  此项目的登录和注册策略 ID。 与 `IndividualB2C` 身份验证结合使用。
 
-`-ssp|--susi-policy-id <ID>` - 此项目的登录和注册策略 ID。 与 `IndividualB2C` 身份验证结合使用。
+- **`-rp|--reset-password-policy-id <ID>`**
 
-`--aad-instance <INSTANCE>` - 要连接到的 Azure Active Directory 实例。 与 `SingleOrg` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/`。
+  此项目的重置密码策略 ID。 与 `IndividualB2C` 身份验证结合使用。
 
-`--client-id <ID>` - 此项目的客户端 ID。 与 `IndividualB2C` 或 `SingleOrg` 身份验证结合使用。 默认值为 `11111111-1111-1111-11111111111111111`。
+- **`-ep|--edit-profile-policy-id <ID>`**
 
-`--domain <DOMAIN>` - 目录租户的域。 与 `SingleOrg` 或 `IndividualB2C` 身份验证结合使用。 默认值为 `qualified.domain.name`。
+  此项目的编辑配置文件策略 ID。 与 `IndividualB2C` 身份验证结合使用。
 
-`--tenant-id <ID>` - 要连接到的目录的 TenantId ID。 与 `SingleOrg` 身份验证结合使用。 默认值为 `22222222-2222-2222-2222-222222222222`。
+- **`--aad-instance <INSTANCE>`**
 
-`-r|--org-read-access` - 允许此应用程序对目录进行读取访问。 仅适用于 `SingleOrg` 或 `MultiOrg` 身份验证。
+  要连接到的 Azure Active Directory 实例。 与 `SingleOrg` 或 `MultiOrg` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/`。
 
-`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json  。
+- **`--client-id <ID>`**
 
-`-uld|--use-local-db` - 指定应使用 LocalDB，而不使用 SQLite。 仅适用于 `Individual` 或 `IndividualB2C` 身份验证。
+  此项目的客户端 ID。 与 `IndividualB2C`、`SingleOrg` 或 `MultiOrg` 身份验证结合使用。 默认值为 `11111111-1111-1111-11111111111111111`。
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+- **`--domain <DOMAIN>`**
 
-`--no-https` - 项目不需要 HTTPS。 `app.UseHsts` 和 `app.UseHttpsRedirection` 未添加到 `Startup.Configure` 中。 此选项仅适用于未使用 `Individual`、`IndividualB2C`、`SingleOrg` 和 `MultiOrg` 的情况。
+  目录租户的域。 与 `SingleOrg` 或 `IndividualB2C` 身份验证结合使用。 默认值为 `qualified.domain.name`。
 
-**mvc、razor**
+- **`--tenant-id <ID>`**
 
-`-au|--auth <AUTHENTICATION_TYPE>` - 要使用的身份验证类型。 可能的值为：
+  要连接到的目录的 TenantId ID。 与 `SingleOrg` 身份验证结合使用。 默认值为 `22222222-2222-2222-2222-222222222222`。
 
-- `None` - 不进行身份验证（默认）。
-- `Individual` - 个人身份验证。
-- `IndividualB2C` - 使用 Azure AD B2C 进行个人身份验证。
-- `SingleOrg` - 对一个租户进行组织身份验证。
-- `MultiOrg` - 对多个租户进行组织身份验证。
-- `Windows` - Windows 身份验证。
+- **`--callback-path <PATH>`**
 
-`--aad-b2c-instance <INSTANCE>` - 要连接到的 Azure Active Directory B2C 实例。 与 `IndividualB2C` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/tfp/`。
+  重定向 URI 的应用程序基路径中的请求路径。 与 `SingleOrg` 或 `IndividualB2C` 身份验证结合使用。 默认值为 `/signin-oidc`。
 
-`-ssp|--susi-policy-id <ID>` - 此项目的登录和注册策略 ID。 与 `IndividualB2C` 身份验证结合使用。
+- **`-r|--org-read-access`**
 
-`-rp|--reset-password-policy-id <ID>` - 此项目的重置密码策略 ID。 与 `IndividualB2C` 身份验证结合使用。
+  允许此应用程序对目录进行读取访问。 仅适用于 `SingleOrg` 或 `MultiOrg` 身份验证。
 
-`-ep|--edit-profile-policy-id <ID>` - 此项目的编辑配置文件策略 ID。 与 `IndividualB2C` 身份验证结合使用。
+- **`--exclude-launch-settings`**
 
-`--aad-instance <INSTANCE>` - 要连接到的 Azure Active Directory 实例。 与 `SingleOrg` 或 `MultiOrg` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/`。
+  从生成的模板中排除 launchSettings.json  。
 
-`--client-id <ID>` - 此项目的客户端 ID。 与 `IndividualB2C`、`SingleOrg` 或 `MultiOrg` 身份验证结合使用。 默认值为 `11111111-1111-1111-11111111111111111`。
+- **`--no-https`**
 
-`--domain <DOMAIN>` - 目录租户的域。 与 `SingleOrg` 或 `IndividualB2C` 身份验证结合使用。 默认值为 `qualified.domain.name`。
+  关闭 HTTPS。 此选项仅适用于 `Individual`、`IndividualB2C`、`SingleOrg` 和 `MultiOrg` 未用于 `--auth` 的情况。
 
-`--tenant-id <ID>` - 要连接到的目录的 TenantId ID。 与 `SingleOrg` 身份验证结合使用。 默认值为 `22222222-2222-2222-2222-222222222222`。
+- **`-uld|--use-local-db`**
 
-`--callback-path <PATH>` - 重定向 URI 的应用程序基路径中的请求路径。 与 `SingleOrg` 或 `IndividualB2C` 身份验证结合使用。 默认值为 `/signin-oidc`。
+  指定应使用 LocalDB，而不使用 SQLite。 仅适用于 `Individual` 或 `IndividualB2C` 身份验证。
 
-`-r|--org-read-access` - 允许此应用程序对目录进行读取访问。 仅适用于 `SingleOrg` 或 `MultiOrg` 身份验证。
+- **`--no-restore`**
 
-`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json  。
+  在项目创建期间不执行隐式还原。
 
-`--use-browserlink` - 在项目中添加 BrowserLink。
+***
 
-`-uld|--use-local-db` - 指定应使用 LocalDB，而不使用 SQLite。 仅适用于 `Individual` 或 `IndividualB2C` 身份验证。
+### <a name="web"></a>Web
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+- **`--exclude-launch-settings`**
 
-`--no-https` - 项目不需要 HTTPS。 `app.UseHsts` 和 `app.UseHttpsRedirection` 未添加到 `Startup.Configure` 中。 此选项仅适用于未使用 `Individual`、`IndividualB2C`、`SingleOrg` 和 `MultiOrg` 的情况。
+  从生成的模板中排除 launchSettings.json  。
 
-**page**
+- **`-f|--framework <FRAMEWORK>`**
 
-`-na|--namespace <NAMESPACE_NAME>` - 已生成代码的命名空间。 默认值为 `MyApp.Namespace`。
+  指定目标[框架](../../standard/frameworks.md)。 选项在 .NET Core 2.2 SDK 中不可用。
 
-`-np|--no-pagemodel` - 创建不含 PageModel 的页。
+  下表根据所使用的 SDK 版本号列出了默认值：
 
-**viewimports**
+  | SDK 版本 | 默认值   |
+  |-------------|-----------------|
+  | 3.1         | `netcoreapp3.1` |
+  | 3.0         | `netcoreapp3.0` |
+  | 2.1         | `netcoreapp2.1` |
 
-`-na|--namespace <NAMESPACE_NAME>` - 已生成代码的命名空间。 默认值为 `MyApp.Namespace`。
+- **`--no-restore`**
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+  在项目创建期间不执行隐式还原。
 
-**console、angular、react、reactredux**
+- **`--no-https`**
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+  关闭 HTTPS。
 
-**classlib**
+***
 
-`-f|--framework <FRAMEWORK>` - 指定目标[框架](../../standard/frameworks.md)。 值：`netcoreapp2.0`（要创建 .NET Core 类库的话）或 `netstandard2.0`（要创建 .NET Standard 类库的话）。 默认值为 `netstandard2.0`。
+### <a name="web-options"></a> mvc、webapp
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-**mstest、xunit**
+  要使用的身份验证类型。 可能的值为：
 
-`-p|--enable-pack` - 允许使用 [dotnet pack](dotnet-pack.md) 为项目打包。
+  - `None` - 不进行身份验证（默认）。
+  - `Individual` - 个人身份验证。
+  - `IndividualB2C` - 使用 Azure AD B2C 进行个人身份验证。
+  - `SingleOrg` - 对一个租户进行组织身份验证。
+  - `MultiOrg` - 对多个租户进行组织身份验证。
+  - `Windows` - Windows 身份验证。
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+- **`--aad-b2c-instance <INSTANCE>`**
 
-**globaljson**
+  要连接到的 Azure Active Directory B2C 实例。 与 `IndividualB2C` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/tfp/`。
 
-`--sdk-version <VERSION_NUMBER>` - 指定要在 global.json  文件中使用的 .NET Core SDK 版本。
+- **`-ssp|--susi-policy-id <ID>`**
 
-**web**
+  此项目的登录和注册策略 ID。 与 `IndividualB2C` 身份验证结合使用。
 
-`--use-launch-settings` - 在生成的模板输出中添加 launchSettings.json  。
+- **`-rp|--reset-password-policy-id <ID>`**
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+  此项目的重置密码策略 ID。 与 `IndividualB2C` 身份验证结合使用。
 
-**webapi**
+- **`-ep|--edit-profile-policy-id <ID>`**
 
-`-au|--auth <AUTHENTICATION_TYPE>` - 要使用的身份验证类型。 可能的值为：
+  此项目的编辑配置文件策略 ID。 与 `IndividualB2C` 身份验证结合使用。
 
-- `None` - 不进行身份验证（默认）。
-- `IndividualB2C` - 使用 Azure AD B2C 进行个人身份验证。
-- `SingleOrg` - 对一个租户进行组织身份验证。
-- `Windows` - Windows 身份验证。
+- **`--aad-instance <INSTANCE>`**
 
-`--aad-b2c-instance <INSTANCE>` - 要连接到的 Azure Active Directory B2C 实例。 与 `IndividualB2C` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/tfp/`。
+  要连接到的 Azure Active Directory 实例。 与 `SingleOrg` 或 `MultiOrg` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/`。
 
-`-ssp|--susi-policy-id <ID>` - 此项目的登录和注册策略 ID。 与 `IndividualB2C` 身份验证结合使用。
+- **`--client-id <ID>`**
 
-`--aad-instance <INSTANCE>` - 要连接到的 Azure Active Directory 实例。 与 `SingleOrg` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/`。
+  此项目的客户端 ID。 与 `IndividualB2C`、`SingleOrg` 或 `MultiOrg` 身份验证结合使用。 默认值为 `11111111-1111-1111-11111111111111111`。
 
-`--client-id <ID>` - 此项目的客户端 ID。 与 `IndividualB2C` 或 `SingleOrg` 身份验证结合使用。 默认值为 `11111111-1111-1111-11111111111111111`。
+- **`--domain <DOMAIN>`**
 
-`--domain <DOMAIN>` - 目录租户的域。 与 `SingleOrg` 或 `IndividualB2C` 身份验证结合使用。 默认值为 `qualified.domain.name`。
+  目录租户的域。 与 `SingleOrg` 或 `IndividualB2C` 身份验证结合使用。 默认值为 `qualified.domain.name`。
 
-`--tenant-id <ID>` - 要连接到的目录的 TenantId ID。 与 `SingleOrg` 身份验证结合使用。 默认值为 `22222222-2222-2222-2222-222222222222`。
+- **`--tenant-id <ID>`**
 
-`-r|--org-read-access` - 允许此应用程序对目录进行读取访问。 仅适用于 `SingleOrg` 或 `MultiOrg` 身份验证。
+  要连接到的目录的 TenantId ID。 与 `SingleOrg` 身份验证结合使用。 默认值为 `22222222-2222-2222-2222-222222222222`。
 
-`--use-launch-settings` - 在生成的模板输出中添加 launchSettings.json  。
+- **`--callback-path <PATH>`**
 
-`-uld|--use-local-db` - 指定应使用 LocalDB，而不使用 SQLite。 仅适用于 `Individual` 或 `IndividualB2C` 身份验证。
+  重定向 URI 的应用程序基路径中的请求路径。 与 `SingleOrg` 或 `IndividualB2C` 身份验证结合使用。 默认值为 `/signin-oidc`。
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+- **`-r|--org-read-access`**
 
-**mvc、razor**
+  允许此应用程序对目录进行读取访问。 仅适用于 `SingleOrg` 或 `MultiOrg` 身份验证。
 
-`-au|--auth <AUTHENTICATION_TYPE>` - 要使用的身份验证类型。 可能的值为：
+- **`--exclude-launch-settings`**
 
-- `None` - 不进行身份验证（默认）。
-- `Individual` - 个人身份验证。
-- `IndividualB2C` - 使用 Azure AD B2C 进行个人身份验证。
-- `SingleOrg` - 对一个租户进行组织身份验证。
-- `MultiOrg` - 对多个租户进行组织身份验证。
-- `Windows` - Windows 身份验证。
+  从生成的模板中排除 launchSettings.json  。
 
-`--aad-b2c-instance <INSTANCE>` - 要连接到的 Azure Active Directory B2C 实例。 与 `IndividualB2C` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/tfp/`。
+- **`--no-https`**
 
-`-ssp|--susi-policy-id <ID>` - 此项目的登录和注册策略 ID。 与 `IndividualB2C` 身份验证结合使用。
+  关闭 HTTPS。 此选项仅适用于未使用 `Individual`、`IndividualB2C`、`SingleOrg` 和 `MultiOrg` 的情况。
 
-`-rp|--reset-password-policy-id <ID>` - 此项目的重置密码策略 ID。 与 `IndividualB2C` 身份验证结合使用。
+- **`-uld|--use-local-db`**
 
-`-ep|--edit-profile-policy-id <ID>` - 此项目的编辑配置文件策略 ID。 与 `IndividualB2C` 身份验证结合使用。
+  指定应使用 LocalDB，而不使用 SQLite。 仅适用于 `Individual` 或 `IndividualB2C` 身份验证。
 
-`--aad-instance <INSTANCE>` - 要连接到的 Azure Active Directory 实例。 与 `SingleOrg` 或 `MultiOrg` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/`。
+- **`-f|--framework <FRAMEWORK>`**
 
-`--client-id <ID>` - 此项目的客户端 ID。 与 `IndividualB2C`、`SingleOrg` 或 `MultiOrg` 身份验证结合使用。 默认值为 `11111111-1111-1111-11111111111111111`。
+  指定目标[框架](../../standard/frameworks.md)。 自 .NET Core 3.0 SDK 起可用的选项。
 
-`--domain <DOMAIN>` - 目录租户的域。 与 `SingleOrg` 或 `IndividualB2C` 身份验证结合使用。 默认值为 `qualified.domain.name`。
+  下表根据所使用的 SDK 版本号列出了默认值：
 
-`--tenant-id <ID>` - 要连接到的目录的 TenantId ID。 与 `SingleOrg` 身份验证结合使用。 默认值为 `22222222-2222-2222-2222-222222222222`。
+  | SDK 版本 | 默认值   |
+  |-------------|-----------------|
+  | 3.1         | `netcoreapp3.1` |
+  | 3.0         | `netcoreapp3.0` |
 
-`--callback-path <PATH>` - 重定向 URI 的应用程序基路径中的请求路径。 与 `SingleOrg` 或 `IndividualB2C` 身份验证结合使用。 默认值为 `/signin-oidc`。
+- **`--no-restore`**
 
-`-r|--org-read-access` - 允许此应用程序对目录进行读取访问。 仅适用于 `SingleOrg` 或 `MultiOrg` 身份验证。
+  在项目创建期间不执行隐式还原。
 
-`--use-launch-settings` - 在生成的模板输出中添加 launchSettings.json  。
+- **`--use-browserlink`**
 
-`--use-browserlink` - 在项目中添加 BrowserLink。
+  在项目中添加 BrowserLink。 选项在 .NET Core 2.2 和 3.1 SDK 中不可用。
 
-`-uld|--use-local-db` - 指定应使用 LocalDB，而不使用 SQLite。 仅适用于 `Individual` 或 `IndividualB2C` 身份验证。
+***
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+### <a name="spa"></a> angular、react
 
-**page**
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-`-na|--namespace <NAMESPACE_NAME>` - 生成的代码的命名空间。 默认值为 `MyApp.Namespace`。
+  要使用的身份验证类型。 自 .NET Core 3.0 SDK 起可用。 
+  
+  可能的值为：
 
-`-np|--no-pagemodel` - 创建不含 PageModel 的页。
+  - `None` - 不进行身份验证（默认）。
+  - `Individual` - 个人身份验证。
 
-**viewimports**
+- **`--exclude-launch-settings`**
 
-`-na|--namespace <NAMESPACE_NAME>` - 生成的代码的命名空间。 默认值为 `MyApp.Namespace`。
+  从生成的模板中排除 launchSettings.json  。 
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+- **`--no-restore`**
 
-**console、xunit、mstest、web、webapi**
+  在项目创建期间不执行隐式还原。
 
-`-f|--framework <FRAMEWORK>` - 指定目标[框架](../../standard/frameworks.md)。 值：`netcoreapp1.0` 或 `netcoreapp1.1`。 默认值为 `netcoreapp1.0`。
+- **`--no-https`**
 
-**classlib**
+  关闭 HTTPS。 仅当身份验证为 `None` 时，此选项才适用。
 
-`-f|--framework <FRAMEWORK>` - 指定目标[框架](../../standard/frameworks.md)。 值：`netcoreapp1.0`、`netcoreapp1.1` 或 `netstandard1.0` 到 `netstandard1.6`。 默认值为 `netstandard1.4`。
+- **`-uld|--use-local-db`**
 
-**mvc**
+  指定应使用 LocalDB，而不使用 SQLite。 仅适用于 `Individual` 或 `IndividualB2C` 身份验证。 自 .NET Core 3.0 SDK 起可用。
 
-`-f|--framework <FRAMEWORK>` - 指定目标[框架](../../standard/frameworks.md)。 值：`netcoreapp1.0` 或 `netcoreapp1.1`。 默认值为 `netcoreapp1.0`。
+- **`-f|--framework <FRAMEWORK>`**
 
-`-au|--auth <AUTHENTICATION_TYPE>` - 要使用的身份验证类型。 值：`None` 或 `Individual`。 默认值为 `None`。
+  指定目标[框架](../../standard/frameworks.md)。 选项在 .NET Core 2.2 SDK 中不可用。
 
-`-uld|--use-local-db` - 指定是否使用 LocalDB，而不是 SQLite。 值：`true` 或 `false`。 默认值为 `false`。
+  下表根据所使用的 SDK 版本号列出了默认值：
 
----
+  | SDK 版本 | 默认值   |
+  |-------------|-----------------|
+  | 3.1         | `netcoreapp3.1` |
+  | 3.0         | `netcoreapp3.0` |
+  | 2.1         | `netcoreapp2.0` |
+
+***
+
+### <a name="reactredux"></a>reactredux
+
+- **`--exclude-launch-settings`**
+
+  从生成的模板中排除 launchSettings.json  。 
+
+- **`-f|--framework <FRAMEWORK>`**
+
+  指定目标[框架](../../standard/frameworks.md)。 选项在 .NET Core 2.2 SDK 中不可用。
+
+  下表根据所使用的 SDK 版本号列出了默认值：
+
+  | SDK 版本 | 默认值   |
+  |-------------|-----------------|
+  | 3.1         | `netcoreapp3.1` |
+  | 3.0         | `netcoreapp3.0` |
+  | 2.1         | `netcoreapp2.0` |
+
+- **`--no-restore`**
+
+  在项目创建期间不执行隐式还原。
+
+- **`--no-https`**
+
+  关闭 HTTPS。
+
+***
+
+### <a name="razorclasslib"></a>razorclasslib
+
+- **`--no-restore`**
+
+  在项目创建期间不执行隐式还原。
+
+- **`-s|--support-pages-and-views`**
+
+  除了将组件添加到此库以外，还支持添加传统的 Razor 页面和视图。 自 .NET Core 3.0 SDK 起可用。
+
+***
+  
+### <a name="webapi"></a>webapi
+
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
+
+  要使用的身份验证类型。 可能的值为：
+
+  - `None` - 不进行身份验证（默认）。
+  - `IndividualB2C` - 使用 Azure AD B2C 进行个人身份验证。
+  - `SingleOrg` - 对一个租户进行组织身份验证。
+  - `Windows` - Windows 身份验证。
+
+- **`--aad-b2c-instance <INSTANCE>`**
+
+  要连接到的 Azure Active Directory B2C 实例。 与 `IndividualB2C` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/tfp/`。
+
+- **`-ssp|--susi-policy-id <ID>`**
+
+  此项目的登录和注册策略 ID。 与 `IndividualB2C` 身份验证结合使用。
+
+- **`--aad-instance <INSTANCE>`**
+
+  要连接到的 Azure Active Directory 实例。 与 `SingleOrg` 身份验证结合使用。 默认值为 `https://login.microsoftonline.com/`。
+
+- **`--client-id <ID>`**
+
+  此项目的客户端 ID。 与 `IndividualB2C` 或 `SingleOrg` 身份验证结合使用。 默认值为 `11111111-1111-1111-11111111111111111`。
+
+- **`--domain <DOMAIN>`**
+
+  目录租户的域。 与 `IndividualB2C` 或 `SingleOrg` 身份验证结合使用。 默认值为 `qualified.domain.name`。
+
+- **`--tenant-id <ID>`**
+
+  要连接到的目录的 TenantId ID。 与 `SingleOrg` 身份验证结合使用。 默认值为 `22222222-2222-2222-2222-222222222222`。
+
+- **`-r|--org-read-access`**
+
+  允许此应用程序对目录进行读取访问。 仅适用于 `SingleOrg` 身份验证。
+
+- **`--exclude-launch-settings`**
+
+  从生成的模板中排除 launchSettings.json  。
+
+- **`--no-https`**
+
+  关闭 HTTPS。 `app.UseHsts` 和 `app.UseHttpsRedirection` 未添加到 `Startup.Configure` 中。 此选项仅适用于 `IndividualB2C` 或 `SingleOrg` 未用于身份验证的情况。
+
+- **`-uld|--use-local-db`**
+
+  指定应使用 LocalDB，而不使用 SQLite。 仅适用于 `IndividualB2C` 身份验证。
+
+- **`-f|--framework <FRAMEWORK>`**
+
+  指定目标[框架](../../standard/frameworks.md)。 选项在 .NET Core 2.2 SDK 中不可用。
+
+  下表根据所使用的 SDK 版本号列出了默认值：
+
+  | SDK 版本 | 默认值   |
+  |-------------|-----------------|
+  | 3.1         | `netcoreapp3.1` |
+  | 3.0         | `netcoreapp3.0` |
+  | 2.1         | `netcoreapp2.1` |
+
+- **`--no-restore`**
+
+  在项目创建期间不执行隐式还原。
+
+***
+
+### <a name="globaljson"></a>globaljson
+
+- **`--sdk-version <VERSION_NUMBER>`**
+
+  指定要在 global.json  文件中使用的 .NET Core SDK 版本。
+
+***
 
 ## <a name="examples"></a>示例
 
-通过指定模板名称，创建 C# 控制台应用程序项目：
+- 通过指定模板名称，创建 C# 控制台应用程序项目：
 
-`dotnet new "Console Application"`
+  ```dotnetcli
+  dotnet new "Console Application"
+  ```
 
-在当前目录中创建 F# 控制台应用程序项目：
+- 在当前目录中创建 F# 控制台应用程序项目：
 
-`dotnet new console -lang F#`
+  ```dotnetcli
+  dotnet new console -lang F#
+  ```
 
-在指定目录中创建 .NET Standard 类库项目（仅适用于 .NET Core SDK 2.0 或更高版本）：
+- 在指定的目录中创建 .NET Standard 类库项目：
 
-`dotnet new classlib -lang VB -o MyLibrary`
+  ```dotnetcli
+  dotnet new classlib -lang VB -o MyLibrary
+  ```
 
-在当前目录中新建没有设置身份验证的 ASP.NET Core C# MVC 项目：
+- 在当前目录中新建没有设置身份验证的 ASP.NET Core C# MVC 项目：
 
-`dotnet new mvc -au None`
+  ```dotnetcli
+  dotnet new mvc -au None
+  ```
 
-创建新的 xUnit 项目：
+- 创建新的 xUnit 项目：
 
-`dotnet new xunit`
+  ```dotnetcli
+  dotnet new xunit
+  ```
 
-列出适用于 MVC 的所有模板：
+- 列出可用于单页应用程序 (SPA) 模板的所有模板：
 
-`dotnet new mvc -l`
+  ```dotnetcli
+  dotnet new spa -l
+  ```
 
-列出与“we”子字符串匹配的所有模板  。 找不到完全匹配，因此子字符串匹配针对短名称和名称列运行。
+- 列出与“we”子字符串匹配的所有模板  。 找不到完全匹配，因此子字符串匹配针对短名称和名称列运行。
 
-`dotnet new we -l`
+  ```dotnetcli
+  dotnet new we -l
+  ```
 
-尝试调用与 ng 匹配的模板  。 如果无法确定单个匹配项，请列出部分匹配项的模板。
+- 尝试调用与 ng 匹配的模板  。 如果无法确定单个匹配项，请列出部分匹配项的模板。
 
-`dotnet new ng`
+  ```dotnetcli
+  dotnet new ng
+  ```
 
-安装适用于 ASP.NET Core 的单页应用程序模板 2.0 版（命令选项仅可用于 .NET Core SDK 1.1 及更高版本）：
+- 安装 ASP.NET Core 的 SPA 模板 2.0 版：
 
-`dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.0.0`
+  ```dotnetcli
+  dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.0.0
+  ```
 
-在当前目录中创建 global.json，将 SDK 版本设为 2.0.0（仅适用于 .NET Core SDK 2.0 或更高版本）  ：
+- 列出已安装的模板及其详细信息，包括如何卸载它们：
 
-`dotnet new globaljson --sdk-version 2.0.0`
+  ```dotnetcli
+  dotnet new -u
+  ```
+
+- 在当前目录中创建 global.json  ，将 SDK 版本设置为 3.1.101：
+
+  ```dotnetcli
+  dotnet new globaljson --sdk-version 3.1.101
+  ```
 
 ## <a name="see-also"></a>请参阅
 

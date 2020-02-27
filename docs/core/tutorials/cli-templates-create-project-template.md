@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 64b029f87135c3424d01a6833619f0aec3833883
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f53f4037f832265a35f65bf2e5096c7e5a37bcf1
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340355"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503530"
 ---
 # <a name="tutorial-create-a-project-template"></a>教程：创建项目模板
 
@@ -47,7 +47,7 @@ working
 
 ## <a name="modify-programcs"></a>修改 Program.cs
 
-打开 program.cs  文件。 控制台项目不使用异步入口点，我们来添加它。 将代码更改为以下内容并保存文件：
+打开 program.cs  文件。 控制台项目不使用异步入口点，我们来添加它。 将代码更改为以下内容并保存文件。
 
 ```csharp
 using System;
@@ -85,10 +85,17 @@ namespace consoleasync
 
 ## <a name="build-the-project"></a>生成项目
 
-在完成项目模板之前，应对其进行测试，确保它能够正确编译和运行。 在终端中，运行 `dotnet run` 命令，应能看到以下输出：
+在完成项目模板之前，应对其进行测试，确保它能够正确编译和运行。
+
+在终端中，运行以下命令。
+
+```dotnetcli
+dotnet run
+```
+
+将获得以下输出。
 
 ```console
-C:\working\templates\consoleasync> dotnet run
 Hello World with C# 8.0!
 ```
 
@@ -102,7 +109,7 @@ Hello World with C# 8.0!
 
 创建模板时，除特殊配置文件夹外，模板文件夹中的所有文件和文件夹都作为模板的一部分包含在内。 此配置文件夹名为“.template.config”  。
 
-首先，创建一个名为“.template.config”  的新子文件夹，然后进入该文件夹。 然后，创建一个名为“template.json”  的新文件。 文件夹结构应如下所示：
+首先，创建一个名为“.template.config”  的新子文件夹，然后进入该文件夹。 然后，创建一个名为“template.json”  的新文件。 文件夹结构应如下所示。
 
 ```console
 working
@@ -112,7 +119,7 @@ working
                 template.json
 ```
 
-使用你喜爱的文本编辑器打开 template.json  并粘贴以下 json 代码，然后保存：
+使用你喜爱的文本编辑器打开 template.json  并粘贴以下 json 代码，然后保存。
 
 ```json
 {
@@ -133,12 +140,17 @@ working
 
 `classifications` 项表示你在运行 `dotnet new` 并获取模板列表时看到的“标记”  列。 用户还可以根据分类标记进行搜索。 不要将 json 文件中的 `tags` 属性与 `classifications` 标记列表混淆。 它们虽然具有类似的名称，但截然不同。 template.json  文件的完整架构位于 [JSON 架构存储](http://json.schemastore.org/template)。 有关 template.json  文件的详细信息，请参阅 [dotnet 创建模板 wiki](https://github.com/dotnet/templating/wiki)。
 
-现在你已有一个有效的 .template.config/template.json  文件，可以安装模板了。 在安装模板之前，请务必删除无需在模板中包含的任何额外文件夹和文件，例如 bin  或 obj  文件夹。 在终端中，导航到 consoleasync  文件夹，并运行 `dotnet new -i .\` 以安装位于当前文件夹的模板。 如果使用的是 Linux 或 MacOS 操作系统，请使用正斜杠：`dotnet new -i ./`。
+现在你已有一个有效的 .template.config/template.json  文件，可以安装模板了。 在安装模板之前，请务必删除无需在模板中包含的任何额外文件夹和文件，例如 bin  或 obj  文件夹。 在终端中，导航到 consoleasync  文件夹，并运行 `dotnet new -i .\` 以安装位于当前文件夹的模板。 如果使用的是 Linux 或 macOS 操作系统，请使用正斜杠：`dotnet new -i ./`。
 
 此命令输出安装的模板列表，其中应包括你的模板。
 
+```dotnetcli
+dotnet new -i .\
+```
+
+将获得类似于下面的输出。
+
 ```console
-C:\working\templates\consoleasync> dotnet new -i .\
 Usage: new [options]
 
 Options:
@@ -159,17 +171,33 @@ Worker Service                                    worker                [C#]    
 
 ### <a name="test-the-project-template"></a>测试项目模板
 
-现在你已安装了项模板，可对其进行测试。 导航到 test  文件夹，使用 `dotnet new consoleasync` 创建新的控制台应用程序。 这将生成一个可以使用 `dotnet run` 命令轻松测试的工作项目。
+现在你已安装了项模板，可对其进行测试。
 
-```console
-C:\test> dotnet new consoleasync
-The template "Example templates: async project" was created successfully.
-```
+1. 导航到 test  文件夹
 
-```console
-C:\test> dotnet run
-Hello World with C# 8.0!
-```
+1. 使用以下命令创建一个新的控制台应用程序，该命令生成可使用 `dotnet run` 命令轻松测试的工作项目。
+
+    ```dotnetcli
+    dotnet new consoleasync
+    ```
+
+    将获得以下输出。
+
+    ```console
+    The template "Example templates: async project" was created successfully.
+    ```
+
+1. 请使用以下命令运行项目。
+
+    ```dotnetcli
+    dotnet run
+    ```
+
+    将获得以下输出。
+
+    ```console
+    Hello World with C# 8.0!
+    ```
 
 祝贺你！ 你已使用 .NET Core 创建并部署了项目模板。 为准备学习本系列教程的下一部分，必须卸载已创建的模板。 确保同时删除 test  文件夹中的所有文件。 这将回到干净状态，为本教程的下一个主要部分做好准备。
 
@@ -177,8 +205,13 @@ Hello World with C# 8.0!
 
 由于模板是使用文件路径安装的，因此，必须使用绝对  文件路径将其卸载。 可以通过运行 `dotnet new -u` 命令看到已安装的模板列表。 你的模板应列在最后。 使用列出的路径，通过执行 `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` 命令卸载模板。
 
+```dotnetcli
+dotnet new -u
+```
+
+将获得类似于下面的输出。
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -206,8 +239,10 @@ Currently installed items:
       Example templates: async project (consoleasync) C#
 ```
 
-```console
-C:\working> dotnet new -u C:\working\templates\consoleasync
+若要卸载该模板，请运行以下命令。
+
+```dotnetcli
+dotnet new -u C:\working\templates\consoleasync
 ```
 
 ## <a name="next-steps"></a>后续步骤

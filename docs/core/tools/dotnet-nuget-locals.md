@@ -2,21 +2,17 @@
 title: dotnet nuget locals 命令
 description: dotnet nuget locals 命令可清除或列出本地 NuGet 资源，如 http 请求缓存、临时缓存或整个计算机范围内的全局包文件夹。
 author: karann-msft
-ms.date: 06/26/2019
-ms.openlocfilehash: b57c127650555e412af08df6656fb62d75c8ed7c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 3fdd7d946b08b4c18cfaeb65013de259b927a7fa
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734076"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503693"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
- 本文适用于：✔️ .NET Core 1.x SDK 及更高版本
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
 ## <a name="name"></a>“属性”
 
@@ -35,7 +31,7 @@ dotnet nuget locals [-h|--help]
 
 ## <a name="arguments"></a>自变量
 
-* **`CACHE_LOCATION`**
+- **`CACHE_LOCATION`**
 
   要列出或清除的缓存位置。 可以接受以下值之一：
 
@@ -46,49 +42,49 @@ dotnet nuget locals [-h|--help]
 
 ## <a name="options"></a>选项
 
-* **`--force-english-output`**
+- **`--force-english-output`**
 
   使用固定的、基于英语的区域性强制运行应用程序。
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   打印出有关命令的简短帮助。
 
-* **`-c|--clear`**
+- **`-c|--clear`**
 
   清除选项对指定的缓存类型执行清除操作。 缓存目录的内容被以递归方式删除。 正在执行的用户/组必须具有对缓存目录中的文件的相关权限。 反之，则显示错误，指示未清除的文件/文件夹。
 
-* **`-l|--list`**
+- **`-l|--list`**
 
   列表选项用于显示指定缓存类型的位置。
 
 ## <a name="examples"></a>示例
 
-* 显示所有本地缓存目录的路径（http 缓存目录、全局包缓存目录和临时缓存目录）：
+- 显示所有本地缓存目录的路径（http 缓存目录、全局包缓存目录和临时缓存目录）：
 
   ```dotnetcli
   dotnet nuget locals all –l
   ```
 
-* 显示本地 http 缓存录的路径：
+- 显示本地 http 缓存录的路径：
 
   ```dotnetcli
   dotnet nuget locals http-cache --list
   ```
 
-* 清除所有本地缓存目录的文件（http 缓存目录、全局包缓存目录和临时缓存目录）：
+- 清除所有本地缓存目录的文件（http 缓存目录、全局包缓存目录和临时缓存目录）：
 
   ```dotnetcli
   dotnet nuget locals all --clear
   ```
 
-* 清除本地全局包缓存目录中的所有文件：
+- 清除本地全局包缓存目录中的所有文件：
 
   ```dotnetcli
   dotnet nuget locals global-packages -c
   ```
 
-* 清除本地临时缓存目录中的所有文件：
+- 清除本地临时缓存目录中的所有文件：
 
   ```dotnetcli
   dotnet nuget locals temp -c

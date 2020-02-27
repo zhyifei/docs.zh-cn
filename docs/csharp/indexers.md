@@ -4,12 +4,12 @@ description: 了解 C# 索引器以及它们如何实现索引属性，这些属
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 86e646b341cf098d8621f095d4bfc9ea2191940d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 966483e80d8dd0421dce1b7fabdb0d443d73a0fc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039123"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450877"
 ---
 # <a name="indexers"></a>索引器
 
@@ -321,7 +321,7 @@ using CityDataMeasurements = System.Collections.Generic.Dictionary<string, Syste
 
 为构造泛型类型创建别名  。 通过这些语句，稍后代码可以使用更具描述性的 `DateMeasurements` 和 `CityDateMeasurements` 名称，而不是 `Dictionary<DateTime, Measurements>` 和 `Dictionary<string, Dictionary<DateTime, Measurements> >` 的泛型构造。 此构造要求在 `=` 符号右侧使用完全限定的类型名称。
 
-另一项技术是对任何用于集合的索引的 `DateTime` 对象剥离时间部分。 .NET framework 不包括仅日期类型。
+另一项技术是对任何用于集合的索引的 `DateTime` 对象剥离时间部分。 .NET 不包含仅日期类型。
 开发人员使用 `DateTime` 类型，但使用 `Date` 属性来确保这一天的任何 `DateTime` 对象是对等的。
 
 ## <a name="summing-up"></a>总结

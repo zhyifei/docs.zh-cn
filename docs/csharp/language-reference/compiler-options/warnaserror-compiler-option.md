@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: 66c78ee56c9d5153b5b878b2e695ad4ee6bffe0b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7d43941629e933ac5a9e9c9d6a1388b6194f8d99
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606249"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503474"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror（C# 编译器选项）
 -warnaserror+ 选项将所有警告视为错误   
@@ -29,7 +29,7 @@ ms.locfileid: "69606249"
   
  默认情况下，-warnaserror- 将生效，导致警告不会阻止生成输出文件  。 -warnaserror 与 -warnaserror+ 相同，会导致将警告视为错误   。  
   
- （可选）如果希望仅将一些特定警告视为错误，则可以指定视为错误的警告编号的逗号分隔列表。  
+ （可选）如果希望仅将一些特定警告视为错误，则可以指定视为错误的警告编号的逗号分隔列表。 可以使用可为 null  的简写形式指定所有为 Null 性警告的集合。
   
  使用 [-warn](./warn-compiler-option.md) 指定想要编译器显示的警告等级。 使用 [-nowarn](./nowarn-compiler-option.md) 禁用某些警告。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "69606249"
   
 ```console  
 csc -warnaserror in.cs  
-csc -warnaserror:642,649,652 in.cs  
+csc -warnaserror:642,649,652,nullable in.cs  
 ```  
   
 ## <a name="see-also"></a>请参阅

@@ -4,12 +4,12 @@ description: 了解 C# 中的模式匹配表达式
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: ff84ddd4f07fb77dc9fe648a495a441ed8f9198b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039366"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501632"
 ---
 # <a name="pattern-matching"></a>模式匹配
 
@@ -136,3 +136,7 @@ ms.locfileid: "73039366"
 模式匹配适用于任何数据类型。 你编写了检查对象并基于这些条件进行控制流决策的表达式。
 
 将此示例中的代码与通过为抽象 `Shape` 和特定派生类（各自具有自己的用于计算面积的虚方法实现）创建类层次结构而产生的设计进行比较。 你通常会发现，在处理数据并希望将数据存储问题与行为问题分开时，模式匹配表达式可能是非常有用的工具。
+
+## <a name="see-also"></a>请参阅
+
+- [教程：使用模式匹配功能来扩展数据类型](tutorials/pattern-matching.md)

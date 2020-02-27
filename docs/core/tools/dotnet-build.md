@@ -1,21 +1,17 @@
 ---
 title: dotnet build 命令
 description: dotnet build 命令可生成项目及其所有依赖项。
-ms.date: 10/14/2019
-ms.openlocfilehash: ec37d82c9e22a59acf7617f80a7491c0bcab89c9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 9f9a78ec0a6a25c54c8a727c05081ce6835514ee
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734315"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503759"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
- 本文适用于：✔️ .NET Core 1.x SDK 及更高版本
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
 ## <a name="name"></a>“属性”
 
@@ -75,7 +71,7 @@ dotnet build [-h|--help]
 
 ## <a name="options"></a>选项
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
   定义生成配置。 大多数项目的默认配置为 `Debug`，但你可以覆盖项目中的生成配置设置。
 
@@ -85,7 +81,7 @@ dotnet build [-h|--help]
 
 - **`--force`**
 
-  强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件  。 自 .NET Core 2.0 SDK 起可用。
+  强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件  。
 
 - **`-h|--help`**
 
@@ -105,7 +101,7 @@ dotnet build [-h|--help]
 
 - **`--no-restore`**
 
-  在生成期间不执行隐式还原。 自 .NET Core 2.0 SDK 起可用。
+  在生成期间不执行隐式还原。
 
 - **`--nologo`**
 

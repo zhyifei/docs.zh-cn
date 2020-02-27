@@ -3,13 +3,13 @@ title: 开发 ASP.NET Core MVC 应用
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 开发 ASP.NET Core MVC 应用
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 7bc30db084f361e6c4654b89e69230b379b0136c
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.date: 12/04/2019
+ms.openlocfilehash: a18b4dfc60c7d3971136f73f333b7225735710b3
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116533"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503948"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>开发 ASP.NET Core MVC 应用
 
@@ -43,9 +43,9 @@ ASP.NET Core 应用的核心在于将传入请求映射到传出响应。 较低
 ASP.NET Core MVC 应用可以使用传统路由或属性路由，或二者同时使用。 传统路由在代码中定义，使用类似以下示例中的语法指定路由约定  ：
 
 ```csharp
-app.UseMvc(routes =>
+app.UseEndpoints(endpoints =>
 {
-    routes.MapRoute("default","{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
 });
 ```
 
@@ -129,9 +129,9 @@ public class Startup
     public Startup(IHostingEnvironment env)
     {
         var builder = new ConfigurationBuilder()
-        .SetBasePath(env.ContentRootPath)
-        .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-        .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+            .SetBasePath(env.ContentRootPath)
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
     }
 }
 ```
@@ -149,12 +149,12 @@ public void Configure(IApplicationBuilder app,
 }
 ```
 
-ConfigureServices 方法是此行为的例外情况，它必须使用 IServiceCollection 类型的一个参数。 实际上它并不需要支持依赖注入，因为一方面它负责向服务容器添加对象，另一方面它有权通过 IServiceCollection 参数访问所有当前已配置的服务。 因此在 Startup 类的每个部分均可使用 ASP.NET Core 服务集合中定义的依赖关系，方法是以参数形式请求所需服务，也可通过在 ConfigureServices 中使用 IServiceCollection。
+ConfigureServices 方法是此行为的例外情况，它必须使用 IServiceCollection 类型的一个参数。 实际上它并不需要支持依赖注入，因为一方面它负责向服务容器添加对象，另一方面它有权通过 IServiceCollection 参数访问所有当前已配置的服务。 因此在 Startup 类的每个部分均可使用 ASP.NET Core 服务集合中定义的依赖关系，方法是以参数形式请求所需服务，或在 ConfigureServices 中使用 IServiceCollection。
 
 > [!NOTE]
-> 如果需确保某些服务可供 Startup 类使用，可以使用 WebHostBuilder 及其 ConfigureServices 方法对其进行配置。
+> 如果需要确保某些服务可供 Startup 类使用，可以使用 IWebHostBuilder 及其 ConfigureServices 方法在 CreateDefaultBuilder 调用中对其进行配置。
 
-Startup 类是一个范例，应照此构建 ASP.NET Core 应用程序的其他部分，从控制器到中间件到筛选器再到自己的服务。 在任何情况下都应遵守[显式依赖关系原则](https://deviq.com/explicit-dependencies-principle/)，请求依赖关系，而不要直接创建依赖关系，在整个应用程序中充分利用依赖关系注入。 注意对实现进行直接实例化的位置和方式，特别是使用基础结构或会产生负面影响的服务和对象。 相较于对针对特定实现类型的引用进行硬编码，最好是使用在应用程序核心中定义并作为参数传递的抽象元素。
+Startup 类是一个范例，应照此构建 ASP.NET Core 应用程序的其他部分 - 从控制器到中间件到过滤器再到自己的服务。 在任何情况下都应遵守[显式依赖关系原则](https://deviq.com/explicit-dependencies-principle/)，请求依赖关系，而不要直接创建依赖关系，在整个应用程序中充分利用依赖关系注入。 注意对实现进行直接实例化的位置和方式，特别是使用基础结构或会产生负面影响的服务和对象。 相较于对针对特定实现类型的引用进行硬编码，最好是使用在应用程序核心中定义并作为参数传递的抽象元素。
 
 ## <a name="structuring-the-application"></a>构建应用程序
 
@@ -191,15 +191,10 @@ public class HomeController
 还需要向路由添加区域支持：
 
 ```csharp
-app.UseMvc(routes =>
+app.UseEndpoints(endpoints =>
 {
-    // Areas support
-    routes.MapRoute(
-    name: "areaRoute",
-    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-    routes.MapRoute(
-    name: "default",
-    template: "{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "areaRoute", pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
 });
 ```
 
@@ -237,7 +232,7 @@ public class FeatureConvention : IControllerModelConvention
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-ASP.NET Core MVC 还使用约定来确定视图的位置。 可以使用自定义约定取而代之，使视图位于功能文件夹中（使用上述 FeatureConvention 提供的功能名称）。 可在 MSDN 文章 [ASP.NET Core MVC 的功能切片](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)中详细了解此方法并下载工作示例。
+ASP.NET Core MVC 还使用约定来确定视图的位置。 可以使用自定义约定取而代之，使视图位于功能文件夹中（使用上述 FeatureConvention 提供的功能名称）。 可在 MSDN 杂志文章 [ASP.NET Core MVC 的功能切片](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)中详细了解此方法并下载工作示例。
 
 ### <a name="cross-cutting-concerns"></a>横切关注点
 
@@ -311,7 +306,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-你可阅读 MSDN 文章[真实的 ASP.NET Core MVC 过滤器](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters)，了解有关实现过滤器的详细信息并下载工作示例。
+你可阅读 MSDN 杂志文章[真实的 ASP.NET Core MVC 过滤器](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters)，了解有关实现过滤器的详细信息并下载工作示例。
 
 > ### <a name="references--structuring-applications"></a>参考 - 构建应用程序
 >
@@ -319,9 +314,9 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN 杂志 - ASP.NET Core MVC 的功能切分**  
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc>
-> - **过滤器**  
+> - **筛选器**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **MSDN - 真实的 ASP.NET Core MVC 过滤器**  
+> - **MSDN 杂志 - 真实的 ASP.NET Core MVC 筛选器**  
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
 ## <a name="security"></a>安全性
@@ -356,11 +351,9 @@ public void Configure(IApplicationBuilder app)
 {
     app.UseStaticFiles();
     app.UseIdentity();
-    app.UseMvc(routes =>
+    app.UseEndpoints(endpoints =>
     {
-        routes.MapRoute(
-        name: "default",
-        template: "{controller=Home}/{action=Index}/{id?}");
+        endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
     });
 }
 ```
@@ -445,8 +438,6 @@ public void ConfigureServices(IServiceCollection services)
 
 除了通过 Web API 提供页面和响应数据请求之外，ASP.NET Core 应用还能与已连接的客户端直接通信。 这种出站通信可以使用多种传输技术，其中最常见的是 WebSocket。 ASP.NET Core SignalR 是一个库，它简化了向应用程序添加某种实时服务器到客户端的通信功能的过程。 SignalR 支持多种传输技术，包括 WebSocket，并从开发人员处抽象出许多实现细节。
 
-从 2.1 版开始，ASP.NET Core SignalR 可用于 ASP.NET Core。
-
 无论是直接使用 WebSocket 还是使用其他技术，实时客户端通信在许多应用程序方案中都很有用。 一些示例包括：
 
 - 实时聊天室应用程序
@@ -518,9 +509,9 @@ public class Program
 
 - [值对象](https://deviq.com/value-object/)，表示可以根据其属性值的总和进行比较的概念。 例如，包含开始日期和结束日期的 DateRange。
 
-- [域事件](https://martinfowler.com/eaaDev/DomainEvent.html)，表示系统中发生的与系统其他部分相关的事件。
+- [领域事件](https://martinfowler.com/eaaDev/DomainEvent.html)，表示系统中发生的与系统其他部分相关的事件。
 
-请注意，DDD 域模型应封装模型中的复杂行为。 尤其是实体，它不应该仅仅是属性的集合。 域模型缺少行为，并且仅表示系统状态时，就是所谓的[贫乏性模型](https://deviq.com/anemic-model/)，DDD 中应避免此类模型。
+DDD 领域模型应在模型中包含复杂行为。 尤其是实体，它不应该仅仅是属性的集合。 域模型缺少行为，并且仅表示系统状态时，就是所谓的[贫乏性模型](https://deviq.com/anemic-model/)，DDD 中应避免此类模型。
 
 除这些模型类型之外，DDD 通常还采用多种模式：
 
@@ -555,11 +546,11 @@ DDD 需要在建模、体系结构和通信方面进行投资，这对于较小�
 
 ## <a name="deployment"></a>部署
 
-无论在哪里托管 ASP.NET Core 应用，部署过程都包含以下几个步骤。 第一步，发布应用程序，可以使用 dotnet 发布 CLI 命令来完成。 此操作将编译应用程序，并将运行应用程序所需的所有文件放到指定的文件夹中。 从 Visual Studio 部署时，系统将自动执行此步骤。 发布文件夹中包含应用程序的 .exe 和 .dll 文件及其依赖项。 自包含应用程序中还包含一个 .NET 运行时版本。 ASP.NET Core 应用程序还将包含配置文件、静态客户端资产和 MVC 视图。
+无论在哪里托管 ASP.NET Core 应用，部署过程都包含以下几个步骤。 第一步，发布应用程序，这可以使用 `dotnet publish` CLI 命令来完成。 此操作将编译应用程序，并将运行应用程序所需的所有文件放到指定的文件夹中。 从 Visual Studio 部署时，系统将自动执行此步骤。 发布文件夹中包含应用程序的 .exe 和 .dll 文件及其依赖项。 自包含应用程序中还包含一个 .NET 运行时版本。 ASP.NET Core 应用程序还将包含配置文件、静态客户端资产和 MVC 视图。
 
 ASP.NET Core 应用程序是控制台应用程序，服务器启动时必须启动，应用程序（或服务器）崩溃时必须重新启动。 可以使用流程管理器自动执行此过程。 适用于 ASP.NET Core 的最常见的进程管理器是 Linux 上的 Nginx 和 Apache，以及 Windows 上的 IIS 或 Windows Service。
 
-除流程管理器之外，Kestrel Web 服务器中托管的 ASP.NET Core 应用程序还必须使用反向代理服务器。 反向代理服务器接收到来自 Internet 的 HTTP 请求，并在进行一些初步处理后将这些请求转发到 Kestrel。 反向代理服务器为应用程序提供一个安全层，并且是边缘部署的必需条件（向来自 Internet 的流量公开）。 Kestrel 相对较新，尚未提供对某些攻击的抵御功能。 Kestrel 也不支持在同一端口上承载多个应用程序，因此不能将其用于主机头之类的技术以实现在同一端口和 IP 地址上承载多个应用程序。
+除流程管理器之外，ASP.NET Core 应用程序可以使用反向代理服务器。 反向代理服务器接收到来自 Internet 的 HTTP 请求，并在进行一些初步处理后将这些请求转发到 Kestrel。 反向代理服务器为应用程序提供了一层安全性。 Kestrel 也不支持在同一端口上承载多个应用程序，因此不能将其用于主机头之类的技术以实现在同一端口和 IP 地址上承载多个应用程序。
 
 ![Kestrel 到 Internet](./media/image7-5.png)
 

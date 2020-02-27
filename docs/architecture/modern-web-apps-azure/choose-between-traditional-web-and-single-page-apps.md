@@ -3,22 +3,22 @@ title: 在传统 Web 应用和单页应用之间选择
 description: 了解在生成 Web 应用时，如何在传统 Web 应用和单页应用程序 (SPA) 之间进行选择。
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 9ede64249705aba3f22a9663b8a258e41f030aca
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 12/04/2019
+ms.openlocfilehash: d4ed76455001c1a0b8e2e2f1bb90ce8715dd0052
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739453"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450103"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>在传统 Web 应用和单页应用 (SPA) 之间选择
 
 > “Atwood 定律：任何能够用 JavaScript 编写的应用程序，最终必将用 JavaScript 编写。”  
 > \- Jeff Atwood 
 
-目前可通过两种通用方法来构建 Web 应用程序：在服务器上执行大部分应用程序逻辑的传统 Web 应用程序，以及在 Web 浏览器中执行大部分用户界面逻辑的单页应用程序 (SPA)，后者主要使用 Web API 与 Web 服务器通信。 也可以将两种方法混合使用，最简单的方法是在更大型的传统 Web 应用程序中承载一个或多个丰富 SPA 类子应用程序。
+目前可通过两种通用方法来构建 Web 应用程序：在服务器上执行大部分应用程序逻辑的传统 Web 应用程序，以及在 Web 浏览器中执行大部分用户界面逻辑的单页应用程序 (SPA)，后者主要使用 Web API 与 Web 服务器通信。 也可以将两种方法混合使用，最简单的方法是在更大型的传统 Web 应用程序中托管一个或多个丰富 SPA 类子应用程序。
 
-何时应使用传统 Web 应用程序：
+何时使用传统 Web 应用程序：
 
 - 应用程序的客户端要求简单，甚至要求只读。
 
@@ -26,7 +26,7 @@ ms.locfileid: "73739453"
 
 - 团队不熟悉 JavaScript 或 TypeScript 开发技术。
 
-何时应使用 SPA：
+何时使用 SPA：
 
 - 应用程序必须公开具有许多功能的丰富用户界面。
 
@@ -36,11 +36,21 @@ ms.locfileid: "73739453"
 
 此外，SPA 框架还需要更强的体系结构和安全专业知识。 相较于传统 Web 应用程序，SPA 框架需要进行频繁的更新和使用新框架，因此改动更大。 相较于传统 Web 应用，SPA 应用程序在配置自动化生成和部署过程以及利用部署选项（如容器）方面的难度更大。
 
-使用 SPA 模型改进用户体验时必须权衡这些注意事项。
+使用 SPA 方法改进用户体验时必须权衡这些注意事项。
 
 ## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3.0 引入了一种新模型，用于构建称为 Blazor 的丰富的、交互式和可组合的 UI。 Blazor 服务器端允许开发人员在服务器上使用 Razor 构建 UI，还使用 [WebAssembly](https://webassembly.org/) 将此代码传递到浏览器和执行客户端。 ASP.NET Core 3.0 仍在开发中，但你应该会期望在本电子书的 3.0 更新中看到有关此技术的详细信息。 有关 Blazor 的详细信息，请参阅 [Blazor 入门](https://blazor.net/docs/get-started.html)。
+ASP.NET Core 3.0 引入了一种新模型，用于构建称为 Blazor 的丰富的、交互式和可组合的 UI。 Blazor 服务器端允许开发人员在服务器上使用 Razor 构建 UI，还使用 [WebAssembly](https://webassembly.org/) 将此代码传递到浏览器和执行客户端。 现在 ASP.NET Core 3.0 或更高版本中提供 Blazor 服务器端。 Blazor 客户端应该于 2020 年推出。
+
+Blazor 提供了一个全新的第三个选项，可用于评估是否生成纯服务器呈现的 Web 应用程序或 SPA。 可以使用 Blazor 生成类似于 SPA 的丰富客户端行为，而无需进行大量 JavaScript 开发。 Blazor 应用程序可以调用 API 来请求数据或执行服务器端操作。
+
+在以下情况下考虑使用 Blazor 生成 Web 应用程序：
+
+- 应用程序必须公开丰富用户界面
+
+- 与使用 JavaScript 或 TypeScript 开发相比，团队更喜欢使用 .NET 开发
+
+有关 Blazor 的详细信息，请参阅 [Blazor 入门](https://blazor.net/docs/get-started.html)。
 
 ## <a name="when-to-choose-traditional-web-apps"></a>何时选择传统 Web 应用
 
@@ -64,9 +74,9 @@ ASP.NET Core 3.0 引入了一种新模型，用于构建称为 Blazor 的丰富�
 
 **应用程序必须公开具有许多功能的丰富用户界面**
 
-SPA 可支持丰富客户端功能，当用户执行操作或在应用的各区域间导航时无需重新加载页面。 SPA 很少需要重新加载整个页面，因此加载速度更快，可在后台提取数据，并且对单个用户操作的响应更快。 SPA 支持增量更新，可保存尚未完成的窗体或文档，而无需用户单击按钮提交窗体。 SPA 支持丰富的客户端行为，例如拖放，比传统应用程序更容易操作。 可以将 SPA 设计为在断开连接的模式下运行，对客户端模型进行更新，并在重新建立连接后将更新最终同步回服务器。 如果应用要求包括丰富的功能，且超出了典型 HTML 窗体提供的功能，则应选择 SPA 样式应用程序。
+SPA 可支持丰富客户端功能，当用户执行操作或在应用的各区域间导航时无需重新加载页面。 SPA 很少需要重新加载整个页面，因此加载速度更快，可在后台提取数据，并且对单个用户操作的响应更快。 SPA 支持增量更新，可保存尚未完成的窗体或文档，而无需用户单击按钮提交窗体。 SPA 支持丰富的客户端行为，例如拖放，比传统应用程序更容易操作。 可以将 SPA 设计为在断开连接的模式下运行，对客户端模型进行更新，并在重新建立连接后将更新最终同步回服务器。 如果应用要求包括丰富的功能，且超出了典型 HTML 窗体提供的功能，则选择 SPA 样式应用程序。
 
-请注意，SPA 通常需要实现内置于传统 Web 应用中的功能，例如在反映当前操作的地址栏中显示有意义的 URL（并允许用户将此 URL 存为书签或对其进行深层链接以便返回此 URL）。 SPA 还应允许用户使用浏览器的后退和前进按钮寻找用户意料之中的结果。
+通常，SPA 需要实现内置于传统 Web 应用中的功能，例如在反映当前操作的地址栏中显示有意义的 URL（并允许用户将此 URL 存为书签或对其进行深层链接以便返回此 URL）。 SPA 还应允许用户使用浏览器的后退和前进按钮寻找用户意料之中的结果。
 
 **团队熟悉 JavaScript 和/或 TypeScript 开发**
 
@@ -76,6 +86,8 @@ SPA 可支持丰富客户端功能，当用户执行操作或在应用的各区�
 >
 > - **Angular**  
 >   <https://angular.io>
+> - **React**
+>   <https://reactjs.org/>
 > - **JavaScript 框架的比较**  
 >   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
 
@@ -83,16 +95,28 @@ SPA 可支持丰富客户端功能，当用户执行操作或在应用的各区�
 
 如果已提供一个 Web API 供其他客户端使用，则相较于在服务器端窗体中复制逻辑，创建一个利用这些 API 的 SPA 实现更加容易。 用户与应用程序交互时，SPA 广泛使用 Web API 来查询和更新数据。
 
-## <a name="decision-table--traditional-web-or-spa"></a>决策表 - 传统 Web 或 SPA
+## <a name="when-to-choose-blazor"></a>何时选择 Blazor
 
-下面的决策表总结了在传统 Web 应用程序和 SPA 之间进行选择时要考虑的一些基本因素。
+以下是有关何时为 Web 应用选择 Blazor 的详尽说明。
 
-| **因素**                                           | **传统 Web 应用** | **单页面应用程序** |
-| ---------------------------------------------------- | ----------------------- | --------------------------- |
-| 需要团队熟悉 JavaScript/TypeScript | **最低**             | **必需**                |
-| 支持不带脚本的浏览器                   | **支持**           | **不支持**           |
-| 客户端应用程序行为极少             | **适合**         | **不必要**                |
-| 丰富而复杂的用户界面要求            | **受限**             | **适合**             |
+**应用程序必须公开丰富用户界面**
+
+与基于 JavaScript 的 SPA 一样，Blazor 应用程序可以支持丰富客户端行为，而无需重载页面。 这些应用程序对用户的响应更快，仅获取响应给定用户交互所需的数据（或 HTML）。 如果设计得当，则服务器端 Blazor 应用可以配置为以客户端 Blazor 应用的形式运行，并且在支持该功能后只需进行最小的更改。
+
+**与使用 JavaScript 或 TypeScript 开发相比，团队更喜欢使用 .NET 开发**
+
+与使用 JavaScript 或 TypeScript 等客户端语言相比，许多使用 .NET 和 Razor 的开发人员的工作效率更高。 由于已经使用 .NET 开发了应用程序的服务器端，因此，使用 Blazor 可以确保团队中的每个 .NET 开发人员都可以理解并且可能会生成应用程序前端的行为。
+
+## <a name="decision-table"></a>决策表
+
+下面的决策表总结了在传统 Web 应用程序、SPA 或 Blazor 应用之间进行选择时要考虑的一些基本因素。
+
+| **因素**                                           | **传统 Web 应用** | **单页面应用程序** | **Blazor 应用**  |
+| ---------------------------------------------------- | ----------------------- | --------------------------- | --------------- |
+| 需要团队熟悉 JavaScript/TypeScript | **最低**             | **必需**                | **最低**     |
+| 支持不带脚本的浏览器                   | **支持**           | **不支持**           | **支持**   |
+| 客户端应用程序行为极少             | **适合**         | **不必要**                | **可行**      |
+| 丰富而复杂的用户界面要求            | **受限**             | **适合**             | **适合** |
 
 >[!div class="step-by-step"]
 >[上一页](modern-web-applications-characteristics.md)

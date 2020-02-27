@@ -1,13 +1,13 @@
 ---
 title: 何时为 Docker 容器选择 .NET Core
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 何时为 Docker 容器选择 .NET Core
-ms.date: 09/11/2018
-ms.openlocfilehash: d17b6b7620f485f09f8f18ac792418a48ae40037
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 01/30/2020
+ms.openlocfilehash: b3cb1eefe739b4ffdbbdd0bdcb3c74b51862704b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920984"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501848"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>何时为 Docker 容器选择 .NET Core
 
@@ -35,11 +35,11 @@ ms.locfileid: "76920984"
 
 虽然容器通常与微服务体系结构结合使用，但是也可用于对遵循任何体系结构模式的 Web 应用或服务进行容器化。 虽然能够将 .NET Framework 用于 Windows 容器，但 .NET Core 的模块化和轻型特点使之成为容器和微服务体系结构的最佳选择。 在创建和部署容器时，使用 .NET Core 时容器的映像大小要远小于使用 .NET Framework 时的大小。
 
-## <a name="creating-and-deploying-microservices-on-containers"></a>在容器上创建和部署微服务
+## <a name="create-and-deploy-microservices-on-containers"></a>在容器上创建和部署微服务
 
-可使用传统 .NET Framework，通过使用普通进程构建基于微服务的应用程序（不含容器）。 通过这种方式，由于已安装 .NET Framework 并在进程之间共享，进程变得轻量，从而可快速启动。 但如果使用容器，传统 .NET Framework 的映像便也基于 Windows Server Core，这样的话，它对于“容器上微服务”方法，就显得体量过于庞大。
+可使用传统 .NET Framework，通过使用普通进程构建基于微服务的应用程序（不含容器）。 通过这种方式，由于已安装 .NET Framework 并在进程之间共享，进程变得轻量，从而可快速启动。 但如果使用容器，传统 .NET Framework 的映像便也基于 Windows Server Core，这样的话，它对于“容器上微服务”方法，就显得体量过于庞大。 但是，团队也一直在寻找机会来改善 .NET Framework 用户体验。 最近，[Windows Server Core 容器映像的大小已减小 40% 以上](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller)。 
 
-相反，如果要使用基于容器的面向微服务的系统，.NET Core 是最佳选择，因为它体量轻。 此外，与之相关的容器映像，无论是 Linux 映像还是 Windows Nano 映像，都精简而小巧，让容器变得轻量，从而能够快速启动。
+另一方面，如果要使用基于容器的面向微服务的系统，.NET Core 是最佳选择，因为它体量轻。 此外，与之相关的容器映像，无论是 Linux 还是 Windows Nano Server，都精简而小巧，让容器变得轻量，从而能够快速启动。
 
 微服务意味着尽可能得小：可轻松访问、占用空间小、小型的界定上下文（检查 DDD、[域驱动设计](https://en.wikipedia.org/wiki/Domain-driven_design)）、较少的关注度、能够快速启动和停止。 为满足这些要求，需要使用可快速实例化的轻量型容器映像，例如 .NET Core 容器映像。
 

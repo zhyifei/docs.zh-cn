@@ -3,12 +3,12 @@ title: C# 7.0 中的新增功能 - C# 指南
 description: 大致了解 C# 语言的版本 7.0 中的新增功能。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 73563a04dea04c942a6326d6a04ddd54bb80b0ed
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a6ac5c00ceb2ce8e5e56e2a86a8cde937d5108e2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694577"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448629"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 中的新增功能
 
@@ -236,7 +236,7 @@ C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6
 
 从异步方法返回 `Task` 对象可能在某些路径中导致性能瓶颈。 `Task` 是引用类型，因此使用它意味着分配对象。 如果使用 `async` 修饰符声明的方法返回缓存结果或以同步方式完成，那么额外的分配在代码的性能关键部分可能要耗费相当长的时间。 如果这些分配发生在紧凑循环中，则成本会变高。
 
-新语言功能意味着异步方法返回类型不限于 `Task`、`Task<T>` 和 `void`。 返回类型必须仍满足异步模式，这意味着 `GetAwaiter` 方法必须是可访问的。 作为一个具体示例，已将 `ValueTask` 类型添加到 .NET framework 中，以使用这一新语言功能：
+新语言功能意味着异步方法返回类型不限于 `Task`、`Task<T>` 和 `void`。 返回类型必须仍满足异步模式，这意味着 `GetAwaiter` 方法必须是可访问的。 作为一个具体示例，已将 `ValueTask` 类型添加到 .NET 中，以使用这一新语言功能：
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 

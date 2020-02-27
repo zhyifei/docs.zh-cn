@@ -3,12 +3,12 @@ title: 如何修改字符串内容 - C# 指南
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 539e313173d46c2c92399cefe94207c8beed03b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973256"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543256"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>如何修改以 C\# 编写的字符串内容
 
@@ -62,12 +62,13 @@ ms.locfileid: "73973256"
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
-## <a name="unsafe-modifications-to-string"></a>对字符串进行不安全修改
+## <a name="programmatically-build-up-string-content"></a>以编程方式生成字符串内容
 
-使用不安全  代码，可在创建字符串后“就地”进行修改。 不安全代码会绕过许多 .NET 旨在用于尽量减少代码中某些类型 bug 的功能。 需使用不安全代码来就地修改字符串，因为字符串类型已设计为不可变  类型。 创建之后，它的值就不会更改。 不安全代码通过访问和修改 `string` 使用的内存来避开此属性，而不使用常规的 `string` 方法。
-下面提供了这些少数情况下的示例，因为某些时候，你可能希望使用不安全代码就地修改字符串。 示例演示如何使用 `fixed` 关键字。 `fixed` 关键字可防止垃圾回收器 (GC) 在代码使用不安全指针访问内存时移动内存中的字符串对象。 此外还演示对字符串进行不安全操作可能产生的一个副作用，此副作用是由于 C# 编译器在内部存储（暂存）字符串的方式而导致的。 通常，除非绝对必要，否则不应使用这种方法。 可在关于 [unsafe](../language-reference/keywords/unsafe.md) 和 [fixed](../language-reference/keywords/fixed-statement.md) 的文章中了解详细信息。 <xref:System.String.Intern%2A> 的 API 参考包括字符串集中的信息。
+由于字符串是不可变的，因此前面的示例都创建了临时字符串或字符数组。 在高性能方案中，可能需要避免这些堆分配。 .NET Core 提供了一种 <xref:System.String.Create%2A?displayProperty=nameWithType> 方法，该方法使你可以通过回调以编程方式填充字符串的字符内容，同时避免中间的临时字符串分配。
 
-[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+
+可以使用不安全的代码修改固定块中的字符串，但是强烈  建议不要在创建字符串后修改字符串内容。 这样做将以不可预知的方式中断操作。 例如，如果某人暂存一个与你的内容相同的字符串，他们将获得你的副本，并且根本不希望你修改他们的字符串。
 
 可通过查看 [GitHub 存储库](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的代码来尝试这些示例。 也可以下载这些示例的 [zip 文件](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 

@@ -3,13 +3,13 @@ title: 常用客户端 Web 技术
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 常用客户端 Web 技术
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 7dd3765b1b71d8c1ef22d714a00be3e171fab523
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.date: 12/04/2019
+ms.openlocfilehash: 2809c8539b42e8e2250039dceed1389b3cbdcd8a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093118"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449369"
 ---
 # <a name="common-client-side-web-technologies"></a>常用客户端 Web 技术
 
@@ -20,9 +20,12 @@ ASP.NET Core 应用程序属于 Web 应用程序，并且通常依赖于 HTML、
 
 尽管 HTML 和 CSS 相对稳定，但应用程序框架和实用程序开发人员用于生成基于 Web 的应用程序的 JavaScript，正以惊人的速度发展。 本章介绍 Web 开发人员使用 JavaScript 的几种方式，并提供 Angular 和 React 客户端库的简要概述。
 
+> [!NOTE]
+> Blazor 提供了 JavaScript 框架的替代方法，用于生成丰富的交互式客户端用户界面。 客户端 Blazor 支持仍处于预览状态，因此目前不在本章的范围之内。
+
 ## <a name="html"></a>HTML
 
-HTML（超文本标记语言）是标准标记语言，用于创建网页和 Web 应用程序。 它的元素组成了网页的构建基块，表示格式化文本、图像、窗体输入和其他结构。 浏览器发出 URL 请求时，无论提取网页还是应用程序，首先需要返回 HTML 文档。 这个 HTML 文档可能引用或包括关于其外观、CSS 形式的布局或 JavaScript 形式的行为的详细信息。
+HTML 是标准标记语言，用于创建网页和 Web 应用程序。 它的元素组成了网页的构建基块，表示格式化文本、图像、窗体输入和其他结构。 浏览器发出 URL 请求时，无论提取网页还是应用程序，首先需要返回 HTML 文档。 这个 HTML 文档可能引用或包括关于其外观、CSS 形式的布局或 JavaScript 形式的行为的详细信息。
 
 ## <a name="css"></a>CSS
 
@@ -36,13 +39,13 @@ CSS（级联样式表）用于控制 HTML 元素的外观和布局。 CSS 样式
 
 ### <a name="css-preprocessors"></a>CSS 预处理器
 
-CSS 样式表缺少对条件逻辑、变量以及其他编程语言功能的支持。 因此，大型样式表通常包含大量重复，如将相同的颜色、字体或其他设置应用于 HTML 元素和 CSS 类的多个不同的变体。 通过添加对变量和逻辑的支持，CSS 预处理器可帮助样式表遵循 [DRY 原则](https://deviq.com/don-t-repeat-yourself/)。
+CSS 样式表缺少对条件逻辑、变量以及其他编程语言功能的支持。 因此，大型样式表通常包含很多重复，如将相同的颜色、字体或其他设置应用于 HTML 元素和 CSS 类的多个不同的变体。 通过添加对变量和逻辑的支持，CSS 预处理器可帮助样式表遵循 [DRY 原则](https://deviq.com/don-t-repeat-yourself/)。
 
 最常用的 CSS 预处理器是 Sass 和 LESS。 两者均可扩展 CSS 并与其后向兼容，表示无格式 CSS 文件即为有效的 Sass 或 LESS 文件。 Sass 基于 Ruby，而 LESS 基于 JavaScript，二者通常作为本地部署过程的一部分运行。 两者都提供命令行工具，以及 Visual Studio 中的内置支持，可使用 Gulp 或 Grunt 任务运行它们。
 
 ## <a name="javascript"></a>JavaScript
 
-JavaScript 是动态的解释性编程语言，已在 ECMAScript 语言规范中进行标准化。 它是 Web 的编程语言。 与 CSS 一样，JavaScript 可定义为 HTML 元素中的属性，作为网页或单独文件中的脚本基块。 正如 CSS，一般建议将 JavaScript 组织到单独的文件中，并尽可能将其与各个网页或应用程序视图中找到的 HTML 分开保存。
+JavaScript 是动态的解释性编程语言，已在 ECMAScript 语言规范中进行标准化。 它是 Web 的编程语言。 与 CSS 一样，JavaScript 可定义为 HTML 元素中的属性，作为网页或单独文件中的脚本基块。 正如 CSS，建议将 JavaScript 组织到单独的文件中，并尽可能将其与各个网页或应用程序视图中找到的 HTML 分开保存。
 
 在 Web 应用程序中使用 JavaScript 时，通常需要执行以下几项任务：
 
@@ -79,7 +82,7 @@ JavaScript 是动态的解释性编程语言，已在 ECMAScript 语言规范中
 
 ### <a name="angular-spas"></a>Angular SPA
 
-AngularJS 快速成为了世界上最常用的一种 JavaScript 框架。 在 Angular 2 中，团队彻底重建了框架（使用 [TypeScript](https://www.typescriptlang.org/)），并将 AngularJS 重新命名为简单的 Angular。 目前的 Angular 4 版本仍是用于生成单页面应用程序的可靠框架。
+Angular 仍是世界上最常用的一种 JavaScript 框架。 从 Angular 2 开始，团队彻底重建了框架（使用 [TypeScript](https://www.typescriptlang.org/)），并从最初的 AngularJS 名称重新命名为简单的 Angular。 经过数年的发展，重新设计的 Angular 仍是用于生成单页应用程序的可靠框架。
 
 Angular 应用程序基于组件构建。 组件通过特殊对象与 HTML 模板进行组合，并控制页面的一部分。 下面是 Angular 文档中的简单组件：
 
@@ -104,7 +107,7 @@ Microsoft 开发了一个参考应用程序，[eShopOnContainers](https://aka.ms
 
 ### <a name="react"></a>React
 
-与 Angular 不同，Angular 提供完整的模型 - 视图 - 控制器模式实现，而 React 仅关注视图。 它不是一个框架，只是一个库，因此需要利用其他库才能生成 SPA。
+与 Angular 不同，Angular 提供完整的模型 - 视图 - 控制器模式实现，而 React 仅关注视图。 它不是一个框架，只是一个库，因此需要利用其他库才能生成 SPA。 有许多库旨在与 React 一起使用，以生成丰富的单页应用程序。
 
 React 最重要的特征之一是使用虚拟 DOM。 虚拟 DOM 可向 React 提供多项好处，包括性能（虚拟 DOM 可优化实际 DOM 的哪部分需要更新）和可测试性（无需使用浏览器即可测试 React 和它与虚拟 DOM 的交互）。
 
@@ -121,6 +124,40 @@ React 很少使用与 HTML 配合的方式。 React 直接在其 JavaScript 代�
 如果已了解 JavaScript，学习 React 应该很简单。 与 Angular 或其他常用库相比，它几乎不涉及众多的学习曲线或特殊语法。
 
 由于React 不是完整的框架，因此通常需要其他库来处理路由、Web API 调用和依赖关系管理等任务。 好处是可为每个任务选择最合适的库，但坏处时需要进行所有决策，并在完成后验证所有选定库是否可以很好地协同工作。 如果想要一个好的开端，可使用初学者工具包（如 React Slingshot）,它可使用 React 预先打包一组可兼容库。
+
+### <a name="vue"></a>Vue
+
+在其入门指南中，“Vue 是用于生成用户界面的渐进式框架。 与其他单一框架不同，Vue 旨在从头开始逐渐采用。 核心库仅集中在视图层，易于提取并与其他库或现有项目集成。 另一方面，与新式工具和支持库结合使用时，Vue 完全有能力为复杂的单页应用程序提供支持。”
+
+开始使用 Vue 只需要在 HTML 文件中包含其脚本：
+
+```html
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+```
+
+添加了框架之后，你就可以使用 Vue 的简单模板语法以声明方式将数据呈现到 DOM：
+
+```html
+<div id="app">
+  {{ message }}
+</div>
+```
+
+然后添加以下脚本：
+
+```js
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+```
+
+这足以在页面上呈现“Hello Vue!” 。 但是，请注意，Vue 并不只是将消息呈现给 div 一次。 它支持数据绑定和动态更新，因此如果 `message` 的值发生更改，`<div>` 中的值将立即更新以反映更改。
+
+当然，这里仅介绍 Vue 的简单功能。 在过去的几年中，它非常受欢迎，并且拥有一个庞大的社区。 有一个[庞大且不断增长的支持组件和库列表](https://github.com/vuejs/awesome-vue#redux)，它们可以与 Vue 一起扩展。 如果希望将客户端行为添加到 Web 应用程序中，或者正在考虑生成完整的 SPA，那么值得对 Vue 进行一番研究。
 
 ### <a name="choosing-a-spa-framework"></a>选择 SPA 框架
 
@@ -157,13 +194,13 @@ JavaScript 框架仍以极快的速度发展。 使用上面列出的注意事�
 > - **Angular**  
 > <https://angular.io/>
 > - **React**  
-> <https://facebook.github.io/react/>
-> - **React Slingshot**  
-> <https://github.com/coryhouse/react-slingshot>
-> - **React 与 Angular 2 比较**  
-> <https://www.codementor.io/codementorteam/react-vs-angular-2-comparison-beginners-guide-lvz5710ha>
-> - **2017 年 5 佳 JavaScript 框架**  
-> <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
+> <https://reactjs.org/>
+> - **Vue**  
+> <https://vuejs.org/>
+> - **Angular、React 与 Vue：2020 年要选择哪种框架**
+> <https://www.codeinwp.com/blog/angular-vs-vue-vs-react/>
+> - **2020 年用于前端开发的顶级 JavaScript 框架**  
+> <https://www.freecodecamp.org/news/complete-guide-for-front-end-developers-javascript-frameworks-2019/>
 
 >[!div class="step-by-step"]
 >[上一页](common-web-application-architectures.md)

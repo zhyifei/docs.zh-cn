@@ -1,21 +1,17 @@
 ---
 title: dotnet clean 命令
 description: dotnet clean 命令可清除当前目录。
-ms.date: 06/26/2019
-ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 186f1ea07718a8e178f88c3d079cf6e2f1f8660b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734248"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503756"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
- 本文适用于：✔️ .NET Core 1.x SDK 及更高版本
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
 ## <a name="name"></a>“属性”
 
@@ -41,9 +37,9 @@ dotnet clean [-h|--help]
 
 ## <a name="options"></a>选项
 
-* **`-c|--configuration {Debug|Release}`**
+* **`-c|--configuration <CONFIGURATION>`**
 
-  定义生成配置。 默认值为 `Debug`。 只有在生成期间指定了此选项，才必须在清除时使用此选项。
+  定义生成配置。 大多数项目的默认配置为 `Debug`，但你可以覆盖项目中的生成配置设置。 只有在生成期间指定了此选项，才必须在清除时使用此选项。
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -67,7 +63,7 @@ dotnet clean [-h|--help]
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  清除指定运行时的输出文件夹。 在创建[独立部署 (SCD)](../deploying/index.md#self-contained-deployments-scd) 时使用此选项。 自 .NET Core 2.0 SDK 起可用的选项。
+  清除指定运行时的输出文件夹。 在创建[独立部署 (SCD)](../deploying/index.md#publish-self-contained) 时使用此选项。
 
 * **`-v|--verbosity <LEVEL>`**
 

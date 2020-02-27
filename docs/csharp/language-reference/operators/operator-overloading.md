@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: eb4639b7cede59e6ca1e315f54ce805947f03327
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 1475852d312fa16980f25347fc9a864cb1659221
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937197"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451923"
 ---
 # <a name="operator-overloading-c-reference"></a>运算符重载（C# 引用）
 
@@ -64,4 +64,6 @@ ms.locfileid: "75937197"
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)
 - [用户定义转换运算符](user-defined-conversion-operators.md)
+- [设计准则 - 运算符重载](../../../standard/design-guidelines/operator-overloads.md)
+- [设计准则 - 相等运算符](../../../standard/design-guidelines/equality-operators.md)
 - [重载运算符为何在 C# 中始终是静态的？](https://docs.microsoft.com/archive/blogs/ericlippert/why-are-overloaded-operators-always-static-in-c)

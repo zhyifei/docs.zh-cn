@@ -3,13 +3,13 @@ title: 在 ASP.NET Core 应用中使用数据
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用 | 在 ASP.NET Core 应用中使用数据
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: d3c91f594eedd2636cbf08285f0dee352bc4835a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 12/04/2019
+ms.openlocfilehash: f37bdca688559236d9b07b97f7ee7459b3be4f39
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777119"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449343"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>在 ASP.NET Core 应用中使用数据
 
@@ -200,9 +200,9 @@ private void ConfigureOrder(EntityTypeBuilder<Order> builder)
 }
 ```
 
-在此示例中，`ShipToAddress` 属性的类型为 `Address`。 `Address` 是一个具有多个属性的值对象，例如 `Street` 和 `City`。 EF Core 将 `Order` 对象映射到其表中，每个 `Address` 属性有一列，每个列名前面都加有该属性的名称。 在此示例中，`Order` 表将包含 `ShipToAddress_Street` 和 `ShipToAddress_City` 等列。
+在此示例中，`ShipToAddress` 属性的类型为 `Address`。 `Address` 是一个具有多个属性的值对象，例如 `Street` 和 `City`。 EF Core 将 `Order` 对象映射到其表中，每个 `Address` 属性有一列，每个列名前面都加有该属性的名称。 在此示例中，`Order` 表将包含 `ShipToAddress_Street` 和 `ShipToAddress_City` 等列。 如果需要，也可以将从属类型存储在单独的表中。
 
-[EF Core 2.2 引入了对从属实体集合的支持](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
+详细了解 [EF Core 中的从属实体支持](/ef/core/modeling/owned-entities)。
 
 ### <a name="resilient-connections"></a>弹性连接
 

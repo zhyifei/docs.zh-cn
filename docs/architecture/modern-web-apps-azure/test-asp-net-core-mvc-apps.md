@@ -3,13 +3,13 @@ title: 测试 ASP.NET Core MVC 应用
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 测试 ASP.NET Core MVC 应用
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 5f63e350e2f1ba8699bb002a54492cbf9501948e
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.date: 12/04/2019
+ms.openlocfilehash: 164e820ffa6030b3dcb9180d56e57ce39bb03143
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965771"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503931"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>测试 ASP.NET Core MVC 应用
 
@@ -70,7 +70,7 @@ Martin Fowler 提出了测试金字塔概念，如图 9-1 所示。
 
 **图 9-2**。 解决方案中的测试组织
 
-可使用你喜欢的任何测试框架。 xUnit 框架有效运行，编写所有 ASP.NET Core 和 EF Core 测试时皆使用此框架。 可使用图 9-3 中所示的模板或从使用 dotnet new xunit 的 CLI，在 Visual Studio 中添加 xUnit 测试项目。
+可使用你喜欢的任何测试框架。 xUnit 框架有效运行，编写所有 ASP.NET Core 和 EF Core 测试时皆使用此框架。 可使用图 9-3 中所示的模板或从使用 `dotnet new xunit` 的 CLI，在 Visual Studio 中添加 xUnit 测试项目。
 
 ![在 Visual Studio 中添加 xUnit 测试项目](./media/image9-3.png)
 
@@ -106,7 +106,7 @@ Martin Fowler 提出了测试金字塔概念，如图 9-1 所示。
 
 ## <a name="unit-testing-aspnet-core-apps"></a>对 ASP.NET Core 应用执行单元测试
 
-在具有出色设计的 ASP.NET Core 应用程序中，大多数复杂性和业务逻辑会封装在业务实体以及各种服务中。 ASP.NET Core MVC 应用本身及其控制器、筛选器、视图模型和视图需要的单元测试极少。 特定操作的很多功能体现在该操作方法之外。 单元测试不能有效测试路由是否正常运行或测试全局错误。 同样，无法对任何筛选器（包括模型验证筛选器以及身份验证和授权筛选器）执行单元测试。 如果没有这些行为源，大多数操作方法应非常小，这会将其大量工作委托至服务（可独立于使用这些服务的控制器对这些服务执行测试）。
+在具有出色设计的 ASP.NET Core 应用程序中，大多数复杂性和业务逻辑会封装在业务实体以及各种服务中。 ASP.NET Core MVC 应用本身及其控制器、筛选器、视图模型和视图需要的单元测试极少。 特定操作的很多功能体现在该操作方法之外。 单元测试不能有效测试路由是否正常运行或测试全局错误。 同样，无法使用针对控制器的操作方法的测试对任何筛选器（包括模型验证筛选器以及身份验证和授权筛选器）执行单元测试。 如果没有这些行为源，大多数操作方法应非常小，这会将其大量工作委托至服务（可独立于使用这些服务的控制器对这些服务执行测试）。
 
 有时为对代码执行单元测试，需要重构代码。 通常，这涉及到确定抽象以及使用依赖项注入来访问待测试代码中的抽象，而不是直接针对基础结构编码。 例如，请思考以下用于显示图像的简单操作方法：
 
@@ -153,7 +153,7 @@ ASP.NET Core 应用中的大多数集成测试应该是测试基础结构项目�
 
 ## <a name="functional-testing-aspnet-core-apps"></a>对 ASP.NET Core 应用执行功能测试
 
-对于 ASP.NET Core 应用程序，`TestServer` 类让功能测试非常易于编写。 可以直接使用 `WebHostBuilder`（针对应用程序的一般操作）或使用 `WebApplicationFactory` 类型（自 2.1 版开始提供）来配置 `TestServer`。 尝试将测试主机与生产主机进行尽可能密切的匹配，以便让测试执行与应用将在生产中进行的行为类似的行为。 `WebApplicationFactory` 类有助于配置 TestServer 的 ContentRoot，该 ContentRoot 由 ASP.NET Core 用于定位静态资源（例如视图）。
+对于 ASP.NET Core 应用程序，`TestServer` 类让功能测试非常易于编写。 可以直接使用 `WebHostBuilder`（或 `HostBuilder`）（针对应用程序的一般操作）或使用 `WebApplicationFactory` 类型（自 2.1 版开始提供）来配置 `TestServer`。 应尝试将测试主机与生产主机进行尽可能密切的匹配，以便让测试执行与应用将在生产中进行的行为类似的行为。 `WebApplicationFactory` 类有助于配置 TestServer 的 ContentRoot，该 ContentRoot 由 ASP.NET Core 用于定位静态资源（例如视图）。
 
 可以通过创建实现 IClassFixture\<WebApplicationFactory\<TEntry>>（其中 TEntry 为 Web 应用的启动类）的测试类来创建简单的功能测试。 创建完成后，测试固定例程可使用中心的 CreateClient 方法来创建客户端：
 
@@ -175,6 +175,7 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 
 ```cs
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.eShopWeb.Infrastructure.Data;
@@ -184,32 +185,35 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 
-namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
+namespace Microsoft.eShopWeb.FunctionalTests.Web
 {
-    public class CustomWebApplicationFactory<TStartup>
-    : WebApplicationFactory<Startup>
+    public class WebTestFixture : WebApplicationFactory<Startup>
     {
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
+            builder.UseEnvironment("Testing");
+
             builder.ConfigureServices(services =>
             {
+                 services.AddEntityFrameworkInMemoryDatabase();
+
                 // Create a new service provider.
-                var serviceProvider = new ServiceCollection()
+                var provider = services
                     .AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
-                // Add a database context (ApplicationDbContext) using an in-memory
+                // Add a database context (ApplicationDbContext) using an in-memory 
                 // database for testing.
                 services.AddDbContext<CatalogContext>(options =>
                 {
                     options.UseInMemoryDatabase("InMemoryDbForTesting");
-                    options.UseInternalServiceProvider(serviceProvider);
+                    options.UseInternalServiceProvider(provider);
                 });
 
                 services.AddDbContext<AppIdentityDbContext>(options =>
                 {
                     options.UseInMemoryDatabase("Identity");
-                    options.UseInternalServiceProvider(serviceProvider);
+                    options.UseInternalServiceProvider(provider);
                 });
 
                 // Build the service provider.
@@ -224,7 +228,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
                     var loggerFactory = scopedServices.GetRequiredService<ILoggerFactory>();
 
                     var logger = scopedServices
-                        .GetRequiredService<ILogger<CustomWebApplicationFactory<TStartup>>>();
+                        .GetRequiredService<ILogger<WebTestFixture>>();
 
                     // Ensure the database is created.
                     db.Database.EnsureCreated();
@@ -233,6 +237,11 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
                     {
                         // Seed the database with test data.
                         CatalogContextSeed.SeedAsync(db, loggerFactory).Wait();
+
+                        // seed sample user data
+                        var userManager = scopedServices.GetRequiredService<UserManager<ApplicationUser>>();
+                        var roleManager = scopedServices.GetRequiredService<RoleManager<IdentityRole>>();
+                        AppIdentityDbContextSeed.SeedAsync(userManager, roleManager).Wait();
                     }
                     catch (Exception ex)
                     {
@@ -249,17 +258,17 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
 测试可以使用此自定义 WebApplicationFactory 来创建客户端，并使用此客户端实例向应用程序作出请求。 该应用程序将具备植入的数据，这些数据可用作测试断言的一部分。 以下测试验证 eShopOnWeb 应用程序的主页是否正确加载并包括已作为种子数据的一部分添加至应用程序的产品列表。
 
 ```cs
-using Microsoft.eShopWeb.FunctionalTests.Web.Controllers;
-using Microsoft.eShopWeb.Web;
+using Microsoft.eShopWeb.FunctionalTests.Web;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 {
-    public class HomePageOnGet : IClassFixture<CustomWebApplicationFactory<Startup>>
+    [Collection("Sequential")]
+    public class HomePageOnGet : IClassFixture<WebTestFixture>
     {
-        public HomePageOnGet(CustomWebApplicationFactory<Startup> factory)
+        public HomePageOnGet(WebTestFixture factory)
         {
             Client = factory.CreateClient();
         }
@@ -293,8 +302,6 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 >   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
 > - ASP.NET Core 中的集成测试   \
 >   <https://docs.microsoft.com/aspnet/core/test/integration-tests>
-> - **ASP.NET Community Standup - 2018 年 5 月 15 日 - 使用 Javier C. Nelson 进行 MVC 测试 - YouTube 视频** \
->   <https://www.youtube.com/watch?v=wtOE-xmFJkw&list=PL1rZQsJPBU2StolNg0aqvQswETPcYnNKL&index=5>
 
 >[!div class="step-by-step"]
 >[上一页](work-with-data-in-asp-net-core-apps.md)

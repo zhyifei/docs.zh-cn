@@ -1,13 +1,13 @@
 ---
 title: 使用 Entity Framework Core 实现基础结构持久性层
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 探索使用 Entity Framework Core 实现基础结构持久性层的细节。
-ms.date: 10/08/2018
-ms.openlocfilehash: b70ede6b47cbf990d0435aef841416c68f6439b4
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 63579dc74ba52551bc1ee02a57337c1b17fdf396
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737916"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502501"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 实现基础结构持久性层
 
@@ -273,49 +273,73 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 {
     public void Configure(EntityTypeBuilder<Order> orderConfiguration)
     {
-            orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
+        orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
 
-            orderConfiguration.HasKey(o => o.Id);
+        orderConfiguration.HasKey(o => o.Id);
 
-            orderConfiguration.Ignore(b => b.DomainEvents);
+        orderConfiguration.Ignore(b => b.DomainEvents);
 
-            orderConfiguration.Property(o => o.Id)
-                .ForSqlServerUseSequenceHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
+        orderConfiguration.Property(o => o.Id)
+            .UseHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
 
-            //Address Value Object persisted as owned entity type supported since EF Core 2.0
-            orderConfiguration.OwnsOne(o => o.Address);
+        //Address value object persisted as owned entity type supported since EF Core 2.0
+        orderConfiguration
+            .OwnsOne(o => o.Address, a =>
+            {
+                a.WithOwner();
+            });
 
-            orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-            orderConfiguration.Property<int?>("BuyerId").IsRequired(false);
-            orderConfiguration.Property<int>("OrderStatusId").IsRequired();
-            orderConfiguration.Property<int?>("PaymentMethodId").IsRequired(false);
-            orderConfiguration.Property<string>("Description").IsRequired(false);
+        orderConfiguration
+            .Property<int?>("_buyerId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("BuyerId")
+            .IsRequired(false);
 
-            var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+        orderConfiguration
+            .Property<DateTime>("_orderDate")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("OrderDate")
+            .IsRequired();
 
-            // DDD Patterns comment:
-            //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
-            navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+        orderConfiguration
+            .Property<int>("_orderStatusId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("OrderStatusId")
+            .IsRequired();
 
-            orderConfiguration.HasOne<PaymentMethod>()
-                .WithMany()
-                .HasForeignKey("PaymentMethodId")
-                .IsRequired(false)
-                .OnDelete(DeleteBehavior.Restrict);
+        orderConfiguration
+            .Property<int?>("_paymentMethodId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("PaymentMethodId")
+            .IsRequired(false);
 
-            orderConfiguration.HasOne<Buyer>()
-                .WithMany()
-                .IsRequired(false)
-                .HasForeignKey("BuyerId");
+        orderConfiguration.Property<string>("Description").IsRequired(false);
 
-            orderConfiguration.HasOne(o => o.OrderStatus)
-                .WithMany()
-                .HasForeignKey("OrderStatusId");
+        var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+
+        // DDD Patterns comment:
+        //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
+        navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+
+        orderConfiguration.HasOne<PaymentMethod>()
+            .WithMany()
+            .HasForeignKey("_paymentMethodId")
+            .IsRequired(false)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        orderConfiguration.HasOne<Buyer>()
+            .WithMany()
+            .IsRequired(false)
+            .HasForeignKey("_buyerId");
+
+        orderConfiguration.HasOne(o => o.OrderStatus)
+            .WithMany()
+            .HasForeignKey("_orderStatusId");
     }
 }
 ```
 
-可以设置同一 OnModelCreating 方法内的所有 Fluent API 映射，但最好是将该代码进行分区并得到多个配置类，每个实体一个，如示例中所示。 尤其是对于特别大的模型，最好有单独的配置类用于配置不同的实体类型。
+可以设置同一 `OnModelCreating` 方法内的所有 Fluent API 映射，但最好是将该代码进行分区并得到多个配置类，每个实体一个，如示例中所示。 尤其是对于大型模型，最好有单独的配置类用于配置不同的实体类型。
 
 示例中的代码演示了几个显式声明和映射。 但是，EF Core 约定自动执行这里的许多映射，因此示例中需要的实际代码可能较小。
 
@@ -333,7 +357,7 @@ Hi/Lo 算法描述用于从相关数据库序列获取一批唯一 ID 的机制�
 
 - 它生成一个人工可读标识符，不同于使用 GUID 的技术。
 
-EF Core 支持使用 ForSqlServerUseSequenceHiLo 方法的 [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm)，如前面的示例中所示。
+EF Core 支持使用 `UseHiLo` 方法的 [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm)，如前面的示例中所示。
 
 ### <a name="map-fields-instead-of-properties"></a>映射字段（而非属性）
 
@@ -410,6 +434,7 @@ public class BasketWithItemsSpecification : BaseSpecification<Basket>
     {
         AddInclude(b => b.Items);
     }
+
     public BasketWithItemsSpecification(string buyerId)
         : base(b => b.BuyerId == buyerId)
     {
@@ -445,7 +470,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 除了封装筛选逻辑，该规范还可指定要返回的数据的形状，包括要填充的属性。
 
-尽管我们不建议从存储库返回 IQueryable，但可以在存储库中使用它们来生成一系列结果。 可以看到此方法在以上 List 方法中使用，List 方法使用中间 IQueryable 表达式来生成查询的包含内容列表，然后再使用最后一行上的规范条件来执行查询。
+尽管我们不建议从存储库返回 `IQueryable`，但可以在存储库中使用它们来生成一系列结果。 可以看到此方法在以上 List 方法中使用，List 方法使用中间 `IQueryable` 表达式来生成查询的包含内容列表，然后再使用最后一行上的规范条件来执行查询。
 
 ### <a name="additional-resources"></a>其他资源
 

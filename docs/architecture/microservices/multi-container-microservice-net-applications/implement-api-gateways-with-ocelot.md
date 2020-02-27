@@ -1,22 +1,20 @@
 ---
 title: 通过 Ocelot 实现 API 网关
 description: 了解如何通过 Ocelot 实现 API 网关以及如何在基于容器的环境中使用 Ocelot。
-ms.date: 10/02/2018
-ms.openlocfilehash: c0bcd240b6bd190dd02266c7faaf9fd668eb23bb
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 01/30/2020
+ms.openlocfilehash: 0eb834829a418cfa1ccdf13c5fc8849f6855c4ba
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777296"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502420"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>通过 Ocelot 实现 API 网关
 
-引用的微服务应用程序 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 使用的是 [Ocelot](https://github.com/ThreeMammals/Ocelot)，这是一个简单的轻量级 API 网关，可与微服务/容器一起部署到任意位置，例如 eShopOnContainers 使用的以下任意环境：
-
-- 位于本地开发电脑、本地或云中的 Docker 主机。
-- 本地或 Azure Kubernetes 服务 (AKS) 等托管云中的 Kubernetes 群集。
-- 本地或云中的 Service Fabric 群集。
-- 作为 Azure 中的 PaaS 或无服务器服务的 Service Fabric 网格。
+> [!IMPORTANT]
+> 引用微服务应用程序 [ eShopOnContainers ](https://github.com/dotnet-architecture/eShopOnContainers) 当前正在使用 [Envoy](https://www.envoyproxy.io/) 提供的功能来实现 API 网关，而不是之前引用的 [Ocelot](https://github.com/ThreeMammals/Ocelot)。
+> 我们之所以选择这种设计，是因为 Envoy 对 WebSocket 协议的内置支持，这是 eShopOnContainers 中实现的新 gRPC 服务间通信所必需的。
+> 但是，我们在指南中保留了此部分，因此，你可以将 Ocelot 视为适用于生产级方案的简单且功能强大的轻型 API 网关。
 
 ## <a name="architect-and-design-your-api-gateways"></a>构建和设计 API 网关
 
@@ -89,7 +87,7 @@ HTTP 请求将最终运行访问微服务数据库的那种 C# 代码以及任�
 对于微服务 URL，当容器部署在本地开发电脑（本地 Docker 主机）中时，每个微服务的容器始终有一个内部端口（通常是端口 80），在其 dockerfile 中指定，如以下 dockerfile 中所示：
 
 ```Dockerfile
-FROM microsoft/aspnetcore:2.0.5 AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 ```
@@ -105,7 +103,7 @@ EXPOSE 80
 以下是“目录”微服务的 `docker-compose.override.yml` 文件示例：
 
 ```yml
-catalog.api:
+catalog-api:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
     - ASPNETCORE_URLS=http://0.0.0.0:80
@@ -123,10 +121,10 @@ catalog.api:
 在本地 Docker 主机中运行“目录”微服务。 从 Visual Studio 运行完整的 eShopOnContainers 解决方案（它将运行 docker-compose 文件中的所有服务）；在 CMD 或放置 `docker-compose.yml` 和 `docker-compose.override.yml` 的文件夹中的 PowerShell 中运行以下 docker-compose 命令启动“目录”微服务。
 
 ```console
-docker-compose run --service-ports catalog.api
+docker-compose run --service-ports catalog-api
 ```
 
-此命令仅运行 catalog.api 服务容器以及 docker-compose.yml 中指定的依赖项。 此事例中为 SQL Server 容器和 RabbitMQ 容器。
+此命令仅运行 catalog-api 服务容器以及 docker-compose.yml 中指定的依赖项。 此事例中为 SQL Server 容器和 RabbitMQ 容器。
 
 然后，可直接访问“目录”微服务，并直接通过该“外部”端口由 Swagger UI 查看其方法，此事例中为 `http://localhost:5101/swagger`：
 
@@ -142,7 +140,7 @@ docker-compose run --service-ports catalog.api
 
 Ocelot 基本上是一组可按特定顺序应用的中间件。
 
-Ocelot 仅适用于 ASP.NET Core。 它面向 netstandard2.0，所以可在任何支持 .NET Standard 2.0 的位置使用，包括 .NET Core 2.0 运行时和 .NET Framework 4.6.1 运行时及更高版本。
+Ocelot 仅适用于 ASP.NET Core。 它面向 `netstandard2.0`，所以可在任何支持 .NET Standard 2.0 的位置使用，包括 .NET Core 2.0 运行时和 .NET Framework 4.6.1 运行时及更高版本。
 
 使用 Visual Studio 中的 [Ocelot NuGet 包](https://www.nuget.org/packages/Ocelot/)在 ASP.NET Core 项目中安装 Ocelot 及其依赖项。
 
@@ -207,7 +205,7 @@ namespace OcelotApiGw
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "catalog.api",
+          "Host": "catalog-api",
           "Port": 80
         }
       ],
@@ -219,7 +217,7 @@ namespace OcelotApiGw
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],
@@ -249,7 +247,7 @@ Ocelot API 网关的主要功能是接收传入的 HTTP 请求并将其转发到
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],
@@ -318,7 +316,7 @@ UpstreamPathTemplate 是一个 URL，Ocelot 将其用来识别用于客户端中
 mobileshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5200:80"
   volumes:
@@ -327,7 +325,7 @@ mobileshoppingapigw:
 mobilemarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5201:80"
   volumes:
@@ -336,7 +334,7 @@ mobilemarketingapigw:
 webshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5202:80"
   volumes:
@@ -345,7 +343,7 @@ webshoppingapigw:
 webmarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5203:80"
   volumes:
@@ -362,13 +360,13 @@ webmarketingapigw:
 
 现在，如果通过 API 网关运行 eShopOnContainers（在打开 eShopOnContainers-ServicesAndWebApps.sln 解决方案或运行“docker-compose up”时，默认包含在 VS 中），将执行以下示例路由。
 
-例如，访问 webshoppingapigw API 网关提供的上游 URL `http://localhost:5202/api/v1/c/catalog/items/2/` 时，将从 Docker 主机中的内部下游 URL `http://catalog.api/api/v1/2` 获取相同结果，如以下浏览器所示。
+例如，访问 webshoppingapigw API 网关提供的上游 URL `http://localhost:5202/api/v1/c/catalog/items/2/` 时，将从 Docker 主机中的内部下游 URL `http://catalog-api/api/v1/2` 获取相同结果，如以下浏览器所示。
 
 ![显示通过 API 网关进行响应的浏览器屏幕截图。](./media/implement-api-gateways-with-ocelot/access-microservice-through-url.png)
 
 图 6-35  。 通过 API 网关提供的 URL 访问微服务
 
-由于测试或调试原因，如果想不通过 API 网关直接访问目录 Docker 容器（仅在开发环境中），考虑到“catalog.api”是 Docker 主机内部的 DNS 解析（由 docker-compose 服务名称处理服务发现），直接访问容器的唯一方法是通过 docker-compose.override.yml 中发布的外部端口，该端口仅用于开发测试，例如以下浏览器中的 `http://localhost:5101/api/v1/Catalog/items/1`。
+由于测试或调试原因，如果想不通过 API 网关直接访问目录 Docker 容器（仅在开发环境中），考虑到“catalog-api”是 Docker 主机内部的 DNS 解析（由 docker-compose 服务名称处理服务发现），直接访问容器的唯一方法是通过 docker-compose.override.yml 中发布的外部端口，该端口仅用于开发测试，例如以下浏览器中的 `http://localhost:5101/api/v1/Catalog/items/1`。
 
 ![显示对 Catalog.api 的直接响应的浏览器屏幕截图。](./media/implement-api-gateways-with-ocelot/direct-access-microservice-testing.png)
 
@@ -426,7 +424,7 @@ webmarketingapigw:
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],

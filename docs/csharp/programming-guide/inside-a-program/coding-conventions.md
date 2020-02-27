@@ -6,15 +6,16 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: c56d673de958f49a9ace60350442e89039e1d69f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712099"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452001"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 编码约定（C# 编程指南）
- 编码约定可实现以下目的：  
+
+编码约定可实现以下目的：  
   
 - 它们为代码创建一致的外观，以确保读取器专注于内容而非布局。  
   
@@ -24,7 +25,7 @@ ms.locfileid: "75712099"
   
 - 它们展示 C# 最佳做法。  
 
- Microsoft 根据本主题中的准则来开发样本和文档。  
+Microsoft 根据本文中的准则来开发样本和文档。  
   
 ## <a name="naming-conventions"></a>命名约定  
   
@@ -35,7 +36,8 @@ ms.locfileid: "75712099"
 - 你不必更改通过使用 Visual Studio 设计器工具创建的对象的名称以使它们适合其他准则。  
   
 ## <a name="layout-conventions"></a>布局约定  
- 好的布局利用格式设置来强调代码的结构并使代码更便于阅读。 Microsoft 示例和样本符合以下约定：  
+
+好的布局利用格式设置来强调代码的结构并使代码更便于阅读。 Microsoft 示例和样本符合以下约定：  
   
 - 使用默认的代码编辑器设置（智能缩进、4 字符缩进、制表符保存为空格）。 有关详细信息，请参阅[选项、文本编辑器、C#、格式设置](/visualstudio/ide/reference/options-text-editor-csharp-formatting)。  
   
@@ -66,7 +68,8 @@ ms.locfileid: "75712099"
 - 不要在注释周围创建格式化的星号块。  
   
 ## <a name="language-guidelines"></a>语言准则  
- 以下各节介绍 C# 遵循以准备代码示例和样本的做法。  
+
+以下各节介绍 C# 遵循以准备代码示例和样本的做法。  
   
 ### <a name="string-data-type"></a>String 数据类型  
   
@@ -94,33 +97,38 @@ ms.locfileid: "75712099"
   
 - 避免使用 `var` 来代替 [dynamic](../../language-reference/builtin-types/reference-types.md)。  
   
-- 使用隐式类型化来确定 [for](../../language-reference/keywords/for.md) 和 [foreach](../../language-reference/keywords/foreach-in.md) 循环中循环变量的类型。  
+- 使用隐式类型化来确定 [for](../../language-reference/keywords/for.md) 循环中循环变量的类型。  
   
      下面的示例在 `for` 语句中使用隐式类型化。  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
-  
-     下面的示例在 `foreach` 语句中使用隐式类型化。  
-  
-     [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]  
-  
+
+- 不要使用隐式类型化来确定 [foreach](../../language-reference/keywords/foreach-in.md) 循环中循环变量的类型。
+
+     下面的示例在 `foreach` 语句中使用显式类型化。
+
+     [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
+
+     > [!NOTE]
+     > 注意不要意外更改可迭代集合的元素类型。 例如，在 `foreach` 语句中从 <xref:System.Linq.IQueryable?displayProperty=nameWithType> 切换到 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 很容易，这会更改查询的执行。
+
 ### <a name="unsigned-data-type"></a>无符号数据类型  
   
-- 通常，使用 `int` 而非无符号类型。 `int` 的使用在整个 C# 中都很常见，并且当你使用 `int` 时，更易于与其他库交互。  
+通常，使用 `int` 而非无符号类型。 `int` 的使用在整个 C# 中都很常见，并且当你使用 `int` 时，更易于与其他库交互。  
   
 ### <a name="arrays"></a>数组  
   
-- 当在声明行上初始化数组时，请使用简洁的语法。  
+当在声明行上初始化数组时，请使用简洁的语法。  
   
-     [!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
+[!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
   
 ### <a name="delegates"></a>委托  
   
-- 使用简洁的语法来创建委托类型的实例。  
+使用简洁的语法来创建委托类型的实例。  
   
-     [!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
+[!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
   
-     [!code-csharp[csProgGuideCodingConventions#15](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#15)]  
+[!code-csharp[csProgGuideCodingConventions#15](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#15)]  
   
 ### <a name="try-catch-and-using-statements-in-exception-handling"></a>异常处理中的 try-catch 和 using 语句  
   
@@ -134,9 +142,9 @@ ms.locfileid: "75712099"
   
 ### <a name="-and-124124-operators"></a>&& 和 || 运算符  
   
-- 若要通过跳过不必要的比较来避免异常并提高性能，请在执行比较时使用 [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-)（而不是 [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-)），使用 [||](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) （而不是 [|](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-)），如下面的示例所示。  
+若要通过跳过不必要的比较来避免异常并提高性能，请在执行比较时使用 [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-)（而不是 [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-)），使用 [||](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) （而不是 [|](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-)），如下面的示例所示。  
   
-     [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
+[!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
 ### <a name="new-operator"></a>New 运算符  
   
@@ -154,15 +162,15 @@ ms.locfileid: "75712099"
   
 ### <a name="event-handling"></a>事件处理  
   
-- 如果你正定义一个稍后不需要删除的事件处理程序，请使用 lambda 表达式。  
+如果你正定义一个稍后不需要删除的事件处理程序，请使用 lambda 表达式。  
   
-     [!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
+[!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
   
-     [!code-csharp[csProgGuideCodingConventions#23](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#23)]  
+[!code-csharp[csProgGuideCodingConventions#23](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#23)]  
   
 ### <a name="static-members"></a>静态成员  
   
-- 使用类名调用 [static](../../language-reference/keywords/static.md) 成员：ClassName.StaticMember  。 这种做法通过明确静态访问使代码更易于阅读。  请勿使用派生类的名称限定基类中定义的静态成员。  编译该代码时，代码可读性具有误导性，如果向派生类添加具有相同名称的静态成员，代码可能会被破坏。  
+使用类名调用 [static](../../language-reference/keywords/static.md) 成员：ClassName.StaticMember  。 这种做法通过明确静态访问使代码更易于阅读。  请勿使用派生类的名称限定基类中定义的静态成员。  编译该代码时，代码可读性具有误导性，如果向派生类添加具有相同名称的静态成员，代码可能会被破坏。  
   
 ### <a name="linq-queries"></a>LINQ 查询  
   
@@ -193,7 +201,8 @@ ms.locfileid: "75712099"
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   
 ## <a name="security"></a>安全性  
- 请遵循[安全编码准则](../../../standard/security/secure-coding-guidelines.md)中的准则。  
+
+请遵循[安全编码准则](../../../standard/security/secure-coding-guidelines.md)中的准则。  
   
 ## <a name="see-also"></a>请参阅
 

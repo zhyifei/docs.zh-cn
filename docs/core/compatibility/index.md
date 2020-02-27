@@ -2,12 +2,12 @@
 title: 重大更改的类型
 description: 了解 .NET Core 如何试着保证开发人员在不同的 .NET 版本中享有兼容性，以及哪种类型的变更被视为中断性变更。
 ms.date: 06/10/2019
-ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092975"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628587"
 ---
 # <a name="changes-that-affect-compatibility"></a>会影响兼容性的变更
 
@@ -49,7 +49,7 @@ ms.locfileid: "77092975"
 
   旧程序集必须标有指向新程序集的 <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  。
 
-- ✔️ 允许：  将 [struct](../../csharp/language-reference/keywords/struct.md) 类型更改为 `readonly struct` 类型
+- ✔️ 允许：  将 [struct](../../csharp/language-reference/builtin-types/struct.md) 类型更改为 `readonly struct` 类型
 
   不允许将 `readonly struct` 类型更改为 `struct` 类型。
 
@@ -77,11 +77,11 @@ ms.locfileid: "77092975"
 
   接口删除规则有一个例外情况：可以添加派生自删除的接口的接口实现。 例如，如果类型或接口现在实现将实现 <xref:System.IDisposable> 的 <xref:System.ComponentModel.IComponent>，则可以删除 <xref:System.IDisposable>。
 
-- ❌ 不允许：  将 `readonly struct` 类型更改为 [struct](../../csharp/language-reference/keywords/struct.md) 类型
+- ❌ 不允许：  将 `readonly struct` 类型更改为 [struct](../../csharp/language-reference/builtin-types/struct.md) 类型
 
   但允许将 `struct` 类型更改为 `readonly struct` 类型。
 
-- ❌ 不允许：  将 [struct](../../csharp/language-reference/keywords/struct.md) 类型更改为 `ref struct` 类型，或将后者改为前者
+- ❌ 不允许：  将 [struct](../../csharp/language-reference/builtin-types/struct.md) 类型更改为 `ref struct` 类型，或将后者改为前者
 
 - ❌ 不允许：  缩小类型的可见性
 
@@ -300,7 +300,7 @@ ms.locfileid: "77092975"
 
 - ✔️ 允许：  向参数添加 [params](../../csharp/language-reference/keywords/params.md)
 
-- ❌ 不允许：  将 [struct](../../csharp/language-reference/keywords/struct.md) 更改为 [class](../../csharp/language-reference/keywords/class.md)，或将后者改为前者
+- ❌ 不允许：  将 [struct](../../csharp/language-reference/builtin-types/struct.md) 更改为 [class](../../csharp/language-reference/keywords/class.md)，或将后者改为前者
 
 - ❌ 不允许：  向代码块添加 [checked](../../csharp/language-reference/keywords/virtual.md) 关键字
 

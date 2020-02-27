@@ -1,13 +1,13 @@
 ---
 title: 使用 docker-compose.yml 定义多容器应用程序
 description: 如何使用 docker-compose.yml 指定多容器应用程序的微服务组合。
-ms.date: 10/02/2018
-ms.openlocfilehash: f9cab35ac8e11ca89a83f646c29bf72f84e66ef4
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.date: 01/30/2020
+ms.openlocfilehash: 86d6feda343df7f4b72374f93fc45b3246780cdf
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116550"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502472"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定义多容器应用程序
 
@@ -26,20 +26,20 @@ services:
   webmvc:
     image: eshop/webmvc
     environment:
-      - CatalogUrl=http://catalog.api
-      - OrderingUrl=http://ordering.api
-      - BasketUrl=http://basket.api
+      - CatalogUrl=http://catalog-api
+      - OrderingUrl=http://ordering-api
+      - BasketUrl=http://basket-api
     ports:
       - "5100:80"
     depends_on:
-      - catalog.api
-      - ordering.api
-      - basket.api
+      - catalog-api
+      - ordering-api
+      - basket-api
 
-  catalog.api:
-    image: eshop/catalog.api
+  catalog-api:
+    image: eshop/catalog-api
     environment:
-      - ConnectionString=Server=sql.data;Initial Catalog=CatalogData;User Id=sa;Password=your@password
+      - ConnectionString=Server=sqldata;Initial Catalog=CatalogData;User Id=sa;Password=your@password
     expose:
       - "80"
     ports:
@@ -48,37 +48,37 @@ services:
     extra_hosts:
       - "CESARDLSURFBOOK:10.0.75.1"
     depends_on:
-      - sql.data
+      - sqldata
 
-  ordering.api:
-    image: eshop/ordering.api
+  ordering-api:
+    image: eshop/ordering-api
     environment:
-      - ConnectionString=Server=sql.data;Database=Services.OrderingDb;User Id=sa;Password=your@password
+      - ConnectionString=Server=sqldata;Database=Services.OrderingDb;User Id=sa;Password=your@password
     ports:
       - "5102:80"
     #extra hosts can be used for standalone SQL Server or services at the dev PC
     extra_hosts:
       - "CESARDLSURFBOOK:10.0.75.1"
     depends_on:
-      - sql.data
+      - sqldata
 
-  basket.api:
-    image: eshop/basket.api
+  basket-api:
+    image: eshop/basket-api
     environment:
-      - ConnectionString=sql.data
+      - ConnectionString=sqldata
     ports:
       - "5103:80"
     depends_on:
-      - sql.data
+      - sqldata
 
-  sql.data:
+  sqldata:
     environment:
       - SA_PASSWORD=your@password
       - ACCEPT_EULA=Y
     ports:
       - "5434:1433"
 
-  basket.data:
+  basketdata:
     image: redis
 ```
 
@@ -87,21 +87,21 @@ services:
 | 服务名称 | 描述 |
 |--------------|-------------|
 | webmvc       | 容器，包括从服务器端 C\# 使用微服务的 ASP.NET Core MVC 应用程序|
-| catalog.api  | 容器，包括 Catalog ASP.NET Core Web API 微服务 |
-| ordering.api | 容器，包括 Ordering ASP.NET Core Web API 微服务 |
-| sql.data     | 容器，运行适用于 Linux 的 SQL Server，并保存微服务数据库 |
-| basket.api   | 容器，包含有 Basket ASP.NET Core Web API 微服务 |
-| basket.data  | 容器，运行 REDIS 缓存服务，并将篮数据库作为 REDIS 缓存 |
+| catalog-api  | 容器，包括 Catalog ASP.NET Core Web API 微服务 |
+| ordering-api | 容器，包括 Ordering ASP.NET Core Web API 微服务 |
+| sqldata     | 容器，运行适用于 Linux 的 SQL Server，并保存微服务数据库 |
+| basket-api   | 容器，包含有 Basket ASP.NET Core Web API 微服务 |
+| basketdata  | 容器，运行 REDIS 缓存服务，并将篮数据库作为 REDIS 缓存 |
 
 ### <a name="a-simple-web-service-api-container"></a>简单的 Web 服务 API 容器
 
-关注单个容器，catalog.api 容器微服务的定义很简单：
+关注单个容器，catalog-api 容器微服务的定义很简单：
 
 ```yml
-  catalog.api:
-    image: eshop/catalog.api
+  catalog-api:
+    image: eshop/catalog-api
     environment:
-      - ConnectionString=Server=sql.data;Initial Catalog=CatalogData;User Id=sa;Password=your@password
+      - ConnectionString=Server=sqldata;Initial Catalog=CatalogData;User Id=sa;Password=your@password
     expose:
       - "80"
     ports:
@@ -110,32 +110,32 @@ services:
     extra_hosts:
       - "CESARDLSURFBOOK:10.0.75.1"
     depends_on:
-      - sql.data
+      - sqldata
 ```
 
 这种容器化服务具有以下基本配置：
 
-- 它基于自定义 eshop/catalog.api 映像。 为简便起见，文件中没有 build: key 设置。 这意味着，必须事先生成（使用 docker build 命令）映像或从任何 Docker 注册表下载（使用 docker pull 命令）映像。
+- 它基于自定义 eshop/catalog-api  映像。 为简便起见，文件中没有 build: key 设置。 这意味着，必须事先生成（使用 docker build 命令）映像或从任何 Docker 注册表下载（使用 docker pull 命令）映像。
 
 - 它定义了一个名为 ConnectionString 的环境变量，Entity Framework 使用连接字符串用来访问包含目录数据模型的 SQL Server 实例。 在这种情况下，同一 SQL Server 容器拥有多个数据库。 因此，开发 Docker 时所需计算机内存减少。 但是，开发人员也可以为每个微服务数据库部署一个 SQL Server 容器。
 
-- SQL Server 的名称是 sql.data，与运行适用于 Linux 的 SQL Server 实例的容器的名称相同。 这很方便，因为使用此名称解析（Docker 主机内部）可解析网络地址，这样从其他容器访问容器时，无需了解受访容器的内部 IP。
+- SQL Server 的名称是 sqldata，与运行适用于 Linux 的 SQL Server 实例的容器的名称相同  。 这很方便，因为使用此名称解析（Docker 主机内部）可解析网络地址，这样从其他容器访问容器时，无需了解受访容器的内部 IP。
 
 由于连接字符串由环境变量定义，因此可在不同的时间通过不同机制设置该变量。 例如，在最终主机中部署到生产时，可设置不同的连接字符串，或通过 Azure DevOps Services 中的 CI/CD 管道或喜爱的 DevOps 系统来完成。
 
-- 它公开了端口 80，用于对 Docker 主机中的 catalog.api 服务进行内部访问。 目前的主机是 Linux VM，因为它以适用于 Linux 的 Docker 映像为基础，但开发人员可配置该容器，使其在 Windows 映像上运行。
+- 它公开了端口 80，用于对 Docker 主机中的 catalog-api 服务进行内部访问  。 目前的主机是 Linux VM，因为它以适用于 Linux 的 Docker 映像为基础，但开发人员可配置该容器，使其在 Windows 映像上运行。
 
 - 它将容器上公开的端口 80 转接到 Docker 主机 (Linux VM) 上的端口 5101。
 
-- 它将 Web 服务链接到 sql.data 服务（在容器中运行的 Linux 数据库的 SQL Server 实例）。 指定此依赖项时，在 sql.data 容器启动后，catalog.api 容器才会启动；这一点很重要，因为 catalog.api 需要先启动并运行 SQL Server 数据库。 但是，在许多情况下，这种容器依赖项不足，因为 Docker 只能在容器级别进行检查。 有时服务（在此情况下为 SQL Server）可能还未准备就绪，因此建议在客户端微服务中实施具有指数回退的重试逻辑。 这样一来，如果依赖项容器在短时间内未准备就绪，应用程序仍然可以复原。
+- 它将 Web 服务链接到 sqldata  服务（在容器中运行的 Linux 数据库的 SQL Server 实例）。 指定此依赖项时，在 sqldata 容器启动后，catalog-api 容器才会启动；这一点很重要，因为 catalog-api 需要先启动并运行 SQL Server 数据库。 但是，在许多情况下，这种容器依赖项不足，因为 Docker 只能在容器级别进行检查。 有时服务（在此情况下为 SQL Server）可能还未准备就绪，因此建议在客户端微服务中实施具有指数回退的重试逻辑。 这样一来，如果依赖项容器在短时间内未准备就绪，应用程序仍然可以复原。
 
 - 它被配置为允许访问外部服务器：extra\_hosts 设置允许访问 Docker 主机之外的外部服务器或计算机（即作为开发 Docker 主机的默认 Linux VM 以外的），例如开发 PC 上的本地 SQL Server 实例。
 
-此外，还有其他更高级的 docker-compose.yml 设置，我们将在下面的部分介绍。
+此外，还有其他更高级的 `docker-compose.yml` 设置，我们将在下面的部分介绍。
 
 ### <a name="using-docker-compose-files-to-target-multiple-environments"></a>针对多个环境使用 docker-compose 文件
 
-docker-compose.yml 文件是定义文件，可供多种支持该格式的基础结构使用。 最简单的工具是 docker-compose 命令。
+`docker-compose.*.yml` 文件是定义文件，可供多种支持该格式的基础结构使用。 最简单的工具是 docker-compose 命令。
 
 因此，可针对以下主要方案使用 docker-compose 命令。
 
@@ -179,13 +179,13 @@ docker-compose -f docker-compose.yml -f docker-compose.test.override.yml down
 
 ![Docker 撰写项目中的文件的屏幕截图。](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
-图 6-11  。 Visual Studio 2017 中的 docker-compose 文件
+图 6-11  。 Visual Studio 2019 中的 docker-compose 文件
 
 **docker-compose** 项目文件结构：
 
-* *.dockerignore* - 用于忽略文件
-* *docker-compose.yml* - 用于撰写微服务
-* *docker-compose.override.yml* - 用于配置微服务环境
+- *.dockerignore* - 用于忽略文件
+- *docker-compose.yml* - 用于撰写微服务
+- *docker-compose.override.yml* - 用于配置微服务环境
 
 可使用任何编辑器（如 Visual Studio Code 或 Sublime）编辑 docker-compose 文件，并使用 docker-compose up 命令运行该应用程序。
 
@@ -207,34 +207,34 @@ docker-compose -f docker-compose.yml -f docker-compose.test.override.yml down
 #docker-compose.yml (Base)
 version: '3.4'
 services:
-  basket.api:
-    image: eshop/basket.api:${TAG:-latest}
+  basket-api:
+    image: eshop/basket-api:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Basket/Basket.API/Dockerfile
     depends_on:
-      - basket.data
-      - identity.api
+      - basketdata
+      - identity-api
       - rabbitmq
 
-  catalog.api:
-    image: eshop/catalog.api:${TAG:-latest}
+  catalog-api:
+    image: eshop/catalog-api:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Catalog/Catalog.API/Dockerfile
     depends_on:
-      - sql.data
+      - sqldata
       - rabbitmq
 
-  marketing.api:
-    image: eshop/marketing.api:${TAG:-latest}
+  marketing-api:
+    image: eshop/marketing-api:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Marketing/Marketing.API/Dockerfile
     depends_on:
-      - sql.data
-      - nosql.data
-      - identity.api
+      - sqldata
+      - nosqldata
+      - identity-api
       - rabbitmq
 
   webmvc:
@@ -243,19 +243,19 @@ services:
       context: .
       dockerfile: src/Web/WebMVC/Dockerfile
     depends_on:
-      - catalog.api
-      - ordering.api
-      - identity.api
-      - basket.api
-      - marketing.api
+      - catalog-api
+      - ordering-api
+      - identity-api
+      - basket-api
+      - marketing-api
 
-  sql.data:
-    image: microsoft/mssql-server-linux:2017-latest
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest
 
-  nosql.data:
+  nosqldata:
     image: mongo
 
-  basket.data:
+  basketdata:
     image: redis
 
   rabbitmq:
@@ -286,12 +286,12 @@ version: '3.4'
 services:
 # Simplified number of services here:
 
-  basket.api:
+  basket-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - ConnectionString=${ESHOP_AZURE_REDIS_BASKET_DB:-basket.data}
-      - identityUrl=http://identity.api
+      - ConnectionString=${ESHOP_AZURE_REDIS_BASKET_DB:-basketdata}
+      - identityUrl=http://identity-api
       - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
@@ -304,11 +304,11 @@ services:
     ports:
       - "5103:80"
 
-  catalog.api:
+  catalog-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - ConnectionString=${ESHOP_AZURE_CATALOG_DB:-Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word}
+      - ConnectionString=${ESHOP_AZURE_CATALOG_DB:-Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word}
       - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5202/api/v1/catalog/items/[0]/pic/}
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
@@ -323,17 +323,17 @@ services:
     ports:
       - "5101:80"
 
-  marketing.api:
+  marketing-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - ConnectionString=${ESHOP_AZURE_MARKETING_DB:-Server=sql.data;Database=Microsoft.eShopOnContainers.Services.MarketingDb;User Id=sa;Password=Pass@word}
-      - MongoConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosql.data}
+      - ConnectionString=${ESHOP_AZURE_MARKETING_DB:-Server=sqldata;Database=Microsoft.eShopOnContainers.Services.MarketingDb;User Id=sa;Password=Pass@word}
+      - MongoConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosqldata}
       - MongoDatabase=MarketingDb
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
       - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}
-      - identityUrl=http://identity.api
+      - identityUrl=http://identity-api
       - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
       - CampaignDetailFunctionUri=${ESHOP_AZUREFUNC_CAMPAIGN_DETAILS_URI}
       - PicBaseUrl=${ESHOP_AZURE_STORAGE_MARKETING_URL:-http://localhost:5110/api/v1/campaigns/[0]/pic/}
@@ -354,12 +354,12 @@ services:
       - PurchaseUrl=http://webshoppingapigw
       - IdentityUrl=http://10.0.75.1:5105
       - MarketingUrl=http://webmarketingapigw
-      - CatalogUrlHC=http://catalog.api/hc
-      - OrderingUrlHC=http://ordering.api/hc
-      - IdentityUrlHC=http://identity.api/hc
-      - BasketUrlHC=http://basket.api/hc
-      - MarketingUrlHC=http://marketing.api/hc
-      - PaymentUrlHC=http://payment.api/hc
+      - CatalogUrlHC=http://catalog-api/hc
+      - OrderingUrlHC=http://ordering-api/hc
+      - IdentityUrlHC=http://identity-api/hc
+      - BasketUrlHC=http://basket-api/hc
+      - MarketingUrlHC=http://marketing-api/hc
+      - PaymentUrlHC=http://payment-api/hc
       - SignalrHubUrl=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5202
       - UseCustomizationData=True
       - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}
@@ -367,16 +367,16 @@ services:
       - UseLoadTest=${USE_LOADTEST:-False}
     ports:
       - "5100:80"
-  sql.data:
+  sqldata:
     environment:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
     ports:
       - "5433:1433"
-  nosql.data:
+  nosqldata:
     ports:
       - "27017:27017"
-  basket.data:
+  basketdata:
     ports:
       - "6379:6379"
   rabbitmq:
@@ -412,7 +412,7 @@ IdentityUrl=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5105
 
 以下示例展示了 .env 文件，例如用于 eShopOnContainers 应用程序的 [.env](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/.env) 文件。
 
-```env
+```sh
 # .env file
 
 ESHOP_EXTERNAL_DNS_NAME_OR_IP=localhost
@@ -437,7 +437,7 @@ Docker-compose 要求 .env 文件中的每行都是 \<variable\>=\<value\> 格�
 如果查看 Internet 上源代码的 Docker 和 .NET Core ，则会发现 Dockerfiles 会将源代码源复制到容器，展现生成 Docker 映像的简单性。 这些示例表明，使用简单配置，即可拥有 Docker 映像，同时应用程序还会带有环境。 以下示例显示在此情况下的简单 Dockerfile。
 
 ```Dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -463,7 +463,7 @@ ENTRYPOINT ["dotnet", "run"]
 1. **sdk**：用于开发和生成方案
 1. **aspnet**：用于 ASP.NET 生产方案
 1. **runtime**：用于 .NET 生产方案
-1. **runtime-deps**：用于[自包含应用程序](../../../core/deploying/index.md#self-contained-deployments-scd)的生产方案。
+1. **runtime-deps**：用于[自包含应用程序](../../../core/deploying/index.md#publish-self-contained)的生产方案。
 
 为了更快启动，运行时映像还会自动将 aspnetcore\_url 设置为端口 80，并使用 Ngen 创建程序集的本机映像缓存。
 

@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5f4038e863d9bb59df470d3516c08fd2ad29c078
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340369"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503557"
 ---
 # <a name="tutorial-create-an-item-template"></a>教程：创建项模板
 
@@ -41,7 +41,7 @@ ms.locfileid: "75340369"
 
 首先，创建父文件夹，名称无关紧要。 然后，创建一个名为“working”  的子文件夹。 在 working  文件夹内，创建一个名为“templates”  的子文件夹。
 
-接下来，在名为“test”  的父文件夹下创建一个文件夹。 文件夹结构应如下所示：
+接下来，在名为“test”  的父文件夹下创建一个文件夹。 文件夹结构应如下所示。
 
 ```console
 parent_folder
@@ -99,7 +99,7 @@ working
                 template.json
 ```
 
-使用你喜爱的文本编辑器打开 template.json  并粘贴以下 JSON 代码，然后保存：
+使用你喜爱的文本编辑器打开 template.json  并粘贴以下 JSON 代码，然后保存。
 
 ```json
 {
@@ -151,8 +151,13 @@ Worker Service                                    worker                [C#]    
 
 现在你已安装了项模板，可对其进行测试。 导航到 test/  文件夹，使用 `dotnet new console` 创建新的控制台应用程序。 这将生成一个可以使用 `dotnet run` 命令轻松测试的工作项目。
 
+```dotnetcli
+dotnet new console
+```
+
+将获得类似于下面的输出。
+
 ```console
-C:\test> dotnet new console
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -162,15 +167,27 @@ Running 'dotnet restore' on C:\test\test.csproj...
 Restore succeeded.
 ```
 
+运行该项目。
+
+```dotnetcli
+dotnet run
+```
+
+将获得以下输出。
+
 ```console
-C:\test> dotnet run
 Hello World!
 ```
 
 接下来，运行 `dotnet new stringext` 以从模板生成 CommonExtensions.cs  。
 
+```dotnetcli
+dotnet new stringext
+```
+
+将获得以下输出。
+
 ```console
-C:\test> dotnet new stringext
 The template "Example templates: string extensions" was created successfully.
 ```
 
@@ -182,8 +199,13 @@ Console.WriteLine("Hello World!".Reverse());
 
 再次运行程序，将看到结果已反转。
 
+```dotnetcli
+dotnet run
+```
+
+将获得以下输出。
+
 ```console
-C:\test> dotnet run
 !dlroW olleH
 ```
 
@@ -193,8 +215,13 @@ C:\test> dotnet run
 
 由于模板是按文件路径安装的，因此，必须使用绝对  文件路径将其卸载。 可以通过运行 `dotnet new -u` 命令看到已安装的模板列表。 你的模板应列在最后。 使用列出的路径，通过执行 `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` 命令卸载模板。
 
+```dotnetcli
+dotnet new -u
+```
+
+将获得类似于下面的输出。
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -222,8 +249,10 @@ Currently installed items:
       Example templates: string extensions (stringext) C#
 ```
 
-```console
-C:\working> dotnet new -u C:\working\templates\extensions
+若要卸载该模板，请运行以下命令。
+
+```dotnetcli
+dotnet new -u C:\working\templates\extensions
 ```
 
 ## <a name="next-steps"></a>后续步骤

@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: d36909e06bd9a3de0940c4c1b2b9eacbf9cafe7f
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ba50eb222d9eab6bffbb8ebfdf0ecf47951ce719
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740594"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543516"
 ---
 # <a name="install-the-net-core-runtime"></a>安装 .NET Core 运行时
 
@@ -61,13 +61,15 @@ export PATH=$PATH:$HOME/dotnet
 >
 > 你可以编辑 shell 配置文件，永久地添加这些命令。 Linux 提供了许多不同的 shell，每个都有不同的配置文件。 例如：
 >
-> - **Bash Shell**：~/.bash_profile、~/.bashrc
-> - **Korn Shell**：~/.kshrc 或 .profile
-> - **Z Shell**：~/.zshrc 或 .zprofile
+> - **Bash Shell**：~/.bash_profile  、~/.bashrc 
+> - **Korn Shell**：~/.kshrc  或 .profile 
+> - **Z Shell**：~/.zshrc  或 .zprofile 
 > 
 > 为 shell 编辑相应的源文件，并将 `:$HOME/dotnet` 添加到现有 `PATH` 语句的末尾。 如果不包含 `PATH` 语句，则使用 `export PATH=$PATH:$HOME/dotnet` 添加新行。
 >
 > 另外，将 `export DOTNET_ROOT=$HOME/dotnet` 添加至文件的末尾。
+
+使用此方法可以将不同的版本安装到不同的位置，并明确选择应用程序要使用的对应版本。
 
 ::: zone-end
 
@@ -85,6 +87,25 @@ dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
 
 > [!NOTE]
 > 以上命令安装 ASP.NET Core 运行时，用于实现最大的兼容性。 ASP.NET Core 运行时还包括标准 .NET Core 运行时。
+
+## <a name="download-and-manually-install"></a>下载并手动安装
+
+若要提取运行时并使 .NET Core CLI 命令可用于终端，请先[下载](#all-net-core-downloads) .NET Core 二进制版本。 然后，创建要安装到的目录，例如 `%USERPROFILE%\dotnet`。 最后，将下载的 zip 文件提取到该目录中。
+
+默认情况下，.NET Core CLI 命令和应用不会使用通过这种方式安装的 .NET Core。 必须明确选择使用它。 为此，请更改用于启动应用程序的环境变量：
+
+```console
+set DOTNET_ROOT=%USERPROFILE%\dotnet
+set PATH=%USERPROFILE%\dotnet;%PATH%
+```
+
+使用此方法可以将多个版本安装到不同的位置，然后通过使用指向安装位置的环境变量运行应用程序来明确选择应用程序应使用哪个安装位置。
+
+即使已设置这些环境变量，在选择用于运行应用程序的最佳框架时，.NET Core 仍会考虑默认的全局安装位置。 默认位置通常为安装程序使用的 `C:\Program Files\dotnet`。 还可以通过设置此环境变量来指示运行时仅使用自定义安装位置：
+
+```console
+set DOTNET_MULTILEVEL_LOOKUP=0
+```
 
 ::: zone-end
 

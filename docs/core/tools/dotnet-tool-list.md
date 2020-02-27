@@ -1,62 +1,73 @@
 ---
 title: dotnet tool list 命令
-description: dotnet tool list 命令从计算机中列出指定的 .NET Core 全局工具。
-ms.date: 05/29/2018
-ms.openlocfilehash: 6d35b1dce0c6d57edb0c6dd5f9711f093bc804aa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+description: dotnet 工具列表命令列出计算机上安装的 .NET Core 工具。
+ms.date: 02/14/2020
+ms.openlocfilehash: bb74cfeaf441cf8a1a030d97d16655f85d8267d1
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117563"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543451"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+ 本文适用于： ✔️ .NET Core 2.1 SDK 及更高版本
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
-`dotnet tool list` - 列出当前安装在计算机上的默认目录中或指定路径中的所有 [.NET Core 全局工具](global-tools.md)。
+`dotnet tool list` - 列出计算机上当前安装的所有指定类型的 [.NET Core 工具](global-tools.md)。
 
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
 dotnet tool list <-g|--global>
 dotnet tool list <--tool-path>
+dotnet tool list
 dotnet tool list <-h|--help>
 ```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
-`dotnet tool list` 命令让你可以列出计算机上（当前用户配置文件）或特定路径中安装的所有用户范围的 .NET Core 全局工具。 此命令列出包名称、安装的版本以及全局工具命令。 若要使用此 list 命令，需要使用 `--global` 选项指定要查看所有用户范围的工具或者使用 `--tool-path` 选项指定自定义路径。
+`dotnet tool list` 命令为用户提供一种在计算机上安装所有 .NET Core 全局工具、工具路径工具或本地工具的方法。 此命令列出包名称、安装的版本以及工具命令。  若要使用命令，请指定以下项之一：
+
+* 在默认位置安装全局工具。 使用 `--global` 选项
+* 在自定义位置安装全局工具。 使用 `--tool-path` 选项。
+* 运行本地工具。 省略 `--global` 和 `--tool-path` 选项。
+
+**本地工具从 .NET Core SDK 3.0 开始可用。**
 
 ## <a name="options"></a>选项
 
-`-g|--global`
+- **`-g|--global`**
 
-列出用户范围的全局工具。 不能与 `--tool-path` 选项一起使用。 如果不指定此选项，则必须指定 `--tool-path` 选项。
+  列出用户范围的全局工具。 不能与 `--tool-path` 选项一起使用。 省略 `--global` 和 `--tool-path` 将列出本地工具。 
 
-`-h|--help`
+- **`-h|--help`**
 
-打印出有关命令的简短帮助。
+  打印出有关命令的简短帮助。
 
-`--tool-path <PATH>`
+- **`--tool-path <PATH>`**
 
-指定用于查找全局工具的自定义位置。 路径可以是绝对的，也可以是相对的。 不能与 `--global` 选项一起使用。 如果不指定此选项，则必须指定 `--global` 选项。
+  指定用于查找全局工具的自定义位置。 路径可以是绝对的，也可以是相对的。 不能与 `--global` 选项一起使用。 省略 `--global` 和 `--tool-path` 将列出本地工具。 
 
 ## <a name="examples"></a>示例
 
-列出计算机上安装的所有用户范围的全局工具（当前用户配置文件）：
+- **`dotnet tool list -g`**
 
-`dotnet tool list -g`
+  列出计算机上安装的所有用户范围的全局工具（当前用户配置文件）。
 
-列出特定 Windows 文件夹中的全局工具：
+- **`dotnet tool list --tool-path c:\global-tools`**
 
-`dotnet tool list --tool-path c:\global-tools`
+  列出特定 Windows 目录中的全局工具。
 
-列出特定 Linux/macOS 文件夹中的全局工具：
+- **`dotnet tool list --tool-path ~/bin`**
 
-`dotnet tool list --tool-path ~/bin`
+  列出特定 Linux/macOS 目录中的全局工具。
+
+- **`dotnet tool list`**
+
+  列出当前目录中所有可用的本地工具。
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Core 全局工具](global-tools.md)
+- [.NET Core 工具](global-tools.md)

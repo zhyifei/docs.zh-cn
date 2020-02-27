@@ -1,25 +1,21 @@
 ---
 title: dotnet sln 命令
 description: 使用 dotnet-sln 命令，可以便捷地在解决方案文件中添加、删除和列出项目。
-ms.date: 10/29/2019
-ms.openlocfilehash: e344deaae0867202a79a3c38df48a2be8d4d7d13
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: b2455c04a46b2a10b8142d8ddc2d8129f2154b27
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733081"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543477"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
- 本文适用于：✔️ .NET Core 1.x SDK 及更高版本
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
 ## <a name="name"></a>“属性”
 
-`dotnet sln` - 修改 .NET Core 解决方案文件。
+`dotnet sln` - 在 .NET Core 解决方案文件中列出或修改项目。
 
 ## <a name="synopsis"></a>摘要
 
@@ -29,7 +25,7 @@ dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 
 ## <a name="description"></a>描述
 
-使用 `dotnet sln` 命令，可以便捷地在解决方案文件中添加、删除和列出项目。
+使用 `dotnet sln` 命令，可以便捷地在解决方案文件中列出和修改项目。
 
 若要使用 `dotnet sln` 命令，必须存在解决方案文件。 如果需要创建一个解决方案文件，请使用 [dotnet new](dotnet-new.md) 命令，如下例所示：
 
@@ -41,24 +37,46 @@ dotnet new sln
 
 - **`SOLUTION_FILE`**
 
-  要使用的解决方案文件。 如果未指定，此命令会搜索当前目录来获取一个项目文件。 如果目录中有多个解决方案文件，必须指定一个。
+  要使用的解决方案文件。 如果省略此参数，此命令会搜索当前目录来获取一个解决方案文件。 如果未找到解决方案文件或找到多个解决方案文件，则该命令将失败。
 
 ## <a name="options"></a>选项
 
 - **`-h|--help`**
 
-  打印出有关命令的简短帮助。
+  打印出有关如何使用命令的说明。
 
 ## <a name="commands"></a>命令
 
-### `add`
+### `list`
 
-将一个或多个项目添加到解决方案文件中。
+列出解决方案文件中的所有项目。
 
 #### <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH>
+dotnet sln list [-h|--help]
+```
+
+#### <a name="arguments"></a>自变量
+
+- **`SOLUTION_FILE`**
+
+  要使用的解决方案文件。 如果省略此参数，此命令会搜索当前目录来获取一个解决方案文件。 如果未找到解决方案文件或找到多个解决方案文件，则该命令将失败。
+
+#### <a name="options"></a>选项
+
+- **`-h|--help`**
+
+  打印出有关如何使用命令的说明。
+  
+### `add`
+
+将一个或多个项目添加到解决方案文件。
+
+#### <a name="synopsis"></a>摘要
+
+```dotnetcli
+dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln add [-h|--help]
 ```
 
@@ -66,17 +84,17 @@ dotnet sln add [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  要使用的解决方案文件。 如果未指定，此命令会搜索当前目录来获取一个项目文件。 如果目录中有多个解决方案文件，必须指定一个。
+  要使用的解决方案文件。 如果未指定，此命令会搜索当前目录以获取一个解决方案文件，如果找到多个解决方案文件，则该命令将失败。
 
 - **`PROJECT_PATH`**
 
-  要添加到解决方案的项目的路径。 通过用空格将项目彼此隔开，可以添加多个项目。 Unix/Linux shell [glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))扩展由 `dotnet sln` 命令正确处理。
+  要添加到解决方案的一个或多个项目的路径。 Unix/Linux shell [glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))扩展由 `dotnet sln` 命令正确处理。
 
 #### <a name="options"></a>选项
 
 - **`-h|--help`**
 
-  打印出有关命令的简短帮助。
+  打印出有关如何使用命令的说明。
 
 - **`--in-root`**
 
@@ -93,7 +111,7 @@ dotnet sln add [-h|--help]
 #### <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH>
+dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 ```
 
@@ -101,52 +119,42 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  要使用的解决方案文件。 如果未指定，此命令会搜索当前目录来获取一个项目文件。 如果目录中有多个解决方案文件，必须指定一个。
+  要使用的解决方案文件。 如果保留未指定，此命令会搜索当前目录以获取一个解决方案文件，如果找到多个解决方案文件，则该命令将失败。
 
 - **`PROJECT_PATH`**
 
-  要从解决方案中删除的项目路径。 通过用空格将项目彼此隔开，可以删除多个项目。 Unix/Linux shell [glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))扩展由 `dotnet sln` 命令正确处理。
+  要添加到解决方案的一个或多个项目的路径。 Unix/Linux shell [glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))扩展由 `dotnet sln` 命令正确处理。
 
 #### <a name="options"></a>选项
 
 - **`-h|--help`**
 
-  打印出有关命令的简短帮助。
-
-### `list`
-
-列出解决方案文件中的所有项目。
-
-#### <a name="synopsis"></a>摘要
-
-```dotnetcli
-dotnet sln list [-h|--help]
-```
-
-#### <a name="arguments"></a>自变量
-
-- **`SOLUTION_FILE`**
-
-  要使用的解决方案文件。 如果未指定，此命令会搜索当前目录来获取一个项目文件。 如果目录中有多个解决方案文件，必须指定一个。
-
-#### <a name="options"></a>选项
-
-- **`-h|--help`**
-
-  打印出有关命令的简短帮助。
+  打印出有关如何使用命令的说明。
 
 ## <a name="examples"></a>示例
+
+- 在解决方案中列出项目：
+
+  ```dotnetcli
+  dotnet sln todo.sln list
+  ```
 
 - 将一个 C# 项目添加到解决方案中：
 
   ```dotnetcli
-  dotnet sln todo.sln add todo-app/todo-app.csproj
+  dotnet sln add todo-app/todo-app.csproj
   ```
 
 - 从解决方案中删除一个 C# 项目：
 
   ```dotnetcli
-  dotnet sln todo.sln remove todo-app/todo-app.csproj
+  dotnet sln remove todo-app/todo-app.csproj
+  ```
+
+- 将多个 C# 项目添加到解决方案的根目录中：
+
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj --in-root
   ```
 
 - 将多个 C# 项目添加到解决方案中：

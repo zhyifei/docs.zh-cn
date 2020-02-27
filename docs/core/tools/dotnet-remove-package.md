@@ -1,27 +1,29 @@
 ---
 title: dotnet remove package 命令
 description: dotnet remove package 命令可便于删除对项目的 NuGet 包引用。
-ms.date: 05/29/2018
-ms.openlocfilehash: cbdeacff78ef20c9a73010e10a771a724b23792e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 02/14/2020
+ms.openlocfilehash: 8eaa311748c5627351ef149012dc4dddd2ab2793
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632437"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503632"
 ---
 # <a name="dotnet-remove-package"></a>dotnet remove package
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet remove package` - 从项目文件删除包引用。
 
 ## <a name="synopsis"></a>摘要
 
-`dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]`
+```dotnetcli
+dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]
+```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 使用 `dotnet remove package` 命令可方便地从项目删除 NuGet 包引用。
 
@@ -37,12 +39,14 @@ ms.locfileid: "65632437"
 
 ## <a name="options"></a>选项
 
-`-h|--help`
+- **`-h|--help`**
 
-打印出有关命令的简短帮助。
+  打印出有关命令的简短帮助。
 
 ## <a name="examples"></a>示例
 
-从当前目录中的项目删除 `Newtonsoft.Json` NuGet 包：
+- 从当前目录中的项目删除 `Newtonsoft.Json` NuGet 包：
 
-`dotnet remove package Newtonsoft.Json`
+  ```dotnetcli
+  dotnet remove package Newtonsoft.Json
+  ```

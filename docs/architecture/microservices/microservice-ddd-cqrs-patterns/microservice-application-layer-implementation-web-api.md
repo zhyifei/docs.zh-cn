@@ -1,13 +1,13 @@
 ---
 title: 使用 Web API 实现微服务应用层
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解依赖关系注入和转存进程模式及其在 Web API 应用层中的实现详细信息。
-ms.date: 10/08/2018
-ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+description: 了解依赖关系注入和转存进程模式及其在 Web API 应用层中的实现详细信息。
+ms.date: 01/30/2020
+ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "73737521"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502450"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 实现微服务应用层
 
@@ -92,11 +92,9 @@ public void ConfigureServices(IServiceCollection services)
 {
     // Register out-of-the-box framework services.
     services.AddDbContext<CatalogContext>(c =>
-    {
-        c.UseSqlServer(Configuration["ConnectionString"]);
-    },
-    ServiceLifetime.Scoped
-    );
+        c.UseSqlServer(Configuration["ConnectionString"]),
+        ServiceLifetime.Scoped);
+
     services.AddMvc();
     // Register custom application dependencies.
     services.AddScoped<IMyCustomRepository, MyCustomSQLRepository>();
@@ -289,7 +287,7 @@ public class CreateOrderCommand
 
 命令的另一个特征是不变性，因为它们的预期用途是由域模型直接处理。 它们不需要在预计的生存期内更改。 在 C# 类中，可通过不使用任何可更改内部状态的资源库或其他方法，实现不变性。
 
-请记住，如果打算或预计命令将经过序列化/反序列化过程，则属性必须具有私有资源库和 `[DataMember]`（或 `[JsonProperty]`）特性，否则反序列化程序将无法在目标上使用所需值重新构造对象。
+请记住，如果打算或希望命令经过序列化/反序列化过程，则这些属性必须具有一个专用资源库和 `[DataMember]`（或 `[JsonProperty]`）属性。 否则，反序列化程序将无法使用所需的值在目标上重建对象。 如果该类的构造函数带有所有属性的参数，并且使用通常的 camelCase 命名约定，并且可以将该构造函数注释为 `[JsonConstructor]`，则也可以使用真正的只读属性。 但是，此选项需要更多代码。
 
 例如，用于创建订单的命令类可能与你要创建的订单在数据上类似，但你可能不需要相同的属性。 例如，`CreateOrderCommand` 命令没有订单 ID，因为订单尚未创建。
 

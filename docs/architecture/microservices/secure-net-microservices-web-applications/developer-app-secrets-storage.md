@@ -2,14 +2,13 @@
 title: 在开发过程中安全地存储应用程序机密
 description: .Net 微服务和 Web 应用程序中的安全性 - 不要在源代码管理中存储密码、连接字符串或 API 密钥等应用程序机密，了解在 ASP.NET Core 中可以使用的选项，特别是必须了解如何处理“用户机密”。
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: fe8e7fa11c9a4f4cae133c2e09f9e4b4dd40a546
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 01/30/2020
+ms.openlocfilehash: 1ef2246746b9165f1564fa7be64ff7eb28eb1d32
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675694"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501797"
 ---
 # <a name="store-application-secrets-safely-during-development"></a>在开发过程中安全地存储应用程序机密
 
@@ -39,7 +38,7 @@ ms.locfileid: "68675694"
 
 ## <a name="store-secrets-with-the-aspnet-core-secret-manager"></a>使用 ASP.NET Core 机密管理器存储机密
 
-ASP.NET Core [机密管理器](/aspnet/core/security/app-secrets#secret-manager)工具提供了在源代码外部保存机密的另一种方法。 若要使用机密管理器工具，请在项目文件中安装包 Microsoft.Extensions.Configuration.SecretManager  。 如果该依赖项存在并且已还原，则可以使用 `dotnet user-secrets` 命令来通过命令行设置机密的值。 这些机密将存储在用户配置文件目录中的 JSON 文件中（详细信息随操作系统而异），与源代码无关。
+ASP.NET Core [机密管理器](/aspnet/core/security/app-secrets#secret-manager)工具提供了开发过程中在源代码外部保存机密的另一种方法  。 若要使用机密管理器工具，请在项目文件中安装包 Microsoft.Extensions.Configuration.SecretManager  。 如果该依赖项存在并且已还原，则可以使用 `dotnet user-secrets` 命令来通过命令行设置机密的值。 这些机密将存储在用户配置文件目录中的 JSON 文件中（详细信息随操作系统而异），与源代码无关。
 
 机密管理器工具设置的机密是由使用机密的项目的 `UserSecretsId` 属性组织的。 因此，必须确保在项目文件中设置 UserSecretsId 属性，如下面的代码片段所示。 默认值是 Visual Studio 分配的 GUID，但实际字符串并不重要，只要它在计算机中是唯一的。
 

@@ -2,18 +2,18 @@
 title: dotnet test 命令
 description: dotnet test 命令可用于在给定项目中执行单元测试。
 ms.date: 05/29/2018
-ms.openlocfilehash: c3115d546efb1f076ae9f9731f83a12183aa4154
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 909815151265117395c6d8d13b4443a245c05f9e
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182511"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451189"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet test` - 用于执行单元测试的 .NET 测试驱动程序。
 
@@ -21,7 +21,7 @@ ms.locfileid: "71182511"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
@@ -31,7 +31,7 @@ dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] 
 dotnet test [-h|--help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
@@ -40,7 +40,7 @@ dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect
 dotnet test [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
@@ -50,7 +50,7 @@ dotnet test [-h|--help]
 
 ---
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 `dotnet test` 命令用于执行给定项目中的单元测试。 `dotnet test` 命令启动为项目指定的测试运行程序控制台应用程序。 测试运行程序执行为单元测试框架（例如 MSTest、NUnit 或 xUnit）定义的测试，并报告每个测试是否成功。 如果所有测试均成功，测试运行程序将返回 0 作为退出代码；否则将返回 1。 测试运行程序和单元测试库打包为 NuGet 包并还原为该项目的普通依赖项。
 
@@ -66,7 +66,7 @@ dotnet test [-h|--help]
 
 ## <a name="options"></a>选项
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -140,7 +140,7 @@ dotnet test [-h|--help]
 
 有关 RunSettings 的详细信息，请参阅 [vstest.console.exe：传递 RunSettings 参数](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -202,7 +202,7 @@ dotnet test [-h|--help]
 
 设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -278,7 +278,7 @@ dotnet test [-h|--help]
 
 | 测试框架 | 支持的属性                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>name</li><li>ClassName</li><li>Priority</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>“属性”</li><li>ClassName</li><li>Priority</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Traits</li></ul>                                   |
 
 `<operator>` 说明了属性和值之间的关系：
@@ -288,6 +288,7 @@ dotnet test [-h|--help]
 | `=`      | 完全匹配     |
 | `!=`     | 非完全匹配 |
 | `~`      | 包含        |
+| `!~`     | 不包含    |
 
 `<value>` 是字符串。 所有查找都不区分大小写。
 

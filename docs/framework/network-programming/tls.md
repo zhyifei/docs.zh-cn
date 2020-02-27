@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: e2f8f1304de587e1bedd8cde60e665971d903183
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: bae6bf6a1a5d87241b619bf024c099c48af6af43
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937685"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452677"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 中的传输层安全性 (TLS) 最佳做法
 
@@ -140,7 +140,7 @@ WCF 框架的这些版本被硬编码为使用值 SSL 3.0 和 TLS 1.0。 这些�
 
 ## <a name="if-your-app-targets-net-framework-35"></a>如果应用面向 .NET Framework 3.5
 
-如果必须显式设置安全协议，而不是由 .NET Framework 或操作系统选择安全协议，请将 `SecurityProtocolTypeExtensions` 和 `SslProtocolsExtension` 枚举添加到你的代码中。 `SecurityProtocolTypeExtensions` 和 `SslProtocolsExtension` 包含 `Tls12`、`Tls11` 的值和 `SystemDefault` 值。 请参阅[在 Windows 8.1 和 Windows Server 2012 R2 上的 .NET Framework 3.5 中包含对 TLS 系统默认版本的支持](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework)。
+如果必须显式设置安全协议，而不是由 .NET 或操作系统选择安全协议，请将 `SecurityProtocolTypeExtensions` 和 `SslProtocolsExtension` 枚举添加到你的代码中。 `SecurityProtocolTypeExtensions` 和 `SslProtocolsExtension` 包含 `Tls12`、`Tls11` 的值和 `SystemDefault` 值。 有关详细信息，请参阅[在 Windows 8.1 和 Windows Server 2012 R2 上的 .NET Framework 3.5 中包含对 TLS 系统默认版本的支持](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework)。
 
 <a name="configuring-security-via-appcontext-switches"></a>
 

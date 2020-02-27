@@ -1,13 +1,13 @@
 ---
 title: 容器化整体式应用程序
 description: 容器化整体式应用程序虽然无法从微服务体系结构中获得所有好处，但却具有可立即提供的重要部署优势。
-ms.date: 09/20/2018
-ms.openlocfilehash: e02aa4ff644fc26b7f15721866f8862f6a175cf2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 0e6f7504a91d2b1a89193471746168fc34f50956
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737992"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503284"
 ---
 # <a name="containerizing-monolithic-applications"></a>容器化整体式应用程序
 
@@ -61,7 +61,7 @@ Microsoft Azure 中的整体式应用程序可以使用每个实例的专用 VM 
 
 ![显示容器注册表的“创建应用服务”对话框的屏幕截图。](./media/containerize-monolithic-applications/publish-azure-app-service-container.png)
 
-**图 4-4**。 将单容器应用程序从 Visual Studio 发布到 Azure 应用服务
+**图 4-4**。 将单容器应用程序从 Visual Studio 2019 发布到 Azure 应用服务
 
 如果没有 Docker，需要 Azure 应用服务中不支持的其他功能、框架或依赖项时，则必须等到 Azure 团队更新应用服务中的这些依赖项。 或者必须切换到 Azure 云服务或 VM 等其他服务，你可以在其中获得更进一步的控制权，且可以为应用程序安装所需的组件或框架。
 

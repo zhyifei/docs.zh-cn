@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ef3e4f9f8145677732b9d2e66d416be277697f55
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 51b3c1b3e3d61b23a0511ca807afef0269ac9ee4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920633"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465976"
 ---
 
 添加到包管理器源的包以可改动的格式命名：`{product}-{type}-{version}`。
@@ -24,16 +24,18 @@ ms.locfileid: "76920633"
 - **version**\
 要安装的 SDK 或运行时的版本。 本文始终提供最新支持的版本的说明。 有效选项为任何已发布的版本，例如：
 
+  - 3.1
   - 3.0
-  - 2.2
   - 2.1
+
+  尝试下载的 SDK/运行时可能不适用于 Linux 发行版。 有关受支持的发行版的列表，请参阅 [.NET Core 依赖项和要求](../dependencies.md?pivots=os-linux)。
 
 ### <a name="examples"></a>示例
 
-- 安装 .NET Core 2.2 SDK：`dotnet-sdk-2.2`
 - 安装 ASP.NET Core 3.1 运行时：`aspnetcore-runtime-3.1`
 - 安装 .NET Core 2.1 运行时：`dotnet-runtime-2.1`
+- 安装 .NET Core 3.0 SDK：`dotnet-sdk-3.0`
 
 ### <a name="package-missing"></a>缺少包
 
-如果包版本组合无效，则它不可用。 例如，未安装 ASP.NET Core SDK，所有 SDK 组件都包含在 .NET Core SDK 中。 `aspnetcore-sdk-2.2` 的值不正确，应为 `dotnet-sdk-2.2`。
+如果包版本组合无效，则它不可用。 例如，未安装 ASP.NET Core SDK，所有 SDK 组件都包含在 .NET Core SDK 中。 `aspnetcore-sdk-2.2` 的值不正确，应为 `dotnet-sdk-2.2`。 有关 .NET Core 支持的 Linux 发行版的列表，请参阅 [.NET Core 依赖项和要求](../dependencies.md?pivots=os-linux)。

@@ -1,13 +1,13 @@
 ---
 title: 通过 Polly 实现使用指数退避算法的 HTTP 调用重试
 description: 了解如何使用 Polly 和 HttpClientFactory 处理 HTTP 故障。
-ms.date: 01/07/2019
-ms.openlocfilehash: 551cd1230c565b30c81090c984747e726680b9ed
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 01/30/2020
+ms.openlocfilehash: 60943360c9674f93b246b37b2667b48dab659e0e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089959"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502670"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>通过 HttpClientFactory 和 Polly 策略实现使用指数退避算法的 HTTP 调用重试
 
@@ -19,9 +19,9 @@ Polly 是一个 .NET 库，提供恢复能力和瞬态故障处理功能。 通�
 
 以下步骤说明如何通过集成到 HttpClientFactory 中的 Polly（已在上一部分中说明）使用 Http 重试。
 
-**引用 ASP.NET Core 2.2 包**
+**引用 ASP.NET Core 3.1 包**
 
-自 .NET Core 2.1 起提供 `HttpClientFactory`，但建议在项目中使用 NuGet 中的最新 ASP.NET Core 2.2 包。 通常需要 `AspNetCore` 元包和扩展包 `Microsoft.Extensions.Http.Polly`。
+自 .NET Core 2.1 起提供 `HttpClientFactory`，但建议在项目中使用 NuGet 中的最新 ASP.NET Core 3.1 包。 通常，还需要引用扩展包 `Microsoft.Extensions.Http.Polly`。
 
 **使用 Polly 的重试策略在 Startup 中配置客户端**
 

@@ -1,19 +1,19 @@
 ---
 title: 订阅事件
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解发布和订阅集成事件的详细信息。
-ms.date: 10/02/2018
-ms.openlocfilehash: facbb04d322c5df03498a0313556dd9b5b3161d2
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.date: 01/30/2020
+ms.openlocfilehash: 544af8035ed23dd6507dfed4944b0c327c81d943
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937150"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501813"
 ---
 # <a name="subscribing-to-events"></a>订阅事件
 
 使用事件总线的第一步是为微服务订阅它们想要接收的事件。 该操作应在接收者微服务中完成。
 
-下面的简单代码展示了每个接收者微服务在启动时（即，在 `Startup` 类中）必须实现哪些内容，才能订阅所需的事件。 在此示例中，`basket.api` 微服务需要订阅 `ProductPriceChangedIntegrationEvent` 和 `OrderStartedIntegrationEvent` 消息。
+下面的简单代码展示了每个接收者微服务在启动时（即，在 `Startup` 类中）必须实现哪些内容，才能订阅所需的事件。 在此示例中，`basket-api` 微服务需要订阅 `ProductPriceChangedIntegrationEvent` 和 `OrderStartedIntegrationEvent` 消息。
 
 例如，通过订阅 `ProductPriceChangedIntegrationEvent` 事件，购物车微服务可了解产品价格的任何变化，并在用户购物车中有该产品时向该用户发出价格变动警告。
 
@@ -301,7 +301,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他资源
 
-- **遵循消息幂等性**  
+- **遵循消息幂等性** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>删除重复的集成事件消息
@@ -338,7 +338,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **最终一致性** \
-    [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+    <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Philip Brown。集成绑定上下文的策略** \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
@@ -359,7 +359,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 - **CAP 定理** \
-    [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
+    <https://en.wikipedia.org/wiki/CAP_theorem>
 
 - **什么是 CAP 定理？** \
     <https://www.quora.com/What-Is-CAP-Theorem-1>
@@ -377,7 +377,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **可靠性指南**（RabbitMQ 文档）\
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
+    <https://www.rabbitmq.com/reliability.html#consumer>
 
 > [!div class="step-by-step"]
 > [上一页](rabbitmq-event-bus-development-test-environment.md)

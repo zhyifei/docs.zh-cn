@@ -2,12 +2,12 @@
 title: 云本机应用程序呢？
 description: 通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序 | 云本机应用程序呢？
 ms.date: 04/28/2018
-ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: d2a7f89e347d75ddbdae84c8eb57e32447b83297
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72318450"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543542"
 ---
 # <a name="what-about-cloud-native-applications"></a>云本机应用程序呢？
 
@@ -41,7 +41,10 @@ ms.locfileid: "72318450"
 
 [云本机计算基础 (CNCF)](https://www.cncf.io/) 是云本机原则的主要推动者。 Microsoft 是 [CNCF 的 成员](https://azure.microsoft.com/blog/announcing-cncf/)。
 
-有关示例定义以及有关云本机应用程序特征的详细信息，请参阅 Gartner 文章[如何构建和设计云本机应用程序](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)。 有关 Microsoft 对如何实现云本机应用程序的具体指导，请参阅 [.NET 微服务：适用于容器化 .NET 应用程序的体系结构](https://aka.ms/microservicesebook)。
+有关如何设计和开发云本机应用程序的详细指导，请阅读以下免费电子书：
+
+* [为 Azure 构建云本机 .NET 应用程序](../../cloud-native/introduction.md)
+* [.NET 微服务：适用于容器化 .NET 应用程序的体系结构](../../microservices/index.md)。
 
 如果将整个应用程序迁移到云本机模型，则要考虑的最重要因素是，必须重新架构到基于微服务的体系结构。 由于涉及大型重构过程，因此这显然需要大量开发工作。 对于需要新级别的可伸缩性和长期的灵活性的任务关键型应用程序，通常选择此选项。 但是，可以通过只为几个新方案添加微服务来开始迁移到云本机，最终将应用程序完全重构为微服务。 这是最适合某些方案的增量方法。
 

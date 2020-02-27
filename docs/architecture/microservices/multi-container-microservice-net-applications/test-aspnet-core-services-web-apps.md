@@ -1,13 +1,13 @@
 ---
 title: 测试 ASP.NET Core 服务和 Web 应用
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 探索用于在容器中测试 ASP.NET Core 服务和 Web 应用的体系结构。
-ms.date: 10/02/2018
-ms.openlocfilehash: 324b71d830bca43be71e8847fe2dd1b8b1593556
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: ab3ae6276ea4e4c741731f050913d956046271ca
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739478"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501991"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>测试 ASP.NET Core 服务和 Web 应用
 
@@ -68,7 +68,7 @@ public async Task Get_order_detail_success()
 
 与单元测试相比，集成测试执行较多的代码片段，且集成测试依赖基础结构元素，因此它的速度比单元测试慢几个数量级。 因此，最好限制编写和运行的集成测试数量。
 
-ASP.NET Core 包括可用于处理 HTTP 请求且无网络费用的内置测试 web 主机，这意味着可在使用真正的 web 主机时更快地运行这些测试。 NuGet 组件中，测试 web 主机 (TestServer) 作为 Microsoft.AspNetCore.TestHost 提供。 可将其添加到集成测试项目，并用于托管 ASP.NET Core 应用程序。
+ASP.NET Core 包括可用于处理 HTTP 请求且无网络费用的内置测试 web 主机，这意味着可比使用真正的 Web 主机时更快地运行这些测试。 NuGet 组件中，测试 web 主机 (TestServer) 作为 Microsoft.AspNetCore.TestHost 提供。 可将其添加到集成测试项目，并用于托管 ASP.NET Core 应用程序。
 
 如以下代码所示，创建 ASP.NET Core 控制器的集成测试时，通过测试主机实例化控制器。 这相当于 HTTP 请求，但它的运行速度更快。
 
@@ -140,8 +140,6 @@ compose 应用程序运行后，如果运行 Visual Studio，可利用断点和�
 
 3. **应用程序功能/集成测试**，侧重于微服务集成，具有执行多个微服务的测试用例。 这些测试位于项目 Application.FunctionalTests  中。
 
-4. **负载测试**，侧重于每个微服务的响应时间。 这些测试位于项目 LoadTest  中，需要 Visual Studio 2017 Enterprise Edition。
-
 每个微服务的单元和集成测试包含在每个微服务的测试文件夹中，应用程序负载测试包含在解决方案文件夹中的测试文件夹下，如图 6-25 所示。
 
 ![VS 指出解决方案中某些测试项目的屏幕截图。](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
@@ -160,9 +158,9 @@ services:
     image: redis:alpine
   rabbitmq:
     image: rabbitmq:3-management-alpine
-  sql.data:
-    image: microsoft/mssql-server-linux:2017-latest
-  nosql.data:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+  nosqldata:
     image: mongo
 ```
 
@@ -179,13 +177,13 @@ services:
     ports:
       - "15672:15672"
       - "5672:5672"
-  sql.data:
+  sqldata:
     environment:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
     ports:
       - "5433:1433"
-  nosql.data:
+  nosqldata:
     ports:
       - "27017:27017"
 ```

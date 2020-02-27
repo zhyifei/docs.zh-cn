@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Action delegate, creating with lambda expression
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-ms.openlocfilehash: d1b716e977702d03db176da70be00a1e5c789a4b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4e5be295a52edc1a7f0a0a3aa98f55335ae3e31b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129029"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452995"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>PLINQ 和 TPL 中的 Lambda 表达式
 
@@ -26,11 +26,11 @@ ms.locfileid: "73129029"
 
 ## <a name="func-delegate"></a>Func 委托
 
-`Func` 委托封装返回值的一个方法。 在 Func 签名中，最后或最右侧的类型参数始终指定返回类型。 导致编译器错误出现的常见原因之一是，尝试将两个输入参数传入 <xref:System.Func%602?displayProperty=nameWithType>；此类型其实只需要使用一个输入参数。 框架类库定义了 17 个版本的 `Func`：<xref:System.Func%601?displayProperty=nameWithType>、<xref:System.Func%602?displayProperty=nameWithType>、<xref:System.Func%603?displayProperty=nameWithType> 一直到 <xref:System.Func%6017?displayProperty=nameWithType>。
+`Func` 委托封装返回值的一个方法。 在 `Func` 签名中，最后或最右侧的类型参数始终指定返回类型。 导致编译器错误出现的常见原因之一是，尝试将两个输入参数传入 <xref:System.Func%602?displayProperty=nameWithType>；此类型其实只需要使用一个输入参数。 .NET 定义 `Func` 的 17 个版本：<xref:System.Func%601?displayProperty=nameWithType>、<xref:System.Func%602?displayProperty=nameWithType>、<xref:System.Func%603?displayProperty=nameWithType>，依此类推直到 <xref:System.Func%6017?displayProperty=nameWithType>。
 
 ## <a name="action-delegate"></a>Action 委托
 
-<xref:System.Action?displayProperty=nameWithType> 委托封装了不返回值或返回 [void](../../csharp/language-reference/keywords/void.md) 的方法（Visual Basic 中的 Sub）。 在 Action 类型签名中，类型参数仅表示输入参数。 与 Func 一样，Framework 类库定义了 Action 的 17 个版本，从没有类型参数的版本到具有 16 个类型参数的版本。
+<xref:System.Action?displayProperty=nameWithType> 委托封装了不返回值的方法（Visual Basic 中的 Sub）。 在 `Action` 类型签名中，类型参数仅表示输入参数。 与 `Func` 一样，.NET 定义了 `Action` 的 17 个版本，从没有类型参数的版本到具有 16 个类型参数的版本。
 
 ## <a name="example"></a>示例
 

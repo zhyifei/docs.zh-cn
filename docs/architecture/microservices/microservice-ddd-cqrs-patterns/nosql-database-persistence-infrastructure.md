@@ -1,13 +1,13 @@
 ---
 title: 将 NoSQL 数据库用作持久性基础结构
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 大致了解 NoSQL 数据库（特别是 Azure Cosmos DB）作为持久性实现选项的使用情况。
-ms.date: 10/08/2018
-ms.openlocfilehash: 44fc2fa01e2d19efed7314f421a682c0a635a9f6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+description: 大致了解 NoSQL 数据库（特别是 Azure Cosmos DB）作为持久性实现选项的使用情况。
+ms.date: 01/30/2020
+ms.openlocfilehash: 7da4141d9aadc4aaa265ac97d328bc4b7569a0cb
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737452"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502375"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>将 NoSQL 数据库用作持久性基础结构
 
@@ -122,7 +122,7 @@ await client.CreateDocumentAsync(collectionUri, newOrder);
 
 可以像从其他任何 .NET 应用程序一样，从运行在容器中的 .NET 代码访问 Azure Cosmos DB 数据库。 例如，实现 eShopOnContainers 中的 Locations.API 和 Marketing.API 微服务，这样它们就可以使用 Azure Cosmos DB 数据库。
 
-但是，从 Docker 开发环境的角度来看，Azure Cosmos DB 存在限制。 即使有本地 [Azure Cosmos DB 仿真器](https://docs.microsoft.com/azure/cosmos-db/local-emulator)能够在本地开发计算机（如 PC）中运行，截至 2017 年底，它也仅支持 Windows，不支持 Linux。
+但是，从 Docker 开发环境的角度来看，Azure Cosmos DB 存在限制。 即使有可以在本地开发计算机上运行的本地 [Azure Cosmos DB 仿真器](https://docs.microsoft.com/azure/cosmos-db/local-emulator)，它也仅支持 Windows。 不支持 Linux 和 macOS。
 
 此外，也可能在 Docker 上运行此仿真器，但仅在 Windows 容器上运行，而不在 Linux 容器上运行。 如果将应用程序部署为 Linux 容器，这对开发环境来说从一开始就是一个障碍，因为目前无法同时在用于 Windows 的 Docker 上部署 Linux 和 Windows 容器。 所有正在部署的容器都必须适用于 Linux 或 Windows。
 
@@ -273,14 +273,14 @@ public async Task<Locations> GetAsync(int locationId)
 version: '3.4'
 services:
   # Other services
-  locations.api:
+  locations-api:
     environment:
       # Other settings
-      - ConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosql.data}
+      - ConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosqldata}
 
 ```
 
-`ConnectionString` 环境变量通过以下方式解析：如果使用 Azure Cosmos DB 连接字符串在 `.env` 文件中定义该 `ESHOP_AZURE_COSMOSDB` 全局变量，则将使用它访问云中的 Azure Cosmos DB 数据库。 如果未定义，它将采用 `mongodb://nosql.data` 值并使用 mongodb 开发容器。
+`ConnectionString` 环境变量通过以下方式解析：如果使用 Azure Cosmos DB 连接字符串在 `.env` 文件中定义该 `ESHOP_AZURE_COSMOSDB` 全局变量，则将使用它访问云中的 Azure Cosmos DB 数据库。 如果未定义，它将采用 `mongodb://nosqldata` 值并使用 MongoDB 开发容器。
 
 以下代码演示带有 Azure Cosmos DB 连接字符串全局环境变量的 `.env` 文件，如在 eShopOnContainers 中实现一样：
 
@@ -299,16 +299,16 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 #ESHOP_AZURE_SERVICE_BUS=<YourAzureServiceBusInfo>
 ```
 
-应取消注释 ESHOP_AZURE_COSMOSDB 行，并使用从 Azure 门户获得的 Azure Cosmos DB 连接字符串进行更新，如[将 MongoDB 应用程序连接到 Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account) 中所述。
+取消注释 ESHOP_AZURE_COSMOSDB 行，并使用从 Azure 门户获得的 Azure Cosmos DB 连接字符串进行更新，如[将 MongoDB 应用程序连接到 Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account) 中所述。
 
-如果 `ESHOP_AZURE_COSMOSDB` 全局变量为空（表示它已在 `.env` 文件中被注释掉），则该容器使用指向在 eShopOnContainers 中部署的本地 MongoDB 容器（名为 `nosql.data` 并在 docker-compose 文件中定义）的默认 MongoDB 连接字符串，如以下.yml 代码所示。
+如果 `ESHOP_AZURE_COSMOSDB` 全局变量为空，则意味着它在 `.env` 文件中已被注释掉，那么容器将使用默认的 MongoDB 连接字符串。 此连接字符串指向部署在 eShopOnContainers 中的本地 MongoDB 容器，该容器名为 `nosqldata`，并在 docker-compose 文件中定义，如以下 .yml 代码所示：
 
 ``` yml
 # docker-compose.yml
 version: '3.4'
 services:
   # ...Other services...
-  nosql.data:
+  nosqldata:
     image: mongo
 ```
 

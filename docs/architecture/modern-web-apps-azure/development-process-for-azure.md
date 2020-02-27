@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | Azure
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 830271d76e5a87ed782d81fa9491328c580f0f87
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849587"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450033"
 ---
 # <a name="development-process-for-azure"></a>Azure 的开发过程
 
@@ -26,13 +26,9 @@ ms.locfileid: "70849587"
 
 无论你更青睐内容丰富、功能强大的 IDE 还是灵活轻量的编辑器，Microsoft 都可为你提供用于开发 ASP.NET Core 应用程序的工具。
 
-**Visual Studio 2017。** 如果使用 Visual Studio 2017  ，安装 .NET Core 跨平台开发工作负荷后，即可构建 ASP.NET Core 应用程序。  图 10-1 显示了 Visual Studio 2017 安装对话框中的必需工作负荷。
+**Visual Studio 2019。** Visual Studio 2019 是用于开发适用于 ASP.NET Core 的应用程序的同类最佳 IDE。 它提供了多种可提高开发人员生产率的功能。 可以使用它来开发应用程序，然后分析其性能和其他特征。 借助集成的调试程序，你可以暂停代码执行，并在运行时在代码中来回切换。 借助内置的测试运行程序，你可以组织测试及其结果，甚至可以在编写代码时执行实时单元测试。 使用 Live Share，可以与其他开发人员进行实时协作，并通过网络无缝共享代码会话。 准备就绪后，Visual Studio 包括了将应用程序发布到 Azure 所需的所有内容或任何可托管它的位置。
 
-![在 Visual Studio 2017 中安装 .NET Core 工作负载](./media/image10-1.png)
-
-**图 10-1.** 在 Visual Studio 2017 中安装 .NET Core 工作负荷。
-
-[下载 Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+[下载 Visual Studio 2019](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 **Visual Studio Code 和 dotnet CLI**（适用于 Mac、Linux 和 Windows 的跨平台工具）。 如果更青睐支持任何开发语言的轻量级跨平台编辑器，可以使用 Microsoft Visual Studio Code 和 the dotnet CLI。 这些产品提供简单但可靠的体验，可以简化开发人员工作流。 此外，Visual Studio Code 支持适用于 C\# 和 Web 开发的扩展，在该编辑器内提供智能感知和快捷任务。
 
@@ -58,7 +54,7 @@ ms.locfileid: "70849587"
 
 ![AzureWebApp](./media/image10-2.png)
 
-**图 10-2.** 在 Azure 门户中创建新的 Azure 应用服务 Web 应用。
+**图 10-1.** 在 Azure 门户中创建新的 Azure 应用服务 Web 应用。
 
 无论新代码何时提交至项目的源代码管理存储库，CI 生成过程均会执行自动生成。 由此你可获得即时反馈，知悉代码已生成（且理想情况下可通过自动测试），并且或许可进行部署。 此 CI 生成将生成一个 Web 部署包项目，并将其发布，以供 CD 进程使用。
 
@@ -74,11 +70,11 @@ ms.locfileid: "70849587"
 
 ### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>开发 Azure 托管型 ASP.NET Core 应用程序的工作流
 
-配置 Azure 帐户和 CI/CD 过程后，即可轻松开发 Azure 托管的 ASP.NET Core 应用程序。 构建 ASP.NET Core 应用并将其托管在 Azure 应用服务作为 Web 应用时，通常会采用以下基本步骤，如图 10-3 所示。
+配置 Azure 帐户和 CI/CD 过程后，即可轻松开发 Azure 托管的 ASP.NET Core 应用程序。 生成 ASP.NET Core 应用并将其托管在 Azure 应用服务作为 Web 应用时，通常会采用以下基本步骤，如图 10-2 所示。
 
 ![EndToEndDevDeployWorkflow](./media/image10-3.png)
 
-**图 10-3.** 构建 ASP.NET Core 应用以及将应用于托管于 Azure 的分步工作流
+**图 10-2.** 构建 ASP.NET Core 应用以及将应用于托管于 Azure 的分步工作流
 
 #### <a name="step-1-local-dev-environment-inner-loop"></a>步骤 1。 本地开发环境内循环
 

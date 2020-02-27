@@ -1,15 +1,15 @@
 ---
-title: 协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
+title: 安排微服务和多容器应用应用程序的业务流程，以实现高可伸缩性和高可用性
 description: 发现用于安排微服务和多容器应用程序以便实现高可伸缩性和可用性的选项，以及 Azure Dev Spaces 在开发 Kubernetes 应用程序生命周期时的可能性。
-ms.date: 09/20/2018
-ms.openlocfilehash: 3915e6386e66d40bedc92368bfbcda81790c6923
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 01/30/2020
+ms.openlocfilehash: f9e91d3958e2d567e68257c377f76cc3c2325a0b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090147"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502987"
 ---
-# <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
+# <a name="orchestrate-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>安排微服务和多容器应用应用程序的业务流程，以实现高可伸缩性和高可用性
 
 如果应用程序基于微服务或只是跨多个容器拆分，则必须使用适用于生产就绪应用程序的业务流程协调程序。 如前所述，在基于微服务的方法中，每个微服务均拥有其模型和数据，如此从开发和部署的角度来看，它便是具有自主性。 但即使拥有由多个服务组成的更传统的应用程序（如 SOA），也将拥有多个容器或服务，这些容器或服务中包含需要作为分布式系统部署的单个业务应用程序。 这类系统的扩展和管理非常复杂；因此，如果想要拥有生产就绪且可缩放的多容器应用程序，则必须使用业务流程协调程序。
 
@@ -72,9 +72,9 @@ Azure Kubernetes 服务优化了专门针对 Azure 的常用 Docker 群集开源
 
 作为 AKS 的一部分，默认安装的任何软件都不收费。 所有默认选项都通过开源软件实现。 AKS 可用于 Azure 中的多个虚拟机。 仅针对所选的计算实例以及使用的其他基础结构资源（如存储和网络）收取费用。 AKS 本身不会以增量方式收费。
 
-有关基于 kubectl 和原始 .yaml 文件部署到 Kubernetes 的进一步实现信息，请查看[在 AKS（Azure Kubernetes 服务）中设置 eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service)) 上的帖子。
+Kubernetes 的默认生产部署选项是使用 Helm 图表，这将在下一部分中进行介绍。
 
-## <a name="deploying-with-helm-charts-into-kubernetes-clusters"></a>使用 Helm 图表部署到 Kubernetes 群集
+## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>使用 Helm chart 部署到 Kubernetes 群集
 
 将应用程序部署到 Kubernetes 群集时，可以如上一节中已经提到的那样，通过基于本机格式（.yaml 文件）的部署文件来使用原始 kubectl.exe CLI 工具。 但是，对于更复杂的 Kubernetes 应用程序（如部署基于微服务的复杂应用程序时），建议使用 [Helm](https://helm.sh/)。
 
@@ -84,7 +84,7 @@ Helm 图表可帮助对即使最复杂的 Kubernetes 应用程序进行定义、
 
 Helm 由 [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) 与 Microsoft、Google、Bitnami 和 Helm 参与者社区协作维护。
 
-有关 Helm 图表和 Kubernetes 的进一步实现信息，请查看[使用 Helm 图表将 eShopOnContainers 部署到 AKS](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Deploying-to-AKS-using-Helm-Charts) 中的帖子。
+有关 Helm 图表和 Kubernetes 的详细实现信息，请参阅[使用 Helm 图表将 eShopOnContainers 部署到 AKS](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)) 的帖子。
 
 ## <a name="use-azure-dev-spaces-for-your-kubernetes-application-lifecycle"></a>将 Azure Dev Spaces 用于 Kubernetes 应用程序生命周期
 
@@ -92,7 +92,7 @@ Helm 由 [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) 与 Mi
 
 如前所述，Azure Dev Spaces 在部署基于容器的应用程序时使用 Helm 图表。
 
-Azure Dev Spaces 可帮助开发团队在 Kubernetes 上提高工作效率，因为它允许只需使用 Visual Studio 2017 或 Visual Studio Code，便可直接在 Azure 中的全局 Kubernetes 群集中快速迭代和调试代码。 Azure 中的这一 Kubernetes 群集是共享的托管 Kubernetes 群集，因此团队可以通过协作方式一起工作。 可以独立开发代码，然后部署到全局群集并对其他组件进行端到端测试，无需复制或模拟依赖项。
+Azure Dev Spaces 可帮助开发团队在 Kubernetes 上提高工作效率，因为它允许只需使用 Visual Studio 2019 或 Visual Studio Code，便可直接在 Azure 中的全局 Kubernetes 群集中快速迭代和调试代码。 Azure 中的这一 Kubernetes 群集是共享的托管 Kubernetes 群集，因此团队可以通过协作方式一起工作。 可以独立开发代码，然后部署到全局群集并对其他组件进行端到端测试，无需复制或模拟依赖项。
 
 如图 4-26 所示，Azure Dev Spaces 中最独特的功能是能够创建可以运行的“空间”，它们会集成到群集中全局部署的其余部分。
 
@@ -106,7 +106,7 @@ Azure Dev Spaces 提供了空间这一概念，允许你在相对隔离的环境
 
 此功能基于 URL 前缀，因此，在使用 URL 中的任何开发空间前缀时，如果在开发空间中存在该前缀，则将从目标微服务提供请求，否则，它将被转发到在层次结构中找到的目标微服务的第一个实例，并最终达到顶部的主开发空间。
 
-可以查看 [Azure Dev Spaces 上的 eShopOnContainers wiki 页面](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Using-Azure-Dev-Spaces-and-AKS)，以实际了解具体示例。
+若要获取具体示例的实际视图，请参阅 [Azure Dev Spaces 上的 eShopOnContainers wiki 页面](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)。
 
 有关进一步信息，请查看[使用 Azure Dev Spaces 进行团队开发](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore)上的文章。
 

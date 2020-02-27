@@ -1,13 +1,13 @@
 ---
 title: dotnet 命令
 description: 了解 dotnet 命令（.NET Core CLI 的通用驱动程序）及其用法。
-ms.date: 06/04/2018
-ms.openlocfilehash: 7674529980623caa2291987bdeba52f50ce2fc2c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 02/13/2020
+ms.openlocfilehash: 364978465b63401907b46ead64dbceb2f15c8169
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920553"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451163"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -21,14 +21,14 @@ ms.locfileid: "76920553"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```dotnetcli
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
     [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
@@ -36,7 +36,7 @@ dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--de
     [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
@@ -53,7 +53,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ## <a name="options"></a>选项
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--additional-deps <PATH>`
 
@@ -117,7 +117,7 @@ runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 �
 
 打印使用中的 .NET Core SDK 版本。
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `--additional-deps <PATH>`
 
@@ -167,7 +167,7 @@ runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 �
 
 打印使用中的 .NET Core SDK 版本。
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `--additionalprobingpath <PATH>`
 
@@ -215,7 +215,7 @@ runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 �
 
 ### <a name="general"></a>常规
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 | 命令                                       | 函数                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
@@ -234,7 +234,7 @@ runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 �
 | [dotnet store](dotnet-store.md)               | 将程序集存储到运行时包存储区。                     |
 | [dotnet test](dotnet-test.md)                 | 使用测试运行程序运行测试。                                     |
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 | 命令                             | 函数                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
@@ -252,7 +252,7 @@ runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 �
 | [dotnet store](dotnet-store.md)     | 将程序集存储到运行时包存储区。                     |
 | [dotnet test](dotnet-test.md)       | 使用测试运行程序运行测试。                                     |
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 | 命令                             | 函数                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
@@ -293,16 +293,16 @@ runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 �
 [dotnet nuget locals](dotnet-nuget-locals.md) | 清除或列出本地 NuGet 资源，例如 http 请求缓存、临时缓存或计算机范围的全局包文件夹。
 [dotnet nuget push](dotnet-nuget-push.md) | 将包推送到服务器，并将其发布。
 
-### <a name="global-tools-commands"></a>全局工具命令
+### <a name="global-tool-path-and-local-tools-commands"></a>全局、工具路径和本地工具命令
 
-[.NET Core 全局工具](global-tools.md)可与 .NET Core SDK 2.1.300 一起开始使用：
+工具是控制台应用程序，它们从 NuGet 包中安装并从命令提示符处进行调用。 你可自行编写工具，也可安装由第三方编写的工具。 工具也称为全局工具、工具路径工具和本地工具。 有关详细信息，请参阅 [.NET Core 工具概述](global-tools.md)。 全局和工具路径工具从 .NET Core SDK 2.1 开始可用。 本地工具从 .NET Core SDK 3.0 开始可用。
 
 命令 | 函数
 --- | ---
-[dotnet tool install](dotnet-tool-install.md) | 在计算机上安装全局工具。
-[dotnet tool list](dotnet-tool-list.md) | 列出当前安装在计算机上的默认目录中或指定路径中的所有全局工具。
-[dotnet tool uninstall](dotnet-tool-uninstall.md) | 从计算机中卸载全局工具。
-[dotnet tool update](dotnet-tool-update.md) | 在计算机上更新全局工具。
+[dotnet tool install](dotnet-tool-install.md) | 在计算机上安装工具。
+[dotnet tool list](dotnet-tool-list.md) | 列出计算机上当前安装的所有全局、工具路径或本地工具。
+[dotnet tool uninstall](dotnet-tool-uninstall.md) | 从计算机中卸载工具。
+[dotnet tool update](dotnet-tool-update.md) | 更新计算机上安装的工具。
 
 ### <a name="additional-tools"></a>其他工具
 
@@ -340,7 +340,7 @@ runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 �
 
 ## <a name="environment-variables"></a>环境变量
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `DOTNET_PACKAGES`
 
@@ -362,7 +362,7 @@ runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 �
 
 如果设置为 `0`，则禁用次要版本前滚。 有关详细信息，请参阅[前滚](../whats-new/dotnet-core-2-1.md#roll-forward)。
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `DOTNET_PACKAGES`
 
@@ -380,7 +380,7 @@ runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 �
 
 指定是否从全局位置解析 .NET Core 运行时、共享框架或 SDK。 如果未设置，则默认为 `true`。 设置为 `false` 不从全局位置解析，并且具有独立的 .NET Core 安装（接受的值为 `0` 或 `false`）。 有关多级别查找的详细信息，请参阅 [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)（多级别 SharedFX 查找）。
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `DOTNET_PACKAGES`
 

@@ -3,12 +3,12 @@ title: 从 .NET Framework 到 .NET Core 的中断性变更
 titleSuffix: ''
 description: 列出了从 .NET Framework 到 .NET Core 的中断性变更。
 ms.date: 12/18/2019
-ms.openlocfilehash: 407f99adf5d400fce659ef71cda32ceac1e54491
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: f712be14d7debc4b3008f8459e6ee925754b25f0
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093053"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449385"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>从 .NET Framework 迁移到 .NET Core 的中断性变更
 
@@ -20,10 +20,27 @@ ms.locfileid: "77093053"
 ## <a name="corefx"></a>CoreFx
 
 - [UseShellExecute 默认值更改](#change-in-default-value-of-useshellexecute)
+- [FileSystemInfo.Attributes 引发的 UnauthorizedAccessException](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
 [!INCLUDE[Process.Start changes](~/includes/core-changes/corefx/2.1/process-start-changes.md)]
+
+***
+
+### <a name="net-core-10"></a>.NET Core 1.0
+
+[!INCLUDE [UnauthorizedAccessException thrown by FileSystemInfo.Attributes](~/includes/core-changes/corefx/1.0/filesysteminfo-attributes-exceptions.md)]
+
+***
+
+## <a name="cryptography"></a>密码
+
+- [已考虑 SignedCms.ComputeSignature 的布尔参数](#boolean-parameter-of-signedcmscomputesignature-is-respected)
+
+### <a name="net-core-21"></a>.NET Core 2.1
+
+[!INCLUDE [Boolean parameter of SignedCms.ComputeSignature is respected](~/includes/core-changes/cryptography/2.1/compute-signature-silent-parameter.md)]
 
 ***
 

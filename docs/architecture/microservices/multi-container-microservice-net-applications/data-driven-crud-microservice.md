@@ -1,13 +1,13 @@
 ---
 title: 创建简单的数据驱动 CRUD 微服务
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解如何在微服务应用程序的上下文中创建简单的 CRUD（数据驱动）微服务。
-ms.date: 01/07/2019
-ms.openlocfilehash: 56cec488c22b0f3b45b9c1dae9d2f4fd7ef7beaa
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: b72d7defed81e57e2971c5e2b53df2d86b2dc947
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737331"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502359"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>创建简单的数据驱动 CRUD 微服务
 
@@ -39,7 +39,7 @@ ms.locfileid: "73737331"
 
 ![显示项目设置的 Visual studio 的屏幕截图。](./media/data-driven-crud-microservice/create-asp-net-core-web-api-project.png)
 
-图 6-6  。 在 Visual Studio 中创建 ASP.NET Core Web API 项目
+图 6-6  。 在 Visual Studio 2019 中创建 ASP.NET Core Web API 项目
 
 要创建 ASP.NET Core Web API 项目，首先需选择 ASP.NET Core Web 应用程序，然后选择 API 类型。 创建该项目之后，便可使用 Entity Framework API 或其他 API 实现 MVC 控制器，与任何其他 Web API 项目中的操作一样。 在新的 Web API 项目中，可以看到该微服务中的唯一依赖关系在 ASP.NET Core 本身上。 在内部，Microsoft.AspNetCore.All 依赖项内引用的是实体框架和许多其他 .NET Core NuGet 包，如图 6-7 所示  。
 
@@ -129,12 +129,27 @@ public class CatalogController : ControllerBase
 
     // GET api/v1/[controller]/items[?pageSize=3&pageIndex=10]
     [HttpGet]
-    [Route("[action]")]
+    [Route("items")]
     [ProducesResponseType(typeof(PaginatedItemsViewModel<CatalogItem>), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> Items([FromQuery]int pageSize = 10,
-                                           [FromQuery]int pageIndex = 0)
-
+    [ProducesResponseType(typeof(IEnumerable<CatalogItem>), (int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+    public async Task<IActionResult> ItemsAsync(
+        [FromQuery]int pageSize = 10,
+        [FromQuery]int pageIndex = 0,
+        string ids = null)
     {
+        if (!string.IsNullOrEmpty(ids))
+        {
+            var items = await GetItemsByIdsAsync(ids);
+
+            if (!items.Any())
+            {
+                return BadRequest("ids value invalid. Must be comma-separated list of numbers");
+            }
+
+            return Ok(items);
+        }
+
         var totalItems = await _catalogContext.CatalogItems
             .LongCountAsync();
 
@@ -172,7 +187,7 @@ _context.SaveChanges();
 
 在上面的 `CatalogController` 类的示例中，是通过 `CatalogController()` 构造函数注入 `CatalogContext` 类型的对象和其他对象。
 
-需在 Web API 项目中设置一个重要配置，即向服务的 IoC 容器注册 DbContext 类。 通常在 `Startup`类中执行此操作，方法在 `ConfigureServices()` 方法中调用 `services.AddDbContext<DbContext>()` 方法，如下例中所示：
+需在 Web API 项目中设置一个重要配置，即向服务的 IoC 容器注册 DbContext 类。 通常在 `Startup` 类中执行此操作，方法是在 `ConfigureServices()` 方法中调用 `services.AddDbContext<DbContext>()` 方法，如以下简化的示例中所示  ：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -240,9 +255,9 @@ Settings.json 文件中可为 ConnectionString 属性或任何其他属性设置
 # docker-compose.override.yml
 
 #
-catalog.api:
+catalog-api:
   environment:
-    - ConnectionString=Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
+    - ConnectionString=Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
     # Additional environment variables for this service
   ports:
     - "5101:80"
@@ -350,7 +365,7 @@ Swashbuckle 生成的 Swagger UI API 文档包括所有已发布操作。 此处
 
 目前，Swashbuckle 在用于 ASP.NET Core 应用程序的高级元包 [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore) 下包含五个内部 NuGet 包。
 
-在 Web API 项目中安装这些 NuGet 包后，需在 Startup 类中配置 Swagger，如以下代码所示（已简化）：
+在 Web API 项目中安装这些 NuGet 包后，需在 Startup 类中配置 Swagger，如以下简化的  代码所示：
 
 ```csharp
 public class Startup
@@ -366,12 +381,11 @@ public class Startup
         services.AddSwaggerGen(options =>
         {
             options.DescribeAllEnumsAsStrings();
-            options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
+            options.SwaggerDoc("v1", new OpenApiInfo
             {
                 Title = "eShopOnContainers - Catalog HTTP API",
                 Version = "v1",
-                Description = "The Catalog Microservice HTTP API. This is a Data-Driven/CRUD microservice sample",
-                TermsOfService = "Terms Of Service"
+                Description = "The Catalog Microservice HTTP API. This is a Data-Driven/CRUD microservice sample"
             });
         });
 
@@ -395,7 +409,7 @@ public class Startup
 
 完成此操作后，便可启动应用程序，并使用类似以下的 URL 浏览以下 Swagger JSON 和 UI 终结点：
 
-```url
+```console
   http://<your-root-url>/swagger/v1/swagger.json
 
   http://<your-root-url>/swagger/

@@ -2,12 +2,12 @@
 title: .NET Core 的 csproj 格式的新增内容
 description: 了解现有文件和 .NET Core csproj 文件之间的区别
 ms.date: 04/08/2019
-ms.openlocfilehash: 202c1867ae6404db074e6196b28ffe5f453ef5bf
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 2fb00e830380c5c4cbf7b6dcd2c8a585e1617b4b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965602"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451364"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
@@ -35,7 +35,7 @@ ms.locfileid: "76965602"
 
 - 面向 .NET Core 或 .NET Standard 时，绝不通过项目文件中的 `<PackageReference>` 项，对 `Microsoft.NETCore.App` 或 `NETStandard.Library` 元包进行显式引用。
 - 面向 .NET Core 时，如果需要特定版本的运行时，应使用项目中的 `<RuntimeFrameworkVersion>` 属性（例如，`1.0.4`），而不是引用元包。
-  - 例如，如果使用[独立部署](../deploying/index.md#self-contained-deployments-scd)且需要 1.0.0 LTS 运行时的特定修补程序版本，可能会发生这种情况。
+  - 例如，如果使用[独立部署](../deploying/index.md#publish-self-contained)且需要 1.0.0 LTS 运行时的特定修补程序版本，可能会发生这种情况。
 - 面向 .NET Standard 时，如果需要特定版本的 `NETStandard.Library` 元包，可以使用 `<NetStandardImplicitPackageVersion>` 属性并设置所需版本。
 - 请勿在 .NET Framework 项目中显式添加或更新对 `Microsoft.NETCore.App` 或 `NETStandard.Library` 元包的引用。 使用基于 .NET Standard 的 NuGet 包时，如果需要任意版本的 `NETStandard.Library`，NuGet 可自动安装该版本。
 
@@ -55,12 +55,12 @@ ms.locfileid: "76965602"
 
 > 已知问题：.NET Core 2.1 SDK 只在项目还使用 Microsoft.NET.Sdk.Web 时才支持这种语法。 .NET Core 2.2 SDK 中解决了此问题。
 
-这些对 ASP.NET Core 元包的引用行为与大多数普通 NuGet 包略有不同。 使用这些元包的应用的[框架依赖部署](../deploying/index.md#framework-dependent-deployments-fdd)自动使用 ASP.NET Core 共享框架。 使用元包时，引用的 ASP.NET Core NuGet 包中的任何资产都不会  与应用一起部署。也就是说，ASP.NET Core 共享框架包含这些资产。 共享框架中的资产更适合目标平台，旨在缩短应用启动时间。 若要详细了解共享框架，请参阅 [.NET Core 分发打包](../distribution-packaging.md)。
+这些对 ASP.NET Core 元包的引用行为与大多数普通 NuGet 包略有不同。 使用这些元包的应用的[框架依赖部署](../deploying/index.md#publish-runtime-dependent)自动使用 ASP.NET Core 共享框架。 使用元包时，引用的 ASP.NET Core NuGet 包中的任何资产都不会  与应用一起部署。也就是说，ASP.NET Core 共享框架包含这些资产。 共享框架中的资产更适合目标平台，旨在缩短应用启动时间。 若要详细了解共享框架，请参阅 [.NET Core 分发打包](../distribution-packaging.md)。
 
 如果指定  版本，这会被视为框架依赖部署的 ASP.NET Core 共享框架的最低  版本，并被视为独立式部署的确切  版本。 这可能会导致以下后果：
 
 - 如果服务器上安装的 ASP.NET Core 版本低于 PackageReference 中指定的版本，.NET Core 进程便会无法启动。 元包更新通常先可用于 NuGet.org，再可用于托管环境（如 Azure）。 将 PackageReference 中的版本更新为 ASP.NET Core 可能会导致部署的应用失败。
-- 如果应用部署为[独立式部署](../deploying/index.md#self-contained-deployments-scd)，应用可能不包含 .NET Core 的最新安全更新程序。 如果未指定版本，SDK 可以自动在独立式部署中包含 ASP.NET Core 的最新版本。
+- 如果应用部署为[独立式部署](../deploying/index.md#publish-self-contained)，应用可能不包含 .NET Core 的最新安全更新程序。 如果未指定版本，SDK 可以自动在独立式部署中包含 ASP.NET Core 的最新版本。
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core 项目中默认包含的编译项
 
@@ -289,6 +289,10 @@ RID 允许发布独立部署。
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
 
 一个布尔值，指定客户端是否必须提示使用者接受包许可证后才可安装包。 默认值为 `false`。
+
+### <a name="developmentdependency"></a>DevelopmentDependency
+
+一个布尔值，用于指定包是否被标记为仅开发依赖项，从而防止包作为依赖项包含到其他包中。 利用 PackageReference (NuGet 4.8+)，此标志还意味着将从编译中排除编译时资产。 有关详细信息，请参阅 [PackageReference 的 DevelopmentDependency 支持](https://github.com/NuGet/Home/wiki/DevelopmentDependency-support-for-PackageReference)。
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 

@@ -1,20 +1,20 @@
 ---
 title: .NET Standard
 description: 了解 .NET Standard 及其版本以及支持它的 .NET 实现。
-ms.date: 09/23/2019
+ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 25490d5063a1f6c31b76af30ac6d37de6cb8c07f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124632"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452586"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standard](https://github.com/dotnet/standard) 是一套正式的 .NET API 规范，有望在所有 .NET 实现中推出。 推出 .NET Standard 的背后动机是要提高 .NET 生态系统中的一致性。 [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) 持续为 .NET 实现行为建立统一性，但适用于 .NET 库实现的 .NET 基类库 (BCL) 没有类似的规范。
+[.NET Standard](https://github.com/dotnet/standard) 是一套正式的 .NET API 规范，有望在所有 .NET 实现中推出。 推出 .NET Standard 的背后动机是要提高 .NET 生态系统中的一致性。 [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) 继续为 .NET 实现行为建立统一性，尽管 ECMA 335 指定了一小组标准库，但 .NET Standard 规范包含范围更广的 .NET API。
 
 .NET Standard 可实现以下重要情境：
 
@@ -58,7 +58,7 @@ ms.locfileid: "77124632"
 - 累加性：.NET Standard 版本在逻辑上形成同心圆。也就是说，较高的版本包含较低版本的所有 API。 版本之间没有重大更改。
 - 不可变：一旦发布，.NET Standard 版本就会冻结起来。 新 API 首先会在特定的 .NET 实现（如 .NET Core）中可用。 如果 .NET Standard 评审委员会认为新 API 应可用于所有 .NET 实现，则会将它们添加到新的 .NET Standard 版本中。
 
-## <a name="specification"></a>规格
+## <a name="specification"></a>规范
 
 .NET Standard 规范是一组标准化的 API。 此规范由 .NET 实现者（具体而言，由 Microsoft（包括 .NET Framework、NET Core 和 Mono）和 Unity）进行维护。 在通过 [GitHub](https://github.com/dotnet/standard) 建立新 .NET Standard 版本的过程中，采用公众反馈流程。
 
@@ -86,7 +86,7 @@ NuGet 包面向一个或多个[框架](frameworks.md)。 .NET Standard 包定位
 
 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) 元包引用定义 .NET Standard 的一整套 NuGet 包。  要指定 `netstandard` 作为目标，最常见的方法是引用此元包。 它描述并提供了对大约 40 个 .NET 库及定义 .Net Standard 的相关 API 的访问权限。 可以引用以 `netstandard` 为目标的其他包来使用其他 API。
 
-### <a name="versioning"></a>版本控制
+### <a name="versioning"></a>版本管理
 
 规范并不是单一的，而是一组版本不断线性递增的 API。 该标准的第一个版本建立了一组基准 API。 后续版本将添加 API，并继承以前的版本定义的 API。 在从标准中移除 API 方面，并没有成文的规定。
 
@@ -159,7 +159,7 @@ NuGet 包面向一个或多个[框架](frameworks.md)。 .NET Standard 包定位
 | Profile157  | 1.0           | Windows 8.1、Windows Phone 8.1、Windows Phone Silverlight 8.1
 | Profile259  | 1.0           | .NET Framework 4.5、Windows 8, Windows Phone 8.1、Windows Phone Silverlight 8
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [.NET Standard 版本](https://github.com/dotnet/standard/blob/master/docs/versions.md)
 - [生成 .NET Standard 库](../core/tutorials/library-with-visual-studio.md)

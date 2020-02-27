@@ -3,12 +3,12 @@ title: 保护 .NET 微服务和 Web 应用程序
 description: .NET 微服务和 Web 应用中的安全性 - 了解 ASP.NET Core Web 应用中的身份验证选项。
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: f82212956f5492a51ec99d092e1a5131d1b31313
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0ac2591f8650e9f8cf29560735a9ec803d29ee4f
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501652"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628327"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>确保 .NET 微服务和 Web 应用的安全性
 
@@ -135,8 +135,8 @@ public void ConfigureServices(IServiceCollection services)
 
 有关为外部提供程序配置应用的详细信息，请参阅 [ASP.NET Core 文档中的外部提供程序身份验证](/aspnet/core/security/authentication/social/)。
 
-> [!TIP]
-所有详细信息都由之前提到的授权中间件和服务处理。 因此，除了注册之前提到的身份验证提供程序之外，在 Visual Studio 中创建 ASP.NET 代码 Web 应用程序项目时，必须选择“单个用户帐户”  身份验证选项，如图 9-3 所示。
+>[!TIP]
+>所有详细信息都由之前提到的授权中间件和服务处理。 因此，除了注册之前提到的身份验证提供程序之外，在 Visual Studio 中创建 ASP.NET 代码 Web 应用程序项目时，必须选择“单个用户帐户”  身份验证选项，如图 9-3 所示。
 
 ![“新建 ASP.NET Core Web 应用程序”对话框的屏幕截图。](./media/index/select-individual-user-account-authentication-option.png)
 

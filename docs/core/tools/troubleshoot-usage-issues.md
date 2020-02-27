@@ -2,13 +2,13 @@
 title: 排查 .NET Core 工具使用问题
 description: 发现运行 .NET Core 工具出现的常见问题及可能的解决方案。
 author: kdollard
-ms.date: 09/23/2019
-ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.date: 02/14/2020
+ms.openlocfilehash: ab5d1be8f201ea283f8537f18886feab46157127
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74282501"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543269"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>排查 .NET Core 工具使用问题
 
@@ -59,7 +59,7 @@ Possible reasons for this include:
   * 如果已安装 .NET Core 3.0 SDK，并且已将 `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` 环境变量设置为 `false`。
   * 如果已安装 .NET Core 2.2 SDK 或更低版本，并且已将 `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` 环境变量设置为 `true`。
 
-  有关全局工具的详细信息，请参阅 [.NET Core 全局工具概述](global-tools.md)。
+  有关详细信息，请参阅 [.NET Core 工具](global-tools.md)。
 
 * 本地工具
 
@@ -73,7 +73,7 @@ Possible reasons for this include:
 
 ### <a name="runtime-not-found"></a>找不到运行时
 
-.NET Core 工具是[依赖框架的应用程序](../deploying/index.md#framework-dependent-deployments-fdd)，也就是说它们依赖于计算机上安装的 .NET Core 运行时。 如果找不到所需的运行时，则遵循常规的 .NET Core 运行时前滚规则，例如：
+.NET Core 工具是[依赖框架的应用程序](../deploying/index.md#publish-runtime-dependent)，也就是说它们依赖于计算机上安装的 .NET Core 运行时。 如果找不到所需的运行时，则遵循常规的 .NET Core 运行时前滚规则，例如：
 
 * 应用程序前滚至指定的主要版本和次要版本的最高修补程序版本。
 * 如果主要版本号和次要版本号没有匹配的运行时，则使用下一个较高的次要版本。
@@ -137,9 +137,6 @@ dotnet tool install -g <toolName>
 dotnet tool install -g --version 1.1.0-pre <toolName>
 ```
 
-> [!NOTE]
-> .NET Core CLI 正计划在未来版本中添加一个 `--preview` 开关来简化此操作。
-
 ### <a name="package-isnt-a-net-core-tool"></a>包不是 .NET Core 工具
 
 * 已按此名称找到 NuGet 包，但它不是 .NET Core 工具。
@@ -162,4 +159,4 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 
 ## <a name="see-also"></a>请参阅
 
-* [.NET Core 全局工具概述](global-tools.md)
+* [.NET Core 工具](global-tools.md)

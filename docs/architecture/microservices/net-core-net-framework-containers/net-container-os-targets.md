@@ -1,13 +1,13 @@
 ---
 title: 使用 .NET 容器时定位的操作系统
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 .NET 容器时定位的操作系统
-ms.date: 01/07/2019
-ms.openlocfilehash: dcf91f5ab808a8704201979f6bab1140c3343bce
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: a09e3981ece478a9795c0f27acc98d604864cdd5
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736929"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501864"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>使用 .NET 容器时定位的操作系统
 
@@ -34,10 +34,10 @@ ms.locfileid: "73736929"
 
 | 图像 | 注释 |
 |-------|----------|
-| mcr.microsoft.com/dotnet/core/runtime:2.2 | .NET Core 2.2 多体系结构：支持 Linux 和 Windows Nano Server，具体取决于 Docker 主机。 |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2 | ASP.NET Core 2.2 多体系结构：支持 Linux 和 Windows Nano Server，具体取决于 Docker 主机。 <br/> ASP.NET Core 的 aspnetcore 映像具有多个优化。 |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine | Linux Alpine 发行版上的 .NET Core 2.2 仅运行时 |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803 | Windows Nano Server（Windows Server 版本 1803）上的 .NET Core 2.2 仅运行时 |
+| mcr.microsoft.com/dotnet/core/runtime:3.1 | .NET Core 3.1 多体系结构：支持 Linux 和 Windows Nano Server，具体取决于 Docker 主机。 |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1 | ASP.NET Core 3.1 多体系结构：支持 Linux 和 Windows Nano Server，具体取决于 Docker 主机。 <br/> ASP.NET Core 的 aspnetcore 映像具有多个优化。 |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim | Linux Debian 发行版上的 .NET Core 3.1 仅运行时 |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1809 | Windows Nano Server（Windows Server 版本 1809）上的 .NET Core 3.1 仅运行时 |
 
 ## <a name="additional-resources"></a>其他资源
 

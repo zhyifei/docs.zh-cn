@@ -1,13 +1,13 @@
 ---
 title: 使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
 description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解使用 IHostedService 和 BackgroundService 在微服务 .NET Core 中实现后台任务的新选项。
-ms.date: 01/07/2019
-ms.openlocfilehash: d289d8ccc737fa9fc13b95da44e4b617b431f96a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: fab67c816e90c69a4d593422b4974cb9b8819807
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737189"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502307"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
 
@@ -21,15 +21,15 @@ ms.locfileid: "73737189"
 
 **图 6-26**. 在 WebHost 与主机中使用 IHostedService
 
-ASP.NET Core 1.x 和 2.x 支持 IWebHost，用于 Web 应用中的后台进程。 .NET Core 2.1 支持 IHost，适用于带有纯控制台应用的后台进程。 请注意 `WebHost` 和 `Host` 之间产生的差异。
+ASP.NET Core 1.x 和 2.x 支持 `IWebHost`，适用于 Web 应用中的后台进程。 .NET Core 2.1 及更高版本支持 `IHost`，适用于带有纯控制台应用的后台进程。 请注意 `WebHost` 和 `Host` 之间产生的差异。
 
-ASP.NET Core 2.0 中的 `WebHost`（实现 `IWebHost` 的基类）是用于为进程提供 HTTP 服务器功能的基础结构项目，例如，如果正在实现 MVC Web 应用或 Web API 服务。 它提供 ASP.NET Core 中所有新的基础结构优点，使用户能够使用依赖关系注入，在请求管道中插入中间件等，并精确地将这些 `IHostedServices` 用于后台任务。
+ASP.NET Core 2.0 中的 `WebHost`（实现 `IWebHost` 的基类）是用于为进程提供 HTTP 服务器功能的基础结构项目，例如，在实现 MVC Web 应用或 Web API 服务时。 它提供 ASP.NET Core 中所有新的基础结构优点，使用户能够使用依赖关系注入，在请求管道中插入中间件等。 `WebHost` 将这些相同的 `IHostedServices` 用于后台任务。
 
 .NET Core 2.1 中引入了 `Host`（实现 `IHost` 的基类）。 基本上，`Host` 能让用户拥有与 `WebHost`（依赖项注入、托管服务等）相似的基础结构，但在这种情况下，只需拥有一个简单轻便的进程作为主机，与 MVC、Web API 或 HTTP 服务器功能无关。
 
-因此，可以选择一个专用主机进程，也可使用 IHost 创建一个来专门处理托管服务，例如仅用于托管 `IHostedServices` 的微服务，或者可以选择性地扩展现有的 ASP.NET Core `WebHost`，例如现有的 ASP.NET Core Web API 或 MVC 应用。
+因此，可以选择一个专用主机进程或使用 `IHost` 创建一个来专门处理托管服务，例如仅用于托管 `IHostedServices` 的微服务，或者也可以选择性地扩展现有的 ASP.NET Core `WebHost`，例如现有的 ASP.NET Core Web API 或 MVC 应用。
 
-每种方法都有优缺点，具体取决于业务和可伸缩性需求。 重要的是，如果后台任务与 HTTP (IWebHost) 无关，则应使用 IHost。
+每种方法都有优缺点，具体取决于业务和可伸缩性需求。 重要的是，如果后台任务与 HTTP (`IWebHost`) 无关，则应使用 `IHost`。
 
 ## <a name="registering-hosted-services-in-your-webhost-or-host"></a>在 WebHost 或主机中注册托管服务
 
@@ -43,7 +43,7 @@ SignalR 是使用托管服务的项目的一个示例，但也可以将其用于
 - 在 Web 应用后台处理消息队列中的消息，同时共享 `ILogger` 等公共服务。
 - 从 `Task.Run()` 开始的后台任务。
 
-基本上，可以将所有这些操作卸载至基于 IHostedService 的后台任务。
+基本上，可以将所有这些操作卸载至实现 `IHostedService` 的后台任务。
 
 向 `WebHost` 或 `Host` 添加一个或多个 `IHostedServices` 的方式是，通过 ASP.NET Core `WebHost`（或 .NET Core 2.1 及更高版本中的 `Host`）中的 <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A>  扩展方法对它们进行注册。 基本上，必须在常见的 `Startup` 类的 `ConfigureServices()` 方法中注册托管服务，如以下典型的 ASP.NET WebHost 中的代码所示。
 
@@ -232,21 +232,21 @@ WebHost.CreateDefaultBuilder(args)
 
 ### <a name="deployment-considerations-and-takeaways"></a>部署注意事项和要点
 
-请务必注意，部署 ASP.NET Core `WebHost` 或 .NET Core `Host` 的方式可能会影响最终解决方案。 例如，如果在 IIS 或常规 Azure 应用服务上部署 `WebHost`，由于应用池回收，主机可能会被关闭。 但是，如果将主机作为容器部署到 Kubernetes 或 Service Fabric 等业务流程协调程序中，则可以控制主机的实时实例数量。 此外，还可以考虑云中专门针对这些方案的其他方法，例如 Azure Functions。 最后，如果需要服务一直处于运行状态并在 Windows Server 上部署，可以使用 Windows 服务。
+请务必注意，部署 ASP.NET Core `WebHost` 或 .NET Core `Host` 的方式可能会影响最终解决方案。 例如，如果在 IIS 或常规 Azure 应用服务上部署 `WebHost`，由于应用池回收，主机可能会被关闭。 但是，如果将主机作为容器部署到 Kubernetes 等业务流程协调程序中，则可以控制主机的实时实例数量。 此外，还可以考虑云中专门针对这些方案的其他方法，例如 Azure Functions。 最后，如果需要服务一直处于运行状态并在 Windows Server 上部署，可以使用 Windows 服务。
 
 但即使对于部署到应用池中的 `WebHost`，也存在如重新填充或刷新应用程序的内存中缓存这样的情况，这仍然适用。
 
-`IHostedService` 接口为在 ASP.NET Core Web 应用程序（在 .NET Core 2.0 中）或任何进程/主机（从使用 `IHost` 的 .NET Core 2.1 开始）中启动后台任务提供了一种便捷方式。 其主要优势在于，当主机本身将要关闭时，可以有机会进行正常取消以清理后台任务的代码。
+`IHostedService` 接口为在 ASP.NET Core Web 应用程序（在 .NET Core 2.0 及更高版本中）或任何进程/主机（从使用 `IHost` 的 .NET Core 2.1 开始）中启动后台任务提供了一种便捷方式。 其主要优势在于，当主机本身将要关闭时，可以有机会进行正常取消以清理后台任务的代码。
 
 ## <a name="additional-resources"></a>其他资源
 
-- **Building a scheduled task in ASP.NET Core/Standard 2.0**
-  <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>（在 ASP.NET Core/Standard 2.0 中构建计划任务）
+- **在 ASP.NET Core/Standard 2.0 中生成计划任务** \
+  <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **Implementing IHostedService in ASP.NET Core 2.0**
-  <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>（在 ASP.NET Core 2.0 中实现 IHostedService）
+- **在 ASP.NET Core 2.0 中实现 IHostedService** \
+  <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **使用 ASP.NET Core 2.1 的 GenericHost 示例**
+- **使用 ASP.NET Core 2.1 的 GenericHost 示例** \
   <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]

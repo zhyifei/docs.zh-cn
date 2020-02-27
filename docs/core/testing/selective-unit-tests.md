@@ -3,16 +3,20 @@ title: 运行选择性单元测试
 description: 如何使用筛选表达式通过 .NET Core 中的 dotnet 测试命令运行选择性单元测试。
 author: smadala
 ms.date: 03/22/2017
-ms.openlocfilehash: 57428dad2de6c2507ca2cdc42e3df9e83a1edd69
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b9156300587215e68c01c609e298dbc1a2c53d11
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715464"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543503"
 ---
 # <a name="running-selective-unit-tests"></a>运行选择性单元测试
 
 借助 .NET Core 中的 `dotnet test` 命令，可以使用筛选表达式来运行选择性测试。 本文演示如何筛选运行哪些测试。 下面的示例使用 `dotnet test`。 如果使用的是 `vstest.console.exe`，请将 `--filter` 替换成 `--testcasefilter:`。
+
+> [!NOTE]
+> 在 `*nix` 上使用包含感叹号 (!)的筛选器需要转义，因为保留了 `!`。 例如，如果命名空间包含 IntegrationTests `dotnet test --filter FullyQualifiedName\!~IntegrationTests`，则此筛选器将跳过所有测试。
+> 请注意感叹号前面的反斜杠。
 
 ## <a name="mstest"></a>MSTest
 

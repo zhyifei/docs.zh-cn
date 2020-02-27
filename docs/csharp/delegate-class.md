@@ -1,23 +1,23 @@
 ---
 title: System.Delegate 和 `delegate` 关键字
-description: 详细介绍 .NET Framework 中支持委托的类以及这些类映射到“delegate”关键字的方式。
+description: 详细介绍 .NET 中支持委托的类以及这些类映射到“delegate”关键字的方式。
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3cfc9925be0f191dc3fc93c02f4a8f9a40b71895
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420369"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450916"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 和 `delegate` 关键字
 
 [上一篇](delegates-overview.md)
 
-本文介绍 .NET Framework 中支持委托的类以及这些类映射到 `delegate` 关键字的方式。
+本文介绍 .NET 中支持委托的类以及这些类映射到 `delegate` 关键字的方式。
 
-## <a name="defining-delegate-types"></a>定义委托类型
+## <a name="define-delegate-types"></a>定义委托类型
 
 我们从“delegate”关键字开始，因为这是你在使用委托时会使用的主要方法。 编译器在你使用 `delegate` 关键字时生成的代码会映射到调用 <xref:System.Delegate> 和 <xref:System.MulticastDelegate> 类的成员的方法调用。 
 
@@ -41,7 +41,7 @@ public delegate int Comparison<in T>(T left, T right);
 
 编译器还会为此新类型生成添加和移除处理程序，以便此类的客户端可以对实例的调用列表添加和移除方法。 编译器会强制所添加或移除的方法的签名与声明该方法时使用的签名匹配。 
 
-## <a name="declaring-instances-of-delegates"></a>声明委托的实例
+## <a name="declare-instances-of-delegates"></a>声明委托的实例
 
 定义委托之后，可以创建该类型的实例。
 与 C# 中的所有变量一样，不能直接在命名空间中或全局命名空间中声明委托实例。
@@ -57,7 +57,7 @@ public Comparison<T> comparator;
  
  上面的代码片段在类中声明了一个成员变量。 还可以声明作为局部变量或方法参数的委托变量。
 
-## <a name="invoking-delegates"></a>调用委托
+## <a name="invoke-delegates"></a>调用委托
 
 可通过调用某个委托来调用处于该委托调用列表中的方法。 在 `Sort()` 方法内部，代码会调用比较方法以确定放置对象的顺序：
 
@@ -70,7 +70,7 @@ int result = comparator(left, right);
 
 此代码行做出的假设不安全：无法保证目标已被添加到委托中。 如果未附加目标，则上面的行会导致引发 `NullReferenceException`。 用于解决此问题的惯例比简单 null 检查更加复杂，在此[系列](delegates-patterns.md)的后面部分中会进行介绍。
 
-## <a name="assigning-adding-and-removing-invocation-targets"></a>分配、添加和移除调用目标
+## <a name="assign-add-and-remove-invocation-targets"></a>分配、添加和删除调用目标
 
 这是委托类型的定义方式，以及声明和调用委托实例的方式。
 
@@ -115,7 +115,7 @@ Sort() 示例通常将单个目标方法附加到委托。 但是，委托对象
 
 上面介绍的语言支持可提供在使用委托时通常需要的功能和支持。 这些功能采用 .NET Core Framework 中的两个类进行构建：<xref:System.Delegate> 和 <xref:System.MulticastDelegate>。
 
-`System.Delegate` 类及其单个直接其子类 `System.MulticastDelegate` 可提供框架支持，以便创建委托、将方法注册为委托目标以及调用注册为委托目标的所有方法。 
+`System.Delegate` 类及其单个直接子类 `System.MulticastDelegate` 可提供框架支持，以便创建委托、将方法注册为委托目标以及调用注册为委托目标的所有方法。 
 
 有趣的是，`System.Delegate` 和 `System.MulticastDelegate` 类本身不是委托类型。 它们为所有特定委托类型提供基础。 相同的语言设计过程要求不能声明派生自 `Delegate` 或 `MulticastDelegate` 的类。 C# 语言规则禁止这样做。
  
@@ -129,8 +129,8 @@ Sort() 示例通常将单个目标方法附加到委托。 但是，委托对象
 
 要记住的首要且最重要的事实是，使用的每个委托都派生自 `MulticastDelegate`。 多播委托意味着通过委托进行调用时，可以调用多个方法目标。 原始设计考虑区分只能附加并调用一个目标方法的委托与可以附加并调用多个目标方法的委托。 该区分被证明在实际中不如最初设想那么有用。 已创建了两个不同的类，并且自初始公开发行以来便一直处于框架中。
 
-对委托最常使用的方法是 `Invoke()` 和 `BeginInvoke()`  /  `EndInvoke()`。 `Invoke()` 会调用已附加到特定委托实例的所有方法。 如上面所见，通常会通过对委托变量使用方法调用语法来调用委托。 如在[此系列后面部分](delegates-patterns.md)中所见，一些模式可直接使用这些方法。
+对委托最常使用的方法是 `Invoke()` 和 `BeginInvoke()` / `EndInvoke()`。 `Invoke()` 会调用已附加到特定委托实例的所有方法。 如上面所见，通常会通过对委托变量使用方法调用语法来调用委托。 如在[此系列后面部分](delegates-patterns.md)中所见，一些模式可直接使用这些方法。
 
 现在你已了解支持委托的语言语法和类，我们来看一下如何使用、创建和调用强类型委托。
 
-[下一部分](delegates-strongly-typed.md)
+[下一页](delegates-strongly-typed.md)

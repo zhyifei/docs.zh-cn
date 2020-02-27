@@ -3,13 +3,13 @@ title: 新式 Web 应用程序的特征
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 新式 Web 应用程序的特征
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: d3848f3b0cf993930bfc3801ce40c5eac30f094d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.date: 12/04/2019
+ms.openlocfilehash: d70fa54adeb505fd37807399402281dfda67cf52
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374092"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451559"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>新式 Web 应用程序的特征
 
@@ -61,20 +61,28 @@ ASP.NET Core 应用程序支持单元测试，并且通过其松散耦合和依�
 
 ## <a name="simple-development-and-deployment"></a>简单的开发和部署
 
-可使用简单的文本编辑器、命令行接口或者全功能开发环境（例如 Visual Studio）编写 ASP.NET Core 应用程序。 整体应用程序通常部署到单个终结点。 可轻松将部署自动化，作为持续集成 (CI) 和持续交付 (CD) 管道的一部分。 除传统的 CI/CD 工具外，Microsoft Azure 还集成了 git 存储库支持，并可在对特定 git 分支或标记作出更新时自动部署更新。
+可使用简单的文本编辑器、命令行接口或者全功能开发环境（例如 Visual Studio）编写 ASP.NET Core 应用程序。 整体应用程序通常部署到单个终结点。 可轻松将部署自动化，作为持续集成 (CI) 和持续交付 (CD) 管道的一部分。 除传统的 CI/CD 工具外，Microsoft Azure 还集成了 git 存储库支持，并可在对特定 git 分支或标记作出更新时自动部署更新。 Azure DevOps 提供了功能完备的 CI/CD 生成和部署管道，而 GitHub Actions 为在那里托管的项目提供了另一个选择。
 
 ## <a name="traditional-aspnet-and-web-forms"></a>传统的 ASP.NET 和 Web 窗体
 
 除 ASP.NET Core 外，传统的 ASP.NET 4.x 依然是一个用于构建 Web 应用程序的可靠强大的平台。 ASP.NET 支持 MVC 和 Web API 开发模型以及 Web 窗体。Web 窗体非常适合用于基于页面的丰富应用程序开发，具有丰富的第三方组件系统。 Microsoft Azure 长期以来支持 ASP.NET 4.x 应用程序，而且许多开发人员非常熟悉该平台。
 
+## <a name="blazor"></a>Blazor
+
+Blazor 包含在 ASP.NET Core 3.0 和更高版本中。 它提供了一种新机制，可使用 Razor、C# 和 ASP.NET Core 生成丰富的交互式 Web 客户端应用程序。 它提供了在开发新式 Web 应用程序时要考虑的另一种解决方案。 有两个版本的 Blazor 可供考虑：服务器端和客户端。
+
+服务器端 Blazor 于 2019 年随 ASP.NET Core 3.0 一起发布。 顾名思义，它在服务器上运行，通过网络将对客户端文档的更改重新呈现到浏览器。 服务器端 Blazor 提供了丰富的客户端体验，而无需客户端 JavaScript，也不需要为每个客户端页面交互单独加载页面。 服务器请求并处理已加载页面中的更改，然后使用 SignalR 将其发送回客户端。
+
+客户端 Blazor 将于 2020 年发布，将不需要在服务器上进行更改。 相反，它将利用 WebAssembly 在客户端中运行 .NET 代码。 如果需要请求数据，客户端仍然可以对服务器进行 API 调用，但是所有客户端行为都通过 WebAssembly 在客户端中运行，WebAssembly 在所有主流浏览器中受支持，并且只是一个 Javascript 库。
+
 > ### <a name="references--modern-web-applications"></a>参考 - 新式 Web 应用程序
 >
 > - **ASP.NET Core 简介**  
 >   <https://docs.microsoft.com/aspnet/core/>
-> - **ASP.NET Core 六大关键优势使其更加独特和优秀**  
->   <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
 > - **在 ASP.NET Core 进行测试**  
 >   <https://docs.microsoft.com/aspnet/core/testing/>
+> - **Blazor - 入门**  
+>   <https://blazor.net/docs/get-started.html>
 
 >[!div class="step-by-step"]
 >[上一页](index.md)

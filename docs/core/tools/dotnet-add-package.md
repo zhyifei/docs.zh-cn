@@ -1,21 +1,17 @@
 ---
 title: dotnet add package 命令
 description: “dotnet add package”命令可便于添加对项目的 NuGet 包引用。
-ms.date: 06/26/2019
-ms.openlocfilehash: 210dcf0efe06672264ebfa297589bdb387591a42
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: cb44805f91ac4047dd50fd7e88d4eac5f15f2508
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733325"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503810"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
- 本文适用于：✔️ .NET Core 1.x SDK 及更高版本
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
 ## <a name="name"></a>“属性”
 

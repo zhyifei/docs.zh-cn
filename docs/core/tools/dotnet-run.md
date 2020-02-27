@@ -1,21 +1,17 @@
 ---
 title: dotnet run 命令
 description: dotnet run 命令可便于使用源代码运行应用程序。
-ms.date: 10/31/2019
-ms.openlocfilehash: 5920f0d1f04204b286fdf6f51f5fd13644846390
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/19/2020
+ms.openlocfilehash: 415d7079db6a3da80c4fcf2074307ea760e84982
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734101"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503608"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
- 本文适用于：✔️ .NET Core 1.x SDK 及更高版本
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
 ## <a name="name"></a>“属性”
 
@@ -23,40 +19,12 @@ ms.locfileid: "76734101"
 
 ## <a name="synopsis"></a>摘要
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
-
 ```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile] [--no-build] [--no-dependencies]
-    [--no-launch-profile] [--no-restore] [-p|--project] [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile] 
+    [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project] 
+    [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
-
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-
-```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
-    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [-v|--verbosity] [[--] [application arguments]]
-dotnet run [-h|--help]
-```
-
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-
-```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
-    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
-dotnet run [-h|--help]
-```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
-dotnet run [-h|--help]
-```
-
----
 
 ## <a name="description"></a>描述
 
@@ -80,209 +48,84 @@ dotnet myapp.dll
 
 ## <a name="options"></a>选项
 
-# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+- **`--`**
 
-`--`
+  将参数分隔到正在运行的应用程序的参数的 `dotnet run`。 在此分隔符后的所有参数均传递给已运行的应用程序。
 
-将参数分隔到正在运行的应用程序的参数的 `dotnet run`。 在此分隔符后的所有参数均传递给已运行的应用程序。
+- **`-c|--configuration <CONFIGURATION>`**
 
-`-c|--configuration {Debug|Release}`
+  定义生成配置。 大多数项目的默认配置为 `Debug`，但你可以覆盖项目中的生成配置设置。
 
-定义生成配置。 大多数项目的默认值为 `Debug`。
+- **`-f|--framework <FRAMEWORK>`**
 
-`-f|--framework <FRAMEWORK>`
+  使用指定[框架](../../standard/frameworks.md)生成并运行应用。 框架必须在项目文件中进行指定。
 
-使用指定[框架](../../standard/frameworks.md)生成并运行应用。 框架必须在项目文件中进行指定。
+- **`--force`**
 
-`--force`
+  强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件  。
 
-强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件  。
+- **`-h|--help`**
 
-`-h|--help`
+  打印出有关命令的简短帮助。
 
-打印出有关命令的简短帮助。
+- **`--interactive`**
 
-`--interactive`
+  允许命令停止并等待用户输入或操作（例如，完成身份验证）。 自 .NET Core 3.0 SDK 起可用。
 
-允许命令停止并等待用户输入或操作（例如，完成身份验证）。
+- **`--launch-profile <NAME>`**
 
-`--launch-profile <NAME>`
+  启动应用程序时要使用的启动配置文件（若有）的名称。 启动配置文件在 launchSettings.json 文件中进行定义，通常称为 `Development`、`Staging` 和 `Production`  。 有关详细信息，请参阅[使用多个环境](/aspnet/core/fundamentals/environments)。
 
-启动应用程序时要使用的启动配置文件（若有）的名称。 启动配置文件在 launchSettings.json 文件中进行定义，通常称为 `Development`、`Staging` 和 `Production`  。 有关详细信息，请参阅[使用多个环境](/aspnet/core/fundamentals/environments)。
+- **`--no-build`**
 
-`--no-build`
+  运行前不生成项目。 还隐式设置 `--no-restore` 标记。
 
-运行前不生成项目。 还隐式设置 `--no-restore` 标记。
+- **`--no-dependencies`**
 
-`--no-dependencies`
+  当使用项目到项目 (P2P) 引用还原项目时，还原根项目，不还原引用。
 
-当使用项目到项目 (P2P) 引用还原项目时，还原根项目，不还原引用。
+- **`--no-launch-profile`**
 
-`--no-launch-profile`
+  不尝试使用 launchSettings.json 配置应用程序  。
 
-不尝试使用 launchSettings.json 配置应用程序  。
+- **`--no-restore`**
 
-`--no-restore`
+  运行此命令时不执行隐式还原。
 
-运行此命令时不执行隐式还原。
+- **`-p|--project <PATH>`**
 
-`-p|--project <PATH>`
+  指定要运行的项目文件的路径（文件夹名称或完整路径）。 如果未指定，则默认为当前目录。
 
-指定要运行的项目文件的路径（文件夹名称或完整路径）。 如果未指定，则默认为当前目录。
+- **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-`--runtime <RUNTIME_IDENTIFIER>`
+  指定要为其还原包的目标运行时。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。 自 .NET Core 3.0 SDK 起可用的 `-r` 简短选项。
 
-指定要为其还原包的目标运行时。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。
+- **`-v|--verbosity <LEVEL>`**
 
-`-v|--verbosity <LEVEL>`
-
-设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
-
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-
-`--`
-
-将参数分隔到正在运行的应用程序的参数的 `dotnet run`。 在此分隔符后的所有参数均传递给已运行的应用程序。
-
-`-c|--configuration {Debug|Release}`
-
-定义生成配置。 大多数项目的默认值为 `Debug`。
-
-`-f|--framework <FRAMEWORK>`
-
-使用指定[框架](../../standard/frameworks.md)生成并运行应用。 框架必须在项目文件中进行指定。
-
-`--force`
-
-强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件  。
-
-`-h|--help`
-
-打印出有关命令的简短帮助。
-
-`--launch-profile <NAME>`
-
-启动应用程序时要使用的启动配置文件（若有）的名称。 启动配置文件在 launchSettings.json 文件中进行定义，通常称为 `Development`、`Staging` 和 `Production`  。 有关详细信息，请参阅[使用多个环境](/aspnet/core/fundamentals/environments)。
-
-`--no-build`
-
-运行前不生成项目。 还隐式设置 `--no-restore` 标记。
-
-`--no-dependencies`
-
-当使用项目到项目 (P2P) 引用还原项目时，还原根项目，不还原引用。
-
-`--no-launch-profile`
-
-不尝试使用 launchSettings.json 配置应用程序  。
-
-`--no-restore`
-
-运行此命令时不执行隐式还原。
-
-`-p|--project <PATH>`
-
-指定要运行的项目文件的路径（文件夹名称或完整路径）。 如果未指定，则默认为当前目录。
-
-`--runtime <RUNTIME_IDENTIFIER>`
-
-指定要为其还原包的目标运行时。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。
-
-`-v|--verbosity <LEVEL>`
-
-设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
-
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-
-`--`
-
-将参数分隔到正在运行的应用程序的参数的 `dotnet run`。 在此分隔符后的所有参数均传递给已运行的应用程序。
-
-`-c|--configuration {Debug|Release}`
-
-定义生成配置。 大多数项目的默认值为 `Debug`。
-
-`-f|--framework <FRAMEWORK>`
-
-使用指定[框架](../../standard/frameworks.md)生成并运行应用。 框架必须在项目文件中进行指定。
-
-`--force`
-
-强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件  。
-
-`-h|--help`
-
-打印出有关命令的简短帮助。
-
-`--launch-profile <NAME>`
-
-启动应用程序时要使用的启动配置文件（若有）的名称。 启动配置文件在 launchSettings.json 文件中进行定义，通常称为 `Development`、`Staging` 和 `Production`  。 有关详细信息，请参阅[使用多个环境](/aspnet/core/fundamentals/environments)。
-
-`--no-build`
-
-运行前不生成项目。 还隐式设置 `--no-restore` 标记。
-
-`--no-dependencies`
-
-当使用项目到项目 (P2P) 引用还原项目时，还原根项目，不还原引用。
-
-`--no-launch-profile`
-
-不尝试使用 launchSettings.json 配置应用程序  。
-
-`--no-restore`
-
-运行此命令时不执行隐式还原。
-
-`-p|--project <PATH>`
-
-指定要运行的项目文件的路径（文件夹名称或完整路径）。 如果未指定，则默认为当前目录。
-
-`--runtime <RUNTIME_IDENTIFIER>`
-
-指定要为其还原包的目标运行时。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-`--`
-
-将参数分隔到正在运行的应用程序的参数的 `dotnet run`。 在此分隔符后的所有参数均传递给已运行的应用程序。
-
-`-c|--configuration {Debug|Release}`
-
-定义生成配置。 大多数项目的默认值为 `Debug`。
-
-`-f|--framework <FRAMEWORK>`
-
-使用指定[框架](../../standard/frameworks.md)生成并运行应用。 框架必须在项目文件中进行指定。
-
-`-h|--help`
-
-打印出有关命令的简短帮助。
-
-`-p|--project <PATH/PROJECT.csproj>`
-
-指定项目文件的路径和名称。 （请参阅备注。）如果未指定，则默认为当前目录。
-
-> [!NOTE]
-> 通过 `-p|--project` 选项使用项目文件的路径和名称。 CLI 中的回归可阻止使用 .NET Core SDK 1.x 提供文件夹路径。 若要详细了解此问题，请参阅 [dotnet run -p - 无法启动项目 (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992)。
-
----
+  设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 默认值为 `m`。 自 .NET Core 2.1 SDK 起可用。 
 
 ## <a name="examples"></a>示例
 
-运行当前目录中的项目：
+- 运行当前目录中的项目：
 
-`dotnet run`
+  ```dotnetcli
+  dotnet run
+  ```
 
-运行指定的项目：
+- 运行指定的项目：
 
-`dotnet run --project ./projects/proj1/proj1.csproj`
+  ```dotnetcli
+  dotnet run --project ./projects/proj1/proj1.csproj
+  ```
 
-运行当前目录中的项目（在本例中，`--help` 参数被传递到应用程序，因为使用了空白的 `--` 选项）：
+- 运行当前目录中的项目（在本例中，`--help` 参数被传递到应用程序，因为使用了空白的 `--` 选项）：
 
-`dotnet run --configuration Release -- --help`
+  ```dotnetcli
+  dotnet run --configuration Release -- --help
+  ```
 
-在当前仅显示最小输出的目录中还原项目的依赖项和工具，然后运行项目（.NET Core SDK 2.0 及更高版本）：
+- 在当前仅显示最小输出的目录中还原项目的依赖项和工具，然后运行项目（.NET Core SDK 2.0 及更高版本）：
 
-`dotnet run --verbosity m`
+  ```dotnetcli
+  dotnet run --verbosity m
+  ```

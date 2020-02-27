@@ -1,13 +1,13 @@
 ---
 title: 运行状况监视
 description: 了解实现运行状况监视的一种方法。
-ms.date: 01/07/2019
-ms.openlocfilehash: f1d63e04bbea95fcf0a9f9d3b50aef0e7d4a830e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: a91e51af66049f9774365cd56b90ab792a4dd4fc
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732892"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502689"
 ---
 # <a name="health-monitoring"></a>运行状况监视
 
@@ -19,7 +19,7 @@ ms.locfileid: "73732892"
 
 ## <a name="implement-health-checks-in-aspnet-core-services"></a>在 ASP.NET Core 服务中实现运行状况检查
 
-开发 ASP.NET Core 微服务或 Web 应用程序时，可以使用 ASP .NET Core 2.2 中发布的内置运行状况检查功能。 与许多 ASP.NET 核心功能一样，运行状况检查附带一组服务和中间件。
+开发 ASP.NET Core 微服务或 Web 应用程序时，可以使用 ASP .NET Core 3.1 中发布的内置运行状况检查功能 ([Microsoft.Extensions.Diagnostics.HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks))。 与许多 ASP.NET 核心功能一样，运行状况检查附带一组服务和中间件。
 
 运行状况检查服务和中间件使用方便，并提供了一些功能，可以用于验证应用程序（如 SQL Server 数据库或远程 API）所需的任何外部资源是否正常工作。 使用该功能时，还可以确定资源正常运行的定义，稍后将会介绍。
 
@@ -27,20 +27,23 @@ ms.locfileid: "73732892"
 
 ### <a name="use-the-healthchecks-feature-in-your-back-end-aspnet-microservices"></a>在后端 ASP.NET 微服务中使用 HealthChecks 功能
 
-本部分介绍如何在示例 ASP.NET Core 2.2 Web API 应用程序中使用 HealthChecks 功能。 后面部分中将介绍如何在大规模微服务（例如，eShopOnContainers）中实现此功能。 首先，需要定义每个微服务的正常运行状况的必备条件。 在该示例应用程序中，如果可通过 HTTP 访问微服务 API 并且可以使用与其相关的 SQL Server 数据库，则该微服务的处于正常运行状态。
+本部分介绍如何在示例 ASP.NET Core 3.1 Web API 应用程序中使用 [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) 中实现的 HealthChecks 功能。 后面部分中将介绍如何在大规模微服务（例如，eShopOnContainers）中实现此功能。 首先，需要定义每个微服务的正常运行状况的必备条件。 在该示例应用程序中，如果可通过 HTTP 访问微服务 API 并且可以使用与其相关的 SQL Server 数据库，则该微服务的处于正常运行状态。
 
-在 .NET Core 2.2 中，使用内置 API，可以通过以下方式配置服务、为微服务及其依赖的 SQL Server 数据库添加运行状况检查：
+在 .NET Core 3.1 中，使用内置 API，可以通过以下方式配置服务、为微服务及其依赖的 SQL Server 数据库添加运行状况检查：
 
 ```csharp
-// Startup.cs from .NET Core 2.2 Web Api sample
+// Startup.cs from .NET Core 3.1 Web API sample
 //
 public void ConfigureServices(IServiceCollection services)
 {
     //...
     // Registers required services for health checks
     services.AddHealthChecks()
-    // Add a health check for a SQL database
-    .AddCheck("MyDatabase", new SqlConnectionHealthCheck(Configuration["ConnectionStrings:DefaultConnection"]));
+        // Add a health check for a SQL Server database
+        .AddSqlServer(
+            configuration["ConnectionString"],
+            name: "OrderingDB-check",
+            tags: new string[] { "orderingdb" });
 }
 ```
 
@@ -98,17 +101,26 @@ public class SqlConnectionHealthCheck : IHealthCheck
 }
 ```
 
-请注意，在上面的代码中，`Select 1` 是用于检查数据库运行状况的查询。 若要监视微服务的可用性，Kubernetes 和 Service Fabric 等业务流程协调程序可通过发送微服务测试请求来定期执行运行状况检查。 请务必让数据库查询保持高效，以便快速执行这些操作而不会导致更高的资源使用率。
+请注意，在上面的代码中，`Select 1` 是用于检查数据库运行状况的查询。 若要监视微服务的可用性，Kubernetes 等业务流程协调程序可通过发送微服务测试请求来定期执行运行状况检查。 请务必让数据库查询保持高效，以便快速执行这些操作而不会导致更高的资源使用率。
 
-最后，创建对 URL 路径“/hc”进行响应的中间件：
+最后，添加对 URL 路径 `/hc` 进行响应的中间件：
 
 ```csharp
-// Startup.cs from .NET Core 2.2 Web Api sample
+// Startup.cs from .NET Core 3.1 Web Api sample
 //
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     //…
-    app.UseHealthChecks("/hc");
+    app.UseEndpoints(endpoints =>
+    {
+        //...
+        endpoints.MapHealthChecks("/hc", new HealthCheckOptions()
+        {
+            Predicate = _ => true,
+            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+        });
+        //...
+    });
     //…
 }
 ```
@@ -119,7 +131,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 eShopOnContainers 中的微服务依赖多个服务来执行其任务。 例如，eShopOnContainers 中的 `Catalog.API` 微服务依赖许多服务，例如，Azure Blob 存储、SQL Server 和 RabbitMQ。 因此，它使用 `AddCheck()` 方法添加了多个运行状况检查。 对于每个依赖服务，需要添加自定义 `IHealthCheck` 实现，用于定义其各自的运行状况状态。
 
-开放源代码项目 [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) 可通过为基于 .NET Core 2.2 构建的每个企业服务提供自定义运行状况检查实现，解决此问题。 每个运行状况检查都可作为单独的 NuGet 包，可轻松添加到项目。 eShopOnContainers 将其广泛用于其所有微服务。
+开放源代码项目 [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) 可通过为基于 .NET Core 3.1 构建的每个企业服务提供自定义运行状况检查实现，解决此问题。 每个运行状况检查都可作为单独的 NuGet 包，可轻松添加到项目。 eShopOnContainers 将其广泛用于其所有微服务。
 
 例如，在 `Catalog.API` 微服务中，添加了以下 NuGet 包：
 
@@ -279,7 +291,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 - **Service Fabric 运行状况监视简介** \
   [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
-- **Azure Monitor**  
+- **Azure Monitor** \
   <https://azure.microsoft.com/services/monitor/>
 
 >[!div class="step-by-step"]

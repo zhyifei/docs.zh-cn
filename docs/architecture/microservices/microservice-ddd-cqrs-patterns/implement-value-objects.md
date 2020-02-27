@@ -1,13 +1,13 @@
 ---
 title: 实现值对象
 description: 适用于容器化的 .NET 应用程序的 .NET 微服务体系结构 | 深入了解有关使用新实体框架功能实现值对象的详细信息和选项。
-ms.date: 10/08/2018
-ms.openlocfilehash: 70c92fe86fda20ed4e909b945b843e8e71092f09
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.date: 01/30/2020
+ms.openlocfilehash: 4ace5c141b1cbd2dcfefb7ea7165a4006b130479
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899773"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502512"
 ---
 # <a name="implement-value-objects"></a>实现值对象
 
@@ -131,13 +131,13 @@ public class Address : ValueObject
 
 可以看到此 Address 的值对象实现没有标识，因此在 Address 类中甚至在 ValueObject 类中都没有 ID 字段。
 
-在 EF Core 2.0 之前，实体框架使用的类中是不能没有 ID 字段的，EF Core 2.0 在实现不具有 ID 的更好值对象方面发挥了很大的作用。 下一节内容将对此进行详细介绍。
+在 EF Core 2.0 之前，实体框架 (EF) 使用的类中是不能没有 ID 字段的，EF Core 2.0 在实现不具有 ID 的更好值对象方面发挥了很大的作用。 下一节内容将对此进行详细介绍。
 
-也许有人会争辩说，由于值对象是不可变的，所以应该是只读的（即“只获取”属性），这是事实没错。 但是，值对象通常会被执行序列化和反序列化操作以遍历消息队列，并且由于是只读的，这阻止了反序列化器分配值，从而只将其保留为私有集，且其只读程度让此机制成为可能。
+也许有人会争辩说，由于值对象是不可变的，所以应该是只读的（即,具有“只获取”属性），这是事实没错。 但是，值对象通常会被执行序列化和反序列化操作以遍历消息队列，并且由于是只读的，这阻止了反序列化器分配值，从而只将其保留为私有集，且其只读程度让此机制成为可能。
 
-## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>如何通过 EF Core 2.0 在数据库中持久保存值对象
+## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>如何通过 EF Core 2.0 及更高版本在数据库中持久保存值对象
 
-你刚才看到如何在域模型中定义值对象。 但是，如何切实地通过一般使用标识确定实体的 Entity Framework (EF) Core 来将其持久保存在数据库中呢？
+你刚才看到如何在域模型中定义值对象。 但是，由于 它通常使用标识来确定实体，如何切实地使用 Entity Framework Core 来将其持久保存在数据库中呢？
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>背景和较早的方法（使用 EF Core 1.1）
 
@@ -160,11 +160,11 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 
 但是，将值对象持久保存在数据库中执行起来如同将常规实体持久保存在不同表中。
 
-使用 EF Core 2.0 时，有更好的新方法来持久保存值对象。
+使用 EF Core 2.0 及更高版本时，有更好的新方法来持久保存值对象。
 
-## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20"></a>在 EF Core 2.0 中以固有实体类型形式来持久保存值对象
+## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20-and-later"></a>在 EF Core 2.0 及更高版本中以从属实体类型形式来持久保存值对象
 
-即使 EF Core 中的固有实体类型与 DDD 中的规范值对象模式之间存在一些差距，当前它是在 EF Core 2.0 中持久保存值对象的最佳方式。 将在本部分末尾看到限制。
+即使 EF Core 中的固有实体类型与 DDD 中的规范值对象模式之间存在一些差距，当前它是在 EF Core 2.0 及更高版本中持久保存值对象的最佳方式。 将在本部分末尾看到限制。
 
 固有实体类型功能已添加到 EF Core 2.0 及以上版本。
 
@@ -178,7 +178,7 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 
 - 指向它们的导航属性
 
-- 对于固有类型的集合，一个独立的组成部分（EF Core 2.0 中尚不支持，2.2 即将推出）。
+- 对于固有类型的集合，一个独立的组成部分（在 EF Core 2.2 及更高版本中受支持）。
 
 例如，在 eShopOnContainers 的订购域模型中，作为 Order 实体的一部分，Address 值对象在所有者实体（即 Order 实体）内作为固有实体类型实现。 Address 是域模型中定义的没有标识属性的类型。 它用作 Order 类型的属性来指定特定订单的发货地址。
 
@@ -275,7 +275,7 @@ public class Address
 
 - 我们堆栈中固有类型实例的标识（键）即为所有者类型标识和固有类型定义的组合。
 
-#### <a name="owned-entities-capabilities"></a>固有实体功能：
+#### <a name="owned-entities-capabilities"></a>固有实体功能
 
 - 固有类型可以引用其他实体，固有（嵌套固有类型）或非固有（其他实体的常规引用导航属性）均可。
 
@@ -283,17 +283,17 @@ public class Address
 
 - 表拆分由约定设置，但可以通过使用 ToTable 将固有类型映射到其他表来另行选择。
 
-- 立即加载对于固有类型自动执行，即无需对查询调用 Include()。
+- 立即加载对于固有类型自动执行，即无需对查询调用 `.Include()`。
 
-- 从 EF Core 2.1 开始，可以使用属性 \[\] 进行配置
+- 使用 EF Core 2.1 及更高版本可以通过属性 `[Owned]` 进行配置。
 
-#### <a name="owned-entities-limitations"></a>固有实体的限制：
+- 可以处理固有类型的集合（使用版本 2.2 及更高版本）。
 
-- 不能创建固有类型的 DbSet\<T\>（按照设计）。
+#### <a name="owned-entities-limitations"></a>固有实体限制
 
-- 不能在固有类型上调用 ModelBuilder.Entity\<T\>()（当前按照设计）。
+- 不能创建固有类型的 `DbSet<T>`（按照设计）。
 
-- 尚且没有固有类型的集合（截至 EF Core 2.1，但 2.2 支持）。
+- 不能对固有类型调用 `ModelBuilder.Entity<T>()`（目前按照设计）。
 
 - 不支持使用同一表格中所有者映射的可选（即为 null）固有类型（即使用表格拆分）。 这是因为对每个属性都进行了映射，因此总体而言，对于 null 复杂值，没有单独的 sentinel。
 
@@ -316,8 +316,11 @@ public class Address
 - **Vaughn Vernon。实现域驱动设计。** （书；包括值对象的讨论）\
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
+- **从属实体类型** \
+  <https://docs.microsoft.com/ef/core/modeling/owned-entities>
+
 - 阴影属性   \
-  [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
+  <https://docs.microsoft.com/ef/core/modeling/shadow-properties>
 
 - **复杂类型和/或值对象**。 EF Core GitHub 存储库中的讨论（“问题”选项卡）\
   <https://github.com/dotnet/efcore/issues/246>
