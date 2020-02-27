@@ -2,12 +2,12 @@
 title: Azure Monitor
 description: 使用 Azure Monitor 来了解系统的运行情况。
 ms.date: 02/05/2020
-ms.openlocfilehash: 961331011db4e59583438a2dbdf366bbe0e34261
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 87ffca186346c3356c0277809d1d67145d1dd17b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448908"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628028"
 ---
 # <a name="azure-monitor"></a>Azure Monitor
 
@@ -78,7 +78,7 @@ Azure Monitor 会自动利用机器学习来了解部署的应用程序的正常
 ## <a name="references"></a>参考
 
 - [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview)
-- [智能警报管理-MS Ignite](https://oxfordcomputergroup.com/resourceso365-security-native-cloud-authentication/)
+- [智能警报管理-MS Ignite](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/)
 
 >[!div class="step-by-step"]
 >[上一页](monitoring-azure-kubernetes.md)
