@@ -1,13 +1,13 @@
 ---
 title: 为基于容器的应用程序选择 Azure 计算平台
 description: 通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序 | 为基于容器的应用程序选择 Azure 计算平台
-ms.date: 05/04/2018
-ms.openlocfilehash: 079c9c5ca02b6dc75214d63cb59afdead03d3190
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 02/18/2020
+ms.openlocfilehash: 52e7cf1c5dd3a5850564bdb33ac7a4ac4904f432
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73737017"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503892"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>为基于容器的应用程序选择 Azure 计算平台
 
@@ -25,9 +25,19 @@ ms.locfileid: "73737017"
 
 在对应用程序的需求进行更深入的分析之后，所选择的产品可能会有所不同。 但最好一开始就获得初步指导，你可以基于特定的优先级从其中开始评估和测试。
 
-在图 1 中，你可以看到不同种类应用及其理想的 Azure 托管方案的明细。
+在下表中，可以看到不同种类应用及其可能和推荐的 Azure 托管方案的明细。
 
-![哪些 Azure 托管方案最适合不同应用的表。](./media/choosing-azure-compute-options-for-container-based-applications/azure-hosting-scenarios-for-apps.png)
+| 应用程序体系结构 | VMs - Azure 虚拟机 | ACI - Azure 容器实例 | Azure 应用服务（带/不带容器） | AKS - Azure Kubernetes 服务 | Azure Functions | Azure Batch |
+|:------------------------:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **Web 应用（单片）**         | ![可能使用 VM](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可能使用 ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![推荐使用应用服务](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![可能使用 AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | |
+| **N 层应用（服务）**        | ![可能使用 VM](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可能使用 ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![推荐使用应用服务](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![可能使用 AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可能使用 Azure Fuctions](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | |
+| **云本机（微服务）**  | | ![可能使用 ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | ![推荐使用 AKS](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （Linux&nbsp;容器）| ![推荐使用 Azure Functions](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （事件驱动） | |
+| **批处理/作业（后台任务）** | ![可能使用 VM](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可能使用 ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可能使用应用服务](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可能使用 AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![推荐使用 Azure Functions](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （后台任务） | ![建议使用 Azure Batch](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （大规模） |
+
+**图例**
+
+![推荐的图标](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) 推荐的 \
+![可能的图标](media/choosing-azure-compute-options-for-container-based-applications/possible.png) 可能
 
 > [!div class="step-by-step"]
 > [上一页](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
