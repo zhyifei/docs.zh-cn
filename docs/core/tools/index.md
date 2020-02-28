@@ -3,16 +3,16 @@ title: .NET Core CLI
 titleSuffix: ''
 description: .NET Core CLI 及其功能概述。
 ms.date: 02/13/2020
-ms.openlocfilehash: 1078d68ddc088274fa14b0094a81765f7af69dad
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: c491088f26a9aa1c065414e76fb0b80d554380b4
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543309"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625977"
 ---
 # <a name="net-core-cli-overview"></a>.NET Core CLI 概述
 
- 本文适用于： ✔️ .NET Core 2.1 SDK 及更高版本
+本文适用于： ✔️ .NET Core 2.1 SDK 及更高版本
 
 .NET Core 命令行接口 (CLI) 工具是用于开发、生成、运行和发布 .NET Core 应用程序的跨平台工具链。
 
@@ -59,8 +59,8 @@ ms.locfileid: "77543309"
 - [tool install](dotnet-tool-install.md)
 - [tool list](dotnet-tool-list.md)
 - [tool update](dotnet-tool-update.md)
-- [tool restore](global-tools.md#install-a-local-tool) 自 .NET Core SDK 3.0 起可用 
-- [tool run](global-tools.md#invoke-a-local-tool) 自 .NET Core SDK 3.0 起可用 
+- [tool restore](global-tools.md#install-a-local-tool) 自 .NET Core SDK 3.0 起可用
+- [tool run](global-tools.md#invoke-a-local-tool) 自 .NET Core SDK 3.0 起可用
 - [tool uninstall](dotnet-tool-uninstall.md)
 
 工具是控制台应用程序，它们从 NuGet 包中安装并从命令提示符处进行调用。 你可自行编写工具，也可安装由第三方编写的工具。 工具也称为全局工具、工具路径工具和本地工具。 有关详细信息，请参阅 [.NET Core 工具概述](global-tools.md)。
@@ -87,7 +87,7 @@ dotnet /build_output/my_app.dll
 dotnet build
 ```
 
-首先，驱动程序确定要使用的 SDK 版本。 如果没有任何[“global.json”](global-json.md)，则使用可用的最新版本 SDK。 这有可能是预览版或稳定版，具体取决于计算机上的最新版本。  确定 SDK 版本后，它便会执行命令。
+首先，驱动程序确定要使用的 SDK 版本。 如果没有 [global.json](global-json.md) 文件，则使用可用的最新版本 SDK。 这有可能是预览版或稳定版，具体取决于计算机上的最新版本。  确定 SDK 版本后，它便会执行命令。
 
 ### <a name="command"></a>命令
 

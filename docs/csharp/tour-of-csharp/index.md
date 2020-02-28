@@ -2,12 +2,12 @@
 title: C# 介绍 - C# 指南
 description: 刚开始接触 C#？ 了解 C# 语言的基础知识。
 ms.date: 04/05/2019
-ms.openlocfilehash: e2d7af3a35dc9d4fdeddf9eb742d155ab33094b4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b510342f957a259a6c7763441778461b3dd4ef1e
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711657"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673285"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 语言介绍
 
@@ -64,8 +64,6 @@ Hello, World
   - ***语句***用于表示程序的操作。
 - [类和对象](classes-and-objects.md)
   - ***类***是最基本的 C# 类型。 ***对象***是类实例。 类是使用***成员***生成的，此主题也对此进行了介绍。
-- [结构](structs.md)
-  - 与类不同，***结构***是属于值类型的数据结构。
 - [数组](arrays.md)
   - ***数组***是一种数据结构，其中包含许多通过计算索引访问的变量。
 - [接口](interfaces.md)

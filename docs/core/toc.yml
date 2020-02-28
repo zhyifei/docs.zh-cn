@@ -49,25 +49,7 @@
     - name: 安装本地化的 IntelliSense
       href: install/localized-intellisense.md
 - name: 入门
-  items:
-    - name: 入门
-      href: get-started.md
-    - name: 'C# 和 Visual Studio Code 入门'
-      href: tutorials/with-visual-studio-code.md
-    - name: 使用 Visual Studio Code 在 macOS 上开始使用 .NET Core
-      href: tutorials/using-on-macos.md
-    - name: 在 Visual Studio 中创建第一个控制台应用
-      href: tutorials/with-visual-studio.md
-    - name: 使用 Visual Studio 调试应用程序
-      href: tutorials/debugging-with-visual-studio.md
-    - name: 使用 Visual Studio 发布应用程序
-      href: tutorials/publishing-with-visual-studio.md
-    - name: 在 Visual Studio 中创建 .NET Standard 库
-      href: tutorials/library-with-visual-studio.md
-    - name: 在 Visual Studio 中测试 .NET Standard 库
-      href: tutorials/testing-library-with-visual-studio.md
-    - name: 在 Visual Studio 中使用 .NET Standard 库
-      href: tutorials/consuming-library-with-visual-studio.md
+  href: get-started.md
 - name: .NET Core 的新增功能
   items:
     - name: .NET Core 3.1 的新增功能
@@ -87,12 +69,28 @@
   items:
     - name: 概述
       href: tutorials/index.md
-    - name: 通过 Visual Studio for Mac 开始使用 .NET Core
-      href: tutorials/using-on-mac-vs.md
-    - name: 在 macOS 上构建完整的 .NET Core 解决方案
-      href: tutorials/using-on-mac-vs-full-solution.md
+    - name: 通过 Visual Studio 开始使用 .NET Core
+      href: tutorials/with-visual-studio.md
+    - name: 通过 Visual Studio Code 开始使用 .NET Core
+      href: tutorials/with-visual-studio-code.md
     - name: 通过 CLI 开始使用 .NET Core
       href: tutorials/cli-create-console-app.md
+    - name: 通过 Visual Studio Code 在 macOS 上开始使用 .NET Core
+      href: tutorials/using-on-macos.md
+    - name: 通过 Visual Studio for Mac 开始使用 .NET Core
+      href: tutorials/using-on-mac-vs.md
+    - name: 使用 Visual Studio 调试应用程序
+      href: tutorials/debugging-with-visual-studio.md
+    - name: 使用 Visual Studio 发布应用程序
+      href: tutorials/publishing-with-visual-studio.md
+    - name: 在 Visual Studio 中创建 .NET Standard 库
+      href: tutorials/library-with-visual-studio.md
+    - name: 在 Visual Studio 中测试 .NET Standard 库
+      href: tutorials/testing-library-with-visual-studio.md
+    - name: 在 Visual Studio 中使用 .NET Standard 库
+      href: tutorials/consuming-library-with-visual-studio.md
+    - name: 在 macOS 上构建完整的 .NET Core 解决方案
+      href: tutorials/using-on-mac-vs-full-solution.md
     - name: 使用 .NET Core CLI 组织和测试项目
       href: tutorials/testing-with-cli.md
     - name: 使用跨平台工具开发库
