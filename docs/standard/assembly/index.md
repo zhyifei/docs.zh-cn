@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 968eaf2befb44eb893699d1114b315a4f5df3097
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: f85fef37ac952c91ac73570f26d80d8a46f4eedf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921374"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156500"
 ---
 # <a name="assemblies-in-net"></a>.NET 中的程序集
 
@@ -85,7 +85,7 @@ ms.locfileid: "76921374"
 必须添加对应用程序中的程序集的引用，才能使用该程序集。 引用程序集后，应用程序可以使用其名称空间的所有可访问类型、属性、方法和其他成员，就好像它们的代码是源文件的一部分一样。
 
 > [!NOTE]
-> .NET 类库中的大多数程序集都是自动引用的。 如果系统程序集不是自动引用的，则对于 .NET Core，可以添加对包含该程序集的 NuGet 包的引用。 请使用 Visual Studio 中的 NuGet 包管理器，或者将程序集的 [\<PackageReference>](../../core/tools/dependencies.md#the-new-packagereference-element) 元素添加到 .csproj 或 .vbproj 项目   。 在 .NET Framework 中，可以通过在 Visual Studio 中使用“添加引用”对话框，或者通过使用 [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) 或 [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) 编译器的 `-reference` 命令行选项，添加对该程序集的引用  。
+> .NET 类库中的大多数程序集都是自动引用的。 如果系统程序集不是自动引用的，则对于 .NET Core，可以添加对包含该程序集的 NuGet 包的引用。 请使用 Visual Studio 中的 NuGet 包管理器，或者将程序集的 [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) 元素添加到 .csproj 或 .vbproj 项目   。 在 .NET Framework 中，可以通过在 Visual Studio 中使用“添加引用”对话框，或者通过使用 [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) 或 [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) 编译器的 `-reference` 命令行选项，添加对该程序集的引用  。
 
 在 C# 中，可以在单个应用程序中使用同一程序集的两个版本。 有关详细信息，请参阅[外部别名](../../csharp/language-reference/keywords/extern-alias.md)。
 

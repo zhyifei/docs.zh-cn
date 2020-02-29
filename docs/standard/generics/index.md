@@ -26,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: f04b6fcd1641a53efe75d38ab7122967bff6a58d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f20e5108ad8bff602f5b761e65f093d987f2608
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708366"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156304"
 ---
 # <a name="generics-in-net"></a>.NET 中的泛型
 
@@ -124,7 +124,7 @@ ms.locfileid: "75708366"
   
  公共语言运行时提供了新的操作码和前缀来支持 Microsoft 中间语言 (MSIL) 中的泛型类型，包括 <xref:System.Reflection.Emit.OpCodes.Stelem>、 <xref:System.Reflection.Emit.OpCodes.Ldelem>、 <xref:System.Reflection.Emit.OpCodes.Unbox_Any>、 <xref:System.Reflection.Emit.OpCodes.Constrained>和 <xref:System.Reflection.Emit.OpCodes.Readonly>。  
   
- Visual C++、C# 和 Visual Basic 都对定义和使用泛型提供完全支持。 有关语言支持的详细信息，请参阅 [Visual Basic 中的泛型类型](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)、[泛型简介](../../csharp/programming-guide/generics/index.md)和 [Visual C++ 中的泛型概述](/cpp/windows/overview-of-generics-in-visual-cpp)。 
+ Visual C++、C# 和 Visual Basic 都对定义和使用泛型提供完全支持。 有关语言支持的详细信息，请参阅 [Visual Basic 中的泛型类型](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)、[泛型简介](../../csharp/programming-guide/generics/index.md)和 [Visual C++ 中的泛型概述](/cpp/windows/overview-of-generics-in-visual-cpp)。
 
 ## <a name="nested-types-and-generics"></a>嵌套类型和泛型  
  嵌套在泛型类型中的类型可取决于封闭泛型类型的类型参数。 公共语言运行时将嵌套类型看作泛型，即使它们不具有自己的泛型类型形参。 创建嵌套类型的实例时，必须指定所有封闭泛型类型的类型实参。  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423530"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159619"
 ---
 # <a name="handling-and-raising-events"></a>处理和引发事件
 
@@ -27,7 +27,7 @@ ms.locfileid: "73423530"
   
  有关在 Windows 8.x Store 应用中处理事件的信息，请参阅[事件和路由事件概述](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10))。  
   
-## <a name="events"></a>活动
+## <a name="events"></a>事件
 
 事件是由对象发送的用于发出操作信号的消息。 该操作可能是由用户交互引起，例如单击按钮；也可能是由某些其他程序的逻辑导致，例如更改属性值。 引发事件的对象称为“事件发送方”  。 事件发送方不知道哪个对象或方法将接收（处理）它引发的事件。 事件通常是事件发送方的成员，例如 <xref:System.Web.UI.WebControls.Button.Click> 事件是 <xref:System.Web.UI.WebControls.Button> 类的成员，<xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件是实现  <xref:System.ComponentModel.INotifyPropertyChanged> 接口的类的成员。  
   
@@ -78,17 +78,17 @@ ms.locfileid: "73423530"
 [!code-vb[EventsOverview#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>静态和动态事件处理程序  
- 
+
 借助 .NET，订阅者可以进行静态或动态注册以获得事件通知。 对于其事件由静态事件处理程序进行处理的类，静态事件处理程序对其整个生命周期有效。 通常为响应某些条件程序逻辑，会在程序执行期间显式激活和停用动态事件处理程序。 例如，如果仅在特定条件下需要事件通知，或如果应用程序提供多个事件处理程序且由运行时条件定义要使用的适当事件处理程序，则可以使用动态事件处理程序。 上一节中的示例演示如何动态添加事件处理程序。 有关详细信息，请查看 Visual Basic 中的[事件](../../visual-basic/programming-guide/language-features/events/index.md)和 C# 中的[事件](../../csharp/programming-guide/events/index.md)。  
   
 ## <a name="raising-multiple-events"></a>引发多个事件  
  如果您的类引发多个事件，编译器会为每一个事件委托实例生成一个字段。 如果事件数量很大，则可能无法接受按一个委托计算一个字段的存储成本。 对于这些情况，.NET 提供一个事件属性，可以将其与选择的另一数据结构一起用于存储事件委托。  
   
- 事件属性由事件声明和事件访问器组成。 事件访问器是您定义的方法，用来从存储数据结构添加和移除事件委托实例。 请注意，事件属性要比事件字段慢，这是因为必须先检索每个事件委托，然后才能调用它。 需在内存和速度之间进行权衡。 如果类定义许多不常引发的事件，那么需要实现事件属性。 有关更多信息，请参阅[如何：使用事件属性处理多个事件](how-to-handle-multiple-events-using-event-properties.md)。  
+ 事件属性由事件声明和事件访问器组成。 事件访问器是您定义的方法，用来从存储数据结构添加和移除事件委托实例。 请注意，事件属性要比事件字段慢，这是因为必须先检索每个事件委托，然后才能调用它。 需在内存和速度之间进行权衡。 如果类定义许多不常引发的事件，那么需要实现事件属性。 有关详细信息，请参阅[如何：使用事件属性处理多个事件](how-to-handle-multiple-events-using-event-properties.md)。  
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|说明|  
+|Title|描述|  
 |-----------|-----------------|  
 |[如何：抛出和使用事件](how-to-raise-and-consume-events.md)|包含引发和使用事件的示例。|  
 |[如何：使用事件属性处理多个事件](how-to-handle-multiple-events-using-event-properties.md)|演示如何使用事件属性处理多个事件。|  
