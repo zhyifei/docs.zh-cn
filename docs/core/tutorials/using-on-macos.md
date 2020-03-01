@@ -2,53 +2,53 @@
 title: 教程：使用 Visual Studio Code 在 macOS 中创建 .NET Core 解决方案
 description: 本文档提供使用 Visual Studio Code 创建 .NET Core 解决方案的步骤和工作流概述。
 ms.date: 12/19/2019
-ms.openlocfilehash: e3c210d4391c0e3c9c3455ecf23dd138abdb4363
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f5da16d413ddc25587ff35550fe9f308dc87f4bb
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741539"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156590"
 ---
-# <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a><span data-ttu-id="83f4f-103">教程：使用 Visual Studio Code 在 macOS 中创建 .NET Core 解决方案</span><span class="sxs-lookup"><span data-stu-id="83f4f-103">Tutorial: Create a .NET Core solution in macOS using Visual Studio Code</span></span>
+# <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a><span data-ttu-id="f25b0-103">教程：使用 Visual Studio Code 在 macOS 中创建 .NET Core 解决方案</span><span class="sxs-lookup"><span data-stu-id="f25b0-103">Tutorial: Create a .NET Core solution in macOS using Visual Studio Code</span></span>
 
-<span data-ttu-id="83f4f-104">本文档提供为 macOS 创建 .NET Core 解决方案的步骤和工作流概述。</span><span class="sxs-lookup"><span data-stu-id="83f4f-104">This document provides the steps and workflow to create a .NET Core solution for macOS.</span></span> <span data-ttu-id="83f4f-105">了解到如何通过 [NuGet](https://www.nuget.org/) 创建项目、单元测试、使用调试工具和合并第三方库。</span><span class="sxs-lookup"><span data-stu-id="83f4f-105">Learn how to create projects, unit tests, use the debugging tools, and incorporate third-party libraries via [NuGet](https://www.nuget.org/).</span></span>
+<span data-ttu-id="f25b0-104">本文档提供为 macOS 创建 .NET Core 解决方案的步骤和工作流概述。</span><span class="sxs-lookup"><span data-stu-id="f25b0-104">This document provides the steps and workflow to create a .NET Core solution for macOS.</span></span> <span data-ttu-id="f25b0-105">了解到如何通过 [NuGet](https://www.nuget.org/) 创建项目、单元测试、使用调试工具和合并第三方库。</span><span class="sxs-lookup"><span data-stu-id="f25b0-105">Learn how to create projects, unit tests, use the debugging tools, and incorporate third-party libraries via [NuGet](https://www.nuget.org/).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="83f4f-106">本文在 macOS 上使用 [Visual Studio Code](https://code.visualstudio.com)。</span><span class="sxs-lookup"><span data-stu-id="83f4f-106">This article uses [Visual Studio Code](https://code.visualstudio.com) on macOS.</span></span>
+> <span data-ttu-id="f25b0-106">本文在 macOS 上使用 [Visual Studio Code](https://code.visualstudio.com)。</span><span class="sxs-lookup"><span data-stu-id="f25b0-106">This article uses [Visual Studio Code](https://code.visualstudio.com) on macOS.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="83f4f-107">先决条件</span><span class="sxs-lookup"><span data-stu-id="83f4f-107">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="f25b0-107">先决条件</span><span class="sxs-lookup"><span data-stu-id="f25b0-107">Prerequisites</span></span>
 
-<span data-ttu-id="83f4f-108">获取 [.NET Core SDK](https://dotnet.microsoft.com/download)。</span><span class="sxs-lookup"><span data-stu-id="83f4f-108">Install the [.NET Core SDK](https://dotnet.microsoft.com/download).</span></span> <span data-ttu-id="83f4f-109">.NET Core SDK 包括最新版本的 .NET Core 框架和运行时。</span><span class="sxs-lookup"><span data-stu-id="83f4f-109">The .NET Core SDK includes the latest release of the .NET Core framework and runtime.</span></span>
+<span data-ttu-id="f25b0-108">获取 [.NET Core SDK](https://dotnet.microsoft.com/download)。</span><span class="sxs-lookup"><span data-stu-id="f25b0-108">Install the [.NET Core SDK](https://dotnet.microsoft.com/download).</span></span> <span data-ttu-id="f25b0-109">.NET Core SDK 包括最新版本的 .NET Core 框架和运行时。</span><span class="sxs-lookup"><span data-stu-id="f25b0-109">The .NET Core SDK includes the latest release of the .NET Core framework and runtime.</span></span>
 
-<span data-ttu-id="83f4f-110">安装 [Visual Studio Code](https://code.visualstudio.com)。</span><span class="sxs-lookup"><span data-stu-id="83f4f-110">Install [Visual Studio Code](https://code.visualstudio.com).</span></span> <span data-ttu-id="83f4f-111">在本文中，还将安装可提升 .NET Core 开发体验的 Visual Studio Code 扩展。</span><span class="sxs-lookup"><span data-stu-id="83f4f-111">During the course of this article, you also install Visual Studio Code extensions that improve the .NET Core development experience.</span></span>
+<span data-ttu-id="f25b0-110">安装 [Visual Studio Code](https://code.visualstudio.com)。</span><span class="sxs-lookup"><span data-stu-id="f25b0-110">Install [Visual Studio Code](https://code.visualstudio.com).</span></span> <span data-ttu-id="f25b0-111">在本文中，还将安装可提升 .NET Core 开发体验的 Visual Studio Code 扩展。</span><span class="sxs-lookup"><span data-stu-id="f25b0-111">During the course of this article, you also install Visual Studio Code extensions that improve the .NET Core development experience.</span></span>
 
-<span data-ttu-id="83f4f-112">打开 Visual Studio Code，并按 <kbd>Fn</kbd>+<kbd>F1</kbd> 打开 Visual Studio Code 面板，从而安装 Visual Studio Code C# 扩展。</span><span class="sxs-lookup"><span data-stu-id="83f4f-112">Install the Visual Studio Code C# extension by opening Visual Studio Code and pressing <kbd>Fn</kbd>+<kbd>F1</kbd> to open the Visual Studio Code palette.</span></span> <span data-ttu-id="83f4f-113">键入 ext install  ，查看扩展列表。</span><span class="sxs-lookup"><span data-stu-id="83f4f-113">Type **ext install** to see the list of extensions.</span></span> <span data-ttu-id="83f4f-114">选择 C# 扩展。</span><span class="sxs-lookup"><span data-stu-id="83f4f-114">Select the C# extension.</span></span> <span data-ttu-id="83f4f-115">重启 Visual Studio Code 以激活扩展。</span><span class="sxs-lookup"><span data-stu-id="83f4f-115">Restart Visual Studio Code to activate the extension.</span></span> <span data-ttu-id="83f4f-116">有关详细信息，请参阅 [Visual Basic Code C# 扩展文档](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。</span><span class="sxs-lookup"><span data-stu-id="83f4f-116">For more information, see the [Visual Studio Code C# Extension documentation](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).</span></span>
+<span data-ttu-id="f25b0-112">打开 Visual Studio Code，并按 <kbd>Fn</kbd>+<kbd>F1</kbd> 打开 Visual Studio Code 面板，从而安装 Visual Studio Code C# 扩展。</span><span class="sxs-lookup"><span data-stu-id="f25b0-112">Install the Visual Studio Code C# extension by opening Visual Studio Code and pressing <kbd>Fn</kbd>+<kbd>F1</kbd> to open the Visual Studio Code palette.</span></span> <span data-ttu-id="f25b0-113">键入 ext install  ，查看扩展列表。</span><span class="sxs-lookup"><span data-stu-id="f25b0-113">Type **ext install** to see the list of extensions.</span></span> <span data-ttu-id="f25b0-114">选择 C# 扩展。</span><span class="sxs-lookup"><span data-stu-id="f25b0-114">Select the C# extension.</span></span> <span data-ttu-id="f25b0-115">重启 Visual Studio Code 以激活扩展。</span><span class="sxs-lookup"><span data-stu-id="f25b0-115">Restart Visual Studio Code to activate the extension.</span></span> <span data-ttu-id="f25b0-116">有关详细信息，请参阅 [Visual Basic Code C# 扩展文档](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。</span><span class="sxs-lookup"><span data-stu-id="f25b0-116">For more information, see the [Visual Studio Code C# Extension documentation](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).</span></span>
 
-## <a name="get-started"></a><span data-ttu-id="83f4f-117">入门</span><span class="sxs-lookup"><span data-stu-id="83f4f-117">Get started</span></span>
+## <a name="get-started"></a><span data-ttu-id="f25b0-117">入门</span><span class="sxs-lookup"><span data-stu-id="f25b0-117">Get started</span></span>
 
-<span data-ttu-id="83f4f-118">在本教程中，将创建三个项目：库项目、对该库项目的测试和使用该库的控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="83f4f-118">In this tutorial, you create three projects: a library project, tests for that library project, and a console application that makes use of the library.</span></span> <span data-ttu-id="83f4f-119">若要[查看或下载本文的源代码](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)，请访问 GitHub 上的 dotnet/samples 存储库。</span><span class="sxs-lookup"><span data-stu-id="83f4f-119">You can [view or download the source](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) for this article at the dotnet/samples repository on GitHub.</span></span> <span data-ttu-id="83f4f-120">有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。</span><span class="sxs-lookup"><span data-stu-id="83f4f-120">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
+<span data-ttu-id="f25b0-118">在本教程中，将创建三个项目：库项目、对该库项目的测试和使用该库的控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="f25b0-118">In this tutorial, you create three projects: a library project, tests for that library project, and a console application that makes use of the library.</span></span> <span data-ttu-id="f25b0-119">若要[查看或下载本文的源代码](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)，请访问 GitHub 上的 dotnet/samples 存储库。</span><span class="sxs-lookup"><span data-stu-id="f25b0-119">You can [view or download the source](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) for this article at the dotnet/samples repository on GitHub.</span></span> <span data-ttu-id="f25b0-120">有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。</span><span class="sxs-lookup"><span data-stu-id="f25b0-120">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-<span data-ttu-id="83f4f-121">启动 Visual Studio Code。</span><span class="sxs-lookup"><span data-stu-id="83f4f-121">Start Visual Studio Code.</span></span> <span data-ttu-id="83f4f-122">按 <kbd>Ctrl</kbd><kbd>\`</kbd>   >   （反引号）或在菜单中依次选择“视图”>“终端”，在 Visual Studio Code 中打开嵌入式终端。</span><span class="sxs-lookup"><span data-stu-id="83f4f-122">Press <kbd>Ctrl</kbd><kbd>\`</kbd> (the backquote or backtick character) or select **View** > **Terminal** from the menu to open an embedded terminal in Visual Studio Code.</span></span> <span data-ttu-id="83f4f-123">若要在 Visual Studio Code 外部执行操作，仍可以使用资源管理器的“通过命令提示符打开”  （在 macOS 或 Linux 上，为“在终端中打开”  ）命令打开外部 shell。</span><span class="sxs-lookup"><span data-stu-id="83f4f-123">You can still open an external shell with the Explorer **Open in Command Prompt** command (**Open in Terminal** on macOS or Linux) if you prefer to work outside of Visual Studio Code.</span></span>
+<span data-ttu-id="f25b0-121">启动 Visual Studio Code。</span><span class="sxs-lookup"><span data-stu-id="f25b0-121">Start Visual Studio Code.</span></span> <span data-ttu-id="f25b0-122">按 <kbd>Ctrl</kbd><kbd>\`</kbd>   >   （反引号）或在菜单中依次选择“视图”>“终端”，在 Visual Studio Code 中打开嵌入式终端。</span><span class="sxs-lookup"><span data-stu-id="f25b0-122">Press <kbd>Ctrl</kbd><kbd>\`</kbd> (the backquote or backtick character) or select **View** > **Terminal** from the menu to open an embedded terminal in Visual Studio Code.</span></span> <span data-ttu-id="f25b0-123">若要在 Visual Studio Code 外部执行操作，仍可以使用资源管理器的“通过命令提示符打开”  （在 macOS 或 Linux 上，为“在终端中打开”  ）命令打开外部 shell。</span><span class="sxs-lookup"><span data-stu-id="f25b0-123">You can still open an external shell with the Explorer **Open in Command Prompt** command (**Open in Terminal** on macOS or Linux) if you prefer to work outside of Visual Studio Code.</span></span>
 
-<span data-ttu-id="83f4f-124">首先创建一个解决方案文件，它将用作一个或多个 .NET Core 项目的容器。</span><span class="sxs-lookup"><span data-stu-id="83f4f-124">Begin by creating a solution file, which serves as a container for one or more .NET Core projects.</span></span> <span data-ttu-id="83f4f-125">在终端中，运行 [`dotnet new`](../tools/dotnet-new.md) 命令以在名为 golden  的新文件夹中创建新的解决方案 golden.sln  ：</span><span class="sxs-lookup"><span data-stu-id="83f4f-125">In the terminal, run the [`dotnet new`](../tools/dotnet-new.md) command to create a new solution *golden.sln* inside a new folder named *golden*:</span></span>
+<span data-ttu-id="f25b0-124">首先创建一个解决方案文件，它将用作一个或多个 .NET Core 项目的容器。</span><span class="sxs-lookup"><span data-stu-id="f25b0-124">Begin by creating a solution file, which serves as a container for one or more .NET Core projects.</span></span> <span data-ttu-id="f25b0-125">在终端中，运行 [`dotnet new`](../tools/dotnet-new.md) 命令以在名为 golden  的新文件夹中创建新的解决方案 golden.sln  ：</span><span class="sxs-lookup"><span data-stu-id="f25b0-125">In the terminal, run the [`dotnet new`](../tools/dotnet-new.md) command to create a new solution *golden.sln* inside a new folder named *golden*:</span></span>
 
 ```dotnetcli
 dotnet new sln -o golden
 ```
 
-<span data-ttu-id="83f4f-126">导航到新的 golden  文件夹，执行下列命令来创建库项目，它将在库  文件夹中生成 library.csproj  和 Class1.cs  这两个文件：</span><span class="sxs-lookup"><span data-stu-id="83f4f-126">Navigate to the new *golden* folder and execute the following command to create a library project, which produces two files,*library.csproj* and *Class1.cs*, in the *library* folder:</span></span>
+<span data-ttu-id="f25b0-126">导航到新的 golden  文件夹，执行下列命令来创建库项目，它将在库  文件夹中生成 library.csproj  和 Class1.cs  这两个文件：</span><span class="sxs-lookup"><span data-stu-id="f25b0-126">Navigate to the new *golden* folder and execute the following command to create a library project, which produces two files,*library.csproj* and *Class1.cs*, in the *library* folder:</span></span>
 
 ```dotnetcli
 dotnet new classlib -o library
 ```
 
-<span data-ttu-id="83f4f-127">执行 [`dotnet sln`](../tools/dotnet-sln.md) 命令，将新创建的 library.csproj  添加到解决方案：</span><span class="sxs-lookup"><span data-stu-id="83f4f-127">Execute the [`dotnet sln`](../tools/dotnet-sln.md) command to add the newly created *library.csproj* project to the solution:</span></span>
+<span data-ttu-id="f25b0-127">执行 [`dotnet sln`](../tools/dotnet-sln.md) 命令，将新创建的 library.csproj  添加到解决方案：</span><span class="sxs-lookup"><span data-stu-id="f25b0-127">Execute the [`dotnet sln`](../tools/dotnet-sln.md) command to add the newly created *library.csproj* project to the solution:</span></span>
 
 ```dotnetcli
 dotnet sln add library/library.csproj
 ```
 
-<span data-ttu-id="83f4f-128">*library.csproj* 文件包含以下信息：</span><span class="sxs-lookup"><span data-stu-id="83f4f-128">The *library.csproj* file contains the following information:</span></span>
+<span data-ttu-id="f25b0-128">*library.csproj* 文件包含以下信息：</span><span class="sxs-lookup"><span data-stu-id="f25b0-128">The *library.csproj* file contains the following information:</span></span>
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -60,13 +60,13 @@ dotnet sln add library/library.csproj
 </Project>
 ```
 
-<span data-ttu-id="83f4f-129">库方法以 JSON 格式串行化和反序列化对象。</span><span class="sxs-lookup"><span data-stu-id="83f4f-129">Our library methods serialize and deserialize objects in JSON format.</span></span> <span data-ttu-id="83f4f-130">若要支持 JSON 序列化和反序列化，请添加对 `Newtonsoft.Json` NuGet 包的引用。</span><span class="sxs-lookup"><span data-stu-id="83f4f-130">To support JSON serialization and deserialization, add a reference to the `Newtonsoft.Json` NuGet package.</span></span> <span data-ttu-id="83f4f-131">`dotnet add` 命令向项目添加新项。</span><span class="sxs-lookup"><span data-stu-id="83f4f-131">The `dotnet add` command adds new items to a project.</span></span> <span data-ttu-id="83f4f-132">若要添加对 NuGet 包的引用，请使用 [`dotnet add package`](../tools/dotnet-add-package.md) 命令并指定包的名称：</span><span class="sxs-lookup"><span data-stu-id="83f4f-132">To add a reference to a NuGet package, use the [`dotnet add package`](../tools/dotnet-add-package.md) command and specify the name of the package:</span></span>
+<span data-ttu-id="f25b0-129">库方法以 JSON 格式串行化和反序列化对象。</span><span class="sxs-lookup"><span data-stu-id="f25b0-129">Our library methods serialize and deserialize objects in JSON format.</span></span> <span data-ttu-id="f25b0-130">若要支持 JSON 序列化和反序列化，请添加对 `Newtonsoft.Json` NuGet 包的引用。</span><span class="sxs-lookup"><span data-stu-id="f25b0-130">To support JSON serialization and deserialization, add a reference to the `Newtonsoft.Json` NuGet package.</span></span> <span data-ttu-id="f25b0-131">`dotnet add` 命令向项目添加新项。</span><span class="sxs-lookup"><span data-stu-id="f25b0-131">The `dotnet add` command adds new items to a project.</span></span> <span data-ttu-id="f25b0-132">若要添加对 NuGet 包的引用，请使用 [`dotnet add package`](../tools/dotnet-add-package.md) 命令并指定包的名称：</span><span class="sxs-lookup"><span data-stu-id="f25b0-132">To add a reference to a NuGet package, use the [`dotnet add package`](../tools/dotnet-add-package.md) command and specify the name of the package:</span></span>
 
 ```dotnetcli
 dotnet add library package Newtonsoft.Json
 ```
 
-<span data-ttu-id="83f4f-133">这会将 `Newtonsoft.Json` 及其依赖项添加到库项目。</span><span class="sxs-lookup"><span data-stu-id="83f4f-133">This adds `Newtonsoft.Json` and its dependencies to the library project.</span></span> <span data-ttu-id="83f4f-134">或者，可以手动编辑 library.csproj  文件，并添加以下节点：</span><span class="sxs-lookup"><span data-stu-id="83f4f-134">Alternatively, manually edit the *library.csproj* file and add the following node:</span></span>
+<span data-ttu-id="f25b0-133">这会将 `Newtonsoft.Json` 及其依赖项添加到库项目。</span><span class="sxs-lookup"><span data-stu-id="f25b0-133">This adds `Newtonsoft.Json` and its dependencies to the library project.</span></span> <span data-ttu-id="f25b0-134">或者，可以手动编辑 library.csproj  文件，并添加以下节点：</span><span class="sxs-lookup"><span data-stu-id="f25b0-134">Alternatively, manually edit the *library.csproj* file and add the following node:</span></span>
 
 ```xml
 <ItemGroup>
@@ -74,13 +74,13 @@ dotnet add library package Newtonsoft.Json
 </ItemGroup>
 ```
 
-<span data-ttu-id="83f4f-135">执行 [`dotnet restore`](../tools/dotnet-restore.md)（[请参阅注释](#dotnet-restore-note)），这将还原依赖项，并在库  中创建 obj  文件夹，该文件夹中包含三个文件，其中一个是 project.assets.json  文件：</span><span class="sxs-lookup"><span data-stu-id="83f4f-135">Execute [`dotnet restore`](../tools/dotnet-restore.md), ([see note](#dotnet-restore-note)) which restores dependencies and creates an *obj* folder inside *library* with three files in it, including a *project.assets.json* file:</span></span>
+<span data-ttu-id="f25b0-135">执行 [`dotnet restore`](../tools/dotnet-restore.md)（[请参阅注释](#dotnet-restore-note)），这将还原依赖项，并在库  中创建 obj  文件夹，该文件夹中包含三个文件，其中一个是 project.assets.json  文件：</span><span class="sxs-lookup"><span data-stu-id="f25b0-135">Execute [`dotnet restore`](../tools/dotnet-restore.md), ([see note](#dotnet-restore-note)) which restores dependencies and creates an *obj* folder inside *library* with three files in it, including a *project.assets.json* file:</span></span>
 
 ```dotnetcli
 dotnet restore
 ```
 
-<span data-ttu-id="83f4f-136">在库  文件夹中，将文件 Class1.cs  重命名为 Thing.cs  。</span><span class="sxs-lookup"><span data-stu-id="83f4f-136">In the *library* folder, rename the file *Class1.cs* to *Thing.cs*.</span></span> <span data-ttu-id="83f4f-137">将代码替换为以下内容：</span><span class="sxs-lookup"><span data-stu-id="83f4f-137">Replace the code with the following:</span></span>
+<span data-ttu-id="f25b0-136">在库  文件夹中，将文件 Class1.cs  重命名为 Thing.cs  。</span><span class="sxs-lookup"><span data-stu-id="f25b0-136">In the *library* folder, rename the file *Class1.cs* to *Thing.cs*.</span></span> <span data-ttu-id="f25b0-137">将代码替换为以下内容：</span><span class="sxs-lookup"><span data-stu-id="f25b0-137">Replace the code with the following:</span></span>
 
 ```csharp
 using static Newtonsoft.Json.JsonConvert;
@@ -95,35 +95,35 @@ namespace Library
 }
 ```
 
-<span data-ttu-id="83f4f-138">`Thing` 类包含一个公共方法 `Get`，它返回两个数字的总和，实现方法是将总和转换为字符串，然后反序列化为一个整数。</span><span class="sxs-lookup"><span data-stu-id="83f4f-138">The `Thing` class contains one public method, `Get`, which returns the sum of two numbers but does so by converting the sum into a string and then deserializing it into an integer.</span></span> <span data-ttu-id="83f4f-139">这将使用大量现代 C# 功能，如[`using static` 指令](../../csharp/language-reference/keywords/using-static.md)、[expression-bodied 成员](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members)和[字符串内插](../../csharp/language-reference/tokens/interpolated.md)。</span><span class="sxs-lookup"><span data-stu-id="83f4f-139">This makes use of a number of modern C# features, such as [`using static` directives](../../csharp/language-reference/keywords/using-static.md), [expression-bodied members](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members), and [string interpolation](../../csharp/language-reference/tokens/interpolated.md).</span></span>
+<span data-ttu-id="f25b0-138">`Thing` 类包含一个公共方法 `Get`，它返回两个数字的总和，实现方法是将总和转换为字符串，然后反序列化为一个整数。</span><span class="sxs-lookup"><span data-stu-id="f25b0-138">The `Thing` class contains one public method, `Get`, which returns the sum of two numbers but does so by converting the sum into a string and then deserializing it into an integer.</span></span> <span data-ttu-id="f25b0-139">这将使用大量现代 C# 功能，如[`using static` 指令](../../csharp/language-reference/keywords/using-static.md)、[expression-bodied 成员](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members)和[字符串内插](../../csharp/language-reference/tokens/interpolated.md)。</span><span class="sxs-lookup"><span data-stu-id="f25b0-139">This makes use of a number of modern C# features, such as [`using static` directives](../../csharp/language-reference/keywords/using-static.md), [expression-bodied members](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members), and [string interpolation](../../csharp/language-reference/tokens/interpolated.md).</span></span>
 
-<span data-ttu-id="83f4f-140">使用 [`dotnet build`](../tools/dotnet-build.md) 命令生成库。</span><span class="sxs-lookup"><span data-stu-id="83f4f-140">Build the library with the [`dotnet build`](../tools/dotnet-build.md) command.</span></span> <span data-ttu-id="83f4f-141">这将在 golden/library/bin/Debug/netstandard1.4  下生成一个 library.dll  文件：</span><span class="sxs-lookup"><span data-stu-id="83f4f-141">This produces a *library.dll* file under *golden/library/bin/Debug/netstandard1.4*:</span></span>
+<span data-ttu-id="f25b0-140">使用 [`dotnet build`](../tools/dotnet-build.md) 命令生成库。</span><span class="sxs-lookup"><span data-stu-id="f25b0-140">Build the library with the [`dotnet build`](../tools/dotnet-build.md) command.</span></span> <span data-ttu-id="f25b0-141">这将在 golden/library/bin/Debug/netstandard1.4  下生成一个 library.dll  文件：</span><span class="sxs-lookup"><span data-stu-id="f25b0-141">This produces a *library.dll* file under *golden/library/bin/Debug/netstandard1.4*:</span></span>
 
 ```dotnetcli
 dotnet build
 ```
 
-## <a name="create-the-test-project"></a><span data-ttu-id="83f4f-142">创建测试项目</span><span class="sxs-lookup"><span data-stu-id="83f4f-142">Create the test project</span></span>
+## <a name="create-the-test-project"></a><span data-ttu-id="f25b0-142">创建测试项目</span><span class="sxs-lookup"><span data-stu-id="f25b0-142">Create the test project</span></span>
 
-<span data-ttu-id="83f4f-143">生成针对库的测试项目。</span><span class="sxs-lookup"><span data-stu-id="83f4f-143">Build a test project for the library.</span></span> <span data-ttu-id="83f4f-144">在 golden  文件夹中，创建一个新测试项目：</span><span class="sxs-lookup"><span data-stu-id="83f4f-144">From the *golden* folder, create a new test project:</span></span>
+<span data-ttu-id="f25b0-143">生成针对库的测试项目。</span><span class="sxs-lookup"><span data-stu-id="f25b0-143">Build a test project for the library.</span></span> <span data-ttu-id="f25b0-144">在 golden  文件夹中，创建一个新测试项目：</span><span class="sxs-lookup"><span data-stu-id="f25b0-144">From the *golden* folder, create a new test project:</span></span>
 
 ```dotnetcli
 dotnet new xunit -o test-library
 ```
 
-<span data-ttu-id="83f4f-145">向解决方案添加测试项目：</span><span class="sxs-lookup"><span data-stu-id="83f4f-145">Add the test project to the solution:</span></span>
+<span data-ttu-id="f25b0-145">向解决方案添加测试项目：</span><span class="sxs-lookup"><span data-stu-id="f25b0-145">Add the test project to the solution:</span></span>
 
 ```dotnetcli
 dotnet sln add test-library/test-library.csproj
 ```
 
-<span data-ttu-id="83f4f-146">在上一节创建的库中添加项目引用，这样编译器就可以查找并使用该库项目。</span><span class="sxs-lookup"><span data-stu-id="83f4f-146">Add a project reference the library you created in the previous section so that the compiler can find and use the library project.</span></span> <span data-ttu-id="83f4f-147">使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：</span><span class="sxs-lookup"><span data-stu-id="83f4f-147">Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
+<span data-ttu-id="f25b0-146">在上一节创建的库中添加项目引用，这样编译器就可以查找并使用该库项目。</span><span class="sxs-lookup"><span data-stu-id="f25b0-146">Add a project reference the library you created in the previous section so that the compiler can find and use the library project.</span></span> <span data-ttu-id="f25b0-147">使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：</span><span class="sxs-lookup"><span data-stu-id="f25b0-147">Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
 
 ```dotnetcli
 dotnet add test-library/test-library.csproj reference library/library.csproj
 ```
 
-<span data-ttu-id="83f4f-148">或者，可以手动编辑 test-library.csproj  文件，并添加以下节点：</span><span class="sxs-lookup"><span data-stu-id="83f4f-148">Alternatively, manually edit the *test-library.csproj* file and add the following node:</span></span>
+<span data-ttu-id="f25b0-148">或者，可以手动编辑 test-library.csproj  文件，并添加以下节点：</span><span class="sxs-lookup"><span data-stu-id="f25b0-148">Alternatively, manually edit the *test-library.csproj* file and add the following node:</span></span>
 
 ```xml
 <ItemGroup>
@@ -131,7 +131,7 @@ dotnet add test-library/test-library.csproj reference library/library.csproj
 </ItemGroup>
 ```
 
-<span data-ttu-id="83f4f-149">现已正确配置依赖项，可以开始创建库的测试项目。</span><span class="sxs-lookup"><span data-stu-id="83f4f-149">Now that the dependencies have been properly configured, create the tests for your library.</span></span> <span data-ttu-id="83f4f-150">打开 *UnitTest1.cs*，用以下代码替代其内容：</span><span class="sxs-lookup"><span data-stu-id="83f4f-150">Open *UnitTest1.cs* and replace its contents with the following code:</span></span>
+<span data-ttu-id="f25b0-149">现已正确配置依赖项，可以开始创建库的测试项目。</span><span class="sxs-lookup"><span data-stu-id="f25b0-149">Now that the dependencies have been properly configured, create the tests for your library.</span></span> <span data-ttu-id="f25b0-150">打开 *UnitTest1.cs*，用以下代码替代其内容：</span><span class="sxs-lookup"><span data-stu-id="f25b0-150">Open *UnitTest1.cs* and replace its contents with the following code:</span></span>
 
 ```csharp
 using Library;
@@ -150,73 +150,73 @@ namespace TestApp
 }
 ```
 
-<span data-ttu-id="83f4f-151">请注意，在首次创建单元测试 (`Assert.NotEqual`) 时，已断言值 42 不等于 19+23（或 42），因此测试将失败。</span><span class="sxs-lookup"><span data-stu-id="83f4f-151">Note that you assert the value 42 is not equal to 19+23 (or 42) when you first create the unit test (`Assert.NotEqual`), which will fail.</span></span> <span data-ttu-id="83f4f-152">生成单元测试的一个重要步骤是：使创建的测试最初失败一次，以便确认其逻辑正确无误。</span><span class="sxs-lookup"><span data-stu-id="83f4f-152">An important step in building unit tests is to create the test to fail once first to confirm its logic.</span></span>
+<span data-ttu-id="f25b0-151">请注意，在首次创建单元测试 (`Assert.NotEqual`) 时，已断言值 42 不等于 19+23（或 42），因此测试将失败。</span><span class="sxs-lookup"><span data-stu-id="f25b0-151">Note that you assert the value 42 is not equal to 19+23 (or 42) when you first create the unit test (`Assert.NotEqual`), which will fail.</span></span> <span data-ttu-id="f25b0-152">生成单元测试的一个重要步骤是：使创建的测试最初失败一次，以便确认其逻辑正确无误。</span><span class="sxs-lookup"><span data-stu-id="f25b0-152">An important step in building unit tests is to create the test to fail once first to confirm its logic.</span></span>
 
-<span data-ttu-id="83f4f-153">在 golden  文件夹中，执行下列命令：</span><span class="sxs-lookup"><span data-stu-id="83f4f-153">From the *golden* folder, execute the following commands:</span></span>
+<span data-ttu-id="f25b0-153">在 golden  文件夹中，执行下列命令：</span><span class="sxs-lookup"><span data-stu-id="f25b0-153">From the *golden* folder, execute the following commands:</span></span>
 
 ```dotnetcli
-dotnet restore 
+dotnet restore
 dotnet test test-library/test-library.csproj
 ```
 
-<span data-ttu-id="83f4f-154">这些命令将以递归形式查找所有项目，以还原依赖项、生成依赖性，并激活 xUnit 测试运行程序以运行测试。</span><span class="sxs-lookup"><span data-stu-id="83f4f-154">These commands will recursively find all projects to restore dependencies, build them, and activate the xUnit test runner to run the tests.</span></span> <span data-ttu-id="83f4f-155">该测试像预期那样失败。</span><span class="sxs-lookup"><span data-stu-id="83f4f-155">The single test fails, as you expect.</span></span>
+<span data-ttu-id="f25b0-154">这些命令将以递归形式查找所有项目，以还原依赖项、生成依赖性，并激活 xUnit 测试运行程序以运行测试。</span><span class="sxs-lookup"><span data-stu-id="f25b0-154">These commands will recursively find all projects to restore dependencies, build them, and activate the xUnit test runner to run the tests.</span></span> <span data-ttu-id="f25b0-155">该测试像预期那样失败。</span><span class="sxs-lookup"><span data-stu-id="f25b0-155">The single test fails, as you expect.</span></span>
 
-<span data-ttu-id="83f4f-156">编辑 UnitTest1.cs  文件，将断言从 `Assert.NotEqual` 更改为 `Assert.Equal`。</span><span class="sxs-lookup"><span data-stu-id="83f4f-156">Edit the *UnitTest1.cs* file and change the assertion from `Assert.NotEqual` to `Assert.Equal`.</span></span> <span data-ttu-id="83f4f-157">在 goldden  文件夹中执行下列命令，重新运行测试，此次测试通过：</span><span class="sxs-lookup"><span data-stu-id="83f4f-157">Execute the following command from the *golden* folder to re-run the test, which passes this time:</span></span>
+<span data-ttu-id="f25b0-156">编辑 UnitTest1.cs  文件，将断言从 `Assert.NotEqual` 更改为 `Assert.Equal`。</span><span class="sxs-lookup"><span data-stu-id="f25b0-156">Edit the *UnitTest1.cs* file and change the assertion from `Assert.NotEqual` to `Assert.Equal`.</span></span> <span data-ttu-id="f25b0-157">在 goldden  文件夹中执行下列命令，重新运行测试，此次测试通过：</span><span class="sxs-lookup"><span data-stu-id="f25b0-157">Execute the following command from the *golden* folder to re-run the test, which passes this time:</span></span>
 
 ```dotnetcli
 dotnet test test-library/test-library.csproj
 ```
 
-## <a name="create-the-console-app"></a><span data-ttu-id="83f4f-158">创建控制台应用</span><span class="sxs-lookup"><span data-stu-id="83f4f-158">Create the console app</span></span>
+## <a name="create-the-console-app"></a><span data-ttu-id="f25b0-158">创建控制台应用</span><span class="sxs-lookup"><span data-stu-id="f25b0-158">Create the console app</span></span>
 
-<span data-ttu-id="83f4f-159">通过以下步骤创建的控制台应用依赖于之前创建的库项目，并在运行时调用其库方法。</span><span class="sxs-lookup"><span data-stu-id="83f4f-159">The console app you create over the following steps takes a dependency on the library project you created earlier and calls its library method when it runs.</span></span> <span data-ttu-id="83f4f-160">使用此开发模式，可了解如何创建多个项目的可重用库。</span><span class="sxs-lookup"><span data-stu-id="83f4f-160">Using this pattern of development, you see how to create reusable libraries for multiple projects.</span></span>
+<span data-ttu-id="f25b0-159">通过以下步骤创建的控制台应用依赖于之前创建的库项目，并在运行时调用其库方法。</span><span class="sxs-lookup"><span data-stu-id="f25b0-159">The console app you create over the following steps takes a dependency on the library project you created earlier and calls its library method when it runs.</span></span> <span data-ttu-id="f25b0-160">使用此开发模式，可了解如何创建多个项目的可重用库。</span><span class="sxs-lookup"><span data-stu-id="f25b0-160">Using this pattern of development, you see how to create reusable libraries for multiple projects.</span></span>
 
-<span data-ttu-id="83f4f-161">在 golden  文件夹中创建新的控制台应用程序：</span><span class="sxs-lookup"><span data-stu-id="83f4f-161">Create a new console application from the *golden* folder:</span></span>
+<span data-ttu-id="f25b0-161">在 golden  文件夹中创建新的控制台应用程序：</span><span class="sxs-lookup"><span data-stu-id="f25b0-161">Create a new console application from the *golden* folder:</span></span>
 
 ```dotnetcli
 dotnet new console -o app
 ```
 
-<span data-ttu-id="83f4f-162">向解决方案添加控制台应用项目：</span><span class="sxs-lookup"><span data-stu-id="83f4f-162">Add the console app project to the solution:</span></span>
+<span data-ttu-id="f25b0-162">向解决方案添加控制台应用项目：</span><span class="sxs-lookup"><span data-stu-id="f25b0-162">Add the console app project to the solution:</span></span>
 
 ```dotnetcli
 dotnet sln add app/app.csproj
 ```
 
-<span data-ttu-id="83f4f-163">运行 `dotnet add reference` 命令，创建库的依赖项：</span><span class="sxs-lookup"><span data-stu-id="83f4f-163">Create the dependency on the library by running the `dotnet add reference` command:</span></span>
+<span data-ttu-id="f25b0-163">运行 `dotnet add reference` 命令，创建库的依赖项：</span><span class="sxs-lookup"><span data-stu-id="f25b0-163">Create the dependency on the library by running the `dotnet add reference` command:</span></span>
 
 ```dotnetcli
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
-<span data-ttu-id="83f4f-164">运行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)），在解决方案中还原三个项目的依赖项。</span><span class="sxs-lookup"><span data-stu-id="83f4f-164">Run `dotnet restore` ([see note](#dotnet-restore-note)) to restore the dependencies of the three projects in the solution.</span></span> <span data-ttu-id="83f4f-165">打开 program.cs  ，并使用下列行替换 `Main` 方法中的内容：</span><span class="sxs-lookup"><span data-stu-id="83f4f-165">Open *Program.cs* and replace the contents of the `Main` method with the following line:</span></span>
+<span data-ttu-id="f25b0-164">运行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)），在解决方案中还原三个项目的依赖项。</span><span class="sxs-lookup"><span data-stu-id="f25b0-164">Run `dotnet restore` ([see note](#dotnet-restore-note)) to restore the dependencies of the three projects in the solution.</span></span> <span data-ttu-id="f25b0-165">打开 program.cs  ，并使用下列行替换 `Main` 方法中的内容：</span><span class="sxs-lookup"><span data-stu-id="f25b0-165">Open *Program.cs* and replace the contents of the `Main` method with the following line:</span></span>
 
 ```csharp
 WriteLine($"The answer is {new Thing().Get(19, 23)}");
 ```
 
-<span data-ttu-id="83f4f-166">在 Program.cs  文件顶部添加两个 `using` 指令：</span><span class="sxs-lookup"><span data-stu-id="83f4f-166">Add two `using` directives to the top of the *Program.cs* file:</span></span>
+<span data-ttu-id="f25b0-166">在 Program.cs  文件顶部添加两个 `using` 指令：</span><span class="sxs-lookup"><span data-stu-id="f25b0-166">Add two `using` directives to the top of the *Program.cs* file:</span></span>
 
 ```csharp
 using static System.Console;
 using Library;
 ```
 
-<span data-ttu-id="83f4f-167">执行下列 `dotnet run` 命令，运行可执行文件，其中，`dotnet run` 后的 `-p` 选项用于指定主应用程序的项目。</span><span class="sxs-lookup"><span data-stu-id="83f4f-167">Execute the following `dotnet run` command to run the executable, where the `-p` option to `dotnet run` specifies the project for the main application.</span></span> <span data-ttu-id="83f4f-168">应用会生成字符串“The answer is 42”。</span><span class="sxs-lookup"><span data-stu-id="83f4f-168">The app produces the string "The answer is 42".</span></span>
+<span data-ttu-id="f25b0-167">执行下列 `dotnet run` 命令，运行可执行文件，其中，`dotnet run` 后的 `-p` 选项用于指定主应用程序的项目。</span><span class="sxs-lookup"><span data-stu-id="f25b0-167">Execute the following `dotnet run` command to run the executable, where the `-p` option to `dotnet run` specifies the project for the main application.</span></span> <span data-ttu-id="f25b0-168">应用会生成字符串“The answer is 42”。</span><span class="sxs-lookup"><span data-stu-id="f25b0-168">The app produces the string "The answer is 42".</span></span>
 
 ```dotnetcli
 dotnet run -p app/app.csproj
 ```
 
-## <a name="debug-the-application"></a><span data-ttu-id="83f4f-169">调试应用程序</span><span class="sxs-lookup"><span data-stu-id="83f4f-169">Debug the application</span></span>
+## <a name="debug-the-application"></a><span data-ttu-id="f25b0-169">调试应用程序</span><span class="sxs-lookup"><span data-stu-id="f25b0-169">Debug the application</span></span>
 
-<span data-ttu-id="83f4f-170">在 `Main` 方法中的 `WriteLine` 语句处设置一个断点。</span><span class="sxs-lookup"><span data-stu-id="83f4f-170">Set a breakpoint at the `WriteLine` statement in the `Main` method.</span></span> <span data-ttu-id="83f4f-171">要实现此操作，可在光标位于 `WriteLine` 行之上时按 <kbd>Fn</kbd>+<kbd>F9</kbd> 键，也可在想要设置断点的行的左侧边缘中单击鼠标。</span><span class="sxs-lookup"><span data-stu-id="83f4f-171">Do this by either pressing the <kbd>Fn</kbd>+<kbd>F9</kbd> key when the cursor is over the `WriteLine` line or by clicking the mouse in the left margin on the line where you want to set the breakpoint.</span></span> <span data-ttu-id="83f4f-172">代码行旁边的边缘中将出现一个红色圆圈。</span><span class="sxs-lookup"><span data-stu-id="83f4f-172">A red circle will appear in the margin next to the line of code.</span></span> <span data-ttu-id="83f4f-173">到达断点时，将在执行断点行前  停止执行代码。</span><span class="sxs-lookup"><span data-stu-id="83f4f-173">When the breakpoint is reached, code execution will stop *before* the breakpoint line is executed.</span></span>
+<span data-ttu-id="f25b0-170">在 `Main` 方法中的 `WriteLine` 语句处设置一个断点。</span><span class="sxs-lookup"><span data-stu-id="f25b0-170">Set a breakpoint at the `WriteLine` statement in the `Main` method.</span></span> <span data-ttu-id="f25b0-171">要实现此操作，可在光标位于 `WriteLine` 行之上时按 <kbd>Fn</kbd>+<kbd>F9</kbd> 键，也可在想要设置断点的行的左侧边缘中单击鼠标。</span><span class="sxs-lookup"><span data-stu-id="f25b0-171">Do this by either pressing the <kbd>Fn</kbd>+<kbd>F9</kbd> key when the cursor is over the `WriteLine` line or by clicking the mouse in the left margin on the line where you want to set the breakpoint.</span></span> <span data-ttu-id="f25b0-172">代码行旁边的边缘中将出现一个红色圆圈。</span><span class="sxs-lookup"><span data-stu-id="f25b0-172">A red circle will appear in the margin next to the line of code.</span></span> <span data-ttu-id="f25b0-173">到达断点时，将在执行断点行前  停止执行代码。</span><span class="sxs-lookup"><span data-stu-id="f25b0-173">When the breakpoint is reached, code execution will stop *before* the breakpoint line is executed.</span></span>
 
-<span data-ttu-id="83f4f-174">若要打开“调试器”选项卡，请在 Visual Studio Code 工具栏中选择“调试”图标，再从菜单栏中依次选择“视图”   >   “调试”，或使用键盘快捷方式 <kbd>&#8679;</kbd><kbd>&#8984;</kbd><kbd>D</kbd>：</span><span class="sxs-lookup"><span data-stu-id="83f4f-174">Open the debugger tab by selecting the Debug icon in the Visual Studio Code toolbar, selecting **View** > **Debug** from the menu bar, or using the keyboard shortcut <kbd>&#8679;</kbd><kbd>&#8984;</kbd><kbd>D</kbd>:</span></span>
+<span data-ttu-id="f25b0-174">若要打开“调试器”选项卡，请在 Visual Studio Code 工具栏中选择“调试”图标，再从菜单栏中依次选择“视图”   >   “调试”，或使用键盘快捷方式 <kbd>&#8679;</kbd><kbd>&#8984;</kbd><kbd>D</kbd>：</span><span class="sxs-lookup"><span data-stu-id="f25b0-174">Open the debugger tab by selecting the Debug icon in the Visual Studio Code toolbar, selecting **View** > **Debug** from the menu bar, or using the keyboard shortcut <kbd>&#8679;</kbd><kbd>&#8984;</kbd><kbd>D</kbd>:</span></span>
 
 ![Visual Studio Code 调试程序](./media/using-on-macos/visual-studio-code-debugger.png)
 
-<span data-ttu-id="83f4f-176">按“开始”按钮，在调试器下启动应用程序。</span><span class="sxs-lookup"><span data-stu-id="83f4f-176">Press the Play button to start the application under the debugger.</span></span> <span data-ttu-id="83f4f-177">你已在此项目中创建了测试项目和应用程序。</span><span class="sxs-lookup"><span data-stu-id="83f4f-177">You've created both a test project and an application in this project.</span></span> <span data-ttu-id="83f4f-178">调试器会询问你要启动哪个项目。</span><span class="sxs-lookup"><span data-stu-id="83f4f-178">The debugger asks which project you want to start.</span></span> <span data-ttu-id="83f4f-179">选择“应用”项目。</span><span class="sxs-lookup"><span data-stu-id="83f4f-179">Select the "app" project.</span></span> <span data-ttu-id="83f4f-180">应用开始执行，运行到断点处停止。</span><span class="sxs-lookup"><span data-stu-id="83f4f-180">The app begins execution and runs to the breakpoint, where it stops.</span></span> <span data-ttu-id="83f4f-181">单步执行 `Get` 方法，确保已传入正确的参数。</span><span class="sxs-lookup"><span data-stu-id="83f4f-181">Step into the `Get` method and make sure that you have passed in the correct arguments.</span></span> <span data-ttu-id="83f4f-182">确认答案是 42。</span><span class="sxs-lookup"><span data-stu-id="83f4f-182">Confirm that the answer is 42.</span></span>
+<span data-ttu-id="f25b0-176">按“开始”按钮，在调试器下启动应用程序。</span><span class="sxs-lookup"><span data-stu-id="f25b0-176">Press the Play button to start the application under the debugger.</span></span> <span data-ttu-id="f25b0-177">你已在此项目中创建了测试项目和应用程序。</span><span class="sxs-lookup"><span data-stu-id="f25b0-177">You've created both a test project and an application in this project.</span></span> <span data-ttu-id="f25b0-178">调试器会询问你要启动哪个项目。</span><span class="sxs-lookup"><span data-stu-id="f25b0-178">The debugger asks which project you want to start.</span></span> <span data-ttu-id="f25b0-179">选择“应用”项目。</span><span class="sxs-lookup"><span data-stu-id="f25b0-179">Select the "app" project.</span></span> <span data-ttu-id="f25b0-180">应用开始执行，运行到断点处停止。</span><span class="sxs-lookup"><span data-stu-id="f25b0-180">The app begins execution and runs to the breakpoint, where it stops.</span></span> <span data-ttu-id="f25b0-181">单步执行 `Get` 方法，确保已传入正确的参数。</span><span class="sxs-lookup"><span data-stu-id="f25b0-181">Step into the `Get` method and make sure that you have passed in the correct arguments.</span></span> <span data-ttu-id="f25b0-182">确认答案是 42。</span><span class="sxs-lookup"><span data-stu-id="f25b0-182">Confirm that the answer is 42.</span></span>
 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
