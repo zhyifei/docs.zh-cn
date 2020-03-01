@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: af1b374cd14d5070194c035024ce2328c9016646
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 1a691ad0c1f8dbfadd642360d7f9629a136ff3ab
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503539"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156655"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>使用 .NET Core CLI 实现 .NET Core 入门
 
@@ -40,30 +40,30 @@ dotnet run
 01. `dotnet new console`
 
     [dotnet new](../tools/dotnet-new.md) 会创建一个最新的 Hello.csproj 项目文件，其中包含生成控制台应用所必需的依赖项  。 此外，它还会创建一个 Program.cs  ，这是包含应用程序入口点的基本文件。
-    
+
     Hello.csproj  ：
-    
+
     [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
-    
+
     项目文件指定还原依赖项和生成程序所需的一切。
-    
+
     - `<OutputType>` 元素指定我们要生成的可执行文件，即控制台应用程序。
     - `<TargetFramework>` 元素指定要定位的 .NET 实现代码。 在高级方案中，可以指定多个目标框架，并在单个操作中生成所有目标框架。 在本教程中，我们将仅针对 .NET Core 3.1 进行生成。
-    
+
     Program.cs  :
-    
+
     [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
-    
+
     该程序从 `using System` 开始，这意味着“将 `System` 命名空间中的所有内容都纳入此文件的作用域”。 `System` 命名空间包括 `Console` 类。
-    
+
     接着定义一个名为 `Hello` 的命名空间。 你可以将其更改为任何你喜欢的名称。 在该命名空间中定义了一个名为 `Program` 的类，其中 `Main` 方法采用名为 `args` 的字符串数组。 此数组包含在运行程序时所传递的参数列表。 实际上，不使用此数组，程序只会写入文本“Hello World!” “Hello World!”。 稍后将对使用此参数的代码进行更改。
-    
+
     `dotnet new` 隐式调用 [dotnet restore](../tools/dotnet-restore.md)。 `dotnet restore` 调用到 [NuGet](https://www.nuget.org/)（.NET 包管理器）以还原依赖项树。 NuGet 分析 Hello.csproj  文件、下载文件中定义的依赖项（或从计算机缓存中获取）并编写 obj/project.assets.json  文件，在编译和运行示例时需要使用该文件。
 
 02. `dotnet run`
 
     [dotnet run](../tools/dotnet-run.md) 调用 [dotnet build](../tools/dotnet-build.md) 来确保已生成要生成的目标，然后调用 `dotnet <assembly.dll>` 运行目标应用程序。
-    
+
     ```dotnetcli
     dotnet run
     ```
@@ -73,9 +73,9 @@ dotnet run
     ```console
     Hello World!
     ```
-    
+
     或者，还可以运行 `dotnet build` 来编译代码，无需运行已生成的控制台应用程序。 这会基于项目的名称将已编译的应用程序作为 DLL 文件生成。 在这种情况下，创建的文件命名为 Hello.dll  。 此应用可以使用 Windows 上的 `dotnet bin\Debug\netcoreapp3.1\Hello.dll` 运行（非 Windows 系统使用 `/`）。
-    
+
     ```dotnetcli
     dotnet bin\Debug\netcoreapp3.1\Hello.dll
     ```
@@ -85,7 +85,7 @@ dotnet run
     ```console
     Hello World!
     ```
-    
+
     在编译应用时，会随 `Hello.dll` 一起创建特定于操作系统的可执行文件。 在 Windows 上，这将是 `Hello.exe`；在 Linux 或 macOS 上，这将是 `hello`。 在上面的示例中，用 `Hello.exe` 或 `Hello` 命名该文件。 可以直接运行该可执行文件。
 
     ```console

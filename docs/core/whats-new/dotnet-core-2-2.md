@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 9495288658fa102df8f0fbd643e2fcdf49d8f3b3
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: e045c39240c99777d05ca86ee0a8cd1fa4309c4f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451975"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156577"
 ---
 # <a name="whats-new-in-net-core-22"></a>.NET Core 2.2 的新增功能
 
@@ -26,7 +26,7 @@ ms.locfileid: "77451975"
 
 **在运行时服务中处理事件**
 
-你可能经常希望监视应用程序的运行时服务（如 GC、JIT 和 ThreadPool）的使用情况，以了解它们如何影响应用程序。 在 Windows 系统上，这通常通过监视当前进程的 ETW 事件来完成。 虽然这仍然可以很好地工作，但是如果你在低特权环境中或者在 Linux 或 macOS 上运行，那么并不总是能够使用 ETW。 
+你可能经常希望监视应用程序的运行时服务（如 GC、JIT 和 ThreadPool）的使用情况，以了解它们如何影响应用程序。 在 Windows 系统上，这通常通过监视当前进程的 ETW 事件来完成。 虽然这仍然可以很好地工作，但是如果你在低特权环境中或者在 Linux 或 macOS 上运行，那么并不总是能够使用 ETW。
 
 从 .NET Core 2.2 开始，现在可以使用 <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType> 类来使用 CoreCLR 事件。 这些事件描述了诸如 GC、JIT、ThreadPool 和 interop 等运行时服务的行为。 这些事件与作为 CoreCLR ETW 提供程序的一部分公开的事件相同。  这允许应用程序使用这些事件或使用传输机制将它们发送到遥测聚合服务。 可以在以下代码示例中看到如何订阅事件：
 

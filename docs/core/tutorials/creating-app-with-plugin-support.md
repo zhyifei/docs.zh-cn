@@ -4,12 +4,12 @@ description: 了解如何创建支持插件的 .NET Core 应用程序。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 32205a507bc95b2f8a2f75368aab3fde710249ee
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4c03c70edcdba52c4e6029402b92d5478a0d312c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787857"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156642"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>使用插件创建 .NET Core 应用程序
 
@@ -218,7 +218,7 @@ static Assembly LoadPlugin(string relativePath)
 返回到根文件夹，执行以下步骤：
 
 1. 运行以下命令，新建一个名为 `HelloPlugin` 的类库项目：
-    
+
     ```dotnetcli
     dotnet new classlib -o HelloPlugin
     ```

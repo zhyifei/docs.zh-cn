@@ -2,12 +2,12 @@
 title: dotnet tool update 命令
 description: dotnet tool update 命令更新计算机上指定的 .NET Core 工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: 50bb366fedfb0ea69b8b6007ff89e366b4f689de
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 80e807a0fc06ad762334f888e701f6d9c448369a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543412"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156941"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -58,7 +58,7 @@ dotnet tool update <-h|--help>
 
 - **`-g|--global`**
 
-  指定此更新用于用户范围的工具。 不能与 `--tool-path` 选项一起使用。 省略 `--global` 和 `--tool-path` 均指定要更新的工具是本地工具。 
+  指定此更新用于用户范围的工具。 不能与 `--tool-path` 选项一起使用。 省略 `--global` 和 `--tool-path` 均指定要更新的工具是本地工具。
 
 - **`-h|--help`**
 
@@ -66,7 +66,7 @@ dotnet tool update <-h|--help>
 
 - **`--tool-path <PATH>`**
 
-  指定全局工具的安装位置。 路径可以是绝对的，也可以是相对的。 不能与 `--global` 选项一起使用。 省略 `--global` 和 `--tool-path` 均指定要更新的工具是本地工具。 
+  指定全局工具的安装位置。 路径可以是绝对的，也可以是相对的。 不能与 `--global` 选项一起使用。 省略 `--global` 和 `--tool-path` 均指定要更新的工具是本地工具。
 
 - **`-v|--verbosity <LEVEL>`**
 

@@ -2,12 +2,12 @@
 title: 安装本地化的 IntelliSense 文件
 description: 了解如何设置开发计算机，以便在 Visual Studio 中为 .NET Core 项目使用本地化的 IntelliSense 文件。
 ms.date: 01/23/2020
-ms.openlocfilehash: 58b462507edf953a6c28aadbb9e3239a5cbe05b2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733652"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157708"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>如何为 .NET Core 安装本地化的 IntelliSense 文件
 
@@ -42,7 +42,7 @@ ms.locfileid: "76733652"
       | .NET Core       | Microsoft.NETCore.App.Ref         |
       | Windows 桌面 | Microsoft.WindowsDesktop.App.Ref  |
       | .NET Standard   | NETStandard.Library.Ref           |
-   
+
    1. 导航到要为其安装本地化 IntelliSense 的版本。 例如，3.1.0  。
    1. 打开 ref 文件夹  。
    1. 打开 moniker 文件夹。 例如，netcoreapp3.1  。
@@ -116,7 +116,7 @@ ms.locfileid: "76733652"
 
 1. 在“环境”节点下，选择“国际设置”   。
 
-1. 在“语言”下拉列表中，选择所需的语言  。 选择 **“确定”** 。 
+1. 在“语言”下拉列表中，选择所需的语言  。 选择 **“确定”** 。
 
 1. 随即会显示一个对话框，告知必须重启 Visual Studio 才能使所做的更改生效。 选择 **“确定”** 。
 

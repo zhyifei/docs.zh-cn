@@ -4,12 +4,12 @@ description: 了解有关编写单元测试的最佳做法，以提高 .NET Core
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 387d66bfeaf48359a27a532247a799c319f38caa
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a65cf3fbfb6562dbd9aaf815e1bfe469585c0fc0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714288"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157383"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 单元测试最佳做法
 
@@ -169,7 +169,7 @@ Assert.True(mockOrder.Validated);
 
 魔幻字符串可能会让测试读者感到困惑。 如果字符串看起来不寻常，他们可能想知道为什么为某个参数或返回值选择了某个值。 这可能会使他们仔细查看实现细节，而不是专注于测试。
 
-> [!TIP] 
+> [!TIP]
 > 编写测试时，应力求表达尽可能多的意图。 对于魔幻字符串，一种很好的方法是将这些值赋给常量。
 
 #### <a name="bad"></a>不佳：
@@ -208,7 +208,7 @@ Assert.True(mockOrder.Validated);
 
 在单元测试框架中，在测试套件的每个单元测试之前调用 `Setup`。 虽然有些人可能会将其视为有用的工具，但它通常最终导致庞大且难懂的测试。 每个测试通常有不同的要求，以使测试启动并运行。 遗憾的是，`Setup` 迫使你对每个测试使用完全相同的要求。
 
-> [!NOTE] 
+> [!NOTE]
 > 自版本 2.x 起，xUnit 已删除 SetUp 和 TearDown
 
 #### <a name="bad"></a>不佳：
@@ -239,7 +239,7 @@ Assert.True(mockOrder.Validated);
 
 - 如果一个 Assert 失败，将不计算后续 Assert。
 - 确保在测试中没有断言多个事例。
-- 让你从整体上了解测试失败原因。 
+- 让你从整体上了解测试失败原因。
 
 将多个断言引入测试用例时，不能保证所有断言都会执行。 在大多数单元测试框架中，一旦断言在单元测试中失败，则进行中的测试会自动被视为失败。 这可能会令人困惑，因为正在运行的功能将显示为失败。
 
@@ -253,7 +253,7 @@ Assert.True(mockOrder.Validated);
 [!code-csharp[AfterMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
 ### <a name="validate-private-methods-by-unit-testing-public-methods"></a>通过单元测试公共方法验证专有方法
-在大多数情况下，不需要测试专用方法。 专用方法是实现细节。 可以这样认为：专用方法永远不会孤立存在。 在某些时候，存在调用专用方法作为其实现的一部分的面向公共的方法。 你应关心的是调用到专用方法的公共方法的最终结果。 
+在大多数情况下，不需要测试专用方法。 专用方法是实现细节。 可以这样认为：专用方法永远不会孤立存在。 在某些时候，存在调用专用方法作为其实现的一部分的面向公共的方法。 你应关心的是调用到专用方法的公共方法的最终结果。
 
 请考虑下列情形
 
@@ -270,9 +270,9 @@ private string TrimInput(string input)
 }
 ```
 
-你的第一反应可能是开始为 `TrimInput` 编写测试，因为想要确保该方法按预期工作。 但是，`ParseLogLine` 完全有可能以一种你所不期望的方式操纵 `sanitizedInput`，使得对 `TrimInput` 的测试变得毫无用处。 
+你的第一反应可能是开始为 `TrimInput` 编写测试，因为想要确保该方法按预期工作。 但是，`ParseLogLine` 完全有可能以一种你所不期望的方式操纵 `sanitizedInput`，使得对 `TrimInput` 的测试变得毫无用处。
 
-真正的测试应该针对面向公共的方法 `ParseLogLine` 进行，因为这是你最终应该关心的。 
+真正的测试应该针对面向公共的方法 `ParseLogLine` 进行，因为这是你最终应该关心的。
 
 ```csharp
 public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
@@ -293,11 +293,11 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 ```csharp
 public int GetDiscountedPrice(int price)
 {
-    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday) 
+    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }
@@ -326,7 +326,7 @@ public void GetDiscountedPrice_OnTuesday_ReturnsHalfPrice()
 }
 ```
 
-遗憾的是，你会很快意识到你的测试存在一些问题。 
+遗憾的是，你会很快意识到你的测试存在一些问题。
 
 - 如果在星期二运行测试套件，则第二个测试将通过，但第一个测试将失败。
 - 如果在任何其他日期运行测试套件，则第一个测试将通过，但第二个测试将失败。
@@ -341,11 +341,11 @@ public interface IDateTimeProvider
 
 public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
-    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday) 
+    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }

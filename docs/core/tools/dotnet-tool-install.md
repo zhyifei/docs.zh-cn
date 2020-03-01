@@ -2,12 +2,12 @@
 title: dotnet tool install 命令
 description: dotnet tool install 命令在计算机上安装指定的 .NET Core 工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: 2705defe9b77009ca1411da28dd86d144ccc19e6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 641e6a2753b1cf3bfc334ba2495342f7c42421fc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543464"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156969"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -30,7 +30,7 @@ dotnet tool install <-h|--help>
 
 `dotnet tool install` 命令为用户提供一种在计算机上安装 .NET Core 工具的方法。 若要使用命令，请指定以下安装选项之一：
 
-* 若要在默认位置中安装全局工具，请使用 `--tool-path` 选项。
+* 若要在默认位置中安装全局工具，请使用 `--global` 选项。
 * 若要在自定义位置中安装全局工具，请使用 `--tool-path` 选项。
 * 若要安装本地工具，请省略 `--global` 和 `--tool-path` 选项。
 
@@ -73,7 +73,7 @@ dotnet new tool-manifest
 
 - **`-g|--global`**
 
-  指定安装是用户范围的。 不能与 `--tool-path` 选项一起使用。 省略 `--global` 和 `--tool-path` 指定本地工具安装。 
+  指定安装是用户范围的。 不能与 `--tool-path` 选项一起使用。 省略 `--global` 和 `--tool-path` 指定本地工具安装。
 
 - **`-h|--help`**
 
@@ -81,7 +81,7 @@ dotnet new tool-manifest
 
 - **`tool-path <PATH>`**
 
-  指定全局工具的安装位置。 路径可以是绝对的，也可以是相对的。 如果路径不存在，命令会尝试创建它。 省略 `--global` 和 `--tool-path` 指定本地工具安装。 
+  指定全局工具的安装位置。 路径可以是绝对的，也可以是相对的。 如果路径不存在，命令会尝试创建它。 省略 `--global` 和 `--tool-path` 指定本地工具安装。
 
 - **`-v|--verbosity <LEVEL>`**
 

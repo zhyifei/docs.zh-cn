@@ -3,12 +3,12 @@ title: C# 和 Visual Studio Code 入门
 description: 了解如何使用 Visual Studio Code 创建和调试首个 C# .NET Core 应用。
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: acd1c300545bc6c107552576180afd7dec6b7382
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ef7134e26c1ded3926faa51748c1b6d4a461008f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503524"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156603"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 和 Visual Studio Code 入门
 
@@ -113,7 +113,7 @@ ms.locfileid: "77503524"
 
     ```csharp
     using System;
-    
+
     namespace HelloWorld
     {
         class Program

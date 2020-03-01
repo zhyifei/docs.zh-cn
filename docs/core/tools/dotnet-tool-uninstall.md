@@ -2,12 +2,12 @@
 title: dotnet tool uninstall 命令
 description: dotnet tool uninstall 命令从计算机上卸载指定的 .NET Core 工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: 82dad0206d9c3e2ef0f41c353f4a608f10e4f127
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 7a15c169c73cf5a743e0fa6f47645d6bccedbde3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543438"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157040"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -46,7 +46,7 @@ dotnet tool uninstall <-h|--help>
 
 - **`-g|--global`**
 
-  指定要从用户范围的安装中删除工具。 不能与 `--tool-path` 选项一起使用。 省略 `--global` 和 `--tool-path` 指定要删除的工具是本地工具。 
+  指定要从用户范围的安装中删除工具。 不能与 `--tool-path` 选项一起使用。 省略 `--global` 和 `--tool-path` 指定要删除的工具是本地工具。
 
 - **`-h|--help`**
 
@@ -54,7 +54,7 @@ dotnet tool uninstall <-h|--help>
 
 - **`--tool-path <PATH>`**
 
-  指定卸载工具的位置。 路径可以是绝对的，也可以是相对的。 不能与 `--global` 选项一起使用。 省略 `--global` 和 `--tool-path` 指定要删除的工具是本地工具。 
+  指定卸载工具的位置。 路径可以是绝对的，也可以是相对的。 不能与 `--global` 选项一起使用。 省略 `--global` 和 `--tool-path` 指定要删除的工具是本地工具。
 
 ## <a name="examples"></a>示例
 
