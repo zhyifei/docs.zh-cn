@@ -156,7 +156,7 @@ ms.locfileid: "70989692"
 
 1. 按 Ctrl+Shift+B 生成解决方案。
 
-     有关如何运行工作流的说明，请参阅下一主题，[如何：运行工作流](how-to-run-a-workflow.md)。 如果你已经完成了 [如何：使用不同样式的工作流](how-to-run-a-workflow.md) 步骤运行工作流，并希望使用此步骤中的顺序工作流运行它，请[跳到 [](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) how to：运行工作流](how-to-run-a-workflow.md)。
+     有关如何运行工作流的说明，请参阅下一主题，[如何：运行工作流](how-to-run-a-workflow.md)。 如果你已经完成了 [如何：使用不同样式的工作流](how-to-run-a-workflow.md) 步骤运行工作流，并希望使用此步骤中的顺序工作流运行它，请[跳到](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) [how to：运行工作流](how-to-run-a-workflow.md)。
 
 ## <a name="see-also"></a>请参阅
 
