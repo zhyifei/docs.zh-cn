@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 0583329ae75fa54cf000212479895ccebdbd30d8
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: a7e03a833886a1486e0dc081d6ef059791a464b5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142052"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156330"
 ---
 # <a name="implementing-a-dispose-method"></a>实现 Dispose 方法
 
@@ -125,7 +125,7 @@ ms.locfileid: "74142052"
 > [!NOTE]
 > 在 C# 中，通过定义[析构函数](../../csharp/programming-guide/classes-and-structs/destructors.md)重写 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>。  
   
-<a name="SafeHandles"></a>   
+<a name="SafeHandles"></a>
 ## <a name="using-safe-handles"></a>使用安全句柄
 
 编写对象终结器的代码是一项复杂的任务，如果处理不好可能会出现问题。 因此，建议你构造 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 对象，而非实现终结器。  
@@ -142,7 +142,7 @@ ms.locfileid: "74142052"
   
 - 用于等待句柄的 <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> 类。  
   
-<a name="base"></a>   
+<a name="base"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>使用安全句柄实现基类的释放模式
 
 下面的示例阐释了基类 `DisposableStreamResource` 的释放模式，此模式使用安全句柄封装非托管资源。 它定义 `DisposableResource` 类，该类使用 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 包装表示打开的文件的 <xref:System.IO.Stream> 对象。 `DisposableResource` 方法还包含一个属性 `Size`，该属性返回文件流中的总字节数。  
@@ -150,7 +150,7 @@ ms.locfileid: "74142052"
 [!code-csharp[Conceptual.Disposable#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/base1.cs#9)]
 [!code-vb[Conceptual.Disposable#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/base1.vb#9)]  
   
-<a name="derived"></a>   
+<a name="derived"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-derived-class"></a>使用安全句柄实现派生类的释放模式
 
 下面的示例阐释派生类 `DisposableStreamResource2` 的释放模式，该类继承自上一个示例中显示的 `DisposableStreamResource` 类。 此类额外添加一种方法（即 `WriteFileInfo`），并使用 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 对象包装可写文件的句柄。  

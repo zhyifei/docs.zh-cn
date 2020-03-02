@@ -11,12 +11,12 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: fe5bb95d5e1f90c0dafa30977d76ea1d62125c99
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4f0f3555ae1ab7e662d5f88ac65739a7c791a964
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130881"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158072"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>检索存储在特性中的信息
 检索自定义属性的过程非常简单。 首先，声明要检索的属性实例。 然后，使用 <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 方法，用要检索的属性的值初始化新属性。 在初始化新属性后，只需使用它的属性即可获取值。  
@@ -32,7 +32,7 @@ ms.locfileid: "73130881"
   
 - [检索应用于不同范围的多个属性实例](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
-<a name="cpconretrievingsingleinstanceofattribute"></a>   
+<a name="cpconretrievingsingleinstanceofattribute"></a>
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>检索一个属性实例  
  在下面的示例中，`DeveloperAttribute`（如上一部分所述）在类一级适用于 `MainApp` 类。 `GetAttribute` 方法使用 GetCustomAttribute  在类一级检索 `DeveloperAttribute` 中存储的值，再在控制台中显示它们。  
   
@@ -51,12 +51,12 @@ The Reviewed Attribute is: True.
  如果找不到属性，GetCustomAttribute  方法会将 `MyAttribute` 初始化为 NULL 值。 此示例在 `MyAttribute` 中查找此类实例，并在找不到属性时通知用户。 如果在类范围中找不到 `DeveloperAttribute`，控制台中显示以下消息。  
   
 ```console  
-The attribute was not found.   
+The attribute was not found.
 ```  
   
  此示例假定属性定义位于当前的命名空间中。 请注意，如果属性定义不在当前的命名空间中，请导入属性定义所在的命名空间。  
   
-<a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>   
+<a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>检索应用于同一范围的多个属性实例  
  在上一示例中，要检查的类和要查找的特定属性都传递给 <xref:System.Attribute.GetCustomAttribute%2A>。 此代码非常适用于只有一个属性实例在类一级应用的情况。 不过，如果在相同的类一级应用多个属性实例，GetCustomAttribute  方法不会检索所有信息。 如果同一属性的多个实例应用于相同范围，可以使用 <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> 将所有属性实例添加到数组中。 例如，如果在相同的类一级应用两个 `DeveloperAttribute` 实例，可以将 `GetAttribute` 方法修改为显示在这两个属性中找到的信息。 请注意，若要在同一级别应用多个属性，必须在 <xref:System.AttributeUsageAttribute> 中定义属性，并将 AllowMultiple  属性设为 true  。  
   
@@ -68,7 +68,7 @@ The attribute was not found.
   
  如果找不到任何属性，此代码会向用户发出警报。 如果找到，就会显示两个 `DeveloperAttribute` 实例中包含的信息。  
   
-<a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>   
+<a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-different-scopes"></a>检索应用于不同范围的多个属性实例  
  <xref:System.Attribute.GetCustomAttributes%2A> 和 <xref:System.Attribute.GetCustomAttribute%2A> 方法不会搜索整个类，也不会返回相应类中的所有属性实例。 而是一次只搜索一个指定方法或成员。 如果类中的相同属性应用于每个成员，且要检索应用于这些成员的所有属性的值，必须将各个方法或成员单独提供给 GetCustomAttributes  和 GetCustomAttribute  。  
   

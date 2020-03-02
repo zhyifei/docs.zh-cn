@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: ecc1e234b03cb45075c40ff6698f71f8ce18d0de
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a70bd3070d8b1dcd06e55d330a01d29071293f6c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128977"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159385"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>为多线程处理同步数据
 
@@ -32,9 +32,9 @@ ms.locfileid: "73128977"
   
 |类别|全局字段|静态字段|静态方法|实例字段|实例方法|特定代码块|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
-|无同步|No|否|否|否|否|No|  
-|同步上下文|No|否|否|是|是|No|  
-|同步代码区域|No|No|仅当标记时|No|仅当标记时|仅当标记时|  
+|无同步|否|否|否|否|否|否|  
+|同步上下文|否|否|否|是|是|否|  
+|同步代码区域|否|否|仅当标记时|否|仅当标记时|仅当标记时|  
 |手动同步|手动|手动|手动|手动|手动|手动|  
   
 ## <a name="no-synchronization"></a>无同步  
@@ -64,7 +64,7 @@ ms.locfileid: "73128977"
  在这两种情况下，如果代码块中引发异常，则 **lock** 或 **SyncLock** 获取的锁将自动释放。 C# 和 Visual Basic 编译器在发出 **try**/**finally** 块时，在 try 的起始处使用 **Monitor.Enter**，在 **finally** 块中使用 **Monitor.Exit**。 如果 **lock** 或 **SyncLock** 块内部引发了异常，则会运行 **finally** 处理程序，从而允许执行任何清除工作。  
   
 ## <a name="synchronized-context"></a>同步上下文  
- 
+
 仅在 .NET Framework 和 Xamarin 应用程序中，可以使用任何 <xref:System.ContextBoundObject> 上的 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> 来同步所有实例方法和字段。 同一上下文域中的所有对象都共享同一个锁。 允许多个线程访问方法和字段，但在任一时刻只允许一个线程访问。  
   
 ## <a name="see-also"></a>请参阅

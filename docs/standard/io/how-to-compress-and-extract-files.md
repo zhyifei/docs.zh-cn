@@ -10,12 +10,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: 6345b467e9ade085a38de6dc9758b1bd99d1ae62
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5aa25e265ed6ffb613e9916414c6f2335a4aaf57
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708097"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159372"
 ---
 # <a name="how-to-compress-and-extract-files"></a>如何：压缩和解压缩文件
 
@@ -31,9 +31,9 @@ ms.locfileid: "75708097"
 
 ## <a name="example-1-create-and-extract-a-zip-file"></a>示例 1：创建和提取 .zip 文件
 
-以下示例演示如何使用 <xref:System.IO.Compression.ZipFile> 类创建和提取压缩的 .zip 文件  。 该示例将文件夹的内容压缩为一个新的 .zip 文件，然后将该 .zip 提取到一个新文件夹  。 
+以下示例演示如何使用 <xref:System.IO.Compression.ZipFile> 类创建和提取压缩的 .zip 文件  。 该示例将文件夹的内容压缩为一个新的 .zip 文件，然后将该 .zip 提取到一个新文件夹  。
 
-若要运行示例，请在程序文件夹中创建 start 文件夹，然后在其中放入要压缩的文件  。 
+若要运行示例，请在程序文件夹中创建 start 文件夹，然后在其中放入要压缩的文件  。
 
 如果收到生成错误“当前上下文中不存在名称 ‘ZipFile’”，请向项目添加对 `System.IO.Compression.FileSystem` 程序集的引用。
 
@@ -42,13 +42,13 @@ ms.locfileid: "75708097"
 
 ## <a name="example-2-extract-specific-file-extensions"></a>示例 2：提取特定文件扩展名
 
-下一示例循环访问现有 .zip 文件的内容并提取扩展名为 .txt 的文件   。 它使用 <xref:System.IO.Compression.ZipArchive> 类访问 zip，使用 <xref:System.IO.Compression.ZipArchiveEntry> 类检查各个条目。 适用于 <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> 对象的扩展方法 <xref:System.IO.Compression.ZipArchiveEntry> 可以在 <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> 类中使用。 
+下一示例循环访问现有 .zip 文件的内容并提取扩展名为 .txt 的文件   。 它使用 <xref:System.IO.Compression.ZipArchive> 类访问 zip，使用 <xref:System.IO.Compression.ZipArchiveEntry> 类检查各个条目。 适用于 <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> 对象的扩展方法 <xref:System.IO.Compression.ZipArchiveEntry> 可以在 <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> 类中使用。
 
-若要运行示例，请将名为 result.zip 的 .zip 文件放到程序文件夹中   。 出现提示时，提供要提取到的文件夹名称。 
+若要运行示例，请将名为 result.zip 的 .zip 文件放到程序文件夹中   。 出现提示时，提供要提取到的文件夹名称。
 
 如果收到生成错误“当前上下文中不存在名称 ‘ZipFile’”，请向项目添加对 `System.IO.Compression.FileSystem` 程序集的引用。
 
-如果收到错误“在未引用的程序集中定义了 ‘ZipArchive’ 类型”，请向项目添加对 `System.IO.Compression` 程序集的引用。 
+如果收到错误“在未引用的程序集中定义了 ‘ZipArchive’ 类型”，请向项目添加对 `System.IO.Compression` 程序集的引用。
 
 > [!IMPORTANT]
 > 在解压缩文件时，必须查找可以转义出你想要解压缩到的目录的恶意文件路径。 这被称为“路径遍历攻击”。 下面的示例演示如何检查恶意文件路径，并提供一种安全的解压缩方法。

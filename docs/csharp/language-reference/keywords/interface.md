@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: b315d1f04c9e74700afba8ee7871b23ab4b2fd28
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 473f5f8e226f0a144746ac943afcffdccd4777c7
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744690"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625847"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface":::（C#参考）
 
-接口定义协定。 实现该协定的任何 [`class`](class.md) 或 [`struct`](struct.md) 必须提供接口中定义的成员的实现。 从 C# 8.0 开始，接口可为成员定义默认实现。 它还可以定义 [`static`](static.md) 成员，以便提供常见功能的单个实现。
+接口定义协定。 实现该协定的任何 [`class`](class.md) 或 [`struct`](../builtin-types/struct.md) 必须提供接口中定义的成员的实现。 从 C# 8.0 开始，接口可为成员定义默认实现。 它还可以定义 [`static`](static.md) 成员，以便提供常见功能的单个实现。
 
 在以下示例中，类 `ImplementationClass` 必须实现一个不含参数但返回 `void` 的名为 `SampleMethod` 的方法。
 
@@ -78,6 +78,4 @@ public interface INamed
 - [接口](../../programming-guide/interfaces/index.md)
 - [使用属性](../../programming-guide/classes-and-structs/using-properties.md)
 - [使用索引器](../../programming-guide/indexers/using-indexers.md)
-- [class](class.md)
-- [struct](struct.md)
 - [接口](../../programming-guide/interfaces/index.md)

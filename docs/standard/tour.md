@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 0154910b91df0b2f72daebe802e4c75bbca964bb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f4cd2e47da236d276a42b972265ffd1a2fe27310
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337583"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160334"
 ---
 # <a name="tour-of-net"></a>.NET 教程
 
@@ -21,13 +21,13 @@ ms.locfileid: "75337583"
 
 ## <a name="how-to-run-the-code-samples"></a>如何运行代码示例
 
-要了解如何设置开发环境以运行代码示例，请参阅[入门](get-started.md)主题。 将代码示例从此页复制并粘贴到你的环境中以执行它们。 
+要了解如何设置开发环境以运行代码示例，请参阅[入门](get-started.md)主题。 将代码示例从此页复制并粘贴到你的环境中以执行它们。
 
 ## <a name="programming-languages"></a>编程语言
 
 .NET 支持多种编程语言。 .NET 实现可实现[公共语言基础结构 (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)，除其他事项外，它指定与语言无关的运行时和语言互操作性。 这意味着可选择任意 .NET 语言在 .NET 上生成应用和服务。
 
-Microsoft 积极开发和支持三种 .NET 语言：C#、F# 和 Visual Basic。 
+Microsoft 积极开发和支持三种 .NET 语言：C#、F# 和 Visual Basic。
 
 * C# 是一种简单、强大、类型安全、面向对象的语言，同时保留了 C 语言的表达力度和简洁性。 熟悉 C 和类似语言的任何人在适应 C# 的过程中几乎不会遇到什么问题。 请查看 [C# 指南](../csharp/index.yml)，了解有关 C# 的详细信息。
 

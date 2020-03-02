@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: 5223c9b2031b1e25ec2f84326c811da1a78ddc15
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c574719da9b89b468b92b042e1f2b5b10fbe3c0d
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711410"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159320"
 ---
 # <a name="common-type-system"></a>常规类型系统
 通用类型系统定义了如何在公共语言运行时中声明、使用和管理类型，同时也是运行时跨语言集成支持的一个重要组成部分。 常规类型系统执行以下功能：  
@@ -44,7 +44,7 @@ ms.locfileid: "75711410"
   
 - [类型成员的特征](#characteristics_of_type_members)  
   
-<a name="types_in_the_net_framework"></a>   
+<a name="types_in_the_net_framework"></a>
 ## <a name="types-in-net"></a>.NET 中的类型  
  .NET 中的所有类型不是值类型就是引用类型。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "75711410"
   
 - [委托](#Delegates)  
   
-<a name="Classes"></a>   
+<a name="Classes"></a>
 ### <a name="classes"></a>类  
  类是可以直接从另一个类派生以及从 <xref:System.Object?displayProperty=nameWithType> 隐式派生的引用类型。 类定义对象（它是该类的实例）可以执行的操作（方法、事件或属性）和该对象包含的数据（字段）。 尽管类通常同时包含定义和实现（与接口不同，例如，接口只包含定义而不包含实现），但它也可以有一个或多个没有实现的成员。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "75711410"
   
  类可以实现任意数目的接口，但是它除了 <xref:System.Object?displayProperty=nameWithType>（所有类都可以隐式从它继承）之外，只能从一个基类继承。 所有的类都必须至少有一个构造函数，该函数初始化此类的新实例。 如果没有显式定义构造函数，大多数编译器将自动提供一个无参数构造函数。  
   
-<a name="Structures"></a>   
+<a name="Structures"></a>
 ### <a name="structures"></a>结构  
  结构是隐式从 <xref:System.ValueType?displayProperty=nameWithType> 派生的值类型，后者则是从 <xref:System.Object?displayProperty=nameWithType> 派生的。 对于表示内存要求很小的值以及将值作为按值参数传递给具有强类型参数的方法，结构很有用。 在 .NET 中，所有基元数据类型（<xref:System.Boolean>、<xref:System.Byte>、<xref:System.Char>、<xref:System.DateTime>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32> 和 <xref:System.UInt64>）都定义为结构。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75711410"
   
  对于每一种值类型，公共语言运行时都提供一种相应的已装箱类型，它是与值类型有着相同状态和行为的类。 将值类型的实例传递到接受 <xref:System.Object?displayProperty=nameWithType> 类型的参数的方法时，会将它装箱。 当控件从接受值类型作为传引用参数的方法调用返回时，会将它拆箱（即它从类实例重新转换回值类型的实例）。 当需要已装箱的类型时，某些语言要求使用特殊的语法；而另外一些语言会在需要时自动使用已装箱的类型。 在定义值类型时，需要同时定义已装箱和未装箱的类型。  
   
-<a name="Enumerations"></a>   
+<a name="Enumerations"></a>
 ### <a name="enumerations"></a>枚举  
  枚举 (enum) 是一种值类型，该值类型直接从 <xref:System.Enum?displayProperty=nameWithType> 继承并为基础基元类型的值提供替代名称。 枚举类型具有一个名称、一个必须为某个内置带符号或不带符号的整数类型的基础类型（如 <xref:System.Byte>、<xref:System.Int32> 或 <xref:System.UInt64>）以及一组字段。 字段是静态文本字段，其中的每一个字段都表示常数。 同一个值可以分配给多个字段。 出现这种情况时，必须将其中某个值标记为主要枚举值，以便进行反射和字符串转换。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "75711410"
  [!code-csharp[Conceptual.Types.Enum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.enum/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Enum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.enum/vb/example.vb#1)]  
   
-<a name="Interfaces"></a>   
+<a name="Interfaces"></a>
 ### <a name="interfaces"></a>接口  
  接口定义用于指定“可以执行”关系或“具有”关系的协定。 接口通常用于实现某种功能，如比较和排序（<xref:System.IComparable> 和 <xref:System.IComparable%601> 接口）、测试相等性（<xref:System.IEquatable%601> 接口）或枚举集合中的项（<xref:System.Collections.IEnumerable> 和 <xref:System.Collections.Generic.IEnumerable%601> 接口）。 接口可具有属性、方法和事件，所有这些都是抽象成员；也就是说，虽然接口定义这些成员及其签名，但每个接口成员的功能由实现该接口的类型定义。 这意味着实现接口的任何类或结构都必须为该接口中声明的抽象成员提供定义。 接口也可以要求任何实现类或结构实现一个或多个其他接口。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "75711410"
   
  每种语言都必须提供映射规则，将实现映射到需要该成员的接口，因为多个接口可以使用同一个签名声明成员，而这些成员可以分别具有单独的实现。  
   
-<a name="Delegates"></a>   
+<a name="Delegates"></a>
 ### <a name="delegates"></a>委托  
  委托是用途类似于 C++ 中的函数指针的引用类型。 它们用于 .NET 中的事件处理程序和回调函数。 与函数指针不同，委托是安全、可验证和类型安全的。 委托类型可以表示任何具有兼容签名的实例方法或静态方法。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "75711410"
 > [!NOTE]
 > 不需要将这些方法用于 C#、C++ 和 Visual Basic 中的事件处理程序委托，因为这些语言为添加和移除事件处理程序提供了语法。  
 
-<a name="type_definitions"></a>   
+<a name="type_definitions"></a>
 ## <a name="type-definitions"></a>类型定义  
  类型定义包括以下内容：  
   
@@ -222,7 +222,7 @@ ms.locfileid: "75711410"
   
  一个类型可以实现任何数量的接口。 要实现接口，类型必须实现该接口的所有虚拟成员。 虚方法可以由派生的类型来实现，既可静态调用，也可动态调用。  
 
-<a name="type_members"></a>   
+<a name="type_members"></a>
 ## <a name="type-members"></a>类型成员  
  运行时允许您定义指定类型行为和状态的类型成员。 类型成员包括以下内容：  
   
@@ -238,7 +238,7 @@ ms.locfileid: "75711410"
   
 - [嵌套类型](#NestedTypes)  
   
-<a name="Fields"></a>   
+<a name="Fields"></a>
 ### <a name="fields"></a>字段  
  字段描述并包含类型状态的一部分。 字段可以是运行时支持的任何类型。 字段通常是 `private` 或 `protected`，因此只能在类内部或从派生类访问。 如果可以从类型外部修改字段值，通常使用属性集访问器。 公开的字段通常是只读的，可以为以下两种类型：  
   
@@ -251,7 +251,7 @@ ms.locfileid: "75711410"
  [!code-csharp[Conceptual.Types.Members.Fields#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.fields/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Fields#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.fields/vb/example.vb#1)]  
   
-<a name="Properties"></a>   
+<a name="Properties"></a>
 ### <a name="properties"></a>属性  
  属性命名类型的值或状态，并定义获得或设置属性值的方法。 属性可以是基元类型、基元类型的集合、用户定义的类型或用户定义类型的集合。 属性通常用于使类型的公共接口独立于类型的实际表示形式。 这使属性能够反映不直接在类中存储的值（例如，当属性返回计算值时）或能够在将值赋给私有字段前进行验证。 下面的示例演示后一种模式。  
   
@@ -260,13 +260,13 @@ ms.locfileid: "75711410"
   
  除了包含属性本身之外，包含可读属性的类型的 Microsoft 中间语言 (MSIL) 还包含 `get_`propertyname  方法，包含可写属性的类型的 MSIL 还包含 `set_`propertyname  方法。  
   
-<a name="Methods"></a>   
+<a name="Methods"></a>
 ### <a name="methods"></a>方法  
  方法描述可用于类型的操作。 方法的签名指定其所有参数和返回值可使用的类型。  
   
  尽管大多数方法都定义方法调用所需的参数的确切数目，但某些方法支持可变数目的参数。 这些方法的最后声明的参数用 <xref:System.ParamArrayAttribute> 特性标记。 语言编译器通常会提供一个关键字（例如，在 C# 中为 `params`，在 Visual Basic 中为 `ParamArray`），使得不必显式使用 <xref:System.ParamArrayAttribute>。  
   
-<a name="Constructors"></a>   
+<a name="Constructors"></a>
 ### <a name="constructors"></a>构造函数  
  构造函数是一种特殊类型的方法，可创建类或结构的新实例。 像任何其他方法一样，构造函数可以包含参数，但是它不返回值（即它返回 `void`）。  
   
@@ -274,17 +274,17 @@ ms.locfileid: "75711410"
   
  如果一个结构的源代码定义多个构造函数，则这些构造函数必须是参数化的；结构不能定义无参数构造函数，并且编译器不会为结构或其他值类型生成无参数构造函数。 所有值类型都具有隐式无参数构造函数。 此构造函数由公共语言运行时实现，并且将该结构的所有字段都初始化为其默认值。  
   
-<a name="Events"></a>   
+<a name="Events"></a>
 ### <a name="events"></a>事件  
  事件定义可以响应的事情，并定义订阅、取消订阅及引发事件的方法。 事件通常用于通知其他类型的状态改变。 有关详细信息，请参阅[事件](../../../docs/standard/events/index.md)。  
   
-<a name="NestedTypes"></a>   
+<a name="NestedTypes"></a>
 ### <a name="nested-types"></a>嵌套类型  
  嵌套类型是作为某其他类型的成员的类型。 嵌套类型应与其包含类型紧密关联，并且不得用作通用类型。 在声明类型使用和创建嵌套类型实例时，嵌套类型很有用，但不在公共成员中公开嵌套类型的使用。  
   
  嵌套类型可能会使有些开发人员感到困惑，因此除非有必要的理由，否则嵌套类型不应是公开可见的。 在设计完善的库中，开发人员几乎不需要使用嵌套类型实例化对象或声明变量。  
 
-<a name="characteristics_of_type_members"></a>   
+<a name="characteristics_of_type_members"></a>
 ## <a name="characteristics-of-type-members"></a>类型成员的特征  
  通用类型系统允许类型成员具有多种特征，但并不要求语言能支持所有这些特征。 下表介绍了这些成员特征。  
   

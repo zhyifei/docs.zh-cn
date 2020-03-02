@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960385"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160217"
 ---
 # <a name="managed-execution-process"></a>托管执行过程
 <a name="introduction"></a> 托管的执行过程包括以下步骤，在本主题后面将对此进行详细讨论：  
@@ -36,7 +36,7 @@ ms.locfileid: "74960385"
   
      公共语言运行时提供启用要发生的执行的基础结构以及执行期间可使用的服务。  
   
-<a name="choosing_a_compiler"></a>   
+<a name="choosing_a_compiler"></a>
 ## <a name="choosing-a-compiler"></a>选择编译器  
  若要获取公共语言运行时 (CLR) 提供的好处，必须使用一个或多个面向运行时的语言编译器，如 Visual Basic、C#、Visual C++、F# 或众多第三方编译器之一，如 Eiffel、Perl 或 COBOL 编译器。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74960385"
   
  [返回页首](#introduction)  
   
-<a name="compiling_to_msil"></a>   
+<a name="compiling_to_msil"></a>
 ## <a name="compiling-to-msil"></a>编译为 MSIL  
  编译为托管代码时，编译器将源代码转换为 Microsoft 中间语言 (MSIL)，这是一组独立于 CPU 且可以有效地转换为本机代码的说明。 MSIL 包括有关加载、存储、初始化和调用对象方法的说明，以及有关算术和逻辑运算、控制流、直接内存访问、异常处理和其他操作的说明。 代码可以运行之前，必须将 MSIL 转换为特定于 CPU 的代码，通常通过 [实时 (JIT) 编译器](#compiling_msil_to_native_code)实现。 由于公共语言运行时为其支持的每个计算机基础结构提供一个或多个 JIT 编译器，同一组的 MSIL 可以在任何受支持的基础结构上进行 JIT 编译和运行。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "74960385"
   
  [返回页首](#introduction)  
   
-<a name="compiling_msil_to_native_code"></a>   
+<a name="compiling_msil_to_native_code"></a>
 ## <a name="compiling-msil-to-native-code"></a>将 MSIL 编译为本机代码  
  运行 Microsoft 中间语言 (MSIL) 前，必须根据公共语言运行时将其编译为目标计算机基础结构的本机代码。 .NET Framework 提供两种方法来执行此转换：  
   
@@ -89,7 +89,7 @@ ms.locfileid: "74960385"
   
  [返回页首](#introduction)  
   
-<a name="running_code"></a>   
+<a name="running_code"></a>
 ## <a name="running-code"></a>运行代码  
  公共语言运行时提供启用要发生的托管执行的基础结构以及执行期间可使用的服务。 方法可以运行之前，必须编译为特定于处理器的代码。 当第一次调用，然后运行时，为其生成 MSIL 的每种方法都是 JIT 编译的。 下次运行该方法时，将运行现有的 JIT 编译的本机代码。 重复 JIT 编译，然后运行代码的过程，直到执行完毕。  
   

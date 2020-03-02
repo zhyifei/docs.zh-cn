@@ -12,12 +12,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: edd398cd3e42e23301dcc992093d14d087754e76
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d6314fae266505fbb4410aaaa351973070ab3811
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347243"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156434"
 ---
 # <a name="resolve-assembly-loads"></a>解析程序集加载
 .NET 为对程序集加载需要更强控制的应用程序提供了 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。 通过处理此事件，应用程序可从常规探测路径外部将程序集加载到加载上下文、从几个程序集版本中选择要加载的版本、发出动态程序集并返回此程序集，等等。 本主题指导如何处理 <xref:System.AppDomain.AssemblyResolve> 事件。  
@@ -81,7 +81,7 @@ using namespace System::Reflection;
 ref class Example
 {
 internal:
-    static Assembly^ MyHandler(Object^ source, ResolveEventArgs^ e) 
+    static Assembly^ MyHandler(Object^ source, ResolveEventArgs^ e)
     {
         Console::WriteLine("Resolving {0}", e->Name);
         return Assembly::Load(e->Name);
@@ -98,7 +98,7 @@ void main()
         Object^ obj = ad->CreateInstanceAndUnwrap(
             "MyAssembly, version=1.2.3.4, culture=neutral, publicKeyToken=null",
             "MyType");
-    } 
+    }
     catch (Exception^ ex)
     {
         Console::WriteLine(ex->Message);
@@ -133,19 +133,19 @@ class BadExample
             object obj = ad.CreateInstanceAndUnwrap(
                 "MyAssembly, version=1.2.3.4, culture=neutral, publicKeyToken=null",
                 "MyType");
-        } 
+        }
         catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
         }
     }
 
-    static Assembly MyHandler(object source, ResolveEventArgs e) 
+    static Assembly MyHandler(object source, ResolveEventArgs e)
     {
         Console.WriteLine("Resolving {0}", e.Name);
         return Assembly.Load(e.Name);
     }
-} 
+}
 
 /* This example produces output similar to the following:
 
@@ -165,7 +165,7 @@ Imports System.Reflection
 Class BadExample
 
     Shared Sub Main()
-    
+
         Dim ad As AppDomain = AppDomain.CreateDomain("Test")
         AddHandler ad.AssemblyResolve, AddressOf MyHandler
 

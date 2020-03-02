@@ -4,12 +4,12 @@ description: 描述 .NET 体系结构组件，例如 .NET Standard、.NET 实现
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: af28863ac98ff5ffb5a8133fb98f2f1e7036985d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: eadcf05069edfa32a52c5e73045b4cebd1a9a6ac
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124385"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160373"
 ---
 # <a name="net-architectural-components"></a>.NET 体系结构组件
 
@@ -70,7 +70,7 @@ UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件
 
 - .NET Framework 公共语言运行时 (CLR)
 - .NET Core 核心公共语言运行时 (CoreCLR)
-- 适用于通用 Windows 平台的 .NET Native 
+- 适用于通用 Windows 平台的 .NET Native
 - 用于 Xamarin.iOS、Xamarin.Android、Xamarin.Mac 和 Mono 桌面框架的 Mono 运行时
 
 ## <a name="net-tooling-and-common-infrastructure"></a>.NET 工具和常见基础结构
@@ -96,19 +96,19 @@ C# 语言和公共语言基础结构 (CLI) 规范通过 [Ecma International®](h
 - **C# 语言标准（版本 5.0）** ：[ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
 - **公共语言基础结构**：提供 [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) 和 [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) 形式。
 - **派生自分区 IV XML 文件的信息**：提供 [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) 和 [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) 格式。
- 
+
 官方 ISO/IEC 文档可从 ISO/IEC [公开标准](https://standards.iso.org/ittf/PubliclyAvailableStandards/)页获取。 以下链接可从该页面直接获得：
 
 - **信息技术 - 编程语言 - C#** ：[ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
 - **信息技术 - 公共语言基础结构 (CLI) 分区 I 到 VI**：[ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
 - **信息技术 - 公共语言基础结构 (CLI) - 有关派生自分区 IV XML 文件的信息的技术报告**：[ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [为服务器应用选择 .NET Core 或 .NET Framework](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
 - [.NET Core 指南](../core/index.md)
 - [.NET Framework 指南](../framework/index.md)
 - [C# 指南](../csharp/index.yml)
-- [F # 指南](../fsharp/index.yml)
+- [F# 指南](../fsharp/index.yml)
 - [Visual Basic 指南](../visual-basic/index.yml)

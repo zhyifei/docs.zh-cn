@@ -2,12 +2,12 @@
 title: 使用作为容器运行的数据库服务器
 description: 了解使用仅作为开发容器运行的数据库服务器的重要性。 从不用于生产。
 ms.date: 01/30/2020
-ms.openlocfilehash: 816ac196636f78a368a9f20e8eedcc6a22567fa7
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0cbc933003aac10970814378c27e88b5cb0ddbe5
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502293"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628522"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>使用作为容器运行的数据库服务器
 
@@ -48,10 +48,10 @@ eShopOnContainers 应用程序提供在启动时在数据库中设定数据，�
 ### <a name="additional-resources"></a>其他资源
 
 - **Run the SQL Server Docker image on Linux, Mac, or Windows**（在 Linux、Mac 或 Windows 上运行 SQL Server Docker 映像） \
-    <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
+  <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
 
 - **Connect and query SQL Server on Linux with sqlcmd**（使用 sqlcmd 连接和查询 Linux 上的 SQL Server） \
-    <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
+  <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
 
 ## <a name="seeding-with-test-data-on-web-application-startup"></a>在 Web 应用程序启动时设定测试数据
 

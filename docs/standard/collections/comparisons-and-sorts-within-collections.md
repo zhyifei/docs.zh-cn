@@ -12,19 +12,19 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: fc6972061994e17c2176d3ab278b8d2b37c725ee
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3360652f22ed39ccfd99f9863052fe584b78562f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711384"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159255"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>集合内的比较和排序
 <xref:System.Collections> 类在管理集合所涉及的几乎所有进程中执行比较，无论是搜索待删除的元素或返回键值对的值。  
   
  集合通常使用相等比较器和/或排序比较器。 有两个构造用于比较。  
   
-<a name="BKMK_Checkingforequality"></a>   
+<a name="BKMK_Checkingforequality"></a>
 ## <a name="checking-for-equality"></a>检查等同性  
  诸如 `Contains`、 <xref:System.Collections.IList.IndexOf%2A>、 <xref:System.Collections.Generic.List%601.LastIndexOf%2A>和 `Remove` 的方法将相等比较器用于集合元素。 如果集合是泛型的，则按照以下原则比较项是否相等：  
   
@@ -34,7 +34,7 @@ ms.locfileid: "75711384"
   
  此外，字典集合的某些构造函数重载接受 <xref:System.Collections.Generic.IEqualityComparer%601> 实现，用于比较键是否相等。 有关示例，请参见 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> 构造函数。  
   
-<a name="BKMK_Determiningsortorder"></a>   
+<a name="BKMK_Determiningsortorder"></a>
 ## <a name="determining-sort-order"></a>确定排序顺序  
  `BinarySearch` 和 `Sort` 等方法将排序比较器用于集合元素。 可在集合的元素间进行比较，或在元素或指定值之间进行比较。 对于比较对象，有 `default comparer` 和 `explicit comparer`的概念。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75711384"
   
  系统当前的区域性设置可影响集合中的比较和排序。 默认情况下， **Collections** 类中的比较和排序是区分区域性的。 若要忽略区域性设置并因此获得一致的比较和排序结果，请使用具有接受 <xref:System.Globalization.CultureInfo.InvariantCulture%2A> 的成员重载的 <xref:System.Globalization.CultureInfo>。 有关详细信息，请参阅 “[在集合中执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)” 和 “[在数组中执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)”。  
   
-<a name="BKMK_Equalityandsortexample"></a>   
+<a name="BKMK_Equalityandsortexample"></a>
 ## <a name="equality-and-sort-example"></a>等同性和排序示例  
  以下代码展示了 <xref:System.IEquatable%601> 和 <xref:System.IComparable%601> 在简单的业务对象上的实现。 此外，如果对象被存储在列表中并已排序，那么你会发现调用 <xref:System.Collections.Generic.List%601.Sort> 方法会导致 `Part` 类型使用默认比较器，并通过使用匿名方法实现 <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29> 方法。  
   

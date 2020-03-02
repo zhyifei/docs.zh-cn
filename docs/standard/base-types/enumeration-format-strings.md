@@ -10,12 +10,12 @@ helpviewer_keywords:
 - enumeration format strings
 - formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-ms.openlocfilehash: c32fd9d59f61b6befe94ff9eb85b0c39ce926adb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: da7634758f5c4319fa18612d216682dc141318fd
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348268"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155953"
 ---
 # <a name="enumeration-format-strings"></a>枚举格式字符串
 
@@ -48,7 +48,7 @@ ms.locfileid: "75348268"
 
 将枚举项显示为十六进制值。 根据需要以前导零表示此值，以确保在枚举类型的[基础数值类型](xref:System.Enum.GetUnderlyingType%2A)中，结果字符串的每个字节都有两个字符。 下面的示例演示 X 格式说明符。 在示例中，这两者的基础类型 <xref:System.ConsoleColor> 和 <xref:System.IO.FileAttributes> 为 <xref:System.Int32>，或 32 位（或 4 字节）整数，它将生成 8 个字符的结果字符串。
 
-[!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
+[!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]
 
 ## <a name="example"></a>示例

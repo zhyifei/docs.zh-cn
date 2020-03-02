@@ -4,12 +4,12 @@ description: 了解 .NET API 分析器如何有助于检测弃用的 API 和平�
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: f6cf2d8109c564447972afd18c6d6d587711304b
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: e214c91f2beebc7f3b3324f4879deba9a5623f86
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542619"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156129"
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
 
@@ -47,7 +47,7 @@ API 分析器使用 API 专用错误代码，这些代码以 DE（全称是“De
    3. 选择“包括预发行版”。 
    4. 搜索 Microsoft.DotNet.Analyzers.Compatibility  。
    5. 选择列表中的包。
-   6. 选择“安装”按钮  。 
+   6. 选择“安装”按钮  。
    7. 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。
 
 ### <a name="use-the-api-analyzer"></a>使用 API 分析器
@@ -56,13 +56,13 @@ API 分析器使用 API 专用错误代码，这些代码以 DE（全称是“De
 
 ![“显示绿色波浪线且左侧有灯泡的 WebClient API 屏幕截图”](media/api-analyzer/green-squiggle.jpg)
 
-弃用的 API 每出现一次，“错误列表”  窗口中都会显示具有唯一 ID 的警告，如下面的示例所示 (`DE004`)： 
+弃用的 API 每出现一次，“错误列表”  窗口中都会显示具有唯一 ID 的警告，如下面的示例所示 (`DE004`)：
 
 ![“显示警告 ID 和说明的‘错误列表’窗口屏幕截图”](media/api-analyzer/warnings-id-and-descriptions.jpg "包含警告的错误列表窗口。")
 
 单击 ID 后，便会转到详细信息网页，其中说明了 API 遭弃用的原因，以及有关可用替换 API 的建议。
 
-可以禁止显示任何警告，具体方法是右键单击突出显示的成员，并选择“禁止 \<诊断 ID>”  。 禁止显示警告的方法有两种： 
+可以禁止显示任何警告，具体方法是右键单击突出显示的成员，并选择“禁止 \<诊断 ID>”  。 禁止显示警告的方法有两种：
 
 - [本地（在源中）](#suppress-warnings-locally)
 - [全局（在禁止文件中）](#suppress-warnings-globally)- 推荐方法

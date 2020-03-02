@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: ae0ba0bf15b6a02df5130d34d277322897826697
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b1ec8cfc0f8c6e660d716c51bf3c3387b73a278f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338515"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159307"
 ---
 # <a name="composite-formatting"></a>复合格式设置
 
@@ -31,7 +31,7 @@ ms.locfileid: "75338515"
   
 - <xref:System.String.Format%2A?displayProperty=nameWithType>，它返回格式化的结果字符串。  
   
-- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>，它将格式化的结果字符串追加到 <xref:System.Text.StringBuilder> 对象。   
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>，它将格式化的结果字符串追加到 <xref:System.Text.StringBuilder> 对象。
 - <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法的某些重载，它将格式化的结果字符串显示到控制台上。  
   
 - <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> 方法的某些重载，它将格式化的结果字符串写入流或文件中。 派生自 <xref:System.IO.TextWriter> 的类（如 <xref:System.IO.StreamWriter> 和 <xref:System.Web.UI.HtmlTextWriter>）也共享此功能。  

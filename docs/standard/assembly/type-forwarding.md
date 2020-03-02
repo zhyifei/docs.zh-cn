@@ -8,12 +8,12 @@ ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 7b9fd4e89d1d3290dfc17f52de392c4ee9092d02
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 215636a9617a2723d8ab69640c1d3e69491a7d87
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138601"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160360"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>公共语言运行时中的类型转发
 使用类型转发可以将类型移到另一个程序集，而不必重新编译使用原始程序集的应用程序。  
@@ -29,19 +29,19 @@ ms.locfileid: "73138601"
  转发类型有四个步骤：  
   
 1. 将类型的源代码从原始程序集移到目标程序集。  
-   
+
 2. 在类型曾存于的程序集中，为已移动的类型添加 <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>。 下面的代码显示名为 `Example` 的被移动类型的属性。  
-   
+
    ```cpp  
     [assembly:TypeForwardedToAttribute(Example::typeid)]  
    ```
-   
+
    ```csharp  
     [assembly:TypeForwardedToAttribute(typeof(Example))]  
    ```  
-   
+
 3. 编译该类型目前所属的程序集。  
-   
+
 4. 重新编译该类型原来所属的程序集，其中带有对该类型目前所属的程序集的引用。 例如，如果从命令行编译一个 C# 文件，则使用 [-referenc（C# 编译器选项）](../../csharp/language-reference/compiler-options/reference-compiler-option.md)选项指定包含类型的程序集。 在 C++ 中，在源文件中使用 [#using](/cpp/preprocessor/hash-using-directive-cpp) 指令指定包含类型的程序集。  
   
 ## <a name="see-also"></a>请参阅

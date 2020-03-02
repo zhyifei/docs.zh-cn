@@ -4,16 +4,16 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: bf290681395460bec10be45c4eaa1f165e453caf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 17162a0dc959a85c03a5cb5757e2b91fe10b0ab3
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75702891"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628158"
 ---
 # <a name="using-indexers-c-programming-guide"></a>使用索引器（C# 编程指南）
 
-索引器使你可从语法上方便地创建[类](../../language-reference/keywords/class.md)、[结构](../../language-reference/keywords/struct.md)或[接口](../../language-reference/keywords/interface.md)，以便客户端应用程序能像访问数组一样访问它们。 在主要目标是封装内部集合或数组的类型中，常常要实现索引器。 例如，假设有一个类 `TempRecord`，它表示 24 小时的周期内在 10 个不同时间点所记录的温度（单位为华氏度）。 此类包含类型 `float[]` 的一个数组 `temps`，用于存储温度值。 通过在此类中实现索引器，客户端可采用 `float temp = tr[4]` 的形式（而非 `float temp = tr.temps[4]`）访问 `TempRecord` 实例中的温度。 索引器表示法不但简化了客户端应用程序的语法；它还使类及其目标更容易直观地为其它开发者所理解。  
+索引器使你可从语法上方便地创建[类](../../language-reference/keywords/class.md)、[结构](../../language-reference/builtin-types/struct.md)或[接口](../../language-reference/keywords/interface.md)，以便客户端应用程序能像访问数组一样访问它们。 在主要目标是封装内部集合或数组的类型中，常常要实现索引器。 例如，假设有一个类 `TempRecord`，它表示 24 小时的周期内在 10 个不同时间点所记录的温度（单位为华氏度）。 此类包含类型 `float[]` 的一个数组 `temps`，用于存储温度值。 通过在此类中实现索引器，客户端可采用 `float temp = tr[4]` 的形式（而非 `float temp = tr.temps[4]`）访问 `TempRecord` 实例中的温度。 索引器表示法不但简化了客户端应用程序的语法；它还使类及其目标更容易直观地为其它开发者所理解。  
   
 若要在类或结构上声明索引器，请使用 [this](../../language-reference/keywords/this.md) 关键字，如以下示例所示：
 

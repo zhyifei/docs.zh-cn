@@ -6,12 +6,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 19bf7682916336173ed93619fb6f0ff1242a1b30
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712801"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626706"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where（泛型类型约束）（C# 参考）
 
@@ -32,7 +32,7 @@ ms.locfileid: "75712801"
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-`where` 子句可能包含 `notnull` 约束。 `notnull` 约束将类型参数限制为不可为 null 的类型。 该类型可以是[值类型](struct.md)，也可以是不可为 null 的引用类型。 对于在 [`nullable enable` 上下文](../../nullable-references.md#nullable-contexts)中编译的代码，从 C# 8.0 开始可以使用 `notnull` 约束。 与其他约束不同，如果类型参数违反 `notnull` 约束，编译器会生成警告而不是错误。 警告仅在 `nullable enable` 上下文中生成。 
+`where` 子句可能包含 `notnull` 约束。 `notnull` 约束将类型参数限制为不可为 null 的类型。 该类型可以是[值类型](../builtin-types/value-types.md)，也可以是不可为 null 的引用类型。 对于在 [`nullable enable` 上下文](../../nullable-references.md#nullable-contexts)中编译的代码，从 C# 8.0 开始可以使用 `notnull` 约束。 与其他约束不同，如果类型参数违反 `notnull` 约束，编译器会生成警告而不是错误。 警告仅在 `nullable enable` 上下文中生成。
 
 > [!IMPORTANT]
 > 包含 `notnull` 约束的泛型声明可以在可为 null 的不明显上下文中使用，但编译器不会强制执行约束。
