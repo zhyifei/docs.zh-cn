@@ -92,7 +92,7 @@ ms.locfileid: "78160087"
 
 在现有的文档中，“框架”有时指 [.NET 的实现](#implementation-of-net)。 例如，某文章可能会将 .NET Core 称为框架。 我们计划从文档中去掉这种令人困惑的用法。
 
-## <a name="gc"></a>“GC”
+## <a name="gc"></a>GC
 
 垃圾回收器。
 
