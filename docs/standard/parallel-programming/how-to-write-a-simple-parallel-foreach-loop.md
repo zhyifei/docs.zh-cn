@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 02b94b673dc4468e68a1dadd83aab0e3bfcfaa16
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921218"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160295"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>如何：编写简单的 Parallel.ForEach 循环
 
@@ -50,7 +50,7 @@ Visual Studio 中有适用于 Windows 桌面和 .NET Core 的 Visual Basic 和 C
 从命令行，可使用 .NET Core CLI 命令（例如 `dotnet new console` 或 `dotnet new console -lang vb`），或者可创建文件并使用 .NET Framework 应用程序提供的命令行编译器。
 
 对于.NET Core 项目，必须引用 System.Drawing.Common  NuGet 包。 在 Visual Studio 中，使用 NuGet 包管理器安装该包。 或者，也可以在 \*.csproj 或 \*.vbproj 文件中添加对包的引用：
- 
+
 ```xml
 <ItemGroup>
      <PackageReference Include="System.Drawing.Common" Version="4.5.1" />

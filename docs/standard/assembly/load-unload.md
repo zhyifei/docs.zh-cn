@@ -2,12 +2,12 @@
 title: 如何：加载和卸载程序集
 ms.date: 08/19/2019
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
-ms.openlocfilehash: 77ea97c2fc324287e9c697d630def98241432c9f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: a520ffd41c3465737be7494d374cbcf64e3f1b85
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972671"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155771"
 ---
 # <a name="how-to-load-and-unload-assemblies"></a>如何：加载和卸载程序集
 公共语言运行时会自动加载程序所引用的程序集，但也可以将特定的程序集动态加载到当前的应用程序域。 有关详细信息，请参阅[如何：将程序集加载到应用程序域中](../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)。
@@ -16,7 +16,7 @@ ms.locfileid: "70972671"
 
 ## <a name="load-and-unload-assemblies"></a>加载和卸载程序集
 
-要将程序集加载到应用程序域中，请使用 <xref:System.AppDomain> 和 <xref:System.Reflection.Assembly> 类中包含的几种加载方法中的一种。 有关详细信息，请参阅[如何：将程序集加载到应用程序域中](../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)。 请注意，.NET Core 仅支持单个应用程序域。 
+要将程序集加载到应用程序域中，请使用 <xref:System.AppDomain> 和 <xref:System.Reflection.Assembly> 类中包含的几种加载方法中的一种。 有关详细信息，请参阅[如何：将程序集加载到应用程序域中](../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)。 请注意，.NET Core 仅支持单个应用程序域。
 
 若要在 .NET Framework 中卸载程序集，必须卸载包含它的所有应用程序域。 要卸载应用程序域，请使用 <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> 方法。 有关详细信息，请参阅[如何：卸载应用程序域](../../framework/app-domains/how-to-unload-an-application-domain.md)。
 

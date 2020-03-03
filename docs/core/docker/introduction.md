@@ -3,12 +3,12 @@ title: Docker 简介
 description: 本文简要概述 .NET Core 应用程序上下文中的 Docker。
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: 40c8a3c8d81d23c621ccb83a283f49aa34a58ac1
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: eedfd1e7c1b361beb9d4f271e739657ef5e894a6
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920826"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157786"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 简介
 
@@ -18,7 +18,7 @@ ms.locfileid: "76920826"
 
 ## <a name="docker-basics"></a>Docker 基础知识
 
-首先来熟悉几个概念。 Docker 客户端具有可用于管理映像和容器的 CLI。 如前文所述，应花时间通读 [Docker 概述](https://docs.docker.com/engine/docker-overview/)文档。 
+首先来熟悉几个概念。 Docker 客户端具有可用于管理映像和容器的 CLI。 如前文所述，应花时间通读 [Docker 概述](https://docs.docker.com/engine/docker-overview/)文档。
 
 ### <a name="images"></a>映像
 
@@ -34,7 +34,7 @@ ms.locfileid: "76920826"
 
 容器注册表是映像存储库的集合。 映像可以基于注册表映像。 可以直接从注册表中的映像创建容器。 [Docker 容器、映像和注册表之间的关系](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md)是[构建和生成容器化应用程序或微服务](../../architecture/microservices/architect-microservice-container-applications/index.md)时的一个重要概念。 此方法大大缩短了开发和部署之间的时间。
 
-Docker 具有一个托管在 [Docker 中心](https://hub.docker.com/)的公共注册表，可供用户使用。 [.NET Core 相关映像](https://hub.docker.com/_/microsoft-dotnet-core/)均在 Docker 中心列出。 
+Docker 具有一个托管在 [Docker 中心](https://hub.docker.com/)的公共注册表，可供用户使用。 [.NET Core 相关映像](https://hub.docker.com/_/microsoft-dotnet-core/)均在 Docker 中心列出。
 
 Microsoft 容器注册表 (MCR) 是 Microsoft 提供的容器映像的官方来源。 MCR 构建在 Azure CDN 之上，可提供用于全局复制的映像。 但是，MCR 没有面向公众的网站，了解有关 Microsoft 提供的容器映像的主要方法是通过 [Microsoft Docker 中心页面](https://hub.docker.com/_/microsoft-dotnet-core/)。
 
@@ -44,7 +44,7 @@ Dockerfile  是定义可创建映像的一组指令的文件。 Dockerfile  中�
 
 ## <a name="net-core-images"></a>.NET Core 映像
 
-官方 .NET Core Docker 映像发布到 Microsoft 容器注册表 (MCR)，用户可以在 [Microsoft.NET Core Docker 中心存储库](https://hub.docker.com/_/microsoft-dotnet-core/)中找到这些映像。 每个存储库包含 .NET（SDK 或运行时）和可以使用的操作系统的不同组合的映像。 
+官方 .NET Core Docker 映像发布到 Microsoft 容器注册表 (MCR)，用户可以在 [Microsoft.NET Core Docker 中心存储库](https://hub.docker.com/_/microsoft-dotnet-core/)中找到这些映像。 每个存储库包含 .NET（SDK 或运行时）和可以使用的操作系统的不同组合的映像。
 
 Microsoft 提供适合特定场景的映像。 例如，[ASP.NET Core 存储库](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)提供针对在生产环境中运行 ASP.NET Core 应用生成的映像。
 

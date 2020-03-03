@@ -4,12 +4,12 @@ description: 本文简要概述了 .NET Core 和.NET Standard 项目的单元测
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 41f4457e636ca495b78109803ca66680e72d007e
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 1263bfe337b9d6609c0ca7df70aa299a61a7f1a0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899886"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157396"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 中的单元测试
 
@@ -23,9 +23,9 @@ ms.locfileid: "75899886"
 
 ## <a name="what-are-unit-tests"></a>什么是单元测试？
 
-使用自动测试是确保软件应用程序按作者期望执行操作的一种绝佳方式。 软件应用程序有多种类型的测试。 其中包括集成测试、Web 测试、负载测试和其他测试。 “单元测试”用于测试个人软件组件或方法  。 单元测试仅应测试开发人员控件内的代码。 它们不应测试基础结构问题。 基础结构问题包括数据库、文件系统和网络资源。 
+使用自动测试是确保软件应用程序按作者期望执行操作的一种绝佳方式。 软件应用程序有多种类型的测试。 其中包括集成测试、Web 测试、负载测试和其他测试。 “单元测试”用于测试个人软件组件或方法  。 单元测试仅应测试开发人员控件内的代码。 它们不应测试基础结构问题。 基础结构问题包括数据库、文件系统和网络资源。
 
-此外，请记住还可使用编写测试的最佳做法。 例如，[测试驱动开发 (TDD)](https://deviq.com/test-driven-development/) 是指先编写单元测试，再编写该单元测试要检查的代码。 TDD 就像先编写书籍大纲，再编写该书籍。 它旨在帮助开发人员编写更简单、更具可读性的高效代码。 
+此外，请记住还可使用编写测试的最佳做法。 例如，[测试驱动开发 (TDD)](https://deviq.com/test-driven-development/) 是指先编写单元测试，再编写该单元测试要检查的代码。 TDD 就像先编写书籍大纲，再编写该书籍。 它旨在帮助开发人员编写更简单、更具可读性的高效代码。
 
 > [!NOTE]
 > ASP.NET 团队遵循[这些约定](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests)帮助开发人员为测试类和方法提供合适的名称。
@@ -40,11 +40,11 @@ ms.locfileid: "75899886"
 
 - [C#](../../csharp/index.yml)
 - [F#](../../fsharp/index.yml)
-- [Visual Basic](../../visual-basic/index.yml) 
+- [Visual Basic](../../visual-basic/index.yml)
 
 还可以在以下各项之间进行选择：
 
-- [xUnit](https://xunit.github.io) 
+- [xUnit](https://xunit.github.io)
 - [NUnit](https://nunit.org)
 - [MSTest](https://github.com/Microsoft/testfx-docs)
 

@@ -3,12 +3,12 @@ title: .NET 术语表
 description: 了解 .NET 文档中所用的选定术语的含义。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 822d6c9513d49dcc6bc57421003441d9bcc7c281
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921108"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160087"
 ---
 # <a name="net-glossary"></a>.NET 术语表
 
@@ -22,11 +22,11 @@ ms.locfileid: "76921108"
 
 请参阅 [CoreRT](#corert) 和 [.NET Native](#net-native)。
 
-## <a name="aspnet"></a>ASP.NET 
+## <a name="aspnet"></a>ASP.NET
 
 随 .NET Framework 一起提供的原始 ASP.NET 实现。
 
-有时 ASP.NET 是一个涵盖性术语，指包含 ASP.NET Core 在内的两个 ASP.NET 实现。 该术语在任何给定实例中的含义取决于上下文。 若要指明不要使用 ASP.NET 表示这两种实现，请参考 ASP.NET 4.x。 
+有时 ASP.NET 是一个涵盖性术语，指包含 ASP.NET Core 在内的两个 ASP.NET 实现。 该术语在任何给定实例中的含义取决于上下文。 若要指明不要使用 ASP.NET 表示这两种实现，请参考 ASP.NET 4.x。
 
 请参阅 [ASP.NET 文档](/aspnet/#pivot=aspnet)。
 
@@ -78,7 +78,7 @@ ms.locfileid: "76921108"
 
 在所包含的第三方应用和库方面，术语“.NET 生态系统”不同于类似的“.NET 堆栈”等术语。 请看以下这一句示例：
 
-- “推出 [.NET Standard](#net-standard) 的背后动机是要提高 .NET 生态系统中的一致性。” 
+- “推出 [.NET Standard](#net-standard) 的背后动机是要提高 .NET 生态系统中的一致性。”
 
 ## <a name="framework"></a>框架
 
@@ -157,7 +157,7 @@ Mono 通常与实时编译器一起使用，但它也提供在 iOS 之类的平�
 
 请参阅 [.NET 指南](index.md)
 
-## <a name="net-core"></a>.NET Core 
+## <a name="net-core"></a>.NET Core
 
 一种跨平台、高性能的开放源 .NET 实现。 包括 Core 公共语言运行时 (CoreCLR)、Core AOT 运行时（正在开发的 CoreRT）、Core 基类库和 Core SDK。
 
@@ -217,7 +217,7 @@ NuGet 包 &mdash; 或只是一个包 &mdash; 是一个 .zip 文件，其中具�
 
 下面是在句子中使用的示例：
 
-- “.NET Core 是一个跨平台 .NET 实现。” 
+- “.NET Core 是一个跨平台 .NET 实现。”
 - “PCL 配置文件代表 Microsoft 平台，而 .NET Standard 与平台无关。”
 
 .NET 文档经常使用“.NET 平台”表示一个 .NET 实现或包括所有实现的 .NET 堆栈。 这两种用法往往会与主（OS/硬件）含义混淆，因此我们计划从文档中去除这些用法。
@@ -239,13 +239,13 @@ NuGet 包 &mdash; 或只是一个包 &mdash; 是一个 .zip 文件，其中具�
 - “计划在多个运行时上运行的库应将此框架作为目标。” （参阅 .NET Standard）
 - “各种 .NET 运行时实现特定版本的 .NET Standard。 … 每个 .NET 运行时版本都将会公布它所支持的最高 .NET Standard 版本...”
 
-我们计划消除此不一致的用法。 
+我们计划消除此不一致的用法。
 
 ## <a name="stack"></a>堆栈
 
 一组编程方法，一起用于生成并运行应用程序。
 
-“.NET 堆栈”指 .NET Standard 和所有 .NET 实现。 短语“一个 .NET 堆栈”可能指一种 .NET 实现。 
+“.NET 堆栈”指 .NET Standard 和所有 .NET 实现。 短语“一个 .NET 堆栈”可能指一种 .NET 实现。
 
 ## <a name="target-framework"></a>Target Framework — 目标 Framework
 

@@ -3,12 +3,12 @@ title: 使用 Visual Studio 调试 Hello World .NET Core 应用程序
 description: 了解如何使用 Visual Studio 调试用 C# 或 Visual Basic 编写的 Hello World 应用程序。
 ms.date: 12/05/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: bc2736165ec827c1f2670605f23f549ceed4e83a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b2ee1401fc89f990c5f930d80d1a510a117e63a0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714056"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156668"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio"></a>使用 Visual Studio 调试 C# 或 Visual Basic .NET Core Hello World 应用程序
 
@@ -28,7 +28,7 @@ ms.locfileid: "75714056"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. 通过在读取 `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` 的行上单击代码窗口的左边距来设置该行的断点  。 也可以通过将插入符号置于代码行中，然后按 F9  或从菜单栏中选择“调试”   > “切换断点”  来设置断点。
 
@@ -64,12 +64,12 @@ ms.locfileid: "75714056"
 
 1. 按任意键，退出应用程序并停止调试。
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. 通过在读取 `Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}!")` 的行上单击代码窗口的左边距来设置该行的断点  。 也可以通过将插入符号置于所需的行中，然后从菜单栏中选择“调试”   > “切换断点”  来设置断点。
 
    断点会在执行包含断点的代码行之前  暂时中断执行应用程序。
-   
+
    如下图所示，Visual Studio 通过突出显示此代码行，并在其左侧边缘显示红色圆圈来指明这行设置了断点。
 
    ![设置断点后的 Visual Studio 程序窗口](./media/debugging-with-visual-studio/vb/set-breakpoint-in-editor.png)
@@ -104,7 +104,7 @@ ms.locfileid: "75714056"
 
 若要设置条件断点，并测试用户无法输入字符串时的情况如何，请执行以下操作：
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. 右键单击表示断点的红点。 在上下文菜单中，选择“条件”  ，打开“断点设置”  对话框。 选择“条件”  框（如果尚未选择）。
 
@@ -142,7 +142,7 @@ ms.locfileid: "75714056"
 
 1. 单击代码窗口左侧边缘上的点，或选中该代码行，选择“调试”>“切换断点”  ，从而清除断点。
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. 右键单击表示断点的红点。 在上下文菜单中，选择“条件”  ，打开“断点设置”  对话框。 选中“条件”  对应的框。
 
@@ -185,7 +185,7 @@ ms.locfileid: "75714056"
 
 使用 Visual Studio，还可以单步执行程序，并监视其执行情况。 通常可以设置断点，并使用此功能单步执行程序流，尽管是一小部分程序代码。 因为程序很小，因此可以单步执行整个程序：
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. 在菜单栏上，选择“调试”   > “单步执行”  ，或按 F11  。 Visual Studio 会在要执行的下一行旁边突出显示一个箭头。
 
@@ -211,7 +211,7 @@ ms.locfileid: "75714056"
 
 1. 按任意键，关闭控制台窗口并停止调试。
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. 在菜单栏上，选择“调试”   > “单步执行”  ，或按 F11  。 Visual Studio 会在要执行的下一行旁边突出显示一个箭头。
 

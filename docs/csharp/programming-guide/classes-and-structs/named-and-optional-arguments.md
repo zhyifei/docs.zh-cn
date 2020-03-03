@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 6afa8a2bd2dfee8d7c36b58342036d18241317a8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3685482caebd892c460a3cc2ecf3a22acbe3c9ec
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714789"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673402"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>命名实参和可选实参（C# 编程指南）
 C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特定形参指定实参，方法是将实参与该形参的名称关联，而不是与形参在形参列表中的位置关联。 通过*可选参数*，你可以为某些形参省略实参。 这两种技术都可与方法、索引器、构造函数和委托一起使用。  
@@ -69,7 +69,7 @@ C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特
   
 - 常量表达式；  
   
-- `new ValType()` 形式的表达式，其中 `ValType` 是值类型，例如 [enum](../../language-reference/builtin-types/enum.md) 或 [struct](structs.md)；  
+- `new ValType()` 形式的表达式，其中 `ValType` 是值类型，例如 [enum](../../language-reference/builtin-types/enum.md) 或 [struct](../../language-reference/builtin-types/struct.md)；  
   
 - [default(ValType)](../../language-reference/operators/default.md) 形式的表达式，其中 `ValType` 是值类型。  
   

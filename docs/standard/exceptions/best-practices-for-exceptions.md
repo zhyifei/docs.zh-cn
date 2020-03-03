@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 6a165c3e0f41603ef7233669d7148dd44b1d3ce6
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1de231b01e3fa97e78a87ae6b0595a9b5536374e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696768"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160165"
 ---
 # <a name="best-practices-for-exceptions"></a>异常的最佳做法
 
@@ -56,7 +56,7 @@ ms.locfileid: "71696768"
 
 避免异常的另一方法是，对极为常见的错误案例返回 NULL（或默认值），而不是引发异常。 极其常见的错误案例可被视为常规控制流。 通过在这些情况下返回 NULL（或默认值），可最大程度地减小对应用的性能产生的影响。
 
-对于值类型，是否使用 `Nullable<T>` 或默认值作为错误指示符是特定应用需要考虑的内容。 通过使用 `Nullable<Guid>`，`default` 变为 `null` 而非 `Guid.Empty`。 有时，添加 `Nullable<T>` 可更加明确值何时存在或不存在。 在其他时候，添加 `Nullable<T>` 可以创建额外的案例以查看不必要的内容，并且仅用于创建潜在的错误源。 
+对于值类型，是否使用 `Nullable<T>` 或默认值作为错误指示符是特定应用需要考虑的内容。 通过使用 `Nullable<Guid>`，`default` 变为 `null` 而非 `Guid.Empty`。 有时，添加 `Nullable<T>` 可更加明确值何时存在或不存在。 在其他时候，添加 `Nullable<T>` 可以创建额外的案例以查看不必要的内容，并且仅用于创建潜在的错误源。
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>引发异常而不是返回错误代码
 
@@ -64,7 +64,7 @@ ms.locfileid: "71696768"
 
 ## <a name="use-the-predefined-net-exception-types"></a>使用预定义的 .NET 异常类型
 
-仅当预定义的异常类不适用时，引入新异常类。 例如:
+仅当预定义的异常类不适用时，引入新异常类。 例如：
 
 - 如果根据对象的当前状态，属性集或方法调用不适当，则会引发 <xref:System.InvalidOperationException> 异常。
 
@@ -72,7 +72,7 @@ ms.locfileid: "71696768"
 
 ## <a name="end-exception-class-names-with-the-word-exception"></a>异常类名称的结尾为 `Exception`
 
-需要自定义异常时，对其正确命名并从 <xref:System.Exception> 类进行派生。 例如:
+需要自定义异常时，对其正确命名并从 <xref:System.Exception> 类进行派生。 例如：
 
 [!code-cpp[Conceptual.Exception.Handling#4](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
@@ -113,7 +113,7 @@ ms.locfileid: "71696768"
 对于本地化应用程序，应为应用程序可能引发的每个异常提供本地化消息字符串。 资源文件用于提供本地化错误消息。 有关本地化应用程序和检索本地化字符串的信息，请参阅以下文章：
 
 - [如何：使用本地化的异常消息创建用户定义的异常](how-to-create-localized-exception-messages.md)
-- [桌面应用中的资源](../../framework/resources/index.md) 
+- [桌面应用中的资源](../../framework/resources/index.md)
 - <xref:System.Resources.ResourceManager?displayProperty=nameWithType>
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>在自定义异常中，按需提供其他属性
@@ -126,7 +126,7 @@ ms.locfileid: "71696768"
 
 ## <a name="use-exception-builder-methods"></a>使用异常生成器方法
 
-类从其实现中的不同位置引发同一异常是常见的情况。 为避免过多的代码，应使用帮助器方法创建异常并将其返回。 例如:
+类从其实现中的不同位置引发同一异常是常见的情况。 为避免过多的代码，应使用帮助器方法创建异常并将其返回。 例如：
 
 [!code-cpp[Conceptual.Exception.Handling#6](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]

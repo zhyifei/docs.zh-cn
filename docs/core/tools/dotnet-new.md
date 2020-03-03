@@ -2,12 +2,12 @@
 title: dotnet new 命令
 description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
 ms.date: 02/13/2020
-ms.openlocfilehash: f11512acf5a1fdc4bde49b3d1212ccf6335dff8b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451325"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157214"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -20,7 +20,7 @@ ms.locfileid: "77451325"
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] 
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name]
     [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
@@ -174,7 +174,7 @@ dotnet new [-h|--help]
 
   有关默认的 C# 版本列表，请参阅[默认](../../csharp/language-reference/configure-language-version.md#defaults)。
 
-- **`--no-restore`** 
+- **`--no-restore`**
 
   如已指定，则在项目创建期间不执行隐式还原。 自 .NET Core 2.2 SDK 起可用。
 
@@ -202,7 +202,7 @@ dotnet new [-h|--help]
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  指定目标[框架](../../standard/frameworks.md)。 默认值为 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起可用。 
+  指定目标[框架](../../standard/frameworks.md)。 默认值为 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起可用。
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -234,7 +234,7 @@ dotnet new [-h|--help]
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  指定目标[框架](../../standard/frameworks.md)。 默认值为 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起可用。 
+  指定目标[框架](../../standard/frameworks.md)。 默认值为 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起可用。
 
 - **`--exclude-launch-settings`**
 
@@ -503,7 +503,7 @@ dotnet new [-h|--help]
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  要使用的身份验证类型。 自 .NET Core 3.0 SDK 起可用。 
+  要使用的身份验证类型。 自 .NET Core 3.0 SDK 起可用。
   
   可能的值为：
 
@@ -512,7 +512,7 @@ dotnet new [-h|--help]
 
 - **`--exclude-launch-settings`**
 
-  从生成的模板中排除 launchSettings.json  。 
+  从生成的模板中排除 launchSettings.json  。
 
 - **`--no-restore`**
 
@@ -544,7 +544,7 @@ dotnet new [-h|--help]
 
 - **`--exclude-launch-settings`**
 
-  从生成的模板中排除 launchSettings.json  。 
+  从生成的模板中排除 launchSettings.json  。
 
 - **`-f|--framework <FRAMEWORK>`**
 

@@ -2,12 +2,12 @@
 title: dotnet tool list 命令
 description: dotnet 工具列表命令列出计算机上安装的 .NET Core 工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: bb74cfeaf441cf8a1a030d97d16655f85d8267d1
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: f231dcfe64a925f75f948d508e7a2d83befd9a00
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543451"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156968"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -40,7 +40,7 @@ dotnet tool list <-h|--help>
 
 - **`-g|--global`**
 
-  列出用户范围的全局工具。 不能与 `--tool-path` 选项一起使用。 省略 `--global` 和 `--tool-path` 将列出本地工具。 
+  列出用户范围的全局工具。 不能与 `--tool-path` 选项一起使用。 省略 `--global` 和 `--tool-path` 将列出本地工具。
 
 - **`-h|--help`**
 
@@ -48,7 +48,7 @@ dotnet tool list <-h|--help>
 
 - **`--tool-path <PATH>`**
 
-  指定用于查找全局工具的自定义位置。 路径可以是绝对的，也可以是相对的。 不能与 `--global` 选项一起使用。 省略 `--global` 和 `--tool-path` 将列出本地工具。 
+  指定用于查找全局工具的自定义位置。 路径可以是绝对的，也可以是相对的。 不能与 `--global` 选项一起使用。 省略 `--global` 和 `--tool-path` 将列出本地工具。
 
 ## <a name="examples"></a>示例
 

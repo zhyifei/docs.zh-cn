@@ -5,12 +5,12 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 2447db25e837cdcd6d67847b8677d7d44da551a9
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 93b6079b9a3bbf6d537094cab9dfb305ace7f6bf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964871"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625860"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>C# 类型的默认值（C# 参考）
 
@@ -24,7 +24,7 @@ ms.locfileid: "75964871"
 |[bool](bool.md)|`false`|
 |[char](char.md)|`'\0'` (U + 0000)|
 |[enum](enum.md)|表达式 `(E)0` 生成的值，其中 `E` 是枚举标识符。|
-|[struct](../keywords/struct.md)|通过如下设置生成的值：将所有值类型的字段设置为其默认值，将所有引用类型的字段设置为 `null`。|
+|[struct](struct.md)|通过如下设置生成的值：将所有值类型的字段设置为其默认值，将所有引用类型的字段设置为 `null`。|
 |任何[可以为 null 的值类型](nullable-value-types.md)|<xref:System.Nullable%601.HasValue%2A> 属性为 `false` 且 <xref:System.Nullable%601.Value%2A> 属性未定义的实例。 该默认值也称为可以为 null 的值类型的“null”  值。|
 
 使用[默认运算符](../operators/default.md)生成默认类型值，如下面的示例所示：

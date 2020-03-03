@@ -15,12 +15,12 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: 66a4945f536c2f30d61a878e6449a6b0f6b45f22
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bdbe267bb178e90c0008422e6543a23178c2c4d8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132885"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159983"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>修整和删除 .NET 中的字符串字符
 如果将句子分析成单个单词，最后得到的结果可能是任意一端带有空白（也称为空格）的单词。 在这种情形下，可以使用 **System.String** 类中的其中一种剪裁方法，从字符串中的指定位置移除任何数量的空格或其他字符。 下表描述了可用的剪裁方法。  
@@ -77,7 +77,7 @@ ms.locfileid: "73132885"
   
  此代码向控制台显示 `World!`。  
   
-## <a name="remove"></a>删除 
+## <a name="remove"></a>删除
 
  <xref:System.String.Remove%2A?displayProperty=nameWithType> 方法从现有字符串的指定位置开始移除指定数量的字符。 此方法采用从零开始的索引。  
   

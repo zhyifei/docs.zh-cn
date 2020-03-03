@@ -4,12 +4,12 @@ description: 通过使用 dotnet test 和 xUnit 分步生成示例解决方案�
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 9cf301533046951f8fd3f9829afabadf6bba3d64
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5fe4a8faddd87334439513368f24d808abc58e65
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715430"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157305"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 和 xUnit 在 .NET Core 中进行 F# 库单元测试
 
@@ -82,7 +82,7 @@ dotnet add reference ../MathService/MathService.fsproj
         MathServiceTests.fsproj
 ```
 
-在 unit-testing-with-fsharp  目录中执行 `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`。 
+在 unit-testing-with-fsharp  目录中执行 `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`。
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
@@ -158,9 +158,9 @@ let ``SquaresOfOdds works`` () =
 let private square x = x * x
 let private isOdd x = x % 2 <> 0
 
-let squaresOfOdds xs = 
-    xs 
-    |> Seq.filter isOdd 
+let squaresOfOdds xs =
+    xs
+    |> Seq.filter isOdd
     |> Seq.map square
 ```
 

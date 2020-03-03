@@ -3,12 +3,12 @@ title: 为服务器应用选择 .NET Core 或 .NET Framework
 description: 关于在 .NET 中生成服务器应用时应考虑使用哪种 .NET 实现的指南。
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: c202e42a46c4a72bdceca1fb250170d381603a8d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 0b6bf4c2eb66aa4de497923a0a16b65a955ba6fc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124619"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159970"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
@@ -75,7 +75,7 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 
 库很快将使用 .NET Standard。 通过 .NET Standard 可跨各种 .NET 实现（包括 .NET Core）共享代码。 使用 .NET Standard 2.0 则更简单：
 
-- API 曲面已变为更大。 
+- API 曲面已变为更大。
 - 引入了 .NET Framework 兼容性模式。 此兼容性模式允许 .NET Standard/.NET Core 项目引用.NET Framework 库。 若要详细了解兼容性模式，请参阅 [Announcing .NET Standard 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/)（宣布发布 .NET Standard 2.0）。
 
 因此，只有在库或 NuGet 包使用的技术在 .NET Standard/.NET Core 中不可用的情况下，才需要使用 .NET Framework。
@@ -86,7 +86,7 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 
 - ASP.NET Web 窗体应用程序：ASP.NET Web 窗体仅在.NET Framework 中可用。 ASP.NET Core 不能用于 ASP.NET Web 窗体。 目前没有将 ASP.NET Web 窗体引入 .NET Core 的计划。
 
-- ASP.NET 网页应用程序：ASP.NET 网页未包含在 ASP.NET Core 中。 
+- ASP.NET 网页应用程序：ASP.NET 网页未包含在 ASP.NET Core 中。
 
 - WCF 服务的实现。 虽然 [WCF 客户端库](https://github.com/dotnet/wcf)可从 .NET Core 使用 WCF 服务，WCF 服务器实现目前只在 .NET Framework 上可用。 这种情况虽然不属于 .NET Core 当前计划，但将来会考虑这点。
 
@@ -100,7 +100,7 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 
 某些 Microsoft 或第三方平台不支持 .NET Core。 某些 Azure 服务提供尚不可用于 .NET Core 的 SDK。 这只是过渡情况，因为所有 Azure 服务都将使用 .NET Core。 在此期间，可用始终使用等效的 REST API 取代客户端 SDK。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在 ASP.NET 和 ASP.NET Core 之间进行选择](/aspnet/core/choose-aspnet-framework)
 - [面向 .NET Framework 的 ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)

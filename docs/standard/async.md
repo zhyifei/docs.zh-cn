@@ -6,19 +6,19 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: 1570909b7b416eff81dd90a936ff5ed10aad94f1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d649bc3a92d3bb834b3bc4f7d3c1bcb0f9417375
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346087"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159723"
 ---
 # <a name="async-overview"></a>异步概述
 
-不久前，人们通过购买更新的电脑和服务器来加快应用的速度，但是这种趋势已经停止了。 事实上，趋势逆转了。 手机配备 1ghz 单核 ARM 芯片，而服务器工作负荷转向 VM。 用户仍青睐响应式 UI，企业所有者则希望拥有能随着其业务缩放的服务器。 向手机和云的转变以及超过 30 亿使用 Internet 的人口引领着新软件模式的形成。 
+不久前，人们通过购买更新的电脑和服务器来加快应用的速度，但是这种趋势已经停止了。 事实上，趋势逆转了。 手机配备 1ghz 单核 ARM 芯片，而服务器工作负荷转向 VM。 用户仍青睐响应式 UI，企业所有者则希望拥有能随着其业务缩放的服务器。 向手机和云的转变以及超过 30 亿使用 Internet 的人口引领着新软件模式的形成。
 
 - 有了高应用存储率，客户端应用有望保持始终开启，始终连接的状态，并且可持续响应用户交互（例如，触摸）！
-- 用户期望服务能够通过平稳地扩展和收缩来应对流量高峰。 
+- 用户期望服务能够通过平稳地扩展和收缩来应对流量高峰。
 
 异步编程是一项关键技术，可以直接处理多个核心上的阻塞 I/O 和并发操作。 通过 C#、Visual Basic 和 F# 中易于使用的语言级异步编程模型，.NET 可为应用和服务提供使其变得可响应且富有弹性。
 

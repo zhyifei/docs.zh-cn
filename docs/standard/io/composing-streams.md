@@ -13,15 +13,15 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-ms.openlocfilehash: 689cc9537cd7a5fe6a677d42e5790bbcf1b3aefa
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3f18712793254f4942c092c87a3e64c73b492ae0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708143"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160100"
 ---
 # <a name="compose-streams"></a>撰写流
-后备存储是磁盘或内存等存储介质  。 各个后备存储都实现自己的流，作为 <xref:System.IO.Stream> 类的实现。 
+后备存储是磁盘或内存等存储介质  。 各个后备存储都实现自己的流，作为 <xref:System.IO.Stream> 类的实现。
 
 每个流类型对给定的后备存储执行字节读取和写入操作。 连接到后备存储的流称为“基流”  。 基流的构造函数包含将流连接到后备存储所需的参数。 例如，<xref:System.IO.FileStream> 包含指定路径参数的构造函数，此参数指定了进程如何共享文件。  
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 16daa0ef3133b6cd04dc48b7f79fd365098e4bdf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348073"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156538"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>分析 .NET 中的日期和时间字符串
 
@@ -72,7 +72,7 @@ ms.locfileid: "75348073"
 
 [!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
- 
+
 ## <a name="parseexact"></a>ParseExact
 
 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 方法将符合其中一个指定字符串模式的字符串转换为 <xref:System.DateTime> 对象。 将未采用其中一种指定格式的字符串传递给此方法时，会引发 <xref:System.FormatException>。 可以指定一种标准日期和时间格式说明符或自定义格式说明符的组合。 使用自定义格式说明符可以构造自定义识别字符串。 有关说明符的说明，请参见有关[标准日期和时间格式字符串](standard-date-and-time-format-strings.md)和[自定义日期和时间格式字符串](custom-date-and-time-format-strings.md)的主题。  

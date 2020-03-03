@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 301177113f67748b62ea2686615cfe5378fdc2fd
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973315"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157539"
 ---
 # <a name="exposing-net-core-components-to-com"></a>向 COM 公开 .NET Core 组件
 
@@ -23,7 +23,7 @@ ms.locfileid: "73973315"
 - 生成 COM 服务器作为构建 .NET Core 库的一部分。
 - 自动为无注册表 COM 生成并行服务器清单。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - 安装 [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) 或更高版本。
 
@@ -32,14 +32,14 @@ ms.locfileid: "73973315"
 第一步是创建库。
 
 1. 创建新文件夹，并在该文件夹中运行以下命令：
-    
+
     ```dotnetcli
     dotnet new classlib
     ```
 
 2. 打开 `Class1.cs`。
 3. 将 `using System.Runtime.InteropServices;` 添加到文件顶部。
-4. 创建名为 `IServer` 的接口。 例如:
+4. 创建名为 `IServer` 的接口。 例如：
 
    [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
 

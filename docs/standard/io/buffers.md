@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: e42f165bfedec3b1fa54615ee7e2a2028f40aadb
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: f939164cd56b2fb2feeeb171236b0e1171327e19
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960473"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160113"
 ---
 # <a name="work-with-buffers-in-net"></a>使用 .NET 中的缓冲区
 
@@ -115,6 +115,8 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet5)]
 
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
+
 ##### <a name="process-text-data"></a>处理文本数据
 
 如下示例中：
@@ -146,7 +148,7 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 - 无法比较两个 `SequencePosition`，这使得难以：
   - 了解一个位置是否大于或小于另一个位置。
   - 编写一些分析算法。
-- `ReadOnlySequence<T>` 大于对象引用，并且应尽可能通过 [in](../../csharp/language-reference/keywords/in-parameter-modifier.md) 或 [ref](../../csharp/language-reference/keywords/ref.md) 进行传递。 通过 `in` 或 `ref` 传递 `ReadOnlySequence<T>` 可减少[结构](../../csharp/language-reference/keywords/struct.md)的复制。
+- `ReadOnlySequence<T>` 大于对象引用，并且应尽可能通过 [in](../../csharp/language-reference/keywords/in-parameter-modifier.md) 或 [ref](../../csharp/language-reference/keywords/ref.md) 进行传递。 通过 `in` 或 `ref` 传递 `ReadOnlySequence<T>` 可减少[结构](../../csharp/language-reference/builtin-types/struct.md)的复制。
 - 空段：
   - 在 `ReadOnlySequence<T>` 中有效。
   - 可能会在使用 `ReadOnlySequence<T>.TryGet` 方法进行循环访问时出现。

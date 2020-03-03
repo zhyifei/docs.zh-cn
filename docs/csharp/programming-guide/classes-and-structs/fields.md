@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 665c99302887c51c69b4d818619dd6bedd43b644
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 46d4f77a4a490b2acdb5da20b9a477f27c38d410
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714938"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628236"
 ---
 # <a name="fields-c-programming-guide"></a>字段（C# 编程指南）
 
-字段  是在[类](../../language-reference/keywords/class.md)或[结构](../../language-reference/keywords/struct.md)中直接声明的任意类型的变量。 字段是其包含类型的成员  。
+字段  是在[类](../../language-reference/keywords/class.md)或[结构](../../language-reference/builtin-types/struct.md)中直接声明的任意类型的变量。 字段是其包含类型的成员  。
 
 类或结构可能具有实例字段和/或静态字段。 实例字段特定于类型的实例。 如果你有包含实例字段 F 的类 T，则可以创建两个类型为 T 的对象并修改每个对象中 F 的值，而不会影响另一个对象中的值。 与此相比，静态字段属于类本身，并在该类的所有实例之间共享。 只能使用类名称访问静态字段。 如果按实例名称访问静态字段，将出现 [CS0176](../../misc/cs0176.md) 编译时错误。
 

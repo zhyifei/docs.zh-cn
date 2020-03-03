@@ -1181,7 +1181,7 @@
           href: walkthrough-authoring-a-composite-control-with-visual-csharp.md
         - name: 演练：从控件继承
           href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md
-        - name: 演练：使用智能标记执行常见任务
+        - name: 演练：使用设计操作执行常规任务
           href: perform-common-tasks-design-actions.md
         - name: 演练：序列化标准类型集合
           href: serializing-collections-designerserializationvisibilityattribute.md

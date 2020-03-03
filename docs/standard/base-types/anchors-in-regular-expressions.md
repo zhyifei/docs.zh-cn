@@ -16,12 +16,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.openlocfilehash: 319aa76754adc852528f35448d9906d4e903693b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c4853a6854f5da1a3217c976a03ddbde3b528560
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711540"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159658"
 ---
 # <a name="anchors-in-regular-expressions"></a>正则表达式中的定位点
 定位点（原子零宽度断言）指定字符串中必须出现匹配的位置。 在搜索表达式中使用定位点时，正则表达式引擎不在字符串中前进或使用字符，它仅在指定位置查找匹配。 例如， `^` 指定必须从行或字符串的开头开始匹配。 因此，正则表达式 `^http:` 仅当 "http:" 出现在行开头时才与之匹配。 下表列出了 .NET 中正则表达式支持的定位点。  
@@ -61,7 +61,7 @@ ms.locfileid: "75711540"
 |`\s\d{4}`|匹配后跟四个十进制数字的空格。|  
 |<code>(-(\d{4}&#124;present))?</code>|匹配连字符后跟四个十进制数字或字符串“present”的零或一个匹配项。 这是第六个捕获组。 还包括第七个捕获组。|  
 |`,?`|匹配逗号的零个或一个匹配项。|  
-|<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|匹配以下内容的一个或多个匹配项：空格、四个十进制数字、连字符后跟四个十进制数字或字符串“present”的零个或一个匹配项以及零个或一个逗号。 这是第五个捕获组。| 
+|<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|匹配以下内容的一个或多个匹配项：空格、四个十进制数字、连字符后跟四个十进制数字或字符串“present”的零个或一个匹配项以及零个或一个逗号。 这是第五个捕获组。|
 
 ## <a name="end-of-string-or-line-"></a>字符串或行的末尾：$  
  `$` 定位点指定前面的模式必须出现在输入字符串的末尾，或出现在输入字符串末尾的 `\n` 之前。  
@@ -71,7 +71,7 @@ ms.locfileid: "75711540"
  以下示例将 `$` 定位点添加到 [字符串或行的开头](#start-of-string-or-line-) 部分的示例中所使用的正则表达式模式中。 配合包括五行文本的原始输入字符串使用时， <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法找不到匹配项，因为第一行的末尾与 `$` 模式不匹配。 当原始输入字符串被拆分为字符串数组时， <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法会成功匹配五行中的每一行。 如果调用 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法时将 `options` 参数设置为 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>，则找不到匹配项，因为正则表达式模式不考虑回车符元素 (\u+000D)。 但是，如果通过用将 `$` 替换成 `\r?$`修改了正则表达式模式，则调用 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法并将 `options` 参数设置为 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 将再次找到五个匹配项。  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring1.cs#2)]
- [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]     
+ [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]
 
 ## <a name="start-of-string-only-a"></a>仅字符串的开头：\A  
  `\A` 定位点指定匹配必须出现在输入字符串的开头。 它等同于 `^` 定位点，只不过 `\A` 忽略了 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项。 因此，在多行的输入字符串中，它只能匹配第一行的开头。  
@@ -79,7 +79,7 @@ ms.locfileid: "75711540"
  以下示例与 `^` 和 `$` 定位点的示例类似。 它在正则表达式中使用 `\A` 定位点，可提取有关某些职业棒球队存在年限的信息。 输入字符串包括五行。 调用 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法仅找到输入字符串中与正则表达式模式匹配的第一个子字符串。 如示例所示， <xref:System.Text.RegularExpressions.RegexOptions.Multiline> 选项不起作用。  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring2.cs#3)]
- [!code-vb[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring2.vb#3)]     
+ [!code-vb[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring2.vb#3)]
 
 ## <a name="end-of-string-or-before-ending-newline-z"></a>字符串末尾或结束换行之前：\Z  
  `\Z` 定位点指定匹配项必须出现在输入字符串的末尾，或出现在输入字符串末尾的 `\n` 之前。 它等同于 `$` 定位点，只不过 `\Z` 忽略了 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项。 因此，在多行字符串中，它只能匹配最后一行的末尾，或 `\n`前的最后一行。  
@@ -89,7 +89,7 @@ ms.locfileid: "75711540"
  以下示例在正则表达式中使用 `\Z` 定位点，与 [字符串或行的开头](#start-of-string-or-line-) 部分的示例类似，可提取有关某些职业棒球队存在年限的信息。 正则表达式 `\r?\Z` 中的子表达式 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\Z` 匹配字符串的末尾，也匹配以 `\n` 或 `\r\n`结尾的字符串。 因此，数组中的每个元素都与正则表达式模式匹配。  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring2.cs#4)]
- [!code-vb[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring2.vb#4)]     
+ [!code-vb[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring2.vb#4)]
 
 ## <a name="end-of-string-only-z"></a>仅字符串末尾：\z  
  `\z` 定位点指定匹配必须出现在输入字符串末尾。 与 `$` 语言元素类似， `\z` 忽略了 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项。 与 `\Z` 语言元素不同， `\z` 不匹配字符串末尾的 `\n` 字符。 因此，它只能匹配输入字符串的最后一行。  
@@ -97,7 +97,7 @@ ms.locfileid: "75711540"
  以下示例在正则表达式中使用 `\z` 定位点，与上一部分的示例中使用的定位点在其他方面相同，用于提取有关某些职业棒球队存在年限的信息。 此示例尝试使用正则表达式模式 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`匹配字符串数组中五个元素的每一个。 两个字符串以回车符和换行符结尾，一个字符串以换行符结尾，另外两个既不以回车符也不以换行符结尾。 如输出所示，只有不包含回车符或换行符的字符串与模式匹配。  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring3.cs#5)]
- [!code-vb[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring3.vb#5)]    
+ [!code-vb[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring3.vb#5)]
 
 ## <a name="contiguous-matches-g"></a>连续匹配：\G  
  `\G` 定位符指定匹配必须出现在上一个匹配结束的点。 将此定位点与 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 方法配合使用时，它可确保所有匹配项是连续的。  
@@ -116,7 +116,7 @@ ms.locfileid: "75711540"
 |`\s?`|匹配零个或一个空格。|  
 |`\w*`|匹配零个或多个单词字符。|  
 |`(\w+\s?\w*)`|匹配后跟零个或一个空格再后跟零个或多个单词字符的一个或多个单词字符。 这是第一个捕获组。|  
-|`,?`|匹配文本逗号字符的零个或一个匹配项。|     
+|`,?`|匹配文本逗号字符的零个或一个匹配项。|
 
 ## <a name="word-boundary-b"></a>字边界：\b  
  `\b` 定位符指定匹配必须出现单词字符（ `\w` 语言元素）和非单词字符（ `\W` 语言元素）之间的边界上。 单词字符包括字母数字字符和下划线；非单词字符包括不为字母数字字符或下划线的任何字符。 （有关详细信息，请参阅[字符类](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。）匹配也可以出现在字符串开头或结尾处的单词边界上。  

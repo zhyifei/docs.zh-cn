@@ -14,12 +14,12 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: 91fc0022eae3f036e0ec046ea12446871926ab27
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 135cfa815c10d1a9dd9056604a4601678da9d5c4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711462"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159346"
 ---
 # <a name="changing-case-in-net"></a>更改 .NET 中的大小写
 如果编写可接受用户输入的应用程序，永远无法确定用户以哪种大小写输入数据。 通常，你希望字符串统一采用大写或小写，尤其是在用户界面显示时。 下表介绍 3 种更改大小写的方法： 前两个方法提供可接受区域性的重载。  
@@ -33,7 +33,7 @@ ms.locfileid: "75711462"
 > [!WARNING]
 > 请注意，为了对 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.String.ToLower%2A?displayProperty=nameWithType> 方法进行比较或测试它们是否相等，这两种方法不应用于转换字符串。 有关详细信息，请参阅[比较混合大小写的字符串](#Comparing)部分。  
   
-<a name="Comparing"></a>   
+<a name="Comparing"></a>
 ## <a name="comparing-strings-of-mixed-case"></a>比较混合大小写的字符串  
  若要比较混合大小写的字符串以确定它们的顺序，请调用具有 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法中具有 `comparisonType` 参数的其中一个重载，并向 `comparisonType` 自变量提供 <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>、<xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> 或 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 的值。 对于使用特定区域性（而非当前区域性）的比较，请调用 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法中具有 `culture` 和 `options` 参数的重载，并提供 <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> 的值作为 `options` 参数。  
   

@@ -3,16 +3,16 @@ title: 提升的 Dotnet 命令访问权限
 description: 了解需要提升访问权限的 dotnet 命令的最佳做法。
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: fe33cbe966d175f71ba350737b283c1e83f64fa6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543425"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156759"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>提升的 Dotnet 命令访问权限
 
-开发人员可根据软件开发最佳做法来编写需要最少权限的软件。 但是，某些软件（如性能监视工具）由于操作系统规则，需要管理员权限。 以下指南介绍使用 .NET Core 编写此类软件的适用方案。 
+开发人员可根据软件开发最佳做法来编写需要最少权限的软件。 但是，某些软件（如性能监视工具）由于操作系统规则，需要管理员权限。 以下指南介绍使用 .NET Core 编写此类软件的适用方案。
 
 可以运行以下提升的命令：
 
@@ -35,8 +35,8 @@ ms.locfileid: "77543425"
 
 如果文件夹 `%ProgramFiles%\dotnet-tools` 已存在，请执行以下操作以检查“用户”组是否有写入或修改该目录的权限：
 
-- 右键单击 `%ProgramFiles%\dotnet-tools` 文件夹并选择“属性”  。 随即打开“常用属性”对话框  。 
-- 选择“安全性”选项卡  。在“组或用户名”下，检查“用户”组是否具有写入或修改目录的权限  。 
+- 右键单击 `%ProgramFiles%\dotnet-tools` 文件夹并选择“属性”  。 随即打开“常用属性”对话框  。
+- 选择“安全性”选项卡  。在“组或用户名”下，检查“用户”组是否具有写入或修改目录的权限  。
 - 如果“用户”组可以写入或修改目录，则在安装工具时使用其他目录名，而不使用 dotnet-tools  。
 
 要安装工具，请在提升的提示符下运行以下命令。 此操作将在安装期间创建 dotnet-tools 文件夹  。
@@ -97,7 +97,7 @@ dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
    dotnet build
    sudo ./bin/Debug/netcoreapp3.0/APPLICATIONNAME
    ```
-    
+
 - 使用 [dotnet run](dotnet-run.md) 命令与 `—no-build` 标志，以避免生成新的二进制文件：
 
    ```dotnetcli

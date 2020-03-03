@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/10/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: a82934fd2ea9568681a3bec82c3b15513decc926
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bdd6e28713bdece2bd144e6763bd84d719e91449
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741564"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156629"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>使用 Visual Studio 发布 .NET Core Hello World 应用程序
 
@@ -25,15 +25,15 @@ ms.locfileid: "76741564"
 1. 右键单击“HelloWorld”  项目（而不是 HelloWorld 解决方案），然后选择菜单中的“发布”  。 （还可以选择“生成”  主菜单中的“发布 HelloWorld”  。）
 
    ![Visual Studio 发布上下文菜单](media/publishing-with-visual-studio/publish-context-menu.png)
-   
+
 1. 在“选择发布目标”  页上，选择“文件夹”  ，然后选择“创建配置文件”  。
 
    ![在 Visual Studio 中选择发布目标](media/publishing-with-visual-studio/pick-publish-target.png)
-   
+
 1. 在“发布”  页上，选择“发布”  。
 
    ![Visual Studio 发布窗口](media/publishing-with-visual-studio/publish-page.png)
-   
+
 ## <a name="inspect-the-files"></a>检查文件
 
 发布过程中会生成依赖于框架的部署，在此类部署中，若系统上安装了 .NET Core，已发布的应用程序可在 .NET Core 支持的任何平台上运行。 用户可以通过双击可执行文件或从命令提示符发出 `dotnet HelloWorld.dll` 命令来运行发布的应用。
@@ -59,7 +59,7 @@ ms.locfileid: "76741564"
          这是应用程序的[依赖于框架的部署](../deploying/deploy-with-cli.md#framework-dependent-deployment)版本。 若要执行此动态链接库，请在命令提示符处输入 `dotnet HelloWorld.dll`。
 
       * *HelloWorld.exe*
-      
+
          这是应用程序的[依赖于框架的可执行文件](../deploying/deploy-with-cli.md#framework-dependent-executable)版本。 若要运行该版本，请在命令提示符处输入 `HelloWorld.exe`。
 
       * HelloWorld.pdb  （对于部署是可选的）

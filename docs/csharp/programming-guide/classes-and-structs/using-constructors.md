@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: faab6ac57629db11c60ee5b563ea95ebb90016dd
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 7c227b61c6d5b4ead00fced0dba046b90683fde1
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964361"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626407"
 ---
 # <a name="using-constructors-c-programming-guide"></a>使用构造函数（C# 编程指南）
 
-创建[类](../../language-reference/keywords/class.md)或[结构](../../language-reference/keywords/struct.md)时，将会调用其构造函数。 构造函数与该类或结构具有相同名称，并且通常初始化新对象的数据成员。  
+创建[类](../../language-reference/keywords/class.md)或[结构](../../language-reference/builtin-types/struct.md)时，将会调用其构造函数。 构造函数与该类或结构具有相同名称，并且通常初始化新对象的数据成员。  
   
  在下面的示例中，通过使用简单构造函数定义了一个名为 `Taxi` 的类。 然后使用 [new](../../language-reference/operators/new-operator.md) 运算符对该类进行实例化。 在为新对象分配内存之后，`new` 运算符立即调用 `Taxi` 构造函数。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "75964361"
   
  有关详细信息，请参阅[私有构造函数](./private-constructors.md)。  
   
- [结构](../../language-reference/keywords/struct.md)类型的构造函数与类的构造函数类似，但是 `structs` 不包含显式无参数构造函数，因为编译器将自动提供一个显式无参数构造函数。 此构造函数会将 `struct` 中的每个字段初始化为[默认值](../../language-reference/builtin-types/default-values.md)。 但是，只有使用 `new` 实例化 `struct` 时，才会调用此无参数构造函数。 例如，此代码使用 <xref:System.Int32> 的无参数构造函数，因此可确保整数已初始化：  
+ [结构](../../language-reference/builtin-types/struct.md)类型的构造函数与类的构造函数类似，但是 `structs` 不包含显式无参数构造函数，因为编译器将自动提供一个显式无参数构造函数。 此构造函数会将 `struct` 中的每个字段初始化为[默认值](../../language-reference/builtin-types/default-values.md)。 但是，只有使用 `new` 实例化 `struct` 时，才会调用此无参数构造函数。 例如，此代码使用 <xref:System.Int32> 的无参数构造函数，因此可确保整数已初始化：  
   
 ```csharp  
 int i = new int();  

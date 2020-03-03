@@ -12,17 +12,17 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-ms.openlocfilehash: 223e83a5ff6a73825985ec4e3b6b601fb196fe5e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5d40db7f902dac8bd6bbdc1510be8e56a321be30
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75707895"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159450"
 ---
 # <a name="how-to-copy-directories"></a>如何：复制目录
-此主题演示如何使用 I/O 类将目录下的内容同步复制到另一个位置。 
+此主题演示如何使用 I/O 类将目录下的内容同步复制到另一个位置。
 
-有关异步文件复制的示例，请参阅[异步文件 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)。 
+有关异步文件复制的示例，请参阅[异步文件 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)。
 
 此示例通过将 `DirectoryCopy` 方法的 `copySubDirs` 设置为 `true` 来复制子目录。 `DirectoryCopy` 方法通过对每个子目录调用其自身的方法来递归复制它们，直到再也没有子目录可以复制为止。  
   
@@ -30,6 +30,8 @@ ms.locfileid: "75707895"
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
  [!code-vb[System.IO.Directory_Copy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Directory_Copy/vb/Program.vb#1)]  
   
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.IO.FileInfo>

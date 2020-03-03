@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: bfa9c24ef4cd2c418c91e00318aa47b889078d40
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d4444b6d080afa92a4e7fd9f30c5f9358f02f0ef
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552655"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159229"
 ---
 # <a name="framework-libraries"></a>框架库
 
@@ -52,7 +52,7 @@ BCL 提供最基本的类型和实用工具功能，是其他所有 .NET 类库�
 
 * <xref:System.Net.Http.HttpClient> - 用于发送 HTTP 请求以及从 URI 所标识资源接收 HTTP 响应的 API。
 * <xref:System.Xml.Linq.XDocument> - 用于配合 LINQ 加载和查询 XML 文档的 API。
-* <xref:System.IO.StreamReader> - 用于读取文件的 API。 
+* <xref:System.IO.StreamReader> - 用于读取文件的 API。
 * <xref:System.IO.StreamWriter> - 用于写入文件的 API。
 
 ## <a name="app-model-apis"></a>应用模型 API
