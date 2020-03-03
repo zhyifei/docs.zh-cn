@@ -11,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 427550e1fbeb38cefbb4afe97d80e198ac2d6cb0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adda4ed2ab5c59e3518b8e724044529a79840ad0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127632"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156473"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>如何：引用具有强名称的程序集
 引用强名称程序集中的类型或资源的过程通常是透明的。 可在编译时（早期绑定）或在运行时进行引用。  
@@ -44,12 +44,12 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 对强名称程序集进行运行时引用（例如使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 方法）时，必须使用引用的强名称程序集的显示名称。 显示名称的语法如下：  
 
-\<assembly name>, \<version number>, \<culture>, \<public key token>         
+\<*程序集名称*> **,** \<*版本号*> **,** \<*区域性*> **,** \<*公钥标记*>  
 
-例如:  
+例如：  
 
 ```console
-myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   
+myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33
 ```  
 
 在此示例中，`PublicKeyToken` 是十六进制格式的公钥标记。 如果没有区域性值，请使用 `Culture=neutral`。  
@@ -73,7 +73,7 @@ Dim myDll As Assembly = _
 
 可使用以下[强名称 (Sn.exe)](../../framework/tools/sn-exe-strong-name-tool.md) 命令为特定程序集打印十六进制格式的公钥和公钥标记：  
 
-sn -Tp \< assembly >     
+**sn -Tp \<** *程序集* **>**  
 
 如果有公钥文件，则可改用以下命令（请注意命令行选项大小写的区别）：  
 

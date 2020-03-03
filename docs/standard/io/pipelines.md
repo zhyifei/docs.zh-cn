@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 54b5f97aca131f52b9b5d9f54d7fa5ec00ba3d5b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b18b2bf31787fa58e614cd4f057fba9037fe8ad8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423674"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627547"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET 中的 System.IO.Pipelines
 
@@ -67,6 +67,8 @@ async Task ProcessLinesAsync(NetworkStream stream)
 [!code-csharp[](~/samples/snippets/csharp/pipelines/ProcessLinesAsync.cs?name=snippet)]
 
 前面的代码很复杂，不能解决所识别的所有问题。 高性能网络通常意味着编写非常复杂的代码以使性能最大化。 `System.IO.Pipelines` 的设计目的是使编写此类代码更容易。
+
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
 
 ## <a name="pipe"></a>管道
 
@@ -159,7 +161,7 @@ var pipe = new Pipe(options);
 
 ### <a name="pipe-reset"></a>管道重置
 
-通常重用 `Pipe` 对象即可重置。 要重置管道，请在完成 `PipeReader` 和 `PipeWriter` 时调用 <xref:System.IO.Pipelines.PipeReader><xref:System.IO.Pipelines.Pipe.Reset%2A>。
+通常重用 `Pipe` 对象即可重置。 若要重置管道，请在 `PipeReader` 和 `PipeWriter` 完成时调用 <xref:System.IO.Pipelines.PipeReader> <xref:System.IO.Pipelines.Pipe.Reset%2A>。
 
 ## <a name="pipereader"></a>PipeReader
 

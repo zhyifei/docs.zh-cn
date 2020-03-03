@@ -401,7 +401,7 @@
               href: programming-guide/concepts/expression-trees/debugging-expression-trees-in-visual-studio.md
             - name: DebugView 语法
               href: programming-guide/concepts/expression-trees/debugview-syntax.md
-        - name: Iterators
+        - name: 迭代器
           href: programming-guide/concepts/iterators.md
         - name: 语言集成查询 (LINQ)
           items:
