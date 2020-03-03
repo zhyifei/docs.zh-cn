@@ -1,4 +1,4 @@
-- name: Accessing Application Settings
+- name: 访问应用程序设置
   href: index.md
   items:
     - name: 如何：创建用户设置的属性网格
