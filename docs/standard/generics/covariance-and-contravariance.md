@@ -25,7 +25,7 @@ ms.locfileid: "75708392"
   
      使你能够使用比原始指定的类型派生程度更大的类型。  
   
-     你可以向 `IEnumerable<Derived>` 类型的变量分配`IEnumerable<Base>` （在 Visual Basic 中为 `IEnumerable(Of Derived)`）的实例。  
+     你可以将 `IEnumerable<Derived>`（在 Visual Basic 中为 `IEnumerable(Of Derived)`）的实例分配给 `IEnumerable<Base>` 类型的变量。  
   
 - `Contravariance`  
   
@@ -37,7 +37,7 @@ ms.locfileid: "75708392"
   
      这意味着，你只能使用原始指定的类型；固定泛型类型参数既不是协变类型，也不是逆变类型。  
   
-     你无法向 `List<Base>` 类型的变量分配 `List<Derived>`（在 Visual Basic 中为 `List(Of Base)`）的实例，反之亦然。  
+     你无法将 List<Base>（在 Visual Basic 中为 `List(Of Base)`）的实例分配给 List<Derived> 类型的变量，反之亦然。  
   
  利用协变类型参数，你可以执行非常类似于普通的[多态性](../../csharp/programming-guide/classes-and-structs/polymorphism.md)的分配，如以下代码中所示。  
   
@@ -77,11 +77,12 @@ ms.locfileid: "75708392"
 ## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>具有逆变泛型类型参数的泛型接口  
  从 .NET Framework 4 开始，某些泛型接口具有逆变类型参数；例如：<xref:System.Collections.Generic.IComparer%601>、<xref:System.IComparable%601> 和 <xref:System.Collections.Generic.IEqualityComparer%601>。 由于这些接口只具有逆变类型参数，因此这些类型参数只用作接口成员中的参数类型。  
   
- 下面的示例阐释了逆变类型参数。 该示例定义具有`Area` 属性的抽象（在 Visual Basic 中为 `MustInherit` ） `Shape` 类。 该示例还定义一个实现 `IComparer<Shape>`（在 Visual Basic 中为`IComparer(Of Shape)`）的`ShapeAreaComparer`类。 <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> 方法的实现基于 `Area` 属性的值，所以 `ShapeAreaComparer` 可用于按区域对 `Shape` 对象排序。  
+ 下面的示例阐释了逆变类型参数。该示例定义具有 `Area` 属性的抽象（在 Visual Basic 中为 `MustInherit`）`Shape` 类。该示例还定义一个实现 `IComparer<Shape>`（在 Visual Basic 中为 `IComparer(Of Shape)`）的
+`ShapeAreaComparer` 类。<xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> 方法的实现基于 `Area` 属性的值，所以 `ShapeAreaComparer` 可用于按区域对 `Shape` 对象排序。  
   
- `Circle` 类继承 `Shape` 并重写 `Area`。 该示例创建 <xref:System.Collections.Generic.SortedSet%601> 对象的 `Circle` ，使用采用 `IComparer<Circle>` （在 Visual Basic 中为`IComparer(Of Circle)` ）的构造函数。 但是，该对象不传递 `IComparer<Circle>`，而是传递一个用于实现 `IComparer<Shape>` 的 `ShapeAreaComparer`对象。 当代码需要派生程度较大的类型的比较器 (`Circle`) 时，该示例可以传递派生程度较小的类型的比较器 (`Shape`)，因为 <xref:System.Collections.Generic.IComparer%601> 泛型接口的类型参数是逆变参数。  
+  `Circle` 类继承 `Shape` 并替代 `Area`。该示例使用一个采用 `IComparer<Circle>`（在 Visual Basic 中为 `IComparer(Of Circle)`）的构造函数创建 `Circle` 对象的 <xref:System.Collections.Generic.SortedSet%601>。但是，该示例不传递 `IComparer<Circle>`，而是传递一个用于实现 `IComparer<Shape>` 的 `ShapeAreaComparer` 对象。当代码调用派生程度较高的类型 (`Circle`) 的比较器时，该示例可以传递派生程度较低的类型 (`Shape`) 的比较器，因为 <xref:System.Collections.Generic.IComparer%601> 泛型接口的类型参数是逆变参数。  
   
- 向 `SortedSet<Circle>` 中添加新 `Circle`对象时，每次将新元素与现有元素进行比较时，都会调用 `ShapeAreaComparer` 对象的`IComparer<Shape>.Compare` 方法（在 Visual Basic 中为 `IComparer(Of Shape).Compare` 方法）。 方法 (`Shape`) 的参数类型比被传递的类型 (`Circle`) 的派生程度小，所以调用是类型安全的。 逆变使 `ShapeAreaComparer` 可以对派生自 `Shape`的任意单个类型的集合以及混合类型的集合排序。  
+   向 `SortedSet<Circle>` 中添加新 `Circle`对象时，每次将新元素与现有元素进行比较时，都会调用 `ShapeAreaComparer` 对象的`IComparer<Shape>.Compare` 方法（在 Visual Basic 中为 `IComparer(Of Shape).Compare` 方法）。该方法的参数类型 (`Shape`) 比所传递的类型 (`Circle`) 的派生程度低，所以调用是类型安全的。逆变使 `ShapeAreaComparer` 可以对派生自 `Shape` 的任意单个类型的集合以及混合类型的集合排序。    
   
  [!code-csharp[CoContravarianceInClrGenericI2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici2/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici2/vb/example.vb#1)]  
@@ -92,7 +93,7 @@ ms.locfileid: "75708392"
 > [!NOTE]
 > `Func` 泛型委托的最后一个泛型类型参数指定委托签名中返回值的类型。 该参数是协变的（`out` 关键字），而其他泛型类型参数是逆变的（`in` 关键字）。  
   
- 下面的代码阐释这一点。 第一段代码定义了一个名为 `Base`的类、一个名为 `Derived` 的类（此类继承 `Base`）和另一个具有名为`MyMethod`的`static`方法（在 Visual Basic 中为 `Shared`）的类。 该方法接受`Base`的实例，并返回 `Derived` 的实例。 （如果参数是 `Derived` 的实例，则 `MyMethod` 将返回该实例；如果参数是 `Base` 的实例，则 `MyMethod` 将返回 `Derived` 的新实例。）在 `Main()` 中，该示例创建一个表示 `Func<Base, Derived>` 的 `MyMethod`（在 Visual Basic 中为 `Func(Of Base, Derived)`）的实例，并将此实例存储在变量 `f1` 中。  
+  下面的代码阐释这一点。第一段代码定义了一个名为 `Base` 的类、一个名为 `Derived` 的类（此类继承 `Base`）和另一个具有名为 `MyMethod` 的 `static` 方法（在 Visual Basic 中为 `Shared`）的类。该方法接受 `Base` 的实例，并返回 `Derived` 的实例。（如果参数是 `Derived` 的实例，则 `MyMethod` 将返回该实例；如果参数是 `Base` 的实例，则 `MyMethod` 将返回 `Derived` 的新实例。）在 `Main()` 中，该示例创建一个表示 `MyMethod` 的 `Func<Base, Derived>`（在 Visual Basic 中为 `Func(Of Base, Derived)`）的实例，并将此实例存储在变量 `f1` 中。  
   
  [!code-csharp[CoContravarianceDelegates#2](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegates/cs/example.cs#2)]
  [!code-vb[CoContravarianceDelegates#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegates/vb/example.vb#2)]  
