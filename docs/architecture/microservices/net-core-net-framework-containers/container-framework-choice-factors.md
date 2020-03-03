@@ -2,12 +2,12 @@
 title: 决策表。 用于 Docker 的 .NET Framework
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 决策表，用于 Docker 的 .NET Framework
 ms.date: 09/11/2018
-ms.openlocfilehash: 0087d80c2d949daf14e1edd773dd310f47c508a9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8ffe2b7bc0bee976d3a63b274994dbcc8aef0c61
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039668"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628314"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>决策表：用于 Docker 的 .NET Framework
 
@@ -27,7 +27,7 @@ ms.locfileid: "71039668"
 | ASP.NET 4（MVC 5、Web API 2 和 Web 窗体） | -- | .NET Framework |
 | SignalR 服务 | .NET Core 2.1 或更高版本 | .NET Framework <br/> .NET Core 2.1 或更高版本 |
 | WCF、WF 和其他旧框架 | .NET Core 中的 WCF（仅客户端库） | .NET Framework <br/> .NET Core 中的 WCF（仅客户端库） |
-| Azure 服务的消耗 | .NET Core <br/> （最终所有 Azure 服务都将为 .NET Core 提供客户端 SDK）。 | .NET Framework <br/> .NET Core <br/> （最终所有 Azure 服务都将为 .NET Core 提供客户端 SDK）。 |
+| Azure 服务的消耗 | .NET Core <br/> （最终大部分 Azure 服务都将为 .NET Core 提供客户端 SDK） | .NET Framework <br/> .NET Core <br/> （最终大部分 Azure 服务都将为 .NET Core 提供客户端 SDK） |
 
 >[!div class="step-by-step"]
 >[上一页](net-framework-container-scenarios.md)

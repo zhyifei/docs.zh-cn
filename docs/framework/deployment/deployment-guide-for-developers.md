@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 597bfd2c16f6289a2bcb931c3896918dcb6d9a4d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 26c168040b0fa5e975e64a7518b0d0bf250c4711
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094132"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628119"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 部署指南（针对开发人员）
 本主题为想要随自己的应用一起安装任何 .NET Framework 版本（从 .NET Framework 4.5 到 [!INCLUDE[net_current](../../../includes/net-current-version.md)]）的开发人员提供了相关信息。
@@ -134,21 +134,7 @@ InstallAware 从单个源生成 Windows 应用 (APPX)、Windows Installer (MSI)�
 
 ### <a name="installshield-deployment"></a>InstallShield 部署
 
-在 Visual Studio 中，若要选择 InstallShield 部署并添加对 .NET Framework 的依赖项：
-
-1. 在 Visual Studio 菜单栏上，依次选择 **“文件”** 、 **“新建”** 和 **“项目”** 。
-
-2. 在 **“新建项目”** 对话框的左窗格中，依次选择 **“其他项目类型”** 、 **“安装和部署”** 、 **“InstallShield LE”** 。
-
-3. 在 **“名称”** 框中，键入你的项目名称，然后选择 **“确定”** 。
-
-4. 如果你是首次创建安装和部署项目，请选择“转到 InstallShield”  或“启用 InstallShield Limited Edition”  ，以下载你的 Microsoft Visual Studio 版本对应的 InstallShield Limited Edition。 重新启动 Visual Studio。
-
-5. 转到 **“项目助手”** 向导，选择 **“应用程序文件”** 以添加项目输出。 你可以使用此向导配置其他项目特性。
-
-6. 转到 **“安装要求”** ，选择要安装的操作系统和 .NET Framework 的版本。
-
-7. 打开安装项目的快捷菜单，然后选择 **“生成”** 。
+InstallShield 可生成 Windows 应用包（MSIX、APPX）、Windows Installer 包 (MSI) 和本机代码 (EXE) 安装程序。 InstallShield 还提供 Visual Studio 集成。 有关详细信息，请访问 [InstallShield](https://www.flexerasoftware.com/install/products/installshield.html) 网站。
 
 <a name="wix"></a>
 
