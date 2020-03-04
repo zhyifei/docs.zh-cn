@@ -1,12 +1,12 @@
 ---
 title: 适用于 .NET 的 XML 序列化示例
 ms.date: 03/30/2017
-ms.openlocfilehash: 8564a3c3919d2ac8b6adecee1a2f5e12ab490a5c
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 0cdf838afa257e59e0b8494a03c312d1b2bf6f03
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250433"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159840"
 ---
 # <a name="xml-serialization-samples-for-net"></a>适用于 .NET 的 XML 序列化示例
 
@@ -14,7 +14,7 @@ ms.locfileid: "72250433"
  演示如何将内存中的对象图序列化成流。  
   
 * [Web 服务泛型序列化技术示例](../../../docs/standard/serialization/web-services-generics-serialization-technology-sample.md)  
- 演示如何在 ASP.NET Web 服务中使用和控制泛型的序列化。 
+ 演示如何在 ASP.NET Web 服务中使用和控制泛型的序列化。
 
 * [SchemaImporterExtension 技术示例](../../../docs/standard/serialization/schemaimporterextension-technology-sample.md)  
  演示自定义 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>。  

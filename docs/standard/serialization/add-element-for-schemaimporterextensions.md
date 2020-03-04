@@ -1,18 +1,18 @@
 ---
-title: <schemaImporterExtensions> 的 <add> 元素
+title: <add> 的 <schemaImporterExtensions> 元素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 89196b094d5631c9e243a51a718e53f9c06db20d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f47623aa305ae6e98625acc3d199a76e27d2ea5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794974"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159931"
 ---
-# <a name="add-element-for-schemaimporterextensions"></a>\<添加 > 元素\<schemaImporterExtensions >
+# <a name="add-element-for-schemaimporterextensions"></a>\<为 \<schemaImporterExtensions 添加 > 元素 >
 添加将 XSD 类型映射到 .NET Framework 类型时 <xref:System.Xml.Serialization.XmlSchemaImporter> 所用的类型。 有关配置文件的详细信息，请参阅[配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)。  
   
  \<configuration>  
@@ -26,12 +26,12 @@ ms.locfileid: "61794974"
 <add name = "typeName" type="fully qualified type [,Version=version number] [,Culture=culture] [,PublicKeyToken= token]"/>  
 ```  
   
-## <a name="attributes-and-elements"></a>特性和元素  
+## <a name="attributes-and-elements"></a>属性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>Attributes  
   
-|特性|描述|  
+|特性|说明|  
 |---------------|-----------------|  
 |**name**|用于查找实例的简单名称。|  
 |**type**|必需。 指定要添加的架构扩展类。 type 特性值必须位于一行上，并且包含完全限定的类型名称。 当程序集放置在全局程序集缓存 (GAC) 中时，该特性值还必须包括已签名程序集的版本、区域性和公钥标记。|  
@@ -41,7 +41,7 @@ ms.locfileid: "61794974"
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |\<schemaImporterExtensions>|包含 <xref:System.Xml.Serialization.XmlSchemaImporter> 所使用的类型。|  
   
@@ -52,15 +52,15 @@ ms.locfileid: "61794974"
 <configuration>  
   <system.xml.serialization>  
     <schemaImporterExtensions>  
-       <add name="contoso" type="System.Web.Mobile.MobileCapabilities,   
-       System.Web.Mobile, Version=2.0.0.0, Culture=neutral,   
-       PublicKeyToken=b03f5f7f11d50a3a" />   
+       <add name="contoso" type="System.Web.Mobile.MobileCapabilities,
+       System.Web.Mobile, Version=2.0.0.0, Culture=neutral,
+       PublicKeyToken=b03f5f7f11d50a3a" />
     </schemaImporterExtensions>  
   </system.xml.serialization>  
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - [\<system.xml.serialization> 元素](../../../docs/standard/serialization/system-xml-serialization-element.md)

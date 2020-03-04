@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-ms.openlocfilehash: 8f4136683f13a52b84ab9e8bfd69f30c8914e029
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 58f1487486c2802a2c64b51afcecb01c76dd291a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710175"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155602"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>使用 XPath 导航选择节点
 XML 文档对象模型 (DOM) 包含的方法使您可以使用 XML 路径语言 (XPath) 浏览功能查询 DOM 中的信息。 可以使用 XPath 查找单个特定节点，或查找与某个条件匹配的所有节点。  
@@ -30,7 +30,7 @@ Dim root As XmlNode = doc.DocumentElement
 Dim nsmgr As New XmlNamespaceManager(doc.NameTable)  
 nsmgr.AddNamespace("bk", "urn:newbooks-schema")  
   
-' Select and display the first node in which the author's   
+' Select and display the first node in which the author's
 ' last name is Kingsolver.  
 Dim node As XmlNode = root.SelectSingleNode( _  
      "descendant::bk:book[bk:author/bk:last-name='Kingsolver']", nsmgr)  
@@ -47,7 +47,7 @@ XmlNode root = doc.DocumentElement;
 XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);  
 nsmgr.AddNamespace("bk", "urn:newbooks-schema");  
   
-// Select and display the first node in which the author's   
+// Select and display the first node in which the author's
 // last name is Kingsolver.  
 XmlNode node = root.SelectSingleNode(  
     "descendant::bk:book[bk:author/bk:last-name='Kingsolver']", nsmgr);  

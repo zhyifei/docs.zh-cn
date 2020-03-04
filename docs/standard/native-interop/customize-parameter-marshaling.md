@@ -2,12 +2,12 @@
 title: 自定义参数封送 - .NET
 description: 了解如何自定义 .NET 将参数封送到本机表示形式的方式。
 ms.date: 01/18/2019
-ms.openlocfilehash: 36fb8c105a8836d77b862095a616de3ba641073c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ff646ad942cf051ce90cd75b24c8562e536182d9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706356"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159606"
 ---
 # <a name="customizing-parameter-marshaling"></a>自定义参数封送
 
@@ -21,10 +21,10 @@ ms.locfileid: "75706356"
 
 其中每个格式都会将以 null 结尾的字符串传递到本机代码。 它们的差别在于本机字符串的编码。
 
-| `System.Runtime.InteropServices.UnmanagedType` 值 | Encoding |
+| `System.Runtime.InteropServices.UnmanagedType` 值 | 编码 |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
-| LPUTF8Str | UTF-8 | 
+| LPUTF8Str | UTF-8 |
 | LPWStr | UTF-16 |
 | LPTStr | UTF-16 |
 
@@ -38,9 +38,9 @@ ms.locfileid: "75706356"
 
 ## <a name="customizing-array-parameters"></a>自定义数组参数
 
-.NET 还提供多种方式来封送数组参数。 如果要调用获取 C 样式数组的 API，则使用 <xref:System.Runtime.InteropServices.UnmanagedType.LPArray?displayProperty=nameWithType> 非托管类型。 如果数组中的值需要进行自定义封送，则可以为其使用 `[MarshalAs]` 属性上的 <xref:System.Runtime.InteropServices.MarshalAsAttribute.ArraySubType> 字段。
+.NET 还提供多种方式来封送数组参数。 如果要调用获取 C 样式数组的 API，则使用 <xref:System.Runtime.InteropServices.UnmanagedType.LPArray?displayProperty=nameWithType> 非托管类型。 如果数组中的值需要进行自定义封送，则可以为其使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute.ArraySubType> 属性上的 `[MarshalAs]` 字段。
 
-如果使用的是 COM API，则可能必须将数组参数作为 `SAFEARRAY*` 进行封送。 为此，可以使用 <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> 非托管类型。 [自定义 `object` 字段](./customize-struct-marshaling.md#marshaling-systemobjects)上的表中显示了 `SAFEARRAY` 的元素的默认类型。 可以使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> 和 <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> 字段自定义 `SAFEARRAY` 的确切元素类型。
+如果使用的是 COM API，则可能必须将数组参数作为 `SAFEARRAY*` 进行封送。 为此，可以使用 <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> 非托管类型。 `SAFEARRAY`自定义 [ 字段`object`上的表中显示了 ](./customize-struct-marshaling.md#marshaling-systemobjects) 的元素的默认类型。 可以使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> 和 <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> 字段自定义 `SAFEARRAY` 的确切元素类型。
 
 ## <a name="customizing-boolean-or-decimal-parameters"></a>自定义布尔或十进制参数
 
@@ -52,7 +52,7 @@ ms.locfileid: "75706356"
 
 ### <a name="marshaling-as-specific-com-interfaces"></a>作为特定的 COM 接口进行封送
 
-如果 API 使用指向 COM 对象的指针，则可以使用类型为 `object` 的参数上的以下任一 `UnmanagedType` 格式告知 .NET 作为这些特定接口进行封送：
+如果 API 使用指向 COM 对象的指针，则可以使用类型为 `UnmanagedType` 的参数上的以下任一 `object` 格式告知 .NET 作为这些特定接口进行封送：
 
 - `IUnknown`
 - `IDispatch`
@@ -62,7 +62,7 @@ ms.locfileid: "75706356"
 
 ### <a name="marshaling-to-a-variant"></a>封送到 `VARIANT`
 
-如果本机 API 采用 Win32 `VARIANT`，则可以使用 `object` 参数上的 <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 格式将对象作为 `VARIANT` 进行封送。 如需了解 .NET 类型与 `VARIANT` 类型之间的映射，请参阅有关[自定义 `object` 字段](customize-struct-marshaling.md#marshaling-systemobjects)的文档。
+如果本机 API 采用 Win32 `VARIANT`，则可以使用 <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 参数上的 `object` 格式将对象作为 `VARIANT` 进行封送。 如需了解 .NET 类型与 [ 类型之间的映射，请参阅有关`object`自定义 ](customize-struct-marshaling.md#marshaling-systemobjects) 字段`VARIANT`的文档。
 
 ### <a name="custom-marshalers"></a>自定义封送处理程序
 

@@ -3,12 +3,12 @@ title: 转换中的结果树片断
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-ms.openlocfilehash: 33d66b0a835be8bacab76ef9295ce8158385d8d1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e454c1194e8c280042857f106e22d0d0509417e3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710253"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156356"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>转换中的结果树片断
 
@@ -140,7 +140,7 @@ ms.locfileid: "75710253"
     </xsl:variable>
 
     <xsl:template match="/">
-            <xsl:for-each select="msxsl:node-set($states)"/> 
+            <xsl:for-each select="msxsl:node-set($states)"/>
     </xsl:template>
 </xsl:stylesheet>
 ```
@@ -167,8 +167,8 @@ ms.locfileid: "75710253"
 <![CDATA[
     string func(XPathNodeIterator it)
     {
-        it.MoveNext(); 
-        return it.Current.Value; 
+        it.MoveNext();
+        return it.Current.Value;
         //it.Current returns XPathNavigator positioned on the current node
     }
 

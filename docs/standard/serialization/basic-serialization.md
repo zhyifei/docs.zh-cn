@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: 9a7cdd0b9e5bd12d5730d92f39c2432bdc84a18e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2dde9f795dfe31ff6ef821272a0d5e8d20e8b2f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795026"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159944"
 ---
 # <a name="basic-serialization"></a>基本序列化
 
@@ -65,7 +65,7 @@ Console.WriteLine("str: {0}", obj.str);
 ```xml  
 <SOAP-ENV:Envelope  
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"  
   xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"  
   SOAP-ENV:encodingStyle=  
@@ -86,7 +86,7 @@ Console.WriteLine("str: {0}", obj.str);
 请注意，无法继承 [Serializable](xref:System.SerializableAttribute) 属性。 如果从 `MyObject` 派生新类，新类也必须标记为以上特性，否则将无法序列化。 例如，尝试序列化以下类的实例时，将收到 <xref:System.Runtime.Serialization.SerializationException> 信息，提示 `MyStuff` 类型未标记为可序列化。  
   
 ```csharp  
-public class MyStuff : MyObject   
+public class MyStuff : MyObject
 {  
   public int n3;  
 }  
@@ -94,7 +94,7 @@ public class MyStuff : MyObject
   
  使用 [Serializable](xref:System.SerializableAttribute) 属性非常方便，但有以上所述的限制。 有关何时应标记类以进行序列化的信息，请参阅[序列化准则](serialization-guidelines.md)。 若类已编译，则无法对其进行序列化。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [二进制序列化](binary-serialization.md)
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

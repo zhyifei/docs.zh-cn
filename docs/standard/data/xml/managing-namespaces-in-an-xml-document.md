@@ -3,17 +3,17 @@ title: 管理 XML 文档中的命名空间
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 64ef9fd4ca3a9a83b9cd3eba9cb952b0f668e9f0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7b219788895ab2f89fa285c2e1b7de62639bfcf9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710695"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160035"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>管理 XML 文档中的命名空间
 XML 命名空间将 XML 文档中的元素和属性名称与自定义和预定义的 URI 关联起来。 要创建这些关联，您应为命名空间 URI 定义前缀，并使用这些前缀来限定 XML 数据中的元素和属性名称。 命名空间可防止元素和属性名称冲突，并允许以不同方式处理和验证同名的元素和属性。  
   
-<a name="declare"></a>   
+<a name="declare"></a>
 ## <a name="declaring-namespaces"></a>声明命名空间  
  若要对某个元素声明命名空间，请使用 `xmlns:` 属性：  
   
@@ -30,7 +30,7 @@ XML 命名空间将 XML 文档中的元素和属性名称与自定义和预定�
   
  若要指示某个元素是特定命名空间的一部分，请向其添加命名空间前缀。 例如，如果 `Author` 元素属于 `mybook` 命名空间，则将其声明为 `<mybook:Author>`。  
   
-<a name="scope"></a>   
+<a name="scope"></a>
 ## <a name="declaration-scope"></a>声明范围  
  命名空间在从声明点开始直至声明它的元素结束这一范围内有效。 在此示例中，在 `BOOK` 元素中定义的命名空间不适用于 `BOOK` 元素外部的元素（例如，`Publisher` 元素）：  
   
@@ -65,7 +65,7 @@ XML 命名空间将 XML 文档中的元素和属性名称与自定义和预定�
   
  下面是可使用 <xref:System.Xml.XmlNamespaceManager> 类执行的一些管理和查找任务。 有关更多信息和示例，请遵循指向每个方法或属性的引用页的链接。  
   
-|要执行的操作|“使用”|  
+|至|使用|  
 |--------|---------|  
 |添加命名空间|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> 方法|  
 |删除命名空间|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> 方法|  

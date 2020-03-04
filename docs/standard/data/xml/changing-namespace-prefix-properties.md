@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-ms.openlocfilehash: e6b811d58ef9d98c51e9a45a46a1965c4fa12b55
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b1df520d00d3a98b2e518092d4eff51b5d0b7741
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711111"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158020"
 ---
 # <a name="changing-namespace-prefix-properties"></a>更改命名空间前缀属性
 使用 XmlNode 类，可以更改与给定节点关联的命名空间前缀。 例如，下面的代码显示所更改元素的前缀。  
@@ -27,7 +27,7 @@ Console.WriteLine(doc.InnerXml)
 ```csharp  
 XmlDocument doc = new XmlDocument();  
 doc.LoadXml("<a:test xmlns:a='123' xmlns:b='456'/>");  
-XmlElement e = doc.DocumentElement;         
+XmlElement e = doc.DocumentElement;
 e.Prefix = "b";  
 Console.WriteLine(doc.InnerXml);  
 ```  
@@ -51,7 +51,7 @@ Console.WriteLine(doc.InnerXml)
 ```csharp  
 XmlDocument doc = new XmlDocument();  
 doc.LoadXml("<test xmlns='123'/>");  
-XmlElement e = doc.DocumentElement;         
+XmlElement e = doc.DocumentElement;
 e.Prefix = "a";  
 Console.WriteLine(doc.InnerXml);  
 ```  

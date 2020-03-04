@@ -3,18 +3,18 @@ title: CBC 解密漏洞
 description: 了解如何使用填充来检测和减少密码块链（CBC）模式的对称解密的计时漏洞。
 ms.date: 06/12/2018
 author: blowdart
-ms.openlocfilehash: 87f8e3c53e4d06f6a4edc7670891ac83ec8d65ab
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4616ef9015b47ff232a17f058c7a0f1449f42e81
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705842"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159957"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>使用填充对 CBC 模式对称解密的漏洞进行计时
 
-Microsoft 相信，如果应用了可验证的填充，则在应用可验证的填充时，解密加密为密码块链（CBC）模式的数据是不安全的。情况下. 此毋庸置疑基于当前已知的加密研究。 
+Microsoft 相信，如果应用了可验证的填充，则在应用可验证的填充时，解密加密为密码块链（CBC）模式的数据是不安全的。情况下. 此毋庸置疑基于当前已知的加密研究。
 
-## <a name="introduction"></a>简介
+## <a name="introduction"></a>介绍
 
 填充 oracle 攻击是一种针对加密数据的攻击，攻击者可以利用这些数据来解密数据的内容，而无需知道密钥。
 

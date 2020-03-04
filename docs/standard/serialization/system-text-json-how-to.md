@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fdca8d957bb2453e90652af1dfe5ef99b33b1b2c
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 8025f84f2425f5b91e08b28ddb24d105d8c4d1a3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163197"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159580"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中对 JSON 进行序列化和反序列化（marshal 和取消封送）
 
@@ -61,7 +61,7 @@ using System.Text.Json.Serialization;
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPOCOs)]
 
-序列化上述类型的实例的 JSON 输出类似于下面的示例。 默认情况下，JSON 输出为缩小： 
+序列化上述类型的实例的 JSON 输出类似于下面的示例。 默认情况下，JSON 输出为缩小：
 
 ```json
 {"Date":"2019-08-01T00:00:00-07:00","TemperatureCelsius":25,"Summary":"Hot","DatesAvailable":["2019-08-01T00:00:00-07:00","2019-08-02T00:00:00-07:00"],"TemperatureRanges":{"Cold":{"High":20,"Low":-10},"Hot":{"High":60,"Low":20}},"SummaryWords":["Cool","Windy","Humid"]}
@@ -191,7 +191,7 @@ using System.Text.Json.Serialization;
 * [将所有属性名称转换为 camel 大小写](#use-camel-case-for-all-json-property-names)
 * [实现自定义属性命名策略](#use-a-custom-json-property-naming-policy)
 * [将字典键转换为 camel 大小写](#camel-case-dictionary-keys)
-* [将枚举转换为字符串和 camel 大小写](#enums-as-strings) 
+* [将枚举转换为字符串和 camel 大小写](#enums-as-strings)
 
 对于需要对 JSON 属性名称和值进行特殊处理的其他方案，可以[实现自定义转换器](system-text-json-converters-how-to.md)。
 
@@ -378,11 +378,11 @@ JSON 属性命名策略：
 
 下面是一个示例对象，用于序列化和 JSON 输出：
 
-|Property |{2&gt;值&lt;2}  |
+|属性 |值  |
 |---------|---------|
 | 日期    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
-| 摘要| null|
+| 摘要| Null|
 
 ```json
 {
@@ -507,7 +507,7 @@ JSON 属性命名策略：
 ```
 
 > [!IMPORTANT]
-> 这些方法只为要序列化的根对象提供多态序列化，而不提供该根对象的属性的多态序列化。 
+> 这些方法只为要序列化的根对象提供多态序列化，而不提供该根对象的属性的多态序列化。
 
 如果将较低级别的对象定义为 `object`类型，则可以获取多态序列化。 例如，假设 `WeatherForecast` 类具有一个名为 `PreviousForecast` 的属性，该属性可以定义为类型 `WeatherForecast` 或 `object`：
 
@@ -566,7 +566,7 @@ JSON 属性命名策略：
 }
 ```
 
-有关多态**序列化**的详细信息，以及有关**反序列**化的信息，请参阅[如何从 Newtonsoft.Json 迁移到 System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)。
+有关多态**序列化**的详细信息，以及有关**反序列**化的信息，请参阅[如何从 newtonsoft.json 迁移到 system.object](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)。
 
 ## <a name="allow-comments-and-trailing-commas"></a>允许注释和尾随逗号
 
@@ -634,7 +634,7 @@ JSON 属性命名策略：
 
 反序列化前面显示的此示例类型的 JSON 时，额外的数据将成为 `ExtensionData` 属性的键值对：
 
-|Property |{2&gt;值&lt;2}  |注释  |
+|属性 |值  |备注  |
 |---------|---------|---------|
 | 日期    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | 区分大小写不匹配（`temperatureCelsius` 在 JSON 中），因此未设置属性。 |
@@ -712,7 +712,7 @@ JSON 中的 Null 值仅在有效时才会被忽略。 不可以为 null 的值�
 前面的代码：
 
 * 假定 JSON 要分析的字符串中有一个名为 `jsonString`。
-* 计算 `Students` 数组中具有 `Grade` 属性的对象的平均评分。 
+* 计算 `Students` 数组中具有 `Grade` 属性的对象的平均评分。
 * 为没有成绩的学生分配默认等级70。
 * 通过每次迭代增加 `count` 变量来对学生进行计数。 一种替代方法是调用 <xref:System.Text.Json.JsonElement.GetArrayLength%2A>，如以下示例中所示：
 
@@ -732,7 +732,7 @@ JSON 中的 Null 值仅在有效时才会被忽略。 不可以为 null 的值�
 
 * 读取 JSON 文件，将数据加载到 `JsonDocument`，并将格式化（整齐打印的） JSON 写入文件。
 * 使用 <xref:System.Text.Json.JsonDocumentOptions> 指定允许但忽略输入 JSON 中的注释。
-* 完成后，将对编写器调用 <xref:System.Text.Json.Utf8JsonWriter.Flush%2A>。 一种替代方法是让编写人员在 autoflush 时进行处理。 
+* 完成后，将对编写器调用 <xref:System.Text.Json.Utf8JsonWriter.Flush%2A>。 一种替代方法是让编写人员在 autoflush 时进行处理。
 
 下面是示例代码处理的 JSON 输入的示例：
 
@@ -769,7 +769,7 @@ JSON 中的 Null 值仅在有效时才会被忽略。 不可以为 null 的值�
 * 假定文件编码为 UTF-16，并将其转码为 UTF-8。 可以通过使用以下代码，将编码为 UTF-8 的文件直接读入 `ReadOnlySpan<byte>`：
 
   ```csharp
-  ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName); 
+  ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
   ```
 
   如果文件包含 UTF-8 字节顺序标记（BOM），请在将字节传递到 `Utf8JsonReader`之前将其删除，因为读取器需要文本。 否则，BOM 被视为无效的 JSON，读取器将引发异常。

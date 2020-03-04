@@ -3,12 +3,12 @@ title: XslTransform 的输出
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-ms.openlocfilehash: 178b1e949868d3af893cbcb6df63590053341a3e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 93cbf7807630a605e17e7f513055c052aad0d08e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710487"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159632"
 ---
 # <a name="outputs-from-an-xsltransform"></a>XslTransform 的输出
 样式表可以结合使用 `<xsl:output>` 语句和 `method` 属性来确定输出格式，下表说明了使用 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法写入输出并将输出格式声明为 <xref:System.IO.Stream> 或 <xref:System.IO.TextWriter> 时的输出格式。  
@@ -44,7 +44,7 @@ ms.locfileid: "75710487"
 - indent  
   
     > [!NOTE]
-    > \*如果 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法将其输出发送到 <xref:System.IO.TextWriter>，将忽略 encoding 属性。 而是改用 <xref:System.IO.TextWriter> 的 encoding 属性。 
+    > \*如果 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法将其输出发送到 <xref:System.IO.TextWriter>，将忽略 encoding 属性。 而是改用 <xref:System.IO.TextWriter> 的 encoding 属性。
   
  如果 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法的输出为 <xref:System.IO.Stream> 时，将忽略下列属性：  
   

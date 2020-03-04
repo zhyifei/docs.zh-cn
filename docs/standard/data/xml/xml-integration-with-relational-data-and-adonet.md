@@ -3,12 +3,12 @@ title: 关系数据和 ADO.NET 的 XML 集成
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-ms.openlocfilehash: 373e28d1fffd8c47acb4acb70271db056aa3a27b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 30b788c77a2352d0d02ee772ab3f428381facd9f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709928"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155615"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>关系数据和 ADO.NET 的 XML 集成
 XmlDataDocument 类是 XmlDocument 的派生类，包含 XML 数据。 XmlDataDocument 的优势在于，在关系数据和分层数据之间架起了桥梁。 它是可绑定到 DataSet 的 XmlDocument，这两个类可以同步对其中所含数据的更改。 绑定到 DataSet 的 XmlDocument 允许 XML 与关系数据集成，不必将数据表示为 XML 格式或关系格式。 您可以用这两种格式表示数据，而不是限于一种数据表示形式。  
@@ -27,7 +27,7 @@ XmlDataDocument 类是 XmlDocument 的派生类，包含 XML 数据。 XmlDataDo
   
  由于 XmlDataDocument 继承自 XmlDocument，因此它实现了 W3C DOM。 鉴于 XmlDataDocument 与 DataSet 关联，并将数据子集存储到其中，DataSet 未限制或改变将它用作 XmlDocument。 为使用 XmlDocument 而编写的代码不经更改，即可对 XmlDataDocument 使用。 DataSet 通过定义表、列、关系和约束提供数据相同的关系视图，成为独立的内存中用户数据存储。  
   
- 下图展示了 XML 数据与 DataSet 和 XmlDataDocument 的不同关联： 
+ 下图展示了 XML 数据与 DataSet 和 XmlDataDocument 的不同关联：
   
  ![显示与 XML 数据集的不同关联的图。](./media/xml-integration-with-relational-data-and-adonet/xml-integration-relational-data-adodotnet.gif)  
   

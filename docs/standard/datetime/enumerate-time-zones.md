@@ -9,12 +9,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], enumerating
 - enumerating time zones [.NET Framework]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-ms.openlocfilehash: 662e389f4fecc77244e378f1c0672935403fa456
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aa8962c8aea208778983610041937dc3f75c1f1e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129125"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159437"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>如何：枚举计算机上存在的时区
 
@@ -25,7 +25,7 @@ ms.locfileid: "73129125"
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>枚举本地系统上存在的时区
 
-1. 调用 <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> 方法。 方法返回 <xref:System.TimeZoneInfo> 对象的泛型 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 集合。 集合中的项按其 <xref:System.TimeZoneInfo.DisplayName%2A> 属性进行排序。 例如:
+1. 调用 <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> 方法。 方法返回 <xref:System.TimeZoneInfo> 对象的泛型 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 集合。 集合中的项按其 <xref:System.TimeZoneInfo.DisplayName%2A> 属性进行排序。 例如：
 
    [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
    [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]
@@ -55,7 +55,7 @@ ms.locfileid: "73129125"
 大多数列表控件（如 <xref:System.Windows.Forms.ListBox?displayProperty=nameWithType> 或 <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType> 控件）允许您将对象变量的集合分配给其 `DataSource` 属性，前提是该集合实现 <xref:System.Collections.IEnumerable> 接口。 （泛型 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 类执行此功能。）若要在集合中显示单个对象，控件将调用该对象的 `ToString` 方法来提取用于表示对象的字符串。 对于 <xref:System.TimeZoneInfo> 对象，`ToString` 方法返回 <xref:System.TimeZoneInfo> 对象的显示名称（其 <xref:System.TimeZoneInfo.DisplayName%2A> 属性的值）。
 
 > [!NOTE]
-> 由于列表控件调用对象的 `ToString` 方法，因此你可以为控件分配 <xref:System.TimeZoneInfo> 对象的集合，使控件为每个对象显示有意义的名称，并检索用户已选择的 <xref:System.TimeZoneInfo> 对象。 这样就无需为集合中的每个对象提取字符串，而是将字符串分配给一个集合，该集合又分配给该控件的 `DataSource` 属性，检索该用户选定的字符串，然后使用此字符串提取它介绍了。 
+> 由于列表控件调用对象的 `ToString` 方法，因此你可以为控件分配 <xref:System.TimeZoneInfo> 对象的集合，使控件为每个对象显示有意义的名称，并检索用户已选择的 <xref:System.TimeZoneInfo> 对象。 这样就无需为集合中的每个对象提取字符串，而是将该字符串分配给一个集合，该集合将变为分配给该控件的 `DataSource` 属性，检索该用户所选的字符串，然后使用此字符串提取它所描述的对象。
 
 ## <a name="compiling-the-code"></a>编译代码
 
@@ -67,7 +67,7 @@ ms.locfileid: "73129125"
 
   <xref:System.Collections.ObjectModel>
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [日期、时间和时区](../../../docs/standard/datetime/index.md)
 - [如何：将时区保存到嵌入的资源中](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)

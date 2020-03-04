@@ -8,12 +8,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 70ed4176872e18ccafa00808630fcc51337b8479
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0b448379fba965060fdf3bf067e65374f40d1fc2
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123216"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156005"
 ---
 # <a name="runtime-callable-wrapper"></a>运行时可调用包装
 公共语言运行时通过名为运行时可调用包装 (RCW) 的代理公开 COM 对象。 尽管 RCW 似乎是 .NET 客户端的普通对象，但它的主要功能是封送处理 .NET 客户端和 COM 对象之间的调用。  
@@ -31,9 +31,9 @@ ms.locfileid: "73123216"
  标准包装强制执行内置的封送处理规则。 例如，当 .NET 客户端将 String 类型作为自变量的一部分传递到非托管对象时，包装会将字符串转换为 BSTR 类型。 如果 COM 对象向它托管的调用方返回 BSTR，则调用方会收到 String。 客户端和服务器都会发送和接收所熟悉的数据。 其他类型不需要转换。 例如，标准包装始终无需转换类型即可在托管代码和非托管代码间传递 4 字节整数。  
   
 ## <a name="marshaling-selected-interfaces"></a>封送处理所选接口  
- [运行时可调用包装器](runtime-callable-wrapper.md) (RCW) 的主要目的是隐藏托管和非托管编程模型之间的差异。 若要创建无缝转换，RCW 需使用选定的 COM 接口且不将其公开到 .NET 客户端，如下图所示。 
+ [运行时可调用包装器](runtime-callable-wrapper.md) (RCW) 的主要目的是隐藏托管和非托管编程模型之间的差异。 若要创建无缝转换，RCW 需使用选定的 COM 接口且不将其公开到 .NET 客户端，如下图所示。
 
- 下图显示了 COM 接口和运行时可调用包装器： 
+ 下图显示了 COM 接口和运行时可调用包装器：
   
  ![带有接口的运行时可调用包装器的屏幕截图。](./media/runtime-callable-wrapper/runtime-callable-wrapper-interfaces.gif)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "73123216"
   
  RCW 使用下表列出的接口，这些接口由其包装的对象公开。  
   
-|接口|描述|  
+|接口|说明|  
 |---------------|-----------------|  
 |**IDispatch**|用于通过反射后期绑定到 COM 对象。|  
 |**IErrorInfo**|提供以下内容的文字描述：错误、错误源、帮助文件，帮助上下文以及定义错误的接口的 GUID（.NET 类始终为 GUID_NULL）。|  
@@ -50,13 +50,13 @@ ms.locfileid: "73123216"
   
  RCW 选择性地使用下表中列出的接口，这些接口由其包装的对象公开。  
   
-|接口|描述|  
+|接口|说明|  
 |---------------|-----------------|  
 |**IConnectionPoint** 和 **IConnectionPointContainer**|RCW 对向基于委托的事件公开连接点事件样式的对象执行转换。|  
 |**IDispatchEx**（仅限 .NET Framework） |如果类实现 IDispatchEx，则 RCW 实现 IExpando。 IDispatchEx 接口是 IDispatch 接口的扩展，与 IDispatch 不同，它可枚举、添加、删除和以区分大小的方式调用成员。|  
 |**IEnumVARIANT**|使支持枚举的 COM 类型可被视为集合。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [COM 包装](com-wrappers.md)
 - [COM 可调用包装器](com-callable-wrapper.md)

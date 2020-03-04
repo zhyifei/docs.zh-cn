@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: ac7e1b68f3f43a0c84c7330666825207e5b90004
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e54990785cafd6061c6d53c13af6476a4b46e20e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711046"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160347"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>将字符串转换为 .NET Framework 数据类型
 若要将字符串转换为 .NET Framework 数据类型，请使用满足应用要求的 XmlConvert 方法。 有关 XmlConvert 类提供的所有转换方法的列表，请参阅 <xref:System.Xml.XmlConvert>。  
@@ -87,7 +87,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
 ```xml  
 <Boolean>true</Boolean>  
-<Boolean>1</Boolean>   
+<Boolean>1</Boolean>
 ```  
   
  两者均可通过下列代码理解，其中 bvalue 为 System.Boolean.True：  

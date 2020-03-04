@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-ms.openlocfilehash: 1ab6dec2b99b01db04333c5d47176e40ed033fa7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 994153ba93848ebb120f23bdf6a979462a65142d
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709889"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159476"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>使用 XmlSchemaCollection 进行 XML 架构 (XSD) 验证
 可以使用 <xref:System.Xml.Schema.XmlSchemaCollection> 根据 XML 架构定义语言 (XSD) 架构对 XML 文档进行验证。 <xref:System.Xml.Schema.XmlSchemaCollection> 在集合中存储架构，因此每当验证发生时不必将该架构加载到内存中，从而提高了性能。 如果架构存在于架构集合中，则将使用 `schemaLocation` 属性在集合中查找该架构。  
@@ -35,7 +35,7 @@ ms.locfileid: "75709889"
 ```vb  
 Dim xsc As New XmlSchemaCollection()  
 ' XML Schema.  
-xsc.Add("urn:bookstore-schema", schema)   
+xsc.Add("urn:bookstore-schema", schema)
 reader = New XmlTextReader(filename)  
 vreader = New XmlValidatingReader(reader)  
 vreader.Schemas.Add(xsc)  
@@ -184,9 +184,9 @@ while(vr.Read()) {
  下面概括了作为验证依据的 XML 架构文件 sample4.xsd 的内容。  
   
 ```xml  
-<xs:schema   
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"   
-    xmlns:tns="datatypesTest"   
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="datatypesTest"
     targetNamespace="datatypesTest"  
     elementFormDefault="qualified">  
   

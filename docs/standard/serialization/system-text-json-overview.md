@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: acb83be9b20a155b6b6a9fb5ade38e099f54e71d
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 660a2831aa6a807486fc47eae880bcd11347c547
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163587"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159541"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>.NET 中的 JSON 序列化和反序列化（封送和 unmarshalling）-概述
 
@@ -22,7 +22,7 @@ ms.locfileid: "76163587"
 
 库设计通过广泛的功能集强调高性能和低内存分配。 内置 UTF-8 支持优化了编码为 UTF-8 的 JSON 文本的处理过程，这是针对 web 上的数据和磁盘上的文件的最流行的编码。
 
-该库还提供了用于处理内存中文档对象模型（DOM）的类。 此功能允许对 JSON 文件或字符串中的元素进行随机只读访问。 
+该库还提供了用于处理内存中文档对象模型（DOM）的类。 此功能允许对 JSON 文件或字符串中的元素进行随机只读访问。
 
 ## <a name="how-to-get-the-library"></a>如何获取库
 

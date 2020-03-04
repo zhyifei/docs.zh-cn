@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 603306ad4a739f168716fd7f6169a79923585b82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 067f32a026e3354e6c4256602ed17fd7d7bde0b8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645051"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159788"
 ---
 # <a name="serialization-guidelines"></a>序列化准则
 本文档列出了在设计要序列化的 API 时要考虑的准则。  
@@ -22,15 +22,15 @@ ms.locfileid: "64645051"
   
  .NET 提供了针对各种序列化方案进行优化的三种主要序列化技术。 下表列出了这些技术以及与这些技术相关的主要 .NET 类型。  
   
-|技术|相关的类|说明|  
+|技术|相关的类|备注|  
 |----------------|----------------------|-----------|  
 |数据协定序列化|<xref:System.Runtime.Serialization.DataContractAttribute><br /><br /> <xref:System.Runtime.Serialization.DataMemberAttribute><br /><br /> <xref:System.Runtime.Serialization.DataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.NetDataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer><br /><br /> <xref:System.Runtime.Serialization.ISerializable>|常规持久性<br /><br /> Web 服务<br /><br /> JSON|  
 |XML 序列化|<xref:System.Xml.Serialization.XmlSerializer>|具有完全控制的 <br />XML 格式|  
-|运行时 -序列化（二进制和 SOAP）|<xref:System.SerializableAttribute><br /><br /> <xref:System.Runtime.Serialization.ISerializable><br /><br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter><br /><br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|.NET Remoting|  
+|运行时 -序列化（二进制和 SOAP）|<xref:System.SerializableAttribute><br /><br /> <xref:System.Runtime.Serialization.ISerializable><br /><br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter><br /><br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|.NET 远程处理|  
   
  设计新的类型时，应决定这些类型需要支持哪种技术（如果有的话）。 以下准则介绍了如何做出此决定以及如何提供这类支持。 这些准则并不表示帮助您选择在实现应用程序或库时应使用哪种序列化技术。 这些准则与 API 设计不是直接相关的，因此它们不在本主题的讨论范围内。  
   
-## <a name="guidelines"></a>准则  
+## <a name="guidelines"></a>指南  
   
 - 设计新类型时请务必考虑序列化。  
   
@@ -69,8 +69,7 @@ ms.locfileid: "64645051"
      [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
-     <xref:System.Runtime.Serialization.OnDeserializedAttribute> 属性是最常用的回调属性。 此系列中的其他属性还有 <xref:System.Runtime.Serialization.OnDeserializingAttribute>、    
-    <xref:System.Runtime.Serialization.OnSerializingAttribute>和<xref:System.Runtime.Serialization.OnSerializedAttribute>。 这些特性可分别用来标记在反序列化之前、序列化之前以及序列化之后执行的回调。  
+     <xref:System.Runtime.Serialization.OnDeserializedAttribute> 属性是最常用的回调属性。 系列中的其他属性为 <xref:System.Runtime.Serialization.OnDeserializingAttribute>、<xref:System.Runtime.Serialization.OnSerializingAttribute>和 <xref:System.Runtime.Serialization.OnSerializedAttribute>。 这些属性可分别用来标记在反序列化之前、序列化之前以及序列化之后执行的回调。  
   
 4. 请考虑使用 <xref:System.Runtime.Serialization.KnownTypeAttribute> 指示在反序列化复杂对象关系图时应使用的具体类型。  
   
@@ -83,11 +82,11 @@ ms.locfileid: "64645051"
   
 5. 创建或更改可序列化的类型时，请务必考虑向后兼容性和向前兼容性。  
   
-     请记住，类型的未来版本的序列化流可反序列化为该类型的当前版本，反之亦然。 您一定要清楚，数据成员（甚至对于私有成员和内部成员）不能更改其名称和类型，甚至不能更改其在类型的未来版本中的顺序，除非特别留意将使用显式参数的协定保存到数据协定属性。在对可序列化的类型进行更改时，测试序列化的兼容性。 尝试将新版本反序列化为旧版本，以及将旧版本反序列化为新版本。  
+     请记住，类型的未来版本的序列化流可反序列化到类型的当前版本，反之亦然。 您一定要清楚，数据成员（甚至对于私有成员和内部成员）不能更改其名称和类型，甚至不能更改其在类型的未来版本中的顺序，除非特别留意将使用显式参数的协定保存到数据协定属性。在对可序列化的类型进行更改时，测试序列化的兼容性。 尝试将新版本反序列化为旧版本，以及将旧版本反序列化为新版本。  
   
 6. 考虑实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口以允许在类型的两个不同版本之间进行往返。  
   
-     序列化程序可通过此接口确保在转换期间不丢失任何数据。 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> 属性可存储类型的未来版本中不为当前版本所知的任何数据。 在随后序列化当前版本并将其反序列化为未来版本时，可通过 ExtensionData 属性值在序列化流中使用附加数据。  
+     序列化程序可通过此接口确保在往返期间不丢失任何数据。 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> 属性可存储类型的未来版本中不为当前版本所知的任何数据。 在随后序列化当前版本并将其反序列化为未来版本时，可通过 ExtensionData 属性值在序列化流中使用附加数据。  
   
      [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
      [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
@@ -95,30 +94,30 @@ ms.locfileid: "64645051"
      有关详细信息，请参阅[向前兼容的数据协定](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 #### <a name="supporting-xml-serialization"></a>支持 XML 序列化  
- 数据协定序列化是 .NET Framework 中的主要（默认）序列化技术，但也存在数据协定序列化不支持的序列化情况。 例如，它不能让您完全控制序列化程序生成或使用的 XML 的形状。 如果要求此类精细控制，则必须使用 XML 序列化，而且需要设计类型以支持此序列化技术。  
+ 数据协定序列化是 .NET Framework 中的主要（默认）序列化技术，但也存在数据协定序列化不支持的序列化情况。 例如，数据协定序列化无法让您完全控制序列化程序生成或使用的 XML 的形状。 如果要求此类精细控制，则必须使用 XML 序列化，而且需要设计类型以支持此序列化技术。  
   
-1. 应避免专门针对 XML 序列化设计类型，除非您有很充分的理由要控制所生成的 XML 的形状。 此序列化技术已被上一节中讨论的数据协定序列化所取代。  
+1. 应避免专门针对 XML 序列化设计类型，除非您有很充分的理由要控制所生成的 XML 的形状。 此序列化技术已由上一节讨论的数据协定序列化所取代。  
   
      换句话说，不要将 <xref:System.Xml.Serialization> 命名空间中的属性应用到新类型，除非您清楚该类型将会用于 XML 序列化。 以下示例展示如何使用 System.Xml.Serialization 来控制生成的 XML 的形状。  
   
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2. 如果通过应用 XML 序列化属性所提供的对于序列化 XML 的形状的控制还无法满足您的需要，则可考虑实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口。 接口的两种方法 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 和 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 可允许你完全控制序列化的 XML 流。 还可以通过应用 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性来控制为类型生成的 XML 架构。  
+2. 如果通过应用 XML 序列化属性所提供的对于序列化 XML 的形状的控制还无法满足您的需要，则可考虑实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口。 接口的两个方法（<xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 和 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>）允许你完全控制序列化的 XML 流。 还可以通过应用 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性来控制为类型生成的 XML 架构。  
   
 #### <a name="supporting-runtime-serialization"></a>支持运行时序列化  
  运行时序列化是 .NET 远程处理所使用的一项技术。 如果您认为将会使用 .NET 远程处理传输类型，则需要确保类型支持运行时序列化。  
   
- 可通过应用 <xref:System.SerializableAttribute> 属性提供对运行时序列化的基本支持，更高级的方案涉及实现一个简单的运行时可序列化模式（实现 -<xref:System.Runtime.Serialization.ISerializable> 并提供一个序列化构造函数）。  
+ 可通过应用  *属性提供对运行时序列化的基本支持，更高级的方案涉及实现一个简单的运行时可序列化模式（实现 -* 并提供一个序列化构造函数）<xref:System.SerializableAttribute><xref:System.Runtime.Serialization.ISerializable>。  
   
 1. 如果您的类型将要用于 .NET 远程处理，则应考虑支持运行时序列化。 例如，<xref:System.AddIn> 命名空间使用 .NET 远程处理，因此在 System.AddIn 加载项之间交换的所有类型都需要支持运行时序列化。  
   
      [!code-csharp[SerializationGuidelines#7](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#7)]
      [!code-vb[SerializationGuidelines#7](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#7)]  
   
-2. 如果需要完全控制序列化过程，则应考虑实现运行时可序列化模式。 例如，如果需要在对数据进行序列化或反序列化时转换数据。  
+2. 如果需要完全控制序列化过程，则应考虑实现运行时可序列化模式。 例如，如果您需要在对数据进行序列化或反序列化时转换数据。  
   
-     此模式非常简单。 所需操作就是实现 <xref:System.Runtime.Serialization.ISerializable> 接口，并提供在反序列化对象时使用的特殊构造函数。  
+     此模式非常简单。 您需要执行的全部操作就是实现 <xref:System.Runtime.Serialization.ISerializable> 接口，并提供在反序列化对象时使用的特殊构造函数。  
   
      [!code-csharp[SerializationGuidelines#8](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#8)]
      [!code-vb[SerializationGuidelines#8](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#8)]  
@@ -138,7 +137,7 @@ ms.locfileid: "64645051"
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [数据协定序列化程序](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)

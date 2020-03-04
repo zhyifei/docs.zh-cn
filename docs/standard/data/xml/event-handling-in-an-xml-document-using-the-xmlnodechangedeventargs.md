@@ -6,17 +6,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-ms.openlocfilehash: ecbed7e57628b4e140e0f4dbcd600643617b075a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b27c51572b1ba83480d90eba4add7f930715a4e5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710890"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156525"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>使用 mlNodeChangedEventArgs 的 XML 文档中的事件处理
 XmlNodeChangedEventArgs 封装传递给事件处理程序的参数，这些处理程序在 XmlDocument 对象上注册为用于处理事件。 下表提供了事件以及关于何时引发事件的说明。  
   
-|Event|引发|  
+|事件|引发|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|当准备将属于当前文档的节点插入到另一个节点时。|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|当已经将属于当前文档的节点插入到另一个节点时。|  
@@ -34,16 +34,16 @@ XmlNodeChangedEventArgs 封装传递给事件处理程序的参数，这些处�
 ' Attach the event handler, NodeInsertedHandler, to the NodeInserted  
 ' event.  
 Dim doc as XmlDocument = new XmlDocument()  
-Dim XmlNodeChgEHdlr as XmlNodeChangedEventHandler = new XmlNodeChangedEventHandler(addressof MyNodeChangedEvent)   
-AddHandler doc.NodeInserted, XmlNodeChgEHdlr   
+Dim XmlNodeChgEHdlr as XmlNodeChangedEventHandler = new XmlNodeChangedEventHandler(addressof MyNodeChangedEvent)
+AddHandler doc.NodeInserted, XmlNodeChgEHdlr
   
 Dim n as XmlNode = doc.CreateElement( "element" )  
-Console.WriteLine( "Before Event Inserting" )   
+Console.WriteLine( "Before Event Inserting" )
   
 ' This is the point where the new node is being inserted in the tree,  
 ' and this is the point where the NodeInserted event is raised.  
 doc.AppendChild( n )  
-Console.WriteLine( "After Event Inserting" )   
+Console.WriteLine( "After Event Inserting" )
   
 ' Define the event handler that handles the NodeInserted event.  
 sub NodeInsertedHandler(src as Object, args as XmlNodeChangedEventArgs)  
@@ -62,7 +62,7 @@ Console.WriteLine( "Before Event Inserting" );
 // This is the point where the new node is being inserted in the tree,  
 // and this is the point where the NodeInserted event is raised.  
 doc.AppendChild( n );  
-Console.WriteLine( "After Event Inserting" );   
+Console.WriteLine( "After Event Inserting" );
   
 // Define the event handler that handles the NodeInserted event.  
 void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)  
@@ -173,7 +173,7 @@ public class Sample
      doc.DocumentElement.AppendChild(newElem);  
   
      Console.WriteLine("\r\nDisplay the modified XML...");  
-     Console.WriteLine(doc.OuterXml);             
+     Console.WriteLine(doc.OuterXml);
   
   }  
   
@@ -201,7 +201,7 @@ public class Sample
         Console.WriteLine("");  
   }  
   
-} // End class   
+} // End class
 ```  
   
  有关详细信息，请参阅 <xref:System.Xml.XmlNodeChangedEventArgs>和<xref:System.Xml.XmlNodeChangedEventHandler>。  

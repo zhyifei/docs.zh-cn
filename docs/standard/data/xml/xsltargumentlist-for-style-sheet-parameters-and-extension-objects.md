@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 5cd733d557dabe66145fdbb848c473411d63c62b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 34ffb9923337bbad90b2170a16d610d26c7f6f23
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709616"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160191"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>样式表参数和扩展对象的 XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> 类包含可扩展样式表语言转换 (XSLT) 参数和 XSLT 扩展对象。 传入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法后，这些参数和扩展对象可以从样式表中进行调用。  
@@ -38,9 +38,9 @@ ms.locfileid: "75709616"
   
 |W3C 类型|相当的 .NET Framework 类（类型）|XPath 类型还是 XSLT 类型|  
 |--------------|----------------------------------------------|-----------------------------|  
-|字符串|System.String|XPath|  
+|String|System.String|XPath|  
 |Boolean|System.Boolean|XPath|  
-|Number|System.Double|XPath|  
+|数字|System.Double|XPath|  
 |Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
@@ -173,8 +173,8 @@ public class Sample
   
 ```xml  
 <order>  
-   <total>36.9</total>   
-   15% discount if paid by: 5/6/2001 5:01:15 PM   
+   <total>36.9</total>
+   15% discount if paid by: 5/6/2001 5:01:15 PM
 </order>  
 ```  
   
@@ -317,7 +317,7 @@ public class Sample
   <circle>  
     <radius>37.5</radius>  
   </circle>  
-</data>    
+</data>
 ```  
   
  circle.xsl  
@@ -332,7 +332,7 @@ public class Sample
     <circle>  
     <xsl:copy-of select="node()"/>  
        <circumference>  
-          <xsl:value-of select="myObj:Circumference(radius)"/>          
+          <xsl:value-of select="myObj:Circumference(radius)"/>
        </circumference>  
     </circle>  
   </xsl:for-each>  

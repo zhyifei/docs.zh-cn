@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-ms.openlocfilehash: 1f300bab01f94af8c70c8b67a69a73fbc5ba5bac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: af6df3729f1bd926e9a47cc5b9d9bf460c8e1225
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709824"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159281"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection 架构编译
 XmlSchemaCollection 是可用于存储和验证 XML 数据缩减 (XDR) 和 XML 架构定义语言 (XSD) 架构的缓存或库。 XmlSchemaCollection 在内存中缓存架构，而不是通过文件或 URL 访问架构，从而提升了性能。  
@@ -51,7 +51,7 @@ vr.Schemas.Add(xsc)
 XmlTextReader tr = new XmlTextReader("Books.xml");  
 XmlValidatingReader vr = new XmlValidatingReader(tr);  
 XmlSchemaCollection xsc = new XmlSchemaCollection();  
-xsc.Add("urn:bookstore-schema", "Books.xsd");    
+xsc.Add("urn:bookstore-schema", "Books.xsd");
 vr.Schemas.Add(xsc);  
 ```  
   

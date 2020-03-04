@@ -3,12 +3,12 @@ title: XPath 命名空间浏览
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-ms.openlocfilehash: 37b9d3e04e075c7ef95420c70881ba9b34e031ce
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f35318b1439b762bf7c87cff217ed1787e8d007c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709785"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156317"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath 命名空间浏览
 要对 XML 文档使用 XPath 查询，必须正确定位 XML 命名空间以及命名空间中包含的元素。 命名空间可防止在多个上下文中使用名称时可能产生的混淆情况；例如，名称 `ID` 可能引用与 XML 文档的不同元素相关联的多个标识符。 命名空间语法指定了 URI、名称和前缀，可区分 XML 文档的各个元素。  
@@ -18,7 +18,7 @@ ms.locfileid: "75709785"
 ## <a name="namespace-declarations"></a>命名空间声明  
  命名空间声明使得在使用 <xref:System.Xml.XPath.XPathNavigator> 的实例时，很容易区分和定位 XML 文档的各个元素。 命名空间前缀提供了一种简化的语法，用来定位命名空间。  
   
- 前缀可按此形式定义：`<e:Envelope>`e`”是命名空间的正式 URI 的缩写。 使用此语法可以将 `Body` 元素标识为 `Envelope` 命名空间的成员：`e:Body`。  
+ 前缀可按此形式定义：`<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` 在此语法中，前缀“`e`”是命名空间的正式 URI 的缩写。 使用此语法可以将 `Body` 元素标识为 `Envelope` 命名空间的成员：`e:Body`。  
   
  在下一节的浏览示例中，下面的 XML 文档将用作 `response.xml`。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "75709785"
 <e:Envelope xmlns:e="http://schemas.xmlsoap.org/soap/envelope/">  
   <e:Body>  
     <s:Search xmlns:s="http://schemas.microsoft.com/v1/Search">  
-      <r:request xmlns:r="http://schemas.microsoft.com/v1/Search/metadata"   
+      <r:request xmlns:r="http://schemas.microsoft.com/v1/Search/metadata"
                  xmlns:i="http://www.w3.org/2001/XMLSchema-instance">  
       </r:request>  
     </s:Search>  
@@ -54,13 +54,13 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
   
     XPathNavigator element = nav.SelectSingleNode(xpath, nsmgr);  
   
-    Console.WriteLine("Element Prefix:" + element.Prefix +   
+    Console.WriteLine("Element Prefix:" + element.Prefix +
     " Local name:" + element.LocalName);  
     Console.WriteLine("Namespace URI: " + element.NamespaceURI);  
 }  
 ```  
   
- 完全限定的命名空间和名称的精确度不仅仅是一种方便。 对前面的示例中的文档定义和代码进行一项小实验，可以验证如果不使用完全限定的元素名称进行浏览，就会引发异常。 例如，元素定义为 `<Search>`，而查询字符串 `xpath = "/s:Envelope/s:Body/Search";` 没有对 `Search` 元素使用命名空间前缀，则此查询将返回 `null`，而不是 `Search` 元素。  
+ 完全限定的命名空间和名称的精确度不仅仅是一种方便。 对前面的示例中的文档定义和代码进行一项小实验，可以验证如果不使用完全限定的元素名称进行浏览，就会引发异常。 例如，元素定义为 `<Search xmlns="http://schemas.microsoft.com/v1/Search">`，而查询字符串 `xpath = "/s:Envelope/s:Body/Search";` 没有对 `Search` 元素使用命名空间前缀，则此查询将返回 `null`，而不是 `Search` 元素。  
   
 ## <a name="see-also"></a>另请参阅
 

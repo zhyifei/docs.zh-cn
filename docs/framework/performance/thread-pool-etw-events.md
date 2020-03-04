@@ -5,12 +5,12 @@ helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-ms.openlocfilehash: e1deb17dfdfea4c8b66eb8d836a10bf888727e1a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 249d0607ddd280bcb4e9cf3ef34b28ff8ada3b04
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715904"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240488"
 ---
 # <a name="thread-pool-etw-events"></a>线程池 ETW 事件
 这些事件收集有关工作线程和 I/O 线程的信息。  
@@ -33,7 +33,7 @@ ms.locfileid: "75715904"
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|事件|事件 ID|在发生以下情况时引发|  
 |-|-|-|  
 |`ThreadPoolWorkerThreadStart`|50|创建工作线程。|  
 |`ThreadPoolWorkerThreadStop`|51|停止工作线程。|  
@@ -42,7 +42,7 @@ ms.locfileid: "75715904"
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
 |ActiveWorkerThreadCount|win:UInt32|可用于处理工作的工作线程数，包括已在处理工作的工作线程。|  
 |RetiredWorkerThreadCount|win:UInt32|不能用于处理工作但被保留以防之后需要更多线程的工作线程数。|  
@@ -60,13 +60,13 @@ ms.locfileid: "75715904"
   
  下表显示了事件信息。  
   
-|Event|事件 ID|描述|  
+|事件|事件 ID|说明|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|指一个示例的信息收集，即具有一定并发级别的即时吞吐量测量。|  
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
 |吞吐量|win:Double|每个时间单位的完成数。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
@@ -80,13 +80,13 @@ ms.locfileid: "75715904"
   
  下表显示了事件信息。  
   
-|Event|事件 ID|描述|  
+|事件|事件 ID|说明|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|当线程注入（爬山）算法确定并发级别发生更改时，在控件中记录更改。|  
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
 |AverageThroughput|win:Double|测量示例的平均吞吐量。|  
 |NewWorkerThreadCount|win:UInt32|新的活动工作线程数。|  
@@ -102,13 +102,13 @@ ms.locfileid: "75715904"
   
  下表显示了事件信息。  
   
-|Event|事件 ID|描述|  
+|事件|事件 ID|说明|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|在线程池上收集数据。|  
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
 |持续时间|win:Double|收集这些统计信息的时间量（以秒为单位）。|  
 |吞吐量|win:Double|在此间隔期间每秒完成的平均数量。|  
@@ -117,7 +117,7 @@ ms.locfileid: "75715904"
 |ThroughputErrorEstimate|win:Double|保留供内部使用。|  
 |ThroughputErrorEstimate|win:Double|保留供内部使用。|  
 |ThroughputWave|win:Double|在此间隔期间因活动工作线程计数变化导致的相对吞吐量变化。|  
-|Confidence|win:Double|ThroughputRatio 字段的有效性测量。|  
+|置信度|win:Double|ThroughputRatio 字段的有效性测量。|  
 |NewcontrolSetting|win:Double|将作为活动线程计数未来变化基线的活动工作线程数。|  
 |NewThreadWaveMagnitude|Win:UInt16|活动线程计数的未来变化量值。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
@@ -134,15 +134,15 @@ ms.locfileid: "75715904"
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|事件|事件 ID|在发生以下情况时引发|  
 |-|-|-|  
 |`IOThreadCreate_V1`|44|在线程池中创建 I/O 线程。|  
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
-|计数|win:UInt64|I/O 线程数，包括新创建的线程。|  
+|Count|win:UInt64|I/O 线程数，包括新创建的线程。|  
 |NumRetired|win:UInt64|已停用的工作线程数。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
@@ -155,15 +155,15 @@ ms.locfileid: "75715904"
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|事件|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`IOThreadRetire_V1`|46|I/O 线程变为停用候选项。|  
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
-|计数|win:UInt64|线程池中剩余的 I/O 线程数。|  
+|Count|win:UInt64|线程池中剩余的 I/O 线程数。|  
 |NumRetired|win:UInt64|已停用的 I/O 线程数。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
@@ -176,15 +176,15 @@ ms.locfileid: "75715904"
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|事件|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`IOThreadUnretire_V1`|47|I/O 线程因在该线程变为停用候选项后的等待期间内达到 I/O 而恢复使用。|  
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
-|计数|win:UInt64|线程池中的 I/O 线程数，包括这一个。|  
+|Count|win:UInt64|线程池中的 I/O 线程数，包括这一个。|  
 |NumRetired|win:UInt64|已停用的 I/O 线程数。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
@@ -197,15 +197,15 @@ ms.locfileid: "75715904"
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|事件|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
-|`IOThreadTerminate`|45|在线程池中创建 I/O 线程。|  
+|`IOThreadTerminate`|45|线程池中的 i/o 线程终止。|  
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
-|计数|win:UInt64|线程池中剩余的 I/O 线程数。|  
+|Count|win:UInt64|线程池中剩余的 I/O 线程数。|  
 |NumRetired|win:UInt64|已停用的 I/O 线程数。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
