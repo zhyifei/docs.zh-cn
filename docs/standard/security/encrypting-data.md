@@ -11,20 +11,20 @@ helpviewer_keywords:
 - cryptography [.NET Framework], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: b335e0d39c1809b028e2005a472fe77729e9d267
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 669b9c77ca0102ed94d8743cf37b18c0d0c528dc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706209"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159398"
 ---
-# <a name="encrypting-data"></a><span data-ttu-id="5ce96-102">加密数据</span><span class="sxs-lookup"><span data-stu-id="5ce96-102">Encrypting Data</span></span>
-<span data-ttu-id="5ce96-103">对称加密和非对称加密是使用不同的进程执行的。</span><span class="sxs-lookup"><span data-stu-id="5ce96-103">Symmetric encryption and asymmetric encryption are performed using different processes.</span></span> <span data-ttu-id="5ce96-104">对称加密是对流执行的，因此适用于加密大量数据。</span><span class="sxs-lookup"><span data-stu-id="5ce96-104">Symmetric encryption is performed on streams and is therefore useful to encrypt large amounts of data.</span></span> <span data-ttu-id="5ce96-105">非对称加密是对少数字节执行的，因此仅适用于加密少量数据。</span><span class="sxs-lookup"><span data-stu-id="5ce96-105">Asymmetric encryption is performed on a small number of bytes and is therefore useful only for small amounts of data.</span></span>  
+# <a name="encrypting-data"></a><span data-ttu-id="6d62e-102">加密数据</span><span class="sxs-lookup"><span data-stu-id="6d62e-102">Encrypting Data</span></span>
+<span data-ttu-id="6d62e-103">对称加密和非对称加密是使用不同的进程执行的。</span><span class="sxs-lookup"><span data-stu-id="6d62e-103">Symmetric encryption and asymmetric encryption are performed using different processes.</span></span> <span data-ttu-id="6d62e-104">对称加密是对流执行的，因此适用于加密大量数据。</span><span class="sxs-lookup"><span data-stu-id="6d62e-104">Symmetric encryption is performed on streams and is therefore useful to encrypt large amounts of data.</span></span> <span data-ttu-id="6d62e-105">非对称加密是对少数字节执行的，因此仅适用于加密少量数据。</span><span class="sxs-lookup"><span data-stu-id="6d62e-105">Asymmetric encryption is performed on a small number of bytes and is therefore useful only for small amounts of data.</span></span>  
   
-## <a name="symmetric-encryption"></a><span data-ttu-id="5ce96-106">对称加密</span><span class="sxs-lookup"><span data-stu-id="5ce96-106">Symmetric Encryption</span></span>  
- <span data-ttu-id="5ce96-107">托管对称加密类与名为 <xref:System.Security.Cryptography.CryptoStream> 的特殊流类一起使用，后者用于加密读入流中的数据。</span><span class="sxs-lookup"><span data-stu-id="5ce96-107">The managed symmetric cryptography classes are used with a special stream class called a <xref:System.Security.Cryptography.CryptoStream> that encrypts data read into the stream.</span></span> <span data-ttu-id="5ce96-108">使用托管流类、实现 **接口（从实现加密算法的类创建）的类以及用于描述对** CryptoStream <xref:System.Security.Cryptography.ICryptoTransform> 授予的访问权限的类型的 <xref:System.Security.Cryptography.CryptoStreamMode> 枚举，来初始化 **CryptoStream**类。</span><span class="sxs-lookup"><span data-stu-id="5ce96-108">The **CryptoStream** class is initialized with a managed stream class, a class implements the <xref:System.Security.Cryptography.ICryptoTransform> interface (created from a class that implements a cryptographic algorithm), and a <xref:System.Security.Cryptography.CryptoStreamMode> enumeration that describes the type of access permitted to the **CryptoStream**.</span></span> <span data-ttu-id="5ce96-109">可以使用派生自 **类的任何类来初始化** CryptoStream <xref:System.IO.Stream> 类，其中包括 <xref:System.IO.FileStream>、 <xref:System.IO.MemoryStream>和 <xref:System.Net.Sockets.NetworkStream>。</span><span class="sxs-lookup"><span data-stu-id="5ce96-109">The **CryptoStream** class can be initialized using any class that derives from the <xref:System.IO.Stream> class, including <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>, and <xref:System.Net.Sockets.NetworkStream>.</span></span> <span data-ttu-id="5ce96-110">使用这些类，可以对多个流对象执行对称加密。</span><span class="sxs-lookup"><span data-stu-id="5ce96-110">Using these classes, you can perform symmetric encryption on a variety of stream objects.</span></span>  
+## <a name="symmetric-encryption"></a><span data-ttu-id="6d62e-106">对称加密</span><span class="sxs-lookup"><span data-stu-id="6d62e-106">Symmetric Encryption</span></span>  
+ <span data-ttu-id="6d62e-107">托管对称加密类与名为 <xref:System.Security.Cryptography.CryptoStream> 的特殊流类一起使用，后者用于加密读入流中的数据。</span><span class="sxs-lookup"><span data-stu-id="6d62e-107">The managed symmetric cryptography classes are used with a special stream class called a <xref:System.Security.Cryptography.CryptoStream> that encrypts data read into the stream.</span></span> <span data-ttu-id="6d62e-108">使用托管流类、实现 **接口（从实现加密算法的类创建）的类以及用于描述对** CryptoStream <xref:System.Security.Cryptography.ICryptoTransform> 授予的访问权限的类型的 <xref:System.Security.Cryptography.CryptoStreamMode> 枚举，来初始化 **CryptoStream**类。</span><span class="sxs-lookup"><span data-stu-id="6d62e-108">The **CryptoStream** class is initialized with a managed stream class, a class implements the <xref:System.Security.Cryptography.ICryptoTransform> interface (created from a class that implements a cryptographic algorithm), and a <xref:System.Security.Cryptography.CryptoStreamMode> enumeration that describes the type of access permitted to the **CryptoStream**.</span></span> <span data-ttu-id="6d62e-109">可以使用派生自 **类的任何类来初始化** CryptoStream <xref:System.IO.Stream> 类，其中包括 <xref:System.IO.FileStream>、 <xref:System.IO.MemoryStream>和 <xref:System.Net.Sockets.NetworkStream>。</span><span class="sxs-lookup"><span data-stu-id="6d62e-109">The **CryptoStream** class can be initialized using any class that derives from the <xref:System.IO.Stream> class, including <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>, and <xref:System.Net.Sockets.NetworkStream>.</span></span> <span data-ttu-id="6d62e-110">使用这些类，可以对多个流对象执行对称加密。</span><span class="sxs-lookup"><span data-stu-id="6d62e-110">Using these classes, you can perform symmetric encryption on a variety of stream objects.</span></span>  
   
- <span data-ttu-id="5ce96-111">下面的示例演示如何创建 <xref:System.Security.Cryptography.RijndaelManaged> 类的新实例（该类可实现 Rijndael 加密算法），并用它对 **CryptoStream** 类进行加密。</span><span class="sxs-lookup"><span data-stu-id="5ce96-111">The following example illustrates how to create a new instance of the <xref:System.Security.Cryptography.RijndaelManaged> class, which implements the Rijndael encryption algorithm, and use it to perform encryption on a **CryptoStream** class.</span></span> <span data-ttu-id="5ce96-112">在此示例中，使用名为 **的流对象初始化** CryptoStream `myStream` ，该流对象可以是任何类型的托管流。</span><span class="sxs-lookup"><span data-stu-id="5ce96-112">In this example, the **CryptoStream** is initialized with a stream object called `myStream` that can be any type of managed stream.</span></span> <span data-ttu-id="5ce96-113">向 **RijndaelManaged** 类中的 **CreateEncryptor** 方法传递用于加密的密钥和 IV。</span><span class="sxs-lookup"><span data-stu-id="5ce96-113">The **CreateEncryptor** method from the **RijndaelManaged** class is passed the key and IV that are used for encryption.</span></span> <span data-ttu-id="5ce96-114">在此例中，使用了由 `rmCrypto` 生成的默认密钥和 IV。</span><span class="sxs-lookup"><span data-stu-id="5ce96-114">In this case, the default key and IV generated from `rmCrypto` are used.</span></span> <span data-ttu-id="5ce96-115">最后传递 **CryptoStreamMode.Write** ，指定对流的写入权限。</span><span class="sxs-lookup"><span data-stu-id="5ce96-115">Finally, the **CryptoStreamMode.Write** is passed, specifying write access to the stream.</span></span>  
+ <span data-ttu-id="6d62e-111">下面的示例演示如何创建 <xref:System.Security.Cryptography.RijndaelManaged> 类的新实例（该类可实现 Rijndael 加密算法），并用它对 **CryptoStream** 类进行加密。</span><span class="sxs-lookup"><span data-stu-id="6d62e-111">The following example illustrates how to create a new instance of the <xref:System.Security.Cryptography.RijndaelManaged> class, which implements the Rijndael encryption algorithm, and use it to perform encryption on a **CryptoStream** class.</span></span> <span data-ttu-id="6d62e-112">在此示例中，使用名为 **的流对象初始化** CryptoStream `myStream` ，该流对象可以是任何类型的托管流。</span><span class="sxs-lookup"><span data-stu-id="6d62e-112">In this example, the **CryptoStream** is initialized with a stream object called `myStream` that can be any type of managed stream.</span></span> <span data-ttu-id="6d62e-113">向 **RijndaelManaged** 类中的 **CreateEncryptor** 方法传递用于加密的密钥和 IV。</span><span class="sxs-lookup"><span data-stu-id="6d62e-113">The **CreateEncryptor** method from the **RijndaelManaged** class is passed the key and IV that are used for encryption.</span></span> <span data-ttu-id="6d62e-114">在此例中，使用了由 `rmCrypto` 生成的默认密钥和 IV。</span><span class="sxs-lookup"><span data-stu-id="6d62e-114">In this case, the default key and IV generated from `rmCrypto` are used.</span></span> <span data-ttu-id="6d62e-115">最后传递 **CryptoStreamMode.Write** ，指定对流的写入权限。</span><span class="sxs-lookup"><span data-stu-id="6d62e-115">Finally, the **CryptoStreamMode.Write** is passed, specifying write access to the stream.</span></span>  
   
 ```vb  
 Dim rmCrypto As New RijndaelManaged()  
@@ -36,12 +36,12 @@ RijndaelManaged rmCrypto = new RijndaelManaged();
 CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateEncryptor(), CryptoStreamMode.Write);  
 ```  
   
- <span data-ttu-id="5ce96-116">执行此代码后，使用 Rijndael 算法对写入到 **CryptoStream** 对象的任何数据进行加密。</span><span class="sxs-lookup"><span data-stu-id="5ce96-116">After this code is executed, any data written to the **CryptoStream** object is encrypted using the Rijndael algorithm.</span></span>  
+ <span data-ttu-id="6d62e-116">执行此代码后，使用 Rijndael 算法对写入到 **CryptoStream** 对象的任何数据进行加密。</span><span class="sxs-lookup"><span data-stu-id="6d62e-116">After this code is executed, any data written to the **CryptoStream** object is encrypted using the Rijndael algorithm.</span></span>  
   
- <span data-ttu-id="5ce96-117">下面的示例演示创建流、加密流、写入流和关闭流的整个过程。</span><span class="sxs-lookup"><span data-stu-id="5ce96-117">The following example shows the entire process of creating a stream, encrypting the stream, writing to the stream, and closing the stream.</span></span> <span data-ttu-id="5ce96-118">此示例创建使用 **CryptoStream** 类和 **RijndaelManaged** 类加密的网络流。</span><span class="sxs-lookup"><span data-stu-id="5ce96-118">This example creates a network stream that is encrypted using the **CryptoStream** class and the **RijndaelManaged** class.</span></span> <span data-ttu-id="5ce96-119">使用 <xref:System.IO.StreamWriter> 类将消息写入到加密流。</span><span class="sxs-lookup"><span data-stu-id="5ce96-119">A message is written to the encrypted stream with the <xref:System.IO.StreamWriter> class.</span></span>  
+ <span data-ttu-id="6d62e-117">下面的示例演示创建流、加密流、写入流和关闭流的整个过程。</span><span class="sxs-lookup"><span data-stu-id="6d62e-117">The following example shows the entire process of creating a stream, encrypting the stream, writing to the stream, and closing the stream.</span></span> <span data-ttu-id="6d62e-118">此示例创建使用 **CryptoStream** 类和 **RijndaelManaged** 类加密的网络流。</span><span class="sxs-lookup"><span data-stu-id="6d62e-118">This example creates a network stream that is encrypted using the **CryptoStream** class and the **RijndaelManaged** class.</span></span> <span data-ttu-id="6d62e-119">使用 <xref:System.IO.StreamWriter> 类将消息写入到加密流。</span><span class="sxs-lookup"><span data-stu-id="6d62e-119">A message is written to the encrypted stream with the <xref:System.IO.StreamWriter> class.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="5ce96-120">此示例还可用于写入文件。</span><span class="sxs-lookup"><span data-stu-id="5ce96-120">You can also use this example to write to a file.</span></span> <span data-ttu-id="5ce96-121">若要执行该操作，请删除 <xref:System.Net.Sockets.TcpClient> 引用，并将 <xref:System.Net.Sockets.NetworkStream> 替换为 <xref:System.IO.FileStream>。</span><span class="sxs-lookup"><span data-stu-id="5ce96-121">To do that, delete the <xref:System.Net.Sockets.TcpClient> reference and replace the <xref:System.Net.Sockets.NetworkStream> with a <xref:System.IO.FileStream>.</span></span>  
+> <span data-ttu-id="6d62e-120">此示例还可用于写入文件。</span><span class="sxs-lookup"><span data-stu-id="6d62e-120">You can also use this example to write to a file.</span></span> <span data-ttu-id="6d62e-121">若要执行该操作，请删除 <xref:System.Net.Sockets.TcpClient> 引用，并将 <xref:System.Net.Sockets.NetworkStream> 替换为 <xref:System.IO.FileStream>。</span><span class="sxs-lookup"><span data-stu-id="6d62e-121">To do that, delete the <xref:System.Net.Sockets.TcpClient> reference and replace the <xref:System.Net.Sockets.NetworkStream> with a <xref:System.IO.FileStream>.</span></span>  
   
 ```vb  
 Imports System  
@@ -54,11 +54,11 @@ Sub Main()
    Try  
       'Create a TCP connection to a listening TCP process.  
       'Use "localhost" to specify the current computer or  
-      'replace "localhost" with the IP address of the   
-      'listening process.   
+      'replace "localhost" with the IP address of the
+      'listening process.
       Dim tcp As New TcpClient("localhost", 11000)  
   
-      'Create a network stream from the TCP connection.   
+      'Create a network stream from the TCP connection.
       Dim netStream As NetworkStream = tcp.GetStream()  
   
       'Create a new instance of the RijndaelManaged class  
@@ -68,11 +68,11 @@ Sub Main()
             Dim key As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}  
             Dim iv As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}  
   
-      'Create a CryptoStream, pass it the NetworkStream, and encrypt   
+      'Create a CryptoStream, pass it the NetworkStream, and encrypt
       'it with the Rijndael class.  
       Dim cryptStream As New CryptoStream(netStream, rmCrypto.CreateEncryptor(key, iv), CryptoStreamMode.Write)  
   
-      'Create a StreamWriter for easy writing to the   
+      'Create a StreamWriter for easy writing to the
       'network stream.  
       Dim sWriter As New StreamWriter(cryptStream)  
   
@@ -110,11 +110,11 @@ public class main
       {  
          //Create a TCP connection to a listening TCP process.  
          //Use "localhost" to specify the current computer or  
-         //replace "localhost" with the IP address of the   
-         //listening process.    
+         //replace "localhost" with the IP address of the
+         //listening process.
          TcpClient tcp = new TcpClient("localhost",11000);  
   
-         //Create a network stream from the TCP connection.   
+         //Create a network stream from the TCP connection.
          NetworkStream netStream = tcp.GetStream();  
   
          //Create a new instance of the RijndaelManaged class  
@@ -124,13 +124,13 @@ public class main
          byte[] key = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16};  
          byte[] iv = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16};  
   
-         //Create a CryptoStream, pass it the NetworkStream, and encrypt   
+         //Create a CryptoStream, pass it the NetworkStream, and encrypt
          //it with the Rijndael class.  
-         CryptoStream cryptStream = new CryptoStream(netStream,   
-         rmCrypto.CreateEncryptor(key, iv),     
+         CryptoStream cryptStream = new CryptoStream(netStream,
+         rmCrypto.CreateEncryptor(key, iv),
          CryptoStreamMode.Write);  
   
-         //Create a StreamWriter for easy writing to the   
+         //Create a StreamWriter for easy writing to the
          //network stream.  
          StreamWriter sWriter = new StreamWriter(cryptStream);  
   
@@ -156,22 +156,22 @@ public class main
 }  
 ```  
   
- <span data-ttu-id="5ce96-122">要使以上示例成功执行， <xref:System.Net.Sockets.TcpClient> 类中必须具有用于侦听指定 IP 地址和端口号的进程。</span><span class="sxs-lookup"><span data-stu-id="5ce96-122">For the previous example to execute successfully, there must be a process listening on the IP address and port number specified in the <xref:System.Net.Sockets.TcpClient> class.</span></span> <span data-ttu-id="5ce96-123">如果存在侦听进程，则代码将连接到该侦听进程，使用 Rijndael 对称算法加密流，并将“Hello World!”</span><span class="sxs-lookup"><span data-stu-id="5ce96-123">If a listening process exists, the code will connect to the listening process, encrypt the stream using the Rijndael symmetric algorithm, and write "Hello World!"</span></span> <span data-ttu-id="5ce96-124">写入流。</span><span class="sxs-lookup"><span data-stu-id="5ce96-124">to the stream.</span></span> <span data-ttu-id="5ce96-125">如果代码成功运行，则它会向控制台显示以下文本：</span><span class="sxs-lookup"><span data-stu-id="5ce96-125">If the code is successful, it displays the following text to the console:</span></span>  
+ <span data-ttu-id="6d62e-122">要使以上示例成功执行， <xref:System.Net.Sockets.TcpClient> 类中必须具有用于侦听指定 IP 地址和端口号的进程。</span><span class="sxs-lookup"><span data-stu-id="6d62e-122">For the previous example to execute successfully, there must be a process listening on the IP address and port number specified in the <xref:System.Net.Sockets.TcpClient> class.</span></span> <span data-ttu-id="6d62e-123">如果存在侦听进程，则代码将连接到该侦听进程，使用 Rijndael 对称算法加密流，并将“Hello World!”</span><span class="sxs-lookup"><span data-stu-id="6d62e-123">If a listening process exists, the code will connect to the listening process, encrypt the stream using the Rijndael symmetric algorithm, and write "Hello World!"</span></span> <span data-ttu-id="6d62e-124">写入流。</span><span class="sxs-lookup"><span data-stu-id="6d62e-124">to the stream.</span></span> <span data-ttu-id="6d62e-125">如果代码成功运行，则它会向控制台显示以下文本：</span><span class="sxs-lookup"><span data-stu-id="6d62e-125">If the code is successful, it displays the following text to the console:</span></span>  
   
 ```console  
 The message was sent.  
 ```  
   
- <span data-ttu-id="5ce96-126">但是，如果找不到任何侦听进程或引发异常，则代码将向控制台显示以下文本：</span><span class="sxs-lookup"><span data-stu-id="5ce96-126">However, if no listening process is found or an exception is raised, the code displays the following text to the console:</span></span>  
+ <span data-ttu-id="6d62e-126">但是，如果找不到任何侦听进程或引发异常，则代码将向控制台显示以下文本：</span><span class="sxs-lookup"><span data-stu-id="6d62e-126">However, if no listening process is found or an exception is raised, the code displays the following text to the console:</span></span>  
   
 ```console  
 The connection failed.  
 ```  
   
-## <a name="asymmetric-encryption"></a><span data-ttu-id="5ce96-127">非对称加密</span><span class="sxs-lookup"><span data-stu-id="5ce96-127">Asymmetric Encryption</span></span>  
- <span data-ttu-id="5ce96-128">非对称算法通常用于加密少量数据，例如加密对称密钥和 IV。</span><span class="sxs-lookup"><span data-stu-id="5ce96-128">Asymmetric algorithms are usually used to encrypt small amounts of data such as the encryption of a symmetric key and IV.</span></span> <span data-ttu-id="5ce96-129">通常情况下，单独执行的非对称加密使用另一方生成的公共密钥。</span><span class="sxs-lookup"><span data-stu-id="5ce96-129">Typically, an individual performing asymmetric encryption uses the public key generated by another party.</span></span> <span data-ttu-id="5ce96-130">.NET Framework 出于此目的提供了 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 类。</span><span class="sxs-lookup"><span data-stu-id="5ce96-130">The <xref:System.Security.Cryptography.RSACryptoServiceProvider> class is provided by the .NET Framework for this purpose.</span></span>  
+## <a name="asymmetric-encryption"></a><span data-ttu-id="6d62e-127">非对称加密</span><span class="sxs-lookup"><span data-stu-id="6d62e-127">Asymmetric Encryption</span></span>  
+ <span data-ttu-id="6d62e-128">非对称算法通常用于加密少量数据，例如加密对称密钥和 IV。</span><span class="sxs-lookup"><span data-stu-id="6d62e-128">Asymmetric algorithms are usually used to encrypt small amounts of data such as the encryption of a symmetric key and IV.</span></span> <span data-ttu-id="6d62e-129">通常情况下，单独执行的非对称加密使用另一方生成的公共密钥。</span><span class="sxs-lookup"><span data-stu-id="6d62e-129">Typically, an individual performing asymmetric encryption uses the public key generated by another party.</span></span> <span data-ttu-id="6d62e-130">.NET Framework 出于此目的提供了 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 类。</span><span class="sxs-lookup"><span data-stu-id="6d62e-130">The <xref:System.Security.Cryptography.RSACryptoServiceProvider> class is provided by the .NET Framework for this purpose.</span></span>  
   
- <span data-ttu-id="5ce96-131">下面的示例使用公钥信息加密对称密钥和 IV。</span><span class="sxs-lookup"><span data-stu-id="5ce96-131">The following example uses public key information to encrypt a symmetric key and IV.</span></span> <span data-ttu-id="5ce96-132">初始化了代表第三方公钥的两个字节数组。</span><span class="sxs-lookup"><span data-stu-id="5ce96-132">Two byte arrays are initialized that represent the public key of a third party.</span></span> <span data-ttu-id="5ce96-133"><xref:System.Security.Cryptography.RSAParameters> 对象初始化为这些值。</span><span class="sxs-lookup"><span data-stu-id="5ce96-133">An <xref:System.Security.Cryptography.RSAParameters> object is initialized to these values.</span></span> <span data-ttu-id="5ce96-134">然后，使用 **方法将** RSAParameters **对象（以及它所代表的公钥）导入** RSACryptoServiceProvider <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> 。</span><span class="sxs-lookup"><span data-stu-id="5ce96-134">Next, the **RSAParameters** object (along with the public key it represents) is imported into an **RSACryptoServiceProvider** using the <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="5ce96-135">最后，对 <xref:System.Security.Cryptography.RijndaelManaged> 类创建私钥和 IV 进行加密。</span><span class="sxs-lookup"><span data-stu-id="5ce96-135">Finally, the private key and IV created by a <xref:System.Security.Cryptography.RijndaelManaged> class are encrypted.</span></span> <span data-ttu-id="5ce96-136">此示例要求系统安装 128 位加密。</span><span class="sxs-lookup"><span data-stu-id="5ce96-136">This example requires systems to have 128-bit encryption installed.</span></span>  
+ <span data-ttu-id="6d62e-131">下面的示例使用公钥信息加密对称密钥和 IV。</span><span class="sxs-lookup"><span data-stu-id="6d62e-131">The following example uses public key information to encrypt a symmetric key and IV.</span></span> <span data-ttu-id="6d62e-132">初始化了代表第三方公钥的两个字节数组。</span><span class="sxs-lookup"><span data-stu-id="6d62e-132">Two byte arrays are initialized that represent the public key of a third party.</span></span> <span data-ttu-id="6d62e-133"><xref:System.Security.Cryptography.RSAParameters> 对象初始化为这些值。</span><span class="sxs-lookup"><span data-stu-id="6d62e-133">An <xref:System.Security.Cryptography.RSAParameters> object is initialized to these values.</span></span> <span data-ttu-id="6d62e-134">然后，使用 **方法将** RSAParameters **对象（以及它所代表的公钥）导入** RSACryptoServiceProvider <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> 。</span><span class="sxs-lookup"><span data-stu-id="6d62e-134">Next, the **RSAParameters** object (along with the public key it represents) is imported into an **RSACryptoServiceProvider** using the <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="6d62e-135">最后，对 <xref:System.Security.Cryptography.RijndaelManaged> 类创建私钥和 IV 进行加密。</span><span class="sxs-lookup"><span data-stu-id="6d62e-135">Finally, the private key and IV created by a <xref:System.Security.Cryptography.RijndaelManaged> class are encrypted.</span></span> <span data-ttu-id="6d62e-136">此示例要求系统安装 128 位加密。</span><span class="sxs-lookup"><span data-stu-id="6d62e-136">This example requires systems to have 128-bit encryption installed.</span></span>  
   
 ```vb  
 Imports System  
@@ -195,7 +195,7 @@ Module Module1
         'Create a new instance of the RSAParameters structure.  
         Dim rsaKeyInfo As New RSAParameters()  
   
-        'Set rsaKeyInfo to the public key values.   
+        'Set rsaKeyInfo to the public key values.
         rsaKeyInfo.Modulus = publicKey  
         rsaKeyInfo.Exponent = exponent  
   
@@ -243,7 +243,7 @@ class Class1
       //Create a new instance of the RSAParameters structure.  
       RSAParameters rsaKeyInfo = new RSAParameters();  
   
-      //Set rsaKeyInfo to the public key values.   
+      //Set rsaKeyInfo to the public key values.
       rsaKeyInfo.Modulus = publicKey;  
       rsaKeyInfo.Exponent = exponent;  
   
@@ -260,8 +260,8 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5ce96-137">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5ce96-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6d62e-137">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6d62e-137">See also</span></span>
 
-- [<span data-ttu-id="5ce96-138">生成加密和解密密钥</span><span class="sxs-lookup"><span data-stu-id="5ce96-138">Generating Keys for Encryption and Decryption</span></span>](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
-- [<span data-ttu-id="5ce96-139">解密数据</span><span class="sxs-lookup"><span data-stu-id="5ce96-139">Decrypting Data</span></span>](../../../docs/standard/security/decrypting-data.md)
-- [<span data-ttu-id="5ce96-140">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="5ce96-140">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)
+- [<span data-ttu-id="6d62e-138">生成加密和解密密钥</span><span class="sxs-lookup"><span data-stu-id="6d62e-138">Generating Keys for Encryption and Decryption</span></span>](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [<span data-ttu-id="6d62e-139">解密数据</span><span class="sxs-lookup"><span data-stu-id="6d62e-139">Decrypting Data</span></span>](../../../docs/standard/security/decrypting-data.md)
+- [<span data-ttu-id="6d62e-140">加密服务</span><span class="sxs-lookup"><span data-stu-id="6d62e-140">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)

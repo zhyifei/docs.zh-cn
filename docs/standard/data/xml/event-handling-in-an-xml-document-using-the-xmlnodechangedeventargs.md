@@ -6,44 +6,44 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-ms.openlocfilehash: ecbed7e57628b4e140e0f4dbcd600643617b075a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b27c51572b1ba83480d90eba4add7f930715a4e5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710890"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156525"
 ---
-# <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a><span data-ttu-id="7f513-102">使用 mlNodeChangedEventArgs 的 XML 文档中的事件处理</span><span class="sxs-lookup"><span data-stu-id="7f513-102">Event Handling in an XML Document Using the XmlNodeChangedEventArgs</span></span>
-<span data-ttu-id="7f513-103">XmlNodeChangedEventArgs 封装传递给事件处理程序的参数，这些处理程序在 XmlDocument 对象上注册为用于处理事件。</span><span class="sxs-lookup"><span data-stu-id="7f513-103">The **XmlNodeChangedEventArgs** encapsulates the arguments passed to the event handlers registered on the **XmlDocument** object for handling events.</span></span> <span data-ttu-id="7f513-104">下表提供了事件以及关于何时引发事件的说明。</span><span class="sxs-lookup"><span data-stu-id="7f513-104">The events and a description of when they are fired is given in the following table.</span></span>  
+# <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a><span data-ttu-id="d867b-102">使用 mlNodeChangedEventArgs 的 XML 文档中的事件处理</span><span class="sxs-lookup"><span data-stu-id="d867b-102">Event Handling in an XML Document Using the XmlNodeChangedEventArgs</span></span>
+<span data-ttu-id="d867b-103">XmlNodeChangedEventArgs 封装传递给事件处理程序的参数，这些处理程序在 XmlDocument 对象上注册为用于处理事件。</span><span class="sxs-lookup"><span data-stu-id="d867b-103">The **XmlNodeChangedEventArgs** encapsulates the arguments passed to the event handlers registered on the **XmlDocument** object for handling events.</span></span> <span data-ttu-id="d867b-104">下表提供了事件以及关于何时引发事件的说明。</span><span class="sxs-lookup"><span data-stu-id="d867b-104">The events and a description of when they are fired is given in the following table.</span></span>  
   
-|<span data-ttu-id="7f513-105">Event</span><span class="sxs-lookup"><span data-stu-id="7f513-105">Event</span></span>|<span data-ttu-id="7f513-106">引发</span><span class="sxs-lookup"><span data-stu-id="7f513-106">Fired</span></span>|  
+|<span data-ttu-id="d867b-105">事件</span><span class="sxs-lookup"><span data-stu-id="d867b-105">Event</span></span>|<span data-ttu-id="d867b-106">引发</span><span class="sxs-lookup"><span data-stu-id="d867b-106">Fired</span></span>|  
 |-----------|-----------|  
-|<xref:System.Xml.XmlDocument.NodeInserting>|<span data-ttu-id="7f513-107">当准备将属于当前文档的节点插入到另一个节点时。</span><span class="sxs-lookup"><span data-stu-id="7f513-107">When a node belonging to the current document is about to be inserted into another node.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeInserted>|<span data-ttu-id="7f513-108">当已经将属于当前文档的节点插入到另一个节点时。</span><span class="sxs-lookup"><span data-stu-id="7f513-108">When a node belonging to the current document has been inserted into another node.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeRemoving>|<span data-ttu-id="7f513-109">当准备将属于此文档的节点从文档中移除时。</span><span class="sxs-lookup"><span data-stu-id="7f513-109">When a node belonging to this document is about to be removed from the document.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeRemoved>|<span data-ttu-id="7f513-110">当已经将属于此文档的节点从其父级中移除时。</span><span class="sxs-lookup"><span data-stu-id="7f513-110">When a node belonging to this document has been removed from its parent.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeChanging>|<span data-ttu-id="7f513-111">当准备更改节点值时。</span><span class="sxs-lookup"><span data-stu-id="7f513-111">When the value of a node is about to be changed.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeChanged>|<span data-ttu-id="7f513-112">当节点值已经更改时。</span><span class="sxs-lookup"><span data-stu-id="7f513-112">When the value of a node has been changed.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeInserting>|<span data-ttu-id="d867b-107">当准备将属于当前文档的节点插入到另一个节点时。</span><span class="sxs-lookup"><span data-stu-id="d867b-107">When a node belonging to the current document is about to be inserted into another node.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeInserted>|<span data-ttu-id="d867b-108">当已经将属于当前文档的节点插入到另一个节点时。</span><span class="sxs-lookup"><span data-stu-id="d867b-108">When a node belonging to the current document has been inserted into another node.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeRemoving>|<span data-ttu-id="d867b-109">当准备将属于此文档的节点从文档中移除时。</span><span class="sxs-lookup"><span data-stu-id="d867b-109">When a node belonging to this document is about to be removed from the document.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeRemoved>|<span data-ttu-id="d867b-110">当已经将属于此文档的节点从其父级中移除时。</span><span class="sxs-lookup"><span data-stu-id="d867b-110">When a node belonging to this document has been removed from its parent.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeChanging>|<span data-ttu-id="d867b-111">当准备更改节点值时。</span><span class="sxs-lookup"><span data-stu-id="d867b-111">When the value of a node is about to be changed.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeChanged>|<span data-ttu-id="d867b-112">当节点值已经更改时。</span><span class="sxs-lookup"><span data-stu-id="d867b-112">When the value of a node has been changed.</span></span>|  
   
 > [!NOTE]
-> <span data-ttu-id="7f513-113">如果 XmlDataDocument 内存使用完全优化为使用 DataSet 存储，那么基础 DataSet 有更改时，XmlDataDocument 可能不会抛出上面列出的任何事件。</span><span class="sxs-lookup"><span data-stu-id="7f513-113">If the **XmlDataDocument** memory usage is fully optimized to use **DataSet** storage, the **XmlDataDocument** might not raise any of the events listed above when changes are made to the underlying **DataSet**.</span></span> <span data-ttu-id="7f513-114">如果需要这些事件，必须遍历整个 XmlDocument 一遍，才能非完全优化内存使用。</span><span class="sxs-lookup"><span data-stu-id="7f513-114">If you need these events, you must traverse the whole **XmlDocument** once to make the memory usage non-fully optimized.</span></span>  
+> <span data-ttu-id="d867b-113">如果 XmlDataDocument 内存使用完全优化为使用 DataSet 存储，那么基础 DataSet 有更改时，XmlDataDocument 可能不会抛出上面列出的任何事件。</span><span class="sxs-lookup"><span data-stu-id="d867b-113">If the **XmlDataDocument** memory usage is fully optimized to use **DataSet** storage, the **XmlDataDocument** might not raise any of the events listed above when changes are made to the underlying **DataSet**.</span></span> <span data-ttu-id="d867b-114">如果需要这些事件，必须遍历整个 XmlDocument 一遍，才能非完全优化内存使用。</span><span class="sxs-lookup"><span data-stu-id="d867b-114">If you need these events, you must traverse the whole **XmlDocument** once to make the memory usage non-fully optimized.</span></span>  
   
- <span data-ttu-id="7f513-115">下面的代码示例显示如何定义事件处理程序以及如何将该事件处理程序添加到事件。</span><span class="sxs-lookup"><span data-stu-id="7f513-115">The following code example shows how to define an event handler and how to add the event handler to an event.</span></span>  
+ <span data-ttu-id="d867b-115">下面的代码示例显示如何定义事件处理程序以及如何将该事件处理程序添加到事件。</span><span class="sxs-lookup"><span data-stu-id="d867b-115">The following code example shows how to define an event handler and how to add the event handler to an event.</span></span>  
   
 ```vb  
 ' Attach the event handler, NodeInsertedHandler, to the NodeInserted  
 ' event.  
 Dim doc as XmlDocument = new XmlDocument()  
-Dim XmlNodeChgEHdlr as XmlNodeChangedEventHandler = new XmlNodeChangedEventHandler(addressof MyNodeChangedEvent)   
-AddHandler doc.NodeInserted, XmlNodeChgEHdlr   
+Dim XmlNodeChgEHdlr as XmlNodeChangedEventHandler = new XmlNodeChangedEventHandler(addressof MyNodeChangedEvent)
+AddHandler doc.NodeInserted, XmlNodeChgEHdlr
   
 Dim n as XmlNode = doc.CreateElement( "element" )  
-Console.WriteLine( "Before Event Inserting" )   
+Console.WriteLine( "Before Event Inserting" )
   
 ' This is the point where the new node is being inserted in the tree,  
 ' and this is the point where the NodeInserted event is raised.  
 doc.AppendChild( n )  
-Console.WriteLine( "After Event Inserting" )   
+Console.WriteLine( "After Event Inserting" )
   
 ' Define the event handler that handles the NodeInserted event.  
 sub NodeInsertedHandler(src as Object, args as XmlNodeChangedEventArgs)  
@@ -62,7 +62,7 @@ Console.WriteLine( "Before Event Inserting" );
 // This is the point where the new node is being inserted in the tree,  
 // and this is the point where the NodeInserted event is raised.  
 doc.AppendChild( n );  
-Console.WriteLine( "After Event Inserting" );   
+Console.WriteLine( "After Event Inserting" );
   
 // Define the event handler that handles the NodeInserted event.  
 void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)  
@@ -71,9 +71,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- <span data-ttu-id="7f513-116">某些 XML 文档对象模型 (DOM) 操作是可导致引发多个事件的复合操作。</span><span class="sxs-lookup"><span data-stu-id="7f513-116">Some XML Document Object Model (DOM) operations are compound operations that can result in multiple events being fired.</span></span> <span data-ttu-id="7f513-117">例如，AppendChild 可能还必须删除从上一个父级追加的节点。</span><span class="sxs-lookup"><span data-stu-id="7f513-117">For example, **AppendChild** may also have to remove the node being appended from its previous parent.</span></span> <span data-ttu-id="7f513-118">在此示例中，依次抛出 NodeRemoved 事件和 NodeInserted 事件。</span><span class="sxs-lookup"><span data-stu-id="7f513-118">In this case, you see a **NodeRemoved** event fired first, followed by a **NodeInserted** event.</span></span> <span data-ttu-id="7f513-119">设置 InnerXml 等操作可能会导致多个事件发生。</span><span class="sxs-lookup"><span data-stu-id="7f513-119">Operations like setting **InnerXml** could result in multiple events.</span></span>  
+ <span data-ttu-id="d867b-116">某些 XML 文档对象模型 (DOM) 操作是可导致引发多个事件的复合操作。</span><span class="sxs-lookup"><span data-stu-id="d867b-116">Some XML Document Object Model (DOM) operations are compound operations that can result in multiple events being fired.</span></span> <span data-ttu-id="d867b-117">例如，AppendChild 可能还必须删除从上一个父级追加的节点。</span><span class="sxs-lookup"><span data-stu-id="d867b-117">For example, **AppendChild** may also have to remove the node being appended from its previous parent.</span></span> <span data-ttu-id="d867b-118">在此示例中，依次抛出 NodeRemoved 事件和 NodeInserted 事件。</span><span class="sxs-lookup"><span data-stu-id="d867b-118">In this case, you see a **NodeRemoved** event fired first, followed by a **NodeInserted** event.</span></span> <span data-ttu-id="d867b-119">设置 InnerXml 等操作可能会导致多个事件发生。</span><span class="sxs-lookup"><span data-stu-id="d867b-119">Operations like setting **InnerXml** could result in multiple events.</span></span>  
   
- <span data-ttu-id="7f513-120">下面的代码示例展示了如何创建事件处理程序，以及如何处理 NodeInserted 事件。</span><span class="sxs-lookup"><span data-stu-id="7f513-120">The following code example shows the creation of the event handler and the handling of the **NodeInserted** event.</span></span>  
+ <span data-ttu-id="d867b-120">下面的代码示例展示了如何创建事件处理程序，以及如何处理 NodeInserted 事件。</span><span class="sxs-lookup"><span data-stu-id="d867b-120">The following code example shows the creation of the event handler and the handling of the **NodeInserted** event.</span></span>  
   
 ```vb  
 Imports System  
@@ -173,7 +173,7 @@ public class Sample
      doc.DocumentElement.AppendChild(newElem);  
   
      Console.WriteLine("\r\nDisplay the modified XML...");  
-     Console.WriteLine(doc.OuterXml);             
+     Console.WriteLine(doc.OuterXml);
   
   }  
   
@@ -201,11 +201,11 @@ public class Sample
         Console.WriteLine("");  
   }  
   
-} // End class   
+} // End class
 ```  
   
- <span data-ttu-id="7f513-121">有关详细信息，请参阅 <xref:System.Xml.XmlNodeChangedEventArgs>和<xref:System.Xml.XmlNodeChangedEventHandler>。</span><span class="sxs-lookup"><span data-stu-id="7f513-121">For more information, see <xref:System.Xml.XmlNodeChangedEventArgs> and <xref:System.Xml.XmlNodeChangedEventHandler>.</span></span>  
+ <span data-ttu-id="d867b-121">有关详细信息，请参阅 <xref:System.Xml.XmlNodeChangedEventArgs>和<xref:System.Xml.XmlNodeChangedEventHandler>。</span><span class="sxs-lookup"><span data-stu-id="d867b-121">For more information, see <xref:System.Xml.XmlNodeChangedEventArgs> and <xref:System.Xml.XmlNodeChangedEventHandler>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7f513-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7f513-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d867b-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d867b-122">See also</span></span>
 
-- [<span data-ttu-id="7f513-123">XML 文档对象模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="7f513-123">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [<span data-ttu-id="d867b-123">XML 文档对象模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="d867b-123">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

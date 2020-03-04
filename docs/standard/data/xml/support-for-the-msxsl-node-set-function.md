@@ -3,25 +3,25 @@ title: 对 msxsl:node-set() 函数的支持
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-ms.openlocfilehash: b9603f6c910e8e29309618c8e01e283c28ae2bff
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5022b298cb20796edbc54e951d8b06043697d832
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710123"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155589"
 ---
-# <a name="support-for-the-msxslnode-set-function"></a><span data-ttu-id="dea1a-102">对 msxsl:node-set() 函数的支持</span><span class="sxs-lookup"><span data-stu-id="dea1a-102">Support for the msxsl:node-set() Function</span></span>
-<span data-ttu-id="dea1a-103">`msxsl:node-set` 函数使你能够将结果树片段转换成节点集。</span><span class="sxs-lookup"><span data-stu-id="dea1a-103">The `msxsl:node-set` function enables you to convert a result tree fragment into a node set.</span></span> <span data-ttu-id="dea1a-104">生成的节点集总是包含单个节点并且是树的根节点。</span><span class="sxs-lookup"><span data-stu-id="dea1a-104">The resulting node set always contains a single node and is the root node of the tree.</span></span>  
+# <a name="support-for-the-msxslnode-set-function"></a><span data-ttu-id="17169-102">对 msxsl:node-set() 函数的支持</span><span class="sxs-lookup"><span data-stu-id="17169-102">Support for the msxsl:node-set() Function</span></span>
+<span data-ttu-id="17169-103">`msxsl:node-set` 函数使你能够将结果树片段转换成节点集。</span><span class="sxs-lookup"><span data-stu-id="17169-103">The `msxsl:node-set` function enables you to convert a result tree fragment into a node set.</span></span> <span data-ttu-id="17169-104">生成的节点集总是包含单个节点并且是树的根节点。</span><span class="sxs-lookup"><span data-stu-id="17169-104">The resulting node set always contains a single node and is the root node of the tree.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="dea1a-105"><xref:System.Xml.Xsl.XslTransform> 类在 .NET Framework 2.0 中已过时。</span><span class="sxs-lookup"><span data-stu-id="dea1a-105">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="dea1a-106">可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。</span><span class="sxs-lookup"><span data-stu-id="dea1a-106">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="dea1a-107">请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)，以获取详细信息。</span><span class="sxs-lookup"><span data-stu-id="dea1a-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
+> <span data-ttu-id="17169-105"><xref:System.Xml.Xsl.XslTransform> 类在 .NET Framework 2.0 中已过时。</span><span class="sxs-lookup"><span data-stu-id="17169-105">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="17169-106">可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。</span><span class="sxs-lookup"><span data-stu-id="17169-106">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="17169-107">请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)，以获取详细信息。</span><span class="sxs-lookup"><span data-stu-id="17169-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
   
- <span data-ttu-id="dea1a-108">`msxsl:node-set` 函数使你能够将结果树片段转换成节点集。</span><span class="sxs-lookup"><span data-stu-id="dea1a-108">The `msxsl:node-set` function enables you to convert a result tree fragment into a node set.</span></span> <span data-ttu-id="dea1a-109">生成的节点集总是包含单个节点并且是树的根节点。</span><span class="sxs-lookup"><span data-stu-id="dea1a-109">The resulting node set always contains a single node and is the root node of the tree.</span></span>  
+ <span data-ttu-id="17169-108">`msxsl:node-set` 函数使你能够将结果树片段转换成节点集。</span><span class="sxs-lookup"><span data-stu-id="17169-108">The `msxsl:node-set` function enables you to convert a result tree fragment into a node set.</span></span> <span data-ttu-id="17169-109">生成的节点集总是包含单个节点并且是树的根节点。</span><span class="sxs-lookup"><span data-stu-id="17169-109">The resulting node set always contains a single node and is the root node of the tree.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dea1a-110">示例</span><span class="sxs-lookup"><span data-stu-id="dea1a-110">Example</span></span>  
- <span data-ttu-id="dea1a-111">在下面的示例中，`$var` 是一个变量，是样式表中的一个节点树。</span><span class="sxs-lookup"><span data-stu-id="dea1a-111">In the following example, `$var` is a variable that is a node tree in the style sheet.</span></span> <span data-ttu-id="dea1a-112">for-each 语句与 `node-set` 函数组合使用，允许用户将此节点树作为节点集循环访问。</span><span class="sxs-lookup"><span data-stu-id="dea1a-112">The for-each statement combined with the `node-set` function allows the user to iterate over this node tree as a node set.</span></span>  
+## <a name="example"></a><span data-ttu-id="17169-110">示例</span><span class="sxs-lookup"><span data-stu-id="17169-110">Example</span></span>  
+ <span data-ttu-id="17169-111">在下面的示例中，`$var` 是一个变量，是样式表中的一个节点树。</span><span class="sxs-lookup"><span data-stu-id="17169-111">In the following example, `$var` is a variable that is a node tree in the style sheet.</span></span> <span data-ttu-id="17169-112">for-each 语句与 `node-set` 函数组合使用，允许用户将此节点树作为节点集循环访问。</span><span class="sxs-lookup"><span data-stu-id="17169-112">The for-each statement combined with the `node-set` function allows the user to iterate over this node tree as a node set.</span></span>  
   
-## <a name="nodesetxsl"></a><span data-ttu-id="dea1a-113">nodeset.xsl</span><span class="sxs-lookup"><span data-stu-id="dea1a-113">nodeset.xsl</span></span>  
+## <a name="nodesetxsl"></a><span data-ttu-id="17169-113">nodeset.xsl</span><span class="sxs-lookup"><span data-stu-id="17169-113">nodeset.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -35,7 +35,7 @@ ms.locfileid: "75710123"
   
     <xsl:template match="/">  
         <authors>  
-            <xsl:for-each select="msxsl:node-set($books)/book">   
+            <xsl:for-each select="msxsl:node-set($books)/book">
                 <author><xsl:value-of select="@author"/></author>  
             </xsl:for-each>  
         </authors>  
@@ -43,14 +43,14 @@ ms.locfileid: "75710123"
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a><span data-ttu-id="dea1a-114">Output</span><span class="sxs-lookup"><span data-stu-id="dea1a-114">Output</span></span>  
- <span data-ttu-id="dea1a-115">转换的输出为</span><span class="sxs-lookup"><span data-stu-id="dea1a-115">The output of the transformation is</span></span>  
+## <a name="output"></a><span data-ttu-id="17169-114">Output</span><span class="sxs-lookup"><span data-stu-id="17169-114">Output</span></span>  
+ <span data-ttu-id="17169-115">转换的输出为</span><span class="sxs-lookup"><span data-stu-id="17169-115">The output of the transformation is</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <authors><author>Michael Howard</author><author>Michael Kay</author></authors>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="dea1a-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="dea1a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="17169-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="17169-116">See also</span></span>
 
-- [<span data-ttu-id="dea1a-117">XslTransform 类实现 XSLT 处理器</span><span class="sxs-lookup"><span data-stu-id="dea1a-117">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [<span data-ttu-id="17169-117">XslTransform 类实现 XSLT 处理器</span><span class="sxs-lookup"><span data-stu-id="17169-117">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

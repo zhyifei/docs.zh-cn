@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-ms.openlocfilehash: 12cb3a1fb3311450b8597ef13f1f2efa4adeaf7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af19981fd7cfeda3e8e985fa991fd7fdf2476b42
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922507"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159918"
 ---
-# <a name="how-to-control-serialization-of-derived-classes"></a><span data-ttu-id="1d67b-102">如何：控制派生类的序列化</span><span class="sxs-lookup"><span data-stu-id="1d67b-102">How to: Control Serialization of Derived Classes</span></span>
-<span data-ttu-id="1d67b-103">使用 XmlElementAttribute 属性更改 XML 元素的名称不是自定义对象序列化的唯一方法。</span><span class="sxs-lookup"><span data-stu-id="1d67b-103">Using the **XmlElementAttribute** attribute to change the name of an XML element is not the only way to customize object serialization.</span></span> <span data-ttu-id="1d67b-104">您还可以自定义 XML 流，具体方法为从现有类派生以及指示 <xref:System.Xml.Serialization.XmlSerializer> 实例如何序列化新类。</span><span class="sxs-lookup"><span data-stu-id="1d67b-104">You can also customize the XML stream by deriving from an existing class and instructing the <xref:System.Xml.Serialization.XmlSerializer> instance how to serialize the new class.</span></span>  
+# <a name="how-to-control-serialization-of-derived-classes"></a><span data-ttu-id="6fc99-102">如何：控制派生类的序列化</span><span class="sxs-lookup"><span data-stu-id="6fc99-102">How to: Control Serialization of Derived Classes</span></span>
+<span data-ttu-id="6fc99-103">使用 XmlElementAttribute 属性更改 XML 元素的名称不是自定义对象序列化的唯一方法。</span><span class="sxs-lookup"><span data-stu-id="6fc99-103">Using the **XmlElementAttribute** attribute to change the name of an XML element is not the only way to customize object serialization.</span></span> <span data-ttu-id="6fc99-104">您还可以自定义 XML 流，具体方法为从现有类派生以及指示 <xref:System.Xml.Serialization.XmlSerializer> 实例如何序列化新类。</span><span class="sxs-lookup"><span data-stu-id="6fc99-104">You can also customize the XML stream by deriving from an existing class and instructing the <xref:System.Xml.Serialization.XmlSerializer> instance how to serialize the new class.</span></span>  
   
- <span data-ttu-id="1d67b-105">例如，假设有一个 `Book` 类，您可以从该类派生，并创建一个具有多个属性的 `ExpandedBook` 类。</span><span class="sxs-lookup"><span data-stu-id="1d67b-105">For example, given a `Book` class, you can derive from it and create an `ExpandedBook` class that has a few more properties.</span></span> <span data-ttu-id="1d67b-106">然而，序列化或反序列化时，必须指导 XmlSerializer 接受派生类型。</span><span class="sxs-lookup"><span data-stu-id="1d67b-106">However, you must instruct the **XmlSerializer** to accept the derived type when serializing or deserializing.</span></span> <span data-ttu-id="1d67b-107">可以通过创建一个 <xref:System.Xml.Serialization.XmlElementAttribute> 实例并将其 Type 属性设置为派生类类型来完成此操作。</span><span class="sxs-lookup"><span data-stu-id="1d67b-107">This can be done by creating a <xref:System.Xml.Serialization.XmlElementAttribute> instance and setting its **Type** property to the derived class type.</span></span> <span data-ttu-id="1d67b-108">将 XmlElementAttribute 添加到 <xref:System.Xml.Serialization.XmlAttributes> 实例。</span><span class="sxs-lookup"><span data-stu-id="1d67b-108">Add the **XmlElementAttribute** to a <xref:System.Xml.Serialization.XmlAttributes> instance.</span></span> <span data-ttu-id="1d67b-109">再将 XmlAttributes 添加到 <xref:System.Xml.Serialization.XmlAttributeOverrides> 实例，指定被重写的类型和接受派生类型的成员名。</span><span class="sxs-lookup"><span data-stu-id="1d67b-109">Then add the **XmlAttributes** to a <xref:System.Xml.Serialization.XmlAttributeOverrides> instance, specifying the type being overridden and the name of the member that accepts the derived class.</span></span> <span data-ttu-id="1d67b-110">这在下面的示例中显示。</span><span class="sxs-lookup"><span data-stu-id="1d67b-110">This is shown in the following example.</span></span>  
+ <span data-ttu-id="6fc99-105">例如，假设有一个 `Book` 类，您可以从该类派生，并创建一个具有多个属性的 `ExpandedBook` 类。</span><span class="sxs-lookup"><span data-stu-id="6fc99-105">For example, given a `Book` class, you can derive from it and create an `ExpandedBook` class that has a few more properties.</span></span> <span data-ttu-id="6fc99-106">然而，序列化或反序列化时，必须指导 XmlSerializer 接受派生类型。</span><span class="sxs-lookup"><span data-stu-id="6fc99-106">However, you must instruct the **XmlSerializer** to accept the derived type when serializing or deserializing.</span></span> <span data-ttu-id="6fc99-107">可以通过创建一个 <xref:System.Xml.Serialization.XmlElementAttribute> 实例并将其 Type 属性设置为派生类类型来完成此操作。</span><span class="sxs-lookup"><span data-stu-id="6fc99-107">This can be done by creating a <xref:System.Xml.Serialization.XmlElementAttribute> instance and setting its **Type** property to the derived class type.</span></span> <span data-ttu-id="6fc99-108">将 XmlElementAttribute 添加到  **实例**<xref:System.Xml.Serialization.XmlAttributes>。</span><span class="sxs-lookup"><span data-stu-id="6fc99-108">Add the **XmlElementAttribute** to a <xref:System.Xml.Serialization.XmlAttributes> instance.</span></span> <span data-ttu-id="6fc99-109">再将 XmlAttributes 添加到  **实例，指定被重写的类型和接受派生类型的成员名**<xref:System.Xml.Serialization.XmlAttributeOverrides>。</span><span class="sxs-lookup"><span data-stu-id="6fc99-109">Then add the **XmlAttributes** to a <xref:System.Xml.Serialization.XmlAttributeOverrides> instance, specifying the type being overridden and the name of the member that accepts the derived class.</span></span> <span data-ttu-id="6fc99-110">这在下面的示例中显示。</span><span class="sxs-lookup"><span data-stu-id="6fc99-110">This is shown in the following example.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1d67b-111">示例</span><span class="sxs-lookup"><span data-stu-id="1d67b-111">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="6fc99-111">示例</span><span class="sxs-lookup"><span data-stu-id="6fc99-111">Example</span></span>  
   
 ```vb  
 Public Class Orders  
     public Books() As Book  
-End Class     
+End Class
   
 Public Class Book  
-    public ISBN As String   
+    public ISBN As String
 End Class  
   
 Public Class ExpandedBook  
@@ -41,11 +41,11 @@ Public Class Run
     End Sub  
   
     Public Sub SerializeObject(filename As String)  
-        ' Each overridden field, property, or type requires   
-        ' an XmlAttributes instance.   
+        ' Each overridden field, property, or type requires
+        ' an XmlAttributes instance.
         Dim attrs As XmlAttributes = New XmlAttributes()  
   
-        ' Creates an XmlElementAttribute instance to override the   
+        ' Creates an XmlElementAttribute instance to override the
         ' field that returns Book objects. The overridden field  
         ' returns Expanded objects instead.  
         Dim attr As XmlElementAttribute = _  
@@ -60,9 +60,9 @@ Public Class Run
         Dim attrOverrides As XmlAttributeOverrides = _  
         New XmlAttributeOverrides()  
   
-        ' Adds the type of the class that contains the overridden   
-        ' member, as well as the XmlAttributes instance to override it   
-        ' with, to the XmlAttributeOverrides instance.   
+        ' Adds the type of the class that contains the overridden
+        ' member, as well as the XmlAttributes instance to override it
+        ' with, to the XmlAttributeOverrides instance.
         attrOverrides.Add(GetType(Orders), "Books", attrs)  
   
         ' Creates the XmlSerializer using the XmlAttributeOverrides.  
@@ -91,9 +91,9 @@ Public Class Run
         New XmlAttributeOverrides()  
         Dim attrs As XmlAttributes = New XmlAttributes()  
   
-        ' Creates an XmlElementAttribute to override the   
+        ' Creates an XmlElementAttribute to override the
         ' field that returns Book objects. The overridden field  
-        ' returns Expanded objects instead.   
+        ' returns Expanded objects instead.
         Dim attr As XmlElementAttribute = _  
         New XmlElementAttribute()  
         attr.ElementName = "NewBook"  
@@ -112,11 +112,11 @@ Public Class Run
         Dim myOrders As Orders = CType( s.Deserialize(fs), Orders)  
         Console.WriteLine("ExpandedBook:")  
   
-        ' The difference between deserializing the overridden   
-        ' XML document and serializing it is this: To read the derived   
-        ' object values, you must declare an object of the derived type   
-        ' and cast the returned object to it.   
-        Dim expanded As ExpandedBook   
+        ' The difference between deserializing the overridden
+        ' XML document and serializing it is this: To read the derived
+        ' object values, you must declare an object of the derived type
+        ' and cast the returned object to it.
+        Dim expanded As ExpandedBook
         Dim b As Book  
         for each b  in myOrders.Books  
             expanded = CType(b, ExpandedBook)  
@@ -131,7 +131,7 @@ End Class
 public class Orders  
 {  
     public Book[] Books;  
-}      
+}
   
 public class Book  
 {  
@@ -147,11 +147,11 @@ public class Run
 {  
     public void SerializeObject(string filename)  
     {  
-        // Each overridden field, property, or type requires   
+        // Each overridden field, property, or type requires
         // an XmlAttributes instance.  
         XmlAttributes attrs = new XmlAttributes();  
   
-        // Creates an XmlElementAttribute instance to override the   
+        // Creates an XmlElementAttribute instance to override the
         // field that returns Book objects. The overridden field  
         // returns Expanded objects instead.  
         XmlElementAttribute attr = new XmlElementAttribute();  
@@ -164,13 +164,13 @@ public class Run
         // Creates the XmlAttributeOverrides instance.  
         XmlAttributeOverrides attrOverrides = new XmlAttributeOverrides();  
   
-        // Adds the type of the class that contains the overridden   
-        // member, as well as the XmlAttributes instance to override it   
+        // Adds the type of the class that contains the overridden
+        // member, as well as the XmlAttributes instance to override it
         // with, to the XmlAttributeOverrides.  
         attrOverrides.Add(typeof(Orders), "Books", attrs);  
   
         // Creates the XmlSerializer using the XmlAttributeOverrides.  
-        XmlSerializer s =   
+        XmlSerializer s =
         new XmlSerializer(typeof(Orders), attrOverrides);  
   
         // Writing the file requires a TextWriter instance.  
@@ -192,11 +192,11 @@ public class Run
   
     public void DeserializeObject(string filename)  
     {  
-        XmlAttributeOverrides attrOverrides =   
+        XmlAttributeOverrides attrOverrides =
             new XmlAttributeOverrides();  
         XmlAttributes attrs = new XmlAttributes();  
   
-        // Creates an XmlElementAttribute to override the   
+        // Creates an XmlElementAttribute to override the
         // field that returns Book objects. The overridden field  
         // returns Expanded objects instead.  
         XmlElementAttribute attr = new XmlElementAttribute();  
@@ -209,35 +209,35 @@ public class Run
         attrOverrides.Add(typeof(Orders), "Books", attrs);  
   
         // Creates the XmlSerializer using the XmlAttributeOverrides.  
-        XmlSerializer s =   
+        XmlSerializer s =
         new XmlSerializer(typeof(Orders), attrOverrides);  
   
         FileStream fs = new FileStream(filename, FileMode.Open);  
         Orders myOrders = (Orders) s.Deserialize(fs);  
         Console.WriteLine("ExpandedBook:");  
   
-        // The difference between deserializing the overridden   
-        // XML document and serializing it is this: To read the derived   
-        // object values, you must declare an object of the derived type   
+        // The difference between deserializing the overridden
+        // XML document and serializing it is this: To read the derived
+        // object values, you must declare an object of the derived type
         // and cast the returned object to it.  
         ExpandedBook expanded;  
-        foreach(Book b in myOrders.Books)   
+        foreach(Book b in myOrders.Books)
         {  
             expanded = (ExpandedBook)b;  
             Console.WriteLine(  
-            expanded.ISBN + "\n" +   
+            expanded.ISBN + "\n" +
             expanded.NewEdition);  
         }  
     }  
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1d67b-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="1d67b-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6fc99-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6fc99-112">See also</span></span>
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - <xref:System.Xml.Serialization.XmlElementAttribute>
 - <xref:System.Xml.Serialization.XmlAttributes>
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
-- [<span data-ttu-id="1d67b-113">XML 和 SOAP 序列化</span><span class="sxs-lookup"><span data-stu-id="1d67b-113">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [<span data-ttu-id="1d67b-114">如何：将对象序列化</span><span class="sxs-lookup"><span data-stu-id="1d67b-114">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [<span data-ttu-id="1d67b-115">如何：指定 XML Stream 的替代元素名称</span><span class="sxs-lookup"><span data-stu-id="1d67b-115">How to: Specify an Alternate Element Name for an XML Stream</span></span>](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [<span data-ttu-id="6fc99-113">XML 和 SOAP 序列化</span><span class="sxs-lookup"><span data-stu-id="6fc99-113">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [<span data-ttu-id="6fc99-114">如何：序列化对象</span><span class="sxs-lookup"><span data-stu-id="6fc99-114">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [<span data-ttu-id="6fc99-115">如何：指定 XML 流的替代元素名称</span><span class="sxs-lookup"><span data-stu-id="6fc99-115">How to: Specify an Alternate Element Name for an XML Stream</span></span>](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)

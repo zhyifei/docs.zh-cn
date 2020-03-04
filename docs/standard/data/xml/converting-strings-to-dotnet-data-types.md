@@ -6,34 +6,34 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: ac7e1b68f3f43a0c84c7330666825207e5b90004
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e54990785cafd6061c6d53c13af6476a4b46e20e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711046"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160347"
 ---
-# <a name="converting-strings-to-net-framework-data-types"></a><span data-ttu-id="91af9-102">将字符串转换为 .NET Framework 数据类型</span><span class="sxs-lookup"><span data-stu-id="91af9-102">Converting Strings to .NET Framework Data Types</span></span>
-<span data-ttu-id="91af9-103">若要将字符串转换为 .NET Framework 数据类型，请使用满足应用要求的 XmlConvert 方法。</span><span class="sxs-lookup"><span data-stu-id="91af9-103">If you want to convert a string to a .NET Framework data type, use the **XmlConvert** method that fits the application requirements.</span></span> <span data-ttu-id="91af9-104">有关 XmlConvert 类提供的所有转换方法的列表，请参阅 <xref:System.Xml.XmlConvert>。</span><span class="sxs-lookup"><span data-stu-id="91af9-104">For a list of all conversion methods available in the **XmlConvert** class, see <xref:System.Xml.XmlConvert>.</span></span>  
+# <a name="converting-strings-to-net-framework-data-types"></a><span data-ttu-id="7d807-102">将字符串转换为 .NET Framework 数据类型</span><span class="sxs-lookup"><span data-stu-id="7d807-102">Converting Strings to .NET Framework Data Types</span></span>
+<span data-ttu-id="7d807-103">若要将字符串转换为 .NET Framework 数据类型，请使用满足应用要求的 XmlConvert 方法。</span><span class="sxs-lookup"><span data-stu-id="7d807-103">If you want to convert a string to a .NET Framework data type, use the **XmlConvert** method that fits the application requirements.</span></span> <span data-ttu-id="7d807-104">有关 XmlConvert 类提供的所有转换方法的列表，请参阅 <xref:System.Xml.XmlConvert>。</span><span class="sxs-lookup"><span data-stu-id="7d807-104">For a list of all conversion methods available in the **XmlConvert** class, see <xref:System.Xml.XmlConvert>.</span></span>  
   
- <span data-ttu-id="91af9-105">从 ToString 方法返回的字符串是传入数据的字符串版本。</span><span class="sxs-lookup"><span data-stu-id="91af9-105">The string returned from the **ToString** method is a string version of the data that is passed in.</span></span> <span data-ttu-id="91af9-106">此外，还有若干 .NET Framework 类型仍使用 XmlConvert 类进行转换，但它们不使用 System.Convert 类中的方法。</span><span class="sxs-lookup"><span data-stu-id="91af9-106">Additionally, there are several .NET Framework types that convert using the **XmlConvert** class yet they do not use the methods in the **System.Convert** class.</span></span> <span data-ttu-id="91af9-107">XmlConvert 类遵循 XML 架构 (XSD) 数据类型规范，并有 XMLConvert 可以映射到的数据类型。</span><span class="sxs-lookup"><span data-stu-id="91af9-107">The **XmlConvert** class follows the XML Schema (XSD) data type specification and has a data type that the **XmlConvert** can map to.</span></span>  
+ <span data-ttu-id="7d807-105">从 ToString 方法返回的字符串是传入数据的字符串版本。</span><span class="sxs-lookup"><span data-stu-id="7d807-105">The string returned from the **ToString** method is a string version of the data that is passed in.</span></span> <span data-ttu-id="7d807-106">此外，还有若干 .NET Framework 类型仍使用 XmlConvert 类进行转换，但它们不使用 System.Convert 类中的方法。</span><span class="sxs-lookup"><span data-stu-id="7d807-106">Additionally, there are several .NET Framework types that convert using the **XmlConvert** class yet they do not use the methods in the **System.Convert** class.</span></span> <span data-ttu-id="7d807-107">XmlConvert 类遵循 XML 架构 (XSD) 数据类型规范，并有 XMLConvert 可以映射到的数据类型。</span><span class="sxs-lookup"><span data-stu-id="7d807-107">The **XmlConvert** class follows the XML Schema (XSD) data type specification and has a data type that the **XmlConvert** can map to.</span></span>  
   
- <span data-ttu-id="91af9-108">下表列出了 .NET Framework 数据类型和使用 XML 架构 (XSD) 数据类型映射返回的字符串类型。</span><span class="sxs-lookup"><span data-stu-id="91af9-108">The following table lists .NET Framework data types and the string types that are returned using XML Schema (XSD) data type mapping.</span></span> <span data-ttu-id="91af9-109">不能使用 System.Convert 处理这些 .NET Framework 类型。</span><span class="sxs-lookup"><span data-stu-id="91af9-109">These .NET Framework types cannot be processed using **System.Convert**.</span></span>  
+ <span data-ttu-id="7d807-108">下表列出了 .NET Framework 数据类型和使用 XML 架构 (XSD) 数据类型映射返回的字符串类型。</span><span class="sxs-lookup"><span data-stu-id="7d807-108">The following table lists .NET Framework data types and the string types that are returned using XML Schema (XSD) data type mapping.</span></span> <span data-ttu-id="7d807-109">不能使用 System.Convert 处理这些 .NET Framework 类型。</span><span class="sxs-lookup"><span data-stu-id="7d807-109">These .NET Framework types cannot be processed using **System.Convert**.</span></span>  
   
-|<span data-ttu-id="91af9-110">.NET Framework 类型</span><span class="sxs-lookup"><span data-stu-id="91af9-110">.NET Framework type</span></span>|<span data-ttu-id="91af9-111">返回的字符串</span><span class="sxs-lookup"><span data-stu-id="91af9-111">String returned</span></span>|  
+|<span data-ttu-id="7d807-110">.NET Framework 类型</span><span class="sxs-lookup"><span data-stu-id="7d807-110">.NET Framework type</span></span>|<span data-ttu-id="7d807-111">返回的字符串</span><span class="sxs-lookup"><span data-stu-id="7d807-111">String returned</span></span>|  
 |-------------------------|---------------------|  
-|<span data-ttu-id="91af9-112">Boolean</span><span class="sxs-lookup"><span data-stu-id="91af9-112">Boolean</span></span>|<span data-ttu-id="91af9-113">“true”、“false”</span><span class="sxs-lookup"><span data-stu-id="91af9-113">"true", "false"</span></span>|  
-|<span data-ttu-id="91af9-114">Single.PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="91af9-114">Single.PositiveInfinity</span></span>|<span data-ttu-id="91af9-115">“INF”</span><span class="sxs-lookup"><span data-stu-id="91af9-115">"INF"</span></span>|  
-|<span data-ttu-id="91af9-116">Single.NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="91af9-116">Single.NegativeInfinity</span></span>|<span data-ttu-id="91af9-117">“-INF”</span><span class="sxs-lookup"><span data-stu-id="91af9-117">"-INF"</span></span>|  
-|<span data-ttu-id="91af9-118">Double.PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="91af9-118">Double.PositiveInfinity</span></span>|<span data-ttu-id="91af9-119">“INF”</span><span class="sxs-lookup"><span data-stu-id="91af9-119">"INF"</span></span>|  
-|<span data-ttu-id="91af9-120">Double.NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="91af9-120">Double.NegativeInfinity</span></span>|<span data-ttu-id="91af9-121">“-INF”</span><span class="sxs-lookup"><span data-stu-id="91af9-121">"-INF"</span></span>|  
-|<span data-ttu-id="91af9-122">DateTime</span><span class="sxs-lookup"><span data-stu-id="91af9-122">DateTime</span></span>|<span data-ttu-id="91af9-123">格式为“yyyy-MM-ddTHH:mm:sszzzzzz”及其子集。</span><span class="sxs-lookup"><span data-stu-id="91af9-123">Format is "yyyy-MM-ddTHH:mm:sszzzzzz" and its subsets.</span></span>|  
-|<span data-ttu-id="91af9-124">Timespan</span><span class="sxs-lookup"><span data-stu-id="91af9-124">Timespan</span></span>|<span data-ttu-id="91af9-125">格式是 PnYnMnTnHnMnS，例如 `P2Y10M15DT10H30M20S` 表示长 2 年 10 个月 15 天 10 小时 30 分钟 20 秒的持续时间。</span><span class="sxs-lookup"><span data-stu-id="91af9-125">Format is PnYnMnTnHnMnS that is, `P2Y10M15DT10H30M20S` is a duration of 2 years, 10 months, 15 days, 10 hours, 30 minutes, and 20 seconds.</span></span>|  
+|<span data-ttu-id="7d807-112">Boolean</span><span class="sxs-lookup"><span data-stu-id="7d807-112">Boolean</span></span>|<span data-ttu-id="7d807-113">“true”、“false”</span><span class="sxs-lookup"><span data-stu-id="7d807-113">"true", "false"</span></span>|  
+|<span data-ttu-id="7d807-114">Single.PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="7d807-114">Single.PositiveInfinity</span></span>|<span data-ttu-id="7d807-115">“INF”</span><span class="sxs-lookup"><span data-stu-id="7d807-115">"INF"</span></span>|  
+|<span data-ttu-id="7d807-116">Single.NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="7d807-116">Single.NegativeInfinity</span></span>|<span data-ttu-id="7d807-117">“-INF”</span><span class="sxs-lookup"><span data-stu-id="7d807-117">"-INF"</span></span>|  
+|<span data-ttu-id="7d807-118">Double.PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="7d807-118">Double.PositiveInfinity</span></span>|<span data-ttu-id="7d807-119">“INF”</span><span class="sxs-lookup"><span data-stu-id="7d807-119">"INF"</span></span>|  
+|<span data-ttu-id="7d807-120">Double.NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="7d807-120">Double.NegativeInfinity</span></span>|<span data-ttu-id="7d807-121">“-INF”</span><span class="sxs-lookup"><span data-stu-id="7d807-121">"-INF"</span></span>|  
+|<span data-ttu-id="7d807-122">DateTime</span><span class="sxs-lookup"><span data-stu-id="7d807-122">DateTime</span></span>|<span data-ttu-id="7d807-123">格式为“yyyy-MM-ddTHH:mm:sszzzzzz”及其子集。</span><span class="sxs-lookup"><span data-stu-id="7d807-123">Format is "yyyy-MM-ddTHH:mm:sszzzzzz" and its subsets.</span></span>|  
+|<span data-ttu-id="7d807-124">Timespan</span><span class="sxs-lookup"><span data-stu-id="7d807-124">Timespan</span></span>|<span data-ttu-id="7d807-125">格式是 PnYnMnTnHnMnS，例如 `P2Y10M15DT10H30M20S` 表示长 2 年 10 个月 15 天 10 小时 30 分钟 20 秒的持续时间。</span><span class="sxs-lookup"><span data-stu-id="7d807-125">Format is PnYnMnTnHnMnS that is, `P2Y10M15DT10H30M20S` is a duration of 2 years, 10 months, 15 days, 10 hours, 30 minutes, and 20 seconds.</span></span>|  
   
 > [!NOTE]
-> <span data-ttu-id="91af9-126">如果使用 ToString 方法将表中所列的任何 .NET Framework 类型转换为字符串，返回的字符串不是基类型，而是 XML 架构 (XSD) 字符串类型。</span><span class="sxs-lookup"><span data-stu-id="91af9-126">If converting any of the .NET Framework types listed in the table to a string using the **ToString** method, the returned string is not the base type, but the XML Schema (XSD) string type.</span></span>  
+> <span data-ttu-id="7d807-126">如果使用 ToString 方法将表中所列的任何 .NET Framework 类型转换为字符串，返回的字符串不是基类型，而是 XML 架构 (XSD) 字符串类型。</span><span class="sxs-lookup"><span data-stu-id="7d807-126">If converting any of the .NET Framework types listed in the table to a string using the **ToString** method, the returned string is not the base type, but the XML Schema (XSD) string type.</span></span>  
   
- <span data-ttu-id="91af9-127">DateTime 和 Timespan 值类型的区别在于，DateTime 表示时间上的某个时刻，而 TimeSpan 则表示时间间隔。</span><span class="sxs-lookup"><span data-stu-id="91af9-127">The **DateTime** and **Timespan** value type differs in that a **DateTime** represents an instant in time, whereas a **TimeSpan** represents a time interval.</span></span> <span data-ttu-id="91af9-128">XML 架构 (XSD) 数据类型规范中指定了 DateTime 和 Timespan 格式。</span><span class="sxs-lookup"><span data-stu-id="91af9-128">The **DateTime** and **Timespan** formats are specified in the XML Schema (XSD) data types specification.</span></span> <span data-ttu-id="91af9-129">例如：</span><span class="sxs-lookup"><span data-stu-id="91af9-129">For example:</span></span>  
+ <span data-ttu-id="7d807-127">DateTime 和 Timespan 值类型的区别在于，DateTime 表示时间上的某个时刻，而 TimeSpan 则表示时间间隔。</span><span class="sxs-lookup"><span data-stu-id="7d807-127">The **DateTime** and **Timespan** value type differs in that a **DateTime** represents an instant in time, whereas a **TimeSpan** represents a time interval.</span></span> <span data-ttu-id="7d807-128">XML 架构 (XSD) 数据类型规范中指定了 DateTime 和 Timespan 格式。</span><span class="sxs-lookup"><span data-stu-id="7d807-128">The **DateTime** and **Timespan** formats are specified in the XML Schema (XSD) data types specification.</span></span> <span data-ttu-id="7d807-129">例如：</span><span class="sxs-lookup"><span data-stu-id="7d807-129">For example:</span></span>  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -47,11 +47,11 @@ DateTime date = new DateTime (2001, 08, 04);
 writer.WriteElementString("Date", XmlConvert.ToString(date));  
 ```  
   
- <span data-ttu-id="91af9-130">**输出**</span><span class="sxs-lookup"><span data-stu-id="91af9-130">**Output**</span></span>  
+ <span data-ttu-id="7d807-130">**输出**</span><span class="sxs-lookup"><span data-stu-id="7d807-130">**Output**</span></span>  
   
- <span data-ttu-id="91af9-131">`<Date>2001-08-04T00:00:00</Date>`。</span><span class="sxs-lookup"><span data-stu-id="91af9-131">`<Date>2001-08-04T00:00:00</Date>`.</span></span>  
+ <span data-ttu-id="7d807-131">`<Date>2001-08-04T00:00:00</Date>`。</span><span class="sxs-lookup"><span data-stu-id="7d807-131">`<Date>2001-08-04T00:00:00</Date>`.</span></span>  
   
- <span data-ttu-id="91af9-132">下面的代码将整数转换为字符串：</span><span class="sxs-lookup"><span data-stu-id="91af9-132">The following code converts an integer to a string:</span></span>  
+ <span data-ttu-id="7d807-132">下面的代码将整数转换为字符串：</span><span class="sxs-lookup"><span data-stu-id="7d807-132">The following code converts an integer to a string:</span></span>  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -65,32 +65,32 @@ Int32 value = 200;
 writer.WriteElementString("Number", XmlConvert.ToString(value));  
 ```  
   
- <span data-ttu-id="91af9-133">**输出**</span><span class="sxs-lookup"><span data-stu-id="91af9-133">**Output**</span></span>  
+ <span data-ttu-id="7d807-133">**输出**</span><span class="sxs-lookup"><span data-stu-id="7d807-133">**Output**</span></span>  
   
  `<Number>200</Number>`  
   
- <span data-ttu-id="91af9-134">不过，如果将字符串转换为 Boolean、Single 或 Double，返回的 .NET Framework 类型与使用 System.Convert 类返回的类型不同。</span><span class="sxs-lookup"><span data-stu-id="91af9-134">However, if you are converting a string to **Boolean**, **Single**, or **Double**, the .NET Framework type that is returned is not the same as the type returned when using the **System.Convert** class.</span></span>  
+ <span data-ttu-id="7d807-134">不过，如果将字符串转换为 Boolean、Single 或 Double，返回的 .NET Framework 类型与使用 System.Convert 类返回的类型不同。</span><span class="sxs-lookup"><span data-stu-id="7d807-134">However, if you are converting a string to **Boolean**, **Single**, or **Double**, the .NET Framework type that is returned is not the same as the type returned when using the **System.Convert** class.</span></span>  
   
-## <a name="string-to-boolean"></a><span data-ttu-id="91af9-135">将字符串转换为 Boolean</span><span class="sxs-lookup"><span data-stu-id="91af9-135">String to Boolean</span></span>  
- <span data-ttu-id="91af9-136">下表列出了使用 ToBoolean 方法将字符串转换为 Boolean 时，针对给定输入字符串生成的类型。</span><span class="sxs-lookup"><span data-stu-id="91af9-136">The following table shows what type is generated for the given input strings, when converting a string to **Boolean** using the **ToBoolean** method.</span></span>  
+## <a name="string-to-boolean"></a><span data-ttu-id="7d807-135">将字符串转换为 Boolean</span><span class="sxs-lookup"><span data-stu-id="7d807-135">String to Boolean</span></span>  
+ <span data-ttu-id="7d807-136">下表列出了使用 ToBoolean 方法将字符串转换为 Boolean 时，针对给定输入字符串生成的类型。</span><span class="sxs-lookup"><span data-stu-id="7d807-136">The following table shows what type is generated for the given input strings, when converting a string to **Boolean** using the **ToBoolean** method.</span></span>  
   
-|<span data-ttu-id="91af9-137">有效的字符串输入参数</span><span class="sxs-lookup"><span data-stu-id="91af9-137">Valid string input parameter</span></span>|<span data-ttu-id="91af9-138">.NET Framework 输出类型</span><span class="sxs-lookup"><span data-stu-id="91af9-138">.NET Framework output type</span></span>|  
+|<span data-ttu-id="7d807-137">有效的字符串输入参数</span><span class="sxs-lookup"><span data-stu-id="7d807-137">Valid string input parameter</span></span>|<span data-ttu-id="7d807-138">.NET Framework 输出类型</span><span class="sxs-lookup"><span data-stu-id="7d807-138">.NET Framework output type</span></span>|  
 |----------------------------------|--------------------------------|  
-|<span data-ttu-id="91af9-139">“true”</span><span class="sxs-lookup"><span data-stu-id="91af9-139">"true"</span></span>|<span data-ttu-id="91af9-140">Boolean.True</span><span class="sxs-lookup"><span data-stu-id="91af9-140">Boolean.True</span></span>|  
-|<span data-ttu-id="91af9-141">"1"</span><span class="sxs-lookup"><span data-stu-id="91af9-141">"1"</span></span>|<span data-ttu-id="91af9-142">Boolean.True</span><span class="sxs-lookup"><span data-stu-id="91af9-142">Boolean.True</span></span>|  
-|<span data-ttu-id="91af9-143">“false”</span><span class="sxs-lookup"><span data-stu-id="91af9-143">"false"</span></span>|<span data-ttu-id="91af9-144">Boolean.False</span><span class="sxs-lookup"><span data-stu-id="91af9-144">Boolean.False</span></span>|  
-|<span data-ttu-id="91af9-145">“0”</span><span class="sxs-lookup"><span data-stu-id="91af9-145">"0"</span></span>|<span data-ttu-id="91af9-146">Boolean.False</span><span class="sxs-lookup"><span data-stu-id="91af9-146">Boolean.False</span></span>|  
+|<span data-ttu-id="7d807-139">“true”</span><span class="sxs-lookup"><span data-stu-id="7d807-139">"true"</span></span>|<span data-ttu-id="7d807-140">Boolean.True</span><span class="sxs-lookup"><span data-stu-id="7d807-140">Boolean.True</span></span>|  
+|<span data-ttu-id="7d807-141">"1"</span><span class="sxs-lookup"><span data-stu-id="7d807-141">"1"</span></span>|<span data-ttu-id="7d807-142">Boolean.True</span><span class="sxs-lookup"><span data-stu-id="7d807-142">Boolean.True</span></span>|  
+|<span data-ttu-id="7d807-143">“false”</span><span class="sxs-lookup"><span data-stu-id="7d807-143">"false"</span></span>|<span data-ttu-id="7d807-144">Boolean.False</span><span class="sxs-lookup"><span data-stu-id="7d807-144">Boolean.False</span></span>|  
+|<span data-ttu-id="7d807-145">“0”</span><span class="sxs-lookup"><span data-stu-id="7d807-145">"0"</span></span>|<span data-ttu-id="7d807-146">Boolean.False</span><span class="sxs-lookup"><span data-stu-id="7d807-146">Boolean.False</span></span>|  
   
- <span data-ttu-id="91af9-147">例如，给定以下 XML：</span><span class="sxs-lookup"><span data-stu-id="91af9-147">For example, given the following XML:</span></span>  
+ <span data-ttu-id="7d807-147">例如，给定以下 XML：</span><span class="sxs-lookup"><span data-stu-id="7d807-147">For example, given the following XML:</span></span>  
   
- <span data-ttu-id="91af9-148">**输入**</span><span class="sxs-lookup"><span data-stu-id="91af9-148">**Input**</span></span>  
+ <span data-ttu-id="7d807-148">**输入**</span><span class="sxs-lookup"><span data-stu-id="7d807-148">**Input**</span></span>  
   
 ```xml  
 <Boolean>true</Boolean>  
-<Boolean>1</Boolean>   
+<Boolean>1</Boolean>
 ```  
   
- <span data-ttu-id="91af9-149">两者均可通过下列代码理解，其中 bvalue 为 System.Boolean.True：</span><span class="sxs-lookup"><span data-stu-id="91af9-149">Both can be understood by the following code, and **bvalue** is **System.Boolean.True**:</span></span>  
+ <span data-ttu-id="7d807-149">两者均可通过下列代码理解，其中 bvalue 为 System.Boolean.True：</span><span class="sxs-lookup"><span data-stu-id="7d807-149">Both can be understood by the following code, and **bvalue** is **System.Boolean.True**:</span></span>  
   
 ```vb  
 Dim bvalue As Boolean = _  
@@ -103,23 +103,23 @@ Boolean bvalue = XmlConvert.ToBoolean(reader.ReadElementString());
 Console.WriteLine(bvalue);  
 ```  
   
-## <a name="string-to-single"></a><span data-ttu-id="91af9-150">将字符串转换为 Single</span><span class="sxs-lookup"><span data-stu-id="91af9-150">String to Single</span></span>  
- <span data-ttu-id="91af9-151">下表列出了使用 ToSingle 方法将字符串转换为 Single 时，针对给定输入字符串生成的类型。</span><span class="sxs-lookup"><span data-stu-id="91af9-151">The following table shows what type is generated for the given input strings, when converting a string to a **Single** using the **ToSingle** method.</span></span>  
+## <a name="string-to-single"></a><span data-ttu-id="7d807-150">将字符串转换为 Single</span><span class="sxs-lookup"><span data-stu-id="7d807-150">String to Single</span></span>  
+ <span data-ttu-id="7d807-151">下表列出了使用 ToSingle 方法将字符串转换为 Single 时，针对给定输入字符串生成的类型。</span><span class="sxs-lookup"><span data-stu-id="7d807-151">The following table shows what type is generated for the given input strings, when converting a string to a **Single** using the **ToSingle** method.</span></span>  
   
-|<span data-ttu-id="91af9-152">有效的字符串输入参数</span><span class="sxs-lookup"><span data-stu-id="91af9-152">Valid string input parameter</span></span>|<span data-ttu-id="91af9-153">.NET Framework 输出类型</span><span class="sxs-lookup"><span data-stu-id="91af9-153">.NET Framework output type</span></span>|  
+|<span data-ttu-id="7d807-152">有效的字符串输入参数</span><span class="sxs-lookup"><span data-stu-id="7d807-152">Valid string input parameter</span></span>|<span data-ttu-id="7d807-153">.NET Framework 输出类型</span><span class="sxs-lookup"><span data-stu-id="7d807-153">.NET Framework output type</span></span>|  
 |----------------------------------|--------------------------------|  
-|<span data-ttu-id="91af9-154">“INF”</span><span class="sxs-lookup"><span data-stu-id="91af9-154">"INF"</span></span>|<span data-ttu-id="91af9-155">Single.PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="91af9-155">Single.PositiveInfinity</span></span>|  
-|<span data-ttu-id="91af9-156">“-INF”</span><span class="sxs-lookup"><span data-stu-id="91af9-156">"-INF"</span></span>|<span data-ttu-id="91af9-157">Single.NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="91af9-157">Single.NegativeInfinity</span></span>|  
+|<span data-ttu-id="7d807-154">“INF”</span><span class="sxs-lookup"><span data-stu-id="7d807-154">"INF"</span></span>|<span data-ttu-id="7d807-155">Single.PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="7d807-155">Single.PositiveInfinity</span></span>|  
+|<span data-ttu-id="7d807-156">“-INF”</span><span class="sxs-lookup"><span data-stu-id="7d807-156">"-INF"</span></span>|<span data-ttu-id="7d807-157">Single.NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="7d807-157">Single.NegativeInfinity</span></span>|  
   
-## <a name="string-to-double"></a><span data-ttu-id="91af9-158">将字符串转换为 Double</span><span class="sxs-lookup"><span data-stu-id="91af9-158">String to Double</span></span>  
- <span data-ttu-id="91af9-159">下表列出了使用 ToDouble 方法将字符串转换为 Single 时，针对给定输入字符串生成的类型。</span><span class="sxs-lookup"><span data-stu-id="91af9-159">The following table shows what type is generated for the given input strings, when converting a string to a **Single** using the **ToDouble** method.</span></span>  
+## <a name="string-to-double"></a><span data-ttu-id="7d807-158">将字符串转换为 Double</span><span class="sxs-lookup"><span data-stu-id="7d807-158">String to Double</span></span>  
+ <span data-ttu-id="7d807-159">下表列出了使用 ToDouble 方法将字符串转换为 Single 时，针对给定输入字符串生成的类型。</span><span class="sxs-lookup"><span data-stu-id="7d807-159">The following table shows what type is generated for the given input strings, when converting a string to a **Single** using the **ToDouble** method.</span></span>  
   
-|<span data-ttu-id="91af9-160">有效的字符串输入参数</span><span class="sxs-lookup"><span data-stu-id="91af9-160">Valid string input parameter</span></span>|<span data-ttu-id="91af9-161">.NET Framework 输出类型</span><span class="sxs-lookup"><span data-stu-id="91af9-161">.NET Framework output type</span></span>|  
+|<span data-ttu-id="7d807-160">有效的字符串输入参数</span><span class="sxs-lookup"><span data-stu-id="7d807-160">Valid string input parameter</span></span>|<span data-ttu-id="7d807-161">.NET Framework 输出类型</span><span class="sxs-lookup"><span data-stu-id="7d807-161">.NET Framework output type</span></span>|  
 |----------------------------------|--------------------------------|  
-|<span data-ttu-id="91af9-162">“INF”</span><span class="sxs-lookup"><span data-stu-id="91af9-162">"INF"</span></span>|<span data-ttu-id="91af9-163">Double.PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="91af9-163">Double.PositiveInfinity</span></span>|  
-|<span data-ttu-id="91af9-164">“-INF”</span><span class="sxs-lookup"><span data-stu-id="91af9-164">"-INF"</span></span>|<span data-ttu-id="91af9-165">Double.NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="91af9-165">Double.NegativeInfinity</span></span>|  
+|<span data-ttu-id="7d807-162">“INF”</span><span class="sxs-lookup"><span data-stu-id="7d807-162">"INF"</span></span>|<span data-ttu-id="7d807-163">Double.PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="7d807-163">Double.PositiveInfinity</span></span>|  
+|<span data-ttu-id="7d807-164">“-INF”</span><span class="sxs-lookup"><span data-stu-id="7d807-164">"-INF"</span></span>|<span data-ttu-id="7d807-165">Double.NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="7d807-165">Double.NegativeInfinity</span></span>|  
   
- <span data-ttu-id="91af9-166">下面的代码写出 `<Infinity>INF</Infinity>`：</span><span class="sxs-lookup"><span data-stu-id="91af9-166">The following code writes `<Infinity>INF</Infinity>`:</span></span>  
+ <span data-ttu-id="7d807-166">下面的代码写出 `<Infinity>INF</Infinity>`：</span><span class="sxs-lookup"><span data-stu-id="7d807-166">The following code writes `<Infinity>INF</Infinity>`:</span></span>  
   
 ```vb  
 Dim value As Double = Double.PositiveInfinity  
@@ -131,7 +131,7 @@ Double value = Double.PositiveInfinity;
 writer.WriteElementString("Infinity", XmlConvert.ToString(value));  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="91af9-167">另请参阅</span><span class="sxs-lookup"><span data-stu-id="91af9-167">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7d807-167">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7d807-167">See also</span></span>
 
-- [<span data-ttu-id="91af9-168">XML 数据类型转换</span><span class="sxs-lookup"><span data-stu-id="91af9-168">Conversion of XML Data Types</span></span>](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
-- [<span data-ttu-id="91af9-169">将 .NET Framework 类型转换为字符串</span><span class="sxs-lookup"><span data-stu-id="91af9-169">Converting .NET Framework Types to Strings</span></span>](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+- [<span data-ttu-id="7d807-168">XML 数据类型转换</span><span class="sxs-lookup"><span data-stu-id="7d807-168">Conversion of XML Data Types</span></span>](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
+- [<span data-ttu-id="7d807-169">将 .NET Framework 类型转换为字符串</span><span class="sxs-lookup"><span data-stu-id="7d807-169">Converting .NET Framework Types to Strings</span></span>](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
