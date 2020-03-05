@@ -145,7 +145,7 @@
       href: discards.md
     - name: 泛型
       href: programming-guide/generics/index.md
-    - name: Iterators
+    - name: 迭代器
       href: iterators.md
     - name: 委托和事件
       items:
