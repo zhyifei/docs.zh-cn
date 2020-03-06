@@ -3,18 +3,18 @@ title: .NET Core SDK 遥测
 description: 了解可收集使用情况信息以供分析的 .NET Core SDK 遥测功能、收集的数据，以及如何禁用遥测。
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 8bde344ee393e113502a0895ee55c241cbf24c57
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9d5d7ff09ade89712f2fbbe35224851bb1c28b4c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714100"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156681"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遥测
 
 [.NET Core SDK](index.md) 包含遥测功能，可在 .NET Core CLI 故障时收集使用情况数据和异常信息。 .NET Core CLI 附带 .NET Core SDK，是一组用于生成、测试和发布 .NET Core 应用的谓词。 请务必让 .NET 团队了解到工具使用情况，以便我们对其做出改进。 有关故障的信息可帮助团队解决问题并修复 bug。
 
-数据为匿名收集，并根据 [Creative Commons Attribution 许可证](https://creativecommons.org/licenses/by/4.0/)以汇总形式发布。 
+数据为匿名收集，并根据 [Creative Commons Attribution 许可证](https://creativecommons.org/licenses/by/4.0/)以汇总形式发布。
 
 ## <a name="scope"></a>范围
 
@@ -30,7 +30,7 @@ ms.locfileid: "75714100"
 
 ## <a name="how-to-opt-out"></a>如何选择退出
 
-.NET Core SDK 遥测功能默认处于启用状态。 要选择退出遥测功能，请将 `DOTNET_CLI_TELEMETRY_OPTOUT` 环境变量设置为 `1` 或 `true`。 
+.NET Core SDK 遥测功能默认处于启用状态。 要选择退出遥测功能，请将 `DOTNET_CLI_TELEMETRY_OPTOUT` 环境变量设置为 `1` 或 `true`。
 
 如果安装成功，.NET Core SDK 安装程序也会发送一个遥测条目。 要选择退出，请在安装 .NET Core SDK 之前设置 `DOTNET_CLI_TELEMETRY_OPTOUT` 环境变量。
 
@@ -128,11 +128,11 @@ at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryC
 at Microsoft.DotNet.Cli.Program.Main(String[] args)
 ```
 
-### <a name="avoid-inadvertent-disclosure-information"></a>避免意外泄露信息
+### <a name="avoid-inadvertent-disclosure-of-information"></a>避免意外泄露信息
 
 .NET Core 参与者以及运行自己生成的 .NET Core SDK 版本的任何其他人都应考虑其 SDK 源代码的路径。 如果在使用属于自定义调试生成或者使用自定义生成符号文件配置的 .NET Core SDK 时出现故障，则生成计算机的 SDK 源文件路径将作为堆栈跟踪的一部分收集，并且不会进行哈希处理。
 
-因此，.NET Core SDK 的自定义生成不应位于路径名公开个人或敏感信息的目录中。 
+因此，.NET Core SDK 的自定义生成不应位于路径名公开个人或敏感信息的目录中。
 
 ## <a name="see-also"></a>请参阅
 

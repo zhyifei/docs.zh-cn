@@ -1,18 +1,18 @@
 ---
 title: C# 接口 - C# 语言介绍
 description: 接口定义 C# 类型实现的协定
-ms.date: 08/10/2016
+ms.date: 02/27/2020
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.openlocfilehash: d10d9f69cebe9a05cdff9b9ff5d817237bf8c56f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 62d94462fa481379cf70d63a598deb7f36be204f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346830"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159125"
 ---
 # <a name="interfaces"></a>接口
 
-***接口***定义了可由类和结构实现的协定。 接口可以包含方法、属性、事件和索引器。 接口不提供所定义的成员的实现代码，仅指定必须由实现接口的类或结构提供的成员。
+***接口***定义了可由类和结构实现的协定。 接口可以包含方法、属性、事件和索引器。 接口不提供所定义成员的实现，仅指定必须由实现接口的类或结构提供的成员。
 
 接口可以采用***多重继承***。 在以下示例中，接口 `IComboBox` 同时继承自 `ITextBox` 和 `IListBox`。
 

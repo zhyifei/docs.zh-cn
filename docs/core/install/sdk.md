@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 0aa323533dd9136372c2bbc330c9c3056fdf428c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740564"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157566"
 ---
 # <a name="install-the-net-core-sdk"></a>安装 .NET Core SDK
 
@@ -35,6 +35,19 @@ Windows 具有独立的安装程序，可用于安装 .NET Core 3.1 SDK：
 macOS 具有独立的安装程序，可用于安装 .NET Core 3.1 SDK：
 
 - [x64（64 位）CPU](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+## <a name="download-and-manually-install"></a>下载并手动安装
+
+除了使用适用于 .NET Core 的 macOS 安装程序，还可以下载并手动安装 SDK。
+
+若要提取 SDK 并使 .NET Core CLI 命令可用于终端，请先[下载](#all-net-core-downloads) .NET Core 二进制版本。 然后，打开终端并运行以下命令。 假定将运行时下载到 `~/Downloads/dotnet-sdk.pkg` 文件中。
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-sdk.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
 
 ::: zone-end
 
@@ -61,9 +74,9 @@ export PATH=$PATH:$HOME/dotnet
 >
 > 你可以编辑 shell 配置文件，永久地添加这些命令。 Linux 提供了许多不同的 shell，每个都有不同的配置文件。 例如：
 >
-> - **Bash Shell**：~/.bash_profile、~/.bashrc
-> - **Korn Shell**：~/.kshrc 或 .profile
-> - **Z Shell**：~/.zshrc 或 .zprofile
+> - **Bash Shell**：~/.bash_profile  、~/.bashrc 
+> - **Korn Shell**：~/.kshrc  或 .profile 
+> - **Z Shell**：~/.zshrc  或 .zprofile 
 >
 > 为 shell 编辑相应的源文件，并将 `:$HOME/dotnet` 添加到现有 `PATH` 语句的末尾。 如果不包含 `PATH` 语句，则使用 `export PATH=$PATH:$HOME/dotnet` 添加新行。
 >
@@ -87,8 +100,8 @@ export PATH=$PATH:$HOME/dotnet
 如果你已安装 Visual Studio，则可以使用以下步骤检查你的版本。
 
 01. 打开 Visual Studio。
-01. 选择“帮助” > “Microsoft Visual Studio”。
-01. 从“关于”对话框中读取版本号。
+01. 选择“帮助”   > “Microsoft Visual Studio”  。
+01. 从“关于”  对话框中读取版本号。
 
 Visual Studio 可安装最新的 .NET Core SDK 和运行时。
 
@@ -98,12 +111,31 @@ Visual Studio 可安装最新的 .NET Core SDK 和运行时。
 
 安装或修改 Visual Studio 时，根据要生成的应用程序的类型，选择以下一个或多个工作负载：
 
-- “其他工具集”部分中的“.NET Core 跨平台开发”工作负荷。
-- “Web 和云”部分中的“ASP.NET 和 Web 开发”工作负荷。
-- “Web 和云”部分中的“Azure 开发”工作负载。
-- “桌面和移动”部分中的“NET 桌面开发”工作负载。
+- “其他工具集”部分中的“.NET Core 跨平台开发”工作负荷   。
+- “Web 和云”部分中的“ASP.NET 和 Web 开发”工作负荷   。
+- “Web 和云”部分中的“Azure 开发”工作负载   。
+- “桌面和移动”部分中的“NET 桌面开发”工作负载   。
 
 [![具有 .NET Core 工作负载的 Windows Visual Studio 2019](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)
+
+## <a name="download-and-manually-install"></a>下载并手动安装
+
+若要提取运行时并使 .NET Core CLI 命令可用于终端，请先[下载](#all-net-core-downloads) .NET Core 二进制版本。 然后，创建要安装到的目录，例如 `%USERPROFILE%\dotnet`。 最后，将下载的 zip 文件提取到该目录中。
+
+默认情况下，.NET Core CLI 命令和应用不会使用通过这种方式安装的 .NET Core。 必须明确选择使用它。 为此，请更改用于启动应用程序的环境变量：
+
+```console
+set DOTNET_ROOT=%USERPROFILE%\dotnet
+set PATH=%USERPROFILE%\dotnet;%PATH%
+```
+
+使用此方法可以将多个版本安装到不同的位置，然后通过使用指向安装位置的环境变量运行应用程序来明确选择应用程序应使用哪个安装位置。
+
+即使已设置这些环境变量，在选择用于运行应用程序的最佳框架时，.NET Core 仍会考虑默认的全局安装位置。 默认位置通常为安装程序使用的 `C:\Program Files\dotnet`。 还可以通过设置此环境变量来指示运行时仅使用自定义安装位置：
+
+```console
+set DOTNET_MULTILEVEL_LOOKUP=0
+```
 
 ::: zone-end
 
@@ -111,7 +143,7 @@ Visual Studio 可安装最新的 .NET Core SDK 和运行时。
 
 ## <a name="install-with-visual-studio-for-mac"></a>使用 Visual Studio for Mac 安装
 
-在选定“.NET Core”工作负载时，使用 Visual Studio for Mac 安装 .NET Core SDK。 若要开始在 macOS 上进行 .NET Core 开发，请参阅[安装 Visual Studio 2019 for Mac](/visualstudio/mac/installation)。 对于最新的版本 .NET Core 3.1，则必须使用 Visual Studio for Mac 8.4 预览版。
+在选定“.NET Core”  工作负载时，使用 Visual Studio for Mac 安装 .NET Core SDK。 若要开始在 macOS 上进行 .NET Core 开发，请参阅[安装 Visual Studio 2019 for Mac](/visualstudio/mac/installation)。 对于最新的版本 .NET Core 3.1，则必须使用 Visual Studio for Mac 8.4 预览版。
 
 [![具有 .NET Core 工作负载功能的 macOS Visual Studio 2019 for Mac](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)
 
@@ -186,6 +218,7 @@ Microsoft 提供适合特定场景的映像。 例如，[ASP.NET Core 存储库]
 
 ::: zone pivot="os-macos"
 
+- [处理 macOS Catalina 公证](macos-notarization-issues.md)。
 - [教程：开始使用 macOS](../tutorials/using-on-mac-vs.md)。
 - [教程：使用 Visual Studio Code 创建一个新应用](../tutorials/with-visual-studio-code.md)。
 - [教程：使 .NET Core 应用容器化](../docker/build-container.md)。

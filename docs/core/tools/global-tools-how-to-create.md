@@ -2,12 +2,12 @@
 title: 教程：创建 .NET Core 工具
 description: 了解如何创建 .NET Core 工具。 工具是一个通过使用 .NET Core CLI 安装的控制台应用程序。
 ms.date: 02/12/2020
-ms.openlocfilehash: 558bf9e37efc8de68a61f1384fababe342ab7d66
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 88cc3be7b149834ace0c5f3ba8ac8c039199908f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543399"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156720"
 ---
 # <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>教程：使用 .NET Core CLI 创建 .NET Core 工具
 
@@ -31,24 +31,18 @@ ms.locfileid: "77543399"
 
 1. 打开命令提示符，创建一个名为“repository”  的文件夹。
 
-1. 导航到“repository”  文件夹，然后输入以下命令，将 `<name>` 替换为唯一值，使项目名称唯一。 
+1. 导航到“repository”文件夹并输入以下命令  ：
 
    ```dotnetcli
-   dotnet new console -n botsay-<name>
+   dotnet new console -n microsoft.botsay
    ```
 
-   例如，你可以运行以下命令：
+   此命令将在“repository”文件夹下创建一个名为“microsoft.botsay”的新文件夹   。
 
-   ```dotnetcli
-   dotnet new console -n botsay-nancydavolio
-   ```
-
-   此命令将在“repository”  文件夹下创建一个名为“botsay-\<name>”  的新文件夹。
-
-1. 导航到“botsay-\<name>”  文件夹。
+1. 导航到“microsoft.botsay”文件夹  。
 
    ```console
-   cd botsay-<name>
+   cd microsoft.botsay
    ```
 
 ## <a name="add-the-code"></a>添加代码
@@ -151,9 +145,9 @@ dotnet run -- Hello from the bot
 
 ## <a name="package-the-tool"></a>打包工具
 
-在将应用程序作为工具打包并分发之前，你需要修改项目文件。 
+在将应用程序作为工具打包并分发之前，你需要修改项目文件。
 
-1. 打开“botsay-\<name>.csproj”  文件，然后将三个新的 XML 节点添加到 `<PropertyGroup>` 节点的末尾：
+1. 打开“microsoft.botsay.csproj”文件，然后将三个新的 XML 节点添加到 `<PropertyGroup>` 节点的末尾  ：
 
    ```xml
    <PackAsTool>true</PackAsTool>
@@ -190,7 +184,7 @@ dotnet run -- Hello from the bot
    dotnet pack
    ```
 
-   “botsay-\<name>.1.0.0.nupkg”  文件在由“botsay-\<name>.csproj”  文件的 `<PackageOutputPath>` 值标识的文件夹中创建，在本示例中为“./nupkg”  文件夹。
+   “microsoft.botsay.1.0.0.nupkg”文件在由 microsoft.botsay.csproj 文件的 `<PackageOutputPath>` 值标识的文件夹中创建，在本示例中为“./nupkg”文件夹    。
   
    如果想要公开发布一个工具，你可以将其上传到 `https://www.nuget.org`。 该工具在 NuGet 上可用后，开发人员就可以使用 [dotnet tool install](dotnet-tool-install.md) 命令安装该工具。 在本教程中，你将直接从本地“nupkg”  文件夹安装包，因此无需将包上传到 NuGet。
 

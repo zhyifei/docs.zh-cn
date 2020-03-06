@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 17d1d344b9a27ffd4995fa4849ee6d5ce7f90f29
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f4834f88c646b44269f8290c2ad08698c34e714a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789691"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627667"
 ---
 # <a name="see-c-programming-guide"></a>\<see>（C# 编程指南）
 
@@ -27,7 +27,7 @@ ms.locfileid: "76789691"
 
 ## <a name="parameters"></a>参数
 
-- cref = " `member`"
+- cref = "`member`"
 
   对可从当前编译环境调用的成员或字段的引用。 编译器检查是否存在给定的码位元素，并将 `member` 传递到输出 XML 中的元素名称。 将成员置于双引号 (" ") 内  。
 

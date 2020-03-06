@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: ba50eb222d9eab6bffbb8ebfdf0ecf47951ce719
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a41bbdf5419585f06773583dbe82ab0d84ebaa4c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543516"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157631"
 ---
 # <a name="install-the-net-core-runtime"></a>安装 .NET Core 运行时
 
@@ -35,6 +35,19 @@ Windows 具有独立的安装程序，可用于安装 .NET Core 3.1 运行时：
 macOS 具有独立的安装程序，可用于安装 .NET Core 3.1 运行时：
 
 - [x64（64 位）CPU](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+## <a name="download-and-manually-install"></a>下载并手动安装
+
+除了使用适用于 .NET Core 的 macOS 安装程序，还可以下载并手动安装运行时。
+
+若要安装运行时并使 .NET Core CLI 命令可用于终端，请先[下载](#all-net-core-downloads) .NET Core 二进制版本。 然后，打开终端并运行以下命令。 假定将运行时下载到 `~/Downloads/dotnet-runtime.pkg` 文件中。
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-runtime.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
 
 ::: zone-end
 
@@ -64,7 +77,7 @@ export PATH=$PATH:$HOME/dotnet
 > - **Bash Shell**：~/.bash_profile  、~/.bashrc 
 > - **Korn Shell**：~/.kshrc  或 .profile 
 > - **Z Shell**：~/.zshrc  或 .zprofile 
-> 
+>
 > 为 shell 编辑相应的源文件，并将 `:$HOME/dotnet` 添加到现有 `PATH` 语句的末尾。 如果不包含 `PATH` 语句，则使用 `export PATH=$PATH:$HOME/dotnet` 添加新行。
 >
 > 另外，将 `export DOTNET_ROOT=$HOME/dotnet` 添加至文件的末尾。

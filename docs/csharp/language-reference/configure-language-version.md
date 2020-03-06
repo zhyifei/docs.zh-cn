@@ -1,19 +1,24 @@
 ---
 title: C# 语言版本控制 - C# 指南
-description: 了解如何根据项目确定 C# 语言版本，以及可以手动调整的不同值。
-ms.date: 07/10/2019
-ms.openlocfilehash: 3c1035d983660ea0a945e4d4b7b72c69736c90cb
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+description: 了解如何根据项目确定 C# 语言版本，以及背后的原因。 了解如何手动重写默认值。
+ms.date: 02/21/2020
+ms.openlocfilehash: 2be76fdac471a7175b661d896b0da2910b3609f3
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980127"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626759"
 ---
 # <a name="c-language-versioning"></a>C# 语言版本控制
 
-最新的 C# 编译器根据项目的一个或多个目标框架确定默认语言版本。 这是因为 C# 语言可能具有依赖于每个 .NET 实现中不提供的类型或运行时组件的功能。 这也确保了无论根据哪种目标构建项目，默认情况下你都将获得最兼容的语言版本。
+最新的 C# 编译器根据项目的一个或多个目标框架确定默认语言版本。 Visual Studio 不提供用于更改值的 UI，但可以通过编辑 .csproj 文件来更改值  。 此默认选择可确保使用与目标框架兼容的最新语言版本。 你将从访问与项目目标兼容的最新语言功能中受益。 此默认选择还可确保不会使用需要类型或运行时行为在目标框架中不可用的语言。 选择比默认版本更高的语言版本可能导致难以诊断编译时和运行时错误。
 
-本文中的规则适用于随 Visual Studio 2019 或 .NET Core 3.0 SDK 一起提供的编译器。 默认情况下，Visual Studio 2017 安装或早期 .NET Core SDK 版本中包含的 C# 编译器以 C# 7.0 为目标。 
+C# 8.0（和更高版本）仅在 .NET Core 3.x 和更高版本上受支持。 许多最新功能需要 .NET Core 3.x 中引入的库和运行时功能：
+
+- 默认接口成员实现需要使用 .NET Core 3.0 CLR 中的新功能。
+- 异步流需要使用新类型 <xref:System.IAsyncDisposable?displayProperty=nameWithType>、<xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>。
+- 索引和范围需要新类型 <xref:System.Index?displayProperty=nameWithType> 和 <xref:System.Range?displayProperty=nameWithType>。
+- 可为 null 的引用类型利用几个[特性](../nullable-attributes.md)来提供更准确的警告。 这些特性是在 .NET Core 3.0 中添加的。 其他目标框架并未使用这些特性中的任何一种进行批注。 这意味着可为 null 的警告可能无法准确反映潜在问题。
 
 ## <a name="defaults"></a>默认值
 
@@ -28,9 +33,7 @@ ms.locfileid: "76980127"
 |.NET Standard|1.x|C# 7.3|
 |.NET Framework|全部|C# 7.3|
 
-## <a name="default-for-previews"></a>默认值适用于预览版
-
-如果你的项目是以具有相应预览语言版本的预览框架为目标，那么使用的语言版本是预览语言版本。 这可确保你可以使用保证在任何环境中都可用的预览提供的最新功能，而不会影响面向发布的 .NET Core 版本的项目。
+如果你的项目是以具有相应预览语言版本的预览框架为目标，那么使用的语言版本是预览语言版本。 你可在任何环境中使用该预览版提供的最新功能，而不会影响面向已发布 .NET Core 版本的项目。
 
 ## <a name="override-a-default"></a>替代默认值
 
@@ -64,11 +67,11 @@ ms.locfileid: "76980127"
 </Project>
 ```
 
-现在，包含该文件的目录的每个子目录中的版本都将使用 C# 预览版。 有关详细信息，请参阅关于[自定义生成](/visualstudio/msbuild/customize-your-build)的文章。
+包含该文件的目录的所有子目录中的版本都将使用 C# 预览版。 有关详细信息，请参阅关于[自定义生成](/visualstudio/msbuild/customize-your-build)的文章。
 
 ## <a name="c-language-version-reference"></a>C# 语言版本引用
 
-下表显示当前所有 C# 语言版本。 如果编译器较旧，它可能不一定了解每个值。 如果安装的是 .NET Core 3.0，则你可以访问列出的所有内容。
+下表显示当前所有 C# 语言版本。 如果编译器较旧，它可能不一定能识别每个值。 如果安装的是 .NET Core 3.0 或更高版本，则可以访问列出的所有内容。
 
 |“值”|含义|
 |------------|-------------|

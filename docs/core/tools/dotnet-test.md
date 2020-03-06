@@ -1,17 +1,17 @@
 ---
 title: dotnet test 命令
 description: dotnet test 命令可用于在给定项目中执行单元测试。
-ms.date: 05/29/2018
-ms.openlocfilehash: 909815151265117395c6d8d13b4443a245c05f9e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 02/27/2020
+ms.openlocfilehash: 6e906ab396a788905c99f50e73390b765b240efc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451189"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157005"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+ 本文适用于： ✔️ .NET Core 2.1 SDK 及更高版本
 
 ## <a name="name"></a>“属性”
 
@@ -19,36 +19,15 @@ ms.locfileid: "77451189"
 
 ## <a name="synopsis"></a>摘要
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
-
 ```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] 
-    [-v|--verbosity] [-- <RunSettings arguments>]
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame]
+    [-c|--configuration] [--collect] [-d|--diag] [-f|--framework]
+    [--filter] [-l|--logger] [--no-build] [--no-restore]
+    [-o|--output] [-r|--results-directory] [-s|--settings]
+    [-t|--list-tests] [-v|--verbosity] [-- <RunSettings arguments>]
 
 dotnet test [-h|--help]
 ```
-
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
-
-```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
-
-dotnet test [-h|--help]
-```
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
-
-dotnet test [-h|--help]
-```
-
----
 
 ## <a name="description"></a>描述
 
@@ -60,213 +39,103 @@ dotnet test [-h|--help]
 
 ## <a name="arguments"></a>自变量
 
-`PROJECT`
+- **`PROJECT`**
 
-指向测试项目的路径。 如未指定，则默认为当前目录。
+  指向测试项目的路径。 如未指定，则默认为当前目录。
 
 ## <a name="options"></a>选项
 
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
+- **`a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+  在测试运行中使用来自指定路径的自定义测试适配器。
 
-在测试运行中使用来自指定路径的自定义测试适配器。
+- **`-blame`**
 
-`--blame`
+  在意见模式中运行测试。 此选项有助于隔离导致测试主机出现故障的有问题的测试。 它会在当前目录中创建一个输出文件 (Sequence.xml)，其中捕获了故障前的测试执行顺序  。
 
-在意见模式中运行测试。 此选项有助于隔离导致测试主机出现故障的有问题的测试。 它会在当前目录中创建一个输出文件 (Sequence.xml)，其中捕获了故障前的测试执行顺序  。
+- **`c|--configuration {Debug|Release}`**
 
-`-c|--configuration {Debug|Release}`
+  定义生成配置。 默认值为 `Debug`，但项目配置可以替代此默认 SDK 设置。
 
-定义生成配置。 默认值为 `Debug`，但项目配置可以替代此默认 SDK 设置。
+- **`-collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
-`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
+  为测试运行启用数据收集器。 有关详细信息，请参阅[监视和分析测试运行](https://aka.ms/vstest-collect)。
 
-为测试运行启用数据收集器。 有关详细信息，请参阅[监视和分析测试运行](https://aka.ms/vstest-collect)。
+- **`d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+  启用测试平台的诊断模式，并将诊断消息写入指定文件。
 
-启用测试平台的诊断模式，并将诊断消息写入指定文件。
+- **`f|--framework <FRAMEWORK>`**
 
-`-f|--framework <FRAMEWORK>`
+  查找特定[框架](../../standard/frameworks.md)的测试二进制文件。
 
-查找特定[框架](../../standard/frameworks.md)的测试二进制文件。
+- **`--filter <EXPRESSION>`**
 
-`--filter <EXPRESSION>`
+  使用给定表达式筛选掉当前项目中的测试。 有关详细信息，请参阅[筛选选项详细信息](#filter-option-details)部分。 若要获取使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
 
-使用给定表达式筛选掉当前项目中的测试。 有关详细信息，请参阅[筛选选项详细信息](#filter-option-details)部分。 若要获取使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
+- **`h|--help`**
 
-`-h|--help`
+  打印出有关命令的简短帮助。
 
-打印出有关命令的简短帮助。
+- **`l|--logger <LoggerUri/FriendlyName>`**
 
-`-l|--logger <LoggerUri/FriendlyName>`
+  指定测试结果记录器。
 
-指定测试结果记录器。
+- **`--no-build`**
 
-`--no-build`
+  不在运行测试项目之前生成它。 还将隐式设置 - `--no-restore` 标记。
 
-不在运行测试项目之前生成它。 还隐式设置 `--no-restore` 标记。
+- **`--no-restore`**
 
-`--no-restore`
+  运行此命令时不执行隐式还原。
 
-运行此命令时不执行隐式还原。
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
-`-o|--output <OUTPUT_DIRECTORY>`
+  查找要运行的二进制文件的目录。
 
-查找要运行的二进制文件的目录。
+- **`-r|--results-directory <PATH>`**
 
-`-r|--results-directory <PATH>`
+  用于放置测试结果的目录。 如果指定的目录不存在，则会创建该目录。
 
-用于放置测试结果的目录。 如果指定的目录不存在，则会创建该目录。
+- **`-s|--settings <SETTINGS_FILE>`**
 
-`-s|--settings <SETTINGS_FILE>`
+  `.runsettings` 文件用于运行测试。 [使用 `.runsettings` 文件配置单元测试。](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
-`.runsettings` 文件用于运行测试。 [使用 `.runsettings` 文件配置单元测试。](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+- **`-t|--list-tests`**
 
-`-t|--list-tests`
+  列出当前项目中发现的所有测试。
 
-列出当前项目中发现的所有测试。
+- **`-v|--verbosity <LEVEL>`**
 
-`-v|--verbosity <LEVEL>`
+  设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
-设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+- `RunSettings` 参数
 
-`RunSettings arguments`
+  参数在测试中作为 `RunSettings` 配置传递。 参数在“-- ”（注意 -- 后的空格）后被指定为 `[name]=[value]` 对。 空格用于分隔多个 `[name]=[value]` 对。
 
-作为测试的 RunSettings 配置传递的参数。 参数在“-- ”（注意 -- 后的空格）后被指定为 `[name]=[value]` 对。 空格用于分隔多个 `[name]=[value]` 对。
+  示例：`dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-示例：`dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
-
-有关 RunSettings 的详细信息，请参阅 [vstest.console.exe：传递 RunSettings 参数](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
-
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
-
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
-
-在测试运行中使用来自指定路径的自定义测试适配器。
-
-`-c|--configuration {Debug|Release}`
-
-定义生成配置。 默认值为 `Debug`，但项目配置可以替代此默认 SDK 设置。
-
-`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
-
-为测试运行启用数据收集器。 有关详细信息，请参阅[监视和分析测试运行](https://aka.ms/vstest-collect)。
-
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
-
-启用测试平台的诊断模式，并将诊断消息写入指定文件。
-
-`-f|--framework <FRAMEWORK>`
-
-查找特定[框架](../../standard/frameworks.md)的测试二进制文件。
-
-`--filter <EXPRESSION>`
-
-使用给定表达式筛选掉当前项目中的测试。 有关详细信息，请参阅[筛选选项详细信息](#filter-option-details)部分。 若要获取使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
-
-`-h|--help`
-
-打印出有关命令的简短帮助。
-
-`-l|--logger <LoggerUri/FriendlyName>`
-
-指定测试结果记录器。
-
-`--no-build`
-
-不在运行测试项目之前生成它。 还隐式设置 `--no-restore` 标记。
-
-`--no-restore`
-
-运行此命令时不执行隐式还原。
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-查找要运行的二进制文件的目录。
-
-`-r|--results-directory <PATH>`
-
-用于放置测试结果的目录。 如果指定的目录不存在，则会创建该目录。
-
-`-s|--settings <SETTINGS_FILE>`
-
-`.runsettings` 文件用于运行测试。 [使用 `.runsettings` 文件配置单元测试。](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
-
-`-t|--list-tests`
-
-列出当前项目中发现的所有测试。
-
-`-v|--verbosity <LEVEL>`
-
-设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
-
-在测试运行中使用来自指定路径的自定义测试适配器。
-
-`-c|--configuration {Debug|Release}`
-
-定义生成配置。 默认值为 `Debug`，但项目配置可以替代此默认 SDK 设置。
-
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
-
-启用测试平台的诊断模式，并将诊断消息写入指定文件。
-
-`-f|--framework <FRAMEWORK>`
-
-查找特定[框架](../../standard/frameworks.md)的测试二进制文件。
-
-`--filter <EXPRESSION>`
-
-使用给定表达式筛选掉当前项目中的测试。 有关详细信息，请参阅[筛选选项详细信息](#filter-option-details)部分。 若要获取使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
-
-`-h|--help`
-
-打印出有关命令的简短帮助。
-
-`-l|--logger <LoggerUri/FriendlyName>`
-
-指定测试结果记录器。
-
-`--no-build`
-
-不在运行测试项目之前生成它。
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-查找要运行的二进制文件的目录。
-
-`-s|--settings <SETTINGS_FILE>`
-
-`.runsettings` 文件用于运行测试。 [使用 `.runsettings` 文件配置单元测试。](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
-
-`-t|--list-tests`
-
-列出当前项目中发现的所有测试。
-
-`-v|--verbosity <LEVEL>`
-
-设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
-
----
+  有关详细信息，请参阅 [vstest.console.exe：传递 RunSettings 参数](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
 
 ## <a name="examples"></a>示例
 
-运行当前目录所含项目中的测试：
+- 运行当前目录所含项目中的测试：
 
-`dotnet test`
+  ```dotnetcli
+  dotnet test
+  ```
 
-运行 `test1` 项目中的测试：
+- 运行 `test1` 项目中的测试：
 
-`dotnet test ~/projects/test1/test1.csproj`
+  ```dotnetcli
+  dotnet test ~/projects/test1/test1.csproj
+  ```
 
-在当前目录运行项目中的测试，并以 trx 格式生成测试结果文件：
+- 在当前目录运行项目中的测试，并以 trx 格式生成测试结果文件：
 
-`dotnet test --logger trx`
+  ```dotnetcli
+  dotnet test --logger trx
+  ```
 
 ## <a name="filter-option-details"></a>筛选选项详细信息
 

@@ -1,29 +1,31 @@
 ---
-title: 在 .NET Core 工具中管理依赖项
-description: 介绍如何使用 .NET Core 工具管理依赖项。
-ms.date: 03/06/2017
-ms.openlocfilehash: 916daca0240c10dc63ca96048590a426bc51d450
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+title: 管理 .NET Core 中的依赖项
+description: 介绍如何管理 .NET Core 应用程序的项目依赖项。
+no-loc:
+- dotnet add package
+- dotnet remove package
+- dotnet list package
+ms.date: 02/25/2020
+ms.openlocfilehash: 367be7eb04d58bffc0846de1d035a5801e8d9376
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965615"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157240"
 ---
-# <a name="manage-dependencies-with-net-core-sdk-10"></a>使用 .NET Core SDK 1.0 管理依赖项
+# <a name="manage-dependencies-in-net-core-applications"></a>管理 .NET Core 应用程序中的依赖项
 
-在 .NET Core 项目从 project.json 移动到 csproj 和 MSBuild 的同时，还投入了大笔资金将项目文件和资产统一，以便跟踪依赖项。 对于 .NET Core 项目，这与 project.json 的做法类似。 没有单独的 JSON 或 XML 文件来跟踪 NuGet 依赖项。 通过这种改变，我们还在名为 `<PackageReference>` 的 csproj 语法中引入了另一种类型的引用  。
+本文介绍如何通过编辑项目文件或使用 CLI 来添加和删除依赖项。
 
-本文档介绍了新的引用类型。 它还演示了如何使用此新引用类型将包依赖项添加到项目。
+## <a name="the-packagereference-element"></a>\<PackageReference> 元素
 
-## <a name="the-new-packagereference-element"></a>新 \<PackageReference> 元素
-
-`<PackageReference>` 具有下列基本结构：
+`<PackageReference>` 项目文件元素具有以下结构：
 
 ```xml
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" />
 ```
 
-如果你熟悉 MSBuild，则它看起来和已有的引用类型很相似。 关键是 `Include` 语句，它指定要添加到项目的包 ID。 `<Version>` 子元素指定要获取的版本。 根据 [NuGet 版本规则](/nuget/create-packages/dependency-versions#version-ranges)指定版本。
+`Include` 特性指定要添加到项目的包的 ID。 `Version` 特性指定要获取的版本。 版本根据 [NuGet 版本规则](/nuget/create-packages/dependency-versions#version-ranges)进行指定。
 
 > [!NOTE]
 > 如果不熟悉“项目-文件”语法，可参阅 [MSBuild 项目参考](/visualstudio/msbuild/msbuild-project-file-schema-reference)文档了解详细信息。
@@ -34,39 +36,47 @@ ms.locfileid: "76965615"
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-依赖项只有在对给定目标生成时才有效。 条件中的 `$(TargetFramework)` 是将在项目中设置的 MSBuild 属性。 对于大多数常见的 .NET Core 应用程序，无需这样做。
+上述示例中的依赖项只有在对给定目标生成时才有效。 条件中的 `$(TargetFramework)` 是将在项目中设置的 MSBuild 属性。 对于大多数常见的 .NET Core 应用程序，无需这样做。
 
-## <a name="add-a-dependency-to-the-project"></a>向项目添加依赖项
+## <a name="add-a-dependency-by-editing-the-project-file"></a>通过编辑项目文件添加依赖项
 
-向项目添加依赖项非常简单。 下面是如何向项目添加 Json.NET 版本 `9.0.1` 的示例。 当然，它也适用于其他任意 NuGet 依赖项。
-
-你的项目文件有两个或多个 `<ItemGroup>` 节点。 其中一个节点已有 `<PackageReference>` 元素。 可以向此节点添加新的依赖项，或创建一个新的依赖项；结果将是一样的。
-
-下面的示例使用 `dotnet new console` 删除的默认模板。 这是一个简单的控制台应用程序。 打开项目时，将找到 `<ItemGroup>`，其中包含已存在的 `<PackageReference>`。 在其中添加以下代码：
+若要添加依赖项，请在 `<ItemGroup>` 元素内添加 `<PackageReference>` 元素。 可以添加到现有 `<ItemGroup>`，也可以新建一个元素。 下面的示例使用 `dotnet new console` 创建的默认控制台应用程序项目：
 
 ```xml
-<PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
-```
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
-之后，保存项目并运行 `dotnet restore` 命令以安装依赖项。
-
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-
-完整项目如下所示：
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
   </ItemGroup>
+
 </Project>
 ```
 
-## <a name="remove-a-dependency-from-the-project"></a>从项目中删除依赖项
+## <a name="add-a-dependency-by-using-the-cli"></a>使用 CLI 添加依赖项
 
-从项目文件中删除依赖项只需从项目文件中删除 `<PackageReference>`。
+若要添加依赖项，请运行 [dotnet add package](dotnet-add-package.md) 命令，如以下示例中所示：
+
+```dotnetcli
+dotnet add package Microsoft.EntityFrameworkCore
+```
+
+## <a name="remove-a-dependency-by-editing-the-project-file"></a>通过编辑项目文件删除依赖项
+
+若要删除依赖项，请从项目文件中删除其 `<PackageReference>` 元素。
+
+## <a name="remove-a-dependency-by-using-the-cli"></a>使用 CLI 删除依赖项
+
+若要删除依赖项，请运行 [dotnet remove package](dotnet-remove-package.md) 命令，如以下示例中所示：
+
+```dotnetcli
+dotnet remove package Microsoft.EntityFrameworkCore
+```
+
+## <a name="see-also"></a>请参阅
+
+* [项目文件中的 NuGet 包](../project-sdk/msbuild-props.md#nuget-packages)
+* [dotnet list package 命令](dotnet-remove-package.md)

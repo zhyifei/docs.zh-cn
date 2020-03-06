@@ -5,12 +5,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 95735d5032a8896570918b991f12b853af88fb68
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 09b290713f3bc2a7a7824bb19c98138943ad5b2c
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705478"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673376"
 ---
 # <a name="objects-c-programming-guide"></a>对象（C# 编程指南）
 类或结构定义的作用类似于蓝图，指定该类型可以进行哪些操作。 从本质上说，对象是按照此蓝图分配和配置的内存块。 程序可以创建同一个类的多个对象。 对象也称为实例，可以存储在命名变量中，也可以存储在数组或集合中。 使用这些变量来调用对象方法及访问对象公共属性的代码称为客户端代码。 在 C# 等面向对象的语言中，典型的程序由动态交互的多个对象组成。  
@@ -52,8 +52,6 @@ ms.locfileid: "75705478"
   
 - [类](./classes.md)  
   
-- [结构](./structs.md)  
-  
 - [构造函数](./constructors.md)  
   
 - [终结器](./destructors.md)  
@@ -66,6 +64,6 @@ ms.locfileid: "75705478"
 - [object](../../language-reference/builtin-types/reference-types.md)
 - [继承](./inheritance.md)
 - [class](../../language-reference/keywords/class.md)
-- [struct](../../language-reference/keywords/struct.md)
+- [结构类型](../../language-reference/builtin-types/struct.md)
 - [new 运算符](../../language-reference/operators/new-operator.md)
 - [常规类型系统](../../../standard/base-types/common-type-system.md)

@@ -1,63 +1,25 @@
 ---
 title: 面向对象的编程 (C#)
-ms.date: 07/20/2015
+ms.date: 02/08/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 1de150f6eb4be893ca1afce6bd16afde5752c986
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 01d6f55bf0752f902f351675c4596abbb8ac85c2
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711818"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627885"
 ---
 # <a name="object-oriented-programming-c"></a>面向对象的编程 (C#)
 
-C# 提供对面向对象的编程（包括封装、继承和多形性）的完整支持。
+C# 提供对面向对象的编程（包括封装、继承和多态性）的完整支持。
 
-“封装”  意味着将一组相关属性、方法和其他成员视为一个单元或对象。
+- “封装”  意味着将一组相关属性、方法和其他成员视为一个单元或对象。
+- “继承”  描述基于现有类创建新类的能力。
+- 多态性意味着可以有多个可互换使用的类，即使每个类以不同方式实现相同属性或方法。 
 
-“继承”  描述基于现有类创建新类的能力。
+## <a name="classes-and-objects"></a>类和对象
 
-多态性意味着可以有多个可互换使用的类，即使每个类以不同方式实现相同属性或方法。 
-
-本节介绍下列概念：
-
-- [类和对象](#Classes)
-
-  - [类成员](#Members)
-
-    - [属性和字段](#Properties)
-
-    - [方法](#Methods)
-
-    - [构造函数](#Constructors)
-
-    - [终结器](#Finalizers)
-
-    - [事件](#Events)
-
-    - [嵌套类](#NestedClasses)
-
-  - [访问修饰符和访问级别](#AccessModifiers)
-
-  - [实例化类](#InstantiatingClasses)
-
-  - [静态类和成员](#Static)
-
-  - [匿名类型](#AnonymousTypes)
-
-- [继承](#Inheritance)
-
-  - [重写成员](#Overriding)
-
-- [接口](#Interfaces)
-
-- [泛型](#Generics)
-
-- [委托](#Delegates)
-
-## <a name="Classes"></a> 类和对象
-
-“类”  和“对象”  这两个术语有时互换使用，但实际上，类描述对象的“类型”  ，而对象是类的可用“实例”  。 因此，创建对象的操作称为“实例化”  。 如果使用蓝图类比，类是蓝图，对象就是基于该蓝图的建筑。
+“类”和“对象”分别描述对象的类型和类的实例     。 因此，创建对象的操作称为“实例化”  。 如果使用蓝图类比，类是蓝图，对象就是基于该蓝图的建筑。
 
 定义类：
 
@@ -67,7 +29,7 @@ class SampleClass
 }
 ```
 
-C# 还提供了类的轻量版本，称为“结构”  。当需要创建大量对象但不希望因此占用太多内存时，可以使用此轻量版本。
+C# 还提供被称为“结构”的类型，在不需要支持继承或多形性时非常有用  。
 
 定义结构：
 
@@ -77,32 +39,28 @@ struct SampleStruct
 }
 ```
 
-有关详细信息，请参见:
+有关详细信息，请参阅有关 [class](../../language-reference/keywords/class.md) 和 [struct](../../language-reference/builtin-types/struct.md) 关键字的文章。
 
-- [class](../../language-reference/keywords/class.md)
-
-- [struct](../../language-reference/keywords/struct.md)
-
-### <a name="Members"></a> 类成员
+### <a name="class-members"></a>类成员
 
 每个类都可以具有不同的“类成员”  。类成员包括属性（用于描述类数据）、方法（用于定义类行为）和事件（用于在不同的类和对象之间提供通信）。
 
-#### <a name="Properties"></a> 属性和字段
+#### <a name="properties-and-fields"></a>属性和字段
 
-字段和属性表示对象包含的信息。 字段类似于变量，因为可以直接读取或设置它们。
+字段和属性表示对象包含的信息。 字段类似于变量，因为可以直接读取或设置它们，不过要考虑适用的访问修饰符。
 
-定义字段：
+定义可从类的实例中访问的字段：
 
 ```csharp
-class SampleClass
+public class SampleClass
 {
-    public string sampleField;
+    string sampleField;
 }
 ```
 
-属性具有 get 和 set 过程，它们对如何设置或返回值提供更多的控制。
+属性具有 `get` 和 `set` 访问器，它们对设置或返回值的方式提供更多控制。
 
-C# 允许你创建私有字段来存储属性值，或者使用常说的“自动实现的属性”，这些属性自动在后台创建此字段，并为属性过程提供基本逻辑。
+C# 允许创建私有字段来存储属性值，或者使用自动实现的属性，这些属性自动在后台创建此字段，并为属性过程提供基本逻辑。
 
 定义自动实现的属性：
 
@@ -122,14 +80,14 @@ class SampleClass
     public int Sample
     {
         // Return the value stored in a field.
-        get { return _sample; }
+        get => _sample;
         // Store the value in the field.
-        set { _sample = value; }
+        set =>  _sample = value;
     }
 }
 ```
 
-大多数属性的方法或过程都是既可以设置也可以获取属性值。 但你可以创建只读或只写属性来限制对它们的修改或读取。 在 C# 中，可以忽略 `get` 或 `set` 属性方法。 但是，自动实现的属性不能为只读或只写。
+大多数属性的方法或过程都是既可以设置也可以获取属性值。 但你可以创建只读或只写属性来限制对它们的修改或读取。 在 C# 中，可以忽略 `get` 或 `set` 属性方法。 但是，自动实现的属性不能是只写的。 可以在包含类的构造函数中设置只读自动实现的属性。
 
 有关详细信息，请参见:
 
@@ -137,7 +95,7 @@ class SampleClass
 
 - [set](../../language-reference/keywords/set.md)
 
-#### <a name="Methods"></a> 方法
+#### <a name="methods"></a>方法
 
 “方法”  是对象可以执行的操作。
 
@@ -167,10 +125,9 @@ public int sampleMethod(int sampleParam) {}
 有关详细信息，请参见:
 
 - [方法](../classes-and-structs/methods.md)
-
 - [扩展方法](../classes-and-structs/extension-methods.md)
 
-#### <a name="Constructors"></a> 构造函数
+#### <a name="constructors"></a>构造函数
 
 构造函数一种类方法，它们在创建给定类型的对象时自动执行。 构造函数通常用于初始化新对象的数据成员。 构造函数只能在创建类时运行一次。 此外，构造函数中的代码始终在类中所有其他代码之前运行。 但是，你可以按照为任何其他方法创建重载的方式，创建多个构造函数重载。
 
@@ -188,13 +145,13 @@ public class SampleClass
 
 有关详细信息，请参阅[构造函数](../classes-and-structs/constructors.md)。
 
-#### <a name="Finalizers"></a>终结器
+#### <a name="finalizers"></a>终结器
 
 终结器用于析构类的实例。 在 .NET Framework 中，垃圾回收器自动管理应用程序中托管对象的内存分配和释放。 但是，你可能仍会需要终结器来清理应用程序创建的所有非托管资源。 一个类只能有一个终结器。
 
 有关终结器和 .NET Framework 垃圾回收的详细信息，请参阅[垃圾回收](../../../standard/garbage-collection/index.md)。
 
-#### <a name="Events"></a> 事件
+#### <a name="events"></a>事件
 
 类或对象可以通过事件向其他类或对象通知发生的相关事情。 发送（或引发）事件的类称为“发行者”  ，接收（或处理）事件的类称为“订户”  。 有关事件以及如何引发和处理事件的详细信息，请参阅[事件](../../../standard/events/index.md)。
 
@@ -204,7 +161,7 @@ public class SampleClass
 
 - 若要订阅事件，请使用 `+=` 运算符；若要取消订阅事件，请使用 `-=` 运算符。
 
-#### <a name="NestedClasses"></a> 嵌套类
+#### <a name="nested-classes"></a>嵌套类
 
 在另一个类中定义的类称为“嵌套”  。 默认情况下，嵌套类是私有类。
 
@@ -224,7 +181,7 @@ class Container
 Container.Nested nestedInstance = new Container.Nested()
 ```
 
-### <a name="AccessModifiers"></a> 访问修饰符和访问级别
+### <a name="access-modifiers-and-access-levels"></a>访问修饰符和访问级别
 
 所有类和类方法都可以使用“访问修饰符”  指定自己为其他类提供的访问级别。
 
@@ -241,7 +198,7 @@ Container.Nested nestedInstance = new Container.Nested()
 
 有关详细信息，请参阅[访问修饰符](../classes-and-structs/access-modifiers.md)。
 
-### <a name="InstantiatingClasses"></a> 实例化类
+### <a name="instantiating-classes"></a>实例化类
 
 若要创建对象，你需要实例化类，即创建类实例。
 
@@ -269,10 +226,9 @@ SampleClass sampleObject = new SampleClass
 有关详细信息，请参见:
 
 - [new 运算符](../../language-reference/operators/new-operator.md)
-
 - [对象和集合初始值设定项](../classes-and-structs/object-and-collection-initializers.md)
 
-### <a name="Static"></a> 静态类和成员
+### <a name="static-classes-and-members"></a>静态类和成员
 
 类的静态成员是指由该类的所有实例共享的属性、过程或字段。
 
@@ -295,7 +251,7 @@ C# 中的静态类只有静态成员，无法进行实例化。 静态成员也�
 
 有关详细信息，请参阅：[static](../../language-reference/keywords/static.md)。
 
-### <a name="AnonymousTypes"></a> 匿名类型
+### <a name="anonymous-types"></a>匿名类型
 
 匿名类型使你无需为数据类型编写类定义即可创建对象。 此时，编译器将为你生成类。 该类没有可使用的名称，且包含在声明对象时指定的属性。
 
@@ -309,7 +265,7 @@ var sampleObject =
 
 有关详细信息，请参见:[匿名类型](../classes-and-structs/anonymous-types.md)。
 
-## <a name="Inheritance"></a> 继承
+## <a name="inheritance"></a>继承
 
 通过继承，可以创建一个新类，它重用、扩展和修改另一个类中定义的行为。 其成员被继承的类称为“基类”  ，继承这些成员的类称为“派生类”  。 但是，C# 中的所有类都隐式继承自 <xref:System.Object> 类，该类支持 .NET 类层次结构，并为所有类提供低级别服务。
 
@@ -342,7 +298,7 @@ public abstract class B { }
 
 - [abstract](../../language-reference/keywords/abstract.md)
 
-### <a name="Overriding"></a> 重写成员
+### <a name="overriding-members"></a>重写成员
 
 默认情况下，派生类继承其基类的所有成员。 若希望更改继承成员的行为，则需要重写该成员。 即，可以在派生类中定义方法、属性或事件的新实现。
 
@@ -355,7 +311,7 @@ public abstract class B { }
 |[abstract](../../language-reference/keywords/abstract.md)|要求在派生类中重写类成员。|
 |[new 修饰符](../../language-reference/keywords/new-modifier.md)|隐藏继承自基类的成员|
 
-## <a name="Interfaces"></a> 接口
+## <a name="interfaces"></a>接口
 
 和类一样，接口也定义了一系列属性、方法和事件。 但与类不同的是，接口并不提供实现。 它们由类来实现，并从类中被定义为单独的实体。 接口表示一种约定，实现接口的类必须严格按其定义来实现接口的每个方面。
 
@@ -380,13 +336,9 @@ class SampleClass : ISampleInterface
 }
 ```
 
-有关详细信息，请参见:
+有关详细信息，请参阅关于[接口](../interfaces/index.md)的编程指南，以及关于 [interface](../../language-reference/keywords/interface.md) 关键字的语言参考。
 
-[接口](../interfaces/index.md)
-
-[interface](../../language-reference/keywords/interface.md)
-
-## <a name="Generics"></a> 泛型
+## <a name="generics"></a>泛型
 
 .NET Framework 中的类、结构、接口和方法可以包括“类型参数”  ，类型参数定义它们可以存储或使用的对象的类型。 最常见的泛型示例是集合，从中可以指定要存储在集合中的对象的类型。
 
@@ -412,7 +364,7 @@ sampleObject.Field = "Sample string";
 
 - [泛型](../generics/index.md)
 
-## <a name="Delegates"></a> 委托
+## <a name="delegates"></a>委托
 
 “委托”  是一种类型，它定义方法签名，可以提供对具有兼容签名的任何方法的引用。 你可以通过委托调用方法。 委托用于将方法作为参数传递给其他方法。
 
@@ -444,11 +396,7 @@ class SampleClass
 }
 ```
 
-有关详细信息，请参见:
-
-- [委托](../delegates/index.md)
-
-- [delegate](../../language-reference/builtin-types/reference-types.md)
+有关详细信息，请参阅关于[委托](../delegates/index.md)的编程指南，以及关于 [delegate](../../language-reference/builtin-types/reference-types.md) 关键字的语言参考。
 
 ## <a name="see-also"></a>请参阅
 

@@ -2,12 +2,12 @@
 title: 标识符名称
 description: 了解 C# 编程语言中有效标识符名称的规则。
 ms.date: 08/21/2018
-ms.openlocfilehash: f8a27ddae0437ed037b59f76d60dc7e420ddc2eb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bef6e2ea285b5391af3350ae42a4105d140c6d1b
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589354"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673363"
 ---
 # <a name="identifier-names"></a>标识符名称
 
@@ -38,7 +38,7 @@ ms.locfileid: "69589354"
 - [在 C# 程序内部](./index.md)
 - [C# 参考](../../language-reference/index.md)
 - [类](../classes-and-structs/classes.md)
-- [结构](../classes-and-structs/structs.md)
+- [结构类型](../../language-reference/builtin-types/struct.md)
 - [命名空间](../namespaces/index.md)
 - [接口](../interfaces/index.md)
 - [委托](../delegates/index.md)

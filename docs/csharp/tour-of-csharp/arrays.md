@@ -1,14 +1,14 @@
 ---
 title: C# 数组 - C# 语言介绍
 description: 数组是 C# 语言中最基本的集合类型
-ms.date: 08/10/2016
+ms.date: 02/27/2020
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.openlocfilehash: 56a053ac8525d4c6c34592d6092f3f162cb04247
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3e045c0933a21beab6958c7851546ba6e0b55ef9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634609"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159190"
 ---
 # <a name="arrays"></a>数组
 
@@ -25,7 +25,7 @@ ms.locfileid: "65634609"
 [!code-csharp[ArrayRank](../../../samples/snippets/csharp/tour/arrays/Program.cs#L24-L26)]
 
 `a1` 数组包含 10 个元素，`a2` 数组包含 50 个元素 (10 × 5)，`a3` 数组包含 100 个元素 (10 × 5 × 2)。
-数组的元素类型可以是任意类型（包括数组类型）。 包含数组类型元素的数组有时称为***交错数组***，因为元素数组的长度不必全都一样。 以下示例分配由 `int` 数组构成的数组：
+数组的元素类型可以是任意类型（包括数组类型）。 包含数组类型元素的数组有时称为“交错数组”，因为元素数组的长度不必全都一样。 以下示例分配由 `int` 数组构成的数组：
 
 [!code-csharp[ArrayAllocation](../../../samples/snippets/csharp/tour/arrays/Program.cs#L31-L34)]
 
@@ -35,14 +35,14 @@ ms.locfileid: "65634609"
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L39-L39)]
 
-请注意，可从 { 和 } 内的表达式数量推断出数组的长度。 局部变量和字段声明可以进一步缩短，这样就不用重新声明数组类型了。
+可从 { 和 } 内的表达式数量推断出数组的长度。 局部变量和字段声明可以进一步缩短，这样就不用重新声明数组类型了。
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L44-L44)]
 
-以上两个示例等同于以下示例：
+以上两个示例等同于以下代码：
 
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 
 >[!div class="step-by-step"]
->[上一页](structs.md)
+>[上一页](classes-and-objects.md)
 >[下一页](interfaces.md)

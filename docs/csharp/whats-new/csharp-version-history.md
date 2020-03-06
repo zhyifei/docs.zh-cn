@@ -3,12 +3,12 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739102"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673272"
 ---
 # <a name="the-history-of-c"></a>C\# 发展历史
 
@@ -37,7 +37,7 @@ C# 生成工具将最新的主要语言版本视为默认语言版本。 主要�
 C# 1.0 的主要功能包括：
 
 - [类](../programming-guide/classes-and-structs/classes.md)
-- [结构](../programming-guide/classes-and-structs/structs.md)
+- [结构](../language-reference/builtin-types/struct.md)
 - [接口](../programming-guide/interfaces/index.md)
 - [事件](../events-overview.md)
 - [属性](../properties.md)

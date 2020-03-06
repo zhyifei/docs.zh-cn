@@ -1,14 +1,14 @@
 ---
 title: C# 类型和变量 - C# 语言介绍
 description: 了解如何在 C# 中定义类型和声明变量
-ms.date: 08/10/2016
+ms.date: 02/25/2020
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 28ba01f7d3f9c71e99945a5d5e813d95389b3b79
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: b2a5255a243c12543a1cd59b5724b6c826306e04
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737633"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159086"
 ---
 # <a name="types-and-variables"></a>类型和变量
 
@@ -16,7 +16,7 @@ C# 有两种类型：*值类型*和*引用类型*。 值类型的变量直接包
 
 C# 值类型又细分为*简单类型*、*枚举类型*、*结构类型*和*可以为 null 的值类型*。 C# 引用类型又细分为*类类型*、*接口类型*、*数组类型*和*委托类型*。
 
-下面概述了 C# 的类型系统。
+以下大纲概述了 C# 的类型系统。
 
 - [值类型][ValueTypes]
   - [简单类型][SimpleTypes]
@@ -47,7 +47,7 @@ C# 值类型又细分为*简单类型*、*枚举类型*、*结构类型*和*可�
 [ValueTypes]: ../language-reference/builtin-types/value-types.md
 [SimpleTypes]: ../language-reference/builtin-types/value-types.md#built-in-value-types
 [EnumTypes]: ../language-reference/builtin-types/enum.md
-[StructTypes]: ../language-reference/keywords/struct.md
+[StructTypes]: ../language-reference/builtin-types/struct.md
 [NullableTypes]: ../language-reference/builtin-types/nullable-value-types.md
 [ReferenceTypes]: ../language-reference/keywords/reference-types.md
 [ClassTypes]: ../language-reference/keywords/class.md
@@ -69,7 +69,7 @@ C# 程序使用*类型声明*创建新类型。 类型声明指定新类型的�
 
 `interface` 类型将协定定义为一组已命名的公共函数成员。 实现 `interface` 的 `class` 或 `struct` 必须提供接口函数成员的实现代码。 `interface` 可以继承自多个基接口，`class` 和 `struct` 可以实现多个接口。
 
-`delegate` 类型表示引用包含特定参数列表和返回类型的方法。 通过委托，可以将方法视为可分配给变量并可作为参数传递的实体。 委托类同于函数式语言提供的函数类型。 委托也类似于其他一些语言中的函数指针概念，但与函数指针不同的是，委托不仅面向对象，还类型安全。
+`delegate` 类型表示引用包含特定参数列表和返回类型的方法。 通过委托，可以将方法视为可分配给变量并可作为参数传递的实体。 委托类同于函数式语言提供的函数类型。 它们还类似于其他一些语言中存在的“函数指针”概念。 与函数指针不同，委托是面向对象且类型安全的。
 
 `class`、`struct`、`interface` 和 `delegate` 类型全部都支持泛型，因此可以使用其他类型对它们进行参数化。
 

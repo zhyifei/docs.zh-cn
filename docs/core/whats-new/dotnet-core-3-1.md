@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 0905cbebb2d966570be4ac3aefb40f4377b97061
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 323a2390f079c17b81db01e4e3787916251943bf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742584"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156551"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1 的新增功能
 
@@ -36,6 +36,34 @@ Visual Studio for Mac 也支持 .NET Core 3.1，并且 Visual Studio for Mac 8.4
 | .NET Core 2.1 | 生命周期终结于 2021 年 8 月 21 日。    |
 
 有关详细信息，请参阅 [.NET Core 支持策略](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。
+
+## <a name="macos-apphost-and-notarization"></a>macOS appHost 和公证
+
+仅 macOS 
+
+从已公证的适用于 macOS 的 .NET Core SDK 3.1 开始，默认已禁用 appHost 设置。 有关详细信息，请参阅 [macOS Catalina 公证以及对 .NET Core 下载和项目的影响](../install/macos-notarization-issues.md)。
+
+启用 appHost 设置后，.NET Core 在生成或发布时将生成本机 Mach-O 可执行文件。 如果使用 `dotnet run` 命令从源代码中运行应用，或通过启动 Mach-O 可执行文件直接运行应用，则应用会在 appHost 的上下文中运行。
+
+如果没有 appHost，用户就只能使用 `dotnet <filename.dll>` 命令启动[依赖于运行时](../deploying/index.md#publish-runtime-dependent)的应用。 发布[独立](../deploying/index.md#publish-self-contained)应用时，始终会创建 appHost。
+
+可以在项目级别配置 appHost，或通过 `-p:UseAppHost` 参数切换特定 `dotnet` 命令的 appHost：
+
+- 项目文件
+
+  ```xml
+  <PropertyGroup>
+    <UseAppHost>true</UseAppHost>
+  </PropertyGroup>
+  ```
+
+- 命令行参数
+
+  ```dotnetcli
+  dotnet run -p:UseAppHost=true
+  ```
+
+有关 `UseAppHost` 设置的详细信息，请参阅 [Microsoft.NET.Sdk 的 MSBuild 属性](../project-sdk/msbuild-props.md#useapphost)。
 
 ## <a name="windows-forms"></a>Windows 窗体
 

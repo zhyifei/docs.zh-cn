@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 187a49131e903e00cab54d9db43b6cd8eb359a3a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713695"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673090"
 ---
 # <a name="class-c-reference"></a>class（C# 参考）
 
@@ -33,9 +33,9 @@ class TestClass
 |继承|示例|
 |-----------------|-------------|
 |None|`class ClassA { }`|
-|Single|`class DerivedClass: BaseClass { }`|
-|无，实现两个接口|`class ImplClass: IFace1, IFace2 { }`|
-|单一，实现一个接口|`class ImplDerivedClass: BaseClass, IFace1 { }`|
+|Single|`class DerivedClass : BaseClass { }`|
+|无，实现两个接口|`class ImplClass : IFace1, IFace2 { }`|
+|单一，实现一个接口|`class ImplDerivedClass : BaseClass, IFace1 { }`|
 
 直接在命名空间中声明的、未嵌套在其它类中的类，可以是[公共](./public.md)或[内部](./internal.md)。 默认情况下类为 `internal`。
 
@@ -71,9 +71,9 @@ class TestClass
 
 - [接口](../../programming-guide/interfaces/index.md)
 
-- [结构](../../programming-guide/classes-and-structs/structs.md)
+- [结构类型](../builtin-types/struct.md)
 
-- [枚举](../builtin-types/enum.md)
+- [枚举类型](../builtin-types/enum.md)
 
 ## <a name="example"></a>示例
 

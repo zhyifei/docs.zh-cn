@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 60794c4f8a5f9aeb7a4b3cd58c0c9f00e03fa9e7
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 6e85c2c3e796ae59a13f944bd4913e4b7316c56a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450975"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156564"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新增功能
 
@@ -54,12 +54,40 @@ C# 8.0 也是该发布的一部分，包含[可为空引用类型](../../csharp/
 
 ### <a name="default-executables"></a>默认可执行文件
 
-.NET Core 现在默认生成[依赖于框架的可执行文件](../deploying/index.md#publish-runtime-dependent)。 对于使用全局安装的 .NET Core 版本的应用程序而言，这是一种新行为。 以前，仅[独立部署](../deploying/index.md#publish-self-contained)会生成可执行文件。
+.NET Core 现在默认生成[依赖于运行时的可执行文件](../deploying/index.md#publish-runtime-dependent)。 对于使用全局安装的 .NET Core 版本的应用程序而言，这是一种新行为。 以前，仅[独立部署](../deploying/index.md#publish-self-contained)会生成可执行文件。
 
-在 `dotnet build` 或 `dotnet publish` 期间，将创建一个与你使用的 SDK 的环境和平台相匹配的可执行文件。 和其他本机可执行文件一样，可以使用这些可执行文件执行相同操作，例如：
+在 `dotnet build` 或 `dotnet publish` 期间，将创建一个与你使用的 SDK 的环境和平台相匹配的可执行文件（即 appHost）  。 和其他本机可执行文件一样，可以使用这些可执行文件执行相同操作，例如：
 
 - 可以双击可执行文件。
 - 可以直接从命令提示符启用应用程序，如 Windows 上的 `myapp.exe`，以及 Linux 和 macOS 上的 `./myapp`。
+
+### <a name="macos-apphost-and-notarization"></a>macOS appHost 和公证
+
+仅 macOS 
+
+从已公证的适用于 macOS 的 .NET Core SDK 3.0 开始，默认已禁用用于生成默认可执行文件（即 appHost）的设置。 有关详细信息，请参阅 [macOS Catalina 公证以及对 .NET Core 下载和项目的影响](../install/macos-notarization-issues.md)。
+
+启用 appHost 设置后，.NET Core 在生成或发布时将生成本机 Mach-O 可执行文件。 如果使用 `dotnet run` 命令从源代码中运行应用，或通过启动 Mach-O 可执行文件直接运行应用，则应用会在 appHost 的上下文中运行。
+
+如果没有 appHost，用户就只能使用 `dotnet <filename.dll>` 命令启动[依赖于运行时](../deploying/index.md#publish-runtime-dependent)的应用。 发布[独立](../deploying/index.md#publish-self-contained)应用时，始终会创建 appHost。
+
+可以在项目级别配置 appHost，或通过 `-p:UseAppHost` 参数切换特定 `dotnet` 命令的 appHost：
+
+- 项目文件
+
+  ```xml
+  <PropertyGroup>
+    <UseAppHost>true</UseAppHost>
+  </PropertyGroup>
+  ```
+
+- 命令行参数
+
+  ```dotnetcli
+  dotnet run -p:UseAppHost=true
+  ```
+
+有关 `UseAppHost` 设置的详细信息，请参阅 [Microsoft.NET.Sdk 的 MSBuild 属性](../project-sdk/msbuild-props.md#useapphost)。
 
 ### <a name="single-file-executables"></a>单文件可执行文件
 

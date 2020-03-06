@@ -4,12 +4,12 @@ description: 了解所有 C# 程序中的核心类型（数字、字符串和对
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: ad496a9cbb0a654ec10ac38b374a76b042911302
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: bb2177026afb2eef2e14ece0c306bfd3ffe7af39
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093287"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673259"
 ---
 # <a name="types-variables-and-values"></a>类型、变量和值
 
@@ -82,9 +82,10 @@ C# 提供了一组标准的内置数值类型来表示整数、浮点值、布�
   
 - 它支持继承原则。 类型可以派生自其他类型（称为*基类型*）。 派生类型继承（有一些限制）基类型的方法、属性和其他成员。 基类型可以继而从某种其他类型派生，在这种情况下，派生类型继承其继承层次结构中的两种基类型的成员。 所有类型（包括 <xref:System.Int32> (C# keyword: `int`) 等内置数值类型）最终都派生自单个基类型，即 <xref:System.Object> (C# keyword: `object`)。 此统一类型层次结构称为[通用类型系统](../standard/common-type-system.md) (CTS)。 有关 C# 中的继承的详细信息，请参阅[继承](programming-guide/classes-and-structs/inheritance.md)。  
   
-- CTS 中的每种类型被定义为值类型或引用类型。   这包括 .NET Framework 类库中的所有自定义类型以及你自己的用户定义类型。 使用 [struct](language-reference/keywords/struct.md) 关键字定义的类型是值类型；所有内置数值类型都是 **structs**。 有关值类型的详细信息，请参阅[结构](structs.md)。 使用 [class](language-reference/keywords/class.md) 关键字定义的类型是引用类型。 有关引用类型的详细信息，请参阅[类](programming-guide/classes-and-structs/classes.md)。 引用类型和值类型具有不同的编译时规则和不同的运行时行为。
+- CTS 中的每种类型被定义为值类型或引用类型。   这包括 .NET 类库中的所有自定义类型以及你自己的用户定义类型。 使用 `struct` 或 `enum` 关键字定义的类型是值类型。 有关值类型的详细信息，请参阅[值类型](language-reference/builtin-types/value-types.md)。 使用 [class](language-reference/keywords/class.md) 关键字定义的类型是引用类型。 有关引用类型的详细信息，请参阅[类](programming-guide/classes-and-structs/classes.md)。 引用类型和值类型具有不同的编译时规则和不同的运行时行为。
 
 ## <a name="see-also"></a>请参阅
 
-- [结构](structs.md)
+- [结构类型](language-reference/builtin-types/struct.md)
+- [枚举类型](language-reference/builtin-types/enum.md)
 - [类](programming-guide/classes-and-structs/classes.md)

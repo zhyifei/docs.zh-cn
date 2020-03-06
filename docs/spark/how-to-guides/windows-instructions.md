@@ -3,13 +3,13 @@ title: 在 Windows 上生成 .NET for Apache Spark 应用程序
 description: 了解如何在 Windows 上生成 .NET for Apache Spark 应用程序。
 ms.date: 01/29/2020
 ms.topic: conceptual
-ms.custom: mvc,how-to
-ms.openlocfilehash: e6dec09f7d3e8d478cdcccf9df1c3e72d5f884eb
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.custom: how-to
+ms.openlocfilehash: 640459c8c80b6d798718b89d4965802cdacd6c63
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76928060"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628652"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>了解如何在 Windows 上生成 .NET for Apache Spark 应用程序
 
@@ -27,22 +27,22 @@ ms.locfileid: "76928060"
      * .NET Core 跨平台开发
        * 所有必需的组件
   3. 安装 [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  。 
-     - 为操作系统选择适当的版本，例如，Win x64 计算机选择 jdk-8u201-windows-x64。
+     - 选择适用于操作系统的合适版本。 例如，为 Windows x64 计算机选择 jdk-8u201-windows-x64.exe  。
      - 使用安装程序安装，验证是否能够从命令行运行 `java`。
   4. 安装 [Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)  。
-     - 下载 [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip)。
-     - 提取到本地目录，例如 `C:\bin\apache-maven-3.6.0\`。
-     - 将 Apache Maven 添加到 [PATH 环境变量](https://www.java.com/en/download/help/path.xml)，例如 `C:\bin\apache-maven-3.6.0\bin`。
+     - 下载 [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip)。
+     - 提取到本地目录。 例如 *C:\bin\apache-maven-3.6.0\*。
+     - 将 Apache Maven 添加到 [PATH 环境变量](https://www.java.com/en/download/help/path.xml)。 例如 C:\bin\apache-maven-3.6.0\bin  。
      - 验证是否能够从命令行运行 `mvn`。
   5. 安装 [Apache Spark 2.3+](https://spark.apache.org/downloads.html)  。
-     - 下载 [Apache Spark 2.3+](https://spark.apache.org/downloads.html) 并使用 [7-zip](https://www.7-zip.org/) 将其提取到本地文件夹（例如 `C:\bin\spark-2.3.2-bin-hadoop2.7\`）。 （支持的 spark 版本为 2.3.*、2.4.0、2.4.1、2.4.3 和 2.4.4）
-     - 添加[新环境变量](https://www.java.com/en/download/help/path.xml) `SPARK_HOME`，例如 `C:\bin\spark-2.3.2-bin-hadoop2.7\`。
+     - 下载 [Apache Spark 2.3 +](https://spark.apache.org/downloads.html)，并使用 [7-zip](https://www.7-zip.org/) 将其提取到本地文件夹，例如 *C:\bin\spark-2.3.2-bin-hadoop2.7\*。（支持的 spark 版本为 2.3.* 、2.4.0、2.4.1、2.4.3 和 2.4.4）
+     - 添加[新环境变量](https://www.java.com/en/download/help/path.xml) `SPARK_HOME`。 例如 *C:\bin\spark-2.3.2-bin-hadoop2.7\*。
 
        ```powershell
        set SPARK_HOME=C:\bin\spark-2.3.2-bin-hadoop2.7\       
        ```
 
-     - 将 Apache Spark 添加到 [PATH 环境变量](https://www.java.com/en/download/help/path.xml)，例如 `C:\bin\spark-2.3.2-bin-hadoop2.7\bin`。
+     - 将 Apache Spark 添加到 [PATH 环境变量](https://www.java.com/en/download/help/path.xml)。 例如 C:\bin\spark-2.3.2-bin-hadoop2.7\bin  。
 
        ```powershell       
        set PATH=%SPARK_HOME%\bin;%PATH%
@@ -70,8 +70,8 @@ ms.locfileid: "76928060"
         </details>
 
   6. 安装 [WinUtils](https://github.com/steveloughran/winutils)  。
-     - 从 [WinUtils 存储库](https://github.com/steveloughran/winutils)下载 `winutils.exe` 二进制文件。 应选择编译 Spark 发行版时使用的 Hadoop 版本，例如，为 Spark 2.3.2 使用 hadoop-2.7.1。
-     - 将 `winutils.exe` 二进制文件保存到所选目录，例如 `C:\hadoop\bin`。
+     - 从 [WinUtils 存储库](https://github.com/steveloughran/winutils)下载 `winutils.exe` 二进制文件。 应选择编译 Spark 发行版时使用的 Hadoop 版本。 例如将 hadoop-2.7.1 用于 Spark 2.3.2。
+     - 将 `winutils.exe` 二进制文件保存到所选目录。 例如 C:\hadoop\bin  。
      - 设置 `HADOOP_HOME` 以反映包含 winutils.exe（不带 bin）的目录。 例如，使用命令行：
 
        ```powershell
@@ -84,14 +84,14 @@ ms.locfileid: "76928060"
        set PATH=%HADOOP_HOME%\bin;%PATH%
        ```
 
-确保可以从命令行运行 `dotnet`、`java`、`mvn`、`spark-shell`，然后再转到下一部分。 认为还有更好的办法？ 请[发布问题](https://github.com/dotnet/spark/issues)随意参与。
+确保可以从命令行运行 `dotnet`、`java`、`mvn`、`spark-shell`，然后再进行下一步。 认为还有更好的办法？ 请[发布问题](https://github.com/dotnet/spark/issues)并随意参与讨论。
 
 > [!NOTE]
 > 如果更新了任何环境变量，可能需要命令行的新实例。
 
 ## <a name="build"></a>生成
 
-对于本指南的其余部分，需要将 .NET for Apache Spark 存储库克隆到计算机。 可以为克隆存储库选择任何位置，例如 `C:\github\dotnet-spark\`。
+对于本指南的其余部分，需要将 .NET for Apache Spark 存储库克隆到计算机。 可以为克隆存储库选择任何位置。 例如 *C:\github\dotnet-spark\*。
 
 ```bash
 git clone https://github.com/dotnet/spark.git C:\github\dotnet-spark
@@ -212,13 +212,13 @@ mvn clean package
 
 生成示例后，无论你是面向 .NET Framework 还是 .NET Core，都可以通过 `spark-submit` 来运行它们。 请确保已按照[先决条件](#prerequisites)部分操作并安装 Apache Spark。
 
-  1. 设置 `DOTNET_WORKER_DIR` 或 `PATH` 环境变量以包含已生成 `Microsoft.Spark.Worker` 二进制文件的路径（例如，.NET Framework 的 `C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461`、.NET Core 的 `C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish`）：
+  1. 设置 `DOTNET_WORKER_DIR` 或 `PATH` 环境变量，使其包含已生成 `Microsoft.Spark.Worker` 二进制文件的路径（例如在 .NET Framework 中为 C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461，在 .NET Core 中为 C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish）   ：
 
       ```powershell
       set DOTNET_WORKER_DIR=C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish
       ```
   
-  2. 打开 Powershell 并转到已生成应用程序二进制文件的目录（例如，.NET Framework 的 `C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461`、.NET Core 的 `C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish`）：
+  2. 打开 Powershell 并转到已生成应用二进制文件的目录（例如在 .NET Framework 中为 C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461，在 .NET Core 在为 C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish）   ：
 
       ```powershell
       cd C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish

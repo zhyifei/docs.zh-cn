@@ -1,14 +1,14 @@
 ---
 title: C# 语句 - C# 语言介绍
 description: 使用语句创建 C# 程序操作
-ms.date: 11/06/2016
+ms.date: 02/27/2020
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.openlocfilehash: 26b151bc116dde9120757f954bdcf3aee041c5f5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ced13b1bfd17977acb98bf33c0a477161cf08a93
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634534"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159099"
 ---
 # <a name="statements"></a>语句
 
@@ -20,11 +20,11 @@ ms.locfileid: "65634534"
 
 *表达式语句*用于计算表达式。 可用作语句的表达式包括方法调用、使用 `new` 运算符的对象分配、使用 `=` 和复合赋值运算符的赋值、使用 `++` 和 `--` 运算符和 `await` 表达式的递增和递减运算。
 
-*选择语句*用于根据一些表达式的值从多个可能的语句中选择一个以供执行。 这一类语句包括 `if` 和 `switch` 语句。
+*选择语句*用于根据一些表达式的值从多个可能的语句中选择一个以供执行。 此组包含 `if` 和 `switch` 语句。
 
-*迭代语句*用于重复执行嵌入语句。 这一类语句包括 `while`、`do`、`for` 和 `foreach` 语句。
+*迭代语句*用于重复执行嵌入语句。 此组包含 `while`、`do`、`for` 和 `foreach` 语句。
 
-*跳转语句*用于转移控制权。 这一类语句包括 `break`、`continue`、`goto`、`throw`、`return` 和 `yield` 语句。
+*跳转语句*用于转移控制权。 此组包含 `break`、`continue`、`goto`、`throw`、`return` 和 `yield` 语句。
 
 `try`...`catch` 语句用于捕获在代码块执行期间发生的异常，`try`...`finally` 语句用于指定始终执行的最终代码，无论异常发生与否。
 

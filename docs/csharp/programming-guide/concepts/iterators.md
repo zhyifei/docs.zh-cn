@@ -2,12 +2,12 @@
 title: 循环访问 C# 中的集合
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: d47dcf6e7748f85978b1b0bcf739b5d1280263f3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: aceedd11466c75cedad3c67224c3a5595b4cabfa
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594964"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626265"
 ---
 # <a name="iterators-c"></a>迭代器 (C#)
 
@@ -324,11 +324,11 @@ public class Stack<T> : IEnumerable<T>
 
 迭代器可用作一种方法，或一个 `get` 访问器。 不能在事件、实例构造函数、静态构造函数或静态终结器中使用迭代器。
 
-必须存在从 `yield return` 语句中的表达式类型到迭代器返回的 IEnumerable\<T> 类型参数的隐式转换。
+必须存在从 `yield return` 语句中的表达式类型到迭代器返回的 `IEnumerable<T>` 类型参数的隐式转换。
 
 在 C# 中，迭代器方法不能有任何 `in`、`ref` 或 `out` 参数。
 
-在 C# 中，“yield”不是保留字，只有在 `return` 或 `break` 关键字之前使用时才有特殊含义。
+在 C# 中，`yield` 不是保留字，只有在 `return` 或 `break` 关键字之前使用时才有特殊含义。
 
 ## <a name="technical-implementation"></a>技术实现
 
@@ -336,7 +336,7 @@ public class Stack<T> : IEnumerable<T>
 
 若要查看编译器执行的操作，可使用 Ildasm.exe 工具查看为迭代器方法生成的 Microsoft 中间语言代码。
 
-为[类](../../language-reference/keywords/class.md)或[结构](../../language-reference/keywords/struct.md)创建迭代器时，不必实现整个 <xref:System.Collections.IEnumerator> 接口。 编译器检测到迭代器时，会自动生成 <xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601> 接口的 `Current`、`MoveNext` 和 `Dispose` 方法。
+为[类](../../language-reference/keywords/class.md)或[结构](../../language-reference/builtin-types/struct.md)创建迭代器时，不必实现整个 <xref:System.Collections.IEnumerator> 接口。 编译器检测到迭代器时，会自动生成 <xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601> 接口的 `Current`、`MoveNext` 和 `Dispose` 方法。
 
 在 `foreach` 循环（或对 `IEnumerator.MoveNext` 的直接调用）的每次后续迭代中，下一个迭代器代码体都会在上一个 `yield return` 语句之后恢复。 然后继续下一个 `yield return` 语句，直至到达迭代器体的结尾，或直至遇到 `yield break` 语句。
 
