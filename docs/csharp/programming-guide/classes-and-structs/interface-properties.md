@@ -1,24 +1,24 @@
 ---
 title: 接口属性 - C# 编程指南
-ms.date: 07/20/2015
+ms.date: 01/31/2020
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: ff892a35f4be6600c00bc0c72c2f789ef6eb4408
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5798b80526f34e923e2eaab43847b98f6c64e14b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705530"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626615"
 ---
 # <a name="interface-properties-c-programming-guide"></a>接口属性（C# 编程指南）
 
-可以在[接口](../../language-reference/keywords/interface.md)上声明属性。 下面是接口属性访问器的示例：
+可以在[接口](../../language-reference/keywords/interface.md)上声明属性。 下面的示例声明一个接口属性访问器：
 
-[!code-csharp[csProgGuideProperties#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#14)]
+[!code-csharp[DeclareProperties](~/samples/snippets/csharp/interfaces/properties.cs#DeclareInterfaceProperties)]
 
-接口属性的访问器没有正文。 因此，访问器的用途是指示属性为读写、只读还是只写。
+接口属性通常没有主体。 访问器指示属性是读写、只读还是只写。 与在类和结构中不同，在没有主体的情况下声明访问器不会声明[自动实现的属性](auto-implemented-properties.md)。 从 C# 8.0 开始，接口可为成员（包括属性）定义默认实现。 在接口中为属性定义默认实现的情况非常少，因为接口可能不会定义实例数据字段。
 
 ## <a name="example"></a>示例
 
@@ -26,19 +26,20 @@ ms.locfileid: "75705530"
 
 可以使用属性的完全限定名称，它引用其中声明成员的接口。 例如：
 
-[!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]
+[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
 
-这称为[显式接口实现](../interfaces/explicit-interface-implementation.md)。 例如，如果 `Employee` 类正在实现接口 `ICitizen` 和接口 `IEmployee`，而这两个接口都具有 `Name` 属性，则需要用到显式接口成员实现。 即是说下列属性声明：
+前面的示例演示了如何[显式接口实现](../interfaces/explicit-interface-implementation.md)。 例如，如果 `Employee` 类正在实现接口 `ICitizen` 和接口 `IEmployee`，而这两个接口都具有 `Name` 属性，则需要用到显式接口成员实现。 即是说下列属性声明：
 
-[!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]
+[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
 
 在 `IEmployee` 接口中实现 `Name` 属性，而以下声明：
 
-[!code-csharp[csProgGuideProperties#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#17)]
+[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#CitizenImplementation)]
 
 在 `ICitizen` 接口中实现 `Name` 属性。
 
-[!code-csharp[csProgGuideProperties#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#15)]
+[!code-csharp[Example](~/samples/snippets/csharp/interfaces/properties.cs#PropertyExample)]
+[!code-csharp[Example](~/samples/snippets/csharp/interfaces/properties.cs#UseProperty)]
 
 **`210 Hazem Abolrous`**
 
