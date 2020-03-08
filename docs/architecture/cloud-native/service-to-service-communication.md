@@ -4,11 +4,11 @@ description: 了解后端云和本地微服务与其他后端微服务通信的�
 author: robvet
 ms.date: 09/09/2019
 ms.openlocfilehash: a5124b8b83f62ff17b1230ead63db26e0c1f2a5b
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087600"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675139"
 ---
 # <a name="service-to-service-communication"></a>服务到服务通信
 
@@ -220,7 +220,7 @@ Azure 服务总线和事件网格为公开单一独立事件（例如新 Cosmos 
 
 事件中心支持常见的事件发布协议，包括 HTTPS 和 AMQP。 它还支持 Kafka 1.0。 [现有的 Kafka 应用程序可使用 Kafka 协议与事件中心进行通信](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview)，该协议提供了管理大型 Kafka 群集的替代方法。 许多开源云本机系统都接受 Kafka。
 
-事件中心通过[分区使用者模型](https://docs.microsoft.com/azure/event-hubs/event-hubs-features)实现消息流式处理，其中每个使用者只读取消息流的特定子集或分区。 此模式允许以极大的水平缩放规模进行事件处理，并提供队列和主题所不能提供的其他面向流的功能。 分区是事件中心内保留的有序事件的序列。 当较新的事件到达时，它们将被添加到此序列的末尾。 图4-19 显示事件中心中的分区。
+事件中心通过[分区使用者模型](https://docs.microsoft.com/azure/event-hubs/event-hubs-features)实现消息流式处理，其中每个使用者只读取消息流的特定子集或分区。 此模式允许以极大的水平缩放规模进行事件处理，并提供队列和主题所不能提供的其他面向流的功能。 分区是事件中心内保留的有序事件。 当较新的事件到达时，它们将被添加到此序列的末尾。 图4-19 显示事件中心中的分区。
 
 ![事件中心分区](./media/event-hub-partitioning.png)
 

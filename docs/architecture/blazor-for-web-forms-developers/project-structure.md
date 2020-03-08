@@ -5,11 +5,11 @@ author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
 ms.openlocfilehash: 2c383e86ff22f5a3460476998992b66e9417cc11
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841905"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675005"
 ---
 # <a name="project-structure-for-blazor-apps"></a>Blazor 应用的项目结构
 
@@ -137,7 +137,7 @@ Blazor 项目中的大多数文件都是*razor*文件。 Razor 是基于 HTML C#
 @using BlazorApp1.Shared
 ```
 
-## <a name="pages"></a>Pages
+## <a name="pages"></a>页
 
 Blazor 应用中的页面位于何处？ Blazor 不会为可寻址页面定义单独的文件扩展名，例如 ASP.NET Web Forms apps 中的 *.aspx*文件。 而是通过将路由分配给组件来定义页面。 通常使用 `@page` Razor 指令分配路由。 例如，在*Pages/Counter*文件中编写的 `Counter` 组件定义了以下路由：
 
