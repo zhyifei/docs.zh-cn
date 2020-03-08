@@ -3,11 +3,11 @@ title: 创建 gRPC 客户端库-WCF 开发人员 gRPC
 description: 针对 gRPC services 的共享客户端库/包的讨论。
 ms.date: 09/02/2019
 ms.openlocfilehash: bb58cb3cda4b0cbb3a5d34129961349bcb0093e9
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711458"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675171"
 ---
 # <a name="create-grpc-client-libraries"></a>创建 gRPC 客户端库
 

@@ -3,11 +3,11 @@ title: 适用于 WCF 开发人员的 gRPC 类型
 description: 查看 WCF 支持的远程过程调用的类型以及它们在 gRPC 中的等效项
 ms.date: 09/02/2019
 ms.openlocfilehash: 58f097bac61395e6810155e8ae9a6bbf2219ec5e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503439"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675158"
 ---
 # <a name="types-of-rpc"></a>RPC 类型
 
