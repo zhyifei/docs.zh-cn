@@ -19,10 +19,10 @@ helpviewer_keywords:
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 ms.openlocfilehash: 99e1f3f96465d05c100a0dbb2bc5218810c33754
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159424"
 ---
 # <a name="types-of-isolation"></a>隔离的类型
@@ -73,7 +73,7 @@ ms.locfileid: "78159424"
   
 <a name="UserDomainAssembly"></a>
 ## <a name="isolation-by-user-domain-and-assembly"></a>按用户、域和程序集隔离  
- 如果应用使用需要专用数据存储的第三方程序集，可以使用独立存储来存储专用数据。 按用户、域和程序集隔离可确保，仅当使用程序集的应用在程序集创建存储时正在运行时，且仅当为其创建存储的用户运行应用时，只有给定程序集中的代码才能访问数据。 按用户、域和程序集隔离可防止第三方程序集将数据泄漏给其他应用。 如果确定要使用独立存储，但不确定要使用哪种类型的隔离，此隔离类型应为默认选择。 调用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 的静态 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 方法并传入用户、域和程序集 <xref:System.IO.IsolatedStorage.IsolatedStorageScope>，即可返回采用这种隔离的存储。  
+ 如果应用使用需要专用数据存储的第三方程序集，可以使用独立存储来存储专用数据。 按用户、域和程序集隔离可确保，仅当使用程序集的应用在程序集创建存储时正在运行时，且仅当为其创建存储的用户运行应用时，只有给定程序集中的代码才能访问数据。 按用户、域和程序集隔离可防止第三方程序集将数据泄漏给其他应用。 如果确定要使用独立存储，但不确定要使用哪种类型的隔离，此隔离类型应为默认选择。 调用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 的静态 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 方法并传入用户、域和程序集 <xref:System.IO.IsolatedStorage.IsolatedStorageScope>，即可返回采用这种隔离的存储。  
   
  下面的代码示例检索按用户、域和程序集隔离的存储。 可通过 `isoFile` 对象访问此存储。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "78159424"
  [!code-csharp[Conceptual.IsolatedStorage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#12)]
  [!code-vb[Conceptual.IsolatedStorage#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#12)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
 - [独立存储](../../../docs/standard/io/isolated-storage.md)

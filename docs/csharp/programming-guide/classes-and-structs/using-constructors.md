@@ -5,17 +5,17 @@ helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
 ms.openlocfilehash: 7c227b61c6d5b4ead00fced0dba046b90683fde1
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626407"
 ---
 # <a name="using-constructors-c-programming-guide"></a>使用构造函数（C# 编程指南）
 
 创建[类](../../language-reference/keywords/class.md)或[结构](../../language-reference/builtin-types/struct.md)时，将会调用其构造函数。 构造函数与该类或结构具有相同名称，并且通常初始化新对象的数据成员。  
   
- 在下面的示例中，通过使用简单构造函数定义了一个名为 `Taxi` 的类。 然后使用 [new](../../language-reference/operators/new-operator.md) 运算符对该类进行实例化。 在为新对象分配内存之后，`new` 运算符立即调用 `Taxi` 构造函数。  
+ 在下面的示例中，通过使用简单构造函数定义了一个名为 `Taxi` 的类。 然后使用 [new](../../language-reference/operators/new-operator.md) 运算符对该类进行实例化。 在为新对象分配内存之后，`Taxi` 运算符立即调用 `new` 构造函数。  
   
  [!code-csharp[csProgGuideObjects#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#53)]  
   
@@ -29,7 +29,7 @@ ms.locfileid: "77626407"
   
  有关详细信息，请参阅[私有构造函数](./private-constructors.md)。  
   
- [结构](../../language-reference/builtin-types/struct.md)类型的构造函数与类的构造函数类似，但是 `structs` 不包含显式无参数构造函数，因为编译器将自动提供一个显式无参数构造函数。 此构造函数会将 `struct` 中的每个字段初始化为[默认值](../../language-reference/builtin-types/default-values.md)。 但是，只有使用 `new` 实例化 `struct` 时，才会调用此无参数构造函数。 例如，此代码使用 <xref:System.Int32> 的无参数构造函数，因此可确保整数已初始化：  
+ [结构](../../language-reference/builtin-types/struct.md)类型的构造函数与类的构造函数类似，但是 `structs` 不包含显式无参数构造函数，因为编译器将自动提供一个显式无参数构造函数。 此构造函数会将 `struct` 中的每个字段初始化为[默认值](../../language-reference/builtin-types/default-values.md)。 但是，只有使用 `struct` 实例化 `new` 时，才会调用此无参数构造函数。 例如，此代码使用 <xref:System.Int32> 的无参数构造函数，因此可确保整数已初始化：  
   
 ```csharp  
 int i = new int();  
@@ -54,7 +54,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  因此无需调用值类型的无参数构造函数。  
   
- 两个类和 `structs` 都可以定义带参数的构造函数。 必须通过 `new` 语句或 [base](../../language-reference/keywords/base.md) 语句调用带参数的构造函数。 类和 `structs` 还可以定义多个构造函数，并且二者均无需定义无参数构造函数。 例如：  
+ 两个类和 `structs` 都可以定义带参数的构造函数。 必须通过 `new` 语句或 [base](../../language-reference/keywords/base.md) 语句调用带参数的构造函数。 类和 `structs` 还可以定义多个构造函数，并且二者均无需定义无参数构造函数。 例如:  
   
  [!code-csharp[csProgGuideObjects#54](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#54)]  
   
@@ -62,7 +62,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#55](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#55)]  
   
- 构造函数可以使用 `base` 关键字调用基类的构造函数。 例如：  
+ 构造函数可以使用 `base` 关键字调用基类的构造函数。 例如:  
   
  [!code-csharp[csProgGuideObjects#56](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#56)]  
   
@@ -90,9 +90,9 @@ Console.WriteLine("{0}, {1}", a, b);
   
 ## <a name="c-language-specification"></a>C# 语言规范  
 
-有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[实例构造函数](~/_csharplang/spec/classes.md#instance-constructors)和[静态构造函数](~/_csharplang/spec/classes.md#static-constructors)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/classes.md#instance-constructors)中的[实例构造函数](~/_csharplang/spec/classes.md#static-constructors)和[静态构造函数](/dotnet/csharp/language-reference/language-specification/introduction)。 该语言规范是 C# 语法和用法的权威资料。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [类和结构](./index.md)

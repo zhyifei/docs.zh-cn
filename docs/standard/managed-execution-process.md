@@ -11,10 +11,10 @@ helpviewer_keywords:
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160217"
 ---
 # <a name="managed-execution-process"></a>托管执行过程
@@ -105,7 +105,7 @@ ms.locfileid: "78160217"
   
  [返回页首](#introduction)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [概述](../../docs/framework/get-started/overview.md)
 - [语言独立性和与语言无关的组件](../../docs/standard/language-independence-and-language-independent-components.md)

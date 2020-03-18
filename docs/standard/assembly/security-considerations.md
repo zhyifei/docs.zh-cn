@@ -16,10 +16,10 @@ helpviewer_keywords:
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 ms.openlocfilehash: 77c9f9131b556e0b8fa639cd723bf1ca8cd6602e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73972312"
 ---
 # <a name="assembly-security-considerations"></a>程序集安全注意事项
@@ -60,7 +60,7 @@ ms.locfileid: "73972312"
   
  因为强命名和使用 [SignTool.exe（签名工具）](../../framework/tools/signtool-exe.md)进行签名确保了完整性，因此可将代码访问安全策略建立在这两种形式的程序集证据的基础上。 强命名和使用 [SignTool.exe（签名工具）](../../framework/tools/signtool-exe.md)进行签名通过数字签名和证书来确保完整性。 上面提到的所有技术（哈希验证、强命名和使用 [SignTool.exe（签名工具）](../../framework/tools/signtool-exe.md) 进行签名）可协同工作，确保程序集没有做过任何方式的改动。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [具有强名称的程序集](strong-named.md)
 - [.NET 中的程序集](index.md)

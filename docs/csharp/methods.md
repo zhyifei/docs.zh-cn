@@ -5,11 +5,11 @@ ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
 ms.openlocfilehash: f44c83408e884d76eef5e2b5abbca511fbae2a1f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73101487"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398711"
 ---
 # <a name="methods"></a>方法
 
@@ -49,7 +49,7 @@ ms.locfileid: "73101487"
 
 调用方法就像访问字段。 在对象名称（如果调用实例方法）或类型名称（如果调用 `static` 方法）后添加一个句点、方法名称和括号。 自变量列在括号里，并且用逗号分隔。
 
-该方法定义指定任何所需参数的名称和类型。 调用方调用该方法时，它为每个参数提供了称为自变量的具体值。 自变量必须与参数类型兼容，但调用代码中使用的自变量名（如果有）不需要与方法中定义的自变量名相同。 在下面示例中，`Square` 方法包含名为 i  的类型为 `int` 的单个参数。 第一种方法调用将向 `Square` 方法传递名为 num  的 `int` 类型的变量；第二个方法调用将传递数值常量；第三个方法调用将传递表达式。
+该方法定义指定任何所需参数的名称和类型。 调用方调用该方法时，它为每个参数提供了称为自变量的具体值。 自变量必须与参数类型兼容，但调用代码中使用的自变量名（如果有）不需要与方法中定义的自变量名相同。 在下面示例中，`Square` 方法包含名为 i`int`*的类型为* 的单个参数。 第一种方法调用将向 `Square` 方法传递名为 num`int`*的* 类型的变量；第二个方法调用将传递数值常量；第三个方法调用将传递表达式。
 
 [!code-csharp[csSnippets.Methods#74](../../samples/snippets/csharp/concepts/methods/params74.cs#74)]
 
@@ -95,7 +95,7 @@ C# 中的所有类型不是值类型  就是引用类型  。 有关内置值类
 
 引用类型的对象按值传递到方法中时，将按值传递对对象的引用。 也就是说，该方法接收的不是对象本身，而是指示该对象位置的自变量。 控件返回到调用方法时，如果通过使用此引用更改对象的成员，此更改将反映在对象中。 但是，当控件返回到调用方时，替换传递到方法的对象对原始对象无影响。
 
-下面的示例定义名为 `SampleRefType` 的类（属于引用类型）。 它实例化 `SampleRefType` 对象，将 44 赋予其 `value` 字段，并将该对象传递给 `ModifyObject` 方法。 该示例执行的内容实质上与先前示例相同，均按值将自变量传递到方法。 但因为使用了引用类型，结果会有所不同。 `ModifyObject` 中所做的对 `obj.value` 字段的修改，也会将 `Main` 方法中的自变量 `rt` 的 `value` 字段更改为 33，如示例中的输出值所示。
+下面的示例定义名为 `SampleRefType` 的类（属于引用类型）。 它实例化 `SampleRefType` 对象，将 44 赋予其 `value` 字段，并将该对象传递给 `ModifyObject` 方法。 该示例执行的内容实质上与先前示例相同，均按值将自变量传递到方法。 但因为使用了引用类型，结果会有所不同。 `ModifyObject` 中所做的对 `obj.value` 字段的修改，也会将 `value` 方法中的自变量 `rt` 的 `Main` 字段更改为 33，如示例中的输出值所示。
 
 [!code-csharp[csSnippets.Methods#42](../../samples/snippets/csharp/concepts/methods/byvalue42.cs#42)]
 
@@ -181,7 +181,7 @@ C# 中的所有类型不是值类型  就是引用类型  。 有关内置值类
 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/return44.cs#46)]
 
-在这种情况下，使用本地变量 `result`存储值是可选的。 此步骤可以帮助提高代码的可读性，或者如果需要存储该方法整个范围内自变量的原始值，则此步骤可能很有必要。
+在这种情况下，使用本地变量 `result`存储值是可选的。 此步骤可以帮助提高代码的可读性，或者如果需要存储该方法整个范围内参数的原始值，则此步骤可能很有必要。
 
 有时，需要方法返回多个值。 从 C# 7.0 开始，可以使用元组类型  和元组文本  轻松实现此目的。 元组类型定义元组元素的数据类型。 元组文本提供返回的元组的实际值。 在下面的示例中，`(string, string, string, int)` 定义 `GetPersonalInfo` 方法返回的元组类型。 表达式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 是元组文本；方法返回 `PersonInfo` 对象的第一个、中间和最后一个名称及其使用期限。
 
@@ -217,7 +217,7 @@ var person = GetPersonalInfo("111111111");
 Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 ```
 
-如果将数组作为自变量传递给一个方法，并修改各个元素的值，则该方法不一定会返回该数组，尽管选择这么操作的原因是为了实现更好的样式或功能性的值流。  这是因为 C# 会按值传递所有引用类型，而数组引用的值是指向该数组的指针。 在下面的示例中，引用该数组的任何代码都能观察到在 `DoubleValues` 方法中对 `values` 数组内容的更改。
+如果将数组作为自变量传递给一个方法，并修改各个元素的值，则该方法不一定会返回该数组，尽管选择这么操作的原因是为了实现更好的样式或功能性的值流。  这是因为 C# 会按值传递所有引用类型，而数组引用的值是指向该数组的指针。 在下面的示例中，引用该数组的任何代码都能观察到在 `values` 方法中对 `DoubleValues` 数组内容的更改。
 
 [!code-csharp[csSnippets.Methods#101](../../samples/snippets/csharp/concepts/methods/returnarray1.cs#101)]
 
@@ -240,14 +240,14 @@ Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 
 通过使用异步功能，你可以调用异步方法而无需使用显式回调，也不需要跨多个方法或 lambda 表达式来手动拆分代码。
 
-如果用 [async](language-reference/keywords/async.md) 修饰符标记方法，则可以在该方法中使用 [await](language-reference/operators/await.md) 运算符。 当控件到达异步方法中的 `await` 表达式时，如果等待的任务未完成，控件将返回到调用方，并在等待任务完成前，包含 `await` 关键字的方法中的进度将一直处于挂起状态。 任务完成后，可以在方法中恢复执行。
+如果用 [async](language-reference/keywords/async.md) 修饰符标记方法，则可以使用该方法中的 [await](language-reference/operators/await.md) 运算符。 当控件到达异步方法中的 `await` 表达式时，如果等待的任务未完成，控件将返回到调用方，并在等待任务完成前，包含 `await` 关键字的方法中的进度将一直处于挂起状态。 任务完成后，可以在方法中恢复执行。
 
 > [!NOTE]
 > 异步方法在遇到第一个尚未完成的 awaited 对象或到达异步方法的末尾时（以先发生者为准），将返回到调用方。
 
 异步方法可以具有 <xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task>、 或 `void` 返回类型。 `void` 返回类型主要用于定义需要 `void` 返回类型的事件处理程序。 无法等待返回 `void` 的异步方法，并且返回 void 方法的调用方无法捕获该方法引发的异常。 从 C# 7.0 开始，异步方法可以有[任何类似任务的返回类型](./whats-new/csharp-7.md#generalized-async-return-types)。
 
-在下面的示例中，`DelayAsync` 是一个异步方法，包含返回整数的 return 语句。 由于它是异步方法，其方法声明必须具有返回类型 `Task<int>`。 因为返回类型是 `Task<int>`，`DoSomethingAsync` 中 `await` 表达式的计算将如以下 `int result = await delayTask` 语句所示得出整数。
+在下面的示例中，`DelayAsync` 是一个异步方法，包含返回整数的 return 语句。 由于它是异步方法，其方法声明必须具有返回类型 `Task<int>`。 因为返回类型是 `Task<int>`，`await` 中 `DoSomethingAsync` 表达式的计算将如以下 `int result = await delayTask` 语句所示得出整数。
 
 [!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
 
@@ -259,7 +259,7 @@ Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 
 ## <a name="expression-bodied-members"></a>Expression-Bodied 成员
 
-具有立即仅返回表达式结果，或单个语句作为方法主题的方法定义很常见。  以下是使用 `=>` 定义此类方法的语法快捷方式：
+具有立即仅返回表达式结果，或单个语句作为方法主题的方法定义很常见。  以下是使用 `=>`定义此类方法的语法快捷方式：
 
 ```csharp
 public Point Move(int dx, int dy) => new Point(x + dx, y + dy);
@@ -274,7 +274,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 <a name="iterators"></a>
 
-## <a name="iterators"></a>Iterators
+## <a name="iterators"></a>迭代器
 
 迭代器对集合执行自定义迭代，如列表或数组。 迭代器使用 [yield return](language-reference/keywords/yield.md) 语句返回元素，每次返回一个。 到达 `yield return` 语句后，会记住当前位置，以便调用方可以请求序列中的下一个元素。
 
@@ -282,7 +282,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 有关更多信息，请参见 [迭代器](programming-guide/concepts/iterators.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [访问修饰符](language-reference/keywords/access-modifiers.md)
 - [静态类和静态类成员](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)

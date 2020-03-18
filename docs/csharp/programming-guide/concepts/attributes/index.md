@@ -2,11 +2,11 @@
 title: 特性 (C#)
 ms.date: 04/26/2018
 ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141562"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397640"
 ---
 # <a name="attributes-c"></a>特性 (C#)
 
@@ -67,15 +67,15 @@ ms.locfileid: "74141562"
 
 下表列出了可能的 `target` 值。
 
-|目标值|适用对象|
+|目标值|适用于|
 |------------------|----------------|
 |`assembly`|整个程序集|
 |`module`|当前程序集模块|
 |`field`|类或结构中的字段|
-|`event`|事件|
+|`event`|ㄆン|
 |`method`|方法或 `get` 和 `set` 属性访问器|
 |`param`|方法参数或 `set` 属性访问器参数|
-|`property`|属性|
+|`property`|Property|
 |`return`|方法、属性索引器或 `get` 属性访问器的返回值|
 |`type`|结构、类、接口、枚举或委托|
 
@@ -115,7 +115,7 @@ using System.Reflection;
 
 ## <a name="related-sections"></a>相关章节
 
-有关详细信息，请参见:
+有关详情，请参阅：
 
 - [创建自定义特性 (C#)](creating-custom-attributes.md)  
 - [使用反射访问特性 (C#)](accessing-attributes-by-using-reflection.md)  
@@ -123,7 +123,7 @@ using System.Reflection;
 - [通用特性 (C#)](common-attributes.md)  
 - [调用方信息 (C#)](../caller-information.md)  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../../index.md)
 - [反射 (C#)](../reflection.md)

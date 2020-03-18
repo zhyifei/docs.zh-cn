@@ -10,10 +10,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
 ms.openlocfilehash: 33a4f5424ac50de7b5dc988034ca15127dc1ed02
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348821"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>如何：在同一目录中创建文件副本 (Visual Basic)
@@ -22,13 +22,13 @@ ms.locfileid: "74348821"
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a>在同一文件夹中创建文件副本  
   
-- 使用 `CopyFile` 方法，提供目标文件和位置。 下面的示例创建名为 `test2.txt` 的 `test.txt` 副本。  
+- 使用 `CopyFile` 方法，提供目标文件和位置。 下面的示例创建名为 `test.txt` 的 `test2.txt` 副本。  
   
      [!code-vb[VbVbcnMyFileSystem#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#51)]  
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a>通过覆盖现有文件在同一文件夹中创建文件副本  
   
-- 使用 `CopyFile` 方法，提供目标文件和位置，并将 `overwrite` 设置为 `True`。 下面的示例创建名为 `test2.txt` 的 `test.txt` 副本，并用该名称覆盖任何现有文件。  
+- 使用 `CopyFile` 方法，提供目标文件和位置，并将 `overwrite` 设置为 `True`。 下面的示例创建名为 `test.txt` 的 `test2.txt` 副本，并用该名称覆盖任何现有文件。  
   
      [!code-vb[VbVbcnMyFileSystem#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#52)]  
   
@@ -64,12 +64,12 @@ ms.locfileid: "74348821"
   
 - 该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
 - [如何：将具有特定模式的文件复制到目录中](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
 - [如何：在不同的目录中创建文件的副本](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
-- [如何：将目录复制到另一个目录](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)
+- [如何：将一个目录复制到另一个目录](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)
 - [如何：重命名文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)

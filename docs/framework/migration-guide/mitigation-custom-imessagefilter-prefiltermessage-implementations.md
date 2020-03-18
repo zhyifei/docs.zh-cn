@@ -3,11 +3,11 @@ title: 缓解：自定义 IMessageFilter.PreFilterMessage 实现
 ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
 ms.openlocfilehash: 7757e8d1fd0258ab2d972b7321082e4afa37f710
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457938"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398645"
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>缓解：自定义 IMessageFilter.PreFilterMessage 实现
 
@@ -25,9 +25,9 @@ ms.locfileid: "73457938"
 
 此更改仅影响面向从 .NET Framework 4.6.1 开始的 .NET Framework 版本的 Windows 窗体应用。
 
-对于面向以前版本的 .NET framework 的 Windows 窗体应用程序，在调用 <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> 方法时，此类实现在某些情况下会引发 <xref:System.IndexOutOfRangeException> 异常
+对于面向以前版本的 .NET framework 的 Windows 窗体应用程序，在调用 <xref:System.IndexOutOfRangeException> 方法时，此类实现在某些情况下会引发 <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> 异常
 
-## <a name="mitigation"></a>缓解
+## <a name="mitigation"></a>缓解操作
 
 如果无需进行此更改，面向 .NET Framework 4.6.1 或更高版本的应用可通过将以下配置设置添加到应用配置文件的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 部分来选择放弃更改：
 
@@ -45,6 +45,6 @@ ms.locfileid: "73457938"
 </runtime>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [应用程序兼容性](application-compatibility.md)

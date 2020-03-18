@@ -3,17 +3,17 @@ title: dotnet new 命令
 description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
 ms.date: 02/13/2020
 ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157214"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398027"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
  本文适用于： ✔️ .NET Core 2.0 SDK 及更高版本
 
-## <a name="name"></a>“属性”
+## <a name="name"></a>名称
 
 `dotnet new` - 根据指定的模板，创建新的项目、配置文件或解决方案。
 
@@ -26,13 +26,13 @@ dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet new` 命令基于模板创建 .NET Core 项目或其他项目。
 
 命令调用[模板引擎](https://github.com/dotnet/templating)，以根据指定的模板和选项在磁盘上创建项目。
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 - **`TEMPLATE`**
 
@@ -96,7 +96,7 @@ dotnet new [-h|--help]
 
 - **`-h|--help`**
 
-  打印命令帮助。 可针对 `dotnet new` 命令本身或任何模板调用它。 例如 `dotnet new mvc --help`。
+  打印命令帮助。 可针对 `dotnet new` 命令本身或任何模板调用它。 例如，`dotnet new mvc --help` 。
 
 - **`-i|--install <PATH|NUGET_ID>`**
 
@@ -115,7 +115,7 @@ dotnet new [-h|--help]
   要创建的模板的语言。 接受的语言因模板而异（请参阅[参数](#arguments)部分中的默认值）。 对于某些模板无效。
 
   > [!NOTE]
-  > 某些 shell 将 `#` 解释为特殊字符。 在这些情况下，请将语言参数值括在引号中。 例如 `dotnet new console -lang "F#"`。
+  > 某些 shell 将 `#` 解释为特殊字符。 在这些情况下，请将语言参数值括在引号中。 例如，`dotnet new console -lang "F#"` 。
 
 - **`-n|--name <OUTPUT_NAME>`**
 
@@ -140,7 +140,7 @@ dotnet new [-h|--help]
   如果未指定此选项的参数，该命令将列出已安装的模板及其详细信息。
 
   > [!NOTE]
-  > 若要使用 `PATH` 卸载模板，需要完全限定路径。 例如，C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp  有效，但是包含文件夹中的 ./GarciaSoftware.ConsoleTemplate.CSharp  无效。
+  > 若要使用 `PATH` 卸载模板，需要完全限定路径。 例如，C:/Users/*USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp\<* 有效，但是包含文件夹中的 ./GarciaSoftware.ConsoleTemplate.CSharp  无效。
   > 模板路径中不要包含最后的终止目录斜杠。
 
 - **`--update-apply`**
@@ -472,7 +472,7 @@ dotnet new [-h|--help]
 
 - **`--no-https`**
 
-  关闭 HTTPS。 此选项仅适用于未使用 `Individual`、`IndividualB2C`、`SingleOrg` 和 `MultiOrg` 的情况。
+  关闭 HTTPS。 此选项仅适用于未使用 `Individual`、`IndividualB2C``SingleOrg` 和 `MultiOrg` 的情况。
 
 - **`-uld|--use-local-db`**
 
@@ -725,7 +725,7 @@ dotnet new [-h|--help]
   dotnet new globaljson --sdk-version 3.1.101
   ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [dotnet new 自定义模板](custom-templates.md)
 - [创建 dotnet new 自定义模板](../tutorials/cli-templates-create-item-template.md)

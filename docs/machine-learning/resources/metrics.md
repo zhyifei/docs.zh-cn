@@ -3,11 +3,11 @@ title: ML.NET 指标
 description: 了解用于评估 ML.NET 模型性能的指标
 ms.date: 12/17/2019
 ms.openlocfilehash: 8e823fd8cc344c1b8e0ecd709b527137368cbfa0
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739607"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397799"
 ---
 # <a name="evaluate-your-mlnet-model-with-metrics"></a>使用指标评估 ML.NET 模型
 

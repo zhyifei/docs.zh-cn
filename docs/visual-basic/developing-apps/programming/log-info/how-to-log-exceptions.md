@@ -1,15 +1,15 @@
 ---
-title: 如何：记录异常
+title: 如何：日志异常
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
 ms.openlocfilehash: fe6949d727fae0c230ce7421b32fdaf2a498edbc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352085"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>如何：在 Visual Basic 中记录异常
@@ -44,7 +44,7 @@ ms.locfileid: "74352085"
   
 ### <a name="to-log-an-unhandled-exception"></a>记录未处理的异常  
   
-1. 在 “解决方案资源管理器”中选择一个项目。  在 **“项目”** 菜单上，选择 **“属性”** 。  
+1. 在 **“解决方案资源管理器”** 中选择一个项目。 在 **“项目”** 菜单上，选择 **“属性”** 。  
   
 2. 单击“应用程序”  选项卡。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "74352085"
   
      此时将打开 ApplicationEvents.vb 文件。  
   
-4. 在“代码编辑器”中打开 ApplicationEvents.vb 文件。 在“常规”  菜单上，选择“MyApplication 事件”。    
+4. 在“代码编辑器”中打开 ApplicationEvents.vb 文件。 在“常规”  菜单上，选择“MyApplication 事件”  。  
   
 5. 在“声明”  菜单上，选择“UnhandledException”  。  
   
@@ -66,12 +66,12 @@ ms.locfileid: "74352085"
   
      [!code-vb[VbVbalrMyApplicationLog#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#5)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [如何：写入日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [演练：确定 My.Application.Log 在哪里写入信息](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [演练：更改 My.Application.Log 在哪里写入信息](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [如何：编写日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [演练：确定 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [演练：更改 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

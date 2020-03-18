@@ -6,10 +6,10 @@ helpviewer_keywords:
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
 ms.openlocfilehash: c8e13598080139cafabffb2e17d0a3b99c37dc5d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348775"
 ---
 # <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>如何：在 Visual Basic 中查找具有特定模式的子目录
@@ -46,7 +46,7 @@ ms.locfileid: "74348775"
 
 - 该用户缺少必要的权限 (<xref:System.UnauthorizedAccessException>)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>
 - [如何：查找具有特定模式的文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)
