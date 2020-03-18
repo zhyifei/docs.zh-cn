@@ -12,10 +12,10 @@ helpviewer_keywords:
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
 ms.openlocfilehash: f38301a3a717a35b98e55804d6435d046bbbbab4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345652"
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>如何：在 Visual Basic 中删除注册表项
@@ -48,7 +48,7 @@ ms.locfileid: "74345652"
 
  如果未授予足够的运行时权限 (<xref:System.Security.Permissions.RegistryPermission>) 或用户没有用于创建或写入设置的适当访问权限（由 ACL 确定），则注册表调用将失败。 例如，具有代码访问安全性权限的本地应用程序可能没有操作系统权限。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey>

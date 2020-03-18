@@ -3,10 +3,10 @@ title: 如何使用表达式树来生成动态查询 (C#)
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
 ms.openlocfilehash: 6114ec13dd43a7df146b87dda00fba06d6eb870c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635894"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>如何使用表达式树来生成动态查询 (C#)
@@ -24,7 +24,7 @@ ms.locfileid: "75635894"
           .OrderBy(company => company)
  ```
   
- <xref:System.Linq.Expressions> 命名空间中的工厂方法用于创建表达式树，这些表达式树表示构成总体查询的表达式。 表示标准查询运算符方法调用的表达式将引用这些方法的 <xref:System.Linq.Queryable> 实现。 最终的表达式树将传递给 `IQueryable` 数据源的提供程序的 <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 实现，以创建 `IQueryable` 类型的可执行查询。 通过枚举该查询变量获得结果。  
+ <xref:System.Linq.Expressions> 命名空间中的工厂方法用于创建表达式树，这些表达式树表示构成总体查询的表达式。 表示标准查询运算符方法调用的表达式将引用这些方法的 <xref:System.Linq.Queryable> 实现。 最终的表达式树将传递给 <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 数据源的提供程序的 `IQueryable` 实现，以创建 `IQueryable` 类型的可执行查询。 通过枚举该查询变量获得结果。  
   
 ```csharp  
 // Add a using directive for System.Linq.Expressions.  
@@ -105,7 +105,7 @@ foreach (string company in results)
   
 - 包括 System.Linq.Expressions 命名空间。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [表达式树 (C#)](./index.md)
 - [如何执行表达式树 (C#)](./how-to-execute-expression-trees.md)

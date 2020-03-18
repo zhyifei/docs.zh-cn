@@ -3,10 +3,10 @@ title: 元素运算 (C#)
 ms.date: 10/03/2018
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
 ms.openlocfilehash: e9ec41793afffe60a7184622f91b5fc023e0958f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345162"
 ---
 # <a name="element-operations-c"></a>元素运算 (C#)
@@ -17,7 +17,7 @@ ms.locfileid: "75345162"
   
 ## <a name="methods"></a>方法  
   
-|方法名|描述|C# 查询表达式语法|详细信息|  
+|方法名|说明|C# 查询表达式语法|详细信息|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |ElementAt|返回集合中指定索引处的元素。|不适用。|<xref:System.Linq.Enumerable.ElementAt%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAt%2A?displayProperty=nameWithType>|  
 |ElementAtOrDefault|返回集合中指定索引处的元素；如果索引超出范围，则返回默认值。|不适用。|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAtOrDefault%2A?displayProperty=nameWithType>|  
@@ -28,7 +28,7 @@ ms.locfileid: "75345162"
 |Single|返回集合的唯一一个元素或满足条件的唯一一个元素。 如果没有要返回的元素或要返回多个元素，则引发 <xref:System.InvalidOperationException>。 |不适用。|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
 |SingleOrDefault|返回集合的唯一一个元素或满足条件的唯一一个元素。 如果没有要返回的元素，则返回默认值。 如果要返回多个元素，则引发 <xref:System.InvalidOperationException>。 |不适用。|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Linq>
 - [标准查询运算符概述 (C#)](./standard-query-operators-overview.md)

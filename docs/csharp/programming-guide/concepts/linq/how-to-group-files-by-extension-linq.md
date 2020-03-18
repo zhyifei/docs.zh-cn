@@ -2,12 +2,12 @@
 title: 如何按扩展名对文件进行分组 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: d12b40c7dba7bd3e10f30ddfd394b25c36794428
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2ee1fa1291f5845c818395dfe038ec5894adc863
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345902"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169150"
 ---
 # <a name="how-to-group-files-by-extension-linq-c"></a>如何按扩展名对文件进行分组 (LINQ) (C#)
 本示例演示如何使用 LINQ 来执行高级分组和对文件或文件夹列表执行排序操作。 它还演示如何使用 <xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Take%2A> 方法在控制台窗口中对输出进行分页。  
@@ -42,7 +42,7 @@ class GroupByExtension
             orderby fileGroup.Key  
             select fileGroup;  
   
-        // Display one group at a time. If the number of   
+        // Display one group at a time. If the number of
         // entries is greater than the number of lines  
         // in the console window, then page the output.  
         PageOutput(trimLength, queryGroupByExt);  
@@ -107,7 +107,7 @@ class GroupByExtension
 ## <a name="compiling-the-code"></a>编译代码  
  使用 System.Linq 和 System.IO 命名空间的 `using` 指令创建 C# 控制台应用程序项目。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
 - [LINQ 和文件目录 (C#)](./linq-and-file-directories.md)

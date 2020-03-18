@@ -2,12 +2,12 @@
 title: 协变和逆变 (C#)
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: 1d5a1de1825e585512f694a0cd72cee9b37cda36
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 80b4d703bb88d0bf1f7f48236c21b7698017e7f8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595285"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79169865"
 ---
 # <a name="covariance-and-contravariance-c"></a>协变和逆变 (C#)
 在 C# 中，协变和逆变能够实现数组类型、委托类型和泛型类型参数的隐式引用转换。 协变保留分配兼容性，逆变则与之相反。  
@@ -15,25 +15,25 @@ ms.locfileid: "69595285"
  以下代码演示分配兼容性、协变和逆变之间的差异。  
   
 ```csharp  
-// Assignment compatibility.   
+// Assignment compatibility.
 string str = "test";  
-// An object of a more derived type is assigned to an object of a less derived type.   
+// An object of a more derived type is assigned to an object of a less derived type.
 object obj = str;  
   
-// Covariance.   
+// Covariance.
 IEnumerable<string> strings = new List<string>();  
-// An object that is instantiated with a more derived type argument   
-// is assigned to an object instantiated with a less derived type argument.   
-// Assignment compatibility is preserved.   
+// An object that is instantiated with a more derived type argument
+// is assigned to an object instantiated with a less derived type argument.
+// Assignment compatibility is preserved.
 IEnumerable<object> objects = strings;  
   
-// Contravariance.             
-// Assume that the following method is in the class:   
-// static void SetObject(object o) { }   
+// Contravariance.
+// Assume that the following method is in the class:
+// static void SetObject(object o) { }
 Action<object> actObject = SetObject;  
-// An object that is instantiated with a less derived type argument   
-// is assigned to an object instantiated with a more derived type argument.   
-// Assignment compatibility is reversed.   
+// An object that is instantiated with a less derived type argument
+// is assigned to an object instantiated with a more derived type argument.
+// Assignment compatibility is reversed.
 Action<string> actString = actObject;  
 ```  
   
@@ -81,7 +81,7 @@ IEnumerable<Object> objects = strings;
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|说明|  
+|标题|说明|  
 |-----------|-----------------|  
 |[泛型接口中的变体 (C#)](./variance-in-generic-interfaces.md)|讨论泛型接口中的协变和逆变，提供 .NET Framework 中的变体泛型接口列表。|  
 |[创建变体泛型接口 (C#)](./creating-variant-generic-interfaces.md)|演示如何创建自定义变体接口。|  

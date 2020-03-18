@@ -3,10 +3,10 @@ title: 日志记录和跟踪 - .NET Core
 description: .NET Core 日志记录和跟踪简介。
 ms.date: 08/05/2019
 ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714412"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core 日志记录和跟踪
@@ -85,7 +85,7 @@ ms.locfileid: "75714412"
 
 ## <a name="logging-related-references"></a>与日志记录相关的引用
 
-- [如何：使用跟踪和调试执行有条件编译](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [如何：使用跟踪和调试进行条件编译](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 
 - [如何：向应用程序代码添加跟踪语句](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 

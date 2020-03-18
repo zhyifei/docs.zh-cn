@@ -11,10 +11,10 @@ helpviewer_keywords:
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
 ms.openlocfilehash: 013af4e55c8fc396bbc92058d7fb454484f3263e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711826"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>不安全代码和指针（C# 编程指南）
@@ -40,7 +40,7 @@ ms.locfileid: "75711826"
   
 ## <a name="related-sections"></a>相关章节
 
-有关详细信息，请参见:
+有关详情，请参阅：
 
 - [指针类型](pointer-types.md)
 
@@ -48,9 +48,9 @@ ms.locfileid: "75711826"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[不安全代码](~/_csharplang/spec/unsafe-code.md)主题。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/unsafe-code.md)中的[不安全代码](~/_csharplang/spec/introduction.md)主题。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)

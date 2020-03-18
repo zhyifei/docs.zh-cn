@@ -19,10 +19,10 @@ helpviewer_keywords:
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
 ms.openlocfilehash: 846df5ecb1e681e8d0440e627586a681bf071efa
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160139"
 ---
 # <a name="garbage-collection"></a>垃圾回收
@@ -31,7 +31,7 @@ ms.locfileid: "78160139"
 <a name="related_topics"></a>
 ## <a name="related-topics"></a>相关主题  
   
-|Title|描述|  
+|标题|说明|  
 |-----------|-----------------|  
 |[垃圾回收的基础知识](../../../docs/standard/garbage-collection/fundamentals.md)|描述垃圾回收的工作原理、如何在托管堆上分配对象，以及其他核心概念。|  
 |[垃圾回收和性能](../../../docs/standard/garbage-collection/performance.md)|介绍了可用来诊断垃圾回收和性能问题的性能检查。|  
@@ -42,7 +42,7 @@ ms.locfileid: "78160139"
 |[应用程序域资源监视](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|介绍了如何监视应用程序域的 CPU 和内存使用情况。|  
 |[弱引用](../../../docs/standard/garbage-collection/weak-references.md)|描述允许应用程序访问对象的同时也允许垃圾回收器收集相应对象的功能。|  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.GC?displayProperty=nameWithType>  
   
  <xref:System.GCCollectionMode?displayProperty=nameWithType>  
@@ -59,6 +59,6 @@ ms.locfileid: "78160139"
   
  <xref:System.IDisposable?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [清理未托管资源](../../../docs/standard/garbage-collection/unmanaged.md)（清理未托管资源）

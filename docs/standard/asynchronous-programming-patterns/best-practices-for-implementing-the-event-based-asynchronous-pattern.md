@@ -13,10 +13,10 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
 ms.openlocfilehash: 439b862612d7997c9277ffb2cf4f15b14bd0b106
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156044"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>实现基于事件的异步模式的最佳做法
@@ -35,7 +35,7 @@ ms.locfileid: "78156044"
   
 - 在与该方法相同的类上定义 <em>MethodName</em>Completed 事件  。  
   
-- 为派生自 <xref:System.ComponentModel.AsyncCompletedEventArgs> 类的 <em>MethodName</em>Completed 事件定义一个 <xref:System.EventArgs> 类和随附委托  。 默认类名应采用 <em>MethodName</em>CompletedEventArgs  形式。  
+- 为派生自 <xref:System.EventArgs> 类的 <em>MethodName</em>Completed 事件定义一个  **类和随附委托**<xref:System.ComponentModel.AsyncCompletedEventArgs>。 默认类名应采用 <em>MethodName</em>CompletedEventArgs  形式。  
   
 - 确保 <xref:System.EventArgs> 类特定于 <em>MethodName</em> 方法的返回值。 在使用 <xref:System.EventArgs> 类时，切勿要求开发人员强制转换结果。  
   
@@ -77,7 +77,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - 如果类定义了不使用状态参数的 <em>MethodName</em>Async  方法，且它不支持多个并发调用，则应确保在先前 <em>MethodName</em>Async  调用完成前，只要尝试调用 <em>MethodName</em>Async  都会导致 <xref:System.InvalidOperationException> 抛出。  
   
-- 一般来说，如果多次调用不使用 `userSuppliedState` 参数的 <em>MethodName</em>Async  方法，导致多个未结操作出现，不得抛出异常。 如果类无法显式处理这种情况，将引发异常，但可假定开发人员能够处理多个不可区分回调。  
+- 一般来说，如果多次调用不使用 <em>参数的</em>MethodName**Async**`userSuppliedState` 方法，导致多个未结操作出现，不得抛出异常。 如果类无法显式处理这种情况，将引发异常，但可假定开发人员能够处理多个不可区分回调。  
   
 ### <a name="accessing-results"></a>访问结果  
   
@@ -99,7 +99,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - 如果你的类支持多个并发调用，则不要公开 `IsBusy` 属性。 例如，XML Web services 代理不会公开 `IsBusy` 属性，因为它们支持异步方法的多个并发调用。  
   
-- 在调用 <em>MethodName</em>Async  方法后，且在抛出 <em>MethodName</em>Completed  事件前，`IsBusy` 属性应返回 `true`。 否则，它应返回 `false`。 <xref:System.ComponentModel.BackgroundWorker> 和 <xref:System.Net.WebClient> 组件是公开 `IsBusy` 属性的类的示例。  
+- 在调用 `IsBusy`MethodName`true`Async 方法后，且在抛出 **MethodName**Completed 事件前，**属性应返回**。 否则，它应返回 `false`。 <xref:System.ComponentModel.BackgroundWorker> 和 <xref:System.Net.WebClient> 组件是公开 `IsBusy` 属性的类的示例。  
   
 ### <a name="cancellation"></a>取消  
   
@@ -127,7 +127,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 > [!NOTE]
 > 如果你明确想违反应用程序模型的策略，但仍想获得使用基于事件的异步模式的其他好处，则你可以避开这些规则。 例如，你可能希望在 Windows 窗体中进行操作的某个类是自由线程类。 只要开发人员了解隐含的限制，你就可以创建自由线程类。 控制台应用程序不会同步 <xref:System.ComponentModel.AsyncOperation.Post%2A> 调用的执行。 这会导致按错误的顺序引发 `ProgressChanged` 事件。 如果希望序列化 <xref:System.ComponentModel.AsyncOperation.Post%2A> 调用的执行，请实现并安装 <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType> 类。  
   
- 有关使用 <xref:System.ComponentModel.AsyncOperation> 和 <xref:System.ComponentModel.AsyncOperationManager> 以启用异步操作的详细信息，请参阅[如何：实现支持基于事件的异步模式的组件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)。  
+ 若要详细了解如何使用 <xref:System.ComponentModel.AsyncOperation> 和 <xref:System.ComponentModel.AsyncOperationManager> 启用异步操作，请参阅[如何：实现支持基于事件的异步模式的组件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)。  
   
 ## <a name="guidelines"></a>准则  
   
@@ -143,7 +143,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - 当你使用任何形式的多线程时，都有可能会遇到非常严重且复杂的 Bug。 在实现任何使用多线程处理的解决方案之前，请参阅[托管线程处理最佳做法](../../../docs/standard/threading/managed-threading-best-practices.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ComponentModel.AsyncOperation>
 - <xref:System.ComponentModel.AsyncOperationManager>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: 5565f37c9cfd8cb84c07f9ecc6f6c2edf8c66c61
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ae8741e2f29db0a470ad8d3b121375fbdeaff0d9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714756"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170190"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>对象和集合初始值设定项（C# 编程指南）
 
@@ -22,7 +22,7 @@ ms.locfileid: "75714756"
   
 [!code-csharp[ObjectInitializer1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#CatDeclaration)]  
 [!code-csharp[ObjectInitializer1a](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ObjectPropertyInitialization)]  
- 
+
 对象初始值设定项语法允许你创建一个实例，然后将具有其分配属性的新建对象指定给赋值中的变量。
 
 从 C# 6 开始，除了分配字段和属性外，对象初始值设定项还可以设置索引器。 请思考这个基本的 `Matrix` 类：
@@ -94,7 +94,7 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
   
 [!code-csharp[ListInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ListInitializer)]  
   
-如果集合的 `Add` 方法允许，则可以将 [null](../../language-reference/keywords/null.md) 指定为集合初始值设定项中的一个元素。  
+如果集合的 [ 方法允许，则可以将 ](../../language-reference/keywords/null.md)null`Add` 指定为集合初始值设定项中的一个元素。  
   
 [!code-csharp[ListInitializerNull](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ListInitialerWithNull)]  
   
@@ -122,7 +122,7 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
 
 [!code-csharp[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullDictionaryInitializer)]  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [C# 中的 LINQ](../../linq/index.md)

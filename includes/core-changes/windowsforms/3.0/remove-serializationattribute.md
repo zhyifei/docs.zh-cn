@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d48ced9d0201a33f9149aba155ddd3d8bc04c93f
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74643849"
 ---
 ### <a name="serializableattribute-removed-from-some-windows-forms-types"></a>已从一些 Windows 窗体类型中删除 SerializableAttribute
@@ -34,7 +34,7 @@ ms.locfileid: "74643849"
 
 3.0 预览版 9
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 对于要标记为“可序列化”的类型，更新可能依赖它们的所有代码。
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
 ms.openlocfilehash: ef98809eae0329c028dfb318c4a437aae4736db1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712983"
 ---
 # <a name="unsafe-c-reference"></a>unsafe（C# 参考）
@@ -33,7 +33,7 @@ unsafe static void FastCopy(byte[] src, byte[] dst, int count)
 unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
 ```
 
-还可以使用不安全块从而能够使用该块内的不安全代码。 例如：
+还可以使用不安全块从而能够使用该块内的不安全代码。 例如:
 
 ```csharp
 unsafe
@@ -50,9 +50,9 @@ unsafe
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[不安全代码](~/_csharplang/spec/unsafe-code.md)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/unsafe-code.md)中的[不安全代码](/dotnet/csharp/language-reference/language-specification/introduction)。 该语言规范是 C# 语法和用法的权威资料。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)

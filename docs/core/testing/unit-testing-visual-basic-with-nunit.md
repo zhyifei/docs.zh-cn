@@ -3,12 +3,12 @@ title: 使用 dotnet test 和 NUnit 对 .NET Core 中的 Visual Basic 进行单�
 description: 使用 NUnit 分步构建一个 Visual Basic 示例解决方案，在此交互式体验中学习 .NET Core 中的单元测试概念。
 author: rprouse
 ms.date: 10/04/2018
-ms.openlocfilehash: 8f05d25a0add76f5c552f5b9ac1eb310c3d6407a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a33447457344b241b4c2376d777b0deb7f556874
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715407"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240917"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>使用 dotnet test 和 NUnit 进行 Visual Basic .NET Core 库的单元测试
 
@@ -16,7 +16,7 @@ ms.locfileid: "75715407"
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 - [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更高版本。
 - 按需选择的文本编辑器或代码编辑器。
@@ -82,7 +82,7 @@ dotnet new nunit -lang VB
 
 [dotnet new](../tools/dotnet-new.md) 命令可创建一个将 NUnit 用作测试库的测试项目。 生成的模板在 PrimeServiceTests.vbproj  文件中配置了测试运行程序：
 
-[!code-xml[Packages](~/samples/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService.Tests.vbproj#Packages)]
+[!code-xml[Packages](~/samples/snippets/core/testing/unit-testing-vb-nunit/vb/PrimeService.Tests/PrimeService.Tests.vbproj#Packages)]
 
 测试项目需要其他包创建和运行单元测试。 在上一步中，`dotnet new` 已添加 NUnit 和 NUnit 测试适配器。 现在，将 `PrimeService` 类库作为另一个依赖项添加到项目中。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
 
@@ -151,13 +151,13 @@ End Function
 
 ## <a name="adding-more-features"></a>添加更多功能
 
-你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0、-1。 可以将这些情况添加为具有 `<Test>` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 xUnit 属性，可使你编写类似测试套件。  `<TestCase>` 属性表示执行相同代码，但具有不同输入参数一系列测试。 可以使用 `<TestCase>` 属性来指定这些输入的值。
+你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0，-1。 可以将这些情况添加为具有 `<Test>` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 xUnit 属性，可使你编写类似测试套件。  `<TestCase>` 属性表示执行相同代码，但具有不同输入参数一系列测试。 可以使用 `<TestCase>` 属性来指定这些输入的值。
 
 无需创建新测试，而是应用这两个属性来创建一系列测试，用于测试小于 2（最小质数）的几个值：
 
-[!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
+[!code-vb[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-vb-nunit/vb/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
-运行 `dotnet test`，两项测试均失败。 若要使所有测试通过，可以在 PrimeServices.cs 文件中更改 `Main` 方法开头的 `if` 子句  ：
+运行 `dotnet test`，两项测试均失败。 若要使所有测试通过，可以在 PrimeServices.cs 文件中更改 `if` 方法开头的 `Main` 子句  ：
 
 ```vb
 if candidate < 2

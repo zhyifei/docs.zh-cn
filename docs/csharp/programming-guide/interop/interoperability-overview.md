@@ -9,10 +9,10 @@ helpviewer_keywords:
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 ms.openlocfilehash: 2c9eb2a8e6c2db8dc06ebe48ca6eb37d5cf638e7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75700726"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互操作性概述（C# 编程指南）
@@ -53,11 +53,11 @@ ms.locfileid: "75700726"
   
 2. 生成 COM 类型库并对它进行注册以供 COM 使用。  
   
-     可修改 Visual C# 项目属性以自动注册 COM 互操作的 C# 程序集。 Visual Studio 通过 `/tlb` 命令行开关使用 [Regasm.exe（程序集注册工具）](../../../framework/tools/regasm-exe-assembly-registration-tool.md)。此工具使用托管组件作为输入，以生成类型库。 此类型库描述程序集中的 `public` 类型并添加注册表项，以便 COM 客户端可以创建托管类。  
+     可修改 Visual C# 项目属性以自动注册 COM 互操作的 C# 程序集。 Visual Studio 通过 [ 命令行开关使用 ](../../../framework/tools/regasm-exe-assembly-registration-tool.md)Regasm.exe（程序集注册工具）`/tlb`。此工具使用托管组件作为输入，以生成类型库。 此类型库描述程序集中的 `public` 类型并添加注册表项，以便 COM 客户端可以创建托管类。  
   
  有关详细信息，请参阅[向 COM 公开 .NET Framework 组件](../../../framework/interop/exposing-dotnet-components-to-com.md)和 [COM 类示例](./example-com-class.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Improving Interop Performance](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)（提高互操作性能）
 - [COM 和 .NET 之间的互操作性简介](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)

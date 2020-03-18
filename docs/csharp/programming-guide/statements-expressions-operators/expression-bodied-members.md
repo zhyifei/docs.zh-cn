@@ -5,10 +5,10 @@ helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 ms.openlocfilehash: f212bb707d3dd2d4a7cc917d335a83cff01ed0cf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711982"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Expression-bodied 成员（C# 编程指南）
@@ -30,13 +30,13 @@ C# 6 中引入了针对方法和只读属性的表达式主体定义支持，并
 |[Property](#properties)  |C# 7.0 |
 |[构造函数](#constructors)   |C# 7.0 |
 |[终结器](#finalizers)     |C# 7.0 |
-|[索引器](#indexers)       |C# 7.0 |
+|[Indexer](#indexers)       |C# 7.0 |
 
 ## <a name="methods"></a>方法
 
 expression-bodied 方法包含单个表达式，它返回的值的类型与方法的返回类型匹配；或者，对于返回 `void` 的方法，其表达式则执行某些操作。 例如，替代 <xref:System.Object.ToString%2A> 方法的类型通常包含单个表达式，该表达式返回当前对象的字符串表示形式。
 
-下面的示例定义 `Person` 类，该类通过表达式主体定义替代 <xref:System.Object.ToString%2A>。 它还定义向控制台显示名称的 `DisplayName` 方法。 请注意，`ToString` 表达式主体定义中未使用 `return` 关键字。
+下面的示例定义 `Person` 类，该类通过表达式主体定义替代 <xref:System.Object.ToString%2A>。 它还定义向控制台显示名称的 `DisplayName` 方法。 请注意，`return` 表达式主体定义中未使用 `ToString` 关键字。
 
 [!code-csharp[expression-bodied-methods](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]  
 

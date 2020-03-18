@@ -5,10 +5,10 @@ author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
 ms.openlocfilehash: c0224a1cc6cbb9ae6fa88e5f869c47a1e84289e0
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77451520"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core 附加工具概述
@@ -35,7 +35,7 @@ WCF (Windows Communication Foundation) [Web ervice Reference 工具](wcf-web-ser
 
 WCF [dotnet-svcutil 工具](dotnet-svcutil-guide.md)是一个 .NET 工具，可从网络位置上的 Web 服务中或从 WSDL 文件中检索元数据。 还可生成与 .NET Core 兼容的源文件并使用可用于访问 Web 服务操作的方法定义 WCF 代理类。
 
-dotnet-svcutil 工具是 [WCF Web Service Reference](wcf-web-service-reference-guide.md) Visual Studio 连接服务提供程序（随 Visual Studio 2017 版本 15.5 首次推出）的替代产品   。 dotnet-svcutil  工具作为一种 .NET 工具，可用于 Linux、macOS 和 Windows。
+dotnet-svcutil 工具是 **WCF Web Service Reference** Visual Studio 连接服务提供程序（随 Visual Studio 2017 版本 15.5 首次推出）的替代产品[  ](wcf-web-service-reference-guide.md)。 dotnet-svcutil  工具作为一种 .NET 工具，可用于 Linux、macOS 和 Windows。
 
 ## <a name="wcf-dotnet-svcutilxmlserializer-tool"></a>WCF dotnet-svcutil.xmlserializer 工具
 

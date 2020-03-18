@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: d366fb6f79593866cb8cb2ae761ba656fe33c598
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f09d9891f79eda44c428d5509e341a54ad3a3eee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867368"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157099"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>相等性比较（C# 编程指南）
 
@@ -33,7 +33,7 @@ ms.locfileid: "76867368"
 int a = GetOriginalValue();  
 int b = GetCurrentValue();  
   
-// Test for value equality.   
+// Test for value equality.
 if (b == a)
 {  
     // The two integers are equal.  
@@ -50,13 +50,13 @@ if (b == a)
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|描述|  
+|标题|说明|  
 |-----------|-----------------|  
 |[如何测试引用相等性（标识）](./how-to-test-for-reference-equality-identity.md)|介绍如何确定两个变量是否具有引用相等性。|  
 |[如何为类型定义值相等性](./how-to-define-value-equality-for-a-type.md)|介绍如何为类型提供值相等性的自定义定义。|  
 |[C# 编程指南](../index.md)|提供一些链接，这些链接指向重要 C# 语言功能以及通过 .NET Framework 提供给 C# 的功能的相关详细信息。|  
 |[类型](../types/index.md)|提供有关 C# 类型系统的信息以及指向附加信息的链接。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)

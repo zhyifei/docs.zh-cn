@@ -6,10 +6,10 @@ helpviewer_keywords:
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
 ms.openlocfilehash: 47bf4e8f07a8b6778db8fa675d745d362dc10d7d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75703021"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>泛型和特性（C# 编程指南）
@@ -43,7 +43,7 @@ ms.locfileid: "75703021"
   
  若要在运行时获取有关泛型类型或类型参数的信息，可使用 <xref:System.Reflection> 方法。 有关详细信息，请参阅[泛型和反射](./generics-and-reflection.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [泛型](./index.md)

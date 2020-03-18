@@ -11,10 +11,10 @@ helpviewer_keywords:
 - generics [.NET Framework], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 ms.openlocfilehash: baf8497289ee71c2dbdc544607212de90928289c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708379"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>用于操作数组和列表的泛型委托
@@ -39,7 +39,7 @@ ms.locfileid: "75708379"
 ### <a name="chaining-delegates"></a>链接委托  
  使用这些委托的许多方法返回数组或列表，然后传递到另一种方法。 例如，如果你想要选择某些数组元素，将这些元素转换为新类型，并将其保存在新的数组中，则可以将 <xref:System.Array.FindAll%2A> 泛型方法返回的数组传递到 <xref:System.Array.ConvertAll%2A> 泛型方法。 如果新的元素类型缺少自然排序顺序，你可以将 <xref:System.Array.ConvertAll%2A> 泛型方法返回的数组传递到 <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29> 泛型方法。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>

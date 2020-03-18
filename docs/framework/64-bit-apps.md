@@ -7,16 +7,16 @@ helpviewer_keywords:
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 ms.openlocfilehash: 90e022d5643dc49ccc5b78d071b3b473c92f0670
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74429666"
 ---
 # <a name="64-bit-applications"></a>64 位应用程序
 编译应用程序时，您可以将其指定为在 Windows 64 位操作系统上作为本机应用程序或在 WOW64（Windows 64 位下的 Windows 32 位）下运行。 WOW64 是一种兼容性环境，它使 32 位应用能够在 64 位系统上运行。 WOW64 包括在所有 64 位版本的 Windows 操作系统中。  
   
-## <a name="running-32-bit-vs-64-bit-applications-on-windows"></a>在 Windows 上运行 32 位与64 位应用程序  
+## <a name="running-32-bit-vs-64-bit-applications-on-windows"></a>在 Windows 上运行 32 位与 64 位应用程序  
  在 64 位操作系统上，所有基于 .NET Framework 1.0 或 1.1 生成的应用程序都会被视为 32 位应用程序，并始终在 WOW64 和 32 位公共语言运行时 (CLR) 下执行。 基于 .NET Framework 4 或更高版本生成的 32 位应用程序也可以在 64 位系统上的 WOW64 下运行。  
   
  在 x86 计算机上，Visual Studio 会安装 32 位版本的 CLR，而在 64 位 Windows 计算机上会同时安装 32 位版本和适当的 64 位版本的 CLR。 （因为 Visual Studio 是一个 32 位应用程序，所以当安装到 64 位系统上时，它会在 WOW64 下运行。）  

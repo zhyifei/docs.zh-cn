@@ -3,10 +3,10 @@ title: 订阅事件
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解发布和订阅集成事件的详细信息。
 ms.date: 01/30/2020
 ms.openlocfilehash: 544af8035ed23dd6507dfed4944b0c327c81d943
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501813"
 ---
 # <a name="subscribing-to-events"></a>订阅事件

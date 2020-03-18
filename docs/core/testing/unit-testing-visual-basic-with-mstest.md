@@ -4,12 +4,12 @@ description: 通过使用 MSTest 分步生成 Visual Basic 示例解决方案的
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-ms.openlocfilehash: 14c145ffc227078378897feeb75db0df8da4be6f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: df167e0559c841510df17ba39801e43315036241
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714254"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240930"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>使用 dotnet test 和 MSTest 进行 Visual Basic .NET Core 库单元测试
 
@@ -87,7 +87,7 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
         PrimeServiceTests.vbproj
 ```
 
-在 unit-testing-vb-mstest  目录中执行 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md)。
+在 unit-testing-vb-mstest[`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj` 目录中执行 ](../tools/dotnet-sln.md)  。
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
@@ -129,11 +129,11 @@ End Function
 
 ## <a name="adding-more-features"></a>添加更多功能
 
-你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0、-1。 可以将这些情况添加为具有 `<TestMethod>` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 MSTest 属性，使用这些属性可编写类似测试的套件。  `<DataTestMethod>` 属性表示执行相同代码，但具有不同输入参数一系列测试。 可以使用 `<DataRow>` 属性来指定这些输入的值。
+你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0，-1。 可以将这些情况添加为具有 `<TestMethod>` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 MSTest 属性，使用这些属性可编写类似测试的套件。  `<DataTestMethod>` 属性表示执行相同代码，但具有不同输入参数一系列测试。 可以使用 `<DataRow>` 属性来指定这些输入的值。
 
 可以不使用这两个属性创建新测试，而用来创建单个索引。 此索引是测试多个小于 2（即最小的质数）的值的方法：
 
-[!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
+[!code-vb[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-vb-mstest/vb/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
 运行 `dotnet test`，两项测试均失败。 若要使所有测试通过，可以更改方法开头的 `if` 子句：
 

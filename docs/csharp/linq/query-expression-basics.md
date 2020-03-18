@@ -3,12 +3,12 @@ title: 查询表达式基础（C# 中的 LINQ）
 description: 与查询表达式相关的概念介绍
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 5ebe2163df47c60c677d7ac911ce0f65529835eb
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 83beaa82d4b4b42ff9da5230edddd391b33a0717
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635855"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173349"
 ---
 # <a name="query-expression-basics"></a>查询表达式基础
 
@@ -156,7 +156,7 @@ ms.locfileid: "75635855"
 
 还可以通过使用 [into](../language-reference/keywords/into.md) 关键字将 `join` 操作的结果存储到临时变量中来执行分组联接。 有关详细信息，请参阅 [join 子句](../language-reference/keywords/join-clause.md)。
 
-#### <a name="let-clause"></a>let 子句 
+#### <a name="let-clause"></a>let 子句
 
 使用 `let` 子句可将表达式（如方法调用）的结果存储在新范围变量中。 在下面的示例中，范围变量 `firstName` 存储 `Split` 返回的字符串数组的第一个元素。
 

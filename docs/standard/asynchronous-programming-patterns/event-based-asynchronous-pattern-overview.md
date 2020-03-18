@@ -17,10 +17,10 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
 ms.openlocfilehash: cce01a7c87f6f20b5e6c46881b8c863bb5a72a88
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160061"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>基于事件的异步模式概述
@@ -131,7 +131,7 @@ public class AsyncExample
   
  一些类可能会在异步操作继续时报告增量结果。 这些结果将存储在从 <xref:System.ComponentModel.ProgressChangedEventArgs> 派生的类中并显示为此派生类中的属性。 你可以在 `ProgressChanged` 事件的事件处理程序中访问这些结果，就像访问 <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> 属性一样。 如果有多个异步操作挂起，你可以使用 <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> 属性来分辨出哪个操作在报告增量结果。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>

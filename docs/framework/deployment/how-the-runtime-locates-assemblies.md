@@ -9,12 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-ms.openlocfilehash: c462a6df2d5221907a6b574c33bb8fa1c52abac5
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 13e2661b67ba3b717b8917e80118175acb09e756
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741335"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181669"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>运行时如何定位程序集
 
@@ -141,7 +141,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ### <a name="machine-configuration-file"></a>计算机配置文件
 最后，运行时检查计算机配置文件。 此文件名为 Machine.config，驻留在本地计算机上安装有运行时的根目录的配置子目录中。 管理员可使用此文件来指定此计算机本地的程序集绑定限制。 计算机配置文件中的设置优先于所有其他配置设置 ；但是，这并不意味着所有配置设置都应置于此文件中。 管理员策略文件确定的版本为最终版本，且不能重写。 Machine.config 文件中指定的重写可影响所有应用程序。 有关配置文件的详细信息，请参阅 [使用配置文件配置应用](../configure-apps/index.md)。
 
-<a name="step2"></a> 
+<a name="step2"></a>
 
 ## <a name="step-2-checking-for-previously-referenced-assemblies"></a>步骤 2：检查以前引用的程序集
 

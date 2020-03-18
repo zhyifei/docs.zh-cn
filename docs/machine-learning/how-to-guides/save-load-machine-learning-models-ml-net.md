@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: e3cebe979b5c279ce8cb90db5510f8758c24c2b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73976998"
 ---
 # <a name="save-and-load-trained-models"></a>保存和加载经过训练的模型
@@ -67,9 +67,9 @@ mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 保存模型时，需要以下两项：
 
 1. 模型的 [`ITransformer`](xref:Microsoft.ML.ITransformer)。
-2. [`ITransformer`](xref:Microsoft.ML.ITransformer) 预期输入的 [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema)。
+2. [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) 预期输入的 [`ITransformer`](xref:Microsoft.ML.ITransformer)。
 
-训练模型后，通过 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 方法使用输入数据的 `DataViewSchema` 将经过训练的模型保存到名为 `model.zip` 的文件中。
+训练模型后，通过 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 方法使用输入数据的 `model.zip` 将经过训练的模型保存到名为 `DataViewSchema` 的文件中。
 
 ```csharp
 // Save Trained Model

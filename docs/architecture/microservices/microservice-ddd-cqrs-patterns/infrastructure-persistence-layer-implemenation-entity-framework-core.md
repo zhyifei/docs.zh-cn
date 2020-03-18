@@ -3,11 +3,11 @@ title: 使用 Entity Framework Core 实现基础结构持久性层
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 探索使用 Entity Framework Core 实现基础结构持久性层的细节。
 ms.date: 01/30/2020
 ms.openlocfilehash: 63579dc74ba52551bc1ee02a57337c1b17fdf396
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502501"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401495"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 实现基础结构持久性层
 

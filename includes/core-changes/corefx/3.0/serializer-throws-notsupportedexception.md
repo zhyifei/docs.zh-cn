@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e6e10b2ec451c07bf397cbdcac51ef57c29dab47
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568121"
 ---
 ### <a name="json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception"></a>Json 序列化程序异常类型从 `JsonException` 更改为 `NotSupportedException`
@@ -27,7 +27,7 @@ ms.locfileid: "74568121"
 
 3.0 预览版 9
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 如果要在反序列化时捕获 <xref:System.Text.Json.JsonException>，则可能要考虑同时捕获 <xref:System.NotSupportedException>。
 

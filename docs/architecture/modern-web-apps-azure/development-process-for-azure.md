@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77450033"
 ---
 # <a name="development-process-for-azure"></a>Azure 的开发过程
@@ -100,7 +100,7 @@ ms.locfileid: "77450033"
 
 该 Web 应用运行时，可监视该应用程序的运行状况，并收集诊断和用户行为数据。 Application Insights 包含于 Visual Studio 中，为 ASP.NET 应用提供自动检测。 它可提供有关使用情况、异常、请求、性能和日志的信息。
 
-## <a name="references"></a>参考资料
+## <a name="references"></a>reference
 
 **构建 ASP.NET Core 应用并将其部署到 Azure**  
 <https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>

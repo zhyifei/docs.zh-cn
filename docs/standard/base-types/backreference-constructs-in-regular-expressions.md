@@ -13,10 +13,10 @@ helpviewer_keywords:
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 ms.openlocfilehash: 905578d763ebe5d5b8eb96a9056fbe11fbfab137
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711527"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>正则表达式中的反向引用构造
@@ -34,7 +34,7 @@ ms.locfileid: "75711527"
 
 `\` *number*
 
-其中 *number* 是正则表达式中捕获组的序号位置。 例如，`\4` 匹配第四个捕获组的内容。 如果正则表达式模式中未定义 number  ，将会发生分析错误，并且正则表达式引擎会抛出 <xref:System.ArgumentException>。 例如，正则表达式 `\b(\w+)\s\1` 有效，因为 `(\w+)` 是表达式中的第一个也是唯一一个捕获组。 `\b(\w+)\s\2` 无效，该表达式会因为没有捕获组编号 `\2` 而引发自变量异常。 此外，如果 number 标识特定序号位置中的捕获组，但该捕获组已被分配了一个不同于其序号位置的数字名称，则正则表达式分析器还会引发 <xref:System.ArgumentException>  。
+其中 *number* 是正则表达式中捕获组的序号位置。 例如，`\4` 匹配第四个捕获组的内容。 如果正则表达式模式中未定义 number  ，将会发生分析错误，并且正则表达式引擎会抛出 <xref:System.ArgumentException>。 例如，正则表达式 `\b(\w+)\s\1` 有效，因为 `(\w+)` 是表达式中的第一个也是唯一一个捕获组。 `\b(\w+)\s\2` 无效，该表达式会因为没有捕获组编号 `\2` 而引发自变量异常。 此外，如果 number 标识特定序号位置中的捕获组，但该捕获组已被分配了一个不同于其序号位置的数字名称，则正则表达式分析器还会引发  <xref:System.ArgumentException>。
 
 请注意八进制转义代码（如 `\16`）和使用相同表示法的 `\`number  反向引用之间的不明确问题。 这种多义性可通过如下方式解决：
 
@@ -50,7 +50,7 @@ ms.locfileid: "75711527"
 
 下面的示例查找字符串中双写的单词字符。 它定义一个由下列元素组成的正则表达式 `(\w)\1`。
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |`(\w)`|匹配单词字符，并将其分配给第一个捕获组。|
 |`\1`|匹配值与第一捕获组相同的下一个字符。|
@@ -72,7 +72,7 @@ ms.locfileid: "75711527"
 
 下面的示例查找字符串中双写的单词字符。 它定义一个由下列元素组成的正则表达式 `(?<char>\w)\k<char>`。
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |`(?<char>\w)`|匹配字词字符，并将结果分配到 `char` 捕获组。|
 |`\k<char>`|匹配下一个与 `char` 捕获组的值相同的字符。|
@@ -87,7 +87,7 @@ ms.locfileid: "75711527"
 [!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
 [!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]
 
-如果 name 是 number 的字符串表示形式，且没有捕获组具有该名称，`\k<` name `>` 与反向引用 `\`number 相同，其中 number 是捕获的序号位置     。 在以下示例中，有名为 `char` 的单个捕获组。 反向引用构造将其称为 `\k<1>`。 正如示例中的输出所示，由于 `char` 是第一个捕获组，所以对 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 的调用成功。
+如果 name 是 number 的字符串表示形式，且没有捕获组具有该名称，*name* 与反向引用 `\k<`number 相同，其中 number 是捕获的序号位置  `>``\`   。 在以下示例中，有名为 `char` 的单个捕获组。 反向引用构造将其称为 `\k<1>`。 正如示例中的输出所示，由于 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 是第一个捕获组，所以对 `char` 的调用成功。
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]
@@ -103,10 +103,10 @@ ms.locfileid: "75711527"
 
 下面的示例包含正则表达式模式 `(?<1>a)(?<1>\1b)*`，该模式重新定义 \1 命名组。 下表描述了正则表达式中的每个模式。
 
-|模式|描述|
+|模式|说明|
 |-------------|-----------------|
 |`(?<1>a)`|匹配字符“a”，并将结果分配到 `1` 捕获组。|
-|`(?<1>\1b)*`|匹配零个或多个`1` 捕获组以及“b”，并将结果分配到 `1` 捕获组。|
+|`(?<1>\1b)*`|匹配 `1` 组的 0 更大发生次数以及“b”，并将结果分配到 `1` 捕获组。|
 
 [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
 [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]
@@ -123,7 +123,7 @@ ms.locfileid: "75711527"
 
 如果某个组尚未捕获任何子字符串，则对该组的反向引用是不确定的，永远不会匹配。 下面展示了正则表达式模式 `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b` 的定义：
 
-|模式|描述|
+|模式|说明|
 |-------------|-----------------|
 |`\b`|在单词边界处开始匹配。|
 |`(\p{Lu}{2})`|匹配两个大写字母。 这是第一个捕获组。|
@@ -136,6 +136,6 @@ ms.locfileid: "75711527"
 [!code-csharp[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference5.cs#5)]
 [!code-vb[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference5.vb#5)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

@@ -2,12 +2,12 @@
 title: 如何将对象数据写入 XML 文件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 475e9398f20a2a4db9fb537d0b8d44f0273e980b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f7ffb47a22d3cd94cd7cb6f702b64180a8790eb4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346451"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167501"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>如何将对象数据写入 XML 文件 (C#)
 本示例使用 <xref:System.Xml.Serialization.XmlSerializer> 类从某个类将对象写入 XML 文件。  
@@ -25,14 +25,14 @@ public class XMLWrite
   
     public class Book  
     {  
-        public String title;   
+        public String title;
     }  
   
     public static void WriteXML()  
     {  
         Book overview = new Book();  
         overview.title = "Serialization Overview";  
-        System.Xml.Serialization.XmlSerializer writer =   
+        System.Xml.Serialization.XmlSerializer writer =
             new System.Xml.Serialization.XmlSerializer(typeof(Book));  
   
         var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "//SerializationOverview.xml";  
@@ -61,7 +61,7 @@ public class XMLWrite
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  此示例在文件尚未存在时创建新文件。 如果某个应用程序需要创建文件，则该应用程序需要针对文件夹的 `Create` 访问权限。 如果文件已存在，则该应用程序只需要 `Write` 访问权限（这是较弱的特权）。 如有可能，在部署过程中创建文件，并且仅授予针对单个文件的 `Read` 访问权限（而不是针对 `Create` 文件夹的访问权限）会更加安全。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.IO.StreamWriter>
 - [如何从 XML 文件读取对象数据 (C#)](./how-to-read-object-data-from-an-xml-file.md)

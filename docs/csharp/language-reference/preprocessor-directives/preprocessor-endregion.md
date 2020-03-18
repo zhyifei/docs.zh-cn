@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - '#endregion directive [C#]'
 ms.assetid: 16099660-91b2-49e5-9646-77f9ef069526
-ms.openlocfilehash: b334691689da8b3e8f74f4899e34061bfc921c07
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c61c7a890811014acc69a43e422be53480bfb6f9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712528"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173414"
 ---
 # <a name="endregion-c-reference"></a>#endregion（C# 参考）
-`#endregion` 标记 [#region](./preprocessor-region.md) 块的结尾。 例如：  
+`#endregion` 标记 [#region](./preprocessor-region.md) 块的结尾。 例如:  
   
 ```csharp
 #region MyClass definition  
-class MyClass   
+class MyClass
 {  
-    static void Main()   
+    static void Main()
     {  
     }  
 }  
 #endregion  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)

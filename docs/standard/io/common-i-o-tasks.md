@@ -6,10 +6,10 @@ helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 ms.openlocfilehash: 01e9d6b50bd7eeafea792a772ca86a81e40dafd4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708173"
 ---
 # <a name="common-io-tasks"></a>通用 I/O 任务
@@ -20,8 +20,8 @@ ms.locfileid: "75708173"
 |若要执行此操作...|请参见本主题中的示例...|  
 |-------------------|--------------------------------------|  
 |创建文本文件|<xref:System.IO.File.CreateText%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.CreateText%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.File.Create%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.Create%2A?displayProperty=nameWithType> 方法|  
-|写入到文本文件|[如何：将文本写入文件](../../../docs/standard/io/how-to-write-text-to-a-file.md)<br /><br /> [如何：编写文本文件 (C++/CLI)](/cpp/dotnet/how-to-write-a-text-file-cpp-cli)|  
-|从文本文件读取|[如何：从文件中读取文本](../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
+|写入到文本文件|[如何：向文件写入文本](../../../docs/standard/io/how-to-write-text-to-a-file.md)<br /><br /> [如何：编写文本文件 (C++/CLI)](/cpp/dotnet/how-to-write-a-text-file-cpp-cli)|  
+|从文本文件读取|[如何：从文件读取文本](../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
 |向文件中追加文本|[如何：打开并追加到日志文件](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType> 方法|  
 |重命名或移动文件|<xref:System.IO.File.Move%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.MoveTo%2A?displayProperty=nameWithType> 方法|  
 |删除文件|<xref:System.IO.File.Delete%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.Delete%2A?displayProperty=nameWithType> 方法|  
@@ -41,7 +41,7 @@ ms.locfileid: "75708173"
   
 |若要执行此操作...|请参见本主题中的示例...|  
 |-------------------|--------------------------------------|  
-|访问特定文件夹（如“My Documents”）中的文件|[如何：将文本写入文件](../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
+|访问特定文件夹（如“My Documents”）中的文件|[如何：向文件写入文本](../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
 |创建目录|<xref:System.IO.Directory.CreateDirectory%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.Directory%2A?displayProperty=nameWithType> 属性|  
 |创建子目录|<xref:System.IO.DirectoryInfo.CreateSubdirectory%2A?displayProperty=nameWithType> 方法|  
 |重命名或移动目录|<xref:System.IO.Directory.Move%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.DirectoryInfo.MoveTo%2A?displayProperty=nameWithType> 方法|  
@@ -51,7 +51,7 @@ ms.locfileid: "75708173"
 |查明目录大小|<xref:System.IO.Directory?displayProperty=nameWithType> 类|  
 |确定目录是否存在|<xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType> 方法|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [文件和流 I/O](../../../docs/standard/io/index.md)
 - [撰写流](../../../docs/standard/io/composing-streams.md)

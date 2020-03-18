@@ -11,11 +11,11 @@ helpviewer_keywords:
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
 ms.openlocfilehash: afd9e688bd716375bafb370fad4af082a9498411
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673415"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397658"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>类和结构（C# 编程指南）
 类和结构是 .NET Framework 通用类型系统的两种基本构造。 每种本质上都是一种数据结构，其中封装了同属一个逻辑单元的一组数据和行为。 数据和行为是类或结构的*成员*，包括方法、属性和事件等（此主题稍后将具体列举）。  

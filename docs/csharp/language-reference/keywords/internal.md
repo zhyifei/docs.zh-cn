@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: db653d0ed7f4835348484242b03392a8955c6392
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e5a5ca18828b689241abbb6d80c5adc51efb073c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713431"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173596"
 ---
 # <a name="internal-c-reference"></a>internal（C# 参考）
-`internal` 关键字是类型和类型成员的[访问修饰符](./access-modifiers.md)。 
+`internal` 关键字是类型和类型成员的[访问修饰符](./access-modifiers.md)。
   
  > 本页涵盖 `internal` 访问。 `internal` 关键字也是 [`protected internal`](./protected-internal.md) 访问修饰符的一部分。
   
 只有在同一程序集的文件中，内部类型或成员才可访问，如下例所示：  
   
 ```csharp  
-public class BaseClass   
+public class BaseClass
 {  
     // Only accessible within the same assembly.
     internal static int x = 0;
@@ -43,7 +43,7 @@ public class BaseClass
 ```csharp  
 // Assembly1.cs  
 // Compile with: /target:library  
-internal class BaseClass   
+internal class BaseClass
 {  
    public static int intM = 0;  
 }  
@@ -52,9 +52,9 @@ internal class BaseClass
 ```csharp  
 // Assembly1_a.cs  
 // Compile with: /reference:Assembly1.dll  
-class TestAccess   
+class TestAccess
 {  
-   static void Main()   
+   static void Main()
    {  
       var myBase = new BaseClass();   // CS0122  
    }  
@@ -67,7 +67,7 @@ class TestAccess
 ```csharp  
 // Assembly2.cs  
 // Compile with: /target:library  
-public class BaseClass   
+public class BaseClass
 {  
    internal static int intM = 0;  
 }  
@@ -76,9 +76,9 @@ public class BaseClass
 ```csharp  
 // Assembly2_a.cs  
 // Compile with: /reference:Assembly2.dll  
-public class TestAccess   
+public class TestAccess
 {  
-   static void Main()   
+   static void Main()
    {  
       var myBase = new BaseClass();   // Ok.  
       BaseClass.intM = 444;    // CS0117  
@@ -88,9 +88,9 @@ public class TestAccess
   
 ## <a name="c-language-specification"></a>C# 语言规范  
 
-有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[声明的可访问性](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/basic-concepts.md#declared-accessibility)中的[声明的可访问性](/dotnet/csharp/language-reference/language-specification/introduction)。 该语言规范是 C# 语法和用法的权威资料。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
@@ -99,5 +99,5 @@ public class TestAccess
 - [可访问性级别](./accessibility-levels.md)
 - [修饰符](index.md)
 - [public](./public.md)
-- [专用](./private.md)
+- [private](./private.md)
 - [受保护](./protected.md)

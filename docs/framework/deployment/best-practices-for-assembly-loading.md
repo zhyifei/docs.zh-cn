@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: d1b6c2cd9f96a4acf48cbced48a86bc3e3409562
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7575c40edf47e977335bcc34fcd9e49debab0980
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716579"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181706"
 ---
 # <a name="best-practices-for-assembly-loading"></a>适用于程序集加载的最佳做法
 本文讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 以及其他错误。 本文讨论以下建议：  
@@ -34,7 +34,7 @@ ms.locfileid: "75716579"
   
  第一个建议（即[了解加载上下文的优点和缺点](#load_contexts)）为其他建议提供了背景信息，因为这些建议都依赖于对加载上下文的了解。  
   
-<a name="load_contexts"></a>   
+<a name="load_contexts"></a>
 ## <a name="understand-the-advantages-and-disadvantages-of-load-contexts"></a>了解加载上下文的优点和缺点  
  在应用程序域中，可以将程序集加载到以下三个上下文之一中，也可以在没有上下文的情况下加载它们：  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75716579"
   
 - 该策略不适用于 1.0 和 1.1 版本的 .NET Framework。  
   
-<a name="avoid_partial_names"></a>   
+<a name="avoid_partial_names"></a>
 ## <a name="avoid-binding-on-partial-assembly-names"></a>避免对部分程序集名称进行绑定  
  加载程序集时，如果仅指定程序集显示名称的一部分 (<xref:System.Reflection.Assembly.FullName%2A>)，则会发生部分名称绑定。 例如，可能会在调用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法时仅使用程序集的简单名称，而忽略版本、区域性和公钥标记。 也可能会调用 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> 方法，该方法首先调用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法，再搜索全局程序集缓存（如果未能找到程序集）并加载程序集的最新可用版本。  
   
@@ -115,15 +115,15 @@ ms.locfileid: "75716579"
   
  如果希望使用 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法（因为此方法使程序集加载变得很轻松），请考虑在应用程序失败时提供用于标识缺失的程序集的错误消息，与自动使用程序集的未知版本（可能会导致不可预知的行为和安全漏洞）相比，这样做可能能够提供更好的用户体验。  
   
-<a name="avoid_loading_into_multiple_contexts"></a>   
+<a name="avoid_loading_into_multiple_contexts"></a>
 ## <a name="avoid-loading-an-assembly-into-multiple-contexts"></a>避免将一个程序集加载到多个上下文中  
  将一个程序集加载到多个上下文中会导致出现类型标识问题。 将同一个程序集中的相同类型加载到两个不同的上下文中，就像是加载具有相同名称的两个不同的类型一样。 如果尝试将一个类型强制转换为另一个类型，则将引发 <xref:System.InvalidCastException>，并显示一条令人混淆的消息，指示不能将类型 `MyType` 强制转换为类型 `MyType`。  
   
- 例如，假设在一个名为 `Utility` 的程序集中声明 `ICommunicate` 接口，该接口由程序及其加载的其他程序集引用。 这些其他程序集包含实现 `ICommunicate` 接口的类型，并允许程序使用它们。  
+ 例如，假设在一个名为 `ICommunicate` 的程序集中声明 `Utility` 接口，该接口由程序及其加载的其他程序集引用。 这些其他程序集包含实现 `ICommunicate` 接口的类型，并允许程序使用它们。  
   
  下面来看看在程序运行时会出现的情况。 程序所引用的程序集将加载到默认加载上下文中。 如果使用 <xref:System.Reflection.Assembly.Load%2A> 方法按照目标程序集的标识来加载该程序集，则该程序集及其依赖项都将位于默认加载上下文中。 程序和目标程序集将使用同一个 `Utility` 程序集。  
   
- 不过，假设使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法按照目标程序集的文件路径加载该程序集。 该程序集将在没有任何上下文的情况下进行加载，因此不会自动加载其依赖项。 可能具有 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的处理程序来提供依赖项，并且该处理程序可能会使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法在没有上下文的情况下加载 `Utility` 程序集。 此时，若创建目标程序集中包含的某个类型的实例，并尝试将该实例分配给类型 `ICommunicate` 的变量，则将引发 <xref:System.InvalidCastException>，因为运行时会将 `Utility` 程序集的两个副本中的 `ICommunicate` 接口视为不同的类型。  
+ 不过，假设使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法按照目标程序集的文件路径加载该程序集。 该程序集将在没有任何上下文的情况下进行加载，因此不会自动加载其依赖项。 可能具有 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的处理程序来提供依赖项，并且该处理程序可能会使用 `Utility` 方法在没有上下文的情况下加载 <xref:System.Reflection.Assembly.LoadFile%2A> 程序集。 此时，若创建目标程序集中包含的某个类型的实例，并尝试将该实例分配给类型 `ICommunicate` 的变量，则将引发 <xref:System.InvalidCastException>，因为运行时会将 `ICommunicate` 程序集的两个副本中的 `Utility` 接口视为不同的类型。  
   
  在许多其他情况下，也可以将一个程序集加载到多个上下文中。 最佳方法是通过在应用程序路径中重新定位目标程序集，并对 <xref:System.Reflection.Assembly.Load%2A> 方法使用完整的显示名称，从而避免冲突。 然后，将目标程序集加载到默认加载上下文中，并且两个程序集将使用同一个 `Utility` 程序集。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "75716579"
   
  [考虑切换到默认加载上下文](#switch_to_default)一节讨论了针对使用文件路径加载（例如 <xref:System.Reflection.Assembly.LoadFile%2A> 和 <xref:System.Reflection.Assembly.LoadFrom%2A>）的替代方法。  
   
-<a name="avoid_loading_multiple_versions"></a>   
+<a name="avoid_loading_multiple_versions"></a>
 ## <a name="avoid-loading-multiple-versions-of-an-assembly-into-the-same-context"></a>避免将一个程序集的多个版本加载到同一上下文中  
  将一个程序集的多个版本加载到一个加载上下文中会导致出现类型标识问题。 从同一个程序集的两个版本加载同一个类型，就像是加载了具有相同名称的两个不同类型一样。 如果尝试将一个类型强制转换为另一个类型，则将引发 <xref:System.InvalidCastException>，并显示一条令人混淆的消息，指示不能将类型 `MyType` 强制转换为类型 `MyType`。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "75716579"
   
  请认真检查代码，确保仅加载程序集的一个版本。 可以使用 <xref:System.AppDomain.GetAssemblies%2A?displayProperty=nameWithType> 方法确定在任何给定时间加载的程序集。  
   
-<a name="switch_to_default"></a>   
+<a name="switch_to_default"></a>
 ## <a name="consider-switching-to-the-default-load-context"></a>考虑切换到默认加载上下文  
  检查应用程序的程序集加载和部署模式。 是否能够消除从字节数组加载的程序集？ 是否能够将程序集移动到探测路径中？ 如果程序集位于全局程序集缓存中或应用程序域的探测路径（即 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A>）中，则可以按照程序集的标识来加载程序集。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "75716579"
   
  请注意，可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法加载这些程序集。 由于这些程序集此时位于探测路径中，因此会将它们加载到默认加载上下文（而非加载位置上下文）中。 不过，建议切换到 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法并提供完整的程序集显示名称，从而确保始终使用正确的版本。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

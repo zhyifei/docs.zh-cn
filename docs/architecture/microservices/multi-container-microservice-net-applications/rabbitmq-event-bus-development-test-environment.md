@@ -3,10 +3,10 @@ title: 使用 RabbitMQ 实现用于开发或测试环境的事件总线
 description: 容器化 .NET 应用程序的 .NET 微服务架构 | 使用 RabbitMQ 实现用于开发或测试环境的集成事件的事件总线消息传递。
 ms.date: 10/02/2018
 ms.openlocfilehash: ba1cea9384893955ae0743ac8d6a34c350224cd5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74711201"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>使用 RabbitMQ 实现用于开发或测试环境的事件总线

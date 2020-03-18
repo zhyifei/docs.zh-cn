@@ -3,10 +3,10 @@ title: 处理异步应用中的重新进入 (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
 ms.openlocfilehash: 67fbbd294ffe6219b58065f974543b2dd483a92c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451858"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>处理异步应用中的重新进入 (C#)
@@ -109,7 +109,7 @@ TOTAL bytes returned:  890591
 
 ### <a name="BKMK_DisableTheStartButton"></a>禁用“开始”按钮
 
-可以通过在 `StartButton_Click` 事件处理程序顶部禁用“开始”  按钮，在操作运行期间阻止该按钮。 随后可以在操作完成时从 `finally` 块中重新启用中该按钮，以便用户可以再次运行应用。
+可以通过在  **事件处理程序顶部禁用“开始”** `StartButton_Click`按钮，在操作运行期间阻止该按钮。 随后可以在操作完成时从 `finally` 块中重新启用中该按钮，以便用户可以再次运行应用。
 
 若要设置此方案，请对[检查并运行示例应用](#BKMD_SettingUpTheExample)中提供的基本代码进行以下更改。 还可以从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载已完成的应用。 项目名是 DisableStartButton。
 
@@ -146,7 +146,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 
 有关取消的详细信息，请参阅[微调异步应用程序 (C#)](./fine-tuning-your-async-application.md)。
 
-若要设置此方案，请对[检查并运行示例应用](#BKMD_SettingUpTheExample)中提供的基本代码进行以下更改。 还可以从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载压缩文件。 项目名是 CancelAndRestart。
+若要设置此方案，请对[检查并运行示例应用](#BKMD_SettingUpTheExample)中提供的基本代码进行以下更改。 还可以从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载已完成的应用。 项目名是 CancelAndRestart。
 
 1. 声明 <xref:System.Threading.CancellationTokenSource> 变量 `cts`，它处于所有方法的范围内。
 
@@ -307,7 +307,7 @@ TOTAL bytes returned:  890591
 
 操作会共享一个全局 <xref:System.Threading.Tasks.Task> (`pendingWork`)，它用作显示进程的守卫。
 
-若要设置此方案，请对[检查并运行示例应用](#BKMD_SettingUpTheExample)中提供的基本代码进行以下更改。 还可以从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载压缩文件。 项目名是 QueueResults。
+若要设置此方案，请对[检查并运行示例应用](#BKMD_SettingUpTheExample)中提供的基本代码进行以下更改。 还可以从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载已完成的应用。 项目名是 QueueResults。
 
 下面的输出显示用户仅选择“开始”  按钮一次时的结果。 字母标签 A 指示结果来自首次选择“开始”  按钮。 编号显示下载目标列表中 URL 的顺序。
 
@@ -437,7 +437,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 
 `AccessTheWebAsync` 随后调用 `FinishOneGroupAsync` 以等待每个下载完成并显示其长度。
 
-`FinishOneGroupAsync` 会返回在 `AccessTheWebAsync` 中分配给 `pendingWork` 的任务。 该值会在任务完成之前阻止另一个操作进行中断。
+`FinishOneGroupAsync` 会返回在 `pendingWork` 中分配给 `AccessTheWebAsync` 的任务。 该值会在任务完成之前阻止另一个操作进行中断。
 
 ```csharp
 private async Task<char> AccessTheWebAsync(char grp)
@@ -576,7 +576,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 1. 启动 Visual Studio。
 
-2. 在菜单栏上，依次选择“文件”  、“新建”  、“项目”  。
+2. 在菜单栏上，依次选择 **“文件”** 、 **“新建”** 、 **“项目”** 。
 
      **“新建项目”** 对话框随即打开。
 
@@ -728,7 +728,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 12. 从[禁用“开始”按钮](#BKMK_DisableTheStartButton)、[取消并重启操作](#BKMK_CancelAndRestart)或[运行多个操作并将输出排入队列](#BKMK_RunMultipleOperations)中进行更改以处理重新进入。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [演练：使用 Async 和 Await 访问 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [使用 Async 和 Await 的异步编程 (C#)](./index.md)

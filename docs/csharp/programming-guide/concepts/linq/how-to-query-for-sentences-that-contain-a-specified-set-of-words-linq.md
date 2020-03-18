@@ -2,12 +2,12 @@
 title: 如何查询包含一组指定词语的句子 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: efb0eb60a9695c19e16b507d29ef6994e904cff9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: df279f57d9965d796397cbcf7a0f3ba05bf9e5c1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347697"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168851"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>如何查询包含一组指定词语的句子 (LINQ) (C#)
 此示例演示如何在包含一组指定的词语的每个匹配项的文本文件中查找句子。 尽管此示例中的搜索词数组采用硬编码形式，但它也可在运行时以动态方式进行填充。 在此示例中，查询将返回包含单词“Historically,”、“data,”和“integrated”的句子。  
@@ -46,7 +46,7 @@ class FindSentences
   
         // Execute the query. Note that you can explicitly type  
         // the iteration variable here even though sentenceQuery  
-        // was implicitly typed.   
+        // was implicitly typed.
         foreach (string str in sentenceQuery)  
         {  
             Console.WriteLine(str);  
@@ -62,13 +62,13 @@ Historically, the world of data and the world of objects have not been well inte
 */  
 ```  
   
- 查询运行时首先将文本拆分成句子，然后将句子拆分成包含每个单词的字符串数组。 对于每个数组，<xref:System.Linq.Enumerable.Distinct%2A> 方法将删除所有重复字词，然后查询将对字词数组和 `wordsToMatch` 数组执行 <xref:System.Linq.Enumerable.Intersect%2A> 操作。 如果相交数与 `wordsToMatch` 数组的计数相同，将在单词中找到所有单词并返回原始句子。  
+ 查询运行时首先将文本拆分成句子，然后将句子拆分成包含每个单词的字符串数组。 对于每个数组，<xref:System.Linq.Enumerable.Distinct%2A> 方法将删除所有重复字词，然后查询将对字词数组和 <xref:System.Linq.Enumerable.Intersect%2A> 数组执行 `wordsToMatch` 操作。 如果相交数与 `wordsToMatch` 数组的计数相同，将在单词中找到所有单词并返回原始句子。  
   
  在对 <xref:System.String.Split%2A> 的调用中，使用标点符号作为分隔符，以从字符串中删除标点符号。 如果你没有不这样做，则假如你有一个字符串 “Historically,”，该字符串不会与 `wordsToMatch` 数组中的“Historically”匹配。 根据在源文本中找到的标点类型，可能需要使用其他分隔符。  
   
 ## <a name="compiling-the-code"></a>编译代码  
 使用 System.Linq 和 System.IO 命名空间的 `using` 指令创建 C# 控制台应用程序项目。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [LINQ 和字符串 (C#)](./linq-and-strings.md)

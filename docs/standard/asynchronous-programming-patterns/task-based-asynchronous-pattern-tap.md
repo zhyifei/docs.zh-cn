@@ -13,10 +13,10 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 ms.openlocfilehash: 89c486618729c334bf74f0a1f4f9dd1b3cee8b0e
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78158163"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>基于任务的异步模式 (TAP)
@@ -24,13 +24,13 @@ ms.locfileid: "78158163"
   
 ## <a name="naming-parameters-and-return-types"></a>命名、参数和返回类型
 
-TAP 使用单个方法表示异步操作的开始和完成。 这与异步编程模型（APM 或 `IAsyncResult`）模式和基于事件的异步模式 (EAP) 形成对比。 APM 需要 `Begin` 和 `End` 方法。 EAP 需要后缀为 `Async` 的方法，以及一个或多个事件、事件处理程序委托类型和 `EventArg` 派生类型。 TAP 中的异步方法在返回可等待类型（如 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.ValueTask> 和 <xref:System.Threading.Tasks.ValueTask%601>）的方法的操作名称后面添加 `Async` 后缀。 例如，返回 `Task<String>` 的异步 `Get` 操作可命名为 `GetAsync`。 若要将 TAP 方法添加到已包含带 `Async` 后缀的 EAP 方法名称的类中，请改用后缀 `TaskAsync`。 例如，如果类具有 `GetAsync` 方法，请使用名称 `GetTaskAsync`。 如果方法启动异步操作，但不返回可等待类型，它的名称应以 `Begin`、`Start` 或表明此方法不返回或抛出操作结果的其他某谓词开头。  
+TAP 使用单个方法表示异步操作的开始和完成。 这与异步编程模型（APM 或 `IAsyncResult`）模式和基于事件的异步模式 (EAP) 形成对比。 APM 需要 `Begin` 和 `End` 方法。 EAP 需要后缀为 `Async` 的方法，以及一个或多个事件、事件处理程序委托类型和 `EventArg` 派生类型。 TAP 中的异步方法在返回可等待类型（如 `Async`、<xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 和 <xref:System.Threading.Tasks.ValueTask>）的方法的操作名称后面添加 <xref:System.Threading.Tasks.ValueTask%601> 后缀。 例如，返回 `Get` 的异步 `Task<String>` 操作可命名为 `GetAsync`。 若要将 TAP 方法添加到已包含带 `Async` 后缀的 EAP 方法名称的类中，请改用后缀 `TaskAsync`。 例如，如果类具有 `GetAsync` 方法，请使用名称 `GetTaskAsync`。 如果方法启动异步操作，但不返回可等待类型，它的名称应以 `Begin`、`Start` 或表明此方法不返回或抛出操作结果的其他某谓词开头。  
   
  TAP 方法返回 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>，具体取决于相应同步方法返回的是 void 还是类型 `TResult`。  
   
  TAP 方法的参数应与其同步对应方法的参数匹配，并应以相同顺序提供。  但是，`out` 和 `ref` 参数不受此规则的限制，并应完全避免。 应该将通过 `out` 或 `ref` 参数返回的所有数据改为作为由 `TResult` 返回的 <xref:System.Threading.Tasks.Task%601> 的一部分返回，且应使用元组或自定义数据结构来容纳多个值。 即使 TAP 方法的同步对应方法没有提供 <xref:System.Threading.CancellationToken> 参数，也应该考虑添加此参数。
 
- 专用于创建、控制或组合任务的方法无需遵循此命名模式，因为方法名称或方法所属类型的名称已明确指明方法的异步用途；此类方法通常称为“组合器”  。 组合器的示例包括 <xref:System.Threading.Tasks.Task.WhenAll%2A> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A>，[使用基于任务的异步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)一文的[使用基于任务的内置组合器](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators)部分对此进行了介绍。  
+ 专用于创建、控制或组合任务的方法无需遵循此命名模式，因为方法名称或方法所属类型的名称已明确指明方法的异步用途；此类方法通常称为“组合器”  。 组合器的示例包括 <xref:System.Threading.Tasks.Task.WhenAll%2A> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A>，[使用基于任务的异步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators)一文的[使用基于任务的内置组合器](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)部分对此进行了介绍。  
   
  有关展示了 TAP 语法与旧异步编程模式（如异步编程模型 (APM) 和基于事件的异步模式 (EAP)）语法区别的示例，请参阅[异步编程模式](../../../docs/standard/asynchronous-programming-patterns/index.md)。  
   
@@ -54,7 +54,7 @@ TAP 使用单个方法表示异步操作的开始和完成。 这与异步编程
 ## <a name="task-status"></a>任务状态  
  <xref:System.Threading.Tasks.Task> 类提供了异步操作的生命周期，且该周期由 <xref:System.Threading.Tasks.TaskStatus> 枚举表示。 为了支持派生自 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 的类型的个别案例，并支持调度时分离构造，<xref:System.Threading.Tasks.Task> 类公开了 <xref:System.Threading.Tasks.Task.Start%2A> 方法。 公共 <xref:System.Threading.Tasks.Task> 构造函数创建的任务称为“冷任务”  ，因为它们在非计划 <xref:System.Threading.Tasks.TaskStatus.Created> 状态下开始生命周期，并仅在对这些实例调用 <xref:System.Threading.Tasks.Task.Start%2A> 时才被排入计划。
 
- 所有其他任务在热状态下开始其生命周期，这意味着它们表示的异步操作已启动，并且其任务状态是 <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType> 以外的枚举值。 必须激活从 TAP 方法返回的所有任务。 **如果 TAP 方法在内部使用任务的构造函数来实例化要返回的任务，TAP 方法必须在返回前先对 <xref:System.Threading.Tasks.Task> 对象调用 <xref:System.Threading.Tasks.Task.Start%2A>。** TAP 方法的使用者可以安全地假设返回的任务处于活动状态且不应尝试对从 TAP 方法返回的任何 <xref:System.Threading.Tasks.Task.Start%2A> 调用 <xref:System.Threading.Tasks.Task>。 对活动的任务调用 <xref:System.Threading.Tasks.Task.Start%2A> 将引发 <xref:System.InvalidOperationException> 异常。  
+ 所有其他任务在热状态下开始其生命周期，这意味着它们表示的异步操作已启动，并且其任务状态是 <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType> 以外的枚举值。 必须激活从 TAP 方法返回的所有任务。 **如果 TAP 方法在内部使用任务的构造函数来实例化要返回的任务，TAP 方法必须在返回前先对 <xref:System.Threading.Tasks.Task.Start%2A> 对象调用 <xref:System.Threading.Tasks.Task>。** TAP 方法的使用者可以安全地假设返回的任务处于活动状态且不应尝试对从 TAP 方法返回的任何 <xref:System.Threading.Tasks.Task.Start%2A> 调用 <xref:System.Threading.Tasks.Task>。 对活动的任务调用 <xref:System.Threading.Tasks.Task.Start%2A> 将引发 <xref:System.InvalidOperationException> 异常。  
   
 ## <a name="cancellation-optional"></a>取消（可选）  
  在 TAP 中，取消是异步方法实现者和异步方法使用者的选项。 如果操作允许取消，则会公开接受取消标记（<xref:System.Threading.CancellationToken> 实例）的异步方法的重载。 按照约定，该参数命名为 `cancellationToken`。  
@@ -181,7 +181,7 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
                        progress As IProgress(Of T)) As Task  
 ```  
   
- 若要弥补缺少的两个中间组合，开发人员可以为 `cancellationToken` 参数传递 <xref:System.Threading.CancellationToken.None%2A> 或默认的 <xref:System.Threading.CancellationToken>，为 `null` 参数传递 `progress`。  
+ 若要弥补缺少的两个中间组合，开发人员可以为 <xref:System.Threading.CancellationToken.None%2A> 参数传递 <xref:System.Threading.CancellationToken> 或默认的 `cancellationToken`，为 `null` 参数传递 `progress`。  
   
  如果需要 TAP 方法的每种用法支持取消或进度，则可以忽略不接受相关参数的重载。  
   
@@ -189,7 +189,7 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|描述|  
+|标题|说明|  
 |-----------|-----------------|  
 |[异步编程模式](../../../docs/standard/asynchronous-programming-patterns/index.md)|介绍执行异步操作的三种模式：基于任务的异步模式 (TAP)、异步编程模型 (APM) 和基于事件的异步模式 (EAP)。|  
 |[实现基于任务的异步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|描述如何使用以下三种方式实现基于任务的异步模式 (TAP)：手动使用 Visual Studio 中的 C# 和 Visual Basic 编译器，或通过编译器和手动方法的组合。|  

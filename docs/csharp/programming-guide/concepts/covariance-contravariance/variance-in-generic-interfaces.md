@@ -2,16 +2,16 @@
 title: 泛型接口中的变体 (C#)
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 71225814a11074f52e4937dec88ca5e27114d6c7
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 2020ea54734724de775192a1a438413a73003d17
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179062"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169657"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>泛型接口中的变体 (C#)
 
-.NET Framework 4 引入了对多个现有泛型接口的变体支持。 变体支持允许实现这些接口的类进行隐式转换。 
+.NET Framework 4 引入了对多个现有泛型接口的变体支持。 变体支持允许实现这些接口的类进行隐式转换。
 
 自 .NET Framework 4 起，以下接口为变体：
 
@@ -98,7 +98,7 @@ IEnumerable<int> integers = new List<int>();
 IEnumerable<Object> listObjects = new List<String>();
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在泛型集合的接口中使用变体 (C#)](./using-variance-in-interfaces-for-generic-collections.md)
 - [创建变体泛型接口 (C#)](./creating-variant-generic-interfaces.md)

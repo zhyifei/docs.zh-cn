@@ -9,12 +9,12 @@ helpviewer_keywords:
 - updates, determining for .NET Framework
 - .NET Framework, determining updates
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
-ms.openlocfilehash: 087519048b412798ef7495d250dc2538ee5c2fd0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5c7bf48d5786530a9bcb69fb7cf605ac2c80a4eb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716256"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181267"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>如何确定安装了哪些 .NET Framework 安全更新和修补程序
 
@@ -35,7 +35,7 @@ ms.locfileid: "75716256"
 
      已安装的更新在标识适用的 .NET Framework 版本的子项下方列出。 每个更新均由知识库 (KB) 编号进行标识。
 
-在注册表编辑器中，.NET Framework 版本和每个版本已安装的更新都保存在不同的子项中。 有关检测已安装版本号的信息，请参阅[如何：确定已安装的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)。
+在注册表编辑器中，.NET Framework 版本和每个版本已安装的更新都保存在不同的子项中。 若要了解如何检测已安装的版本号，请参阅[如何：确定安装了哪些 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)。
 
 ## <a name="query-the-registry-using-code"></a>使用代码查询注册表
 
@@ -74,7 +74,7 @@ $DotNetVersions = Get-ChildItem HKLM:\SOFTWARE\WOW6432Node\Microsoft\Updates | W
  "*.NET Framework*"}
 
 ForEach($Version in $DotNetVersions){
-    
+
    $Updates = Get-ChildItem $Version.PSPath
     $Version.PSChildName
     ForEach ($Update in $Updates){
@@ -104,8 +104,8 @@ KB2600211
 KB2600217
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [如何：确定已安装的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)
-- [安装面向开发者的 .NET Framework](../install/guide-for-developers.md)
+- [如何：确定安装了哪些 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)
+- [安装面向开发人员的 .NET Framework](../install/guide-for-developers.md)
 - [版本和依赖关系](versions-and-dependencies.md)

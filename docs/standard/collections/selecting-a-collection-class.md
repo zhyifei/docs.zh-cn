@@ -11,10 +11,10 @@ helpviewer_keywords:
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 ms.openlocfilehash: fb03200c810290c970f7aa56a0e15d385aca7ca8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711345"
 ---
 # <a name="selecting-a-collection-class"></a>选择集合类
@@ -54,15 +54,15 @@ ms.locfileid: "75711345"
   
   - 一个键和一个值：使用任何基于 <xref:System.Collections.IDictionary> 接口或 <xref:System.Collections.Generic.IDictionary%602> 泛型接口的集合。  
   
-  - 带有嵌入键的值：使用 <xref:System.Collections.ObjectModel.KeyedCollection%602> 泛型类。  
+  - 带有嵌入键的一个值：使用 <xref:System.Collections.ObjectModel.KeyedCollection%602> 泛型类。  
   
-  - 一个键和多个值：使用 <xref:System.Collections.Specialized.NameValueCollection> 类。  
+  - 一个键列和多个值：使用 <xref:System.Collections.Specialized.NameValueCollection> 类。  
   
 - 是否需要以与输入方式不同的方式对元素进行排序？  
   
   - <xref:System.Collections.Hashtable> 类按其哈希代码对其元素进行排序。  
   
-  - <xref:System.Collections.SortedList> 类以及 <xref:System.Collections.Generic.SortedList%602> 和 <xref:System.Collections.Generic.SortedDictionary%602> 泛型类按键对元素进行排序。 排序顺序的依据为，实现 <xref:System.Collections.SortedList> 类的 <xref:System.Collections.IComparer> 接口和实现 <xref:System.Collections.Generic.SortedList%602> 和 <xref:System.Collections.Generic.SortedDictionary%602> 泛型类的 <xref:System.Collections.Generic.IComparer%601> 泛型接口。 在这两种泛型类型中，虽然 <xref:System.Collections.Generic.SortedDictionary%602> 的性能优于 <xref:System.Collections.Generic.SortedList%602>，但 <xref:System.Collections.Generic.SortedList%602> 占用的内存更少。  
+  - <xref:System.Collections.SortedList> 类以及 <xref:System.Collections.Generic.SortedList%602> 和 <xref:System.Collections.Generic.SortedDictionary%602> 泛型类按键对元素进行排序。 排序顺序的依据为，实现 <xref:System.Collections.IComparer> 类的 <xref:System.Collections.SortedList> 接口和实现 <xref:System.Collections.Generic.IComparer%601> 和 <xref:System.Collections.Generic.SortedList%602> 泛型类的 <xref:System.Collections.Generic.SortedDictionary%602> 泛型接口。 在这两种泛型类型中，虽然 <xref:System.Collections.Generic.SortedDictionary%602> 的性能优于 <xref:System.Collections.Generic.SortedList%602>，但 <xref:System.Collections.Generic.SortedList%602> 占用的内存更少。  
   
   - <xref:System.Collections.ArrayList> 提供了一种 <xref:System.Collections.ArrayList.Sort%2A> 方法，此方法采用 <xref:System.Collections.IComparer> 实现作为参数。 其泛型对应项（<xref:System.Collections.Generic.List%601> 泛型类）提供一种 <xref:System.Collections.Generic.List%601.Sort%2A> 方法，此方法采用 <xref:System.Collections.Generic.IComparer%601> 泛型接口的实现作为参数。  
   
@@ -74,14 +74,14 @@ ms.locfileid: "75711345"
   
   - <xref:System.Collections.Specialized.StringCollection>（基于 <xref:System.Collections.IList>）和 <xref:System.Collections.Specialized.StringDictionary>（基于 <xref:System.Collections.IDictionary>）位于 <xref:System.Collections.Specialized> 命名空间。  
   
-  - 此外，通过指定其泛型类参数的 <xref:System.String> 类，可以使用 <xref:System.Collections.Generic> 命名空间中的任何泛型集合类作为强类型字符串集合。 例如，可以将变量声明为采用 [List\<String>](xref:System.Collections.Generic.List%601) 或 [Dictionary<String,String>](xref:System.Collections.Generic.Dictionary%602) 类型。
+  - 此外，通过指定其泛型类参数的 <xref:System.Collections.Generic> 类，可以使用 <xref:System.String> 命名空间中的任何泛型集合类作为强类型字符串集合。 例如，可以将变量声明为采用 [List\<String>](xref:System.Collections.Generic.List%601) 或 [Dictionary<String,String>](xref:System.Collections.Generic.Dictionary%602) 类型。
   
 ## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects 与 PLINQ  
  LINQ to Objects 让开发人员能够使用 LINQ 查询访问内存中对象，条件是该对象类型实现 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>。 LINQ 查询提供了一种通用的数据访问模式，与标准 `foreach` 循环相比，它通常更加简洁，可读性更高，并且可提供筛选、排序和分组功能。 有关详细信息，请参阅 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) 和 [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)。  
   
  PLINQ 提供 LINQ to Objects 的并行实现，在许多情况下，可通过更有效地利用多核计算机提供更快的查询执行。 有关详细信息，请参阅[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Collections>
 - <xref:System.Collections.Specialized>

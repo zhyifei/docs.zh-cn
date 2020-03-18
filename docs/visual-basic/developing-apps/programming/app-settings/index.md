@@ -6,10 +6,10 @@ helpviewer_keywords:
 - examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
 ms.openlocfilehash: 49f65e9c39a29056cb1c552f0d577fcf0d75d658
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353248"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>访问应用程序设置 (Visual Basic)
@@ -26,14 +26,14 @@ ms.locfileid: "74353248"
 
  下表列出了演示如何访问应用程序窗体的示例。  
   
-|功能|查看|  
+|到|请参阅|  
 |--------|---------|  
 |更新用户设置的值|[如何：在 Visual Basic 中更改用户设置](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|在属性网格中显示应用程序和用户设置|[如何：在 Visual Basic 中为用户设置创建属性网格](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
-|保存已更新的用户设置值|[如何：在 Visual Basic 中暂留用户设置](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|在属性网格中显示应用程序和用户设置|[如何：在 Visual Basic 中创建用户设置的属性网格](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|保存已更新的用户设置值|[如何：在 Visual Basic 中保存用户设置](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
 |确定用户设置的值|[如何：在 Visual Basic 中读取应用程序设置](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [管理应用程序设置 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
 - [My.Settings 对象](../../../../visual-basic/language-reference/objects/my-settings-object.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 247fb222eaacdb5ee60df2dded3a857f0395eb34
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3e6a999d528be111ba2b92886f4e6e3ebf185d5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606575"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173661"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference（C# 编译器选项）
 -reference 选项使编译器将指定文件中的[公共](../keywords/public.md)类型信息导入当前项目，从而使你可从指定的程序集文件中引用元数据  。  
@@ -89,7 +89,7 @@ GridV1::Grid
  此外，可以通过在控件名称前添加 `GridV2` 前缀来引用 `grid20.dll` 中的网格控件，如下所示：  
   
 ```csharp  
-GridV2::Grid   
+GridV2::Grid
 ```  
   
 ## <a name="see-also"></a>请参阅

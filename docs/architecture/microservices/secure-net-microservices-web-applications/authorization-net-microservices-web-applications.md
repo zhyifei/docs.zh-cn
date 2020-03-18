@@ -4,10 +4,10 @@ description: .NET 微服务和 Web 应用程序中的安全性 - 了解 ASP .NET
 author: mjrousos
 ms.date: 01/30/2020
 ms.openlocfilehash: f6b69faceac9a9b4819212cc04f89080f3ddad56
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501767"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>关于 .NET 微服务和 Web 应用中的授权
@@ -110,7 +110,7 @@ services.AddAuthorization(options =>
 
 除使用 `AddPolicy` 调用注册自定义策略要求外，还需要通过依赖项注入注册自定义要求处理程序 (`services.AddTransient<IAuthorizationHandler, MinimumAgeHandler>()`)。
 
-ASP.NET Core [授权文档](https://docs.asp.net/en/latest/security/authorization/policies.html) 提供了用于（基于 `DateOfBirth` 声明）检查用户年龄的自定义授权要求和处理程序的示例。
+ASP.NET Core `DateOfBirth`授权文档[ 提供了用于（基于 ](https://docs.asp.net/en/latest/security/authorization/policies.html) 声明）检查用户年龄的自定义授权要求和处理程序的示例。
 
 ## <a name="additional-resources"></a>其他资源
 

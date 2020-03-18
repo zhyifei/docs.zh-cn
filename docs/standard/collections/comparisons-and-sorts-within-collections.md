@@ -13,10 +13,10 @@ helpviewer_keywords:
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
 ms.openlocfilehash: 3360652f22ed39ccfd99f9863052fe584b78562f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159255"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>集合内的比较和排序
@@ -46,9 +46,9 @@ ms.locfileid: "78159255"
   
 - 如果类型 T 未实现任何接口，则没有默认比较器，必须显式提供一个比较器或比较委托。  
   
- 为了提供显式比较，某些方法接受 **IComparer** 实现作为参数。 例如， <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> 方法接受 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 实现。  
+ 为了提供显式比较，一些方法接受将 **IComparer** 实现代码用作参数。 例如， <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> 方法接受 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 实现。  
   
- 系统当前的区域性设置可影响集合中的比较和排序。 默认情况下， **Collections** 类中的比较和排序是区分区域性的。 若要忽略区域性设置并因此获得一致的比较和排序结果，请使用具有接受 <xref:System.Globalization.CultureInfo.InvariantCulture%2A> 的成员重载的 <xref:System.Globalization.CultureInfo>。 有关详细信息，请参阅 “[在集合中执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)” 和 “[在数组中执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)”。  
+ 系统当前的区域性设置可影响集合中的比较和排序。 默认情况下，**Collections** 类中的比较和排序区分区域性。 若要忽略区域性设置并因此获得一致的比较和排序结果，请使用具有接受 <xref:System.Globalization.CultureInfo.InvariantCulture%2A> 的成员重载的 <xref:System.Globalization.CultureInfo>。 有关详细信息，请参阅 “[在集合中执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)” 和 “[在数组中执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)”。  
   
 <a name="BKMK_Equalityandsortexample"></a>
 ## <a name="equality-and-sort-example"></a>等同性和排序示例  
@@ -57,7 +57,7 @@ ms.locfileid: "78159255"
  [!code-csharp[System.Collections.Generic.List.Sort#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.list.sort/cs/program.cs#1)]
  [!code-vb[System.Collections.Generic.List.Sort#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.list.sort/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Collections.IComparer>
 - <xref:System.IEquatable%601>

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - C# language, method parameters
 ms.assetid: a5c3003f-7441-4710-b8b1-c79de77e0b77
 ms.openlocfilehash: 60ac7a8d982e7788f07debce114896859385c8e2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705465"
 ---
 # <a name="passing-parameters-c-programming-guide"></a>传递参数（C# 编程指南）
@@ -30,9 +30,9 @@ ms.locfileid: "75705465"
   
 ## <a name="c-language-specification"></a>C# 语言规范  
 
-有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[参数列表](~/_csharplang/spec/expressions.md#argument-lists)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#argument-lists)中的[参数列表](/dotnet/csharp/language-reference/language-specification/introduction)。 该语言规范是 C# 语法和用法的权威资料。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [方法](./methods.md)

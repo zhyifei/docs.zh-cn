@@ -3,10 +3,10 @@ title: XAttribute 类概述 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
 ms.openlocfilehash: 7a806314664c6319fc45cff0dddedbe38027059d
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635660"
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute 类概述 (C#)
@@ -20,7 +20,7 @@ ms.locfileid: "75635660"
 ## <a name="the-xattribute-constructor"></a>XAttribute 构造函数  
  下面的 <xref:System.Xml.Linq.XAttribute> 类构造函数是您将最常使用的构造函数之一：  
   
-|构造函数|描述|  
+|构造函数|说明|  
 |-----------------|-----------------|  
 |`XAttribute(XName name, object content)`|创建一个 <xref:System.Xml.Linq.XAttribute> 对象。 `name` 参数指定属性的名称；`content` 指定属性的内容。|  
   
@@ -79,6 +79,6 @@ Console.WriteLine(c);
   
  这一区别仅对编写在节点级使用 XML 树的代码的开发人员特别重要。 许多开发人员不会关心这种区别。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [LINQ to XML 编程概述 (C#)](./linq-to-xml-overview.md)

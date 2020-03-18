@@ -3,10 +3,10 @@ title: 基于 Docker 的应用程序的开发流程
 description: 从较高的层面对开发基于 Docker 应用程序的选项进行概述。 使用所选的 Visual Studio for Windows、Visual Studio for Mac 或 Visual Studio Code 获得多平台支持（Windows、macOS 和 Linux）。
 ms.date: 01/30/2020
 ms.openlocfilehash: 799aa6fc742a8fb763ec5a7ae3cf3f70f89bed6d
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77502721"
 ---
 # <a name="development-process-for-docker-based-applications"></a>基于 Docker 的应用程序的开发流程
@@ -15,7 +15,7 @@ ms.locfileid: "77502721"
 
 ## <a name="development-environment-for-docker-apps"></a>Docker 应用的开发环境
 
-### <a name="development-tool-choices-ide-or-editor"></a>开发工具选择：IDE 或编辑器
+### <a name="development-tool-choices-ide-or-editor"></a>开发工具选项：IDE 或编辑器
 
 无论你更青睐内容丰富、功能强大的 IDE 还是轻量、灵活的级编辑器，Microsoft 都可为你提供用于开发 Docker 应用程序的工具。
 

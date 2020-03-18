@@ -3,10 +3,10 @@ title: 使用 Web API 实现微服务应用层
 description: 了解依赖关系注入和转存进程模式及其在 Web API 应用层中的实现详细信息。
 ms.date: 01/30/2020
 ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77502450"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 实现微服务应用层

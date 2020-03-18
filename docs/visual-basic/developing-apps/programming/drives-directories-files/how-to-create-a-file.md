@@ -6,15 +6,15 @@ helpviewer_keywords:
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
 ms.openlocfilehash: 20533ec01d3198d499312ed0c15ec8cca2ff70bd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348800"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>如何：在 Visual Basic 中创建文件
 
-此示例使用 <xref:System.IO.File> 类中的 <xref:System.IO.File.Create%2A> 方法在指定的路径中创建一个空文本文件。  
+此示例使用 <xref:System.IO.File.Create%2A> 类中的 <xref:System.IO.File> 方法在指定的路径中创建一个空文本文件。  
   
 ## <a name="example"></a>示例  
 
@@ -50,7 +50,7 @@ ms.locfileid: "74348800"
   
  如果用户无权创建文件，将引发 <xref:System.UnauthorizedAccessException>。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.IO>
 - <xref:System.IO.File.Create%2A>

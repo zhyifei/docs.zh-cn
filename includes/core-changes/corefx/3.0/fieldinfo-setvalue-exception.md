@@ -1,20 +1,20 @@
 ---
 ms.openlocfilehash: dc733ee32184db5af59bb06e294cd73765977581
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449542"
 ---
 ### <a name="fieldinfosetvalue-throws-exception-for-static-init-only-fields"></a>FieldInfo.SetValue 将对静态、仅初始化字段引发异常
 
-从 .NET Core 3.0 开始，当你尝试通过调用 <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName> 在静态 <xref:System.Reflection.FieldAttributes.InitOnly> 字段上设置值时，将引发异常。
+从 .NET Core 3.0 开始，当你尝试通过调用 <xref:System.Reflection.FieldAttributes.InitOnly> 在静态 <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName> 字段上设置值时，将引发异常。
 
 #### <a name="change-description"></a>更改描述
 
-在 .NET Framework 和 3.0 之前的 .NET Core 版本中，你可以通过调用 <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName> 来设置初始化后为常量的静态字段的值（[C# 中的 readonly](~/docs/csharp/language-reference/keywords/readonly.md)）。 但是，以这种方式设置此类字段导致了不可预测的行为，具体取决于目标框架和优化设置。
+在 .NET Framework 和 3.0 之前的 .NET Core 版本中，你可以通过调用 [ 来设置初始化后为常量的静态字段的值（](~/docs/csharp/language-reference/keywords/readonly.md)C# 中的 readonly<xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName>）。 但是，以这种方式设置此类字段导致了不可预测的行为，具体取决于目标框架和优化设置。
 
-在 .NET Core 3.0 及更高版本中，当对静态 <xref:System.Reflection.FieldAttributes.InitOnly> 字段调用 <xref:System.Reflection.FieldInfo.SetValue%2A> 时，将引发 <xref:System.FieldAccessException?displayProperty=nameWithType> 异常。
+在 .NET Core 3.0 及更高版本中，当对静态 <xref:System.Reflection.FieldInfo.SetValue%2A> 字段调用 <xref:System.Reflection.FieldAttributes.InitOnly> 时，将引发 <xref:System.FieldAccessException?displayProperty=nameWithType> 异常。
 
 > [!TIP]
 > <xref:System.Reflection.FieldAttributes.InitOnly> 字段是只能在声明它时或位于包含类的构造函数中时设置的字段。 换句话说，它在初始化后为常量。

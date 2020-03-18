@@ -7,10 +7,10 @@ helpviewer_keywords:
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
 ms.openlocfilehash: cfb0190ee263e65e8130a8925f76357a382eafa3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711995"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>匿名函数 -（C# 编程指南）
@@ -29,9 +29,9 @@ ms.locfileid: "75711995"
   
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的 [匿名函数表达式](~/_csharplang/spec/expressions.md#anonymous-function-expressions)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#anonymous-function-expressions)中的 [匿名函数表达式](~/_csharplang/spec/introduction.md)部分。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [语句、表达式和运算符](./index.md)
 - [Lambda 表达式](./lambda-expressions.md)

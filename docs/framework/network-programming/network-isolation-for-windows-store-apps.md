@@ -3,10 +3,10 @@ title: Windows 应用商店应用的网络隔离
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
 ms.openlocfilehash: 390a0281f03b08322cc1bee469b601fd5a1547c4
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74802165"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Windows 应用商店应用的网络隔离
@@ -27,7 +27,7 @@ ms.locfileid: "74802165"
   
 有关如何配置用于网络隔离故障排除的网络功能和隔离工具的详细信息，请参阅 Windows 8.x 应用商店开发人员文档中的[如何配置网络隔离功能](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [连接到 Web 服务](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
 - [网络隔离指南和核对清单](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))

@@ -3,10 +3,10 @@ title: 生成适用于云的可复原服务。 在云中处理暂时性故障
 description: 通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序 | 生成适用于云的可复原服务。 在云中处理暂时性故障
 ms.date: 04/30/2018
 ms.openlocfilehash: e516dc675ceb8def25c6d676bced0ea7f253b2d5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74711249"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>生成适用于云的可复原服务：在云中处理暂时性故障

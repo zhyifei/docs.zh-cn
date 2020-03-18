@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet, seodoc18
 ms.openlocfilehash: 307261088f5c7c69c0e69fbd6b99940c04842eec
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156616"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio"></a>在 Visual Studio 中使用 .NET Core 测试 .NET Standard 库
@@ -21,7 +21,7 @@ ms.locfileid: "78156616"
 
 若要创建单元测试项目，请执行以下操作：
 
-1. 打开在[在 Visual Studio 中生成 .NET Standard 库](library-with-visual-studio.md)一文中创建的 `ClassLibraryProjects` 解决方案。
+1. 打开在`ClassLibraryProjects`在 Visual Studio 中生成 .NET Standard 库[一文中创建的 ](library-with-visual-studio.md) 解决方案。
 
 1. 将名为“StringLibraryTest”的新单元测试项目添加到解决方案。
 
@@ -70,7 +70,7 @@ ms.locfileid: "78156616"
 
    - 它会导入 <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> 命名空间，其中包含用于单元测试的类型。
 
-   - 向 `UnitTest1` 类应用 [TestClass](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) 特性。 测试类中标记有 [TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) 属性的所有测试方法都会在单元测试运行时自动执行。
+   - 向 [ 类应用 ](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute)TestClass`UnitTest1` 特性。 测试类中标记有 [TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) 属性的所有测试方法都会在单元测试运行时自动执行。
 
    - 它应用 [TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) 属性，将 C# 中的 `TestMethod1` 或将 Visual Basic 中的 `TestSub` 定义为在单元测试运行时自动执行的测试方法。
 
@@ -85,7 +85,7 @@ ms.locfileid: "78156616"
 
 ## <a name="add-and-run-unit-test-methods"></a>添加并运行单元测试方法
 
-运行单元测试时，Visual Studio 执行单元测试类（对其应用了 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 特性的类）中标记有 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 特性的所有方法。 当第一次遇到测试不通过或测试方法中的所有测试均已成功通过时，测试方法终止。
+运行单元测试时，Visual Studio 执行单元测试类（对其应用了 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 特性的类）中标记有 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 特性的所有方法。 当第一次遇到测试不通过或测试方法中的所有测试均已成功通过时，测试方法终止。
 
 最常见的测试调用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 类的成员。 许多断言方法至少包含两个参数，其中一个是预期的测试结果，另一个是实际的测试结果。 下表显示了 `Assert` 类最常调用的一些方法：
 
@@ -100,7 +100,7 @@ ms.locfileid: "78156616"
 
 测试 `StringLibrary.StartsWithUpper` 方法时，需要提供许多以大写字符开头的字符串。 在这种情况下，此方法应返回 `true`，以便可以调用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A> 方法。 同样，需要提供许多以非大写字符开头的字符串。 在这种情况下，此方法应返回 `false`，以便可以调用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A> 方法。
 
-由于库方法处理的是字符串，因此还需要确保它能够成功处理[空字符串 (`String.Empty`)](xref:System.String.Empty)（不含字符且 <xref:System.String.Length> 为 0 的有效字符串）和 `null` 字符串（尚未初始化的字符串）。 如果对 <xref:System.String> 实例调用 `StartsWithUpper` 作为扩展方法，无法向其传递 `null` 字符串。 不过，还可以直接将其作为静态方法进行调用，并向其传递一个 <xref:System.String> 自变量。
+由于库方法处理的是字符串，因此还需要确保它能够成功处理[空字符串 (`String.Empty`)](xref:System.String.Empty)（不含字符且 <xref:System.String.Length> 为 0 的有效字符串）和 `null` 字符串（尚未初始化的字符串）。 如果对 `StartsWithUpper` 实例调用 <xref:System.String> 作为扩展方法，无法向其传递 `null` 字符串。 不过，还可以直接将其作为静态方法进行调用，并向其传递一个 <xref:System.String> 自变量。
 
 将定义三个方法，每个方法都会对字符串数组中的各个元素反复调用它的 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 方法。 由于测试方法在第一次遇到测试不通过时会立即失败，因此将调用方法重载，以便传递字符串来指明方法调用中使用的字符串值。
 
@@ -136,7 +136,7 @@ ms.locfileid: "78156616"
 
 由于运行的测试均通过，因此需进行少量改动，以使其中一个测试方法失败：
 
-1. 通过修改 `TestDoesNotStartWithUpper` 方法中的 `words` 数组来包含字符串“Error”。 由于 Visual Studio 将在生成运行测试的解决方案时自动保存打开的文件，因此无需手动保存。
+1. 通过修改 `words` 方法中的 `TestDoesNotStartWithUpper` 数组来包含字符串“Error”。 由于 Visual Studio 将在生成运行测试的解决方案时自动保存打开的文件，因此无需手动保存。
 
    ```csharp
    string[] words = { "alphabet", "Error", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
@@ -154,7 +154,7 @@ ms.locfileid: "78156616"
    > [!div class="mx-imgBorder"]
    > ![未通过测试的“测试资源管理器”窗口](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. 选择失败的测试，`TestDoesNotStartWith`。 “测试资源管理器”窗口显示断言生成的消息：  “Assert.IsFalse 失败。 “Error”应返回 false；实际返回 True”。 由于此次失败，数组中“Error”之后的所有字符串都未进行测试。
+1. 选择失败的测试，`TestDoesNotStartWith`。 “测试资源管理器”  窗口显示断言生成的消息：“Assert.IsFalse 失败。 ‘Error’ 应返回 false; 实际返回 True”。 由于此次失败，数组中“Error”之后的所有字符串都未进行测试。
 
    > [!div class="mx-imgBorder"]
    > ![显示 IsFalse 断言失败的“测试资源管理器”窗口](./media/testing-library-with-visual-studio/failed-test-detail.png)
@@ -181,6 +181,6 @@ ms.locfileid: "78156616"
 
 至此，已完成对库的测试，下一步就是使其可供调用方使用。 可以将类库与一个或多个应用程序捆绑在一起，也可以 NuGet 包的形式分发类库。 有关详细信息，请参阅[使用 .NET Standard 类库](consuming-library-with-visual-studio.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [单元测试基础知识 - Visual Studio](/visualstudio/test/unit-test-basics)

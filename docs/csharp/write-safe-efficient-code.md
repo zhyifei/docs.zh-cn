@@ -4,12 +4,12 @@ description: 通过 C# 语言最新增强功能，可以编写可验证的安全
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: f590a338d35966e2cd3a507164057a49b8a5f6f8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d4a7916b80e15c7f00fa0a7da213ed0593e0959d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346703"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78239971"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>编写安全有效的 C# 代码
 
@@ -154,7 +154,7 @@ public struct Point3D
 
 在调用站点，调用方可以选择将 `Origin` 属性用作 `ref readonly` 或值：
 
-[!code-csharp[AssignRefReadonly](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
+[!code-csharp[AssignRefReadonly](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
 
 前面的代码中的第一个分配将创建 `Origin` 常数的副本，并分配该副本。 第二个将分配引用。 注意，`readonly` 修饰符必须包含在变量声明中。 无法修改该修饰符引用对象的引用。 尝试执行该操作将导致编译时错误。
 
@@ -180,7 +180,7 @@ public struct Point3D
 
 下面的代码演示了一个方法示例，该方法用于计算三维空间中两点间的距离。
 
-[!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
+[!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
 该参数具有两个结构，每个结构包含三个双精度值。 一个双精度值有 8 个字节，所以每个参数有 24 个字节。 通过指定 `in` 修饰符，可向这些参数传递 4 字节或 8 字节引用，具体取决于计算机的体系结构。 大小的差异很小，但是当应用程序使用许多不同的值在一个紧凑的循环中调用此方法时，这些差异将累积。
 
@@ -190,7 +190,7 @@ public struct Point3D
 
 `in` 实参的另一个功能是可对 `in` 形参的实参使用文本值或常数。 此外，与 `ref` 或 `out` 参数不同，无需在调用站点应用 `in` 修饰符。 下面的代码演示调用 `CalculateDistance` 方法的两个示例。 第一个示例使用按引用传递的两个本地变量。 第二个示例包含方法调用过程中创建的临时变量。
 
-[!code-csharp[UseInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#UseInArgument "Specifying an In argument")]
+[!code-csharp[UseInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#UseInArgument "Specifying an In argument")]
 
 有多种方法可让编译器确保强制执行 `in` 参数的只读性质。  首先，调用的方法不能直接分配给 `in` 参数。 当值类型为 `struct` 时，不能直接分配给 `in` 参数的任何字段。 此外，不能向使用 `ref` 或 `out` 修饰符的任何方法传递 `in` 参数。
 如果字段为 `struct` 类型且该参数也为 `struct` 类型，则这些规则适用于 `in` 参数的任何字段。 事实上，如果所有级别的成员访问类型都是 `structs`，则这些规则适用于多层成员访问。
@@ -204,11 +204,11 @@ public struct Point3D
 
 在更新现有代码以使用只读引用参数时，这些规则会很有用。 在调用的方法中，可以调用任何使用按值参数的实例方法。 在这些方法中，将创建 `in` 参数的副本。 由于编译器可为任何 `in` 参数创建临时变量，因此还可指定任何 `in` 参数的默认值。 以下代码指定原点（点 0,0）为第二个点的默认值：
 
-[!code-csharp[InArgumentDefault](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
+[!code-csharp[InArgumentDefault](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
 
 要强制编译器按引用传递只读参数，请在调用站点的参数上指定 `in` 修饰符，如下列代码所示：
 
-[!code-csharp[UseInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ExplicitInArgument "Specifying an In argument")]
+[!code-csharp[UseInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ExplicitInArgument "Specifying an In argument")]
 
 这样可以更轻松地在大型代码库中采用一段时间的 `in` 参数，从而实现性能提升。 首先，将 `in` 修饰符添加到方法签名。 然后，可以在调用站点添加 `in` 修饰符，并创建 `readonly struct` 类型，让编译器避免在更多位置创建 `in` 参数的防御性副本。
 
@@ -218,13 +218,13 @@ public struct Point3D
 
 上述技术解释了如何通过返回引用和按引用传递值来避免创建副本。 当参数类型声明为 `readonly struct` 类型时，这些技术最有效。 否则，编译器必须在许多情况下创建“防御副本”以强制执行任何参数的只读状态  。 请考虑下面这个计算三维点到原点距离的示例：
 
-[!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
+[!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
 `Point3D` 结构不是只读结构  。 此方法的主体中有六个不同的属性访问调用。 在首次检查时，你可能认为这些访问是安全的。 毕竟，`get` 访问器不应该修改对象的状态。 但是没有强制执行的语言规则。 它只是通用约定。 任何类型都可以实现修改内部状态的 `get` 访问器。 如果没有语言保证，编译器必须在调用任何成员之前创建参数的临时副本。 在堆栈上创建临时存储，将参数的值复制到临时存储中，并将每个成员访问的值作为 `this` 参数复制到堆栈中。 在许多情况下，当参数类型不是 `readonly struct` 时，这些副本会降低性能，使得按值传递比按只读引用传递速度更快。
 
 相反，如果距离计算使用不可变结构 `ReadonlyPoint3D`，则不需要临时对象：
 
-[!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
+[!code-csharp[readonlyInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
 当你调用 `readonly struct` 的成员时，编译器会生成更有效的代码：`this` 引用始终是按引用成员方法传递的 `in` 参数，而不是接收器的副本。 将 `readonly struct` 用作 `in` 参数时，此优化可以减少复制操作。
 

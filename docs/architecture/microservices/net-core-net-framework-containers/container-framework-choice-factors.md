@@ -3,10 +3,10 @@ title: 决策表。 用于 Docker 的 .NET Framework
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 决策表，用于 Docker 的 .NET Framework
 ms.date: 09/11/2018
 ms.openlocfilehash: 8ffe2b7bc0bee976d3a63b274994dbcc8aef0c61
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77628314"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>决策表：用于 Docker 的 .NET Framework

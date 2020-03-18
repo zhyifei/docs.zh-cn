@@ -4,12 +4,12 @@ description: 了解 C# 中的模式匹配表达式
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0c302499543c90bd01427e2791435968d580f644
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501632"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170379"
 ---
 # <a name="pattern-matching"></a>模式匹配
 
@@ -27,7 +27,7 @@ ms.locfileid: "77501632"
 
 我们不会从抽象形状定义以及添加不同的特定形状类开始，而是从每个几何形状的简单纯数据定义开始：
 
-[!code-csharp[ShapeDefinitions](../../samples/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
+[!code-csharp[ShapeDefinitions](../../samples/snippets/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
 
 在这些结构中，我们编写一个方法来计算某种形状的面积。
 
@@ -35,13 +35,13 @@ ms.locfileid: "77501632"
 
 在 C# 7.0 之前，需要在一系列 `if` 和 `is` 语句中测试每种类型：
 
-[!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
+[!code-csharp[ClassicIsExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
 上面的代码是类型模式  的经典表达式：测试变量以确定其类型并基于该类型执行不同操作。
 
 通过使用 `is` 表达式的扩展在测试成功时对变量赋值，此代码变得更加简单：
 
-[!code-csharp[IsPatternExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
+[!code-csharp[IsPatternExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
 
 在此更新的版本中，`is` 表达式会测试变量并将它分配给具有正确类型的新变量。 另请注意，此版本包含 `Rectangle` 类型（即 `struct`）。 新的 `is` 表达式使用值类型以及引用类型。
 
@@ -59,17 +59,17 @@ ms.locfileid: "77501632"
 
 ## <a name="using-pattern-matching-switch-statements"></a>使用模式匹配 `switch` 语句
 
-随着时间推移，可能需要支持其他形状类型。 随着要测试的条件数增加，你会发现使用 `is` 模式匹配表达式可能会变得很不方便。 除了需要对要检查的每种类型使用 `if` 语句，`is` 表达式仅限为测试输入是否与单个类型匹配。 在这种情况下，会发现 `switch` 模式匹配表达式会是更好的选择。 
+随着时间推移，可能需要支持其他形状类型。 随着要测试的条件数增加，你会发现使用 `is` 模式匹配表达式可能会变得很不方便。 除了需要对要检查的每种类型使用 `if` 语句，`is` 表达式仅限为测试输入是否与单个类型匹配。 在这种情况下，会发现 `switch` 模式匹配表达式会是更好的选择。
 
 传统 `switch` 语句是模式表达式：支持常量模式。
 可以将变量与 `case` 语句中使用的任何常量进行比较：
 
-[!code-csharp[ClassicSwitch](../../samples/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
+[!code-csharp[ClassicSwitch](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
 
 `switch` 语句支持的唯一模式是常量模式。 它进一步限制为数字类型和 `string` 类型。
 这些限制已移除，现在可以使用类型模式编写 `switch` 语句：
 
-[!code-csharp[Switch Type Pattern](../../samples/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
+[!code-csharp[Switch Type Pattern](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
 
 模式匹配 `switch` 语句使用的语法对于使用过传统 C 样式 `switch` 语句的开发人员会比较熟悉。 会计算每个 `case`，并执行与输入变量匹配的条件下的代码。 代码执行无法从一个 case 表达式“贯穿”到下一个表达式；`case` 语句的语法要求，每个 `case` 都必须以 `break`、`return` 或 `goto` 结尾。
 
@@ -87,7 +87,7 @@ ms.locfileid: "77501632"
 
 可以通过对 `case` 标签使用 `when` 子句，为面积为 0 的那些形状创建特殊 case。 边长为 0 的正方形，或半径为 0 的圆形的面积为 0。 可通过对 `case` 标签使用 `when` 语句来指定该条件：  
 
-[!code-csharp[ComputeDegenerateShapes](../../samples/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
+[!code-csharp[ComputeDegenerateShapes](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
 
 此更改演示了有关新语法的几个要点。 首先，多个 `case` 标签可以应用于一个 `switch` 部分。 在其中任何标签为 `true` 时执行语句块。 在此例中，如果 `switch` 表达式是面积为 0 的圆形或正方形，则方法返回常量 0。
 
@@ -98,13 +98,13 @@ ms.locfileid: "77501632"
 
 添加了这些面积为 0 的形状之后，我们再添加一些形状类型：一个矩形和一个三角形：
 
-[!code-csharp[AddRectangleAndTriangle](../../samples/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
+[!code-csharp[AddRectangleAndTriangle](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
 
- 这组更改为每个新形状的退化情况、标签和块添加 `case` 标签。 
+ 这组更改为每个新形状的退化情况、标签和块添加 `case` 标签。
 
 最后，可以添加 `null` case 来确保参数不是 `null`：
 
-[!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
+[!code-csharp[NullCase](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
 `null` 模式的特殊行为十分有趣，因为模式中的常量 `null` 没有类型，但可以转换为任何引用类型或可以为 null 的类型。 语言定义 `null` 值不会匹配任何类型模式（无论变量的编译时类型如何），而不是将 `null` 转换为任何类型。 此行为使新的基于 `switch` 的类型模式与 `is` 语句保持一致：如果检查的值为 `null`，`is` 语句始终返回 `false`。 它也更简单；也就是说，在检查类型后，便无需执行其他 null 检查。 可以从上面示例中的任何 case 块都没有 null 检查得知：此类检查不是必需的，因为与类型模式匹配即可保证非 null 值。
 
@@ -124,7 +124,7 @@ ms.locfileid: "77501632"
 
 第三个规则引入了 `var` 事例可能适用的用途。 假设要进行模式匹配，其中输入是字符串，且要搜索已知命令值。 可以编写如下代码：
 
-[!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
+[!code-csharp[VarCaseExpression](../../samples/snippets/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
 `var` 事例匹配 `null`、空字符串或任何仅包含空白符的字符串。 请注意，为了确保不会意外抛出 <xref:System.NullReferenceException>，上面的代码使用 `?.` 运算符。 `default` case 处理此命令分析程序不理解的其他任何字符串值。
 

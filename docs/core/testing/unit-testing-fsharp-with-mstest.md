@@ -5,10 +5,10 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.openlocfilehash: a685ed8a56393fb6e1c1b9400f0ed4bcef15f9b5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714280"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>使用 dotnet test 和 MSTest 在 .NET Core 中进行 F# 库单元测试
@@ -82,7 +82,7 @@ dotnet add reference ../MathService/MathService.fsproj
         MathServiceTests.fsproj
 ```
 
-在 unit-testing-with-fsharp  目录中执行 `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`。
+在 unit-testing-with-fsharp`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`*目录中执行*。
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
@@ -180,7 +180,7 @@ let squaresOfOdds xs =
 
 你已生成一个小型库和该库的一组单元测试。 你已将解决方案结构化，使添加新包和新测试成为了正常工作流的一部分。 你已将多数的时间和精力集中在解决应用程序的目标上。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [dotnet new](../tools/dotnet-new.md)
 - [dotnet sln](../tools/dotnet-sln.md)

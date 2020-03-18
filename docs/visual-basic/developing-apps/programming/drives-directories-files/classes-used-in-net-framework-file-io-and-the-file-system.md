@@ -5,10 +5,10 @@ helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 ms.openlocfilehash: fe70f8fb655579049bb36fc324d04530259d25f2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348932"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>在 .NET Framework 文件 I/O 和文件系统中使用的类 (Visual Basic)
@@ -30,7 +30,7 @@ ms.locfileid: "74348932"
 |<xref:System.IO.FileAccess?displayProperty=nameWithType>|定义文件的读取、写入或读/写访问权限的常量。|  
 |<xref:System.IO.FileAttributes?displayProperty=nameWithType>|提供文件和目录的属性，例如 `Archive`、`Hidden` 和 `ReadOnly`。|  
 |<xref:System.IO.FileInfo?displayProperty=nameWithType>|提供用于创建、复制、删除、移动和打开文件的静态方法，并可帮助创建 `FileStream`。|  
-|<xref:System.IO.FileMode?displayProperty=nameWithType>|控制打开文件的方式。 在多个 `FileStream` 和 `IsolatedStorageFileStream` 的构造函数中指定此参数，此参数用于 <xref:System.IO.File> 和 <xref:System.IO.FileInfo> 的 `Open` 方法。|  
+|<xref:System.IO.FileMode?displayProperty=nameWithType>|控制打开文件的方式。 在多个 `FileStream` 和 `IsolatedStorageFileStream` 的构造函数中指定此参数，此参数用于 `Open` 和 <xref:System.IO.File> 的 <xref:System.IO.FileInfo> 方法。|  
 |<xref:System.IO.FileShare?displayProperty=nameWithType>|定义用于控制其他文件流可以对同一文件进行何种类型的访问的常量。|  
 |<xref:System.IO.Path?displayProperty=nameWithType>|提供用于处理目录字符串的方法和属性。|  
 |<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|通过定义 <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>、<xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>、<xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> 和 <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> 权限来控制对文件和文件夹的访问。|  
@@ -60,9 +60,9 @@ ms.locfileid: "74348932"
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|从 `String` 读取字符。 输出可以是任意编码中的流或 `String`。|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|将字符写入 `String`。 输出可以是任意编码中的流或 `String`。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [撰写流](../../../../standard/io/composing-streams.md)
 - [文件和流 I/O](../../../../standard/io/index.md)
-- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [异步文件 I/O](../../../../standard/io/asynchronous-file-i-o.md)
 - [.NET Framework 文件 I/O 和文件系统基础知识 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

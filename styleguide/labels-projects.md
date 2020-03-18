@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 394ed636cece766d61b1a10403b98c73f1d3cb93
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 99153bb9cf3287951a1e52e716c799ee64eb82ad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73041259"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78950992"
 ---
 # <a name="labels-and-projects-roadmap"></a>标签和项目路线图
 
-.NET 文档团队广泛使用 [GitHub 标签](https://github.com/dotnet/docs/labels)来组织我们的工作。 通过按标签组合进行筛选，我们可以在 [.NET 文档网站](https://docs.microsoft.com/dotnet)中迅速找到所感兴趣的部分。 
+.NET 文档团队广泛使用 [GitHub 标签](https://github.com/dotnet/docs/labels)来组织我们的工作。 通过按标签组合进行筛选，我们可以在 [.NET 文档网站](https://docs.microsoft.com/dotnet)中迅速找到所感兴趣的部分。
 
 此外，我们还使用 [GitHub 项目](https://github.com/dotnet/docs/projects)组织冲刺和其他实现目标的长篇故事。
 
@@ -22,13 +22,13 @@ ms.locfileid: "73041259"
 
 - [.NET 指南](#find-a-single-net-guide)和[指南章节](#search-one-section-of-a-guide)。
 - [目标版本](#releases)
-- [优先级](#priority)
+- [Priority](#priority)
 
 你可以合并每组（指南、版本、优先级）中的标签，以缩小关注范围，查找你想要解决的问题。
 
 ### <a name="find-a-single-net-guide"></a>查找单个 .NET 指南
 
-我们针对各个体系结构电子书以及各个 .NET 指南使用标签。 
+我们针对各个体系结构电子书以及各个 .NET 指南使用标签。
 
 ![:book: guide on light green background](./images/guide.png "体系结构指南标签的前缀")
 
@@ -97,7 +97,7 @@ ms.locfileid: "73041259"
 
 ![:checkered_flag:Release: on dark yellow](./images/release.png "版本标签的前缀")
 
-针对特定版本标记的问题标有 `:checkered_flag: Release:` 前缀，并且使用深黄色背景。 
+针对特定版本标记的问题标有 `:checkered_flag: Release:` 前缀，并且使用深黄色背景。
 
 - .NET Core 2.2
 - .NET Core 3.0
@@ -116,7 +116,7 @@ ms.locfileid: "73041259"
 
 ## <a name="projects"></a>项目
 
-参与者应查看[适用于 .NET 社区协作者的项目](https://github.com/dotnet/docs/projects/35)。 我们已针对维护、文档更新和新内容任务创建了不同的列。 这也是一种查找感兴趣任务的方法。 （请注意，可以使用上述标签筛选项目视图。） 
+参与者应查看[适用于 .NET 社区协作者的项目](https://github.com/dotnet/docs/projects/35)。 我们已针对维护、文档更新和新内容任务创建了不同的列。 这也是一种查找感兴趣任务的方法。 （请注意，可以使用上述标签筛选项目视图。）
 
 此外，我们还通过其他两种方式使用项目：
 

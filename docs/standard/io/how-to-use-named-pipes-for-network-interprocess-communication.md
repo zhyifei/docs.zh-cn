@@ -16,10 +16,10 @@ helpviewer_keywords:
 - full duplex communication [.NET Framework], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
 ms.openlocfilehash: 71f3a8d38b46993762b2673ea5fe735d8d54d351
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706629"
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>如何：使用命名管道进行网络进程间通信
@@ -43,7 +43,7 @@ ms.locfileid: "75706629"
 ## <a name="robust-programming"></a>可靠编程  
  因为此示例中的客户端进程和服务器进程可以在同一台计算机上运行，所以提供给 <xref:System.IO.Pipes.NamedPipeClientStream> 对象的服务器名称为 `"."`。 如果客户端进程和服务器进程在不同的计算机上运行，`"."` 会被替换为运行服务器进程的计算机的网络名称。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Security.Principal.TokenImpersonationLevel>
 - <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>

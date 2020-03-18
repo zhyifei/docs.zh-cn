@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
 ms.openlocfilehash: 089d5d7c7a95e2de4629f53255d9d9790fd5508a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705387"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>使用 Override 和 New 关键字进行版本控制（C# 编程指南）
@@ -61,24 +61,24 @@ C# 语言经过专门设计，以便不同库中的[基类](../../language-refer
   
  [!code-csharp[csProgGuideInheritance#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#31)]  
   
- 使用 `new` 关键字可告诉编译器你的定义将隐藏基类中包含的定义。 这是默认行为。  
+ 使用 `new` 关键字可告诉编译器你的定义将隐藏基类中包含的定义。 此选项为默认行为。  
   
 ## <a name="override-and-method-selection"></a>替代和方法选择  
  当在类中对方法进行命名时，如果有多个方法与调用兼容（例如，存在两种同名的方法，并且其参数与传递的参数兼容），则 C# 编译器将选择最佳方法进行调用。 以下方法将是兼容的：  
   
  [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  
   
- 在 `Derived` 的一个实例中调用 `DoWork` 时，C# 编译器将首先尝试使该调用与最初在 `Derived` 上声明的 `DoWork` 版本兼容。 替代方法不被视为是在类上进行声明的，而是在基类上声明的方法的新实现。 仅当 C# 编译器无法将方法调用与 `Derived` 上的原始方法匹配时，才尝试将该调用与具有相同名称和兼容参数的替代方法匹配。 例如：  
+ 在 `DoWork` 的一个实例中调用 `Derived` 时，C# 编译器将首先尝试使该调用与最初在 `DoWork` 上声明的 `Derived` 版本兼容。 替代方法不被视为是在类上进行声明的，而是在基类上声明的方法的新实现。 仅当 C# 编译器无法将方法调用与 `Derived` 上的原始方法匹配时，才尝试将该调用与具有相同名称和兼容参数的替代方法匹配。 例如:  
   
  [!code-csharp[csProgGuideInheritance#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#33)]  
   
- 由于变量 `val` 可以隐式转换为 double 类型，因此 C# 编译器将调用 `DoWork(double)`，而不是 `DoWork(int)`。 有两种方法可以避免此情况。 首先，避免将新方法声明为与虚方法相同的名称。 其次，可以通过将 `Derived` 的实例强制转换为 `Base` 来使 C# 编译器搜索基类方法列表，从而使其调用虚方法。 由于是虚方法，因此将调用 `Derived` 上的 `DoWork(int)` 的实现。 例如：  
+ 由于变量 `val` 可以隐式转换为 double 类型，因此 C# 编译器将调用 `DoWork(double)`，而不是 `DoWork(int)`。 有两种方法可以避免此情况。 首先，避免将新方法声明为与虚方法相同的名称。 其次，可以通过将 `Derived` 的实例强制转换为 `Base` 来使 C# 编译器搜索基类方法列表，从而使其调用虚方法。 由于是虚方法，因此将调用 `DoWork(int)` 上的 `Derived` 的实现。 例如:  
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   
  有关 `new` 和 `override` 的更多示例，请参阅[了解何时使用 Override 和 New 关键字](./knowing-when-to-use-override-and-new-keywords.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [类和结构](./index.md)

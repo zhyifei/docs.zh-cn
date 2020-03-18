@@ -3,12 +3,12 @@ title: 使用 Visual Studio 中的 Roslyn 语法可视化工具浏览代码
 description: 语法可视化工具提供了可视化工具，用于浏览 .NET Compiler Platform SDK 为代码生成的模型。
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: c4b4414dabcb6c9749a23d726e4a69334376d988
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 27e5a1f0b31dd2af2ac779223538b03cdb4db0c5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346966"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156982"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>使用 Visual Studio 中的 Roslyn 语法可视化工具浏览代码
 
@@ -20,22 +20,22 @@ ms.locfileid: "75346966"
 
 ## <a name="syntax-visualizer"></a>语法可视化工具
 
-使用“语法可视化工具”可以检查 Visual Studio IDE 当前活动的编辑器窗口中的 C# 或 Visual Basic 代码文件的语法树  。 通过单击“视图” > “其他窗口” > “语法可视化工具”，可以启动可视化工具    。  还可以使用右上角的“快速启动”工具栏  。 键入“语法”，然后应该会显示用于开启语法可视化工具的命令  。
+使用“语法可视化工具”可以检查 Visual Studio IDE 当前活动的编辑器窗口中的 C# 或 Visual Basic 代码文件的语法树  。 通过单击“视图” **“其他窗口”** “语法可视化工具”，可以启动可视化工具 >    >   。  还可以使用右上角的“快速启动”工具栏  。 键入“语法”，然后应该会显示用于开启语法可视化工具的命令  。
 
-此命令会以浮动工具窗口的形式打开语法可视化工具。 如果没有打开代码编辑器窗口，则显示为空白，如下图所示。 
+此命令会以浮动工具窗口的形式打开语法可视化工具。 如果没有打开代码编辑器窗口，则显示为空白，如下图所示。
 
 ![语法可视化工具窗口](media/syntax-visualizer/syntax-visualizer.png)
 
 将此工具窗口停靠在 Visual Studio 中方便操作的位置，例如左侧。 可视化工具显示关于当前代码文件的信息。
 
-使用 File > New Project 命令新建项目   。 可以创建 Visual Basic 项目或 C# 项目。 当 Visual Studio 打开此项目的主代码文件时，可视化工具会显示它的语法树。 可以打开此 Visual Studio 实例中的任何现有 C#/Visual Basic 文件，可视化工具会显示该文件的语法树。 如果在 Visual Studio 中打开了多个代码文件，可视化工具会显示当前活动的代码文件（键盘焦点所在的代码文件）的语法树。
+使用 File**New Project 命令新建项目** >   。 可以创建 Visual Basic 项目或 C# 项目。 当 Visual Studio 打开此项目的主代码文件时，可视化工具会显示它的语法树。 可以打开此 Visual Studio 实例中的任何现有 C#/Visual Basic 文件，可视化工具会显示该文件的语法树。 如果在 Visual Studio 中打开了多个代码文件，可视化工具会显示当前活动的代码文件（键盘焦点所在的代码文件）的语法树。
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 ![将 C# 语法树可视化](media/syntax-visualizer/visualize-csharp.png)
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 ![将 Visual Basic 语法树可视化](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
@@ -49,27 +49,27 @@ ms.locfileid: "75346966"
 在树中进行导航有两种方式：
 
 * 展开或单击树中的项。 可视化工具自动选择与代码编辑器中的项的范围对应的文本。
-* 单击或选择代码编辑器中的文本。 在前面的 Visual Basic 示例中，如果在代码编辑器中选择了包含“Module Module1”的那一行，则可视化工具会在树中自动导航至对应的 ModuleStatement 节点。 
+* 单击或选择代码编辑器中的文本。 在前面的 Visual Basic 示例中，如果在代码编辑器中选择了包含“Module Module1”的那一行，则可视化工具会在树中自动导航至对应的 ModuleStatement 节点。
 
 可视化工具会突出显示树中的项，该项的范围与编辑器中所选择的文本的范围最匹配。
 
-可视化工具会刷新树，以匹配活动代码文件中的修改。 将调用添加至 `Main()`.中的 `Console.WriteLine()`。 键入内容时，可视化工具会刷新树。
+可视化工具会刷新树，以匹配活动代码文件中的修改。 将调用添加至 `Console.WriteLine()`.中的 `Main()`。 键入内容时，可视化工具会刷新树。
 
 请在键入 `Console.` 后暂停键入。 树中有一些粉色的项。 这说明在所键入的代码中存在错误（通常也成为“诊断”）。 这些错误会附加到语法树的节点、标记和琐碎内容中。 可视化工具会显示哪些项存在错误，并用粉色突出显示其背景。 将鼠标悬停在该项上可以查看任何粉色项的错误。 可视化工具只显示语法错误（这些错误与键入代码的语法相关）；不会显示任何语义错误。
- 
+
 ## <a name="syntax-graphs"></a>语法关系图
 
-右键单击树中的任何项，然后单击“查看定向语法关系图”  。 
+右键单击树中的任何项，然后单击“查看定向语法关系图”  。
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
-可视化工具会以图解形式显示以所选项为根的关系子树。 针对 C# 示例中对应于 `Main()` 方法的 MethodDeclaration 节点，尝试以下步骤  。 可视化工具显示如下所示的语法关系图：
+可视化工具会以图解形式显示以所选项为根的关系子树。 针对 C# 示例中对应于  **方法的 MethodDeclaration 节点，尝试以下步骤**`Main()`。 可视化工具显示如下所示的语法关系图：
 
 ![查看 C# 语法关系图](media/syntax-visualizer/csharp-syntax-graph.png)
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
-针对前面的 Visual Basic 示例中对应于 `Main()` 方法的 SubBlock 节点，尝试相同的操作  。 可视化工具显示如下所示的语法关系图：
+针对前面的 Visual Basic 示例中对应于  **方法的 SubBlock 节点，尝试相同的操作**`Main()`。 可视化工具显示如下所示的语法关系图：
 
 ![查看 Visual Basic 语法关系图](media/syntax-visualizer/visual-basic-syntax-graph.png)
 
@@ -87,9 +87,9 @@ ms.locfileid: "75346966"
 
 ## <a name="inspecting-semantics"></a>检查语义
 
-语法可视化工具可以对符号和语义信息进行基本检查。 在 C# 示例中的 Main() 内键入 `double x = 1 + 1;`。 然后在代码编辑器窗口中选择表达式 `1 + 1`。 可视化工具突出显示了 AddExpression 节点  。 右键单击 AddExpression，然后单击“查看符号(如果有)”   。 请注意，大部分菜单项都带有“如果有”这个限定条件。 语法可视化工具检查节点的属性，包括不是所有节点都有的属性。 
+语法可视化工具可以对符号和语义信息进行基本检查。 在 C# 示例中的 Main() 内键入 `double x = 1 + 1;`。 然后在代码编辑器窗口中选择表达式 `1 + 1`。 可视化工具突出显示了 AddExpression 节点  。 右键单击 AddExpression，然后单击“查看符号(如果有)”   。 请注意，大部分菜单项都带有“如果有”这个限定条件。 语法可视化工具检查节点的属性，包括不是所有节点都有的属性。
 
-可视化工具中的属性网格更新如下图所示：该表达式的符号是 SynthesizedIntrinsicOperatorSymbol  ，其中种类 = 方法  。
+可视化工具中的属性网格会更新，如下图所示：该表达式的符号为 SynthesizedIntrinsicOperatorSymbol，其中 Kind = Method   。
 
 ![符号属性](media/syntax-visualizer/symbol-properties.png)
 
@@ -97,7 +97,7 @@ ms.locfileid: "75346966"
 
 ![TypeSymbol 属性](media/syntax-visualizer/type-symbol-properties.png)
 
-针对同一个 AddExpression 节点，请尝试“查看转换后的 TypeSymbol (如果有)”   。 属性网格的更新内容指示虽然表达式的类型为 `Int32`，但转换后的表达式类型为 `Double`，如下图所示。 此节点包含转换后的类型符号信息，因为 `Int32` 表达式所在的上下文要求必须转换为 `Double` 型。 此转换满足了为赋值运算符左侧的变量 `x` 指定的类型为 `Double` 型的要求。
+针对同一个 AddExpression 节点，请尝试“查看转换后的 TypeSymbol (如果有)”   。 属性网格的更新内容指示虽然表达式的类型为 `Int32`，但转换后的表达式类型为 `Double`，如下图所示。 此节点包含转换后的类型符号信息，因为 `Int32` 表达式所在的上下文要求必须转换为 `Double` 型。 此转换满足了为赋值运算符左侧的变量 `Double` 指定的类型为 `x` 型的要求。
 
 ![转换后的 TypeSymbol 属性](media/syntax-visualizer/converted-type-symbol-properties.png)
 
@@ -119,24 +119,24 @@ Module Program
 End Module
 ```
 
-此代码引入了映射到文件顶部的 `System.Console` 类型的 `C` 别名，并在 `Main()` 内使用此别名。 选择在 `Main()` 方法的 `C.WriteLine()` 中使用此别名 `C`。 可视化工具会选择对应的 IdentifierName 节点  。 右键单击此节点，并单击“查看符号(如果有)”  。 属性网格指示此标识符绑定至 `System.Console` 类型，如下图所示：
+此代码引入了映射到文件顶部的 `C` 类型的 `System.Console` 别名，并在 `Main()` 内使用此别名。 选择在 `C` 方法的 `C.WriteLine()` 中使用此别名 `Main()`。 可视化工具会选择对应的 IdentifierName 节点  。 右键单击此节点，并单击“查看符号(如果有)”  。 属性网格指示此标识符绑定至 `System.Console` 类型，如下图所示：
 
 ![符号属性](media/syntax-visualizer/symbol-visual-basic.png)
 
-针对同一 IdentifierName 节点，尝试“查看 AliasSymbol (如果有)”   。 属性网格指示该标识符为绑定至 `System.Console` 目标的别名 `C`。 换而言之，属性网格会提供对应于标识符 `C` 的 AliasSymbol 的相关信息  。
+针对同一 IdentifierName 节点，尝试“查看 AliasSymbol (如果有)”   。 属性网格指示该标识符为绑定至 `C` 目标的别名 `System.Console`。 换而言之，属性网格会提供对应于标识符  **的 AliasSymbol 的相关信息**`C`。
 
 ![AliasSymbol 属性](media/syntax-visualizer/alias-symbol.png)
 
-检查对应于任何声明的类型、方法和属性的符号。 在可视化工具中选择对应节点，单击“查看符号(如果有)”  。 选择 `Sub Main()` 方法，包括该方法的正文。 针对可视化工具中对应的 SubBlock 节点，单击“查看符号(如果有)”   。 属性网格显示此 SubBlock 节点的 MethodSymbol 的名称为 `Main`，返回类型为 `Void`   。
+检查对应于任何声明的类型、方法和属性的符号。 在可视化工具中选择对应节点，单击“查看符号(如果有)”  。 选择 `Sub Main()` 方法，包括该方法的正文。 针对可视化工具中对应的 SubBlock 节点，单击“查看符号(如果有)”   。 属性网格显示此 SubBlock 节点的 MethodSymbol 的名称为 **，返回类型为**  `Main``Void`。
 
 ![查看方法声明的符号](media/syntax-visualizer/method-symbol.png)
 
 在 C# 中可以轻松重复上述 Visual Basic 示例。 为别名键入 `using C = System.Console;` 以代替 `Imports C = System.Console`。 在 C# 中完成的上述步骤会在可视化工具窗口中产生相同的结果。
 
-语义检查操作只能用于节点。 不能用于标记和琐事。 并非所有节点都有相关的语义信息可供检查。 如果某个节点不具备相关的语义信息，单击“查看 \* 符号(如果有)”会显示空白的属性网格  。
+语义检查操作只能用于节点。 不能用于标记和琐事。 并非所有节点都有相关的语义信息可供检查。 如果某个节点不具备相关的语义信息，单击“查看  **符号(如果有)”会显示空白的属性网格\*** 。
 
 可阅读[使用语义](work-with-semantics.md)概述文档，详细了解执行语义分析的 API。
 
 ## <a name="closing-the-syntax-visualizer"></a>关闭语法可视化工具
 
-在不使用可视化工具窗口检查源代码时，可以关闭该窗口。 当你在浏览代码、编辑和更改源时，语法可视化工具会更新显示的内容。 在你没有使用它的时候，这种情况会分散人的注意力。 
+在不使用可视化工具窗口检查源代码时，可以关闭该窗口。 当你在浏览代码、编辑和更改源时，语法可视化工具会更新显示的内容。 在你没有使用它的时候，这种情况会分散人的注意力。

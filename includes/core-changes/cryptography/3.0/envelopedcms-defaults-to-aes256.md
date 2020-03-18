@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: f9000b19997201c2d3de0643669f9029ff1ca31c
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74567950"
 ---
 ### <a name="envelopedcms-defaults-to-aes-256-encryption"></a>EnvelopedCms 默认为 AES-256 加密
@@ -28,9 +28,9 @@ return cms.Encode();
 
 3.0 预览版 8
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
-如果该更改有负面影响，则可以通过在包含 <xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier> 类型参数的 <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> 构造函数中显式指定加密算法标识符来还原 TripleDES 加密，例如：
+如果该更改有负面影响，则可以通过在包含 <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> 类型参数的 <xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier> 构造函数中显式指定加密算法标识符来还原 TripleDES 加密，例如：
 
 ```csharp
 Oid tripleDesOid = new Oid("1.2.840.113549.3.7", null);

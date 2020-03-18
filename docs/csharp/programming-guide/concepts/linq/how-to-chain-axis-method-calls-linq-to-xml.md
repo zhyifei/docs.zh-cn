@@ -2,12 +2,12 @@
 title: 如何链接轴方法调用 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: ccfbf516a7fddbef357bfb0072288e250768616b
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 56fa5c9e8358883d838b68e99664240aa97f347f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141430"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169462"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>如何链接轴方法调用 (LINQ to XML) (C#)
 一个在代码中常用的模式是调用轴方法，然后调用一个扩展方法轴。  
@@ -17,7 +17,7 @@ ms.locfileid: "74141430"
 ## <a name="example"></a>示例  
  本示例使用 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> 和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> 在所有 `Name` 元素中查找所有 `Address` 元素中的所有 `PurchaseOrder` 元素。  
   
- 本示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 本示例使用以下 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```csharp  
 XElement purchaseOrders = XElement.Load("PurchaseOrders.xml");  
@@ -73,7 +73,7 @@ foreach (XElement e in names)
   
 ```csharp  
 XElement root = XElement.Load("Irregular.xml");  
-IEnumerable<XElement> configParameters =   
+IEnumerable<XElement> configParameters =
     root.Elements("Customer").Elements("Config").  
     Elements("ConfigParameter");  
 foreach (XElement cp in configParameters)  
@@ -90,7 +90,7 @@ foreach (XElement cp in configParameters)
 ## <a name="example"></a>示例  
  下面的示例演示针对命名空间中的 XML 的相同技术。 有关详细信息，请参阅[命名空间概述(LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。  
   
- 本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的多个采购订单](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
+ 本示例使用以下 XML 文档：[示例 XML 文件：命名空间中的多个采购订单](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -116,6 +116,6 @@ foreach (XElement e in names)
 <aw:Name xmlns:aw="http://www.adventure-works.com">Jessica Arnold</aw:Name>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [LINQ to XML 轴 (C#)](linq-to-xml-axes-overview.md)

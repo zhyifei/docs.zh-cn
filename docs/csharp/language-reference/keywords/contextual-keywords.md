@@ -5,17 +5,17 @@ helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
 ms.openlocfilehash: 1de8fbccfa9485a546689233ea8a601a8bd697a5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713647"
 ---
 # <a name="contextual-keywords-c-reference"></a>上下文关键字（C# 参考）
 
-上下文关键字用于在代码中提供特定含义，但它不是 C# 中的保留字。 本部分介绍下面这些上下文关键字：  
+上下文关键字用于在代码中提供特定含义，但不是 C# 中的保留字。 本部分介绍下面这些上下文关键字：  
   
-|关键字|描述|  
+|关键字|说明|  
 |-------------|-----------------|  
 |[add](./add.md)|定义一个自定义事件访问器，客户端代码订阅事件时会调用该访问器。|  
 |[async](./async.md)|指示修改后的方法、lambda 表达式或匿名方法是异步的。|  
@@ -28,13 +28,13 @@ ms.locfileid: "75713647"
 |[set](./set.md)|为属性或索引器定义访问器方法。|  
 |[value](./value.md)|用于设置访问器和添加或删除事件处理程序。|  
 |[var](./var.md)|使编译器能够确定在方法作用域中声明的变量类型。|  
-|[when](when.md)|指定 `catch` 块的筛选条件或 `switch` 语句的 `case` 标签。|
+|[when](when.md)|指定 `catch` 块的筛选条件或 `case` 语句的 `switch` 标签。|
 |[where](./where-generic-type-constraint.md)|将约束添加到泛型声明。 （另请参阅 [where](./where-clause.md)）。|  
 |[yield](./yield.md)|在迭代器块中使用，用于向枚举数对象返回值或用于表示迭代结束。|  
   
  C# 3.0 中引入的所有查询关键字也都是上下文相关的。 有关详细信息，请参阅[查询关键字 (LINQ)](./query-keywords.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)

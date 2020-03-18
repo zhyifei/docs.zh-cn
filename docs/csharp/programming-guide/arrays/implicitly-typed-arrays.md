@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
 ms.openlocfilehash: 943760af30422cd333fdff65cdf678108c9d9564
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705712"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>隐式类型的数组（C# 编程指南）
 
-可以创建隐式类型化的数组，其中数组实例的类型通过数组初始值设定项中指定的元素来推断。 针对隐式类型化变量的任何规则也适用于隐式类型化数组。 有关详细信息，请参阅[隐式类型局部变量](../classes-and-structs/implicitly-typed-local-variables.md)。
+可以创建隐式类型化的数组，其中数组实例的类型通过数组初始值设定项中指定的元素来推断。 针对隐式类型化变量的任何规则也适用于隐式类型化数组。 有关详细信息，请参阅[隐式类型本地变量](../classes-and-structs/implicitly-typed-local-variables.md)。
 
 隐式类型化数组通常用于查询表达式、匿名类型、对象和集合初始值设定项。
 
@@ -31,7 +31,7 @@ ms.locfileid: "75705712"
 
 [!code-csharp[csProgGuideLINQ#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#38)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [隐式类型的局部变量](../classes-and-structs/implicitly-typed-local-variables.md)

@@ -3,11 +3,11 @@ title: 运行时配置选项
 description: 了解如何使用运行时配置设置来配置 .NET Core 应用程序。
 ms.date: 01/21/2020
 ms.openlocfilehash: ddf68c30e620a06856f65e71bd050e1b77618f20
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733449"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397610"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core 运行时配置设置
 

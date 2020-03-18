@@ -5,10 +5,10 @@ helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
 ms.openlocfilehash: 57da13f6dc6719166b9051afeb2532ba5fbeff3a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713477"
 ---
 # <a name="in-generic-modifier-c-reference"></a>in（泛型修饰符）（C# 参考）
@@ -41,7 +41,7 @@ ms.locfileid: "75713477"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [out](out-generic-modifier.md)
 - [协变和逆变](../../programming-guide/concepts/covariance-contravariance/index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-ms.openlocfilehash: d88b2b40f63f0616cfd54e8abb62f1bc2183f776
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cd76b2c33fe1a1a986bc05e3c3ed5f22809686ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713300"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173570"
 ---
 # <a name="orderby-clause-c-reference"></a>orderby 子句（C# 参考）
 
@@ -35,10 +35,10 @@ ms.locfileid: "75713300"
 
 编译时，`orderby` 子句将转换为对 <xref:System.Linq.Enumerable.OrderBy%2A> 方法的调用。 `orderby` 子句中的多个关键值将转换为 <xref:System.Linq.Enumerable.ThenBy%2A> 方法调用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [查询关键字 (LINQ)](query-keywords.md)
-- [语言集成查询 (LINQ)](../../linq/index.md)
+- [C# 中的 LINQ](../../linq/index.md)
 - [group 子句](group-clause.md)
-- [C# 中的 LINQ 入门](/dotnet/csharp/programming-guide/concepts/linq/)
+- [语言集成查询 (LINQ)](../../programming-guide/concepts/linq/index.md)

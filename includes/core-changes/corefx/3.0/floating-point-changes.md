@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: ce4f09908b1025e8e5a0380c9bf035c6b0db479a
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568185"
 ---
 ### <a name="floating-point-formatting-and-parsing-behavior-changed"></a>浮点格式设置和分析行为已更改
@@ -20,7 +20,7 @@ ms.locfileid: "74568185"
 
 3.0
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 在 [Floating-point parsing and formatting improvements in .NET Core 3.0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/)（.NET Core 3.0 中浮点分析和格式设置改进）博客文章的“对现有代码的潜在影响”部分中，如果你在与 .NET Core 2.2 应用程序比较时观察到行为有变，则通常建议更改代码，这涉及到使用不同的标准或自定义格式字符串来强制执行所需的行为。 如果一些结果之前都不正确，则它们可能没法修复。
 

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - catch blocks
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 ms.openlocfilehash: 5a9218d394b76e897f4263708a10f1bc895ad4e1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708461"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>如何使用 try/catch 块捕获异常
 
-将可能引发异常的任何代码语句放置在 `try` 块中，将用于处理异常的语句放置在 `try` 块下的一个或多个 `catch` 块中。 每个 `catch` 块包括异常类型，并且可以包含处理该异常类型所需的其他语句。
+将可能引发异常的任何代码语句放置在 `try` 块中，将用于处理异常的语句放置在 `catch` 块下的一个或多个 `try` 块中。 每个 `catch` 块包括异常类型，并且可以包含处理该异常类型所需的其他语句。
 
 在以下示例中，<xref:System.IO.StreamReader> 将打开一个名为 data.txt 的文件  ，并从文件中检索行。 因为代码可能会引发任何三个异常，因此将其放置于 `try` 块中。 三个 `catch` 块捕获异常并通过将结果向控制台显示来处理它们。
 
@@ -36,7 +36,7 @@ ms.locfileid: "75708461"
 > [!NOTE]
 > 大多数代码可能会引发异常，并且一些异常（如 <xref:System.OutOfMemoryException>）可能随时由 CLR 本身引发。 虽然应用程序无需处理这些异常，但在编写供他人使用的库时，应注意到这种可能性。 有关何时在 `try` 块中设置代码的建议，请参阅[异常的最佳做法](best-practices-for-exceptions.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [异常](index.md)
 - [处理 .NET 中的 I/O 错误](../io/handling-io-errors.md)

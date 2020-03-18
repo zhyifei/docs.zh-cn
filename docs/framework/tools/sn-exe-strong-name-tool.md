@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: 90cad6529b3ac2a8afedaca0c43d5c7561dcf9e6
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: b5eee15a08dcae42263e06939c197ec0848816a0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138961"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180307"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe（强名称工具）
 强名称工具 (Sn.exe) 有助于使用[强名称](../../standard/assembly/strong-named.md)对程序集进行签名。 Sn.exe 提供了用于密钥管理、签名生成和签名验证的选项。  
@@ -28,7 +28,7 @@ ms.locfileid: "74138961"
  强名称工具自动随 Visual Studio 一起安装。 若要启动此工具，请使用“开发人员命令提示”（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
 
 > [!NOTE]
-> 在 64 位计算机上，可通过使用 Visual Studio 开发人员命令提示运行 32 位版本的 Sn.exe，也可使用 Visual Studio x64 Win64 命令提示运行 64 位版本的 Sn.exe。 
+> 在 64 位计算机上，可通过使用 Visual Studio 开发人员命令提示运行 32 位版本的 Sn.exe，也可使用 Visual Studio x64 Win64 命令提示运行 64 位版本的 Sn.exe。
   
  在命令提示符处，键入以下内容：  
   
@@ -40,7 +40,7 @@ sn [-quiet][option [parameter(s)]]
   
 ## <a name="parameters"></a>参数  
   
-|选项|说明|  
+|选项|描述|  
 |------------|-----------------|  
 |`-a identityKeyPairFile signaturePublicKeyFile`|生成 <xref:System.Reflection.AssemblySignatureKeyAttribute> 数据以将标识密钥从一个文件迁移到签名密钥。|  
 |`-ac identityPublicKeyFile identityKeyPairContainer signaturePublicKeyFile`|生成 <xref:System.Reflection.AssemblySignatureKeyAttribute> 数据以将标识密钥从一个密钥容器迁移到签名密钥。|  
@@ -63,7 +63,7 @@ sn [-quiet][option [parameter(s)]]
 |`-t[p] infile`|显示存储在 infile 中的公钥的标记  。 infile 的内容必须是以前使用 -p 从密钥对文件生成的公钥   。  不要使用 -t[p] 选项直接从密钥对文件提取标记  。<br /><br /> Sn.exe 将使用公钥的哈希函数计算标记。 为节省空间，公共语言运行时在记录对具有强名称的程序集的依赖性时，将公钥标记存储在清单中，作为对另一个程序集的引用的一部分。 -tp 选项除显示标记外还显示公钥  。 如果 <xref:System.Reflection.AssemblySignatureKeyAttribute> 特性已应用于程序集，则标记用于标识密钥，并显示哈希算法和标识密钥的名称。<br /><br /> 请注意，此选项不验证程序集签名，而且不应用于做出信任决策。  此选项仅显示原始公钥标记数据。|  
 |`-T[p] assembly`|显示 assembly 的公钥标记  。 assembly 必须是包含程序集清单的文件的名称  。<br /><br /> Sn.exe 将使用公钥的哈希函数计算标记。 为节省空间，公共语言运行时在记录对具有强名称的程序集的依赖性时，将公钥标记存储在清单中，作为对另一个程序集的引用的一部分。 -Tp 选项除显示标记外还显示公钥  。 如果 <xref:System.Reflection.AssemblySignatureKeyAttribute> 特性已应用于程序集，则标记用于标识密钥，并显示哈希算法和标识密钥的名称。<br /><br /> 请注意，此选项不验证程序集签名，而且不应用于做出信任决策。  此选项仅显示原始公钥标记数据。|  
 |`-TS assembly infile`|使用 infile 中的密钥对，对已签名或部分签名的程序集进行测试签名   。|  
-|`-TSc assembly container`|使用密钥容器 container 中的密钥对，对已签名或部分签名的程序集进行测试签名   。| 
+|`-TSc assembly container`|使用密钥容器 container 中的密钥对，对已签名或部分签名的程序集进行测试签名   。|
 |`-v assembly`|验证 assembly 中的强名称，其中 assembly 是包含程序集清单的文件的名称   。|  
 |`-vf assembly`|验证 assembly 中的强名称  。 与 -v 选项不同，-vf 会强制实施验证，即使已使用 -Vr 选项禁用了验证也是如此    。|  
 |`-Vk regfile.reg assembly [userlist] [infile]`|创建一个注册项 (.reg) 文件，你可以使用它注册要跳过验证的指定程序集。 应用于 -Vr 选项的程序集命名规则也应用于 -Vk   。 有关 userlist 和 infile 选项的信息，请参阅 -Vr 选项    。|  
@@ -83,7 +83,7 @@ sn [-quiet][option [parameter(s)]]
 > [!NOTE]
 > 对于写入到受保护资源（如注册表）的参数（例如，–Vr），请以管理员身份运行 SN.exe  。  
   
-强名称工具假定使用 `AT_SIGNATURE` 算法标识符生成公钥/私钥对。 使用 `AT_KEYEXCHANGE` 算法生成的公钥/私钥对会生成错误。 
+强名称工具假定使用 `AT_SIGNATURE` 算法标识符生成公钥/私钥对。 使用 `AT_KEYEXCHANGE` 算法生成的公钥/私钥对会生成错误。
 
 ## <a name="examples"></a>示例  
  下面的命令创建一个新的随机密钥对，并将其存储在 `keyPair.snk` 中。  

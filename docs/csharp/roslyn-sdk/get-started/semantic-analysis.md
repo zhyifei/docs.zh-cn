@@ -3,12 +3,12 @@ title: 语义分析入门
 description: 本教程概述如何使用.NET 编译器 SDK 进行语义分析。
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 7bf2f40ea0bc059d9c517780016ca5deb805ceb6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: a6dcaeeb86acb5c0e1602f01dc5952ffd9d5e3f5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346982"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240503"
 ---
 # <a name="get-started-with-semantic-analysis"></a>语义分析入门
 
@@ -46,35 +46,35 @@ ms.locfileid: "75346982"
 你将分析上面展示过的基本“Hello World!” 程序。
 为 Hello World 程序添加文本，作为 `Program` 类中的常量：
 
-[!code-csharp[Declare the program test](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#1 "Declare a constant string for the program text to analyze")]
+[!code-csharp[Declare the program test](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
 下一步，添加以下代码，为 `programText` 常量中的代码文本生成语法树。  将下面这行代码添加到 `Main` 方法中：
 
-[!code-csharp[Create the tree](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#2 "Create the syntax tree")]
+[!code-csharp[Create the tree](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#2 "Create the syntax tree")]
 
 接下来，从已创建的树生成 <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation>。 “Hello World”示例依赖于 <xref:System.String> 和 <xref:System.Console> 类型。 需要引用在编译中声明这两种类型的程序集。 将下面这行代码添加到 `Main` 方法以创建语法树的编译，包括对相应程序集的引用：
 
-[!code-csharp[Create the compilation](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#3 "Create the compilation for the semantic model")]
+[!code-csharp[Create the compilation](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#3 "Create the compilation for the semantic model")]
 
 <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2A?displayProperty=nameWithType> 方法将引用添加到编译。 <xref:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile%2A?displayProperty=nameWithType> 方法加载程序集作为引用。
 
 ## <a name="querying-the-semantic-model"></a>查询语义模型
 
-如果有 <xref:Microsoft.CodeAnalysis.Compilation>，你可以向它查询 <xref:Microsoft.CodeAnalysis.Compilation> 所包含的任何 <xref:Microsoft.CodeAnalysis.SyntaxTree> 的 <xref:Microsoft.CodeAnalysis.SemanticModel>。 你可将语义模型看作通常从智能感知中获取的所有信息的来源。 <xref:Microsoft.CodeAnalysis.SemanticModel> 可回答“此位置中范围内的名称是什么？”、“可通过此方法访问哪些成员？”、“此文本块中使用了什么变量？”和“此名称/表达式指的是什么？”等问题。 添加此声明以创建语义模型：
+如果有 <xref:Microsoft.CodeAnalysis.Compilation>，你可以向它查询 <xref:Microsoft.CodeAnalysis.SemanticModel> 所包含的任何 <xref:Microsoft.CodeAnalysis.SyntaxTree> 的 <xref:Microsoft.CodeAnalysis.Compilation>。 你可将语义模型看作通常从智能感知中获取的所有信息的来源。 <xref:Microsoft.CodeAnalysis.SemanticModel> 可回答“此位置中范围内的名称是什么？”、“可通过此方法访问哪些成员？”、“此文本块中使用了什么变量？”和“此名称/表达式指的是什么？”等问题。 添加此声明以创建语义模型：
 
-[!code-csharp[Create the semantic model](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#4 "Create the semantic model")]
+[!code-csharp[Create the semantic model](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#4 "Create the semantic model")]
 
 ## <a name="binding-a-name"></a>绑定名称
 
-<xref:Microsoft.CodeAnalysis.Compilation> 从 <xref:Microsoft.CodeAnalysis.SyntaxTree> 创建 <xref:Microsoft.CodeAnalysis.SemanticModel> 创建模型后，你可以查询以找到第一个 `using` 指令，并检索 `System` 命名空间的符号信息。 将这两行代码添加到 `Main` 方法以创建语义模型，并检索第一个 using 语句的符号：
+<xref:Microsoft.CodeAnalysis.Compilation> 从 <xref:Microsoft.CodeAnalysis.SemanticModel> 创建 <xref:Microsoft.CodeAnalysis.SyntaxTree> 创建模型后，你可以查询以找到第一个 `using` 指令，并检索 `System` 命名空间的符号信息。 将这两行代码添加到 `Main` 方法以创建语义模型，并检索第一个 using 语句的符号：
 
-[!code-csharp[Find the namespace symbol for the first using](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#5 "Find the namespace symbol for the first using")]
+[!code-csharp[Find the namespace symbol for the first using](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#5 "Find the namespace symbol for the first using")]
 
-上述代码示例演示如何绑定第一个 `using` 指令中的名称以检索 `System` 命名空间的 <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType>。 上述代码还说明，使用语法模型  查找代码的结构；使用语义模型理解它的含义  。  语法模型在 using 语句中找到字符串 `System`。  语义模型具有关于 `System` 命名空间中所定义类型的全部信息。
+上述代码示例演示如何绑定第一个 `using` 指令中的名称以检索 <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType> 命名空间的 `System`。 上述代码还说明，使用语法模型  查找代码的结构；使用语义模型理解它的含义  。  语法模型在 using 语句中找到字符串 `System`。  语义模型具有关于 `System` 命名空间中所定义类型的全部信息。
 
-可以从 <xref:Microsoft.CodeAnalysis.SymbolInfo> 对象获取使用 <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> 属性的 <xref:Microsoft.CodeAnalysis.ISymbol?displayProperty=nameWithType>。 此属性返回此表达式所引用的符号。 对于不引用任何内容的表达式（例如数字参数），此属性为 `null`。 若 <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> 不为 null，<xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> 表示符号的类型。 在此示例中，<xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> 属性是 <xref:Microsoft.CodeAnalysis.SymbolKind.Namespace?displayProperty=nameWithType>。 将以下代码添加到 `Main` 方法。 它检索 `System` 命名空间的符号，然后将 `System` 命名空间中声明的所有子命名空间显示出来：
+可以从 <xref:Microsoft.CodeAnalysis.SymbolInfo> 对象获取使用 <xref:Microsoft.CodeAnalysis.ISymbol?displayProperty=nameWithType> 属性的 <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType>。 此属性返回此表达式所引用的符号。 对于不引用任何内容的表达式（例如数字参数），此属性为 `null`。 若 <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> 不为 null，<xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> 表示符号的类型。 在此示例中，<xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> 属性是 <xref:Microsoft.CodeAnalysis.SymbolKind.Namespace?displayProperty=nameWithType>。 将以下代码添加到 `Main` 方法。 它检索 `System` 命名空间的符号，然后将 `System` 命名空间中声明的所有子命名空间显示出来：
 
-[!code-csharp[Display all the child namespaces](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#6 "Display all the child namespaces from this compilation")]
+[!code-csharp[Display all the child namespaces](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#6 "Display all the child namespaces from this compilation")]
 
 运行该程序，然后应看到以下输出：
 
@@ -107,31 +107,31 @@ Press any key to continue . . .
 
 通过找到程序中的单个字符串文本 查找到“Hello World!”字符串。 找到语法节点后，从语义模型中获取该节点的类型信息。 将以下代码添加到 `Main` 方法：
 
-[!code-csharp[Find the namespace symbol for the only using](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#7 "Find the namespace symbol for the only using")]
+[!code-csharp[Find the namespace symbol for the only using](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#7 "Find the namespace symbol for the only using")]
 
 <xref:Microsoft.CodeAnalysis.TypeInfo?displayProperty=nameWithType> 结构包括 <xref:Microsoft.CodeAnalysis.TypeInfo.Type?displayProperty=nameWithType> 属性，此属性可启用对关于文本类型的语义信息的访问。 在此例中为 `string` 类型。 添加将此属性分配至本地变量的声明：
 
-[!code-csharp[Find the semantic information about the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#8 "Use the string literal to access the semantic information in the string type.")]
+[!code-csharp[Find the semantic information about the string type](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#8 "Use the string literal to access the semantic information in the string type.")]
 
 要完成本教程，让我们生成 LINQ 查询，该查询会创建一个在 `string` 类型上声明并返回 `string` 的所有公共方法的序列。 此查询比较复杂，我们将逐行生成，然后将其重新构造为单个查询。 此查询的源是 `string` 类型上所声明全部成员的序列：
 
-[!code-csharp[Access the sequence of members on the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
+[!code-csharp[Access the sequence of members on the string type](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
 
 该源序列包含所有成员（包括属性和字段），使用 <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> 方法对其进行筛选以查找属于 <xref:Microsoft.CodeAnalysis.IMethodSymbol?displayProperty=nameWithType> 对象的元素：
 
-[!code-csharp[Filter the sequence to only methods](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
+[!code-csharp[Filter the sequence to only methods](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
 
 接下来，添加另一个筛选器，只返回这些属于公共方法并返回 `string` 的方法：
 
-[!code-csharp[Filter on return type and accessibility](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#11 "Find only the public methods that return a string.")]
+[!code-csharp[Filter on return type and accessibility](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#11 "Find only the public methods that return a string.")]
 
 只选择名称属性，且只通过删除任何重载来区分名称：
 
-[!code-csharp[find the distinct names.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#12 "Use the string literal to access the semantic information in the string type.")]
+[!code-csharp[find the distinct names.](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#12 "Use the string literal to access the semantic information in the string type.")]
 
 还可以使用 LINQ 查询语法生成完整查询，然后在控制台中显示所有方法名称：
 
-[!code-csharp[build and display the results of this query.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#13 "Build and display the results of the query.")]
+[!code-csharp[build and display the results of this query.](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#13 "Build and display the results of the query.")]
 
 生成并运行该程序。 您应看到以下输出：
 

@@ -2,12 +2,12 @@
 title: C# 介绍 - C# 指南
 description: 刚开始接触 C#？ 了解 C# 语言的基础知识。
 ms.date: 02/26/2020
-ms.openlocfilehash: 69651d6233bfaf217366be3850f6b3d9c550d8e2
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: bf5a200f2ee777698ae8564f348ffc117d9abab0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159138"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79156839"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 语言介绍
 
@@ -33,12 +33,12 @@ C# 采用***统一的类型系统***。 所有 C# 类型（包括 `int` 和 `dou
 
 C# 源文件的文件扩展名通常为 `.cs`。 要创建此算法，请先下载并安装 [.NET Core SDK](https://dotnet.microsoft.com/download)。 然后，执行命令 `dotnet new console -o hello` 创建一个新程序和生成脚本。 该程序和生成脚本分别位于文件 `Program.cs` 和 `hello.csproj` 中。 使用 `run` 命令生成并运行应用程序：
 
-```console
+```dotnetcli
 cd hello
 dotnet run
 ```
 
-该程序生成以下输出： 
+该程序生成以下输出：
 
 ```console
 Hello, World!

@@ -3,10 +3,10 @@ title: 如何重新排列带分隔符的文件的字段 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
 ms.openlocfilehash: 6bc502ff12a908edf43f9ff7f5f63f98c3ff29c4
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347659"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>如何重新排列带分隔符的文件的字段 (LINQ) (C#)
@@ -78,7 +78,7 @@ class CSVFiles
 ## <a name="compiling-the-code"></a>编译代码  
 使用 System.Linq 和 System.IO 命名空间的 `using` 指令创建 C# 控制台应用程序项目。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [LINQ 和字符串 (C#)](./linq-and-strings.md)
 - [LINQ 和文件目录 (C#)](./linq-and-file-directories.md)

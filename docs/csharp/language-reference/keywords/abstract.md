@@ -8,10 +8,10 @@ helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
 ms.openlocfilehash: 96e8bbce2e67c316d5cd1cd78e3e2506dabead25
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713853"
 ---
 # <a name="abstract-c-reference"></a>abstract（C# 参考）
@@ -40,7 +40,7 @@ ms.locfileid: "75713853"
   
 - 只有抽象类中才允许抽象方法声明。  
   
-- 由于抽象方法声明不提供实际的实现，因此没有方法主体；方法声明仅以分号结尾，且签名后没有大括号 ({ })。 例如：  
+- 由于抽象方法声明不提供实际的实现，因此没有方法主体；方法声明仅以分号结尾，且签名后没有大括号 ({ })。 例如:  
   
     ```csharp  
     public abstract void MyMethod();  
@@ -60,7 +60,7 @@ ms.locfileid: "75713853"
   
  抽象类必须为所有接口成员提供实现。  
   
- 实现接口的抽象类有可能将接口方法映射到抽象方法上。 例如：  
+ 实现接口的抽象类有可能将接口方法映射到抽象方法上。 例如:  
   
 [!code-csharp[csrefKeywordsModifiers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#2)]
   
@@ -80,7 +80,7 @@ BaseClass bc = new BaseClass();   // Error
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)

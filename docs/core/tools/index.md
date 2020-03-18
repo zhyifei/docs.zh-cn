@@ -3,12 +3,12 @@ title: .NET Core CLI
 titleSuffix: ''
 description: .NET Core CLI 及其功能概述。
 ms.date: 02/13/2020
-ms.openlocfilehash: d84f96889cabc3fb4521e39db25050aacdd11546
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 45a40063f70a621e807abf5e01ceecb125aecd7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156707"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397598"
 ---
 # <a name="net-core-cli-overview"></a>.NET Core CLI 概述
 
@@ -24,44 +24,44 @@ ms.locfileid: "78156707"
 
 ### <a name="basic-commands"></a>基本命令
 
-- [new](dotnet-new.md)
-- [restore](dotnet-restore.md)
-- [build](dotnet-build.md)
-- [publish](dotnet-publish.md)
-- [run](dotnet-run.md)
-- [test](dotnet-test.md)
-- [vstest](dotnet-vstest.md)
-- [pack](dotnet-pack.md)
-- [migrate](dotnet-migrate.md)
-- [clean](dotnet-clean.md)
-- [sln](dotnet-sln.md)
-- [help](dotnet-help.md)
-- [store](dotnet-store.md)
+- [`new`](dotnet-new.md)
+- [`restore`](dotnet-restore.md)
+- [`build`](dotnet-build.md)
+- [`publish`](dotnet-publish.md)
+- [`run`](dotnet-run.md)
+- [`test`](dotnet-test.md)
+- [`vstest`](dotnet-vstest.md)
+- [`pack`](dotnet-pack.md)
+- [`migrate`](dotnet-migrate.md)
+- [`clean`](dotnet-clean.md)
+- [`sln`](dotnet-sln.md)
+- [`help`](dotnet-help.md)
+- [`store`](dotnet-store.md)
 
 ### <a name="project-modification-commands"></a>项目修改命令
 
-- [add package](dotnet-add-package.md)
-- [add reference](dotnet-add-reference.md)
-- [remove package](dotnet-remove-package.md)
-- [remove reference](dotnet-remove-reference.md)
-- [list reference](dotnet-list-reference.md)
+- [`add package`](dotnet-add-package.md)
+- [`add reference`](dotnet-add-reference.md)
+- [`remove package`](dotnet-remove-package.md)
+- [`remove reference`](dotnet-remove-reference.md)
+- [`list reference`](dotnet-list-reference.md)
 
 ### <a name="advanced-commands"></a>高级命令
 
-- [nuget delete](dotnet-nuget-delete.md)
-- [nuget locals](dotnet-nuget-locals.md)
-- [nuget push](dotnet-nuget-push.md)
-- [msbuild](dotnet-msbuild.md)
-- [dotnet install script](dotnet-install-script.md)
+- [`nuget delete`](dotnet-nuget-delete.md)
+- [`nuget locals`](dotnet-nuget-locals.md)
+- [`nuget push`](dotnet-nuget-push.md)
+- [`msbuild`](dotnet-msbuild.md)
+- [`dotnet install script`](dotnet-install-script.md)
 
 ### <a name="tool-management-commands"></a>工具管理命令
 
-- [tool install](dotnet-tool-install.md)
-- [tool list](dotnet-tool-list.md)
-- [tool update](dotnet-tool-update.md)
-- [tool restore](global-tools.md#install-a-local-tool) 自 .NET Core SDK 3.0 起可用 
-- [tool run](global-tools.md#invoke-a-local-tool) 自 .NET Core SDK 3.0 起可用 
-- [tool uninstall](dotnet-tool-uninstall.md)
+- [`tool install`](dotnet-tool-install.md)
+- [`tool list`](dotnet-tool-list.md)
+- [`tool update`](dotnet-tool-update.md)
+- [`tool restore`](global-tools.md#install-a-local-tool) 自 .NET Core SDK 3.0 起可用。
+- [`tool run`](global-tools.md#invoke-a-local-tool) 自 .NET Core SDK 3.0 起可用。
+- [`tool uninstall`](dotnet-tool-uninstall.md)
 
 工具是控制台应用程序，它们从 NuGet 包中安装并从命令提示符处进行调用。 你可自行编写工具，也可安装由第三方编写的工具。 工具也称为全局工具、工具路径工具和本地工具。 有关详细信息，请参阅 [.NET Core 工具概述](global-tools.md)。
 

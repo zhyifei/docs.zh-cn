@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b0c4e9617677cf95e3a059b57f3d50ddfb072f4a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937003"
 ---
 ### <a name="default-control-font-changed-to-segoe-ui-9-pt"></a>默认控件字体更改为 Segoe UI 9 pt
@@ -14,7 +14,7 @@ ms.locfileid: "75937003"
 
 ![.NET Framework 中的默认控件字体](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-framework.png)
 
-从 .NET Core 3.0 开始，默认字体设置为 `Segoe UI 9 pt`（与 <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType> 相同的字体）。 作为此更改的结果，窗体和控件的大小会增加约 27%，以适应新默认字体的更大大小。 例如：
+从 .NET Core 3.0 开始，默认字体设置为 `Segoe UI 9 pt`（与 <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType> 相同的字体）。 作为此更改的结果，窗体和控件的大小会增加约 27%，以适应新默认字体的更大大小。 例如:
 
 ![.NET Core 中的默认控件字体](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-core.png)
 
@@ -28,7 +28,7 @@ ms.locfileid: "75937003"
 
 由于窗体和控件的大小改变，因此请确保应用程序能够正确呈现。
 
-要保留原始字体，请将窗体的默认字体设置为 `Microsoft Sans Serif 8 pt`。 例如：
+要保留原始字体，请将窗体的默认字体设置为 `Microsoft Sans Serif 8 pt`。 例如:
 
 ```csharp
 public MyForm()

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 79901d0b57816915ca7ea73cfe7fa3d40820434e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568140"
 ---
 ### <a name="jsonelement-api-changes"></a>JsonElement API 更改
@@ -41,17 +41,17 @@ ms.locfileid: "74568140"
     }
     ```
 
-1. 现在，<xref:System.Text.Json.JsonElement.WriteTo%2A> 在其方法参数为 `null` 时引发 <xref:System.ArgumentNullException>。
+1. 现在，<xref:System.Text.Json.JsonElement.WriteTo%2A> 在其方法参数为 <xref:System.ArgumentNullException> 时引发 `null`。
 
 #### <a name="version-introduced"></a>引入的版本
 
 3.0 预览版 7
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 如果你的代码受这些更改的影响，则可以执行以下操作：
 
-- <xref:System.Text.Json.JsonElement> 中没有用于 `WriteProperty` 重载的替换 API。 相反，你可在调用 <xref:System.Text.Json.JsonElement.WriteTo%2A> 方法时一并调用某个 <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> 重载，以获得相同的结果。 例如:
+- `WriteProperty` 中没有用于 <xref:System.Text.Json.JsonElement> 重载的替换 API。 相反，你可在调用 <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> 方法时一并调用某个 <xref:System.Text.Json.JsonElement.WriteTo%2A> 重载，以获得相同的结果。 例如:
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -72,7 +72,7 @@ ms.locfileid: "74568140"
    }
    ```
 
-- 处理对 <xref:System.Text.Json.JsonElement.WriteTo%2A> 方法的调用中的 <xref:System.ArgumentNullException>。
+- 处理对 <xref:System.ArgumentNullException> 方法的调用中的 <xref:System.Text.Json.JsonElement.WriteTo%2A>。
 
 #### <a name="affected-apis"></a>受影响的 API
 

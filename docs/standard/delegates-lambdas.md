@@ -7,10 +7,10 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
 ms.openlocfilehash: 0abcc73e31eab89c422513acf778bc8bd092e788
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75345543"
 ---
 # <a name="delegates-and-lambdas"></a>委托和 lambda
@@ -106,7 +106,7 @@ public class Program
 }
 ```
 
-如你所见，该委托的正文只是一组表达式，其他所有委托也是如此。 但它并非单独定义，而是在调用 <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> 方法时临时引入  。
+如你所见，该委托的正文只是一组表达式，其他所有委托也是如此。 但它并非单独定义，而是在调用  _方法时临时引入_<xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType>。
 
 但是，即使使用此方法，仍有许多可以丢弃的代码。 此时就需要使用 **lambda 表达式**。
 

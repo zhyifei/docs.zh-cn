@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 ms.openlocfilehash: 0221889f6d736b41546b564273ebb41d49dfb039
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75559880"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 入门
@@ -28,7 +28,7 @@ ms.locfileid: "75559880"
 
 - [为 Visual Basic 程序员提供的附加资源](additional-resources.md) 提供网站和新闻组列表，它们能够帮助你找到常见问题的答案。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [获取 Visual Basic](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 收录了包含 Visual Basic 支持的 Visual Studio 版本（包括免费版本）的下载链接。
 

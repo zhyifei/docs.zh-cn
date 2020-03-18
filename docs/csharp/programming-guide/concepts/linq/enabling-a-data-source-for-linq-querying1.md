@@ -3,10 +3,10 @@ title: 启用数据源以进行 LINQ 查询
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
 ms.openlocfilehash: 9a143f0da74d4e91ef697f468d7fda225e75245b
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635764"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>启用数据源以进行 LINQ 查询
@@ -39,7 +39,7 @@ ms.locfileid: "75635764"
   
  复杂的 `IQueryable` 提供程序（如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 提供程序）可将完整的 LINQ 查询转换为可表达查询语言（如 SQL）。 与复杂性较低的提供程序相比，复杂的提供程序更为全面，因为它能在查询中处理各种各样的问题。 它还具有开放的类型系统，因而必须包含广泛的基础结构来映射用户定义的类型。 开发复杂的提供程序需要耗费大量的精力。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Linq.IQueryable%601>
 - <xref:System.Collections.Generic.IEnumerable%601>
