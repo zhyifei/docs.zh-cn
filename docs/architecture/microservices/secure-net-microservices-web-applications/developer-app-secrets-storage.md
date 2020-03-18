@@ -4,10 +4,10 @@ description: .Net 微服务和 Web 应用程序中的安全性 - 不要在源代
 author: mjrousos
 ms.date: 01/30/2020
 ms.openlocfilehash: 1ef2246746b9165f1564fa7be64ff7eb28eb1d32
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501797"
 ---
 # <a name="store-application-secrets-safely-during-development"></a>在开发过程中安全地存储应用程序机密
@@ -50,7 +50,7 @@ ASP.NET Core [机密管理器](/aspnet/core/security/app-secrets#secret-manager)
 
 通过调用 ConfigurationBuilder 实例上的 `AddUserSecrets<T>` 将应用程序的机密包含在其配置中，就可以在应用程序中使用通过机密管理器存储的机密。 泛型参数 T 应是 UserSecretId 应用到的程序集中的类型。 通常使用 `AddUserSecrets<Startup>` 没问题。
 
-在 Program.cs  中使用 `CreateDefaultBuilder` 方法时，`AddUserSecrets<Startup>()` 包含在开发环境的默认选项中。
+在 Program.cs`AddUserSecrets<Startup>()``CreateDefaultBuilder` 中使用  *方法时，* 包含在开发环境的默认选项中。
 
 >[!div class="step-by-step"]
 >[上一页](authorization-net-microservices-web-applications.md)

@@ -16,10 +16,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
 ms.openlocfilehash: 83dc6ce0d29c1c368c36b51fc84ecad34d72e01f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333811"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>演练：在 Visual Basic 中操作文件和目录
@@ -30,21 +30,21 @@ ms.locfileid: "74333811"
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-the-project"></a>要创建项目  
+### <a name="to-create-the-project"></a>创建项目  
   
 1. 在“文件”菜单上，单击“新建项目”。    
   
-     此时将出现 “新建项目” 对话框。   
+     此时将出现“新建项目”  对话框。  
   
 2. 在“已安装的模板”窗格中，展开“Visual Basic”，然后单击“Windows”。    在中间的“模板”窗格中，单击“Windows 窗体应用程序”。    
   
-3. 在“名称”框中，键入 `FileExplorer` 以设置项目名称，然后单击“确定”。    
+3. 在“名称”框中，键入  **以设置项目名称，然后单击“确定”。** `FileExplorer`   
   
      Visual Studio 会将项目添加到“解决方案资源管理器”  中，此时“Windows 窗体设计器”随即打开。  
   
 4. 将下表中的控件添加到窗体，并设置控件属性相应的值。  
   
-    |控件|属性|值|  
+    |控件|Property|“值”|  
     |-------------|--------------|-----------|  
     |**ListBox**|**Name**|`filesListBox`|  
     |**Button**|**Name**<br /><br /> **文本**|`browseButton`<br /><br /> **浏览**|  
@@ -54,7 +54,7 @@ ms.locfileid: "74333811"
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>选择一个文件夹，并列出文件夹中的文件  
   
-1. 通过双击窗体上的控件，创建 `browseButton` 的 `Click` 事件处理程序。 代码编辑器随即打开。  
+1. 通过双击窗体上的控件，创建 `Click` 的 `browseButton` 事件处理程序。 代码编辑器随即打开。  
   
 2. 将以下代码添加到 `Click` 事件处理程序中。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "74333811"
   
 ### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a>从文本文件获取文件的属性和内容  
   
-1. 通过双击窗体上的控件，创建 `examineButton` 的 `Click` 事件处理程序。  
+1. 通过双击窗体上的控件，创建 `Click` 的 `examineButton` 事件处理程序。  
   
 2. 将以下代码添加到 `Click` 事件处理程序中。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "74333811"
   
      <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> 方法将文件内容读取到 <xref:System.IO.StreamReader>。 该内容的第一行是从 `StreamReader` 获取的，然后将添加到 `StringBuilder`。  
   
-4. 运行该应用程序。 单击“浏览”，然后浏览到包含 .txt 文件的文件夹。  单击 **“确定”** 。  
+4. 运行该应用程序。 单击“浏览”，然后浏览到包含 .txt 文件的文件夹。  单击“确定”。   
   
      在 `ListBox` 中选择一个文件，然后单击“检查”  。 `MessageBox` 显示文件信息。  
   
@@ -140,15 +140,15 @@ ms.locfileid: "74333811"
   
      `SetEnabled` 方法启用还是禁用控件是由是否选中 `ListBox` 中的项决定的。  
   
-2. 通过双击窗体上的 `ListBox` 控件，创建 `filesListBox` 的 `SelectedIndexChanged` 事件处理程序。  
+2. 通过双击窗体上的 `SelectedIndexChanged` 控件，创建 `filesListBox` 的 `ListBox` 事件处理程序。  
   
-3. 在新的 `filesListBox_SelectedIndexChanged` 事件处理程序中添加对 `SetEnabled` 的调用。  
+3. 在新的 `SetEnabled` 事件处理程序中添加对 `filesListBox_SelectedIndexChanged` 的调用。  
   
-4. 在 `browseButton_Click` 事件处理程序末尾添加对 `SetEnabled` 的调用。  
+4. 在 `SetEnabled` 事件处理程序末尾添加对 `browseButton_Click` 的调用。  
   
-5. 在 `Form1_Load` 事件处理程序末尾添加对 `SetEnabled` 的调用。  
+5. 在 `SetEnabled` 事件处理程序末尾添加对 `Form1_Load` 的调用。  
   
-6. 运行该应用程序。 如果在 `ListBox` 中未选中任何项，将禁用“保存结果”复选框和“检查”按钮。    
+6. 运行该应用程序。 如果在  **中未选中任何项，将禁用“保存结果”复选框和“检查”按钮。**  `ListBox`  
   
 ## <a name="full-example-using-mycomputerfilesystem"></a>使用 My.Computer.FileSystem 的完整示例  
 
@@ -162,7 +162,7 @@ ms.locfileid: "74333811"
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

@@ -6,10 +6,10 @@ ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
 ms.openlocfilehash: 436cfb3904f0891f8c18bb5890563a13d65e2d1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "62003049"
 ---
 # <a name="the-roslyn-based-analyzers"></a>基于 Roslyn 的分析器
@@ -35,4 +35,4 @@ ms.locfileid: "62003049"
 
 * [API 分析器](api-analyzer.md)：此分析器检查代码是否存在潜在的兼容性风险，或者是否使用了弃用的 API。
 * [框架分析器](framework-analyzer.md)：此分析器对代码进行检查，确保它遵循 .NET Framework 应用程序的准则。 这些规则包括多个基于安全的建议。
-* [.NET 可移植性分析器](portability-analyzer.md)：此分析器检查代码以了解让应用与其他 .NET 实现和配置文件（包括 .NET Core、.NET Standard、UWP 以及适用于 iOS、Android 和 Mac 的 Xamarin）兼容所需的工作量。
+* [.NET Portability Analyzer](portability-analyzer.md)：此分析器检查代码以了解让应用与其他 .NET 实现和配置文件（包括 .NET Core、.NET Standard、UWP 以及适用于 iOS、Android 和 Mac 的 Xamarin）兼容所需的工作量。

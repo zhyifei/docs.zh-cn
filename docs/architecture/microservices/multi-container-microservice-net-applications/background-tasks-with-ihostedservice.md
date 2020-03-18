@@ -3,10 +3,10 @@ title: 使用 IHostedService 和 BackgroundService 类在微服务中实现后�
 description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解使用 IHostedService 和 BackgroundService 在微服务 .NET Core 中实现后台任务的新选项。
 ms.date: 01/30/2020
 ms.openlocfilehash: fab67c816e90c69a4d593422b4974cb9b8819807
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77502307"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
@@ -45,7 +45,7 @@ SignalR 是使用托管服务的项目的一个示例，但也可以将其用于
 
 基本上，可以将所有这些操作卸载至实现 `IHostedService` 的后台任务。
 
-向 `WebHost` 或 `Host` 添加一个或多个 `IHostedServices` 的方式是，通过 ASP.NET Core `WebHost`（或 .NET Core 2.1 及更高版本中的 `Host`）中的 <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A>  扩展方法对它们进行注册。 基本上，必须在常见的 `Startup` 类的 `ConfigureServices()` 方法中注册托管服务，如以下典型的 ASP.NET WebHost 中的代码所示。
+向 `IHostedServices` 或 `WebHost` 添加一个或多个 `Host` 的方式是，通过 ASP.NET Core <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A>（或 .NET Core 2.1 及更高版本中的  ）中的 `WebHost``Host` 扩展方法对它们进行注册。 基本上，必须在常见的 `ConfigureServices()` 类的 `Startup` 方法中注册托管服务，如以下典型的 ASP.NET WebHost 中的代码所示。
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -68,7 +68,7 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 
 ## <a name="the-ihostedservice-interface"></a>IHostedService 接口
 
-当注册 `IHostedService` 时，.NET Core 会在应用程序启动和停止期间分别调用 `IHostedService` 类型的 `StartAsync()` 和 `StopAsync()` 方法。 具体而言，即在服务器已启动并已触发 `IApplicationLifetime.ApplicationStarted` 后调用 start。
+当注册 `IHostedService` 时，.NET Core 会在应用程序启动和停止期间分别调用 `StartAsync()` 类型的 `StopAsync()` 和 `IHostedService` 方法。 具体而言，即在服务器已启动并已触发 `IApplicationLifetime.ApplicationStarted` 后调用 start。
 
 在 .NET Core 中定义的 `IHostedService` 如下所示。
 
@@ -210,7 +210,7 @@ public class GracePeriodManagerService : BackgroundService
 
 当然，也可以改为运行任何其他业务的后台任务。
 
-默认情况下，取消令牌会设置为 5 秒超时，但可以在使用 `IWebHostBuilder` 的 `UseShutdownTimeout` 扩展构建 `WebHost` 时更改该值。 这意味着我们的服务预计将在 5 秒内取消，否则会更突然地终止。
+默认情况下，取消令牌会设置为 5 秒超时，但可以在使用 `WebHost` 的 `UseShutdownTimeout` 扩展构建 `IWebHostBuilder` 时更改该值。 这意味着我们的服务预计将在 5 秒内取消，否则会更突然地终止。
 
 以下代码会将该时间更改为 10 秒。
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
 ms.openlocfilehash: 73c32aefe06a68bb42fcb5f4615da0927e57e892
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345607"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>如何：在 Visual Basic 中从注册表项中读取值
 
-`My.Computer.Registry` 对象的 `GetValue` 方法可以用于读取 Windows 注册表中的值。  
+`GetValue` 对象的 `My.Computer.Registry` 方法可以用于读取 Windows 注册表中的值。  
   
  如果在下面的示例中，“Software\MyApp”项不存在，则引发异常。 如果在下面的示例中，`ValueName`“Name”不存在，则返回 `Nothing`。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "74345607"
   
 ### <a name="to-read-a-value-from-a-registry-key"></a>从注册表项读取值  
   
-- 使用 `GetValue` 方法（指定路径和名称）可从注册表项读取值。 下面的示例从 `HKEY_CURRENT_USER\Software\MyApp` 读取值 `Name` 并将它显示在消息框中。  
+- 使用 `GetValue` 方法（指定路径和名称）可从注册表项读取值。 下面的示例从 `Name` 读取值 `HKEY_CURRENT_USER\Software\MyApp` 并将它显示在消息框中。  
   
      [!code-vb[VbResourceTasks#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#4)]  
   
@@ -55,7 +55,7 @@ ms.locfileid: "74345607"
 
  若要运行此进程，程序集需要 <xref:System.Security.Permissions.RegistryPermission> 类授予的特权等级。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 同样，用户必须具有用于创建或写入设置的正确 ACL。 例如，具有代码访问安全性权限的本地应用程序可能没有操作系统权限。 有关详细信息，请参阅[代码访问安全性基础知识](../../../../framework/misc/code-access-security-basics.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - <xref:Microsoft.Win32.RegistryHive>

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
 ms.openlocfilehash: 57182f1a1d92b7fe954fd26b32c5e4b1107823ee
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348778"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>如何：在 Visual Basic 中删除文件
 
-通过 `My.Computer.FileSystem` 对象的 `DeleteFile` 方法，可以删除文件。 它提供的选项包括：是否将已删除的文件发送到“回收站”  、是否要求用户确认应删除该文件，以及当用户取消操作时要执行的操作。  
+通过 `DeleteFile` 对象的 `My.Computer.FileSystem` 方法，可以删除文件。 它提供的选项包括：是否将已删除的文件发送到“回收站”  、是否要求用户确认应删除该文件，以及当用户取消操作时要执行的操作。  
   
 ### <a name="to-delete-a-text-file"></a>删除文本文件  
   
@@ -32,7 +32,7 @@ ms.locfileid: "74348778"
   
 ### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a>删除文本文件并将其发送到“回收站”  
   
-- 使用 `DeleteFile` 方法删除文件，并为 `recycle` 参数指定 `SendToRecycleBin`。 以下代码演示如何删除名为 `test.txt` 的文件并将其发送到“回收站”  。  
+- 使用 `DeleteFile` 方法删除文件，并为 `SendToRecycleBin` 参数指定 `recycle`。 以下代码演示如何删除名为 `test.txt` 的文件并将其发送到“回收站”  。  
   
      [!code-vb[VbFileIOMisc#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#10)]  
   
@@ -60,7 +60,7 @@ ms.locfileid: "74348778"
   
 - 用户取消了该操作，并且 `onUserCancel` 设置为 `ThrowException` (<xref:System.OperationCanceledException>)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

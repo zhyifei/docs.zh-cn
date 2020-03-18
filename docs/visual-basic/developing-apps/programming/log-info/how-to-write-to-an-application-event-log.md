@@ -1,5 +1,5 @@
 ---
-title: 如何：将信息写入应用程序事件日志
+title: 如何：写入应用程序事件日志
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Computer.EventLog element
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
 ms.openlocfilehash: 511bb8fb16851872c1a16ae7627ed0fc6594337c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352050"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>如何：写入应用程序事件日志 (Visual Basic)
@@ -20,11 +20,11 @@ ms.locfileid: "74352050"
 
 不能将信息写入安全日志。 只有 LocalSystem 或 Administrator 帐户的成员可以将信息写入系统日志。
 
-若要查看事件日志，可以使用“服务器资源管理器”  或“Windows 事件查看器”  。 有关详细信息，请参阅 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)。
+若要查看事件日志，可以使用“服务器资源管理器”  或“Windows 事件查看器”。   有关详细信息，请参阅 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)。
 
 ## <a name="to-add-and-configure-the-event-log-listener"></a>添加和配置事件日志侦听器
 
-1. 在“解决方案资源管理器” 中右键单击 app.config，然后选择“打开”。  
+1. 在“解决方案资源管理器”  中右键单击 app.config，然后选择“打开”  。
 
     \- 或 -
 
@@ -34,7 +34,7 @@ ms.locfileid: "74352050"
 
     2. 在“添加新项”  对话框中，选择“应用程序配置文件”  。
 
-    3. 单击 **“添加”** 。
+    3. 单击 **添加**。
 
 2. 在应用程序配置文件中找到 `<listeners>` 部分。
 
@@ -59,7 +59,7 @@ ms.locfileid: "74352050"
     将 `APPLICATION_NAME` 替换为应用程序的名称。
 
     > [!NOTE]
-    > 通常情况下，应用程序只将错误信息写入事件日志。 有关筛选日志输出的信息，请参阅[演练：筛选 My.Application.Log 输出](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。
+    > 通常情况下，应用程序只将错误信息写入事件日志。 有关筛选日志输出的信息，请参阅 [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。
 
 ## <a name="to-write-event-information-to-the-event-log"></a>将事件信息写入事件日志
 
@@ -67,11 +67,11 @@ ms.locfileid: "74352050"
 
 为程序集配置事件日志侦听器后，它将接收该程序集写入 `My.Application.Log` 的所有消息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
 - [如何：日志异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [演练：确定 My.Application.Log 在哪里写入信息](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [演练：确定 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)

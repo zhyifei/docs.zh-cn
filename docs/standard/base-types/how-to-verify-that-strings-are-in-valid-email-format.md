@@ -19,10 +19,10 @@ helpviewer_keywords:
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 ms.openlocfilehash: c02fc215fa66951ae3333175191ab96a226a2afe
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73197586"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>如何确认字符串是有效的电子邮件格式
@@ -35,7 +35,7 @@ ms.locfileid: "73197586"
 
 若要验证电子邮件地址是否有效，方法 `IsValidEmail` 将使用 <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> 正则表达式模式调用 `(@)(.+)$` 方法将域名从电子邮件地址分离。 第三个参数是表示了处理和替换匹配文本的方法的 <xref:System.Text.RegularExpressions.MatchEvaluator> 委托。 正则表达式模式的解释如下。
 
-|模式|说明|
+|模式|描述|
 |-------------|-----------------|
 |`(@)`|匹配 @ 字符。 这是第一个捕获组。|
 |`(.+)`|匹配任意字符的一个或多个匹配项。 这是第二个捕获组。|

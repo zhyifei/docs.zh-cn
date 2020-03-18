@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
 ms.openlocfilehash: c1163a41cd2feb0e8785ae9d4c6a71dfbedf3f12
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77092611"
 ---
 # <a name="interpret-model-predictions-using-permutation-feature-importance"></a>使用排列特征重要性解释模型预测
@@ -26,7 +26,7 @@ ms.locfileid: "77092611"
 
 数据集中用于此示例的特征位于列 1-12 中。 目标在于预测 `Price`。
 
-| 列 | 功能 | 描述
+| 列 | 功能 | 说明
 | --- | --- | --- |
 | 1 | CrimeRate | 人均犯罪率
 | 2 | ResidentialZones | 城镇住宅区
@@ -40,7 +40,7 @@ ms.locfileid: "77092611"
 | 10 | TaxRate | 财产税率
 | 11 | StudentTeacherRatio | 师生比率
 | 12 | PercentPopulationBelowPoverty | 贫困线以下人口百分比
-| 13 | Price | 住宅价格
+| 13 | 价格 | 住宅价格
 
 数据集的示例如下所示：
 
@@ -137,7 +137,7 @@ ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
         .PermutationFeatureImportance(sdcaModel, preprocessedTrainData, permutationCount:3);
 ```
 
-在训练数据集上使用 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) 的结果是 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) 对象的 [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray)。 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) 提供 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 的多个观测值的均值和标准差等摘要统计信息，观测值数量等于 `permutationCount` 参数指定的排列数。
+在训练数据集上使用 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) 的结果是 [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) 对象的 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics)。 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) 提供 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 的多个观测值的均值和标准差等摘要统计信息，观测值数量等于 `permutationCount` 参数指定的排列数。
 
 重要性（在本例中，由 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) 计算的 R 平方指标的绝对平均下降）可随后按从最重要到最不重要的顺序排序。
 

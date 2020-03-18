@@ -4,10 +4,10 @@ description: 了解如何使用概率性编程和 Infer.NET 创建基于简化�
 ms.date: 01/30/2020
 ms.custom: mvc,how-to
 ms.openlocfilehash: 8e489d61c5e6cca53ba12b13fddd0b73c7f85ef9
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77092598"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>使用 Infer.NET 和概率性编程创建游戏匹配列表
@@ -18,13 +18,13 @@ ms.locfileid: "77092598"
 
 借助概率性编程，可创建真实过程的统计模型。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 - 本地开发环境设置
 
   此操作指南要求有一台可用于进行开发的计算机。 .NET 教程 [Hello World 10 分钟入门](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)介绍了如何在 macOS、Windows 或 Linux 上设置本地开发环境。
 
-## <a name="create-your-app"></a>创建应用程序
+## <a name="create-your-app"></a>创建应用
 
 1. 打开一个新的命令提示符，并运行下面的命令：
 
@@ -33,7 +33,7 @@ dotnet new console -o myApp
 cd myApp
 ```
 
-`dotnet` 命令将创建 `console` 类型的 `new` 应用程序。 `-o` 参数将创建名称为 `myApp` 的目录，会在其中存储应用并填充所需的文件。 `cd myApp` 命令会将你转到新创建的应用目录。
+`dotnet` 命令将创建 `new` 类型的 `console` 应用程序。 `-o` 参数将创建名称为 `myApp` 的目录，会在其中存储应用并填充所需的文件。 `cd myApp` 命令会将你转到新创建的应用目录。
 
 ## <a name="install-infernet-package"></a>安装 Infer.NET 包
 
@@ -62,7 +62,7 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 仔细观察示例数据会发现玩家 3 和玩家 4 分别输赢过一次。 我们来看下使用概率性编程时的排名。 还会注意到有一位玩家 0，因为对于开发人员而言，甚至 Office 匹配列表都是从零开始的。
 
-## <a name="write-some-code"></a>编写代码
+## <a name="write-some-code"></a>编写一些代码
 
 设计模型后，就可以使用 Infer.NET 建模 API 将其表示为概率性程序。 在常用的文本编辑器中，打开 `Program.cs`，并将其所有内容替换为以下代码：
 

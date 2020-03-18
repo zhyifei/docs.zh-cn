@@ -11,10 +11,10 @@ helpviewer_keywords:
 - -fullpaths compiler option [C#]
 ms.assetid: d2a5f857-cbb2-430b-879c-d648aaf0b8c4
 ms.openlocfilehash: 3bb4027f1c479bbaedda889d72712acb587b5713
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606866"
 ---
 # <a name="-fullpaths-c-compiler-options"></a>-fullpaths（C# 编译器选项）
@@ -31,6 +31,6 @@ ms.locfileid: "69606866"
   
  此编译器选项在 Visual Studio 中不可用，并且无法以编程方式更改。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](./index.md)

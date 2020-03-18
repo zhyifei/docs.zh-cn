@@ -9,10 +9,10 @@ helpviewer_keywords:
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 ms.openlocfilehash: bbb3dae2ce66c93d05a2a1c0f7e426901fa7b2e0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140176"
 ---
 # <a name="assembly-versioning"></a>程序集版本控制
@@ -71,7 +71,7 @@ ms.locfileid: "73140176"
   
 信息性版本用自定义特性 <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> 表示。 有关信息性版本属性的更多信息，请参阅[设置程序集属性](set-attributes.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [运行时如何定位程序集](../../framework/deployment/how-the-runtime-locates-assemblies.md)
 - [配置应用](../../framework/configure-apps/index.md)

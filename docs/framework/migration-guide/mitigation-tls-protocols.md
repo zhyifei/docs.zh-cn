@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
 ms.openlocfilehash: 45225d73ac60564d3e22c73270faab6b4e04d697
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457835"
 ---
 # <a name="mitigation-tls-protocols"></a>缓解：TLS 协议
-从 .NET Framework 4.6 开始，允许 <xref:System.Net.ServicePointManager?displayProperty=nameWithType> 和 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 类使用以下三种协议之一：Tls1.0、Tls1.1 或 Tls1.2。 不支持 SSL3.0 协议和 RC4 密码。  
+从 .NET Framework 4.6 开始，<xref:System.Net.ServicePointManager?displayProperty=nameWithType> 和 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 类可以使用以下三种协议之一：Tls1.0、Tls1.1 或 Tls 1.2。 不支持 SSL3.0 协议和 RC4 密码。  
   
 ## <a name="impact"></a>影响  
  此更改会影响：  
@@ -22,8 +22,8 @@ ms.locfileid: "73457835"
   
 - 不能升级以支持 Tls1.0、Tls1.1 或 Tls 1.2 的任意服务器端应用。  
   
-## <a name="mitigation"></a>缓解  
- 建议的缓解操作是将服务器端应用升级到 Tls1.0、Tls1.1 或 Tls 1.2。 如果这不可行或者如果客户端应用被中断，则可以使用 <xref:System.AppContext> 类并采用如两种方式中的一种来选择退出此功能：  
+## <a name="mitigation"></a>缓解操作  
+ 建议的缓解是将服务器端应用升级到 Tls1.0、Tls1.1 或 Tls 1.2。 如果这不可行或者如果客户端应用被中断，则可以使用 <xref:System.AppContext> 类并采用如两种方式中的一种来选择退出此功能：  
   
 - 以编程方式使用如下代码段：  
   
@@ -40,6 +40,6 @@ ms.locfileid: "73457835"
   
  但请注意，不建议选择退出默认行为，因为这会导致应用程序不太安全。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [应用程序兼容性](application-compatibility.md)

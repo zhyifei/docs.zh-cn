@@ -6,10 +6,10 @@ helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 ms.openlocfilehash: 790543118b18b0422f41c3249512b62aae0cfb03
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75938110"
 ---
 # <a name="thread-safe-collections"></a>线程安全集合
@@ -32,7 +32,7 @@ ms.locfileid: "75938110"
   
  下表列出了 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间中的集合类型。  
   
-|类型|描述|  
+|类型|说明|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|为实现 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 的所有类型提供限制和阻止功能。 有关详细信息，请参阅 [BlockingCollection 概述](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)。|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|键值对字典的线程安全实现。|  
@@ -43,7 +43,7 @@ ms.locfileid: "75938110"
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|描述|  
+|标题|说明|  
 |-----------|-----------------|  
 |[BlockingCollection 概述](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|描述 <xref:System.Collections.Concurrent.BlockingCollection%601> 类型提供的功能。|  
 |[如何：在 ConcurrentDictionary 中添加和移除项](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|描述如何从 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 添加和删除元素|  
@@ -53,5 +53,5 @@ ms.locfileid: "75938110"
 |[如何：在管道中使用阻塞集合的数组](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|描述如何同时使用多个阻塞集合来实现一个管道。|  
 |[如何：使用 ConcurrentBag 创建目标池](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|演示如何使用并发包在可重用对象（而不是继续创建新对象）的情况下改进性能。|  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>

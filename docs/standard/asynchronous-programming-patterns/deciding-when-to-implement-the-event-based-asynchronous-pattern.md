@@ -13,10 +13,10 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
 ms.openlocfilehash: 5fca32953af91184fe99d8ef6afe5a2374f325d6
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67663716"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>确定何时实现基于事件的异步模式
@@ -48,7 +48,7 @@ ms.locfileid: "67663716"
 
 - 在 <xref:System.IAsyncResult> 模式实现的基础之上生成基于事件的模式实现。
 
-- 避免对相同的类公开基于事件的模式和 <xref:System.IAsyncResult> 模式。 请对“高级”类公开基于事件的模式，并对“低级”类公开 <xref:System.IAsyncResult> 模式。 例如，比较 <xref:System.Net.WebClient> 组件上基于事件的模式与 <xref:System.Web.HttpRequest> 类上的 <xref:System.IAsyncResult> 模式。
+- 避免对相同的类公开基于事件的模式和 <xref:System.IAsyncResult> 模式。 请对“高级”类公开基于事件的模式，并对“低级”类公开 <xref:System.IAsyncResult> 模式。 例如，比较 <xref:System.Net.WebClient> 组件上基于事件的模式与 <xref:System.IAsyncResult> 类上的 <xref:System.Web.HttpRequest> 模式。
 
   - 出于兼容性需要，可以对相同的类公开基于事件的模式和 <xref:System.IAsyncResult> 模式。 例如，如果已释放使用 <xref:System.IAsyncResult> 模式的 API，需要保留 <xref:System.IAsyncResult> 模式，以实现向后兼容性。
 
@@ -76,7 +76,7 @@ ms.locfileid: "67663716"
 
 下面列出了一些在决定使用 <xref:System.IAsyncResult> 模式时要遵循的建议：
 
-- 仅在特别需要对 <xref:System.Threading.WaitHandle> 或<xref:System.IAsyncResult> 对象的支持时，才公开 <xref:System.IAsyncResult> 模式。
+- 仅在特别需要对 <xref:System.IAsyncResult> 或<xref:System.Threading.WaitHandle> 对象的支持时，才公开 <xref:System.IAsyncResult> 模式。
 
 - 仅在有使用 <xref:System.IAsyncResult> 模式的现有 API 时，才公开 <xref:System.IAsyncResult> 模式。
 
@@ -84,7 +84,7 @@ ms.locfileid: "67663716"
 
 - 仅在有高性能要求，且已验证无法通过基于事件的模式满足这些要求，但可以通过 <xref:System.IAsyncResult> 模式满足时，才公开 <xref:System.IAsyncResult> 模式。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：实现支持基于事件的异步模式的组件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
 - [基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

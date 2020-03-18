@@ -3,11 +3,11 @@ title: 重大更改和 .NET 库
 description: 有关在创建 .NET 库时浏览重大更改的最佳做法建议。
 ms.date: 10/02/2018
 ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731461"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398507"
 ---
 # <a name="breaking-changes"></a>重大更改
 
@@ -96,11 +96,11 @@ public class Document
 
 > 删除 API 是一种二进制重大更改。 如果维护成本较低，并且不会向库增添大量技术债务，请考虑保留已过时类型和方法。 不删除类型和方法可以帮助避免上述最糟糕情况。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [面向 C# 开发人员的版本和更新注意事项](../../csharp/whats-new/version-update-considerations.md)
 - [.NET 中的 API 重大更改的权威指南](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
 - [.NET 重大更改规则](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
->[上一篇](versioning.md)
+>[上一页](versioning.md)

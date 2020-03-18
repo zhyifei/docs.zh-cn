@@ -9,15 +9,15 @@ helpviewer_keywords:
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
 ms.openlocfilehash: c549b9fcc91401aed846afd39e656b60e16afb74
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937605"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 表达式（C# 编程指南）
 
-“Lambda 表达式”是采用以下任意一种形式的表达式：
+“Lambda 表达式”是采用以下任意一种形式的表达式： 
 
 - [表达式 lambda](#expression-lambdas)，表达式为其主体：
 
@@ -33,7 +33,7 @@ ms.locfileid: "75937605"
 
 使用 [lambda 声明运算符`=>`](../../language-reference/operators/lambda-operator.md) 从其主体中分离 lambda 参数列表。 若要创建 Lambda 表达式，需要在 Lambda 运算符左侧指定输入参数（如果有），然后在另一侧输入表达式或语句块。
 
-任何 Lambda 表达式都可以转换为[委托](../../language-reference/builtin-types/reference-types.md#the-delegate-type)类型。 Lambda 表达式可以转换的委托类型由其参数和返回值的类型定义。 如果 lambda 表达式不返回值，则可以将其转换为 `Action` 委托类型之一；否则，可将其转换为 `Func` 委托类型之一。 例如，有 2 个参数且不返回值的 Lambda 表达式可转换为 <xref:System.Action%602> 委托。 有 1 个参数且有返回值的 Lambda 表达式可转换为 <xref:System.Func%602> 委托。 以下示例中，lambda 表达式 `x => x * x`（指定名为 `x` 的参数并返回 `x` 平方值）将分配给委托类型的变量：
+任何 Lambda 表达式都可以转换为[委托](../../language-reference/builtin-types/reference-types.md#the-delegate-type)类型。 Lambda 表达式可以转换的委托类型由其参数和返回值的类型定义。 如果 lambda 表达式不返回值，则可以将其转换为 `Action` 委托类型之一；否则，可将其转换为 `Func` 委托类型之一。 例如，有 2 个参数且不返回值的 Lambda 表达式可转换为 <xref:System.Action%602> 委托。 有 1 个参数且不返回值的 Lambda 表达式可转换为 <xref:System.Func%602> 委托。 以下示例中，lambda 表达式 `x => x * x`（指定名为 `x` 的参数并返回 `x` 平方值）将分配给委托类型的变量：
 
 [!code-csharp-interactive[lambda is delegate](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Delegate)]
 
@@ -49,7 +49,7 @@ ms.locfileid: "75937605"
   
 ## <a name="expression-lambdas"></a>表达式 lambda
 
-表达式位于 `=>` 运算符右侧的 lambda 表达式称为“表达式 lambda”。 表达式 lambda 广泛用于[表达式树](../concepts/expression-trees/index.md)的构造。 表达式 lambda 会返回表达式的结果，并采用以下基本形式：
+表达式位于 `=>` 运算符右侧的 lambda 表达式称为“表达式 lambda”  。 表达式 lambda 广泛用于[表达式树](../concepts/expression-trees/index.md)的构造。 表达式 lambda 会返回表达式的结果，并采用以下基本形式：
 
 ```csharp
 (input-parameters) => expression
@@ -201,7 +201,7 @@ lambda 类型推理的一般规则如下：
 
 ## <a name="capture-of-outer-variables-and-variable-scope-in-lambda-expressions"></a>捕获 lambda 表达式中的外部变量和变量范围
 
-lambda 可以引用外部变量。 这些变量是在定义 lambda 表达式的方法中或包含 lambda 表达式的类型中的范围内变量。 以这种方式捕获的变量将进行存储以备在 lambda 表达式中使用，即使在其他情况下，这些变量将超出范围并进行垃圾回收。 必须明确地分配外部变量，然后才能在 lambda 表达式中使用该变量。 下面的示例演示这些规则：
+lambda 可以引用外部变量  。 这些变量是在定义 lambda 表达式的方法中或包含 lambda 表达式的类型中的范围内变量。 以这种方式捕获的变量将进行存储以备在 lambda 表达式中使用，即使在其他情况下，这些变量将超出范围并进行垃圾回收。 必须明确地分配外部变量，然后才能在 lambda 表达式中使用该变量。 下面的示例演示这些规则：
 
 [!code-csharp[variable scope](~/samples/snippets/csharp/programming-guide/lambda-expressions/VariableScopeWithLambdas.cs#VariableScope)]
 
@@ -223,7 +223,7 @@ lambda 可以引用外部变量。 这些变量是在定义 lambda 表达式的�
 
 ## <a name="featured-book-chapter"></a>特别推荐书籍章节
 
-[面向 C# 3.0 程序员的超过 250 个解决方案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29)中的 [C# 3.0 手册（第三版）：委托、事件和 Lambda 表达式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
+[C# 3.0 手册（第三版）：面向 C# 3.0 程序员的超过 250 个解决方案中的委托、事件和 Lambda 表达式  
   
 ## <a name="see-also"></a>请参阅
 

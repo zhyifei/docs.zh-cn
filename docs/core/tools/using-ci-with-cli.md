@@ -3,10 +3,10 @@ title: 在持续集成 (CI) 中使用 .NET Core SDK 和工具
 description: 了解如何在具有持续集成的生成服务器上使用 .NET Core SDK 及其工具。
 ms.date: 05/18/2017
 ms.openlocfilehash: 6e23a21dd36422a095e56519c9aa28ce2549f7b2
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451033"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持续集成 (CI) 中使用 .NET Core SDK 和工具
@@ -159,7 +159,7 @@ install:
 
    ![添加生成步骤](./media/using-ci-with-cli/add-build-step.png)
 
-1. 此时，系统会显示“任务目录”  。 此目录包含在生成中使用的任务。 由于已有脚本，因此请为“PowerShell：   运行 PowerShell 脚本”选择“添加”按钮
+1. 此时，系统会显示“任务目录”  。 此目录包含在生成中使用的任务。 由于已有脚本，因此选择“PowerShell:运行 PowerShell 脚本”  旁边的“添加”  按钮。
 
    ![添加 PowerShell 脚本步骤](./media/using-ci-with-cli/add-powershell-script.png)
 
@@ -173,6 +173,6 @@ install:
 
 使用 .NET Core 工具构建 .NET Core 代码生成进程的两种常规方法是，直接使用 MSBuild 或使用 .NET Core 命令行命令。 应采用哪种方法取决于对方法的熟悉程度和复杂性取舍。 使用 MSBuild，可以将生成进程表达为任务和目标，但需要学习 MSBuild 项目文件语法，这增加了复杂性。 使用 .NET Core 命令行工具可能更为简单，但需要在 `bash` 或 PowerShell 等脚本语言中编写业务流程逻辑。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET 下载 - Linux](https://dotnet.microsoft.com/download?initial-os=linux)

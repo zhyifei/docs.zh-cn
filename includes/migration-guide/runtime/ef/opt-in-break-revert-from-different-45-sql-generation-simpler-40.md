@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 64d540278544e74c46d46b77c97bccd26d4116dd
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: e5d81d791e1a2f1a2dbdafc787dec1227423883d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67803279"
 ---
 ### <a name="opt-in-break-to-revert-from-different-45-sql-generation-to-simpler-40-sql-generation"></a>选择中断以从不同的 4.5 SQL 生成还原到更简单的 4.0 SQL 生成
@@ -15,4 +15,3 @@ ms.locfileid: "67803279"
 |范围|透明|
 |Version|4.5.2|
 |类型|运行时|
-

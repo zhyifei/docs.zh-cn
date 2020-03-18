@@ -4,11 +4,11 @@ description: 大致了解 C# 语言的版本 7.0 中的新增功能。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
 ms.openlocfilehash: a6ac5c00ceb2ce8e5e56e2a86a8cde937d5108e2
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448629"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398339"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 中的新增功能
 
@@ -126,7 +126,7 @@ if (input is int count)
 switch 匹配表达式具有常见的语法，它基于已包含在 C# 语言中的 `switch` 语句。 更新后的 switch 语句有几个新构造：
 
 - `switch` 表达式的控制类型不再局限于整数类型、`Enum` 类型、`string` 或与这些类型之一对应的可为 null 的类型。 可能会使用任何类型。
-- 可以在每个 `case` 标签中测试 `switch` 表达式的类型。 与 `is` 表达式一样，可以为该类型指定一个新变量。
+- 可以在每个 `switch` 标签中测试 `case` 表达式的类型。 与 `is` 表达式一样，可以为该类型指定一个新变量。
 - 可以添加 `when` 子句以进一步测试该变量的条件。
 - `case` 标签的顺序现在很重要。 执行匹配的第一个分支；其他将跳过。
 
@@ -215,14 +215,14 @@ C# 语言还有多个规则，可保护你免于误用 `ref` 局部变量和返�
 
 ## <a name="more-expression-bodied-members"></a>更多的 expression-bodied 成员
 
-C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6.md#expression-bodied-function-members)。 C# 7.0 扩展了可作为表达式实现的允许的成员。 在 C# 7.0 中，你可以在属性  和索引器  上实现构造函数  、终结器  以及 `get` 和 `set` 访问器。 以下代码演示了每种情况的示例：
+C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6.md#expression-bodied-function-members)。 C# 7.0 扩展了可作为表达式实现的允许的成员。 在 C# 7.0 中，你可以在属性  和索引器  上实现构造函数`get``set`、终结器  以及 *和* 访问器。 以下代码演示了每种情况的示例：
 
 [!code-csharp[ExpressionBodiedMembers](~/samples/snippets/csharp/new-in-7/expressionmembers.cs#ExpressionBodiedEverything "new expression-bodied members")]
 
 > [!NOTE]
 > 本示例不需要终结器，但显示它是为了演示语法。 不应在类中实现终结器，除非有必要发布非托管资源。 还应考虑使用 <xref:System.Runtime.InteropServices.SafeHandle> 类，而不是直接管理非托管资源。
 
-这些 expression-bodied 成员的新位置代表了 C# 语言的一个重要里程碑：这些功能由致力于开发开放源代码 [Roslyn](https://github.com/dotnet/Roslyn) 项目的社区成员实现。
+这些针对 expression-bodied 成员的新位置代表了 C# 语言的一个重要里程碑：这些功能由致力于开放源代码 [Roslyn](https://github.com/dotnet/Roslyn) 项目的社区成员实现。
 
 将方法更改为 expression bodied 成员是[二进制兼容的更改](version-update-considerations.md#binary-compatible-changes)。
 

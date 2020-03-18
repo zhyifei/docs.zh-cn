@@ -5,16 +5,16 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
 ms.openlocfilehash: d70fa54adeb505fd37807399402281dfda67cf52
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451559"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>新式 Web 应用程序的特征
 
 > "… 恰当合理的设计，会使功能的价格变便宜。 这种方式有难度，但是却总有成效。”  
-> \- Dennis Ritchie 
+> _Dennis Ritchie\-_
 
 新式 Web 应用程序比以往承载着更高的用户期望和要求。 当今的 Web 应用需要能在全球任何地方任意时刻可用，需要可在任何设备或屏幕尺寸上使用。 Web 应用程序必须具有安全性、灵活性和可缩放性，以便满足高峰需求。 如今复杂方案日益需要由丰富的用户体验来处理，这建立在使用 JavaScript 并通过 Web API 进行有效通信的客户端的基础之上。
 

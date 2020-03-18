@@ -9,10 +9,10 @@ helpviewer_keywords:
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
 ms.openlocfilehash: 007b10f6f27233c43caad4c1910e3d1158682950
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920369"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion（C# 编译器选项）
@@ -25,7 +25,7 @@ ms.locfileid: "76920369"
 -langversion:option
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 `option`
 
@@ -34,7 +34,7 @@ ms.locfileid: "76920369"
 |选项|含义|
 |------------|-------------|
 |preview|编译器接受它可支持的最新预览版本中的所有有效语言语法。|
-|latest|编译器接受它可支持的最新版本（包括次要版本）中的所有有效语言语法。|
+|最新|编译器接受它可支持的最新版本（包括次要版本）中的所有有效语言语法。|
 |latestMajor|编译器接受它可支持的最新主版本中的所有有效语言语法。|
 |8.0|编译器只接受 C# 8.0 或更低版本中所含的语法。|
 |7.3|编译器只接受 C# 7.3 或更低版本中所含的语法。|
@@ -66,7 +66,7 @@ C# 应用程序引用的元数据不受 -langversion 编译器选项约束  。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-|Version|链接|描述|
+|Version|链接|说明|
 |-------|----|-----------|
 |C# 7.0 和更高版本||当前不可用|
 |C# 6.0|[链接](/dotnet/csharp/language-reference/language-specification/introduction)|C# 语言规范版本 6 - 非官方草稿：.NET Foundation|
@@ -94,7 +94,7 @@ C# 应用程序引用的元数据不受 -langversion 编译器选项约束  。
 |C# 2| Microsoft Visual Studio/生成工具 2005 或捆绑的 .Net Framework 2.0 编译器 |
 |C# 1.0/1.2 | Microsoft Visual Studio/生成工具 .NET 2002 或捆绑的 .NET Framework 1.0 编译器 |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

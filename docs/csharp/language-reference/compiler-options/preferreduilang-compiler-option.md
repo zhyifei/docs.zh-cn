@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -preferreduilang compiler option [C#]
 ms.assetid: 68b2462f-6778-48d7-8052-62805fe8e02c
 ms.openlocfilehash: 7ebafcf446c9033c93e0c5fa5e11ea2930bd2e1e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602555"
 ---
 # <a name="-preferreduilang-c-compiler-options"></a>-preferreduilang（C# 编译器选项）
@@ -24,7 +24,7 @@ ms.locfileid: "69602555"
 -preferreduilang: language  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `language`  
  用于编译器输出的语言的[语言名称](/windows/desktop/Intl/language-names)。  
   
@@ -37,6 +37,6 @@ csc.exe -preferreduilang:ja-JP
   
 ## <a name="requirements"></a>要求  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](./index.md)

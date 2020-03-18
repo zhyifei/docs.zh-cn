@@ -4,10 +4,10 @@ description: 了解任意类型 .NET 项目或文件的自定义模板。
 author: thraka
 ms.date: 06/14/2019
 ms.openlocfilehash: 8e1ac4ca21a8a90ad0f7c9bd3dd11281eb4a6e02
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73420880"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 自定义模板
@@ -22,13 +22,13 @@ ms.locfileid: "73420880"
 
 ### <a name="net-default-templates"></a>.NET 默认模板
 
-安装 [.NET Core SDK](https://dotnet.microsoft.com/download) 时，将获取十多个用于创建项目和文件的内置模板，包括控制台应用程序、类库、单元测试项目、ASP.NET Core 应用程序（包括 [Angular](https://angular.io/) 和 [React](https://facebook.github.io/react/) 项目）和配置文件。 若要列出内置模板，请运行带有 `-l|--list` 选项的 `dotnet new` 命令：
+安装 [.NET Core SDK](https://dotnet.microsoft.com/download) 时，将获取十多个用于创建项目和文件的内置模板，包括控制台应用程序、类库、单元测试项目、ASP.NET Core 应用程序（包括 [Angular](https://angular.io/) 和 [React](https://facebook.github.io/react/) 项目）和配置文件。 若要列出内置模板，请运行带有 `dotnet new` 选项的 `-l|--list` 命令：
 
 ```dotnetcli
 dotnet new --list
 ```
 
-## <a name="configuration"></a>配置
+## <a name="configuration"></a>Configuration
 
 模板由以下部分组成：
 
@@ -56,7 +56,7 @@ template.json  文件位于模板根目录中的 .template.config  文件夹。 
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | template.json  文件的 JSON 架构。 如果指定架构，支持 JSON 架构的编辑器启用 JSON 编辑功能。 例如，[Visual Studio Code](https://code.visualstudio.com/) 要求此成员启用 IntelliSense。 使用值 `http://json.schemastore.org/template`。 |
 | `author`          | string        | 模板创建者。 |
-| `classifications` | array(string) | 为了找到模板，用户可能会在搜索模板时使用的 0 个或多个模板特征。 如果出现在使用 `dotnet new -l|--list` 命令生成的模板列表中，classifications 还会出现在“Tags”  列中。 |
+| `classifications` | array(string) | 为了找到模板，用户可能会在搜索模板时使用的 0 个或多个模板特征。 如果出现在使用  *命令生成的模板列表中，classifications 还会出现在“Tags”* `dotnet new -l|--list`列中。 |
 | `identity`        | string        | 此模板的唯一名称。 |
 | `name`            | string        | 用户应看到的模板名称。 |
 | `shortName`       | string        | 方便用户选择模板的默认速记名称，适用于模板名称由用户指定（而不是通过 GUI 选择）的环境。 例如，通过命令提示符和 CLI 命令使用模板时，短名称非常有用。 |
@@ -109,7 +109,7 @@ mytemplate  文件夹是可安装的模板包。 安装此包后，`shortName` �
 01. `<IncludeBuildOutput>` 设置设为 `false` 以从 NuGet 包排除编译器生成的所有二进制文件。
 01. `<ContentTargetFolders>` 设置设为 `content`。 这可确保设为“内容”  的文件存储在 NuGet 包的 content  文件夹中。 NuGet 包中的此文件夹由 dotnet 模板系统解析。
 
-使所有代码文件不被模板项目编译的一个简单的方法是使用 `<ItemGroup>` 元素内项目文件中的 `<Compile Remove="**\*" />` 项。
+使所有代码文件不被模板项目编译的一个简单的方法是使用 `<Compile Remove="**\*" />` 元素内项目文件中的 `<ItemGroup>` 项。
 
 设置模板包结构的一个简单方法是将所有模板放在单独的文件夹中，然后放到位于 .csproj 文件所在目录的 templates 文件夹的每个模板文件夹中   。 这样，你可以使用单个项目项包括 templates 中的所有文件和文件夹作为“内容”   。 在 `<ItemGroup>` 元素中创建 `<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />` 项。
 
@@ -242,13 +242,13 @@ dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 
 ## <a name="create-a-project-using-a-custom-template"></a>使用自定义模板创建项目
 
-安装模板后，通过执行 `dotnet new <TEMPLATE>` 命令来使用模板，就像使用其他任何预安装模板一样。 还可以为 `dotnet new` 命令指定[选项](dotnet-new.md#options)，包括在模板设置中配置的模板专用选项。 直接向命令提供模板的短名称：
+安装模板后，通过执行 `dotnet new <TEMPLATE>` 命令来使用模板，就像使用其他任何预安装模板一样。 还可以为 [ 命令指定](dotnet-new.md#options)选项`dotnet new`，包括在模板设置中配置的模板专用选项。 直接向命令提供模板的短名称：
 
 ```dotnetcli
 dotnet new <TEMPLATE>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建 dotnet new 自定义模板（教程）](../tutorials/cli-templates-create-item-template.md)
 - [dotnet/templating GitHub 存储库 Wiki](https://github.com/dotnet/templating/wiki)

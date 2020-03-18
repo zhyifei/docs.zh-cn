@@ -10,10 +10,10 @@ dev_langs:
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
 ms.openlocfilehash: eafd8f78c3d8de1ba064021111f869571d5a570f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160321"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ（语言集成查询）
@@ -143,7 +143,7 @@ Dim filteredItems = From item In myItems
 
 难道 API 语法不比查询语法更简洁吗？
 
-不是。 查询语法允许使用 let 子句，这样，便可以在表达式的作用域内引入和绑定变量，然后在表达式的后续片段中使用该变量  。 只使用 API 语法重现相同的代码也是可行的，不过，这很可能会导致代码难以阅读。
+否。 查询语法允许使用 let 子句，这样，便可以在表达式的作用域内引入和绑定变量，然后在表达式的后续片段中使用该变量  。 只使用 API 语法重现相同的代码也是可行的，不过，这很可能会导致代码难以阅读。
 
 那么，问题来了，**只使用查询语法可以吗？**
 
@@ -354,7 +354,7 @@ End Function
 
 PLINQ（又称并行 LINQ）是 LINQ 表达式的并行执行引擎。 换言之，LINQ 正则表达式可能会没有意义地在任意数量的线程之间并行化。 为此，可以调用表达式前面的 `AsParallel()`。
 
-考虑以下情况：
+请考虑下列各项：
 
 ```csharp
 public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> facebookUsers)

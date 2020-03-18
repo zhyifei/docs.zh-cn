@@ -11,10 +11,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 ms.openlocfilehash: a76cc40f308ac2f636a650cd4a17da0e94e23a34
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160256"
 ---
 # <a name="managed-threading-best-practices"></a>托管线程处理的最佳做法
@@ -172,7 +172,7 @@ else {
   
 - 避免提供可更改静态状态的静态方法。 在常见服务器方案中，静态状态可在各个请求之间共享，这意味着多个线程可同时执行该代码。 这可能导致线程出现 bug。 请考虑使用一种设计模式，将数据封装到在各请求之间不共享的实例中。 此外，如果同步静态数据，更改状态的静态方法间的调用可导致死锁或冗余同步，进而降低性能。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [线程处理](../../../docs/standard/threading/index.md)
 - [线程与线程处理](../../../docs/standard/threading/threads-and-threading.md)

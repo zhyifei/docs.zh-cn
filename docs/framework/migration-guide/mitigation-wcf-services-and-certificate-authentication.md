@@ -3,10 +3,10 @@ title: 缓解：WCF 服务和证书身份验证
 ms.date: 03/30/2017
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
 ms.openlocfilehash: 8c8493efa2c3223809ad87e01e3faddaea859ca8
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457793"
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>缓解：WCF 服务和证书身份验证
@@ -17,7 +17,7 @@ ms.locfileid: "73457793"
 
 TLS 1.2 不支持 MD5 证书身份验证。 因此，如果客户使用的 SSL 证书对哈希算法使用 MD5，WCF 客户端就无法连接 WCF 服务。 有关详细信息，请参阅[缓解：WCF 服务和证书身份验证](mitigation-wcf-services-and-certificate-authentication.md)。
 
-## <a name="mitigation"></a>缓解
+## <a name="mitigation"></a>缓解操作
 
 可以通过执行下列任一操作来解决此问题，以便 WCF 客户端可以连接 WCF 服务器：
 
@@ -54,6 +54,6 @@ TLS 1.2 不支持 MD5 证书身份验证。 因此，如果客户使用的 SSL �
   > [!CAUTION]
   > 不建议采用此解决方法，因为使用 MD5 哈希算法的证书被视为不安全。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [应用程序兼容性](application-compatibility.md)

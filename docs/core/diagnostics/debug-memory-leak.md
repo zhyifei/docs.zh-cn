@@ -4,10 +4,10 @@ description: 了解如何调试 .NET Core 中的内存泄漏。
 ms.topic: tutorial
 ms.date: 12/17/2019
 ms.openlocfilehash: 014945394f87edd02c94f7c3b28043bd07470d8b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76737729"
 ---
 # <a name="tutorial-debug-a-memory-leak-in-net-core"></a>教程：调试 .NET Core 中的内存泄漏

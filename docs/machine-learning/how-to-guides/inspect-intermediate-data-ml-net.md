@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
 ms.openlocfilehash: 11df1d5caaa7b7974360d863f85afbff18985e47
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73977090"
 ---
 # <a name="inspect-intermediate-data-during-processing"></a>在处理期间检查中间数据
@@ -104,7 +104,7 @@ float averageCurrentPrice = (firstRow.CurrentPrice + secondRow.CurrentPrice + th
 
 ## <a name="inspect-values-in-a-single-column"></a>检查单个列中的值
 
-在模型生成过程中的任何时候，都可以使用 [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) 方法访问 [`IDataView`](xref:Microsoft.ML.IDataView) 的单个列中的值。 [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) 方法将单个列中的所有值都返回为 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)。
+在模型生成过程中的任何时候，都可以使用 [`IDataView`](xref:Microsoft.ML.IDataView) 方法访问 [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) 的单个列中的值。 [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) 方法将单个列中的所有值都返回为 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)。
 
 ```csharp
 IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();
@@ -112,7 +112,7 @@ IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();
 
 ## <a name="inspect-idataview-values-one-row-at-a-time"></a>一次检查一行 IDataView 值
 
-[`IDataView`](xref:Microsoft.ML.IDataView) 延迟求值。 若要循环访问 [`IDataView`](xref:Microsoft.ML.IDataView) 的各行，而不按本文档前面部分所示转换为 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)，请通过使用 [`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor*) 方法并传入 [`IDataView`](xref:Microsoft.ML.IDataView) 的 [DataViewSchema](xref:Microsoft.ML.DataViewSchema) 作为参数来创建 [`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor)。 然后，若要循环访问各行，请使用 [`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext*) 游标方法以及 [`ValueGetter`](xref:Microsoft.ML.ValueGetter%601) 委托从每个列中提取相应的值。
+[`IDataView`](xref:Microsoft.ML.IDataView) 延迟求值。 若要循环访问 [`IDataView`](xref:Microsoft.ML.IDataView) 的各行，而不按本文档前面部分所示转换为 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)，请通过使用 [`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor) 方法并传入 [`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor*) 的 [DataViewSchema](xref:Microsoft.ML.DataViewSchema) 作为参数来创建 [`IDataView`](xref:Microsoft.ML.IDataView)。 然后，若要循环访问各行，请使用 [`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext*) 游标方法以及 [`ValueGetter`](xref:Microsoft.ML.ValueGetter%601) 委托从每个列中提取相应的值。
 
 > [!IMPORTANT]
 > 出于性能考虑，ML.NET 中的向量使用 [`VBuffer`](xref:Microsoft.ML.Data.VBuffer%601) 而不是本机集合类型（即 `Vector`,`float[]`）。
@@ -150,7 +150,7 @@ using (DataViewRowCursor cursor = data.GetRowCursor(columns))
 > [!WARNING]
 > 请勿在生产代码中使用 `Preview`，因为它专用于调试，可能会降低性能。
 
-模型生成过程是实验性的和迭代的。 若要预览对数据子集预处理或训练机器学习模型后的数据，请使用可返回 [`DataDebuggerPreview`](xref:Microsoft.ML.Data.DataDebuggerPreview) 的 [`Preview`](xref:Microsoft.ML.DebuggerExtensions.Preview*) 方法。 其结果为一个具有 `ColumnView` 和 `RowView` 属性的对象，这两个属性都是 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) 并包含特定列或行中的值。 使用 `maxRows` 参数指定要应用转换的行数。
+模型生成过程是实验性的和迭代的。 若要预览对数据子集预处理或训练机器学习模型后的数据，请使用可返回 [`Preview`](xref:Microsoft.ML.DebuggerExtensions.Preview*) 的 [`DataDebuggerPreview`](xref:Microsoft.ML.Data.DataDebuggerPreview) 方法。 其结果为一个具有 `ColumnView` 和 `RowView` 属性的对象，这两个属性都是 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) 并包含特定列或行中的值。 使用 `maxRows` 参数指定要应用转换的行数。
 
 ![数据调试器预览对象](./media/inspect-intermediate-data-ml-net/data-debugger-preview-01.png)
 

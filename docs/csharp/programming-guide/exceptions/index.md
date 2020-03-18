@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
 ms.openlocfilehash: b883012cf8f72247ff4e0b47a46eee1854e2d534
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76735659"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>异常和异常处理（C# 编程指南）
@@ -31,7 +31,7 @@ C# 语言的异常处理功能有助于处理在程序运行期间发生的任�
 - 在可能抛出异常的语句周围使用 `try` 代码块。
 - 在 `try` 代码块中出现异常后，控制流会跳转到调用堆栈中任意位置上的首个相关异常处理程序。 在 C# 中，`catch` 关键字用于定义异常处理程序。
 - 如果给定的异常没有对应的异常处理程序，那么程序会停止执行，并显示错误消息。
-- 除非可以处理异常并让应用程序一直处于已知状态，否则不捕获异常。 如果捕获 `System.Exception`，则使用 `catch` 代码块末尾的 `throw` 关键字重新抛出异常。
+- 除非可以处理异常并让应用程序一直处于已知状态，否则不捕获异常。 如果捕获 `System.Exception`，则使用 `throw` 代码块末尾的 `catch` 关键字重新抛出异常。
 - 如果 `catch` 代码块定义异常变量，可以用它来详细了解所发生的异常类型。
 - 使用 `throw` 关键字，程序可以显式生成异常。
 - 异常对象包含错误详细信息，如调用堆栈的状态和错误的文本说明。
@@ -52,9 +52,9 @@ C# 语言的异常处理功能有助于处理在程序运行期间发生的任�
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[异常](~/_csharplang/spec/exceptions.md)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/exceptions.md)中的[异常](/dotnet/csharp/language-reference/language-specification/introduction)。 该语言规范是 C# 语法和用法的权威资料。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.SystemException>
 - [C# 编程指南](../index.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75936844"
 ---
 # <a name="using-threads-and-threading"></a>使用线程和线程处理
@@ -44,7 +44,7 @@ ms.locfileid: "75936844"
 
 下表列出了某些 <xref:System.Threading.Thread> 属性：  
   
-|Property|描述|  
+|Property|说明|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|如果此线程已启动但尚未正常终止或中止，则返回 `true`。|  
 |<xref:System.Threading.Thread.IsBackground%2A>|获取或设置布尔值，该值指示线程是否为后台线程。 后台线程类似前台线程，但后台线程不会阻止进程停止。 属于某个进程的所有前台线程均停止后，公共语言运行时通过对仍处于活动状态的后台进程调用 <xref:System.Threading.Thread.Abort%2A> 方法来结束进程。 有关详细信息，请参阅[前台和后台线程](foreground-and-background-threads.md)。|  
@@ -52,7 +52,7 @@ ms.locfileid: "75936844"
 |<xref:System.Threading.Thread.Priority%2A>|获取或设置由操作系统用来确定线程计划优先顺序的 <xref:System.Threading.ThreadPriority> 值。 有关详细信息，请参阅[计划线程](scheduling-threads.md)和 <xref:System.Threading.ThreadPriority> 引用。|  
 |<xref:System.Threading.Thread.ThreadState%2A>|获取 <xref:System.Threading.ThreadState> 值，该值包含线程的当前状态。|  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.Thread?displayProperty=nameWithType>
 - [线程与线程处理](threads-and-threading.md)

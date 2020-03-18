@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: b91cdc7a0d2e4258662155a840500ce21ab35760
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74100700"
 ---
-### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>Authorization:AddAuthorization 重载已移动到不同的程序集
+### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>授权：AddAuthorization 重载已移动到不同的程序集
 
 用于驻留在 `Microsoft.AspNetCore.Authorization` 中的核心 `AddAuthorization` 方法已重命名为 `AddAuthorizationCore`。 旧的 `AddAuthorization` 方法仍然存在，但却在 `Microsoft.AspNetCore.Authorization.Policy` 程序集中。 使用这两种方法的应用应该不会受到任何影响。 请注意，`Microsoft.AspNetCore.Authorization.Policy` 现随附于共享框架而不是独立的包中，如[共享框架：从 Microsoft.AspNetCore.App 中删除了程序集](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)中所述。
 
@@ -25,7 +25,7 @@ ms.locfileid: "74100700"
 
 `AddAuthorization` 是一个更好的方法名称，用于添加授权所需的所有常用服务。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 添加对 `Microsoft.AspNetCore.Authorization.Policy` 的引用或改用 `AddAuthorizationCore`。
 

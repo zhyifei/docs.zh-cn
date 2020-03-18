@@ -8,10 +8,10 @@ helpviewer_keywords:
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
 ms.openlocfilehash: 52770187568d0ba0f54ec36ee2c3d754a9b4d9a8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348881"
 ---
 # <a name="file-encodings-visual-basic"></a>文件编码 (Visual Basic)
@@ -30,7 +30,7 @@ ms.locfileid: "74348881"
 
 <xref:System.Text.Encoding> 类表示字符编码。 下表列出并描述了每个可用的编码类型。
 
-|name|说明|
+|名称|说明|
 |---|---|
 |<xref:System.Text.ASCIIEncoding>|表示 Unicode 字符的 ASCII 字符编码。|
 |<xref:System.Text.UnicodeEncoding>|表示 Unicode 字符的 UTF-16 编码。|
@@ -38,7 +38,7 @@ ms.locfileid: "74348881"
 |<xref:System.Text.UTF7Encoding>|表示 Unicode 字符的 UTF-7 编码。|
 |<xref:System.Text.UTF8Encoding>|表示 Unicode 字符的 UTF-8 编码。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [从文件读取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
 - [写入文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

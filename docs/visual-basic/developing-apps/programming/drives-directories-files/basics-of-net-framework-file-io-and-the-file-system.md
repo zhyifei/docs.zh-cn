@@ -10,10 +10,10 @@ helpviewer_keywords:
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 ms.openlocfilehash: 5d60d0089d042c0be343c741c26de0b4b7778d6d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348936"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 文件 I/O 和文件系统基础知识 (Visual Basic)
@@ -59,11 +59,11 @@ ms.locfileid: "74348936"
 
 下表列出了通常使用流完成的任务：
 
-|功能|查看|
+|到|请参阅|
 |---|---|
 |读取和写入数据文件|[如何：对新建的数据文件进行读取和写入](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
-|从文件中读取文本|[如何：从文件中读取文本](../../../../standard/io/how-to-read-text-from-a-file.md)|
-|将文本写入文件|[如何：将文本写入文件](../../../../standard/io/how-to-write-text-to-a-file.md)|
+|从文件中读取文本|[如何：从文件读取文本](../../../../standard/io/how-to-read-text-from-a-file.md)|
+|将文本写入文件|[如何：向文件写入文本](../../../../standard/io/how-to-write-text-to-a-file.md)|
 |从字符串中读取字符|[如何：从字符串中读取字符](../../../../standard/io/how-to-read-characters-from-a-string.md)|
 |向字符串写入字符|[如何：向字符串写入字符](../../../../standard/io/how-to-write-characters-to-a-string.md)|
 |加密数据|[加密数据](../../../../standard/security/encrypting-data.md)|
@@ -77,7 +77,7 @@ ms.locfileid: "74348936"
 
 下表列出涉及文件访问和文件特性的任务：
 
-|功能|查看|
+|到|请参阅|
 |---|---|
 |打开并追加文本到日志文件|[如何：打开并追加到日志文件](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
 |确定文件特性|<xref:System.IO.FileAttributes>|
@@ -92,7 +92,7 @@ ms.locfileid: "74348936"
 
 下表列出了通常与独立文件存储相关联的任务。
 
-|功能|查看|
+|到|请参阅|
 |---|---|
 |创建独立存储区|[如何：获取独立存储的存储区](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
 |枚举独立存储区|[如何：枚举独立存储的存储区](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|
@@ -106,7 +106,7 @@ ms.locfileid: "74348936"
 
 <xref:System.IO.FileSystemWatcher> 组件允许监视系统上或任何你对其具有网络访问权限的计算机上的文件和目录所作的更改。 例如，如果修改了文件，可能想要向用户发送更改警报。 发生更改时，会引发一个或多个事件并将其存储在缓冲区中，然后移交给 <xref:System.IO.FileSystemWatcher> 组件进行处理。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [撰写流](../../../../standard/io/composing-streams.md)
 - [文件和流 I/O](../../../../standard/io/index.md)

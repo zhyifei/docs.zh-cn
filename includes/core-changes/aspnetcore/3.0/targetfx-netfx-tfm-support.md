@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b60f74947a537c602c7bd1a89587b76bd847c82a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937293"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>目标框架：删除了 .NET Framework 支持
@@ -47,7 +47,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影响的 API
 
-None
+无
 
 <!-- 
 

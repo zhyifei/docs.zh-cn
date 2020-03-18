@@ -9,10 +9,10 @@ helpviewer_keywords:
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
 ms.openlocfilehash: afba0df89aabad7ddf8b641fbab421800718deb3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333825"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>从文件读取 (Visual Basic)
@@ -39,7 +39,7 @@ ms.locfileid: "74333825"
  [如何：使用 StreamReader 读取文件中的文本](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
  演示如何使用 <xref:System.IO.StreamReader> 读取文件。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  介绍 `My.Computer.FileSystem` 对象及其成员。  

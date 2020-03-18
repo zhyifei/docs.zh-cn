@@ -1,5 +1,5 @@
 ---
-title: 如何：上传文件
+title: 如何：上载文件
 ms.date: 07/20/2015
 helpviewer_keywords:
 - networks, uploading files
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
 ms.openlocfilehash: 52b731606c74ab7ff06a42dfdbe078616ba33d88
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345560"
 ---
-# <a name="how-to-upload-a-file-in-visual-basic"></a>如何：在 Visual Basic 上传文件
+# <a name="how-to-upload-a-file-in-visual-basic"></a>如何：在 Visual Basic 中上传文件
 
 可使用 <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> 方法上传文件并将文件存储到远程位置。 如果 `ShowUI` 参数设置为 `True`，则显示一个对话框，该对话框显示上传进度并允许用户取消该操作。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "74345560"
   
 - 连接超时 (<xref:System.TimeoutException>)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>

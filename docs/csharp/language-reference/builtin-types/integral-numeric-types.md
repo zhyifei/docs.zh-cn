@@ -33,10 +33,10 @@ helpviewer_keywords:
 - long keyword [C#]
 - ulong keyword [C#]
 ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093196"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整型数值类型（C# 参考）
@@ -127,7 +127,7 @@ var longVariable = (long)42;
 - [整型类型](~/_csharplang/spec/types.md#integral-types)
 - [整数文本](~/_csharplang/spec/lexical-structure.md#integer-literals)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [值类型](value-types.md)

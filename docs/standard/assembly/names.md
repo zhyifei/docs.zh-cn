@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 ms.openlocfilehash: 7a1a4d2512ebb002a3153fe2d51f47157136744d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73733099"
 ---
 # <a name="assembly-names"></a>程序集名称

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ordering comparisons [.NET Framework]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 ms.openlocfilehash: 704ada32d428c468d5b71a3f1390568ca586079e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708319"
 ---
 # <a name="generic-interfaces"></a>泛型接口
@@ -27,7 +27,7 @@ ms.locfileid: "75708319"
 ### <a name="equality-and-ordering-comparisons"></a>相等比较和排序比较  
  在 <xref:System> 命名空间中，<xref:System.IComparable%601?displayProperty=nameWithType> 和 <xref:System.IEquatable%601?displayProperty=nameWithType> 泛型接口与它们对应的非泛型接口一样，各自定义了用于排序比较和相等比较的方法。 类型通过实现这些接口来提供执行这些比较的能力。  
   
- 在 <xref:System.Collections.Generic> 命名空间中，<xref:System.Collections.Generic.IComparer%601> 和 <xref:System.Collections.Generic.IEqualityComparer%601> 泛型接口为没有实现 <xref:System.IComparable%601?displayProperty=nameWithType> 或 <xref:System.IEquatable%601?displayProperty=nameWithType> 泛型接口的类型提供一种定义排序比较和相等比较的方式，并为实现了上述泛型接口的类型提供了重新定义这些关系的方式。 这些接口由许多泛型集合类的方法和构造函数使用。 例如，可以将泛型 <xref:System.Collections.Generic.IComparer%601> 对象传递至 <xref:System.Collections.Generic.SortedDictionary%602> 类的构造函数，以便为没有实现泛型 <xref:System.IComparable%601?displayProperty=nameWithType> 的类型指定排列顺序。 存在 <xref:System.Array.Sort%2A?displayProperty=nameWithType> 泛型静态方法与通过泛型 <xref:System.Collections.Generic.IComparer%601> 实现对数组和列表进行排序的 <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> 实例方法的重载。  
+ 在 <xref:System.Collections.Generic> 命名空间中，<xref:System.Collections.Generic.IComparer%601> 和 <xref:System.Collections.Generic.IEqualityComparer%601> 泛型接口为没有实现 <xref:System.IComparable%601?displayProperty=nameWithType> 或 <xref:System.IEquatable%601?displayProperty=nameWithType> 泛型接口的类型提供一种定义排序比较和相等比较的方式，并为实现了上述泛型接口的类型提供了重新定义这些关系的方式。 这些接口由许多泛型集合类的方法和构造函数使用。 例如，可以将泛型 <xref:System.Collections.Generic.IComparer%601> 对象传递至 <xref:System.Collections.Generic.SortedDictionary%602> 类的构造函数，以便为没有实现泛型 <xref:System.IComparable%601?displayProperty=nameWithType> 的类型指定排列顺序。 存在 <xref:System.Array.Sort%2A?displayProperty=nameWithType> 泛型静态方法与通过泛型 <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> 实现对数组和列表进行排序的 <xref:System.Collections.Generic.IComparer%601> 实例方法的重载。  
   
  <xref:System.Collections.Generic.Comparer%601> 和 <xref:System.Collections.Generic.EqualityComparer%601> 泛型类为 <xref:System.Collections.Generic.IComparer%601> 和 <xref:System.Collections.Generic.IEqualityComparer%601> 泛型接口的实现提供基类，同时还通过其各自的 <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType> 属性提供默认排序比较和相等比较。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75708319"
   
  <xref:System.Collections.Generic.IEnumerable%601> 泛型接口提供泛型枚举器结构。 泛型枚举器实现的 <xref:System.Collections.Generic.IEnumerator%601> 泛型接口继承自非泛型 <xref:System.Collections.IEnumerator> 接口；<xref:System.Collections.IEnumerator.MoveNext%2A> 和 <xref:System.Collections.IEnumerator.Reset%2A> 成员（不依赖于类型参数 `T`）仅出现在非泛型接口中。 这意味着非泛型接口的任何使用者还可以使用泛型接口。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>

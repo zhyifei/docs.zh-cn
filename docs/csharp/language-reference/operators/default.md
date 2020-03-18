@@ -4,12 +4,12 @@ description: 使用 default 运算符生成类型的默认值
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 651c4698514aee8cf4dab75ea32c98493e19a30b
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 0d37fe952e71e74f014872231a2e58663dea9d18
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964623"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398183"
 ---
 # <a name="default-operator-c-reference"></a>default 运算符（C# 参考）
 
@@ -17,7 +17,7 @@ ms.locfileid: "75964623"
 
 下面的示例演示 `default` 运算符的用法：
 
-[!code-csharp-interactive[default of T](~/samples/csharp/language-reference/operators/DefaultOperator.cs#WithOperand)]
+[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
 
 你还可以将 `default` 关键字用作 [`switch` 语句](../keywords/switch.md)中的默认用例标签。
 
@@ -32,15 +32,15 @@ ms.locfileid: "75964623"
 
 下面的示例演示 `default` 文本的用法：
 
-[!code-csharp-interactive[default literal](~/samples/csharp/language-reference/operators/DefaultOperator.cs#DefaultLiteral)]
+[!code-csharp-interactive[default literal](snippets/DefaultOperator.cs#DefaultLiteral)]
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的 [默认值表达式](~/_csharplang/spec/expressions.md#default-value-expressions)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#default-value-expressions)中的 [默认值表达式](~/_csharplang/spec/introduction.md)部分。
 
 有关 `default` 文本的详细信息，请参阅[功能建议说明](~/_csharplang/proposals/csharp-7.1/target-typed-default.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)

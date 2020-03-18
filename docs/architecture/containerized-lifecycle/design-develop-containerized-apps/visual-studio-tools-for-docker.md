@@ -4,10 +4,10 @@ description: 了解 Visual Studio 2017 15.7 版及更高版本中可用的 Docke
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 2b6fdc33f9cf850cf9e52fca4a1a9754cd412567
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68673874"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>在 Windows 上的 Visual Studio 2017 中使用 Docker 工具
@@ -72,12 +72,12 @@ ms.locfileid: "68673874"
 
 下表可帮助确定如何设置这些选项。
 
-| name | 默认设置 | 应用于 | 说明 |
+| “属性” | 默认设置 | 适用于 | 描述 |
 | -----|:---------------:|:----------:| ----------- |
-| 在项目加载时自动拉取所需的 Docker 映像 | 启用 | Docker Compose | 为了在加载项目时提高性能，Visual Studio 将在后台启动 Docker 拉取操作，以便在准备好运行代码时，映像已下载或正在下载。 如果只需加载项目和浏览代码，可以将其关闭，以避免下载不需要的容器映像。 |
-| 在后台自动启动容器 | 启用 | Docker Compose | 同样，为了提高性能，Visual Studio 会在构建和运行容器时创建卷装载随时可用的容器。 如果要控制创建容器的时间，请将其关闭。 |
-| 在解决方案关闭时自动终止容器 | 启用 | Docker Compose | 如果希望解决方案的容器在关闭解决方案或关闭 Visual Studio 后继续运行，请将其关闭。 |
-| 不提示需要信任 localhost SSL 证书 | 关闭 | ASP.NET Core 2.2 项目 | 如果 localhost SSL 证书不受信任，则每次运行项目时 Visual Studio 都会提示，除非选中此复选框。 |
+| 在项目加载时自动拉取所需的 Docker 映像 | On | Docker Compose | 为了在加载项目时提高性能，Visual Studio 将在后台启动 Docker 拉取操作，以便在准备好运行代码时，映像已下载或正在下载。 如果只需加载项目和浏览代码，可以将其关闭，以避免下载不需要的容器映像。 |
+| 在后台自动启动容器 | On | Docker Compose | 同样，为了提高性能，Visual Studio 会在构建和运行容器时创建卷装载随时可用的容器。 如果要控制创建容器的时间，请将其关闭。 |
+| 在解决方案关闭时自动终止容器 | On | Docker Compose | 如果希望解决方案的容器在关闭解决方案或关闭 Visual Studio 后继续运行，请将其关闭。 |
+| 不提示需要信任 localhost SSL 证书 | Off | ASP.NET Core 2.2 项目 | 如果 localhost SSL 证书不受信任，则每次运行项目时 Visual Studio 都会提示，除非选中此复选框。 |
 
 > [!WARNING]
 > 如果 localhost SSL 证书不受信任且选中该框以禁止出现提示，则 HTTPS Web 请求可能会在应用或服务中在运行时失败。 在这种情况下，请取消选中“不提示”复选框，运行项目并在提示时指示信任  。

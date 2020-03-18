@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: 182350cc5143155133385c6fd77986b271f6db91
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73977044"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>使用经过训练的模型进行预测
@@ -40,7 +40,7 @@ public class HousingData
 
 与 `Features` 和 `Label` 输入列名一样，ML.NET 为模型生成的预测值列提供默认名称。 名称可能因任务而异。
 
-由于此示例中使用的算法是线性回归算法，输出列的默认名称为 `Score`，它由 `PredictedPrice` 属性上的 [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 特性定义。
+由于此示例中使用的算法是线性回归算法，输出列的默认名称为 `Score`，它由 [ 属性上的 `ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute)`PredictedPrice` 特性定义。
 
 ```csharp
 class HousingPrediction
@@ -86,7 +86,7 @@ HousingData inputData = new HousingData
 HousingPrediction prediction = predictionEngine.Predict(inputData);
 ```
 
-如果访问 `prediction` 对象的 `Score` 属性，则应获得类似于 `150079` 的值。
+如果访问 `Score` 对象的 `prediction` 属性，则应获得类似于 `150079` 的值。
 
 ## <a name="multiple-predictions"></a>多个预测
 

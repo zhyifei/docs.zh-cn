@@ -4,10 +4,10 @@ description: 了解如何在 C# 中编写 LINQ 查询。
 ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
 ms.openlocfilehash: ed32543b0422e0664a8577f2c27f7c7c00a719a1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "65632877"
 ---
 # <a name="write-linq-queries-in-c"></a>在 C\# 中编写 LINQ 查询
@@ -27,7 +27,7 @@ ms.locfileid: "65632877"
 
 ## <a name="example---query-syntax"></a>示例 - 查询语法
 
-编写大多数查询的推荐方式是使用查询语法创建查询表达式。 下面的示例演示三个查询表达式。 第一个查询表达式演示如何通过应用包含 `where` 子句的条件来筛选或限制结果。 它返回源序列中值大于 7 或小于 3 的所有元素。 第二个表达式演示如何对返回的结果进行排序。 第三个表达式演示如何根据某个键对结果进行分组。 此查询基于单词的第一个字母返回两个组。
+编写大多数查询的推荐方式是使用查询语法  创建查询表达式  。 下面的示例演示三个查询表达式。 第一个查询表达式演示如何通过应用包含 `where` 子句的条件来筛选或限制结果。 它返回源序列中值大于 7 或小于 3 的所有元素。 第二个表达式演示如何对返回的结果进行排序。 第三个表达式演示如何根据某个键对结果进行分组。 此查询基于单词的第一个字母返回两个组。
 
 [!code-csharp[csProgGuideLINQ#5](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_1.cs)]
 
@@ -79,7 +79,7 @@ var numCount = numbers.Where(n => n < 3 || n > 7).Count();
 int numCount = numbers.Where(n => n < 3 || n > 7).Count();
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [演练：用 C# 编写查询](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
 - [语言集成查询 (LINQ)](index.md)

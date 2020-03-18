@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to,title-hack-0625
 ms.openlocfilehash: 87eae789478752423f3e682d4db6cead0391aa6e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73976930"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation"></a>使用交叉验证来训练机器学习模型
@@ -50,7 +50,7 @@ public class HousingData
 
 ## <a name="prepare-the-data"></a>准备数据
 
-在使用数据生成机器学习模型之前预处理数据。 在此示例中，`Size` 和 `HistoricalPrices` 列合并为一个特征向量，其使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 方法输出到名为 `Features` 的新列。 除了将数据转换为 ML.NET 算法所期望的格式之外，连接列还通过对连接的列应用一次操作（而不是对每个单独的列应用操作），优化了管道中的后续操作。
+在使用数据生成机器学习模型之前预处理数据。 在此示例中，`Size` 和 `HistoricalPrices` 列合并为一个特征向量，其使用 `Features`[`Concatenate` 方法输出到名为 ](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 的新列。 除了将数据转换为 ML.NET 算法所期望的格式之外，连接列还通过对连接的列应用一次操作（而不是对每个单独的列应用操作），优化了管道中的后续操作。
 
 将列合并为单个向量后，[`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) 将应用于 `Features` 列，以使 `Size` 和 `HistoricalPrices` 处于 0-1 之间的同一范围内。
 
@@ -93,7 +93,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 
 ## <a name="evaluate-the-model"></a>评估模型
 
-可以通过单个 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 对象的 `Metrics` 属性访问不同的经过训练的模型的指标。 在本例中，通过变量 `rSquared` 访问和存储 [R 平方指标](https://en.wikipedia.org/wiki/Coefficient_of_determination)。
+可以通过单个 `Metrics`[`CrossValidationResult` 对象的 ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 属性访问不同的经过训练的模型的指标。 在本例中，通过变量 [ 访问和存储 ](https://en.wikipedia.org/wiki/Coefficient_of_determination)R 平方指标`rSquared`。
 
 ```csharp
 IEnumerable<double> rSquared =

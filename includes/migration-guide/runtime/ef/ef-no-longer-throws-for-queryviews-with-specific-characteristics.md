@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: bc33266bb2af639d7d0d1cb532ed73abd7f1ba9a
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 705e1a22b8a5791c1103dd374a8bab19356cadfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67803262"
 ---
 ### <a name="ef-no-longer-throws-for-queryviews-with-specific-characteristics"></a>EF 将不再引发有特定特征的 QueryViews
@@ -15,4 +15,3 @@ ms.locfileid: "67803262"
 |范围|边缘|
 |Version|4.5.2|
 |类型|运行时|
-

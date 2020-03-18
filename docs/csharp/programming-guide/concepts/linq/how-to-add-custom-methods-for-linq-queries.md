@@ -3,10 +3,10 @@ title: 如何为 LINQ 查询添加自定义方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
 ms.openlocfilehash: e16175d3332b6ce36458eaa78af093e4f8772723
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141469"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>如何为 LINQ 查询添加自定义方法 (C#)
@@ -53,7 +53,7 @@ public static class LINQExtension
 
 使用从 <xref:System.Collections.Generic.IEnumerable%601> 接口调用其他聚合方法的方式为任何可枚举集合调用此扩展方法。
 
-下面的代码示例说明如何为类型 `double` 的数组使用 `Median` 方法。
+下面的代码示例说明如何为类型 `Median` 的数组使用 `double` 方法。
 
 ```csharp
 double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };
@@ -77,7 +77,7 @@ Console.WriteLine("double: Median = " + query1);
 
 #### <a name="to-create-an-overload-for-each-type"></a>为每种类型创建重载
 
-可以为要支持的每种类型创建特定重载。 下面的代码示例演示 `integer` 类型的 `Median` 方法的重载。
+可以为要支持的每种类型创建特定重载。 下面的代码示例演示 `Median` 类型的 `integer` 方法的重载。
 
 ```csharp
 //int overload
@@ -88,7 +88,7 @@ public static double Median(this IEnumerable<int> source)
 }
 ```
 
-现在便可以为 `integer` 和 `double` 类型调用 `Median` 重载了，如以下代码中所示：
+现在便可以为 `Median` 和 `integer` 类型调用 `double` 重载了，如以下代码中所示：
 
 ```csharp
 double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };
@@ -214,7 +214,7 @@ foreach (var element in query)
 */
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [扩展方法](../../classes-and-structs/extension-methods.md)

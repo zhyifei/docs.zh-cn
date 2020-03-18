@@ -12,11 +12,11 @@ helpviewer_keywords:
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 ms.openlocfilehash: ea8aef03d2f5837f35ecb31209e57853c0c8257b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330421"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398543"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>垃圾回收的基本知识
 
@@ -267,7 +267,7 @@ ms.locfileid: "74330421"
 
 ![并发垃圾回收线程](./media/gc-concurrent.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [GC 的配置选项](../../core/run-time-config/garbage-collector.md)
 - [垃圾回收](index.md)

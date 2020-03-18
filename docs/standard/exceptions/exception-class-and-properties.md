@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
 ms.openlocfilehash: df05150a5bdd5d24766be252f5cec9a436720d8c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708940"
 ---
 # <a name="exception-class-and-properties"></a>异常类和属性
@@ -24,7 +24,7 @@ ms.locfileid: "75708940"
 
 <xref:System.Exception> 类具有以下属性，有助于更轻松地理解异常。
 
-| 属性名 | 描述 |
+| 属性名称 | 说明 |
 | ------------- | ----------- |
 | <xref:System.Exception.Data> | <xref:System.Collections.IDictionary> 包含键/值对中的任意数据。 |
 | <xref:System.Exception.HelpLink> | 可容纳指向帮助文件的 URL（或 URN），帮助文件中提供了大量信息说明了异常的原因。 |
@@ -37,6 +37,6 @@ ms.locfileid: "75708940"
 
 建议仅抛出和捕获派生自 <xref:System.Exception> 的对象，但可以将派生自 <xref:System.Object> 类的任何对象作为异常抛出。 请注意，并非所有语言都支持引发和捕获不是从 <xref:System.Exception> 派生的对象。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [异常](index.md)

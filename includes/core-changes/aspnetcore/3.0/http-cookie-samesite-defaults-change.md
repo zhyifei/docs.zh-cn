@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 15ba678431b97e7c961c119d83546569bdf9bad2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74282525"
 ---
 ### <a name="http-some-cookie-samesite-defaults-changed-to-none"></a>HTTP：某些 cookie SameSite 默认值更改为“None”
@@ -26,7 +26,7 @@ ms.locfileid: "74282525"
 
 更改了默认值，使 `SameSite` 成为可选功能。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 发出 cookie 的每个组件都需要决定 `SameSite` 是否适用于其方案。 检查受影响 API 的使用情况，并根据需要重新配置 `SameSite`。
 

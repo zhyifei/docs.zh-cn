@@ -3,10 +3,10 @@ title: 对等名称解析协议
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
 ms.openlocfilehash: c8b7b2190349323bf212d816a77f5f7810f6ca2c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74428226"
 ---
 # <a name="peer-name-resolution-protocol"></a>对等名称解析协议
@@ -46,7 +46,7 @@ ms.locfileid: "74428226"
   
 - <xref:System.Net.PeerToPeer.PeerNameResolver>：定义将对等名称解析到其网络终结点的进程，包括解析的同步和异步方法。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>

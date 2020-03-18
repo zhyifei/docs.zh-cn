@@ -8,10 +8,10 @@ dev_langs:
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 ms.openlocfilehash: e1f419dd57c1e90d7ebb57ef572f338a34d1c509
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73423639"
 ---
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
@@ -315,7 +315,7 @@ End Class
 
 .NET [通用类型系统](common-type-system.md)包括大量直接受公共语言运行时支持且专以程序集的元数据编码的内置类型。 在这些内部类型中，下表中所列的类型都符合 CLS。
 
-符合 CLS 的类型 | 说明
+符合 CLS 的类型 | 描述
 ------------------ | -----------
 [Byte](xref:System.Byte) | 8 位无符号整数
 [Int16](xref:System.Int16) | 16 位带符号整数
@@ -331,7 +331,7 @@ End Class
 
 下表中所列的内部类型不符合 CLS。
 
-不符合类型 | 说明 | 符合 CLS 的替代方法
+不符合类型 | 描述 | 符合 CLS 的替代方法
 ------------------ | ----------- | -------------------------
 [SByte](xref:System.SByte) | 8 位带符号整数数据类型 | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | 16 位无符号整数 | [Int32](xref:System.Int32)

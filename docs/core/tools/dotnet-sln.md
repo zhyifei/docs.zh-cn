@@ -3,17 +3,17 @@ title: dotnet sln 命令
 description: 使用 dotnet-sln 命令，可以便捷地在解决方案文件中添加、删除和列出项目。
 ms.date: 02/14/2020
 ms.openlocfilehash: b2455c04a46b2a10b8142d8ddc2d8129f2154b27
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543477"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
 **本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
-## <a name="name"></a>“属性”
+## <a name="name"></a>名称
 
 `dotnet sln` - 在 .NET Core 解决方案文件中列出或修改项目。
 
@@ -23,7 +23,7 @@ ms.locfileid: "77543477"
 dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 使用 `dotnet sln` 命令，可以便捷地在解决方案文件中列出和修改项目。
 
@@ -33,7 +33,7 @@ dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 dotnet new sln
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 - **`SOLUTION_FILE`**
 
@@ -57,7 +57,7 @@ dotnet new sln
 dotnet sln list [-h|--help]
 ```
 
-#### <a name="arguments"></a>自变量
+#### <a name="arguments"></a>参数
 
 - **`SOLUTION_FILE`**
 
@@ -80,7 +80,7 @@ dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PAT
 dotnet sln add [-h|--help]
 ```
 
-#### <a name="arguments"></a>自变量
+#### <a name="arguments"></a>参数
 
 - **`SOLUTION_FILE`**
 
@@ -115,7 +115,7 @@ dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 ```
 
-#### <a name="arguments"></a>自变量
+#### <a name="arguments"></a>参数
 
 - **`SOLUTION_FILE`**
 

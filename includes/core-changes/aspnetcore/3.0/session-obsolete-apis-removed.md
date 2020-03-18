@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 4dcb357570cb6597fde86c9e8f2acb74364cfaa3
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198359"
 ---
 ### <a name="session-state-obsolete-apis-removed"></a>会话状态：已删除过时的 API
@@ -18,7 +18,7 @@ ms.locfileid: "73198359"
 
 此更改强制实施跨 API 的一致性来配置使用 cookie 的功能。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 将已删除的 API 的使用迁移到其更新的替换项。 请看下面 `Startup.ConfigureServices` 中的示例：
 

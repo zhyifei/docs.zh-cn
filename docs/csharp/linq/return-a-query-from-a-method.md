@@ -4,10 +4,10 @@ description: 如何返回查询。
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
 ms.openlocfilehash: 1df533770f76301432b104d6f8398f1687750cce
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73972514"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>如何从方法中返回查询（C# 编程指南）
@@ -20,6 +20,6 @@ ms.locfileid: "73972514"
   
  [!code-csharp[csProgGuideLINQ#80](~/samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [语言集成查询 (LINQ)](index.md)

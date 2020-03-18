@@ -1,15 +1,15 @@
 ---
-title: 缓解：跨应用程序域的对象反序列化
+title: 缓解：跨应用程序域的对象的反序列化
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 ms.openlocfilehash: e2d90a77cab699646bd31eaa162d1bd1744fd51b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457921"
 ---
-# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>缓解：跨应用程序域的对象反序列化
+# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>缓解：跨应用程序域的对象的反序列化
 有时，当一个应用程序使用具有不同应用程序基的两个或多个应用程序域时，如果尝试跨应用程序域在逻辑调用上下文中反序列化对象，则会引发异常。  
   
 ## <a name="diagnosing-the-issue"></a>诊断问题  
@@ -35,7 +35,7 @@ ms.locfileid: "73457921"
   
 6. 由于逻辑调用上下文中的类型不能在默认应用程序域中解析，因此将会引发异常。  
   
-## <a name="mitigation"></a>缓解  
+## <a name="mitigation"></a>缓解操作  
  若要解决此问题，请执行以下操作：  
   
 1. 当引发异常时，查找调用堆栈中对 `get_Evidence` 的调用。 这个异常可以是异常集中的任何一个大子集，包括 <xref:System.IO.FileNotFoundException> 和 <xref:System.Runtime.Serialization.SerializationException>。  
@@ -46,6 +46,6 @@ ms.locfileid: "73457921"
     System.Configuration.ConfigurationManager.GetSection("system.xml/xmlReader");  
     ```
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [应用程序兼容性](application-compatibility.md)

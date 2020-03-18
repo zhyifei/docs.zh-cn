@@ -4,10 +4,10 @@ description: 了解如何使用 ML.NET 来计算用于评估和验证机器学�
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
 ms.openlocfilehash: d6409307cd283ae67d7546c4dc6e19e6089a0766
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73975844"
 ---
 # <a name="calculate-metrics-to-evaluate-machine-learning-model-quality"></a>计算指标以评估机器学习模型质量

@@ -7,10 +7,10 @@ f1_keywords:
 helpviewer_keywords:
 - where (generic type constraint) [C#]
 ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626706"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where（泛型类型约束）（C# 参考）
@@ -32,7 +32,7 @@ ms.locfileid: "77626706"
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-`where` 子句可能包含 `notnull` 约束。 `notnull` 约束将类型参数限制为不可为 null 的类型。 该类型可以是[值类型](../builtin-types/value-types.md)，也可以是不可为 null 的引用类型。 对于在 [`nullable enable` 上下文](../../nullable-references.md#nullable-contexts)中编译的代码，从 C# 8.0 开始可以使用 `notnull` 约束。 与其他约束不同，如果类型参数违反 `notnull` 约束，编译器会生成警告而不是错误。 警告仅在 `nullable enable` 上下文中生成。
+`where` 子句可能包含 `notnull` 约束。 `notnull` 约束将类型参数限制为不可为 null 的类型。 该类型可以是[值类型](../builtin-types/value-types.md)，也可以是不可为 null 的引用类型。 对于在 `notnull`[ 上下文`nullable enable`中编译的代码，从 C# 8.0 开始可以使用 ](../../nullable-references.md#nullable-contexts) 约束。 与其他约束不同，如果类型参数违反 `notnull` 约束，编译器会生成警告而不是错误。 警告仅在 `nullable enable` 上下文中生成。
 
 > [!IMPORTANT]
 > 包含 `notnull` 约束的泛型声明可以在可为 null 的不明显上下文中使用，但编译器不会强制执行约束。
@@ -43,7 +43,7 @@ ms.locfileid: "77626706"
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-`where` 子句也可能包括构造函数约束 `new()`。 该约束使得能够使用 `new` 运算符创建类型参数的实例。 [new() 约束](new-constraint.md)可以让编译器知道：提供的任何类型参数都必须具有可访问的无参数构造函数。 例如：
+`where` 子句也可能包括构造函数约束 `new()`。 该约束使得能够使用 `new` 运算符创建类型参数的实例。 [new() 约束](new-constraint.md)可以让编译器知道：提供的任何类型参数都必须具有可访问的无参数构造函数。 例如:
 
 [!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 
@@ -69,7 +69,7 @@ ms.locfileid: "77626706"
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)

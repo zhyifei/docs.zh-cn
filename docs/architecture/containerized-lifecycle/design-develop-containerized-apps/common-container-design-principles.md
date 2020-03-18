@@ -3,10 +3,10 @@ title: 常见容器设计原则
 description: 了解良好容器设计的基本原则，即容器应只承载一个进程。
 ms.date: 02/15/2019
 ms.openlocfilehash: 69f3ff6c9303f0c4082695d861a8c90031295b6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68672494"
 ---
 # <a name="common-container-design-principles"></a>常见容器设计原则

@@ -5,10 +5,10 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76116026"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>如何将 Windows 窗体桌面应用程序移植到 .NET Core
@@ -17,14 +17,14 @@ ms.locfileid: "76116026"
 
 本文中的各种名称用于标识迁移所用的文件类型。 迁移项目时，你的文件将以不同的名称命名，因此，请自行在心里将它们与下面列出的文件进行匹配：
 
-| 文件 | 描述 |
+| 文件 | 说明 |
 | ---- | ----------- |
 | **MyApps.sln** | 解决方案文件的名称。 |
 | **MyForms.csproj** | 要移植的 .NET Framework Windows 窗体项目的名称。 |
 | **MyFormsCore.csproj** | 创建的新 .NET Core 项目的名称。 |
 | **MyAppCore.exe** | .NET Core Windows 窗体应用程序的可执行文件。 |
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 - 适用于要执行的任何设计器工作的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。
 
@@ -127,7 +127,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 - **RootNamespace**\
 项目使用的默认命名空间。 它应该与 .NET Framework 项目的默认命名空间匹配。
 
-将这三个元素添加到 `MyFormsCore.csproj` 文件中的 `<PropertyGroup>` 节点：
+将这三个元素添加到 `<PropertyGroup>` 文件中的 `MyFormsCore.csproj` 节点：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
@@ -188,7 +188,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework.Fonts
 
 借助上一步的示例，详细介绍正在处理的项目和文件。
 
-| 文件 | 描述 |
+| 文件 | 说明 |
 | ---- | ----------- |
 | **MyApps.sln** | 解决方案文件的名称。 |
 | **MyControls.csproj** | 要移植的 .NET Framework Windows 窗体控件项目的名称。 |

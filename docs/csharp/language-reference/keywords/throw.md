@@ -10,11 +10,11 @@ helpviewer_keywords:
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 ms.openlocfilehash: 04d3138e3390627355b4b2d4e25c6b00248cec1a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713048"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398111"
 ---
 # <a name="throw-c-reference"></a>throw（C# 参考）
 
@@ -28,7 +28,7 @@ ms.locfileid: "75713048"
 throw [e];
 ```
 
-`e` 是一个派生自 <xref:System.Exception?displayProperty=nameWithType> 的类的实例。 下例使用 `throw` 语句在传递给名为 `GetNumber` 的方法的参数与内部数组的有效索引不对应时引发  <xref:System.IndexOutOfRangeException> 。
+`e` 是一个派生自 <xref:System.Exception?displayProperty=nameWithType> 的类的实例。 下例使用 `throw` 语句在传递给名为 <xref:System.IndexOutOfRangeException> 的方法的参数与内部数组的有效索引不对应时引发 `GetNumber`。
 
 [!code-csharp[csrefKeyword#1](~/samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#1)]
 
@@ -43,7 +43,7 @@ throw [e];
 [!code-csharp[csrefKeyword#3](~/samples/snippets/csharp/language-reference/keywords/throw/throw-3.cs#3)]
 
 > [!IMPORTANT]
-> 还可以使用 `catch` 块中的 `throw e` 语法来实例化传递给调用方的新异常。 在这种情况下，将不会保留可从 <xref:System.Exception.StackTrace> 属性获得的原始异常的堆栈跟踪。
+> 还可以使用 `throw e` 块中的 `catch` 语法来实例化传递给调用方的新异常。 在这种情况下，将不会保留可从 <xref:System.Exception.StackTrace> 属性获得的原始异常的堆栈跟踪。
 
 ## <a name="the-throw-expression"></a>`throw` 表达式
 
@@ -53,11 +53,11 @@ throw [e];
 
    [!code-csharp[csrefKeyword#4](~/samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]
 
-- [null 合并运算符](../operators/null-coalescing-operator.md)。 在以下示例中，如果分配给 `Name` 属性的字符串为 `null`，则将 `throw` 表达式与 null 合并运算符结合使用以引发异常。
+- [null 合并运算符](../operators/null-coalescing-operator.md)。 在以下示例中，如果分配给 `throw` 属性的字符串为 `Name`，则将 `null` 表达式与 null 合并运算符结合使用以引发异常。
 
    [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]
 
-- expression-bodied [lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) 或方法。 下例说明了 expression-bodied 方法，由于不支持对 <xref:System.DateTime> 值的转换，该方法引发 <xref:System.InvalidCastException>。
+- expression-bodied [lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) 或方法。 下例说明了 expression-bodied 方法，由于不支持对 <xref:System.InvalidCastException> 值的转换，该方法引发 <xref:System.DateTime>。
 
    [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]
 
@@ -65,10 +65,10 @@ throw [e];
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
 - [try-catch](try-catch.md)
 - [C# 关键字](index.md)
-- [如何：显式抛出异常](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+- [如何：显式引发异常](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

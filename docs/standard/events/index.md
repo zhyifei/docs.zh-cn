@@ -15,10 +15,10 @@ helpviewer_keywords:
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159619"
 ---
 # <a name="handling-and-raising-events"></a>处理和引发事件
@@ -88,14 +88,14 @@ ms.locfileid: "78159619"
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|描述|  
+|标题|说明|  
 |-----------|-----------------|  
-|[如何：抛出和使用事件](how-to-raise-and-consume-events.md)|包含引发和使用事件的示例。|  
+|[如何：引发和使用事件](how-to-raise-and-consume-events.md)|包含引发和使用事件的示例。|  
 |[如何：使用事件属性处理多个事件](how-to-handle-multiple-events-using-event-properties.md)|演示如何使用事件属性处理多个事件。|  
 |[观察程序设计模式](observer-design-pattern.md)|描述允许订阅者向提供方注册和接收通知的设计模式。|  
 |[如何：在 Web 窗体应用程序中使用事件](how-to-consume-events-in-a-web-forms-application.md)|演示如何处理 Web 窗体控件引发的事件。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.EventHandler>
 - <xref:System.EventHandler%601>

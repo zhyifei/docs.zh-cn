@@ -3,10 +3,10 @@ title: 如何计算中间值 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
 ms.openlocfilehash: 3ead3bfb02f7c9192db96996c1f1e01a86a4191a
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141446"
 ---
 # <a name="how-to-calculate-intermediate-values-c"></a>如何计算中间值 (C#)

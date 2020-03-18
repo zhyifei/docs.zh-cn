@@ -3,12 +3,12 @@ title: 使用 NUnit 和 .NET Core 进行 C# 单元测试
 description: 使用 dotnet test 和 NUnit 分步构建一个示例解决方案，在此交互式体验中学习 C# 和 .NET Core 中的单元测试概念。
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 8c099695b48e96ac47e41794082cd8dccaa0457a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 283aa5a28ed213d4290eb3c73a98af56ec074ad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157266"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240878"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>使用 NUnit 和 .NET Core 进行 C# 单元测试
 
@@ -16,7 +16,7 @@ ms.locfileid: "78157266"
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 - [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更高版本。
 - 按需选择的文本编辑器或代码编辑器。
@@ -87,7 +87,7 @@ dotnet new nunit
 
 [dotnet new](../tools/dotnet-new.md) 命令可创建一个将 NUnit 用作测试库的测试项目。 生成的模板在 PrimeService.Tests.csproj  文件中配置测试运行程序：
 
-[!code-xml[Packages](~/samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
+[!code-xml[Packages](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
 
 测试项目需要其他包创建和运行单元测试。 在上一步中，`dotnet new` 已添加 Microsoft 测试 SDK、NUnit 测试框架和 NUnit 测试适配器。 现在，将 `PrimeService` 类库作为另一个依赖项添加到项目中。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
 
@@ -120,35 +120,7 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 编写一个失败测试，使其通过，然后重复此过程。 在 PrimeService.Tests  目录中，将 UnitTest1.cs  文件重命名为 PrimeService_IsPrimeShould.cs  ，并将其整个内容替换为以下代码：
 
-```csharp
-using NUnit.Framework;
-using Prime.Services;
-
-namespace Prime.UnitTests.Services
-{
-    [TestFixture]
-    public class PrimeService_IsPrimeShould
-    {
-        [Test]
-        public void IsPrime_InputIs1_ReturnFalse()
-        {
-            PrimeService primeService = CreatePrimeService();
-            var result = primeService.IsPrime(1);
-
-            Assert.IsFalse(result, "1 should not be prime");
-        }
-
-        /*
-        More tests
-        */
-
-        private PrimeService CreatePrimeService()
-        {
-             return new PrimeService();
-        }
-    }
-}
-```
+[!code-csharp[Sample_FirstTest](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_FirstTest)]
 
 `[TestFixture]` 属性表示包含单元测试的类。 `[Test]` 属性指示方法是测试方法。
 
@@ -171,13 +143,13 @@ public bool IsPrime(int candidate)
 
 ## <a name="adding-more-features"></a>添加更多功能
 
-你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0、-1。 可以添加具有 `[Test]` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 NUnit 属性可用于编写一套类似的测试。  `[TestCase]` 属性用于创建一套可执行相同代码但具有不同输入参数的测试。 可以使用 `[TestCase]` 属性来指定这些输入的值。
+你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0，-1。 可以添加具有 `[Test]` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 NUnit 属性可用于编写一套类似的测试。  `[TestCase]` 属性用于创建一套可执行相同代码但具有不同输入参数的测试。 可以使用 `[TestCase]` 属性来指定这些输入的值。
 
 无需创建新的测试，而是应用此属性来创建数据驱动的单个测试。 数据驱动的测试方法用于测试多个小于 2（即最小质数）的值：
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-运行 `dotnet test`，两项测试均失败。 若要使所有测试通过，可以在 PrimeService.cs 文件中更改 `Main` 方法开头的 `if` 子句  ：
+运行 `dotnet test`，两项测试均失败。 若要使所有测试通过，可以在 PrimeService.cs 文件中更改 `if` 方法开头的 `Main` 子句  ：
 
 ```csharp
 if (candidate < 2)

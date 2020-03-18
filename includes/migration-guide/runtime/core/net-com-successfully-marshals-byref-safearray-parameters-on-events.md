@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 6ff23bbe8c48235770d39cb7d35a1df7de6c5201
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "68440250"
 ---
 ### <a name="net-com-successfully-marshals-byref-safearray-parameters-on-events"></a>.NET COM 成功封送事件上的 ByRef SafeArray 参数

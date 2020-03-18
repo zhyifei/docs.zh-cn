@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b49b2f88b130bb952b77964d5bf38374dc606385
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74567999"
 ---
 ### <a name="net-core-30-prefers-openssl-11x-to-openssl-10x"></a>.NET Core 3.0 倾向于使用 OpenSSL 1.1.x 而不是 OpenSSL 1.0.x
@@ -22,7 +22,7 @@ ms.locfileid: "74567999"
 
 3.0
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 需要小心使用直接与 OpenSSL 操作的库和应用程序，确保它们使用的 OpenSSL 版本与 .NET Core 运行时相同。
 

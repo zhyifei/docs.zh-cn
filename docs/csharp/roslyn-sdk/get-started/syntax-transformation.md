@@ -3,12 +3,12 @@ title: 语法转换 (Roslyn API) 入门
 description: 介绍如何遍历、查询及浏览语法树。
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: bbd56f445a9f06b530a7d094b06f60e6123788da
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 5045dca839daba1070b34720e72cc9c4f7b94828
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306932"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240605"
 ---
 # <a name="get-started-with-syntax-transformation"></a>语法转换入门
 
@@ -36,7 +36,7 @@ ms.locfileid: "67306932"
 
 添加以下 using 指令到 `Program.cs` 文件顶部以导入 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory> 类的工厂方法和方法 <xref:System.Console>，以便以后可以使用它们，而不需要对它们进行限定：
 
-[!code-csharp[import the SyntaxFactory class](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#StaticUsings "import the Syntax Factory class and the System.Console class")]
+[!code-csharp[import the SyntaxFactory class](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#StaticUsings "import the Syntax Factory class and the System.Console class")]
 
 创建 **命名语法节点** 以创建表示 `using System.Collections.Generic;` 语句的树。 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax> 是在 C# 中显示的四种类型名称的基类。 将这四种类型名称组合在一起，以创建任何可通过 C# 语言显示的名称：
 
@@ -47,17 +47,17 @@ ms.locfileid: "67306932"
 
 若要创建 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax> 节点，请使用 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.IdentifierName(System.String)> 方法。 在 `Program.cs` 的 `Main` 方法中添加以下代码：
 
-[!code-csharp[create the system identifier](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateIdentifierName "Create and display the system name identifier")]
+[!code-csharp[create the system identifier](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateIdentifierName "Create and display the system name identifier")]
 
 前面的代码创建 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IdentifierNameSyntax> 对象，并将其分配给变量 `name`。 许多 Roslyn API 返回基类，使其更轻松地处理相关类型。 变量 `name`，即 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax>，可以在生成 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax> 时重用。 在生成示例时，不要使用类型推理。 你将自动执行此项目中的这一步。
 
 你已创建名称。 现在，可以通过构建 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax> 在树中生成更多节点。 新树使用 `name` 作为左侧名称，并使用 `Collections` 命名空间新的 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IdentifierNameSyntax> 作为 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax> 的右侧。 将下列代码添加到 `program.cs`：
 
-[!code-csharp[create the collections identifier](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateQualifiedIdentifierName "Build the System.Collections identifier")]
+[!code-csharp[create the collections identifier](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateQualifiedIdentifierName "Build the System.Collections identifier")]
 
 再次运行代码并查看结果。 你将构建一个表示代码的节点树。 你将继续运行此模式，以便生成命名空间 `System.Collections.Generic` 的 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax>。 将下列代码添加到 `Program.cs`：
 
-[!code-csharp[create the full identifier](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateFullNamespace "Build the System.Collections.Generic identifier")]
+[!code-csharp[create the full identifier](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateFullNamespace "Build the System.Collections.Generic identifier")]
 
 再次运行此程序以查看你已为要添加的代码生成的树。
 
@@ -67,26 +67,26 @@ ms.locfileid: "67306932"
 
 下一步是创建一个表示整个（小型）程序的树，然后修改它。 将以下代码添加到 `Program` 类的开头：
 
-[!code-csharp[create a parse tree](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#DeclareSampleCode "Create a tree that represents a small program")]
+[!code-csharp[create a parse tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#DeclareSampleCode "Create a tree that represents a small program")]
 
 > [!NOTE]
 > 该示例代码使用 `System.Collections` 命名空间而不是 `System.Collections.Generic` 命名空间。
 
 接下来，将以下代码添加到 `Main` 方法的底部来分析文本，并创建树：
 
-[!code-csharp[create a parse tree](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateParseTree "Create a tree that represents a small program")]
+[!code-csharp[create a parse tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateParseTree "Create a tree that represents a small program")]
 
 此示例使用 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.WithName(Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax)?displayProperty=NameWithType> 方法将 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> 节点中的名称替换为在前面代码中构造的名称。
 
 使用 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.WithName(Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax)> 方法创建一个新的 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> 节点，将 `System.Collections` 名称更新为在前面代码中创建的名称。 将以下代码添加到 `Main` 方法底部：
 
-[!code-csharp[create a new subtree](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#BuildNewUsing "Create the subtree with the replaced namespace")]
+[!code-csharp[create a new subtree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#BuildNewUsing "Create the subtree with the replaced namespace")]
 
 运行程序，并仔细查看输出。 `newusing` 尚未置于根树中。 原始树尚未更改。
 
 使用 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> 扩展方法添加以下代码以创建新树。 新树是将现有导入替换为更新后的 `newUsing` 节点的结果。 将此新树分配给现有 `root` 变量：
 
-[!code-csharp[create a new root tree](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#TransformTree "Create the transformed root tree with the replaced namespace")]
+[!code-csharp[create a new root tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#TransformTree "Create the transformed root tree with the replaced namespace")]
 
 再次运行程序。 现在，树正确地导入了 `System.Collections.Generic` 命名空间。
 
@@ -100,15 +100,15 @@ ms.locfileid: "67306932"
 
 使用指令将以下内容添加到 `TypeInferenceRewriter.cs` 文件：
 
-[!code-csharp[add necessary usings](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#AddUsings "Add required usings")]
+[!code-csharp[add necessary usings](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#AddUsings "Add required usings")]
 
 接下来，使 `TypeInferenceRewriter` 类扩展 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> 类：
 
-[!code-csharp[add base class](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BaseClass "Add base class")]
+[!code-csharp[add base class](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BaseClass "Add base class")]
 
 添加以下代码以声明一个私有只读字段，以保存 <xref:Microsoft.CodeAnalysis.SemanticModel> 并在构造函数中将其初始化。 稍后你将需要此字段以确定可以使用类型推理的位置：
 
-[!code-csharp[initialize members](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#Construction "Declare and initialize member variables")]
+[!code-csharp[initialize members](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#Construction "Declare and initialize member variables")]
 
 重写 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> 方法：
 
@@ -140,25 +140,25 @@ Type variable;
 
 将以下代码添加到 `VisitLocalDeclarationStatement` 方法主体以跳过重写这些形式的声明：
 
-[!code-csharp[exclude other declarations](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#Exclusions "Exclude variables declarations not processed by this sample")]
+[!code-csharp[exclude other declarations](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#Exclusions "Exclude variables declarations not processed by this sample")]
 
 该方法表明，通过返回未修改的 `node` 参数没有发生重写。 如果上述两个 `if` 表达式都为 true，则该节点表示一个可能的初始化声明。 添加这些语句以提取声明中指定的类型名称，并使用 <xref:Microsoft.CodeAnalysis.SemanticModel> 字段将其绑定来获取类型符号：
 
-[!code-csharp[extract type name](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ExtractTypeSymbol "Extract the type name specified by the declaration")]
+[!code-csharp[extract type name](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ExtractTypeSymbol "Extract the type name specified by the declaration")]
 
 现在，添加此语句以绑定初始值设定项表达式：
 
-[!code-csharp[bind initializer](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Bind the initializer expressions")]
+[!code-csharp[bind initializer](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Bind the initializer expressions")]
 
 最后，如果初始值设定项表达式的类型与指定类型相匹配，则添加以下 `if` 语句，将现有类型名称替换为 `var` 关键字：
 
-[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
+[!code-csharp[ReplaceNode](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
 
 此条件是必需的，因为声明可能将初始值设定项表达式转换为基类或接口。 如果这是需要的，则分配左侧和右侧的类型不匹配。 在这些情况下删除显式类型将更改程序语义。 `var` 指定为标识符而不是关键字，因为 `var` 是上下文关键字。 前导和尾随琐事（空白）从旧类型名转换为 `var` 关键字以保持垂直空白和缩进。 使用 `ReplaceNode`（而非 `With*`来转换 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> 更为简单，因为类型名称实际上是声明语句的孙级。
 
 你已完成 `TypeInferenceRewriter`。 现在返回到 `Program.cs` 文件来完成该示例。 创建测试 <xref:Microsoft.CodeAnalysis.Compilation> 并从中获取 <xref:Microsoft.CodeAnalysis.SemanticModel>。 使用该 <xref:Microsoft.CodeAnalysis.SemanticModel> 尝试 `TypeInferenceRewriter`。 你将在最后执行此步骤。 在此期间，声明一个表示测试编译的占位符变量：
 
-[!code-csharp[DeclareCompilation](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#DeclareTestCompilation "Declare the test compilation")]
+[!code-csharp[DeclareCompilation](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#DeclareTestCompilation "Declare the test compilation")]
 
 暂停一段时间后，应会看到错误波形曲线，报告不存在 `CreateTestCompilation` 方法。 按 Ctrl+句点  打开灯泡，然后按 Enter 以调用“生成方法存根(Stub)”  命令。 此命令将在 `Program` 类中生成 `CreateTestCompilation` 方法的方法存根(Stub)。 稍后你将返回填写此方法：
 
@@ -166,17 +166,17 @@ Type variable;
 
 编写以下代码以循环访问测试 <xref:Microsoft.CodeAnalysis.Compilation> 中的每个 <xref:Microsoft.CodeAnalysis.SyntaxTree>。 对于每一个，都使用 <xref:Microsoft.CodeAnalysis.SemanticModel> 初始化该树的新 `TypeInferenceRewriter`：
 
-[!code-csharp[IterateTrees](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#IterateTrees "Iterate all the source trees in the test compilation")]
+[!code-csharp[IterateTrees](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#IterateTrees "Iterate all the source trees in the test compilation")]
 
 在你创建的 `foreach` 语句中，添加以下代码以在每个源树上执行转换。 如果进行了任何编辑，这段代码将有条件地写出新的转换树。 如果遇到一个或多个可以使用类型推理进行简化的本地变量声明，则重写工具应该只修改一个树：
 
-[!code-csharp[TransformTrees](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#TransformTrees "Transform and save any trees that are modified by the rewriter")]
+[!code-csharp[TransformTrees](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#TransformTrees "Transform and save any trees that are modified by the rewriter")]
 
 应看到 `File.WriteAllText` 代码下的波形曲线。 选择灯泡，并添加所需的 `using System.IO;` 语句。
 
 即将完成！ 还有一个步骤：创建测试 <xref:Microsoft.CodeAnalysis.Compilation>。 因为你在本快速入门教程期间尚未使用类型推理，所以它将是一个完美的测试用例。 遗憾的是，从 C# 项目文件中创建编译不在本演练范围内。 但幸运的是，如果你已仔细按照说明进行操作，那还是有希望的。 将 `CreateTestCompilation` 方法的内容替换为以下代码。 它将创建一个与本快速入门教程所述的项目相匹配的测试编译：
 
-[!code-csharp[CreateTestCompilation](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#CreateTestCompilation "Create a test compilation using the code written for this quickstart.")]
+[!code-csharp[CreateTestCompilation](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#CreateTestCompilation "Create a test compilation using the code written for this quickstart.")]
 
 运行项目，祈求好运吧。 在 Visual Studio 中，选择“调试”   > “启动调试”  。 应该会收到 Visual Studio 的提醒，指示项目中的文件已更改。 单击“全部同意”  以重载已修改的文件。 检查这些文件以观察效果。 请注意，如果没有所有那些显式和冗余类型的说明符，代码会看起来更加简洁。
 

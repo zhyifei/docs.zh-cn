@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: e69cc5a9634f0b5232562782557645894f94ce2e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4d4bc0c192912b5fa87a8e91bc5ba0e1d4ce3598
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345307"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398207"
 ---
 # <a name="member-access-operators-c-reference"></a>成员访问运算符（C# 参考）
 
@@ -56,17 +56,17 @@ ms.locfileid: "75345307"
 
 - 使用 `.` 访问命名空间内的嵌套命名空间，如以下 [`using` directive](../keywords/using-directive.md) 的示例所示：
 
-  [!code-csharp[nested namespaces](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NestedNamespace)]
+  [!code-csharp[nested namespaces](snippets/MemberAccessOperators.cs#NestedNamespace)]
 
 - 使用 `.` 构成限定名称  以访问命名空间中的类型，如下面的代码所示：
 
-  [!code-csharp[qualified name](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#QualifiedName)]
+  [!code-csharp[qualified name](snippets/MemberAccessOperators.cs#QualifiedName)]
 
   使用 [`using` 指令](../keywords/using-directive.md)来使用可选的限定名称。
 
 - 使用 `.` 访问[类型成员](../../programming-guide/classes-and-structs/index.md#members)（静态和非静态），如下面的代码所示：
 
-  [!code-csharp-interactive[type members](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#TypeMemberAccess)]
+  [!code-csharp-interactive[type members](snippets/MemberAccessOperators.cs#TypeMemberAccess)]
 
 还可以使用 `.` 访问[扩展方法](../../programming-guide/classes-and-structs/extension-methods.md)。
 
@@ -78,7 +78,7 @@ ms.locfileid: "75345307"
 
 下面的示例演示如何访问数组元素：
 
-[!code-csharp-interactive[array access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Arrays)]
+[!code-csharp-interactive[array access](snippets/MemberAccessOperators.cs#Arrays)]
 
 如果数组索引超出数组相应维度的边界，将引发 <xref:System.IndexOutOfRangeException>。
 
@@ -90,7 +90,7 @@ ms.locfileid: "75345307"
 
 下面的示例使用 .NET <xref:System.Collections.Generic.Dictionary%602> 类型来演示索引器访问：
 
-[!code-csharp-interactive[indexer access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Indexers)]
+[!code-csharp-interactive[indexer access](snippets/MemberAccessOperators.cs#Indexers)]
 
 使用索引器，可通过类似于编制数组索引的方式对用户定义类型的实例编制索引。 与必须是整数的数组索引不同，可以将索引器参数声明为任何类型。
 
@@ -126,7 +126,7 @@ A?.B?[C];
 
 以下示例演示了 `?.` 和 `?[]` 运算符的用法：
 
-[!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
+[!code-csharp-interactive[null-conditional operators](snippets/MemberAccessOperators.cs#NullConditional)]
 
 前面的示例还使用 [Null 合并运算符 `??`](null-coalescing-operator.md) 来指定替代表达式，以便在 null 条件运算的结果为 `null` 时用于计算。
 
@@ -156,7 +156,7 @@ if (handler != null)
 
 以下示例演示如何在使用或不使用参数的情况下调用方法，以及调用委托：
 
-[!code-csharp-interactive[invocation with ()](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Invocation)]
+[!code-csharp-interactive[invocation with ()](snippets/MemberAccessOperators.cs#Invocation)]
 
 在调用带 [`new`](new-operator.md) 运算符的[构造函数](../../programming-guide/classes-and-structs/constructors.md)时，还可以使用括号。
 
@@ -170,7 +170,7 @@ if (handler != null)
 
 `^` 运算符在 C# 8.0 和更高版本中提供，指示序列末尾的元素位置。 对于长度为 `length` 的序列，`^n` 指向与序列开头偏移 `length - n` 的元素。 例如，`^1` 指向序列的最后一个元素，`^length` 指向序列的第一个元素。
 
-[!code-csharp[index from end](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
+[!code-csharp[index from end](snippets/MemberAccessOperators.cs#IndexFromEnd)]
 
 如前面的示例所示，表达式 `^e` 属于 <xref:System.Index?displayProperty=nameWithType> 类型。 在表达式 `^e` 中，`e` 的结果必须隐式转换为 `int`。
 
@@ -180,7 +180,7 @@ if (handler != null)
 
 `..` 运算符在 C# 8.0 和更高版本中提供，指定索引范围的开头和末尾作为其操作数。 左侧操作数是范围的包含性  开头。 右侧操作数是范围的包含性  末尾。 任一操作数都可以是序列开头或末尾的索引，如以下示例所示：
 
-[!code-csharp[range examples](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
+[!code-csharp[range examples](snippets/MemberAccessOperators.cs#Ranges)]
 
 如前面的示例所示，表达式 `a..b` 属于 <xref:System.Range?displayProperty=nameWithType> 类型。 在表达式 `a..b` 中，`a` 和 `b` 的结果必须隐式转换为 `int` 或 <xref:System.Index>。
 
@@ -190,7 +190,7 @@ if (handler != null)
 - `..b` 等效于 `0..b`
 - `..` 等效于 `0..^0`
 
-[!code-csharp[ranges with omitted operands](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#RangesOptional)]
+[!code-csharp[ranges with omitted operands](snippets/MemberAccessOperators.cs#RangesOptional)]
 
 有关详细信息，请参阅[索引和范围](../../tutorials/ranges-indexes.md)。
 

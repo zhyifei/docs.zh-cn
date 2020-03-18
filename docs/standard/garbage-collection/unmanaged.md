@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
 ms.openlocfilehash: e05cfb949ee3f206f212ca7015f3ff4c22cd2a12
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73423042"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>清理非托管资源
@@ -43,7 +43,7 @@ ms.locfileid: "73423042"
 
 [使用实现 IDisposable 的对象](../../../docs/standard/garbage-collection/using-objects.md)介绍类型使用者如何确保调用其 <xref:System.IDisposable.Dispose%2A> 实现。 建议使用 C# `using` 语句或 Visual Basic `Using` 语句来执行此操作。
 
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
 
 <xref:System.IDisposable?displayProperty=nameWithType>\
 定义用于释放非托管资源的 <xref:System.IDisposable.Dispose%2A> 方法。

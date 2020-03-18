@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
 ms.openlocfilehash: 25421df2e9306071ce3506aaf7affd1b259d1c32
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602441"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module（C# 编译器选项）
@@ -36,13 +36,13 @@ ms.locfileid: "69602441"
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
 ## <a name="example"></a>示例  
- 通过创建 `in.netmodule` 编译 `in.cs`：  
+ 通过创建 `in.cs` 编译 `in.netmodule`：  
   
 ```console  
 csc -target:module in.cs  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [-target（C# 编译器选项）](./target-compiler-option.md)
 - [C# 编译器选项](./index.md)

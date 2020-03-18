@@ -7,10 +7,10 @@ helpviewer_keywords:
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
 ms.openlocfilehash: dd4ddb3b324bd6d235efb541c90875dbe9ed4c2d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789822"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>文档标记分隔符（C# 编程指南）
@@ -22,7 +22,7 @@ XML 文档注释需要使用分隔符，用来向编译器指示文档注释开�
   单行分隔符。 这是在文档示例中显示的格式，由 Visual C# 项目模板使用。 如果在分隔符后面有一个空格字符，那么此字符不会包括在 XML 输出中。
 
   > [!NOTE]
-  > Visual Studio IDE 具有一种称为智能注释编辑的功能，在代码编辑器中键入 `///` 分隔符后，此功能可自动插入 \<summary> 和 \</summary> 标记，并在此标记中移动游标。 可以在[“选项”对话框](/visualstudio/ide/reference/options-text-editor-csharp-advanced)中打开/关闭此功能。
+  > Visual Studio IDE 具有一种称为智能注释编辑的功能，在代码编辑器中键入 \< 分隔符后，此功能可自动插入 \<summary> 和 `///`/summary> 标记，并在此标记中移动游标。 可以在[“选项”对话框](/visualstudio/ide/reference/options-text-editor-csharp-advanced)中打开/关闭此功能。
   
 - `/** */`
 
@@ -82,7 +82,7 @@ XML 文档注释需要使用分隔符，用来向编译器指示文档注释开�
     ```
     <!-- markdownlint-enable MD010 -->
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [XML 文档注释](./index.md)

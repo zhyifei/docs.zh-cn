@@ -36,10 +36,10 @@ helpviewer_keywords:
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159996"
 ---
 # <a name="the-regular-expression-object-model"></a>正则表达式对象模型
@@ -89,7 +89,7 @@ ms.locfileid: "78159996"
   
  正则表达式模式 `^\d{3}-\d{2}-\d{4}$` 的含义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`^`|匹配输入字符串的开头部分。|  
 |`\d{3}`|匹配三个十进制数字。|  
@@ -107,7 +107,7 @@ ms.locfileid: "78159996"
   
  正则表达式模式 `\b(\w+)\W+(\1)\b` 的含义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`(\w+)`|匹配一个或多个单词字符。 这是第一个捕获组。|  
@@ -129,7 +129,7 @@ ms.locfileid: "78159996"
   
  正则表达式模式 `\b\d+\.\d{2}\b` 的含义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`\d+`|匹配一个或多个十进制数字。|  
@@ -152,7 +152,7 @@ ms.locfileid: "78159996"
   
  正则表达式模式 `\b\d{1,2}\.\s` 的含义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`\d{1,2}`|匹配一个或两个十进制数字。|  
@@ -167,7 +167,7 @@ ms.locfileid: "78159996"
 ### <a name="the-match-collection"></a>Match 集合  
  <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法返回一个 <xref:System.Text.RegularExpressions.MatchCollection> 对象，该对象包含多个 <xref:System.Text.RegularExpressions.Match> 对象，这些对象表示正则表达式引擎在输入字符串中找到的所有匹配项（其顺序为这些匹配项在输入字符串中的显示顺序）。 如果没有匹配项，则此方法将返回一个不包含任何成员的 <xref:System.Text.RegularExpressions.MatchCollection> 对象。 利用 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 属性，你可以按照索引（从零到将 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 属性的值减 1 所得的值）访问集合中的各个成员。 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> 是集合的索引器（在 C# 中）和默认属性（在 Visual Basic 中）。  
   
- 默认情况下，调用 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法会使用延迟计算来填充 <xref:System.Text.RegularExpressions.MatchCollection> 对象。 访问需要完全填充的集合的属性（如 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 属性）可能会降低性能。 因此，建议你使用由 <xref:System.Collections.IEnumerator> 方法返回的 <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> 对象访问该集合。 各种语言都提供了用于包装集合的 <xref:System.Collections.IEnumerator> 接口的构造（如 Visual Basic 中的 `For Each` 和 C# 中的 `foreach`）。  
+ 默认情况下，调用 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法会使用延迟计算来填充 <xref:System.Text.RegularExpressions.MatchCollection> 对象。 访问需要完全填充的集合的属性（如 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 属性）可能会降低性能。 因此，建议你使用由 <xref:System.Collections.IEnumerator> 方法返回的 <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> 对象访问该集合。 各种语言都提供了用于包装集合的 `For Each` 接口的构造（如 Visual Basic 中的 `foreach` 和 C# 中的 <xref:System.Collections.IEnumerator>）。  
   
  下面的示例使用 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType> 方法将在输入字符串中找到的所有匹配项填充到 <xref:System.Text.RegularExpressions.MatchCollection> 对象中。 此示例枚举了该集合，将匹配项复制到字符串数组并将字符位置记录在整数数组中。  
   
@@ -196,7 +196,7 @@ ms.locfileid: "78159996"
   
 - <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回一个 <xref:System.Text.RegularExpressions.GroupCollection> 对象，该对象包含有关与正则表达式模式中的捕获组匹配的子字符串的信息。  
   
-- `Match.Captures` 属性返回一个 <xref:System.Text.RegularExpressions.CaptureCollection> 对象，该对象的使用是有限制的。 不会为其 `Success` 属性为 `false` 的 <xref:System.Text.RegularExpressions.Match> 的对象填充集合。 否则，它将包含一个 <xref:System.Text.RegularExpressions.Capture> 对象，该对象具有的信息与 <xref:System.Text.RegularExpressions.Match> 对象具有的信息相同。  
+- `Match.Captures` 属性返回一个 <xref:System.Text.RegularExpressions.CaptureCollection> 对象，该对象的使用是有限制的。 不会为其 <xref:System.Text.RegularExpressions.Match> 属性为 `Success` 的 `false` 的对象填充集合。 否则，它将包含一个 <xref:System.Text.RegularExpressions.Capture> 对象，该对象具有的信息与 <xref:System.Text.RegularExpressions.Match> 对象具有的信息相同。  
   
  有关这些对象的更多信息，请参阅本主题后面的[组集合](#GroupCollection)和[捕获集合](#CaptureCollection)部分。  
   
@@ -215,7 +215,7 @@ ms.locfileid: "78159996"
   
  正则表达式模式 `\b\d+(,\d{3})*\.\d{2}\b` 的定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`\d+`|匹配一个或多个十进制数字。|  
@@ -246,7 +246,7 @@ ms.locfileid: "78159996"
   
  正则表达式模式 `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` 的定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`(\w+)`|匹配一个或多个单词字符。 这是第一个捕获组。|  
@@ -275,14 +275,14 @@ ms.locfileid: "78159996"
   
  正则表达式模式 `^(?<name>\w+):(?<value>\w+)` 的定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`^`|从输入字符串的开头部分开始匹配。|  
 |`(?<name>\w+)`|匹配一个或多个单词字符。 此捕获组的名称为 `name`。|  
 |`:`|匹配冒号。|  
 |`(?<value>\w+)`|匹配一个或多个单词字符。 此捕获组的名称为 `value`。|  
   
- <xref:System.Text.RegularExpressions.Group> 类的属性提供有关捕获组的信息：`Group.Value` 属性包含捕获子字符串，`Group.Index` 属性在输入文本中指示捕获组的起始位置，`Group.Length` 属性包含捕获文本的长度，`Group.Success` 属性指示子字符串是否与捕获组所定义的模式匹配。  
+ <xref:System.Text.RegularExpressions.Group> 类的属性提供有关捕获的组的信息：`Group.Value` 属性包含捕获的子字符串，`Group.Index` 属性指示输入文本中捕获的组的起始位置，`Group.Length` 属性包含捕获的文本的长度，`Group.Success` 属性指示子字符串是否与捕获组所定义的模式匹配。  
   
  通过对组应用量符（有关详细信息，请参阅[量符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)），可以每捕获组修改一个捕获的关系，具体方式分为以下两种：  
   
@@ -299,7 +299,7 @@ ms.locfileid: "78159996"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
-- 限定符可以匹配由捕获组定义的模式的多个匹配项。 在此情况下，`Value` 对象的 `Length` 和 <xref:System.Text.RegularExpressions.Group> 属性仅包含有关最后捕获的子字符串的信息。 例如，下面的正则表达式匹配以句点结束的单个句子。 此表达式使用两个分组构造：第一个分组构造捕获单个单词和空白字符；第二个分组构造捕获单个单词。 如示例中的输出所示，虽然正则表达式成功捕获整个句子，但第二个捕获组仅捕获了最后一个单词。  
+- 限定符可以匹配由捕获组定义的模式的多个匹配项。 在此情况下，`Value` 对象的 `Length` 和 <xref:System.Text.RegularExpressions.Group> 属性仅包含有关最后捕获的子字符串的信息。 例如，下面的正则表达式匹配以句点结束的单个句子。 此表达式使用两个分组构造：第一个分组构造捕获各个单词以及空白字符；第二个分组构造捕获各个单词。 如示例中的输出所示，虽然正则表达式成功捕获整个句子，但第二个捕获组仅捕获了最后一个单词。  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
@@ -339,7 +339,7 @@ ms.locfileid: "78159996"
   
  该正则表达式的定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\w+`|匹配一个或多个单词字符。|  
 |`(\s\w+)*`|匹配零个或多个以下模式：一个空白字符后跟一个或多个单词字符。 此模式匹配包含多个单词的城市名称。 这是第三个捕获组。|  
@@ -349,7 +349,7 @@ ms.locfileid: "78159996"
 |`;`|匹配分号。|  
 |`((\w+(\s\w+)*),(\d+);)+`|匹配一个或多个以下模式：一个单词后跟任何其他单词，后跟一个逗号、一个或多个数字和一个分号。 这是第一个捕获组。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Text.RegularExpressions>
 - [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)

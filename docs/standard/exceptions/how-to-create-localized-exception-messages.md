@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.date: 09/13/2019
 ms.openlocfilehash: 5a02c71b16e2c8e5ade5128866af7dc46a03ba4a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160178"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>如何使用本地化的异常消息创建用户定义的异常
@@ -165,7 +165,7 @@ Throw New StudentNotFoundException("The student cannot be found.", "John")
     > [!NOTE]
     > 如果项目名称为 `TestProject`，并且资源文件 ExceptionMessages.resx  位于项目的 Resources  文件夹中，则资源文件的完全限定名称为 `TestProject.Resources.ExceptionMessages`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何创建用户定义的异常](how-to-create-user-defined-exceptions.md)
 - [创建桌面应用程序的附属程序集](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 ms.openlocfilehash: c5232aa89064c514e71f3a18bc754159e9c9b15b
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160271"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>使用实现 IDisposable 的对象
@@ -45,7 +45,7 @@ C# 中的 `using` 语句和 Visual Basic 中的 `Using` 语句可以简化创建
 
 ## <a name="tryfinally-block"></a>Try/finally 块
 
-可以选择直接实现 `try/finally` 块，而不是将 `try/finally` 块包装在 `using` 语句中。 这可以是私有编码样式，或者你可能出于下列原因之一需要这样做：  
+可以选择直接实现 `try/finally` 块，而不是将 `using` 块包装在 `try/finally` 语句中。 这可以是私有编码样式，或者你可能出于下列原因之一需要这样做：  
   
 - 包含 `catch` 块可处理 `try` 块中引发的任何异常。 否则，不会处理 `using` 语句引发的任何异常，`using` 块中引发的任何异常也是如此，前提是 `try/catch` 块不存在。  
   
@@ -58,7 +58,7 @@ C# 中的 `using` 语句和 Visual Basic 中的 `Using` 语句可以简化创建
   
 如果选择实现或必须实现 `try/finally` 块，可以遵循此基本模式，因为编程语言不支持 `using` 语句，但允许直接调用 <xref:System.IDisposable.Dispose%2A> 方法。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [清理未托管资源](../../../docs/standard/garbage-collection/unmanaged.md)（清理未托管资源）
 - [using 语句（C# 参考）](../../csharp/language-reference/keywords/using-statement.md)

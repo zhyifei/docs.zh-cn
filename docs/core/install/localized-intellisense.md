@@ -3,10 +3,10 @@ title: 安装本地化的 IntelliSense 文件
 description: 了解如何设置开发计算机，以便在 Visual Studio 中为 .NET Core 项目使用本地化的 IntelliSense 文件。
 ms.date: 01/23/2020
 ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157708"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>如何为 .NET Core 安装本地化的 IntelliSense 文件
@@ -16,7 +16,7 @@ ms.locfileid: "78157708"
 - 如何安装这些文件的本地化版本。
 - 如何修改 Visual Studio 安装以使用其他语言。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 - [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 或更高版本。
 - [Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或更高版本。
@@ -124,6 +124,6 @@ ms.locfileid: "78157708"
 
 之后，当打开面向刚安装的 IntelliSense 文件版本的 .NET Core 项目时，IntelliSense 应会按预期方式工作。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的 IntelliSense](/visualstudio/ide/using-intellisense)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
 ms.openlocfilehash: 048bc70c2b5416d4377c5abcfdaf18a9312068db
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352110"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic 编程
@@ -33,13 +33,13 @@ ms.locfileid: "74352110"
  [访问应用程序 Web 服务](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  所含文档介绍了如何使用 `My.WebServices` 对象访问应用程序引用的 Web 服务。  
   
- [访问应用程序设置](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
+ [Accessing Application Settings](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  所含文档介绍了如何使用 `My.Settings` 对象访问应用程序的设置。  
   
  [处理驱动器、目录和文件](drives-directories-files/index.md)  
  所含文档介绍了如何使用 `My.Computer.FileSystem` 对象访问文件系统。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Basic 语言功能](../../../visual-basic/programming-guide/language-features/index.md)
 - [编程概念](../../../visual-basic/programming-guide/concepts/index.md)

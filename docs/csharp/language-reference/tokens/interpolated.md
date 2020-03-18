@@ -11,10 +11,10 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.openlocfilehash: 97bc606569b83bd14cd3b32495deb8e529747e9c
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76980114"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 字符串内插（C# 参考）
@@ -37,7 +37,7 @@ ms.locfileid: "76980114"
 
 括号中的元素是可选的。 下表说明了每个元素：
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |`interpolationExpression`|生成需要设置格式的结果的表达式。 `null` 的字符串表示形式为 <xref:System.String.Empty?displayProperty=nameWithType>。|
 |`alignment`|常数表达式，它的值定义表达式结果的字符串表示形式中的最小字符数。 如果值为正，则字符串表示形式为右对齐；如果值为负，则为左对齐。 有关详细信息，请参阅[对齐组件](../../../standard/base-types/composite-formatting.md#alignment-component)。|
@@ -74,7 +74,7 @@ ms.locfileid: "76980114"
       - <xref:System.FormattableString.Invariant%2A> 方法，生成 <xref:System.Globalization.CultureInfo.InvariantCulture> 的结果字符串。
       - <xref:System.FormattableString.ToString(System.IFormatProvider)> 方法，生成特定区域性的结果字符串。
 
-    你还可使用 <xref:System.FormattableString.ToString(System.IFormatProvider)> 方法，以提供支持自定义格式设置的 <xref:System.IFormatProvider> 接口的用户定义实现。 有关详细信息，请参阅[在 .NET 中设置类型格式](../../../standard/base-types/formatting-types.md)一文中的[使用 ICustomFormatter 进行自定义格式设置](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter)部分。
+    你还可使用 <xref:System.FormattableString.ToString(System.IFormatProvider)> 方法，以提供支持自定义格式设置的 <xref:System.IFormatProvider> 接口的用户定义实现。 有关详细信息，请参阅[在 .NET 中设置类型格式](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter)一文中的[使用 ICustomFormatter 进行自定义格式设置](../../../standard/base-types/formatting-types.md)部分。
 
 1. 将内插字符串转换为 <xref:System.IFormattable> 实例，使用此实例也可通过单个 <xref:System.IFormattable> 实例创建多个包含区域性特定内容的结果字符串。
 
@@ -94,9 +94,9 @@ ms.locfileid: "76980114"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[内插字符串](~/_csharplang/spec/expressions.md#interpolated-strings)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#interpolated-strings)的[内插字符串](~/_csharplang/spec/introduction.md)部分。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 特殊字符](index.md)

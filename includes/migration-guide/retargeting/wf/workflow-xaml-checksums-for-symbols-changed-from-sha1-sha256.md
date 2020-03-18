@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 9c54572b8dcedaa103db8503cfc1155b4698c3ed
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: f814703e187726d3988787fac52e5049988fd4d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67803437"
 ---
 ### <a name="workflow-xaml-checksums-for-symbols-changed-from-sha1-to-sha256"></a>符号的工作流 XAML 校验和从 SHA1 更改为 SHA256
@@ -15,4 +15,3 @@ ms.locfileid: "67803437"
 |范围|次要|
 |Version|4.8|
 |类型|重定目标|
-

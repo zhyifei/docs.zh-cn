@@ -8,10 +8,10 @@ helpviewer_keywords:
 - writing to files [Visual Basic], in My Documents
 ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
 ms.openlocfilehash: bc62f2bc63a2ea185b8ea4c8d271dd28d347d6f0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334526"
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>如何：在 Visual Basic 中将文本写入“我的文档”目录中的文件
@@ -48,7 +48,7 @@ ms.locfileid: "74334526"
   
  此示例创建一个新文件。 如果某个应用程序需要创建文件，则该应用程序需要文件夹的“创建”权限。 可使用访问控制列表设置权限。 如果文件已存在，则该应用程序只需要“写入”权限（这是较弱的权限）。 如有可能，在部署过程中创建文件，并且仅授予针对单个文件的“读取”权限（而不是针对文件夹授予“创建”权限）会更加安全。 此外，较安全的做法是将数据写入用户文件夹，而不是根文件夹或“Program Files”  文件夹。 有关详细信息，请参阅 [ACL 技术概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100))。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.IO.Path.Combine%2A?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Computer>

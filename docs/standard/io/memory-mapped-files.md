@@ -10,10 +10,10 @@ helpviewer_keywords:
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 ms.openlocfilehash: 004da94bc7345bdc294562f0e1bedf6f1735adec
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159710"
 ---
 # <a name="memory-mapped-files"></a>内存映射文件
@@ -57,9 +57,9 @@ ms.locfileid: "78159710"
 |获取内存映射文件的顺序访问视图的 <xref:System.IO.UnmanagedMemoryStream> 对象。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream%2A?displayProperty=nameWithType> 方法。|  
 |获取内存映射文件的随机访问视图的 <xref:System.IO.UnmanagedMemoryAccessor> 对象。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A?displayProperty=nameWithType> 方法。|  
 |获取要与非托管代码结合使用的 <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> 对象。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType> 属性。<br /><br /> - 或 -<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType> 属性。<br /><br /> - 或 -<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType> 属性。|  
-|将内存分配一直延迟到视图创建完成（仅限非持久化文件）。<br /><br /> （若要确定当前系统页面大小，请使用 <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType> 属性。）|值为 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType> 的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> 方法。<br /><br /> - 或 -<br /><br /> 将 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> 枚举用作参数的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> 方法。|  
+|将内存分配一直延迟到视图创建完成（仅限非持久化文件）。<br /><br /> （若要确定当前系统页面大小，请使用 <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType> 属性。）|值为 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> 的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType> 方法。<br /><br /> - 或 -<br /><br /> 将 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> 枚举用作参数的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> 方法。|  
   
-### <a name="security"></a>安全性  
+### <a name="security"></a>安全  
  可以在创建内存映射文件时应用访问权限，具体操作是运行以下需要将 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> 枚举用作参数的方法：  
   
 - <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
@@ -68,7 +68,7 @@ ms.locfileid: "78159710"
   
 - <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
   
- 若要指定打开现有内存映射文件所需的访问权限，可以运行需要将 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights> 用作参数的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A> 方法。  
+ 若要指定打开现有内存映射文件所需的访问权限，可以运行需要将 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A> 用作参数的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights> 方法。  
   
  另外，还可以添加包含预定义访问规则的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileSecurity> 对象。  
   
@@ -145,6 +145,6 @@ Process C says: True
  [!code-csharp[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/cs/program.cs#1)]
  [!code-vb[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/vb/program.vb#1)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [文件和流 I/O](../../../docs/standard/io/index.md)

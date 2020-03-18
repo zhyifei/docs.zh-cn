@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 9e98d3bca645cf82bf4fe99160dd096b0e274ef7
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 566a3e0455b30e901b09be88b4256ffe67bdc2b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802518"
 ---
 ### <a name="workflow-sql-persistence-adds-primary-key-clusters-and-disallows-null-values-in-some-columns"></a>工作流 SQL 持久性添加主键群集并在某些列中禁止 null 值
@@ -15,4 +15,3 @@ ms.locfileid: "67802518"
 |范围|边缘|
 |Version|4.7|
 |类型|运行时|
-

@@ -5,15 +5,15 @@ ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
 ms.openlocfilehash: 09ce36e7a61f576dc4449976ce676701dc57c9cd
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76921125"
 ---
 # <a name="console-app"></a>控制台应用
 
-此教程将介绍 .NET Core 和 C# 语言的许多功能。 你将了解：
+此教程将介绍 .NET Core 和 C# 语言的许多功能。 学习内容：
 
 - .NET Core CLI 的基础知识
 - C# 控制台应用程序的结构
@@ -25,7 +25,7 @@ ms.locfileid: "76921125"
 
 此教程将介绍许多功能。 我们将逐个生成这些功能。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 - 将计算机设置为运行 .NET Core。 有关安装说明，请访问 [.NET Core 下载](https://dotnet.microsoft.com/download)页。 可以在 Windows、Linux、macOS 或 Docker 容器中运行此应用程序。
 
@@ -55,7 +55,7 @@ namespace TeleprompterConsole
 
 ## <a name="reading-and-echoing-the-file"></a>读取和回显文件
 
-要添加的第一项功能是读取文本文件，然后在控制台中显示全部文本。 首先，让我们来添加文本文件。 将此[示例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter)的 GitHub 存储库中的 [sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) 文件复制到项目目录中。 这将用作应用程序脚本。 如果需要有关如何下载本主题示例应用的信息，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)主题中的说明。
+要添加的第一项功能是读取文本文件，然后在控制台中显示全部文本。 首先，让我们来添加文本文件。 将此[示例](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt)的 GitHub 存储库中的 [sampleQuotes.txt](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) 文件复制到项目目录中。 这将用作应用程序脚本。 如果需要有关如何下载本主题示例应用的信息，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)主题中的说明。
 
 接下来，在 `Program` 类中添加以下方法（即 `Main` 方法的下方）：
 
@@ -115,7 +115,7 @@ foreach (var word in words)
 yield return Environment.NewLine;
 ```
 
-接下来，需要修改对文件行的使用方式，并在写入每个字词后添加延迟。 用以下代码块替换 `Main` 方法中的 `Console.WriteLine(line)` 的语句：
+接下来，需要修改对文件行的使用方式，并在写入每个字词后添加延迟。 用以下代码块替换 `Console.WriteLine(line)` 方法中的 `Main` 的语句：
 
 ```csharp
 Console.Write(line);
@@ -135,7 +135,7 @@ if (!string.IsNullOrWhiteSpace(line))
 using System.Threading.Tasks;
 ```
 
-运行此示例并检查输出。 现在，每打印输出一个字词后，就会有 200 毫秒的延迟。 不过，显示的输出反映出一些问题，因为源文本文件有好几行都超过 80 个字符，且没有换行符。 很难滚动读取这些文本。 此问题很容易解决。 只需跟踪每行长度，然后在行长度达到特定阈值时生成新的一行即可。 在 `ReadFrom` 方法中声明 `words` 后声明一个局部变量，用于保存行长度：
+运行此示例并检查输出。 现在，每打印输出一个字词后，就会有 200 毫秒的延迟。 不过，显示的输出反映出一些问题，因为源文本文件有好几行都超过 80 个字符，且没有换行符。 很难滚动读取这些文本。 此问题很容易解决。 只需跟踪每行长度，然后在行长度达到特定阈值时生成新的一行即可。 在 `words` 方法中声明 `ReadFrom` 后声明一个局部变量，用于保存行长度：
 
 ```csharp
 var lineLength = 0;
@@ -158,7 +158,7 @@ if (lineLength > 70)
 
 最后一步将是添加代码，以便在一个任务中异步编写输出，同时运行另一任务来读取用户输入（如果用户想要加快或减慢文本显示速度，或完全停止文本显示的话）。 此过程分为几步操作，最后将完成所需的全部更新。 第一步是创建异步 <xref:System.Threading.Tasks.Task> 返回方法，用于表示已创建的用于读取和显示文件的代码。
 
-将以下方法（截取自 `Main` 方法主体）添加到 `Program` 类中：
+将以下方法（截取自 `Program` 方法主体）添加到 `Main` 类中：
 
 ```csharp
 private static async Task ShowTeleprompter()
@@ -175,7 +175,7 @@ private static async Task ShowTeleprompter()
 }
 ```
 
-你会注意到两处更改。 首先，此版本在方法主体中使用 `await` 关键字，而不是调用 <xref:System.Threading.Tasks.Task.Wait> 同步等待任务完成。 为此，需要将 `async` 修饰符添加到方法签名中。 此方法返回 `Task`。 请注意，没有用于返回 `Task` 对象的返回语句。 相反，`Task` 对象由编译器在你使用 `await` 运算符时生成的代码进行创建。 可以想象，此方法在到达 `await` 时返回。 返回的 `Task` 指示工作未完成。 在等待的任务完成时，此方法继续执行。 执行完后，返回的 `Task` 会指示已完成。
+你会注意到两处更改。 首先，此版本在方法主体中使用 <xref:System.Threading.Tasks.Task.Wait> 关键字，而不是调用 `await` 同步等待任务完成。 为此，需要将 `async` 修饰符添加到方法签名中。 此方法返回 `Task`。 请注意，没有用于返回 `Task` 对象的返回语句。 相反，`Task` 对象由编译器在你使用 `await` 运算符时生成的代码进行创建。 可以想象，此方法在到达 `await` 时返回。 返回的 `Task` 指示工作未完成。 在等待的任务完成时，此方法继续执行。 执行完后，返回的 `Task` 会指示已完成。
 调用代码可以通过监视返回的 `Task` 来确定完成时间。
 
 可以在 `Main` 方法中调用以下新方法：

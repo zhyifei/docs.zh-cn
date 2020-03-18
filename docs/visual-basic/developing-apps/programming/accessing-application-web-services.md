@@ -7,10 +7,10 @@ helpviewer_keywords:
 - applications [Visual Basic], Web services
 ms.assetid: 8ad5405b-e771-42b1-82d3-ce97af2cea9e
 ms.openlocfilehash: ad616bd46f92261ec5ad6ae81d0db48138631ed1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349230"
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>访问应用程序 Web 服务 (Visual Basic)
@@ -21,11 +21,11 @@ ms.locfileid: "74349230"
 
 下表列出了访问应用程序所引用的 Web 服务的可能方法。
 
-|功能|查看|
+|到|请参阅|
 |---|---|
 |调用 Web 服务|[My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)|
-|以异步方式调用 Web 服务，并在事件完成时处理该事件|[如何：以异步方式调用 Web 服务](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
+|以异步方式调用 Web 服务，并在事件完成时处理该事件|[如何：异步调用 Web 服务](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)

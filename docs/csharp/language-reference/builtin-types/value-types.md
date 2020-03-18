@@ -8,24 +8,24 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 76f4a3ed929e3ac8e3e6cc74158e75af7a6c8cf2
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 406e5b8bbe0802146a65bb4b9a053e753a7827ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625942"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398267"
 ---
 # <a name="value-types-c-reference"></a>值类型（C# 参考）
 
 值类型  和[引用类型](../keywords/reference-types.md)是 C# 类型的两个主要类别。 值类型的变量包含类型的实例。 它不同于引用类型的变量，后者包含对类型实例的引用。 默认情况下，在[分配](../operators/assignment-operator.md)中，通过将实参传递给方法并返回方法结果来复制变量值。 对于值类型变量，会复制相应的类型实例。 以下示例演示了该行为：
 
-[!code-csharp[copy of values](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
+[!code-csharp[copy of values](snippets/ValueTypes.cs#ValueTypeCopied)]
 
 如前面的示例所示，对值类型变量的操作只影响存储在变量中的值类型实例。
 
 如果值类型包含引用类型的数据成员，则在复制值类型实例时，只会复制对引用类型实例的引用。 副本和原始值类型实例都具有对同一引用类型实例的访问权限。 以下示例演示了该行为：
 
-[!code-csharp[shallow copy](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ShallowCopy)]
+[!code-csharp[shallow copy](snippets/ValueTypes.cs#ShallowCopy)]
 
 > [!NOTE]
 > 若要使代码更不易出错、更可靠，请定义并使用不可变的值类型。 本文仅为演示目的使用可变值类型。

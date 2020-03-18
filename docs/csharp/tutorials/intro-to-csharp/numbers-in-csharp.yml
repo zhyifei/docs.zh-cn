@@ -12,10 +12,10 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.openlocfilehash: 48268c6e839ae4f72aae0e872c837b153325b68b
-  ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 02/20/2020
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "77504008"
 items:
 - durationInMinutes: 1
@@ -192,7 +192,7 @@ items:
   content: >
     在上一个示例中，整数除法截断了结果。
 
-    可以使用余数运算符（即 `%` 字符）计算余数：
+    可以使用余数运算符（即 ** 字符）计算余数**`%`：
 
 
     ```csharp
@@ -415,7 +415,7 @@ items:
 
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - content: >-
-    你已完成“C# 中的数字”交互式教程。 可选择下方的“分支和循环”链接开始下一个交互式教程，或者可访问 [.NET 站点](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 请通过“后续步骤”部分返回到这些教程。
+    你已完成“C# 中的数字”交互式教程。 可选择下方的“分支和循环”链接开始下一个交互式教程，或者可访问 **.NET 站点**下载 .NET Core SDK，在计算机上创建项目，并继续编码[](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)。 请通过“后续步骤”部分返回到这些教程。
 
 
     可以参阅下面的主题，详细了解 C# 中的数字：

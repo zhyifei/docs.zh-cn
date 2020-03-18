@@ -3,10 +3,10 @@ title: 纯功能转换简介 (C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
 ms.openlocfilehash: 34e2fdfae7c0243ca6f59354c453396648c3fa85
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69592103"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>纯功能转换简介 (C#)
@@ -18,7 +18,7 @@ ms.locfileid: "69592103"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|描述|  
 |-----------|-----------------|  
 |[概念和术语（功能转换）(C#)](./concepts-and-terminology-functional-transformation.md)|介绍纯函数转换的概念和术语。|  
 |[函数编程与命令式编程 (C#)](./functional-programming-vs-imperative-programming.md)|将函数编程与更传统的命令性（过程）编程进行对比。|  

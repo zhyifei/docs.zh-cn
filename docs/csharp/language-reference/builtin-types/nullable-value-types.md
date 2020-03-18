@@ -4,12 +4,12 @@ description: 了解 C# 中可以为 null 的值类型及其使用方法
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: bd90a0b1b77349efe581eb8aae44c58802ba756d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: a84b3d60269491846b783e5046a84a1d14e258a1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093183"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398273"
 ---
 # <a name="nullable-value-types-c-reference"></a>可为空的值类型（C# 参考）
 
@@ -24,9 +24,9 @@ ms.locfileid: "77093183"
 
 ## <a name="declaration-and-assignment"></a>声明和赋值
 
-由于值类型可隐式转换为相应的可为空的值类型，因此可以像向其基础值类型赋值一样，向可为空值类型的变量赋值。 还可分配 `null` 值。 例如：
+由于值类型可隐式转换为相应的可为空的值类型，因此可以像向其基础值类型赋值一样，向可为空值类型的变量赋值。 还可分配 `null` 值。 例如:
 
-[!code-csharp[declare and assign](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Declaration)]
+[!code-csharp[declare and assign](snippets/NullableValueTypes.cs#Declaration)]
 
 可为空值类型的默认值表示 `null`，也就是说，它是其 <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> 属性返回 `false` 的实例。
 
@@ -34,33 +34,33 @@ ms.locfileid: "77093183"
 
 从 C# 7.0 开始，可以将 [`is` 运算符与类型模式 ](../operators/type-testing-and-cast.md#type-testing-with-pattern-matching) 结合使用，既检查 `null` 的可为空值类型的实例，又检索基础类型的值：
 
-[!code-csharp-interactive[use pattern matching](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#PatternMatching)]
+[!code-csharp-interactive[use pattern matching](snippets/NullableValueTypes.cs#PatternMatching)]
 
 始终可以使用以下只读属性来检查和获取可为空值类型变量的值：
 
 - <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> 指示可为空值类型的实例是否有基础类型的值。
 
-- 如果 <xref:System.Nullable%601.HasValue%2A> 为 `true`，则 <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> 获取基础类型的值。 如果 <xref:System.Nullable%601.HasValue%2A> 为 `false`，则 <xref:System.Nullable%601.Value%2A> 属性将引发 <xref:System.InvalidOperationException>。
+- 如果 <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> 为 <xref:System.Nullable%601.HasValue%2A>，则 `true` 获取基础类型的值。 如果 <xref:System.Nullable%601.HasValue%2A> 为 `false`，则 <xref:System.Nullable%601.Value%2A> 属性将引发 <xref:System.InvalidOperationException>。
 
 以下示例中的使用 `HasValue` 属性在显示值之前测试变量是否包含该值：
 
-[!code-csharp-interactive[use HasValue](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#HasValue)]
+[!code-csharp-interactive[use HasValue](snippets/NullableValueTypes.cs#HasValue)]
 
 还可将可为空的值类型的变量与 `null` 进行比较，而不是使用 `HasValue` 属性，如以下示例所示：
 
-[!code-csharp-interactive[use comparison with null](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#CompareWithNull)]
+[!code-csharp-interactive[use comparison with null](snippets/NullableValueTypes.cs#CompareWithNull)]
 
 ## <a name="conversion-from-a-nullable-value-type-to-an-underlying-type"></a>从可为空的值类型转换为基础类型
 
 如果要将可为空值类型的值分配给不可以为 null 的值类型变量，则可能需要指定要分配的替代 `null` 的值。 使用 [Null 合并操作符`??`](../operators/null-coalescing-operator.md)执行此操作（也可将 <xref:System.Nullable%601.GetValueOrDefault(%600)?displayProperty=nameWithType> 方法用于相同的目的）：
 
-[!code-csharp-interactive[?? operator](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
+[!code-csharp-interactive[?? operator](snippets/NullableValueTypes.cs#NullCoalescing)]
 
 如果要使用基础值类型的[默认值](default-values.md)来替代 `null`，请使用 <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> 方法。
 
 还可以将可为空的值类型显式强制转换为不可为 null 的类型，如以下示例所示：
 
-[!code-csharp[explicit cast](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Cast)]
+[!code-csharp[explicit cast](snippets/NullableValueTypes.cs#Cast)]
 
 在运行时，如果可为空的值类型的值为 `null`，则显式强制转换将抛出 <xref:System.InvalidOperationException>。
 
@@ -68,19 +68,19 @@ ms.locfileid: "77093183"
 
 ## <a name="lifted-operators"></a>提升的运算符
 
-预定义的一元运算符和二元[运算符](../operators/index.md)或值类型 `T` 支持的任何重载运算符也受相应的可为空值类型 `T?` 支持。 如果一个或全部两个操作数为 `null`  ，则这些运算符（也称为提升的运算符）将生成 `null`；否则，运算符使用其操作数所包含的值来计算结果。 例如：
+预定义的一元运算符和二元[运算符](../operators/index.md)或值类型 `T` 支持的任何重载运算符也受相应的可为空值类型 `T?` 支持。 如果一个或全部两个操作数为  `null`，则这些运算符（也称为提升的运算符）将生成 `null`；否则，运算符使用其操作数所包含的值来计算结果。 例如:
 
-[!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
+[!code-csharp[lifted operators](snippets/NullableValueTypes.cs#LiftedOperator)]
 
 > [!NOTE]
-> 对于 `bool?` 类型，预定义的 `&` 和 `|` 运算符不遵循此部分中描述的规则：即使其中一个操作数为 `null`，运算符计算结果也可以不为 NULL。 有关详细信息，请参阅[布尔逻辑运算符](../operators/boolean-logical-operators.md)一文的[可以为 null 的布尔逻辑运算符](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)部分。
+> 对于 `bool?` 类型，预定义的 `&` 和 `|` 运算符不遵循此部分中描述的规则：即使其中一个操作数为 `null`，运算符计算结果也可以不为 NULL。 有关详细信息，请参阅[布尔逻辑运算符](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)一文的[可以为 null 的布尔逻辑运算符](../operators/boolean-logical-operators.md)部分。
 
 对于[比较运算符](../operators/comparison-operators.md) `<`、`>`、`<=` 和 `>=`，如果一个或全部两个操作数都为 `null`，则结果为 `false`；否则，将比较操作数的包含值。 请勿作出如下假定：由于某个特定的比较（例如 `<=`）返回 `false`，则相反的比较 (`>`) 返回 `true`。 以下示例显示 10
 
 - 既不大于等于 `null`，
 - 也不小于 `null`
 
-[!code-csharp-interactive[relational and equality operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
+[!code-csharp-interactive[relational and equality operators](snippets/NullableValueTypes.cs#ComparisonOperators)]
 
 对于[相等运算符](../operators/equality-operators.md#equality-operator-) `==`，如果两个操作数都为 `null`，则结果为 `true`；如果只有一个操作数为 `null`，则结果为 `false`；否则，将比较操作数的包含值。
 
@@ -97,27 +97,27 @@ ms.locfileid: "77093183"
 
 可将值类型 `T` 的已装箱值取消装箱到相应的可为空值类型 `T?`，如以下示例所示：
 
-[!code-csharp-interactive[boxing and unboxing](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Boxing)]
+[!code-csharp-interactive[boxing and unboxing](snippets/NullableValueTypes.cs#Boxing)]
 
 ## <a name="how-to-identify-a-nullable-value-type"></a>如何确定可为空的值类型
 
-下面的示例演示了如何确定 <xref:System.Type?displayProperty=nameWithType> 实例是否表示已构造的可为空值类型，即，具有指定类型参数 `T` 的 <xref:System.Nullable%601?displayProperty=nameWithType> 类型：
+下面的示例演示了如何确定 <xref:System.Type?displayProperty=nameWithType> 实例是否表示已构造的可为空值类型，即，具有指定类型参数 <xref:System.Nullable%601?displayProperty=nameWithType> 的 `T` 类型：
 
-[!code-csharp-interactive[whether Type is nullable](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsTypeNullable)]
+[!code-csharp-interactive[whether Type is nullable](snippets/NullableValueTypes.cs#IsTypeNullable)]
 
 如示例所示，使用 [typeof](../operators/type-testing-and-cast.md#typeof-operator) 运算符来创建 <xref:System.Type?displayProperty=nameWithType> 实例。
 
 如果要确定实例是否是可为空的值类型，请不要使用 <xref:System.Object.GetType%2A?displayProperty=nameWithType> 方法获取要通过前面的代码测试的 <xref:System.Type> 实例。 如果对值类型可为空的实例调用 <xref:System.Object.GetType%2A?displayProperty=nameWithType> 方法，该实例将[装箱](#boxing-and-unboxing)到 <xref:System.Object>。 由于对可为空的值类型的非 NULL 实例的装箱等同于对基础类型的值的装箱，因此 <xref:System.Object.GetType%2A> 会返回表示可为空的值类型的基础类型的 <xref:System.Type> 实例：
 
-[!code-csharp-interactive[GetType example](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#GetType)]
+[!code-csharp-interactive[GetType example](snippets/NullableValueTypes.cs#GetType)]
 
 另外，请勿使用 [is](../operators/type-testing-and-cast.md#is-operator) 运算符来确定实例是否是可为空的值类型。 如以下示例所示，无法使用 `is` 运算符区分可为空值类型实例的类型与其基础类型实例：
 
-[!code-csharp-interactive[is operator example](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsOperator)]
+[!code-csharp-interactive[is operator example](snippets/NullableValueTypes.cs#IsOperator)]
 
 可使用以下示例中提供的代码来确定实例是否是可为空的值类型：
 
-[!code-csharp-interactive[whether an instance is of a nullable type](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsInstanceNullable)]
+[!code-csharp-interactive[whether an instance is of a nullable type](snippets/NullableValueTypes.cs#IsInstanceNullable)]
 
 > [!NOTE]
 > 此部分中所述的方法不适用于[可为空的引用类型](../../nullable-references.md)的情况。
@@ -132,7 +132,7 @@ ms.locfileid: "77093183"
 - [显式可为空转换](~/_csharplang/spec/conversions.md#explicit-nullable-conversions)
 - [提升的转换运算符](~/_csharplang/spec/conversions.md#lifted-conversion-operators)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [“提升”的准确含义是什么？](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean)

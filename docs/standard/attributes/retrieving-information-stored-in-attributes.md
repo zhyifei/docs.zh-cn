@@ -12,17 +12,17 @@ helpviewer_keywords:
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 ms.openlocfilehash: 4f0f3555ae1ab7e662d5f88ac65739a7c791a964
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78158072"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>检索存储在特性中的信息
 检索自定义属性的过程非常简单。 首先，声明要检索的属性实例。 然后，使用 <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 方法，用要检索的属性的值初始化新属性。 在初始化新属性后，只需使用它的属性即可获取值。  
   
 > [!IMPORTANT]
-> 本主题介绍了如何为执行上下文中加载的代码检索属性。 若要为仅反射上下文中加载的代码检索属性，必须使用 <xref:System.Reflection.CustomAttributeData> 类，如以下所述：[如何：将程序集加载到仅反射上下文中](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
+> 本主题介绍了如何为执行上下文中加载的代码检索属性。 若要为仅反射上下文中加载的代码检索属性，必须使用 <xref:System.Reflection.CustomAttributeData> 类，如[如何：将程序集加载到仅反射上下文](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)中所述。  
   
  此部分介绍了如何通过以下方式检索属性：  
   
@@ -58,7 +58,7 @@ The attribute was not found.
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>检索应用于同一范围的多个属性实例  
- 在上一示例中，要检查的类和要查找的特定属性都传递给 <xref:System.Attribute.GetCustomAttribute%2A>。 此代码非常适用于只有一个属性实例在类一级应用的情况。 不过，如果在相同的类一级应用多个属性实例，GetCustomAttribute  方法不会检索所有信息。 如果同一属性的多个实例应用于相同范围，可以使用 <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> 将所有属性实例添加到数组中。 例如，如果在相同的类一级应用两个 `DeveloperAttribute` 实例，可以将 `GetAttribute` 方法修改为显示在这两个属性中找到的信息。 请注意，若要在同一级别应用多个属性，必须在 <xref:System.AttributeUsageAttribute> 中定义属性，并将 AllowMultiple  属性设为 true  。  
+ 在上一示例中，要检查的类和要查找的特定属性都传递给 <xref:System.Attribute.GetCustomAttribute%2A>。 此代码非常适用于只有一个属性实例在类一级应用的情况。 不过，如果在相同的类一级应用多个属性实例，GetCustomAttribute  方法不会检索所有信息。 如果同一属性的多个实例应用于相同范围，可以使用 <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> 将所有属性实例添加到数组中。 例如，如果在相同的类一级应用两个 `DeveloperAttribute` 实例，可以将 `GetAttribute` 方法修改为显示在这两个属性中找到的信息。 请注意，若要在同一级别应用多个属性，必须在  **中定义属性，并将 AllowMultiple** **属性设为 true**<xref:System.AttributeUsageAttribute>。  
   
  下面的代码示例展示了如何使用 GetCustomAttributes  方法来创建数组，以引用任何给定类中的所有 `DeveloperAttribute` 实例。 然后，所有属性的值都显示在控制台中。  
   
@@ -82,7 +82,7 @@ The attribute was not found.
   
  可以使用 <xref:System.Type> 类的成员，在传递的类中获取各个方法和成员。 此示例先查询 Type  对象，以获取类一级的属性信息。 接下来，它使用 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 将所有方法实例都放入 <xref:System.Reflection.MemberInfo?displayProperty=nameWithType> 对象数组，以检索方法一级的属性信息。 还可以使用 <xref:System.Type.GetProperties%2A?displayProperty=nameWithType> 方法检查属性一级的属性，或使用 <xref:System.Type.GetConstructors%2A?displayProperty=nameWithType>方法检查构造函数一级的属性。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>

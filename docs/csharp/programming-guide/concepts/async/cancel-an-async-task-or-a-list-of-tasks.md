@@ -3,10 +3,10 @@ title: 取消一个异步任务或一组任务 (C#)
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
 ms.openlocfilehash: 93526f772f79e993767fd8f29087b6caf4e29468
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595716"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>取消异步任务或任务列表 (C#)
@@ -24,7 +24,7 @@ ms.locfileid: "69595716"
 
 ### <a name="download-the-example"></a>下载示例
 
-若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）。
+若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序），然后遵循以下步骤。
 
 1. 解压缩下载的文件，然后启动 Visual Studio。
 
@@ -77,7 +77,7 @@ ms.locfileid: "69595716"
         cts = new CancellationTokenSource();
         ```
 
-    - 在 `AccessTheWebAsync` 调用中（该操作下载指定网站的内容），将 `cts` 的 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 属性作为参数发送。 如果请求取消，则 `Token` 属性传播消息。 如果用户选择取消下载操作，请添加显示消息的 catch 块。 下列代码显示这些更改。
+    - 在 `AccessTheWebAsync` 调用中（该操作下载指定网站的内容），将 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 的 `cts` 属性作为参数发送。 如果请求取消，则 `Token` 属性传播消息。 如果用户选择取消下载操作，请添加显示消息的 catch 块。 下列代码显示这些更改。
 
         ```csharp
         try
@@ -97,7 +97,7 @@ ms.locfileid: "69595716"
         }
         ```
 
-4. 在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient> 类型中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 重载来下载网站内容。 将 `ct`（`AccessTheWebAsync` 的 <xref:System.Threading.CancellationToken> 参数）作为第二个参数传递。 如果用户选择“取消”  按钮，则令牌携带消息。
+4. 在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 类型中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient> 重载来下载网站内容。 将 `ct`（<xref:System.Threading.CancellationToken> 的 `AccessTheWebAsync` 参数）作为第二个参数传递。 如果用户选择“取消”  按钮，则令牌携带消息。
 
      下列代码显示 `AccessTheWebAsync` 中的更改。
 
@@ -144,7 +144,7 @@ ms.locfileid: "69595716"
 
 ### <a name="download-the-example"></a>下载示例
 
-若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）。
+若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序），然后遵循以下步骤。
 
 1. 解压缩下载的文件，然后启动 Visual Studio。
 
@@ -258,7 +258,7 @@ ms.locfileid: "69595716"
 
 以下各部分包含每个前面示例的代码。 请注意，必须为 <xref:System.Net.Http> 添加引用。
 
-可以从[异步示例：Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）下载这些项目。
+可以从 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）下载这些项目。
 
 ### <a name="example---cancel-a-task"></a>示例 - 取消任务
 
@@ -517,10 +517,10 @@ namespace CancelAListOfTasks
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
 - [使用 Async 和 Await 的异步编程 (C#)](./index.md)
 - [微调异步应用程序 (C#)](./fine-tuning-your-async-application.md)
-- [异步示例：微调应用程序](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）

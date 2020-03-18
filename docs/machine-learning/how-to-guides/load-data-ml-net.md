@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
 ms.openlocfilehash: 83aaae2d2e75b3076841750bf5d505390a538bc0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74344757"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>从文件和其他源加载数据
@@ -57,8 +57,8 @@ public class HousingData
 
 将列加载为：
 
-- 单个列，例如 `HousingData` 类中的 `Size` 和 `CurrentPrices`。
-- 以向量的形式一次加载多个列，例如 `HousingData` 类中的 `HistoricalPrices`。
+- 单个列，例如 `Size` 类中的 `CurrentPrices` 和 `HousingData`。
+- 以向量的形式一次加载多个列，例如 `HistoricalPrices` 类中的 `HousingData`。
 
 如果有一个向量属性，请在数据模型中向该属性应用 [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) 特性。 请务必注意，向量中的所有元素必须为相同的类型。 保持列与列之间的分隔状态可以提高特征工程的易用性和灵活性，但是对于非常多的列，在单个列上操作会对训练速度产生影响。
 
@@ -200,7 +200,7 @@ HousingData[] inMemoryCollection = new HousingData[]
 };
 ```
 
-使用 [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) 方法将内存中集合加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中：
+使用 [`IDataView`](xref:Microsoft.ML.IDataView) 方法将内存中集合加载到 [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) 中：
 
 > [!IMPORTANT]
 > [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) 假定其所加载的 [`IEnumerable`](xref:System.Collections.IEnumerable) 是线程安全的。

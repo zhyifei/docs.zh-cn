@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
 ms.openlocfilehash: 1e7f0123ab07fd4e83eea957b72bf79eeeecef2b
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74204692"
 ---
 # <a name="network-programming-in-the-net-framework"></a>.NET Framework 中的网络编程
@@ -85,7 +85,7 @@ Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且
  [网络编程示例](network-programming-samples.md)  
  可下载网络编程示例的链接，这些示例使用 <xref:System.Net>、 <xref:System.Net.Cache>、 <xref:System.Net.Configuration>、 <xref:System.Net.Mail>、 <xref:System.Net.Mime>、 <xref:System.Net.NetworkInformation>、 <xref:System.Net.PeerToPeer>、 <xref:System.Net.Security>、 <xref:System.Net.Sockets> 命名空间中的类。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Net?displayProperty=nameWithType>  
  为当前网络采用的多种协议提供简单的编程接口。 此命名空间中的 <xref:System.Net.WebRequest?displayProperty=nameWithType> 和 <xref:System.Net.WebResponse?displayProperty=nameWithType> 类是可插入协议的基础。  
   
@@ -134,7 +134,7 @@ Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且
  <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=nameWithType>  
  为配置采用应用程序扩展保护的身份验证提供支持。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Framework 中的传输层安全性 (TLS) 最佳做法](tls.md)
 - [网络编程操作说明主题](network-programming-how-to-topics.md)

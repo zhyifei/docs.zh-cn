@@ -9,10 +9,10 @@ helpviewer_keywords:
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
 ms.openlocfilehash: 0989678be070910c410d71717fe66679e1b70557
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69603082"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport（C# 编译器选项）
@@ -24,12 +24,12 @@ ms.locfileid: "69603082"
 -bugreport:file  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `file`  
  要包含 Bug 报告的文件的名称。  
   
 ## <a name="remarks"></a>备注  
- -bugreport 选项指定以下信息应置于 `file` 中  ：  
+ -bugreport 选项指定以下信息应置于  **中**`file`：  
   
 - 编译中所有源代码文件副本。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "69603082"
   
  请注意，生成文件的内容会公开源代码，这可能会导致意外信息泄露。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](./index.md)
 - [-errorreport（C# 编译器选项）](./errorreport-compiler-option.md)

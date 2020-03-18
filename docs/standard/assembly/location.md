@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], location
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
 ms.openlocfilehash: 0b84aba749625f0f86027cd9d09a5e9a2229a3f2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73733124"
 ---
 # <a name="assembly-location"></a>程序集位置
@@ -27,7 +27,7 @@ ms.locfileid: "73733124"
 
      部署在 HTTP 服务器上的程序集必须具有强名称，请在应用程序配置文件的基本代码节中指向此程序集。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建程序集](create.md)
 - [全局程序集缓存](../../framework/app-domains/gac.md)

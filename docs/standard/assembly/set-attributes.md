@@ -1,5 +1,5 @@
 ---
-title: 设置程序集属性
+title: 设置程序集特性
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], attributes
@@ -11,13 +11,13 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 0e4e2e595ed4f95511bd23ab0ed00139f71b2c8b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73740468"
 ---
-# <a name="set-assembly-attributes"></a>设置程序集属性
+# <a name="set-assembly-attributes"></a>设置程序集特性
 
 程序集特性是提供程序集相关信息的值。 特性分为以下几组信息：
 
@@ -37,9 +37,9 @@ ms.locfileid: "73740468"
 
 |程序集标识特性|说明|
 |---------------------------------|-----------------|
-|<xref:System.Reflection.AssemblyCultureAttribute>|表示程序集所支持的区域性的枚举字段。 程序集还可以指定区域性独立性，表示它包含默认区域性的资源。 **注意：** 运行时将任何没有将区域性属性设置为 null 的程序集视为附属程序集。 此类程序集需遵循附属程序集绑定规则。 有关详细信息，请参阅[运行时如何定位程序集](../../framework/deployment/how-the-runtime-locates-assemblies.md)。|
+|<xref:System.Reflection.AssemblyCultureAttribute>|表示程序集所支持的区域性的枚举字段。 程序集还可以指定区域性独立性，表示它包含默认区域性的资源。 注意：对于区域性特性未设置为 null 的任何程序集，运行时都会将它们视为附属程序集  。 此类程序集需遵循附属程序集绑定规则。 有关详细信息，请参阅[运行时如何定位程序集](../../framework/deployment/how-the-runtime-locates-assemblies.md)。|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|设置程序集特性（例如是否可以并行运行程序集）的值。|
-|<xref:System.Reflection.AssemblyVersionAttribute>|以 *主版本*.*次版本*.*内部版本*.*修订版本* 为格式的数值（例如 2.4.0.0）。 公共语言运行时使用此值在强名称程序集中执行绑定操作。 **注意：** 如果 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 特性不适用于程序集，则 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>、<xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 属性使用由 <xref:System.Reflection.AssemblyVersionAttribute> 特性指定的版本号。|
+|<xref:System.Reflection.AssemblyVersionAttribute>|以 *主版本*.*次版本*.*内部版本*.*修订版本* 为格式的数值（例如 2.4.0.0）。 公共语言运行时使用此值在强名称程序集中执行绑定操作。 注意：如果 **特性不适用于程序集，则**、<xref:System.Reflection.AssemblyInformationalVersionAttribute> 和 <xref:System.Reflection.AssemblyVersionAttribute> 属性将使用由 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> 特性指定的版本号<xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType><xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>。|
 
 下面的示例演示了如何将版本和区域性特性应用到程序集中。
 
@@ -73,7 +73,7 @@ ms.locfileid: "73740468"
 |<xref:System.Reflection.AssemblyCompanyAttribute>|指定公司名称的字符串值。|
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|指定版权信息的字符串值。|
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|指定 Win32 文件版本号的字符串值。 通常默认为程序集版本。|
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|指定公共语言运行时未使用的版本信息（例如完整的产品版本号）的字符串值。 **注意：** 如果将此属性应用于程序集，可以在运行时使用 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> 属性获取它指定的字符串。 此字符串还用于 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 属性所提供的路径和注册表项。|
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|指定公共语言运行时未使用的版本信息（例如完整的产品版本号）的字符串值。 注意：如果将此特性应用于程序集，可在运行时通过使用  **属性获得其指定的字符串**<xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>。 此字符串还用于 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 属性所提供的路径和注册表项。|
 |<xref:System.Reflection.AssemblyProductAttribute>|指定产品信息的字符串值。|
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|指定商标信息的字符串值。|
 
@@ -117,6 +117,6 @@ ms.locfileid: "73740468"
 <Assembly:AssemblyDelaySignAttribute(True)>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建程序集](create.md)

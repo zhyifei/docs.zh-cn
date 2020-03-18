@@ -6,10 +6,10 @@ helpviewer_keywords:
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
 ms.openlocfilehash: 9f477649dba1b42d7a10d521c010977707daf3ec
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75698750"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>如何将字节数组转换为 int（C# 编程指南）
@@ -40,14 +40,14 @@ ms.locfileid: "75698750"
 
 ## <a name="example"></a>示例
 
-在本示例中，将调用 <xref:System.BitConverter> 类的 <xref:System.BitConverter.GetBytes%28System.Int32%29> 方法，将 `int` 转换为字节数组。
+在本示例中，将调用 <xref:System.BitConverter.GetBytes%28System.Int32%29> 类的 <xref:System.BitConverter> 方法，将 `int` 转换为字节数组。
 
 > [!NOTE]
 > 输出可能会根据计算机体系结构的字节顺序而不同。
 
 [!code-csharp[csProgGuideTypes#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#23)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.BitConverter>
 - <xref:System.BitConverter.IsLittleEndian>

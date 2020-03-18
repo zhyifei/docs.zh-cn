@@ -5,10 +5,10 @@ helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.openlocfilehash: dc03744559a87a2548c5bee9452c22cd20f337b8
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77627705"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指针类型（C# 编程指南）
@@ -24,7 +24,7 @@ void* identifier; //allowed but not recommended
 
 指针类型不从[对象](../../language-reference/builtin-types/reference-types.md)继承，并且指针类型与 `object` 之间不存在转换。 此外，装箱和取消装箱不支持指针。 但是，你可在不同的指针类型之间以及指针类型和整型之间进行转换。
 
-在同一个声明中声明多个指针时，星号 (*) 仅与基础类型一起写入；而不是用作每个指针名称的前缀。 例如：
+在同一个声明中声明多个指针时，星号 (*) 仅与基础类型一起写入；而不是用作每个指针名称的前缀。 例如:
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -35,7 +35,7 @@ int *p1, *p2, *p3;   // Invalid in C#
 
 `myType*` 类型的指针变量的值为 `myType` 类型的变量的地址。 下面是指针类型声明的示例：
 
-|示例|描述|
+|示例|说明|
 |-------------|-----------------|
 |`int* p`|`p` 是指向整数的指针。|
 |`int** p`|`p` 是指向整数的指针的指针。|
@@ -63,7 +63,7 @@ int* myVariable;
 
 下表列出了可在不安全的上下文中对指针执行的运算符和语句：
 
-|运算符/语句|使用|
+|运算符/语句|用途|
 |-------------------------|---------|
 |`*`|执行指针间接寻址。|
 |`->`|通过指针访问结构的成员。|
@@ -79,9 +79,9 @@ int* myVariable;
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[指针类型](~/_csharplang/spec/unsafe-code.md#pointer-types)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/unsafe-code.md#pointer-types)的[指针类型](~/_csharplang/spec/introduction.md)部分。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [不安全代码和指针](index.md)

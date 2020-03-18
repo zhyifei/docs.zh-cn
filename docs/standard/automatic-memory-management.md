@@ -13,10 +13,10 @@ helpviewer_keywords:
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
 ms.openlocfilehash: 1038f16dca507e58005189c9558a9ec8dae4b34f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159697"
 ---
 # <a name="automatic-memory-management"></a>自动内存管理
@@ -49,7 +49,7 @@ ms.locfileid: "78159697"
 ## <a name="releasing-memory-for-unmanaged-resources"></a>为非托管资源释放内存  
  对于应用程序创建的大多数对象，可以依赖垃圾回收器自动执行必要的内存管理任务。 但是，非托管资源需要显式清除。 最常用的非托管资源类型是包装操作系统资源的对象，例如，文件句柄、窗口句柄或网络连接。 虽然垃圾回收器可以跟踪封装非托管资源的托管对象的生存期，但却无法具体了解如何清理资源。 创建封装非托管资源的对象时，建议在公共 **Dispose** 方法中提供必要的代码以清理非托管资源。 通过提供 **Dispose** 方法，对象的用户可以在使用完对象后显式释放其内存。 使用封装非托管资源的对象时，应该了解 **Dispose** 并在必要时调用它。 有关清理非托管资源的详细信息和实现 **Dispose** 的设计模式示例，请参见[垃圾回收](../../docs/standard/garbage-collection/index.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.GC>
 - [垃圾回收](../../docs/standard/garbage-collection/index.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 ms.openlocfilehash: 51292d977f2be87cec7c3481f5004fe5fe756224
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74204542"
 ---
 # <a name="task-based-asynchronous-programming"></a>基于任务的异步编程
@@ -42,7 +42,7 @@ ms.locfileid: "74204542"
 > [!NOTE]
 > <xref:System.Threading.Tasks.Task> 在后台创建的 <xref:System.Threading.Tasks.Parallel.Invoke%2A> 实例数不一定与所提供的委托数相等。 TPL 可能会使用各种优化，特别是对于大量的委托。
 
-有关详细信息，请参阅[如何：使用 Parallel.Invoke 来执行并行操作](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)。
+有关详细信息，请参阅[如何：使用 Parallel.Invoke 执行并行操作](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)。
 
 为了更好地控制任务执行或从任务返回值，必须更加显式地使用 <xref:System.Threading.Tasks.Task> 对象。
 
@@ -70,7 +70,7 @@ ms.locfileid: "74204542"
 [!code-csharp[TPL_TaskIntro#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/result1.cs#4)]
 [!code-vb[TPL_TaskIntro#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/result1.vb#4)]
 
-有关详细信息，请参阅[如何：从任务中返回值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)。
+有关详细信息，请参阅[如何：从任务返回值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)。
 
 使用 lambda 表达式创建委托时，你有权访问源代码中当时可见的所有变量。 然而，在某些情况下，特别是在循环中，lambda 不按照预期的方式捕获变量。 它仅捕获最终值，而不是它每次迭代后更改的值。 以下示例演示了该问题。 它将循环计数器传递给实例化 `CustomData` 对象并使用循环计数器作为对象标识符的 lambda 表达式。 如示例输出所示，每个 `CustomData` 对象都具有相同的标识符。
 
@@ -214,7 +214,7 @@ ms.locfileid: "74204542"
 
 ### <a name="tasktfromresult"></a>Task(T).FromResult
 
-通过使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法，你可以创建包含预计算结果的 <xref:System.Threading.Tasks.Task%601> 对象。 执行返回 <xref:System.Threading.Tasks.Task%601> 对象的异步运算，且已计算该 <xref:System.Threading.Tasks.Task%601> 对象的结果时，此方法将十分有用。 有关使用 <xref:System.Threading.Tasks.Task.FromResult%2A> 检索缓存中包含的异步下载运算结果的示例，请参阅[如何：创建预先计算的任务](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)。
+通过使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法，你可以创建包含预计算结果的 <xref:System.Threading.Tasks.Task%601> 对象。 执行返回 <xref:System.Threading.Tasks.Task%601> 对象的异步运算，且已计算该 <xref:System.Threading.Tasks.Task%601> 对象的结果时，此方法将十分有用。 有关使用 <xref:System.Threading.Tasks.Task.FromResult%2A> 检索缓存中包含的异步下载操作结果的示例，请参阅[如何：创建预先计算的任务](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)。
 
 ## <a name="handling-exceptions-in-tasks"></a>处理任务中的异常
 
@@ -238,7 +238,7 @@ ms.locfileid: "74204542"
 
 你可以创建标记，并使用 <xref:System.Threading.CancellationTokenSource> 类在以后某一时间发出取消请求。 可以将该标记作为参数传递给 <xref:System.Threading.Tasks.Task>，还可以在执行响应取消请求的工作的用户委托中引用同一标记。
 
-有关详细信息，请参阅[任务取消](../../../docs/standard/parallel-programming/task-cancellation.md)和[如何：取消任务及其子级](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)。
+有关详细信息，请参阅[任务取消](../../../docs/standard/parallel-programming/task-cancellation.md)和[如何：取消任务及其子任务](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)。
 
 ## <a name="the-taskfactory-class"></a>TaskFactory 类
 
@@ -272,7 +272,7 @@ TPL 有几种在并行和顺序方案中都有用的新公共类型。 它们包
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|标题|说明|
 |-|-|
 |[使用延续任务来链接任务](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|描述延续任务的工作方式。|
 |[附加和分离的子任务](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|描述附加子任务和分离子任务之间的差异。|
@@ -287,7 +287,7 @@ TPL 有几种在并行和顺序方案中都有用的新公共类型。 它们包
 |[数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|描述如何使用 <xref:System.Threading.Tasks.Parallel.For%2A> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 来创建循环访问数据的并行循环。|
 |[并行编程](../../../docs/standard/parallel-programming/index.md)|.NET Framework 并行编程的顶级节点。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [并行编程](../../../docs/standard/parallel-programming/index.md)
 - [使用 .NET Framework 进行并行编程的示例](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: ad2f7bf981d56e06ec726942f1fd37dff6b5b09c
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: c8329fbaed68fde3a63a5c589896ffcdf64b1766
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802619"
 ---
 ### <a name="performance-improvement-in-automation-tree-for-grouping-itemscontrols"></a>自动化树中对 ItemsControls 进行分组的性能改进
@@ -14,4 +14,3 @@ ms.locfileid: "67802619"
 |范围|主要|
 |Version|4.8|
 |类型|运行时|
-

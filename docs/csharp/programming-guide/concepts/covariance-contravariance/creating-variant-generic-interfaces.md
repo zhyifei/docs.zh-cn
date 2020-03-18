@@ -3,10 +3,10 @@ title: 创建变体泛型接口 (C#)
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
 ms.openlocfilehash: 4ba72f28cd2ddd800f169387cc2c742159d4cb1b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595307"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>创建变体泛型接口 (C#)
@@ -124,7 +124,7 @@ interface IInvariant<T> : ICovariant<T> { }
 interface IExtCovariant<out T> : ICovariant<T> { }
 ```
 
-尽管 `IInvariant<T>` 接口和 `IExtCovariant<out T>` 接口扩展的是同一个接口，但泛型类型参数 `T` 在前者中为固定参数，在后者中为协变参数。 此规则也适用于逆变泛型类型参数。
+尽管 `IInvariant<T>` 接口和 `T` 接口扩展的是同一个接口，但泛型类型参数 `IExtCovariant<out T>` 在前者中为固定参数，在后者中为协变参数。 此规则也适用于逆变泛型类型参数。
 
 无论泛型类型参数 `T` 在接口中是协变还是逆变，都可以创建一个接口来扩展这两类接口，只要在扩展接口中，该 `T` 泛型类型参数为固定参数。 以下代码示例阐释了这一点。
 
@@ -190,7 +190,7 @@ class Program
 
 在此示例中，没有指定 `pets.GetEnumerator` 方法如何在 `Cat` 和 `Dog` 之间选择。 这可能导致代码中出现问题。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [泛型接口中的变体 (C#)](./variance-in-generic-interfaces.md)
 - [对 Func 和 Action 泛型委托使用变体 (C#)](./using-variance-for-func-and-action-generic-delegates.md)

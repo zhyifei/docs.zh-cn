@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 6a99ed916e4e86e85d7ebc2d6ea36a6372c00206
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: e6b0387d9d04aa979de289ea0c5caa6c76f4d1be
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802656"
 ---
 ### <a name="aspnet-incorrect-multipart-handling-may-result-in-lost-form-data"></a>ASP.NET 多部分处理不正确可能会导致丢失窗体数据。
@@ -16,4 +16,3 @@ ms.locfileid: "67802656"
 |Version|4.8|
 |类型|运行时|
 |受影响的 API|<ul><li><xref:System.Web.HttpRequest.Form?displayProperty=nameWithType></li><li><xref:System.Web.HttpRequest.Files?displayProperty=nameWithType></li><li><xref:System.Web.HttpRequest.ContentEncoding?displayProperty=nameWithType></li></ul>|
-

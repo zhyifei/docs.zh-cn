@@ -3,10 +3,10 @@ title: 什么是 Docker？
 description: 深入了解 Docker，这里的一个简单类比可能会对你有所帮助。
 ms.date: 02/15/2019
 ms.openlocfilehash: e3b3685f2fc6d5a9d33bb176d04ca910f0289344
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76919881"
 ---
 # <a name="what-is-docker"></a>什么是 Docker？

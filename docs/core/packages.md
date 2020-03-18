@@ -4,11 +4,11 @@ description: 了解包、元包和框架的术语。
 author: richlander
 ms.date: 06/20/2016
 ms.openlocfilehash: 657519edf1c0860ee3222c71ce85723e19029a9d
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965888"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397931"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>包、元包和框架
 
@@ -16,7 +16,7 @@ ms.locfileid: "76965888"
 
 每个 .Net Core 包都支持以框架形式通过多个 .Net 实现代码运行。 其中有些框架是传统框架，例如表示 .NET Framework 的 `net46`。 而另一些则是新框架，可视为是“基于包的框架”，这种是框架的另外一种新的定义模型。 这些基于包的框架整个是作为包进行创建的，它们自身也被定义成包，这就在包与框架之间形成了一种比较密切的关系。
 
-## <a name="packages"></a>package
+## <a name="packages"></a>包
 
 .NET Core 被分成一组包，它们提供基元类型、更高级的数据类型、应用组合类型和通用实用工具。 每一个包都代表着单独的同名程序集。 例如，[System.Runtime 包](https://www.nuget.org/packages/System.Runtime)包含 System.Runtime.dll。
 
@@ -108,7 +108,7 @@ ms.locfileid: "76965888"
 
 ### <a name="net-standard"></a>.NET Standard
 
-.NET Standard（[目标框架名字对象](../standard/frameworks.md)：`netstandard`）框架表示在 [.NET Standard](../standard/net-standard.md) 基础之上生成并由其定义的 API。 如果构建的库将用于在多个运行时上运行，就应将此框架作为目标。 这样便可在任何一种兼容 .NET Standard 的运行时上受支持，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 每个运行时都支持一组 .NET Standard 版本，具体取决于实现的 API。
+.NET Standard（[目标框架名字对象](../standard/frameworks.md)：`netstandard`）框架表示在 [.NET Standard](../standard/net-standard.md) 基础之上生成并由其定义的 API。 如果构建的库将在多个运行时中运行，就应将此框架作为目标。 这样便可在任何一种兼容 .NET Standard 的运行时上受支持，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 每个运行时都支持一组 .NET Standard 版本，具体取决于实现的 API。
 
 `netstandard` 框架隐式引用 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) 元包。 例如，以下 MSBuild 项目文件指示项目以 `netstandard1.6` 为目标，其引用 [`NETStandard.Library` 1.6 版](https://www.nuget.org/packages/NETStandard.Library/1.6.0)元包。
 

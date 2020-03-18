@@ -1,5 +1,5 @@
 ---
-title: 如何：往返行程日期和时间值
+title: 如何：往返日期和时间值
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,42 +13,42 @@ helpviewer_keywords:
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 ms.openlocfilehash: 2e3a58ffe8332e0afec62461f6897d673e1da09f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132010"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>如何：往返行程日期和时间值
+# <a name="how-to-round-trip-date-and-time-values"></a>如何：往返日期和时间值
 
 在许多应用程序中，日期和时间值旨在明确标识单个时间点。 本主题介绍了如何保存和还原 <xref:System.DateTime> 值、<xref:System.DateTimeOffset> 值以及包含时区信息的日期和时间值，以便还原后的值与保存的值标识的时间相同。
 
 ### <a name="to-round-trip-a-datetime-value"></a>往返 DateTime 值
 
-1. 通过调用包含 "o" 格式说明符的 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 方法，将 <xref:System.DateTime> 值转换为字符串表示形式。
+1. 通过调用包含 "o" 格式说明符的 <xref:System.DateTime> 方法，将 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 值转换为字符串表示形式。
 
 2. 将 <xref:System.DateTime> 值的字符串表示形式保存到文件中，或跨进程、应用域或计算机边界传递它。
 
 3. 检索表示 <xref:System.DateTime> 值的字符串。
 
-4. 调用 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 方法，并以 `styles` 参数值的形式传递 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>。
+4. 调用 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 方法，并以 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> 参数值的形式传递 `styles`。
 
 下面的示例展示了如何往返 <xref:System.DateTime> 值。
 
 [!code-csharp[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#1)]
 [!code-vb[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#1)]
 
-往返 <xref:System.DateTime> 值时，此方法成功暂留所有本地时间和世界时间。 例如，如果本地 <xref:System.DateTime> 值保存在采用美国太平洋标准时区的系统会，并在位于美国中部标准时区的系统上还原，则还原的日期和时间会比原始时间晚两个小时，这反映了两个时区之间的时差。 但是，此方法对于未指定时间不一定准确。 所有 <xref:System.DateTime.Kind%2A> 属性为 <xref:System.DateTimeKind.Unspecified> 的 <xref:System.DateTime> 值都会被视为本地时间。 否则，<xref:System.DateTime> 不会成功标识正确的时间点。 针对此限制的解决方法是将日期和时间值与其时区紧密耦合，以便进行保存和还原操作。
+往返 <xref:System.DateTime> 值时，此方法成功暂留所有本地时间和世界时间。 例如，如果本地 <xref:System.DateTime> 值保存在美国太平洋标准时区系统上的系统中，并在美国中部标准时区的系统上被还原，还原后的日期和时间将比原始时间晚两个小时，这反映了两个时区之间的时差。 但是，此方法对于未指定时间不一定准确。 所有 <xref:System.DateTime> 属性为 <xref:System.DateTime.Kind%2A> 的 <xref:System.DateTimeKind.Unspecified> 值都会被视为本地时间。 否则，<xref:System.DateTime> 不会成功标识正确的时间点。 针对此限制的解决方法是将日期和时间值与其时区紧密耦合，以便进行保存和还原操作。
 
 ### <a name="to-round-trip-a-datetimeoffset-value"></a>往返 DateTimeOffset 值
 
-1. 通过调用包含 "o" 格式说明符的 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 方法，将 <xref:System.DateTimeOffset> 值转换为字符串表示形式。
+1. 通过调用包含 "o" 格式说明符的 <xref:System.DateTimeOffset> 方法，将 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 值转换为字符串表示形式。
 
 2. 将 <xref:System.DateTimeOffset> 值的字符串表示形式保存到文件中，或跨进程、应用域或计算机边界传递它。
 
 3. 检索表示 <xref:System.DateTimeOffset> 值的字符串。
 
-4. 调用 <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 方法，并以 `styles` 参数值的形式传递 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>。
+4. 调用 <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 方法，并以 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> 参数值的形式传递 `styles`。
 
 下面的示例展示了如何往返 <xref:System.DateTimeOffset> 值。
 
@@ -97,7 +97,7 @@ ms.locfileid: "73132010"
 
 - 每个代码示例（`DateInTimeZone` 除外）都应被添加到类或 Visual Basic 模块中，且被包装到方法中，并通过 `Main` 进行调用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之间进行选择](../../../docs/standard/datetime/choosing-between-datetime.md)

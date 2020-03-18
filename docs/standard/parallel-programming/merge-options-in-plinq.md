@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 ms.openlocfilehash: 18f233ac4c5afa63ec31e83d5fff8f0a57f9146f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74203989"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ 中的合并选项
@@ -23,7 +23,7 @@ ms.locfileid: "74203989"
  [!code-csharp[PLINQ#26](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#26)]
  [!code-vb[PLINQ#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#26)]  
   
- 有关完整的示例，请参阅[如何：在 PLINQ 中指定合并选项](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)。  
+ 有关完整示例，请参阅[如何：在 PLINQ 中指定合并选项](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)。  
   
  如果特定查询无法支持请求执行的选项，将会直接忽略此选项。 大多数情况下，无需为 PLINQ 查询指定合并选项。 不过，在某些情况下，通过测试和度量，可以发现查询在非默认模式下执行效果最佳。 这种做法的常见用途是，强制区块合并运算符流式传输结果，以提升用户界面的响应速度。  
   
@@ -59,11 +59,11 @@ ms.locfileid: "74203989"
 |<xref:System.Linq.ParallelEnumerable.Take%2A>|无|  
 |<xref:System.Linq.ParallelEnumerable.Where%2A>|无|  
   
- 其他所有 PLINQ 查询运算符可能会忽略用户提供的合并选项。 一些查询运算符（例如，<xref:System.Linq.ParallelEnumerable.Reverse%2A> 和 <xref:System.Linq.ParallelEnumerable.OrderBy%2A>）在生成并重新排序所有元素之前，无法生成任何元素。 因此，如果在还包含 <xref:System.Linq.ParallelEnumerable.Reverse%2A> 等运算符的查询中使用 <xref:System.Linq.ParallelMergeOptions>，除非运算符生成了结果，否则将不会在查询中应用合并行为。  
+ 其他所有 PLINQ 查询运算符可能会忽略用户提供的合并选项。 一些查询运算符（例如，<xref:System.Linq.ParallelEnumerable.Reverse%2A> 和 <xref:System.Linq.ParallelEnumerable.OrderBy%2A>）在生成并重新排序所有元素之前，无法生成任何元素。 因此，如果在还包含 <xref:System.Linq.ParallelMergeOptions> 等运算符的查询中使用 <xref:System.Linq.ParallelEnumerable.Reverse%2A>，除非运算符生成了结果，否则将不会在查询中应用合并行为。  
   
  一些运算符处理合并选项的能力，取决于源序列的类型，以及之前是否在查询中使用过 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 运算符。 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 始终为 <xref:System.Linq.ParallelMergeOptions.NotBuffered>；它立即生成元素。 <xref:System.Linq.ParallelEnumerable.OrderBy%2A> 始终为 <xref:System.Linq.ParallelMergeOptions.FullyBuffered>；它必须先对整个列表进行排序，再生成元素。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [如何：在 PLINQ 中指定合并选项](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

@@ -3,15 +3,15 @@ title: dotnet-install 脚本
 description: 了解用于安装 .NET Core SDK 和共享运行时的 dotnet-install 脚本。
 ms.date: 01/23/2020
 ms.openlocfilehash: bf28f872be3ac2b4115b1d5e5c06e32afec0b49e
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092858"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 脚本引用
 
-## <a name="name"></a>“属性”
+## <a name="name"></a>名称
 
 `dotnet-install.ps1` | `dotnet-install.sh` - 用于安装 .NET Core SDK 和共享运行时的脚本。
 
@@ -33,7 +33,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
     [--runtime-id] [--skip-non-versioned-files] [--help]
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet-install` 脚本用于执行 .NET Core SDK 的非管理员安装，其中包含 .NET Core CLI 和共享运行时。
 
@@ -216,7 +216,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
   curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Core 版本](https://github.com/dotnet/core/releases)
 - [.NET Core 运行时和 SDK 下载存档](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

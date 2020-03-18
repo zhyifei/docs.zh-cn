@@ -4,10 +4,10 @@ description: Microsoft WCF dotnet-svcutil 工具概述，该工具添加了 .NET
 author: mlacouture
 ms.date: 02/22/2019
 ms.openlocfilehash: 0607c73935f319f2cc0d8d9f92d96a4c71c54edf
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920938"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core 的 WCF dotnet-svcutil 工具
@@ -16,21 +16,21 @@ Windows Communication Foundation (WCF) dotnet-svcutil  工具是一种 .NET 工�
 
 类似于 .NET Framework 项目的[服务模型元数据 - svcutil  ](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 工具，dotnet svcutil  是用于生成 Web 服务引用的命令行工具，与 .NET Core 和 .NET Standard 项目兼容。
 
-dotnet-svcutil 工具是 [WCF Web 服务引用](wcf-web-service-reference-guide.md) Visual Studio 连接服务提供程序（随 Visual Studio 2017 版本 15.5 首次推出）的替代选项   。 dotnet-svcutil  工具作为一种 .NET 工具，可跨平台用于 Linux、macOS 和 Windows。
+dotnet-svcutil 工具是 **WCF Web 服务引用** Visual Studio 连接服务提供程序（随 Visual Studio 2017 版本 15.5 首次推出）的替代选项[  ](wcf-web-service-reference-guide.md)。 dotnet-svcutil  工具作为一种 .NET 工具，可跨平台用于 Linux、macOS 和 Windows。
 
 > [!IMPORTANT]
 > 应仅从受信任源引用服务。 从不受信任的源添加引用可能会危及安全性。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+# <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
 - [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更高版本
 - 你最喜欢的代码编辑器
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+# <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
 - [.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) 或更高版本
 - 你最喜欢的代码编辑器
@@ -68,13 +68,13 @@ public interface ISayHello
     ```
 
 3. 安装 [`dotnet-svcutil` NuGet 包](https://nuget.org/packages/dotnet-svcutil)作为 CLI 工具： <!-- markdownlint-disable MD023 -->
-    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+    # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
     dotnet tool install --global dotnet-svcutil
     ```
 
-    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
     在编辑器中打开 `HelloSvcutil.csproj` 项目文件，编辑 `Project` 元素，并使用下面的代码添加 [`dotnet-svcutil` NuGet 包](https://nuget.org/packages/dotnet-svcutil)作为 CLI 工具引用：
 
     ```xml
@@ -83,7 +83,7 @@ public interface ISayHello
     </ItemGroup>
     ```
 
-    然后使用 [`dotnet restore`](../tools/dotnet-restore.md) 命令还原 dotnet-svcutil  包，如下所示：
+    然后使用  [ 命令还原 dotnet-svcutil`dotnet restore`](../tools/dotnet-restore.md) 包，如下所示：
 
     ```dotnetcli
     dotnet restore
@@ -93,13 +93,13 @@ public interface ISayHello
 
 4. 运行 dotnet-svcutil  命令生成 Web 服务引用文件，如下所示：
 
-    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+    # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
     dotnet-svcutil http://contoso.com/SayHello.svc
     ```
 
-    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
     ```dotnetcli
     dotnet svcutil http://contoso.com/SayHello.svc
@@ -153,16 +153,16 @@ public interface ISayHello
 
 6. 导航到在 Web 浏览器的控制台中列出的 URL（例如，`http://localhost:5000`）。
 
-您应看到以下输出：“Hello dotnet-svcutil!”
+你将看到以下输出：“Hello dotnet-svcutil!”
 
 有关 `dotnet-svcutil` 工具参数的详细说明，请调用传递帮助参数的工具，如下所示：
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+# <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
 ```dotnetcli
 dotnet-svcutil --help
 ```
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+# <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
 ```dotnetcli
 dotnet svcutil --help

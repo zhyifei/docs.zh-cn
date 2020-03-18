@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 3685482caebd892c460a3cc2ecf3a22acbe3c9ec
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 15b685248730c1f742035612a201d97d180bbc41
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673402"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398417"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>命名实参和可选实参（C# 编程指南）
 C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特定形参指定实参，方法是将实参与该形参的名称关联，而不是与形参在形参列表中的位置关联。 通过*可选参数*，你可以为某些形参省略实参。 这两种技术都可与方法、索引器、构造函数和委托一起使用。  
@@ -40,7 +40,7 @@ C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特
   
  命名实参还可以标识每个实参所表示的含义，从而改进代码的可读性。 在下面的示例方法中，`sellerName` 不得为 NULL 或空白符。 由于 `sellerName` 和 `productName` 都是字符串类型，所以使用命名实参而不是按位置发送实参是有意义的，可以区分这两种类型并减少代码阅读者的困惑。
   
- 当命名实参与位置实参一起使用时，只要 
+ 当命名实参与位置实参一起使用时，只要
 
 - 没有后接任何位置实参或
 
@@ -100,7 +100,7 @@ C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特
 ## <a name="com-interfaces"></a>COM 接口  
  命名实参和可选实参，以及对动态对象的支持和其他增强功能大大提高了与 COM API（例如 Office Automation API）的互操作性。  
   
- 例如，Microsoft Office Excel 的 <xref:Microsoft.Office.Interop.Excel.Range> 接口中的 <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> 方法有七个可选形参。 这些形参如下图所示：  
+ 例如，Microsoft Office Excel 的 <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> 接口中的 <xref:Microsoft.Office.Interop.Excel.Range> 方法有七个可选形参。 这些形参如下图所示：  
   
  ![显示 AutoFormat 方法的 IntelliSense 快速信息的屏幕截图。](./media/named-and-optional-arguments/autoformat-method-parameters.png)  
   
@@ -126,7 +126,7 @@ C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何在 Office 编程中使用命名参数和可选参数](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [使用类型 dynamic](../types/using-type-dynamic.md)

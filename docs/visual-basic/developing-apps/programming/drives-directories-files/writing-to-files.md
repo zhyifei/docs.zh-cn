@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
 ms.openlocfilehash: 8511a96c7abcc28997c293a09ef10bad543dc261
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352142"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>写入文件 (Visual Basic)
@@ -36,7 +36,7 @@ ms.locfileid: "74352142"
  [如何：使用 StreamWriter 向文件中写入文本](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
  演示如何使用 <xref:System.IO.StreamWriter?displayProperty=nameWithType> 对象写入文件。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  介绍 `My.Computer.FileSystem` 对象及其方法和属性。  

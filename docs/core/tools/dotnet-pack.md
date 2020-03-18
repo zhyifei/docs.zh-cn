@@ -3,17 +3,17 @@ title: dotnet pack 命令
 description: dotnet pack 命令可为 .NET Core 项目创建 NuGet 包。
 ms.date: 02/14/2020
 ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503643"
 ---
-# <a name="dotnet-pack"></a>dotnet pack
+# <a name="dotnet-pack"></a>dotnet 包
 
 **本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
-## <a name="name"></a>“属性”
+## <a name="name"></a>名称
 
 `dotnet pack` - 将代码打包到 NuGet 包。
 
@@ -26,7 +26,7 @@ dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-sou
 dotnet pack [-h|--help]
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet pack` 命令生成项目并创建 NuGet 包。 该命令的结果是一个 NuGet 包，也就是一个 .nupkg 文件  。
 
@@ -51,7 +51,7 @@ dotnet pack [-h|--help]
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 `PROJECT | SOLUTION`
 
@@ -145,13 +145,13 @@ dotnet pack [-h|--help]
   dotnet pack --no-build --output nupkgs
   ```
 
-- 将项目的版本后缀配置为 *.csproj* 文件中的 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`，使用给定的后缀打包当前项目，并更新生成的程序包版本：
+- 将项目的版本后缀配置为 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`.csproj*文件中的*，使用给定的后缀打包当前项目，并更新生成的程序包版本：
 
   ```dotnetcli
   dotnet pack --version-suffix "ci-1234"
   ```
 
-- 使用 `PackageVersion` MSBuild 属性将包版本设置为 `2.1.0`：
+- 使用 `2.1.0` MSBuild 属性将包版本设置为 `PackageVersion`：
 
   ```dotnetcli
   dotnet pack -p:PackageVersion=2.1.0

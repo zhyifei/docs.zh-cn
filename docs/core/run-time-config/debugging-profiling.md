@@ -4,10 +4,10 @@ description: 了解为 .NET Core 应用配置调试和分析的运行时设置�
 ms.date: 11/27/2019
 ms.topic: reference
 ms.openlocfilehash: c57cfa7233f48def890ded3c9d589b7f268147df
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74998857"
 ---
 # <a name="run-time-configuration-options-for-debugging-and-profiling"></a>用于调试和分析的运行时配置选项

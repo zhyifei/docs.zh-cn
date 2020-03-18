@@ -3,12 +3,12 @@ title: 使用 .NET Core CLI 组织和测试项目
 description: 本教程介绍如何从命令行组织和测试 .NET Core 项目。
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: 11d13ad1d74c69cdfe0626bda8823dd0609da85f
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 0d61e0fc004cfcb6d78c49475c7b7f0f523aad2c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920421"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78239906"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>使用 .NET Core CLI 组织和测试项目
 
@@ -65,23 +65,23 @@ ms.locfileid: "76920421"
 
 IPet.cs  :
 
-[!code-csharp[IPet interface](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/IPet.cs)]
+[!code-csharp[IPet interface](../../../samples/snippets/core/tutorials/testing-with-cli/csharp/src/NewTypes/Pets/IPet.cs)]
 
 Dog.cs  :
 
-[!code-csharp[Dog class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Dog.cs)]
+[!code-csharp[Dog class](../../../samples/snippets/core/tutorials/testing-with-cli/csharp/src/NewTypes/Pets/Dog.cs)]
 
 Cat.cs  :
 
-[!code-csharp[Cat class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Cat.cs)]
+[!code-csharp[Cat class](../../../samples/snippets/core/tutorials/testing-with-cli/csharp/src/NewTypes/Pets/Cat.cs)]
 
 Program.cs  :
 
-[!code-csharp[Main](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Program.cs)]
+[!code-csharp[Main](../../../samples/snippets/core/tutorials/testing-with-cli/csharp/src/NewTypes/Program.cs)]
 
 NewTypes.csproj  :
 
-[!code-xml[NewTypes csproj](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]
+[!code-xml[NewTypes csproj](../../../samples/snippets/core/tutorials/testing-with-cli/csharp/src/NewTypes/NewTypes.csproj)]
 
 请执行以下命令：
 
@@ -96,13 +96,13 @@ Woof!
 Meow!
 ```
 
-可选练习：可通过扩展此项目来添加新的宠物类型，例如 `Bird`。 使鸟的 `TalkToOwner` 方法向所有者发出 `Tweet!`。 再次运行应用。 输出将包含 `Tweet!`
+可选练习：可通过扩展此项目添加新的宠物类型，如 `Bird`。 使鸟的 `TalkToOwner` 方法向所有者发出 `Tweet!`。 再次运行应用。 输出将包含 `Tweet!`
 
 ### <a name="testing-the-sample"></a>测试示例
 
 `NewTypes` 项目已准备就绪，与宠物相关的类型均置于一个文件夹中，因此具有良好的组织。 接下来，创建测试项目，并使用 [xUnit](https://xunit.github.io/) 测试框架开始编写测试。 使用单元测试，可自动检查宠物类型的行为，确认其正常运行。
 
-导航回 src 文件夹并创建“test”文件夹，后者包含 NewTypesTests 文件夹    。 在 NewTypesTests  文件夹的命令提示符中，执行 `dotnet new xunit`。 这将生成两个文件：NewTypesTests.csproj 和 UnitTest1.cs   。
+导航回 src 文件夹并创建“test”文件夹，后者包含 NewTypesTests 文件夹    。 在 NewTypesTests  文件夹的命令提示符中，执行 `dotnet new xunit`。 这将生成两个文件：NewTypesTests.csproj  和 UnitTest1.cs  。
 
 测试项目当前无法测试 `NewTypes` 中的类型，并且需要对 `NewTypes` 项目的项目引用。 要添加项目引用，请使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
 
@@ -120,7 +120,7 @@ dotnet add reference ../../src/NewTypes/NewTypes.csproj
 
 NewTypesTests.csproj  :
 
-[!code-xml[NewTypesTests csproj](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/NewTypesTests.csproj)]
+[!code-xml[NewTypesTests csproj](../../../samples/snippets/core/tutorials/testing-with-cli/csharp/test/NewTypesTests/NewTypesTests.csproj)]
 
 NewTypesTests.csproj  文件包含下列内容：
 
@@ -158,7 +158,7 @@ public class PetTests
 }
 ```
 
-可选练习：如果先前向所有者添加了生成 `Tweet!` 的 `Bird` 类型，请向 PetTests.cs 文件 `BirdTalkToOwnerReturnsTweet` 添加测试方法，以检查对于 `Bird` 类型，`TalkToOwner` 方法是否正常工作  。
+可选练习：如果先前向所有者添加了生成 `Bird` 的 `Tweet!` 类型，请向 PetTests.cs  文件 `BirdTalkToOwnerReturnsTweet` 添加测试方法，检查对于 `TalkToOwner` 类型，`Bird` 方法是否正常工作。
 
 > [!NOTE]
 > 尽管期望 `expected` 和 `actual` 值相等，但使用 `Assert.NotEqual` 检查的初始断言表明这些值并不相等  。 务必最初创建一个失败的测试，以检查测试的逻辑是否正确。 确认测试失败后，调整断言，使测试通过。
@@ -217,7 +217,7 @@ Test execution time: 1.7000 Seconds
 
 将测试的断言从 `Assert.NotEqual` 更改为 `Assert.Equal`：
 
-[!code-csharp[PetTests class](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]
+[!code-csharp[PetTests class](../../../samples/snippets/core/tutorials/testing-with-cli/csharp/test/NewTypesTests/PetTests.cs)]
 
 使用 `dotnet test` 命令重新运行测试，并获得以下输出：
 

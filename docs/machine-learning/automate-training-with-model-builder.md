@@ -2,13 +2,13 @@
 title: 什么是模型生成器，它的工作原理是怎样的？
 description: 如何使用 ML.NET 模型生成器自动训练机器学习模型
 ms.date: 01/07/2020
-ms.custom: overview
-ms.openlocfilehash: ac704b7961a8442a9174cdef5a4cd2a619236a4e
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.custom: overview, mlnet-tooling
+ms.openlocfilehash: cff4601843ec9ca7201ea7dbdbfbcfa18f50e46e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777395"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397805"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>什么是模型生成器，它的工作原理是怎样的？
 
@@ -159,7 +159,7 @@ ML.NET 模型生成器是一个直观的图形化 Visual Studio 扩展，用于�
 
 评估是衡量模型品质的过程。 模型生成器使用经过训练的模型对新的测试数据进行预测，然后度量预测效果的过程。
 
-模型生成器将训练数据拆分为训练集和测试集。 训练数据 (80%) 用于训练模型，测试数据 (20%) 用于评估模型。 
+模型生成器将训练数据拆分为训练集和测试集。 训练数据 (80%) 用于训练模型，测试数据 (20%) 用于评估模型。
 
 ### <a name="how-do-i-understand-my-model-performance"></a>如何了解模型性能？
 

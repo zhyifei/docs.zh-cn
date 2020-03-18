@@ -1,15 +1,15 @@
 ---
-title: 3.5 SP1 版本中对 HttpWebRequest 的 NTLM 身份验证的更改
+title: 3\.5 SP1 版本中对 HttpWebRequest 的 NTLM 身份验证的更改
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
 ms.openlocfilehash: 388e6dc648e1fd68e24a852cb08de107f09f9c9f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "64754876"
 ---
-# <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>3.5 SP1 版本中对 HttpWebRequest 的 NTLM 身份验证的更改
+# <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>3\.5 SP1 版本中对 HttpWebRequest 的 NTLM 身份验证的更改
 
 在 .NET Framework 版本 3.5 SP1 及以上版本中做出了安全性更改，这些更改影响以下类处理集成式 Windows 身份验证的方式：<xref:System.Net.HttpWebRequest>、 <xref:System.Net.HttpListener>、 <xref:System.Net.Security.NegotiateStream>以及 System.Net 命名空间中的相关类。 这些更改会影响使用这些类来发出 Web 请求和接收响应的应用程序，这些应用程序使用基于 NTLM 的集成式 Windows 身份验证。 此更改会影响配置为使用集成式 Windows 身份验证的 Web 服务器和客户端应用程序。
 
@@ -53,7 +53,7 @@ ms.locfileid: "64754876"
 
 如 <https://support.microsoft.com/kb/896861> 中所述，安全级别较低的变通方法是禁用环回检查。 这将禁用反射攻击保护。 因此，最好将一组备用名称限制为仅希望计算机实际使用的那些名称。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>
 - <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>

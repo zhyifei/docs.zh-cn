@@ -4,10 +4,10 @@ description: 在本教程的“分支和循环”中，将编写 C# 代码以研
 ms.date: 10/31/2017
 ms.custom: mvc
 ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73739127"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>通过分支和循环语句了解条件逻辑
@@ -65,7 +65,7 @@ else
     Console.WriteLine("The answer is not greater than 10");
 ```
 
-只有当条件的测试结果为 `false` 时，才执行 `else` 关键字后面的语句。 将 `if`、`else` 与布尔条件相结合，可以满足处理 `true` 和 `false` 所需的一切要求。
+只有当条件的测试结果为 `else` 时，才执行 `false` 关键字后面的语句。 将 `if`、`else` 与布尔条件相结合，可以满足处理 `true` 和 `false` 所需的一切要求。
 
 > [!IMPORTANT]
 > `if` 和 `else` 语句下的缩进是为了方便读者阅读。
@@ -127,7 +127,7 @@ else
 
 修改 `a`、`b` 和 `c` 的值，并在 `&&` 和 `||` 之间切换浏览。 你将进一步了解 `&&` 和 `||` 运算符的工作原理。
 
-你已完成第一步。 开始进入下一部分前，先将当前代码移到单独的方法中。 这样一来，可以更轻松地开始处理新示例。 将 `Main` 方法重命名为 `ExploreIf`，并编写调用 `ExploreIf` 的新 `Main` 方法。 完成后，代码应如下所示：
+你已完成第一步。 开始进入下一部分前，先将当前代码移到单独的方法中。 这样一来，可以更轻松地开始处理新示例。 将 `Main` 方法重命名为 `ExploreIf`，并编写调用 `Main` 的新 `ExploreIf` 方法。 完成后，代码应如下所示：
 
 ```csharp
 using System;
@@ -204,7 +204,7 @@ while (counter < 10)
 
 `while` 语句会检查条件，并执行 `while` 后面的语句或语句块。 除非条件为 false，否则它会重复检查条件并执行这些语句。
 
-此示例新引入了另外一个运算符。 `counter` 变量后面的 `++` 是增量  运算符。 它将 `counter` 值加 1，并将计算后的值存储在 `counter` 变量中。
+此示例新引入了另外一个运算符。 `++` 变量后面的 `counter` 是增量  运算符。 它将 `counter` 值加 1，并将计算后的值存储在 `counter` 变量中。
 
 > [!IMPORTANT]
 > 请确保 `while` 循环条件在你执行代码时更改为 false。 否则，创建的就是无限循环  ，即程序永不结束。 本示例中没有演示上述情况，因为你必须使用  CTRL-C 或其他方法强制退出程序。

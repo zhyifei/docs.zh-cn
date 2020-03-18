@@ -3,10 +3,10 @@ title: 字符串内插 - C# 教程
 description: 本教程介绍了如何使用 C# 字符串内插功能将格式化表达式结果添加到较大的字符串中。
 ms.date: 10/23/2018
 ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75346783"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>使用字符串内插构造格式化字符串
