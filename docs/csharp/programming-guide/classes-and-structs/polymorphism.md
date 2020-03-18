@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 169ba2a1307a301c80b3d9ccac45f4ac9f707921
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 58980bd0d70d8a778cdb208f56d31ee8465871a4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626283"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170164"
 ---
 # <a name="polymorphism-c-programming-guide"></a>多态性（C# 编程指南）
 
@@ -24,7 +24,7 @@ ms.locfileid: "77626283"
 1. 创建一个类层次结构，其中每个特定形状类均派生自一个公共基类。
 1. 使用虚方法通过对基类方法的单个调用来调用任何派生类上的相应方法。
 
-首先，创建一个名为 `Rectangle``Shape` 的基类，并创建一些派生类，例如 `Triangle``Circle`、 和 。 为 `Shape` 类提供一个名为 `Draw` 的虚拟方法，并在每个派生类中重写该方法以绘制该类表示的特定形状。 创建 `List<Shape>` 对象，并向其添加 `Circle`、`Triangle` 和 `Rectangle`。 
+首先，创建一个名为 `Rectangle``Shape` 的基类，并创建一些派生类，例如 `Triangle``Circle`、 和 。 为 `Shape` 类提供一个名为 `Draw` 的虚拟方法，并在每个派生类中重写该方法以绘制该类表示的特定形状。 创建 `List<Shape>` 对象，并向其添加 `Circle`、`Triangle` 和 `Rectangle`。
 
 [!code-csharp[Polymorphism overview](~/samples/snippets/csharp/objectoriented/Inheritance.cs#PolymorphismOverview)]
 

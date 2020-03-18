@@ -2,12 +2,12 @@
 title: ref 返回值和 ref 局部变量（C# 指南）
 description: 了解如何定义和使用 ref 返回值和 ref 局部变量
 ms.date: 04/04/2018
-ms.openlocfilehash: 7ade422b5b3805ef2e1f487252a98fb85cdfe70c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 87a9538db60d69062f0fb48ed9683a9d4f972b91
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736817"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170068"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 返回值和局部变量
 
@@ -38,7 +38,7 @@ ms.locfileid: "73736817"
 - 方法签名在返回类型前面有 [ref](../../language-reference/keywords/ref.md) 关键字。
 - 方法主体中的每个 [return](../../language-reference/keywords/return.md) 语句都在返回实例的名称前面有 [ref](../../language-reference/keywords/ref.md) 关键字。
 
-下面的示例方法满足这些条件，且返回对名为 `p` 的 `Person` 对象的引用：
+下面的示例方法满足这些条件，且返回对名为 `Person` 的 `p` 对象的引用：
 
 ```csharp
 public ref Person GetContactInformation(string fname, string lname)
@@ -82,7 +82,7 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 后续使用 `p` 等同于使用 `GetContactInformation` 返回的变量，因为 `p` 是此变量的别名。 对 `p` 所做的更改也会更改从 `GetContactInformation` 返回的变量。
 
-`ref` 关键字用于局部变量声明前面和  方法调用前面。 
+`ref` 关键字用于局部变量声明前面和  方法调用前面。
 
 可通过相同方式按引用访问值。 在某些情况下，按引用访问值可避免潜在的高开销复制操作，从而提高性能。 例如，以下语句显示用户可如何定义一个用于引用值的 ref 局部变量值。
 
@@ -90,7 +90,7 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-`ref` 关键字用于局部变量声明前面和  第二个示例中的值前面。 在这两个示例中，如果无法同时将 `ref` 关键字包含在变量声明和赋值中，则会导致编译器错误 CS8172：“无法使用值对按引用变量进行初始化”。 
+`ref` 关键字用于局部变量声明前面和  第二个示例中的值前面。 在这两个示例中，如果无法同时将 `ref` 关键字包含在变量声明和赋值中，则会导致编译器错误 CS8172：“无法使用值对按引用变量进行初始化”。
 
 在低于 C# 7.3 的版本中，无法将 ref 局部变量重新分配为，在初始化后引用其他存储。 此限制已取消。 下面的示例展示了如何重新分配：
 
@@ -103,7 +103,7 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 ## <a name="ref-returns-and-ref-locals-an-example"></a>ref 返回结果和 ref 局部变量：示例
 
-下列示例定义存储整数值数组的 `NumberStore` 类。 `FindNumber` 方法按引用返回第一个大于或等于作为参数传递的数字的数字。 如果没有大于或等于该参数的数字，则方法返回索引 0 中的数字。 
+下列示例定义存储整数值数组的 `NumberStore` 类。 `FindNumber` 方法按引用返回第一个大于或等于作为参数传递的数字的数字。 如果没有大于或等于该参数的数字，则方法返回索引 0 中的数字。
 
 [!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#1)]
 
@@ -119,7 +119,7 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 如果查找的数字更接近数组末尾，这第二个版本就更高效且序列更长。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ref 关键字](../../language-reference/keywords/ref.md)
 - [编写安全高效的代码](../../write-safe-efficient-code.md)

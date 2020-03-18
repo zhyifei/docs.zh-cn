@@ -7,12 +7,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 42932809d58c739afc165676c0b90c5a23f568de
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 33616e4eacb484b9c6eda3862cd86fdd1e6df165
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712814"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173479"
 ---
 # <a name="where-clause-c-reference"></a>where 子句（C# 参考）
 
@@ -44,11 +44,11 @@ ms.locfileid: "75712814"
 
 在编译时，`where` 关键字将转换为对 <xref:System.Linq.Enumerable.Where%2A> 标准查询运算符方法的调用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [查询关键字 (LINQ)](query-keywords.md)
 - [from 子句](from-clause.md)
 - [select 子句](select-clause.md)
 - [筛选数据](../../programming-guide/concepts/linq/filtering-data.md)
 - [C# 中的 LINQ](../../linq/index.md)
-- [C# 中的 LINQ 入门](/dotnet/csharp/programming-guide/concepts/linq/)
+- [语言集成查询 (LINQ)](../../programming-guide/concepts/linq/index.md)

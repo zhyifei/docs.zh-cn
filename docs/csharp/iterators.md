@@ -1,17 +1,17 @@
 ---
-title: Iterators
+title: 迭代器
 description: 了解如何使用内置 C# 迭代器以及如何创建自己的自定义迭代器方法。
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
 ms.openlocfilehash: 1933ecf83e9fa234f9b88c815d8ab527997c97f2
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036417"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398723"
 ---
-# <a name="iterators"></a>Iterators
+# <a name="iterators"></a>迭代器
 
 编写的几乎每个程序都需要循环访问集合。 因此需要编写代码来检查集合中的每一项。
 

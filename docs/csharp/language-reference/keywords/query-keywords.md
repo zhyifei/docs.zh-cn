@@ -5,12 +5,12 @@ helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: 3c08c2b6ecdaa4b875f118531e7e77f7164dd784
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 01134eda540c5141afbd11b2c89ff779da495a9a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713152"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173518"
 ---
 # <a name="query-keywords-c-reference"></a>查询关键字（C# 参考）
 
@@ -18,7 +18,7 @@ ms.locfileid: "75713152"
 
 ## <a name="in-this-section"></a>本节内容
 
-|子句|描述|
+|子句|说明|
 |------------|-----------------|
 |[from](from-clause.md)|指定数据源和范围变量（类似于迭代变量）。|
 |[where](where-clause.md)|基于由逻辑 AND 和 OR 运算符（`&&` 或 <code>&#124;&#124;</code>）分隔的一个或多个布尔表达式筛选源元素。|
@@ -35,9 +35,8 @@ ms.locfileid: "75713152"
 |[ascending](ascending.md)|[orderby](orderby-clause.md) 子句中的上下文关键字。|
 |[descending](descending.md)|[orderby](orderby-clause.md) 子句中的上下文关键字。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 关键字](index.md)
 - [LINQ（语言集成查询）](../../programming-guide/concepts/linq/index.md)
 - [C# 中的 LINQ](../../linq/index.md)
-- [C# 中的 LINQ 入门](/dotnet/csharp/programming-guide/concepts/linq/)

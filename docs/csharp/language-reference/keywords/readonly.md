@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: c3db8f7791e510768608e834339526fb82771979
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 165b6287e1610e013b289601e1535a08fdd3b5c9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451936"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398123"
 ---
 # <a name="readonly-c-reference"></a>readonly（C# 参考）
 
 `readonly` 关键字是一个可在四个上下文中使用的修饰符：
 
-- 在[字段声明](#readonly-field-example)中，`readonly` 指示只能在声明期间或在同一个类的构造函数中向字段赋值。 可以在字段声明和构造函数中多次分配和重新分配只读字段。 
+- 在[字段声明](#readonly-field-example)中，`readonly` 指示只能在声明期间或在同一个类的构造函数中向字段赋值。 可以在字段声明和构造函数中多次分配和重新分配只读字段。
   
   构造函数退出后，不能分配 `readonly` 字段。 此规则对于值类型和引用类型具有不同的含义：
   
-  - 由于值类型直接包含数据，因此属于 `readonly` 值类型的字段不可变。 
+  - 由于值类型直接包含数据，因此属于 `readonly` 值类型的字段不可变。
   - 由于引用类型包含对其数据的引用，因此属于 `readonly` 引用类型的字段必须始终引用同一对象。 该对象是可变的。 `readonly` 修饰符可防止字段替换为引用类型的其他实例。 但是，修饰符不会阻止通过只读字段修改字段的实例数据。
 
   > [!WARNING]
@@ -135,7 +135,7 @@ public readonly int Index { get; }
 // Or:
 public int Number { readonly get; }
 public string Message { readonly get; set; }
-``` 
+```
 
 可以在这些位置添加 `readonly` 修饰符，但不会产生任何有意义的效果。 不能将 `readonly` 修饰符添加到自动实现的属性资源库或读/写自动实现的属性中。
 

@@ -3,12 +3,12 @@ title: 类和对象 - C# 简介教程
 description: 创建首个 C# 程序，并探索面向对象的概念
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 06d1a30abc0d031badcba4ec60f7deb3c670a3ae
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: b6ad72997647b80b981f1a1871e384791404bdf7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634945"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156588"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>使用类和对象探索面向对象的编程
 
@@ -16,7 +16,7 @@ ms.locfileid: "75634945"
 
 ## <a name="create-your-application"></a>创建应用程序
 
-使用终端窗口，创建名为 classes 的目录。 可以在其中生成应用程序。 将此目录更改为当前目录，并在控制台窗口中键入 `dotnet new console`。 此命令可创建应用程序。 打开 Program.cs。 应如下所示：
+使用终端窗口，创建名为 classes  的目录。 可以在其中生成应用程序。 将此目录更改为当前目录，并在控制台窗口中键入 `dotnet new console`。 此命令可创建应用程序。 打开 Program.cs  。 应如下所示：
 
 ```csharp
 using System;
@@ -33,7 +33,7 @@ namespace classes
 }
 ```
 
-在本教程中，将要新建表示银行帐户的类型。 通常情况下，开发者都会在不同的文本文件中定义每个类。 这样可以更轻松地管理不断增大的程序。 在 classes 目录中，新建名为 BankAccount.cs 的文件。 
+在本教程中，将要新建表示银行帐户的类型。 通常情况下，开发者都会在不同的文本文件中定义每个类。 这样可以更轻松地管理不断增大的程序。 在 classes  目录中，新建名为 BankAccount.cs  的文件。
 
 此文件包含“银行帐户”定义。 面向对象的编程组织代码的方式为，创建类形式的类型。 这些类包含表示特定实体的代码。 `BankAccount` 类表示银行帐户。 代码通过方法和属性实现特定操作。 在本教程中，银行帐户支持以下行为：
 
@@ -71,13 +71,13 @@ namespace classes
 }
 ```
 
-继续操作前，先来看看已经生成的内容。  借助 `namespace` 声明，可以按逻辑组织代码。 由于本教程的篇幅较小，因此所有代码都将添加到一个命名空间中。 
+继续操作前，先来看看已经生成的内容。  借助 `namespace` 声明，可以按逻辑组织代码。 由于本教程的篇幅较小，因此所有代码都将添加到一个命名空间中。
 
-`public class BankAccount` 定义要创建的类或类型。 类声明后面 `{` 和 `}` 中的所有内容定义了类的状态和行为。 `BankAccount` 类有五个成员。 前三个成员是属性。 属性是数据元素，可以包含强制执行验证或其他规则的代码。 最后两个成员是方法。 方法是执行一个函数的代码块。 读取每个成员的名称应该能够为自己或其他开发者提供了解类用途的足够信息。
+`public class BankAccount` 定义要创建的类或类型。 类声明后面 `{` 和 `}` 中的所有内容定义了类的状态和行为。 ***类有五个成员***`BankAccount`。 前三个成员是属性。 属性是数据元素，可以包含强制执行验证或其他规则的代码。 最后两个成员是方法。 方法是执行一个函数的代码块。 读取每个成员的名称应该能够为自己或其他开发者提供了解类用途的足够信息。
 
 ## <a name="open-a-new-account"></a>打开新帐户
 
-要实现的第一个功能是打开银行帐户。 打开帐户时，客户必须提供初始余额，以及此帐户的一个或多个所有者的相关信息。 
+要实现的第一个功能是打开银行帐户。 打开帐户时，客户必须提供初始余额，以及此帐户的一个或多个所有者的相关信息。
 
 新建 `BankAccount` 类型的对象意味着，定义可分配这些值的构造函数。 构造函数是与类同名的成员。 用于初始化相应类类型的对象。 将以下构造函数添加到 `BankAccount` 类型中：
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-构造函数是在使用 [`new`](../../language-reference/operators/new-operator.md) 创建对象时进行调用。 将 Program.cs 中的代码行 `Console.WriteLine("Hello World!");` 替换为以下代码行（将 `<name>` 替换为自己的名称）：
+构造函数是在使用 [`new`](../../language-reference/operators/new-operator.md) 创建对象时进行调用。 将 Program.cs`Console.WriteLine("Hello World!");`*中的代码行* 替换为以下代码行（将 `<name>` 替换为自己的名称）：
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -119,37 +119,37 @@ accountNumberSeed++;
 
 银行帐户类必须接受存款和取款，才能正常运行。 接下来，将为银行帐户创建每笔交易日记，实现存款和取款。 与仅更新每笔交易余额相比，这样做有一些优点。 历史记录可用于审核所有交易，并管理每日余额。 通过在需要时根据所有交易的历史记录计算余额，单笔交易中修正的任何错误将会在下次计算余额时得到正确体现。
 
-接下来，先新建表示交易的类型。 这是一个没有任何责任的简单类型。 但需要有多个属性。 新建名为 Transaction.cs 的文件。 向新文件添加以下代码：
+接下来，先新建表示交易的类型。 这是一个没有任何责任的简单类型。 但需要有多个属性。 新建名为 Transaction.cs  的文件。 向新文件添加以下代码：
 
-[!code-csharp[Transaction](~/samples/csharp/classes-quickstart/Transaction.cs)]
+[!code-csharp[Transaction](~/samples/snippets/csharp/classes-quickstart/Transaction.cs)]
 
-现在，将 `Transaction` 对象的 <xref:System.Collections.Generic.List%601> 添加到 `BankAccount` 类中。 添加以下声明：
+现在，将 <xref:System.Collections.Generic.List%601> 对象的 `Transaction` 添加到 `BankAccount` 类中。 添加以下声明：
 
-[!code-csharp[TransactionDecl](~/samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
+[!code-csharp[TransactionDecl](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
-<xref:System.Collections.Generic.List%601> 类要求导入不同的命名空间。 在 BankAccount.cs 的开头，添加以下代码：
+<xref:System.Collections.Generic.List%601> 类要求导入不同的命名空间。 在 BankAccount.cs  的开头，添加以下代码：
 
 ```csharp
 using System.Collections.Generic;
 ```
 
-现在，更改 `Balance` 的报告方式。  可以通过对所有交易的值进行求和计算余额。 将 `BankAccount` 类中 `Balance` 的声明修改为如下所示：
+现在，更改 `Balance` 的报告方式。  可以通过对所有交易的值进行求和计算余额。 将 `Balance` 类中 `BankAccount` 的声明修改为如下所示：
 
-[!code-csharp[BalanceComputation](~/samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
+[!code-csharp[BalanceComputation](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
 
 此示例反映了属性的一个重要方面。 现在，可以在其他程序员要求获取余额时计算值。 计算会枚举所有交易，总和即为当前余额。
 
-接下来，实现 `MakeDeposit` 和 `MakeWithdrawal` 方法。 这些方法将强制执行最后两条规则：初始余额必须为正数，且取款后的余额不能是负数。 
+接下来，实现 `MakeDeposit` 和 `MakeWithdrawal` 方法。 这些方法将强制执行最后两条规则：初始余额必须为正数，且取款后的余额不能是负数。
 
 这就引入了异常的概念。 指明方法无法成功完成工作的标准方法是抛出异常。 异常类型及其关联消息描述了错误。 在此示例中，如果存款金额为负数，`MakeDeposit` 方法会抛出异常。 如果取款金额为负数，或取款后的余额为负数，`MakeWithdrawal` 方法会抛出异常：
 
-[!code-csharp[DepositAndWithdrawal](~/samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
+[!code-csharp[DepositAndWithdrawal](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
-[`throw`](../../language-reference/keywords/throw.md) 语句将引发异常。 当前块执行结束，将控制权移交给在调用堆栈中发现的第一个匹配的 `catch` 块。 添加 `catch` 块可以稍后再测试一下此代码。
+[`throw`](../../language-reference/keywords/throw.md) 语句将引发异常  。 当前块执行结束，将控制权移交给在调用堆栈中发现的第一个匹配的 `catch` 块。 添加 `catch` 块可以稍后再测试一下此代码。
 
 构造函数应进行一处更改，更改为添加初始交易，而不是直接更新余额。 由于已编写 `MakeDeposit` 方法，因此通过构造函数调用它。 完成的构造函数应如下所示：
 
-[!code-csharp[Constructor](~/samples/csharp/classes-quickstart/BankAccount.cs#Constructor)]
+[!code-csharp[Constructor](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#Constructor)]
 
 <xref:System.DateTime.Now?displayProperty=nameWithType> 是返回当前日期和时间的属性。 在 `Main` 方法中添加几个存款和取款，对此进行测试：
 
@@ -196,11 +196,11 @@ catch (InvalidOperationException e)
 
 为了完成本教程，可以编写 `GetAccountHistory` 方法，为交易历史记录创建 `string`。 将此方法添加到 `BankAccount` 类型中：
 
-[!code-csharp[History](~/samples/csharp/classes-quickstart/BankAccount.cs#History)]
+[!code-csharp[History](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#History)]
 
 上面的代码使用 <xref:System.Text.StringBuilder> 类，设置包含每个交易行的字符串的格式。 在前面的教程中，也遇到过字符串格式设置代码。 新增的一个字符为 `\t`。 这用于插入选项卡，从而设置输出格式。
 
-添加以下代码行，在 Program.cs 中对它进行测试：
+添加以下代码行，在 Program.cs  中对它进行测试：
 
 ```csharp
 Console.WriteLine(account.GetAccountHistory());

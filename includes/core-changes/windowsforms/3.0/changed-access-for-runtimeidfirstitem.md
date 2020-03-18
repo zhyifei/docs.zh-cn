@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5bbbf9075683b0f124e126b661b4ab85011e6c2e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74643927"
 ---
 ### <a name="change-of-access-for-accessibleobjectruntimeidfirstitem"></a>更改访问 AccessibleObject.RuntimeIDFirstItem 的权限
@@ -18,7 +18,7 @@ ms.locfileid: "74643927"
 
 3.0 RC1
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 如果开发的 .NET Core 应用的类型派生自 <xref:System.Windows.Forms.AccessibleObject>，访问 `RuntimeIDFirstItem` 字段时，此更改可能会对你产生影响。 如果是这种情况，可以按如下方式定义局部常量：
 

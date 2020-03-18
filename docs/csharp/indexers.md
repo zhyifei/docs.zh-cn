@@ -4,12 +4,12 @@ description: 了解 C# 索引器以及它们如何实现索引属性，这些属
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 966483e80d8dd0421dce1b7fabdb0d443d73a0fc
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 8e583b8a7cedab61ea6fdd56587608907610b6b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450877"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79145679"
 ---
 # <a name="indexers"></a>索引器
 
@@ -39,7 +39,7 @@ public int this[string key]
 
 属性的各种用法同样适用于索引器。 此规则的唯一例外是“自动实现属性”  。 编译器无法始终为索引器生成正确的存储。
 
-用于引用项的集合中的某个项的参数可区分索引器和属性。 只要每个索引器的参数列表是唯一的，就可以对一个类型定义多个索引器。 让我们来探讨可能在类定义中使用一个或多个索引器的不同场景。 
+用于引用项的集合中的某个项的参数可区分索引器和属性。 只要每个索引器的参数列表是唯一的，就可以对一个类型定义多个索引器。 让我们来探讨可能在类定义中使用一个或多个索引器的不同场景。
 
 ## <a name="scenarios"></a>方案
 
@@ -50,7 +50,7 @@ public int this[string key]
 
 ### <a name="arrays-and-vectors"></a>数组和矢量
 
-创建索引器的一个最常见的场景是当类型对数组或矢量进行建模时。 可以创建一个索引器用于对已排序的数据列表进行建模。 
+创建索引器的一个最常见的场景是当类型对数组或矢量进行建模时。 可以创建一个索引器用于对已排序的数据列表进行建模。
 
 创建自己的索引器的优点是你可以为集合定义存储以满足你的需求。 假设以下场景：类型对历史数据进行建模，并且此历史数据太大而无法立即加载到内存中。 需要根据使用情况加载和卸载集合的某些部分。 以下示例对此行为进行建模。 此示例报告存在多少数据点。 此示例按需创建页以存储部分数据。 此示例从内存中删除页，以便为较新的请求所需的页腾出空间。
 
@@ -224,9 +224,10 @@ public class ArgsActions
 
 ### <a name="multi-dimensional-maps"></a>多维映射
 
-可以创建使用多个参数的索引器。 此外，这些参数未限制为相同的类型。 请看以下两个示例。   
+可以创建使用多个参数的索引器。 此外，这些参数未限制为相同的类型。 请看以下两个示例。
 
-第一个示例演示为 Mandelbrot 集合生成值的类。 有关此集合背后的数学原理的详细信息，请参阅[这篇文章](https://en.wikipedia.org/wiki/Mandelbrot_set)。 索引器使用两个双精度型来定义平面 XY 上的一个点。
+第一个示例演示为 Mandelbrot 集合生成值的类。 有关此集合背后的数学原理的详细信息，请参阅[这篇文章](https://en.wikipedia.org/wiki/Mandelbrot_set)。
+索引器使用两个双精度型来定义平面 XY 上的一个点。
 Get 访问器计算迭代的次数，直到确定某个点不在集合中。 如果达到最大迭代数，并且点在集合中，则返回类的 maxIterations 值。 （Mandelbrot 集合常用的计算机生成的图像定义迭代数量的颜色，以便确定一个点是否在集合外部。
 
 ```csharp
@@ -267,9 +268,9 @@ Mandelbrot 集合在每个 (x,y) 坐标上为实际数值定义值。
 请查看上一次索引器的使用，其中索引器采用多个不同类型的参数。 请考虑一个管理历史温度数据的程序。 此索引器使用一个城市和一个日期来设置或获取位置的高温和低温：
 
 ```csharp
-using DateMeasurements = 
+using DateMeasurements =
     System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>;
-using CityDataMeasurements = 
+using CityDataMeasurements =
     System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>>;
 
 public class HistoricalWeatherData
@@ -319,7 +320,8 @@ using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, 
 using CityDataMeasurements = System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>>;
 ```
 
-为构造泛型类型创建别名  。 通过这些语句，稍后代码可以使用更具描述性的 `DateMeasurements` 和 `CityDateMeasurements` 名称，而不是 `Dictionary<DateTime, Measurements>` 和 `Dictionary<string, Dictionary<DateTime, Measurements> >` 的泛型构造。 此构造要求在 `=` 符号右侧使用完全限定的类型名称。
+为构造泛型类型创建别名  。 通过这些语句，稍后代码可以使用更具描述性的 `DateMeasurements` 和 `CityDateMeasurements` 名称，而不是 `Dictionary<DateTime, Measurements>` 和 `Dictionary<string, Dictionary<DateTime, Measurements> >` 的泛型构造。
+此构造要求在 `=` 符号右侧使用完全限定的类型名称。
 
 另一项技术是对任何用于集合的索引的 `DateTime` 对象剥离时间部分。 .NET 不包含仅日期类型。
 开发人员使用 `DateTime` 类型，但使用 `Date` 属性来确保这一天的任何 `DateTime` 对象是对等的。

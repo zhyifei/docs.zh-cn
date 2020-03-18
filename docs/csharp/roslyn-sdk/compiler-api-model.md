@@ -3,16 +3,16 @@ title: .NET Compiler Platform SDK 概念和对象模型
 description: 此概述提供了高效使用 .NET 编译器 SDK 所需的背景。 介绍了 API 层、涉及的主要类型以及总体对象模型。
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: ee8f902bf1df8b63e229fd518e7a0c592fcd47ca
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e563260e21fb8807017db90ff63e30fec0415a48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675701"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156956"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>了解 .NET Compiler Platform SDK 模型
 
-编译器按照结构化规则处理代码，这些规则通常不同于用户读取和理解代码的方式。 基本了解编译器使用的模型对于了解生成基于 Roslyn 的工具时使用的 API 至关重要。 
+编译器按照结构化规则处理代码，这些规则通常不同于用户读取和理解代码的方式。 基本了解编译器使用的模型对于了解生成基于 Roslyn 的工具时使用的 API 至关重要。
 
 ## <a name="compiler-pipeline-functional-areas"></a>编译器管道功能区域
 
@@ -30,7 +30,7 @@ ms.locfileid: "57675701"
 
 每个编译器将这些组件合并在一起，组成一个端到端整体。
 
-这些 API 与 Visual Studio 使用的 API 相同。 例如，代码大纲和格式设置功能使用语法树，对象浏览器和导航功能使用符号表，重构和转到定义使用语义模型，编辑并继续使用所有这些信息，包括发出 API。 
+这些 API 与 Visual Studio 使用的 API 相同。 例如，代码大纲和格式设置功能使用语法树，对象浏览器和导航功能使用符号表，重构和转到定义使用语义模型，编辑并继续使用所有这些信息，包括发出 API。
 
 ## <a name="api-layers"></a>API 层
 

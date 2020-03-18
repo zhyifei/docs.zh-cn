@@ -2,12 +2,12 @@
 title: 示例 XML 文件：命名空间中的典型采购订单
 ms.date: 07/20/2015
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
-ms.openlocfilehash: 59ef22c73345fa13278795a6363871b3657e5b8f
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 001a12210c2252d9718425d0d4013bdbdf25b996
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868688"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167959"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>示例 XML 文件：命名空间中的典型采购订单
 下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 此文件是典型的采购单。 该 XML 在某个命名空间中。  
@@ -53,4 +53,3 @@ ms.locfileid: "68868688"
   </aw:Items>  
 </aw:PurchaseOrder>  
 ```  
- 

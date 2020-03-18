@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 8e4518718d0975f8b4a65870f15d8c52d692c2f5
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a9e80ecb3288479a2ca81b43c9d088809ed5f2f0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625730"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847282"
 ---
 # <a name="sizeof-operator-c-reference"></a>sizeof 运算符（C# 参考）
 
@@ -20,7 +20,7 @@ ms.locfileid: "77625730"
 
 `sizeof` 运算符需要[不安全](../keywords/unsafe.md)上下文。 但下表中的表达式在编译时被计算为相应的常数值，并不需要“不安全”的上下文：
 
-|表达式|常量值|
+|Expression|常量值|
 |---------|---------------|
 |`sizeof(sbyte)`|1|
 |`sizeof(byte)`|1|
@@ -40,15 +40,15 @@ ms.locfileid: "77625730"
 
 下面的示例演示 `sizeof` 运算符的用法：
 
-[!code-csharp[sizeof examples](~/samples/csharp/language-reference/operators/SizeOfOperator.cs)]
+[!code-csharp[sizeof examples](snippets/SizeOfOperator.cs)]
 
 `sizeof` 运算符返回公共语言运行时将在托管内存中分配的字节数。 对于[结构](../builtin-types/struct.md)类型，该值包括了填充（如有），如前例所示。 `sizeof` 运算符的结果可能异于 <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> 方法的结果，该方法返回某个类型在*非托管*内存中的大小。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的 [sizeof 运算符](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator)的 [sizeof 运算符](~/_csharplang/spec/introduction.md)部分。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)

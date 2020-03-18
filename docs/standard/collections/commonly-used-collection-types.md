@@ -13,10 +13,10 @@ helpviewer_keywords:
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
 ms.openlocfilehash: 1004a2f9a0594d9150d147dec1e16b56205e0d13
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711397"
 ---
 # <a name="commonly-used-collection-types"></a>常用的集合类型
@@ -32,14 +32,14 @@ ms.locfileid: "75711397"
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|描述|  
+|标题|说明|  
 |-----------|-----------------|  
 |[集合和数据结构](../../../docs/standard/collections/index.md)|讨论在 .NET Framework 中提供的各种集合类型，包括堆栈、队列、列表、数组和字典。|  
 |[哈希表和字典集合类型](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|描述泛型和非泛型的基于哈希的字典类型的功能。|  
 |[已排序的集合类型](../../../docs/standard/collections/sorted-collection-types.md)|描述为列表和集提供排序功能的类。|  
 |[泛型](../../../docs/standard/generics/index.md)|描述泛型功能，包括 .NET Framework 提供的泛型集合、委托和接口。 为 C#、Visual Basic 和 Visual C++ 提供功能文档链接和支持技术（如反射）链接。|  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Collections?displayProperty=nameWithType>  
   
  <xref:System.Collections.Generic?displayProperty=nameWithType>  

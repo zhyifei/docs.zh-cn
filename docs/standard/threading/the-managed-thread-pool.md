@@ -10,11 +10,11 @@ helpviewer_keywords:
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 ms.openlocfilehash: 2671ce7c9721b15de8a3805da27040e973a62804
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127535"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398555"
 ---
 # <a name="the-managed-thread-pool"></a>托管线程池
 
@@ -65,7 +65,7 @@ ms.locfileid: "73127535"
 
 也可以通过从托管代码调用 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType>（或从非托管代码调用 [`ICorThreadpool::CorQueueUserWorkItem`](../../framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md)）并传递表示执行任务的方法的 <xref:System.Threading.WaitCallback?displayProperty=nameWithType> 委托来使用线程池。
 
-使用线程池的另一种方法是通过使用 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法并传递在发出信号或超时的时候调用 <xref:System.Threading.WaitOrTimerCallback?displayProperty=nameWithType> 委托所表示的方法的 <xref:System.Threading.WaitHandle?displayProperty=nameWithType>，从而对与等待操作相关的工作项排队。 线程池线程用于调用回调方法。  
+使用线程池的另一种方法是通过使用 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法并传递在发出信号或超时的时候调用 <xref:System.Threading.WaitHandle?displayProperty=nameWithType> 委托所表示的方法的 <xref:System.Threading.WaitOrTimerCallback?displayProperty=nameWithType>，从而对与等待操作相关的工作项排队。 线程池线程用于调用回调方法。  
 
 有关示例，请查看引用的 API 页面。
   
@@ -83,7 +83,7 @@ ms.locfileid: "73127535"
 - 需将线程放入单线程单元。 所有 <xref:System.Threading.ThreadPool> 线程均位于多线程单元中。  
 - 需具有与线程关联的稳定标识，或需将一个线程专用于一项任务。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.ThreadPool?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
@@ -92,5 +92,5 @@ ms.locfileid: "73127535"
 - [如何：从任务中返回值](../parallel-programming/how-to-return-a-value-from-a-task.md)
 - [线程处理对象和功能](threading-objects-and-features.md)
 - [线程与线程处理](threads-and-threading.md)
-- [Asynchronous File I/O](../io/asynchronous-file-i-o.md)
+- [异步文件 I/O](../io/asynchronous-file-i-o.md)
 - [计时器](timers.md)

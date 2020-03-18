@@ -5,18 +5,18 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/13/2019
 ms.topic: tutorial
-ms.openlocfilehash: bd91fb401b9beb6ae74c4599b25e43284473f8b0
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 460c37e66c2c0a8a9b197a9abaff9eead842bdeb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75466423"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187557"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>教程：使用 .NET for Apache Spark 进行批处理
 
-在本教程中，了解如何使用 .NET for Apache Spark 进行批处理。 批处理是指静态数据的转换，这意味着源数据已经加载到数据存储中。 
+在本教程中，了解如何使用 .NET for Apache Spark 进行批处理。 批处理是指静态数据的转换，这意味着源数据已经加载到数据存储中。
 
-批处理通常在需要为进一步分析做好准备的大型、平面数据集上执行。 日志处理和数据仓库是常见的批处理方案。 在这种情况下，你将分析有关 GitHub 项目的信息，如不同项目的分叉次数或项目最近的更新情况。 
+批处理通常在需要为进一步分析做好准备的大型、平面数据集上执行。 日志处理和数据仓库是常见的批处理方案。 在这种情况下，你将分析有关 GitHub 项目的信息，如不同项目的分叉次数或项目最近的更新情况。
 
 在本教程中，你将了解：
 
@@ -26,7 +26,7 @@ ms.locfileid: "75466423"
 > * 将数据读入 DataFrame 并准备进行分析
 > * 使用 Spark SQL 处理数据
 
-## <a name="prerequisites"></a>先决条件 
+## <a name="prerequisites"></a>先决条件
 
 如果这是你第一次使用 .NET for Apache Spark，请参阅 [.NET for Apache Spark 入门](../tutorials/get-started.md)教程，了解如何准备环境并运行第一个 .NET for Apache Spark 应用程序。
 
@@ -128,7 +128,7 @@ Spark SQL 允许对数据进行 SQL 调用。 常见的方法是将用户定义�
 
    ```csharp
    // Sort by most forked languages first
-   groupedDF.OrderBy(Desc("avg(forked_from)")).Show(); 
+   groupedDF.OrderBy(Desc("avg(forked_from)")).Show();
    ```
 
 1. 下一个代码块显示最近项目的更新情况。 注册名为“MyUDF”  的新用户定义的函数，并将其与在教程开头声明的日期 s_referenceDate  进行比较。 将每个项目的日期与参考日期进行比较。 然后，使用 Spark SQL 对每个数据行调用 UDF，以分析数据集中的每个项目。
@@ -137,8 +137,8 @@ Spark SQL 允许对数据进行 SQL 调用。 常见的方法是将用户定义�
    spark.Udf().Register<string, bool>(
        "MyUDF",
        (date) => DateTime.TryParse(date, out DateTime convertedDate) &&
-           (convertedDate > s_referenceDate);   
-   cleanedProjects.CreateOrReplaceTempView("dateView"); 
+           (convertedDate > s_referenceDate);
+   cleanedProjects.CreateOrReplaceTempView("dateView");
 
    DataFrame dateDf = spark.Sql(
        "SELECT *, MyUDF(dateView.updated_at) AS datebefore FROM dateView");

@@ -1,12 +1,12 @@
 ---
 title: 演练：使用 C# 保留对象
 ms.date: 04/26/2018
-ms.openlocfilehash: 5e3a327ca0a257c45de361e0b3734e0b127f9869
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 85c5d1b711180eda5734d5860d996242c6bc89d1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851040"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167565"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>演练：使用 C\# 保留对象
 
@@ -29,7 +29,7 @@ ms.locfileid: "70851040"
 > [!TIP]
 > 需要安装代码编辑器？ 试用 [Visual Studio](https://visualstudio.com/downloads)！
 
-- 该示例需要 C# 7.3。 请参阅[选择 C# 语言版本](../../../language-reference/configure-language-version.md) 
+- 该示例需要 C# 7.3。 请参阅[选择 C# 语言版本](../../../language-reference/configure-language-version.md)
 
 可在 [.NET 示例 GitHub 存储库](https://github.com/dotnet/samples/tree/master/csharp/serialization)在线检查示例代码。
 
@@ -41,7 +41,7 @@ ms.locfileid: "70851040"
 1. 在编辑器中打开应用程序，然后添加名为 `Loan.cs` 的新类。
 1. 将以下代码添加到 `Loan` 类：
 
-[!code-csharp[Loan class definition](../../../../../samples/csharp/serialization/Loan.cs#1)]
+[!code-csharp[Loan class definition](../../../../../samples/snippets/csharp/serialization/Loan.cs#1)]
 
 还需要创建一个使用 `Loan` 类的应用程序。
 
@@ -49,11 +49,11 @@ ms.locfileid: "70851040"
 
 1. 打开 `Program.cs`。 添加以下代码：
 
-[!code-csharp[Create a loan object](../../../../../samples/csharp/serialization/Program.cs#1)]
+[!code-csharp[Create a loan object](../../../../../samples/snippets/csharp/serialization/Program.cs#1)]
 
 添加 `PropertyChanged` 事件的事件处理程序和几行以修改 `Loan` 对象并显示此更改。 你可以在下列代码中查看添加项：
 
-[!code-csharp[Listening for the PropertyChanged event](../../../../../samples/csharp/serialization/Program.cs#2)]
+[!code-csharp[Listening for the PropertyChanged event](../../../../../samples/snippets/csharp/serialization/Program.cs#2)]
 
 现在，可运行该代码，并查看当前输出：
 
@@ -69,37 +69,37 @@ New customer value: Henry Clay
 
 为了保持 Loan 类的值，必须首先使用 `Serializable` 属性标记该类。 将下面的代码添加到 Loan 类声明的上方：
 
-[!code-csharp[Loan class definition](../../../../../samples/csharp/serialization/Loan.cs#2)]
+[!code-csharp[Loan class definition](../../../../../samples/snippets/csharp/serialization/Loan.cs#2)]
 
 <xref:System.SerializableAttribute> 通知编译器可将类中的所有内容保留到文件中。 因为 `PropertyChanged` 事件不表示应该存储的对象图的部分，所以它不应序列化。 执行此操作可能将所有附加到该事件的对象序列化。 可将 <xref:System.NonSerializedAttribute> 添加到 `PropertyChanged` 事件处理程序的字段声明。
 
-[!code-csharp[Disable serialization for the event handler](../../../../../samples/csharp/serialization/Loan.cs#3)]
+[!code-csharp[Disable serialization for the event handler](../../../../../samples/snippets/csharp/serialization/Loan.cs#3)]
 
 从 C# 7.3 开始，可使用 `field` 目标值将特性附加到自动实现的属性的支持字段。 以下代码添加 `TimeLastLoaded` 属性并将其标记为不可序列化：
 
-[!code-csharp[Disable serialization for an auto-implemented property](../../../../../samples/csharp/serialization/Loan.cs#4)]
+[!code-csharp[Disable serialization for an auto-implemented property](../../../../../samples/snippets/csharp/serialization/Loan.cs#4)]
 
 下一步是向 LoanApp 应用程序添加序列化代码。 为了将该类序列化并将其写入到文件，可使用 <xref:System.IO> 和 <xref:System.Runtime.Serialization.Formatters.Binary> 命名空间。 为了避免键入完全限定的名称，可以添加对必要命名空间的引用，如以下代码所示：
 
-[!code-csharp[Adding namespaces for serialization](../../../../../samples/csharp/serialization/Program.cs#3)]
+[!code-csharp[Adding namespaces for serialization](../../../../../samples/snippets/csharp/serialization/Program.cs#3)]
 
 下一步是添加代码，在创建对象时对文件中的对象进行反序列化。 向序列化数据的文件名的类中添加一个常量，如以下代码所示：
 
-[!code-csharp[Define the name of the saved file](../../../../../samples/csharp/serialization/Program.cs#4)]
+[!code-csharp[Define the name of the saved file](../../../../../samples/snippets/csharp/serialization/Program.cs#4)]
 
 接下来，在创建 `TestLoan` 对象的行后添加以下代码：
 
-[!code-csharp[Read from a file if it exists](../../../../../samples/csharp/serialization/Program.cs#5)]
+[!code-csharp[Read from a file if it exists](../../../../../samples/snippets/csharp/serialization/Program.cs#5)]
 
 首先必须检查该文件是否存在。 如果存在，则创建 <xref:System.IO.Stream> 类来读取二进制文件和 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 类，以转换该文件。 还需将流类型转换为 Loan 对象类型。
 
 然后必须添加代码以将该类序列化到文件中。 以 `Main` 方式在现有代码后添加以下代码：
 
-[!code-csharp[Save the existing Loan object](../../../../../samples/csharp/serialization/Program.cs#6)]
+[!code-csharp[Save the existing Loan object](../../../../../samples/snippets/csharp/serialization/Program.cs#6)]
 
 此时可再次生成并运行应用程序。 首次运行时，请注意起始利率为 7.5，然后更改为 7.1. 关闭该应用程序，然后重新运行。 现在，应用程序打印已读取所保存文件的消息，即使在代码更改它之前，利率也是 7.1。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [序列化 (C#)](index.md)
 - [C# 编程指南](../..//index.md)

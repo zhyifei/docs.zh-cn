@@ -8,18 +8,18 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 6113912f176d2d7b68c77ff2e78a361b373ca31a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: b85d0df086f3ca65ed995594dd374286e1c3ba5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634637"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847724"
 ---
 # <a name="structure-types-c-reference"></a>结构类型（C# 参考）
 
-结构类型（ *“structure type”* 或 *“struct type”* ）是一种可封装数据和相关功能的[值类型](value-types.md)。 使用 `struct` 关键字定义结构类型：
+结构类型（“structure type”或“struct type”）是一种可封装数据和相关功能的值类型   [](value-types.md)。 使用 `struct` 关键字定义结构类型：
 
-[!code-csharp[struct example](~/samples/csharp/language-reference/builtin-types/StructType.cs#StructExample)]
+[!code-csharp[struct example](snippets/StructType.cs#StructExample)]
 
 结构类型具有值语义  。 也就是说，结构类型的变量包含类型的实例。 默认情况下，在分配中，通过将参数传递给方法并返回方法结果来复制变量值。 对于结构类型变量，将复制该类型的实例。 有关更多信息，请参阅[值类型](value-types.md)。
 
@@ -47,7 +47,7 @@ ms.locfileid: "77634637"
 
 如果结构类型的所有实例字段都是可访问的，则还可以在不使用 `new` 运算符的情况下对其进行实例化。 在这种情况下，在首次使用实例之前必须初始化所有实例字段。 下面的示例演示如何执行此操作：
 
-[!code-csharp[without new](~/samples/csharp/language-reference/builtin-types/StructType.cs#WithoutNew)]
+[!code-csharp[without new](snippets/StructType.cs#WithoutNew)]
 
 在处理[内置值类型](value-types.md#built-in-value-types)的情况下，请使用相应的文本来指定类型的值。
 

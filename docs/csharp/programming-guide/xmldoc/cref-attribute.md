@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: 2a9b9966a28b62c41ac6091268ae172bae3a40d7
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b06d0c9d447124dec7d8cf3c0cbbfd0daca78fe3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793447"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157008"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref 属性（C# 编程指南）
 
@@ -17,11 +17,11 @@ XML 文档标记中的 `cref` 属性是指“代码引用”。 它指定标记�
 
 ## <a name="example"></a>示例
 
-下面的示例演示了在 [\<see>](./see.md) 标记中使用的 `cref` 属性。
+下面的示例演示了在 `cref`[see>\< 标记中使用的 ](./see.md) 属性。
 
 [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]
 
-在编译时，该程序生成以下 XML 文件。 请注意，例如 `GetZero` 方法的 `cref` 属性已被编译器转换为 `"M:TestNamespace.TestClass.GetZero"`。 “M:”前缀表示“方法”，并且是一种由文档工具（例如 DocFX 和 Sandcastle）识别的约定。 有关前缀的完整列表，请参阅[处理 XML 文件](./processing-the-xml-file.md)。
+在编译时，该程序生成以下 XML 文件。 请注意，例如 `cref` 方法的 `GetZero` 属性已被编译器转换为 `"M:TestNamespace.TestClass.GetZero"`。 “M:”前缀表示“方法”，并且是一种由文档工具（例如 DocFX 和 Sandcastle）识别的约定。 有关前缀的完整列表，请参阅[处理 XML 文件](./processing-the-xml-file.md)。
 
 ```xml  
 <?xml version="1.0"?>
@@ -49,12 +49,12 @@ XML 文档标记中的 `cref` 属性是指“代码引用”。 它指定标记�
             <summary>
             The GetZero method.
             </summary>
-            <example> 
+            <example>
             This sample shows how to call the <see cref="M:TestNamespace.TestClass.GetZero"/> method.
             <code>
-            class TestClass 
+            class TestClass
             {
-                static int Main() 
+                static int Main()
                 {
                     return GetZero();
                 }
@@ -66,7 +66,7 @@ XML 文档标记中的 `cref` 属性是指“代码引用”。 它指定标记�
             <summary>
             The GetGenericValue method.
             </summary>
-            <remarks> 
+            <remarks>
             This sample shows how to specify the <see cref="M:TestNamespace.TestClass.GetGenericValue``1(``0)"/> method as a cref attribute.
             </remarks>
         </member>
@@ -74,7 +74,7 @@ XML 文档标记中的 `cref` 属性是指“代码引用”。 它指定标记�
             <summary>
             GenericClass.
             </summary>
-            <remarks> 
+            <remarks>
             This example shows how to specify the <see cref="T:TestNamespace.GenericClass`1"/> type as a cref attribute.
             </remarks>
         </member>
@@ -82,7 +82,7 @@ XML 文档标记中的 `cref` 属性是指“代码引用”。 它指定标记�
 </doc>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 文档注释](./index.md)
 - [建议的文档注释标记](./recommended-tags-for-documentation-comments.md)

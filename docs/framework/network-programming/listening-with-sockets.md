@@ -15,19 +15,19 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: d8db8cc6157ef0b03c90d00804696c7e660f08a3
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: cf8316ede6888b99a8b0c87cfa3426b33be18b7f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736777"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180740"
 ---
 # <a name="listening-with-sockets"></a>使用套接字侦听
 侦听器或服务器套接字打开网络上的端口，然后等待客户端连接到该端口。 虽然存在其他网络地址系列和协议，但本示例演示如何创建 TCP/IP 网络的远程服务。  
   
  通过将主机的 IP 地址与服务的端口号组合来定义 TCP/IP 服务的唯一地址，以创建该服务的终结点。 <xref:System.Net.Dns> 类提供了返回有关本地网络设备支持的网络地址信息的方法。 如果本地网络设备有多个网络地址或本地系统支持多个网络设备，该  Dns 类将返回所有网络地址信息，并且应用程序必须为此服务选择正确的地址。 Internet 编号分配机构 (IANA) 定义公共服务的端口号；有关详细信息，请参阅 [服务名称和传输协议端口号注册表](https://www.iana.org/assignments/port-numbers)。 其他服务可具有 1,024 到 65,535 范围内的注册端口号。  
   
- 通过将主机计算机的  Dns 返回的第一个 IP 地址与从已注册端口号范围内选择的端口号组合，以下示例为服务器创建 <xref:System.Net.IPEndPoint>。  
+ 通过将主机计算机的 <xref:System.Net.IPEndPoint>**Dns 返回的第一个 IP 地址与从已注册端口号范围内选择的端口号组合，以下示例为服务器创建** 。  
   
 ```vb  
 Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())  
@@ -45,7 +45,7 @@ IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
   
 ```vb  
 Dim listener As New Socket(ipAddress.AddressFamily, _  
-    SocketType.Stream, ProtocolType.Tcp) 
+    SocketType.Stream, ProtocolType.Tcp)
 listener.Bind(localEndPoint)  
 listener.Listen(100)  
 ```  
@@ -59,7 +59,7 @@ listener.Listen(100);
   
   Listen 方法使用一个参数，该参数指定在服务器忙错误返回到连接客户端之前，允许的挂起  套接字连接的数目。 在这种情况下，在服务器忙响应返回到客户端编号 101 前，最多 100 个客户端置于连接队列中。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用同步服务器套接字](using-a-synchronous-server-socket.md)
 - [使用异步服务器套接字](using-an-asynchronous-server-socket.md)

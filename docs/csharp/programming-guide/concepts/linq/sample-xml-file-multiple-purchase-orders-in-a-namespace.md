@@ -1,13 +1,13 @@
 ---
-title: 示例 XML 文件：Namespace2 中的多个采购单
+title: 示例 XML 文件：命名空间 2 中的多个采购订单
 ms.date: 07/20/2015
 ms.assetid: 595024f2-374a-4615-acb5-64fa1600f377
-ms.openlocfilehash: 05eb5dd7e6a73b03b693375441eb14f533105894
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f525f73854b52b8a4d70ff842c19d3bdda9c38d5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483710"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168182"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>示例 XML 文件：命名空间中的多个采购订单
 下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 此文件包含多个采购订单。 该 XML 在某个命名空间中。  
@@ -108,4 +108,3 @@ ms.locfileid: "66483710"
   </aw:PurchaseOrder>  
 </aw:PurchaseOrders>  
 ```  
- 

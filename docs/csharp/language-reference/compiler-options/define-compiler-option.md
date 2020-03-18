@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: cb9de387b319ff4b81dcd1ccc37f04d8b6b3123a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4a3622b6acc8ebe9c590b01b67074ae59396fc34
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924801"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173739"
 ---
 # <a name="-define-c-compiler-options"></a>-define（C# 编译器选项）
 -define 选项将 `name` 定义为程序中所有源代码文件的符号  。  
@@ -28,7 +28,7 @@ ms.locfileid: "69924801"
 ```  
   
 ## <a name="arguments"></a>自变量  
- `name`， `name2`  
+ `name`，`name2`  
  一个或多个要定义的符号的名称。  
   
 ## <a name="remarks"></a>备注  
@@ -38,7 +38,7 @@ ms.locfileid: "69924801"
   
  -d 是 -define 的缩写形式   。  
   
- 通过使用分号或逗号分隔符号名称，可用 -define 定义多个符号  。 例如:  
+ 通过使用分号或逗号分隔符号名称，可用 -define 定义多个符号  。 例如：  
   
 ```console  
 -define:DEBUG;TUESDAY  
@@ -65,11 +65,11 @@ ms.locfileid: "69924801"
 // or uncomment the next line  
 // #define xx  
 using System;  
-public class Test   
+public class Test
 {  
-    public static void Main()   
+    public static void Main()
     {  
-        #if (xx)   
+        #if (xx)
             Console.WriteLine("xx defined");  
         #else  
             Console.WriteLine("xx not defined");  

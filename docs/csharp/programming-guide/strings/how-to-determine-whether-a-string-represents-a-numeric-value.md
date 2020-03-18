@@ -6,18 +6,18 @@ helpviewer_keywords:
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: bd89024a0a9bd62927d2d5e0eda248b57bb7d21d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 15a21a6298f8f0a57e0189554246202b220dd259
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711917"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157060"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>如何确定字符串是否表示数值（C# 编程指南）
-若要确定字符串是否是指定数值类型的有效表示形式，请使用由所有基元数值类型以及如 <xref:System.DateTime> 和 <xref:System.Net.IPAddress> 等类型实现的静态 `TryParse` 方法。 以下示例演示如何确定“108”是否为有效的 [int](../../language-reference/builtin-types/integral-numeric-types.md)。  
+若要确定字符串是否是指定数值类型的有效表示形式，请使用由所有基元数值类型以及如 `TryParse` 和 <xref:System.DateTime> 等类型实现的静态 <xref:System.Net.IPAddress> 方法。 以下示例演示如何确定“108”是否为有效的 [int](../../language-reference/builtin-types/integral-numeric-types.md)。  
   
 ```csharp  
-int i = 0;   
+int i = 0;
 string s = "108";  
 bool result = int.TryParse(s, out i); //i now = 108  
 ```  
@@ -28,7 +28,7 @@ bool result = int.TryParse(s, out i); //i now = 108
 > 字符串可能仅包含数字字符，但对于你使用的 `TryParse` 方法的类型仍然无效。 例如，“256”不是 `byte` 的有效值，但对 `int` 有效。 “98.6”不是 `int` 的有效值，但它是有效的 `decimal`。  
   
 ## <a name="example"></a>示例  
- 以下示例演示如何对 `long`、`byte` 和 `decimal` 值的字符串表示形式使用 `TryParse`。  
+ 以下示例演示如何对 `TryParse`、`long` 和 `byte` 值的字符串表示形式使用 `decimal`。  
   
  [!code-csharp[csProgGuideStrings#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#14)]  
   
@@ -38,7 +38,7 @@ bool result = int.TryParse(s, out i); //i now = 108
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  请务必使用 `TryParse` 或 `Parse` 方法验证控件（如文本框和组合框）中的用户输入。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何将字节数组转换为 int](../types/how-to-convert-a-byte-array-to-an-int.md)
 - [如何将字符串转换为数字](../types/how-to-convert-a-string-to-a-number.md)

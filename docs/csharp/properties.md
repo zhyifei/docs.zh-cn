@@ -4,11 +4,11 @@ description: 了解 C# 属性，包括验证功能、计算值、迟缓计算及
 ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
 ms.openlocfilehash: bda8a4f58f71b57248296dd4ba9f9bf4cbed40d4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039747"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398687"
 ---
 # <a name="properties"></a>属性
 
@@ -82,7 +82,7 @@ hero.FirstName = "";
 
 现在，可以从任意代码访问 `FirstName` 属性，但只能从 `Person` 类中的其他代码对其赋值。
 
-可以向 set 和 get 访问器添加任何严格访问修饰符。 在单个访问器上放置的任何访问修饰符都必须比属性定义上的访问修饰符提供更严格的限制。 上述做法是合法的，因为 `FirstName` 属性为 `public`，但 set 访问器为 `private`。 不能声明具有 `public` 访问器的 `private` 属性。 属性声明还可以声明为 `protected`、`internal`、`protected internal`，甚至 `private`。
+可以向 set 和 get 访问器添加任何严格访问修饰符。 在单个访问器上放置的任何访问修饰符都必须比属性定义上的访问修饰符提供更严格的限制。 上述做法是合法的，因为 `FirstName` 属性为 `public`，但 set 访问器为 `private`。 不能声明具有 `private` 访问器的 `public` 属性。 属性声明还可以声明为 `protected`、`internal`、`protected internal`，甚至 `private`。
 
 在 `get` 访问器上放置限制性更强的修饰符也是合法的。 例如，可以有一个 `public` 属性，但将 `get` 访问器限制为 `private`。 不过实际情况下很少这么做。
 
@@ -107,7 +107,7 @@ public class Measurements
 
 上面的示例使用[字符串内插](./language-reference/tokens/interpolated.md)功能来创建全名的格式化字符串。
 
-也可以使用 expression-bodied 成员，以更简洁的方式来创建 `FullName` 计算属性  ：
+也可以使用 expression-bodied 成员，以更简洁的方式来创建  *计算属性*`FullName`：
 
 [!code-csharp[A computed property using an expression bodied member](../../samples/snippets/csharp/properties/Person.cs#11)]
 
@@ -119,7 +119,7 @@ expression-bodied 成员使用 lambda 表达式语法来定义包含单个表达
 
 [!code-csharp[Caching the value of a computed property](../../samples/snippets/csharp/properties/Person.cs#12)]
 
-不过，上面的代码含有 bug。 如果代码更新 `FirstName` 或 `LastName` 属性的值，那么，以前计算的 `fullName` 字段将无效。 修改 `FirstName` 和 `LastName` 属性的 `set` 访问器，以便重新计算 `fullName` 字段：
+不过，上面的代码含有 bug。 如果代码更新 `FirstName` 或 `LastName` 属性的值，那么，以前计算的 `fullName` 字段将无效。 修改 `set` 和 `FirstName` 属性的 `LastName` 访问器，以便重新计算 `fullName` 字段：
 
 [!code-csharp[Invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#13)]
 
@@ -129,7 +129,7 @@ expression-bodied 成员使用 lambda 表达式语法来定义包含单个表达
 ### <a name="attaching-attributes-to-auto-implemented-properties"></a>将特性附加到自动实现的属性
 
 从 C# 7.3 开始，可在自动实现的属性中将字段特性附加到编译器生成的支持字段。 例如，可考虑添加唯一整数 `Person` 属性的 `Id` 类的修订。
-使用自动实现的属性编写 `Id` 属性，但是该设计不需要保留 `Id` 属性。 <xref:System.NonSerializedAttribute> 只能附加到字段，不能附加到属性。 可使用特性上的 `field:` 说明符将 <xref:System.NonSerializedAttribute> 附加到 `Id` 属性的支持字段，如下例所示：
+使用自动实现的属性编写 `Id` 属性，但是该设计不需要保留 `Id` 属性。 <xref:System.NonSerializedAttribute> 只能附加到字段，不能附加到属性。 可使用特性上的 <xref:System.NonSerializedAttribute> 说明符将 `Id` 附加到 `field:` 属性的支持字段，如下例所示：
 
 [!code-csharp[Attaching attributes to a backing field](../../samples/snippets/csharp/properties/Person.cs#14)]
 
@@ -137,7 +137,7 @@ expression-bodied 成员使用 lambda 表达式语法来定义包含单个表达
 
 ### <a name="implementing-inotifypropertychanged"></a>实现 INotifyPropertyChanged
 
-需要在属性访问器中编写代码的最后一种情形是为了支持 <xref:System.ComponentModel.INotifyPropertyChanged> 接口，该接口用于通知数据绑定客户端值已更改。 当属性值发生更改时，该对象引发 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged?displayProperty=nameWithType> 事件来指示更改。 数据绑定库则基于该更改来更新显示元素。 下面的代码演示如何为此 person 类的 `FirstName` 属性实现 `INotifyPropertyChanged`。
+需要在属性访问器中编写代码的最后一种情形是为了支持 <xref:System.ComponentModel.INotifyPropertyChanged> 接口，该接口用于通知数据绑定客户端值已更改。 当属性值发生更改时，该对象引发 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged?displayProperty=nameWithType> 事件来指示更改。 数据绑定库则基于该更改来更新显示元素。 下面的代码演示如何为此 person 类的 `INotifyPropertyChanged` 属性实现 `FirstName`。
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 

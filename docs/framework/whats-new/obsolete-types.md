@@ -7,10 +7,10 @@ helpviewer_keywords:
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 ms.openlocfilehash: b7932a553f39e1f1da2a3946878d6224099da8da
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74802682"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中的过时类型
@@ -86,7 +86,7 @@ ms.locfileid: "74802682"
 |<xref:System.Collections.IHashCodeProvider?displayProperty=nameWithType>|请改用 <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType>。|
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|<xref:System.Configuration.Assemblies.AssemblyHash> 类已弃用。|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|在 .NET Framework 4.5 中首次被废弃。 请改用 System.Runtime.CompilerServices 命名空间中的 <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> 类。|
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|有一个可用的备用 API：发出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自定义特性。|
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|备用 API 可用：改为发出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自定义特性。|
 |<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|请改用 <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>。|
 |<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|请改用 <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>。|
 |<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|请改用 <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>。|
@@ -132,7 +132,7 @@ ms.locfileid: "74802682"
 |<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|请改用 <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType>。|
 |<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|请改用 <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType>。|
 |<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|请改用 <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|请改用 <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|请改用 <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType>。|
 |<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> 仅用于实现 .NET 2.0 透明度兼容性。|
 |<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> 仅用于实现 .NET 2.0 透明度兼容性。 请改用 <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>。|
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=nameWithType>|此类型已过时，并将从 .NET Framework 的未来版本中移除。|
@@ -621,8 +621,8 @@ IEHost.dll 和 IEExec.exe 程序集已从 .NET Framework 中删除。 其所有�
 
 |类型|消息|
 |----------|-------------|
-|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|此类已弃用。 请改用 Microsoft.Build  程序集中的 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>。|
-|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|此类已弃用。 请改用 Microsoft.Build  程序集中的 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>。|
+|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|此类已弃用。 请改用 Microsoft.Build <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>*程序集中的* 。|
+|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|此类已弃用。 请改用 Microsoft.Build <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>*程序集中的* 。|
 
 [返回页首](#introduction)
 
@@ -806,7 +806,7 @@ IEHost.dll 和 IEExec.exe 程序集已从 .NET Framework 中删除。 其所有�
 |<xref:Microsoft.VisualC.NeedsCopyConstructorModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll 是已过时的程序集，仅出于向后兼容目的而存在。|
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll 是已过时的程序集，仅出于向后兼容目的而存在。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [类库中过时的内容](whats-obsolete.md)
 - [过时成员](obsolete-members.md)

@@ -3,11 +3,11 @@ title: 应用程序发布
 description: 了解如何发布 .NET Core 应用程序。 .NET Core 可以发布特定于平台或跨平台的应用。 可将应用发布为独立应用或依赖于运行时的应用。 每个模式都会影响用户运行应用的方式。
 ms.date: 01/31/2020
 ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157930"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397586"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core 应用程序发布概述
 

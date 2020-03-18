@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fe99a2ac81b54ae6aa3cb64af9b5995a548c0c2b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1e84a0c3636f36794ca7795ac54d192d3cb44217
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76727885"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79141089"
 ---
 # <a name="net-docs"></a>.NET Docs
 
@@ -18,7 +18,7 @@ ms.locfileid: "76727885"
 
 欢迎大家积极参与，帮助我们改进并完成 .NET 文档。这是一个非常大的存储库，涵盖很大区域。 如果这是你首次访问，请查看我们的[标签和项目路线图](styleguide/labels-projects.md)，将有助于浏览此存储库中的问题和项目。
 
-若要参与，请参阅 [.NET 社区参与者项目](https://github.com/dotnet/docs/projects/35)，了解相关信息。 [参与指南](CONTRIBUTING.md)提供所涉及过程的说明。 
+若要参与，请参阅 [.NET 社区参与者项目](https://github.com/dotnet/docs/projects/35)，了解相关信息。 [参与指南](CONTRIBUTING.md)提供所涉及过程的说明。
 
 如果你有兴趣帮助将面向 .NET Framework 的现有代码从[已停用代码库](https://docs.microsoft.com/teamblog/msdn-code-gallery-retired)站点迁移到存储在[示例存储库](https://github.com/dotnet/samples)中的 .NET Core 应用程序，并使其可从[示例浏览器](https://docs.microsoft.com/samples/browse)中下载，请参阅[代码库迁移](https://github.com/dotnet/docs/projects/88)项目。 代码库示例已移动到 [Microsoft Archive](https://github.com/microsoftarchive?q=msdn-code-gallery) 组织。
 

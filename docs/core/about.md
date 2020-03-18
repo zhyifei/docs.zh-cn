@@ -2,12 +2,12 @@
 title: 关于 .NET Core
 description: 了解 .NET Core。
 ms.date: 09/17/2019
-ms.openlocfilehash: 7908cf70e91dcd68668008c2c3082dc293330ec1
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 89740b67b294650f78cf36361548c2fe24ac80cb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965836"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147355"
 ---
 # <a name="about-net-core"></a>关于 .NET Core
 
@@ -26,7 +26,7 @@ ms.locfileid: "76965836"
 可以使用 C#、Visual Basic 和 F# 语言编写适用于 .NET Core 的应用程序和库。 这些语言可在你喜欢的文本编辑器或集成开发环境 (IDE) 中使用，包括：
 
 - [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
-- [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
+- [Visual Studio Code](https://code.visualstudio.com/download)
 - Sublime Text
 - Vim
 

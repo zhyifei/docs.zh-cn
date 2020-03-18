@@ -4,13 +4,13 @@ description: 了解如何安装 ML.NET 模型生成器工具
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 11/21/2019
-ms.custom: mvc, how-to
-ms.openlocfilehash: b87f712ad7a8b2229c1d42db4bad1fe511475ac7
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.custom: mvc, how-to, mlnet-tooling
+ms.openlocfilehash: b944d7f6044553251132824e7e4213119e34500e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552944"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78848647"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>如何安装 ML.NET 模型生成器
 
@@ -45,7 +45,7 @@ ms.locfileid: "74552944"
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. 从菜单栏选择“工具” > “扩展和更新”  
+1. 从菜单栏选择“工具” **“扩展和更新”**  >  
 
     ![VS2017 打开“扩展管理器”对话框](./media/install-model-builder/vs2017-open-extensions-manager.png)
 
@@ -58,7 +58,7 @@ ms.locfileid: "74552944"
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-1. 从菜单栏选择“扩展” > “管理扩展”  
+1. 从菜单栏选择“扩展” **“管理扩展”**  >  
 
     ![VS2019 打开“扩展管理器”对话框](./media/install-model-builder/vs2019-open-extensions-manager.png)
 
@@ -73,7 +73,7 @@ ms.locfileid: "74552944"
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. 从菜单栏选择“工具” > “扩展和更新”  
+1. 从菜单栏选择“工具” **“扩展和更新”**  >  
 
     ![VS2017 打开“管理扩展”对话框](./media/install-model-builder/vs2017-open-extensions-manager.png)
 
@@ -86,7 +86,7 @@ ms.locfileid: "74552944"
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-1. 从菜单栏选择“扩展” > “管理扩展”  
+1. 从菜单栏选择“扩展” **“管理扩展”**  >  
 
     ![VS2019 打开“管理扩展”对话框](./media/install-model-builder/vs2019-open-extensions-manager.png)
 

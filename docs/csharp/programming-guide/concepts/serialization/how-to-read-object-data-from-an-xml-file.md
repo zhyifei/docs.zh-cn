@@ -2,12 +2,12 @@
 title: 如何从 XML 文件读取对象数据 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 2da5919c11ed2d6e43f4f9fc406f43e3ed48060f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 18428cbe2f2d3b9434a77ee4d063ceabbba6bcb8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346439"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167813"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>如何从 XML 文件读取对象数据 (C#)
 本示例使用 <xref:System.Xml.Serialization.XmlSerializer> 类读取之前写入 XML 文件的对象数据。  
@@ -18,7 +18,7 @@ ms.locfileid: "75346439"
 public class Book  
 {  
     public String title;  
-}         
+}
   
 public void ReadXML()  
 {  
@@ -30,7 +30,7 @@ public void ReadXML()
     wfile.Close();  
   
     // Now we can read the serialized book ...  
-    System.Xml.Serialization.XmlSerializer reader =   
+    System.Xml.Serialization.XmlSerializer reader =
         new System.Xml.Serialization.XmlSerializer(typeof(Book));  
     System.IO.StreamReader file = new System.IO.StreamReader(  
         @"c:\temp\SerializationOverview.xml");  
@@ -61,7 +61,7 @@ public void ReadXML()
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  始终验证输入，并且绝不会反序列化来自不受信任源的数据。 重新创建的对象会在具有对它进行反序列化的代码的权限的本地计算机上运行。 在应用程序中使用输入的数据之前，需验证所有的输入内容。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.IO.StreamWriter>
 - [如何将对象数据写入 XML 文件 (C#)](./how-to-write-object-data-to-an-xml-file.md)

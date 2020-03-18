@@ -3,13 +3,13 @@ title: ML.NET CLI 遥测收集
 description: 了解收集使用情况信息以供分析的 ML.NET CLI 遥测功能、收集的数据，以及如何禁用遥测。 此外，还可以找到 .NET 许可协议的链接以及有关 Microsoft GDPR 合规性的信息。
 ms.topic: conceptual
 ms.date: 09/03/2019
-ms.custom: ''
-ms.openlocfilehash: edd74b6f3d3c50d5eff012629f0b1db6b62d9021
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.custom: mlnet-tooling
+ms.openlocfilehash: 99e11acba343cc689c3219ca9316144fc62cd618
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977267"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78849739"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI 遥测收集
 
@@ -25,7 +25,7 @@ ms.locfileid: "73977267"
 
 `mlnet` 命令可启动 ML.NET CLI，但命令本身不收集遥测。
 
-在未附加其他命令的情况下，遥测在运行 `mlnet` 命令时处于*未启用*状态。 例如:
+在未附加其他命令的情况下，遥测在运行 `mlnet` 命令时处于*未启用*状态。 例如：
 
 - `mlnet`
 - `mlnet --help`

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: b7ea52eaccda4599969a5d1e3b683d2d842b0d82
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: c4e29e6437edfe549b36a04a2050f63caa0d3d2a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093235"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846517"
 ---
 # <a name="char-c-reference"></a>char（C# 参考）
 
@@ -34,7 +34,7 @@ ms.locfileid: "77093235"
 - Unicode 转义序列，它是 `\u` 后跟字符代码的十六进制表示形式（四个符号）。
 - 十六进制转义序列，它是 `\x` 后跟字符代码的十六进制表示形式。
 
-[!code-csharp-interactive[char literals](~/samples/csharp/language-reference/builtin-types/CharType.cs#Literals)]
+[!code-csharp-interactive[char literals](snippets/CharType.cs#Literals)]
 
 如前面的示例所示，你还可以将字符代码的值转换为相应的 `char` 值。
 
@@ -51,9 +51,9 @@ ms.locfileid: "77093235"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[整型类型](~/_csharplang/spec/types.md#integral-types)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/types.md#integral-types)的[整型类型](~/_csharplang/spec/introduction.md)部分。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [值类型](value-types.md)

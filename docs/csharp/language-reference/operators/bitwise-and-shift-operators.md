@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: a9f507ecdfced5b044b9d6338f723f53b1b4c4b7
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 54198368672e0c9324210a232c7851b5a90402cb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115827"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398069"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>位运算符和移位运算符（C# 参考）
 
@@ -44,7 +44,7 @@ ms.locfileid: "76115827"
 - 二进制 [`<<`（向左移位）](#left-shift-operator-)和 [`>>`（向右移位）](#right-shift-operator-)移位运算符
 - 二进制 [`&`（逻辑 AND）](#logical-and-operator-)、[`|`（逻辑 OR）](#logical-or-operator-)和 [`^`（逻辑异或）](#logical-exclusive-or-operator-)运算符
 
-这些运算符是针对 `int`、`uint`、`long` 和 `ulong` 类型定义的。 如果两个操作数都是其他整数类型（`sbyte`、`byte`、`short`、`ushort` 或 `char`），它们的值将转换为 `int` 类型，这也是一个运算的结果类型。 如果操作数是不同的整数类型，它们的值将转换为最接近的包含整数类型。 有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[数值提升](~/_csharplang/spec/expressions.md#numeric-promotions)部分。
+这些运算符是针对 `int`、`uint`、`long` 和 `ulong` 类型定义的。 如果两个操作数都是其他整数类型（`sbyte`、`byte`、`short`、`ushort` 或 `char`），它们的值将转换为 `int` 类型，这也是一个运算的结果类型。 如果操作数是不同的整数类型，它们的值将转换为最接近的包含整数类型。 有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#numeric-promotions)的[数值提升](~/_csharplang/spec/introduction.md)部分。
 
 `&`、`|` 和 `^` 运算符也是为 `bool` 类型的操作数定义的。 有关详细信息，请参阅[布尔逻辑运算符](boolean-logical-operators.md)。
 
@@ -54,7 +54,7 @@ ms.locfileid: "76115827"
 
 `~` 运算符通过反转每个位产生其操作数的按位求补：
 
-[!code-csharp-interactive[bitwise NOT](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseComplement)]
+[!code-csharp-interactive[bitwise NOT](snippets/BitwiseAndShiftOperators.cs#BitwiseComplement)]
 
 也可以使用 `~` 符号来声明终结器。 有关详细信息，请参阅[终结器](../../programming-guide/classes-and-structs/destructors.md)。
 
@@ -64,11 +64,11 @@ ms.locfileid: "76115827"
 
 左移运算会放弃超出结果类型范围的高阶位，并将低阶空位位置设置为零，如以下示例所示：
 
-[!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
+[!code-csharp-interactive[left shift](snippets/BitwiseAndShiftOperators.cs#LeftShift)]
 
 由于移位运算符仅针对 `int`、`uint`、`long` 和 `ulong` 类型定义，因此运算的结果始终包含至少 32 位。 如果左侧操作数是其他整数类型（`sbyte`、`byte`、`short`、`ushort` 或 `char`），则其值将转换为 `int` 类型，如以下示例所示：
 
-[!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
+[!code-csharp-interactive[left shift with promotion](snippets/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
 有关 `<<` 运算符的右侧操作数如何定义移位计数的信息，请参阅[移位运算符的移位计数](#shift-count-of-the-shift-operators)部分。
 
@@ -78,17 +78,17 @@ ms.locfileid: "76115827"
 
 右移位运算会放弃低阶位，如以下示例所示：
 
-[!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
+[!code-csharp-interactive[right shift](snippets/BitwiseAndShiftOperators.cs#RightShift)]
 
 高顺序空位位置是根据左侧操作数类型设置的，如下所示：
 
 - 如果左侧操作数的类型是 `int` 或 `long`，则右移运算符将执行  算术移位：左侧操作数的最高有效位（符号位）的值将传播到高顺序空位位置。 也就是说，如果左侧操作数为非负，高顺序空位位置设置为零，如果为负，则将该位置设置为 1。
 
-  [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
+  [!code-csharp-interactive[arithmetic right shift](snippets/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
 - 如果左侧操作数的类型是 `uint` 或 `ulong`，则右移运算符执行逻辑移位：高顺序空位位置始终设置为零。 
 
-  [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
+  [!code-csharp-interactive[logical right shift](snippets/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
 有关 `>>` 运算符的右侧操作数如何定义移位计数的信息，请参阅[移位运算符的移位计数](#shift-count-of-the-shift-operators)部分。
 
@@ -96,7 +96,7 @@ ms.locfileid: "76115827"
 
 `&` 运算符计算其操作数的位逻辑 AND：
 
-[!code-csharp-interactive[bitwise AND](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
+[!code-csharp-interactive[bitwise AND](snippets/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
 对于 `bool` 操作数，`&` 运算符对其操作数执行[逻辑 AND](boolean-logical-operators.md#logical-and-operator-) 运算。 一元 `&` 运算符是 [address-of 运算符](pointer-related-operators.md#address-of-operator-)。
 
@@ -104,7 +104,7 @@ ms.locfileid: "76115827"
 
 `^` 运算符计算其操作数的位逻辑异或，也称为位逻辑 XOR：
 
-[!code-csharp-interactive[bitwise XOR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
+[!code-csharp-interactive[bitwise XOR](snippets/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
 对于 `bool` 操作数，`^` 运算符对其操作数执行[逻辑异或](boolean-logical-operators.md#logical-exclusive-or-operator-)运算。
 
@@ -112,7 +112,7 @@ ms.locfileid: "76115827"
 
 `|` 运算符计算其操作数的位逻辑 OR：
 
-[!code-csharp-interactive[bitwise OR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
+[!code-csharp-interactive[bitwise OR](snippets/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
 对于 `bool` 操作数，`|` 运算符对其操作数执行[逻辑 OR](boolean-logical-operators.md#logical-or-operator-) 运算。
 
@@ -134,11 +134,11 @@ x = x op y
 
 以下示例演示了使用位运算符和移位运算符的复合赋值的用法：
 
-[!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
+[!code-csharp-interactive[compound assignment](snippets/BitwiseAndShiftOperators.cs#CompoundAssignment)]
 
-由于[数值提升](~/_csharplang/spec/expressions.md#numeric-promotions)，`op`，运算的结果可能无法隐式转换为 `x` 的 `T` 类型。 在这种情况下，如果 `op` 是预定义的运算符并且运算的结果可以显式转换为 `x` 的类型 `T`，则形式为 `x op= y` 的复合赋值表达式等效于 `x = (T)(x op y)`，但 `x` 仅计算一次。 以下示例演示了该行为：
+由于[数值提升](~/_csharplang/spec/expressions.md#numeric-promotions)，`op` 运算的结果可能不会隐式转换为 `T` 的 `x` 类型。 在这种情况下，如果 `op` 是预定义的运算符并且运算的结果可以显式转换为 `T` 的类型 `x`，则形式为 `x op= y` 的复合赋值表达式等效于 `x = (T)(x op y)`，但 `x` 仅计算一次。 以下示例演示了该行为：
 
-[!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
+[!code-csharp-interactive[compound assignment with cast](snippets/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
 
 ## <a name="operator-precedence"></a>运算符优先级
 
@@ -152,9 +152,9 @@ x = x op y
 
 使用括号 `()` 可以更改运算符优先级决定的计算顺序：
 
-[!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
+[!code-csharp-interactive[operator precedence](snippets/BitwiseAndShiftOperators.cs#Precedence)]
 
-如需了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md#operator-precedence)一文中的[运算符优先级](index.md)部分。
+要了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md#operator-precedence)一文中的[运算符优先级](index.md)部分。
 
 ## <a name="shift-count-of-the-shift-operators"></a>移位运算符的移位计数
 
@@ -168,16 +168,16 @@ x = x op y
 
 以下示例演示了该行为：
 
-[!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
+[!code-csharp-interactive[shift count example](snippets/BitwiseAndShiftOperators.cs#ShiftCount)]
 
 > [!NOTE]
 > 如前例所示，即使右侧操作符的值大于左侧操作符中的位数，移位运算的结果也不可为零。
 
 ## <a name="enumeration-logical-operators"></a>枚举逻辑运算符
 
-所有[枚举](../builtin-types/enum.md)类型还支持 `~`、`&`、`|` 和 `^` 运算符。 对于相同枚举类型的操作数，对底层整数类型的相应值执行逻辑运算。 例如，对于具有底层类型 `U` 的枚举类型 `T` 的任何 `x` 和 `y`，`x & y` 表达式生成与 `(T)((U)x & (U)y)` 表达式相同的结果。
+所有`~`枚举`&`类型还支持 `|`、`^`、[ 和 ](../builtin-types/enum.md) 运算符。 对于相同枚举类型的操作数，对底层整数类型的相应值执行逻辑运算。 例如，对于具有底层类型 `x` 的枚举类型 `y` 的任何 `T` 和 `U`，`x & y` 表达式生成与 `(T)((U)x & (U)y)` 表达式相同的结果。
 
-通常使用具有枚举类型的位逻辑运算符，该枚举类型使用 [Flags](xref:System.FlagsAttribute) 特性定义。 有关详细信息，请参阅[枚举类型](../builtin-types/enum.md)一文的[作为位标记的枚举类型](../builtin-types/enum.md#enumeration-types-as-bit-flags)部分。
+通常使用具有枚举类型的位逻辑运算符，该枚举类型使用 [Flags](xref:System.FlagsAttribute) 特性定义。 有关详细信息，请参阅[枚举类型](../builtin-types/enum.md#enumeration-types-as-bit-flags)一文的[作为位标记的枚举类型](../builtin-types/enum.md)部分。
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
@@ -195,7 +195,7 @@ x = x op y
 - [复合赋值](~/_csharplang/spec/expressions.md#compound-assignment)
 - [数值提升](~/_csharplang/spec/expressions.md#numeric-promotions)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)
