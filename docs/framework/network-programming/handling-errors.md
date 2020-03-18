@@ -31,60 +31,60 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 7084c4579dd5fca0075c7516754195f7cea9e27c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f5be5d8e14d7aa2d98009fc10c9cce314e745ed1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458043"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180874"
 ---
-# <a name="handling-errors"></a><span data-ttu-id="1d4ae-102">处理错误</span><span class="sxs-lookup"><span data-stu-id="1d4ae-102">Handling Errors</span></span>
+# <a name="handling-errors"></a><span data-ttu-id="f5e1f-102">处理错误</span><span class="sxs-lookup"><span data-stu-id="f5e1f-102">Handling Errors</span></span>
 
-<span data-ttu-id="1d4ae-103"><xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类都会引发系统异常（如 <xref:System.ArgumentException>）和特定于 Web 的异常（为 <xref:System.Net.WebRequest.GetResponse%2A> 方法所引发的 <xref:System.Net.WebException>）。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-103">The <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes throw both system exceptions (such as <xref:System.ArgumentException>) and Web-specific exceptions (which are <xref:System.Net.WebException> thrown by the <xref:System.Net.WebRequest.GetResponse%2A> method).</span></span>  
+<span data-ttu-id="f5e1f-103"><xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类都会引发系统异常（如 <xref:System.ArgumentException>）和特定于 Web 的异常（为 <xref:System.Net.WebException> 方法所引发的 <xref:System.Net.WebRequest.GetResponse%2A>）。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-103">The <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes throw both system exceptions (such as <xref:System.ArgumentException>) and Web-specific exceptions (which are <xref:System.Net.WebException> thrown by the <xref:System.Net.WebRequest.GetResponse%2A> method).</span></span>  
   
-<span data-ttu-id="1d4ae-104">每个 WebException 包括一个 <xref:System.Net.WebException.Status%2A> 属性，它包含来自 <xref:System.Net.WebExceptionStatus> 枚举的一个值  。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-104">Each **WebException** includes a <xref:System.Net.WebException.Status%2A> property that contains a value from the <xref:System.Net.WebExceptionStatus> enumeration.</span></span> <span data-ttu-id="1d4ae-105">可以检查“状态”属性以确定发生的错误并采取适当的步骤解决该错误  。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-105">You can examine the **Status** property to determine the error that occurred and take the proper steps to resolve the error.</span></span>  
+<span data-ttu-id="f5e1f-104">每个 WebException 包括一个 **属性，它包含来自** 枚举的一个值<xref:System.Net.WebException.Status%2A><xref:System.Net.WebExceptionStatus>。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-104">Each **WebException** includes a <xref:System.Net.WebException.Status%2A> property that contains a value from the <xref:System.Net.WebExceptionStatus> enumeration.</span></span> <span data-ttu-id="f5e1f-105">可以检查“状态”属性以确定发生的错误并采取适当的步骤解决该错误  。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-105">You can examine the **Status** property to determine the error that occurred and take the proper steps to resolve the error.</span></span>  
   
-<span data-ttu-id="1d4ae-106">下表描述了“状态”属性可能的值  。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-106">The following table describes the possible values for the **Status** property.</span></span>  
+<span data-ttu-id="f5e1f-106">下表描述了“状态”属性可能的值  。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-106">The following table describes the possible values for the **Status** property.</span></span>  
   
-|<span data-ttu-id="1d4ae-107">状态</span><span class="sxs-lookup"><span data-stu-id="1d4ae-107">Status</span></span>|<span data-ttu-id="1d4ae-108">说明</span><span class="sxs-lookup"><span data-stu-id="1d4ae-108">Description</span></span>|  
+|<span data-ttu-id="f5e1f-107">状态</span><span class="sxs-lookup"><span data-stu-id="f5e1f-107">Status</span></span>|<span data-ttu-id="f5e1f-108">说明</span><span class="sxs-lookup"><span data-stu-id="f5e1f-108">Description</span></span>|  
 |------------|-----------------|  
-|<span data-ttu-id="1d4ae-109">ConnectFailure</span><span class="sxs-lookup"><span data-stu-id="1d4ae-109">ConnectFailure</span></span>|<span data-ttu-id="1d4ae-110">无法在传输级别联系远程服务。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-110">The remote service could not be contacted at the transport level.</span></span>|  
-|<span data-ttu-id="1d4ae-111">ConnectionClosed</span><span class="sxs-lookup"><span data-stu-id="1d4ae-111">ConnectionClosed</span></span>|<span data-ttu-id="1d4ae-112">连接被提前关闭。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-112">The connection was closed prematurely.</span></span>|  
-|<span data-ttu-id="1d4ae-113">KeepAliveFailure</span><span class="sxs-lookup"><span data-stu-id="1d4ae-113">KeepAliveFailure</span></span>|<span data-ttu-id="1d4ae-114">服务器已关闭与“保持的连接”标头设置建立的连接。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-114">The server closed a connection made with the Keep-alive header set.</span></span>|  
-|<span data-ttu-id="1d4ae-115">NameResolutionFailure</span><span class="sxs-lookup"><span data-stu-id="1d4ae-115">NameResolutionFailure</span></span>|<span data-ttu-id="1d4ae-116">名称服务无法解析主机名。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-116">The name service could not resolve the host name.</span></span>|  
-|<span data-ttu-id="1d4ae-117">ProtocolError</span><span class="sxs-lookup"><span data-stu-id="1d4ae-117">ProtocolError</span></span>|<span data-ttu-id="1d4ae-118">从服务器接收的响应是完整的，但指示在协议级别出现错误。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-118">The response received from the server was complete but indicated an error at the protocol level.</span></span>|  
-|<span data-ttu-id="1d4ae-119">ReceiveFailure</span><span class="sxs-lookup"><span data-stu-id="1d4ae-119">ReceiveFailure</span></span>|<span data-ttu-id="1d4ae-120">无法从远程服务器接收完整的响应。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-120">A complete response was not received from the remote server.</span></span>|  
-|<span data-ttu-id="1d4ae-121">RequestCanceled</span><span class="sxs-lookup"><span data-stu-id="1d4ae-121">RequestCanceled</span></span>|<span data-ttu-id="1d4ae-122">请求已被取消。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-122">The request was canceled.</span></span>|  
-|<span data-ttu-id="1d4ae-123">SecureChannelFailure</span><span class="sxs-lookup"><span data-stu-id="1d4ae-123">SecureChannelFailure</span></span>|<span data-ttu-id="1d4ae-124">安全通道链接中出现错误。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-124">An error occurred in a secure channel link.</span></span>|  
-|<span data-ttu-id="1d4ae-125">SendFailure</span><span class="sxs-lookup"><span data-stu-id="1d4ae-125">SendFailure</span></span>|<span data-ttu-id="1d4ae-126">无法向远程服务器发送完整的请求。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-126">A complete request could not be sent to the remote server.</span></span>|  
-|<span data-ttu-id="1d4ae-127">ServerProtocolViolation</span><span class="sxs-lookup"><span data-stu-id="1d4ae-127">ServerProtocolViolation</span></span>|<span data-ttu-id="1d4ae-128">服务器响应不是有效的 HTTP 响应。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-128">The server response was not a valid HTTP response.</span></span>|  
-|<span data-ttu-id="1d4ae-129">成功</span><span class="sxs-lookup"><span data-stu-id="1d4ae-129">Success</span></span>|<span data-ttu-id="1d4ae-130">未遇到任何错误。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-130">No error was encountered.</span></span>|  
-|<span data-ttu-id="1d4ae-131">超时</span><span class="sxs-lookup"><span data-stu-id="1d4ae-131">Timeout</span></span>|<span data-ttu-id="1d4ae-132">在请求的超时设置内未接收到任何响应。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-132">No response was received within the time-out set for the request.</span></span>|  
-|<span data-ttu-id="1d4ae-133">TrustFailure</span><span class="sxs-lookup"><span data-stu-id="1d4ae-133">TrustFailure</span></span>|<span data-ttu-id="1d4ae-134">无法验证服务器证书。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-134">A server certificate could not be validated.</span></span>|  
-|<span data-ttu-id="1d4ae-135">MessageLengthLimitExceeded</span><span class="sxs-lookup"><span data-stu-id="1d4ae-135">MessageLengthLimitExceeded</span></span>|<span data-ttu-id="1d4ae-136">从服务器发送请求或接收响应时，接收到的消息超出指定限制。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-136">A message was received that exceeded the specified limit when sending a request or receiving a response from the server.</span></span>|  
-|<span data-ttu-id="1d4ae-137">挂起</span><span class="sxs-lookup"><span data-stu-id="1d4ae-137">Pending</span></span>|<span data-ttu-id="1d4ae-138">内部异步请求处于挂起状态。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-138">An internal asynchronous request is pending.</span></span>|  
-|<span data-ttu-id="1d4ae-139">PipelineFailure</span><span class="sxs-lookup"><span data-stu-id="1d4ae-139">PipelineFailure</span></span>|<span data-ttu-id="1d4ae-140">此值支持 .NET Framework 基础结构，不能在代码中直接使用。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-140">This value supports the .NET Framework infrastructure and is not intended to be used directly in your code.</span></span>|  
-|<span data-ttu-id="1d4ae-141">ProxyNameResolutionFailure</span><span class="sxs-lookup"><span data-stu-id="1d4ae-141">ProxyNameResolutionFailure</span></span>|<span data-ttu-id="1d4ae-142">名称解析程序服务无法解析代理主机名。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-142">The name resolver service could not resolve the proxy host name.</span></span>|  
-|<span data-ttu-id="1d4ae-143">UnknownError</span><span class="sxs-lookup"><span data-stu-id="1d4ae-143">UnknownError</span></span>|<span data-ttu-id="1d4ae-144">出现未知类型的异常。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-144">An exception of unknown type has occurred.</span></span>|  
+|<span data-ttu-id="f5e1f-109">ConnectFailure</span><span class="sxs-lookup"><span data-stu-id="f5e1f-109">ConnectFailure</span></span>|<span data-ttu-id="f5e1f-110">无法在传输级别联系远程服务。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-110">The remote service could not be contacted at the transport level.</span></span>|  
+|<span data-ttu-id="f5e1f-111">ConnectionClosed</span><span class="sxs-lookup"><span data-stu-id="f5e1f-111">ConnectionClosed</span></span>|<span data-ttu-id="f5e1f-112">连接被提前关闭。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-112">The connection was closed prematurely.</span></span>|  
+|<span data-ttu-id="f5e1f-113">KeepAliveFailure</span><span class="sxs-lookup"><span data-stu-id="f5e1f-113">KeepAliveFailure</span></span>|<span data-ttu-id="f5e1f-114">服务器已关闭与“保持的连接”标头设置建立的连接。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-114">The server closed a connection made with the Keep-alive header set.</span></span>|  
+|<span data-ttu-id="f5e1f-115">NameResolutionFailure</span><span class="sxs-lookup"><span data-stu-id="f5e1f-115">NameResolutionFailure</span></span>|<span data-ttu-id="f5e1f-116">名称服务无法解析主机名。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-116">The name service could not resolve the host name.</span></span>|  
+|<span data-ttu-id="f5e1f-117">ProtocolError</span><span class="sxs-lookup"><span data-stu-id="f5e1f-117">ProtocolError</span></span>|<span data-ttu-id="f5e1f-118">从服务器接收的响应是完整的，但指示在协议级别出现错误。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-118">The response received from the server was complete but indicated an error at the protocol level.</span></span>|  
+|<span data-ttu-id="f5e1f-119">ReceiveFailure</span><span class="sxs-lookup"><span data-stu-id="f5e1f-119">ReceiveFailure</span></span>|<span data-ttu-id="f5e1f-120">无法从远程服务器接收完整的响应。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-120">A complete response was not received from the remote server.</span></span>|  
+|<span data-ttu-id="f5e1f-121">RequestCanceled</span><span class="sxs-lookup"><span data-stu-id="f5e1f-121">RequestCanceled</span></span>|<span data-ttu-id="f5e1f-122">请求已被取消。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-122">The request was canceled.</span></span>|  
+|<span data-ttu-id="f5e1f-123">SecureChannelFailure</span><span class="sxs-lookup"><span data-stu-id="f5e1f-123">SecureChannelFailure</span></span>|<span data-ttu-id="f5e1f-124">安全通道链接中出现错误。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-124">An error occurred in a secure channel link.</span></span>|  
+|<span data-ttu-id="f5e1f-125">SendFailure</span><span class="sxs-lookup"><span data-stu-id="f5e1f-125">SendFailure</span></span>|<span data-ttu-id="f5e1f-126">无法向远程服务器发送完整的请求。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-126">A complete request could not be sent to the remote server.</span></span>|  
+|<span data-ttu-id="f5e1f-127">ServerProtocolViolation</span><span class="sxs-lookup"><span data-stu-id="f5e1f-127">ServerProtocolViolation</span></span>|<span data-ttu-id="f5e1f-128">服务器响应不是有效的 HTTP 响应。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-128">The server response was not a valid HTTP response.</span></span>|  
+|<span data-ttu-id="f5e1f-129">成功</span><span class="sxs-lookup"><span data-stu-id="f5e1f-129">Success</span></span>|<span data-ttu-id="f5e1f-130">未遇到任何错误。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-130">No error was encountered.</span></span>|  
+|<span data-ttu-id="f5e1f-131">超时</span><span class="sxs-lookup"><span data-stu-id="f5e1f-131">Timeout</span></span>|<span data-ttu-id="f5e1f-132">在请求的超时设置内未接收到任何响应。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-132">No response was received within the time-out set for the request.</span></span>|  
+|<span data-ttu-id="f5e1f-133">TrustFailure</span><span class="sxs-lookup"><span data-stu-id="f5e1f-133">TrustFailure</span></span>|<span data-ttu-id="f5e1f-134">无法验证服务器证书。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-134">A server certificate could not be validated.</span></span>|  
+|<span data-ttu-id="f5e1f-135">MessageLengthLimitExceeded</span><span class="sxs-lookup"><span data-stu-id="f5e1f-135">MessageLengthLimitExceeded</span></span>|<span data-ttu-id="f5e1f-136">从服务器发送请求或接收响应时，接收到的消息超出指定限制。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-136">A message was received that exceeded the specified limit when sending a request or receiving a response from the server.</span></span>|  
+|<span data-ttu-id="f5e1f-137">挂起</span><span class="sxs-lookup"><span data-stu-id="f5e1f-137">Pending</span></span>|<span data-ttu-id="f5e1f-138">内部异步请求处于挂起状态。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-138">An internal asynchronous request is pending.</span></span>|  
+|<span data-ttu-id="f5e1f-139">PipelineFailure</span><span class="sxs-lookup"><span data-stu-id="f5e1f-139">PipelineFailure</span></span>|<span data-ttu-id="f5e1f-140">此值支持 .NET Framework 基础结构，不能在代码中直接使用。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-140">This value supports the .NET Framework infrastructure and is not intended to be used directly in your code.</span></span>|  
+|<span data-ttu-id="f5e1f-141">ProxyNameResolutionFailure</span><span class="sxs-lookup"><span data-stu-id="f5e1f-141">ProxyNameResolutionFailure</span></span>|<span data-ttu-id="f5e1f-142">名称解析程序服务无法解析代理主机名。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-142">The name resolver service could not resolve the proxy host name.</span></span>|  
+|<span data-ttu-id="f5e1f-143">UnknownError</span><span class="sxs-lookup"><span data-stu-id="f5e1f-143">UnknownError</span></span>|<span data-ttu-id="f5e1f-144">出现未知类型的异常。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-144">An exception of unknown type has occurred.</span></span>|  
   
-<span data-ttu-id="1d4ae-145">当“状态”属性为“WebExceptionStatus.ProtocolError”时，可以使用包含来自服务器的响应的 WebResponse    。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-145">When the **Status** property is **WebExceptionStatus.ProtocolError**, a **WebResponse** that contains the response from the server is available.</span></span> <span data-ttu-id="1d4ae-146">可以检查此响应以确定协议错误的实际来源。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-146">You can examine this response to determine the actual source of the protocol error.</span></span>  
+<span data-ttu-id="f5e1f-145">当“状态”属性为“WebExceptionStatus.ProtocolError”时，可以使用包含来自服务器的响应的 WebResponse    。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-145">When the **Status** property is **WebExceptionStatus.ProtocolError**, a **WebResponse** that contains the response from the server is available.</span></span> <span data-ttu-id="f5e1f-146">可以检查此响应以确定协议错误的实际来源。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-146">You can examine this response to determine the actual source of the protocol error.</span></span>  
   
-<span data-ttu-id="1d4ae-147">下面的示例演示如何捕获 WebException  。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-147">The following example shows how to catch a **WebException**.</span></span>  
+<span data-ttu-id="f5e1f-147">下面的示例演示如何捕获 WebException  。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-147">The following example shows how to catch a **WebException**.</span></span>  
   
 ```csharp  
-try   
+try
 {  
     // Create a request instance.  
-    WebRequest myRequest =   
+    WebRequest myRequest =
     WebRequest.Create("http://www.contoso.com");  
     // Get the response.  
     WebResponse myResponse = myRequest.GetResponse();  
-    //Get a readable stream from the server.   
+    //Get a readable stream from the server.
     Stream sr = myResponse.GetResponseStream();  
   
     //Read from the stream and write any data to the console.  
     bytesread = sr.Read( myBuffer, 0, length);  
-    while( bytesread > 0 )   
+    while( bytesread > 0 )
     {  
         for (int i=0; i<bytesread; i++) {  
             Console.Write( "{0}", myBuffer[i]);  
@@ -95,7 +95,7 @@ try
     sr.Close();  
     myResponse.Close();  
 }  
-catch (WebException webExcp)   
+catch (WebException webExcp)
 {  
     // If you reach this point, an exception has been caught.  
     Console.WriteLine("A WebException has been caught.");  
@@ -103,8 +103,8 @@ catch (WebException webExcp)
     Console.WriteLine(webExcp.ToString());  
     // Get the WebException status code.  
     WebExceptionStatus status =  webExcp.Status;  
-    // If status is WebExceptionStatus.ProtocolError,   
-    //   there has been a protocol error and a WebResponse   
+    // If status is WebExceptionStatus.ProtocolError,
+    //   there has been a protocol error and a WebResponse
     //   should exist. Display the protocol error.  
     if (status == WebExceptionStatus.ProtocolError) {  
         Console.Write("The server returned protocol error ");  
@@ -114,7 +114,7 @@ catch (WebException webExcp)
            + httpResponse.StatusCode);  
     }  
 }  
-catch (Exception e)   
+catch (Exception e)
 {  
     // Code to catch other exceptions goes here.  
 }  
@@ -126,10 +126,10 @@ Try
     Dim myRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ' Get the response.  
     Dim myResponse As WebResponse = myRequest.GetResponse()  
-    'Get a readable stream from the server.   
+    'Get a readable stream from the server.
     Dim sr As Stream = myResponse.GetResponseStream()  
   
-    Dim i As Integer      
+    Dim i As Integer
     'Read from the stream and write any data to the console.  
     bytesread = sr.Read(myBuffer, 0, length)  
     While bytesread > 0  
@@ -148,8 +148,8 @@ Catch webExcp As WebException
     Console.WriteLine(webExcp.ToString())  
     ' Get the WebException status code.  
     Dim status As WebExceptionStatus = webExcp.Status  
-    ' If status is WebExceptionStatus.ProtocolError,   
-    '   there has been a protocol error and a WebResponse   
+    ' If status is WebExceptionStatus.ProtocolError,
+    '   there has been a protocol error and a WebResponse
     '   should exist. Display the protocol error.  
     If status = WebExceptionStatus.ProtocolError Then  
         Console.Write("The server returned protocol error ")  
@@ -164,11 +164,11 @@ Catch e As Exception
 End Try  
 ```  
   
-<span data-ttu-id="1d4ae-148">当 Windows 套接字上出现错误时，使用 <xref:System.Net.Sockets.Socket> 类的应用程序将引发 <xref:System.Net.Sockets.SocketException>。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-148">Applications that use the <xref:System.Net.Sockets.Socket> class throw <xref:System.Net.Sockets.SocketException> when errors occur on the Windows socket.</span></span> <span data-ttu-id="1d4ae-149"><xref:System.Net.Sockets.TcpClient>、<xref:System.Net.Sockets.TcpListener> 和 <xref:System.Net.Sockets.UdpClient> 类在套接字类的顶层生成，并且也会引发 SocketExceptions   。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-149">The <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, and <xref:System.Net.Sockets.UdpClient> classes are built on top of the **Socket** class and throw **SocketExceptions** as well.</span></span>  
+<span data-ttu-id="f5e1f-148">当 Windows 套接字上出现错误时，使用 <xref:System.Net.Sockets.Socket> 类的应用程序将引发 <xref:System.Net.Sockets.SocketException>。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-148">Applications that use the <xref:System.Net.Sockets.Socket> class throw <xref:System.Net.Sockets.SocketException> when errors occur on the Windows socket.</span></span> <span data-ttu-id="f5e1f-149"><xref:System.Net.Sockets.TcpClient>、<xref:System.Net.Sockets.TcpListener> 和 <xref:System.Net.Sockets.UdpClient> 类在套接字类的顶层生成，并且也会引发 SocketExceptions   。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-149">The <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, and <xref:System.Net.Sockets.UdpClient> classes are built on top of the **Socket** class and throw **SocketExceptions** as well.</span></span>  
   
-<span data-ttu-id="1d4ae-150">引发 SocketException 时，SocketException 类将 <xref:System.Net.Sockets.SocketException.ErrorCode%2A> 属性设置为最后一次发生的操作系统套接字错误   。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-150">When a **SocketException** is thrown, the **SocketException** class sets the <xref:System.Net.Sockets.SocketException.ErrorCode%2A> property to the last operating system socket error that occurred.</span></span> <span data-ttu-id="1d4ae-151">有关套接字错误代码的详细信息，请参阅 MSDN 中的 Winsock 2.0 API 错误代码文档。</span><span class="sxs-lookup"><span data-stu-id="1d4ae-151">For more information about socket error codes, see the Winsock 2.0 API error code documentation in MSDN.</span></span>  
+<span data-ttu-id="f5e1f-150">引发 SocketException 时，SocketException 类将  **属性设置为最后一次发生的操作系统套接字错误**  <xref:System.Net.Sockets.SocketException.ErrorCode%2A>。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-150">When a **SocketException** is thrown, the **SocketException** class sets the <xref:System.Net.Sockets.SocketException.ErrorCode%2A> property to the last operating system socket error that occurred.</span></span> <span data-ttu-id="f5e1f-151">有关套接字错误代码的详细信息，请参阅 MSDN 中的 Winsock 2.0 API 错误代码文档。</span><span class="sxs-lookup"><span data-stu-id="f5e1f-151">For more information about socket error codes, see the Winsock 2.0 API error code documentation in MSDN.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1d4ae-152">请参阅</span><span class="sxs-lookup"><span data-stu-id="1d4ae-152">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f5e1f-152">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f5e1f-152">See also</span></span>
 
-- [<span data-ttu-id="1d4ae-153">在 .NET 中处理和引发异常</span><span class="sxs-lookup"><span data-stu-id="1d4ae-153">Handling and throwing exceptions in .NET</span></span>](../../standard/exceptions/index.md)
-- [<span data-ttu-id="1d4ae-154">请求数据</span><span class="sxs-lookup"><span data-stu-id="1d4ae-154">Requesting Data</span></span>](requesting-data.md)
+- [<span data-ttu-id="f5e1f-153">在 .NET 中处理和引发异常</span><span class="sxs-lookup"><span data-stu-id="f5e1f-153">Handling and throwing exceptions in .NET</span></span>](../../standard/exceptions/index.md)
+- [<span data-ttu-id="f5e1f-154">请求数据</span><span class="sxs-lookup"><span data-stu-id="f5e1f-154">Requesting Data</span></span>](requesting-data.md)

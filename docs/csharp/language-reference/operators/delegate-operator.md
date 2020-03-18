@@ -4,40 +4,40 @@ ms.date: 07/18/2019
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: 9a78faaccffa9e7d4bf2829d8dfa0fa62a788bba
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 1dd27fe5fdfdc1bc8a63e1298da00d252e800a72
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039046"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847334"
 ---
-# <a name="delegate-operator-c-reference"></a><span data-ttu-id="0a26e-102">delegate 运算符 -（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="0a26e-102">delegate operator (C# reference)</span></span>
+# <a name="delegate-operator-c-reference"></a><span data-ttu-id="4e1dd-102">delegate 运算符 -（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="4e1dd-102">delegate operator (C# reference)</span></span>
 
-<span data-ttu-id="0a26e-103">`delegate` 运算符创建一个可以转换为委托类型的匿名方法：</span><span class="sxs-lookup"><span data-stu-id="0a26e-103">The `delegate` operator creates an anonymous method that can be converted to a delegate type:</span></span>
+<span data-ttu-id="4e1dd-103">`delegate` 运算符创建一个可以转换为委托类型的匿名方法：</span><span class="sxs-lookup"><span data-stu-id="4e1dd-103">The `delegate` operator creates an anonymous method that can be converted to a delegate type:</span></span>
 
-[!code-csharp-interactive[anonymous method](~/samples/csharp/language-reference/operators/DelegateOperator.cs#AnonymousMethod)]
+[!code-csharp-interactive[anonymous method](snippets/DelegateOperator.cs#AnonymousMethod)]
 
 > [!NOTE]
-> <span data-ttu-id="0a26e-104">从 C# 3 开始，lambda 表达式提供了一种更简洁和富有表现力的方式来创建匿名函数。</span><span class="sxs-lookup"><span data-stu-id="0a26e-104">Beginning with C# 3, lambda expressions provide a more concise and expressive way to create an anonymous function.</span></span> <span data-ttu-id="0a26e-105">使用 [=> 运算符](lambda-operator.md)构造 lambda 表达式：</span><span class="sxs-lookup"><span data-stu-id="0a26e-105">Use the [=> operator](lambda-operator.md) to construct a lambda expression:</span></span>
+> <span data-ttu-id="4e1dd-104">从 C# 3 开始，lambda 表达式提供了一种更简洁和富有表现力的方式来创建匿名函数。</span><span class="sxs-lookup"><span data-stu-id="4e1dd-104">Beginning with C# 3, lambda expressions provide a more concise and expressive way to create an anonymous function.</span></span> <span data-ttu-id="4e1dd-105">使用 [=> 运算符](lambda-operator.md)构造 lambda 表达式：</span><span class="sxs-lookup"><span data-stu-id="4e1dd-105">Use the [=> operator](lambda-operator.md) to construct a lambda expression:</span></span>
 >
-> [!code-csharp-interactive[lambda expression](~/samples/csharp/language-reference/operators/DelegateOperator.cs#Lambda)]
+> [!code-csharp-interactive[lambda expression](snippets/DelegateOperator.cs#Lambda)]
 >
-> <span data-ttu-id="0a26e-106">有关 lambda 表达式功能的更多信息（例如，如何捕获外部变量），请参阅 [lambda 表达式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="0a26e-106">For more information about features of lambda expressions, for example, capturing outer variables, see [Lambda expressions](../../programming-guide/statements-expressions-operators/lambda-expressions.md).</span></span>
+> <span data-ttu-id="4e1dd-106">有关 lambda 表达式功能的更多信息（例如，如何捕获外部变量），请参阅 [lambda 表达式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="4e1dd-106">For more information about features of lambda expressions, for example, capturing outer variables, see [Lambda expressions](../../programming-guide/statements-expressions-operators/lambda-expressions.md).</span></span>
 
-<span data-ttu-id="0a26e-107">使用 `delegate` 运算符时，可以省略参数列表。</span><span class="sxs-lookup"><span data-stu-id="0a26e-107">When you use the `delegate` operator, you might omit the parameter list.</span></span> <span data-ttu-id="0a26e-108">如果这样做，可以将创建的匿名方法转换为具有任何参数列表的委托类型，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="0a26e-108">If you do that, the created anonymous method can be converted to a delegate type with any list of  parameters, as the following example shows:</span></span>
+<span data-ttu-id="4e1dd-107">使用 `delegate` 运算符时，可以省略参数列表。</span><span class="sxs-lookup"><span data-stu-id="4e1dd-107">When you use the `delegate` operator, you might omit the parameter list.</span></span> <span data-ttu-id="4e1dd-108">如果这样做，可以将创建的匿名方法转换为具有任何参数列表的委托类型，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="4e1dd-108">If you do that, the created anonymous method can be converted to a delegate type with any list of  parameters, as the following example shows:</span></span>
 
-[!code-csharp-interactive[no parameter list](~/samples/csharp/language-reference/operators/DelegateOperator.cs#WithoutParameterList)]
+[!code-csharp-interactive[no parameter list](snippets/DelegateOperator.cs#WithoutParameterList)]
 
-<span data-ttu-id="0a26e-109">这是 lambda 表达式不支持的匿名方法的唯一功能。</span><span class="sxs-lookup"><span data-stu-id="0a26e-109">That's the only functionality of anonymous methods that is not supported by lambda expressions.</span></span> <span data-ttu-id="0a26e-110">在所有其他情况下，lambda 表达式是编写内联代码的首选方法。</span><span class="sxs-lookup"><span data-stu-id="0a26e-110">In all other cases, a lambda expression is a preferred way to write inline code.</span></span>
+<span data-ttu-id="4e1dd-109">这是 lambda 表达式不支持的匿名方法的唯一功能。</span><span class="sxs-lookup"><span data-stu-id="4e1dd-109">That's the only functionality of anonymous methods that is not supported by lambda expressions.</span></span> <span data-ttu-id="4e1dd-110">在所有其他情况下，lambda 表达式是编写内联代码的首选方法。</span><span class="sxs-lookup"><span data-stu-id="4e1dd-110">In all other cases, a lambda expression is a preferred way to write inline code.</span></span>
 
-<span data-ttu-id="0a26e-111">还可以使用 `delegate` 关键字声明[委托类型](../builtin-types/reference-types.md#the-delegate-type)。</span><span class="sxs-lookup"><span data-stu-id="0a26e-111">You also use the `delegate` keyword to declare a [delegate type](../builtin-types/reference-types.md#the-delegate-type).</span></span>
+<span data-ttu-id="4e1dd-111">还可以使用 `delegate` 关键字声明[委托类型](../builtin-types/reference-types.md#the-delegate-type)。</span><span class="sxs-lookup"><span data-stu-id="4e1dd-111">You also use the `delegate` keyword to declare a [delegate type](../builtin-types/reference-types.md#the-delegate-type).</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="0a26e-112">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="0a26e-112">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="4e1dd-112">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="4e1dd-112">C# language specification</span></span>
 
-<span data-ttu-id="0a26e-113">有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的 [匿名函数表达式](~/_csharplang/spec/expressions.md#anonymous-function-expressions)部分。</span><span class="sxs-lookup"><span data-stu-id="0a26e-113">For more information, see the [Anonymous function expressions](~/_csharplang/spec/expressions.md#anonymous-function-expressions) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+<span data-ttu-id="4e1dd-113">有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#anonymous-function-expressions)中的 [匿名函数表达式](~/_csharplang/spec/introduction.md)部分。</span><span class="sxs-lookup"><span data-stu-id="4e1dd-113">For more information, see the [Anonymous function expressions](~/_csharplang/spec/expressions.md#anonymous-function-expressions) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="0a26e-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="0a26e-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4e1dd-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4e1dd-114">See also</span></span>
 
-- [<span data-ttu-id="0a26e-115">C# 参考</span><span class="sxs-lookup"><span data-stu-id="0a26e-115">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="0a26e-116">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="0a26e-116">C# operators</span></span>](index.md)
-- [<span data-ttu-id="0a26e-117">=> 运算符</span><span class="sxs-lookup"><span data-stu-id="0a26e-117">=> operator</span></span>](lambda-operator.md)
+- [<span data-ttu-id="4e1dd-115">C# 参考</span><span class="sxs-lookup"><span data-stu-id="4e1dd-115">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="4e1dd-116">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="4e1dd-116">C# operators</span></span>](index.md)
+- [<span data-ttu-id="4e1dd-117">=> 运算符</span><span class="sxs-lookup"><span data-stu-id="4e1dd-117">=> operator</span></span>](lambda-operator.md)
