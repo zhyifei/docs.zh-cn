@@ -4,11 +4,11 @@ description: 了解 .NET 文档中所用的选定术语的含义。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
 ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160087"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398747"
 ---
 # <a name="net-glossary"></a>.NET 术语表
 
@@ -92,11 +92,11 @@ ms.locfileid: "78160087"
 
 在现有的文档中，“框架”有时指 [.NET 的实现](#implementation-of-net)。 例如，某文章可能会将 .NET Core 称为框架。 我们计划从文档中去掉这种令人困惑的用法。
 
-## <a name="gc"></a>GC
+## <a name="gc"></a>“GC”
 
 垃圾回收器。
 
-垃圾回收器是自动内存管理的实现。  GC 可释放不再使用的对象占用的内存。 
+垃圾回收器是自动内存管理的实现。  GC 可释放对象占用的不再使用的内存。
 
 请参阅[垃圾回收](garbage-collection/index.md)。
 
@@ -118,7 +118,7 @@ C# 等较高级的 .NET 语言编译为称为中间语言 (IL) 的硬件无关�
 
 - 一个或多个运行时。 示例：CLR、CoreCLR、CoreRT。
 - 实现 .NET Standard 的某版本并且可能包含其他 API 的类库。 示例：.NET Framework 基类库、.NET Core 基类库。
-- 可选择包含一个或多个应用程序框架。 示例：ASP.NET、Windows 窗体和 WPF 包含在 .NET Framework 中。
+- 可选择包含一个或多个应用程序框架。 示例： ASP.NET、Windows 窗体和 WPF 包含在 .NET Framework 中。
 - 可包含开发工具。 某些开发工具在多个实现之间共享。
 
 .NET 实现的示例：
@@ -205,9 +205,9 @@ UWP 是 .NET Native 支持的首个应用程序框架。 现在，我们支持�
 
 可将此方法视为永久性 JIT 编译器。 它通常在执行代码的计算机上编译该代码，但通常在安装时进行编译。
 
-## <a name="package"></a>包
+## <a name="package"></a>程序包
 
-NuGet 包 &mdash; 或只是一个包 &mdash; 是一个 .zip 文件，其中具有一个或多个名称相同的程序集以及作者姓名等其他元数据。
+NuGet 包 &mdash; 或只是一个包 &mdash; 是一个 .zip  文件，其中具有一个或多个名称相同的程序集以及作者姓名等其他元数据。
 
 .zip  文件的扩展名为 .nupkg  ，且可以包含在多个目标框架和版本中使用的资产（如 .dll  文件和 .xml  文件）。 在应用或库中安装时，会根据应用或库指定的目标框架选择相应的资产。 定义接口的资产位于 ref  文件夹，而定义实现的资产位于 lib  文件夹。
 
@@ -271,7 +271,7 @@ NuGet 包 &mdash; 或只是一个包 &mdash; 是一个 .zip 文件，其中具�
 
 用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件的 .NET 实现。 它旨在统一可能想要以其为目标的不同类型的设备，包括电脑、平板电脑、平板手机、电话，甚至 Xbox。 UWP 提供许多服务，如集中式应用商店、执行环境 (AppContainer) 和一组 Windows API（用于代替 Win32 (WinRT)）。 应用可采用 C++、C#、Visual Basic 和 JavaScript 编写。 使用 C# 和 Visual Basic 时，.NET API 由 .NET Core 提供。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET 指南](index.md)
 - [.NET Framework 指南](../framework/index.md)

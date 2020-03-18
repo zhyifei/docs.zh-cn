@@ -4,12 +4,12 @@ description: 了解有关编写单元测试的最佳做法，以提高 .NET Core
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: a65cf3fbfb6562dbd9aaf815e1bfe469585c0fc0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 586373381bcb18384cbf29bb2ca2bd220a2b2d3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157383"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240956"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 单元测试最佳做法
 
@@ -32,7 +32,7 @@ ms.locfileid: "78157383"
 使用单元测试，可在每次生成后，甚至在更改一行代码后重新运行整套测试。 让你确信新代码不会破坏现有功能。
 
 ### <a name="executable-documentation"></a>可执行文档
-在给定某个输入的情况下，特定方法的作用或行为可能并不总是很明显。 你可能会想知道：如果我将空白字符串传递给它，此方法会有怎样的行为？ Null?
+在给定某个输入的情况下，特定方法的作用或行为可能并不总是很明显。 你可能会问自己：如果我将空白字符串传递给它，此方法会有怎样的行为？ Null?
 
 如果你有一套命名正确的单元测试，每个测试应能够清楚地解释给定输入的预期输出。 此外，它应该能够验证其确实有效。
 
@@ -102,7 +102,7 @@ Assert.True(mockOrder.Validated);
 
 关于 mock 与 stub 需要注意的一个重点是，mock 与 stub 很像，但可以针对 mock 对象进行断言，而不针对 stub 进行断言。
 
-## <a name="best-practices"></a>最佳实践
+## <a name="best-practices"></a>最佳做法
 
 ### <a name="naming-your-tests"></a>为测试命名
 测试的名称应包括三个部分：
@@ -118,10 +118,10 @@ Assert.True(mockOrder.Validated);
 测试不仅能确保代码有效，还能提供文档。 只需查看单元测试套件，就可以在不查看代码本身的情况下推断代码的行为。 此外，测试失败时，可以确切地看到哪些方案不符合预期。
 
 #### <a name="bad"></a>不佳：
-[!code-csharp[BeforeNaming](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeNaming)]
+[!code-csharp[BeforeNaming](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeNaming)]
 
 #### <a name="better"></a>良好：
-[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
+[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="arranging-your-tests"></a>安排测试
 “Arrange、Act、Assert”是单元测试时的常见模式  。 顾名思义，它包含三个主要操作：
@@ -138,10 +138,10 @@ Assert.True(mockOrder.Validated);
 可读性是编写测试时最重要的方面之一。 在测试中分离这些操作会明确地突出显示调用代码所需的依赖项、调用代码的方式以及尝试断言的内容。 虽然可以组合一些步骤并减小测试的大小，但主要目标是使测试尽可能可读。
 
 #### <a name="bad"></a>不佳：
-[!code-csharp[BeforeArranging](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeArranging)]
+[!code-csharp[BeforeArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeArranging)]
 
 #### <a name="better"></a>良好：
-[!code-csharp[AfterArranging](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterArranging)]
+[!code-csharp[AfterArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterArranging)]
 
 ### <a name="write-minimally-passing-tests"></a>以最精简方式编写通过测试
 单元测试中使用的输入应为最简单的输入，以便验证当前正在测试的行为。
@@ -154,10 +154,10 @@ Assert.True(mockOrder.Validated);
 包含比通过测试所需信息更多信息的测试更可能将错误引入测试，并且可能使测试的意图变得不太明确。 编写测试时需要将重点放在行为上。 在模型上设置额外的属性或在不需要时使用非零值，只会偏离所要证明的内容。
 
 #### <a name="bad"></a>不佳：
-[!code-csharp[BeforeMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
+[!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
 
 #### <a name="better"></a>良好：
-[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
+[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="avoid-magic-strings"></a>避免魔幻字符串
 单元测试中的命名变量和生产代码中的命名变量同样重要。 单元测试不应包含魔幻字符串。
@@ -173,10 +173,10 @@ Assert.True(mockOrder.Validated);
 > 编写测试时，应力求表达尽可能多的意图。 对于魔幻字符串，一种很好的方法是将这些值赋给常量。
 
 #### <a name="bad"></a>不佳：
-[!code-csharp[BeforeMagicString](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMagicString)]
+[!code-csharp[BeforeMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMagicString)]
 
 #### <a name="better"></a>良好：
-[!code-csharp[AfterMagicString](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMagicString)]
+[!code-csharp[AfterMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMagicString)]
 
 ### <a name="avoid-logic-in-tests"></a>在测试中应避免逻辑
 编写单元测试时，请避免手动字符串串联和逻辑条件，例如 `if`、`while`、`for` 和 `switch` 等等。
@@ -192,10 +192,10 @@ Assert.True(mockOrder.Validated);
 > 如果不可避免地要在测试中使用逻辑，请考虑将测试分成两个或多个不同的测试。
 
 #### <a name="bad"></a>不佳：
-[!code-csharp[LogicInTests](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#LogicInTests)]
+[!code-csharp[LogicInTests](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#LogicInTests)]
 
 #### <a name="better"></a>良好：
-[!code-csharp[AfterTestLogic](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterTestLogic)]
+[!code-csharp[AfterTestLogic](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterTestLogic)]
 
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>更偏好 helper 方法而非 setup 和 teardown
 如果测试需要类似的对象或状态，那么比起使用 Setup 和 Teardown 属性（如果存在），更偏好使用 helper 方法。
@@ -212,22 +212,22 @@ Assert.True(mockOrder.Validated);
 > 自版本 2.x 起，xUnit 已删除 SetUp 和 TearDown
 
 #### <a name="bad"></a>不佳：
-[!code-csharp[BeforeSetup](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeSetup)]
+[!code-csharp[BeforeSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeSetup)]
 
 ```csharp
 // more tests...
 ```
 
-[!code-csharp[BeforeHelperMethod](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeHelperMethod)]
+[!code-csharp[BeforeHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeHelperMethod)]
 
 #### <a name="better"></a>良好：
-[!code-csharp[AfterHelperMethod](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterHelperMethod)]
+[!code-csharp[AfterHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterHelperMethod)]
 
 ```csharp
 // more tests...
 ```
 
-[!code-csharp[AfterSetup](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterSetup)]
+[!code-csharp[AfterSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterSetup)]
 
 ### <a name="avoid-multiple-asserts"></a>避免多个断言
 在编写测试时，请尝试每次测试只包含一个 Assert。 仅使用一个 assert 的常用方法包括：
@@ -247,10 +247,10 @@ Assert.True(mockOrder.Validated);
 > 此规则的一个常见例外是对对象进行断言。 在这种情况下，通常可以对每个属性进行多次断言，以确保对象处于所预期的状态。
 
 #### <a name="bad"></a>不佳：
-[!code-csharp[BeforeMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
+[!code-csharp[BeforeMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
 
 #### <a name="better"></a>良好：
-[!code-csharp[AfterMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
+[!code-csharp[AfterMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
 ### <a name="validate-private-methods-by-unit-testing-public-methods"></a>通过单元测试公共方法验证专有方法
 在大多数情况下，不需要测试专用方法。 专用方法是实现细节。 可以这样认为：专用方法永远不会孤立存在。 在某些时候，存在调用专用方法作为其实现的一部分的面向公共的方法。 你应关心的是调用到专用方法的公共方法的最终结果。

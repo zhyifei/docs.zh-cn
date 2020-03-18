@@ -2,12 +2,12 @@
 title: 委托中的变体 (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: cdf7cad97ececbf4baae8328b1df55318c627cbb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fd1b4824dc3d8f12347e01b804a6e39fe2e086c8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345165"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169709"
 ---
 # <a name="variance-in-delegates-c"></a>委托中的变体 (C#)
 .NET Framework 3.5 引入了变体支持，用于在 C# 中匹配所有委托的方法签名和委托类型。 这表明不仅可以将具有匹配签名的方法分配给委托，还可以将返回派生程度较大的派生类型的方法分配给委托（协变），或者如果方法所接受参数的派生类型所具有的派生程度小于委托类型指定的程度（逆变），也可将其分配给委托。 这包括泛型委托和非泛型委托。  
@@ -36,7 +36,7 @@ public static Second ASecondRSecond(Second second)
 public static First AFirstRFirst(First first)  
 { return new First(); }  
   
-// The return type is more derived   
+// The return type is more derived
 // and the argument type is less derived.  
 public static Second AFirstRSecond(First first)  
 { return new Second(); }  
@@ -45,10 +45,10 @@ public static Second AFirstRSecond(First first)
  以下代码示例说明了方法签名与委托类型之间的隐式转换。  
   
 ```csharp  
-// Assigning a method with a matching signature   
+// Assigning a method with a matching signature
 // to a non-generic delegate. No conversion is necessary.  
 SampleDelegate dNonGeneric = ASecondRFirst;  
-// Assigning a method with a more derived return type   
+// Assigning a method with a more derived return type
 // and less derived argument type to a non-generic delegate.  
 // The implicit conversion is used.  
 SampleDelegate dNonGenericConversion = AFirstRSecond;  
@@ -56,7 +56,7 @@ SampleDelegate dNonGenericConversion = AFirstRSecond;
 // Assigning a method with a matching signature to a generic delegate.  
 // No conversion is necessary.  
 SampleGenericDelegate<Second, First> dGeneric = ASecondRFirst;  
-// Assigning a method with a more derived return type   
+// Assigning a method with a more derived return type
 // and less derived argument type to a generic delegate.  
 // The implicit conversion is used.  
 SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;  
@@ -81,13 +81,13 @@ public static void Test()
   
     // You can assign delegates to each other,  
     // because the type T is declared covariant.  
-    SampleGenericDelegate <Object> dObject = dString;             
+    SampleGenericDelegate <Object> dObject = dString;
 }  
 ```  
   
  如果仅使用变体支持来匹配方法签名和委托类型，且不使用 `in` 和 `out` 关键字，则可能会发现有时可以使用相同的 lambda 表达式或方法实例化委托，但不能将一个委托分配给另一个委托。  
   
- 在以下代码示例中，`SampleGenericDelegate<String>` 不能显式转换为 `SampleGenericDelegate<Object>`，尽管 `String` 继承 `Object`。 可以使用 `out` 关键字标记 泛型参数 `T` 解决此问题。  
+ 在以下代码示例中，`SampleGenericDelegate<String>` 不能显式转换为 `SampleGenericDelegate<Object>`，尽管 `String` 继承 `Object`。 可以使用 `T` 关键字标记 泛型参数 `out` 解决此问题。  
   
 ```csharp  
 public delegate T SampleGenericDelegate<T>();  
@@ -98,7 +98,7 @@ public static void Test()
   
     // You can assign the dObject delegate  
     // to the same lambda expression as dString delegate  
-    // because of the variance support for   
+    // because of the variance support for
     // matching method signatures with delegate types.  
     SampleGenericDelegate<Object> dObject = () => " ";  
   
@@ -112,9 +112,9 @@ public static void Test()
 ### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>.NET Framework 中具有变体类型参数的泛型委托  
  .NET Framework 4 在几个现有泛型委托中引入了泛型类型参数的变体支持：  
   
-- <xref:System> 命名空间的 `Action` 委托，例如 <xref:System.Action%601> 和 <xref:System.Action%602>  
+- `Action` 命名空间的 <xref:System> 委托，例如 <xref:System.Action%601> 和 <xref:System.Action%602>  
   
-- <xref:System> 命名空间的 `Func` 委托，例如 <xref:System.Func%601> 和 <xref:System.Func%602>  
+- `Func` 命名空间的 <xref:System> 委托，例如 <xref:System.Func%601> 和 <xref:System.Func%602>  
   
 - <xref:System.Predicate%601> 委托  
   
@@ -192,11 +192,11 @@ public static void Test()
     // DInvariant<Object> dObject = dInt;  
     // DInvariant<long> dLong = dInt;  
     // DVariant<Object> dVariantObject = dVariantInt;  
-    // DVariant<long> dVariantLong = dVariantInt;              
+    // DVariant<long> dVariantLong = dVariantInt;
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [泛型](../../../../standard/generics/index.md)
 - [对 Func 和 Action 泛型委托使用变体 (C#)](./using-variance-for-func-and-action-generic-delegates.md)

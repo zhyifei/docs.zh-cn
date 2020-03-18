@@ -4,16 +4,16 @@ description: 了解如何使用 spark-submit 和 Set Jar 将 .NET for Apache Spa
 ms.date: 12/05/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9cd3d40871d4600660957ec268f192ef3e045845
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 65976f9095ecef66e0538c398492033c612c1430
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838361"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187610"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>将 .NET for Apache Spark 作业提交到 Databricks
 
-可通过两种方法将 .NET for Apache Spark 作业部署到 Databricks：`spark-submit` 和 Set Jar。 
+可通过两种方法将 .NET for Apache Spark 作业部署到 Databricks：`spark-submit` 和 Set Jar。
 
 ## <a name="deploy-using-spark-submit"></a>使用 spark-submit 进行部署
 

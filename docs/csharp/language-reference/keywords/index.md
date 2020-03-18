@@ -10,11 +10,11 @@ helpviewer_keywords:
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
 ms.openlocfilehash: 928917d25b5f3f97c4b8cdff85efdaa1957be41e
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626680"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397538"
 ---
 # <a name="c-keywords"></a>C# 关键字
 
@@ -28,15 +28,15 @@ ms.locfileid: "77626680"
 |[break](break.md)|[byte](../builtin-types/integral-numeric-types.md)|[case](switch.md)|[catch](try-catch.md)|  
 |[char](../builtin-types/char.md)|[checked](checked.md)|[class](class.md)|[const](const.md)|  
 |[continue](continue.md)|[decimal](../builtin-types/floating-point-numeric-types.md)|[default](default.md)|[delegate](../builtin-types/reference-types.md)|  
-|[do](do.md)|[double](../builtin-types/floating-point-numeric-types.md)|[else](if-else.md)|[enum](../builtin-types/enum.md)|  
+|[do](do.md)|[双精度](../builtin-types/floating-point-numeric-types.md)|[else](if-else.md)|[enum](../builtin-types/enum.md)|  
 |[event](event.md)|[explicit](../operators/user-defined-conversion-operators.md)|[extern](extern.md)|[false](../builtin-types/bool.md)|  
 |[finally](try-finally.md)|[fixed](fixed-statement.md)|[float](../builtin-types/floating-point-numeric-types.md)|[for](for.md)|  
 |[foreach](foreach-in.md)|[goto](goto.md)|[if](if-else.md)|[implicit](../operators/user-defined-conversion-operators.md)|  
-|[in](in.md)|[int](../builtin-types/integral-numeric-types.md)|[interface](interface.md)|[internal](internal.md)|
+|[in](in.md)|[int](../builtin-types/integral-numeric-types.md)|[接口](interface.md)|[内部](internal.md)|
 |[is](is.md)|[lock](lock-statement.md)|[long](../builtin-types/integral-numeric-types.md)|[namespace](namespace.md)|
-|[new](../operators/new-operator.md)|[null](null.md)|[object](../builtin-types/reference-types.md)|[operator](../operators/operator-overloading.md)|
+|[全新](../operators/new-operator.md)|[null](null.md)|[object](../builtin-types/reference-types.md)|[operator](../operators/operator-overloading.md)|
 |[out](out.md)|[override](override.md)|[params](params.md)|[private](private.md)|
-|[protected](protected.md)|[public](public.md)|[readonly](readonly.md)|[ref](ref.md)|
+|[受保护](protected.md)|[public](public.md)|[readonly](readonly.md)|[ref](ref.md)|
 |[return](return.md)|[sbyte](../builtin-types/integral-numeric-types.md)|[sealed](sealed.md)|[short](../builtin-types/integral-numeric-types.md)||
 [sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[string](../builtin-types/reference-types.md)|
 |[struct](../builtin-types/struct.md)|[switch](switch.md)|[this](this.md)|[throw](throw.md)|
@@ -47,7 +47,7 @@ ms.locfileid: "77626680"
 
 ## <a name="contextual-keywords"></a>上下文关键字
 
- 上下文关键字用于在代码中提供特定含义，但它不是 C# 中的保留字。 一些上下文关键字（如 `partial` 和 `where`）在两个或多个上下文中有特殊含义。  
+ 上下文关键字用于在代码中提供特定含义，但不是 C# 中的保留字。 一些上下文关键字（如 `partial` 和 `where`）在两个或多个上下文中有特殊含义。  
   
 ||||  
 |---|---|---|  
@@ -63,6 +63,6 @@ ms.locfileid: "77626680"
 |[when（筛选条件）](when.md)|[where（泛型类型约束）](where-generic-type-constraint.md)|[where（查询子句）](where-clause.md)|
 |[yield](yield.md)| | |
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)

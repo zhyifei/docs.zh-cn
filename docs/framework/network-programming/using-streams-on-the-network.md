@@ -17,28 +17,28 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: aa3fc56dc461d4fe22e2ff391f3561d8834128d8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7d5a2e3eec9b49731a09f6eb41a8d8500a59b45c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046875"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180622"
 ---
 # <a name="using-streams-on-the-network"></a>在网络上使用流
 网络资源在 .NET Framework 中表示为流。 通过对流进行一般处理，.NET Framework 提供下列功能：  
   
 - 发送和接收 Web 数据的通用方法。 无论文件的实际内容是什么（HTML、XML 或任何其他内容），应用程序都将使用 <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> 和 <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> 发送和接收数据。  
   
-- 跨 .NET Framework 的流兼容性。 流在 .NET Framework 中遍及使用，其具有丰富的基础结构来处理流。 例如，通过仅更改初始化流的几行代码，便可修改从 <xref:System.IO.FileStream> 中读取 XML 数据的应用程序而使其改为从 <xref:System.Net.Sockets.NetworkStream> 中读取数据。 NetworkStream 类和其他流之间的主要区别在于：NetworkStream 是不可查找的，<xref:System.Net.Sockets.NetworkStream.CanSeek%2A> 属性始终返回 false，且 <xref:System.Net.Sockets.NetworkStream.Seek%2A> 和 <xref:System.Net.Sockets.NetworkStream.Position%2A> 方法将引发 <xref:System.NotSupportedException>。     
+- 跨 .NET Framework 的流兼容性。 流在 .NET Framework 中遍及使用，其具有丰富的基础结构来处理流。 例如，通过仅更改初始化流的几行代码，便可修改从 <xref:System.IO.FileStream> 中读取 XML 数据的应用程序而使其改为从 <xref:System.Net.Sockets.NetworkStream> 中读取数据。 NetworkStream 类和其他流之间的主要区别在于：NetworkStream 是不可查找的，**属性始终返回 false，且** 和 **方法将引发**。<xref:System.Net.Sockets.NetworkStream.CanSeek%2A>  <xref:System.Net.Sockets.NetworkStream.Seek%2A><xref:System.Net.Sockets.NetworkStream.Position%2A><xref:System.NotSupportedException>  
   
 - 在数据到达时处理数据。 流在数据从网络到达目标时便提供对数据的访问，而不会强制应用程序等待整个数据集下载完成。  
   
- <xref:System.Net.Sockets> 命名空间包含一个 NetworkStream 类，该类实现专用于网络资源的 <xref:System.IO.Stream> 类。  <xref:System.Net.Sockets> 命名空间中的类使用 NetworkStream 类表示流。   
+ <xref:System.Net.Sockets> 命名空间包含一个 NetworkStream 类，该类实现专用于网络资源的  **类。** <xref:System.IO.Stream> <xref:System.Net.Sockets> 命名空间中的类使用 NetworkStream 类表示流。   
   
- 若要使用返回的流向网络发送数据，请对 <xref:System.Net.WebRequest> 调用 <xref:System.Net.WebRequest.GetRequestStream%2A>。 WebRequest 会将请求标头发送到服务器；然后你可以通过对返回的流调用 <xref:System.IO.Stream.BeginWrite%2A>、<xref:System.IO.Stream.EndWrite%2A> 或 <xref:System.IO.Stream.Write%2A> 方法，将数据发送到网络资源。  某些协议（如 HTTP）可能要求在发送数据之前设置协议特定的属性。 下面的代码示例演示如何设置 HTTP 特定的属性以发送数据。 该示例假定变量 `sendData` 包含要发送的数据，变量 `sendLength` 为要发送的数据的字节数。  
+ 若要使用返回的流向网络发送数据，请对 <xref:System.Net.WebRequest.GetRequestStream%2A> 调用 <xref:System.Net.WebRequest>。 WebRequest 会将请求标头发送到服务器；然后你可以通过对返回的流调用 **、** 或 <xref:System.IO.Stream.BeginWrite%2A> 方法，将数据发送到网络资源。<xref:System.IO.Stream.EndWrite%2A><xref:System.IO.Stream.Write%2A> 某些协议（如 HTTP）可能要求在发送数据之前设置协议特定的属性。 下面的代码示例演示如何设置 HTTP 特定的属性以发送数据。 该示例假定变量 `sendData` 包含要发送的数据，变量 `sendLength` 为要发送的数据的字节数。  
   
 ```csharp  
-HttpWebRequest request =   
+HttpWebRequest request =
    (HttpWebRequest) WebRequest.Create("http://www.contoso.com/");  
 request.Method = "POST";  
 request.ContentLength = sendLength;  
@@ -68,7 +68,7 @@ Catch
 End Try  
 ```  
   
- 若要从网络接收数据，请对 <xref:System.Net.WebResponse> 调用 <xref:System.Net.WebResponse.GetResponseStream%2A>。 然后可以通过对返回的流调用 <xref:System.IO.Stream.BeginRead%2A>、<xref:System.IO.Stream.EndRead%2A> 或 <xref:System.IO.Stream.Read%2A> 方法，从网络资源读取数据。  
+ 若要从网络接收数据，请对 <xref:System.Net.WebResponse.GetResponseStream%2A> 调用 <xref:System.Net.WebResponse>。 然后可以通过对返回的流调用 <xref:System.IO.Stream.BeginRead%2A>、<xref:System.IO.Stream.EndRead%2A> 或 <xref:System.IO.Stream.Read%2A> 方法，从网络资源读取数据。  
   
  使用来自网络资源的流时，请留心以下几点：  
   
@@ -86,7 +86,7 @@ End Try
 // Create a response object.  
 WebResponse response = request.GetResponse();  
 // Get a readable stream from the server.  
-StreamReader sr =   
+StreamReader sr =
    new StreamReader(response.GetResponseStream(), Encoding.ASCII);  
 // Use the stream. Remember when you are through with the stream to close it.  
 sr.Close();  
@@ -96,13 +96,13 @@ sr.Close();
 ' Create a response object.  
 Dim response As WebResponse = request.GetResponse()  
 ' Get a readable stream from the server.  
-Dim sr As _   
+Dim sr As _
    New StreamReader(response.GetResponseStream(), Encoding.ASCII)  
 ' Use the stream. Remember when you are through with the stream to close it.  
 sr.Close()  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：使用 WebRequest 类请求数据](how-to-request-data-using-the-webrequest-class.md)
 - [请求数据](requesting-data.md)

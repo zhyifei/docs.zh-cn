@@ -5,14 +5,14 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/04/2019
 ms.topic: tutorial
-ms.openlocfilehash: 83d44af080d95ab6f9311ddd3ca4860806757436
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 125ef834da8e42c99c8080a3d5414a7927ce7636
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504041"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79186515"
 ---
-# <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>教程：使用 .NET for Apache Spark 进行结构化流式处理 
+# <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>教程：使用 .NET for Apache Spark 进行结构化流式处理
 
 本教程介绍如何使用 .NET for Apache Spark 调用 Spark 结构化流式处理。 Spark 结构化流式处理是 Apache Spark 对处理实时数据流的支持。 流处理是指在生成实时数据时对其进行分析。
 
@@ -47,7 +47,7 @@ ms.locfileid: "77504041"
 
 ## <a name="establish-and-connect-to-a-data-stream"></a>建立连接并连接到数据流
 
-测试流处理的一个常用方法是通过 netcat  。 netcat（也称为 nc  ）可用于从网络连接中读取以及向网络连接写入。 通过终端窗口建立与 netcat 的网络连接。 
+测试流处理的一个常用方法是通过 netcat  。 netcat（也称为 nc  ）可用于从网络连接中读取以及向网络连接写入。 通过终端窗口建立与 netcat 的网络连接。
 
 ### <a name="create-a-data-stream-with-netcat"></a>使用 netcat 创建数据流
 
@@ -108,14 +108,14 @@ DataFrame lines = spark
 
 可以使用 Spark 应用程序中的 UDF（用户定义的函数）来对数据执行计算和分析  。
 
-将以下代码添加到 `Main` 方法，以注册名为 `udfArray` 的 UDF。 
+将以下代码添加到 `Main` 方法，以注册名为 `udfArray` 的 UDF。
 
 ```csharp
 Func<Column, Column> udfArray =
     Udf<string, string[]>((str) => new string[] { str, $"{str} {str.Length}" });
 ```
 
-此 UDF 处理从 netcat 终端接收的每个字符串，以生成包含原始字符串（包含在 str  中）的数组，后跟与原始字符串的长度串联的原始字符串。 
+此 UDF 处理从 netcat 终端接收的每个字符串，以生成包含原始字符串（包含在 str  中）的数组，后跟与原始字符串的长度串联的原始字符串。
 
 例如，在 netcat 终端中输入“Hello world”会生成一个数组，其中  ：
 

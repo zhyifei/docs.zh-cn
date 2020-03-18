@@ -2,12 +2,12 @@
 title: 如何查找相关元素 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: cdc281d0b08ee7b7f93ac28b14e82fa113a3379d
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f74c338019c0451ab5e3ac0d8da10392ae5601ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141030"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169228"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>如何查找相关元素 (XPath-LINQ to XML) (C#)
 本主题演示如何在由其他元素的值所引用的属性上获取元素选择。  
@@ -21,7 +21,7 @@ ms.locfileid: "74141030"
   
  请注意，在 .NET 中，列表索引是从零开始编制。 在 XPath 谓词中，对节点集合的索引是从 1 开始的。 本示例反映了这种差别。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)。  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  
@@ -83,4 +83,3 @@ Results are identical
   </FullAddress>  
 </Customer>  
 ```  
- 

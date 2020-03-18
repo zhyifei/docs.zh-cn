@@ -6,31 +6,31 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 3ce68ecc1f0740fdb43ccf22b636dcd4bc05ea0a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 76cd00b9c84f128d2a181115293df910d8deb6cb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712229"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398405"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>类型参数的约束（C# 编程指南）
 
 约束告知编译器类型参数必须具备的功能。 在没有任何约束的情况下，类型参数可以是任何类型。 编译器只能假定 <xref:System.Object?displayProperty=nameWithType> 的成员，它是任何 .NET 类型的最终基类。 有关详细信息，请参阅[使用约束的原因](#why-use-constraints)。 如果客户端代码尝试使用约束所不允许的类型来实例化类，则会产生编译时错误。 通过使用 `where` 上下文关键字指定约束。 下表列出了七种类型的约束：
 
-|约束|描述|
+|约束|说明|
 |----------------|-----------------|
 |`where T : struct`|类型参数必须是不可为 null 的值类型。 有关可为 null 的值类型的信息，请参阅[可为 null 的值类型](../../language-reference/builtin-types/nullable-value-types.md)。 由于所有值类型都具有可访问的无参数构造函数，因此 `struct` 约束表示 `new()` 约束，并且不能与 `new()` 约束结合使用。 此外，`struct` 约束也不能与 `unmanaged` 约束结合使用。|
 |`where T : class`|类型参数必须是引用类型。 此约束还应用于任何类、接口、委托或数组类型。|
 |`where T : notnull`|类型参数必须是不可为 null 的类型。 参数可以是 C# 8.0 或更高版本中的不可为 null 的引用类型，也可以是不可为 null 的值类型。 此约束还应用于任何类、接口、委托或数组类型。|
 |`where T : unmanaged`|类型参数必须是不可为 null 的[非托管类型](../../language-reference/builtin-types/unmanaged-types.md)。 `unmanaged` 约束表示 `struct` 约束，且不能与 `struct` 约束或 `new()` 约束结合使用。|
 |`where T : new()`|类型参数必须具有公共无参数构造函数。 与其他约束一起使用时，`new()` 约束必须最后指定。 `new()` 约束不能与 `struct` 和 `unmanaged` 约束结合使用。|
-|`where T :` \<基类名> |类型参数必须是指定的基类或派生自指定的基类。|
-|`where T :` \<接口名称> |类型参数必须是指定的接口或实现指定的接口。 可指定多个接口约束。 约束接口也可以是泛型。|
+|`where T :` *基类名>\<*|类型参数必须是指定的基类或派生自指定的基类。|
+|`where T :` *接口名称>\<*|类型参数必须是指定的接口或实现指定的接口。 可指定多个接口约束。 约束接口也可以是泛型。|
 |`where T : U`|为 T 提供的类型参数必须是为 U 提供的参数或派生自为 U 提供的参数。|
 
 ## <a name="why-use-constraints"></a>使用约束的原因
 
-通过约束类型参数，可以增加约束类型及其继承层次结构中的所有类型所支持的允许操作和方法调用的数量。 设计泛型类或方法时，如果要对泛型成员执行除简单赋值之外的任何操作或调用 <xref:System.Object?displayProperty=nameWithType> 不支持的任何方法，则必须对该类型参数应用约束。 例如，基类约束告诉编译器，仅此类型的对象或派生自此类型的对象可用作类型参数。 编译器有了此保证后，就能够允许在泛型类中调用该类型的方法。 以下代码示例演示可通过应用基类约束添加到（[泛型介绍](../../../standard/generics/index.md)中的）`GenericList<T>` 类的功能。
+通过约束类型参数，可以增加约束类型及其继承层次结构中的所有类型所支持的允许操作和方法调用的数量。 设计泛型类或方法时，如果要对泛型成员执行除简单赋值之外的任何操作或调用 <xref:System.Object?displayProperty=nameWithType> 不支持的任何方法，则必须对该类型参数应用约束。 例如，基类约束告诉编译器，仅此类型的对象或派生自此类型的对象可用作类型参数。 编译器有了此保证后，就能够允许在泛型类中调用该类型的方法。 以下代码示例演示可通过应用基类约束添加到（`GenericList<T>`泛型介绍[中的）](../../../standard/generics/index.md) 类的功能。
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#9)]
 
@@ -76,7 +76,7 @@ ms.locfileid: "75712229"
 
 ## <a name="notnull-constraint"></a>NotNull 约束
 
-从 C# 8.0 开始，可以使用 `notnull` 约束指定类型参数必须是不可为 null 的值类型或不可为 null 的引用类型。 `notnull` 约束只能在 `nullable enable` 上下文中使用。 如果在可以为 null 的不明显上下文中添加 `notnull` 约束，则编译器将生成警告。 
+从 C# 8.0 开始，可以使用 `notnull` 约束指定类型参数必须是不可为 null 的值类型或不可为 null 的引用类型。 `notnull` 约束只能在 `nullable enable` 上下文中使用。 如果在可以为 null 的不明显上下文中添加 `notnull` 约束，则编译器将生成警告。
 
 与其他约束不同，如果类型参数违反 `notnull` 约束，那么在 `nullable enable` 上下文中编译该代码时，编译器会生成警告。 如果在可以为 null 的不明显上下文中编译代码，则编译器不会生成任何警告或错误。
 
@@ -116,7 +116,7 @@ ms.locfileid: "75712229"
 
 [!code-csharp[using the enum constrained method](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Collections.Generic>
 - [C# 编程指南](../index.md)

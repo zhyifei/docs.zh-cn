@@ -4,12 +4,12 @@ description: 总结如何使用表达式树创建将代码解释为数据并基�
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
-ms.openlocfilehash: 43715c94b70f1cd7f758cde91ae7c8d1b2f70f9f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 513244a987e295c81cfb5d00d9a0cfd6912074e0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036753"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79145886"
 ---
 # <a name="expression-trees-summary"></a>表达式树摘要
 
@@ -19,7 +19,7 @@ ms.locfileid: "73036753"
 
 可以检查表达式树以了解算法的目的。 不仅可以检查该代码。 可以生成表示原始代码的修改版本的新表达式树。
 
-还可以使用表达式树来查看算法，并将该算法翻译成另一种语言或环境。 
+还可以使用表达式树来查看算法，并将该算法翻译成另一种语言或环境。
 
 ## <a name="limitations"></a>限制
 

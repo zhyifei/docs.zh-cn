@@ -4,11 +4,11 @@ description: 一个重要的机器学习术语表，可在 ML.NET 中生成自�
 ms.topic: reference
 ms.date: 07/31/2019
 ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739877"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397763"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>机器学习重要术语词汇表
 
@@ -24,7 +24,7 @@ ms.locfileid: "75739877"
 
 ## <a name="binary-classification"></a>二元分类
 
-一个[分类](#classification)事例，其中[标签](#label)仅为两个类中的一个。 有关详细信息，请参阅[机器学习任务](tasks.md)主题的[二元分类](tasks.md#binary-classification)部分。
+一个[分类](#classification)事例，其中[标签](#label)仅为两个类中的一个。 有关详细信息，请参阅[机器学习任务](tasks.md#binary-classification)主题的[二元分类](tasks.md)部分。
 
 ## <a name="calibration"></a>校准
 
@@ -44,7 +44,7 @@ ms.locfileid: "75739877"
 
 [回归](#regression)中的一项评估指标，表明数据与模型的匹配程度。 范围从 0 到 1。 值 0 表示数据是随机的，否则就无法与模型相匹配。 值 1 表示模型与数据完全匹配。 这通常称为 <sup>2</sup>、R<sup>2</sup> 或 r 平方值。
 
-## <a name="data"></a>数据
+## <a name="data"></a>data
 
 数据是所有机器学习应用程序的核心。 在 ML.NET 中，数据由 <xref:Microsoft.ML.IDataView> 对象表示。 数据视图对象：
 
@@ -80,7 +80,7 @@ ML.NET 中实现 <xref:Microsoft.ML.IEstimator%601> 接口的类。
 
 机器学习算法的参数。 示例包括在决策林中学习的树的数量，或者梯度下降算法中的步长。 在对模型进行定型之前，先设置超参数  的值，并控制查找预测函数参数的过程，例如，决策树中的比较点或线性回归模型中的权重。 有关详细信息，请参阅 Wikipedia 上的[超参数](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning))一文。
 
-## <a name="label"></a>Label
+## <a name="label"></a>标签
 
 使用机器学习模型进行预测的元素。 例如，狗的品种或将来的股票价格。
 
@@ -104,7 +104,7 @@ ML.NET 中实现 <xref:Microsoft.ML.IEstimator%601> 接口的类。
 
 ## <a name="multiclass-classification"></a>多类分类
 
-一个[分类](#classification)事例，其中[标签](#label)是三个或更多类中的一个。 有关详细信息，请参阅[机器学习任务](tasks.md)主题的[多类分类](tasks.md#multiclass-classification)部分。
+一个[分类](#classification)事例，其中[标签](#label)是三个或更多类中的一个。 有关详细信息，请参阅[机器学习任务](tasks.md#multiclass-classification)主题的[多类分类](tasks.md)部分。
 
 ## <a name="n-gram"></a>N 元语法
 
@@ -139,7 +139,7 @@ ML.NET 中实现 <xref:Microsoft.ML.IEstimator%601> 接口的类。
 
 ## <a name="regression"></a>回归测试
 
-[监管式机器学习](#supervised-machine-learning)任务，其中输出是一个实际值，例如，双精度值。 示例包括预测股票价格。 有关详细信息，请参阅[机器学习任务](tasks.md)主题的[回归](tasks.md#regression)部分。
+[监管式机器学习](#supervised-machine-learning)任务，其中输出是一个实际值，例如，双精度值。 示例包括预测股票价格。 有关详细信息，请参阅[机器学习任务](tasks.md#regression)主题的[回归](tasks.md)部分。
 
 ## <a name="relative-absolute-error"></a>相对绝对误差
 

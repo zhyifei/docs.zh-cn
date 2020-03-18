@@ -14,11 +14,11 @@ helpviewer_keywords:
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 ms.openlocfilehash: 689ca9f7278dcf91b12bc62b5255a968388bb9f8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120758"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398783"
 ---
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 
@@ -172,7 +172,7 @@ ms.locfileid: "73120758"
 
 .NET Framework [通用类型系统](../../docs/standard/base-types/common-type-system.md)包括大量直接受公共语言运行时支持且专以程序集元数据编码的内置类型。 在这些内部类型中，下表中所列的类型都符合 CLS。
 
-|符合 CLS 的类型|说明|
+|符合 CLS 的类型|描述|
 |-------------------------|-----------------|
 |<xref:System.Byte>|8 位无符号整数|
 |<xref:System.Int16>|16 位带符号整数|
@@ -188,7 +188,7 @@ ms.locfileid: "73120758"
 
 下表中所列的内部类型不符合 CLS。
 
-|不符合类型|说明|符合 CLS 的替代方法|
+|不符合类型|描述|符合 CLS 的替代方法|
 |-------------------------|-----------------|--------------------------------|
 |<xref:System.SByte>|8 位带符号整数数据类型|<xref:System.Int16>|
 |<xref:System.TypedReference>|指向对象及其运行时类型的指针|None|

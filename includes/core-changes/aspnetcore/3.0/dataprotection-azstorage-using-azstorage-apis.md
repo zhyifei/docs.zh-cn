@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: db70596552ffd699156e1b7a55cb1e944596f077
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901836"
 ---
 ### <a name="data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis"></a>数据保护：DataProtection.AzureStorage 使用新的 Azure 存储 API

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-ms.openlocfilehash: 989266bfc2de9bd5ce2948f09a2b9f19dd2c782e
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 791455c1eaef752da2b551e20187d390ca6c65e6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628288"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170320"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>自动实现的属性（C# 编程指南）
 
@@ -25,11 +25,11 @@ ms.locfileid: "77628288"
 不能在接口中声明自动实现的属性。 自动实现的属性声明一个私有实例支持字段，并且接口可能不声明实例字段。 如果在接口中声明属性而不定义主体，请使用访问器声明属性，访问器必须由实现该接口的每个类型实现。
 
 在 C# 6 和更高版本中，你可以像字段一样初始化自动实现属性：  
- 
+
 ```csharp  
 public string FirstName { get; set; } = "Jane";  
 ```  
- 
+
 上一示例中所示的类是可变的。 客户端代码在创建后可以更改对象中的值。 在包含重要行为（方法）以及数据的复杂类中，通常有必要具有公共属性。 但是，对于较小类或仅封装一组值（数据）且只有很少行为或没有行为的结构，则应该通过声明 set 访问器为[专用](../../language-reference/keywords/private.md)（对使用者的不可变）或通过声明仅一个 get 访问器（除构造函数外都不可变），使对象不可变。  有关详细信息，请参阅[如何使用自动实现的属性实现轻量类](./how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)。
 
 ## <a name="see-also"></a>请参阅

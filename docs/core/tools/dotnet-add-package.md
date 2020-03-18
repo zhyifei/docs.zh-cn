@@ -2,18 +2,18 @@
 title: dotnet add package 命令
 description: “dotnet add package”命令可便于添加对项目的 NuGet 包引用。
 ms.date: 02/14/2020
-ms.openlocfilehash: cb44805f91ac4047dd50fd7e88d4eac5f15f2508
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 8121539a50d2ac2837693ccc35581f7fde1d1fc1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503810"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146601"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
 **本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
-## <a name="name"></a>“属性”
+## <a name="name"></a>名称
 
 `dotnet add package` - 向项目文件添加包引用。
 
@@ -21,7 +21,7 @@ ms.locfileid: "77503810"
 
 `dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [--interactive] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 使用 `dotnet add package` 命令可方便地向项目文件添加包引用。 运行该命令后，还有一个兼容性检查，确保包与项目中的框架兼容。 如果通过了该检查，则将 `<PackageReference>` 元素添加到项目文件并运行 [dotnet 还原](dotnet-restore.md)。
 
@@ -30,7 +30,7 @@ ms.locfileid: "77503810"
 例如，将 `Newtonsoft.Json` 添加到 ToDo.csproj  后的输出如以下示例所示：
 
 ```console
-  Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
+Writing C:\Users\me\AppData\Local\Temp\tmp95A8.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
 log  : Restoring packages for C:\Temp\projects\consoleproj\consoleproj.csproj...
 info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json
@@ -48,7 +48,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 - **`PROJECT`**
 
@@ -108,7 +108,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 NuGet 中管理全局包、缓存和临时文件夹](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
 - [NuGet 包版本控制](https://docs.microsoft.com/nuget/reference/package-versioning)

@@ -2,12 +2,12 @@
 title: 查找默认段落样式 (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 45a3e293a88fc0d7fc6aa70d21d1d3a6a8bb9b13
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 8cc1f1b9df208b0b180e5fe4a50922b5ee46b480
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204100"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169527"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>查找默认段落样式 (C#)
 在 WordprocessingML 文档中操作信息教程中的第一项任务是在文档中查找默认段落样式。  
@@ -65,7 +65,7 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
 }  
   
 // The following query finds all the paragraphs that have the default style.  
-string defaultStyle =   
+string defaultStyle =
     (string)(  
         from style in styleDoc.Root.Elements(w + "style")  
         where (string)style.Attribute(w + "type") == "paragraph"&&  

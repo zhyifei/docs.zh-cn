@@ -17,11 +17,11 @@ helpviewer_keywords:
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 ms.openlocfilehash: c574719da9b89b468b92b042e1f2b5b10fbe3c0d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159320"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398519"
 ---
 # <a name="common-type-system"></a>常规类型系统
 通用类型系统定义了如何在公共语言运行时中声明、使用和管理类型，同时也是运行时跨语言集成支持的一个重要组成部分。 常规类型系统执行以下功能：  

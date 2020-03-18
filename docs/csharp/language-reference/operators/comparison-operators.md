@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 86f557d0575b440455fd6363f0d0d6783a9e7acc
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 68502205193a1fc8ab7410053e13274560ffffb0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345333"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398051"
 ---
 # <a name="comparison-operators-c-reference"></a>比较运算符（C# 参考）
 
@@ -41,25 +41,25 @@ ms.locfileid: "75345333"
 
 如果左侧操作数小于右侧操作数，`<` 运算符返回 `true`，否则返回 `false`：
 
-[!code-csharp-interactive[less than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Less)]
+[!code-csharp-interactive[less than example](snippets/ComparisonOperators.cs#Less)]
 
 ## <a name="greater-than-operator-"></a>大于运算符 >
 
 如果左侧操作数大于右侧操作数，`>` 运算符返回 `true`，否则返回 `false`：
 
-[!code-csharp-interactive[greater than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Greater)]
+[!code-csharp-interactive[greater than example](snippets/ComparisonOperators.cs#Greater)]
 
 ## <a name="less-than-or-equal-operator-"></a>小于或等于运算符 \<=
 
 如果左侧操作数小于或等于右侧操作数，`<=` 运算符返回 `true`，否则返回 `false`：
 
-[!code-csharp-interactive[less than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#LessOrEqual)]
+[!code-csharp-interactive[less than or equal example](snippets/ComparisonOperators.cs#LessOrEqual)]
 
 ## <a name="greater-than-or-equal-operator-"></a>大于或等于运算符 >=
 
 如果左侧操作数大于或等于右侧操作数，`>=` 运算符返回 `true`，否则返回 `false`：
 
-[!code-csharp-interactive[greater than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#GreaterOrEqual)]
+[!code-csharp-interactive[greater than or equal example](snippets/ComparisonOperators.cs#GreaterOrEqual)]
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
@@ -69,9 +69,9 @@ ms.locfileid: "75345333"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[关系和类型测试运算符](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators)中的[关系和类型测试运算符](~/_csharplang/spec/introduction.md)部分。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)

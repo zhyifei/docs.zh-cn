@@ -4,11 +4,11 @@ description: 了解如何分析外部依赖项，以便将项目从 .NET Framewo
 author: cartermp
 ms.date: 10/22/2019
 ms.openlocfilehash: 2aa09e551a99358d3a6961fafcfc0aa8dbd976b1
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777249"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397919"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>分析依赖项将代码移植到 .NET Core
 
@@ -32,9 +32,9 @@ ms.locfileid: "75777249"
 
 ### <a name="analyze-nuget-packages-using-nugetorg"></a>使用 nuget.org 分析 NuGet 包
 
-可以在包页面“依赖项”部分的 [nuget.org](https://www.nuget.org/) 上查看每个包所支持的目标框架名字对象 (TFM)。
+可以在包页面“依赖项”部分的 [nuget.org](https://www.nuget.org/) 上查看每个包所支持的目标框架名字对象 (TFM)  。
 
-尽管使用站点验证兼容性是一种比较简单的方法，但站点上并未提供所有包的“依赖项”信息。
+尽管使用站点验证兼容性是一种比较简单的方法，但站点上并未提供所有包的“依赖项”信息  。
 
 ### <a name="analyze-nuget-packages-using-nuget-package-explorer"></a>使用 NuGet 包资源管理器分析 NuGet 包
 
@@ -43,10 +43,10 @@ NuGet 包本身就是一组包含特定于平台的程序集的文件夹。 检�
 检查 NuGet 包文件夹最简单方法是使用 [NuGet 包资源管理器](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)工具。 安装完成后，使用以下步骤查看文件夹名称：
 
 1. 打开 NuGet 包资源管理器。
-2. 单击“从在线源打开包”。
+2. 单击“从在线源打开包”  。
 3. 搜索包的名称。
-4. 从搜索结果中选择包的名称，然后点击“打开”。
-5. 展开右侧的“lib”文件夹并查看文件夹名称。
+4. 从搜索结果中选择包的名称，然后点击“打开”  。
+5. 展开右侧的“lib”文件夹并查看文件夹名称  。
 
 使用以下模式之一查找具有名称的文件夹：`netstandardX.Y` 或 `netcoreappX.Y`。
 
@@ -83,7 +83,7 @@ NuGet 包本身就是一组包含特定于平台的程序集的文件夹。 检�
 如果所依赖的 NuGet 包无法在 .NET Core 上运行，可以执行以下几项操作：
 
 - 如果项目是开放源代码并托管在诸如 GitHub 中，则可以直接与开发人员交流。
-- 可直接在 [nuget.org](https://www.nuget.org/) 上联系作者。搜索包并单击包页面左侧的“联系所有者”。
+- 可直接在 [nuget.org](https://www.nuget.org/) 上联系作者。搜索包并单击包页面左侧的“联系所有者”  。
 - 可以搜索在 .NET Core 上运行的其他包，它与所使用的包进行的是相同的任务。
 - 可以尝试自己编写包所执行的代码。
 - 可以通过更改应用的功能来清除对包的依赖性，至少在该包有可用的兼容性版本之前都能这样做。

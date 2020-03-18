@@ -4,18 +4,18 @@ description: 了解如何在 C# 库和应用程序中运用继承。
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b69da841c7c7a2e518191ad34f2ff5b368899728
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120131"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156748"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的继承
 
 此教程将介绍 C# 中的继承。 继承是面向对象的编程语言的一项功能，可方便你定义提供特定功能（数据和行为）的基类，并定义继承或重写此功能的派生类。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 本教程假定你已安装 .NET Core SDK。 请访问 [.NET Core 下载](https://dotnet.microsoft.com/download)页进行下载。 还需要安装代码编辑器。 此教程使用 [Visual Studio Code](https://code.visualstudio.com)，但你可以选择使用任何代码编辑器。
 
@@ -142,9 +142,9 @@ public struct ValueStructure : ValueType // Generates CS0527.
 | 类型类别 | 隐式继承自                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
 | class         | <xref:System.Object>                                                          |
-| struct        | <xref:System.ValueType>， <xref:System.Object>                                 |
+| struct        | <xref:System.ValueType>，<xref:System.Object>                                 |
 | enum          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
-| 委托      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
+| delegate      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
 
 ## <a name="inheritance-and-an-is-a-relationship"></a>继承和“is a”关系
 
@@ -291,7 +291,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-以下示例使用派生自 `Shape` 的对象。 它实例化派生自 `Shape` 的一组对象，然后调用 `Shape` 类的静态方法，用于包装返回的 `Shape` 属性值。 运行时从派生类型的重写属性检索值。 以下示例还将数组中的每个 `Shape` 对象显式转换成其派生类型；如果显式转换成功，则检索 `Shape` 的特定子类的属性。 
+以下示例使用派生自 `Shape` 的对象。 它实例化派生自 `Shape` 的一组对象，然后调用 `Shape` 类的静态方法，用于包装返回的 `Shape` 属性值。 运行时从派生类型的重写属性检索值。 以下示例还将数组中的每个 `Shape` 对象显式转换成其派生类型；如果显式转换成功，则检索 `Shape` 的特定子类的属性。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 

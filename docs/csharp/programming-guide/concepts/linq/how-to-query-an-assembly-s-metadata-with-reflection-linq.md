@@ -2,12 +2,12 @@
 title: 如何使用反射查询程序集的元数据 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: 65f27ae17d77553bfd7a78c1310febd337a55a6e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6e68cfea2bf3e03aed9de3e4a18cf9941ece34e3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345691"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168916"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>如何使用反射查询程序集的元数据 (LINQ) (C#)
 
@@ -30,7 +30,7 @@ class ReflectionHowTO
         var pubTypesQuery = from type in assembly.GetTypes()  
                     where type.IsPublic  
                         from method in type.GetMethods()  
-                        where method.ReturnType.IsArray == true 
+                        where method.ReturnType.IsArray == true
                             || ( method.ReturnType.GetInterface(  
                                 typeof(System.Collections.Generic.IEnumerable<>).FullName ) != null  
                             && method.ReturnType.FullName != "System.String" )  
@@ -51,8 +51,8 @@ class ReflectionHowTO
 }
 ```  
 
-该示例使用 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> 方法返回指定程序集中的类型的数组。 将应用 [where](../../../language-reference/keywords/where-clause.md) 筛选器，以便仅返回公共类型。 对于每个公共类型，子查询使用从 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 调用返回的 <xref:System.Reflection.MethodInfo> 数组生成。 筛选这些结果，以仅返回其返回类型为数组或实现 <xref:System.Collections.Generic.IEnumerable%601> 的其他类型的方法。 最后，通过使用类型名称作为键来对这些结果进行分组。  
+该示例使用 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> 方法返回指定程序集中的类型的数组。 将应用 [where](../../../language-reference/keywords/where-clause.md) 筛选器，以便仅返回公共类型。 对于每个公共类型，子查询使用从 <xref:System.Reflection.MethodInfo> 调用返回的 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 数组生成。 筛选这些结果，以仅返回其返回类型为数组或实现 <xref:System.Collections.Generic.IEnumerable%601> 的其他类型的方法。 最后，通过使用类型名称作为键来对这些结果进行分组。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)

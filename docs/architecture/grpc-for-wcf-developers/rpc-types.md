@@ -1,36 +1,36 @@
 ---
-title: 适用于 WCF 开发人员的 gRPC 类型
-description: 查看 WCF 支持的远程过程调用的类型以及它们在 gRPC 中的等效项
+title: 适用于 WCF 开发人员的 RPC 类型 - gRPC
+description: 审查 WCF 支持的远程过程调用的类型及其在 gRPC 中的等效调用
 ms.date: 09/02/2019
-ms.openlocfilehash: 58f097bac61395e6810155e8ae9a6bbf2219ec5e
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: b9d4ce7cae693ed7904229483cbccfe3b299b640
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78675158"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401783"
 ---
 # <a name="types-of-rpc"></a>RPC 类型
 
-作为 Windows Communication Foundation （WCF）开发人员，你可能习惯于处理以下类型的远程过程调用（RPC）：
+作为 Windows 通信基础 （WCF） 开发人员，您可能习惯于处理以下类型的远程过程调用 （RPC）：
 
-- 请求/答复
-- 模式
-  - 会话的单向双工
+- 请求/回复
+- 双工：
+  - 带会话的单向双工
   - 带会话的全双工
 - 单向
 
-可以非常自然地将这些 RPC 类型映射到现有的 gRPC 概念。 本章将依次介绍每个区域。 [第5章](migrate-wcf-to-grpc.md)将更深入地探讨相似的示例。
+可以自然地将这些 RPC 类型映射到现有的 gRPC 概念。 本章将依次介绍每个领域。 [第五章](migrate-wcf-to-grpc.md)将更深入地探讨类似的例子。
 
 | WCF | gRPC |
 | --- | ---- |
-| 常规请求/答复 | 一元 |
-| 使用客户端回调接口进行会话的双工服务 | 服务器流式处理 |
+| 定期请求/回复 | 一元 |
+| 使用客户端回调接口使用会话的双工服务 | 服务器流式处理 |
 | 带会话的全双工服务 | 双向流式处理 |
 | 单向操作 | 客户端流式处理 |
 
-## <a name="requestreply"></a>请求/答复
+## <a name="requestreply"></a>请求/回复
 
-对于采用并返回少量数据的简单请求/回复方法，请使用一元 RPC 的最简单的 gRPC 模式。
+对于获取和返回少量数据的简单请求/回复方法，请使用最简单的 gRPC 模式，即一元 RPC。
 
 ```protobuf
 service Things {
@@ -57,21 +57,21 @@ public async Task ShowThing(int thingId)
 }
 ```
 
-如您所见，实现 gRPC 一元 RPC 服务方法与实现 WCF 操作类似。 不同之处在于，使用 gRPC 时，可以重写基类方法，而不是实现接口。 在服务器上，gRPC 基方法始终返回 <xref:System.Threading.Tasks.Task%601>，尽管客户端同时提供异步和阻塞方法来调用服务。
+如您所见，实现 gRPC 一元 RPC 服务方法类似于实现 WCF 操作。 区别在于，使用 gRPC，可以重写基类方法，而不是实现接口。 在服务器上，gRPC 基方法始终返回<xref:System.Threading.Tasks.Task%601>，尽管客户端同时提供异步和阻止方法来调用服务。
 
-## <a name="wcf-duplex-one-way-to-client"></a>WCF 双工，一种对客户端的方法
+## <a name="wcf-duplex-one-way-to-client"></a>WCF 双工，客户端的一种方式
 
-WCF 应用程序（具有某些绑定）可以在客户端和服务器之间创建持久性连接。 在连接关闭之前，服务器可以通过使用 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 属性中指定的*回调接口*，将数据异步发送到客户端。
+WCF 应用程序（具有某些绑定）可以在客户端和服务器之间创建持久连接。 服务器可以使用<xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>属性中指定的*回调接口*将数据异步发送到客户端，直到连接关闭。
 
-gRPC services 提供类似于消息流的功能。 流在实现方面并不*完全*映射到 WCF 双工服务，但你可以获得相同的结果。
+gRPC 服务提供与消息流类似的功能。 流在实现方面不会*精确*映射到 WCF 双工服务，但您可以实现相同的结果。
 
 ### <a name="grpc-streaming"></a>gRPC 流式处理
 
-gRPC 支持从客户端到服务器以及从服务器到客户端创建持久流。 这两种类型的流可以同时处于活动状态。 此功能称为双向流式处理。 
+gRPC 支持创建从客户端到服务器以及从服务器到客户端的持久流。 这两种类型的流可以同时处于活动状态。 此功能称为双向流式处理。
 
-可以将流用于一段时间内的任意异步消息传送。 也可以将其用于传递太大的数据集，以便在单个请求或响应中生成和发送。
+随着时间的推移，您可以将流用于任意的异步消息传递。 或者，您可以使用它们传递太大的大型数据集，无法生成和发送单个请求或响应。
 
-下面的示例演示了一个服务器流 RPC。
+下面的示例显示了服务器流 RPC。
 
 ```protobuf
 service ClockStreamer {
@@ -115,19 +115,19 @@ public async Task TellTheTimeAsync(CancellationToken token)
 ```
 
 > [!NOTE]
-> 服务器流 Rpc 适用于订阅样式服务。 如果在内存中生成整个数据集的效率低下或不可能，则它们也适用于发送大型数据集。 但是，流响应的速度不如在单个消息中发送 `repeated` 字段快。 作为一种规则，流不应用于小型数据集。
+> 服务器流式处理中心对于订阅样式的服务很有用。 当在内存中构建整个数据集效率低下或不可能时，它们对于发送大型数据集也很有用。 但是，流式处理响应不如在一条消息中`repeated`发送字段快。 通常，流式处理不应用于小型数据集。
 
 ### <a name="differences-from-wcf"></a>与 WCF 的差异
 
-WCF 双工服务使用可具有多个方法的客户端回调接口。 GRPC 服务器流式处理服务只能通过单个流发送消息。 如果需要多个方法，请将消息类型与[Any 字段或字段之一](protobuf-any-oneof.md)一起使用，以发送不同的消息，并在客户端中编写代码来处理这些消息。
+WCF 双工服务使用客户端回调接口，该接口可以有多个方法。 gRPC 服务器流服务只能通过单个流发送消息。 如果需要多种方法，请使用具有[Any 字段或字段之一](protobuf-any-oneof.md)的消息类型发送不同的消息，并在客户端中编写代码来处理它们。
 
-在 WCF 中，具有会话的[ServiceContract](xref:System.ServiceModel.ServiceContractAttribute)类保持活动状态，直到关闭连接。 可以在会话中调用多个方法。 在 gRPC 中，实现方法返回的 `Task` 不应完成，直到关闭连接。
+在 WCF 中，具有会话[的服务合同](xref:System.ServiceModel.ServiceContractAttribute)类将保持活动状态，直到连接关闭。 可以在会话中调用多种方法。 在 gRPC`Task`中，在关闭连接之前，实现方法返回的不应完成。
 
-## <a name="wcf-one-way-operations-and-grpc-client-streaming"></a>WCF 单向操作和 gRPC 客户端流式处理
+## <a name="wcf-one-way-operations-and-grpc-client-streaming"></a>WCF 单向操作和 gRPC 客户端流
 
-WCF 提供返回传输特定确认的单向操作（标记为 `[OperationContract(IsOneWay = true)]`）。 gRPC 服务方法始终返回响应，即使它为空也是如此。 客户端应始终等待该响应。 对于 gRPC 中的消息传递 "暂时" 样式，您可以创建客户端流式处理服务。
+WCF 提供单向操作（标记为`[OperationContract(IsOneWay = true)]`），返回特定于传输的确认。 gRPC 服务方法始终返回响应，即使它为空。 客户端应始终等待该响应。 对于 gRPC 中"即用即用"消息传递样式，您可以创建客户端流服务。
 
-### <a name="thing_logproto"></a>thing_log proto
+### <a name="thing_logproto"></a>thing_log.proto
 
 ```protobuf
 service ThingLog {
@@ -189,13 +189,13 @@ public class ThingLogger : IAsyncDisposable
 }
 ```
 
-如前面的示例所示，可以将客户端流式处理 Rpc 用于暂时消息消息处理。 你还可以使用它们向服务器发送非常大的数据集。 适用于性能的相同警告：对于较小的数据集，请使用 `repeated` 常规消息中的字段。
+您可以使用客户端流 RPC 进行触发和忘记消息传递，如上例所示。 您还可以使用它们向服务器发送非常大的数据集。 相同的性能警告适用：对于较小的数据集，在`repeated`常规消息中使用字段。
 
 ## <a name="wcf-full-duplex-services"></a>WCF 全双工服务
 
-在服务接口和客户端回调接口上，WCF 双工绑定支持多个单向操作。 此支持允许在客户端和服务器之间进行正在进行的会话。 gRPC 支持类似于双向流式处理 Rpc 的内容，其中，两个参数都标记有 `stream` 修饰符。
+WCF 双工绑定支持在服务接口和客户端回调接口上执行多个单向操作。 这种支持允许客户端和服务器之间持续对话。 gRPC 支持与双向流式处理 RPC 类似的内容，其中两个参数`stream`都用修饰符标记。
 
-### <a name="chatproto"></a>chat
+### <a name="chatproto"></a>聊天.proto
 
 ```protobuf
 service Chatter {
@@ -228,9 +228,9 @@ public class ChatterService : Chatter.ChatterBase
 }
 ```
 
-在上面的示例中，你可以看到，实现方法收到请求流（`IAsyncStreamReader<MessageRequest>`）和响应流（`IServerStreamWriter<MessageResponse>`）。 方法可以读取和写入消息，直到关闭连接。
+在前面的示例中，您可以看到实现方法同时接收请求流 （`IAsyncStreamReader<MessageRequest>`） 和响应流 （`IServerStreamWriter<MessageResponse>`。 该方法可以读取和写入消息，直到连接关闭。
 
-### <a name="chatter-client"></a>Chatter 客户端
+### <a name="chatter-client"></a>聊天客户端
 
 ```csharp
 public class Chat : IAsyncDisposable
@@ -271,5 +271,5 @@ public class Chat : IAsyncDisposable
 ```
 
 >[!div class="step-by-step"]
->[上一页](wcf-bindings.md)
->[下一页](metadata.md)
+>[上一个](wcf-bindings.md)
+>[下一个](metadata.md)

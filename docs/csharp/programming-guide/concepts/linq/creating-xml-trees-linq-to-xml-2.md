@@ -2,12 +2,12 @@
 title: 在 C# 中创建 XML 树 (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: a77171ebbc07e54f6988fb97aff197b4c6d31721
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 4794e4fe019b30d8f2acb3eb255bb77ba2f7f290
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594621"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169540"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>在 C# 中创建 XML 树 (LINQ to XML)
 本节提供有关使用 C# 来创建 XML 树的信息。  
@@ -25,7 +25,7 @@ ms.locfileid: "69594621"
 XElement contacts =  
     new XElement("Contacts",  
         new XElement("Contact",  
-            new XElement("Name", "Patrick Hines"),   
+            new XElement("Name", "Patrick Hines"),
             new XElement("Phone", "206-555-0144"),  
             new XElement("Address",  
                 new XElement("Street1", "123 Main St"),  
@@ -139,7 +139,7 @@ Console.WriteLine(address);
 XElement contacts =  
     new XElement("Contacts",  
         new XElement("Contact",  
-            new XElement("Name", "Patrick Hines"),                                                   
+            new XElement("Name", "Patrick Hines"),
             new XElement("Phone", "206-555-0144"),  
             new XElement("Address",  
                 new XElement("Street1", "123 Main St"),  
@@ -183,7 +183,7 @@ Console.WriteLine(phone);
   
 ```xml  
 <Phone Type="Home">555-555-5555</Phone>
-```   
+```
 
 ### <a name="creating-an-empty-element"></a>创建空元素  
  若要创建空 <xref:System.Xml.Linq.XElement>，请不要将任何内容传递给构造函数。 下面的示例创建一个空元素：  
@@ -234,6 +234,6 @@ Console.WriteLine("Child2 was {0}",
 //    Child2 was attached  
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建 XML 树 (C#)](./linq-to-xml-overview.md)

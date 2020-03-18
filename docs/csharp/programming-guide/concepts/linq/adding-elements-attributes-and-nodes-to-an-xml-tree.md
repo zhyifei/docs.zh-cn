@@ -2,12 +2,12 @@
 title: 向 XML 树添加元素、属性和节点 (C#)
 ms.date: 07/20/2015
 ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
-ms.openlocfilehash: fee03dd2ba0818778afb3447e8930a2c2567b067
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 20d8d9d9c592f5f570d7c94298dcee41763c1f1f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486236"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169570"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>向 XML 树添加元素、属性和节点 (C#)
 可以向现有的 XML 树中添加内容（包括元素、属性、注释、处理指令、文本和 CDATA）。  
@@ -35,7 +35,7 @@ ms.locfileid: "66486236"
 ### <a name="code"></a>代码  
   
 ```csharp  
-XElement srcTree = new XElement("Root",   
+XElement srcTree = new XElement("Root",
     new XElement("Element1", 1),  
     new XElement("Element2", 2),  
     new XElement("Element3", 3),  

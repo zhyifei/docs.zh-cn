@@ -1,12 +1,12 @@
 ---
 title: 序列化 (C#)
 ms.date: 01/02/2020
-ms.openlocfilehash: 1d2bda9022b7e43744dd8a0286eff88914cf65a3
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: d914298a370b09307e84c88959542b4823cf37ce
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635725"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79167590"
 ---
 # <a name="serialization-c"></a>序列化 (C#)
 
@@ -43,7 +43,7 @@ JSON 序列化将对象的公共属性序列化为符合 [RFC 8259 JSON 规范](
 
 <xref:System.Runtime.Serialization> 命名空间包含用于对二进制和 XML 进行序列化和反序列化的类。
 
-二进制序列化使用二进制编码来生成精简的序列化以供使用，如基于存储或套接字的网络流。 在二进制序列化中，所有成员（包括只读成员）都会被序列化，且性能也会有所提升。 
+二进制序列化使用二进制编码来生成精简的序列化以供使用，如基于存储或套接字的网络流。 在二进制序列化中，所有成员（包括只读成员）都会被序列化，且性能也会有所提升。
 
 XML 序列化将对象的公共字段和属性或方法的参数和返回值序列化成符合特定 XML 架构定义语言 (XSD) 文档要求的 XML 流。 XML 序列化生成已转换成 XML 的强类型类，其中包含公共属性和字段。 <xref:System.Xml.Serialization> 包含用于对 XML 进行序列化和反序列化的类。 将特性应用于类和类成员，从而控制 <xref:System.Xml.Serialization.XmlSerializer> 如何序列化或反序列化类的实例。
 
@@ -79,9 +79,10 @@ XML 序列化将对象的公共字段和属性或方法的参数和返回值序�
 
 [System.Text.Json 概述](../../../../standard/serialization/system-text-json-overview.md) 演示如何获取 `System.Text.Json` 库。
 
-[如何在 .NET 中对 JSON 数据进行序列化和反序列化](../../../../standard/serialization/system-text-json-how-to.md)。 演示如何使用 <xref:System.Text.Json.JsonSerializer> 类在 JSON 之间读取和写入对象数据。
+[如何在 .NET 中对 JSON 数据进行序列化和反序列化](../../../../standard/serialization/system-text-json-how-to.md)。
+演示如何使用 <xref:System.Text.Json.JsonSerializer> 类在 JSON 之间读取和写入对象数据。
 
-[演练：在 Visual Basic 中保持对象 (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
+[演练：在 Visual Studio 中暂留对象 (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
 展示了如何使用序列化在实例之间暂留对象数据，以便可以存储值并在下次实例化对象时检索值。
 
 [如何从 XML 文件读取对象数据 (C#)](how-to-read-object-data-from-an-xml-file.md)  

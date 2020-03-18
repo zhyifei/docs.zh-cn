@@ -4,12 +4,12 @@ description: 了解 C# 和 .NET 中的版本控制工作原理
 ms.date: 01/08/2017
 ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 3fadbc1257ae758fc220685fa074a4fa68b20ba1
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 124cce51865f04a555bc121fb6ce18cc95591bdc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039658"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156462"
 ---
 # <a name="versioning-in-c"></a>C\# 中的版本控制
 
@@ -35,7 +35,8 @@ SemVer 的最基本方法是 3 组件格式 `MAJOR.MINOR.PATCH`，其中：
 ### <a name="backwards-compatibility"></a>后向兼容
 
 发布新版本的库时，与先前版本的后向兼容很可能成为主要关注事项之一。
-如果重新编译时，依赖于先前版本的代码适用于新版本，则新版本的库与先前版本是源兼容的。 在没有重新编译的情况下，如果依赖于先前版本的应用程序适用于新版本，则新版本的库是二进制兼容的。
+如果重新编译时，依赖于先前版本的代码适用于新版本，则新版本的库与先前版本是源兼容的。
+在没有重新编译的情况下，如果依赖于先前版本的应用程序适用于新版本，则新版本的库是二进制兼容的。
 
 以下是维护与较旧版本库的后向兼容时的注意事项：
 
@@ -82,7 +83,7 @@ SemVer 的最基本方法是 3 组件格式 `MAJOR.MINOR.PATCH`，其中：
 
 请参见以下示例：
 
-[!code-csharp[Sample usage of the 'new' modifier](~/samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](~/samples/snippets/csharp/versioning/new/Program.cs#sample)]
 
 **输出**
 
@@ -100,7 +101,7 @@ A derived method
 
 `override` 修饰符指派生实现会扩展基类成员的实现而不是将其隐藏。 基类成员需要具有应用于自身的 `virtual` 修饰符。
 
-[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'override' modifier](../../samples/snippets/csharp/versioning/override/Program.cs#sample)]
 
 **输出**
 

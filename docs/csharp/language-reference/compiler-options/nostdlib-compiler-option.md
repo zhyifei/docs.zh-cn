@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
 ms.openlocfilehash: ad8a2b5fc87dd7beee86d96331cf3961315be533
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345079"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib（C# 编译器选项）
@@ -40,7 +40,7 @@ ms.locfileid: "75345079"
 
 2. 单击“生成”  属性页。
 
-3. 单击“高级”  按钮。
+3. 单击 **“高级”** 按钮。
 
 4. 修改“不引用 mscorlib.dll”  属性。
 
@@ -48,6 +48,6 @@ ms.locfileid: "75345079"
 
 有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](./index.md)

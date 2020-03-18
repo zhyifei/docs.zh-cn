@@ -5,11 +5,11 @@ ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
 ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124593"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398795"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK 样式项目中的目标框架
 
@@ -116,7 +116,7 @@ public class MyClass
 
 以下目标框架已弃用。 以这些目标框架为目标的包应迁移到指明的替代框架。
 
-| 已弃用的 TFM                                                                             | 替代功能 |
+| 已弃用的 TFM                                                                             | Replacement |
 | ------------------------------------------------------------------------------------------ | ----------- |
 | aspnet50<br>aspnetcore50<br>dnxcore50<br>dnx<br>dnx45<br>dnx451<br>dnx452                  | netcoreapp  |
 | dotnet<br>dotnet50<br>dotnet51<br>dotnet52<br>dotnet53<br>dotnet54<br>dotnet55<br>dotnet56 | netstandard |

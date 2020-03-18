@@ -3,12 +3,12 @@ title: 非托管类型 - C# 参考
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 042cf382879cc4010a388fb75f41099b4342c9d9
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 8a4599514115aa21f17c32848ce203fea704072e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626940"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846454"
 ---
 # <a name="unmanaged-types-c-reference"></a>非托管类型（C# 参考）
 
@@ -23,17 +23,17 @@ ms.locfileid: "77626940"
 
 从 C# 8.0 开始，仅包含非托管类型的字段的*构造*结构类型也是非托管类型，如以下示例所示：
 
-[!code-csharp[unmanaged constructed types](~/samples/csharp/language-reference/builtin-types/UnmanagedTypes.cs#ProgramExample)]
+[!code-csharp[unmanaged constructed types](snippets/UnmanagedTypes.cs#ProgramExample)]
 
 泛型结构可以是非托管类型的源，也可以是不是非托管构造类型的源。 前面的示例定义一个泛型结构 `Coords<T>`，并提供非托管构造类型的示例。 不是非托管类型情况的示例是 `Coords<object>`。 它不是非托管性质，因为它具有不是非托管性质的 `object` 类型的字段。 如果你希望所有  构造类型都是非托管类型，请在泛型结构的定义中使用 `unmanaged` 约束：
 
-[!code-csharp[unmanaged constraint in type definition](~/samples/csharp/language-reference/builtin-types/UnmanagedTypes.cs#AlwaysUnmanaged)]
+[!code-csharp[unmanaged constraint in type definition](snippets/UnmanagedTypes.cs#AlwaysUnmanaged)]
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[指针类型](~/_csharplang/spec/unsafe-code.md#pointer-types)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/unsafe-code.md#pointer-types)的[指针类型](~/_csharplang/spec/introduction.md)部分。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [指针类型](../../programming-guide/unsafe-code-pointers/pointer-types.md)

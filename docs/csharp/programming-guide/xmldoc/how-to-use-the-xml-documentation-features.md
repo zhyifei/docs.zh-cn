@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 57034fb835d4c82b5bf658e61ec78ef226c2551e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e279b13d9216120e25f454faa14dc71ad24c74ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789775"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156995"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>如何使用 XML 文档功能
 
@@ -62,7 +62,7 @@ ms.locfileid: "76789775"
             </summary>
             <param name="s"> Parameter description for s goes here.</param>
             <seealso cref="T:System.String">
-            You can use the cref attribute on any tag to reference a type or member 
+            You can use the cref attribute on any tag to reference a type or member
             and the compiler will check that the reference exists.
             </seealso>
         </member>
@@ -124,14 +124,14 @@ XML 文档以 /// 开头。 创建新项目时，向导会放置一些以 /// �
 
   - \<param> 标记用于描述参数。 如果已使用，编译器会验证该参数是否存在，以及文档是否描述了所有参数。 如果验证失败，编译器会发出警告。
 
-  - `cref` 属性可以附加到任何标记，以提供对代码元素的引用。 编译器验证此代码元素是否存在。 如果验证失败，编译器会发出警告。 编译器在查找 `cref` 属性中描述的类型时会考虑所有 `using` 语句。
+  - `cref` 属性可以附加到任何标记，以提供对代码元素的引用。 编译器验证此代码元素是否存在。 如果验证失败，编译器会发出警告。 编译器在查找 `using` 属性中描述的类型时会考虑所有 `cref` 语句。
 
   - \<summary> 标记由 Visual Studio 中的 IntelliSense 用于显示有关某个类型或成员的附加信息。
 
     > [!NOTE]
     > XML 文件不提供有关该类型和成员的完整信息（例如，它不包含任何类型信息）。 若要获取有关类型或成员的完整信息，必须将文档文件与对实际类型或成员的反射一起使用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [-doc（C# 编译器选项）](../../language-reference/compiler-options/doc-compiler-option.md)

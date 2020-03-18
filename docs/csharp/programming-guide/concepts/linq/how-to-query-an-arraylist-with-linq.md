@@ -2,15 +2,15 @@
 title: 如何使用 LINQ 查询 ArrayList (C#)
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: b8edb90d33c92324d4f76c7e6977641fe4499d9d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fa185ba3793b628b0d65e1f513a70ec68f6f2425
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345708"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168929"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>如何使用 LINQ 查询 ArrayList (C#)
-如果使用 LINQ 来查询非泛型 <xref:System.Collections.IEnumerable> 集合（例如 <xref:System.Collections.ArrayList>），必须显式声明范围变量的类型，以反映集合中对象的特定类型。 例如，如果有 `Student` 对象的 <xref:System.Collections.ArrayList>，那么 [from 子句](../../../language-reference/keywords/from-clause.md)应如下所示：  
+如果使用 LINQ 来查询非泛型 <xref:System.Collections.IEnumerable> 集合（例如 <xref:System.Collections.ArrayList>），必须显式声明范围变量的类型，以反映集合中对象的特定类型。 例如，如果有 <xref:System.Collections.ArrayList> 对象的 `Student`，那么 [from 子句](../../../language-reference/keywords/from-clause.md)应如下所示：  
   
 ```csharp
 var query = from Student s in arrList  
@@ -77,12 +77,12 @@ namespace NonGenericLINQ
         }  
     }  
 }  
-/* Output:   
+/* Output:
     Omelchenko: 98  
     Garcia: 97  
 */  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)

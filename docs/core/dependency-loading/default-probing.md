@@ -5,11 +5,11 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: 500ee6ee863b1f311970a9e718936f57f7d4efd6
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72303682"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398003"
 ---
 # <a name="default-probing"></a>默认探测
 
@@ -21,7 +21,7 @@ ms.locfileid: "72303682"
 
 每个探测属性均可选。 如果存在，则每个属性都是一个字符串值，其中包含绝对路径的分隔列表。 在 Windows 上，分隔符为“;”，在所有其他平台上，分隔符为“:”。
 
-|属性名                 |说明  |
+|属性名称                 |说明  |
 |------------------------------|---------|
 |`TRUSTED_PLATFORM_ASSEMBLIES`   | 平台和应用程序程序集文件路径的列表。 |
 |`PLATFORM_RESOURCE_ROOTS`       | 用于搜索附属资源程序集的目录路径的列表。 |
@@ -31,12 +31,12 @@ ms.locfileid: "72303682"
 
 ### <a name="how-are-the-properties-populated"></a>如何填充属性？
 
-填充属性有两个主要方案，具体取决于 \<myapp>.deps.json 文件是否存在  。
+填充属性有两个主要方案，具体取决于 *myapp>.deps.json 文件是否存在\<* 。
 
-- 当 \*.deps.json 文件存在时，将对其进行分析以填充探测属性  。
-- 如果 \*.deps.json  文件不存在，则假定应用程序的目录以包含所有依赖项。 目录的内容用于填充探测属性。
+- 当 *.deps.json 文件存在时，将对其进行分析以填充探测属性\** 。
+- 如果 *.deps.json\** 文件不存在，则假定应用程序的目录以包含所有依赖项。 目录的内容用于填充探测属性。
 
-此外，也会对任何引用框架的 \*.deps.json  文件进行类似的分析。
+此外，也会对任何引用框架的 *.deps.json\** 文件进行类似的分析。
 
 最后，可使用环境变量 `ADDITIONAL_DEPS` 添加其他依赖项。
 
@@ -58,7 +58,7 @@ ms.locfileid: "72303682"
 
 当探测以定位托管程序集时，<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> 会按以下顺序查找：
 
-- 与 `TRUSTED_PLATFORM_ASSEMBLIES` 中的 <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> 匹配的文件（在删除文件扩展名之后）。
+- 与 <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> 中的 `TRUSTED_PLATFORM_ASSEMBLIES` 匹配的文件（在删除文件扩展名之后）。
 - 包含公共文件扩展名的 `APP_NI_PATHS` 中的本机映像程序集文件。
 - 包含公共文件扩展名的 `APP_PATHS` 中的程序集文件。
 

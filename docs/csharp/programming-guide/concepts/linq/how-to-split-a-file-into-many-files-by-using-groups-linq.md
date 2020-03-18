@@ -2,12 +2,12 @@
 title: 如何使用组将一个文件拆分成多个文件 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 934b6385a8634c23a4e29098367c9aaa7355f11c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 654b444c26f2868c4e2b0e2893a639ebc6cacabf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347322"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168565"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>如何使用组将一个文件拆分成多个文件 (LINQ) (C#)
 此示例演示一种进行以下操作的方法：合并两个文件的内容，然后创建一组以新方式整理数据的新文件。  
@@ -29,7 +29,7 @@ ms.locfileid: "75347322"
     Garcia, Debra  
     ```  
   
-2. 将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹：请注意，这两个文件拥有一些共同的名称。  
+2. 将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹：注意这两个文件有一些共同的姓名。  
   
     ```text  
     Liu, Jinghao  
@@ -92,7 +92,7 @@ class SplitWithGroups
         Console.ReadKey();  
     }  
 }  
-/* Output:   
+/* Output:
     A  
        Aw, Kam Foo  
     B  
@@ -128,7 +128,7 @@ class SplitWithGroups
 
 使用 System.Linq 和 System.IO 命名空间的 `using` 指令创建 C# 控制台应用程序项目。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [LINQ 和字符串 (C#)](./linq-and-strings.md)
 - [LINQ 和文件目录 (C#)](./linq-and-file-directories.md)

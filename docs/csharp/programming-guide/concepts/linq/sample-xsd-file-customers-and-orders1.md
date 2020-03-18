@@ -2,12 +2,12 @@
 title: 示例 XSD 文件：客户和订单
 ms.date: 07/20/2015
 ms.assetid: ef9911a3-7ac4-44fd-b36e-a0c0ad0a157d
-ms.openlocfilehash: ff893053e5ed29b95a0ede1f172915df2e83ffa2
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2e8fdcd9100ea608828371ff5dce6cf0d040292f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346478"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167941"
 ---
 # <a name="sample-xsd-file-customers-and-orders"></a>示例 XSD 文件：客户和订单
 下面的 XSD 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 此文件包含[示例 XML 文件：客户和订单 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) 的架构定义。 架构使用 XSD 的 `xs:key` 和 `xs:keyref` 功能将 `CustomerID` 元素的 `Customer` 属性设置为键，并在每个 `CustomerID` 元素的 `Order` 元素和每个 `CustomerID` 元素的 `Customer` 属性之间建立关系。  
@@ -92,4 +92,3 @@ ms.locfileid: "75346478"
   </xs:complexType>  
 </xs:schema>  
 ```  
- 

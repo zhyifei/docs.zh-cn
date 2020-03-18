@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: b90971e072c0d075479523dc70187894cd0c8565
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0052475697dae2c3ad891db18d300b5ec08a7e62
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715740"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180351"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe（按托管配置文件优化工具）
 
@@ -104,7 +104,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 - 默认情况下，Mpgo.exe 不在 Visual Studio 生成路径中。 你必须添加 Visual Studio 的路径，或在 Mpgo 命令行上指定完整路径。 你可在 Visual Studio 中的后期生成事件中使用 `–Scenario` 或 `–Import` 参数。 但是，一般的处理方式是从 Visual Studio 开发人员命令提示符处使用一次 `–Scenario`，然后在每次生成后使用 `–Import` 更新优化的程序集，例如：`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`。  
   
-<a name="samples"></a>   
+<a name="samples"></a>
 ## <a name="examples"></a>示例  
  以下来自 Visual Studio 开发人员命令提示处的 Mpgo.exe 命令将优化一个税务应用程序：  
   

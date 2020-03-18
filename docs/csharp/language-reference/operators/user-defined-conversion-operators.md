@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 379deb20243a13cc608cb7fe119b341065327c1e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: b6061492cc1a4f756196fb8a9050b68651431e38
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450669"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847257"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>用户定义转换运算符（C# 引用）
 
@@ -29,7 +29,7 @@ ms.locfileid: "77450669"
 
 下面的示例展示如何定义隐式转换和显式转换：
 
-[!code-csharp[implicit an explicit conversions](~/samples/csharp/language-reference/operators/UserDefinedConversions.cs)]
+[!code-csharp[implicit an explicit conversions](snippets/UserDefinedConversions.cs)]
 
 `operator` 关键字也可用于重载预定义的 C# 运算符。 有关详细信息，请参阅[运算符重载](operator-overloading.md)。
 
@@ -42,7 +42,7 @@ ms.locfileid: "77450669"
 - [隐式转换](~/_csharplang/spec/conversions.md#implicit-conversions)
 - [显式转换](~/_csharplang/spec/conversions.md#explicit-conversions)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)
