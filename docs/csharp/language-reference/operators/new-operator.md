@@ -4,12 +4,12 @@ ms.date: 06/25/2019
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: beb55f0765e7f9090f0587f1d2a06cf03ea90ab8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 84131bc503a106961419a27fc4e3e0f2d82306a8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712658"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846228"
 ---
 # <a name="new-operator-c-reference"></a>new 运算符（C# 参考）
 
@@ -19,23 +19,23 @@ ms.locfileid: "75712658"
 
 ## <a name="constructor-invocation"></a>构造函数调用
 
-要创建类型的新实例，通常使用 `new` 运算符调用该类型的某个[构造函数](../../programming-guide/classes-and-structs/constructors.md)：
+要创建类型的新实例，通常使用 [ 运算符调用该类型的某个](../../programming-guide/classes-and-structs/constructors.md)构造函数`new`：
 
-[!code-csharp-interactive[invoke constructor](~/samples/csharp/language-reference/operators/NewOperator.cs#Constructor)]
+[!code-csharp-interactive[invoke constructor](snippets/NewOperator.cs#Constructor)]
 
-可以使用带有 `new` 运算符的[对象或集合初始值设定项](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)实例化和初始化一个语句中的对象，如下例所示：
+可以使用带有 [ 运算符的](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)对象或集合初始值设定项`new`实例化和初始化一个语句中的对象，如下例所示：
 
-[!code-csharp-interactive[constructor with initializer](~/samples/csharp/language-reference/operators/NewOperator.cs#ConstructorWithInitializer)]
+[!code-csharp-interactive[constructor with initializer](snippets/NewOperator.cs#ConstructorWithInitializer)]
 
 ## <a name="array-creation"></a>数组创建
 
 还可以使用 `new` 运算符创建数组实例，如下例所示：
 
-[!code-csharp-interactive[create array](~/samples/csharp/language-reference/operators/NewOperator.cs#Array)]
+[!code-csharp-interactive[create array](snippets/NewOperator.cs#Array)]
 
 使用数组初始化语法创建数组实例，并在一个语句中使用元素填充该实例。 以下示例显示可以执行该操作的各种方法：
 
-[!code-csharp-interactive[initialize array](~/samples/csharp/language-reference/operators/NewOperator.cs#ArrayInitialization)]
+[!code-csharp-interactive[initialize array](snippets/NewOperator.cs#ArrayInitialization)]
 
 有关数组的详细信息，请参阅[数组](../../programming-guide/arrays/index.md)。
 
@@ -43,7 +43,7 @@ ms.locfileid: "75712658"
 
 要创建[匿名类型](../../programming-guide/classes-and-structs/anonymous-types.md)的实例，请使用 `new` 运算符和对象初始值设定项语法：
 
-[!code-csharp-interactive[anonymous type](~/samples/csharp/language-reference/operators/NewOperator.cs#AnonymousType)]
+[!code-csharp-interactive[anonymous type](snippets/NewOperator.cs#AnonymousType)]
 
 ## <a name="destruction-of-type-instances"></a>类型实例的析构
 
@@ -57,9 +57,9 @@ ms.locfileid: "75712658"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的 [new 运算符](~/_csharplang/spec/expressions.md#the-new-operator)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#the-new-operator)的 [new 运算符](~/_csharplang/spec/introduction.md)部分。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)

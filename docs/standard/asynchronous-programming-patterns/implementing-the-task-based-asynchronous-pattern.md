@@ -12,10 +12,10 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
 ms.openlocfilehash: 6218aa1a7b813601e9b718abf862e20a7cbcd313
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124307"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>实现基于任务的异步模式
@@ -48,7 +48,7 @@ ms.locfileid: "73124307"
 
 你可以通过以下方式生成计算密集型任务：
 
-- 在 .NET Framework 4 中，使用 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法，这种方法接受异步执行委托（通常是 <xref:System.Action%601> 或 <xref:System.Func%601>）。 如果你提供 <xref:System.Action%601> 委托，该方法会返回表示异步执行该委托的 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 对象。 如果你提供 <xref:System.Func%601> 委托，该方法会返回 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 对象。 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> 方法的重载接受一个取消标记（<xref:System.Threading.CancellationToken>）、任务创建选项（<xref:System.Threading.Tasks.TaskCreationOptions>）和一个任务计划程序（<xref:System.Threading.Tasks.TaskScheduler>），它们都对计划和任务执行提供细粒度控制。 定目标到当前任务计划程序的工厂实例可用作 <xref:System.Threading.Tasks.Task> 类的静态属性 (<xref:System.Threading.Tasks.Task.Factory%2A>)；例如：`Task.Factory.StartNew(…)`。
+- 在 .NET Framework 4 中，使用 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法，这种方法接受异步执行委托（通常是 <xref:System.Action%601> 或 <xref:System.Func%601>）。 如果你提供 <xref:System.Action%601> 委托，该方法会返回表示异步执行该委托的 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 对象。 如果你提供 <xref:System.Func%601> 委托，该方法会返回 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 对象。 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> 方法的重载接受一个取消标记（<xref:System.Threading.CancellationToken>）、任务创建选项（<xref:System.Threading.Tasks.TaskCreationOptions>）和一个任务计划程序（<xref:System.Threading.Tasks.TaskScheduler>），它们都对计划和任务执行提供细粒度控制。 定目标到当前任务计划程序的工厂实例可用作 <xref:System.Threading.Tasks.Task.Factory%2A> 类的静态属性 (<xref:System.Threading.Tasks.Task>)；例如：`Task.Factory.StartNew(…)`。
 
 - 在 .NET Framework 4.5 及更高版本（包括 .NET Core 和 .NET Standard）中，使用静态 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 方法作为 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 的快捷方式。 你可以使用 <xref:System.Threading.Tasks.Task.Run%2A> 来轻松启动针对线程池的计算密集型任务。 在 .NET Framework 4.5 及更高版本中，这是用于启动计算密集型任务的首选机制。 仅当需要更细化地控制任务时，才直接使用 `StartNew`。
 
@@ -99,7 +99,7 @@ ms.locfileid: "73124307"
 
 此示例还演示了如何通过多个异步操作使单个取消标记线程化。 有关详细信息，请参阅[使用基于任务的异步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)中的取消用法部分。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [基于任务的异步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
 - [使用基于任务的异步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)

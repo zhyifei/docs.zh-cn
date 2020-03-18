@@ -5,10 +5,10 @@ author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
 ms.openlocfilehash: 394d11038b59f4cbe9e9955df43b6198eb5daaf8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73088129"
 ---
 # <a name="blazor-for-aspnet-web-forms-developers"></a>Blazor for ASP.NET Web Forms 开发人员
@@ -45,13 +45,13 @@ Mac 和 macOS 是 Apple Inc. 的商标
 
 作者：
 
-> [Daniel Roth](https://github.com/danroth27)，Microsoft Corp 首席项目经理  。
+> **Daniel Roth[，Microsoft Corp 首席项目经理](https://github.com/danroth27)** 。
 
-> [Jeff Fritz](https://github.com/csharpfritz)，Microsoft Corp 资深项目经理  。
+> **Jeff Fritz[，Microsoft Corp 资深项目经理](https://github.com/csharpfritz)** 。
 
-> [Taylor Southwick](https://github.com/twsouthwick)，Microsoft Corp 资深软件工程师  。
+> **Taylor Southwick[，Microsoft Corp 资深软件工程师](https://github.com/twsouthwick)** 。
 
-> [Scott Addie](https://github.com/scottaddie)，Microsoft Corp 资深内容开发人员  。
+> **Scott Addie[，Microsoft Corp 资深内容开发人员](https://github.com/scottaddie)** 。
 
 ## <a name="introduction"></a>介绍
 
@@ -82,4 +82,4 @@ Mac 和 macOS 是 Apple Inc. 的商标
 我们正在不断完善本书和相关示例，欢迎你提供反馈！ 如果对如何改进本书有任何建议，请使用 [GitHub 问题](https://github.com/dotnet/docs/issues)上任何页面底部的反馈部分进行反馈。
 
 >[!div class="step-by-step"]
->[下一页](introduction.md)
+>[下一部分](introduction.md)

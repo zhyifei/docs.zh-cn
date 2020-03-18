@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 1a691ad0c1f8dbfadd642360d7f9629a136ff3ab
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: fe69521a6ac88055e3e8c8502a7e19a72667dbef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156655"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240852"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>使用 .NET Core CLI 实现 .NET Core 入门
 
@@ -19,7 +19,7 @@ ms.locfileid: "78156655"
 
 如果不熟悉 .NET Core CLI，请参阅 [.NET Core 概述](../tools/index.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 - [.NET Core SDK 3.1](https://dotnet.microsoft.com/download) 或更高版本。
 - 按需选择的文本编辑器或代码编辑器。
@@ -43,7 +43,7 @@ dotnet run
 
     Hello.csproj  ：
 
-    [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+    [!code-xml[Hello.csproj](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Hello.csproj)]
 
     项目文件指定还原依赖项和生成程序所需的一切。
 
@@ -52,7 +52,7 @@ dotnet run
 
     Program.cs  :
 
-    [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
+    [!code-csharp[Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Program.cs)]
 
     该程序从 `using System` 开始，这意味着“将 `System` 命名空间中的所有内容都纳入此文件的作用域”。 `System` 命名空间包括 `Console` 类。
 
@@ -100,7 +100,7 @@ dotnet run
 
 01. 将 *Program.cs* 文件的内容替换为以下代码：
 
-    [!code-csharp[Fibonacci](~/samples/core/console-apps/fibonacci-msbuild/Program.cs)]
+    [!code-csharp[Fibonacci](~/samples/snippets/core/tutorials/cli-create-console-app/fibonacci-msbuild/csharp/Program.cs)]
 
 02. 运行 [dotnet build](../tools/dotnet-build.md) 以编译更改。
 
@@ -132,7 +132,7 @@ dotnet run
     15: 377
     ```
 
-就是这么简单！ 可以按任意喜欢的方式修改 Program.cs  。
+这就是所有的操作！ 可以按任意喜欢的方式修改 Program.cs  。
 
 ## <a name="working-with-multiple-files"></a>使用多个文件
 
@@ -140,11 +140,11 @@ dotnet run
 
 01. 使用以下代码将新文件添加到名为 *FibonacciGenerator.cs* 的 *Hello* 目录：
 
-    [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
+    [!code-csharp[Fibonacci Generator](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/FibonacciGenerator.cs)]
 
-02. 更改 *Program.cs* 文件中的 `Main` 方法，以实例化新的类并调用其方法，如下例所示：
+02. 更改 `Main`Program.cs*文件中的* 方法，以实例化新的类并调用其方法，如下例所示：
 
-    [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+    [!code-csharp[New Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/Program.cs)]
 
 03. 运行 [dotnet build](../tools/dotnet-build.md) 以编译更改。
 
@@ -176,7 +176,7 @@ dotnet run
 
 ## <a name="publish-your-app"></a>发布你的应用
 
-准备好分发应用后，使用 [dotnet publish](../tools/dotnet-publish.md) 命令在 bin\\debug\\netcoreapp3.1\\publish\\（非 Windows 系统使用 `/`）处生成 publish 文件夹   。 可以将 publish  文件夹的内容分发到其他平台，只要这些平台安装了 dotnet 运行时即可。
+准备好分发应用后，使用 [dotnet publish](../tools/dotnet-publish.md) 命令在 bin_debug_netcoreapp3.1_publish\\（非 Windows 系统使用 \\）处生成 publish 文件夹\\\\_ `/`。 可以将 publish  文件夹的内容分发到其他平台，只要这些平台安装了 dotnet 运行时即可。
 
 ```dotnetcli
 dotnet publish
@@ -217,9 +217,9 @@ Hello World!
 
 ## <a name="conclusion"></a>结束语
 
-就是这么简单！ 现在，可以开始使用此处学到的基本概念来创建自己的程序了。
+这就是所有的操作！ 现在，可以开始使用此处学到的基本概念来创建自己的程序了。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 .NET Core CLI 组织和测试项目](testing-with-cli.md)
 - [使用 .NET Core CLI 发布 .NET Core 应用](../deploying/deploy-with-cli.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - buffers"
 - pipeline processing
 ms.openlocfilehash: b61b1dbbedf4658fe113986fbb4a792a2f574534
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121988"
 ---
 # <a name="memory--and-span-related-types"></a>内存和跨度相关类型
@@ -45,7 +45,7 @@ ms.locfileid: "73121988"
 
 由于内存和跨度相关类型通常用于在处理管道中存储数据，因此开发人员在使用 <xref:System.Span%601>、<xref:System.Memory%601> 和相关类型时要务必遵循一套最佳做法。 [内存\<T> 和跨度\<T> 使用准则](memory-t-usage-guidelines.md)中介绍了这些最佳做法。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Memory%601?displayProperty=nameWithType>
 - <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>

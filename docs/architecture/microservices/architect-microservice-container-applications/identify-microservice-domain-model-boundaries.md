@@ -3,10 +3,10 @@ title: 标识每个微服务的域模型边界
 description: 探索将大型应用程序划分为微服务以实现可靠体系结构的本质。
 ms.date: 09/20/2018
 ms.openlocfilehash: 9c433066dd8e93dbb09b15e58c9c85617775723d
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834419"
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>标识每个微服务的域模型边界

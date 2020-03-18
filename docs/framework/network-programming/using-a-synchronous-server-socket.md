@@ -18,18 +18,18 @@ helpviewer_keywords:
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
 ms.openlocfilehash: cbc02c755ceefa8f31439f121a98978b82f33fa2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047038"
 ---
 # <a name="using-a-synchronous-server-socket"></a>使用同步服务器套接字
 同步服务器套接字会挂起应用程序的执行，直到在套接字上收到连接请求。 同步服务器套接字不适用于在其操作中大量使用网络的应用程序，但它们可能适用于简单的网络应用程序。  
   
- 使用 <xref:System.Net.Sockets.Socket.Bind%2A> 和 <xref:System.Net.Sockets.Socket.Listen%2A> 方法将 <xref:System.Net.Sockets.Socket> 设置为侦听终结点之后，便可以开始使用 <xref:System.Net.Sockets.Socket.Accept%2A> 方法接受传入的连接请求。 调用 Accept 方法时，应用程序将处于挂起状态，直到收到连接请求。   
+ 使用 <xref:System.Net.Sockets.Socket> 和 <xref:System.Net.Sockets.Socket.Bind%2A> 方法将 <xref:System.Net.Sockets.Socket.Listen%2A> 设置为侦听终结点之后，便可以开始使用 <xref:System.Net.Sockets.Socket.Accept%2A> 方法接受传入的连接请求。 调用 Accept 方法时，应用程序将处于挂起状态，直到收到连接请求。   
   
- 在收到连接请求时，Accept 会返回一个与连接客户端关联的新 Socket 实例。   下面的示例从客户端读取数据，并在控制台上显示该数据，然后将数据回显到客户端。 Socket 不指定任何消息协议，因此字符串“\<EOF>”标记消息数据的结尾。  它假定名为 `listener` 的 Socket 已初始化并绑定到终结点。   
+ 在收到连接请求时，Accept 会返回一个与连接客户端关联的新 Socket 实例。   下面的示例从客户端读取数据，并在控制台上显示该数据，然后将数据回显到客户端。 Socket 不指定任何消息协议，因此字符串“**EOF>”标记消息数据的结尾。** \< 它假定名为  **的 Socket 已初始化并绑定到终结点。** `listener`  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  
@@ -75,7 +75,7 @@ handler.Shutdown(SocketShutdown.Both);
 handler.Close();  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用异步服务器套接字](using-an-asynchronous-server-socket.md)
 - [同步服务器套接字示例](synchronous-server-socket-example.md)

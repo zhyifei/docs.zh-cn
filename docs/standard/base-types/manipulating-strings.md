@@ -7,10 +7,10 @@ helpviewer_keywords:
 - manipulating strings
 ms.assetid: d4568ff3-9f83-4549-acd8-47aec2194ac0
 ms.openlocfilehash: 5188c4f1099aad486e921dfba0c6c4216613ba4e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73135234"
 ---
 # <a name="manipulating-strings-in-net"></a>控制 .NET 中的字符串
@@ -33,5 +33,5 @@ ms.locfileid: "73135234"
  [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
  介绍了如何使用基类库实现格式设置、如何设置数字类型的格式、如何设置字符串类型的格式，以及如何针对特定区域性设置格式。  
   
- [分析字符串](../../../docs/standard/base-types/parsing-strings.md)  
+ [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
  描述如何将对象初始化为这些对象的字符串表示形式所描述的值。 分析是格式化的反向操作。

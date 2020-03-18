@@ -1,5 +1,5 @@
 ---
-title: 如何：引发事件和使用事件
+title: 如何：引发和使用事件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
 ms.openlocfilehash: 256b5ae9ac2145e339136985872dfa5423aca730
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131588"
 ---
-# <a name="how-to-raise-and-consume-events"></a>如何：引发事件和使用事件
+# <a name="how-to-raise-and-consume-events"></a>如何：引发和使用事件
 本主题中的示例演示如何处理事件。 它们包含 <xref:System.EventHandler>、<xref:System.EventHandler%601> 委托和自定义委托的示例，用于说明包含数据和不包含数据的事件。  
   
  这些示例使用[事件](../../../docs/standard/events/index.md)一文中介绍的概念。  
@@ -42,6 +42,6 @@ ms.locfileid: "73131588"
  [!code-csharp[EventsOverview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programwithdelegate.cs#7)]
  [!code-vb[EventsOverview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdelegate.vb#7)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [事件](../../../docs/standard/events/index.md)

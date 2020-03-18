@@ -18,10 +18,10 @@ helpviewer_keywords:
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
 ms.openlocfilehash: fdecd18dc5975cd469e49de0eb0b55081e738cd8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047075"
 ---
 # <a name="using-a-synchronous-client-socket"></a>使用同步客户端套接字
@@ -42,7 +42,7 @@ int bytesSent = s.Send(msg);
   
  Send 方法从缓冲区移除字节，并用网络接口将这些字节排队以便发送到网络设备。  网络接口可能不会立即发送数据，但它最终将发送，只要使用 <xref:System.Net.Sockets.Socket.Shutdown%2A> 方法正常关闭连接。  
   
- 若要从网络设备接收数据，请将缓冲区传递到 Socket 类的数据接收方法之一（<xref:System.Net.Sockets.Socket.Receive%2A> 和 <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>）。  同步套接字将挂起应用程序，直到从网络收到字节或者套接字关闭。 下面的示例接收来自网络的数据，然后将其显示在控制台上。 该示例假定来自网络的数据是用 ASCII 编码的文本。 Receive 方法返回从网络接收的字节数。   
+ 若要从网络设备接收数据，请将缓冲区传递到 Socket 类的数据接收方法之一（**和**）。 <xref:System.Net.Sockets.Socket.Receive%2A><xref:System.Net.Sockets.Socket.ReceiveFrom%2A> 同步套接字将挂起应用程序，直到从网络收到字节或者套接字关闭。 下面的示例接收来自网络的数据，然后将其显示在控制台上。 该示例假定来自网络的数据是用 ASCII 编码的文本。 Receive 方法返回从网络接收的字节数。   
   
 ```vb  
 Dim bytes(1024) As Byte  
@@ -70,7 +70,7 @@ s.Shutdown(SocketShutdown.Both);
 s.Close();  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用异步客户端套接字](using-an-asynchronous-client-socket.md)
 - [使用套接字侦听](listening-with-sockets.md)

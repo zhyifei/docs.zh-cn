@@ -9,10 +9,10 @@ helpviewer_keywords:
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
 ms.openlocfilehash: b2d6cc94c11ca6305a75e9ee489af53ad957201e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76744514"
 ---
 # <a name="reference-types-c-reference"></a>引用类型（C# 参考）
@@ -23,7 +23,7 @@ C# 中有两种类型：引用类型和值类型。 引用类型的变量存储�
 
 - [class](class.md)
 
-- [interface](interface.md)
+- [接口](interface.md)
 
 - [delegate](../builtin-types/reference-types.md)
 
@@ -35,7 +35,7 @@ C# 中有两种类型：引用类型和值类型。 引用类型的变量存储�
 
 - [string](../builtin-types/reference-types.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 关键字](index.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, how to create aggregate function
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
 ms.openlocfilehash: 7bb4cc1b69f0b6b97c1cf6255ded5341304f3ee3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73106760"
 ---
 # <a name="how-to-write-a-custom-plinq-aggregate-function"></a>如何：编写自定义 PLINQ 聚合函数
@@ -31,7 +31,7 @@ ms.locfileid: "73106760"
   
  请注意，如果 Lambda 表达式主体由一个表达式组成，<xref:System.Func%602?displayProperty=nameWithType> 委托的返回值就是表达式值。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Linq.ParallelEnumerable>
 - [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

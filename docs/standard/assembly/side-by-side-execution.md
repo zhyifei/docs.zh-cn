@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], side-by-side execution
 ms.assetid: e42036ee-7590-47d1-b884-cc856e39bd5d
 ms.openlocfilehash: 234efba66d87b520b54d6d113afcc4bba0bfe06a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138666"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>程序集和并行执行
@@ -20,7 +20,7 @@ ms.locfileid: "73138666"
   
 尽管运行时使您能够创建并行应用程序，但并行执行并不是自动进行的。 有关创建并行执行的应用程序的详细信息，请参阅[并行执行的组件的创建指南](../../framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [运行时如何定位程序集](../../framework/deployment/how-the-runtime-locates-assemblies.md)
 - [.NET 中的程序集](index.md)

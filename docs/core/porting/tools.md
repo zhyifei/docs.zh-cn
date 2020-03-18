@@ -4,10 +4,10 @@ description: 了解可以用于移植到 .NET Core 的一些工具
 author: cartermp
 ms.date: 12/07/2018
 ms.openlocfilehash: 98b3a29f2287414b2cd323f1cbf2225905592b26
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157513"
 ---
 # <a name="tools-to-help-with-porting-to-net-core"></a>用于帮助移植到 .NET Core 的工具

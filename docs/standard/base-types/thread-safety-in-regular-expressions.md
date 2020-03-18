@@ -10,10 +10,10 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, threads
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
 ms.openlocfilehash: db25028e10872cfca08d28518c795414d06c5d49
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124803"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>正则表达式中的线程安全
@@ -25,6 +25,6 @@ ms.locfileid: "73124803"
   
  枚举器是唯一例外。 应用程序必须序列化对集合枚举器的调用。 规则为，如果可以在多个线程上同时枚举一个集合，则应该同步枚举器所遍历集合的根对象上的枚举器方法。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)

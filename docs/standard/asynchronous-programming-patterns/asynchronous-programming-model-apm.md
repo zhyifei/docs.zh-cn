@@ -12,17 +12,17 @@ helpviewer_keywords:
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 ms.openlocfilehash: 0a9ea3c8c9c589bb5954fa9771ffd1bb095f6d73
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140138"
 ---
 # <a name="asynchronous-programming-model-apm"></a>异步编程模型 (APM)
 使用 <xref:System.IAsyncResult> 设计模式的异步操作是通过名为 `BeginOperationName` 和 `EndOperationName` 的两个方法来实现的，这两个方法分别开始和结束异步操作 OperationName  。 例如， <xref:System.IO.FileStream> 类提供 <xref:System.IO.FileStream.BeginRead%2A> 和 <xref:System.IO.FileStream.EndRead%2A> 方法来从文件异步读取字节。 这两个方法实现了 <xref:System.IO.FileStream.Read%2A> 方法的异步版本。  
   
 > [!NOTE]
-> 从 .NET Framework 4 开始，任务并行库为异步和并行编程提供了一种新模型。 有关详细信息，请参阅 “[任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)” 和 “[基于任务的异步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)”。  
+> 从 .NET Framework 4 开始，任务并行库为异步和并行编程提供了一种新模型。 有关详细信息，请参阅 [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) 和 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)。  
   
  在调用 `BeginOperationName` 后，应用程序可以继续在调用线程上执行指令，同时异步操作在另一个线程上执行。 每次调用 `BeginOperationName` 时，应用程序还应调用 `EndOperationName` 来获取操作的结果。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73140138"
 ## <a name="ending-an-asynchronous-operation"></a>结束异步操作  
  `EndOperationName` 方法用于结束异步操作 OperationName  。 `EndOperationName` 方法的返回值与其同步对应方法的返回值类型相同，并且是特定于异步操作的。 例如， <xref:System.IO.FileStream.EndRead%2A> 方法返回从 <xref:System.IO.FileStream> 读取的字节数， <xref:System.Net.Dns.EndGetHostByName%2A> 方法返回包含有关主机的信息的 <xref:System.Net.IPHostEntry> 对象。 `EndOperationName` 方法采用该方法同步版本的签名中声明的所有输出参数或引用参数。 除了来自同步方法的参数外，`EndOperationName` 方法还包括 <xref:System.IAsyncResult> 参数。 调用方必须将对应调用返回的实例传递给 `BeginOperationName`。  
   
- 如果调用 `EndOperationName` 时 <xref:System.IAsyncResult> 对象表示的异步操作尚未完成，则 `EndOperationName` 将在异步操作完成之前阻止调用线程。 异步操作引发的异常是从 `EndOperationName` 方法引发的。 未定义多次使用同一 <xref:System.IAsyncResult> 调用 `EndOperationName` 方法的效果。 同样，也未定义使用 <xref:System.IAsyncResult>（相关 Begin 方法未返回）调用 `EndOperationName` 方法的效果。  
+ 如果调用 <xref:System.IAsyncResult> 时 `EndOperationName` 对象表示的异步操作尚未完成，则 `EndOperationName` 将在异步操作完成之前阻止调用线程。 异步操作引发的异常是从 `EndOperationName` 方法引发的。 未定义多次使用同一 `EndOperationName` 调用 <xref:System.IAsyncResult> 方法的效果。 同样，也未定义使用 `EndOperationName`（相关 Begin 方法未返回）调用 <xref:System.IAsyncResult> 方法的效果。  
   
 > [!NOTE]
 > 对于这两种未定义的情况，实施者应考虑引发 <xref:System.InvalidOperationException>。  
@@ -55,15 +55,15 @@ ms.locfileid: "73140138"
   
 - 从应用程序的主线程调用 `EndOperationName`，阻止应用程序执行，直到操作完成之后再继续执行。 有关展示了此方法的示例，请参阅[通过结束异步操作阻止应用执行](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)。  
   
-- 使用 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 来阻止应用程序执行，直到一个或多个操作完成。 有关演示此方法的示例，请参阅 “[使用 AsyncWaitHandle 阻止应用程序的执行](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)”。  
+- 使用 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 来阻止应用程序执行，直到一个或多个操作完成。 有关演示此方法的示例，请参阅 [Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)。  
   
  在异步操作完成时不需要阻止的应用程序可使用下列方法之一：  
   
-- 按以下方式轮询操作完成状态：定期检查 <xref:System.IAsyncResult.IsCompleted%2A> 属性，操作完成后调用 `EndOperationName`。 有关演示此方法的示例，请参阅 [轮询异步操作的状态](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md)。  
+- 按以下方式轮询操作完成状态：定期检查 <xref:System.IAsyncResult.IsCompleted%2A> 属性，操作完成后调用 `EndOperationName`。 有关演示此方法的示例，请参阅 [Polling for the Status of an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md)。  
   
-- 使用 <xref:System.AsyncCallback> 委托来指定要在操作完成时调用的方法。 有关演示此方法的示例，请参阅 [使用 AsyncCallback 委托结束异步操作](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)。  
+- 使用 <xref:System.AsyncCallback> 委托来指定要在操作完成时调用的方法。 有关演示此方法的示例，请参阅 [Using an AsyncCallback Delegate to End an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
 - [使用异步方式调用同步方法](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)

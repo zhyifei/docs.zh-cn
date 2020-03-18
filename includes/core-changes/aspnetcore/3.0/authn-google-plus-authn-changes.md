@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: c634c43e72d345721f2d8f2e9f45760e927a86ab
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394250"
 ---
 ### <a name="authentication-google-deprecated-and-replaced"></a>身份验证：Google+ 已弃用并被替换
@@ -20,7 +20,7 @@ Google 的替代 API 使用不同的数据源和格式。 下面提供的缓解�
 
 所有版本。 此更改是 ASP.NET Core 的外部更改。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 ##### <a name="owin-with-aspnet-web-forms-and-mvc"></a>包含 ASP.NET Web Forms 和 MVC 的 Owin
 

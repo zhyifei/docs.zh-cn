@@ -8,10 +8,10 @@ helpviewer_keywords:
 - /refout compiler option [C#]
 - -refout compiler option [C#]
 ms.openlocfilehash: f48316a1e6f657e3bd0190d269dfe0e875a833d9
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72771757"
 ---
 # <a name="-refout-c-compiler-options"></a>-refout（C# 编译器选项）
@@ -24,7 +24,7 @@ ms.locfileid: "72771757"
 -refout:filepath
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
  `filepath` - 引用程序集的文件路径。 通常情况下，应与主程序集的路径匹配。 推荐约定（MSBuild 采用）是，将引用程序集放入与主程序集相关的“ref/”子文件夹中。
 
@@ -34,7 +34,7 @@ ms.locfileid: "72771757"
 
 `-refout` 和 [`-refonly`](refonly-compiler-option.md) 选项互斥。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](./index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

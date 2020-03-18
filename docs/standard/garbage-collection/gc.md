@@ -5,11 +5,11 @@ ms.date: 07/22/2016
 ms.technology: dotnet-standard
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
 ms.openlocfilehash: 8046cb744dccaf512208d517c243640820efce8e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685759"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61945361"
 ---
 # <a name="automatic-memory-management-and-garbage-collection"></a>自动内存管理和垃圾回收
 
@@ -45,7 +45,7 @@ ms.locfileid: "45685759"
 
 对于应用程序创建的大多数对象，可以依赖垃圾回收器自动执行必要的内存管理任务。 但是，非托管资源需要显式清除。 最常用的非托管资源类型是包装操作系统资源的对象，例如，文件句柄、窗口句柄或网络连接。 虽然垃圾回收器可以跟踪封装非托管资源的托管对象的生存期，但却无法具体了解如何清理资源。 创建封装非托管资源的对象时，建议在公共 `Dispose` 方法中提供必要的代码以清理非托管资源。 通过提供 `Dispose` 方法，对象的用户可以在使用完对象后显式释放其内存。 使用封装非托管资源的对象时，应该了解 `Dispose` 并在必要时调用它。 有关清理非托管资源的更多信息和实现 `Dispose` 的设计模式示例，请参见 [.NET 中的垃圾回收](index.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [System.GC](xref:System.GC)
 - [.NET 中的垃圾回收](index.md)

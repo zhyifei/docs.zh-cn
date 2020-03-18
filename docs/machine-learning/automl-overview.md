@@ -3,13 +3,13 @@ title: 使用 ML.NET 自动化机器学习
 description: 自动模型选择和训练的概述
 ms.date: 05/01/2019
 ms.topic: overview
-ms.custom: mvc
-ms.openlocfilehash: c6c369dc0b0375f180d33d85ef320ddb24102f3e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.custom: mvc, mlnet-tooling
+ms.openlocfilehash: acd6cae71d2d5d79209a77d34175e7f1b3c1ee35
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740094"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78849349"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>使用 ML.NET 自动化机器学习
 

@@ -3,10 +3,10 @@ title: 使用 Docker 和 Microsoft Azure 设计和开发容器化应用
 description: 让我们来了解 Docker 应用程序生命周期中的开发/设计工作负载。
 ms.date: 02/15/2019
 ms.openlocfilehash: ad7f635feab21cd6e6b31c0b5d43fb2598ffa16c
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70294903"
 ---
 # <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a>使用 Docker 和 Microsoft Azure 设计和开发容器化应用

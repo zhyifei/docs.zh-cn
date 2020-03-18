@@ -3,10 +3,10 @@ title: 链接查询示例 (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
 ms.openlocfilehash: 45e3a4f341ca8eb06ff0f553e0f933956e6c6546
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70205414"
 ---
 # <a name="chaining-queries-example-c"></a>链接查询示例 (C#)
@@ -86,6 +86,6 @@ Main: str >GHI!!!<
   
 - [中间具体化 (C#)](./intermediate-materialization.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [教程：将查询链接在一起 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

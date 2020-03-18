@@ -5,10 +5,10 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: c745a4eb1c6f4a00bf139100b02f31cf3327d01e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522725"
 ---
 # <a name="architecture-deployment-approaches"></a>体系结构部署方法
@@ -139,8 +139,8 @@ PaaS 解决了 IaaS 常见的挑战。 PaaS 使开发人员可以专注于代码
 |         |IaaS     |PaaS     |容器|无服务器|
 |---------|---------|---------|---------|----------|
 |缩放 |VM       |实例 |应用      |函数  |
-|**摘要**|硬件|Platform|OS 主机|运行时   |
-|**单位** |VM       |项目  |图像    |代码      |
+|**摘要**|硬件|平台|OS 主机|运行时   |
+|**单位** |VM       |Project  |Image    |代码      |
 |**生存期**|数月|数天到数月|数分钟到数天|数毫秒到数分钟|
 |**责任**|应用程序、依赖项、运行时和操作系统|应用程序和依赖项|应用程序、依赖项和运行时|函数
 

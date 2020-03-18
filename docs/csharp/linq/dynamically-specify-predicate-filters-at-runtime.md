@@ -4,11 +4,11 @@ description: 了解如何使用 C# 中的 LINQ 在运行时动态指定谓词筛
 ms.date: 12/01/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
 ms.openlocfilehash: 314be8f98b9ff014f14bef11a1f3581eff8574b4
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857731"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659938"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>在运行时动态指定谓词筛选器
 
@@ -18,15 +18,15 @@ ms.locfileid: "54857731"
 
 1. 打开一个新的控制台应用程序并将其命名为 `PredicateFilters`。
 
-2. 从[查询对象的集合](query-a-collection-of-objects.md)复制 `StudentClass` 类，并将其粘贴到类 `Program` 下方的命名空间 `PredicateFilters`。 `StudentClass` 提供 `Student` 对象的列表。
+2. 从`StudentClass`查询对象的集合[复制 ](query-a-collection-of-objects.md) 类，并将其粘贴到类 `PredicateFilters` 下方的命名空间 `Program`。 `StudentClass` 提供 `Student` 对象的列表。
 
-3. 注释禁止 `StudentClass` 中的 `Main` 方法。
+3. 注释禁止 `Main` 中的 `StudentClass` 方法。
 
 4. 将类 `Program` 替换为以下代码：
 
      [!code-csharp[csProgGuideLINQ#26](~/samples/snippets/csharp/concepts/linq/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]
 
-5. 将以下行添加到类 `DynamicPredicates` 中 `ids` 声明下的 `Main` 方法。
+5. 将以下行添加到类 `Main` 中 `DynamicPredicates` 声明下的 `ids` 方法。
 
      ```csharp
      QueryById(ids);
@@ -36,25 +36,25 @@ ms.locfileid: "54857731"
 
 7. 在控制台窗口中显示以下输出：
 
-     Garcia:114
+     Garcia: 114
 
-     O'Donnell:112
+     O'Donnell: 112
 
-     Omelchenko:111
+     Omelchenko: 111
 
-8. 下一步是再次运行该项目，此次是通过使用在运行时输入的输入而非数组 `ids` 来执行此操作。 在 `Main` 方法中，将 `QueryByID(ids)` 更改为 `QueryByID(args)`。
+8. 下一步是再次运行该项目，此次是通过使用在运行时输入的输入而非数组 `ids` 来执行此操作。 在 `QueryByID(ids)` 方法中，将 `QueryByID(args)` 更改为 `Main`。
 
 9. 使用命令行参数 `122 117 120 115` 运行该项目。 运行项目时，这些值将成为 `args` 的元素，它们是 `Main` 方法的参数。
 
 10. 在控制台窗口中显示以下输出：
 
-     Adams:120
+     Adams: 120
 
-     Feng:117
+     Feng: 117
 
-     Garcia:115
+     Garcia: 115
 
-     Tucker:122
+     Tucker: 122
 
 ## <a name="to-filter-by-using-a-switch-statement"></a>使用 switch 语句进行筛选
 
@@ -68,7 +68,7 @@ ms.locfileid: "54857731"
 
 4. 运行该项目，其命令行参数为介于 1 和 4 之间的整数值。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [语言集成查询 (LINQ)](index.md)
 - [where 子句](../language-reference/keywords/where-clause.md)

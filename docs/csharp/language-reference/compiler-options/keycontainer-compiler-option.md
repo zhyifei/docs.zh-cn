@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
 ms.openlocfilehash: fead2d4296cfa6fb0195cb4b43f6448c0fc7e6a9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970139"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer（C# 编译器选项）
@@ -24,7 +24,7 @@ ms.locfileid: "70970139"
 -keycontainer:string  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `string`  
  强名称密钥容器的名称。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "70970139"
   
  可通过 <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A> 以编程方式访问此编译器选项。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器 -keyfile 选项](keyfile-compiler-option.md)
 - [C# 编译器选项](index.md)

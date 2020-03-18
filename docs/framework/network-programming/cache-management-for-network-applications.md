@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
 ms.openlocfilehash: 7e131963999db3e3d5e0e6f3fa110da36e6452a1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048875"
 ---
 # <a name="cache-management-for-network-applications"></a>网络应用程序的缓存管理
@@ -35,6 +35,6 @@ ms.locfileid: "71048875"
  [在网络应用程序中配置缓存](configuring-caching-in-network-applications.md)  
  描述如何以编程方式创建缓存策略以及使用缓存的请求。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Net.Cache>  
  定义类型和枚举，这些类型和枚举用于为使用 <xref:System.Net.WebRequest><xref:System.Net.HttpWebRequest> 和 <xref:System.Net.FtpWebRequest> 类获取的资源定义缓存策略。

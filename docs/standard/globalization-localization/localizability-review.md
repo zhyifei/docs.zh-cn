@@ -17,10 +17,10 @@ helpviewer_keywords:
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 ms.openlocfilehash: b286bdd2c5d7b03a0a2b5f94478e252da6cd0ae2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120853"
 ---
 # <a name="localizability-review"></a>本地化评审
@@ -77,7 +77,7 @@ ms.locfileid: "73120853"
 
 如果在开发应用时遵循了全球化建议，并正确处理了区域性敏感型功能，同时还发现并解决了测试期间出现的本地化问题，就可以执行下一步[本地化](../../../docs/standard/globalization-localization/localization.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [全球化和本地化](../../../docs/standard/globalization-localization/index.md)
 - [本地化](../../../docs/standard/globalization-localization/localization.md)

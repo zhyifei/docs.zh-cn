@@ -3,10 +3,10 @@ title: 设计和开发基于微服务的多容器 .NET 应用程序
 description: 容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解用于设计和开发基于微服务的多容器 .NET 应用程序的外部体系结构。
 ms.date: 10/02/2018
 ms.openlocfilehash: 8c2f828e9913a0efcdf580371124b0f624daeffe
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295227"
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a>设计和开发基于微服务的多容器 .NET 应用程序

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 ms.openlocfilehash: 6c14c60b30f8f70aa5e888ed45d6f867154e18d8
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159645"
 ---
 # <a name="exceptions-in-managed-threads"></a>托管线程中的异常
@@ -23,7 +23,7 @@ ms.locfileid: "78159645"
   
  公共语言运行时为用于控制程序流的某些未经处理的异常提供支持：  
   
-- 由于 <xref:System.Threading.Thread.Abort%2A> 得到调用，因此 <xref:System.Threading.ThreadAbortException> 在线程中抛出。  
+- 由于 <xref:System.Threading.ThreadAbortException> 得到调用，因此 <xref:System.Threading.Thread.Abort%2A> 在线程中抛出。  
   
 - 由于线程执行时所在的应用域正在卸载，因此 <xref:System.AppDomainUnloadedException> 在线程中抛出。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "78159645"
   
 - 在线程池线程中，没有诸如未经处理的异常这样的内容。 当某个任务引发了它无法处理的异常时，运行时会将异常堆栈跟踪打印至控制台，然后将线程返回至线程池。  
   
-- 在使用 <xref:System.Threading.Thread> 类的 <xref:System.Threading.Thread.Start%2A> 方法创建的线程中，不存在未经处理的异常等现象。 当在此类线程中运行的代码引发它无法处理的异常时，运行时会将异常堆栈跟踪打印至控制台，然后正常终止线程。  
+- 在使用 <xref:System.Threading.Thread.Start%2A> 类的 <xref:System.Threading.Thread> 方法创建的线程中，不存在未经处理的异常等现象。 当在此类线程中运行的代码引发它无法处理的异常时，运行时会将异常堆栈跟踪打印至控制台，然后正常终止线程。  
   
 - 在终结器线程中，没有诸如未经处理的异常这样的内容。 当终结器引发它无法处理的异常时，运行时会将异常堆栈跟踪打印至控制台，然后允许终结器线程继续运行终结器。  
   
@@ -76,6 +76,6 @@ ms.locfileid: "78159645"
 ## <a name="host-override"></a>主机重写  
  在 .NET Framework 2.0 版中，非托管主机可以使用宿主 API 中的 [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) 接口来重写公共语言运行时的默认未经处理的异常。 [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) 函数用于设置未经处理的异常的策略。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [托管线程处理基本知识](../../../docs/standard/threading/managed-threading-basics.md)

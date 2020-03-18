@@ -12,10 +12,10 @@ helpviewer_keywords:
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
 ms.openlocfilehash: 183078b1f7a3eb3530fea8af06dbb59055d7d25d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120787"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>执行不区分区域性的字符串操作
@@ -40,7 +40,7 @@ ms.locfileid: "73120787"
  [不区分区域性的字符串操作](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
  介绍对字符串执行操作时应了解区域性的原因，并为何时执行区分区域性的操作、何时执行不区分区域性的操作提供了指南。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [排序权重表（适用于 Windows 系统上的 .NET）](https://www.microsoft.com/download/details.aspx?id=10921)
 - [默认 Unicode 排序元素表（适用于 Linux 和 macOS 上 .NET Core）](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

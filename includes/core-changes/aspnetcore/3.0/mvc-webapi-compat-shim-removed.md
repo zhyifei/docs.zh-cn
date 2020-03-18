@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 75945e7ff26c1c6db891d12cef4c16ed210da6af
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394034"
 ---
 ### <a name="mvc-web-api-compatibility-shim-removed"></a>MVC：已删除 Web API 兼容性填充码
@@ -22,7 +22,7 @@ ms.locfileid: "72394034"
 
 Web API 兼容性填充码是一种迁移工具。 它限制用户对 ASP.NET Core 中添加的新功能的访问。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 删除此填充码的使用，直接迁移到 ASP.NET Core 本身中的类似功能。
 

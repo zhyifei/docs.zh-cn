@@ -3,10 +3,10 @@ title: 启用和禁用 IPv6
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
 ms.openlocfilehash: 66c802dd5feb865faf7469cb7da04fbffcb4a2d6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048567"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>启用和禁用 IPv6
@@ -15,11 +15,11 @@ ms.locfileid: "71048567"
 ## <a name="configuration-steps"></a>配置步骤  
  下表列出了各种配置  
   
-|支持 IPv6 的操作系统？|支持 IPv6 的网络类？|说明|  
+|支持 IPv6 的操作系统？|支持 IPv6 的网络类？|描述|  
 |-------------------------------------|---------------------------------------|-----------------|  
-|No|No|可以分析 IPv6 地址。|  
-|No|是|可以分析 IPv6 地址。|  
-|是|No|使用未标记为过时的名称解析方法，可以分析并解析 IPv6 地址。|  
+|否|否|可以分析 IPv6 地址。|  
+|否|是|可以分析 IPv6 地址。|  
+|是|否|使用未标记为过时的名称解析方法，可以分析并解析 IPv6 地址。|  
 |是|是|使用所有方法（包含标记为过时的方法），可以分析并解析 IPv6 地址。|  
   
  请注意，要为 System.Net 命名空间中的所有类启用 IPv6 支持，必须修改计算机配置文件或应用程序的配置文件。 应用程序的配置文件优先于计算机配置文件。  

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
 ms.openlocfilehash: 76566d06cac81d8ba4138369c6ee3ef807a99634
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71049048"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>通过代理访问 Internet
@@ -32,7 +32,7 @@ ms.locfileid: "71049048"
   
 - [如何：重写全局代理选择](how-to-override-a-global-proxy-selection.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用应用程序协议](using-application-protocols.md)
 - [.NET Framework 中的网络编程](index.md)

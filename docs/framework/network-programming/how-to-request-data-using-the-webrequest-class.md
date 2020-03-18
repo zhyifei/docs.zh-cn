@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
 ms.openlocfilehash: e670a2a503ce704eff847e9e0b3ee340ab52fe62
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048169"
 ---
 # <a name="how-to-request-data-by-using-the-webrequest-class"></a>如何：使用 WebRequest 类请求数据
@@ -24,7 +24,7 @@ ms.locfileid: "71048169"
 
 ## <a name="to-request-data-from-a-host-server"></a>从主机服务器请求数据
 
-1. 通过使用资源 URI 调用 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 来创建 <xref:System.Net.WebRequest> 实例。 例如:
+1. 通过使用资源 URI 调用 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 来创建 <xref:System.Net.WebRequest> 实例。 例如：
 
     ```csharp
     WebRequest request = WebRequest.Create("https://docs.microsoft.com");
@@ -49,7 +49,7 @@ ms.locfileid: "71048169"
     request.Credentials = CredentialCache.DefaultCredentials
     ```
 
-3. 通过调用 <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> 向服务器发送请求。 此方法返回包含服务器响应的对象。 返回的 <xref:System.Net.WebResponse> 对象的类型由请求的 URI 的方案决定。 例如:
+3. 通过调用 <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> 向服务器发送请求。 此方法返回包含服务器响应的对象。 返回的 <xref:System.Net.WebResponse> 对象的类型由请求的 URI 的方案决定。 例如：
 
     ```csharp
     WebResponse response = request.GetResponse();
@@ -71,7 +71,7 @@ ms.locfileid: "71048169"
     Console.WriteLine(CType(response,HttpWebResponse).StatusDescription)
     ```
 
-5. 要获取包含由服务器发送的响应数据的流，请调用 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 方法。 例如:
+5. 要获取包含由服务器发送的响应数据的流，请调用 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 方法。 例如：
 
     ```csharp
     Stream dataStream = response.GetResponseStream();
@@ -81,7 +81,7 @@ ms.locfileid: "71048169"
     Dim dataStream As Stream = response.GetResponseStream()
     ```
 
-6. 从响应对象读取数据后，可以使用 <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> 方法关闭它，也可以使用 <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 方法关闭响应流。 如果不关闭响应对象或流，则应用程序可能会耗尽服务器连接，并且无法处理其他请求。 因为 `WebResponse.Close` 方法在其关闭响应时调用 `Stream.Close`，所以不必在响应和流对象上调用 `Close`，尽管这样做没有坏处。 例如:
+6. 从响应对象读取数据后，可以使用 <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> 方法关闭它，也可以使用 <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 方法关闭响应流。 如果不关闭响应对象或流，则应用程序可能会耗尽服务器连接，并且无法处理其他请求。 因为 `WebResponse.Close` 方法在其关闭响应时调用 `Stream.Close`，所以不必在响应和流对象上调用 `Close`，尽管这样做没有坏处。 例如：
 
     ```csharp
     response.Close();

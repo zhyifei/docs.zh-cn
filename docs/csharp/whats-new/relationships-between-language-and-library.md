@@ -3,11 +3,11 @@ title: 语言功能与库类型之间的关系 |Microsoft 文档
 description: 语言功能通常依赖于要实现的库类型。 了解该关系。
 ms.date: 07/20/2017
 ms.openlocfilehash: dfae7972af0a251a92700d7d33bd6f971eb1870e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360078"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61706021"
 ---
 # <a name="relationships-between-language-features-and-library-types"></a>语言功能与库类型之间的关系
 

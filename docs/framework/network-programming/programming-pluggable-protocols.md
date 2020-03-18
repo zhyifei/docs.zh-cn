@@ -16,24 +16,24 @@ helpviewer_keywords:
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
 ms.openlocfilehash: 94dfedd317782b9e518df02c84d9af55b1ef2b69
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047391"
 ---
 # <a name="programming-pluggable-protocols"></a>对可插入协议进行编程
 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 抽象类为可插入协议提供了基础。 通过从 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 派生协议特定的类，应用程序可以请求 Internet 资源中的数据并读取响应而无需指定所使用的协议。  
   
- 在创建协议特定的 <xref:System.Net.WebRequest> 前，必须首先注册其 Create 方法。 使用<xref:System.Net.WebRequest> 的静态 <xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29> 方法注册一个 <xref:System.Net.WebRequest> 子代来处理一组请求（包括对某一特定 Internet 方案的请求、对某个方案和服务器的请求或对某个方案、服务器和路径的请求）。  
+ 在创建协议特定的 <xref:System.Net.WebRequest> 前，必须首先注册其 Create 方法。 使用<xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29> 的静态 <xref:System.Net.WebRequest> 方法注册一个 <xref:System.Net.WebRequest> 子代来处理一组请求（包括对某一特定 Internet 方案的请求、对某个方案和服务器的请求或对某个方案、服务器和路径的请求）。  
   
  在大多数情况下，可以使用 <xref:System.Net.WebRequest> 类的方法和属性发送和接收数据。 但是，如果需要访问协议特定的属性，则可以将 <xref:System.Net.WebRequest> 的类型转换成特定的派生类实例。  
   
  要利用可插入协议，<xref:System.Net.WebRequest> 子代必须提供一个默认的“请求并响应”事务，该事务不要求设置协议特定的属性。 例如 <xref:System.Net.HttpWebRequest> 类实现了 HTTP 的 <xref:System.Net.WebRequest> 类，默认情况下提供 `GET` 请求并返回包含从 Web 服务器返回的流的 <xref:System.Net.HttpWebResponse>。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [从 WebRequest 派生](deriving-from-webrequest.md)
 - [从 WebResponse 派生](deriving-from-webresponse.md)
 - [.NET Framework 中的网络编程](index.md)
-- [如何：转换 WebRequest 以访问协议特定属性](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+- [如何：转换 WebRequest 以访问协议特定的属性](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

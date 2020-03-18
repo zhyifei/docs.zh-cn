@@ -4,12 +4,12 @@ description: 此教程将介绍如何使用 LINQ 生成序列、编写用于 LIN
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ece001e82c0aa44a91999bea78d2fd695ff9362b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345614"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240010"
 ---
 # <a name="work-with-language-integrated-query-linq"></a>使用语言集成查询 (LINQ)
 
@@ -29,7 +29,7 @@ ms.locfileid: "75345614"
 
 在此教程中，将执行多步操作。 执行每步操作后，都可以运行应用程序，并查看进度。 还可参阅 dotnet/samples GitHub 存储库中的[完整示例](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core 下载](https://dotnet.microsoft.com/download)页。 可以在 Windows、Ubuntu Linux、OS X 或 Docker 容器中运行此应用程序。 必须安装常用的代码编辑器。 在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。 不过，你可以使用习惯使用的任意工具。
 
@@ -41,7 +41,7 @@ ms.locfileid: "75345614"
 
 ## <a name="create-the-data-set"></a>创建数据集
 
-开始前，请确保下列行在 `dotnet new console` 生成的 `Program.cs` 文件的顶部：
+开始前，请确保下列行在 `Program.cs` 生成的 `dotnet new console` 文件的顶部：
 
 ```csharp
 // Program.cs
@@ -145,7 +145,7 @@ public static void Main(string[] args)
 
 需要编写几种特殊的方法，我们称之为<xref:System.Collections.Generic.IEnumerable%601>扩展方法[，来添加一些功能，以便于与 LINQ 查询返回的 ](../programming-guide/classes-and-structs/extension-methods.md) 交互。 简而言之，扩展方法是具有特殊用途的静态方法，借助它无需修改你想要为其添加功能的已有原始类型，即可向其添加功能。 
 
-向程序添加新的静态类文件（名称为 `Extensions.cs`），以用于存放扩展方法，然后开始生成第一个扩展方法： 
+向程序添加新的静态类文件（名称为 *），以用于存放扩展方法，然后开始生成第一个扩展方法：* `Extensions.cs`
 
 ```csharp
 // Extensions.cs
@@ -173,13 +173,13 @@ public static IEnumerable<T> InterleaveSequenceWith<T> (this IEnumerable<T> firs
 
 可以发现，在扩展方法的第一个自变量中添加了 `this` 修饰符。 也就是说，调用扩展方法，就像是第一个自变量类型的成员方法一样。 此方法声明还遵循标准惯用做法，其中输入和输出类型为 `IEnumerable<T>`。 遵循这种做法，可以将 LINQ 方法链在一起，从而执行更复杂的查询。
 
-正常情况下，将扑克牌分为两半后，需要将这两半合并在一起。 在代码中，这意味着一次性地枚举通过 <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 获得的两个序列，  `interleaving` 元素，并创建一个序列：即现在洗牌后的扑克牌。 必须了解 <xref:System.Collections.Generic.IEnumerable%601> 的工作原理，才能编写处理两个序列的 LINQ 方法。
+正常情况下，将扑克牌分为两半后，需要将这两半合并在一起。 在代码中，这意味着一次性地枚举通过 <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 获得的两个序列， *`interleaving`* 元素，并创建一个序列：即现在洗牌后的扑克牌。 必须了解 <xref:System.Collections.Generic.IEnumerable%601> 的工作原理，才能编写处理两个序列的 LINQ 方法。
 
 <xref:System.Collections.Generic.IEnumerable%601> 接口有一个方法 (<xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>)。 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 返回的对象包含用于移动到下一个元素的方法，以及用于检索序列中当前元素的属性。 将使用这两个成员来枚举集合并返回元素。 由于此交错方法是迭代器方法，因此将使用上面的 `yield return` 语法，而不用生成并返回集合。
 
 下面是此方法的实现代码：
 
-[!CODE-csharp[InterleaveSequenceWith](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
+[!CODE-csharp[InterleaveSequenceWith](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
 
 至此，你已编写好这个方法，请回到 `Main` 方法，并进行一次洗牌：
 
@@ -213,7 +213,7 @@ public static void Main(string[] args)
 
 编写用于确定两个序列是否相等的方法应该很简单。 此方法的结构与你编写的洗牌方法类似。 不同之处在于，这一次将比较每个序列的匹配元素，而不是 `yield return` 每个元素。 枚举整个序列后，如果每个元素都一致，那么序列就是相同的：
 
-[!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
+[!CODE-csharp[SequenceEquals](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
 这反映了另一种 LINQ 惯用做法，即终端方法。 此类方法需要将序列（或在此示例中，为两个序列）用作输入，并返回一个标量值。 使用终端方法时，它们始终是 LINQ 查询方法链中最后的方法，因此其名称为“终端”。
 
@@ -267,7 +267,7 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 在 `Extensions.cs` 文件中输入或复制下面的方法。 此扩展方法会在项目目录中新建一个名称为 `debug.log` 的文件，并将当前正在执行的查询记录到日志文件中。 可以将此扩展方法追加到任何查询中，以标记查询已执行。
 
-[!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
+[!CODE-csharp[LogQuery](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
 你将看到 `File` 下显示红色波浪线，这表示它不存在。 它将不编译，因为编译器无法识别 `File`。 要解决此问题，请务必在 `Extensions.cs` 中第一行的下面添加以下代码行：
 
@@ -329,7 +329,7 @@ public static void Main(string[] args)
 
 可以提高此处的代码性能，以减少执行次数。 一个简单的修复方法是缓存构造扑克牌的原始 LINQ 查询的结果。  目前，每当 do-while 循环进行迭代时，需要反复执行查询，每次都要重新构造扑克牌并进行洗牌。 可以利用 LINQ 方法 <xref:System.Linq.Enumerable.ToArray%2A> 和 <xref:System.Linq.Enumerable.ToList%2A> 来缓存扑克牌；将这两个方法追加到查询时，它们将执行你已告知它们要执行的同种操作，而现在它们会将结果存储在数组或列表中，具体取决于选择调用的方法。 将 LINQ 方法 <xref:System.Linq.Enumerable.ToArray%2A> 追加到两个查询中，并再次运行程序：
 
-[!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
+[!CODE-csharp[Main](../../../samples/snippets/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
 现在向外洗牌下降到 30 次查询。 再次运行向内洗牌程序，改善情况类似：现在它执行 162 次查询。
 

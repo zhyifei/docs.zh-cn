@@ -3,10 +3,10 @@ title: 将容器作为 DevOps 协作的基础
 description: 了解容器在简化 DevOps 方面的关键作用。
 ms.date: 02/15/2019
 ms.openlocfilehash: 8258f4331212d92376d64fef318adcdff492f61f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73094504"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>将容器作为 DevOps 协作的基础

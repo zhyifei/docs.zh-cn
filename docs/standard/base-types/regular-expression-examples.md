@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
 ms.openlocfilehash: 788fa2a6793e14189def4c30a0baf0d4a5cf6b0a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73128098"
 ---
 # <a name="regular-expression-examples"></a>正则表达式示例
@@ -21,7 +21,7 @@ ms.locfileid: "73128098"
 > <xref:System.Web.RegularExpressions> 命名空间包含大量正则表达式对象，这些对象实现预定义的正则表达式模式，用于分析 HTML、XML 和 ASP.NET 文档中的字符串。 例如，<xref:System.Web.RegularExpressions.TagRegex> 类标识字符串中的开始标记，<xref:System.Web.RegularExpressions.CommentRegex> 类标识字符串中的 ASP.NET 注释。  
   
 ## <a name="in-this-section"></a>本节内容  
- [示例：扫描 HREF](../../../docs/standard/base-types/regular-expression-example-scanning-for-hrefs.md)  
+ [示例：扫描搜索 HREF](../../../docs/standard/base-types/regular-expression-example-scanning-for-hrefs.md)  
  收录了搜索输入字符串并打印输出所有 href="…" 值及其在字符串中位置的示例。  
   
  [示例：更改日期格式](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)  
@@ -33,10 +33,10 @@ ms.locfileid: "73128098"
  [如何：从字符串中剥离无效字符](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)  
  收录了从字符串中剥离无效的非字母数字字符的示例。  
   
- [如何：确认字符串是有效的电子邮件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
+ [如何：确认字符串是否是有效的电子邮件地址格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
  提供验证一个字符串是否为有效的电子邮件格式的示例。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Text.RegularExpressions>  
  提供了 .NET System.Text.RegularExpressions  命名空间的类库参考信息。  
   

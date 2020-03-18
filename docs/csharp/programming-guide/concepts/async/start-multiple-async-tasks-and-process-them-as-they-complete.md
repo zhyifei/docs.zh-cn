@@ -3,10 +3,10 @@ title: 在异步任务完成时对其进行处理
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
 ms.openlocfilehash: b618fd6bf80551231d2b285fd0e8aef688d00d93
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71736727"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>启动多个异步任务并在其完成时进行处理 (C#)
@@ -20,7 +20,7 @@ ms.locfileid: "71736727"
 
 ## <a name="download-an-example-solution"></a>下载示例解决方案
 
-若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）。
+若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序），然后遵循以下步骤。
 
 > [!TIP]
 > 如果不想下载项目，可在本主题末尾处查看 MainWindow.xaml.cs  文件。
@@ -29,7 +29,7 @@ ms.locfileid: "71736727"
 
 2. 在菜单栏上，依次选择  “文件” >   “打开” >   “项目/解决方案”。
 
-3. 在“打开项目”  对话框中，打开保存已下载的示例代码的文件夹，然后打开 AsyncFineTuningCS  /AsyncFineTuningVB  的解决方案 (.sln  ) 文件。
+3. 在“打开项目”  对话框中，打开保存已下载的示例代码的文件夹，然后打开 AsyncFineTuningCS  *AsyncFineTuningVB*/ 的解决方案 (.sln  ) 文件。
 
 4. 在“解决方案资源管理器”中，打开“ProcessTasksAsTheyFinish”项目的快捷菜单，选择“设为启动项目”。   
 
@@ -87,7 +87,7 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
 
 下列代码是示例的 MainWindow.xaml.cs  文件的完整文本。 对添加到此示例的元素进行了星号标记。 另请注意，必须为 <xref:System.Net.Http> 添加引用。
 
-可以从 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）下载这些项目。
+可以从 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）下载这些项目。
 
 ```csharp
 using System;
@@ -225,9 +225,9 @@ namespace ProcessTasksAsTheyFinish
 // Downloads complete.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [微调异步应用程序 (C#)](fine-tuning-your-async-application.md)
 - [使用 Async 和 Await 的异步编程 (C#)](index.md)
-- [异步示例：微调应用程序](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）

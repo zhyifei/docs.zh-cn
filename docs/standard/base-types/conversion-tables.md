@@ -13,10 +13,10 @@ helpviewer_keywords:
 - data types [.NET Framework], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
 ms.openlocfilehash: aa1ef8397338af949bd147fd3252b2d9ecaf53ef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73103893"
 ---
 # <a name="type-conversion-tables-in-net"></a>.NET 中的类型转换表
@@ -28,12 +28,12 @@ ms.locfileid: "73103893"
 |类型|可在不丢失数据的情况下转换为|  
 |----------|-------------------------------------------|  
 |<xref:System.Byte>|<xref:System.UInt16>、<xref:System.Int16>、<xref:System.UInt32>、<xref:System.Int32>、<xref:System.UInt64>、<xref:System.Int64>、<xref:System.Single>、<xref:System.Double>、<xref:System.Decimal>|  
-|<xref:System.SByte>|<xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
+|<xref:System.SByte>|<xref:System.Int16>、 <xref:System.Int32>、 <xref:System.Int64>、 <xref:System.Single>、 <xref:System.Double>、 <xref:System.Decimal>|  
 |<xref:System.Int16>|<xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.UInt16>|<xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.Char>|<xref:System.UInt16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.Int32>|<xref:System.Int64>, <xref:System.Double>, <xref:System.Decimal>|  
-|<xref:System.UInt32>|<xref:System.Int64>, <xref:System.UInt64>, <xref:System.Double>, <xref:System.Decimal>|  
+|<xref:System.UInt32>|<xref:System.Int64>、<xref:System.UInt64>、<xref:System.Double>、<xref:System.Decimal>|  
 |<xref:System.Int64>|<xref:System.Decimal>|  
 |<xref:System.UInt64>|<xref:System.Decimal>|  
 |<xref:System.Single>|<xref:System.Double>|  
@@ -45,20 +45,20 @@ ms.locfileid: "73103893"
 |<xref:System.Int32>|<xref:System.Single>|  
 |<xref:System.UInt32>|<xref:System.Single>|  
 |<xref:System.Int64>|<xref:System.Single>， <xref:System.Double>|  
-|<xref:System.UInt64>|<xref:System.Single>, <xref:System.Double>|  
+|<xref:System.UInt64>|<xref:System.Single>， <xref:System.Double>|  
 |<xref:System.Decimal>|<xref:System.Single>， <xref:System.Double>|  
   
 ## <a name="narrowing-conversions"></a>收缩转换  
  目标为 <xref:System.Single> 或 <xref:System.Double> 的收缩转换可能会导致信息丢失。 如果目标类型无法正确表达源类型的大小，则结果类型将设置为常数 `PositiveInfinity` 或 `NegativeInfinity`。 `PositiveInfinity` 是正数除以 0 的结果，也在 <xref:System.Single> 或 <xref:System.Double> 的值大于 `MaxValue` 字段的值时返回。 `NegativeInfinity` 是负数除以 0 的结果，也在 <xref:System.Single> 或 <xref:System.Double> 的值小于 `MinValue` 字段的值时返回。 从 <xref:System.Double> 转换到 <xref:System.Single> 可能会导致 `PositiveInfinity` 或 `NegativeInfinity`。  
   
- 收缩转换还可能导致其他数据类型的信息丢失。 不过，如果要转换的类型值不在目标类型的 `MaxValue` 和 `MinValue` 字段指定的范围内，就会抛出 <xref:System.OverflowException>，并且运行时会检查转换，以确保目标类型的值不超出它的 `MaxValue` 或 `MinValue`。 始终以这种方式检查使用 <xref:System.Convert?displayProperty=nameWithType> 类执行的转换。  
+ 收缩转换还可能导致其他数据类型的信息丢失。 不过，如果要转换的类型值不在目标类型的 <xref:System.OverflowException> 和 `MaxValue` 字段指定的范围内，就会抛出 `MinValue`，并且运行时会检查转换，以确保目标类型的值不超出它的 `MaxValue` 或 `MinValue`。 始终以这种方式检查使用 <xref:System.Convert?displayProperty=nameWithType> 类执行的转换。  
   
- 下表列出了使用 <xref:System.Convert?displayProperty=nameWithType> 抛出 <xref:System.OverflowException> 的转换，或要转换类型的值不在生成类型的定义范围内的任何已检查转换。  
+ 下表列出了使用 <xref:System.OverflowException> 抛出 <xref:System.Convert?displayProperty=nameWithType> 的转换，或要转换类型的值不在生成类型的定义范围内的任何已检查转换。  
   
 |类型|可转换为|  
 |----------|-------------------------|  
 |<xref:System.Byte>|<xref:System.SByte>|  
-|<xref:System.SByte>|<xref:System.Byte>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>|  
+|<xref:System.SByte>|<xref:System.Byte>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>|  
 |<xref:System.Int16>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.UInt16>|  
 |<xref:System.UInt16>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>|  
 |<xref:System.Int32>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>,<xref:System.UInt32>|  
@@ -69,7 +69,7 @@ ms.locfileid: "73103893"
 |<xref:System.Single>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
 |<xref:System.Double>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Convert?displayProperty=nameWithType>
 - [.NET 中的类型转换](../../../docs/standard/base-types/type-conversion.md)

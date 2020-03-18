@@ -15,10 +15,10 @@ helpviewer_keywords:
 - DateTime object
 - time strings
 ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156538"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>分析 .NET 中的日期和时间字符串
@@ -42,7 +42,7 @@ ms.locfileid: "78156538"
 
 如果字符串中存在日期，则它必须包括月份、某日或某年。 如果存在时间，则它必须包括小时和分钟或 AM/PM 标志。
 
-你可以指定 <xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault> 常量，以覆盖这些默认值。 使用该常量时，任何缺少的年、月或天属性将设置为值 `1`。 使用 <xref:System.DateTime.Parse%2A> 的[最后一个示例](#styles-example)对此行为进行了演示。
+你可以指定 <xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault> 常量，以覆盖这些默认值。 使用该常量时，任何缺少的年、月或天属性将设置为值 `1`。 使用 [ 的](#styles-example)最后一个示例<xref:System.DateTime.Parse%2A>对此行为进行了演示。
 
 除了日期和时间组成部分，日期和时间的字符串表示形式还可以包含指示时间与协调世界时 (UTC) 相差多少的偏移量。 例如，字符串“2/14/2007 5:32:00 -7:00”定义比 UTC 早七个小时的时间。 如果在时间的字符串表示形式中省略了偏移，分析方法返回 <xref:System.DateTime> 对象，它的 <xref:System.DateTime.Kind%2A> 属性设置为 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>。 如果指定了偏移，分析方法返回 <xref:System.DateTime> 对象，它的 <xref:System.DateTime.Kind%2A> 属性设置为 <xref:System.DateTimeKind.Local?displayProperty=nameWithType>，且值调整为采用计算机的本地时区。 可以通过结合使用 <xref:System.Globalization.DateTimeStyles> 值和分析方法来修改此行为。
   
@@ -61,7 +61,7 @@ ms.locfileid: "78156538"
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
 
-你也可以显式定义分析字符串时将使用其格式设置约定的区域性。 指定 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 属性返回的一个标准 <xref:System.Globalization.DateTimeFormatInfo> 对象。 下面的示例使用格式提供程序将德语字符串分析为 <xref:System.DateTime>。 它创建了一个表示 `de-DE` 区域性的 <xref:System.Globalization.CultureInfo>。 `CultureInfo` 对象可以确保成功分析此特定的字符串。 这会排除处于 <xref:System.Threading.Thread.CurrentThread> 的 <xref:System.Threading.Thread.CurrentCulture> 中的任何设置。  
+你也可以显式定义分析字符串时将使用其格式设置约定的区域性。 指定 <xref:System.Globalization.DateTimeFormatInfo> 属性返回的一个标准 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 对象。 下面的示例使用格式提供程序将德语字符串分析为 <xref:System.DateTime>。 它创建了一个表示 <xref:System.Globalization.CultureInfo> 区域性的 `de-DE`。 `CultureInfo` 对象可以确保成功分析此特定的字符串。 这会排除处于 <xref:System.Threading.Thread.CurrentCulture> 的 <xref:System.Threading.Thread.CurrentThread> 中的任何设置。  
   
 [!code-csharp[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
 [!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#2)]
@@ -82,11 +82,11 @@ ms.locfileid: "78156538"
 [!code-csharp[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
 [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
 
-<xref:System.DateTime.Parse%2A> 和 <xref:System.DateTime.ParseExact%2A> 方法的每个重载还包含 <xref:System.IFormatProvider> 参数，用于提供有关字符串格式设置的区域性专用信息。 此 <xref:System.IFormatProvider> 对象为 <xref:System.Globalization.CultureInfo> 对象，表示标准区域性或 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 属性返回的 <xref:System.Globalization.DateTimeFormatInfo> 对象。  <xref:System.DateTime.ParseExact%2A> 还使用定义一个或多个自定义日期和时间格式的其他字符串或字符串数组参数。  
+<xref:System.DateTime.Parse%2A> 和 <xref:System.DateTime.ParseExact%2A> 方法的每个重载还包含 <xref:System.IFormatProvider> 参数，用于提供有关字符串格式设置的区域性专用信息。 此 <xref:System.IFormatProvider> 对象为 <xref:System.Globalization.CultureInfo> 对象，表示标准区域性或 <xref:System.Globalization.DateTimeFormatInfo> 属性返回的 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 对象。  <xref:System.DateTime.ParseExact%2A> 还使用定义一个或多个自定义日期和时间格式的其他字符串或字符串数组参数。  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [分析字符串](parsing-strings.md)
+- [Parsing Strings](parsing-strings.md)
 - [格式设置类型](formatting-types.md)
 - [.NET 中的类型转换](type-conversion.md)
 - [标准日期和时间格式](standard-date-and-time-format-strings.md)

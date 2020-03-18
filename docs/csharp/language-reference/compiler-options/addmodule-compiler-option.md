@@ -9,10 +9,10 @@ helpviewer_keywords:
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
 ms.openlocfilehash: 148a63c37cfbc4c60448adccde10947e91e22bb9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970178"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule（C# 编译器选项）
@@ -25,7 +25,7 @@ ms.locfileid: "70970178"
 ```  
   
 ## <a name="arguments"></a>自变量  
- `file`， `file2`  
+ `file`，`file2`  
  包含元数据的输出文件。 该文件不能包含程序集清单。 若要导入多个文件，请用逗号或分号将文件名隔开。  
   
 ## <a name="remarks"></a>备注  

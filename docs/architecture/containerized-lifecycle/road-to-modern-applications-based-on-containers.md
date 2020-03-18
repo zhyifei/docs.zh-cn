@@ -3,10 +3,10 @@ title: 基于容器的新式应用程序之路
 description: Docker、容器和微服务体系结构不是一个通用的解决方案，了解这一点很重要。 此处可以找到一些可帮助你做出决定的参考资料。
 ms.date: 11/23/2018
 ms.openlocfilehash: 0bc1adcd89c19b512032ee8fdf1a6e28cea96ee8
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72770705"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>基于容器的新式应用程序之路

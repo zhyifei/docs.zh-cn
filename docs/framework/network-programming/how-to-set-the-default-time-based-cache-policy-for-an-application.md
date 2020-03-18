@@ -10,10 +10,10 @@ helpviewer_keywords:
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
 ms.openlocfilehash: 0aaa26f67ef1ef191060e682690fa14de328b812
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048090"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>如何：为应用程序设置默认基于时间的缓存策略
@@ -62,7 +62,7 @@ Public Shared Sub SetDefaultTimeBasedPolicy2()
 End Sub  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [网络应用程序的缓存管理](cache-management-for-network-applications.md)
 - [缓存策略](cache-policy.md)

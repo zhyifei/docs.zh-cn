@@ -9,10 +9,10 @@ helpviewer_keywords:
 - parallel loops, how to speed up
 ms.assetid: c7a66677-cb59-4cbf-969a-d2e8fc61a6ce
 ms.openlocfilehash: 29d7fa8200ddd972c1a5c98ea6f30a7c8ff732e9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139749"
 ---
 # <a name="how-to-speed-up-small-loop-bodies"></a>如何：加快小型循环体的速度
@@ -24,7 +24,7 @@ ms.locfileid: "73139749"
   
  在循环执行最少量的工作时，此示例中演示的方法很有用。 随着工作变得更占用计算资源，通过默认分区程序，使用 <xref:System.Threading.Tasks.Parallel.For%2A> 或 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环，很有可能会获得相同或更好的性能。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [PLINQ 和 TPL 的自定义分区程序](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - background threads
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
 ms.openlocfilehash: 9e93f07b3b84264373db0317919b6ee519c8127c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138053"
 ---
 # <a name="foreground-and-background-threads"></a>前台和后台线程
@@ -30,7 +30,7 @@ ms.locfileid: "73138053"
   
  如果使用线程监视活动（如套接字连接），请将它的 <xref:System.Threading.Thread.IsBackground%2A> 属性设置为 `true`，以便线程不会阻止进程终止。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>
 - <xref:System.Threading.Thread>

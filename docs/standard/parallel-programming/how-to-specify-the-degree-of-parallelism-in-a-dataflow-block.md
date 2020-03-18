@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TPL dataflow library, specifying parallelism
 ms.assetid: e4088541-ee05-40db-95f5-147cfe62fde7
 ms.openlocfilehash: 50399d6cd32fe310089395ac8c660b08151ba808
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141651"
 ---
 # <a name="how-to-specify-the-degree-of-parallelism-in-a-dataflow-block"></a>如何：指定数据流块中的并行度
@@ -33,6 +33,6 @@ ms.locfileid: "73141651"
   
  由于 <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> 属性表示最大并行度，因此数据流块执行时的并行度可能小于指定的值。 为了满足功能需求或需要考虑可用系统资源不足的问题时，数据流块可以使用较小的并行度。 数据流块选择的并行度从不会大于您指定的值。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

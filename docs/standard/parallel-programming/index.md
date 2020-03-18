@@ -6,10 +6,10 @@ helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
 ms.openlocfilehash: ae129ef0cb2b331c1eb0220282f21fec6f6fb77d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73134147"
 ---
 # <a name="parallel-programming-in-net"></a>.NET 中的并行编程
@@ -35,7 +35,7 @@ ms.locfileid: "73134147"
 |[PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|简要概述 C# 和 Visual Basic 中的 Lambda 表达式，并演示如何在 PLINQ 和任务并行库中使用这些表达式。|
 |[其他阅读材料](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|收录了指向其他信息以及 .NET 中并行编程示例资源的链接。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [异步概述](../async.md)
 - [托管线程](../threading/index.md)

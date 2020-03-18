@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 806722ea9aec1c828786525e3155b7f624159ac1
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522654"
 ---
 ### <a name="identity-adddefaultui-method-overload-removed"></a>标识：已删除 AddDefaultUI 方法重载
@@ -18,7 +18,7 @@ ms.locfileid: "72522654"
 
 此更改是采用静态 Web 资产功能的结果。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 调用 <xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)?displayProperty=nameWithType> 而不是重载。 如果使用的是 Bootstrap 3，还应将以下行添加到项目文件中的 `<PropertyGroup>` 元素：
 

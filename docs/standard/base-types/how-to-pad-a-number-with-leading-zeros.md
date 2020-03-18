@@ -12,10 +12,10 @@ helpviewer_keywords:
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 ms.openlocfilehash: bc3c4b75c484274c214141d8fbfcf8ac592b0b99
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131980"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>如何：用前导零填充数字
@@ -28,7 +28,7 @@ ms.locfileid: "73131980"
 
 1. 确定是要将整数显示为十进制值还是十六进制值。
 
-    - 若要将整数显示为十进制值，则调用其 `ToString(String)` 方法，并传递字符串“Dn”作为 `format` 参数的值，其中 n 表示字符串的最小长度   。
+    - 若要将整数显示为十进制值，则调用其 `ToString(String)` 方法，并传递字符串“Dn”作为  *参数的值，其中 n 表示字符串的最小长度*`format`  。
 
     - 若要将整数显示为十六进制值，则调用其 `ToString(String)` 方法，并传递字符串“Xn  ”作为 format 参数的值，其中 n  表示字符串的最小长度。
 
@@ -83,7 +83,7 @@ ms.locfileid: "73131980"
 
     1. 如果它包括小数点符号，则确定小数点左侧的字符数。
 
-         -或-
+         或
 
          如果它不包括小数点符号，则确定字符串的长度。
 
@@ -100,8 +100,8 @@ ms.locfileid: "73131980"
 [!code-csharp[Formatting.HowTo.PadNumber#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.PadNumber/cs/Pad1.cs#4)]
 [!code-vb[Formatting.HowTo.PadNumber#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#4)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [复合格式设置](../../../docs/standard/base-types/composite-formatting.md)

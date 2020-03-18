@@ -1,5 +1,5 @@
 ---
-title: 如何：防止子任务附加到父任务
+title: 如何：防止子任务附加到其父任务
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - tasks, preventing attachments
 ms.assetid: c0fb85d4-9e80-4905-9f65-29acc54201c4
 ms.openlocfilehash: 265b6d06f17a1dfbee3f009feff1ee1645e62a46
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139263"
 ---
-# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>如何：防止子任务附加到父任务
+# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>如何：防止子任务附加到其父任务
 本文档演示如何阻止子任务附加到父任务。 在调用由第三方编写的也使用任务的组件时，阻止子任务附加到其父级是有用的。 例如，使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 选项创建 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 对象的第三方组件，如果长时间运行或引发未经处理的异常，可能会导致代码中出现问题。  
   
 ## <a name="example"></a>示例  
@@ -26,6 +26,6 @@ ms.locfileid: "73139263"
   
  因为父任务只有在所有子任务完成后才会完成，所以长时间运行的子任务会让整个应用程序执行得非常缓慢。 在此示例中，当应用程序使用默认选项创建父任务时，子任务必须在父任务完成之前完成。 当应用程序使用 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> 选项时，子任务未附加到父任务。 因此，应用程序可以在父任务完成之后且必须等待子任务完成之前执行其他工作。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [基于任务的异步编程](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 ms.openlocfilehash: dd9b7b8cb194353d0a1c285af10d54dc7366896e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73128957"
 ---
 # <a name="threading-objects-and-features"></a>线程处理对象和功能
@@ -30,7 +30,7 @@ ms.locfileid: "73128957"
 |[SpinLock](spinlock.md)|描述 <xref:System.Threading.SpinLock?displayProperty=nameWithType> 结构，它是某些低级别锁定方案的 <xref:System.Threading.Monitor?displayProperty=nameWithType> 类的轻型替代项。|
 |[SpinWait](spinwait.md)|描述 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 结构，它为基于调整的等待提供支持。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.WaitHandle?displayProperty=nameWithType>
@@ -38,6 +38,6 @@ ms.locfileid: "73128957"
 - <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
 - [使用线程和线程处理](using-threads-and-threading.md)
-- [Asynchronous File I/O](../io/asynchronous-file-i-o.md)
+- [异步文件 I/O](../io/asynchronous-file-i-o.md)
 - [并行编程](../parallel-programming/index.md)
 - [任务并行库 (TPL)](../parallel-programming/task-parallel-library-tpl.md)

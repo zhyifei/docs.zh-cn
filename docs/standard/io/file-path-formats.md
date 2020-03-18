@@ -10,10 +10,10 @@ helpviewer_keywords:
 - long paths
 - path formats, Windows
 ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628041"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系统中的文件路径格式
@@ -30,7 +30,7 @@ ms.locfileid: "77628041"
 
 如果以上三项都存在，则为绝对路径。 如未指定卷号或驱动器号，且目录名称的开头是[目录分隔符](<xref:System.IO.Path.DirectorySeparatorChar>)，则路径属于当前驱动器根路径上的相对路径。 否则路径相对于当前目录。 下表显示了一些可能出现的目录和文件路径。
 
-|路径  |描述  |
+|路径  |说明  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | C: 盘根路径上的绝对文件路径。 |
 | `\Program Files\Custom Utilities\StringFinder.exe` | 当前驱动器根路径上的绝对路径。 |
@@ -62,7 +62,7 @@ ms.locfileid: "77628041"
 
 以下是一些 UNC 路径的示例：
 
-|路径  |描述  |
+|路径  |说明  |
 | -- | -- |
 | `\\system07\C$\` | `system07` 上 C: 盘的根目录。 |
 | `\\Server2\Share\Test\Foo.txt` | \\\\Server2\\Share 卷的测试目录中的 Foo.txt 文件。|
@@ -95,7 +95,7 @@ DOS 设备路径由以下部分组成：
 
    设备路径说明符后的第一个 DOS 设备路径段标识了卷或驱动器。 （例如，`\\?\C:\` 和 `\\.\BootPartition\`。）
 
-   UNC 有个特定的链接，很自然地名为 `UNC`。 例如：
+   UNC 有个特定的链接，很自然地名为 `UNC`。 例如:
 
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`

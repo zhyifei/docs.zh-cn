@@ -11,10 +11,10 @@ helpviewer_keywords:
 - attributes [.NET Framework], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 ms.openlocfilehash: 14cd6fef80ff9ae3a9d78531785edab0da7cc6b9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73130917"
 ---
 # <a name="applying-attributes"></a>应用特性
@@ -42,7 +42,7 @@ ms.locfileid: "73130917"
  [!code-vb[Conceptual.Attributes.Usage#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source1.vb#3)]  
   
 ## <a name="applying-attributes-at-the-assembly-level"></a>在程序集级别应用特性  
- 如果要在程序集级别应用属性，请使用 **assembly`Assembly`（Visual Basic 中用** ）关键字。 下列代码显示在程序集级别应用的 **AssemblyTitleAttribute**。  
+ 如果要在程序集级别应用属性，请使用 **assembly**（Visual Basic 中用 `Assembly`）关键字。 下列代码显示在程序集级别应用的 **AssemblyTitleAttribute**。  
   
  [!code-cpp[Conceptual.Attributes.Usage#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source1.cpp#2)]
  [!code-csharp[Conceptual.Attributes.Usage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#2)]
@@ -50,7 +50,7 @@ ms.locfileid: "73130917"
   
  应用此特性时，字符串 `"My Assembly"` 将被放置在文件元数据部分的程序集清单中。 可通过后列方法查看特性：使用 [MSIL 反汇编程序 (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)，或创建一个自定义程序来检索特性。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [特性](../../../docs/standard/attributes/index.md)
 - [检索存储在特性中的信息](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)

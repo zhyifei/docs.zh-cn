@@ -11,10 +11,10 @@ helpviewer_keywords:
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
 ms.openlocfilehash: 2abac1ccf45fc9c9c28e27c132e72fe483a24d75
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73122220"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>如何：在数据流块中指定任务计划程序
@@ -26,7 +26,7 @@ ms.locfileid: "73122220"
   
 1. 创建一个 Visual C# 或 Visual Basic“Windows 窗体应用程序”项目  。 在以下步骤中，该项目命名为 `WriterReadersWinForms`。  
   
-2. 在主窗体的窗体设计器中，Form1.cs（对于 Visual Basic 则为 Form1.vb）添加了四个 <xref:System.Windows.Forms.CheckBox> 控件。 将 `checkBox1`、`checkBox2`、`checkBox3`、`checkBox4` 的 <xref:System.Windows.Forms.Control.Text%2A> 属性分别设置为“读取器 1”  、“读取器 2”  、“读取器 3”  和“编写器”  。 将每个控件的 <xref:System.Windows.Forms.Control.Enabled%2A> 属性设置为 `False`。  
+2. 在主窗体的窗体设计器中，Form1.cs（对于 Visual Basic 则为 Form1.vb）添加了四个 <xref:System.Windows.Forms.CheckBox> 控件。 将 <xref:System.Windows.Forms.Control.Text%2A>、 **、** 、`checkBox1` 的  **属性分别设置为“读取器 1”** `checkBox2`、“读取器 2”  、“读取器 3”`checkBox3`**和“编写器”** `checkBox4`。 将每个控件的 <xref:System.Windows.Forms.Control.Enabled%2A> 属性设置为 `False`。  
   
 3. 在窗体上添加一个 <xref:System.Windows.Forms.Timer> 控件。 将 <xref:System.Windows.Forms.Timer.Interval%2A> 属性设置为 `2500`。  
   
@@ -79,6 +79,6 @@ ms.locfileid: "73122220"
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#100)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

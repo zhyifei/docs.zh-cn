@@ -22,16 +22,16 @@ helpviewer_keywords:
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
 ms.openlocfilehash: ee4dc87383153ae4e8df0a3bed7cce5220e65405
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048635"
 ---
 # <a name="configuring-internet-applications"></a>配置 Internet 应用程序
 [\<System.Net > 元素（网络设置）](../configure-apps/file-schema/network/system-net-element-network-settings.md)配置元素包含应用程序的网络配置信息。 使用 [\<system.Net> 元素（网络设置）](../configure-apps/file-schema/network/system-net-element-network-settings.md)元素，可以设置代理服务器，设置连接管理参数，包括自定义应用程序内的身份验证和请求模块。  
   
- [\<defaultProxy>元素（网络设置）](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md)元素定义 `GlobalProxySelection` 类返回的代理服务器。 任何没有自身 <xref:System.Net.HttpWebRequest.Proxy%2A> 属性的 <xref:System.Net.HttpWebRequest> 都设置为使用默认代理的特定值。 除了设置代理地址外，还可以创建不使用代理的服务器地址列表，并指示不应将代理用于本地地址。  
+ [\<defaultProxy>元素（网络设置）](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md)元素定义 `GlobalProxySelection` 类返回的代理服务器。 任何没有自身 <xref:System.Net.HttpWebRequest> 属性的 <xref:System.Net.HttpWebRequest.Proxy%2A> 都设置为使用默认代理的特定值。 除了设置代理地址外，还可以创建不使用代理的服务器地址列表，并指示不应将代理用于本地地址。  
   
  请注意，Microsoft Internet Explorer 设置与配置设置相结合，并且后者具有优先级。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "71048635"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Framework 中的网络编程](index.md)
 - [网络设置架构](../configure-apps/file-schema/network/index.md)

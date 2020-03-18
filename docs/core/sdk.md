@@ -4,10 +4,10 @@ description: 查看有关 .NET Core SDK 的信息，其是一组用于创建 .NE
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
 ms.openlocfilehash: c2723e0e28c889f91f79ea3c0b26aa38f69fb41c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157461"
 ---
 # <a name="net-core-sdk-overview"></a>.NET Core SDK 概述
@@ -31,7 +31,7 @@ ms.locfileid: "78157461"
 
 默认情况下，SDK 以“并排”(SxS) 方式安装，这意味着多个版本可以随时在一台计算机上共存。 [选择要使用的 .NET Core 版本](versions/selection.md)一文中详细说明了如何在运行 CLI 命令时选择版本。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Core CLI 概述](tools/index.md)
 - [.NET Core 版本控制概述](versions/index.md)

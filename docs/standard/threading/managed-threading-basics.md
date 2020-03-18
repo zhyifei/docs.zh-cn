@@ -9,10 +9,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 ms.openlocfilehash: bec769043ab630b37609bed12302ceff5b90474a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139232"
 ---
 # <a name="managed-threading-basics"></a>托管线程处理基本知识
@@ -44,7 +44,7 @@ ms.locfileid: "73139232"
  [线程本地存储：线程相关的静态字段和数据槽](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  介绍了线程相对存储机制。  
   
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
 
  <xref:System.Threading.Thread>  
  提供**线程**类的参考文档，无论该类是来自托管代码还是在托管应用程序中创建的，它都表示一个托管线程。  

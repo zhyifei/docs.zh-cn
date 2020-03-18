@@ -2,18 +2,18 @@
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
 ms.openlocfilehash: a3a82e33d7259ec56ec3e907bc3d4d9f8a01167d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589303"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61668713"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
 确定如何使用自定义特性类。 <xref:System.AttributeUsageAttribute> 是应用到自定义特性定义的特性。 `AttributeUsage` 特性帮助控制：
 
 - 可能应用到的具体程序元素特性。 除非使用限制，否则特性可能应用到以下任意程序元素：
-  - 程序集
+  - 程序集 (assembly)
   - name
   - Field — 字段
   - Event — 事件
@@ -79,7 +79,7 @@ ThirdAttribute
 SecondAttribute
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>

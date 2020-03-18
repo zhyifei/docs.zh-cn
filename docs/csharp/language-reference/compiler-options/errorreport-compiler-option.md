@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
 ms.openlocfilehash: 52b58aac5e82d4228dfda9c4d77c1d1c5de3e0cd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253884"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport（C# 编译器选项）
@@ -27,7 +27,7 @@ ms.locfileid: "70253884"
 -errorreport:{ none | prompt | queue | send }
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  **none**  
  不收集有关内部编译器错误的报告，或不向 Microsoft 发送报告。
 
@@ -56,6 +56,6 @@ ms.locfileid: "70253884"
 
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](./index.md)

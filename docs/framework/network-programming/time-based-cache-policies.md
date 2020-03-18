@@ -18,14 +18,14 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
 ms.openlocfilehash: 0edde8e716d5ce3b1444e994234def5835341475
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047127"
 ---
 # <a name="time-based-cache-policies"></a>基于时间的缓存策略
-基于时间的缓存策略使用检索资源的时间、随资源返回的标头和当前时间来定义缓存条目的新鲜度。 设置基于时间的缓存策略时，可使用 <xref:System.Net.Cache.HttpRequestCacheLevel.Default> 基于时间的策略，也可创建自定义的基于时间的策略。 当对使用超文本传输协议 (HTTP) 获得的资源使用默认的基于时间的策略时，由缓存响应中包含的标头以及 RFC 2616 第 13 和 14 节（可在 [Internet 工程任务组 (IETF)](https://www.ietf.org/) 网站上找到）中指定的行为来确定精确的缓存行为。 如需深入了解如何为 HTTP 资源设置默认基于时间的策略的代码示例，请参阅[如何：为应用程序设置默认基于时间的缓存策略](how-to-set-the-default-time-based-cache-policy-for-an-application.md)。 有关演示如何创建和使用缓存策略的代码示例，请参阅[在网络应用程序中配置缓存](configuring-caching-in-network-applications.md)。  
+基于时间的缓存策略使用检索资源的时间、随资源返回的标头和当前时间来定义缓存条目的新鲜度。 设置基于时间的缓存策略时，可使用 <xref:System.Net.Cache.HttpRequestCacheLevel.Default> 基于时间的策略，也可创建自定义的基于时间的策略。 当对使用超文本传输协议 (HTTP) 获得的资源使用默认的基于时间的策略时，由缓存响应中包含的标头以及 RFC 2616 第 13 和 14 节（可在 [Internet 工程任务组 (IETF)](https://www.ietf.org/) 网站上找到）中指定的行为来确定精确的缓存行为。 有关演示如何为 HTTP 资源设置默认的基于时间策略的代码示例，请参阅[如何：为应用程序设置默认基于时间的缓存策略](how-to-set-the-default-time-based-cache-policy-for-an-application.md)。 有关演示如何创建和使用缓存策略的代码示例，请参阅[在网络应用程序中配置缓存](configuring-caching-in-network-applications.md)。  
   
 ## <a name="criteria-to-determine-freshness-of-cached-entries"></a>用于确定已缓存条目新鲜度的条件  
  要自定义基于时间的缓存策略，可指定使用以下一个或多个条件来确定已缓存条目的新鲜度：  
@@ -61,7 +61,7 @@ ms.locfileid: "71047127"
   
 - [缓存策略交互 — 最长使用时间和最低新鲜度](cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [网络应用程序的缓存管理](cache-management-for-network-applications.md)
 - [缓存策略](cache-policy.md)

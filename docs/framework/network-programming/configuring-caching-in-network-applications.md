@@ -5,10 +5,10 @@ helpviewer_keywords:
 - cache [.NET Framework], configuring
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
 ms.openlocfilehash: d8ff64e4ab42283732d7f632efab6b4e9afad0a0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048705"
 ---
 # <a name="configuring-caching-in-network-applications"></a>配置网络应用程序中的缓存
@@ -24,7 +24,7 @@ ms.locfileid: "71048705"
   
  也可使用应用程序或计算机配置文件配置缓存策略。 有关详细信息，请参阅 &#124; [\<requestCaching> 元素（网络设置）](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [网络应用程序的缓存管理](cache-management-for-network-applications.md)
 - [缓存策略](cache-policy.md)

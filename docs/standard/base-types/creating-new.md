@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73103818"
 ---
 # <a name="creating-new-strings-in-net"></a>新建 .NET 中的字符串
@@ -32,7 +32,7 @@ ms.locfileid: "73103818"
 ## <a name="methods-that-return-strings"></a>返回字符串的方法  
  下表列出了返回新字符串对象的几个有用方法。  
   
-|方法名称|使用|  
+|方法名称|用途|  
 |-----------------|---------|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|从一组输入对象生成格式化的字符串。|  
 |<xref:System.String.Concat%2A?displayProperty=nameWithType>|从两个或更多个字符串生成字符串。|  
@@ -56,7 +56,7 @@ ms.locfileid: "73103818"
  [!code-csharp[Strings.Creating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#2)]
  [!code-vb[Strings.Creating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#2)]  
   
-### <a name="join"></a>联接  
+### <a name="join"></a>Join  
  String.Join  方法通过字符串数组和分隔符字符串新建字符串。 如果想要将多个字符串连接在一起，构成一个可能由逗号分隔的列表，则此方法非常有用。  
   
  下面的示例使用空格来连接字符串数组。  
@@ -78,7 +78,7 @@ ms.locfileid: "73103818"
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [基本字符串操作](../../../docs/standard/base-types/basic-string-operations.md)
 - [复合格式设置](../../../docs/standard/base-types/composite-formatting.md)

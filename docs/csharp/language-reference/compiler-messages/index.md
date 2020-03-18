@@ -7,10 +7,10 @@ helpviewer_keywords:
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
 ms.openlocfilehash: af1ec49e6c7eb94c4e324b947e8ead8149d0a997
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "72771880"
 ---
 # <a name="c-compiler-errors"></a>C# 编译器错误
@@ -29,7 +29,7 @@ ms.locfileid: "72771880"
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](../compiler-options/index.md)
 - [很抱歉，我们没有关于此 C# 错误的具体信息](../../misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)

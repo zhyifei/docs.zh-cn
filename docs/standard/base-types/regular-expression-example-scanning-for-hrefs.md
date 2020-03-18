@@ -14,10 +14,10 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 ms.openlocfilehash: d8546980dd0cf58ca7c095750f2749d5a6bc7723
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73084216"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>正则表达式示例：扫描 HREF
@@ -36,7 +36,7 @@ ms.locfileid: "73084216"
   
  正则表达式模式 `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` 的含义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`href`|匹配文本字符串“href”。 匹配不区分大小写。|  
 |`\s*`|匹配零个或多个空白字符。|  

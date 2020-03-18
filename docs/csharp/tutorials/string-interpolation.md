@@ -5,10 +5,10 @@ author: pkulikov
 ms.technology: csharp-fundamentals
 ms.date: 09/02/2019
 ms.openlocfilehash: b901ae661ebd4af625d9f3c999b0eb50dda1990d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73039214"
 ---
 # <a name="string-interpolation-in-c"></a>C\# 中的字符串内插
@@ -45,7 +45,7 @@ ms.locfileid: "73039214"
 
 [!code-csharp-interactive[format string example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#2)]
 
-有关详细信息，请参阅[复合格式设置](../../standard/base-types/composite-formatting.md)主题的[格式字符串组件](../../standard/base-types/composite-formatting.md#format-string-component)章节。 该部分提供主题链接，这些主题介绍 .NET 基类型支持的标准和自定义格式字符串。
+有关详细信息，请参阅[复合格式设置](../../standard/base-types/composite-formatting.md#format-string-component)主题的[格式字符串组件](../../standard/base-types/composite-formatting.md)章节。 该部分提供主题链接，这些主题介绍 .NET 基类型支持的标准和自定义格式字符串。
 
 ## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolation-expression"></a>如何控制设置了格式的内插表达式的字段宽度和对齐方式
 
@@ -69,7 +69,7 @@ ms.locfileid: "73039214"
 
 如示例输出所示，如果已设置格式的表达式结果长度超出指定字段宽度，则忽略对齐方式值  。
 
-有关详细信息，请参阅[复合格式设置](../../standard/base-types/composite-formatting.md)主题的[对齐方式组件](../../standard/base-types/composite-formatting.md#alignment-component)部分。
+有关详细信息，请参阅[复合格式设置](../../standard/base-types/composite-formatting.md#alignment-component)主题的[对齐方式组件](../../standard/base-types/composite-formatting.md)部分。
 
 ## <a name="how-to-use-escape-sequences-in-an-interpolated-string"></a>如何在内插字符串中使用转义序列
 
@@ -77,7 +77,7 @@ ms.locfileid: "73039214"
 
 若要逐字解释转义序列，可使用[逐字](../language-reference/tokens/verbatim.md)字符串文本。 内插逐字字符串以 `$` 字符开头，后跟 `@` 字符。 从 C# 8.0 开始，可以按任意顺序使用 `$` 和 `@` 标记：`$@"..."` 和 `@$"..."` 均为有效的内插逐字字符串。
 
-若要在结果字符串中包含大括号 "{" 或 "}"，请使用两个大括号 "{{" 或 "}}"。 有关详细信息，请参阅[复合格式设置](../../standard/base-types/composite-formatting.md)主题的[转义括号](../../standard/base-types/composite-formatting.md#escaping-braces)部分。
+若要在结果字符串中包含大括号 "{" 或 "}"，请使用两个大括号 "{{" 或 "}}"。 有关详细信息，请参阅[复合格式设置](../../standard/base-types/composite-formatting.md#escaping-braces)主题的[转义括号](../../standard/base-types/composite-formatting.md)部分。
 
 以下示例演示如何在结果字符串中包含大括号并构造逐字内插字符串：
 
@@ -107,7 +107,7 @@ ms.locfileid: "73039214"
 
 本教程介绍字符串插值用法的常见方案。 有关字符串插值的详细信息，请参阅[字符串插值](../language-reference/tokens/interpolated.md)主题。 有关 .NET 中设置类型格式的详细信息，请参阅[设置 .NET 中类型的格式](../../standard/base-types/formatting-types.md)和[复合格式设置](../../standard/base-types/composite-formatting.md)主题。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.String.Format%2A?displayProperty=nameWithType>
 - <xref:System.FormattableString?displayProperty=nameWithType>

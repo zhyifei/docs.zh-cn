@@ -3,10 +3,10 @@ title: 演练和技术入门概述
 description: 通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序 | 演练和技术入门概述
 ms.date: 04/28/2018
 ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69660887"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>演练和技术入门概述
@@ -50,7 +50,7 @@ eShopModernizing GitHub 存储库 wiki 中提供了完整的技术演练：
 
 本演练的主要目的只是熟悉这些应用及其代码和配置。 可以配置应用，使其生成并使用模拟数据（而无需使用 SQL 数据库）进行测试。 此可选配置以分离的方式基于依赖项注入。
 
-### <a name="scenario-1-aspnet-web-apps"></a>方案 1：ASP.NET Web 应用
+### <a name="scenario-1-aspnet-web-apps"></a>应用场景 1：ASP.NET Web 应用
 
 下图显示了原始旧版 ASP.NET Web 应用程序的简单方案。
 
@@ -64,7 +64,7 @@ eShopModernizing GitHub 存储库 wiki 中提供了完整的技术演练：
 
 ASP.NET 4.x 或早期版本中的依赖项（对于 MVC 或 Web Forms）意味着这些应用程序不会在 .NET Core 上运行，除非使用 ASP.NET Core MVC 来完全重写代码。
 
-### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>方案 2：WCF 服务和 WinForms 客户端应用（3 层应用）
+### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>应用场景 2：WCF 服务和 WinForms 客户端应用（3 层应用）
 
 下图显示了原始 3 层旧版应用程序的简单方案。
 
@@ -99,13 +99,13 @@ ASP.NET 4.x 或早期版本中的依赖项（对于 MVC 或 Web Forms）意味�
 
 本演练重点介绍 Visual Studio 2017 Tools for Docker 方法，但另外两种方法与使用 Dockerfile 非常相似。
 
-### <a name="scenario-1-containerized-aspnet-web-apps"></a>方案 1：容器化 ASP.NET Web 应用
+### <a name="scenario-1-containerized-aspnet-web-apps"></a>应用场景 1：容器化 ASP.NET Web 应用
 
 下图显示了容器化 eShop 旧版 Web 应用应用程序的方案。
 
 ![开发环境中的容器化 ASP.NET 应用程序的简化体系结构关系图](./media/image5-3.png)
 
-### <a name="scenario-2-containerized-wcf-service"></a>方案 2：容器化 WCF 服务
+### <a name="scenario-2-containerized-wcf-service"></a>应用场景 2：容器化 WCF 服务
 
 下图显示了具有容器化 WCF 服务的 3 层应用的方案。
 

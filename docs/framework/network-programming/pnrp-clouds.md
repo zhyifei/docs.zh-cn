@@ -3,10 +3,10 @@ title: PNRP 云
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
 ms.openlocfilehash: dd27e61fe1f648dcaf4ee4dd5f5119d33913c63a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047375"
 ---
 # <a name="pnrp-clouds"></a>PNRP 云
@@ -31,7 +31,7 @@ PNRP“云”表示通过网络相互通信的一组节点。 术语“云”与
   
  创建或获取 Cloud 实例后，便可为其注册对等名称以创建已知对等网格。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Net.PeerToPeer.Cloud>
 - [对等名称解析协议](peer-name-resolution-protocol.md)

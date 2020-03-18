@@ -6,10 +6,10 @@ helpviewer_keywords:
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 ms.openlocfilehash: 42d0e2d85517d4a8fb443db9b63e6b893267caca
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121585"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>并行执行的组件的创建指南
@@ -60,7 +60,7 @@ ms.locfileid: "73121585"
   
  仅当文件版本号更新时，[全局程序集缓存工具 (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 才允许用户替换程序集。 安装程序在安装时通常不会覆盖程序集，除非该程序集版本号较大。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [并行执行](side-by-side-execution.md)
 - [如何：启用和禁用自动绑定重定向](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

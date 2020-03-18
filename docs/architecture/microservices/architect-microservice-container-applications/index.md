@@ -3,10 +3,10 @@ title: 构建基于微服务的容器化应用程序
 description: 构建基于微服务的容器化应用程序并不简单，不应掉以轻心。 了解本章的核心概念。
 ms.date: 09/20/2018
 ms.openlocfilehash: aff30c907f1140b94dbcae330ed7cb633b0a744b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295017"
 ---
 # <a name="architecting-container-and-microservice-based-applications"></a>构建基于微服务的容器化应用程序

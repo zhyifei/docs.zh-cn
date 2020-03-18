@@ -3,15 +3,15 @@ title: 运行、管理和监视 Docker 生产环境
 description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
 ms.date: 02/15/2019
 ms.openlocfilehash: 900c361d5604f7fdaf41613287aa48c5381a9af7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295029"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>运行、管理和监视 Docker 生产环境
 
-愿景：企业应用程序需要具有高可用性和高可伸缩性；IT 操作需要能够管理和监视环境及应用程序本身。
+远景：企业应用程序需要具有高可用性和高可伸缩性；IT 操作需要能够管理和监视环境及应用程序本身。
 
 容器化 Docker 应用程序生命周期的最后一个关键点在于，如何能够在可缩放的高可用性 (HA) 生产环境中运行、管理和监视应用程序。
 

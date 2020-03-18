@@ -21,10 +21,10 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 ms.openlocfilehash: ac034ff37b0b39f41d6f58381286706f9a9ac602
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121703"
 ---
 # <a name="net-regular-expressions"></a>.NET 正则表达式
@@ -109,7 +109,7 @@ ms.locfileid: "73121703"
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|说明|  
+|Title|描述|  
 |-----------|-----------------|  
 |[正则表达式语言 - 快速参考](regular-expression-language-quick-reference.md)|提供有关可用来定义正则表达式的字符集、运算符和构造的信息。|  
 |[正则表达式对象模型](the-regular-expression-object-model.md)|提供演示如何使用正则表达式类的信息和代码示例。|  

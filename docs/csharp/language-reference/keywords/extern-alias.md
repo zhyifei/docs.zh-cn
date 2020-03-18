@@ -9,10 +9,10 @@ helpviewer_keywords:
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
 ms.openlocfilehash: 86202333484933d7449b0c4d8c5a3f1a63cd7775
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713550"
 ---
 # <a name="extern-alias-c-reference"></a>外部别名（C# 参考）
@@ -27,7 +27,7 @@ ms.locfileid: "75713550"
   
  `/r:GridV2=grid20.dll`  
   
- 这将创建外部别名 `GridV1` 和 `GridV2`。 若要从程序中使用这些别名，请通过使用 `extern` 关键字引用它们。 例如：  
+ 这将创建外部别名 `GridV1` 和 `GridV2`。 若要从程序中使用这些别名，请通过使用 `extern` 关键字引用它们。 例如:  
   
  `extern alias GridV1;`  
   
@@ -40,10 +40,10 @@ ms.locfileid: "75713550"
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](./index.md)
-- [::运算符](../operators/namespace-alias-qualifier.md)
+- [:: 运算符](../operators/namespace-alias-qualifier.md)
 - [-reference（C# 编译器选项）](../compiler-options/reference-compiler-option.md)

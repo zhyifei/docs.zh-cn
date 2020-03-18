@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
 ms.openlocfilehash: bbabc84c144e5b3415c19f346b890782e251662c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715056"
 ---
 # <a name="arrays-c-programming-guide"></a>数组（C# 编程指南）
@@ -36,7 +36,7 @@ type[] arrayName;
 - 交错数组是数组的数组，因此其元素为引用类型且被初始化为 `null`。
 - 数组从零开始编制索引：包含 `n` 元素的数组从 `0` 索引到 `n-1`。
 - 数组元素可以是任何类型，其中包括数组类型。
-- 数组类型是从抽象的基类型 <xref:System.Array> 派生的[引用类型](../../language-reference/keywords/reference-types.md)。 由于此类型实现 <xref:System.Collections.IEnumerable> 和 <xref:System.Collections.Generic.IEnumerable%601>，因此可以在 C# 中的所有数组上使用 [foreach](../../language-reference/keywords/foreach-in.md) 迭代。
+- 数组类型是从抽象的基类型 [ 派生的](../../language-reference/keywords/reference-types.md)引用类型<xref:System.Array>。 由于此类型实现 <xref:System.Collections.IEnumerable> 和 <xref:System.Collections.Generic.IEnumerable%601>，因此可以在 C# 中的所有数组上使用 [foreach](../../language-reference/keywords/foreach-in.md) 迭代。
 
 ## <a name="related-sections"></a>相关章节
 
@@ -48,7 +48,7 @@ type[] arrayName;
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [集合](../concepts/collections.md)

@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120744"
 ---
 # <a name="handling-io-errors-in-net"></a>处理 .NET 中的 I/O 错误
@@ -71,7 +71,7 @@ ms.locfileid: "73120744"
 
 在 <xref:System.IO.IOException> 情况下，可以从 [IOException.HResult](xref:System.Exception.HResult) 属性获取更多错误信息。 若要将 HResult 值转换为 Win32 错误代码，可以删除 32 位值的前 16 位。 下表列出了可能包装在 <xref:System.IO.IOException> 中的错误代码。
 
-| HResult | 返回的常量 | 说明 |
+| HResult | 常量 | 说明 |
 | --- | --- | --- |
 | ERROR_SHARING_VIOLATION | 32 | 缺少文件名称，或文件或目录正在使用中。 |
 | ERROR_FILE_EXISTS | 80 | 该文件已存在。 |
@@ -83,7 +83,7 @@ ms.locfileid: "73120744"
 [!code-csharp[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/cs/io-exceptions.cs)]
 [!code-vb[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/vb/io-exceptions.vb)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 .NET 中处理和引发异常](../exceptions/index.md)
 - [异常处理（任务并行库）](../parallel-programming/exception-handling-task-parallel-library.md)

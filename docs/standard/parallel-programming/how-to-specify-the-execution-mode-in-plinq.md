@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, how to use execution mode
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
 ms.openlocfilehash: c602aba6e18f80b007b15cd61dfd2b48a36dd2c8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139244"
 ---
 # <a name="how-to-specify-the-execution-mode-in-plinq"></a>如何：在 PLINQ 中指定执行模式
@@ -30,7 +30,7 @@ ms.locfileid: "73139244"
 ## <a name="compiling-the-code"></a>编译代码  
  将此代码剪切并粘贴到 [PLINQ 数据样本](../../../docs/standard/parallel-programming/plinq-data-sample.md)中，并通过 `Main` 调用方法。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Linq.ParallelEnumerable.AsSequential%2A>
 - [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

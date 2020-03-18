@@ -9,10 +9,10 @@ helpviewer_keywords:
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 ms.custom: seadec18
 ms.openlocfilehash: 05cdf399e104fc9e528c954adb19634a5c136664
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132916"
 ---
 # <a name="basic-string-operations-in-net"></a>.NET 中的基本字符串操作
@@ -37,7 +37,7 @@ ms.locfileid: "73132916"
  [使用 StringBuilder 类](../../../docs/standard/base-types/stringbuilder.md)  
  介绍了如何使用 <xref:System.Text.StringBuilder> 类创建和修改动态字符串对象。  
   
- [如何：执行基本字符串控制](../../../docs/standard/base-types/basic-manipulations.md)  
+ [如何：执行基本的字符串控制](../../../docs/standard/base-types/basic-manipulations.md)  
  展示了如何使用基本字符串操作。  
   
 ## <a name="related-sections"></a>相关章节  

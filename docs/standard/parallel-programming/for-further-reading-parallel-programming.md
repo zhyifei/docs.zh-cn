@@ -6,10 +6,10 @@ helpviewer_keywords:
 - tasks, further reading
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
 ms.openlocfilehash: d424c04f52e08b0fdb72e187bd8999ef16427080
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73134218"
 ---
 # <a name="for-further-reading-parallel-programming"></a>其他阅读材料（并行编程）
@@ -24,7 +24,7 @@ ms.locfileid: "73134218"
 
 - [使用 .NET Framework 并行编程的示例](https://code.msdn.microsoft.com/ParExtSamples)页面包含许多示例，展示了中级和高级并行编程技巧。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [并行计算开发人员中心](https://msdn.microsoft.com/vstudio/bb964701)
 - [Visual C++ 中的并行编程](/cpp/parallel/parallel-programming-in-visual-cpp)

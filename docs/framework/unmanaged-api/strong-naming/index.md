@@ -7,10 +7,10 @@ helpviewer_keywords:
 - unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 ms.openlocfilehash: 7d18513450111d58b5d26fd834addd465cfc4267
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140631"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>强命名（非托管 API 参考）
@@ -104,7 +104,7 @@ ms.locfileid: "73140631"
  [PublicKeyBlob Strong Naming](publickeyblob-structure.md)  
  表示二进制格式的公钥/私钥对中的公钥。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICLRStrongName 接口](../hosting/iclrstrongname-interface.md)
 - [非托管 API 参考](../index.md)

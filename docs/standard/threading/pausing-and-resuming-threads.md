@@ -11,10 +11,10 @@ helpviewer_keywords:
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 ms.openlocfilehash: 3020694b93479d5f1d64d31c203f8fe033a10320
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73129005"
 ---
 # <a name="pausing-and-interrupting-threads"></a>暂停和中断线程
@@ -47,7 +47,7 @@ ms.locfileid: "73129005"
   
 - <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 将线程从可能处于的任何等待中唤醒，并导致 <xref:System.Threading.ThreadAbortException> 在线程中抛出。 有关详细信息，请参阅[销毁线程](../../../docs/standard/threading/destroying-threads.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadInterruptedException>

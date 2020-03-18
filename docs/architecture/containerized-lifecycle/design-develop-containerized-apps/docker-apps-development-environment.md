@@ -3,10 +3,10 @@ title: Docker 应用的开发环境
 description: 了解支持 Docker 开发生命周期的最重要的开发工具选项。
 ms.date: 02/15/2019
 ms.openlocfilehash: 35236e75f47e830d0970ca9cfd074d9a69e6f85c
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71214304"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 应用的开发环境

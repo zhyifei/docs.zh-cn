@@ -12,10 +12,10 @@ helpviewer_keywords:
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
 ms.openlocfilehash: 1fbfe25b90e810ff96924a2341582ff3f5ee5e5d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047357"
 ---
 # <a name="proxy-configuration"></a>代理配置
@@ -28,7 +28,7 @@ ms.locfileid: "71047357"
   
  网络环境的变化可能要求系统使用一组新代理。 如果网络连接不可用或新的网络连接已初始化，系统必须在新环境中发现相应的配置脚本源并运行新脚本。  
   
- 可以使用配置文件中的 [`<proxy>`](../configure-apps/file-schema/network/proxy-element-network-settings.md) 元素的 `usesystemdefault` 属性。 `usesystemdefault` 属性控制是否应从用户的 Internet Explorer 代理设置读取静态代理设置（代理地址、跳过列表和跳过本地）。 如果此值设置为 `true`，那么将使用来自 Internet Explorer 的静态代理设置。 如果此值设置为 `false` 或未设置，那么静态代理设置可在配置中指定并将替代 Internet Explorer 代理设置。 此外，此值必须设置为 `false` 或不设置，才能启用自适应代理。  
+ 可以使用配置文件中的 `usesystemdefault`[`<proxy>` 元素的 ](../configure-apps/file-schema/network/proxy-element-network-settings.md) 属性。 `usesystemdefault` 属性控制是否应从用户的 Internet Explorer 代理设置读取静态代理设置（代理地址、跳过列表和跳过本地）。 如果此值设置为 `true`，那么将使用来自 Internet Explorer 的静态代理设置。 如果此值设置为 `false` 或未设置，那么静态代理设置可在配置中指定并将替代 Internet Explorer 代理设置。 此外，此值必须设置为 `false` 或不设置，才能启用自适应代理。  
   
  以下例子显示了典型的自适应代理配置。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "71047357"
 </system.net>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>

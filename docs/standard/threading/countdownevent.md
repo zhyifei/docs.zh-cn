@@ -9,10 +9,10 @@ helpviewer_keywords:
 - synchronization primitives, CountdownEvent
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 ms.openlocfilehash: 628d6a96606117d447c61d01595d13dd4a957ce4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138113"
 ---
 # <a name="countdownevent"></a>CountdownEvent
@@ -27,7 +27,7 @@ ms.locfileid: "73138113"
   
 - 创建实例后，可以递增信号计数。  
   
-- 在 <xref:System.Threading.CountdownEvent.Reset%2A> 方法调用返回 <xref:System.Threading.CountdownEvent.Wait%2A> 后，可以重用实例。  
+- 在 <xref:System.Threading.CountdownEvent.Wait%2A> 方法调用返回 <xref:System.Threading.CountdownEvent.Reset%2A> 后，可以重用实例。  
   
 - 实例公开 <xref:System.Threading.WaitHandle>，以与其他 .NET Framework 同步 API（如 <xref:System.Threading.WaitHandle.WaitAll%2A>）集成。  
   
@@ -45,6 +45,6 @@ ms.locfileid: "73138113"
   
  请注意，等待操作不会取消正在向它发出信号的线程。 通常情况下，取消应用于逻辑操作，可以包括事件等待操作，以及此等待操作要同步的所有工作项。 在此示例中，每个工作项都传递有相同的取消令牌副本，以便能够响应取消请求。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.Semaphore?displayProperty=nameWithType>

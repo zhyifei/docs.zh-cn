@@ -6,10 +6,10 @@ helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 ms.openlocfilehash: a2271feae78100940b4ecac3c42c9bfefa7e1769
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123140"
 ---
 # <a name="data-structures-for-parallel-programming"></a>用于并行编程的数据结构
@@ -44,11 +44,11 @@ ms.locfileid: "73123140"
 |<xref:System.Threading.SpinLock?displayProperty=nameWithType>|互斥锁基元，导致尝试获取锁的线程先在循环中等待或旋转  一段时间，再生成量程。 在应缩短锁等待时间的情况下，<xref:System.Threading.SpinLock> 的性能优于其他形式的锁定。 有关详细信息，请参阅 [SpinLock](../../../docs/standard/threading/spinlock.md)。|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|小的轻型类型，它会旋转一段指定的时间，并最终将线程置于等待状态（如果超出旋转计数的话）。  有关详细信息，请参阅 [SpinWait](../../../docs/standard/threading/spinwait.md)。|  
   
- 有关详细信息，请参见:  
+ 有关详情，请参阅：  
   
 - [如何：使用 SpinLock 进行低级别同步](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
-- [如何：使用屏障同步并发操作](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)。  
+- [如何：使用 Barrier 同步并发操作](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)。  
   
 ## <a name="lazy-initialization-classes"></a>迟缓初始化类  
  通过迟缓初始化，除非需要，否则不分配对象内存。 迟缓初始化可以提升性能，具体是通过在整个程序生存期内均匀分布对象分配。 若要为任何自定义类型启用迟缓初始化，可以包装类型 <xref:System.Lazy%601>。  
@@ -66,7 +66,7 @@ ms.locfileid: "73123140"
 ## <a name="aggregate-exceptions"></a>聚合异常  
  <xref:System.AggregateException?displayProperty=nameWithType> 类型可用于捕获对各个线程并发抛出的多个异常，并将它们作为一个异常返回给联接线程。 为此，<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 类型以及 PLINQ 大量使用 <xref:System.AggregateException>。 有关详细信息，请参阅[异常处理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)和[如何：处理 PLINQ 查询中的异常](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - <xref:System.Threading?displayProperty=nameWithType>

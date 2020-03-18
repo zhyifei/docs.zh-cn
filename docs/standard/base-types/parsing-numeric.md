@@ -12,17 +12,17 @@ helpviewer_keywords:
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 ms.openlocfilehash: ac44282a06b2b3710d3a9e5390c7a514c1632c3a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127603"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>分析 .NET 中的数字字符串
 所有数字类型都具有两个静态分析方法（`Parse` 和 `TryParse`），可以使用它们将数字的字符串表示形式转换为数字类型。 这两个方法使你可以分析使用[标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)和[自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)中所述的格式字符串生成的字符串。 默认情况下，`Parse` 和 `TryParse` 方法可以成功地将仅包含整数十进制数字的字符串转化为整数值。 它们可以将包含整数和小数十进制数字、组分隔符和十进制分隔符的字符串转换为浮点值。 `Parse` 方法在操作失败时引发异常，而 `TryParse` 方法返回 `false`。  
   
 ## <a name="parsing-and-format-providers"></a>分析和格式提供程序  
- 通常，数值的字符串表示因区域性而异。 数值字符串的元素都会因区域性而异，如货币符号、组（或千位）分隔符和十进制分隔符。 分析方法可隐式或显式使用可以识别这些特定于区域性的变体的格式提供程序。 如果在 `Parse` 或 `TryParse` 方法调用中未指定任何格式提供程序，使用的是与当前线程区域性关联的格式提供程序（<xref:System.Globalization.NumberFormatInfo.CurrentInfo%2A?displayProperty=nameWithType> 属性返回的 <xref:System.Globalization.NumberFormatInfo> 对象）。  
+ 通常，数值的字符串表示因区域性而异。 数值字符串的元素都会因区域性而异，如货币符号、组（或千位）分隔符和十进制分隔符。 分析方法可隐式或显式使用可以识别这些特定于区域性的变体的格式提供程序。 如果在 `Parse` 或 `TryParse` 方法调用中未指定任何格式提供程序，使用的是与当前线程区域性关联的格式提供程序（<xref:System.Globalization.NumberFormatInfo> 属性返回的 <xref:System.Globalization.NumberFormatInfo.CurrentInfo%2A?displayProperty=nameWithType> 对象）。  
   
  格式提供程序由 <xref:System.IFormatProvider> 实现表示。 此接口包含一个成员，即 <xref:System.IFormatProvider.GetFormat%2A> 方法；它需要使用一个参数，即表示要设置格式的类型的 <xref:System.Type> 对象。 此方法返回提供格式设置信息的对象。 .NET 支持以下两个 <xref:System.IFormatProvider> 实现，用于分析数字字符串：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73127603"
  [!code-vb[Parsing.Numbers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/formatproviders1.vb#1)]  
   
 ## <a name="parsing-and-numberstyles-values"></a>分析和 NumberStyles 值  
- 分析操作可以处理的样式元素（如空格、组分隔符和十进制分隔符）由 <xref:System.Globalization.NumberStyles> 枚举值定义。 默认情况下，表示整数值的字符串是使用 <xref:System.Globalization.NumberStyles.Integer?displayProperty=nameWithType> 值进行分析，此值仅允许数字、前导和尾随空格以及前导符号。 表示浮点值的字符串是通过结合使用 <xref:System.Globalization.NumberStyles.Float?displayProperty=nameWithType> 和 <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> 值进行分析；此复合样式允许数字以及前导和尾随空格、前导符号、十进制分隔符、组分隔符和指数。 通过调用包含 <xref:System.Globalization.NumberStyles> 类型参数的 `Parse` 或 `TryParse` 方法重载，并设置一个或多个 <xref:System.Globalization.NumberStyles> 标志，可以控制字符串中能够包含的样式元素，以便分析操作成功。  
+ 分析操作可以处理的样式元素（如空格、组分隔符和十进制分隔符）由 <xref:System.Globalization.NumberStyles> 枚举值定义。 默认情况下，表示整数值的字符串是使用 <xref:System.Globalization.NumberStyles.Integer?displayProperty=nameWithType> 值进行分析，此值仅允许数字、前导和尾随空格以及前导符号。 表示浮点值的字符串是通过结合使用 <xref:System.Globalization.NumberStyles.Float?displayProperty=nameWithType> 和 <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> 值进行分析；此复合样式允许数字以及前导和尾随空格、前导符号、十进制分隔符、组分隔符和指数。 通过调用包含 `Parse` 类型参数的 `TryParse` 或 <xref:System.Globalization.NumberStyles> 方法重载，并设置一个或多个 <xref:System.Globalization.NumberStyles> 标志，可以控制字符串中能够包含的样式元素，以便分析操作成功。  
   
  例如，包含组分隔符的字符串使用 <xref:System.Int32> 方法不能转换为 <xref:System.Int32.Parse%28System.String%29?displayProperty=nameWithType> 值。 但是，如果使用 <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> 标记，可成功转换，如下面的示例所示。  
   
@@ -81,8 +81,8 @@ ms.locfileid: "73127603"
  [!code-csharp[Parsing.Numbers#3](../../../samples/snippets/csharp/VS_Snippets_CLR/parsing.numbers/cs/unicode1.cs#3)]
  [!code-vb[Parsing.Numbers#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/unicode1.vb#3)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Globalization.NumberStyles>
-- [分析字符串](../../../docs/standard/base-types/parsing-strings.md)
+- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)
 - [格式设置类型](../../../docs/standard/base-types/formatting-types.md)

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 ms.openlocfilehash: eae1c38c2383d13bfb4dab83f2fe9551970b39f4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120887"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>对 .NET 应用程序进行全球化和本地化
@@ -36,7 +36,7 @@ ms.locfileid: "73120887"
 
 遵循这三个步骤有两大好处：
 
-- 让你无需改进为支持单个区域性（如美国英语）而专门设计的应用程序以支持其他区域性。英语，以支持其他区域性。
+- 让你无需改进为支持单个区域性（如美国英语）而专门设计的应用程序以支持其他区域性。
 
 - 这会产生更加稳定并有少量 Bug 的本地化应用程序。
 
@@ -66,7 +66,7 @@ ms.locfileid: "73120887"
 
 描述在全球化、本地化和开发全球通用的 ASP.NET 应用程序时遵循的最佳做法。
 
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
 
 - <xref:System.Globalization?displayProperty=nameWithType> 命名空间
 

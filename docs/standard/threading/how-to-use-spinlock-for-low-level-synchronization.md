@@ -9,10 +9,10 @@ helpviewer_keywords:
 - SpinLock, how to use
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
 ms.openlocfilehash: ad254cb6208bff868e5fc689c502b7ddcc175ad5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73137952"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>如何：使用 SpinLock 进行低级别同步
@@ -26,9 +26,9 @@ ms.locfileid: "73137952"
   
  此示例使用 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> 类，要求必须有用户同步，才能执行多线程访问。 在定目标到 .NET Framework 版本 4 的应用中，另一种选择是使用不需要任何用户锁的 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>。  
   
- 请注意，在 <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> 调用中使用 `false`（Visual Basic 中的 `False`）。 这可提供最佳性能。 在 IA64 架构上指定 `true`（Visual Basic 中为 `True`）可使用内存栅栏，这会刷新写入缓冲区以确保锁现在可用于其他线程退出。  
+ 请注意，在 `false` 调用中使用 `False`（Visual Basic 中的 <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType>）。 这可提供最佳性能。 在 IA64 架构上指定 `true`（Visual Basic 中为 `True`）可使用内存栅栏，这会刷新写入缓冲区以确保锁现在可用于其他线程退出。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [线程处理对象和功能](threading-objects-and-features.md)
 - [lock 语句 (C#)](../../csharp/language-reference/keywords/lock-statement.md)

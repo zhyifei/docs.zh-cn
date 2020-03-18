@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
 ms.openlocfilehash: 8bb2b411dc867b6a43e52058dccf2ac980cf0b1e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69922503"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug（C# 编译器选项）
@@ -25,7 +25,7 @@ ms.locfileid: "69922503"
 -debug:{full | pdbonly}  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `+` &#124; `-`  
  指定 `+` 或仅 -debug 将导致编译器生成调试信息并将此信息放在程序数据库（.pdb 文件）中  。 指定 `-`（在不指定 -debug 时生效）将导致不创建任何调试信息  。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "69922503"
  如果使用 -debug:full，请注意，对经过优化的 JIT 代码的速度和大小会存在一定影响，且对包含 -debug:full 的代码质量也有一定影响   。 建议使用 -debug:pdbonly 或不使用 PDB 生成发布代码  。  
   
 > [!NOTE]
-> -debug:pdbonly 和 -debug:full 之间的一个区别在于，使用 -debug:full，编译器将发出 <xref:System.Diagnostics.DebuggableAttribute>，用于告知 JIT 编译器有可用调试信息    。 因此，在使用 -debug:full 时，如果代码包含设置为 false 的 <xref:System.Diagnostics.DebuggableAttribute>，则将出现错误  。  
+> -debug:pdbonly 和 -debug:full 之间的一个区别在于，使用 -debug:full，编译器将发出 **，用于告知 JIT 编译器有可用调试信息**   <xref:System.Diagnostics.DebuggableAttribute>。 因此，在使用 -debug:full 时，如果代码包含设置为 false 的 <xref:System.Diagnostics.DebuggableAttribute>，则将出现错误  。  
   
  有关如何配置应用程序的调试性能的详细信息，请参阅[令映像更易于调试](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "69922503"
   
 2. 单击“生成”  属性页。  
   
-3. 单击“高级”  按钮。  
+3. 单击 **“高级”** 按钮。  
   
 4. 修改“调试信息”  属性。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "69922503"
 csc -debug -pdb:app.pdb test.cs  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](./index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

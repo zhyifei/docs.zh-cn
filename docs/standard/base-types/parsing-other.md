@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
 ms.openlocfilehash: 08e891501bbefcf8b32eff10dd7294af9d81adac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127571"
 ---
 # <a name="parsing-other-strings-in-net"></a>分析 .NET 中的其他字符串
@@ -48,8 +48,8 @@ ms.locfileid: "73127571"
  [!code-csharp[Conceptual.String.Parse#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#4)]
  [!code-vb[Conceptual.String.Parse#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#4)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [分析字符串](../../../docs/standard/base-types/parsing-strings.md)
+- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)
 - [格式设置类型](../../../docs/standard/base-types/formatting-types.md)
 - [.NET 中的类型转换](../../../docs/standard/base-types/type-conversion.md)

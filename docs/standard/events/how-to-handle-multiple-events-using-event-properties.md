@@ -13,10 +13,10 @@ helpviewer_keywords:
 - events [.NET Framework], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 ms.openlocfilehash: f74d75a09da350b34dfb067c3d0db8fc669116ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124771"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>如何：使用事件属性处理多个事件
@@ -45,7 +45,7 @@ ms.locfileid: "73124771"
  [!code-csharp[Conceptual.Events.Other#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.events.other/cs/example3.cs#31)]
  [!code-vb[Conceptual.Events.Other#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.events.other/vb/example3.vb#31)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [事件](../../../docs/standard/events/index.md)

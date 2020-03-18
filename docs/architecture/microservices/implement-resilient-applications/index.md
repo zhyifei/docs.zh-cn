@@ -2,12 +2,12 @@
 title: 实现可复原的应用程序
 description: 了解恢复能力，这是微服务体系结构中的核心概念。 必须了解如何在发生瞬间失败时进行适当的处理。
 ms.date: 01/30/2020
-ms.openlocfilehash: ccdb2470c727ad4bd89c4e0634da8564b8010e63
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 46276a6b9b36a494bfae657275692ca9d5554d86
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502655"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78847227"
 ---
 # <a name="implement-resilient-applications"></a>实现可复原的应用程序
 

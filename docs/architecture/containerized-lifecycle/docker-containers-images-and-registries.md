@@ -3,10 +3,10 @@ title: Docker 容器、映像和注册表
 description: 了解注册表在部署应用程序的 Docker 方式中扮演的关键角色。
 ms.date: 02/15/2019
 ms.openlocfilehash: bfef21cab7be89abaf33b89366d7cff2115a7cc6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72770921"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 容器、映像和注册表
@@ -15,9 +15,9 @@ ms.locfileid: "72770921"
 
 若要运行应用或服务，应用的映像会实例化，以创建一个在 Docker 主机上运行的容器。 最初，会在开发环境或 PC 中测试容器。
 
-将映像存储在充当映像库的注册表中。 部署到生产业务流程协调程序时需要一个注册表。 Docker 通过 [Docker Hub](https://hub.docker.com/)维护一个公共注册表；其他供应商为不同映像集合提供注册表，包括 [Azure 容器注册表](https://azure.microsoft.com/services/container-registry/)。 或者，企业可本地拥有一个专用注册表，用于其 Docker 映像。
+将映像存储在充当映像库的注册表中。 部署到生产业务流程协调程序时需要一个注册表。 Docker 通过 [Docker 中心](https://hub.docker.com/)维护公共注册表；其他供应商为不同映像集合提供注册表，包括 [Azure 容器注册表](https://azure.microsoft.com/services/container-registry/)。 或者，企业可以拥有一个本地专用注册表，用于其 Docker 映像。
 
-图 1-4 显示了 Docker 中的映像和注册表与其他组件相关联的方式。 还显示了供应商推出的多种注册表产品/服务。
+图 1-4 显示了 Docker 中的映像和注册表与其他组件相关联的方式。 还显示了供应商的多个注册表产品/服务。
 
 ![显示 Docker 中的基本分类的关系图。](./media/docker-containers-images-and-registries/taxonomy-docker-terms-concepts.png)
 
@@ -31,7 +31,7 @@ ms.locfileid: "72770921"
 
 - 由于保密性，映像不能被公开分享。
 
-- 希望映像和所选部署环境之间的网络延迟保持在最低水平。 例如，如果生产环境是 Azure，则可能想将映像存储在 [Azure 容器注册表](https://azure.microsoft.com/services/container-registry/)中，以便最小化网络延迟。 同样，如果生产环境是在本地，则需要在同一本地网络中使用本地的 Docker 信任的注册表。
+- 在映像和所选部署环境之间，希望网络延迟保持最低。 例如，如果生产环境是 Azure，则可能想将映像存储在 [Azure 容器注册表](https://azure.microsoft.com/services/container-registry/)中，以便最小化网络延迟。 同样，如果生产环境是在本地，便需要使本地 Docker 信任的注册表在相同的本地网络中可用。
 
 >[!div class="step-by-step"]
 >[上一页](docker-terminology.md)

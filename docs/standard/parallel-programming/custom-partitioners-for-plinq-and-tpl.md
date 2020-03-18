@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 ms.openlocfilehash: 8caea6d8a97b8c0daf7c59718479ea2e12a52d78
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141564"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ 和 TPL 的自定义分区程序
@@ -23,7 +23,7 @@ ms.locfileid: "73141564"
 
 对数据源进行分区的方法有很多种。 最高效的方法是，多个线程一起协作，共同处理原始源序列，而不是将数据源实际分割成多个子序列。 对于长度提前已知的数组和其他索引源（如 <xref:System.Collections.IList> 集合），范围分区  是最简单的分区种类。 每个线程都会收到唯一起始和结束索引，这样就可以处理范围内的数据源，而又不会覆盖其他任何线程或被其他任何线程覆盖。 范围分区涉及的唯一开销是，创建范围这项初始工作；之后就无需执行其他任何同步工作了。 因此，只要工作负载是均分的，就可以确保实现良好性能。 范围分区的缺点是，即使某线程提前完成，也无法帮助其他线程完成工作。
 
-对于长度未知的链接列表或其他集合，可以使用区块分区  。 在区块分区中，并行循环或查询中的每个线程或任务都会使用并处理一个区块中的若干源元素，再返回检索其他元素。 分区程序可确保所有元素均已分发，且没有重复项。 区块可为任意大小。 例如，[如何：实现动态分区](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)中所述的分区程序会创建只包含一个元素的区块。 只要区块不是太大，这类分区就一定会执行负载均衡，因为向线程分配的元素不是预先确定的。 不过，每当线程需要获取其他区块时，分区程序就要承担一次同步开销。 在这种情况下产生的同步量与区块大小成反比。
+对于长度未知的链接列表或其他集合，可以使用区块分区  。 在区块分区中，并行循环或查询中的每个线程或任务都会使用并处理一个区块中的若干源元素，再返回检索其他元素。 分区程序可确保所有元素均已分发，且没有重复项。 区块可为任意大小。 例如，[如何：实现动态分区](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)中展示的分区程序创建的区块就只包含一个元素。 只要区块不是太大，这类分区就一定会执行负载均衡，因为向线程分配的元素不是预先确定的。 不过，每当线程需要获取其他区块时，分区程序就要承担一次同步开销。 在这种情况下产生的同步量与区块大小成反比。
 
 通常情况下，范围分区只有在以下情况下才会更快：委托的执行时间为小到中等，数据源有大量元素，且每个分区的工作总量大致相等。 因此，大多数情况下，区块分区通常更快。 如果数据源有少量元素或委托的执行时间较长，那么区块分区和范围分区的性能大致相同。
 
@@ -54,7 +54,7 @@ TPL 分区程序还支持动态数量的分区。 也就是说，可以在 <xref
 
 ### <a name="configuring-static-range-partitioners-for-parallelforeach"></a>配置 Parallel.ForEach 静态范围分区程序
 
-在 <xref:System.Threading.Tasks.Parallel.For%2A> 循环中，循环的主体作为委托提供给方法。 调用此委托的成本与调用虚拟方法大致相同。 在某些情况下，并行循环的主体可能非常小，这就会导致对每个循环迭代调用委托的成本变得十分高昂。 在这种情况下，可以使用 <xref:System.Collections.Concurrent.Partitioner.Create%2A> 重载之一，对数据源元素创建范围分区的 <xref:System.Collections.Generic.IEnumerable%601>。 然后，可以将此范围集合传递到主体包含常规 `for` 循环的 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 方法。 这种方法的优势在于，委托调用成本在每个范围内只产生一次，而不是每个元素都产生一次。 下面的示例展示了基本模式。
+在 <xref:System.Threading.Tasks.Parallel.For%2A> 循环中，循环的主体作为委托提供给方法。 调用此委托的成本与调用虚拟方法大致相同。 在某些情况下，并行循环的主体可能非常小，这就会导致对每个循环迭代调用委托的成本变得十分高昂。 在这种情况下，可以使用 <xref:System.Collections.Concurrent.Partitioner.Create%2A> 重载之一，对数据源元素创建范围分区的 <xref:System.Collections.Generic.IEnumerable%601>。 然后，可以将此范围集合传递到主体包含常规 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环的 `for` 方法。 这种方法的优势在于，委托调用成本在每个范围内只产生一次，而不是每个元素都产生一次。 下面的示例展示了基本模式。
 
 [!code-csharp[TPL_Partitioners#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioner01.cs#01)]
 [!code-vb[TPL_Partitioners#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_partitioners/vb/partitionercreate01.vb#01)]
@@ -72,7 +72,7 @@ TPL 分区程序还支持动态数量的分区。 也就是说，可以在 <xref
 |||
 |-|-|
 |<xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>|此方法由主线程调用一次，并返回 IList(IEnumerator(TSource))。 循环或查询中的每个工作线程都可以对列表调用 `GetEnumerator`，以在不同的分区中检索 <xref:System.Collections.Generic.IEnumerator%601>。|
-|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|如果实现 <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>，返回 `true`；否则，返回 `false`。|
+|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|如果实现 `true`，返回 <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>；否则，返回 `false`。|
 |<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>|如果 <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> 是 `true`，可以视需要选择调用此方法（而不是 <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>）。|
 
 如果结果必须可排序，或需要对元素进行索引访问，请从 <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> 派生类，并重写虚拟方法，如下表所述。
@@ -80,7 +80,7 @@ TPL 分区程序还支持动态数量的分区。 也就是说，可以在 <xref
 |||
 |-|-|
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetPartitions%2A>|此方法由主线程调用一次，并返回 `IList(IEnumerator(TSource))`。 循环或查询中的每个工作线程都可以对列表调用 `GetEnumerator`，以在不同的分区中检索 <xref:System.Collections.Generic.IEnumerator%601>。|
-|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|如果实现 <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>，返回 `true`；否则，返回 false。|
+|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|如果实现 `true`，返回 <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>；否则，返回 false。|
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>|这通常直接调用 <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>。|
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>|如果 <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> 是 `true`，可以视需要选择调用此方法（而不是 <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>）。|
 
@@ -125,7 +125,7 @@ TPL 分区程序还支持动态数量的分区。 也就是说，可以在 <xref
 
 - 所有索引都必须为非负索引。 如果未遵循此规则，PLINQ/TPL 可能会抛出异常。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [并行编程](../../../docs/standard/parallel-programming/index.md)
 - [如何：实现动态分区](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)

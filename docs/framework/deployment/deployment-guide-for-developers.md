@@ -7,10 +7,10 @@ helpviewer_keywords:
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 ms.openlocfilehash: 26c168040b0fa5e975e64a7518b0d0bf250c4711
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628119"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 部署指南（针对开发人员）
@@ -394,7 +394,7 @@ Windows Installer XML (WiX) 工具集通过 XML 源代码生成 Windows 安装�
 
 - [面向管理员的部署指南](guide-for-administrators.md)
 - [系统要求](../get-started/system-requirements.md)
-- [安装面向开发者的 .NET Framework](../install/guide-for-developers.md)
+- [安装面向开发人员的 .NET Framework](../install/guide-for-developers.md)
 - [安装和卸载 .NET Framework 受阻疑难解答](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 - [在 .NET Framework 4.5 安装期间减少系统重新启动次数](reducing-system-restarts.md)
 - [如何：获取 .NET Framework 4.5 安装程序的进度](how-to-get-progress-from-the-dotnet-installer.md)

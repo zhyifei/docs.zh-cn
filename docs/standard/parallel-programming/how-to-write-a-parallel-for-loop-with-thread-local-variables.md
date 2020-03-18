@@ -9,10 +9,10 @@ helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
 ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139712"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>如何：编写具有线程局部变量的 Parallel.For 循环
@@ -42,7 +42,7 @@ Function() new MyClass()
   
  若要详细了解如何使用 Lambda 表达式，请参阅 [PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [并行编程](../../../docs/standard/parallel-programming/index.md)

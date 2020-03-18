@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b0e1d6d720a1c9b827fb4585606e64b545d395d7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393886"
 ---
 ### <a name="kestrel-request-trailer-headers-moved-to-new-collection"></a>Kestrel：请求尾部标头已移动到新集合
@@ -39,7 +39,7 @@ HTTP/2 请求尾部在 ASP.NET Core 2.2 中不可用，但现在可用于 ASP.NE
 
 在 gRPC 等方案中，尾部是关键功能。 将尾部合并到请求标头会使用户感到困惑。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 在 `HttpRequest` 上使用尾部相关扩展方法访问尾部。
 

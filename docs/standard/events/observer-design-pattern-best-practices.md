@@ -7,10 +7,10 @@ helpviewer_keywords:
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 ms.openlocfilehash: 2da29e0baf429142707d0ddd39b1a11c13a17a90
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141539"
 ---
 # <a name="observer-design-pattern-best-practices"></a>观察程序设计模式最佳做法
@@ -51,7 +51,7 @@ ms.locfileid: "73141539"
   
  虽然可将观察者附加到多个提供程序到，建议的模式是将 <xref:System.IObserver%601> 实例附加到唯一的 <xref:System.IObservable%601> 实例。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [观察程序设计模式](../../../docs/standard/events/observer-design-pattern.md)
 - [如何：实现监视程序](../../../docs/standard/events/how-to-implement-an-observer.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - .NET Framework changes
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 ms.openlocfilehash: c46f781d495b87a4f24e77935df7c4814c8567ae
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73196695"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework 中的应用程序兼容性
@@ -62,7 +62,7 @@ ms.locfileid: "73196695"
 **透明**\
 对应用的开发人员或用户没有明显影响的更改。 不需要由于此更改而修改应用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [版本和依赖关系](versions-and-dependencies.md)
 - [新增功能](../whats-new/index.md)

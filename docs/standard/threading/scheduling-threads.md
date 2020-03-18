@@ -7,10 +7,10 @@ helpviewer_keywords:
 - scheduling threads
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
 ms.openlocfilehash: abcdf56b90513b937adefc38583e0312fec69785
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73106232"
 ---
 # <a name="scheduling-threads"></a>计划线程
@@ -19,7 +19,7 @@ ms.locfileid: "73106232"
   
  线程根据优先级被排入执行计划。 即使线程是在运行时内执行，操作系统也会为所有线程分配处理器时间片。 用于确定线程执行顺序的计划算法详细信息因各个操作系统而异。 在一些操作系统下，（在可以执行的线程中）优先级最高的线程始终都被计划为第一个运行。 如果有多个线程的优先级相同，计划程序会遍历具有此优先级的全部线程，为每个线程分配固定的执行时间片。 只要有更高优先级的线程可供运行，就不会执行优先级较低的线程。 如果在给定优先级没有其他任何可运行的线程，计划程序会转到下一个较低优先级，并计划执行具有此优先级的线程。 如果较高优先级的线程变得可运行，就会强占优先级较低的线程，并获准重新执行。 除此之外，如果应用的用户界面在前台和后台之间转换，操作系统还可以动态调整线程优先级。 其他操作系统可能会选择使用不同的计划算法。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用线程和线程处理](../../../docs/standard/threading/using-threads-and-threading.md)
 - [Windows 中的托管和非托管线程](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)

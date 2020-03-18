@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Web Forms, event handling
 ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
 ms.openlocfilehash: 1f95fd0dcc12f2d4e47ee07e1e6bb15d91000f0f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124785"
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a>如何：在 Web 窗体应用程序中使用事件
@@ -49,6 +49,6 @@ ASP.NET Web 窗体应用程序中的一种常见情况是使用控件填充网�
   
 3. 在步骤 2 中定义的事件处理程序方法会添加代码以执行事件发生时所需的各种操作。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [事件](../../../docs/standard/events/index.md)

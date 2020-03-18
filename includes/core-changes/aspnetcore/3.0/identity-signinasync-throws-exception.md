@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 6679e38aefa7d61ce430dc5375ff3b35c641ea27
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394214"
 ---
 ### <a name="identity-signinasync-throws-exception-for-unauthenticated-identity"></a>标识：对于未经身份验证的标识，SignInAsync 会引发异常
@@ -24,9 +24,9 @@ ms.locfileid: "72394214"
 
 #### <a name="reason-for-change"></a>更改原因
 
-旧行为是有问题的，因为在默认情况下，`[Authorize]`  /  `RequireAuthenticatedUser()` 拒绝了这些主体。
+旧行为是有问题的，因为在默认情况下，`[Authorize]` / `RequireAuthenticatedUser()` 拒绝了这些主体。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 在 ASP.NET Core 3.0 预览版 6 中，`AuthenticationOptions` 上有 `RequireAuthenticatedSignIn` 标记，默认为 `true`。 将此标志设置为 `false` 以还原旧行为。
 
@@ -36,7 +36,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影响的 API
 
-无
+None
 
 <!-- 
 

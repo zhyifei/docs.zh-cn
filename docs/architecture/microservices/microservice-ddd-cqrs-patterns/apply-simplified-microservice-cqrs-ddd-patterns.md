@@ -3,10 +3,10 @@ title: 在微服务中应用简化的 CQRS 和 DDD 模式
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解 CQRS 与 DDD 模式之间的整体关系。
 ms.date: 10/08/2018
 ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834307"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>在微服务中应用简化后的 CQRS 和 DDD 模式

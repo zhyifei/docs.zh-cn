@@ -4,10 +4,10 @@ ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
 ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543256"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>如何修改以 C\# 编写的字符串内容
@@ -72,7 +72,7 @@ ms.locfileid: "77543256"
 
 可通过查看 [GitHub 存储库](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的代码来尝试这些示例。 也可以下载这些示例的 [zip 文件](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Framework 正则表达式](../../standard/base-types/regular-expressions.md)
 - [正则表达式语言 - 快速参考](../../standard/base-types/regular-expression-language-quick-reference.md)

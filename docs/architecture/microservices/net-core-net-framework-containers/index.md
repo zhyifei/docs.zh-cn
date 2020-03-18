@@ -3,10 +3,10 @@ title: 为 Docker 容器选择 .NET Core 还是 .NET Framework
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 为 Docker 容器选择 .NET Core 还是 .NET Framework
 ms.date: 09/11/2018
 ms.openlocfilehash: b01aaf25f4071e8e4a07905a12ec9dd0d89a738d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70849274"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a>为 Docker 容器选择 .NET Core 还是 .NET Framework

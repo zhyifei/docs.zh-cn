@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: ae5a5fbf97ed4a03de7d35b9d5d5ca8de3aebc39
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394233"
 ---
 ### <a name="caching-responsecaching-pubternal-types-changed-to-internal"></a>缓存：ResponseCaching“Pubternal”类型已更改为内部
@@ -32,7 +32,7 @@ ms.locfileid: "72394233"
 
 `internal` 范围更好地反映了不受支持的策略。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 复制应用或库使用的类型。
 

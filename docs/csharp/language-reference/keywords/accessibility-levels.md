@@ -6,10 +6,10 @@ helpviewer_keywords:
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
 ms.openlocfilehash: 26fbc2a6d86aead537465c304146630f8bcd3ad4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713816"
 ---
 # <a name="accessibility-levels-c-reference"></a>可访问性级别（C# 参考）
@@ -37,9 +37,9 @@ ms.locfileid: "75713816"
   
 |成员|默认成员可访问性|允许的成员的声明的可访问性|  
 |----------------|----------------------------------|--------------------------------------------------|  
-|`enum`|`public`|None|  
+|`enum`|`public`|无|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|None|  
+|`interface`|`public`|无|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
  嵌套类型的可访问性依赖于它的[可访问域](./accessibility-domain.md)，该域是由已声明的成员可访问性和直接包含类型的可访问域这二者共同确定的。 但是，嵌套类型的可访问域不能超出包含类型的可访问域。  
@@ -47,7 +47,7 @@ ms.locfileid: "75713816"
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
@@ -57,6 +57,6 @@ ms.locfileid: "75713816"
 - [对使用可访问性级别的限制](./restrictions-on-using-accessibility-levels.md)
 - [访问修饰符](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [public](./public.md)
-- [专用](./private.md)
+- [private](./private.md)
 - [受保护](./protected.md)
-- [internal](./internal.md)
+- [内部](./internal.md)

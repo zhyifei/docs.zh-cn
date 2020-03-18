@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e5355387d5cb6d9e6de89f5b85e64bc100b32ae1
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522705"
 ---
 ### <a name="spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger"></a>SPA：SpaServices 和 NodeServices 不再回退到控制台记录器
@@ -26,7 +26,7 @@ ms.locfileid: "72522705"
 
 需要与其他 ASP.NET Core 包实现日志记录的方式保持一致。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 如果需要旧行为，若要配置控制台日志记录，请将 `services.AddLogging(builder => builder.AddConsole())` 添加到 `Setup.ConfigureServices` 方法。
 
@@ -36,7 +36,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影响的 API
 
-无
+None
 
 <!--
 

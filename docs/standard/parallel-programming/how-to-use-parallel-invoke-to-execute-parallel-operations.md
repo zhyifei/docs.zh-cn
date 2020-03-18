@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Parallel.Invoke 执行并行操作
+title: 如何：使用 Parallel.Invoke 来执行并行操作
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
 ms.openlocfilehash: 665490601cad9ccd7881042aed576b95bbc07115
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139726"
 ---
-# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>如何：使用 Parallel.Invoke 执行并行操作
+# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>如何：使用 Parallel.Invoke 来执行并行操作
 
 此示例演示如何通过使用任务并行库中的 <xref:System.Threading.Tasks.Parallel.Invoke%2A> 并行操作。 共享的数据源上执行三个操作。 因为操作均不修改源，所以可以直接的方式并行执行。
 
@@ -36,7 +36,7 @@ ms.locfileid: "73139726"
 
 将完整示例复制和粘贴到 Microsoft Visual Studio 项目，并按 F5 键  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [并行编程](../../../docs/standard/parallel-programming/index.md)
 - [如何：取消任务及其子级](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)

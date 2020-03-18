@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
 author: pkulikov
 ms.openlocfilehash: d7d1fa13b02fe7425fa9b4cb81ba20297a23fe4b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73128954"
 ---
 # <a name="timers"></a>计时器
@@ -51,11 +51,11 @@ ms.locfileid: "73128954"
 
 <xref:System.Timers.Timer?displayProperty=nameWithType> 是另一个可在多线程环境中使用的计时器，该计时器默认情况下在 <xref:System.Threading.ThreadPool> 线程上引发事件。
 
-在创建 <xref:System.Timers.Timer?displayProperty=nameWithType> 对象时，可以指定引发 <xref:System.Timers.Timer.Elapsed> 事件的时间间隔。 使用 <xref:System.Timers.Timer.Enabled%2A> 属性指示计时器是否应引发 <xref:System.Timers.Timer.Elapsed> 事件。 如果仅需在经过指定时间间隔后引发一次 <xref:System.Timers.Timer.Elapsed> 事件，请将 <xref:System.Timers.Timer.AutoReset%2A> 设置为 `false`。 <xref:System.Timers.Timer.AutoReset%2A> 属性的默认值为 `true`，表示将按 <xref:System.Timers.Timer.Interval%2A> 属性定义的时间间隔定期引发 <xref:System.Timers.Timer.Elapsed> 事件。
+在创建 <xref:System.Timers.Timer?displayProperty=nameWithType> 对象时，可以指定引发 <xref:System.Timers.Timer.Elapsed> 事件的时间间隔。 使用 <xref:System.Timers.Timer.Enabled%2A> 属性指示计时器是否应引发 <xref:System.Timers.Timer.Elapsed> 事件。 如果仅需在经过指定时间间隔后引发一次 <xref:System.Timers.Timer.Elapsed> 事件，请将 <xref:System.Timers.Timer.AutoReset%2A> 设置为 `false`。 <xref:System.Timers.Timer.AutoReset%2A> 属性的默认值为 `true`，表示将按 <xref:System.Timers.Timer.Elapsed> 属性定义的时间间隔定期引发 <xref:System.Timers.Timer.Interval%2A> 事件。
 
 有关更多信息和示例，请参见<xref:System.Timers.Timer?displayProperty=nameWithType>。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.Timer?displayProperty=nameWithType>
 - <xref:System.Timers.Timer?displayProperty=nameWithType>

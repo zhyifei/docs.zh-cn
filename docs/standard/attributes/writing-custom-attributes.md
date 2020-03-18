@@ -17,14 +17,14 @@ helpviewer_keywords:
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 ms.openlocfilehash: 6570c6994c0f2e6571361c3eadc73b02a55f1584
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140590"
 ---
 # <a name="writing-custom-attributes"></a>编写自定义特性
-要设计你自己的自定义特性，无需掌握许多新的概念。 如果你熟悉面向对象的编程，并且知道如何设计类，那么你已经具备大部分所需知识。 自定义特性本质上是直接或间接派生自 <xref:System.Attribute?displayProperty=nameWithType>的传统类。 与传统类一样，自定义特性包含用于存储和检索数据的方法。  
+要设计你自己的自定义特性，无需掌握许多新的概念。 如果你熟悉面向对象的编程，并且知道如何设计类，那么你已经具备大部分所需知识。 自定义属性本质上是直接或间接派生自 <xref:System.Attribute?displayProperty=nameWithType> 的传统类。 与传统类一样，自定义特性包含用于存储和检索数据的方法。  
   
  正确设计自定义特性的主要步骤如下：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73140590"
   
 - [声明属性](#declaring-properties)  
   
- 本节描述上述各个步骤，并以[自定义特性的示例](#custom-attribute-example)结束本节的描述。  
+ 本节描述上述各个步骤，并以 [自定义特性的示例](#custom-attribute-example)结束本节的描述。  
   
 ## <a name="applying-the-attributeusageattribute"></a>应用 AttributeUsageAttribute  
  自定义特性声明以 <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> 开头，定义了特性类的一些主要特征。 例如，你可以指定其他类是否可以继承你的特性，或者指定此特性可以应用到哪些元素。 下面的代码片段演示了 <xref:System.AttributeUsageAttribute> 的使用方式。  
@@ -116,7 +116,7 @@ ms.locfileid: "73140590"
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
  [!code-vb[Conceptual.Attributes.Usage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#15)]  
   
- 可以重载此构造函数以适应值的各种组合。 如果你还为自定义特性类定义了[属性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))，则在初始化该特性时可以使用命名参数和定位参数的组合。 通常情况下，将所有必选的参数定义为定位参数，将所有可选的参数定义为命名参数。 在这种情况下，没有必选参数则无法初始化特性。 其他所有参数都是可选参数。 请注意，在 Visual Basic 中，特性类的构造函数不应使用 ParamArray 参数。  
+ 可以重载此构造函数以适应值的各种组合。 如果你还为自定义特性类定义了 [属性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)) ，则在初始化该特性时可以使用命名参数和定位参数的组合。 通常情况下，将所有必选的参数定义为定位参数，将所有可选的参数定义为命名参数。 在这种情况下，没有必选参数则无法初始化特性。 其他所有参数都是可选参数。 请注意，在 Visual Basic 中，特性类的构造函数不应使用 ParamArray 参数。  
   
  下面的代码示例显示如何使用可选和必选参数应用使用上例中的构造函数的特性。 该示例假定特性有一个必选的布尔值和一个可选的字符串属性。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "73140590"
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
 ## <a name="declaring-properties"></a>声明属性  
- 如果你想要定义一个命名参数，或者提供一种简单的方法来返回由特性存储的值，请声明[属性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))。 应将特性的属性声明为公共实体，此公告实体包含将返回的数据类型的描述。 定义将保存属性值的变量，并将此变量与 **get** 和 **set** 方法相关联。 下面的代码示例说明如何在特性中实现一个简单属性。  
+ 如果你想要定义一个命名参数，或者提供一种简单的方法来返回由特性存储的值，请声明 [属性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))。 应将特性的属性声明为公共实体，此公告实体包含将返回的数据类型的描述。 定义将保存属性值的变量，并将此变量与 **get** 和 **set** 方法相关联。 下面的代码示例说明如何在特性中实现一个简单属性。  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]
@@ -138,7 +138,7 @@ ms.locfileid: "73140590"
  [!code-csharp[Conceptual.Attributes.Usage#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#4)]
  [!code-vb[Conceptual.Attributes.Usage#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#4)]  
   
- 可以采用以下任一种方法，使用全称 `DeveloperAttribute`或缩写名称 `Developer`应用此特性。  
+ 可以采用以下任一种方法，使用全称 `DeveloperAttribute` 或缩写名称 `Developer` 应用此属性。  
   
  [!code-cpp[Conceptual.Attributes.Usage#12](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#12)]
  [!code-csharp[Conceptual.Attributes.Usage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#12)]
@@ -146,7 +146,7 @@ ms.locfileid: "73140590"
   
  第一个示例显示只应用了必选命名参数的特性，第二个示例显示同时应用了必选参数和可选参数的特性。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Attribute?displayProperty=nameWithType>
 - <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
 ms.openlocfilehash: a1307acf331cec50b1dbbd0f6e908a0c3baaf7ac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712931"
 ---
 # <a name="using-c-reference"></a>using（C# 参考）
@@ -22,7 +22,7 @@ ms.locfileid: "75712931"
 - [using 指令](using-directive.md)为命名空间创建别名，或导入在其他命名空间中定义的类型。
 - [using static 指令](using-static.md)导入单个类的成员。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)

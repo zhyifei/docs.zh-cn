@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 ms.openlocfilehash: d4bbf30923d65ad7aeced80efa626136ae27491b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138144"
 ---
 # <a name="cancellation-in-managed-threads"></a>托管线程中的取消
@@ -52,7 +52,7 @@ ms.locfileid: "73138144"
 ## <a name="cancellation-types"></a>取消类型  
  取消框架作为相关类型集实现，如下表所列。  
   
-|类型名称|说明|  
+|类型名称|描述|  
 |---------------|-----------------|  
 |<xref:System.Threading.CancellationTokenSource>|创建取消标记并为此标记的所有副本发出取消请求的对象。|  
 |<xref:System.Threading.CancellationToken>|通常作为方法参数传递给一个或多个侦听器的轻量值类型。 侦听器通过轮询、回调或等待句柄监视标记的 `IsCancellationRequested` 属性的值。|  

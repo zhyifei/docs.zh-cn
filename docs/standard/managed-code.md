@@ -5,11 +5,11 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
 ms.openlocfilehash: 9133859bd9c999e076effcf0d4d631c59db02f33
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678753"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61910112"
 ---
 # <a name="what-is-managed-code"></a>什么是“托管代码”？
 
@@ -25,7 +25,7 @@ ms.locfileid: "57678753"
 
 什么是“中间语言”（简称 IL）？ 中间语言是编译使用高级 .NET 语言编写的代码后获得的结果。 对使用其中一种语言编写的代码进行编译后，即可获得 IL 所生成的二进制代码。 必须注意，IL 独立于在运行时顶层运行的任何特定语言；行业甚至为它单独制定了规范，如果有需要，你可以阅读该规范。
 
-从高级代码生成 IL 后，你很有可能想要运行它。 CLR 此时将接管工作，启动**实时** (JIT) 编译过程，或者将代码从 IL **实时**编译成可以真正在 CPU 上运行的机器代码。 这样，CLR 就能确切地知道代码的作用，并可以有效地_管理_代码。
+从高级代码生成 IL 后，你很有可能想要运行它。 CLR 此时将接管工作，启动**实时** (JIT) 编译过程，或者将代码从 IL **实时**编译成可以真正在 CPU 上运行的机器代码。 这样，CLR 就能确切地知道代码的作用，并可以有效地 _管理_ 代码。
 
 中间语言有时也称为公共中间语言 (CIL) 或 Microsoft 中间语言 (MSIL)。
 

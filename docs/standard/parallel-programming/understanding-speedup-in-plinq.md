@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 ms.openlocfilehash: 07b5027d560a4caccc6c0a516c3f70c11df6be83
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139903"
 ---
 # <a name="understanding-speedup-in-plinq"></a>了解 PLINQ 中的加速
@@ -68,7 +68,7 @@ PLINQ 的主要用途是，在多核计算机上并行执行查询委托，以�
 ## <a name="when-plinq-chooses-sequential-mode"></a>如果 PLINQ 选择顺序模式  
  PLINQ 始终都会尝试至少像顺序运行查询一样快地执行查询。 虽然 PLINQ 没有考虑用户委托的计算成本或输入源大小，但它确实会查找特定查询“形状”。 具体来说，它会查找通常会减慢查询在并行模式下的执行速度的查询运算符或运算符组合。 如果找到此类形状，PLINQ 默认会回退到顺序模式。  
   
- 不过，在度量特定查询的性能后，可以确定它在并行模式下的实际运行速度更快。 在这种情况下，可以通过 <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> 方法使用 <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> 标志来指示 PLINQ 并行执行查询。 有关详细信息，请参阅[如何：在 PLINQ 中指定执行模式](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)。  
+ 不过，在度量特定查询的性能后，可以确定它在并行模式下的实际运行速度更快。 在这种情况下，可以通过 <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> 方法使用 <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> 标志来指示 PLINQ 并行执行查询。 有关详细信息，请参阅[如何：在 PLINQ 中指定执行模式](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)。  
   
  下面列出了 PLINQ 在顺序模式下默认执行的查询形状：  
   
@@ -82,6 +82,6 @@ PLINQ 的主要用途是，在多核计算机上并行执行查询委托，以�
   
 - 包含 Reverse 的查询，除非应用于可索引的数据源。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

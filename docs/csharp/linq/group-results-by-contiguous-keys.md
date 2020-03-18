@@ -4,11 +4,11 @@ description: 如何使用 C# 中的 LINQ 按连续键对结果进行分组。
 ms.date: 08/14/2018
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
 ms.openlocfilehash: b5753c85bb07be4fc84b78a299eece961969ff9d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47193000"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659899"
 ---
 # <a name="group-results-by-contiguous-keys"></a>按连续键对结果进行分组
 
@@ -49,6 +49,6 @@ ms.locfileid: "47193000"
 
 若要在项目中使用扩展方法，请将 `MyExtensions` 静态类复制到新的或现有源代码文件中，并且如有需要，请为它所在的命名空间添加 `using` 指令。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [语言集成查询 (LINQ)](index.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - TPL dataflow library, reading and writing messages
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
 ms.openlocfilehash: 58927803b741acf6c1964b35f6603e6901f9cbf1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139287"
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>如何：将消息写入数据流块和从数据流块读取消息
@@ -52,6 +52,6 @@ ms.locfileid: "73139287"
 ## <a name="next-steps"></a>后续步骤  
  本示例演示如何直接从消息块读取和写入。 还可以连接数据流块来形成管道  （这是数据流块的线性序列）或网络  （这是数据流块的图形）。 在管道或网络中，当数据可用时源向目标异步传播数据。 有关创建基本数据流管道的示例，请参阅[演练：创建数据流管道](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md)。 有关创建更复杂的数据流网络的示例，请参阅[演练：在 Windows 窗体应用程序中使用数据流](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

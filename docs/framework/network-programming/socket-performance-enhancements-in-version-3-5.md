@@ -3,10 +3,10 @@ title: 版本 3.5 中的套接字性能增强
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
 ms.openlocfilehash: 577c033fc5639f9d9f50e413fd2cb55a75d48f2c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047241"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>版本 3.5 中的套接字性能增强
@@ -33,7 +33,7 @@ ms.locfileid: "71047241"
   
  新的异步套接字操作上下文对象的生存期由应用程序代码中的引用和异步 I/O 引用确定。 作为参数提交给异步套接字操作方法之一后，应用程序不必保留对异步套接字操作上下文对象的引用。 完成回调返回之前，应用程序会继续引用它。 然而，应用程序保留对上下文对象的引用是有利的，这样可将其重新用于将来的异步套接字操作。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>

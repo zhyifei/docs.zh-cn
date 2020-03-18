@@ -9,10 +9,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 ms.openlocfilehash: f1913f8c41ba4a7b54f7abcdfb97400503da8ac5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73107155"
 ---
 # <a name="assembly-manifest"></a>程序集清单
@@ -51,7 +51,7 @@ ms.locfileid: "73107155"
   
  通过在代码中使用程序集特性，您可以添加或更改程序集清单中的一些信息。 您可以更改版本信息和信息性特性，包括商标、版权、产品、公司和信息性版本。 有关程序集特性的完整列表，请参阅[设置程序集属性](set-attributes.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [程序集内容](contents.md)
 - [程序集版本控制](versioning.md)

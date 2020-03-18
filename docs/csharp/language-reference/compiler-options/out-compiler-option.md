@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970381"
 ---
 # <a name="-out-c-compiler-options"></a>-out（C# 编译器选项）
@@ -24,7 +24,7 @@ ms.locfileid: "70970381"
 -out:filename  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `filename`  
  编译器创建的输出文件的名称。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "70970381"
 csc t.cs -out:mymodule.netmodule -target:module t2.cs  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](./index.md)
 - [友元程序集](../../../standard/assembly/friend.md)

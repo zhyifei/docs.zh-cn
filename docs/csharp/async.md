@@ -6,10 +6,10 @@ ms.date: 06/20/2016
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.openlocfilehash: 38d7c856e9a536db9ef26349175ad440a49f5fe2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713956"
 ---
 # <a name="asynchronous-programming"></a>异步编程
@@ -22,7 +22,7 @@ C# 拥有语言级别的异步编程模型，它使你能轻松编写异步代�
 
 异步编程的核心是 `Task` 和 `Task<T>` 对象，这两个对象对异步操作建模。  它们受关键字 `async` 和 `await` 的支持。  在大多数情况下模型十分简单：
 
-对于 I/O 绑定代码，当你 `await` 一个操作，它将返回 `async` 方法中的一个 `Task` 或 `Task<T>`。
+对于 I/O 绑定代码，当你 `await` 一个操作，它将返回 `Task` 方法中的一个 `Task<T>` 或 `async`。
 
 对于 CPU 绑定代码，当你 `await` 一个操作，它将在后台线程通过 `Task.Run` 方法启动。
 
@@ -74,7 +74,7 @@ calculateButton.Clicked += async (o, e) =>
 };
 ```
 
-就是这么简单！  此代码清楚地表达了按钮的单击事件的目的，它无需手动管理后台线程，而是通过非阻止性的方式来实现。
+这就是所有的操作！  此代码清楚地表达了按钮的单击事件的目的，它无需手动管理后台线程，而是通过非阻止性的方式来实现。
 
 ### <a name="what-happens-under-the-covers"></a>内部原理
 
@@ -106,9 +106,9 @@ calculateButton.Clicked += async (o, e) =>
 
     如果答案为“是”，则你的工作是 **CPU 绑定**。
 
-如果你的工作为 I/O 绑定，请使用 `async` 和 `await`（而不使用 `Task.Run`）   。  不应使用任务并行库  。  相关原因在[深入了解异步的文章](../standard/async-in-depth.md)中说明。
+如果你的工作为 I/O 绑定，请使用 **和**（而不使用 `async`）`await`  `Task.Run`。  不应使用任务并行库  。  相关原因在[深入了解异步的文章](../standard/async-in-depth.md)中说明。
 
-如果你的工作为 CPU 绑定，并且你重视响应能力，请使用 `async` 和 `await`，并在另一个线程上使用 `Task.Run` 生成工作。    如果该工作同时适用于并发和并行，则应考虑使用[任务并行库](../standard/parallel-programming/task-parallel-library-tpl.md)。
+如果你的工作为 CPU 绑定，并且你重视响应能力，请使用 **和**，并在另一个线程上使用 `async` 生成工作。`await`  `Task.Run`  如果该工作同时适用于并发和并行，则应考虑使用[任务并行库](../standard/parallel-programming/task-parallel-library-tpl.md)。
 
 此外，应始终对代码的执行进行测量。  例如，你可能会遇到这样的情况：多线程处理时，上下文切换的开销高于 CPU 绑定工作的开销。  每种选择都有折衷，应根据自身情况选择正确的折衷方案。
 
@@ -218,7 +218,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 
 尽管异步编程相对简单，但应记住一些可避免意外行为的要点。
 
-* `async` 方法需要在主体中有 `await` 关键字，否则它们将永不暂停！  
+* `async` 方法需要在主体中有  **关键字，否则它们将永不暂停！** `await` 
 
 这一点需牢记在心。  如果 `await` 未用在 `async` 方法的主体中，C# 编译器将生成一个警告，但此代码将会以类似普通方法的方式进行编译和运行。  请注意这会导致效率低下，因为由 C# 编译器为异步方法生成的状态机将不会完成任何任务。
 

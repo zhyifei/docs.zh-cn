@@ -3,10 +3,10 @@ title: .NET for Apache Spark 教程
 description: 浏览 .NET for Apache Spark 教程，了解如何将 Apache Spark 集成到 .NET 应用程序中。
 ms.date: 05/17/2019
 ms.openlocfilehash: fde70dfbe5d8c09c4af63ecae5608ff0f3bb2b9b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "72583489"
 ---
 # <a name="net-for-apache-spark-tutorials"></a>.NET for Apache Spark 教程

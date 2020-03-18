@@ -4,10 +4,10 @@ description: 详细了解机器学习和 ML.NET
 ms.topic: reference
 ms.date: 02/25/2020
 ms.openlocfilehash: 2ec58352a310130d6611ed351ea563aeca558f01
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628691"
 ---
 # <a name="mlnet-resources"></a>ML.NET 资源

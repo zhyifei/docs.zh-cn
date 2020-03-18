@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
 ms.openlocfilehash: 24677b145974af03e6ddcac1b9bab5907ab70c7b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69924676"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest（C# 编译器选项）
@@ -24,7 +24,7 @@ ms.locfileid: "69924676"
 -win32manifest: filename  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `filename`  
  自定义清单文件的名称和位置。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69924676"
 </assembly>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](./index.md)
 - [-nowin32manifest（C# 编译器选项）](./nowin32manifest-compiler-option.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
 ms.openlocfilehash: 114fa2973c50be9a4199db9729e3cd9ea6122866
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626524"
 ---
 # <a name="methods-c-programming-guide"></a>方法（C# 编程指南）
@@ -21,7 +21,7 @@ ms.locfileid: "77626524"
 
 ## <a name="method-signatures"></a>方法签名
 
-通过指定访问级别（如 `public` 或 `private`）、可选修饰符（如 `abstract` 或 `sealed`）、返回值、方法的名称以及任何方法参数，在[类](../../language-reference/keywords/class.md)、[结构](../../language-reference/builtin-types/struct.md)或[接口](../interfaces/index.md)中声明方法。 这些部件一起构成方法的签名。
+通过指定访问级别（如 [ 或 ](../../language-reference/keywords/class.md)）、可选修饰符（如 [ 或 ](../../language-reference/builtin-types/struct.md)）、返回值、方法的名称以及任何方法参数，在[类](../interfaces/index.md)、`public`结构`private`或`abstract`接口`sealed`中声明方法。 这些部件一起构成方法的签名。
 
 > [!NOTE]
 > 出于方法重载的目的，方法的返回类型不是方法签名的一部分。 但是在确定委托和它所指向的方法之间的兼容性时，它是方法签名的一部分。
@@ -32,13 +32,13 @@ ms.locfileid: "77626524"
 
 ## <a name="method-access"></a>方法访问
 
-调用对象上的方法就像访问字段。 在对象名之后添加一个句点、方法名和括号。 参数列在括号里，并且用逗号分隔。 因此，可在以下示例中调用 `Motorcycle` 类的方法：
+调用对象上的方法就像访问字段。 在对象名之后添加一个句点、方法名和括号。 自变量列在括号里，并且用逗号分隔。 因此，可在以下示例中调用 `Motorcycle` 类的方法：
 
 [!code-csharp[csProgGuideObjects#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#41)]
 
 ## <a name="method-parameters-vs-arguments"></a>方法形参与实参
 
-该方法定义指定任何所需参数的名称和类型。 调用代码调用该方法时，它为每个参数提供了称为参数的具体值。 参数必须与参数类型兼容，但调用代码中使用的参数名（如果有）不需要与方法中定义的参数名相同。 例如：
+该方法定义指定任何所需参数的名称和类型。 调用代码调用该方法时，它为每个参数提供了称为参数的具体值。 参数必须与参数类型兼容，但调用代码中使用的参数名（如果有）不需要与方法中定义的参数名相同。 例如:
 
 [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]
 
@@ -56,7 +56,7 @@ ms.locfileid: "77626524"
 
 [!code-csharp[csProgGuideObjects#75](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#75)]
 
-该示例执行的内容实质上与先前示例相同，均按值将自变量传递到方法。 但是因为使用了引用类型，结果有所不同。 `ModifyObject` 中所做的对形参 `value` 的 `obj`字段的修改，也会更改 `value` 方法中实参 `rt`的 `TestRefType` 字段。 `TestRefType` 方法显示 33 作为输出。
+该示例执行的内容实质上与先前示例相同，均按值将参数传递到方法。 但是因为使用了引用类型，结果有所不同。 `ModifyObject` 中所做的对形参 `value` 的 `obj`字段的修改，也会更改 `value` 方法中实参 `rt`的 `TestRefType` 字段。 `TestRefType` 方法显示 33 作为输出。
 
 有关如何通过引用和值传递引用类型的详细信息，请参阅[传递引用类型参数](./passing-reference-type-parameters.md)和[引用类型](../../language-reference/keywords/reference-types.md)。
 
@@ -83,7 +83,7 @@ public ref double GetEstimatedDistance()
 
 [!code-csharp[csProgGuideObjects#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#46)]
 
-在这种情况下，使用本地变量 `result`存储值是可选的。 此步骤可以帮助提高代码的可读性，或者如果需要存储该方法整个范围内自变量的原始值，则此步骤可能很有必要。
+在这种情况下，使用本地变量 `result`存储值是可选的。 此步骤可以帮助提高代码的可读性，或者如果需要存储该方法整个范围内参数的原始值，则此步骤可能很有必要。
 
 若要使用按引用从方法返回的值，必须声明 [ref local](ref-returns.md#ref-locals) 变量（如果想要修改其值）。 例如，如果 `Planet.GetEstimatedDistance` 方法按引用返回 <xref:System.Double> 值，则可以将其定义为具有如下所示代码的 ref local 变量：
 
@@ -119,7 +119,7 @@ public static void FillMatrix(int[,] matrix)
 
 通过使用异步功能，你可以调用异步方法而无需使用显式回调，也不需要跨多个方法或 lambda 表达式来手动拆分代码。
 
-如果用 [async](../../language-reference/keywords/async.md) 修饰符标记方法，则可以在该方法中使用 [await](../../language-reference/operators/await.md) 运算符。 当控件到达异步方法中的 await 表达式时，控件将返回到调用方，并在等待任务完成前，方法中进度将一直处于挂起状态。 任务完成后，可以在方法中恢复执行。
+如果用 [async](../../language-reference/keywords/async.md) 修饰符标记方法，则可以使用该方法中的 [await](../../language-reference/operators/await.md) 运算符。 当控件到达异步方法中的 await 表达式时，控件将返回到调用方，并在等待任务完成前，方法中进度将一直处于挂起状态。 任务完成后，可以在方法中恢复执行。
 
 > [!NOTE]
 > 异步方法在遇到第一个尚未完成的 awaited 对象或到达异步方法的末尾时（以先发生者为准），将返回到调用方。
@@ -151,7 +151,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 如果该方法返回 `void` 或是异步方法，则该方法的主体必须是语句表达式（与 lambda 相同）。 对于属性和索引器，两者必须是只读的，并且不使用 `get` 访问器关键字。
 
-## <a name="iterators"></a>Iterators
+## <a name="iterators"></a>迭代器
 
 迭代器对集合执行自定义迭代，如列表或数组。 迭代器使用 [yield return](../../language-reference/keywords/yield.md) 语句返回元素，每次返回一个。 当 [yield return](../../language-reference/keywords/yield.md) 语句到达时，将记住当前在代码中的位置。 下次调用迭代器时，将从该位置重新开始执行。
 
@@ -165,7 +165,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [类和结构](index.md)

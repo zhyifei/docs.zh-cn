@@ -4,10 +4,10 @@ description: 介绍 C# 对弃元的支持（弃元是未赋值的可丢弃变量
 ms.technology: csharp-fundamentals
 ms.date: 07/21/2017
 ms.openlocfilehash: a76e7fc13f92ec0de87153bb35eb3924bb317616
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73100643"
 ---
 # <a name="discards---c-guide"></a>弃元 - C# 指南
@@ -67,15 +67,15 @@ ms.locfileid: "73100643"
 
 请注意，`_` 也是有效标识符。 当在支持的上下文之外使用时，`_` 不视为占位符，而视为有效变量。 如果名为 `_` 的标识符已在范围内，则使用 `_` 作为独立占位符可能导致：
 
-- 将预期的占位符的值赋给范围内 `_` 变量，会导致该变量的值被意外修改。 例如:
+- 将预期的占位符的值赋给范围内 `_` 变量，会导致该变量的值被意外修改。 例如：
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
 
-- 因违反类型安全而发生的编译器错误。 例如:
+- 因违反类型安全而发生的编译器错误。 例如：
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
 
-- 编译器错误 CS0136：“无法在此范围中声明名为“\_”的局部变量或参数，因为该名称用于在封闭的局部范围中定义局部变量或参数”。 例如:
+- 编译器错误 CS0136：“无法在此范围中声明名为“\_”的局部变量或参数，因为该名称用于在封闭的局部范围中定义局部变量或参数”。 例如：
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 

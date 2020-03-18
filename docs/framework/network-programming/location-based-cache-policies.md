@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
 ms.openlocfilehash: e6896452fce89f69b40f1d03332355df72d93211
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047668"
 ---
 # <a name="location-based-cache-policies"></a>基于位置的缓存策略
@@ -46,7 +46,7 @@ ms.locfileid: "71047668"
 ## <a name="revalidate-policy"></a>重新验证策略  
  将缓存中的资源副本与服务器上的副本进行比较。 如果服务器上的副本较新，则用它来满足请求并替换缓存中的副本。 如果缓存中的副本与服务器副本相同，则使用缓存副本。 在 HTTP 缓存协议中，这是通过条件请求来实现的。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [网络应用程序的缓存管理](cache-management-for-network-applications.md)
 - [缓存策略](cache-policy.md)

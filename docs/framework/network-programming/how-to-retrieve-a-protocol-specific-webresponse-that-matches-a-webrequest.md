@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d8c90785-f16b-42a5-8439-ed2f731b2ba8
 ms.openlocfilehash: 0cb2d11306f52df767d8c053e8ab745696bb8e47
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048139"
 ---
 # <a name="how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest"></a>如何：检索与 WebRequest 匹配的特定于协议的 WebResponse
@@ -32,6 +32,6 @@ Dim resp As WebResponse = req.GetResponse()
   
 - 引用 System.Net 命名空间  。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [请求数据](requesting-data.md)

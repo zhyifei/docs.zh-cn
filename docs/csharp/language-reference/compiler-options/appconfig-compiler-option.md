@@ -9,10 +9,10 @@ helpviewer_keywords:
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
 ms.openlocfilehash: 7a7e8e61f65704a2e99385a1be320048d950324c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69922522"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig（C# 编译器选项）
@@ -24,14 +24,14 @@ ms.locfileid: "69922522"
 -appconfig:file  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `file`  
  必需。 包含程序集绑定设置的应用程序配置文件。  
   
 ## <a name="remarks"></a>备注  
  -appconfig 的一种用途是处理高级情形；在该情形中，程序集必须同时引用特定引用程序集的 .NET Framework 版本和 .NET Framework for Silverlight 版本  。 例如，在 Windows Presentation Foundation (WPF) 中编写的 XAML 设计器可能需要为设计器用户界面引用 WPF 桌面以及随附于 Silverlight 的 WPF 子集。 同一设计器程序集必须访问这两个程序集。 默认情况下，单独引用会导致编译器错误，因为程序集绑定将这两个程序集视为等效。  
   
- 通过使用 -appconfig 编译器选项，可通过使用 `<supportPortability>` 标记指定某个 app.config 文件的位置，该文件会禁用默认行为，如以下示例所示  。  
+ 通过使用 -appconfig 编译器选项，可通过使用  **标记指定某个 app.config 文件的位置，该文件会禁用默认行为，如以下示例所示**`<supportPortability>`。  
   
  `<supportPortability PKT="7cec85d7bea7798e" enable="false"/>`  
   
@@ -54,7 +54,7 @@ ms.locfileid: "69922522"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [\<supportPortability> 元素](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)
 - [按字母顺序列出的 C# 编译器选项](./listed-alphabetically.md)

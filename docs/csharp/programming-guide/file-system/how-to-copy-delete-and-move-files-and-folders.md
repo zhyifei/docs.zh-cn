@@ -5,14 +5,14 @@ helpviewer_keywords:
 - I/O [C#]
 ms.assetid: 62e52cd7-9597-4e4a-acf9-1315f5cdbf05
 ms.openlocfilehash: 662f0ab3b9e69aa8bfb0085f42f577b850029e4d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712268"
 ---
 # <a name="how-to-copy-delete-and-move-files-and-folders-c-programming-guide"></a>如何复制、删除和移动文件和文件夹（C# 编程指南）
-以下示例演示如何从 <xref:System.IO?displayProperty=nameWithType> 命名空间使用 <xref:System.IO.File?displayProperty=nameWithType>、<xref:System.IO.Directory?displayProperty=nameWithType>、<xref:System.IO.FileInfo?displayProperty=nameWithType> 和 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 类以同步方式复制、移动和删除文件与文件夹。 这些示例未提供进度栏或其他任何用户界面。 如果希望提供一个标准进度对话框，请参阅[如何提供文件操作进度对话框](how-to-provide-a-progress-dialog-box-for-file-operations.md)。  
+以下示例演示如何从 <xref:System.IO.File?displayProperty=nameWithType> 命名空间使用 <xref:System.IO.Directory?displayProperty=nameWithType>、<xref:System.IO.FileInfo?displayProperty=nameWithType>、<xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 和 <xref:System.IO?displayProperty=nameWithType> 类以同步方式复制、移动和删除文件与文件夹。 这些示例未提供进度栏或其他任何用户界面。 如果希望提供一个标准进度对话框，请参阅[如何提供文件操作进度对话框](how-to-provide-a-progress-dialog-box-for-file-operations.md)。  
   
  操作多个文件时，请使用 <xref:System.IO.FileSystemWatcher?displayProperty=nameWithType> 提供事件，以便可以计算进度。 另一种方法是使用平台调用来调用 Windows Shell 中相应的文件相关方法。 有关如何异步执行这些文件操作的信息，请参阅[异步文件 I/O](../../../standard/io/asynchronous-file-i-o.md)。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75712268"
   
  [!code-csharp[csFilesandFolders#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#9)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C# 编程指南](../index.md)
