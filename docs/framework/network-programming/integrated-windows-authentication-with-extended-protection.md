@@ -3,10 +3,10 @@ title: 带有扩展保护的集成 Windows 身份验证
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
 ms.openlocfilehash: c4afc008f600c9be0040f8d7623f5e20623dfd7d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74444243"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>带有扩展保护的集成 Windows 身份验证
@@ -88,30 +88,30 @@ ms.locfileid: "74444243"
   
 - 新的 <xref:System.Net.TransportContext> 类添加到表示传输上下文的 <xref:System.Net> 命名空间。  
   
-- 在 <xref:System.Net.HttpWebRequest> 类中新增 <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> 和 <xref:System.Net.HttpWebRequest.GetRequestStream%2A> 重载方法，允许检索 <xref:System.Net.TransportContext> 以支持客户端应用程序的扩展保护。  
+- 在 <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> 类中新增 <xref:System.Net.HttpWebRequest.GetRequestStream%2A> 和 <xref:System.Net.HttpWebRequest> 重载方法，允许检索 <xref:System.Net.TransportContext> 以支持客户端应用程序的扩展保护。  
   
 - 对 <xref:System.Net.HttpListener> 和 <xref:System.Net.HttpListenerRequest> 类进行添加补充以支持服务器应用程序。  
   
  进行了功能更改，为现有 <xref:System.Net.Mail> 命名空间中的 SMTP 客户端应用程序提供扩展保护支持：  
   
-- <xref:System.Net.Mail.SmtpClient> 类中的 <xref:System.Net.Mail.SmtpClient.TargetName%2A> 属性，在为 SMTP 客户端应用程序使用扩展保护时表示用于身份验证的 SPN。  
+- <xref:System.Net.Mail.SmtpClient.TargetName%2A> 类中的 <xref:System.Net.Mail.SmtpClient> 属性，在为 SMTP 客户端应用程序使用扩展保护时表示用于身份验证的 SPN。  
   
  进行了大量的功能更改来支持现有 <xref:System.Net.Security> 命名空间中的扩展保护。 包括以下更改：  
   
-- 在 <xref:System.Net.Security.NegotiateStream> 类中新增 <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> 和 <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> 重载方法，允许传递 CBT 来支持客户端应用程序的扩展保护。  
+- 在 <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> 类中新增 <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> 和 <xref:System.Net.Security.NegotiateStream> 重载方法，允许传递 CBT 来支持客户端应用程序的扩展保护。  
   
-- 在 <xref:System.Net.Security.NegotiateStream> 类中新增 <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> 和 <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> 重载方法，允许传递 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 来支持服务器应用程序的扩展保护。  
+- 在 <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> 类中新增 <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> 和 <xref:System.Net.Security.NegotiateStream> 重载方法，允许传递 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 来支持服务器应用程序的扩展保护。  
   
-- 在 <xref:System.Net.Security.SslStream> 类中新增 <xref:System.Net.Security.SslStream.TransportContext%2A> 属性来支持客户端和服务器应用程序的扩展保护。  
+- 在 <xref:System.Net.Security.SslStream.TransportContext%2A> 类中新增 <xref:System.Net.Security.SslStream> 属性来支持客户端和服务器应用程序的扩展保护。  
   
  添加了 <xref:System.Net.Configuration.SmtpNetworkElement> 属性以支持在 <xref:System.Net.Security> 命名空间中为 SMTP 客户端配置扩展保护。  
   
 ## <a name="extended-protection-for-client-applications"></a>客户端应用程序的扩展保护  
  大多数客户端应用程序的扩展保护支持会自动发生。 只要 Windows 的基础版本支持扩展保护，<xref:System.Net.HttpWebRequest> 和 <xref:System.Net.Mail.SmtpClient> 类就支持扩展保护。 <xref:System.Net.HttpWebRequest> 实例发送从 <xref:System.Uri> 构造的 SPN。 默认情况下，<xref:System.Net.Mail.SmtpClient> 实例发送从 SMTP 邮件服务器的主机名构造的 SPN。  
   
- 对于自定义身份验证，客户端应用程序可以使用 <xref:System.Net.HttpWebRequest> 类中的 <xref:System.Net.HttpWebRequest.EndGetRequestStream%28System.IAsyncResult%2CSystem.Net.TransportContext%40%29?displayProperty=nameWithType> 或 <xref:System.Net.HttpWebRequest.GetRequestStream%28System.Net.TransportContext%40%29?displayProperty=nameWithType> 方法，允许使用 <xref:System.Net.TransportContext.GetChannelBinding%2A> 方法来检索 <xref:System.Net.TransportContext> 和 CBT。  
+ 对于自定义身份验证，客户端应用程序可以使用 <xref:System.Net.HttpWebRequest.EndGetRequestStream%28System.IAsyncResult%2CSystem.Net.TransportContext%40%29?displayProperty=nameWithType> 类中的 <xref:System.Net.HttpWebRequest.GetRequestStream%28System.Net.TransportContext%40%29?displayProperty=nameWithType> 或 <xref:System.Net.HttpWebRequest> 方法，允许使用 <xref:System.Net.TransportContext> 方法来检索 <xref:System.Net.TransportContext.GetChannelBinding%2A> 和 CBT。  
   
- 通过设置 <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> 属性，可重写 <xref:System.Net.HttpWebRequest> 实例向给定服务发送集成式身份验证所用的 SPN。  
+ 通过设置 <xref:System.Net.HttpWebRequest> 属性，可重写 <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> 实例向给定服务发送集成式身份验证所用的 SPN。  
   
  <xref:System.Net.Mail.SmtpClient.TargetName%2A> 属性可用来设置用于 SMTP 连接的集成式 Windows 身份验证的自定义 SPN。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "74444243"
   
  这些扩展保护功能也可由服务器应用程序用于其他请求类型的、使用了受信任代理时的身份验证。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Security.Authentication.ExtendedProtection>
 - <xref:System.Security.Authentication.ExtendedProtection.Configuration>
