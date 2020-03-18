@@ -3,26 +3,26 @@ title: 如何从多个源填充对象集合 (LINQ) (C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
 ms.openlocfilehash: 3d841e5ca25afde94674af0fedc9a824c382be5b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345758"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a><span data-ttu-id="1457e-102">如何从多个源填充对象集合 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="1457e-102">How to populate object collections from multiple sources (LINQ) (C#)</span></span>
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a><span data-ttu-id="0e619-102">如何从多个源填充对象集合 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="0e619-102">How to populate object collections from multiple sources (LINQ) (C#)</span></span>
 
-<span data-ttu-id="1457e-103">本示例演示如何将来自不同源的数据合并到一系列新的类型。</span><span class="sxs-lookup"><span data-stu-id="1457e-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>
+<span data-ttu-id="0e619-103">本示例演示如何将来自不同源的数据合并到一系列新的类型。</span><span class="sxs-lookup"><span data-stu-id="0e619-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="1457e-104">请勿尝试将内存中数据或文件系统中的数据与仍在数据库中的数据进行联接。</span><span class="sxs-lookup"><span data-stu-id="1457e-104">Don't try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="1457e-105">这种跨域联接可能产生未定义的结果，因为可能为数据库查询和其他类型的源定义了联接操作的不同方式。</span><span class="sxs-lookup"><span data-stu-id="1457e-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="1457e-106">此外，如果数据库中的数据量足够大，这样的操作还存在可能导致内存不足的异常的风险。</span><span class="sxs-lookup"><span data-stu-id="1457e-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="1457e-107">若要将数据库中的数据联接到内存数据，首先对数据库查询调用 `ToList` 或 `ToArray`，然后对返回的集合执行联接。</span><span class="sxs-lookup"><span data-stu-id="1457e-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>
+> <span data-ttu-id="0e619-104">请勿尝试将内存中数据或文件系统中的数据与仍在数据库中的数据进行联接。</span><span class="sxs-lookup"><span data-stu-id="0e619-104">Don't try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="0e619-105">这种跨域联接可能产生未定义的结果，因为可能为数据库查询和其他类型的源定义了联接操作的不同方式。</span><span class="sxs-lookup"><span data-stu-id="0e619-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="0e619-106">此外，如果数据库中的数据量足够大，这样的操作还存在可能导致内存不足的异常的风险。</span><span class="sxs-lookup"><span data-stu-id="0e619-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="0e619-107">若要将数据库中的数据联接到内存数据，首先对数据库查询调用 `ToList` 或 `ToArray`，然后对返回的集合执行联接。</span><span class="sxs-lookup"><span data-stu-id="0e619-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>
 
-## <a name="to-create-the-data-file"></a><span data-ttu-id="1457e-108">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="1457e-108">To create the data file</span></span>
+## <a name="to-create-the-data-file"></a><span data-ttu-id="0e619-108">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="0e619-108">To create the data file</span></span>
 
-<span data-ttu-id="1457e-109">按照[如何联接不同文件中的内容 (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) 中的说明，将 names.csv 和 scores.csv 文件复制到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="1457e-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to join content from dissimilar files (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md).</span></span>
+<span data-ttu-id="0e619-109">按照[如何联接不同文件中的内容 (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) 中的说明，将 names.csv 和 scores.csv 文件复制到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="0e619-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to join content from dissimilar files (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="1457e-110">示例</span><span class="sxs-lookup"><span data-stu-id="1457e-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="0e619-110">示例</span><span class="sxs-lookup"><span data-stu-id="0e619-110">Example</span></span>
 
-<span data-ttu-id="1457e-111">下面的示例演示如何使用命名类型 `Student` 存储来自两个内存字符串集合（模拟 .csv 格式的电子表格数据）的合并数据。</span><span class="sxs-lookup"><span data-stu-id="1457e-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="1457e-112">第一个字符串集合代表学生姓名和 ID，第二个集合代表学生 ID（在第一列）和四次考试分数。</span><span class="sxs-lookup"><span data-stu-id="1457e-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="1457e-113">此 ID 用作外键。</span><span class="sxs-lookup"><span data-stu-id="1457e-113">The ID is used as the foreign key.</span></span>
+<span data-ttu-id="0e619-111">下面的示例演示如何使用命名类型 `Student` 存储来自两个内存字符串集合（模拟 .csv 格式的电子表格数据）的合并数据。</span><span class="sxs-lookup"><span data-stu-id="0e619-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="0e619-112">第一个字符串集合代表学生姓名和 ID，第二个集合代表学生 ID（在第一列）和四次考试分数。</span><span class="sxs-lookup"><span data-stu-id="0e619-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="0e619-113">此 ID 用作外键。</span><span class="sxs-lookup"><span data-stu-id="0e619-113">The ID is used as the foreign key.</span></span>
 
 ```csharp
 using System;
@@ -107,9 +107,9 @@ class PopulateCollection
  */
 ```
 
-<span data-ttu-id="1457e-114">在 [select](../../../language-reference/keywords/select-clause.md) 子句中，对象初始值设定项使用来自两个源的数据实例化每个新的 `Student` 对象。</span><span class="sxs-lookup"><span data-stu-id="1457e-114">In the [select](../../../language-reference/keywords/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>
+<span data-ttu-id="0e619-114">在 [select](../../../language-reference/keywords/select-clause.md) 子句中，对象初始值设定项使用来自两个源的数据实例化每个新的 `Student` 对象。</span><span class="sxs-lookup"><span data-stu-id="0e619-114">In the [select](../../../language-reference/keywords/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>
 
-<span data-ttu-id="1457e-115">如果不需要存储查询的结果，那么和命名类型相比，匿名类型使用起来更方便。</span><span class="sxs-lookup"><span data-stu-id="1457e-115">If you don't have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="1457e-116">如果在执行查询的方法外部传递查询结果，则需要使用命名类型。</span><span class="sxs-lookup"><span data-stu-id="1457e-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="1457e-117">下面的示例执行与前面示例相同的任务，但使用的是匿名类型，而不是命名类型：</span><span class="sxs-lookup"><span data-stu-id="1457e-117">The following example executes the same task as the previous example, but uses anonymous types instead of named types:</span></span>
+<span data-ttu-id="0e619-115">如果不需要存储查询的结果，那么和命名类型相比，匿名类型使用起来更方便。</span><span class="sxs-lookup"><span data-stu-id="0e619-115">If you don't have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="0e619-116">如果在执行查询的方法外部传递查询结果，则需要使用命名类型。</span><span class="sxs-lookup"><span data-stu-id="0e619-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="0e619-117">下面的示例执行与前面示例相同的任务，但使用的是匿名类型，而不是命名类型：</span><span class="sxs-lookup"><span data-stu-id="0e619-117">The following example executes the same task as the previous example, but uses anonymous types instead of named types:</span></span>
 
 ```csharp
 // Merge the data sources by using an anonymous type.
@@ -139,8 +139,8 @@ foreach (var student in queryNamesScores2)
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="1457e-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="1457e-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0e619-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0e619-118">See also</span></span>
 
-- [<span data-ttu-id="1457e-119">LINQ 和字符串 (C#)</span><span class="sxs-lookup"><span data-stu-id="1457e-119">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="1457e-120">对象和集合初始值设定项</span><span class="sxs-lookup"><span data-stu-id="1457e-120">Object and Collection Initializers</span></span>](../../classes-and-structs/object-and-collection-initializers.md)
-- [<span data-ttu-id="1457e-121">匿名类型</span><span class="sxs-lookup"><span data-stu-id="1457e-121">Anonymous Types</span></span>](../../classes-and-structs/anonymous-types.md)
+- [<span data-ttu-id="0e619-119">LINQ 和字符串 (C#)</span><span class="sxs-lookup"><span data-stu-id="0e619-119">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="0e619-120">对象和集合初始值设定项</span><span class="sxs-lookup"><span data-stu-id="0e619-120">Object and Collection Initializers</span></span>](../../classes-and-structs/object-and-collection-initializers.md)
+- [<span data-ttu-id="0e619-121">匿名类型</span><span class="sxs-lookup"><span data-stu-id="0e619-121">Anonymous Types</span></span>](../../classes-and-structs/anonymous-types.md)

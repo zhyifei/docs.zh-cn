@@ -2,17 +2,17 @@
 title: 如何对某个词在字符串中出现的次数进行计数 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: 0411b0c17b57a49e031f078412b9e45692c619fe
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 9c3ac2e0d44d52e437586a4d105a022f75c1dc54
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141339"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169320"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a><span data-ttu-id="d689b-102">如何对某个词在字符串中出现的次数进行计数 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="d689b-102">How to count occurrences of a word in a string (LINQ) (C#)</span></span>
-<span data-ttu-id="d689b-103">此示例演示如何使用 LINQ 查询对指定词在字符串中出现的次数进行计数。</span><span class="sxs-lookup"><span data-stu-id="d689b-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="d689b-104">请注意，若要执行计数，首先需调用 <xref:System.String.Split%2A> 方法来创建词数组。</span><span class="sxs-lookup"><span data-stu-id="d689b-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="d689b-105"><xref:System.String.Split%2A> 方法存在性能开销。</span><span class="sxs-lookup"><span data-stu-id="d689b-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="d689b-106">如果只需要统计字符串的字数，则应考虑改用 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 或 <xref:System.String.IndexOf%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="d689b-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="d689b-107">但是，如果性能不是关键问题，或者已拆分句子以对其执行其他类型的查询，则使用 LINQ 来计数词或短语同样有意义。</span><span class="sxs-lookup"><span data-stu-id="d689b-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a><span data-ttu-id="db0ce-102">如何对某个词在字符串中出现的次数进行计数 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="db0ce-102">How to count occurrences of a word in a string (LINQ) (C#)</span></span>
+<span data-ttu-id="db0ce-103">此示例演示如何使用 LINQ 查询对指定词在字符串中出现的次数进行计数。</span><span class="sxs-lookup"><span data-stu-id="db0ce-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="db0ce-104">请注意，若要执行计数，首先需调用 <xref:System.String.Split%2A> 方法来创建词数组。</span><span class="sxs-lookup"><span data-stu-id="db0ce-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="db0ce-105"><xref:System.String.Split%2A> 方法存在性能开销。</span><span class="sxs-lookup"><span data-stu-id="db0ce-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="db0ce-106">如果只需要统计字符串的字数，则应考虑改用 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 或 <xref:System.String.IndexOf%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="db0ce-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="db0ce-107">但是，如果性能不是关键问题，或者已拆分句子以对其执行其他类型的查询，则使用 LINQ 来计数词或短语同样有意义。</span><span class="sxs-lookup"><span data-stu-id="db0ce-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d689b-108">示例</span><span class="sxs-lookup"><span data-stu-id="d689b-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="db0ce-108">示例</span><span class="sxs-lookup"><span data-stu-id="db0ce-108">Example</span></span>  
   
 ```csharp  
 class CountWords  
@@ -35,7 +35,7 @@ class CountWords
         //Convert the string into an array of words  
         string[] source = text.Split(new char[] { '.', '?', '!', ' ', ';', ':', ',' }, StringSplitOptions.RemoveEmptyEntries);  
   
-        // Create the query.  Use ToLowerInvariant to match "data" and "Data"   
+        // Create the query.  Use ToLowerInvariant to match "data" and "Data"
         var matchQuery = from word in source  
                          where word.ToLowerInvariant() == searchTerm.ToLowerInvariant()  
                          select word;  
@@ -54,9 +54,9 @@ class CountWords
 */  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="d689b-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="d689b-109">Compiling the Code</span></span>  
- <span data-ttu-id="d689b-110">使用 System.Linq 和 System.IO 命名空间的 `using` 指令创建 C# 控制台应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="d689b-110">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="db0ce-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="db0ce-109">Compiling the Code</span></span>  
+ <span data-ttu-id="db0ce-110">使用 System.Linq 和 System.IO 命名空间的 `using` 指令创建 C# 控制台应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="db0ce-110">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d689b-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="d689b-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="db0ce-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="db0ce-111">See also</span></span>
 
-- [<span data-ttu-id="d689b-112">LINQ 和字符串 (C#)</span><span class="sxs-lookup"><span data-stu-id="d689b-112">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="db0ce-112">LINQ 和字符串 (C#)</span><span class="sxs-lookup"><span data-stu-id="db0ce-112">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
