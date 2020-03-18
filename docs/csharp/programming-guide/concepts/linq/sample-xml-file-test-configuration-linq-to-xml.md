@@ -3,16 +3,16 @@ title: 示例 XML 文件：测试配置 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 45bfb509-c1d4-4b4f-9690-1cb0c9816516
 ms.openlocfilehash: 713e0b69ea896d9f4198ae68f1a3a258d74f24f4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66487231"
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="5093d-102">示例 XML 文件：测试配置 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="5093d-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
-<span data-ttu-id="5093d-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="5093d-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="5093d-104">这是一个测试配置文件。</span><span class="sxs-lookup"><span data-stu-id="5093d-104">This is a test configuration file.</span></span>  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="839f9-102">示例 XML 文件：测试配置 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="839f9-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="839f9-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="839f9-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="839f9-104">这是一个测试配置文件。</span><span class="sxs-lookup"><span data-stu-id="839f9-104">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a><span data-ttu-id="5093d-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="5093d-105">TestConfig.xml</span></span>  
+## <a name="testconfigxml"></a><span data-ttu-id="839f9-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="839f9-105">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  

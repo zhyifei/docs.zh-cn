@@ -1,41 +1,41 @@
 ---
 ms.openlocfilehash: d207a937917da78f6b902ad8ca4f02fa9a46c2e1
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76116363"
 ---
-### <a name="types-in-microsoftvisualbasicmyservices-namespace-not-available"></a><span data-ttu-id="2c3c6-101">Microsoft.VisualBasic.MyServices 命名空间中的类型不可用</span><span class="sxs-lookup"><span data-stu-id="2c3c6-101">Types in Microsoft.VisualBasic.MyServices namespace not available</span></span>
+### <a name="types-in-microsoftvisualbasicmyservices-namespace-not-available"></a><span data-ttu-id="08fdf-101">Microsoft.VisualBasic.MyServices 命名空间中的类型不可用</span><span class="sxs-lookup"><span data-stu-id="08fdf-101">Types in Microsoft.VisualBasic.MyServices namespace not available</span></span>
 
-<span data-ttu-id="2c3c6-102"><xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> 命名空间中的类型不可用。</span><span class="sxs-lookup"><span data-stu-id="2c3c6-102">The types in the <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> namespace are not available.</span></span>
+<span data-ttu-id="08fdf-102"><xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> 命名空间中的类型不可用。</span><span class="sxs-lookup"><span data-stu-id="08fdf-102">The types in the <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> namespace are not available.</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="2c3c6-103">引入的版本</span><span class="sxs-lookup"><span data-stu-id="2c3c6-103">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="08fdf-103">引入的版本</span><span class="sxs-lookup"><span data-stu-id="08fdf-103">Version introduced</span></span>
 
-<span data-ttu-id="2c3c6-104">.NET Core 3.0 预览版 8</span><span class="sxs-lookup"><span data-stu-id="2c3c6-104">.NET Core 3.0 Preview 8</span></span>
+<span data-ttu-id="08fdf-104">.NET Core 3.0 预览版 8</span><span class="sxs-lookup"><span data-stu-id="08fdf-104">.NET Core 3.0 Preview 8</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="2c3c6-105">更改描述</span><span class="sxs-lookup"><span data-stu-id="2c3c6-105">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="08fdf-105">更改描述</span><span class="sxs-lookup"><span data-stu-id="08fdf-105">Change description</span></span>
 
-<span data-ttu-id="2c3c6-106"><xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> 中的类型之前在某些 .NET Core 3.0 预览版本中可用。</span><span class="sxs-lookup"><span data-stu-id="2c3c6-106">The types in the <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> namespace were available in some .NET Core 3.0 Preview releases.</span></span> <span data-ttu-id="2c3c6-107">自 NET Core 3.0 预览版 9 起，它们不再可用。</span><span class="sxs-lookup"><span data-stu-id="2c3c6-107">They are no longer available starting with .NET Core 3.0 Preview 9.</span></span>
+<span data-ttu-id="08fdf-106"><xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> 中的类型之前在某些 .NET Core 3.0 预览版本中可用。</span><span class="sxs-lookup"><span data-stu-id="08fdf-106">The types in the <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> namespace were available in some .NET Core 3.0 Preview releases.</span></span> <span data-ttu-id="08fdf-107">自 NET Core 3.0 预览版 9 起，它们不再可用。</span><span class="sxs-lookup"><span data-stu-id="08fdf-107">They are no longer available starting with .NET Core 3.0 Preview 9.</span></span>
 
-<span data-ttu-id="2c3c6-108">已删除这些类型，以避免在后续版本中出现不必要的程序集依赖项或中断性变更。</span><span class="sxs-lookup"><span data-stu-id="2c3c6-108">The types were removed to avoid unnecessary assembly dependencies or breaking changes in subsequent releases.</span></span>
+<span data-ttu-id="08fdf-108">已删除这些类型，以避免在后续版本中出现不必要的程序集依赖项或中断性变更。</span><span class="sxs-lookup"><span data-stu-id="08fdf-108">The types were removed to avoid unnecessary assembly dependencies or breaking changes in subsequent releases.</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="2c3c6-109">建议操作</span><span class="sxs-lookup"><span data-stu-id="2c3c6-109">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="08fdf-109">建议操作</span><span class="sxs-lookup"><span data-stu-id="08fdf-109">Recommended action</span></span>
 
-<span data-ttu-id="2c3c6-110">如果你的代码依赖于对 Microsoft.VisualBasic.MyServices 类型及其成员的使用，可使用 .NET 类库中的相应类型和成员  。</span><span class="sxs-lookup"><span data-stu-id="2c3c6-110">If your code depends on the use of **Microsoft.VisualBasic.MyServices** types and their members, there are corresponding types and members in the .NET class library.</span></span> <span data-ttu-id="2c3c6-111">下面是 Microsoft.VisualBasic.MyServices 到其等效 .NET 类库类型的映射  ：</span><span class="sxs-lookup"><span data-stu-id="2c3c6-111">The following is a mapping of  **Microsoft.VisualBasic.MyServices** types to their equivalent .NET class library types:</span></span>
+<span data-ttu-id="08fdf-110">如果你的代码依赖于对 Microsoft.VisualBasic.MyServices 类型及其成员的使用，可使用 .NET 类库中的相应类型和成员  。</span><span class="sxs-lookup"><span data-stu-id="08fdf-110">If your code depends on the use of **Microsoft.VisualBasic.MyServices** types and their members, there are corresponding types and members in the .NET class library.</span></span> <span data-ttu-id="08fdf-111">下面是 Microsoft.VisualBasic.MyServices 到其等效 .NET 类库类型的映射  ：</span><span class="sxs-lookup"><span data-stu-id="08fdf-111">The following is a mapping of  **Microsoft.VisualBasic.MyServices** types to their equivalent .NET class library types:</span></span>
 
-|<span data-ttu-id="2c3c6-112">Microsoft.VisualBasic.MyServices 类型</span><span class="sxs-lookup"><span data-stu-id="2c3c6-112">Microsoft.VisualBasic.MyServices type</span></span>|<span data-ttu-id="2c3c6-113">.NET 类库类型</span><span class="sxs-lookup"><span data-stu-id="2c3c6-113">.NET class library type</span></span>|
+|<span data-ttu-id="08fdf-112">Microsoft.VisualBasic.MyServices 类型</span><span class="sxs-lookup"><span data-stu-id="08fdf-112">Microsoft.VisualBasic.MyServices type</span></span>|<span data-ttu-id="08fdf-113">.NET 类库类型</span><span class="sxs-lookup"><span data-stu-id="08fdf-113">.NET class library type</span></span>|
 |--|--|
-|<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>|<span data-ttu-id="2c3c6-114"><xref:System.Windows.Clipboard?displayProperty=nameWithType> 用于 WPF 应用程序，<xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> 用于 Windows 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="2c3c6-114"><xref:System.Windows.Clipboard?displayProperty=nameWithType> for WPF applications, <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> for Windows Forms applications</span></span>|
-|<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy>|<span data-ttu-id="2c3c6-115"><xref:System.IO> 命名空间中的类型</span><span class="sxs-lookup"><span data-stu-id="2c3c6-115">Types in the <xref:System.IO> namespace</span></span>|
-|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>|<span data-ttu-id="2c3c6-116"><xref:Microsoft.Win32> 命名空间中与注册表相关的类型</span><span class="sxs-lookup"><span data-stu-id="2c3c6-116">Registry-related types in the <xref:Microsoft.Win32> namespace</span></span>|
+|<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>|<span data-ttu-id="08fdf-114"><xref:System.Windows.Clipboard?displayProperty=nameWithType> 用于 WPF 应用程序，<xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> 用于 Windows 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="08fdf-114"><xref:System.Windows.Clipboard?displayProperty=nameWithType> for WPF applications, <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> for Windows Forms applications</span></span>|
+|<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy>|<span data-ttu-id="08fdf-115"><xref:System.IO> 命名空间中的类型</span><span class="sxs-lookup"><span data-stu-id="08fdf-115">Types in the <xref:System.IO> namespace</span></span>|
+|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>|<span data-ttu-id="08fdf-116"><xref:Microsoft.Win32> 命名空间中与注册表相关的类型</span><span class="sxs-lookup"><span data-stu-id="08fdf-116">Registry-related types in the <xref:Microsoft.Win32> namespace</span></span>|
 |<xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy>|<xref:System.Environment.GetFolderPath%2A?displayProperty=nameWithType>|
 
-#### <a name="category"></a><span data-ttu-id="2c3c6-117">类别</span><span class="sxs-lookup"><span data-stu-id="2c3c6-117">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="08fdf-117">类别</span><span class="sxs-lookup"><span data-stu-id="08fdf-117">Category</span></span>
 
-<span data-ttu-id="2c3c6-118">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2c3c6-118">Visual Basic</span></span>
+<span data-ttu-id="08fdf-118">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="08fdf-118">Visual Basic</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="2c3c6-119">受影响的 API</span><span class="sxs-lookup"><span data-stu-id="2c3c6-119">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="08fdf-119">受影响的 API</span><span class="sxs-lookup"><span data-stu-id="08fdf-119">Affected APIs</span></span>
 
 - <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName>
 

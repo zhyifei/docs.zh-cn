@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: 2e974d277d6659aaada321b2a7e7a604df78a7bd
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 3b7309347c643d89a28331c6ef3cac36085a969a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858647"
 ---
-### <a name="wpf-windows-are-rendered-without-clipping-when-extending-outside-a-single-monitor"></a><span data-ttu-id="07927-101">当 WPF 窗口超出单个显示屏时，会不经剪辑就呈现该窗口</span><span class="sxs-lookup"><span data-stu-id="07927-101">WPF windows are rendered without clipping when extending outside a single monitor</span></span>
+### <a name="wpf-windows-are-rendered-without-clipping-when-extending-outside-a-single-monitor"></a><span data-ttu-id="eff41-101">当 WPF 窗口超出单个显示屏时，会不经剪辑就呈现该窗口</span><span class="sxs-lookup"><span data-stu-id="eff41-101">WPF windows are rendered without clipping when extending outside a single monitor</span></span>
 
 |   |   |
 |---|---|
-|<span data-ttu-id="07927-102">详细信息</span><span class="sxs-lookup"><span data-stu-id="07927-102">Details</span></span>|<span data-ttu-id="07927-103">在 Windows 8 及更高版本上运行的 .NET Framework 4.6 中，当一个窗口超出多监视器方案中的单个显示屏时，会不经剪辑就呈现整个窗口。</span><span class="sxs-lookup"><span data-stu-id="07927-103">In the .NET Framework 4.6 running on Windows 8 and above, the entire window is rendered without clipping when it extends outside of single display in a multi-monitor scenario.</span></span> <span data-ttu-id="07927-104">这与先前版本的 .NET Framework 不同，以前的版本在 WPF 窗口超出单个显示屏时会剪辑该窗口。</span><span class="sxs-lookup"><span data-stu-id="07927-104">This is different from previous versions of the .NET Framework which would clip WPF windows that extended beyond a single display.</span></span>|
-|<span data-ttu-id="07927-105">建议</span><span class="sxs-lookup"><span data-stu-id="07927-105">Suggestion</span></span>|<span data-ttu-id="07927-106">可以使用应用程序的配置文件中的 <code>&lt;appSettings&gt;</code> 的 <code>&lt;EnableMultiMonitorDisplayClipping&gt;</code> 元素，或在应用启动时设置 <code>EnableMultiMonitorDisplayClipping</code> 属性，显式设置此行为（无论剪辑与否）。</span><span class="sxs-lookup"><span data-stu-id="07927-106">This behavior (whether to clip or not) can be explicitly set using the <code>&lt;EnableMultiMonitorDisplayClipping&gt;</code> element in <code>&lt;appSettings&gt;</code> in an application's configuration file, or by setting the <code>EnableMultiMonitorDisplayClipping</code> property at app startup.</span></span>|
-|<span data-ttu-id="07927-107">范围</span><span class="sxs-lookup"><span data-stu-id="07927-107">Scope</span></span>|<span data-ttu-id="07927-108">次要</span><span class="sxs-lookup"><span data-stu-id="07927-108">Minor</span></span>|
-|<span data-ttu-id="07927-109">版本</span><span class="sxs-lookup"><span data-stu-id="07927-109">Version</span></span>|<span data-ttu-id="07927-110">4.6</span><span class="sxs-lookup"><span data-stu-id="07927-110">4.6</span></span>|
-|<span data-ttu-id="07927-111">类型</span><span class="sxs-lookup"><span data-stu-id="07927-111">Type</span></span>|<span data-ttu-id="07927-112">运行时</span><span class="sxs-lookup"><span data-stu-id="07927-112">Runtime</span></span>|
-
+|<span data-ttu-id="eff41-102">详细信息</span><span class="sxs-lookup"><span data-stu-id="eff41-102">Details</span></span>|<span data-ttu-id="eff41-103">在 Windows 8 及更高版本上运行的 .NET Framework 4.6 中，当一个窗口超出多监视器方案中的单个显示屏时，会不经剪辑就呈现整个窗口。</span><span class="sxs-lookup"><span data-stu-id="eff41-103">In the .NET Framework 4.6 running on Windows 8 and above, the entire window is rendered without clipping when it extends outside of single display in a multi-monitor scenario.</span></span> <span data-ttu-id="eff41-104">这与先前版本的 .NET Framework 不同，以前的版本在 WPF 窗口超出单个显示屏时会剪辑该窗口。</span><span class="sxs-lookup"><span data-stu-id="eff41-104">This is different from previous versions of the .NET Framework which would clip WPF windows that extended beyond a single display.</span></span>|
+|<span data-ttu-id="eff41-105">建议</span><span class="sxs-lookup"><span data-stu-id="eff41-105">Suggestion</span></span>|<span data-ttu-id="eff41-106">可以使用应用程序的配置文件中的 <code>&lt;EnableMultiMonitorDisplayClipping&gt;</code> 的 <code>&lt;appSettings&gt;</code> 元素，或在应用启动时设置 <code>EnableMultiMonitorDisplayClipping</code> 属性，显式设置此行为（无论剪辑与否）。</span><span class="sxs-lookup"><span data-stu-id="eff41-106">This behavior (whether to clip or not) can be explicitly set using the <code>&lt;EnableMultiMonitorDisplayClipping&gt;</code> element in <code>&lt;appSettings&gt;</code> in an application's configuration file, or by setting the <code>EnableMultiMonitorDisplayClipping</code> property at app startup.</span></span>|
+|<span data-ttu-id="eff41-107">范围</span><span class="sxs-lookup"><span data-stu-id="eff41-107">Scope</span></span>|<span data-ttu-id="eff41-108">次要</span><span class="sxs-lookup"><span data-stu-id="eff41-108">Minor</span></span>|
+|<span data-ttu-id="eff41-109">Version</span><span class="sxs-lookup"><span data-stu-id="eff41-109">Version</span></span>|<span data-ttu-id="eff41-110">4.6</span><span class="sxs-lookup"><span data-stu-id="eff41-110">4.6</span></span>|
+|<span data-ttu-id="eff41-111">类型</span><span class="sxs-lookup"><span data-stu-id="eff41-111">Type</span></span>|<span data-ttu-id="eff41-112">运行时</span><span class="sxs-lookup"><span data-stu-id="eff41-112">Runtime</span></span>|

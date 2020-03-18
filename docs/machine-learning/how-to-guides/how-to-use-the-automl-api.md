@@ -4,24 +4,24 @@ description: ML.NET 自动化 ML API 可自动化模型生成过程并生成可�
 ms.date: 12/18/2019
 ms.custom: mvc,how-to
 ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75636557"
 ---
-# <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a><span data-ttu-id="ae195-104">如何使用 ML.NET 自动化机器学习 API</span><span class="sxs-lookup"><span data-stu-id="ae195-104">How to use the ML.NET automated machine learning API</span></span>
+# <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a><span data-ttu-id="9c2f7-104">如何使用 ML.NET 自动化机器学习 API</span><span class="sxs-lookup"><span data-stu-id="9c2f7-104">How to use the ML.NET automated machine learning API</span></span>
 
-<span data-ttu-id="ae195-105">自动化机器学习 (AutoML) 可自动化将机器学习应用于数据的过程。</span><span class="sxs-lookup"><span data-stu-id="ae195-105">Automated machine learning (AutoML) automates the process of applying machine learning to data.</span></span> <span data-ttu-id="ae195-106">在给定数据集的情况下，可以运行 AutoML **试验**来迭代不同的数据特征、机器学习算法和超参数，从而选择最佳模型。</span><span class="sxs-lookup"><span data-stu-id="ae195-106">Given a dataset, you can run an AutoML **experiment** to iterate over different data featurizations, machine learning algorithms, and hyperparameters to select the best model.</span></span>
+<span data-ttu-id="9c2f7-105">自动化机器学习 (AutoML) 可自动化将机器学习应用于数据的过程。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-105">Automated machine learning (AutoML) automates the process of applying machine learning to data.</span></span> <span data-ttu-id="9c2f7-106">在给定数据集的情况下，可以运行 AutoML **试验**来迭代不同的数据特征、机器学习算法和超参数，从而选择最佳模型。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-106">Given a dataset, you can run an AutoML **experiment** to iterate over different data featurizations, machine learning algorithms, and hyperparameters to select the best model.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="ae195-107">本主题涉及 ML.NET 目前处于预览状态的自动化机器学习 API。</span><span class="sxs-lookup"><span data-stu-id="ae195-107">This topic refers to the automated machine learning API for ML.NET, which is currently in preview.</span></span> <span data-ttu-id="ae195-108">材料可能会有所变化。</span><span class="sxs-lookup"><span data-stu-id="ae195-108">Material may be subject to change.</span></span>
+> <span data-ttu-id="9c2f7-107">本主题涉及 ML.NET 目前处于预览状态的自动化机器学习 API。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-107">This topic refers to the automated machine learning API for ML.NET, which is currently in preview.</span></span> <span data-ttu-id="9c2f7-108">材料可能会有所变化。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-108">Material may be subject to change.</span></span>
 
-## <a name="load-data"></a><span data-ttu-id="ae195-109">加载数据</span><span class="sxs-lookup"><span data-stu-id="ae195-109">Load data</span></span>
+## <a name="load-data"></a><span data-ttu-id="9c2f7-109">加载数据</span><span class="sxs-lookup"><span data-stu-id="9c2f7-109">Load data</span></span>
 
-<span data-ttu-id="ae195-110">自动化机器学习支持将数据集加载到 [IDataView](xref:Microsoft.ML.IDataView) 中。</span><span class="sxs-lookup"><span data-stu-id="ae195-110">Automated machine learning supports loading a dataset into an [IDataView](xref:Microsoft.ML.IDataView).</span></span> <span data-ttu-id="ae195-111">数据可以采用制表符分隔值 (TSV) 文件和逗号分隔值 (CSV) 文件的形式。</span><span class="sxs-lookup"><span data-stu-id="ae195-111">Data can be in the form of tab-separated value (TSV) files and comma separated value (CSV) files.</span></span>
+<span data-ttu-id="9c2f7-110">自动化机器学习支持将数据集加载到 [IDataView](xref:Microsoft.ML.IDataView) 中。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-110">Automated machine learning supports loading a dataset into an [IDataView](xref:Microsoft.ML.IDataView).</span></span> <span data-ttu-id="9c2f7-111">数据可以采用制表符分隔值 (TSV) 文件和逗号分隔值 (CSV) 文件的形式。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-111">Data can be in the form of tab-separated value (TSV) files and comma separated value (CSV) files.</span></span>
 
-<span data-ttu-id="ae195-112">示例：</span><span class="sxs-lookup"><span data-stu-id="ae195-112">Example:</span></span>
+<span data-ttu-id="9c2f7-112">示例：</span><span class="sxs-lookup"><span data-stu-id="9c2f7-112">Example:</span></span>
 
 ```csharp
 using Microsoft.ML;
@@ -31,56 +31,56 @@ using Microsoft.ML.AutoML;
     IDataView trainDataView = mlContext.Data.LoadFromTextFile<SentimentIssue>("my-data-file.csv", hasHeader: true);
 ```
 
-## <a name="select-the-machine-learning-task-type"></a><span data-ttu-id="ae195-113">选择机器学习任务类型</span><span class="sxs-lookup"><span data-stu-id="ae195-113">Select the machine learning task type</span></span>
+## <a name="select-the-machine-learning-task-type"></a><span data-ttu-id="9c2f7-113">选择机器学习任务类型</span><span class="sxs-lookup"><span data-stu-id="9c2f7-113">Select the machine learning task type</span></span>
 
-<span data-ttu-id="ae195-114">在创建试验之前，请确定想要解决的机器学习问题的类型。</span><span class="sxs-lookup"><span data-stu-id="ae195-114">Before creating an experiment, determine the kind of machine learning problem you want to solve.</span></span> <span data-ttu-id="ae195-115">自动化机器学习支持以下 ML 任务：</span><span class="sxs-lookup"><span data-stu-id="ae195-115">Automated machine learning supports the following ML tasks:</span></span>
+<span data-ttu-id="9c2f7-114">在创建试验之前，请确定想要解决的机器学习问题的类型。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-114">Before creating an experiment, determine the kind of machine learning problem you want to solve.</span></span> <span data-ttu-id="9c2f7-115">自动化机器学习支持以下 ML 任务：</span><span class="sxs-lookup"><span data-stu-id="9c2f7-115">Automated machine learning supports the following ML tasks:</span></span>
 
-* <span data-ttu-id="ae195-116">二元分类</span><span class="sxs-lookup"><span data-stu-id="ae195-116">Binary Classification</span></span>
-* <span data-ttu-id="ae195-117">多类分类</span><span class="sxs-lookup"><span data-stu-id="ae195-117">Multiclass Classification</span></span>
-* <span data-ttu-id="ae195-118">回归测试</span><span class="sxs-lookup"><span data-stu-id="ae195-118">Regression</span></span>
-* <span data-ttu-id="ae195-119">建议</span><span class="sxs-lookup"><span data-stu-id="ae195-119">Recommendation</span></span>
+* <span data-ttu-id="9c2f7-116">二元分类</span><span class="sxs-lookup"><span data-stu-id="9c2f7-116">Binary Classification</span></span>
+* <span data-ttu-id="9c2f7-117">多类分类</span><span class="sxs-lookup"><span data-stu-id="9c2f7-117">Multiclass Classification</span></span>
+* <span data-ttu-id="9c2f7-118">回归测试</span><span class="sxs-lookup"><span data-stu-id="9c2f7-118">Regression</span></span>
+* <span data-ttu-id="9c2f7-119">建议</span><span class="sxs-lookup"><span data-stu-id="9c2f7-119">Recommendation</span></span>
 
-## <a name="create-experiment-settings"></a><span data-ttu-id="ae195-120">创建试验设置</span><span class="sxs-lookup"><span data-stu-id="ae195-120">Create experiment settings</span></span>
+## <a name="create-experiment-settings"></a><span data-ttu-id="9c2f7-120">创建试验设置</span><span class="sxs-lookup"><span data-stu-id="9c2f7-120">Create experiment settings</span></span>
 
-<span data-ttu-id="ae195-121">为确定的 ML 任务类型创建试验设置：</span><span class="sxs-lookup"><span data-stu-id="ae195-121">Create experiment settings for the determined ML task type:</span></span>
+<span data-ttu-id="9c2f7-121">为确定的 ML 任务类型创建试验设置：</span><span class="sxs-lookup"><span data-stu-id="9c2f7-121">Create experiment settings for the determined ML task type:</span></span>
 
-* <span data-ttu-id="ae195-122">二元分类</span><span class="sxs-lookup"><span data-stu-id="ae195-122">Binary Classification</span></span>
+* <span data-ttu-id="9c2f7-122">二元分类</span><span class="sxs-lookup"><span data-stu-id="9c2f7-122">Binary Classification</span></span>
 
   ```csharp
   var experimentSettings = new BinaryExperimentSettings();
   ```
 
-* <span data-ttu-id="ae195-123">多类分类</span><span class="sxs-lookup"><span data-stu-id="ae195-123">Multiclass Classification</span></span>
+* <span data-ttu-id="9c2f7-123">多类分类</span><span class="sxs-lookup"><span data-stu-id="9c2f7-123">Multiclass Classification</span></span>
 
   ```csharp
   var experimentSettings = new MulticlassExperimentSettings();
   ```
 
-* <span data-ttu-id="ae195-124">回归测试</span><span class="sxs-lookup"><span data-stu-id="ae195-124">Regression</span></span>
+* <span data-ttu-id="9c2f7-124">回归测试</span><span class="sxs-lookup"><span data-stu-id="9c2f7-124">Regression</span></span>
 
   ```csharp
   var experimentSettings = new RegressionExperimentSettings();
   ```
 
-* <span data-ttu-id="ae195-125">建议</span><span class="sxs-lookup"><span data-stu-id="ae195-125">Recommendation</span></span>
+* <span data-ttu-id="9c2f7-125">建议</span><span class="sxs-lookup"><span data-stu-id="9c2f7-125">Recommendation</span></span>
 
   ```csharp
   var experimentSettings = new RecommendationExperimentSettings();
   ```
 
-## <a name="configure-experiment-settings"></a><span data-ttu-id="ae195-126">配置试验设置</span><span class="sxs-lookup"><span data-stu-id="ae195-126">Configure experiment settings</span></span>
+## <a name="configure-experiment-settings"></a><span data-ttu-id="9c2f7-126">配置试验设置</span><span class="sxs-lookup"><span data-stu-id="9c2f7-126">Configure experiment settings</span></span>
 
-<span data-ttu-id="ae195-127">试验具有高度可配置性。</span><span class="sxs-lookup"><span data-stu-id="ae195-127">Experiments are highly configurable.</span></span> <span data-ttu-id="ae195-128">有关配置设置的完整列表，请参阅 [AutoML API 文档](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview)。</span><span class="sxs-lookup"><span data-stu-id="ae195-128">See the [AutoML API docs](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview) for a full list of configuration settings.</span></span>
+<span data-ttu-id="9c2f7-127">试验具有高度可配置性。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-127">Experiments are highly configurable.</span></span> <span data-ttu-id="9c2f7-128">有关配置设置的完整列表，请参阅 [AutoML API 文档](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview)。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-128">See the [AutoML API docs](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview) for a full list of configuration settings.</span></span>
 
-<span data-ttu-id="ae195-129">一些示例包括：</span><span class="sxs-lookup"><span data-stu-id="ae195-129">Some examples include:</span></span>
+<span data-ttu-id="9c2f7-129">一些示例包括：</span><span class="sxs-lookup"><span data-stu-id="9c2f7-129">Some examples include:</span></span>
 
-1. <span data-ttu-id="ae195-130">指定试验的最长允许运行时间。</span><span class="sxs-lookup"><span data-stu-id="ae195-130">Specify the maximum time that the experiment is allowed to run.</span></span>
+1. <span data-ttu-id="9c2f7-130">指定试验的最长允许运行时间。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-130">Specify the maximum time that the experiment is allowed to run.</span></span>
 
     ```csharp
     experimentSettings.MaxExperimentTimeInSeconds = 3600;
     ```
 
-1. <span data-ttu-id="ae195-131">在试验的计划完成时间之前，使用取消令牌取消试验。</span><span class="sxs-lookup"><span data-stu-id="ae195-131">Use a cancellation token to cancel the experiment before it is scheduled to finish.</span></span>
+1. <span data-ttu-id="9c2f7-131">在试验的计划完成时间之前，使用取消令牌取消试验。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-131">Use a cancellation token to cancel the experiment before it is scheduled to finish.</span></span>
 
     ```csharp
     experimentSettings.CancellationToken = cts.Token;
@@ -89,22 +89,22 @@ using Microsoft.ML.AutoML;
     CancelExperimentAfterAnyKeyPress(cts);
     ```
 
-1. <span data-ttu-id="ae195-132">指定其他优化指标。</span><span class="sxs-lookup"><span data-stu-id="ae195-132">Specify a different optimizing metric.</span></span>
+1. <span data-ttu-id="9c2f7-132">指定其他优化指标。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-132">Specify a different optimizing metric.</span></span>
 
     ```csharp
     var experimentSettings = new RegressionExperimentSettings();
     experimentSettings.OptimizingMetric = RegressionMetric.MeanSquaredError;
     ```
 
-1. <span data-ttu-id="ae195-133">`CacheDirectory` 设置是指向目录的指针，执行 AutoML 任务期间训练的所有模型都将保存在该目录中。</span><span class="sxs-lookup"><span data-stu-id="ae195-133">The `CacheDirectory` setting is a pointer to a directory where all models trained during the AutoML task will be saved.</span></span> <span data-ttu-id="ae195-134">如果 `CacheDirectory` 设置为 null，则模型将保留在内存中，而不是写入磁盘。</span><span class="sxs-lookup"><span data-stu-id="ae195-134">If `CacheDirectory` is set to null, models will be kept in memory instead of written to disk.</span></span>
+1. <span data-ttu-id="9c2f7-133">`CacheDirectory` 设置是指向目录的指针，执行 AutoML 任务期间训练的所有模型都将保存在该目录中。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-133">The `CacheDirectory` setting is a pointer to a directory where all models trained during the AutoML task will be saved.</span></span> <span data-ttu-id="9c2f7-134">如果 `CacheDirectory` 设置为 null，则模型将保留在内存中，而不是写入磁盘。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-134">If `CacheDirectory` is set to null, models will be kept in memory instead of written to disk.</span></span>
 
     ```csharp
     experimentSettings.CacheDirectory = null;
     ```
 
-1. <span data-ttu-id="ae195-135">指示自动化 ML 不要使用特定训练程序。</span><span class="sxs-lookup"><span data-stu-id="ae195-135">Instruct automated ML not to use certain trainers.</span></span>
+1. <span data-ttu-id="9c2f7-135">指示自动化 ML 不要使用特定训练程序。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-135">Instruct automated ML not to use certain trainers.</span></span>
 
-    <span data-ttu-id="ae195-136">将根据每个任务探索待优化训练程序的默认列表。</span><span class="sxs-lookup"><span data-stu-id="ae195-136">A default list of trainers to optimize are explored per task.</span></span> <span data-ttu-id="ae195-137">此列表可以针对每个试验进行修改。</span><span class="sxs-lookup"><span data-stu-id="ae195-137">This list can be modified for each experiment.</span></span> <span data-ttu-id="ae195-138">例如，可以从列表中删除在数据集上运行缓慢的训练程序。</span><span class="sxs-lookup"><span data-stu-id="ae195-138">For instance, trainers that run slowly on your dataset can be removed from the list.</span></span> <span data-ttu-id="ae195-139">若要优化一个特定的训练程序，请调用 `experimentSettings.Trainers.Clear()`，然后添加想要使用的训练程序。</span><span class="sxs-lookup"><span data-stu-id="ae195-139">To optimize on one specific trainer call `experimentSettings.Trainers.Clear()`, then add the trainer that you want to use.</span></span>
+    <span data-ttu-id="9c2f7-136">将根据每个任务探索待优化训练程序的默认列表。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-136">A default list of trainers to optimize are explored per task.</span></span> <span data-ttu-id="9c2f7-137">此列表可以针对每个试验进行修改。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-137">This list can be modified for each experiment.</span></span> <span data-ttu-id="9c2f7-138">例如，可以从列表中删除在数据集上运行缓慢的训练程序。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-138">For instance, trainers that run slowly on your dataset can be removed from the list.</span></span> <span data-ttu-id="9c2f7-139">若要优化一个特定的训练程序，请调用 `experimentSettings.Trainers.Clear()`，然后添加想要使用的训练程序。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-139">To optimize on one specific trainer call `experimentSettings.Trainers.Clear()`, then add the trainer that you want to use.</span></span>
 
     ```csharp
     var experimentSettings = new RegressionExperimentSettings();
@@ -112,60 +112,60 @@ using Microsoft.ML.AutoML;
     experimentSettings.Trainers.Remove(RegressionTrainer.OnlineGradientDescent);
     ```
 
-<span data-ttu-id="ae195-140">每个 ML 任务支持的训练程序的列表可在以下相应链接中找到：</span><span class="sxs-lookup"><span data-stu-id="ae195-140">The list of supported trainers per ML task can be found at the corresponding link below:</span></span>
+<span data-ttu-id="9c2f7-140">每个 ML 任务支持的训练程序的列表可在以下相应链接中找到：</span><span class="sxs-lookup"><span data-stu-id="9c2f7-140">The list of supported trainers per ML task can be found at the corresponding link below:</span></span>
 
-* [<span data-ttu-id="ae195-141">支持的二元分类算法</span><span class="sxs-lookup"><span data-stu-id="ae195-141">Supported Binary Classification Algorithms</span></span>](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
-* [<span data-ttu-id="ae195-142">支持的多类分类算法</span><span class="sxs-lookup"><span data-stu-id="ae195-142">Supported Multiclass Classification Algorithms</span></span>](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
-* [<span data-ttu-id="ae195-143">支持的回归算法</span><span class="sxs-lookup"><span data-stu-id="ae195-143">Supported Regression Algorithms</span></span>](xref:Microsoft.ML.AutoML.RegressionTrainer)
-* [<span data-ttu-id="ae195-144">支持的推荐算法</span><span class="sxs-lookup"><span data-stu-id="ae195-144">Supported Recommendation Algorithms</span></span>](xref:Microsoft.ML.AutoML.RecommendationTrainer)
+* [<span data-ttu-id="9c2f7-141">支持的二元分类算法</span><span class="sxs-lookup"><span data-stu-id="9c2f7-141">Supported Binary Classification Algorithms</span></span>](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
+* [<span data-ttu-id="9c2f7-142">支持的多类分类算法</span><span class="sxs-lookup"><span data-stu-id="9c2f7-142">Supported Multiclass Classification Algorithms</span></span>](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
+* [<span data-ttu-id="9c2f7-143">支持的回归算法</span><span class="sxs-lookup"><span data-stu-id="9c2f7-143">Supported Regression Algorithms</span></span>](xref:Microsoft.ML.AutoML.RegressionTrainer)
+* [<span data-ttu-id="9c2f7-144">支持的推荐算法</span><span class="sxs-lookup"><span data-stu-id="9c2f7-144">Supported Recommendation Algorithms</span></span>](xref:Microsoft.ML.AutoML.RecommendationTrainer)
 
-## <a name="optimizing-metric"></a><span data-ttu-id="ae195-145">优化指标</span><span class="sxs-lookup"><span data-stu-id="ae195-145">Optimizing metric</span></span>
+## <a name="optimizing-metric"></a><span data-ttu-id="9c2f7-145">优化指标</span><span class="sxs-lookup"><span data-stu-id="9c2f7-145">Optimizing metric</span></span>
 
-<span data-ttu-id="ae195-146">如以上示例所示，优化指标可确定在模型训练期间要优化的指标。</span><span class="sxs-lookup"><span data-stu-id="ae195-146">The optimizing metric, as shown in the example above, determines the metric to be optimized during model training.</span></span> <span data-ttu-id="ae195-147">可以选择的优化指标由选择的任务类型决定。</span><span class="sxs-lookup"><span data-stu-id="ae195-147">The optimizing metric you can select is determined by the task type you choose.</span></span> <span data-ttu-id="ae195-148">以下是可用指标的列表。</span><span class="sxs-lookup"><span data-stu-id="ae195-148">Below is a list of available metrics.</span></span>
+<span data-ttu-id="9c2f7-146">如以上示例所示，优化指标可确定在模型训练期间要优化的指标。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-146">The optimizing metric, as shown in the example above, determines the metric to be optimized during model training.</span></span> <span data-ttu-id="9c2f7-147">可以选择的优化指标由选择的任务类型决定。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-147">The optimizing metric you can select is determined by the task type you choose.</span></span> <span data-ttu-id="9c2f7-148">以下是可用指标的列表。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-148">Below is a list of available metrics.</span></span>
 
-|[<span data-ttu-id="ae195-149">二元分类</span><span class="sxs-lookup"><span data-stu-id="ae195-149">Binary Classification</span></span>](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [<span data-ttu-id="ae195-150">多类分类</span><span class="sxs-lookup"><span data-stu-id="ae195-150">Multiclass Classification</span></span>](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[<span data-ttu-id="ae195-151">回归和建议</span><span class="sxs-lookup"><span data-stu-id="ae195-151">Regression & Recommendation</span></span>](xref:Microsoft.ML.AutoML.RegressionMetric)
+|[<span data-ttu-id="9c2f7-149">二元分类</span><span class="sxs-lookup"><span data-stu-id="9c2f7-149">Binary Classification</span></span>](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [<span data-ttu-id="9c2f7-150">多类分类</span><span class="sxs-lookup"><span data-stu-id="9c2f7-150">Multiclass Classification</span></span>](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[<span data-ttu-id="9c2f7-151">回归和建议</span><span class="sxs-lookup"><span data-stu-id="9c2f7-151">Regression & Recommendation</span></span>](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
-|<span data-ttu-id="ae195-152">准确性</span><span class="sxs-lookup"><span data-stu-id="ae195-152">Accuracy</span></span>| <span data-ttu-id="ae195-153">LogLoss</span><span class="sxs-lookup"><span data-stu-id="ae195-153">LogLoss</span></span> | <span data-ttu-id="ae195-154">RSquared</span><span class="sxs-lookup"><span data-stu-id="ae195-154">RSquared</span></span>
-|<span data-ttu-id="ae195-155">AreaUnderPrecisionRecallCurve</span><span class="sxs-lookup"><span data-stu-id="ae195-155">AreaUnderPrecisionRecallCurve</span></span> | <span data-ttu-id="ae195-156">LogLossReduction</span><span class="sxs-lookup"><span data-stu-id="ae195-156">LogLossReduction</span></span> | <span data-ttu-id="ae195-157">MeanAbsoluteError</span><span class="sxs-lookup"><span data-stu-id="ae195-157">MeanAbsoluteError</span></span>
-|<span data-ttu-id="ae195-158">AreaUnderRocCurve</span><span class="sxs-lookup"><span data-stu-id="ae195-158">AreaUnderRocCurve</span></span> | <span data-ttu-id="ae195-159">MacroAccuracy</span><span class="sxs-lookup"><span data-stu-id="ae195-159">MacroAccuracy</span></span> | <span data-ttu-id="ae195-160">MeanSquaredError</span><span class="sxs-lookup"><span data-stu-id="ae195-160">MeanSquaredError</span></span>
-|<span data-ttu-id="ae195-161">F1Score</span><span class="sxs-lookup"><span data-stu-id="ae195-161">F1Score</span></span> | <span data-ttu-id="ae195-162">MicroAccuracy</span><span class="sxs-lookup"><span data-stu-id="ae195-162">MicroAccuracy</span></span> | <span data-ttu-id="ae195-163">RootMeanSquaredError</span><span class="sxs-lookup"><span data-stu-id="ae195-163">RootMeanSquaredError</span></span>
-|<span data-ttu-id="ae195-164">NegativePrecision</span><span class="sxs-lookup"><span data-stu-id="ae195-164">NegativePrecision</span></span> | <span data-ttu-id="ae195-165">TopKAccuracy</span><span class="sxs-lookup"><span data-stu-id="ae195-165">TopKAccuracy</span></span>
-|<span data-ttu-id="ae195-166">NegativeRecall</span><span class="sxs-lookup"><span data-stu-id="ae195-166">NegativeRecall</span></span> |
-|<span data-ttu-id="ae195-167">PositivePrecision</span><span class="sxs-lookup"><span data-stu-id="ae195-167">PositivePrecision</span></span>
-|<span data-ttu-id="ae195-168">PositiveRecall</span><span class="sxs-lookup"><span data-stu-id="ae195-168">PositiveRecall</span></span>
+|<span data-ttu-id="9c2f7-152">准确性</span><span class="sxs-lookup"><span data-stu-id="9c2f7-152">Accuracy</span></span>| <span data-ttu-id="9c2f7-153">LogLoss</span><span class="sxs-lookup"><span data-stu-id="9c2f7-153">LogLoss</span></span> | <span data-ttu-id="9c2f7-154">RSquared</span><span class="sxs-lookup"><span data-stu-id="9c2f7-154">RSquared</span></span>
+|<span data-ttu-id="9c2f7-155">AreaUnderPrecisionRecallCurve</span><span class="sxs-lookup"><span data-stu-id="9c2f7-155">AreaUnderPrecisionRecallCurve</span></span> | <span data-ttu-id="9c2f7-156">LogLossReduction</span><span class="sxs-lookup"><span data-stu-id="9c2f7-156">LogLossReduction</span></span> | <span data-ttu-id="9c2f7-157">MeanAbsoluteError</span><span class="sxs-lookup"><span data-stu-id="9c2f7-157">MeanAbsoluteError</span></span>
+|<span data-ttu-id="9c2f7-158">AreaUnderRocCurve</span><span class="sxs-lookup"><span data-stu-id="9c2f7-158">AreaUnderRocCurve</span></span> | <span data-ttu-id="9c2f7-159">MacroAccuracy</span><span class="sxs-lookup"><span data-stu-id="9c2f7-159">MacroAccuracy</span></span> | <span data-ttu-id="9c2f7-160">MeanSquaredError</span><span class="sxs-lookup"><span data-stu-id="9c2f7-160">MeanSquaredError</span></span>
+|<span data-ttu-id="9c2f7-161">F1Score</span><span class="sxs-lookup"><span data-stu-id="9c2f7-161">F1Score</span></span> | <span data-ttu-id="9c2f7-162">MicroAccuracy</span><span class="sxs-lookup"><span data-stu-id="9c2f7-162">MicroAccuracy</span></span> | <span data-ttu-id="9c2f7-163">RootMeanSquaredError</span><span class="sxs-lookup"><span data-stu-id="9c2f7-163">RootMeanSquaredError</span></span>
+|<span data-ttu-id="9c2f7-164">NegativePrecision</span><span class="sxs-lookup"><span data-stu-id="9c2f7-164">NegativePrecision</span></span> | <span data-ttu-id="9c2f7-165">TopKAccuracy</span><span class="sxs-lookup"><span data-stu-id="9c2f7-165">TopKAccuracy</span></span>
+|<span data-ttu-id="9c2f7-166">NegativeRecall</span><span class="sxs-lookup"><span data-stu-id="9c2f7-166">NegativeRecall</span></span> |
+|<span data-ttu-id="9c2f7-167">PositivePrecision</span><span class="sxs-lookup"><span data-stu-id="9c2f7-167">PositivePrecision</span></span>
+|<span data-ttu-id="9c2f7-168">PositiveRecall</span><span class="sxs-lookup"><span data-stu-id="9c2f7-168">PositiveRecall</span></span>
 
-## <a name="data-pre-processing-and-featurization"></a><span data-ttu-id="ae195-169">数据预处理和特征化</span><span class="sxs-lookup"><span data-stu-id="ae195-169">Data pre-processing and featurization</span></span>
+## <a name="data-pre-processing-and-featurization"></a><span data-ttu-id="9c2f7-169">数据预处理和特征化</span><span class="sxs-lookup"><span data-stu-id="9c2f7-169">Data pre-processing and featurization</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="ae195-170">特征列仅支持 <xref:System.Boolean>、<xref:System.Single> 和 <xref:System.String> 类型。</span><span class="sxs-lookup"><span data-stu-id="ae195-170">The feature column only supported types of <xref:System.Boolean>, <xref:System.Single>, and <xref:System.String>.</span></span>
+> <span data-ttu-id="9c2f7-170">特征列仅支持 <xref:System.Boolean>、<xref:System.Single> 和 <xref:System.String> 类型。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-170">The feature column only supported types of <xref:System.Boolean>, <xref:System.Single>, and <xref:System.String>.</span></span>
 
-<span data-ttu-id="ae195-171">默认情况下会进行数据预处理，并会自动执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="ae195-171">Data pre-processing happens by default and the following steps are performed automatically for you:</span></span>
+<span data-ttu-id="9c2f7-171">默认情况下会进行数据预处理，并会自动执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="9c2f7-171">Data pre-processing happens by default and the following steps are performed automatically for you:</span></span>
 
-1. <span data-ttu-id="ae195-172">删除没有有用信息的特征</span><span class="sxs-lookup"><span data-stu-id="ae195-172">Drop features with no useful information</span></span>
+1. <span data-ttu-id="9c2f7-172">删除没有有用信息的特征</span><span class="sxs-lookup"><span data-stu-id="9c2f7-172">Drop features with no useful information</span></span>
 
-    <span data-ttu-id="ae195-173">删除没有来自训练集和验证集的有用信息的特征。</span><span class="sxs-lookup"><span data-stu-id="ae195-173">Drop features with no useful information from training and validation sets.</span></span> <span data-ttu-id="ae195-174">其中包括缺少所有值的特征、所有行具有相同值的特征或具有极高基数的特征（例如，哈希、ID 或 GUID）。</span><span class="sxs-lookup"><span data-stu-id="ae195-174">These include features with all values missing, same value across all rows or with extremely high cardinality (e.g., hashes, IDs or GUIDs).</span></span>
+    <span data-ttu-id="9c2f7-173">删除没有来自训练集和验证集的有用信息的特征。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-173">Drop features with no useful information from training and validation sets.</span></span> <span data-ttu-id="9c2f7-174">其中包括缺少所有值的特征、所有行具有相同值的特征或具有极高基数的特征（例如，哈希、ID 或 GUID）。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-174">These include features with all values missing, same value across all rows or with extremely high cardinality (e.g., hashes, IDs or GUIDs).</span></span>
 
-1. <span data-ttu-id="ae195-175">缺少值指示和插补</span><span class="sxs-lookup"><span data-stu-id="ae195-175">Missing value indication and imputation</span></span>
+1. <span data-ttu-id="9c2f7-175">缺少值指示和插补</span><span class="sxs-lookup"><span data-stu-id="9c2f7-175">Missing value indication and imputation</span></span>
 
-    <span data-ttu-id="ae195-176">使用数据类型的默认值填充缺少值的单元格。</span><span class="sxs-lookup"><span data-stu-id="ae195-176">Fill missing value cells with the default value for the datatype.</span></span> <span data-ttu-id="ae195-177">使用与输入列数量相同的插槽数追加指示特征。</span><span class="sxs-lookup"><span data-stu-id="ae195-177">Append indicator features with the same number of slots as the input column.</span></span> <span data-ttu-id="ae195-178">如果输入列中缺少值，则追加的指示特征中的值为 `1`，否则为 `0`。</span><span class="sxs-lookup"><span data-stu-id="ae195-178">The value in the appended indicator features is `1` if the value in the input column is missing and `0` otherwise.</span></span>
+    <span data-ttu-id="9c2f7-176">使用数据类型的默认值填充缺少值的单元格。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-176">Fill missing value cells with the default value for the datatype.</span></span> <span data-ttu-id="9c2f7-177">使用与输入列数量相同的插槽数追加指示特征。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-177">Append indicator features with the same number of slots as the input column.</span></span> <span data-ttu-id="9c2f7-178">如果输入列中缺少值，则追加的指示特征中的值为 `1`，否则为 `0`。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-178">The value in the appended indicator features is `1` if the value in the input column is missing and `0` otherwise.</span></span>
 
-1. <span data-ttu-id="ae195-179">生成其他特征</span><span class="sxs-lookup"><span data-stu-id="ae195-179">Generate additional features</span></span>
+1. <span data-ttu-id="9c2f7-179">生成其他特征</span><span class="sxs-lookup"><span data-stu-id="9c2f7-179">Generate additional features</span></span>
 
-    <span data-ttu-id="ae195-180">对于文本特征：使用一元语法和三元语法的词袋特征。</span><span class="sxs-lookup"><span data-stu-id="ae195-180">For text features: Bag-of-word features using unigrams and tri-character-grams.</span></span>
+    <span data-ttu-id="9c2f7-180">对于文本特征：使用一元语法和三元语法的词袋特征。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-180">For text features: Bag-of-word features using unigrams and tri-character-grams.</span></span>
 
-    <span data-ttu-id="ae195-181">对于分类特征：用于低基数特征的单热编码，以及用于高基数分类特征的单热哈希编码。</span><span class="sxs-lookup"><span data-stu-id="ae195-181">For categorical features: One-hot encoding for low cardinality features, and one-hot-hash encoding for high cardinality categorical features.</span></span>
+    <span data-ttu-id="9c2f7-181">对于分类特征：用于低基数特征的单热编码，以及用于高基数分类特征的单热哈希编码。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-181">For categorical features: One-hot encoding for low cardinality features, and one-hot-hash encoding for high cardinality categorical features.</span></span>
 
-1. <span data-ttu-id="ae195-182">转换和编码</span><span class="sxs-lookup"><span data-stu-id="ae195-182">Transformations and encodings</span></span>
+1. <span data-ttu-id="9c2f7-182">转换和编码</span><span class="sxs-lookup"><span data-stu-id="9c2f7-182">Transformations and encodings</span></span>
 
-    <span data-ttu-id="ae195-183">具有极少唯一值的文本特征转换为分类特征。</span><span class="sxs-lookup"><span data-stu-id="ae195-183">Text features with very few unique values transformed into categorical features.</span></span> <span data-ttu-id="ae195-184">根据分类特征的基数，执行单热编码或单热哈希编码。</span><span class="sxs-lookup"><span data-stu-id="ae195-184">Depending on cardinality of categorical features, perform one-hot encoding or one-hot hash encoding.</span></span>
+    <span data-ttu-id="9c2f7-183">具有极少唯一值的文本特征转换为分类特征。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-183">Text features with very few unique values transformed into categorical features.</span></span> <span data-ttu-id="9c2f7-184">根据分类特征的基数，执行单热编码或单热哈希编码。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-184">Depending on cardinality of categorical features, perform one-hot encoding or one-hot hash encoding.</span></span>
 
-## <a name="exit-criteria"></a><span data-ttu-id="ae195-185">退出条件</span><span class="sxs-lookup"><span data-stu-id="ae195-185">Exit criteria</span></span>
+## <a name="exit-criteria"></a><span data-ttu-id="9c2f7-185">退出条件</span><span class="sxs-lookup"><span data-stu-id="9c2f7-185">Exit criteria</span></span>
 
-<span data-ttu-id="ae195-186">定义完成任务的条件：</span><span class="sxs-lookup"><span data-stu-id="ae195-186">Define the criteria to complete your task:</span></span>
+<span data-ttu-id="9c2f7-186">定义完成任务的条件：</span><span class="sxs-lookup"><span data-stu-id="9c2f7-186">Define the criteria to complete your task:</span></span>
 
-1. <span data-ttu-id="ae195-187">一段时间后退出 - 通过在试验设置中使用 `MaxExperimentTimeInSeconds`，可以定义任务应持续运行的时长（以秒为单位）。</span><span class="sxs-lookup"><span data-stu-id="ae195-187">Exit after a length of time - Using `MaxExperimentTimeInSeconds` in your experiment settings you can define how long in seconds that an task should continue to run.</span></span>
+1. <span data-ttu-id="9c2f7-187">一段时间后退出 - 通过在试验设置中使用 `MaxExperimentTimeInSeconds`，可以定义任务应持续运行的时长（以秒为单位）。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-187">Exit after a length of time - Using `MaxExperimentTimeInSeconds` in your experiment settings you can define how long in seconds that an task should continue to run.</span></span>
 
-1. <span data-ttu-id="ae195-188">收到取消令牌时退出 - 可以使用取消令牌，以便在任务的计划完成时间之前取消该任务。</span><span class="sxs-lookup"><span data-stu-id="ae195-188">Exit on a cancellation token -  You can use a cancellation token that lets you cancel the task before it is scheduled to finish.</span></span>
+1. <span data-ttu-id="9c2f7-188">收到取消令牌时退出 - 可以使用取消令牌，以便在任务的计划完成时间之前取消该任务。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-188">Exit on a cancellation token -  You can use a cancellation token that lets you cancel the task before it is scheduled to finish.</span></span>
 
     ```csharp
     var cts = new CancellationTokenSource();
@@ -174,48 +174,48 @@ using Microsoft.ML.AutoML;
     experimentSettings.CancellationToken = cts.Token;
     ```
 
-## <a name="create-an-experiment"></a><span data-ttu-id="ae195-189">创建试验</span><span class="sxs-lookup"><span data-stu-id="ae195-189">Create an experiment</span></span>
+## <a name="create-an-experiment"></a><span data-ttu-id="9c2f7-189">创建试验</span><span class="sxs-lookup"><span data-stu-id="9c2f7-189">Create an experiment</span></span>
 
-<span data-ttu-id="ae195-190">配置试验设置后，即可创建试验。</span><span class="sxs-lookup"><span data-stu-id="ae195-190">Once you have configured the experiment settings, you are ready to create the experiment.</span></span>
+<span data-ttu-id="9c2f7-190">配置试验设置后，即可创建试验。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-190">Once you have configured the experiment settings, you are ready to create the experiment.</span></span>
 
 ```csharp
 RegressionExperiment experiment = mlContext.Auto().CreateRegressionExperiment(experimentSettings);
 ```
 
-## <a name="run-the-experiment"></a><span data-ttu-id="ae195-191">运行试验</span><span class="sxs-lookup"><span data-stu-id="ae195-191">Run the experiment</span></span>
+## <a name="run-the-experiment"></a><span data-ttu-id="9c2f7-191">运行试验</span><span class="sxs-lookup"><span data-stu-id="9c2f7-191">Run the experiment</span></span>
 
-<span data-ttu-id="ae195-192">运行试验会触发数据预处理、学习算法选择和超参数调整。</span><span class="sxs-lookup"><span data-stu-id="ae195-192">Running the experiment triggers data pre-processing, learning algorithm selection, and hyperparameter tuning.</span></span> <span data-ttu-id="ae195-193">AutoML 将继续生成特征化、学习算法和超参数的组合，直到达到 `MaxExperimentTimeInSeconds` 或试验终止。</span><span class="sxs-lookup"><span data-stu-id="ae195-193">AutoML will continue to generate combinations of featurization, learning algorithms, and hyperparameters until the `MaxExperimentTimeInSeconds` is reached or the experiment is terminated.</span></span>
+<span data-ttu-id="9c2f7-192">运行试验会触发数据预处理、学习算法选择和超参数调整。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-192">Running the experiment triggers data pre-processing, learning algorithm selection, and hyperparameter tuning.</span></span> <span data-ttu-id="9c2f7-193">AutoML 将继续生成特征化、学习算法和超参数的组合，直到达到 `MaxExperimentTimeInSeconds` 或试验终止。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-193">AutoML will continue to generate combinations of featurization, learning algorithms, and hyperparameters until the `MaxExperimentTimeInSeconds` is reached or the experiment is terminated.</span></span>
 
 ```csharp
 ExperimentResult<RegressionMetrics> experimentResult = experiment
     .Execute(trainingDataView, LabelColumnName, progressHandler: progressHandler);
 ```
 
-<span data-ttu-id="ae195-194">如果想要传入验证数据、指示列目的的列信息或特征预提取器，请探索 `Execute()` 的其他重载。</span><span class="sxs-lookup"><span data-stu-id="ae195-194">Explore other overloads for `Execute()` if you want to pass in validation data, column information indicating the column purpose, or prefeaturizers.</span></span>
+<span data-ttu-id="9c2f7-194">如果想要传入验证数据、指示列目的的列信息或特征预提取器，请探索 `Execute()` 的其他重载。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-194">Explore other overloads for `Execute()` if you want to pass in validation data, column information indicating the column purpose, or prefeaturizers.</span></span>
 
-## <a name="training-modes"></a><span data-ttu-id="ae195-195">训练模式</span><span class="sxs-lookup"><span data-stu-id="ae195-195">Training modes</span></span>
+## <a name="training-modes"></a><span data-ttu-id="9c2f7-195">训练模式</span><span class="sxs-lookup"><span data-stu-id="9c2f7-195">Training modes</span></span>
 
-### <a name="training-dataset"></a><span data-ttu-id="ae195-196">训练数据集</span><span class="sxs-lookup"><span data-stu-id="ae195-196">Training dataset</span></span>
+### <a name="training-dataset"></a><span data-ttu-id="9c2f7-196">训练数据集</span><span class="sxs-lookup"><span data-stu-id="9c2f7-196">Training dataset</span></span>
 
-<span data-ttu-id="ae195-197">AutoML 提供重载试验执行方法，该方法允许提供训练数据。</span><span class="sxs-lookup"><span data-stu-id="ae195-197">AutoML provides an overloaded experiment execute method which allows you to provide training data.</span></span> <span data-ttu-id="ae195-198">在内部，自动化 ML 将数据划分为训练-验证拆分。</span><span class="sxs-lookup"><span data-stu-id="ae195-198">Internally, automated ML divides the data into train-validate splits.</span></span>
+<span data-ttu-id="9c2f7-197">AutoML 提供重载试验执行方法，该方法允许提供训练数据。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-197">AutoML provides an overloaded experiment execute method which allows you to provide training data.</span></span> <span data-ttu-id="9c2f7-198">在内部，自动化 ML 将数据划分为训练-验证拆分。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-198">Internally, automated ML divides the data into train-validate splits.</span></span>
 
 ```csharp
 experiment.Execute(trainDataView);
 ```
 
-### <a name="custom-validation-dataset"></a><span data-ttu-id="ae195-199">自定义验证数据集</span><span class="sxs-lookup"><span data-stu-id="ae195-199">Custom validation dataset</span></span>
+### <a name="custom-validation-dataset"></a><span data-ttu-id="9c2f7-199">自定义验证数据集</span><span class="sxs-lookup"><span data-stu-id="9c2f7-199">Custom validation dataset</span></span>
 
-<span data-ttu-id="ae195-200">如果随机拆分不可接受（时序数据通常如此），则使用自定义验证数据集。</span><span class="sxs-lookup"><span data-stu-id="ae195-200">Use custom validation dataset if random split is not acceptable, as is usually the case with time series data.</span></span> <span data-ttu-id="ae195-201">可以指定自己的验证数据集。</span><span class="sxs-lookup"><span data-stu-id="ae195-201">You can specify your own validation dataset.</span></span> <span data-ttu-id="ae195-202">将根据指定的验证数据集而不是一个或多个随机数据集评估模型。</span><span class="sxs-lookup"><span data-stu-id="ae195-202">The model will be evaluated against the validation dataset specified instead of one or more random datasets.</span></span>
+<span data-ttu-id="9c2f7-200">如果随机拆分不可接受（时序数据通常如此），则使用自定义验证数据集。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-200">Use custom validation dataset if random split is not acceptable, as is usually the case with time series data.</span></span> <span data-ttu-id="9c2f7-201">可以指定自己的验证数据集。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-201">You can specify your own validation dataset.</span></span> <span data-ttu-id="9c2f7-202">将根据指定的验证数据集而不是一个或多个随机数据集评估模型。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-202">The model will be evaluated against the validation dataset specified instead of one or more random datasets.</span></span>
 
 ```csharp
 experiment.Execute(trainDataView, validationDataView);
 ```
 
-## <a name="explore-model-metrics"></a><span data-ttu-id="ae195-203">探索模型指标</span><span class="sxs-lookup"><span data-stu-id="ae195-203">Explore model metrics</span></span>
+## <a name="explore-model-metrics"></a><span data-ttu-id="9c2f7-203">探索模型指标</span><span class="sxs-lookup"><span data-stu-id="9c2f7-203">Explore model metrics</span></span>
 
-<span data-ttu-id="ae195-204">在 ML 试验的每次迭代后，系统会存储与该任务相关的指标。</span><span class="sxs-lookup"><span data-stu-id="ae195-204">After each iteration of an ML experiment, metrics relating to that task are stored.</span></span>
+<span data-ttu-id="9c2f7-204">在 ML 试验的每次迭代后，系统会存储与该任务相关的指标。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-204">After each iteration of an ML experiment, metrics relating to that task are stored.</span></span>
 
-<span data-ttu-id="ae195-205">例如，我们可以从最佳运行中访问验证指标：</span><span class="sxs-lookup"><span data-stu-id="ae195-205">For example, we can access validation metrics from the best run:</span></span>
+<span data-ttu-id="9c2f7-205">例如，我们可以从最佳运行中访问验证指标：</span><span class="sxs-lookup"><span data-stu-id="9c2f7-205">For example, we can access validation metrics from the best run:</span></span>
 
 ```csharp
 RegressionMetrics metrics = experimentResult.BestRun.ValidationMetrics;
@@ -223,12 +223,12 @@ Console.WriteLine($"R-Squared: {metrics.RSquared:0.##}");
 Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}");
 ```
 
-<span data-ttu-id="ae195-206">以下是每个 ML 任务的所有可用指标：</span><span class="sxs-lookup"><span data-stu-id="ae195-206">The following are all the available metrics per ML task:</span></span>
+<span data-ttu-id="9c2f7-206">以下是每个 ML 任务的所有可用指标：</span><span class="sxs-lookup"><span data-stu-id="9c2f7-206">The following are all the available metrics per ML task:</span></span>
 
-* [<span data-ttu-id="ae195-207">二元分类指标</span><span class="sxs-lookup"><span data-stu-id="ae195-207">Binary classification metrics</span></span>](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
-* [<span data-ttu-id="ae195-208">多类分类指标</span><span class="sxs-lookup"><span data-stu-id="ae195-208">Multiclass classification metrics</span></span>](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
-* [<span data-ttu-id="ae195-209">回归和建议指标</span><span class="sxs-lookup"><span data-stu-id="ae195-209">Regression & recommendation metrics</span></span>](xref:Microsoft.ML.AutoML.RegressionMetric)
+* [<span data-ttu-id="9c2f7-207">二元分类指标</span><span class="sxs-lookup"><span data-stu-id="9c2f7-207">Binary classification metrics</span></span>](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
+* [<span data-ttu-id="9c2f7-208">多类分类指标</span><span class="sxs-lookup"><span data-stu-id="9c2f7-208">Multiclass classification metrics</span></span>](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
+* [<span data-ttu-id="9c2f7-209">回归和建议指标</span><span class="sxs-lookup"><span data-stu-id="9c2f7-209">Regression & recommendation metrics</span></span>](xref:Microsoft.ML.AutoML.RegressionMetric)
 
-## <a name="see-also"></a><span data-ttu-id="ae195-210">请参阅</span><span class="sxs-lookup"><span data-stu-id="ae195-210">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9c2f7-210">请参阅</span><span class="sxs-lookup"><span data-stu-id="9c2f7-210">See also</span></span>
 
-<span data-ttu-id="ae195-211">有关完整的代码示例等，请访问 [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state) GitHub 存储库。</span><span class="sxs-lookup"><span data-stu-id="ae195-211">For full code samples and more visit the [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state) GitHub repository.</span></span>
+<span data-ttu-id="9c2f7-211">有关完整的代码示例等，请访问 [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state) GitHub 存储库。</span><span class="sxs-lookup"><span data-stu-id="9c2f7-211">For full code samples and more visit the [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state) GitHub repository.</span></span>

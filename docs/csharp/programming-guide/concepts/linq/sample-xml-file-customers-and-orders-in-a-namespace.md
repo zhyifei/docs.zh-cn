@@ -3,16 +3,16 @@ title: 示例 XML 文件：命名空间 2 中的客户和订单
 ms.date: 07/20/2015
 ms.assetid: 2da1c474-f658-4dca-a457-c35ef5ba4aff
 ms.openlocfilehash: 80bc052ecc62dfbd78f1dfdffac1925f8a03f31a
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66483805"
 ---
-# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="94814-102">示例 XML 文件：命名空间中的客户和订单</span><span class="sxs-lookup"><span data-stu-id="94814-102">Sample XML File: Customers and Orders in a Namespace</span></span>
-<span data-ttu-id="94814-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="94814-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="94814-104">此文件包含客户和订单。</span><span class="sxs-lookup"><span data-stu-id="94814-104">This file contains customers and orders.</span></span> <span data-ttu-id="94814-105">该 XML 在某个命名空间中。</span><span class="sxs-lookup"><span data-stu-id="94814-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="656da-102">示例 XML 文件：命名空间中的客户和订单</span><span class="sxs-lookup"><span data-stu-id="656da-102">Sample XML File: Customers and Orders in a Namespace</span></span>
+<span data-ttu-id="656da-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="656da-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="656da-104">此文件包含客户和订单。</span><span class="sxs-lookup"><span data-stu-id="656da-104">This file contains customers and orders.</span></span> <span data-ttu-id="656da-105">该 XML 在某个命名空间中。</span><span class="sxs-lookup"><span data-stu-id="656da-105">The XML is in a namespace.</span></span>  
   
-## <a name="customersordersinnamespacexml"></a><span data-ttu-id="94814-106">CustomersOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="94814-106">CustomersOrdersInNamespace.xml</span></span>  
+## <a name="customersordersinnamespacexml"></a><span data-ttu-id="656da-106">CustomersOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="656da-106">CustomersOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

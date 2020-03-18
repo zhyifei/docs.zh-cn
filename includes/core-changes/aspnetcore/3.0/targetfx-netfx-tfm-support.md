@@ -1,53 +1,53 @@
 ---
 ms.openlocfilehash: b60f74947a537c602c7bd1a89587b76bd847c82a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937293"
 ---
-### <a name="target-framework-net-framework-support-dropped"></a><span data-ttu-id="b4137-101">目标框架：删除了 .NET Framework 支持</span><span class="sxs-lookup"><span data-stu-id="b4137-101">Target framework: .NET Framework support dropped</span></span>
+### <a name="target-framework-net-framework-support-dropped"></a><span data-ttu-id="397e4-101">目标框架：删除了 .NET Framework 支持</span><span class="sxs-lookup"><span data-stu-id="397e4-101">Target framework: .NET Framework support dropped</span></span>
 
-<span data-ttu-id="b4137-102">从 ASP.NET Core 3.0 开始，.NET Framework 不再是受支持的目标框架。</span><span class="sxs-lookup"><span data-stu-id="b4137-102">Starting with ASP.NET Core 3.0, .NET Framework is an unsupported target framework.</span></span>
+<span data-ttu-id="397e4-102">从 ASP.NET Core 3.0 开始，.NET Framework 不再是受支持的目标框架。</span><span class="sxs-lookup"><span data-stu-id="397e4-102">Starting with ASP.NET Core 3.0, .NET Framework is an unsupported target framework.</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="b4137-103">更改描述</span><span class="sxs-lookup"><span data-stu-id="b4137-103">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="397e4-103">更改描述</span><span class="sxs-lookup"><span data-stu-id="397e4-103">Change description</span></span>
 
-<span data-ttu-id="b4137-104">.NET Framework 4.8 是 .NET Framework 的上一个主要版本。</span><span class="sxs-lookup"><span data-stu-id="b4137-104">.NET Framework 4.8 is the last major version of .NET Framework.</span></span> <span data-ttu-id="b4137-105">新的 ASP.NET Core 应用应基于 .NET Core 构建。</span><span class="sxs-lookup"><span data-stu-id="b4137-105">New ASP.NET Core apps should be built on .NET Core.</span></span> <span data-ttu-id="b4137-106">从 .NET Core 3.0 版开始，可将 ASP.NET Core 3.0 视为 .NET Core 的一部分。</span><span class="sxs-lookup"><span data-stu-id="b4137-106">Starting with the .NET Core 3.0 release, you can think of ASP.NET Core 3.0 as being part of .NET Core.</span></span>
+<span data-ttu-id="397e4-104">.NET Framework 4.8 是 .NET Framework 的上一个主要版本。</span><span class="sxs-lookup"><span data-stu-id="397e4-104">.NET Framework 4.8 is the last major version of .NET Framework.</span></span> <span data-ttu-id="397e4-105">新的 ASP.NET Core 应用应基于 .NET Core 构建。</span><span class="sxs-lookup"><span data-stu-id="397e4-105">New ASP.NET Core apps should be built on .NET Core.</span></span> <span data-ttu-id="397e4-106">从 .NET Core 3.0 版开始，可将 ASP.NET Core 3.0 视为 .NET Core 的一部分。</span><span class="sxs-lookup"><span data-stu-id="397e4-106">Starting with the .NET Core 3.0 release, you can think of ASP.NET Core 3.0 as being part of .NET Core.</span></span>
 
-<span data-ttu-id="b4137-107">将 .NET Framework 和 ASP.NET Core 结合使用的客户可以使用 [2.1 LTS 版本](https://www.microsoft.com/net/download/dotnet-core/2.1)以完全受支持的方式继续。</span><span class="sxs-lookup"><span data-stu-id="b4137-107">Customers using ASP.NET Core with .NET Framework can continue in a fully supported fashion using the [2.1 LTS release](https://www.microsoft.com/net/download/dotnet-core/2.1).</span></span> <span data-ttu-id="b4137-108">至少在 2021 年 8 月 21 日之前，将继续提供对 2.1 的支持和服务。</span><span class="sxs-lookup"><span data-stu-id="b4137-108">Support and servicing for 2.1 continues until at least August 21, 2021.</span></span> <span data-ttu-id="b4137-109">根据 [.NET 支持策略](https://www.microsoft.com/net/platform/support-policy)，此日期为声明 LTS 版本后三年。</span><span class="sxs-lookup"><span data-stu-id="b4137-109">This date is three years after declaration of the LTS release per the [.NET Support Policy](https://www.microsoft.com/net/platform/support-policy).</span></span> <span data-ttu-id="b4137-110">.NET Framework 对 ASP.NET Core 2.1 包的支持  将无限延期，类似于[其他基于包的 ASP.NET 框架的服务策略](https://dotnet.microsoft.com/platform/support/policy/aspnet)。</span><span class="sxs-lookup"><span data-stu-id="b4137-110">Support for ASP.NET Core 2.1 packages **on .NET Framework** will extend indefinitely, similar to the [servicing policy for other package-based ASP.NET frameworks](https://dotnet.microsoft.com/platform/support/policy/aspnet).</span></span>
+<span data-ttu-id="397e4-107">将 .NET Framework 和 ASP.NET Core 结合使用的客户可以使用 [2.1 LTS 版本](https://www.microsoft.com/net/download/dotnet-core/2.1)以完全受支持的方式继续。</span><span class="sxs-lookup"><span data-stu-id="397e4-107">Customers using ASP.NET Core with .NET Framework can continue in a fully supported fashion using the [2.1 LTS release](https://www.microsoft.com/net/download/dotnet-core/2.1).</span></span> <span data-ttu-id="397e4-108">至少在 2021 年 8 月 21 日之前，将继续提供对 2.1 的支持和服务。</span><span class="sxs-lookup"><span data-stu-id="397e4-108">Support and servicing for 2.1 continues until at least August 21, 2021.</span></span> <span data-ttu-id="397e4-109">根据 [.NET 支持策略](https://www.microsoft.com/net/platform/support-policy)，此日期为声明 LTS 版本后三年。</span><span class="sxs-lookup"><span data-stu-id="397e4-109">This date is three years after declaration of the LTS release per the [.NET Support Policy](https://www.microsoft.com/net/platform/support-policy).</span></span> <span data-ttu-id="397e4-110">.NET Framework 对 ASP.NET Core 2.1 包的支持  将无限延期，类似于[其他基于包的 ASP.NET 框架的服务策略](https://dotnet.microsoft.com/platform/support/policy/aspnet)。</span><span class="sxs-lookup"><span data-stu-id="397e4-110">Support for ASP.NET Core 2.1 packages **on .NET Framework** will extend indefinitely, similar to the [servicing policy for other package-based ASP.NET frameworks](https://dotnet.microsoft.com/platform/support/policy/aspnet).</span></span>
 
-<span data-ttu-id="b4137-111">有关从 .NET Framework 移植到 .NET Core 的详细信息，请参阅[移植到 .NET Core](~/docs/core/porting/index.md)。</span><span class="sxs-lookup"><span data-stu-id="b4137-111">For more information about porting from .NET Framework to .NET Core, see [Porting to .NET Core](~/docs/core/porting/index.md).</span></span>
+<span data-ttu-id="397e4-111">有关从 .NET Framework 移植到 .NET Core 的详细信息，请参阅[移植到 .NET Core](~/docs/core/porting/index.md)。</span><span class="sxs-lookup"><span data-stu-id="397e4-111">For more information about porting from .NET Framework to .NET Core, see [Porting to .NET Core](~/docs/core/porting/index.md).</span></span>
 
-<span data-ttu-id="b4137-112">`Microsoft.Extensions` 包（如日志记录、依赖项注入和配置）和 Entity Framework Core 不受影响。</span><span class="sxs-lookup"><span data-stu-id="b4137-112">`Microsoft.Extensions` packages (such as logging, dependency injection, and configuration) and Entity Framework Core aren't affected.</span></span> <span data-ttu-id="b4137-113">它们将继续支持 .NET Standard。</span><span class="sxs-lookup"><span data-stu-id="b4137-113">They'll continue to support .NET Standard.</span></span>
+<span data-ttu-id="397e4-112">`Microsoft.Extensions` 包（如日志记录、依赖项注入和配置）和 Entity Framework Core 不受影响。</span><span class="sxs-lookup"><span data-stu-id="397e4-112">`Microsoft.Extensions` packages (such as logging, dependency injection, and configuration) and Entity Framework Core aren't affected.</span></span> <span data-ttu-id="397e4-113">它们将继续支持 .NET Standard。</span><span class="sxs-lookup"><span data-stu-id="397e4-113">They'll continue to support .NET Standard.</span></span>
 
-<span data-ttu-id="b4137-114">有关此更改动机的详细信息，请参阅[原始博客文章](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/)。</span><span class="sxs-lookup"><span data-stu-id="b4137-114">For more information on the motivation for this change, see [the original blog post](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/).</span></span>
+<span data-ttu-id="397e4-114">有关此更改动机的详细信息，请参阅[原始博客文章](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/)。</span><span class="sxs-lookup"><span data-stu-id="397e4-114">For more information on the motivation for this change, see [the original blog post](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/).</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="b4137-115">引入的版本</span><span class="sxs-lookup"><span data-stu-id="b4137-115">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="397e4-115">引入的版本</span><span class="sxs-lookup"><span data-stu-id="397e4-115">Version introduced</span></span>
 
-<span data-ttu-id="b4137-116">3.0</span><span class="sxs-lookup"><span data-stu-id="b4137-116">3.0</span></span>
+<span data-ttu-id="397e4-116">3.0</span><span class="sxs-lookup"><span data-stu-id="397e4-116">3.0</span></span>
 
-#### <a name="old-behavior"></a><span data-ttu-id="b4137-117">旧行为</span><span class="sxs-lookup"><span data-stu-id="b4137-117">Old behavior</span></span>
+#### <a name="old-behavior"></a><span data-ttu-id="397e4-117">旧行为</span><span class="sxs-lookup"><span data-stu-id="397e4-117">Old behavior</span></span>
 
-<span data-ttu-id="b4137-118">ASP.NET Core 应用可在 .NET Core 或 .NET Framework 上运行。</span><span class="sxs-lookup"><span data-stu-id="b4137-118">ASP.NET Core apps could run on either .NET Core or .NET Framework.</span></span>
+<span data-ttu-id="397e4-118">ASP.NET Core 应用可在 .NET Core 或 .NET Framework 上运行。</span><span class="sxs-lookup"><span data-stu-id="397e4-118">ASP.NET Core apps could run on either .NET Core or .NET Framework.</span></span>
 
-#### <a name="new-behavior"></a><span data-ttu-id="b4137-119">新行为</span><span class="sxs-lookup"><span data-stu-id="b4137-119">New behavior</span></span>
+#### <a name="new-behavior"></a><span data-ttu-id="397e4-119">新行为</span><span class="sxs-lookup"><span data-stu-id="397e4-119">New behavior</span></span>
 
-<span data-ttu-id="b4137-120">ASP.NET Core 应用只能在 .NET Core 上运行。</span><span class="sxs-lookup"><span data-stu-id="b4137-120">ASP.NET Core apps can only be run on .NET Core.</span></span>
+<span data-ttu-id="397e4-120">ASP.NET Core 应用只能在 .NET Core 上运行。</span><span class="sxs-lookup"><span data-stu-id="397e4-120">ASP.NET Core apps can only be run on .NET Core.</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="b4137-121">建议操作</span><span class="sxs-lookup"><span data-stu-id="b4137-121">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="397e4-121">建议操作</span><span class="sxs-lookup"><span data-stu-id="397e4-121">Recommended action</span></span>
 
-<span data-ttu-id="b4137-122">请执行以下一项操作：</span><span class="sxs-lookup"><span data-stu-id="b4137-122">Take one of the following actions:</span></span>
+<span data-ttu-id="397e4-122">请执行以下一项操作：</span><span class="sxs-lookup"><span data-stu-id="397e4-122">Take one of the following actions:</span></span>
 
-- <span data-ttu-id="b4137-123">将应用保留在 ASP.NET Core 2.1 上。</span><span class="sxs-lookup"><span data-stu-id="b4137-123">Keep your app on ASP.NET Core 2.1.</span></span>
-- <span data-ttu-id="b4137-124">将应用和依赖项迁移到 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="b4137-124">Migrate your app and dependencies to .NET Core.</span></span>
+- <span data-ttu-id="397e4-123">将应用保留在 ASP.NET Core 2.1 上。</span><span class="sxs-lookup"><span data-stu-id="397e4-123">Keep your app on ASP.NET Core 2.1.</span></span>
+- <span data-ttu-id="397e4-124">将应用和依赖项迁移到 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="397e4-124">Migrate your app and dependencies to .NET Core.</span></span>
 
-#### <a name="category"></a><span data-ttu-id="b4137-125">类别</span><span class="sxs-lookup"><span data-stu-id="b4137-125">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="397e4-125">类别</span><span class="sxs-lookup"><span data-stu-id="397e4-125">Category</span></span>
 
-<span data-ttu-id="b4137-126">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="b4137-126">ASP.NET Core</span></span>
+<span data-ttu-id="397e4-126">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="397e4-126">ASP.NET Core</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="b4137-127">受影响的 API</span><span class="sxs-lookup"><span data-stu-id="b4137-127">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="397e4-127">受影响的 API</span><span class="sxs-lookup"><span data-stu-id="397e4-127">Affected APIs</span></span>
 
-<span data-ttu-id="b4137-128">None</span><span class="sxs-lookup"><span data-stu-id="b4137-128">None</span></span>
+<span data-ttu-id="397e4-128">无</span><span class="sxs-lookup"><span data-stu-id="397e4-128">None</span></span>
 
 <!-- 
 
