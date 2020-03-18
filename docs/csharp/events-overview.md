@@ -3,16 +3,16 @@ title: 事件介绍
 description: 本概述中介绍 .NET Core 中的事件和事件的语言设计目标。
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: ceae2b9319a1de9f01102987735c7db2c2883f18
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 4e660f85eecfd5668919baf21a0d26f858faf5a6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138516"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146109"
 ---
 # <a name="introduction-to-events"></a>事件介绍
 
-[上一篇](delegates-patterns.md)
+[上一页](delegates-patterns.md)
 
 和委托类似，事件是*后期绑定*机制。 实际上，事件是建立在对委托的语言支持之上的。
 
@@ -59,11 +59,11 @@ Progress?.Invoke(this, new FileListArgs(file));
 
 如[委托](delegates-patterns.md)部分中所介绍的那样，?.
 运算符可以轻松确保在事件没有订阅服务器时不引发事件。
- 
+
 通过使用 `+=` 运算符订阅事件：
 
 ```csharp
-EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
+EventHandler<FileListArgs> onProgress = (sender, eventArgs) =>
     Console.WriteLine(eventArgs.FoundFile);
 
 fileLister.Progress += onProgress;
@@ -82,4 +82,4 @@ fileLister.Progress -= onProgress;
 
 下一篇文章将介绍有关典型事件模式及此示例的不同变体的详细信息。
 
-[下一页](event-pattern.md)
+[下一部分](event-pattern.md)

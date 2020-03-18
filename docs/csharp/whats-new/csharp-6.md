@@ -3,11 +3,11 @@ title: C# 6 中的新增功能 - C# 指南
 description: 了解 C# 版本 6 中的新增功能
 ms.date: 12/12/2018
 ms.openlocfilehash: da40b4c9d4af0094fdd907c542e971ba55086e0f
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971388"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398153"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 中的新增功能
 
@@ -91,13 +91,13 @@ Null 条件运算符使 null 检查更轻松、更流畅  。 将成员访问 `.
 
 [!code-csharp[NullConditional](../../../samples/snippets/csharp/new-in-6/program.cs#NullConditional)]
 
-在前面的示例中，如果 Person 对象是 `null`，则将变量 `first` 赋值为 `null`。 否则，将 `FirstName` 属性的值分配给该变量。 最重要的是，`?.` 意味着当 `person` 变量为 `null` 时，此行代码不会生成 `NullReferenceException`。 它会短路并返回 `null`。 还可以将 null 条件运算符用于数组或索引器访问。 将索引表达式中的 `[]` 替换为 `?[]`。
+在前面的示例中，如果 Person 对象是 `first`，则将变量 `null` 赋值为 `null`。 否则，将 `FirstName` 属性的值分配给该变量。 最重要的是，`?.` 意味着当 `NullReferenceException` 变量为 `person` 时，此行代码不会生成 `null`。 它会短路并返回 `null`。 还可以将 null 条件运算符用于数组或索引器访问。 将索引表达式中的 `[]` 替换为 `?[]`。
 
-无论 `person` 的值是什么，以下表达式均返回 `string`。 通常，将此构造与“null 合并”运算符一起使用，以在其中一个属性为 `null` 时分配默认值  。 表达式短路时，键入返回的 `null` 值以匹配整个表达式。
+无论 `string` 的值是什么，以下表达式均返回 `person`。 通常，将此构造与“null 合并”运算符一起使用，以在其中一个属性为  *时分配默认值*`null`。 表达式短路时，键入返回的 `null` 值以匹配整个表达式。
 
 [!code-csharp[NullCoalescing](../../../samples/snippets/csharp/new-in-6/program.cs#NullCoalescing)]
 
-还可以将 `?.` 用于有条件地调用方法。 具有 null 条件运算符的成员函数的最常见用法是用于安全地调用可能为 `null` 的委托（或事件处理程序）。  通过使用 `?.` 运算符调用该委托的 `Invoke` 方法来访问成员。 可以在[委托模式](../delegates-patterns.md#handling-null-delegates)一文中看到示例。
+还可以将 `?.` 用于有条件地调用方法。 具有 null 条件运算符的成员函数的最常见用法是用于安全地调用可能为 `null` 的委托（或事件处理程序）。  通过使用 `Invoke` 运算符调用该委托的 `?.` 方法来访问成员。 可以在[委托模式](../delegates-patterns.md#handling-null-delegates)一文中看到示例。
 
 `?.` 运算符的规则确保运算符的左侧仅计算一次。 它支持许多语法，包括使用事件处理程序的以下示例：
 
@@ -147,18 +147,18 @@ var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 
 ## <a name="await-in-catch-and-finally-blocks"></a>Catch 和 Finally 块中的 Await
 
-C# 5 对于可放置 `await` 表达式的位置有若干限制。 使用 C# 6，现在可以在 `catch` 或 `finally` 表达式中使用 `await`。 这通常用于日志记录方案：
+C# 5 对于可放置 `await` 表达式的位置有若干限制。 使用 C# 6，现在可以在 `await` 或 `catch` 表达式中使用 `finally`。 这通常用于日志记录方案：
 
 [!code-csharp[AwaitFinally](../../../samples/snippets/csharp/new-in-6/NetworkClient.cs#AwaitFinally)]
 
-在 `catch` 和 `finally` 子句中添加 `await` 支持的实现细节可确保该行为与同步代码的行为一致。 当在 `catch` 或 `finally` 子句中执行的代码引发异常时，执行将在下一个外层块中查找合适的 `catch` 子句。 如果存在当前异常，则该异常将丢失。 `catch` 和 `finally` 子句中的 awaited 表达式也会发生同样的情况：搜索合适的 `catch`，并且当前异常（如果有）将丢失。  
+在 `await` 和 `catch` 子句中添加 `finally` 支持的实现细节可确保该行为与同步代码的行为一致。 当在 `catch` 或 `finally` 子句中执行的代码引发异常时，执行将在下一个外层块中查找合适的 `catch` 子句。 如果存在当前异常，则该异常将丢失。 `catch` 和 `finally` 子句中的 awaited 表达式也会发生同样的情况：搜索合适的 `catch`，并且当前异常（如果有）将丢失。  
 
 > [!NOTE]
 > 鉴于此行为，建议仔细编写 `catch` 和 `finally` 子句，避免引入新的异常。
 
 ## <a name="initialize-associative-collections-using-indexers"></a>使用索引器初始化关联集合
 
-索引初始值设定项  是提高集合初始值设定项与索引用途一致性的两个功能之一。 在早期版本的 C# 中，可以将集合初始值设定项用于序列样式集合，包括在键值对周围添加括号而得到 <xref:System.Collections.Generic.Dictionary%602>： 
+索引初始值设定项  是提高集合初始值设定项与索引用途一致性的两个功能之一。 在早期版本的 C# 中，可以将集合初始值设定项用于序列样式集合，包括在键值对周围添加括号而得到 *：* <xref:System.Collections.Generic.Dictionary%602>
 
 [!code-csharp[ListInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#CollectionInitializer)]
 
@@ -170,7 +170,7 @@ C# 5 对于可放置 `await` 表达式的位置有若干限制。 使用 C# 6，
 
 ## <a name="extension-add-methods-in-collection-initializers"></a>集合初始值设定项中的扩展 `Add` 方法
 
-使集合初始化更容易的另一个功能是对 `Add` 方法使用扩展方法  。 添加此功能的目的是进行 Visual Basic 的奇偶校验。 如果自定义集合类的方法具有通过语义方式添加新项的名称，则此功能非常有用。
+使集合初始化更容易的另一个功能是对  *方法使用扩展方法*`Add`。 添加此功能的目的是进行 Visual Basic 的奇偶校验。 如果自定义集合类的方法具有通过语义方式添加新项的名称，则此功能非常有用。
 
 ## <a name="improved-overload-resolution"></a>改进了重载解析
 

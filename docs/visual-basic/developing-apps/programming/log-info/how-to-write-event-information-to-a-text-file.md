@@ -1,5 +1,5 @@
 ---
-title: 如何：将事件信息写入文本文件
+title: 'How to: Write Event Information to a Text File'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs [Visual Studio], writing event information
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
 ms.openlocfilehash: c3c81e331eb3d8ee450ba0cac38e57976846ee63
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352075"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>如何：将事件信息写入文本文件 (Visual Basic)
@@ -19,7 +19,7 @@ ms.locfileid: "74352075"
 
 ### <a name="to-add-and-configure-the-file-log-listener"></a>添加和配置文件日志侦听器
 
-1. 在“解决方案资源管理器” 中右键单击 app.config，然后选择“打开”。  
+1. 在“解决方案资源管理器”  中右键单击 app.config，然后选择“打开”  。
 
      \- 或 -
 
@@ -29,7 +29,7 @@ ms.locfileid: "74352075"
 
     2. 在“添加新项”  对话框中，选择“应用程序配置文件”  。
 
-    3. 单击 **“添加”** 。
+    3. 单击 **添加**。
 
 2. 在应用程序配置文件中找到 `<listeners>` 部分。
 
@@ -62,11 +62,11 @@ ms.locfileid: "74352075"
 
 ### <a name="to-write-event-information-to-the-file-log"></a>将事件信息写入文件日志
 
-可以使用 `My.Application.Log.WriteEntry` 或 `My.Application.Log.WriteException` 方法将信息写入文件日志。 有关详细信息，请参阅[如何：编写日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)和[如何：日志异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)。
+可以使用 `My.Application.Log.WriteEntry` 或 `My.Application.Log.WriteException` 方法将信息写入文件日志。 有关详细信息，请参阅[如何：编写日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)和[如何：记录异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)。
 
 为程序集配置文件日志侦听器后，它将接收该程序集写入 `My.Application.Log` 的所有消息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>

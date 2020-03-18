@@ -3,12 +3,12 @@ title: 使用 .NET Core 创建 REST 客户端
 description: 此教程将介绍 .NET Core 和 C# 语言的许多功能。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: f85d50b222d06caa045e22b452d0902aaac66088
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 5796df2d2fd8c4d9aaca783d720448c90858c067
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503975"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156852"
 ---
 # <a name="rest-client"></a>REST 客户端
 
@@ -161,7 +161,7 @@ namespace WebAPIClient
 JSON 序列化程序将忽略所使用的类类型未包含的信息。
 借助此功能，可更轻松地创建仅处理一部分 JSON 数据包字段的类型。
 
-至此，你已创建类型，让我们来进行反序列化吧。 
+至此，你已创建类型，让我们来进行反序列化吧。
 
 接下来，使用序列化程序将 JSON 转换成 C# 对象。 使用以下三行代码替换 `ProcessRepositories` 方法中对 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> 的调用：
 

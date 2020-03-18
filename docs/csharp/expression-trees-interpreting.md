@@ -4,12 +4,12 @@ description: 了解如何编写代码来检查表达式树的结构。
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 34434a633d866b82da3da713aaecc218c7d35124
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 1283d7d957c72558652b96cb428efd0f071f0184
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036897"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146003"
 ---
 # <a name="interpreting-expressions"></a>解释表达式
 
@@ -260,9 +260,9 @@ Expression<Func<int>> sum5 = () => (1 + (2 + 3)) + 4;
 ```
 
 可以看到可能的答案分为两种，以便着重于最有可能正确的答案。 第一种表示*右结合*表达式。 第二种表示*左结合*表达式。
-这两种格式的优点是，格式可以缩放为任意数量的加法表达式。 
+这两种格式的优点是，格式可以缩放为任意数量的加法表达式。
 
-如果确实通过该访问者运行此表达式，则将看到此输出，其验证简单的加法表达式是否为*左结合*。 
+如果确实通过该访问者运行此表达式，则将看到此输出，其验证简单的加法表达式是否为*左结合*。
 
 为了运行此示例并查看完整的表达式树，我不得不对源表达式树进行一次更改。 当表达式树包含所有常量时，所得到的树仅包含 `10` 的常量值。 编译器执行所有加法运算，并将表达式缩减为其最简单的形式。 只需在表达式中添加一个变量即可看到原始的树：
 
@@ -349,8 +349,8 @@ The expression body is:
 
 ```csharp
 Expression<Func<int, int>> factorial = (n) =>
-    n == 0 ? 
-    1 : 
+    n == 0 ?
+    1 :
     Enumerable.Range(1, n).Aggregate((product, factor) => product * factor);
 ```
 
@@ -509,7 +509,7 @@ The expression body is:
 
 ## <a name="extending-the-sample-library"></a>扩展示例库
 
-本部分中的示例演示访问和检查表达式树中的节点的核心技术。 我略过了很多可能需要的操作，以便专注于访问表达式树中的节点这一核心任务。 
+本部分中的示例演示访问和检查表达式树中的节点的核心技术。 我略过了很多可能需要的操作，以便专注于访问表达式树中的节点这一核心任务。
 
 首先，访问者只处理整数常量。 常量值可以是任何其他数值类型，且 C# 语言支持这些类型之间的转换和提升。 此代码的更可靠版本可反映所有这些功能。
 

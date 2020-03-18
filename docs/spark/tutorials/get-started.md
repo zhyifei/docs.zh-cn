@@ -4,12 +4,12 @@ description: 了解如何在 Windows、MacOS 和 Ubuntu 上使用 .NET Core 运�
 ms.date: 01/31/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 018c21804bf942233e07039281d7ec22a6bef763
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 7375c385245a05d7dc29d5df89d875bf6cb4141a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092312"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187543"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>教程：.NET for Apache Spark 入门
 
@@ -121,7 +121,7 @@ source ~/.bashrc
 
 在 Windows  上创建[新环境变量](https://www.java.com/en/download/help/path.xml) `DOTNET_WORKER_DIR`，并将其设置为下载和提取 Microsoft.Spark.Worker 时使用的目录（例如，`C:\bin\Microsoft.Spark.Worker\`）。
 
-在 MacOS  上使用 `export DOTNET_WORKER_DIR <your_path>` 创建新环境变量，并将其设置为下载和提取 Microsoft.Spark.Worker 时使用的目录（例如，~/bin/Microsoft.Spark.Worker/  ）。 
+在 MacOS  上使用 `export DOTNET_WORKER_DIR <your_path>` 创建新环境变量，并将其设置为下载和提取 Microsoft.Spark.Worker 时使用的目录（例如，~/bin/Microsoft.Spark.Worker/  ）。
 
 在 Ubuntu  上创建[新环境变量](https://help.ubuntu.com/community/EnvironmentVariables) `DOTNET_WORKER_DIR`，并将其设置为下载和提取 Microsoft.Spark.Worker 时使用的目录（例如，~/bin/Microsoft.Spark.Worker  ）。
 

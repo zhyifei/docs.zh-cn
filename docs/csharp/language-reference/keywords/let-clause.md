@@ -8,12 +8,12 @@ helpviewer_keywords:
 - let keyword [C#]
 - let clause [C#]
 ms.assetid: 13c9c1a4-ce57-48ef-8e1b-4c2a59b99fb4
-ms.openlocfilehash: 32bb5d2138c0b86bf58d26015aa208f655229129
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3ce2b663e5678de6b53db610b489f85ab1427b9d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715228"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173583"
 ---
 # <a name="let-clause-c-reference"></a>let 子句（C# 参考）
 
@@ -25,14 +25,14 @@ ms.locfileid: "75715228"
 
 1. 创建一个可以查询其自身的可枚举类型。
 
-2. 使查询仅调用一次范围变量 `word` 上的 `ToLower`。 如果不使用 `let`，则不得不调用 `where` 子句中的每个谓词的 `ToLower`。
+2. 使查询仅调用一次范围变量 `ToLower` 上的 `word`。 如果不使用 `let`，则不得不调用 `ToLower` 子句中的每个谓词的 `where`。
 
 [!code-csharp[cscsrefQueryKeywords#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Let.cs#28)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../../language-reference/index.md)
 - [查询关键字 (LINQ)](query-keywords.md)
-- [语言集成查询 (LINQ)](../../linq/index.md)
-- [C# 中的 LINQ 入门](/dotnet/csharp/programming-guide/concepts/linq/)
+- [C# 中的 LINQ](../../linq/index.md)
+- [语言集成查询 (LINQ)](../../programming-guide/concepts/linq/index.md)
 - [在查询表达式中处理异常](../../linq/handle-exceptions-in-query-expressions.md)

@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 0aa323533dd9136372c2bbc330c9c3056fdf428c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 13600ea01e18ad47e6295653ba3b79ce53ff3257
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157566"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397955"
 ---
 # <a name="install-the-net-core-sdk"></a>安装 .NET Core SDK
 
@@ -157,7 +157,7 @@ Visual Studio Code 是一个功能强大的轻量级源代码编辑器，可在�
 
 01. [下载并安装 Visual Studio Code](https://code.visualstudio.com/Download)。
 01. [下载并安装 .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core)。
-01. [从 Visual Studio Code 市场安装 C# 扩展](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)。
+01. [从 Visual Studio Code 市场安装 C# 扩展](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)。
 
 ::: zone pivot="os-windows"
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-ms.openlocfilehash: 5202e4c26220bc9ea08d6d941ee5a7821cbbdefd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e965702943149d3ed34be39bb2923ad52dcf90ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122239"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181649"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>在 .NET Framework 中并行执行
 
@@ -28,7 +28,7 @@ ms.locfileid: "73122239"
 利用并行执行，可更好地控制应用程序所绑定的组件的版本，并可更好地控制应用程序所使用的运行时的版本。  
   
 ## <a name="benefits-of-side-by-side-execution"></a>并行 (Side-by-Side) 执行的优点  
- 
+
 在 Windows XP 和 .NET Framework 之前，发生 DLL 冲突的原因是应用程序不能区别同一代码的不同的不兼容版本。 包含在 DLL 中的类型信息仅绑定到文件名。 应用程序无法知道包含在 DLL 中的类型是否同用来生成该应用程序的类型相同。 因此，组件的新版本会覆盖旧版本，并会破坏应用程序。  
   
 为消除 DLL 冲突，并行执行和 .NET Framework 提供了下列功能：  
@@ -61,7 +61,7 @@ ms.locfileid: "73122239"
   
 ### <a name="runtime-version-information-in-the-application-configuration-file"></a>应用程序配置文件中的运行时版本信息  
 
-除了 PE 文件头中的信息，还可使用提供运行时版本信息的应用程序配置文件部署应用程序。 应用程序配置文件由应用程序开发人员创建，是基于 XML 的文件且与应用程序一同提供。 如果此文件中有 [\<startup> 部分](../configure-apps/file-schema/startup/startup-element.md)的 [\<requiredRuntime> 元素](../configure-apps/file-schema/startup/requiredruntime-element.md)，则指定运行时版本以及应用程序支持的组件版本。 还可在测试中使用此文件测试应用程序是否与不同的运行时版本兼容。  
+除了 PE 文件头中的信息，还可使用提供运行时版本信息的应用程序配置文件部署应用程序。 应用程序配置文件由应用程序开发人员创建，是基于 XML 的文件且与应用程序一同提供。 如果此文件中有 [\<startup> 部分](../configure-apps/file-schema/startup/requiredruntime-element.md)的 [\<requiredRuntime> 元素](../configure-apps/file-schema/startup/startup-element.md)，则指定运行时版本以及应用程序支持的组件版本。 还可在测试中使用此文件测试应用程序是否与不同的运行时版本兼容。  
   
 非托管代码（包括 COM 和 COM+ 应用程序）可具有运行时用于与托管代码进行交互的应用程序配置文件。 应用程序配置文件会影响任何通过 COM 激活的托管代码。 此文件可指定所支持的运行时版本以及程序集重定向。 默认情况下，调用到托管代码的 COM 互操作应用程序使用计算机上安装的最新版本的运行时。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "73122239"
   
 如果应用程序配置文件存在，则运行时根据以下过程的结果确定要加载的适当运行时版本：  
   
-1. 运行时检查应用程序配置文件中的 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 元素。 如果 \<supportedRuntime> 元素中指定了一个或多个支持的运行时版本，则运行时加载第一个 \<supportedRuntime> 元素指定的运行时版本   。 如果这一版本不可用，则运行时检查下一个 \<supportedRuntime> 元素，并尝试加载所指定的运行时版本  。 如果这一运行时版本仍不可用，则检查后面的 \<supportedRuntime> 元素  。 如果受支持的运行时版本均不可用，则运行时无法加载运行时版本，并向用户显示一条消息（请参阅步骤 3）。  
+1. 运行时检查应用程序配置文件中的 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 元素。 如果 **supportedRuntime> 元素中指定了一个或多个支持的运行时版本，则运行时加载第一个 \<supportedRuntime> 元素指定的运行时版本** **\<** 。 如果这一版本不可用，则运行时检查下一个 **supportedRuntime> 元素，并尝试加载所指定的运行时版本\<** 。 如果这一运行时版本仍不可用，则检查后面的 **supportedRuntime> 元素\<** 。 如果受支持的运行时版本均不可用，则运行时无法加载运行时版本，并向用户显示一条消息（请参阅步骤 3）。  
   
 2. 运行时读取应用程序可执行文件的 PE 文件头。 如果 PE 文件头指定的运行时版本可用，则运行时加载此版本。 如果指定的运行时版本不可用，运行时将搜索 Microsoft 确定与 PE 文件头中的运行时版本兼容的运行时版本。 如果找不到此版本，则继续执行到步骤 3。  
   
@@ -97,18 +97,18 @@ ms.locfileid: "73122239"
 
 因为它们是并行问题的潜在根源，部分限定的程序集引用仅可用于绑定到应用程序目录中的程序集。 避免在代码中使用部分限定的程序集引用。  
   
-若要减轻在代码中使用部分限定的程序集引用，可以利用应用程序配置文件中的 [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) 元素，对代码中出现的部分限定的程序集引用进行完全限定。 应当使用 \<qualifyAssembly> 元素来仅指定未在部分引用中设置的字段  。 fullName 属性中列出的程序集标识必须包含完全限定程序集名称所需的所有信息：程序集名称、公钥、区域性和版本  。  
+若要减轻在代码中使用部分限定的程序集引用，可以利用应用程序配置文件中的 [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) 元素，对代码中出现的部分限定的程序集引用进行完全限定。 应当使用 **qualifyAssembly> 元素来仅指定未在部分引用中设置的字段\<** 。 fullName 属性中列出的程序集标识必须包含完全限定程序集名称所需的所有信息：程序集名称、公钥、区域性和版本  。  
   
  以下示例演示用于完全限定名为 `myAssembly` 的程序集的应用程序配置文件条目。  
   
 ```xml  
-<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">   
-<qualifyAssembly partialName="myAssembly"   
+<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+<qualifyAssembly partialName="myAssembly"
 fullName="myAssembly,  
-      version=1.0.0.0,   
-publicKeyToken=...,   
-      culture=neutral"/>   
-</assemblyBinding>   
+      version=1.0.0.0,
+publicKeyToken=...,
+      culture=neutral"/>
+</assemblyBinding>
 ```  
   
  每当程序集加载语句引用 `myAssembly` 时，这些配置文件设置就会使运行时将部分限定的 `myAssembly` 引用自动转换为完全限定引用。 例如，Assembly.Load("myAssembly") 转换为 Assembly.Load("myAssembly, version=1.0.0.0, publicKeyToken=..., culture=neutral")。  
@@ -118,7 +118,7 @@ publicKeyToken=...,
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|说明|  
+|标题|说明|  
 |-----------|-----------------|  
 |[如何：启用和禁用自动绑定重定向](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|描述如何将应用程序绑定到程序集的特定版本。|  
 |[配置程序集绑定重定向](configuring-assembly-binding-redirection.md)|说明如何将程序集绑定引用重定向到 .NET Framework 程序集的特定版本。|  
@@ -126,6 +126,6 @@ publicKeyToken=...,
 |[.NET 中的程序集](../../standard/assembly/index.md)|提供程序集的概念性概述。|  
 |[应用程序域](../app-domains/application-domains.md)|提供应用程序域的概念性概述。|  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
 
 [\<supportedRuntime> 元素](../configure-apps/file-schema/startup/supportedruntime-element.md)

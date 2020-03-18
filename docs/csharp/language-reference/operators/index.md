@@ -10,10 +10,10 @@ helpviewer_keywords:
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74552474"
 ---
 # <a name="c-operators-c-reference"></a>C# 运算符（C# 参考）
@@ -47,7 +47,7 @@ Console.WriteLine(a); //  output: 8
 | [x..y](member-access-operators.md#range-operator-) | 范围 |
 | [x * y](arithmetic-operators.md#multiplication-operator-)、[x / y](arithmetic-operators.md#division-operator-)、[x % y](arithmetic-operators.md#remainder-operator-) | 乘法|
 | [x + y](arithmetic-operators.md#addition-operator-)、[x – y](arithmetic-operators.md#subtraction-operator--) | 加法 |
-| [x \<\<  y](bitwise-and-shift-operators.md#left-shift-operator-)、[x >> y](bitwise-and-shift-operators.md#right-shift-operator-) | 移位 |
+| [x \<\<  y](bitwise-and-shift-operators.md#left-shift-operator-)、[x >> y](bitwise-and-shift-operators.md#right-shift-operator-) | 班次 |
 | [x \< y](comparison-operators.md#less-than-operator-)、[x > y](comparison-operators.md#greater-than-operator-)、[x \<= y](comparison-operators.md#less-than-or-equal-operator-)、[x >= y](comparison-operators.md#greater-than-or-equal-operator-)、[is](type-testing-and-cast.md#is-operator)、[as](type-testing-and-cast.md#as-operator) | 关系和类型测试 |
 | [x == y](equality-operators.md#equality-operator-)、[x != y](equality-operators.md#inequality-operator-) | 相等 |
 | `x & y` | [布尔逻辑 AND](boolean-logical-operators.md#logical-and-operator-) 或[按位逻辑 AND](bitwise-and-shift-operators.md#logical-and-operator-) |
@@ -63,8 +63,8 @@ Console.WriteLine(a); //  output: 8
 
 当运算符的优先级相同，运算符的结合性决定了运算的执行顺序：
 
-- 左结合运算符按从左到右的顺序计算。  除[赋值运算符](assignment-operator.md)和 [null 合并运算符](null-coalescing-operator.md)外，所有二元运算符都是左结合运算符。 例如，`a + b - c` 将计算为 `(a + b) - c`。
-- 右结合运算符按从右到左的顺序计算。  赋值运算符、null 合并运算符和[条件运算符`?:`](conditional-operator.md)是右结合运算符。 例如，`x = y = z` 将计算为 `x = (y = z)`。
+- 左结合运算符按从左到右的顺序计算。  除[赋值运算符](assignment-operator.md)和 [null 合并运算符](null-coalescing-operator.md)外，所有二元运算符都是左结合运算符。 例如， `a + b - c` 将计算为 `(a + b) - c`。
+- 右结合运算符按从右到左的顺序计算。  赋值运算符、null 合并运算符和[条件运算符`?:`](conditional-operator.md)是右结合运算符。 例如， `x = y = z` 将计算为 `x = (y = z)`。
 
 使用括号更改运算符结合性所施加的计算顺序：
 
@@ -78,7 +78,7 @@ Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
 
 与运算符的优先级和结合性无关，从左到右计算表达式中的操作数。 以下示例展示了运算符和操作数的计算顺序：
 
-| 表达式 | 计算顺序 |
+| Expression | 计算顺序 |
 | ---------- | ------------------- |
 |`a + b`|a, b, +|
 |`a + b * c`|a, b, c, *, +|
@@ -89,9 +89,9 @@ Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[运算符](~/_csharplang/spec/expressions.md#operators)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#operators)中的[运算符](~/_csharplang/spec/introduction.md)部分。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [表达式](../../programming-guide/statements-expressions-operators/expressions.md)

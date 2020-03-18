@@ -4,12 +4,12 @@ description: 介绍通过将表达式树转换为可执行的中间语言 (IL) �
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 9af4b346962cb743daddf774e8b3c1f8fa722ae4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 802a83f52f9c05a99c3f49f8f6511eff81ef3eaa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037111"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146016"
 ---
 # <a name="executing-expression-trees"></a>执行表达式树
 
@@ -21,7 +21,7 @@ ms.locfileid: "73037111"
 ## <a name="lambda-expressions-to-functions"></a>Lambda 表达式到函数
 
 可以将任何 LambdaExpression 或派生自 LambdaExpression 的任何类型转换为可执行的 IL。 其他表达式类型不能直接转换为代码。 此限制在实践中影响不大。 Lambda 表达式是你可通过转换为可执行的中间语言 (IL) 来执行的唯一表达式类型。 （思考直接执行 `ConstantExpression` 意味着什么。 这是否意味着任何用处？）`LambdaExpression` 或派生自 `LambdaExpression` 的类型的任何表达式树均可转换为 IL。
-表达式类型 `Expression<TDelegate>` 是 .NET Core 库中的唯一具体示例。 它用于表示映射到任何委托类型的表达式。 由于此类型映射到一个委托类型，因此 .NET 可以检查表达式，并为匹配 lambda 表达式签名的适当委托生成 IL。 
+表达式类型 `Expression<TDelegate>` 是 .NET Core 库中的唯一具体示例。 它用于表示映射到任何委托类型的表达式。 由于此类型映射到一个委托类型，因此 .NET 可以检查表达式，并为匹配 lambda 表达式签名的适当委托生成 IL。
 
 在大多数情况下，这将在表达式和其对应的委托之间创建简单映射。 例如，由 `Expression<Func<int>>` 表示的表达式树将被转换为 `Func<int>` 类型的委托。 对于具有任何返回类型和参数列表的 Lambda 表达式，存在这样的委托类型：该类型是由该 Lambda 表达式表示的可执行代码的目标类型。
 
@@ -50,7 +50,7 @@ Console.WriteLine(answer);
 
 ## <a name="caveats"></a>注意事项
 
-将 lambda 表达式编译为委托并调用该委托是可对表达式树执行的最简单的操作之一。 但是，即使是执行这个简单的操作，也存在一些必须注意的事项。 
+将 lambda 表达式编译为委托并调用该委托是可对表达式树执行的最简单的操作之一。 但是，即使是执行这个简单的操作，也存在一些必须注意的事项。
 
 Lambda 表达式将对表达式中引用的任何局部变量创建闭包。 必须保证作为委托的一部分的任何变量在调用 `Compile` 的位置处和执行结果委托时可用。
 
@@ -108,7 +108,7 @@ private static Func<int, int> CreateBoundResource()
 }
 ```
 
-从此方法返回的委托已对释放了的 `constant` 对象闭包。 （它已被释放，因为它已在 `using` 语句中进行声明。） 
+从此方法返回的委托已对释放了的 `constant` 对象闭包。 （它已被释放，因为它已在 `using` 语句中进行声明。）
 
 现在，在执行从此方法返回的委托时，将在执行时引发 `ObjectDisposedException`。
 

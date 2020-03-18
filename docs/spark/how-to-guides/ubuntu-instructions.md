@@ -4,12 +4,12 @@ description: 了解如何在 Ubuntu 上生成 .NET for Apache Spark 应用程序
 ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: a12c861d0f231910f715a13fd41d1f3f0d6748a7
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 6dd6f60bb89a51c47fe17182fc47de818cd00b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76928066"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187571"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a>了解如何在 Ubuntu 上生成 .NET for Apache Spark 应用程序
 
@@ -21,7 +21,7 @@ ms.locfileid: "76928066"
 
 1. 下载并安装 [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1)  或 [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)  - 安装 SDK 会将 `dotnet` 工具链添加到路径。  支持 .NET Core 2.1、2.2 和 3.1。
 
-2. 安装 [OpenJDK 8](https://openjdk.java.net/install/)  。 
+2. 安装 [OpenJDK 8](https://openjdk.java.net/install/)  。
 
    - 可以使用以下命令：
 
@@ -29,10 +29,10 @@ ms.locfileid: "76928066"
    sudo apt install openjdk-8-jdk
    ```
 
-   * 验证是否能够从命令行运行 `java`。       
+   * 验证是否能够从命令行运行 `java`。
 
       Java 版本输出示例：
-          
+
       ```bash
       openjdk version "1.8.0_191"
       OpenJDK Runtime Environment (build 1.8.0_191-8u191-b12-2ubuntu0.18.04.1-b12)
@@ -59,13 +59,13 @@ ms.locfileid: "76928066"
       export PATH=${M2_HOME}/bin:${PATH}
       source ~/.bashrc
       ```
-       
+
        请注意，关闭终端时这些环境变量将丢失。 如果希望更改是永久性的，请将 `export` 行添加到 `~/.bashrc` 文件中。
 
-   * 验证是否能够从命令行运行 `mvn`       
+   * 验证是否能够从命令行运行 `mvn`
 
        mvn 版本输出示例：
-       
+
        ```
        Apache Maven 3.6.0 (97c98ec64a1fdfee7767ce5ffb20918da4f719f3; 2018-10-24T18:41:47Z)
        Maven home: ~/bin/apache-maven-3.6.0
@@ -88,13 +88,13 @@ ms.locfileid: "76928066"
       export PATH="$SPARK_HOME/bin:$PATH"
       source ~/.bashrc
       ```
-       
+
       请注意，关闭终端时这些环境变量将丢失。 如果希望更改是永久性的，请将 `export` 行添加到 `~/.bashrc` 文件中。
 
    * 验证是否能够从命令行运行 `spark-shell`。
 
       控制台输出示例：
-      
+
       ```
       Welcome to
             ____              __
@@ -109,7 +109,7 @@ ms.locfileid: "76928066"
 
       scala> sc
       res0: org.apache.spark.SparkContext = org.apache.spark.SparkContext@6eaa6b0c
-      ```                      
+      ```
 
 确保可以从命令行运行 `dotnet`、`java`、`mvn`、`spark-shell`，然后再转到下一部分。 认为还有更好的办法？ 请[发布问题](https://github.com/dotnet/spark/issues)随意参与。
 
@@ -129,7 +129,7 @@ git clone https://github.com/dotnet/spark.git ~/dotnet.spark
 
 ```bash
 cd src/scala
-mvn clean package 
+mvn clean package
 ```
 
 应会看到为支持的 Spark 版本创建的 JAR：
@@ -147,14 +147,14 @@ mvn clean package
    cd ~/dotnet.spark/src/csharp/Microsoft.Spark.Worker/
    dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    ```
-      
+
    控制台输出示例：
 
    ```bash
    user@machine:/home/user/dotnet.spark/src/csharp/Microsoft.Spark.Worker$ dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    Microsoft (R) Build Engine version 16.0.462+g62fb89029d for .NET Core
    Copyright (C) Microsoft Corporation. All rights reserved.
-      
+
       Restore completed in 36.03 ms for /home/user/dotnet.spark/src/csharp/Microsoft.Spark.Worker/Microsoft.Spark.Worker.csproj.
       Restore completed in 35.94 ms for /home/user/dotnet.spark/src/csharp/Microsoft.Spark/Microsoft.Spark.csproj.
       Microsoft.Spark -> /home/user/dotnet.spark/artifacts/bin/Microsoft.Spark/Debug/netstandard2.0/Microsoft.Spark.dll
@@ -168,7 +168,7 @@ mvn clean package
    cd ~/dotnet.spark/examples/Microsoft.Spark.CSharp.Examples/
    dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    ```
-      
+
    控制台输出示例：
 
    ```bash

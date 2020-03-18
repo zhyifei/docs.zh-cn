@@ -4,10 +4,10 @@ description: 创建基于 project.json 的库时减少包依赖项。
 author: cartermp
 ms.date: 06/20/2016
 ms.openlocfilehash: 48ba3ef578388fd98fe7cb830df313512d359483
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75740822"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>使用 project.json 减少包依赖项
@@ -24,7 +24,7 @@ ms.locfileid: "75740822"
 
 当前，没有任何可修剪包引用的正式 `dotnet` 命令。  相反，需要手动进行此操作。  一般过程如下所示：
 
-1. 在 `project.json` 的 `dependencies` 部分中引用 `NETStandard.Library` 版本 `1.6.0`。
+1. 在 `NETStandard.Library` 的 `1.6.0` 部分中引用 `dependencies` 版本 `project.json`。
 2. 使用 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）从命令行中还原包。
 3. 检查 `project.lock.json` 文件并找到 `NETStandard.Library` 部分。  它在文件的开头附近。
 4. 复制 `dependencies` 下所有列出的包。
@@ -56,7 +56,7 @@ ms.locfileid: "75740822"
 
 接着，使用 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）还原包，检查 `project.lock.json` 文件，并查找为 `NETStandard.Library` 还原的所有包。
 
-以下是以 `netstandard1.0` 为目标时，`project.lock.json` 文件中相关部分的内容：
+以下是以 `project.lock.json` 为目标时，`netstandard1.0` 文件中相关部分的内容：
 
 ```json
 "NETStandard.Library/1.6.0":{
@@ -89,7 +89,7 @@ ms.locfileid: "75740822"
 }
 ```
 
-然后，将包引用复制到库的 `project.json` 文件的 `dependencies` 部分，替换 `NETStandard.Library` 引用：
+然后，将包引用复制到库的 `dependencies` 文件的 `project.json` 部分，替换 `NETStandard.Library` 引用：
 
 ```json
 {

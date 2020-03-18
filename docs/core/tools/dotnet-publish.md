@@ -2,12 +2,12 @@
 title: dotnet publish 命令
 description: dotnet publish 命令可将 .NET Core 项目或解决方案发布到目录。
 ms.date: 02/24/2020
-ms.openlocfilehash: cf41ee09244faad03feb8ccda19135b8c7780106
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: c34618409c9a539043c84c7e03daa8aa249d64f6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156993"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146550"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -20,7 +20,7 @@ ms.locfileid: "78156993"
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration] 
+dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration]
     [-f|--framework] [--force] [--interactive] [--manifest]
     [--no-build] [--no-dependencies] [--no-restore] [--nologo]
     [-o|--output] [-r|--runtime] [--self-contained]
@@ -48,7 +48,7 @@ dotnet publish [-h|--help]
   
   * `PROJECT` 是 [C#](csproj.md)、F# 或 Visual Basic 项目文件的路径和文件名，或包含 C#、F# 或 Visual Basic 项目文件的目录的路径。 如果未指定目录，则默认为当前目录。
 
-  * `SOLUTION` 是解决方案文件（扩展名为 .sln）的路径和文件名，或包含解决方案文件的目录的路径  。 如果未指定目录，则默认为当前目录。 **自 .NET Core 3.0 SDK 起可用。** 
+  * `SOLUTION` 是解决方案文件（扩展名为 .sln）的路径和文件名，或包含解决方案文件的目录的路径  。 如果未指定目录，则默认为当前目录。 自 .NET Core 3.0 SDK 起可用。
 
 ## <a name="options"></a>选项
 
@@ -68,9 +68,9 @@ dotnet publish [-h|--help]
 
   打印出有关命令的简短帮助。
 
-- **`--interactive`** **自 .NET Core 3.0 SDK 起可用。**
+- **`--interactive`**
 
-  允许命令停止并等待用户输入或操作。 例如，完成身份验证。 
+  允许命令停止并等待用户输入或操作。 例如，完成身份验证。 自 .NET Core 3.0 SDK 起可用。
 
 - **`--manifest <PATH_TO_MANIFEST_FILE>`**
 
@@ -84,9 +84,9 @@ dotnet publish [-h|--help]
 
   忽略项目间引用，仅还原根项目。
 
-- **`--nologo`** **自 .NET Core 3.0 SDK 起可用。**
+- **`--nologo`**
 
-  不显示启动版权标志或版权消息。 
+  不显示启动版权标志或版权消息。 自 .NET Core 3.0 SDK 起可用。
 
 - **`--no-restore`**
 
@@ -102,9 +102,9 @@ dotnet publish [-h|--help]
 
   与应用程序一同发布 .NET Core 运行时，因此无需在目标计算机上安装运行时。 如果指定了运行时标识符，默认值为 `true`。 有关详细信息，请参阅 [.NET Core 应用程序发布](../deploying/index.md)和[使用 .NET Core CLI 发布 .NET Core 应用](../deploying/deploy-with-cli.md)。
 
-- **`--no-self-contained`**  **自 .NET Core 3.0 SDK 起可用。**
+- **`--no-self-contained`**
 
-  等效于 `--self-contained false`。
+  等效于 `--self-contained false`。 自 .NET Core 3.0 SDK 起可用。
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -112,7 +112,7 @@ dotnet publish [-h|--help]
 
 - **`-v|--verbosity <LEVEL>`**
 
-  设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+  设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 默认值是 `minimal`。
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 

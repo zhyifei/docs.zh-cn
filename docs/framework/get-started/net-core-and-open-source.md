@@ -2,26 +2,26 @@
 title: .NET Core 和开放源代码
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: 4032ba771d917d25473c8de350cc752bd052f94d
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: b5aa42d0460d743bffe8f17a2603773c03c09ce0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75752545"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181614"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core 和开放源代码
 
 本文提供有关 .NET Core 概念的简要概述并展示如何查找更多信息。 若要查找有关 .NET Core 的完整文档列表，请访问 [.NET Core 指南](../../core/index.md)。
-  
-<a name="BKMK_WhatisNETCore"></a>   
+
 ## <a name="what-is-net-core"></a>.NET Core 是什么？  
- .NET Core 是 .NET Standard 的常规用途、模块化、跨平台和开放源代码实现。 它包含 .NET Framework 这样的许多相同 API（但 .NET Core 是较小的集）并包括支持不同操作系统和芯片目标的运行时、框架、编译器和工具组件。 .NET Core 实现主要由 ASP.NET Core 工作负载驱动，但同时也由拥有一个更现代的实现这一需求和愿望驱动。 它可以用于设备、云和嵌入式/IoT 方案。  
+
+.NET Core 是 .NET Standard 的常规用途、模块化、跨平台和开放源代码实现。 它包含 .NET Framework 这样的许多相同 API（但 .NET Core 是较小的集）并包括支持不同操作系统和芯片目标的运行时、框架、编译器和工具组件。 .NET Core 实现主要由 ASP.NET Core 工作负载驱动，但同时也由拥有一个更现代的实现这一需求和愿望驱动。 它可以用于设备、云和嵌入式/IoT 方案。  
   
- 若要开始使用 .NET Core，请访问 .NET 教程 [Hello World 10 分钟入门](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)。  
+若要开始使用 .NET Core，请访问 .NET 教程 [Hello World 10 分钟入门](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)。  
   
 下面列出了 .NET Core 的主要特征：
   
-- **跨平台：** .NET Core 提供了实现所需应用功能的关键功能，并且可以重用代码而不考虑平台目标。 它当前支持三种主要的操作系统 (OS)：Windows、Linux 和 macOS。 可以编写无需修改即可跨受支持操作系统运行的应用和库。 若要查看受支持操作系统的列表，请访问 [.NET Core 路线图](https://github.com/dotnet/core/blob/master/roadmap.md)。
+- **跨平台：** .NET Core 提供了实现所需应用功能的关键功能，并且可以重用代码而不考虑平台目标。 它当前支持三种主要的操作系统 (OS)：Windows、 Linux 和 macOS。 可以编写无需修改即可跨受支持操作系统运行的应用和库。 若要查看受支持操作系统的列表，请访问 [.NET Core 路线图](https://github.com/dotnet/core/blob/master/roadmap.md)。
   
 - **开放源代码：** .NET Core 是 [.NET Foundation](https://www.dotnetfoundation.org/) 管理下的很多项目中的一个，并在 [GitHub](https://github.com/) 上提供。  将 .NET Core 作为开放源代码项目促使开发过程更加透明并能提升社区的活跃度及参与度。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "75752545"
   
 - [ASP.NET Core](https://github.com/dotnet/aspnetcore)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET 教程 - Hello World 10 分钟入门](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
 - [.NET Core 指南](../../core/index.md)

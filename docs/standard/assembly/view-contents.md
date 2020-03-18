@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 72b02209d74b6b183af6c11d9bd037889ea08543
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 179b240bb06a319ff71009e14323d5c8f2740e5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347058"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187386"
 ---
 # <a name="how-to-view-assembly-contents"></a>如何：查看程序集内容
 
@@ -104,7 +104,7 @@ End Class
 
 下表描述了本例所使用 Hello.exe 程序集的程序集清单中的各项指令  ：
 
-|指令|说明|
+|指令|描述|
 |---------------|-----------------|
 |.assembly extern \<assembly name> |指定包含当前模块所引用项目的另一程序集（在此示例中为 `mscorlib`）。|
 |.publickeytoken \<token> |指定引用程序集的实际密钥的标记。|
@@ -118,7 +118,7 @@ End Class
 
 根据程序集的内容，程序集清单可包含许多不同的指令。 有关程序集清单中指令的详尽列表，请参阅 Ecma 文档，特别是“第 II 部分：Metadata Definition and Semantics”（第 2 部分：元数据定义和语义）和“Partition III:CIL 指令集”：
 
-- [ECMA C# 和公共语言基础结构标准](/dotnet/standard/components#applicable-standards)
+- [ECMA C# 和公共语言基础结构标准](../components.md#applicable-standards)
 - [标准 ECMA-335 - 公共语言基础结构 (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)
 
 ## <a name="see-also"></a>请参阅

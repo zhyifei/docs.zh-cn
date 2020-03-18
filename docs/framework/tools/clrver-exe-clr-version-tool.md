@@ -6,10 +6,10 @@ helpviewer_keywords:
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 ms.openlocfilehash: bfc612ef5455e1b4a03d15fd99a8a1873d2c7c08
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715802"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe（CLR 版本工具）
@@ -27,7 +27,7 @@ clrver [option]
   
 ## <a name="options"></a>选项  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |`-all`|显示正在使用的 CLR 的计算机上的所有进程。|  
 |pid |显示具有指定的进程 ID (PID) 的进程所使用的 CLR 版本。|  
@@ -54,7 +54,7 @@ clrver [option]
   
  `Clrver -all`  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [工具](index.md)
 - [命令提示](developer-command-prompt-for-vs.md)

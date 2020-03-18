@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
 ms.openlocfilehash: 910fa4af1b4e45ce627b589a06910dc168490047
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712138"
 ---
 # <a name="hello-world----your-first-program"></a>Hello World -- 你的第一个程序
@@ -21,11 +21,11 @@ ms.locfileid: "75712138"
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="create-a-new-application"></a>创建一个新的应用程序
+## <a name="create-a-new-application"></a>创建新应用程序
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 启动 Visual Studio。 你将在 Windows 上看到以下图像：
 
@@ -51,7 +51,7 @@ Press any key to close this window . . .
 
 按相关键关闭窗口。
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 启动 Visual Studio for Mac。 你将在 Mac 上看到以下图像：
 
@@ -104,7 +104,7 @@ C# 控制台应用程序必须包含 `Main` 方法，控件在其中开始和结
 
 [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
-\- 或 -
+或
 
 [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
@@ -122,7 +122,7 @@ C# 程序通常使用由 .NET Framework 的运行时库提供的输入/输出服
 
 有关输入/输出方法的详细信息，请参阅 <xref:System.IO>。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [示例和教程](../../../samples-and-tutorials/index.md)

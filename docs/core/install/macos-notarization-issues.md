@@ -4,12 +4,12 @@ description: 本文介绍在安装 .NET core 运行时、SDK 以及使用 .NET C
 author: thraka
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: b16ef4074f829246df0aedebf7ffe4df75faed51
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: be39c1ea56699f84736a2b37bc958507b16e826b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78165349"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146744"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>macOS Catalina 公证以及对 .NET Core 下载和项目的影响
 
@@ -78,7 +78,7 @@ ms.locfileid: "78165349"
 ## <a name="default-entitlements"></a>默认权利
 
 .NET Core 的默认主机（`dotnet` 命令）具有一套默认权利。 需要这些权利才能正常运行 .NET Core。 你的应用程序可能需要其他权利，在这种情况下，需要生成并使用 [appHost](#apphost-is-disabled-by-default)，然后在本地添加必要的权利。
- 
+
 .NET Core 的默认权利包括：
 
 - `com.apple.security.cs.allow-jit`

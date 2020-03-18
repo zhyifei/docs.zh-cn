@@ -3,11 +3,11 @@ title: NuGet 和 .NET 库
 description: 使用 .NET 库的 NuGet 打包的最佳实践建议。
 ms.date: 01/15/2019
 ms.openlocfilehash: f1e8d39fe2988f11ce7fd351a4d6bee6d322f2b5
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731371"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398531"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -44,7 +44,7 @@ NuGet 包 (`*.nupkg`) 是一个 zip 文件，其中包含 .NET 程序集和关�
 
 NuGet 包支持多个[元数据属性](/nuget/reference/nuspec)。 下表包含 NuGet.org 上的每个包应提供的核心元数据：
 
-| MSBuild 属性名称              | Nuspec 名称              | 描述  |
+| MSBuild 属性名称              | Nuspec 名称              | 说明  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | 包标识符。 如果标识符的前缀满足[条件](/nuget/reference/id-prefix-reservation)，则可以保留该前缀。 |
 | `PackageVersion`                   | `version`                  | NuGet 包版本。 有关详细信息，请参阅 [NuGet 包版本](./versioning.md#nuget-package-version)。             |
@@ -92,7 +92,7 @@ NuGet 包支持多个[元数据属性](/nuget/reference/nuspec)。 下表包含 
 
 符号文件 (`*.pdb`) 由 .NET 编译器与程序集一起生成。 符号文件将执行位置映射到原始源代码，以便可以逐行执行源代码（因为它使用调试程序运行）。 NuGet 支持[生成单独的符号包 (`*.snupkg`)](/nuget/create-packages/symbol-packages-snupkg)（包含符号文件）以及主包（包含 .NET 程序集）。 符号包的理念是它们托管在符号服务器上并仅由 Visual Studio 等工具按需下载。
 
-NuGet.org 托管了自己的[符号服务器存储库](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server)。 开发人员可以通过向其在 [Visual Studio 中的符号源](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)添加 `https://symbols.nuget.org/download/symbols`，来使用发布到 NuGet.org 符号服务器的符号。
+NuGet.org 托管了自己的[符号服务器存储库](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server)。 开发人员可以通过向其在 `https://symbols.nuget.org/download/symbols`Visual Studio 中的符号源[添加 ](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)，来使用发布到 NuGet.org 符号服务器的符号。
 
 > [!IMPORTANT]
 > NuGet.org 符号服务器仅支持由 SDK 样式项目创建的新的[可移植符号文件](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`)。

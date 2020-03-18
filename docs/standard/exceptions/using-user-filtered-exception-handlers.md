@@ -7,10 +7,10 @@ helpviewer_keywords:
 - exceptions, user-filtered
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
 ms.openlocfilehash: 5537404178b746310f720c5b0c075c77287dda4c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708448"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>使用用户筛选的异常处理程序
@@ -34,7 +34,7 @@ End Try
 ## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>结合特定异常和用户筛选的子句  
  Catch 语句可以同时包含特定异常和用户筛选的子句。 运行时首先测试特定异常。 如果特定异常成功，运行时会执行用户筛选。 普通筛选可包含对类筛选器中声明的变量的引用。 请注意，两个筛选子句的顺序不能颠倒。  
   
- 下面的 Visual Basic 示例介绍 **Catch** 语句中的特定异常 `ClassLoadException` 以及使用 **When** 关键字的用户筛选的子句。  
+ 下面的 Visual Basic 示例介绍 `ClassLoadException`Catch**语句中的特定异常** 以及使用 **When** 关键字的用户筛选的子句。  
   
 ```vb
 Try  
@@ -44,6 +44,6 @@ Try
 End Try  
 ```  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [异常](index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: b4d25f80e4cdb08fbc28fa4db3cb1c790b1145e6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 68ea7ad6fc7cf5580dbdd0ae7f012f36566db0dc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713087"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173505"
 ---
 # <a name="select-clause-c-reference"></a>select 子句（C# 参考）
 
@@ -37,7 +37,7 @@ ms.locfileid: "75713087"
 
 在编译时，`select` 子句被转换为 <xref:System.Linq.Enumerable.Select%2A> 标准查询运算符的方法调用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [查询关键字 (LINQ)](query-keywords.md)
@@ -45,4 +45,4 @@ ms.locfileid: "75713087"
 - [分部（方法）（C# 参考）](partial-method.md)
 - [匿名类型](../../programming-guide/classes-and-structs/anonymous-types.md)
 - [C# 中的 LINQ](../../linq/index.md)
-- [C# 中的 LINQ 入门](/dotnet/csharp/programming-guide/concepts/linq/)
+- [语言集成查询 (LINQ)](../../programming-guide/concepts/linq/index.md)

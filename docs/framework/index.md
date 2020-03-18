@@ -8,19 +8,19 @@ helpviewer_keywords:
 - .NET Framework, documentation
 - documentation, .NET Framework
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
-ms.openlocfilehash: e00fb73bf884446ec220a114c49863386da456ef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d94d97cd1b519025ff360dc903558ea3656818d5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114249"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181534"
 ---
 # <a name="net-framework-guide"></a>.NET Framework 指南
 
 > [!NOTE]
-> 此 .NET Framework 内容集包含 .NET Framework 4.5 到 4.8 版本的相关信息。 若要下载 .NET Framework，请参阅[安装 .NET Framework](./install/guide-for-developers.md)。 有关 .NET Framework 中的新功能和更改的列表，请参阅 [.NET Framework 中的新增功能](./whats-new/index.md)。 有关受支持的平台列表，请参阅 [.NET Framework 系统要求](./get-started/system-requirements.md)。 有关早期版本的 .NET Framework 的文档，请参阅 [.NET 早期版本文档](https://docs.microsoft.com/previous-versions/dotnet/)。
+> 此 .NET Framework 内容集包含 .NET Framework 4.5 到 4.8 版本的相关信息。 要下载 .NET Framework，请参阅[安装 .NET Framework](./install/guide-for-developers.md)。 有关 .NET Framework 中的新功能和更改的列表，请参阅 [.NET Framework 中的新增功能](./whats-new/index.md)。 有关受支持的平台列表，请参阅 [.NET Framework 系统要求](./get-started/system-requirements.md)。 有关早期版本的 .NET Framework 的文档，请参阅 [.NET 早期版本文档](https://docs.microsoft.com/previous-versions/dotnet/)。
 
-.NET Framework 是用于为 Web、Windows、Windows Phone、Windows Server 和 Microsoft Azure 构建应用的开发平台。 它包含公共语言运行时 (CLR) 和 .NET Framework 类库，其中包括各种功能和对许多行业标准的支持。
+.NET Framework 是用于为 Web、Windows、Windows Server 和 Microsoft Azure 构建应用的开发平台。 它包含公共语言运行时 (CLR) 和 .NET Framework 类库，其中包括各种功能和对许多行业标准的支持。
 
 .NET Framework 提供许多服务，包括内存管理、类型和内存安全、安全性、网络和应用程序部署。 它提供易于使用的数据结构和 API，将较低级别的 Windows 操作系统抽象化。 可在 .NET Framework 中使用不同编程语言，包括 C#、F# 和 Visual Basic。
 
@@ -30,11 +30,11 @@ ms.locfileid: "73114249"
 
 ## <a name="installation"></a>安装
 
-.NET Framework 随附于 Windows，使你能够运行 .NET Framework 应用程序。 需要的 .NET Framework 版本可能要比 Windows 版本附带的版本更高。 有关详细信息，请参阅[在 Windows 上安装 .NET Framework](./install/index.md)。
+.NET Framework 随附于 Windows，你可用它来运行 .NET Framework 应用程序。 需要的 .NET Framework 版本可能要比 Windows 版本附带的版本更高。 有关详细信息，请参阅[在 Windows 上安装 .NET Framework](./install/index.md)。
 
-请参阅[修复 .NET Framework](./install/repair.md)，了解在安装 .NET Framework 时遇到错误时应如何修复 .NET Framework 安装。
+要了解在安装 .NET Framework 期间遇到错误时应如何修复安装，请参阅[修复 .NET Framework](./install/repair.md)。
 
-若要更详细地了解如何下载 .NET Framework，请参阅[安装面向开发人员的 .NET Framework](./install/guide-for-developers.md)。
+要更详细地了解如何下载 .NET Framework，请参阅[安装面向开发人员的 .NET Framework](./install/guide-for-developers.md)。
 
 ## <a name="in-this-section"></a>本节内容
 

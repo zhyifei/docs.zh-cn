@@ -4,22 +4,22 @@ description: 详细介绍 .NET 中支持委托的类以及这些类映射到“d
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 3cfc9925be0f191dc3fc93c02f4a8f9a40b71895
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 87fdf19c4ea810c5ac4409fe16c3cba9d5fc6574
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450916"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146276"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 和 `delegate` 关键字
 
-[上一篇](delegates-overview.md)
+[上一页](delegates-overview.md)
 
 本文介绍 .NET 中支持委托的类以及这些类映射到 `delegate` 关键字的方式。
 
 ## <a name="define-delegate-types"></a>定义委托类型
 
-我们从“delegate”关键字开始，因为这是你在使用委托时会使用的主要方法。 编译器在你使用 `delegate` 关键字时生成的代码会映射到调用 <xref:System.Delegate> 和 <xref:System.MulticastDelegate> 类的成员的方法调用。 
+我们从“delegate”关键字开始，因为这是你在使用委托时会使用的主要方法。 编译器在你使用 `delegate` 关键字时生成的代码会映射到调用 <xref:System.Delegate> 和 <xref:System.MulticastDelegate> 类的成员的方法调用。
 
 可使用类似于定义方法签名的语法来定义委托类型。 只需向定义添加 `delegate` 关键字即可。
 
@@ -37,9 +37,9 @@ public delegate int Comparison<in T>(T left, T right);
 请注意，语法可能看起来像是声明变量，但它实际上是声明类型  。 可以在类中、直接在命名空间中、甚至是在全局命名空间中定义委托类型。
 
 > [!NOTE]
-> 建议不要直接在全局命名空间中声明委托类型（或其他类型）。 
+> 建议不要直接在全局命名空间中声明委托类型（或其他类型）。
 
-编译器还会为此新类型生成添加和移除处理程序，以便此类的客户端可以对实例的调用列表添加和移除方法。 编译器会强制所添加或移除的方法的签名与声明该方法时使用的签名匹配。 
+编译器还会为此新类型生成添加和移除处理程序，以便此类的客户端可以对实例的调用列表添加和移除方法。 编译器会强制所添加或移除的方法的签名与声明该方法时使用的签名匹配。
 
 ## <a name="declare-instances-of-delegates"></a>声明委托的实例
 
@@ -54,7 +54,7 @@ public Comparison<T> comparator;
 ```
 
 变量的类型是 `Comparison<T>`（前面定义的委托类型）。 变量的名称是 `comparator`。
- 
+
  上面的代码片段在类中声明了一个成员变量。 还可以声明作为局部变量或方法参数的委托变量。
 
 ## <a name="invoke-delegates"></a>调用委托
@@ -68,7 +68,7 @@ int result = comparator(left, right);
 在上面的行中，代码会调用  附加到委托的方法。
 可将变量视为方法名称，并使用普通方法调用语法调用它。
 
-此代码行做出的假设不安全：无法保证目标已被添加到委托中。 如果未附加目标，则上面的行会导致引发 `NullReferenceException`。 用于解决此问题的惯例比简单 null 检查更加复杂，在此[系列](delegates-patterns.md)的后面部分中会进行介绍。
+该代码行进行了不安全假设：不保证目标已添加到委托。 如果未附加目标，则上面的行会导致引发 `NullReferenceException`。 用于解决此问题的惯例比简单 null 检查更加复杂，在此[系列](delegates-patterns.md)的后面部分中会进行介绍。
 
 ## <a name="assign-add-and-remove-invocation-targets"></a>分配、添加和删除调用目标
 
@@ -115,10 +115,10 @@ Sort() 示例通常将单个目标方法附加到委托。 但是，委托对象
 
 上面介绍的语言支持可提供在使用委托时通常需要的功能和支持。 这些功能采用 .NET Core Framework 中的两个类进行构建：<xref:System.Delegate> 和 <xref:System.MulticastDelegate>。
 
-`System.Delegate` 类及其单个直接子类 `System.MulticastDelegate` 可提供框架支持，以便创建委托、将方法注册为委托目标以及调用注册为委托目标的所有方法。 
+`System.Delegate` 类及其单个直接子类 `System.MulticastDelegate` 可提供框架支持，以便创建委托、将方法注册为委托目标以及调用注册为委托目标的所有方法。
 
 有趣的是，`System.Delegate` 和 `System.MulticastDelegate` 类本身不是委托类型。 它们为所有特定委托类型提供基础。 相同的语言设计过程要求不能声明派生自 `Delegate` 或 `MulticastDelegate` 的类。 C# 语言规则禁止这样做。
- 
+
 相反，C# 编译器会在你使用 C# 语言关键字声明委托类型时，创建派生自 `MulticastDelegate` 的类的实例。
 
 此设计起源于 C# 和 .NET 的第一版。 设计团队的一个目标是确保在使用委托时，语言强制实施类型安全。 这意味着确保使用正确类型和数量的参数来调用委托。 并且在编译时正确指示任何返回类型。 委托是 1.0 .NET 版本的一部分（在泛型出现之前）。
@@ -133,4 +133,4 @@ Sort() 示例通常将单个目标方法附加到委托。 但是，委托对象
 
 现在你已了解支持委托的语言语法和类，我们来看一下如何使用、创建和调用强类型委托。
 
-[下一页](delegates-strongly-typed.md)
+[下一部分](delegates-strongly-typed.md)

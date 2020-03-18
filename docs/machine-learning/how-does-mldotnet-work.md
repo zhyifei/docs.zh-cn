@@ -4,12 +4,12 @@ description: ML.NET 使你能够在联机或脱机场景中将机器学习添加
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: bc157b22201c66bceecf78aaa36b9c653fe6a131
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 169250adf81992ad0025e78eb9c8f151107bcf40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794571"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185856"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什么是 ML.NET 以及它如何工作？
 
@@ -25,16 +25,16 @@ ML.NET 在使用 .NET Core 的 Windows、Linux 和 macOS 或使用 .NET Framewor
 
 |||
 |-|-|
-|分类/类别划分|自动将客户反馈划分为正面和负面类别|
+|分类/类别|自动将客户反馈划分为正面和负面类别|
 |回归/预测连续值|根据大小和位置预测房屋价格|
 |异常情况检测|检测欺诈性银行交易 |
-|建议|根据在线购物者之前的购买情况向其建议可能想要购买的产品|
+|建议|根据网购者以前的购买情况，推荐他们可能想购买的产品|
 |时序/顺序数据|预测天气/产品销售额|
 |图像分类|对医学影像中的病状进行分类|
 
 ## <a name="hello-mlnet-world"></a>Hello ML.NET World
 
-以下代码片段中的代码演示了最简单的 ML.NET 应用程序。 此示例构造线性回归模型，使用房屋大小和价格数据预测房屋价格。 
+以下代码片段中的代码演示了最简单的 ML.NET 应用程序。 此示例构造线性回归模型，使用房屋大小和价格数据预测房屋价格。
 
  ```csharp
     using System;

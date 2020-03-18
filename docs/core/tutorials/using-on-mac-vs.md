@@ -3,10 +3,10 @@ title: 通过 Visual Studio for Mac 开始使用 .NET Core
 description: 本主题将指导你使用 Visual Studio for Mac 和 .NET Core 来构建简单的控制台应用程序。
 ms.date: 12/19/2019
 ms.openlocfilehash: 4cd7e311411bce62698e291e763227496877ea39
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75740492"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>通过 Visual Studio for Mac 开始在 macOS 上使用 .NET Core
@@ -16,10 +16,10 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 > [!NOTE]
 > 你的反馈非常有价值。 有两种方法可以向开发团队提供有关 Visual Studio for Mac 的反馈：
 >
-> * 在 Visual Studio for Mac 中，从菜单中选择“帮助” > “报告问题”，或从欢迎屏幕中选择“报告问题”，将打开一个窗口，以供填写 bug 报告。 可在[开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html)门户中跟踪自己的反馈。
-> * 若要提出建议，从菜单中选择“帮助” > “提供建议”，或从欢迎屏幕中选择“提供建议”，转到 [Visual Studio for Mac 开发人员社区网页](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)。
+> * 在 Visual Studio for Mac 中，从菜单中选择“帮助”   > “报告问题”  ，或从欢迎屏幕中选择“报告问题”  ，将打开一个窗口，以供填写 bug 报告。 可在[开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html)门户中跟踪自己的反馈。
+> * 若要提出建议，从菜单中选择“帮助”   > “提供建议”  ，或从欢迎屏幕中选择“提供建议”  ，转到 [Visual Studio for Mac 开发人员社区网页](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 请参阅 [.NET Core 依赖项和要求](../install/dependencies.md?pivots=os-macos)一文。
 
@@ -33,21 +33,21 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 ## <a name="creating-a-project"></a>创建项目
 
-1. 在“开始”窗口上，选择“新建”。
+1. 在“开始”窗口上，选择“新建”  。
 
    ![Visual Studio for Mac 开始屏幕上的“新建”按钮](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
-1. 在“新建项目”对话框中，选择“.NET Core”节点下的“应用”。 单击“下一步”，然后选择“控制台应用程序”模板。
+1. 在“新建项目”  对话框中，选择“.NET Core”  节点下的“应用”  。 单击“下一步”  ，然后选择“控制台应用程序”  模板。
 
    ![新项目模板列表](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
 
 1. 如果安装了多个版本的 .NET Core，请选择项目的目标框架。
 
-1. 为“项目名称”键入“HelloWorld”。 选择“创建”。
+1. 为“项目名称”  键入“HelloWorld”。 选择“创建”  。
 
    ![配置新的控制台应用程序对话框](./media/using-on-mac-vs/visual-studio-mac-new-options.png)
 
-1. 等待还原项目的依赖项。 该项目包含一个 C# 文件 *Program.cs*，其中包含具有 `Main` 方法的 `Program` 类。 运行应用时，`Console.WriteLine` 语句将“Hello World!” 输出至控制台。
+1. 等待还原项目的依赖项。 该项目包含一个 C# 文件 *Program.cs*，其中包含具有 `Program` 方法的 `Main` 类。 运行应用时，`Console.WriteLine` 语句将“Hello World!” 输出至控制台。
 
    ![打开 Program.cs 文件的主窗口](./media/using-on-mac-vs/visual-studio-mac-editor.png)
 

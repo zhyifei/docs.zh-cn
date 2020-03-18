@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 测�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 164e820ffa6030b3dcb9180d56e57ce39bb03143
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 2b347442c4a9b7b6cf912ec461248f901dc45417
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503931"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147486"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>测试 ASP.NET Core MVC 应用
 
@@ -40,7 +40,7 @@ ms.locfileid: "77503931"
 
 > “很多时候，开发系统类似于修建房屋。 虽然这个类比并不完全准确，但是我们可将其延伸，用以理解单元测试与功能测试的区别。 单元测试类似于巡查房屋建筑工地的建筑检查员。 建筑检查员专注于房屋的各种内部系统、地基、框架、电路、管道等。 他确保（测试）房屋各部分功能正常且安全，即符合建筑规范。 在这种情景下，功能测试类似于出现在同一建筑工地上的房主。 他假定房屋内部系统一切正常，建筑检查员履行了其检查职责。 房主关心的是住在这个房屋里的体验。 他关心房屋外观如何、每个房间是否大小合适、房屋是否能满足家庭需要，以及窗外是否有好的风景。 也就是说，房主对房屋执行功能测试。 他是站在用户角度。 建筑检察员则是对房屋进行单元测试。 他站在建筑商角度。”
 
-源：[单元测试与功能测试](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
+来源：[单元测试与功能测试](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
 
 我认为：“作为开发人员，我们的失败可能体现在两方面：我们构建应用的方式错误，或者我们的应用不能满足客户需求。” 单元测试可确保构建应用的方式正确；功能测试可确保我们的应用可满足客户需求。
 
@@ -153,7 +153,7 @@ ASP.NET Core 应用中的大多数集成测试应该是测试基础结构项目�
 
 ## <a name="functional-testing-aspnet-core-apps"></a>对 ASP.NET Core 应用执行功能测试
 
-对于 ASP.NET Core 应用程序，`TestServer` 类让功能测试非常易于编写。 可以直接使用 `WebHostBuilder`（或 `HostBuilder`）（针对应用程序的一般操作）或使用 `WebApplicationFactory` 类型（自 2.1 版开始提供）来配置 `TestServer`。 应尝试将测试主机与生产主机进行尽可能密切的匹配，以便让测试执行与应用将在生产中进行的行为类似的行为。 `WebApplicationFactory` 类有助于配置 TestServer 的 ContentRoot，该 ContentRoot 由 ASP.NET Core 用于定位静态资源（例如视图）。
+对于 ASP.NET Core 应用程序，`TestServer` 类让功能测试非常易于编写。 可以直接使用 `TestServer`（或 `WebHostBuilder`）（针对应用程序的一般操作）或使用 `HostBuilder` 类型（自 2.1 版开始提供）来配置 `WebApplicationFactory`。 应尝试将测试主机与生产主机进行尽可能密切的匹配，以便让测试执行与应用将在生产中进行的行为类似的行为。 `WebApplicationFactory` 类有助于配置 TestServer 的 ContentRoot，该 ContentRoot 由 ASP.NET Core 用于定位静态资源（例如视图）。
 
 可以通过创建实现 IClassFixture\<WebApplicationFactory\<TEntry>>（其中 TEntry 为 Web 应用的启动类）的测试类来创建简单的功能测试。 创建完成后，测试固定例程可使用中心的 CreateClient 方法来创建客户端：
 
@@ -202,7 +202,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web
                     .AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
-                // Add a database context (ApplicationDbContext) using an in-memory 
+                // Add a database context (ApplicationDbContext) using an in-memory
                 // database for testing.
                 services.AddDbContext<CatalogContext>(options =>
                 {

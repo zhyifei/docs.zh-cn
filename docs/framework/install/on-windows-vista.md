@@ -3,12 +3,12 @@ title: 在 Windows Vista 上安装 .NET Framework
 description: 了解如何在 Windows Vista 上安装 .NET Framework。
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
-ms.openlocfilehash: 02f57aee139621ba277731f9b76c3c48fc6abc57
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 9b8470f4cdfcc6ec85fb6677f5518203c0de5de1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965875"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181548"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>在 Windows Vista 和 Windows Server 2008 上安装 .NET Framework
 
@@ -22,7 +22,7 @@ ms.locfileid: "76965875"
 
 [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46) 是 Windows Vista 和 Windows Server 2008 上支持的最新 .NET Framework 版本。
 
-[.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) 支持为 .NET Framework 4.0 到 4.6 生成的应用程序。
+[.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46) 支持为 .NET Framework 4.0 到 4.6 生成的应用程序。
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
@@ -30,8 +30,8 @@ ms.locfileid: "76965875"
 
 .NET Framework 3.5 支持为 .NET Framework 1.0 到 3.5 生成的应用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [下载 .NET Framework](https://dotnet.microsoft.com/download)
 - [安装和卸载 .NET Framework 受阻疑难解答](troubleshoot-blocked-installations-and-uninstallations.md)
-- [安装面向开发者的 .NET Framework](guide-for-developers.md)
+- [安装面向开发人员的 .NET Framework](guide-for-developers.md)

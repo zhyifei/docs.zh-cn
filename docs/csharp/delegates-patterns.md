@@ -3,16 +3,16 @@ title: 委托的常见模式
 description: 了解在代码中使用委托避免组件间强耦合的常见模式。
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 22ab88e5b139381e3a8921baa20df035f1405146
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454078"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398735"
 ---
 # <a name="common-patterns-for-delegates"></a>委托的常见模式
 
-[上一部分](delegates-strongly-typed.md)
+[上一页](delegates-strongly-typed.md)
 
 委托提供了一种机制，可实现涉及组件间最小耦合度的软件设计。
 
@@ -54,15 +54,15 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 我们从小处着手：初始实现会接受新消息并使用任意附加委托编写它们。 你可以从一个将消息写入控制台的委托开始。
 
-[!code-csharp[LoggerImplementation](../../samples/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
+[!code-csharp[LoggerImplementation](../../samples/snippets/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
 
-上面的静态类是可以发挥作用的最简单的类。 我们需要编写将消息写入控制台的方法的单个实现： 
+上面的静态类是可以发挥作用的最简单的类。 我们需要编写将消息写入控制台的方法的单个实现：
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/snippets/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
 最后，你需要通过将委托附加到记录器中声明的 WriteMessage 委托来进行挂钩：
 
-[!code-csharp[ConnectDelegate](../../samples/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
+[!code-csharp[ConnectDelegate](../../samples/snippets/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
 
 ## <a name="practices"></a>实践
 
@@ -70,20 +70,20 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 使用在核心框架中定义的委托类型，用户可更轻松地使用委托。 无需定义新类型，而且使用你库的开发者不需要学习新的专用委托类型。
 
-使用尽可能少的灵活接口：若要新建输出记录器，必须创建一种方法。 该方法可以是静态方法或实例方法。 它可能具有任何访问权限。
+使用的接口尽可能小且灵活：若要创建新的输出记录器，必须创建一个方法。 该方法可以是静态方法或实例方法。 它可能具有任何访问权限。
 
-## <a name="formatting-output"></a>设置输出格式
+## <a name="formatting-output"></a>设置输出的格式
 
 让第一个版本更加可靠，然后开始创建其他日志记录机制。
 
 然后，向 `LogMessage()` 方法添加一些参数，以便日志类创建更多结构化消息：
 
-[!code-csharp[Severity](../../samples/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
-[!code-csharp[NextLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
+[!code-csharp[Severity](../../samples/snippets/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
+[!code-csharp[NextLogger](../../samples/snippets/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
 
-接下来，使用 `Severity` 参数来筛选发送到日志输出的消息。 
+接下来，使用 `Severity` 参数来筛选发送到日志输出的消息。
 
-[!code-csharp[FinalLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
+[!code-csharp[FinalLogger](../../samples/snippets/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
 
 ## <a name="practices"></a>实践
 
@@ -97,11 +97,11 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 下面是基于文件的记录器：
 
-[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
+[!code-csharp[FileLogger](../../samples/snippets/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
 
 创建此类后，可将它进行实例化，然后它会将 LogMessage 方法附加到记录器组件中：
 
-[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
+[!code-csharp[FileLogger](../../samples/snippets/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
 
 这两项并不互相排斥。 你可以附加这两种日志方法并生成要发送到控制台和文件的消息：
 
@@ -133,7 +133,7 @@ Logger.WriteMessage -= LoggingMethods.LogToConsole;
 
 ## <a name="handling-null-delegates"></a>处理 Null 委托
 
-最后，更新 LogMessage 方法，从而在没有选择输出机制的情况下更加可靠。 `WriteMessage` 委托没有附加调用列表时，当前实现将引发 `NullReferenceException`。
+最后，更新 LogMessage 方法，从而在没有选择输出机制的情况下更加可靠。 `NullReferenceException` 委托没有附加调用列表时，当前实现将引发 `WriteMessage`。
 你可能更需要在没有附加方法时自行继续的设计。 将 null 条件运算符与 `Delegate.Invoke()` 方法结合使用时，很容易实现该目标：
 
 ```csharp
@@ -143,9 +143,9 @@ public static void LogMessage(string msg)
 }
 ```
 
-当左操作数（本例中为 `WriteMessage`）为 null 时，null 条件运算符（`?.`）会短路，这意味着不会尝试记录消息。
+当左操作数（本例中为 `?.`）为 null 时，null 条件运算符（`WriteMessage`）会短路，这意味着不会尝试记录消息。
 
-不会在 `System.Delegate` 或 `System.MulticastDelegate` 的文档中列出 `Invoke()` 方法。 编译器将为声明的所有委托类型生成类型安全的 `Invoke` 方法。 在此示例中，这意味着 `Invoke` 只需要一个 `string` 参数，并且有一个无效返回类型。
+不会在 `Invoke()` 或 `System.Delegate` 的文档中列出 `System.MulticastDelegate` 方法。 编译器将为声明的所有委托类型生成类型安全的 `Invoke` 方法。 在此示例中，这意味着 `Invoke` 只需要一个 `string` 参数，并且有一个无效返回类型。
 
 ## <a name="summary-of-practices"></a>实践摘要
 
@@ -153,4 +153,4 @@ public static void LogMessage(string msg)
 
 记录器类可在不引入重大更改的情况下进行任何数量的增强或更改。 与类相似，无法在没有重大更改的风险下修改公共 API。 但是，因为仅通过委托进行记录器和输出引擎之间的耦合，因此不涉及其他类型（如接口或基类）。 耦合度越小越好。
 
-[下一页](events-overview.md)
+[下一部分](events-overview.md)

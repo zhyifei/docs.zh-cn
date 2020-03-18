@@ -6,10 +6,10 @@ helpviewer_keywords:
 - .NET Framework, deploying apps
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 ms.openlocfilehash: c025643b6dd103e35231df5c983a06c899af02b1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716445"
 ---
 # <a name="deploying-net-framework-applications"></a>部署 .NET Framework 应用程序
@@ -22,6 +22,6 @@ ms.locfileid: "75716445"
  [适用于程序集加载的最佳做法](best-practices-for-assembly-loading.md)  
  讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException><xref:System.MissingMethodException> 和其他错误。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [开发指南](../development-guide.md)

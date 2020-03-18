@@ -3,11 +3,11 @@ title: 通用属性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
 ms.openlocfilehash: 7988dad410c6e51869ec9d7e40d94e874443a5f8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595456"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398381"
 ---
 # <a name="common-attributes-c"></a>通用属性 (C#)
 本主题介绍在 C# 程序中最常用的属性。  
@@ -42,7 +42,7 @@ ms.locfileid: "69595456"
   
  下表显示标识特性。  
   
-|特性|目标|  
+|特性|目的|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyName>|详细描述程序集的标识。|  
 |<xref:System.Reflection.AssemblyVersionAttribute>|指定程序集的版本。|  
@@ -52,7 +52,7 @@ ms.locfileid: "69595456"
 ### <a name="informational-attributes"></a>信息性特性  
  信息性特性可用于提供程序集的其他公司或产品信息。 下表显示 <xref:System.Reflection?displayProperty=nameWithType> 命名空间中定义的信息性属性。  
   
-|特性|目标|  
+|特性|目的|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyProductAttribute>|定义为程序集清单指定产品名称的自定义属性。|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|定义为程序集清单指定商标的自定义属性。|  
@@ -65,7 +65,7 @@ ms.locfileid: "69595456"
 ### <a name="assembly-manifest-attributes"></a>程序集清单特性  
  程序集清单特性可用于提供程序集清单中的信息。 这些信息包括标题、说明、默认别名和配置。 下表显示 <xref:System.Reflection?displayProperty=nameWithType> 命名空间中定义的程序集清单属性。  
   
-|特性|目标|  
+|特性|目的|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyTitleAttribute>|定义为程序集清单指定程序集标题的自定义属性。|  
 |<xref:System.Reflection.AssemblyDescriptionAttribute>|定义为程序集清单指定程序集说明的自定义属性。|  
@@ -229,7 +229,7 @@ class SampleClass
   
  有关调用方信息特性的详细信息，请参阅[调用方信息 (C#)](../caller-information.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>

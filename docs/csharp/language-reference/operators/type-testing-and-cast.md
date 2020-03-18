@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: c3550a593eafb9b50fa7e419e2f747c3e7a0e2ea
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 037ddc8eeda418b2e4858ab98be6cd362ca0e1e2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972653"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398171"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>类型测试和强制转换运算符（C# 引用）
 
@@ -46,17 +46,17 @@ E is T
 
 其中 `E` 是返回一个值的表达式，`T` 是类型或类型参数的名称。 `E` 不得为匿名方法或 Lambda 表达式。
 
-如果 `E` 的结果为非 null 且可以通过引用转换、装箱转换或取消装箱转换来转换为类型 `T`，则 `E is T` 表达式将返回 `true`；否则，它将返回 `false`。 `is` 运算符不会考虑用户定义的转换。
+如果 `E is T` 的结果为非 null 且可以通过引用转换、装箱转换或取消装箱转换来转换为类型 `true`，则 `E` 表达式将返回 `T`；否则，它将返回 `false`。 `is` 运算符不会考虑用户定义的转换。
 
 以下示例演示，如果表达式结果的运行时类型派生自给定类型，即类型之间存在引用转换，`is` 运算符将返回 `true`：
 
-[!code-csharp[is with reference conversion](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
+[!code-csharp[is with reference conversion](snippets/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
 
 以下示例演示，`is` 运算符将考虑装箱和取消装箱转换，但不会考虑[数值转换](../builtin-types/numeric-conversions.md)：
 
-[!code-csharp-interactive[is with int](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithInt)]
+[!code-csharp-interactive[is with int](snippets/TypeTestingAndConversionOperators.cs#IsWithInt)]
 
-有关 C# 转换的信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[转换](~/_csharplang/spec/conversions.md)一章。
+有关 C# 转换的信息，请参阅 [C# 语言规范](~/_csharplang/spec/conversions.md)的[转换](~/_csharplang/spec/introduction.md)一章。
 
 ### <a name="type-testing-with-pattern-matching"></a>有模式匹配的类型测试
 
@@ -70,7 +70,7 @@ E is T v
 
 以下示例演示了具有以下类型模式的 `is` 运算符的用法：
 
-[!code-csharp-interactive[is with type pattern](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsTypePattern)]
+[!code-csharp-interactive[is with type pattern](snippets/TypeTestingAndConversionOperators.cs#IsTypePattern)]
 
 有关类型模式和其他受支持模式的详细信息，请参阅[具有 is 的模式匹配](../keywords/is.md#pattern-matching-with-is)。
 
@@ -96,7 +96,7 @@ E is T ? (T)(E) : (T)null
 
 下面的示例演示 `as` 运算符的用法：
 
-[!code-csharp-interactive[as operator](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#AsOperator)]
+[!code-csharp-interactive[as operator](snippets/TypeTestingAndConversionOperators.cs#AsOperator)]
 
 > [!NOTE]
 > 如之前的示例所示，你需要将 `as` 表达式的结果与 `null` 进行比较，以检查转换是否成功。 从 C# 7.0 开始，你可以使用 [is 运算符](#type-testing-with-pattern-matching)测试转换是否成功，如果成功，则将其结果分配给新变量。
@@ -107,9 +107,9 @@ E is T ? (T)(E) : (T)null
 
 下面的示例演示显式数值和引用转换：
 
-[!code-csharp-interactive[cast expression](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#Cast)]
+[!code-csharp-interactive[cast expression](snippets/TypeTestingAndConversionOperators.cs#Cast)]
 
-有关支持的显式转换的信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[显式转换](~/_csharplang/spec/conversions.md#explicit-conversions)部分。 有关如何定义自定义显式或隐式类型转换的信息，请参阅[用户定义转换运算符](user-defined-conversion-operators.md)。
+有关支持的显式转换的信息，请参阅 [C# 语言规范](~/_csharplang/spec/conversions.md#explicit-conversions)的[显式转换](~/_csharplang/spec/introduction.md)部分。 有关如何定义自定义显式或隐式类型转换的信息，请参阅[用户定义转换运算符](user-defined-conversion-operators.md)。
 
 ### <a name="other-usages-of-"></a>() 的其他用法
 
@@ -117,15 +117,15 @@ E is T ? (T)(E) : (T)null
 
 括号的其他用法是调整表达式中计算操作的顺序。 有关详细信息，请参阅 [C# 运算符](index.md)。
 
-## <a name="typeof-operator"></a>typeof 运算符
+## <a name="typeof-operator"></a>TypeOf 运算符
 
 `typeof` 运算符用于获取某个类型的 <xref:System.Type?displayProperty=nameWithType> 实例。 `typeof` 运算符的实参必须是类型或类型形参的名称，如以下示例所示：
 
-[!code-csharp-interactive[typeof operator](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeOf)]
+[!code-csharp-interactive[typeof operator](snippets/TypeTestingAndConversionOperators.cs#TypeOf)]
 
 你还可以使用具有未绑定泛型类型的 `typeof` 运算符。 未绑定泛型类型的名称必须包含适当数量的逗号，且此数量小于类型参数的数量。 以下示例演示了具有未绑定泛型类型的 `typeof` 运算符的用法：
 
-[!code-csharp-interactive[typeof unbound generic](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
+[!code-csharp-interactive[typeof unbound generic](snippets/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
 
 表达式不能为 `typeof` 运算符的参数。 若要获取表达式结果的运行时类型的 <xref:System.Type?displayProperty=nameWithType> 实例，请使用 <xref:System.Object.GetType%2A?displayProperty=nameWithType> 方法。
 
@@ -133,7 +133,7 @@ E is T ? (T)(E) : (T)null
 
 使用 `typeof` 运算符来检查表达式结果的运行时类型是否与给定的类型完全匹配。 以下示例演示了使用 `typeof` 运算符和 [is 运算符](#is-operator)执行的类型检查之间的差异：
 
-[!code-csharp[typeof vs is](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeCheckWithTypeOf)]
+[!code-csharp[typeof vs is](snippets/TypeTestingAndConversionOperators.cs#TypeCheckWithTypeOf)]
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
@@ -150,7 +150,7 @@ E is T ? (T)(E) : (T)null
 - [强制转换表达式](~/_csharplang/spec/expressions.md#cast-expressions)
 - [typeof 运算符](~/_csharplang/spec/expressions.md#the-typeof-operator)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)

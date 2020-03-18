@@ -4,12 +4,12 @@ description: 了解为什么选择本地函数比选择 Lambda 表达式更好�
 ms.date: 06/27/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: a644b6868a37b3d6231a514dc37030cae062785a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 13cc3fe47bbcd6a465347a6c991b2006586c78fa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038802"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173336"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>本地函数与 Lambda 表达式比较
 
@@ -46,7 +46,7 @@ int M()
 编译器可以确定 `LocalFunction` 在调用时明确分配 `y`。 因为在 `return` 语句之前调用了 `LocalFunction`，所以在 `return` 语句中明确分配了 `y`。
 
 可实现示例分析的分析允许第四个差异。
-根据它们的用途，本地函数可以避免 Lambda 表达式始终需要的堆分配。 如果本地函数永远不会转换为委托，并且本地函数捕获的变量都不会被其他转换为委托的 lambda 或本地函数捕获，则编译器可以避免堆分配。 
+根据它们的用途，本地函数可以避免 Lambda 表达式始终需要的堆分配。 如果本地函数永远不会转换为委托，并且本地函数捕获的变量都不会被其他转换为委托的 lambda 或本地函数捕获，则编译器可以避免堆分配。
 
 请看以下异步示例：
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-ms.openlocfilehash: ae8451089dc645c925848489a61c5fb55c468032
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 29c649abb7ff5db74cadfdbe5b7c11f9322f75f8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047310"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180684"
 ---
 # <a name="security-in-network-programming"></a>网络编程中的安全性
 
@@ -27,7 +27,7 @@ ms.locfileid: "71047310"
 
 [.NET Framework 中的传输层安全性 (TLS) 最佳做法](tls.md)  
 介绍 .NET Framework 的 TLS 最佳做法。
- 
+
 [使用安全套接字层](using-secure-sockets-layer.md)  
 介绍如何使用安全套接字层 (SSL) 连接。  
   

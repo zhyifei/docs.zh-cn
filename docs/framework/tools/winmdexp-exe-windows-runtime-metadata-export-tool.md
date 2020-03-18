@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 ms.openlocfilehash: 52820b78f6ed7b02e80df66f90a01143b31d9b29
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74447274"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe（Windows 运行时元数据导出工具）
@@ -48,7 +48,7 @@ winmdexp [options] winmdmodule
   
  当你使用 C# 或 Visual Basic 编写 Windows 8.x 应用商店应用或 Windows 运行时组件时，.NET Framework 将提供支持，使得利用 Windows 运行时进行编程更加自然。 [Windows 应用商店应用和 Windows 运行时的 .NET Framework 支持](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)一文中对此进行了讨论。 在该过程中，某些常用的 Windows 运行时类型将映射到 .NET Framework 类型。 Winmdexp.exe 将反转此过程并生成使用对应的 Windows 运行时类型的 API 图面。 例如，从 <xref:System.Collections.Generic.IList%601> 接口构造的类型将映射到从 Windows 运行时 <xref:Windows.Foundation.Collections.IVector%601> 接口构造的类型。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [用 C# 和 Visual Basic 创建 Windows 运行时组件](https://docs.microsoft.com/previous-versions/br230301(v=vs.110))

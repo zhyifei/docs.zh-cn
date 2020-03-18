@@ -4,12 +4,12 @@ description: 本高级教程展示了如何使用模式匹配技术，通过单�
 ms.date: 03/13/2019
 ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: df1054d8e0ec2b2539e6a1d00bf353d8ca927397
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039193"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156527"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>教程：使用模式匹配功能来扩展数据类型
 
@@ -23,7 +23,7 @@ C# 7 引入了基本模式匹配功能。 C# 8 通过新增表达式和模式，
 > - 使用模式匹配表达式来实现基于类型和属性值的行为。
 > - 结合使用模式匹配和其他方法来创建完整算法。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 需要将计算机设置为运行 .NET Core，包括 C# 8.0 编译器。 自 [Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或 [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) 起，开始随附 C# 8 编译器。
 
@@ -41,7 +41,7 @@ C# 7 引入了基本模式匹配功能。 C# 8 通过新增表达式和模式，
 
 通过上述简要说明，你可能已快速勾勒出用于对此系统进行建模的对象层次结构。 不过，数据来自多个源，如其他车辆注册管理系统。 这些系统提供不同的类来对相应数据进行建模，而你连可使用的一个对象模型都没有。 在本教程中，你将使用这些简化后的类，对这些外部系统中的车辆数据进行建模，如下面的代码所示：
 
-[!code-csharp[ExternalSystems](~/samples/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
+[!code-csharp[ExternalSystems](~/samples/snippets/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
 
 若要下载起始代码，可以访问 [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) GitHub 存储库。 可以看到，车辆类来自不同的系统，且位于不同的命名空间中。 没有常见基类，可利用的 `System.Object` 除外。
 
@@ -241,7 +241,7 @@ vehicle switch
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
-    
+
     { }     => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
     null    => throw new ArgumentNullException(nameof(vehicle))
 };
@@ -337,17 +337,17 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
 
 此方法虽起作用，但是重复的。 可以简化它，如下面的代码所示：
 
-[!code-csharp[IsWeekDay](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
+[!code-csharp[IsWeekDay](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
 接下来，添加将时间分类为块的类似函数：
 
-[!code-csharp[GetTimeBand](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
+[!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
 上面的方法不使用模式匹配。 使用熟悉的 `if` 语句级联将更为清楚。 你确实添加将每个时间范围转换为离散值的专用 `enum`。
 
 创建这些方法后，可以结合使用另一个 `switch` 表达式和元组模式  ，以计算定价附加费。 可以生成包含所有 16 个臂的 `switch` 表达式：
 
-[!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
+[!code-csharp[FullTuplePattern](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
 上面的代码虽起作用，但可以进行简化。 周末对应的所有八个组合的通行费都相同。 可以将所有八个组合都替换为下面的代码：
 
@@ -380,7 +380,7 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
 最后，可以删除通行费正常的两个高峰时段。 删除这些臂后，可以在最后的 switch 臂中将 `false` 替换为弃元 (`_`)。 完成的方法如下所示：
 
-[!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
+[!code-csharp[SimplifiedTuplePattern](../../../samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
 此示例突出了模式匹配的一个优点：模式分支是依序计算的。 如果将它们重排为更早的分支处理后续事例之一，编译器便会提示你无法访问的代码。 借助这些语言规则，可以更轻松地执行前面的简化，同时确信代码未更改。
 

@@ -4,12 +4,12 @@ description: 了解如何使用 spark-submit 和 Apache Livy 将 .NET for Apache
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d558234a53cc22d65540a380ac7f5b3ac03ba0ae
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 83359f7f613b500a4ce121ce1612cda0ad1191ab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868013"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185801"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>将 .NET for Apache Spark 作业提交到 Azure HDInsight
 
@@ -18,7 +18,7 @@ ms.locfileid: "76868013"
 ## <a name="deploy-using-spark-submit"></a>使用 spark-submit 进行部署
 
 可以使用 [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) 命令将 .NET for Apache Spark 作业提交到 Azure HDInsight。
- 
+
 1. 导航到 Azure 门户中的 HDInsight Spark 群集，然后选择“SSH + 群集登录名”  。
 
 2. 复制 ssh 登录信息，并将登录名粘贴到终端。 使用在群集创建期间设置的密码登录到群集。 应会看到“欢迎使用 Ubuntu 和 Spark”的消息。

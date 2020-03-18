@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f4cd2e47da236d276a42b972265ffd1a2fe27310
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 61d4792b1f1b92dd59442ee38810da96c6cf63bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160334"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78241138"
 ---
 # <a name="tour-of-net"></a>.NET 教程
 
@@ -41,7 +41,7 @@ Microsoft 积极开发和支持三种 .NET 语言：C#、F# 和 Visual Basic。
 
 以下两行代码都会分配内存：
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
 
 无法使用任何类似的关键字来取消分配内存，因为当垃圾回收器通过其计划的运行规则回收内存时，会自动取消分配。
 
@@ -49,7 +49,7 @@ Microsoft 积极开发和支持三种 .NET 语言：C#、F# 和 Visual Basic。
 
 下例中，运行时引发 <xref:System.IndexOutOfRangeException> 异常，强制实现内存安全：
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="working-with-unmanaged-resources"></a>处理未托管的资源
 
@@ -57,7 +57,7 @@ Microsoft 积极开发和支持三种 .NET 语言：C#、F# 和 Visual Basic。
 
 在 .NET 中，引用未托管资源的对象会实现 <xref:System.IDisposable> 接口。 用完对象后，需调用此对象的 <xref:System.IDisposable.Dispose> 方法，该方法会释放所有托管资源。 .NET 语言为此类对象提供了一种便捷的 [`using` 语句](../csharp/language-reference/keywords/using.md)，如下例所示：
 
-[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
+[!code-csharp[UnmanagedResources](../../samples/snippets/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
 `using` 块完成后，.NET 运行时会自动调用 `stream` 对象的 <xref:System.IDisposable.Dispose> 方法，该方法会释放文件句柄。 如果某异常造成控件退出块，则运行时也会执行此操作。
 
@@ -73,15 +73,15 @@ Microsoft 积极开发和支持三种 .NET 语言：C#、F# 和 Visual Basic。
 
 .NET 语言面向对象，包含基类和派生类的层次结构。 .NET 运行时仅允许与对象层次结构相符的对象强制转换和调用。 请记住，任何 .NET 语言中定义的每个类型都派生自 <xref:System.Object> 基类型。
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
 
 使用类型安全还有助于强制实施封装，因为它可以保证访问器关键字的保真度。 访问器关键字是控制其他代码访问给定类型的成员的项目。 这些关键字通常用于某个类型中用来管理类型行为的各种数据。
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
 C#、Visual Basic 和 F# 支持本地*类型推理*。 类型推理是指编译器根据右侧的表达式推断左侧表达式的类型。 这并不意味着类型安全遭到破坏或规避。 生成的类型具有一个隐含所有信息的强类型。 在上例中，重写了 `dog` 以介绍类型推理，示例的其余部分保持不变：
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
 与在 C# 和 Visual Basic 中找到的方法本地类型推理相比，F# 的类型推理能力更强。 若要了解详细信息，请参阅[类型推理](../fsharp/language-reference/type-inference.md)。
 
@@ -101,7 +101,7 @@ C#、Visual Basic 和 F# 支持本地*类型推理*。 类型推理是指编译�
 
 以下示例显示了使用 <xref:System.Collections.Generic.List%601> 类型实例运行的基本程序：
 
-[!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
+[!code-csharp[GenericsShort](../../samples/snippets/csharp/snippets/tour/GenericsShort.csx)]
 
 有关详细信息，请参阅[泛型类型（泛型）概述](generics.md)主题。
 
@@ -133,7 +133,7 @@ LINQ 是适用于 C# 和 Visual Basic 的强大功能集，可用于编写简单
 
 以下示例是 `StringBuilder` 类中 `ToString()` 方法的修改版本。 它演示了如何使用 `unsafe` 代码直接移动内存区块，从而有效实现某种算法：
 
-[!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]
+[!code-csharp[Unsafe](../../samples/snippets/csharp/snippets/tour/Unsafe.csx)]
 
 ## <a name="next-steps"></a>后续步骤
 

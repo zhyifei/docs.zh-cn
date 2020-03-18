@@ -4,20 +4,20 @@ description: 了解生成表达式树的方法。
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 45628b00633c8d6ff51dbd5f5dbdda7ca25dd7c4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c93eb16ebf2ff66dc0162afb6841f2cadfce174e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037098"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146042"
 ---
 # <a name="building-expression-trees"></a>生成表达式树
 
 [上一步 - 解释表达式](expression-trees-interpreting.md)
 
-到目前为止，你所看到的所有表达式树都是由 C# 编译器创建的。 你所要做的是创建一个 lambda 表达式，将其分配给一个类型为 `Expression<Func<T>>` 或某种相似类型的变量。 这不是创建表达式树的唯一方法。 很多情况下，可能需要在运行时在内存中生成一个表达式。 
+到目前为止，你所看到的所有表达式树都是由 C# 编译器创建的。 你所要做的是创建一个 lambda 表达式，将其分配给一个类型为 `Expression<Func<T>>` 或某种相似类型的变量。 这不是创建表达式树的唯一方法。 很多情况下，可能需要在运行时在内存中生成一个表达式。
 
-由于这些表达式树是不可变的，所以生成表达式树很复杂。 不可变意味着必须以从叶到根的方式生成表达式树。 你将用于生成表达式树的 API 反映了这一事实：你将用于生成节点的方法会将其所有子节点作为参数。 让我们通过几个示例来了解相关技巧。
+由于这些表达式树是不可变的，所以生成表达式树很复杂。 不可变意味着必须以从叶到根的方式生成表达式树。 用于生成表达式树的 API 体现了这一点：用于生成节点的方法将其所有子级用作参数。 让我们通过几个示例来了解相关技巧。
 
 ## <a name="creating-nodes"></a>创建节点
 
@@ -71,7 +71,7 @@ var lambda = Expression.Lambda(
 Expression<Func<double, double, double>> distanceCalc =
     (x, y) => Math.Sqrt(x * x + y * y);
 ```
- 
+
 首先，创建 `x` 和 `y` 的参数表达式：
 
 ```csharp
@@ -111,7 +111,7 @@ var distanceLambda = Expression.Lambda(
 
 ## <a name="building-code-in-depth"></a>深度生成代码
 
-不仅限于使用这些 API 可以生成的代码。 但是，要生成的表达式树越复杂，代码就越难以管理和阅读。 
+不仅限于使用这些 API 可以生成的代码。 但是，要生成的表达式树越复杂，代码就越难以管理和阅读。
 
 让我们生成一个与此代码等效的表达式树：
 
@@ -128,7 +128,7 @@ Func<int, int> factorialFunc = (n) =>
 };
 ```
 
-请注意上面我未生成表达式树，只是生成了委托。 使用 `Expression` 类不能生成语句 lambda。 下面是生成相同的功能所需的代码。 它很复杂，这是因为没有用于生成 `while` 循环的 API，而是需要生成一个包含条件测试的循环和一个用于中断循环的标签目标。 
+请注意上面我未生成表达式树，只是生成了委托。 使用 `Expression` 类不能生成语句 lambda。 下面是生成相同的功能所需的代码。 它很复杂，这是因为没有用于生成 `while` 循环的 API，而是需要生成一个包含条件测试的循环和一个用于中断循环的标签目标。
 
 ```csharp
 var nArgument = Expression.Parameter(typeof(int), "n");
@@ -162,13 +162,13 @@ BlockExpression body = Expression.Block(
 );
 ```
 
-用于生成阶乘函数的表达式树的代码相对更长、更复杂，它充满了标签和 break 语句以及我们在日常编码任务中想要避免的其他元素。 
+用于生成阶乘函数的表达式树的代码相对更长、更复杂，它充满了标签和 break 语句以及我们在日常编码任务中想要避免的其他元素。
 
 在本部分中，我还更新了用于访问此表达式树中所有节点的访客代码，并编写了在此示例中创建的节点的相关信息。 可以在 dotnet/docs GitHub 存储库[查看或下载示例代码](https://github.com/dotnet/samples/tree/master/csharp/expression-trees)。 生成并运行这些示例，自行动手试验。 有关下载说明，请参阅[示例和教程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ## <a name="examining-the-apis"></a>检查 API
 
-表达式树 API 在 .NET Core 中较难导航，但没关系。 它们的用途相当复杂：编写在运行时生成代码的代码。 它们必须具有复杂的结构，才能在支持 C# 语言中提供的所有控件结构和尽可能减小 API 表面积之间保持平衡。 这种平衡意味着许多控件结构不是由其 C# 构造表示，而是由表示基础逻辑的构造表示，这些基础逻辑由编译器从这些较高级别的构造生成。 
+表达式树 API 在 .NET Core 中较难导航，但没关系。 它们的用途相当复杂：编写在运行时生成代码的代码。 它们必须具有复杂的结构，才能在支持 C# 语言中提供的所有控件结构和尽可能减小 API 表面积之间保持平衡。 这种平衡意味着许多控件结构不是由其 C# 构造表示，而是由表示基础逻辑的构造表示，这些基础逻辑由编译器从这些较高级别的构造生成。
 
 另外，此时存在一些不能通过使用 `Expression` 类方法直接生成的 C# 表达式。 一般来说，这些将是在 C# 5 和 C# 6 中添加的最新运算符和表达式。 （例如，无法生成 `async` 表达式，并且无法直接创建新 `?.` 运算符。）
 

@@ -4,12 +4,12 @@ description: 介绍 .NET 事件模式，如何创建标准事件源以及订阅�
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: a050dc9a11470ff3b71488ce2ab4b92e607aa9b0
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: dec516767e43a6bf4edfa555e34f3adcc21a46e3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037169"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146136"
 ---
 # <a name="standard-net-event-patterns"></a>标准 .NET 事件模式
 
@@ -38,9 +38,9 @@ void OnEventRaised(object sender, EventArgs args);
 
 使用事件模型有一些设计优势。 可以创建多个事件侦听器，用于在找到查找的文件时执行不同的操作。 合并不同的侦听器可以创建更可靠的算法。
 
-下面是找到查找的文件时的初始事件参数声明： 
+下面是找到查找的文件时的初始事件参数声明：
 
-[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
+[!code-csharp[EventArgs](../../samples/snippets/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
 
 尽管这种类型看上去是小型的仅限数据的类型，但仍应按约定将其设为引用 (`class`) 类型。 这意味着参数对象将通过引用来传递，并且所有订阅服务器都将查看到任何数据更新。 第一版是不可变对象。 应优先将事件参数类型中的属性设为不可变。 这样一来，一个订阅服务器在其他订阅服务器看到值之前便无法更改值。 （但对此也有例外，如下所示。）  
 
@@ -48,21 +48,21 @@ void OnEventRaised(object sender, EventArgs args);
 
 让我们通过填充 FileSearcher 类来搜索与模式匹配的文件，并在发现匹配时引发正确的事件。
 
-[!code-csharp[FileSearcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
+[!code-csharp[FileSearcher](../../samples/snippets/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
 ## <a name="defining-and-raising-field-like-events"></a>定义并引发类似字段的事件
 
 要将事件添加到类，最简单的方式是将该事件声明为公共字段，如上面的示例中所示：
 
-[!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
+[!code-csharp[DeclareEvent](../../samples/snippets/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
 看起来它像在声明一个公共字段，这似乎是一个面向对象的不良实践。 你希望通过属性或方法来保护数据访问。 虽然这可能看起来是糟糕的做法，但编译器生成的代码确实会创建包装器，以便事件对象只能通过安全的方式进行访问。 类似字段的事件上唯一可用的操作是添加处理程序：
 
-[!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
+[!code-csharp[DeclareEventHandler](../../samples/snippets/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 
 和删除处理程序：
 
-[!code-csharp[RemoveEventHandler](../../samples/csharp/events/Program.cs#RemoveHandler "Remove the event handler")]
+[!code-csharp[RemoveEventHandler](../../samples/snippets/csharp/events/Program.cs#RemoveHandler "Remove the event handler")]
 
 请注意，处理程序有一个局部变量。 如果使用了 lambda 的正文，则删除操作无法正常进行。 它将成为不同的委托实例，并静默地不执行任何操作。
 
@@ -76,7 +76,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 事件处理程序不返回值，因此需以其它方式进行通信。 标准事件模式使用 EventArgs 对象来包含字段，事件订阅服务器使用这些字段进行通信取消。
 
-根据“取消”协定的语义，有两种不同的模式可供使用。 在两种情况下，你都将为找到的文件事件向 EventArguments 添加布尔字段。 
+根据“取消”协定的语义，有两种不同的模式可供使用。 在两种情况下，你都将为找到的文件事件向 EventArguments 添加布尔字段。
 
 其中一种模式允许任一订阅服务器取消操作。
 在此模式下，新字段会初始化为 `false`。 任何订阅服务器都可将其更改为 `true`。 当所有订阅服务器观察到事件已引发后，FileSearcher 组件将检查布尔值，并执行操作。
@@ -86,7 +86,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 让我们来实现此示例的第一版。 需要将名为 `CancelRequested` 的布尔字段添加到 `FileFoundArgs` 类型：
 
-[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgs "Update event arguments")]
+[!code-csharp[EventArgs](../../samples/snippets/csharp/events/Program.cs#EventArgs "Update event arguments")]
 
 此新字段将自动初始化为 `false`，即布尔字段的默认值，因此不会意外取消。 对组件进行的唯一其它更改是在引发事件后检查标志，查看是否有任何订阅服务器提出了取消请求：
 
@@ -122,27 +122,27 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 在拥有多个子目录的目录中，此操作可能要花较长时间。 让我们添加一个在每次新目录搜索开始时引发的事件。 这让订阅服务器可以跟踪进度，并根据进度更新用户。 目前为止，你所创建的所有示例都是公共的。 让我们把这个示例设为内部事件。 这意味着你也可以将这些类型用于参数内部。
 
-首先，创建新的 EventArgs 派生类，用于报告新目录和进度。 
+首先，创建新的 EventArgs 派生类，用于报告新目录和进度。
 
-[!code-csharp[DirEventArgs](../../samples/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
+[!code-csharp[DirEventArgs](../../samples/snippets/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
 
 同样，可以根据建议为事件参数设置不可变的引用类型。
 
 接下来，定义事件。 此时，需使用不同的语法。 除使用字段语法之外，还可以显式创建包含添加或删除处理程序的属性。 在本例中，这些处理程序中无需包含额外的代码，但这一步演示了你可以如何创建它们。
 
-[!code-csharp[Declare event with add and remove handlers](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Declare the event with add and remove handlers")]
+[!code-csharp[Declare event with add and remove handlers](../../samples/snippets/csharp/events/Program.cs#DeclareSearchEvent "Declare the event with add and remove handlers")]
 
 在许多方面，此处编写的代码可反映编译器为你已见过的字段事件定义所生成的代码。 创建事件所使用的语法与用于[属性](properties.md)的语法是极为相似的。 请注意，处理程序的名称各不相同：`add` 和 `remove`。 通过调用它们来订阅事件，或取消订阅事件。 请注意，还必须声明一个私有支持字段以存储事件变量。 它初始化为 null。
 
 接下来，让我们添加 `Search` 方法的重载，该重载遍历子目录，并引发这两个事件。 要实现此目的，最简单的方法是使用默认参数来指定你要搜索所有目录：
 
-[!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
+[!code-csharp[SearchImplementation](../../samples/snippets/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 
 此时可运行调用重载的应用程序来搜索所有子目录。 虽然新 `ChangeDirectory` 事件中没有订阅服务器，但使用 `?.Invoke()` 习惯用语可确保此操作正常。
 
- 让我们通过添加处理程序来编写一行，用于在控制台窗口显示进度。 
+ 让我们通过添加处理程序来编写一行，用于在控制台窗口显示进度。
 
-[!code-csharp[Search](../../samples/csharp/events/Program.cs#Search "Declare event handler")]
+[!code-csharp[Search](../../samples/snippets/csharp/events/Program.cs#Search "Declare event handler")]
 
 你已了解了整个 .NET 生态系统所遵循的模式。
 通过学习这些模式和约定，将能够快速编写惯用的 C# 和 .NET。
