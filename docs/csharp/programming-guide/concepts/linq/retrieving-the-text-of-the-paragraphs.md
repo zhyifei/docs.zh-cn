@@ -2,12 +2,12 @@
 title: 检索段落的文本 (C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: cedca9df84ee687a9e304cde0015b46d07956364
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7c47420045def3fe973169e01143646c0f60a8eb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423329"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168240"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>检索段落的文本 (C#)
 此示例以上一个示例[检索段落及其样式 (C#)](./retrieving-the-paragraphs-and-their-styles.md) 为基础。 这个新示例将每个段落的文本作为字符串进行检索。  
@@ -18,7 +18,7 @@ ms.locfileid: "73423329"
   
  当然，可以只编写一个查询，使之包含检索段落、每个段落的样式以及每个段落的文本这些功能。 但是，将一个比较复杂的查询分解成多个查询通常很有好处，因为这样产生的代码更加模块化，更易于维护。 而且，如果需要重用查询的某一部分，使用此方式编写的查询更容易重构。  
   
- 这些链接在一起的查询使用的处理模型在[教程：将查询链接在一起 (C#)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) 中有详细的讨论。  
+ 这些链接在一起的查询使用的处理模型在[教程：将查询链接在一起 (C#)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) 主题中有详细的讨论。  
   
 ## <a name="example"></a>示例  
  本示例处理一个 WordprocessingML 文档，它确定元素节点、样式名称和每个段落的文本。 本示例以本教程中前面的一些示例为基础构建。 下面代码中的注释标识出了这个新查询。  
@@ -68,7 +68,7 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
     }  
 }  
   
-string defaultStyle =   
+string defaultStyle =
     (string)(  
         from style in styleDoc.Root.Elements(w + "style")  
         where (string)style.Attribute(w + "type") == "paragraph"&&  
@@ -142,7 +142,7 @@ StyleName:Code >Hello World<
   
 - [使用扩展方法重构 (C#)](./refactoring-using-an-extension-method.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [教程：操作 WordprocessingML 文档中的内容 (C#)](shape-of-wordprocessingml-documents.md)
 - [LINQ to XML 中的延迟执行和迟缓计算 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

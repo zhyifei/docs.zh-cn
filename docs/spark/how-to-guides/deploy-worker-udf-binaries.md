@@ -4,12 +4,12 @@ description: 了解如何部署 .NET for Apache Spark 辅助角色和用户定�
 ms.date: 01/21/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: f9197ca3cf8066f0849ebbe70d7757c9035d02f6
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f373ccee398149adcadeac91f02d9896214706b0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76748541"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187592"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>部署 .NET for Apache Spark 辅助角色和用户定义的函数二进制文件
 
@@ -19,19 +19,19 @@ ms.locfileid: "76748541"
 配置显示常规环境变量和参数设置，用于部署 .NET for Apache Spark 辅助角色和用户定义的函数二进制文件。
 
 ### <a name="environment-variables"></a>环境变量
-部署辅助角色和编写 UDF 时，可能需要设置几个常用环境变量： 
+部署辅助角色和编写 UDF 时，可能需要设置几个常用环境变量：
 
 | 环境变量         | 描述
-| :--------------------------- | :---------- 
+| :--------------------------- | :----------
 | DOTNET_WORKER_DIR            | 生成 <code>Microsoft.Spark.Worker</code> 二进制文件的路径</br>它由 Spark 驱动程序使用，将被传递到 Spark 执行程序。 如果未设置此变量，Spark 执行器将搜索 <code>PATH</code> 环境变量中指定的路径。</br>例如  “C:\bin\Microsoft.Spark.Worker”
 | DOTNET_ASSEMBLY_SEARCH_PATHS | 逗号分隔的路径，<code>Microsoft.Spark.Worker</code> 将在这些路径中加载程序集。</br>请注意，如果路径以“.”开头，则将预置工作目录。 如果处于 yarn 模式，  则“.”表示容器的工作目录。</br>例如  “C:\Users\\&lt;用户名&gt;\\&lt;mysparkapp&gt;\bin\Debug\\&lt;dotnet 版本&gt;”
 | DOTNET_WORKER_DEBUG          | 如果要<a href="https://github.com/dotnet/spark/blob/master/docs/developer-guide.md#debugging-user-defined-function-udf">调试 UDF</a>，请在运行 <code>spark-submit</code> 之前将此环境变量设置为 <code>1</code>。
 
 ### <a name="parameter-options"></a>参数选项
-[捆绑](https://spark.apache.org/docs/latest/submitting-applications.html#bundling-your-applications-dependencies) Spark 应用程序后，可以使用 `spark-submit` 启动它。 下表显示了一些常用选项： 
+[捆绑](https://spark.apache.org/docs/latest/submitting-applications.html#bundling-your-applications-dependencies) Spark 应用程序后，可以使用 `spark-submit` 启动它。 下表显示了一些常用选项：
 
 | 参数名称        | 描述
-| :---------------------| :---------- 
+| :---------------------| :----------
 | --class               | 应用程序的入口点。</br> 例如 org.apache.spark.deploy.dotnet.DotnetRunner
 | --master              | 群集的<a href="https://spark.apache.org/docs/latest/submitting-applications.html#master-urls">母版 URL</a>。</br> 例如 yarn
 | --deploy-mode         | 是在辅助节点 (<code>cluster</code>) 上还是在本地作为外部客户端 (<code>client</code>) 部署驱动程序。</br>默认值：<code>client</code>

@@ -3,22 +3,22 @@ title: C# 和 Visual Studio Code 入门
 description: 了解如何使用 Visual Studio Code 创建和调试首个 C# .NET Core 应用。
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: ef7134e26c1ded3926faa51748c1b6d4a461008f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 8eaf1ba2314dcab96db615a8691afed82c5011a7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156603"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397883"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 和 Visual Studio Code 入门
 
 .NET Core 提供了快速运行的模块化平台，用于创建在 Windows、Linux 和 macOS 上运行的应用程序。 带 C# 扩展的 Visual Studio Code 提供功能强大的编辑体验，完全支持 C# IntelliSense（智能代码填充）和调试。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 1. 安装 [Visual Studio Code](https://code.visualstudio.com/)。
 2. 获取 [.NET Core SDK](https://dotnet.microsoft.com/download)。
-3. 安装 Visual Studio Code 的 [C# 扩展](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)。 若要详细了解如何在 Visual Studio Code 上安装扩展，请访问 [VS Code 扩展市场](https://code.visualstudio.com/docs/editor/extension-gallery)。
+3. 安装 Visual Studio Code 的 [C# 扩展](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)。 若要详细了解如何在 Visual Studio Code 上安装扩展，请访问 [VS Code 扩展市场](https://code.visualstudio.com/docs/editor/extension-gallery)。
 
 ## <a name="hello-world"></a>Hello World
 
@@ -28,7 +28,7 @@ ms.locfileid: "78156603"
 
     - 打开 Visual Studio Code。
     - 依次单击左侧菜单上的“资源管理器”图标和 **“打开文件夹”** 。
-    - 从主菜单中选择“文件” > “打开文件夹”，打开要在其中放置 C# 项目的文件夹，然后单击“选择文件夹”    。 在我们的示例中，为项目创建名为“HelloWorld”的文件夹  。
+    - 从主菜单中选择“文件” **“打开文件夹”，打开要在其中放置 C# 项目的文件夹，然后单击“选择文件夹”**  >    。 在我们的示例中，为项目创建名为“HelloWorld”的文件夹  。
 
       ![Visual Studio Code“打开文件夹”](media/with-visual-studio-code/vs-code-open-folder.png)
 
@@ -62,7 +62,7 @@ ms.locfileid: "78156603"
 
     ![打开 Program.cs 文件](media/with-visual-studio-code/open-program-cs.png)
 
-2. Visual Studio Code 会提示添加缺少的资产，以生成和调试应用。 选择 **“是”** 。
+2. Visual Studio Code 会提示添加缺少的资产，以生成和调试应用。 请选择“是”。 
 
     ![提示添加缺少的资产](media/with-visual-studio-code/missing-assets.png)
 
@@ -143,9 +143,9 @@ ms.locfileid: "78156603"
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>缺少在 Visual Studio Code 中生成和调试 C# 所需的资产。 调试器显示“无配置”。
 
-Visual Studio Code C# 扩展可生成用于生成和调试的资产。 首次打开 C# 项目时，Visual Studio Code 会提示用户生成这些资产。 如果当时并未生成这些资产，仍可以通过打开命令面板（“视图”>“命令面板”  ）并键入“>.NET：生成用于生成和调试的资产”来运行此命令。 选择此方法可生成所需的 .vscode、launch.json 和 tasks.jsonn 配置文件    。
+Visual Studio Code C# 扩展可生成用于生成和调试的资产。 首次打开 C# 项目时，Visual Studio Code 会提示用户生成这些资产。 如果当时并未生成这些资产，仍可以通过打开命令面板（“视图”>“命令面板”）并键入“>.NET: Generate Assets for Build and Debug”来运行此命令  。 选择此方法可生成所需的 .vscode、launch.json 和 tasks.jsonn 配置文件    。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [设置 Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
 - [在 Visual Studio Code 中进行调试](https://code.visualstudio.com/Docs/editor/debugging)

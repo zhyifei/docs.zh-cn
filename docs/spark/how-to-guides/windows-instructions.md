@@ -4,12 +4,12 @@ description: 了解如何在 Windows 上生成 .NET for Apache Spark 应用程�
 ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: 640459c8c80b6d798718b89d4965802cdacd6c63
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: cb7154185fc9aa08bc447cb846798995301a6651
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628652"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185760"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>了解如何在 Windows 上生成 .NET for Apache Spark 应用程序
 
@@ -26,7 +26,7 @@ ms.locfileid: "77628652"
          * .NET Framework 4.6.1 开发工具
      * .NET Core 跨平台开发
        * 所有必需的组件
-  3. 安装 [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  。 
+  3. 安装 [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  。
      - 选择适用于操作系统的合适版本。 例如，为 Windows x64 计算机选择 jdk-8u201-windows-x64.exe  。
      - 使用安装程序安装，验证是否能够从命令行运行 `java`。
   4. 安装 [Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)  。
@@ -39,16 +39,16 @@ ms.locfileid: "77628652"
      - 添加[新环境变量](https://www.java.com/en/download/help/path.xml) `SPARK_HOME`。 例如 *C:\bin\spark-2.3.2-bin-hadoop2.7\*。
 
        ```powershell
-       set SPARK_HOME=C:\bin\spark-2.3.2-bin-hadoop2.7\       
+       set SPARK_HOME=C:\bin\spark-2.3.2-bin-hadoop2.7\
        ```
 
      - 将 Apache Spark 添加到 [PATH 环境变量](https://www.java.com/en/download/help/path.xml)。 例如 C:\bin\spark-2.3.2-bin-hadoop2.7\bin  。
 
-       ```powershell       
+       ```powershell
        set PATH=%SPARK_HOME%\bin;%PATH%
        ```
-     
-     - 验证是否能够从命令行运行 `spark-shell`。        
+
+     - 验证是否能够从命令行运行 `spark-shell`。
         控制台输出示例：
 
         ```
@@ -105,7 +105,7 @@ git clone https://github.com/dotnet/spark.git C:\github\dotnet-spark
 
 ```powershell
 cd src\scala
-mvn clean package 
+mvn clean package
 ```
 
 应会看到为支持的 Spark 版本创建的 JAR：
@@ -138,9 +138,9 @@ mvn clean package
         df.Filter(df["age"] > 21).Show();
       ```
 
-     成功生成后，会在输出目录中看到相应的二进制文件。     
+     成功生成后，会在输出目录中看到相应的二进制文件。
      控制台输出示例：
-     
+
       ```powershell
             Directory: C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461
 
@@ -159,7 +159,7 @@ mvn clean package
         -a----        3/16/2019  12:00 AM          23552 Microsoft.Spark.Worker.xml
         -a----        3/16/2019  12:00 AM         332363 Microsoft.Spark.xml
         ------------------------------------------- More framework files -------------------------------------
-      ```     
+      ```
 
 #### <a name="using-net-core-cli-for-net-core"></a>使用适用于 .NET Core 的 .NET Core CLI
 
@@ -172,7 +172,7 @@ mvn clean package
       cd C:\github\dotnet-spark\src\csharp\Microsoft.Spark.Worker\
       dotnet publish -f netcoreapp2.1 -r win10-x64
       ```
-      
+
       控制台输出示例：
 
       ```powershell
@@ -185,7 +185,7 @@ mvn clean package
         Microsoft.Spark -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark\Debug\netstandard2.0\Microsoft.Spark.dll
         Microsoft.Spark.Worker -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\Microsoft.Spark.Worker.dll
         Microsoft.Spark.Worker -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish\
-      ```    
+      ```
 
   2. 生成示例：
 
@@ -193,7 +193,7 @@ mvn clean package
       cd C:\github\dotnet-spark\examples\Microsoft.Spark.CSharp.Examples\
       dotnet publish -f netcoreapp2.1 -r win10-x64
       ```
-   
+
       控制台输出示例：
 
       ```powershell
@@ -206,7 +206,7 @@ mvn clean package
         Microsoft.Spark -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark\Debug\netstandard2.0\Microsoft.Spark.dll
         Microsoft.Spark.CSharp.Examples -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\Microsoft.Spark.CSharp.Examples.dll
         Microsoft.Spark.CSharp.Examples -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish\
-      ```     
+      ```
 
 ## <a name="run-the-net-for-spark-sample-applications"></a>运行 .NET for Spark 示例应用程序
 
@@ -271,7 +271,7 @@ mvn clean package
      - [Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount（提供 jar）](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs) 
 
          ```powershell
-         spark-submit.cmd 
+         spark-submit.cmd
          --jars path\to\net.jpountz.lz4\lz4-1.3.0.jar,path\to\org.apache.kafka\kafka-clients-0.10.0.1.jar,path\to\org.apache.spark\spark-sql-kafka-0-10_2.11-2.3.2.jar,`path\to\org.slf4j\slf4j-api-1.7.6.jar,path\to\org.spark-project.spark\unused-1.0.0.jar,path\to\org.xerial.snappy\snappy-java-1.1.2.6.jar `
          --class org.apache.spark.deploy.dotnet.DotnetRunner `
          --master local `

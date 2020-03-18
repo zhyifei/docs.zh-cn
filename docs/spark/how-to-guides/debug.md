@@ -4,12 +4,12 @@ description: 了解如何在 Windows 上部署 .NET for Apache Spark 应用程�
 ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 25f5291c47dc1cdf2668cb077fae7439e330cc1c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: dac6aed1f7faba7f07b722a6dac0da930ab9ec66
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919924"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185810"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>部署 .NET for Apache Spark 应用程序
 
@@ -63,7 +63,7 @@ if (EnvironmentUtils.GetEnvironmentVariableAsBool("DOTNET_WORKER_DEBUG"))
 
 点击 `F5` 继续应用程序，最终会点击断点。
 
-> [!NOTE] 
+> [!NOTE]
 > 将为每个任务弹出“选择实时调试器”窗口。 若要避免弹出过多窗口，请将执行器数设置为较小数目。 例如，可以将“--master local[1]”  选项用于 spark-submit，以将任务数设置为 1，这将启动一个调试器实例。
 
 ## <a name="debug-scala-code"></a>调试 Scala 代码

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
 ms.openlocfilehash: 6a61c42ba2d01e84ffae376bf95c99877437be85
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712827"
 ---
 # <a name="when-c-reference"></a>when（C# 参考）
 
 在以下两个上下文中，可以使用上下文关键字 `when` 指定筛选条件：
 
-- 在 [try/catch](try-catch.md) 或 [try/catch/finally](try-catch-finally.md) 块的 `catch` 语句中。
-- 在 [switch](switch.md) 语句的 `case` 标签中。
+- 在 `catch`try/catch[ 或 ](try-catch.md)try/catch/finally[ 块的 ](try-catch-finally.md) 语句中。
+- 在 `case`switch[ 语句的 ](switch.md) 标签中。
 
-## <a name="when-in-a-catch-statement"></a>`catch` 语句中的 `when`
+## <a name="when-in-a-catch-statement"></a>`when` 语句中的 `catch`
 
 从 C# 6 开始，`when` 可用于 `catch` 语句中，以指定为执行特定异常处理程序而必须为 true 的条件。 语法为：
 
@@ -35,7 +35,7 @@ catch (ExceptionType [e]) when (expr)
 
 [!code-csharp[when-with-catch](~/samples/snippets/csharp/language-reference/keywords/when/catch.cs)]
 
-## <a name="when-in-a-switch-statement"></a>`switch` 语句中的 `when`
+## <a name="when-in-a-switch-statement"></a>`when` 语句中的 `switch`
 
 从 C# 7.0 开始，`case` 标签无需是互斥的，且 `case` 标签在 `switch` 语句中的显示顺序可以决定要执行的 switch 块。 `when` 关键字可指定一个筛选条件，该条件使得仅当筛选条件也为 true 时，与其相关联的 case 标签才为 true。 语法为：
 
@@ -49,7 +49,7 @@ case (expr) when (when-condition):
 
 [!code-csharp[when-with-case#1](~/samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [switch 语句](switch.md)
 - [try/catch 语句](try-catch.md)

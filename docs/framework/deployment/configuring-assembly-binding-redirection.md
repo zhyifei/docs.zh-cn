@@ -5,17 +5,17 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
-ms.openlocfilehash: c7b9dcb99e08a1ef2844c5811897aa87ff86f866
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5b24d99aa23358272eecd042c40001413965d7f0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716558"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181682"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>配置程序集绑定重定向
-默认情况下，应用程序使用一组 .NET Framework 程序集，该程序集随用于编译该应用程序的运行时版本一起提供。 可以使用应用程序配置文件中 [\<assemblyBinding>](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 元素上的 appliesTo 特性，将程序集绑定引用重定向到 .NET Framework 程序集的特定版本  。 此可选特性用 .NET Framework 版本号来指示它应用于哪个版本。 如果没有指定 appliesTo 特性，\<assemblyBinding> 元素将适用于 .NET Framework 的所有版本   。  
+默认情况下，应用程序使用一组 .NET Framework 程序集，该程序集随用于编译该应用程序的运行时版本一起提供。 可以使用应用程序配置文件中  assemblyBinding>[ 元素上的 appliesTo 特性，将程序集绑定引用重定向到 .NET Framework 程序集的特定版本\<](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)。 此可选特性用 .NET Framework 版本号来指示它应用于哪个版本。 如果没有指定 appliesTo 特性，**assemblyBinding> 元素将适用于 .NET Framework 的所有版本** **\<** 。  
   
- 在 .NET Framework 1.1 版中引入了 appliesTo 特性，而在 .NET Framework 1.0 版中则忽略了此特性  。 这意味着，即使指定了 appliesTo 特性，在使用 .NET Framework 1.0 版时所有的 \<assemblyBinding> 元素也都适用   。  
+ 在 .NET Framework 1.1 版中引入了 appliesTo 特性，而在 .NET Framework 1.0 版中则忽略了此特性  。 这意味着，即使指定了 appliesTo 特性，在使用 .NET Framework 1.0 版时所有的 **assemblyBinding> 元素也都适用\<**  。  
   
 > [!NOTE]
 > 使用 appliesTo 特性来限制运行时特定版本的程序集绑定重定向  。  
@@ -25,28 +25,28 @@ ms.locfileid: "75716558"
 ```xml  
 <runtime>  
         <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1" appliesTo="v1.0.3705">  
-            <dependentAssembly>   
+            <dependentAssembly>
                * assembly information goes here *  
             </dependentAssembly>  
        </assemblyBinding>  
 </runtime>  
 ```  
   
- \<assemblyBinding> 元素要区分顺序  。 应首先输入任何 .NET Framework 1.0 版程序集的程序集绑定重定向信息，再输入任何 .NET Framework 1.1 版程序集的程序集绑定重定向信息。 最后，输入任何因不使用 **appliesTo** 特性而适用于所有版本的 .NET Framework 的.NET Framework 程序集重定向的程序集绑定重定向信息。 如果发生重定向冲突，请使用配置文件中的第一个匹配的重定向语句。  
+ **assemblyBinding> 元素要区分顺序\<** 。 应首先输入任何 .NET Framework 1.0 版程序集的程序集绑定重定向信息，再输入任何 .NET Framework 1.1 版程序集的程序集绑定重定向信息。 最后，输入任何因不使用 **appliesTo** 特性而适用于所有版本的 .NET Framework 的.NET Framework 程序集重定向的程序集绑定重定向信息。 如果发生重定向冲突，请使用配置文件中的第一个匹配的重定向语句。  
   
  例如，若要将一个引用重定向到 .NET Framework 1.0 版程序集，而将另一个引用重定向到 .NET Framework 1.1 版程序集，将使用以下伪代码中所示的模式。  
   
 ```xml  
-<assemblyBinding xmlns="..." appliesTo="v1.0.3705">   
-  <!-- .NET Framework version 1.0 redirects here. -->   
-</assemblyBinding>   
+<assemblyBinding xmlns="..." appliesTo="v1.0.3705">
+  <!-- .NET Framework version 1.0 redirects here. -->
+</assemblyBinding>
   
-<assemblyBinding xmlns="..." appliesTo="v1.1.4322">   
-  <!-- .NET Framework version 1.1 redirects here. -->   
-</assemblyBinding>   
+<assemblyBinding xmlns="..." appliesTo="v1.1.4322">
+  <!-- .NET Framework version 1.1 redirects here. -->
+</assemblyBinding>
   
-<assemblyBinding xmlns="...">   
-  <!-- Redirects meant for all versions of the .NET Framework. -->   
+<assemblyBinding xmlns="...">
+  <!-- Redirects meant for all versions of the .NET Framework. -->
 </assemblyBinding>  
 ```  
   
@@ -55,6 +55,6 @@ ms.locfileid: "75716558"
   
  可以通过确定是否正在发生程序集绑定重定向来确定是否正在使用某个配置文件。 使用[程序集绑定日志查看器 (Fuslogvw.exe)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md) 查看正在加载哪些程序集。 若要查看所有的程序集绑定，必须在注册表中设置 ForceLog 的条目  。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：启用和禁用自动绑定重定向](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

@@ -4,10 +4,10 @@ description: 了解如何为机器学习模型选择 ML.NET 算法
 ms.topic: overview
 ms.date: 06/05/2019
 ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75739991"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>如何选择 ML.NET 算法
@@ -95,7 +95,7 @@ ms.locfileid: "75739991"
 |----------|--------|
 |用于异常情况检测|<xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>|
 
-## <a name="naive-bayes"></a>朴素贝叶斯
+## <a name="naive-bayes"></a>Naive Bayes
 
 |属性|训练程序|
 |----------|--------|

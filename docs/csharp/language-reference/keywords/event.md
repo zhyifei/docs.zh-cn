@@ -10,10 +10,10 @@ helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
 ms.openlocfilehash: eb1805ed55921497fea88e6b39989c876ef003d1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713560"
 ---
 # <a name="event-c-reference"></a>event (C# 参考)
@@ -34,7 +34,7 @@ ms.locfileid: "75713560"
 
 下列关键字应用于事件。
 
-|关键字|描述|更多相关信息|
+|关键字|说明|更多相关信息|
 |-------------|-----------------|--------------------------|
 |[static](./static.md)|使事件可供调用方在任何时候进行调用，即使不存在类的实例。|[静态类和静态类成员](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|
 |[virtual](./virtual.md)|允许派生类使用[重写](./override.md)关键字重写事件行为。|[继承](../../programming-guide/classes-and-structs/inheritance.md)|
@@ -49,7 +49,7 @@ ms.locfileid: "75713560"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)

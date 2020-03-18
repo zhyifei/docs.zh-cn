@@ -23,10 +23,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
 ms.openlocfilehash: 8e0b291c0bb526c21654a1e8c08bd168d95ac53a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348911"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>创建、删除和移动文件和目录 (Visual Basic)
@@ -59,7 +59,7 @@ ms.locfileid: "74348911"
  [如何：重命名文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
  演示如何重命名文件。  
   
- [如何：将目录复制到另一个目录](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
+ [如何：将一个目录复制到另一个目录](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
  演示如何将目录复制到另一位置。  
   
  [如何：创建目录](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
@@ -77,7 +77,7 @@ ms.locfileid: "74348911"
  [如何：分析文件路径](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
  演示如何使用 `My` 方法合并文件路径。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  介绍 `My.Computer.FileSystem` 对象及其成员。  

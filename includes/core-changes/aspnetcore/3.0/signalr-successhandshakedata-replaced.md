@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 1d8bcaf68d44f27642048c1c207b52c55b604690
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901783"
 ---
 ### <a name="signalr-handshakeprotocolsuccesshandshakedata-replaced"></a>SignalR：HandshakeProtocol.SuccessHandshakeData 已替换
@@ -24,11 +24,11 @@ ms.locfileid: "75901783"
 
 #### <a name="reason-for-change"></a>更改原因
 
-握手响应中添加了其他字段，这些字段是非常量，并会根据所选协议的不同而变化。
+握手响应  中添加了其他字段，这些字段是非常量，并会根据所选协议的不同而变化。
 
 #### <a name="recommended-action"></a>建议操作
 
-无。 此类型不适用于从用户代码使用。 它是 `public` 类型，因此可以在 SignalR 服务器和客户端之间共享。 它还可以由以 .NET 编写的客户 SignalR 客户端使用。 SignalR 用户不应受此更改的影响。
+无。 此类型不适用于从用户代码使用。 它是 `public` 类型，因此可以在 SignalR 服务器和客户端之间共享。 它还可以由以 .NET 编写的客户 SignalR 客户端使用。 SignalR 用户不应受此更改的影响  。
 
 #### <a name="category"></a>类别
 

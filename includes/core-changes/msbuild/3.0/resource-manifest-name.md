@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 276268d31670b5e7dcd0ae9c0b7a61c3c38ca663
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 16ee73bfc0ab33b04ea3e2fa6d0eec521a9b8634
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451874"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78967848"
 ---
 ### <a name="resource-manifest-file-names"></a>资源清单文件名
 
@@ -63,7 +63,7 @@ ms.locfileid: "77451874"
   MyTypes.cs  和 MyTypes.resx  或 MyTypes.fr-FR.resx  文件存在于同一文件夹中。
   
   **生成的资源清单文件名**：Namespace.Classname.resources 或 Namespace.Classname.fr-FR.resources（其中 `Namespace.Classname` 是 MyTypes.cs 中第一个类的名称）    。
-    
+
 - 如果前面的规则均不适用，则生成的资源清单文件名为 RootNamespace.RelativePathWithDotsForSlashes.\[Culture.]resources  。 相对路径是 `EmbeddedResource` 元素的 `Link` 属性的值（如果已设置）。 否则，相对路径是 `EmbeddedResource` 元素的 `Identity` 属性的值。 在 Visual Studio 中，这是从项目根目录到解决方案资源管理器中的文件的路径。
 
 #### <a name="recommended-action"></a>建议操作

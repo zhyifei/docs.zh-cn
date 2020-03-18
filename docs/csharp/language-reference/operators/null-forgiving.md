@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 21bbf8e1253641317750b911e052ee5ff0a0d063
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 36bfa46cebd2b35c4985dfc23dbe84f8f5dc9201
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036161"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846284"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! （null 包容）运算符（C# 参考）
 
@@ -25,23 +25,23 @@ null 包容运算符在运行时不起作用。 它仅通过更改表达式的 n
 
 null 包容运算符的一个用例是测试参数验证逻辑。 例如，请考虑以下类：
 
-[!code-csharp[Person class](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#PersonClass)]
+[!code-csharp[Person class](snippets/NullForgivingOperator.cs#PersonClass)]
 
 使用 [ 测试框架](../../../core/testing/unit-testing-with-mstest.md)，可以在构造函数中为验证逻辑创建以下测试：
 
-[!code-csharp[Person test](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#TestPerson)]
+[!code-csharp[Person test](snippets/NullForgivingOperator.cs#TestPerson)]
 
 如果不使用 null 包容运算符，编译器将为前面的代码生成以下警告：`Warning CS8625: Cannot convert null literal to non-nullable reference type`。 通过使用 null 包容运算符，可以告知编译器传递 `null` 是预期行为，不应发出警告。
 
 如果你明确知道某个表达式不能为 `null`，但编译器无法识别它，也可以使用 null 包容运算符。 在下面的示例中，如果 `IsValid` 方法返回 `true`，则其参数不是 `null`，可以放心取消对它的引用：
 
-[!code-csharp[Use null-forgiving operator](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#UseNullForgiving)]
+[!code-csharp[Use null-forgiving operator](snippets/NullForgivingOperator.cs#UseNullForgiving)]
 
 如果没有 null 包容运算符，编译器将为 `p.Name` 代码生成以下警告：`Warning CS8602: Dereference of a possibly null reference`。
 
 如果可以修改 `IsValid` 方法，则可使用 [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) 属性告知编译器，当方法返回 `true` 时，`IsValid` 方法的参数不能是 `null`：
 
-[!code-csharp[Use an attribute](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#UseAttribute)]
+[!code-csharp[Use an attribute](snippets/NullForgivingOperator.cs#UseAttribute)]
 
 在前面的例子中，不需要使用 null 包容运算符，因为编译器有足够的信息来发现 `p` 不能是 `if` 语句中的 `null`。 如需深入了解允许你提供有关变量 null 状态的其他信息的属性，请参阅[使用属性升级 API 以定义 null 期望值](../../nullable-attributes.md)。
 

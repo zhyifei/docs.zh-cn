@@ -9,10 +9,10 @@ helpviewer_keywords:
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
 ms.openlocfilehash: 4875e53327e24c4b5983a4a3b79b5beced368725
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74428614"
 ---
 # <a name="c-reference"></a>C# 参考
@@ -48,7 +48,7 @@ ms.locfileid: "74428614"
  C# 7.0 中实现了许多新功能。 这些功能包括：模式匹配、本地函数、out 变量声明、throw 表达式、二进制文本和数字分隔符。 此文件夹包含适用于每个功能的规范。
   
  [C# 7.1 规范建议](../../../_csharplang/proposals/csharp-7.1/async-main.md)  
- C# 7.1 中有以下新增功能。 首先，可编写返回 `Task` 或 `Task<int>` 的 `Main` 方法。 由此可将 `async` 修饰符添加到 `Main`。 可推断类型的位置中没有类型时可使用 `default` 表达式。 同时，也可推断元组成员名称。 最后，可通过泛型使用模式匹配。
+ C# 7.1 中有以下新增功能。 首先，可编写返回 `Main` 或 `Task` 的 `Task<int>` 方法。 由此可将 `async` 修饰符添加到 `Main`。 可推断类型的位置中没有类型时可使用 `default` 表达式。 同时，也可推断元组成员名称。 最后，可通过泛型使用模式匹配。
 
  [C# 7.2 规范建议](../../../_csharplang/proposals/csharp-7.2/readonly-ref.md)  
  C#7.2 添加了大量小功能。 可使用 `in` 关键字通过只读引用传递参数。 许多低级更改可支持 `Span` 及相关类型的编译时安全性。 在某些情况下，可使用已命名参数，其中后面的参数是位置参数。 借助 `private protected` 访问修饰符，可指定调用方仅限于在同一程序集中实现的派生类型。 `?:` 运算符可解析位对变量的引用。 还可使用前导数字分隔符格式化十六进制和二进制数字。

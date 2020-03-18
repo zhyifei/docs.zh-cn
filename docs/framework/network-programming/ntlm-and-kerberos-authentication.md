@@ -19,12 +19,12 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: ca9e1b9bf6235fdaeea25b8975155af429848ae3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 372101763bdd84b454e6e2db3ec6cf0ebdf3f991
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047529"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180705"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>NTLM 和 Kerberos 身份验证
 默认 NTLM 身份验证和 Kerberos 身份验证使用与调用应用程序关联的 Microsoft Windows NT 用户凭据来尝试通过服务器进行身份验证。 使用非默认 NTLM 身份验证时，应用程序会将认证类型设置为 NTLM，并使用 <xref:System.Net.NetworkCredential> 对象将用户名、密码和域传递给主机，如下例所示。  
@@ -39,7 +39,7 @@ WReq.Credentials = _
 ```csharp  
 String MyURI = "http://www.contoso.com/";  
 WebRequest WReq = WebRequest.Create (MyURI);  
-WReq.Credentials =   
+WReq.Credentials =
     new NetworkCredential(UserName, SecurelyStoredPassword, Domain);  
 ```  
   
@@ -62,7 +62,7 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
 > [!NOTE]
 > 无法通过代理服务器进行 NTLM 身份验证。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [基本和摘要式身份验证](basic-and-digest-authentication.md)
 - [Internet 身份验证](internet-authentication.md)

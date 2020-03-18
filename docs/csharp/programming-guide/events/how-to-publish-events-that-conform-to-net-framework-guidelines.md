@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 0ae240d0c078b5eaa690f128c037ee2471325872
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 90c079b9f7dbf2a1d963b7eee4447145d7a10432
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705335"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167527"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>如何发布符合 .NET Framework 准则的事件（C# 编程指南）
 下面的过程演示了如何将遵循标准 .NET Framework 模式的事件添加到类和结构中。 .NET Framework 类库中的所有事件均基于 <xref:System.EventHandler> 委托，定义如下：  
@@ -38,7 +38,7 @@ public delegate void EventHandler(object sender, EventArgs e);
         public string Message  
         {  
             get { return msg; }  
-        }   
+        }
     }  
     ```  
   

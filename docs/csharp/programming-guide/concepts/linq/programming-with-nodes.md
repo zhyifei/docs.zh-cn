@@ -2,12 +2,12 @@
 title: 使用节点进行编程 (C#)
 ms.date: 07/20/2015
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
-ms.openlocfilehash: 8c4c858cbc1fad4041c2e5ce62ca8a01dd1cfb2c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 05c2e95fe97effda7b537a7ac2d8f5780f4e212b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253151"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168309"
 ---
 # <a name="programming-with-nodes-c"></a>使用节点进行编程 (C#)
 需要编写 XML 编辑器、转换系统或报告编写器这类程序的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 开发人员通常需要编写在比元素和属性更细的粒度下运行的程序。 开发人员通常需要在节点级别上工作，操作文本节点、处理指令和添加注释。 本主题提供有关在节点级别进行编程的一些详细信息。  
@@ -71,7 +71,7 @@ XText textNode = xmlTree.Nodes().OfType<XText>().First();
 textNode.Value = "";  
   
 XText textNode2 = xmlTree.Nodes().OfType<XText>().First();  
-Console.WriteLine(">>{0}<<", textNode2);   
+Console.WriteLine(">>{0}<<", textNode2);
 ```  
   
  该示例产生下面的输出：  
@@ -89,7 +89,7 @@ XElement child1 = new XElement("Child1",
 );  
 XElement child2 = new XElement("Child2");  
 Console.WriteLine(child1);  
-Console.WriteLine(child2);   
+Console.WriteLine(child2);
 ```  
   
  该示例产生下面的输出：  
@@ -139,7 +139,7 @@ XDocument root = XDocument.Parse(
 Console.WriteLine(root.Nodes().OfType<XText>().Count());  
   
 // count the white-space child nodes using XPathEvaluate  
-Console.WriteLine(((IEnumerable)root.XPathEvaluate("text()")).OfType<XText>().Count());   
+Console.WriteLine(((IEnumerable)root.XPathEvaluate("text()")).OfType<XText>().Count());
 ```  
   
  该示例产生下面的输出：  

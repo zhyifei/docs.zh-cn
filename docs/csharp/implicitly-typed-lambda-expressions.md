@@ -4,17 +4,17 @@ description: 了解为什么不能使用隐式类型化变量声明来声明 lam
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: a3851da9-e018-4389-9922-233db7d0f841
-ms.openlocfilehash: cf16bb4d9ed27f536ae163284f36a0f305877139
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ef437ef961210290db4150a8a5cfb70e01aee958
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713890"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79145717"
 ---
 # <a name="implicitly-typed-lambda-expressions"></a>隐式类型化 lambda 表达式
 
 不能使用隐式类型化变量声明来声明 lambda 表达式。
-它会对编译器造成循环逻辑问题。 `var` 声明会告知编译器通过赋值运算符右侧的表达式的类型查明变量的类型。 Lambda 表达式没有编译时类型，但是可转换为任何匹配委托或表达式类型。 将 lambda 表达式分配给委托或表达式类型的变量时，可告知编译器尝试并将 lambda 表达式转换为与“分配对象”变量的签名匹配的表达式或委托。 编译器必须尝试使赋值右侧的内容与赋值左侧的类型匹配。 
+它会对编译器造成循环逻辑问题。 `var` 声明会告知编译器通过赋值运算符右侧的表达式的类型查明变量的类型。 Lambda 表达式没有编译时类型，但是可转换为任何匹配委托或表达式类型。 将 lambda 表达式分配给委托或表达式类型的变量时，可告知编译器尝试并将 lambda 表达式转换为与“分配对象”变量的签名匹配的表达式或委托。 编译器必须尝试使赋值右侧的内容与赋值左侧的类型匹配。
 
 赋值两侧都无法告知编译器查看赋值运算符另一侧的对象并查看我的类型是否匹配。
 

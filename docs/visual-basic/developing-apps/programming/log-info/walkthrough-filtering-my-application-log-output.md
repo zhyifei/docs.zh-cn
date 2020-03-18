@@ -7,10 +7,10 @@ helpviewer_keywords:
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
 ms.openlocfilehash: f18556bbe1ca2d77925482319246d403892d31ef
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353593"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>演练：筛选 My.Application.Log 输出 (Visual Basic)
@@ -43,7 +43,7 @@ ms.locfileid: "74353593"
 
 6. 关闭该应用程序。
 
-     有关如何查看应用程序的调试输出窗口的信息，请参阅[输出窗口](/visualstudio/ide/reference/output-window)。 有关应用程序的日志文件的位置的信息，请参阅[演练：确定 My.Application.Log 在哪里写入信息](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。
+     有关如何查看应用程序的调试输出窗口的信息，请参阅[输出窗口](/visualstudio/ide/reference/output-window)。 有关应用程序日志文件的位置的信息，请参阅[演练：确定 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。
 
     > [!NOTE]
     > 默认情况下，应用程序关闭时将刷新日志文件输出。
@@ -52,7 +52,7 @@ ms.locfileid: "74353593"
 
 ## <a name="filtering-for-all-myapplicationlog-listeners"></a>对所有 My.Application.Log 侦听器的筛选
 
-`My.Application.Log` 对象使用名为 `DefaultSwitch` 的 <xref:System.Diagnostics.SourceSwitch>，以控制将哪些消息从 `WriteEntry` 和 `WriteException` 方法传递到日志侦听器。 通过将 `DefaultSwitch` 的值设置为 <xref:System.Diagnostics.SourceLevels> 枚举值的其中一个，可在应用程序的配置文件中对其进行配置。 默认情况下，其值为“信息”。
+`My.Application.Log` 对象使用名为 <xref:System.Diagnostics.SourceSwitch> 的 `DefaultSwitch`，以控制将哪些消息从 `WriteEntry` 和 `WriteException` 方法传递到日志侦听器。 通过将 `DefaultSwitch` 的值设置为 <xref:System.Diagnostics.SourceLevels> 枚举值的其中一个，可在应用程序的配置文件中对其进行配置。 默认情况下，其值为“信息”。
 
 此表显示了在给定的特定 `DefaultSwitch` 设置下，日志将消息写入侦听器所需的严重级别。
 
@@ -61,7 +61,7 @@ ms.locfileid: "74353593"
 |`Critical`|`Critical`|
 |`Error`|`Critical` 或 `Error`|
 |`Warning`|`Critical`、`Error` 或 `Warning`|
-|`Information`|`Critical`、`Error`、`Warning` 或 `Information`|
+|`Information`|`Critical`、 `Error`、 `Warning`或 `Information`|
 |`Verbose`|`Critical`、`Error`、`Warning`、`Information` 或 `Verbose`|
 |`ActivityTracing`|`Start`、`Stop`、`Suspend`、`Resume` 或 `Transfer`|
 |`All`|允许所有消息。|
@@ -76,7 +76,7 @@ ms.locfileid: "74353593"
 
 1. 在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。  
 
-     -或-
+     或
 
      如果其中没有 app.config 文件：
 
@@ -164,7 +164,7 @@ ms.locfileid: "74353593"
 
 2. 在“解决方案资源管理器”中右键单击 app.config。  选择“打开”。 
 
-3. 找到 `<listeners>` 部分，该部分位于 `name` 属性为“DefaultSource”的 `<source>` 部分中，后者位于 `<sources>` 部分中。 `<sources>` 部分位于 `<system.diagnostics>` 部分中，后者位于顶级 `<configuration>` 部分中。
+3. 找到 `<listeners>` 部分，该部分位于 `<source>` 属性为“DefaultSource”的 `name` 部分中，后者位于 `<sources>` 部分中。 `<sources>` 部分位于 `<system.diagnostics>` 部分中，后者位于顶级 `<configuration>` 部分中。
 
 4. 将此元素添加到 `<listeners>` 部分：
 
@@ -251,11 +251,11 @@ ms.locfileid: "74353593"
 
 有关在部署后更改日志设置的详细信息，请参阅[使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [演练：确定 My.Application.Log 在哪里写入信息](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [演练：更改 My.Application.Log 在哪里写入信息](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [演练：确定 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [演练：更改 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
 - [演练：创建自定义日志侦听器](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
-- [如何：写入日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [如何：编写日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
 - [跟踪开关](../../../../framework/debug-trace-profile/trace-switches.md)
 - [记录来自应用程序的信息](../../../../visual-basic/developing-apps/programming/log-info/index.md)

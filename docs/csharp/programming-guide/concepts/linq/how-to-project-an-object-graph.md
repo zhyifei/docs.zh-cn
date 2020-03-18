@@ -2,18 +2,18 @@
 title: 如何投影对象图 (C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: 93fabe26fd3d9ff0b61d8b8dfc33425715452c88
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: eafb3d9064159c43fc98e0b241f0045465fca824
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635686"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168955"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>如何投影对象图 (C#)
 本主题演示如何从 XML 投影或填充对象图。  
   
 ## <a name="example"></a>示例  
- 以下代码使用[示例 XML 文件中的 `Address`、`PurchaseOrder` 和 `PurchaseOrderItem` 类填充对象图：典型采购订单 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML 文档。  
+ 下面的代码用`Address`示例 XML 文件：典型采购订单 (LINQ to XML)`PurchaseOrder` XML 文档中的 `PurchaseOrderItem`、[ 和 ](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) 类填充对象图。  
   
 ```csharp  
 class Address  
@@ -185,7 +185,7 @@ class Program {
                             from a in po.Elements("Address")  
                             select new Address {  
                                 AddressType = ((string)a.Attribute("Type") == "Shipping") ?  
-                                    Address.AddressUse.Shipping :   
+                                    Address.AddressUse.Shipping :
                                     Address.AddressUse.Billing,  
                                 Name = (string)a.Element("Name"),  
                                 Street = (string)a.Element("Street"),  
@@ -214,7 +214,7 @@ class Program {
 }  
 ```  
   
- 在此示例中，LINQ 查询的结果以 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 形式返回。 `PurchaseOrder` 类中各项的类型都是 <xref:System.Collections.Generic.IEnumerable%601> 的 `PurchaseOrderItem`。 该代码使用 <xref:System.Linq.Enumerable.ToList%2A> 扩展方法，根据查询结果来创建 <xref:System.Collections.Generic.List%601> 集合。  
+ 在此示例中，LINQ 查询的结果以 <xref:System.Collections.Generic.IEnumerable%601> 的 `PurchaseOrderItem` 形式返回。 `PurchaseOrder` 类中各项的类型都是 <xref:System.Collections.Generic.IEnumerable%601> 的 `PurchaseOrderItem`。 该代码使用 <xref:System.Linq.Enumerable.ToList%2A> 扩展方法，根据查询结果来创建 <xref:System.Collections.Generic.List%601> 集合。  
   
  此示例产生以下输出：  
   
@@ -255,7 +255,7 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>

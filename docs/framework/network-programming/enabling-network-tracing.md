@@ -11,21 +11,21 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 62a24e45339b93af2c62db440f0611f16705116d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 61ffd422463ca70cc34c39dd216ce8e660809dcb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048524"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180884"
 ---
 # <a name="enabling-network-tracing"></a>启用网络跟踪
 网络跟踪允许访问有关方法调用的信息，以及有关托管应用程序所生成的网络流量的信息。 必须完成以下任务才能在应用程序中启用网络跟踪：  
   
-- 在启用跟踪的情况下编译代码。 请参阅[如何：使用跟踪和调试进行条件编译](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)，了解有关启用跟踪所需编译器开关的详细信息。  
+- 在启用跟踪的情况下编译代码。 有关启用跟踪所需编译器开关的详细信息，请参阅[如何：使用跟踪和调试进行条件编译](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。  
   
 - 为跟踪输出指定目标。  
   
-- 配置网络跟踪的行为。 请参阅[如何：配置网络跟踪](how-to-configure-network-tracing.md)，了解详细信息。  
+- 配置网络跟踪的行为。 请参阅[如何：配置网络跟踪](how-to-configure-network-tracing.md)了解详细信息。  
   
  最常见的跟踪目标（也称为跟踪侦听器）是默认侦听器和日志文件。  
   
@@ -40,12 +40,12 @@ ms.locfileid: "71048524"
   <trace autoflush="true" indentsize="4">  
     <listeners>  
       <add name="file" type="System.Diagnostics.TextWriterTraceListener" initializeData="trace.log"/>  
-    </listeners>   
+    </listeners>
   </trace>  
 </system.diagnostics>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [解释网络跟踪](interpreting-network-tracing.md)
 - [.NET Framework 中的网络跟踪](network-tracing.md)
