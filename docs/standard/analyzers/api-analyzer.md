@@ -5,10 +5,10 @@ author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
 ms.openlocfilehash: e214c91f2beebc7f3b3324f4879deba9a5623f86
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156129"
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
@@ -20,7 +20,7 @@ API 分析器以 NuGet 包 [Microsoft.DotNet.Analyzers.Compatibility](https://ww
 > [!NOTE]
 > .NET API 分析器仍为预发行版。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 - Visual Studio 2017 及更高版本，或 Visual Studio for Mac（所有版本）。
 
@@ -62,18 +62,18 @@ API 分析器使用 API 专用错误代码，这些代码以 DE（全称是“De
 
 单击 ID 后，便会转到详细信息网页，其中说明了 API 遭弃用的原因，以及有关可用替换 API 的建议。
 
-可以禁止显示任何警告，具体方法是右键单击突出显示的成员，并选择“禁止 \<诊断 ID>”  。 禁止显示警告的方法有两种：
+可以禁止显示任何警告，具体方法是右键单击突出显示的成员，并选择“禁止 **诊断 ID>”\<** 。 禁止显示警告的方法有两种：
 
 - [本地（在源中）](#suppress-warnings-locally)
 - [全局（在禁止文件中）](#suppress-warnings-globally)- 推荐方法
 
 ### <a name="suppress-warnings-locally"></a>在本地禁止显示警告
 
-若要在本地禁止显示警告，请右键单击要对其禁止显示警告的成员，再依次选择“快速操作和重构”   > “禁止诊断 ID \<诊断 ID>   > “在源中”  。 此时，[#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告预处理器指令会添加到定义的范围内的源代码中：![“用 #pragma 警告禁用指令框定的代码屏幕截图”](media/api-analyzer/suppress-in-source.jpg)
+若要在本地禁止显示警告，请右键单击要对其禁止显示警告的成员，再依次选择“快速操作和重构”   > “禁止诊断 ID **诊断 ID>  \<**  > “在源中”  。 此时，[#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告预处理器指令会添加到源代码中定义的范围内：![“用 #pragma 警告禁用指令框定的代码屏幕截图”](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppress-warnings-globally"></a>在全局禁止显示警告
 
-若要在全局禁止显示警告，请右键单击要对其禁止显示警告的成员，再依次选择“快速操作和重构”   > “禁止诊断 ID \<诊断 ID>   > “在禁止文件中”  。
+若要在全局禁止显示警告，请右键单击要对其禁止显示警告的成员，再依次选择“快速操作和重构”   > “禁止诊断 ID **诊断 ID>  \<**  > “在禁止文件中”  。
 
 ![“显示绿色波浪线且左侧有灯泡的 WebClient API 屏幕截图”](media/api-analyzer/suppress-in-sup-file.jpg)
 
@@ -125,7 +125,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 ![“显示诊断和‘设置规则集严重性’弹出对话框的解决方案资源管理器屏幕截图”](media/api-analyzer/disable-notifications.jpg)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [API 分析器简介](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/)博客文章。
 - YouTube 上的 [API 分析器](https://youtu.be/eeBEahYXGd0)演示视频。

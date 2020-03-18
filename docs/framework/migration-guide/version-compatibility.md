@@ -8,15 +8,15 @@ helpviewer_keywords:
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73974955"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework 的版本兼容性
 
-向后兼容性表示为某个平台的特定版本开发的应用程序将在该平台的更高版本上运行。 .NET Framework 尝试最大程度地支持后向兼容性：为某个版本的 .NET Framework 编写的源代码应在更高版本的 .NET Framework 上编译，而在某个版本的 .NET Framework 上运行的二进制文件的行为方式应与其在更高版本的 .NET Framework 上的行为方式相同。
+向后兼容性表示为某个平台的特定版本开发的应用程序将在该平台的更高版本上运行。 .NET Framework 尝试最大程度地支持向后兼容性：为某个版本的 .NET Framework 编写的源代码应在更高版本的 .NET Framework 上编译，而在某个版本的 .NET Framework 上运行的二进制文件的行为方式应与其在更高版本的 .NET Framework 上的行为方式相同。
 
 ## <a name="Apps"></a> 应用的版本兼容性
 
@@ -33,7 +33,7 @@ ms.locfileid: "73974955"
 </configuration>
 ```
 
-有关详细信息，请参阅[如何：将应用配置为支持 .NET Framework 4 或 4.x](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)。
+有关详细信息，请参阅[如何：配置应用以支持 .NET Framework 4 或 4.x](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)。
 
 ## <a name="version-compatibility-for-components"></a>组件的版本兼容性
 
@@ -67,7 +67,7 @@ ms.locfileid: "73974955"
 
 如果找不到解决问题的适当方法，请记住，.NET Framework 4.5（或其单点版本之一）与版本 1.1、2.0 和 3.5 并行运行，并且是取代版本 4 的就地更新。 对于以版本 1.1、2.0 和 3.5 为目标的应用程序，你可以在目标计算机上安装适当的 .NET Framework 版本以在其最佳环境中运行该应用程序。 有关并行执行的详细信息，请参阅[并行执行](../deployment/side-by-side-execution.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [新增功能](../whats-new/index.md)
 - [类库中过时的内容](../whats-new/whats-obsolete.md)

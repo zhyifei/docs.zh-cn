@@ -3,17 +3,17 @@ title: dotnet migrate 命令
 description: dotnet migrate 命令可迁移项目及其所有依赖项。
 ms.date: 02/14/2020
 ms.openlocfilehash: 6148048c469c43320cc4459352fd2fb62f101740
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503695"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
  本文适用于：✔️ .NET Core 2.x SDK
 
-## <a name="name"></a>“属性”
+## <a name="name"></a>名称
 
 `dotnet migrate` - 将预览版 2 .NET Core 项目迁移到 .NET Core SDK 样式的项目中。
 
@@ -24,7 +24,7 @@ dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--r
 dotnet migrate [-h|--help]
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 此命令已弃用。 自 .NET Core 3.0 SDK 起，`dotnet migrate` 命令不再可用。 它只能将预览版 2 .NET Core 项目迁移到不支持的 1.x .NET Core 项目。
 
@@ -43,7 +43,7 @@ dotnet migrate [-h|--help]
 
 `dotnet migrate` 命令仅支持有效的预览版 2 基于 *project.json* 的项目。 这意味着，不能使用它将 DNX 或预览版 1 基于 *project.json* 的项目直接迁移到 MSBuild/csproj 项目。 首先需要将项目手动迁移到预览版 2 基于 *project.json* 的项目，然后使用 `dotnet migrate` 命令迁移该项目。
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 `PROJECT_JSON/GLOBAL_JSON/SOLUTION_FILE/PROJECT_DIR`
 

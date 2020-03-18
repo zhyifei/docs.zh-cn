@@ -3,17 +3,17 @@ title: dotnet msbuild 命令
 description: dotnet msbuild 命令可提供对 MSBuild 命令行的访问权限。
 ms.date: 02/14/2020
 ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503676"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
 **本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
-## <a name="name"></a>“属性”
+## <a name="name"></a>名称
 
 `dotnet msbuild` - 生成项目及其所有依赖项。
 
@@ -21,7 +21,7 @@ ms.locfileid: "77503676"
 
 `dotnet msbuild <msbuild_arguments> [-h]`
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet msbuild` 命令允许访问功能完备的 MSBuild。
 
