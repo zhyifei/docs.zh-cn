@@ -1,19 +1,18 @@
 ---
-ms.openlocfilehash: 3b36bc1ed9c35722478bdb31b82a79bed1a18914
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 8332aca6e72346c92e80ce28979b83eec496b0e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858840"
 ---
-### <a name="right-clicking-on-a-wpf-datagrid-row-header-changes-the-datagrid-selection"></a><span data-ttu-id="8c44a-101">右键单击 WPF DataGrid 行标题更改 DataGrid 选择</span><span class="sxs-lookup"><span data-stu-id="8c44a-101">Right clicking on a WPF DataGrid row header changes the DataGrid selection</span></span>
+### <a name="right-clicking-on-a-wpf-datagrid-row-header-changes-the-datagrid-selection"></a><span data-ttu-id="48992-101">右键单击 WPF DataGrid 行标题更改 DataGrid 选择</span><span class="sxs-lookup"><span data-stu-id="48992-101">Right clicking on a WPF DataGrid row header changes the DataGrid selection</span></span>
 
 |   |   |
 |---|---|
-|<span data-ttu-id="8c44a-102">详细信息</span><span class="sxs-lookup"><span data-stu-id="8c44a-102">Details</span></span>|<span data-ttu-id="8c44a-103">在选中多行时，右键单击所选的 <xref:System.Windows.Controls.DataGrid?displayProperty=name> 行标题会导致 <xref:System.Windows.Controls.DataGrid?displayProperty=name> 更改为仅选择该行。</span><span class="sxs-lookup"><span data-stu-id="8c44a-103">Right-clicking a selected <xref:System.Windows.Controls.DataGrid?displayProperty=name> row header while multiple rows are selected results in the <xref:System.Windows.Controls.DataGrid?displayProperty=name>'s selection changing to only that row.</span></span>|
-|<span data-ttu-id="8c44a-104">建议</span><span class="sxs-lookup"><span data-stu-id="8c44a-104">Suggestion</span></span>|<span data-ttu-id="8c44a-105">此问题已在 .NET Framework 4.6 中解决，因此升级到该版本的 .NET Framework 即可解决该问题。</span><span class="sxs-lookup"><span data-stu-id="8c44a-105">This issue has been fixed in the .NET Framework 4.6 and may be addressed by upgrading to that version of the .NET Framework.</span></span>|
-|<span data-ttu-id="8c44a-106">范围</span><span class="sxs-lookup"><span data-stu-id="8c44a-106">Scope</span></span>|<span data-ttu-id="8c44a-107">边缘</span><span class="sxs-lookup"><span data-stu-id="8c44a-107">Edge</span></span>|
-|<span data-ttu-id="8c44a-108">版本</span><span class="sxs-lookup"><span data-stu-id="8c44a-108">Version</span></span>|<span data-ttu-id="8c44a-109">4.5</span><span class="sxs-lookup"><span data-stu-id="8c44a-109">4.5</span></span>|
-|<span data-ttu-id="8c44a-110">类型</span><span class="sxs-lookup"><span data-stu-id="8c44a-110">Type</span></span>|<span data-ttu-id="8c44a-111">运行时</span><span class="sxs-lookup"><span data-stu-id="8c44a-111">Runtime</span></span>|
-|<span data-ttu-id="8c44a-112">受影响的 API</span><span class="sxs-lookup"><span data-stu-id="8c44a-112">Affected APIs</span></span>|<ul><li><xref:System.Windows.Controls.DataGrid.%23ctor?displayProperty=nameWithType></li></ul>|
-
+|<span data-ttu-id="48992-102">详细信息</span><span class="sxs-lookup"><span data-stu-id="48992-102">Details</span></span>|<span data-ttu-id="48992-103">在选中多行时，右键单击所选的 <xref:System.Windows.Controls.DataGrid?displayProperty=name> 行标题会导致 <xref:System.Windows.Controls.DataGrid?displayProperty=name> 更改为仅选择该行。</span><span class="sxs-lookup"><span data-stu-id="48992-103">Right-clicking a selected <xref:System.Windows.Controls.DataGrid?displayProperty=name> row header while multiple rows are selected results in the <xref:System.Windows.Controls.DataGrid?displayProperty=name>'s selection changing to only that row.</span></span>|
+|<span data-ttu-id="48992-104">建议</span><span class="sxs-lookup"><span data-stu-id="48992-104">Suggestion</span></span>|<span data-ttu-id="48992-105">此问题已在 .NET Framework 4.6 中解决，因此升级到该版本的 .NET Framework 即可解决该问题。</span><span class="sxs-lookup"><span data-stu-id="48992-105">This issue has been fixed in the .NET Framework 4.6 and may be addressed by upgrading to that version of the .NET Framework.</span></span>|
+|<span data-ttu-id="48992-106">范围</span><span class="sxs-lookup"><span data-stu-id="48992-106">Scope</span></span>|<span data-ttu-id="48992-107">边缘</span><span class="sxs-lookup"><span data-stu-id="48992-107">Edge</span></span>|
+|<span data-ttu-id="48992-108">Version</span><span class="sxs-lookup"><span data-stu-id="48992-108">Version</span></span>|<span data-ttu-id="48992-109">4.5</span><span class="sxs-lookup"><span data-stu-id="48992-109">4.5</span></span>|
+|<span data-ttu-id="48992-110">类型</span><span class="sxs-lookup"><span data-stu-id="48992-110">Type</span></span>|<span data-ttu-id="48992-111">运行时</span><span class="sxs-lookup"><span data-stu-id="48992-111">Runtime</span></span>|
+|<span data-ttu-id="48992-112">受影响的 API</span><span class="sxs-lookup"><span data-stu-id="48992-112">Affected APIs</span></span>|<ul><li><xref:System.Windows.Controls.DataGrid.%23ctor?displayProperty=nameWithType></li></ul>|

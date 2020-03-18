@@ -1,43 +1,43 @@
 ---
 ms.openlocfilehash: 8979b7ffc09726c6588fe3ba60b916202697648f
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522663"
 ---
-### <a name="signalr-hubconnectioncontext-constructors-changed"></a><span data-ttu-id="c73c3-101">SignalR：已更改 HubConnectionContext 构造函数</span><span class="sxs-lookup"><span data-stu-id="c73c3-101">SignalR: HubConnectionContext constructors changed</span></span>
+### <a name="signalr-hubconnectioncontext-constructors-changed"></a><span data-ttu-id="f188c-101">SignalR：已更改 HubConnectionContext 构造函数</span><span class="sxs-lookup"><span data-stu-id="f188c-101">SignalR: HubConnectionContext constructors changed</span></span>
 
-<span data-ttu-id="c73c3-102">SignalR 的 `HubConnectionContext` 构造函数已更改为接受选项类型（而不是多个参数），以接受经得起未来考验的添加选项。</span><span class="sxs-lookup"><span data-stu-id="c73c3-102">SignalR's `HubConnectionContext` constructors changed to accept an options type, rather than multiple parameters, to future-proof adding options.</span></span> <span data-ttu-id="c73c3-103">此更改使用单个接受选项类型的构造函数替换两个构造函数。</span><span class="sxs-lookup"><span data-stu-id="c73c3-103">This change replaces two constructors with a single constructor that accepts an options type.</span></span>
+<span data-ttu-id="f188c-102">SignalR 的 `HubConnectionContext` 构造函数已更改为接受选项类型（而不是多个参数），以接受经得起未来考验的添加选项。</span><span class="sxs-lookup"><span data-stu-id="f188c-102">SignalR's `HubConnectionContext` constructors changed to accept an options type, rather than multiple parameters, to future-proof adding options.</span></span> <span data-ttu-id="f188c-103">此更改使用单个接受选项类型的构造函数替换两个构造函数。</span><span class="sxs-lookup"><span data-stu-id="f188c-103">This change replaces two constructors with a single constructor that accepts an options type.</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="c73c3-104">引入的版本</span><span class="sxs-lookup"><span data-stu-id="c73c3-104">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="f188c-104">引入的版本</span><span class="sxs-lookup"><span data-stu-id="f188c-104">Version introduced</span></span>
 
-<span data-ttu-id="c73c3-105">3.0</span><span class="sxs-lookup"><span data-stu-id="c73c3-105">3.0</span></span>
+<span data-ttu-id="f188c-105">3.0</span><span class="sxs-lookup"><span data-stu-id="f188c-105">3.0</span></span>
 
-#### <a name="old-behavior"></a><span data-ttu-id="c73c3-106">旧行为</span><span class="sxs-lookup"><span data-stu-id="c73c3-106">Old behavior</span></span>
+#### <a name="old-behavior"></a><span data-ttu-id="f188c-106">旧行为</span><span class="sxs-lookup"><span data-stu-id="f188c-106">Old behavior</span></span>
 
-<span data-ttu-id="c73c3-107">`HubConnectionContext` 有两个构造函数：</span><span class="sxs-lookup"><span data-stu-id="c73c3-107">`HubConnectionContext` has two constructors:</span></span>
+<span data-ttu-id="f188c-107">`HubConnectionContext` 有两个构造函数：</span><span class="sxs-lookup"><span data-stu-id="f188c-107">`HubConnectionContext` has two constructors:</span></span>
 
 ```csharp
 public HubConnectionContext(ConnectionContext connectionContext, TimeSpan keepAliveInterval, ILoggerFactory loggerFactory);
 public HubConnectionContext(ConnectionContext connectionContext, TimeSpan keepAliveInterval, ILoggerFactory loggerFactory, TimeSpan clientTimeoutInterval);
 ```
 
-#### <a name="new-behavior"></a><span data-ttu-id="c73c3-108">新行为</span><span class="sxs-lookup"><span data-stu-id="c73c3-108">New behavior</span></span>
+#### <a name="new-behavior"></a><span data-ttu-id="f188c-108">新行为</span><span class="sxs-lookup"><span data-stu-id="f188c-108">New behavior</span></span>
 
-<span data-ttu-id="c73c3-109">这两个构造函数已被删除并已替换为一个构造函数：</span><span class="sxs-lookup"><span data-stu-id="c73c3-109">The two constructors were removed and replaced with one constructor:</span></span>
+<span data-ttu-id="f188c-109">这两个构造函数已被删除并已替换为一个构造函数：</span><span class="sxs-lookup"><span data-stu-id="f188c-109">The two constructors were removed and replaced with one constructor:</span></span>
 
 ```csharp
 public HubConnectionContext(ConnectionContext connectionContext, HubConnectionContextOptions contextOptions, ILoggerFactory loggerFactory)
 ```
 
-#### <a name="reason-for-change"></a><span data-ttu-id="c73c3-110">更改原因</span><span class="sxs-lookup"><span data-stu-id="c73c3-110">Reason for change</span></span>
+#### <a name="reason-for-change"></a><span data-ttu-id="f188c-110">更改原因</span><span class="sxs-lookup"><span data-stu-id="f188c-110">Reason for change</span></span>
 
-<span data-ttu-id="c73c3-111">新的构造函数使用新的选项对象。</span><span class="sxs-lookup"><span data-stu-id="c73c3-111">The new constructor uses a new options object.</span></span> <span data-ttu-id="c73c3-112">因此，可以在以后展开 `HubConnectionContext` 的功能，而无需执行更多的构造函数和中断性变更。</span><span class="sxs-lookup"><span data-stu-id="c73c3-112">Consequently, the features of `HubConnectionContext` can be expanded in the future without making more constructors and breaking changes.</span></span>
+<span data-ttu-id="f188c-111">新的构造函数使用新的选项对象。</span><span class="sxs-lookup"><span data-stu-id="f188c-111">The new constructor uses a new options object.</span></span> <span data-ttu-id="f188c-112">因此，可以在以后展开 `HubConnectionContext` 的功能，而无需执行更多的构造函数和中断性变更。</span><span class="sxs-lookup"><span data-stu-id="f188c-112">Consequently, the features of `HubConnectionContext` can be expanded in the future without making more constructors and breaking changes.</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="c73c3-113">建议的操作</span><span class="sxs-lookup"><span data-stu-id="c73c3-113">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="f188c-113">建议操作</span><span class="sxs-lookup"><span data-stu-id="f188c-113">Recommended action</span></span>
 
-<span data-ttu-id="c73c3-114">而不是使用以下构造函数：</span><span class="sxs-lookup"><span data-stu-id="c73c3-114">Instead of using the following constructor:</span></span>
+<span data-ttu-id="f188c-114">而不是使用以下构造函数：</span><span class="sxs-lookup"><span data-stu-id="f188c-114">Instead of using the following constructor:</span></span>
 
 ```csharp
 HubConnectionContext connectionContext = new HubConnectionContext(
@@ -47,7 +47,7 @@ HubConnectionContext connectionContext = new HubConnectionContext(
     clientTimeoutInterval: TimeSpan.FromSeconds(15));
 ```
 
-<span data-ttu-id="c73c3-115">使用以下构造函数：</span><span class="sxs-lookup"><span data-stu-id="c73c3-115">Use the following constructor:</span></span>
+<span data-ttu-id="f188c-115">使用以下构造函数：</span><span class="sxs-lookup"><span data-stu-id="f188c-115">Use the following constructor:</span></span>
 
 ```csharp
 HubConnectionContextOptions contextOptions = new HubConnectionContextOptions()
@@ -58,11 +58,11 @@ HubConnectionContextOptions contextOptions = new HubConnectionContextOptions()
 HubConnectionContext connectionContext = new HubConnectionContext(connectionContext, contextOptions, loggerFactory);
 ```
 
-#### <a name="category"></a><span data-ttu-id="c73c3-116">类别</span><span class="sxs-lookup"><span data-stu-id="c73c3-116">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="f188c-116">类别</span><span class="sxs-lookup"><span data-stu-id="f188c-116">Category</span></span>
 
-<span data-ttu-id="c73c3-117">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="c73c3-117">ASP.NET Core</span></span>
+<span data-ttu-id="f188c-117">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="f188c-117">ASP.NET Core</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="c73c3-118">受影响的 API</span><span class="sxs-lookup"><span data-stu-id="c73c3-118">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="f188c-118">受影响的 API</span><span class="sxs-lookup"><span data-stu-id="f188c-118">Affected APIs</span></span>
 
 - <xref:Microsoft.AspNetCore.SignalR.HubConnectionContext.%23ctor(Microsoft.AspNetCore.Connections.ConnectionContext,System.TimeSpan,Microsoft.Extensions.Logging.ILoggerFactory)?displayProperty=nameWithType>
 - <xref:Microsoft.AspNetCore.SignalR.HubConnectionContext.%23ctor(Microsoft.AspNetCore.Connections.ConnectionContext,System.TimeSpan,Microsoft.Extensions.Logging.ILoggerFactory,System.TimeSpan)?displayProperty=nameWithType>
