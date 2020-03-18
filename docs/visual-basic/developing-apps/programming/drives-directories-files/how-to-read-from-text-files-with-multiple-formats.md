@@ -12,19 +12,19 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
 ms.openlocfilehash: b36c781d5f8333749d346bb8f19540f0d1bd1692
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334570"
 ---
-# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a><span data-ttu-id="4c783-102">如何：在 Visual Basic 中读取具有多种格式的文本文件</span><span class="sxs-lookup"><span data-stu-id="4c783-102">How to: Read from fext files with multiple formats in Visual Basic</span></span>
+# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a><span data-ttu-id="00fa0-102">如何：在 Visual Basic 中读取具有多种格式的文本文件</span><span class="sxs-lookup"><span data-stu-id="00fa0-102">How to: Read from fext files with multiple formats in Visual Basic</span></span>
 
-<span data-ttu-id="4c783-103"><xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 对象提供一种可以轻松而高效地分析结构化文本文件（如日志）的方法。</span><span class="sxs-lookup"><span data-stu-id="4c783-103">The <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object provides a way to easily and efficiently parse structured text files, such as logs.</span></span> <span data-ttu-id="4c783-104">可以使用 `PeekChars` 方法处理具有多种格式的文件，以便在分析整个文件时确定每行的格式。</span><span class="sxs-lookup"><span data-stu-id="4c783-104">You can process a file with multiple formats by using the `PeekChars` method to determine the format of each line as you parse through the file.</span></span>
+<span data-ttu-id="00fa0-103"><xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 对象提供一种可以轻松而高效地分析结构化文本文件（如日志）的方法。</span><span class="sxs-lookup"><span data-stu-id="00fa0-103">The <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object provides a way to easily and efficiently parse structured text files, such as logs.</span></span> <span data-ttu-id="00fa0-104">可以使用 `PeekChars` 方法处理具有多种格式的文件，以便在分析整个文件时确定每行的格式。</span><span class="sxs-lookup"><span data-stu-id="00fa0-104">You can process a file with multiple formats by using the `PeekChars` method to determine the format of each line as you parse through the file.</span></span>
   
-### <a name="to-parse-a-text-file-with-multiple-formats"></a><span data-ttu-id="4c783-105">分析具有多种格式的文本文件</span><span class="sxs-lookup"><span data-stu-id="4c783-105">To parse a text file with multiple formats</span></span>
+### <a name="to-parse-a-text-file-with-multiple-formats"></a><span data-ttu-id="00fa0-105">分析具有多种格式的文本文件</span><span class="sxs-lookup"><span data-stu-id="00fa0-105">To parse a text file with multiple formats</span></span>
 
-1. <span data-ttu-id="4c783-106">将名为 testfile.txt  的文本文件添加到你的项目中。</span><span class="sxs-lookup"><span data-stu-id="4c783-106">Add a text file named *testfile.txt* to your project.</span></span> <span data-ttu-id="4c783-107">向文本文件添加以下内容：</span><span class="sxs-lookup"><span data-stu-id="4c783-107">Add the following content to the text file:</span></span>
+1. <span data-ttu-id="00fa0-106">将名为 testfile.txt  的文本文件添加到你的项目中。</span><span class="sxs-lookup"><span data-stu-id="00fa0-106">Add a text file named *testfile.txt* to your project.</span></span> <span data-ttu-id="00fa0-107">向文本文件添加以下内容：</span><span class="sxs-lookup"><span data-stu-id="00fa0-107">Add the following content to the text file:</span></span>
 
     ```text
     Err  1001 Cannot access resource.
@@ -35,39 +35,39 @@ ms.locfileid: "74334570"
     Acc  10/04/2009User2      Standard user.
     ```
 
-2. <span data-ttu-id="4c783-108">定义所需格式和报告错误时使用的格式。</span><span class="sxs-lookup"><span data-stu-id="4c783-108">Define the expected format and the format used when an error is reported.</span></span> <span data-ttu-id="4c783-109">每个数组中的最后一项为 -1，因此假定最后一个字段为可变宽度。</span><span class="sxs-lookup"><span data-stu-id="4c783-109">The last entry in each array is -1, therefore the last field is assumed to be of variable width.</span></span> <span data-ttu-id="4c783-110">数组中的最后一项小于或等于 0 时，会出现这种情况。</span><span class="sxs-lookup"><span data-stu-id="4c783-110">This occurs when the last entry in the array is less than or equal to 0.</span></span>
+2. <span data-ttu-id="00fa0-108">定义所需格式和报告错误时使用的格式。</span><span class="sxs-lookup"><span data-stu-id="00fa0-108">Define the expected format and the format used when an error is reported.</span></span> <span data-ttu-id="00fa0-109">每个数组中的最后一项为 -1，因此假定最后一个字段为可变宽度。</span><span class="sxs-lookup"><span data-stu-id="00fa0-109">The last entry in each array is -1, therefore the last field is assumed to be of variable width.</span></span> <span data-ttu-id="00fa0-110">数组中的最后一项小于或等于 0 时，会出现这种情况。</span><span class="sxs-lookup"><span data-stu-id="00fa0-110">This occurs when the last entry in the array is less than or equal to 0.</span></span>
 
      [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]
 
-3. <span data-ttu-id="4c783-111">创建新的 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 对象，定义宽度和格式。</span><span class="sxs-lookup"><span data-stu-id="4c783-111">Create a new <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object, defining the width and format.</span></span>
+3. <span data-ttu-id="00fa0-111">创建新的 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 对象，定义宽度和格式。</span><span class="sxs-lookup"><span data-stu-id="00fa0-111">Create a new <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object, defining the width and format.</span></span>
 
      [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]
 
-4. <span data-ttu-id="4c783-112">依次通过各行，并在读取之前测试格式。</span><span class="sxs-lookup"><span data-stu-id="4c783-112">Loop through the rows, testing for format before reading.</span></span>
+4. <span data-ttu-id="00fa0-112">依次通过各行，并在读取之前测试格式。</span><span class="sxs-lookup"><span data-stu-id="00fa0-112">Loop through the rows, testing for format before reading.</span></span>
 
      [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]
 
-5. <span data-ttu-id="4c783-113">将错误写入控制台。</span><span class="sxs-lookup"><span data-stu-id="4c783-113">Write errors to the console.</span></span>
+5. <span data-ttu-id="00fa0-113">将错误写入控制台。</span><span class="sxs-lookup"><span data-stu-id="00fa0-113">Write errors to the console.</span></span>
 
      [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]
 
-## <a name="example"></a><span data-ttu-id="4c783-114">示例</span><span class="sxs-lookup"><span data-stu-id="4c783-114">Example</span></span>
+## <a name="example"></a><span data-ttu-id="00fa0-114">示例</span><span class="sxs-lookup"><span data-stu-id="00fa0-114">Example</span></span>
 
-<span data-ttu-id="4c783-115">以下是从文件 `testfile.txt` 中读取的完整示例：</span><span class="sxs-lookup"><span data-stu-id="4c783-115">The following is the complete example that reads from the file `testfile.txt`:</span></span>
+<span data-ttu-id="00fa0-115">以下是从文件 `testfile.txt` 中读取的完整示例：</span><span class="sxs-lookup"><span data-stu-id="00fa0-115">The following is the complete example that reads from the file `testfile.txt`:</span></span>
 
  [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]
 
-## <a name="robust-programming"></a><span data-ttu-id="4c783-116">可靠编程</span><span class="sxs-lookup"><span data-stu-id="4c783-116">Robust programming</span></span>
+## <a name="robust-programming"></a><span data-ttu-id="00fa0-116">可靠编程</span><span class="sxs-lookup"><span data-stu-id="00fa0-116">Robust programming</span></span>
 
-<span data-ttu-id="4c783-117">以下情况可能会导致异常：</span><span class="sxs-lookup"><span data-stu-id="4c783-117">The following conditions may cause an exception:</span></span>  
+<span data-ttu-id="00fa0-117">以下情况可能会导致异常：</span><span class="sxs-lookup"><span data-stu-id="00fa0-117">The following conditions may cause an exception:</span></span>  
   
-- <span data-ttu-id="4c783-118">无法使用指定的格式分析行 (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>)。</span><span class="sxs-lookup"><span data-stu-id="4c783-118">A row cannot be parsed using the specified format (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span></span> <span data-ttu-id="4c783-119">此异常消息指定导致发生异常的行，同时将 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> 属性分配给该行中包含的文本。</span><span class="sxs-lookup"><span data-stu-id="4c783-119">The exception message specifies the line causing the exception, while the <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> property is assigned to the text contained in the line.</span></span>
-- <span data-ttu-id="4c783-120">指定的文件不存在 (<xref:System.IO.FileNotFoundException>)。</span><span class="sxs-lookup"><span data-stu-id="4c783-120">The specified file does not exist (<xref:System.IO.FileNotFoundException>).</span></span>
-- <span data-ttu-id="4c783-121">在部分信任的情况下，用户没有足够的权限访问文件。</span><span class="sxs-lookup"><span data-stu-id="4c783-121">A partial-trust situation in which the user does not have sufficient permissions to access the file.</span></span> <span data-ttu-id="4c783-122">(<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="4c783-122">(<xref:System.Security.SecurityException>).</span></span>
-- <span data-ttu-id="4c783-123">路径过长 (<xref:System.IO.PathTooLongException>)。</span><span class="sxs-lookup"><span data-stu-id="4c783-123">The path is too long (<xref:System.IO.PathTooLongException>).</span></span>
-- <span data-ttu-id="4c783-124">用户没有足够的权限访问文件 (<xref:System.UnauthorizedAccessException>)。</span><span class="sxs-lookup"><span data-stu-id="4c783-124">The user does not have sufficient permissions to access the file (<xref:System.UnauthorizedAccessException>).</span></span>
+- <span data-ttu-id="00fa0-118">无法使用指定的格式分析行 (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>)。</span><span class="sxs-lookup"><span data-stu-id="00fa0-118">A row cannot be parsed using the specified format (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span></span> <span data-ttu-id="00fa0-119">此异常消息指定导致发生异常的行，同时将 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> 属性分配给该行中包含的文本。</span><span class="sxs-lookup"><span data-stu-id="00fa0-119">The exception message specifies the line causing the exception, while the <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> property is assigned to the text contained in the line.</span></span>
+- <span data-ttu-id="00fa0-120">指定的文件不存在 (<xref:System.IO.FileNotFoundException>)。</span><span class="sxs-lookup"><span data-stu-id="00fa0-120">The specified file does not exist (<xref:System.IO.FileNotFoundException>).</span></span>
+- <span data-ttu-id="00fa0-121">在部分信任的情况下，用户没有足够的权限访问文件。</span><span class="sxs-lookup"><span data-stu-id="00fa0-121">A partial-trust situation in which the user does not have sufficient permissions to access the file.</span></span> <span data-ttu-id="00fa0-122">(<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="00fa0-122">(<xref:System.Security.SecurityException>).</span></span>
+- <span data-ttu-id="00fa0-123">路径过长 (<xref:System.IO.PathTooLongException>)。</span><span class="sxs-lookup"><span data-stu-id="00fa0-123">The path is too long (<xref:System.IO.PathTooLongException>).</span></span>
+- <span data-ttu-id="00fa0-124">用户没有足够的权限访问文件 (<xref:System.UnauthorizedAccessException>)。</span><span class="sxs-lookup"><span data-stu-id="00fa0-124">The user does not have sufficient permissions to access the file (<xref:System.UnauthorizedAccessException>).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="4c783-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="4c783-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="00fa0-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="00fa0-125">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>
@@ -75,6 +75,6 @@ ms.locfileid: "74334570"
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.EndOfData%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>
-- [<span data-ttu-id="4c783-126">如何：读取逗号分隔的文本文件</span><span class="sxs-lookup"><span data-stu-id="4c783-126">How to: Read From Comma-Delimited Text Files</span></span>](how-to-read-from-comma-delimited-text-files.md)
-- [<span data-ttu-id="4c783-127">如何：读取固定宽度的文本文件</span><span class="sxs-lookup"><span data-stu-id="4c783-127">How to: Read From Fixed-width Text Files</span></span>](how-to-read-from-fixed-width-text-files.md)
-- [<span data-ttu-id="4c783-128">使用 TextFieldParser 对象分析文本文件</span><span class="sxs-lookup"><span data-stu-id="4c783-128">Parsing Text Files with the TextFieldParser Object</span></span>](parsing-text-files-with-the-textfieldparser-object.md)
+- [<span data-ttu-id="00fa0-126">如何：读取逗号分隔的文本文件</span><span class="sxs-lookup"><span data-stu-id="00fa0-126">How to: Read From Comma-Delimited Text Files</span></span>](how-to-read-from-comma-delimited-text-files.md)
+- [<span data-ttu-id="00fa0-127">如何：读取固定宽度的文本文件</span><span class="sxs-lookup"><span data-stu-id="00fa0-127">How to: Read From Fixed-width Text Files</span></span>](how-to-read-from-fixed-width-text-files.md)
+- [<span data-ttu-id="00fa0-128">使用 TextFieldParser 对象分析文本文件</span><span class="sxs-lookup"><span data-stu-id="00fa0-128">Parsing Text Files with the TextFieldParser Object</span></span>](parsing-text-files-with-the-textfieldparser-object.md)
