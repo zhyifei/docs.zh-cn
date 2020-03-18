@@ -9,52 +9,52 @@ helpviewer_keywords:
 - certificates, Software Publisher's Certificate
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
 ms.openlocfilehash: 809b7d0383f172a5fbcb2ac4ac3ffb96ff0b8e20
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73129889"
 ---
-# <a name="cert2spcexe-software-publisher-certificate-test-tool"></a><span data-ttu-id="fbabb-102">Cert2spc.exe（软件发行者证书测试工具）</span><span class="sxs-lookup"><span data-stu-id="fbabb-102">Cert2spc.exe (Software Publisher Certificate Test Tool)</span></span>
-<span data-ttu-id="fbabb-103">软件发行者证书测试工具从一个或多个 X.509 证书创建软件发行者证书 (SPC)。</span><span class="sxs-lookup"><span data-stu-id="fbabb-103">The Software Publisher Certificate Test tool creates a Software Publisher's Certificate (SPC) from one or more X.509 certificates.</span></span> <span data-ttu-id="fbabb-104">Cert2spc.exe 仅用于测试目的。</span><span class="sxs-lookup"><span data-stu-id="fbabb-104">Cert2spc.exe is for test purposes only.</span></span> <span data-ttu-id="fbabb-105">可以从证书颁发机构（如 VeriSign 或 Thawte）获得有效 SPC。</span><span class="sxs-lookup"><span data-stu-id="fbabb-105">You can obtain a valid SPC from a Certification Authority such as VeriSign or Thawte.</span></span> <span data-ttu-id="fbabb-106">有关创建 X.509 证书的详细信息，请参阅 [Makecert.exe（证书创建工具）](/windows/desktop/SecCrypto/makecert)。</span><span class="sxs-lookup"><span data-stu-id="fbabb-106">For more information about creating X.509 certificates, see [Makecert.exe (Certificate Creation Tool)](/windows/desktop/SecCrypto/makecert).</span></span>  
+# <a name="cert2spcexe-software-publisher-certificate-test-tool"></a><span data-ttu-id="22d5f-102">Cert2spc.exe（软件发行者证书测试工具）</span><span class="sxs-lookup"><span data-stu-id="22d5f-102">Cert2spc.exe (Software Publisher Certificate Test Tool)</span></span>
+<span data-ttu-id="22d5f-103">软件发行者证书测试工具从一个或多个 X.509 证书创建软件发行者证书 (SPC)。</span><span class="sxs-lookup"><span data-stu-id="22d5f-103">The Software Publisher Certificate Test tool creates a Software Publisher's Certificate (SPC) from one or more X.509 certificates.</span></span> <span data-ttu-id="22d5f-104">Cert2spc.exe 仅用于测试目的。</span><span class="sxs-lookup"><span data-stu-id="22d5f-104">Cert2spc.exe is for test purposes only.</span></span> <span data-ttu-id="22d5f-105">可以从证书颁发机构（如 VeriSign 或 Thawte）获得有效 SPC。</span><span class="sxs-lookup"><span data-stu-id="22d5f-105">You can obtain a valid SPC from a Certification Authority such as VeriSign or Thawte.</span></span> <span data-ttu-id="22d5f-106">有关创建 X.509 证书的详细信息，请参阅 [Makecert.exe（证书创建工具）](/windows/desktop/SecCrypto/makecert)。</span><span class="sxs-lookup"><span data-stu-id="22d5f-106">For more information about creating X.509 certificates, see [Makecert.exe (Certificate Creation Tool)](/windows/desktop/SecCrypto/makecert).</span></span>  
   
- <span data-ttu-id="fbabb-107">此工具会自动随 Visual Studio 一起安装。</span><span class="sxs-lookup"><span data-stu-id="fbabb-107">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="fbabb-108">若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。</span><span class="sxs-lookup"><span data-stu-id="fbabb-108">To run the tool, use the Developer Command Prompt for Visual Studio (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="fbabb-109">有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="fbabb-109">For more information, see [Command Prompts](developer-command-prompt-for-vs.md).</span></span>  
+ <span data-ttu-id="22d5f-107">此工具会自动随 Visual Studio 一起安装。</span><span class="sxs-lookup"><span data-stu-id="22d5f-107">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="22d5f-108">若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。</span><span class="sxs-lookup"><span data-stu-id="22d5f-108">To run the tool, use the Developer Command Prompt for Visual Studio (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="22d5f-109">有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="22d5f-109">For more information, see [Command Prompts](developer-command-prompt-for-vs.md).</span></span>  
   
- <span data-ttu-id="fbabb-110">在命令提示符处，键入以下内容：</span><span class="sxs-lookup"><span data-stu-id="fbabb-110">At the command prompt, type the following:</span></span>  
+ <span data-ttu-id="22d5f-110">在命令提示符处，键入以下内容：</span><span class="sxs-lookup"><span data-stu-id="22d5f-110">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fbabb-111">语法</span><span class="sxs-lookup"><span data-stu-id="fbabb-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="22d5f-111">语法</span><span class="sxs-lookup"><span data-stu-id="22d5f-111">Syntax</span></span>  
   
 ```console  
 cert2spc cert1.cer | crl1.crl [... certN.cer | crlN.crl] outputSPCfile.spc  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fbabb-112">参数</span><span class="sxs-lookup"><span data-stu-id="fbabb-112">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="22d5f-112">参数</span><span class="sxs-lookup"><span data-stu-id="22d5f-112">Parameters</span></span>  
   
-|<span data-ttu-id="fbabb-113">参数</span><span class="sxs-lookup"><span data-stu-id="fbabb-113">Argument</span></span>|<span data-ttu-id="fbabb-114">说明</span><span class="sxs-lookup"><span data-stu-id="fbabb-114">Description</span></span>|  
+|<span data-ttu-id="22d5f-113">参数</span><span class="sxs-lookup"><span data-stu-id="22d5f-113">Argument</span></span>|<span data-ttu-id="22d5f-114">说明</span><span class="sxs-lookup"><span data-stu-id="22d5f-114">Description</span></span>|  
 |--------------|-----------------|  
-|`certN.cer`|<span data-ttu-id="fbabb-115">要包含在 SPC 文件中的 X.509 证书的名称。</span><span class="sxs-lookup"><span data-stu-id="fbabb-115">The name of an X.509 certificate to include in the SPC file.</span></span> <span data-ttu-id="fbabb-116">可以指定用空格分隔的多个名称。</span><span class="sxs-lookup"><span data-stu-id="fbabb-116">You can specify multiple names separated by spaces.</span></span>|  
-|`crlN.crl`|<span data-ttu-id="fbabb-117">要包含在 SPC 文件中的证书吊销列表的名称。</span><span class="sxs-lookup"><span data-stu-id="fbabb-117">The name of a certificate revocation list to include in the SPC file.</span></span> <span data-ttu-id="fbabb-118">可以指定用空格分隔的多个名称。</span><span class="sxs-lookup"><span data-stu-id="fbabb-118">You can specify multiple names separated by spaces.</span></span>|  
-|`outputSPCfile.spc`|<span data-ttu-id="fbabb-119">将包含 X.509 证书的 PKCS #7 对象的名称。</span><span class="sxs-lookup"><span data-stu-id="fbabb-119">The name of the PKCS #7 object that will contain the X.509 certificates.</span></span>|  
+|`certN.cer`|<span data-ttu-id="22d5f-115">要包含在 SPC 文件中的 X.509 证书的名称。</span><span class="sxs-lookup"><span data-stu-id="22d5f-115">The name of an X.509 certificate to include in the SPC file.</span></span> <span data-ttu-id="22d5f-116">可以指定用空格分隔的多个名称。</span><span class="sxs-lookup"><span data-stu-id="22d5f-116">You can specify multiple names separated by spaces.</span></span>|  
+|`crlN.crl`|<span data-ttu-id="22d5f-117">要包含在 SPC 文件中的证书吊销列表的名称。</span><span class="sxs-lookup"><span data-stu-id="22d5f-117">The name of a certificate revocation list to include in the SPC file.</span></span> <span data-ttu-id="22d5f-118">可以指定用空格分隔的多个名称。</span><span class="sxs-lookup"><span data-stu-id="22d5f-118">You can specify multiple names separated by spaces.</span></span>|  
+|`outputSPCfile.spc`|<span data-ttu-id="22d5f-119">将包含 X.509 证书的 PKCS #7 对象的名称。</span><span class="sxs-lookup"><span data-stu-id="22d5f-119">The name of the PKCS #7 object that will contain the X.509 certificates.</span></span>|  
   
-|<span data-ttu-id="fbabb-120">选项</span><span class="sxs-lookup"><span data-stu-id="fbabb-120">Option</span></span>|<span data-ttu-id="fbabb-121">说明</span><span class="sxs-lookup"><span data-stu-id="fbabb-121">Description</span></span>|  
+|<span data-ttu-id="22d5f-120">选项</span><span class="sxs-lookup"><span data-stu-id="22d5f-120">Option</span></span>|<span data-ttu-id="22d5f-121">说明</span><span class="sxs-lookup"><span data-stu-id="22d5f-121">Description</span></span>|  
 |------------|-----------------|  
-|<span data-ttu-id="fbabb-122">**/?**</span><span class="sxs-lookup"><span data-stu-id="fbabb-122">**/?**</span></span>|<span data-ttu-id="fbabb-123">显示该工具的命令语法和选项。</span><span class="sxs-lookup"><span data-stu-id="fbabb-123">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="22d5f-122">**/?**</span><span class="sxs-lookup"><span data-stu-id="22d5f-122">**/?**</span></span>|<span data-ttu-id="22d5f-123">显示该工具的命令语法和选项。</span><span class="sxs-lookup"><span data-stu-id="22d5f-123">Displays command syntax and options for the tool.</span></span>|  
   
-## <a name="examples"></a><span data-ttu-id="fbabb-124">示例</span><span class="sxs-lookup"><span data-stu-id="fbabb-124">Examples</span></span>  
- <span data-ttu-id="fbabb-125">下面的命令从 `myCertificate.cer` 创建一个 SPC 并将其放入 `mySPCFile.spc`。</span><span class="sxs-lookup"><span data-stu-id="fbabb-125">The following command creates an SPC from `myCertificate.cer` and places it in `mySPCFile.spc`.</span></span>  
+## <a name="examples"></a><span data-ttu-id="22d5f-124">示例</span><span class="sxs-lookup"><span data-stu-id="22d5f-124">Examples</span></span>  
+ <span data-ttu-id="22d5f-125">下面的命令从 `myCertificate.cer` 创建一个 SPC 并将其放入 `mySPCFile.spc`。</span><span class="sxs-lookup"><span data-stu-id="22d5f-125">The following command creates an SPC from `myCertificate.cer` and places it in `mySPCFile.spc`.</span></span>  
   
 ```console
 cert2spc myCertificate.cer mySPCFile.spc  
 ```  
   
- <span data-ttu-id="fbabb-126">下面的命令从 `oneCertificate.cer` 和 `twoCertificate.cer` 创建一个 SPC，并将其放入 `mySPCFile.spc`。</span><span class="sxs-lookup"><span data-stu-id="fbabb-126">The following command creates an SPC from `oneCertificate.cer` and `twoCertificate.cer`, and places it in `mySPCFile.spc`.</span></span>  
+ <span data-ttu-id="22d5f-126">下面的命令从 `oneCertificate.cer` 和 `twoCertificate.cer` 创建一个 SPC，并将其放入 `mySPCFile.spc`。</span><span class="sxs-lookup"><span data-stu-id="22d5f-126">The following command creates an SPC from `oneCertificate.cer` and `twoCertificate.cer`, and places it in `mySPCFile.spc`.</span></span>  
   
 ```console
 cert2spc oneCertificate.cer twoCertificate.cer mySPCFile.spc  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fbabb-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="fbabb-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="22d5f-127">另请参阅</span><span class="sxs-lookup"><span data-stu-id="22d5f-127">See also</span></span>
 
-- [<span data-ttu-id="fbabb-128">工具</span><span class="sxs-lookup"><span data-stu-id="fbabb-128">Tools</span></span>](index.md)
-- [<span data-ttu-id="fbabb-129">Makecert.exe（证书创建工具）</span><span class="sxs-lookup"><span data-stu-id="fbabb-129">Makecert.exe (Certificate Creation Tool)</span></span>](/windows/desktop/SecCrypto/makecert)
-- [<span data-ttu-id="fbabb-130">命令提示</span><span class="sxs-lookup"><span data-stu-id="fbabb-130">Command Prompts</span></span>](developer-command-prompt-for-vs.md)
+- [<span data-ttu-id="22d5f-128">工具</span><span class="sxs-lookup"><span data-stu-id="22d5f-128">Tools</span></span>](index.md)
+- [<span data-ttu-id="22d5f-129">Makecert.exe（证书创建工具）</span><span class="sxs-lookup"><span data-stu-id="22d5f-129">Makecert.exe (Certificate Creation Tool)</span></span>](/windows/desktop/SecCrypto/makecert)
+- [<span data-ttu-id="22d5f-130">命令提示</span><span class="sxs-lookup"><span data-stu-id="22d5f-130">Command Prompts</span></span>](developer-command-prompt-for-vs.md)

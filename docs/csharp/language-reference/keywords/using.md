@@ -8,24 +8,24 @@ helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
 ms.openlocfilehash: a1307acf331cec50b1dbbd0f6e908a0c3baaf7ac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712931"
 ---
-# <a name="using-c-reference"></a><span data-ttu-id="149de-102">using（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="149de-102">using (C# Reference)</span></span>
+# <a name="using-c-reference"></a><span data-ttu-id="45e5a-102">using（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="45e5a-102">using (C# Reference)</span></span>
 
-<span data-ttu-id="149de-103">`using` 关键字有三个主要用途：</span><span class="sxs-lookup"><span data-stu-id="149de-103">The `using` keyword has three major uses:</span></span>
+<span data-ttu-id="45e5a-103">`using` 关键字有三个主要用途：</span><span class="sxs-lookup"><span data-stu-id="45e5a-103">The `using` keyword has three major uses:</span></span>
 
-- <span data-ttu-id="149de-104">[using 语句](using-statement.md)定义一个范围，在此范围的末尾将释放对象。</span><span class="sxs-lookup"><span data-stu-id="149de-104">The [using statement](using-statement.md) defines a scope at the end of which an object will be disposed.</span></span>
-- <span data-ttu-id="149de-105">[using 指令](using-directive.md)为命名空间创建别名，或导入在其他命名空间中定义的类型。</span><span class="sxs-lookup"><span data-stu-id="149de-105">The [using directive](using-directive.md) creates an alias for a namespace or imports types defined in other namespaces.</span></span>
-- <span data-ttu-id="149de-106">[using static 指令](using-static.md)导入单个类的成员。</span><span class="sxs-lookup"><span data-stu-id="149de-106">The [using static directive](using-static.md) imports the members of a single class.</span></span>
+- <span data-ttu-id="45e5a-104">[using 语句](using-statement.md)定义一个范围，在此范围的末尾将释放对象。</span><span class="sxs-lookup"><span data-stu-id="45e5a-104">The [using statement](using-statement.md) defines a scope at the end of which an object will be disposed.</span></span>
+- <span data-ttu-id="45e5a-105">[using 指令](using-directive.md)为命名空间创建别名，或导入在其他命名空间中定义的类型。</span><span class="sxs-lookup"><span data-stu-id="45e5a-105">The [using directive](using-directive.md) creates an alias for a namespace or imports types defined in other namespaces.</span></span>
+- <span data-ttu-id="45e5a-106">[using static 指令](using-static.md)导入单个类的成员。</span><span class="sxs-lookup"><span data-stu-id="45e5a-106">The [using static directive](using-static.md) imports the members of a single class.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="149de-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="149de-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="45e5a-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="45e5a-107">See also</span></span>
 
-- [<span data-ttu-id="149de-108">C# 参考</span><span class="sxs-lookup"><span data-stu-id="149de-108">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="149de-109">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="149de-109">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="149de-110">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="149de-110">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="149de-111">命名空间</span><span class="sxs-lookup"><span data-stu-id="149de-111">Namespaces</span></span>](../../programming-guide/namespaces/index.md)
-- [<span data-ttu-id="149de-112">extern</span><span class="sxs-lookup"><span data-stu-id="149de-112">extern</span></span>](extern.md)
+- [<span data-ttu-id="45e5a-108">C# 参考</span><span class="sxs-lookup"><span data-stu-id="45e5a-108">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="45e5a-109">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="45e5a-109">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="45e5a-110">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="45e5a-110">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="45e5a-111">命名空间</span><span class="sxs-lookup"><span data-stu-id="45e5a-111">Namespaces</span></span>](../../programming-guide/namespaces/index.md)
+- [<span data-ttu-id="45e5a-112">extern</span><span class="sxs-lookup"><span data-stu-id="45e5a-112">extern</span></span>](extern.md)

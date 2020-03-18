@@ -6,87 +6,87 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 1a691ad0c1f8dbfadd642360d7f9629a136ff3ab
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: fe69521a6ac88055e3e8c8502a7e19a72667dbef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156655"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240852"
 ---
-# <a name="get-started-with-net-core-using-the-net-core-cli"></a><span data-ttu-id="3ca41-103">使用 .NET Core CLI 实现 .NET Core 入门</span><span class="sxs-lookup"><span data-stu-id="3ca41-103">Get started with .NET Core using the .NET Core CLI</span></span>
+# <a name="get-started-with-net-core-using-the-net-core-cli"></a><span data-ttu-id="7ba1d-103">使用 .NET Core CLI 实现 .NET Core 入门</span><span class="sxs-lookup"><span data-stu-id="7ba1d-103">Get started with .NET Core using the .NET Core CLI</span></span>
 
-<span data-ttu-id="3ca41-104">本文介绍如何开始使用 .NET Core CLI 开发在 Windows、Linux 和 macOS 上运行的 .NET Core 应用。</span><span class="sxs-lookup"><span data-stu-id="3ca41-104">This article will show you how to start developing .NET Core apps that work on Windows, Linux, and macOS using the .NET Core CLI.</span></span>
+<span data-ttu-id="7ba1d-104">本文介绍如何开始使用 .NET Core CLI 开发在 Windows、Linux 和 macOS 上运行的 .NET Core 应用。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-104">This article will show you how to start developing .NET Core apps that work on Windows, Linux, and macOS using the .NET Core CLI.</span></span>
 
-<span data-ttu-id="3ca41-105">如果不熟悉 .NET Core CLI，请参阅 [.NET Core 概述](../tools/index.md)。</span><span class="sxs-lookup"><span data-stu-id="3ca41-105">If you're unfamiliar with the .NET Core CLI, see the [.NET Core CLI overview](../tools/index.md).</span></span>
+<span data-ttu-id="7ba1d-105">如果不熟悉 .NET Core CLI，请参阅 [.NET Core 概述](../tools/index.md)。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-105">If you're unfamiliar with the .NET Core CLI, see the [.NET Core CLI overview](../tools/index.md).</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="3ca41-106">先决条件</span><span class="sxs-lookup"><span data-stu-id="3ca41-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="7ba1d-106">系统必备</span><span class="sxs-lookup"><span data-stu-id="7ba1d-106">Prerequisites</span></span>
 
-- <span data-ttu-id="3ca41-107">[.NET Core SDK 3.1](https://dotnet.microsoft.com/download) 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="3ca41-107">[.NET Core SDK 3.1](https://dotnet.microsoft.com/download) or later versions.</span></span>
-- <span data-ttu-id="3ca41-108">按需选择的文本编辑器或代码编辑器。</span><span class="sxs-lookup"><span data-stu-id="3ca41-108">A text editor or code editor of your choice.</span></span>
+- <span data-ttu-id="7ba1d-107">[.NET Core SDK 3.1](https://dotnet.microsoft.com/download) 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-107">[.NET Core SDK 3.1](https://dotnet.microsoft.com/download) or later versions.</span></span>
+- <span data-ttu-id="7ba1d-108">按需选择的文本编辑器或代码编辑器。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-108">A text editor or code editor of your choice.</span></span>
 
-## <a name="hello-console-app"></a><span data-ttu-id="3ca41-109">Hello，控制台应用！</span><span class="sxs-lookup"><span data-stu-id="3ca41-109">Hello, Console App!</span></span>
+## <a name="hello-console-app"></a><span data-ttu-id="7ba1d-109">Hello，控制台应用！</span><span class="sxs-lookup"><span data-stu-id="7ba1d-109">Hello, Console App!</span></span>
 
-<span data-ttu-id="3ca41-110">若要[查看或下载示例代码](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild)，可以访问 dotnet/samples GitHub 存储库。</span><span class="sxs-lookup"><span data-stu-id="3ca41-110">You can [view or download the sample code](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild) from the dotnet/samples GitHub repository.</span></span> <span data-ttu-id="3ca41-111">有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。</span><span class="sxs-lookup"><span data-stu-id="3ca41-111">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
+<span data-ttu-id="7ba1d-110">若要[查看或下载示例代码](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild)，可以访问 dotnet/samples GitHub 存储库。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-110">You can [view or download the sample code](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild) from the dotnet/samples GitHub repository.</span></span> <span data-ttu-id="7ba1d-111">有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-111">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-<span data-ttu-id="3ca41-112">打开命令提示符，创建一个名为“Hello”  的文件夹。</span><span class="sxs-lookup"><span data-stu-id="3ca41-112">Open a command prompt and create a folder named *Hello*.</span></span> <span data-ttu-id="3ca41-113">导航到创建的文件夹，键入下列内容。</span><span class="sxs-lookup"><span data-stu-id="3ca41-113">Navigate to the folder you created and type the following.</span></span>
+<span data-ttu-id="7ba1d-112">打开命令提示符，创建一个名为“Hello”  的文件夹。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-112">Open a command prompt and create a folder named *Hello*.</span></span> <span data-ttu-id="7ba1d-113">导航到创建的文件夹，键入下列内容。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-113">Navigate to the folder you created and type the following.</span></span>
 
 ```dotnetcli
 dotnet new console
 dotnet run
 ```
 
-<span data-ttu-id="3ca41-114">让我们进行快速演练：</span><span class="sxs-lookup"><span data-stu-id="3ca41-114">Let's do a quick walkthrough:</span></span>
+<span data-ttu-id="7ba1d-114">让我们进行快速演练：</span><span class="sxs-lookup"><span data-stu-id="7ba1d-114">Let's do a quick walkthrough:</span></span>
 
 01. `dotnet new console`
 
-    <span data-ttu-id="3ca41-115">[dotnet new](../tools/dotnet-new.md) 会创建一个最新的 Hello.csproj 项目文件，其中包含生成控制台应用所必需的依赖项  。</span><span class="sxs-lookup"><span data-stu-id="3ca41-115">[dotnet new](../tools/dotnet-new.md) creates an up-to-date *Hello.csproj* project file with the dependencies necessary to build a console app.</span></span> <span data-ttu-id="3ca41-116">此外，它还会创建一个 Program.cs  ，这是包含应用程序入口点的基本文件。</span><span class="sxs-lookup"><span data-stu-id="3ca41-116">It also creates a *Program.cs*, a basic file containing the entry point for the application.</span></span>
+    <span data-ttu-id="7ba1d-115">[dotnet new](../tools/dotnet-new.md) 会创建一个最新的 Hello.csproj 项目文件，其中包含生成控制台应用所必需的依赖项  。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-115">[dotnet new](../tools/dotnet-new.md) creates an up-to-date *Hello.csproj* project file with the dependencies necessary to build a console app.</span></span> <span data-ttu-id="7ba1d-116">此外，它还会创建一个 Program.cs  ，这是包含应用程序入口点的基本文件。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-116">It also creates a *Program.cs*, a basic file containing the entry point for the application.</span></span>
 
-    <span data-ttu-id="3ca41-117">Hello.csproj  ：</span><span class="sxs-lookup"><span data-stu-id="3ca41-117">*Hello.csproj*:</span></span>
+    <span data-ttu-id="7ba1d-117">Hello.csproj  ：</span><span class="sxs-lookup"><span data-stu-id="7ba1d-117">*Hello.csproj*:</span></span>
 
-    [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+    [!code-xml[Hello.csproj](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Hello.csproj)]
 
-    <span data-ttu-id="3ca41-118">项目文件指定还原依赖项和生成程序所需的一切。</span><span class="sxs-lookup"><span data-stu-id="3ca41-118">The project file specifies everything that's needed to restore dependencies and build the program.</span></span>
+    <span data-ttu-id="7ba1d-118">项目文件指定还原依赖项和生成程序所需的一切。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-118">The project file specifies everything that's needed to restore dependencies and build the program.</span></span>
 
-    - <span data-ttu-id="3ca41-119">`<OutputType>` 元素指定我们要生成的可执行文件，即控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="3ca41-119">The `<OutputType>` element specifies that we're building an executable, in other words a console application.</span></span>
-    - <span data-ttu-id="3ca41-120">`<TargetFramework>` 元素指定要定位的 .NET 实现代码。</span><span class="sxs-lookup"><span data-stu-id="3ca41-120">The `<TargetFramework>` element specifies what .NET implementation we're targeting.</span></span> <span data-ttu-id="3ca41-121">在高级方案中，可以指定多个目标框架，并在单个操作中生成所有目标框架。</span><span class="sxs-lookup"><span data-stu-id="3ca41-121">In an advanced scenario, you can specify multiple target frameworks and build to all those in a single operation.</span></span> <span data-ttu-id="3ca41-122">在本教程中，我们将仅针对 .NET Core 3.1 进行生成。</span><span class="sxs-lookup"><span data-stu-id="3ca41-122">In this tutorial, we'll stick to building only for .NET Core 3.1.</span></span>
+    - <span data-ttu-id="7ba1d-119">`<OutputType>` 元素指定我们要生成的可执行文件，即控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-119">The `<OutputType>` element specifies that we're building an executable, in other words a console application.</span></span>
+    - <span data-ttu-id="7ba1d-120">`<TargetFramework>` 元素指定要定位的 .NET 实现代码。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-120">The `<TargetFramework>` element specifies what .NET implementation we're targeting.</span></span> <span data-ttu-id="7ba1d-121">在高级方案中，可以指定多个目标框架，并在单个操作中生成所有目标框架。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-121">In an advanced scenario, you can specify multiple target frameworks and build to all those in a single operation.</span></span> <span data-ttu-id="7ba1d-122">在本教程中，我们将仅针对 .NET Core 3.1 进行生成。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-122">In this tutorial, we'll stick to building only for .NET Core 3.1.</span></span>
 
-    <span data-ttu-id="3ca41-123">Program.cs  :</span><span class="sxs-lookup"><span data-stu-id="3ca41-123">*Program.cs*:</span></span>
+    <span data-ttu-id="7ba1d-123">Program.cs  :</span><span class="sxs-lookup"><span data-stu-id="7ba1d-123">*Program.cs*:</span></span>
 
-    [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
+    [!code-csharp[Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Program.cs)]
 
-    <span data-ttu-id="3ca41-124">该程序从 `using System` 开始，这意味着“将 `System` 命名空间中的所有内容都纳入此文件的作用域”。</span><span class="sxs-lookup"><span data-stu-id="3ca41-124">The program starts by `using System`, which means "bring everything in the `System` namespace into scope for this file".</span></span> <span data-ttu-id="3ca41-125">`System` 命名空间包括 `Console` 类。</span><span class="sxs-lookup"><span data-stu-id="3ca41-125">The `System` namespace includes the `Console` class.</span></span>
+    <span data-ttu-id="7ba1d-124">该程序从 `using System` 开始，这意味着“将 `System` 命名空间中的所有内容都纳入此文件的作用域”。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-124">The program starts by `using System`, which means "bring everything in the `System` namespace into scope for this file".</span></span> <span data-ttu-id="7ba1d-125">`System` 命名空间包括 `Console` 类。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-125">The `System` namespace includes the `Console` class.</span></span>
 
-    <span data-ttu-id="3ca41-126">接着定义一个名为 `Hello` 的命名空间。</span><span class="sxs-lookup"><span data-stu-id="3ca41-126">We then define a namespace called `Hello`.</span></span> <span data-ttu-id="3ca41-127">你可以将其更改为任何你喜欢的名称。</span><span class="sxs-lookup"><span data-stu-id="3ca41-127">You can change this to anything you want.</span></span> <span data-ttu-id="3ca41-128">在该命名空间中定义了一个名为 `Program` 的类，其中 `Main` 方法采用名为 `args` 的字符串数组。</span><span class="sxs-lookup"><span data-stu-id="3ca41-128">A class named `Program` is defined within that namespace, with a `Main` method that takes an array of strings named `args`.</span></span> <span data-ttu-id="3ca41-129">此数组包含在运行程序时所传递的参数列表。</span><span class="sxs-lookup"><span data-stu-id="3ca41-129">This array contains the list of arguments passed in when the program is run.</span></span> <span data-ttu-id="3ca41-130">实际上，不使用此数组，程序只会写入文本“Hello World!”</span><span class="sxs-lookup"><span data-stu-id="3ca41-130">As it is, this array is not used and the program simply writes the text "Hello World!"</span></span> <span data-ttu-id="3ca41-131">“Hello World!”。</span><span class="sxs-lookup"><span data-stu-id="3ca41-131">to the console.</span></span> <span data-ttu-id="3ca41-132">稍后将对使用此参数的代码进行更改。</span><span class="sxs-lookup"><span data-stu-id="3ca41-132">Later, we'll make changes to the code that will make use of this argument.</span></span>
+    <span data-ttu-id="7ba1d-126">接着定义一个名为 `Hello` 的命名空间。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-126">We then define a namespace called `Hello`.</span></span> <span data-ttu-id="7ba1d-127">你可以将其更改为任何你喜欢的名称。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-127">You can change this to anything you want.</span></span> <span data-ttu-id="7ba1d-128">在该命名空间中定义了一个名为 `Program` 的类，其中 `Main` 方法采用名为 `args` 的字符串数组。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-128">A class named `Program` is defined within that namespace, with a `Main` method that takes an array of strings named `args`.</span></span> <span data-ttu-id="7ba1d-129">此数组包含在运行程序时所传递的参数列表。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-129">This array contains the list of arguments passed in when the program is run.</span></span> <span data-ttu-id="7ba1d-130">实际上，不使用此数组，程序只会写入文本“Hello World!”</span><span class="sxs-lookup"><span data-stu-id="7ba1d-130">As it is, this array is not used and the program simply writes the text "Hello World!"</span></span> <span data-ttu-id="7ba1d-131">“Hello World!”。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-131">to the console.</span></span> <span data-ttu-id="7ba1d-132">稍后将对使用此参数的代码进行更改。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-132">Later, we'll make changes to the code that will make use of this argument.</span></span>
 
-    <span data-ttu-id="3ca41-133">`dotnet new` 隐式调用 [dotnet restore](../tools/dotnet-restore.md)。</span><span class="sxs-lookup"><span data-stu-id="3ca41-133">`dotnet new` calls [dotnet restore](../tools/dotnet-restore.md) implicitly.</span></span> <span data-ttu-id="3ca41-134">`dotnet restore` 调用到 [NuGet](https://www.nuget.org/)（.NET 包管理器）以还原依赖项树。</span><span class="sxs-lookup"><span data-stu-id="3ca41-134">`dotnet restore` calls into [NuGet](https://www.nuget.org/) (.NET package manager) to restore the tree of dependencies.</span></span> <span data-ttu-id="3ca41-135">NuGet 分析 Hello.csproj  文件、下载文件中定义的依赖项（或从计算机缓存中获取）并编写 obj/project.assets.json  文件，在编译和运行示例时需要使用该文件。</span><span class="sxs-lookup"><span data-stu-id="3ca41-135">NuGet analyzes the *Hello.csproj* file, downloads the dependencies defined in the file (or grabs them from a cache on your machine), and writes the *obj/project.assets.json* file, which is necessary to compile and run the sample.</span></span>
+    <span data-ttu-id="7ba1d-133">`dotnet new` 隐式调用 [dotnet restore](../tools/dotnet-restore.md)。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-133">`dotnet new` calls [dotnet restore](../tools/dotnet-restore.md) implicitly.</span></span> <span data-ttu-id="7ba1d-134">`dotnet restore` 调用到 [NuGet](https://www.nuget.org/)（.NET 包管理器）以还原依赖项树。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-134">`dotnet restore` calls into [NuGet](https://www.nuget.org/) (.NET package manager) to restore the tree of dependencies.</span></span> <span data-ttu-id="7ba1d-135">NuGet 分析 Hello.csproj  文件、下载文件中定义的依赖项（或从计算机缓存中获取）并编写 obj/project.assets.json  文件，在编译和运行示例时需要使用该文件。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-135">NuGet analyzes the *Hello.csproj* file, downloads the dependencies defined in the file (or grabs them from a cache on your machine), and writes the *obj/project.assets.json* file, which is necessary to compile and run the sample.</span></span>
 
 02. `dotnet run`
 
-    <span data-ttu-id="3ca41-136">[dotnet run](../tools/dotnet-run.md) 调用 [dotnet build](../tools/dotnet-build.md) 来确保已生成要生成的目标，然后调用 `dotnet <assembly.dll>` 运行目标应用程序。</span><span class="sxs-lookup"><span data-stu-id="3ca41-136">[dotnet run](../tools/dotnet-run.md) calls [dotnet build](../tools/dotnet-build.md) to ensure that the build targets have been built, and then calls `dotnet <assembly.dll>` to run the target application.</span></span>
+    <span data-ttu-id="7ba1d-136">[dotnet run](../tools/dotnet-run.md) 调用 [dotnet build](../tools/dotnet-build.md) 来确保已生成要生成的目标，然后调用 `dotnet <assembly.dll>` 运行目标应用程序。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-136">[dotnet run](../tools/dotnet-run.md) calls [dotnet build](../tools/dotnet-build.md) to ensure that the build targets have been built, and then calls `dotnet <assembly.dll>` to run the target application.</span></span>
 
     ```dotnetcli
     dotnet run
     ```
 
-    <span data-ttu-id="3ca41-137">将获得以下输出。</span><span class="sxs-lookup"><span data-stu-id="3ca41-137">You get the following output.</span></span>
+    <span data-ttu-id="7ba1d-137">将获得以下输出。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-137">You get the following output.</span></span>
 
     ```console
     Hello World!
     ```
 
-    <span data-ttu-id="3ca41-138">或者，还可以运行 `dotnet build` 来编译代码，无需运行已生成的控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="3ca41-138">Alternatively, you can also run `dotnet build` to compile the code without running the build console applications.</span></span> <span data-ttu-id="3ca41-139">这会基于项目的名称将已编译的应用程序作为 DLL 文件生成。</span><span class="sxs-lookup"><span data-stu-id="3ca41-139">This results in a compiled application, as a DLL file, based on the name of the project.</span></span> <span data-ttu-id="3ca41-140">在这种情况下，创建的文件命名为 Hello.dll  。</span><span class="sxs-lookup"><span data-stu-id="3ca41-140">In this case, the file created is named *Hello.dll*.</span></span> <span data-ttu-id="3ca41-141">此应用可以使用 Windows 上的 `dotnet bin\Debug\netcoreapp3.1\Hello.dll` 运行（非 Windows 系统使用 `/`）。</span><span class="sxs-lookup"><span data-stu-id="3ca41-141">This app can be run with `dotnet bin\Debug\netcoreapp3.1\Hello.dll` on Windows (use `/` for non-Windows systems).</span></span>
+    <span data-ttu-id="7ba1d-138">或者，还可以运行 `dotnet build` 来编译代码，无需运行已生成的控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-138">Alternatively, you can also run `dotnet build` to compile the code without running the build console applications.</span></span> <span data-ttu-id="7ba1d-139">这会基于项目的名称将已编译的应用程序作为 DLL 文件生成。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-139">This results in a compiled application, as a DLL file, based on the name of the project.</span></span> <span data-ttu-id="7ba1d-140">在这种情况下，创建的文件命名为 Hello.dll  。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-140">In this case, the file created is named *Hello.dll*.</span></span> <span data-ttu-id="7ba1d-141">此应用可以使用 Windows 上的 `dotnet bin\Debug\netcoreapp3.1\Hello.dll` 运行（非 Windows 系统使用 `/`）。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-141">This app can be run with `dotnet bin\Debug\netcoreapp3.1\Hello.dll` on Windows (use `/` for non-Windows systems).</span></span>
 
     ```dotnetcli
     dotnet bin\Debug\netcoreapp3.1\Hello.dll
     ```
 
-    <span data-ttu-id="3ca41-142">将获得以下输出。</span><span class="sxs-lookup"><span data-stu-id="3ca41-142">You get the following output.</span></span>
+    <span data-ttu-id="7ba1d-142">将获得以下输出。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-142">You get the following output.</span></span>
 
     ```console
     Hello World!
     ```
 
-    <span data-ttu-id="3ca41-143">在编译应用时，会随 `Hello.dll` 一起创建特定于操作系统的可执行文件。</span><span class="sxs-lookup"><span data-stu-id="3ca41-143">When the app is compiled, an operating system-specific executable was created along with the `Hello.dll`.</span></span> <span data-ttu-id="3ca41-144">在 Windows 上，这将是 `Hello.exe`；在 Linux 或 macOS 上，这将是 `hello`。</span><span class="sxs-lookup"><span data-stu-id="3ca41-144">On Windows, this would be `Hello.exe`; on Linux or macOS, this would be `hello`.</span></span> <span data-ttu-id="3ca41-145">在上面的示例中，用 `Hello.exe` 或 `Hello` 命名该文件。</span><span class="sxs-lookup"><span data-stu-id="3ca41-145">With the example above, the file is named with `Hello.exe` or `Hello`.</span></span> <span data-ttu-id="3ca41-146">可以直接运行该可执行文件。</span><span class="sxs-lookup"><span data-stu-id="3ca41-146">You can run that executable directly.</span></span>
+    <span data-ttu-id="7ba1d-143">在编译应用时，会随 `Hello.dll` 一起创建特定于操作系统的可执行文件。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-143">When the app is compiled, an operating system-specific executable was created along with the `Hello.dll`.</span></span> <span data-ttu-id="7ba1d-144">在 Windows 上，这将是 `Hello.exe`；在 Linux 或 macOS 上，这将是 `hello`。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-144">On Windows, this would be `Hello.exe`; on Linux or macOS, this would be `hello`.</span></span> <span data-ttu-id="7ba1d-145">在上面的示例中，用 `Hello.exe` 或 `Hello` 命名该文件。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-145">With the example above, the file is named with `Hello.exe` or `Hello`.</span></span> <span data-ttu-id="7ba1d-146">可以直接运行该可执行文件。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-146">You can run that executable directly.</span></span>
 
     ```console
     .\bin\Debug\netcoreapp3.1\Hello.exe
@@ -94,23 +94,23 @@ dotnet run
     Hello World!
     ```
 
-## <a name="modify-the-program"></a><span data-ttu-id="3ca41-147">修改程序</span><span class="sxs-lookup"><span data-stu-id="3ca41-147">Modify the program</span></span>
+## <a name="modify-the-program"></a><span data-ttu-id="7ba1d-147">修改程序</span><span class="sxs-lookup"><span data-stu-id="7ba1d-147">Modify the program</span></span>
 
-<span data-ttu-id="3ca41-148">让我们稍微更改一下程序。</span><span class="sxs-lookup"><span data-stu-id="3ca41-148">Let's change the program a bit.</span></span> <span data-ttu-id="3ca41-149">Fibonacci 数字很有意思，那么除了使用参数，让我们也来添加 Fibonacci 数字，让运行应用的用户开心一下。</span><span class="sxs-lookup"><span data-stu-id="3ca41-149">Fibonacci numbers are fun, so let's add that and also to use the argument to greet the person running the app.</span></span>
+<span data-ttu-id="7ba1d-148">让我们稍微更改一下程序。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-148">Let's change the program a bit.</span></span> <span data-ttu-id="7ba1d-149">Fibonacci 数字很有意思，那么除了使用参数，让我们也来添加 Fibonacci 数字，让运行应用的用户开心一下。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-149">Fibonacci numbers are fun, so let's add that and also to use the argument to greet the person running the app.</span></span>
 
-01. <span data-ttu-id="3ca41-150">将 *Program.cs* 文件的内容替换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="3ca41-150">Replace the contents of your *Program.cs*  file with the following code:</span></span>
+01. <span data-ttu-id="7ba1d-150">将 *Program.cs* 文件的内容替换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="7ba1d-150">Replace the contents of your *Program.cs*  file with the following code:</span></span>
 
-    [!code-csharp[Fibonacci](~/samples/core/console-apps/fibonacci-msbuild/Program.cs)]
+    [!code-csharp[Fibonacci](~/samples/snippets/core/tutorials/cli-create-console-app/fibonacci-msbuild/csharp/Program.cs)]
 
-02. <span data-ttu-id="3ca41-151">运行 [dotnet build](../tools/dotnet-build.md) 以编译更改。</span><span class="sxs-lookup"><span data-stu-id="3ca41-151">Run [dotnet build](../tools/dotnet-build.md) to compile the changes.</span></span>
+02. <span data-ttu-id="7ba1d-151">运行 [dotnet build](../tools/dotnet-build.md) 以编译更改。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-151">Run [dotnet build](../tools/dotnet-build.md) to compile the changes.</span></span>
 
-03. <span data-ttu-id="3ca41-152">运行向应用传递参数的程序。</span><span class="sxs-lookup"><span data-stu-id="3ca41-152">Run the program passing a parameter to the app.</span></span> <span data-ttu-id="3ca41-153">使用 `dotnet` 命令运行应用时，将 `--` 添加到末尾。</span><span class="sxs-lookup"><span data-stu-id="3ca41-153">When you use the `dotnet` command to run an app, add `--` to the end.</span></span> <span data-ttu-id="3ca41-154">`--` 右侧的任何内容都将作为参数传递到应用。</span><span class="sxs-lookup"><span data-stu-id="3ca41-154">Anything to the right of `--` will be passed as a parameter to the app.</span></span> <span data-ttu-id="3ca41-155">在下面的示例中，值 `John` 传递到应用。</span><span class="sxs-lookup"><span data-stu-id="3ca41-155">In the following example, the value `John` is passed to the app.</span></span>
+03. <span data-ttu-id="7ba1d-152">运行向应用传递参数的程序。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-152">Run the program passing a parameter to the app.</span></span> <span data-ttu-id="7ba1d-153">使用 `dotnet` 命令运行应用时，将 `--` 添加到末尾。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-153">When you use the `dotnet` command to run an app, add `--` to the end.</span></span> <span data-ttu-id="7ba1d-154">`--` 右侧的任何内容都将作为参数传递到应用。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-154">Anything to the right of `--` will be passed as a parameter to the app.</span></span> <span data-ttu-id="7ba1d-155">在下面的示例中，值 `John` 传递到应用。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-155">In the following example, the value `John` is passed to the app.</span></span>
 
     ```dotnetcli
     dotnet run -- John
     ```
 
-    <span data-ttu-id="3ca41-156">将获得以下输出。</span><span class="sxs-lookup"><span data-stu-id="3ca41-156">You get the following output.</span></span>
+    <span data-ttu-id="7ba1d-156">将获得以下输出。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-156">You get the following output.</span></span>
 
     ```console
     Hello John!
@@ -132,29 +132,29 @@ dotnet run
     15: 377
     ```
 
-<span data-ttu-id="3ca41-157">就是这么简单！</span><span class="sxs-lookup"><span data-stu-id="3ca41-157">And that's it!</span></span> <span data-ttu-id="3ca41-158">可以按任意喜欢的方式修改 Program.cs  。</span><span class="sxs-lookup"><span data-stu-id="3ca41-158">You can modify *Program.cs* any way you like.</span></span>
+<span data-ttu-id="7ba1d-157">这就是所有的操作！</span><span class="sxs-lookup"><span data-stu-id="7ba1d-157">And that's it!</span></span> <span data-ttu-id="7ba1d-158">可以按任意喜欢的方式修改 Program.cs  。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-158">You can modify *Program.cs* any way you like.</span></span>
 
-## <a name="working-with-multiple-files"></a><span data-ttu-id="3ca41-159">使用多个文件</span><span class="sxs-lookup"><span data-stu-id="3ca41-159">Working with multiple files</span></span>
+## <a name="working-with-multiple-files"></a><span data-ttu-id="7ba1d-159">使用多个文件</span><span class="sxs-lookup"><span data-stu-id="7ba1d-159">Working with multiple files</span></span>
 
-<span data-ttu-id="3ca41-160">单个文件适用于简单的一次性程序，但如果要构建较为复杂的应用，则项目中可能会有多个代码文件。</span><span class="sxs-lookup"><span data-stu-id="3ca41-160">Single files are fine for simple one-off programs, but if you're building a more complex app, you're probably going to have multiple code files on your project.</span></span> <span data-ttu-id="3ca41-161">我们通过缓存一些 Fibonacci 值并添加一些递归特性来基于之前的 Fibonacci 示例进行构建。</span><span class="sxs-lookup"><span data-stu-id="3ca41-161">Let's build off of the previous Fibonacci example by caching some Fibonacci values and add some recursive features.</span></span>
+<span data-ttu-id="7ba1d-160">单个文件适用于简单的一次性程序，但如果要构建较为复杂的应用，则项目中可能会有多个代码文件。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-160">Single files are fine for simple one-off programs, but if you're building a more complex app, you're probably going to have multiple code files on your project.</span></span> <span data-ttu-id="7ba1d-161">我们通过缓存一些 Fibonacci 值并添加一些递归特性来基于之前的 Fibonacci 示例进行构建。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-161">Let's build off of the previous Fibonacci example by caching some Fibonacci values and add some recursive features.</span></span>
 
-01. <span data-ttu-id="3ca41-162">使用以下代码将新文件添加到名为 *FibonacciGenerator.cs* 的 *Hello* 目录：</span><span class="sxs-lookup"><span data-stu-id="3ca41-162">Add a new file inside the *Hello* directory named *FibonacciGenerator.cs* with the following code:</span></span>
+01. <span data-ttu-id="7ba1d-162">使用以下代码将新文件添加到名为 *FibonacciGenerator.cs* 的 *Hello* 目录：</span><span class="sxs-lookup"><span data-stu-id="7ba1d-162">Add a new file inside the *Hello* directory named *FibonacciGenerator.cs* with the following code:</span></span>
 
-    [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
+    [!code-csharp[Fibonacci Generator](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/FibonacciGenerator.cs)]
 
-02. <span data-ttu-id="3ca41-163">更改 *Program.cs* 文件中的 `Main` 方法，以实例化新的类并调用其方法，如下例所示：</span><span class="sxs-lookup"><span data-stu-id="3ca41-163">Change the `Main` method in your *Program.cs* file to instantiate the new class and call its method as in the following example:</span></span>
+02. <span data-ttu-id="7ba1d-163">更改 `Main`Program.cs*文件中的* 方法，以实例化新的类并调用其方法，如下例所示：</span><span class="sxs-lookup"><span data-stu-id="7ba1d-163">Change the `Main` method in your *Program.cs* file to instantiate the new class and call its method as in the following example:</span></span>
 
-    [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+    [!code-csharp[New Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/Program.cs)]
 
-03. <span data-ttu-id="3ca41-164">运行 [dotnet build](../tools/dotnet-build.md) 以编译更改。</span><span class="sxs-lookup"><span data-stu-id="3ca41-164">Run [dotnet build](../tools/dotnet-build.md) to compile the changes.</span></span>
+03. <span data-ttu-id="7ba1d-164">运行 [dotnet build](../tools/dotnet-build.md) 以编译更改。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-164">Run [dotnet build](../tools/dotnet-build.md) to compile the changes.</span></span>
 
-04. <span data-ttu-id="3ca41-165">通过执行 [dotnet run](../tools/dotnet-run.md) 来运行应用。</span><span class="sxs-lookup"><span data-stu-id="3ca41-165">Run your app by executing [dotnet run](../tools/dotnet-run.md).</span></span>
+04. <span data-ttu-id="7ba1d-165">通过执行 [dotnet run](../tools/dotnet-run.md) 来运行应用。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-165">Run your app by executing [dotnet run](../tools/dotnet-run.md).</span></span>
 
     ```dotnetcli
     dotnet run
     ```
 
-    <span data-ttu-id="3ca41-166">将获得以下输出。</span><span class="sxs-lookup"><span data-stu-id="3ca41-166">You get the following output.</span></span>
+    <span data-ttu-id="7ba1d-166">将获得以下输出。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-166">You get the following output.</span></span>
 
     ```console
     0
@@ -174,15 +174,15 @@ dotnet run
     377
     ```
 
-## <a name="publish-your-app"></a><span data-ttu-id="3ca41-167">发布你的应用</span><span class="sxs-lookup"><span data-stu-id="3ca41-167">Publish your app</span></span>
+## <a name="publish-your-app"></a><span data-ttu-id="7ba1d-167">发布你的应用</span><span class="sxs-lookup"><span data-stu-id="7ba1d-167">Publish your app</span></span>
 
-<span data-ttu-id="3ca41-168">准备好分发应用后，使用 [dotnet publish](../tools/dotnet-publish.md) 命令在 bin\\debug\\netcoreapp3.1\\publish\\（非 Windows 系统使用 `/`）处生成 publish 文件夹   。</span><span class="sxs-lookup"><span data-stu-id="3ca41-168">Once you're ready to distribute your app, use the [dotnet publish](../tools/dotnet-publish.md) command to generate the _publish_ folder at _bin\\debug\\netcoreapp3.1\\publish\\_ (use `/` for non-Windows systems).</span></span> <span data-ttu-id="3ca41-169">可以将 publish  文件夹的内容分发到其他平台，只要这些平台安装了 dotnet 运行时即可。</span><span class="sxs-lookup"><span data-stu-id="3ca41-169">You can distribute the contents of the _publish_ folder to other platforms as long as they've already installed the dotnet runtime.</span></span>
+<span data-ttu-id="7ba1d-168">准备好分发应用后，使用 [dotnet publish](../tools/dotnet-publish.md) 命令在 bin_debug_netcoreapp3.1_publish\\（非 Windows 系统使用 \\）处生成 publish 文件夹\\\\_ `/`。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-168">Once you're ready to distribute your app, use the [dotnet publish](../tools/dotnet-publish.md) command to generate the _publish_ folder at _bin\\debug\\netcoreapp3.1\\publish\\_ (use `/` for non-Windows systems).</span></span> <span data-ttu-id="7ba1d-169">可以将 publish  文件夹的内容分发到其他平台，只要这些平台安装了 dotnet 运行时即可。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-169">You can distribute the contents of the _publish_ folder to other platforms as long as they've already installed the dotnet runtime.</span></span>
 
 ```dotnetcli
 dotnet publish
 ```
 
-<span data-ttu-id="3ca41-170">将获得类似于下面的输出。</span><span class="sxs-lookup"><span data-stu-id="3ca41-170">You get output similar to the following.</span></span>
+<span data-ttu-id="7ba1d-170">将获得类似于下面的输出。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-170">You get output similar to the following.</span></span>
 
 ```console
 Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Core
@@ -193,21 +193,21 @@ Copyright (C) Microsoft Corporation. All rights reserved.
   Hello -> C:\Code\Temp\Hello\bin\Debug\netcoreapp3.1\publish\
 ```
 
-<span data-ttu-id="3ca41-171">上面的输出可能会因当前文件夹和操作系统而有所不同，但输出应类似。</span><span class="sxs-lookup"><span data-stu-id="3ca41-171">The output above may differ based on your current folder and operating system, but the output should be similar.</span></span>
+<span data-ttu-id="7ba1d-171">上面的输出可能会因当前文件夹和操作系统而有所不同，但输出应类似。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-171">The output above may differ based on your current folder and operating system, but the output should be similar.</span></span>
 
-<span data-ttu-id="3ca41-172">可以使用 [dotnet](../tools/dotnet.md) 命令运行已发布的应用：</span><span class="sxs-lookup"><span data-stu-id="3ca41-172">You can run your published app with the [dotnet](../tools/dotnet.md) command:</span></span>
+<span data-ttu-id="7ba1d-172">可以使用 [dotnet](../tools/dotnet.md) 命令运行已发布的应用：</span><span class="sxs-lookup"><span data-stu-id="7ba1d-172">You can run your published app with the [dotnet](../tools/dotnet.md) command:</span></span>
 
 ```dotnetcli
 dotnet bin\Debug\netcoreapp3.1\publish\Hello.dll
 ```
 
-<span data-ttu-id="3ca41-173">将获得以下输出。</span><span class="sxs-lookup"><span data-stu-id="3ca41-173">You get the following output.</span></span>
+<span data-ttu-id="7ba1d-173">将获得以下输出。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-173">You get the following output.</span></span>
 
 ```console
 Hello World!
 ```
 
-<span data-ttu-id="3ca41-174">如本文开头处所述，会随 `Hello.dll` 一起创建特定于操作系统的可执行文件。</span><span class="sxs-lookup"><span data-stu-id="3ca41-174">As mentioned at the start of this article, an operating system-specific executable was created along with the `Hello.dll`.</span></span> <span data-ttu-id="3ca41-175">在 Windows 上，这将是 `Hello.exe`；在 Linux 或 macOS 上，这将是 `hello`。</span><span class="sxs-lookup"><span data-stu-id="3ca41-175">On Windows, this would be `Hello.exe`; on Linux or macOS, this would be `hello`.</span></span> <span data-ttu-id="3ca41-176">在上面的示例中，用 `Hello.exe` 或 `Hello` 命名该文件。</span><span class="sxs-lookup"><span data-stu-id="3ca41-176">With the example above, the file is named with `Hello.exe` or `Hello`.</span></span> <span data-ttu-id="3ca41-177">可以直接运行已发布的可执行文件。</span><span class="sxs-lookup"><span data-stu-id="3ca41-177">You can run this published executable directly.</span></span>
+<span data-ttu-id="7ba1d-174">如本文开头处所述，会随 `Hello.dll` 一起创建特定于操作系统的可执行文件。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-174">As mentioned at the start of this article, an operating system-specific executable was created along with the `Hello.dll`.</span></span> <span data-ttu-id="7ba1d-175">在 Windows 上，这将是 `Hello.exe`；在 Linux 或 macOS 上，这将是 `hello`。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-175">On Windows, this would be `Hello.exe`; on Linux or macOS, this would be `hello`.</span></span> <span data-ttu-id="7ba1d-176">在上面的示例中，用 `Hello.exe` 或 `Hello` 命名该文件。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-176">With the example above, the file is named with `Hello.exe` or `Hello`.</span></span> <span data-ttu-id="7ba1d-177">可以直接运行已发布的可执行文件。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-177">You can run this published executable directly.</span></span>
 
 ```console
 .\bin\Debug\netcoreapp3.1\publish\Hello.exe
@@ -215,12 +215,12 @@ Hello World!
 Hello World!
 ```
 
-## <a name="conclusion"></a><span data-ttu-id="3ca41-178">结束语</span><span class="sxs-lookup"><span data-stu-id="3ca41-178">Conclusion</span></span>
+## <a name="conclusion"></a><span data-ttu-id="7ba1d-178">结束语</span><span class="sxs-lookup"><span data-stu-id="7ba1d-178">Conclusion</span></span>
 
-<span data-ttu-id="3ca41-179">就是这么简单！</span><span class="sxs-lookup"><span data-stu-id="3ca41-179">And that's it!</span></span> <span data-ttu-id="3ca41-180">现在，可以开始使用此处学到的基本概念来创建自己的程序了。</span><span class="sxs-lookup"><span data-stu-id="3ca41-180">Now, you can start using the basic concepts learned here to create your own programs.</span></span>
+<span data-ttu-id="7ba1d-179">这就是所有的操作！</span><span class="sxs-lookup"><span data-stu-id="7ba1d-179">And that's it!</span></span> <span data-ttu-id="7ba1d-180">现在，可以开始使用此处学到的基本概念来创建自己的程序了。</span><span class="sxs-lookup"><span data-stu-id="7ba1d-180">Now, you can start using the basic concepts learned here to create your own programs.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="3ca41-181">请参阅</span><span class="sxs-lookup"><span data-stu-id="3ca41-181">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7ba1d-181">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7ba1d-181">See also</span></span>
 
-- [<span data-ttu-id="3ca41-182">使用 .NET Core CLI 组织和测试项目</span><span class="sxs-lookup"><span data-stu-id="3ca41-182">Organizing and testing projects with the .NET Core CLI</span></span>](testing-with-cli.md)
-- [<span data-ttu-id="3ca41-183">使用 .NET Core CLI 发布 .NET Core 应用</span><span class="sxs-lookup"><span data-stu-id="3ca41-183">Publish .NET Core apps with the .NET Core CLI</span></span>](../deploying/deploy-with-cli.md)
-- [<span data-ttu-id="3ca41-184">.NET Core 应用程序部署</span><span class="sxs-lookup"><span data-stu-id="3ca41-184">.NET Core application deployment</span></span>](../deploying/index.md)
+- [<span data-ttu-id="7ba1d-182">使用 .NET Core CLI 组织和测试项目</span><span class="sxs-lookup"><span data-stu-id="7ba1d-182">Organizing and testing projects with the .NET Core CLI</span></span>](testing-with-cli.md)
+- [<span data-ttu-id="7ba1d-183">使用 .NET Core CLI 发布 .NET Core 应用</span><span class="sxs-lookup"><span data-stu-id="7ba1d-183">Publish .NET Core apps with the .NET Core CLI</span></span>](../deploying/deploy-with-cli.md)
+- [<span data-ttu-id="7ba1d-184">.NET Core 应用程序部署</span><span class="sxs-lookup"><span data-stu-id="7ba1d-184">.NET Core application deployment</span></span>](../deploying/index.md)

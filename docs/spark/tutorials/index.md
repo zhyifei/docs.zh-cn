@@ -3,21 +3,21 @@ title: .NET for Apache Spark 教程
 description: 浏览 .NET for Apache Spark 教程，了解如何将 Apache Spark 集成到 .NET 应用程序中。
 ms.date: 05/17/2019
 ms.openlocfilehash: fde70dfbe5d8c09c4af63ecae5608ff0f3bb2b9b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "72583489"
 ---
-# <a name="net-for-apache-spark-tutorials"></a><span data-ttu-id="69fac-103">.NET for Apache Spark 教程</span><span class="sxs-lookup"><span data-stu-id="69fac-103">.NET for Apache Spark tutorials</span></span>
+# <a name="net-for-apache-spark-tutorials"></a><span data-ttu-id="c8253-103">.NET for Apache Spark 教程</span><span class="sxs-lookup"><span data-stu-id="c8253-103">.NET for Apache Spark tutorials</span></span>
 
-<span data-ttu-id="69fac-104">可通过以下教程，了解如何使用 [.NET for Apache Spark](../index.yml) 通过 Apache Spark 生成自定义大数据解决方案以及如何将它们集成到 .NET 应用程序中：</span><span class="sxs-lookup"><span data-stu-id="69fac-104">The following tutorials enable you to understand how to use [.NET for Apache Spark](../index.yml) to build custom big data solutions with Apache Spark and integrate them into your .NET applications:</span></span>
+<span data-ttu-id="c8253-104">可通过以下教程，了解如何使用 [.NET for Apache Spark](../index.yml) 通过 Apache Spark 生成自定义大数据解决方案以及如何将它们集成到 .NET 应用程序中：</span><span class="sxs-lookup"><span data-stu-id="c8253-104">The following tutorials enable you to understand how to use [.NET for Apache Spark](../index.yml) to build custom big data solutions with Apache Spark and integrate them into your .NET applications:</span></span>
 
-* <span data-ttu-id="69fac-105">[入门](get-started.md)：演示如何生成和运行 .NET for Apache Spark 应用程序。</span><span class="sxs-lookup"><span data-stu-id="69fac-105">[Get started](get-started.md): demonstrates build and run a simple .NET for Apache Spark application.</span></span>
-* <span data-ttu-id="69fac-106">[将 .NET for Apache Spark 应用程序部署到 Azure HDInsight](hdinsight-deployment.md)：演示如何将 .NET for Apache Spark 应用程序部署到 Azure HDInsight。</span><span class="sxs-lookup"><span data-stu-id="69fac-106">[Deploy a .NET for Apache Spark application to Azure HDInsight](hdinsight-deployment.md): demonstrates how to deploy your .NET for Apache Spark application to Azure HDInsight.</span></span>
-* <span data-ttu-id="69fac-107">[将 .NET for Apache Spark 应用程序部署到 Amazon EMR Spark](amazon-emr-spark-deployment.md)：演示如何将 .NET for Apache Spark 应用程序部署到 Amazon EMR Spark。</span><span class="sxs-lookup"><span data-stu-id="69fac-107">[Deploy a .NET for Apache Spark application to Amazon EMR Spark](amazon-emr-spark-deployment.md): demonstrates how to deploy your .NET for Apache Spark application to Amazon EMR Spark.</span></span>
-* <span data-ttu-id="69fac-108">[将 a .NET for Apache Spark 应用程序部署到 Databricks](databricks-deployment.md)：演示如何将 .NET for Apache Spark 应用程序部署到 Databricks。</span><span class="sxs-lookup"><span data-stu-id="69fac-108">[Deploy a .NET for Apache Spark application to Databricks](databricks-deployment.md): demonstrates how to deploy your .NET for Apache Spark application to Databricks.</span></span>
+* <span data-ttu-id="c8253-105">[入门](get-started.md)：演示如何生成和运行 .NET for Apache Spark 应用程序。</span><span class="sxs-lookup"><span data-stu-id="c8253-105">[Get started](get-started.md): demonstrates build and run a simple .NET for Apache Spark application.</span></span>
+* <span data-ttu-id="c8253-106">[将 .NET for Apache Spark 应用程序部署到 Azure HDInsight](hdinsight-deployment.md)：演示如何将 .NET for Apache Spark 应用程序部署到 Azure HDInsight。</span><span class="sxs-lookup"><span data-stu-id="c8253-106">[Deploy a .NET for Apache Spark application to Azure HDInsight](hdinsight-deployment.md): demonstrates how to deploy your .NET for Apache Spark application to Azure HDInsight.</span></span>
+* <span data-ttu-id="c8253-107">[将 .NET for Apache Spark 应用程序部署到 Amazon EMR Spark](amazon-emr-spark-deployment.md)：演示如何将 .NET for Apache Spark 应用程序部署到 Amazon EMR Spark。</span><span class="sxs-lookup"><span data-stu-id="c8253-107">[Deploy a .NET for Apache Spark application to Amazon EMR Spark](amazon-emr-spark-deployment.md): demonstrates how to deploy your .NET for Apache Spark application to Amazon EMR Spark.</span></span>
+* <span data-ttu-id="c8253-108">[将 a .NET for Apache Spark 应用程序部署到 Databricks](databricks-deployment.md)：演示如何将 .NET for Apache Spark 应用程序部署到 Databricks。</span><span class="sxs-lookup"><span data-stu-id="c8253-108">[Deploy a .NET for Apache Spark application to Databricks](databricks-deployment.md): demonstrates how to deploy your .NET for Apache Spark application to Databricks.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="69fac-109">后续步骤</span><span class="sxs-lookup"><span data-stu-id="69fac-109">Next Steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="c8253-109">后续步骤</span><span class="sxs-lookup"><span data-stu-id="c8253-109">Next Steps</span></span>
 
-<span data-ttu-id="69fac-110">有关使用 .NET for Apache Spark 的更多示例，请参阅 [GitHub 上的 .NET for Apache Spark 示例](https://github.com/dotnet/spark#samples)。</span><span class="sxs-lookup"><span data-stu-id="69fac-110">For more examples that use .NET for Apache Spark, check out the [.NET for Apache Spark samples on GitHub](https://github.com/dotnet/spark#samples).</span></span>
+<span data-ttu-id="c8253-110">有关使用 .NET for Apache Spark 的更多示例，请参阅 [GitHub 上的 .NET for Apache Spark 示例](https://github.com/dotnet/spark#samples)。</span><span class="sxs-lookup"><span data-stu-id="c8253-110">For more examples that use .NET for Apache Spark, check out the [.NET for Apache Spark samples on GitHub](https://github.com/dotnet/spark#samples).</span></span>

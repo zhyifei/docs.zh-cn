@@ -7,29 +7,29 @@ helpviewer_keywords:
 - partial methods [C#]
 ms.assetid: 43f40242-17e0-4452-8573-090503ad3137
 ms.openlocfilehash: 62efd8b47fb565316b417a65e1b0fe37e40786c8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713217"
 ---
-# <a name="partial-method-c-reference"></a><span data-ttu-id="e81a3-102">分部方法（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="e81a3-102">partial method (C# Reference)</span></span>
+# <a name="partial-method-c-reference"></a><span data-ttu-id="3d794-102">分部方法（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="3d794-102">partial method (C# Reference)</span></span>
 
-<span data-ttu-id="e81a3-103">分部方法在分部类型的一部分中定义了签名，并在该类型的另一部分中定义了实现。</span><span class="sxs-lookup"><span data-stu-id="e81a3-103">A partial method has its signature defined in one part of a partial type, and its implementation defined in another part of the type.</span></span> <span data-ttu-id="e81a3-104">通过分部方法，类设计器可提供与事件处理程序类似的方法挂钩，以便开发者决定是否实现。</span><span class="sxs-lookup"><span data-stu-id="e81a3-104">Partial methods enable class designers to provide method hooks, similar to event handlers, that developers may decide to implement or not.</span></span> <span data-ttu-id="e81a3-105">如果开发者不提供实现，则编译器在编译时删除签名。</span><span class="sxs-lookup"><span data-stu-id="e81a3-105">If the developer does not supply an implementation, the compiler removes the signature at compile time.</span></span> <span data-ttu-id="e81a3-106">以下条件适用于分部方法：</span><span class="sxs-lookup"><span data-stu-id="e81a3-106">The following conditions apply to partial methods:</span></span>
+<span data-ttu-id="3d794-103">分部方法在分部类型的一部分中定义了签名，并在该类型的另一部分中定义了实现。</span><span class="sxs-lookup"><span data-stu-id="3d794-103">A partial method has its signature defined in one part of a partial type, and its implementation defined in another part of the type.</span></span> <span data-ttu-id="3d794-104">通过分部方法，类设计器可提供与事件处理程序类似的方法挂钩，以便开发者决定是否实现。</span><span class="sxs-lookup"><span data-stu-id="3d794-104">Partial methods enable class designers to provide method hooks, similar to event handlers, that developers may decide to implement or not.</span></span> <span data-ttu-id="3d794-105">如果开发者不提供实现，则编译器在编译时删除签名。</span><span class="sxs-lookup"><span data-stu-id="3d794-105">If the developer does not supply an implementation, the compiler removes the signature at compile time.</span></span> <span data-ttu-id="3d794-106">以下条件适用于分部方法：</span><span class="sxs-lookup"><span data-stu-id="3d794-106">The following conditions apply to partial methods:</span></span>
 
-- <span data-ttu-id="e81a3-107">分部类型各部分中的签名必须匹配。</span><span class="sxs-lookup"><span data-stu-id="e81a3-107">Signatures in both parts of the partial type must match.</span></span>
+- <span data-ttu-id="3d794-107">分部类型各部分中的签名必须匹配。</span><span class="sxs-lookup"><span data-stu-id="3d794-107">Signatures in both parts of the partial type must match.</span></span>
 
-- <span data-ttu-id="e81a3-108">方法必须返回 void。</span><span class="sxs-lookup"><span data-stu-id="e81a3-108">The method must return void.</span></span>
+- <span data-ttu-id="3d794-108">方法必须返回 void。</span><span class="sxs-lookup"><span data-stu-id="3d794-108">The method must return void.</span></span>
 
-- <span data-ttu-id="e81a3-109">不允许使用访问修饰符。</span><span class="sxs-lookup"><span data-stu-id="e81a3-109">No access modifiers are allowed.</span></span> <span data-ttu-id="e81a3-110">分部方法是隐式专用的。</span><span class="sxs-lookup"><span data-stu-id="e81a3-110">Partial methods are implicitly private.</span></span>
+- <span data-ttu-id="3d794-109">不允许使用访问修饰符。</span><span class="sxs-lookup"><span data-stu-id="3d794-109">No access modifiers are allowed.</span></span> <span data-ttu-id="3d794-110">分部方法是隐式专用的。</span><span class="sxs-lookup"><span data-stu-id="3d794-110">Partial methods are implicitly private.</span></span>
 
-<span data-ttu-id="e81a3-111">下列示例显示在分部类的两个部分中定义的分部方法：</span><span class="sxs-lookup"><span data-stu-id="e81a3-111">The following example shows a partial method defined in two parts of a partial class:</span></span>
+<span data-ttu-id="3d794-111">下列示例显示在分部类的两个部分中定义的分部方法：</span><span class="sxs-lookup"><span data-stu-id="3d794-111">The following example shows a partial method defined in two parts of a partial class:</span></span>
 
 [!code-csharp[csrefKeywordsContextual#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#9)]
 
-<span data-ttu-id="e81a3-112">有关详细信息，请参阅[分部类和方法](../../programming-guide/classes-and-structs/partial-classes-and-methods.md)。</span><span class="sxs-lookup"><span data-stu-id="e81a3-112">For more information, see [Partial Classes and Methods](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).</span></span>
+<span data-ttu-id="3d794-112">有关详细信息，请参阅[分部类和方法](../../programming-guide/classes-and-structs/partial-classes-and-methods.md)。</span><span class="sxs-lookup"><span data-stu-id="3d794-112">For more information, see [Partial Classes and Methods](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e81a3-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="e81a3-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3d794-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3d794-113">See also</span></span>
 
-- [<span data-ttu-id="e81a3-114">C# 参考</span><span class="sxs-lookup"><span data-stu-id="e81a3-114">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="e81a3-115">分部类型</span><span class="sxs-lookup"><span data-stu-id="e81a3-115">partial type</span></span>](partial-type.md)
+- [<span data-ttu-id="3d794-114">C# 参考</span><span class="sxs-lookup"><span data-stu-id="3d794-114">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="3d794-115">分部类型</span><span class="sxs-lookup"><span data-stu-id="3d794-115">partial type</span></span>](partial-type.md)
