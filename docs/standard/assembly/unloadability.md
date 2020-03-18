@@ -5,10 +5,10 @@ author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
 ms.openlocfilehash: 267c2209556b66ab3541c9c79c99d7eceb2024da
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159736"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>如何在 .NET Core 中使用和调试程序集可卸载性
@@ -22,7 +22,7 @@ ms.locfileid: "78159736"
 - 没有线程将程序集中的方法加载到其调用堆栈上的 `AssemblyLoadContext` 中。
 - 程序集中的任何类型都不会加载到 `AssemblyLoadContext`，这些类型的实例本身由以下引用：
   - `AssemblyLoadContext` 外部的引用，弱引用（<xref:System.WeakReference> 或 <xref:System.WeakReference%601>）除外。
-  - `AssemblyLoadContext` 内部和外部的强垃圾回收器 (GC) 句柄（[GCHandleType.Normal](xref:System.Runtime.InteropServices.GCHandleType.Normal) 或 [GCHandleType.Pinned](xref:System.Runtime.InteropServices.GCHandleType.Pinned)）。
+  - [ 内部和外部的强垃圾回收器 (GC) 句柄（](xref:System.Runtime.InteropServices.GCHandleType.Normal)GCHandleType.Normal[ 或 ](xref:System.Runtime.InteropServices.GCHandleType.Pinned)GCHandleType.Pinned`AssemblyLoadContext`）。
 
 ## <a name="use-collectible-assemblyloadcontext"></a>使用可回收的 AssemblyLoadContext
 
@@ -38,7 +38,7 @@ ms.locfileid: "78159736"
 
 如你所见，`Load` 方法返回 `null`。 这意味着所有依赖项程序集都会加载到默认上下文中，而新上下文仅包含显式加载到其中的程序集。
 
-若要在 `AssemblyLoadContext` 中加载部分或全部依赖项，可以在 `Load` 方法中使用 `AssemblyDependencyResolver`。 `AssemblyDependencyResolver` 将程序集名称解析为绝对程序集文件路径。 解析程序使用加载到上下文中的主程序集的目录中的 .deps.json 文件和程序集文件  。
+若要在 `AssemblyLoadContext` 中加载部分或全部依赖项，可以在 `AssemblyDependencyResolver` 方法中使用 `Load`。 `AssemblyDependencyResolver` 将程序集名称解析为绝对程序集文件路径。 解析程序使用加载到上下文中的主程序集的目录中的 .deps.json 文件和程序集文件  。
 
 [!code-csharp[Advanced custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/complex_assemblyloadcontext.cs)]
 
@@ -56,7 +56,7 @@ ms.locfileid: "78159736"
 
 [!code-csharp[Part 2](~/samples/snippets/standard/assembly/unloading/simple_example.cs#4)]
 
-在 `Main` 方法返回后，可通过在自定义 `AssemblyLoadContext` 上调用 `Unload` 方法或删除对 `AssemblyLoadContext` 的引用来启动卸载：
+在 `Main` 方法返回后，可通过在自定义 `Unload` 上调用 `AssemblyLoadContext` 方法或删除对 `AssemblyLoadContext` 的引用来启动卸载：
 
 [!code-csharp[Part 3](~/samples/snippets/standard/assembly/unloading/simple_example.cs#5)]
 
@@ -88,7 +88,7 @@ ms.locfileid: "78159736"
   - 此类程序集中的类型的实例。
 - 从加载到可回收的 `AssemblyLoadContext` 程序集中运行代码的线程。
 - 在可回收的 `AssemblyLoadContext` 中创建的自定义非可回收 `AssemblyLoadContext` 类型的实例。
-- 将回调设置为自定义 `AssemblyLoadContext` 中的方法的挂起 <xref:System.Threading.RegisteredWaitHandle> 实例。
+- 将回调设置为自定义 <xref:System.Threading.RegisteredWaitHandle> 中的方法的挂起 `AssemblyLoadContext` 实例。
 
 > [!TIP]
 > 在以下情况下可能会出现存储在堆栈槽或处理器寄存器中、可阻止卸载 `AssemblyLoadContext` 的对象引用：
@@ -98,7 +98,7 @@ ms.locfileid: "78159736"
 
 ## <a name="debug-unloading-issues"></a>调试卸载问题
 
-调试卸载问题可能比较繁琐。 你可能会遇到这样的情况：你不知道哪些内容可以使 `AssemblyLoadContext` 保持活动状态，但卸载会失败。 帮助解决此问题的最佳武器是带有 SOS 插件的 WinDbg（Unix 上的 LLDB）。 需要查找哪些内容使属于特定 `AssemblyLoadContext` 的 `LoaderAllocator` 保持活动状态。 SOS 插件可让你查看 GC 堆对象、其层次结构和根。
+调试卸载问题可能比较繁琐。 你可能会遇到这样的情况：你不知道哪些内容可以使 `AssemblyLoadContext` 保持活动状态，但卸载会失败。 帮助解决此问题的最佳武器是带有 SOS 插件的 WinDbg（Unix 上的 LLDB）。 需要查找哪些内容使属于特定 `LoaderAllocator` 的 `AssemblyLoadContext` 保持活动状态。 SOS 插件可让你查看 GC 堆对象、其层次结构和根。
 
 若要将插件加载到调试器中，请在调试器命令行中输入以下命令：
 
@@ -137,7 +137,7 @@ Statistics:
 Total 2 objects
 ```
 
-在下面的“Statistics:”部分中，检查属于 `System.Reflection.LoaderAllocator` 的 `MT` (`MethodTable`)，这是我们关注的对象。 然后在开头的列表中，查找 `MT` 匹配该条目的条目，并获取对象本身的地址。 在示例中，其为“000002b78000ce40”。
+在下面的“Statistics:”部分中，检查属于 `MT` 的 `MethodTable` (`System.Reflection.LoaderAllocator`)，这是我们关注的对象。 然后在开头的列表中，查找 `MT` 匹配该条目的条目，并获取对象本身的地址。 在示例中，其为“000002b78000ce40”。
 
 现在我们知道了 `LoaderAllocator` 对象的地址，可使用另一个命令来查找其 GC 根：
 
@@ -249,6 +249,6 @@ OS Thread Id: 0x60bc (7)
 
 ## <a name="program-loaded-into-the-testassemblyloadcontext"></a>程序已加载到 TestAssemblyLoadContext 中
 
-以下代码表示传递给主测试程序中 `ExecuteAndUnload` 方法的 test.dll  。
+以下代码表示传递给主测试程序中  *方法的 test.dll*`ExecuteAndUnload`。
 
 [!code-csharp[Program loaded into the TestAssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/unloadability_issues_example_test.cs)]

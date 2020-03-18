@@ -3,10 +3,10 @@ title: .NET Core 命令行工具体系结构
 description: 了解 .NET Core 工具层及最新版本中的更改。
 ms.date: 03/06/2017
 ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092910"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 工具中变更的高级概述

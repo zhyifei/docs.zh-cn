@@ -3,10 +3,10 @@ title: protected internal - C# 参考
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 877df74b51fb859043171619f5687ecddb8409d1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713191"
 ---
 # <a name="protected-internal-c-reference"></a>受保护的内部成员（C# 参考）
@@ -57,7 +57,7 @@ class DerivedClass : BaseClass
 
 此示例包含两个文件，即 `Assembly1.cs` 和 `Assembly2.cs`。
 第一个文件包含公共基类 `BaseClass` 和另一个类 `TestAccess`。 `BaseClass` 拥有受保护的内部成员 `myValue`，由 `TestAccess` 类型访问。
-在第二个文件中，如果尝试通过 `BaseClass` 的实例访问 `myValue` ，会生成错误，但如果尝试通过一个派生类的实例来访问此成员，`DerivedClass` 会成功。
+在第二个文件中，如果尝试通过 `myValue` 的实例访问 `BaseClass` ，会生成错误，但如果尝试通过一个派生类的实例来访问此成员，`DerivedClass` 会成功。
 
 结构成员不能为 `protected internal`，因为无法继承结构。
 
@@ -65,7 +65,7 @@ class DerivedClass : BaseClass
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
@@ -75,5 +75,5 @@ class DerivedClass : BaseClass
 - [修饰符](index.md)
 - [public](public.md)
 - [private](private.md)
-- [internal](internal.md)
+- [内部](internal.md)
 - [Internal Virtual 关键字的安全问题](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: c5e4b5619394f99a419fe48aee190ad741ea8c0d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73041654"
 ---
 ### <a name="identity-ui-uses-static-web-assets-feature"></a>标识：UI 使用静态 Web 资产功能
@@ -33,7 +33,7 @@ ASP.NET Core 3.0 引入了静态 Web 资产功能，标识 UI 已采用此功能
 
 采用静态 Web 资产功能要求 UI 框架配置迁移到 MSBuild。 要在哪个框架上进行嵌入的决策是生成时决策，而非运行时决策。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 查看站点 UI，以确保新的 Bootstrap 4 组件兼容。 如有必要，请使用 `IdentityUIFrameworkVersion` MSBuild 属性还原为 Bootstrap 3。 将属性添加到项目文件中的 `<PropertyGroup>` 元素：
 

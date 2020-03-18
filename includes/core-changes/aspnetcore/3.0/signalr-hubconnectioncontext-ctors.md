@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 8979b7ffc09726c6588fe3ba60b916202697648f
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522663"
 ---
 ### <a name="signalr-hubconnectioncontext-constructors-changed"></a>SignalR：已更改 HubConnectionContext 构造函数
@@ -35,7 +35,7 @@ public HubConnectionContext(ConnectionContext connectionContext, HubConnectionCo
 
 新的构造函数使用新的选项对象。 因此，可以在以后展开 `HubConnectionContext` 的功能，而无需执行更多的构造函数和中断性变更。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 而不是使用以下构造函数：
 

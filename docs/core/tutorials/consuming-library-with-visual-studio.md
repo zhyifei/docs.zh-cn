@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet
 ms.openlocfilehash: 4eb75f23359334ea483cba1498f1804c4b24c80c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920456"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio"></a>在 Visual Studio 中使用 .NET Standard 库
@@ -30,7 +30,7 @@ ms.locfileid: "76920456"
 
 就像[在 Visual Studio 中测试 .NET Standard 库](testing-library-with-visual-studio.md)所述的将单元测试和类库添加到同一解决方案中一样，可以将应用程序添加到同一解决方案中。 例如，可在控制台应用程序中使用类库，此应用程序将提示用户输入字符串，并报告第一个字符是否为大写：
 
-1. 打开在[在 Visual Studio 中生成 .NET Standard 库](library-with-visual-studio.md)一文中创建的 `ClassLibraryProjects` 解决方案。
+1. 打开在`ClassLibraryProjects`在 Visual Studio 中生成 .NET Standard 库[一文中创建的 ](library-with-visual-studio.md) 解决方案。
 
 1. 将名为“ShowCase”的新 .NET Core 控制台应用程序添加到解决方案。
 
@@ -61,7 +61,7 @@ ms.locfileid: "76920456"
 
    该程序会提示用户输入字符串。 它会指明字符串是否以大写字符开头。 如果用户没有输入字符串就按 Enter 键，那么应用程序会终止，控制台窗口会关闭。
 
-1. 必要时，将工具栏更改为编译 `ShowCase` 项目的“调试”  版本。 选择“ShowCase”  按钮上的绿色箭头，编译并运行程序。
+1. 必要时，将工具栏更改为编译  **项目的“调试”** `ShowCase`版本。 选择“ShowCase”  按钮上的绿色箭头，编译并运行程序。
 
    ![Visual Studio 中显示“调试”按钮的项目工具栏](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 

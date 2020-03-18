@@ -3,10 +3,10 @@ title: 编程概念 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
 ms.openlocfilehash: 3fcb1ca76c49919b00b74d955b7aadaa2e882f2a
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70168347"
 ---
 # <a name="programming-concepts-c"></a>编程概念 (C#)
@@ -25,7 +25,7 @@ ms.locfileid: "70168347"
 |[表达式树 (C#)](./expression-trees/index.md)|介绍了如何使用表达式树来启用动态修改可执行代码。|  
 |[迭代器 (C#)](./iterators.md)|介绍了用于单步执行集合并一次返回一个元素的迭代器。|  
 |[语言集成查询 (LINQ) (C#)](./linq/index.md)|介绍了 C# 语言语法中强大的查询功能，以及用于查询关系数据库、XML 文档、数据集和内存中集合的模型。|  
-|[面向对象的编程 (C#)](./object-oriented-programming.md)|介绍了面向对象的常见概念，包括封装、继承和多态性。|  
+|[面向对象的编程 (C#)](./object-oriented-programming.md)|介绍了面向对象的常见概念，包括封装、继承和多形性。|  
 |[反射 (C#)](./reflection.md)|介绍了如何使用反射来动态创建类型实例、将类型绑定到现有对象，或从现有对象获取类型并调用其方法或访问其字段和属性。|  
 |[序列化 (C#)](./serialization/index.md)|还介绍了有关二进制、XML 和 SOAP 序列化的关键概念。|  
   

@@ -3,10 +3,10 @@ title: 如何对 .NET Core 运行时和 SDK 进行版本控制
 description: 本文介绍了 .NET Core SDK 和运行时的版本控制方式（类似于语义版本控制）。
 ms.date: 07/26/2018
 ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75777319"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 的版本控制方式概述
@@ -41,7 +41,7 @@ SDK 版本号的第三个位置同时传达次要编号和修补程序编号。 
 
 ## <a name="semantic-versioning"></a>语义化版本控制
 
-.NET Core 运行时大致遵循[语义版本控制 (SemVer)](https://semver.org/)，采用 `MAJOR.MINOR.PATCH` 版本控制，通过版本号的各部分来描述更改程度和类型  。
+.NET Core 运行时大致遵循*语义版本控制 (SemVer)* ，采用 [ 版本控制，通过版本号的各部分来描述更改程度和类型](https://semver.org/)`MAJOR.MINOR.PATCH`。
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
@@ -80,11 +80,11 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ### <a name="preview-versions"></a>预览版
 
-预览版向版本中追加了 `-preview[number]-([build]|"final")`。 例如 `2.0.0-preview1-final`。
+预览版向版本中追加了 `-preview[number]-([build]|"final")`。 例如，`2.0.0-preview1-final` 。
 
 ### <a name="servicing-versions"></a>服务版本
 
-在版本发布后，版本分支通常停止生成日常版本，而开始生成服务版本。 服务版本向版本追加了 `-servicing-[number]`。 例如 `2.0.1-servicing-006924`。
+在版本发布后，版本分支通常停止生成日常版本，而开始生成服务版本。 服务版本向版本追加了 `-servicing-[number]`。 例如，`2.0.1-servicing-006924` 。
 
 ## <a name="relationship-to-net-standard-versions"></a>与 .NET Standard 版本的关系
 
@@ -104,7 +104,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 | 2.2       | 达 2.0     |
 | 3.0       | 至 2.1     |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [目标框架](../../standard/frameworks.md)
 - [.NET Core 分发打包](../build/distribution-packaging.md)

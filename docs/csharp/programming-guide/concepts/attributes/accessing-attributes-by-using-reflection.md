@@ -3,10 +3,10 @@ title: 使用反射访问特性 (C#)
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
 ms.openlocfilehash: 990b6487e50bfb2d123c3871e5f85da063711d9e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595504"
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>使用反射访问特性 (C#)
@@ -26,7 +26,7 @@ Author anonymousAuthorObject = new Author("P. Ackerman");
 anonymousAuthorObject.version = 1.1;  
 ```  
   
- 但是，在为特性查询 `SampleClass` 之前，代码将不会执行。 对 `SampleClass` 调用 `GetCustomAttributes` 会导致按上述方式构造并初始化一个 `Author` 对象。 如果该类具有其他特性，则将以类似方式构造其他特性对象。 然后 `GetCustomAttributes` 会以数组形式返回 `Author` 对象和任何其他特性对象。 之后你便可以循环访问此数组，根据每个数组元素的类型确定所应用的特性，并从特性对象中提取信息。  
+ 但是，在为特性查询 `SampleClass` 之前，代码将不会执行。 对 `GetCustomAttributes` 调用 `SampleClass` 会导致按上述方式构造并初始化一个 `Author` 对象。 如果该类具有其他特性，则将以类似方式构造其他特性对象。 然后 `GetCustomAttributes` 会以数组形式返回 `Author` 对象和任何其他特性对象。 之后你便可以循环访问此数组，根据每个数组元素的类型确定所应用的特性，并从特性对象中提取信息。  
   
 ## <a name="example"></a>示例  
  此处是一个完整的示例。 定义自定义特性、将其应用于多个实体，并通过反射对其进行检索。  
@@ -113,7 +113,7 @@ class TestAuthorAttribute
 */  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 ms.openlocfilehash: 46e846eaf92835fb2a9130b85ed20749934ca5a1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715718"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe（独立存储工具）
@@ -30,7 +30,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 ## <a name="parameters"></a>参数  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |**/h**[**elp**]|显示该工具的命令语法和选项。|  
 |/list |显示当前用户的所有现有存储。 这包括该用户执行的所有应用程序或程序集的存储。|  
@@ -58,7 +58,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
  实际上，是否为用户启用漫游并不会影响 Storeadm.exe 的管理。 在不使用任何选项的情况下运行此工具会向本地存储应用所有操作。 在使用 /roaming 选项的情况下运行此工具会将所有操作应用于可漫游的存储  。 在使用 /machine 选项的情况下运行此工具会将所有操作应用于计算机存储  。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [工具](index.md)
 - [独立存储](../../standard/io/isolated-storage.md)

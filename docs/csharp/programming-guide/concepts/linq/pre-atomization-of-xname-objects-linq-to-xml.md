@@ -3,10 +3,10 @@ title: XName 对象的预原子化 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e84fbbe7-f072-4771-bfbb-059d18e1ad15
 ms.openlocfilehash: 2fd754a352bd2988e52ec9c67a9915a8e587b107
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69591494"
 ---
 # <a name="pre-atomization-of-xname-objects-linq-to-xml-c"></a>XName 对象的预原子化 (LINQ to XML) (C#)
@@ -117,6 +117,6 @@ DateTime t2 = DateTime.Now;
 Console.WriteLine("Time to construct:{0}", t2 - t1);  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [原子化的 XName 和 XNamespace 对象 (LINQ to XML) (C#)](./atomized-xname-and-xnamespace-objects-linq-to-xml.md)

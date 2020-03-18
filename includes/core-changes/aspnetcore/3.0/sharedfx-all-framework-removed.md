@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 959f3959c28c7d0159be7a213986345e2865b9a2
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394439"
 ---
 ### <a name="shared-framework-removed-microsoftaspnetcoreall"></a>共享框架：已删除 Microsoft.AspNetCore.All
@@ -26,7 +26,7 @@ ms.locfileid: "72394439"
 
 `Microsoft.AspNetCore.All` 元包包含了大量外部依赖项。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 迁移项目以使用 `Microsoft.AspNetCore.App` 框架。 以前在 `Microsoft.AspNetCore.All` 中可用的组件在 NuGet 上仍然可用。 这些组件现可与应用一起部署，而不是包含在共享框架中。
 
@@ -36,7 +36,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影响的 API
 
-无
+None
 
 <!-- 
 

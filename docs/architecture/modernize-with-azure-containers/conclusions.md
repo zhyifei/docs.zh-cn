@@ -3,10 +3,10 @@ title: 结论
 description: 通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序 | 结论
 ms.date: 10/26/2017
 ms.openlocfilehash: c7c4042b224577238ae74bd786d4803e487998e7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69578480"
 ---
 # <a name="conclusions"></a>结论
@@ -28,4 +28,4 @@ ms.locfileid: "69578480"
 - Microsoft Azure 提供最全面、最完整的环境，通过 Windows 容器、云基础结构和 PaaS 服务现代化现有 .NET Framework 应用程序。
 
 >[!div class="step-by-step"]
->[上一篇](walkthroughs-technical-get-started-overview.md)
+>[上一页](walkthroughs-technical-get-started-overview.md)

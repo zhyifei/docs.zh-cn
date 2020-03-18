@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 ms.openlocfilehash: 023c38f66611bd0022699d3f62d90c3923585012
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77094470"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>缓解：基于指针的触控和触笔支持
@@ -52,6 +52,6 @@ ms.locfileid: "77094470"
 
 删除此条目或将其值设置为 `false` 可以禁用此可选堆栈。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [应用程序兼容性](application-compatibility.md)

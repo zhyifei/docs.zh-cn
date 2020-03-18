@@ -4,17 +4,17 @@ description: dotnet nuget push 命令可将包推送到服务器并发布。
 author: karann-msft
 ms.date: 02/14/2020
 ms.openlocfilehash: d4ef8e58908fe488c712debff3b313ac0908b43e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503655"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 **本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
-## <a name="name"></a>“属性”
+## <a name="name"></a>名称
 
 `dotnet nuget push` - 将包推送到服务器，并将其发布。
 
@@ -26,11 +26,11 @@ dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--
 dotnet nuget push [-h|--help]
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet nuget push` 将包推送到服务器，并将其发布。 push 命令使用在系统的 NuGet 配置文件或配置文件链中找到的服务器和凭据详细信息。 有关配置文件的详细信息，请参阅 [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior)（配置 NuGet 行为）。 通过加载 *%AppData%\NuGet\NuGet.config* (Windows) 或 *$HOME/.local/share* (Linux/macOS) 获得 NuGet 的默认配置，然后加载任意 *nuget.config* 或 *.nuget\nuget.config*，从驱动器的根目录开始，并在当前目录中结束。
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 - **`ROOT`**
 
@@ -100,7 +100,7 @@ dotnet nuget push [-h|--help]
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
   ```
   
-  * 将 foo.nupkg 推送到自定义推送源 `https://customsource`（指定 API 密钥）  ：
+  * 将 foo.nupkg 推送到自定义推送源 *（指定 API 密钥）* `https://customsource`：
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/

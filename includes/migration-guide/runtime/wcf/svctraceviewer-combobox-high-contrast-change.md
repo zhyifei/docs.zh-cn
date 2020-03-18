@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 5a45d616001be5a2a2bdf2c654c10526125d7d86
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: cc6d96bd614ff015ae2125c0f1477e18a91a68f7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802601"
 ---
 ### <a name="svctraceviewer-combobox-high-contrast-change"></a>svcTraceViewer ComboBox 对比度更改
@@ -15,4 +15,3 @@ ms.locfileid: "67802601"
 |范围|边缘|
 |Version|4.8|
 |类型|运行时|
-

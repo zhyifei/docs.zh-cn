@@ -3,17 +3,17 @@ title: dotnet build 命令
 description: dotnet build 命令可生成项目及其所有依赖项。
 ms.date: 02/14/2020
 ms.openlocfilehash: 9f9a78ec0a6a25c54c8a727c05081ce6835514ee
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503759"
 ---
-# <a name="dotnet-build"></a>dotnet build
+# <a name="dotnet-build"></a>dotnet 生成
 
 **本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
-## <a name="name"></a>“属性”
+## <a name="name"></a>名称
 
 `dotnet build` - 生成项目及其所有依赖项。
 
@@ -27,7 +27,7 @@ dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--for
 dotnet build [-h|--help]
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet build` 命令将项目及其依赖项生成为一组二进制文件。 二进制文件包括扩展名为 .dll 的中间语言 (IL) 文件中的项目代码  。  根据项目类型和设置，可能会包含其他文件，例如：
 
@@ -41,7 +41,7 @@ dotnet build [-h|--help]
 
 对于面向 .NET Core 3.0 及更高版本的可执行项目，库依赖项会被复制到输出文件夹。 这意味着如果没有其他任何特定于发布的逻辑（例如，Web 项目具有的逻辑），则应可部署生成输出。
 
-构建需要 *project.assets.json* 文件，该文件列出了你的应用程序的依赖项。 此文件在 [`dotnet restore`](dotnet-restore.md) 执行时创建。 如果资产文件未就位，那么工具将无法解析引用程序集，进而导致错误生成。 使用 .NET Core 1.x SDK，需要在运行 `dotnet build` 之前显式运行 `dotnet restore`。 自 .NET Core 2.0 SDK 起，`dotnet restore` 在 `dotnet build` 运行时隐式运行。 若要在运行 build 命令时禁用隐式还原，可以传递 `--no-restore` 选项。
+构建需要 *project.assets.json* 文件，该文件列出了你的应用程序的依赖项。 此文件在 [`dotnet restore`](dotnet-restore.md) 执行时创建。 如果资产文件未就位，那么工具将无法解析引用程序集，进而导致错误生成。 使用 .NET Core 1.x SDK，需要在运行 `dotnet restore` 之前显式运行 `dotnet build`。 自 .NET Core 2.0 SDK 起，`dotnet restore` 在 `dotnet build` 运行时隐式运行。 若要在运行 build 命令时禁用隐式还原，可以传递 `--no-restore` 选项。
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -63,7 +63,7 @@ dotnet build [-h|--help]
 
 运行 `dotnet build` 等同于运行 `dotnet msbuild -restore`；但是，输出的默认详细程度不同。
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 `PROJECT | SOLUTION`
 

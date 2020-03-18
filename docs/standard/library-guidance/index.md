@@ -3,10 +3,10 @@ title: 开放源代码 .NET 库指南
 description: 有关创建高质量的 .NET 库的开发人员最佳做法建议。
 ms.date: 10/17/2018
 ms.openlocfilehash: 4c76dfae6ffc39df7f15381be64e33657067d79d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76731425"
 ---
 # <a name="open-source-library-guidance"></a>开放源代码库指南
@@ -30,7 +30,7 @@ ms.locfileid: "76731425"
 
 每篇文章介绍四种类型的建议：“请执行”  、“请考虑”、  、“请避免”、  和“请勿”  。 建议类型表示了应遵循的程度。
 
-应始终遵循“请执行”  建议。 例如：
+应始终遵循“请执行”  建议。 例如:
 
 ✔️ 请使用 NuGet 包分发库。
 
@@ -47,4 +47,4 @@ ms.locfileid: "76731425"
 ❌ 请勿发布库的强名称和非强名称版本。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
 
 >[!div class="step-by-step"]
->[下一页](get-started.md)
+>[下一部分](get-started.md)

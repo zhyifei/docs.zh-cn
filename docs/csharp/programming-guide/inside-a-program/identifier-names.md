@@ -3,10 +3,10 @@ title: 标识符名称
 description: 了解 C# 编程语言中有效标识符名称的规则。
 ms.date: 08/21/2018
 ms.openlocfilehash: bef6e2ea285b5391af3350ae42a4105d140c6d1b
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77673363"
 ---
 # <a name="identifier-names"></a>标识符名称

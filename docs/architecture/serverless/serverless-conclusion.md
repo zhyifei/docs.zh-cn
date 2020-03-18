@@ -5,10 +5,10 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: ae9fc47bf07a7e28688942b856b4743ae7aadc36
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69577240"
 ---
 # <a name="conclusion"></a>结束语
@@ -30,4 +30,4 @@ ms.locfileid: "69577240"
 **无服务器作为工具，而不是工具箱。** 无服务器不是应用程序体系结构的独有解决方案。 它是一种可作为混合应用程序的一部分使用的工具，其中可能包含传统层、整体后端和容器。 无服务器可用于增强现有解决方案，而不是应用程序开发的全有或全无型方法。
 
 >[!div class="step-by-step"]
->[上一篇](serverless-business-scenarios.md)
+>[上一页](serverless-business-scenarios.md)

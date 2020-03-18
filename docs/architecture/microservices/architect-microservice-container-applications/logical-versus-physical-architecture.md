@@ -3,10 +3,10 @@ title: 逻辑体系结构与物理体系结构
 description: 了解逻辑和物理体系结构之间的差异。
 ms.date: 09/20/2018
 ms.openlocfilehash: 8d1bfca190eb9b18d46625fa4afdec963eb07054
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834403"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>逻辑体系结构与物理体系结构
@@ -19,7 +19,7 @@ ms.locfileid: "71834403"
 
 这就是应用程序的逻辑体系结构和物理体系结构之间存在的差异。 系统的逻辑体系结构和逻辑边界不一定要与物理或部署体系结构一对一映射。 这种情况存在一定的可能性，但通常不会发生。
 
-尽管已确定某些业务的微服务或界定上下文，但这并不意味着实现它们的最佳方式总是为每个业务微服务创建单一服务（如 ASP.NET Web API）或者单一 Docker 容器。 必须使用单一服务或容器实现每个业务微服务的这一规则过于严苛。
+尽管已确定某些业务的微服务或界定上下文，但这并不意味着实现它们的最佳方式总是为每个业务微服务创建单一服务（如 ASP.NET Web API）或者单一 Docker 容器。 必须使用单一服务或容器实现每个商业微服务的这一规则过于严苛。
 
 因此，业务微服务或界定上下文是一种不一定与物理体系结构一致的逻辑体系结构。 必须通过使代码和状态可独立、可进行版本控制、部署和缩放，让商业微服务或界定上下文能够自治，这一点很重要。
 

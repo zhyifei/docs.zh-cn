@@ -8,10 +8,10 @@ helpviewer_keywords:
 - SendKeys.SendWait examples
 ms.assetid: f1303184-fce4-44fb-88b4-aac5f42d5d77
 ms.openlocfilehash: 033999c07bb5839a264122b2ca330916bdf844b8
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "72919393"
 ---
 # <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>如何：启动应用程序并向其发送击键 (Visual Basic)
@@ -30,7 +30,7 @@ ms.locfileid: "72919393"
 
 对 `Shell` 函数的调用需要完全信任（<xref:System.Security.SecurityException> 类）。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>

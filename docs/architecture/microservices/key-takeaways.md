@@ -3,13 +3,13 @@ title: 关键结论
 description: 从适用于容器化的 .NET 应用程序的 .Net 微服务体系结构指南/电子书中获取关键信息，以便快速了解在使用微服务体系结构时涉及的高级问题，如优缺点、用于设计和开发的 DDD 模式，以及复原能力、安全性和业务流程协调程序的使用。
 ms.date: 10/19/2018
 ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674454"
 ---
-# <a name="key-takeaways"></a>要点
+# <a name="key-takeaways"></a>关键结论
 
 下列总结和关键结论是本指南中最重要的结论。
 
@@ -36,4 +36,4 @@ ms.locfileid: "68674454"
 **业务流程协调程序。** 基于容器的业务流程协调程序（如 Azure Kubernetes 服务和 Azure Service Fabric）是任何重要微服务和基于容器的应用程序的关键部分。 这些应用程序具有高复杂性、可伸缩性需求，并且不断发展。 本指南介绍了业务流程协调程序及其在基于微服务和基于容器的解决方案中的角色。 如果应用程序需要转移到复杂的容器化应用，建议查看其他资源以详细了解业务流程协调程序。
 
 >[!div class="step-by-step"]
->[上一步](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)
+>[上一页](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)

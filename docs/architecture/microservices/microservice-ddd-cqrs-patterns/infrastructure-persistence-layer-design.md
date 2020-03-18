@@ -2,12 +2,12 @@
 title: 设计基础结构持久性层
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 在基础结构持久性层的设计中探索存储库模式。
 ms.date: 10/08/2018
-ms.openlocfilehash: f1c5df1cc5672760374610a416ae22b45cd76c25
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e10c8c1569089d5c8274df655ad7a12f2ebb7c22
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737943"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846804"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>设计基础结构持久性层
 
@@ -109,9 +109,6 @@ public interface IRepository<T> where T : IAggregateRoot
 ## <a name="additional-resources"></a>其他资源
 
 ### <a name="repository-pattern"></a>存储库模式
-
-- **The Repository pattern** \（存储库模式）\
-  <https://deviq.com/repository-pattern/>
 
 - **Edward Hieatt 和 Rob Mee.Repository pattern**（存储库模式）。 \
   <https://martinfowler.com/eaaCatalog/repository.html>

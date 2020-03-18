@@ -5,10 +5,10 @@ helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
 ms.openlocfilehash: cd67aeb82d736b8941b0637494089723e7815505
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713352"
 ---
 # <a name="new-constraint-c-reference"></a>new 约束（C# 参考）
@@ -29,9 +29,9 @@ ms.locfileid: "75713352"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[类型参数约束](~/_csharplang/spec/classes.md#type-parameter-constraints)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/classes.md#type-parameter-constraints)中的[类型参数约束](~/_csharplang/spec/introduction.md)部分。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../../language-reference/index.md)
 - [C# 编程指南](../../programming-guide/index.md)

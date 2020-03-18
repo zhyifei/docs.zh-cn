@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: ac5a3c4f3aefbb59418ad92b2d795f36916f877f
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394480"
 ---
 ### <a name="spas-spaservices-and-nodeservices-marked-obsolete"></a>SPA：SpaServices 和 NodeServices 被标记为过时
@@ -46,7 +46,7 @@ ASP.NET Core 支持与各种单页应用 (SPA) 框架（包括 Angular、React �
 - 2\.1 之前的集成机制被标记为已过时。
 - 支持 npm 包被标记为已弃用。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 如果正在使用这些包，请更新应用以使用以下功能：
 

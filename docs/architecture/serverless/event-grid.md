@@ -5,10 +5,10 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 3c577139c12567e762aabd58c9dc29457fa37aa1
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522712"
 ---
 # <a name="event-grid"></a>事件网格
@@ -90,7 +90,7 @@ Azure 提供了多个消息传递服务，包括[事件中心](https://docs.micr
 
 使用事件网格的主要好处是 Azure 生成的自动消息。 在 Azure 中，资源自动发布到主题  ，使你可以订阅各种事件。 下表列出了可自动使用的资源类型、消息类型和事件。
 
-| Azure 资源 | 事件类型 | 说明 |
+| Azure 资源 | 事件类型 | 描述 |
 | -------------- | ---------- | ----------- |
 | Azure 订阅 | Microsoft.Resources.ResourceWriteSuccess | 当资源创建或更新操作成功时引发。 |
 | | Microsoft.Resources.ResourceWriteFailure | 当资源创建或更新操作失败时引发。 |

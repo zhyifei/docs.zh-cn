@@ -4,10 +4,10 @@ description: 表达式、操作数和运算符是 C# 语言的构建基块
 ms.date: 02/27/2020
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
 ms.openlocfilehash: 209b5da01cd7539f2bd97023f40fd149910b6f1d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159151"
 ---
 # <a name="expressions"></a>表达式
@@ -18,8 +18,8 @@ ms.locfileid: "78159151"
 
 如果操作数两边的两个运算符的优先级相同，那么运算符的*结合性*决定了运算的执行顺序：
 
-* 除了赋值运算符和 null 合并运算符之外，所有二元运算符均为左结合  运算符，即从左向右执行运算。 例如，`x + y + z` 将计算为 `(x + y) + z`。
-* 赋值运算符、null 合并 `??` 和 `??=` 运算符和条件运算符 `?:` 为右结合  运算符，即从右向左执行运算。 例如，`x = y = z` 将计算为 `x = (y = z)`。
+* 除了赋值运算符和 null 合并运算符之外，所有二元运算符均为左结合  运算符，即从左向右执行运算。 例如， `x + y + z` 将计算为 `(x + y) + z`。
+* 赋值运算符、null 合并 `??` 和 `??=` 运算符和条件运算符 `?:` 为右结合  运算符，即从右向左执行运算。 例如， `x = y = z` 将计算为 `x = (y = z)`。
 
 可以使用括号控制优先级和结合性。 例如，`x + y * z` 先计算 `y` 乘 `z`，并将结果与 `x` 相加，而 `(x + y) * z` 则先计算 `x` 加 `y`，然后将结果与 `z` 相乘。
 

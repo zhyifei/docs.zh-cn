@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: c8f44ae1a500ed240dbff7d9a2c1479af368b7f1
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394346"
 ---
 ### <a name="identity-default-bootstrap-version-of-ui-changed"></a>标识：已更改 UI 的默认 Bootstrap 版本
@@ -26,7 +26,7 @@ ms.locfileid: "72394346"
 
 在 ASP.NET Core 3.0 时间范围内发布了 Bootstrap 4。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 如果使用默认标识用户界面并将其添加到 `Startup.ConfigureServices` 中，则会受到此更改的影响，如以下示例中所示：
 
@@ -37,7 +37,7 @@ services.AddDefaultIdentity<IdentityUser>().AddDefaultUI();
 请执行以下一项操作：
 
 - 迁移应用，以使用其[迁移指南](https://getbootstrap.com/docs/4.0/migration)来使用 Bootstrap 4。
-- 更新 `Startup.ConfigureServices` 以强制使用 Bootstrap 3。 例如:
+- 更新 `Startup.ConfigureServices` 以强制使用 Bootstrap 3。 例如：
 
     ```csharp
     services.AddDefaultIdentity<IdentityUser>().AddDefaultUI(UIFramework.Bootstrap3);
@@ -49,7 +49,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影响的 API
 
-无
+None
 
 <!-- 
 

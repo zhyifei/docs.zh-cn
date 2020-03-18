@@ -11,10 +11,10 @@ helpviewer_keywords:
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
 ms.openlocfilehash: a18e52ea05d49bf2b3a468923f1433f09fff9a8b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712671"
 ---
 # <a name="-operator-c-reference"></a>:: 运算符（C# 参考）
@@ -60,9 +60,9 @@ ms.locfileid: "75712671"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[命名空间别名限定符](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers)中的[命名空间别名限定符](~/_csharplang/spec/introduction.md)部分。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)

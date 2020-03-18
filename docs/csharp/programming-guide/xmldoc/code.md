@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
 ms.openlocfilehash: 1b292f0e1f93f815cc31ef3dfb7015b8950bf8a6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789838"
 ---
 # <a name="code-c-programming-guide"></a>\<code>（C# 编程指南）
@@ -37,9 +37,9 @@ ms.locfileid: "76789838"
 
 ## <a name="example"></a>示例
 
-有关如何使用 \<code> 标记的示例，请参阅 [\<example>](./example.md) 主题。
+有关如何使用 [code> 标记的示例，请参阅 \<](./example.md)example>\< 主题。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [建议的文档注释标记](./recommended-tags-for-documentation-comments.md)

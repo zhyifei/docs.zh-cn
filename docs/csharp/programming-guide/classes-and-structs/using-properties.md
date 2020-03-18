@@ -7,10 +7,10 @@ helpviewer_keywords:
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
 ms.openlocfilehash: d873f626b660bb6bd94710add4543e21e11823d6
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77452014"
 ---
 # <a name="using-properties-c-programming-guide"></a>使用属性（C# 编程指南）

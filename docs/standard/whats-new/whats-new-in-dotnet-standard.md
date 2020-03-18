@@ -5,10 +5,10 @@ ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
 ms.openlocfilehash: a90df0360211c3b02f4f2d8697890180099c5807
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76921061"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard 中的新增功能
@@ -49,7 +49,7 @@ ms.locfileid: "76921061"
 - 增强了 <xref:System.String> 类中的字符串比较、枚举和规范化支持。
 - <xref:System.TimeZoneInfo.AdjustmentRule> 和 <xref:System.TimeZoneInfo.TransitionTime> 类支持夏令时调整和时间转换。
 - 显著改进了 <xref:System.Type> 类中的功能。
-- 通过添加包含 <xref:System.Runtime.Serialization.SerializationInfo> 和 <xref:System.Runtime.Serialization.StreamingContext> 参数的异常构造函数，改进了对异常对象反序列化的支持。
+- 通过添加包含 <xref:System.Runtime.Serialization.SerializationInfo> 和 <xref:System.Runtime.Serialization.StreamingContext> 参数的异常构造函数，改进了对异常对象反串行化的支持。
 
 ### <a name="support-for-net-framework-libraries"></a>支持 .NET Framework 库
 
@@ -69,7 +69,7 @@ ms.locfileid: "76921061"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 ![添加新的 .NET Standard 库项目](./media/std-project-cs.png)
 
@@ -79,7 +79,7 @@ ms.locfileid: "76921061"
 dotnet new classlib
 ```
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 ![添加新的 .NET Standard 库项目](./media/std-project-vb.png)
 
@@ -91,7 +91,7 @@ dotnet new classlib -lang vb
 
 ---
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Standard](../net-standard.md)
 - [.NET Standard 简介](https://devblogs.microsoft.com/dotnet/introducing-net-standard/)

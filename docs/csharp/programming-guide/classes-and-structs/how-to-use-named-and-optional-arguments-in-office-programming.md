@@ -7,10 +7,10 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
 ms.openlocfilehash: 36b5c8b49404606c8240d24953c3677d5612d30e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714876"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>如何在 Office 编程中使用命名实参和可选实参（C# 编程指南）
@@ -37,7 +37,7 @@ ms.locfileid: "75714876"
 
 6. 在“名称”  字段中键入项目的名称。
 
-7. 单击 **“确定”** 。
+7. 单击“确定”。 
 
      新项目将出现在“解决方案资源管理器”  中。
 
@@ -47,7 +47,7 @@ ms.locfileid: "75714876"
 
 2. 在“.NET”页上的“组件名称”列表中，选择“Microsoft.Office.Interop.Word”    。
 
-3. 单击 **“确定”** 。
+3. 单击“确定”。 
 
 ## <a name="to-add-necessary-using-directives"></a>添加必要的 using 指令
 
@@ -107,6 +107,6 @@ ms.locfileid: "75714876"
 
  [!code-csharp[csProgGuideNamedAndOptional#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#12)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [命名参数和可选参数](./named-and-optional-arguments.md)

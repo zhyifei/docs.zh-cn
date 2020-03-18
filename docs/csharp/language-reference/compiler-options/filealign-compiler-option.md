@@ -17,10 +17,10 @@ helpviewer_keywords:
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
 ms.openlocfilehash: aed8b412ea1580f7dfa4f87333598d76a85b5e64
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69603019"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign（C# 编译器选项）
@@ -32,7 +32,7 @@ ms.locfileid: "69603019"
 -filealign:number  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `number`  
  一个值，用于指定输出文件中各节的大小。 有效值为 512、1024、2048、4096 和 8192。 这些值以字节为单位。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "69603019"
   
 2. 单击“生成”  属性页。  
   
-3. 单击“高级”  按钮。  
+3. 单击 **“高级”** 按钮。  
   
 4. 修改“文件对齐”  属性。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](./index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

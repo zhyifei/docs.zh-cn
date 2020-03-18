@@ -3,10 +3,10 @@ title: Docker 应用程序中的状态和数据
 description: Docker 应用程序中的状态和数据管理。 微服务实例是可消耗的，但数据不是，本文介绍如何使用微服务处理这一问题。
 ms.date: 09/20/2018
 ms.openlocfilehash: 1157ea3c4ca8fc389769308cc0a1141b5f92bb88
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72771429"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 应用程序中的状态和数据

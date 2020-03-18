@@ -3,15 +3,15 @@ title: .NET 库的跨平台定位
 description: 有关创建跨平台 .NET 库的最佳做法建议。
 ms.date: 08/12/2019
 ms.openlocfilehash: 61adff3759984554bb83531b4f9d8a49e29c929c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76731456"
 ---
 # <a name="cross-platform-targeting"></a>跨平台定位
 
-新式 .NET 支持多个操作系统和设备。 .NET 开源库支持尽可能多的开发人员（无论是构建 Azure 中托管的 ASP.NET 网站的开发人员，还是在 Unity 中开发 .NET 游戏的开发人员），这一点非常重要。
+新式 .NET 支持多个操作系统和设备。 .NETNET 开源库支持尽可能多的开发人员（无论是构建 Azure 中托管的 ASP.NET 网站的开发人员，还是在 Unity 中开发 .NET 游戏的开发人员），这一点非常重要。
 
 ## <a name="net-standard"></a>.NET Standard
 
@@ -35,7 +35,7 @@ ms.locfileid: "76731456"
 
 > .NET Standard 1.x 作为一组精细的 NuGet 包分发，它创建了一个大型的包依赖项关系图，并导致开发人员在构建时下载大量的包。 新式 .NET 平台（包括 .NET Framework 4.6.1、UWP 和 Xamarin）全部支持 .NET Standard 2.0。 如果需要专门面向较旧的平台，则只能面向 .NET Standard。
 
-✔️ 如果需要面向 `netstandard1.x` 目标，请务必包括 `netstandard2.0` 目标。
+✔️ 如果需要面向 `netstandard2.0` 目标，请务必包括 `netstandard1.x` 目标。
 
 > 所有支持 .NET Standard 2.0 的平台都将使用 `netstandard2.0` 目标，并从较小的包关系图中受益，而较旧的平台仍然可以正常运行并回退到使用 `netstandard1.x` 目标。
 
@@ -92,7 +92,7 @@ public static class GpsLocation
 
 > .NET Standard 程序集将自动供 NuGet 使用。 面向单个 .NET 实现会增加 `*.nupkg` 大小，不会提供任何好处。
 
-✔️ 请考虑在提供 `netstandard2.0` 目标时为 `net461` 添加目标。
+✔️ 请考虑在提供 `net461` 目标时为 `netstandard2.0` 添加目标。
 
 > 在 .NET Framework 中使用 .NET Standard 2.0 存在一些问题，这些在 .NET Framework 4.7.2 中已得到解决。 可以为仍在使用 .NET Framework 4.6.1 - 4.7.1 的开发人员提供为 .NET Framework 4.6.1 构建的二进制文件，从而改善其体验。
 
@@ -117,7 +117,7 @@ public static class GpsLocation
 
 .NET 支持长期不受支持的 .NET Framework 的目标版本以及不再经常使用的平台。 尽管使库在尽可能多的目标上工作是有价值的，但这种情况下必须解决缺少的 API 问题，这会增加很大的开销。 考虑到某些框架的使用范围和局限性，我们认为不再值得面向这些框架。
 
-❌ 请避免包括可移植类库 (PCL) 目标。 例如 `portable-net45+win8+wpa81+wp8`。
+❌ 请避免包括可移植类库 (PCL) 目标。 例如，`portable-net45+win8+wpa81+wp8` 。
 
 > .NET standard 是支持跨平台 .NET 库的新式方法，它可以替代 PCL。
 

@@ -19,10 +19,10 @@ helpviewer_keywords:
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
 ms.openlocfilehash: afb9c3a04258b543e373b6973e576f71f90d7003
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047596"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>.NET Framework 中的网络跟踪
@@ -35,7 +35,7 @@ ms.locfileid: "71047596"
 > [!NOTE]
 > 当你在应用程序中启用网络跟踪后，此成员将输出跟踪信息。 有关详细信息，请参阅“网络跟踪”。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [启用网络跟踪](enabling-network-tracing.md)
 - [如何：配置网络跟踪](how-to-configure-network-tracing.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
 ms.openlocfilehash: e790a41fc945a395feebc63f8d26efdc51dc4fa9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74329598"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>访问计算机的端口 (Visual Basic)
@@ -33,7 +33,7 @@ ms.locfileid: "74329598"
  [.NET Framework 中的端口操作](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
  介绍执行端口操作时使用 .NET Framework 的方式。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
 
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  介绍 `My.Computer.Ports` 对象及其成员。  

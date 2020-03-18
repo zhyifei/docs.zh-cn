@@ -4,10 +4,10 @@ description: 了解移植过程以及发现在将 .NET Framework 项目移植到
 author: cartermp
 ms.date: 10/22/2019
 ms.openlocfilehash: e483bb6e48dad6c3bf71bfa81e704a137fc02094
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75937321"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>从 .NET Framework 移植到 .NET Core 的概述
@@ -33,7 +33,7 @@ ms.locfileid: "75937321"
 
    此工具与可移植性分析器类似，但它不会分析是否可以在 .NET Core 上构建代码，而是分析你是否正在以会导致在运行时引发 <xref:System.PlatformNotSupportedException> 的某种方式使用 API。 尽管这并不常见，但如果从 .NET Framework 4.7.2 或更高版本进行移动，最好进行检查。 如需详细了解会在 .NET Core 上引发异常的 API 信息，请参阅[在 .NET Core上始终引发异常的 API](../compatibility/unsupported-apis.md)。
 
-4. 通过 [Visual Studio 中的转换工具](/nuget/consume-packages/migrate-packages-config-to-package-reference)将所有 `packages.config` 依赖项转换为 [PackageReference](/nuget/consume-packages/package-references-in-project-files) 格式。
+4. 通过 `packages.config`Visual Studio 中的转换工具[将所有 ](/nuget/consume-packages/package-references-in-project-files) 依赖项转换为 [PackageReference](/nuget/consume-packages/migrate-packages-config-to-package-reference) 格式。
 
    此步骤涉及到转换旧 `packages.config` 格式的依赖项。 `packages.config` 不适用于 .NET Core，因此，如果你有包依赖项，则需要进行此转换。
 

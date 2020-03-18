@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 4254cceab0048341b32fe5babf53b5ea3e5a52d6
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "72846999"
 ---
 ### <a name="workflow-xoml-definition-and-sqltrackingservice-cache-keys-changed-from-md5-to-sha256"></a>工作流 XOML 定义和 SqlTrackingService 缓存密钥已从 MD5 更改为 SHA256

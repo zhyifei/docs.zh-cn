@@ -3,10 +3,10 @@ title: 网络中断性变更
 description: 列出 .NET Core 中网络的中断性变更。
 ms.date: 10/03/2019
 ms.openlocfilehash: d5d445827554d2c898e07dac53d8a571ebdf9359
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092988"
 ---
 # <a name="networking-breaking-changes"></a>网络中断性变更

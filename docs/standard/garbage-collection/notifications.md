@@ -10,10 +10,10 @@ helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 ms.openlocfilehash: d5646c4969c95350ab4cd63b16f6f99ffba3a4ec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131537"
 ---
 # <a name="garbage-collection-notifications"></a>垃圾回收通知
@@ -52,7 +52,7 @@ ms.locfileid: "73131537"
 ## <a name="notification-threshold-parameters"></a>通知阈值参数  
  <xref:System.GC.RegisterForFullGCNotification%2A> 方法包含两个参数，用于指定第 2 代对象和大型对象堆的阈值。 如果达到这些值，就应发出垃圾回收通知。 下表介绍了这些参数。  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`maxGenerationThreshold`|介于 1 和 99 之间的数字，指定根据在第 2 代中提升的对象，应何时发出通知。|  
 |`largeObjectHeapThreshold`|介于 1 和 99 之间的数字，指定根据大型对象堆中分配的对象，应何时发出通知。|  
@@ -63,7 +63,7 @@ ms.locfileid: "73131537"
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>说明  
+### <a name="description"></a>描述  
  在下面的示例中，一组服务器处理传入的 Web 请求。 为了模拟处理请求的工作负载，将字节数组添加到 <xref:System.Collections.Generic.List%601> 集合中。 每个服务器都会注册获取垃圾回收通知，再对 `WaitForFullGCProc` 用户方法启动线程，以持续监视 <xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法返回的 <xref:System.GCNotificationStatus> 枚举。  
   
  在通知发出时，<xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法调用它们各自的事件处理用户方法：  

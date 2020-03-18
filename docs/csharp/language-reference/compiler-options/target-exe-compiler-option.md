@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
 ms.openlocfilehash: 6087a64bea5a59bfcfc5372f6a9d6eb8b9c940cb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606463"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe（C# 编译器选项）
@@ -53,7 +53,7 @@ csc -target:exe in.cs
 csc in.cs  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [-target（C# 编译器选项）](./target-compiler-option.md)
 - [C# 编译器选项](./index.md)

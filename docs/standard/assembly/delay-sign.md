@@ -13,10 +13,10 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 113df1ad3fc3ac1e27ebfef572494c1f15a3dbb5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73733173"
 ---
 # <a name="delay-sign-an-assembly"></a>延迟为程序集签名
@@ -35,7 +35,7 @@ ms.locfileid: "73733173"
 
    - <xref:System.Reflection.AssemblyDelaySignAttribute>，通过将 true 作为参数传递给其构造函数来指示正在采用延迟签名  。
 
-   例如:
+   例如：
 
    ```cpp
    [assembly:AssemblyKeyFileAttribute("myKey.snk")];

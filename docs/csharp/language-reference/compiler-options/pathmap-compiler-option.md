@@ -8,10 +8,10 @@ helpviewer_keywords:
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
 ms.openlocfilehash: 48e96d2ec2ccbea83d573c0eb3630b1591c407a9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606625"
 ---
 # <a name="-pathmap-c-compiler-options"></a>-pathmap（C# 编译器选项）
@@ -24,7 +24,7 @@ ms.locfileid: "69606625"
 -pathmap:path1=sourcePath1,path2=sourcePath2
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
  `path1` 当前环境中源文件的完整路径
 
@@ -44,13 +44,13 @@ ms.locfileid: "69606625"
 
 ## <a name="example"></a>示例
 
-在目录 C:\\work\\tests  中编译 `t.cs` 并将该目录映射到输出中的 \publish  ：
+在目录 C:`t.cs`work**tests\\\\ 中编译**  并将该目录映射到输出中的 \publish  ：
 
 ```console
 csc -pathmap:C:\work\tests=\publish t.cs
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](./index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

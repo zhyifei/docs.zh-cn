@@ -7,10 +7,10 @@ helpviewer_keywords:
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
 ms.openlocfilehash: 183f53a579bdd9f70deb16ca9157c377fa3aff3f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75712307"
 ---
 # <a name="events-c-programming-guide"></a>事件（C# 编程指南）
@@ -34,7 +34,7 @@ ms.locfileid: "75712307"
 - 在 .NET Framework 类库中，事件基于 <xref:System.EventHandler> 委托和 <xref:System.EventArgs> 基类。  
   
 ## <a name="related-sections"></a>相关章节  
- 有关详细信息，请参见:  
+ 有关详情，请参阅：  
   
 - [如何订阅和取消订阅事件](./how-to-subscribe-to-and-unsubscribe-from-events.md)
 
@@ -48,14 +48,14 @@ ms.locfileid: "75712307"
 
 ## <a name="c-language-specification"></a>C# 语言规范  
 
-有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[事件](~/_csharplang/spec/classes.md#events)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/classes.md#events)中的[事件](/dotnet/csharp/language-reference/language-specification/introduction)。 该语言规范是 C# 语法和用法的权威资料。
   
 ## <a name="featured-book-chapters"></a>重要章节  
- [C# 3.0 手册（第三版）：面向 C# 3.0 程序员的超过 250 个解决方案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)中的[委托、事件和 Lambda 表达式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29)  
+ [C# 3.0 手册，第三版：为 C# 3.0 程序员提供的 250 多个解决方案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) 中的 [委托、事件和 Lambda 表达式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
   
- [学习 C# 3.0：掌握 C# 3.0 基础知识](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)中的[委托和事件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29)  
+ [Learning C# 3.0: Master the Fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29) （学习 C# 3.0：掌握 C# 3.0 的基本知识）中的 [委托和事件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.EventHandler>
 - [C# 编程指南](../index.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
 ms.openlocfilehash: bd06928b08eb085ef13371687fb1e5b92c6c1d86
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048578"
 ---
 # <a name="deriving-from-webresponse"></a>从 WebResponse 派生
@@ -28,17 +28,17 @@ ms.locfileid: "71048578"
  用户无需使用 Headers 属性即可使用标头元数据  。 协议特定的元数据可作为属性公开，例如，<xref:System.Net.HttpWebResponse.LastModified%2A?displayProperty=nameWithType> 属性公开了 Last-Modified HTTP 标头  。 将标头元数据作为属性公开时，应禁止使用 Headers 属性设置相同的属性  。  
   
 ## <a name="responseuri-property"></a>ResponseUri 属性  
- <xref:System.Net.WebResponse.ResponseUri%2A> 属性包含实际提供响应的资源的 URI。 对于不支持重定向的协议，ResponseUri 与创建响应的 WebRequest 的 <xref:System.Net.WebRequest.RequestUri%2A> 属性相同   。 如果协议支持重定向请求，则 ResponseUri 将包含响应的 URI  。  
+ <xref:System.Net.WebResponse.ResponseUri%2A> 属性包含实际提供响应的资源的 URI。 对于不支持重定向的协议，ResponseUri 与创建响应的 WebRequest 的  **属性相同**<xref:System.Net.WebRequest.RequestUri%2A>  。 如果协议支持重定向请求，则 ResponseUri 将包含响应的 URI  。  
   
 ## <a name="close-method"></a>Close 方法  
- <xref:System.Net.WebResponse.Close%2A> 方法关闭请求和响应进行的任何连接，并清除响应使用的资源。 Close 方法关闭响应使用的所有流实例，但如果之前通过调用 <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 方法关闭了响应流，也不会引发异常  。  
+ <xref:System.Net.WebResponse.Close%2A> 方法关闭请求和响应进行的任何连接，并清除响应使用的资源。 Close 方法关闭响应使用的所有流实例，但如果之前通过调用  **方法关闭了响应流，也不会引发异常**<xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>。  
   
 ## <a name="getresponsestream-method"></a>GetResponseStream 方法  
  <xref:System.Net.WebResponse.GetResponseStream%2A> 方法返回的流中包含所请求资源的响应。 响应流仅包含资源返回的数据，响应中包含的任何标头或元数据应从响应中删除，并通过协议特定的属性或 Headers 属性公开给应用程序  。  
   
  GetResponseStream 方法返回的流实例为应用程序所有，无需关闭 WebResponse 即可将其关闭   。 按照惯例，调用 WebResponse.Close 方法也会关闭 GetResponse 返回的流   。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Net.WebResponse>
 - <xref:System.Net.HttpWebResponse>

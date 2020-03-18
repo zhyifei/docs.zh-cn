@@ -4,10 +4,10 @@ description: .NET 微服务和 Web 应用程序中的安全性 - Azure Key Vault
 author: mjrousos
 ms.date: 01/30/2020
 ms.openlocfilehash: cc95d491136c945255408cec2bd49d4d6579e29a
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501751"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>在生产时使用 Azure Key Vault 保护机密

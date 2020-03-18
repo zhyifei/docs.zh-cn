@@ -4,17 +4,17 @@ description: 了解如何使用 .NET Core CLI 创建 .NET Core 库。 将创建�
 author: cartermp
 ms.date: 05/01/2017
 ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503504"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>使用 .NET Core CLI 开发库
 
 本文介绍如何使用 .NET Core CLI 编写 .NET 的库。 CLI 提供可跨任何支持的 OS 工作的高效低级别体验。 仍可使用 Visual Studio 生成库，如果你首选这种体验，请[参阅 Visual Studio 指南](library-with-visual-studio.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 需要在计算机上安装 [.NET Core SDK 和 CLI](https://dotnet.microsoft.com/download) 。
 
@@ -96,7 +96,7 @@ ms.locfileid: "77503504"
 </Project>
 ```
 
-就是这么简单！ 虽然此库仅针对 .NET Framework 4 编译，但可在较新版本的 .NET Framework 上使用此库。
+这就是所有的操作！ 虽然此库仅针对 .NET Framework 4 编译，但可在较新版本的 .NET Framework 上使用此库。
 
 ## <a name="how-to-multitarget"></a>如何设定多目标
 
@@ -105,7 +105,7 @@ ms.locfileid: "77503504"
 
 如果项目同时支持 .NET Framework 和 .NET Core，可能需要面向较旧版本的 .NET Framework。 在此方案中，如果要为较新目标使用较新的 API 和语言构造，请在代码中使用 `#if` 指令。 可能还需要为要面向的每个平台添加不同的包和依赖项，以包含每种情况所需的不同 API。
 
-例如，假设有一个库，它通过 HTTP 执行联网操作。 对于 .NET Standard 和 .NET Framework 版本 4.5 或更高版本，可从 `System.Net.Http` 命名空间使用 `HttpClient` 类。 但是，.NET Framework 的早期版本没有 `HttpClient` 类，因此可对早期版本使用 `System.Net` 命名空间中的 `WebClient` 类。
+例如，假设有一个库，它通过 HTTP 执行联网操作。 对于 .NET Standard 和 .NET Framework 版本 4.5 或更高版本，可从 `HttpClient` 命名空间使用 `System.Net.Http` 类。 但是，.NET Framework 的早期版本没有 `HttpClient` 类，因此可对早期版本使用 `WebClient` 命名空间中的 `System.Net` 类。
 
 项目文件可能如下所示：
 
@@ -131,8 +131,8 @@ ms.locfileid: "77503504"
 在此处可看到三项主要更改：
 
 1. `TargetFramework` 节点已替换为 `TargetFrameworks`，其中表示了三个 TFM。
-1. `net40` 目标有一个 `<ItemGroup>` 节点，拉取一个 .NET Framework 引用。
-1. `net45` 目标中有一个 `<ItemGroup>` 节点，拉取两个 .NET Framework 引用。
+1. `<ItemGroup>` 目标有一个 `net40` 节点，拉取一个 .NET Framework 引用。
+1. `<ItemGroup>` 目标中有一个 `net45` 节点，拉取两个 .NET Framework 引用。
 
 生成系统可识别以下用在 `#if` 指令中的处理器符号：
 
@@ -239,7 +239,7 @@ netstandard1.4/
    |__MyProject.Test/
    ```
 
-1. 导航到测试项目的目录，然后添加对 `MyProject` 中的 `MyProject.Test` 的引用。
+1. 导航到测试项目的目录，然后添加对 `MyProject.Test` 中的 `MyProject` 的引用。
 
    ```dotnetcli
    cd MyProject.Test
@@ -257,7 +257,7 @@ netstandard1.4/
 
 1. 执行 `dotnet test` 命令，验证 xUnit 是否在运行。 如果选择使用 MSTest，则应改为运行 MSTest 控制台运行程序。
 
-就是这么简单！ 现在可以使用命令行工具跨所有平台测试库。 若要继续测试，现已设置好了所有内容，测试库将非常简单：
+这就是所有的操作！ 现在可以使用命令行工具跨所有平台测试库。 若要继续测试，现已设置好了所有内容，测试库将非常简单：
 
 1. 对库进行更改。
 1. 使用 `dotnet test` 命令在测试目录中从命令行运行测试。

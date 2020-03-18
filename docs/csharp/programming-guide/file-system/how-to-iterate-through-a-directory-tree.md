@@ -6,10 +6,10 @@ helpviewer_keywords:
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
 ms.openlocfilehash: be3931a23e7a88affcf4d0abf617ec00bd35297a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712255"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>如何循环访问目录树（C# 编程指南）
@@ -56,7 +56,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 ## <a name="robust-programming"></a>可靠编程  
  可靠的文件迭代代码必须考虑文件系统的诸多复杂性。 有关 Windows 文件系统的详细信息，请参阅 [NTFS 概述](/windows-server/storage/file-server/ntfs-overview)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.IO>
 - [LINQ 和文件目录](../concepts/linq/linq-and-file-directories.md)

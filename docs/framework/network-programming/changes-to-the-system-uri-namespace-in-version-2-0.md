@@ -3,11 +3,11 @@ title: 对 2.0 版中的 System.Uri 命名空间的更改
 ms.date: 03/30/2017
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 ms.openlocfilehash: 987010b8367069e8089df3f809d23f258bb68f2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188426"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61642758"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>对 2.0 版中的 System.Uri 命名空间的更改
 
@@ -37,7 +37,7 @@ ms.locfileid: "50188426"
 
 - <xref:System.Uri.EscapeString%2A>
 
-## <a name="changes"></a>更改
+## <a name="changes"></a>Changes
 
 - 对于已知不含有查询部件（文件、ftp 等）的 URI 方案，“?”字符始终转义，不将它视为 <xref:System.Uri.Query%2A> 部件的开头。
 
@@ -71,6 +71,6 @@ ms.locfileid: "50188426"
 
 - URI 路径压缩已修复，所以断开的 URI 不能遍历根以上的文件系统。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Uri?displayProperty=nameWithType>

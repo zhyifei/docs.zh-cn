@@ -9,10 +9,10 @@ helpviewer_keywords:
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
 ms.openlocfilehash: 8e52e9db241392b67818b7316767dd97bd38432a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713410"
 ---
 # <a name="join-clause-c-reference"></a>join 子句（C# 参考）
@@ -37,7 +37,7 @@ ms.locfileid: "75713410"
 
 ## <a name="group-join"></a>分组联接
 
-含有 `into` 表达式的 `join` 子句称为分组联接。
+含有 `join` 表达式的 `into` 子句称为分组联接。
 
 [!code-csharp[cscsrefQueryKeywords#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#25)]
 
@@ -73,7 +73,7 @@ ms.locfileid: "75713410"
 
 在 LINQ 查询表达式中，联接操作是在对象集合上执行的。 不能使用与 2 个关系表完全相同的方式“联接”对象集合。 在 LINQ 中，仅当 2 个源序列没有通过任何关系相互联系时，才需要使用显式 `join` 子句。 使用 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 时，外键表在对象模型中表示为主表的属性。 例如，在 Northwind 数据库中，Customer 表与 Orders 表之间具有外键关系。 将这两个表映射到对象模型时，Customer 类具有一个 Orders 属性，其中包含与该 Customer 相关联的 Orders 集合。 实际上，已经为你执行了联接。
 
-若要详细了解如何在 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 的上下文中跨相关表执行查询，请参阅[操作说明：映射数据库关系](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。
+若要深入了解如何在 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 的上下文中跨相关表执行查询，请参阅[如何：映射数据库关系](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。
 
 ## <a name="composite-keys"></a>组合键
 
@@ -87,9 +87,9 @@ ms.locfileid: "75713410"
 
 ## <a name="remarks"></a>备注
 
-后面未跟 `into` 的 `join` 子句转换为 <xref:System.Linq.Enumerable.Join%2A> 方法调用。 后面跟 `into` 的 `join` 子句转换为 <xref:System.Linq.Enumerable.GroupJoin%2A> 方法调用。
+后面未跟 `join` 的 `into` 子句转换为 <xref:System.Linq.Enumerable.Join%2A> 方法调用。 后面跟 `join` 的 `into` 子句转换为 <xref:System.Linq.Enumerable.GroupJoin%2A> 方法调用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [查询关键字 (LINQ)](query-keywords.md)
 - [语言集成查询 (LINQ)](../../linq/index.md)

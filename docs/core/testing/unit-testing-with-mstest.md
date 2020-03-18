@@ -4,12 +4,12 @@ description: 通过使用 dotnet test 和 MSTest 分步生成示例解决方案�
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 1b21e961ffceb3fce2697ad3254e79ed258aaa1a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: bd7891243d84277a7578089f8b4629ff5bada577
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157332"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240904"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>使用 MSTest 和 .NET Core 进行 C# 单元测试
 
@@ -90,7 +90,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeServiceTests.csproj
 ```
 
-在 unit-testing-using-mstest  目录中执行 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md)。
+在 unit-testing-using-mstest[`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj` 目录中执行 ](../tools/dotnet-sln.md)  。
 
 ## <a name="create-the-first-test"></a>创建第一个测试
 
@@ -144,11 +144,11 @@ public bool IsPrime(int candidate)
 
 ## <a name="add-more-features"></a>添加更多功能
 
-你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0、-1。 可使用 [TestMethod 属性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)添加新测试，但这很快就会变得枯燥乏味。 还有其他 MSTest 属性，使用这些属性可编写类似测试的套件。  [DataTestMethod 属性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataTestMethodAttribute)表示执行相同代码但具有不同输入参数的测试套件。 可以使用 [DataRow 属性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute)来指定这些输入的值。
+你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0，-1。 可使用 [TestMethod 属性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)添加新测试，但这很快就会变得枯燥乏味。 还有其他 MSTest 属性，使用这些属性可编写类似测试的套件。  [DataTestMethod 属性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataTestMethodAttribute)表示执行相同代码但具有不同输入参数的测试套件。 可以使用 [DataRow 属性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute)来指定这些输入的值。
 
 可以不使用这两个属性创建新测试，而用来创建单个数据驱动的测试。 数据驱动的测试方法用于测试多个小于 2（即最小质数）的值：
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-using-mstest/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 运行 `dotnet test`，两项测试均失败。 若要使所有测试通过，可以更改方法开头的 `if` 子句：
 
@@ -160,7 +160,7 @@ if (candidate < 2)
 
 你已生成一个小型库和该库的一组单元测试。 你已将解决方案结构化，使添加新包和新测试成为了正常工作流的一部分。 你已将多数的时间和精力集中在解决应用程序的目标上。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting>
 - [在单元测试中使用 MSTest 框架](/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests)

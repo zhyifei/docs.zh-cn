@@ -4,10 +4,10 @@ description: 了解如何使用 Visual Studio 生成以 C# 或 Visual Basic 编�
 ms.date: 12/09/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 748a1499e0c3a4a41613a69b715dbcfbd585bfe3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714011"
 ---
 # <a name="build-a-net-standard-library-in-visual-studio"></a>在 Visual Studio 中生成 .NET Standard 库
@@ -42,7 +42,7 @@ ms.locfileid: "75714011"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. 将名为“StringLibrary”的新 C# .NET Standard 类库项目添加到解决方案。
 
@@ -64,7 +64,7 @@ ms.locfileid: "75714011"
 
 1. 在菜单栏中，选择“生成”   > “生成解决方案”  。
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. 将名为“StringLibrary”的新 Visual Basic .NET Standard 类库项目添加到解决方案。
 

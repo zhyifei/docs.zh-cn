@@ -5,10 +5,10 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.openlocfilehash: 3f8e75a501cfc48e1c416f71e91290cab1a4ffae
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920924"
 ---
 # <a name="how-to-create-a-nuget-package-with-the-net-core-cli"></a>如何使用 .NET Core CLI 创建 NuGet 包
@@ -66,6 +66,6 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 
 务必注意，不是任何时候都涉及 `dotnet publish` 命令。 `dotnet publish` 命令用于在同一个包中部署具有所有依赖项的应用程序 - 而不是用于生成通过 NuGet 发布和使用的 NuGet 包。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [快速入门：创建和发布包](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)

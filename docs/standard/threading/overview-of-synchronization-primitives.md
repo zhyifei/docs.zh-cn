@@ -9,10 +9,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 ms.openlocfilehash: 43f78c914b7cb01f9b0de4c258d5882548e52790
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73106594"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步基元概述
@@ -63,9 +63,9 @@ ms.locfileid: "73106594"
 
 ### <a name="mutex-class"></a>Mutex 类
 
-<xref:System.Threading.Mutex?displayProperty=nameWithType> 类（与 <xref:System.Threading.Monitor> 类似），授予对共享资源的独占访问权限。 使用 [Mutex.WaitOne](<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>) 方法重载之一请求 mutex 的所有权。 <xref:System.Threading.Mutex>（与 <xref:System.Threading.Monitor> 类似）具有线程关联，并且已获取 mutex 的线程必须通过调用 <xref:System.Threading.Mutex.ReleaseMutex%2A?displayProperty=nameWithType> 方法来释放它。
+<xref:System.Threading.Mutex?displayProperty=nameWithType> 类（与 <xref:System.Threading.Monitor> 类似），授予对共享资源的独占访问权限。 使用 [Mutex.WaitOne](<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>) 方法重载之一请求 mutex 的所有权。 <xref:System.Threading.Monitor>（与 <xref:System.Threading.Mutex> 类似）具有线程关联，并且已获取 mutex 的线程必须通过调用 <xref:System.Threading.Mutex.ReleaseMutex%2A?displayProperty=nameWithType> 方法来释放它。
 
-<xref:System.Threading.Mutex> 类（与 <xref:System.Threading.Monitor> 不同）可用于进程间同步。 为此，请使用命名 mutex，它在整个操作系统中都可见。 若要创建命名 mutex 实例，请使用指定了名称的 [Mutex 构造函数](<xref:System.Threading.Mutex.%23ctor%2A>)。 还可以调用 <xref:System.Threading.Mutex.OpenExisting%2A?displayProperty=nameWithType> 方法来打开现有的命名系统 mutex。
+<xref:System.Threading.Monitor> 类（与 <xref:System.Threading.Mutex> 不同）可用于进程间同步。 为此，请使用命名 mutex，它在整个操作系统中都可见。 若要创建命名 mutex 实例，请使用指定了名称的 [Mutex 构造函数](<xref:System.Threading.Mutex.%23ctor%2A>)。 还可以调用 <xref:System.Threading.Mutex.OpenExisting%2A?displayProperty=nameWithType> 方法来打开现有的命名系统 mutex。
   
 有关详细信息，请参阅 [Mutex](mutexes.md) 一文和 <xref:System.Threading.Mutex> API 参考。
 
@@ -87,7 +87,7 @@ ms.locfileid: "73106594"
 
 <xref:System.Threading.SemaphoreSlim> 是 <xref:System.Threading.Semaphore> 的轻量替代项，并且只能在单个流程边界内用于同步。
 
-在 Windows 上，可以将 <xref:System.Threading.Semaphore> 用于进程间同步。 为此，通过使用指定了名称或 <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> 方法的 [Semaphore 构造函数](<xref:System.Threading.Semaphore.%23ctor%2A>)之一来创建表示指定了已命名系统信号量的 <xref:System.Threading.Semaphore> 实例。 <xref:System.Threading.SemaphoreSlim> 不支持已命名系统信号量。
+在 Windows 上，可以将 <xref:System.Threading.Semaphore> 用于进程间同步。 为此，通过使用指定了名称或 <xref:System.Threading.Semaphore> 方法的 [Semaphore 构造函数](<xref:System.Threading.Semaphore.%23ctor%2A>)之一来创建表示指定了已命名系统信号量的 <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> 实例。 <xref:System.Threading.SemaphoreSlim> 不支持已命名系统信号量。
 
 有关详细信息，请参阅 [Semaphore 和 SemaphoreSlim](semaphore-and-semaphoreslim.md) 一文以及 <xref:System.Threading.Semaphore> 或 <xref:System.Threading.SemaphoreSlim> API 参考。
 
@@ -105,10 +105,10 @@ ms.locfileid: "73106594"
 
 已发出信号的 <xref:System.Threading.EventWaitHandle> 的行为取决于其重置模式：
 
-- 使用 <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> 标志创建的 <xref:System.Threading.EventWaitHandle> 会在释放单个等待线程后自动进行重置。 就像旋转栅在每次发出信号时仅允许一个线程通过一样。 派生自 <xref:System.Threading.EventWaitHandle> 的 <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType> 类表示该行为。
-- 在 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法获得调用前，一直向使用 <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> 标志创建的 <xref:System.Threading.EventWaitHandle> 发出信号。 就像接收到信号前保持关闭、然后在被关闭前保持打开的大门一样。 派生自 <xref:System.Threading.EventWaitHandle> 的 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 类表示该行为。 <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> 类是 <xref:System.Threading.ManualResetEvent> 的轻量替代项。
+- 使用 <xref:System.Threading.EventWaitHandle> 标志创建的 <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> 会在释放单个等待线程后自动进行重置。 就像旋转栅在每次发出信号时仅允许一个线程通过一样。 派生自 <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType> 的 <xref:System.Threading.EventWaitHandle> 类表示该行为。
+- 在 <xref:System.Threading.EventWaitHandle> 方法获得调用前，一直向使用 <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> 标志创建的 <xref:System.Threading.EventWaitHandle.Reset%2A> 发出信号。 就像接收到信号前保持关闭、然后在被关闭前保持打开的大门一样。 派生自 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 的 <xref:System.Threading.EventWaitHandle> 类表示该行为。 <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> 类是 <xref:System.Threading.ManualResetEvent> 的轻量替代项。
 
-在 Windows 上，可以将 <xref:System.Threading.EventWaitHandle> 用于进程间同步。 为此，通过使用指定了名称或 <xref:System.Threading.EventWaitHandle.OpenExisting%2A?displayProperty=nameWithType> 方法的 [EventWaitHandle 构造函数](<xref:System.Threading.EventWaitHandle.%23ctor%2A>)之一来创建表示指定了已命名系统信号量的 <xref:System.Threading.EventWaitHandle> 实例。
+在 Windows 上，可以将 <xref:System.Threading.EventWaitHandle> 用于进程间同步。 为此，通过使用指定了名称或 <xref:System.Threading.EventWaitHandle> 方法的 [EventWaitHandle 构造函数](<xref:System.Threading.EventWaitHandle.%23ctor%2A>)之一来创建表示指定了已命名系统信号量的 <xref:System.Threading.EventWaitHandle.OpenExisting%2A?displayProperty=nameWithType> 实例。
 
 有关详细信息，请参阅文章 [EventWaitHandle](eventwaithandle.md)。 对于 API 参考，请参阅 <xref:System.Threading.EventWaitHandle>、<xref:System.Threading.AutoResetEvent>、<xref:System.Threading.ManualResetEvent> 和 <xref:System.Threading.ManualResetEventSlim>。
 
@@ -140,7 +140,7 @@ ms.locfileid: "73106594"
 
 有关详细信息，请参阅 [SpinWait](spinwait.md) 一文和 <xref:System.Threading.SpinWait> API 参考。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [线程安全集合](../collections/thread-safe/index.md)

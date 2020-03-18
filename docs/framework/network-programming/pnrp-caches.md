@@ -3,10 +3,10 @@ title: PNRP 缓存
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
 ms.openlocfilehash: 3ed3e11e702c8933b500421de5654b212cdd80d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "64622996"
 ---
 # <a name="pnrp-caches"></a>PNRP 缓存
@@ -35,6 +35,6 @@ ms.locfileid: "64622996"
   
  对等机可以登记从其他对等机接收对象的偏好。 当对象更新时，协作应用程序收到通知，新的对象传递给应用程序的所有订阅者。 例如，组聊天应用程序中的对等程序可以登记接收应用程序信息的偏好，这会向其发送所有聊天记录作为应用程序数据。  这使得它可以监视云内的聊天活动。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Net.PeerToPeer>

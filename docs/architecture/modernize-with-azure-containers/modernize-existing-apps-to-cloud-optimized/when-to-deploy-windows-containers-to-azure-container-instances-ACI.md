@@ -3,10 +3,10 @@ title: 何时将 Windows 容器部署到 Azure 容器实例 (ACI)
 description: 通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序 | 何时将 Windows 容器部署到 Azure 容器实例 (ACI)
 ms.date: 04/29/2018
 ms.openlocfilehash: 3b6ae1ced9c4e01f5ab400e2575947a396064ebd
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69577930"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>何时将 Windows 容器部署到 Azure 容器实例 (ACI)

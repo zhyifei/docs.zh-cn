@@ -10,10 +10,10 @@ helpviewer_keywords:
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 ms.openlocfilehash: 4b2b6a6124bf8cc0fb3b379607135283678e3268
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091364"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>演练：使用 BatchBlock 和 BatchedJoinBlock 提高效率
@@ -74,7 +74,7 @@ TPL 数据流库提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?disp
 [!code-csharp[TPLDataflow_BatchDatabase#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#3)]
 [!code-vb[TPLDataflow_BatchDatabase#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#3)]
 
-`Employee` 类包含下面三个属性：`EmployeeID`、`LastName` 和 `FirstName`。 这些属性对应于 Northwind 数据库中 `Employees` 表的 `Employee ID`、`Last Name` 和 `First Name` 列。 在展示的此示例中，`Employee` 类还定义了 `Random` 方法，用于创建属性值为随机值的 `Employee` 对象。
+`Employee` 类包含下面三个属性：`EmployeeID`、`LastName` 和 `FirstName`。 这些属性对应于 Northwind 数据库中 `Employee ID` 表的 `Last Name`、`First Name` 和 `Employees` 列。 在展示的此示例中，`Employee` 类还定义了 `Random` 方法，用于创建属性值为随机值的 `Employee` 对象。
 
 <a name="operations"></a>
 
@@ -118,7 +118,7 @@ TPL 数据流库提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?disp
 [!code-csharp[TPLDataflow_BatchDatabase#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#7)]
 [!code-vb[TPLDataflow_BatchDatabase#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#7)]
 
-此方法将随机员工信息打印到控制台中。 它会创建多个随机 `Employee` 对象，并调用 `GetEmployeeID` 方法检索每个对象的唯一标识符。 由于 `GetEmployeeID` 方法在找不到与给定姓氏和名字匹配的员工时抛出异常，因此 `GetRandomEmployees` 方法使用 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 类存储 `GetEmployeeID` 成功调用对应的 `Employee` 对象，以及失败调用对应的 <xref:System.Exception?displayProperty=nameWithType> 对象。 此示例中的 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 对象对保留 `Employee` 对象列表和 <xref:System.Exception> 对象列表的 <xref:System.Tuple%602> 对象执行操作。 如果收到的 `Employee` 和 <xref:System.Exception> 对象数总和等于批大小，<xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 对象就会传播出此类数据。
+此方法将随机员工信息打印到控制台中。 它会创建多个随机 `Employee` 对象，并调用 `GetEmployeeID` 方法检索每个对象的唯一标识符。 由于 `GetEmployeeID` 方法在找不到与给定姓氏和名字匹配的员工时抛出异常，因此 `GetRandomEmployees` 方法使用 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 类存储 `Employee` 成功调用对应的 `GetEmployeeID` 对象，以及失败调用对应的 <xref:System.Exception?displayProperty=nameWithType> 对象。 此示例中的 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 对象对保留 <xref:System.Tuple%602> 对象列表和 `Employee` 对象列表的 <xref:System.Exception> 对象执行操作。 如果收到的 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 和 `Employee` 对象数总和等于批大小，<xref:System.Exception> 对象就会传播出此类数据。
 
 <a name="complete"></a>
 
@@ -129,6 +129,6 @@ TPL 数据流库提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?disp
 [!code-csharp[TPLDataflow_BatchDatabase#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#100)]
 [!code-vb[TPLDataflow_BatchDatabase#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#100)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

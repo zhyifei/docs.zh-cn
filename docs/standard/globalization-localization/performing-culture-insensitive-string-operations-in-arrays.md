@@ -8,10 +8,10 @@ helpviewer_keywords:
 - comparer parameter
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
 ms.openlocfilehash: 051ee77ae5d6552e26e0216d58734d90188475f9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120805"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>在数组中执行不区分区域性的字符串操作
@@ -21,7 +21,7 @@ ms.locfileid: "73120805"
 > [!NOTE]
 > 向比较方法传递 CultureInfo.InvariantCulture 确实会执行非区域性敏感型比较  。 但是，这不会导致对文件路径、注册表项、环境变量等进行非语义比较。 也不支持基于比较结果的安全决策。 若要进行非语义比较或支持基于结果的安全决策，应用应使用接受 <xref:System.StringComparison> 值的比较方法。 然后，应用应传递 <xref:System.StringComparison.Ordinal>。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Array.Sort%2A?displayProperty=nameWithType>
 - <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType>

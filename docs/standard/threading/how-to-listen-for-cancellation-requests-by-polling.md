@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cancellation, how to poll for requests
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
 ms.openlocfilehash: df76674e3003bbb77ef062e90b1dc3283f681d35
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138029"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>如何：通过轮询侦听取消请求
@@ -28,6 +28,6 @@ ms.locfileid: "73138029"
   
  如果调用的是 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>，那么如果除了抛出异常之外，还要执行其他工作来响应取消，只需显式检查 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 属性即可。 在此示例中，可以看到代码实际访问属性两次：一次是显式访问，另一次是在 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> 方法中。 不过，由于读取 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 属性在每次访问时只涉及一个易失读取指令，因此从性能角度来看，双重访问的意义并不大。 最好仍调用此方法，而不是手动抛出 <xref:System.OperationCanceledException>。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [托管线程中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - getting started, Visual C#
 ms.date: 04/05/2019
 ms.openlocfilehash: aff810aa7ba533682f9976fbb59ef4d7ec43ca58
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75713923"
 ---
 # <a name="get-started-with-c"></a>C\# 入门
@@ -52,6 +52,6 @@ ms.locfileid: "75713923"
 
     提供指向使用 C# 的编程演练和每个演练的简要概述的链接。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 Visual Studio 进行 C# 开发](/visualstudio/get-started/csharp/)

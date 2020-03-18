@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 6f8e6d2786d20e055c9bef63891db4d6f88bc64b
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901822"
 ---
 ### <a name="identity-signinmanager-constructor-accepts-new-parameter"></a>标识：SignInManager 构造函数接受新参数

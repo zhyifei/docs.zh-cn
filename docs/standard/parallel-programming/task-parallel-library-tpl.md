@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
 ms.openlocfilehash: 487fe48462803ac19318f450f2576989f196a9be
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139955"
 ---
 # <a name="task-parallel-library-tpl"></a>任务并行库 (TPL)
@@ -21,7 +21,7 @@ ms.locfileid: "73139955"
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|说明|  
+|标题|说明|  
 |-|-|  
 |[数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|描述如何创建并行的 `for` 和 `foreach` 循环（在 Visual Basic 中为 `For` 和 `For Each`）。|  
 |[基于任务的异步编程](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)|描述如何通过使用 <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> 隐式创建和运行任务，或通过直接使用 <xref:System.Threading.Tasks.Task> 对象显式创建和运行任务。|  
@@ -31,6 +31,6 @@ ms.locfileid: "73139955"
 |[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|描述如何使用 LINQ 查询实现数据并行化。|  
 |[并行编程](../../../docs/standard/parallel-programming/index.md)|.NET 并行编程的顶级节点。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 .NET Framework 进行并行编程的示例](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

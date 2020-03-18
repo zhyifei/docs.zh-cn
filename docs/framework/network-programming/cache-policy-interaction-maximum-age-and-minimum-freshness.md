@@ -11,10 +11,10 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
 ms.openlocfilehash: 2ec958cc035ac62086cdd3e2844811accc181d47
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048817"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>缓存策略交互 — 最长使用期限和最低新鲜度
@@ -28,7 +28,7 @@ ms.locfileid: "71048817"
   
 - 如果缓存策略设置 `maxAge` = 2 天，`minFresh` = 2 天，根据 `maxAge`，此内容在 1 月 3 日前是新鲜的。 根据 `minFresh`，此内容在 1 月 2 日前也是新鲜的。 因此，必须在 1 月 2 日重新验证此内容。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [网络应用程序的缓存管理](cache-management-for-network-applications.md)
 - [缓存策略](cache-policy.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - highentropyva compiler option [C#]
 ms.assetid: eaf409b3-384e-49dd-9417-62453658f421
 ms.openlocfilehash: b710bb829f6a7591159d2f2e6bacc670d21c42d1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606849"
 ---
 # <a name="-highentropyva-c-compiler-options"></a>-highentropyva（C# 编译器选项）
@@ -24,7 +24,7 @@ ms.locfileid: "69606849"
 -highentropyva[+ | -]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `+` &#124; `-`  
  此选项指定 64 位可执行文件或由 [-platform:anycpu](./platform-compiler-option.md) 编译器选项标记的可执行文件支持高熵虚拟地址空间。 默认情况下，此选项处于禁用状态。 通过 -highentropyva+ 或 -highentropyva 启用它   。  
   

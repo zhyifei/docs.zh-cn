@@ -3,10 +3,10 @@ title: 概述
 ms.date: 12/13/2019
 description: 有关 Microsoft.Data.Sqlite 的概述
 ms.openlocfilehash: e84c68f0615f187e8dea7ab87ac917c0ad796a1c
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77543594"
 ---
 # <a name="microsoftdatasqlite-overview"></a>Microsoft.Data.Sqlite 概述
@@ -37,7 +37,7 @@ Install-Package Microsoft.Data.Sqlite
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/HelloWorldSample/Program.cs?name=snippet_HelloWorld)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [连接字符串](connection-strings.md)
 * [API 参考](/dotnet/api/?view=msdata-sqlite-3.0)

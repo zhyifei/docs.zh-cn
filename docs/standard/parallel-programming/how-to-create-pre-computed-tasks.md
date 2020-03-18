@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, creating pre-computed
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
 ms.openlocfilehash: f5d2a70685fe0401d0219b99ada6936ac04691f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123128"
 ---
 # <a name="how-to-create-pre-computed-tasks"></a>如何：创建预先计算的任务
@@ -26,6 +26,6 @@ ms.locfileid: "73123128"
   
  此示例计算两次下载多个字符串需要的时间。 与第一组下载操作相比，第二组下载操作应该会花费较少的时间，因为结果已包含在缓存中。 <xref:System.Threading.Tasks.Task.FromResult%2A> 方法可以使 `DownloadStringAsync` 方法创建包含这些预计算结果的 <xref:System.Threading.Tasks.Task%601> 对象。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [基于任务的异步编程](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)

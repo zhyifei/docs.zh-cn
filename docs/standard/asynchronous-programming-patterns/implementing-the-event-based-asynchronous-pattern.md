@@ -18,10 +18,10 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
 ms.openlocfilehash: 9865fa169e0776765f9a97ec0a7b4555bf253886
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67663707"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>实现基于事件的异步模式
@@ -32,7 +32,7 @@ ms.locfileid: "67663707"
 
 有关实现基于事件的异步模式的示例，请参阅[如何：实现支持基于事件的异步模式的组件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)。
 
-对于简单的异步操作，可能会发现 <xref:System.ComponentModel.BackgroundWorker> 组件非常适合。 有关 <xref:System.ComponentModel.BackgroundWorker> 的详细信息，请参阅[如何：在后台运行操作](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)。
+对于简单的异步操作，可能会发现 <xref:System.ComponentModel.BackgroundWorker> 组件非常适合。 若要详细了解 <xref:System.ComponentModel.BackgroundWorker>，请参阅[如何：在后台运行操作](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)。
 
 以下列表介绍本主题中讨论的基于事件的异步模式的功能。
 
@@ -74,7 +74,7 @@ ms.locfileid: "67663707"
 
 - 接受多个调用。
 
-（可选）定义与 MethodNameAsync 完全相同的 MethodNameAsync 重载，但要额外添加对象赋值参数（即 `userState`）。     如果已准备好管理方法的多个并发调用（在这种情况下，`userState` 值将传递回所有事件处理程序以区分方法的调用），可使用此方法。 也可以选择将其简单地作为存储用户状态以供以后检索的位置。
+（可选）定义与 MethodNameAsync 完全相同的 MethodNameAsync 重载，但要额外添加对象赋值参数（即 _）。_    `userState` 如果已准备好管理方法的多个并发调用（在这种情况下，`userState` 值将传递回所有事件处理程序以区分方法的调用），可使用此方法。 也可以选择将其简单地作为存储用户状态以供以后检索的位置。
 
 对于各个 MethodNameAsync 方法签名：  
 
@@ -124,7 +124,7 @@ ms.locfileid: "67663707"
 
 - 你的类（包括将来预计要添加的内容），是否只具有一个支持取消操作的异步操作？
 
-- 支持取消的异步操作是否能支持多个挂起操作？ 也就是说，MethodNameAsync 方法是否需要使用 `userState` 参数？它是否允许在等待任何操作完成前执行多个调用？  
+- 支持取消的异步操作是否能支持多个挂起操作？ 也就是说，MethodNameAsync 方法是否需要使用  _参数？它是否允许在等待任何操作完成前执行多个调用？_  `userState`
 
 使用下表中的两个问题的答案来确定取消方法的签名。
 
@@ -148,7 +148,7 @@ ms.locfileid: "67663707"
 
 请勿在同一类中定义上表中的多个方法。 这将毫无意义，或者会由于方法的泛滥而使类接口变得混乱。
 
-通常，这些方法会立即返回，并且操作实际上可能会/无法取消。 在 MethodNameCompleted 事件的事件处理程序中，MethodNameCompletedEventArgs 对象包含 `Cancelled` 字段，客户端可使用此字段来确定是否取消了操作。    
+通常，这些方法会立即返回，并且操作实际上可能会/无法取消。 在 MethodNameCompleted 事件的事件处理程序中，MethodNameCompletedEventArgs 对象包含  _字段，客户端可使用此字段来确定是否取消了操作。_    `Cancelled`
 
 请遵守[实现基于事件的异步模式的最佳做法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)中所述的取消语义。
 
@@ -156,7 +156,7 @@ ms.locfileid: "67663707"
 
 如果你的类不支持多个并发调用，请考虑公开 `IsBusy` 属性。 这样一来，开发人员可以确定能否运行 MethodNameAsync 方法，同时又不会捕获到 MethodNameAsync 方法抛出的异常。    
 
-请遵守[实现基于事件的异步模式的最佳做法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)中所述的 `IsBusy` 语义。
+请遵守`IsBusy`实现基于事件的异步模式的最佳做法[中所述的 ](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md) 语义。
 
 ## <a name="optionally-provide-support-for-progress-reporting"></a>选择性地为进度报告提供支持
 
@@ -206,7 +206,7 @@ ms.locfileid: "67663707"
 
 - 将增量结果报告与进度报告分开。
 
-- 单独定义针对每个异步方法有适当 <xref:System.EventArgs> 的 MethodNameProgressChanged 事件，以处理此方法的增量结果数据。  
+- 单独定义针对每个异步方法有适当  _的 MethodNameProgressChanged 事件，以处理此方法的增量结果数据。_  <xref:System.EventArgs>
 
 按照[实现基于事件的异步模式的最佳做法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)所述，在适当线程上调用事件处理程序。
 
@@ -216,7 +216,7 @@ ms.locfileid: "67663707"
 
 给定同步方法 *MethodName*：
 
--  MethodName 的 `out` 参数不应为 MethodNameAsync   的一部分。 它们应是 MethodNameCompletedEventArgs 的一部分，与 MethodName 中的相当参数同名（除非有更合适的名称）。   
+- `out`*MethodName 的*  参数不应为 MethodNameAsync   的一部分。 它们应是 MethodNameCompletedEventArgs 的一部分，与 MethodName 中的相当参数同名（除非有更合适的名称）。   
 
 - MethodName 的 `ref` 参数应显示为 MethodNameAsync 的一部分，并显示为 MethodNameCompletedEventArgs 的一部分，与 MethodName 中的相当参数同名（除非有更合适的名称）。      
 
@@ -257,7 +257,7 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>

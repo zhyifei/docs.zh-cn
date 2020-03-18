@@ -11,10 +11,10 @@ helpviewer_keywords:
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 ms.openlocfilehash: 3ca340e19d7340d7bea133fa62c6d8bbc3c0512a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160386"
 ---
 # <a name="collections-and-data-structures"></a>集合和数据结构
@@ -48,7 +48,7 @@ ms.locfileid: "78160386"
   
 - **下限一致**  
   
-     集合的下限是其第一个元素的索引。 <xref:System.Collections> 命名空间中的所有索引集合的下限均为零，这表示它们从 0 开始建立索引。 <xref:System.Array> 默认下限为零，但使用 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 创建 Array 类的实例时可定义其他下限  。  
+     集合的下限是其第一个元素的索引。 <xref:System.Collections> 命名空间中的所有索引集合的下限均为零，这表示它们从 0 开始建立索引。 <xref:System.Array> 默认下限为零，但使用  **创建 Array 类的实例时可定义其他下限**<xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>。  
   
 - **同步以从多个线程进行访问**（仅 <xref:System.Collections> 类）。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "78160386"
 <a name="BKMK_RelatedTopics"></a>
 ## <a name="related-topics"></a>相关主题  
   
-|Title|描述|  
+|标题|说明|  
 |-----------|-----------------|  
 |[选择集合类](../../../docs/standard/collections/selecting-a-collection-class.md)|描述不同的集合并帮助你为你的方案选择一个集合。|  
 |[常用的集合类型](../../../docs/standard/collections/commonly-used-collection-types.md)|描述诸如 <xref:System.Array?displayProperty=nameWithType>、<xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 等常用泛型和非泛型集合类型。|  
@@ -84,7 +84,7 @@ ms.locfileid: "78160386"
 |System.Collections.Immutable|介绍不可变集合并提供各集合类型的链接。|  
   
 <a name="BKMK_Reference"></a>
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Array?displayProperty=nameWithType>  
  <xref:System.Collections?displayProperty=nameWithType>  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  

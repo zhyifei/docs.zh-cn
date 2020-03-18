@@ -6,10 +6,10 @@ helpviewer_keywords:
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 ms.openlocfilehash: be15ce0b0bed37da6fe400e98bfdd118c48f7ba0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716525"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 部署指南（针对管理员）
@@ -121,15 +121,15 @@ ms.locfileid: "75716525"
 
     2. **命令行：** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT`（这些步骤后的表中描述了命令行选项）
 
-    3. **运行：** 选择“隐藏”  。
+    3. 运行：  选择“隐藏”  。
 
-    4. **程序可以运行：** 选择指定程序可以运行（不管用户是否登录）的选项。
+    4. 程序可以运行：  选择指定程序可以运行（不管用户是否登录）的选项。
 
 8. 在“需求”  页上，选择“下一步”  以接受默认值，然后完成该向导。
 
 下表描述了步骤 7 中指定的命令行选项。
 
-|选项|描述|
+|选项|说明|
 |------------|-----------------|
 |**/q**|设置安静模式。 不需要用户输入，也不显示输出。|
 |**/norestart**|防止安装程序自动重新启动。 如果你使用此选项，则 Configuration Manager 必须处理计算机重新启动。|
@@ -228,7 +228,7 @@ System Center 2012 Configuration Manager（既充当管理点又充当分发点�
 
 <a name="troubleshooting"></a>
 
-## <a name="troubleshooting"></a>疑难解答
+## <a name="troubleshooting"></a>故障排除
 
 ### <a name="log-file-locations"></a>日志文件位置
 
@@ -251,7 +251,7 @@ System Center 2012 Configuration Manager（既充当管理点又充当分发点�
 
 有关指向详细信息的链接，请参阅下一节[下载错误代码](#additional_error_codes)。
 
-|返回代码|描述|
+|返回代码|说明|
 |-----------------|-----------------|
 |0|已成功完成安装。|
 |1602|用户已取消安装。|
@@ -276,7 +276,7 @@ System Center 2012 Configuration Manager（既充当管理点又充当分发点�
 
 - [Windows 更新代理结果代码](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [面向开发人员的部署指南](deployment-guide-for-developers.md)
 - [系统要求](../get-started/system-requirements.md)

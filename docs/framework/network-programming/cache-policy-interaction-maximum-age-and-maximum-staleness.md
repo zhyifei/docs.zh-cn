@@ -10,10 +10,10 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
 ms.openlocfilehash: e21cfc28407ba67afdce8d72e5e52c12ab359059
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048845"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>缓存策略交互 — 最长使用期限和最长过期时间
@@ -27,7 +27,7 @@ ms.locfileid: "71048845"
   
 - 如果缓存策略设置 `maxAge` = 5 天，`maxStale` = 1 天，根据 `maxAge` 值，此内容在 1 月 6 日前可用。 根据 `maxStale` 值，此内容在 1 月 5 日前可用。 因此，会在 1 月 5 日重新验证此内容。  
   
- 当内容的最长使用时间小于过期日期时，更保守的缓存行为占据优先级，且最长过期时间值不会有任何效果。 以下示例阐明了在内容过期之前到达最长使用时间 (`maxAge`) 时设置最长过期时间 (`maxStale`) 值的效果：  
+ 当内容的最长使用时间小于过期日期时，更保守的缓存行为占据优先级，且最长过期时间值不会有任何效果。 以下示例阐明了在内容过期之前到达最长使用时间 (`maxStale`) 时设置最长过期时间 (`maxAge`) 值的效果：  
   
 - 如果缓存策略设置 `maxAge` = 1 天，且未指定 `maxStale` 值，即使内容尚未过期，也会在 1 月 2 日重新验证此内容。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71048845"
   
 - 如果缓存策略设置 `maxAge` = 1 天，`maxStale` = 1 天，会在 1 月 2 日重新验证此内容。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [网络应用程序的缓存管理](cache-management-for-network-applications.md)
 - [缓存策略](cache-policy.md)

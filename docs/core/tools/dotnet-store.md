@@ -3,17 +3,17 @@ title: dotnet store 命令
 description: “dotnet store”命令可将指定的程序集存储到运行时包存储区。
 ms.date: 02/14/2020
 ms.openlocfilehash: da1d132b2b873ff55ec104b5bb092d0194889bdc
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503580"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
 **本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
-## <a name="name"></a>“属性”
+## <a name="name"></a>名称
 
 `dotnet store` - 将指定的程序集存储到[运行时包存储区](../deploying/runtime-store.md)。
 
@@ -23,7 +23,7 @@ ms.locfileid: "77503580"
 dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet store` 将指定的程序集存储到[运行时包存储区](../deploying/runtime-store.md)。 默认情况下，程序集更适用于目标运行时和框架。 有关详细信息，请参阅[运行时包存储区](../deploying/runtime-store.md)主题。
 
@@ -85,6 +85,6 @@ dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-
   dotnet store --manifest packages.csproj --skip-optimization
   ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [运行时包存储](../deploying/runtime-store.md)

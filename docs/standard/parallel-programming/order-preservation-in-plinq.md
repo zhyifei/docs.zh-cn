@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 ms.openlocfilehash: 5b067fa277816e6105d37047c6c4996a4cbb9b5a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138222"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ 中的顺序保留
@@ -120,7 +120,7 @@ ms.locfileid: "73138222"
   
  无序结果并不是主动随机无序；就是没有应用任何特殊顺序逻辑。 在某些情况下，无序查询可能会暂留源序列的顺序。 对于使用已编入索引的 Select 运算符的查询，PLINQ 保证输出元素按索引升序排列，但不保证向元素分配哪些索引。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [并行编程](../../../docs/standard/parallel-programming/index.md)

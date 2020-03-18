@@ -6,10 +6,10 @@ helpviewer_keywords:
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
 ms.openlocfilehash: 1fdfaa833ad32428d341b6f3a61cc7f638036183
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937509"
 ---
 # <a name="generic-classes-c-programming-guide"></a>泛型类（C# 编程指南）
@@ -25,7 +25,7 @@ ms.locfileid: "75937509"
   
 - 要将何种约束（如有）应用到类型参数（请参阅[类型参数的约束](./constraints-on-type-parameters.md)）。  
   
-     其中一个有用的规则是，应用最大程度的约束，同时仍可处理必须处理的类型。 例如，如果知道泛型类仅用于引用类型，则请应用类约束。 这可防止将类意外用于值类型，并使你可在 `T` 上使用 `as` 运算符和检查 null 值。  
+     其中一个有用的规则是，应用最大程度的约束，同时仍可处理必须处理的类型。 例如，如果知道泛型类仅用于引用类型，则请应用类约束。 这可防止将类意外用于值类型，并使你可在 `as` 上使用 `T` 运算符和检查 null 值。  
   
 - 是否将泛型行为分解为基类和子类。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "75937509"
   
  泛型类是不变量。 换而言之，如果一个输入参数指定 `List<BaseClass>`，且你尝试提供 `List<DerivedClass>`，则会出现编译时错误。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Collections.Generic>
 - [C# 编程指南](../index.md)

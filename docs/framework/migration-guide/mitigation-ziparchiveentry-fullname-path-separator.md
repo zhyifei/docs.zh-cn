@@ -9,10 +9,10 @@ helpviewer_keywords:
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
 ms.openlocfilehash: 021d22e90ba39a4d01cf7d64588fab2d724b6640
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457733"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>缓解：ZipArchiveEntry.FullName 路径分隔符
@@ -25,7 +25,7 @@ ms.locfileid: "73457733"
   
  对于在 Windows 操作系统上由 .NET Framework<xref:System.IO> 命名空间中的 API 解压缩的 .ZIP 文件，此更改造成的影响应该是最小的，因为这些 API 可以无缝地将正斜杠 ("/") 或反斜杠 ("\\") 处理为路径分隔符。  
   
-## <a name="mitigation"></a>缓解  
+## <a name="mitigation"></a>缓解操作  
  如果不需要此行为，可以在应用程序配置文件的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 部分中添加配置设置，从而选择禁用此行为。 下面展示了 `<runtime>` 部分和选择禁用此行为的开关。  
   
 ```xml  
@@ -42,7 +42,7 @@ ms.locfileid: "73457733"
 </runtime>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [重定目标更改](retargeting-changes-in-the-net-framework-4-6-1.md)
 - [应用程序兼容性](application-compatibility.md)

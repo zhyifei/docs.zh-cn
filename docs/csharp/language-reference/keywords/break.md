@@ -8,10 +8,10 @@ helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
 ms.openlocfilehash: ef276fd9e8da0ea25695c5afdf06a300bbd2a123
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713756"
 ---
 # <a name="break-c-reference"></a>break（C# 参考）
@@ -45,7 +45,7 @@ Sorry, invalid selection.
 
 ## <a name="example"></a>示例
 
-在本例中，`break` 语句仅用于在循环的每次迭代中脱离当前分支。 循环本身不受属于嵌套 [switch](./switch.md) 语句的 `break` 实例的影响。
+在本例中，`break` 语句仅用于在循环的每次迭代中脱离当前分支。 循环本身不受属于嵌套 `break`switch[ 语句的 ](./switch.md) 实例的影响。
 
 [!code-csharp[csrefKeywordsJump#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#8)]
 
@@ -53,7 +53,7 @@ Sorry, invalid selection.
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)

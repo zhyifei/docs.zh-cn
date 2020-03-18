@@ -5,16 +5,16 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
 ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73416718"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>关于 ASP.NET Core Web 应用的 Azure 托管建议
 
 > “全球各地的业务线领导绕过 IT 部门，从云获取应用程序（又称 SaaS）并支付使用费用，就像订阅杂志一样。 不再需要服务时，他们可取消订阅，不会出现设备闲置的情况。”  
-> \-Gartner 分析师 Daryl Plummer 
+> _Gartner 分析师 Daryl Plummer\-_
 
 无论面对应用程序的何种需求和体系结构，Microsoft Azure 均可提供支持。 托管需求可以非常简单（例如静态网站），也可以非常复杂（例如由多个服务组成的复杂的应用程序）。 对于 ASP.NET Core 整体 Web 应用程序和支持服务，推荐以下几种常见配置。 无论是完整应用程序、单个进程或数据，本文中的建议配置均按待托管资源的类型分组。
 
@@ -87,7 +87,7 @@ Azure Kubernetes 服务 (AKS) 管理托管的 Kubernetes 环境，即使没有�
 - 自我修复型托管控制平面（主节点）。
 - 节省成本：仅支付运行的代理池节点。
 
-由于 Azure 会负责管理 AKS 群集中的节点，因此，很多任务（例如群集升级）不再需要手动执行。 由于 Azure 会处理这些关键维护任务，因此，AKS 不提供对群集的直接访问（例如使用 SSH）。
+Azure 可处理 AKS 群集中的节点管理，因此我们不再需要手动执行许多任务，例如群集升级。 由于 Azure 会处理这些关键维护任务，因此，AKS 不提供对群集的直接访问（例如使用 SSH）。
 
 使用 AKS 的团队也可以使用 Azure Dev Spaces。 Azure Dev Spaces 允许团队直接使用他们在 AKS 中运行的整个微服务体系结构或应用程序，帮助团队专注于微服务应用程序的开发和快速迭代。 Azure Dev Spaces 还提供一种独立更新微服务体系结构各部分的方法，而不会影响 AKS 群集的其余部分或其他开发人员。
 
@@ -110,7 +110,7 @@ Azure Dev Spaces：
 
 对于可从应用程序的剩余部分分离的单独逻辑进程，可以“无服务器”方式将其独立部署到 Azure Functions。 通过 Azure Functions 可编写解决特定问题所需的代码，无需担心运行它的应用程序或基础结构。 可选择各种编程语言，包括 C\#、F\#、Node.js、Python 和 PHP，以便你选择一种最高效语言来处理手头任务。 与多数基于云的解决方案一样，仅需为使用的时间量支付费用，而且 Azure Functions 按需扩展非常可靠。
 
-## <a name="data"></a>数据
+## <a name="data"></a>data
 
 Azure 提供多种数据存储选择，以便应用程序可使用恰当的数据提供程序处理相关数据。
 
@@ -154,4 +154,4 @@ Azure 提供多种数据存储选择，以便应用程序可使用恰当的数�
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
->[上一篇](development-process-for-azure.md)
+>[上一页](development-process-for-azure.md)

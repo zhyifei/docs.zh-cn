@@ -3,10 +3,10 @@ title: 重大更改类别
 description: 了解在 .NET Core 中对中断性变更分类的方式。
 ms.date: 06/10/2019
 ms.openlocfilehash: b273ebbb82da803cde66ea34760aa1779c6c1ca5
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093040"
 ---
 # <a name="breaking-change-categories"></a>重大更改类别
@@ -38,7 +38,7 @@ ms.locfileid: "77093040"
 
 设计时兼容性指的是保留不同版本的 Visual Studio 和其他设计时环境中的体验。 虽然这可能涉及到设计器的行为或 UI，但设计时兼容性最重要的方面是项目兼容性。 项目或解决方案必须能够在设计时环境的更新版本中打开和使用。
 
-## <a name="backwards-compatibility"></a>后向兼容性
+## <a name="backwards-compatibility"></a>向后兼容性
 
 向后兼容性指的是 API 的现有使用者能够在操作方式相同的情况下在新版本中运行。 行为变更和二进制兼容性更改都会影响向后兼容性。 如果使用者无法在运行更新版本的 API 时以不同方式运行或操作，则 API 是向后不兼容的  。
 
@@ -52,6 +52,6 @@ ms.locfileid: "77093040"
 
 保持向前兼容性不是 .NET Core 的目标。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [评估 .NET Core 中的中断性变更](index.md)

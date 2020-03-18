@@ -8,10 +8,10 @@ helpviewer_keywords:
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
 ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73418053"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>演练：用 C# 编写查询 (LINQ)
@@ -20,13 +20,13 @@ ms.locfileid: "73418053"
 ## <a name="create-a-c-project"></a>创建 C# 项目  
   
 > [!NOTE]
-> 以下说明适用于 Visual Studio。 如果使用其他开发环境，请创建包含对 System.Core.dll 的引用的控制台项目和用于 <xref:System.Linq?displayProperty=nameWithType> 命名空间的 `using` 指令。  
+> 以下说明适用于 Visual Studio。 如果使用其他开发环境，请创建包含对 System.Core.dll 的引用的控制台项目和用于 `using` 命名空间的 <xref:System.Linq?displayProperty=nameWithType> 指令。  
   
 #### <a name="to-create-a-project-in-visual-studio"></a>在 Visual Studio 中创建项目  
   
 1. 启动 Visual Studio。  
   
-2. 在菜单栏上，依次选择“文件”  、“新建”  、“项目”  。  
+2. 在菜单栏上，依次选择 **“文件”** 、 **“新建”** 、 **“项目”** 。  
   
      **“新建项目”** 对话框随即打开。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73418053"
   
      新项目将出现在“解决方案资源管理器”  中。  
   
-5. 注意，此项目包含对 System.Core.dll 的引用和用于 <xref:System.Linq?displayProperty=nameWithType> 命名空间的 `using` 指令。  
+5. 注意，此项目包含对 System.Core.dll 的引用和用于 `using` 命名空间的 <xref:System.Linq?displayProperty=nameWithType> 指令。  
   
 ## <a name="create-an-in-memory-data-source"></a>创建内存中的数据源  
  用于查询的数据源是 `Student` 对象的简单列表。 每个 `Student` 记录都有名字、姓氏和整数数组（表示该学生在课堂上的测试分数）。 将此代码复制到项目中。 请注意下列特性：  
@@ -51,13 +51,13 @@ ms.locfileid: "73418053"
   
 #### <a name="to-add-the-data-source"></a>添加数据源  
   
-- 向项目中的 `Program` 类添加 `Student` 类和经过初始化的学生列表。  
+- 向项目中的 `Student` 类添加 `Program` 类和经过初始化的学生列表。  
   
      [!code-csharp[CsLinqGettingStarted#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#11)]  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>向学生列表添加新学生  
   
-1. 向 `Students` 列表添加一个新 `Student`，并按自己的选择使用名称和测试分数。 尝试键入所有新学生信息，以便更好地了解对象初始值设定项的语法。  
+1. 向 `Student` 列表添加一个新 `Students`，并按自己的选择使用名称和测试分数。 尝试键入所有新学生信息，以便更好地了解对象初始值设定项的语法。  
   
 ## <a name="create-the-query"></a>创建查询  
   
@@ -133,7 +133,7 @@ ms.locfileid: "73418053"
   
 #### <a name="to-make-the-variables-implicitly-typed"></a>对变量进行隐式类型化  
   
-1. `IGroupings` 的显式编码 `IEnumerables` 将快速变得冗长。 使用 `var` 可以更方便地编写相同的查询和 `foreach` 循环。 `var` 关键字不会更改对象的类型；它仅指示编译器推断类型。 将 `studentQuery` 和迭代变量 `group` 的类型更改为 `var`，然后重新运行查询。 注意，在内部 `foreach` 循环中，该迭代变量仍类型化为 `Student`，并且查询的工作原理和以前一样。 将 `s` 迭代变量更改为 `var`，然后再次运行查询。 将看到完全相同的结果。  
+1. `IEnumerables` 的显式编码 `IGroupings` 将快速变得冗长。 使用 `foreach` 可以更方便地编写相同的查询和 `var` 循环。 `var` 关键字不会更改对象的类型；它仅指示编译器推断类型。 将 `studentQuery` 和迭代变量 `group` 的类型更改为 `var`，然后重新运行查询。 注意，在内部 `foreach` 循环中，该迭代变量仍类型化为 `Student`，并且查询的工作原理和以前一样。 将 `s` 迭代变量更改为 `var`，然后再次运行查询。 将看到完全相同的结果。  
   
      [!code-csharp[CsLINQGettingStarted#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#16)]  
   
@@ -141,7 +141,7 @@ ms.locfileid: "73418053"
   
 #### <a name="to-order-the-groups-by-their-key-value"></a>按照键值对组进行排序  
   
-1. 运行上一查询时，会发现这些组不是按字母顺序排序的。 若要更改此排序，必须在 `group` 子句后提供 `orderby` 子句。 但若要使用 `orderby` 子句，首先需要一个标识符，用作对 `group` 子句创建的组的引用。 可以使用 `into` 关键字提供该标识符，如下所示：  
+1. 运行上一查询时，会发现这些组不是按字母顺序排序的。 若要更改此排序，必须在 `orderby` 子句后提供 `group` 子句。 但若要使用 `orderby` 子句，首先需要一个标识符，用作对 `group` 子句创建的组的引用。 可以使用 `into` 关键字提供该标识符，如下所示：  
   
      [!code-csharp[csLINQGettingStarted#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#17)]  
   
@@ -182,7 +182,7 @@ ms.locfileid: "73418053"
   
  [LINQ to Objects (C#)](./linq-to-objects.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [语言集成查询 (LINQ) (C#)](./index.md)
 - [LINQ 查询表达式](../../../linq/index.md)

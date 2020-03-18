@@ -7,10 +7,10 @@ helpviewer_keywords:
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
 ms.openlocfilehash: adfc53cbe4fd603ac3a6de6b9a0162320d5a2e19
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712281"
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>如何使用 try/catch 处理异常（C# 编程指南）
@@ -24,7 +24,7 @@ ms.locfileid: "75712281"
 ## <a name="comments"></a>注释  
  引发异常的代码包含在 `try` 块中。 在此块后面紧挨着添加 `catch` 语句以处理 `IndexOutOfRangeException` 异常（如果发生此异常）。 `catch` 块处理 `IndexOutOfRangeException` 异常并改为引发更合理的 `ArgumentOutOfRangeException` 异常。 为了向调用方提供尽可能多的信息，请考虑将原始异常指定为新异常的 <xref:System.Exception.InnerException%2A>。 因为 <xref:System.Exception.InnerException%2A> 属性为 [readonly](../../language-reference/keywords/readonly.md)，所以必须在新异常的构造函数中指定此属性。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [异常和异常处理](./index.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 4377d113a18d23c8a0f9a669e6112f1a8223cc79
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ab5eb1679f846bf0e25d90a4d0e0a71f0bdb0096
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450864"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847699"
 ---
 # <a name="enumeration-types-c-reference"></a>枚举类型（C# 参考）
 
@@ -54,9 +54,9 @@ enum ErrorCode : ushort
 
 如果希望枚举类型表示选项组合，请为这些选项定义枚举成员，以便单个选项成为位字段。 也就是说，这些枚举成员的关联值应该是 2 的幂。 然后，可以使用[按位逻辑运算符`|`或 `&`](../operators/bitwise-and-shift-operators.md#enumeration-logical-operators) 分别合并选项或交叉组合选项。 若要指示枚举类型声明位字段，请对其应用 [Flags](xref:System.FlagsAttribute) 属性。 如下面的示例所示，还可以在枚举类型的定义中包含一些典型组合。
 
-[!code-csharp[enum flags](~/samples/csharp/language-reference/builtin-types/EnumType.cs#Flags)]
+[!code-csharp[enum flags](snippets/EnumType.cs#Flags)]
 
-有关详细信息和示例，请参阅 <xref:System.FlagsAttribute?displayProperty=nameWithType> API 参考页和 <xref:System.Enum?displayProperty=nameWithType> API 参考页的[非独占成员和 Flags 属性](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute)部分。
+有关详细信息和示例，请参阅 <xref:System.FlagsAttribute?displayProperty=nameWithType> API 参考页和 [ API 参考页的](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute)非独占成员和 Flags 属性<xref:System.Enum?displayProperty=nameWithType>部分。
 
 ## <a name="the-systemenum-type-and-enum-constraint"></a>System.Enum 类型和枚举约束
 
@@ -68,11 +68,11 @@ enum ErrorCode : ushort
 
 对于任何枚举类型，枚举类型与其基础整型类型之间存在显式转换。 如果将枚举值[转换](../operators/type-testing-and-cast.md#cast-operator-)为其基础类型，则结果为枚举成员的关联整数值。
 
-[!code-csharp[enum conversions](~/samples/csharp/language-reference/builtin-types/EnumType.cs#Conversions)]
+[!code-csharp[enum conversions](snippets/EnumType.cs#Conversions)]
 
 使用 <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> 方法来确定枚举类型是否包含具有特定关联值的枚举成员。
 
-对于任何枚举类型，都存在分别与 <xref:System.Enum?displayProperty=nameWithType> 类型的[装箱和取消装箱](../../programming-guide/types/boxing-and-unboxing.md)相互转换。
+对于任何枚举类型，都存在分别与 [ 类型的](../../programming-guide/types/boxing-and-unboxing.md)装箱和取消装箱<xref:System.Enum?displayProperty=nameWithType>相互转换。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
@@ -85,7 +85,7 @@ enum ErrorCode : ushort
 - [显式枚举转换](~/_csharplang/spec/conversions.md#explicit-enumeration-conversions)
 - [隐式枚举转换](~/_csharplang/spec/conversions.md#implicit-enumeration-conversions)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [枚举格式字符串](../../../standard/base-types/enumeration-format-strings.md)

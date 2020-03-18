@@ -9,10 +9,10 @@ helpviewer_keywords:
 - try-catch statement [C#]
 ms.assetid: a1b443b0-ff7a-43ab-b835-0cc9bfbd15ca
 ms.openlocfilehash: 5d98f6967595c7c32b23ba5422a8d9ca79f7f54c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713035"
 ---
 # <a name="try-catch-finally-c-reference"></a>try-catch-finally（C# 参考）
@@ -27,14 +27,14 @@ ms.locfileid: "75713035"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的 [try 语句](~/_csharplang/spec/statements.md#the-try-statement)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/statements.md#the-try-statement)中的 [try 语句](~/_csharplang/spec/introduction.md)部分。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)
 - [try、throw 和 catch 语句 (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
 - [throw](throw.md)
-- [如何：显式抛出异常](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+- [如何：显式引发异常](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
 - [using 语句](using-statement.md)

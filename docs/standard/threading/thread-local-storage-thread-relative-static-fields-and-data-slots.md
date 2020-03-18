@@ -1,5 +1,5 @@
 ---
-title: 线程本地存储：线程相关的静态字段和数据槽
+title: 线程本地存储区：线程相关的静态字段和数据槽
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 ms.openlocfilehash: b5a7c4b78f8599f64aa11f1c98c033866e582933
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127524"
 ---
-# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>线程本地存储：线程相关的静态字段和数据槽
+# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>线程本地存储区：线程相关的静态字段和数据槽
 托管线程本地存储 (TLS) 可用于存储对线程和应用域唯一的数据。 .NET Framework 提供了下面两种托管 TLS 使用方式：线程相对静态字段和数据槽。  
   
 - 如果可以在编译时预测确切需求，请使用线程相对静态字段（Visual Basic 中的线程相对 `Shared` 字段）。 线程相对静态字段的性能最佳。 它们还支持编译时类型检查。  
@@ -55,7 +55,7 @@ ms.locfileid: "73127524"
   
  命名槽非常便捷，因为可以在需要时检索槽，具体操作是将它的名称传递给 <xref:System.Threading.Thread.GetNamedDataSlot%2A> 方法，而不用维护对未命名槽的引用。 不过，如果另一个组件对线程相对存储使用相同的名称，并且线程同时执行你的组件和另一个组件的代码，这两个组件可能会相互损坏数据。 （此方案假定这两个组件都在同一个应用域中运行，并不旨在共享相同的数据。）  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ContextStaticAttribute>
 - <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>

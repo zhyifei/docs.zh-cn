@@ -10,10 +10,10 @@ helpviewer_keywords:
 - LinkedTokenSource, how to
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
 ms.openlocfilehash: e35472040b6ee1263ebc4c4968fa1822045a2064
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138013"
 ---
 # <a name="how-to-listen-for-multiple-cancellation-requests"></a>如何：侦听多个取消请求
@@ -32,6 +32,6 @@ ms.locfileid: "73138013"
   
  虽然 <xref:System.AggregateException> 不得抛出，但此示例捕获到它的原因是，在实际情况下，任务委托抛出的除 <xref:System.OperationCanceledException> 外其他任何异常都包装在 <xref:System.AggregateException> 中。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [托管线程中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)

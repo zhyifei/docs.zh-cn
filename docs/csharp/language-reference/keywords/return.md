@@ -9,10 +9,10 @@ helpviewer_keywords:
 - return keyword [C#]
 ms.assetid: 6da6e152-5b58-4448-8f3f-470dd0617ecd
 ms.openlocfilehash: 116bad7a1f9f61311d287c575b52547d63c9e1c0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713126"
 ---
 # <a name="return-c-reference"></a>return（C# 参考）
@@ -31,7 +31,7 @@ ms.locfileid: "75713126"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)

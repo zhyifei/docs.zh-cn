@@ -3,10 +3,10 @@ title: 调用方信息 (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
 ms.openlocfilehash: 4b2c34945b47db01b0e655f68f92e4dae7445c2c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595348"
 ---
 # <a name="caller-information-c"></a>调用方信息 (C#)
@@ -79,7 +79,7 @@ public void TraceMessage(string message,
 |特性构造函数|要应用特性的方法或属性的名称。 如果该特性是成员中的任何元素（如参数、返回值或泛型参数），则此结果是与该元素关联的成员的名称。|
 |无包含的成员（例如，程序集级别或应用于类型的特性）|可选参数的默认值。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [特性 (C#)](./attributes/index.md)
 - [通用特性 (C#)](./attributes/common-attributes.md)

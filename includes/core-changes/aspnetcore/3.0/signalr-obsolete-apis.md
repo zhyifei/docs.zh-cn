@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 2a65caedea2af65796267aa145e275ebff814bf8
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394227"
 ---
 ### <a name="signalr-usesignalr-and-useconnections-methods-marked-obsolete"></a>SignalR：UseSignalR 和 UseConnections 方法被标记为过时
@@ -26,7 +26,7 @@ SignalR 中心路由是使用 `UseSignalR` 或 `UseConnections` 配置的。
 
 正在将中间件移动到新的终结点路由系统。 添加中间件的旧方法即将过时。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 将 `UseSignalR` 替换为 `UseEndpoints`：
 

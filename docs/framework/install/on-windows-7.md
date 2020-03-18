@@ -4,10 +4,10 @@ ms.custom: updateeachrelease
 description: 了解如何在 Windows 7 SP1 上安装 .NET Framework。
 ms.date: 04/18/2019
 ms.openlocfilehash: 77177b8c4a40f68eb139f5d765bcb421a4d6bb49
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965849"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>在 Windows 7 SP1 和 Windows Server 2008 R2 上安装 .NET Framework
@@ -35,8 +35,8 @@ ms.locfileid: "76965849"
 
 如果无法确定已安装 .NET Framework 的正确版本，可以[联系 Microsoft 获取帮助](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [下载 .NET Framework](https://dotnet.microsoft.com/download)
 - [安装和卸载 .NET Framework 受阻疑难解答](troubleshoot-blocked-installations-and-uninstallations.md)
-- [安装面向开发者的 .NET Framework](guide-for-developers.md)
+- [安装面向开发人员的 .NET Framework](guide-for-developers.md)

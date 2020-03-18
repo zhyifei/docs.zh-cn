@@ -13,10 +13,10 @@ helpviewer_keywords:
 - -? compiler option [C#]
 ms.assetid: 8d53f6ba-5c3b-4183-976e-9c0f26fd3680
 ms.openlocfilehash: bbf4fd6fd13ee267dcbc80568577d5f8aa7d625e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602906"
 ---
 # <a name="-help---c-compiler-options"></a>-help，-? （C# 编译器选项）
@@ -34,7 +34,7 @@ ms.locfileid: "69602906"
   
  此编译器选项在 Visual Studio 中不可用，并且无法以编程方式更改。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](./index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

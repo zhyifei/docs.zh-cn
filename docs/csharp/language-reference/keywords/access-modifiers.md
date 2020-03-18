@@ -5,10 +5,10 @@ helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
 ms.openlocfilehash: 754949e42771de30cc2dce7e4e610f70ada6dfd4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713845"
 ---
 # <a name="access-modifiers-c-reference"></a>访问修饰符（C# 参考）
@@ -29,19 +29,19 @@ ms.locfileid: "75713845"
   
 - [`protected internal`](protected-internal.md)：访问限于当前程序集或派生自包含类的类型。  
   
-- [`private`](private.md)：访问限于包含类。  
+- [`private`](private.md)：访问限于包含类型。  
 
-- [`private protected`](private-protected.md)：访问限于包含类或当前程序集中派生自包含类的类型。  
+- [`private protected`](private-protected.md)：访问限于包含类或派生自当前程序集中包含类的类型。  
   
  本部分还介绍以下内容：  
   
-- [可访问性级别](./accessibility-levels.md)：使用四个访问修饰符声明六个可访问性级别。  
+- [可访问性级别](./accessibility-levels.md)：使用四种访问修饰符，声明六个可访问性级别。  
   
-- [可访问性域](./accessibility-domain.md)：指定可以在程序段中的何处引用成员。  
+- [可访问性域](./accessibility-domain.md)：指定可在程序段中的何处引用成员。  
   
-- [可访问性级别的使用限制](./restrictions-on-using-accessibility-levels.md)：汇总了已声明可访问性级别的使用限制。  
+- [对使用可访问性级别的限制](./restrictions-on-using-accessibility-levels.md)：概括对使用已声明的可访问性级别的限制。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)

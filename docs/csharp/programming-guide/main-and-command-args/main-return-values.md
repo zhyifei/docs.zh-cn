@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
 ms.openlocfilehash: eaa78c33613093bb0e108870669392d07d346a95
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503996"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 返回值（C# 编程指南）
@@ -93,9 +93,9 @@ private static async Task<int> AsyncConsoleWork()
 - `static Task<int> Main(string[])` 导致编译器发出 `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();` 的等效项
 
 > [!NOTE]
->如果示例在 `Main` 方法上使用 `async` 修饰符，则编译器将生成相同的代码。
+>如果示例在 `async` 方法上使用 `Main` 修饰符，则编译器将生成相同的代码。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [C# 参考](../index.md)

@@ -3,10 +3,10 @@ title: 适用于 WCF 开发人员的 ASP.NET Core gRPC - 适用于 WCF 开发人
 description: 在适用于 WCF 开发人员的 ASP.NET Core 3.0 中构建 gRPC 服务的简介
 ms.date: 09/02/2019
 ms.openlocfilehash: 40307124c521659a00339884bacf48881fa3e048
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77543230"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>适用于 WCF 开发人员的 ASP.NET Core gRPC

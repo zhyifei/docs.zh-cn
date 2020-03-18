@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: bae6bf6a1a5d87241b619bf024c099c48af6af43
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 49beb8aa7d488bb6f0649cfb66ce7e78695840b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452677"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78848205"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 中的传输层安全性 (TLS) 最佳做法
 
@@ -29,7 +29,6 @@ ms.locfileid: "77452677"
 
 - 直接使用 <xref:System.Net> API（例如，<xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 和 <xref:System.Net.Security.SslStream?displayProperty=nameWithType>）。
 - 直接使用 WCF 客户端和使用 <xref:System.ServiceModel?displayProperty=nameWithType> 命名空间的服务。
-- 使用 [Azure 云服务](https://azure.microsoft.com/services/cloud-services/) Web 和辅助角色来托管和运行你的应用程序。 请参阅 [Azure 云服务](#azure-cloud-services)部分。
 
 我们建议：
 
@@ -54,9 +53,9 @@ WCF 支持 TLS1.0、1.1 和 1.2 作为 .NET Framework 4.7 中的默认设置。 
 
 ## <a name="audit-your-code-and-make-code-changes"></a>审核代码并对代码进行更改
 
-对于 ASP.NET 应用程序，检查 _web.config_ 的 `<system.web><httpRuntime targetFramework>` 元素，以验证你所使用的是 .NET Framework 的目标版本。
+对于 ASP.NET 应用程序，检查 `<system.web><httpRuntime targetFramework>`web.config_的_ 元素，以验证你所使用的是 .NET Framework 的目标版本。
 
-有关 Windows 窗体和其他应用程序，请参阅[如何：面向 .NET Framework 的某个版本](/visualstudio/ide/visual-studio-multi-targeting-overview)。
+对于 Windows 窗体和其他应用程序，请参阅[如何：面向 .NET Framework 版本](/visualstudio/ide/visual-studio-multi-targeting-overview)。
 
 使用以下部分验证你未使用特定 TLS 或 SSL 版本。
 
@@ -74,11 +73,11 @@ WCF 支持 TLS1.0、1.1 和 1.2 作为 .NET Framework 4.7 中的默认设置。 
 
 ### <a name="for-tcp-sockets-networking"></a>对于 TCP 套接字网络
 
-<xref:System.Net.Security.SslStream>，使用 .NET Framework 4.7 和更高版本，默认为由操作系统选择最佳安全协议和版本。 若要获取默认操作系统最佳选择，如有可能，请不要使用采取显式 <xref:System.Security.Authentication.SslProtocols> 参数的 <xref:System.Net.Security.SslStream> 的方法重载。 否则，将传递 <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>。 建议不要使用 <xref:System.Security.Authentication.SslProtocols.Default>；设置 `SslProtocols.Default` 会强制使用 SSL 3.0 /TLS 1.0，而不使用 TLS 1.2。
+<xref:System.Net.Security.SslStream>，使用 .NET Framework 4.7 和更高版本，默认为由操作系统选择最佳安全协议和版本。 若要获取默认操作系统最佳选择，如有可能，请不要使用采取显式 <xref:System.Net.Security.SslStream> 参数的 <xref:System.Security.Authentication.SslProtocols> 的方法重载。 否则，将传递 <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>。 建议不要使用 <xref:System.Security.Authentication.SslProtocols.Default>；设置 `SslProtocols.Default` 会强制使用 SSL 3.0 /TLS 1.0，而不使用 TLS 1.2。
 
 不要设置 <xref:System.Net.ServicePointManager.SecurityProtocol> 属性的值（针对 HTTP 网络）。
 
-不要使用采取显式 <xref:System.Security.Authentication.SslProtocols> 参数的 <xref:System.Net.Security.SslStream> 的方法重载（针对 TCP 套接字网络）。 当你将应用重定向到 .NET Framework 4.7 或更高版本时，将遵循最佳做法建议。
+不要使用采取显式 <xref:System.Net.Security.SslStream> 参数的 <xref:System.Security.Authentication.SslProtocols> 的方法重载（针对 TCP 套接字网络）。 当你将应用重定向到 .NET Framework 4.7 或更高版本时，将遵循最佳做法建议。
 
 针对 TCP 套接字网络的面向 .NET Framework 4.7 或更高版本的情况，本主题剩余部分与此不相关。
 
@@ -152,7 +151,7 @@ WCF 框架的这些版本被硬编码为使用值 SSL 3.0 和 TLS 1.0。 这些�
 
 ### <a name="switchsystemnetdontenableschusestrongcrypto"></a>Switch.System.Net.DontEnableSchUseStrongCrypto
 
-`Switch.System.Net.DontEnableSchUseStrongCrypto` 的值为 `false` 将导致你的应用使用强加密。 `DontEnableSchUseStrongCrypto` 的值为 `false` 将使用更为安全的网络协议（TLS 1.2、TLS 1.1 和 TLS 1.0），并阻止不安全的协议。 有关详细信息，请参阅 [SCH_USE_STRONG_CRYPTO 标志](#the-sch_use_strong_crypto-flag)。 值为 `true` 将为你的应用禁用强加密。
+`false` 的值为 `Switch.System.Net.DontEnableSchUseStrongCrypto` 将导致你的应用使用强加密。 `false` 的值为 `DontEnableSchUseStrongCrypto` 将使用更为安全的网络协议（TLS 1.2、TLS 1.1 和 TLS 1.0），并阻止不安全的协议。 有关详细信息，请参阅 [SCH_USE_STRONG_CRYPTO 标志](#the-sch_use_strong_crypto-flag)。 值为 `true` 将为你的应用禁用强加密。
 
 如果你的应用面向 .NET Framework 4.6 或更高版本，则该开关默认为 `false`。 这是我们建议使用的安全默认值。 如果你的应用在 .NET Framework 4.6 上运行，但面向早期版本，则开关默认为 `true`。 在这种情况下，应显式将其设置为 `false`。
 
@@ -160,23 +159,23 @@ WCF 框架的这些版本被硬编码为使用值 SSL 3.0 和 TLS 1.0。 这些�
 
 ### <a name="switchsystemnetdontenablesystemdefaulttlsversions"></a>Switch.System.Net.DontEnableSystemDefaultTlsVersions
 
-`Switch.System.Net.DontEnableSystemDefaultTlsVersions` 的值为 `false` 将导致你的应用允许操作系统选择协议。 值为 `true` 将导致你的应用使用由 .NET Framework 选取的协议。
+`false` 的值为 `Switch.System.Net.DontEnableSystemDefaultTlsVersions` 将导致你的应用允许操作系统选择协议。 值为 `true` 将导致你的应用使用由 .NET Framework 选取的协议。
 
 如果你的应用面向 .NET Framework 4.7 或更高版本，则此开关默认为 `false`。 这是我们建议使用的安全默认值。 如果你的应用在 .NET Framework 4.7 或更高版本上运行，但面向早期版本，则开关默认为 `true`。 在这种情况下，应显式将其设置为 `false`。
 
 ### <a name="switchsystemservicemodeldisableusingservicepointmanagersecurityprotocols"></a>Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols
 
-`Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` 的值为 `false` 将导致你的应用程序使用 `ServicePointManager.SecurityProtocols` 中定义的值，以确保使用证书凭据的消息的安全性。 值为 `true` 将使用可用的最高协议（高至 TLS1.0）
+`false` 的值为 `Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` 将导致你的应用程序使用 `ServicePointManager.SecurityProtocols` 中定义的值，以确保使用证书凭据的消息的安全性。 值为 `true` 将使用可用的最高协议（高至 TLS1.0）
 
 对于面向 .NET Framework 4.7 和更高版本的应用程序，此值默认为 `false`。 对于面向 .NET Framework 4.6.2 和早期版本的应用程序，此值默认为 `true`。
 
 ### <a name="switchsystemservicemodeldontenablesystemdefaulttlsversions"></a>Switch.System.ServiceModel.DontEnableSystemDefaultTlsVersions
 
-`Switch.System.ServiceModel.DontEnableSystemDefaultTlsVersions` 的值为 `false` 将设置默认配置，以允许操作系统选择协议。 值为 `true` 会将默认值设置为可用的最高协议（高至 TLS1.2）。
+`false` 的值为 `Switch.System.ServiceModel.DontEnableSystemDefaultTlsVersions` 将设置默认配置，以允许操作系统选择协议。 值为 `true` 会将默认值设置为可用的最高协议（高至 TLS1.2）。
 
 对于面向 .NET Framework 4.7.1 和更高版本的应用程序，此值默认为 `false`。 对于面向 .NET Framework 4.7 和早期版本的应用程序，此值默认为 `true`。
 
-有关 TLS 协议的详细信息，请参阅[缓解措施：TLS 协议](../migration-guide/mitigation-tls-protocols.md)。 有关 `AppContext` 开关的详细信息，请参阅 [`<AppContextSwitchOverrides> Element`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)。
+有关 TLS 协议的详细信息，请参阅[缓解：TLS 协议](../migration-guide/mitigation-tls-protocols.md)。 有关 `AppContext` 开关的详细信息，请参阅 [`<AppContextSwitchOverrides> Element`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)。
 
 ## <a name="configuring-security-via-the-windows-registry"></a>通过 Windows 注册表配置安全性
 
@@ -241,12 +240,12 @@ Windows Registry Editor Version 5.00
 
 ## <a name="the-sch_use_strong_crypto-flag"></a>SCH_USE_STRONG_CRYPTO 标志
 
-启用后（默认情况下，通过 `AppContext` 开关或 Windows 注册表启动），当你的应用请求 TLS 安全协议时，.NET Framework 将使用 `SCH_USE_STRONG_CRYPTO` 标志。 可以通过 `AppContext` 开关或注册表来默认启用 `SCH_USE_STRONG_CRYPTO` 标志。 操作系统将标志传递到 `Schannel`，以指示它禁用已知弱加密算法、密码套件和 TLS/SSL 协议版本（否则，可能会启用该协议以获得更好的互操作性）。 有关详细信息，请参见:
+启用后（默认情况下，通过 `AppContext` 开关或 Windows 注册表启动），当你的应用请求 TLS 安全协议时，.NET Framework 将使用 `SCH_USE_STRONG_CRYPTO` 标志。 可以通过 `SCH_USE_STRONG_CRYPTO` 开关或注册表来默认启用 `AppContext` 标志。 操作系统将标志传递到 `Schannel`，以指示它禁用已知弱加密算法、密码套件和 TLS/SSL 协议版本（否则，可能会启用该协议以获得更好的互操作性）。 有关详情，请参阅：
 
 - [安全通道](/windows/desktop/SecAuthN/secure-channel)
 - [SCHANNEL_CRED 结构](/windows/win32/api/schannel/ns-schannel-schannel_cred)
 
-当你显式使用 <xref:System.Net.SecurityProtocolType> 或 <xref:System.Security.Authentication.SslProtocols> 的 `Tls` (TLS 1.0)、`Tls11` 或 `Tls12` 枚举的值时，`SCH_USE_STRONG_CRYPTO` 标志还将被传递到 `Schannel`。
+当你显式使用 `SCH_USE_STRONG_CRYPTO` 或 `Schannel` 的 `Tls` (TLS 1.0)、`Tls11` 或 `Tls12` 枚举的值时，<xref:System.Net.SecurityProtocolType> 标志还将被传递到 <xref:System.Security.Authentication.SslProtocols>。
 
 ## <a name="security-updates"></a>安全更新
 
@@ -260,7 +259,7 @@ Windows Registry Editor Version 5.00
 另请参阅：
 
 - [.NET Framework 版本和依赖关系](../migration-guide/versions-and-dependencies.md)
-- [如何：确定已安装的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。
+- [如何：确定安装了哪些 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。
 
 ## <a name="support-for-tls-12"></a>支持 TLS 1.2
 
@@ -293,19 +292,3 @@ Windows Registry Editor Version 5.00
 | Windows 7 SP1<br>Windows Server 2008 R2 SP1 | [在 Windows 7 SP1 和 Server 2008 R2 SP1 上的 .NET Framework 3.5.1 中包含对 TLS 系统默认版本的支持](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Server 2008 | [在 Windows Vista SP2 和 Server 2008 SP2 上的 .NET Framework 2.0 SP2 中包含对 TLS 系统默认版本的支持](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Vista | 不支持 |
-
-## <a name="azure-cloud-services"></a>Azure 云服务
-
-如果你使用 [Azure 云服务](https://azure.microsoft.com/services/cloud-services/) Web 角色和辅助角色来托管和运行应用程序，则需要考虑一些注意事项，以支持 TLS 1.2。
-
-### <a name="net-framework-47-is-not-installed-on-azure-guest-os-by-default"></a>默认情况下在 Azure 来宾操作系统上未安装 .NET Framework 4.7
-
-在最新的 Azure 来宾操作系统系列 5 版本（Windows Server 2016）中安装的最新版本是 4.6.2。 若要查看每个 Azure 来宾操作系统上所安装的 .NET Framework 版本，请参阅 [Azure 来宾操作系统版本和 SDK 兼容性矩阵](https://docs.microsoft.com/azure/cloud-services/cloud-services-guestos-update-matrix)。
-
-如果你的应用程序面向的 .NET Framework 版本在 Azure 来宾操作系统上不可用，则需自行安装它。 请参阅[在 Azure 云服务角色上安装 .NET](https://docs.microsoft.com/azure/cloud-services/cloud-services-dotnet-install-dotnet)。 如果框架安装需要重启，则在进入“就绪”状态前，服务角色可能也会重启。
-
-### <a name="azure-guest-os-registry-settings"></a>Azure 来宾操作系统注册表设置
-
-[Azure 云服务](https://azure.microsoft.com/services/cloud-services/)的 Azure 来宾操作系统系列 5 图像已经具有将值设置为 1 的 `SchUseStrongCrypto` 注册表项。 有关详细信息，请参阅 [SchUseStrongCrypto](#schusestrongcrypto)。
-
-将 [SystemDefaultTlsVersions](#systemdefaulttlsversions) 注册表项设置为 1。 请参阅[通过 Windows 注册表配置安全性](#configuring-security-via-the-windows-registry)。

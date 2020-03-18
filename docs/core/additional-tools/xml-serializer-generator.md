@@ -6,10 +6,10 @@ ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: 094dd1227033e167050ad73121b3005a592a0ae4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714524"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>在 .NET Core 上使用 Microsoft XML 序列化程序生成器
@@ -26,7 +26,7 @@ ms.locfileid: "75714524"
 
 正如适用于 .NET Framework 的 [Xml Serializer Generator (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md)，[Microsoft.XmlSerializer.Generator NuGet 包](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) 是适用于 .NET Core 和 .NET 标准项目的等效项。 它为程序集中包含的类型创建 XML 序列化程序集，从而提高使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化或反序列化这些类型对象时，XML 序列化的启动性能。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 完成本教程：
 
@@ -52,7 +52,7 @@ dotnet new console
 
 使用 [`dotnet add package`](../tools//dotnet-add-package.md) 命令在项目中添加引用。
 
-类型：
+类型:
 
 ```dotnetcli
 dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
@@ -95,15 +95,15 @@ public class MyClass
 
 ### <a name="create-an-xmlserializer-for-myclass"></a>为 MyClass 创建 `XmlSerializer`
 
-在 Main 中添加以下行，为 MyClass 创建 `XmlSerializer`  ：
+在 Main 中添加以下行，为 MyClass 创建  `XmlSerializer`：
 
 ```csharp
 var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 ```
 
-### <a name="build-and-run-the-application"></a>编译和运行应用程序
+### <a name="build-and-run-the-application"></a>构建并运行应用程序
 
-继续在 MyApp 文件夹中，通过 [`dotnet run`](../tools/dotnet-run.md) 运行应用程序，并在运行时自动加载和使用预生成的序列化程序  。
+继续在 MyApp 文件夹中，通过  [ 运行应用程序，并在运行时自动加载和使用预生成的序列化程序`dotnet run`](../tools/dotnet-run.md)。
 
 在控制台窗口中键入以下命令：
 
@@ -132,4 +132,4 @@ dotnet run
 
 - [XML 序列化简介](../../standard/serialization/introducing-xml-serialization.md)
 - [如何使用 XmlSerializer 进行序列化 (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
-- [如何：使用 XmlSerializer (Visual Basic) 进行序列化](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [如何：使用 XmlSerializer 进行序列化 (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

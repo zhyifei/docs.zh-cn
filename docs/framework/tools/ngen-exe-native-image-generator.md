@@ -19,10 +19,10 @@ helpviewer_keywords:
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 ms.openlocfilehash: 297bc3f9182e76523eda4d4be3112f4d1d7e3fee
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75741789"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe（本机映像生成器）
@@ -117,7 +117,7 @@ ngen /? | /help
 
 ## <a name="config"></a>配置
 
-|配置|描述|
+|Configuration|描述|
 |-------------------|-----------------|
 |`/ExeConfig:` `exePath`|使用指定的可执行程序集的配置。<br /><br /> 绑定到依赖项时，Ngen.exe 需要做出与加载程序相同的决策。 如果在运行时使用 <xref:System.Reflection.Assembly.Load%2A> 方法加载共享组件，则应用程序的配置文件将决定为该共享组件加载的依赖项 - 例如，所加载依赖项的版本。 `/ExeConfig` 开关就运行时将加载哪些依赖项为 Ngen.exe 提供了指导。|
 |`/AppBase:` `directoryPath`|查找依赖项时，使用指定目录作为应用程序基础。|

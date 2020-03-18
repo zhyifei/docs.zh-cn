@@ -9,10 +9,10 @@ helpviewer_keywords:
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
 ms.openlocfilehash: 784d9effa589c962b8a2b982fd199f74309fb4dc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789714"
 ---
 # <a name="returns-c-programming-guide"></a>\<returns>（C# 编程指南）
@@ -39,7 +39,7 @@ ms.locfileid: "76789714"
 
 [!code-csharp[csProgGuideDocComments#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#10)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [建议的文档注释标记](./recommended-tags-for-documentation-comments.md)

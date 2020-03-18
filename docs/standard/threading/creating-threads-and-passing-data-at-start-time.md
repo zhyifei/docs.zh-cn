@@ -12,10 +12,10 @@ helpviewer_keywords:
 - threading [.NET Framework], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
 ms.openlocfilehash: a628cbb4c9ec8e1c9ccd9fd73e72a82ecf2b2836
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138107"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>启动时创建线程并传递数据
@@ -39,7 +39,7 @@ ms.locfileid: "73138107"
   
 ## <a name="passing-data-to-threads"></a>将数据传递到线程
 
- 在 .NET Framework 版本 2.0 中，可以在调用 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 方法重载时，使用 <xref:System.Threading.ParameterizedThreadStart> 委托将包含数据的对象轻松传递给线程。 有关代码示例，请参阅 <xref:System.Threading.ParameterizedThreadStart>。  
+ 在 .NET Framework 版本 2.0 中，可以在调用 <xref:System.Threading.ParameterizedThreadStart> 方法重载时，使用 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 委托将包含数据的对象轻松传递给线程。 有关代码示例，请参阅 <xref:System.Threading.ParameterizedThreadStart>。  
   
  使用 <xref:System.Threading.ParameterizedThreadStart> 委托不是传递数据的类型安全方式，因为 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 方法重载接受任何对象。 替换方法是，将线程过程和数据封装到帮助程序类中，并使用 <xref:System.Threading.ThreadStart> 委托执行线程过程。 下面的示例演示这一方法：
 
@@ -57,7 +57,7 @@ ms.locfileid: "73138107"
  [!code-csharp[System.Threading.ThreadStart2#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source4.cs#4)]
  [!code-vb[System.Threading.ThreadStart2#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadStart2/VB/source4.vb#4)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadStart>

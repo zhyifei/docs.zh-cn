@@ -9,10 +9,10 @@ helpviewer_keywords:
 - expression trees
 - debugview
 ms.openlocfilehash: ba695fc808108c49a4eee3c70a305b24c91769d8
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "67661718"
 ---
 # <a name="debugview-syntax"></a>`DebugView` 语法
@@ -43,16 +43,16 @@ ParameterExpression numParam =  Expression.Parameter(typeof(int));
 
 ## <a name="constantexpression"></a>ConstantExpression
 
-对于表示整数值、字符串和 `null` 的 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 对象，将显示常数的值。
+对于表示整数值、字符串和 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 的 `null` 对象，将显示常数的值。
 
 对于使用标准后缀作为 C# 原义字符的数值类型，将后缀添加到值。 下表显示与各种数值类型关联的后缀。
 
-| 类型 | 关键字 | 后缀 |
+| 类型 | 关键字 | Suffix |
 |--|--|--|
 | <xref:System.UInt32?displayProperty=nameWithType> | [uint](../../../language-reference/builtin-types/integral-numeric-types.md) | U |
 | <xref:System.Int64?displayProperty=nameWithType> | [long](../../../language-reference/builtin-types/integral-numeric-types.md) | L |
 | <xref:System.UInt64?displayProperty=nameWithType> | [ulong](../../../language-reference/builtin-types/integral-numeric-types.md) | UL |
-| <xref:System.Double?displayProperty=nameWithType> | [double](../../../language-reference/builtin-types/floating-point-numeric-types.md) | D |
+| <xref:System.Double?displayProperty=nameWithType> | [双精度](../../../language-reference/builtin-types/floating-point-numeric-types.md) | D |
 | <xref:System.Single?displayProperty=nameWithType> | [float](../../../language-reference/builtin-types/floating-point-numeric-types.md) | F |
 | <xref:System.Decimal?displayProperty=nameWithType> | [decimal](../../../language-reference/builtin-types/floating-point-numeric-types.md) | M |
 

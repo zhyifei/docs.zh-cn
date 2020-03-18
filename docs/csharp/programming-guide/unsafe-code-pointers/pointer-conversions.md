@@ -5,10 +5,10 @@ helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
 ms.openlocfilehash: 517166331d2bcf73132269ce2adcf68d5f60b4fe
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76745361"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>指针转换（C# 编程指南）
@@ -16,7 +16,7 @@ ms.locfileid: "76745361"
   
 ## <a name="implicit-pointer-conversions"></a>隐式指针转换  
   
-|From|功能|  
+|From|到|  
 |----------|--------|  
 |任何指针类型|void*|  
 |null|任何指针类型|  
@@ -25,7 +25,7 @@ ms.locfileid: "76745361"
   
 ## <a name="explicit-pointer-conversions"></a>显式指针转换  
   
-|From|功能|  
+|From|到|  
 |----------|--------|  
 |任何指针类型|其他任何指针类型|  
 |sbyte、byte、short、ushort、int、uint、long 或 ulong|任何指针类型|  
@@ -38,7 +38,7 @@ ms.locfileid: "76745361"
   
  [!code-csharp[csProgGuidePointers#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#4)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [指针类型](pointer-types.md)

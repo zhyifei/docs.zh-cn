@@ -7,10 +7,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
 ms.openlocfilehash: d6b8a0a4e16aa3169888958fa1376bfa61526dbd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73137932"
 ---
 # <a name="managed-threading"></a>托管线程处理
@@ -32,7 +32,7 @@ ms.locfileid: "73137932"
  [线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)  
  介绍了可用于同步在不同线程上访问的线程活动和对象数据的托管类，并概述了线程池线程。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  <xref:System.Threading>  
  收录了用于使用和同步托管线程的类。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73137932"
  [应用程序域](../../../docs/framework/app-domains/application-domains.md)  
  概述了应用程序域及其在公共语言基础结构中的应用。  
   
- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
+ [异步文件 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
  描述异步 I/O 的性能优势和基本操作。  
   
  [基于任务的异步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  

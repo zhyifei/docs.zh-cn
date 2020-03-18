@@ -10,10 +10,10 @@ helpviewer_keywords:
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
 ms.openlocfilehash: 39f02c4c2e060c4be40002a2f48b0da31004a9ae
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606193"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res（C# 编译器选项）
@@ -25,7 +25,7 @@ ms.locfileid: "69606193"
 -win32res:filename  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `filename`  
  想向输出文件添加的资源文件。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "69606193"
 csc -win32res:rf.res in.cs  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](./index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

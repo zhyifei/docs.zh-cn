@@ -3,10 +3,10 @@ title: C# 7.3 中的新增功能
 description: C# 7.3 中的新增功能概述
 ms.date: 05/16/2018
 ms.openlocfilehash: ba4cea302d91b395e88940d087fcaed306920840
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74204555"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 中的新增功能
@@ -121,7 +121,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 ### <a name="more-types-support-the-fixed-statement"></a>更多类型支持 `fixed` 语句
 
-`fixed` 语句支持有限的一组类型。 从 C# 7.3 开始，任何包含返回 `ref T` 或 `ref readonly T` 的 `GetPinnableReference()` 方法的类型均有可能为 `fixed`。 添加此功能意味着 `fixed` 可与 <xref:System.Span%601?displayProperty=nameWithType> 和相关类型配合使用。
+`fixed` 语句支持有限的一组类型。 从 C# 7.3 开始，任何包含返回 `GetPinnableReference()` 或 `ref T` 的 `ref readonly T` 方法的类型均有可能为 `fixed`。 添加此功能意味着 `fixed` 可与 <xref:System.Span%601?displayProperty=nameWithType> 和相关类型配合使用。
 
 有关详细信息，请参阅语言参考中的 [`fixed` 语句](../language-reference/keywords/fixed-statement.md)一文。
 
@@ -141,7 +141,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 ### <a name="tuples-support--and-"></a>元组支持 `==` 和 `!=`
 
-C# 元组类型现在支持 `==` 和 `!=`。 有关详细信息，请参阅有关[元组](../tuples.md)一文中的转换[等式](../tuples.md#equality-and-tuples)部分。
+C# 元组类型现在支持 `==` 和 `!=`。 有关详细信息，请参阅有关[元组](../tuples.md#equality-and-tuples)一文中的转换[等式](../tuples.md)部分。
 
 ### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>将特性添加到自动实现的属性的支持字段
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
 ms.openlocfilehash: c947b2015c19d0809cab4535e989ee83ebf17fd9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606395"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target:library（C# 编译器选项）
@@ -44,13 +44,13 @@ ms.locfileid: "69606395"
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
 ## <a name="example"></a>示例  
- 通过创建 `in.dll` 编译 `in.cs`：  
+ 通过创建 `in.cs` 编译 `in.dll`：  
   
 ```console  
 csc -target:library in.cs  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [-target（C# 编译器选项）](./target-compiler-option.md)
 - [C# 编译器选项](./index.md)

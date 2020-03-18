@@ -6,10 +6,10 @@ ms.author: wiwagn
 ms.date: 12/09/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: ba996e4add1cfe44681154b00a6530b1f3e70b37
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713999"
 ---
 # <a name="tutorial-create-your-first-net-core-console-application-in-visual-studio-2019"></a>教程：在 Visual Studio 2019 中创建第一个 .NET Core 控制台应用程序
@@ -28,7 +28,7 @@ ms.locfileid: "75713999"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. 打开 Visual Studio 2019。
 
@@ -53,7 +53,7 @@ ms.locfileid: "75713999"
 
    ![Visual Studio 和新建的 HelloWorld 项目](./media/with-visual-studio/visual-studio-main-window.png)
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. 打开 Visual Studio 2019。
 
@@ -96,7 +96,7 @@ ms.locfileid: "75713999"
 
 改进应用程序，提示用户输入名字，并将其与日期和时间一同显示。 以下说明再次修改并运行应用：
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. 将 `Main` 方法的内容（当前只是调用 `Console.WriteLine` 的行）替换为以下代码：
 
@@ -114,7 +114,7 @@ ms.locfileid: "75713999"
 
 1. 按任意键关闭控制台窗口。
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. 将 `Main` 方法的内容（当前只是调用 `Console.WriteLine` 的行）替换为以下代码：
 

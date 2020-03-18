@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 3f0e8fb4d0d727b40cff5de7cfdc7529bf32dac4
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937088"
 ---
 ### <a name="donotloadlatestricheditcontrol-compatibility-switch-not-supported"></a>不支持 DoNotLoadLatestRichEditControl 兼容性开关

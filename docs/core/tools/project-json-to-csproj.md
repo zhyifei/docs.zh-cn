@@ -4,10 +4,10 @@ description: 查看 project.json 和 csproj 元素之间的映射。
 author: natemcmaster
 ms.date: 03/13/2017
 ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451100"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 和 csproj 属性之间的映射
@@ -38,7 +38,7 @@ ms.locfileid: "77451100"
 }
 ```
 
-不再支持。 在 csproj 中，这取决于项目文件名（通常与目录名称匹配）。 例如 `MyProjectName.csproj`。
+不再支持。 在 csproj 中，这取决于项目文件名（通常与目录名称匹配）。 例如，`MyProjectName.csproj` 。
 
 默认情况下，项目文件名还指定 `<AssemblyName>` 和 `<PackageId>` 属性的值。
 
@@ -49,10 +49,10 @@ ms.locfileid: "77451100"
 </PropertyGroup>
 ```
 
-如果 `buildOptions\outputName` 属性是在 project.json 中定义的，`<AssemblyName>` 将具有不同于 `<PackageId>` 的其他值。
+如果 `<AssemblyName>` 属性是在 project.json 中定义的，`<PackageId>` 将具有不同于 `buildOptions\outputName` 的其他值。
 有关详细信息，请参阅[其他常用生成选项](#other-common-build-options)。
 
-### <a name="version"></a>version
+### <a name="version"></a>版本
 
 ```json
 {
@@ -673,6 +673,6 @@ MSBuild 中没有 `owners` 元素的等效项。
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [CLI 中更改的简要概述](../tools/cli-msbuild-architecture.md)

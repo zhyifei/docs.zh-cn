@@ -5,10 +5,10 @@ ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
 ms.openlocfilehash: 653f355d09a045feabb3dee0f5737cb691cf2dc4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73458179"
 ---
 # <a name="what-is-apache-spark"></a>什么是 Apache Spark？
@@ -23,7 +23,7 @@ ms.locfileid: "73458179"
 
 [提取、转换和加载 (ETL)](/azure/architecture/data-guide/relational-data/etl) 是从一个或多个源收集数据、修改数据以及将数据移动到新数据存储的过程。 可通过多种方法来转换数据，其中包括：
 
-* 筛选
+* Filtering
 * 排序
 * 聚合
 * 联接
@@ -33,7 +33,7 @@ ms.locfileid: "73458179"
 
 ### <a name="real-time-data-stream-processing"></a>实时数据流处理
 
-流数据（或实时数据）是移动数据。 IoT 设备、网络日志和点击流中的遥测都是流数据示例。 可以处理实时数据以提供有用的信息，例如地理空间分析、远程监视和异常情况检测。 就像关系数据一样，可以在将数据移动到输出接收器之前筛选、聚合和准备流数据。 Apache Spark 通过 [Spark Streaming](https://spark.apache.org/streaming/) 支持[实时数据流处理](/azure/architecture/data-guide/big-data/real-time-processing)。
+流数据（或实时数据）是移动数据。 IoT 设备、网络日志和点击流中的遥测都是流数据示例。 可以处理实时数据以提供有用的信息，例如地理空间分析、远程监视和异常情况检测。 就像关系数据一样，可以在将数据移动到输出接收器之前筛选、聚合和准备流数据。 Apache Spark 通过 [Spark Streaming](/azure/architecture/data-guide/big-data/real-time-processing) 支持[实时数据流处理](https://spark.apache.org/streaming/)。
 
 ### <a name="batch-processing"></a>批处理
 

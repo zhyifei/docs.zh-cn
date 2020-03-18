@@ -6,10 +6,10 @@ helpviewer_keywords:
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 ms.openlocfilehash: cc4f9c38138a37b6068d33ffa4229a955db08c07
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716547"
 ---
 # <a name="deploying-the-net-framework"></a>部署 .NET Framework
@@ -25,7 +25,7 @@ ms.locfileid: "75716547"
  [在 .NET Framework 4.5 安装期间减少系统重新启动次数](reducing-system-restarts.md)  
  描述在任何可能的情况下可以阻止重启的 Restart Manager，并说明安装 .NET Framework 的应用程序如何利用它。  
   
- [如何：获取 .NET Framework 4.5 安装程序的进度](how-to-get-progress-from-the-dotnet-installer.md)  
+ [How to: Get Progress from the .NET Framework 4.5 Installer](how-to-get-progress-from-the-dotnet-installer.md)  
  描述如何在没有提示的情况下启动和跟踪 .NET Framework 安装进度，同时显示你自己的安装进度视图。  
   
  [.NET Framework 初始化错误：管理用户体验](initialization-errors-managing-the-user-experience.md)  
@@ -34,6 +34,6 @@ ms.locfileid: "75716547"
  [如何：调试 CLR 激活问题](how-to-debug-clr-activation-issues.md)  
  介绍如何查看和调试 CLR 激活日志，解决使用正确版本的 CLR 运行应用程序时可能遇到的问题。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [开发指南](../development-guide.md)

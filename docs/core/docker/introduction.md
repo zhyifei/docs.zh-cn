@@ -4,10 +4,10 @@ description: 本文简要概述 .NET Core 应用程序上下文中的 Docker。
 ms.date: 03/20/2019
 ms.custom: mvc
 ms.openlocfilehash: eedfd1e7c1b361beb9d4f271e739657ef5e894a6
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157786"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 简介

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - synchronization primitives, Barrier
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 ms.openlocfilehash: 5aa34f7f39f4b9b626bea29372cf984f3cefb361
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138154"
 ---
 # <a name="barrier"></a>屏障
@@ -52,7 +52,7 @@ ms.locfileid: "73138154"
   
  有关详细信息，请参阅[使用延续任务链接任务](../parallel-programming/chaining-tasks-by-using-continuation-tasks.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [线程处理对象和功能](threading-objects-and-features.md)
 - [如何：使用屏障同步并发操作](how-to-synchronize-concurrent-operations-with-a-barrier.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
 ms.openlocfilehash: 5f8f1a3ca9aaf4bea56f342857d2df0bb18a9ba8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047636"
 ---
 # <a name="network-programming-how-to-topics"></a>网络编程操作说明主题
@@ -31,7 +31,7 @@ ms.locfileid: "71047636"
   
 - [如何：使用 WebRequest 注册自定义协议](how-to-register-a-custom-protocol-using-webrequest.md)  
   
-- [如何：转换 WebRequest 以访问协议特定属性](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)  
+- [如何：转换 WebRequest 以访问协议特定的属性](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)  
   
 - [如何：访问 HTTP 特定的属性](how-to-access-http-specific-properties.md)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "71047636"
   
 - [如何：Ping 主机](how-to-ping-a-host.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Framework 中的网络编程](index.md)
 - [网络编程示例](network-programming-samples.md)

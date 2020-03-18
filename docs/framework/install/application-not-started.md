@@ -3,10 +3,10 @@ title: 排查“无法启动此应用程序”
 description: 了解在出现“无法启动此应用程序”对话框时如何应对。
 ms.date: 09/05/2019
 ms.openlocfilehash: 864c6ea23e9a048f060eee39d904bd4377be5084
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965901"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>排查“无法启动此应用程序”错误消息
@@ -59,7 +59,7 @@ ms.locfileid: "76965901"
 
    ![无法解决问题](media/application-not-started/install-3-5.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET Framework 系统要求](../get-started/system-requirements.md)
 - [.NET Framework 安装指南](index.md)

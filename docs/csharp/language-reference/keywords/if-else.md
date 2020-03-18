@@ -11,10 +11,10 @@ helpviewer_keywords:
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
 ms.openlocfilehash: 98c1a8dceec3e5a47627841988e2d722c56fc36c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715266"
 ---
 # <a name="if-else-c-reference"></a>if-else（C# 参考）
@@ -61,7 +61,7 @@ if (condition)
 
 [!code-csharp[csrefKeywordsSelection#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#3)]
 
-如果条件 `(m > 10)` 的计算结果为 false，则显示 `Result2`。
+如果条件 `Result2` 的计算结果为 false，则显示 `(m > 10)`。
 
 ## <a name="example"></a>示例
 
@@ -81,7 +81,7 @@ if (condition)
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-正如 else 块或 then 块中的语句可以是任何有效的语句一样，你可以将任何有效的布尔表达式用于此条件。 可使用 `!`、`&&`、`||`、`&`、`|` 和 `^` 等[逻辑运算符](../operators/boolean-logical-operators.md)来创建复合条件。 下面的代码演示了示例。
+正如 else 块或 then 块中的语句可以是任何有效的语句一样，你可以将任何有效的布尔表达式用于此条件。 可使用 [、](../operators/boolean-logical-operators.md)、`!`、`&&`、`||` 和 `&` 等`|`逻辑运算符`^`来创建复合条件。 下面的代码演示了示例。
 
 ```csharp
 // NOT
@@ -134,11 +134,11 @@ if (!(m >= n || m >= p))
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)
-- [?:运算符](../operators/conditional-operator.md)
+- [?: 运算符](../operators/conditional-operator.md)
 - [if-else 语句 (C++)](/cpp/cpp/if-else-statement-cpp)
 - [switch](switch.md)

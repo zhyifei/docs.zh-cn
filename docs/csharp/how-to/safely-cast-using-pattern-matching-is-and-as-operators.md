@@ -7,10 +7,10 @@ helpviewer_keywords:
 - as operator [C#]
 - is operator [C#]
 ms.openlocfilehash: 762f8135063f7256ce7a167c65013703d9249039
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73973089"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>如何使用模式匹配以及 is 和 as 运算符安全地进行强制转换
@@ -29,7 +29,7 @@ ms.locfileid: "73973089"
 
 前面的示例演示了模式匹配用于转换的其他功能。 可以通过专门检查 `null` 值来测试 NULL 模式的变量。 当变量的运行时值为 `null` 时，用于检查类型的 `is` 语句始终返回 `false`。 模式匹配 `is` 语句不允许可以为 null 值的类型，如 `int?` 或 `Nullable<int>`，但你可以测试任何其他值类型。 上述示例中的 `is` 模式不局限于可为空的值类型。 也可以使用这些模式测试引用类型的变量具有值还是为 `null`。
 
-前面的示例还演示如何在变量为其他类型的 `switch` 语句中使用模式匹配 `is` 表达式。
+前面的示例还演示如何在变量为其他类型的 `is` 语句中使用模式匹配 `switch` 表达式。
 
 如果想要测试变量是否为给定类型，但不将其分配给新变量，则可以对引用类型和可以为 null 的类型使用 `is` 和 `as` 运算符。 以下代码演示如何在引入模式匹配以测试变量是否为给定类型前，使用 C# 语言中的 `is` 和 `as` 语句：
 

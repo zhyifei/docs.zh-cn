@@ -12,10 +12,10 @@ helpviewer_keywords:
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 ms.openlocfilehash: 8e78b2a8d7a815637e143eeb88bcfb51ded33771
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75741356"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>在 .NET 中处理和引发异常
@@ -46,7 +46,7 @@ ms.locfileid: "75741356"
 
 下表列出了一些常见的异常，以及会引发这些异常的原因的示例。
 
-| 异常类型 | 描述 | 示例 |
+| 异常类型 | 说明 | 示例 |
 | -------------- | ----------- | ------- |
 | <xref:System.Exception> | 所有异常的基类。 | 无（使用此异常的派生类）。 |
 | <xref:System.IndexOutOfRangeException> | 仅当错误地对数组进行索引时，才由运行时引发。 | 在数组的有效范围外对数组进行索引： <br /> `arr[arr.Length+1]` |
@@ -56,13 +56,13 @@ ms.locfileid: "75741356"
 | <xref:System.ArgumentNullException> | 由不允许参数为 null 的方法引发。 | `String s = null;` <br /> `"Calculate".IndexOf(s);`|
 | <xref:System.ArgumentOutOfRangeException> | 由验证自变量是否位于给定范围内的方法引发。 | `String s = "string";` <br /> `s.Substring(s.Length+1);` |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [异常类和属性](exception-class-and-properties.md)
-- [如何：使用 Try-Catch 块捕获异常](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+- [如何：使用 Try-Catch 块捕捉异常](how-to-use-the-try-catch-block-to-catch-exceptions.md)
 - [如何：在 Catch 块中使用特定异常](how-to-use-specific-exceptions-in-a-catch-block.md)
-- [如何：显式抛出异常](how-to-explicitly-throw-exceptions.md)
-- [如何：创建用户定义异常](how-to-create-user-defined-exceptions.md)
+- [如何：显式引发异常](how-to-explicitly-throw-exceptions.md)
+- [如何：创建用户定义的异常](how-to-create-user-defined-exceptions.md)
 - [使用用户筛选的异常处理程序](using-user-filtered-exception-handlers.md)
 - [如何：使用 Finally 块](how-to-use-finally-blocks.md)
 - [处理 COM 互操作异常](handling-com-interop-exceptions.md)

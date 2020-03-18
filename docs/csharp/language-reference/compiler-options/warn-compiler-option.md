@@ -13,10 +13,10 @@ helpviewer_keywords:
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 ms.openlocfilehash: 5b05e944a37e16fc1fcc422271be00c09a271a33
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602404"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn（C# 编译器选项）
@@ -28,9 +28,9 @@ ms.locfileid: "69602404"
 -warn:option  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `option`  
- 要为编译显示的警告等级：较低的数字仅显示高严重性警告；较高的数字显示更多警告。 有效值为 0-4：  
+ 想要为编译显示的警告等级：较低的数字仅显示高严重性警告；较高的数字显示更多警告。 有效值为 0-4：  
   
 |警告级别|含义|  
 |-------------------|-------------|  
@@ -64,7 +64,7 @@ ms.locfileid: "69602404"
 csc -warn:1 in.cs  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](./index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

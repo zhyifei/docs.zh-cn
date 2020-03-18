@@ -13,10 +13,10 @@ helpviewer_keywords:
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
 ms.openlocfilehash: e24d5910ab21f01aebb5a32ce7646cf56886a81a
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093456"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso>（C# 编程指南）
@@ -43,9 +43,9 @@ ms.locfileid: "77093456"
 
 ## <a name="example"></a>示例
 
-有关使用 \<seealso> 的示例，请参阅 [\<summary>](./summary.md)。
+有关使用 [seealso> 的示例，请参阅 \<](./summary.md)summary>\<。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
 - [建议的文档注释标记](./recommended-tags-for-documentation-comments.md)

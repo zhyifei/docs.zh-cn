@@ -3,10 +3,10 @@ title: Authenticode（非托管 API 参考）
 ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
 ms.openlocfilehash: 1b8b2222950c75f7f9d2ec2704f722087645cd7e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132456"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode（非托管 API 参考）
@@ -40,6 +40,6 @@ ms.locfileid: "73132456"
  [AXL_AUTHENTICODE_TIMESTAMPER_INFO 结构](axl-authenticode-timestamper-info-structure.md)  
  定义验证码时间戳签署人的信息。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [非托管 API 参考](../index.md)

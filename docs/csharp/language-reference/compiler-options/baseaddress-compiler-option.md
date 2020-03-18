@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
 ms.openlocfilehash: f138f445b8a335c7505e25b34f560c4da40ab2dd
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937214"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress（C# 编译器选项）
@@ -24,7 +24,7 @@ ms.locfileid: "75937214"
 -baseaddress:address  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `address`  
  DLL 的基址。 可将此地址指定为十进制数、十六进制数或八进制数。  
   
@@ -41,13 +41,13 @@ ms.locfileid: "75937214"
   
 2. 单击“生成”  属性页。  
   
-3. 单击“高级”  按钮。  
+3. 单击 **“高级”** 按钮。  
   
 4. 修改“DLL 基址”  属性。  
   
      若要以编程方式设置此编译器选项，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>
 - [C# 编译器选项](./index.md)
