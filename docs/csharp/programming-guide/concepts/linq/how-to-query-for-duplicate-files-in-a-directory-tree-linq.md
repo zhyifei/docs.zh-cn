@@ -2,17 +2,17 @@
 title: 如何在目录树中查询重复文件 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 7c84dba3e87077077f28bc2e665ea3774cf44d3b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0578d6c85c7d2e38c840c278c7ad2775467ac741
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347878"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168877"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a><span data-ttu-id="59af9-102">如何在目录树中查询重复文件 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="59af9-102">How to query for duplicate files in a directory tree (LINQ) (C#)</span></span>
-<span data-ttu-id="59af9-103">有时，具有相同名称的文件可能位于多个文件夹中。</span><span class="sxs-lookup"><span data-stu-id="59af9-103">Sometimes files that have the same name may be located in more than one folder.</span></span> <span data-ttu-id="59af9-104">例如，在 Visual Studio 安装文件夹下，多个文件夹中都有 readme.htm 文件。</span><span class="sxs-lookup"><span data-stu-id="59af9-104">For example, under the Visual Studio installation folder, several folders have a readme.htm file.</span></span> <span data-ttu-id="59af9-105">此示例显示如何在指定根文件夹下查询此类重复文件名。</span><span class="sxs-lookup"><span data-stu-id="59af9-105">This example shows how to query for such duplicate file names under a specified root folder.</span></span> <span data-ttu-id="59af9-106">第二个示例显示如何查询大小和上次写入时间都匹配的文件。</span><span class="sxs-lookup"><span data-stu-id="59af9-106">The second example shows how to query for files whose size and LastWrite times also match.</span></span>  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a><span data-ttu-id="b1607-102">如何在目录树中查询重复文件 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="b1607-102">How to query for duplicate files in a directory tree (LINQ) (C#)</span></span>
+<span data-ttu-id="b1607-103">有时，具有相同名称的文件可能位于多个文件夹中。</span><span class="sxs-lookup"><span data-stu-id="b1607-103">Sometimes files that have the same name may be located in more than one folder.</span></span> <span data-ttu-id="b1607-104">例如，在 Visual Studio 安装文件夹下，多个文件夹中都有 readme.htm 文件。</span><span class="sxs-lookup"><span data-stu-id="b1607-104">For example, under the Visual Studio installation folder, several folders have a readme.htm file.</span></span> <span data-ttu-id="b1607-105">此示例显示如何在指定根文件夹下查询此类重复文件名。</span><span class="sxs-lookup"><span data-stu-id="b1607-105">This example shows how to query for such duplicate file names under a specified root folder.</span></span> <span data-ttu-id="b1607-106">第二个示例显示如何查询大小和上次写入时间都匹配的文件。</span><span class="sxs-lookup"><span data-stu-id="b1607-106">The second example shows how to query for files whose size and LastWrite times also match.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="59af9-107">示例</span><span class="sxs-lookup"><span data-stu-id="59af9-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b1607-107">示例</span><span class="sxs-lookup"><span data-stu-id="b1607-107">Example</span></span>  
   
 ```csharp  
 class QueryDuplicateFileNames  
@@ -99,7 +99,7 @@ class QueryDuplicateFileNames
         // A named type is used to enable the query to be  
         // passed to another method. Anonymous types can also be used  
         // for composite keys but cannot be passed across method boundaries  
-        //   
+        //
         var queryDupFiles =  
             from file in fileList  
             group file.FullName.Substring(charsToSkip) by  
@@ -167,12 +167,12 @@ class QueryDuplicateFileNames
 }  
 ```  
   
- <span data-ttu-id="59af9-108">第一个查询使用简单键来确定匹配；此查询可以找到名称相同但内容可能不同的文件。</span><span class="sxs-lookup"><span data-stu-id="59af9-108">The first query uses a simple key to determine a match; this finds files that have the same name but whose contents might be different.</span></span> <span data-ttu-id="59af9-109">第二个查询使用复合键来匹配 <xref:System.IO.FileInfo> 对象的 3 个属性。</span><span class="sxs-lookup"><span data-stu-id="59af9-109">The second query uses a compound key to match against three properties of the <xref:System.IO.FileInfo> object.</span></span> <span data-ttu-id="59af9-110">此查询更可能找到名称相同且内容相似或相同的文件。</span><span class="sxs-lookup"><span data-stu-id="59af9-110">This query is much more likely to find files that have the same name and similar or identical content.</span></span>  
+ <span data-ttu-id="b1607-108">第一个查询使用简单键来确定匹配；此查询可以找到名称相同但内容可能不同的文件。</span><span class="sxs-lookup"><span data-stu-id="b1607-108">The first query uses a simple key to determine a match; this finds files that have the same name but whose contents might be different.</span></span> <span data-ttu-id="b1607-109">第二个查询使用复合键来匹配 <xref:System.IO.FileInfo> 对象的 3 个属性。</span><span class="sxs-lookup"><span data-stu-id="b1607-109">The second query uses a compound key to match against three properties of the <xref:System.IO.FileInfo> object.</span></span> <span data-ttu-id="b1607-110">此查询更可能找到名称相同且内容相似或相同的文件。</span><span class="sxs-lookup"><span data-stu-id="b1607-110">This query is much more likely to find files that have the same name and similar or identical content.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="59af9-111">编译代码</span><span class="sxs-lookup"><span data-stu-id="59af9-111">Compiling the Code</span></span>  
- <span data-ttu-id="59af9-112">使用 System.Linq 和 System.IO 命名空间的 `using` 指令创建 C# 控制台应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="59af9-112">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="b1607-111">编译代码</span><span class="sxs-lookup"><span data-stu-id="b1607-111">Compiling the Code</span></span>  
+ <span data-ttu-id="b1607-112">使用 System.Linq 和 System.IO 命名空间的 `using` 指令创建 C# 控制台应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="b1607-112">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59af9-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="59af9-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1607-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b1607-113">See also</span></span>
 
-- [<span data-ttu-id="59af9-114">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="59af9-114">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
-- [<span data-ttu-id="59af9-115">LINQ 和文件目录 (C#)</span><span class="sxs-lookup"><span data-stu-id="59af9-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="b1607-114">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="b1607-114">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
+- [<span data-ttu-id="b1607-115">LINQ 和文件目录 (C#)</span><span class="sxs-lookup"><span data-stu-id="b1607-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
