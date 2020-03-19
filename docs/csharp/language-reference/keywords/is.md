@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 1a1f539e80f8d843f40640fa798cf6122f316a9f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e64b690482419963a92764b2c97a42dbb231fbfc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715239"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398303"
 ---
 # <a name="is-c-reference"></a>is（C# 参考）
 
@@ -36,19 +36,19 @@ ms.locfileid: "75715239"
    expr is type varname
 ```
 
-其中 *expr* 是计算结果为某个类型的实例的表达式，*type* 是 *expr* 结果要转换到的类型的名称，*varname* 是 *expr* 结果要转换到的对象（如果 `is` 测试为 `true`）。 
+其中 expr 是计算结果为某个类型的实例的表达式，type 是 expr 结果要转换到的类型的名称，varname 是 expr 结果要转换到的对象（如果 `is` 测试为 `true`）。
 
-如果 expr  不为 `null` 且以下任意内容为 true，那么 `is` 表达式为 `true`：
+如果 expr 不为 `null` 且以下任意内容为 true，那么 `is` 表达式为 `true`：
 
 - *expr* 是与 *type* 具有相同类型的一个实例。
 
 - *expr* 是派生自 *type* 的类型的一个实例。 换言之，*expr* 结果可以向上转换为 *type* 的一个实例。
 
-- *expr* 具有属于 *type* 的一个基类的编译时类型，*expr* 还具有属于 *type* 或派生自 *type* 的运行时类型。 变量的编译时类型  是其声明中定义的变量类型。 变量的运行时类型  是分配给该变量的实例类型。
+- *expr* 具有属于 *type* 的一个基类的编译时类型，*expr* 还具有属于 *type* 或派生自 *type* 的运行时类型。 变量的编译时类型是其声明中定义的变量类型。 变量的运行时类型是分配给该变量的实例类型。
 
 - *expr* 是实现 *type* 接口的类型的一个实例。
 
-自 C# 7.1 起，expr  可能有泛型类型参数及其约束定义的编译时类型。
+自 C# 7.1 起，expr 可能有泛型类型参数及其约束定义的编译时类型。
 
 如果 *expr* 为 `true` 且 `is` 与 `if` 语句配合使用，则仅在 `if` 语句内分配 *varname*。 *varname* 的使用范围：从 `is` 表达式到封闭 `if` 语句的块的末尾。 在任何其他位置使用 *varname* 都会因使用尚未分配的变量而生成编译时错误。
 
@@ -106,15 +106,21 @@ ms.locfileid: "75715239"
 
 ### <a name="var-pattern"></a>var 模式
 
-`var` 模式对于任何类型或值均为 catch-all。 expr  值始终分配给与 expr  的编译时类型相同的本地变量。 `is` 表达式的结果始终为 `true`。 语法为：
+具有 `var` 模式的模式匹配始终成功。 语法为：
 
 ```csharp
    expr is var varname
 ```
 
-下例使用 var 模式向名为 `obj` 的变量分配表达式。 然后，显示 `obj` 的值和类型。
+其中，expr 的值始终分配给名为 varname 的局部变量。 varname 变量的类型与 expr 的编译时类型相同。
+
+如果 expr 的计算结果为 `null`，则 `is` 表达式将生成 `true` 并将 `null` 分配给 varname。 var 模式是 `is` 对 `null` 值生成 `true` 的少数用途之一。
+
+可以使用 `var` 模式在布尔表达式中创建临时变量，如下例所示：
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
+
+在前面的示例中，临时变量用于存储代价高昂的操作的结果。 然后，可以多次使用该变量。
 
 ## <a name="c-language-specification"></a>C# 语言规范
   

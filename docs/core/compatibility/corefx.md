@@ -2,12 +2,12 @@
 title: 基类库的重大更改
 description: 列出 .NET CoreFx（基类库）中的中断性变更。
 ms.date: 09/20/2019
-ms.openlocfilehash: 7c59f2a96545e74e4099b6078ff52009740699c6
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 56a3cf4f4c00a79752d5a98bb086bb9f8c0614b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449540"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147570"
 ---
 # <a name="corefx-breaking-changes"></a>CoreFx 中断性变更
 
@@ -33,6 +33,7 @@ CoreFx 提供了 .NET Core 使用的基元和其他常规类型。
 | [FieldInfo.SetValue 将对静态、仅初始化字段引发异常](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | 3.0 |
 | [添加到内置结构类型的私有字段](#private-fields-added-to-built-in-struct-types) | 2.1 |
 | [UseShellExecute 默认值更改](#change-in-default-value-of-useshellexecute) | 2.1 |
+| [macOS 上的 OpenSSL 版本](#openssl-versions-on-macos) | 2.1 |
 | [FileSystemInfo.Attributes 引发的 UnauthorizedAccessException](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
 
 ## <a name="net-core-30"></a>.NET Core 3.0
@@ -100,6 +101,10 @@ CoreFx 提供了 .NET Core 使用的基元和其他常规类型。
 ***
 
 [!INCLUDE[Change in default value of UseShellExecute](~/includes/core-changes/corefx/2.1/process-start-changes.md)]
+
+***
+
+[!INCLUDE [OpenSSL versions on macOS](../../../includes/core-changes/corefx/openssl-dependencies-macos.md)]
 
 ***
 

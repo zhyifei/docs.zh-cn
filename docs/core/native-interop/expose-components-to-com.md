@@ -1,5 +1,6 @@
 ---
 title: 向 COM 公开 .NET Core 组件
+description: 本教程演示如何从 .NET Core 向 COM 公开类。 为无注册表 COM 生成 COM 服务器和并行服务器清单。
 ms.date: 07/12/2019
 helpviewer_keywords:
 - exposing .NET Core components to COM
@@ -8,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 301177113f67748b62ea2686615cfe5378fdc2fd
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 98d303c99693a8aadb23da509a700772db69c0e0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157539"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146653"
 ---
 # <a name="exposing-net-core-components-to-com"></a>向 COM 公开 .NET Core 组件
 
@@ -41,7 +42,21 @@ ms.locfileid: "78157539"
 3. 将 `using System.Runtime.InteropServices;` 添加到文件顶部。
 4. 创建名为 `IServer` 的接口。 例如：
 
-   [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+   ```csharp
+   using System;
+   using System.Runtime.InteropServices;
+
+   [ComVisible(true)]
+   [Guid(ContractGuids.ServerInterface)]
+   [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+   public interface IServer
+   {
+       /// <summary>
+       /// Compute the value of the constant Pi.
+       /// </summary>
+       double ComputePi();
+   }
+   ```
 
 5. 将 `[Guid("<IID>")]` 属性添加到接口，包含要实现的 COM 接口的接口 GUID。 例如 `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`。 请注意，此 GUID 必须唯一，因为它是 COM 的此接口的唯一标识符。 在 Visual Studio 中，可通过转到“工具”>“创建 GUID”以打开“创建 GUID”工具来生成 GUID。
 6. 将 `[InterfaceType]` 属性添加到接口，并指定接口应实现的基本 COM 接口。

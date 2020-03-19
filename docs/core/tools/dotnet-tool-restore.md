@@ -2,16 +2,16 @@
 title: dotnet tool restore 命令
 description: dotnet tool restore 命令在计算机上安装当前目录范围内的 .NET Core 本地工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: 2900d431987661a9232ceed10d9a424093f8be45
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: cb46f70afb58e482b6aedfddfbf5f3a0c40674f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543850"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146432"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
- 本文适用于： ✔️ .NET Core 3.0 SDK 及更高版本
+本文适用于： ✔️ .NET Core 3.0 SDK 及更高版本
 
 ## <a name="name"></a>“属性”
 
@@ -20,7 +20,11 @@ ms.locfileid: "77543850"
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet tool restore <PACKAGE_NAME> [--configfile] [--add-source] [tool-manifest] [--disable-parallel] [--ignore-failed-sources] [--no-cache] [-interactive] [-v|--verbosity]
+dotnet tool restore <PACKAGE_NAME>
+    [--configfile] [--add-source] [tool-manifest]
+    [--disable-parallel] [--ignore-failed-sources]
+    [--no-cache] [-interactive] [-v|--verbosity]
+
 dotnet tool restore <-h|--help>
 ```
 
@@ -38,7 +42,7 @@ dotnet tool restore <-h|--help>
 
 - **`--configfile <FILE>`**
 
-  要使用的 NuGet 配置 (nuget.config) 文件  。
+  要使用的 NuGet 配置 (nuget.config) 文件。
 
 - **`--add-source <SOURCE>`**
 
@@ -81,3 +85,4 @@ dotnet tool restore <-h|--help>
 ## <a name="see-also"></a>请参阅
 
 - [.NET Core 工具](global-tools.md)
+- [教程：使用 .NET Core CLI 安装和使用 .NET Core 本地工具](local-tools-how-to-use.md)

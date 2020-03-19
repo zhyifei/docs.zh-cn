@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 17ab7317ff1147dc79fae4ef3068cd9bc2143907
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 464514a241cc35fc821049ba0c29bec108d88253
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774209"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180401"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe（许可证编译器）
 许可证编译器读取包含授权信息的文本文件，并产生一个可作为资源嵌入到公共语言运行时可执行文件中的二进制文件。  
@@ -38,16 +38,16 @@ targetPE /complist:filename [-outdir:path]
 /i:modules [/nologo] [/v]  
 ```  
   
-|选项|说明|  
+|选项|描述|  
 |------------|-----------------|  
-|**/complist:** *filename*|指定包含授权组件列表的文件名，这些授权组件要包含在 .licenses 文件中。 每个组件用它的全名引用，并且每行只有一个组件。<br /><br /> 命令行用户可为项目中的每个窗体指定一个单独的文件。 Lc.exe 接受多个输入文件并产生一个 .licenses 文件。|  
+|/complist: filename  |指定包含授权组件列表的文件名，这些授权组件要包含在 .licenses 文件中。 每个组件用它的全名引用，并且每行只有一个组件。<br /><br /> 命令行用户可为项目中的每个窗体指定一个单独的文件。 Lc.exe 接受多个输入文件并产生一个 .licenses 文件。|  
 |**/h**[**elp**]|显示该工具的命令语法和选项。|  
-|**/i:** *module*|指定模块，这些模块包含 **/complist** 文件中列出的组件。 若要指定多个模块，请使用多个 **/i** 标志。|  
+|/i: module  |指定模块，这些模块包含 **/complist** 文件中列出的组件。 若要指定多个模块，请使用多个 **/i** 标志。|  
 |**/nologo**|取消显示 Microsoft 启动版权标志。|  
-|**/outdir:** *path*|指定用来放置输出 .licenses 文件的目录。|  
-|**/target:** *targetPE*|指定为其生成 .licenses 文件的可执行文件。|  
+|/outdir: path  |指定用来放置输出 .licenses 文件的目录。|  
+|/target: targetPE  |指定为其生成 .licenses 文件的可执行文件。|  
 |**/v**|指定详细模式；显示编译进度信息。|  
-|**@** *file*|指定响应 (.rsp) 文件。|  
+|@ file  |指定响应 (.rsp) 文件。|  
 |**/?**|显示该工具的命令语法和选项。|  
   
 ## <a name="example"></a>示例  
@@ -81,8 +81,8 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
   
 ```text  
 /target:hostapp.exe  
-/complist:hostapplic.txt   
-/i:WFCPrj.dll   
+/complist:hostapplic.txt
+/i:WFCPrj.dll
 /outdir:"C:\My Folder"  
 ```  
   

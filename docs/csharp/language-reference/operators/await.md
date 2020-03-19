@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 6dc058f3850e30d8c424d4372c47b127c7d361b6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9f541ae9c26eb12acdcf9a8c59bab98c4772c3b0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712736"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173440"
 ---
 # <a name="await-operator-c-reference"></a>await 运算符（C# 参考）
 
@@ -20,18 +20,18 @@ ms.locfileid: "75712736"
 
 在下面的示例中，<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> 方法返回 `Task<byte[]>` 实例，该实例表示在完成时生成字节数组的异步操作。 在操作完成之前，`await` 运算符将暂停 `DownloadDocsMainPageAsync` 方法。 当 `DownloadDocsMainPageAsync` 暂停时，控件将返回到 `Main` 方法，该方法是 `DownloadDocsMainPageAsync` 的调用方。 `Main` 方法将执行，直至它需要 `DownloadDocsMainPageAsync` 方法执行的异步操作的结果。 当 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 获取所有字节时，将计算 `DownloadDocsMainPageAsync` 方法的其余部分。 之后，将计算 `Main` 方法的其余部分。
 
-[!code-csharp[await example](~/samples/csharp/language-reference/operators/AwaitOperator.cs)]
+[!code-csharp[await example](snippets/AwaitOperator.cs)]
 
 上一个示例使用[异步 `Main` 方法](../../programming-guide/main-and-command-args/index.md)，该方法从 C# 7.1 开始可用。 有关详细信息，请参阅 [Main 方法中的 await 运算符](#await-operator-in-the-main-method)部分。
 
 > [!NOTE]
 > 有关异步编程的介绍，请参阅[使用 async 和 await 的异步编程](../../programming-guide/concepts/async/index.md)。 利用 `async` 和 `await` 的异步编程遵循[基于任务的异步模式](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)。
 
-只能在通过 [async](../keywords/async.md) 关键字修改的方法、[lambda 表达式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](delegate-operator.md)中使用 `await` 运算符。 在异步方法中，不能在同步函数的主体、[lock 语句](../keywords/lock-statement.md)块内以及[不安全的上下文中](../keywords/unsafe.md)使用 `await` 运算符。
+只能在通过 [async](../keywords/async.md) 关键字修改的方法、[lambda 表达式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](delegate-operator.md)中使用 `await` 运算符。 在异步方法中，不能在同步函数的主体、[lock 语句](../keywords/lock-statement.md)块内以及[不安全](../keywords/unsafe.md)的上下文中使用 `await` 运算符。
 
 `await` 运算符的操作数通常是以下其中一个 .NET 类型：<xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.ValueTask> 或 <xref:System.Threading.Tasks.ValueTask%601>。 但是，任何可等待表达式都可以是 `await` 运算符的操作数。 有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[可等待表达式](~/_csharplang/spec/expressions.md#awaitable-expressions)部分。
 
-从 C# 8.0 开始，可使用 `await foreach` 语句来使用异步数据流。 有关详细信息，请参阅 [C# 8.0 中的新增功能](../../whats-new/csharp-8.md)一文中的[异步流](../../whats-new/csharp-8.md#asynchronous-streams)部分。
+从 C# 8.0 开始，可使用 `await foreach` 语句来使用异步数据流。 有关详细信息，请参阅[`foreach`语句](../keywords/foreach-in.md)文章，和 [C# 8.0 新增功能](../../whats-new/csharp-8.md)文章的[异步流](../../whats-new/csharp-8.md#asynchronous-streams)一节。
 
 如果表达式 `t` 的类型为 <xref:System.Threading.Tasks.Task%601> 或 <xref:System.Threading.Tasks.ValueTask%601>，则表达式 `await t` 的类型为 `TResult`。 如果 `t` 的类型为 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.ValueTask>，则 `await t` 的类型为 `void`。 在这两种情况下，如果 `t` 引发异常，则 `await t` 将重新引发异常。 有关如何处理异常的详细信息，请参阅 [try-catch 语句](../keywords/try-catch.md)一文中的[异步方法中的异常](../keywords/try-catch.md#exceptions-in-async-methods)部分。
 

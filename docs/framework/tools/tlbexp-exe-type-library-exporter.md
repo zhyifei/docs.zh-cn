@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: f421a9865e457a4e8e08644671efb55c731db28b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d2380ff607836b5dc15e7194b90dd3a53d1d2c0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104348"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180273"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe（类型库导出程序）
 类型库导出程序生成一个类型库，该类型库描述公共语言运行时程序集中定义的类型。  
@@ -30,29 +30,29 @@ tlbexp assemblyName [options]
   
 ## <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |--------------|-----------------|  
 |*assemblyName*|为其导出类型库的程序集。|  
   
-|选项|说明|  
+|选项|描述|  
 |------------|-----------------|  
-|/asmpath: directory  |指定要在其中搜索程序集的位置。 如果使用此选项，则必须显式指定要在其中搜索所引用的程序集的位置（包括当前目录）。<br /><br /> 当使用 asmpath 选项时，类型库导出程序不会在全局程序集缓存 (GAC) 中查找程序集  。|  
+|/asmpath: directory|指定要在其中搜索程序集的位置。 如果使用此选项，则必须显式指定要在其中搜索所引用的程序集的位置（包括当前目录）。<br /><br /> 当使用 asmpath 选项时，类型库导出程序不会在全局程序集缓存 (GAC) 中查找程序集。|  
 |**/help**|显示该工具的命令语法和选项。|  
-|/names: filename  |指定类型库中名称的大小写。 filename 参数是一个文本文件  。 文件中的每一行均指定类型库中一个名称的大小写。|  
+|/names: filename|指定类型库中名称的大小写。 filename 参数是一个文本文件。 文件中的每一行均指定类型库中一个名称的大小写。|  
 |**/nologo**|取消显示 Microsoft 启动版权标志。|  
-|/oldnames |强制 Tlbexp.exe 导出修饰类型名（如果存在类型名冲突）。 请注意，这是 .NET Framework 2.0 版之前的版本中的默认行为。|  
-|/out: file  |指定要生成的类型库文件的名称。 如果省略该选项，则 Tlbexp.exe 将生成一个与程序集的名称（实际的程序集名称，不一定与包含程序集的文件同名）相同且具有 .tlb 扩展名的类型库。|  
-|**/silence:** `warningnumber`|禁止显示指定的警告。 此选项不能与 **/silent** 一起使用。|  
+|/oldnames|强制 Tlbexp.exe 导出修饰类型名（如果存在类型名冲突）。 请注意，这是 .NET Framework 2.0 版之前的版本中的默认行为。|  
+|/out: file|指定要生成的类型库文件的名称。 如果省略该选项，则 Tlbexp.exe 将生成一个与程序集的名称（实际的程序集名称，不一定与包含程序集的文件同名）相同且具有 .tlb 扩展名的类型库。|  
+|/silence: `warningnumber`|禁止显示指定的警告。 此选项不能与 **/silent** 一起使用。|  
 |**/Silent**|取消显示成功消息。 此选项不能与 **/silence** 一起使用。|  
-|/tlbreference: typelibraryname  |强制 Tlbexp.exe 在不参考注册表的情况下显式解析类型库引用。 例如，如果程序集 B 引用程序集 A，则可使用此选项来提供显式类型库引用而不依赖于注册表中指定的类型库。 Tlbexp.exe 将执行版本检查以确保类型库版本与程序集版本相匹配；否则将生成错误。<br /><br /> 请注意，在将 <xref:System.Runtime.InteropServices.ComImportAttribute> 特性应用于一个接口，然后该接口由另一类型实现的情况下，tlbreference  选项仍咨询注册表。|  
-|/tlbrefpath: path  |所引用的类型库的完全限定路径。|  
-|/win32 |在 64 位计算机上编译时，此选项指定 Tlbexp.exe 生成一个 32 位类型库。|  
-|/win64 |在 32 位计算机上编译时，此选项指定 Tlbexp.exe 生成一个 64 位类型库。|  
+|/tlbreference: typelibraryname|强制 Tlbexp.exe 在不参考注册表的情况下显式解析类型库引用。 例如，如果程序集 B 引用程序集 A，则可使用此选项来提供显式类型库引用而不依赖于注册表中指定的类型库。 Tlbexp.exe 将执行版本检查以确保类型库版本与程序集版本相匹配；否则将生成错误。<br /><br /> 请注意，在将 <xref:System.Runtime.InteropServices.ComImportAttribute> 特性应用于一个接口，然后该接口由另一类型实现的情况下，tlbreference 选项仍咨询注册表。|  
+|/tlbrefpath: path|所引用的类型库的完全限定路径。|  
+|/win32|在 64 位计算机上编译时，此选项指定 Tlbexp.exe 生成一个 32 位类型库。|  
+|/win64|在 32 位计算机上编译时，此选项指定 Tlbexp.exe 生成一个 64 位类型库。|  
 |**/verbose**|指定详细模式；显示需要为其生成类型库的任何引用程序集的列表。|  
 |**/?**|显示该工具的命令语法和选项。|  
   
 > [!NOTE]
-> Tlbexp.exe 的命令行选项不区分大小写，并可以按任何顺序提供。 只需指定足够的选项来唯一标识它。 例如，/n 等效于 /nologo，/o: outfile.tlb 等效于 /out: outfile.tlb       。  
+> Tlbexp.exe 的命令行选项不区分大小写，并可以按任何顺序提供。 只需指定足够的选项来唯一标识它。 例如，/n 等效于 /nologo，/o: outfile.tlb 等效于 /out: outfile.tlb。  
   
 ## <a name="remarks"></a>备注  
  Tlbexp.exe 生成一个类型库，该类型库包含程序集中定义的类型的定义。 应用程序（如 Visual Basic 6.0）可以使用生成的类型库来绑定到程序集中定义的 .NET 类型。  
@@ -79,7 +79,7 @@ tlbexp assemblyName [options]
   
  生成以下类型库：  
   
-```cpp 
+```cpp
 [id(0x60020004)]  
 HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);  
 [id(0x60020005)]  

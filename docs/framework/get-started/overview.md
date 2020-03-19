@@ -7,18 +7,18 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: 397a78514dc5878e83708882ceeb4d92160d9a78
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: de9cbdab5d5786b9d59d23ba675fa3f78f807716
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975660"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181595"
 ---
-# <a name="overview-of-the-net-framework"></a>.NET Framework 概述
+# <a name="overview-of-net-framework"></a>.NET Framework 概述
 
-.NET Framework 是一种技术，该技术支持生成和运行下一代应用和 XML Web Services。 .NET Framework 旨在实现下列目标：
+.NET Framework 是一种技术，支持生成和运行 Windows 应用及 Web 服务。 NET Framework 旨在实现下列目标：
 
-- 提供一个一致的面向对象的编程环境，而无论对象代码是在本地存储和执行，还是在本地执行但在 Internet 上分布，或者是在远程执行的。
+- 提供一个一致的面向对象的编程环境，而无论对象代码是在本地存储和执行，还是在本地执行但在 Web 上分布，或者是在远程执行的。
 
 - 提供一个将软件部署和版本控制冲突最小化的代码执行环境。
 
@@ -33,11 +33,11 @@ ms.locfileid: "73975660"
 > [!NOTE]
 > 有关适用于用户和开发人员的 .NET Framework 的常规说明，请参阅[入门](index.md)。
 
-.NET Framework 包括公共语言运行时 (CLR) 和 .NET Framework 类库。 公共语言运行时是 .NET Framework 的基础。 可将运行时看作一个在执行时管理代码的代理，它提供内存管理、线程管理和远程处理等核心服务，并且还强制实施严格的类型安全以及可提高安全性和可靠性的其他形式的代码准确性。 事实上，代码管理的概念是运行时的基本原则。 以运行时为目标的代码称为托管代码，而不以运行时为目标的代码称为非托管代码。 类库是一个综合性的面向对象的可重用类型集合，可使用它来开发多种应用，这些应用程序包括传统的命令行或图形用户界面 (GUI) 应用，还包括基于 ASP.NET 提供的最新创新的应用（如 Web 窗体和 XML Web Services）。
+.NET Framework 包括公共语言运行时 (CLR) 和 .NET Framework 类库。 公共语言运行时是 .NET Framework 的基础。 可将运行时看作一个在执行时管理代码的代理，它提供内存管理、线程管理和远程处理等核心服务，并且还强制实施严格的类型安全以及可提高安全性和可靠性的其他形式的代码准确性。 事实上，代码管理的概念是运行时的基本原则。 以运行时为目标的代码称为托管代码，而不以运行时为目标的代码称为非托管代码。 类库是一个综合性的面向对象的可重用类型集合，可使用它来开发多种应用，这些应用包括传统的命令行或图形用户界面 (GUI) 应用，还包括基于 ASP.NET 提供的最新创新的应用（如 Web Forms 和 XML Web service）。
 
 .NET Framework 可由非托管组件承载，这些组件将公共语言运行时加载到它们的进程中并启动托管代码的执行，从而创建一个同时利用托管和非托管功能的软件环境。 .NET Framework 不但提供若干个运行时主机，而且还支持第三方运行时主机的开发。
 
-例如，ASP.NET 承载运行时以为托管代码提供可伸缩的服务器端环境。 ASP.NET 直接使用运行时以启用 ASP.NET 应用和 XML Web Services（本主题稍后将对这两者进行讨论）。
+例如，ASP.NET 承载运行时以为托管代码提供可伸缩的服务器端环境。 ASP.NET 直接使用运行时以启用 ASP.NET 应用和 XML Web service（本文稍后将对这两者进行讨论）。
 
 Internet Explorer 是承载运行时（以 MIME 类型扩展的形式）的非托管应用的一个示例。 使用 Internet Explorer 承载运行时使您能够在 HTML 文档中嵌入托管组件或 Windows 窗体控件。 以这种方式承载运行时可使托管移动代码成为可能，不过它需要进行只有托管代码才能提供的重大改进（如不完全受信任的执行和独立的文件存储）。
 

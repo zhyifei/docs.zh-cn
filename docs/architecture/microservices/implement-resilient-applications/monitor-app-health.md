@@ -1,13 +1,13 @@
 ---
 title: 运行状况监视
 description: 了解实现运行状况监视的一种方法。
-ms.date: 01/30/2020
-ms.openlocfilehash: a91e51af66049f9774365cd56b90ab792a4dd4fc
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 03/02/2020
+ms.openlocfilehash: d3d2bc72cf29b3d1ac93191e7ff2bd827c9ee68d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502689"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401543"
 ---
 # <a name="health-monitoring"></a>运行状况监视
 
@@ -19,7 +19,7 @@ ms.locfileid: "77502689"
 
 ## <a name="implement-health-checks-in-aspnet-core-services"></a>在 ASP.NET Core 服务中实现运行状况检查
 
-开发 ASP.NET Core 微服务或 Web 应用程序时，可以使用 ASP .NET Core 3.1 中发布的内置运行状况检查功能 ([Microsoft.Extensions.Diagnostics.HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks))。 与许多 ASP.NET 核心功能一样，运行状况检查附带一组服务和中间件。
+开发 ASP.NET Core 微服务或 Web 应用程序时，可以使用 ASP .NET Core 2.2 中发布的内置运行状况检查功能 ([Microsoft.Extensions.Diagnostics.HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks))。 与许多 ASP.NET 核心功能一样，运行状况检查附带一组服务和中间件。
 
 运行状况检查服务和中间件使用方便，并提供了一些功能，可以用于验证应用程序（如 SQL Server 数据库或远程 API）所需的任何外部资源是否正常工作。 使用该功能时，还可以确定资源正常运行的定义，稍后将会介绍。
 
@@ -27,7 +27,9 @@ ms.locfileid: "77502689"
 
 ### <a name="use-the-healthchecks-feature-in-your-back-end-aspnet-microservices"></a>在后端 ASP.NET 微服务中使用 HealthChecks 功能
 
-本部分介绍如何在示例 ASP.NET Core 3.1 Web API 应用程序中使用 [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) 中实现的 HealthChecks 功能。 后面部分中将介绍如何在大规模微服务（例如，eShopOnContainers）中实现此功能。 首先，需要定义每个微服务的正常运行状况的必备条件。 在该示例应用程序中，如果可通过 HTTP 访问微服务 API 并且可以使用与其相关的 SQL Server 数据库，则该微服务的处于正常运行状态。
+本节介绍在使用 [Microsoft.Extensions.Diagnostics.HealthChecks ](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)包时，如何在示例 ASP.NET Core 3.1 Web API 应用程序中实现 HealthChecks 功能。 下一节介绍如何在大规模微服务（例如 eShopOnContainers）中实现此功能。
+
+首先，需要定义每个微服务的正常运行状况的必备条件。 在该示例应用程序中，如果可通过 HTTP 访问微服务 API 并且可以使用与其相关的 SQL Server 数据库，可定义该微服务处于正常运行状态。
 
 在 .NET Core 3.1 中，使用内置 API，可以通过以下方式配置服务、为微服务及其依赖的 SQL Server 数据库添加运行状况检查：
 
@@ -40,14 +42,15 @@ public void ConfigureServices(IServiceCollection services)
     // Registers required services for health checks
     services.AddHealthChecks()
         // Add a health check for a SQL Server database
-        .AddSqlServer(
-            configuration["ConnectionString"],
-            name: "OrderingDB-check",
-            tags: new string[] { "orderingdb" });
+        .AddCheck(
+            "OrderingDB-check",
+            new SqlConnectionHealthCheck(Configuration["ConnectionString"]),
+            HealthStatus.Unhealthy,
+            new string[] { "orderingdb" });
 }
 ```
 
-在上面的代码中，`services.AddHealthChecks()` 方法配置一个基本 HTTP 检查，会返回状态代码 200 以及“正常”  。  此外，`AddCheck()` 扩展方法可配置自定义 `SqlConnectionHealthCheck`，用于检查相关 SQL 数据库的运行状况。
+在上面的代码中，`services.AddHealthChecks()` 方法配置一个基本 HTTP 检查，会返回状态代码 200 以及“正常”。  此外，`AddCheck()` 扩展方法可配置自定义 `SqlConnectionHealthCheck`，用于检查相关 SQL 数据库的运行状况。
 
 `AddCheck()` 方法添加具有指定名称的新运行状况检查和类型 `IHealthCheck` 的实现。 可以使用 AddCheck 方法添加多个运行状况检查，使微服务在其所有检查均获得“正常”结果后才会提供“正常”状态。
 
@@ -114,11 +117,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     app.UseEndpoints(endpoints =>
     {
         //...
-        endpoints.MapHealthChecks("/hc", new HealthCheckOptions()
-        {
-            Predicate = _ => true,
-            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-        });
+        endpoints.MapHealthChecks("/hc");
         //...
     });
     //…
@@ -269,7 +268,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 例如，大多数业务流程协调程序可以使用运行状况检查来管理不会停机的部署。 仅当服务/容器的状态变为正常时，业务流程协调程序才会开始将流量路由到服务/容器实例。
 
-当业务流程协调程序执行应用程序升级时，运行状况监视尤为重要。 某些业务流程协调程序（如 Azure Service Fabric）会分阶段更新服务，例如，它们可能为每个应用程序升级更新五分之一的群集面。 同时升级的一组节点称为“升级域”  。 完成每个升级域的升级操作并面向用户提供后，在部署进程移至下一升级域之前，该升级域必须通过运行状况检查。
+当业务流程协调程序执行应用程序升级时，运行状况监视尤为重要。 某些业务流程协调程序（如 Azure Service Fabric）会分阶段更新服务，例如，它们可能为每个应用程序升级更新五分之一的群集面。 同时升级的一组节点称为“升级域”。 完成每个升级域的升级操作并面向用户提供后，在部署进程移至下一升级域之前，该升级域必须通过运行状况检查。
 
 服务运行状况的另一方面是报告服务的指标。 这是某些业务流程协调程序（如 Service Fabric）运行状况模型的高级功能。 因为要借助指标来平衡资源使用情况，所以在使用业务流程协调程序时，指标非常重要。 指标也可以是系统运行状况的指示器。 例如，某个应用程序包含多个微服务，并且每个实例都会报告每秒的请求数 (RPS) 指标。 如果某一服务使用的资源（内存、处理器等）比另一个服务多，则业务流程协调程序会在群集中移动服务实例，尝试使资源使用保持均衡状态。
 

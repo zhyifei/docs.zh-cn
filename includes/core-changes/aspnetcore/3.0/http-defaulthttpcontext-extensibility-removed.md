@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 1b4b0aba3ea24682ae972bf283ac387692c83781
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9d138f79fcede4acac837f8d7793aa343ced737c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75902055"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78290751"
 ---
 ### <a name="http-defaulthttpcontext-extensibility-removed"></a>HTTP：已删除 DefaultHttpContext 扩展性
 
 作为 ASP.NET Core 3.0 性能改进的一部分，已删除 `DefaultHttpContext` 的扩展性。 此类现在为 `sealed`。 有关详细信息，请参阅 [dotnet/aspnetcore#6504](https://github.com/dotnet/aspnetcore/pull/6504)。
 
-如果单元测试使用 `Mock<DefaultHttpContext>`，请改用 `Mock<HttpContext>`。
+如果单元测试使用 `Mock<DefaultHttpContext>`，请改用 `Mock<HttpContext>` 或 `new DefaultHttpContext()`。
 
 有关讨论，请参阅 [dotnet/aspnetcore#6534](https://github.com/dotnet/aspnetcore/issues/6534)。
 

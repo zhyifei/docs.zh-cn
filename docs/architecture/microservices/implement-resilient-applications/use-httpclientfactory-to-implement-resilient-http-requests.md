@@ -1,68 +1,73 @@
 ---
-title: 使用 HttpClientFactory 实现复原 HTTP 请求
-description: 了解如何使用自 .NET Core 2.1 起可用的 HttpClientFactory 来创建 `HttpClient` 实例，使其更轻松地在应用程序中使用。
-ms.date: 08/08/2019
-ms.openlocfilehash: 1a6d65509d669166e73ad907b506bae7fa26536d
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+title: 使用 IHttpClientFactory 实现复原 HTTP 请求
+description: 了解如何使用自 .NET Core 2.1 起可用的 IHttpClientFactory 来创建 `HttpClient` 实例，使其更轻松地在应用程序中使用。
+ms.date: 03/03/2020
+ms.openlocfilehash: 088fb6c7e10ad656247ee4065da5c13d383b2cf7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900316"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847214"
 ---
-# <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 实现复原 HTTP 请求
+# <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>使用 IHttpClientFactory 实现复原 HTTP 请求
 
-自 .NET Core 2.1 起可用的 `HttpClientFactory` 是一个“固执的”工厂，用于创建在应用程序中使用的 <xref:System.Net.Http.HttpClient> 实例。
+<xref:System.Net.Http.IHttpClientFactory> 是由自 .NET Core 2.1 起可用的固定工厂 `DefaultHttpClientFactory` 实现的协定，用于创建在应用程序中使用的 <xref:System.Net.Http.HttpClient> 实例。
 
 ## <a name="issues-with-the-original-httpclient-class-available-in-net-core"></a>.NET Core 中提供的原始 HttpClient 类的相关问题
 
 常见的原始 <xref:System.Net.Http.HttpClient> 类非常易于使用，但在某些情况下，许多开发人员却并未正确使用该类。
 
-第一个问题，当此类可释放时，将其用于 `using` 语句并不是最佳选择，因为即使释放 `HttpClient` 对象，基础套接字也不会立即释放，并可能导致严重问题：“套接字耗尽”。 有关此问题的详细信息，请参阅[你正在以错误方式使用 HttpClient，这将导致软件受损](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/)博客文章。
+虽然此类实现 `IDisposable`，但并不是首选在 `using` 语句中声明和实例化它，因为释放 `HttpClient` 对象时，基础套接字不会立即释放，这可能会导致“套接字耗尽”问题。 有关此问题的详细信息，请参阅[你正在以错误方式使用 HttpClient，这将导致软件受损](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/)的博客文章。
 
-因此，`HttpClient` 应进行一次实例化并在应用程序的生命周期中重复使用。 在负载较重的情况下，实例化每个请求的 `HttpClient` 类将耗尽可用的套接字数。 该问题会导致 `SocketException` 错误。 要解决此问题，可能的方法是将 `HttpClient` 对象创建为单一对象或静态对象，请参阅[关于 HttpClient 用法的 Microsoft 文章](../../../csharp/tutorials/console-webapiclient.md)中的说明。
+因此，`HttpClient` 应进行一次实例化并在应用程序的生命周期中重复使用。 在负载较重的情况下，实例化每个请求的 `HttpClient` 类将耗尽可用的套接字数。 该问题会导致 `SocketException` 错误。 要解决此问题，可能的方法是将 `HttpClient` 对象创建为单一对象或静态对象，请参阅[关于 HttpClient 用法的 Microsoft 文章](../../../csharp/tutorials/console-webapiclient.md)中的说明。 对于生存期较短的控制台应用或一天运行几次的类似应用，这可能是一个不错的解决方案。
 
-但将 `HttpClient` 对象用作单一对象或静态对象时还有一个问题。 在这种情况下，单一实例或静态 `HttpClient` 不考虑 DNS 更改，请参阅 dotnet/corefx GitHub 存储库中的此[问题](https://github.com/dotnet/corefx/issues/11224)中的说明。
+在长期运行的进程中使用 `HttpClient` 的共享实例时，开发人员遇到的另一个问题。 在将 HttpClient 实例化为单一实例或静态对象的情况下，它无法处理 DNS 更改，如 dotnet/corefx GitHub 存储库的此[问题](https://github.com/dotnet/corefx/issues/11224)中所述。
 
-为解决上述问题并使 `HttpClient` 实例管理更轻松，.NET Core 2.1 引入了新的 `HttpClientFactory`，后者可与 Polly 集成来实现弹性 HTTP 调用。
+但是，问题实际上不是 `HttpClient` 本身，而是 [HttpClient 的默认构造函数](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor)，因为它创建了一个新的实际 <xref:System.Net.Http.HttpMessageHandler> 实例，该实例具有上面提到的“套接字耗尽”和 DNS 更改问题。
+
+若要解决上述问题并使 `HttpClient` 实例可管理，.NET Core 2.1 引入了 <xref:System.Net.Http.IHttpClientFactory> 接口，该接口可用于在应用中通过依赖关系注入 (DI) 来配置和创建 `HttpClient` 实例。 它还提供基于 Polly 的中间件的扩展，以利用 HttpClient 中的委托处理程序。
 
 [Polly](http://www.thepollyproject.org/) 是瞬态故障处理库，它可以通过流畅且线程安全的方式使用一些预定义的策略，帮助开发人员为其应用程序增加弹性。
 
-## <a name="what-is-httpclientfactory"></a>什么是 HttpClientFactory
+## <a name="benefits-of-using-ihttpclientfactory"></a>使用 IHttpClientFactory 的好处
 
-`HttpClientFactory` 用于：
+同时实现 <xref:System.Net.Http.IHttpMessageHandlerFactory> 的 <xref:System.Net.Http.IHttpClientFactory> 当前实现具有以下优势：
 
 - 提供一个中心位置，用于命名和配置逻辑 `HttpClient` 对象。 例如，可以配置预配置的客户端（服务代理）以访问特定微服务。
 - 通过后列方式整理出站中间件的概念：在 `HttpClient` 中委托处理程序并实现基于 Polly 的中间件以利用 Polly 的复原策略。
 - `HttpClient` 已经具有委托处理程序的概念，这些委托处理程序可以链接在一起，处理出站 HTTP 请求。 将 HTTP 客户端注册到工厂后，可使用一个 Polly 处理程序将 Polly 策略用于重试、断路器等。
-- 管理 `HttpClientMessageHandlers` 的生存期，避免在自行管理 `HttpClient` 生存期时出现上述问题。
+- 管理 <xref:System.Net.Http.HttpMessageHandler> 的生存期，避免在自行管理 `HttpClient` 生存期时出现上述问题。
+
+> [!TIP]
+> 由于关联的 `HttpMessageHandler` 由工厂管理，因此可安全释放由 DI 注入的 `HttpClient` 实例。 事实上，注入的 `HttpClient` 实例是从 DI 角度区分范围的。
 
 > [!NOTE]
-> `HttpClientFactory` 与 `Microsoft.Extensions.DependencyInjection` NuGet 包中的依赖项注入 (DI) 实现紧密相关。 有关使用其他依赖项注入容器的详细信息，请参阅此 [GitHub 讨论](https://github.com/dotnet/extensions/issues/1345)。
+> `IHttpClientFactory` (`DefaultHttpClientFactory`) 实现与 `Microsoft.Extensions.DependencyInjection` NuGet 包中的 DI 实现紧密关联。 有关使用其他 DI 容器的详细信息，请参阅此 [GitHub 讨论](https://github.com/dotnet/extensions/issues/1345)。
 
-## <a name="multiple-ways-to-use-httpclientfactory"></a>HttpClientFactory 的多种用法
+## <a name="multiple-ways-to-use-ihttpclientfactory"></a>IHttpClientFactory 的多种用法
 
-可以通过多种方法在应用程序中使用 `HttpClientFactory`：
+可以通过多种方法在应用程序中使用 `IHttpClientFactory`：
 
-- 直接使用 `HttpClientFactory`
+- 基本用法
 - 使用命名客户端
 - 使用类型化客户端
 - 使用生成的客户端
 
-为简洁起见，本指南介绍了使用 `HttpClientFactory` 的最结构化的方法，即使用类型化客户端（服务代理模式）。 不过，所有选项均已记录，并且当前在此[涵盖 HttpClientFactory 用法的文章](/aspnet/core/fundamentals/http-requests#consumption-patterns)中列出。
+为简洁起见，本指南介绍了使用 `IHttpClientFactory` 的最结构化的方法，即使用类型化客户端（服务代理模式）。 不过，所有选项均已记录，并且当前在此[涵盖 `IHttpClientFactory` 用法的文章](/aspnet/core/fundamentals/http-requests#consumption-patterns)中列出。
 
-## <a name="how-to-use-typed-clients-with-httpclientfactory"></a>如何结合使用类型化客户端和 HttpClientFactory
+## <a name="how-to-use-typed-clients-with-ihttpclientfactory"></a>如何结合使用类型化客户端和 IHttpClientFactory
 
-那么，什么是“类型化客户端”？ 它只是 `DefaultHttpClientFactory` 注入时配置的 `HttpClient`。
+那么，什么是“类型化客户端”？ 它只是为某些特定用途预配置的 `HttpClient`。 此配置可以包括特定值，如基本服务器、HTTP 标头或超时。
 
-下图显示了如何将类型化客户端与 `HttpClientFactory` 结合使用：
+下图显示了如何将类型化客户端与 `IHttpClientFactory` 结合使用：
 
-![展示如何将类型化客户端与 HttpClientFactory 结合使用的图表。](./media/use-httpclientfactory-to-implement-resilient-http-requests/client-application-code.png)
+![展示如何将类型化客户端与 IHttpClientFactory 结合使用的图表。](./media/use-httpclientfactory-to-implement-resilient-http-requests/client-application-code.png)
 
-**图 8-4**。 将 HttpClientFactory 与类型化客户端类结合使用。
+**图 8-4**。 结合使用 `IHttpClientFactory` 和类型化客户端类。
 
-在上图中，ClientService（由控制器或客户端代码使用）使用由注册的 `IHttpClientFactory` 创建的 `HttpClient`。 此工厂从它所管理的池中为 `HttpClient` 分配 `HttpMessageHandler`。 当使用扩展方法 `AddHttpClient` 在 DI 容器中注册 `IHttpClientFactory` 时，可以使用 Polly 策略配置 `HttpClient`。
+在上图中，`ClientService`（由控制器或客户端代码使用）使用由注册的 `IHttpClientFactory` 创建的 `HttpClient`。 此工厂将池的 `HttpMessageHandler` 分配给 `HttpClient`。 当使用扩展方法 <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*> 在 DI 容器中注册 `IHttpClientFactory` 时，可以使用 Polly 策略配置 `HttpClient`。
 
-要配置上述结构，请通过安装包含 `IServiceCollection` 的 `AddHttpClient()` 扩展方法的 `Microsoft.Extensions.Http` NuGet 包，在应用程序中添加 `HttpClientFactory`。 此扩展方法用于注册 `DefaultHttpClientFactory`，后者用作接口 `IHttpClientFactory` 的单一实例。 它定义 `HttpMessageHandlerBuilder` 的临时配置。 此消息处理程序（`HttpMessageHandler` 对象）获取自池，可供从工厂返回的 `HttpClient` 使用。
+要配置上述结构，请通过安装包含 <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> 的 <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*> 扩展方法的 `Microsoft.Extensions.Http` NuGet 包，在应用程序中添加 <xref:System.Net.Http.IHttpClientFactory>。 此扩展方法用于注册内部 `DefaultHttpClientFactory` 类，后者用作接口 `IHttpClientFactory` 的单一实例。 它定义 <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder> 的临时配置。 此消息处理程序（<xref:System.Net.Http.HttpMessageHandler> 对象）获取自池，可供从工厂返回的 `HttpClient` 使用。
 
 在下一个代码中，可以看到如何使用 `AddHttpClient()` 注册需要使用 `HttpClient` 的类型化客户端（服务代理）。
 
@@ -107,7 +112,7 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 
 由于每个处理程序通常都管理自己的基础 HTTP 连接，所以有必要汇集处理程序；创建的处理程序数量如果多于必需的数量，则可能导致连接延迟。 部分处理程序还保持连接无期限地打开，这样可以防止处理程序对 DNS 更改作出反应。
 
-池中的 `HttpMessageHandler` 对象的生存期就是池中的 `HttpMessageHandler` 实例可重用的时间长度。 默认值为两分钟，但可基于每个类型化客户端重写此值。 要重写该值，请在创建客户端时在返回的 `IHttpClientBuilder` 上调用 `SetHandlerLifetime()`，如以下代码所示：
+池中的 `HttpMessageHandler` 对象的生存期就是池中的 `HttpMessageHandler` 实例可重用的时间长度。 默认值为两分钟，但可基于每个类型化客户端重写此值。 要重写该值，请在创建客户端时在返回的 <xref:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder> 上调用 `SetHandlerLifetime()`，如以下代码所示：
 
 ```csharp
 //Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client
@@ -146,13 +151,13 @@ public class CatalogService : ICatalogService
 }
 ```
 
-类型化客户端（示例中的 CatalogService）由 DI（依赖项注入）激活，这意味着除 HttpClient 外，它还可以接受其构造函数中的任何注册服务。
+类型化客户端（示例中的 `CatalogService`）由 DI（依赖项注入）激活，这意味着除 `HttpClient` 外，它还可以接受其构造函数中的任何注册服务。
 
-类型化客户端实际上是一个暂时对象，这意味着每次需要实例时都将创建新实例，并且它将在其每次被构造时接收一个新 `HttpClient` 实例。 但是，池中的 HttpMessageHandler 对象是由多个 Http 请求重复使用的对象。
+类型化客户端实际上是一个暂时对象，这意味着每次需要实例时都将创建新实例，并且它将在其每次被构造时接收一个新 `HttpClient` 实例。 但是，池中的 `HttpMessageHandler` 对象是由多个 `HttpClient` 实例重复使用的对象。
 
 ### <a name="use-your-typed-client-classes"></a>使用类型化客户端类
 
-最后，一旦实现了键入的类并在 `AddHttpClient()` 中注册了它们，就可以在每次可通过 DI 注入服务时使用它们。 例如，在 Razor 页面代码或 MVC Web 应用的控制器中，如 eShopOnContainers 的以下代码中：
+最后，实现了类型化类并在 `AddHttpClient()` 中注册并配置了它们，你便可在任何可通过 DI 注入服务的位置使用它们。 例如，在 Razor 页面代码或 MVC Web 应用的控制器中，如 eShopOnContainers 的以下代码中：
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC.Controllers
@@ -185,18 +190,18 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 
 ## <a name="additional-resources"></a>其他资源
 
-- 在 .NET Core 中使用 HttpClientFactory   
+- 在 .NET Core 中使用 HttpClientFactory  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- `dotnet/extensions` GitHub 存储库中的 HttpClientFactory 源代码   
+- `dotnet/extensions` GitHub 存储库中的 HttpClientFactory 源代码  
   <https://github.com/dotnet/extensions/tree/master/src/HttpClientFactory>
 
 - **Polly（.NET 的恢复和暂时性故障处理库）**  
   <http://www.thepollyproject.org/>
   
-- **使用无依赖项注入的 HttpClientFactory（GitHub 问题）**  
+- 使用无依赖项注入的 IHttpClientFactory（GitHub 问题）  
   <https://github.com/dotnet/extensions/issues/1345>
 
 >[!div class="step-by-step"]
->[上一页](explore-custom-http-call-retries-exponential-backoff.md)
+>[上一页](implement-resilient-entity-framework-core-sql-connections.md)
 >[下一页](implement-http-call-retries-exponential-backoff-polly.md)

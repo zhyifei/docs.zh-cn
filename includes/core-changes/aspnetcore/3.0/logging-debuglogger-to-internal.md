@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 958dede03e1c15f69f4ee676f13713ff43c29e96
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394173"
 ---
 ### <a name="logging-debuglogger-class-made-internal"></a>日志记录：将 DebugLogger 类设为内部类
@@ -21,7 +21,7 @@ ms.locfileid: "72394173"
 * 强制执行与其他记录器（如 `ConsoleLogger`）实现的一致性。
 * 减少 API 图面。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 使用 <xref:Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions.AddDebug%2A> `ILoggingBuilder` 扩展方法来启用调试日志记录。 如果需要手动注册服务，<xref:Microsoft.Extensions.Logging.Debug.DebugLoggerProvider> 也仍为 `public`。
 

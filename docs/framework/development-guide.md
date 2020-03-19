@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: abc392116aec8ffd8aa94f46ef97887c48516ca0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0500e11d2897cfa7392cc8280a0b69c5e2fc515f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122466"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79181618"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 开发指南
 本节介绍了如何创建、配置、调试、保护和部署 .NET Framework 应用。 本节还提供有关技术领域的信息，例如，动态编程、互操作性、扩展性、内存管理和线程处理。  
@@ -30,8 +30,7 @@ ms.locfileid: "73122466"
  [使用 WCF 的面向服务的应用程序](./wcf/index.md)  
  描述如何使用 Windows Communication Foundation (WCF) 生成安全可靠且面向服务的应用。  
   
- [使用 Windows Workflow Foundation 生成工作流](windows-workflow-foundation/index.md)     
- 提供有关用于 Windows Workflow Foundation (WF) 的编程模型、示例和工具的信息。  
+ [使用 Windows Workflow Foundation 生成工作流](windows-workflow-foundation/index.md) 提供有关用于 Windows Workflow Foundation (WF) 的编程模型、示例和工具的信息。  
 
  [Windows 服务应用程序](./windows-services/index.md)  
  介绍如何使用 Visual Studio 和 .NET Framework 创建作为服务安装的应用，以及如何开始、停止和以其他方式控制其行为。  
@@ -42,8 +41,7 @@ ms.locfileid: "73122466"
  [.NET Framework 中的网络编程](./network-programming/index.md)  
  描述 Internet 服务的分层、可扩展和托管实现，你可以将这些服务快速而轻松地集成到你的应用中。  
   
- [配置 .NET Framework 应用程序](configure-apps/index.md)    
- 介绍如何使用配置文件更改设置，而无需重新编译你的 .NET Framework 应用。  
+ [配置 .NET Framework 应用](configure-apps/index.md) 介绍如何使用配置文件更改设置，而无需重新编译你的 .NET Framework 应用。  
   
  [使用 .NET Native 编译应用程序](./net-native/index.md)  
  介绍如何使用 .NET Native 预编译技术生成和部署 Windows 应用商店应用。 .NET Native 编译在托管代码 (C#) 中编写并使 .NET Framework 面向本机代码的应用。  
@@ -62,7 +60,7 @@ ms.locfileid: "73122466"
   
  [性能](./performance/index.md)  
  提供有关缓存、延迟初始化、可靠性和 ETW 事件的信息。  
- 
+
 ## <a name="reference"></a>参考  
  [.NET Framework 类库](/dotnet/api/?view=netframework-4.7)  
  提供 .NET Framework 命名空间中包含的每一个类的语法、代码示例和使用信息。  

@@ -14,10 +14,10 @@ helpviewer_keywords:
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 ms.openlocfilehash: 06fe3a78d0b19720d4f83111980b88806312205f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73129873"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe（证书管理器工具）
@@ -44,29 +44,29 @@ ms.locfileid: "73129873"
   
 ## <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |--------------|-----------------|  
 |*sourceStorename*|包含要添加、删除、保存或显示的现有证书、CTL 或 CRL 的证书存储。 这可以是一个存储文件，也可以是一个系统存储。|  
 |*destinationStorename*|输出证书存储或文件。|  
   
-|选项|说明|  
+|选项|描述|  
 |------------|-----------------|  
 |**/add**|将证书、CTL 和 CRL 添加到证书存储中。|  
 |**/all**|当与 **/add** 一起使用时添加所有项。 当与 **/del** 一起使用时删除所有项。当不与 **/add** 或 **/del** 选项一起使用时显示所有项。 **/all** 选项不能与 **/put** 一起使用。|  
-|**/c**|当与 **/add** 一起使用时添加证书。 当与 **/del** 一起使用时删除证书。当与 **/put** 一起使用时保存证书。 当不与 **/add**、 **/del** 或 **/put** 选项一起使用时显示证书。|  
-|**/CRL**|当与 **/add** 一起使用时添加 CRL。 当与 **/del** 一起使用时删除 CRL。当与 **/put** 一起使用时保存 CRL。 当不与 **/add**、 **/del** 或 **/put** 选项一起使用时显示 CRL。|  
-|**/CTL**|当与 **/add** 一起使用时添加 CTL。 当与 **/del** 一起使用时删除 CTL。当与 **/put** 一起使用时保存 CTL。 当不与 **/add**、 **/del** 或 **/put** 选项一起使用时显示 CTL。|  
+|**/c**|当与 **/add** 一起使用时添加证书。 当与 **/del** 一起使用时删除证书。当与 **/put** 一起使用时保存证书。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示证书。|  
+|**/CRL**|当与 **/add** 一起使用时添加 CRL。 当与 **/del** 一起使用时删除 CRL。当与 **/put** 一起使用时保存 CRL。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示 CRL。|  
+|**/CTL**|当与 **/add** 一起使用时添加 CTL。 当与 **/del** 一起使用时删除 CTL。当与 **/put** 一起使用时保存 CTL。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示 CTL。|  
 |**/del**|从证书存储中删除证书、CTL 和 CRL。|  
-|**/e** *encodingType*|指定证书编码类型。 默认值为 `X509_ASN_ENCODING`。|  
-|**/f** *dwFlags*|指定存储打开标志。 这是传递到 **CertOpenStore** 的 *dwFlags* 参数。 默认值为 CERT_SYSTEM_STORE_CURRENT_USER。 仅当使用 **/y** 选项时才考虑此选项。|  
+|/e encodingType|指定证书编码类型。 默认值为 `X509_ASN_ENCODING`。|  
+|/f dwFlags|指定存储打开标志。 这是传递到 **CertOpenStore** 的 *dwFlags* 参数。 默认值为 CERT_SYSTEM_STORE_CURRENT_USER。 仅当使用 **/y** 选项时才考虑此选项。|  
 |**/h**[**elp**]|显示该工具的命令语法和选项。|  
-|**/n** *nam*|指定要添加、删除或保存的证书的公用名。 此选项只能用于证书，不能用于 CTL 或 CRL。|  
-|**/put**|将证书存储中的 X.509 证书、CTL 或 CRL 保存到文件。 文件以 X.509 格式保存。 **/7** 选项可与 **/put** 选项一起使用，以便用 PKCS #7 格式保存文件。 **/put** 选项后面必须有 **/c**、 **/CTL** 或 **/CRL**。 **/all** 选项不能与 **/put** 一起使用。|  
-|**/r** *location*|标识系统存储的注册表位置。 仅当指定 **/s** 选项时才考虑此选项。 *location* 必须是以下项之一：<br /><br /> -   `currentUser` 指示证书存储在 HKEY_CURRENT_USER 项下。 这是默认设置。<br />-   `localMachine` 指示证书存储在 HKEY_LOCAL_MACHINE 项下。|  
+|/n nam|指定要添加、删除或保存的证书的公用名。 此选项只能用于证书，不能用于 CTL 或 CRL。|  
+|**/put**|将证书存储中的 X.509 证书、CTL 或 CRL 保存到文件。 文件以 X.509 格式保存。 **/7** 选项可与 **/put** 选项一起使用，以便用 PKCS #7 格式保存文件。 **/put** 选项后面必须有 **/c**、**/CTL** 或 **/CRL**。 **/all** 选项不能与 **/put** 一起使用。|  
+|/r location|标识系统存储的注册表位置。 仅当指定 **/s** 选项时才考虑此选项。 *location* 必须是以下项之一：<br /><br /> -   `currentUser` 指示证书存储在 HKEY_CURRENT_USER 项下。 这是默认设置。<br />-   `localMachine` 指示证书存储在 HKEY_LOCAL_MACHINE 项下。|  
 |**/s**|指示证书存储是系统存储。 如果未指定此选项，则会将存储视为 **StoreFile**。|  
-|**/sha1** *sha1Hash*|指定要添加、删除或保存的证书、CTL 或 CRL 的 SHA1 哈希。|  
-|**/v**|指定详细模式；显示有关证书、CTL 和 CRL 的详细信息。 此选项不能与 **/add**、 **/del** 或 **/put** 选项一起使用。|  
-|**/y** *provider*|指定存储提供程序名称。|  
+|/sha1 sha1Hash|指定要添加、删除或保存的证书、CTL 或 CRL 的 SHA1 哈希。|  
+|**/v**|指定详细模式；显示有关证书、CTL 和 CRL 的详细信息。 此选项不能与 **/add**、**/del** 或 **/put** 选项一起使用。|  
+|/y provider|指定存储提供程序名称。|  
 |**/7**|将目标存储保存为 PKCS #7 对象。|  
 |**/?**|显示该工具的命令语法和选项。|  
   
@@ -81,7 +81,7 @@ ms.locfileid: "73129873"
   
 - 将证书存储中的 X.509 证书、CTL 或 CRL 保存到文件。  
   
- Certmgr.exe 适用于两类证书存储：StoreFile 和系统存储  。 不必指定证书存储的类型；Certmgr.exe 能够识别存储类型并执行适当的操作。  
+ Certmgr.exe 适用于两类证书存储：StoreFile 和系统存储。 不必指定证书存储的类型；Certmgr.exe 能够识别存储类型并执行适当的操作。  
   
  运行 Certmgr.exe 时若不指定任何选项，则将启动 certmgr.msc 管理单元，该管理单元具有一个 GUI，可帮助执行也可通过命令行访问的证书管理任务。 该 GUI 提供了一个导入向导，此向导会将证书、CTL 和 CRL 从磁盘复制到证书存储中。  
   

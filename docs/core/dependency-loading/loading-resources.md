@@ -5,10 +5,10 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: bfdc1d8179d46a13b3d137a87397fa3e573da33c
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72303622"
 ---
 # <a name="satellite-assembly-loading-algorithm"></a>附属程序集加载算法
@@ -36,7 +36,7 @@ ms.locfileid: "72303622"
     - 检查当前正在执行程序集的目录，查找与请求的 <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType>（例如 `es-MX`）匹配的子目录。
 
         > [!NOTE]
-        > 3\.0 版之前的 .NET Core 中未实现此功能。
+        > 3.0 版之前的 .NET Core 中未实现此功能。
         >
         > [!NOTE]
         > 在 Linux 和 macOS 上，子目录区分大小写，并且必须是以下两种情况之一：

@@ -5,10 +5,10 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: 312a320676be6eb453697e0704ab771a6707618b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73973499"
 ---
 # <a name="managed-assembly-loading-algorithm"></a>托管程序集加载算法
@@ -23,7 +23,7 @@ ms.locfileid: "73973499"
 
 直接使用特定的 API 也将触发加载：
 
-|API  |说明  |`Active` <xref:System.Runtime.Loader.AssemblyLoadContext> |
+|API  |描述  |`Active` <xref:System.Runtime.Loader.AssemblyLoadContext> |
 |---------|---------|---------|
 |<xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyName%2A?displayProperty=nameWithType>|`Load-by-name`|[this](../../csharp/language-reference/keywords/this.md) 实例。|
 |<xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath%2A?displayProperty=nameWithType><p><xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromNativeImagePath%2A?displayProperty=nameWithType>|从路径加载。|[this](../../csharp/language-reference/keywords/this.md) 实例。|

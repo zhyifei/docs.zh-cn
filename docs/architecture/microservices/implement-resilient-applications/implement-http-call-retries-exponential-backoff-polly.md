@@ -1,27 +1,25 @@
 ---
 title: 通过 Polly 实现使用指数退避算法的 HTTP 调用重试
-description: 了解如何使用 Polly 和 HttpClientFactory 处理 HTTP 故障。
-ms.date: 01/30/2020
-ms.openlocfilehash: 60943360c9674f93b246b37b2667b48dab659e0e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+description: 了解如何使用 Polly 和 IHttpClientFactory 处理 HTTP 故障。
+ms.date: 03/03/2020
+ms.openlocfilehash: 49396dd545a05699278254474c77acf1483e0e0c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502670"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846791"
 ---
-# <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>通过 HttpClientFactory 和 Polly 策略实现使用指数退避算法的 HTTP 调用重试
+# <a name="implement-http-call-retries-with-exponential-backoff-with-ihttpclientfactory-and-polly-policies"></a>通过 IHttpClientFactory 和 Polly 策略实现使用指数退避算法的 HTTP 调用重试
 
 建议的使用指数退避算法的重试方法是利用更高级的 .NET 库，如开放源 [Polly](https://github.com/App-vNext/Polly) 库。
 
 Polly 是一个 .NET 库，提供恢复能力和瞬态故障处理功能。 通过应用 Polly 策略（如重试、断路器、舱壁隔离、超时和回退）即可实现这些功能。 Polly 面向 .NET Framework 4.x 和 .NET Standard 1.0、1.1 和 2.0（支持 .NET Core）。
 
-但是，编写自己的自定义代码以将 Polly 库与 HttpClient 配合使用的过程非常复杂。 eShopOnContainers 的原始版本中包含基于 Polly 的 [ResilientHttpClient 构建基块](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10)。 但随着 [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md) 的发布，使用 Polly 实现复原 HTTP 通信变得简单得多，因此已弃用 eShopOnContainers 中的构建基块。
-
-以下步骤说明如何通过集成到 HttpClientFactory 中的 Polly（已在上一部分中说明）使用 Http 重试。
+以下步骤说明如何通过集成到 `IHttpClientFactory` 中的 Polly（已在上一部分中说明）使用 Http 重试。
 
 **引用 ASP.NET Core 3.1 包**
 
-自 .NET Core 2.1 起提供 `HttpClientFactory`，但建议在项目中使用 NuGet 中的最新 ASP.NET Core 3.1 包。 通常，还需要引用扩展包 `Microsoft.Extensions.Http.Polly`。
+自 .NET Core 2.1 起提供 `IHttpClientFactory`，但建议在项目中使用 NuGet 中的最新 ASP.NET Core 3.1 包。 通常，还需要引用扩展包 `Microsoft.Extensions.Http.Polly`。
 
 **使用 Polly 的重试策略在 Startup 中配置客户端**
 
@@ -34,7 +32,7 @@ services.AddHttpClient<IBasketService, BasketService>()
         .AddPolicyHandler(GetRetryPolicy());
 ```
 
-将策略添加至将要使用的 `HttpClient` 对象需要使用 AddPolicyHandler()  方法。 在此示例中，将使用指数退避算法为 Http 重试添加 Polly 策略。
+将策略添加至将要使用的 `HttpClient` 对象需要使用 AddPolicyHandler() 方法。 在此示例中，将使用指数退避算法为 Http 重试添加 Polly 策略。
 
 若要获得更加模块化的方法，可在 `Startup.cs` 文件内的单独方法中定义 Http 重试策略，如以下代码所示：
 
@@ -73,7 +71,7 @@ Polly 通过项目网站提供了可用于生产的 jitter 算法。
 - **重试模式**  
   [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
-- **Polly 和 HttpClientFactory**  
+- **Polly 和 IHttpClientFactory**  
   <https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory>
 
 - **Polly（.NET 的恢复和暂时性故障处理库）**  
@@ -86,5 +84,5 @@ Polly 通过项目网站提供了可用于生产的 jitter 算法。
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]
->[上一页](explore-custom-http-call-retries-exponential-backoff.md)
+>[上一页](use-httpclientfactory-to-implement-resilient-http-requests.md)
 >[下一页](implement-circuit-breaker-pattern.md)

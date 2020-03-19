@@ -2,15 +2,15 @@
 title: 网络编程示例
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: 1c3dc630f8675084d434431fbe227cf373c54b62
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 860ee2ee766a4c0c1ea158662f195e6e29628687
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047608"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180717"
 ---
 # <a name="network-programming-samples"></a>网络编程示例
-本节包含可下载的网络编程示例的说明和链接，这些示例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相关命名空间中的类。 
+本节包含可下载的网络编程示例的说明和链接，这些示例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相关命名空间中的类。
   
 > [!NOTE]
 > 所有示例都在 [.NET Framework SDK 版本 2.0 示例下载](https://www.microsoft.com/download/confirmation.aspx?id=22181)中提供，它针对 .NET Framework 2.0 发布，可能已过期。
@@ -24,9 +24,8 @@ ms.locfileid: "71047608"
   
  [HttpListener 技术示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/y7cbb2y2(v=vs.85))  
  演示如何处理来自应用程序的 HTTP 请求。  
- 
- [HttpListener ASPX 主机应用程序示例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
- 演示如何使用 <xref:System.Net.HttpListener?displayProperty=nameWithType> 类的功能创建将调用路由至托管的 ASP.NET 应用程序的 HTTP 服务器。
+
+ [HttpListener ASPX 主机应用程序示例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90)) 演示如何使用 <xref:System.Net.HttpListener?displayProperty=nameWithType> 类的功能，创建将调用路由至托管的 ASP.NET 应用程序的 HTTP 服务器。
   
  [Mailer 技术示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/whw7xbk2(v=vs.85))  
  演示如何从客户端应用程序发送电子邮件。  

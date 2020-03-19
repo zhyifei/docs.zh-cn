@@ -14,10 +14,10 @@ helpviewer_keywords:
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 ms.openlocfilehash: caca946617c681ce6516b7184a9ea506cc67158d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73105064"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe（安装程序工具）
@@ -36,7 +36,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 ## <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |--------------|-----------------|
 |`assembly`|要在其中执行安装程序组件的程序集的文件名称。 如果你要通过使用 `/AssemblyName` 选项指定程序集的强名称，则忽略此参数。|
 
@@ -44,12 +44,12 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 ## <a name="options"></a>选项
 
-|选项|说明|
+|选项|描述|
 |------------|-----------------|
-|`/h[elp]`<br /><br /> -或-<br /><br /> `/?`|显示该工具的命令语法和选项。|
-|`/help` *assembly*<br /><br /> -或-<br /><br /> `/?` *assembly*|显示由指定的程序集中的个别安装程序识别的其他选项，以及 InstallUtil.exe 的命令语法和选项。 此选项将各安装程序组件的 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> 属性返回的文本添加到 InstallUtil.exe 的帮助文本。|
+|`/h[elp]`<br /><br /> - 或 -<br /><br /> `/?`|显示该工具的命令语法和选项。|
+|`/help` assembly<br /><br /> - 或 -<br /><br /> `/?` assembly|显示由指定的程序集中的个别安装程序识别的其他选项，以及 InstallUtil.exe 的命令语法和选项。 此选项将各安装程序组件的 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> 属性返回的文本添加到 InstallUtil.exe 的帮助文本。|
 |`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|指定必须在全局程序集缓存中注册的程序集的强名称。 必须使用程序集的版本、区域性和公钥标记完全限定程序集名称。 完全限定名必须用引号括起。<br /><br /> 例如，“myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0”是完全限定的程序集名称。|
-|`/InstallStateDir=[` *directoryName* `]`|指定 .InstallState 文件的目录，其中包含用来卸载程序集的数据。 默认为包含程序集的目录。|
+|`/InstallStateDir=[` directoryName `]`|指定 .InstallState 文件的目录，其中包含用来卸载程序集的数据。 默认为包含程序集的目录。|
 |`/LogFile=`[*filename*]|指定在其中记录安装进度的日志文件的名称。 默认情况下，如果省略 `/LogFile` 选项，则会创建名为 *assemblyname*.InstallLog 的日志文件。 如果省略 *filename*，则不生成任何日志文件。|
 |`/LogToConsole`={`true`&#124;`false`}|如果为 `true`，则会将输出显示到控制台。 如果为 `false`（默认值），则取消将输出显示到控制台。|
 |`/ShowCallStack`|如果在安装过程中的任何时候出现异常，则将调用堆栈输出到日志文件。|

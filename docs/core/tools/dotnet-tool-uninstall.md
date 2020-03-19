@@ -2,16 +2,16 @@
 title: dotnet tool uninstall 命令
 description: dotnet tool uninstall 命令从计算机上卸载指定的 .NET Core 工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: 7a15c169c73cf5a743e0fa6f47645d6bccedbde3
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 82799404c40baa3a39f4e2a5fdb414fb745ef448
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157040"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847828"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
- 本文适用于： ✔️ .NET Core 2.1 SDK 及更高版本
+本文适用于： ✔️ .NET Core 2.1 SDK 及更高版本
 
 ## <a name="name"></a>“属性”
 
@@ -21,8 +21,11 @@ ms.locfileid: "78157040"
 
 ```dotnetcli
 dotnet tool uninstall <PACKAGE_NAME> <-g|--global>
+
 dotnet tool uninstall <PACKAGE_NAME> <--tool-path>
+
 dotnet tool uninstall <PACKAGE_NAME>
+
 dotnet tool uninstall <-h|--help>
 ```
 
@@ -77,3 +80,5 @@ dotnet tool uninstall <-h|--help>
 ## <a name="see-also"></a>请参阅
 
 - [.NET Core 工具](global-tools.md)
+- [教程：使用 .NET Core CLI 安装和使用 .NET Core 全局工具](global-tools-how-to-use.md)
+- [教程：使用 .NET Core CLI 安装和使用 .NET Core 本地工具](local-tools-how-to-use.md)

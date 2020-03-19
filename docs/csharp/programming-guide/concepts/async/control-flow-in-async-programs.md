@@ -3,10 +3,10 @@ title: 异步程序中的控制流 (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
 ms.openlocfilehash: 99f80a86f14179c5f270064a9f96e35f8611ef13
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204443"
 ---
 # <a name="control-flow-in-async-programs-c"></a>异步程序中的控制流 (C#)
@@ -101,9 +101,9 @@ Length of the downloaded string: 33946.
 
 1. 解压缩下载的文件，然后启动 Visual Studio。
 
-2. 在菜单栏上，依次选择  “文件” >   “打开” >   “项目/解决方案”。
+2. 在菜单栏上，依次选择“文件” > “打开” > “项目/解决方案”。
 
-3. 导航到保存已解压缩的示例代码的文件夹，打开解决方案 (.sln) 文件，然后选择 F5  键以生成并运行项目。
+3. 导航到保存已解压缩的示例代码的文件夹，打开解决方案 (.sln) 文件，然后选择 F5 键以生成并运行项目。
 
 ### <a name="create-the-program-yourself"></a>自行创建程序
 
@@ -113,21 +113,21 @@ Length of the downloaded string: 33946.
 
 1. 启动 Visual Studio。
 
-2. 在菜单栏上，依次选择“文件”   > “新建”   > “项目”  。
+2. 在菜单栏上，依次选择“文件” > “新建” > “项目”。
 
      **“新建项目”** 对话框随即打开。
 
-3. 选择  “已安装” >   “Visual C#” >   “Windows 桌面”类别，然后从项目模板列表中选择  “WPF 应用”。
+3. 选择“已安装” > “Visual C#” > “Windows 桌面”类别，然后从项目模板列表中选择“WPF 应用”。
 
-4. 输入 `AsyncTracer` 作为项目名称，然后选择“确定”  按钮。
+4. 输入 `AsyncTracer` 作为项目名称，然后选择“确定”按钮。
 
-     新项目将出现在“解决方案资源管理器”  中。
+     新项目将出现在“解决方案资源管理器”中。
 
 5. 在 Visual Studio 代码编辑器中，选择 **“MainWindow.xaml”** 选项卡。
 
-     如果此选项卡不可见，则在“解决方案资源管理器”  中，打开 MainWindow.xaml 的快捷菜单，然后选择“查看代码”  。
+     如果此选项卡不可见，则在“解决方案资源管理器”中，打开 MainWindow.xaml 的快捷菜单，然后选择“查看代码”。
 
-6. 在 MainWindow.xaml 的“XAML”  视图中，将代码替换为以下代码。
+6. 在 MainWindow.xaml 的“XAML”视图中，将代码替换为以下代码。
 
     ```csharp
     <Window
@@ -143,11 +143,11 @@ Length of the downloaded string: 33946.
     </Window>
     ```
 
-     MainWindow.xaml 的“设计”  视图中将显示一个简单的窗口，其中包含一个文本框和一个按钮。
+     MainWindow.xaml 的“设计”视图中将显示一个简单的窗口，其中包含一个文本框和一个按钮。
 
 7. 对 <xref:System.Net.Http> 添加引用。
 
-8. 在“解决方案资源管理器”  中，打开 MainWindow.xaml.cs 的快捷菜单，然后选择“查看代码”  。
+8. 在“解决方案资源管理器”中，打开 MainWindow.xaml.cs 的快捷菜单，然后选择“查看代码”。
 
 9. 在 MainWindow.xaml.cs 中，将代码替换为以下代码。
 
@@ -236,7 +236,7 @@ Length of the downloaded string: 33946.
     }
     ```
 
-10. 按 F5  键运行程序，然后选择“启动”  按钮。
+10. 按 F5 键运行程序，然后选择“启动”按钮。
 
     将显示以下输出：
 

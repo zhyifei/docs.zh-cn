@@ -2,12 +2,12 @@
 title: dotnet tool run 命令
 description: dotnet tool run 命令调用本地工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: 76830b8a8088fbf21f14ab0722b9547eabde7ba4
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: a088cd0b7f4bba014234a8189a42a63aa6d88f4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156954"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847841"
 ---
 # <a name="dotnet-tool-run"></a>dotnet tool run
 
@@ -21,6 +21,7 @@ ms.locfileid: "78156954"
 
 ```dotnetcli
 dotnet tool run <COMMAND NAME>
+
 dotnet tool run <-h|--help>
 ```
 
@@ -49,3 +50,4 @@ dotnet tool run <-h|--help>
 ## <a name="see-also"></a>请参阅
 
 - [.NET Core 工具](global-tools.md)
+- [教程：使用 .NET Core CLI 安装和使用 .NET Core 本地工具](local-tools-how-to-use.md)

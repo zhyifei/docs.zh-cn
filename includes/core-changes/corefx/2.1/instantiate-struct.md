@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: dc5f608dc9eb4635e1282a9ca5e15ff1bf7d0e0d
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 711b51c590be149545fda3130148e2bcaef8be4f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449541"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78262224"
 ---
 ### <a name="private-fields-added-to-built-in-struct-types"></a>添加到内置结构类型的私有字段
 
-私有字段已添加到[引用程序集](../../../../docs/standard/assembly/reference-assemblies.md)中的内置结构类型。 因此，在 C# 中，必须始终使用 [new 运算符](../../../../docs/csharp/language-reference/operators/new-operator.md)或[默认文本](../../../../docs/csharp/language-reference/operators/default.md#default-literal)，或者通过初始化每个私有字段来实例化结构类型。
+私有字段已添加到[引用程序集](../../../../docs/standard/assembly/reference-assemblies.md)中的[特定结构类型](#affected-apis)。 因此，在 C# 中，必须始终使用 [new 运算符](../../../../docs/csharp/language-reference/operators/new-operator.md)或[默认文本](../../../../docs/csharp/language-reference/operators/default.md#default-literal)来实例化结构类型。
 
 #### <a name="change-description"></a>更改描述
 
-在 .NET Core 2.0 和早期版本中，某些内置结构类型（例如 <xref:System.ConsoleKeyInfo>）可以在不使用 `new` 运算符或[默认文本](../../../../docs/csharp/language-reference/operators/default.md#default-literal)的情况下在 C# 中实例化。 这是因为 C# 编译器使用的[引用程序集](../../../../docs/standard/assembly/reference-assemblies.md)不包含结构的私有字段。 从 .NET Core 2.1 开始，.NET 结构类型的所有私有字段都将添加到引用程序集。
+在 .NET Core 2.0 和早期版本中，某些提供的结构类型（例如 <xref:System.ConsoleKeyInfo>）可以在不使用 `new` 运算符或[默认文本](../../../../docs/csharp/language-reference/operators/default.md#default-literal)的情况下在 C# 中实例化。 这是因为 C# 编译器使用的[引用程序集](../../../../docs/standard/assembly/reference-assemblies.md)不包含结构的私有字段。 从 .NET Core 2.1 开始，.NET 结构类型的所有私有字段都将添加到引用程序集。
 
 例如，下面的 C# 代码在 .NET Core 2.0 中编译，但不在 .Net core 2.1 中编译：
 
@@ -49,16 +49,6 @@ ConsoleKeyInfo key = default;    // Struct type.
 
 if (key.ToString() == "y")
     Console.WriteLine("Yes!");
-```
-
-```csharp
-ConsoleKeyInfo[] keys = new ConsoleKeyInfo[5];    // Array of structs.
-
-for (int i = 0; i < keys.Length; i++)
-{
-    // Initialize each array element with the new operator.
-    keys[i] = new ConsoleKeyInfo();
-}
 ```
 
 #### <a name="category"></a>类别

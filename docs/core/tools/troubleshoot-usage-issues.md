@@ -3,12 +3,12 @@ title: 排查 .NET Core 工具使用问题
 description: 发现运行 .NET Core 工具出现的常见问题及可能的解决方案。
 author: kdollard
 ms.date: 02/14/2020
-ms.openlocfilehash: ab5d1be8f201ea283f8537f18886feab46157127
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: ed6243f802c4d3ce56a742916a1a28676e3cd876
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543269"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146445"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>排查 .NET Core 工具使用问题
 
@@ -42,28 +42,28 @@ Possible reasons for this include:
 
 * 全局工具
 
-    全局工具可安装在默认目录中，也可安装在特定位置中。 默认目录为：
+  全局工具可安装在默认目录中，也可安装在特定位置中。 默认目录为：
 
-    | (OS)          | 路径                          |
-    |-------------|-------------------------------|
-    | Linux/macOS | `$HOME/.dotnet/tools`         |
-    | Windows     | `%USERPROFILE%\.dotnet\tools` |
+  | (OS)          | 路径                          |
+  |-------------|-------------------------------|
+  | Linux/macOS | `$HOME/.dotnet/tools`         |
+  | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-    如果要尝试运行全局工具，请检查计算机上的 `PATH` 环境变量是否包含安装该全局工具的路径且可执行文件是否位于该路径中。
+  如果要尝试运行全局工具，请检查计算机上的 `PATH` 环境变量是否包含安装该全局工具的路径且可执行文件是否位于该路径中。
 
-    .NET Core CLI 在首次使用时尝试将默认位置添加到 PATH 环境变量。 但在一些情况下，位置不会自动添加到 PATH，因此你必须编辑 PATH，针对以下情况对其进行配置：
+  .NET Core CLI 在首次使用时尝试将默认位置添加到 PATH 环境变量。 但是，在某些情况下，位置不会自动添加至 PATH：
 
-  * 如果要使用 Linux，并且已使用 .tar.gz 文件（而非 apt-get 或 rpm）安装 .NET Core SDK  。
+  * 如果要使用 Linux，并且已使用 .tar.gz 文件（而非 apt-get 或 rpm）安装 .NET Core SDK。
   * 如果使用的是 macOS 10.15“Catalina”或更高版本。
-  * 如果要使用 macOS 10.14“Mojave”或更低版本，并且已使用 .tar.gz 文件（而非 .pkg）安装 .NET Core SDK   。
+  * 如果要使用 macOS 10.14“Mojave”或更低版本，并且已使用 .tar.gz 文件（而非 .pkg）安装 .NET Core SDK。
   * 如果已安装 .NET Core 3.0 SDK，并且已将 `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` 环境变量设置为 `false`。
   * 如果已安装 .NET Core 2.2 SDK 或更低版本，并且已将 `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` 环境变量设置为 `true`。
 
-  有关详细信息，请参阅 [.NET Core 工具](global-tools.md)。
+  在这些情况下，或者如果指定了 `--tool-path` 选项，则计算机上的 `PATH` 环境变量不会自动包含安装全局工具的路径。 在这种情况下，使用 shell 提供的用于更新环境变量的任何方法，将工具位置（例如 `$HOME/.dotnet/tools`）追加到 `PATH` 环境变量。 有关详细信息，请参阅 [.NET Core 工具](global-tools.md)。
 
 * 本地工具
 
-  如果要尝试运行本地工具，请验证当前目录或其任何父目录中是否存在一个名为 dotnet-tools.json 的清单文件  。 此文件还可位于项目文件夹层次结构中任意位置的 .config 文件夹下，而不是位于根文件夹中  。 如果存在 dotnet-tools.json，请将其打开，检查是否存在你要尝试运行的工具  。 如果该文件不包含 `"isRoot": true` 的条目，则还要进一步检查文件层次结构中是否存在其他工具清单文件。
+  如果要尝试运行本地工具，请验证当前目录或其任何父目录中是否存在一个名为 dotnet-tools.json 的清单文件。 此文件还可位于项目文件夹层次结构中任意位置的 .config 文件夹下，而不是位于根文件夹中。 如果存在 dotnet-tools.json，请将其打开，检查是否存在你要尝试运行的工具。 如果该文件不包含 `"isRoot": true` 的条目，则还要进一步检查文件层次结构中是否存在其他工具清单文件。
 
   如果要尝试运行已通过指定的路径安装的 .NET Core 工具，则需要在使用该工具时包含该路径。 下面是使用安装了工具路径的工具的示例：
 

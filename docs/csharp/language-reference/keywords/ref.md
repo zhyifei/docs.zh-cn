@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 25c74317ce9033ef10735ee0087f275632b6bd17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 05f0bd8566851678203a3f064b96bfff7dee18b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715183"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398129"
 ---
 # <a name="ref-c-reference"></a>ref（C# 参考）
 
@@ -41,7 +41,7 @@ ms.locfileid: "75715183"
 ```csharp
 class CS0663_Example
 {
-    // Compiler error CS0663: "Cannot define overloaded 
+    // Compiler error CS0663: "Cannot define overloaded
     // methods that differ only on ref and out".
     public void SampleMethod(out int i) { }
     public void SampleMethod(ref int i) { }
@@ -115,9 +115,11 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 从 C# 7.3 开始，`foreach` 语句的迭代变量可以是 ref local 变量，也可以是 ref readonly local 变量。 有关详细信息，请参阅 [foreach 语句](foreach-in.md)一文。
 
+此外，从 C# 7.3 开始，可以使用 [ref 赋值运算符](../operators/assignment-operator.md#ref-assignment-operator)重新分配 ref local 或 ref readonly local 变量。
+
 ## <a name="ref-readonly-locals"></a>Ref readonly 局部变量
 
-Ref readonly 局部变量用于指代在其签名中具有 `ref readonly` 并使用 `return ref` 的方法或属性返回的值。 `ref readonly` 变量将 `ref` 本地变量的属性与 `readonly` 变量结合使用：它是所分配到的存储的别名，且无法修改。 
+Ref readonly 局部变量用于指代在其签名中具有 `ref readonly` 并使用 `return ref` 的方法或属性返回的值。 `ref readonly` 变量将 `ref` 本地变量的属性与 `readonly` 变量结合使用：它是所分配到的存储的别名，且无法修改。
 
 ## <a name="a-ref-returns-and-ref-locals-example"></a>ref 返回值和 ref 局部变量示例
 
@@ -137,7 +139,7 @@ Ref readonly 局部变量用于指代在其签名中具有 `ref readonly` 并使
 
 - 不能对 `ref struct` 装箱。 无法向属于 `object`、`dynamic` 或任何接口类型的变量分配 `ref struct` 类型。
 - `ref struct` 类型不能实现接口。
-- 不能将 `ref struct` 声明为类或常规结构的字段成员。 这包括声明自动实现的属性，后者会创建一个由编译器生成的支持字段。 
+- 不能将 `ref struct` 声明为类或常规结构的字段成员。 这包括声明自动实现的属性，后者会创建一个由编译器生成的支持字段。
 - 不能声明异步方法中属于 `ref struct` 类型的本地变量。 不能在返回类似 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `Task` 类型的同步方法中声明它们。
 - 无法在迭代器中声明 `ref struct` 本地变量。
 - 无法捕获 Lambda 表达式或本地函数中的 `ref struct` 变量。
@@ -155,7 +157,6 @@ Ref readonly 局部变量用于指代在其签名中具有 `ref readonly` 并使
 - [编写安全高效的代码](../../write-safe-efficient-code.md)
 - [ref 返回结果和局部变量](../../programming-guide/classes-and-structs/ref-returns.md)
 - [条件 ref 表达式](../operators/conditional-operator.md#conditional-ref-expression)
-- [ref 赋值运算符](../operators/assignment-operator.md#ref-assignment-operator)
 - [传递参数](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [方法参数](method-parameters.md)
 - [C# 参考](../index.md)

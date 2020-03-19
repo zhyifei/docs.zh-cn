@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 54ace52fc6a8f4614c1f762b65453979bcb92c7a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920385"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397871"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新增功能
 
@@ -43,7 +43,7 @@ ms.locfileid: "76920385"
 
 ### <a name="new-cli-commands"></a>新的 CLI 命令
 
-许多使用 [`DotnetCliToolReference`](../tools/extensibility.md) 的仅在每个项目的基础上可用的工具现作为 .NET Core SDK 的一部分提供。 这些工具包括：
+许多使用 `DotnetCliToolReference` 的仅在每个项目的基础上可用的工具现作为 .NET Core SDK 的一部分提供。 这些工具包括：
 
 - `dotnet watch` 提供文件系统观察程序，该程序在执行指定的命令集之前会首先等待文件更改。 例如，下面的命令将自动重新生成当前项目，并在其中的文件发生更改时生成详细输出：
 
@@ -65,7 +65,7 @@ ms.locfileid: "76920385"
 
 ### <a name="global-tools"></a>全局工具
 
-.NET Core 2.1 支持全局工具  ，即，可通过命令行在全局范围内使用的自定义工具。 以前版本的 .NET Core 中的扩展性模型只能通过使用 [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools) 在每个项目的基础上提供自定义工具。
+.NET Core 2.1 支持全局工具，即，可通过命令行在全局范围内使用的自定义工具。 以前版本的 .NET Core 中的扩展性模型只能通过使用 `DotnetCliToolReference` 在每个项目的基础上提供自定义工具。
 
 若要安装全局工具，请使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令。 例如：
 
@@ -89,9 +89,9 @@ dotnet tool install -g dotnetsay
 
 ## <a name="roll-forward"></a>前滚
 
-从 .NET Core 2.0 开始，所有 .NET Core 应用程序都将自动前滚到系统上安装的最新次要版本  。
+从 .NET Core 2.0 开始，所有 .NET Core 应用程序都将自动前滚到系统上安装的最新次要版本。
 
-从 .NET Core 2.0 开始，如果在其中构建应用程序的 .NET Core 版本在运行时不存在，应用程序将针对最新安装的次要版本  的 .NET Core 自动运行。 换而言之，如果应用程序在 .NET Core 2.0 中生成，而主机系统未安装 .NET Core 2.0 但安装了 .NET Core 2.1，则应用程序将通过 .NET Core 2.1 运行。
+从 .NET Core 2.0 开始，如果在其中构建应用程序的 .NET Core 版本在运行时不存在，应用程序将针对最新安装的次要版本的 .NET Core 自动运行。 换而言之，如果应用程序在 .NET Core 2.0 中生成，而主机系统未安装 .NET Core 2.0 但安装了 .NET Core 2.1，则应用程序将通过 .NET Core 2.1 运行。
 
 > [!IMPORTANT]
 > 此前滚行为不适用于预览版本。 默认情况下，它也不适用于主要版本，但可以通过以下设置进行更改。
@@ -106,7 +106,7 @@ dotnet tool install -g dotnetsay
 
 - 将 `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` 环境变量设置为所需的值。
 
-- 使用所需的值将下列行添加到 .runtimeconfig.json  文件：
+- 使用所需的值将下列行添加到 .runtimeconfig.json 文件：
 
    ```json
    "rollForwardOnNoCandidateFx" : 0
@@ -124,7 +124,7 @@ dotnet tool install -g dotnetsay
 
 ### <a name="self-contained-application-servicing"></a>自包含应用程序服务
 
-`dotnet publish` 现发布服务运行时版本的自包含应用程序。 当你使用 .NET Core 2.1 SDK (v 2.1.300) 发布自包含应用程序时，你的应用程序将包括此 SDK 已知的最新服务运行时版本。 当升级到最新的 SDK，将发布最新的 .NET Core 运行时版本。 这适用于 .NET Core 1.0 运行时以及更高版本。
+`dotnet publish` 现发布服务运行时版本的自包含应用程序。 当你使用 .NET Core 2.1 SDK (v 2.1.300) 发布自包含应用程序时，你的应用程序将包括此 SDK 已知的最新服务运行时版本。 升级到最新的 SDK 时，你将发布最新的 .NET Core 运行时版本。 这适用于 .NET Core 1.0 运行时以及更高版本。
 
 自包含发布依赖于 NuGet.org 上的运行时版本。计算机上不需要有服务运行时。
 
@@ -137,13 +137,13 @@ dotnet tool install -g dotnetsay
 
 ## <a name="jit-compiler-improvements"></a>JIT 编译器改进
 
-.NET Core 包含新的 JIT 编译器技术，称为“分层编译”  （也称为“自适应优化”  ），可以显著提高性能。 分层编译是一个可选设置。
+.NET Core 包含新的 JIT 编译器技术，称为“分层编译”（也称为“自适应优化”），可以显著提高性能。 分层编译是一个可选设置。
 
 由 JIT 编译器执行的重要任务之一是优化代码执行。 然而，对于很少使用的代码路径，相比运行未优化代码所花费的运行时，编译器可能需要更多的时间来优化代码。 分层编译介绍了 JIT 编译中的两个阶段：
 
-- 第一层  ，将尽可能快地生成代码。
+- 第一层，将尽可能快地生成代码。
 
-- 第二层  ，将为那些频繁执行的方法生成优化代码。 为了增强性能，第二层编译并行执行。
+- 第二层，将为那些频繁执行的方法生成优化代码。 为了增强性能，第二层编译并行执行。
 
 可以通过这两种方法之一选择加入分层编译。
 
@@ -177,17 +177,17 @@ dotnet tool install -g dotnetsay
 
 下面的示例使用 <xref:System.Span%601> 和 <xref:System.Memory%601> 实例来提供一个数组 10 个元素的虚拟视图。
 
-[!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/program.cs)]
 
-[!code-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli 压缩
 
 .NET Core 2.1 添加了对 Brotli 压缩和解压缩的支持。 Brotli 是在 [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) 中定义的通用无损压缩算法，并且大多数 Web 浏览器和主 Web 服务器都提供支持。 可以使用基于流的 <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> 类或基于范围的高性能 <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> 和 <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> 类。 下面的示例用 <xref:System.IO.Compression.BrotliStream> 类演示压缩：
 
-[!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/brotli.cs#1)]
 
-[!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
+[!code-vb[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 <xref:System.IO.Compression.BrotliStream> 行为等同于 <xref:System.IO.Compression.DeflateStream> 和 <xref:System.IO.Compression.GZipStream>，这样就可以轻松地将调用这些 API 的代码转换为 <xref:System.IO.Compression.BrotliStream>。
 
@@ -244,6 +244,10 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 在 Windows 上，还可以选择使用 <xref:System.Net.Http.WinHttpHandler?displayProperty=nameWithType>后者依赖于本机实现），或者通过将类实例传递到 <xref:System.Net.Http.HttpClient> 构造函数来使用 <xref:System.Net.Http.SocketsHttpHandler> 类。
 
 在 Linux 和 macOS 上，可以在每个进程的基础上仅配置 <xref:System.Net.Http.HttpClient>。 在 Linux 上，如果想要使用旧的 <xref:System.Net.Http.HttpClient> 实现，则需要部署 [libcurl](https://curl.haxx.se/libcurl/)。 （它随 .NET Core 2.0 一起安装。）
+
+### <a name="breaking-changes"></a>重大更改
+
+有关中断性变更的信息，请参阅[从版本 2.0 迁移到 2.1 的中断性变更](../compatibility/2.0-2.1.md)。
 
 ## <a name="see-also"></a>请参阅
 

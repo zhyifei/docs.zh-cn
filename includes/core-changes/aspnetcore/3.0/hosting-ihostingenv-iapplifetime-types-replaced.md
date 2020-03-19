@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: be1fad236dd3eed047b010e93285aec8bc607b61
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394331"
 ---
 ### <a name="hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced"></a>托管：IHostingEnvironment 和 IApplicationLifetime 类型标记为过时并被替换
@@ -26,7 +26,7 @@ ms.locfileid: "72394331"
 
 在 ASP.NET Core 2.1 中引入 `Microsoft.Extensions.Hosting` 时，从 `Microsoft.AspNetCore.Hosting` 复制了某些类型（如 `IHostingEnvironment` 和 `IApplicationLifetime`）。 某些 ASP.NET Core 3.0 更改会导致应用包括 `Microsoft.Extensions.Hosting` 和 `Microsoft.AspNetCore.Hosting` 命名空间。 如果同时引用了两个命名空间，则使用这些重复类型会导致“引用不明确”编译器错误。
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 将旧类型的所有使用替换为新引入的类型，如下所示：
 
@@ -46,7 +46,7 @@ ms.locfileid: "72394331"
 - <xref:Microsoft.Extensions.Hosting.IHostApplicationLifetime?displayProperty=nameWithType>
 - <xref:Microsoft.Extensions.Hosting.Environments?displayProperty=nameWithType>
 
-新的 `IHostEnvironment` `IsDevelopment` 和 `IsProduction` 扩展方法在 `Microsoft.Extensions.Hosting` 命名空间中。 可能需要将该命名空间添加到项目中。
+新的 `IHostEnvironment` `IsDevelopment` 和 `IsProduction` 扩展方法位于 `Microsoft.Extensions.Hosting` 命名空间中。 可能需要将该命名空间添加到项目中。
 
 #### <a name="category"></a>类别
 

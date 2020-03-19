@@ -1,13 +1,13 @@
 ---
 title: 在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解在 eShopOnContainers 中的订购微服务中实现 CQRS 的方式。
-ms.date: 10/08/2018
-ms.openlocfilehash: 0380e759595e8a159e89f858a5ced4dacfa4e9b4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 03/03/2020
+ms.openlocfilehash: 16fe46189a5b43591adebbb764d4acef2f7efbfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674124"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847149"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法
 
@@ -23,7 +23,7 @@ eShopOnContainers 引用应用程序处的订单微服务设计基于 CQRS 原�
 
 这种模式中的一种是聚合模式，会在后面几部分中进行详细介绍。 简单来说，在聚合模式中，因多个域对象在域中的关系，会将这些域对象作为一个单位来对待。 在查询中，此模式也可能产生不便，它可能会增加查询逻辑的复杂性。 对于只读查询，无法获得将多个对象视为单个聚合的优势。 而只会增加复杂性。
 
-如图 7-2 所示，本指南建议仅在微服务的事务性/更新区域中使用 DDD 模式（也即由命令触发时）。 查询可以遵循更简单的方法，如果遵循 CQRS 方法，应将查询与命令分离开来。
+如前一部分中的图 7-2 所示，本指南建议仅在微服务的事务性/更新区域中使用 DDD 模式（也即由命令触发时）。 查询可以遵循更简单的方法，如果遵循 CQRS 方法，应将查询与命令分离开来。
 
 要实现“查询端”，成熟的 ORM 中有许多方法可供选择：EF Core、AutoMapper 投影、存储过程、视图、具体化视图或微型 ORM。
 

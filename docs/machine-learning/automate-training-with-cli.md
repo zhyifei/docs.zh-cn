@@ -2,13 +2,13 @@
 title: 使用 ML.NET CLI 自动进行模型训练
 description: 了解如何使用 ML.NET CLI 工具通过命令行自动训练最佳模型。
 ms.date: 12/17/2019
-ms.custom: how-to
-ms.openlocfilehash: ffcdba28fcb73a02f5d4726075588fe3b7789375
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.custom: how-to, mlnet-tooling
+ms.openlocfilehash: 3344ed15266503d4d5c7cd9db0a0596f58a904fa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740120"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185887"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>使用 ML.NET CLI 自动进行模型训练
 
@@ -16,14 +16,14 @@ ML.NET CLI 可为 .NET 开发人员自动生成模型。
 
 若要单独使用 ML.NET API（不使用 ML.NET AutoML CLI），需要选择训练程序（针对特定任务的机器学习算法的实现），以及要应用到数据的数据转换集（特征工程）。 每个数据集的最佳管道各不相同，从所有选择中选择最佳算法增加了复杂性。 此外，每个算法都有一组要调整的超参数。 因此，可能会花费数周甚至数月时间进行机器学习模型优化，以尝试找到特征工程、学习算法和超参数的最佳组合。
 
-ML.NET CLI 使用自动机器学习 (AutoML) 简化了此过程。 
+ML.NET CLI 使用自动机器学习 (AutoML) 简化了此过程。
 
 > [!NOTE]
 > 本主题涉及目前处于预览状态的 ML.NET **CLI** 和 ML.NET **AutoML**，且材料可能会有所变化。
 
 ## <a name="what-is-the-mlnet-command-line-interface-cli"></a>什么是 ML.NET 命令行接口 (CLI)？
 
-ML.NET CLI 是一个 dotnet 全局工具。 安装后，将为其指定一个机器学习任务和一个定型数据集，并生成一个 ML.NET 模型以及要运行的 C# 代码，以便在应用程序中使用该模型。
+ML.NET CLI 是一个 [.NET Core 工具](../core/tools/global-tools.md)。 安装后，你为其指定一个机器学习任务和一个训练数据集，而它将生成一个 ML.NET 模型以及要运行的 C# 代码，以便在应用程序中使用该模型。
 
 如下图所示，生成高质量的 ML.NET 模型（序列化模型 .zip 文件）以及用于运行该模型/对该模型评分的示例 C# 代码非常简单。 此外，还会生成用于创建/训练该模型的 C# 代码，以便可以研究和迭代用于该生成的“最佳模型”的算法和设置。
 
@@ -66,7 +66,7 @@ CLI `auto-train` 命令在输出文件夹中生成以下资产：
 
 使用 CLI 工具生成“最佳模型”时，可看到适用于所针对的 ML 任务的质量指标（例如准确性和 R 平方）。
 
-在这里，我们总结了按 ML 任务分组的指标，以便于了解自动生成的“最佳模型”的质量。
+这里总结了按 ML 任务分组的指标，以便于了解自动生成的“最佳模型”的质量。
 
 ### <a name="metrics-for-binary-classification-models"></a>二元分类模型指标
 

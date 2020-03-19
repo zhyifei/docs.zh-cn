@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 22e7c670f93293bd37edcb181c8130cdbe9ceb26
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 748745ca6799005dccdbfcbcc37a8c2a38f2a88e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047053"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180653"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>使用异步客户端套接字
 异步客户端套接字在等待网络操作完成时不会挂起应用程序。 相反，它使用标准 .NET Framework 异步编程模型在一个线程上处理网络连接，而应用程序继续在原始线程上运行。 异步套接字适用于大量使用网络或不宜等待网络操作完成（才可继续运作）的应用程序。  
@@ -33,7 +33,7 @@ ms.locfileid: "71047053"
   
  异步套接字使用系统线程池中的多个线程处理网络连接。 一个线程负责发起数据的发送或接收；其他线程完成与网络设备的连接以及发送或接收数据。 在以下示例中，<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 类的实例用于挂起主线程的执行并在执行可以继续时发出信号。  
   
- 在下面的示例中，为了将异步套接字连接到网络设备，`Connect` 方法会初始化 Socket，然后调用 <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType> 方法（传递表示网络设备的远程终结点）、连接回调方法和状态对象（即客户端 Socket，用于在异步调用之间传递状态信息）   。 该示例实现 `Connect` 方法，将指定的 Socket 连接到指定的终结点。  它假定一个名为 `connectDone` 的全局 ManualResetEvent。   
+ 在下面的示例中，为了将异步套接字连接到网络设备，`Connect` 方法会初始化 Socket，然后调用 <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType> 方法（传递表示网络设备的远程终结点）、连接回调方法和状态对象（即客户端 Socket，用于在异步调用之间传递状态信息）。 该示例实现 `Connect` 方法，将指定的 Socket 连接到指定的终结点。 它假定一个名为 `connectDone` 的全局 ManualResetEvent。  
   
 ```vb  
 Public Shared Sub Connect(remoteEP As EndPoint, client As Socket)  
@@ -46,14 +46,14 @@ End Sub 'Connect
   
 ```csharp  
 public static void Connect(EndPoint remoteEP, Socket client) {  
-    client.BeginConnect(remoteEP,   
+    client.BeginConnect(remoteEP,
         new AsyncCallback(ConnectCallback), client );  
   
    connectDone.WaitOne();  
 }  
 ```  
   
- 连接回调方法 `ConnectCallback` 实现 <xref:System.AsyncCallback> 委托。 它在远程设备可用时连接到远程设备，然后通过设置 ManualResetEvent `connectDone` 向应用程序线程发出连接完成的信号。  下面的代码实现 `ConnectCallback` 方法。  
+ 连接回调方法 `ConnectCallback` 实现 <xref:System.AsyncCallback> 委托。 它在远程设备可用时连接到远程设备，然后通过设置 ManualResetEvent `connectDone` 向应用程序线程发出连接完成的信号。 下面的代码实现 `ConnectCallback` 方法。  
   
 ```vb  
 Private Shared Sub ConnectCallback(ar As IAsyncResult)  
@@ -119,7 +119,7 @@ private static void Send(Socket client, String data) {
 }  
 ```  
   
- 发送回调方法 `SendCallback` 实现 <xref:System.AsyncCallback> 委托。 它在网络设备准备好接收时发送数据。 下面的示例演示 `SendCallback` 方法的实现。 它假定一个名为 `sendDone` 的全局 ManualResetEvent。   
+ 发送回调方法 `SendCallback` 实现 <xref:System.AsyncCallback> 委托。 它在网络设备准备好接收时发送数据。 下面的示例演示 `SendCallback` 方法的实现。 它假定一个名为 `sendDone` 的全局 ManualResetEvent。  
   
 ```vb  
 Private Shared Sub SendCallback(ar As IAsyncResult)  
@@ -162,11 +162,11 @@ private static void SendCallback(IAsyncResult ar) {
 ```vb  
 Public Class StateObject  
     ' Client socket.  
-    Public workSocket As Socket = Nothing   
+    Public workSocket As Socket = Nothing
     ' Size of receive buffer.  
     Public BufferSize As Integer = 256  
     ' Receive buffer.  
-    Public buffer(256) As Byte   
+    Public buffer(256) As Byte
     ' Received data string.  
     Public sb As New StringBuilder()  
 End Class 'StateObject  
@@ -185,7 +185,7 @@ public class StateObject {
 }  
 ```  
   
- `Receive` 方法示例设置状态对象，然后调用 BeginReceive 方法从客户端套接字异步读取数据。  以下示例实现 `Receive` 方法。  
+ `Receive` 方法示例设置状态对象，然后调用 BeginReceive 方法从客户端套接字异步读取数据。 以下示例实现 `Receive` 方法。  
   
 ```vb  
 Private Shared Sub Receive(client As Socket)  
@@ -219,14 +219,14 @@ private static void Receive(Socket client) {
 }  
 ```  
   
- 接收回调方法 `ReceiveCallback` 实现 AsyncCallback 委托。  它接收来自网络设备的数据并生成消息字符串。 它将来自网络的一个或多个数据字节读入数据缓冲区，然后再次调用 BeginReceive 方法，直到客户端完成数据发送为止。  从客户端读取所有数据后，`ReceiveCallback` 通过设置 ManualResetEvent `sendDone` 向应用程序线程发出数据完成的信号。   
+ 接收回调方法 `ReceiveCallback` 实现 AsyncCallback 委托。 它接收来自网络设备的数据并生成消息字符串。 它将来自网络的一个或多个数据字节读入数据缓冲区，然后再次调用 BeginReceive 方法，直到客户端完成数据发送为止。 从客户端读取所有数据后，`ReceiveCallback` 通过设置 ManualResetEvent `sendDone` 向应用程序线程发出数据完成的信号。  
   
- 下面的示例代码实现 `ReceiveCallback` 方法。 它假定一个名为 `response` 的全局字符串（该字符串保留接收的字符串）和一个名为 `receiveDone` 的全局 ManualResetEvent。  服务器必须正常关闭客户端套接字才能结束网络会话。  
+ 下面的示例代码实现 `ReceiveCallback` 方法。 它假定一个名为 `response` 的全局字符串（该字符串保留接收的字符串）和一个名为 `receiveDone` 的全局 ManualResetEvent。 服务器必须正常关闭客户端套接字才能结束网络会话。  
   
 ```vb  
 Private Shared Sub ReceiveCallback(ar As IAsyncResult)  
     Try  
-        ' Retrieve the state object and the client socket   
+        ' Retrieve the state object and the client socket
         ' from the asynchronous state object.  
         Dim state As StateObject = CType(ar.AsyncState, StateObject)  
         Dim client As Socket = state.workSocket  
@@ -259,7 +259,7 @@ End Sub 'ReceiveCallback
 ```csharp  
 private static void ReceiveCallback( IAsyncResult ar ) {  
     try {  
-        // Retrieve the state object and the client socket   
+        // Retrieve the state object and the client socket
         // from the asynchronous state object.  
         StateObject state = (StateObject) ar.AsyncState;  
         Socket client = state.workSocket;  

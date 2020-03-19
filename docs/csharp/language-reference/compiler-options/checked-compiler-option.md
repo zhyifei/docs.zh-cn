@@ -8,15 +8,15 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 4e07698e7abdad00983b61412fa2a57e651d4d46
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: cb4dbadfa4efd0750ffd3dea88a3f661e2f85a8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606998"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173765"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked（C# 编译器选项）
--checked 选项指定，不在 [checked](../keywords/checked.md) 或 [unchecked](../keywords/unchecked.md) 关键字的范围内、并且产生的值超出数据类型范围的整数算法语句是否将导致运行时异常  。  
+-checked 选项指定，不在 [checked](../keywords/checked.md) 或 [unchecked](../keywords/unchecked.md) 关键字的范围内、并且产生的值超出数据类型范围的整数算法语句是否将导致运行时异常。  
   
 ## <a name="syntax"></a>语法  
   
@@ -25,23 +25,23 @@ ms.locfileid: "69606998"
 ```  
   
 ## <a name="remarks"></a>备注  
- `checked` 或 `unchecked` 关键字范围内的整数算法语句不受 -checked 选项的影响  。  
+ `checked` 或 `unchecked` 关键字范围内的整数算法语句不受 -checked 选项的影响。  
   
- 如果不在 `checked` 或 `unchecked` 关键字范围内的整数算法语句产生的值超出数据类型范围，并且编译中使用了 -checked+（或 -checked），则该语句将在运行时导致异常   。 如果编译中使用的是 -checked-，则该语句在运行时不会导致异常  。  
+ 如果不在 `checked` 或 `unchecked` 关键字范围内的整数算法语句产生的值超出数据类型范围，并且编译中使用了 -checked+（或 -checked），则该语句将在运行时导致异常。 如果编译中使用的是 -checked-，则该语句在运行时不会导致异常。  
   
- 此选项的默认值为“-checked-”  ；溢出检查已禁用。
- 
+ 此选项的默认值为“-checked-”；溢出检查已禁用。
+
  有时，用于生成大型应用程序的自动化工具将 -checked 设置为 +。 使用 -checked- 的一种方案：通过指定 -checked- 来替代工具的全局默认值。
- 
+
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1. 打开项目的“属性”  页。 有关详细信息，请参阅 [“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
+1. 打开项目的“属性”页。 有关详细信息，请参阅 [“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
   
-2. 单击“生成”  属性页。  
+2. 单击“生成”属性页。  
   
-3. 单击“高级”  按钮。  
+3. 单击“高级”按钮。  
   
-4. 修改“检查算术溢出/下溢”  属性。  
+4. 修改“检查算术溢出”属性。  
   
  要以编程方式访问此编译器选项，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>。  
   

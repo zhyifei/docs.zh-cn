@@ -1,13 +1,13 @@
 ---
 title: 实现断路器模式
 description: 了解如何实现断路器模式作为 Http 重试的互补系统。
-ms.date: 10/16/2018
-ms.openlocfilehash: 00ca39b4b6fac37ff60adf128c3f4e22c5fc14e2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 03/03/2020
+ms.openlocfilehash: a79c6fcca1e29f3c30d697cb369060d59a72c121
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732857"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847240"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>实现断路器模式
 
@@ -25,11 +25,11 @@ ms.locfileid: "73732857"
 
 断路器模式与“重试模式”的目的和用途不同。 “重试模式”让应用程序能够重试某项操作，并预期该操作最终会成功。 断路器模式阻止应用程序执行很可能会失败的操作。 应用程序可以合并这两种模式。 但重试逻辑应能敏锐觉察断路器返回的任何异常，并在断路器指示故障并非暂时性故障时放弃重试尝试。
 
-## <a name="implement-circuit-breaker-pattern-with-httpclientfactory-and-polly"></a>使用 HttpClientFactory 和 Polly 实现断路器模式
+## <a name="implement-circuit-breaker-pattern-with-ihttpclientfactory-and-polly"></a>使用 `IHttpClientFactory` 和 Polly 实现断路器模式
 
-在实现重试操作时，建议的方法为断路器使用 Polly 这种经过验证的 .NET 库以及它与 HttpClientFactory 的本机集成。
+在实现重试操作时，建议的方法为断路器使用 Polly 这种经过验证的 .NET 库以及它与 `IHttpClientFactory` 的本机集成。
 
-在使用 HttpClientFactory 时，将断路器策略添加到 HttpClientFactory 传出中间件管道就像将单个增量代码片段添加到已有代码一样简单。
+在使用 `IHttpClientFactory` 时，将断路器策略添加到 `IHttpClientFactory` 传出中间件管道就像将单个增量代码片段添加到已有代码一样简单。
 
 此处在用于 HTTP 调用重试的代码中添加的唯一内容是用于将断路器策略添加到策略列表的代码（如以下增量代码所示，该代码是 ConfigureServices() 方法的一部分）。
 
@@ -61,7 +61,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 所有这些功能均适用于从 .NET 代码内部管理故障转移的情况，与由 Azure 自动管理的情况相反（位置透明化）。
 
-从使用情况角度来看，在使用 HttpClient 时，无需添加新内容，因为该代码与结合使用 HttpClientFactory 和 HttpClient 时所使用的代码相同，如之前部分所述。
+从使用情况角度来看，在使用 HttpClient 时，无需添加新内容，因为该代码与结合使用 `HttpClient` 和 `IHttpClientFactory` 时所使用的代码相同，如之前部分所述。
 
 ## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>在 eShopOnContainers 中测试 Http 重试和断路器
 
@@ -77,7 +77,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 一种方法是在断路器策略中将允许的重试次数减少为 1 次，并将整个解决方案重新部署到 Docker。 如果设为一次重试，部署过程中 HTTP 请求失败的可能性就会很大，断路器会打开，然后收到错误。
 
-另一种方法是使用 Basket  微服务中实现的自定义中间件。 启用此中间件后，它会捕获所有 HTTP 请求并返回状态代码 500。 可以通过向失败 URI 发出 GET 请求来启用此中间件，如下所示：
+另一种方法是使用 Basket 微服务中实现的自定义中间件。 启用此中间件后，它会捕获所有 HTTP 请求并返回状态代码 500。 可以通过向失败 URI 发出 GET 请求来启用此中间件，如下所示：
 
 - `GET http://localhost:5103/failing`\
   此请求返回中间件的当前状态。 如果启用了中间件，则请求返回状态代码 500。 如果禁用了中间件，则无响应。

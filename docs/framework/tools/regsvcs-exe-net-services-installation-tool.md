@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-ms.openlocfilehash: 1af93ae89d027bccdd52b9cd9c49f8e620303677
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aecd2f6894558b45898c7f22dd333617d9e2e327
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104946"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180366"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe（.NET 服务安装工具）
 .NET 服务安装工具执行下列操作：  
@@ -34,36 +34,36 @@ ms.locfileid: "73104946"
 ```console  
       regsvcs [/c | /fc | /u] [/tlb:typeLibraryFile] [/extlb]  
 [/reconfig] [/componly] [/appname:applicationName]  
-[/nologo] [/quiet]assemblyFile.dll   
+[/nologo] [/quiet]assemblyFile.dll
 ```  
   
 ## <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |--------------|-----------------|  
-|assemblyFile.dll |源程序集文件。 此程序集必须用强名称进行签名。 有关详细信息，请参阅[使用强名称为程序集签名](../../standard/assembly/sign-strong-name.md)。|  
+|assemblyFile.dll|源程序集文件。 此程序集必须用强名称进行签名。 有关详细信息，请参阅[使用强名称为程序集签名](../../standard/assembly/sign-strong-name.md)。|  
   
-|选项|说明|  
+|选项|描述|  
 |------------|-----------------|  
-|/appdir: path  |指定应用程序的根目录。|  
-|/appname: applicationName  |指定要查找或创建的 COM+ 应用程序的名称。|  
+|/appdir: path|指定应用程序的根目录。|  
+|/appname: applicationName|指定要查找或创建的 COM+ 应用程序的名称。|  
 |**/c**|创建目标应用程序。|  
-|/componly |只配置组件；忽略方法和接口。|  
-|/exapp |指定此工具需要现有应用程序。|  
-|/extlb |使用现有类型库。|  
-|/fc |查找或创建目标应用程序。|  
+|/componly|只配置组件；忽略方法和接口。|  
+|/exapp|指定此工具需要现有应用程序。|  
+|/extlb|使用现有类型库。|  
+|/fc|查找或创建目标应用程序。|  
 |**/help**|显示该工具的命令语法和选项。|  
-|/noreconfig |不重新配置现有的目标应用程序。|  
+|/noreconfig|不重新配置现有的目标应用程序。|  
 |**/nologo**|取消显示 Microsoft 启动版权标志。|  
-|/parname: name  |指定要查找或创建的 COM+ 应用程序的名称或 ID。|  
-|/reconfig |重新配置现有目标应用程序。 这是默认设置。|  
-|/tlb: typelibraryfile  |指定要安装的类型库文件。|  
-|/u |卸载目标应用程序。|  
+|/parname: name|指定要查找或创建的 COM+ 应用程序的名称或 ID。|  
+|/reconfig|重新配置现有目标应用程序。 这是默认设置。|  
+|/tlb: typelibraryfile|指定要安装的类型库文件。|  
+|/u|卸载目标应用程序。|  
 |**/quiet**|指定安静模式；取消显示登录和成功消息。|  
 |**/?**|显示该工具的命令语法和选项。|  
   
 ## <a name="remarks"></a>备注  
- Regsvcs.exe 需要由 assemblyFile.dll 指定的源程序集文件  。 此程序集必须用强名称进行签名。 有关强名称签名的更多信息，请参阅[使用强名称为程序集签名](../../standard/assembly/sign-strong-name.md)。 目标应用程序的名称和类型库文件的名称都是可选的。 如果 applicationName 参数尚不存在，则该参数可从源程序集文件生成并且将由 Regsvcs.exe 创建  。 typelibraryfile 参数可以指定类型库名称  。 如果未指定类型库名称，默认情况下，Regsvcs.exe 将使用程序集名称。  
+ Regsvcs.exe 需要由 assemblyFile.dll 指定的源程序集文件。 此程序集必须用强名称进行签名。 有关强名称签名的更多信息，请参阅[使用强名称为程序集签名](../../standard/assembly/sign-strong-name.md)。 目标应用程序的名称和类型库文件的名称都是可选的。 如果 applicationName 参数尚不存在，则该参数可从源程序集文件生成并且将由 Regsvcs.exe 创建。 typelibraryfile 参数可以指定类型库名称。 如果未指定类型库名称，默认情况下，Regsvcs.exe 将使用程序集名称。  
   
  当 Regsvcs.exe 注册组件的方法时，它需要遵从那些方法的[要求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100))和[链接要求](../misc/link-demands.md)。 因为该工具在完全受信任的环境中执行，所以大多数权限要求都会成功。 但是，如果组件中的方法受 <xref:System.Security.Permissions.StrongNameIdentityPermission> 或 <xref:System.Security.Permissions.PublisherIdentityPermission> 的要求或链接要求保护，则 Regsvcs.exe 无法注册这些组件。  
   
