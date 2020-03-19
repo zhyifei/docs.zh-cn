@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: db1d09c8c9e606b5327a42977a74a74703282d84
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568072"
 ---
 ### <a name="net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences"></a>当替换格式错误的 UTF-8 字节序列时，.NET Core 3.0 遵循 Unicode 最佳做法
 
-如果 <xref:System.Text.UTF8Encoding> 类在执行字节到字符的转码操作期间遇到格式错误的 UTF-8 字节序列，它会在输出字符串中将该序列替换为 '�'（U+FFFD 替换字符）字符。 .NET Core 3.0 与以前版本的 .NET Core 和 .NET Framework 的不同之处在于，在转码操作期间按照 Unicode 最佳做法执行此替换。
+<xref:System.Text.UTF8Encoding> 类在字节到字符转码操作期间遇到格式错误的 UTF-8 字节序列时，它将在输出字符串中用“�”（U+FFFD 替换字符）替换该序列。 .NET Core 3.0 与以前版本的 .NET Core 和 .NET Framework 的不同之处在于，在转码操作期间按照 Unicode 最佳做法执行此替换。
 
 这是在整个 .NET 中改进 UTF-8 处理的较大工作量（包括通过新的 <xref:System.Text.Unicode.Utf8?displayProperty=nameWithType> 和 <xref:System.Text.Rune?displayProperty=nameWithType> 类型）的一部分。 为 <xref:System.Text.UTF8Encoding> 类型提供了改进的错误处理机制，以便生成与新引入的类型一致的输出。
 
@@ -30,7 +30,7 @@ ms.locfileid: "74568072"
 
 3.0
 
-#### <a name="recommended-action"></a>建议的操作
+#### <a name="recommended-action"></a>建议操作
 
 开发人员一方不需要执行任何操作。
 

@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: ed9fd55fd84606d2083e0576581391331769a1e6
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 1ddeeaca4645bd4788f03018643a0bc2682c731a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089280"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79186911"
 ---
 # <a name="metadata-and-markdown-template"></a>元数据和 Markdown 模板
 
@@ -36,7 +36,7 @@ ms.locfileid: "74089280"
 - 值（例如标题）中的冒号会中断元数据解析器。 在此情况下，使用双引号将标题括起来（例如， `title: "Writing .NET Core console apps: An advanced step-by-step guide"`）。
 - **title**：出现在搜索引擎结果中。 此标题不应与 H1 标题相同，并且包含的字符数不超过 60 个。
 - **描述**：概括文章内容。 它通常显示在搜索结果页中，但不用于搜索排名。 其长度应为 115-145 个字符，包括空格。
-- “作者”和“ ms.author”   ：“作者”字段应包含作者的“GitHub 用户名”，而不是其别名  。  另一方面，“ms.author”字段应包含 Microsoft 别名，并指示负责维护该文章的人员  。
+- “作者”和“ ms.author”   ：作者字段应包含作者的 GitHub 用户名  ，而不是其别名。 另一方面，“ms.author”字段应包含 Microsoft 别名，并指示负责维护该文章的人员  。
 - **ms.topic**：主题类型。 最常见的值为 `conceptual` 并且在全局级别进行设置。 使用的其他常用值为 `tutorial`、`overview` 和 `reference`。
 - “dev_langs”  定义主题显示的语言筛选器。 可以在[支持的语言](#supported-languages)部分中查看受支持的值列表。 仅当主题涵盖了多个编程语言时才需要设置。 通常，只在内容中使用 `csharp`、`vb`、`fsharp` 和 `cpp` 作为值。
 - **ms-chap**：用于 BI 目的的产品标识。 它们通常在全局级别进行设置，因此通常不会出现在每篇文章的元数据块中。
@@ -276,7 +276,7 @@ UID 等同于完全限定的类型和成员名称。
 
 #### <a name="supported-languages"></a>支持的语言
 
-|name|Markdown 标签|
+|“属性”|Markdown 标签|
 |-----|-------|
 |.NET 控制台|dotnetcli|
 |ASP.NET (C#)|aspx-csharp|
@@ -411,7 +411,7 @@ function fancyAlert(arg) {
 > [!VIDEO <channel9_video_link>]
 ```
 
-若要获取视频的正确 URL，请选择视频帧下面的“嵌入”选项卡，然后从`<iframe>` 元素复制 URL  。 例如:
+若要获取视频的正确 URL，请选择视频帧下面的“嵌入”选项卡，然后从`<iframe>` 元素复制 URL  。 例如：
 
 ```markdown
 > [!VIDEO https://channel9.msdn.com/Blogs/dotnet/NET-Core-20-Released/player]
@@ -425,7 +425,7 @@ function fancyAlert(arg) {
 > [!VIDEO <youtube_video_link>]
 ```
 
-例如:
+例如：
 
 ```markdown
 > [!VIDEO https://www.youtube.com/embed/Q2mMbjw6cLA]
