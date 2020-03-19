@@ -49,7 +49,7 @@ Dapper 是开源项目（最初由 Sam Saffron 创建），也是在 [Stack Over
 
 ## <a name="dynamic-versus-static-viewmodels"></a>动态与静态 Viewmodel
 
-将 ViewModel 从服务器端返回到客户端应用时，可将这些 ViewModel 看作 DTO（数据传输对象），这些 DOT 与实体模型的内部实体域不同，因为 ViewModel 以客户端应用所需的方式保存数据。 因此，在许多情况下，可以聚合来自多个域实体的数据，并根据客户端应用需要数据的方式精确地组合这些 ViewModel。
+将 ViewModel 从服务器端返回到客户端应用时，可将这些 ViewModel 看作 DTO（数据传输对象），这些 DTO 与实体模型的内部实体域不同，因为 ViewModel 以客户端应用所需的方式保存数据。 因此，在许多情况下，可以聚合来自多个域实体的数据，并根据客户端应用需要数据的方式精确地组合这些 ViewModel。
 
 这些 ViewModel 或 DTO 可如稍后的代码片段中显示的 `OrderSummary` 类一样（作为数据持有者类）显式定义，或者，可以基于查询所返回的属性将动态 ViewModel 或动态 DTO 作为动态类型返回。
 
