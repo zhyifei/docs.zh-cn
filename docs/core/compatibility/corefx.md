@@ -2,40 +2,41 @@
 title: 基类库的重大更改
 description: 列出 .NET CoreFx（基类库）中的中断性变更。
 ms.date: 09/20/2019
-ms.openlocfilehash: 7c59f2a96545e74e4099b6078ff52009740699c6
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 56a3cf4f4c00a79752d5a98bb086bb9f8c0614b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449540"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147570"
 ---
-# <a name="corefx-breaking-changes"></a><span data-ttu-id="796ef-103">CoreFx 中断性变更</span><span class="sxs-lookup"><span data-stu-id="796ef-103">CoreFx breaking changes</span></span>
+# <a name="corefx-breaking-changes"></a><span data-ttu-id="4303d-103">CoreFx 中断性变更</span><span class="sxs-lookup"><span data-stu-id="4303d-103">CoreFx breaking changes</span></span>
 
-<span data-ttu-id="796ef-104">CoreFx 提供了 .NET Core 使用的基元和其他常规类型。</span><span class="sxs-lookup"><span data-stu-id="796ef-104">CoreFx provides the primitives and other general types used by .NET Core.</span></span>
+<span data-ttu-id="4303d-104">CoreFx 提供了 .NET Core 使用的基元和其他常规类型。</span><span class="sxs-lookup"><span data-stu-id="4303d-104">CoreFx provides the primitives and other general types used by .NET Core.</span></span>
 
-<span data-ttu-id="796ef-105">本页记录了以下中断性变更：</span><span class="sxs-lookup"><span data-stu-id="796ef-105">The following breaking changes are documented on this page:</span></span>
+<span data-ttu-id="4303d-105">本页记录了以下中断性变更：</span><span class="sxs-lookup"><span data-stu-id="4303d-105">The following breaking changes are documented on this page:</span></span>
 
-| <span data-ttu-id="796ef-106">重大更改</span><span class="sxs-lookup"><span data-stu-id="796ef-106">Breaking change</span></span> | <span data-ttu-id="796ef-107">引入的版本</span><span class="sxs-lookup"><span data-stu-id="796ef-107">Version introduced</span></span> |
+| <span data-ttu-id="4303d-106">重大更改</span><span class="sxs-lookup"><span data-stu-id="4303d-106">Breaking change</span></span> | <span data-ttu-id="4303d-107">引入的版本</span><span class="sxs-lookup"><span data-stu-id="4303d-107">Version introduced</span></span> |
 | - | :-: |
-| [<span data-ttu-id="796ef-108">报告版本的 API 现在报告产品版本而不是文件版本</span><span class="sxs-lookup"><span data-stu-id="796ef-108">APIs that report version now report product and not file version</span></span>](#apis-that-report-version-now-report-product-and-not-file-version) | <span data-ttu-id="796ef-109">3.0</span><span class="sxs-lookup"><span data-stu-id="796ef-109">3.0</span></span> |
-| [<span data-ttu-id="796ef-110">自定义 EncoderFallbackBuffer 实例无法递归回退</span><span class="sxs-lookup"><span data-stu-id="796ef-110">Custom EncoderFallbackBuffer instances cannot fall back recursively</span></span>](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | <span data-ttu-id="796ef-111">3.0</span><span class="sxs-lookup"><span data-stu-id="796ef-111">3.0</span></span> |
-| [<span data-ttu-id="796ef-112">浮点格式设置和分析行为变更</span><span class="sxs-lookup"><span data-stu-id="796ef-112">Floating point formatting and parsing behavior changes</span></span>](#floating-point-formatting-and-parsing-behavior-changed) | <span data-ttu-id="796ef-113">3.0</span><span class="sxs-lookup"><span data-stu-id="796ef-113">3.0</span></span> |
-| [<span data-ttu-id="796ef-114">浮点分析操作不再失败或引发 OverflowException</span><span class="sxs-lookup"><span data-stu-id="796ef-114">Floating-point parsing operations no longer fail or throw an OverflowException</span></span>](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception) | <span data-ttu-id="796ef-115">3.0</span><span class="sxs-lookup"><span data-stu-id="796ef-115">3.0</span></span> |
-| [<span data-ttu-id="796ef-116">InvalidAsynchronousStateException 已移到另一个程序集</span><span class="sxs-lookup"><span data-stu-id="796ef-116">InvalidAsynchronousStateException moved to another assembly</span></span>](#invalidasynchronousstateexception-moved-to-another-assembly) | <span data-ttu-id="796ef-117">3.0</span><span class="sxs-lookup"><span data-stu-id="796ef-117">3.0</span></span> |
-| [<span data-ttu-id="796ef-118">当替换格式错误的 UTF-8 字节序列时，NET Core 3.0 遵循 Unicode 最佳做法</span><span class="sxs-lookup"><span data-stu-id="796ef-118">NET Core 3.0 follows Unicode best practices when replacing ill-formed UTF-8 byte sequences</span></span>](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences) | <span data-ttu-id="796ef-119">3.0</span><span class="sxs-lookup"><span data-stu-id="796ef-119">3.0</span></span> |
-| [<span data-ttu-id="796ef-120">TypeDescriptionProviderAttribute 已移到另一个程序集</span><span class="sxs-lookup"><span data-stu-id="796ef-120">TypeDescriptionProviderAttribute moved to another assembly</span></span>](#typedescriptionproviderattribute-moved-to-another-assembly) | <span data-ttu-id="796ef-121">3.0</span><span class="sxs-lookup"><span data-stu-id="796ef-121">3.0</span></span> |
-| [<span data-ttu-id="796ef-122">ZipArchiveEntry 不再处理条目大小不一致的存档</span><span class="sxs-lookup"><span data-stu-id="796ef-122">ZipArchiveEntry no longer handles archives with inconsistent entry sizes</span></span>](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | <span data-ttu-id="796ef-123">3.0</span><span class="sxs-lookup"><span data-stu-id="796ef-123">3.0</span></span> |
-| [<span data-ttu-id="796ef-124">JSON 序列化程序异常类型已从 JsonException 更改为 NotSupportedException</span><span class="sxs-lookup"><span data-stu-id="796ef-124">JSON serializer exception type changed from JsonException to NotSupportedException</span></span>](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | <span data-ttu-id="796ef-125">3.0</span><span class="sxs-lookup"><span data-stu-id="796ef-125">3.0</span></span> |
-| [<span data-ttu-id="796ef-126">Utf8JsonWriter 中的 (string)null 语义更改</span><span class="sxs-lookup"><span data-stu-id="796ef-126">Change in semantics of (string)null in Utf8JsonWriter</span></span>](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | <span data-ttu-id="796ef-127">3.0</span><span class="sxs-lookup"><span data-stu-id="796ef-127">3.0</span></span> |
-| [<span data-ttu-id="796ef-128">JsonEncodedText.Encode 方法具有附加的 JavaScriptEncoder 参数</span><span class="sxs-lookup"><span data-stu-id="796ef-128">JsonEncodedText.Encode methods have an additional JavaScriptEncoder argument</span></span>](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | <span data-ttu-id="796ef-129">3.0</span><span class="sxs-lookup"><span data-stu-id="796ef-129">3.0</span></span> |
-| [<span data-ttu-id="796ef-130">已更改 JsonFactoryConverter.CreateConverter 签名</span><span class="sxs-lookup"><span data-stu-id="796ef-130">JsonFactoryConverter.CreateConverter signature changed</span></span>](#jsonfactoryconvertercreateconverter-signature-changed) | <span data-ttu-id="796ef-131">3.0</span><span class="sxs-lookup"><span data-stu-id="796ef-131">3.0</span></span> |
-| [<span data-ttu-id="796ef-132">JsonElement API 更改</span><span class="sxs-lookup"><span data-stu-id="796ef-132">JsonElement API changes</span></span>](#jsonelement-api-changes) | <span data-ttu-id="796ef-133">3.0</span><span class="sxs-lookup"><span data-stu-id="796ef-133">3.0</span></span> |
-| [<span data-ttu-id="796ef-134">FieldInfo.SetValue 将对静态、仅初始化字段引发异常</span><span class="sxs-lookup"><span data-stu-id="796ef-134">FieldInfo.SetValue throws exception for static, init-only fields</span></span>](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | <span data-ttu-id="796ef-135">3.0</span><span class="sxs-lookup"><span data-stu-id="796ef-135">3.0</span></span> |
-| [<span data-ttu-id="796ef-136">添加到内置结构类型的私有字段</span><span class="sxs-lookup"><span data-stu-id="796ef-136">Private fields added to built-in struct types</span></span>](#private-fields-added-to-built-in-struct-types) | <span data-ttu-id="796ef-137">2.1</span><span class="sxs-lookup"><span data-stu-id="796ef-137">2.1</span></span> |
-| [<span data-ttu-id="796ef-138">UseShellExecute 默认值更改</span><span class="sxs-lookup"><span data-stu-id="796ef-138">Change in default value of UseShellExecute</span></span>](#change-in-default-value-of-useshellexecute) | <span data-ttu-id="796ef-139">2.1</span><span class="sxs-lookup"><span data-stu-id="796ef-139">2.1</span></span> |
-| [<span data-ttu-id="796ef-140">FileSystemInfo.Attributes 引发的 UnauthorizedAccessException</span><span class="sxs-lookup"><span data-stu-id="796ef-140">UnauthorizedAccessException thrown by FileSystemInfo.Attributes</span></span>](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | <span data-ttu-id="796ef-141">1.0</span><span class="sxs-lookup"><span data-stu-id="796ef-141">1.0</span></span> |
+| [<span data-ttu-id="4303d-108">报告版本的 API 现在报告产品版本而不是文件版本</span><span class="sxs-lookup"><span data-stu-id="4303d-108">APIs that report version now report product and not file version</span></span>](#apis-that-report-version-now-report-product-and-not-file-version) | <span data-ttu-id="4303d-109">3.0</span><span class="sxs-lookup"><span data-stu-id="4303d-109">3.0</span></span> |
+| [<span data-ttu-id="4303d-110">自定义 EncoderFallbackBuffer 实例无法递归回退</span><span class="sxs-lookup"><span data-stu-id="4303d-110">Custom EncoderFallbackBuffer instances cannot fall back recursively</span></span>](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | <span data-ttu-id="4303d-111">3.0</span><span class="sxs-lookup"><span data-stu-id="4303d-111">3.0</span></span> |
+| [<span data-ttu-id="4303d-112">浮点格式设置和分析行为变更</span><span class="sxs-lookup"><span data-stu-id="4303d-112">Floating point formatting and parsing behavior changes</span></span>](#floating-point-formatting-and-parsing-behavior-changed) | <span data-ttu-id="4303d-113">3.0</span><span class="sxs-lookup"><span data-stu-id="4303d-113">3.0</span></span> |
+| [<span data-ttu-id="4303d-114">浮点分析操作不再失败或引发 OverflowException</span><span class="sxs-lookup"><span data-stu-id="4303d-114">Floating-point parsing operations no longer fail or throw an OverflowException</span></span>](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception) | <span data-ttu-id="4303d-115">3.0</span><span class="sxs-lookup"><span data-stu-id="4303d-115">3.0</span></span> |
+| [<span data-ttu-id="4303d-116">InvalidAsynchronousStateException 已移到另一个程序集</span><span class="sxs-lookup"><span data-stu-id="4303d-116">InvalidAsynchronousStateException moved to another assembly</span></span>](#invalidasynchronousstateexception-moved-to-another-assembly) | <span data-ttu-id="4303d-117">3.0</span><span class="sxs-lookup"><span data-stu-id="4303d-117">3.0</span></span> |
+| [<span data-ttu-id="4303d-118">当替换格式错误的 UTF-8 字节序列时，NET Core 3.0 遵循 Unicode 最佳做法</span><span class="sxs-lookup"><span data-stu-id="4303d-118">NET Core 3.0 follows Unicode best practices when replacing ill-formed UTF-8 byte sequences</span></span>](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences) | <span data-ttu-id="4303d-119">3.0</span><span class="sxs-lookup"><span data-stu-id="4303d-119">3.0</span></span> |
+| [<span data-ttu-id="4303d-120">TypeDescriptionProviderAttribute 已移到另一个程序集</span><span class="sxs-lookup"><span data-stu-id="4303d-120">TypeDescriptionProviderAttribute moved to another assembly</span></span>](#typedescriptionproviderattribute-moved-to-another-assembly) | <span data-ttu-id="4303d-121">3.0</span><span class="sxs-lookup"><span data-stu-id="4303d-121">3.0</span></span> |
+| [<span data-ttu-id="4303d-122">ZipArchiveEntry 不再处理条目大小不一致的存档</span><span class="sxs-lookup"><span data-stu-id="4303d-122">ZipArchiveEntry no longer handles archives with inconsistent entry sizes</span></span>](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | <span data-ttu-id="4303d-123">3.0</span><span class="sxs-lookup"><span data-stu-id="4303d-123">3.0</span></span> |
+| [<span data-ttu-id="4303d-124">JSON 序列化程序异常类型已从 JsonException 更改为 NotSupportedException</span><span class="sxs-lookup"><span data-stu-id="4303d-124">JSON serializer exception type changed from JsonException to NotSupportedException</span></span>](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | <span data-ttu-id="4303d-125">3.0</span><span class="sxs-lookup"><span data-stu-id="4303d-125">3.0</span></span> |
+| [<span data-ttu-id="4303d-126">Utf8JsonWriter 中的 (string)null 语义更改</span><span class="sxs-lookup"><span data-stu-id="4303d-126">Change in semantics of (string)null in Utf8JsonWriter</span></span>](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | <span data-ttu-id="4303d-127">3.0</span><span class="sxs-lookup"><span data-stu-id="4303d-127">3.0</span></span> |
+| [<span data-ttu-id="4303d-128">JsonEncodedText.Encode 方法具有附加的 JavaScriptEncoder 参数</span><span class="sxs-lookup"><span data-stu-id="4303d-128">JsonEncodedText.Encode methods have an additional JavaScriptEncoder argument</span></span>](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | <span data-ttu-id="4303d-129">3.0</span><span class="sxs-lookup"><span data-stu-id="4303d-129">3.0</span></span> |
+| [<span data-ttu-id="4303d-130">已更改 JsonFactoryConverter.CreateConverter 签名</span><span class="sxs-lookup"><span data-stu-id="4303d-130">JsonFactoryConverter.CreateConverter signature changed</span></span>](#jsonfactoryconvertercreateconverter-signature-changed) | <span data-ttu-id="4303d-131">3.0</span><span class="sxs-lookup"><span data-stu-id="4303d-131">3.0</span></span> |
+| [<span data-ttu-id="4303d-132">JsonElement API 更改</span><span class="sxs-lookup"><span data-stu-id="4303d-132">JsonElement API changes</span></span>](#jsonelement-api-changes) | <span data-ttu-id="4303d-133">3.0</span><span class="sxs-lookup"><span data-stu-id="4303d-133">3.0</span></span> |
+| [<span data-ttu-id="4303d-134">FieldInfo.SetValue 将对静态、仅初始化字段引发异常</span><span class="sxs-lookup"><span data-stu-id="4303d-134">FieldInfo.SetValue throws exception for static, init-only fields</span></span>](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | <span data-ttu-id="4303d-135">3.0</span><span class="sxs-lookup"><span data-stu-id="4303d-135">3.0</span></span> |
+| [<span data-ttu-id="4303d-136">添加到内置结构类型的私有字段</span><span class="sxs-lookup"><span data-stu-id="4303d-136">Private fields added to built-in struct types</span></span>](#private-fields-added-to-built-in-struct-types) | <span data-ttu-id="4303d-137">2.1</span><span class="sxs-lookup"><span data-stu-id="4303d-137">2.1</span></span> |
+| [<span data-ttu-id="4303d-138">UseShellExecute 默认值更改</span><span class="sxs-lookup"><span data-stu-id="4303d-138">Change in default value of UseShellExecute</span></span>](#change-in-default-value-of-useshellexecute) | <span data-ttu-id="4303d-139">2.1</span><span class="sxs-lookup"><span data-stu-id="4303d-139">2.1</span></span> |
+| [<span data-ttu-id="4303d-140">macOS 上的 OpenSSL 版本</span><span class="sxs-lookup"><span data-stu-id="4303d-140">OpenSSL versions on macOS</span></span>](#openssl-versions-on-macos) | <span data-ttu-id="4303d-141">2.1</span><span class="sxs-lookup"><span data-stu-id="4303d-141">2.1</span></span> |
+| [<span data-ttu-id="4303d-142">FileSystemInfo.Attributes 引发的 UnauthorizedAccessException</span><span class="sxs-lookup"><span data-stu-id="4303d-142">UnauthorizedAccessException thrown by FileSystemInfo.Attributes</span></span>](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | <span data-ttu-id="4303d-143">1.0</span><span class="sxs-lookup"><span data-stu-id="4303d-143">1.0</span></span> |
 
-## <a name="net-core-30"></a><span data-ttu-id="796ef-142">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="796ef-142">.NET Core 3.0</span></span>
+## <a name="net-core-30"></a><span data-ttu-id="4303d-144">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="4303d-144">.NET Core 3.0</span></span>
 
 [!INCLUDE[APIs that report version now report product and not file version](~/includes/core-changes/corefx/3.0/version-information-changes.md)]
 
@@ -93,7 +94,7 @@ ms.locfileid: "77449540"
 
 ***
 
-## <a name="net-core-21"></a><span data-ttu-id="796ef-143">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="796ef-143">.NET Core 2.1</span></span>
+## <a name="net-core-21"></a><span data-ttu-id="4303d-145">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="4303d-145">.NET Core 2.1</span></span>
 
 [!INCLUDE[Private fields added to built-in struct types](~/includes/core-changes/corefx/2.1/instantiate-struct.md)]
 
@@ -103,7 +104,11 @@ ms.locfileid: "77449540"
 
 ***
 
-## <a name="net-core-10"></a><span data-ttu-id="796ef-144">.NET Core 1.0</span><span class="sxs-lookup"><span data-stu-id="796ef-144">.NET Core 1.0</span></span>
+[!INCLUDE [OpenSSL versions on macOS](../../../includes/core-changes/corefx/openssl-dependencies-macos.md)]
+
+***
+
+## <a name="net-core-10"></a><span data-ttu-id="4303d-146">.NET Core 1.0</span><span class="sxs-lookup"><span data-stu-id="4303d-146">.NET Core 1.0</span></span>
 
 [!INCLUDE [UnauthorizedAccessException thrown by FileSystemInfo.Attributes](~/includes/core-changes/corefx/1.0/filesysteminfo-attributes-exceptions.md)]
 
