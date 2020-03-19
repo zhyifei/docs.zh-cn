@@ -6,11 +6,11 @@ dev_langs:
 - csharp
 - cpp
 ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741529"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401165"
 ---
 # <a name="customizing-structure-marshaling"></a>自定义结构封送
 
@@ -20,17 +20,17 @@ ms.locfileid: "76741529"
 
 .NET 提供了 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> 属性和 <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> 枚举，允许用户自定义字段在内存中的放置方式。 以下指南将帮助你避免常见问题。
 
-✔️考虑尽可能使用 `LayoutKind.Sequential`。
+✔️ 请考虑尽量使用 `LayoutKind.Sequential`。
 
-如果本机结构也具有显式布局（如联合），✔️仅在封送处理中使用 `LayoutKind.Explicit`。
+✔️ 当本机结构还具有显式布局（如联合）时，请务必仅将 `LayoutKind.Explicit` 用于封送。
 
-如果需要在 .NET Core 3.0 之前针对运行时，请 ❌ 避免使用 `LayoutKind.Explicit` 在非 Windows 平台上封送结构时使用。 3\.0 之前的 .NET Core 运行时不支持将显式结构按值传递到 Intel 或 AMD 64 位非 Windows 系统上的本机函数。 但是，运行时支持在所有平台上按引用传递显式结构。
+❌如果需要在`LayoutKind.Explicit`.NET Core 3.0 之前定位运行时，则在非 Windows 平台上对结构进行封送时使用。 3.0 之前的 .NET Core 运行时不支持按值将显式结构传递给英特尔或 AMD 64 位非 Windows 系统上的本机函数。 但是，运行时支持在所有平台上按引用传递显式结构。
 
 ## <a name="customizing-boolean-field-marshaling"></a>自定义布尔字段封送
 
 本机代码具有许多不同的布尔表示形式。 仅在 Windows 上，有三种方式可用于表示布尔值。 运行时不知道结构的本机定义，因此，它最多只能对如何封送布尔值做出猜测。 .NET 运行时提供指示如何封送布尔字段的方式。 下面的示例介绍如何将 .NET `bool` 封送到不同的本机布尔类型。
 
-布尔值默认作为本机 4 字节 Win32 [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) 值进行封送，如下面的示例所示：
+布尔值默认为本机 4 字节 Win32[`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL)值封送，如以下示例所示：
 
 ```csharp
 public struct WinBool
@@ -163,7 +163,7 @@ struct InPlaceArray
 
 .NET 还提供用于封送字符串字段的各种自定义。
 
-默认情况下，.NET 将字符串作为指向以 null 结尾的字符串的指针进行封送。 编码取决于 <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> 中的 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> 字段的值。 如果未指定任何属性，则编码将默认为 ANSI 编码。
+默认情况下，.NET 将字符串作为指向以 null 结尾的字符串的指针进行封送。 编码取决于 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> 中的 <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> 字段的值。 如果未指定任何属性，则编码将默认为 ANSI 编码。
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -195,7 +195,7 @@ struct DefaultString
 };
 ```
 
-如果需要对不同字段使用不同编码或只是希望在结构定义中更加明确，则可以在 <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> 属性上使用 <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> 或 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 值。
+如果需要对不同字段使用不同编码或只是希望在结构定义中更加明确，则可以在 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 属性上使用 <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> 或 <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> 值。
 
 ```csharp
 public struct AnsiString
@@ -227,7 +227,7 @@ struct UnicodeString
 };
 ```
 
-如果想要使用 UTF-8 编码封送字符串，则可以在 <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> 中使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 值。
+如果想要使用 UTF-8 编码封送字符串，则可以在 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 中使用 <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> 值。
 
 ```csharp
 public struct UTF8String
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>自定义十进制字段封送
 
-如果在 Windows 上操作，则可能会遇到一些使用本机 [`CY` 或 `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 结构的 API。 默认情况下，.NET `decimal` 类型会封送到本机 [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 结构。 但是，可以使用包含 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 值的 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 来指示封送处理程序将 `decimal` 值转换为本机 `CY` 值。
+如果您正在处理 Windows，则可能会遇到一些使用本机[`CY`或`CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1)结构的 API。 默认情况下，.NET`decimal`类型对本机[`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1)结构进行封送。 但是，可以使用包含 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 值的 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 来指示封送处理程序将 `decimal` 值转换为本机 `CY` 值。
 
 ```csharp
 public struct Currency
@@ -358,7 +358,7 @@ struct ObjectDefault
 };
 ```
 
-如果要将对象字段封送到 `IDispatch*`，请添加包含 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 值的 <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType>。
+如果要将对象字段封送到 `IDispatch*`，请添加包含 <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType> 值的 <xref:System.Runtime.InteropServices.MarshalAsAttribute>。
 
 ```csharp
 public struct ObjectDispatch
@@ -375,7 +375,7 @@ struct ObjectDispatch
 };
 ```
 
-如果要将其作为 `VARIANT` 进行封送，请添加包含 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 值的 <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>。
+如果要将其作为 `VARIANT` 进行封送，请添加包含 <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 值的 <xref:System.Runtime.InteropServices.MarshalAsAttribute>。
 
 ```csharp
 public struct ObjectVariant

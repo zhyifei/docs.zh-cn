@@ -1,5 +1,6 @@
 ---
 title: 保护状态数据
+description: 将状态数据声明为私有或内部变量，以限制对它的访问。 这些数据仍可以通过反射、序列化和调试来访问。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - secure coding, state data
 - state data security
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
-ms.openlocfilehash: c30bd2fe9e1ed371be2db60739d3b329fea788c7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f95bf409f7eef8c2636d3c180d2bbd95fbc689c1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705894"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186827"
 ---
 # <a name="securing-state-data"></a>保护状态数据
 处理敏感数据或做出任何种类的安全决策的应用程序需要将相关数据保持在自己的控制之下，而不允许其他可能的恶意代码直接访问这些数据。 保护内存中的数据的最好方法就是，将数据声明为私有或内部（范围限定为相同的程序集内）变量。 然而，即使这些数据受到访问权制约，你也应当注意：  
@@ -28,4 +29,4 @@ ms.locfileid: "75705894"
   
 ## <a name="see-also"></a>另请参阅
 
-- [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)
+- [代码安全维护指南](../../../docs/standard/security/secure-coding-guidelines.md)

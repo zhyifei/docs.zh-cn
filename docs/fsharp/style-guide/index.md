@@ -1,48 +1,48 @@
 ---
-title: F#风格指南
-description: 了解良好的五个原则F#代码。
+title: F# 样式指南
+description: 了解良好 F# 代码的五个原则。
 ms.date: 12/10/2018
 ms.openlocfilehash: 9f47257626e04b09b546de2ae315d48d791678be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61901844"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401111"
 ---
-# <a name="f-style-guide"></a>F#风格指南
+# <a name="f-style-guide"></a>F# 样式指南
 
-以下文章介绍了格式设置准则F#代码和主题的指南的语言功能以及应如何使用它们。
+以下文章介绍了 F# 代码的格式设置指南以及语言功能的专题指南以及如何使用它们。
 
-本指南已被表述基于使用的F#在大型基本代码与多样化的程序员。 本指南通常可以成功地使用F#和挫折时随时间变化的程序要求最小化。
+本指南是根据在具有不同程序员组的大型代码库中使用 F# 制定的。 本指南通常会导致 F# 的成功使用，并最大限度地减少程序要求随时间变化时的挫折感。
 
-## <a name="five-principles-of-good-f-code"></a>良好的五个原则F#代码
+## <a name="five-principles-of-good-f-code"></a>良好 F# 代码的五个原则
 
-请记住您编写任何时间的以下原则F#代码，尤其是在会随时间变化的系统。 在以后的文章的指南的每个片段源自以下五个点。
+在编写 F# 代码时，请记住以下原则，尤其是在随时间变化的系统中。 进一步文章中的每一条指导都源于这五点。
 
-1. **好F#代码是简洁、 富有表现力的且可组合**
+1. **好的 F# 代码简洁、富有表现力且可组合**
 
-    F#具有许多功能，使您能够表达更少的代码行中的操作并重用一般功能。 F#核心库还包含许多有用的类型和函数用于处理数据的通用集合。 您自己的函数和中的组合F#核心库 （或其他库） 是惯用的例程的一部分F#编程。 作为一般规则，如果可以快速解决问题更少的代码中，行中其他开发人员 （或将来自助） 将感激。 此外强烈建议你使用如 FSharp.Core，库[vast.NET 库](../../../api/index.md)的F#上，运行或上的第三方包[NuGet](https://www.nuget.org/)时需要执行非常重要的任务。
+    F# 具有许多功能，允许您以更少的代码行表示操作并重用通用功能。 F# 核心库还包含许多有用的类型和函数，用于处理常见的数据集合。 您自己的函数和 F# 核心库（或其他库）中的函数的组成是常规惯用 F# 编程的一部分。 通常，如果能够用更少的代码行来表达问题的解决方案，其他开发人员（或您未来的自我）将非常感激。 强烈建议您使用 FSharp.Core、F# 运行[的庞大 .NET 库](../../../api/index.md)等库，或者当您需要执行一项不平凡的任务时，使用[NuGet](https://www.nuget.org/)上的第三方包。
 
-2. **好F#代码进行互操作**
+2. **好的 F# 代码是可互操作的**
 
-    互操作可能需要多个窗体，包括使用不同的语言代码。 其他调用方与互操作的代码的边界是关键部分，以得到正确结果，即使调用方也是在F#。 编写时F#，您应始终认为有关其他代码将调用您要编写的包括如果用户将这样做类似的另一种语言的代码C#。 [ F#组件设计准则](component-design-guidelines.md)介绍了详细的互操作性。
+    互操作可以采取多种形式，包括使用不同语言的代码。 其他调用方互操作的代码边界是正确获取的关键部分，即使调用方也位于 F#中也是如此。 编写 F#时，应始终考虑如何将其他代码调用您编写的代码，包括它们是否从其他语言（如 C#）调用。 [F# 组件设计指南](component-design-guidelines.md)详细介绍了互操作性。
 
-3. **好F#的代码使对象编程的使用，不 object 方向**
+3. **好的 F# 代码使用对象编程，而不是面向对象**
 
-    F#在.NET 中，已使用的对象进行编程的完全支持包括[类](../language-reference/classes.md)，[接口](../language-reference/interfaces.md)，[访问修饰符](../language-reference/access-control.md)，[抽象类](../language-reference/abstract-classes.md)，依次类推。 对于更复杂的功能代码，例如必须是上下文感知的函数对象可以轻松地封装函数不能的方式的上下文信息。 等功能[可选参数](../language-reference/members/methods.md#optional-arguments)和小心使用[重载](../language-reference/members/methods.md#overloaded-methods)可以使用此功能的更轻松地进行调用方。
+    F# 完全支持使用 .NET 中的对象进行编程，包括[类](../language-reference/classes.md)、[接口](../language-reference/interfaces.md)、[访问修改器](../language-reference/access-control.md)、[抽象类](../language-reference/abstract-classes.md)等。 对于更复杂的功能代码（如必须具有上下文感知功能的函数），对象可以轻松地以函数无法的方式封装上下文信息。 [可选参数](../language-reference/members/methods.md#optional-arguments)和谨慎使用[重载](../language-reference/members/methods.md#overloaded-methods)等功能可以使调用方更轻松地使用此功能。
 
-4. **好F#也不公开的变化情况下执行代码**
+4. **良好的 F# 代码在未暴露突变的情况下表现良好**
 
-    它是公开的若要编写高性能代码，则必须使用变化。 它是计算机的工作原理，别忘了。 此类代码通常是容易出错且难以得到正确结果。 避免公开给调用方的变化。 相反，[生成隐藏的变化基于实现的功能接口](conventions.md#performance)性能至关重要。
+    编写高性能代码，必须使用突变，这已不为人有。 毕竟，这是计算机的工作原理。 此类代码通常容易出错，难以正确。 避免向呼叫者公开突变。 相反，[构建一个功能接口，在性能至关重要时隐藏基于突变的实现](conventions.md#performance)。
 
-5. **好F#代码是可工具化**
+5. **好的 F# 代码是可工具的**
 
-    工具是非常宝贵的工作大型代码库，也可以编写F#代码，以便可以使用更有效地使用F#语言工具。 一个示例确保你不要过度使用无点的样式的编程，以便可以使用调试器来检查中间值。 另一个示例使用[XML 文档注释](../language-reference/xml-documentation.md)描述构造，以便在编辑器中的工具提示可以在调用站点上显示这些注释。 始终考虑如何在代码将读取、 导航、 调试，并由其工具能够与其他编程人员操作。
+    工具对于在大型代码库中工作非常宝贵，您可以编写 F# 代码，以便可以更有效地将其用于 F# 语言工具。 一个例子是确保您不会使用无点编程样式过度使用，以便可以使用调试器检查中间值。 另一个示例是使用[XML 文档注释](../language-reference/xml-documentation.md)来描述构造，以便编辑器中的工具提示可以在调用站点显示这些注释。 始终思考如何被其他程序员使用他们的工具读取、导航、调试和操作代码。
 
 ## <a name="next-steps"></a>后续步骤
 
-[ F#代码格式设置准则](formatting.md)指南提供有关如何设置代码格式，以便轻松阅读。
+[F# 代码格式设置指南](formatting.md)提供有关如何设置代码格式以便易于阅读的指导。
 
-[ F#编码约定](conventions.md)提供的指南F#编程习语可帮助更大的长期维护F#代码库。
+[F# 编码约定](conventions.md)为 F# 编程习惯用语提供指导，这将有助于对较大的 F# 代码库进行长期维护。
 
-[ F#组件设计准则](component-design-guidelines.md)提供创作指南F#组件，例如库。
+[F# 组件设计指南](component-design-guidelines.md)为编写 F# 组件（如库）提供了指南。

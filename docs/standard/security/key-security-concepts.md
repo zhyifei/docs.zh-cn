@@ -12,17 +12,17 @@ helpviewer_keywords:
 - security [.NET Framework], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
 ms.openlocfilehash: b7bcb7e56ca14d129eadcaeac19452d4a443713d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705967"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401279"
 ---
 # <a name="key-security-concepts"></a>安全性的基础概念
 Microsoft .NET Framework 提供基于角色的安全性，帮助解决有关移动代码的安全性问题，并提供支持，使组件可以决定用户有权执行的操作。  
   
 ## <a name="type-safety-and-security"></a>类型安全和安全性  
- 类型安全代码只访问其有权访问的内存位置。 （对于此讨论，类型安全专门指内存类型安全，不应与更广泛的类型安全混淆。）例如，类型安全代码无法从另一个对象的私有字段读取值。 它仅以明确定义且经允许的方式访问类型。  
+ 类型安全代码只访问其有权访问的内存位置。 （对于本讨论，类型安全特别提到内存类型安全，不应在更广泛的方面与类型安全混淆。例如，类型安全代码无法从其他对象的私有字段读取值。 它仅以明确定义且经允许的方式访问类型。  
   
  在实时 (JIT) 编译期间，一个可选的验证过程将检查方法（该方法将被实时编译为本机代码）的元数据和 Microsoft 中间语言 (MSIL)，以验证它们是否类型安全。 如果代码有权绕过验证，则将跳过此过程。 有关验证的详细信息，请参阅[托管执行过程](../../../docs/standard/managed-execution-process.md)。  
   
@@ -41,7 +41,7 @@ Microsoft .NET Framework 提供基于角色的安全性，帮助解决有关移�
   
  有关详细信息，请参阅[主体和标识对象](../../../docs/standard/security/principal-and-identity-objects.md)。  
   
-## <a name="authentication"></a>身份验证 （可能为英文网页）  
+## <a name="authentication"></a>身份验证  
  身份验证是通过检查用户凭据和针对某些颁发机构对这些凭据进行验证来发现和验证主体的标识的过程。 身份验证期间获取的信息可直接为你的代码所用。 还可以使用 .NET Framework 基于角色的安全性对当前用户进行身份验证并确定是否允许该主体访问代码。 请参阅 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> 方法的重载，了解有关如何对特定角色的主体进行身份验证的示例。 例如，可以使用 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> 重载确定当前用户是否是“Administrators”组的成员。  
   
  现今使用的身份验证机制多种多样，其中许多可与 .NET Framework 基于角色的安全性配合使用。 最常用的一些机制包括 basic、digest、Passport、操作系统（例如，NTLM 或 Kerberos）或应用程序定义的机制。  

@@ -1,5 +1,6 @@
 ---
 title: 安全性和进行中的代码生成
+description: 代表信任度较低的代码生成代码是一个安全问题，尤其是在调用方可以影响代码生成时。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - security [.NET Framework], on-the-fly code generation
 - secure coding, on-the-fly code generation
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
-ms.openlocfilehash: 64ddcc6a379e5719eb734eede13e576a707696fe
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 34ebda27a81ca29ebb27a721b77b735a12be882e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705881"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186798"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>安全性和进行中的代码生成
 某些库的操作方式是通过生成代码并运行它执行调用方的某项操作。 基本问题是代表信任级别较低的代码生成代码，并在更高的信任级别运行它。 当调用方可影响代码生成时，问题更为恶化，因此必须确保仅生成认为安全的代码。  
@@ -26,4 +27,4 @@ ms.locfileid: "75705881"
   
 ## <a name="see-also"></a>另请参阅
 
-- [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)
+- [代码安全维护指南](../../../docs/standard/security/secure-coding-guidelines.md)
