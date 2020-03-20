@@ -11,10 +11,10 @@ helpviewer_keywords:
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 ms.openlocfilehash: a43ce44e11a9231dee2961ee02bac745d9ca71cb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141599"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>正则表达式中的其他构造
@@ -27,7 +27,7 @@ ms.locfileid: "73141599"
   
  在问号后列出要启用的选项，在负号后列出要禁用的选项。 下表对每个选项进行了描述。 有关每个选项的更多信息，请参见[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)。  
   
-|选项|说明|  
+|选项|描述|  
 |------------|-----------------|  
 |`i`|不区分大小写的匹配。|  
 |`m`|多行模式。|  
@@ -47,7 +47,7 @@ ms.locfileid: "73141599"
   
  该示例定义两个正则表达式。 第一个 `\b(D\w+)\s(d\w+)\b` 匹配以一个大写“D”和一个小写“d”开头的两个连续单词。 第二个正则表达式 `\b(D\w+)(?ixn) \s (d\w+) \b` 使用内联选项修改此模式，如下表所述。 结果的比较会确认 `(?ixn)` 构造的效果。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`(D\w+)`|匹配后跟一个或多个单词字符的大写“D”。 这是第一个捕获组。|  
@@ -57,11 +57,11 @@ ms.locfileid: "73141599"
 |`\b`|与字边界匹配。|  
   
 ## <a name="inline-comment"></a>内联注释  
- `(?#` comment  `)` 构造可用于在正则表达式中添加内联注释。 正则表达式引擎在模式匹配中不使用注释的任何部分，尽管注释仍包含在 <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> 方法返回的字符串中。 该注释在第一个右括号处终止。  
+ `(?#` comment`)` 构造可用于在正则表达式中添加内联注释  。 正则表达式引擎在模式匹配中不使用注释的任何部分，尽管注释仍包含在 <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> 方法返回的字符串中。 该注释在第一个右括号处终止。  
   
  下面的示例重复了上一部分的示例中的第一个正则表达式模式。 它将两个内联注释添加到该正则表达式，以指示比较是否区分大小写。 正则表达式模式 `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b` 按以下方式定义。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`(?# case-sensitive comparison)`|注释。 它不影响模式匹配行为。|  
@@ -82,7 +82,7 @@ ms.locfileid: "73141599"
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\{`|匹配左大括号。|  
 |`\d+`|匹配一个或多个十进制数字。|  

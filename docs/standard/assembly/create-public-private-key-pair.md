@@ -16,10 +16,10 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 8a9845e3cd18ff86ec04216ad0e9c5606186b113
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73122523"
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>如何：创建公钥/私钥对
@@ -33,7 +33,7 @@ ms.locfileid: "73122523"
 
 要创建密钥对，请在命令提示符处键入以下命令：
 
-**sn –k** \<*file name*>
+sn –k file name  \<  >
 
 此命令中，  “文件名”是包含密钥对的输出文件的名称。
 

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73972103"
 ---
 # <a name="regular-expression-options"></a>正则表达式选项
@@ -29,7 +29,7 @@ ms.locfileid: "73972103"
 |<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|使用不区分大小写的匹配。 有关更多信息，请参见[不区分大小写的匹配](#case-insensitive-matching)。|
 |<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|使用多线模式，其中 `^` 和 `$` 匹配每行的开头和末尾（不是输入字符串的开头和末尾）。 有关更多信息，请参见[多行模式](#multiline-mode)。|
 |<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|使用单行模式，其中的句号 (.) 匹配每个字符（而不是除了 `\n` 以外的每个字符)。 有关详细信息，请参阅[单行模式](#single-line-mode)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|不捕获未命名的组。 唯一有效的捕获是显式命名或编号的 `(?<`*name*`>` *subexpression*`)` 形式的组。 有关更多信息，请参见[仅显式捕获](#explicit-captures-only)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|不捕获未命名的组。 唯一有效的捕获是显式命名或编号的 `(?<`name`>` subexpression`)` 形式的组   。 有关更多信息，请参见[仅显式捕获](#explicit-captures-only)。|
 |<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|不可用|将正则表达式编译为程序集。 有关更多信息，请参见[已编译的正则表达式](#compiled-regular-expressions)。|
 |<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|从模式中排除保留的空白并启用数字符号 (`#`) 后的注释。 有关更多信息，请参见[忽略空白](#ignore-white-space)。|
 |<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|不可用|更改搜索方向。 搜索是从右向左而不是从左向右进行。 有关更多信息，请参见[从右向左模式](#right-to-left-mode)。|
@@ -160,7 +160,7 @@ ms.locfileid: "73972103"
 
 正则表达式模式 `^(\w+)\s(\d+)\r*$` 的定义如下表所示。
 
-|模式|说明|
+|模式|描述|
 |-------------|-----------------|
 |`^`|从行首开始。|
 |`(\w+)`|匹配一个或多个单词字符。 这是第一个捕获组。|
@@ -198,7 +198,7 @@ ms.locfileid: "73972103"
 
 旨在仅从文档提取末尾有句号、感叹点或问号的句子，仅产生的句子（这由 <xref:System.Text.RegularExpressions.Match> 对象表示）有意义。 集合中的各单词不是。
 
-随后未使用的捕获组可能很昂贵，因为正则表达式引擎必须填充 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合对象。 作为替换方法，也可以使用 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 选项或 `n` 内联选项，指定显式命名的唯一有效捕获，或由 `(?<`名称  `>` 子表达式  `)` 构造指定的编号组。
+随后未使用的捕获组可能很昂贵，因为正则表达式引擎必须填充 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合对象。 作为替换方法，也可以使用 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 选项或 `n` 内联选项，指定显式命名的唯一有效捕获，或由 `(?<`名称`>` 子表达式`)` 构造指定的编号组   。
 
 以下示例显示 `\b\(?((\w+),?\s?)+[\.!?]\)?` 正则表达式模式在 <xref:System.Text.RegularExpressions.Regex.Match%2A> 方法被调用且没有 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 选项时返回的匹配信息。 如第一个方法调用输出所示，正则表达式引擎使用有关已捕获的子字符串的信息完全填充 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合对象。 因为第二个方法使用设置为 `options` 的 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 进行调用，所以它不会捕获有关组的信息。
 
@@ -207,7 +207,7 @@ ms.locfileid: "73972103"
 
 正则表达式模式 `\b\(?((?>\w+),?\s?)+[\.!?]\)?` 的定义如下表所示。
 
-|模式|说明|
+|模式|描述|
 |-------------|-----------------|
 |`\b`|在单词边界处开始。|
 |`\(?`|匹配左括号（“(”）的零或一个匹配项。|
@@ -264,7 +264,7 @@ ms.locfileid: "73972103"
 
 - 加括号的限定符内不允许有空格，如 `{`n  `}`、`{`n  `,}` 和 `{`n  `,`m  `}`。 例如，因为它包含一个空白字符，所以正则表达式模式 `\d{1, 3}` 与任何从 1 到 3 位数的数字序列不匹配。
 
-- 引入语言元素的字符序列内不允许有空格。 例如:
+- 引入语言元素的字符序列内不允许有空格。 例如：
 
   - 语言元素 `(?:`subexpression  `)` 表示非捕获组，并且该元素的 `(?:` 部分不能有嵌入空格。 模式 `(? :`子表达式  `)` 在运行时抛出 <xref:System.ArgumentException>，因为正则表达式引擎无法分析此模式，且模式 `( ?:`子表达式  `)` 与子表达式  不匹配。
 
@@ -305,7 +305,7 @@ ms.locfileid: "73972103"
 
 正则表达式模式的定义如下表所示。
 
-|模式|说明|
+|模式|描述|
 |-------------|-----------------|
 |`(?<=\d{1,2}\s)`|匹配项的开头必须有后跟一个空格的一个或两个十进制数字。|
 |`\w+`|匹配一个或多个单词字符。|
@@ -338,7 +338,7 @@ ECMAScript 和规范化正则表达式的行为在三个方面不同：字符类
 
   该正则表达式的定义如下表所示。
 
-  |模式|说明|
+  |模式|描述|
   |-------------|-----------------|
   |(a+)|与字母“a”匹配一次或多次。 这是第二个捕获组。|
   |(\1)|与第一个捕获组捕获的子字符串匹配。 这是第三个捕获组。|

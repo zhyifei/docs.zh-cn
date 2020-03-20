@@ -4,12 +4,12 @@ description: 了解引用程序集，这是 .NET 中一种特殊类型的程序�
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 3b85e51a015cca1e53ee2503c7bfa58c504fc718
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 938942caf81c54a8aa9207dbe87559438ffb252e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156460"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79141063"
 ---
 # <a name="reference-assemblies"></a>引用程序集
 
@@ -29,7 +29,7 @@ ms.locfileid: "78156460"
 
 使用“添加引用”  对话框在 Visual Studio 中添加对 .NET Framework 程序集的引用时，可以从列表中选择一个程序集，Visual Studio 会自动查找对应于项目中选择的目标框架版本的引用程序集。 这同样适用于使用 [Reference](/visualstudio/msbuild/common-msbuild-project-items#reference) 项目项直接在 MSBuild 项目中添加引用的情形：只需指定程序集名称，无需指定完整的文件路径。 使用 `-reference` 编译器选项（在 [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) 和 [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) 中），或者使用 Roslyn API 中的 <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> 方法在命令行中添加对这些程序集的引用时，必须为正确的目标平台版本手动指定引用程序集文件。 .NET Framework 引用程序集文件位于 %ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETFramework  目录中。 对于 .NET Core，可以通过将 `PreserveCompilationContext` 项目属性设置为 `true` 强制发布操作，以便将目标平台的引用程序集复制到输出目录的 publish/refs  子目录。 然后，可以将这些引用程序集文件传递给编译器。 使用 [Microsoft.Extensions.DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/) 包中的 `DependencyContext` 有助于找到其路径。
 
-由于它们不包含任何实现，因此无法加载引用程序集用于执行；如果尝试这样做，则会导致 <xref:System.BadImageFormatException?displayProperty=nameWithType>。 但是，如果需要检查其内容，仍可以（使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> 方法）将其加载到仅反射上下文中。
+由于它们不包含任何实现，因此无法加载引用程序集用于执行。 如果尝试这样做，则会导致 <xref:System.BadImageFormatException?displayProperty=nameWithType>。 如果要检查引用程序集的内容，你可将其加载到 .NET Framework 中的仅反射上下文中（使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> 方法），或者加载到 .NET Core 中的 <xref:System.Reflection.MetadataLoadContext>。
 
 ## <a name="generating-reference-assemblies"></a>生成引用程序集
 

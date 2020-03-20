@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: a7e03a833886a1486e0dc081d6ef059791a464b5
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: f3d3269ccf56954f963762503d2bc1c53b9e6b83
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156330"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78238983"
 ---
 # <a name="implementing-a-dispose-method"></a>实现 Dispose 方法
 
@@ -33,7 +33,7 @@ ms.locfileid: "78156330"
   
 若要帮助确保始终正确地清理资源，<xref:System.IDisposable.Dispose%2A> 方法应该可以多次调用而不引发异常。  
   
-为 <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> 方法提供的代码示例演示了强行垃圾回收如何在回收对象的成员仍在执行时引起终结器运行。 在较长的 <xref:System.GC.KeepAlive%2A> 方法末尾最好调用 <xref:System.IDisposable.Dispose%2A> 方法。  
+为 <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> 方法提供的代码示例演示了垃圾回收如何引起终结器运行，而对该对象或其成员的非托管引用仍在使用中。 利用 <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType>使对象从当前例程开始到调用此方法的那一刻为止都不适合进行垃圾回收，这是可行的。
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Dispose() 和 Dispose(Boolean)  

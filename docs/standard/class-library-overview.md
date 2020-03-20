@@ -38,11 +38,11 @@ helpviewer_keywords:
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132845"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398765"
 ---
 # <a name="net-class-library-overview"></a>.NET 类库概述
 
@@ -84,15 +84,15 @@ ms.locfileid: "73132845"
   
  下表列出了 .NET 提供的基类型，并对每种类型进行了简单描述，同时指出了 Visual Basic、C#、C++ 和 F# 中的相应类型。  
   
-|类别|类名|说明|Visual Basic 数据类型|C# 数据类型|C++/CLI 数据类型|F# 数据类型|  
+|类别|类名|描述|Visual Basic 数据类型|C# 数据类型|C++/CLI 数据类型|F# 数据类型|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |整数|<xref:System.Byte>|8 位无符号整数。|**Byte**|**byte**|**unsigned char**|**byte**|  
-||<xref:System.SByte>|8 位有符号整数。<br /><br /> 不符合 CLS。|**SByte**|**sbyte**|**char**<br /> -或-<br /> signed char  |**sbyte**|  
+||<xref:System.SByte>|8 位有符号整数。<br /><br /> 不符合 CLS。|**SByte**|**sbyte**|**char**<br /> \- 或 -<br /> 带符号字符  |**sbyte**|  
 ||<xref:System.Int16>|16 位带符号整数。|**Short**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|32 位带符号整数。|**Integer**|**int**|**int**<br /><br /> -或-<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|32 位带符号整数。|**Integer**|**int**|**int**<br /><br /> \- 或 -<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|64 位带符号整数。|**Long**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|16 位无符号整数。<br /><br /> 不符合 CLS。|**UShort**|**ushort**|**unsigned short**|**uint16**|  
-||<xref:System.UInt32>|32 位无符号整数。<br /><br /> 不符合 CLS。|**UInteger**|**uint**|**unsigned int**<br /> -或-<br /> **unsigned long**|**uint32**|  
+||<xref:System.UInt32>|32 位无符号整数。<br /><br /> 不符合 CLS。|**UInteger**|**uint**|**unsigned int**<br /> \- 或 -<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|64 位无符号整数。<br /><br /> 不符合 CLS。|**ULong**|**ulong**|unsigned __int64 |**uint64**|  
 |浮点|<xref:System.Single>|单精度（32 位）浮点数字。|**单精度**|**float**|**float**|**float32**<br> or<br>**single**|  
 ||<xref:System.Double>|双精度（64 位）浮点数字。|**双精度**|**double**|**double**|**float**<br> or <br> **double**|  

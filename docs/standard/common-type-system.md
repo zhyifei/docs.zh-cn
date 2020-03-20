@@ -4,12 +4,12 @@ description: 了解通用类型系统 (CTS) 和公共语言规范 (CLS) 如何�
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: d162a736b8f7b56293fc75a445c2a80cce597768
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8983e456b051ace434fda9f6ed9cf9028c2ec2d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664520"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187667"
 ---
 # <a name="common-type-system--common-language-specification"></a>常规类型系统和公共语言规范
 
@@ -17,7 +17,7 @@ ms.locfileid: "64664520"
 
 ## <a name="common-type-system"></a>常规类型系统
 
-首先，请记住 .NET 实现对语言不可知。 这不仅意味着程序员可以使用可编译为 IL 的任意语言编写代码。 还意味着程序员需要能够与使用 .NET 实现上可用的其他语言编写的代码进行交互。
+首先，请记住 .NET 实现对语言不可知  。 这不仅意味着程序员可以使用可编译为 IL 的任意语言编写代码。 还意味着程序员需要能够与使用 .NET 实现上可用的其他语言编写的代码进行交互。
 
 为透明地执行此操作，必须使用某种通用方式描所有受支持类型。 这正是通用类型系统 (CTS) 的职责。 其功能如下：
 
@@ -44,7 +44,7 @@ CTS 还将定义类型的所有其他属性，例如访问修饰符、有效的�
 
 ## <a name="common-language-specification"></a>公共语言规范
 
-为实现完全互操作性情景，代码中创建的所有对象都必须依赖于使用它的语言（即其调用方）的某些共性。 由于存在多种不同语言，因此 .NET 在公共语言规范 (CLS) 中指定了这些共性。 CLS 定义了许多常见应用程序所需的一组功能。 对于在 .NET 上实现的语言，它还就语言需要支持的内容提供了一组脚本。
+为实现完全互操作性情景，代码中创建的所有对象都必须依赖于使用它的语言（即其调用方  ）的某些共性。 由于存在多种不同语言，因此 .NET 在公共语言规范  (CLS) 中指定了这些共性。 CLS 定义了许多常见应用程序所需的一组功能。 对于在 .NET 上实现的语言，它还就语言需要支持的内容提供了一组脚本。
 
 CLS 是 CTS 的子集。 这意味着，CTS 中的所有规则也适用于 CLS，除非 CLS 规则更严格。 如果仅使用 CLS 中的规则生成组件（即在其 API 中仅公开 CLS 功能），则将该组件视为**符合 CLS**。 例如，`<framework-librares>` 完全符合 CLS，因为它们需要对 .NET 支持的所有语言有效。
 

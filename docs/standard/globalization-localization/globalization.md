@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: 953d8d3055dff48cd943b748771f20803a4d6573
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fe03bbdd7d037a9f1fb4985b62b447c6ef9c6535
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120892"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79174779"
 ---
 # <a name="globalization"></a>全球化
 
@@ -66,7 +66,7 @@ ms.locfileid: "73120892"
 > [!TIP]
 > 可使用 <xref:System.Globalization.StringInfo> 类与文本元素配合使用，而不使用字符串中的单个字符。
 
-在字符串搜索和比较中，常见的错误是将字符串作为字符的集合，其中每个字符由 <xref:System.Char> 对象表示。 实际上，单个字符串可能由一个、两个或多个 <xref:System.Char> 对象组成。 此类字符在一些字符串中出现得最频繁，这些字符串位于其字母表是由 Unicode 基本拉丁字符范围（从 U+0021 到 U+007E）以外的字符所组成的区域性中。 以下示例尝试在字符串中查找 LATIN CAPITAL LETTER A WITH GRAVE 字符 (U+00C0) 的索引。 但是，此字符有两种表示方法：单个代码单元 (U+00C0) 或复合字符（两个代码单元：U+0021 和 U+007E）。 在这种情况下，字符在字符串示例中用两个 <xref:System.Char> 对象（U+0021 和 U+007E）表示。 示例代码调用 <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> 和 <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> 重载以查找此字符在字符串实例中的位置，但返回了不同的结果 。 第一个方法调用拥有 <xref:System.Char> 参数，它执行的是序号比较，因此无法找到匹配项。 第二个调用拥有 <xref:System.String> 参数，它执行的是区分区域性的比较，因此找到了匹配项。
+在字符串搜索和比较中，常见的错误是将字符串作为字符的集合，其中每个字符由 <xref:System.Char> 对象表示。 实际上，单个字符串可能由一个、两个或多个 <xref:System.Char> 对象组成。 此类字符在一些字符串中出现得最频繁，这些字符串位于其字母表是由 Unicode 基本拉丁字符范围（从 U+0021 到 U+007E）以外的字符所组成的区域性中。 以下示例尝试在字符串中查找 LATIN CAPITAL LETTER A WITH GRAVE 字符 (U+00C0) 的索引。 但是，此字符有两种表示方法：单个代码单元 (U+00C0) 或复合字符（两个代码单元：U+0041 和 U+0300）。 在这种情况下，字符在字符串示例中用两个 <xref:System.Char> 对象（U+0041 和 U+0300）表示。 示例代码调用 <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> 和 <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> 重载以查找此字符在字符串实例中的位置，但返回了不同的结果 。 第一个方法调用拥有 <xref:System.Char> 参数，它执行的是序号比较，因此无法找到匹配项。 第二个调用拥有 <xref:System.String> 参数，它执行的是区分区域性的比较，因此找到了匹配项。
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
@@ -336,7 +336,7 @@ ms.locfileid: "73120892"
 
 - .NET 支持替换区域性。 由此可定义补充现有标准区域性或完全替换现有标准区域性的新的自定义区域性。
 
-- 在 Windows 系统上，用户可使用“控制面板”中的“区域和语言”  应用，自定义区域性专用设置。 在实例化 <xref:System.Globalization.CultureInfo> 对象时，可调用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来确定它是否反射这些用户自定义。 通常，对最终用户应用而言，应考虑用户首选项，以用户期望的格式呈现数据。
+- 在 Windows 系统上，用户可使用“控制面板”中的“区域和语言”  应用，自定义区域性专用设置。 在实例化 <xref:System.Globalization.CultureInfo> 对象时，可调用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来确定它是否反射这些用户自定义。 通常，对最终用户应用而言，你应考虑用户首选项，以用户期望的格式呈现数据。
 
 ## <a name="see-also"></a>请参阅
 

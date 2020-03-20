@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 45763504c2d25596b0adfb4b8a0236b332d89e8c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 3ab468f6c68429a3a5cb8706152288afae520df3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802045"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187145"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新增功能
 
@@ -42,7 +42,7 @@ Visual Basic/Visual Studio 2015\
 有关新功能，请参阅 [Visual Basic 14](#visual-basic-14)。
 
 Visual Basic/Visual Studio 2013\
-.NET Compiler Platform (“Roslyn”) 的技术预览
+.NET Compiler Platform（“Roslyn”）的技术预览
 
 Visual Basic/Visual Studio 2012\
 `Async` 和 `await` 关键字、迭代器、调用方信息特性
@@ -186,7 +186,7 @@ Visual Basic 命令行编译器现在支持 [-refout](../reference/command-line-
 
 从 C# 7.0 开始，C# 支持引用返回值。 也就是说，当调用方法收到引用返回的值时，可以更改引用的值。 Visual Basic 不允许使用引用返回值创建方法，但允许使用和修改引用返回值。
 
-例如，用 C# 编写的以下 `Sentence` 类包括 `FindNext` 方法，该方法查找句子中以指定的子字符串开头的下一个单词。 该字符串作为引用返回值返回，方法引用传递的 `Boolean` 变量指示搜索是否成功。 这意味着调用方不仅可以读取返回的值；还可以修改此值，此修改在 `Sentence` 类中反映。
+例如，用 C# 编写的以下 `Sentence` 类包括 `FindNext` 方法，该方法查找句子中以指定的子字符串开头的下一个单词。 该字符串作为引用返回值返回，方法引用传递的 `Boolean` 变量指示搜索是否成功。 这意味着，除了读取返回值外，调用方还可以对其进行修改，并且该修改会反映在 `Sentence` 类中。
 
 [!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
