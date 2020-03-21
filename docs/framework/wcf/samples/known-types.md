@@ -2,20 +2,20 @@
 title: 已知类型
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: 5d772caa262a271db180bf764e0763999fffd7f3
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b75f540694eaeea90367f1720d5747f71d0a392d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715703"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144612"
 ---
-# <a name="known-types"></a><span data-ttu-id="fbefc-102">已知类型</span><span class="sxs-lookup"><span data-stu-id="fbefc-102">Known Types</span></span>
-<span data-ttu-id="fbefc-103">此示例演示如何在数据协定中指定有关派生类型的信息。</span><span class="sxs-lookup"><span data-stu-id="fbefc-103">This sample demonstrates how to specify information about derived types in a data contract.</span></span> <span data-ttu-id="fbefc-104">数据协定允许您在服务中传入和传出结构化数据。</span><span class="sxs-lookup"><span data-stu-id="fbefc-104">Data contracts allow you to pass structured data to and from services.</span></span> <span data-ttu-id="fbefc-105">在面向对象的编程中，可以用从另一个类型继承的类型来代替原始类型。</span><span class="sxs-lookup"><span data-stu-id="fbefc-105">In object-oriented programming, a type that inherits from another type can be used in place of the original type.</span></span> <span data-ttu-id="fbefc-106">在面向服务的编程中，传递的是架构（而不是类型），因此，类型之间的关系将不保留。</span><span class="sxs-lookup"><span data-stu-id="fbefc-106">In service-oriented programming, schemas rather than types are communicated and therefore, the relationship between types is not preserved.</span></span> <span data-ttu-id="fbefc-107"><xref:System.Runtime.Serialization.KnownTypeAttribute> 属性允许在数据协定中包括有关派生类型的信息。</span><span class="sxs-lookup"><span data-stu-id="fbefc-107">The <xref:System.Runtime.Serialization.KnownTypeAttribute> attribute allows information about derived types to be included in the data contract.</span></span> <span data-ttu-id="fbefc-108">如果不使用此机制，则不能在应当使用基类型的情况下发送或接收派生类型。</span><span class="sxs-lookup"><span data-stu-id="fbefc-108">If this mechanism is not used, a derived type cannot be sent or received where a base type is expected.</span></span>  
+# <a name="known-types"></a><span data-ttu-id="b1a43-102">已知类型</span><span class="sxs-lookup"><span data-stu-id="b1a43-102">Known Types</span></span>
+<span data-ttu-id="b1a43-103">此示例演示如何在数据协定中指定有关派生类型的信息。</span><span class="sxs-lookup"><span data-stu-id="b1a43-103">This sample demonstrates how to specify information about derived types in a data contract.</span></span> <span data-ttu-id="b1a43-104">数据协定允许您在服务中传入和传出结构化数据。</span><span class="sxs-lookup"><span data-stu-id="b1a43-104">Data contracts allow you to pass structured data to and from services.</span></span> <span data-ttu-id="b1a43-105">在面向对象的编程中，可以用从另一个类型继承的类型来代替原始类型。</span><span class="sxs-lookup"><span data-stu-id="b1a43-105">In object-oriented programming, a type that inherits from another type can be used in place of the original type.</span></span> <span data-ttu-id="b1a43-106">在面向服务的编程中，传递的是架构（而不是类型），因此，类型之间的关系将不保留。</span><span class="sxs-lookup"><span data-stu-id="b1a43-106">In service-oriented programming, schemas rather than types are communicated and therefore, the relationship between types is not preserved.</span></span> <span data-ttu-id="b1a43-107"><xref:System.Runtime.Serialization.KnownTypeAttribute> 属性允许在数据协定中包括有关派生类型的信息。</span><span class="sxs-lookup"><span data-stu-id="b1a43-107">The <xref:System.Runtime.Serialization.KnownTypeAttribute> attribute allows information about derived types to be included in the data contract.</span></span> <span data-ttu-id="b1a43-108">如果不使用此机制，则不能在应当使用基类型的情况下发送或接收派生类型。</span><span class="sxs-lookup"><span data-stu-id="b1a43-108">If this mechanism is not used, a derived type cannot be sent or received where a base type is expected.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="fbefc-109">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="fbefc-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="b1a43-109">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="b1a43-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="fbefc-110">此服务的服务协定使用复数，如下面的示例代码中所示。</span><span class="sxs-lookup"><span data-stu-id="fbefc-110">The service contract for the service uses complex numbers, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="b1a43-110">此服务的服务协定使用复数，如下面的示例代码中所示。</span><span class="sxs-lookup"><span data-stu-id="b1a43-110">The service contract for the service uses complex numbers, as shown in the following sample code.</span></span>  
   
 ```csharp
 // Define a service contract.  
@@ -33,7 +33,7 @@ public interface ICalculator
 }  
 ```  
   
- <span data-ttu-id="fbefc-111"><xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 应用于 `ComplexNumber` 类，这将指示在客户端和服务之间可以传递类的哪些字段。</span><span class="sxs-lookup"><span data-stu-id="fbefc-111">The <xref:System.Runtime.Serialization.DataContractAttribute> and <xref:System.Runtime.Serialization.DataMemberAttribute> is applied to the `ComplexNumber` class to indicate which fields of the class can be passed between the client and the service.</span></span> <span data-ttu-id="fbefc-112">可以用 `ComplexNumberWithMagnitude` 派生类来代替 `ComplexNumber`。</span><span class="sxs-lookup"><span data-stu-id="fbefc-112">The derived `ComplexNumberWithMagnitude` class can be used in place of `ComplexNumber`.</span></span> <span data-ttu-id="fbefc-113"><xref:System.Runtime.Serialization.KnownTypeAttribute> 类型的 `ComplexNumber` 属性说明了这一点。</span><span class="sxs-lookup"><span data-stu-id="fbefc-113">The <xref:System.Runtime.Serialization.KnownTypeAttribute> attribute on the `ComplexNumber` type indicates this.</span></span>  
+ <span data-ttu-id="b1a43-111"><xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 应用于 `ComplexNumber` 类，这将指示在客户端和服务之间可以传递类的哪些字段。</span><span class="sxs-lookup"><span data-stu-id="b1a43-111">The <xref:System.Runtime.Serialization.DataContractAttribute> and <xref:System.Runtime.Serialization.DataMemberAttribute> is applied to the `ComplexNumber` class to indicate which fields of the class can be passed between the client and the service.</span></span> <span data-ttu-id="b1a43-112">可以用 `ComplexNumberWithMagnitude` 派生类来代替 `ComplexNumber`。</span><span class="sxs-lookup"><span data-stu-id="b1a43-112">The derived `ComplexNumberWithMagnitude` class can be used in place of `ComplexNumber`.</span></span> <span data-ttu-id="b1a43-113"><xref:System.Runtime.Serialization.KnownTypeAttribute> 类型的 `ComplexNumber` 属性说明了这一点。</span><span class="sxs-lookup"><span data-stu-id="b1a43-113">The <xref:System.Runtime.Serialization.KnownTypeAttribute> attribute on the `ComplexNumber` type indicates this.</span></span>  
   
 ```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -53,7 +53,7 @@ public class ComplexNumber
 }  
 ```  
   
- <span data-ttu-id="fbefc-114">`ComplexNumberWithMagnitude` 类型派生自 `ComplexNumber`，但是额外添加了一个数据成员 `Magnitude`。</span><span class="sxs-lookup"><span data-stu-id="fbefc-114">The `ComplexNumberWithMagnitude` type derives from `ComplexNumber` but adds an additional data member, `Magnitude`.</span></span>  
+ <span data-ttu-id="b1a43-114">`ComplexNumberWithMagnitude` 类型派生自 `ComplexNumber`，但是额外添加了一个数据成员 `Magnitude`。</span><span class="sxs-lookup"><span data-stu-id="b1a43-114">The `ComplexNumberWithMagnitude` type derives from `ComplexNumber` but adds an additional data member, `Magnitude`.</span></span>  
   
 ```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -71,7 +71,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- <span data-ttu-id="fbefc-115">为了演示已知类型功能，此服务的实现方式是只返回加法和减法 `ComplexNumberWithMagnitude`。</span><span class="sxs-lookup"><span data-stu-id="fbefc-115">To demonstrate the known types feature, the service is implemented in such a way that it returns a `ComplexNumberWithMagnitude` only for addition and subtraction.</span></span> <span data-ttu-id="fbefc-116">（由于 `ComplexNumber` 属性的存在，即使协定中指定了 `KnownTypeAttribute`，这也是允许的。）</span><span class="sxs-lookup"><span data-stu-id="fbefc-116">(Even though the contract specifies `ComplexNumber`, this is allowed because of the `KnownTypeAttribute` attribute).</span></span> <span data-ttu-id="fbefc-117">乘法和除法仍返回基数 `ComplexNumber` 类型。</span><span class="sxs-lookup"><span data-stu-id="fbefc-117">Multiplication and division still return the base `ComplexNumber` type.</span></span>  
+ <span data-ttu-id="b1a43-115">为了演示已知类型功能，服务的实现方式使其仅返回添加`ComplexNumberWithMagnitude`和减法。</span><span class="sxs-lookup"><span data-stu-id="b1a43-115">To demonstrate the known types feature, the service is implemented in such a way that it returns a `ComplexNumberWithMagnitude` only for addition and subtraction.</span></span> <span data-ttu-id="b1a43-116">（由于 `ComplexNumber` 属性的存在，即使协定中指定了 `KnownTypeAttribute`，这也是允许的。）</span><span class="sxs-lookup"><span data-stu-id="b1a43-116">(Even though the contract specifies `ComplexNumber`, this is allowed because of the `KnownTypeAttribute` attribute).</span></span> <span data-ttu-id="b1a43-117">乘法和除法仍返回基`ComplexNumber`类型。</span><span class="sxs-lookup"><span data-stu-id="b1a43-117">Multiplication and division still return the base `ComplexNumber` type.</span></span>  
   
 ```csharp
 public class DataContractCalculatorService : IDataContractCalculator  
@@ -86,7 +86,7 @@ public class DataContractCalculatorService : IDataContractCalculator
     public ComplexNumber Subtract(ComplexNumber n1, ComplexNumber n2)  
     {  
         //Return the derived type.  
-        return new ComplexNumberWithMagnitude(n1.Real - n2.Real,   
+        return new ComplexNumberWithMagnitude(n1.Real - n2.Real,
                                  n1.Imaginary - n2.Imaginary);  
     }  
   
@@ -97,13 +97,13 @@ public class DataContractCalculatorService : IDataContractCalculator
         double imaginary2 = n2.Real * n1.Imaginary;  
         double real2 = n1.Imaginary * n2.Imaginary * -1;  
         //Return the base type.  
-        return new ComplexNumber(real1 + real2, imaginary1 +   
+        return new ComplexNumber(real1 + real2, imaginary1 +
                                                   imaginary2);  
     }  
   
     public ComplexNumber Divide(ComplexNumber n1, ComplexNumber n2)  
     {  
-        ComplexNumber conjugate = new ComplexNumber(n2.Real,   
+        ComplexNumber conjugate = new ComplexNumber(n2.Real,
                                      -1*n2.Imaginary);  
         ComplexNumber numerator = Multiply(n1, conjugate);  
         ComplexNumber denominator = Multiply(n2, conjugate);  
@@ -114,11 +114,11 @@ public class DataContractCalculatorService : IDataContractCalculator
 }  
 ```  
   
- <span data-ttu-id="fbefc-118">在客户端上，服务协定和数据协定都是在源文件 generatedClient.cs 中定义的，该文件由服务元数据中的[元数据实用工具（svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成。</span><span class="sxs-lookup"><span data-stu-id="fbefc-118">On the client, both the service contract and the data contract are defined in the source file generatedClient.cs, which is generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from service metadata.</span></span> <span data-ttu-id="fbefc-119">由于在服务的数据协定中指定了 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性，因此在使用服务时，客户端既能够接收 `ComplexNumber` 类又能够接收 `ComplexNumberWithMagnitude` 类。</span><span class="sxs-lookup"><span data-stu-id="fbefc-119">Because the <xref:System.Runtime.Serialization.KnownTypeAttribute> attribute is specified in the service's data contract, the client is able to receive both the `ComplexNumber` and `ComplexNumberWithMagnitude` classes when using the service.</span></span> <span data-ttu-id="fbefc-120">客户端检测它是否获得了 `ComplexNumberWithMagnitude` 并生成相应的输出：</span><span class="sxs-lookup"><span data-stu-id="fbefc-120">The client detects whether it got a `ComplexNumberWithMagnitude` and generate the appropriate output:</span></span>  
+ <span data-ttu-id="b1a43-118">在客户端上，服务协定和数据协定都generatedClient.cs源文件中定义，该文件由[服务模型元数据实用程序工具 （Svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)从服务元数据生成。</span><span class="sxs-lookup"><span data-stu-id="b1a43-118">On the client, both the service contract and the data contract are defined in the source file generatedClient.cs, which is generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from service metadata.</span></span> <span data-ttu-id="b1a43-119">由于在服务的数据协定中指定了 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性，因此在使用服务时，客户端既能够接收 `ComplexNumber` 类又能够接收 `ComplexNumberWithMagnitude` 类。</span><span class="sxs-lookup"><span data-stu-id="b1a43-119">Because the <xref:System.Runtime.Serialization.KnownTypeAttribute> attribute is specified in the service's data contract, the client is able to receive both the `ComplexNumber` and `ComplexNumberWithMagnitude` classes when using the service.</span></span> <span data-ttu-id="b1a43-120">客户端检测它是否获得了 `ComplexNumberWithMagnitude` 并生成相应的输出：</span><span class="sxs-lookup"><span data-stu-id="b1a43-120">The client detects whether it got a `ComplexNumberWithMagnitude` and generate the appropriate output:</span></span>  
   
 ```csharp
 // Create a client  
-DataContractCalculatorClient client =   
+DataContractCalculatorClient client =
     new DataContractCalculatorClient();  
   
 // Call the Add service operation.  
@@ -130,7 +130,7 @@ Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",
     result.real, result.imaginary);  
 if (result is ComplexNumberWithMagnitude)  
 {  
-    Console.WriteLine("Magnitude: {0}",   
+    Console.WriteLine("Magnitude: {0}",
         ((ComplexNumberWithMagnitude)result).Magnitude);  
 }  
 else  
@@ -139,7 +139,7 @@ else
 }  
 ```  
   
- <span data-ttu-id="fbefc-121">运行示例时，操作的请求和响应将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="fbefc-121">When you run the sample, the requests and responses of the operation are displayed in the client console window.</span></span> <span data-ttu-id="fbefc-122">请注意，对加法和减法列显了数量级，而对乘法和除法却没有列显，这是由服务的实现方式确定的。</span><span class="sxs-lookup"><span data-stu-id="fbefc-122">Note that a magnitude is printed for addition and subtraction but not for multiplication and division because of the way the service was implemented.</span></span> <span data-ttu-id="fbefc-123">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="fbefc-123">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="b1a43-121">运行示例时，操作的请求和响应将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="b1a43-121">When you run the sample, the requests and responses of the operation are displayed in the client console window.</span></span> <span data-ttu-id="b1a43-122">请注意，对加法和减法列显了数量级，而对乘法和除法却没有列显，这是由服务的实现方式确定的。</span><span class="sxs-lookup"><span data-stu-id="b1a43-122">Note that a magnitude is printed for addition and subtraction but not for multiplication and division because of the way the service was implemented.</span></span> <span data-ttu-id="b1a43-123">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="b1a43-123">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -154,19 +154,19 @@ No magnitude was sent from the service
     Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="fbefc-124">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="fbefc-124">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="b1a43-124">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="b1a43-124">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="fbefc-125">确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="fbefc-125">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="b1a43-125">确保已为 Windows[通信基础示例执行一次性设置过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="b1a43-125">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2. <span data-ttu-id="fbefc-126">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="fbefc-126">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2. <span data-ttu-id="b1a43-126">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="b1a43-126">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3. <span data-ttu-id="fbefc-127">若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="fbefc-127">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3. <span data-ttu-id="b1a43-127">要在单机或跨计算机配置中运行示例，请按照[运行 Windows 通信基础示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)说明操作。</span><span class="sxs-lookup"><span data-stu-id="b1a43-127">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="fbefc-128">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="fbefc-128">The samples may already be installed on your machine.</span></span> <span data-ttu-id="fbefc-129">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="fbefc-129">Check for the following (default) directory before continuing.</span></span>  
->   
+> <span data-ttu-id="b1a43-128">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="b1a43-128">The samples may already be installed on your machine.</span></span> <span data-ttu-id="b1a43-129">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="b1a43-129">Check for the following (default) directory before continuing.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> <span data-ttu-id="fbefc-130">如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="fbefc-130">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="fbefc-131">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="fbefc-131">This sample is located in the following directory.</span></span>  
->   
+>
+> <span data-ttu-id="b1a43-130">如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。</span><span class="sxs-lookup"><span data-stu-id="b1a43-130">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b1a43-131">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="b1a43-131">This sample is located in the following directory.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  

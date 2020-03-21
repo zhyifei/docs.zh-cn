@@ -9,24 +9,24 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: ca8b9fab3c53e256792faf0969b5066d5e35f6c7
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bcd0e81b730c2fc7b741662ae803633de4f6199e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744349"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141726"
 ---
-# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="e07da-102">在“Windows 窗体”中使用控件的概述</span><span class="sxs-lookup"><span data-stu-id="e07da-102">Overview of Using Controls in Windows Forms</span></span>
-<span data-ttu-id="e07da-103">本主题介绍 Windows 窗体应用程序的基本元素，并提供一个简单的示例，该示例使用控件并在 Windows 窗体应用程序中处理事件。</span><span class="sxs-lookup"><span data-stu-id="e07da-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
+# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="6d54a-102">在“Windows 窗体”中使用控件的概述</span><span class="sxs-lookup"><span data-stu-id="6d54a-102">Overview of Using Controls in Windows Forms</span></span>
+<span data-ttu-id="6d54a-103">本主题介绍 Windows 窗体应用程序的基本元素，并提供一个简单的示例，用于使用控件并处理 Windows 窗体应用程序中的事件。</span><span class="sxs-lookup"><span data-stu-id="6d54a-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
   
-## <a name="simple-windows-forms-applications"></a><span data-ttu-id="e07da-104">简单的 Windows 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="e07da-104">Simple Windows Forms Applications</span></span>  
- <span data-ttu-id="e07da-105">Windows 窗体应用程序至少包含以下元素：</span><span class="sxs-lookup"><span data-stu-id="e07da-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
+## <a name="simple-windows-forms-applications"></a><span data-ttu-id="6d54a-104">简单窗口窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="6d54a-104">Simple Windows Forms Applications</span></span>  
+ <span data-ttu-id="6d54a-105">至少，Windows 窗体应用程序包含以下元素：</span><span class="sxs-lookup"><span data-stu-id="6d54a-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
   
-- <span data-ttu-id="e07da-106">一个或多个派生自 <xref:System.Windows.Forms.Form?displayProperty=nameWithType>的类。</span><span class="sxs-lookup"><span data-stu-id="e07da-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
+- <span data-ttu-id="6d54a-106">派生自<xref:System.Windows.Forms.Form?displayProperty=nameWithType>的一个或多个类。</span><span class="sxs-lookup"><span data-stu-id="6d54a-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
   
-- <span data-ttu-id="e07da-107">一种 `Main` 方法，该方法调用 `static` （`shared` Visual Basic） <xref:System.Windows.Forms.Application.Run%2A> 方法并向其传递 <xref:System.Windows.Forms.Form> 实例。</span><span class="sxs-lookup"><span data-stu-id="e07da-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="e07da-108"><xref:System.Windows.Forms.Application.Run%2A> 方法处理从操作系统到应用程序的消息。</span><span class="sxs-lookup"><span data-stu-id="e07da-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
+- <span data-ttu-id="6d54a-107">调用`Main` `static` （`shared`在 Visual Basic 中）<xref:System.Windows.Forms.Application.Run%2A>方法并将<xref:System.Windows.Forms.Form>实例传递给它的方法。</span><span class="sxs-lookup"><span data-stu-id="6d54a-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="6d54a-108">该方法<xref:System.Windows.Forms.Application.Run%2A>处理从操作系统到应用程序的消息。</span><span class="sxs-lookup"><span data-stu-id="6d54a-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
   
- <span data-ttu-id="e07da-109">下面的代码示例演示 Windows 窗体应用程序的基本元素。</span><span class="sxs-lookup"><span data-stu-id="e07da-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
+ <span data-ttu-id="6d54a-109">以下代码示例显示了 Windows 窗体应用程序的基本元素。</span><span class="sxs-lookup"><span data-stu-id="6d54a-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -45,8 +45,8 @@ Public Class MyForm
    <STAThread()> _  
    Public Shared Sub Main()  
       Dim aform As New MyForm()  
-      ' The Application.Run method processes messages from the operating system   
-      ' to your application. If you comment out the next line of code,   
+      ' The Application.Run method processes messages from the operating system
+      ' to your application. If you comment out the next line of code,
       ' your application will compile and execute, but because it is not in the  
       ' message loop, it will exit after an instance of the form is created.  
       Application.Run(aform)  
@@ -66,16 +66,16 @@ public class MyForm : Form {
    [STAThread]  
    public static void Main(string[] args) {  
      MyForm aform = new MyForm();  
-// The Application.Run method processes messages from the operating system   
-// to your application. If you comment out the next line of code,   
+// The Application.Run method processes messages from the operating system
+// to your application. If you comment out the next line of code,
 // your application will compile and execute, but because it is not in the // message loop, it will exit after an instance of the form is created.  
       Application.Run(aform);  
    }  
 }  
 ```  
   
-## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="e07da-110">在 Windows 窗体应用程序中使用控件</span><span class="sxs-lookup"><span data-stu-id="e07da-110">Using Controls in a Windows Forms Application</span></span>  
- <span data-ttu-id="e07da-111">下面的代码示例演示了一个简单的应用程序，该应用程序演示 Windows 窗体应用程序如何使用控件并处理事件。</span><span class="sxs-lookup"><span data-stu-id="e07da-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="e07da-112">该示例由窗体上的三个按钮组成：每个按钮在单击时都将更改背景色。</span><span class="sxs-lookup"><span data-stu-id="e07da-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
+## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="6d54a-110">在 Windows 窗体应用程序中使用控件</span><span class="sxs-lookup"><span data-stu-id="6d54a-110">Using Controls in a Windows Forms Application</span></span>  
+ <span data-ttu-id="6d54a-111">下面的代码示例显示了一个简单的应用程序，它说明了 Windows 窗体应用程序如何使用控件和处理事件。</span><span class="sxs-lookup"><span data-stu-id="6d54a-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="6d54a-112">该示例由窗体上的三个按钮组成;单击时，每个按钮都会更改背景颜色。</span><span class="sxs-lookup"><span data-stu-id="6d54a-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -101,9 +101,9 @@ Public Class MyForm
       MyBase.Dispose(disposing)  
    End Sub  
   
-   ' InitializeComponent is a helper method for the constructor.   
-   ' It is included for consistency with code that is   
-   ' auto-generated by the Windows Forms designer in Visual Studio.   
+   ' InitializeComponent is a helper method for the constructor.
+   ' It is included for consistency with code that is
+   ' auto-generated by the Windows Forms designer in Visual Studio.
    Private Sub InitializeComponent()  
   
       ' Creates three buttons, sets their properties, and attaches  
@@ -140,7 +140,7 @@ Public Class MyForm
          Else  
             Me.BackColor = Color.Green  
          End If  
-      End If   
+      End If
    End Sub  
   
    ' The STAThreadAttribute informs the common language runtime that  
@@ -164,21 +164,21 @@ public class MyForm : Form {
    private Button blue;  
    private Button green;  
   
-   public MyForm() : base() {     
-      InitializeComponent();     
+   public MyForm() : base() {
+      InitializeComponent();
    }  
   
    protected override void Dispose(bool disposing) {  
       base.Dispose(disposing);  
    }  
   
-// InitializeComponent is a helper method for the constructor.   
-// It is included for consistency with code that is   
-// auto-generated by the Windows Forms designer in Visual Studio.   
+// InitializeComponent is a helper method for the constructor.
+// It is included for consistency with code that is
+// auto-generated by the Windows Forms designer in Visual Studio.
    private void InitializeComponent() {  
   
-// A delegate for the click event of a button. The argument to   
-// the constructor contains a reference to the method that performs the   
+// A delegate for the click event of a button. The argument to
+// the constructor contains a reference to the method that performs the
 // event handling logic.  
       EventHandler handler = new EventHandler(button_Click);  
   
@@ -204,7 +204,7 @@ public class MyForm : Form {
       green.Location = new Point(100, 150);  
       green.Size = new Size(50, 50);  
       green.Click += handler;  
-      Controls.Add(green);        
+      Controls.Add(green);
       }  
   
    // Event handler.  
@@ -223,7 +223,7 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e07da-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e07da-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6d54a-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6d54a-113">See also</span></span>
 
-- [<span data-ttu-id="e07da-114">使用 .NET Framework 开发自定义 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="e07da-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
-- [<span data-ttu-id="e07da-115">Windows 窗体控件开发基础知识</span><span class="sxs-lookup"><span data-stu-id="e07da-115">Windows Forms Control Development Basics</span></span>](windows-forms-control-development-basics.md)
+- [<span data-ttu-id="6d54a-114">使用 .NET Framework 开发自定义 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="6d54a-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
+- [<span data-ttu-id="6d54a-115">Windows 窗体控件开发基础知识</span><span class="sxs-lookup"><span data-stu-id="6d54a-115">Windows Forms Control Development Basics</span></span>](windows-forms-control-development-basics.md)

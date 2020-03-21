@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4d1e6700-d4be-4fbd-8796-bfb4c07abbc8
 topic_type:
 - apiref
-ms.openlocfilehash: aae122b6cf94e1205671dc7bbc0231c7d265b932
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ca4d7fe32b71401c16e64314bd8b4a9eb0f7766
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109318"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178338"
 ---
-# <a name="asm_cmp_flags-enumeration"></a><span data-ttu-id="35d61-102">ASM_CMP_FLAGS 枚举</span><span class="sxs-lookup"><span data-stu-id="35d61-102">ASM_CMP_FLAGS Enumeration</span></span>
-<span data-ttu-id="35d61-103">指示由[IAssemblyName：： IsEqual](iassemblyname-isequal-method.md)方法进行比较的两个程序集的版本、生成、区域性、签名等。</span><span class="sxs-lookup"><span data-stu-id="35d61-103">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](iassemblyname-isequal-method.md) method.</span></span>  
+# <a name="asm_cmp_flags-enumeration"></a><span data-ttu-id="03dd9-102">ASM_CMP_FLAGS 枚举</span><span class="sxs-lookup"><span data-stu-id="03dd9-102">ASM_CMP_FLAGS Enumeration</span></span>
+<span data-ttu-id="03dd9-103">指示要由[IAssemblyname：：isEqual](iassemblyname-isequal-method.md)方法比较的两个程序集的版本、生成、区域性、签名等。</span><span class="sxs-lookup"><span data-stu-id="03dd9-103">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](iassemblyname-isequal-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="35d61-104">语法</span><span class="sxs-lookup"><span data-stu-id="35d61-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03dd9-104">语法</span><span class="sxs-lookup"><span data-stu-id="03dd9-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -35,10 +35,10 @@ typedef enum {
     ASM_CMPF_BUILD_NUMBER           = 0x8,  
     ASM_CMPF_REVISION_NUMBER        = 0x10,  
   
-    ASM_CMPF_VERSION                =   
-                 ASM_CMPF_MAJOR_VERSION |   
-                 ASM_CMPF_MINOR_VERSION |   
-                 ASM_CMPF_BUILD_NUMBER  |   
+    ASM_CMPF_VERSION                =
+                 ASM_CMPF_MAJOR_VERSION |
+                 ASM_CMPF_MINOR_VERSION |
+                 ASM_CMPF_BUILD_NUMBER  |
                  ASM_CMPF_REVISION_NUMBER,  
   
     ASM_CMPF_PUBLIC_KEY_TOKEN       = 0x20,  
@@ -51,30 +51,30 @@ typedef enum {
     ASM_CMPF_MVID                   = 0x1000,  
     ASM_CMPF_SIGNATURE              = 0x2000,  
   
-    ASM_CMPF_IL_ALL                 =   
-                 ASM_CMPF_NAME             |   
-                 ASM_CMPF_VERSION          |   
-                 ASM_CMPF_PUBLIC_KEY_TOKEN |   
+    ASM_CMPF_IL_ALL                 =
+                 ASM_CMPF_NAME             |
+                 ASM_CMPF_VERSION          |
+                 ASM_CMPF_PUBLIC_KEY_TOKEN |
                  ASM_CMPF_CULTURE,  
   
-    ASM_CMPF_IL_NO_VERSION          =   
-                 ASM_CMPF_NAME             |   
-                 ASM_CMPF_PUBLIC_KEY_TOKEN |   
+    ASM_CMPF_IL_NO_VERSION          =
+                 ASM_CMPF_NAME             |
+                 ASM_CMPF_PUBLIC_KEY_TOKEN |
                  ASM_CMPF_CULTURE  
   
 } ASM_CMP_FLAGS;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="35d61-105">要求</span><span class="sxs-lookup"><span data-stu-id="35d61-105">Requirements</span></span>  
- <span data-ttu-id="35d61-106">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="35d61-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03dd9-105">要求</span><span class="sxs-lookup"><span data-stu-id="03dd9-105">Requirements</span></span>  
+ <span data-ttu-id="03dd9-106">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="03dd9-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="35d61-107">**标头：** 合成。h</span><span class="sxs-lookup"><span data-stu-id="35d61-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="03dd9-107">**标题：** 融合.h</span><span class="sxs-lookup"><span data-stu-id="03dd9-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="35d61-108">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="35d61-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="03dd9-108">**库：** 作为资源包含在 MsCorEE.dll 中</span><span class="sxs-lookup"><span data-stu-id="03dd9-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="35d61-109">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="35d61-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="03dd9-109">**.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03dd9-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="35d61-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="35d61-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03dd9-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="03dd9-110">See also</span></span>
 
-- [<span data-ttu-id="35d61-111">IAssemblyName 接口</span><span class="sxs-lookup"><span data-stu-id="35d61-111">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
-- [<span data-ttu-id="35d61-112">合成枚举</span><span class="sxs-lookup"><span data-stu-id="35d61-112">Fusion Enumerations</span></span>](fusion-enumerations.md)
+- [<span data-ttu-id="03dd9-111">IAssemblyName 接口</span><span class="sxs-lookup"><span data-stu-id="03dd9-111">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+- [<span data-ttu-id="03dd9-112">合成枚举</span><span class="sxs-lookup"><span data-stu-id="03dd9-112">Fusion Enumerations</span></span>](fusion-enumerations.md)

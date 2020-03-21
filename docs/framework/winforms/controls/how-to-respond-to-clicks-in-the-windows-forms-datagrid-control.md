@@ -1,5 +1,5 @@
 ---
-title: 响应 DataGrid 控件中的单击
+title: 响应数据网格控制中的点击
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 9aa1331116cd3f2f8050ff9f8cc8cc52d25726d1
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e72d117b12d43ece8c4d05ed29ab45693418eede
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735763"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141934"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a><span data-ttu-id="4b39e-102">如何：响应 Windows 窗体 DataGrid 控件中的单击</span><span class="sxs-lookup"><span data-stu-id="4b39e-102">How to: Respond to Clicks in the Windows Forms DataGrid Control</span></span>
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a><span data-ttu-id="81054-102">如何：响应 Windows 窗体 DataGrid 控件中的单击</span><span class="sxs-lookup"><span data-stu-id="81054-102">How to: Respond to Clicks in the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
-> <span data-ttu-id="4b39e-103"><xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。</span><span class="sxs-lookup"><span data-stu-id="4b39e-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="4b39e-104">有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="4b39e-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
+> <span data-ttu-id="81054-103"><xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。</span><span class="sxs-lookup"><span data-stu-id="81054-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="81054-104">有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="81054-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- <span data-ttu-id="4b39e-105">将 Windows 窗体 <xref:System.Windows.Forms.DataGrid> 连接到数据库后，可以监视用户单击了哪个单元格。</span><span class="sxs-lookup"><span data-stu-id="4b39e-105">After the Windows Forms <xref:System.Windows.Forms.DataGrid> is connected to a database, you can monitor which cell the user clicked.</span></span>  
+ <span data-ttu-id="81054-105">将 Windows<xref:System.Windows.Forms.DataGrid>窗体连接到数据库后，可以监视用户单击的单元格。</span><span class="sxs-lookup"><span data-stu-id="81054-105">After the Windows Forms <xref:System.Windows.Forms.DataGrid> is connected to a database, you can monitor which cell the user clicked.</span></span>  
   
-### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a><span data-ttu-id="4b39e-106">检测 DataGrid 的用户何时选择不同的单元格</span><span class="sxs-lookup"><span data-stu-id="4b39e-106">To detect when the user of the DataGrid selects a different cell</span></span>  
+### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a><span data-ttu-id="81054-106">检测 DataGrid 用户何时选择其他单元格</span><span class="sxs-lookup"><span data-stu-id="81054-106">To detect when the user of the DataGrid selects a different cell</span></span>  
   
-- <span data-ttu-id="4b39e-107">在 <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> 事件处理程序中，编写代码以进行适当的响应。</span><span class="sxs-lookup"><span data-stu-id="4b39e-107">In the <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> event handler, write code to respond appropriately.</span></span>  
+- <span data-ttu-id="81054-107">在事件<xref:System.Windows.Forms.DataGrid.CurrentCellChanged>处理程序中，编写代码以做出适当的响应。</span><span class="sxs-lookup"><span data-stu-id="81054-107">In the <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> event handler, write code to respond appropriately.</span></span>  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -38,27 +38,27 @@ ms.locfileid: "76735763"
     ```  
   
     ```csharp  
-    private void myDataGrid_CurrentCellChanged(object sender,   
+    private void myDataGrid_CurrentCellChanged(object sender,
     System.EventArgs e)  
     {  
        MessageBox.Show ("Col is " + myDataGrid.CurrentCell.ColumnNumber  
-          + ", Row is " + myDataGrid.CurrentCell.RowNumber   
+          + ", Row is " + myDataGrid.CurrentCell.RowNumber
           + ", Value is " + myDataGrid[myDataGrid.CurrentCell] );  
     }  
     ```  
   
-     <span data-ttu-id="4b39e-108">（视觉C#对象）将以下代码放在窗体的构造函数中以注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="4b39e-108">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="81054-108">（视觉 C#）将以下代码放在窗体的构造函数中以注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="81054-108">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.myDataGrid.CurrentCellChanged += new  
        System.EventHandler(this.myDataGrid_CurrentCellChanged);  
     ```  
   
-### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a><span data-ttu-id="4b39e-109">确定用户单击的数据网格部分</span><span class="sxs-lookup"><span data-stu-id="4b39e-109">To determine which part of the DataGrid the user clicked</span></span>  
+### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a><span data-ttu-id="81054-109">确定用户单击的数据网格的哪个部分</span><span class="sxs-lookup"><span data-stu-id="81054-109">To determine which part of the DataGrid the user clicked</span></span>  
   
-- <span data-ttu-id="4b39e-110">在相应的事件处理程序中调用 <xref:System.Windows.Forms.DataGrid.HitTest%2A> 方法，如 <xref:System.Windows.Forms.Control.MouseDown> 或 <xref:System.Windows.Forms.Control.Click> 事件。</span><span class="sxs-lookup"><span data-stu-id="4b39e-110">Call the <xref:System.Windows.Forms.DataGrid.HitTest%2A> method in an appropriate event handler, such as for the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.Click> event.</span></span>  
+- <span data-ttu-id="81054-110">在<xref:System.Windows.Forms.DataGrid.HitTest%2A>适当的事件处理程序中调用 方法，例如 对于<xref:System.Windows.Forms.Control.MouseDown>或<xref:System.Windows.Forms.Control.Click>事件。</span><span class="sxs-lookup"><span data-stu-id="81054-110">Call the <xref:System.Windows.Forms.DataGrid.HitTest%2A> method in an appropriate event handler, such as for the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.Click> event.</span></span>  
   
-     <span data-ttu-id="4b39e-111"><xref:System.Windows.Forms.DataGrid.HitTest%2A> 方法返回包含已单击区域的行和列的 <xref:System.Windows.Forms.DataGrid.HitTestInfo> 对象。</span><span class="sxs-lookup"><span data-stu-id="4b39e-111">The <xref:System.Windows.Forms.DataGrid.HitTest%2A> method returns a <xref:System.Windows.Forms.DataGrid.HitTestInfo> object that contains the row and column of a clicked area.</span></span>  
+     <span data-ttu-id="81054-111">该方法<xref:System.Windows.Forms.DataGrid.HitTest%2A>返回一个<xref:System.Windows.Forms.DataGrid.HitTestInfo>包含已单击区域的行和列的对象。</span><span class="sxs-lookup"><span data-stu-id="81054-111">The <xref:System.Windows.Forms.DataGrid.HitTest%2A> method returns a <xref:System.Windows.Forms.DataGrid.HitTestInfo> object that contains the row and column of a clicked area.</span></span>  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -92,7 +92,7 @@ ms.locfileid: "76735763"
     ```  
   
     ```csharp  
-    private void myDataGrid_MouseDown(object sender,   
+    private void myDataGrid_MouseDown(object sender,
     System.Windows.Forms.MouseEventArgs e)  
     {  
        DataGrid myGrid = (DataGrid) sender;  
@@ -100,7 +100,7 @@ ms.locfileid: "76735763"
        hti = myGrid.HitTest(e.X, e.Y);  
        string message = "You clicked ";  
   
-       switch (hti.Type)   
+       switch (hti.Type)
        {  
           case System.Windows.Forms.DataGrid.HitTestType.None :  
              message += "the background.";  
@@ -132,7 +132,7 @@ ms.locfileid: "76735763"
     }  
     ```  
   
-     <span data-ttu-id="4b39e-112">（视觉C#对象）将以下代码放在窗体的构造函数中以注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="4b39e-112">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="81054-112">（视觉 C#）将以下代码放在窗体的构造函数中以注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="81054-112">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.myDataGrid.MouseDown += new  
@@ -140,7 +140,7 @@ ms.locfileid: "76735763"
        (this.myDataGrid_MouseDown);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="4b39e-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4b39e-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81054-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="81054-113">See also</span></span>
 
-- [<span data-ttu-id="4b39e-114">DataGrid 控件</span><span class="sxs-lookup"><span data-stu-id="4b39e-114">DataGrid Control</span></span>](datagrid-control-windows-forms.md)
-- [<span data-ttu-id="4b39e-115">如何：在运行时更改 Windows 窗体 DataGrid 控件中显示的数据</span><span class="sxs-lookup"><span data-stu-id="4b39e-115">How to: Change Displayed Data at Run Time in the Windows Forms DataGrid Control</span></span>](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [<span data-ttu-id="81054-114">DataGrid 控件</span><span class="sxs-lookup"><span data-stu-id="81054-114">DataGrid Control</span></span>](datagrid-control-windows-forms.md)
+- [<span data-ttu-id="81054-115">如何：在运行时更改 Windows 窗体 DataGrid 控件中显示的数据</span><span class="sxs-lookup"><span data-stu-id="81054-115">How to: Change Displayed Data at Run Time in the Windows Forms DataGrid Control</span></span>](change-displayed-data-at-run-time-wf-datagrid-control.md)
