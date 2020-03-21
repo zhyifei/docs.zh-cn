@@ -2,22 +2,22 @@
 title: 挂起的实例管理
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: 3f1f4f8edcbe0e05067d3ca739ef3d5f4fe4d798
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 784ec3cdda8eedb188c3c776ed412ea40baf37ea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715946"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182792"
 ---
 # <a name="suspended-instance-management"></a>挂起的实例管理
 此示例演示如何管理已挂起的工作流实例。  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 的默认操作为 `AbandonAndSuspend`。 这意味着，在默认情况下，从 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的某个工作流实例抛出的未处理异常会导致从内存中释放（放弃）该实例，而该实例的持久版本将被标记为已挂起。 已挂起的工作流实例在取消挂起之前无法运行。
 
  此示例演示如何实现用于查询已挂起实例的命令行实用工具，以及如何为用户提供恢复或终止实例的选项。 在此示例中，一个工作流服务有意引发异常，从而使该服务挂起。 然后可以使用命令行实用工具查询该实例，并随后恢复或终止该实例。
 
-## <a name="demonstrates"></a>演示文本
- Windows Workflow Foundation （WF）中 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 和 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> <xref:System.ServiceModel.WorkflowServiceHost>。
+## <a name="demonstrates"></a>演示
+ <xref:System.ServiceModel.WorkflowServiceHost>和<xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior><xref:System.ServiceModel.Activities.WorkflowControlEndpoint>在 Windows 工作流基础 （WF）。
 
-## <a name="discussion"></a>讨论
+## <a name="discussion"></a>讨论区
  本示例中实现的命令行实用工具特定于 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 中附带的 SQL 实例存储区实现。 如果您具有该实例存储区的自定义实现，则可以使用特定于您实例存储区的实现替换示例中的 `WorkflowInstanceCommand` 实现，来改编此实用工具。
 
  所提供的实现直接针对 SQL 实例存储区来运行 SQL 命令以列出挂起的实例，并依赖于添加到 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> 的 <xref:System.ServiceModel.WorkflowServiceHost>，以便恢复或终止实例。
@@ -32,7 +32,7 @@ ms.locfileid: "74715946"
 
 2. 设置 SQL Server 数据库。
 
-    1. 在 Visual Studio 2010 命令提示符下，运行 SuspendedInstanceManagement 示例目录中的 "setup .cmd"，此操作执行以下操作：
+    1. 从 Visual Studio 2010 命令提示符中，从挂起实例管理示例目录中运行"setup.cmd"，该目录执行以下操作：
 
         1. 使用 SQL Server Express 创建持久性数据库。 如果持久性数据库已存在，则删除该数据库并重新创建一个
 
@@ -42,23 +42,23 @@ ms.locfileid: "74715946"
 
 3. 设置服务队列。
 
-    1. 在 Visual Studio 2010 中，右键单击**SampleWorkflowApp**项目，然后单击 "**设为启动项目**"。
+    1. 在 Visual Studio 2010 中，右键单击**示例工作流应用**项目，然后单击"**设置为启动项目**"。
 
-    2. 按**F5**编译并运行 SampleWorkflowApp。 这将创建所需队列。
+    2. 通过按**F5**编译并运行示例工作流应用程序。 这将创建所需队列。
 
-    3. 按**enter**停止 SampleWorkflowApp。
+    3. 按**Enter**以停止示例工作流应用。
 
-    4. 通过从命令提示符运行 Compmgmt.msc 打开“计算机管理”控制台。
+    4. 通过在命令提示符下运行 Compmgmt.msc 来打开计算机管理控制台。
 
-    5. 展开 "**服务和应用程序**"、"**消息队列**" 和 "**专用队列**"。
+    5. 扩展**服务和应用程序**，**消息队列**，**专用队列**.
 
-    6. 右键单击 " **ReceiveTx** " 队列，然后选择 "**属性**"。
+    6. 右键单击**ReceiveTx**队列并选择**属性**。
 
-    7. 选择 "**安全**" 选项卡，"允许**每个人**" 具有**接收消息**、**扫视消息**和**发送消息**的权限。
+    7. 选择"**安全**"选项卡，并允许**每个人都**具有**接收消息**、**查看消息**和**发送消息的权限**。
 
 4. 现在运行示例。
 
-    1. 在 Visual Studio 2010 中，按**Ctrl + F5**再次运行 SampleWorkflowApp 项目而不进行调试。 将在控制台窗口中输出两个终结点地址：一个用于应用程序终结点，另一个来自 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>。 随后会创建一个工作流实例，该实例的跟踪记录会出现在控制台窗口中。 该工作流实例会引发异常，从而导致该实例挂起或中止。
+    1. 在 Visual Studio 2010 中，通过按**Ctrl_F5**再次运行示例工作流App 项目，而无需调试。 将在控制台窗口中输出两个终结点地址：一个用于应用程序终结点，另一个来自 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>。 随后会创建一个工作流实例，该实例的跟踪记录会出现在控制台窗口中。 该工作流实例会引发异常，从而导致该实例挂起或中止。
 
     2. 随后可以使用命令行实用工具对这些实例中的任何一个进行进一步操作。 命令行参数的语法如下：
 
@@ -70,17 +70,17 @@ ms.locfileid: "74715946"
 
 1. 通过在 `vs2010` 命令提示符下运行 Compmgmt.msc 来打开计算机管理控制台。
 
-2. 展开 "**服务和应用程序**"、"**消息队列**" 和 "**专用队列**"。
+2. 扩展**服务和应用程序**，**消息队列**，**专用队列**.
 
-3. 删除**ReceiveTx**队列。
+3. 删除**接收Tx**队列。
 
 4. 若要删除持久性数据库，请运行 cleanup.cmd。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
->   
+>
+> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\SuspendedInstanceManagement`

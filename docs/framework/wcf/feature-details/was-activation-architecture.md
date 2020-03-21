@@ -2,12 +2,12 @@
 title: WAS 激活体系结构
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 01c30db1182ece6dd968b69cc4efcaa2d9fabd79
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 67ddcd97ac75ddeb0765c38bb9ce7b5e8f039272
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737513"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184244"
 ---
 # <a name="was-activation-architecture"></a>WAS 激活体系结构
 本主题详细列举和讨论了 Windows 进程激活服务（也称为 WAS）的组件。  
@@ -30,14 +30,14 @@ ms.locfileid: "76737513"
  ![显示 WAS 体系结构的屏幕截图。](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>侦听器适配器  
- 侦听器适配器是一些单独的 Windows 服务，这些服务可以实现用于通过其侦听的网络协议接收消息的网络通信逻辑。 下表列出了用于 Windows Communication Foundation （WCF）协议的侦听器适配器。  
+ 侦听器适配器是一些单独的 Windows 服务，这些服务可以实现用于通过其侦听的网络协议接收消息的网络通信逻辑。 下表列出了 Windows 通信基础 （WCF） 协议的侦听器适配器。  
   
-|侦听器适配器服务名称|协议|注意|  
+|侦听器适配器服务名称|协议|说明|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|http|提供 IIS 7.0 和 WCF HTTP 激活的通用组件。|  
+|W3SVC|http|为 IIS 7.0 和 WCF 提供 HTTP 激活的通用组件。|  
 |NetTcpActivator|net.tcp|取决于 NetTcpPortSharing 服务。|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|net.msmq|用于基于 WCF 的消息队列应用程序。|  
+|NetMsmqActivator|net.msmq|适用于基于 WCF 的消息队列应用程序。|  
 |NetMsmqActivator|msmq.formatname|提供与现有消息队列应用程序的向后兼容性。|  
   
  在安装过程中，在 applicationHost.config 文件中注册特定协议的侦听器适配器，如下面的 XML 示例中所示。  
@@ -46,13 +46,13 @@ ms.locfileid: "76737513"
 <system.applicationHost>  
     <listenerAdapters>  
         <add name="http" />  
-        <add name="net.tcp"   
+        <add name="net.tcp"
           identity="S-1-5-80-3579033775-2824656752-1522793541-1960352512-462907086" />  
-         <add name="net.pipe"   
+         <add name="net.pipe"
            identity="S-1-5-80-2943419899-937267781-4189664001-1229628381-3982115073" />  
-          <add name="net.msmq"   
+          <add name="net.msmq"
             identity="S-1-5-80-89244771-1762554971-1007993102-348796144-2203111529" />  
-           <add name="msmq.formatname"   
+           <add name="msmq.formatname"
              identity="S-1-5-80-89244771-1762554971-1007993102-348796144-2203111529" />  
     </listenerAdapters>  
 </system.applicationHost>  
@@ -64,13 +64,13 @@ ms.locfileid: "76737513"
 ```xml  
 <system.web>  
    <protocols>  
-      <add name="net.tcp"   
+      <add name="net.tcp"
         processHandlerType=  
          "System.ServiceModel.WasHosting.TcpProcessProtocolHandler"  
         appDomainHandlerType=  
          "System.ServiceModel.WasHosting.TcpAppDomainProtocolHandler"  
         validate="false" />  
-      <add name="net.pipe"   
+      <add name="net.pipe"
         processHandlerType=  
          "System.ServiceModel.WasHosting.NamedPipeProcessProtocolHandler"  
           appDomainHandlerType=  

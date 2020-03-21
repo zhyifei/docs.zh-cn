@@ -10,22 +10,22 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-ms.openlocfilehash: 92e52fb130adecd6acdbeb8eac8d624d3c291094
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b679539be1aeb593124eb35a235bcc578decb4c0
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129982"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111772"
 ---
 # <a name="create-resource-files-for-net-apps"></a>为 .NET 应用创建资源文件
 
 可以将字符串、图像或对象数据等资源包含在资源文件中，方便应用程序使用。 .NET Framework 提供了五种创建资源文件的方法：
 
-- 创建一个包含字符串资源的文本文件。 可以使用[资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 将文本文件转换成二进制资源 (.resources) 文件。 然后使用语言编译器将这个二进制资源文件嵌入可执行应用程序或应用程序库，或者使用[程序集链接器 (Al.exe)](../tools/al-exe-assembly-linker.md) 将这个二进制资源文件嵌入附属程序集。 有关详细信息，请参阅[文本文件中的资源](creating-resource-files-for-desktop-apps.md#TextFiles)部分。
+- 创建一个包含字符串资源的文本文件。 可以使用[资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 将文本文件转换成二进制资源 (.resources) 文件。 然后，可以使用语言编译器将二进制资源文件嵌入到应用程序可执行文件或应用程序库中，也可以使用[程序集链接器 （Al.exe）](../tools/al-exe-assembly-linker.md)将其嵌入到附属程序集中。 有关详细信息，请参阅[文本文件中的资源](creating-resource-files-for-desktop-apps.md#TextFiles)部分。
 
 - 创建一个包含字符串、图像或对象数据的 XML 资源 (.resx) 文件。 可以使用[资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 将 .resx 文件转换成二进制资源 (.resources) 文件。 然后使用语言编译器将这个二进制资源文件嵌入可执行应用程序或应用程序库，或者使用[程序集链接器 (Al.exe)](../tools/al-exe-assembly-linker.md) 将这个二进制资源文件嵌入附属程序集。 有关详细信息，请参阅 [.resx 文件中的资源](creating-resource-files-for-desktop-apps.md#ResxFiles)部分。
 
-- 使用 <xref:System.Resources> 命名空间中的类型以编程方式创建一个 XML 资源 (.resx) 文件。 可以创建一个 .resx 文件、枚举其资源并按名称检索特定资源。 有关详细信息，请参阅主题[以编程方式使用 .resx 文件](working-with-resx-files-programmatically.md)。
+- 使用 <xref:System.Resources> 命名空间中的类型以编程方式创建一个 XML 资源 (.resx) 文件。 可以创建一个 .resx 文件、枚举其资源并按名称检索特定资源。 有关详细信息，请参阅[以编程方式使用 .resx 文件](working-with-resx-files-programmatically.md)。
 
 - 以编程方式创建一个二进制资源 (.resources) 文件。 然后使用语言编译器将该文件嵌入可执行应用程序或应用程序库，或者使用[程序集链接器 (Al.exe)](../tools/al-exe-assembly-linker.md) 将这个二进制资源文件嵌入附属程序集。 有关详细信息，请参阅 [.resources 文件中的资源](creating-resource-files-for-desktop-apps.md#ResourcesFiles)部分。
 
@@ -58,7 +58,7 @@ name2=value2
 
  .txt 和 .restext 文件的资源文件格式是相同的。 .restext 文件扩展名仅用于明确区分文本文件和基于文本的资源文件。
 
- 字符串资源显示为名称/值对，其中名称是标识资源的字符串，值是在将名称传递给资源检索方法（例如 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>）时返回的资源字符串。 名称和值必须用等号 (=) 分隔开。 例如:
+ 字符串资源显示为名称/值对，其中名称是标识资源的字符串，值是在将名称传递给资源检索方法（例如 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>）时返回的资源字符串********。 名称和值必须用等号 (=) 分隔开****。 例如：
 
 ```text
 FileMenuName=File
@@ -70,13 +70,13 @@ HelpMenuName=Help
 > [!CAUTION]
 > 请勿使用资源文件存储密码、 安全敏感信息或私人数据。
 
- 在文本文件中，允许存在空字符串（即值为 <xref:System.String.Empty?displayProperty=nameWithType> 的资源）。 例如:
+ 在文本文件中，允许存在空字符串（即值为 <xref:System.String.Empty?displayProperty=nameWithType> 的资源）。 例如：
 
 ```text
 EmptyString=
 ```
 
- 从 .NET Framework 4.5 开始并在所有版本的 .NET Core 中，文本文件支持使用 `#ifdef`symbol... `#endif` 和 `#if !`symbol... `#endif` 构造的传统编译。 还可以通过[资源文件生成器 (resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 使用 `/define` 开关来定义符号。 每个资源都需要其自己的 `#ifdef`symbol... `#endif` 或 `#if !`symbol... `#endif` 构造。 如果使用的是 `#ifdef` 语句，并且定义了 symbol，则关联的资源将包括在 .resources 文件中；否则，将不包括此资源。 如果使用的是 `#if !` 语句，并且没有定义 symbol，则关联的资源将包括在 .resources 文件中；否则，将不包括此资源。
+ 从 .NET 框架 4.5 开始，在所有版本的 .NET Core 中，文本`#ifdef`文件支持使用*符号*进行条件编译...`#endif`和`#if !`*符号*...`#endif`构造。 还可以通过[资源文件生成器 (resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 使用 `/define` 开关来定义符号。 每个资源都需要自己的`#ifdef`*符号*...`#endif`或`#if !`*符号*...`#endif`构造。 如果使用的是 `#ifdef` 语句，并且定义了 symbol，则关联的资源将包括在 .resources 文件中；否则，将不包括此资源**。 如果使用的是 `#if !` 语句，并且没有定义 symbol，则关联的资源将包括在 .resources 文件中；否则，将不包括此资源**。
 
  注释在文本文件中为可选项，并且在每行开头使用分号 (;) 或者井号 (#) 开头。 包含注释的行可位于文件中的任何位置。 使用[资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 创建的已编译 .resources 文件中不包含注释。
 
@@ -90,15 +90,15 @@ OKButton=OK
 CancelButton=Cancel
 ```
 
- 如果文本文件包含名称的重复匹配项，[资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 将显示一条警告，并忽略第二个名称。
+ 如果文本文件包含名称的重复匹配项，[资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 将显示一条警告，并忽略第二个名称**。
 
- *值*不能包含新行字符，但是可以使用 C 语言样式的转义符（如 `\n`）来表示新行，并 `\t` 以表示制表符。如果转义，还可以包含反斜杠字符（例如，"\\\\"）。 此外，允许使用空字符串。
+ *值*不能包含新的行字符，但可以使用 C 语言样式转义字符，如`\n`表示新行和`\t`表示选项卡。如果反斜杠字符被转义（例如，""），\\\\也可以包括它。 此外，允许使用空字符串。
 
- 应使用 little-endian 或 big-endian 字节顺序的 UTF-8 编码或 UTF-16 编码以文本文件格式保存资源。 但是在默认情况下，将 .txt 文件转换为 .resources 文件的[资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 会将文件默认视为 UTF-8 文件。 如果希望 Resgen.exe 识别使用 UTF-16 编码的文件，必须在文件开头包含 Unicode 字节顺序标记 (U + FEFF)。
+ 使用 UTF-8 编码或 UTF-16 编码以小端编码或大字节顺序保存文本文件格式的资源。 但是在默认情况下，将 .txt 文件转换为 .resources 文件的[资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 会将文件默认视为 UTF-8 文件。 如果希望 Resgen.exe 识别使用 UTF-16 编码的文件，必须在文件开头包含 Unicode 字节顺序标记 (U + FEFF)。
 
  若要将文本格式的资源文件嵌入到 .NET 程序集，必须使用[资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 将文件转换为二进制资源 (.resources) 文件。 然后可使用语言编译器将 .resources 文件嵌入 .NET 程序集，或者使用[程序集链接器 (Al.exe)](../tools/al-exe-assembly-linker.md) 将其嵌入附属程序集。
 
- 下面的示例在简单的“Hello World”控制台应用程序中使用了一个名为 GreetingResources.txt 的文本格式的资源文件。 该文本文件定义了 `prompt` 和 `greeting` 两个字符串，分别用于提示用户输入其名字和显示一条问候。
+ 下面的示例在简单的“Hello World”控制台应用程序中使用了一个名为 GreetingResources.txt 的文本格式的资源文件。 文本文件定义两个字符串 和`prompt``greeting`，提示用户输入其名称并显示问候语。
 
 ```text
 # GreetingResources.txt
@@ -148,7 +148,7 @@ csc greeting.cs -resource:GreetingResources.resources
 > [!WARNING]
 > 请勿使用资源文件存储密码、 安全敏感信息或私人数据。
 
- 对于资源对象，data 标记中包含了 `type` 属性，用于指示资源的数据类型。 对于由二进制数据构成的对象，`data` 标记还包含 `mimetype` 属性，用以指示二进制数据的 `base64` 类型。
+ 对于资源对象，data 标记中包含了 `type` 属性，用于指示资源的数据类型****。 对于由二进制数据构成的对象，`data` 标记还包含 `mimetype` 属性，用以指示二进制数据的 `base64` 类型。
 
 > [!NOTE]
 > 所有的 .resx 文件都使用二进制序列化格式化程序来生成和分析指定类型的二进制数据。 因此如果对象的二进制序列化格式以不兼容的方式发生更改，.resx 文件可能失效。
@@ -186,7 +186,7 @@ csc greeting.cs -resource:GreetingResources.resources
 > [!NOTE]
 > 请勿使用资源文件存储密码、 安全敏感信息或私人数据。
 
- 下面的示例以编程方式创建了一个名为 CarResources.resources 的 .resources 文件，该文件存储了六个字符串、一个图标和两个由应用程序定义的对象（两个 `Automobile` 对象）。 请注意，示例中定义并实例化的 `Automobile` 类，使用 <xref:System.SerializableAttribute> 属性进行标记，这样二进制序列化格式化程序便可持久保留该类。
+ 下面的示例以编程方式创建了一个名为 CarResources.resources 的 .resources 文件，该文件存储了六个字符串、一个图标和两个由应用程序定义的对象（两个 `Automobile` 对象）。 在`Automobile`示例中定义和实例化的类使用<xref:System.SerializableAttribute>属性标记，该属性允许该属性由二进制序列化 formatter 进行持久化。
 
  [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)]
  [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]
@@ -198,12 +198,12 @@ csc greeting.cs -resource:GreetingResources.resources
 
 将资源文件添加到 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 项目时，Visual Studio 会在项目目录中创建一个 .resx 文件。 Visual Studio 会提供资源编辑器，可用于添加字符串、图像和二进制对象。 编辑器只能用于处理静态数据，因此不能用于储存编程对象；必须以编程方式将对象数据写入 .resx 文件或 .resources 文件。 有关详细信息，请参阅[以编程方式使用 .resx 文件](working-with-resx-files-programmatically.md)和 [.resources 文件中的资源](creating-resource-files-for-desktop-apps.md#ResourcesFiles)部分。
 
-如果要添加本地化资源，请为它们提供与主资源文件相同的根文件名称。 还应在文件名中指定其区域性。 例如，如果要添加一个名为 Resources.resx 的资源文件，或许还需要创建名为 Resources.en-US.resx 和 Resources.fr-fr.resx 的资源文件，分别用以保存英语（美国）和法语（法国）区域性的本地化资源。 还应该指定应用程序的默认区域性。 找不到特定区域性的本地化资源时，将使用此默认区域性的资源。 若要指定默认区域性，请在 Visual Studio 的解决方案资源管理器中，右键单击项目名称，指向“应用程序”，单击“程序集信息”，然后在“非特定语言”列表中选择合适的语言/区域性。
+如果要添加本地化资源，请为它们提供与主资源文件相同的根文件名称。 还应在文件名中指定其区域性。 例如，如果要添加一个名为 Resources.resx 的资源文件，或许还需要创建名为 Resources.en-US.resx 和 Resources.fr-fr.resx 的资源文件，分别用以保存英语（美国）和法语（法国）区域性的本地化资源。 还应该指定应用程序的默认区域性。 找不到特定区域性的本地化资源时，将使用此默认区域性的资源。 若要指定默认区域性，请在 Visual Studio 的解决方案资源管理器中，右键单击项目名称，指向“应用程序”，单击“程序集信息”，然后在“非特定语言”列表中选择合适的语言/区域性********。
 
-编译时，Visual Studio 首先将项目中的 .resx 文件转换为二进制资源 (.resources) 文件，并将其存储在项目 obj 目录的子目录中。 Visual Studio 会将不包含本地化资源的所有资源文件嵌入项目生成的主程序集中。 如果资源文件包含本地化资源，Visual Studio 会将其嵌入用于每个本地化区域性的单独的附属程序集中。 然后将每个附属程序集存储到名称与本地化区域性相对应的目录中。 例如，本地化的英语（美国）资源存储在 en-US 子目录的附属程序集中。
+编译时，Visual Studio 首先将项目中的 .resx 文件转换为二进制资源 (.resources) 文件，并将其存储在项目 obj** 目录的子目录中。 Visual Studio 会将不包含本地化资源的所有资源文件嵌入项目生成的主程序集中。 如果资源文件包含本地化资源，Visual Studio 会将其嵌入用于每个本地化区域性的单独的附属程序集中。 然后将每个附属程序集存储到名称与本地化区域性相对应的目录中。 例如，本地化的英语（美国）资源存储在 en-US 子目录的附属程序集中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Resources>
 - [桌面应用中的资源](index.md)
-- [打包和部署资源](packaging-and-deploying-resources-in-desktop-apps.md)
+- [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md)

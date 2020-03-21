@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: c178283b18aaf2c406292d9ab7e12a24c882c102
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: eb77f26bbe3546a3f90804c3648f8547fb6abad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447040"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180090"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>实现 UI 自动化 Value 控件模式
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74447040"
   
  <xref:System.Windows.Automation.ValuePattern> 控件模式用于支持具有未跨越范围的内部值的控件，以及可用字符串表示的控件。 此字符串是可编辑的，具体取决于控件及其设置。 有关实现此模式的控件的示例，请参阅 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
+<a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
  在实现 Value 控件模式时，请注意以下准则和约定：  
   
@@ -36,38 +36,38 @@ ms.locfileid: "74447040"
   
 - <xref:System.Windows.Automation.Provider.IValueProvider> 不支持检索格式设置信息或子字符串值。 在这些情况下，请实现 <xref:System.Windows.Automation.Provider.ITextProvider> 。  
   
-- 必须通过 Microsoft Word （如下所示）中的 "**颜色选取器**" 选择控件（如下所示）来实现 <xref:System.Windows.Automation.Provider.IValueProvider>，该控件支持颜色值（例如 "黄色"）与等效的内部 RGB 结构之间的字符串映射。  
+- <xref:System.Windows.Automation.Provider.IValueProvider>必须由控件实现，例如 Microsoft Word**中的颜色选取器**选择控件（如下图所示），该控件支持颜色值（例如"黄色"）和等效内部 RGB 结构之间的字符串映射。  
   
  ![突出显示黄色的颜色选取器。](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 颜色样本字符串映射的示例  
   
 - 在允许调用 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> 之前，控件应将其 `true` 设置为 <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> ，并将其 `false` 设置为 <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>。  
   
-<a name="Required_Members_for_the_IValueProvider_Interface"></a>   
+<a name="Required_Members_for_the_IValueProvider_Interface"></a>
 ## <a name="required-members-for-ivalueprovider"></a>IValueProvider 必需的成员  
  实现 <xref:System.Windows.Automation.Provider.IValueProvider>需要以下属性和方法。  
   
-|必需的成员|成员类型|注意|  
+|必需的成员|成员类型|说明|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|属性|无|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|属性|无|  
+|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|properties|无|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|properties|无|  
 |<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|方法|无|  
   
-<a name="Exceptions"></a>   
-## <a name="exceptions"></a>异常  
+<a name="Exceptions"></a>
+## <a name="exceptions"></a>例外  
  提供程序必须引发以下异常。  
   
 |异常类型|条件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -如果以不正确的格式（如格式不正确的日期）将特定于区域设置的信息传递给控件，则为。|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -如果无法将新值从字符串转换为控件可识别的格式，则为。|  
-|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -当尝试操作未启用的控件时。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> - 如果以不正确的格式（如格式不正确的日期）将特定于区域设置的信息传递给控件。|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> - 如果新值无法从字符串转换为控件识别的格式。|  
+|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> - 尝试操作未启用的控件时。|  
   
 ## <a name="see-also"></a>另请参阅
 
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
-- [ValuePattern 插入文本示例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
+- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
+- [值模式 插入文本示例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
 - [UI 自动化树概述](ui-automation-tree-overview.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)

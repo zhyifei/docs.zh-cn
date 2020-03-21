@@ -2,14 +2,14 @@
 title: <ImpliesType>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
-ms.openlocfilehash: 2f0ce1a1587e190627212cba07db298c12f4b30e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 57f4208233cd5e8544b4f1c254e3b0e0eaacd508
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128393"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181005"
 ---
-# <a name="impliestype-element-net-native"></a>\<暗示类型 > 元素（.NET Native）
+# <a name="impliestype-element-net-native"></a>\<隐含类型>元素（.NET 本机）
 如果该策略已应用到该包含类型或方法，将该策略应用到一个类型。  
   
 ## <a name="syntax"></a>语法  
@@ -19,7 +19,7 @@ ms.locfileid: "73128393"
              Activate="policy_type"  
              Browse="policy_type"  
              Dynamic="policy_type"  
-             Serialize="policy_type"   
+             Serialize="policy_type"
              DataContractSerializer="policy_setting"  
              DataContractJsonSerializer="policy_setting"  
              XmlSerializer="policy_setting"  
@@ -31,14 +31,14 @@ ms.locfileid: "73128393"
 ## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>属性  
   
-|特性|特性类型|描述|  
+|Attribute|属性类型|说明|  
 |---------------|--------------------|-----------------|  
 |`Name`|常规|必需的特性。 指定类型名称。|  
-|`Activate`|映像|可选特性。 控制运行时对构造函数的访问，以启用实例激活。|  
-|`Browse`|映像|可选特性。 控制对有关程序元素信息的查询，但并不启用任何运行时访问。|  
-|`Dynamic`|映像|可选特性。 控制运行时对所有类型成员的访问，包括构造函数、方法、字段、属性和事件，以启用动态编程。|  
+|`Activate`|反射|可选特性。 控制运行时对构造函数的访问，以启用实例激活。|  
+|`Browse`|反射|可选特性。 控制对有关程序元素信息的查询，但并不启用任何运行时访问。|  
+|`Dynamic`|反射|可选特性。 控制运行时对所有类型成员的访问，包括构造函数、方法、字段、属性和事件，以启用动态编程。|  
 |`Serialize`|序列化|可选特性。 控制运行时对构造函数、字段和属性的访问，使类型实例得到序列化和反序列化处理，这是通过库进行的，例如 Newtonsoft JSON 序列化程序。|  
 |`DataContractSerializer`|序列化|可选特性。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 类的序列化策略。|  
 |`DataContractJsonSerializer`|序列化|可选特性。 控制使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> 类的 JSON 序列化策略。|  
@@ -49,26 +49,26 @@ ms.locfileid: "73128393"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|type_name|类型名称。 如果此 `<ImpliesType>` 元素代表的类型同其包含的 `<Type>` 元素位于相同的命名空间，type_name 可能会包括类型名称而不包括其命名空间。 否则，type_name 必须包含完全限定的类型名称。|  
+|*type_name*|类型名称。 如果此 `<ImpliesType>` 元素代表的类型同其包含的 `<Type>` 元素位于相同的命名空间，type_name** 可能会包括类型名称而不包括其命名空间。 否则，type_name** 必须包含完全限定的类型名称。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|policy_setting|该设置将应用到这种策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
+|*策略_设置*|该设置将应用到这种策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
-|[\<Type>](type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|  
-|[\<Method>](method-element-net-native.md)|将反射策略应用到一个方法。|  
+|[\<键入>](type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
+|[\<类型即时>](typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|  
+|[\<方法>](method-element-net-native.md)|将反射策略应用到一个方法。|  
   
 ## <a name="remarks"></a>备注  
  该 `<ImpliesType>` 元素主要是供库使用的。 它讨论的是以下情景：  
@@ -89,7 +89,7 @@ ms.locfileid: "73128393"
   
  这个指令是不起作用的，除非 `Explicit` 的一个实例化具有一个已定义的 `Dynamic` 策略设置。 例如，如果对于 `Explicit<Int32>` 情况如此，`Implicit<Int32>` 会同其根公共成员一起被实例化，并且它们的元数据就能由动态编程访问。  
   
- 以下是一个至少可以应用到序列化程序的实际实例。 指令获得到的需求是，反射到 something 的 `IList<`*something*`>` 类型也需要反射到相应的 `List<`*something*`>` 类型，而不需要任何应用程序注释。  
+ 以下是一个至少可以应用到序列化程序的实际实例。 指令捕获了以下要求：对类型化`IList<`*的东西*`>`进行反射也涉及对相应的`List<`*事物*`>`类型进行反思，而无需任何每个应用程序注释。  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  
@@ -97,7 +97,7 @@ ms.locfileid: "73128393"
 </Type>  
 ```  
   
- `<ImpliesType>` 元素也可能出现在 `<Method>` 元素内部，因为在某些情况下泛型方法暗示着反射到了一个类型实例化上。 例如，假设有一个泛型方法 `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` 给定的库将随关联的 <xref:System.Collections.Generic.List%601> 和 <xref:System.Array> 类型动态访问。 这可以表示为：  
+ `<ImpliesType>` 元素也可能出现在 `<Method>` 元素内部，因为在某些情况下泛型方法暗示着反射到了一个类型实例化上。 例如，想象一个特定的库可以动态访问的泛型方法 `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` 以及相关的 <xref:System.Collections.Generic.List%601> 和 <xref:System.Array> 类型。 这可以表示为：  
   
 ```xml  
 <Type Name="MyType">  
@@ -108,8 +108,8 @@ ms.locfileid: "73128393"
 </Type>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [运行时指令 (rd.xml) 配置文件参考](runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令 (rd.xml) 配置文件引用](runtime-directives-rd-xml-configuration-file-reference.md)
 - [运行时指令元素](runtime-directive-elements.md)
 - [运行时指令策略设置](runtime-directive-policy-settings.md)

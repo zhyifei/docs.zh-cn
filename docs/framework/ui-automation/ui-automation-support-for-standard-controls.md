@@ -5,112 +5,112 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 49277073706444fd611ae41e762442388ac50b71
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 36028d589e98177f6a0e83092edd656860b1a8d4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789607"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179855"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>UI 自动化对标准控件的支持
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- 本主题包含有关为 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]、Win32 和 Windows 窗体框架开发的应用程序中的标准控件 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 支持的信息。  
+ 本主题包含有关支持为[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)][!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]Win32 和 Windows 窗体框架开发的应用程序中的标准控件的信息。  
   
-<a name="Windows_Presentation_Foundation_Controls"></a>   
+<a name="Windows_Presentation_Foundation_Controls"></a>
 ## <a name="windows-presentation-foundation-controls"></a>Windows Presentation Foundation 控件  
  为用户交互提供信息或支持的所有 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 控件元素均具有对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的完整本机支持。 面板等其他元素对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]不可见。  
   
-<a name="Win32_Controls"></a>   
+<a name="Win32_Controls"></a>
 ## <a name="win32-controls"></a>Win32 控件  
- 大多数 Win32 控件都通过 Uiautomationclientsideproviders.dll 中的客户端提供程序公开 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]。 此程序集将自动注册，以用于 UI 自动化客户端应用程序。  
+ 大多数 Win32 控件[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]通过 UIAutomationClientside 提供程序.dll 中的客户端提供程序公开。 此程序集将自动注册，以用于 UI 自动化客户端应用程序。  
   
- 仅为*对 comctrl32.dll*版本6中的控件提供完全支持。  
+ 完全支持仅为*ComCtrl32.dll*版本 6 中的控件提供。  
   
  支持以下控件。  
   
-|类名|控件类型|  
+|类名称|控件类型|  
 |----------------|------------------|  
-|Button|Button|  
-|Button|RadioButton|  
-|Button|组|  
-|Button|CheckBox|  
-|Button|超链接|  
-|Button|SplitButton|  
-|Button|CheckBox|  
-|ComboBoxEx32|组合框|  
-|组合框|组合框|  
-|Edit|文档|  
-|Edit|Edit|  
-|SysLink|超链接|  
-|Static|文本|  
-|Static|Image|  
-|SysIPAddress32|“自定义”|  
+|按钮|按钮|  
+|按钮|RadioButton|  
+|按钮|组|  
+|按钮|CheckBox|  
+|按钮|Hyperlink|  
+|按钮|SplitButton|  
+|按钮|CheckBox|  
+|ComboBoxEx32|ComboBox|  
+|ComboBox|ComboBox|  
+|编辑|Document|  
+|编辑|编辑|  
+|SysLink|Hyperlink|  
+|静态|文本|  
+|静态|映像|  
+|SysIPAddress32|自定义|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
-|SysListView32|列表|  
-|ListBox|列表|  
+|SysListView32|列出|  
+|ListBox|列出|  
 |ListBox|ListItem|  
 |#32768|菜单|  
 |#32768|MenuItem|  
-|msctls_progress32|进度条|  
+|msctls_progress32|ProgressBar|  
 |RichEdit|Document。 请参阅注释。|  
-|RichEdit20A|文档|  
-|RichEdit20W|文档|  
-|RichEdit50W|文档|  
-|ScrollBar|Slider|  
-|msctls_trackbar32|Slider|  
+|RichEdit20A|Document|  
+|RichEdit20W|Document|  
+|RichEdit50W|Document|  
+|ScrollBar|滑块|  
+|msctls_trackbar32|滑块|  
 |msctls_updown32|Spinner|  
 |msctls_statusbar32|StatusBar|  
-|SysTabControl32|Tab|  
+|SysTabControl32|选项卡|  
 |SysTabControl32|TabItem|  
 |ToolbarWindow32|ToolBar|  
 |ToolbarWindow32|MenuItem|  
-|ToolbarWindow32|Button|  
+|ToolbarWindow32|按钮|  
 |ToolbarWindow32|CheckBox|  
 |ToolbarWindow32|RadioButton|  
-|ToolbarWindow32|Separator|  
-|tooltips_class32|工具提示|  
-|#32774|工具提示|  
-|ReBarWindow32|ToolBar|  
+|ToolbarWindow32|分隔符|  
+|tooltips_class32|ToolTip|  
+|#32774|ToolTip|  
+|ReBarWindow32|工具栏|  
 |SysTreeView32|树|  
 |SysTreeView32|TreeItem|  
   
- **注意**只有 Windows Vista 附带的版本（在 Riched20.dll 版本3.1 及更高版本以及 Msftedit.dll 版本4.1 及更高版本）支持 RichEdit 控件。  
+ **注意**仅支持与 Windows Vista 一起附带的版本（在 RichEd20.dll 版本 3.1 及更高版本以及 MsftEdit.dll 版本 4.1 及更高版本）中支持 RichEdit 控件。  
   
  不支持以下控件。  
   
-|类名|控件类型|  
+|类名称|控件类型|  
 |----------------|------------------|  
-|SysAnimate32|Image|  
+|SysAnimate32|映像|  
 |SysPager|Spinner|  
-|SysDateTimePick32|“自定义”|  
-|SysMonthCal32|Calendar|  
-|MS_WINNOTE|ToolTip|  
-|VBBubble|ToolTip|  
-|ScrollBar（在用作独立控件时）|Slider|  
-|SuperGrid|“自定义”|  
+|SysDateTimePick32|自定义|  
+|SysMonthCal32|日历|  
+|MS_WINNOTE|工具提示|  
+|VBBubble|工具提示|  
+|ScrollBar（在用作独立控件时）|滑块|  
+|SuperGrid|自定义|  
   
-<a name="Windows_Forms_Controls"></a>   
+<a name="Windows_Forms_Controls"></a>
 ## <a name="windows-forms-controls"></a>Windows 窗体控件  
- 通过 Uiautomationclientsideproviders.dll 中的客户端提供程序 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 公开 Windows 窗体控件。 此程序集将自动注册，以用于 UI 自动化客户端应用程序。  
+ Windows 窗体控件通过[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]UIAutomationClientside 提供程序.dll 中的客户端提供程序公开。 此程序集将自动注册，以用于 UI 自动化客户端应用程序。  
   
- 通常，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支持作为 Win32 公共控件的托管包装 Windows 窗体控件。 支持以下控件。  
+ 通常，Win32 公共控件的托管包装器的 Windows 窗体控件受[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支持。 支持以下控件。  
   
-|类名称|  
+|类名|  
 |----------------|  
-|Button|  
+|按钮|  
 |CheckBox|  
 |CheckedListBox|  
 |ColorDialog|  
-|组合框|  
+|ComboBox|  
 |FolderBrowser|  
 |FontDialog|  
 |GroupBox|  
 |HscrollBar|  
 |ImageList|  
-|标签|  
+|Label|  
 |ListBox|  
 |ListView|  
 |MainMenu/ContextMenu|  
@@ -119,7 +119,7 @@ ms.locfileid: "76789607"
 |OpenFileDialog|  
 |PageSetupDialog|  
 |PrintDialog|  
-|进度条|  
+|ProgressBar|  
 |RadioButton|  
 |RichTextBox|  
 |SaveFileDialog|  
@@ -127,16 +127,16 @@ ms.locfileid: "76789607"
 |SoundPlayer|  
 |StatusBar|  
 |TabControl/TabPage|  
-|文本框|  
-|计时器|  
-|ToolBar|  
-|工具提示|  
+|TextBox|  
+|Timer|  
+|工具栏|  
+|ToolTip|  
 |TrackBar|  
 |TreeView|  
 |VscrollBar|  
 |Web 浏览器|  
   
- 以下控件仅通过其对 Microsoft Active Accessibility 的支持公开给 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]。 某些功能可能不可用。  
+ 以下控件[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]仅通过支持 Microsoft 活动辅助功能而公开。 某些功能可能不可用。  
   
 |控件名称|  
 |------------------|  
@@ -147,7 +147,7 @@ ms.locfileid: "76789607"
 |DomainUpDown|  
 |ErrorProvider|  
 |FlowLayoutPanel|  
-|窗体|  
+|Form|  
 |LinkLabel|  
 |HelpProvider|  
 |MaskedTextBox|  
@@ -163,7 +163,7 @@ ms.locfileid: "76789607"
 |ToolStrip|  
 |TableLayoutPanel|  
 |SplitContainer/SplitterPanel|  
-|拆分器|  
+|Splitter|  
 |RaftingContainer|  
 |StatusStrip|  
   

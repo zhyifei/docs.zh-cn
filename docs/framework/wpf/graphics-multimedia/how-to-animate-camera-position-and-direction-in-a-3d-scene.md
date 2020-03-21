@@ -2,27 +2,27 @@
 title: 如何：在三维场景中对照相机位置和方向进行动画处理
 ms.date: 03/30/2017
 helpviewer_keywords:
-- animation [WPF], camera position in 3-D scenes
-- camera direction [WPF], animating in 3-D scenes
-- 3-D scenes [WPF], animating camera position
-- 3-D scenes [WPF], animating camera direction
-- camera position [WPF], animating in 3-D scenes
-- animation [WPF], camera direction in 3-D scenes
+- animation [WPF], camera position in 3D scenes
+- camera direction [WPF], animating in 3D scenes
+- 3D scenes [WPF], animating camera position
+- 3D scenes [WPF], animating camera direction
+- camera position [WPF], animating in 3D scenes
+- animation [WPF], camera direction in 3D scenes
 ms.assetid: 480224b7-a5e5-4165-ba7f-ef760ddff94a
-ms.openlocfilehash: b64263a495ffe845a76317aad8f5b4a14e11b31e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ce94e154cd5aa29b59260f893ec2b63a08db0fc
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651371"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112202"
 ---
 # <a name="how-to-animate-camera-position-and-direction-in-a-3d-scene"></a>如何：在三维场景中对照相机位置和方向进行动画处理
-下面的示例演示如何将照相机位置进行动画处理和对三维场景中指向的方向进行动画处理。 这是通过使用<xref:System.Windows.Media.Animation.Point3DAnimation>并<xref:System.Windows.Media.Animation.Vector3DAnimation>进行动画处理<xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A>并<xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A>分别的属性<xref:System.Windows.Media.Media3D.PerspectiveCamera>。 可能使用如下的动画可以更改的事件响应场景旁观者的视图。  
+下面的示例演示如何为摄像机的位置设置动画，并为它在 3D 场景中指向的方向设置动画。 这是通过使用<xref:System.Windows.Media.Animation.Point3DAnimation>和<xref:System.Windows.Media.Animation.Vector3DAnimation>分别为<xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A>和<xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A>属性设置动画来完成<xref:System.Windows.Media.Media3D.PerspectiveCamera>的。 您可以使用这样的动画来更改旁观者对场景的视图，以响应事件。  
   
 ## <a name="example"></a>示例  
  [!code-xaml[Animation3DGallery_snip#PointVector3DAnimationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/PointVector3DAnimationExample.xaml#pointvector3danimationexamplewholepage)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Media.Animation.Vector3DAnimation>
 - <xref:System.Windows.Media.Animation.Point3DAnimation>

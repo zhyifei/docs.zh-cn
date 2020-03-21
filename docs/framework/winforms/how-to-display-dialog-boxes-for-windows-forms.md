@@ -1,5 +1,5 @@
 ---
-title: 如何：显示对话框
+title: 操作方式：显示对话框
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Windows Forms, calling one form from another
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
-ms.openlocfilehash: dd04a06eaa0dd7583ef2f72edb4cffa99aaaa60c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3625080c7c322e297a9de92e4f95a40c0caf3e72
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739458"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181972"
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>如何：显示 Windows 窗体的对话框
-您可以使用与在应用程序中显示任何其他窗体相同的方式来显示对话框。 启动窗体在应用程序运行时自动加载。 若要使第二个窗体或对话框显示在应用程序中，请编写用于加载和显示它的代码。 同样，若要使窗体或对话框消失，请编写代码来卸载或隐藏它。  
+显示对话框的方式与在应用程序中显示任何其他窗体的方式相同。 当应用程序运行时，启动窗体会自动加载。 要使第二个窗体或对话框显示在应用程序中，请编写代码以加载并显示它。 同样，要使窗体或对话框消失，请编写代码以卸载或隐藏它。  
   
 ### <a name="to-display-a-dialog-box"></a>显示对话框  
   
-1. 导航到要用于打开对话框的事件处理程序。 如果选择了菜单命令、单击按钮或发生其他任何事件，则会发生这种情况。  
+1. 导航到要打开对话框的事件处理程序。 当选择菜单命令、单击按钮时或发生任何其他事件时，可能会发生这种情况。  
   
 2. 在事件处理程序中，添加代码以打开对话框。 在此示例中，按钮单击事件用于显示对话框：  
   
@@ -35,7 +35,7 @@ ms.locfileid: "76739458"
     ```  
   
     ```csharp  
-    private void button1_Click(object sender, System.EventArgs e)   
+    private void button1_Click(object sender, System.EventArgs e)
     {  
        Form dlg1 = new Form();  
        dlg1.ShowDialog();  
@@ -43,7 +43,7 @@ ms.locfileid: "76739458"
     ```  
   
     ```cpp  
-    private:   
+    private:
       void button1_Click(System::Object ^ sender,  
         System::EventArgs ^ e)  
       {  

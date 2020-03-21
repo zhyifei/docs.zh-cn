@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-ms.openlocfilehash: 644b5ed751caaf1809250244b37badc8037b0f57
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 29006eba3d3a523fd24a461207ab12222a639782
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792344"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178592"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields 方法
 提供有关属于类型的字段的信息。  
@@ -31,35 +31,35 @@ ms.locfileid: "76792344"
 HRESULT GetTypeFields(  
     [in] COR_TYPEID id,  
     [in] ULONG32 celt,  
-    [out] COR_FIELD fields[],   
+    [out] COR_FIELD fields[],
     [out] ULONG32 *pceltNeeded  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `id`  
- 中检索其字段信息的类型的标识符。  
+ [在]检索字段信息的类型的类型标识符。  
   
  `celt`  
- 中要检索其字段信息的[COR_FIELD](cor-field-structure.md)对象的数量。  
+ [在]要检索字段信息[COR_FIELD](cor-field-structure.md)对象数。  
   
  `fields`  
- 弄[COR_FIELD](cor-field-structure.md)对象的数组，这些对象提供有关属于类型的字段的信息。  
+ [出]COR_FIELD[对象数组](cor-field-structure.md)，提供有关属于该类型的字段的信息。  
   
  `pceltNeeded`  
- 弄一个指针，指向 `fields`中包含的[COR_FIELD](cor-field-structure.md)对象的数量。  
+ [出]指向 中包含的`fields`[COR_FIELD](cor-field-structure.md)对象的数量的指针。  
   
 ## <a name="remarks"></a>备注  
- `celt` 参数，它指定方法用来填充 `fields`的字段信息的字段数，应与 `COR_TYPE_LAYOUT::numFields` 字段的值相对应。  
+ 参数`celt`指定方法用于填充`fields`的字段信息的字段数应对应于`COR_TYPE_LAYOUT::numFields`字段的值。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

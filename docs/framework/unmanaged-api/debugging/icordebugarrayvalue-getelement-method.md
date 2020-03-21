@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ac3cba5-c282-402e-b7ef-b46634f5176b
 topic_type:
 - apiref
-ms.openlocfilehash: 3d45caae56403d77776f1a8adbb5fb9c368ff105
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adcb7b5a27f3b8c63dbbb660a23b5c891f84ac46
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088494"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179011"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement 方法
 获取给定数组元素的值。  
@@ -30,25 +30,25 @@ ms.locfileid: "73088494"
 ```cpp  
 HRESULT GetElement (  
     [in]  ULONG32          cdim,  
-    [in, size_is(cdim), length_is(cdim)]   
+    [in, size_is(cdim), length_is(cdim)]
          ULONG32           indices[],  
     [out] ICorDebugValue   **ppValue  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `cdim`  
- 中此 `ICorDebugArrayValue` 对象的维度数。  
+ [在]此`ICorDebugArrayValue`对象的维度数。  
   
- 此值也是 `indices` 数组的大小，因为其大小等于 `ICorDebugArrayValue` 对象的维度数。  
+ 此值也是数组的大小，`indices`因为它的大小等于`ICorDebugArrayValue`对象的维度数。  
   
  `indices`  
- 中索引值的数组，其中每个值都指定 `ICorDebugArrayValue` 对象的维度内的位置。  
+ [在]索引值数组，每个数组指定`ICorDebugArrayValue`对象维度中的位置。  
   
- 此值不得为 null。  
+ 此值不能为空。  
   
  `ppValue`  
- 弄指向 ICorDebugValue 对象的地址的指针，该对象表示指定元素的值。  
+ [出]指向 ICorDebugValue 对象地址的指针，表示指定元素的值。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -57,4 +57,4 @@ HRESULT GetElement (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

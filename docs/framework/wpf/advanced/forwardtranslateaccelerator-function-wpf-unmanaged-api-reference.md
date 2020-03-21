@@ -1,5 +1,5 @@
 ---
-title: ForwardTranslateAccelerator 函数-WPF 非托管 API 参考
+title: 转发加速器功能 - WPF 非托管 API 引用
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
@@ -9,44 +9,44 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: f6e8208ffe2c186234f30f31e346ca6b1d0be4c0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a0a01be3000dc53df7855cb74015ba1164206838
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747047"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186623"
 ---
-# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>ForwardTranslateAccelerator 函数（WPF 非托管 API 参考）
-此 API 支持 Windows Presentation Foundation （WPF）基础结构，不应在代码中直接使用。  
+# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>转发加速器功能（WPF 非托管 API 引用）
+此 API 支持 Windows 演示基础 （WPF） 基础结构，不用于直接从代码中使用。  
   
- 由用于 Windows 管理的 Windows Presentation Foundation （WPF）基础结构使用。  
+ 由 Windows 演示基础 （WPF） 基础结构用于窗口管理。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT ForwardTranslateAccelerator(  
-   MSG* pMsg,   
+   MSG* pMsg,
    VARIANT_BOOL appUnhandled  
 )  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  pMsg  
  指向消息的指针。  
   
- appUnhandled  
- 当应用程序有机会处理输入消息但尚未处理时 `true`;否则，`false`。  
+ 应用程序未处理  
+ `true`当应用程序已有机会处理输入消息，但尚未处理它;否则， `false`.  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[.NET Framework 系统要求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[.NET 框架系统要求](../../get-started/system-requirements.md)。  
   
- **.DLL**  
+ **Dll：**  
   
- 在 .NET Framework 3.0 和3.5： PresentationHostDLL  
+ 在 .NET 框架 3.0 和 3.5 中：演示HostDLL.dll  
   
- 在 .NET Framework 4 及更高版本中： PresentationHost_v0400 .dll  
+ 在 .NET 框架 4 及更高版本：PresentationHost_v0400.dll  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

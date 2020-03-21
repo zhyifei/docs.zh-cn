@@ -1,5 +1,5 @@
 ---
-title: 安全透明代码，级别1
+title: 安全透明代码，级别 1
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: 8f232a7724ad831818627cbfc2845ea808a3fcfd
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 980c684bced685a61ad82ff5713ccff2b974028f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215807"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181131"
 ---
-# <a name="security-transparent-code-level-1"></a>安全透明代码，级别1
+# <a name="security-transparent-code-level-1"></a>安全透明代码，级别 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 透明度可帮助开发人员编写更安全的 .NET Framework 库来向部分信任的代码公开功能。 .NET Framework 2.0 版中引入了 1 级透明度，此透明度主要仅供 Microsoft 内部使用。 从 .NET Framework 4 开始，可以使用[2 级透明度](security-transparent-code-level-2.md)。 但是，保留了1级透明度，以便您可以识别必须用早期安全规则运行的旧代码。  
+ 透明度可帮助开发人员编写更安全的 .NET Framework 库来向部分信任的代码公开功能。 .NET Framework 2.0 版中引入了 1 级透明度，此透明度主要仅供 Microsoft 内部使用。 从 .NET 框架 4 开始，可以使用[级别 2 透明度](security-transparent-code-level-2.md)。 但已保留 1 级透明度，以便你能够标识必须使用以前的安全规则运行的旧代码。  
   
 > [!IMPORTANT]
-> 应仅出于兼容性目的而指定 1 级透明度；也就是说，仅为使用 .NET Framework 3.5 或以前的版本（使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 或不使用透明度模型）开发的代码指定 1 级透明度。 例如，对允许从部分信任的调用方 (APTCA) 调用的 .NET Framework 2.0 程序集使用 1 级透明度。 对于为 .NET Framework 4 开发的代码，请始终使用2级透明度。  
+> 应仅出于兼容性目的而指定 1 级透明度；也就是说，仅为使用 .NET Framework 3.5 或以前的版本（使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 或不使用透明度模型）开发的代码指定 1 级透明度。 例如，对允许从部分信任的调用方 (APTCA) 调用的 .NET Framework 2.0 程序集使用 1 级透明度。 对于为 .NET 框架 4 开发的代码，始终使用级别 2 透明度。  
   
  本主题包含以下各节：  
   
-- [1级透明度模型](#the_level_1_transparency_model)  
+- [1 级透明度模型](#the_level_1_transparency_model)  
   
 - [透明度特性](#transparency_attributes)  
   
 - [安全透明度示例](#security_transparency_examples)  
   
-<a name="the_level_1_transparency_model"></a>   
+<a name="the_level_1_transparency_model"></a>
 ## <a name="the-level-1-transparency-model"></a>1 级透明度模型  
  使用 1 级透明度时，你会使用一种安全模型，该模型将代码分成三类方法：安全透明的方法、安全可靠关键的方法和安全关键的方法。  
   
@@ -55,15 +55,15 @@ ms.locfileid: "77215807"
   
  为了向后兼容 .NET Framework 的早期版本，所有未用透明度特性批注的成员都被视为安全可靠关键成员。 所有未进行此类批注的类型都被视为是透明的。 没有用于验证透明度的静态分析规则。 因此，你可能需要在运行时调试透明度错误。  
   
-<a name="transparency_attributes"></a>   
+<a name="transparency_attributes"></a>
 ## <a name="transparency-attributes"></a>透明度特性  
  下表介绍可用于批注代码透明度的三个特性。  
   
 |Attribute|说明|  
 |---------------|-----------------|  
 |<xref:System.Security.SecurityTransparentAttribute>|只允许在程序集级别上应用。 将程序集中的所有类型和成员都标识为安全透明。 程序集不能包含任何安全关键代码。|  
-|<xref:System.Security.SecurityCriticalAttribute>|不带 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 属性在程序集级别使用时，默认将程序集中的所有代码都标识为安全透明的代码，但会指出程序集可能包含安全关键代码。<br /><br /> 在类级别使用时，将类或方法标识为安全关键，但不会如此标识类的成员。 若要使所有成员都成为安全关键成员，请将 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 属性设置为 <xref:System.Security.SecurityCriticalScope.Everything>。<br /><br /> 在成员级别使用时，特性仅应用于相应的成员。<br /><br /> 标识为安全关键的类或成员可以执行特权提升。 **重要提示：** 在第1级透明度中，当从程序集外部调用安全关键类型和成员时，这些类型和成员将被视为安全可靠关键类型。 应该通过针对完全信任的链接要求来保护安全关键类型和成员，以避免未经授权的特权提升。|  
-|<xref:System.Security.SecuritySafeCriticalAttribute>|标识可以由程序集中的安全透明代码访问的安全关键代码。 否则，安全透明的代码将不能访问同一程序集中的私有或内部安全关键成员。 执行此操作将影响安全关键代码，并且可能会引起意外的特权提升。 安全可靠关键代码应该经过严格的安全审核。 **注意：** 安全可靠关键类型和成员必须验证调用方的权限，以确定调用方是否有权访问受保护的资源。|  
+|<xref:System.Security.SecurityCriticalAttribute>|不带 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 属性在程序集级别使用时，默认将程序集中的所有代码都标识为安全透明的代码，但会指出程序集可能包含安全关键代码。<br /><br /> 在类级别使用时，将类或方法标识为安全关键，但不会如此标识类的成员。 若要使所有成员都成为安全关键成员，请将 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 属性设置为 <xref:System.Security.SecurityCriticalScope.Everything>。<br /><br /> 在成员级别使用时，特性仅应用于相应的成员。<br /><br /> 标识为安全关键的类或成员可以执行特权提升。 **重要提示：** 在级别 1 透明度中，当从程序集外部调用安全关键类型和成员时，它们将被视为安全关键类型。 应该通过针对完全信任的链接要求来保护安全关键类型和成员，以避免未经授权的特权提升。|  
+|<xref:System.Security.SecuritySafeCriticalAttribute>|标识可以由程序集中的安全透明代码访问的安全关键代码。 否则，安全透明的代码将不能访问同一程序集中的私有或内部安全关键成员。 执行此操作将影响安全关键代码，并且可能会引起意外的特权提升。 安全可靠关键代码应该经过严格的安全审核。 **注：** 安全关键类型和成员必须验证调用方的权限，以确定调用方是否有权访问受保护的资源。|  
   
  <xref:System.Security.SecuritySafeCriticalAttribute> 特性使得安全透明的代码可以访问同一程序集中的安全关键成员。 将程序集中的安全透明代码和安全关键代码视为两个程序集中的代码。 安全透明的代码将不能查看安全关键代码的私有或内部成员。 此外，通常会对安全关键代码进行审核，以核查对其公共接口的访问权限。 你不希望可在程序集外访问私有或内部状态，而希望将该状态保持隔离。 <xref:System.Security.SecuritySafeCriticalAttribute> 特性可在安全透明代码和安全关键代码之间保持状态隔离，同时允许在必要时替代该隔离。 安全透明的代码不能访问私有或内部安全关键代码，除非这些成员已标记有 <xref:System.Security.SecuritySafeCriticalAttribute>. 在应用 <xref:System.Security.SecuritySafeCriticalAttribute> 之前，将该成员视为公共公开的成员对其进行审核。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "77215807"
 |`SecurityCritical(SecurityCriticalScope.Everything)`|所有类型和成员都是安全关键的。|  
 |`SecurityCritical`|所有代码默认都是透明的。 但是，各个类型和成员可以有其他特性。|  
   
-<a name="security_transparency_examples"></a>   
+<a name="security_transparency_examples"></a>
 ## <a name="security-transparency-examples"></a>安全透明度示例  
  若要使用 .NET Framework 2.0 透明度规则（1 级透明度），请使用下面的程序集批注：  
   
@@ -130,5 +130,5 @@ public class B
   
 ## <a name="see-also"></a>另请参阅
 
-- [安全透明代码，级别2](security-transparent-code-level-2.md)
+- [安全透明的代码，级别 2](security-transparent-code-level-2.md)
 - [安全更改](../security/security-changes.md)

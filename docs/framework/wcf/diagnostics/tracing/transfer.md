@@ -2,18 +2,18 @@
 title: 传输
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: c3f9420ac798bf2722f825d14ca64653127432b4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0ebfff97cd33e7a588a1ab92399a97a0fbec039
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662887"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185710"
 ---
 # <a name="transfer"></a>传输
-本主题介绍 Windows Communication Foundation (WCF) 活动跟踪模型中的传输。  
+本主题介绍 Windows 通信基础 （WCF） 活动跟踪模型中的传输。  
   
 ## <a name="transfer-definition"></a>传输定义  
- 活动之间的传输表示终结点内相关活动中的事件之间的因果关系。 当两个活动之间存在控制流（例如方法调用跨越活动边界）时，这两个活动将与传输相关。 在 WCF 中，在服务上，传入字节时侦听在活动传输到接收字节活动其中创建消息对象。 有关端到端跟踪方案及其各自的活动和跟踪设计的列表，请参阅[端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)。  
+ 活动之间的传输表示终结点内相关活动中的事件之间的因果关系。 当两个活动之间存在控制流（例如方法调用跨越活动边界）时，这两个活动将与传输相关。 在 WCF 中，当服务上传入字节时，侦听活动将传输到创建消息对象的接收字节活动。 有关端到端跟踪方案及其各自的活动和跟踪设计的列表，请参阅端到端[跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)。  
   
  若要发出传输跟踪，请在跟踪源中使用如下配置代码所示的 `ActivityTracing` 设置。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "64662887"
   
  活动 M 和活动 N 之间存在控制流时，会从 M 向 N 发出传输跟踪。例如，由于存在跨越活动边界的方法调用，因而 N 会为 M 执行某些工作。 N 可能已存在或已创建。 N 由 M 生成，此时 N 是新活动，为 M 执行某些工作。  
   
- 从 M 到 N 的传输之后可能不会紧跟一个从 N 到 M 的反向传输。这是因为 M 可能会在 N 中生成一些工作，并且不会跟踪何时 N 将完成这些工作。 实际上，M 可以在 N 完成其任务之前终止。 生成侦听器活动 (N)，然后终止的"打开 ServiceHost"活动 (M) 中发生这种情况。 从 N 传回 M 意味着 N 已完成与 M 相关的工作。  
+ 从 M 到 N 的传输之后可能不会紧跟一个从 N 到 M 的反向传输。这是因为 M 可能会在 N 中生成一些工作，并且不会跟踪何时 N 将完成这些工作。 实际上，M 可以在 N 完成其任务之前终止。 这将发生在生成侦听器活动 （N） 然后终止的"打开服务主机"活动 （M） 中。 从 N 传回 M 意味着 N 已完成与 M 相关的工作。  
   
  N 可以继续执行与 M 无关的其他处理，例如继续从不同登录活动接收登录请求 (M) 的现有身份验证器活动 (N)。  
   
@@ -67,7 +67,7 @@ TraceSource ts = new TraceSource("myTS");
 // 1. remember existing ("ambient") activity for clean up  
 Guid oldGuid = Trace.CorrelationManager.ActivityId;  
 // this will be our new activity  
-Guid newGuid = Guid.NewGuid();   
+Guid newGuid = Guid.NewGuid();
 
 // 2. call transfer, indicating that we are switching to the new AID  
 ts.TraceTransfer(667, "Transferring.", newGuid);  
@@ -87,7 +87,7 @@ ts.TraceEvent(TraceEventType.Information, 667, "Hello from activity " + i);
 // Perform Work  
 // some work.  
 // Return  
-ts.TraceEvent(TraceEventType.Information, 667, "Work complete on activity " + i);   
+ts.TraceEvent(TraceEventType.Information, 667, "Work complete on activity " + i);
 
 // 6. Emit the transfer returning to the original activity  
 ts.TraceTransfer(667, "Transferring Back.", oldGuid);  
@@ -96,13 +96,13 @@ ts.TraceTransfer(667, "Transferring Back.", oldGuid);
 ts.TraceEvent(TraceEventType.Stop, 667, "Boundary: Activity " + i);  
 
 // 8. Change the tls variable to the original AID  
-Trace.CorrelationManager.ActivityId = oldGuid;    
+Trace.CorrelationManager.ActivityId = oldGuid;
 
 // 9. Resume the old activity  
 ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [配置跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [使用服务跟踪查看器查看相关跟踪和进行故障排除](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

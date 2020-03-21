@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: f4b5f1763b655026b20f37605d4649606af7fea6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 04f3ee1e01054df6a13ab2391e14a6a7f7274bb9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435372"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180219"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>实现 UI 自动化 Grid 控件模式
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74435372"
   
  <xref:System.Windows.Automation.GridPattern> 控件模式用于支持作为子元素集合的容器的控件。 此元素的子元素必须实现 <xref:System.Windows.Automation.Provider.IGridItemProvider> ，并且在可以按行和列进行遍历的二维逻辑坐标系统中进行组织。 有关实现此控件模式的控件示例，请参阅 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
+<a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
  在实现 Grid 控件模式时，请注意以下准则和约定：  
   
@@ -29,7 +29,7 @@ ms.locfileid: "74435372"
   
 - 如果某个单元格为空，必须仍返回 UI 自动化元素以便支持该单元格的 <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> 属性。 当网格中的子元素的布局类似于未对齐的数组时，这是可能的（请参阅下面的示例）。  
   
- ![显示不规则布局的 Windows 资源管理器视图。](./media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
+ ![显示未对齐布局的 Windows 资源管理器视图。](./media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
 坐标为空的 Grid 控件的示例  
   
 - 只有一项的网格仍需要实现 <xref:System.Windows.Automation.Provider.IGridProvider> （如果它逻辑上被视为网格）。 网格中的子项数并不重要。  
@@ -42,32 +42,32 @@ ms.locfileid: "74435372"
   
 - 使用 <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> 来跟踪遍历的网格的项或单元格。  
   
-<a name="Required_Members_for_IGridProvider"></a>   
+<a name="Required_Members_for_IGridProvider"></a>
 ## <a name="required-members-for-igridprovider"></a>IGridProvider 必需的成员  
  实现 IGridProvider 接口需要以下属性和方法。  
   
-|必需的成员|类型|注意|  
+|必需的成员|类型|说明|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|属性|无|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|properties|无|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|properties|无|  
 |<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|方法|无|  
   
  没有与此控件模式关联的事件。  
   
-<a name="Exceptions"></a>   
-## <a name="exceptions"></a>异常  
+<a name="Exceptions"></a>
+## <a name="exceptions"></a>例外  
  提供程序必须引发以下异常。  
   
 |异常类型|条件|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果请求的行坐标大于 <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> 或列坐标大于 <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>。|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果请求的行坐标或列坐标都小于零。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> - 如果请求的行坐标大于<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>或列坐标大于 。 <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> - 如果请求的行坐标或列坐标中的任何一个小于零。|  
   
 ## <a name="see-also"></a>另请参阅
 
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
+- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
 - [实现 UI 自动化 GridItem 控件模式](implementing-the-ui-automation-griditem-control-pattern.md)
 - [UI 自动化树概述](ui-automation-tree-overview.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: f04b40edde0755315f3b4fd4284fc7c804a54313
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11eb4c9bc4ba1b1fe9051a04d12f893e693fb175
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130046"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180465"
 ---
 # <a name="security-issues-in-reflection-emit"></a>反射发出中的安全问题
 .NET Framework 提供了三种发出 Microsoft 中间语言 (MSIL) 的方式，每种方式都有其自身的安全问题：  
@@ -32,9 +32,9 @@ ms.locfileid: "73130046"
 > [!NOTE]
 > 反射和发出代码所需的权限已在 .NET Framework 的后续版本中更改。 请参阅本主题后面的[版本信息](#Version_Information)。  
   
-<a name="Dynamic_Assemblies"></a>   
+<a name="Dynamic_Assemblies"></a>
 ## <a name="dynamic-assemblies"></a>动态程序集  
- 动态程序集是使用 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 方法的重载创建的。 此方法的大多数重载在 .NET Framework 4 中已弃用，原因是取消了计算机范围的安全策略。 （请参阅[安全更改](../security/security-changes.md)。）其余的重载可由任意代码执行，而不考虑信任级别。 这些重载分为两组：一组重载指定在创建动态程序集时要对该程序集应用的特性的列表，另一组重载则不会进行相应的指定。 如果没有通过在创建程序集时应用 <xref:System.Security.SecurityRulesAttribute> 属性来指定程序集的透明度模型，则从发出程序集继承透明度模型。  
+ 动态程序集是使用 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 方法的重载创建的。 此方法的大多数重载在 .NET Framework 4 中已弃用，原因是取消了计算机范围的安全策略。 （请参阅[安全更改](../security/security-changes.md)。无论信任级别如何，其余重载都可以由任何代码执行。 这些重载分为两组：一组重载指定在创建动态程序集时要对该程序集应用的特性的列表，另一组重载则不会进行相应的指定。 如果没有通过在创建程序集时应用 <xref:System.Security.SecurityRulesAttribute> 属性来指定程序集的透明度模型，则从发出程序集继承透明度模型。  
   
 > [!NOTE]
 > 对于在创建动态程序集之后通过使用 <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> 方法对该程序集应用的特性，只有在将该程序集保存到磁盘并再次加载到内存中之后，这些特性才会起作用。  
@@ -57,7 +57,7 @@ ms.locfileid: "73130046"
   
 - 不生成调试符号。 （`Internet` 和 `LocalIntranet` 权限集未包括必要的权限。）  
   
-<a name="Anonymously_Hosted_Dynamic_Methods"></a>   
+<a name="Anonymously_Hosted_Dynamic_Methods"></a>
 ## <a name="anonymously-hosted-dynamic-methods"></a>匿名托管的动态方法  
  通过使用未指定关联类型或模块的两个 <xref:System.Reflection.Emit.DynamicMethod> 构造函数（即 <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%29> 和 <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29>）来创建匿名托管的动态方法。 这些构造函数将动态方法放到系统提供的完全信任的安全透明的程序集中。 使用这些构造函数或发出动态方法的代码不需要任何权限。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "73130046"
 > [!NOTE]
 > 动态方法不支持调试符号。  
   
-<a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>   
+<a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>与现有程序集关联的动态方法  
  若要将动态方法与现有程序集中的某一类型或模块关联，请使用指定关联类型或模块的任一 <xref:System.Reflection.Emit.DynamicMethod> 构造函数。 调用这些构造函数所需的权限各不相同，这是因为将动态方法与现有类型或模块关联会授予该动态方法访问非公共类型和成员的权限：  
   
@@ -135,7 +135,7 @@ ms.locfileid: "73130046"
 > [!NOTE]
 > 动态方法不支持调试符号。  
   
-<a name="Version_Information"></a>   
+<a name="Version_Information"></a>
 ## <a name="version-information"></a>版本信息  
  从 .NET Framework 4 开始，已取消计算机范围的安全策略，并且安全透明度已成为默认的强制机制。 请参阅[安全更改](../security/security-changes.md)。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "73130046"
 ### <a name="obtaining-information-on-types-and-members"></a>获取有关类型和成员的信息  
  从 .NET Framework 2.0 开始，获取有关非公共类型和成员信息不再需要任何权限。 使用反射可获取发出动态方法所需的信息。 例如，使用 <xref:System.Reflection.MethodInfo> 对象发出方法调用。 .NET Framework 的早期版本需要使用带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。 有关详细信息，请参阅[反射的安全注意事项](security-considerations-for-reflection.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [反射的安全注意事项](security-considerations-for-reflection.md)
 - [发出动态方法和程序集](emitting-dynamic-methods-and-assemblies.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bfb2cd39-3e0b-4d51-ba0c-f009755c1456
 topic_type:
 - apiref
-ms.openlocfilehash: b6fd3682290c9752125aed7b9663c6704ade25de
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 37659262695b63a6dd6390c62c4bb7e04fdadca4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132324"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179311"
 ---
 # <a name="cor_heapinfo-structure"></a>COR_HEAPINFO 结构
 提供有关垃圾回收堆的常规信息，包括它是否是可枚举的。  
@@ -28,28 +28,28 @@ ms.locfileid: "73132324"
   
 ```cpp  
 typedef struct _COR_HEAPINFO {  
-    BOOL areGCStructuresValid;   
-    DWORD pointerSize;   
+    BOOL areGCStructuresValid;
+    DWORD pointerSize;
     DWORD numHeaps;  
-    BOOL concurrent;   
-    CorDebugGCType gcType;   
+    BOOL concurrent;
+    CorDebugGCType gcType;
 } COR_HEAPINFO;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true` 如果垃圾回收结构有效并且可以枚举堆，则为;否则，`false`。|  
+|`areGCStructuresValid`|`true`如果垃圾回收结构有效，并且可以枚举堆;如果垃圾回收结构有效，则为堆。否则， `false`.|  
 |`pointerSize`|目标体系结构上指针的大小（以字节为单位）。|  
-|`numHeaps`|进程中逻辑垃圾回收堆的数目。|  
-|`concurrent`|`TRUE` 如果启用了并发（后台）垃圾回收，则为;否则，`FALSE`。|  
-|`gcType`|[CorDebugGCType](cordebuggctype-enumeration.md)枚举的成员，它指示垃圾回收器是在工作站上运行还是在服务器上运行。|  
+|`numHeaps`|进程中的逻辑垃圾回收堆数。|  
+|`concurrent`|`TRUE`如果启用并发（后台）垃圾回收;如果启用了并发（后台）垃圾回收;否则， `FALSE`.|  
+|`gcType`|[CorDebugGCType](cordebuggctype-enumeration.md)枚举的成员，用于指示垃圾回收器是在工作站上运行还是服务器上运行。|  
   
 ## <a name="remarks"></a>备注  
- 通过调用[ICorDebugProcess5：： GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md)方法返回 `COR_HEAPINFO` 结构的实例。  
+ 结构的`COR_HEAPINFO`实例通过调用[ICorDebugProcess5：：：getGCHeap信息](icordebugprocess5-getgcheapinformation-method.md)方法返回。  
   
- 枚举垃圾回收堆上的对象之前，必须始终检查 `areGCStructuresValid` 字段，以确保堆处于可枚举状态。 有关详细信息，请参阅[ICorDebugProcess5：： GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md)方法。  
+ 在枚举垃圾回收堆上的对象之前，必须始终检查该`areGCStructuresValid`字段以确保堆处于枚举状态。 有关详细信息，请参阅[ICorDebugProcess5：：getGCHeap信息](icordebugprocess5-getgcheapinformation-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
@@ -58,9 +58,9 @@ typedef struct _COR_HEAPINFO {
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试结构](debugging-structures.md)
 - [调试](index.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-ms.openlocfilehash: 73665915a70225c2b1da47c7b60347b089564884
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0f8f96cf73882ef6556e5b9e64cf9adf389a2318
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716031"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180552"
 ---
 # <a name="loader-etw-events"></a>加载程序 ETW 事件
 这些事件将收集与加载和卸载应用程序域、程序集和模块相关的信息。  
@@ -20,7 +20,7 @@ ms.locfileid: "75716031"
 ## <a name="application-domain-events"></a>应用程序域事件
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Event|Level|  
+|引发事件的关键字|事件|级别|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AppDomainLoad_V1` 和 `AppDomainUnLoad_V1`|信息性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|信息性 (4)|  
@@ -28,7 +28,7 @@ ms.locfileid: "75716031"
   
  下表显示了事件信息。  
   
-|Event|事件 ID|描述|  
+|事件|事件 ID|说明|  
 |-----------|--------------|-----------------|  
 |`AppDomainLoad_V1` （为所有应用程序域记录）|156|每当在进程生存期内创建应用程序域时引发。|  
 |`AppDomainUnLoad_V1`|157|每当在进程生存期内销毁应用程序域时引发。|  
@@ -37,7 +37,7 @@ ms.locfileid: "75716031"
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|应用程序域的唯一标识符。|  
 |AppDomainFlags|win:UInt32|0x1：默认域。<br /><br /> 0x2：可执行。<br /><br /> 0x4：应用程序域，位 28-31：共享此域的策略。<br /><br /> 0：一个共享域。|  
@@ -48,7 +48,7 @@ ms.locfileid: "75716031"
 ## <a name="clr-loader-assembly-events"></a>CLR 加载程序程序集事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Event|Level|  
+|引发事件的关键字|事件|级别|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AssemblyLoad` 和 `AssemblyUnload`|信息性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|信息性 (4)|  
@@ -56,7 +56,7 @@ ms.locfileid: "75716031"
   
  下表显示了事件信息。  
   
-|Event|事件 ID|描述|  
+|事件|事件 ID|说明|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|在加载程序集时引发。|  
 |`AssemblyUnload_V1`|155|在卸载程序集时引发。|  
@@ -65,19 +65,19 @@ ms.locfileid: "75716031"
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
 |AssemblyID|win:UInt64|程序集的唯一 ID。|  
 |AppDomainID|win:UInt64|此程序集的域的 ID。|  
 |BindingID|win:UInt64|唯一地标识程序集绑定的 ID。|  
 |AssemblyFlags|win:UInt32|0x1：非特定于域的程序集。<br /><br /> 0x2：动态程序集。<br /><br /> 0x4：程序集具有本机映像。<br /><br /> 0x8：可回收程序集。|  
 |AssemblyName|win:UnicodeString|完全限定程序集名称。|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|   
+|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|
 
 ## <a name="module-events"></a>模块事件
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Event|Level|  
+|引发事件的关键字|事件|级别|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`ModuleLoad_V2` 和 `ModuleUnload_V2`|信息性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|信息性 (4)|  
@@ -86,7 +86,7 @@ ms.locfileid: "75716031"
   
  下表显示了事件信息。  
   
-|Event|事件 ID|描述|  
+|事件|事件 ID|说明|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|在进程的生存期内加载模块时引发。|  
 |`ModuleUnload_V2`|153|在进程的生存期内卸载模块时引发。|  
@@ -95,7 +95,7 @@ ms.locfileid: "75716031"
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|模块的唯一 ID。|  
 |AssemblyID|win:UInt64|此模块所驻留的程序集的 ID。|  
@@ -122,7 +122,7 @@ ms.locfileid: "75716031"
 ## <a name="clr-domain-module-events"></a>CLR 域模块事件
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Event|Level|  
+|引发事件的关键字|事件|级别|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|信息性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|信息性 (4)|  
@@ -130,7 +130,7 @@ ms.locfileid: "75716031"
   
  下表显示了事件信息。  
   
-|Event|事件 ID|描述|  
+|事件|事件 ID|说明|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|在为应用程序域加载模块时引发。|  
 |`DomainModuleDCStart_V1`|151|在启动断开期间为应用程序域枚举加载的模块，并为所有应用程序域记录。|  
@@ -138,7 +138,7 @@ ms.locfileid: "75716031"
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|标识此模块所属的程序集。|  
 |AssemblyID|win:UInt64|此模块所驻留的程序集的 ID。|  
@@ -152,7 +152,7 @@ ms.locfileid: "75716031"
 ## <a name="module-range-events"></a>模块范围事件
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Event|Level|  
+|引发事件的关键字|事件|级别|  
 |-----------------------------------|-----------|-----------|  
 |`PerfTrackKeyWord`)|`ModuleRange`|信息性 (4)|  
 |`PerfTrackKeyWord`|`ModuleRangeDCStart`|信息性 (4)|  
@@ -160,7 +160,7 @@ ms.locfileid: "75716031"
   
  下表显示了事件信息。  
   
-|Event|事件 ID|描述|  
+|事件|事件 ID|说明|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|如果加载的本机映像生成器 (NGen) 映像已使用 IBC 进行优化，并且包含有关 NGen 映像热区的信息，则此事件存在。|  
 |`ModuleRangeDCStart`|160|`ModuleRange` 事件在断开开始时引发。|  
@@ -168,7 +168,7 @@ ms.locfileid: "75716031"
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|win:UInt16|如果加载了 CLR 的多个实例，则唯一标识进程中 CLR 的特定实例。|  
 |ModuleID|win:UInt64|标识此模块所属的程序集。|  

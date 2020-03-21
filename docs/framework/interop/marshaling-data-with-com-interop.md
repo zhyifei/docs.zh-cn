@@ -4,12 +4,12 @@ ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-ms.openlocfilehash: 24fa390c94baaa0fe009ebe513f2eb7aa34d34fa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ae41713d5349321725599c0c38d7c6fc515c374b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114000"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181375"
 ---
 # <a name="marshaling-data-with-com-interop"></a>用 COM 互操作对数据进行封送处理
 COM 互操作同时对在托管代码中使用 COM 对象和向 COM 公开托管对象提供支持。 对于将数据封送到 COM 和从 COM 中封送数据的支持是广泛的，并几乎总是提供正确的封送行为。  
@@ -23,9 +23,8 @@ COM 互操作同时对在托管代码中使用 COM 对象和向 COM 公开托管
  以下部分链接到特定主题，这些主题描述在能够（或必须）为封送拆收器提供附加类型信息时自定义互操作包装器的过程。  
   
 ## <a name="in-this-section"></a>本节内容  
-[如何：手动创建包装器](how-to-create-wrappers-manually.md)   
-描述如何在托管源代码中手动创建 COM 包装器。 
- 
+[如何：手动创建包装器](how-to-create-wrappers-manually.md)描述如何在托管源代码中手动创建 COM 包装器。
+
  [如何：将托管代码 DCOM 迁移到 WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
  描述如何将托管 DCOM 代码迁移到 WCF，以得到最安全的解决方案。  
   

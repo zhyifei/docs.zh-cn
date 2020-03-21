@@ -15,45 +15,45 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: c8866e98be0dd064138acdf5e0f6fb9c339fb3d2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6f7f400c51ded0b98c0c2286cb6f90bbd77e47d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790651"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178401"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next 方法
-从当前位置开始，获取进程中当前存在的指定数量的应用程序域。  
+从当前位置开始获取进程中当前存在的指定数量的应用程序域。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT Next (  
     [in] ULONG  celt,  
-    [out, size_is(celt), length_is(*pceltFetched)]   
+    [out, size_is(celt), length_is(*pceltFetched)]
         ICorPublishAppDomain **objects,  
     [out] ULONG *pceltFetched  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `celt`  
- 中要检索的元素的数目。  
+ [在]要检索的元素数。  
   
  `objects`  
- 弄一个指针，指向检索到的[ICorPublishAppDomain](icorpublishappdomain-interface.md)对象的数组，其中每个对象都表示一个应用程序域。  
+ [出]指向检索到[的 ICorPublishAppDomain](icorpublishappdomain-interface.md)对象的数组的指针，每个对象都表示一个应用程序域。  
   
  `pceltFetched`  
- 弄一个指针，指向实际返回的应用程序域的数量。 如果 `celt` 为1，则此值可以为 null。  
+ [出]指向实际返回的应用程序域数的指针。 此值可以是 null（如果是`celt`1）。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorPub，CorPub  
+ **标题：** 科尔普布.idl， 科尔普布.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

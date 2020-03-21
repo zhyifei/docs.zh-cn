@@ -2,12 +2,12 @@
 title: 在自定义设计器中使用 ExpressionTextBox
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: 6b581b42c882c12425a17b9a518f8957ca10898a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6d3df9e18c7239f0e4695509d80edfd02e9a9d6f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715538"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182772"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>在自定义设计器中使用 ExpressionTextBox
 此示例演示如何在自定义活动设计器中使用 <xref:System.Activities.Presentation.View.ExpressionTextBox>。 自定义活动 `MultiAssign` 将两个字符串值分配给两个字符串变量。 某些 <xref:System.Activities.Presentation.View.ExpressionTextBox> 控件绑定到 <xref:System.Activities.InArgument>，而某些控件绑定到 <xref:System.Activities.OutArgument>。
@@ -15,7 +15,7 @@ ms.locfileid: "74715538"
 ## <a name="sample-details"></a>示例详细信息
  `ArgumentToExpressionConverter` 是在将表达式绑定到参数时使用的类型转换器。 根据需要，必须将 `ConverterParameter` 设置为 `In` 或 `Out`。 不支持 `InOut`。
 
- `UseLocationExpression` 特性用于 `OutArgument`s，以指定表达式应为左值（"左值" 或 "位置值"）表达式。 在大多数情况下，左值表达式是有效的 Visual Basic 标识符，用于指示要返回的 `OutArgument` 是变量还是参数名称。
+ 该`UseLocationExpression`属性用于`OutArgument`指定表达式应为 L 值（"左值"或"位置值"）表达式。 在大多数情况下，左值表达式是有效的 Visual Basic 标识符，用于指示要返回的 `OutArgument` 是变量还是参数名称。
 
  在此示例中，将 `MaxLines` 特性设置为 1，未设置 `MinLines`。 这表示无论用户键入多少文本，<xref:System.Activities.Presentation.View.ExpressionTextBox> 都是大小固定的一行。 若要允许 <xref:System.Activities.Presentation.View.ExpressionTextBox> 增大以容纳用户输入，请将 `MaxLines` 设置为大于 `MinLines`。
 
@@ -23,27 +23,27 @@ ms.locfileid: "74715538"
 
 #### <a name="to-use-this-sample"></a>使用此示例
 
-1. 使用 Visual Studio 2010 打开 ExpressionTextBoxSample 文件。
+1. 使用 Visual Studio 2010，打开表达式文本BoxSample.sln 文件。
 
 2. 要生成解决方案，按 Ctrl+Shift+B。
 
-#### <a name="to-run-this-sample"></a>运行此示例
+#### <a name="to-run-this-sample"></a>运行本示例的步骤
 
 1. 向解决方案添加新工作流控制台应用程序。
 
-2. 从新的工作流控制台应用程序项目添加对**ExpressionTextBoxSample**项目的引用。
+2. 从新的工作流控制台应用程序项目添加对**表达式文本BoxSample**项目的引用。
 
 3. 生成解决方案。
 
-4. 将 " **MultiAssign** " 活动从 "工具箱" 拖放到工作流中。
+4. 从工具箱中拖动 **"多分配"** 活动并将其放入工作流中。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
->   
+>
+> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\ExpressionTextBox`  
   
 ## <a name="see-also"></a>另请参阅

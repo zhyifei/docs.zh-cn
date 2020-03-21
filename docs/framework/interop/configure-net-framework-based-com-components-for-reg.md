@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: 61f5f0f3ec9a4386fa12e7511b4a518f2b56a21c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dedf5ab51ab5cf9befb5bd183968388406df4e5b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123671"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181467"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活
 基于 .NET Framework 的组件的免注册激活略复杂于 COM 组件的免注册激活。 安装需要两个清单：  
@@ -42,10 +42,10 @@ ms.locfileid: "73123671"
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
-      <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myComApp"   
-                        version="1.0.0.0"   
-                        processorArchitecture="msil"   
+      <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myComApp"
+                        version="1.0.0.0"
+                        processorArchitecture="msil"
       />  
     ```  
   
@@ -54,18 +54,18 @@ ms.locfileid: "73123671"
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
-      <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myComApp"   
-                        version="1.0.0.0"   
-                        processorArchitecture="x86"   
+      <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myComApp"
+                        version="1.0.0.0"
+                        processorArchitecture="x86"
                         publicKeyToken="8275b28176rcbbef"  
       />  
       <dependency>  
         <dependentAssembly>  
-          <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myManagedComp"   
-                        version="6.0.0.0"   
-                        processorArchitecture="X86"   
+          <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myManagedComp"
+                        version="6.0.0.0"
+                        processorArchitecture="X86"
                         publicKeyToken="8275b28176rcbbef"  
           />  
         </dependentAssembly>  
@@ -103,15 +103,15 @@ ms.locfileid: "73123671"
   
 4. 标识程序集中的每个类。 使用 `<clrClass>` 元素来唯一地标识托管程序集中的每个类。 该元素是 `<assembly>` 元素的子元素，具有下表中描述的属性。  
   
-    |特性|描述|必需|  
+    |Attribute|说明|必选|  
     |---------------|-----------------|--------------|  
     |`clsid`|用于指定要激活的类的标识符。|是|  
-    |`description`|用于通知用户组件相关信息的字符串。 空字符串为默认值。|No|  
+    |`description`|用于通知用户组件相关信息的字符串。 空字符串为默认值。|否|  
     |`name`|用于表示托管类的字符串。|是|  
-    |`progid`|用于后期绑定激活的标识符。|No|  
-    |`threadingModel`|COM 线程模型。 “Both”为默认值。|No|  
-    |`runtimeVersion`|指定要使用的公共语言运行时 (CLR) 版本。 如未指定此属性，并且尚未加载 CLR，将使用最近安装的早于 CLR 版本 4 的 CLR 版本加载组件。 如果指定 v1.0.3705、v1.1.4322 或 v2.0.50727，版本将自动向前滚到最近安装的早于 CLR 版本 4 的 CLR 版本（通常为 v2.0.50727）。 如果已加载其他 CLR 版本，并且可在进程内并行加载指定版本，那么将加载指定版本；否则使用已加载的 CLR。 这可能会导致加载失败。|No|  
-    |`tlbid`|包含有关该类的类型信息的类型库的标识符。|No|  
+    |`progid`|用于后期绑定激活的标识符。|否|  
+    |`threadingModel`|COM 线程模型。 “Both”为默认值。|否|  
+    |`runtimeVersion`|指定要使用的公共语言运行时 (CLR) 版本。 如未指定此属性，并且尚未加载 CLR，将使用最近安装的早于 CLR 版本 4 的 CLR 版本加载组件。 如果指定 v1.0.3705、v1.1.4322 或 v2.0.50727，版本将自动向前滚到最近安装的早于 CLR 版本 4 的 CLR 版本（通常为 v2.0.50727）。 如果已加载其他 CLR 版本，并且可在进程内并行加载指定版本，那么将加载指定版本；否则使用已加载的 CLR。 这可能会导致加载失败。|否|  
+    |`tlbid`|包含有关该类的类型信息的类型库的标识符。|否|  
   
      所有属性标记都区分大小写。 通过使用 OLE/COM ObjectViewer (Oleview.exe) 查看程序集的已导出类型库，可以获取 CLSID、ProgID、线程模型和运行时版本。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "73123671"
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
            <assemblyIdentity  
                         name="myOrganization.myDivision.myManagedComp"  
-                        version="1.2.3.4"   
+                        version="1.2.3.4"
                         publicKeyToken="8275b28176rcbbef"  
            />  
            <clrClass  
@@ -156,19 +156,19 @@ ms.locfileid: "73123671"
   
      在此语句中，`myManagedComp.manifest` 是正在嵌入的组件清单的名称。 对于此示例，脚本文件名称是 `myresource.rc`。  
   
-2. 使用 Microsoft Windows 资源编译器 (rc.exe) 编译脚本。 在命令提示符处，键入下列命令：  
+2. 使用 Microsoft Windows 资源编译器 (rc.exe) 编译脚本。 在命令提示符窗口中键入以下命令：  
   
      `rc myresource.rc`  
   
      Rc.exe 生成 `myresource.res` 资源文件。  
   
-3. 再次编译该程序集的源文件，并使用 /win32res 选项指定资源文件：  
+3. 再次编译该程序集的源文件，并使用 /win32res**** 选项指定资源文件：  
   
     `/win32res:myresource.res`  
   
      同样，`myresource.res` 是包含嵌入资源的资源文件的名称。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [免注册 COM 互操作](registration-free-com-interop.md)
 - [免注册 COM 互操作的需求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))

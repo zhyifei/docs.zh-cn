@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-ms.openlocfilehash: 832a53e072afc5533f2eeb7feb0cc326771cf23d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d561587e6bb98ba857b27ba89b4c1a45ba964ffd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435251"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180188"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>实现 UI 自动化 GridItem 控件模式
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74435251"
   
  <xref:System.Windows.Automation.GridItemPattern> 控件模式用于支持实现 <xref:System.Windows.Automation.Provider.IGridProvider> 的容器的各个子控件。 有关实现此控件模式的控件示例，请参阅 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
+<a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
  在实现 <xref:System.Windows.Automation.Provider.IGridProvider> 时，请注意以下准则和约定：  
   
@@ -29,33 +29,33 @@ ms.locfileid: "74435251"
   
 - 合并的单元格将根据 UI 自动化提供程序定义的其基本定位单元格来报告其 <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> 和 <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> 属性。 通常，它将是最左上方的行或列。  
   
-- <xref:System.Windows.Automation.Provider.IGridItemProvider> 不提供网格的活动操作（如合并或拆分单元）。  
+- <xref:System.Windows.Automation.Provider.IGridItemProvider> 不对网格进行实时操作，如合并或拆分单元格。  
   
 - 通常，可以使用键盘遍历实现 <xref:System.Windows.Automation.Provider.IGridItemProvider> 的控件（即 UI 自动化客户端可以移动到相邻的控件）。  
   
-<a name="Required_Members_for_IGridItemProvider"></a>   
+<a name="Required_Members_for_IGridItemProvider"></a>
 ## <a name="required-members-for-igriditemprovider"></a>IGridItemProvider 必需的成员  
  实现 <xref:System.Windows.Automation.Provider.IGridItemProvider>需要以下属性和方法。  
   
-|必需的成员|成员类型|注意|  
+|必需的成员|成员类型|说明|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|属性|无|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|属性|无|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|属性|无|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|属性|无|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|properties|无|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|properties|无|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|properties|无|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|properties|无|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|properties|无|  
   
  没有与此控件模式关联的方法或事件。  
   
-<a name="Exceptions"></a>   
-## <a name="exceptions"></a>异常  
+<a name="Exceptions"></a>
+## <a name="exceptions"></a>例外  
  没有与此控件模式关联的异常。  
   
 ## <a name="see-also"></a>另请参阅
 
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
+- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
 - [实现 UI 自动化 Grid 控件模式](implementing-the-ui-automation-grid-control-pattern.md)
 - [UI 自动化树概述](ui-automation-tree-overview.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)

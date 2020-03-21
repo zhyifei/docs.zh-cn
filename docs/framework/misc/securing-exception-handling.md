@@ -9,24 +9,24 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-ms.openlocfilehash: e0465f2eb6be61e161f5e6b8cadf629a53f11906
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: ad27e62197f6fdaa6b5e706f4ae02c03fecae9f1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215789"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181138"
 ---
 # <a name="securing-exception-handling"></a>保护异常处理
-在 Visual C++和 Visual Basic 中，堆栈中的一个筛选器表达式将在任何**finally**语句之前运行。 与该筛选器相关联的**catch**块在**finally**语句之后运行。 有关详细信息，请参阅[使用用户筛选的异常](../../standard/exceptions/using-user-filtered-exception-handlers.md)。 本部分将介绍此顺序的安全隐患。 请考虑以下伪代码示例，该示例演示 filter 语句和**finally**语句的运行顺序。  
+在 Visual C++ 和 Visual Basic 中，进一步向上堆栈的筛选器表达式在任何**最终**语句之前运行。 与该筛选器关联的**catch**块在**最终**语句之后运行。 有关详细信息，请参阅[使用用户筛选的异常](../../standard/exceptions/using-user-filtered-exception-handlers.md)。 本节将检查此订单的安全影响。 请考虑以下伪代码示例，该示例说明了筛选器语句**和最后语句**的运行顺序。  
   
 ```cpp  
-void Main()   
+void Main()
 {  
-    try   
+    try
     {  
         Sub();  
-    }   
-    except (Filter())   
+    }
+    except (Filter())
     {  
         Console.WriteLine("catch");  
     }  
@@ -35,21 +35,21 @@ bool Filter () {
     Console.WriteLine("filter");  
     return true;  
 }  
-void Sub()   
+void Sub()
 {  
-    try   
+    try
     {  
         Console.WriteLine("throw");  
         throw new Exception();  
-    }   
-    finally   
+    }
+    finally
     {  
         Console.WriteLine("finally");  
     }  
-}                        
+}
 ```  
   
- 此代码将打印以下代码。  
+ 此代码打印以下内容。  
   
 ```output
 Throw  
@@ -58,26 +58,26 @@ Finally
 Catch  
 ```  
   
- 该筛选器在**finally**语句之前运行，因此，在执行其他代码的情况下，可能会发生状态更改的任何内容引入安全问题。 例如：  
+ 筛选器在**最终**语句之前运行，因此任何进行状态更改都可以引入安全问题，从而可以利用其他代码的执行。 例如：  
   
 ```cpp  
-try   
+try
 {  
     Alter_Security_State();  
     // This means changing anything (state variables,  
-    // switching unmanaged context, impersonation, and   
-    // so on) that could be exploited if malicious   
+    // switching unmanaged context, impersonation, and
+    // so on) that could be exploited if malicious
     // code ran before state is restored.  
     Do_some_work();  
-}   
-finally   
+}
+finally
 {  
     Restore_Security_State();  
     // This simply restores the state change above.  
 }  
 ```  
   
- 此伪代码允许堆栈上较高的筛选器运行任意代码。 具有类似效果的其他操作示例是对其他标识的临时模拟、设置跳过某些安全检查的内部标志或更改与线程关联的区域性。 建议的解决方案是引入异常处理程序，以将代码的更改从调用方的筛选器块隔离到线程状态。 但是，必须正确地引入异常处理程序，否则不会解决此问题。 下面的示例将切换 UI 区域性，但任何类型的线程状态更改都可能会以同样的方式公开。  
+ 此伪代码允许堆栈上较高的筛选器运行任意代码。 具有类似效果的其他操作示例包括临时模拟另一个标识、设置绕过某些安全检查的内部标志或更改与线程关联的区域性。 建议的解决方案是引入一个异常处理程序，以将代码对线程状态的更改与调用方的筛选器块隔离开来。 但是，正确引入异常处理程序或无法解决此问题非常重要。 下面的示例切换 UI 区域性，但任何类型的线程状态更改可能同样公开。  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -101,7 +101,7 @@ Public Class UserCode
          obj.YourMethod()  
       Catch e As Exception When FilterFunc  
          Console.WriteLine("An error occurred: '{0}'", e)  
-         Console.WriteLine("Current Culture: {0}",   
+         Console.WriteLine("Current Culture: {0}",
 Thread.CurrentThread.CurrentUICulture)  
       End Try  
    End Sub  
@@ -114,42 +114,42 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- 在这种情况下，正确的修复方法是在**try**/**catch**块中包装现有**try**/**finally**块。 只需在现有**try**/**finally**块中引入**catch throw**子句，就不能解决问题，如以下示例中所示。  
+ 在这种情况下，正确的解决方法是在**try**/**catch**块中包装现有**try**/**finally**块。 简单地将**catch-throw**子句引入到现有**try**/**finally**块中并不能解决问题，如下例所示。  
   
 ```cpp  
 YourObject.YourMethod()  
 {  
     CultureInfo saveCulture = Thread.CurrentThread.CurrentUICulture;  
   
-    try   
+    try
     {  
         Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-DE");  
         // Do something that throws an exception.  
     }  
     catch { throw; }  
-    finally   
+    finally
     {  
         Thread.CurrentThread.CurrentUICulture = saveCulture;  
     }  
 }  
 ```  
   
- 这并不能解决此问题，因为在 `FilterFunc` 获取控件之前， **finally**语句尚未运行。  
+ 这不能解决问题，因为**finally**语句在`FilterFunc`获取控件之前未运行。  
   
- 下面的示例通过确保在将异常提供给调用方的异常筛选器块之前执行了**finally**子句来解决此问题。  
+ 下面的示例通过在提供调用方的异常筛选器块的异常之前已执行**最终**子句来解决此问题。  
   
 ```cpp  
 YourObject.YourMethod()  
 {  
     CultureInfo saveCulture = Thread.CurrentThread.CurrentUICulture;  
-    try    
+    try
     {  
-        try   
+        try
         {  
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-DE");  
             // Do something that throws an exception.  
         }  
-        finally   
+        finally
         {  
             Thread.CurrentThread.CurrentUICulture = saveCulture;  
         }  
@@ -160,4 +160,4 @@ YourObject.YourMethod()
   
 ## <a name="see-also"></a>另请参阅
 
-- [安全编码准则](../../standard/security/secure-coding-guidelines.md)
+- [代码安全维护指南](../../standard/security/secure-coding-guidelines.md)

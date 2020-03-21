@@ -2,15 +2,15 @@
 title: 自定义消息筛选器
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 79edba14eff5403591cf43592415d923dbd321be
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 896407a218073eba53676baa4bcbd125593c80ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716830"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183887"
 ---
 # <a name="custom-message-filter"></a>自定义消息筛选器
-此示例演示如何替换 Windows Communication Foundation （WCF）用于将消息调度到终结点的消息筛选器。  
+此示例演示如何替换 Windows 通信基础 （WCF） 用于向终结点调度消息的消息筛选器。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -19,7 +19,7 @@ ms.locfileid: "74716830"
   
  服务的每个终结点都有一个 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>。 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 同时具有 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> 和 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>。 这两个筛选器的联合是用于该终结点的消息筛选器。  
   
- 默认情况下，终结点的 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> 与发送到某个地址的任何消息匹配，该地址与服务终结点的 <xref:System.ServiceModel.EndpointAddress> 的匹配。 默认情况下，终结点的 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> 会检查传入消息的操作，并将与服务终结点协定 `true` =`IsInitiating`操作的其中一个操作对应的任何消息匹配。 因此，默认情况下，仅当消息的 To 标头为终结点的 <xref:System.ServiceModel.EndpointAddress> 并且消息的动作与终结点操作的动作之一匹配时，终结点的筛选器才与此消息匹配。  
+ 默认情况下，终结点的 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> 与发送到某个地址的任何消息匹配，该地址与服务终结点的 <xref:System.ServiceModel.EndpointAddress> 的匹配。 默认情况下，终结点的<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>将检查传入消息的操作，并将任何消息与对应于服务终结点协定操作的操作之一的操作进行匹配（仅`IsInitiating`=`true`考虑操作）。 因此，默认情况下，仅当消息的 To 标头为终结点的 <xref:System.ServiceModel.EndpointAddress> 并且消息的动作与终结点操作的动作之一匹配时，终结点的筛选器才与此消息匹配。  
   
  使用行为可以更改这些筛选器。 在本示例中，服务创建一个 <xref:System.ServiceModel.Description.IEndpointBehavior>，该行为替换 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> 上的 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> 和 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>：  
   
@@ -63,7 +63,7 @@ else
     <behaviorExtensions>  
         <add name="filteringEndpointBehavior" type="Microsoft.ServiceModel.Samples.FilteringEndpointBehaviorExtension, service" />  
     </behaviorExtensions>  
-</extensions>      
+</extensions>
 ```  
   
  然后，服务为每个变体创建 `endpointBehavior` 配置：  
@@ -84,9 +84,9 @@ else
 ```xml  
 <endpoint address=""  
         bindingConfiguration="ws"  
-        listenUri=""   
+        listenUri=""
         binding="wsHttpBinding"  
-        contract="Microsoft.ServiceModel.Samples.IHello"   
+        contract="Microsoft.ServiceModel.Samples.IHello"
         behaviorConfiguration="endpoint2" />  
 ```  
   
@@ -105,28 +105,28 @@ Hello
 ```xml  
 <endpoint address=""  
           bindingConfiguration="ws"  
-          listenUri=""   
+          listenUri=""
           binding="wsHttpBinding"  
-          contract="Microsoft.ServiceModel.Samples.IHello"   
+          contract="Microsoft.ServiceModel.Samples.IHello"
           behaviorConfiguration="endpoint1" />  
 ```  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
->   
+>
+> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageFilter`  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+1. 要生成解决方案，请按照生成 Windows[通信基础示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-2. 若要在单计算机配置中运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+2. 要在单机配置中运行示例，请按照[运行 Windows 通信基础示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明操作。  
   
-3. 若要在跨计算机配置中运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作，并在 Client.cs 中更改以下行。  
+3. 要在跨计算机配置中运行示例，请按照[运行 Windows 通信基础示例](../../../../docs/framework/wcf/samples/running-the-samples.md)的说明操作，并在Client.cs中更改以下行。  
   
     ```csharp
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 2f96f3c7261882af58cd10038d729c4e723d6fa0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8a44fd89017002ae51d9b15a22bac97668d0ff90
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447951"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179873"
 ---
 # <a name="ui-automation-properties-overview"></a>UI 自动化属性概述
 > [!NOTE]
@@ -20,17 +20,17 @@ ms.locfileid: "74447951"
   
  本节概括了 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 属性。 下面各主题中提供了更具体的信息：  
   
-- [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)  
+- [客户端的 UI 自动化属性](ui-automation-properties-for-clients.md)  
   
 - [服务器端 UI 自动化提供程序实现](server-side-ui-automation-provider-implementation.md)  
   
-<a name="Property_Identifiers"></a>   
+<a name="Property_Identifiers"></a>
 ## <a name="property-identifiers"></a>属性标识符  
- 每个属性都由一个数字和名称标识。 属性的名称仅用于调试和诊断。 提供程序使用数字 Id 来标识传入的属性请求。 但是，客户端应用程序只使用封装了数字和名称的 <xref:System.Windows.Automation.AutomationProperty>来标识它们希望检索的属性。  
+ 每个属性都由一个数字和名称标识。 属性的名称仅用于调试和诊断。 提供程序使用数字 ID 来标识传入的属性请求。 但是，客户端应用程序只使用封装了数字和名称的 <xref:System.Windows.Automation.AutomationProperty>来标识它们希望检索的属性。  
   
  表示特定属性的<xref:System.Windows.Automation.AutomationProperty> 对象在各个类中以字段的形式提供。 出于安全原因，UI 自动化提供程序将从 Uiautomationtypes.dll 中包含的一组单独的类中获取这些对象。  
   
- 下表按包含 <xref:System.Windows.Automation.AutomationProperty>Id 的类对属性进行分类。  
+ 下表按包含指示的<xref:System.Windows.Automation.AutomationProperty>类对属性进行分类。  
   
 |属性的种类|客户端从中获取 ID|提供程序从中获取 ID|  
 |-------------------------|--------------------------|----------------------------|  
@@ -51,26 +51,26 @@ ms.locfileid: "74447951"
 |具有值的元素的值和读/写功能|<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.ValuePatternIdentifiers>|  
 |窗口的功能和状态|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.WindowPatternIdentifiers>|  
   
-<a name="Properties_by_Category"></a>   
-## <a name="properties-by-category"></a>按类别列出的属性  
- 下表对其 Id 在 <xref:System.Windows.Automation.AutomationElement> 和 <xref:System.Windows.Automation.AutomationElementIdentifiers>中找到的属性进行分类。 这些属性是所有控件共有的。 很少一些属性在提供程序应用程序的生存期内可能是静态的；大多数动态属性都与控件模式关联。  
+<a name="Properties_by_Category"></a>
+## <a name="properties-by-category"></a>按类别排列的属性  
+ 下表对 在 和<xref:System.Windows.Automation.AutomationElement><xref:System.Windows.Automation.AutomationElementIdentifiers>中找到其指示的属性进行分类。 这些属性是所有控件共有的。 很少一些属性在提供程序应用程序的生存期内可能是静态的；大多数动态属性都与控件模式关联。  
   
  除 **和** 之外， <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A><xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>“属性访问”列还列出了每个属性的任何其他访问器。 有关在客户端应用程序中获取属性的详细信息，请参阅 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)。  
   
 > [!NOTE]
-> 有关每个属性的具体信息，请访问 “属性访问”列中的链接。  
+> 有关每个属性的具体信息，请访问 **** “属性访问”列中的链接。  
   
 ### <a name="display-characteristics"></a>显示特征  
   
 |属性标识符|和|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>|  
-|<xref:System.Windows.Automation.AutomationElement.CultureProperty>|n/a|  
+|<xref:System.Windows.Automation.AutomationElement.CultureProperty>|不适用|  
 |<xref:System.Windows.Automation.AutomationElement.HelpTextProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsOffscreen%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.OrientationProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Orientation%2A>|  
   
-### <a name="element-type"></a>Type 元素  
+### <a name="element-type"></a>元素类型  
   
 |属性标识符|和|  
 |-------------------------|---------------------|  
@@ -80,7 +80,7 @@ ms.locfileid: "74447951"
 |<xref:System.Windows.Automation.AutomationElement.ItemTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemType%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.LocalizedControlType%2A>|  
   
-### <a name="identification"></a>标识  
+### <a name="identification"></a>识别  
   
 |属性标识符|和|  
 |-------------------------|---------------------|  
@@ -127,7 +127,7 @@ ms.locfileid: "74447951"
 |<xref:System.Windows.Automation.AutomationElement.IsValuePatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsWindowPatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
   
-### <a name="miscellaneous"></a>其他  
+### <a name="miscellaneous"></a>杂项  
   
 |属性标识符|和|  
 |-------------------------|---------------------|  
@@ -135,7 +135,7 @@ ms.locfileid: "74447951"
 |<xref:System.Windows.Automation.AutomationElement.IsPasswordProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsPassword%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ItemStatusProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemStatus%2A>|  
   
-<a name="Localization"></a>   
+<a name="Localization"></a>
 ## <a name="localization"></a>本地化  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供程序应按照操作系统的语言呈现下列属性：  
   
@@ -149,7 +149,7 @@ ms.locfileid: "74447951"
   
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
   
-<a name="Properties_and_Events"></a>   
+<a name="Properties_and_Events"></a>
 ## <a name="properties-and-events"></a>属性和事件  
  属性更改事件的概念与 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 中的属性密切相关。 对于动态属性，客户端应用程序需要一种途径来了解属性值已更改，以便它能够用某种其他方式更新信息缓存或对新信息做出响应。  
   
@@ -161,9 +161,9 @@ ms.locfileid: "74447951"
   
 ## <a name="see-also"></a>另请参阅
 
-- [Caching in UI Automation Clients](caching-in-ui-automation-clients.md)
-- [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)
+- [在 UI 自动化客户端中缓存](caching-in-ui-automation-clients.md)
+- [客户端的 UI 自动化属性](ui-automation-properties-for-clients.md)
 - [服务器端 UI 自动化提供程序实现](server-side-ui-automation-provider-implementation.md)
 - [基于属性条件查找 UI 自动化元素](find-a-ui-automation-element-based-on-a-property-condition.md)
-- [从 UI 自动化提供程序返回属性](return-properties-from-a-ui-automation-provider.md)
-- [从 UI 自动化提供程序引发事件](raise-events-from-a-ui-automation-provider.md)
+- [Return Properties from a UI Automation Provider](return-properties-from-a-ui-automation-provider.md)
+- [从 UI 自动化提供程序中引发事件](raise-events-from-a-ui-automation-provider.md)

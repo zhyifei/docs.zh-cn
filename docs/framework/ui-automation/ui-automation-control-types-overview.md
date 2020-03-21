@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, control types
 - control types, UI Automation
 ms.assetid: 75159ef8-bd43-4d13-acb7-1f1fe9253160
-ms.openlocfilehash: ec2dd3635f09144985df278be1d53ead675d3080
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 643c89e8f6c5e34aa1fb3c5c7c6c750c72046277
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442628"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179933"
 ---
 # <a name="ui-automation-control-types-overview"></a>UI 自动化控件类型概述
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "74442628"
   
  具有已知标识符便于辅助技术设备确定 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 中可用的控件的类型以及和控件交互的方式。  
   
-<a name="UI_Automation_Control_Type_Requisites"></a>   
+<a name="UI_Automation_Control_Type_Requisites"></a>
 ## <a name="ui-automation-control-type-requisites"></a>UI 自动化控件类型必备条件  
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 控件类型提供一组提供程序必须满足的条件。 满足这些条件时，控件可以使用特定的控件类型名称。 每个控件类型对以下内容设有条件：  
   
@@ -32,7 +32,7 @@ ms.locfileid: "74442628"
   
  当控件满足特定控件类型的条件时， <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> 属性值将指示该控件类型。  
   
-<a name="Current_UI_Automation_Control_Types"></a>   
+<a name="Current_UI_Automation_Control_Types"></a>
 ## <a name="current-ui-automation-control-types"></a>当前的 UI 自动化控件类型  
  以下列表包含当前 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 控制类型集：  
   

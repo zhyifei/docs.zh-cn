@@ -9,12 +9,12 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 5f9362814eb671a6d7a111cadb96be6d06f5cb3d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 495e7d29c814164f4235d18569477b856cb09045
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441491"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179897"
 ---
 # <a name="ui-automation-events-overview"></a>UI 自动化事件概述
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "74441491"
   
  通过允许提供程序应用程序有选择地引发事件来提高效率，这具体取决于是否有客户端订阅了这些事件，或者如果没有客户端在侦听任意事件，则不会引发任何事件。  
   
-<a name="Types_of_Events"></a>   
+<a name="Types_of_Events"></a>
 ## <a name="types-of-events"></a>事件类型  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件分为以下几类：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "74441491"
   
 - `TextChangedEvent`  
   
-<a name="UI_Automation_Event_Identifiers"></a>   
+<a name="UI_Automation_Event_Identifiers"></a>
 ## <a name="ui-automation-event-identifiers"></a>UI 自动化事件标识符  
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 事件由 <xref:System.Windows.Automation.AutomationEvent> 对象标识。 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> 属性包含唯一标识这类事件的值。  
   
@@ -62,11 +62,11 @@ ms.locfileid: "74441491"
 |<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.StructureChangedEventArgs>|  
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowClosedEventArgs>|  
   
-<a name="UI_Automation_Event_Arguments"></a>   
+<a name="UI_Automation_Event_Arguments"></a>
 ## <a name="ui-automation-event-arguments"></a>UI 自动化事件参数  
  下列类能封装事件参数。  
   
-|实例|说明|  
+|类|说明|  
 |-----------|-----------------|  
 |<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|包含有关内容异步加载的信息，包括加载已完成的百分比的信息。|  
 |<xref:System.Windows.Automation.AutomationEventArgs>|包含有关无需额外数据的简单事件的信息。|  
@@ -83,6 +83,6 @@ ms.locfileid: "74441491"
   
 ## <a name="see-also"></a>另请参阅
 
-- [UI Automation Events for Clients](ui-automation-events-for-clients.md)
+- [客户端的 UI 自动化事件](ui-automation-events-for-clients.md)
 - [服务器端 UI 自动化提供程序实现](server-side-ui-automation-provider-implementation.md)
 - [订阅 UI 自动化事件](subscribe-to-ui-automation-events.md)

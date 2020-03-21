@@ -2,12 +2,12 @@
 title: ICorDebugDataTarget2::GetImageFromPointer 方法
 ms.date: 03/30/2017
 ms.assetid: 939cabe1-b647-4090-b662-eeec23c6c58d
-ms.openlocfilehash: 55c87731399cf1e7a6747720b8bb33de7e01906c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3ac1f8ab98583357a3aa622b5032d9ae121ebdf2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788835"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178917"
 ---
 # <a name="icordebugdatatarget2getimagefrompointer-method"></a>ICorDebugDataTarget2::GetImageFromPointer 方法
 返回该模块地址中的模块基址和大小。  
@@ -16,18 +16,18 @@ ms.locfileid: "76788835"
   
 ```cpp  
 HRESULT GetImageFromPointer(  
-   [in] CORDB_ADDRESS addr,   
-   [out] CORDB_ADDRESS *pImageBase,   
+   [in] CORDB_ADDRESS addr,
+   [out] CORDB_ADDRESS *pImageBase,
    [out] ULONG32 *pSize  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `addr`  
- 一个[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值，该值表示模块中的地址。  
+ 表示模块中地址[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值。  
   
  `pImageBase`  
- 弄一个[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值，该值表示模块的基址。  
+ [出]表示模块基本地址[的CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值。  
   
  `pSize`  
  指针指向模块大小。  
@@ -37,14 +37,14 @@ HRESULT GetImageFromPointer(
 > [!NOTE]
 > 此方法仅适用于 .NET Native。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

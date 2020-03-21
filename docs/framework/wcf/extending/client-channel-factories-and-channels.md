@@ -2,12 +2,12 @@
 title: 客户端：通道工厂和通道
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: 3dfcca0d5492a3fa376ec184f4bdd9bfa03b53c0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 25e2c034d1fefc7728667231040a97c3aeecabbd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795863"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185692"
 ---
 # <a name="client-channel-factories-and-channels"></a>客户端：通道工厂和通道
 本主题介绍通道工厂和通道的创建。  
@@ -20,15 +20,15 @@ ms.locfileid: "70795863"
   
  通道工厂在关闭时负责关闭其创建的但尚未关闭的所有通道。 请注意，此处的模型是非对称的，原因是当通道侦听器关闭时，它仅停止接受新通道，而使现有通道保持打开状态以便继续接收消息。  
   
- WCF 为此过程提供基类帮助程序。 （有关本主题中讨论的通道帮助器类的图，请参阅[通道模型概述](channel-model-overview.md)。）  
+ WCF 为此过程提供基类帮助程序。 （有关本主题中讨论的通道帮助器类的图表，请参阅[通道模型概述](channel-model-overview.md)。  
   
-- 类实现<xref:System.ServiceModel.ICommunicationObject>并强制执行[开发通道](developing-channels.md)的步骤2中所述的状态机。 <xref:System.ServiceModel.Channels.CommunicationObject>  
+- 该<xref:System.ServiceModel.Channels.CommunicationObject>类实现<xref:System.ServiceModel.ICommunicationObject>并强制执行[开发通道](developing-channels.md)步骤 2 中描述的状态机。  
   
 - <xref:System.ServiceModel.Channels.ChannelManagerBase> 类实现 <xref:System.ServiceModel.Channels.CommunicationObject> 并为 <xref:System.ServiceModel.Channels.ChannelFactoryBase?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.ChannelListenerBase?displayProperty=nameWithType> 提供统一的基类。 <xref:System.ServiceModel.Channels.ChannelManagerBase> 类与 <xref:System.ServiceModel.Channels.ChannelBase>（用来实现 <xref:System.ServiceModel.Channels.IChannel> 的基类）结合使用。
   
-- <xref:System.ServiceModel.Channels.ChannelFactoryBase>类实现<xref:System.ServiceModel.Channels.ChannelManagerBase>和`OnCreateChannel` ，并将`CreateChannel`重载合并到一个抽象方法中。 <xref:System.ServiceModel.Channels.IChannelFactory>
+- 类<xref:System.ServiceModel.Channels.ChannelFactoryBase>实现<xref:System.ServiceModel.Channels.ChannelManagerBase>并<xref:System.ServiceModel.Channels.IChannelFactory>合并`CreateChannel`重载到一个`OnCreateChannel`抽象方法中。
   
-- <xref:System.ServiceModel.Channels.ChannelListenerBase> 类实现 <xref:System.ServiceModel.Channels.IChannelListener>。 它负责执行基本状态管理。 
+- <xref:System.ServiceModel.Channels.ChannelListenerBase> 类实现 <xref:System.ServiceModel.Channels.IChannelListener>。 它负责执行基本状态管理。
   
  以下讨论基于[传输：UDP](../samples/transport-udp.md)示例。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70795863"
   
  重写 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A> 将创建用于向此 <xref:System.Net.EndPoint> 发送消息的套接字。  
   
- ```csharp 
+ ```csharp
 this.socket = new Socket(  
 this.remoteEndPoint.AddressFamily,
    SocketType.Dgram,
@@ -55,7 +55,7 @@ this.socket.Close();
 base.OnClose(timeout);  
 ```  
   
- 实现`Send()`和`BeginSend()`。 / `EndSend()` 这将分解为两个主要部分。 首先，将消息序列化为字节数组：  
+ 实现`Send()``BeginSend()`/`EndSend()`和 。 这将分解为两个主要部分。 首先，将消息序列化为字节数组：  
   
 ```csharp  
 ArraySegment<byte> messageBuffer = EncodeMessage(message);  
@@ -65,14 +65,14 @@ ArraySegment<byte> messageBuffer = EncodeMessage(message);
   
 ```csharp  
 this.socket.SendTo(  
-  messageBuffer.Array,   
-  messageBuffer.Offset,   
-  messageBuffer.Count,   
-  SocketFlags.None,   
+  messageBuffer.Array,
+  messageBuffer.Offset,
+  messageBuffer.Count,
+  SocketFlags.None,
   this.remoteEndPoint  
 );  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [开发通道](developing-channels.md)

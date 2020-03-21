@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-ms.openlocfilehash: c37f039d9636854c464e7981693c573bd60deab9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4c79d0e4e37f3f884651e49c8fff6db72fac4f50
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132342"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179296"
 ---
 # <a name="cor_il_map-structure"></a>COR_IL_MAP 结构
 指定函数的相对偏移量的更改。  
@@ -28,67 +28,67 @@ ms.locfileid: "73132342"
   
 ```cpp  
 typedef struct _COR_IL_MAP {  
-    ULONG32 oldOffset;   
-    ULONG32 newOffset;   
+    ULONG32 oldOffset;
+    ULONG32 newOffset;
     BOOL    fAccurate;  
 } COR_IL_MAP;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`oldOffset`|相对于函数开头的旧 Microsoft 中间语言（MSIL）偏移量。|  
-|`newOffset`|相对于函数开头的新 MSIL 偏移量。|  
-|`fAccurate`|如果已知映射准确无误，则 `true`;否则，`false`。|  
+|`oldOffset`|旧的 Microsoft 中间语言 （MSIL） 相对于函数的开头偏移。|  
+|`newOffset`|新的 MSIL 相对于函数的开头偏移。|  
+|`fAccurate`|`true`如果已知映射准确;如果映射准确;否则， `false`.|  
   
 ## <a name="remarks"></a>备注  
- 映射的格式如下所示：调试器将假定 `oldOffset` 引用原始的、未修改的 MSIL 代码内的 MSIL 偏移量。 `newOffset` 参数引用新的、经过检测的代码中的相应 MSIL 偏移量。  
+ 地图的格式如下：调试器将假定引用`oldOffset`原始未修改的 MSIL 代码中的 MSIL 偏移量。 该`newOffset`参数是指新检测代码中的相应 MSIL 偏移量。  
   
- 若要单步执行，应满足以下要求：  
+ 为了正常工作，应满足以下要求：  
   
 - 地图应按升序排序。  
   
-- 不应对已检测的 MSIL 代码进行重新排序。  
+- 不应重新排序已检测的 MSIL 代码。  
   
-- 不应删除原始的 MSIL 代码。  
+- 不应删除原始 MSIL 代码。  
   
-- 映射应包括用于映射程序数据库（PDB）文件中的所有序列点的条目。  
+- 地图应包括用于映射程序数据库 （PDB） 文件中的所有序列点的条目。  
   
- 地图未插入缺失的条目。 下面的示例演示了一个映射及其结果。  
+ 地图不会插值缺少的条目。 下面的示例显示地图及其结果。  
   
- 将  
+ Map:  
   
-- 0个旧偏移，0个新偏移  
+- 0 旧偏移，0 新偏移  
   
-- 5旧偏移量，10个新偏移  
+- 5 个旧偏移，10 个新偏移  
   
-- 9旧偏移，20个新偏移  
+- 9 个旧偏移，20 个新偏移  
   
- 后果  
+ 结果：  
   
-- 早于0、1、2、3或4的偏移将映射到新的偏移量0。  
+- 旧偏移 0、1、2、3 或 4 将映射到新的偏移量 0。  
   
-- 旧偏移量5、6、7或8将映射到新的偏移量10。  
+- 旧偏移 5、6、7 或 8 将映射到新的偏移量 10。  
   
-- 旧偏移量9或更高将映射到新偏移量20。  
+- 旧偏移量为 9 或更高，将映射到新的偏移量 20。  
   
-- 新偏移量为0、1、2、3、4、5、6、7、8或9，将映射到旧偏移量0。  
+- 新的偏移量为 0、1、2、3、4、5、6、7、8 或 9 将映射到旧偏移 0。  
   
-- 新偏移量为10、11、12、13、14、15、16、17、18或19，将映射到旧偏移量5。  
+- 10、11、12、13、14、15、16、17、18 或 19 的新偏移将映射到旧偏移 5。  
   
-- 20或更高的新偏移量将映射到旧偏移量9。  
+- 新的偏移量为 20 或更高，将映射到旧偏移 9。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标头：** Cordebug.idl、Corprof.idl  
+ **标题：** 科尔科调试.idl， 科尔普罗芬.伊德尔  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试结构](debugging-structures.md)
 - [调试](index.md)

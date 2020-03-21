@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 280f68c8b762562a56ce96f45f118702fb0e4d76
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ea7a598a73f131d8ee33e285a39173fbf84a97f5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962399"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182910"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>如何：创建自定义跟踪参与者
-工作流跟踪用于查看工作流执行的状态。 工作流运行时发出跟踪记录，这些跟踪记录描述工作流生命周期事件、活动生命周期事件、书签摘要和故障。 这些跟踪记录供跟踪参与者使用。 Windows Workflow Foundation (WF) 包含一个标准跟踪参与者, 该参与者将跟踪记录作为 Windows 事件跟踪 (ETW) 事件写入。 如果这不能满足您的需求，您还可以编写自定义跟踪参与者。 本教程步骤说明如何创建自定义跟踪参与者和跟踪配置文件，该配置文件捕获 `WriteLine` 活动的输出，以便将这些活动显示给用户。  
+工作流跟踪用于查看工作流执行的状态。 工作流运行时发出跟踪记录，这些跟踪记录描述工作流生命周期事件、活动生命周期事件、书签摘要和故障。 这些跟踪记录供跟踪参与者使用。 Windows 工作流基础 （WF） 包括一个标准跟踪参与者，该参与者将跟踪记录写入 Windows （ETW） 事件的事件跟踪。 如果这不能满足您的需求，您还可以编写自定义跟踪参与者。 本教程步骤说明如何创建自定义跟踪参与者和跟踪配置文件，该配置文件捕获 `WriteLine` 活动的输出，以便将这些活动显示给用户。  
   
 > [!NOTE]
-> 入门教程中的每个主题都依赖于前面的主题。 若要完成本主题，必须先完成前面的主题。 若要下载完整版本或观看教程的视频演练, 请参阅[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
+> 入门教程中的每个主题都依赖于前面的主题。 若要完成本主题，必须先完成前面的主题。 要下载已完成的版本或查看本教程的视频演练，请参阅[Windows 工作流基础 （WF45） - 入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ## <a name="to-create-the-custom-tracking-participant"></a>创建自定义跟踪参与者  
   
-1. 在**解决方案资源管理器**中右键单击 " **NumberGuessWorkflowHost** ", 然后选择 "**添加**"、"**类**"。 在`StatusTrackingParticipant` "**名称**" 框中键入, 然后单击 "**添加**"。  
+1. 右键单击 **"解决方案资源管理器**中**的数字猜测工作流主机**"，然后选择 **"添加**"**类**。 键入`StatusTrackingParticipant`**"名称**"框，然后单击"**添加**"。  
   
 2. 在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。  
   
@@ -92,11 +92,11 @@ ms.locfileid: "69962399"
     }  
     ```  
   
-     未指定跟踪配置文件时，使用默认跟踪配置文件。 使用默认跟踪配置文件时，将为所有 `ActivityStates` 发出跟踪记录。 因为我们只需在 `WriteLine` 活动的生命周期内捕获一次文本，所以我们仅从 `ActivityStates.Executing` 状态捕获文本。 在中,[创建跟踪配置文件并注册跟踪参与者](#to-create-the-tracking-profile-and-register-the-tracking-participant), 将创建一个跟踪配置文件, 该配置`WriteLine`文件指定仅`ActivityStates.Executing`发出跟踪记录。  
+     未指定跟踪配置文件时，使用默认跟踪配置文件。 使用默认跟踪配置文件时，将为所有 `ActivityStates` 发出跟踪记录。 因为我们只需在 `WriteLine` 活动的生命周期内捕获一次文本，所以我们仅从 `ActivityStates.Executing` 状态捕获文本。 为了[创建跟踪配置文件并注册跟踪参与者](#to-create-the-tracking-profile-and-register-the-tracking-participant)，将创建一个跟踪配置文件，指定仅`WriteLine``ActivityStates.Executing`发出跟踪记录。  
   
 ## <a name="to-create-the-tracking-profile-and-register-the-tracking-participant"></a>创建跟踪配置文件并注册跟踪参与者  
   
-1. 在**解决方案资源管理器**中右键单击 " **WorkflowHostForm** ", 然后选择 "**查看代码**"。  
+1. 右键单击**解决方案资源管理器**中的**工作流主机窗体**，然后选择 **"查看代码**"。  
   
 2. 在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "69962399"
     {  
         TrackingProfile = new TrackingProfile  
         {  
-            Queries =   
+            Queries =
             {  
                 new ActivityStateQuery  
                 {  
@@ -198,7 +198,7 @@ ms.locfileid: "69962399"
         {  
             TrackingProfile = new TrackingProfile  
             {  
-                Queries =   
+                Queries =
                 {  
                     new ActivityStateQuery  
                     {  
@@ -217,7 +217,7 @@ ms.locfileid: "69962399"
   
 ## <a name="to-display-the-tracking-information"></a>显示跟踪信息  
   
-1. 在**解决方案资源管理器**中右键单击 " **WorkflowHostForm** ", 然后选择 "**查看代码**"。  
+1. 右键单击**解决方案资源管理器**中的**工作流主机窗体**，然后选择 **"查看代码**"。  
   
 2. 在 `InstanceId_SelectedIndexChanged` 处理程序中，添加以下代码，紧接在清除状态窗口的代码之后。  
   
@@ -316,7 +316,7 @@ ms.locfileid: "69962399"
   
 2. 按 Ctrl+F5 启动应用程序。  
   
-3. 为推测游戏选择一个范围, 并选择要启动的工作流类型, 然后单击 "**新建游戏**"。 在**推测**框中输入推测, 然后单击 "**开始**" 以提交推测。 可以看到，工作流的状态显示在状态窗口中。 此输出是从 `WriteLine` 活动捕获的。 通过从 "**工作流实例 Id** " 组合框中选择一个工作流来切换到该工作流, 并注意当前工作流的状态为 "已删除"。 切换回上一个工作流，可以看到其状态已恢复，与以下示例类似。  
+3. 选择猜测游戏的范围和要启动的工作流类型，然后单击 **"新游戏**"。 在 **"猜测"** 框中输入猜测，然后单击"**转到**"以提交您的猜测。 可以看到，工作流的状态显示在状态窗口中。 此输出是从 `WriteLine` 活动捕获的。 通过从 **"工作流实例 Id**组合"框中选择一个工作流切换到其他工作流，并注意当前工作流的状态将被删除。 切换回上一个工作流，可以看到其状态已恢复，与以下示例类似。  
   
     > [!NOTE]
     > 如果切换到启用跟踪之前启动的工作流，则不会显示状态。 但是，如果如果进行了其他猜数，则将保存其状态，因为现在启用了跟踪。  
@@ -326,13 +326,13 @@ ms.locfileid: "69962399"
     Your guess is too high.
     Please enter a number between 1 and 10
     ```
-    
+
     > [!NOTE]
-    > 此信息对于确定随机数的范围十分有用，但它并不包含有关先前进行的猜数的任何信息。 此信息将在下一步[中执行以下操作:并行托管多个版本的工作流](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
+    > 此信息对于确定随机数的范围十分有用，但它并不包含有关先前进行的猜数的任何信息。 此信息在下一步"[如何：并排托管工作流的多个版本](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)"。
 
     记下工作流实例 ID，然后播放游戏，直到播完。
   
-4. 打开 Windows 资源管理器并导航到**NumberGuessWorkflowHost\bin\debug**文件夹 (或**bin\release** , 具体取决于项目设置)。 可以看到，除了项目可执行文件之外，还有包含 guid 文件名的文件。 确定与上一步中已完成工作流的工作流实例 ID 对应的工作流，然后用记事本打开它。 跟踪信息所包含的内容类似于以下内容。  
+4. 打开 Windows 资源管理器并导航到 **"数字猜测工作流""""单元\调试**文件夹"（或**bin_发布**，具体取决于项目设置）。 可以看到，除了项目可执行文件之外，还有包含 guid 文件名的文件。 确定与上一步中已完成工作流的工作流实例 ID 对应的工作流，然后用记事本打开它。 跟踪信息所包含的内容类似于以下内容。  
   
     ```output
     Please enter a number between 1 and 10
@@ -342,4 +342,4 @@ ms.locfileid: "69962399"
     Please enter a number between 1 and 10
     ```
 
-    除了缺少用户的猜数之外，此跟踪数据不包含有关工作流的最终猜数的信息。 这是因为，跟踪信息仅包含工作流的 `WriteLine` 输出，而在工作流完成后从 `Completed` 显示的最终消息也是这样的。 在本教程的后续步骤中[, 如何:并行托管多个版本的工作流](how-to-host-multiple-versions-of-a-workflow-side-by-side.md), 将修改现有`WriteLine`活动以显示用户的推测, 并添加一个显示最终结果的附加`WriteLine`活动。 集成这些更改后, [如何:并行承载多个版本的工作流](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)演示如何同时承载多个版本的工作流。
+    除了缺少用户的猜数之外，此跟踪数据不包含有关工作流的最终猜数的信息。 这是因为，跟踪信息仅包含工作流的 `WriteLine` 输出，而在工作流完成后从 `Completed` 显示的最终消息也是这样的。 在本教程的下一步，[如何：并排托管工作流的多个版本](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)，修改现有`WriteLine`活动以显示用户的猜测，并添加显示最终结果的其他`WriteLine`活动。 集成这些更改后，[如何：并排托管工作流的多个版本](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)演示如何同时托管工作流的多个版本。

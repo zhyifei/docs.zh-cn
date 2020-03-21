@@ -5,33 +5,33 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 4b282062040ccfc18534ad88effc4c0f1972c5a6
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 3660877194931c2be5b9b1c9aa54e2595701697f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212058"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184646"
 ---
 # <a name="message-security-with-a-certificate-client"></a>使用证书客户端的消息安全
-下面的方案演示使用消息安全模式保护 Windows Communication Foundation （WCF）客户端和服务。 使用证书对客户端和服务进行身份验证。 有关详细信息，请参阅[分布式应用程序安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。
+以下方案显示使用消息安全模式保护的 Windows 通信基础 （WCF） 客户端和服务。 使用证书对客户端和服务进行身份验证。 有关详细信息，请参阅[分布式应用程序安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。
 
  ![显示具有证书的客户端的屏幕截图。](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
  有关示例应用程序，请参阅[消息安全证书](../../../../docs/framework/wcf/samples/message-security-certificate.md)。  
 
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
-|安全模式|Message|  
-|互操作性|仅 WCF|  
+|安全模式|消息|  
+|互操作性|仅限 WCF|  
 |身份验证（服务器）|使用服务证书|  
 |身份验证（客户端）|使用客户端证书|  
 |完整性|是|  
-|保密性|是|  
-|Transport|HTTP|  
+|机密性|是|  
+|传输|HTTP|  
 |绑定|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>服务  
- 下面的代码和配置应独立运行。 执行以下操作之一：  
+ 下面的代码和配置应独立运行。 执行下列操作之一：  
   
 - 使用代码（而不使用配置）创建独立服务。  
   
@@ -61,11 +61,11 @@ ms.locfileid: "76212058"
       </serviceBehaviors>  
     </behaviors>  
     <services>  
-      <service behaviorConfiguration="ServiceCredentialsBehavior"   
+      <service behaviorConfiguration="ServiceCredentialsBehavior"
                name="ServiceModel.Calculator">  
-        <endpoint address="http://localhost/Calculator"   
+        <endpoint address="http://localhost/Calculator"
                   binding="wsHttpBinding"  
-                  bindingConfiguration="MessageAndCertificateClient"   
+                  bindingConfiguration="MessageAndCertificateClient"
                   name="SecuredByClientCertificate"  
                   contract="ServiceModel.ICalculator" />  
       </service>  
@@ -85,7 +85,7 @@ ms.locfileid: "76212058"
 ```  
   
 ## <a name="client"></a>Client  
- 下面的代码和配置应独立运行。 执行以下操作之一：  
+ 下面的代码和配置应独立运行。 执行下列操作之一：  
   
 - 使用代码（和客户端代码）创建独立客户端。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "76212058"
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>配置  
- 下面的配置使用终结点行为指定客户端证书。 有关证书的详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 此代码还使用 <`identity`> 元素来指定预期服务器标识的域名系统（DNS）。 有关标识的详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 下面的配置使用终结点行为指定客户端证书。 有关证书的详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 该代码还使用<>`identity`元素来指定预期的服务器标识的域名系统 （DNS）。 有关标识的详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -111,7 +111,7 @@ ms.locfileid: "76212058"
       <endpointBehaviors>  
         <behavior name="endpointCredentialsBehavior">  
           <clientCredentials>  
-            <clientCertificate findValue="Cohowinery.com"   
+            <clientCertificate findValue="Cohowinery.com"
                storeLocation="LocalMachine"  
               x509FindType="FindBySubjectName" />  
           </clientCredentials>  
@@ -128,7 +128,7 @@ ms.locfileid: "76212058"
       </wsHttpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="http://machineName/Calculator"   
+      <endpoint address="http://machineName/Calculator"
                 behaviorConfiguration="endpointCredentialsBehavior"  
                 binding="wsHttpBinding"  
                 bindingConfiguration="WSHttpBinding_ICalculator"  
@@ -145,7 +145,7 @@ ms.locfileid: "76212058"
   
 ## <a name="see-also"></a>另请参阅
 
-- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Windows Server App Fabric 的安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcess4::ProcessStateChanged 方法
+title: ICorDebugProcess4：:Process状态更改方法
 ms.date: 02/07/2019
 api_name:
 - ICorDebugProcess4::ProcessStateChanged
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: adfd563e19389642ac0ed0a3cef4aae8a32fa466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a6f36f5b86b4fa58ce2a4ef4aa23d527f797a5a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767182"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178629"
 ---
-# <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4::ProcessStateChanged 方法
+# <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4：:Process状态更改方法
 
-通知 ICorDebug 管道的过程调试器扩展继续调试对象的执行。
+通知 ICorDebug 管道进程外调试器正在继续执行调试器。
 
 ## <a name="syntax"></a>语法
 
@@ -34,26 +34,26 @@ HRESULT ProcessStateChanged(
 );
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
  `eChange`\
-[in]成员[CorDebugStateChange 枚举](cordebugstatechange-enumeration.md)描述进程的执行状态的更改。
+[在][CorDebugStateChange 计数](cordebugstatechange-enumeration.md)的成员，描述进程执行状态的变化。
 
 ## <a name="remarks"></a>备注
 
-提供的方法属于`ICorDebugProcess4`接口，并对应于虚拟方法表的第四个槽。
+提供的方法是接口的一`ICorDebugProcess4`部分，对应于虚拟方法表的第四个槽。
 
 ## <a name="requirements"></a>要求
 
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
- **标头：** 无
+ **标题：** 没有
 
- **库：** 无
- 
- **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+ **库：** 没有
 
-## <a name="see-also"></a>请参阅
+ **.NET 框架版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+
+## <a name="see-also"></a>另请参阅
 
 - [ICorDebugProcess4 接口](icordebugprocess4-interface.md)
 - [调试接口](debugging-interfaces.md)

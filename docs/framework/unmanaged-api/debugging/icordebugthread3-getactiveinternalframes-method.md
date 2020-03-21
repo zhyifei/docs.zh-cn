@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-ms.openlocfilehash: 25cd3e05bc80dd39d2ca558bb4dd5fb77d255f5a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 680af5afa3ebef5bcaf9e34580e421dcc8093aaf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791400"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178468"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>ICorDebugThread3::GetActiveInternalFrames 方法
-返回堆栈上的内部帧（[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md)对象）的数组。  
+返回堆栈上的内部帧数组[（ICorDebug内部Frame2](icordebuginternalframe2-interface.md)对象）。  
   
 ## <a name="syntax"></a>语法  
   
-```cpp 
+```cpp
 HRESULT GetActiveInternalFrames  
       (  
       [in] ULONG32 cInternalFrames,  
@@ -37,44 +37,44 @@ HRESULT GetActiveInternalFrames
       );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `cInternalFrames`  
- 中`ppInternalFrames`中所需的内部帧数。  
+ [在]中预期的内部帧数`ppInternalFrames`。  
   
  `pcInternalFrames`  
- 弄指向 `ULONG32` 的指针，该指针包含堆栈上的内部帧的数目。  
+ [出]指向`ULONG32`包含堆栈上内部帧数的 指针。  
   
  `ppInternalFrames`  
- [in，out]一个指针，指向堆栈上内部帧的数组的地址。  
+ [进出]指向堆栈上内部帧数组地址的指针。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|已成功创建[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md)对象。|  
-|E_INVALIDARG|`cInternalFrames` 不为零，并且 `ppInternalFrames` 为 `null`或 `pcInternalFrames` 为 `null`。|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` 小于内部帧的计数。|  
+|S_OK|已成功创建[ICorDebug 内部Frame2](icordebuginternalframe2-interface.md)对象。|  
+|E_INVALIDARG|`cInternalFrames``ppInternalFrames`不是零，`null`是 ，`pcInternalFrames`或`null`是 。|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames`小于内部帧的计数。|  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
   
 ## <a name="remarks"></a>备注  
- 内部帧是由运行时推送到堆栈上的数据结构，用于存储临时数据。  
+ 内部帧是运行时推送到堆栈以存储临时数据的数据结构。  
   
- 第一次调用 `GetActiveInternalFrames`时，应将 `cInternalFrames` 参数设置为0（零），将 `ppInternalFrames` 参数设置为 null。 第一次返回 `GetActiveInternalFrames` 时，`pcInternalFrames` 包含堆栈上内部帧的计数。  
+ 首次调用`GetActiveInternalFrames`时，应将`cInternalFrames`参数设置为 0（零），并将`ppInternalFrames`参数设置为 null。 首次`GetActiveInternalFrames`返回时，`pcInternalFrames`包含堆栈上内部帧的计数。  
   
- 然后，应再次调用 `GetActiveInternalFrames`。 应在 `cInternalFrames` 参数中传递正确的计数（`pcInternalFrames`），并在 `ppInternalFrames`指定指向适当大小的数组的指针。  
+ `GetActiveInternalFrames`然后，应调用第二次。 应在`pcInternalFrames``cInternalFrames`参数中传递正确的计数 （ ），并在 中指定指向适当大小的数组的`ppInternalFrames`指针。  
   
- 使用[ICorDebugStackWalk：： GetFrame](icordebugthread3-getactiveinternalframes-method.md)方法返回实际的堆栈帧。  
+ 使用[ICorDebugStackWalk：getFrame](icordebugthread3-getactiveinternalframes-method.md)方法返回实际堆栈帧。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

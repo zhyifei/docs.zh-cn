@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: c9199e0ea1971c22bfc1f6334b9d2d9d73bb048c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9decb617e30a340d3e73e911f7848110de5599e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435052"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180167"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>实现 UI 自动化 MultipleView 控件模式
 > [!NOTE]
@@ -21,9 +21,9 @@ ms.locfileid: "74435052"
   
  <xref:System.Windows.Automation.MultipleViewPattern> 控件模式用于支持那些提供并能够在同组信息或子控件的多个表示形式间进行切换的控件。  
   
- 可显示多个视图的控件示例包括列表视图（可将其内容显示为缩略图、磁贴、图标或详细信息）、Microsoft Excel 图表（饼图、折线图、条形图、带有公式的单元格值）、Microsoft Word 文档（正常、Web 版式、打印布局、阅读版式、大纲）、Microsoft Outlook 日历（年、月、周、天）和 Microsoft Windows Media Player 的外观。 支持的视图由控件开发人员确定，并特定于每个控件。  
+ 可以显示多个视图的控件示例包括列表视图（可以将其内容显示为缩略图、磁贴、图标或详细信息）、Microsoft Excel 图表（饼图、行、条形图、带公式的单元格值）、Microsoft Word 文档（普通、Web 布局、打印）布局、阅读布局、大纲）、微软 Outlook 日历（年、月、周、日）和微软 Windows 媒体播放器外观。 支持的视图由控件开发人员确定，并特定于每个控件。  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
+<a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
  在实现 Multiple View 控件模式时，请注意以下准则和约定：  
   
@@ -35,21 +35,21 @@ ms.locfileid: "74435052"
   
 - 视图名称必须是适合在文本到语音转换、盲文和其他用户可读的应用程序中使用。  
   
-<a name="Required_Members_for_IMultipleViewProvider"></a>   
+<a name="Required_Members_for_IMultipleViewProvider"></a>
 ## <a name="required-members-for-imultipleviewprovider"></a>IMultipleViewProvider 所需的成员  
  实现 IMultipleViewProvider 需要以下属性和方法。  
   
-|必需的成员|成员类型|注意|  
+|必需的成员|成员类型|说明|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.CurrentView%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.CurrentView%2A>|properties|无|  
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|方法|无|  
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|方法|无|  
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|方法|无|  
   
  没有与此控件模式相关联的事件。  
   
-<a name="Exceptions"></a>   
-## <a name="exceptions"></a>异常  
+<a name="Exceptions"></a>
+## <a name="exceptions"></a>例外  
  提供程序必须引发以下异常。  
   
 |异常类型|条件|  
@@ -60,6 +60,6 @@ ms.locfileid: "74435052"
 
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
+- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
 - [UI 自动化树概述](ui-automation-tree-overview.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)

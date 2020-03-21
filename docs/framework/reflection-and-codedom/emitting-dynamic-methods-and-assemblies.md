@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-ms.openlocfilehash: 578851bed188921324e3c25e533b3466068dee3d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fda5a20eb7798086ec10415889454b4a8beba5f3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446780"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180530"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>发出动态方法和程序集
 
@@ -34,24 +34,20 @@ ms.locfileid: "74446780"
   
 除了 <xref:System.Reflection.Emit> 命名空间中的托管类型，还有非托管元数据接口，非托管元数据接口在[元数据接口](../unmanaged-api/metadata/metadata-interfaces.md)参考文档中介绍。 托管的反射发出提供比非托管元数据接口更强的语义错误检查和更高级别的元数据抽象。  
   
-元数据和 MSIL 的另一个有用资源是《公共语言基础结构 (CLI)》文档，尤其是“第二部分：元数据定义和语义”和“第三部分: CIL 指令集”。 文档可在[Ecma](https://www.ecma-international.org/publications/standards/Ecma-335.htm)网站上联机获取。  
+元数据和 MSIL 的另一个有用资源是《公共语言基础结构 (CLI)》文档，尤其是“第二部分：元数据定义和语义”和“第三部分: CIL 指令集”。 这些文件可在[Ecma网站上](https://www.ecma-international.org/publications/standards/Ecma-335.htm)在线查阅。  
   
 ## <a name="in-this-section"></a>本节内容
   
-[反射发出中的安全问题](security-issues-in-reflection-emit.md)  
+[反射中的安全问题发出](security-issues-in-reflection-emit.md)  
 介绍与使用反射发出创建动态程序集相关的安全问题。  
 
-[如何：定义和执行动态方法](how-to-define-and-execute-dynamic-methods.md)   
-介绍如何执行简单的动态方法和绑定到类实例的动态方法。
+[如何：定义和执行动态方法](how-to-define-and-execute-dynamic-methods.md)演示如何执行一个简单的动态方法和绑定到类实例的动态方法。
 
-[如何：用反射发出定义泛型类型](how-to-define-a-generic-type-with-reflection-emit.md)   
-介绍如何创建具有两个参数的简单泛型类型、如何对类型参数应用类约束、接口约束和特殊约束，以及如何创建使用类的类型参数作为参数类型和返回类型的成员。
+[如何：定义具有反射发出的泛型类型](how-to-define-a-generic-type-with-reflection-emit.md)演示如何使用两个类型参数创建简单的泛型类型，如何对类型参数应用类、接口和特殊约束，以及如何创建使用类的类型参数作为参数类型和返回类型的成员。
 
-[如何：用反射发出定义泛型方法](how-to-define-a-generic-method-with-reflection-emit.md)   
-介绍如何创建、发出和调用简单的泛型方法。
+[如何：定义具有反射发出的泛型方法](how-to-define-a-generic-method-with-reflection-emit.md)演示如何创建、发出和调用简单的泛型方法。
 
-[动态类型生成的可回收程序集](collectible-assemblies.md)   
-介绍了可回收程序集，它是一个动态程序集，卸载该程序集时，无需卸载在其中创建了该程序集的应用程序域。
+[动态类型生成可收集程序集](collectible-assemblies.md)引入可收集程序集，它们是动态程序集，无需卸载创建它们的应用程序域即可卸载。
   
 ## <a name="reference"></a>参考  
 

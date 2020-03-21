@@ -1,5 +1,5 @@
 ---
-title: 使用 RichTextBox 控件启用拖放操作
+title: 使用富文本盒控制启用拖放操作
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: 3c17560dee012912aea2938654f1dc4dc56e0725
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 27e5c18598552c465ef17f5e58069bc10e401c09
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745819"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182349"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>如何：在 Windows 窗体 RichTextBox 控件中启用拖放操作
 通过处理 <xref:System.Windows.Forms.RichTextBox> 和 <xref:System.Windows.Forms.RichTextBox.DragEnter> 事件，在 Windows 窗体 <xref:System.Windows.Forms.RichTextBox.DragDrop> 控件中进行拖放操作。 因此，在 <xref:System.Windows.Forms.RichTextBox> 控件中进行拖放操作是非常简单的。  
@@ -28,8 +28,8 @@ ms.locfileid: "76745819"
 2. 在 <xref:System.Windows.Forms.RichTextBox.DragEnter> 事件的事件处理程序中编写代码。 使用 `if` 语句来确保要拖动的数据为可接受的类型（本例为文本）。 <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> 属性可以设置为 <xref:System.Windows.Forms.DragDropEffects> 枚举的任何值。  
   
     ```vb  
-    Private Sub RichTextBox1_DragEnter(ByVal sender As Object, _   
-       ByVal e As System.Windows.Forms.DragEventArgs) _   
+    Private Sub RichTextBox1_DragEnter(ByVal sender As Object, _
+       ByVal e As System.Windows.Forms.DragEventArgs) _
        Handles RichTextBox1.DragEnter  
        If (e.Data.GetDataPresent(DataFormats.Text)) Then  
           e.Effect = DragDropEffects.Copy  
@@ -40,10 +40,10 @@ ms.locfileid: "76745819"
     ```  
   
     ```csharp  
-    private void richTextBox1_DragEnter(object sender,   
+    private void richTextBox1_DragEnter(object sender,
     System.Windows.Forms.DragEventArgs e)  
     {  
-       if (e.Data.GetDataPresent(DataFormats.Text))   
+       if (e.Data.GetDataPresent(DataFormats.Text))
           e.Effect = DragDropEffects.Copy;  
        else  
           e.Effect = DragDropEffects.None;  
@@ -62,7 +62,7 @@ ms.locfileid: "76745819"
        }  
     ```  
   
-     （视觉C#对象和C++视觉对象）将以下代码放在窗体的构造函数中以注册事件处理程序。  
+     （视觉 C# 和视觉C++）将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.richTextBox1.DragEnter += new  
@@ -81,10 +81,10 @@ ms.locfileid: "76745819"
      在下面的示例中，代码会将 <xref:System.Windows.Forms.RichTextBox.Text%2A> 控件的 <xref:System.Windows.Forms.RichTextBox> 属性设置为等于要拖动的数据。 如果 <xref:System.Windows.Forms.RichTextBox> 控件中已有文本，拖动的文本将插入到插入点。  
   
     ```vb  
-    Private Sub RichTextBox1_DragDrop(ByVal sender As Object, _   
-       ByVal e As System.Windows.Forms.DragEventArgs) _   
+    Private Sub RichTextBox1_DragDrop(ByVal sender As Object, _
+       ByVal e As System.Windows.Forms.DragEventArgs) _
        Handles RichTextBox1.DragDrop  
-       Dim i As Int16   
+       Dim i As Int16
        Dim s As String  
   
        ' Get start position to drop the text.  
@@ -100,7 +100,7 @@ ms.locfileid: "76745819"
     ```  
   
     ```csharp  
-    private void richTextBox1_DragDrop(object sender,   
+    private void richTextBox1_DragDrop(object sender,
     System.Windows.Forms.DragEventArgs e)  
     {  
        int i;  
@@ -112,7 +112,7 @@ ms.locfileid: "76745819"
        richTextBox1.Text = richTextBox1.Text.Substring(0,i);  
   
        // Drop the text on to the RichTextBox.  
-       richTextBox1.Text = richTextBox1.Text +   
+       richTextBox1.Text = richTextBox1.Text +
           e.Data.GetData(DataFormats.Text).ToString();  
        richTextBox1.Text = richTextBox1.Text + s;  
     }  
@@ -133,12 +133,12 @@ ms.locfileid: "76745819"
   
        // Drop the text on to the RichTextBox.  
        String ^str = String::Concat(richTextBox1->Text, e->Data  
-       ->GetData(DataFormats->Text)->ToString());   
+       ->GetData(DataFormats->Text)->ToString());
        richTextBox1->Text = String::Concat(str, s);  
        }  
     ```  
   
-     （视觉C#对象和C++视觉对象）将以下代码放在窗体的构造函数中以注册事件处理程序。  
+     （视觉 C# 和视觉C++）将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.richTextBox1.DragDrop += new  
@@ -147,7 +147,7 @@ ms.locfileid: "76745819"
     ```  
   
     ```cpp  
-    this->richTextBox1->DragDrop += gcnew   
+    this->richTextBox1->DragDrop += gcnew
        System::Windows::Forms::DragEventHandler  
        (this, &Form1::richTextBox1_DragDrop);  
     ```  
@@ -156,7 +156,7 @@ ms.locfileid: "76745819"
   
 1. 保存并生成应用程序。 在运行期间，运行写字板。  
   
-     写字板是由 Windows 安装的允许拖放操作的文本编辑器。 可以通过单击“开始” 按钮，选择“运行”，在“运行” `WordPad`**对话框的文本框中键入** ，然后单击“确定”来访问它。  
+     写字板是由 Windows 安装的允许拖放操作的文本编辑器。 可以通过单击“开始” **** 按钮，选择“运行” ****，在“运行” `WordPad`**对话框的文本框中键入** ，然后单击“确定” **** 来访问它。  
   
 2. 打开写字板后，在其中键入文本字符串。 使用鼠标选择该文本，然后将所选的文本拖到 Windows 应用程序中的 <xref:System.Windows.Forms.RichTextBox> 控件之上。  
   
@@ -169,4 +169,4 @@ ms.locfileid: "76745819"
 - <xref:System.Windows.Forms.RichTextBox>
 - [如何：在应用程序之间执行拖放操作](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [RichTextBox 控件](richtextbox-control-windows-forms.md)
-- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
+- [要在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

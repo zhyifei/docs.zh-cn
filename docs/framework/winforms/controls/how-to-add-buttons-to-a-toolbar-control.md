@@ -12,31 +12,31 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: 8ab1fa8fc163ed50e51801769d40e61483e8ed5b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1bb6de58010e70a4edafacafe3dc00b511fc63de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912633"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182343"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>如何：向 ToolBar 控件添加按钮
 > [!NOTE]
 > <xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。  
   
- <xref:System.Windows.Forms.ToolBar>控件的一个组成部分是您向其中添加的按钮。 可以使用这些命令来轻松访问菜单命令或, 也可以将其放置在应用程序的用户界面的另一个区域中, 向用户提供菜单结构中不存在的命令。  
+ <xref:System.Windows.Forms.ToolBar>控件的一个组成部分是添加到控件中的按钮。 这些可用于提供对菜单命令的轻松访问，或者交替地将其放置在应用程序用户界面的另一个区域，以向菜单结构中不可用的用户公开命令。  
   
- 下面的示例假定<xref:System.Windows.Forms.ToolBar>已将控件添加到 Windows 窗体 (`Form1`)。  
+ 下面的示例假定<xref:System.Windows.Forms.ToolBar>控件已添加到 Windows 窗体 （）。`Form1`  
   
 ### <a name="to-add-buttons-programmatically"></a>以编程方式添加按钮  
   
-1. 在过程中, 通过将工具栏按钮添加到<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>集合来创建工具栏按钮。  
+1. 在此过程中，通过将工具栏按钮添加到集合中<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>来创建工具栏按钮。  
   
-2. 通过<xref:System.Windows.Forms.ToolBar.Buttons%2A>属性传递按钮的索引, 指定单个按钮的属性设置。  
+2. 通过<xref:System.Windows.Forms.ToolBar.Buttons%2A>属性传递按钮的索引，指定单个按钮的属性设置。  
   
-     下面的示例假设窗体<xref:System.Windows.Forms.ToolBar>已添加控件。  
+     下面的示例假定已添加控件的<xref:System.Windows.Forms.ToolBar>窗体。  
   
     > [!NOTE]
-    > 该<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>集合是一个从零开始的集合, 因此, 代码应进行相应的处理。  
+    > 集合<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>是一个基于零的集合，因此代码应相应地进行。  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -90,7 +90,7 @@ ms.locfileid: "69912633"
        toolBar1.Buttons[2].PartialPush = true;  
   
        // Instantiate a ContextMenu component and menu items.  
-       // Set the DropDownButton's DropDownMenu property to   
+       // Set the DropDownButton's DropDownMenu property to
        // the context menu.  
        ContextMenu cm = new ContextMenu();  
        MenuItem miOne = new MenuItem("One");  
@@ -129,7 +129,7 @@ ms.locfileid: "69912633"
           toolBar1->Buttons[2]->PartialPush = true;  
   
           // Instantiate a ContextMenu component and menu items.  
-          // Set the DropDownButton's DropDownMenu property to   
+          // Set the DropDownButton's DropDownMenu property to
           // the context menu.  
           System::Windows::Forms::ContextMenu^ cm = gcnew System::Windows::Forms::ContextMenu;  
           MenuItem^ miOne = gcnew MenuItem( "One" );  
@@ -148,10 +148,10 @@ ms.locfileid: "69912633"
        }  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.ToolBar>
 - [如何：定义工具栏按钮的图标](how-to-define-an-icon-for-a-toolbar-button.md)
-- [如何：工具栏按钮的触发器菜单事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [如何：触发工具栏按钮的菜单事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar 控件概述](toolbar-control-overview-windows-forms.md)
 - [ToolBar 控件](toolbar-control-windows-forms.md)

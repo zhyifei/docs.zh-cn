@@ -10,18 +10,18 @@ helpviewer_keywords:
 - graphics [WPF], grouping Transform objects
 - TransformGroup [WPF]
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
-ms.openlocfilehash: 544d0a26f24e5ad4ed7e2e3cfa25f8e15d1be446
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 3ef11104b2a4fc775d29d2a388c9a70a69a3f10f
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452826"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112110"
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a>如何：向对象应用多个变换
-此示例演示如何使用 <xref:System.Windows.Media.TransformGroup> 将两个或多个 <xref:System.Windows.Media.Transform> 对象组合成单个复合 <xref:System.Windows.Media.Transform>。  
+此示例演示如何使用<xref:System.Windows.Media.TransformGroup>将两个或多个<xref:System.Windows.Media.Transform>对象分组到单个复合中。 <xref:System.Windows.Media.Transform>  
   
 ## <a name="example"></a>示例  
- 下面的示例使用 <xref:System.Windows.Media.TransformGroup> 向 <xref:System.Windows.Controls.Button>应用 <xref:System.Windows.Media.ScaleTransform> 和 <xref:System.Windows.Media.RotateTransform>。  
+ 下面的<xref:System.Windows.Media.TransformGroup>示例使用 将 和<xref:System.Windows.Media.ScaleTransform>a<xref:System.Windows.Media.RotateTransform>应用于<xref:System.Windows.Controls.Button>。  
   
  [!code-xaml[Transforms_snip#MultipleTransformExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/MultipleTransformExample.xaml#multipletransformexamplewholepage)]  
   
@@ -33,4 +33,4 @@ ms.locfileid: "77452826"
 - <xref:System.Windows.UIElement.RenderTransform%2A>
 - <xref:System.Windows.Media.TransformGroup>
 - [转换概述](transforms-overview.md)
-- [2D 转换示例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)
+- [2D 变换示例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)

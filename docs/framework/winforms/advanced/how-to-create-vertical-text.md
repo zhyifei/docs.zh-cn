@@ -10,20 +10,20 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing vertical
 - vertical text [Windows Forms], drawing
 ms.assetid: 50c69046-4188-47d9-b949-cc2610ffd337
-ms.openlocfilehash: 009e8e392841ac6b846007a88efc33ef79f56967
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 86401342625f593945b801f7619ef9ca9681317c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582680"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182558"
 ---
 # <a name="how-to-create-vertical-text"></a>如何：创建垂直文本
-可以使用<xref:System.Drawing.StringFormat>对象来指定垂直而不是水平绘制文本。  
+可以使用<xref:System.Drawing.StringFormat>对象指定垂直而不是水平绘制文本。  
   
 ## <a name="example"></a>示例  
- 下面的示例将值分配<xref:System.Drawing.StringFormatFlags.DirectionVertical>到<xref:System.Drawing.StringFormat.FormatFlags%2A>属性的<xref:System.Drawing.StringFormat>对象。 是否<xref:System.Drawing.StringFormat>对象传递给<xref:System.Drawing.Graphics.DrawString%2A>方法的<xref:System.Drawing.Graphics>类。 该值<xref:System.Drawing.StringFormatFlags.DirectionVertical>隶属<xref:System.Drawing.StringFormatFlags>枚举。  
+ 下面的示例将该值<xref:System.Drawing.StringFormatFlags.DirectionVertical>分配给<xref:System.Drawing.StringFormat.FormatFlags%2A><xref:System.Drawing.StringFormat>对象的属性。 该<xref:System.Drawing.StringFormat>对象传递给<xref:System.Drawing.Graphics.DrawString%2A><xref:System.Drawing.Graphics>类的方法。 该值<xref:System.Drawing.StringFormatFlags.DirectionVertical>是枚举的成员<xref:System.Drawing.StringFormatFlags>。  
   
- 下图显示了垂直文本： 
+ 下图显示了垂直文本：
   
  ![显示垂直字体文本的图形。](./media/how-to-create-vertical-text/vertical-font-text-graphic.png)  
   
@@ -32,8 +32,8 @@ ms.locfileid: "65582680"
   
 ## <a name="compiling-the-code"></a>编译代码  
   
-- 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e` ，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
+- 前面的示例设计用于 Windows 窗体，它要求<xref:System.Windows.Forms.PaintEventArgs>`e`. <xref:System.Windows.Forms.PaintEventHandler>  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：用 GDI 绘制文本](how-to-draw-text-with-gdi.md)

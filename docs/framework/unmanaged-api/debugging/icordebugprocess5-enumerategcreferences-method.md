@@ -15,43 +15,43 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-ms.openlocfilehash: 81993f108ae9b59300b5d29402d7a423c3657757
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a97c14d83f99c847bb8569a33e175ab6eb5bccd8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792435"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178623"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences 方法
-获取一个枚举器，该枚举器用于进程中要进行垃圾回收的所有对象。  
+获取进程中要垃圾回收的所有对象的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT EnumerateGCReferences(  
-    [in] Bool enumerateWeakReferences,   
+    [in] Bool enumerateWeakReferences,
     [out] ICorDebugGCReferenceEnum **ppEnum  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `enumerateWeakReferences`  
- 中指示是否也要枚举弱引用的布尔值。 如果 `true``enumerateWeakReferences`，则 `ppEnum` 枚举器将同时包含强引用和弱引用。 如果 `false``enumerateWeakReferences`，则枚举器仅包括强引用。  
+ [在]指示是否也枚举弱引用的布尔值。 如果是`enumerateWeakReferences``true`，`ppEnum`则枚举器同时包含强引用和弱引用。 如果`enumerateWeakReferences``false`为 ，则枚举器仅包含强引用。  
   
  `ppEnum`  
- 弄一个指针，指向[ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md)的地址，该地址是要进行垃圾回收的对象的枚举器。  
+ [出]指向[ICorDebugGC 参考Enum](icordebuggcreferenceenum-interface.md)地址的指针，该地址是要垃圾回收的对象的枚举器。  
   
 ## <a name="remarks"></a>备注  
- 此方法提供了一种方法，用于确定进程中任何托管对象的完整根链，并可用于确定对象仍处于活动状态的原因。  
+ 此方法提供了一种确定进程中任何托管对象的完整根链的方法，并可用于确定对象仍然处于活动状态的原因。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

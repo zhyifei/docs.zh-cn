@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 7305258570ad853afa88a231592fd4b6cd2dd74e
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 49d2988cbad33497f2214098bcde68f7d5434b5e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965862"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180022"
 ---
 # <a name="microsoft-ui-automation"></a>Microsoft UI 自动化
 
 > [!NOTE]
-> 本文档适用于想要使用 <xref:System.Windows.Automation> 命名空间中定义的托管 UI 自动化类的 .NET 开发人员。 有关 UI 自动化的最新信息，请参阅[Windows 自动化 API： Ui 自动化](/windows/win32/winauto/entry-uiauto-win32)。
+> 本文档适用于希望使用命名空间中定义的托管 UI 自动化类的<xref:System.Windows.Automation>.NET 开发人员。 有关 UI 自动化的最新信息，请参阅[Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。
 
- Microsoft UI 自动化是 Microsoft Windows 的辅助功能框架。 它通过提供对用户界面（UI）相关信息的编程访问，满足了辅助技术产品和自动化测试框架的需求。 此外，UI 自动化使控件和应用程序开发人员能够更轻松地访问其产品。
+ 微软 UI 自动化是微软 Windows 的辅助功能框架。 它通过提供对用户界面 （UI） 信息的编程访问，满足辅助技术产品和自动化测试框架的需求。 此外，UI 自动化使控制和应用程序开发人员能够使其产品易于访问。
 
- 本文档介绍了托管代码的 UI 自动化 API。 有关中C++的 ui 自动化编程的详细信息，请参阅[Win32 应用程序的 ui 自动化](/windows/desktop/winauto/windows-automation-api-portal)。
+ 本文档介绍托管代码的 UI 自动化 API。 有关C++ UI 自动化编程的信息，请参阅[Win32 应用程序的 UI 自动化](/windows/desktop/winauto/windows-automation-api-portal)。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
 - [辅助功能最佳方案](accessibility-best-practices.md)
 - [UI 自动化基础知识](ui-automation-fundamentals.md)
@@ -34,4 +34,4 @@ ms.locfileid: "76965862"
 
 ## <a name="related-sections"></a>相关章节
 
-- [辅助功能示例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 
+- [辅助功能示例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility)

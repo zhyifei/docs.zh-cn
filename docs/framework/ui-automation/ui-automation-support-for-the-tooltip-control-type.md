@@ -1,19 +1,19 @@
 ---
-title: 对 ToolTip 控件类型的 UI 自动化支持
+title: UI 自动化对 ToolTip 控件类型的支持
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, ToolTip control type
 - ToolTip control type
 - control types, ToolTip
 ms.assetid: c3779d78-3164-43ae-8dae-bfaeafffdd65
-ms.openlocfilehash: ce1a3fa79c9e0074b3e0f7bfe5aa316fd0d28426
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 8531270efb5a7bc5896c5d2fa04dd0632547cac7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785725"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179464"
 ---
-# <a name="ui-automation-support-for-the-tooltip-control-type"></a>对 ToolTip 控件类型的 UI 自动化支持
+# <a name="ui-automation-support-for-the-tooltip-control-type"></a>UI 自动化对 ToolTip 控件类型的支持
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -21,25 +21,25 @@ ms.locfileid: "76785725"
   
  工具提示控件是包含文本的弹出窗口。  
   
- 以下各部分定义 ToolTip 控件类型的必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有工具提示控件，无论是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 还是 Windows 窗体。  
+ 以下各部分定义 ToolTip 控件类型的必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。 这些要求[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]适用于所有工具提示控件，无论是[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Win32 还是 Windows 窗体。  
   
-<a name="Required_UI_Automation_Tree_Structure"></a>   
+<a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必需的 UI 自动化树结构  
  下表介绍与工具提示控件有关的控件视图和 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图并介绍可被包含在每个视图中的内容。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](ui-automation-tree-overview.md)。  
   
 |控件视图|内容视图|  
 |------------------|------------------|  
-|工具提示<br /><br /> -Text （0个或多个）<br />-Image （0个或多个）|工具提示|  
+|ToolTip<br /><br /> - 文本（0 或更多）<br />- 图像（0 或更多）|ToolTip|  
   
  如果工具提示控件可接收键盘焦点，则它们仅显示在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中。 否则，所有的工具提示信息可从工具提示引用的 `HelpTextProperty` 元素上的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 获取。  
   
  工具提示应出现在他们的信息所引用的控件下方。 客户端必须侦听 `ToolTipOpenedEvent` 以确保它们以一致的方式获得工具提示中包含的信息。  
   
-<a name="Required_UI_Automation_Properties"></a>   
+<a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
  下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与工具提示控件尤其相关。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|{2&gt;值&lt;2}|注释|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|说明|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
@@ -47,41 +47,41 @@ ms.locfileid: "76785725"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|请参阅注释。|如果该控件可以接收键盘焦点，则它必须支持此属性。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|请参阅注释。|工具提示控件的名称是在工具提示中显示的文本。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|工具提示控件始终由其内容进行自标记。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|工具提示|此值对于所有 UI 框架均相同。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ToolTip|此值对于所有 UI 框架均相同。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|“工具提示”|对应于 ToolTip 控件类型的本地化的字符串。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|视情况而定|如果工具提示控件可接收键盘焦点，则它们必须位于树的内容视图中。 如果它仅为文本，则它可作为 HelpTextProperty 从引发它的控件获取。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|依赖的对象|如果工具提示控件可接收键盘焦点，则它们必须位于树的内容视图中。 如果它仅为文本，则它可作为 HelpTextProperty 从引发它的控件获取。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|工具提示控件必须始终为一个控件。|  
   
-<a name="Required_UI_Automation_Control_Patterns"></a>   
+<a name="Required_UI_Automation_Control_Patterns"></a>
 ## <a name="required-ui-automation-control-patterns"></a>必需的 UI 自动化控件模式  
  下表列出需要由工具提示控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。 有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。  
   
-|控件模式|支持|注释|  
+|控件模式|支持|说明|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider>|视情况而定|可以通过单击 UI 项关闭的工具提示必须支持 WindowPattern，以便可以自动关闭。|  
-|<xref:System.Windows.Automation.Provider.ITextProvider>|视情况而定|工具提示控件可支持“文本”控件模式以实现更好的辅助功能，尽管这不是必需的。 当文本具有丰富的样式和特性（例如，颜色、粗体和斜体）时，“文本”控件模式会很有用。|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider>|依赖的对象|可以通过单击 UI 项关闭的工具提示必须支持 WindowPattern，以便可以自动关闭。|  
+|<xref:System.Windows.Automation.Provider.ITextProvider>|依赖的对象|工具提示控件可支持“文本”控件模式以实现更好的辅助功能，尽管这不是必需的。 当文本具有丰富的样式和特性（例如，颜色、粗体和斜体）时，“文本”控件模式会很有用。|  
   
-<a name="Required_UI_Automation_Events"></a>   
+<a name="Required_UI_Automation_Events"></a>
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
  当工具提示控件出现在屏幕上时，它们必须引发 `ToolTipOpenedEvent` 。 该事件将包括对工具提示自身的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 元素的引用。  
   
  下表列出需要由所有工具提示控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|注释|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|说明|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|视情况而定|无|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|视情况而定|无|  
-|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent>|视情况而定|无|  
-|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|视情况而定|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipOpenedEvent>|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipClosedEvent>|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowVisualStateProperty> 属性更改事件。|视情况而定|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必需|无|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|依赖的对象|无|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|依赖的对象|无|  
+|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent>|依赖的对象|无|  
+|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|依赖的对象|无|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipOpenedEvent>|必选|无|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipClosedEvent>|必选|无|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必选|无|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 属性更改事件。|必选|无|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。|必选|无|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 属性更改事件。|必选|无|  
+|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowVisualStateProperty> 属性更改事件。|依赖的对象|无|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必选|无|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必选|无|  
   
 ## <a name="see-also"></a>另请参阅
 

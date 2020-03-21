@@ -5,33 +5,33 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 547c23509096b66c1fdbd46117a10f4de1692387
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 3dd21268d4ea7dc59c74889ac94dc86678e91865
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212048"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184642"
 ---
 # <a name="message-security-with-a-user-name-client"></a>用户名客户端的消息安全
-下图显示了使用消息级安全性保护 Windows Communication Foundation （WCF）服务和客户端。 服务使用 X.509 证书进行身份验证。 客户端使用用户名和密码进行身份验证。  
+下图显示了使用消息级安全性保护的 Windows 通信基础 （WCF） 服务和客户端。 服务使用 X.509 证书进行身份验证。 客户端使用用户名和密码进行身份验证。  
   
  有关示例应用程序，请参阅[消息安全用户名](../../../../docs/framework/wcf/samples/message-security-user-name.md)。  
   
  ![使用用户名身份验证的消息安全](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
-|安全模式|Message|  
-|互操作性|仅 Windows Communication Foundation （WCF）|  
+|安全模式|消息|  
+|互操作性|仅限 Windows 通信基金会 （WCF）|  
 |身份验证（服务器）|初始协商需要服务器身份验证|  
 |身份验证（客户端）|用户名/密码|  
 |完整性|是，使用共享安全上下文|  
-|保密性|是，使用共享安全上下文|  
-|Transport|HTTP|  
+|机密性|是，使用共享安全上下文|  
+|传输|HTTP|  
 |绑定|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>服务  
- 下面的代码和配置应独立运行。 执行以下操作之一：  
+ 下面的代码和配置应独立运行。 执行下列操作之一：  
   
 - 使用代码（而不使用配置）创建独立服务。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "76212048"
       <serviceBehaviors>  
         <behavior name="ServiceCredentialsBehavior">  
           <serviceCredentials>  
-            <serviceCertificate findValue="Contoso.com"   
+            <serviceCertificate findValue="Contoso.com"
                                 storeLocation="LocalMachine"  
-                                storeName="My"     
+                                storeName="My"
                                 x509FindType="FindBySubjectName" />  
           </serviceCredentials>  
         </behavior>  
@@ -75,7 +75,7 @@ ms.locfileid: "76212048"
     <bindings>  
       <wsHttpBinding>  
         <binding name="MessageAndUserName">  
-          <security mode="Message">              
+          <security mode="Message">
             <message clientCredentialType="UserName" />  
           </security>  
         </binding>  
@@ -111,9 +111,9 @@ ms.locfileid: "76212048"
       </wsHttpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="http://machineName/Calculator"   
+      <endpoint address="http://machineName/Calculator"
                 binding="wsHttpBinding"  
-                bindingConfiguration="WSHttpBinding_ICalculator"   
+                bindingConfiguration="WSHttpBinding_ICalculator"
                 contract="ICalculator"  
                 name="WSHttpBinding_ICalculator">  
         <identity>  
@@ -127,8 +127,8 @@ ms.locfileid: "76212048"
   
 ## <a name="see-also"></a>另请参阅
 
-- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [用户名消息安全](../../../../docs/framework/wcf/samples/message-security-user-name.md)
 - [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [\<身份>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
 - [Windows Server App Fabric 的安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

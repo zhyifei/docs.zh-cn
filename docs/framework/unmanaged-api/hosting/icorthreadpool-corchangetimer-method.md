@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 82b03a59-5a87-43ed-9b75-e04b256e1a46
 topic_type:
 - apiref
-ms.openlocfilehash: 330adf6ca2445f7307671d5531ce49a9d46e0fbb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bb3778a55e7f395ad65f6a9841ca1f31f1de4ebc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133315"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178260"
 ---
 # <a name="icorthreadpoolcorchangetimer-method"></a>ICorThreadpool::CorChangeTimer 方法
 此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。  
@@ -29,8 +29,8 @@ ms.locfileid: "73133315"
   
 ```cpp  
 HRESULT CorChangeTimer (  
-    [in]  HANDLE Timer,   
-    [in]  ULONG  DueTime,   
+    [in]  HANDLE Timer,
+    [in]  ULONG  DueTime,
     [in]  ULONG  Period,  
     [out] BOOL*  result  
 );  
@@ -39,12 +39,12 @@ HRESULT CorChangeTimer (
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Mscoree.dll  
+ **标题：** MSCorEE.h  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包含在 MSCorEE.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorThreadpool 接口](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)

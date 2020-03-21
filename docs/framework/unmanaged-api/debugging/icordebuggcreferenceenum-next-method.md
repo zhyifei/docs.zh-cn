@@ -15,45 +15,45 @@ helpviewer_keywords:
 ms.assetid: 91b1345c-a94f-4ef8-9696-3823d06c6d05
 topic_type:
 - apiref
-ms.openlocfilehash: 3a8e967a3ecc452ebda08872d8bcd9e9d08c766f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d87f414e9dfd05a519b60efc7ecdd5328a6dd86f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777696"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178870"
 ---
 # <a name="icordebuggcreferenceenumnext-method"></a>ICorDebugGCReferenceEnum::Next 方法
-获取指定数量的[COR_GC_REFERENCE](cor-gc-reference-structure.md)实例，这些实例包含有关将进行垃圾回收的对象的信息。  
+获取指定数量的[COR_GC_REFERENCE](cor-gc-reference-structure.md)实例，这些实例包含有关将垃圾回收的对象的信息。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT Next(  
-    [in] ULONG celt,    [out, size_is(celt), length_is(*pceltFetched)] COR_GC_REFERENCE roots[],   
+    [in] ULONG celt,    [out, size_is(celt), length_is(*pceltFetched)] COR_GC_REFERENCE roots[],
     [out] ULONG *pceltFetched  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  celt  
- 中要检索的根的数目。  
+ [在]要检索的根数。  
   
- 根目录  
- 弄指针的数组，其中每个都指向一个[COR_GC_REFERENCE](cor-gc-reference-structure.md)对象，该对象表示要进行垃圾回收的对象的根。  
+ 根  
+ [出]指针数组，每个指针都指向表示要垃圾回收的对象的根[COR_GC_REFERENCE](cor-gc-reference-structure.md)对象。  
   
  pceltFetched  
- 弄一个指针，指向 `roots`中实际返回的[COR_GC_REFERENCE](cor-gc-reference-structure.md)对象的数量。 如果 `celt` 为 1，此值可能为 `null`。  
+ [出]指向中实际返回的对象数[COR_GC_REFERENCE](cor-gc-reference-structure.md)的指针`roots`。 如果 `celt` 为 1，此值可能为 `null`。  
   
 ## <a name="remarks"></a>备注  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

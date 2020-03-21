@@ -1,5 +1,5 @@
 ---
-title: 如何：向 TreeView 或 ListView 控件添加自定义信息
+title: 如何：将自定义信息添加到树视图或列表视图控件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: fe507c41de97e9332f3f27e453a476d992f86627
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: faed586a5814526b0169ea46c8bb452e3777d8ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732219"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182423"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>如何：向 TreeView 或 ListView 控件添加自定义信息（Windows 窗体）
-可以在 Windows 窗体 <xref:System.Windows.Forms.TreeView> 控件或 <xref:System.Windows.Forms.ListView> 控件中的派生项中创建派生节点。 通过派生可添加任何所需字段，以及添加处理这些字段的自定义方法和构造函数。 此功能的用途之一是将 Customer 对象附加到每个树节点或列表项。 此处的示例针对 <xref:System.Windows.Forms.TreeView> 控件，但相同的方法可用于 <xref:System.Windows.Forms.ListView> 控件。  
+您可以在 Windows 窗体<xref:System.Windows.Forms.TreeView>控件中创建派生节点，也可以在<xref:System.Windows.Forms.ListView>控件中创建派生项。 通过派生可添加任何所需字段，以及添加处理这些字段的自定义方法和构造函数。 此功能的用途之一是将 Customer 对象附加到每个树节点或列表项。 此处的示例用于<xref:System.Windows.Forms.TreeView>控件，但相同的方法可用于<xref:System.Windows.Forms.ListView>控件。  
   
 ### <a name="to-derive-a-tree-node"></a>派生树节点  
   
-- 创建一个新的 node 类，该类派生自 <xref:System.Windows.Forms.TreeNode> 类，该类具有一个用于记录文件路径的自定义字段。  
+- 创建一个从<xref:System.Windows.Forms.TreeNode>类派生的新节点类，该类具有用于记录文件路径的自定义字段。  
   
     ```vb  
     Class myTreeNode  
@@ -75,7 +75,7 @@ ms.locfileid: "76732219"
      在下例中，为文本文件位置设置的路径是 My Documents 文件夹。 这样做是出于一个假定，即假定大多数运行 Windows 操作系统的计算机都包含此目录。 这还使得具有最低系统访问级别的用户能够安全运行应用程序。  
   
     ```vb  
-    ' You should replace the bold text file   
+    ' You should replace the bold text file
     ' in the sample below with a text file of your own choosing.  
     TreeView1.Nodes.Add(New myTreeNode (System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.Personal) _  
@@ -83,7 +83,7 @@ ms.locfileid: "76732219"
     ```  
   
     ```csharp  
-    // You should replace the bold text file   
+    // You should replace the bold text file
     // in the sample below with a text file of your own choosing.  
     // Note the escape character used (@) when specifying the path.  
     treeView1.Nodes.Add(new myTreeNode(System.Environment.GetFolderPath
@@ -92,7 +92,7 @@ ms.locfileid: "76732219"
     ```  
   
     ```cpp  
-    // You should replace the bold text file   
+    // You should replace the bold text file
     // in the sample below with a text file of your own choosing.  
     treeView1->Nodes->Add(new myTreeNode(String::Concat(  
        System::Environment::GetFolderPath  
@@ -100,7 +100,7 @@ ms.locfileid: "76732219"
        "\\TextFile.txt")));  
     ```  
   
-2. 如果传递的是树节点，并且它被类型化为 <xref:System.Windows.Forms.TreeNode> 类，则需要强制转换为派生类。 强制转换是从一种对象类型到另一种对象类型的显式转换。 有关强制转换的详细信息，请参阅[隐式和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)（Visual Basic）、[强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)（视觉对象C#）或[强制转换运算符：（）](/cpp/cpp/cast-operator-parens) （视觉对象C++）。  
+2. 如果传递树节点并将其键入为<xref:System.Windows.Forms.TreeNode>类，则需要强制转换为派生类。 强制转换是从一种对象类型到另一种对象类型的显式转换。 有关强制转换的详细信息，请参阅[隐式和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)（可视基本）、[强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)（可视 C#）或[强制转换运算符：（）（可视](/cpp/cpp/cast-operator-parens)C++）。  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  
@@ -125,7 +125,7 @@ ms.locfileid: "76732219"
           System::Windows::Forms::TreeViewEventArgs ^  e)  
        {  
           myTreeNode ^ myNode = safe_cast<myTreeNode^>(e->Node);  
-          MessageBox::Show(String::Concat("Node selected is ",   
+          MessageBox::Show(String::Concat("Node selected is ",
              myNode->FilePath));  
        }  
     ```  

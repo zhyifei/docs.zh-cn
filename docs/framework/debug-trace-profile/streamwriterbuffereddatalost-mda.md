@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data buffering problems
 - streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
-ms.openlocfilehash: 82940b40b302f4a928547f2e6a0c285727e13934
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 18b2a5a95756ed125d26b2846c0b1ddc320463ea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216104"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181740"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
-写入 `streamWriterBufferedDataLost` 时，将激活 <xref:System.IO.StreamWriter> 托管调试助手 (MDA)，但随后，在销毁 <xref:System.IO.StreamWriter.Flush%2A> 的实例前不再调用 <xref:System.IO.StreamWriter.Close%2A> 或 <xref:System.IO.StreamWriter> 方法。 启用此 MDA 时，运行时确定 <xref:System.IO.StreamWriter> 内是否仍然有任何缓冲数据。 如果缓冲数据确实存在，则将激活 MDA。 调用 <xref:System.GC.Collect%2A> 和 <xref:System.GC.WaitForPendingFinalizers%2A> 方法可以强制运行终结器。 否则，终结器将似乎在任意时刻运行，并且在进程退出时可能根本没有运行。 在启用了此 MDA 的情况下显式运行终结器将有助于更可靠地重现此类问题。  
+写入 <xref:System.IO.StreamWriter> 时，将激活 `streamWriterBufferedDataLost` 托管调试助手 (MDA)，但随后，在销毁 <xref:System.IO.StreamWriter> 的实例前不再调用 <xref:System.IO.StreamWriter.Flush%2A> 或 <xref:System.IO.StreamWriter.Close%2A> 方法。 启用此 MDA 时，运行时确定 <xref:System.IO.StreamWriter> 内是否仍然有任何缓冲数据。 如果缓冲数据确实存在，则将激活 MDA。 调用 <xref:System.GC.Collect%2A> 和 <xref:System.GC.WaitForPendingFinalizers%2A> 方法可以强制运行终结器。 否则，终结器将似乎在任意时刻运行，并且在进程退出时可能根本没有运行。 在启用了此 MDA 的情况下显式运行终结器将有助于更可靠地重现此类问题。  
   
 ## <a name="symptoms"></a>症状  
  <xref:System.IO.StreamWriter> 不会将最后 1-4 KB 的数据写入文件。  
@@ -30,7 +30,7 @@ ms.locfileid: "77216104"
   
 ```csharp  
 // Poorly written code.  
-void Write()   
+void Write()
 {  
     StreamWriter sw = new StreamWriter("file.txt");  
     sw.WriteLine("Data");  
@@ -46,10 +46,10 @@ GC.WaitForPendingFinalizers();
 ```  
   
 ## <a name="resolution"></a>解决方法  
- 在关闭应用程序或具有 <xref:System.IO.StreamWriter.Close%2A> 实例的代码块之前，请确保在 <xref:System.IO.StreamWriter.Flush%2A> 上调用 <xref:System.IO.StreamWriter> 或 <xref:System.IO.StreamWriter>。 实现此操作的最佳机制之一是使用 C# `using` 块（Visual Basic 中为 `Using`）创建实例，这将确保调用编写器的 <xref:System.IO.StreamWriter.Dispose%2A> 方法，从而正确关闭实例。  
+ 在关闭应用程序或具有 <xref:System.IO.StreamWriter> 实例的代码块之前，请确保在 <xref:System.IO.StreamWriter> 上调用 <xref:System.IO.StreamWriter.Close%2A> 或 <xref:System.IO.StreamWriter.Flush%2A>。 实现此操作的最佳机制之一是使用 C# `using` 块（Visual Basic 中为 `Using`）创建实例，这将确保调用编写器的 <xref:System.IO.StreamWriter.Dispose%2A> 方法，从而正确关闭实例。  
   
 ```csharp
-using(StreamWriter sw = new StreamWriter("file.txt"))   
+using(StreamWriter sw = new StreamWriter("file.txt"))
 {  
     sw.WriteLine("Data");  
 }  
@@ -59,24 +59,24 @@ using(StreamWriter sw = new StreamWriter("file.txt"))
   
 ```csharp
 StreamWriter sw;  
-try   
+try
 {  
     sw = new StreamWriter("file.txt"));  
     sw.WriteLine("Data");  
 }  
-finally   
+finally
 {  
     if (sw != null)  
         sw.Close();  
 }  
 ```  
   
- 如果这两个解决方案都不能使用（例如，如果 <xref:System.IO.StreamWriter> 存储在静态变量中，并且无法在其生命周期结束时轻松运行代码），则通过以下方式避免此问题：在最后一次使用 <xref:System.IO.StreamWriter.Flush%2A> 上的 <xref:System.IO.StreamWriter> 之后调用它，或者将 <xref:System.IO.StreamWriter.AutoFlush%2A> 属性设置为 `true`。  
+ 如果这两个解决方案都不能使用（例如，如果 <xref:System.IO.StreamWriter> 存储在静态变量中，并且无法在其生命周期结束时轻松运行代码），则通过以下方式避免此问题：在最后一次使用 <xref:System.IO.StreamWriter> 上的 <xref:System.IO.StreamWriter.Flush%2A> 之后调用它，或者将 <xref:System.IO.StreamWriter.AutoFlush%2A> 属性设置为 `true`。  
   
 ```csharp
 private static StreamWriter log;  
 // static class constructor.  
-static WriteToFile()   
+static WriteToFile()
 {  
     StreamWriter sw = new StreamWriter("log.txt");  
     sw.AutoFlush = true;  

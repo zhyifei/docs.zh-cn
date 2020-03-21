@@ -8,25 +8,25 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: e3c48aec830cdc3ccceb8683f93e3a99ee6364e2
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 863726a6264f01de9f00296b4a64b9fd1bb96765
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506193"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182033"
 ---
 # <a name="overriding-the-onpaint-method"></a>重写 OnPaint 方法
-重写任何.NET Framework 中定义的事件的基本步骤相同，并且在以下列表总结了。  
+重写 .NET 框架中定义的任何事件的基本步骤相同，并汇总如下列表中。  
   
-#### <a name="to-override-an-inherited-event"></a>若要重写继承的事件  
+#### <a name="to-override-an-inherited-event"></a>重写继承的事件  
   
-1. 重写受保护`On` *EventName*方法。  
+1. 重写受保护的`On`*事件名称*方法。  
   
-2. 调用`On` *EventName*方法重写从基类`On` *EventName*方法，因此已注册的委托接收事件。  
+2. `On`从重写`On`*的 EventName*方法调用基类的*EventName*方法，以便注册代理接收事件。  
   
- <xref:System.Windows.Forms.Control.Paint>在此处详细论述事件，因为每个 Windows 窗体控件必须重写<xref:System.Windows.Forms.Control.Paint>它所继承的事件<xref:System.Windows.Forms.Control>。 基<xref:System.Windows.Forms.Control>类不知道如何派生的控件需要绘制时，它不提供任何绘制逻辑中的<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 <xref:System.Windows.Forms.Control.OnPaint%2A>方法<xref:System.Windows.Forms.Control>只需将调度<xref:System.Windows.Forms.Control.Paint>到已注册的事件接收器的事件。  
+ 此处<xref:System.Windows.Forms.Control.Paint>将详细讨论该事件，因为每个 Windows 窗体控件都必须<xref:System.Windows.Forms.Control.Paint>覆盖从 继承的事件<xref:System.Windows.Forms.Control>。 基<xref:System.Windows.Forms.Control>类不知道如何绘制派生控件，也不在<xref:System.Windows.Forms.Control.OnPaint%2A>方法中提供任何绘制逻辑。 <xref:System.Windows.Forms.Control>简单地将<xref:System.Windows.Forms.Control.Paint>事件调度给已注册的事件接收器<xref:System.Windows.Forms.Control.OnPaint%2A>的方法。  
   
- 如果您已完成中的示例[如何：开发简单的 Windows 窗体控件](how-to-develop-a-simple-windows-forms-control.md)，你已了解的重写示例<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 下面的代码片段摘自该示例。  
+ 如果您通过["如何：开发一个简单的 Windows 窗体控件"](how-to-develop-a-simple-windows-forms-control.md)中的示例，则您看到了重写<xref:System.Windows.Forms.Control.OnPaint%2A>该方法的示例。 以下代码片段取自该示例。  
   
 ```vb  
 Public Class FirstControl  
@@ -41,7 +41,7 @@ Public Class FirstControl
       ' Call methods of the System.Drawing.Graphics object.  
       e.Graphics.DrawString(Text, Font, New SolidBrush(ForeColor), RectangleF.op_Implicit(ClientRectangle))  
    End Sub  
-End Class   
+End Class
 ```  
   
 ```csharp  
@@ -52,11 +52,11 @@ public class FirstControl : Control {
       base.OnPaint(e);  
       // Call methods of the System.Drawing.Graphics object.  
       e.Graphics.DrawString(Text, Font, new SolidBrush(ForeColor), ClientRectangle);  
-   }   
-}   
+   }
+}
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs>类包含用于数据<xref:System.Windows.Forms.Control.Paint>事件。 它具有两个属性，如下面的代码中所示。  
+ 类<xref:System.Windows.Forms.PaintEventArgs>包含<xref:System.Windows.Forms.Control.Paint>事件的数据。 它有两个属性，如下代码所示。  
   
 ```vb  
 Public Class PaintEventArgs  
@@ -68,7 +68,7 @@ Public Class PaintEventArgs
   
    Public ReadOnly Property Graphics() As System.Drawing.Graphics  
       ...  
-   End Property   
+   End Property
    ...  
 End Class  
 ```  
@@ -82,11 +82,11 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 是否要绘制的矩形和<xref:System.Windows.Forms.PaintEventArgs.Graphics%2A>属性是指<xref:System.Drawing.Graphics>对象。 中的类<xref:System.Drawing?displayProperty=nameWithType>管理命名空间提供的功能的 GDI + 中，新的 Windows 图形库的访问权限的类。 <xref:System.Drawing.Graphics>对象具有用于绘制点、 字符串、 线条、 弧线、 椭圆和许多其他形状的方法。  
+ <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>是要绘制的矩形，<xref:System.Windows.Forms.PaintEventArgs.Graphics%2A>属性引用<xref:System.Drawing.Graphics>对象。 命名空间中的<xref:System.Drawing?displayProperty=nameWithType>类是托管类，提供对 GDI+ 功能（新的 Windows 图形库）的功能的访问。 该<xref:System.Drawing.Graphics>对象具有绘制点、字符串、线条、圆弧、椭圆和许多其他形状的方法。  
   
- 控件调用其<xref:System.Windows.Forms.Control.OnPaint%2A>方法需要更改其可视显示时。 此方法反过来引发<xref:System.Windows.Forms.Control.Paint>事件。  
+ 控件每当需要更改其<xref:System.Windows.Forms.Control.OnPaint%2A>可视显示时调用其方法。 此方法反过来引发事件<xref:System.Windows.Forms.Control.Paint>。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [事件](../../../standard/events/index.md)
 - [呈现 Windows 窗体控件](rendering-a-windows-forms-control.md)

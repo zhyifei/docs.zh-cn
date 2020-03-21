@@ -2,20 +2,20 @@
 title: 发现路由器服务
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 09309b23d2a3cc672811c2f617e6fb81a2b4e021
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 149dd69cdd1972465f4b7cb48ab657492d3f21d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712286"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183732"
 ---
 # <a name="discovery-router-service"></a>发现路由器服务
 此示例演示如何将发现消息转发到另一个终结点。  
   
-## <a name="demonstrates"></a>演示文本  
+## <a name="demonstrates"></a>演示  
  发现路由  
   
-## <a name="discussion"></a>讨论  
+## <a name="discussion"></a>讨论区  
  路由发现在以下方案中非常有用：客户端正在使用代理来查找服务，该代理不知道这种服务，但知道另一个代理。 此代理可以将发现数据包从此客户端转发到第二个代理。 第二个代理可以查找该服务，然后将响应返回到原始客户端。  
   
  在此示例中，客户端将一条消息发送到发现路由组件。 此消息将发送到发现路由器上的一个特定终结点。 然后，该路由器将此消息转发到一个 UDP 多播终结点。 探测消息将到达该多播终结点，侦听 UDP 多播地址的服务将对该发现路由器做出响应。 发现路由器收集这些响应，然后将它们发送回客户端。  
@@ -32,9 +32,9 @@ ms.locfileid: "74712286"
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
->   
+>
+> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryRouter`

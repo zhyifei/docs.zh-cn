@@ -1,23 +1,23 @@
 ---
-title: 表达式-WF
+title: 表达式 - WF
 ms.date: 03/30/2017
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
-ms.openlocfilehash: 62b278825de6242075e89e3b243b6d6d8ef4d599
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: 93fe449e8fa6c50f715d842c2ef6a9ecbd31aff2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306195"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182931"
 ---
 # <a name="expressions"></a>表达式
 
-Windows Workflow Foundation （WF）表达式是返回结果的任何活动。 从 <xref:System.Activities.Activity%601> 间接派生的所有表达式活动，其中包含名为 <xref:System.Activities.OutArgument> 的 <xref:System.Activities.Activity%601.Result%2A> 属性作为活动的返回值。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 随附了从简单活动（如 <xref:System.Activities.Expressions.VariableValue%601> 和 <xref:System.Activities.Expressions.VariableReference%601>，它们通过运算符活动提供对单个工作流变量的访问）到复杂活动（如 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>，它们提供对 Visual Basic 语言的全面访问，以获得结果）的广泛表达式活动。 可以通过从 <xref:System.Activities.CodeActivity%601> 或 <xref:System.Activities.NativeActivity%601> 派生来创建其他表达式活动。
+Windows 工作流基础 （WF） 表达式是返回结果的任何活动。 从 <xref:System.Activities.Activity%601> 间接派生的所有表达式活动，其中包含名为 <xref:System.Activities.OutArgument> 的 <xref:System.Activities.Activity%601.Result%2A> 属性作为活动的返回值。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 随附了从简单活动（如 <xref:System.Activities.Expressions.VariableValue%601> 和 <xref:System.Activities.Expressions.VariableReference%601>，它们通过运算符活动提供对单个工作流变量的访问）到复杂活动（如 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>，它们提供对 Visual Basic 语言的全面访问，以获得结果）的广泛表达式活动。 可以通过从 <xref:System.Activities.CodeActivity%601> 或 <xref:System.Activities.NativeActivity%601> 派生来创建其他表达式活动。
 
 ## <a name="using-expressions"></a>使用表达式
  工作流设计器对 Visual Basic 项目中的所有表达式使用 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601>，对 C# 工作流项目中的所有表达式使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 和 <xref:Microsoft.CSharp.Activities.CSharpReference%601>。
 
 > [!NOTE]
-> .NET Framework 4.5 C#中引入了对工作流项目中的表达式的支持。 有关详细信息，请参阅[ C#表达式](csharp-expressions.md)。
+> 在 .NET 框架 4.5 中引入了对工作流项目中 C# 表达式的支持。 有关详细信息，请参阅[C# 表达式](csharp-expressions.md)。
 
  设计器生成的工作流保存在 XAML 中，其中表达式位于方括号中，如以下示例所示。
 
@@ -40,7 +40,7 @@ Windows Workflow Foundation （WF）表达式是返回结果的任何活动。 �
 </Sequence>
 ```
 
- 在代码中定义工作流时，可以使用所有表达式活动。 下面的示例演示如何使用运算符活动的组合添加三个数字：
+ 在代码中定义工作流时，可以使用所有表达式活动。 下面的示例显示了运算符活动组合用于添加三个数字的用法：
 
 ```csharp
 Variable<int> a = new Variable<int>("a", 1);
@@ -69,7 +69,7 @@ Sequence w = new Sequence
 };
 ```
 
- 使用C# lambda 表达式可以更简洁地地表示相同的工作流，如下面的示例中所示：
+ 使用 C# lambda 表达式可以更紧凑地表示相同的工作流，如以下示例所示：
   
 ```csharp
 Variable<int> a = new Variable<int>("a", 1);
@@ -80,7 +80,7 @@ Variable<int> r = new Variable<int>("r", 0);
 Sequence w = new Sequence
 {
     Variables = { a, b, c, r },
-    Activities = 
+    Activities =
     {
         new Assign {
             To = new OutArgument<int>(r),
@@ -119,7 +119,7 @@ namespace ExpressionsDemo
 }
 ```
 
- 利用此新活动，你可以重写之前添加了三个值的工作流，如以下示例中所示：
+ 使用此新活动，您可以重写添加三个值的上一个工作流，如以下示例所示：
 
 ```csharp
 Variable<int> a = new Variable<int>("a", 1);
@@ -146,4 +146,4 @@ Sequence w = new Sequence
 };
 ```
 
- 有关在代码中使用表达式的详细信息，请参阅[使用命令性代码创作工作流、活动和表达式](authoring-workflows-activities-and-expressions-using-imperative-code.md)。
+ 有关在代码中使用表达式的详细信息，请参阅[使用命令代码创作工作流、活动和表达式](authoring-workflows-activities-and-expressions-using-imperative-code.md)。

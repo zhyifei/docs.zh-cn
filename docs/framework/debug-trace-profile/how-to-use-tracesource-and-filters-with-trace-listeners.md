@@ -14,15 +14,15 @@ helpviewer_keywords:
 - trace listeners, filters
 - trace listeners, initializing
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
-ms.openlocfilehash: 53cdce767d437c47aab94e883381954f8cf70653
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 7d2b9da72ae0b2a5c60eb90da0b56b45634e6e05
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215919"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181813"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>如何：将 TraceSource 和筛选器与跟踪侦听器一起使用
-.NET Framework 版本 2.0 的新功能之一是增强型的跟踪系统。 基本前提不变：跟踪消息通过交换机发送到侦听器，侦听器将数据报告给相关联的输出介质。 2\.0 版的主要区别是，可以通过 <xref:System.Diagnostics.TraceSource> 类的实例启动跟踪。 <xref:System.Diagnostics.TraceSource> 用作增强型跟踪系统，并可用来代替较旧的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 跟踪类的静态方法。 熟悉的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 类仍存在，但建议使用 <xref:System.Diagnostics.TraceSource> 类进行跟踪。  
+.NET Framework 版本 2.0 的新功能之一是增强型的跟踪系统。 基本前提不变：跟踪消息通过交换机发送到侦听器，侦听器将数据报告给相关联的输出介质。 2.0 版的主要区别是，可以通过 <xref:System.Diagnostics.TraceSource> 类的实例启动跟踪。 <xref:System.Diagnostics.TraceSource> 用作增强型跟踪系统，并可用来代替较旧的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 跟踪类的静态方法。 熟悉的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 类仍存在，但建议使用 <xref:System.Diagnostics.TraceSource> 类进行跟踪。  
   
  本主题描述如何将 <xref:System.Diagnostics.TraceSource> 与应用程序配置文件结合使用。  可在不使用配置文件的情况下使用 <xref:System.Diagnostics.TraceSource> 进行跟踪，但是不建议这样做。 有关在不使用配置文件的情况下进行跟踪的信息，请参阅[如何：创建和初始化跟踪源](how-to-create-and-initialize-trace-sources.md)。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "77215919"
     {  
         class Program  
         {  
-            private static TraceSource mySource =   
+            private static TraceSource mySource =
                 new TraceSource("TraceSourceApp");  
             static void Main(string[] args)  
             {  
@@ -49,9 +49,9 @@ ms.locfileid: "77215919"
             }  
             static void Activity1()  
             {  
-                mySource.TraceEvent(TraceEventType.Error, 1,   
+                mySource.TraceEvent(TraceEventType.Error, 1,
                     "Error message.");  
-                mySource.TraceEvent(TraceEventType.Warning, 2,   
+                mySource.TraceEvent(TraceEventType.Warning, 2,
                     "Warning message.");  
             }  
         }  
@@ -66,13 +66,13 @@ ms.locfileid: "77215919"
     <configuration>  
       <system.diagnostics>  
         <sources>  
-          <source name="TraceSourceApp"   
-            switchName="sourceSwitch"   
+          <source name="TraceSourceApp"
+            switchName="sourceSwitch"
             switchType="System.Diagnostics.SourceSwitch">  
             <listeners>  
-              <add name="console"   
+              <add name="console"
                 type="System.Diagnostics.ConsoleTraceListener">  
-                <filter type="System.Diagnostics.EventTypeFilter"   
+                <filter type="System.Diagnostics.EventTypeFilter"
                   initializeData="Warning"/>  
               </add>  
               <add name="myListener"/>  
@@ -84,10 +84,10 @@ ms.locfileid: "77215919"
           <add name="sourceSwitch" value="Warning"/>  
         </switches>  
         <sharedListeners>  
-          <add name="myListener"   
-            type="System.Diagnostics.TextWriterTraceListener"   
+          <add name="myListener"
+            type="System.Diagnostics.TextWriterTraceListener"
             initializeData="myListener.log">  
-            <filter type="System.Diagnostics.EventTypeFilter"   
+            <filter type="System.Diagnostics.EventTypeFilter"
               initializeData="Error"/>  
           </add>  
         </sharedListeners>  
@@ -108,27 +108,27 @@ ms.locfileid: "77215919"
     {  
         class Program  
         {  
-            private static TraceSource mySource =   
+            private static TraceSource mySource =
                 new TraceSource("TraceSourceApp");  
             static void Main(string[] args)  
             {  
                 Activity1();  
   
                 // Change the event type for which tracing occurs.  
-                // The console trace listener must be specified   
+                // The console trace listener must be specified
                 // in the configuration file. First, save the original  
                 // settings from the configuration file.  
-                EventTypeFilter configFilter =   
+                EventTypeFilter configFilter =
                     (EventTypeFilter)mySource.Listeners["console"].Filter;  
   
-                // Then create a new event type filter that ensures   
+                // Then create a new event type filter that ensures
                 // critical messages will be written.  
                 mySource.Listeners["console"].Filter =  
                     new EventTypeFilter(SourceLevels.Critical);  
                 Activity2();  
   
-                // Allow the trace source to send messages to listeners   
-                // for all event types. This statement will override   
+                // Allow the trace source to send messages to listeners
+                // for all event types. This statement will override
                 // any settings in the configuration file.  
                 mySource.Switch.Level = SourceLevels.All;  
   
@@ -140,20 +140,20 @@ ms.locfileid: "77215919"
             }  
             static void Activity1()  
             {  
-                mySource.TraceEvent(TraceEventType.Error, 1,   
+                mySource.TraceEvent(TraceEventType.Error, 1,
                     "Error message.");  
-                mySource.TraceEvent(TraceEventType.Warning, 2,   
+                mySource.TraceEvent(TraceEventType.Warning, 2,
                     "Warning message.");  
             }  
             static void Activity2()  
             {  
-                mySource.TraceEvent(TraceEventType.Critical, 3,   
+                mySource.TraceEvent(TraceEventType.Critical, 3,
                     "Critical message.");  
                 mySource.TraceInformation("Informational message.");  
             }  
             static void Activity3()  
             {  
-                mySource.TraceEvent(TraceEventType.Error, 4,   
+                mySource.TraceEvent(TraceEventType.Error, 4,
                     "Error message.");  
                 mySource.TraceInformation("Informational message.");  
             }  
