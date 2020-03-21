@@ -2,14 +2,14 @@
 title: 如何：查找具有特定特性的元素 (XPath-LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-ms.openlocfilehash: ef8dd26d40f15d3d5a27f0ca5d62f7337f2054ca
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 36f725a7684dc009dbfb956a1584fd6ca5e487b0
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343691"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78267036"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>如何：查找具有特定特性的元素（XPath LINQ to XML）（Visual Basic）
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>如何：查找具有特定属性的元素（XPath-LINQ 到 XML）（可视基本）
 有时需要查找具有特定属性的所有元素。 您并不关心属性的内容， 而是根据属性是否存在进行选择。  
   
  XPath 表达式为：  
@@ -20,7 +20,7 @@ ms.locfileid: "74343691"
  下面的代码选择具有 `Select` 属性的所有元素。  
   
 ```vb  
-Dim doc As XElement = _   
+Dim doc As XElement = _
     <Root>  
         <Child1>1</Child1>  
         <Child2 Select='true'>2</Child2>  
@@ -51,7 +51,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- 该示例产生下面的输出：  
+ 此示例生成以下输出：  
   
 ```console
 Results are identical  
@@ -61,4 +61,4 @@ Results are identical
   
 ## <a name="see-also"></a>另请参阅
 
-- [XPath 用户的 LINQ to XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 用户的 LINQ 到 XML（可视基本）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
