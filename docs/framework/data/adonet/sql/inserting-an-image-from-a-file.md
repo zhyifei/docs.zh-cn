@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: d47f5b7eaf6b5f6a3174982e6b4cf43859c031a5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 94ec554ca2dc5ed4eb6792b9b42ae6f1b856f51e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794149"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148603"
 ---
-# <a name="inserting-an-image-from-a-file"></a><span data-ttu-id="eb362-102">从文件中插入图像</span><span class="sxs-lookup"><span data-stu-id="eb362-102">Inserting an Image from a File</span></span>
-<span data-ttu-id="eb362-103">可以将二进制大对象 (BLOB) 作为二进制或字符数据写入数据库，具体视数据源的字段类型而定。</span><span class="sxs-lookup"><span data-stu-id="eb362-103">You can write a binary large object (BLOB) to a database as either binary or character data, depending on the type of field at your data source.</span></span> <span data-ttu-id="eb362-104">BLOB 是一个表示 `text`、`ntext` 和 `image` 数据类型的通用术语，这些数据类型通常包含文档和图片。</span><span class="sxs-lookup"><span data-stu-id="eb362-104">BLOB is a generic term that refers to the `text`, `ntext`, and `image` data types, which typically contain documents and pictures.</span></span>  
+# <a name="inserting-an-image-from-a-file"></a><span data-ttu-id="e03ad-102">从文件中插入图像</span><span class="sxs-lookup"><span data-stu-id="e03ad-102">Inserting an Image from a File</span></span>
+<span data-ttu-id="e03ad-103">可以将二进制大型对象 (BLOB) 作为二进制数据或字符数据（具体视数据源中的字段类型而定）写入数据库。</span><span class="sxs-lookup"><span data-stu-id="e03ad-103">You can write a binary large object (BLOB) to a database as either binary or character data, depending on the type of field at your data source.</span></span> <span data-ttu-id="e03ad-104">BLOB 这一通用术语是指，通常包含文档和图片的 `text`、`ntext` 和 `image` 数据类型。</span><span class="sxs-lookup"><span data-stu-id="e03ad-104">BLOB is a generic term that refers to the `text`, `ntext`, and `image` data types, which typically contain documents and pictures.</span></span>  
   
- <span data-ttu-id="eb362-105">若要将 BLOB 值写入数据库，请发出适当的 INSERT 或 UPDATE 语句，并将 BLOB 值作为输入参数传递（请参阅[配置参数和参数数据类型](../configuring-parameters-and-parameter-data-types.md)）。</span><span class="sxs-lookup"><span data-stu-id="eb362-105">To write a BLOB value to your database, issue the appropriate INSERT or UPDATE statement and pass the BLOB value as an input parameter (see [Configuring Parameters and Parameter Data Types](../configuring-parameters-and-parameter-data-types.md)).</span></span> <span data-ttu-id="eb362-106">如果 BLOB 存储为文本格式（如 SQL Server `text` 字段），则可将 BLOB 作为字符串参数传递。</span><span class="sxs-lookup"><span data-stu-id="eb362-106">If your BLOB is stored as text, such as a SQL Server `text` field, you can pass the BLOB as a string parameter.</span></span> <span data-ttu-id="eb362-107">如果 BLOB 存储为二进制格式（如 SQL Server `image` 字段），则可将类型 `byte` 的数组作为二进制参数传递。</span><span class="sxs-lookup"><span data-stu-id="eb362-107">If the BLOB is stored in binary format, such as a SQL Server `image` field, you can pass an array of type `byte` as a binary parameter.</span></span>  
+ <span data-ttu-id="e03ad-105">若要将 BLOB 值写入数据库，请发出相应的 INSERT 或 UPDATE 语句，并将 BLOB 值作为输入参数传递（请参阅[配置参数和参数数据类型](../configuring-parameters-and-parameter-data-types.md)）。</span><span class="sxs-lookup"><span data-stu-id="e03ad-105">To write a BLOB value to your database, issue the appropriate INSERT or UPDATE statement and pass the BLOB value as an input parameter (see [Configuring Parameters and Parameter Data Types](../configuring-parameters-and-parameter-data-types.md)).</span></span> <span data-ttu-id="e03ad-106">如果 BLOB 存储为文本（如 SQL Server `text` 字段），可以将 BLOB 作为字符串参数传递。</span><span class="sxs-lookup"><span data-stu-id="e03ad-106">If your BLOB is stored as text, such as a SQL Server `text` field, you can pass the BLOB as a string parameter.</span></span> <span data-ttu-id="e03ad-107">如果 BLOB 以二进制格式存储（如 SQL Server `image` 字段），可以将 `byte` 类型的数组作为二进制参数传递。</span><span class="sxs-lookup"><span data-stu-id="e03ad-107">If the BLOB is stored in binary format, such as a SQL Server `image` field, you can pass an array of type `byte` as a binary parameter.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="eb362-108">示例</span><span class="sxs-lookup"><span data-stu-id="eb362-108">Example</span></span>  
- <span data-ttu-id="eb362-109">下面的代码示例将雇员信息添加到 Northwind 数据库中的“Employees”表中。</span><span class="sxs-lookup"><span data-stu-id="eb362-109">The following code example adds employee information to the Employees table in the Northwind database.</span></span> <span data-ttu-id="eb362-110">从文件中读取雇员的照片并将其添加到表中的“照片”字段，此字段是一个图像字段。</span><span class="sxs-lookup"><span data-stu-id="eb362-110">A photo of the employee is read from a file and added to the Photo field in the table, which is an image field.</span></span>  
+## <a name="example"></a><span data-ttu-id="e03ad-108">示例</span><span class="sxs-lookup"><span data-stu-id="e03ad-108">Example</span></span>  
+ <span data-ttu-id="e03ad-109">下面的代码示例将员工信息添加到 Northwind 数据库中的 Employees 表。</span><span class="sxs-lookup"><span data-stu-id="e03ad-109">The following code example adds employee information to the Employees table in the Northwind database.</span></span> <span data-ttu-id="e03ad-110">它从文件中读取员工照片，并将它添加到表中的“照片”字段（图像字段）。</span><span class="sxs-lookup"><span data-stu-id="e03ad-110">A photo of the employee is read from a file and added to the Photo field in the table, which is an image field.</span></span>  
   
 ```vb  
 Public Shared Sub AddEmployee( _  
@@ -39,7 +39,7 @@ Public Shared Sub AddEmployee( _
     "INSERT INTO Employees (LastName, FirstName, Title, " & _  
     "HireDate, ReportsTo, Photo) " & _  
     "Values(@LastName, @FirstName, @Title, " & _  
-    "@HireDate, @ReportsTo, @Photo)", connection)   
+    "@HireDate, @ReportsTo, @Photo)", connection)
   
   command.Parameters.Add("@LastName",  _  
     SqlDbType.NVarChar, 20).Value = lastName  
@@ -77,12 +77,12 @@ End Function
   
 ```csharp  
 public static void AddEmployee(  
-  string lastName,   
-  string firstName,   
-  string title,   
-  DateTime hireDate,   
-  int reportsTo,   
-  string photoFilePath,   
+  string lastName,
+  string firstName,
+  string title,
+  DateTime hireDate,
+  int reportsTo,
+  string photoFilePath,
   string connectionString)  
 {  
   byte[] photo = GetPhoto(photoFilePath);  
@@ -94,17 +94,17 @@ public static void AddEmployee(
     "INSERT INTO Employees (LastName, FirstName, " +  
     "Title, HireDate, ReportsTo, Photo) " +  
     "Values(@LastName, @FirstName, @Title, " +  
-    "@HireDate, @ReportsTo, @Photo)", connection);   
+    "@HireDate, @ReportsTo, @Photo)", connection);
   
-  command.Parameters.Add("@LastName",    
+  command.Parameters.Add("@LastName",
      SqlDbType.NVarChar, 20).Value = lastName;  
-  command.Parameters.Add("@FirstName",   
+  command.Parameters.Add("@FirstName",
       SqlDbType.NVarChar, 10).Value = firstName;  
-  command.Parameters.Add("@Title",       
+  command.Parameters.Add("@Title",
       SqlDbType.NVarChar, 30).Value = title;  
-  command.Parameters.Add("@HireDate",   
+  command.Parameters.Add("@HireDate",
        SqlDbType.DateTime).Value = hireDate;  
-  command.Parameters.Add("@ReportsTo",   
+  command.Parameters.Add("@ReportsTo",
       SqlDbType.Int).Value = reportsTo;  
   
   command.Parameters.Add("@Photo",  
@@ -130,10 +130,10 @@ public static byte[] GetPhoto(string filePath)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="eb362-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="eb362-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e03ad-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e03ad-111">See also</span></span>
 
-- [<span data-ttu-id="eb362-112">使用命令修改数据</span><span class="sxs-lookup"><span data-stu-id="eb362-112">Using Commands to Modify Data</span></span>](../using-commands-to-modify-data.md)
-- [<span data-ttu-id="eb362-113">检索二进制数据</span><span class="sxs-lookup"><span data-stu-id="eb362-113">Retrieving Binary Data</span></span>](../retrieving-binary-data.md)
-- [<span data-ttu-id="eb362-114">SQL Server 二进制和大值数据</span><span class="sxs-lookup"><span data-stu-id="eb362-114">SQL Server Binary and Large-Value Data</span></span>](sql-server-binary-and-large-value-data.md)
-- [<span data-ttu-id="eb362-115">SQL Server 数据类型映射</span><span class="sxs-lookup"><span data-stu-id="eb362-115">SQL Server Data Type Mappings</span></span>](../sql-server-data-type-mappings.md)
-- [<span data-ttu-id="eb362-116">ADO.NET 概述</span><span class="sxs-lookup"><span data-stu-id="eb362-116">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="e03ad-112">使用命令修改数据</span><span class="sxs-lookup"><span data-stu-id="e03ad-112">Using Commands to Modify Data</span></span>](../using-commands-to-modify-data.md)
+- [<span data-ttu-id="e03ad-113">检索二进制数据</span><span class="sxs-lookup"><span data-stu-id="e03ad-113">Retrieving Binary Data</span></span>](../retrieving-binary-data.md)
+- [<span data-ttu-id="e03ad-114">SQL 服务器二进制和大值数据</span><span class="sxs-lookup"><span data-stu-id="e03ad-114">SQL Server Binary and Large-Value Data</span></span>](sql-server-binary-and-large-value-data.md)
+- [<span data-ttu-id="e03ad-115">SQL Server 数据类型映射</span><span class="sxs-lookup"><span data-stu-id="e03ad-115">SQL Server Data Type Mappings</span></span>](../sql-server-data-type-mappings.md)
+- [<span data-ttu-id="e03ad-116">ADO.NET 概述</span><span class="sxs-lookup"><span data-stu-id="e03ad-116">ADO.NET Overview</span></span>](../ado-net-overview.md)

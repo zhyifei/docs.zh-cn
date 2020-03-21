@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: a84f74bde8da9ca7e40184b76efe51cea129b66a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 70ee6041b14feb298d93ab452e16ee23607b3fcc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451845"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174285"
 ---
-# <a name="manipulating-data"></a><span data-ttu-id="f7798-102">操作数据</span><span class="sxs-lookup"><span data-stu-id="f7798-102">Manipulating Data</span></span>
-<span data-ttu-id="f7798-103">在引入多个活动结果集 (MARS) 之前，开发人员必须使用多个连接或服务器端游标来解决某些方案。</span><span class="sxs-lookup"><span data-stu-id="f7798-103">Before the introduction of Multiple Active Result Sets (MARS), developers had to use either multiple connections or server-side cursors to solve certain scenarios.</span></span> <span data-ttu-id="f7798-104">此外，如果在事务情境下使用多个连接，则需要绑定的连接（使用 sp_getbindtoken 和 sp_bindsession）。</span><span class="sxs-lookup"><span data-stu-id="f7798-104">In addition, when multiple connections were used in a transactional situation, bound connections (with **sp_getbindtoken** and **sp_bindsession**) were required.</span></span> <span data-ttu-id="f7798-105">以下方案显示如何使用启用 MARS 的连接来取代多个连接。</span><span class="sxs-lookup"><span data-stu-id="f7798-105">The following scenarios show how to use a MARS-enabled connection instead of multiple connections.</span></span>  
+# <a name="manipulating-data"></a><span data-ttu-id="7ec06-102">操作数据</span><span class="sxs-lookup"><span data-stu-id="7ec06-102">Manipulating Data</span></span>
+<span data-ttu-id="7ec06-103">在引入多重活动结果集 (MARS) 之前，开发人员必须使用多个连接或服务器端游标来解决某些情况。</span><span class="sxs-lookup"><span data-stu-id="7ec06-103">Before the introduction of Multiple Active Result Sets (MARS), developers had to use either multiple connections or server-side cursors to solve certain scenarios.</span></span> <span data-ttu-id="7ec06-104">此外，如果在事务情境下使用多个连接，则需要绑定的连接（使用 sp_getbindtoken 和 sp_bindsession）\*\*\*\*\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="7ec06-104">In addition, when multiple connections were used in a transactional situation, bound connections (with **sp_getbindtoken** and **sp_bindsession**) were required.</span></span> <span data-ttu-id="7ec06-105">以下场景说明了如何使用启用了 MARS 的连接，而不是使用多个连接。</span><span class="sxs-lookup"><span data-stu-id="7ec06-105">The following scenarios show how to use a MARS-enabled connection instead of multiple connections.</span></span>  
   
-## <a name="using-multiple-commands-with-mars"></a><span data-ttu-id="f7798-106">对 MARS 使用多个命令</span><span class="sxs-lookup"><span data-stu-id="f7798-106">Using Multiple Commands with MARS</span></span>  
- <span data-ttu-id="f7798-107">以下控制台应用程序演示如何对两个 <xref:System.Data.SqlClient.SqlDataReader> 对象和单个启用了 MARS 的 <xref:System.Data.SqlClient.SqlCommand> 对象使用两个 <xref:System.Data.SqlClient.SqlConnection> 对象。</span><span class="sxs-lookup"><span data-stu-id="f7798-107">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with two <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span>  
+## <a name="using-multiple-commands-with-mars"></a><span data-ttu-id="7ec06-106">对 MARS 使用多个命令</span><span class="sxs-lookup"><span data-stu-id="7ec06-106">Using Multiple Commands with MARS</span></span>  
+ <span data-ttu-id="7ec06-107">下面的控制台应用程序演示如何使用两个包含两个 <xref:System.Data.SqlClient.SqlCommand> 对象的 <xref:System.Data.SqlClient.SqlDataReader> 对象和一个启用了 MARS 的 <xref:System.Data.SqlClient.SqlConnection> 对象。</span><span class="sxs-lookup"><span data-stu-id="7ec06-107">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with two <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="f7798-108">示例</span><span class="sxs-lookup"><span data-stu-id="f7798-108">Example</span></span>  
- <span data-ttu-id="f7798-109">该示例将打开一个到**AdventureWorks**数据库的连接。</span><span class="sxs-lookup"><span data-stu-id="f7798-109">The example opens a single connection to the **AdventureWorks** database.</span></span> <span data-ttu-id="f7798-110">使用 <xref:System.Data.SqlClient.SqlCommand> 对象创建一个 <xref:System.Data.SqlClient.SqlDataReader> 对象。</span><span class="sxs-lookup"><span data-stu-id="f7798-110">Using a <xref:System.Data.SqlClient.SqlCommand> object, a <xref:System.Data.SqlClient.SqlDataReader> is created.</span></span> <span data-ttu-id="f7798-111">在使用该读取器时，打开第二个 <xref:System.Data.SqlClient.SqlDataReader>，使用来自第一个 <xref:System.Data.SqlClient.SqlDataReader> 的数据作为第二个读取器的 WHERE 子句的输入。</span><span class="sxs-lookup"><span data-stu-id="f7798-111">As the reader is used, a second <xref:System.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:System.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.</span></span>  
+### <a name="example"></a><span data-ttu-id="7ec06-108">示例</span><span class="sxs-lookup"><span data-stu-id="7ec06-108">Example</span></span>  
+ <span data-ttu-id="7ec06-109">该示例将打开与 AdventureWorks\*\*\*\* 数据库的单个连接。</span><span class="sxs-lookup"><span data-stu-id="7ec06-109">The example opens a single connection to the **AdventureWorks** database.</span></span> <span data-ttu-id="7ec06-110">使用 <xref:System.Data.SqlClient.SqlCommand> 对象时，将创建一个 <xref:System.Data.SqlClient.SqlDataReader>。</span><span class="sxs-lookup"><span data-stu-id="7ec06-110">Using a <xref:System.Data.SqlClient.SqlCommand> object, a <xref:System.Data.SqlClient.SqlDataReader> is created.</span></span> <span data-ttu-id="7ec06-111">使用阅读器时，打开第二个 <xref:System.Data.SqlClient.SqlDataReader>，使用第一个 <xref:System.Data.SqlClient.SqlDataReader> 的数据作为第二个阅读器的 WHERE 子句的输入。</span><span class="sxs-lookup"><span data-stu-id="7ec06-111">As the reader is used, a second <xref:System.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:System.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="f7798-112">下面的示例使用随 SQL Server 提供的 AdventureWorks 示例数据库。</span><span class="sxs-lookup"><span data-stu-id="f7798-112">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="f7798-113">示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。</span><span class="sxs-lookup"><span data-stu-id="f7798-113">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="f7798-114">根据环境的需要修改连接字符串。</span><span class="sxs-lookup"><span data-stu-id="f7798-114">Modify the connection string as necessary for your environment.</span></span>  
+> <span data-ttu-id="7ec06-112">下面的示例使用随 SQL Server 提供的 AdventureWorks 示例数据库\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="7ec06-112">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="7ec06-113">示例代码中提供的连接字符串假定数据库已安装并且在本地计算机上可用。</span><span class="sxs-lookup"><span data-stu-id="7ec06-113">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="7ec06-114">根据环境需要修改连接字符串。</span><span class="sxs-lookup"><span data-stu-id="7ec06-114">Modify the connection string as necessary for your environment.</span></span>  
   
 ```vb  
 Option Strict On  
@@ -44,7 +44,7 @@ Module Module1
     Dim productCmd As SqlCommand  
     Dim productReader As SqlDataReader  
   
-    Dim vendorSQL As String = & _   
+    Dim vendorSQL As String = & _
       "SELECT VendorId, Name FROM Purchasing.Vendor"  
     Dim productSQL As String = _  
         "SELECT Production.Product.Name FROM Production.Product " & _  
@@ -108,20 +108,20 @@ static void Main()
   
   int vendorID;  
   SqlDataReader productReader = null;  
-  string vendorSQL =   
+  string vendorSQL =
     "SELECT VendorId, Name FROM Purchasing.Vendor";  
-  string productSQL =   
+  string productSQL =
     "SELECT Production.Product.Name FROM Production.Product " +  
     "INNER JOIN Purchasing.ProductVendor " +  
-    "ON Production.Product.ProductID = " +   
+    "ON Production.Product.ProductID = " +
     "Purchasing.ProductVendor.ProductID " +  
     "WHERE Purchasing.ProductVendor.VendorID = @VendorId";  
   
-  using (SqlConnection awConnection =   
+  using (SqlConnection awConnection =
     new SqlConnection(connectionString))  
   {  
     SqlCommand vendorCmd = new SqlCommand(vendorSQL, awConnection);  
-    SqlCommand productCmd =   
+    SqlCommand productCmd =
       new SqlCommand(productSQL, awConnection);  
   
     productCmd.Parameters.Add("@VendorId", SqlDbType.Int);  
@@ -157,20 +157,20 @@ static void Main()
   {  
     // To avoid storing the connection string in your code,  
     // you can retrieve it from a configuration file.  
-    return "Data Source=(local);Integrated Security=SSPI;" +   
+    return "Data Source=(local);Integrated Security=SSPI;" +
       "Initial Catalog=AdventureWorks;MultipleActiveResultSets=True";  
   }  
 }  
 ```  
   
-## <a name="reading-and-updating-data-with-mars"></a><span data-ttu-id="f7798-115">使用 MARS 读取和更新数据</span><span class="sxs-lookup"><span data-stu-id="f7798-115">Reading and Updating Data with MARS</span></span>  
- <span data-ttu-id="f7798-116">MARS 允许连接供读取操作以及数据操作语言 (DML) 操作使用，包含多个挂起操作。</span><span class="sxs-lookup"><span data-stu-id="f7798-116">MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation.</span></span> <span data-ttu-id="f7798-117">通过此功能，应用程序不需要处理连接忙的错误。</span><span class="sxs-lookup"><span data-stu-id="f7798-117">This feature eliminates the need for an application to deal with connection-busy errors.</span></span> <span data-ttu-id="f7798-118">此外，MARS 可以替换服务器端游标的使用，这通常会消耗更多资源。</span><span class="sxs-lookup"><span data-stu-id="f7798-118">In addition, MARS can replace the use of server-side cursors, which generally consume more resources.</span></span> <span data-ttu-id="f7798-119">最后，因为可以在单个连接上执行多个操作，所以，这些操作可以共享相同的事务上下文，不需要使用 sp_getbindtoken 和 sp_bindsession 系统存储过程。</span><span class="sxs-lookup"><span data-stu-id="f7798-119">Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.</span></span>  
+## <a name="reading-and-updating-data-with-mars"></a><span data-ttu-id="7ec06-115">使用 MARS 读取和更新数据</span><span class="sxs-lookup"><span data-stu-id="7ec06-115">Reading and Updating Data with MARS</span></span>  
+ <span data-ttu-id="7ec06-116">MARS 允许将连接用于读取操作和数据操作语言 (DML) 操作，其中有多个待处理操作。</span><span class="sxs-lookup"><span data-stu-id="7ec06-116">MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation.</span></span> <span data-ttu-id="7ec06-117">此功能使应用程序无需处理连接繁忙错误。</span><span class="sxs-lookup"><span data-stu-id="7ec06-117">This feature eliminates the need for an application to deal with connection-busy errors.</span></span> <span data-ttu-id="7ec06-118">此外，MARS 可以取代服务器端游标的使用，后者通常消耗更多资源。</span><span class="sxs-lookup"><span data-stu-id="7ec06-118">In addition, MARS can replace the use of server-side cursors, which generally consume more resources.</span></span> <span data-ttu-id="7ec06-119">最后，因为可以在单个连接上执行多个操作，所以，这些操作可以共享相同的事务上下文，不需要使用 sp_getbindtoken 和 sp_bindsession 系统存储过程\*\*\*\*\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="7ec06-119">Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="f7798-120">示例</span><span class="sxs-lookup"><span data-stu-id="f7798-120">Example</span></span>  
- <span data-ttu-id="f7798-121">以下控制台应用程序演示如何对三个 <xref:System.Data.SqlClient.SqlDataReader> 对象和单个启用了 MARS 的 <xref:System.Data.SqlClient.SqlCommand> 对象使用两个 <xref:System.Data.SqlClient.SqlConnection> 对象。</span><span class="sxs-lookup"><span data-stu-id="f7798-121">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with three <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span> <span data-ttu-id="f7798-122">第一个命令对象检索信用评级为 5 的供应商列表。</span><span class="sxs-lookup"><span data-stu-id="f7798-122">The first command object retrieves a list of vendors whose credit rating is 5.</span></span> <span data-ttu-id="f7798-123">第二个命令对象使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:System.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。</span><span class="sxs-lookup"><span data-stu-id="f7798-123">The second command object uses the vendor ID provided from a <xref:System.Data.SqlClient.SqlDataReader> to load the second <xref:System.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor.</span></span> <span data-ttu-id="f7798-124">每个产品记录通过第二个 <xref:System.Data.SqlClient.SqlDataReader> 访问。</span><span class="sxs-lookup"><span data-stu-id="f7798-124">Each product record is visited by the second <xref:System.Data.SqlClient.SqlDataReader>.</span></span> <span data-ttu-id="f7798-125">通过执行计算来确定新的 OnOrderQty。</span><span class="sxs-lookup"><span data-stu-id="f7798-125">A calculation is performed to determine what the new **OnOrderQty** should be.</span></span> <span data-ttu-id="f7798-126">然后，通过第三个命令对象来使用新值更新 ProductVendor 表。</span><span class="sxs-lookup"><span data-stu-id="f7798-126">The third command object is then used to update the **ProductVendor** table with the new value.</span></span> <span data-ttu-id="f7798-127">整个过程在单个事务中进行，在结束时回滚。</span><span class="sxs-lookup"><span data-stu-id="f7798-127">This entire process takes place within a single transaction, which is rolled back at the end.</span></span>  
+### <a name="example"></a><span data-ttu-id="7ec06-120">示例</span><span class="sxs-lookup"><span data-stu-id="7ec06-120">Example</span></span>  
+ <span data-ttu-id="7ec06-121">下面的控制台应用程序演示如何使用两个包含三个 <xref:System.Data.SqlClient.SqlCommand> 对象的 <xref:System.Data.SqlClient.SqlDataReader> 对象和一个启用了 MARS 的 <xref:System.Data.SqlClient.SqlConnection> 对象。</span><span class="sxs-lookup"><span data-stu-id="7ec06-121">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with three <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span> <span data-ttu-id="7ec06-122">第一个命令对象检索信用评级为 5 的供应商列表。</span><span class="sxs-lookup"><span data-stu-id="7ec06-122">The first command object retrieves a list of vendors whose credit rating is 5.</span></span> <span data-ttu-id="7ec06-123">第二个命令对象使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:System.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。</span><span class="sxs-lookup"><span data-stu-id="7ec06-123">The second command object uses the vendor ID provided from a <xref:System.Data.SqlClient.SqlDataReader> to load the second <xref:System.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor.</span></span> <span data-ttu-id="7ec06-124">每个产品记录由第二个 <xref:System.Data.SqlClient.SqlDataReader> 访问。</span><span class="sxs-lookup"><span data-stu-id="7ec06-124">Each product record is visited by the second <xref:System.Data.SqlClient.SqlDataReader>.</span></span> <span data-ttu-id="7ec06-125">通过执行计算来确定新的 OnOrderQty\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="7ec06-125">A calculation is performed to determine what the new **OnOrderQty** should be.</span></span> <span data-ttu-id="7ec06-126">然后，通过第三个命令对象来使用新值更新 ProductVendor 表\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="7ec06-126">The third command object is then used to update the **ProductVendor** table with the new value.</span></span> <span data-ttu-id="7ec06-127">整个过程发生在单个事务中，该事务在结束时回滚。</span><span class="sxs-lookup"><span data-stu-id="7ec06-127">This entire process takes place within a single transaction, which is rolled back at the end.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="f7798-128">下面的示例使用随 SQL Server 提供的 AdventureWorks 示例数据库。</span><span class="sxs-lookup"><span data-stu-id="f7798-128">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="f7798-129">示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。</span><span class="sxs-lookup"><span data-stu-id="f7798-129">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="f7798-130">根据环境的需要修改连接字符串。</span><span class="sxs-lookup"><span data-stu-id="f7798-130">Modify the connection string as necessary for your environment.</span></span>  
+> <span data-ttu-id="7ec06-128">下面的示例使用随 SQL Server 提供的 AdventureWorks 示例数据库\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="7ec06-128">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="7ec06-129">示例代码中提供的连接字符串假定数据库已安装并且在本地计算机上可用。</span><span class="sxs-lookup"><span data-stu-id="7ec06-129">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="7ec06-130">根据环境需要修改连接字符串。</span><span class="sxs-lookup"><span data-stu-id="7ec06-130">Modify the connection string as necessary for your environment.</span></span>  
   
 ```vb  
 Option Strict On  
@@ -211,7 +211,7 @@ Module Module1
         "FROM Purchasing.ProductVendor " & _  
         "WHERE VendorID = @VendorID"  
     Dim updateSQL As String = _  
-        "UPDATE Purchasing.ProductVendor " & _   
+        "UPDATE Purchasing.ProductVendor " & _
         "SET OnOrderQty = @OrderQty " & _  
         "WHERE ProductID = @ProductID AND VendorID = @VendorID"  
   
@@ -263,7 +263,7 @@ Module Module1
         End While  
       End Using  
   
-      Console.WriteLine("Total Records Updated: " & _   
+      Console.WriteLine("Total Records Updated: " & _
         CStr(totalRecordsUpdated))  
       updateTx.Rollback()  
       Console.WriteLine("Transaction Rolled Back")  
@@ -315,18 +315,18 @@ static void Main()
   int totalRecordsUpdated = 0;  
   
   string vendorSQL =  
-      "SELECT VendorID, Name FROM Purchasing.Vendor " +   
+      "SELECT VendorID, Name FROM Purchasing.Vendor " +
       "WHERE CreditRating = 5";  
   string prodVendSQL =  
       "SELECT ProductID, MaxOrderQty, MinOrderQty, OnOrderQty " +  
-      "FROM Purchasing.ProductVendor " +   
+      "FROM Purchasing.ProductVendor " +
       "WHERE VendorID = @VendorID";  
   string updateSQL =  
-      "UPDATE Purchasing.ProductVendor " +   
+      "UPDATE Purchasing.ProductVendor " +
       "SET OnOrderQty = @OrderQty " +  
       "WHERE ProductID = @ProductID AND VendorID = @VendorID";  
   
-  using (SqlConnection awConnection =   
+  using (SqlConnection awConnection =
     new SqlConnection(connectionString))  
   {  
     awConnection.Open();  
@@ -382,7 +382,7 @@ static void Main()
         }  
       }  
     }  
-    Console.WriteLine("Total Records Updated: " +   
+    Console.WriteLine("Total Records Updated: " +
       totalRecordsUpdated.ToString());  
     updateTx.Rollback();  
     Console.WriteLine("Transaction Rolled Back");  
@@ -395,14 +395,14 @@ private static string GetConnectionString()
 {  
   // To avoid storing the connection string in your code,  
   // you can retrieve it from a configuration file.  
-  return "Data Source=(local);Integrated Security=SSPI;" +   
-    "Initial Catalog=AdventureWorks;" +   
+  return "Data Source=(local);Integrated Security=SSPI;" +
+    "Initial Catalog=AdventureWorks;" +
     "MultipleActiveResultSets=True";  
   }  
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f7798-131">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f7798-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7ec06-131">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7ec06-131">See also</span></span>
 
-- [<span data-ttu-id="f7798-132">多重活动结果集 (MARS)</span><span class="sxs-lookup"><span data-stu-id="f7798-132">Multiple Active Result Sets (MARS)</span></span>](multiple-active-result-sets-mars.md)
-- [<span data-ttu-id="f7798-133">ADO.NET 概述</span><span class="sxs-lookup"><span data-stu-id="f7798-133">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="7ec06-132">多个活动的结果集 (MARS)</span><span class="sxs-lookup"><span data-stu-id="7ec06-132">Multiple Active Result Sets (MARS)</span></span>](multiple-active-result-sets-mars.md)
+- [<span data-ttu-id="7ec06-133">ADO.NET 概述</span><span class="sxs-lookup"><span data-stu-id="7ec06-133">ADO.NET Overview</span></span>](../ado-net-overview.md)

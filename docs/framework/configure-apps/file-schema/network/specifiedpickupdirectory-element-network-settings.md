@@ -8,53 +8,53 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: 1acc724bb14c3610f14d06452c30b3d5dac42e13
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 4b0cbaf9a7bfe2a9b1610811f4201253d219a6b2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089079"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154603"
 ---
-# <a name="specifiedpickupdirectory-element-network-settings"></a><span data-ttu-id="73404-102">\<specifiedPickupDirectory > 元素（网络设置）</span><span class="sxs-lookup"><span data-stu-id="73404-102">\<specifiedPickupDirectory> Element (Network Settings)</span></span>
-<span data-ttu-id="73404-103">配置简单邮件传输协议（SMTP）服务器的本地目录。</span><span class="sxs-lookup"><span data-stu-id="73404-103">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>  
+# <a name="specifiedpickupdirectory-element-network-settings"></a><span data-ttu-id="f647c-102">\<指定的拾取目录>元素（网络设置）</span><span class="sxs-lookup"><span data-stu-id="f647c-102">\<specifiedPickupDirectory> Element (Network Settings)</span></span>
+<span data-ttu-id="f647c-103">为简单邮件传输协议 （SMTP） 服务器配置本地目录。</span><span class="sxs-lookup"><span data-stu-id="f647c-103">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>  
   
-<span data-ttu-id="73404-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="73404-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="73404-105">\<&nbsp;&nbsp;[ **> 的**](system-net-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="73404-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>\
-<span data-ttu-id="73404-106">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<mailSettings >** ](mailsettings-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="73404-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<mailSettings>**](mailsettings-element-network-settings.md)</span></span>\
-<span data-ttu-id="73404-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**smtp >** ](smtp-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="73404-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<smtp>**](smtp-element-network-settings.md)</span></span>\
-<span data-ttu-id="73404-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<specifiedPickupDirectory >**</span><span class="sxs-lookup"><span data-stu-id="73404-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<specifiedPickupDirectory>**</span></span>  
+<span data-ttu-id="f647c-104">[**\<配置>**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="f647c-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="f647c-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="f647c-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>\
+<span data-ttu-id="f647c-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<邮件设置>**](mailsettings-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="f647c-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<mailSettings>**](mailsettings-element-network-settings.md)</span></span>\
+<span data-ttu-id="f647c-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<斯姆特普>**](smtp-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="f647c-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<smtp>**](smtp-element-network-settings.md)</span></span>\
+<span data-ttu-id="f647c-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<指定的取件目录>**</span><span class="sxs-lookup"><span data-stu-id="f647c-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<specifiedPickupDirectory>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="73404-109">语法</span><span class="sxs-lookup"><span data-stu-id="73404-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f647c-109">语法</span><span class="sxs-lookup"><span data-stu-id="f647c-109">Syntax</span></span>  
   
 ```xml  
 <specifiedPickupDirectory  
-  pickupDirectoryLocation="directory"   
+  pickupDirectoryLocation="directory"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="73404-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="73404-110">Attributes and Elements</span></span>  
- <span data-ttu-id="73404-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="73404-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f647c-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="f647c-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="f647c-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="f647c-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="73404-112">特性</span><span class="sxs-lookup"><span data-stu-id="73404-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f647c-112">属性</span><span class="sxs-lookup"><span data-stu-id="f647c-112">Attributes</span></span>  
   
-|<span data-ttu-id="73404-113">特性</span><span class="sxs-lookup"><span data-stu-id="73404-113">Attribute</span></span>|<span data-ttu-id="73404-114">描述</span><span class="sxs-lookup"><span data-stu-id="73404-114">Description</span></span>|  
+|<span data-ttu-id="f647c-113">Attribute</span><span class="sxs-lookup"><span data-stu-id="f647c-113">Attribute</span></span>|<span data-ttu-id="f647c-114">说明</span><span class="sxs-lookup"><span data-stu-id="f647c-114">Description</span></span>|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|<span data-ttu-id="73404-115">应用程序在其中保存电子邮件以供 SMTP 服务器稍后处理的目录。</span><span class="sxs-lookup"><span data-stu-id="73404-115">The directory where applications save email for later processing by the SMTP server.</span></span>|  
+|`pickupDirectoryLocation`|<span data-ttu-id="f647c-115">应用程序保存电子邮件以供 SMTP 服务器以后处理的目录。</span><span class="sxs-lookup"><span data-stu-id="f647c-115">The directory where applications save email for later processing by the SMTP server.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="73404-116">子元素</span><span class="sxs-lookup"><span data-stu-id="73404-116">Child Elements</span></span>  
- <span data-ttu-id="73404-117">无。</span><span class="sxs-lookup"><span data-stu-id="73404-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f647c-116">子元素</span><span class="sxs-lookup"><span data-stu-id="f647c-116">Child Elements</span></span>  
+ <span data-ttu-id="f647c-117">无。</span><span class="sxs-lookup"><span data-stu-id="f647c-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="73404-118">父元素</span><span class="sxs-lookup"><span data-stu-id="73404-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f647c-118">父元素</span><span class="sxs-lookup"><span data-stu-id="f647c-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="73404-119">元素</span><span class="sxs-lookup"><span data-stu-id="73404-119">Element</span></span>|<span data-ttu-id="73404-120">描述</span><span class="sxs-lookup"><span data-stu-id="73404-120">Description</span></span>|  
+|<span data-ttu-id="f647c-119">元素</span><span class="sxs-lookup"><span data-stu-id="f647c-119">Element</span></span>|<span data-ttu-id="f647c-120">说明</span><span class="sxs-lookup"><span data-stu-id="f647c-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="73404-121">\<smtp > 元素（网络设置）</span><span class="sxs-lookup"><span data-stu-id="73404-121">\<smtp> Element (Network Settings)</span></span>](smtp-element-network-settings.md)|<span data-ttu-id="73404-122">配置简单邮件传输协议（SMTP）邮件发送选项。</span><span class="sxs-lookup"><span data-stu-id="73404-122">Configures Simple Mail Transport Protocol (SMTP) mail sending options.</span></span>|  
+|[<span data-ttu-id="f647c-121">\<smtp>元素（网络设置）</span><span class="sxs-lookup"><span data-stu-id="f647c-121">\<smtp> Element (Network Settings)</span></span>](smtp-element-network-settings.md)|<span data-ttu-id="f647c-122">配置简单的邮件传输协议 （SMTP） 邮件发送选项。</span><span class="sxs-lookup"><span data-stu-id="f647c-122">Configures Simple Mail Transport Protocol (SMTP) mail sending options.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="73404-123">备注</span><span class="sxs-lookup"><span data-stu-id="73404-123">Remarks</span></span>  
- <span data-ttu-id="73404-124">`specifiedPickupDirectory` 特性设置应用程序保存邮件以供 SMTP 服务器处理的目录。</span><span class="sxs-lookup"><span data-stu-id="73404-124">The `specifiedPickupDirectory` attribute sets the directory where applications save mail messages to be processed by the SMTP server.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f647c-123">备注</span><span class="sxs-lookup"><span data-stu-id="f647c-123">Remarks</span></span>  
+ <span data-ttu-id="f647c-124">`specifiedPickupDirectory` 特性设置应用程序保存邮件以供 SMTP 服务器处理的目录。</span><span class="sxs-lookup"><span data-stu-id="f647c-124">The `specifiedPickupDirectory` attribute sets the directory where applications save mail messages to be processed by the SMTP server.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="73404-125">示例</span><span class="sxs-lookup"><span data-stu-id="73404-125">Example</span></span>  
- <span data-ttu-id="73404-126">下面的示例将 c:\maildrop 指定为邮件分拣目录。</span><span class="sxs-lookup"><span data-stu-id="73404-126">The following example specifies c:\maildrop as the mail pickup directory.</span></span>  
+## <a name="example"></a><span data-ttu-id="f647c-125">示例</span><span class="sxs-lookup"><span data-stu-id="f647c-125">Example</span></span>  
+ <span data-ttu-id="f647c-126">下面的示例指定 c：\maildrop 作为邮件取件目录。</span><span class="sxs-lookup"><span data-stu-id="f647c-126">The following example specifies c:\maildrop as the mail pickup directory.</span></span>  
   
 ```xml  
 <configuration>  
@@ -70,9 +70,9 @@ ms.locfileid: "74089079"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="73404-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="73404-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f647c-127">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f647c-127">See also</span></span>
 
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement?displayProperty=nameWithType>
-- [<span data-ttu-id="73404-128">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="73404-128">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="f647c-128">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="f647c-128">Network Settings Schema</span></span>](index.md)

@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: 4ac0216ce2965d555f7283ba66a085ea9d7cac3c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e18c23e9bbec97a64110aba6eb7241761ecece06
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783835"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149552"
 ---
-# <a name="getschema-and-schema-collections"></a><span data-ttu-id="552a5-102">GetSchema 和架构集合</span><span class="sxs-lookup"><span data-stu-id="552a5-102">GetSchema and Schema Collections</span></span>
-<span data-ttu-id="552a5-103">每个 .NET Framework 托管提供程序中的**连接**类实现**GetSchema**方法，该方法用于检索有关当前已连接的数据库的架构信息，以及从**GetSchema**方法采用的形式<xref:System.Data.DataTable>。</span><span class="sxs-lookup"><span data-stu-id="552a5-103">The **Connection** classes in each of the .NET Framework managed providers implement a **GetSchema** method which is used to retrieve schema information about the database that is currently connected, and the schema information returned from the **GetSchema** method comes in the form of a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="552a5-104">**GetSchema**方法是一种重载方法，该方法提供了用于指定要返回的架构集合以及限制返回的信息量的可选参数。</span><span class="sxs-lookup"><span data-stu-id="552a5-104">The **GetSchema** method is an overloaded method that provides optional parameters for specifying the schema collection to return, and restricting the amount of information returned.</span></span>  
+# <a name="getschema-and-schema-collections"></a><span data-ttu-id="d69af-102">GetSchema 和架构集合</span><span class="sxs-lookup"><span data-stu-id="d69af-102">GetSchema and Schema Collections</span></span>
+<span data-ttu-id="d69af-103">每个 .NET 框架托管提供程序中的**Connect**类实现**GetSchema**方法，该方法用于检索有关当前连接的数据库的架构信息，并且从**GetSchema**方法返回的架构信息以 形式<xref:System.Data.DataTable>出现。</span><span class="sxs-lookup"><span data-stu-id="d69af-103">The **Connection** classes in each of the .NET Framework managed providers implement a **GetSchema** method which is used to retrieve schema information about the database that is currently connected, and the schema information returned from the **GetSchema** method comes in the form of a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="d69af-104">**GetSchema**方法是一种重载方法，它提供了用于指定要返回的架构集合和限制返回的信息量的可选参数。</span><span class="sxs-lookup"><span data-stu-id="d69af-104">The **GetSchema** method is an overloaded method that provides optional parameters for specifying the schema collection to return, and restricting the amount of information returned.</span></span>  
   
-## <a name="specifying-the-schema-collections"></a><span data-ttu-id="552a5-105">指定架构集合</span><span class="sxs-lookup"><span data-stu-id="552a5-105">Specifying the Schema Collections</span></span>  
- <span data-ttu-id="552a5-106">**GetSchema**方法的第一个可选参数是以字符串形式指定的集合名称。</span><span class="sxs-lookup"><span data-stu-id="552a5-106">The first optional parameter of the **GetSchema** method is the collection name which is specified as a string.</span></span> <span data-ttu-id="552a5-107">有两种类型的架构集合：所有提供程序通用的通用架构集合以及每个提供程序特定的特定架构集合。</span><span class="sxs-lookup"><span data-stu-id="552a5-107">There are two types of schema collections: common schema collections that are common to all providers, and specific schema collections which are specific to each provider.</span></span>  
+## <a name="specifying-the-schema-collections"></a><span data-ttu-id="d69af-105">指定架构集合</span><span class="sxs-lookup"><span data-stu-id="d69af-105">Specifying the Schema Collections</span></span>  
+ <span data-ttu-id="d69af-106">**GetSchema**方法的第一个可选参数是指定为字符串的集合名称。</span><span class="sxs-lookup"><span data-stu-id="d69af-106">The first optional parameter of the **GetSchema** method is the collection name which is specified as a string.</span></span> <span data-ttu-id="d69af-107">有两种类型的架构集合：所有提供程序通用的通用架构集合以及每个提供程序特定的特定架构集合。</span><span class="sxs-lookup"><span data-stu-id="d69af-107">There are two types of schema collections: common schema collections that are common to all providers, and specific schema collections which are specific to each provider.</span></span>  
   
- <span data-ttu-id="552a5-108">可以通过调用不带任何参数的**GetSchema**方法或使用架构集合名称 "MetaDataCollections"，查询 .NET Framework 托管提供程序以确定支持的架构集合列表。</span><span class="sxs-lookup"><span data-stu-id="552a5-108">You can query a .NET Framework managed provider to determine the list of supported schema collections by calling the **GetSchema** method with no arguments, or with the schema collection name "MetaDataCollections".</span></span> <span data-ttu-id="552a5-109">此时将返回 <xref:System.Data.DataTable>，包含支持的架构集合列表、每个架构集合支持的限制数以及所使用的标识符部分数。</span><span class="sxs-lookup"><span data-stu-id="552a5-109">This will return a <xref:System.Data.DataTable> with a list of the supported schema collections, the number of restrictions that they each support, and the number of identifier parts that they use.</span></span>  
+ <span data-ttu-id="d69af-108">您可以查询 .NET Framework 托管提供程序，通过调用没有参数的**GetSchema**方法或使用架构集合名称"MetaDataCollection"来确定支持的架构集合的列表。</span><span class="sxs-lookup"><span data-stu-id="d69af-108">You can query a .NET Framework managed provider to determine the list of supported schema collections by calling the **GetSchema** method with no arguments, or with the schema collection name "MetaDataCollections".</span></span> <span data-ttu-id="d69af-109">此时将返回 <xref:System.Data.DataTable>，包含支持的架构集合列表、每个架构集合支持的限制数以及所使用的标识符部分数。</span><span class="sxs-lookup"><span data-stu-id="d69af-109">This will return a <xref:System.Data.DataTable> with a list of the supported schema collections, the number of restrictions that they each support, and the number of identifier parts that they use.</span></span>  
   
-### <a name="retrieving-schema-collections-example"></a><span data-ttu-id="552a5-110">检索架构集合示例</span><span class="sxs-lookup"><span data-stu-id="552a5-110">Retrieving Schema Collections Example</span></span>  
- <span data-ttu-id="552a5-111">下面的示例演示如何使用<xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> SQL Server <xref:System.Data.SqlClient.SqlConnection>类的 .NET Framework 数据提供程序的方法来检索与**AdventureWorks**示例数据库中包含的所有表有关的架构信息：</span><span class="sxs-lookup"><span data-stu-id="552a5-111">The following examples demonstrate how to use the <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> method of the .NET Framework Data Provider for the SQL Server <xref:System.Data.SqlClient.SqlConnection> class to retrieve schema information about all of the tables contained in the **AdventureWorks** sample database:</span></span>  
+### <a name="retrieving-schema-collections-example"></a><span data-ttu-id="d69af-110">检索架构集合示例</span><span class="sxs-lookup"><span data-stu-id="d69af-110">Retrieving Schema Collections Example</span></span>  
+ <span data-ttu-id="d69af-111">以下示例演示如何使用 SQL Server<xref:System.Data.SqlClient.SqlConnection.GetSchema%2A><xref:System.Data.SqlClient.SqlConnection>类的 .NET 框架数据提供程序的方法检索有关**AdventureWorks**示例数据库中包含的所有表的架构信息：</span><span class="sxs-lookup"><span data-stu-id="d69af-111">The following examples demonstrate how to use the <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> method of the .NET Framework Data Provider for the SQL Server <xref:System.Data.SqlClient.SqlConnection> class to retrieve schema information about all of the tables contained in the **AdventureWorks** sample database:</span></span>  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -42,7 +42,7 @@ Module Module1
    End Sub  
   
    Private Function GetConnectionString() As String  
-      ' To avoid storing the connection string in your code,    
+      ' To avoid storing the connection string in your code,
       ' you can retrieve it from a configuration file.  
       Return "Data Source=(local);Database=AdventureWorks;" _  
          & "Integrated Security=true;"  
@@ -104,7 +104,7 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="552a5-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="552a5-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d69af-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d69af-112">See also</span></span>
 
-- [<span data-ttu-id="552a5-113">检索数据库架构信息</span><span class="sxs-lookup"><span data-stu-id="552a5-113">Retrieving Database Schema Information</span></span>](retrieving-database-schema-information.md)
-- [<span data-ttu-id="552a5-114">ADO.NET 概述</span><span class="sxs-lookup"><span data-stu-id="552a5-114">ADO.NET Overview</span></span>](ado-net-overview.md)
+- [<span data-ttu-id="d69af-113">检索数据库架构信息</span><span class="sxs-lookup"><span data-stu-id="d69af-113">Retrieving Database Schema Information</span></span>](retrieving-database-schema-information.md)
+- [<span data-ttu-id="d69af-114">ADO.NET 概述</span><span class="sxs-lookup"><span data-stu-id="d69af-114">ADO.NET Overview</span></span>](ado-net-overview.md)
