@@ -15,32 +15,32 @@ helpviewer_keywords:
 ms.assetid: 868b339b-acdb-4fe0-91c7-b85f4fba99eb
 topic_type:
 - apiref
-ms.openlocfilehash: e103401b85626e53db53e1894c22b161774e5163
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7c6d1905cdbd12b960014e687034ea9d163b68d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088692"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179036"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>ICorDebugArrayValue::GetBaseIndicies 方法
-获取数组中每个维的基索引。  
+获取数组中每个维度的基本索引。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT GetBaseIndicies (  
     [in] ULONG32          cdim,  
-    [out, size_is(cdim), length_is(cdim)]   
+    [out, size_is(cdim), length_is(cdim)]
         ULONG32           indicies[]  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `cdim`  
- 中此 `ICorDebugArrayValue` 对象的维度数。 此值也是 `indicies` 数组的大小，因为其大小等于 `ICorDebugArrayValue` 对象的维度数。  
+ [在]此`ICorDebugArrayValue`对象的维度数。 此值也是数组的大小，`indicies`因为它的大小等于`ICorDebugArrayValue`对象的维度数。  
   
  `indicies`  
- 弄整数数组，其中每个整数都是此 `ICorDebugArrayValue` 对象的维度的基本索引（即起始索引）。  
+ [出]整数数组，每个数组都是此`ICorDebugArrayValue`对象维度的基础索引（即起始索引）。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -49,4 +49,4 @@ HRESULT GetBaseIndicies (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
