@@ -15,60 +15,60 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-ms.openlocfilehash: beb697d80417b937876a0887e4376341185a47d9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dae4a36537eeac58ffb17ebc1b78d935ec807cd8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447213"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175975"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps 方法
-获取具有指定的元数据签名的文件的属性。  
+使用指定的元数据签名获取文件的属性。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT GetFileProps (  
-    [in]  mdFile      mdf,   
-    [out] LPWSTR      szName,   
-    [in]  ULONG       cchName,   
-    [out] ULONG       *pchName,   
-    [out] const void  **ppbHashValue,   
-    [out] ULONG       *pcbHashValue,   
+    [in]  mdFile      mdf,
+    [out] LPWSTR      szName,
+    [in]  ULONG       cchName,
+    [out] ULONG       *pchName,
+    [out] const void  **ppbHashValue,
+    [out] ULONG       *pcbHashValue,
     [out] DWORD       *pdwFileFlags  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `mdf`  
- 中`mdFile` 元数据标记，它表示要获取其属性的文件。  
+ [在]表示`mdFile`要为其获取属性的文件的元数据令牌。  
   
  `szName`  
- 弄文件的简单名称。  
+ [出]文件的简单名称。  
   
  `cchName`  
- 中`szName`的大小（宽字符）。  
+ [在]大字符的大小`szName`。  
   
  `pchName`  
- 弄`szName`中实际返回的宽字符数。  
+ [出]中实际返回的宽字符数`szName`。  
   
  `ppbHashValue`  
- 弄指向哈希值的指针。 这是文件的哈希，使用 SHA-1 算法。  
+ [出]指向哈希值的指针。 这是使用 SHA-1 算法的文件哈希。  
   
  `pcbHashValue`  
- 弄返回的哈希值中的宽字符数。  
+ [出]返回的哈希值中的宽字符数。  
   
  `pdwFileFlags`  
- 弄一个指针，指向描述应用于文件的元数据的标志。 Flags 值是一个或多个[CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)值的组合。  
+ [出]指向描述应用于文件的元数据的标志的指针。 标志值是一个或多个[CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)值的组合。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

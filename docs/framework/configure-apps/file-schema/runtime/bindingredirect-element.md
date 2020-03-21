@@ -9,26 +9,26 @@ helpviewer_keywords:
 - container tags, <bindingRedirect> element
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-ms.openlocfilehash: 7d51ef5c4107fc6a40a472a660f53bb0ded59683
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d96585b397f75dcb9fac7e7fce93799cc95e7c6c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252789"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154291"
 ---
-# <a name="bindingredirect-element"></a>\<bindingRedirect > 元素
+# <a name="bindingredirect-element"></a>\<绑定重定向>元素
 将一个程序集版本重定向到另一个版本。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bindingRedirect>**  
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<运行时>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<程序集绑定>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<从属装配>**](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<绑定重定向>**  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-   <bindingRedirect    
+   <bindingRedirect
 oldVersion="existing assembly version"  
 newVersion="new assembly version"/>  
 ```  
@@ -36,22 +36,22 @@ newVersion="new assembly version"/>
 ## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>属性  
   
-|特性|描述|  
+|Attribute|说明|  
 |---------------|-----------------|  
-|`oldVersion`|必需的特性。<br /><br /> 指定最初请求的程序集的版本。 程序集版本号的格式为 "主要版本. 次要版本. 内部版本.*修订*版本"。 该版本号的每个部分的有效值介于 0 和 65535 之间。<br /><br /> 你还可以按下列格式指定版本范围：<br /><br /> *n.n.n.n - n.n.n.n*|  
-|`newVersion`|必需的特性。<br /><br /> 用以下格式指定要使用的程序集的版本，而不是最初请求的*版本：*<br /><br /> 此值可以指定 `oldVersion` 之前的版本。|  
+|`oldVersion`|必需的特性。<br /><br /> 指定最初请求的程序集的版本。 程序集版本号的格式*是主要.* 该版本号的每个部分的有效值介于 0 和 65535 之间。<br /><br /> 你还可以按下列格式指定版本范围：<br /><br /> *n.n.n.n - n.n.n.n*|  
+|`newVersion`|必需的特性。<br /><br /> Specifies the version of the assembly to use instead of the originally requested version in the format: *n.n.n.n*<br /><br /> 此值可以指定 `oldVersion` 之前的版本。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |无||  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`assemblyBinding`|包含有关程序集版本重定向和程序集位置的信息。|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
@@ -59,11 +59,11 @@ newVersion="new assembly version"/>
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 在针对具有强名称的程序集生成 .NET Framework 应用程序时，默认情况下，应用程序在运行时使用该版本的程序集，即使提供了新版本也是如此。 但是，你可以将应用程序配置为针对更新版本的程序集运行。 有关运行时如何使用这些文件来确定要使用的程序集版本的详细信息，请参阅[运行时如何定位程序集](../../../deployment/how-the-runtime-locates-assemblies.md)。  
+ 在针对具有强名称的程序集生成 .NET Framework 应用程序时，默认情况下，应用程序在运行时使用该版本的程序集，即使提供了新版本也是如此。 但是，你可以将应用程序配置为针对更新版本的程序集运行。 有关运行时如何使用这些文件来确定要使用的程序集版本的详细信息，请参阅[运行时如何查找程序集](../../../deployment/how-the-runtime-locates-assemblies.md)。  
   
  通过在一个 `bindingRedirect` 元素中包含多个 `dependentAssembly` 元素，你可以重定向多个程序集版本。 你还可从程序集的更新版本重定向到较旧版本。  
   
- 应用程序配置文件中的显式程序集绑定重定向需要安全权限。 这适用于对 .NET Framework 程序集和来自第三方的程序集的重定向。 通过在<xref:System.Security.Permissions.SecurityPermissionFlag> <xref:System.Security.Permissions.SecurityPermission>上设置标志来授予权限。 有关详细信息，请参阅[程序集绑定重定向安全权限](../../assembly-binding-redirection-security-permission.md)。  
+ 应用程序配置文件中的显式程序集绑定重定向需要安全权限。 这适用于对 .NET Framework 程序集和来自第三方的程序集的重定向。 通过在 上设置<xref:System.Security.Permissions.SecurityPermissionFlag>标志来授予权限。 <xref:System.Security.Permissions.SecurityPermission> 有关详细信息，请参阅[程序集绑定重定向安全权限](../../assembly-binding-redirection-security-permission.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何将一个程序集版本重定向到另一个版本。  
@@ -84,7 +84,7 @@ newVersion="new assembly version"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [运行时设置架构](index.md)
 - [配置文件架构](../index.md)

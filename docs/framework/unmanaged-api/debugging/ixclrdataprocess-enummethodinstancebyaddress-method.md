@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::EnumMethodInstanceByAddress 方法
+title: IXCLR数据处理：：枚举方法实例按地址方法
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EnumMethodInstanceByAddress Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 89b89a0cb056a0515bf0859069455a73f62aae4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: afc5fc377dd45d5e8d4d2d7b3385ca0524df69e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769616"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176651"
 ---
-# <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLRDataProcess::EnumMethodInstanceByAddress 方法
+# <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLR数据处理：：枚举方法实例按地址方法
 
-枚举的方法实例的地址偏移量开始此过程。
+枚举从地址偏移开始此过程的方法实例。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -37,27 +37,25 @@ HRESULT EnumMethodInstanceByAddress(
 );
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
 `handle`\
-[in]枚举的方法实例句柄。
+[在]用于枚举方法实例的句柄。
 
 `mod`\
-[out]枚举的方法实例。
+[出]枚举的方法实例。
 
 ## <a name="remarks"></a>备注
 
-提供的方法属于`IXCLRDataProcess`接口，并对应于虚拟方法表 28 槽。
+提供的方法是接口的一`IXCLRDataProcess`部分，对应于虚拟方法表的第 28 个插槽。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。   
-**标头：** 无   
-**库：** 无   
-**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]   
- 
-## <a name="see-also"></a>请参阅
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
+**标题：** 无**库：** 无 **.NET 框架版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-- [CLRDataSourceType 枚举](clrdatasourcetype-enumeration.md)
+## <a name="see-also"></a>另请参阅
+
+- [CLRDataSource 类型枚举](clrdatasourcetype-enumeration.md)
 - [调试](index.md)
 - [IXCLRDataProcess 接口](ixclrdataprocess-interface.md)

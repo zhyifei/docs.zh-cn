@@ -15,60 +15,60 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-ms.openlocfilehash: 506e13ad956a01b16e36d8c71737fe0efce4c01b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f664e694303691fb1132150037dcbcdb5549539a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450317"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177530"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps 方法
-设置或更新通过之前对 IMetaDataEmit 的调用定义的事件的指定功能[：:D efineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)。  
+设置或更新由之前调用[IMetaDataEmit：:DefineEvent）](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)定义的事件的指定功能。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT SetEventProps (  
-    [in]  mdEvent     ev,   
-    [in]  DWORD       dwEventFlags,   
-    [in]  mdToken     tkEventType,   
-    [in]  mdMethodDef mdAddOn,   
-    [in]  mdMethodDef mdRemoveOn,   
-    [in]  mdMethodDef mdFire,   
-    [in]  mdMethodDef rmdOtherMethods[]   
+    [in]  mdEvent     ev,
+    [in]  DWORD       dwEventFlags,
+    [in]  mdToken     tkEventType,
+    [in]  mdMethodDef mdAddOn,
+    [in]  mdMethodDef mdRemoveOn,
+    [in]  mdMethodDef mdFire,
+    [in]  mdMethodDef rmdOtherMethods[]
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `ev`  
- 中事件标记。  
+ [在]事件令牌。  
   
  `dwEventFlags`  
- 中事件标志。 这是 `CorEventAttr` 值的位掩码。  
+ [在]事件标志。 这是值的`CorEventAttr`位掩码。  
   
  `tkEventType`  
- 中事件类的标记。 这是 `mdTypeDef` 或 `mdTypeRef` 令牌。  
+ [在]事件类的令牌。 这是 或`mdTypeDef``mdTypeRef`标记。  
   
  `mdAddOn`  
- 中用于订阅事件的方法，或为 null。  
+ [在]用于订阅事件或 null 的方法。  
   
  `mdRemoveOn`  
- 中用于取消订阅事件的方法，或为 null。  
+ [在]用于取消订阅事件或 null 的方法。  
   
  `mdFire`  
- 中使用的方法（由派生类）引发事件。  
+ [在]用于（由派生类）引发事件的方法。  
   
  `rmdOtherMethods[]`  
- 中与事件关联的其他方法的标记数组。 数组的最后一个元素必须是 `mdMethodDefNil`。  
+ [在]与事件关联的其他方法的令牌数组。 数组的最后一个元素必须是`mdMethodDefNil`。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

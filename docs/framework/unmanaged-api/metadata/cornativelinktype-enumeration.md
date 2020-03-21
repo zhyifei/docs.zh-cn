@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f86ff37-2dab-4e64-819a-76b3bfe828ff
 topic_type:
 - apiref
-ms.openlocfilehash: 718e41e16c07265d8a36b8f6124d99cd3490f7be
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0b613ebacdff82a29fdbc3f4caa0f2b8bb5d3f6a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436624"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176157"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType 枚举
 提供一些值，用于指示本机代码中链接的类型。  
@@ -27,7 +27,7 @@ ms.locfileid: "74436624"
 ## <a name="syntax"></a>语法  
   
 ```cpp  
-typedef enum   
+typedef enum
 {  
     nltNone       = 1,  
     nltAnsi       = 2,  
@@ -38,25 +38,25 @@ typedef enum
 } CorNativeLinkType;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
 |成员|说明|  
 |------------|-----------------|  
 |`nltNone`|指示未指定任何关键字。|  
 |`nltAnsi`|指示指定了 ANSI 关键字。|  
 |`nltUnicode`|指示指定了 Unicode 关键字|  
-|`nltAuto`|指示指定了 auto 关键字。|  
+|`nltAuto`|指示指定了自动关键字。|  
 |`nltOle`|指示指定了 OLE 关键字。|  
 |`nltMaxValue`|未使用。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包含在 MsCorEE.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

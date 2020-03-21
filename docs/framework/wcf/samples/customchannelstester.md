@@ -2,21 +2,21 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: 0d77af319e18868ce7d600269cd9afaa0c4ce2c6
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c23bd3eddd49972b7083347fed88d4e70707ae58
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928648"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183800"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 `CustomChannelsTester` 是一个可用于依据一组预定义的服务协定测试自定义通道实现的工具。 可以通过使用 XML 文件选择这组服务协定并将其传递给该工具。 然后，该工具将生成服务和客户端，该客户端会在消息交换过程中测试您的自定义通道实现。  
   
 ### <a name="to-build-the-tool"></a>生成工具  
   
-1. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+1. 要生成解决方案，请按照生成 Windows[通信基础示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-2. 生成解决方案将生成三个文件：Customchannelstester.exe、Testspec.xml 和 Samplerun.cmd。 文件 samplerun.cmd 提供了一个示例命令行，说明如何使用此工具来测试[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。  
+2. 生成该解决方案将会生成三个文件：CustomChannelsTester.exe、TestSpec.xml 和 SampleRun.cmd。 文件 SampleRun.cmd 具有一个示例命令行，其中演示如何使用此工具来测试[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。  
   
 ### <a name="to-run-the-tool"></a>运行此工具  
   
@@ -28,9 +28,9 @@ ms.locfileid: "70928648"
   
      需要使用 `/binding` 选项。  
   
-     `/dll`如果 "绑定" 不是由 Windows Communication Foundation （WCF）提供的系统提供的绑定，则是必需的。  
+     `/dll`如果"绑定"不是 Windows 通信基金会 （WCF） 提供的系统提供的绑定，则需要绑定。  
   
-     `/testspec` 是可选的。  
+     `/testspec` 是可选项。  
   
      这将根据测试规范和绑定创建服务器和客户端。  
   
@@ -39,15 +39,15 @@ ms.locfileid: "70928648"
      下面是用于描述测试规范的示例 XML (testspec.xml)：  
   
     ```xml  
-    <TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"   
+    <TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >  
     <ServiceContract>  
     <!-- Test a contract which has oneway / twoway operations. If you set ExpandAll = true, both types of contracts are tested -->    <IsOneWay ExpandAll="true">true</IsOneWay>  
     <!-- Test a contract with Asynchronous / Synchronous Operations-->  
-        <IsAsync>false</IsAsync>   
-    <!-- Test a sessionful / sessionless contract-->      
+        <IsAsync>false</IsAsync>
+    <!-- Test a sessionful / sessionless contract-->
         <IsSession ExpandAll="true">true</IsSession>  
-    <!-- If the Service Contract includes a CallBack Contract-->      
+    <!-- If the Service Contract includes a CallBack Contract-->
         <IsCallBack ExpandAll="true">true</IsCallBack>  
     </ServiceContract>  
     <TestDetails>  
@@ -56,7 +56,7 @@ ms.locfileid: "70928648"
     <!-- Port Number - Optional-->  
         <Port>8000</Port>  
     <!--URI for the callBack address for the client. The client will receive the messages from the server on this address in case of a CallBack Contract-->  
-        <ClientCallBackAddress/>      
+        <ClientCallBackAddress/>
     <!-- Duration (in sec) after the server has started, it times out - optional(default = 300sec) -->  
         <ServerTimeout>300</ServerTimeout>  
     <!-- Duration (in sec) before the Client initializes -optional(default = 60sec) -->  

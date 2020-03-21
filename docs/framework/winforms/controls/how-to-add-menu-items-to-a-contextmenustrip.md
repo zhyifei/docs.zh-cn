@@ -9,19 +9,19 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], adding items
 - context menus [Windows Forms], adding menu items
 ms.assetid: 1ec14776-3ea2-4752-bd22-4fae0fd19e1a
-ms.openlocfilehash: 85729082d34cc976fabdbc50629b528c5f28cf54
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7e3480c5a56170ce94d5b5bde0208542c82e7702
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624086"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182314"
 ---
 # <a name="how-to-add-menu-items-to-a-contextmenustrip"></a>如何：向 ContextMenuStrip 添加菜单项
-可以在一次向添加一个菜单项或多个项<xref:System.Windows.Forms.ContextMenuStrip>。  
+一次只能将一个菜单项或多个项添加到 。 <xref:System.Windows.Forms.ContextMenuStrip>  
   
-### <a name="to-add-a-single-menu-item-to-a-contextmenustrip"></a>若要向 ContextMenuStrip 添加一个菜单项  
+### <a name="to-add-a-single-menu-item-to-a-contextmenustrip"></a>将单个菜单项添加到上下文菜单条  
   
-- 使用<xref:System.Windows.Forms.ToolStripItemCollection.Add%2A>方法将添加一个菜单项<xref:System.Windows.Forms.ContextMenuStrip>。  
+- 使用<xref:System.Windows.Forms.ToolStripItemCollection.Add%2A>方法将一个菜单项添加到<xref:System.Windows.Forms.ContextMenuStrip>。  
   
     ```vb  
     Me.contextMenuStrip1.Items.Add(Me.toolStripMenuItem1)  
@@ -31,9 +31,9 @@ ms.locfileid: "64624086"
     this.contextMenuStrip1.Items.Add(toolStripMenuItem1);  
     ```  
   
-### <a name="to-add-several-menu-items-to-a-contextmenustrip"></a>若要向 ContextMenuStrip 添加多个菜单项  
+### <a name="to-add-several-menu-items-to-a-contextmenustrip"></a>将多个菜单项添加到上下文菜单条  
   
-- 使用<xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A>方法将添加到多个菜单项<xref:System.Windows.Forms.ContextMenuStrip>。  
+- 使用<xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A>方法将多个菜单项添加到 。 <xref:System.Windows.Forms.ContextMenuStrip>  
   
     ```vb  
     Me.contextMenuStrip1.Items.AddRange(New _  
@@ -42,11 +42,11 @@ ms.locfileid: "64624086"
     ```  
   
     ```csharp  
-    this.contextMenuStrip1.Items.AddRange(new   
+    this.contextMenuStrip1.Items.AddRange(new
        System.Windows.Forms.ToolStripItem[] {  
           this.toolStripMenuItem1, this.toolStripMenuItem2});  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ContextMenuStrip 控件](contextmenustrip-control.md)

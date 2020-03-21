@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef77efd1-849c-4e51-ba92-7ee3d2bf0339
 topic_type:
 - apiref
-ms.openlocfilehash: f6b5e12df60663b75e10b04eaa008a75d720d753
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9370b27fd385b0223b354365d64aa57048f4ec69
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434441"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177845"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps 方法
 修改指定的 `ManifestResource` 元数据结构。  
@@ -30,36 +30,36 @@ ms.locfileid: "74434441"
 ```cpp  
 HRESULT SetManifestResourceProps (  
     [in] mdManifestResource  mr,  
-    [in] mdToken             tkImplementation,   
+    [in] mdToken             tkImplementation,
     [in] DWORD               dwOffset,  
     [in] DWORD               dwResourceFlags  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `mr`  
- 中用于指定要修改的 `ManifestResource` 元数据结构的标记。  
+ [在]指定要修改的`ManifestResource`元数据结构的令牌。  
   
  `tkImplementation`  
- 中映射到资源提供程序的 `File` 或 `AssemblyRef`类型的标记。  
+ [在]映射到资源提供程序的令牌`File`类型`AssemblyRef`或 。  
   
  `dwOffset`  
- 中文件中资源的起始位置的偏移量。  
+ [在]文件中资源开头的偏移量。  
   
  `dwResourceFlags`  
- 中指定资源特性的标志值的按位组合。  
+ [在]指定资源属性的标志值的位组合。  
   
 ## <a name="remarks"></a>备注  
- 若要创建 `ManifestResource` 元数据结构，请使用[IMetaDataAssemblyEmit：:D efinemanifestresource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)方法。  
+ 要创建`ManifestResource`元数据结构，请使用[IMetaDataAssemblyEmit：:DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

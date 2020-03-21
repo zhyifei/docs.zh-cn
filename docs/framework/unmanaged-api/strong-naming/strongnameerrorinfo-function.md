@@ -18,35 +18,35 @@ helpviewer_keywords:
 ms.assetid: e91bf8c3-7c26-4732-938e-2e5b04abfc99
 topic_type:
 - apiref
-ms.openlocfilehash: dd83fc6a7f553b54cc2acd5e9a93d8d58747d75a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d5eedc34b75d3a0c02969c06454b0f7ec942ed17
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141711"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176937"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo 函数
 获取由其中一个强名称函数引发的最后一个错误代码。  
   
- 此函数已弃用。  
+ 此函数已被弃用。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
-HRESULT StrongNameErrorInfo ();   
+HRESULT StrongNameErrorInfo ();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 由一个强名称函数设置的最后一个 COM 错误代码。  
+ 由强名称函数之一设置的最后一个 COM 错误代码。  
   
 ## <a name="remarks"></a>备注  
- 大多数强名称方法会返回简单的 `true` 或 `false` 指示成功完成。 使用 `StrongNameErrorInfo` 函数检索 HRESULT，该函数指定强名称函数生成的最后一个错误。  
+ 大多数强名称方法返回成功完成的简单`true`或`false`指示。 使用`StrongNameErrorInfo`函数检索指定强名称函数生成的最后一个错误的 HRESULT。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标头：** Stackexchange.redis.strongname  
+ **标题：** 强名称.h  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包含在 MsCorEE.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  

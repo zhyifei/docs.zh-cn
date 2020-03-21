@@ -15,38 +15,38 @@ helpviewer_keywords:
 ms.assetid: 35991289-f389-495d-8caa-a6384fb1d557
 topic_type:
 - apiref
-ms.openlocfilehash: b9cad4c9647983e5b39f9b7a5d03736f2848e1c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f876187624d066b9e672fbf44a984d6d02a54c43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432697"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175871"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue 方法
-用在指定的元数据中进行的更改更新当前程序集范围。  
+使用在指定的元数据中所做的更改更新当前程序集范围。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
-HRESULT ApplyEditAndContinue (   
+HRESULT ApplyEditAndContinue (
     [in]  IUnknown    *pImport  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `pImport`  
- \[\] 指向[IUnknown](/cpp/atl/iunknown)对象的指针，该对象表示来自可移植可执行（PE）文件的增量元数据。
+ \[在\]指向[IUnknown](/cpp/atl/iunknown)对象的指针中，该对象表示来自可移植可执行文件 （PE） 文件中的增量元数据。
   
- 增量元数据是元数据的块，其中包括对模块的实际元数据副本所做的更改。  
+ 增量元数据是元数据块，包括对模块实际元数据副本所做的更改。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

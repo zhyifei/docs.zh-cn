@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-ms.openlocfilehash: 1cf3f2b62b388b6c2d6fcd75b1b07a67d5b2e49f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8b3f7712436c001e5cd44f214f6edb06390abd41
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866697"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177067"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished 方法
 通知探查器已创建应用程序域。  
@@ -30,32 +30,32 @@ ms.locfileid: "76866697"
 ```cpp  
 HRESULT AppDomainCreationFinished(  
     [in] AppDomainID appDomainId,  
-    [in] HRESULT     hrStatus);   
+    [in] HRESULT     hrStatus);
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
 - `appDomainId`
 
-  \[中的] 标识已创建的域。
+  \[in] 标识已创建的域。
 
 - `hrStatus`
 
-  \[中的] HRESULT，它指示是否已成功完成创建应用程序域。
+  \[in] 指示应用程序域的创建是否成功完成的 HRESULT。
 
 ## <a name="remarks"></a>备注  
- 在调用 `AppDomainCreationFinished` 方法之前，应用程序 ID 对于任何信息请求均无效。  
+ 在调用方法之前，`AppDomainCreationFinished`应用程序 ID 对任何信息请求无效。  
   
- 在 `AppDomainCreationFinished` 回调后，某些加载应用程序域的部分可能会继续。 如果 `hrStatus` 失败，则指示失败。 不过，`hrStatus` 中的 HRESULT 成功仅指示创建应用程序域的第一部分已成功。  
+ 回调后`AppDomainCreationFinished`加载应用程序域的某些部分可能会继续。 故障 HRESULT `hrStatus` in 表示失败。 但是，HRESULT 的成功仅`hrStatus`表示创建应用程序域的第一部分已成功。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

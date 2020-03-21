@@ -15,59 +15,59 @@ helpviewer_keywords:
 ms.assetid: 0f9bde1d-e306-438d-941b-d0925b322304
 topic_type:
 - apiref
-ms.openlocfilehash: 470b6511366cef1680eaf97f9ab376736add55c4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 53b3d94e8b1e273fcbc041d25a5bf586a12735c0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437895"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177255"
 ---
 # <a name="imetadataimportfindmethod-method"></a>IMetaDataImport::FindMethod 方法
-获取一个指针，该指针指向方法的 MethodDef 标记，该方法由指定的 <xref:System.Type> 包含并且具有指定的名称和元数据签名。  
+获取指向方法的指针，该方法由指定内容<xref:System.Type>封闭，并且具有指定的名称和元数据签名。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT FindMethod (  
    [in]  mdTypeDef          td,  
-   [in]  LPCWSTR            szName,   
-   [in]  PCCOR_SIGNATURE    pvSigBlob,   
-   [in]  ULONG              cbSigBlob,   
+   [in]  LPCWSTR            szName,
+   [in]  PCCOR_SIGNATURE    pvSigBlob,
+   [in]  ULONG              cbSigBlob,
    [out] mdMethodDef        *pmb  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `td`  
- 中包含要搜索的成员的类型（类或接口）的 `mdTypeDef` 标记。 如果 `mdTokenNil`此值，则会对全局函数执行查找。  
+ [在]包含`mdTypeDef`要搜索的成员的类型（类或接口）的令牌。 如果此值为`mdTokenNil`，则对全局函数执行查找。  
   
  `szName`  
- 中要搜索的方法的名称。  
+ [在]要搜索的方法的名称。  
   
  `pvSigBlob`  
- 中指向方法的二进制元数据签名的指针。  
+ [在]指向方法的二进制元数据签名的指针。  
   
  `cbSigBlob`  
- 中`pvSigBlob`的大小（以字节为单位）。  
+ [在]的大小（以字节为单位）。 `pvSigBlob`  
   
  `pmb`  
- 弄指向匹配 MethodDef 标记的指针。  
+ [出]指向匹配的 MethodDef 令牌的指针。  
   
 ## <a name="remarks"></a>备注  
- 使用方法的封闭类或接口（`td`）、其名称（`szName`）以及可选的签名（`pvSigBlob`）来指定方法。 类或接口中可能有多个具有相同名称的方法。 在这种情况下，传递该方法的签名以查找唯一匹配项。  
+ 使用其封闭类或接口 （））`td``szName`和可选方式指定方法的签名 （）。`pvSigBlob` 类或接口中可能有多个同名方法。 在这种情况下，传递方法的签名以查找唯一匹配项。  
   
- 传递给 `FindMethod` 的签名必须已在当前范围内生成，因为签名将绑定到特定范围。 签名可以嵌入标识封闭类或值类型的标记。 该令牌是本地 TypeDef 表中的索引。 不能在当前范围的上下文之外生成运行时签名，并使用该签名作为输入 `FindMethod`。  
+ 传递给的签名`FindMethod`必须在当前作用域中生成，因为签名绑定到特定作用域。 签名可以嵌入标识封闭类或值类型的令牌。 令牌是本地 TypeDef 表中的索引。 不能在当前作用域的上下文之外生成运行时签名，并且使用该签名作为输入 到`FindMethod`的输入。  
   
- `FindMethod` 仅查找直接在类或接口中定义的方法;它找不到继承的方法。  
+ `FindMethod`仅查找直接在类或接口中定义的方法;它找不到继承的方法。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包含在 MsCorEE.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

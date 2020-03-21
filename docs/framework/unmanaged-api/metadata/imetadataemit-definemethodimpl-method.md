@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: 9dcc8b3d-33ee-4c7c-8d6f-322c57b94a0f
 topic_type:
 - apiref
-ms.openlocfilehash: 99f529a151a42cf4a9ee1f74bd3a76a5b6b1b35f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 64d76efa8c2f29fda559e5c84217b865540027ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445258"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175819"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl 方法
-创建一个定义，用于实现从接口继承的方法，并返回该方法实现定义的标记。  
+为从接口继承的方法的实现创建定义，并将令牌返回到该方法实现定义。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
-HRESULT DefineMethodImpl (   
-    [in]  mdTypeDef         td,   
-    [in]  mdToken           tkBody,   
+HRESULT DefineMethodImpl (
+    [in]  mdTypeDef         td,
+    [in]  mdToken           tkBody,
     [in]  mdToken           tkDecl  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `td`  
- 中实现类的 `mdTypedef` 标记。  
+ [在]实现`mdTypedef`类的令牌。  
   
  `tkBody`  
- 中代码体的 `mdMethodDef` 或 `mdMemberRef` 标记。  
+ [在]代码`mdMethodDef`正文`mdMemberRef`的 或 令牌。  
   
  `tkDecl`  
- 中正在实现的接口方法的 `mdMethodDef` 或 `mdMemberRef` 标记。  
+ [在]正在`mdMethodDef`实现的`mdMemberRef`接口方法的 或 令牌。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

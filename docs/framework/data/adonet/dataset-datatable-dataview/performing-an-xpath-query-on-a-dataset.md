@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 6082a171d24c55ea52c153bbd920bb7486be78a7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5e9a00ab78a57c3c1686d7c87ed8b45d9b2649af
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784378"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150826"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>对数据集执行 XPath 查询
-同步<xref:System.Data.DataSet>与<xref:System.Xml.XmlDataDocument>之间的关系使你可以使用 xml 服务（例如 xml 路径语言（XPath）查询）来访问**XmlDataDocument** ，并且可以更方便地执行某些功能。直接访问**数据集**。 例如，您可以对与**数据**集同步的**XmlDataDocument**执行 XPath 查询，而不是使用的**Select**方法<xref:System.Data.DataTable>将关系导航到**dataset**中的其他表，以获取格式为的 XML 元素列表<xref:System.Xml.XmlNodeList>。 然后，将**XmlNodeList**中的节点强制<xref:System.Xml.XmlElement>转换为节点，并将其传递给**XmlDataDocument**的**GetRowFromElement**方法，以返回对<xref:System.Data.DataRow>同步**中的表中的行的匹配引用数据集**。  
+同步<xref:System.Data.DataSet>和<xref:System.Xml.XmlDataDocument>之间的关系允许您使用 XML 服务（如 XML 路径语言 （XPath） 查询），这些服务可以访问**XmlDataDocument，** 并且可以比直接访问**DataSet**更方便地执行某些功能。 例如，可以使用**Select**方法<xref:System.Data.DataTable>将关系导航到**DataSet**中的其他表，而是可以在与**DataSet**同步的**XmlDataDocument**上执行 XPath 查询，以获取 XML 元素的列表。 <xref:System.Xml.XmlNodeList> 然后，将**XmlNodeList**中的节点<xref:System.Xml.XmlElement>作为节点强制转换，可以传递给**XmlDataDocument**的**GetRowFromElement**方法，以<xref:System.Data.DataRow>返回对同步**DataSet**中表行的匹配引用。  
   
- 例如，以下代码示例执行“孙级”XPath 查询。 **数据集**填充了三个表：**Customers**、 **Orders**和**OrderDetails**。 在此示例中，首先在**Customers**表和**orders**表之间以及**orders**表和**OrderDetails**表之间创建父子关系。 然后，执行 XPath 查询来返回**XmlNodeList**的**客户**节点，其中孙**OrderDetails**节点的**ProductID**节点的值为43。 实质上，该示例使用 XPath 查询来确定哪些客户订购了**ProductID**为43的产品。  
+ 例如，以下代码示例执行“孙级”XPath 查询。 **数据集**由三个表填充：**客户**、**订单**和**订单详细信息**。 在此示例中，首先在 **"客户**"和 **"订单"** 表之间以及 **"订单****详细信息**"表之间创建父子关系。 然后执行 XPath 查询以返回**客户**节点的**XmlNodeList，** 其中孙**订单详细信息**节点具有值为 43**的 ProductID**节点。 实质上，该示例使用 XPath 查询来确定哪些客户订购了产品**ID**为 43 的产品。  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -43,7 +43,7 @@ dataSet.Relations.Add("OrderDetail", _
   dataSet.Tables("Orders").Columns("OrderID"), _  
 dataSet.Tables("OrderDetails").Columns("OrderID"), false).Nested = true  
   
-Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)   
+Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)
   
 Dim nodeList As XmlNodeList = xmlDoc.DocumentElement.SelectNodes( _  
   "descendant::Customers[*/OrderDetails/ProductID=43]")  
@@ -84,10 +84,10 @@ dataSet.Relations.Add("CustOrders",
   
 dataSet.Relations.Add("OrderDetail",  
   dataSet.Tables["Orders"].Columns["OrderID"],  
-  dataSet.Tables["OrderDetails"].Columns["OrderID"],   
+  dataSet.Tables["OrderDetails"].Columns["OrderID"],
   false).Nested = true;  
   
-XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);   
+XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);
   
 XmlNodeList nodeList = xmlDoc.DocumentElement.SelectNodes(  
   "descendant::Customers[*/OrderDetails/ProductID=43]");  
@@ -101,7 +101,7 @@ foreach (XmlNode xmlNode in nodeList)
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据集和 XmlDataDocument 同步](dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET 概述](../ado-net-overview.md)

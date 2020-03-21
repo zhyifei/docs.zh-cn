@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: 50f2444764ddb212513550ff0a62fcfecab2c45a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e68ca46f9d2c562491063ae66754c469dbe0898e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347998"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184430"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>在服务协定中指定数据传输
-Windows Communication Foundation （WCF）可以看作是一种消息传递基础结构。 服务操作可以接收消息、处理消息以及发送消息。 消息是使用操作协定描述的。 例如，请考虑以下协定。  
+Windows 通信基础 （WCF） 可视为消息传递基础结构。 服务操作可以接收消息、处理消息以及发送消息。 消息是使用操作协定描述的。 例如，请考虑以下协定。  
   
 ```csharp  
 [ServiceContract]  
@@ -52,7 +52,7 @@ float GetAirfare(string fromCity, string toCity, out string currency);
     Function GetAirfare(fromCity As String, toCity As String) As Double  
 ```  
   
- 此外，可以使用引用参数让某个参数同时成为请求消息和答复消息的一部分。 这些参数必须是可以序列化（转换为 XML）的类型。 默认情况下，WCF 使用称为 <xref:System.Runtime.Serialization.DataContractSerializer> 类的组件来执行此转换。 支持大多数基元类型（如 `int`、`string`、`float` 和 `DateTime`）。 用户定义的类型通常必须具有数据协定。 有关详细信息，请参阅[使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 此外，可以使用引用参数让某个参数同时成为请求消息和答复消息的一部分。 这些参数必须是可以序列化（转换为 XML）的类型。 默认情况下，WCF 使用称为 类的<xref:System.Runtime.Serialization.DataContractSerializer>组件来执行此转换。 支持大多数基元类型（如 `int`、`string`、`float` 和 `DateTime`）。 用户定义的类型通常必须具有数据协定。 有关详细信息，请参阅[使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
 ```csharp
 public interface IAirfareQuoteService  
@@ -87,7 +87,7 @@ Public Interface IAirfareQuoteService
 End Interface  
 ```  
   
- 偶尔，`DataContractSerializer` 不足以序列化您的类型。 WCF 支持可用于序列化参数的替代序列化引擎（<xref:System.Xml.Serialization.XmlSerializer>）。 <xref:System.Xml.Serialization.XmlSerializer> 使您可以使用诸如 `XmlAttributeAttribute` 之类的属性对得到的 XML 进行更多控制。 若要切换到对特定操作或整个服务使用 <xref:System.Xml.Serialization.XmlSerializer>，请将 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 属性应用到相应的操作或服务。 例如：  
+ 偶尔，`DataContractSerializer` 不足以序列化您的类型。 WCF 支持备用序列化引擎 ，<xref:System.Xml.Serialization.XmlSerializer>也可以用于序列化参数。 <xref:System.Xml.Serialization.XmlSerializer> 使您可以使用诸如 `XmlAttributeAttribute` 之类的属性对得到的 XML 进行更多控制。 若要切换到对特定操作或整个服务使用 <xref:System.Xml.Serialization.XmlSerializer>，请将 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 属性应用到相应的操作或服务。 例如：  
   
 ```csharp  
 [ServiceContract]  
@@ -124,7 +124,7 @@ Class Itinerary
 End Class  
 ```  
   
- 有关详细信息，请参阅[使用 XmlSerializer 类](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。 请记住，最好不要如此处所示手动切换到 <xref:System.Xml.Serialization.XmlSerializer>，除非有该主题详细讨论的特定原因需要执行此操作。  
+ 有关详细信息，请参阅使用[Xml 序列化器类](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。 请记住，最好不要如此处所示手动切换到 <xref:System.Xml.Serialization.XmlSerializer>，除非有该主题详细讨论的特定原因需要执行此操作。  
   
  若要将 .NET 参数名称与协定名称分开，可以使用 <xref:System.ServiceModel.MessageParameterAttribute> 属性 (Attribute)，并且使用 `Name` 属性 (Property) 来设置协定名称。 例如，下面的操作协定等效于本主题中的第一个示例。  
   
@@ -141,13 +141,13 @@ public float GetAirfare(
 ```  
   
 ## <a name="describing-empty-messages"></a>描述空消息  
- 可以通过不使用输入参数和引用参数来描述空请求消息。 例如，在中C#：  
+ 可以通过不使用输入参数和引用参数来描述空请求消息。 例如，在 C# 中：  
   
  `[OperationContract]`  
   
  `public int GetCurrentTemperature();`  
   
- 例如，在 Visual Basic 中：  
+ 例如，在可视化基础知识中：  
   
  `<OperationContract()>`  
   
@@ -221,7 +221,7 @@ End Interface
   
 <MessageContract()>  
 Public Class GetAirfareRequest  
-    <MessageHeader()>   
+    <MessageHeader()>
     Public Property date as DateTime  
     <MessageBodyMember()>  
     Public Property itinerary As Itinerary  
@@ -248,7 +248,7 @@ End Class
 ## <a name="describing-messages-by-using-streams"></a>使用流描述消息  
  另一种在操作中描述消息的方式是在操作协定中使用 <xref:System.IO.Stream> 类或它的派生类之一，或者将该类用作消息协定正文成员（此时，它必须是唯一的成员）。 对于传入消息，类型必须是 `Stream` — 您不能使用派生类。  
   
- WCF 不会调用序列化程序，而是检索流中的数据，并将数据直接放入传出消息，或从传入消息中检索数据并将数据直接放入流中。 下面的示例演示流的用法。  
+ WCF 不是调用序列化程序，而是从流中检索数据并将其直接放入传出消息中，或从传入消息中检索数据并将其直接放入流中。 下面的示例演示流的用法。  
   
 ```csharp  
 [OperationContract]  
@@ -316,7 +316,7 @@ public void LogMessage(Message m);
 Sub LogMessage(m As Message)  
 ```  
   
- 这是一个高级方案，在[使用 Message 类](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)中进行了详细说明。  
+ 这是一个高级方案，在[使用消息类](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)中对此进行了详细介绍。  
   
 ## <a name="describing-fault-messages"></a>描述错误消息  
  除了由返回值以及输出参数或引用参数描述的消息以外，任何非单向操作都至少可以返回两种可能的消息：它的正常响应消息和错误消息。 请考虑下面的操作协定。  
@@ -368,7 +368,7 @@ Public Class
 End Class  
 ```  
   
- 可以通过引发相应数据协定类型的 <xref:System.ServiceModel.FaultException%601> 来生成这些其他错误。 有关详细信息，请参阅[处理异常和错误](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)。  
+ 可以通过引发相应数据协定类型的 <xref:System.ServiceModel.FaultException%601> 来生成这些其他错误。 有关详细信息，请参阅[处理异常和故障](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)。  
   
  不能使用 <xref:System.Xml.Serialization.XmlSerializer> 类描述错误。 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 对错误协定无效。  
   
@@ -401,7 +401,7 @@ public bool IsLibraryItemAvailable(LibraryItem item);
 [OperationContract]  
 public bool IsLibraryItemAvailable(LibraryItem item);  
   
-// code omitted   
+// code omitted
   
 [DataContract]  
 [KnownType(typeof(Book))]  
@@ -440,7 +440,7 @@ End Class
  可以执行许多操作来自定义序列化数据的方式。  
   
 ### <a name="changing-server-serialization-settings"></a>更改服务器序列化设置  
- 当使用默认 <xref:System.Runtime.Serialization.DataContractSerializer> 时，可以通过将 <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性应用于服务，控制服务上的序列化过程的某些方面。 具体说来，您可以使用 `MaxItemsInObjectGraph` 属性设置相应的配额，以便对 <xref:System.Runtime.Serialization.DataContractSerializer> 反序列化的最大对象数进行限制。 可以使用 `IgnoreExtensionDataObject` 属性关闭往返过程版本管理功能。 有关配额的详细信息，请参阅[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。 有关往返的详细信息，请参阅[向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+ 当使用默认 <xref:System.Runtime.Serialization.DataContractSerializer> 时，可以通过将 <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性应用于服务，控制服务上的序列化过程的某些方面。 具体说来，您可以使用 `MaxItemsInObjectGraph` 属性设置相应的配额，以便对 <xref:System.Runtime.Serialization.DataContractSerializer> 反序列化的最大对象数进行限制。 可以使用 `IgnoreExtensionDataObject` 属性关闭往返过程版本管理功能。 有关配额的详细信息，请参阅[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。 有关往返的详细信息，请参阅[前向兼容数据合同](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 ```csharp  
 [ServiceBehavior(MaxItemsInObjectGraph=100000)]  
@@ -464,9 +464,9 @@ End Interface
 ```  
   
 ### <a name="serialization-behaviors"></a>序列化行为  
- WCF 中提供了两种行为，<xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 和自动插入的 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 取决于特定操作所使用的序列化程序。 因为这些行为是自动应用的，您通常不必了解它们。  
+ WCF 中提供了两种行为，<xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>根据<xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>特定操作使用的序列化器自动插入和。 因为这些行为是自动应用的，您通常不必了解它们。  
   
- 但是，`DataContractSerializerOperationBehavior` 具有可用于自定义序列化过程的 `MaxItemsInObjectGraph`、`IgnoreExtensionDataObject` 和 `DataContractSurrogate` 属性。 前两个属性的含义与上一节中讨论的相同。 您可以使用 `DataContractSurrogate` 属性来启用数据协定代理项，这是一种用于自定义和扩展序列化过程的强大机制。 有关详细信息，请参阅[数据协定代理](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)项。  
+ 但是，`DataContractSerializerOperationBehavior` 具有可用于自定义序列化过程的 `MaxItemsInObjectGraph`、`IgnoreExtensionDataObject` 和 `DataContractSurrogate` 属性。 前两个属性的含义与上一节中讨论的相同。 您可以使用 `DataContractSurrogate` 属性来启用数据协定代理项，这是一种用于自定义和扩展序列化过程的强大机制。 有关详细信息，请参阅[数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。  
   
  可以使用 `DataContractSerializerOperationBehavior` 来自定义客户端和服务器序列化。 下面的示例演示如何增加客户端上的 `MaxItemsInObjectGraph` 配额。  
   
@@ -496,7 +496,7 @@ For Each op As OperationDescription In factory.Endpoint.Contract.Operations
     Dim client As IDataService = factory.CreateChannel  
 ```  
   
-下面是自承载的情况下服务的等效代码：
+以下是服务上的等效代码，在自托管的情况下：
   
 ```csharp  
 ServiceHost serviceHost = new ServiceHost(typeof(IDataService))  
@@ -549,7 +549,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
         <client>  
             <endpoint address="http://example.com/myservice"  
                   behaviorConfiguration="LargeQuotaBehavior"  
-                binding="basicHttpBinding" bindingConfiguration=""   
+                binding="basicHttpBinding" bindingConfiguration=""
                             contract="IDataService"  
                 name="" />  
         </client>  
@@ -558,13 +558,13 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
 ```  
   
 ### <a name="shared-type-serialization-object-graph-preservation-and-custom-serializers"></a>共享类型序列化、对象图保留和自定义序列化程序  
- <xref:System.Runtime.Serialization.DataContractSerializer> 使用数据协定名称而不是 .NET 类型名称序列化。 这与面向服务的体系结构原则是一致的，并且支持更大程度的灵活性 — .NET 类型可以在不影响网络协定的情况下进行更改。 在极少数情况下，您可能希望序列化实际的 .NET 类型名称，从而在客户端和服务器之间引入紧耦合，就像 .NET Framework 远程处理技术那样。 这不是建议的做法，但在从 .NET Framework 远程处理迁移到 WCF 的罕见情况下除外。 在这种情况下，必须使用 <xref:System.Runtime.Serialization.NetDataContractSerializer> 类而不是 <xref:System.Runtime.Serialization.DataContractSerializer> 类。  
+ <xref:System.Runtime.Serialization.DataContractSerializer> 使用数据协定名称而不是 .NET 类型名称序列化。 这与面向服务的体系结构原则是一致的，并且支持更大程度的灵活性 — .NET 类型可以在不影响网络协定的情况下进行更改。 在极少数情况下，您可能希望序列化实际的 .NET 类型名称，从而在客户端和服务器之间引入紧耦合，就像 .NET Framework 远程处理技术那样。 这不是推荐的做法，除非在从 .NET 框架远程处理迁移到 WCF 时通常发生极少数情况。 在这种情况下，必须使用 <xref:System.Runtime.Serialization.NetDataContractSerializer> 类而不是 <xref:System.Runtime.Serialization.DataContractSerializer> 类。  
   
  <xref:System.Runtime.Serialization.DataContractSerializer> 通常按对象树形式序列化对象图。 即，如果多次引用同一个对象，则会将该对象序列化多次。 例如，考虑一个 `PurchaseOrder` 实例，它有两个名为 `billTo` 和 `shipTo` 的 Address 类型的字段。 如果这两个字段设置为同一个 Address 实例，那么在序列化和反序列化后将有两个相同的 Address 实例。 这样做的原因是 XML 中没有用于表示对象图的标准且可互操作的方式（<xref:System.Xml.Serialization.XmlSerializer> 上可用的旧 SOAP 编码标准除外，如上一节中关于 `Style` 和 `Use` 的介绍中所述）。 按对象树形式序列化对象图具有某些缺点，例如：无法序列化含有循环引用的图。 有时，需要切换到真正的对象图序列化，即使它不是可互操作的。 这可以通过使用在将 <xref:System.Runtime.Serialization.DataContractSerializer> 参数设置为 `preserveObjectReferences` 的情况下构造的 `true` 来完成。  
   
  有时，内置序列化程序不足以满足方案的需要。 在大多数情况下，仍可使用用来派生 <xref:System.Runtime.Serialization.XmlObjectSerializer> 和 <xref:System.Runtime.Serialization.DataContractSerializer> 的 <xref:System.Runtime.Serialization.NetDataContractSerializer> 抽象类。  
   
- 前面的三种情况（.NET 类型保留、对象图保留和完全基于 `XmlObjectSerializer` 的自定义序列化）都需要插入一个自定义序列化程序。 为此，请执行以下步骤：  
+ 前面的三种情况（.NET 类型保留、对象图保留和完全基于 `XmlObjectSerializer` 的自定义序列化）都需要插入一个自定义序列化程序。 为此，请执行下列步骤：  
   
 1. 编写自己的派生自 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 的行为。  
   
@@ -572,7 +572,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
 3. 在打开服务主机或创建客户端通道之前，移除现有的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 行为并插入在前面的步骤中创建的自定义派生类。  
   
- 有关高级序列化概念的详细信息，请参阅[序列化和反序列](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)化。  
+ 有关高级序列化概念的详细信息，请参阅[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
 ## <a name="see-also"></a>另请参阅
 

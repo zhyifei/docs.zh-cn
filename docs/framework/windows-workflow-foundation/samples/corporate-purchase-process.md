@@ -2,25 +2,25 @@
 title: 企业采购过程
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 95fa421ed44cf2d930fb4b80979d1b8bd9fda5ed
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 93cfc3546fc312f046c4a5e1dd63dfb357f143c4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715214"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182872"
 ---
 # <a name="corporate-purchase-process"></a>企业采购过程
 此示例演示如何使用自动最佳建议书选择来创建基于购买过程的非常基本的征求建议书 (RFP)。 它将 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、<xref:System.Activities.Statements.ForEach%601> 和一个自定义活动组合在一起来创建一个表示该过程的工作流。
 
- 此示例包含一个 ASP.NET 客户端应用程序，该应用程序允许与其他参与者（与原始请求者或特定供应商）进行交互。
+ 此示例包含一个ASP.NET客户端应用程序，该应用程序允许作为不同的参与者（作为原始请求者或特定供应商）与流程进行交互。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-- Visual Studio 2012。
+- 视觉工作室 2012.
 
-- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。
+- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
-## <a name="demonstrates"></a>演示文本
+## <a name="demonstrates"></a>演示
 
 - 自定义活动。
 
@@ -36,25 +36,25 @@ ms.locfileid: "74715214"
 
 - 跟踪。
 
-- 在不同的客户端（ASP.NET Web 应用程序和 WinForms 应用程序）中承载 [!INCLUDE[wf1](../../../../includes/wf1-md.md)]。
+- 托管[!INCLUDE[wf1](../../../../includes/wf1-md.md)]在不同的客户端（ASP.NET Web 应用程序和 WinForms 应用程序）。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
->   
+>
+> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>流程说明  
- 此示例演示了如何实现 Windows Workflow Foundation （WF）程序，以便从供应商处为一般公司收集建议。  
+ 此示例显示 Windows 工作流基础 （WF） 计划的实现，以从一般公司的供应商那里收集建议。  
   
 1. 公司 X 的一名员工创建了一份征求建议书 (RFP)。  
   
     1. 该员工键入 RFP 标题和说明。  
   
-    2. 该员工选择要请求其提交建议书的供应商。  
+    2. 员工选择要邀请提交建议的供应商。  
   
 2. 该员工提交建议书。  
   
@@ -78,31 +78,31 @@ ms.locfileid: "74715214"
 ## <a name="projects-in-this-sample"></a>此示例中的项目  
  此示例包含以下项目。  
   
-|项目|描述|  
+|Project|说明|  
 |-------------|-----------------|  
-|表服务|过程中使用的实体对象（征求建议书、供应商和供应商建议书）。|  
+|通用|过程中使用的实体对象（征求建议书、供应商和供应商建议书）。|  
 |WfDefinition|客户端应用程序用来创建和使用购买过程工作流实例的过程（作为 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 程序）和主机 (`PurchaseProcessHost`) 的定义。|  
-|WebClient|ASP.NET 客户端应用程序，允许用户创建和参与购买过程的实例。 此应用程序使用自定义创建的主机与工作流引擎进行交互。|  
+|WebClient|允许用户创建和参与购买过程实例的ASP.NET客户端应用程序。 此应用程序使用自定义创建的主机与工作流引擎进行交互。|  
 |WinFormsClient|一个 Windows 窗体客户端应用程序，它允许用户创建和参与购买过程的实例。 此应用程序使用自定义创建的主机与工作流引擎进行交互。|  
   
 ### <a name="wfdefinition"></a>WfDefinition  
  下表包含对 WfDefinition 项目中最重要文件的说明。  
   
-|File|描述|  
+|文件|说明|  
 |----------|-----------------|  
 |IPurchaseProcessHost.cs|工作流主机的接口。|  
 |PurchaseProcessHost.cs|工作流主机的实现。 该主机提取工作流运行时的详细信息，并在所有客户端应用程序中用于加载和运行 `PurchaseProcess` 工作流实例并与其进行交互。|  
 |PurchaseProcessWorkflow.cs|一个包含购买过程工作流定义的活动（派生自 <xref:System.Activities.Activity>）。<br /><br /> 派生自 <xref:System.Activities.Activity> 的活动通过组合现有自定义活动和来自 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 活动库的活动来组合功能。 组合这些活动是创建自定义功能的最基本方法。|  
-|WaitForVendorProposal.cs|此自定义活动派生自 <xref:System.Activities.NativeActivity>，并将在提交建议书时创建一个稍后必须由供应商恢复的命名书签。<br /><br /> 从 <xref:System.Activities.NativeActivity> 派生的活动，与从 <xref:System.Activities.CodeActivity> 派生的活动一样，可通过重写 <xref:System.Activities.NativeActivity.Execute%2A> 来创建命令性功能，除此之外还可以通过传递给 <xref:System.Activities.ActivityContext> 方法的 `Execute` 访问工作流运行时的所有功能。 此上下文支持安排和取消子活动、设置非持久性区域（执行阻塞期间，运行时没有保存工作流的数据，如在原子事务内），以及 <xref:System.Activities.Bookmark> 对象（用于继续已暂停工作流的句柄）。|  
+|WaitForVendorProposal.cs|此自定义活动派生自 <xref:System.Activities.NativeActivity>，并将在提交建议书时创建一个稍后必须由供应商恢复的命名书签。<br /><br /> 从 <xref:System.Activities.NativeActivity> 派生的活动，与从 <xref:System.Activities.CodeActivity> 派生的活动一样，可通过重写 <xref:System.Activities.NativeActivity.Execute%2A> 来创建命令性功能，除此之外还可以通过传递给 <xref:System.Activities.ActivityContext> 方法的 `Execute` 访问工作流运行时的所有功能。 此上下文支持计划子活动并取消子活动、设置不持久化区域（运行时不保留工作流数据（如原子事务中）的执行块）和<xref:System.Activities.Bookmark>对象（用于恢复暂停的工作流的句柄）。|  
 |TrackingParticipant.cs|一个 <xref:System.Activities.Tracking.TrackingParticipant>，它接收所有跟踪事件并将这些事件保存到一个文本文件中。<br /><br /> 跟踪参与者将作为扩展添加到工作流实例中。|  
 |XmlWorkflowInstanceStore.cs|一个自定义 <xref:System.Runtime.DurableInstancing.InstanceStore>，它将工作流应用程序保存到 XML 文件中。|  
 |XmlPersistenceParticipant.cs|一个自定义 <xref:System.Activities.Persistence.PersistenceParticipant>，它将征求建议书实例保存到 XML 文件中。|  
 |AsyncResult.cs / CompletedAsyncResult.cs|用于在持久性组件中实现异步模式的帮助器类。|  
   
-### <a name="common"></a>表服务  
+### <a name="common"></a>通用  
  下表包含对 Common 项目中最重要的类的说明。  
   
-|类|描述|  
+|类|说明|  
 |-----------|-----------------|  
 |供应商|在征求建议书中提交建议书的供应商。|  
 |RequestForProposal|征求建议书 (RFP) 是一份邀请，旨在请求供应商提交有关特定商品或服务的建议书。|  
@@ -114,7 +114,7 @@ ms.locfileid: "74715214"
 ### <a name="web-client"></a>Web 客户端  
  下表包含对 Web Client 项目中最重要网页的说明。  
   
-|File|描述|  
+|文件|说明|  
 |-|-|  
 |CreateRfp.aspx|创建和提交新的征求建议书。|  
 |Default.aspx|显示所有活动的和已完成的征求建议书。|  
@@ -124,17 +124,17 @@ ms.locfileid: "74715214"
 ### <a name="winforms-client"></a>WinForms Client  
  下表包含对 Win Forms 项目中最重要的窗体的说明。  
   
-|窗体|描述|  
+|Form|说明|  
 |-|-|  
 |NewRfp|创建和提交新的征求建议书。|  
-|ShowProposals|显示所有活动的和已完成的征求建议书。 **注意：** 你可能需要单击 UI 中的 "**刷新**" 按钮，才能在创建或修改建议请求后查看该屏幕中的更改。|  
+|ShowProposals|显示所有活动的和已完成的征求建议书。 **注：** 创建或修改"建议请求"后，可能需要单击 UI 中的 **"刷新**"按钮以查看该屏幕中的更改。|  
 |SubmitProposal|从具体的征求建议书中获取来自供应商的建议。 此窗口仅由供应商使用。|  
 |ViewRfp|显示有关征求建议书的所有信息（收到的建议书、日期、值和其他信息）。 此窗口仅供征求建议书的创建者使用。|  
   
 ### <a name="persistence-files"></a>持久性文件  
  下表显示由永久性提供程序 (`XmlPersistenceProvider`) 生成的文件，这些文件位于当前系统的临时文件夹下的路径（使用 <xref:System.IO.Path.GetTempPath%2A>）中。 在当前执行路径中创建跟踪文件。  
   
-|“文件名”|描述|{2&gt;路径&lt;2}|  
+|文件名|说明|路径|  
 |-|-|-|  
 |rfps.xml|具有所有活动的和已完成的征求建议书的 XML 文件。|<xref:System.IO.Path.GetTempPath%2A>|  
 |[instanceid]|此文件包含有关工作流实例的所有信息。<br /><br /> 此文件由程式化的持久性实现生成（XmlPersistenceProvider 中的 PersistenceParticipant）。|<xref:System.IO.Path.GetTempPath%2A>|  
@@ -143,11 +143,11 @@ ms.locfileid: "74715214"
   
 #### <a name="to-use-this-sample"></a>使用此示例  
   
-1. 使用 Visual Studio 2010 打开 PurchaseProcess 解决方案文件。  
+1. 使用 Visual Studio 2010，打开采购流程.sln 解决方案文件。  
   
-2. 若要执行 Web 客户端项目，请打开**解决方案资源管理器**并右键单击 " **Web 客户端**" 项目。 选择 "**设置为启动项目**"。  
+2. 要执行 Web 客户端项目，请打开**解决方案资源管理器**并右键单击**Web 客户端**项目。 选择 **"设置为启动项目**"。  
   
-3. 若要执行 WinForms 客户端项目，请打开**解决方案资源管理器**并右键单击 " **WinForms" 客户端**项目。 选择 "**设置为启动项目**"。  
+3. 要执行 WinForms 客户端项目，请打开**解决方案资源管理器**并右键单击**WinForms 客户端**项目。 选择 **"设置为启动项目**"。  
   
 4. 要生成解决方案，按 Ctrl+Shift+B。  
   
@@ -155,20 +155,20 @@ ms.locfileid: "74715214"
   
 ### <a name="web-client-options"></a>Web Client 选项  
   
-- **创建新的 RFP**：创建新的提议请求（RFP）并启动购买过程工作流。  
+- **创建新的 RFP**：创建新的征求建议书 （RFP） 并启动采购流程工作流。  
   
-- **刷新**：刷新主窗口中活动的和已完成的 rfp 的列表。  
+- **刷新**：刷新主窗口中的活动和已完成 RFP 的列表。  
   
 - **视图**：显示现有 RFP 的内容。 供应商可提交其建议书（如果受到邀请或 RFP 尚未完成）。  
   
-- 查看为：用户可以通过在 "活动 Rfp" 网格中的 "**视图**" 中选择所需的参与者，使用不同的标识访问 RFP。  
+- 视图为：用户可以使用不同的标识访问 RFP，通过在活动 RFP 网格中选择视图中的所需参与者**作为**组合框。  
   
 ### <a name="winforms-client-options"></a>WinForms Client 选项  
   
-- **创建 RFP**：创建新的提议请求（RFP）并启动购买过程工作流。  
+- **创建 RFP**：创建新的征求建议书 （RFP） 并启动采购流程工作流。  
   
-- **刷新**：刷新主窗口中活动的和已完成的 rfp 的列表。  
+- **刷新**：刷新主窗口中的活动和已完成 RFP 的列表。  
   
-- **查看 rfp**：显示现有 RFP 的内容。 供应商可提交其建议书（如果受到邀请或 RFP 尚未完成）。  
+- **查看 RFP**：显示现有 RFP 的内容。 供应商可提交其建议书（如果受到邀请或 RFP 尚未完成）。  
   
-- **连接身份**：通过在活动的 rfp 网格的 "**视图为**" 组合框中选择所需的参与者，用户可以使用不同的标识访问 RFP。
+- **以**：允许用户使用不同的标识访问 RFP，通过在活动 RFP 网格中选择视图中的所需参与者**作为**组合框。

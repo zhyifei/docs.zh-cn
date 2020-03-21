@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: faf4ea9c52b91c3fc0f2f775e7bd5dfe039c53a8
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 05ecc467f75fbeda785b4bac1c3b8b1ceeb173b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738110"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174324"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>如何：使用采用参数的存储过程
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将输出参数映射到引用参数，并且对于值类型，它将参数声明为可以为 null。  
   
- 有关如何在返回行集的查询中使用输入参数的示例，请参阅[如何：返回行集](how-to-return-rowsets.md)。  
+ 有关如何在返回行集的查询中使用输入参数的示例，请参阅["如何：返回行集](how-to-return-rowsets.md)"。  
   
 ## <a name="example"></a>示例  
  下面的示例带有单个输入参数（客户 ID）并返回一个输出参数（该客户的总销售额）。  
   
 ```sql
-CREATE PROCEDURE [dbo].[CustOrderTotal]   
+CREATE PROCEDURE [dbo].[CustOrderTotal]
 @CustomerID nchar(5),  
 @TotalSales money OUTPUT  
 AS  
@@ -39,9 +39,9 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
  [!code-csharp[DLinqSprox#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#3)]
  [!code-vb[DLinqSprox#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#3)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [存储过程](stored-procedures.md)
 - [下载示例数据库](downloading-sample-databases.md)
-- [可以为 null 的C#值类型（）](../../../../../csharp/language-reference/builtin-types/nullable-value-types.md)
+- [空值类型 （C#）](../../../../../csharp/language-reference/builtin-types/nullable-value-types.md)
 - [可以为 Null 的值类型 (Visual Basic)](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

@@ -8,49 +8,49 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: ca0a9a4b37f28eb03f58de4fd9b120cb7e654e0c
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: fe6de09213c6f980e8eb205a318aae50033b2a84
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088644"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155227"
 ---
-# <a name="cryptographysettings-element"></a>\<G s > 元素
+# <a name="cryptographysettings-element"></a>\<密码设置>元素
 包含加密设置。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<g s >**
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<姆斯科利布>**](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<密码设置>**
 
 ## <a name="syntax"></a>语法  
   
 ```xml  
-      <cryptographySettings>   
+      <cryptographySettings>
 </cryptographySettings>  
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>属性  
  无。  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
-|[\<cryptoNameMapping >](cryptonamemapping-element.md)|包含类到友好名称的映射。|  
-|[\<oidMap >](oidmap-element.md)|包含与类的 ASN 对象标识符（OID）映射。|  
+|[\<加密名称映射>](cryptonamemapping-element.md)|包含类到友好名称的映射。|  
+|[\<oidMap>](oidmap-element.md)|包含 ASN.1 对象标识符 （OID） 映射到类。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`mscorlib`|包含 `cryptographySettings` 元素。|  
+|`mscorlib`|包含元素`cryptographySettings`。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<g s >** 元素包含加密名称映射和 OID 映射。 此示例将配置运行时，以便 <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> 返回 `MyHashClass` 对象，`MyCryptoClass` 类映射到对象标识符1.3.36.2.1。  
+ 下面的示例演示如何使用**\<加密设置>** 元素来包含加密名称映射和 OID 映射。 此示例配置运行时，<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>以便返回`MyHashClass`对象，`MyCryptoClass`并且类映射到对象标识符 1.3.36.2.1。  
   
 ```xml  
 <configuration>  
@@ -76,8 +76,8 @@ ms.locfileid: "74088644"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [配置文件架构](../index.md)
-- [加密设置架构](index.md)
+- [密码设置架构](index.md)
 - [加密服务](../../../../standard/security/cryptographic-services.md)

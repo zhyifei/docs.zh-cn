@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: c2b6be79855955887988378b9fcffe1891520d68
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 6fc54bb9e38768e390201ea77243d3df4cd67f10
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980257"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151736"
 ---
 # <a name="code-access-security-and-adonet"></a>代码访问安全性和 ADO.NET
 .NET Framework 提供基于角色的安全性和代码访问安全性 (CAS)，这两种安全性都可以通过公共语言运行库 (CLR) 提供的公共基础结构实现。 对于非托管代码，大多数应用程序都可以使用用户或主体权限执行。 因此，当拥有提升权限的用户运行恶意软件或包含错误的软件时，计算机系统可能会受到损坏并危及私有数据。  
@@ -23,7 +23,7 @@ ms.locfileid: "76980257"
  CLR 仅允许代码执行代码具有执行权限的那些操作。 代码可以请求权限，而这些请求需要基于管理员设置的安全策略。  
   
 > [!NOTE]
-> 在 CLR 中指定的代码不能为自身授予权限。 例如，代码可以请求并获得比安全策略允许的权限少的权限，但决不会获得比安全策略允许的权限多的权限。 在授予权限时，应该从无权限开始，然后为要执行的特定任务添加最少的权限。 一开始就使用所有权限，然后拒绝各个权限会导致应用程序不安全，应用程序可能会授予不必要的权限，从而使应用程序无意中包含安全漏洞。 有关详细信息，请参阅[配置安全策略](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100))和[安全策略管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))。  
+> 在 CLR 中指定的代码不能为自身授予权限。 例如，代码可以请求并获得比安全策略允许的权限少的权限，但决不会获得比安全策略允许的权限多的权限。 在授予权限时，应该从无权限开始，然后为要执行的特定任务添加最少的权限。 一开始就使用所有权限，然后拒绝各个权限会导致应用程序不安全，应用程序可能会授予不必要的权限，从而使应用程序无意中包含安全漏洞。 有关详细信息，请参阅[配置安全策略](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100))[和安全策略管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))。  
   
  代码访问权限有三种类型：  
   
@@ -50,7 +50,7 @@ ms.locfileid: "76980257"
  根据要生成的应用程序类型，还应考虑在数据库中实现基于角色的权限。 有关 SQL Server 中基于角色的安全性的详细信息，请参阅[SQL Server 安全性](./sql/sql-server-security.md)。  
   
 ## <a name="assemblies"></a>程序集  
- 程序集构成 .NET Framework 应用程序部署、版本控制、重复使用、激活范围和安全权限的基本单元。 程序集提供类型和资源的集合，二者结合在一起构成功能的逻辑单元。 对于 CLR，类型不存在于程序集的上下文之外。 有关创建和部署程序集的详细信息，请参阅[用程序集编程](../../../standard/assembly/program.md)。  
+ 程序集构成 .NET Framework 应用程序部署、版本控制、重复使用、激活范围和安全权限的基本单元。 程序集提供类型和资源的集合，二者结合在一起构成功能的逻辑单元。 对于 CLR，类型不存在于程序集的上下文之外。 有关创建和部署程序集的详细信息，请参阅[使用程序集进行编程](../../../standard/assembly/program.md)。  
   
 ### <a name="strong-naming-assemblies"></a>强命名程序集  
  强名称（或数字签名）由程序集的标识组成，该标识包括程序集的简单文本名称、版本号和区域性信息（如果提供）、公钥和数字签名。 数字签名使用相应私钥从程序集文件生成。 程序集文件包含程序集清单，该清单包含组成程序集的所有文件的名称和哈希。  
@@ -67,34 +67,34 @@ ms.locfileid: "76980257"
   
  下表列出了可用的 <xref:System.Data.SqlClient.SqlClientPermissionAttribute> 属性及其说明：  
   
-|权限属性|描述|  
+|权限属性|说明|  
 |-----------------------------------|-----------------|  
 |`Action`|获取或设置安全性操作。 从 <xref:System.Security.Permissions.SecurityAttribute> 继承。|  
 |`AllowBlankPassword`|启用或禁用连接字符串中空白密码。 有效值为 `true`（启用空白密码的使用）和 `false`（禁用空白密码的使用）。 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
-|`ConnectionString`|标识允许的连接字符串。 可标识多个连接字符串。 **注意：** 不要在连接字符串中包括用户 ID 或密码。 此版本中，不能使用 .NET Framework 配置工具更改连接字符串限制。 <br /><br /> 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
-|`KeyRestrictions`|标识允许或不允许的连接字符串参数。 在窗体中标识的连接字符串参数 *\<参数名称>=* 。 可指定多个参数，并用分号 (;) 进行分隔。 **注意：** 如果未指定 `KeyRestrictions`，但 `KeyRestrictionBehavior` 属性设置为 `AllowOnly` 或 `PreventUsage`，则不允许其他连接字符串参数。 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
-|`KeyRestrictionBehavior`|将连接字符串参数标识为唯一允许的附加参数 (`AllowOnly`)，或标识不允许的附加参数 (`PreventUsage`)。 默认为 `AllowOnly`。 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
+|`ConnectionString`|标识允许的连接字符串。 可标识多个连接字符串。 **注：** 请勿在连接字符串中包含用户 ID 或密码。 此版本中，不能使用 .NET Framework 配置工具更改连接字符串限制。 <br /><br /> 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
+|`KeyRestrictions`|标识允许或不允许的连接字符串参数。 连接字符串参数在窗体*\<参数名称>#* 中标识。 可指定多个参数，并用分号 (;) 进行分隔。 **注：** 如果不指定`KeyRestrictions`，但将 属性设置为`KeyRestrictionBehavior``AllowOnly`或`PreventUsage`，则不允许其他连接字符串参数。 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
+|`KeyRestrictionBehavior`|将连接字符串参数标识为唯一允许的附加参数 (`AllowOnly`)，或标识不允许的附加参数 (`PreventUsage`)。 `AllowOnly` 为默认值。 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
 |`TypeID`|在派生类中实现此属性时获取唯一标识符。 从 <xref:System.Attribute> 继承。|  
 |`Unrestricted`|表明是否声明对该资源的无限制权限。 从 <xref:System.Security.Permissions.SecurityAttribute> 继承。|  
   
 #### <a name="connectionstring-syntax"></a>ConnectionString 语法  
- 下面的示例演示如何使用配置文件的 `connectionStrings` 元素仅允许使用特定的连接字符串。 有关从配置文件中存储和检索连接字符串的详细信息，请参阅[连接字符串](connection-strings.md)。  
+ 下面的示例演示如何使用配置文件的 `connectionStrings` 元素仅允许使用特定的连接字符串。 有关从配置文件存储和检索连接字符串的详细信息，请参阅[连接字符串](connection-strings.md)。  
   
 ```xml  
 <connectionStrings>  
-  <add name="DatabaseConnection"   
-    connectionString="Data Source=(local);Initial   
+  <add name="DatabaseConnection"
+    connectionString="Data Source=(local);Initial
     Catalog=Northwind;Integrated Security=true;" />  
 </connectionStrings>  
 ```  
   
 #### <a name="keyrestrictions-syntax"></a>KeyRestrictions 语法  
- 下面的示例启用相同的连接字符串，允许使用 `Encrypt` 和 `Packet Size` 连接字符串选项，但限制使用任何其他连接字符串选项。  
+ 下面的示例启用相同的连接字符串，启用`Encrypt`和`Packet Size`连接字符串选项，但限制使用任何其他连接字符串选项。  
   
 ```xml  
 <connectionStrings>  
-  <add name="DatabaseConnection"   
-    connectionString="Data Source=(local);Initial   
+  <add name="DatabaseConnection"
+    connectionString="Data Source=(local);Initial
     Catalog=Northwind;Integrated Security=true;"  
     KeyRestrictions="Encrypt=;Packet Size=;"  
     KeyRestrictionBehavior="AllowOnly" />  
@@ -106,8 +106,8 @@ ms.locfileid: "76980257"
   
 ```xml  
 <connectionStrings>  
-  <add name="DatabaseConnection"   
-    connectionString="Data Source=(local);Initial   
+  <add name="DatabaseConnection"
+    connectionString="Data Source=(local);Initial
     Catalog=Northwind;Integrated Security=true;"  
     KeyRestrictions="User Id=;Password=;Persist Security Info=;"  
     KeyRestrictionBehavior="PreventUsage" />  
@@ -119,24 +119,24 @@ ms.locfileid: "76980257"
   
 ```xml  
 <connectionStrings>  
-  <add name="DatabaseConnection"   
-    connectionString="Data Source=(local);Initial   
+  <add name="DatabaseConnection"
+    connectionString="Data Source=(local);Initial
     Catalog=Northwind;Integrated Security=true;"  
     KeyRestrictions="Initial Catalog;Connection Timeout=;  
-       Encrypt=;Packet Size=;"   
+       Encrypt=;Packet Size=;"
     KeyRestrictionBehavior="AllowOnly" />  
   
-  <add name="DatabaseConnection2"   
-    connectionString="Data Source=SqlServer2;Initial   
+  <add name="DatabaseConnection2"
+    connectionString="Data Source=SqlServer2;Initial
     Catalog=Northwind2;Integrated Security=true;"  
     KeyRestrictions="Initial Catalog;Connection Timeout=;  
-       Encrypt=;Packet Size=;"   
+       Encrypt=;Packet Size=;"
     KeyRestrictionBehavior="AllowOnly" />  
 </connectionStrings>  
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>启用具有自定义权限集的部分信任  
- 要对特定区域启用 <xref:System.Data.SqlClient> 权限，系统管理员必须创建自定义的权限集，并将其设置为特定区域的权限集。 不能修改默认权限集（如 `LocalIntranet`）。 例如，若要包含具有 <xref:System.Security.Policy.Zone> `LocalIntranet`的代码的 <xref:System.Data.SqlClient> 权限，系统管理员可以为 `LocalIntranet`复制权限集，将其重命名为 "CustomLocalIntranet"，添加 <xref:System.Data.SqlClient> 权限，使用 Caspol.exe 导入 CustomLocalIntranet 权限集[（代码访问安全策略工具）](../../tools/caspol-exe-code-access-security-policy-tool.md)，并将 `LocalIntranet_Zone` 的权限集设置为 CustomLocalIntranet。  
+ 要对特定区域启用 <xref:System.Data.SqlClient> 权限，系统管理员必须创建自定义的权限集，并将其设置为特定区域的权限集。 不能修改默认权限集（如 `LocalIntranet`）。 例如，<xref:System.Data.SqlClient>要包含 具有<xref:System.Security.Policy.Zone>`LocalIntranet`的代码的权限，系统管理员可以将 权限集`LocalIntranet`重新命名为"自定义本地内联网"，添加<xref:System.Data.SqlClient>权限，使用[Caspol.exe（代码访问安全策略工具）](../../tools/caspol-exe-code-access-security-policy-tool.md)导入自定义本地内联网权限集，并将 的权限`LocalIntranet_Zone`集设置为自定义本地内联网。  
   
 ### <a name="sample-permission-set"></a>示例权限集  
  下面是在部分受信任方案中，SQL Server .NET Framework 数据提供程序的示例权限集。 有关创建自定义权限集的信息，请参阅[使用 Caspol.exe 配置权限集](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100))。  
@@ -153,14 +153,14 @@ version="1"
 AllowBlankPassword="False">  
 <add ConnectionString="Data Source=(local);Integrated Security=true;"  
  KeyRestrictions="Initial Catalog=;Connection Timeout=;  
-   Encrypt=;Packet Size=;"   
+   Encrypt=;Packet Size=;"
  KeyRestrictionBehavior="AllowOnly" />  
  </IPermission>  
 </PermissionSet>  
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>使用安全权限验证 ADO.NET 代码访问  
- 对于部分信任方案，可以通过指定 <xref:System.Data.SqlClient.SqlClientPermissionAttribute> 来要求代码中的特定方法具有 CAS 特权。 如果当前受限制的安全策略不允许该权限，在运行代码之前将引发异常。 有关安全策略的详细信息，请参阅[安全策略管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))和[安全策略最佳实践](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))。  
+ 对于部分信任方案，可以通过指定 <xref:System.Data.SqlClient.SqlClientPermissionAttribute> 来要求代码中的特定方法具有 CAS 特权。 如果当前受限制的安全策略不允许该权限，在运行代码之前将引发异常。 有关安全策略的详细信息，请参阅[安全策略管理和](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))[安全策略最佳实践](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))。  
   
 ### <a name="example"></a>示例  
  以下示例演示如何编写要求特定连接字符串的代码。 该示例模拟拒绝为 <xref:System.Data.SqlClient> 授予无限制权限的过程，系统管理员在实际工作中将会使用 CAS 策略实现该过程。  
@@ -177,7 +177,7 @@ AllowBlankPassword="False">
   
 ```output  
 Failed, as expected: <IPermission class="System.Data.SqlClient.  
-SqlClientPermission, System.Data, Version=2.0.0.0,   
+SqlClientPermission, System.Data, Version=2.0.0.0,
   Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1"  
   AllowBlankPassword="False">  
 <add ConnectionString="Data Source=(local);Initial Catalog=  
@@ -192,11 +192,11 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>与非托管代码的互操作性  
  在 CLR 外部运行的代码称为非托管代码。 因此，安全机制（如 CAS）不能应用于非托管代码。 COM 组件、ActiveX 接口和 Windows API 函数都是非托管代码的示例。 在执行非托管代码时应考虑特殊安全注意事项，以便不会危害应用程序的整体安全性。 有关详细信息，请参阅[与非托管代码交互操作](../../interop/index.md)。  
   
- .NET Framework 可以通过 COM 互操作提供访问，因此还支持与现有 COM 组件的向后兼容。 通过使用 COM 互操作工具导入相关的 COM 类型，可以将 COM 组件合并到 .NET Framework 应用程序中。 一旦导入后，就可以使用 COM 类型了。 通过将程序集元数据导出到类型库并将托管组件注册为 COM 组件，COM 互操作还可以使 COM 客户端访问托管代码。 有关详细信息，请参阅[高级 COM 互操作性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))。  
+ .NET Framework 可以通过 COM 互操作提供访问，因此还支持与现有 COM 组件的向后兼容。 通过使用 COM 互操作工具导入相关的 COM 类型，可以将 COM 组件合并到 .NET Framework 应用程序中。 一旦导入后，就可以使用 COM 类型了。 通过将程序集元数据导出到类型库并将托管组件注册为 COM 组件，COM 互操作还可以使 COM 客户端访问托管代码。 有关详细信息，请参阅高级[COM 互操作性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))。  
   
 ## <a name="see-also"></a>另请参阅
 
 - [保证 ADO.NET 应用程序的安全](securing-ado-net-applications.md)
-- [本机代码和 .NET Framework 代码中的安全性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
+- [本机代码和 .NET Framework 代码的安全性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [基于角色的安全性](../../../standard/security/role-based-security.md)
 - [ADO.NET 概述](ado-net-overview.md)

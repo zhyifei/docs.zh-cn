@@ -8,30 +8,30 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: 4e2159cda5f35b5795804dede09ec17d07d71b23
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d1d805f7154c18dba2dcd4eb7228cc200d8da811
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699736"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155176"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>用于加密设置的 \<mscorlib > 元素
-包含[\<g s > 元素](cryptographysettings-element.md)。  
+# <a name="mscorlib-element-for-cryptography-settings"></a>\<用于加密设置的 mscorlib>元素
+包含[\<加密设置>元素](cryptographysettings-element.md)。  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp; **\<mscorlib >**  
+[**\<配置>**](../configuration-element.md)  
+&nbsp;&nbsp;**\<姆斯科利布>**  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-      <mscorlib>   
+      <mscorlib>
 </mscorlib>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性和元素  
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>属性  
  无。  
   
 ### <a name="child-elements"></a>子元素  
@@ -47,7 +47,7 @@ ms.locfileid: "71699736"
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<mscorlib >** 元素来引用加密类并配置运行时。 然后，你可以将字符串 "RSA" 传递到 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 方法，并使用 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 方法返回 `MyCryptoRSAClass` 对象。  
+ 下面的示例演示如何使用**\<mscorlib>** 元素来引用加密类并配置运行时。 然后，可以将字符串"RSA"传递给 方法，<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>并使用 方法<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>返回对象`MyCryptoRSAClass`。  
   
 ```xml  
 <configuration>  
@@ -73,6 +73,6 @@ ms.locfileid: "71699736"
 - <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
 - <xref:System.Security.Cryptography>
 - [配置文件架构](../index.md)
-- [加密设置架构](index.md)
+- [密码设置架构](index.md)
 - [加密服务](../../../../standard/security/cryptographic-services.md)
 - [配置加密类](../../configure-cryptography-classes.md)

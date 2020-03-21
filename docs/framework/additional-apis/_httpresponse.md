@@ -1,5 +1,5 @@
 ---
-title: HttpWebRequest 字段 _HttpResponse
+title: httpWeb请求._HttpResponse字段
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
-ms.openlocfilehash: 236298921ecd286ddba4e74dbce1b63e96055412
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 0c5bfc56299aa06dd59c2598588044e81a69933a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215097"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156241"
 ---
-# <a name="httpwebrequest_httpresponse-field"></a>HttpWebRequest.\_Httpresponse.cache 字段
+# <a name="httpwebrequest_httpresponse-field"></a>HttpWeb请求。\_Http 响应字段
 
-`HttpWebRequest._HttpResponse` 是包含 HTTP 请求中的 HTTP 响应详细信息的 <xref:System.Net.HttpWebResponse>。 在收到 HTTP 响应之前，可以 `null`。
+`HttpWebRequest._HttpResponse`是<xref:System.Net.HttpWebResponse>包含 HTTP 请求的 HTTP 响应详细信息。 它可以直到`null`收到 HTTP 响应。
 
 ## <a name="syntax"></a>语法
   
@@ -28,14 +28,14 @@ internal HttpWebResponse _HttpResponse
 ```
 
 > [!WARNING]
-> `HttpWebRequest._HttpResponse` 字段是内部的，不应在代码中直接使用。
-> 
-> 在任何情况下，Microsoft 不支持在生产应用程序中使用此字段。
+> 该`HttpWebRequest._HttpResponse`字段是内部字段，不应直接用于代码。
+>
+> 在任何情况下，Microsoft 都不支持在生产应用程序中使用此字段。
 
 ## <a name="requirements"></a>要求
 
-**命名空间：** <xref:System.Net>
+**命名空间：**<xref:System.Net>
 
-**程序集：** 系统（在 System.web 中）
+**装配：** 系统（系统中）
 
-**.NET Framework 版本：** 自2.0 起可用。
+**.NET 框架版本：** 自 2.0 起可用。
