@@ -2,75 +2,75 @@
 title: WAS 激活体系结构
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 01c30db1182ece6dd968b69cc4efcaa2d9fabd79
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 67ddcd97ac75ddeb0765c38bb9ce7b5e8f039272
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737513"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184244"
 ---
-# <a name="was-activation-architecture"></a><span data-ttu-id="26613-102">WAS 激活体系结构</span><span class="sxs-lookup"><span data-stu-id="26613-102">WAS Activation Architecture</span></span>
-<span data-ttu-id="26613-103">本主题详细列举和讨论了 Windows 进程激活服务（也称为 WAS）的组件。</span><span class="sxs-lookup"><span data-stu-id="26613-103">This topic itemizes and discusses the components of the Windows Process Activation Service (also known as WAS).</span></span>  
+# <a name="was-activation-architecture"></a><span data-ttu-id="f1a85-102">WAS 激活体系结构</span><span class="sxs-lookup"><span data-stu-id="f1a85-102">WAS Activation Architecture</span></span>
+<span data-ttu-id="f1a85-103">本主题详细列举和讨论了 Windows 进程激活服务（也称为 WAS）的组件。</span><span class="sxs-lookup"><span data-stu-id="f1a85-103">This topic itemizes and discusses the components of the Windows Process Activation Service (also known as WAS).</span></span>  
   
-## <a name="activation-components"></a><span data-ttu-id="26613-104">激活组件</span><span class="sxs-lookup"><span data-stu-id="26613-104">Activation Components</span></span>  
- <span data-ttu-id="26613-105">WAS 由几个体系结构组件组成：</span><span class="sxs-lookup"><span data-stu-id="26613-105">WAS consists of several architectural components:</span></span>  
+## <a name="activation-components"></a><span data-ttu-id="f1a85-104">激活组件</span><span class="sxs-lookup"><span data-stu-id="f1a85-104">Activation Components</span></span>  
+ <span data-ttu-id="f1a85-105">WAS 由几个体系结构组件组成：</span><span class="sxs-lookup"><span data-stu-id="f1a85-105">WAS consists of several architectural components:</span></span>  
   
-- <span data-ttu-id="26613-106">侦听器适配器。</span><span class="sxs-lookup"><span data-stu-id="26613-106">Listener adapters.</span></span> <span data-ttu-id="26613-107">通过特定的网络协议接收消息并与 WAS 进行通信以将传入消息路由到正确的辅助进程中的 Windows 服务。</span><span class="sxs-lookup"><span data-stu-id="26613-107">Windows services that receive messages on specific network protocols and communicate with WAS to route incoming messages to the correct worker process.</span></span>  
+- <span data-ttu-id="f1a85-106">侦听器适配器。</span><span class="sxs-lookup"><span data-stu-id="f1a85-106">Listener adapters.</span></span> <span data-ttu-id="f1a85-107">通过特定的网络协议接收消息并与 WAS 进行通信以将传入消息路由到正确的辅助进程中的 Windows 服务。</span><span class="sxs-lookup"><span data-stu-id="f1a85-107">Windows services that receive messages on specific network protocols and communicate with WAS to route incoming messages to the correct worker process.</span></span>  
   
-- <span data-ttu-id="26613-108">WAS。</span><span class="sxs-lookup"><span data-stu-id="26613-108">WAS.</span></span> <span data-ttu-id="26613-109">管理工作进程的创建和生存期的 Windows 服务。</span><span class="sxs-lookup"><span data-stu-id="26613-109">The Windows service that manages the creation and lifetime of worker processes.</span></span>  
+- <span data-ttu-id="f1a85-108">WAS。</span><span class="sxs-lookup"><span data-stu-id="f1a85-108">WAS.</span></span> <span data-ttu-id="f1a85-109">管理工作进程的创建和生存期的 Windows 服务。</span><span class="sxs-lookup"><span data-stu-id="f1a85-109">The Windows service that manages the creation and lifetime of worker processes.</span></span>  
   
-- <span data-ttu-id="26613-110">一般辅助进程可执行程序 (w3wp.exe)。</span><span class="sxs-lookup"><span data-stu-id="26613-110">The generic worker process executable (w3wp.exe).</span></span>  
+- <span data-ttu-id="f1a85-110">一般辅助进程可执行程序 (w3wp.exe)。</span><span class="sxs-lookup"><span data-stu-id="f1a85-110">The generic worker process executable (w3wp.exe).</span></span>  
   
-- <span data-ttu-id="26613-111">应用程序管理器。</span><span class="sxs-lookup"><span data-stu-id="26613-111">Application manager.</span></span> <span data-ttu-id="26613-112">管理在辅助进程中承载应用程序的应用程序域的创建和生存期。</span><span class="sxs-lookup"><span data-stu-id="26613-112">Manages the creation and lifetime of application domains that host applications within the worker process.</span></span>  
+- <span data-ttu-id="f1a85-111">应用程序管理器。</span><span class="sxs-lookup"><span data-stu-id="f1a85-111">Application manager.</span></span> <span data-ttu-id="f1a85-112">管理在辅助进程中承载应用程序的应用程序域的创建和生存期。</span><span class="sxs-lookup"><span data-stu-id="f1a85-112">Manages the creation and lifetime of application domains that host applications within the worker process.</span></span>  
   
-- <span data-ttu-id="26613-113">协议处理程序。</span><span class="sxs-lookup"><span data-stu-id="26613-113">Protocol handlers.</span></span> <span data-ttu-id="26613-114">在辅助进程中运行并管理辅助进程与各个侦听器适配器之间的通信的协议特定的组件。</span><span class="sxs-lookup"><span data-stu-id="26613-114">Protocol-specific components that run in the worker process and manage communication between the worker process and the individual listener adapters.</span></span> <span data-ttu-id="26613-115">存在两种类型的协议处理程序：进程协议处理程序和 AppDomain 协议处理程序。</span><span class="sxs-lookup"><span data-stu-id="26613-115">Two types of protocol handlers exist: process protocol handlers and AppDomain protocol handlers.</span></span>  
+- <span data-ttu-id="f1a85-113">协议处理程序。</span><span class="sxs-lookup"><span data-stu-id="f1a85-113">Protocol handlers.</span></span> <span data-ttu-id="f1a85-114">在辅助进程中运行并管理辅助进程与各个侦听器适配器之间的通信的协议特定的组件。</span><span class="sxs-lookup"><span data-stu-id="f1a85-114">Protocol-specific components that run in the worker process and manage communication between the worker process and the individual listener adapters.</span></span> <span data-ttu-id="f1a85-115">存在两种类型的协议处理程序：进程协议处理程序和 AppDomain 协议处理程序。</span><span class="sxs-lookup"><span data-stu-id="f1a85-115">Two types of protocol handlers exist: process protocol handlers and AppDomain protocol handlers.</span></span>  
   
- <span data-ttu-id="26613-116">当 WAS 激活辅助进程实例时，会将所需的进程协议处理程序加载到辅助进程中，并使用应用程序管理器来创建一个应用程序域以承载应用程序。</span><span class="sxs-lookup"><span data-stu-id="26613-116">When WAS activates a worker process instance, it loads the process protocol handlers required into the worker process and uses the application manager to create an application domain to host the application.</span></span> <span data-ttu-id="26613-117">应用程序域将加载应用程序的代码以及应用程序使用的网络协议所要求的 AppDomain 协议处理程序。</span><span class="sxs-lookup"><span data-stu-id="26613-117">The application domain loads the application’s code as well as the AppDomain protocol handlers that the network protocols used by the application require.</span></span>  
+ <span data-ttu-id="f1a85-116">当 WAS 激活辅助进程实例时，会将所需的进程协议处理程序加载到辅助进程中，并使用应用程序管理器来创建一个应用程序域以承载应用程序。</span><span class="sxs-lookup"><span data-stu-id="f1a85-116">When WAS activates a worker process instance, it loads the process protocol handlers required into the worker process and uses the application manager to create an application domain to host the application.</span></span> <span data-ttu-id="f1a85-117">应用程序域将加载应用程序的代码以及应用程序使用的网络协议所要求的 AppDomain 协议处理程序。</span><span class="sxs-lookup"><span data-stu-id="f1a85-117">The application domain loads the application’s code as well as the AppDomain protocol handlers that the network protocols used by the application require.</span></span>  
   
  ![显示 WAS 体系结构的屏幕截图。](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
-### <a name="listener-adapters"></a><span data-ttu-id="26613-119">侦听器适配器</span><span class="sxs-lookup"><span data-stu-id="26613-119">Listener Adapters</span></span>  
- <span data-ttu-id="26613-120">侦听器适配器是一些单独的 Windows 服务，这些服务可以实现用于通过其侦听的网络协议接收消息的网络通信逻辑。</span><span class="sxs-lookup"><span data-stu-id="26613-120">Listener adapters are individual Windows services that implement the network communication logic used to receive messages using the network protocol on which they listen.</span></span> <span data-ttu-id="26613-121">下表列出了用于 Windows Communication Foundation （WCF）协议的侦听器适配器。</span><span class="sxs-lookup"><span data-stu-id="26613-121">The following table lists the listener adapters for Windows Communication Foundation (WCF) protocols.</span></span>  
+### <a name="listener-adapters"></a><span data-ttu-id="f1a85-119">侦听器适配器</span><span class="sxs-lookup"><span data-stu-id="f1a85-119">Listener Adapters</span></span>  
+ <span data-ttu-id="f1a85-120">侦听器适配器是一些单独的 Windows 服务，这些服务可以实现用于通过其侦听的网络协议接收消息的网络通信逻辑。</span><span class="sxs-lookup"><span data-stu-id="f1a85-120">Listener adapters are individual Windows services that implement the network communication logic used to receive messages using the network protocol on which they listen.</span></span> <span data-ttu-id="f1a85-121">下表列出了 Windows 通信基础 （WCF） 协议的侦听器适配器。</span><span class="sxs-lookup"><span data-stu-id="f1a85-121">The following table lists the listener adapters for Windows Communication Foundation (WCF) protocols.</span></span>  
   
-|<span data-ttu-id="26613-122">侦听器适配器服务名称</span><span class="sxs-lookup"><span data-stu-id="26613-122">Listener adapter service name</span></span>|<span data-ttu-id="26613-123">协议</span><span class="sxs-lookup"><span data-stu-id="26613-123">Protocol</span></span>|<span data-ttu-id="26613-124">注意</span><span class="sxs-lookup"><span data-stu-id="26613-124">Notes</span></span>|  
+|<span data-ttu-id="f1a85-122">侦听器适配器服务名称</span><span class="sxs-lookup"><span data-stu-id="f1a85-122">Listener adapter service name</span></span>|<span data-ttu-id="f1a85-123">协议</span><span class="sxs-lookup"><span data-stu-id="f1a85-123">Protocol</span></span>|<span data-ttu-id="f1a85-124">说明</span><span class="sxs-lookup"><span data-stu-id="f1a85-124">Notes</span></span>|  
 |-----------------------------------|--------------|-----------|  
-|<span data-ttu-id="26613-125">W3SVC</span><span class="sxs-lookup"><span data-stu-id="26613-125">W3SVC</span></span>|<span data-ttu-id="26613-126">http</span><span class="sxs-lookup"><span data-stu-id="26613-126">http</span></span>|<span data-ttu-id="26613-127">提供 IIS 7.0 和 WCF HTTP 激活的通用组件。</span><span class="sxs-lookup"><span data-stu-id="26613-127">Common component that provides HTTP activation for both IIS 7.0 and WCF.</span></span>|  
-|<span data-ttu-id="26613-128">NetTcpActivator</span><span class="sxs-lookup"><span data-stu-id="26613-128">NetTcpActivator</span></span>|<span data-ttu-id="26613-129">net.tcp</span><span class="sxs-lookup"><span data-stu-id="26613-129">net.tcp</span></span>|<span data-ttu-id="26613-130">取决于 NetTcpPortSharing 服务。</span><span class="sxs-lookup"><span data-stu-id="26613-130">Depends on the NetTcpPortSharing service.</span></span>|  
-|<span data-ttu-id="26613-131">NetPipeActivator</span><span class="sxs-lookup"><span data-stu-id="26613-131">NetPipeActivator</span></span>|<span data-ttu-id="26613-132">net.pipe</span><span class="sxs-lookup"><span data-stu-id="26613-132">net.pipe</span></span>||  
-|<span data-ttu-id="26613-133">NetMsmqActivator</span><span class="sxs-lookup"><span data-stu-id="26613-133">NetMsmqActivator</span></span>|<span data-ttu-id="26613-134">net.msmq</span><span class="sxs-lookup"><span data-stu-id="26613-134">net.msmq</span></span>|<span data-ttu-id="26613-135">用于基于 WCF 的消息队列应用程序。</span><span class="sxs-lookup"><span data-stu-id="26613-135">For use with WCF-based Message Queuing applications.</span></span>|  
-|<span data-ttu-id="26613-136">NetMsmqActivator</span><span class="sxs-lookup"><span data-stu-id="26613-136">NetMsmqActivator</span></span>|<span data-ttu-id="26613-137">msmq.formatname</span><span class="sxs-lookup"><span data-stu-id="26613-137">msmq.formatname</span></span>|<span data-ttu-id="26613-138">提供与现有消息队列应用程序的向后兼容性。</span><span class="sxs-lookup"><span data-stu-id="26613-138">Provides backwards compatibility with existing Message Queuing applications.</span></span>|  
+|<span data-ttu-id="f1a85-125">W3SVC</span><span class="sxs-lookup"><span data-stu-id="f1a85-125">W3SVC</span></span>|<span data-ttu-id="f1a85-126">http</span><span class="sxs-lookup"><span data-stu-id="f1a85-126">http</span></span>|<span data-ttu-id="f1a85-127">为 IIS 7.0 和 WCF 提供 HTTP 激活的通用组件。</span><span class="sxs-lookup"><span data-stu-id="f1a85-127">Common component that provides HTTP activation for both IIS 7.0 and WCF.</span></span>|  
+|<span data-ttu-id="f1a85-128">NetTcpActivator</span><span class="sxs-lookup"><span data-stu-id="f1a85-128">NetTcpActivator</span></span>|<span data-ttu-id="f1a85-129">net.tcp</span><span class="sxs-lookup"><span data-stu-id="f1a85-129">net.tcp</span></span>|<span data-ttu-id="f1a85-130">取决于 NetTcpPortSharing 服务。</span><span class="sxs-lookup"><span data-stu-id="f1a85-130">Depends on the NetTcpPortSharing service.</span></span>|  
+|<span data-ttu-id="f1a85-131">NetPipeActivator</span><span class="sxs-lookup"><span data-stu-id="f1a85-131">NetPipeActivator</span></span>|<span data-ttu-id="f1a85-132">net.pipe</span><span class="sxs-lookup"><span data-stu-id="f1a85-132">net.pipe</span></span>||  
+|<span data-ttu-id="f1a85-133">NetMsmqActivator</span><span class="sxs-lookup"><span data-stu-id="f1a85-133">NetMsmqActivator</span></span>|<span data-ttu-id="f1a85-134">net.msmq</span><span class="sxs-lookup"><span data-stu-id="f1a85-134">net.msmq</span></span>|<span data-ttu-id="f1a85-135">适用于基于 WCF 的消息队列应用程序。</span><span class="sxs-lookup"><span data-stu-id="f1a85-135">For use with WCF-based Message Queuing applications.</span></span>|  
+|<span data-ttu-id="f1a85-136">NetMsmqActivator</span><span class="sxs-lookup"><span data-stu-id="f1a85-136">NetMsmqActivator</span></span>|<span data-ttu-id="f1a85-137">msmq.formatname</span><span class="sxs-lookup"><span data-stu-id="f1a85-137">msmq.formatname</span></span>|<span data-ttu-id="f1a85-138">提供与现有消息队列应用程序的向后兼容性。</span><span class="sxs-lookup"><span data-stu-id="f1a85-138">Provides backwards compatibility with existing Message Queuing applications.</span></span>|  
   
- <span data-ttu-id="26613-139">在安装过程中，在 applicationHost.config 文件中注册特定协议的侦听器适配器，如下面的 XML 示例中所示。</span><span class="sxs-lookup"><span data-stu-id="26613-139">Listener adapters for specific protocols are registered during installation in the applicationHost.config file, as shown in the following XML example.</span></span>  
+ <span data-ttu-id="f1a85-139">在安装过程中，在 applicationHost.config 文件中注册特定协议的侦听器适配器，如下面的 XML 示例中所示。</span><span class="sxs-lookup"><span data-stu-id="f1a85-139">Listener adapters for specific protocols are registered during installation in the applicationHost.config file, as shown in the following XML example.</span></span>  
   
 ```xml  
 <system.applicationHost>  
     <listenerAdapters>  
         <add name="http" />  
-        <add name="net.tcp"   
+        <add name="net.tcp"
           identity="S-1-5-80-3579033775-2824656752-1522793541-1960352512-462907086" />  
-         <add name="net.pipe"   
+         <add name="net.pipe"
            identity="S-1-5-80-2943419899-937267781-4189664001-1229628381-3982115073" />  
-          <add name="net.msmq"   
+          <add name="net.msmq"
             identity="S-1-5-80-89244771-1762554971-1007993102-348796144-2203111529" />  
-           <add name="msmq.formatname"   
+           <add name="msmq.formatname"
              identity="S-1-5-80-89244771-1762554971-1007993102-348796144-2203111529" />  
     </listenerAdapters>  
 </system.applicationHost>  
 ```  
   
-### <a name="protocol-handlers"></a><span data-ttu-id="26613-140">协议处理程序</span><span class="sxs-lookup"><span data-stu-id="26613-140">Protocol Handlers</span></span>  
- <span data-ttu-id="26613-141">在计算机级别的 Web.config 文件中注册特定协议的进程和 AppDomain 协议处理程序。</span><span class="sxs-lookup"><span data-stu-id="26613-141">Process and AppDomain protocol handlers for specific protocols are registered in the machine-level Web.config file.</span></span>  
+### <a name="protocol-handlers"></a><span data-ttu-id="f1a85-140">协议处理程序</span><span class="sxs-lookup"><span data-stu-id="f1a85-140">Protocol Handlers</span></span>  
+ <span data-ttu-id="f1a85-141">在计算机级别的 Web.config 文件中注册特定协议的进程和 AppDomain 协议处理程序。</span><span class="sxs-lookup"><span data-stu-id="f1a85-141">Process and AppDomain protocol handlers for specific protocols are registered in the machine-level Web.config file.</span></span>  
   
 ```xml  
 <system.web>  
    <protocols>  
-      <add name="net.tcp"   
+      <add name="net.tcp"
         processHandlerType=  
          "System.ServiceModel.WasHosting.TcpProcessProtocolHandler"  
         appDomainHandlerType=  
          "System.ServiceModel.WasHosting.TcpAppDomainProtocolHandler"  
         validate="false" />  
-      <add name="net.pipe"   
+      <add name="net.pipe"
         processHandlerType=  
          "System.ServiceModel.WasHosting.NamedPipeProcessProtocolHandler"  
           appDomainHandlerType=  
@@ -85,7 +85,7 @@ ms.locfileid: "76737513"
 </system.web>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="26613-142">另请参阅</span><span class="sxs-lookup"><span data-stu-id="26613-142">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f1a85-142">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f1a85-142">See also</span></span>
 
-- [<span data-ttu-id="26613-143">配置 WAS 以用于 WCF</span><span class="sxs-lookup"><span data-stu-id="26613-143">Configuring WAS for Use with WCF</span></span>](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- <span data-ttu-id="26613-144">[Windows Server App Fabric 承载功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))</span><span class="sxs-lookup"><span data-stu-id="26613-144">[Windows Server App Fabric Hosting Features](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))</span></span>
+- [<span data-ttu-id="f1a85-143">配置 WAS 以用于 WCF</span><span class="sxs-lookup"><span data-stu-id="f1a85-143">Configuring WAS for Use with WCF</span></span>](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
+- <span data-ttu-id="f1a85-144">[Windows Server App Fabric 承载功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))</span><span class="sxs-lookup"><span data-stu-id="f1a85-144">[Windows Server App Fabric Hosting Features](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))</span></span>

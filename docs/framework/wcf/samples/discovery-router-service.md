@@ -2,39 +2,39 @@
 title: 发现路由器服务
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 09309b23d2a3cc672811c2f617e6fb81a2b4e021
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 149dd69cdd1972465f4b7cb48ab657492d3f21d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712286"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183732"
 ---
-# <a name="discovery-router-service"></a><span data-ttu-id="91976-102">发现路由器服务</span><span class="sxs-lookup"><span data-stu-id="91976-102">Discovery Router Service</span></span>
-<span data-ttu-id="91976-103">此示例演示如何将发现消息转发到另一个终结点。</span><span class="sxs-lookup"><span data-stu-id="91976-103">This sample demonstrates how to forward discovery messages to another endpoint.</span></span>  
+# <a name="discovery-router-service"></a><span data-ttu-id="c24cb-102">发现路由器服务</span><span class="sxs-lookup"><span data-stu-id="c24cb-102">Discovery Router Service</span></span>
+<span data-ttu-id="c24cb-103">此示例演示如何将发现消息转发到另一个终结点。</span><span class="sxs-lookup"><span data-stu-id="c24cb-103">This sample demonstrates how to forward discovery messages to another endpoint.</span></span>  
   
-## <a name="demonstrates"></a><span data-ttu-id="91976-104">演示文本</span><span class="sxs-lookup"><span data-stu-id="91976-104">Demonstrates</span></span>  
- <span data-ttu-id="91976-105">发现路由</span><span class="sxs-lookup"><span data-stu-id="91976-105">Discovery Routing</span></span>  
+## <a name="demonstrates"></a><span data-ttu-id="c24cb-104">演示</span><span class="sxs-lookup"><span data-stu-id="c24cb-104">Demonstrates</span></span>  
+ <span data-ttu-id="c24cb-105">发现路由</span><span class="sxs-lookup"><span data-stu-id="c24cb-105">Discovery Routing</span></span>  
   
-## <a name="discussion"></a><span data-ttu-id="91976-106">讨论</span><span class="sxs-lookup"><span data-stu-id="91976-106">Discussion</span></span>  
- <span data-ttu-id="91976-107">路由发现在以下方案中非常有用：客户端正在使用代理来查找服务，该代理不知道这种服务，但知道另一个代理。</span><span class="sxs-lookup"><span data-stu-id="91976-107">Discovery routing is useful in a scenario in which a client is looking for a service using a proxy and the proxy is unaware of such a service, but knows of another proxy.</span></span> <span data-ttu-id="91976-108">此代理可以将发现数据包从此客户端转发到第二个代理。</span><span class="sxs-lookup"><span data-stu-id="91976-108">This proxy can forward the discovery packet from this client to the second proxy.</span></span> <span data-ttu-id="91976-109">第二个代理可以查找该服务，然后将响应返回到原始客户端。</span><span class="sxs-lookup"><span data-stu-id="91976-109">The second proxy can look for the service and return the responses to the original client.</span></span>  
+## <a name="discussion"></a><span data-ttu-id="c24cb-106">讨论区</span><span class="sxs-lookup"><span data-stu-id="c24cb-106">Discussion</span></span>  
+ <span data-ttu-id="c24cb-107">路由发现在以下方案中非常有用：客户端正在使用代理来查找服务，该代理不知道这种服务，但知道另一个代理。</span><span class="sxs-lookup"><span data-stu-id="c24cb-107">Discovery routing is useful in a scenario in which a client is looking for a service using a proxy and the proxy is unaware of such a service, but knows of another proxy.</span></span> <span data-ttu-id="c24cb-108">此代理可以将发现数据包从此客户端转发到第二个代理。</span><span class="sxs-lookup"><span data-stu-id="c24cb-108">This proxy can forward the discovery packet from this client to the second proxy.</span></span> <span data-ttu-id="c24cb-109">第二个代理可以查找该服务，然后将响应返回到原始客户端。</span><span class="sxs-lookup"><span data-stu-id="c24cb-109">The second proxy can look for the service and return the responses to the original client.</span></span>  
   
- <span data-ttu-id="91976-110">在此示例中，客户端将一条消息发送到发现路由组件。</span><span class="sxs-lookup"><span data-stu-id="91976-110">In this sample, a client sends a message to a discovery routing component.</span></span> <span data-ttu-id="91976-111">此消息将发送到发现路由器上的一个特定终结点。</span><span class="sxs-lookup"><span data-stu-id="91976-111">This message is sent to a specific endpoint on the discovery router.</span></span> <span data-ttu-id="91976-112">然后，该路由器将此消息转发到一个 UDP 多播终结点。</span><span class="sxs-lookup"><span data-stu-id="91976-112">The router then forwards the message to a UDP multicast endpoint.</span></span> <span data-ttu-id="91976-113">探测消息将到达该多播终结点，侦听 UDP 多播地址的服务将对该发现路由器做出响应。</span><span class="sxs-lookup"><span data-stu-id="91976-113">The probe message goes out to the multicast endpoint and a service listening on a UDP multicast address responds to that discovery router.</span></span> <span data-ttu-id="91976-114">发现路由器收集这些响应，然后将它们发送回客户端。</span><span class="sxs-lookup"><span data-stu-id="91976-114">The discovery router collects the responses and sends them back to the client.</span></span>  
+ <span data-ttu-id="c24cb-110">在此示例中，客户端将一条消息发送到发现路由组件。</span><span class="sxs-lookup"><span data-stu-id="c24cb-110">In this sample, a client sends a message to a discovery routing component.</span></span> <span data-ttu-id="c24cb-111">此消息将发送到发现路由器上的一个特定终结点。</span><span class="sxs-lookup"><span data-stu-id="c24cb-111">This message is sent to a specific endpoint on the discovery router.</span></span> <span data-ttu-id="c24cb-112">然后，该路由器将此消息转发到一个 UDP 多播终结点。</span><span class="sxs-lookup"><span data-stu-id="c24cb-112">The router then forwards the message to a UDP multicast endpoint.</span></span> <span data-ttu-id="c24cb-113">探测消息将到达该多播终结点，侦听 UDP 多播地址的服务将对该发现路由器做出响应。</span><span class="sxs-lookup"><span data-stu-id="c24cb-113">The probe message goes out to the multicast endpoint and a service listening on a UDP multicast address responds to that discovery router.</span></span> <span data-ttu-id="c24cb-114">发现路由器收集这些响应，然后将它们发送回客户端。</span><span class="sxs-lookup"><span data-stu-id="c24cb-114">The discovery router collects the responses and sends them back to the client.</span></span>  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="91976-115">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="91976-115">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="c24cb-115">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="c24cb-115">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="91976-116">生成示例。</span><span class="sxs-lookup"><span data-stu-id="91976-116">Build the sample.</span></span>  
+1. <span data-ttu-id="c24cb-116">生成示例。</span><span class="sxs-lookup"><span data-stu-id="c24cb-116">Build the sample.</span></span>  
   
-2. <span data-ttu-id="91976-117">运行 DiscoveryRouter 可执行文件。</span><span class="sxs-lookup"><span data-stu-id="91976-117">Run the DiscoveryRouter executable.</span></span>  
+2. <span data-ttu-id="c24cb-117">运行 DiscoveryRouter 可执行文件。</span><span class="sxs-lookup"><span data-stu-id="c24cb-117">Run the DiscoveryRouter executable.</span></span>  
   
-3. <span data-ttu-id="91976-118">从生成目录运行服务可执行文件。</span><span class="sxs-lookup"><span data-stu-id="91976-118">Run the service executable from the build directory.</span></span>  
+3. <span data-ttu-id="c24cb-118">从生成目录运行服务可执行文件。</span><span class="sxs-lookup"><span data-stu-id="c24cb-118">Run the service executable from the build directory.</span></span>  
   
-4. <span data-ttu-id="91976-119">运行客户端可执行文件。</span><span class="sxs-lookup"><span data-stu-id="91976-119">Run the client executable.</span></span> <span data-ttu-id="91976-120">请注意，客户端将查找服务。</span><span class="sxs-lookup"><span data-stu-id="91976-120">Note that the client locates the service.</span></span>  
+4. <span data-ttu-id="c24cb-119">运行客户端可执行文件。</span><span class="sxs-lookup"><span data-stu-id="c24cb-119">Run the client executable.</span></span> <span data-ttu-id="c24cb-120">请注意，客户端将查找服务。</span><span class="sxs-lookup"><span data-stu-id="c24cb-120">Note that the client locates the service.</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="91976-121">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="91976-121">The samples may already be installed on your machine.</span></span> <span data-ttu-id="91976-122">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="91976-122">Check for the following (default) directory before continuing.</span></span>  
->   
+> <span data-ttu-id="c24cb-121">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="c24cb-121">The samples may already be installed on your machine.</span></span> <span data-ttu-id="c24cb-122">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="c24cb-122">Check for the following (default) directory before continuing.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> <span data-ttu-id="91976-123">如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="91976-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="91976-124">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="91976-124">This sample is located in the following directory.</span></span>  
->   
+>
+> <span data-ttu-id="c24cb-123">如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。</span><span class="sxs-lookup"><span data-stu-id="c24cb-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c24cb-124">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="c24cb-124">This sample is located in the following directory.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryRouter`

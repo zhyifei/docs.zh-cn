@@ -12,52 +12,52 @@ api_type:
 ms.assetid: 0c8676f8-ca0d-4998-b64d-fefac7e38912
 topic_type:
 - apiref
-ms.openlocfilehash: 017c14e9170087f3c3c9de64f50d165fc91aa297
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ee263e8c49cd6da7278bd2299557336629720d2f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76782405"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178781"
 ---
-# <a name="icordebugilframe4getlocalvariableex-method"></a><span data-ttu-id="e6510-102">ICorDebugILFrame4::GetLocalVariableEx 方法</span><span class="sxs-lookup"><span data-stu-id="e6510-102">ICorDebugILFrame4::GetLocalVariableEx Method</span></span>
-<span data-ttu-id="e6510-103">[仅在 .NET Framework 4.5.2 及更高版本中受支持]</span><span class="sxs-lookup"><span data-stu-id="e6510-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilframe4getlocalvariableex-method"></a><span data-ttu-id="e98ce-102">ICorDebugILFrame4::GetLocalVariableEx 方法</span><span class="sxs-lookup"><span data-stu-id="e98ce-102">ICorDebugILFrame4::GetLocalVariableEx Method</span></span>
+<span data-ttu-id="e98ce-103">[仅在 .NET Framework 4.5.2 及更高版本中受支持]</span><span class="sxs-lookup"><span data-stu-id="e98ce-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="e6510-104">获取此中间语言 (IL) 堆栈帧中指定的局部变量的值，并且（可选）访问在探查器 ReJIT 检测中添加的变量。</span><span class="sxs-lookup"><span data-stu-id="e6510-104">Gets the value of the specified local variable in this intermediate language (IL) stack frame, and optionally accesses a variable added in profiler ReJIT instrumentation.</span></span>  
+ <span data-ttu-id="e98ce-104">获取此中间语言 (IL) 堆栈帧中指定的局部变量的值，并且（可选）访问在探查器 ReJIT 检测中添加的变量。</span><span class="sxs-lookup"><span data-stu-id="e98ce-104">Gets the value of the specified local variable in this intermediate language (IL) stack frame, and optionally accesses a variable added in profiler ReJIT instrumentation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e6510-105">语法</span><span class="sxs-lookup"><span data-stu-id="e6510-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e98ce-105">语法</span><span class="sxs-lookup"><span data-stu-id="e98ce-105">Syntax</span></span>  
   
 ```cpp
 HRESULT GetLocalVariableEx(  
-   [in] ILCodeKind flags,   
-   [in] DWORD dwIndex,   
+   [in] ILCodeKind flags,
+   [in] DWORD dwIndex,
    [out] ICorDebugValue **ppValue  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e6510-106">参数</span><span class="sxs-lookup"><span data-stu-id="e6510-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e98ce-106">parameters</span><span class="sxs-lookup"><span data-stu-id="e98ce-106">Parameters</span></span>  
  `flags`  
- <span data-ttu-id="e6510-107">中一个[ILCodeKind](ilcodekind-enumeration.md)枚举成员，用于指定在探查器 ReJIT 检测中添加的变量是否包含在帧中。</span><span class="sxs-lookup"><span data-stu-id="e6510-107">[in] An [ILCodeKind](ilcodekind-enumeration.md) enumeration member that specifies whether a variable added in profiler ReJIT instrumentation is included in the frame.</span></span>  
+ <span data-ttu-id="e98ce-107">[在][ILCodeKind](ilcodekind-enumeration.md)枚举成员，用于指定在探查器 ReJIT 检测中添加的变量是否包含在帧中。</span><span class="sxs-lookup"><span data-stu-id="e98ce-107">[in] An [ILCodeKind](ilcodekind-enumeration.md) enumeration member that specifies whether a variable added in profiler ReJIT instrumentation is included in the frame.</span></span>  
   
  `dwIndex`  
- <span data-ttu-id="e6510-108">[in] IL 堆栈帧中局部变量的索引。</span><span class="sxs-lookup"><span data-stu-id="e6510-108">[in] The index of the local variable in the IL stack frame.</span></span>  
+ <span data-ttu-id="e98ce-108">[in] IL 堆栈帧中局部变量的索引。</span><span class="sxs-lookup"><span data-stu-id="e98ce-108">[in] The index of the local variable in the IL stack frame.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="e6510-109">弄指向表示检索到的值的 "ICorDebugValue" 对象地址的指针。</span><span class="sxs-lookup"><span data-stu-id="e6510-109">[out] A pointer to the address of an "ICorDebugValue" object that represents the retrieved value.</span></span>  
+ <span data-ttu-id="e98ce-109">[出]指向表示检索值的"ICorDebugValue"对象地址的指针。</span><span class="sxs-lookup"><span data-stu-id="e98ce-109">[out] A pointer to the address of an "ICorDebugValue" object that represents the retrieved value.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e6510-110">备注</span><span class="sxs-lookup"><span data-stu-id="e6510-110">Remarks</span></span>  
- <span data-ttu-id="e6510-111">此方法类似于[GetLocalVariable](icordebugilframe-getlocalvariable-method.md)方法，不同之处在于它还可以访问在探查器 ReJIT 检测中添加的变量。</span><span class="sxs-lookup"><span data-stu-id="e6510-111">This method is similar to the [GetLocalVariable](icordebugilframe-getlocalvariable-method.md) method, except that it optionally accesses a variable added in profiler ReJIT instrumentation.</span></span> <span data-ttu-id="e6510-112">使用 `ILCODE_ORIGINAL_IL` 的 `flags` 值调用此方法等效于调用[GetLocalVariable](icordebugilframe-getlocalvariable-method.md);如果用附加的局部变量检测方法，则不能访问这些变量。</span><span class="sxs-lookup"><span data-stu-id="e6510-112">Calling this method with a `flags` value of `ILCODE_ORIGINAL_IL` is equivalent to calling [GetLocalVariable](icordebugilframe-getlocalvariable-method.md); if the method is instrumented with additional local variables, those variables cannot be accessed.</span></span> <span data-ttu-id="e6510-113">`ILCODE_REJIT_IL` 使调试器能够访问在探查器 ReJIT 检测中添加的局部变量。</span><span class="sxs-lookup"><span data-stu-id="e6510-113">`ILCODE_REJIT_IL` allows the debugger to access the local variables added in profiler ReJIT instrumentation.</span></span> <span data-ttu-id="e6510-114">如果未检测到 IL，则此方法将返回 `E_INVALIDARG`。</span><span class="sxs-lookup"><span data-stu-id="e6510-114">If the IL is not instrumented, the method returns `E_INVALIDARG`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e98ce-110">备注</span><span class="sxs-lookup"><span data-stu-id="e98ce-110">Remarks</span></span>  
+ <span data-ttu-id="e98ce-111">此方法类似于[GetLocalvariable](icordebugilframe-getlocalvariable-method.md)方法，只不过它可以选择访问在探查器 ReJIT 检测中添加的变量。</span><span class="sxs-lookup"><span data-stu-id="e98ce-111">This method is similar to the [GetLocalVariable](icordebugilframe-getlocalvariable-method.md) method, except that it optionally accesses a variable added in profiler ReJIT instrumentation.</span></span> <span data-ttu-id="e98ce-112">使用`flags`的值`ILCODE_ORIGINAL_IL`调用此方法等效于调用[GetLocalvariable](icordebugilframe-getlocalvariable-method.md);如果使用其他局部变量检测该方法，则无法访问这些变量。</span><span class="sxs-lookup"><span data-stu-id="e98ce-112">Calling this method with a `flags` value of `ILCODE_ORIGINAL_IL` is equivalent to calling [GetLocalVariable](icordebugilframe-getlocalvariable-method.md); if the method is instrumented with additional local variables, those variables cannot be accessed.</span></span> <span data-ttu-id="e98ce-113">`ILCODE_REJIT_IL` 使调试器能够访问在探查器 ReJIT 检测中添加的局部变量。</span><span class="sxs-lookup"><span data-stu-id="e98ce-113">`ILCODE_REJIT_IL` allows the debugger to access the local variables added in profiler ReJIT instrumentation.</span></span> <span data-ttu-id="e98ce-114">如果未检测到 IL，则此方法将返回 `E_INVALIDARG`。</span><span class="sxs-lookup"><span data-stu-id="e98ce-114">If the IL is not instrumented, the method returns `E_INVALIDARG`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e6510-115">需求</span><span class="sxs-lookup"><span data-stu-id="e6510-115">Requirements</span></span>  
- <span data-ttu-id="e6510-116">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e6510-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e98ce-115">要求</span><span class="sxs-lookup"><span data-stu-id="e98ce-115">Requirements</span></span>  
+ <span data-ttu-id="e98ce-116">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e98ce-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e6510-117">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e6510-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e98ce-117">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e98ce-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e6510-118">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e6510-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e98ce-118">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e98ce-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e6510-119">**.NET Framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6510-119">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="e98ce-119">**.NET 框架版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e98ce-119">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e6510-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e6510-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e98ce-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e98ce-120">See also</span></span>
 
-- [<span data-ttu-id="e6510-121">ICorDebugILFrame4 接口</span><span class="sxs-lookup"><span data-stu-id="e6510-121">ICorDebugILFrame4 Interface</span></span>](icordebugilframe4-interface.md)
-- [<span data-ttu-id="e6510-122">调试接口</span><span class="sxs-lookup"><span data-stu-id="e6510-122">Debugging Interfaces</span></span>](debugging-interfaces.md)
-- [<span data-ttu-id="e6510-123">ReJIT：操作方法指南</span><span class="sxs-lookup"><span data-stu-id="e6510-123">ReJIT: A How-To Guide</span></span>](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [<span data-ttu-id="e98ce-121">ICorDebugILFrame4 接口</span><span class="sxs-lookup"><span data-stu-id="e98ce-121">ICorDebugILFrame4 Interface</span></span>](icordebugilframe4-interface.md)
+- [<span data-ttu-id="e98ce-122">调试接口</span><span class="sxs-lookup"><span data-stu-id="e98ce-122">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="e98ce-123">ReJIT：指南</span><span class="sxs-lookup"><span data-stu-id="e98ce-123">ReJIT: A How-To Guide</span></span>](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

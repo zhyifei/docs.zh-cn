@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcess4::ProcessStateChanged 方法
+title: ICorDebugProcess4：:Process状态更改方法
 ms.date: 02/07/2019
 api_name:
 - ICorDebugProcess4::ProcessStateChanged
@@ -15,18 +15,18 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: adfd563e19389642ac0ed0a3cef4aae8a32fa466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a6f36f5b86b4fa58ce2a4ef4aa23d527f797a5a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767182"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178629"
 ---
-# <a name="icordebugprocess4processstatechanged-method"></a><span data-ttu-id="5f04e-102">ICorDebugProcess4::ProcessStateChanged 方法</span><span class="sxs-lookup"><span data-stu-id="5f04e-102">ICorDebugProcess4::ProcessStateChanged Method</span></span>
+# <a name="icordebugprocess4processstatechanged-method"></a><span data-ttu-id="24b04-102">ICorDebugProcess4：:Process状态更改方法</span><span class="sxs-lookup"><span data-stu-id="24b04-102">ICorDebugProcess4::ProcessStateChanged Method</span></span>
 
-<span data-ttu-id="5f04e-103">通知 ICorDebug 管道的过程调试器扩展继续调试对象的执行。</span><span class="sxs-lookup"><span data-stu-id="5f04e-103">Notifies the ICorDebug pipeline that the out of process debugger is continuing the debugee's execution.</span></span>
+<span data-ttu-id="24b04-103">通知 ICorDebug 管道进程外调试器正在继续执行调试器。</span><span class="sxs-lookup"><span data-stu-id="24b04-103">Notifies the ICorDebug pipeline that the out of process debugger is continuing the debugee's execution.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="5f04e-104">语法</span><span class="sxs-lookup"><span data-stu-id="5f04e-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="24b04-104">语法</span><span class="sxs-lookup"><span data-stu-id="24b04-104">Syntax</span></span>
 
 ```cpp
 HRESULT ProcessStateChanged(
@@ -34,27 +34,27 @@ HRESULT ProcessStateChanged(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="5f04e-105">参数</span><span class="sxs-lookup"><span data-stu-id="5f04e-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="24b04-105">parameters</span><span class="sxs-lookup"><span data-stu-id="24b04-105">Parameters</span></span>
 
  `eChange`\
-<span data-ttu-id="5f04e-106">[in]成员[CorDebugStateChange 枚举](cordebugstatechange-enumeration.md)描述进程的执行状态的更改。</span><span class="sxs-lookup"><span data-stu-id="5f04e-106">[in] A member of the [CorDebugStateChange enumeration](cordebugstatechange-enumeration.md) describing a change in the process's execution state.</span></span>
+<span data-ttu-id="24b04-106">[在][CorDebugStateChange 计数](cordebugstatechange-enumeration.md)的成员，描述进程执行状态的变化。</span><span class="sxs-lookup"><span data-stu-id="24b04-106">[in] A member of the [CorDebugStateChange enumeration](cordebugstatechange-enumeration.md) describing a change in the process's execution state.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="5f04e-107">备注</span><span class="sxs-lookup"><span data-stu-id="5f04e-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="24b04-107">备注</span><span class="sxs-lookup"><span data-stu-id="24b04-107">Remarks</span></span>
 
-<span data-ttu-id="5f04e-108">提供的方法属于`ICorDebugProcess4`接口，并对应于虚拟方法表的第四个槽。</span><span class="sxs-lookup"><span data-stu-id="5f04e-108">The provided method is part of the `ICorDebugProcess4` interface and corresponds to the fourth slot of the virtual method table.</span></span>
+<span data-ttu-id="24b04-108">提供的方法是接口的一`ICorDebugProcess4`部分，对应于虚拟方法表的第四个槽。</span><span class="sxs-lookup"><span data-stu-id="24b04-108">The provided method is part of the `ICorDebugProcess4` interface and corresponds to the fourth slot of the virtual method table.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="5f04e-109">要求</span><span class="sxs-lookup"><span data-stu-id="5f04e-109">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="24b04-109">要求</span><span class="sxs-lookup"><span data-stu-id="24b04-109">Requirements</span></span>
 
- <span data-ttu-id="5f04e-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5f04e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+ <span data-ttu-id="24b04-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="24b04-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
- <span data-ttu-id="5f04e-111">**标头：** 无</span><span class="sxs-lookup"><span data-stu-id="5f04e-111">**Header:** None</span></span>
+ <span data-ttu-id="24b04-111">**标题：** 没有</span><span class="sxs-lookup"><span data-stu-id="24b04-111">**Header:** None</span></span>
 
- <span data-ttu-id="5f04e-112">**库：** 无</span><span class="sxs-lookup"><span data-stu-id="5f04e-112">**Library:** None</span></span>
- 
- <span data-ttu-id="5f04e-113">**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5f04e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="24b04-112">**库：** 没有</span><span class="sxs-lookup"><span data-stu-id="24b04-112">**Library:** None</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="5f04e-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="5f04e-114">See also</span></span>
+ <span data-ttu-id="24b04-113">**.NET 框架版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="24b04-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
 
-- [<span data-ttu-id="5f04e-115">ICorDebugProcess4 接口</span><span class="sxs-lookup"><span data-stu-id="5f04e-115">ICorDebugProcess4 Interface</span></span>](icordebugprocess4-interface.md)
-- [<span data-ttu-id="5f04e-116">调试接口</span><span class="sxs-lookup"><span data-stu-id="5f04e-116">Debugging Interfaces</span></span>](debugging-interfaces.md)
-- [<span data-ttu-id="5f04e-117">调试</span><span class="sxs-lookup"><span data-stu-id="5f04e-117">Debugging</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="24b04-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="24b04-114">See also</span></span>
+
+- [<span data-ttu-id="24b04-115">ICorDebugProcess4 接口</span><span class="sxs-lookup"><span data-stu-id="24b04-115">ICorDebugProcess4 Interface</span></span>](icordebugprocess4-interface.md)
+- [<span data-ttu-id="24b04-116">调试接口</span><span class="sxs-lookup"><span data-stu-id="24b04-116">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="24b04-117">调试</span><span class="sxs-lookup"><span data-stu-id="24b04-117">Debugging</span></span>](index.md)

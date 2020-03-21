@@ -1,5 +1,5 @@
 ---
-title: 确定 CheckedListBox 控件中的选中项
+title: 确定选中列表框中检查的项目
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 5854f7e6be759daeb604458ea8554d3c98ed39c2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 5d93a63e9c1c6aae91ecfe83590c59450a565afe
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743251"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182195"
 ---
-# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a><span data-ttu-id="a9e61-102">如何：确定 Windows 窗体 CheckedListBox 控件中的选定项</span><span class="sxs-lookup"><span data-stu-id="a9e61-102">How to: Determine Checked Items in the Windows Forms CheckedListBox Control</span></span>
-<span data-ttu-id="a9e61-103">在 Windows 窗体 <xref:System.Windows.Forms.CheckedListBox> 控件中显示数据时，可以循环访问 <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> 属性中存储的集合，或使用 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 方法单步执行列表，以确定要检查哪些项。</span><span class="sxs-lookup"><span data-stu-id="a9e61-103">When presenting data in a Windows Forms <xref:System.Windows.Forms.CheckedListBox> control, you can either iterate through the collection stored in the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> property, or step through the list using the <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method to determine which items are checked.</span></span> <span data-ttu-id="a9e61-104"><xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 方法采用项索引号作为参数，并返回 `true` 或 `false`。</span><span class="sxs-lookup"><span data-stu-id="a9e61-104">The <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method takes an item index number as its argument and returns `true` or `false`.</span></span> <span data-ttu-id="a9e61-105">与您可能期望的不同，<xref:System.Windows.Forms.ListBox.SelectedItems%2A> 和 <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> 属性不确定哪些项已选中;它们确定突出显示的项。</span><span class="sxs-lookup"><span data-stu-id="a9e61-105">Contrary to what you might expect, the <xref:System.Windows.Forms.ListBox.SelectedItems%2A> and <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> properties do not determine which items are checked; they determine which items are highlighted.</span></span>  
+# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a><span data-ttu-id="d5d63-102">如何：确定 Windows 窗体 CheckedListBox 控件中的选定项</span><span class="sxs-lookup"><span data-stu-id="d5d63-102">How to: Determine Checked Items in the Windows Forms CheckedListBox Control</span></span>
+<span data-ttu-id="d5d63-103">在 Windows 窗体<xref:System.Windows.Forms.CheckedListBox>控件中显示数据时，可以遍遍存储在<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>属性中的集合，或者使用<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法单步执行列表以确定检查哪些项。</span><span class="sxs-lookup"><span data-stu-id="d5d63-103">When presenting data in a Windows Forms <xref:System.Windows.Forms.CheckedListBox> control, you can either iterate through the collection stored in the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> property, or step through the list using the <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method to determine which items are checked.</span></span> <span data-ttu-id="d5d63-104">该方法<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>以项索引号作为其参数，并返回`true`或`false`。</span><span class="sxs-lookup"><span data-stu-id="d5d63-104">The <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method takes an item index number as its argument and returns `true` or `false`.</span></span> <span data-ttu-id="d5d63-105">与您可能期望的相反，和<xref:System.Windows.Forms.ListBox.SelectedItems%2A><xref:System.Windows.Forms.ListBox.SelectedIndices%2A>属性不确定哪些项被检查;相反，属性不会确定哪些项被检查。它们确定突出显示哪些项。</span><span class="sxs-lookup"><span data-stu-id="d5d63-105">Contrary to what you might expect, the <xref:System.Windows.Forms.ListBox.SelectedItems%2A> and <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> properties do not determine which items are checked; they determine which items are highlighted.</span></span>  
   
-### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a><span data-ttu-id="a9e61-106">确定 CheckedListBox 控件中的选中项</span><span class="sxs-lookup"><span data-stu-id="a9e61-106">To determine checked items in a CheckedListBox control</span></span>  
+### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a><span data-ttu-id="d5d63-106">确定选中的"检查列表"控件中的已检查项目</span><span class="sxs-lookup"><span data-stu-id="d5d63-106">To determine checked items in a CheckedListBox control</span></span>  
   
-1. <span data-ttu-id="a9e61-107">遍历 <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> 集合，从0开始，因为集合是从零开始的。</span><span class="sxs-lookup"><span data-stu-id="a9e61-107">Iterate through the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> collection, starting at 0 since the collection is zero-based.</span></span> <span data-ttu-id="a9e61-108">请注意，此方法将在选中项目列表中为您指定项目编号，而不是总体列表。</span><span class="sxs-lookup"><span data-stu-id="a9e61-108">Note that this method will give you the item number in the list of checked items, not the overall list.</span></span> <span data-ttu-id="a9e61-109">因此，如果未检查列表中的第一项并且选中第二项，则以下代码将显示类似于 "Checked Item 1 = MyListItem2" 的文本。</span><span class="sxs-lookup"><span data-stu-id="a9e61-109">So if the first item in the list is not checked and the second item is checked, the code below will display text like "Checked Item 1 = MyListItem2".</span></span>  
+1. <span data-ttu-id="d5d63-107">迭代集合，<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>从 0 开始，因为集合是零基的。</span><span class="sxs-lookup"><span data-stu-id="d5d63-107">Iterate through the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> collection, starting at 0 since the collection is zero-based.</span></span> <span data-ttu-id="d5d63-108">请注意，此方法将为您提供已检查项目列表中的物料编号，而不是整个列表中的项目编号。</span><span class="sxs-lookup"><span data-stu-id="d5d63-108">Note that this method will give you the item number in the list of checked items, not the overall list.</span></span> <span data-ttu-id="d5d63-109">因此，如果未选中列表中的第一项，并且检查了第二项，则下面的代码将显示"已检查的项目 1 = MyListItem2"之类的文本。</span><span class="sxs-lookup"><span data-stu-id="d5d63-109">So if the first item in the list is not checked and the second item is checked, the code below will display text like "Checked Item 1 = MyListItem2".</span></span>  
   
     ```vb  
     ' Determine if there are any items checked.  
@@ -66,9 +66,9 @@ ms.locfileid: "76743251"
     }  
     ```  
   
-     - <span data-ttu-id="a9e61-110">或 -</span><span class="sxs-lookup"><span data-stu-id="a9e61-110">or -</span></span>  
+     - <span data-ttu-id="d5d63-110">或 -</span><span class="sxs-lookup"><span data-stu-id="d5d63-110">or -</span></span>  
   
-2. <span data-ttu-id="a9e61-111">单步执行 <xref:System.Windows.Forms.CheckedListBox.Items%2A> 集合，从0开始，因为集合从零开始，并为每个项调用 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="a9e61-111">Step through the <xref:System.Windows.Forms.CheckedListBox.Items%2A> collection, starting at 0 since the collection is zero-based, and call the <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method for each item.</span></span> <span data-ttu-id="a9e61-112">请注意，此方法将向你显示总体列表中的项编号，因此，如果未检查列表中的第一项并且检查第二项，则会显示类似于 "Item 2 = MyListItem2" 的内容。</span><span class="sxs-lookup"><span data-stu-id="a9e61-112">Note that this method will give you the item number in the overall list, so if the first item in the list is not checked and the second item is checked, it will display something like "Item 2 = MyListItem2".</span></span>  
+2. <span data-ttu-id="d5d63-111">单步执行<xref:System.Windows.Forms.CheckedListBox.Items%2A>集合，从 0 开始，因为集合是零基的，并<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>调用每个项的方法。</span><span class="sxs-lookup"><span data-stu-id="d5d63-111">Step through the <xref:System.Windows.Forms.CheckedListBox.Items%2A> collection, starting at 0 since the collection is zero-based, and call the <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method for each item.</span></span> <span data-ttu-id="d5d63-112">请注意，此方法将为您提供整个列表中的项目编号，因此，如果未选中列表中的第一个项目，并且检查了第二个项目，它将显示类似"项目 2 = MyListItem2"的内容。</span><span class="sxs-lookup"><span data-stu-id="d5d63-112">Note that this method will give you the item number in the overall list, so if the first item in the list is not checked and the second item is checked, it will display something like "Item 2 = MyListItem2".</span></span>  
   
     ```vb  
     Dim i As Integer  
@@ -84,7 +84,7 @@ ms.locfileid: "76743251"
   
     ```csharp  
     int i;  
-    string s;   
+    string s;
     s = "Checked items:\n" ;  
     for (i = 0; i <= (checkedListBox1.Items.Count-1); i++)  
     {  
@@ -98,7 +98,7 @@ ms.locfileid: "76743251"
   
     ```cpp  
     int i;  
-    String ^ s;   
+    String ^ s;
     s = "Checked items:\n" ;  
     for (i = 0; i <= (checkedListBox1->Items->Count-1); i++)  
     {  
@@ -111,6 +111,6 @@ ms.locfileid: "76743251"
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="a9e61-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a9e61-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d5d63-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d5d63-113">See also</span></span>
 
-- [<span data-ttu-id="a9e61-114">用于列出选项的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="a9e61-114">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
+- [<span data-ttu-id="d5d63-114">用于列出选项的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="d5d63-114">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)

@@ -5,68 +5,69 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 4f0cbc06c03c0d122fc69b8a396570919ac14970
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 6e0c34e1db50030c78db295f26fcc25b431d3dde
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980283"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111798"
 ---
-# <a name="adonet-code-examples"></a><span data-ttu-id="d8f7e-102">ADO.NET 代码示例</span><span class="sxs-lookup"><span data-stu-id="d8f7e-102">ADO.NET code examples</span></span>
-<span data-ttu-id="d8f7e-103">本主题中的代码列表演示如何使用下面的 ADO.NET 技术从数据库中检索数据：</span><span class="sxs-lookup"><span data-stu-id="d8f7e-103">The code listings in this topic demonstrate how to retrieve data from a database by using the following ADO.NET technologies:</span></span>
+# <a name="adonet-code-examples"></a><span data-ttu-id="8eef4-102">ADO.NET代码示例</span><span class="sxs-lookup"><span data-stu-id="8eef4-102">ADO.NET code examples</span></span>
 
-- <span data-ttu-id="d8f7e-104">ADO.NET 数据提供程序：</span><span class="sxs-lookup"><span data-stu-id="d8f7e-104">ADO.NET data providers:</span></span>
+<span data-ttu-id="8eef4-103">此页上的代码列表演示如何使用以下ADO.NET技术从数据库检索数据：</span><span class="sxs-lookup"><span data-stu-id="8eef4-103">The code listings on this page demonstrate how to retrieve data from a database by using the following ADO.NET technologies:</span></span>
 
-  - <span data-ttu-id="d8f7e-105">[SqlClient](#sqlclient) （`System.Data.SqlClient`）</span><span class="sxs-lookup"><span data-stu-id="d8f7e-105">[SqlClient](#sqlclient) (`System.Data.SqlClient`)</span></span>
+- <span data-ttu-id="8eef4-104">ADO.NET 数据提供程序：</span><span class="sxs-lookup"><span data-stu-id="8eef4-104">ADO.NET data providers:</span></span>
 
-  - <span data-ttu-id="d8f7e-106">[OleDb](#oledb) （`System.Data.OleDb`）</span><span class="sxs-lookup"><span data-stu-id="d8f7e-106">[OleDb](#oledb) (`System.Data.OleDb`)</span></span>
+  - <span data-ttu-id="8eef4-105">[SqlClient](#sqlclient) `System.Data.SqlClient`（ ）</span><span class="sxs-lookup"><span data-stu-id="8eef4-105">[SqlClient](#sqlclient) (`System.Data.SqlClient`)</span></span>
 
-  - <span data-ttu-id="d8f7e-107">[Odbc](#odbc) （`System.Data.Odbc`）</span><span class="sxs-lookup"><span data-stu-id="d8f7e-107">[Odbc](#odbc) (`System.Data.Odbc`)</span></span>
+  - <span data-ttu-id="8eef4-106">[OleDb](#oledb) `System.Data.OleDb`（ ）</span><span class="sxs-lookup"><span data-stu-id="8eef4-106">[OleDb](#oledb) (`System.Data.OleDb`)</span></span>
 
-  - <span data-ttu-id="d8f7e-108">[OracleClient](#oracleclient) (`System.Data.OracleClient`)</span><span class="sxs-lookup"><span data-stu-id="d8f7e-108">[OracleClient](#oracleclient) (`System.Data.OracleClient`)</span></span>
+  - <span data-ttu-id="8eef4-107">[奥德布](#odbc)`System.Data.Odbc`（ ）</span><span class="sxs-lookup"><span data-stu-id="8eef4-107">[Odbc](#odbc) (`System.Data.Odbc`)</span></span>
 
-- <span data-ttu-id="d8f7e-109">ADO.NET 实体框架：</span><span class="sxs-lookup"><span data-stu-id="d8f7e-109">ADO.NET Entity Framework:</span></span>
+  - <span data-ttu-id="8eef4-108">[甲骨文客户](#oracleclient)`System.Data.OracleClient`（ ）</span><span class="sxs-lookup"><span data-stu-id="8eef4-108">[OracleClient](#oracleclient) (`System.Data.OracleClient`)</span></span>
 
-  - [<span data-ttu-id="d8f7e-110">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="d8f7e-110">LINQ to Entities</span></span>](#linq-to-entities)
+- <span data-ttu-id="8eef4-109">ADO.NET 实体框架：</span><span class="sxs-lookup"><span data-stu-id="8eef4-109">ADO.NET Entity Framework:</span></span>
 
-  - [<span data-ttu-id="d8f7e-111">类型化 ObjectQuery</span><span class="sxs-lookup"><span data-stu-id="d8f7e-111">Typed ObjectQuery</span></span>](#typed-objectquery)
+  - [<span data-ttu-id="8eef4-110">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="8eef4-110">LINQ to Entities</span></span>](#linq-to-entities)
 
-  - <span data-ttu-id="d8f7e-112">[EntityClient](#entityclient) （`System.Data.EntityClient`）</span><span class="sxs-lookup"><span data-stu-id="d8f7e-112">[EntityClient](#entityclient) (`System.Data.EntityClient`)</span></span>
+  - [<span data-ttu-id="8eef4-111">类型化 ObjectQuery</span><span class="sxs-lookup"><span data-stu-id="8eef4-111">Typed ObjectQuery</span></span>](#typed-objectquery)
 
-- [<span data-ttu-id="d8f7e-113">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="d8f7e-113">LINQ to SQL</span></span>](#linq-to-sql)
+  - <span data-ttu-id="8eef4-112">[实体客户端](#entityclient)`System.Data.EntityClient`（ ）</span><span class="sxs-lookup"><span data-stu-id="8eef4-112">[EntityClient](#entityclient) (`System.Data.EntityClient`)</span></span>
 
-## <a name="adonet-data-provider-examples"></a><span data-ttu-id="d8f7e-114">ADO.NET 数据提供程序示例</span><span class="sxs-lookup"><span data-stu-id="d8f7e-114">ADO.NET data provider examples</span></span>
-<span data-ttu-id="d8f7e-115">以下代码列表演示如何使用 ADO.NET 数据提供程序从数据库中检索数据。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-115">The following code listings demonstrate how to retrieve data from a database using ADO.NET data providers.</span></span> <span data-ttu-id="d8f7e-116">数据在一个 `DataReader` 中返回。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-116">The data is returned in a `DataReader`.</span></span> <span data-ttu-id="d8f7e-117">有关详细信息，请参阅[使用 DataReader 检索数据](retrieving-data-using-a-datareader.md)。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-117">For more information, see [Retrieving Data Using a DataReader](retrieving-data-using-a-datareader.md).</span></span>
+- [<span data-ttu-id="8eef4-113">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="8eef4-113">LINQ to SQL</span></span>](#linq-to-sql)
 
-### <a name="sqlclient"></a><span data-ttu-id="d8f7e-118">SqlClient</span><span class="sxs-lookup"><span data-stu-id="d8f7e-118">SqlClient</span></span>
-<span data-ttu-id="d8f7e-119">本示例中的代码假定您可以连接到 Microsoft SQL Server 上的 `Northwind` 示例数据库。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-119">The code in this example assumes that you can connect to the `Northwind` sample database on Microsoft SQL Server.</span></span> <span data-ttu-id="d8f7e-120">在此情形 5 中，示例代码创建一个 <xref:System.Data.SqlClient.SqlCommand> 以从 Products 表中选择行，并添加 <xref:System.Data.SqlClient.SqlParameter> 来将结果限制为其 UnitPrice 大于指定参数值的行。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-120">The code creates a <xref:System.Data.SqlClient.SqlCommand> to select rows from the Products table, adding a <xref:System.Data.SqlClient.SqlParameter> to restrict the results to rows with a UnitPrice greater than the specified parameter value, in this case 5.</span></span> <span data-ttu-id="d8f7e-121"><xref:System.Data.SqlClient.SqlConnection> 在 `using` 块内打开，这将确保在代码退出时关闭并释放资源。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-121">The <xref:System.Data.SqlClient.SqlConnection> is opened inside a `using` block, which ensures that resources are closed and disposed when the code exits.</span></span> <span data-ttu-id="d8f7e-122">示例代码使用 <xref:System.Data.SqlClient.SqlDataReader> 执行命令，并在控制台窗口中显示结果。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-122">The code executes the command by using a <xref:System.Data.SqlClient.SqlDataReader>, and displays the results in the console window.</span></span>
+## <a name="adonet-data-provider-examples"></a><span data-ttu-id="8eef4-114">ADO.NET数据提供程序示例</span><span class="sxs-lookup"><span data-stu-id="8eef4-114">ADO.NET data provider examples</span></span>
+<span data-ttu-id="8eef4-115">以下代码列表演示如何使用 ADO.NET 数据提供程序从数据库中检索数据。</span><span class="sxs-lookup"><span data-stu-id="8eef4-115">The following code listings demonstrate how to retrieve data from a database using ADO.NET data providers.</span></span> <span data-ttu-id="8eef4-116">数据在一个 `DataReader` 中返回。</span><span class="sxs-lookup"><span data-stu-id="8eef4-116">The data is returned in a `DataReader`.</span></span> <span data-ttu-id="8eef4-117">有关详细信息，请参阅[使用数据读取器检索数据](retrieving-data-using-a-datareader.md)。</span><span class="sxs-lookup"><span data-stu-id="8eef4-117">For more information, see [Retrieving Data Using a DataReader](retrieving-data-using-a-datareader.md).</span></span>
+
+### <a name="sqlclient"></a><span data-ttu-id="8eef4-118">SqlClient</span><span class="sxs-lookup"><span data-stu-id="8eef4-118">SqlClient</span></span>
+<span data-ttu-id="8eef4-119">此示例中的代码假定您可以连接到 Microsoft SQL Server`Northwind`上的示例数据库。</span><span class="sxs-lookup"><span data-stu-id="8eef4-119">The code in this example assumes that you can connect to the `Northwind` sample database on Microsoft SQL Server.</span></span> <span data-ttu-id="8eef4-120">在此情形 5 中，示例代码创建一个 <xref:System.Data.SqlClient.SqlCommand> 以从 Products 表中选择行，并添加 <xref:System.Data.SqlClient.SqlParameter> 来将结果限制为其 UnitPrice 大于指定参数值的行。</span><span class="sxs-lookup"><span data-stu-id="8eef4-120">The code creates a <xref:System.Data.SqlClient.SqlCommand> to select rows from the Products table, adding a <xref:System.Data.SqlClient.SqlParameter> to restrict the results to rows with a UnitPrice greater than the specified parameter value, in this case 5.</span></span> <span data-ttu-id="8eef4-121">在<xref:System.Data.SqlClient.SqlConnection>`using`块内打开 ，这可确保在代码退出时关闭和释放资源。</span><span class="sxs-lookup"><span data-stu-id="8eef4-121">The <xref:System.Data.SqlClient.SqlConnection> is opened inside a `using` block, which ensures that resources are closed and disposed when the code exits.</span></span> <span data-ttu-id="8eef4-122">示例代码使用 <xref:System.Data.SqlClient.SqlDataReader> 执行命令，并在控制台窗口中显示结果。</span><span class="sxs-lookup"><span data-stu-id="8eef4-122">The code executes the command by using a <xref:System.Data.SqlClient.SqlDataReader>, and displays the results in the console window.</span></span>
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]
 
-### <a name="oledb"></a><span data-ttu-id="d8f7e-123">OleDb</span><span class="sxs-lookup"><span data-stu-id="d8f7e-123">OleDb</span></span>
-<span data-ttu-id="d8f7e-124">此示例中的代码假定您可以连接到 Microsoft Access Northwind 示例数据库。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-124">The code in this example assumes that you can connect to the Microsoft Access Northwind sample database.</span></span> <span data-ttu-id="d8f7e-125">在此情形 5 中，示例代码创建一个 <xref:System.Data.OleDb.OleDbCommand> 以从 Products 表中选择行，并添加 <xref:System.Data.OleDb.OleDbParameter> 来将结果限制为其 UnitPrice 大于指定参数值的行。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-125">The code creates a <xref:System.Data.OleDb.OleDbCommand> to select rows from the Products table, adding a <xref:System.Data.OleDb.OleDbParameter> to restrict the results to rows with a UnitPrice greater than the specified parameter value, in this case 5.</span></span> <span data-ttu-id="d8f7e-126"><xref:System.Data.OleDb.OleDbConnection> 在 `using` 块内打开，这将确保在代码退出时会关闭和释放资源。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-126">The <xref:System.Data.OleDb.OleDbConnection> is opened inside of a `using` block, which ensures that resources are closed and disposed when the code exits.</span></span> <span data-ttu-id="d8f7e-127">示例代码使用 <xref:System.Data.OleDb.OleDbDataReader> 执行命令，并在控制台窗口中显示结果。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-127">The code executes the command by using a <xref:System.Data.OleDb.OleDbDataReader>, and displays the results in the console window.</span></span>
+### <a name="oledb"></a><span data-ttu-id="8eef4-123">OleDb</span><span class="sxs-lookup"><span data-stu-id="8eef4-123">OleDb</span></span>
+<span data-ttu-id="8eef4-124">此示例中的代码假定你可以连接到 Microsoft Access Northwind 示例数据库。</span><span class="sxs-lookup"><span data-stu-id="8eef4-124">The code in this example assumes that you can connect to the Microsoft Access Northwind sample database.</span></span> <span data-ttu-id="8eef4-125">在此情形 5 中，示例代码创建一个 <xref:System.Data.OleDb.OleDbCommand> 以从 Products 表中选择行，并添加 <xref:System.Data.OleDb.OleDbParameter> 来将结果限制为其 UnitPrice 大于指定参数值的行。</span><span class="sxs-lookup"><span data-stu-id="8eef4-125">The code creates a <xref:System.Data.OleDb.OleDbCommand> to select rows from the Products table, adding a <xref:System.Data.OleDb.OleDbParameter> to restrict the results to rows with a UnitPrice greater than the specified parameter value, in this case 5.</span></span> <span data-ttu-id="8eef4-126"><xref:System.Data.OleDb.OleDbConnection> 在 `using` 块内打开，这将确保在代码退出时会关闭和释放资源。</span><span class="sxs-lookup"><span data-stu-id="8eef4-126">The <xref:System.Data.OleDb.OleDbConnection> is opened inside of a `using` block, which ensures that resources are closed and disposed when the code exits.</span></span> <span data-ttu-id="8eef4-127">示例代码使用 <xref:System.Data.OleDb.OleDbDataReader> 执行命令，并在控制台窗口中显示结果。</span><span class="sxs-lookup"><span data-stu-id="8eef4-127">The code executes the command by using a <xref:System.Data.OleDb.OleDbDataReader>, and displays the results in the console window.</span></span>
 
  [!code-csharp[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/VB/source.vb#1)]
 
-### <a name="odbc"></a><span data-ttu-id="d8f7e-128">Odbc</span><span class="sxs-lookup"><span data-stu-id="d8f7e-128">Odbc</span></span>
-<span data-ttu-id="d8f7e-129">此示例中的代码假定您可以连接到 Microsoft Access Northwind 示例数据库。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-129">The code in this example assumes that you can connect to the Microsoft Access Northwind sample database.</span></span> <span data-ttu-id="d8f7e-130">在此情形 5 中，示例代码创建一个 <xref:System.Data.Odbc.OdbcCommand> 以从 Products 表中选择行，并添加 <xref:System.Data.Odbc.OdbcParameter> 来将结果限制为其 UnitPrice 大于指定参数值的行。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-130">The code creates a <xref:System.Data.Odbc.OdbcCommand> to select rows from the Products table, adding a <xref:System.Data.Odbc.OdbcParameter> to restrict the results to rows with a UnitPrice greater than the specified parameter value, in this case 5.</span></span> <span data-ttu-id="d8f7e-131"><xref:System.Data.Odbc.OdbcConnection> 在 `using` 块内打开，这将确保在代码退出时关闭并释放资源。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-131">The <xref:System.Data.Odbc.OdbcConnection> is opened inside a `using` block, which ensures that resources are closed and disposed when the code exits.</span></span> <span data-ttu-id="d8f7e-132">示例代码使用 <xref:System.Data.Odbc.OdbcDataReader> 执行命令，并在控制台窗口中显示结果。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-132">The code executes the command by using a <xref:System.Data.Odbc.OdbcDataReader>, and displays the results in the console window.</span></span>
+### <a name="odbc"></a><span data-ttu-id="8eef4-128">Odbc</span><span class="sxs-lookup"><span data-stu-id="8eef4-128">Odbc</span></span>
+<span data-ttu-id="8eef4-129">此示例中的代码假定你可以连接到 Microsoft Access Northwind 示例数据库。</span><span class="sxs-lookup"><span data-stu-id="8eef4-129">The code in this example assumes that you can connect to the Microsoft Access Northwind sample database.</span></span> <span data-ttu-id="8eef4-130">在此情形 5 中，示例代码创建一个 <xref:System.Data.Odbc.OdbcCommand> 以从 Products 表中选择行，并添加 <xref:System.Data.Odbc.OdbcParameter> 来将结果限制为其 UnitPrice 大于指定参数值的行。</span><span class="sxs-lookup"><span data-stu-id="8eef4-130">The code creates a <xref:System.Data.Odbc.OdbcCommand> to select rows from the Products table, adding a <xref:System.Data.Odbc.OdbcParameter> to restrict the results to rows with a UnitPrice greater than the specified parameter value, in this case 5.</span></span> <span data-ttu-id="8eef4-131">在<xref:System.Data.Odbc.OdbcConnection>`using`块内打开 ，这可确保在代码退出时关闭和释放资源。</span><span class="sxs-lookup"><span data-stu-id="8eef4-131">The <xref:System.Data.Odbc.OdbcConnection> is opened inside a `using` block, which ensures that resources are closed and disposed when the code exits.</span></span> <span data-ttu-id="8eef4-132">示例代码使用 <xref:System.Data.Odbc.OdbcDataReader> 执行命令，并在控制台窗口中显示结果。</span><span class="sxs-lookup"><span data-stu-id="8eef4-132">The code executes the command by using a <xref:System.Data.Odbc.OdbcDataReader>, and displays the results in the console window.</span></span>
 
-[!code-csharp[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/CS/source.cs#1)] 
-[!code-vb[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/VB/source.vb#1)] 
+[!code-csharp[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/CS/source.cs#1)]
+[!code-vb[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/VB/source.vb#1)]
 
-### <a name="oracleclient"></a><span data-ttu-id="d8f7e-133">OracleClient</span><span class="sxs-lookup"><span data-stu-id="d8f7e-133">OracleClient</span></span>
-<span data-ttu-id="d8f7e-134">此示例中的代码假定已建立与 Oracle 服务器上的 DEMO.CUSTOMER 的连接。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-134">The code in this example assumes a connection to DEMO.CUSTOMER on an Oracle server.</span></span> <span data-ttu-id="d8f7e-135">您还必须添加对 System.Data.OracleClient.dll 的引用。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-135">You must also add a reference to the System.Data.OracleClient.dll.</span></span> <span data-ttu-id="d8f7e-136">示例代码在 <xref:System.Data.OracleClient.OracleDataReader> 中返回数据。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-136">The code returns the data in an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>
+### <a name="oracleclient"></a><span data-ttu-id="8eef4-133">OracleClient</span><span class="sxs-lookup"><span data-stu-id="8eef4-133">OracleClient</span></span>
+<span data-ttu-id="8eef4-134">此示例中的代码假定已建立与 Oracle 服务器上的 DEMO.CUSTOMER 的连接。</span><span class="sxs-lookup"><span data-stu-id="8eef4-134">The code in this example assumes a connection to DEMO.CUSTOMER on an Oracle server.</span></span> <span data-ttu-id="8eef4-135">您还必须添加对 System.Data.OracleClient.dll 的引用。</span><span class="sxs-lookup"><span data-stu-id="8eef4-135">You must also add a reference to the System.Data.OracleClient.dll.</span></span> <span data-ttu-id="8eef4-136">示例代码在 <xref:System.Data.OracleClient.OracleDataReader> 中返回数据。</span><span class="sxs-lookup"><span data-stu-id="8eef4-136">The code returns the data in an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>
 
  [!code-csharp[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
 
-## <a name="entity-framework-examples"></a><span data-ttu-id="d8f7e-137">实体框架示例</span><span class="sxs-lookup"><span data-stu-id="d8f7e-137">Entity Framework examples</span></span>
-<span data-ttu-id="d8f7e-138">以下代码列表演示如何通过查询实体数据模型 (EDM) 中的实体来从数据源检索数据。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-138">The following code listings demonstrate how to retrieve data from a data source by querying entities in an Entity Data Model (EDM).</span></span> <span data-ttu-id="d8f7e-139">这些示例使用基于 Northwind 示例数据库的模型。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-139">These examples use a model based on the Northwind sample database.</span></span> <span data-ttu-id="d8f7e-140">有关实体框架的详细信息，请参阅[实体框架概述](./ef/overview.md)。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-140">For more information about Entity Framework, see [Entity Framework Overview](./ef/overview.md).</span></span>
+## <a name="entity-framework-examples"></a><span data-ttu-id="8eef4-137">实体框架示例</span><span class="sxs-lookup"><span data-stu-id="8eef4-137">Entity Framework examples</span></span>
+<span data-ttu-id="8eef4-138">以下代码列表演示如何通过查询实体数据模型 (EDM) 中的实体来从数据源检索数据。</span><span class="sxs-lookup"><span data-stu-id="8eef4-138">The following code listings demonstrate how to retrieve data from a data source by querying entities in an Entity Data Model (EDM).</span></span> <span data-ttu-id="8eef4-139">这些示例使用基于北风示例数据库的模型。</span><span class="sxs-lookup"><span data-stu-id="8eef4-139">These examples use a model based on the Northwind sample database.</span></span> <span data-ttu-id="8eef4-140">有关实体框架的详细信息，请参阅[实体框架概述](./ef/overview.md)。</span><span class="sxs-lookup"><span data-stu-id="8eef4-140">For more information about Entity Framework, see [Entity Framework Overview](./ef/overview.md).</span></span>
 
-### <a name="linq-to-entities"></a><span data-ttu-id="d8f7e-141">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="d8f7e-141">LINQ to Entities</span></span>
-<span data-ttu-id="d8f7e-142">此示例中的代码使用 LINQ 查询以 Categories 对象的形式返回数据，这些对象将作为仅包含 CategoryID 和 CategoryName 属性的匿名类型提取。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-142">The code in this example uses a LINQ query to return data as Categories objects, which are projected as an anonymous type that contains only the CategoryID and CategoryName properties.</span></span> <span data-ttu-id="d8f7e-143">有关详细信息，请参阅[LINQ to Entities 概述](./ef/language-reference/linq-to-entities.md)。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-143">For more information, see [LINQ to Entities Overview](./ef/language-reference/linq-to-entities.md).</span></span>
+### <a name="linq-to-entities"></a><span data-ttu-id="8eef4-141">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="8eef4-141">LINQ to Entities</span></span>
+<span data-ttu-id="8eef4-142">此示例中的代码使用 LINQ 查询以 Categories 对象的形式返回数据，这些对象将作为仅包含 CategoryID 和 CategoryName 属性的匿名类型提取。</span><span class="sxs-lookup"><span data-stu-id="8eef4-142">The code in this example uses a LINQ query to return data as Categories objects, which are projected as an anonymous type that contains only the CategoryID and CategoryName properties.</span></span> <span data-ttu-id="8eef4-143">有关详细信息，请参阅[LINQ 到实体概述](./ef/language-reference/linq-to-entities.md)。</span><span class="sxs-lookup"><span data-stu-id="8eef4-143">For more information, see [LINQ to Entities Overview](./ef/language-reference/linq-to-entities.md).</span></span>
 
 ```csharp
 using System;
@@ -135,8 +136,8 @@ Class LinqSample
 End Class
 ```
 
-### <a name="typed-objectquery"></a><span data-ttu-id="d8f7e-144">类型化 ObjectQuery</span><span class="sxs-lookup"><span data-stu-id="d8f7e-144">Typed ObjectQuery</span></span>
-<span data-ttu-id="d8f7e-145">此示例中的代码使用 <xref:System.Data.Objects.ObjectQuery%601> 以 Categories 对象的形式返回数据。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-145">The code in this example uses an <xref:System.Data.Objects.ObjectQuery%601> to return data as Categories objects.</span></span> <span data-ttu-id="d8f7e-146">有关详细信息，请参阅[对象查询](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-146">For more information, see [Object Queries](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)).</span></span>
+### <a name="typed-objectquery"></a><span data-ttu-id="8eef4-144">类型化 ObjectQuery</span><span class="sxs-lookup"><span data-stu-id="8eef4-144">Typed ObjectQuery</span></span>
+<span data-ttu-id="8eef4-145">此示例中的代码使用 <xref:System.Data.Objects.ObjectQuery%601> 以 Categories 对象的形式返回数据。</span><span class="sxs-lookup"><span data-stu-id="8eef4-145">The code in this example uses an <xref:System.Data.Objects.ObjectQuery%601> to return data as Categories objects.</span></span> <span data-ttu-id="8eef4-146">有关详细信息，请参阅[对象查询](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="8eef4-146">For more information, see [Object Queries](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)).</span></span>
 
 ```csharp
 using System;
@@ -151,7 +152,7 @@ class ObjectQuerySample
         {
             ObjectQuery<Categories> categoryQuery = context.Categories;
 
-            foreach (Categories category in 
+            foreach (Categories category in
                 categoryQuery.Execute(MergeOption.AppendOnly))
             {
                 Console.WriteLine("\t{0}\t{1}",
@@ -184,8 +185,8 @@ Class ObjectQuerySample
 End Class
 ```
 
-### <a name="entityclient"></a><span data-ttu-id="d8f7e-147">EntityClient</span><span class="sxs-lookup"><span data-stu-id="d8f7e-147">EntityClient</span></span>
-<span data-ttu-id="d8f7e-148">此示例中的代码使用 <xref:System.Data.EntityClient.EntityCommand> 来执行实体 SQL 查询。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-148">The code in this example uses an <xref:System.Data.EntityClient.EntityCommand> to execute an Entity SQL query.</span></span> <span data-ttu-id="d8f7e-149">此查询会返回表示 Categories 实体类型的实例的记录的列表。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-149">This query returns a list of records that represent instances of the Categories entity type.</span></span> <span data-ttu-id="d8f7e-150"><xref:System.Data.EntityClient.EntityDataReader> 用于访问结果集中的数据记录。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-150">An <xref:System.Data.EntityClient.EntityDataReader> is used to access data records in the result set.</span></span> <span data-ttu-id="d8f7e-151">有关详细信息，请参阅[实体框架的 EntityClient Provider](./ef/entityclient-provider-for-the-entity-framework.md)。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-151">For more information, see [EntityClient Provider for the Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).</span></span>
+### <a name="entityclient"></a><span data-ttu-id="8eef4-147">EntityClient</span><span class="sxs-lookup"><span data-stu-id="8eef4-147">EntityClient</span></span>
+<span data-ttu-id="8eef4-148">此示例中的代码使用 <xref:System.Data.EntityClient.EntityCommand> 来执行实体 SQL 查询。</span><span class="sxs-lookup"><span data-stu-id="8eef4-148">The code in this example uses an <xref:System.Data.EntityClient.EntityCommand> to execute an Entity SQL query.</span></span> <span data-ttu-id="8eef4-149">此查询会返回表示 Categories 实体类型的实例的记录的列表。</span><span class="sxs-lookup"><span data-stu-id="8eef4-149">This query returns a list of records that represent instances of the Categories entity type.</span></span> <span data-ttu-id="8eef4-150"><xref:System.Data.EntityClient.EntityDataReader> 用于访问结果集中的数据记录。</span><span class="sxs-lookup"><span data-stu-id="8eef4-150">An <xref:System.Data.EntityClient.EntityDataReader> is used to access data records in the result set.</span></span> <span data-ttu-id="8eef4-151">有关详细信息，请参阅 [用于 Entity Framework 的 EntityClient 提供程序](./ef/entityclient-provider-for-the-entity-framework.md)。</span><span class="sxs-lookup"><span data-stu-id="8eef4-151">For more information, see [EntityClient Provider for the Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).</span></span>
 
 ```csharp
 using System;
@@ -199,7 +200,7 @@ class EntityClientSample
     public static void ExecuteQuery()
     {
         string queryString =
-            @"SELECT c.CategoryID, c.CategoryName 
+            @"SELECT c.CategoryID, c.CategoryName
                 FROM NorthwindEntities.Categories AS c";
 
         using (EntityConnection conn =
@@ -210,7 +211,7 @@ class EntityClientSample
                 conn.Open();
                 using (EntityCommand query = new EntityCommand(queryString, conn))
                 {
-                    using (DbDataReader rdr = 
+                    using (DbDataReader rdr =
                         query.ExecuteReader(CommandBehavior.SequentialAccess))
                     {
                         while (rdr.Read())
@@ -262,13 +263,13 @@ Class EntityClientSample
             Catch ex As Exception
                 Console.WriteLine(ex.Message)
             End Try
-        End Using 
+        End Using
     End Sub
 End Class
 ```
 
-## <a name="linq-to-sql"></a><span data-ttu-id="d8f7e-152">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="d8f7e-152">LINQ to SQL</span></span>
-<span data-ttu-id="d8f7e-153">此示例中的代码使用 LINQ 查询以 Categories 对象的形式返回数据，这些对象将作为仅包含 CategoryID 和 CategoryName 属性的匿名类型提取。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-153">The code in this example uses a LINQ query to return data as Categories objects, which are projected as an anonymous type that contains only the CategoryID and CategoryName properties.</span></span> <span data-ttu-id="d8f7e-154">此示例基于 Northwind 数据上下文。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-154">This example is based on the Northwind data context.</span></span> <span data-ttu-id="d8f7e-155">有关详细信息，请参阅[入门](./sql/linq/getting-started.md)。</span><span class="sxs-lookup"><span data-stu-id="d8f7e-155">For more information, see [Getting Started](./sql/linq/getting-started.md).</span></span>
+## <a name="linq-to-sql"></a><span data-ttu-id="8eef4-152">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="8eef4-152">LINQ to SQL</span></span>
+<span data-ttu-id="8eef4-153">此示例中的代码使用 LINQ 查询以 Categories 对象的形式返回数据，这些对象将作为仅包含 CategoryID 和 CategoryName 属性的匿名类型提取。</span><span class="sxs-lookup"><span data-stu-id="8eef4-153">The code in this example uses a LINQ query to return data as Categories objects, which are projected as an anonymous type that contains only the CategoryID and CategoryName properties.</span></span> <span data-ttu-id="8eef4-154">此示例基于 Northwind 数据上下文。</span><span class="sxs-lookup"><span data-stu-id="8eef4-154">This example is based on the Northwind data context.</span></span> <span data-ttu-id="8eef4-155">有关详细信息，请参阅[入门](./sql/linq/getting-started.md)。</span><span class="sxs-lookup"><span data-stu-id="8eef4-155">For more information, see [Getting Started](./sql/linq/getting-started.md).</span></span>
 
 ```csharp
 using System;
@@ -334,15 +335,15 @@ Class LinqSqlSample
             Catch ex As Exception
                 Console.WriteLine(ex.Message)
             End Try
-            End Using 
+            End Using
     End Sub
 End Class
 ```
 
-## <a name="see-also"></a><span data-ttu-id="d8f7e-156">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d8f7e-156">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8eef4-156">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8eef4-156">See also</span></span>
 
-- [<span data-ttu-id="d8f7e-157">ADO.NET 概述</span><span class="sxs-lookup"><span data-stu-id="d8f7e-157">ADO.NET Overview</span></span>](ado-net-overview.md)
-- [<span data-ttu-id="d8f7e-158">在 ADO.NET 中检索和修改数据</span><span class="sxs-lookup"><span data-stu-id="d8f7e-158">Retrieving and Modifying Data in ADO.NET</span></span>](retrieving-and-modifying-data.md)
-- <span data-ttu-id="d8f7e-159">[创建数据应用程序](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))</span><span class="sxs-lookup"><span data-stu-id="d8f7e-159">[Creating Data Applications](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))</span></span>
-- <span data-ttu-id="d8f7e-160">[查询实体数据模型（实体框架任务）](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="d8f7e-160">[Querying an Entity Data Model (Entity Framework Tasks)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))</span></span>
-- <span data-ttu-id="d8f7e-161">[如何：执行返回匿名类型对象的查询](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="d8f7e-161">[How to: Execute a Query that Returns Anonymous Type Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))</span></span>
+- [<span data-ttu-id="8eef4-157">ADO.NET 概述</span><span class="sxs-lookup"><span data-stu-id="8eef4-157">ADO.NET Overview</span></span>](ado-net-overview.md)
+- [<span data-ttu-id="8eef4-158">在 ADO.NET 中检索和修改数据</span><span class="sxs-lookup"><span data-stu-id="8eef4-158">Retrieving and Modifying Data in ADO.NET</span></span>](retrieving-and-modifying-data.md)
+- <span data-ttu-id="8eef4-159">[创建数据应用程序](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))</span><span class="sxs-lookup"><span data-stu-id="8eef4-159">[Creating Data Applications](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))</span></span>
+- <span data-ttu-id="8eef4-160">[查询实体数据模型（实体框架任务）](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="8eef4-160">[Querying an Entity Data Model (Entity Framework Tasks)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))</span></span>
+- <span data-ttu-id="8eef4-161">[如何：执行返回匿名类型对象的查询](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="8eef4-161">[How to: Execute a Query that Returns Anonymous Type Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))</span></span>

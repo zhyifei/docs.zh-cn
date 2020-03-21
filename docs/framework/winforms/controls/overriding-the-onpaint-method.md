@@ -8,25 +8,25 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: e3c48aec830cdc3ccceb8683f93e3a99ee6364e2
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 863726a6264f01de9f00296b4a64b9fd1bb96765
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506193"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182033"
 ---
-# <a name="overriding-the-onpaint-method"></a><span data-ttu-id="9e4af-102">重写 OnPaint 方法</span><span class="sxs-lookup"><span data-stu-id="9e4af-102">Overriding the OnPaint Method</span></span>
-<span data-ttu-id="9e4af-103">重写任何.NET Framework 中定义的事件的基本步骤相同，并且在以下列表总结了。</span><span class="sxs-lookup"><span data-stu-id="9e4af-103">The basic steps for overriding any event defined in the .NET Framework are identical and are summarized in the following list.</span></span>  
+# <a name="overriding-the-onpaint-method"></a><span data-ttu-id="25cc8-102">重写 OnPaint 方法</span><span class="sxs-lookup"><span data-stu-id="25cc8-102">Overriding the OnPaint Method</span></span>
+<span data-ttu-id="25cc8-103">重写 .NET 框架中定义的任何事件的基本步骤相同，并汇总如下列表中。</span><span class="sxs-lookup"><span data-stu-id="25cc8-103">The basic steps for overriding any event defined in the .NET Framework are identical and are summarized in the following list.</span></span>  
   
-#### <a name="to-override-an-inherited-event"></a><span data-ttu-id="9e4af-104">若要重写继承的事件</span><span class="sxs-lookup"><span data-stu-id="9e4af-104">To override an inherited event</span></span>  
+#### <a name="to-override-an-inherited-event"></a><span data-ttu-id="25cc8-104">重写继承的事件</span><span class="sxs-lookup"><span data-stu-id="25cc8-104">To override an inherited event</span></span>  
   
-1. <span data-ttu-id="9e4af-105">重写受保护`On` *EventName*方法。</span><span class="sxs-lookup"><span data-stu-id="9e4af-105">Override the protected `On`*EventName* method.</span></span>  
+1. <span data-ttu-id="25cc8-105">重写受保护的`On`*事件名称*方法。</span><span class="sxs-lookup"><span data-stu-id="25cc8-105">Override the protected `On`*EventName* method.</span></span>  
   
-2. <span data-ttu-id="9e4af-106">调用`On` *EventName*方法重写从基类`On` *EventName*方法，因此已注册的委托接收事件。</span><span class="sxs-lookup"><span data-stu-id="9e4af-106">Call the `On`*EventName* method of the base class from the overridden `On`*EventName* method, so that registered delegates receive the event.</span></span>  
+2. <span data-ttu-id="25cc8-106">`On`从重写`On`*的 EventName*方法调用基类的*EventName*方法，以便注册代理接收事件。</span><span class="sxs-lookup"><span data-stu-id="25cc8-106">Call the `On`*EventName* method of the base class from the overridden `On`*EventName* method, so that registered delegates receive the event.</span></span>  
   
- <span data-ttu-id="9e4af-107"><xref:System.Windows.Forms.Control.Paint>在此处详细论述事件，因为每个 Windows 窗体控件必须重写<xref:System.Windows.Forms.Control.Paint>它所继承的事件<xref:System.Windows.Forms.Control>。</span><span class="sxs-lookup"><span data-stu-id="9e4af-107">The <xref:System.Windows.Forms.Control.Paint> event is discussed in detail here because every Windows Forms control must override the <xref:System.Windows.Forms.Control.Paint> event that it inherits from <xref:System.Windows.Forms.Control>.</span></span> <span data-ttu-id="9e4af-108">基<xref:System.Windows.Forms.Control>类不知道如何派生的控件需要绘制时，它不提供任何绘制逻辑中的<xref:System.Windows.Forms.Control.OnPaint%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="9e4af-108">The base <xref:System.Windows.Forms.Control> class does not know how a derived control needs to be drawn and does not provide any painting logic in the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span> <span data-ttu-id="9e4af-109"><xref:System.Windows.Forms.Control.OnPaint%2A>方法<xref:System.Windows.Forms.Control>只需将调度<xref:System.Windows.Forms.Control.Paint>到已注册的事件接收器的事件。</span><span class="sxs-lookup"><span data-stu-id="9e4af-109">The <xref:System.Windows.Forms.Control.OnPaint%2A> method of <xref:System.Windows.Forms.Control> simply dispatches the <xref:System.Windows.Forms.Control.Paint> event to registered event receivers.</span></span>  
+ <span data-ttu-id="25cc8-107">此处<xref:System.Windows.Forms.Control.Paint>将详细讨论该事件，因为每个 Windows 窗体控件都必须<xref:System.Windows.Forms.Control.Paint>覆盖从 继承的事件<xref:System.Windows.Forms.Control>。</span><span class="sxs-lookup"><span data-stu-id="25cc8-107">The <xref:System.Windows.Forms.Control.Paint> event is discussed in detail here because every Windows Forms control must override the <xref:System.Windows.Forms.Control.Paint> event that it inherits from <xref:System.Windows.Forms.Control>.</span></span> <span data-ttu-id="25cc8-108">基<xref:System.Windows.Forms.Control>类不知道如何绘制派生控件，也不在<xref:System.Windows.Forms.Control.OnPaint%2A>方法中提供任何绘制逻辑。</span><span class="sxs-lookup"><span data-stu-id="25cc8-108">The base <xref:System.Windows.Forms.Control> class does not know how a derived control needs to be drawn and does not provide any painting logic in the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span> <span data-ttu-id="25cc8-109"><xref:System.Windows.Forms.Control>简单地将<xref:System.Windows.Forms.Control.Paint>事件调度给已注册的事件接收器<xref:System.Windows.Forms.Control.OnPaint%2A>的方法。</span><span class="sxs-lookup"><span data-stu-id="25cc8-109">The <xref:System.Windows.Forms.Control.OnPaint%2A> method of <xref:System.Windows.Forms.Control> simply dispatches the <xref:System.Windows.Forms.Control.Paint> event to registered event receivers.</span></span>  
   
- <span data-ttu-id="9e4af-110">如果您已完成中的示例[如何：开发简单的 Windows 窗体控件](how-to-develop-a-simple-windows-forms-control.md)，你已了解的重写示例<xref:System.Windows.Forms.Control.OnPaint%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="9e4af-110">If you worked through the sample in [How to: Develop a Simple Windows Forms Control](how-to-develop-a-simple-windows-forms-control.md), you have seen an example of overriding the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span> <span data-ttu-id="9e4af-111">下面的代码片段摘自该示例。</span><span class="sxs-lookup"><span data-stu-id="9e4af-111">The following code fragment is taken from that sample.</span></span>  
+ <span data-ttu-id="25cc8-110">如果您通过["如何：开发一个简单的 Windows 窗体控件"](how-to-develop-a-simple-windows-forms-control.md)中的示例，则您看到了重写<xref:System.Windows.Forms.Control.OnPaint%2A>该方法的示例。</span><span class="sxs-lookup"><span data-stu-id="25cc8-110">If you worked through the sample in [How to: Develop a Simple Windows Forms Control](how-to-develop-a-simple-windows-forms-control.md), you have seen an example of overriding the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span> <span data-ttu-id="25cc8-111">以下代码片段取自该示例。</span><span class="sxs-lookup"><span data-stu-id="25cc8-111">The following code fragment is taken from that sample.</span></span>  
   
 ```vb  
 Public Class FirstControl  
@@ -41,7 +41,7 @@ Public Class FirstControl
       ' Call methods of the System.Drawing.Graphics object.  
       e.Graphics.DrawString(Text, Font, New SolidBrush(ForeColor), RectangleF.op_Implicit(ClientRectangle))  
    End Sub  
-End Class   
+End Class
 ```  
   
 ```csharp  
@@ -52,11 +52,11 @@ public class FirstControl : Control {
       base.OnPaint(e);  
       // Call methods of the System.Drawing.Graphics object.  
       e.Graphics.DrawString(Text, Font, new SolidBrush(ForeColor), ClientRectangle);  
-   }   
-}   
+   }
+}
 ```  
   
- <span data-ttu-id="9e4af-112"><xref:System.Windows.Forms.PaintEventArgs>类包含用于数据<xref:System.Windows.Forms.Control.Paint>事件。</span><span class="sxs-lookup"><span data-stu-id="9e4af-112">The <xref:System.Windows.Forms.PaintEventArgs> class contains data for the <xref:System.Windows.Forms.Control.Paint> event.</span></span> <span data-ttu-id="9e4af-113">它具有两个属性，如下面的代码中所示。</span><span class="sxs-lookup"><span data-stu-id="9e4af-113">It has two properties, as shown in the following code.</span></span>  
+ <span data-ttu-id="25cc8-112">类<xref:System.Windows.Forms.PaintEventArgs>包含<xref:System.Windows.Forms.Control.Paint>事件的数据。</span><span class="sxs-lookup"><span data-stu-id="25cc8-112">The <xref:System.Windows.Forms.PaintEventArgs> class contains data for the <xref:System.Windows.Forms.Control.Paint> event.</span></span> <span data-ttu-id="25cc8-113">它有两个属性，如下代码所示。</span><span class="sxs-lookup"><span data-stu-id="25cc8-113">It has two properties, as shown in the following code.</span></span>  
   
 ```vb  
 Public Class PaintEventArgs  
@@ -68,7 +68,7 @@ Public Class PaintEventArgs
   
    Public ReadOnly Property Graphics() As System.Drawing.Graphics  
       ...  
-   End Property   
+   End Property
    ...  
 End Class  
 ```  
@@ -82,12 +82,12 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- <span data-ttu-id="9e4af-114"><xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 是否要绘制的矩形和<xref:System.Windows.Forms.PaintEventArgs.Graphics%2A>属性是指<xref:System.Drawing.Graphics>对象。</span><span class="sxs-lookup"><span data-stu-id="9e4af-114"><xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> is the rectangle to be painted, and the <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> property refers to a <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="9e4af-115">中的类<xref:System.Drawing?displayProperty=nameWithType>管理命名空间提供的功能的 GDI + 中，新的 Windows 图形库的访问权限的类。</span><span class="sxs-lookup"><span data-stu-id="9e4af-115">The classes in the <xref:System.Drawing?displayProperty=nameWithType> namespace are managed classes that provide access to the functionality of GDI+, the new Windows graphics library.</span></span> <span data-ttu-id="9e4af-116"><xref:System.Drawing.Graphics>对象具有用于绘制点、 字符串、 线条、 弧线、 椭圆和许多其他形状的方法。</span><span class="sxs-lookup"><span data-stu-id="9e4af-116">The <xref:System.Drawing.Graphics> object has methods to draw points, strings, lines, arcs, ellipses, and many other shapes.</span></span>  
+ <span data-ttu-id="25cc8-114"><xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>是要绘制的矩形，<xref:System.Windows.Forms.PaintEventArgs.Graphics%2A>属性引用<xref:System.Drawing.Graphics>对象。</span><span class="sxs-lookup"><span data-stu-id="25cc8-114"><xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> is the rectangle to be painted, and the <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> property refers to a <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="25cc8-115">命名空间中的<xref:System.Drawing?displayProperty=nameWithType>类是托管类，提供对 GDI+ 功能（新的 Windows 图形库）的功能的访问。</span><span class="sxs-lookup"><span data-stu-id="25cc8-115">The classes in the <xref:System.Drawing?displayProperty=nameWithType> namespace are managed classes that provide access to the functionality of GDI+, the new Windows graphics library.</span></span> <span data-ttu-id="25cc8-116">该<xref:System.Drawing.Graphics>对象具有绘制点、字符串、线条、圆弧、椭圆和许多其他形状的方法。</span><span class="sxs-lookup"><span data-stu-id="25cc8-116">The <xref:System.Drawing.Graphics> object has methods to draw points, strings, lines, arcs, ellipses, and many other shapes.</span></span>  
   
- <span data-ttu-id="9e4af-117">控件调用其<xref:System.Windows.Forms.Control.OnPaint%2A>方法需要更改其可视显示时。</span><span class="sxs-lookup"><span data-stu-id="9e4af-117">A control invokes its <xref:System.Windows.Forms.Control.OnPaint%2A> method whenever it needs to change its visual display.</span></span> <span data-ttu-id="9e4af-118">此方法反过来引发<xref:System.Windows.Forms.Control.Paint>事件。</span><span class="sxs-lookup"><span data-stu-id="9e4af-118">This method in turn raises the <xref:System.Windows.Forms.Control.Paint> event.</span></span>  
+ <span data-ttu-id="25cc8-117">控件每当需要更改其<xref:System.Windows.Forms.Control.OnPaint%2A>可视显示时调用其方法。</span><span class="sxs-lookup"><span data-stu-id="25cc8-117">A control invokes its <xref:System.Windows.Forms.Control.OnPaint%2A> method whenever it needs to change its visual display.</span></span> <span data-ttu-id="25cc8-118">此方法反过来引发事件<xref:System.Windows.Forms.Control.Paint>。</span><span class="sxs-lookup"><span data-stu-id="25cc8-118">This method in turn raises the <xref:System.Windows.Forms.Control.Paint> event.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e4af-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="9e4af-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="25cc8-119">另请参阅</span><span class="sxs-lookup"><span data-stu-id="25cc8-119">See also</span></span>
 
-- [<span data-ttu-id="9e4af-120">事件</span><span class="sxs-lookup"><span data-stu-id="9e4af-120">Events</span></span>](../../../standard/events/index.md)
-- [<span data-ttu-id="9e4af-121">呈现 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="9e4af-121">Rendering a Windows Forms Control</span></span>](rendering-a-windows-forms-control.md)
-- [<span data-ttu-id="9e4af-122">定义事件</span><span class="sxs-lookup"><span data-stu-id="9e4af-122">Defining an Event</span></span>](defining-an-event-in-windows-forms-controls.md)
+- [<span data-ttu-id="25cc8-120">事件</span><span class="sxs-lookup"><span data-stu-id="25cc8-120">Events</span></span>](../../../standard/events/index.md)
+- [<span data-ttu-id="25cc8-121">呈现 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="25cc8-121">Rendering a Windows Forms Control</span></span>](rendering-a-windows-forms-control.md)
+- [<span data-ttu-id="25cc8-122">定义事件</span><span class="sxs-lookup"><span data-stu-id="25cc8-122">Defining an Event</span></span>](defining-an-event-in-windows-forms-controls.md)

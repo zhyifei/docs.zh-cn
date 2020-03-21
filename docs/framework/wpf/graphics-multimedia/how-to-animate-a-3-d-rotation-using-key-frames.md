@@ -1,35 +1,35 @@
 ---
-title: 如何：使用关键帧对三维旋转进行动画处理
+title: 如何：使用关键帧为 3D 旋转设置动画
 ms.date: 03/30/2017
 helpviewer_keywords:
-- animation [WPF], 3-D translations [WPF], with key frames (Rotation3DAnimation)
+- animation [WPF], 3D translations [WPF], with key frames (Rotation3DAnimation)
 - key frames [WPF], Rotation3DAnimation
-- 3-D translations [WPF], animating [WPF], with key frames (Rotation3DAnimation)
+- 3D translations [WPF], animating [WPF], with key frames (Rotation3DAnimation)
 ms.assetid: 6f671b95-7f30-4836-9a4f-aeb7dc30121f
-ms.openlocfilehash: e72ec94f830f0f5001a77e7492aa1326a47b309d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b9059df079125c34c70237c0f600751020044c6
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762145"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112305"
 ---
-# <a name="how-to-animate-a-3-d-rotation-using-key-frames"></a><span data-ttu-id="22910-102">如何：使用关键帧对三维旋转进行动画处理</span><span class="sxs-lookup"><span data-stu-id="22910-102">How to: Animate a 3-D Rotation Using Key Frames</span></span>
-<span data-ttu-id="22910-103">在以下示例中，<xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames>用于使三维旋转进行动画处理的旋转轴，从而导致"原因"时对象。</span><span class="sxs-lookup"><span data-stu-id="22910-103">In the following example, <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> is used to make a 3D object rotate while its axis of rotation animates resulting in a "wobble".</span></span> <span data-ttu-id="22910-104">此动画使用以下关键帧：</span><span class="sxs-lookup"><span data-stu-id="22910-104">This animation uses the following key frames:</span></span>  
+# <a name="how-to-animate-a-3d-rotation-using-key-frames"></a><span data-ttu-id="58dc9-102">如何：使用关键帧为 3D 旋转设置动画</span><span class="sxs-lookup"><span data-stu-id="58dc9-102">How to: Animate a 3D Rotation Using Key Frames</span></span>
+<span data-ttu-id="58dc9-103">在下面的示例中，<xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames>用于使 3D 对象旋转，而其旋转轴动画会导致"摆动"。</span><span class="sxs-lookup"><span data-stu-id="58dc9-103">In the following example, <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> is used to make a 3D object rotate while its axis of rotation animates resulting in a "wobble".</span></span> <span data-ttu-id="58dc9-104">此动画使用以下关键帧：</span><span class="sxs-lookup"><span data-stu-id="58dc9-104">This animation uses the following key frames:</span></span>  
   
-1. <span data-ttu-id="22910-105"><xref:System.Windows.Media.Animation.LinearRotation3DKeyFrame> 用于创建值之间的平滑的线性插值。</span><span class="sxs-lookup"><span data-stu-id="22910-105"><xref:System.Windows.Media.Animation.LinearRotation3DKeyFrame> is used to create a smooth, linear interpolation between values.</span></span>  
+1. <span data-ttu-id="58dc9-105"><xref:System.Windows.Media.Animation.LinearRotation3DKeyFrame>用于在值之间创建平滑的线性插值。</span><span class="sxs-lookup"><span data-stu-id="58dc9-105"><xref:System.Windows.Media.Animation.LinearRotation3DKeyFrame> is used to create a smooth, linear interpolation between values.</span></span>  
   
-2. <span data-ttu-id="22910-106"><xref:System.Windows.Media.Animation.DiscreteRotation3DKeyFrame> 用于之间创建突然"跳跃"的值 （没有内插法）。</span><span class="sxs-lookup"><span data-stu-id="22910-106"><xref:System.Windows.Media.Animation.DiscreteRotation3DKeyFrame> is used to create sudden "jumps" between values (no interpolation).</span></span>  
+2. <span data-ttu-id="58dc9-106"><xref:System.Windows.Media.Animation.DiscreteRotation3DKeyFrame>用于在值之间创建突然的"跳跃"（无插值）。</span><span class="sxs-lookup"><span data-stu-id="58dc9-106"><xref:System.Windows.Media.Animation.DiscreteRotation3DKeyFrame> is used to create sudden "jumps" between values (no interpolation).</span></span>  
   
-3. <span data-ttu-id="22910-107"><xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame> 用于创建具体取决于值之间的变量转换<xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame.KeySpline%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="22910-107"><xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame> is used to create a variable transition between values depending on the <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame.KeySpline%2A> property.</span></span> <span data-ttu-id="22910-108">在下面的示例中，此部分动画启动较慢，但是即将结束的时间段，以指数方式加速。</span><span class="sxs-lookup"><span data-stu-id="22910-108">In the example below, this part of the animation starts off slow but toward the end of the time segment, speeds up exponentially.</span></span>  
+3. <span data-ttu-id="58dc9-107"><xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame>用于根据<xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame.KeySpline%2A>属性在值之间创建变量转换。</span><span class="sxs-lookup"><span data-stu-id="58dc9-107"><xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame> is used to create a variable transition between values depending on the <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame.KeySpline%2A> property.</span></span> <span data-ttu-id="58dc9-108">在下面的示例中，动画的这一部分开始缓慢，但接近时段的末尾，速度呈指数级增长。</span><span class="sxs-lookup"><span data-stu-id="58dc9-108">In the example below, this part of the animation starts off slow but toward the end of the time segment, speeds up exponentially.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="22910-109">示例</span><span class="sxs-lookup"><span data-stu-id="22910-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="58dc9-109">示例</span><span class="sxs-lookup"><span data-stu-id="58dc9-109">Example</span></span>  
  [!code-xaml[Animation3DGallery_snip#Rotation3DAnimationUsingKeyFramesExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotation3DAnimationUsingKeyFramesExample.xaml#rotation3danimationusingkeyframesexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="22910-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="22910-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="58dc9-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="58dc9-110">See also</span></span>
 
-- [<span data-ttu-id="22910-111">3D 图形概述</span><span class="sxs-lookup"><span data-stu-id="22910-111">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)
-- [<span data-ttu-id="22910-112">关键帧动画概述</span><span class="sxs-lookup"><span data-stu-id="22910-112">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)
-- [<span data-ttu-id="22910-113">使用情节提要为 3D 旋转设置动画效果</span><span class="sxs-lookup"><span data-stu-id="22910-113">Animate a 3-D Rotation Using Storyboards</span></span>](how-to-animate-a-3-d-rotation-using-storyboards.md)
-- [<span data-ttu-id="22910-114">使用 Rotation3DAnimation 为 3D 旋转设置动画效果</span><span class="sxs-lookup"><span data-stu-id="22910-114">Animate a 3-D Rotation Using Rotation3DAnimation</span></span>](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
-- [<span data-ttu-id="22910-115">使用四元数为 3D 旋转设置动画效果</span><span class="sxs-lookup"><span data-stu-id="22910-115">Animate a 3-D Rotation Using Quaternions</span></span>](how-to-animate-a-3-d-rotation-using-quaternions.md)
-- [<span data-ttu-id="22910-116">使用关键帧为 3D 旋转设置动画效果 (QuaternionAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="22910-116">Animate a 3-D Rotation Using Key Frames (QuaternionAnimationUsingKeyFrames)</span></span>](animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)
+- [<span data-ttu-id="58dc9-111">3D 图形概述</span><span class="sxs-lookup"><span data-stu-id="58dc9-111">3D Graphics Overview</span></span>](3-d-graphics-overview.md)
+- [<span data-ttu-id="58dc9-112">关键帧动画概述</span><span class="sxs-lookup"><span data-stu-id="58dc9-112">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)
+- [<span data-ttu-id="58dc9-113">使用情节提要为 3D 旋转设置动画</span><span class="sxs-lookup"><span data-stu-id="58dc9-113">Animate a 3D Rotation Using Storyboards</span></span>](how-to-animate-a-3-d-rotation-using-storyboards.md)
+- [<span data-ttu-id="58dc9-114">使用旋转3D动画为 3D 旋转设置动画</span><span class="sxs-lookup"><span data-stu-id="58dc9-114">Animate a 3D Rotation Using Rotation3DAnimation</span></span>](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
+- [<span data-ttu-id="58dc9-115">使用四元数为 3D 旋转设置动画</span><span class="sxs-lookup"><span data-stu-id="58dc9-115">Animate a 3D Rotation Using Quaternions</span></span>](how-to-animate-a-3-d-rotation-using-quaternions.md)
+- [<span data-ttu-id="58dc9-116">使用关键帧为 3D 旋转设置动画（四元动画使用关键帧）</span><span class="sxs-lookup"><span data-stu-id="58dc9-116">Animate a 3D Rotation Using Key Frames (QuaternionAnimationUsingKeyFrames)</span></span>](animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)
