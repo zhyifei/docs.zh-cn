@@ -1,31 +1,31 @@
 ---
-title: 如何：向三维对象的正面和背面应用 Material
+title: 如何：将材质应用于 3D 对象的正面和背面
 ms.date: 03/30/2017
 helpviewer_keywords:
-- 3-D objects [WPF], applying Material class
-- Material class [WPF], applying to both sides of 3-D object
+- 3D objects [WPF], applying Material class
+- Material class [WPF], applying to both sides of 3D object
 - classes [WPF], Material
 ms.assetid: d93c8ad6-4939-4d29-9544-4d16d98093c1
-ms.openlocfilehash: 1d3f6a0622b5e0ccccf14af99782bb78dfe87ccb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c24879d97e7857fb07fcef4a9ba8efa901e4a39
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698950"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112136"
 ---
-# <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a><span data-ttu-id="a17b2-102">如何：向三维对象的正面和背面应用 Material</span><span class="sxs-lookup"><span data-stu-id="a17b2-102">How to: Apply Material to the Front and Back of a 3-D Object</span></span>
-<span data-ttu-id="a17b2-103">下面的示例演示如何应用<xref:System.Windows.Media.Media3D.Material>到前面和背面三维对象，并对要显示对象的两侧的对象进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="a17b2-103">The following example shows how to apply a <xref:System.Windows.Media.Media3D.Material> to the front and back of a 3-D object and animate the object to show both sides of the object.</span></span> <span data-ttu-id="a17b2-104"><xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A>的属性<xref:System.Windows.Media.Media3D.GeometryModel3D>用于将应用一个红色<xref:System.Windows.Media.Brush>到对象的正面和<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>属性<xref:System.Windows.Media.Media3D.GeometryModel3D>用于将应用一个蓝色<xref:System.Windows.Media.Brush>到后端的对象。</span><span class="sxs-lookup"><span data-stu-id="a17b2-104">The <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> property of a <xref:System.Windows.Media.Media3D.GeometryModel3D> is used to apply a red <xref:System.Windows.Media.Brush> to the front side of the object and the <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> property of the <xref:System.Windows.Media.Media3D.GeometryModel3D> is used to apply a blue <xref:System.Windows.Media.Brush> to the back side of the object.</span></span> <span data-ttu-id="a17b2-105">下面的代码显示了应用到该对象的材料：</span><span class="sxs-lookup"><span data-stu-id="a17b2-105">The code below shows the application of the materials to the object:</span></span>  
+# <a name="how-to-apply-material-to-the-front-and-back-of-a-3d-object"></a><span data-ttu-id="b44ef-102">如何：将材质应用于 3D 对象的正面和背面</span><span class="sxs-lookup"><span data-stu-id="b44ef-102">How to: Apply Material to the Front and Back of a 3D Object</span></span>
+<span data-ttu-id="b44ef-103">下面的示例演示如何将 应用于<xref:System.Windows.Media.Media3D.Material>3D 对象的正面和背面，并为对象设置动画以显示对象的两侧。</span><span class="sxs-lookup"><span data-stu-id="b44ef-103">The following example shows how to apply a <xref:System.Windows.Media.Media3D.Material> to the front and back of a 3D object and animate the object to show both sides of the object.</span></span> <span data-ttu-id="b44ef-104">的属性<xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A><xref:System.Windows.Media.Media3D.GeometryModel3D><xref:System.Windows.Media.Brush>用于将红色应用于对象的正面，<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>而 属性<xref:System.Windows.Media.Media3D.GeometryModel3D>用于将蓝色<xref:System.Windows.Media.Brush>应用于对象的背面。</span><span class="sxs-lookup"><span data-stu-id="b44ef-104">The <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> property of a <xref:System.Windows.Media.Media3D.GeometryModel3D> is used to apply a red <xref:System.Windows.Media.Brush> to the front side of the object and the <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> property of the <xref:System.Windows.Media.Media3D.GeometryModel3D> is used to apply a blue <xref:System.Windows.Media.Brush> to the back side of the object.</span></span> <span data-ttu-id="b44ef-105">下面的代码显示了材料在对象中的应用：</span><span class="sxs-lookup"><span data-stu-id="b44ef-105">The code below shows the application of the materials to the object:</span></span>  
   
  [!code-xaml[Animation3DGallery_snip#BackMaterialAnimationExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/BackMaterialAnimationExample.xaml#backmaterialanimationexampleinline1)]  
   
-## <a name="example"></a><span data-ttu-id="a17b2-106">示例</span><span class="sxs-lookup"><span data-stu-id="a17b2-106">Example</span></span>  
- <span data-ttu-id="a17b2-107">下面的代码演示了整个示例。</span><span class="sxs-lookup"><span data-stu-id="a17b2-107">The following code shows the entire sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="b44ef-106">示例</span><span class="sxs-lookup"><span data-stu-id="b44ef-106">Example</span></span>  
+ <span data-ttu-id="b44ef-107">以下代码显示整个示例。</span><span class="sxs-lookup"><span data-stu-id="b44ef-107">The following code shows the entire sample.</span></span>  
   
  [!code-xaml[Animation3DGallery_snip#BackMaterialAnimationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/BackMaterialAnimationExample.xaml#backmaterialanimationexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="a17b2-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="a17b2-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b44ef-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b44ef-108">See also</span></span>
 
-- [<span data-ttu-id="a17b2-109">创建 3D 场景</span><span class="sxs-lookup"><span data-stu-id="a17b2-109">Create a 3-D Scene</span></span>](how-to-create-a-3-d-scene.md)
-- [<span data-ttu-id="a17b2-110">3D 图形概述</span><span class="sxs-lookup"><span data-stu-id="a17b2-110">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)
-- [<span data-ttu-id="a17b2-111">在 3D 场景中为材料属性设置动画效果</span><span class="sxs-lookup"><span data-stu-id="a17b2-111">Animate Material Properties in a 3-D Scene</span></span>](how-to-animate-material-properties-in-a-3-d-scene.md)
-- [<span data-ttu-id="a17b2-112">向 3D 对象应用放射材料</span><span class="sxs-lookup"><span data-stu-id="a17b2-112">Apply Emissive Material to a 3-D Object</span></span>](how-to-apply-emissive-material-to-a-3-d-object.md)
+- [<span data-ttu-id="b44ef-109">创建 3D 场景</span><span class="sxs-lookup"><span data-stu-id="b44ef-109">Create a 3D Scene</span></span>](how-to-create-a-3-d-scene.md)
+- [<span data-ttu-id="b44ef-110">3D 图形概述</span><span class="sxs-lookup"><span data-stu-id="b44ef-110">3D Graphics Overview</span></span>](3-d-graphics-overview.md)
+- [<span data-ttu-id="b44ef-111">在 3D 场景中设置材质属性的动画</span><span class="sxs-lookup"><span data-stu-id="b44ef-111">Animate Material Properties in a 3D Scene</span></span>](how-to-animate-material-properties-in-a-3-d-scene.md)
+- [<span data-ttu-id="b44ef-112">将透射材料应用于 3D 对象</span><span class="sxs-lookup"><span data-stu-id="b44ef-112">Apply Emissive Material to a 3D Object</span></span>](how-to-apply-emissive-material-to-a-3-d-object.md)
