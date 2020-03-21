@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: d0250e573dc24bfcad97a2f2606cb2e6c8e520da
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17c42c5131252993d1f16e4a2f7a6450f0984d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782754"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149006"
 ---
 # <a name="schema-restrictions"></a>架构限制
-**GetSchema**方法的第二个可选参数是用于限制返回的架构信息量的限制，并将其作为字符串数组传递到**GetSchema**方法。 在数组中的位置确定可以传递的值，这等效于限制数。  
+**GetSchema**方法的第二个可选参数是用于限制返回的架构信息量的限制，它作为字符串数组传递给**GetSchema**方法。 在数组中的位置确定可以传递的值，这等效于限制数。  
   
  例如，下表说明使用适用于 SQL Server 的 .NET Framework 数据提供程序时“Tables”架构集合支持的限制。 SQL Server 架构集合的其他限制在本主题的结尾处列出。  
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|TABLE_CATALOG|1|  
-|Owner|@Owner|TABLE_SCHEMA|2|  
+|目录|@Catalog|TABLE_CATALOG|1|  
+|“所有者”|@Owner|TABLE_SCHEMA|2|  
 |表|@Name|TABLE_NAME|3|  
 |TableType|@TableType|TABLE_TYPE|4|  
   
 ## <a name="specifying-restriction-values"></a>指定限制值  
- 要使用“Tables”架构集合的一个限制，只需创建一个包含四个元素的字符串数组，然后在与限制数匹配的元素中填充值。 例如，若要将**GetSchema**方法返回的表仅限制为 "sales" 架构中的表，请先将数组的第二个元素设置为 "sales"，然后再将其传递给**GetSchema**方法。  
+ 要使用“Tables”架构集合的一个限制，只需创建一个包含四个元素的字符串数组，然后在与限制数匹配的元素中填充值。 例如，要将**GetSchema**方法返回的表限制为"销售"架构中的这些表，在将其传递给**GetSchema**方法之前，将数组的第二个元素设置为"Sales"。  
   
 > [!NOTE]
 > `SqlClient` 和 `OracleClient` 的限制集合还有附加的 `ParameterName` 列。 为了向后兼容，仍提供限制默认列，但是目前忽略该列。 在指定限制值时，应使用参数化查询（而不是字符串替换）来最大程度地降低受到 SQL 注入式攻击的风险。  
@@ -33,10 +33,10 @@ ms.locfileid: "70782754"
 > [!NOTE]
 > 数组中的元素数必须小于或等于指定架构集合支持的限制数，否则，将引发 <xref:System.ArgumentException>。 可以小于最大限制数。 缺少的限制假定为空（无限制）。  
   
- 可以通过将**GetSchema**方法与限制架构集合的名称（即 "限制"）一起调用，来 .NET Framework 查询受支持的限制列表。 此时将返回 <xref:System.Data.DataTable>，包含集合名称、限制名称、默认限制值和限制数的列表。  
+ 您可以查询 .NET Framework 托管提供程序，通过调用具有限制架构集合名称的**GetSchema**方法（即"限制"）来确定受支持限制的列表。 此时将返回 <xref:System.Data.DataTable>，包含集合名称、限制名称、默认限制值和限制数的列表。  
   
 ### <a name="example"></a>示例  
- 下面的示例演示如何使用<xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> SQL Server <xref:System.Data.SqlClient.SqlConnection>类的 .NET Framework 数据提供程序的方法来检索与**AdventureWorks**示例数据库中包含的所有表有关的架构信息。并且将返回的信息仅限于 "销售" 架构中的表：  
+ 以下示例演示如何使用 SQL Server<xref:System.Data.SqlClient.SqlConnection.GetSchema%2A><xref:System.Data.SqlClient.SqlConnection>类的 .NET 框架数据提供程序的方法检索有关**AdventureWorks**示例数据库中包含的所有表的架构信息，并将返回的信息限制为"销售"架构中仅返回的信息：  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -79,7 +79,7 @@ class Program
 {  
   static void Main()  
   {  
-    string connectionString =   
+    string connectionString =
        "Data Source=(local);Database=AdventureWorks;" +  
        "Integrated Security=true;";  
     using (SqlConnection connection =  
@@ -98,7 +98,7 @@ class Program
         {  
             foreach (System.Data.DataColumn col in table.Columns)  
             {  
-                Console.WriteLine("{0} = {1}",   
+                Console.WriteLine("{0} = {1}",
                   col.ColumnName, row[col]);  
             }  
             Console.WriteLine("============================");  
@@ -137,20 +137,20 @@ class Program
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|User_Name|@Name|NAME|1|  
+|User_Name|@Name|name|1|  
   
 ### <a name="databases"></a>数据库  
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|name|@Name|name|1|  
+|名称|@Name|名称|1|  
   
 ### <a name="tables"></a>表  
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|TABLE_CATALOG|1|  
-|Owner|@Owner|TABLE_SCHEMA|2|  
+|目录|@Catalog|TABLE_CATALOG|1|  
+|“所有者”|@Owner|TABLE_SCHEMA|2|  
 |表|@Name|TABLE_NAME|3|  
 |TableType|@TableType|TABLE_TYPE|4|  
   
@@ -158,8 +158,8 @@ class Program
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|TABLE_CATALOG|1|  
-|Owner|@Owner|TABLE_SCHEMA|2|  
+|目录|@Catalog|TABLE_CATALOG|1|  
+|“所有者”|@Owner|TABLE_SCHEMA|2|  
 |表|@Table|TABLE_NAME|3|  
 |列|@Column|COLUMN_NAME|4|  
   
@@ -167,25 +167,25 @@ class Program
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|TABLE_CATALOG|1|  
-|Owner|@Owner|TABLE_SCHEMA|2|  
+|目录|@Catalog|TABLE_CATALOG|1|  
+|“所有者”|@Owner|TABLE_SCHEMA|2|  
 |表|@Table|TABLE_NAME|3|  
 |列|@Column|COLUMN_NAME|4|  
   
-### <a name="views"></a>Views  
+### <a name="views"></a>视图  
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|TABLE_CATALOG|1|  
-|Owner|@Owner|TABLE_SCHEMA|2|  
+|目录|@Catalog|TABLE_CATALOG|1|  
+|“所有者”|@Owner|TABLE_SCHEMA|2|  
 |表|@Table|TABLE_NAME|3|  
   
 ### <a name="viewcolumns"></a>ViewColumns  
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|VIEW_CATALOG|1|  
-|Owner|@Owner|VIEW_SCHEMA|2|  
+|目录|@Catalog|VIEW_CATALOG|1|  
+|“所有者”|@Owner|VIEW_SCHEMA|2|  
 |表|@Table|VIEW_NAME|3|  
 |列|@Column|COLUMN_NAME|4|  
   
@@ -193,26 +193,26 @@ class Program
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|SPECIFIC_CATALOG|1|  
-|Owner|@Owner|SPECIFIC_SCHEMA|2|  
-|name|@Name|SPECIFIC_NAME|3|  
+|目录|@Catalog|SPECIFIC_CATALOG|1|  
+|“所有者”|@Owner|SPECIFIC_SCHEMA|2|  
+|名称|@Name|SPECIFIC_NAME|3|  
 |参数|@Parameter|PARAMETER_NAME|4|  
   
 ### <a name="procedures"></a>过程  
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|SPECIFIC_CATALOG|1|  
-|Owner|@Owner|SPECIFIC_SCHEMA|2|  
-|name|@Name|SPECIFIC_NAME|3|  
+|目录|@Catalog|SPECIFIC_CATALOG|1|  
+|“所有者”|@Owner|SPECIFIC_SCHEMA|2|  
+|名称|@Name|SPECIFIC_NAME|3|  
 |类型|@Type|ROUTINE_TYPE|4|  
   
 ### <a name="indexcolumns"></a>IndexColumns  
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|db_name()|1|  
-|Owner|@Owner|user_name()|2|  
+|目录|@Catalog|db_name()|1|  
+|“所有者”|@Owner|user_name()|2|  
 |表|@Table|o.name|3|  
 |ConstraintName|@ConstraintName|x.name|4|  
 |列|@Column|c.name|5|  
@@ -221,8 +221,8 @@ class Program
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|db_name()|1|  
-|Owner|@Owner|user_name()|2|  
+|目录|@Catalog|db_name()|1|  
+|“所有者”|@Owner|user_name()|2|  
 |表|@Table|o.name|3|  
   
 ### <a name="userdefinedtypes"></a>UserDefinedTypes  
@@ -236,31 +236,31 @@ class Program
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|CONSTRAINT_CATALOG|1|  
-|Owner|@Owner|CONSTRAINT_SCHEMA|2|  
+|目录|@Catalog|CONSTRAINT_CATALOG|1|  
+|“所有者”|@Owner|CONSTRAINT_SCHEMA|2|  
 |表|@Table|TABLE_NAME|3|  
-|name|@Name|CONSTRAINT_NAME|4|  
+|名称|@Name|CONSTRAINT_NAME|4|  
   
-## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008  
+## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008       
  下表列出了 SQL Server 2008 架构集合的限制。 这些限制从 .NET Framework 版本 3.5 SP1 和 SQL Server 2008 开始生效。 .NET Framework 和 SQL Server 的早期版本不支持这些限制。  
   
 ### <a name="columnsetcolumns"></a>ColumnSetColumns  
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|TABLE_CATALOG|1|  
-|Owner|@Owner|TABLE_SCHEMA|2|  
+|目录|@Catalog|TABLE_CATALOG|1|  
+|“所有者”|@Owner|TABLE_SCHEMA|2|  
 |表|@Table|TABLE_NAME|3|  
   
 ### <a name="allcolumns"></a>AllColumns  
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|TABLE_CATALOG|1|  
-|Owner|@Owner|TABLE_SCHEMA|2|  
+|目录|@Catalog|TABLE_CATALOG|1|  
+|“所有者”|@Owner|TABLE_SCHEMA|2|  
 |表|@Table|TABLE_NAME|3|  
 |列|@Column|COLUMN_NAME|4|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ADO.NET 概述](ado-net-overview.md)

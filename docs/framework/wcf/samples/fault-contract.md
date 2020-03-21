@@ -2,15 +2,15 @@
 title: 错误协定
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: d8ea7010bef389b49f68c811565a641a580e230a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c8e93f73d150132c9d6750b81ba2ade944808d40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716958"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183665"
 ---
 # <a name="fault-contract"></a>错误协定
-“错误协定”示例演示如何将错误信息从服务传达到客户端。 该示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，并向服务添加了一些附加代码，以将内部异常转换为错误。 客户端试图执行除数为零的运算以在服务上强制产生错误情况。  
+“错误协定”示例演示如何将错误信息从服务传达到客户端。 该示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，并将一些附加代码添加到服务中，以将内部异常转换为故障。 客户端试图执行除数为零的运算以在服务上强制产生错误情况。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -38,7 +38,7 @@ public interface ICalculator
 ```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class MathFault  
-{      
+{
     private string operation;  
     private string problemType;  
   
@@ -49,7 +49,7 @@ public class MathFault
         set { operation = value; }  
     }  
   
-    [DataMember]          
+    [DataMember]
     public string ProblemType  
     {  
         get { return problemType; }  
@@ -113,7 +113,7 @@ catch (FaultException<MathFault> e)
 </behaviors>  
 ```  
   
- 此外，通过将配置文件中的服务的 `behaviorConfiguration` 属性设置为 "CalculatorServiceBehavior"，该行为必须与服务相关联。  
+ 此外，必须通过将配置文件中的服务`behaviorConfiguration`属性设置为"计算器服务行为"来与服务关联。  
   
  若要在客户端上捕获这样的错误，必须捕获非泛型 <xref:System.ServiceModel.FaultException>。  
   
@@ -121,17 +121,17 @@ catch (FaultException<MathFault> e)
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已为 Windows[通信基础示例执行一次性设置过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+3. 要在单机或跨计算机配置中运行示例，请按照[运行 Windows 通信基础示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)说明操作。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
->   
+>
+> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  

@@ -1,22 +1,22 @@
 ---
-title: 如何：向三维对象应用放射材料
+title: 如何：将透射材料应用于 3D 对象
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- EmissiveMaterial [WPF], applying to 3-D objects
-- 3-D objects [WPF], applying EmissiveMaterial
+- EmissiveMaterial [WPF], applying to 3D objects
+- 3D objects [WPF], applying EmissiveMaterial
 ms.assetid: fd442cc2-5adc-487a-ba70-e45ed54bb3b4
-ms.openlocfilehash: b898148fa07950e3ad1eddcaf9206f7d6a837241
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf32b41ec2410c01ad137ec0ca9311f7c2b70061
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698961"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112149"
 ---
-# <a name="how-to-apply-emissive-material-to-a-3-d-object"></a>如何：向三维对象应用放射材料
-下面的示例演示如何使用<xref:System.Windows.Media.Media3D.EmissiveMaterial>将颜色添加到现有材料等于 EmissiveMaterial 的画笔的颜色。 下面的代码显示<xref:System.Windows.Media.Media3D.DiffuseMaterial>和<xref:System.Windows.Media.Media3D.EmissiveMaterial>应用中进行组合，以将蓝色添加到 DiffuseMaterial 的外观。  
+# <a name="how-to-apply-emissive-material-to-a-3d-object"></a>如何：将透射材料应用于 3D 对象
+下面的示例演示如何使用<xref:System.Windows.Media.Media3D.EmissiveMaterial>向等于 E 使材料画笔颜色的现有材质添加颜色。 下面的代码显示<xref:System.Windows.Media.Media3D.DiffuseMaterial>并<xref:System.Windows.Media.Media3D.EmissiveMaterial>结合应用，以向 Diffuse 材料的外观添加蓝色。  
   
  [!code-xaml[3DGallery_snip#EmmisiveMaterialAnimationExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/EmissiveMaterialExample.xaml#emmisivematerialanimationexampleinline1)]  
   
@@ -26,19 +26,19 @@ ms.locfileid: "61698961"
  [!code-vb[3DGallery_procedural_snip#EmissiveMaterialCodeExampleInline1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/emissivematerialexample.vb#emissivematerialcodeexampleinline1)]  
   
 ## <a name="example"></a>示例  
- 下面的代码演示在 XAML 中的整个示例。  
+ 以下代码在 XAML 中显示整个示例。  
   
  [!code-xaml[3DGallery_snip#EmissiveMaterialExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/EmissiveMaterialExample.xaml#emissivematerialexamplewholepage)]  
   
 ## <a name="example"></a>示例  
- 下面是在程序代码中的整个示例。  
+ 下面是过程代码中的全部示例。  
   
  [!code-csharp[3DGallery_procedural_snip#EmissiveMaterialCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/EmissiveMaterialExample.cs#emissivematerialcodeexamplewholepage)]
  [!code-vb[3DGallery_procedural_snip#EmissiveMaterialCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/emissivematerialexample.vb#emissivematerialcodeexamplewholepage)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建 3D 场景](how-to-create-a-3-d-scene.md)
 - [3D 图形概述](3-d-graphics-overview.md)
-- [在 3D 场景中为材料属性设置动画效果](how-to-animate-material-properties-in-a-3-d-scene.md)
-- [向 3D 对象的正面和背面应用材料](how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)
+- [在 3D 场景中设置材质属性的动画](how-to-animate-material-properties-in-a-3-d-scene.md)
+- [将材质应用于 3D 对象的正面和背面](how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)

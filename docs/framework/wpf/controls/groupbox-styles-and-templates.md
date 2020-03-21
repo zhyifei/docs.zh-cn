@@ -9,37 +9,37 @@ helpviewer_keywords:
 - styles [WPF], GroupBox
 - templates [WPF], GroupBox
 ms.assetid: 33df7037-0a1b-476f-b9d0-41566a777699
-ms.openlocfilehash: e5befffc86f26176da4accfc01239a08d4978713
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 474cda0abc6a18c015836c749c78f4d33aa5abd8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283765"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187480"
 ---
 # <a name="groupbox-styles-and-templates"></a>GroupBox 样式和模板
-<a name="introduction"></a>本主题介绍 <xref:System.Windows.Controls.GroupBox> 控件的样式和模板。 您可以修改默认 <xref:System.Windows.Controls.ControlTemplate> 以使控件具有独特的外观。 有关详细信息，请参阅为[控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
+<a name="introduction"></a>本主题介绍控件的<xref:System.Windows.Controls.GroupBox>样式和模板。 您可以修改默认值<xref:System.Windows.Controls.ControlTemplate>，为控件提供唯一的外观。 有关详细信息，请参阅为[控件创建模板](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
   
-<a name="groupbox_parts"></a>   
-## <a name="groupbox-parts"></a>分组框部分  
- <xref:System.Windows.Controls.GroupBox> 控件没有任何命名部分。  
+<a name="groupbox_parts"></a>
+## <a name="groupbox-parts"></a>组盒零件  
+ 该<xref:System.Windows.Controls.GroupBox>控件没有任何命名部件。  
   
-<a name="groupbox_states"></a>   
-## <a name="groupbox-states"></a>分组框状态  
- 下表列出了 <xref:System.Windows.Controls.GroupBox> 控件的可视状态。  
+<a name="groupbox_states"></a>
+## <a name="groupbox-states"></a>组盒状态  
+ 下表列出了控件的<xref:System.Windows.Controls.GroupBox>可视状态。  
   
 |VisualState 名称|VisualStateGroup 名称|说明|  
 |-|-|-|  
-|有效|ValidationStates|控件使用 <xref:System.Windows.Controls.Validation> 类，并且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是控件具有焦点 `true`。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加属性是 `true` 控件没有焦点。|  
+|有效|ValidationStates|控件使用 类<xref:System.Windows.Controls.Validation>，<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加属性为`false`。|  
+|InvalidFocused|ValidationStates|附加<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>属性具有`true`控件具有焦点。|  
+|InvalidUnfocused|ValidationStates|附加<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>属性是`true`具有控件没有焦点。|  
   
-<a name="groupbox_controltemplate_example"></a>   
-## <a name="groupbox-controltemplate-example"></a>分组 System.windows.controls.controltemplate> 示例  
- 下面的示例演示如何为 <xref:System.Windows.Controls.GroupBox> 控件定义 <xref:System.Windows.Controls.ControlTemplate>。  
+<a name="groupbox_controltemplate_example"></a>
+## <a name="groupbox-controltemplate-example"></a>组盒控制模板示例  
+ 下面的示例演示如何为<xref:System.Windows.Controls.ControlTemplate><xref:System.Windows.Controls.GroupBox>控件定义 。  
   
  [!code-xaml[ControlTemplateExamples#GroupBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/groupbox.xaml#groupbox)]  
   
- <xref:System.Windows.Controls.ControlTemplate> 使用以下一个或多个资源。  
+ 使用<xref:System.Windows.Controls.ControlTemplate>以下一个或多个资源。  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   

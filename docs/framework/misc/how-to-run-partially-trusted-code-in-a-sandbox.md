@@ -8,12 +8,12 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: 0191846f5589b0162ba342161fb5919ff20099d4
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: b2f5a72e747f6c71743a7b22fe9f1962ac2f6b53
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215861"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181184"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>如何：运行沙盒中部分受信任的代码
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -63,7 +63,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 方法返回 `Internet` 权限集或 `LocalIntranet` 权限集，具体取决于证据中的区域。 <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 还为一些作为引用传递的证据对象构造标识权限。  
   
-2. 为包含调用不受信任的代码的宿主类（在此示例中，命名为 `Sandboxer`）的程序集签名。 将用于对程序集签名的 <xref:System.Security.Policy.StrongName> 添加到 <xref:System.Security.Policy.StrongName> 调用的 `fullTrustAssemblies` 参数的 <xref:System.AppDomain.CreateDomain%2A> 数组中。 主机类必须作为完全受信任的类运行，以启用部分信任代码的执行或为部分信任应用程序提供服务。 这就是读取程序集的 <xref:System.Security.Policy.StrongName> 的方式：  
+2. 为包含调用不受信任的代码的宿主类（在此示例中，命名为 `Sandboxer`）的程序集签名。 将用于对程序集签名的 <xref:System.Security.Policy.StrongName> 添加到 <xref:System.AppDomain.CreateDomain%2A> 调用的 `fullTrustAssemblies` 参数的 <xref:System.Security.Policy.StrongName> 数组中。 主机类必须作为完全受信任的类运行，以启用部分信任代码的执行或为部分信任应用程序提供服务。 这就是读取程序集的 <xref:System.Security.Policy.StrongName> 的方式：  
   
     ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
@@ -71,7 +71,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      不需要将 .NET framework 程序集（如 mscorlib 和 System.dll）添加到完全信任列表中，因为它们是作为完全受信任的程序集从全局程序集缓存中加载的。  
   
-3. 初始化 <xref:System.AppDomainSetup> 方法的 <xref:System.AppDomain.CreateDomain%2A> 参数。 使用此参数，可以控制新的 <xref:System.AppDomain> 的许多设置。 <xref:System.AppDomainSetup.ApplicationBase%2A> 属性是一个重要设置，并且应不同于宿主应用程序的 <xref:System.AppDomainSetup.ApplicationBase%2A> 的 <xref:System.AppDomain> 属性。 如果 <xref:System.AppDomainSetup.ApplicationBase%2A> 设置相同，则部分信任应用程序可以获取主机应用程序以加载（作为完全受信任的应用程序）它定义的异常，从而攻击它。 这是为什么不建议使用 catch（异常）的另一个原因。 将主机的应用程序基设置为与沙盒应用程序的应用程序基不同，这可降低攻击风险。  
+3. 初始化 <xref:System.AppDomain.CreateDomain%2A> 方法的 <xref:System.AppDomainSetup> 参数。 使用此参数，可以控制新的 <xref:System.AppDomain> 的许多设置。 <xref:System.AppDomainSetup.ApplicationBase%2A> 属性是一个重要设置，并且应不同于宿主应用程序的 <xref:System.AppDomain> 的 <xref:System.AppDomainSetup.ApplicationBase%2A> 属性。 如果 <xref:System.AppDomainSetup.ApplicationBase%2A> 设置相同，则部分信任应用程序可以获取主机应用程序以加载（作为完全受信任的应用程序）它定义的异常，从而攻击它。 这是为什么不建议使用 catch（异常）的另一个原因。 将主机的应用程序基设置为与沙盒应用程序的应用程序基不同，这可降低攻击风险。  
   
     ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
@@ -83,18 +83,18 @@ AppDomain.CreateDomain( string friendlyName,
      此方法的签名是：  
   
     ```csharp
-    public static AppDomain CreateDomain(string friendlyName,   
-        Evidence securityInfo, AppDomainSetup info, PermissionSet grantSet,   
+    public static AppDomain CreateDomain(string friendlyName,
+        Evidence securityInfo, AppDomainSetup info, PermissionSet grantSet,
         params StrongName[] fullTrustAssemblies)  
     ```  
   
      其他信息：  
   
-    - 这是唯一将 <xref:System.AppDomain.CreateDomain%2A> 作为参数的 <xref:System.Security.PermissionSet> 方法的重载，因而它是唯一允许以部分信任设置加载应用程序的重载。  
+    - 这是唯一将 <xref:System.Security.PermissionSet> 作为参数的 <xref:System.AppDomain.CreateDomain%2A> 方法的重载，因而它是唯一允许以部分信任设置加载应用程序的重载。  
   
     - `evidence` 参数不用于计算权限集；它由 .NET Framework 的其它功能用于标识。  
   
-    - 此重载必须设置<xref:System.AppDomainSetup.ApplicationBase%2A> 参数的 `info` 属性。  
+    - 此重载必须设置`info` 参数的 <xref:System.AppDomainSetup.ApplicationBase%2A> 属性。  
   
     - `fullTrustAssemblies` 参数具有 `params` 关键字，这意味着不需要创建 <xref:System.Security.Policy.StrongName> 数组。 允许将 0、1 或更多强名称作为参数传递。  
   
@@ -108,13 +108,13 @@ AppDomain.CreateDomain( string friendlyName,
   
     - 调用程序集的 <xref:System.AppDomain.ExecuteAssembly%2A> 方法。  
   
-    - 使用 <xref:System.Activator.CreateInstanceFrom%2A> 方法来创建派生自新的 <xref:System.MarshalByRefObject> 中的 <xref:System.AppDomain> 的类的实例。  
+    - 使用 <xref:System.Activator.CreateInstanceFrom%2A> 方法来创建派生自新的 <xref:System.AppDomain> 中的 <xref:System.MarshalByRefObject> 的类的实例。  
   
      第二种方法非常可取，因为这样可以更轻松地将参数传递给新的 <xref:System.AppDomain> 实例。 <xref:System.Activator.CreateInstanceFrom%2A> 方法提供两大重要功能：  
   
     - 可以使用指向不包含你的程序集的位置的基本代码。  
   
-    - 可以在完全信任 (<xref:System.Security.CodeAccessPermission.Assert%2A>) 的 <xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType> 下进行创建，这样就可以创建关键类的一个实例。 （只要程序集没有透明标记，并加载为完全受信任，就会发生这种情况。）因此，你必须小心地仅创建与此函数信任的代码，我们建议你仅在新应用程序域中创建完全受信任的类的实例。  
+    - 可以在完全信任 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) 的 <xref:System.Security.CodeAccessPermission.Assert%2A> 下进行创建，这样就可以创建关键类的一个实例。 （每当程序集没有透明度标记且加载为完全受信任的标记时，就会发生这种情况。因此，您必须小心只创建您信任的代码使用此函数，我们建议您仅在新的应用程序域中创建完全受信任的类的实例。  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
@@ -134,7 +134,7 @@ AppDomain.CreateDomain( string friendlyName,
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
-7. 调用你刚刚创建的 `ExecuteUntrustedCode` 类的实例中的 `Sandboxer` 方法。  
+7. 调用你刚刚创建的 `Sandboxer` 类的实例中的 `ExecuteUntrustedCode` 方法。  
   
     ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
@@ -145,7 +145,7 @@ AppDomain.CreateDomain( string friendlyName,
     ```csharp
     public void ExecuteUntrustedCode(string assemblyName, string typeName, string entryPoint, Object[] parameters)  
     {  
-        //Load the MethodInfo for a method in the new assembly. This might be a method you know, or   
+        //Load the MethodInfo for a method in the new assembly. This might be a method you know, or
         //you can use Assembly.EntryPoint to get to the entry point in an executable.  
         MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
         try  
@@ -155,7 +155,7 @@ AppDomain.CreateDomain( string friendlyName,
         }  
         catch (Exception ex)  
         {  
-        //When information is obtained from a SecurityException extra information is provided if it is   
+        //When information is obtained from a SecurityException extra information is provided if it is
         //accessed in full-trust.  
             new PermissionSet(PermissionState.Unrestricted).Assert();  
             Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
@@ -167,13 +167,13 @@ AppDomain.CreateDomain( string friendlyName,
   
      <xref:System.Reflection> 用于获取部分受信任的程序集中的方法的句柄。 该句柄可以用于以安全的方式、使用最小权限来执行代码。  
   
-     在前面的代码中，请在打印 <xref:System.Security.PermissionSet.Assert%2A> 之前备注完全信任权限的 <xref:System.Security.SecurityException>。  
+     在前面的代码中，请在打印 <xref:System.Security.SecurityException> 之前备注完全信任权限的 <xref:System.Security.PermissionSet.Assert%2A>。  
   
     ```csharp
     new PermissionSet(PermissionState.Unrestricted).Assert()  
     ```  
   
-     完全信任断言用于从 <xref:System.Security.SecurityException> 中获取扩展信息。 没有 <xref:System.Security.PermissionSet.Assert%2A>，则 <xref:System.Security.SecurityException.ToString%2A> 的 <xref:System.Security.SecurityException> 方法将发现堆栈上有部分受信任的代码，并将限制返回的信息。 如果部分信任代码可以读取该信息，可能会导致安全问题，但可以通过不授予 <xref:System.Security.Permissions.UIPermission> 来缓解此风险。 完全信任断言应慎用，且仅在确定不允许部分信任代码提升为完全信任代码时使用。 一般来说，不要调用同一函数中不信任的代码，也不要在调用完全信任断言后调用代码。 始终在完成使用断言后还原断言，这是个好做法。  
+     完全信任断言用于从 <xref:System.Security.SecurityException> 中获取扩展信息。 没有 <xref:System.Security.PermissionSet.Assert%2A>，则 <xref:System.Security.SecurityException> 的 <xref:System.Security.SecurityException.ToString%2A> 方法将发现堆栈上有部分受信任的代码，并将限制返回的信息。 如果部分信任代码可以读取该信息，可能会导致安全问题，但可以通过不授予 <xref:System.Security.Permissions.UIPermission> 来缓解此风险。 完全信任断言应慎用，且仅在确定不允许部分信任代码提升为完全信任代码时使用。 一般来说，不要调用同一函数中不信任的代码，也不要在调用完全信任断言后调用代码。 始终在完成使用断言后还原断言，这是个好做法。  
   
 ## <a name="example"></a>示例  
  下面的示例实现前一部分中的过程。 在此示例中，Visual Studio 解决方案中一个名为 `Sandboxer` 的项目还包含一个名为 `UntrustedCode` 的项目（该项目实现类 `UntrustedClass`）。 此方案假定你已下载库程序集，该程序集包含应该返回 `true` 或 `false` 的方法，以指示你提供的数字是否为斐波纳契数。 相反，该方法会尝试从你的计算机中读取文件。 下面的示例演示不受信任的代码。  
@@ -210,7 +210,7 @@ using System.Security.Permissions;
 using System.Reflection;  
 using System.Runtime.Remoting;  
   
-//The Sandboxer class needs to derive from MarshalByRefObject so that we can create it in another   
+//The Sandboxer class needs to derive from MarshalByRefObject so that we can create it in another
 // AppDomain and refer to it from the default AppDomain.  
 class Sandboxer : MarshalByRefObject  
 {  
@@ -221,12 +221,12 @@ class Sandboxer : MarshalByRefObject
     private static Object[] parameters = { 45 };  
     static void Main()  
     {  
-        //Setting the AppDomainSetup. It is very important to set the ApplicationBase to a folder   
+        //Setting the AppDomainSetup. It is very important to set the ApplicationBase to a folder
         //other than the one in which the sandboxer resides.  
         AppDomainSetup adSetup = new AppDomainSetup();  
         adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
   
-        //Setting the permissions for the AppDomain. We give the permission to execute and to   
+        //Setting the permissions for the AppDomain. We give the permission to execute and to
         //read/discover the location where the untrusted code is loaded.  
         PermissionSet permSet = new PermissionSet(PermissionState.None);  
         permSet.AddPermission(new SecurityPermission(SecurityPermissionFlag.Execution));  
@@ -238,19 +238,19 @@ class Sandboxer : MarshalByRefObject
         AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
   
         //Use CreateInstanceFrom to load an instance of the Sandboxer class into the  
-        //new AppDomain.   
+        //new AppDomain.
         ObjectHandle handle = Activator.CreateInstanceFrom(  
             newDomain, typeof(Sandboxer).Assembly.ManifestModule.FullyQualifiedName,  
             typeof(Sandboxer).FullName  
             );  
-        //Unwrap the new domain instance into a reference in this domain and use it to execute the   
+        //Unwrap the new domain instance into a reference in this domain and use it to execute the
         //untrusted code.  
         Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
         newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
     }  
     public void ExecuteUntrustedCode(string assemblyName, string typeName, string entryPoint, Object[] parameters)  
     {  
-        //Load the MethodInfo for a method in the new Assembly. This might be a method you know, or   
+        //Load the MethodInfo for a method in the new Assembly. This might be a method you know, or
         //you can use Assembly.EntryPoint to get to the main function in an executable.  
         MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
         try  
@@ -260,7 +260,7 @@ class Sandboxer : MarshalByRefObject
         }  
         catch (Exception ex)  
         {  
-            // When we print informations from a SecurityException extra information can be printed if we are   
+            // When we print informations from a SecurityException extra information can be printed if we are
             //calling it with a full-trust stack.  
             new PermissionSet(PermissionState.Unrestricted).Assert();  
             Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
@@ -273,4 +273,4 @@ class Sandboxer : MarshalByRefObject
   
 ## <a name="see-also"></a>另请参阅
 
-- [安全编码准则](../../standard/security/secure-coding-guidelines.md)
+- [代码安全维护指南](../../standard/security/secure-coding-guidelines.md)

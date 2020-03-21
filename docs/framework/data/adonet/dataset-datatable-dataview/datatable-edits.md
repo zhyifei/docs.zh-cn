@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: 689a297eb5368d35c2e7dd034426edbe665e7ed2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e8c4204b51121b147fc7614066d9b849a687574
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785383"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151255"
 ---
 # <a name="datatable-edits"></a>数据表编辑
-当您在 <xref:System.Data.DataRow> 中更改列值时，所做更改会立即置于行的当前状态中。 然后<xref:System.Data.DataRowState> ，将设置为 "**已修改**"，并使用<xref:System.Data.DataRow.AcceptChanges%2A> **DataRow**的或<xref:System.Data.DataRow.RejectChanges%2A>方法来接受或拒绝更改。 **DataRow**还提供了三种方法，可用于在编辑行时挂起行的状态。 这三个方法是 <xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> 和 <xref:System.Data.DataRow.CancelEdit%2A>。  
+当您在 <xref:System.Data.DataRow> 中更改列值时，所做更改会立即置于行的当前状态中。 然后<xref:System.Data.DataRowState>设置为 **"已修改 "，** 并使用<xref:System.Data.DataRow.AcceptChanges%2A>**DataRow**的 或<xref:System.Data.DataRow.RejectChanges%2A>方法接受或拒绝更改。 **DataRow**还提供三种方法，可用于在编辑行时挂起行的状态。 这三个方法是 <xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> 和 <xref:System.Data.DataRow.CancelEdit%2A>。  
   
- 当直接在**datarow**中修改列值时， **Datarow**会使用**Current**、 **Default**和**原始**行版本来管理列值。 除了这些行版本之外， **BeginEdit**、 **EndEdit**和**CancelEdit**方法还使用第四行版本：**建议**。 有关行版本的详细信息，请参阅[行状态和行版本](row-states-and-row-versions.md)。  
+ 直接修改**DataRow**中的列值时 **，DataRow**将使用 **"当前**"、"**默认**"和 **"原始**行"版本管理列值。 除了这些行版本外，"**开始编辑**"、"**结束编辑****"和"取消编辑"** 方法使用第四行版本：**建议**。 有关行版本的详细信息，请参阅[行状态和行版本](row-states-and-row-versions.md)。  
   
- **建议**的行版本在编辑操作期间存在，该操作通过调用**BeginEdit**开始，并通过使用**EndEdit**或**CancelEdit**或通过调用**AcceptChanges**或**RejectChanges**结束。  
+ **建议的**行版本存在于编辑操作中，该操作以调用**BeginEdit**开始，最后使用 **"结束编辑"** 或 **"取消编辑"，** 或调用 **"接受更改**"或 **"拒绝更改**"。  
   
- 在编辑操作期间，可以通过在**DataTable**的**ColumnChanged**事件中计算**ProposedValue** ，将验证逻辑应用于单个列。 **ColumnChanged**事件保存**DataColumnChangeEventArgs** ，可保持对正在更改的列和**ProposedValue**的引用。 计算了建议值后，可以对其进行修改或取消编辑。 当编辑结束时，该行将移出**建议**状态。  
+ 在编辑操作期间，您可以通过在**DataTable**的**列更改**事件中评估 **"建议值**"来将验证逻辑应用于各个列。 **"列更改"** 事件保存**DataColumnChangeEventArgs，该事件**保留对正在更改的列和**建议值**的引用。 计算了建议值后，可以对其进行修改或取消编辑。 编辑结束时，行将移出 **"建议"** 状态。  
   
- 可以通过调用**EndEdit**来确认编辑，也可以通过调用**CancelEdit**来取消编辑。 请注意，尽管**EndEdit**确认了您的编辑，但在调用**AcceptChanges**之前，**数据集**并不会实际接受更改。 另请注意，如果在使用**EndEdit**或**CancelEdit**结束编辑之前调用**AcceptChanges** ，编辑将结束，同时将为**当前**行版本和**原始**行版本接受**建议**的行值。 同样，调用**RejectChanges**会结束编辑并放弃**当前**和**建议**的行版本。 调用**AcceptChanges**或**RejectChanges**后，调用**EndEdit**或**CancelEdit**不起作用，因为编辑已结束。  
+ 您可以通过调用**EndEdit**来确认编辑，也可以通过调用**CancelEdit**来取消编辑。 请注意，虽然**EndEdit**确实确认您的编辑，但**DataSet**在调用 **"接受更改**"之前实际上不会接受更改。 另请注意，如果在结束编辑或**取消编辑**之前调用 **"接受更改**"，则编辑将结束，**并且"当前**"行版本和**原始**行版本均接受 **"建议**行"值。 **EndEdit** 以同样的方式，调用**拒绝更改**结束编辑并丢弃**当前**和**建议的**行版本。 调用"**接受更改**"或 **"拒绝更改**"后调用 **"结束编辑**"或 **"取消编辑"** 不起作用，因为编辑已结束。  
   
- 下面的示例演示如何将**BeginEdit**与**EndEdit**和**CancelEdit**一起使用。 该示例还检查**ColumnChanged**事件中的**ProposedValue** ，并决定是否取消编辑。  
+ 下面的示例演示如何使用 **"开始编辑**"与**结束编辑**和**取消编辑**。 该示例还检查 **"列更改"** 事件中**的"建议值**"，并决定是否取消编辑。  
   
 ```vb  
 Dim workTable As DataTable = New DataTable  
@@ -38,7 +38,7 @@ workTable.Rows.Add(workRow)
   
 workRow.BeginEdit()  
 ' Causes the ColumnChanged event to write a message and cancel the edit.  
-workRow(0) = ""       
+workRow(0) = ""
 workRow.EndEdit()  
   
 ' Displays "Smith, New".  
@@ -59,7 +59,7 @@ End Sub
 DataTable workTable  = new DataTable();  
 workTable.Columns.Add("LastName", typeof(String));  
   
-workTable.ColumnChanged +=   
+workTable.ColumnChanged +=
   new DataColumnChangeEventHandler(OnColumnChanged);  
   
 DataRow workRow = workTable.NewRow();  
@@ -68,11 +68,11 @@ workTable.Rows.Add(workRow);
   
 workRow.BeginEdit();  
 // Causes the ColumnChanged event to write a message and cancel the edit.  
-workRow[0] = "";       
+workRow[0] = "";
 workRow.EndEdit();  
   
 // Displays "Smith, New".  
-Console.WriteLine("{0}, {1}", workRow[0], workRow.RowState);    
+Console.WriteLine("{0}, {1}", workRow[0], workRow.RowState);
   
 protected static void OnColumnChanged(  
   Object sender, DataColumnChangeEventArgs args)  
@@ -86,7 +86,7 @@ protected static void OnColumnChanged(
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>

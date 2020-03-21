@@ -2,25 +2,25 @@
 title: 本地通道
 ms.date: 03/30/2017
 ms.assetid: fa1917a4-f701-4e82-a439-14a16282c7cc
-ms.openlocfilehash: 6bc1fac22f6eed3c9acb6b86f7611cbfb4e1d371
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 87e140395ac2fb5702d8655cf970da8a60c991ec
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714889"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144502"
 ---
 # <a name="local-channel"></a>本地通道
-本地通道是用于在相同应用程序域内进行通信的 Windows Communication Foundation （WCF）传输通道。 对于客户端和服务在相同应用程序域内运行，并且必须避免典型 WCF 通道堆栈（消息的序列化和反序列化）开销的方案，这十分有用。  
+本地通道是用于同一应用程序域内通信的 Windows 通信基础 （WCF） 传输通道。 对于客户端和服务在相同应用程序域内运行，并且必须避免典型 WCF 通道堆栈（消息的序列化和反序列化）开销的方案，这十分有用。  
   
-## <a name="demonstrates"></a>演示文本  
+## <a name="demonstrates"></a>演示  
  本地通道  
   
-## <a name="discussion"></a>讨论  
+## <a name="discussion"></a>讨论区  
  示例由两个项目文件组成：  
   
-- **LocalChannel**：当前应用程序域中的本地通道的编程表示形式。 在此项目中，发送组件将消息放置在内存中队列中，接收组件将消息从队列中取出以进行接收。  
+- **本地通道**：当前应用程序域中本地通道的编程表示形式。 在此项目中，发送组件将消息放置在内存中队列中，接收组件将消息从队列中取出以进行接收。  
   
-- **ClientAndService**：此项目在控制台应用程序中承载服务，然后运行客户端，以便从同一应用程序域中调用服务。  
+- **客户端和服务**：此项目在控制台应用程序中托管服务，然后运行客户端以从同一应用程序域中调用该服务。  
   
  本地通道设计跳过通道堆栈和序列化过程以提高速度。 本地传输通道使用队列实现，以将服务调用从客户端传输到服务并将值返回到客户端。 示例复制对象，而不是对参数和返回值进行序列化。  
   
@@ -32,9 +32,9 @@ ms.locfileid: "74714889"
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
->   
+>
+> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\LocalChannel`

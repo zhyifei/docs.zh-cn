@@ -1,23 +1,23 @@
 ---
-title: 如何在 WAS 中承载 WCF
+title: 如何：在 WAS 中承载 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 9945e398bbd33776cce808b44388a4415da297a1
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 823c3b8452a3fd1c95758d2d09a9effdf02075c8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964774"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184917"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a>如何在 WAS 中承载 WCF
-本主题概述了创建 Windows 进程激活服务（也称为 WAS）托管 Windows Communication Foundation （WCF）服务所需的基本步骤。 WAS 是新的进程激活服务，是对使用非 HTTP 传输协议的 Internet Information Services (IIS) 功能的泛化。 WCF 使用侦听器适配器接口传递通过 WCF 支持的非 HTTP 协议（如 TCP、命名管道和消息队列）接收的激活请求。  
+# <a name="how-to-host-a-wcf-service-in-was"></a>如何：在 WAS 中承载 WCF 服务
+本主题概述了创建 Windows 进程激活服务（也称为 WAS） 托管 Windows 通信基础 （WCF） 服务所需的基本步骤。 WAS 是新的进程激活服务，是对使用非 HTTP 传输协议的 Internet Information Services (IIS) 功能的泛化。 WCF 使用侦听器适配器接口来通信通过 WCF 支持的非 HTTP 协议（如 TCP、命名管道和消息队列）收到的激活请求。  
   
  此主机选项要求正确安装和配置 WAS 激活组件，但不要求编写任何主机代码作为应用程序的一部分。 有关安装和配置 WAS 的详细信息，请参阅[如何：安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
   
 > [!WARNING]
 > 如果将 Web 服务器的请求处理管道设置为经典模式，则将不支持 WAS 激活。 如果要使用 WAS 激活，则必须将 Web 服务器的请求处理管道设置为集成模式。  
   
- 当在 WAS 中承载 WCF 服务时，将按常规方式使用标准绑定。 但是，在使用 <xref:System.ServiceModel.NetTcpBinding> 和 <xref:System.ServiceModel.NetNamedPipeBinding> 配置 WAS 承载的服务时，必须满足一个约束条件。 当不同的终结点使用相同的传输时，绑定设置必须在以下的七个属性上相匹配：  
+ 当 WCF 服务托管在 WAS 中时，标准绑定以通常的方式使用。 但是，在使用 <xref:System.ServiceModel.NetTcpBinding> 和 <xref:System.ServiceModel.NetNamedPipeBinding> 配置 WAS 承载的服务时，必须满足一个约束条件。 当不同的终结点使用相同的传输时，绑定设置必须在以下的七个属性上相匹配：  
   
 - ConnectionBufferSize  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75964774"
   
 ### <a name="to-create-a-client-to-use-the-service"></a>创建要使用服务的客户端  
   
-1. 从命令行使用[Svcutil.exe 元数据实用工具（）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)从服务元数据生成代码。  
+1. 使用[命令行中的 ServiceModel 元数据实用程序工具 （Svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)从服务元数据生成代码。  
   
     ```console
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -90,7 +90,7 @@ ms.locfileid: "75964774"
   
 4. 使用 <xref:System.ServiceModel.NetTcpBinding> 的客户端配置也通过 Svcutil.exe 生成。 在使用 Visual Studio 时，应在 App.config 文件中命名此文件。  
   
-     [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]   
+     [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]
   
 5. 在应用程序中创建 `ClientCalculator` 的实例，然后调用服务操作。  
   

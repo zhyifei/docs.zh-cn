@@ -11,38 +11,38 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: 9bb094ce0b7945f23a2e9b8614e56c9492d5f832
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: fea813d7b9fe585e35b729b8b64e3a5f414ef76d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736035"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141961"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>如何：在运行时修改图片的大小或位置（Windows 窗体）
-如果在窗体上使用 Windows 窗体 <xref:System.Windows.Forms.PictureBox> 控件，则可以将其上的 <xref:System.Windows.Forms.PictureBox.SizeMode%2A> 属性设置为：  
+如果在窗体上使用 Windows<xref:System.Windows.Forms.PictureBox>窗体控件，则可以将窗体上<xref:System.Windows.Forms.PictureBox.SizeMode%2A>的属性设置为：  
   
 - 将图片的左上角与控件的左上角对齐  
   
-- 使图片在控件内居中  
+- 将图片居中  
   
-- 调整控件的大小以适应它所显示的图片  
+- 调整控件的大小以适合显示的图片  
   
-- 伸展显示的任何图片以适应控件  
+- 拉伸它显示的任何图片以适合控件  
   
- 拉伸图片（尤其是位图格式的图片）可能会导致图像质量损失。 图元文件是在运行时绘制图像的图形说明的列表，更适合于拉伸而不是位图。  
+ 拉伸图片（尤其是位图格式）可能会损失图像质量。 元文件是运行时绘制图像的图形说明列表，比位图更适合拉伸。  
   
-### <a name="to-set-the-sizemode-property-at-run-time"></a>在运行时设置 Picturebox1.sizemode 属性  
+### <a name="to-set-the-sizemode-property-at-run-time"></a>在运行时设置 SizeMode 属性  
   
-1. 将 <xref:System.Windows.Forms.PictureBox.SizeMode%2A> 设置为 <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> （默认值）、<xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>、<xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>或 <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>。 <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> 表示将图像放置在控件的左上角;如果图像大于控件，将剪裁其下边缘和右边缘。 <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> 表示图像在控件内居中;如果图像大于控件，则裁剪图片的外边缘。 <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> 表示控件的大小调整为图像的大小。 <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> 是反向的，表示将图像大小调整为控件的大小。  
+1. 设置为<xref:System.Windows.Forms.PictureBox.SizeMode%2A><xref:System.Windows.Forms.PictureBoxSizeMode.Normal>（默认值）、<xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>或<xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage><xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>。 <xref:System.Windows.Forms.PictureBoxSizeMode.Normal>表示图像放置在控件的左上角;如果图像大于控件，则其下边缘和右边缘将剪切。 <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>表示图像居中，在控件中居中;如果图像大于控件，则剪切图片的外边缘。 <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>表示控件的大小会调整为图像的大小。 <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>是相反的，表示图像的大小会调整到控件的大小。  
   
-     在下面的示例中，为图像的位置设置的路径是 "我的文档" 文件夹。 这样做是因为您可以假定大多数运行 Windows 操作系统的计算机都包含此目录。 这还使得具有最低系统访问级别的用户能够安全运行应用程序。 下面的示例假定已添加 <xref:System.Windows.Forms.PictureBox> 控件的窗体。  
+     在下面的示例中，为图像位置设置的路径是"我的文档"文件夹。 此操作已完成，因为您可以假定运行 Windows 操作系统的大多数计算机都将包含此目录。 这还使得具有最低系统访问级别的用户能够安全运行应用程序。 下面的示例假定已添加控件的<xref:System.Windows.Forms.PictureBox>窗体。  
   
     ```vb  
     Private Sub StretchPic()  
        ' Stretch the picture to fit the control.  
        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage  
        ' Load the picture into the control.  
-       ' You should replace the bold image   
+       ' You should replace the bold image
        ' in the sample below with an icon of your own choosing.  
        PictureBox1.Image = Image.FromFile _  
        (System.Environment.GetFolderPath _  
@@ -56,7 +56,7 @@ ms.locfileid: "76736035"
        // Stretch the picture to fit the control.  
        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;  
        // Load the picture into the control.  
-       // You should replace the bold image   
+       // You should replace the bold image
        // in the sample below with an icon of your own choosing.  
        // Note the escape character used (@) when specifying the path.  
        PictureBox1.Image = Image.FromFile _  
@@ -73,7 +73,7 @@ ms.locfileid: "76736035"
           // Stretch the picture to fit the control.  
           pictureBox1->SizeMode = PictureBoxSizeMode::StretchImage;  
           // Load the picture into the control.  
-          // You should replace the bold image   
+          // You should replace the bold image
           // in the sample below with an icon of your own choosing.  
           pictureBox1->Image = Image::FromFile(String::Concat(  
              System::Environment::GetFolderPath(  

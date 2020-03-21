@@ -8,55 +8,55 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 810e942394c75c192e4423afe4c674ef3a2b9900
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 88098f2afaad9728e38c4f9935b45f45826a0ca9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697509"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154551"
 ---
 # <a name="systemnet-element-network-settings"></a>\<system.Net> 元素（网络设置）
 包含指定 .NET Framework 如何连接到网络的设置。  
   
-[ **\<configuration>** ](../configuration-element.md)  
-\<&nbsp;**的 &nbsp;>**  
+[**\<配置>**](../configuration-element.md)  
+&nbsp;&nbsp;**\<system.net>**  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<system.net>   
+<system.net>
 </system.net>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性和元素  
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>属性  
  无。  
   
 ### <a name="child-elements"></a>子元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
-|[authenticationModules](authenticationmodules-element-network-settings.md)|指定用于对 Internet 请求进行身份验证的模块。|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|指定用于验证 Internet 请求的模块。|  
 |[connectionManagement](connectionmanagement-element-network-settings.md)|指定与 Internet 主机的最大连接数。|  
 |[defaultProxy](defaultproxy-element-network-settings.md)|配置超文本传输协议 (HTTP) 代理服务器。|  
-|[mailSettings](mailsettings-element-network-settings.md)|配置简单邮件传输协议（SMTP）邮件发送选项。|  
+|[邮件设置](mailsettings-element-network-settings.md)|配置简单的邮件传输协议 （SMTP） 邮件发送选项。|  
 |[requestCaching](requestcaching-element-network-settings.md)|控制网络请求的缓存机制。|  
-|[设置](settings-element-network-settings.md)|为 <xref:System.Net> 和相关子命名空间中的类配置基本网络选项。|  
+|[设置](settings-element-network-settings.md)|为 和相关子命名空间中的<xref:System.Net>类配置基本网络选项。|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|指定用于从 Internet 主机请求信息的模块。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[configuration](../configuration-element.md)|包含所有命名空间的设置。|  
   
 ## <a name="remarks"></a>备注  
- [\<system.web >](system-net-element-network-settings.md)元素包含 <xref:System.Net> 和相关子命名空间中的类的设置。 设置配置身份验证模块、连接管理、邮件设置、代理服务器和 Internet 请求模块，用于接收来自 Internet 主机的信息。  
+ [ \<system.net>](system-net-element-network-settings.md)元素包含 和相关<xref:System.Net>子命名空间中的类的设置。 这些设置配置身份验证模块、连接管理、邮件设置、代理服务器和 Internet 请求模块，以便从 Internet 主机接收信息。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示 <xref:System.Net> 类使用的典型配置。  
+ 下面的示例显示了<xref:System.Net>类使用的典型配置。  
   
 ```xml  
 <configuration>  

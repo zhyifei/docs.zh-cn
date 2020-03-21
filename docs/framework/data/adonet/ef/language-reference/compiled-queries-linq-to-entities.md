@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: 2d9df4d479605c0a2514fe30a9150ab7bcfe904e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 97ceef3377a67fc621a097843abade9c61c29ca1
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251159"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78848764"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>编译的查询 (LINQ to Entities)
 如果应用程序需要在实体框架中多次执行结构类似的查询，通常可以通过仅编译查询一次并在每次执行时使用不同参数的方法来提高性能。 例如，某应用程序要检索特定城市的所有客户，而该城市是运行时由用户在窗体中指定的。 LINQ to Entities 支持将已编译的查询用于此目的。  
   
  从 .NET Framework 4.5 开始，LINQ 查询是自动缓存的。 但是，您仍可以使用已编译的 LINQ 查询来降低后续执行中的这一开销，编译的查询比自动缓存的 LINQ 查询效率更高。 请注意，不自动缓存将 `Enumerable.Contains` 运算符应用到内存中集合的 LINQ to Entities 查询。 此外，不允许在已编译的 LINQ 查询中参数化内存中的集合。  
   
- <xref:System.Data.Objects.CompiledQuery> 类提供查询的编译和缓存以供重复使用。 从概念上讲，此类包含 <xref:System.Data.Objects.CompiledQuery> 的 `Compile` 方法以及若干重载。 调用 `Compile` 方法可以创建新的委托来表示已编译的查询。 给定 `Compile` 及其参数值，<xref:System.Data.Objects.ObjectContext> 方法将返回生成某个结果的委托（例如 <xref:System.Linq.IQueryable%601> 实例）。 只在第一次执行的过程中查询才编译一次。 编译时为查询设置的合并选项在以后无法更改。 对查询进行编译后，您可以仅提供基元类型的参数，但不能替换将更改生成的 SQL 的查询部分。 有关详细信息，请参阅[实体框架合并选项和已编译的查询](https://go.microsoft.com/fwlink/?LinkId=199591)  
+ <xref:System.Data.Objects.CompiledQuery> 类提供查询的编译和缓存以供重复使用。 从概念上讲，此类包含 <xref:System.Data.Objects.CompiledQuery> 的 `Compile` 方法以及若干重载。 调用 `Compile` 方法可以创建新的委托来表示已编译的查询。 给定 `Compile` 及其参数值，<xref:System.Data.Objects.ObjectContext> 方法将返回生成某个结果的委托（例如 <xref:System.Linq.IQueryable%601> 实例）。 只在第一次执行的过程中查询才编译一次。 编译时为查询设置的合并选项在以后无法更改。 对查询进行编译后，您可以仅提供基元类型的参数，但不能替换将更改生成的 SQL 的查询部分。 有关详细信息，请参阅[EF 合并选项和已编译查询](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)。
   
- 用于<xref:System.Data.Objects.CompiledQuery> `Func` <xref:System.Func%605>编译的方法的 LINQ to Entities 查询表达式由一个泛型委托（如）表示。 `Compile` 查询表达式最多可以包装一个 `ObjectContext` 参数、一个返回参数和 16 个查询参数。 如果需要的查询参数不止 16 个，则可以创建一个结构并用其属性表示查询参数。 然后，该结构上的这些属性在经过设置之后就可以用于查询表达式中。  
+ LINQ 到实体查询表达式<xref:System.Data.Objects.CompiledQuery>，该方法`Compile`编译由一个泛型`Func`委托表示，如<xref:System.Func%605>。 查询表达式最多可以包装一个 `ObjectContext` 参数、一个返回参数和 16 个查询参数。 如果需要的查询参数不止 16 个，则可以创建一个结构并用其属性表示查询参数。 然后，该结构上的这些属性在经过设置之后就可以用于查询表达式中。  
   
 ## <a name="example"></a>示例  
  下面的示例将编译并调用一个查询，该查询接受 <xref:System.Decimal> 输入参数，并返回一个应付款总额大于或等于 200.00 美元的订单序列：  
@@ -40,7 +40,7 @@ ms.locfileid: "70251159"
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery3_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery3_mq)]  
   
 ## <a name="example"></a>示例  
- 下面的示例将编译并调用一个查询，该查询<xref:System.String>接受输入参数，然后返回`Contact`一个其电子邮件地址以指定的字符串开头的：  
+ 下面的示例编译并调用接受<xref:System.String>输入参数的查询，然后返回`Contact`其电子邮件地址以指定的字符串开头的查询：  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery4_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery4_mq)]  
@@ -68,8 +68,8 @@ ms.locfileid: "70251159"
  [!code-csharp[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myparamsstruct)]
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ADO.NET 实体框架](../index.md)
 - [LINQ to Entities](linq-to-entities.md)
-- [实体框架合并选项和已编译的查询](https://go.microsoft.com/fwlink/?LinkId=199591)
+- [EF 合并选项和已编译查询](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)

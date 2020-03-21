@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: bd1a52f1ce0f656af79928a20e3badc73661e89a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d1eaa1ebf41ef86478dda795b3b199239cd37b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635308"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184934"
 ---
 # <a name="how-to-enable-streaming"></a>如何：启用流处理
-Windows Communication Foundation (WCF) 可以发送使用缓冲还是流传输的消息。 在默认的缓冲传输模式中，只有在一条消息全部传递完之后，接收方才能读取该消息。 在流传输模式中，不必等到消息全部传递完，接收方便可以开始处理该消息。 当传递的信息很长且可以依次处理时，流模式非常有用。 当消息过长以致于无法全部缓冲时，流模式也非常有用。  
+Windows 通信基础 （WCF） 可以使用缓冲传输或流式传输发送消息。 在默认的缓冲传输模式中，只有在一条消息全部传递完之后，接收方才能读取该消息。 在流传输模式中，不必等到消息全部传递完，接收方便可以开始处理该消息。 当传递的信息很长且可以依次处理时，流模式非常有用。 当消息过长以致于无法全部缓冲时，流模式也非常有用。  
   
  若要启用流处理，请适当地定义 `OperationContract` 并在传输级别上启用流处理。  
   
@@ -48,7 +48,7 @@ Windows Communication Foundation (WCF) 可以发送使用缓冲还是流传输�
   
     1. 下面示例中的配置段演示如何将 `TransferMode` 和自定义 HTTP 绑定上的 `basicHttpBinding` 属性设置为流处理。  
   
-         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]   
+         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]
   
     2. 下面的代码段演示如何将 `TransferMode` 和自定义 HTTP 绑定上的 `basicHttpBinding` 属性设置为流处理。  
   
@@ -74,7 +74,7 @@ Windows Communication Foundation (WCF) 可以发送使用缓冲还是流传输�
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [大数据和流式处理](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
 - [流](../../../../docs/framework/wcf/samples/stream.md)

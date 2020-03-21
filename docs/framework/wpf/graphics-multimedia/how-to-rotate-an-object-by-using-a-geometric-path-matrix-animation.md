@@ -1,5 +1,5 @@
 ---
-title: 如何：使用几何路径旋转对象（矩阵动画）
+title: 如何：使用几何路径来旋转对象（矩阵动画）
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - rotating objects by geometric paths [WPF]
 - matrix animation [WPF]
 ms.assetid: 877dc9aa-6bdc-4beb-8772-3efaec32c0f0
-ms.openlocfilehash: 8f1b0ac42ea7509f8bc22b0bd2f50e2f96b5bee5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63dc873a2b840ea3f870a8c60c5691ab271c1c9f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923391"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187411"
 ---
-# <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>如何：使用几何路径旋转对象（矩阵动画）
-此示例演示如何使用<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>和一个<xref:System.Windows.Media.MatrixTransform>旋转 （转动） 某个对象沿几何路径由定义<xref:System.Windows.Media.PathGeometry>对象。  
+# <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>如何：使用几何路径来旋转对象（矩阵动画）
+此示例演示如何使用<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>和 a<xref:System.Windows.Media.MatrixTransform>沿<xref:System.Windows.Media.PathGeometry>对象定义的几何路径旋转（透视）对象。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>对象进行动画处理<xref:System.Windows.Media.MatrixTransform.Matrix%2A>属性的<xref:System.Windows.Media.MatrixTransform>。 <xref:System.Windows.Media.MatrixTransform>应用于按钮，并使其沿着曲线路径移动。 因为<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A>属性设置为`true`，矩形将沿着路径的切线旋转。  
+ 下面的示例使用 对象<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>为 属性<xref:System.Windows.Media.MatrixTransform>设置<xref:System.Windows.Media.MatrixTransform.Matrix%2A>动画。 <xref:System.Windows.Media.MatrixTransform>应用于按钮，使其沿曲线路径移动。 由于<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A>属性设置为`true`，矩形沿路径的切线旋转。  
   
  [!code-xaml[PathAnimationGallery_snippet#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/matrixanimationusingpathdoesrotatewithtangentexample.xaml#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
   
  [!code-csharp[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/MatrixAnimationUsingPathDoesRotateWithTangentExample.cs#matrixanimationusingpathdoesrotatewithtangentwholepage)]
  [!code-vb[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/MatrixAnimationUsingPathDoesRotateWithTangentExample.vb#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
   
- 有关完整示例，请参阅[路径动画示例](https://go.microsoft.com/fwlink/?LinkID=160028)。  
+ 有关完整示例，请参阅[路径动画示例](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/PathAnimations)。  
   
- 使用前面示例的代码版本<xref:System.Windows.Media.Animation.Storyboard>进行动画处理<xref:System.Windows.Media.EllipseGeometry>，即使只有一个动画已应用。 将一个动画应用到代码中的属性的更简单方法是使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法。 有关示例，请参阅[在不使用情节提要的情况下对属性进行动画处理](how-to-animate-a-property-without-using-a-storyboard.md)。  
+ 前面的示例的代码版本使用<xref:System.Windows.Media.Animation.Storyboard>为<xref:System.Windows.Media.EllipseGeometry>（） 设置动画，即使只应用了一个动画。 将单个动画应用于代码中的属性的一种更简单的方法是使用 方法<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>。 有关示例，请参阅[在不使用情节提要的情况下对属性进行动画处理](how-to-animate-a-property-without-using-a-storyboard.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [动画概述](animation-overview.md)
-- [路径动画操作说明主题](path-animation-how-to-topics.md)
-- [路径动画示例](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [路径动画帮助主题](path-animation-how-to-topics.md)
+- [路径动画示例](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/PathAnimations)

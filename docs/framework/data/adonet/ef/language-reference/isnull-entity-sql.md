@@ -2,12 +2,12 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: 9066f9fb68ce2c50e9523881cfa0dd930cd0b52e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: b3fc2484e80b637ed5841375985f7bae476bbbf7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319733"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150195"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 确定查询表达式是否为 null。  
@@ -18,7 +18,7 @@ ms.locfileid: "72319733"
 expression IS [ NOT ] NULL  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `expression`  
  任何有效的查询表达式。 不可以是集合，不可含有集合成员，也不可以是具有集合类型属性的记录类型。  
   
@@ -32,9 +32,9 @@ expression IS [ NOT ] NULL
  使用 `IS NULL` 可确定外部联接的元素是否为 null：  
   
 ```sql  
-select c   
-      from LOB.Customers as c left outer join LOB.Orders as o   
-                              on c.ID = o.CustomerID    
+select c
+      from LOB.Customers as c left outer join LOB.Orders as o
+                              on c.ID = o.CustomerID
       where o is not null and o.OrderQuantity = @x  
 ```  
   
@@ -65,6 +65,6 @@ select c from LOB.Customer as c where c.DOB is not null
   
  [!code-sql[DP EntityServices Concepts#ISNULL](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#isnull)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [实体 SQL 引用](entity-sql-reference.md)

@@ -2,12 +2,12 @@
 title: 使用 Windows Store 应用商店客户端应用访问 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 77dc5d19bc40dc09148a8d2368c56e522bfafc1a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: b4b91c103aa91e3b2c9e811c642a8347c7db1a88
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938175"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185488"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>使用 Windows Store 应用商店客户端应用访问 WCF 服务
 Windows 8 引入了一种新应用程序，称为 Windows 应用商店应用程序。 这些应用程序是围绕触摸屏界面设计的。 通过 .NET Framework 4.5，Windows 商店应用程序可以调用 WCF 服务。  
@@ -54,8 +54,8 @@ Windows 8 引入了一种新应用程序，称为 Windows 应用商店应用程�
   
  支持文本编码和二进制编码。 支持所有 WCF 传输模式。 有关更多信息，请参见 [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)。  
   
-### <a name="add-service-reference"></a>添加服务引用  
- 若要从 Windows 应用商店应用程序调用 WCF 服务，请使用 Visual Studio 2012 的“添加服务引用”功能。 在 Windows 应用商店应用程序中完成操作后，您将注意到添加服务引用功能发生了一些变化。 首先，不会生成配置文件。 Windows 应用商店应用程序不使用配置文件，因此，必须用代码来对这些应用程序进行配置。 此配置代码可在由添加服务引用功能生成的 References.cs 文件中找到。 若要查看此文件，请确保在解决方案资源管理器中选择 "显示所有文件"。 该文件位于项目中“服务引用”的 Reference.svcmap 节点下面。 为 Windows 应用商店应用程序中的 WCF 服务生成的所有操作都将使用基于任务的异步模式实现异步。 有关详细信息，请参阅[异步任务-通过任务简化异步编程](https://docs.microsoft.com/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks)。  
+### <a name="add-service-reference"></a>中的  
+ 若要从 Windows 应用商店应用程序调用 WCF 服务，请使用 Visual Studio 2012 的“添加服务引用”功能。 在 Windows 应用商店应用程序中完成操作后，您将注意到添加服务引用功能发生了一些变化。 首先，不会生成配置文件。 Windows 应用商店应用程序不使用配置文件，因此，必须用代码来对这些应用程序进行配置。 此配置代码可在由添加服务引用功能生成的 References.cs 文件中找到。 要查看此文件，请确保在解决方案资源管理器中选择"显示所有文件"。 该文件位于项目中“服务引用”的 Reference.svcmap 节点下面。 为 Windows 应用商店应用程序中的 WCF 服务生成的所有操作都将使用基于任务的异步模式实现异步。 有关详细信息，请参阅[异步任务 - 使用任务简化异步编程](https://docs.microsoft.com/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks)。  
   
  由于现在将使用代码生成配置，因此，每次更新服务引用时，都会覆盖 Reference.cs 文件中所做的任何更改。 为了纠正这种情况，将在一个部分方法中生成配置代码，您可以在客户端代理类中实现此部分方法。 该部分方法的声明如下：  
   
@@ -68,23 +68,23 @@ static partial void Configure(System.ServiceModel.Description.ServiceEndpoint se
   
 ```csharp  
 public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfClient.ServiceRefMultiEndpt.IService1>, MetroWcfClient.ServiceRefMultiEndpt.IService1  
-    {   
-        static partial void Configure(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint,   
+    {
+        static partial void Configure(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint,
             System.ServiceModel.Description.ClientCredentials clientCredentials)  
         {  
-            if (serviceEndpoint.Name ==   
+            if (serviceEndpoint.Name ==
                     ServiceRefMultiEndpt.Service1Client.EndpointConfiguration.BasicHttpBinding_IService1.ToString())  
             {  
                 serviceEndpoint.Binding.SendTimeout = new System.TimeSpan(0, 1, 0);  
             }  
-            else if (serviceEndpoint.Name ==   
+            else if (serviceEndpoint.Name ==
                     ServiceRefMultiEndpt.Service1Client.EndpointConfiguration.BasicHttpBinding_IService11.ToString())  
             {  
                 serviceEndpoint.Binding.SendTimeout = new System.TimeSpan(0, 1, 0);  
                 clientCredentials.UserName.UserName = "username1";  
                 clientCredentials.UserName.Password = "password";  
             }  
-            else if (serviceEndpoint.Name ==   
+            else if (serviceEndpoint.Name ==
                     ServiceRefMultiEndpt.Service1Client.EndpointConfiguration.NetTcpBinding_IService1.ToString())  
             {  
                 serviceEndpoint.Binding.Name = "MyTcpBinding";  
@@ -94,7 +94,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
     }  
 ```  
   
-### <a name="serialization"></a>Serialization  
+### <a name="serialization"></a>序列化  
  Windows 应用商店应用程序支持以下序列化程序：  
   
 1. DataContractSerializer  
@@ -108,7 +108,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 ### <a name="security"></a>安全性  
 
-Windows 应用商店应用程序支持以下安全模式：
+Windows 应用商店应用程序中支持以下安全模式：
   
 1. <xref:System.ServiceModel.SecurityMode.None>  
   
@@ -118,13 +118,13 @@ Windows 应用商店应用程序支持以下安全模式：
   
 4. <xref:System.ServiceModel.SecurityMode.Message>
   
-Windows 应用商店应用程序支持以下客户端凭据类型：
+Windows 应用商店应用程序中支持以下客户端凭据类型：
   
 1. 无  
   
-2. Basic  
+2. 基本  
   
-3. Digest  
+3. 摘要  
   
 4. Negotiate  
   
@@ -136,10 +136,10 @@ Windows 应用商店应用程序支持以下客户端凭据类型：
   
 8. Windows（传输安全）  
   
- 为了使 Windows 应用商店应用程序访问并发送默认的 Windows 凭据，您必须在 Package.appmanifest 文件中启用此功能。 打开此文件并选择 "功能" 选项卡，然后选择 "默认 Windows 凭据"。 这样，应用程序就可以连接到需要域凭据的 Intranet 资源。  
+ 为了使 Windows 应用商店应用程序访问并发送默认的 Windows 凭据，您必须在 Package.appmanifest 文件中启用此功能。 打开此文件并选择"功能"选项卡并选择"默认 Windows 凭据"。 这样，应用程序就可以连接到需要域凭据的 Intranet 资源。  
   
 > [!IMPORTANT]
-> 为了使 Windows 应用商店应用程序进行跨计算机调用，你必须启用另一个名为 "家庭/工作网络" 的功能。 此设置也位于 "功能" 选项卡下的 appmanifest 文件中。选中 "家庭/工作网络" 复选框。 这样，该应用程序就可以对用户的可信地点（家庭和工作地点）进行入站和出站访问。 将始终阻止关键入站端口。 为了访问 Internet 上的服务，您还必须启用“Internet (客户端}”功能。  
+> 为了使 Windows 应用商店应用程序进行跨计算机调用，您必须启用另一个称为"家庭/工作网络"的功能。 此设置也位于"功能"选项卡下的"包.appmanifest"文件中。选择"家庭/工作网络"复选框。 这样，该应用程序就可以对用户的可信地点（家庭和工作地点）进行入站和出站访问。 将始终阻止关键入站端口。 为了访问 Internet 上的服务，您还必须启用“Internet (客户端}”功能。  
   
 ### <a name="misc"></a>杂项  
  Windows 应用商店应用程序支持使用下面的类：  
@@ -176,9 +176,9 @@ void async SomeMethod()
   
 ## <a name="see-also"></a>另请参阅
 
-- [Windows 应用商店应用博客中的 WCF](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
-- [WCF Windows 应用商店客户端和安全](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
-- [Windows 应用商店应用程序和跨计算机调用](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
+- [Windows 应用商店应用日志中的 WCF](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
+- [WCF Windows 应用商店客户端与安全性](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
+- [Windows 应用商店应用与跨计算机调用](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
 - [从 Windows 应用商店应用调用 Azure 中部署的 WCF 服务](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
 - [WCF 安全编程](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [绑定](../../../../docs/framework/wcf/bindings.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managed code, debugging
 - native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
-ms.openlocfilehash: 8f1621090079c030e3c055a417ed9bcad882bf78
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 5cbe8e843ad72785010240f3db30b1d344c80650
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217237"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181767"
 ---
 # <a name="reentrancy-mda"></a>重入 MDA
 先前未通过有序转换执行从托管代码到本机代码的转换的情况下，如果尝试执行从本机代码到托管代码的转换，会激活 `reentrancy` 托管调试助手 (MDA)。  
@@ -47,9 +47,9 @@ ms.locfileid: "77217237"
  MDA 报告正在尝试非法重入。  检查线程的堆栈以确定发生原因和如何更正此问题。 下面是示例输出。  
   
 ```output
-Additional Information: Attempting to call into managed code without   
-transitioning out first.  Do not attempt to run managed code inside   
-low-level native extensibility points. Managed Debugging Assistant   
+Additional Information: Attempting to call into managed code without
+transitioning out first.  Do not attempt to run managed code inside
+low-level native extensibility points. Managed Debugging Assistant
 'Reentrancy' has detected a problem in 'D:\ConsoleApplication1\  
 ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.  
 ```  
@@ -71,32 +71,32 @@ ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.
 using System;  
 public delegate int ExceptionHandler(IntPtr ptrExceptionInfo);  
   
-public class Reenter   
+public class Reenter
 {  
     public static ExceptionHandler keepAlive;  
   
-    [System.Runtime.InteropServices.DllImport("kernel32", ExactSpelling=true,   
+    [System.Runtime.InteropServices.DllImport("kernel32", ExactSpelling=true,
         CharSet=System.Runtime.InteropServices.CharSet.Auto)]  
-    public static extern IntPtr AddVectoredExceptionHandler(int bFirst,   
+    public static extern IntPtr AddVectoredExceptionHandler(int bFirst,
         ExceptionHandler handler);  
   
-    static int MyHandler(IntPtr ptrExceptionInfo)   
+    static int MyHandler(IntPtr ptrExceptionInfo)
     {  
         // EXCEPTION_CONTINUE_SEARCH  
         return 0;  
     }  
     void Run() {}  
   
-    static void Main()   
+    static void Main()
     {  
         keepAlive = new ExceptionHandler(Reenter.MyHandler);  
         IntPtr ret = AddVectoredExceptionHandler(1, keepAlive);  
-        try   
+        try
         {  
             // Dispatch on null should AV.  
-            Reenter r = null;   
+            Reenter r = null;
             r.Run();  
-        }   
+        }
         catch { }  
     }  
 }  

@@ -2,12 +2,12 @@
 title: 持久双工相关
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: efc647b8a39f419f2165fe355529ba145663b753
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: bb73cef5190a0b146e713ef1adae24219dc2eed8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291579"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185170"
 ---
 # <a name="durable-duplex-correlation"></a>持久双工相关
 当工作流服务要求向初始调用方发送回调时，持久双工相关性（也称为回调相关性）非常有用。 与 WCF 双工不同的是，该回调可以在将来的任何时间发生，并且不会绑定到同一通道或通道生存期；唯一要求是，调用方应具有一个用于侦听回调消息的活动终结点。 这样，这两个工作流服务便可在长期运行的对话中进行通信。 本主题概述了持久双工相关性。  
@@ -16,7 +16,7 @@ ms.locfileid: "72291579"
  若要使用持久双工相关性，这两个服务必须使用启用了上下文且支持双向操作的绑定，如 <xref:System.ServiceModel.NetTcpContextBinding> 或 <xref:System.ServiceModel.WSHttpContextBinding>。 调用服务使用所需绑定向其客户端 <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> 注册 <xref:System.ServiceModel.Endpoint>。 接收服务将接收初始调用中的上述数据，然后在回调调用服务的 <xref:System.ServiceModel.Endpoint> 活动中对自己的 <xref:System.ServiceModel.Activities.Send> 使用此数据。 在本示例中，这两个服务互相通信。 第一个服务对第二个服务调用某个方法，然后等待答复。 第二个服务知晓回调方法的名称，但在设计时，实现该方法的服务的终结点是未知的。  
   
 > [!NOTE]
-> 仅当终结点的 <xref:System.ServiceModel.Channels.AddressingVersion> 配置有 <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A> 时，才能使用持久双工。 如果不是，则会引发 <xref:System.InvalidOperationException> 异常，并出现以下消息："该消息包含一个具有[AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing)的终结点引用的回调上下文标头。 仅当 AddressingVersion 配置为 "WSAddressing10" 时，才能传输回调上下文。
+> 仅当终结点的 <xref:System.ServiceModel.Channels.AddressingVersion> 配置有 <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A> 时，才能使用持久双工。 如果不是，则将引发一个<xref:System.InvalidOperationException>异常，其中包含以下消息："该消息包含一个回调上下文标头，其中包含[用于寻址的](http://schemas.xmlsoap.org/ws/2004/08/addressing)终结点引用 。 仅当寻址版本配置为"WSAddressing10"时，才能传输回调上下文。
   
  在下面的示例中，使用 <xref:System.ServiceModel.Endpoint> 承载工作流服务，该服务将创建回调 <xref:System.ServiceModel.WSHttpContextBinding>。  
   
@@ -51,7 +51,7 @@ Receive StartOrder = new Receive
   
 Send GetItems = new Send  
 {  
-    CorrelationInitializers =   
+    CorrelationInitializers =
     {  
         new CallbackCorrelationInitializer  
         {  
@@ -65,7 +65,7 @@ Send GetItems = new Send
         AddressUri = new Uri("http://localhost:8081/Service2"),  
         Binding = new WSHttpContextBinding  
         {  
-            ClientCallbackAddress = new Uri("http://localhost:8080/Service1/ItemsReady")                          
+            ClientCallbackAddress = new Uri("http://localhost:8080/Service1/ItemsReady")
         }  
     }  
 };  
@@ -127,7 +127,7 @@ Variable<CorrelationHandle> ItemsCallbackHandle = new Variable<CorrelationHandle
   
 Receive StartItems = new Receive  
 {  
-    CorrelationInitializers =   
+    CorrelationInitializers =
     {  
         new CallbackCorrelationInitializer  
         {  
@@ -189,7 +189,7 @@ Activity wf = new Sequence
 ```output  
 Service1 waiting at: http://localhost:8080/Service1  
 Service2 waiting at: http://localhost:8081/Service2  
-Press enter to exit.   
+Press enter to exit.
 WF1 - Started  
 WF2 - Request Received  
 WF1 - Request Submitted  

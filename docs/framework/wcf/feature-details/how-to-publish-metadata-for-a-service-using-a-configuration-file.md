@@ -2,20 +2,20 @@
 title: 如何：使用配置文件发布服务的元数据
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 26894a3951b91879a7b3e6f66731891113394082
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7ea0a2aa386f747b89f56f21d75a97e4409140a1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045296"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184870"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>如何：使用配置文件发布服务的元数据
-这是演示如何发布 Windows Communication Foundation (WCF) 服务的元数据的两个帮助主题之一。 有两种方式可以指定服务应如何发布元数据：使用配置文件和使用代码。 本主题演示如何使用配置文件发布服务的元数据。  
+这是演示 Windows 通信基础 （WCF） 服务的发布元数据的两个操作操作主题之一。 有两种方式可以指定服务应如何发布元数据：使用配置文件和使用代码。 本主题演示如何使用配置文件发布服务的元数据。  
   
 > [!CAUTION]
-> 本主题演示如何以不安全的方式发布元数据。 任何客户端都可以检索服务的元数据。 如果您要求服务以安全方式发布元数据, 请参阅[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。  
+> 本主题演示如何以不安全的方式发布元数据。 任何客户端都可以检索服务的元数据。 如果需要服务以安全的方式发布元数据，请参阅[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。  
   
- 有关在代码中发布元数据的详细信息[, 请参阅如何:使用代码](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)发布服务的元数据。 通过发布元数据，客户端可以使用 WS-Transfer GET 请求或使用 `?wsdl` 查询字符串的 HTTP/GET 来检索元数据。 若要确保代码正常工作, 请创建一个基本的 WCF 服务。 为了简单起见，将在以下代码中提供一个基本的自承载服务。  
+ 有关在代码中发布元数据的详细信息，请参阅[：使用代码发布服务的元数据](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。 通过发布元数据，客户端可以使用 WS-Transfer GET 请求或使用 `?wsdl` 查询字符串的 HTTP/GET 来检索元数据。 为了确保代码正常工作，请创建基本的 WCF 服务。 为了简单起见，将在以下代码中提供一个基本的自承载服务。  
   
 ```csharp  
 using System;  
@@ -46,7 +46,7 @@ namespace Metadata.Samples
         static void Main(string[] args)  
         {  
             ServiceHost host = new ServiceHost(typeof(SimpleService),  
-                new Uri("http://localhost:8001/MetadataSample"));   
+                new Uri("http://localhost:8001/MetadataSample"));
             try  
             {  
                 // Open the service host to accept incoming calls  
@@ -92,11 +92,11 @@ namespace Metadata.Samples
   
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>使用应用程序配置文件发布 WCF 服务的元数据  
   
-1. 在 App.config 文件内，在结束 `</services>`&lt;behaviors&gt; 元素之后创建`<behaviors>` 元素。  
+1. 在 App.config 文件内，在结束 `</services>` 元素。  
 
-2. 在 `<behaviors>` 元素内，添加一个 `<serviceBehaviors>` 元素。  
+2. 在 `<behaviors>` 元素中添加 `<serviceBehaviors>` 元素。  
 
-3. 向 `<behavior>`、`<serviceBehaviors>` 元素中添加一个 `name` 元素，并为 元素的 `<behavior>` 属性指定一个值。  
+3. 向 `<behavior>``<serviceBehaviors>` 元素中添加一个 `name` 元素，并为 元素的 `<behavior>` 属性指定一个值。  
 
 4. 向 `<serviceMetadata>` 元素中添加一个 `<behavior>` 元素。 将 `httpGetEnabled` 属性设置为 `true`，并将 `policyVersion` 属性设置为 Policy15。 `httpGetEnabled` 可让服务响应 HTTP GET 请求发出的元数据请求。 `policyVersion` 通知服务在生成元数据时应符合 WS-Policy 1.5。  
 
@@ -158,7 +158,7 @@ namespace Metadata.Samples
   
 9. 生成并运行控制台应用程序。  
   
-10. 使用 Internet Explorer 浏览到服务的基址 (http://localhost:8001/MetadataSample 在本示例中为), 并验证是否已启用元数据发布。 如果不是, 则在结果页顶部显示一条消息:"此服务的元数据发布当前已禁用。"  
+10. 使用 Internet Explorer 浏览到服务的基本地址（http://localhost:8001/MetadataSample在此示例中），并验证元数据发布是否打开。 如果未显示上述内容，则结果页顶部会显示消息：“Metadata publishing for this service is currently disabled”（当前禁用服务的元数据发布）。  
   
 ### <a name="to-use-default-endpoints"></a>使用默认终结点  
   
@@ -182,7 +182,7 @@ namespace Metadata.Samples
      由于该服务有一个 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 设置为 `httpGetEnabled` 的 `true`，因此该服务启用了发布元数据，但是由于未显式添加任何终结点，因此运行时添加默认终结点。 有关默认终结点、绑定和行为的详细信息，请参阅[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服务的简化配置](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例演示如何实现基本 WCF 服务和发布服务的元数据的配置文件。  
+ 以下代码示例显示了基本 WCF 服务的实现以及发布服务元数据的配置文件。  
   
 ```csharp  
 using System;  
@@ -213,7 +213,7 @@ namespace Metadata.Samples
         static void Main(string[] args)  
         {  
             ServiceHost host = new ServiceHost(typeof(SimpleService),  
-                new Uri("http://localhost:8001/MetadataSample"));   
+                new Uri("http://localhost:8001/MetadataSample"));
             try  
             {  
                 // Open the service host to accept incoming calls  
@@ -253,10 +253,10 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
-- [如何：在托管应用程序中托管 WCF 服务](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [如何：托管应用程序中的 WCF 服务](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [自承载](../../../../docs/framework/wcf/samples/self-host.md)
 - [元数据体系结构概述](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)

@@ -2,21 +2,21 @@
 title: 指定无嵌套的元素之间的关系
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: 3aa9976ccde426eeda1d869164409c5235a629fe
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: bee427c6cdf76792773ea827c8772b276ff29c31
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040051"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150813"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>指定无嵌套的元素之间的关系
-当元素不嵌套时，将不创建任何隐式关系。 但是，可以使用**msdata： Relationship**批注显式指定未嵌套的元素之间的关系。  
+当元素不嵌套时，将不创建任何隐式关系。 但是，可以使用**msdata：关系**注释显式指定未嵌套的元素之间的关系。  
   
- 下面的示例显示一个 XML 架构，该架构在不嵌套的**Order**和**OrderDetail**元素之间指定**msdata： Relationship**批注。 **Msdata： Relationship**批注指定为**Schema**元素的子元素。  
+ 下面的示例显示了一个 XML 架构，其中**msdata：关系**注释在未嵌套的 **"订单"** 和"**订单详细信息"** 元素之间指定。 **msdata：关系**注释被指定为**架构**元素的子元素。  
   
 ```xml  
-<xs:schema id="MyDataSet" xmlns=""   
-             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+<xs:schema id="MyDataSet" xmlns=""
+             xmlns:xs="http://www.w3.org/2001/XMLSchema"
              xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
   <xs:complexType>  
@@ -44,27 +44,27 @@ ms.locfileid: "73040051"
    <xs:annotation>  
      <xs:appinfo>  
        <msdata:Relationship name="OrdOrderDetailRelation"  
-                            msdata:parent="Order"   
-                            msdata:child="OrderDetail"   
-                            msdata:parentkey="OrderNumber"   
+                            msdata:parent="Order"
+                            msdata:child="OrderDetail"
+                            msdata:parentkey="OrderNumber"
                             msdata:childkey="OrderNo"/>  
      </xs:appinfo>  
   </xs:annotation>  
 </xs:schema>  
 ```  
   
- XML 架构定义语言（XSD）架构映射过程创建了一个 <xref:System.Data.DataSet>，其中包含**Order**和**OrderDetail**表以及这两个表之间指定的关系，如下所示。  
+ XML 架构定义语言 （XSD） 架构映射过程<xref:System.Data.DataSet>创建一个带有**订单**和**订单详细信息**的表以及这两个表之间指定的关系，如下所示。  
   
 ```text  
 RelationName: OrdOrderDetailRelation  
 ParentTable: Order  
-ParentColumns: OrderNumber   
+ParentColumns: OrderNumber
 ChildTable: OrderDetail  
-ChildColumns: OrderNo   
+ChildColumns: OrderNo
 Nested: False  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [从 XML 架构生成数据集关系 (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
 - [将 XML 架构 (XSD) 约束映射到数据集约束](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)

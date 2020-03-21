@@ -2,15 +2,15 @@
 title: 如何：实现使用发现代理查找服务的客户端应用程序
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 30db2bfc6191b1703f6d63ec2a925df42ecc93e4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33ee5d2c9206b16b1667abd5f6d6c811ff955969
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963878"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185374"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>如何：实现使用发现代理查找服务的客户端应用程序
-本主题是讨论如何实现发现代理的三个主题中的第三个。 在上一主题中[, 如何:实现向发现代理](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)注册的可发现服务, 实现了向发现代理注册自身的 WCF 服务。 在本主题中, 您将创建一个使用发现代理查找 WCF 服务的 WCF 客户端。  
+本主题是讨论如何实现发现代理的三个主题中的第三个。 在上一个主题"[如何：实现一个可发现的服务，注册到发现代理](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)"中，您实现了一个WCF服务，该服务向发现代理注册。 在本主题中，您将创建一个使用发现代理查找 WCF 服务的 WCF 客户端。  
   
 ### <a name="implement-the-client"></a>实现客户端  
   
@@ -79,7 +79,7 @@ ms.locfileid: "69963878"
 
         try  
         {  
-            // Search for services that implement ICalculatorService              
+            // Search for services that implement ICalculatorService
             FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
 
             Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
@@ -101,7 +101,7 @@ ms.locfileid: "69963878"
     }  
     ```  
   
- 您已完成客户端应用程序的实现。 继续操作如何[:测试发现代理](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)。  
+ 您已完成客户端应用程序的实现。 继续：[测试发现代理](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)。  
   
 ## <a name="example"></a>示例  
  下面是此主题的完整代码清单。  
@@ -226,7 +226,7 @@ namespace Microsoft.Samples.Discovery
   
             try  
             {  
-                // Find ICalculatorService endpoints              
+                // Find ICalculatorService endpoints
                 FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
   
                 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
@@ -281,8 +281,8 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [如何：实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [如何：实现向发现代理注册的可发现服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [如何：实现向发现代理注册的可检测服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

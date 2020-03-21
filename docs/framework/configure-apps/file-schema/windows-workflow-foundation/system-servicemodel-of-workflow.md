@@ -1,20 +1,20 @@
 ---
-title: < System.servicemodel > 工作流
+title: <系统.服务模型>工作流
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 757a7a132a6e765e257097d251a110297c6a40bf
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 9aa2bf0fdfd6fe4528a3fda4d05b3ba8f23637d3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398603"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151944"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<工作流的 System.servicemodel >
+# <a name="systemservicemodel-of-workflow"></a>\<系统.服务模型>工作流
 此配置节包含所有工作流配置元素。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<主板.>**  
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<系统。服务模式>**  
   
 ## <a name="syntax"></a>语法  
   
@@ -25,12 +25,12 @@ ms.locfileid: "70398603"
     <behavior name="String">  
       <bufferReceive maxPendingMessagesPerChannel="Integer" />  
       <etwTracking profileName="String" />  
-     <sendMessageChannelCache allowUnsafeCaching="Boolean" >          
+     <sendMessageChannelCache allowUnsafeCaching="Boolean" >
         <channelSettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
         <factorySettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
      </sendMessageChannelCache>  
-      <sqlWorkflowInstanceStore   
-          connectionStringName="String"   
+      <sqlWorkflowInstanceStore
+          connectionStringName="String"
           hostLockRenewalPeriod="TimeSpan"  
           instanceCompletionAction="DeleteNothing/DeleteAll"  
           instanceEncodingAction="None/GZip"  
@@ -42,12 +42,12 @@ ms.locfileid: "70398603"
     </behavior>  
     </serviceBehaviors>  
   </behaviors>  
-  <tracking>    
-     <participants>   
-      <add name="String"   
+  <tracking>
+     <participants>
+      <add name="String"
            profileName="String"  
-           type="String" />   
-     </participants>   
+           type="String" />
+     </participants>
     <trackingProfile name="String">  
       <workflow activityDefinitionId="String">  
           <activityScheduledQueries>  
@@ -88,7 +88,7 @@ ms.locfileid: "70398603"
           </workflowInstanceQuery>  
         </workflowInstanceQueries>  
       </workflow>  
-    </trackingProfile>          
+    </trackingProfile>
    </profiles>  
   </tracking>  
 </system.ServiceModel>  
@@ -97,18 +97,18 @@ ms.locfileid: "70398603"
 ## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>属性  
  无  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
-|[\<behaviors>](behaviors-of-workflow.md)|本节定义**serviceBehaviors**集合。  集合中的每个元素定义服务所使用的行为元素。 每个行为元素都由其唯一**名称**属性标识。|  
-|[\<tracking>](tracking.md)|表示一个配置节，用于定义工作流服务的跟踪设置。<br /><br /> 有关工作流跟踪及其配置的详细信息，请参阅工作流[跟踪和跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)和[配置工作流跟踪](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。|  
+|[\<行为>](behaviors-of-workflow.md)|本节定义**服务行为**集合。  集合中的每个元素定义服务所使用的行为元素。 每个行为元素都由其唯一**的名称**属性标识。|  
+|[\<跟踪>](tracking.md)|表示一个配置节，用于定义工作流服务的跟踪设置。<br /><br /> 有关工作流跟踪及其配置的详细信息，请参阅工作流[的工作流跟踪和跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)和[配置跟踪](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
-|[\<configuration>](../configuration-element.md)|.NET 配置文件中的所有配置元素的根元素。|
+|[\<配置>](../configuration-element.md)|.NET 配置文件中的所有配置元素的根元素。|

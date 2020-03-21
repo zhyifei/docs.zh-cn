@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 4f3166b8f1e59a100f54574ab548f5dae88eb5cd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: b226eed9218207cde99add61ef1f3eb64b459009
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742633"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184294"
 ---
 # <a name="trusted-subsystem"></a>受信任的子系统
 客户端访问分布在网络上的一个或多个 Web 服务。 Web 服务的设计使对其他资源（比如数据库或其他 Web 服务）的访问包装在 Web 服务的企业逻辑中。 必须保护这些资源不受到未经授权的访问。 下图描述了一个受信任的子系统过程。  
   
- ![受信任子系统](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
+ ![受信任的子系统](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
   
  以下步骤说明如图所示的受信任子系统过程：  
   
@@ -31,14 +31,14 @@ ms.locfileid: "76742633"
   
 |特征|说明|  
 |--------------------|-----------------|  
-|安全模式|Message|  
-|互操作性|仅 Windows Communication Foundation （WCF）。|  
+|安全模式|消息|  
+|互操作性|仅限 Windows 通信基础 （WCF）。|  
 |身份验证（服务）|安全令牌服务对客户端进行身份验证和授权。|  
 |身份验证（客户端）|受信任子系统对客户端进行身份验证，资源对受信任子系统服务进行身份验证。|  
 |完整性|是|  
 |机密性|是|  
-|Transport|客户端和受信任子系统服务之间采用 HTTP。<br /><br /> 受信任子系统服务和资源（后端服务）之间采用 NET.TCP。|  
-|绑定|<xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|传输|客户端和受信任子系统服务之间采用 HTTP。<br /><br /> 受信任子系统服务和资源（后端服务）之间采用 NET.TCP。|  
+|绑定|<xref:System.ServiceModel.WSHttpBinding><xref:System.ServiceModel.NetTcpBinding>[和\<ws联邦http绑定>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>资源（后端服务）  
   
@@ -122,7 +122,7 @@ ms.locfileid: "76742633"
       </service>  
     </services>  
     <client>  
-      <endpoint name=""   
+      <endpoint name=""
                 address="net.tcp://contoso.com:8001/BackendService"  
                 binding="customBinding"  
                 bindingConfiguration="ClientBinding"  
@@ -163,7 +163,7 @@ ms.locfileid: "76742633"
 </configuration>  
 ```  
   
-## <a name="client"></a>客户端  
+## <a name="client"></a>Client  
   
 ### <a name="code"></a>代码  
  下面的代码演示如何创建与受信任子系统进行通信的客户端，该客户端使用 HTTP 上的消息安全协议以及用户名和密码进行身份验证。  
@@ -179,7 +179,7 @@ ms.locfileid: "76742633"
 <configuration>  
   <system.serviceModel>  
     <client>  
-        <endpoint name=""   
+        <endpoint name=""
                   address="http://www.cohowinery.com:8000/FacadeService"  
                   binding="wsHttpBinding"  
                   bindingConfiguration="Binding1"  

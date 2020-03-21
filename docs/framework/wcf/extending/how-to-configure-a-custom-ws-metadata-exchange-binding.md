@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: b4a4005a23c8c74edecb00475669e019b50a17af
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 4e0c583eeef4bf068c08b273c833506ce80cbc3a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851221"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185600"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>如何：配置自定义 WS-Metadata Exchange 绑定
-本主题将说明如何配置自定义 WS-Metadata 交换绑定。 Windows Communication Foundation （WCF）包括四个系统定义的元数据绑定，但你可以使用所需的任何绑定来发布元数据。 本主题将演示如何使用 `wsHttpBinding` 发布元数据。 此绑定提供了以安全方式公开元数据的选择。 本文中的代码基于[入门](../samples/getting-started-sample.md)。  
+本主题将说明如何配置自定义 WS-Metadata 交换绑定。 Windows 通信基础 （WCF） 包括四个系统定义的元数据绑定，但您可以使用所需的任何绑定发布元数据。 本主题将演示如何使用 `wsHttpBinding` 发布元数据。 此绑定提供了以安全方式公开元数据的选择。 本文中的代码基于[入门](../samples/getting-started-sample.md)。  
   
 ### <a name="using-a-configuration-file"></a>使用配置文件  
   
@@ -33,7 +33,7 @@ ms.locfileid: "70851221"
   
     ```xml  
     <service        name="Microsoft.ServiceModel.Samples.CalculatorService"  
-    behaviorConfiguration="CalculatorServiceBehavior">   
+    behaviorConfiguration="CalculatorServiceBehavior">
     ```  
   
 3. 添加一个元数据终结点，该终结点将 mex 指定为地址，将 `wsHttpBinding` 指定为绑定，并将 <xref:System.ServiceModel.Description.IMetadataExchange> 指定为协定：  
@@ -113,10 +113,10 @@ ms.locfileid: "70851221"
     Console.WriteLine("Metadata section: " + section.Dialect.ToString());  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [元数据发布行为](../samples/metadata-publishing-behavior.md)
 - [检索元数据](../samples/retrieve-metadata.md)
-- [元数据](../feature-details/metadata.md)
+- [元](../feature-details/metadata.md)
 - [发布元数据](../feature-details/publishing-metadata.md)
 - [发布元数据终结点](../publishing-metadata-endpoints.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-ms.openlocfilehash: de1735103314dfedbabe27623f579ce2c1e728af
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 7492a4c0547680a6ace85a5f7c98567770f5575a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217269"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181781"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 
@@ -29,7 +29,7 @@ ms.locfileid: "77217269"
 
 在 JIT 编译时，包含对象引用类型的实例只是代表性的，因为生成的代码是共享的，每个对象引用类型变量可能是任何对象引用类型。 这会阻止提前准备一些运行时资源。
 
-特别是，使用通用类型变量的方法会在后台怠缓地分配资源。 这些被称为通用字典条目。 例如，对于语句 `List<T> list = new List<T>();` 其中，`T` 是一个泛型类型变量，运行时必须在运行时查找并可能创建准确的实例化，如 `List<Object>, List<String>`等。 这可能由于超出开发人员控制外的各种原因（例如内存不足）而失败。
+特别是，使用通用类型变量的方法会在后台怠缓地分配资源。 这些被称为通用字典条目。 例如，对于`List<T> list = new List<T>();``T`是泛型类型变量的语句，运行时必须查找并可能在运行时创建确切的实例化，例如 ，`List<Object>, List<String>`依此类推。 这可能由于超出开发人员控制外的各种原因（例如内存不足）而失败。
 
 仅应在 JIT 编译时激活此 MDA，而非有精确的实例化时激活。
 
@@ -45,11 +45,11 @@ ms.locfileid: "77217269"
 
 ## <a name="output"></a>输出
 
-下面是此 MDA 的输出示例：
+以下是此 MDA 的输出示例：
   
  ```output
  Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.
- The caller must ensure this method is prepared explicitly at run time prior to execution. 
+ The caller must ensure this method is prepared explicitly at run time prior to execution.
  method name="GenericMethodWithCer"
  declaringType name="OpenGenericCERCall"
  ```
@@ -86,7 +86,7 @@ class Program
         MyClass.GenericMethodWithCer<int>();
 
         // This call is incorrect. A shared version of the method that
-        // cannot be completely analyzed will be JIT-compiled. The 
+        // cannot be completely analyzed will be JIT-compiled. The
         // MDA will be activated at JIT-compile time, not at run time.
         MyClass.GenericMethodWithCer<String>();
     }

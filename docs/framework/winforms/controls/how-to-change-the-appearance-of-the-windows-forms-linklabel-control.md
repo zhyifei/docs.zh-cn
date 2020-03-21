@@ -1,5 +1,5 @@
 ---
-title: 更改 LinkLabel 控件的外观
+title: 更改链接标签控件的外观
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: 0b38722fb1647ea215c3bb8978dd3f54b300a0e0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: df66991289373a05fc7c27b7768a96643e3bbae0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746629"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142125"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>如何：更改 Windows 窗体 LinkLabel 控件的外观
-您可以更改 <xref:System.Windows.Forms.LinkLabel> 控件显示的文本，以满足各种目的。 例如，通常情况下，通过将文本设置为以带有下划线的特定颜色显示来向用户指示文本可以单击。 用户单击文本后，颜色将变为不同的颜色。 若要控制此行为，可以设置五个不同的属性： "<xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>"、"<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>"、"<xref:System.Windows.Forms.LinkLabel.LinkColor%2A>"、"<xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>" 和 "<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>" 属性。  
+您可以更改<xref:System.Windows.Forms.LinkLabel>控件显示的文本，以适应各种用途。 例如，通常的做法是，通过将文本设置为以带有下划线的特定颜色显示，可以向用户指示可以单击文本。 用户单击文本后，颜色将更改为其他颜色。 要控制此行为，可以设置五个不同的<xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>属性：、 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>、<xref:System.Windows.Forms.LinkLabel.LinkColor%2A><xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>和<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>属性。  
   
-### <a name="to-change-the-appearance-of-a-linklabel-control"></a>更改 LinkLabel 控件的外观  
+### <a name="to-change-the-appearance-of-a-linklabel-control"></a>更改链接标签控件的外观  
   
-1. 将 <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> 和 <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> 属性设置为所需的颜色。  
+1. 将<xref:System.Windows.Forms.LinkLabel.LinkColor%2A>和<xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>属性设置为所需的颜色。  
   
-     可以通过编程方式或在设计时在 "**属性**" 窗口中完成此操作。  
+     这可以以编程方式或在 **"属性"** 窗口中的设计时间完成。  
   
     ```vb  
     ' You can set the color using decimal values for red, green, and blue  
@@ -49,9 +49,9 @@ ms.locfileid: "76746629"
     linkLabel1->VisitedLinkColor = Color::Purple;  
     ```  
   
-2. 将 <xref:System.Windows.Forms.LinkLabel.Text%2A> 属性设置为相应的标题。  
+2. 将<xref:System.Windows.Forms.LinkLabel.Text%2A>属性设置为适当的标题。  
   
-     可以通过编程方式或在设计时在 "**属性**" 窗口中完成此操作。  
+     这可以以编程方式或在 **"属性"** 窗口中的设计时间完成。  
   
     ```vb  
     LinkLabel1.Text = "Click here to see more."  
@@ -65,9 +65,9 @@ ms.locfileid: "76746629"
     linkLabel1->Text = "Click here to see more.";  
     ```  
   
-3. 设置 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 属性，以确定将标题的哪部分指定为链接。  
+3. 设置属性<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>以确定标题的哪个部分将指示为链接。  
   
-     <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 值用包含两个数字、起始字符位置和字符数的 <xref:System.Windows.Forms.LinkArea> 表示。 可以通过编程方式或在设计时在 "**属性**" 窗口中完成此操作。  
+     该<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>值用<xref:System.Windows.Forms.LinkArea>包含两个数字、起始字符位置和字符数表示。 这可以以编程方式或在 **"属性"** 窗口中的设计时间完成。  
   
     ```vb  
     LinkLabel1.LinkArea = new LinkArea(6,4)  
@@ -81,13 +81,13 @@ ms.locfileid: "76746629"
     linkLabel1->LinkArea = LinkArea(6,4);  
     ```  
   
-4. 将 <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> 属性设置为 <xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>、<xref:System.Windows.Forms.LinkBehavior.HoverUnderline>或 <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>。  
+4. 将<xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>属性设置为<xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>或<xref:System.Windows.Forms.LinkBehavior.HoverUnderline>。 <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>  
   
-     如果将其设置为 "<xref:System.Windows.Forms.LinkBehavior.HoverUnderline>"，则 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 所确定的标题部分将仅在指针停留在其上时带有下划线。  
+     如果设置为<xref:System.Windows.Forms.LinkBehavior.HoverUnderline>，则确定<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>的标题部分仅在指针位于其上时进行下划线。  
   
-5. 在 <xref:System.Windows.Forms.LinkLabel.LinkClicked> 事件处理程序中，将 <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> 属性设置为 "`true`"。  
+5. 在事件<xref:System.Windows.Forms.LinkLabel.LinkClicked>处理程序中，将<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>属性设置为`true`。  
   
-     访问某个链接后，常见的做法是以某种方式（通常使用颜色）更改其外观。 文本将更改为 <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> 属性指定的颜色。  
+     访问链接后，通常的做法是以某种方式（通常按颜色）更改其外观。 文本将更改为<xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>属性指定的颜色。  
   
     ```vb  
     Protected Sub LinkLabel1_LinkClicked (ByVal sender As Object, _  
@@ -102,7 +102,7 @@ ms.locfileid: "76746629"
     ```csharp  
     protected void LinkLabel1_LinkClicked(object sender, System.EventArgs e)  
     {  
-       // Change the color of the link text by setting LinkVisited   
+       // Change the color of the link text by setting LinkVisited
        // to True.  
        linkLabel1.LinkVisited = true;  
        // Then do whatever other action is appropriate  
@@ -114,7 +114,7 @@ ms.locfileid: "76746629"
        System::Void linkLabel1_LinkClicked(System::Object ^  sender,  
           System::Windows::Forms::LinkLabelLinkClickedEventArgs ^  e)  
        {  
-          // Change the color of the link text by setting LinkVisited   
+          // Change the color of the link text by setting LinkVisited
           // to True.  
           linkLabel1->LinkVisited = true;  
           // Then do whatever other action is appropriate  

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-ms.openlocfilehash: e8c8c9ebff259ccd991768afb8cdf9925a66aad0
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 79772d19ddaec041aa1fac936b9951731507b6e6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141613"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184456"
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel 事务配置
-Windows Communication Foundation （WCF）提供了三个属性，用于为服务配置事务： `transactionFlow`、`transactionProtocol`和 `transactionTimeout`。  
+Windows 通信基础 （WCF） 提供了三个属性来配置服务的事务`transactionFlow`：`transactionProtocol`和`transactionTimeout`。  
   
 ## <a name="configuring-transactionflow"></a>配置 transactionFlow  
- WCF 提供的大多数预定义绑定都包含 `transactionFlow` 和 `transactionProtocol` 属性，以便您可以使用特定的事务流协议将绑定配置为接受特定终结点的传入事务。 此外，你可以使用 `transactionFlow` 元素及其 `transactionProtocol` 特性生成你自己的自定义绑定。 有关设置配置元素的详细信息，请参阅[\<绑定 >](../../configure-apps/file-schema/wcf/bindings.md)和[WCF 配置架构](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
+ WCF 提供的大多数预定义的绑定都包含`transactionFlow`和`transactionProtocol`属性，以便可以将绑定配置为使用特定的事务流协议接受特定终结点的传入事务。 此外，你可以使用 `transactionFlow` 元素及其 `transactionProtocol` 特性生成你自己的自定义绑定。 有关设置配置元素的详细信息，请参阅[\<绑定>](../../configure-apps/file-schema/wcf/bindings.md)和[WCF 配置架构](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
   
  `transactionFlow` 属性指定是否为使用绑定的服务终结点启用事务流。  
   
@@ -28,21 +28,21 @@ Windows Communication Foundation （WCF）提供了三个属性，用于为服�
 <netNamedPipeBinding>  
    <binding name="test"  
       closeTimeout="00:00:10"  
-      openTimeout="00:00:20"   
+      openTimeout="00:00:20"
       receiveTimeout="00:00:30"  
       sendTimeout="00:00:40"  
       transactionFlow="true"  
       transactionProtocol="WSAtomicTransactionOctober2004"  
       hostNameComparisonMode="WeakWildcard"  
       maxBufferSize="1001"  
-      maxConnections="123"   
+      maxConnections="123"
       maxReceivedMessageSize="1000">  
    </binding>  
 </netNamedPipeBinding>  
 ```  
   
 ## <a name="configuring-transactiontimeout"></a>配置 transactionTimeout  
- 可以在配置文件的 `behavior` 元素中为 WCF 服务配置 `transactionTimeout` 特性。 下面的代码演示如何执行此操作。  
+ 您可以在配置文件`behavior`的元素中`transactionTimeout`配置 WCF 服务的属性。 下面的代码演示如何执行此操作。  
   
 ```xml  
 <configuration>  
@@ -62,7 +62,7 @@ Windows Communication Foundation （WCF）提供了三个属性，用于为服�
   
  请注意，所使用的超时值是此 `transactionTimeout` 配置设置和任何 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 属性之间的较小值。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [\<binding >](../../configure-apps/file-schema/wcf/bindings.md)
+- [\<绑定>](../../configure-apps/file-schema/wcf/bindings.md)
 - [WCF 配置架构](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)

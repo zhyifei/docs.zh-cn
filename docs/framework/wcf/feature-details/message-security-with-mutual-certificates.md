@@ -5,35 +5,35 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: e784e254fb9314e69457d81a70400f7be30d9c13
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: e2aaf1a5e6ae1074a81c08fc798f22ea5e9ce139
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211993"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184607"
 ---
 # <a name="message-security-with-mutual-certificates"></a>使用相互证书的消息安全
-下面的方案演示 Windows Communication Foundation （WCF）服务和使用消息安全模式保护的客户端。 使用证书对客户端和服务进行身份验证。  
+以下方案显示了使用消息安全模式保护的 Windows 通信基础 （WCF） 服务和客户端。 使用证书对客户端和服务进行身份验证。  
   
  本方案是可互操作的，因为它使用具有 X.509 证书令牌配置文件的 WS-Security。  
   
 > [!NOTE]
 > 本方案不对服务证书执行协商。 在进行任何通信之前，必须先向客户端提供服务证书。 服务器证书可以随应用程序一起分发，也可以通过带外通信来提供。  
   
- ![具有相互证书的消息安全](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
+ ![具有相互证书的消息安全性](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
-|安全模式|Message|  
+|安全模式|消息|  
 |互操作性|是，使用 WS-Security 和 X.509 证书令牌配置文件兼容的客户端和服务。|  
-|身份验证 （可能为英文网页）|服务器和客户端的相互身份验证。|  
+|身份验证|服务器和客户端的相互身份验证。|  
 |完整性|是|  
-|保密性|是|  
-|Transport|HTTP|  
+|机密性|是|  
+|传输|HTTP|  
 |绑定|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>服务  
- 下面的代码和配置应独立运行。 执行以下操作之一：  
+ 下面的代码和配置应独立运行。 执行下列操作之一：  
   
 - 使用代码（而不使用配置）创建独立服务。  
   
@@ -56,18 +56,18 @@ ms.locfileid: "76211993"
       <serviceBehaviors>  
         <behavior name="serviceCredentialBehavior">  
           <serviceCredentials>  
-            <serviceCertificate findValue="Contoso.com"   
+            <serviceCertificate findValue="Contoso.com"
                                 storeLocation="LocalMachine"  
-                                storeName="My"   
+                                storeName="My"
                                 x509FindType="FindBySubjectName" />  
           </serviceCredentials>  
         </behavior>  
       </serviceBehaviors>  
     </behaviors>  
     <services>  
-      <service behaviorConfiguration="serviceCredentialBehavior"   
+      <service behaviorConfiguration="serviceCredentialBehavior"
                name="ServiceModel.Calculator">  
-        <endpoint address="http://localhost/Calculator"   
+        <endpoint address="http://localhost/Calculator"
                   binding="wsHttpBinding"  
                   bindingConfiguration="InteropCertificateBinding"  
                   name="WSHttpBinding_ICalculator"  
@@ -91,7 +91,7 @@ ms.locfileid: "76211993"
 ```  
   
 ## <a name="client"></a>Client  
- 下面的代码和配置应独立运行。 执行以下操作之一：  
+ 下面的代码和配置应独立运行。 执行下列操作之一：  
   
 - 使用代码（和客户端代码）创建独立客户端。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "76211993"
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>配置  
- 下面配置客户端。 必须使用[\<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)来指定客户端证书。 此外，还使用[\<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)指定服务证书。  
+ 下面配置客户端。 必须使用[\<客户端证书>指定客户端](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)证书。 此外，服务证书是使用[\<默认证书>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)指定。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -117,12 +117,12 @@ ms.locfileid: "76211993"
       <endpointBehaviors>  
         <behavior name="ClientCredentialsBehavior">  
           <clientCredentials>  
-            <clientCertificate findValue="Cohowinery.com"   
+            <clientCertificate findValue="Cohowinery.com"
                  storeLocation="CurrentUser"  
                  storeName="My"  
                  x509FindType="FindBySubjectName" />  
             <serviceCertificate>  
-              <defaultCertificate findValue="Contoso.com"   
+              <defaultCertificate findValue="Contoso.com"
                                   storeLocation="CurrentUser"  
                                   storeName="TrustedPeople"  
                                   x509FindType="FindBySubjectName" />  
@@ -135,7 +135,7 @@ ms.locfileid: "76211993"
       <wsHttpBinding>  
         <binding name="WSHttpBinding_ICalculator" >  
           <security mode="Message">  
-            <message clientCredentialType="Certificate"   
+            <message clientCredentialType="Certificate"
                      negotiateServiceCredential="false"  
                      establishSecurityContext="false" />  
           </security>  
@@ -143,9 +143,9 @@ ms.locfileid: "76211993"
       </wsHttpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="http://machineName/Calculator"   
+      <endpoint address="http://machineName/Calculator"
                 behaviorConfiguration="ClientCredentialsBehavior"  
-                binding="wsHttpBinding"   
+                binding="wsHttpBinding"
                 bindingConfiguration="WSHttpBinding_ICalculator"  
                 contract="ICalculator"  
                 name="WSHttpBinding_ICalculator">  
@@ -160,6 +160,6 @@ ms.locfileid: "76211993"
   
 ## <a name="see-also"></a>另请参阅
 
-- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server App Fabric 的安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
-- [如何：在 WCF 中创建和安装用于传输安全的临时证书](https://docs.microsoft.com/previous-versions/msp-n-p/ff648498(v=pandp.10))
+- [如何：在开发过程中在 WCF 中创建和安装临时证书，用于运输安全](https://docs.microsoft.com/previous-versions/msp-n-p/ff648498(v=pandp.10))

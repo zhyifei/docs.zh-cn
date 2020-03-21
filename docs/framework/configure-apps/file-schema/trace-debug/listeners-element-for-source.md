@@ -1,5 +1,5 @@
 ---
-title: <listeners> 的 <source> 元素
+title: <source> 的 <listeners> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
@@ -7,45 +7,45 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: d7641611e5d8257b49bc6a6abd0a2fadfde66e91
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 0eee325e01b41a15a19e4f40f479596f9d70f73b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697292"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153407"
 ---
-# <a name="listeners-element-for-source"></a>\<源的 \<侦听器 > 元素 >
-在 <xref:System.Diagnostics.TraceSource>的 <xref:System.Diagnostics.TraceSource.Listeners%2A> 集合中添加或移除侦听器。 侦听器将跟踪输出定向到适当的目标，如日志、窗口或文本文件。  
+# <a name="listeners-element-for-source"></a>\<源>的侦\<听器>元素
+添加或删除 集合中的<xref:System.Diagnostics.TraceSource.Listeners%2A>侦听器。 <xref:System.Diagnostics.TraceSource> 侦听器将跟踪输出定向到适当的目标，如日志、窗口或文本文件。  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<的 >** ](system-diagnostics-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<源 >** ](sources-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**源**>](source-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<侦听器 >**  
+[**\<配置>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<系统.诊断>**](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<来源>**](sources-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<源>**](source-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<听众>**  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<listeners>   
+<listeners>
   <add>...</add>  
   <remove ... />  
   <clear/>  
 </listeners>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性和元素  
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>属性  
  无。  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|说明|  
 |-------------|-----------------|  
-|[\<add>](add-element-for-listeners-for-source.md)|将侦听器添加到 `Listeners` 集合中。|  
-|[\<remove>](remove-element-for-listeners-for-source.md)|从 `Listeners` 集合中删除侦听器。|  
-|[\<clear>](clear-element-for-listeners-for-source.md)|清除跟踪源的 `Listeners` 集合。|  
+|[\<添加>](add-element-for-listeners-for-source.md)|将侦听器添加到 `Listeners` 集合中。|  
+|[\<删除>](remove-element-for-listeners-for-source.md)|从`Listeners`集合中删除侦听器。|  
+|[\<明确>](clear-element-for-listeners-for-source.md)|清除跟踪源的 `Listeners` 集合。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -59,21 +59,21 @@ ms.locfileid: "71697292"
 ## <a name="remarks"></a>备注  
   
 ## <a name="configuration-file"></a>配置文件  
- 此元素可在计算机配置文件（Machine.config）和应用程序配置文件中使用。  
+ 此元素可用于计算机配置文件 （Machine.config） 和应用程序配置文件。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 `<listeners>` 元素将控制台跟踪侦听器添加到 `mySource` 源并删除默认的跟踪侦听器。  
+ 下面的示例演示如何使用 元素`<listeners>`向`mySource`源添加控制台跟踪侦听器并删除默认跟踪侦听器。  
   
 ```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
-      <source name="mySource" switchName="sourceSwitch"   
+      <source name="mySource" switchName="sourceSwitch"
         switchType="System.Diagnostics.SourceSwitch">  
         <listeners>  
-          <add name="console"   
+          <add name="console"
             type="System.Diagnostics.ConsoleTraceListener">  
-            <filter type="System.Diagnostics.EventTypeFilter"   
+            <filter type="System.Diagnostics.EventTypeFilter"
               initializeData="Error"/>  
           </add>  
           <remove name="Default"/>  

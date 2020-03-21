@@ -2,12 +2,12 @@
 title: 指定自定义加密算法
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 0bfa6c46f4db1171eb314625e36c267000a0ec12
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 673d177a665e265d77f0221e0a00f4b814c8795c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628678"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186480"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>指定自定义加密算法
 WCF 允许指定在加密数据或计算数字签名时使用的自定义加密算法。 为此，请执行下列步骤：  
@@ -105,12 +105,12 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- <`cryptoClasses`> 元素下的部分将创建 SHA256CryptoServiceProvider 与别名 "SHA256CSP" 之间的映射。 > 元素 <`nameEntry`在 "SHA256CSP" 别名与指定的 URL `http://constoso.com/CustomAlgorithms/CustomHashAlgorithm`之间创建映射。  
+ <>`cryptoClasses`元素下的部分在 SHA256CryptoService 提供商和别名"SHA256CSP"之间创建映射。 <>`nameEntry`元素在"SHA256CSP"别名和指定的 URL`http://constoso.com/CustomAlgorithms/CustomHashAlgorithm`之间创建映射。  
   
  要在代码中注册自定义算法，可使用 <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> 方法。 该方法可创建这两个映射。 以下示例揭示了如何调用此方法：  
   
 ```csharp
-// Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the   
+// Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the
 // SHA256CryptoServiceProvider hash algorithm object.  
 CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.com/CustomAlgorithms/CustomHashAlgorithm");  
 ```  
@@ -123,11 +123,11 @@ WSHttpBinding binding = new WSHttpBinding();
             binding.Security.Message.AlgorithmSuite = new MyCustomAlgorithmSuite();  
 ```  
   
- 有关完整的代码示例，请参阅[WCF 安全中的加密灵活性](../samples/cryptographic-agility-in-wcf-security.md)示例。  
+ 有关完整的代码示例，请参阅[WCF 安全示例中的加密敏捷性](../samples/cryptographic-agility-in-wcf-security.md)。  
   
 ## <a name="see-also"></a>另请参阅
 
-- [Securing Services and Clients](../feature-details/securing-services-and-clients.md)
+- [保护服务和客户端的安全](../feature-details/securing-services-and-clients.md)
 - [保护服务](../securing-services.md)
 - [安全概述](../feature-details/security-overview.md)
-- [安全性概念](../feature-details/security-concepts.md)
+- [安全概念](../feature-details/security-concepts.md)

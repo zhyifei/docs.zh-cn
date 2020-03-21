@@ -2,12 +2,12 @@
 title: 如何：服务版本控制
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 5ce9e7fc896f1ebc46dd25777fc629532339cbe2
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 3cd52e1f52a93e408ebed846894cc5686652cc91
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988703"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184846"
 ---
 # <a name="how-to-service-versioning"></a>如何：服务版本控制
 本主题概述了创建路由配置以将消息路由到同一服务的不同版本所需采取的基本步骤。 在本示例中，消息将路由到计算器服务的两个不同版本：`roundingCalc` (v1) 和 `regularCalc` (v2)。 这两个实现都支持相同的操作，但较早的服务 `roundingCalc` 在返回计算结果前会将所有计算结果舍入到最接近的整数值。 客户端应用程序必须能够指示是否使用较新的 `regularCalc` 服务。  
@@ -21,9 +21,9 @@ ms.locfileid: "69988703"
   
 - 减  
   
-- 相乘  
+- 乘  
   
-- 除  
+- Divide  
   
  由于两个服务实现处理相同的运算，并且除了返回的数据之外基本相同，因此从客户端应用程序发送的消息中包含的基本数据不具备足够的独特性，无法确定如何路由请求。 例如，由于两个服务的默认操作相同，因此不能使用操作筛选器。  
   
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. 定义用于将消息路由到目标终结点的筛选器。  对于本示例, 使用 XPath 筛选器检测 "CalcVer" 自定义标头的值, 以确定应将消息路由到哪个版本。 XPath 筛选器还用于检测不包含 "CalcVer" 标头的消息。 下面的示例定义所需的筛选器和命名空间表。  
+2. 定义用于将消息路由到目标终结点的筛选器。  在此示例中，XPath 筛选器用于检测"CalcVer"自定义标头的值，以确定消息应路由到哪个版本。 XPath 筛选器还用于检测不包含"CalcVer"标头的消息。 下面的示例定义所需的筛选器和命名空间表。  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,9 +94,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    > 默认情况下, 在命名空间表中定义 s12 命名空间前缀, 表示命名`http://www.w3.org/2003/05/soap-envelope`空间。
+    > s12 命名空间前缀在命名空间表中默认定义，并表示命名空间`http://www.w3.org/2003/05/soap-envelope`。
   
-3. 定义筛选器表，该表将各个筛选器与客户端终结点相关联。 如果消息包含值为1的 "CalcVer" 标头, 则会将其发送到 regularCalc 服务。 如果标头包含值 2，则系统将该消息发送到 roundingCalc 服务。 如果没有标头，则系统将该消息路由到 regularCalc。  
+3. 定义筛选器表，该表将各个筛选器与客户端终结点相关联。 如果消息包含值为 1 的"CalcVer"标头，则会将其发送到常规Calc服务。 如果标头包含值 2，则系统将该消息发送到 roundingCalc 服务。 如果没有标头，则系统将该消息路由到 regularCalc。  
   
      以下代码定义筛选器表并添加前面定义的筛选器。  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. 若要根据筛选器表中包含的筛选器评估传入消息，必须使用路由行为将筛选器表与服务终结点关联。 下面的示例演示如何`filterTable1`将与服务终结点相关联:  
+4. 若要根据筛选器表中包含的筛选器评估传入消息，必须使用路由行为将筛选器表与服务终结点关联。 下面的示例演示`filterTable1`了与服务终结点关联的操作：  
   
     ```xml  
     <behaviors>  
@@ -269,7 +269,7 @@ namespace Microsoft.Samples.AdvancedFilters
                     //if they wanted to create the header, go ahead and add it to the outgoing message  
                     if (header != null && (header=="1" || header=="2"))  
                     {  
-                        //create a new header "RoundingCalculator", no specific namespace, and set the value to   
+                        //create a new header "RoundingCalculator", no specific namespace, and set the value to
                         //the value of header.  
                         //the Routing Service will look for this header in order to determine if the message  
                         //should be routed to the RoundingCalculator  
@@ -324,6 +324,6 @@ namespace Microsoft.Samples.AdvancedFilters
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [路由服务](../../../../docs/framework/wcf/samples/routing-services.md)

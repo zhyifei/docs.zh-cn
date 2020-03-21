@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fab037cb-fda6-40fb-9367-921e435dd5a0
 topic_type:
 - apiref
-ms.openlocfilehash: 828e4dc67cb93d0a35879e94b54c9fac6e5bda16
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a35ce025360e0ec8b7085d68e54548026b7c7fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124086"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178901"
 ---
 # <a name="icordebugframegetstackrange-method"></a>ICorDebugFrame::GetStackRange 方法
 获取此堆栈帧的绝对地址范围。  
@@ -29,20 +29,20 @@ ms.locfileid: "73124086"
   
 ```cpp  
 HRESULT GetStackRange (  
-    [out] CORDB_ADDRESS      *pStart,   
+    [out] CORDB_ADDRESS      *pStart,
     [out] CORDB_ADDRESS      *pEnd  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `pStart`  
- 弄一个指向 `CORDB_ADDRESS` 的指针，该指针指定由此 `ICorDebugFrame` 对象表示的堆栈帧的起始地址。  
+ [出]指向`CORDB_ADDRESS`指定此`ICorDebugFrame`对象表示的堆栈帧的起始地址的指针。  
   
  `pEnd`  
- 弄一个指向 `CORDB_ADDRESS` 的指针，该指针指定由此 `ICorDebugFrame` 对象表示的堆栈帧的结束地址。  
+ [出]指向`CORDB_ADDRESS`指定此`ICorDebugFrame`对象表示的堆栈帧的结束地址的指针。  
   
 ## <a name="remarks"></a>备注  
- 堆栈的地址范围可用于拼凑将从多个调试引擎中收集的交错堆栈跟踪组合在一起。 数值范围不提供有关堆栈帧内容的信息。 它仅用于比较堆栈帧位置。  
+ 堆栈的地址范围可用于拼凑从多个调试引擎收集的交错堆栈跟踪。 数值范围不提供有关堆栈帧内容的信息。 它仅对堆栈帧位置的比较有意义。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -51,4 +51,4 @@ HRESULT GetStackRange (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

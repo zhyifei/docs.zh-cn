@@ -1,5 +1,5 @@
 ---
-title: 在运行时更改 DataGrid 控件中显示的数据
+title: 在数据网格控制中更改运行时显示的数据
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: f91e2ea01ef4a52dd649efed70319017efb8368a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6b788c10784082a0c74ee09f8cd85d540c670b84
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740591"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142376"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>如何：在运行时更改 Windows 窗体 DataGrid 控件中显示的数据
 > [!NOTE]
 > <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
- 使用设计时功能创建 Windows 窗体 <xref:System.Windows.Forms.DataGrid> 后，你可能还希望在运行时动态更改网格的 <xref:System.Data.DataSet> 对象的元素。 这可以包括更改表的单个值或更改绑定到 <xref:System.Windows.Forms.DataGrid> 控件的数据源。 对单个值的更改通过 <xref:System.Data.DataSet> 对象而不是 <xref:System.Windows.Forms.DataGrid> 控件来完成。  
+ 使用设计时功能创建 Windows<xref:System.Windows.Forms.DataGrid>窗体后，您可能还希望在运行时动态更改网格<xref:System.Data.DataSet>对象的元素。 这可能包括对表的单个值的更改或更改绑定到控件的<xref:System.Windows.Forms.DataGrid>数据源。 对单个值的更改是通过<xref:System.Data.DataSet>对象而不是控件完成的。 <xref:System.Windows.Forms.DataGrid>  
   
 ### <a name="to-change-data-programmatically"></a>以编程方式更改数据  
   
-1. 从 "<xref:System.Data.DataSet>" 对象指定所需的表，并从表中指定所需的行和字段，并将该单元格设置为等于新的值。  
+1. 从<xref:System.Data.DataSet>对象指定所需的表，从表中指定所需的行和字段，并将单元格设置为等于新值。  
   
     > [!NOTE]
-    > 若要指定 <xref:System.Data.DataSet> 的第一个表或表的第一行，请使用0。  
+    > 要指定 表<xref:System.Data.DataSet>的第一个表或表的第一行，请使用 0。  
   
-     下面的示例演示如何通过单击 `Button1`来更改数据集中第一个表的第一行的第二个条目。 之前已创建 <xref:System.Data.DataSet> （`ds`）和表（`0` 和 `1`）。  
+     下面的示例演示如何通过单击`Button1`来更改数据集第一个表的第一行的第二个条目。 以前<xref:System.Data.DataSet>创建的`ds`（ 和`0``1`表 和 ）  
   
     ```vb  
     Protected Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -46,14 +46,14 @@ ms.locfileid: "76740591"
     ```  
   
     ```cpp  
-    private:   
+    private:
        void button1_Click(System::Object^ sender, System::EventArgs^ e)  
        {  
           dataSet1->Tables[0]->Rows[0][1] = "NewEntry";  
        }  
     ```  
   
-     （视觉C#对象、 C++视觉对象）将以下代码放在窗体的构造函数中以注册事件处理程序。  
+     （视觉 C#，视觉C++）将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -64,13 +64,13 @@ ms.locfileid: "76740591"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     在运行时，可以使用 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 方法将 <xref:System.Windows.Forms.DataGrid> 控件绑定到不同的数据源。 例如，您可能有多个 ADO.NET 数据控件，每个控件都连接到不同的数据库。  
+     在运行时，可以使用 方法<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>将<xref:System.Windows.Forms.DataGrid>控件绑定到其他数据源。 例如，您可能有多个ADO.NET数据控件，每个控件都连接到不同的数据库。  
   
 ### <a name="to-change-the-datasource-programmatically"></a>以编程方式更改数据源  
   
-1. 将 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 方法设置为要绑定到的数据源和表的名称。  
+1. 将<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法设置为要绑定到的数据源和表的名称。  
   
-     下面的示例演示如何使用 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 方法将日期源更改为连接到 Pubs 数据库中的 Authors 表的 ADO.NET 数据控件（adoPubsAuthors）。  
+     下面的示例演示如何使用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法将日期源更改为连接到 Pubs 数据库中的作者表ADO.NET数据控件（adoPubsAuthors）。  
   
     ```vb  
     Private Sub ResetSource()  

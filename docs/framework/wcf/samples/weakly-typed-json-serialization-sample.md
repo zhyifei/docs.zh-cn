@@ -2,17 +2,17 @@
 title: 弱类型 JSON 序列化示例
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 8893c466b347b97a7845234a8182af7ca7feba83
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: bdeaffe31ba9bced28eebcfe294fc9944e5d05d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715049"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143585"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>弱类型 JSON 序列化示例
 将用户定义的类型序列化为给定的连网格式，或者将连网格式反序列为原来的用户定义的类型时，给定的用户定义的类型必须在服务和客户端上可用。 通常，为实现此目的，系统将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于这些用户定义的类型，并将 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性应用于这些类型的成员。 处理 JavaScript 对象符号 (JSON) 对象时，该机制同样适用，如主题 [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)中所述。  
   
- 在某些情况下，Windows Communication Foundation （WCF）服务或客户端必须访问由不受开发人员控制的服务或客户端生成的 JSON 对象。 随着越来越多的 Web 服务公开 JSON Api，WCF 开发人员可能不需要构造任意 JSON 对象要反序列化的本地用户定义类型。 本示例提供了一种机制，使 WCF 开发人员无需创建用户定义的类型即可使用反序列化的任意 JSON 对象。 这称为 JSON 对象的“弱类型序列化” ，因为 JSON 对象反序列化为的类型在编译时是未知的。  
+ 在某些情况下，Windows 通信基础 （WCF） 服务或客户端必须访问由开发人员无法控制的服务或客户端生成的 JSON 对象。 随着更多的 Web 服务公开公开 JSON API，WCF 开发人员构建本地用户定义类型以反序列化任意 JSON 对象可能会变得不切实际。 此示例提供了一种机制，使 WCF 开发人员能够使用非序列化的任意 JSON 对象，而无需创建用户定义的类型。 这称为 JSON 对象的“弱类型序列化” ** ，因为 JSON 对象反序列化为的类型在编译时是未知的。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -23,7 +23,7 @@ ms.locfileid: "74715049"
 {"personal": {"name": "Paul", "age": 23, "height": 1.7, "isSingle": true, "luckyNumbers": [5,17,21]}, "favoriteBands": ["Band ABC", "Band XYZ"]}  
 ```  
   
- 若要反序列化此对象，WCF 客户端必须实现以下用户定义的类型。  
+ 要取消序列化此对象，WCF 客户端必须实现以下用户定义的类型。  
   
 ```csharp  
 [DataContract]  
@@ -58,7 +58,7 @@ ms.locfileid: "74715049"
   
  这可能会很麻烦，尤其是客户端必须处理多种 JSON 对象时。  
   
- 此示例提供的 `JsonObject` 类型引入了以弱类型表示的反序列化的 JSON 对象。 `JsonObject` 依赖于 JSON 对象和 .NET Framework 字典之间的自然映射和 JSON 数组与 .NET Framework 数组之间的映射。 下面的代码演示 `JsonObject` 类型。  
+ 此示例提供的 `JsonObject` 类型引入了以弱类型表示的反序列化的 JSON 对象。 `JsonObject`依赖于 JSON 对象和 .NET 框架字典之间的自然映射，以及 JSON 数组和 .NET 框架数组之间的映射。 下面的代码演示 `JsonObject` 类型。  
   
 ```csharp  
 // Instantiation of JsonObject json omitted  
@@ -70,7 +70,7 @@ bool isSingle = json["root"]["personal"]["isSingle"];
 int[] luckyNumbers = {  
                                      json["root"]["personal"]["luckyNumbers"][0],  
                                      json["root"]["personal"]["luckyNumbers"][1],  
-                                     json["root"]["personal"]["luckyNumbers"][2]   
+                                     json["root"]["personal"]["luckyNumbers"][2]
                                  };  
 string[] favoriteBands = {  
                                         json["root"]["favoriteBands"][0],  
@@ -125,17 +125,17 @@ My favorite bands are Band ABC and Band XYZ.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已为 Windows[通信基础示例执行一次性设置过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 按照在 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中所述的方法生成解决方案 WeaklyTypedJson.sln。  
   
-3. 运行该解决方案。  
+3. 运行解决方案。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
->   
+>
+> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  

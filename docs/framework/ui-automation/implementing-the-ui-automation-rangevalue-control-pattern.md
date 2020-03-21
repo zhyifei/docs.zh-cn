@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: 04db9f97ccea10cf8c65df0f0117c272a5e868dd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 847a8aae3fd0c3d6965c910d19a4cec11cd2a3b7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435105"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180185"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>实现 UI 自动化 RangeValue 控件模式
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74435105"
   
  <xref:System.Windows.Automation.RangeValuePattern> 控件模式用于支持可被设置为范围内的某个值的控件。 有关实现此控件模式的控件示例，请参阅 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
+<a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
  在实现 Range Value 控件模式时，请注意以下准则和约定：  
   
@@ -32,26 +32,26 @@ ms.locfileid: "74435105"
  ![进度栏。](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
 进度栏的示例，其中值为整数类型，最小和最大属性值分别被规范化为 0 和 100  
   
-<a name="Required_Members_for_the_IRangeValueProvider"></a>   
+<a name="Required_Members_for_the_IRangeValueProvider"></a>
 ## <a name="required-members-for-irangevalueprovider"></a>IRangeValueProvider 必需的成员  
   
-|必需的成员|成员类型|注意|  
+|必需的成员|成员类型|说明|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|属性|无|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|属性|无|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|属性|无|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|属性|无|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|属性|无|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|属性|无|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|properties|无|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|properties|无|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|properties|无|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|properties|无|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|properties|无|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|properties|无|  
 |<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|方法|无|  
   
  没有与此控件模式关联的事件。  
   
-<a name="Exceptions"></a>   
-## <a name="exceptions"></a>异常  
+<a name="Exceptions"></a>
+## <a name="exceptions"></a>例外  
  提供程序必须引发以下异常。  
   
-|例外狀況類型|条件|  
+|异常类型|条件|  
 |--------------------|---------------|  
 |<xref:System.ArgumentOutOfRangeException>|使用一个大于<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> 或小于 <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> 的值调用 <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>。|  
   
@@ -59,6 +59,6 @@ ms.locfileid: "74435105"
 
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
+- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
 - [UI 自动化树概述](ui-automation-tree-overview.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)

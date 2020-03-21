@@ -2,12 +2,12 @@
 title: 已知类型
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: 5d772caa262a271db180bf764e0763999fffd7f3
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b75f540694eaeea90367f1720d5747f71d0a392d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715703"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144612"
 ---
 # <a name="known-types"></a>已知类型
 此示例演示如何在数据协定中指定有关派生类型的信息。 数据协定允许您在服务中传入和传出结构化数据。 在面向对象的编程中，可以用从另一个类型继承的类型来代替原始类型。 在面向服务的编程中，传递的是架构（而不是类型），因此，类型之间的关系将不保留。 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性允许在数据协定中包括有关派生类型的信息。 如果不使用此机制，则不能在应当使用基类型的情况下发送或接收派生类型。  
@@ -71,7 +71,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- 为了演示已知类型功能，此服务的实现方式是只返回加法和减法 `ComplexNumberWithMagnitude`。 （由于 `ComplexNumber` 属性的存在，即使协定中指定了 `KnownTypeAttribute`，这也是允许的。） 乘法和除法仍返回基数 `ComplexNumber` 类型。  
+ 为了演示已知类型功能，服务的实现方式使其仅返回添加`ComplexNumberWithMagnitude`和减法。 （由于 `ComplexNumber` 属性的存在，即使协定中指定了 `KnownTypeAttribute`，这也是允许的。） 乘法和除法仍返回基`ComplexNumber`类型。  
   
 ```csharp
 public class DataContractCalculatorService : IDataContractCalculator  
@@ -86,7 +86,7 @@ public class DataContractCalculatorService : IDataContractCalculator
     public ComplexNumber Subtract(ComplexNumber n1, ComplexNumber n2)  
     {  
         //Return the derived type.  
-        return new ComplexNumberWithMagnitude(n1.Real - n2.Real,   
+        return new ComplexNumberWithMagnitude(n1.Real - n2.Real,
                                  n1.Imaginary - n2.Imaginary);  
     }  
   
@@ -97,13 +97,13 @@ public class DataContractCalculatorService : IDataContractCalculator
         double imaginary2 = n2.Real * n1.Imaginary;  
         double real2 = n1.Imaginary * n2.Imaginary * -1;  
         //Return the base type.  
-        return new ComplexNumber(real1 + real2, imaginary1 +   
+        return new ComplexNumber(real1 + real2, imaginary1 +
                                                   imaginary2);  
     }  
   
     public ComplexNumber Divide(ComplexNumber n1, ComplexNumber n2)  
     {  
-        ComplexNumber conjugate = new ComplexNumber(n2.Real,   
+        ComplexNumber conjugate = new ComplexNumber(n2.Real,
                                      -1*n2.Imaginary);  
         ComplexNumber numerator = Multiply(n1, conjugate);  
         ComplexNumber denominator = Multiply(n2, conjugate);  
@@ -114,11 +114,11 @@ public class DataContractCalculatorService : IDataContractCalculator
 }  
 ```  
   
- 在客户端上，服务协定和数据协定都是在源文件 generatedClient.cs 中定义的，该文件由服务元数据中的[元数据实用工具（svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成。 由于在服务的数据协定中指定了 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性，因此在使用服务时，客户端既能够接收 `ComplexNumber` 类又能够接收 `ComplexNumberWithMagnitude` 类。 客户端检测它是否获得了 `ComplexNumberWithMagnitude` 并生成相应的输出：  
+ 在客户端上，服务协定和数据协定都generatedClient.cs源文件中定义，该文件由[服务模型元数据实用程序工具 （Svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)从服务元数据生成。 由于在服务的数据协定中指定了 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性，因此在使用服务时，客户端既能够接收 `ComplexNumber` 类又能够接收 `ComplexNumberWithMagnitude` 类。 客户端检测它是否获得了 `ComplexNumberWithMagnitude` 并生成相应的输出：  
   
 ```csharp
 // Create a client  
-DataContractCalculatorClient client =   
+DataContractCalculatorClient client =
     new DataContractCalculatorClient();  
   
 // Call the Add service operation.  
@@ -130,7 +130,7 @@ Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",
     result.real, result.imaginary);  
 if (result is ComplexNumberWithMagnitude)  
 {  
-    Console.WriteLine("Magnitude: {0}",   
+    Console.WriteLine("Magnitude: {0}",
         ((ComplexNumberWithMagnitude)result).Magnitude);  
 }  
 else  
@@ -156,17 +156,17 @@ No magnitude was sent from the service
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已为 Windows[通信基础示例执行一次性设置过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+3. 要在单机或跨计算机配置中运行示例，请按照[运行 Windows 通信基础示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)说明操作。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
->   
+>
+> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  

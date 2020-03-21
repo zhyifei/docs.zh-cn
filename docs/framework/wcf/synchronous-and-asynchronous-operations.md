@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 143cc0f4566d86f1d42ebd11063f9af3c1ec331f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 75a585efcdf316f407f3617fef8e1e279dcd922d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802435"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143208"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和异步操作
 本主题讨论实现和调用异步服务操作。  
@@ -59,15 +59,15 @@ ms.locfileid: "74802435"
  基于任务的异步模式是实现异步操作的首选方法，因为它最简单且最直接。 若要使用此方法，只需实现服务操作并指定 Task\<T> 的返回类型，其中，T 是逻辑运算返回的类型。 例如：  
   
 ```csharp  
-public class SampleService:ISampleService   
-{   
+public class SampleService:ISampleService
+{
    // ...  
-   public async Task<string> SampleMethodTaskAsync(string msg)   
-   {   
-      return Task<string>.Factory.StartNew(() =>   
-      {   
-         return msg;   
-      });   
+   public async Task<string> SampleMethodTaskAsync(string msg)
+   {
+      return Task<string>.Factory.StartNew(() =>
+      {
+         return msg;
+      });
    }  
    // ...  
 }  
@@ -110,7 +110,7 @@ public class AsyncExample
  有关基于事件的异步模式的更多信息，请参见[基于事件的异步模式](../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)。  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>IAsyncResult 异步模式  
- 服务操作可以通过异步方式实现，使用 .NET Framework 异步编程模式，并使用 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 属性设置为 `true`来标记 `<Begin>` 方法。 在这种情况下，异步操作将以与同步操作相同的方式在元数据中公开，即作为单个操作随请求消息和相关的响应消息来公开。 随后，客户端编程模型可以进行选择。 客户端编程模型可以将这种模式表示为同步操作，也可以表示为异步操作，但前提是调用该服务时发生了请求-响应消息交换。  
+ 可以使用 .NET Framework 异步编程模式以异步方式实现服务操作，`<Begin>`并使用<xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>属性设置为`true`标记方法。 在这种情况下，异步操作将以与同步操作相同的方式在元数据中公开，即作为单个操作随请求消息和相关的响应消息来公开。 随后，客户端编程模型可以进行选择。 客户端编程模型可以将这种模式表示为同步操作，也可以表示为异步操作，但前提是调用该服务时发生了请求-响应消息交换。  
   
  通常，考虑到系统的异步特性，您不应依赖于线程。  将数据传递到操作调度处理的各个阶段的最可靠方式是使用扩展。  
   
@@ -166,7 +166,7 @@ Function EndDoWork(ByRef inout As String, ByRef outonly As String, ByVal result 
 await simpleServiceClient.SampleMethodTaskAsync("hello, world");  
 ```  
   
- 使用基于事件的异步模式只需添加事件处理程序，即可接收响应的通知 -- 将在用户界面线程上自动引发生成的事件。 若要使用此方法，请使用 [ServiceModel 元数据实用工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 并同时指定 /async 和 /tcv:Version35 命令选项，如下面的示例所示。  
+ 使用基于事件的异步模式只需添加事件处理程序，即可接收响应的通知 -- 将在用户界面线程上自动引发生成的事件。 若要使用此方法，请使用 [ServiceModel 元数据实用工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 并同时指定 /async**** 和 /tcv:Version35**** 命令选项，如下面的示例所示。  
   
 ```console  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
@@ -174,23 +174,23 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
   
  完成此操作后，Svcutil.exe 将生成带有事件基础结构的 WCF 客户端类，该事件基础结构使调用应用程序可以实现和分配事件处理程序，以便接收响应和采取相应的操作。 有关完整示例，请参见[如何：以异步方式调用服务操作](./feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
- 不过，基于事件的异步模型仅在 .NET Framework 3.5 中提供。 此外，在使用 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>创建 WCF 客户端通道时，即使在 .NET Framework 3.5 中也不支持此方法。 使用 WCF 客户端通道对象时，必须使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 对象异步调用操作。 若要使用此方法，请使用 [ServiceModel 元数据实用工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 并指定 /async 命令选项，如下面的示例所示。  
+ 但是，基于事件的异步模型仅在 .NET 框架 3.5 中可用。 此外，即使在 .NET 框架 3.5 中，使用 创建 WCF 客户端通道也不受<xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>支持。 使用 WCF 客户端通道对象时，必须使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 对象异步调用操作。 若要使用此方法，请使用 [ServiceModel 元数据实用工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 并指定 /async**** 命令选项，如下面的示例所示。  
   
 ```console  
-svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
+svcutil http://localhost:8000/servicemodelsamples/service/mex /async
 ```  
   
  这会生成一个服务协定，在该服务协定中，每个操作都作为 `<Begin>` 方法（其 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 属性设置为 `true`）和相应的 `<End>` 方法来建模。 有关使用 <xref:System.ServiceModel.ChannelFactory%601> 的完整示例，请参见[如何：使用通道工厂以异步方式调用操作](./feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)。  
   
- 在任何一种情况下，即使服务是以同步方式实现的，应用程序也可以异步方式调用操作，就如同应用程序可以使用同一个模式以异步方式调用本地同步方法一样。 操作的实现方式对于客户端而言并不重要;当响应消息到达时，会将其内容分派给客户端的异步 <`End`> 方法，客户端将检索此信息。  
+ 在任何一种情况下，即使服务是以同步方式实现的，应用程序也可以异步方式调用操作，就如同应用程序可以使用同一个模式以异步方式调用本地同步方法一样。 操作的实现方式对客户端没有重要意义;当响应消息到达时，其内容将发送到客户端的异步<>`End`方法，客户端检索信息。  
   
 ### <a name="one-way-message-exchange-patterns"></a>单向消息交换模式  
- 还可以创建一个异步消息交换模式，在该模式下，单向操作（其 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 为 `true` 的操作，该操作没有相关的响应）可以由客户端或服务独立于另一端来单向发送。 （这会将双工消息交换模式用于单向消息。）在这种情况下，服务协定指定单向消息交换，无论是哪种情况，都可以根据需要将其任意一方实现为异步调用或实现。 通常，当服务协定是单向消息交换时，这些实现极有可能是异步的，因为在发送消息之后，应用程序不会等待答复，而是继续执行其他工作。  
+ 还可以创建一个异步消息交换模式，在该模式下，单向操作（其 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 为 `true` 的操作，该操作没有相关的响应）可以由客户端或服务独立于另一端来单向发送。 （这使用双工消息交换模式与单向消息。在这种情况下，服务协定指定一个单向消息交换，任何一方都可以根据需要实现异步调用或实现。 通常，当服务协定是单向消息交换时，这些实现极有可能是异步的，因为在发送消息之后，应用程序不会等待答复，而是继续执行其他工作。  
   
 ### <a name="event-based-asynchronous-clients-and-message-contracts"></a>基于事件的异步模式客户端和消息协定  
  基于事件的异步模型设计准则规定，如果返回了多个值，则一个值会作为 `Result` 属性返回，其他值会作为 <xref:System.EventArgs> 对象上的属性返回。 因此产生的结果之一是，如果客户端使用基于事件的异步命令选项导入元数据，且该操作返回多个值，则默认的 <xref:System.EventArgs> 对象将返回一个值作为 `Result` 属性，返回的其余值是 <xref:System.EventArgs> 对象的属性。  
   
- 如果要将消息对象作为 `Result` 属性来接收并要使返回的值作为该对象上的属性，请使用 /messageContract 命令选项。 这会生成一个签名，该签名会将响应消息作为 `Result` 对象上的 <xref:System.EventArgs> 属性返回。 然后，所有内部返回值就都是响应消息对象的属性了。  
+ 如果要将消息对象作为 `Result` 属性来接收并要使返回的值作为该对象上的属性，请使用 /messageContract**** 命令选项。 这会生成一个签名，该签名会将响应消息作为 `Result` 对象上的 <xref:System.EventArgs> 属性返回。 然后，所有内部返回值就都是响应消息对象的属性了。  
   
 ## <a name="see-also"></a>另请参阅
 

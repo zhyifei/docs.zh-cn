@@ -2,15 +2,15 @@
 title: 自定义 WSDL 发布
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 173deaf280c052b76e6937b2cec44ebdeafc57f9
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ae6d5fdf243d5000090e993bd3353c6180d0ccaa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714917"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145054"
 ---
 # <a name="custom-wsdl-publication"></a>自定义 WSDL 发布
-此示例演示如何：  
+此示例演示了如何执行以下操作：  
   
 - 在自定义 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 属性 (Attribute) 上实现 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>，以便将该属性 (Attribute) 的属性 (Property) 导出为 WSDL 批注。  
   
@@ -18,7 +18,7 @@ ms.locfileid: "74714917"
   
 - 分别在自定义协定行为和自定义操作行为上实现 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType>，以便在 CodeDom 中将导入的批注作为导入的协定和操作的注释写入。  
   
-- 使用 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 下载 WSDL、用于使用自定义 WSDL 导入程序导入 WSDL 的 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>，<xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> 以及用于生成 Windows Communication Foundation （WCF）客户端代码，并将 WSDL 批注作为///和 "" "中C#的注释和 Visual Basic。  
+- 使用<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>下载 WSDL，使用<xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>自定义 WSDL 导入导入 WSDL，<xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType>使用 生成 Windows 通信基础 （WCF） 客户端代码，其中 WSDL 注释为 /// 和""C# 和 Visual Basic 中的注释。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -27,7 +27,7 @@ ms.locfileid: "74714917"
  此示例中的服务使用两个自定义属性进行标记。 第一个是 `WsdlDocumentationAttribute`，它在构造函数中接受字符串，可用来通过描述用法的字符串提供协定接口或操作。 第二个是 `WsdlParamOrReturnDocumentationAttribute`，可用来返回值或参数，以说明操作中的那些值。 下面的示例演示使用这些属性描述的服务协定 `ICalculator`。  
   
 ```csharp  
-// Define a service contract.      
+// Define a service contract.
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 // Document it.  
 [WsdlDocumentation("The ICalculator contract performs basic calculation services.")]  
@@ -37,7 +37,7 @@ public interface ICalculator
     [WsdlDocumentation("The Add operation adds two numbers and returns the result.")]  
     [return:WsdlParamOrReturnDocumentation("The result of adding the two arguments together.")]  
     double Add(  
-      [WsdlParamOrReturnDocumentation("The first value to add.")]double n1,   
+      [WsdlParamOrReturnDocumentation("The first value to add.")]double n1,
       [WsdlParamOrReturnDocumentation("The second value to add.")]double n2  
     );  
   
@@ -45,7 +45,7 @@ public interface ICalculator
     [WsdlDocumentation("The Subtract operation subtracts the second argument from the first.")]  
     [return:WsdlParamOrReturnDocumentation("The result of the second argument subtracted from the first.")]  
     double Subtract(  
-      [WsdlParamOrReturnDocumentation("The value from which the second is subtracted.")]double n1,   
+      [WsdlParamOrReturnDocumentation("The value from which the second is subtracted.")]double n1,
       [WsdlParamOrReturnDocumentation("The value that is subtracted from the first.")]double n2  
     );  
   
@@ -53,7 +53,7 @@ public interface ICalculator
     [WsdlDocumentation("The Multiply operation multiplies two values.")]  
     [return:WsdlParamOrReturnDocumentation("The result of multiplying the first and second arguments.")]  
     double Multiply(  
-      [WsdlParamOrReturnDocumentation("The first value to multiply.")]double n1,   
+      [WsdlParamOrReturnDocumentation("The first value to multiply.")]double n1,
       [WsdlParamOrReturnDocumentation("The second value to multiply.")]double n2  
     );  
   
@@ -61,7 +61,7 @@ public interface ICalculator
     [WsdlDocumentation("The Divide operation returns the value of the first argument divided by the second argument.")]  
     [return:WsdlParamOrReturnDocumentation("The result of dividing the first argument by the second.")]  
     double Divide(  
-      [WsdlParamOrReturnDocumentation("The numerator.")]double n1,   
+      [WsdlParamOrReturnDocumentation("The numerator.")]double n1,
       [WsdlParamOrReturnDocumentation("The denominator.")]double n2  
     );  
 }  
@@ -144,7 +144,7 @@ for (int i = 0; i < args.Length; i++)
   
 ```xml  
 <services>  
-  <service   
+  <service
       name="Microsoft.ServiceModel.Samples.CalculatorService"  
       behaviorConfiguration="CalculatorServiceBehavior">  
     <!-- ICalculator is exposed at the base address provided by host: http://localhost/servicemodelsamples/service.svc  -->  
@@ -223,8 +223,8 @@ public void GenerateOperation(OperationContractGenerationContext context)
   
 ```xml  
 <client>  
-  <endpoint address="http://localhost/servicemodelsamples/service.svc"   
-  binding="wsHttpBinding"   
+  <endpoint address="http://localhost/servicemodelsamples/service.svc"
+  binding="wsHttpBinding"
   contract="ICalculator" />  
   <metadata>  
     <wsdlImporters>  
@@ -234,57 +234,57 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- 指定自定义导入程序后，WCF 元数据系统会将自定义导入程序加载到为该目的创建的任何 <xref:System.ServiceModel.Description.WsdlImporter>。 此示例使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 下载元数据，使用经过正确配置的 <xref:System.ServiceModel.Description.WsdlImporter> 通过此示例创建的自定义导入程序导入元数据，并使用 <xref:System.ServiceModel.Description.ServiceContractGenerator> 将修改后的协定信息编译成 Visual Basic 和 C# 客户端代码（可在 Visual Studio 中使用以支持 Intellisense），或者编译成 XML 文档。  
+ 指定自定义导入器后，WCF 元数据系统会将自定义导入器加载到为此<xref:System.ServiceModel.Description.WsdlImporter>创建的任何导入器中。 此示例使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 下载元数据，使用经过正确配置的 <xref:System.ServiceModel.Description.WsdlImporter> 通过此示例创建的自定义导入程序导入元数据，并使用 <xref:System.ServiceModel.Description.ServiceContractGenerator> 将修改后的协定信息编译成 Visual Basic 和 C# 客户端代码（可在 Visual Studio 中使用以支持 Intellisense），或者编译成 XML 文档。  
   
 ```csharp
 /// From WSDL Documentation:  
-///   
-/// <summary>The ICalculator contract performs basic calculation   
-/// services.</summary>   
-///   
+///
+/// <summary>The ICalculator contract performs basic calculation
+/// services.</summary>
+///
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
 [System.ServiceModel.ServiceContractAttribute(Namespace="http://Microsoft.ServiceModel.Samples", ConfigurationName="ICalculator")]  
 public interface ICalculator  
 {  
   
     /// From WSDL Documentation:  
-    ///   
-    /// <summary>The Add operation adds two numbers and returns the   
-    /// result.</summary><returns>The result of adding the two arguments   
-    /// together.</returns><param name="n1">The first value to add.</param><param   
-    /// name="n2">The second value to add.</param>   
-    ///   
+    ///
+    /// <summary>The Add operation adds two numbers and returns the
+    /// result.</summary><returns>The result of adding the two arguments
+    /// together.</returns><param name="n1">The first value to add.</param><param
+    /// name="n2">The second value to add.</param>
+    ///
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Add", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/AddResponse")]  
     double Add(double n1, double n2);  
   
     /// From WSDL Documentation:  
-    ///   
-    /// <summary>The Subtract operation subtracts the second argument from the   
-    /// first.</summary><returns>The result of the second argument subtracted from the   
-    /// first.</returns><param name="n1">The value from which the second is   
-    /// subtracted.</param><param name="n2">The value that is subtracted from the   
-    /// first.</param>   
-    ///   
+    ///
+    /// <summary>The Subtract operation subtracts the second argument from the
+    /// first.</summary><returns>The result of the second argument subtracted from the
+    /// first.</returns><param name="n1">The value from which the second is
+    /// subtracted.</param><param name="n2">The value that is subtracted from the
+    /// first.</param>
+    ///
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Subtract", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/SubtractResponse")]  
     double Subtract(double n1, double n2);  
   
     /// From WSDL Documentation:  
-    ///   
-    /// <summary>The Multiply operation multiplies two values.</summary><returns>The   
-    /// result of multiplying the first and second arguments.</returns><param   
-    /// name="n1">The first value to multiply.</param><param name="n2">The second value   
-    /// to multiply.</param>   
-    ///   
+    ///
+    /// <summary>The Multiply operation multiplies two values.</summary><returns>The
+    /// result of multiplying the first and second arguments.</returns><param
+    /// name="n1">The first value to multiply.</param><param name="n2">The second value
+    /// to multiply.</param>
+    ///
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Multiply", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/MultiplyResponse")]  
     double Multiply(double n1, double n2);  
   
     /// From WSDL Documentation:  
-    ///   
-    /// <summary>The Divide operation returns the value of the first argument divided   
-    /// by the second argument.</summary><returns>The result of dividing the first   
-    /// argument by the second.</returns><param name="n1">The numerator.</param><param   
-    /// name="n2">The denominator.</param>   
-    ///   
+    ///
+    /// <summary>The Divide operation returns the value of the first argument divided
+    /// by the second argument.</summary><returns>The result of dividing the first
+    /// argument by the second.</returns><param name="n1">The numerator.</param><param
+    /// name="n2">The denominator.</param>
+    ///
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Divide", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/DivideResponse")]  
     double Divide(double n1, double n2);  
 }  
@@ -292,17 +292,17 @@ public interface ICalculator
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已为 Windows[通信基础示例执行一次性设置过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+3. 要在单机或跨计算机配置中运行示例，请按照[运行 Windows 通信基础示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)说明操作。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
->   
+>
+> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  

@@ -2,12 +2,12 @@
 title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 2010ef9d6fe37e65824cac877074453db1b789db
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 1233971b172079aa48227d0ec520068afbdf0952
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319448"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150064"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 指定用于 SELECT 语句所返回的对象的排序顺序。  
@@ -15,17 +15,17 @@ ms.locfileid: "72319448"
 ## <a name="syntax"></a>语法  
   
 ```sql  
-[ ORDER BY   
+[ ORDER BY
    {  
       order_by_expression [SKIP n] [LIMIT n]  
       [ COLLATE collation_name ]  
       [ ASC | DESC ]  
    }  
-   [ ,…n ]   
+   [ ,…n ]
 ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `order_by_expression`  
  指定作为排序依据的属性的任何有效查询表达式。 可以指定多个排序表达式。 ORDER BY 子句中排序表达式的顺序将决定排序后结果集的结构。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "72319448"
  指定应根据 `collation_name`中所指定的排序规则执行 ORDER BY 运算。 COLLATE 仅适用于字符串表达式。  
   
  ASC  
- 指定所指定属性中的值应按升序排序，即从最低值往最高值排序。 这是默认设置。  
+ 指定所指定属性中的值应按升序排序，即从最低值往最高值排序。 这是默认值。  
   
  DESC  
  指定所指定属性中的值应按降序排序，即从最高值往最低值排序。  
@@ -53,7 +53,7 @@ ms.locfileid: "72319448"
   
  如果代码循环访问一个有序集（顶级投影除外），则不能确保输出会保持其顺序。  
 
-在下面的示例中，保证保留顺序：
+在以下示例中，订单保证保留：
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -61,7 +61,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-在下面的查询中，将忽略嵌套查询的顺序：  
+在以下查询中，将忽略嵌套查询的顺序：  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -97,12 +97,12 @@ ORDER BY ...
   
 - ROW  
   
-- VALUE  
+- 值  
   
 ## <a name="ordering-nested-queries"></a>嵌套查询排序  
  在实体框架中，嵌套表达式可以放在查询的任何位置，不保留嵌套查询的顺序。  
 
-下面的查询将按姓氏对结果进行排序：  
+以下查询按姓氏对结果排序：  
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -110,7 +110,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-在下面的查询中，将忽略嵌套查询的顺序：  
+在以下查询中，将忽略嵌套查询的顺序：  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -128,10 +128,10 @@ SELECT C2.FirstName, C2.LastName
   
  [!code-sql[DP EntityServices Concepts#ORDERBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#orderby)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [查询表达式](query-expressions-entity-sql.md)
 - [实体 SQL 引用](entity-sql-reference.md)
-- [SKIP](skip-entity-sql.md)
-- [LIMIT](limit-entity-sql.md)
-- [TOP](top-entity-sql.md)
+- [跳](skip-entity-sql.md)
+- [限制](limit-entity-sql.md)
+- [返回页首](top-entity-sql.md)

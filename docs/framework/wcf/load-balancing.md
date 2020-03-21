@@ -1,23 +1,23 @@
 ---
-title: 负载平衡
+title: 负载均衡
 ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: c9a1e889ab5adcb8f0eb5ea851c81a4f9ee56e95
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: a444df2b05803ec54c5bd9030ce12209cfe9bd07
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138541"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183982"
 ---
-# <a name="load-balancing"></a>负载平衡
-增加 Windows Communication Foundation （WCF）应用程序容量的一种方法是通过将它们部署到负载平衡的服务器场来扩展它们。 可以使用标准负载平衡技术（包括软件负载平衡器，例如 Windows 网络负载平衡）以及基于硬件的负载平衡设备对 WCF 应用程序进行负载平衡。  
+# <a name="load-balancing"></a>负载均衡
+增加 Windows 通信基础 （WCF） 应用程序的容量的一个方法是通过将它们部署到负载均衡的服务器场来扩展它们。 WCF 应用程序可以使用标准负载平衡技术实现负载平衡，包括 Windows 网络负载平衡等软件负载平衡器以及基于硬件的负载平衡设备。  
   
- 以下各节讨论有关使用各种系统提供的绑定生成的 WCF 应用程序的负载平衡注意事项。  
+ 以下各节讨论使用各种系统提供的绑定构建的负载平衡 WCF 应用程序的注意事项。  
   
 ## <a name="load-balancing-with-the-basic-http-binding"></a>基本 HTTP 绑定的负载平衡  
- 从负载平衡的角度来看，使用 <xref:System.ServiceModel.BasicHttpBinding> 进行通信的 WCF 应用程序与其他常见类型的 HTTP 网络流量（静态 HTML 内容、ASP.NET 页或 .ASMX Web 服务）并没有什么不同。 使用此绑定的 WCF 通道本质上是无状态的，当通道关闭时，它们会终止其连接。 因此，<xref:System.ServiceModel.BasicHttpBinding> 可以很好地与现有的 HTTP 负载平衡技术一起使用。  
+ 从负载平衡的角度来看，使用<xref:System.ServiceModel.BasicHttpBinding>进行通信的 WCF 应用程序与其他常见类型的 HTTP 网络流量（静态 HTML 内容、ASP.NET页或 ASMX Web 服务）没有什么不同。 使用此绑定的 WCF 通道本质上是无状态的，并在通道关闭时终止其连接。 因此，<xref:System.ServiceModel.BasicHttpBinding> 可以很好地与现有的 HTTP 负载平衡技术一起使用。  
   
  默认情况下，<xref:System.ServiceModel.BasicHttpBinding> 会在消息中发送一个具有 `Keep-Alive` 值的连接 HTTP 标头，该标头可让客户端建立到支持这些客户端的服务的持续连接。 这种配置具有高的吞吐量，因为可以重新使用以前建立的连接向同一个服务器发送后续消息。 然而，重新使用连接可能导致客户端与负载平衡场中的特定服务器密切关联，从而降低循环负载平衡的效率。 如果不需要此行为，则可以使用 `Keep-Alive` 或用户定义的 <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> 在使用 <xref:System.ServiceModel.Channels.CustomBinding> 属性的服务器上禁用 HTTP <xref:System.ServiceModel.Channels.Binding>。 下面的示例演示如何使用配置来执行该操作。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "74138541"
   
  <system.serviceModel>  
   <services>  
-   <service   
+   <service
      name="Microsoft.ServiceModel.Samples.CalculatorService"  
      behaviorConfiguration="CalculatorServiceBehavior">  
      <host>  
@@ -39,7 +39,7 @@ ms.locfileid: "74138541"
          And the customBinding -->  
      <endpoint address=""  
            binding="customBinding"  
-           bindingConfiguration="HttpBinding"   
+           bindingConfiguration="HttpBinding"
            contract="Microsoft.ServiceModel.Samples.ICalculator" />  
    </service>  
   </services>  
@@ -56,7 +56,7 @@ ms.locfileid: "74138541"
 </configuration>  
 ```  
   
- 使用 .NET Framework 4 中引入的简化配置，可以使用以下简化的配置来实现相同的行为。  
+ 使用 .NET 框架 4 中引入的简化配置，可以使用以下简化配置完成相同的行为。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -82,7 +82,7 @@ ms.locfileid: "74138541"
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>WSHttp 绑定和 WSDualHttp 绑定的负载平衡  
  如果对默认的绑定配置进行一些修改，则 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.WSDualHttpBinding> 都可以使用 HTTP 负载平衡技术来实现负载平衡。  
   
-- 关闭安全上下文的建立：这可以通过将 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 上的 <xref:System.ServiceModel.WSHttpBinding> 属性设置为 `false` 来完成。 或者，如果需要安全会话，则可以使用[安全会话](./feature-details/secure-sessions.md)主题中所述的有状态安全会话。 有状态安全会话使服务保持无状态，因为安全会话的所有状态都随每个请求作为保护安全令牌的一部分进行传输。 请注意，若要启用有状态安全会话，必须使用 <xref:System.ServiceModel.Channels.CustomBinding> 或用户定义的 <xref:System.ServiceModel.Channels.Binding>，因为系统提供的 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.WSDualHttpBinding> 上并不会公开必需的配置设置。  
+- 关闭安全上下文的建立：这可以通过将 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 上的 <xref:System.ServiceModel.WSHttpBinding> 属性设置为 `false` 来完成。 或者，如果需要安全会话，则可以使用安全会话主题中所述的有状态安全[会话](./feature-details/secure-sessions.md)。 有状态安全会话使服务保持无状态，因为安全会话的所有状态都随每个请求作为保护安全令牌的一部分进行传输。 请注意，若要启用有状态安全会话，必须使用 <xref:System.ServiceModel.Channels.CustomBinding> 或用户定义的 <xref:System.ServiceModel.Channels.Binding>，因为系统提供的 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.WSDualHttpBinding> 上并不会公开必需的配置设置。  
   
 - 不要使用可靠会话。 默认情况下此功能处于关闭状态。  
   
@@ -91,6 +91,6 @@ ms.locfileid: "74138541"
   
  若要在负载平衡方案中获得最佳性能，请考虑使用 <xref:System.ServiceModel.NetTcpSecurity>（<xref:System.ServiceModel.SecurityMode.Transport> 或 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>）。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Internet Information Services 承载最佳做法](./feature-details/internet-information-services-hosting-best-practices.md)

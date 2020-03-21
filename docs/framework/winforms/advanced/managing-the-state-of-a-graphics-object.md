@@ -8,17 +8,17 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: ce645133af35271fe1de969621907c53183d9a54
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: d1e7e6eac775ca779fb68605adcc9bc2b9915e49
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505590"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182457"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>管理 Graphics 对象的状态
-<xref:System.Drawing.Graphics>类是 GDI + 的核心。 若要绘制任何内容，您可以获得<xref:System.Drawing.Graphics>对象，设置其属性，并调用其方法<xref:System.Drawing.Graphics.DrawLine%2A>， <xref:System.Drawing.Graphics.DrawImage%2A>， <xref:System.Drawing.Graphics.DrawString%2A>，等等)。  
+该<xref:System.Drawing.Graphics>课程是 GDI® 的核心。 要绘制任何内容，请获取<xref:System.Drawing.Graphics>对象、设置其属性并调用其方法<xref:System.Drawing.Graphics.DrawLine%2A>、、<xref:System.Drawing.Graphics.DrawString%2A><xref:System.Drawing.Graphics.DrawImage%2A>等。  
   
- 下面的示例调用<xref:System.Drawing.Graphics.DrawRectangle%2A>方法的<xref:System.Drawing.Graphics>对象。 第一个参数传递给<xref:System.Drawing.Graphics.DrawRectangle%2A>方法是<xref:System.Drawing.Pen>对象。  
+ 下面的示例调用<xref:System.Drawing.Graphics.DrawRectangle%2A><xref:System.Drawing.Graphics>对象的方法。 传递给<xref:System.Drawing.Graphics.DrawRectangle%2A>方法的第一个参数是对象<xref:System.Drawing.Pen>。  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -33,18 +33,18 @@ graphics.DrawRectangle(pen, 10, 10, 200, 100);
 ```  
   
 ## <a name="graphics-state"></a>图形状态  
- 一个<xref:System.Drawing.Graphics>对象不仅仅提供绘制方法，如<xref:System.Drawing.Graphics.DrawLine%2A>和<xref:System.Drawing.Graphics.DrawRectangle%2A>。 一个<xref:System.Drawing.Graphics>对象还维护图形状态，可以分为以下类别：  
+ 对象<xref:System.Drawing.Graphics>的作用不仅仅是提供绘图方法，如<xref:System.Drawing.Graphics.DrawLine%2A>和<xref:System.Drawing.Graphics.DrawRectangle%2A>。 对象<xref:System.Drawing.Graphics>还维护图形状态，可以分为以下几类：  
   
 - 质量设置  
   
 - 转换  
   
-- 剪辑区域  
+- 剪切区域  
   
 ### <a name="quality-settings"></a>质量设置  
- 一个<xref:System.Drawing.Graphics>对象具有影响的项的绘制质量的多个属性。 例如，可以设置<xref:System.Drawing.Graphics.TextRenderingHint%2A>属性来指定应用于文本的抗锯齿 （如果有） 的类型。 质量会影响其他属性是<xref:System.Drawing.Graphics.SmoothingMode%2A>， <xref:System.Drawing.Graphics.CompositingMode%2A>， <xref:System.Drawing.Graphics.CompositingQuality%2A>，和<xref:System.Drawing.Graphics.InterpolationMode%2A>。  
+ 对象<xref:System.Drawing.Graphics>具有多个属性，这些属性会影响所绘制的项的质量。 例如，<xref:System.Drawing.Graphics.TextRenderingHint%2A>可以将 属性设置为指定应用于文本的反锯齿类型（如果有）。 影响质量<xref:System.Drawing.Graphics.SmoothingMode%2A>的其他属性是 、<xref:System.Drawing.Graphics.CompositingMode%2A><xref:System.Drawing.Graphics.CompositingQuality%2A>和<xref:System.Drawing.Graphics.InterpolationMode%2A>。  
   
- 下面的示例绘制一个具有平滑模式设置为两个椭圆<xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>，另一个平滑模式设置为使用<xref:System.Drawing.Drawing2D.SmoothingMode.HighSpeed>:  
+ 下面的示例绘制两个椭圆，一个设置为平滑模式<xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>，另一个将平滑模式设置为 ： <xref:System.Drawing.Drawing2D.SmoothingMode.HighSpeed>  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -67,9 +67,9 @@ graphics.DrawEllipse(pen, 0, 150, 200, 100);
 ```  
   
 ### <a name="transformations"></a>转换  
- 一个<xref:System.Drawing.Graphics>对象维护应用到所有项的绘制的两种转换 （世界和页）<xref:System.Drawing.Graphics>对象。 任何仿射转换可以存储在世界转换。 仿射转换包括缩放、 旋转、 反射、 倾斜和转换。 可以使用页转换，缩放和更改单元 （例如，像素为单位为英寸）。 有关详细信息，请参阅[坐标系和坐标转换](coordinate-systems-and-transformations.md)。  
+ 对象<xref:System.Drawing.Graphics>维护应用于该<xref:System.Drawing.Graphics>对象绘制的所有项的两个转换（世界和页面）。 任何仿冒变换都可以储存在世界变换中。 仿法变换包括缩放、旋转、反射、倾斜和平移。 页面转换可用于缩放和更改单位（例如，像素到英寸）。 有关详细信息，请参阅[坐标系和变换](coordinate-systems-and-transformations.md)。  
   
- 下面的示例设置的世界和页转换<xref:System.Drawing.Graphics>对象。 世界转换设置为 30 度旋转。 设置页转换，以便坐标传递到第二个<xref:System.Drawing.Graphics.DrawEllipse%2A>将被视为毫米为单位，而不是像素为单位。 代码会两个相同调用<xref:System.Drawing.Graphics.DrawEllipse%2A>方法。 世界转换应用于第一个<xref:System.Drawing.Graphics.DrawEllipse%2A>调用时，并 （世界和页） 这两种转换应用于第二个<xref:System.Drawing.Graphics.DrawEllipse%2A>调用。  
+ 下面的示例设置<xref:System.Drawing.Graphics>对象的世界和页面转换。 世界转型设置为 30 度旋转。 设置页面变换，以便传递给第二<xref:System.Drawing.Graphics.DrawEllipse%2A>个坐标将被视为毫米而不是像素。 代码对<xref:System.Drawing.Graphics.DrawEllipse%2A>该方法进行两个相同的调用。 世界转换应用于第一个<xref:System.Drawing.Graphics.DrawEllipse%2A>调用，并且两个转换（世界和页面）都应用于第二个<xref:System.Drawing.Graphics.DrawEllipse%2A>调用。  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -84,7 +84,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50)
   
 ```csharp  
 Graphics graphics = e.Graphics;  
-Pen pen = new Pen(Color.Red);   
+Pen pen = new Pen(Color.Red);
   
 graphics.ResetTransform();  
 graphics.RotateTransform(30);                    // world transformation  
@@ -93,14 +93,14 @@ graphics.PageUnit = GraphicsUnit.Millimeter;     // page transformation
 graphics.DrawEllipse(pen, 0, 0, 100, 50);  
 ```  
   
- 下图显示了两个椭圆。 请注意，30 度旋转的坐标系统 （客户端区域的左上角） 来源，而不椭圆的中心。 另请注意钢笔的宽度为 1 的第二个椭圆意味着 1 像素的第一个椭圆和 1 毫米。  
+ 下图显示了两个椭圆。 请注意，30 度旋转是关于坐标系的原点（工作区的左上角），而不是椭圆的中心。 另请注意，笔宽度 1 表示第一个椭圆的 1 像素，第二个椭圆的笔宽度为 1 毫米。  
   
- ![显示两个椭圆的图示： 旋转和笔的宽度。](./media/managing-the-state-of-a-graphics-object/set-rotation-pen-width-drawellipse-method.png)  
+ ![显示两个椭圆的插图：旋转和笔宽度。](./media/managing-the-state-of-a-graphics-object/set-rotation-pen-width-drawellipse-method.png)  
   
-### <a name="clipping-region"></a>剪辑区域  
- 一个<xref:System.Drawing.Graphics>对象维护应用于由，绘制的所有项的剪辑区域<xref:System.Drawing.Graphics>对象。 可以通过调用设置的剪辑区域<xref:System.Drawing.Graphics.SetClip%2A>方法。  
+### <a name="clipping-region"></a>剪切区域  
+ 对象<xref:System.Drawing.Graphics>维护一个裁剪区域，该区域适用于该<xref:System.Drawing.Graphics>对象绘制的所有项目。 您可以通过调用<xref:System.Drawing.Graphics.SetClip%2A>方法来设置裁剪区域。  
   
- 下面的示例通过两个矩形的并集创建 plus 形区域。 该区域指定的剪辑区域为<xref:System.Drawing.Graphics>对象。 然后代码将绘制仅限于的剪辑区域内部的两行。  
+ 下面的示例通过形成两个矩形的合并来创建一个加形区域。 该区域被指定为<xref:System.Drawing.Graphics>对象的剪切区域。 然后，代码绘制两行，这些行仅限于裁剪区域的内部。  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -128,10 +128,10 @@ graphics.DrawLine(pen, 40, 20, 190, 150)
 Graphics graphics = e.Graphics;  
   
 // Opaque red, width 5  
-Pen pen = new Pen(Color.Red, 5);    
+Pen pen = new Pen(Color.Red, 5);
   
 // Opaque aqua  
-SolidBrush brush = new SolidBrush(Color.FromArgb(255, 180, 255, 255));    
+SolidBrush brush = new SolidBrush(Color.FromArgb(255, 180, 255, 255));
   
 // Create a plus-shaped region by forming the union of two rectangles.  
 Region region = new Region(new Rectangle(50, 0, 50, 150));  
@@ -146,11 +146,11 @@ graphics.DrawLine(pen, 0, 30, 150, 160);
 graphics.DrawLine(pen, 40, 20, 190, 150);  
 ```  
   
- 下图显示了裁剪后的行：  
+ 下图显示了剪切的线条：  
   
- ![图，显示受限的剪辑区域。](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
+ ![显示有限剪辑区域的图表。](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)
-- [使用嵌套的图形容器](using-nested-graphics-containers.md)
+- [使用嵌套的 Graphics 容器](using-nested-graphics-containers.md)

@@ -2,21 +2,21 @@
 title: 如何：以编程方式向 WCF 服务和客户端添加可检测性
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: a139eb4a15486be329bc6853ee6b3a3be06b0619
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: dd96bc168413eef99260a5251e74971aa1309ff4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291567"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184888"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>如何：以编程方式向 WCF 服务和客户端添加可检测性
-本主题说明如何使 Windows Communication Foundation （WCF）服务可发现。 它基于[自主机](https://go.microsoft.com/fwlink/?LinkId=145523)示例。  
+本主题介绍如何使 Windows 通信基础 （WCF） 服务可发现。 它基于[自主机](https://go.microsoft.com/fwlink/?LinkId=145523)示例。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>针对 Discovery 配置现有自承载服务示例  
   
-1. 在 Visual Studio 2012 中打开自承载解决方案。 示例位于 TechnologySamples\Basic\Service\Hosting\SelfHost 目录中。  
+1. 在 Visual Studio 2012 中打开自主机解决方案。 示例位于 TechnologySamples\Basic\Service\Hosting\SelfHost 目录中。  
   
-2. 将对 `System.ServiceModel.Discovery.dll` 的引用添加到服务项目中。 你可能会看到一条错误消息，指出 "系统。 "System.servicemodel. .dll" 或其依赖项之一需要更高版本的 .NET Framework，而不是在项目中指定的版本 ... "如果看到此消息，请在解决方案资源管理器中右键单击该项目，然后选择 "**属性**"。 在项目的 "**属性**" 窗口中，确保 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]**目标框架**。  
+2. 将对 `System.ServiceModel.Discovery.dll` 的引用添加到服务项目中。 您可能会看到一条错误消息，指出"系统"。 ServiceModel.Discovery.dll 或其依赖项之一需要比项目中指定的版本更新版本的 .NET 框架......"如果看到此消息，请右键单击解决方案资源管理器中的项目并选择 **"属性**"。 在 **"项目属性"** 窗口中，请确保**目标框架**为[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
   
 3. 打开 Service.cs 文件并添加下面的 `using` 语句。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "72291567"
         using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService)))  
         {  
             // Add a ServiceDiscoveryBehavior  
-            serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());                  
+            serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());
   
             // ...  
         }  
@@ -60,11 +60,11 @@ ms.locfileid: "72291567"
   
 2. 添加对 `System.ServiceModel.dll` 和 `System.ServiceModel.Discovery.dll` 的引用  
   
-3. 将 GeneratedClient.cs 和 App.config 文件从现有客户端项目复制到新的 DiscoveryClientApp 项目。 为此，请在**解决方案资源管理器**中右键单击文件，选择 "**复制**"，然后选择 " **DiscoveryClientApp** " 项目，右键单击并选择 "**粘贴**"。  
+3. 将 GeneratedClient.cs 和 App.config 文件从现有客户端项目复制到新的 DiscoveryClientApp 项目。 为此，请右键单击**解决方案资源管理器**中的文件，选择 **"复制**"，然后选择 **"发现客户端应用"** 项目，右键单击并选择"**粘贴**"。  
   
 4. 打开 Program.cs。  
   
-5. 添加下面的 `using` 语句。  
+5. 添加以下 `using` 语句。  
   
     ```csharp  
     using System.ServiceModel;  
@@ -92,12 +92,12 @@ ms.locfileid: "72291567"
     }  
     ```  
   
-     这会告知 WCF <xref:System.ServiceModel.Discovery.DiscoveryClient> 类应使用标准 UDP 发现终结点来发送和接收发现消息。  
+     这告诉 WCF<xref:System.ServiceModel.Discovery.DiscoveryClient>类应使用标准的 UDP 发现终结点发送和接收发现消息。  
   
 8. 在下一行，调用 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 方法并指定包含要搜索的服务协定的 <xref:System.ServiceModel.Discovery.FindCriteria> 实例。 在本示例中，指定的是 `ICalculator`。  
   
     ```csharp  
-    // Find ICalculatorService endpoints              
+    // Find ICalculatorService endpoints
     FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculator)));  
     ```  
   
@@ -124,7 +124,7 @@ ms.locfileid: "72291567"
   
      此方法使用从 `FindCalculatorServiceAddress` 返回的终结点地址调用计算器服务。  
   
-11. 在 `InvokeCalculatorService` 方法的内部，创建 `CalculatorServiceClient` 类的实例。 此类由[自承载](https://go.microsoft.com/fwlink/?LinkId=145523)示例定义。 并且是使用 Svcutil.exe 生成的。  
+11. 在 `InvokeCalculatorService` 方法的内部，创建 `CalculatorServiceClient` 类的实例。 此类由[自主机](https://go.microsoft.com/fwlink/?LinkId=145523)示例定义。 并且是使用 Svcutil.exe 生成的。  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ ms.locfileid: "72291567"
     ```  
   
 ## <a name="example"></a>示例  
- 下面是此示例的代码清单。 由于此代码基于[自承载](https://go.microsoft.com/fwlink/?LinkId=145523)示例，因此仅列出已更改的文件。 有关自承载示例的详细信息，请参阅[安装说明](https://go.microsoft.com/fwlink/?LinkId=145522)。  
+ 下面是此示例的代码清单。 由于此代码基于[自主机](https://go.microsoft.com/fwlink/?LinkId=145523)示例，因此仅列出已更改的文件。 有关自主机示例的详细信息，请参阅[设置说明](https://go.microsoft.com/fwlink/?LinkId=145522)。  
   
 ```csharp  
 // Service.cs  
@@ -277,7 +277,7 @@ namespace DiscoveryClientApp
             // Create DiscoveryClient  
             DiscoveryClient discoveryClient = new DiscoveryClient(new UdpDiscoveryEndpoint());  
   
-            // Find ICalculatorService endpoints              
+            // Find ICalculatorService endpoints
             FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculator)));  
   
             if (findResponse.Endpoints.Count > 0)  
@@ -342,5 +342,5 @@ namespace DiscoveryClientApp
 
 ## <a name="see-also"></a>另请参阅
 
-- [WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [WCF 发现对象模型](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

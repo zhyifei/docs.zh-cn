@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-ms.openlocfilehash: 11b1072b3467f7d0a3f223fbc2151ec9ccf461ad
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6484832e8e737b9a0d0b3eaf3ede4078729f7a4a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790806"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178440"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses 方法
 枚举远程计算机上运行的进程。  
@@ -31,17 +31,17 @@ ms.locfileid: "76790806"
   
 ```cpp  
 HRESULT EnumProcesses (  
-       [out]  DWORD*                  pcProcs,   
+       [out]  DWORD*                  pcProcs,
        [out]  CoreClrDebugProcInfo**  ppProcs  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `pcProcs`  
  [out] `ppProcs` 中返回的进程数。 此值可为 0（零）。  
   
  `ppProcs`  
- 弄[CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)结构的数组，这些结构表示远程计算机上运行的进程。  
+ [出]一个[CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)结构的数组，表示在远程计算机上运行的进程。  
   
 ## <a name="return-value"></a>返回值  
  S_OK  
@@ -54,16 +54,16 @@ HRESULT EnumProcesses (
  其他故障。  
   
 ## <a name="remarks"></a>备注  
- 若要释放此方法分配的内存，请调用[ICoreClrDebugTarget：： FreeMemory](icoreclrdebugtarget-freememory-method.md)方法。  
+ 要释放此方法分配的内存，请调用[ICoreClrDebugTarget：：freeMemory](icoreclrdebugtarget-freememory-method.md)方法。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CoreClrRemoteDebuggingInterfaces  
+ **标题：** 核心Clr远程调试接口.h  
   
- **库：** mscordbi_macx86  
+ **资料库：** mscordbi_macx86.dll  
   
- **.NET Framework 版本：** 3.5 SP1  
+ **.NET 框架版本：** 3.5 SP1  
   
 ## <a name="see-also"></a>另请参阅
 

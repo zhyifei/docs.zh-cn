@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-ms.openlocfilehash: 2c9aa6792885c685195049948a540453b1f5235e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 45d27fca888bdabedf197525c63dbd03af7ba1ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110312"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179092"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName 方法
 获取应用程序域的名称。  
@@ -31,23 +31,23 @@ ms.locfileid: "73110312"
 HRESULT GetName (  
     [in]  ULONG32           cchName,  
     [out] ULONG32           *pcchName,  
-    [out, size_is(cchName), length_is(*pcchName)]   
+    [out, size_is(cchName), length_is(*pcchName)]
          WCHAR              szName[]  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `cchName`  
- [in] `szName` 数组的大小。 将此值设置为零可以在查询模式下放置此方法。  
+ [in] `szName` 数组的大小。 将此值设置为零，以将此方法置于查询模式。  
   
  `pcchName`  
- 弄一个指针，指向 `szName`中实际返回的名称的大小或字符数。 在查询模式下，此值允许调用方了解要为名称分配的缓冲区大小。  
+ [出]指向名称大小或 中`szName`实际返回的字符数的指针。 在查询模式下，此值允许调用方知道要为名称分配缓冲区有多大。  
   
  `szName`  
- 弄一个数组，该数组存储应用程序域的名称。  
+ [出]存储应用程序域名称的数组。  
   
 ## <a name="remarks"></a>备注  
- 调试器调用一次 `GetName` 方法，以获取该名称所需的缓冲区大小。 调试器将分配缓冲区，然后再次调用方法来填充缓冲区。 要获取名称大小的第一次调用称为*查询模式*。  
+ 调试器调用`GetName`该方法一次，以获得名称所需的缓冲区大小。 调试器分配缓冲区，然后第二次调用 该方法以填充缓冲区。 第一个调用（获取名称的大小）称为*查询模式*。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -56,4 +56,4 @@ HRESULT GetName (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

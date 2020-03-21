@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 8bdd70a6eaea8aff196e2156d88460a6d24b5d3f
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0fae3ac1769163101dcdb183f4c5c2135354b1fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487179"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145418"
 ---
 # <a name="application-startup-time"></a>应用程序启动时间
 启动 WPF 应用程序所需的时间可能存在极大差异。 本主题介绍用于减少 Windows Presentation Foundation (WPF) 应用程序假设启动时间和实际启动时间的各种技巧。  
@@ -24,9 +24,9 @@ ms.locfileid: "67487179"
  当已将主要公共语言运行时 (CLR) 组件的大多数页面加载到内存中时，则发生热启动，这样可节省宝贵的磁盘访问时间。 这就是为什么再次运行托管的应用程序时，该程序的启动速度更快的原因。  
   
 ## <a name="implement-a-splash-screen"></a>实现初始屏幕  
- 为应对在启动应用程序后到显示第一个 UI 期间出现重大的、不可避免的延迟的情况，请使用“初始屏幕”  优化假设的启动时间。 通过此方法，在用户启动应用程序后，几乎可以立即显示图像。 当应用程序准备好显示其第一个 UI 时，初始屏幕将淡化。 从.NET Framework 3.5 SP1 开始，你可以使用<xref:System.Windows.SplashScreen>类，以实现初始屏幕。 有关详细信息，请参阅[将初始屏幕添加到 WPF 应用程序](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)。  
+ 为应对在启动应用程序后到显示第一个 UI 期间出现重大的、不可避免的延迟的情况，请使用“初始屏幕”** 优化假设的启动时间。 通过此方法，在用户启动应用程序后，几乎可以立即显示图像。 当应用程序准备好显示其第一个 UI 时，初始屏幕将淡化。 从 .NET 框架 3.5 SP1 开始，<xref:System.Windows.SplashScreen>可以使用 该类实现初始屏幕。 有关详细信息，请参阅[将初始屏幕添加到 WPF 应用程序](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)。  
   
- 还可以通过使用本机 Win32 图形来实现自己的初始屏幕。 显示之前实现<xref:System.Windows.Application.Run%2A>调用方法。  
+ 还可以通过使用本机 Win32 图形来实现自己的初始屏幕。 在调用<xref:System.Windows.Application.Run%2A>方法之前显示您的实现。  
   
 ## <a name="analyze-the-startup-code"></a>分析启动代码  
  确定冷启动慢的原因。 可能与磁盘 I/O 有关，但这并非唯一的原因。 一般情况下，应将外部资源（例如网络、Web 服务或磁盘）的使用率最小化。  
@@ -65,7 +65,7 @@ ms.locfileid: "67487179"
  同时具有 Ngen 和 JIT 模块可能会导致最差的效果。 这是因为必须加载 mscorjit.dll，且当 JIT 编译器处理代码时，当编译器读取程序集的元数据时，必须访问 Ngen 映像中的许多页面。  
   
 ### <a name="ngen-and-clickonce"></a>Ngen 和 ClickOnce  
- 计划用于部署应用程序的方法在加载期间也会造成影响。 ClickOnce 应用程序部署不支持 Ngen。 如果决定对应用程序使用 Ngen.exe，则需要使用其他部署机制，如 Windows Installer。  
+ 计划用于部署应用程序的方法在加载期间也会造成影响。 单击"一次性"应用程序部署不支持 Ngen。 如果决定对应用程序使用 Ngen.exe，则需要使用其他部署机制，如 Windows Installer。  
   
  有关详细信息，请参阅 [Ngen.exe（本机映像生成器）](../../tools/ngen-exe-native-image-generator.md)。  
   
@@ -81,17 +81,17 @@ ms.locfileid: "67487179"
   
  请考虑在客户端计算机上安装 CA 证书，或尽可能避免使用验证码。 如果知道应用程序不需要发布服务器证据，则无需支付签名验证的费用。  
   
- 从.NET Framework 3.5 起，没有一个允许绕过验证码验证的配置选项。 为执行此操作，将以下设置添加到 app.exe.config 文件：  
+ 从 .NET 框架 3.5 开始，有一个配置选项允许绕过身份验证验证。 为执行此操作，将以下设置添加到 app.exe.config 文件：  
   
 ```xml  
 <configuration>  
     <runtime>  
-        <generatePublisherEvidence enabled="false"/>   
+        <generatePublisherEvidence enabled="false"/>
     </runtime>  
 </configuration>  
 ```  
   
- 有关详细信息，请参阅 [\<generatePublisherEvidence> 元素](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)。  
+ 有关详细信息，请参阅[\<生成 Publisher 证据>元素](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)。  
   
 ## <a name="compare-performance-on-windows-vista"></a>在 Windows Vista 上比较性能  
  Windows Vista 中的内存管理器具有一种名为 SuperFetch 的技术。 SuperFetch 可随时间推移分析内存使用情况模式，从而确定特定用户的最优内存内容。 它会持续工作，不间断地维护此内容。  
@@ -104,25 +104,25 @@ ms.locfileid: "67487179"
  为获得最佳性能，通过减少跨域调用强制实施高效跨域通信。 如果可能，请使用不带参数或具有基元类型参数的调用。  
   
 ## <a name="use-the-neutralresourceslanguage-attribute"></a>使用 NeutralResourcesLanguage 特性  
- 使用<xref:System.Resources.NeutralResourcesLanguageAttribute>指定的非特定区域性<xref:System.Resources.ResourceManager>。 此方法可避免程序集查找失败。  
+ 使用<xref:System.Resources.NeutralResourcesLanguageAttribute>指定 的<xref:System.Resources.ResourceManager>中性区域性。 此方法可避免程序集查找失败。  
   
 ## <a name="use-the-binaryformatter-class-for-serialization"></a>将 BinaryFormatter 类用于序列化  
- 如果必须使用序列化，使用<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>类而不是<xref:System.Xml.Serialization.XmlSerializer>类。 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>类实现中基类库 (BCL) 中的 mscorlib.dll 程序集。 <xref:System.Xml.Serialization.XmlSerializer>在 System.Xml.dll 程序集中，这可能是其他 DLL 加载中实现。  
+ 如果必须使用序列化，请使用 类<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>而不是类<xref:System.Xml.Serialization.XmlSerializer>。 类<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>在 mscorlib.dll 程序集中的基类库 （BCL） 中实现。 在<xref:System.Xml.Serialization.XmlSerializer>System.Xml.dll 程序集中实现，这可能是要加载的额外 DLL。  
   
- 如果必须使用<xref:System.Xml.Serialization.XmlSerializer>类，您可以获得更好的性能预生成序列化程序集。  
+ 如果必须使用 类<xref:System.Xml.Serialization.XmlSerializer>，则可以在预生成序列化程序集时获得更好的性能。  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>将 ClickOnce 配置为在启动后检查更新  
- 如果你的应用程序使用 ClickOnce，配置 ClickOnce 应用程序启动后检查部署站点有更新来避免在启动时的网络访问权限。  
+ 如果应用程序使用 ClickOnce，请通过配置 ClickOnce 来在应用程序启动后检查部署站点的更新，从而避免启动时的网络访问。  
   
- 如果使用 XAML 浏览器应用程序 (XBAP) 模型，请注意 ClickOnce 检查部署站点有更新，即使 XBAP 已位于 ClickOnce 缓存。 有关详细信息，请参阅 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)。  
+ 如果使用 XAML 浏览器应用程序 （XBAP） 模型，请记住，即使 XBAP 已在 ClickOnce 缓存中，ClickOnce 也会检查部署站点以获取更新。 有关详细信息，请参阅 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)。  
   
 ## <a name="configure-the-presentationfontcache-service-to-start-automatically"></a>将 PresentationFontCache 服务配置为自动启动  
  在重新启动后，要运行的第一个 WPF 应用程序是 PresentationFontCache 服务。 该服务会缓存系统字体、改进字体访问，并提高整体性能。 在启动服务时会产生开销，某些受控环境中也存在开销，请考虑将服务配置为在系统重启时自动启动。  
   
 ## <a name="set-data-binding-programmatically"></a>以编程方式设置数据绑定  
- 而不是使用 XAML 来设置<xref:System.Windows.FrameworkElement.DataContext%2A>以声明方式对于主窗口中，请考虑在以编程方式设置<xref:System.Windows.Application.OnActivated%2A>方法。  
+ 请考虑在<xref:System.Windows.Application.OnActivated%2A>方法中编程设置它，而不是<xref:System.Windows.FrameworkElement.DataContext%2A>使用 XAML 为主窗口设置声明性。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.SplashScreen>
 - <xref:System.AppDomain>
@@ -130,4 +130,4 @@ ms.locfileid: "67487179"
 - <xref:System.Resources.ResourceManager>
 - [向 WPF 应用程序添加初始屏幕](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
 - [Ngen.exe（本机映像生成器）](../../tools/ngen-exe-native-image-generator.md)
-- [\<generatePublisherEvidence> 元素](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [\<生成发布者证据>元素](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

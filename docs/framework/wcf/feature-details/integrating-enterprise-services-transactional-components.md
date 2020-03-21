@@ -2,16 +2,16 @@
 title: 集成企业服务事务性组件
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 5914f76639adc3ff569a3bfb8d6eb1db14313e76
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 292573f911459d8a8419e09d81fd1e54dbc6c70b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211936"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184743"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>集成企业服务事务性组件
 
-Windows Communication Foundation （WCF）提供了用于与企业服务集成的自动机制（请参阅[与 COM + 应用程序集成](integrating-with-com-plus-applications.md)）。 但是，你可能希望灵活地开发可在内部使用承载于企业服务中的事务性组件的服务。 因为 WCF 事务功能是在 <xref:System.Transactions> 基础结构上构建的，所以将企业服务与 WCF 集成的过程与指定 <xref:System.Transactions> 与企业服务之间的互操作性的过程相同，如[与企业服务和 COM + 事务的互操作性](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))中所述。  
+Windows 通信基础 （WCF） 提供了与企业服务集成的自动机制（请参阅[与 COM+ 应用程序集成](integrating-with-com-plus-applications.md)）。 但是，你可能希望灵活地开发可在内部使用承载于企业服务中的事务性组件的服务。 由于 WCF 事务功能构建在<xref:System.Transactions>基础结构上，因此将企业服务与 WCF 集成的过程与指定与企业服务之间的<xref:System.Transactions>互操作性的过程相同，如[与企业服务和 COM+ 事务的互操作性](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))中所述。  
   
  若要在传入的流式事务和 COM+ 上下文事务之间提供所需级别的互操作性，服务实现必须创建一个 <xref:System.Transactions.TransactionScope> 实例并使用 <xref:System.Transactions.EnterpriseServicesInteropOption> 枚举中的适当值。  
   
@@ -46,11 +46,11 @@ public class CustomerService : ICustomerServiceContract
                      EnterpriseServicesInteropOption.Full))  
       {  
          // Create an Enterprise Services component  
-         // Call UpdateCustomer method on an Enterprise Services   
-         // component   
+         // Call UpdateCustomer method on an Enterprise Services
+         // component
   
-         // Call UpdateOtherCustomerData method on an Enterprise   
-         // Services component   
+         // Call UpdateOtherCustomerData method on an Enterprise
+         // Services component
          ts.Complete();  
       }  
   
@@ -81,13 +81,13 @@ static void Main()
   
         // Create an Enterprise Services component  
   
-        // Call UpdateCustomer method on an Enterprise Services   
-        // component   
+        // Call UpdateCustomer method on an Enterprise Services
+        // component
   
         ts.Complete();  
     }  
   
-    // Closing the client gracefully closes the connection and   
+    // Closing the client gracefully closes the connection and
     // cleans up resources  
     client.Close();  
 }  

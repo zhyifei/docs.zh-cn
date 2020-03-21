@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3f6928832d822422177ebd7def142422953468a0
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: e680a7a0dc3209d1988f6c84be0864572a74b3a4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274296"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179376"
 ---
 # <a name="clrdata_il_address_map-structure"></a>CLRDATA_IL_ADDRESS_MAP 结构
 
-定义用于寻址映射的 IL。
+定义 IL 以解决映射。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -42,26 +42,25 @@ typedef struct
 
 ## <a name="members"></a>成员
 
-| 成员         | 描述                                            |
+| 成员         | 说明                                            |
 | -------------- | ------------------------------------------------------ |
-| `ilOffset`     | 所包含的地址范围的 IL 偏移量              |
+| `ilOffset`     | 包含地址范围的 IL 偏移量              |
 | `startAddress` | 范围的起始地址。                        |
 | `endAddress`   | 范围的结束地址。                          |
 | `type`         | 数据的类型。 当前未使用此值 |
 
 ## <a name="remarks"></a>备注
 
-此结构存在于运行时中，并且不会通过任何标头或库文件公开。 若要使用它，请定义上面指定的结构， `CLRDATA_ADDRESS`其中是一个64位无符号整数。
+此结构位于运行时内，不会通过任何标头或库文件公开。 要使用它，请定义上面指定的结构，其中`CLRDATA_ADDRESS`是 64 位无符号整数。
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
-**标头：** None  
-**类库**None   
-**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+**标题：** 没有  
+**库：** 无 **.NET 框架版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [CLRDataSourceType 枚举](clrdatasourcetype-enumeration.md)
+- [CLRDataSource 类型枚举](clrdatasourcetype-enumeration.md)
 - [调试](index.md)
 - [调试结构](debugging-structures.md)

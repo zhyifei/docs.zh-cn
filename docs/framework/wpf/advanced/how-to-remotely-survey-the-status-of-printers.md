@@ -11,15 +11,15 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 0a7756684d5a133fa9cb014f109d14e413223ea9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 859ccb703c6c54c66d6ea7b433c67d156627e25b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945229"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187040"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>如何：远程调查打印机的状态
-在大中型公司，在任何给定时间里，都可能发生由于卡纸、纸张用完或某些其他有问题而导致多台打印机无法工作的情况。 Microsoft .NET 框架的 Api 中公开的一组丰富的打印机属性提供了一种快速调查打印机状态的方法。  
+在大中型公司，在任何给定时间里，都可能发生由于卡纸、纸张用完或某些其他有问题而导致多台打印机无法工作的情况。 Microsoft .NET Framework API 中公开的丰富的打印机属性集提供了一种快速调查打印机状态的方法。  
   
 ## <a name="example"></a>示例  
  以下是创建此类实用程序的主要步骤。  
@@ -30,20 +30,20 @@ ms.locfileid: "69945229"
   
 3. 在每一轮服务器循环访问过程中，循环访问所有服务器的队列并读取每个属性，这些属性可能指示队列当前不在工作。  
   
- 以下代码是一系列代码段。 为简单起见，本示例假定存在通过 CRLF 分隔的打印服务器列表。 `fileOfPrintServers` 变量<xref:System.IO.StreamReader>是此文件的对象。 由于每个服务器名称都在其自己的行上, <xref:System.IO.StreamReader.ReadLine%2A>因此的任何调用都将获取下一个服务器<xref:System.IO.StreamReader>的名称, 并将的光标移到下一行的开头。  
+ 以下代码是一系列代码段。 为简单起见，本示例假定存在通过 CRLF 分隔的打印服务器列表。 变量`fileOfPrintServers`是<xref:System.IO.StreamReader>此文件的对象。 由于每个服务器名称都位于其自己的行上，因此<xref:System.IO.StreamReader.ReadLine%2A>，任何调用 都会获取下一个服务器<xref:System.IO.StreamReader>的名称，并将 光标移动到下一行的开头。  
   
- 在外部循环中, 代码为最新<xref:System.Printing.PrintServer>的打印服务器创建一个对象, 并指定该应用程序将具有对服务器的管理权限。  
+ 在外部循环中，代码为最新的打印<xref:System.Printing.PrintServer>服务器创建一个对象，并指定应用程序对服务器具有管理权限。  
   
 > [!NOTE]
-> 如果有大量服务器, 则可以使用<xref:System.Printing.PrintServer.%23ctor%28System.String%2CSystem.String%5B%5D%2CSystem.Printing.PrintSystemDesiredAccess%29>只初始化需要的属性的构造函数来提高性能。  
+> 如果服务器很多，则可以使用仅初始化所需属性的<xref:System.Printing.PrintServer.%23ctor%28System.String%2CSystem.String%5B%5D%2CSystem.Printing.PrintSystemDesiredAccess%29>构造函数来提高性能。  
   
- 然后, 该示例<xref:System.Printing.PrintServer.GetPrintQueues%2A>使用创建服务器的所有队列的集合, 并开始循环遍历它们。 此内部循环包含一个分支结构，该结构对应于检查打印机状态的两种方法：  
+ 然后，该示例<xref:System.Printing.PrintServer.GetPrintQueues%2A>用于创建服务器的所有队列的集合，并开始循环访问这些队列。 此内部循环包含一个分支结构，该结构对应于检查打印机状态的两种方法：  
   
-- 您可以读取类型<xref:System.Printing.PrintQueue.QueueStatus%2A> <xref:System.Printing.PrintQueueStatus>为的属性的标志。  
+- 可以读取 类型<xref:System.Printing.PrintQueue.QueueStatus%2A><xref:System.Printing.PrintQueueStatus>的属性的标志。  
   
-- 您可以读取每个相关属性<xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, 例如、和。 <xref:System.Printing.PrintQueue.IsPaperJammed%2A>  
+- 可以读取每个相关属性，如<xref:System.Printing.PrintQueue.IsOutOfPaper%2A>和<xref:System.Printing.PrintQueue.IsPaperJammed%2A>。  
   
- 此示例演示了这两种方法, 因此, 如果用户想要使用<xref:System.Printing.PrintQueue.QueueStatus%2A>属性的标志, 则以前会提示用户要使用哪种方法并使用 "y" 做出响应。 请参阅以下有关这两种方法的详细信息。  
+ 此示例演示了这两种方法，因此之前系统会提示用户使用哪种方法，如果用户想要使用<xref:System.Printing.PrintQueue.QueueStatus%2A>属性的标志，则使用"y"响应。 请参阅以下有关这两种方法的详细信息。  
   
  最后，会向用户显示结果。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "69945229"
  [!code-csharp[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#surveyqueues)]
  [!code-vb[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#surveyqueues)]  
   
- 若要使用<xref:System.Printing.PrintQueue.QueueStatus%2A>属性的标志来检查打印机状态, 请检查每个相关标志是否已设置。 检查是否在一组位标志中设置了一个位的标准方法是执行一个逻辑 AND 运算，其中将该组标志作为一个操作数，将标志本身作为另一操作数。 由于该标志本身仅设置一个位，因此逻辑 AND 的结果至多为设置了该相同位。 若要查明事实是否如此，只需将逻辑 AND 的结果与标志本身进行比较。 有关详细信息, 请<xref:System.Printing.PrintQueueStatus>参阅、 [& 运算符 (C#引用)](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)和。 <xref:System.FlagsAttribute>  
+ 要使用<xref:System.Printing.PrintQueue.QueueStatus%2A>属性的标志检查打印机状态，请检查每个相关标志以查看是否已设置。 检查是否在一组位标志中设置了一个位的标准方法是执行一个逻辑 AND 运算，其中将该组标志作为一个操作数，将标志本身作为另一操作数。 由于该标志本身仅设置一个位，因此逻辑 AND 的结果至多为设置了该相同位。 若要查明事实是否如此，只需将逻辑 AND 的结果与标志本身进行比较。 有关详细信息，请参阅<xref:System.Printing.PrintQueueStatus> [& 运算符 （C# 参考）](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)和<xref:System.FlagsAttribute>。  
   
  对于已设置了其位的各个特性，代码会将一条通知添加到将向用户显示的最终报告中。 （下面会讨论代码结束时调用的 **ReportAvailabilityAtThisTime** 方法。）  
   
@@ -67,13 +67,13 @@ ms.locfileid: "69945229"
   
  创建了 **ReportAvailabilityAtThisTime** 方法，以应对需要确定队列在一天的当前时间是否可用的情况。  
   
- 如果<xref:System.Printing.PrintQueue.StartTimeOfDay%2A> 和<xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>属性相等, 则方法将不执行任何操作; 因为在这种情况下, 打印机始终可用。 如果它们不同, 则方法获取当前时间, 该时间之后必须转换为午夜的总分钟数, 这是<xref:System.Printing.PrintQueue.StartTimeOfDay%2A>因为<xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>和属性<xref:System.Int32>表示午夜后的分钟数, 而不<xref:System.DateTime>是对象. 最后，该方法会检查当前时间是否介于开始时间和“截至”时间之间。  
+ 如果 和<xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>属性相等，<xref:System.Printing.PrintQueue.StartTimeOfDay%2A>则 该方法将不执行任何操作;因为在这种情况下，打印机随时可用。 如果它们不同，该方法获取当前时间，然后必须转换成午夜后的总<xref:System.Printing.PrintQueue.StartTimeOfDay%2A>分钟数，因为 和<xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>属性表示<xref:System.Int32>午夜后几分钟，而不是<xref:System.DateTime>对象。 最后，该方法会检查当前时间是否介于开始时间和“截至”时间之间。  
   
  [!code-cpp[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#usingstartanduntiltimes)]
  [!code-csharp[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#usingstartanduntiltimes)]
  [!code-vb[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#usingstartanduntiltimes)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Printing.PrintQueue.StartTimeOfDay%2A>
 - <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>
@@ -85,6 +85,6 @@ ms.locfileid: "69945229"
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
-- [& 运算符 (C#参考)](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
+- [&运算符（C# 参考）](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [WPF 中的文档](documents-in-wpf.md)
 - [打印概述](printing-overview.md)

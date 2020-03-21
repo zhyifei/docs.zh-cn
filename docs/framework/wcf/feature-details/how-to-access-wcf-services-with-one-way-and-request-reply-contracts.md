@@ -1,16 +1,16 @@
 ---
-title: 如何：访问 WCF 服务使用单向和请求-答复协定
+title: 如何：使用单向和请求-答复协定访问 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 119a63978f6c45aa940ff999249c654c7cf96d91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 533b97892b15c9034679efba6e4da5e72b56099b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855109"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185145"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>如何：访问 WCF 服务使用单向和请求-答复协定
-下面的过程介绍如何访问 Windows Communication Foundation (WCF) 服务，它定义一个单向协定和请求-答复协定和不使用双工通信模式。  
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>如何：使用单向和请求-答复协定访问 WCF 服务
+以下过程介绍如何访问定义单向协定和请求-回复协定且不使用双工通信模式的 Windows 通信基础 （WCF） 服务。  
   
 ### <a name="to-define-the-service"></a>定义服务  
   
@@ -109,7 +109,7 @@ ms.locfileid: "61855109"
   
 ### <a name="to-access-the-service"></a>访问服务  
   
-1. 运行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)使用元数据交换终结点地址创建使用以下命令行的服务的客户端类：`Svcutil http://localhost:8000/Service` [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成一组接口和类，如下面的示例代码所示。  
+1. 使用元数据交换终结点地址运行[服务模型元数据实用程序工具 （Svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)使用以下命令行为服务创建客户端类：`Svcutil http://localhost:8000/Service`[服务模型元数据实用程序工具 （Svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成一组接口和类，如以下示例代码所示。  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -147,22 +147,22 @@ ms.locfileid: "61855109"
         {  
         }  
   
-        public OneWayCalculatorClient(string endpointConfigurationName) :   
+        public OneWayCalculatorClient(string endpointConfigurationName) :
                 base(endpointConfigurationName)  
         {  
         }  
   
-        public OneWayCalculatorClient(string endpointConfigurationName, string remoteAddress) :   
+        public OneWayCalculatorClient(string endpointConfigurationName, string remoteAddress) :
                 base(endpointConfigurationName, remoteAddress)  
         {  
         }  
   
-        public OneWayCalculatorClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :   
+        public OneWayCalculatorClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
                 base(endpointConfigurationName, remoteAddress)  
         {  
         }  
   
-        public OneWayCalculatorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :   
+        public OneWayCalculatorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
                 base(binding, remoteAddress)  
         {  
         }  
@@ -258,7 +258,7 @@ using System.ServiceModel.Description;
   
 namespace Microsoft.ServiceModel.Samples  
 {  
-    // Define a service contract.   
+    // Define a service contract.
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
     public interface IOneWayCalculator  
     {  
@@ -341,7 +341,7 @@ namespace Microsoft.ServiceModel.Samples
             }  
         }  
     }  
-} 
+}
 ```
 
 ```csharp
@@ -400,6 +400,6 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [单向服务](../../../../docs/framework/wcf/feature-details/one-way-services.md)

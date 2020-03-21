@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: a517dc4e143b561a17bb3715b69be393bee2b21e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: be9661525c960ae558d21b05781007b81b8a3f56
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585017"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185438"
 ---
 # <a name="batching-messages-in-a-transaction"></a>在事务中对消息进行批处理
-排队的应用程序使用事务来确保消息的正确性以及传递的可靠性。 但是，事务是一种成本较高的操作，可能会大幅度降低消息吞吐量。 提高消息吞吐量的一个方法是让一个应用程序在单个事务内读取和处理多个消息。 这需要在性能和恢复之间进行权衡；随着批处理中消息数量的增加，事务回滚时所需完成的恢复工作的工作量也会增加。 需要注意的是，在事务中对消息进行批处理与会话是不同的。 一个*会话*是相关的消息由单个应用程序处理和作为一个单元提交的分组。 当必须将一组相关消息一起进行处理的时候，通常使用会话。 这方面的一个例子是在线购物网站。 *批处理*用于处理多个，不相关的消息的方式增加消息吞吐量。 有关会话的详细信息，请参阅[会话中的分组排队消息](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)。 批处理中的消息也是由单个应用程序处理，并且作为一个单元提交，但批处理中的消息之间可能没有任何关系。 在事务中对消息进行批处理是一种优化方法，它不会改变应用程序的运行方式。  
+排队的应用程序使用事务来确保消息的正确性以及传递的可靠性。 但是，事务是一种成本较高的操作，可能会大幅度降低消息吞吐量。 提高消息吞吐量的一个方法是让一个应用程序在单个事务内读取和处理多个消息。 这需要在性能和恢复之间进行权衡；随着批处理中消息数量的增加，事务回滚时所需完成的恢复工作的工作量也会增加。 需要注意的是，在事务中对消息进行批处理与会话是不同的。 *会话*是由单个应用程序处理并作为单个单元提交的相关消息的分组。 当必须将一组相关消息一起进行处理的时候，通常使用会话。 这方面的一个例子是在线购物网站。 *批处理*用于以增加消息吞吐量的方式处理多个不相关的消息。 有关会话的详细信息，请参阅[在会话中分组排队消息](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)。 批处理中的消息也是由单个应用程序处理，并且作为一个单元提交，但批处理中的消息之间可能没有任何关系。 在事务中对消息进行批处理是一种优化方法，它不会改变应用程序的运行方式。  
   
 ## <a name="entering-batching-mode"></a>进入批处理模式  
- <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 终结点行为对批处理进行控制。 将此终结点行为添加到服务终结点对消息进行批处理的事务中告知 Windows Communication Foundation (WCF)。 并非所有的消息需要事务，所以需要事务的唯一消息放在一个批处理中，并且唯一的消息操作所发送的标有`TransactionScopeRequired`  =  `true`并`TransactionAutoComplete`  =  `true`是被视为一批。 如果服务协定上的所有操作将都标有`TransactionScopeRequired`  =  `false`并`TransactionAutoComplete`  =  `false`，则永远不会进入批处理模式。  
+ <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 终结点行为对批处理进行控制。 将此终结点行为添加到服务终结点会告诉 Windows 通信基础 （WCF） 对事务中的消息进行批处理。 并非所有消息都需要事务，因此只有需要事务的消息被放置在批处理中，`TransactionScopeRequired` = `true`并且仅从标记为 和`TransactionAutoComplete` = `true`的批处理的操作发送的消息。 如果`TransactionScopeRequired` = `false`服务协定上的所有操作都标有 和`TransactionAutoComplete` = `false`，则永远不会输入批处理模式。  
   
 ## <a name="committing-a-transaction"></a>提交事务  
  根据以下因素提交批处理事务：  
   
-- `MaxBatchSize`。 <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 行为的一个属性。 此属性确定放入批处理中的消息的最大数量。 一旦达到此数量，批处理便会被提交。 该值并不是一个严格的限制，在接收到这一数量的消息之前也可以提交批处理。  
+- `MaxBatchSize`. <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 行为的一个属性。 此属性确定放入批处理中的消息的最大数量。 一旦达到此数量，批处理便会被提交。 该值并不是一个严格的限制，在接收到这一数量的消息之前也可以提交批处理。  
   
-- `Transaction Timeout`。 当事务的超时时间已经过去 80% 之后，系统会提交批处理，并且创建一个新的批处理。 这表示如果为事务完成所分配的时间只剩下 20% 或更少，系统便会提交批处理。  
+- `Transaction Timeout`. 当事务的超时时间已经过去 80% 之后，系统会提交批处理，并且创建一个新的批处理。 这表示如果为事务完成所分配的时间只剩下 20% 或更少，系统便会提交批处理。  
   
-- `TransactionScopeRequired`。 当处理一批消息，如果 WCF 发现一个带有`TransactionScopeRequired`  =  `false`，它提交该批处理并重新打开新的批处理的第一个消息的接收`TransactionScopeRequired`  =  `true`和`TransactionAutoComplete` = `true`.  
+- `TransactionScopeRequired`. 处理一批消息时，如果 WCF 找到具有`TransactionScopeRequired` = `false`的消息，它将提交批处理，并在收到第一个消息时`TransactionScopeRequired` = `true``TransactionAutoComplete` = `true`重新打开一个新批处理。  
   
 - 如果队列中不再有其他消息，则即使尚未达到 `MaxBatchSize` 或事务的超时时间尚未过去 80%，系统也会提交当前的批处理。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "64585017"
 ## <a name="concurrency-and-batching"></a>并发和批处理  
  若要增加吞吐量，还可以同时运行多个批处理。 通过设置 `ConcurrencyMode.Multiple` 中的 `ServiceBehaviorAttribute` 可以启用并发批处理。  
   
- *服务遏制*是一种服务行为，用于指示可以对该服务发出多少的最大并发调用。 在将其与批处理结合使用时，可以将其解释为可以运行的并发批处理的数量。 如果未设置服务遏制，WCF 将默认为 16 的最大并发调用。 因此，如果在默认情况下添加批处理行为，则最多会有 16 个批处理同时处于活动状态。 最好根据系统处理能力来调整服务遏制和批处理。 例如，如果队列中有 100 个消息并且将批次大小设置为 20 是比较理想的，那么将最大并发调用数设置为 16 是没有用处的，因为根据吞吐量，可能有 16 个事务处于活动状态，这与未启用批处理的结果类似。 因此，在对这些设置进行微调以提高性能时，要么干脆不使用并发批处理，否则就要使并发批处理具有正确的服务遏制大小。  
+ *服务限制*是一种服务行为，用于指示在服务上可以进行的最大并发调用数。 在将其与批处理结合使用时，可以将其解释为可以运行的并发批处理的数量。 如果未设置服务限制，WCF 将最大并发调用默认为 16。 因此，如果在默认情况下添加批处理行为，则最多会有 16 个批处理同时处于活动状态。 最好根据系统处理能力来调整服务遏制和批处理。 例如，如果队列中有 100 个消息并且将批次大小设置为 20 是比较理想的，那么将最大并发调用数设置为 16 是没有用处的，因为根据吞吐量，可能有 16 个事务处于活动状态，这与未启用批处理的结果类似。 因此，在对这些设置进行微调以提高性能时，要么干脆不使用并发批处理，否则就要使并发批处理具有正确的服务遏制大小。  
   
 ## <a name="batching-and-multiple-endpoints"></a>批处理和多个终结点  
  终结点由地址和协定组成。 可能有多个终结点共享同一个绑定。 两个终结点可以共享同一个绑定，并侦听统一资源标识符 (URI)，即队列地址。 如果两个终结点从同一个队列中进行读取，并且两个终结点都添加了事务处理批处理行为，则指定的批次大小可能会发生冲突。 使用在两个事务处理批处理行为之间指定的最小批次大小来实现批处理，可以解决该冲突。 在此方案中，如果其中一个终结点未指定事务处理批处理，则两个终结点都不会使用批处理。  
@@ -67,7 +67,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 {
      ServiceEndpoint sep = ServiceHost.AddServiceEndpoint(typeof(IOrderProcessor), new NetMsmqBinding(), "net.msmq://localhost/private/ServiceModelSamplesTransacted");
      sep.Behaviors.Add(new TransactedBatchingBehavior(100));
-     
+
      // Open the ServiceHost to create listeners and start listening for messages.
     serviceHost.Open();
   
@@ -82,7 +82,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

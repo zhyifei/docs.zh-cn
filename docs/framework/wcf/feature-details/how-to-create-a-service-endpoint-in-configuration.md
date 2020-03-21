@@ -2,15 +2,15 @@
 title: 如何：在配置中创建服务终结点
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: 63a40576b805952197cec5af2f89a5dc4b5d3545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9687d9537d6f166a02b79261743050168f677261
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787642"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185002"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>如何：在配置中创建服务终结点
-终结点向客户端有权访问 Windows Communication Foundation (WCF) 服务提供的功能。 您可以通过使用相对和绝对终结点地址的组合来定义一个或多个终结点，或者如果您未定义任何服务终结点，则默认情况下运行时为您提供一些终结点。 本主题演示如何使用同时包含相对和绝对地址的配置文件来添加终结点。  
+端点使客户端可以访问 Windows 通信基础 （WCF） 服务提供的功能。 您可以通过使用相对和绝对终结点地址的组合来定义一个或多个终结点，或者如果您未定义任何服务终结点，则默认情况下运行时为您提供一些终结点。 本主题演示如何使用同时包含相对和绝对地址的配置文件来添加终结点。  
   
 ## <a name="example"></a>示例  
  下列服务配置指定一个基址和五个终结点。  
@@ -73,7 +73,7 @@ ms.locfileid: "61787642"
  基址是使用 `add` 元素在 service/host/baseAddresses 下指定的，如下面的示例所示。  
   
 ```xml  
-<service   
+<service
     name="Microsoft.ServiceModel.Samples.CalculatorService">  
   <host>  
     <baseAddresses>  
@@ -83,16 +83,16 @@ ms.locfileid: "61787642"
 ```  
   
 ## <a name="example"></a>示例  
- 在以下示例中显示的第一个终结点指定一个相对地址，这意味着该终结点地址是遵循统一资源标识符 (URI) 构成规则的基址和相对地址的结合。 相对地址为空 ("")，因此终结点地址与基址相同。 实际的终结点地址是`http://localhost:8000/servicemodelsamples/service`。  
+ 在以下示例中显示的第一个终结点指定一个相对地址，这意味着该终结点地址是遵循统一资源标识符 (URI) 构成规则的基址和相对地址的结合。 相对地址为空 ("")，因此终结点地址与基址相同。 实际终结点地址为`http://localhost:8000/servicemodelsamples/service`。  
   
 ```xml  
-<endpoint address=""   
+<endpoint address=""
     binding="wsHttpBinding"  
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
 ## <a name="example"></a>示例  
- 第二个终结点定义也指定一个相对地址，如下面的示例配置所示。 将相对地址“test”追加到基址。 实际的终结点地址是`http://localhost:8000/servicemodelsamples/service/test`。  
+ 第二个终结点定义也指定一个相对地址，如下面的示例配置所示。 将相对地址“test”追加到基址。 实际终结点地址为`http://localhost:8000/servicemodelsamples/service/test`。  
   
 ```xml  
 <endpoint address="/test"  
@@ -101,7 +101,7 @@ ms.locfileid: "61787642"
 ```  
   
 ## <a name="example"></a>示例  
- 第三个终结点定义指定一个绝对地址，如下面的示例配置所示。 基址在地址中不起作用。 实际的终结点地址是`http://localhost:8001/hello/servicemodelsamples`。  
+ 第三个终结点定义指定一个绝对地址，如下面的示例配置所示。 基址在地址中不起作用。 实际终结点地址为`http://localhost:8001/hello/servicemodelsamples`。  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: 7fc2427468540ac0a1480f6140cbb34c3a0f1ab3
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 2afbccd02ef42a78d5eac1a01841516fca27c92e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746508"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182616"
 ---
 # <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>如何：在 Windows 窗体中选择连接到用户计算机的打印机
 用户通常希望选择默认打印机之外的打印机进行打印。 可以使用 <xref:System.Windows.Forms.PrintDialog> 组件使用户能够从当前安装的打印机中选择打印机。 通过 <xref:System.Windows.Forms.PrintDialog> 组件，会捕获 <xref:System.Windows.Forms.DialogResult> 组件的 <xref:System.Windows.Forms.PrintDialog> 并用于选择打印机。  
@@ -23,11 +23,11 @@ ms.locfileid: "76746508"
   
 ### <a name="to-choose-a-printer-and-then-print-a-file"></a>选择打印机，然后打印文件  
   
-1. 选择要使用 <xref:System.Windows.Forms.PrintDialog> 组件使用的打印机。  
+1. 选择要使用该组件的<xref:System.Windows.Forms.PrintDialog>打印机。  
   
-     在下面的代码示例中，要处理两个事件。 在第一种情况下，<xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Click> 事件，将实例化 <xref:System.Windows.Forms.PrintDialog> 类并在 <xref:System.Windows.Forms.DialogResult> 属性中捕获用户选择的打印机。  
+     在下面的代码示例中，要处理两个事件。 <xref:System.Windows.Forms.Button>在第一个<xref:System.Windows.Forms.Control.Click>控件事件中，<xref:System.Windows.Forms.PrintDialog>将实例化类，并在<xref:System.Windows.Forms.DialogResult>属性中捕获用户选择的打印机。  
   
-     在第二个事件中，<xref:System.Drawing.Printing.PrintDocument> 组件的 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件中，将在指定的打印机上打印一个示例文档。  
+     在第二个事件中，<xref:System.Drawing.Printing.PrintDocument.PrintPage><xref:System.Drawing.Printing.PrintDocument>组件的事件，将示例文档打印到指定的打印机。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -37,12 +37,12 @@ ms.locfileid: "76746508"
   
        If (result = DialogResult.OK) Then  
          PrintDocument1.Print()  
-       End If   
+       End If
   
     End Sub  
   
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
-       e.Graphics.FillRectangle(Brushes.Red, New Rectangle(500, 500, 500, 500))          
+       e.Graphics.FillRectangle(Brushes.Red, New Rectangle(500, 500, 500, 500))
     End Sub  
     ```  
   
@@ -58,10 +58,10 @@ ms.locfileid: "76746508"
        }  
     }  
   
-    private void printDocument1_PrintPage(object sender,   
+    private void printDocument1_PrintPage(object sender,
     System.Drawing.Printing.PrintPageEventArgs e)  
     {  
-       e.Graphics.FillRectangle(Brushes.Red,   
+       e.Graphics.FillRectangle(Brushes.Red,
          new Rectangle(500, 500, 500, 500));  
     }  
     ```  
@@ -73,7 +73,7 @@ ms.locfileid: "76746508"
        {  
           PrintDialog ^ printDialog1 = gcnew PrintDialog();  
           printDialog1->Document = printDocument1;  
-          System::Windows::Forms::DialogResult result =   
+          System::Windows::Forms::DialogResult result =
              printDialog1->ShowDialog();  
           if (result == DialogResult::OK)  
           {  
@@ -89,7 +89,7 @@ ms.locfileid: "76746508"
        }  
     ```  
   
-     （视觉C#对象和C++视觉对象）将以下代码放在窗体的构造函数中以注册事件处理程序。  
+     （视觉 C# 和视觉C++）将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.printDocument1.PrintPage += new  

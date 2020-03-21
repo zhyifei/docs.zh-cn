@@ -1,5 +1,5 @@
 ---
-title: System.windows.xps.xpsdocumentwriter>. _WritingProgressChanged 事件（System.web）
+title: XpsDocumentWriter._WritingProgressChanged事件（系统.Windows.Xps）
 ms.date: 10/17/2017
 api_location:
 - system.printing.dll
@@ -11,16 +11,16 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 59df080b4c07e4aa9714a5b00f3ed87be44a9449
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 4d61a11ec6546ed4e1b0011d541f10fec4f86b68
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524997"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155578"
 ---
-# <a name="xpsdocumentwriter_writingprogresschanged-event"></a>System.windows.xps.xpsdocumentwriter>.\_WritingProgressChanged 事件
+# <a name="xpsdocumentwriter_writingprogresschanged-event"></a>XpsDocumentWriter。\_编写进度更改事件
 
-当 <xref:System.Windows.Xps.XpsDocumentWriter> 更新其进度时发生。 
+在 <xref:System.Windows.Xps.XpsDocumentWriter> 更新其进度时发生。
 
 ## <a name="syntax"></a>语法
 
@@ -30,8 +30,8 @@ internal event WritingProgressChangedEventHandler _WritingProgressChanged
 
 ## <a name="requirements"></a>要求
 
-**命名空间：** <xref:System.Windows.Xps>
+**命名空间：**<xref:System.Windows.Xps>
 
-**程序集：** System. 打印（在 system.web 中）
+**装配：** 系统.打印（系统中.打印.dll）
 
-**.NET Framework 版本：** 自3.0 之后可用
+**.NET 框架版本：** 自 3.0 起可用

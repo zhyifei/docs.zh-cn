@@ -1,5 +1,5 @@
 ---
-title: 设置 ProgressBar 控件显示的值
+title: 设置进度栏控件显示的值
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,37 +8,37 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: 79ce1e576652d00b323d31dfc6551e168ea0a9a0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d295079a96ca19a4e4c98e113a3f3051c6403182
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743799"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141806"
 ---
 # <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>如何：设置 Windows 窗体 ProgressBar 控件显示的值
 > [!IMPORTANT]
 > <xref:System.Windows.Forms.ToolStripProgressBar> 控件取代了 <xref:System.Windows.Forms.ProgressBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ProgressBar> 控件以实现向后兼容并供将来使用。  
   
- .NET Framework 提供了几种不同的方法来在 <xref:System.Windows.Forms.ProgressBar> 控件中显示给定的值。 选择哪种方法取决于手头的任务或要解决的问题。 下表显示了可以选择的方法。  
+ .NET 框架为您提供了几种在<xref:System.Windows.Forms.ProgressBar>控件中显示给定值的不同方法。 您选择的方法将取决于手头的任务或正在解决的问题。 下表显示了您可以选择的方法。  
   
 |方法|说明|  
 |--------------|-----------------|  
-|直接设置 <xref:System.Windows.Forms.ProgressBar> 控件的值。|此方法对于你知道将涉及的项（如从数据源读取记录）的总数的任务非常有用。 此外，如果只需设置一次或两次该值，这就是一种简单的方法。 最后，如果需要减少进度栏显示的值，请使用此过程。|  
-|按固定值增加 <xref:System.Windows.Forms.ProgressBar> 显示。|当显示最小值和最大值之间的简单计数时，此方法非常有用，例如已用时间或已处理的文件数。|  
-|按变化的值增加 <xref:System.Windows.Forms.ProgressBar> 显示。|当你需要将显示的值更改为不同数量的次数时，此方法非常有用。 例如，显示将一系列文件写入磁盘时使用的硬盘空间量。|  
+|直接设置<xref:System.Windows.Forms.ProgressBar>控件的值。|此方法对于知道将涉及的项总数（例如从数据源读取记录）的任务非常有用。 此外，如果您只需要设置该值一次或两次，这是一种简单的方法。 最后，如果需要减小进度条显示的值，请使用此过程。|  
+|增加<xref:System.Windows.Forms.ProgressBar>显示值。|当您在最小值和最大值之间显示简单计数（如已用时间或从已知总数中处理的文件数）时，此方法非常有用。|  
+|增加<xref:System.Windows.Forms.ProgressBar>显示量，该值各不相同。|当您需要以不同数量多次更改显示的值时，此方法非常有用。 例如，显示在将一系列文件写入磁盘时消耗的硬盘空间量。|  
   
- 设置进度栏显示的值的最直接方式是设置 "<xref:System.Windows.Forms.ProgressBar.Value%2A>" 属性。 这可以在设计时或运行时执行。  
+ 设置进度条显示的值的最直接方法是设置<xref:System.Windows.Forms.ProgressBar.Value%2A>属性。 这可以在设计时或运行时完成。  
   
-### <a name="to-set-the-progressbar-value-directly"></a>直接设置 ProgressBar 值  
+### <a name="to-set-the-progressbar-value-directly"></a>直接设置进度栏值  
   
-1. 设置 <xref:System.Windows.Forms.ProgressBar> 控件的 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 和 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 值。  
+1. 设置<xref:System.Windows.Forms.ProgressBar>控件和<xref:System.Windows.Forms.ProgressBar.Minimum%2A><xref:System.Windows.Forms.ProgressBar.Maximum%2A>值。  
   
-2. 在代码中，将控件的 <xref:System.Windows.Forms.ProgressBar.Value%2A> 属性设置为一个整数值，该值介于已建立的最小值和最大值之间。  
+2. 在代码中，将控件的属性<xref:System.Windows.Forms.ProgressBar.Value%2A>设置为已建立的最小值和最大值之间的整数值。  
   
     > [!NOTE]
-    > 如果在 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 和 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 属性所建立的边界之外设置 <xref:System.Windows.Forms.ProgressBar.Value%2A> 属性，控件将引发 <xref:System.ArgumentException> 异常。  
+    > 如果将<xref:System.Windows.Forms.ProgressBar.Value%2A>属性设置为 和<xref:System.Windows.Forms.ProgressBar.Minimum%2A><xref:System.Windows.Forms.ProgressBar.Maximum%2A>属性建立的边界之外，则控件将引发异常。 <xref:System.ArgumentException>  
   
-     下面的代码示例演示如何直接设置 <xref:System.Windows.Forms.ProgressBar> 值。 此代码从数据源读取记录，并在每次读取数据记录时更新进度栏和标签。 此示例要求窗体具有 <xref:System.Windows.Forms.Label> 控件、<xref:System.Windows.Forms.ProgressBar> 控件和数据表，其中的行称为 `CustomerRow`，`FirstName` 和 `LastName` 字段。  
+     以下代码示例说明了如何直接设置<xref:System.Windows.Forms.ProgressBar>值。 代码从数据源读取记录，并在每次读取数据记录时更新进度栏和标签。 此示例要求窗体<xref:System.Windows.Forms.Label>具有控件、<xref:System.Windows.Forms.ProgressBar>控件和具有名为`CustomerRow`和`FirstName`字段`LastName`的行的数据表。  
   
     ```vb  
     Public Sub CreateNewRecords()  
@@ -83,19 +83,19 @@ ms.locfileid: "76743799"
     }  
     ```  
   
-     如果正在按固定间隔显示进度，则可以设置此值，然后调用一个方法，该方法将按该间隔增加 <xref:System.Windows.Forms.ProgressBar> 控件的值。 这适用于不以整体百分比度量进度的计时器和其他方案。  
+     如果要显示按固定间隔继续的进度，则可以设置该值，然后调用一个方法，该方法按该间隔增加<xref:System.Windows.Forms.ProgressBar>控件的值。 这对于计时器和其他方案非常有用，因为计时器和其他方案没有将进度作为整个百分比来衡量。  
   
-### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>按固定值增大进度栏  
+### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>将进度条增加一个固定值  
   
-1. 设置 <xref:System.Windows.Forms.ProgressBar> 控件的 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 和 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 值。  
+1. 设置<xref:System.Windows.Forms.ProgressBar>控件和<xref:System.Windows.Forms.ProgressBar.Minimum%2A><xref:System.Windows.Forms.ProgressBar.Maximum%2A>值。  
   
-2. 将控件的 <xref:System.Windows.Forms.ProgressBar.Step%2A> 属性设置为一个整数，该整数表示进度栏的显示值的增加量。  
+2. 将控件的属性<xref:System.Windows.Forms.ProgressBar.Step%2A>设置为表示金额的整数，以增加进度条的显示值。  
   
-3. 调用 <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> 方法以更改 <xref:System.Windows.Forms.ProgressBar.Step%2A> 属性中设置的数量所显示的值。  
+3. 调用<xref:System.Windows.Forms.ProgressBar.PerformStep%2A>方法以更改<xref:System.Windows.Forms.ProgressBar.Step%2A>属性中设置的金额显示的值。  
   
-     下面的代码示例说明了进度栏如何维护复制操作中的文件计数。  
+     以下代码示例说明了进度栏如何维护复制操作中文件的计数。  
   
-     在下面的示例中，将每个文件读入内存中时，会更新进度栏和标签以反映读取的文件总数。 此示例要求窗体具有 <xref:System.Windows.Forms.Label> 控件和 <xref:System.Windows.Forms.ProgressBar> 控件。  
+     在下面的示例中，当每个文件读入内存时，进度栏和标签将更新以反映读取的总文件。 此示例要求窗体具有控件<xref:System.Windows.Forms.Label>和<xref:System.Windows.Forms.ProgressBar>控件。  
   
     ```vb  
     Public Sub LoadFiles()  
@@ -149,30 +149,30 @@ ms.locfileid: "76743799"
     }  
     ```  
   
-     最后，您可以增大进度栏显示的值，以便每个增加都是唯一的。 当您跟踪一系列独特操作（如将不同大小的文件写入硬盘，或以整体百分比度量进度）时，这非常有用。  
+     最后，您可以增加进度条显示的值，以便每次增加都是唯一的量。 当您跟踪一系列独特的操作（例如将不同大小的文件写入硬盘或测量进度作为整个百分比）时，这非常有用。  
   
-### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>按动态值增大进度栏  
+### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>按动态值增加进度条  
   
-1. 设置 <xref:System.Windows.Forms.ProgressBar> 控件的 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 和 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 值。  
+1. 设置<xref:System.Windows.Forms.ProgressBar>控件和<xref:System.Windows.Forms.ProgressBar.Minimum%2A><xref:System.Windows.Forms.ProgressBar.Maximum%2A>值。  
   
-2. 调用 <xref:System.Windows.Forms.ProgressBar.Increment%2A> 方法，以更改指定的整数显示的值。  
+2. 调用<xref:System.Windows.Forms.ProgressBar.Increment%2A>方法以更改指定整数显示的值。  
   
-     下面的代码示例说明了进度栏如何计算在复制操作过程中使用的磁盘空间量。  
+     以下代码示例说明了进度条如何计算复制操作期间使用的磁盘空间量。  
   
-     在以下示例中，将每个文件写入硬盘时，会更新进度栏和标签以反映可用的硬盘空间量。 此示例要求窗体具有 <xref:System.Windows.Forms.Label> 控件和 <xref:System.Windows.Forms.ProgressBar> 控件。  
+     在下面的示例中，当每个文件写入硬盘时，进度栏和标签将更新以反映可用的硬盘空间量。 此示例要求窗体具有控件<xref:System.Windows.Forms.Label>和<xref:System.Windows.Forms.ProgressBar>控件。  
   
     ```vb  
     Public Sub ReadFiles()  
-       ' Sets the progress bar's minimum value to a number   
+       ' Sets the progress bar's minimum value to a number
        ' representing the hard disk space before the files are read in.  
        ' You will most likely have to set this using a system call.  
        ' NOTE: The code below is meant to be an example and  
        ' will not compile.  
        ProgressBar1.Minimum = AvailableDiskSpace()  
-       ' Sets the progress bar's maximum value to a number   
+       ' Sets the progress bar's maximum value to a number
        ' representing the total hard disk space.  
        ' You will most likely have to set this using a system call.  
-       ' NOTE: The code below is meant to be an example   
+       ' NOTE: The code below is meant to be an example
        ' and will not compile.  
        ProgressBar1.Maximum = TotalDiskSpace()  
   
@@ -183,11 +183,11 @@ ms.locfileid: "76743799"
        ' so it will execute the loop 5 times.  
        For i = 1 To 5  
           ' Insert code to read a file into memory and update file size.  
-          ' Increases the progress bar's value based on the size of   
+          ' Increases the progress bar's value based on the size of
           ' the file currently being written.  
           ProgressBar1.Increment(FileSize)  
           ' Updates the label to show available drive space.  
-          Label1.Text = "Current Disk Space Used = " &_   
+          Label1.Text = "Current Disk Space Used = " &_
           ProgressBar1.Value.ToString()  
        Next i  
     End Sub  
@@ -196,16 +196,16 @@ ms.locfileid: "76743799"
     ```csharp  
     public void readFiles()  
     {  
-       // Sets the progress bar's minimum value to a number   
+       // Sets the progress bar's minimum value to a number
        // representing the hard disk space before the files are read in.  
        // You will most likely have to set this using a system call.  
-       // NOTE: The code below is meant to be an example and   
+       // NOTE: The code below is meant to be an example and
        // will not compile.  
        progressBar1.Minimum = AvailableDiskSpace();  
-       // Sets the progress bar's maximum value to a number   
+       // Sets the progress bar's maximum value to a number
        // representing the total hard disk space.  
        // You will most likely have to set this using a system call.  
-       // NOTE: The code below is meant to be an example   
+       // NOTE: The code below is meant to be an example
        // and will not compile.  
        progressBar1.Maximum = TotalDiskSpace();  
   
@@ -215,7 +215,7 @@ ms.locfileid: "76743799"
        for (int i = 1; i<= 5; i++)  
        {  
           // Insert code to read a file into memory and update file size.  
-          // Increases the progress bar's value based on the size of   
+          // Increases the progress bar's value based on the size of
           // the file currently being written.  
           progressBar1.Increment(FileSize);  
           // Updates the label to show available drive space.  

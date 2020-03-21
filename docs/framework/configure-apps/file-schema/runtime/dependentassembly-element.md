@@ -9,46 +9,46 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-ms.openlocfilehash: 33309ed89b4d31580da5de3aeb38e9e1fd8ae4d0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2de8c752867d00708173d11d1851f415a2e8518d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73117585"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154200"
 ---
-# <a name="dependentassembly-element"></a>\<dependentAssembly > 元素
-封装每个程序集的绑定策略和程序集位置。 为每个程序集使用一个 `dependentAssembly` 元素。  
+# <a name="dependentassembly-element"></a>\<从属程序集>元素
+封装每个程序集的绑定策略和程序集位置。 为每个程序集`dependentAssembly`使用一个元素。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly >**  
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<运行时>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<程序集绑定>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<从属装配>**  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<dependentAssembly>   
+<dependentAssembly>
 </dependentAssembly>  
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>属性  
  无。  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
-|`assemblyIdentity`|包含有关程序集的标识信息。 每个 `dependentAssembly` 元素中必须包含此元素。|  
-|`codeBase`|指定运行时在计算机上未安装共享程序集的情况下可以找到该程序集的位置。|  
+|`assemblyIdentity`|包含有关程序集的标识信息。 此元素必须包含在每个`dependentAssembly`元素中。|  
+|`codeBase`|指定运行时在未在计算机上安装共享程序集时可以找到共享程序集的位置。|  
 |`bindingRedirect`|将一个程序集版本重定向到另一个版本。|  
-|`publisherPolicy`|指定运行时是否应用此程序集的发布服务器策略。|  
+|`publisherPolicy`|指定运行时是否为此程序集应用发布者策略。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`assemblyBinding`|包含有关程序集版本重定向和程序集位置的信息。|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
@@ -78,7 +78,7 @@ ms.locfileid: "73117585"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [运行时设置架构](index.md)
 - [配置文件架构](../index.md)

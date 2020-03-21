@@ -7,31 +7,31 @@ helpviewer_keywords:
 - Timelines RepeatBehavior property [WPF]
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
-ms.openlocfilehash: a80f72b0e67c13890d4befcbd5ab7c4a92a93fe7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1512c49a658c80f3ab6af652839c3562af3dd205
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942085"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141541"
 ---
 # <a name="how-to-repeat-an-animation"></a>如何：重复动画
-此示例演示如何使用<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>属性的<xref:System.Windows.Media.Animation.Timeline>为了控制动画的重复行为。  
+此示例演示如何使用<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>属性<xref:System.Windows.Media.Animation.Timeline>来控制动画的重复行为。  
   
 ## <a name="example"></a>示例  
- <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>属性的<xref:System.Windows.Media.Animation.Timeline>控制动画重复其简单持续时间的次数。 通过使用<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>，可以指定<xref:System.Windows.Media.Animation.Timeline>重复特定次数 （迭代计数） 或指定的时间段内。 在任一情况下，动画将经历填充请求的计数或持续时间所需的任意多个开始到结束运行。  
+ 控件<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A><xref:System.Windows.Media.Animation.Timeline>的属性表示动画重复其简单持续时间的次数。 通过使用<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>，可以指定<xref:System.Windows.Media.Animation.Timeline>重复一定次数（迭代计数）或指定时间段。 在这两种情况下，动画都会经历它所需的相同多个开始到端运行，以填充请求的计数或持续时间。  
   
- 默认情况下，时间线具有值为 1.0，这意味着它们播放一次，不进行重复的重复计数。 但是，如果您设置<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>的属性<xref:System.Windows.Media.Animation.Timeline>到<xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>，无限期地重复时间线。  
+ 默认情况下，时间线的重复计数为 1.0，这意味着它们播放一次，不重复。 但是，如果将 属性<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A><xref:System.Windows.Media.Animation.Timeline>设置为<xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>，时间线将无限期重复。  
   
- 下面的示例演示如何使用<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>属性来控制动画的重复行为。 该示例进行动画处理<xref:System.Windows.FrameworkElement.Width%2A>的每个矩形使用不同类型的重复行为的五个矩形的属性。  
+ 下面的示例演示如何使用 属性<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>来控制动画的重复行为。 该示例使用不同类型的重复<xref:System.Windows.FrameworkElement.Width%2A>行为为每个矩形为五个矩形的属性设置动画。  
   
  [!code-xaml[timingbehaviors_snip#RepeatBehaviorWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/RepeatBehaviorExample.xaml#repeatbehaviorwholepage)]  
   
- 有关完整示例，请参阅[动画计时行为示例](https://go.microsoft.com/fwlink/?LinkID=159970)。  
+ 有关完整示例，请参阅[动画计时行为示例](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationTiming)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在重复循环过程中累积动画值](how-to-accumulate-animation-values-during-repeat-cycles.md)
 - [指定时间线是否自动反转](how-to-specify-whether-a-timeline-automatically-reverses.md)
-- [动画和计时操作指南主题](animation-and-timing-how-to-topics.md)
+- [动画和计时帮助主题](animation-and-timing-how-to-topics.md)
 - [动画概述](animation-overview.md)
-- [动画计时行为示例](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [动画计时行为示例](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationTiming)

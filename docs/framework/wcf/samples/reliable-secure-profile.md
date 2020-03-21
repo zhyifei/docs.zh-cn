@@ -2,24 +2,24 @@
 title: 可靠安全配置文件
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: ef4680673f37655603a42f6da8aaf7eceaa01f56
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 9ddd0d78396bba6712650620e6b46c62f13337e2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094938"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144209"
 ---
 # <a name="reliable-secure-profile"></a>可靠安全配置文件
 
-此示例演示如何撰写 WCF 和[可靠安全配置文件（RSP）](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html)。 此示例演示如何实现[建立连接](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf)通道，该通道可以与可靠的消息传送组合在一起，还可以选择使用安全通道，根据 RSP 规范创建可靠的安全绑定。  
+此示例演示如何组合 WCF 和[可靠安全配置文件 （RSP）。](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html) 此示例演示了["使连接](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf)通道"的实现，该通道可以与可靠消息一起组合，并选择性地组成安全通道，以基于 RSP 规范创建可靠的安全绑定。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
->   
+>
+> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
 ## <a name="discussion"></a>讨论区  
@@ -27,11 +27,11 @@ ms.locfileid: "77094938"
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 打开**ReliableSecureProfile**解决方案。  
+1. 打开**可靠的安全配置文件**解决方案。  
   
-2. 在**解决方案资源管理器**中右键单击**服务**项目，从上下文菜单中选择 "**调试**"、"**启动新实例**"。 这会启动服务主机。  
+2. 右键单击**解决方案资源管理器**中的**服务**项目 ，从上下文菜单中选择 **"调试****"，从上下文菜单中启动新实例**。 这会启动服务主机。  
   
-3. 右键单击**解决方案资源管理器**中的**客户端**项目，从上下文菜单中选择 "**调试**" 和 "**启动新实例**"。 这会启动客户端。  
+3. 右键单击**解决方案资源管理器**中的**客户端**项目 ，从上下文菜单中选择**调试**，**从上下文菜单中启动新实例**。 这会启动客户端。  
   
 4. 在客户端控制台窗口中出现提示时键入任意字符串，然后单击 ENTER。这会将输入字符串发送到计算此字符串的哈希的服务。  
   

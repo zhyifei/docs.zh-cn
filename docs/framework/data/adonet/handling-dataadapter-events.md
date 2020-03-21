@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: 8438a7b54ca19625687ab96386384cf62ae62d11
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d01198d158c4e1c64f12e8a0756c3d4e599fce74
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783796"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149539"
 ---
 # <a name="handling-dataadapter-events"></a>处理 DataAdapter 事件
 ADO.NET <xref:System.Data.Common.DataAdapter> 公开三个可用于响应数据源中数据更改的事件。 下表演示了 `DataAdapter` 事件。  
   
-|Event|描述|  
+|事件|说明|  
 |-----------|-----------------|  
 |`RowUpdating`|将要开始对某行执行 UPDATE、INSERT 或 DELETE 操作（通过调用 `Update` 方法之一）。|  
 |`RowUpdated`|对某行的 UPDATE、INSERT 或 DELETE 操作（通过调用 `Update` 方法之一）已完成。|  
@@ -28,7 +28,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> 公开三个可用于响应数据�
   
  可以使用 `Status` 属性来确定在执行该操作期间是否发生了错误；如果需要，还可以使用该属性来控制对当前行和结果行所执行的操作。 当该事件发生时，`Status` 属性将为 `Continue` 或 `ErrorsOccurred`。 下表演示为了控制更新过程中的后继操作，可以将 `Status` 属性设置为的值。  
   
-|状态|描述|  
+|状态|说明|  
 |------------|-----------------|  
 |`Continue`|继续执行更新操作。|  
 |`ErrorsOccurred`|中止更新操作并引发异常。|  
@@ -39,7 +39,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> 公开三个可用于响应数据�
   
  也可以使用 `ContinueUpdateOnError` 属性为更新的行处理错误。 如果 `DataAdapter.ContinueUpdateOnError` 为 `true`，那么当行的更新导致引发异常时，该异常的文本被放入特定行的 `RowError` 信息中，并且处理将会继续而不会引发异常。 这使您能够在 `Update` 完成时对错误作出响应；与此相反的是 `RowUpdated` 事件，它使您能够在遇到错误时响应错误。  
   
- 以下代码示例显示如何添加和移除事件处理程序。 `RowUpdating` 事件处理程序编写带有时间戳的所有已删除记录的日志。 `ContinueUpdateOnError` `DataSet` `RowError` `true`  = 事件处理程序将错误信息添加到中的行的属性中，取消隐藏异常，并继续处理（镜像的行为）。 `RowUpdated`  
+ 以下代码示例显示如何添加和移除事件处理程序。 `RowUpdating` 事件处理程序编写带有时间戳的所有已删除记录的日志。 事件`RowUpdated`处理程序将错误信息添加到 中的`RowError``DataSet`行的属性，禁止异常并继续处理（镜像 的行为`ContinueUpdateOnError` = `true`）。  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -107,7 +107,7 @@ protected static void OnRowUpdating(
   {  
     System.IO.TextWriter tw = System.IO.File.AppendText("Deletes.log");  
     tw.WriteLine(  
-      "{0}: Customer {1} Deleted.", DateTime.Now,   
+      "{0}: Customer {1} Deleted.", DateTime.Now,
        args.Row["CustomerID", DataRowVersion.Original]);  
     tw.Close();  
   }  
@@ -131,7 +131,7 @@ protected static void OnRowUpdated(
   
  传递给 `FillErrorEventArgs` 事件的 `FillError` 包含几项可用于响应和更正错误的属性。 下表演示 `FillErrorEventArgs` 对象的属性。  
   
-|Property|描述|  
+|properties|说明|  
 |--------------|-----------------|  
 |`Errors`|已发生的 `Exception`。|  
 |`DataTable`|出错时所填充的 `DataTable` 对象。|  
@@ -178,7 +178,7 @@ protected static void FillError(object sender, FillErrorEventArgs args)
     DataRow myRow = args.DataTable.Rows.Add(new object[]  
        {args.Values[0], args.Values[1], DBNull.Value});  
     //Set the RowError containing the value for the third column.  
-    myRow.RowError =   
+    myRow.RowError =
        "OverflowException Encountered. Value from data source: " +  
        args.Values[2];  
     args.Continue = true;  
@@ -186,7 +186,7 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [DataAdapters 和 DataReaders](dataadapters-and-datareaders.md)
 - [处理数据集事件](./dataset-datatable-dataview/handling-dataset-events.md)

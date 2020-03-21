@@ -12,12 +12,12 @@ helpviewer_keywords:
 - trace switches
 - trace switches, creating custom
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
-ms.openlocfilehash: c164e26c6757094b9820af14a098229ab11eb137
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: a8ce4ee5de4d330b88e98e85cce4b6547e969613
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217212"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181720"
 ---
 # <a name="trace-switches"></a>跟踪开关
 跟踪开关用于启用、禁用和筛选跟踪输出。 它们是代码中存在并可通过 .config 文件在外部配置的对象。 .NET Framework 中提供三种跟踪开关类型： <xref:System.Diagnostics.BooleanSwitch> 类、 <xref:System.Diagnostics.TraceSwitch> 类和 <xref:System.Diagnostics.SourceSwitch> 类。 <xref:System.Diagnostics.BooleanSwitch> 类充当切换开关，可启用或禁用各种跟踪语句。 使用 <xref:System.Diagnostics.TraceSwitch> 和 <xref:System.Diagnostics.SourceSwitch> 类，可以启用特定跟踪级别的跟踪开关，以确保出现为该级别以及其下所有级别指定的 <xref:System.Diagnostics.Trace> 或 <xref:System.Diagnostics.TraceSource> 消息。 如果禁用此开关，则不会出现跟踪消息。 所有这些类均派生自抽象 (MustInherit**T:System.Diagnostics.Switch**) 类 **Switch**，用户开发的任何开关也应如此。  
@@ -68,10 +68,10 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString())
 ```  
   
 ```csharp  
-System.Diagnostics.TraceSwitch myTraceSwitch =   
+System.Diagnostics.TraceSwitch myTraceSwitch =
    new System.Diagnostics.TraceSwitch("SwitchOne", "The first switch");  
 myTraceSwitch.Level = System.Diagnostics.TraceLevel.Info;  
-// This message box displays true, because setting the level to   
+// This message box displays true, because setting the level to
 // TraceLevel.Info sets all lower levels to true as well.  
 MessageBox.Show(myTraceSwitch.TraceWarning.ToString());  
 // This message box displays false.  

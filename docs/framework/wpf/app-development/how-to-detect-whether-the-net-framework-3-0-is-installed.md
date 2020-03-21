@@ -6,22 +6,22 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: 41010e615b6b3d10ebf6adc0e3f871873e94f409
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 60868661df442849db3f5421f8ea33f790fd83fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124450"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187356"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>如何：检测是否安装了 .NET Framework 3.0
-在管理员可以在系统上部署 Microsoft .NET Framework 应用程序之前，必须先确认 .NET Framework 运行时存在。 本主题提供以 HTML/JavaScript 编写的脚本，管理员可以使用该脚本来确定系统中是否存在 .NET Framework。  
+在管理员可以在系统上部署 Microsoft .NET 框架应用程序之前，他们必须首先确认 .NET 框架运行时存在。 本主题提供用 HTML/JavaScript 编写的脚本，管理员可以使用该脚本来确定系统上是否存在 .NET 框架。  
   
 > [!NOTE]
-> 有关安装、部署和检测 Microsoft .NET 框架的详细信息，请参阅[部署 Microsoft .NET Framework 版本 3.0](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480198(v=msdn.10))中的讨论。  
+> 有关安装、部署和检测 Microsoft .NET 框架的更多详细信息，请参阅[部署 Microsoft .NET 框架版本 3.0](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480198(v=msdn.10))中的讨论。  
   
-<a name="content_expiration"></a>   
-## <a name="detect-the-net-clr-user-agent-string"></a>检测 ".NET CLR" 用户代理字符串  
- 安装 .NET Framework 后，MSI 会将 ".NET CLR" 和版本号添加到 UserAgent 字符串。 下面的示例演示了一个嵌入到简单 HTML 页面中的脚本。 此脚本搜索 UserAgent 字符串，以确定是否安装了 .NET Framework，并在搜索结果中显示状态消息。  
+<a name="content_expiration"></a>
+## <a name="detect-the-net-clr-user-agent-string"></a>检测".NET CLR"用户代理字符串  
+ 安装 .NET 框架后，MSI 会将".NET CLR"和版本号添加到 UserAgent 字符串中。 下面的示例显示了嵌入在简单 HTML 页中的脚本。 脚本搜索 UserAgent 字符串以确定是否安装了 .NET Framework，并在搜索结果上显示状态消息。  
   
 ```html  
 <HTML>  
@@ -113,13 +113,13 @@ ms.locfileid: "77124450"
 </HTML>  
 ```  
   
- 如果搜索 ".NET CLR" 版本成功，将显示以下类型的状态消息：  
+ 如果搜索".NET CLR"版本成功，将显示以下类型的状态消息：  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 3.0.04425.00).`  
   
- 否则，会显示以下类型的状态消息：  
+ 否则，将显示以下类型的状态消息：  
   
  `This machine does not have correct version of the .NET Framework 3.0.`  
   

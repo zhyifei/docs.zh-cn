@@ -1,5 +1,5 @@
 ---
-title: 响应 DataGrid 控件中的单击
+title: 响应数据网格控制中的点击
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 9aa1331116cd3f2f8050ff9f8cc8cc52d25726d1
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e72d117b12d43ece8c4d05ed29ab45693418eede
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735763"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141934"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>如何：响应 Windows 窗体 DataGrid 控件中的单击
 > [!NOTE]
 > <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
- 将 Windows 窗体 <xref:System.Windows.Forms.DataGrid> 连接到数据库后，可以监视用户单击了哪个单元格。  
+ 将 Windows<xref:System.Windows.Forms.DataGrid>窗体连接到数据库后，可以监视用户单击的单元格。  
   
-### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>检测 DataGrid 的用户何时选择不同的单元格  
+### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>检测 DataGrid 用户何时选择其他单元格  
   
-- 在 <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> 事件处理程序中，编写代码以进行适当的响应。  
+- 在事件<xref:System.Windows.Forms.DataGrid.CurrentCellChanged>处理程序中，编写代码以做出适当的响应。  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -38,27 +38,27 @@ ms.locfileid: "76735763"
     ```  
   
     ```csharp  
-    private void myDataGrid_CurrentCellChanged(object sender,   
+    private void myDataGrid_CurrentCellChanged(object sender,
     System.EventArgs e)  
     {  
        MessageBox.Show ("Col is " + myDataGrid.CurrentCell.ColumnNumber  
-          + ", Row is " + myDataGrid.CurrentCell.RowNumber   
+          + ", Row is " + myDataGrid.CurrentCell.RowNumber
           + ", Value is " + myDataGrid[myDataGrid.CurrentCell] );  
     }  
     ```  
   
-     （视觉C#对象）将以下代码放在窗体的构造函数中以注册事件处理程序。  
+     （视觉 C#）将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.myDataGrid.CurrentCellChanged += new  
        System.EventHandler(this.myDataGrid_CurrentCellChanged);  
     ```  
   
-### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>确定用户单击的数据网格部分  
+### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>确定用户单击的数据网格的哪个部分  
   
-- 在相应的事件处理程序中调用 <xref:System.Windows.Forms.DataGrid.HitTest%2A> 方法，如 <xref:System.Windows.Forms.Control.MouseDown> 或 <xref:System.Windows.Forms.Control.Click> 事件。  
+- 在<xref:System.Windows.Forms.DataGrid.HitTest%2A>适当的事件处理程序中调用 方法，例如 对于<xref:System.Windows.Forms.Control.MouseDown>或<xref:System.Windows.Forms.Control.Click>事件。  
   
-     <xref:System.Windows.Forms.DataGrid.HitTest%2A> 方法返回包含已单击区域的行和列的 <xref:System.Windows.Forms.DataGrid.HitTestInfo> 对象。  
+     该方法<xref:System.Windows.Forms.DataGrid.HitTest%2A>返回一个<xref:System.Windows.Forms.DataGrid.HitTestInfo>包含已单击区域的行和列的对象。  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -92,7 +92,7 @@ ms.locfileid: "76735763"
     ```  
   
     ```csharp  
-    private void myDataGrid_MouseDown(object sender,   
+    private void myDataGrid_MouseDown(object sender,
     System.Windows.Forms.MouseEventArgs e)  
     {  
        DataGrid myGrid = (DataGrid) sender;  
@@ -100,7 +100,7 @@ ms.locfileid: "76735763"
        hti = myGrid.HitTest(e.X, e.Y);  
        string message = "You clicked ";  
   
-       switch (hti.Type)   
+       switch (hti.Type)
        {  
           case System.Windows.Forms.DataGrid.HitTestType.None :  
              message += "the background.";  
@@ -132,7 +132,7 @@ ms.locfileid: "76735763"
     }  
     ```  
   
-     （视觉C#对象）将以下代码放在窗体的构造函数中以注册事件处理程序。  
+     （视觉 C#）将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.myDataGrid.MouseDown += new  

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: fa7106207c69f19b647ba80ab7e724e9aad174c1
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 4bd747cea43755116c56b16f1de9a6ffb59935ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005076"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187276"
 ---
 # <a name="table-overview"></a>表概述
-<xref:System.Windows.Documents.Table> 是一种块级别元素，它支持流文档内容的基于网格的表示形式。 此元素极具灵活性，因此很有用，但也因此显得更加复杂，从而不容易理解和正确使用。  
+<xref:System.Windows.Documents.Table>是支持基于网格的 Flow 文档内容的块级元素。 此元素极具灵活性，因此很有用，但也因此显得更加复杂，从而不容易理解和正确使用。  
   
  本主题包含以下各节。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "72005076"
   
 - [基本表结构](#basic_table_structure)  
   
-- [表包含](#table_containment)  
+- [表包容](#table_containment)  
   
 - [行分组](#row_groupings)  
   
@@ -35,20 +35,20 @@ ms.locfileid: "72005076"
   
 - [跨行或列 ](#spanning_rows_or_columns)  
   
-- [使用代码生成表 ](#building_a_table_with_code)  
+- [使用代码生成表](#building_a_table_with_code)  
   
-- [相关主题] 
+- [相关主题]
   
-<a name="table_basics"></a>   
+<a name="table_basics"></a>
 ## <a name="table-basics"></a>表基础  
   
-<a name="table_vs_Grid"></a>   
+<a name="table_vs_Grid"></a>
 ### <a name="how-is-table-different-then-grid"></a>表与网格有什么区别？  
- <xref:System.Windows.Documents.Table> 和 <xref:System.Windows.Controls.Grid> 共享某些常见功能，但每个功能最适合于不同的方案。 <xref:System.Windows.Documents.Table> 旨在在流内容中使用（有关流内容的详细信息，请参阅[流文档概述](flow-document-overview.md)）。 网格最适合在表单内（主要在流内容以外的任意位置）使用。 在 <xref:System.Windows.Documents.FlowDocument>中，<xref:System.Windows.Documents.Table> 支持流内容行为，如分页、列重排和内容选择，而 <xref:System.Windows.Controls.Grid> 则不支持。 另一方面，一 <xref:System.Windows.Controls.Grid> 最适合在 <xref:System.Windows.Documents.FlowDocument> 的外部使用，其中包括 <xref:System.Windows.Controls.Grid> 基于行和列索引添加元素，<xref:System.Windows.Documents.Table> 不会这样做。 <xref:System.Windows.Controls.Grid> 元素允许将子内容分层，允许多个元素存在于单个 "单元" 中。 <xref:System.Windows.Documents.Table> 不支持分层。 <xref:System.Windows.Controls.Grid> 的子元素可相对于其 "单元格" 边界区域进行绝对定位。 <xref:System.Windows.Documents.Table> 不支持此功能。 最后，<xref:System.Windows.Controls.Grid> 需要的资源较少，<xref:System.Windows.Documents.Table> 因此请考虑使用 <xref:System.Windows.Controls.Grid> 来提高性能。  
+ <xref:System.Windows.Documents.Table>并<xref:System.Windows.Controls.Grid>共享一些通用功能，但每个功能最适合不同的方案。 A<xref:System.Windows.Documents.Table>设计用于流内容中（有关流内容的详细信息，请参阅[流文档概述](flow-document-overview.md)）。 网格最适合在表单中（主要在流内容以外的任意位置）使用。 在<xref:System.Windows.Documents.FlowDocument>中<xref:System.Windows.Documents.Table>，支持流内容行为，如分页、列重流和内容选择，而<xref:System.Windows.Controls.Grid>不支持。 另<xref:System.Windows.Controls.Grid>一方面，由于许多原因，包括<xref:System.Windows.Documents.FlowDocument><xref:System.Windows.Controls.Grid>添加基于行和列索引的元素，<xref:System.Windows.Documents.Table>最好在 外部使用。 该<xref:System.Windows.Controls.Grid>元素允许分层子内容，允许多个元素存在于单个"单元格"中。 <xref:System.Windows.Documents.Table>不支持分层。 子<xref:System.Windows.Controls.Grid>元素的子元素可以相对于其"单元格"边界区域绝对定位。 <xref:System.Windows.Documents.Table>不支持此功能。 最后，A<xref:System.Windows.Controls.Grid>需要更少的资源，<xref:System.Windows.Documents.Table>然后考虑使用<xref:System.Windows.Controls.Grid>a 来提高性能。  
   
-<a name="basic_table_structure"></a>   
+<a name="basic_table_structure"></a>
 ### <a name="basic-table-structure"></a>基本表结构  
- <xref:System.Windows.Documents.Table> 提供了一种基于网格的表示形式，其中包含列（由 <xref:System.Windows.Documents.TableColumn> 元素表示）和行（由 <xref:System.Windows.Documents.TableRow> 元素表示）。 <xref:System.Windows.Documents.TableColumn> 元素不承载内容;它们只定义列和列的特征。 <xref:System.Windows.Documents.TableRow> 元素必须承载于 <xref:System.Windows.Documents.TableRowGroup> 元素中，该元素定义表中的一组行。 包含表要呈现的实际内容 <xref:System.Windows.Documents.TableCell> 元素必须承载于 <xref:System.Windows.Documents.TableRow> 元素中。 <xref:System.Windows.Documents.TableCell> 可能只包含从 <xref:System.Windows.Documents.Block>派生的元素。  <xref:System.Windows.Documents.TableCell> 包含的有效子元素。  
+ <xref:System.Windows.Documents.Table>提供基于网格的表示，由列（由<xref:System.Windows.Documents.TableColumn>元素表示）和行（由<xref:System.Windows.Documents.TableRow>元素表示）。 <xref:System.Windows.Documents.TableColumn>元素不承载内容;元素不承载内容。它们只定义列和列的特征。 <xref:System.Windows.Documents.TableRow>元素必须托管在一个<xref:System.Windows.Documents.TableRowGroup>元素中，该元素定义表的行分组。 <xref:System.Windows.Documents.TableCell>元素包含表要显示的实际内容，必须托管在<xref:System.Windows.Documents.TableRow>元素中。 <xref:System.Windows.Documents.TableCell>可能只包含派生自<xref:System.Windows.Documents.Block>的元素。  <xref:System.Windows.Documents.TableCell>包括的有效子元素。  
   
 - <xref:System.Windows.Documents.BlockUIContainer>  
   
@@ -61,12 +61,12 @@ ms.locfileid: "72005076"
 - <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
-> <xref:System.Windows.Documents.TableCell> 元素不能直接承载文本内容。 有关流内容元素（如 <xref:System.Windows.Documents.TableCell>）的包含规则的详细信息，请参阅[流文档概述](flow-document-overview.md)。  
+> <xref:System.Windows.Documents.TableCell>元素不能直接承载文本内容。 有关流内容元素的包含规则的详细信息，请参阅<xref:System.Windows.Documents.TableCell>流[文档概述](flow-document-overview.md)。  
   
 > [!NOTE]
-> <xref:System.Windows.Documents.Table> 类似于 <xref:System.Windows.Controls.Grid> 元素，但具有更多的功能，因此需要更大的资源开销。  
+> <xref:System.Windows.Documents.Table>与元素类似，<xref:System.Windows.Controls.Grid>但具有更多功能，因此需要更大的资源开销。  
   
- 下面的示例使用 XAML 定义了一个简单的 2 x 3 表。  
+ 下面的示例定义了一个简单的 2 x 3 表与 XAML。  
   
  [!code-xaml[TableSnippets2#_Table_BasicLayout](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_basiclayout)]  
   
@@ -74,9 +74,9 @@ ms.locfileid: "72005076"
   
  ![显示基本表呈现方式的屏幕截图。](./media/table-overview/basic-table-render-example.png)  
   
-<a name="table_containment"></a>   
+<a name="table_containment"></a>
 ### <a name="table-containment"></a>表包容  
- <xref:System.Windows.Documents.Table> 派生自 <xref:System.Windows.Documents.Block> 元素，遵循 <xref:System.Windows.Documents.Block> 级别元素的通用规则。  <xref:System.Windows.Documents.Table> 元素可以包含在以下任何元素中：  
+ <xref:System.Windows.Documents.Table>派生自元素<xref:System.Windows.Documents.Block>，并遵循<xref:System.Windows.Documents.Block>级别元素的通用规则。  元素<xref:System.Windows.Documents.Table>可以由以下任何元素包含：  
   
 - <xref:System.Windows.Documents.FlowDocument>  
   
@@ -92,11 +92,11 @@ ms.locfileid: "72005076"
   
 - <xref:System.Windows.Documents.Figure>  
   
-<a name="row_groupings"></a>   
+<a name="row_groupings"></a>
 ### <a name="row-groupings"></a>行分组  
- <xref:System.Windows.Documents.TableRowGroup> 元素提供了一种对表中的行进行任意分组的方式;表中的每一行都必须属于行分组。  行分组中的行通常具有相同的用途，并可作为一个组来设置样式。  行分组的一个常见使用方式是用于将特定用途的行（如标题行、标头和页脚行）与表中所含的主内容分隔开来。  
+ 该<xref:System.Windows.Documents.TableRowGroup>元素提供了一种对表中的行进行任意分组的方法;表中的每一行都必须属于行分组。  行分组中的行通常具有相同的用途，并可作为一个组来设置样式。  行分组的一个常见使用方式是用于将特定用途的行（如标题行、标头和页脚行）与表中所含的主内容分隔开来。  
   
- 下面的示例使用 XAML 来定义具有样式的标头行和表尾行的表。  
+ 下面的示例使用 XAML 定义具有样式标题和页脚行的表。  
   
  [!code-xaml[TableSnippets2#_Table_RowGroups](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_rowgroups)]  
   
@@ -104,7 +104,7 @@ ms.locfileid: "72005076"
   
  ![屏幕快照：表行组](./media/table-rowgroups.png "Table_RowGroups")  
   
-<a name="rendering_precedence"></a>   
+<a name="rendering_precedence"></a>
 ### <a name="background-rendering-precedence"></a>背景呈现优先级  
  表元素以下列顺序呈现（按 Z 顺序从最低到最高排列）。 此顺序不能更改。 例如，对于这些元素，没有可用于替换此已有顺序的“Z 顺序”属性。  
   
@@ -124,11 +124,11 @@ ms.locfileid: "72005076"
   
  下图显示了此示例的呈现方式（仅显示背景色）。  
   
- ![屏幕快照：表 Z 顺序](./media/table-zorder.png "Table_ZOrder")  
+ ![屏幕截图：表 z&#45;顺序](./media/table-zorder.png "Table_ZOrder")  
   
-<a name="spanning_rows_or_columns"></a>   
+<a name="spanning_rows_or_columns"></a>
 ### <a name="spanning-rows-or-columns"></a>跨行或列  
- 可以通过分别使用 <xref:System.Windows.Documents.TableCell.RowSpan%2A> 或 <xref:System.Windows.Documents.TableCell.ColumnSpan%2A> 属性将表单元配置为跨越多个行或列。  
+ 表单元格可以分别配置为使用<xref:System.Windows.Documents.TableCell.RowSpan%2A>或 属性跨越多个行或<xref:System.Windows.Documents.TableCell.ColumnSpan%2A>列。  
   
  请参考以下示例，该示例中有一个跨三列的单元格。  
   
@@ -138,19 +138,19 @@ ms.locfileid: "72005076"
   
  ![屏幕快照：跨全部三列的单元格](./media/table-columnspan.png "Table_ColumnSpan")  
   
-<a name="building_a_table_with_code"></a>   
+<a name="building_a_table_with_code"></a>
 ## <a name="building-a-table-with-code"></a>使用代码生成表  
- 下面的示例演示如何以编程方式创建 <xref:System.Windows.Documents.Table>，并使用内容来填充它。 该表的内容分配为五行（由 <xref:System.Windows.Documents.Table.RowGroups%2A> 对象中包含的 <xref:System.Windows.Documents.TableRow> 对象表示）和六个列（由 <xref:System.Windows.Documents.TableColumn> 对象表示）。 各行用于不同的显示目的，其中，标题行用于显示整个表的标题，标头行用于描述表中的数据列，而页脚行则包含摘要信息。  请注意，“标题”行、“标头”行和“页脚”行并非表格所固有的，它们只是具有不同特征的行。 表单元格包含实际内容，这些内容可以包括文本、图像或几乎任何其他 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 元素。  
+ 以下示例演示如何以编程方式创建 和<xref:System.Windows.Documents.Table>填充内容。 表的内容被分摊成五行（由<xref:System.Windows.Documents.TableRow><xref:System.Windows.Documents.Table.RowGroups%2A>包含在对象中的对象表示）和六列（由<xref:System.Windows.Documents.TableColumn>对象表示）。 各行用于不同的显示目的，其中，标题行用于显示整个表的标题，标头行用于描述表中的数据列，而页脚行则包含摘要信息。  请注意，“标题”行、“标头”行和“页脚”行并非表格所固有的，它们只是具有不同特征的行。 表单元格包含实际内容，内容可以由文本、图像或几乎任何其他[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]元素组成。  
   
- 首先，将创建一个 <xref:System.Windows.Documents.FlowDocument> 来承载 <xref:System.Windows.Documents.Table>，并创建新的 <xref:System.Windows.Documents.Table> 并将其添加到 <xref:System.Windows.Documents.FlowDocument>的内容。  
+ 首先，将<xref:System.Windows.Documents.FlowDocument>创建 承载 的<xref:System.Windows.Documents.Table>，并创建<xref:System.Windows.Documents.Table>一个新内容并将其添加到 中<xref:System.Windows.Documents.FlowDocument>。  
   
  [!code-csharp[TableSnippets#_TableCreate](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
  [!code-vb[TableSnippets#_TableCreate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  
   
- 接下来，将创建六个 <xref:System.Windows.Documents.TableColumn> 对象并将其添加到表的 <xref:System.Windows.Documents.Table.Columns%2A> 集合，并应用某些格式设置。  
+ 接下来，将<xref:System.Windows.Documents.TableColumn>创建六个对象并将其添加到表的集合<xref:System.Windows.Documents.Table.Columns%2A>中，并应用了一些格式。  
   
 > [!NOTE]
-> 请注意，表的 <xref:System.Windows.Documents.Table.Columns%2A> 集合使用从零开始的标准索引。  
+> 请注意，表的集合<xref:System.Windows.Documents.Table.Columns%2A>使用标准的零基索引。  
   
  [!code-csharp[TableSnippets#_TableCreateColumns](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreatecolumns)]
  [!code-vb[TableSnippets#_TableCreateColumns](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreatecolumns)]  

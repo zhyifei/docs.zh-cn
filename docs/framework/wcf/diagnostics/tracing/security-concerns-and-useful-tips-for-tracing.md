@@ -2,12 +2,12 @@
 title: 有关跟踪的安全注意事项和有用提示
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: d1b2c13cacc792ecedacfc3ede7c38e072841263
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ced4f3a3a5e83564703db88b28ee2b3c6eeb1a0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600042"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185712"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>有关跟踪的安全注意事项和有用提示
 本主题说明防止敏感信息公开的方法以及使用 WebHost 时的有用提示。  
@@ -35,7 +35,7 @@ ms.locfileid: "64600042"
    <system.ServiceModel>  
       <machineSettings enableLoggingKnownPii="Boolean"/>  
    </system.ServiceModel>  
-</configuration>   
+</configuration>
 ```  
   
  应用程序部署人员然后可以使用 App.config 或 Web.config 文件中的 `logKnownPii` 属性来启用 PII 日志记录，如下所示：  
@@ -70,7 +70,7 @@ ms.locfileid: "64600042"
                 initializeData="c:\logs\messages.svclog" />  
           </listeners>  
       </source>  
-      <source name="System.ServiceModel"   
+      <source name="System.ServiceModel"
          logKnownPii="true">  
          <listeners>  
             <add name="xml" />  
@@ -84,12 +84,12 @@ ms.locfileid: "64600042"
   
  只有当应用程序启动或重新启动之后，更改才有效。 在两个属性都设置为 `true` 的情况下，会在启动时记录一个事件。 如果 `logKnownPii` 设置为 `true` 但 `enableLoggingKnownPii` 设置为 `false`，也会记录一个事件。  
   
- PII 日志记录的详细信息，请参阅[PII 安全锁定](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md)示例。  
+ 有关 PII 日志记录的详细信息，请参阅[PII 安全锁定](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md)示例。  
   
- 计算机管理员和应用程序部署人员应谨慎使用这两个开关。 如果启用了 PII 日志记录，则会记录安全密钥和 PII。 如果禁用了 PII 日志记录，仍会在消息头和正文中记录敏感数据和特定于应用程序的数据。 有关隐私以及防止公开 PII 的更深入讨论，请参阅[用户隐私](https://go.microsoft.com/fwlink/?LinkID=94647)。  
+ 计算机管理员和应用程序部署人员应谨慎使用这两个开关。 如果启用了 PII 日志记录，则会记录安全密钥和 PII。 如果禁用了 PII 日志记录，仍会在消息头和正文中记录敏感数据和特定于应用程序的数据。 有关隐私和保护 PII 免受暴露的更彻底的讨论，请参阅[用户隐私](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10))。  
   
  另外，对于面向连接的传输，每次连接时会记录一次消息发送方的 IP 地址；对于非面向连接的传输，每发送一条消息会记录一次消息发送方的 IP 地址。 这是在未经发送方同意的情况下进行的。 不过，只有在“信息”或“详细”跟踪级别才会发生此日志记录，这些级别不是生产中的默认或推荐跟踪级别（现场调试时除外）。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

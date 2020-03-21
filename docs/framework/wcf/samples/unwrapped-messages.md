@@ -2,18 +2,18 @@
 title: 未包装的消息
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-ms.openlocfilehash: 4d6525393bb65dd6361b8d195f3a71991102daa1
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 81592910d8530cea2df5ec1fd8a8b1145350ef78
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716737"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143728"
 ---
 # <a name="unwrapped-messages"></a>未包装的消息
 此示例演示未包装的消息。 默认情况下，消息正文的格式设置为对服务操作的参数进行包装。 下面的示例演示一个包装模式下的对 `Add` 服务的 `ICalculator` 请求消息。  
   
 ```xml  
-<s:Envelope   
+<s:Envelope
     xmlns:s="http://www.w3.org/2003/05/soap-envelope"  
     xmlns:a="http://schemas.xmlsoap.org/ws/2005/08/addressing">  
     <s:Header>  
@@ -31,8 +31,8 @@ ms.locfileid: "74716737"
  消息正文中的 `<Add>` 元素包装 `n1` 和 `n2` 参数。 相反，下面的示例则显示未包装模式下的等效消息。  
   
 ```xml  
-<s:Envelope   
-    xmlns:s="http://www.w3.org/2003/05/soap-envelope"   
+<s:Envelope
+    xmlns:s="http://www.w3.org/2003/05/soap-envelope"
     xmlns:a="http://schemas.xmlsoap.org/ws/2005/08/addressing">  
     <s:Header>  
         ….  
@@ -91,23 +91,23 @@ public class ResponseMessage
   
  为了让您看到正在发送和接收的消息，此示例使用了跟踪。 此外，配置 <xref:System.ServiceModel.WSHttpBinding> 时没有使用安全性，以减少它记录的消息数。  
   
- 可以使用[服务跟踪查看器工具（svctraceviewer.exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)查看生成的跟踪日志（c:\logs\Message.log）。 若要查看消息内容，请在服务跟踪查看器工具的左侧窗格和右侧窗格中选择 "**消息**"。 此示例中的跟踪日志配置为生成到 C:\LOGS 文件夹。 请在运行此示例之前创建该文件夹，并为用户赋予对该目录的“网络服务”写权限。  
+ 生成的跟踪日志 （c：_logs_Message.log） 可以使用[服务跟踪查看器工具 （SvcTraceViewer.exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)查看。 要查看邮件内容，请选择"服务跟踪查看器"工具的左侧和右侧窗格中**的消息**。 此示例中的跟踪日志配置为生成到 C:\LOGS 文件夹。 请在运行此示例之前创建该文件夹，并为用户赋予对该目录的“网络服务”写权限。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已为 Windows[通信基础示例执行一次性设置过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 创建一个 C:\LOGS 目录，用于记录消息。 向用户授予对该目录的“网络服务”写权限。  
   
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-4. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+4. 要在单机或跨计算机配置中运行示例，请按照[运行 Windows 通信基础示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)说明操作。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
->   
+>
+> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Unwrapped`  

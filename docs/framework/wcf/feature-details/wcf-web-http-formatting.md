@@ -1,15 +1,15 @@
 ---
-title: WCF Web HTTP 格式设置
+title: WCF Web HTTP 格式
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 884193dc26794be5e8a3c95e05be2ca43a90f6e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6c9728fe40e26977366b73337e72b1514a12a19
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643482"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184197"
 ---
-# <a name="wcf-web-http-formatting"></a>WCF Web HTTP 格式设置
+# <a name="wcf-web-http-formatting"></a>WCF Web HTTP 格式
 通过 WCF Web HTTP 编程模型，你可以动态确定服务操作返回其响应所采用的最佳格式。 支持使用以下两种方法来确定相应格式：即自动和显式。  
   
 ## <a name="automatic-formatting"></a>自动格式设置  
@@ -23,10 +23,10 @@ ms.locfileid: "64643482"
   
 4. WebHttpBehavior 中的默认格式设置。  
   
- 如果请求消息包含 Accept 标头的 Windows Communication Foundation (WCF) 基础结构将搜索其支持的类型。 如果 `Accept` 标头指定了其媒体类型的优先级，则会遵循这些优先级。 如果未在 `Accept` 标头中找到适当的格式，则使用请求消息的内容类型。 如果未指定适当的内容类型，则使用操作的默认格式设置。 默认格式使用 `ResponseFormat` 和 <xref:System.ServiceModel.Web.WebGetAttribute> 特性的 <xref:System.ServiceModel.Web.WebInvokeAttribute> 参数设置。 如果未对操作指定默认格式，则使用 <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> 属性的值。 自动格式设置依赖于 <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> 属性。 如果此属性设置为 `true`，WCF 基础结构将确定要使用的最佳格式。 默认情况下，禁用自动格式选择，以保证向后兼容性。 可以通过编程方式或配置启用自动格式选择。 下面的示例演示如何在代码中启用自动格式选择。  
+ 如果请求消息包含"接受"标头，Windows 通信基础 （WCF） 基础结构将搜索其支持的类型。 如果 `Accept` 标头指定了其媒体类型的优先级，则会遵循这些优先级。 如果未在 `Accept` 标头中找到适当的格式，则使用请求消息的内容类型。 如果未指定适当的内容类型，则使用操作的默认格式设置。 默认格式使用 `ResponseFormat` 和 <xref:System.ServiceModel.Web.WebGetAttribute> 特性的 <xref:System.ServiceModel.Web.WebInvokeAttribute> 参数设置。 如果未对操作指定默认格式，则使用 <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> 属性的值。 自动格式设置依赖于 <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> 属性。 如果此属性设置为 `true`，WCF 基础结构将确定要使用的最佳格式。 默认情况下，禁用自动格式选择，以保证向后兼容性。 可以通过编程方式或配置启用自动格式选择。 下面的示例演示如何在代码中启用自动格式选择。  
   
 ```csharp
-// This code assumes the service name is MyService and the service contract is IMyContract     
+// This code assumes the service name is MyService and the service contract is IMyContract
 Uri baseAddress = new Uri("http://localhost:8000");  
   
 WebServiceHost host = new WebServiceHost(typeof(MyService), baseAddress)  
@@ -47,7 +47,7 @@ try
       sep.Behaviors.Add(webBehavior);  
    }  
          // Open host to start listening for messages  
-   host.Open();        
+   host.Open();
   
   // ...  
 }  
@@ -90,7 +90,7 @@ try
   </system.serviceModel>  
 ```  
   
-## <a name="explicit-formatting"></a>显式格式设置  
+## <a name="explicit-formatting"></a>显式格式  
  顾名思义，在显式格式设置过程中，开发人员在操作代码中确定要使用的最佳格式。 如果最佳格式为 XML 或 JSON，开发人员会将 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 设置为 <xref:System.ServiceModel.Web.WebMessageFormat.Xml> 或 <xref:System.ServiceModel.Web.WebMessageFormat.Json>。 如果未显式设置 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 属性，则使用操作的默认格式。  
   
  下面的示例检查格式查询字符串参数，以获取要采用的格式。 如果已指定该参数，则使用 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 设置操作的格式。  
@@ -163,7 +163,7 @@ public class Service : IService
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.UriTemplate>
 - <xref:System.UriTemplateMatch>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-ms.openlocfilehash: c0a46580ad2673b56fefe7228f2549a2e19d2c14
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5643bc85972ea33cc31b1a83ecf7615dbb275bc2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447054"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180055"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>实现 UI 自动化 Transform 控件模式
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74447054"
   
  <xref:System.Windows.Automation.TransformPattern> 控件模式用于支持可以移动、调整大小或在二维空间中旋转的控件。 有关实现此控件模式的控件示例，请参阅 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
+<a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
  在实现 Transform 控件模式时，请注意以下准则和约定：  
   
@@ -33,35 +33,35 @@ ms.locfileid: "74447054"
   
 - 所有参数和属性值都是绝对和独立于区域设置的。  
   
-<a name="Required_Members_for_the_IValueProvider_Interface"></a>   
+<a name="Required_Members_for_the_IValueProvider_Interface"></a>
 ## <a name="required-members-for-itransformprovider"></a>ITransformProvider 必需的成员  
  实现 <xref:System.Windows.Automation.Provider.ITransformProvider>需要以下属性和方法。  
   
-|必需的成员|成员类型|注意|  
+|必需的成员|成员类型|说明|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|属性|无|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|属性|无|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|properties|无|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|properties|无|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|properties|无|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|方法|无|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|方法|无|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|方法|无|  
   
  没有与此控件模式关联的事件。  
   
-<a name="Exceptions"></a>   
-## <a name="exceptions"></a>异常  
+<a name="Exceptions"></a>
+## <a name="exceptions"></a>例外  
  提供程序必须引发以下异常。  
   
 |异常类型|条件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> -如果 <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> 为 false。|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -如果 <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> 为 false。|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -如果 <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> 为 false。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> -如果<xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty>为 false。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -如果<xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty>为 false。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -如果<xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty>为 false。|  
   
 ## <a name="see-also"></a>另请参阅
 
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
+- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
 - [UI 自动化树概述](ui-automation-tree-overview.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)

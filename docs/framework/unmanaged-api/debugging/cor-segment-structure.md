@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 93aeecb9-7fef-4545-8daf-f566dfc47084
 topic_type:
 - apiref
-ms.openlocfilehash: 0370c74bde9ca5bdbd0fd03515f4b174ddd0a39a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5c743064b8ca645cf45d02b8800c88187bf4c6c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132322"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179283"
 ---
 # <a name="cor_segment-structure"></a>COR_SEGMENT 结构
 包含有关托管堆中的内存区域的信息。  
@@ -28,21 +28,21 @@ ms.locfileid: "73132322"
   
 ```cpp  
 typedef struct _COR_SEGMENT {  
-    CORDB_ADDRESS start;            
-    CORDB_ADDRESS end;              
-    CorDebugGenerationTypes gen;    
-    ULONG heap;                     
+    CORDB_ADDRESS start;
+    CORDB_ADDRESS end;
+    CorDebugGenerationTypes gen;
+    ULONG heap;
 } COR_SEGMENT;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`start`|内存区域的起始地址。|  
 |`end`|内存区域的结束地址。|  
 |`gen`|显示内存区域生成的 [CorDebugGenerationTypes](cordebuggenerationtypes-enumeration.md) 枚举成员。|  
-|`heap`|内存区域驻留的堆数。 有关详细信息，请参阅备注部分。|  
+|`heap`|内存区域驻留的堆数。 有关详细信息，请参阅“备注”部分。|  
   
 ## <a name="remarks"></a>备注  
  `COR_SEGMENTS` 结构表示托管堆中的内存区域。  `COR_SEGMENTS` 对象是 [ICorDebugHeapRegionEnum](icordebugheapsegmentenum-interface.md) 集合对象的成员，通过调用 [ICorDebugProcess5::EnumerateHeapRegions](icordebugprocess5-enumerateheapregions-method.md) 方法填充。  
@@ -56,9 +56,9 @@ typedef struct _COR_SEGMENT {
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试结构](debugging-structures.md)
 - [调试](index.md)

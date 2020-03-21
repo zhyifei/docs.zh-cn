@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: c3858cfab59b63761f43f6b3eaad9bf8ca4c1dbc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 078b5f3fc1cd4273af282580f41e68ca9bd8ff51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916695"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182624"
 ---
 # <a name="application-settings-architecture"></a>应用程序设置体系结构
 本主题介绍应用程序设置体系结构的工作原理，并探讨了体系结构的高级功能，如分组设置和设置键。
@@ -22,7 +22,7 @@ ms.locfileid: "69916695"
  在应用程序中托管自定义组件时，利用提供的接口可使这些自定义组件保留其自己的设置。 通过使用设置键，组件能够保持分隔组件多个实例的设置。
 
 ## <a name="defining-settings"></a>定义设置
- 应用程序设置体系结构在 ASP.NET 和 Windows 窗体中使用, 并且包含许多在两个环境中共享的基类。 最重要的是<xref:System.Configuration.SettingsBase>, 它通过集合提供对设置的访问, 并为加载和保存设置提供低级别方法。 每个环境实现自己的派生自<xref:System.Configuration.SettingsBase>的类, 以便为该环境提供其他设置功能。 在基于 Windows 窗体的应用程序中, 必须在派生自<xref:System.Configuration.ApplicationSettingsBase>类的类上定义所有应用程序设置, 这会将以下功能添加到基类:
+ 应用程序设置体系结构在ASP.NET窗体和 Windows 窗体中使用，它包含许多在这两个环境中共享的基类。 最重要的是<xref:System.Configuration.SettingsBase>，它通过集合提供对设置的访问，并提供用于加载和保存设置的低级方法。 每个环境实现其派生自己的类<xref:System.Configuration.SettingsBase>，以便为该环境提供其他设置功能。 在基于 Windows 窗体的应用程序中，必须在派生自类的<xref:System.Configuration.ApplicationSettingsBase>类上定义所有应用程序设置，这将以下功能添加到基类：
 
 - 高层加载和保存操作
 
@@ -34,7 +34,7 @@ ms.locfileid: "69916695"
 
 - 在更改设置前或在保存设置前验证设置
 
- 可以使用在<xref:System.Configuration>命名空间中定义的多个属性对设置进行描述; "[应用程序设置" 属性](application-settings-attributes.md)中对这些属性进行了说明。 定义设置时, 必须将其<xref:System.Configuration.ApplicationScopedSettingAttribute>应用于或<xref:System.Configuration.UserScopedSettingAttribute>, 这说明了该设置是应用于整个应用程序, 还是仅应用于当前用户。
+ 可以使用命名空间中<xref:System.Configuration>定义的许多属性来描述这些设置;这些在[应用程序设置属性](application-settings-attributes.md)中描述。 定义设置时，必须将其应用于 或<xref:System.Configuration.ApplicationScopedSettingAttribute><xref:System.Configuration.UserScopedSettingAttribute>，其中描述该设置是应用于整个应用程序还是仅适用于当前用户。
 
  以下代码示例定义一个具有单个设置 `BackgroundColor` 的自定义设置类。
 
@@ -42,15 +42,15 @@ ms.locfileid: "69916695"
  [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]
 
 ## <a name="settings-persistence"></a>设置持久性
- 类本身不会持久保存或加载设置; 此作业将归入设置提供程序, 这是一个派生自<xref:System.Configuration.SettingsProvider>的类。 <xref:System.Configuration.ApplicationSettingsBase> 如果的<xref:System.Configuration.ApplicationSettingsBase>派生类未<xref:System.Configuration.SettingsProviderAttribute>通过指定设置提供程序, 则使用默认提供程序<xref:System.Configuration.LocalFileSettingsProvider>。
+ 类<xref:System.Configuration.ApplicationSettingsBase>本身不保留或加载设置;否则，该类将不保留或加载设置。此作业属于设置提供程序，该类派生自<xref:System.Configuration.SettingsProvider>。 如果 派生<xref:System.Configuration.ApplicationSettingsBase>类未通过 指定 设置提供程序<xref:System.Configuration.SettingsProviderAttribute>，则使用默认提供程序 。。 <xref:System.Configuration.LocalFileSettingsProvider>
 
- 最初随 .NET Framework 一起发布的配置系统支持通过本地计算机的 machine.config 文件或使用部署的`app.`exe 文件中提供静态应用程序配置数据。应用程序。 <xref:System.Configuration.LocalFileSettingsProvider>类通过以下方式扩展此本机支持:
+ 最初使用 .NET Framework 发布的配置系统支持通过本地计算机的机器.config 文件或随应用程序一起部署的`app.`exe.config 文件中提供静态应用程序配置数据。 类<xref:System.Configuration.LocalFileSettingsProvider>以以下方式扩展此本机支持：
 
 - 应用程序范围设置可存储在 machine.config 或 `app.`exe.config 文件中。 Machine.config 始终为只读，而出于安全考虑，`app`.exe.config 对大多数应用程序也限制为只读。
 
 - 用户范围设置可存储在 `app`.exe.config 文件中，在这种情况下，这些设置被视为静态默认设置。
 
-- 非默认的用户范围设置存储在新文件 *user*.config 中，其中 *user* 是当前执行应用程序的用户的用户名。 您可以使用<xref:System.Configuration.DefaultSettingValueAttribute>指定用户范围设置的默认值。 由于用户范围设置在应用程序执行期间经常更改，因此 `user`.config 始终可读/写。
+- 非默认的用户范围设置存储在新文件 *user*.config 中，其中 *user* 是当前执行应用程序的用户的用户名。 可以为 具有<xref:System.Configuration.DefaultSettingValueAttribute>的用户范围设置指定默认值。 由于用户范围设置在应用程序执行期间经常更改，因此 `user`.config 始终可读/写。
 
  所有这 3 种配置文件都以 XML 格式存储设置。 应用程序范围设置的顶级 XML 元素为 `<appSettings>`，而 `<userSettings>` 用于用户范围设置。 同时包含应用程序范围设置和用户范围设置默认值的 `app`.exe.config 文件如下所示：
 
@@ -93,48 +93,48 @@ ms.locfileid: "69916695"
 ### <a name="settings-bindings"></a>设置绑定
  应用程序设置使用 Windows 窗体数据绑定体系结构，提供设置对象和组件间设置更新的双向通信。 如果使用 Visual Studio 创建应用程序设置并将其分配给组件属性，则会自动生成这些绑定。
 
- 只能将应用程序设置绑定到支持该<xref:System.Windows.Forms.IBindableComponent>接口的组件。 此外, 组件必须为特定绑定属性实现更改事件, 或通知应用程序设置属性已通过<xref:System.ComponentModel.INotifyPropertyChanged>接口更改。 如果该组件未实现<xref:System.Windows.Forms.IBindableComponent>并且您是通过 Visual Studio 绑定的, 则将首次设置绑定属性, 但不会更新。 如果组件实现<xref:System.Windows.Forms.IBindableComponent>但不支持属性更改通知, 则在属性更改时, 绑定将不会在设置文件中更新。
+ 只能将应用程序设置绑定到支持接口的<xref:System.Windows.Forms.IBindableComponent>组件。 此外，组件必须为特定的绑定属性实现更改事件，或者通知应用程序设置该属性已通过<xref:System.ComponentModel.INotifyPropertyChanged>接口更改。 如果组件未实现<xref:System.Windows.Forms.IBindableComponent>，并且您正在通过 Visual Studio 绑定，则绑定属性将在第一次设置，但不会更新。 如果组件实现<xref:System.Windows.Forms.IBindableComponent>但不支持属性更改通知，则当更改属性时，绑定将不会在设置文件中更新。
 
- 某些 Windows 窗体组件 (如<xref:System.Windows.Forms.ToolStripItem>) 不支持设置绑定。
+ 某些 Windows 窗体组件（<xref:System.Windows.Forms.ToolStripItem>如 ）不支持设置绑定。
 
 ### <a name="settings-serialization"></a>设置序列化
- 当<xref:System.Configuration.LocalFileSettingsProvider>必须将设置保存到磁盘时, 它将执行以下操作:
+ 当<xref:System.Configuration.LocalFileSettingsProvider>必须将设置保存到磁盘时，它将执行以下操作：
 
-1. 使用反射检查在<xref:System.Configuration.ApplicationSettingsBase>派生类上定义的所有属性, 查找<xref:System.Configuration.ApplicationScopedSettingAttribute>使用或<xref:System.Configuration.UserScopedSettingAttribute>应用的属性。
+1. 使用反射检查<xref:System.Configuration.ApplicationSettingsBase>派生类上定义的所有属性，查找使用 或<xref:System.Configuration.ApplicationScopedSettingAttribute><xref:System.Configuration.UserScopedSettingAttribute>应用的属性。
 
-2. 将属性序列化到磁盘。 它首先尝试对关联<xref:System.ComponentModel.TypeConverter.ConvertToString%2A> <xref:System.ComponentModel.TypeConverter>的类型<xref:System.ComponentModel.TypeConverter.ConvertFromString%2A>调用或。 如果不成功，则改用 XML 序列化。
+2. 将属性序列化到磁盘。 它首先尝试调用<xref:System.ComponentModel.TypeConverter.ConvertToString%2A>或<xref:System.ComponentModel.TypeConverter.ConvertFromString%2A>上的关联<xref:System.ComponentModel.TypeConverter>。 如果不成功，则改用 XML 序列化。
 
 3. 基于设置的特性，确定设置应保存到的文件。
 
- 如果实现自己的设置类, 则可以使用<xref:System.Configuration.SettingsSerializeAsAttribute> <xref:System.Configuration.SettingsSerializeAs>通过枚举标记二进制或自定义序列化的设置。 有关在代码中创建自己的设置类的详细信息, [请参阅如何:创建应用程序](how-to-create-application-settings.md)设置。
+ 如果实现自己的设置类，则可以使用<xref:System.Configuration.SettingsSerializeAsAttribute>标记二进制或自定义序列化设置。 <xref:System.Configuration.SettingsSerializeAs> 若要深入了解如何在代码中创建自己的设置类，请参阅[如何：创建应用程序设置](how-to-create-application-settings.md)。
 
 ### <a name="settings-file-locations"></a>设置文件位置
- `app`.exe.config 和 *user*.config 文件的位置因应用程序的安装方式而异。 对于复制到本地计算机上的基于 Windows 窗体的应用程序`app`, .exe .config 将位于应用程序的主可执行文件的基目录所在的同一目录中, 并且*用户*.config 将位于指定的位置<xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType>属性。 对于通过 ClickOnce 安装的应用程序, 这两个文件都将位于 "%InstallRoot%\Documents" 下的 "clickonce 数据目录\\" 和 "设置*用户名*\Local" 设置。
+ `app`.exe.config 和 *user*.config 文件的位置因应用程序的安装方式而异。 对于复制到本地计算机上的基于 Windows 窗体的应用程序，.exe.config`app`将驻留在与应用程序主可执行文件的基础目录相同的目录中，*并且用户*.config 将驻留在<xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType>属性指定的位置。 对于通过 ClickOnce 安装的应用程序，这两个文件将驻留在 %InstallRoot%_文档和设置\\*用户名*[本地设置）下方的 ClickOnce 数据目录中。
 
- 如果用户启用了漫游配置文件，则这些文件的存储位置稍有不同，漫游配置文件可使用户在域内使用其他计算机时定义不同的 Windows 和应用程序设置。 在这种情况下, ClickOnce 应用程序和非 ClickOnce 应用程序都`app`将在%InstallRoot%\Documents 下存储其 .exe 和*用户*.config 文件, 并将\\\Application Data 设置为*username*。
+ 如果用户启用了漫游配置文件，这些文件的存储位置略有不同，这使用户能够在域中使用其他计算机时定义不同的 Windows 和应用程序设置。 在这种情况下，ClickOnce 应用程序和非 ClickOnce 应用程序都将`app`将其 .exe.config 和*user*.config 文件存储在 %InstallRoot%_文档\\和设置*用户名*[应用程序数据下。
 
- 若要深入了解应用程序设置功能如何与新部署技术协同使用，请参阅 [ClickOnce 和应用程序设置](/visualstudio/deployment/clickonce-and-application-settings)。 有关 ClickOnce 数据目录的详细信息, 请参阅[在 Clickonce 应用程序中访问本地数据和远程数据](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)。
+ 若要深入了解应用程序设置功能如何与新部署技术协同使用，请参阅 [ClickOnce 和应用程序设置](/visualstudio/deployment/clickonce-and-application-settings)。 有关 ClickOnce 数据目录的详细信息，请参阅[在 ClickOnce 应用程序中访问本地和远程数据](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)。
 
 ## <a name="application-settings-and-security"></a>应用程序设置和安全
  应用程序设置设计为在部分信任的受限环境中运行，该环境是通过 Internet 或 Intranet 托管的 Windows 窗体应用程序的默认环境。 通过默认设置提供程序使用应用程序设置时，不需要超出部分信任之外的特殊权限。
 
- 在 clickonce 应用程序中使用应用程序设置时, `user`.config 文件存储在 clickonce 数据目录中。 应用程序的`user`.config 文件的大小不能超过 ClickOnce 所设置的数据目录配额。 有关详细信息，请参阅 [ClickOnce 和应用程序设置](/visualstudio/deployment/clickonce-and-application-settings)。
+ 在 ClickOnce 应用程序中使用应用程序设置时`user`，.config 文件存储在 ClickOnce 数据目录中。 应用程序的`user`.config 文件的大小不能超过 ClickOnce 设置的数据目录配额。 有关详细信息，请参阅 [ClickOnce 和应用程序设置](/visualstudio/deployment/clickonce-and-application-settings)。
 
 ## <a name="custom-settings-providers"></a>自定义设置提供程序
- 在应用程序设置体系结构中, 应用程序设置包装类 (派生自<xref:System.Configuration.ApplicationSettingsBase>) 与派生自<xref:System.Configuration.SettingsProvider>的关联设置提供程序或提供程序之间存在松散耦合。 此关联仅由应用于包装<xref:System.Configuration.SettingsProviderAttribute>器类或其各自的属性的定义。 如果未显式指定设置提供程序, 则使用默认提供程序<xref:System.Configuration.LocalFileSettingsProvider>。 因此，此体系结构支持创建和使用自定义设置提供程序。
+ 在应用程序设置体系结构中，应用程序设置包装类（派生自<xref:System.Configuration.ApplicationSettingsBase>） 与派生自<xref:System.Configuration.SettingsProvider>的关联设置提供程序或提供程序之间存在松散耦合。 此关联仅由<xref:System.Configuration.SettingsProviderAttribute>应用于包装类或其单个属性定义。 如果未显式指定设置提供程序，则使用默认提供程序 ， <xref:System.Configuration.LocalFileSettingsProvider>。 因此，此体系结构支持创建和使用自定义设置提供程序。
 
- 例如，假定要开发和使用提供程序 `SqlSettingsProvider`，它将所有设置数据存储在 Microsoft SQL Server 数据库中。 派生类将此信息作为类型<xref:System.Collections.Specialized.NameValueCollection?displayProperty=nameWithType>的参数在`Initialize`其方法中接收。 <xref:System.Configuration.SettingsProvider> 然后, 实现<xref:System.Configuration.SettingsProvider.GetPropertyValues%2A>方法以从数据存储中检索设置并<xref:System.Configuration.SettingsProvider.SetPropertyValues%2A>保存设置。 提供程序可以使用提供<xref:System.Configuration.SettingsPropertyCollection>的来<xref:System.Configuration.SettingsProvider.GetPropertyValues%2A>确定属性的名称、类型和范围, 以及为该属性定义的任何其他设置特性。
+ 例如，假定要开发和使用提供程序 `SqlSettingsProvider`，它将所有设置数据存储在 Microsoft SQL Server 数据库中。 派生<xref:System.Configuration.SettingsProvider>类将在其`Initialize`方法中作为类型的<xref:System.Collections.Specialized.NameValueCollection?displayProperty=nameWithType>参数接收此信息。 然后，您将实现从<xref:System.Configuration.SettingsProvider.GetPropertyValues%2A>数据存储中检索设置并<xref:System.Configuration.SettingsProvider.SetPropertyValues%2A>保存它们的方法。 提供程序可以使用<xref:System.Configuration.SettingsPropertyCollection>提供的<xref:System.Configuration.SettingsProvider.GetPropertyValues%2A>来确定属性的名称、类型和范围，以及为该属性定义的任何其他设置属性。
 
- 提供程序需要实现一个属性和一个方法，这些实现可能不太明显。 属性是的<xref:System.Configuration.SettingsProvider>抽象属性; 您应该对其进行编程以返回以下内容: <xref:System.Configuration.SettingsProvider.ApplicationName%2A>
+ 提供程序需要实现一个属性和一个方法，这些实现可能不太明显。 属性<xref:System.Configuration.SettingsProvider.ApplicationName%2A>是<xref:System.Configuration.SettingsProvider>中的抽象属性。您应该对它进行编程以返回以下内容：
 
  [!code-csharp[ApplicationSettings.Architecture#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
  [!code-vb[ApplicationSettings.Architecture#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]
 
- 派生类还必须实现一个 `Initialize` 方法，该方法既不采用参数也不返回值。 此方法不是由定义<xref:System.Configuration.SettingsProvider>的。
+ 派生类还必须实现一个 `Initialize` 方法，该方法既不采用参数也不返回值。 此方法不由 定义<xref:System.Configuration.SettingsProvider>。
 
- 最后, 在提供<xref:System.Configuration.IApplicationSettingsProvider>程序上实现, 以提供对刷新设置、将设置还原为默认值以及将设置从一个应用程序版本升级到另一个应用程序的支持。
+ 最后，在提供程序<xref:System.Configuration.IApplicationSettingsProvider>上实现支持刷新设置、将设置还原到其默认值以及将设置从一个应用程序版本升级到另一个应用程序版本。
 
- 实现并编译了提供程序后，需要指示设置类使用此提供程序，而不是使用默认的提供程序。 可以通过<xref:System.Configuration.SettingsProviderAttribute>实现此目的。 如果应用于整个设置类, 则提供程序将用于该类定义的每个设置;如果应用于单个设置, 则应用程序设置体系结构仅对这些设置使用该提供<xref:System.Configuration.LocalFileSettingsProvider>程序, 并将用于其余设置。 以下代码示例说明如何指示设置类使用自定义提供程序。
+ 实现并编译了提供程序后，需要指示设置类使用此提供程序，而不是使用默认的提供程序。 通过 来完成此目的<xref:System.Configuration.SettingsProviderAttribute>。 如果应用于整个设置类，则提供程序用于类定义的每个设置;如果将提供程序应用于该类定义的每个设置。如果应用于单个设置，则应用程序设置体系结构仅对这些设置使用该提供程序，并为其余<xref:System.Configuration.LocalFileSettingsProvider>设置使用。 以下代码示例说明如何指示设置类使用自定义提供程序。
 
  [!code-csharp[ApplicationSettings.Architecture#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
  [!code-vb[ApplicationSettings.Architecture#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]
@@ -144,9 +144,9 @@ ms.locfileid: "69916695"
 > [!IMPORTANT]
 > 应确保提供程序是线程安全的，并且一次只允许一个线程写入配置文件。
 
- 你的提供<xref:System.Configuration?displayProperty=nameWithType>程序不需要支持命名空间中定义的所有设置属性, 但必须至少<xref:System.Configuration.ApplicationScopedSettingAttribute>支持和<xref:System.Configuration.UserScopedSettingAttribute>, 并且还应支持<xref:System.Configuration.DefaultSettingValueAttribute>。 对于其不支持的特性，提供程序应直接失败，而不另行通知；提供程序不应引发异常。 如果设置类使用了无效的属性组合 (如将和<xref:System.Configuration.ApplicationScopedSettingAttribute> <xref:System.Configuration.UserScopedSettingAttribute>应用到相同的设置), 则提供程序应引发异常和停止操作。
+ 提供程序不需要<xref:System.Configuration?displayProperty=nameWithType>支持命名空间中定义的所有设置属性，尽管它必须至少<xref:System.Configuration.ApplicationScopedSettingAttribute>支持 和<xref:System.Configuration.UserScopedSettingAttribute>，并且还应支持<xref:System.Configuration.DefaultSettingValueAttribute>。 对于其不支持的特性，提供程序应直接失败，而不另行通知；提供程序不应引发异常。 但是，如果设置类使用无效的属性组合（例如应用<xref:System.Configuration.ApplicationScopedSettingAttribute>和<xref:System.Configuration.UserScopedSettingAttribute>到同一设置），则提供程序应引发异常并停止操作。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>

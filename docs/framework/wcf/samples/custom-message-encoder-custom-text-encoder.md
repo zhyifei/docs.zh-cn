@@ -2,27 +2,27 @@
 title: 自定义消息编码器：自定义文本编码器
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: ae9d7f3d24e70c5cc74378eaaaa224910ada8d25
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 88aeeb4f1d09795b768441d2a572d959f27e0226
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347936"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145106"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>自定义消息编码器：自定义文本编码器
 
-此示例演示如何使用 Windows Communication Foundation （WCF）实现自定义文本消息编码器。
+此示例演示如何使用 Windows 通信基础 （WCF） 实现自定义文本消息编码器。
 
 > [!WARNING]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：
-> 
+>
 > `<InstallDrive>:\WF_WCF_Samples`
-> 
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
-> 
+>
+> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`
 
-WCF 的 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 仅支持 UTF-8、UTF-16 和大字节序 Unicode 编码。 此示例中的自定义文本消息编码器支持可进行互操作性所需的所有平台支持的字符编码。 此示例由一个客户端控制台程序（.exe）、一个由 Internet Information Services （IIS）和一个文本消息编码器库（.dll）承载的服务库（.dll）组成。 该服务实现定义“请求-答复”通信模式的协定。 该协定由 `ICalculator` 接口定义，该接口公开数学运算（加、减、乘和除）。 客户端向给定的数学运算发出同步请求，服务使用结果进行回复。 客户端和服务都使用 `CustomTextMessageEncoder`，而不是使用默认的 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>。
+WCF<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>仅支持 UTF-8、UTF-16 和大端 Unicode 编码。 此示例中的自定义文本消息编码器支持互操作性可能需要的所有平台支持的字符编码。 该示例包括客户端控制台程序 （.exe）、由 Internet 信息服务 （IIS） 托管的服务库 （.dll） 和文本消息编码器库 （.dll）。 该服务实现定义“请求-答复”通信模式的协定。 该协定由 `ICalculator` 接口定义，该接口公开数学运算（加、减、乘和除）。 客户端向给定的数学运算发出同步请求，服务使用结果进行回复。 客户端和服务都使用 `CustomTextMessageEncoder`，而不是使用默认的 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>。
 
 自定义编码器实现由消息编码器工厂、消息编码器、消息编码绑定元素和配置处理程序组成，演示如下：
 
@@ -36,21 +36,21 @@ WCF 的 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> �
 
 ## <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 使用以下命令安装 ASP.NET 4.0。
+1. 使用以下命令安装ASP.NET 4.0。
 
     ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+2. 确保已为 Windows[通信基础示例执行一次性设置过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-3. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
+3. 要生成解决方案，请按照生成 Windows[通信基础示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
-4. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
+4. 要在单机或跨计算机配置中运行示例，请按照[运行 Windows 通信基础示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)说明操作。
 
 ## <a name="message-encoder-factory-and-the-message-encoder"></a>消息编码器工厂和消息编码器
 
-当 <xref:System.ServiceModel.ServiceHost> 或客户端通道打开时，设计时组件 `CustomTextMessageBindingElement` 可创建 `CustomTextMessageEncoderFactory`。 该工厂创建 `CustomTextMessageEncoder`。 消息编码器运行在流模式和缓冲模式中。 它分别使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 读写消息。 与仅支持 UTF-8、UTF-16 和大字节序 Unicode Unicode 的 WCF 优化的 XML 读取器和编写器不同，这些读取器和编写器支持平台支持的所有编码。
+当 <xref:System.ServiceModel.ServiceHost> 或客户端通道打开时，设计时组件 `CustomTextMessageBindingElement` 可创建 `CustomTextMessageEncoderFactory`。 该工厂创建 `CustomTextMessageEncoder`。 消息编码器运行在流模式和缓冲模式中。 它分别使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 读写消息。 与仅支持 UTF-8、UTF-16 和大端 Unicode 的优化 XML 读取器和 WCF 编写器相反，这些读取器和编写器支持所有平台支持的编码。
 
 下面的代码示例演示 CustomTextMessageEncoder。
 
@@ -80,7 +80,7 @@ public class CustomTextMessageEncoder : MessageEncoder
 
     public override string MediaType
     {
-        get 
+        get
         {
             return factory.MediaType;
         }
@@ -88,14 +88,14 @@ public class CustomTextMessageEncoder : MessageEncoder
 
     public override MessageVersion MessageVersion
     {
-        get 
+        get
         {
             return this.factory.MessageVersion;
         }
     }
 
     public override Message ReadMessage(ArraySegment<byte> buffer, BufferManager bufferManager, string contentType)
-    {   
+    {
         byte[] msgContents = new byte[buffer.Count];
         Array.Copy(buffer.Array, buffer.Offset, msgContents, 0, msgContents.Length);
         bufferManager.ReturnBuffer(buffer.Array);
@@ -159,16 +159,16 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 
     public override MessageEncoder Encoder
     {
-        get 
-        { 
+        get
+        {
             return this.encoder;
         }
     }
 
     public override MessageVersion MessageVersion
     {
-        get 
-        { 
+        get
+        {
             return this.version;
         }
     }
@@ -193,11 +193,11 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 
 ## <a name="message-encoding-binding-element"></a>消息编码绑定元素
 
-绑定元素允许配置 WCF 运行时堆栈。 若要在 WCF 应用程序中使用自定义消息编码器，需要一个绑定元素，该元素在运行时堆栈的适当级别创建具有相应设置的消息编码器工厂。
+绑定元素允许配置 WCF 运行时堆栈。 要在 WCF 应用程序中使用自定义消息编码器，需要绑定元素来创建消息编码器工厂，并在运行时堆栈中的相应级别设置适当的设置。
 
-`CustomTextMessageBindingElement` 从 <xref:System.ServiceModel.Channels.BindingElement> 基类派生并从 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 类继承。 这样，其他 WCF 组件就可以将此绑定元素识别为消息编码绑定元素。 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> 的实现返回与相应设置匹配的消息编码器工厂的实例。
+`CustomTextMessageBindingElement` 从 <xref:System.ServiceModel.Channels.BindingElement> 基类派生并从 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 类继承。 这允许其他 WCF 组件识别此绑定元素为消息编码绑定元素。 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> 的实现返回与相应设置匹配的消息编码器工厂的实例。
 
-`CustomTextMessageBindingElement` 通过属性公开 `MessageVersion`、`ContentType` 和 `Encoding` 的设置。 编码器支持 Soap11Addressing 和 Soap12Addressing1 版本。 默认值为 Soap11Addressing1。 `ContentType` 的默认值为“text/xml”。 使用 `Encoding` 属性可以将该值设置为所需的字符编码。 示例客户端和服务使用 WCF 的 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 不支持的 ISO-8859-1 （Latin1-general）字符编码。
+`CustomTextMessageBindingElement` 通过属性公开 `MessageVersion`、`ContentType` 和 `Encoding` 的设置。 编码器支持 Soap11Addressing 和 Soap12Addressing1 版本。 默认值为 Soap11Addressing1。 `ContentType` 的默认值为“text/xml”。 使用 `Encoding` 属性可以将该值设置为所需的字符编码。 示例客户端和服务使用 ISO-8859-1 （Latin1） 字符编码，WCF 不支持<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>该编码。
 
 下面的代码演示如何使用自定义文本消息编码器以编程方式创建绑定。
 
@@ -214,7 +214,7 @@ CustomBinding binding = new CustomBinding(bindingElements);
 
 从 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 派生的任何类型负责更新为服务生成的 WSDL 文档中 SOAP 绑定的版本。 这是通过实现 `ExportEndpoint` 接口上的 <xref:System.ServiceModel.Description.IWsdlExportExtension> 方法，然后修改生成的 WSDL 来实现的。 在本示例中，`CustomTextMessageBindingElement` 使用来自 `TextMessageEncodingBindingElement` 的 WSDL 导出逻辑。
 
-对于本示例，客户端配置是手动配置的。 无法使用 Svcutil.exe 生成客户端配置，因为 `CustomTextMessageBindingElement` 未导出策略断言来描述其行为。 通常应该实现自定义绑定元素上的 <xref:System.ServiceModel.Description.IPolicyExportExtension> 接口，以导出描述绑定元素实现的行为或功能的自定义策略断言。 有关如何导出自定义绑定元素的策略断言的示例，请参阅[Transport： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。
+对于本示例，客户端配置是手动配置的。 无法使用 Svcutil.exe 生成客户端配置，因为 `CustomTextMessageBindingElement` 未导出策略断言来描述其行为。 通常应该实现自定义绑定元素上的 <xref:System.ServiceModel.Description.IPolicyExportExtension> 接口，以导出描述绑定元素实现的行为或功能的自定义策略断言。 有关如何导出自定义绑定元素的策略断言的示例，请参阅[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。
 
 ## <a name="message-encoding-binding-configuration-handler"></a>消息编码绑定配置处理程序
 上一节演示如何以编程方式使用自定义文本消息编码器。 `CustomTextMessageEncodingBindingSection` 实现配置处理程序，使用该程序可以在配置文件中指定自定义文本消息编码器的用法。 `CustomTextMessageEncodingBindingSection` 类是从 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 类派生的。 `BindingElementType` 属性通知配置系统要为此节创建的绑定元素的类型。
@@ -234,8 +234,8 @@ CustomBinding binding = new CustomBinding(bindingElements);
 ```xml
 <extensions>
     <bindingElementExtensions>
-        <add name="customTextMessageEncoding" type=" 
-Microsoft.ServiceModel.Samples.CustomTextMessageEncodingBindingSection, 
+        <add name="customTextMessageEncoding" type="
+Microsoft.ServiceModel.Samples.CustomTextMessageEncodingBindingSection,
                   CustomTextMessageEncoder" />
     </bindingElementExtensions>
 </extensions>

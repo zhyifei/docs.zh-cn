@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Self hosted service
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
-ms.openlocfilehash: 5a94eff021074a24df5b8891fe7b418b1fcf3c35
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: a38738c369db3d3f8242bd71ee04a19a669b2cf4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094912"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144144"
 ---
 # <a name="self-host"></a>自承载
 此示例演示如何在控制台应用程序中实现自承载服务。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 服务配置文件已从 Web.config 重命名为 App.config，并修改为配置一个由主机使用的基址。 服务源代码已修改为实现一个静态 `Main` 函数，该函数创建并打开一个提供已配置的基址的服务主机。 服务实现已修改为将每个操作的输出写入控制台。 客户端未经修改，只是配置了服务的正确终结点地址。  
@@ -25,10 +25,10 @@ ms.locfileid: "77094912"
 public static void Main()  
 {  
     // Create a ServiceHost for the CalculatorService type.  
-    using (ServiceHost serviceHost =   
+    using (ServiceHost serviceHost =
            new ServiceHost(typeof(CalculatorService)))  
     {  
-        // Open the ServiceHost to create listeners   
+        // Open the ServiceHost to create listeners
         // and start listening for messages.  
         serviceHost.Open();  
   
@@ -41,10 +41,10 @@ public static void Main()
 }  
 ```  
   
- 当服务承载在 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 中时，服务的基址由宿主环境提供。 在自承载情况下，您必须亲自指定基址。 这是使用 `add` 元素、 [\<baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)的子级、 [\<主机 >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)的子\<、 [> 服务](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)的子项，如下面的示例配置中所示。  
+ 当服务承载在 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 中时，服务的基址由宿主环境提供。 在自承载情况下，您必须亲自指定基址。 这是使用`add`[\<元素，基地址>](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)的子项，[\<主机>](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)的子项，[\<服务>](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)的子项，如以下示例配置所示。  
   
 ```xml  
-<service   
+<service
     name="Microsoft.ServiceModel.Samples.CalculatorService"  
     behaviorConfiguration="CalculatorServiceBehavior">  
   <host>  
@@ -60,21 +60,21 @@ public static void Main()
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已为 Windows[通信基础示例执行一次性设置过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+3. 要在单计算机或跨计算机配置中运行示例，请按照[运行 Windows 通信基础示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)说明操作。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
->   
+>
+> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\SelfHost`  
   
 ## <a name="see-also"></a>另请参阅
 
-- [AppFabric 宿主和持久性示例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric 承载和持久性示例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

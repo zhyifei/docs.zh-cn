@@ -2,12 +2,12 @@
 title: 消息日志记录的安全问题
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 679975be44244f10232b805a6cc2776b48ed6058
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: bb1a6ab84ceba27b398d397b4407a55aa02c4cae
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935771"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185764"
 ---
 # <a name="security-concerns-for-message-logging"></a>消息日志记录的安全问题
 本主题描述如何防止在消息日志以及由消息日志记录生成的事件中公开敏感数据。  
@@ -15,7 +15,7 @@ ms.locfileid: "75935771"
 ## <a name="security-concerns"></a>安全问题  
   
 ### <a name="logging-sensitive-information"></a>记录敏感信息  
- Windows Communication Foundation （WCF）不会修改特定于应用程序的标头和正文中的任何数据。 WCF 还不跟踪特定于应用程序的标头或正文数据中的个人信息。  
+ Windows 通信基础 （WCF） 不会修改特定于应用程序的标头和正文中的任何数据。 WCF 也不跟踪特定于应用程序标头或正文数据中的个人信息。  
   
  启用消息日志记录后，特定于应用程序的标头中的个人信息（例如查询字符串）以及正文信息（例如信用卡号）会在日志中变为可见。 应用程序部署人员负责对配置和日志文件实施访问控制。 如果您不希望此类信息可见，应当禁用日志记录，或者如果您希望共享日志，则筛选出其中的部分数据。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "75935771"
    <system.serviceModel>  
       <machineSettings enableLoggingKnownPii="true"/>  
    </system.serviceModel>  
-</configuration>   
+</configuration>
 ```  
   
  应用程序部署人员然后可以使用 App.config 或 Web.config 文件中的 `logKnownPii` 属性来启用 PII 日志记录，如下所示：  
@@ -72,7 +72,7 @@ ms.locfileid: "75935771"
                       initializeData="c:\logs\messages.svclog" />  
               </listeners>  
             </source>  
-      <source name="System.ServiceModel"   
+      <source name="System.ServiceModel"
               logKnownPii="true">  
               <listeners>  
                  <add name="traces"  
@@ -88,7 +88,7 @@ ms.locfileid: "75935771"
   
  只有当应用程序启动或重新启动之后，更改才有效。 在两个属性都设置为 `true` 的情况下，会在启动时记录一个事件。 如果 `logKnownPii` 设置为 `true` 但 `enableLoggingKnownPii` 设置为 `false`，也会记录一个事件。  
   
- 计算机管理员和应用程序部署人员应谨慎使用这两个开关。 如果启用了 PII 日志记录，则会记录安全密钥和 PII。 如果禁用了 PII 日志记录，仍会在消息头和正文中记录敏感数据和特定于应用程序的数据。 有关隐私和保护 PII 的详细讨论，请参阅[用户隐私](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10))。  
+ 计算机管理员和应用程序部署人员应谨慎使用这两个开关。 如果启用了 PII 日志记录，则会记录安全密钥和 PII。 如果禁用了 PII 日志记录，仍会在消息头和正文中记录敏感数据和特定于应用程序的数据。 有关隐私和保护 PII 不暴露的更彻底的讨论，请参阅[用户隐私](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10))。  
   
 > [!CAUTION]
 > 在格式不正确的消息中不会隐藏 PII。 这样的消息按原样记录，不进行任何修改。 前面提到的属性对此没有影响。  
@@ -103,11 +103,11 @@ ms.locfileid: "75935771"
   
 - 禁用消息日志记录：当通过 WMI 禁用消息日志记录时发出此事件。 此事件的内容是“消息日志记录已关闭”。  
   
-- 启用记录已知 PII：当启用记录已知 PII 时发出此事件。 当 Machine.config 文件的 `machineSettings` 元素中的 `enableLoggingKnownPii` 属性设置为 `true`时，将发生这种情况，而 App.config 或 web.config 文件中的 `source` 元素的 `logKnownPii` 特性设置为 `true`。  
+- 启用记录已知 PII：当启用记录已知 PII 时发出此事件。 当 Machine.config `enableLoggingKnownPii` `machineSettings`文件元素中的属性`true`设置为 时，将发生这种情况，并且`logKnownPii`App.config 或 Web.config 文件中`source`的元素的属性设置为`true`。  
   
-- 不允许记录已知 PII：当不允许记录已知 PII 时发出此事件。 当 App.config 或 web.config 文件中 `source` 元素的 `logKnownPii` 特性设置为 `true`时，将会发生这种情况，但 Machine.config 文件的 `machineSettings` 元素中的 `enableLoggingKnownPii` 特性设置为 `false`。 不引发异常。  
+- 不允许记录已知 PII：当不允许记录已知 PII 时发出此事件。 当 App.config`source`或 Web.config 文件中的元素`true``logKnownPii`的属性设置为 时，将发生这种情况，但`enableLoggingKnownPii`Machine.config 文件`machineSettings`元素中的属性设置为`false`。 不引发异常。  
   
- 可以在 Windows 附带的事件查看器工具中查看这些事件。 有关此内容的详细信息，请参阅[事件日志记录](./event-logging/index.md)。  
+ 可以在 Windows 附带的事件查看器工具中查看这些事件。 有关此的详细信息，请参阅[事件日志记录](./event-logging/index.md)。  
   
 ## <a name="see-also"></a>另请参阅
 

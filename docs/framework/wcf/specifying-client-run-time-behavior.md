@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: 075f62526ace1ac49d12e1bdec39d8df4b0a3ff1
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: f9c22d25bedc36b3515538a8785b488aaa547990
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321408"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143234"
 ---
 # <a name="specifying-client-run-time-behavior"></a>指定客户端运行时行为
-Windows Communication Foundation （WCF）客户端（如 Windows Communication Foundation （WCF）服务）可进行配置，以修改运行时行为，以适合客户端应用程序。 有三个属性可用于指定客户端运行时行为。 双工客户端回调对象可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 和 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 属性修改其运行时行为。 另一个属性 <xref:System.ServiceModel.Description.ClientViaBehavior> 可用于将逻辑目标与直接网络目标分开。 此外，双工客户端回调类型可以使用某些服务端行为。 有关详细信息，请参阅[指定服务运行时行为](specifying-service-run-time-behavior.md)。  
+Windows 通信基础 （WCF） 客户端（如 Windows 通信基础 （WCF） 服务）可以配置为修改运行时行为以适应客户端应用程序。 有三个属性可用于指定客户端运行时行为。 双工客户端回调对象可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 和 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 属性修改其运行时行为。 另一个属性 <xref:System.ServiceModel.Description.ClientViaBehavior> 可用于将逻辑目标与直接网络目标分开。 此外，双工客户端回调类型可以使用某些服务端行为。 有关详细信息，请参阅[指定服务运行时行为](specifying-service-run-time-behavior.md)。  
   
 ## <a name="using-the-callbackbehaviorattribute"></a>使用 CallbackBehaviorAttribute  
  可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 类来配置或扩展客户端应用程序中回调协定实现的执行行为。 此属性为回调类和 <xref:System.ServiceModel.ServiceBehaviorAttribute> 类执行相似的功能，不同之处在于实例化行为和事务设置。  
@@ -36,13 +36,13 @@ Windows Communication Foundation （WCF）客户端（如 Windows Communication 
   
 - 仅在受控调试方案中才能这样做。  
   
- 下面的代码示例演示一个客户端配置文件，该文件指示 WCF 从 SOAP 消息中的客户端回调对象返回托管异常信息。  
+ 以下代码示例显示了一个客户端配置文件，该文件指示 WCF 从 SOAP 消息中的客户端回调对象返回托管异常信息。  
   
  [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
- 
+
 ## <a name="using-the-clientviabehavior-behavior"></a>使用 ClientViaBehavior 行为  
  可以使用 <xref:System.ServiceModel.Description.ClientViaBehavior> 行为指定应为其创建传输通道的统一资源标识符。 当直接网络目标不是消息的预期处理者时，可使用此行为。 当调用应用程序不需要知道最终目标时，或者当目标 `Via` 标头不是地址时，使用此行为可启用多跃点对话。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [指定服务运行时行为](specifying-service-run-time-behavior.md)

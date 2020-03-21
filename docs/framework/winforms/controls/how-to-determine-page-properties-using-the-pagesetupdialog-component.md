@@ -10,12 +10,12 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 306e0dbf7fb819d1214d7d5d93d335b5d2db75e6
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 8a015c199193dfd9c43bec53cc93cbf9dc201413
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053620"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142038"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>如何：使用 PageSetupDialog 组件确定页属性
 [PageSetupDialog](pagesetupdialog-component-windows-forms.md) 组件针对文档向用户呈现布局、纸张大小和其他页面布局选项。  
@@ -30,7 +30,7 @@ ms.locfileid: "66053620"
   
      在以下示例中， <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Click> 事件处理程序会打开 <xref:System.Windows.Forms.PageSetupDialog> 组件的实例。 一个现有文档在 <xref:System.Windows.Forms.PageSetupDialog.Document%2A> 属性中进行指定，其 <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> 属性设置为 `false`。  
   
-     该示例假定窗体具有<xref:System.Windows.Forms.Button>控件，<xref:System.Drawing.Printing.PrintDocument>名为组件`myDocument`，和一个<xref:System.Windows.Forms.PageSetupDialog>组件。  
+     该示例<xref:System.Windows.Forms.Button>假定窗体具有控件、名为 的<xref:System.Drawing.Printing.PrintDocument>`myDocument`组件和组件。 <xref:System.Windows.Forms.PageSetupDialog>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -76,19 +76,19 @@ ms.locfileid: "66053620"
        }  
     ```  
   
-     (VisualC#和 Visual C++)将以下代码放在窗体的构造函数中以注册事件处理程序。  
+     （视觉 C# 和视觉C++）将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
     ```  
   
     ```cpp  
-    this->button1->Click += gcnew   
+    this->button1->Click += gcnew
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [如何：创建标准 Windows 窗体打印作业](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
-- [PageSetupDialog 组件](pagesetupdialog-component-windows-forms.md)
+- [如何：创建标准的 Windows 窗体打印作业](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)

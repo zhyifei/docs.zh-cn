@@ -5,15 +5,15 @@ helpviewer_keywords:
 - service behaviors, instancing sample
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-ms.openlocfilehash: 868d88cff1c398009f136fe50f6cc3fe8c62d8e1
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: d348bd7961eec69663cf6d9b2b7747b7a5800bb4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715763"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144638"
 ---
 # <a name="instancing"></a>实例化
-“实例化”示例演示实例化行为设置，此设置控制如何响应客户端请求来创建服务类的实例。 该示例基于实现 `ICalculator` 服务协定的[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 本示例定义从 `ICalculatorInstance` 继承的新协定 `ICalculator`。 用 `ICalculatorInstance` 指定的协定提供了三个附加操作，用于检查服务实例的状态。 通过更改实例化设置，运行客户端时可以观察到行为中的更改。  
+“实例化”示例演示实例化行为设置，此设置控制如何响应客户端请求来创建服务类的实例。 该示例基于实现服务协定[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)的`ICalculator`入门项。 本示例定义从 `ICalculatorInstance` 继承的新协定 `ICalculator`。 用 `ICalculatorInstance` 指定的协定提供了三个附加操作，用于检查服务实例的状态。 通过更改实例化设置，运行客户端时可以观察到行为中的更改。  
   
  在此示例中，客户端是一个控制台应用程序 (.exe)，服务是由 Internet 信息服务 (IIS) 承载的。  
   
@@ -92,7 +92,7 @@ public class CalculatorService : ICalculatorInstance
     }  
   
     public int GetOperationCount()  
-    {   // Return the number of ICalculator operations performed   
+    {   // Return the number of ICalculator operations performed
         // on this instance  
         lock (syncObject)  
         {  
@@ -124,17 +124,17 @@ static void Main()
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已为 Windows[通信基础示例执行一次性设置过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+3. 要在单机或跨计算机配置中运行示例，请按照[运行 Windows 通信基础示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)说明操作。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
->   
+>
+> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Instancing`  

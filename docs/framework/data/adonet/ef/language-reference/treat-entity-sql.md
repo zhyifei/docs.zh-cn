@@ -2,12 +2,12 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 38099fa83ed78b40d46faeb5e617157f7aa7c1a1
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 06c4200434f443446e8981dcefe2baf43b1af4b0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319267"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149890"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
 将特定基类型的对象视为指定派生类型的对象。  
@@ -18,7 +18,7 @@ ms.locfileid: "72319267"
 TREAT ( expression as type)  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `expression`  
  任何返回实体的有效查询表达式。  
   
@@ -42,13 +42,13 @@ TREAT ( expression as type)
 ```sql  
 SELECT TREAT(p AS NamespaceName.Employee)  
 FROM ContainerName.Person AS p  
-WHERE p IS OF (NamespaceName.Employee)   
+WHERE p IS OF (NamespaceName.Employee)
 ```  
   
  此查询将 `Person` 实体向上转换为 `Employee` 类型。 如果 p 的值的实际类型不是 `Employee`，则表达式会生成值 `null`。  
   
 > [!NOTE]
-> 指定的表达式 `Employee` 必须是指定数据类型 `Person` 的子类型，或者该数据类型必须为该表达式的子类型。 否则，表达式会导致编译时错误。  
+> 指定的表达式`Employee`必须是指定数据类型`Person`的子类型，或者数据类型必须是表达式的子类型。 否则，表达式会导致编译时错误。  
   
  下表显示了 TREAT 在某些典型模式和非常见模式下的行为。 所有异常都在调用提供程序之前从客户端引发：  
   
@@ -66,7 +66,7 @@ WHERE p IS OF (NamespaceName.Employee)
   
  [!code-sql[DP EntityServices Concepts#TREAT_ISOF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#treat_isof)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [实体 SQL 引用](entity-sql-reference.md)
 - [可以为 NULL 的结构化类型](nullable-structured-types-entity-sql.md)

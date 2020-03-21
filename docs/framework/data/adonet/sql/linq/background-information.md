@@ -2,27 +2,27 @@
 title: 背景信息
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: d7d00a0c64c6b25219403e8fd15eae85c09eafa0
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 3aa0cd4eaae38121cbb8c04c1c917f51dfbb0de1
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937551"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78848322"
 ---
 # <a name="background-information"></a>背景信息
 本节中的主题介绍有关使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的基础知识以外的概念和过程。  
   
  请按以下这些步骤查找 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 代码和应用程序的其他示例：  
   
-- 搜索特定问题的 Microsoft Docs。  
+- 搜索 Microsoft 文档以查找特定问题。  
   
-- 参与[LINQ 论坛](https://go.microsoft.com/fwlink/?LinkId=76488)，可以在其中与专家详细讨论更复杂的主题。  
+- 参加[LINQ论坛](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)，在那里你可以与专家详细讨论更复杂的话题。  
   
-- 研究 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术详细说明的白皮书，其中包含 Visual Basic 和C#代码示例。 有关详细信息，请参阅[LINQ to SQL：用于关系数据的 .Net 语言集成查询](https://go.microsoft.com/fwlink/?LinkId=93205)。  
+- 研究详细技术[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]白皮书，并附有 Visual Basic 和 C# 代码示例。 有关详细信息，请参阅[LINQ 到 SQL： .NET 语言集成查询关系数据](https://docs.microsoft.com/previous-versions/dotnet/articles/bb425822(v=msdn.10))。  
   
 ## <a name="in-this-section"></a>本节内容  
  [ADO.NET 和 LINQ to SQL](ado-net-and-linq-to-sql.md)  
- 描述 ADO.NET 与 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]之间的关系。  
+ 描述ADO.NET和[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]的关系。  
   
  [分析 LINQ to SQL 源代码](analyzing-linq-to-sql-source-code.md)  
  介绍如何通过从 Northwind 示例数据库生成和查看源代码来分析 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 映射。  
@@ -55,7 +55,7 @@ ms.locfileid: "75937551"
  介绍了开放式并发并定义了一些术语。  
   
  [查询概念](query-concepts.md)  
- 描述不同于 LINQ 中的查询 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的查询方面。  
+ 描述与[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]LINQ 中的查询不同的查询的各个方面。  
   
  [从实体缓存检索对象](retrieving-objects-from-the-identity-cache.md)  
  介绍从标识缓存中检索对象的查询类型。  
@@ -63,7 +63,7 @@ ms.locfileid: "75937551"
  [LINQ to SQL 中的安全性](security-in-linq-to-sql.md)  
  介绍确保数据库连接安全的正确方法。  
   
- [序列化](serialization.md)  
+ [序列 化](serialization.md)  
  介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序中的序列化过程。  
   
  [存储过程](stored-procedures.md)  

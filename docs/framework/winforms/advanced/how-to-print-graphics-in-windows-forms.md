@@ -9,23 +9,23 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: 2435b3bc14747a00d2a0fc03a9ebd21ae43c5369
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 15f3a507839430ce058302e7f5abd317ef84626f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740641"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182533"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>如何：在 Windows 窗体中打印图形
-通常，您需要在基于 Windows 的应用程序中打印图形。 <xref:System.Drawing.Graphics> 类提供将对象绘制到设备（如屏幕或打印机）的方法。  
+通常，您需要在基于 Windows 的应用程序中打印图形。 类<xref:System.Drawing.Graphics>提供将对象绘制到设备（如屏幕或打印机）的方法。  
   
 ### <a name="to-print-graphics"></a>打印图形  
   
-1. 将 <xref:System.Drawing.Printing.PrintDocument> 组件添加到窗体。  
+1. 向表单<xref:System.Drawing.Printing.PrintDocument>添加组件。  
   
-2. 在 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件处理程序中，使用 <xref:System.Drawing.Printing.PrintPageEventArgs> 类的 <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> 属性指示打印机要打印的图形类型。  
+2. 在<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件处理程序中<xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A>，使用<xref:System.Drawing.Printing.PrintPageEventArgs>类的属性指示打印机打印的图形类型。  
   
-     下面的代码示例演示了一个事件处理程序，用于在边框内创建蓝色椭圆。 该矩形具有以下位置和维度：从100开始150，宽度为250，高度为250。  
+     下面的代码示例显示了用于在边界矩形内创建蓝色椭圆的事件处理程序。 矩形具有以下位置和尺寸：从 100 开始，150 开头，宽度为 250，高度为 250。  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -34,10 +34,10 @@ ms.locfileid: "76740641"
     ```  
   
     ```csharp  
-    private void printDocument1_PrintPage(object sender,   
+    private void printDocument1_PrintPage(object sender,
     System.Drawing.Printing.PrintPageEventArgs e)  
     {  
-       e.Graphics.FillRectangle(Brushes.Blue,   
+       e.Graphics.FillRectangle(Brushes.Blue,
          new Rectangle(100, 150, 250, 250));  
     }  
     ```  
@@ -52,7 +52,7 @@ ms.locfileid: "76740641"
        }  
     ```  
   
-     （视觉C#对象和C++视觉对象）将以下代码放在窗体的构造函数中以注册事件处理程序。  
+     （视觉 C# 和视觉C++）将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.printDocument1.PrintPage += new  

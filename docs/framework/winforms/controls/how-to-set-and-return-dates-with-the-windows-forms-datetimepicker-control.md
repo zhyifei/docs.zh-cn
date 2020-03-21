@@ -1,5 +1,5 @@
 ---
-title: 通过 DateTimePicker 控件设置和返回日期
+title: 使用日期时间选取器控件设置和返回日期
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms], setting and returning dates
 - examples [Windows Forms], DateTimePicker control
 ms.assetid: a8a48d68-e4b5-426e-9764-51230fc9acd2
-ms.openlocfilehash: 1e0aa58e98748ccde9411f0f4871adbae3a5f14d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f958097640316715b38828e72107ab5bdb9389aa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747112"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141908"
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>如何：使用 Windows 窗体 DateTimePicker 控件设置和返回日期
-Windows 窗体 <xref:System.Windows.Forms.DateTimePicker> 控件中的当前所选日期或时间由 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 属性确定。 可在显示控件前（例如，在设计时或在窗体的 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 事件中）设置 <xref:System.Windows.Forms.Form.Load> 属性来确定控件中最初将选定的日期。 默认情况下，该控件的 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 设置为当前日期。 如果更改代码中控件的 <xref:System.Windows.Forms.DateTimePicker.Value%2A>，该控件将自动在窗体上更新以反映新设置。  
+Windows 窗体 <xref:System.Windows.Forms.DateTimePicker> 控件中的当前所选日期或时间由 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 属性确定。 可在显示控件前（例如，在设计时或在窗体的 <xref:System.Windows.Forms.Form.Load> 事件中）设置 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 属性来确定控件中最初将选定的日期。 默认情况下，该控件的 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 设置为当前日期。 如果更改代码中控件的 <xref:System.Windows.Forms.DateTimePicker.Value%2A>，该控件将自动在窗体上更新以反映新设置。  
   
  <xref:System.Windows.Forms.DateTimePicker.Value%2A> 属性返回 <xref:System.DateTime> 结构作为其值。 存在几个 <xref:System.DateTime> 结构的属性，这些属性返回有关所显示日期的特定信息。 这些属性仅可用于返回值；不要使用它们来设置值。  
   
 - 对于日期值，<xref:System.DateTime.Month%2A>、<xref:System.DateTime.Day%2A> 和 <xref:System.DateTime.Year%2A> 属性为这些所选日期的时间单位返回整数值。 <xref:System.DateTime.DayOfWeek%2A> 属性返回的值指示所选的日期是星期几（<xref:System.DayOfWeek> 枚举中列出了可能的值）。  
   
-- 对于时间值，<xref:System.DateTime.Hour%2A>、<xref:System.DateTime.Minute%2A>、<xref:System.DateTime.Second%2A> 和 <xref:System.DateTime.Millisecond%2A> 属性为这些时间单位返回整数值。 若要配置控件以显示时间，请参阅[如何：在 DateTimePicker 控件中显示时间](how-to-display-time-with-the-datetimepicker-control.md)。  
+- 对于时间值，<xref:System.DateTime.Hour%2A>、<xref:System.DateTime.Minute%2A>、<xref:System.DateTime.Second%2A> 和 <xref:System.DateTime.Millisecond%2A> 属性为这些时间单位返回整数值。 要将控件配置为显示时间，请参阅[如何：使用 DateTimePicker 控件显示时间](how-to-display-time-with-the-datetimepicker-control.md)。  
   
 ### <a name="to-set-the-date-and-time-value-of-the-control"></a>设置控件的日期和时间值  
   
@@ -48,18 +48,18 @@ Windows 窗体 <xref:System.Windows.Forms.DateTimePicker> 控件中的当前所�
   
     ```vb  
     MessageBox.Show("The selected value is ", DateTimePicker1.Text)  
-    MessageBox.Show("The day of the week is ",   
+    MessageBox.Show("The day of the week is ",
        DateTimePicker1.Value.DayOfWeek.ToString)  
-    MessageBox.Show("Millisecond is: ",   
+    MessageBox.Show("Millisecond is: ",
        DateTimePicker1.Value.Millisecond.ToString)  
     ```  
   
     ```csharp  
-    MessageBox.Show ("The selected value is " +   
+    MessageBox.Show ("The selected value is " +
        dateTimePicker1.Text);  
-    MessageBox.Show ("The day of the week is " +   
+    MessageBox.Show ("The day of the week is " +
        dateTimePicker1.Value.DayOfWeek.ToString());  
-    MessageBox.Show("Millisecond is: " +   
+    MessageBox.Show("Millisecond is: " +
        dateTimePicker1.Value.Millisecond.ToString());  
     ```  
   
@@ -75,4 +75,4 @@ Windows 窗体 <xref:System.Windows.Forms.DateTimePicker> 控件中的当前所�
 ## <a name="see-also"></a>另请参阅
 
 - [DateTimePicker 控件](datetimepicker-control-windows-forms.md)
-- [如何：使用 Windows 窗体 DateTimePicker 控件显示自定义格式的日期](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [如何：使用 Windows 窗体 DateTimePicker 控件以自定义格式显示日期](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

@@ -1,5 +1,5 @@
 ---
-title: CoreResponseData 字段 m_StatusCode
+title: 核心响应数据.m_StatusCode字段
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 8abe619a57cc61fc3502807f60deccbbd578f382
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: dfed9a748e959f0f751408566c7cbb4d2fa13e3c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741001"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156068"
 ---
-# <a name="coreresponsedatam_statuscode-field"></a>CoreResponseData\_StatusCode 字段
+# <a name="coreresponsedatam_statuscode-field"></a>核心响应数据.m\_状态代码字段
 
-`CoreResponseData.m_StatusCode` 是包含响应状态的 <xref:System.Net.HttpStatusCode>。
+`CoreResponseData.m_StatusCode`包含<xref:System.Net.HttpStatusCode>响应的状态。
 
 ## <a name="syntax"></a>语法
   
@@ -28,14 +28,14 @@ public HttpStatusCode m_StatusCode
 ```
 
 > [!WARNING]
-> 此 API 不应在代码中直接使用。 相反，应使用 <xref:System.Diagnostics.DiagnosticSource> 挂钩网络代码。 请参阅[DiagnosticSource 用户指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。
-> 
-> 在任何情况下，Microsoft 不支持在生产应用程序中使用此类。
+> 此 API 不应直接用于代码。 相反，您应该使用 挂钩<xref:System.Diagnostics.DiagnosticSource>网络代码。 请参阅[诊断源用户指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。
+>
+> 在任何情况下，Microsoft 都不支持在生产应用程序中使用此类。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-**Namespace**：<xref:System.Net>
+**命名空间：**<xref:System.Net>
 
-**程序集**：系统 （在 System.dll)
+**装配：** 系统（系统中）
 
-**.NET framework 版本**：自 2.0 之后可用。
+**.NET 框架版本：** 自 2.0 起可用。

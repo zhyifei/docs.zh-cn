@@ -2,21 +2,21 @@
 title: 使用 NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: 0f908361c5f9152d333daaf5e3ee90de3b1b89e9
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 82222dbfa3f35ed00d0173f2bc927c32e9e98470
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988627"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184234"
 ---
 # <a name="using-the-nethttpbinding"></a>使用 NetHttpBinding
 <xref:System.ServiceModel.NetHttpBinding> 是为使用 HTTP 或 WebSocket 服务设计的绑定，默认情况下使用二进制编码。 <xref:System.ServiceModel.NetHttpBinding> 将检测它是否与请求-答复协定或双工协定结合使用，并更改其行为以进行匹配 ― 它将针对请求-答复协定使用 HTTP，并针对双工协定使用 WebSocket。 可使用 <xref:System.ServiceModel.Channels.WebSocketTransportUsage> 设置来重写此行为：  
   
-1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always>-这会强制使用 Websocket, 甚至用于请求-答复协定。  
+1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always>- 这强制 WebSocket 甚至用于请求回复合同。  
   
-2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never>-这会阻止使用 Websocket。 尝试使用具有此设置的双工协定将导致异常。  
+2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never>- 这可以防止使用 WebSocket。 尝试使用具有此设置的双工协定将导致异常。  
   
-3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex>-这是默认值, 其行为如上所述。  
+3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex>- 这是默认值，行为情况如上所述。  
   
  <xref:System.ServiceModel.NetHttpBinding> 支持 HTTP 模式和 WebSocket 模式下的可靠会话。 在 WebSocket 模式下，会话由传输来提供。  
   
@@ -54,11 +54,11 @@ ms.locfileid: "69988627"
 ```csharp  
 ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);  
             NetHttpBinding binding = new NetHttpBinding();  
-            svchost.AddServiceEndpoint(typeof(IService1), binding, address);   
+            svchost.AddServiceEndpoint(typeof(IService1), binding, address);
         }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [配置服务绑定](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
 - [绑定](../../../../docs/framework/wcf/feature-details/bindings.md)

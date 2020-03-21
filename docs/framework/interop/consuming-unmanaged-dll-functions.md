@@ -14,11 +14,11 @@ helpviewer_keywords:
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 ms.openlocfilehash: 7ec1f129dcc19300dd5a4e7c5e627d9e0edf29a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123653"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400949"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用非托管 DLL 函数
 平台调用是一项服务，使托管代码能够调用动态链接库 (DLL) 中实现的非托管函数，例如 Windows API 中的非托管函数。 此服务定位并调用导出的函数，并根据需要跨交互操作边界封送其自变量（整数、字符串、数组、结构等）。  
@@ -37,11 +37,11 @@ ms.locfileid: "73123653"
   
 3. [在托管代码中创建原型](creating-prototypes-in-managed-code.md)。  
   
-     [Visual Basic] 使用 Declare 语句以及 Function 和 Lib 关键字。 在极少数情况下，可以使用 DllImportAttribute 和 Shared Function 关键字。 本节稍后会对这些情况进行说明。  
+     [Visual Basic] 使用 Declare 语句以及 Function 和 Lib 关键字************。 在极少数情况下，可以使用 DllImportAttribute 和 Shared Function 关键字********。 本节稍后会对这些情况进行说明。  
   
-     [C#] 使用 DllImportAttribute 标识 DLL 和函数。 为此方法标记 static 和 extern 修饰符。  
+     [C]使用**DllImport属性**标识 DLL 和函数。 为此方法标记 static 和 extern 修饰符********。  
   
-     [C++] 使用 DllImportAttribute 标识 DLL 和函数。 用 extern "C" 标记此包装方法或函数。  
+     [C++] 使用 DllImportAttribute 标识 DLL 和函数****。 用 extern "C" 标记此包装方法或函数****。  
   
 4. [调用 DLL 函数](calling-a-dll-function.md)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73123653"
  有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](marshaling-data-with-platform-invoke.md)。  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>平台调用详解  
- 平台调用依赖元数据定位导出的函数并在运行时封送处理它的自变量。 下图显示了此过程。  
+ 平台调用依赖元数据定位导出的函数并在运行时封送处理它的自变量。 下图显示了这一过程。  
   
  ![显示平台调用的图表。](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  
   
@@ -65,12 +65,12 @@ ms.locfileid: "73123653"
     > [!NOTE]
     > 定位和加载 DLL，并定位仅在首次调用函数时内存中出现的函数地址。  
   
-4. 将控制转移到非托管函数。  
+4. 将控件传输到非托管函数。  
   
  平台调用将向托管调用方引发非托管函数生成的异常。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [与非托管代码交互操作](index.md)
+- [与非托管代码互操作](index.md)
 - [平台调用示例](platform-invoke-examples.md)
-- [互操作封送处理](interop-marshaling.md)
+- [互通封送](interop-marshaling.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-ms.openlocfilehash: 8a6a1ab69754d48017059d547a1f9e5e3889a606
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bd5e03d0277d656be4c6b0e45142279b3e9ec4b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739717"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142442"
 ---
 # <a name="application-settings-for-windows-forms"></a>Windows 窗体的应用程序设置
 借助 Windows 窗体的应用程序设置功能，可轻松地在客户端创建、存储和维护自定义应用程序和用户首选项。 借助应用程序设置，可存储应用程序数据（如数据库连接字符串）以及用户特定的数据（如工具栏位置和最近使用的列表）。  
@@ -38,8 +38,7 @@ ms.locfileid: "76739717"
   
 ## <a name="related-topics"></a>相关主题
 
-[Windows 窗体配置部分](../../configure-apps/file-schema/winforms/index.md)    
-记录从 .NET Framework 4.7 开始 Windows 窗体的应用程序中启用高 DPI 支持的设置。
+[窗口窗体配置部分](../../configure-apps/file-schema/winforms/index.md)记录启用 Windows 窗体应用程序中支持高 DPI 的设置，从 .NET 框架 4.7 开始。
 
 ## <a name="see-also"></a>另请参阅
 

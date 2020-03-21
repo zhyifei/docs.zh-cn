@@ -5,31 +5,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: d3c1661acf4d4aa2de8b6eca7015c74ba7f80af1
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: bcfeb5f863b1dd6cf9171a7fc53c8984ea68ecb3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212017"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184626"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 客户端的消息安全
-此方案显示 Windows Communication Foundation （WCF）客户端和由消息安全模式保护的服务器。 客户端和服务使用 Windows 凭据进行身份验证。  
+此方案显示受消息安全模式保护的 Windows 通信基础 （WCF） 客户端和服务器。 客户端和服务使用 Windows 凭据进行身份验证。  
   
  ![Windows 客户端的消息安全性](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
-|安全模式|Message|  
-|互操作性|仅 WCF|  
+|安全模式|消息|  
+|互操作性|仅限 WCF|  
 |身份验证（服务器）|服务器和客户端的相互身份验证|  
 |身份验证（客户端）|服务器和客户端的相互身份验证|  
 |完整性|是，使用共享安全上下文|  
-|保密性|是，使用共享安全上下文|  
-|Transport|NET.TCP|  
+|机密性|是，使用共享安全上下文|  
+|传输|NET.TCP|  
 |绑定|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>服务  
- 下面的代码和配置应独立运行。 执行以下操作之一：  
+ 下面的代码和配置应独立运行。 执行下列操作之一：  
   
 - 使用代码（而不使用配置）创建独立服务。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "76212017"
 ```  
   
 ## <a name="client"></a>Client  
- 下面的代码和配置应独立运行。 执行以下操作之一：  
+ 下面的代码和配置应独立运行。 执行下列操作之一：  
   
 - 使用代码（和客户端代码）创建独立客户端。  
   
@@ -105,11 +105,11 @@ ms.locfileid: "76212017"
       </netTcpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="net.tcp://machineName:8008/Calculator"   
+      <endpoint address="net.tcp://machineName:8008/Calculator"
                 binding="netTcpBinding"  
                 bindingConfiguration="NetTcpBinding_ICalculator"  
                 contract="ICalculator"  
-                name="NetTcpBinding_ICalculator">          
+                name="NetTcpBinding_ICalculator">
       </endpoint>  
     </client>  
   </system.serviceModel>  
@@ -118,5 +118,5 @@ ms.locfileid: "76212017"
   
 ## <a name="see-also"></a>另请参阅
 
-- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server App Fabric 的安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

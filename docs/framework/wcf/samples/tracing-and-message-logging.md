@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 448eef6ea147b725600b774026155acc1fca6d36
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 9ffb7a99540b953fc93a22d2296caf86f294d25d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094860"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143819"
 ---
 # <a name="tracing-and-message-logging"></a>跟踪和消息日志记录
-本示例演示如何启用跟踪和消息日志记录。 使用[服务跟踪查看器工具（svctraceviewer.exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)查看生成的跟踪和消息日志。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
+本示例演示如何启用跟踪和消息日志记录。 使用[服务跟踪查看器工具 （SvcTraceViewer.exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)查看生成的跟踪和消息日志。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
   
 ## <a name="tracing"></a>跟踪  
- Windows Communication Foundation （WCF）使用 <xref:System.Diagnostics> 命名空间中定义的跟踪机制。 在此跟踪模型中，由应用程序实现的跟踪源生成跟踪数据。 每个源均由名称进行标识。 跟踪使用程序会创建针对要为其检索信息的跟踪源的侦听器。 若要接收跟踪数据，您必须创建针对该跟踪源的侦听器。 在 WCF 中，可以通过将以下代码添加到服务或客户端的配置文件来完成此操作，方法是将服务模型跟踪源设置 `switchValue`：  
+ Windows 通信基础 （WCF） 使用命名空间中<xref:System.Diagnostics>定义的跟踪机制。 在此跟踪模型中，由应用程序实现的跟踪源生成跟踪数据。 每个源均由名称进行标识。 跟踪使用程序会创建针对要为其检索信息的跟踪源的侦听器。 若要接收跟踪数据，您必须创建针对该跟踪源的侦听器。 在 WCF 中，可以通过设置服务模型跟踪源`switchValue`将以下代码添加到服务的配置文件或客户端的配置文件中来实现：  
   
 ```xml  
 <system.diagnostics>  
@@ -43,10 +43,10 @@ ms.locfileid: "77094860"
 </system.diagnostics>  
 ```  
   
- 有关跟踪源的详细信息，请参阅[配置跟踪](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)主题中的跟踪源部分。  
+ 有关跟踪源的详细信息，请参阅["配置跟踪"](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)主题中的跟踪源部分。  
   
 ## <a name="activity-tracing-and-propagation"></a>活动跟踪和传播  
- 如果在客户端和服务的 `system.ServiceModel` 跟踪源中启用了 `ActivityTracing` 并将其 `propagateActivity` 设置为 `true`，则可以在处理的逻辑单元（活动）中、终结点内的活动（通过活动传输）以及跨多个终结点（通过活动 ID 传播）的活动之间提供跟踪关联。  
+ 在`ActivityTracing`客户端和服务`propagateActivity`的`system.ServiceModel`跟踪`true`源中启用并设置为后，在逻辑处理单元（活动）、终结点内的活动（通过活动传输）以及跨多个终结点的活动（通过活动 ID 传播）中提供跟踪的相关性。  
   
  这三种机制（活动、传输和传播）可帮助您使用服务跟踪查看器工具更快地找到错误的根本原因。 有关详细信息，请参阅[使用服务跟踪查看器查看相关跟踪和故障排除](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)。  
   
@@ -111,25 +111,25 @@ ms.locfileid: "77094860"
 > [!NOTE]
 > 如果开始时未创建日志目录，则不会创建跟踪文件。 请确保 C:\logs\ 目录存在，或在侦听器配置中指定一个替换日志记录目录。 有关更多信息，请参见本文档最后的初始安装说明。  
   
- 有关消息日志记录的详细信息，请参阅[配置消息日志记录](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)主题。  
+ 有关邮件日志记录的详细信息，请参阅[配置消息日志记录](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)主题。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已为 Windows[通信基础示例执行一次性设置过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 运行“跟踪和消息日志记录”示例之前，创建 C:\logs\ 目录以便服务向其中写入 .svclog 文件。 此目录的名称在配置文件中定义为要记录的跟踪和消息的路径，并可以进行更改。 向用户授予对日志目录的网络服务写权限。  
   
-3. 若要生成C#、 C++或 Visual Basic 的 .net 版本的解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+3. 要生成解决方案的 C#、C++ 或 Visual Basic .NET 版本，请按照[生成 Windows 通信基础示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明操作。  
   
-4. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+4. 要在单计算机或跨计算机配置中运行示例，请按照[运行 Windows 通信基础示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)说明操作。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
->   
+>
+> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
 ## <a name="see-also"></a>另请参阅
