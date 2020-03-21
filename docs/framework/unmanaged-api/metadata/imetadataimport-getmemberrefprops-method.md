@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-ms.openlocfilehash: 1d6d66ea62cbf679f722f830b3638455001aedd6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a61254ba751e47b0089a3f7528aca337a32e2db3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437486"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175364"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps 方法
 获取与指定标记引用的成员关联的元数据。  
@@ -29,46 +29,46 @@ ms.locfileid: "74437486"
   
 ```cpp  
 HRESULT GetMemberRefProps (  
-   [in]  mdMemberRef       mr,   
-   [out] mdToken           *ptk,   
-   [out] LPWSTR            szMember,   
-   [in]  ULONG             cchMember,   
-   [out] ULONG             *pchMember,   
-   [out] PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pbSig   
+   [in]  mdMemberRef       mr,
+   [out] mdToken           *ptk,
+   [out] LPWSTR            szMember,
+   [in]  ULONG             cchMember,
+   [out] ULONG             *pchMember,
+   [out] PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pbSig
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `mr`  
- 中要为其返回关联的元数据的 MemberRef 标记。  
+ [在]要为其返回关联的元数据的会员Ref 令牌。  
   
  `ptk`  
- 弄TypeDef 或 TypeRef 或 TypeSpec 标记，它表示声明成员的类，或表示声明成员的 module 类的 ModuleRef 标记或表示成员的 MethodDef。  
+ [出]表示成员声明的类的 TypeDef 或 TypeRef 或 TypeSpec 令牌，或表示声明成员的模块类的 ModuleRef 令牌，或表示成员的 MethodDef。  
   
  `szMember`  
- 弄成员名称的字符串缓冲区。  
+ [出]成员名称的字符串缓冲区。  
   
  `cchMember`  
- 中`szMember`中的请求大小（以宽字符为大小）。  
+ [在]请求的大小以宽字符表示`szMember`。  
   
  `pchMember`  
- 弄`szMember`的宽字符返回的大小。  
+ [出]返回的大小以宽字符。 `szMember`  
   
  `ppvSibBlob`  
- 弄指向成员的二进制元数据签名的指针。  
+ [出]指向成员的二进制元数据签名的指针。  
   
  `pbSig`  
- 弄`ppvSigBlob`的大小（以字节为单位）。  
+ [出]的大小（以字节为单位）。 `ppvSigBlob`  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包含在 MsCorEE.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

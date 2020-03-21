@@ -15,52 +15,52 @@ helpviewer_keywords:
 ms.assetid: 47132dda-fa92-4bd1-ae4b-24cd9a60665a
 topic_type:
 - apiref
-ms.openlocfilehash: efc627619d9abf9cfa6010e1c0ca709989b9cad3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b921118f7c43edef3c07cbb34cbbd9119d36ce51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445461"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177556"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps 方法
-设置或更新指定字段标记所引用的字段的默认值。  
+设置或更新指定字段令牌引用的字段的默认值。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT SetFieldProps (  
-    [in]  mdFieldDef  fd,   
-    [in]  DWORD       dwFieldFlags,   
-    [in]  DWORD       dwCPlusTypeFlag,   
-    [in]  void const  *pValue,   
-    [in]  ULONG       cchValue   
+    [in]  mdFieldDef  fd,
+    [in]  DWORD       dwFieldFlags,
+    [in]  DWORD       dwCPlusTypeFlag,
+    [in]  void const  *pValue,
+    [in]  ULONG       cchValue
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `fd`  
- 中目标字段的标记。  
+ [在]目标字段的令牌。  
   
  `dwFieldFlags`  
- 中字段特性。 这是 `CorFieldAttr` 值的位掩码。  
+ [在]字段属性。 这是值的`CorFieldAttr`位掩码。  
   
  `dwCPlusTypeFlag`  
- 中常量值的 `ELEMENT_TYPE_` *\** 。 这是 `CorElementType` 值。 如果未定义常数，请将此值设置为 `ELEMENT_TYPE_END`。  
+ [在]常`ELEMENT_TYPE_`*\** 量值的 。 这是一个`CorElementType`值。 如果未定义常量，则将此值设置为`ELEMENT_TYPE_END`。  
   
  `pValue`  
- 中字段的常数值。  
+ [在]字段的常量值。  
   
  `cchValue`  
- 中`pValue`的大小（以 Unicode 字符为格式）。  
+ [在]的大小（以 Unicode 字符表示`pValue`）  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

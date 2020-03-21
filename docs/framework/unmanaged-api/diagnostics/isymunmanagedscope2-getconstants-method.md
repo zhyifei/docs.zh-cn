@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f241b620-9ec5-42fd-92ef-3b22329db72a
 topic_type:
 - apiref
-ms.openlocfilehash: f7cd45a90a750c357706f720453ff23697875b58
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 45268929b6e9ad6ac6423aa0fa2b7b5022bc9179
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446233"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176612"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants 方法
-获取在此范围内定义的局部变量。  
+获取在此作用域中定义的本地常量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,25 +32,25 @@ HRESULT GetConstants(
      [in]  ULONG32  cConstants,  
      [out] ULONG32  *pcConstants,  
      [out, size_is(cConstants),  
-         length_is(*pcConstants)] ISymUnmanagedConstant*   
+         length_is(*pcConstants)] ISymUnmanagedConstant*
              constants[]);  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `cConstants`  
- 中`pcConstants` 参数指向的缓冲区的长度。  
+ [在]`pcConstants`参数指向的缓冲区的长度。  
   
  `pcConstants`  
- 弄指向 `ULONG32` 的指针，该指针接收包含常量所需的缓冲区大小（以字符数表示）。  
+ [出]指向 的指针`ULONG32`，该指针以字符形式接收包含常量所需的缓冲区的大小。  
   
  `constants`  
- 弄用于存储常量的缓冲区。  
+ [出]存储常量的缓冲区。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
+ 如果方法成功，S_OK;否则，E_FAIL或其他错误代码。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym，CorSym  
+ **标题：** 科西姆.伊德尔，科西姆.h  
   
 ## <a name="see-also"></a>另请参阅
 

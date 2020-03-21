@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-ms.openlocfilehash: 3854cb4aa3d229c87466c0a35a72447ceb235624
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2d6e86a7f5a93b900e79907f8ee0762869d7f737
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449990"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177288"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs 方法
 枚举表示当前范围内的所有类型的 TypeDef 标记。  
@@ -29,44 +29,44 @@ ms.locfileid: "74449990"
   
 ```cpp  
 HRESULT EnumTypeDefs (  
-   [out] HCORENUM   *phEnum,   
+   [out] HCORENUM   *phEnum,
    [in]  mdTypeDef  rTypeDefs[],  
-   [in]  ULONG      cMax,   
+   [in]  ULONG      cMax,
    [out] ULONG      *pcTypeDefs  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `phEnum`  
- 弄指向新枚举器的指针。 第一次调用此方法时，此值必须为 NULL。  
+ [出]指向新枚举器的指针。 对于此方法的第一次调用，这必须为 NULL。  
   
  `rTypeDefs`  
- 中用于存储 TypeDef 标记的数组。  
+ [在]用于存储 TypeDef 令牌的数组。  
   
  `cMax`  
  [in] `rTypeDefs` 数组的最大大小。  
   
  `pcTypeDefs`  
- 弄`rTypeDefs`中返回的 TypeDef 标记的数目。  
+ [出]在 中`rTypeDefs`返回的 TypeDef 令牌数。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` 成功返回。|  
-|`S_FALSE`|没有要枚举的令牌。 在这种情况下，`pcTypeDefs` 为零。|  
+|`S_OK`|`EnumTypeDefs`已成功返回。|  
+|`S_FALSE`|没有要枚举的令牌。 在这种情况下，`pcTypeDefs`为零。|  
   
 ## <a name="remarks"></a>备注  
- TypeDef 标记表示一种类型，如类或接口，以及通过扩展性机制添加的任何类型。  
+ TypeDef 令牌表示类或接口的类型，以及通过扩展机制添加的任何类型。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包含在 MsCorEE.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

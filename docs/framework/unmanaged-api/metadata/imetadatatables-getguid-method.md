@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: a3546316-e24d-417f-9909-e45d42c9d471
 topic_type:
 - apiref
-ms.openlocfilehash: 2ac29de437e746f1524fc1427c47eb8f5c761be7
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 57df124f15f78daad053d9634e1baa969a65cc35
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937814"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175273"
 ---
 # <a name="imetadatatablesgetguid-method"></a>IMetaDataTables::GetGuid 方法
-获取指定索引处的行的 GUID。  
+从指定索引处的行获取 GUID。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
-HRESULT GetGuid (   
+HRESULT GetGuid (
     [in]  ULONG       ixGuid,  
     [out] const GUID  **ppGUID  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `ixGuid`  
- 中要从中获取 GUID 的行的索引。  
+ [在]要从中获取 GUID 的行的索引。  
   
  `ppGuid`  
- 弄指向 GUID 的指针的指针。  
+ [出]指向 GUID 的指针。  
   
 ## <a name="remarks"></a>备注  
 
-  不建议使用此方法，因为它不返回一致的结果。 有关 GUID 表的信息，请参阅公共语言基础结构（CLI）文档，尤其是 "第二部分：元数据定义和语义"。 文档在线提供;请[参阅C# ECMA 和公共语言基础结构标准](../../../standard/components.md#applicable-standards)和[标准 ECMA-335-公共语言基础结构（CLI）](http://www.ecma-international.org/publications/standards/Ecma-335.htm)。  
+  我们不建议使用此方法，因为它不返回一致的结果。 有关 GUID 表的信息，请参阅通用语言基础结构 （CLI） 文档，尤其是"分区 II：元数据定义和语义"。 文档可在线获取;请参阅[ECMA C# 和通用语言基础结构标准和](../../../standard/components.md#applicable-standards)[标准 ECMA-335 - 通用语言基础结构 （CLI）。](http://www.ecma-international.org/publications/standards/Ecma-335.htm)  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

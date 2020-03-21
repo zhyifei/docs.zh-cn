@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58ac8202-854d-4efd-acfb-d2da8b446e12
 topic_type:
 - apiref
-ms.openlocfilehash: 2d49a146a465210cea8466a75666ca3f800b090b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 95a798d662b44cf2e088af84d3b1eec97da8e7fb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450145"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177942"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr 枚举
 包含一些值，用于描述属性的元数据。  
@@ -29,7 +29,7 @@ ms.locfileid: "74450145"
 ```cpp  
 typedef enum CorPropertyAttr {  
   
-    prSpecialName           =   0x0200,   
+    prSpecialName           =   0x0200,
     prReservedMask          =   0xf400,  
     prRTSpecialName         =   0x0400,  
     prHasDefault            =   0x1000,  
@@ -38,22 +38,22 @@ typedef enum CorPropertyAttr {
 } CorPropertyAttr;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
 |成员|说明|  
 |------------|-----------------|  
-|`prSpecialName`|指定属性是特殊的，其名称描述了操作方法。|  
-|`prReservedMask`|保留供公共语言运行时内部使用。|  
-|`prRTSpecialName`|指定公共语言运行时元数据内部 Api 应检查属性名称的编码。|  
+|`prSpecialName`|指定属性是特殊的，并且其名称描述如何。|  
+|`prReservedMask`|保留供公共语言运行时的内部使用。|  
+|`prRTSpecialName`|指定通用语言运行时元数据内部 API 应检查属性名称的编码。|  
 |`prHasDefault`|指定属性具有默认值。|  
 |`prUnused`|未使用。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Corhdr。h  
+ **标题：** 科尔赫德  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

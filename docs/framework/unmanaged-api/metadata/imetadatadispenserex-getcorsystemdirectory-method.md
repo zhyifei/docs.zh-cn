@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: d9e0f3b6-e106-4820-bada-5bfba34ce360
 topic_type:
 - apiref
-ms.openlocfilehash: da9a13a3dea34f6681f47e95c5b352a710d7458b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fb673666543bea3df44005ee3b20d311524f51d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431217"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175910"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory 方法
-获取保存当前公共语言运行时（CLR）的目录。 此方法仅支持在进程外调试器中使用。 如果从另一个组件调用，它将返回 E_NOTIMPL。  
+获取保存当前通用语言运行时 （CLR） 的目录。 此方法仅支持进程外调试器使用。 如果从其他组件调用，它将返回E_NOTIMPL。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT GetCORSystemDirectory (  
-    [out] LPWSTR      szBuffer,   
-    [in]  DWORD       cchBuffer,   
+    [out] LPWSTR      szBuffer,
+    [in]  DWORD       cchBuffer,
     [out] DWORD*      pchBuffer  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `szBuffer`  
- 弄要接收目录名称的缓冲区。  
+ [出]要接收目录名称的缓冲区。  
   
  `cchBuffer`  
- 中`szBuffer`的大小（以字节为单位）。  
+ [在]的大小（以字节为单位）的大小`szBuffer`。  
   
  `pchBuffer`  
- 弄`szBuffer`中实际返回的字节数。  
+ [出]在 中`szBuffer`实际返回的字节数。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

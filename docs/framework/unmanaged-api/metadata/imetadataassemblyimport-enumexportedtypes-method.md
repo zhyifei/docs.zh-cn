@@ -15,55 +15,55 @@ helpviewer_keywords:
 ms.assetid: e5912ed8-e4ce-438b-8ea3-d9e4c288d109
 topic_type:
 - apiref
-ms.openlocfilehash: 45e2348b4726447548544d975e60b93e464fb402
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f00fe5bce2f808265add228406dfaa2ccc267545
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450339"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176001"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes 方法
-枚举当前元数据范围内的程序集清单中引用的导出类型。  
+枚举当前元数据作用域中程序集清单中引用的导出类型。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT EnumExportedTypes (  
-    [in, out] HCORENUM     *phEnum,   
-    [out] mdExportedType   rExportedTypes[],   
-    [in]  ULONG            cMax,   
+    [in, out] HCORENUM     *phEnum,
+    [out] mdExportedType   rExportedTypes[],
+    [in]  ULONG            cMax,
     [out] ULONG            *pcTokens  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `phEnum`  
- [in，out]指向枚举器的指针。 当首次调用 `EnumExportedTypes` 方法时，此值必须为 null 值。  
+ [进出]指向枚举器的指针。 当首次调用该方法时，`EnumExportedTypes`这必须是 null 值。  
   
  `rExportedTypes`  
- 弄`mdExportedType` 元数据标记的枚举。  
+ [出]元数据令牌的`mdExportedType`枚举。  
   
  `cMax`  
- 中可放置在 `rExportedTypes` 数组中的 `mdExportedType` 标记的最大数目。  
+ [在]可放置在`rExportedTypes`数组中`mdExportedType`的最大令牌数。  
   
  `pcTokens`  
- 弄实际置于 `rExportedTypes`中 `mdExportedType` 标记的数目。  
+ [出]实际放置在`mdExportedType`中的`rExportedTypes`令牌数。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumExportedTypes` 成功返回。|  
-|`S_FALSE`|没有要枚举的令牌。 在这种情况下，`pcTokens` 设置为零。|  
+|`S_OK`|`EnumExportedTypes`已成功返回。|  
+|`S_FALSE`|没有要枚举的令牌。 在这种情况下，`pcTokens`设置为零。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

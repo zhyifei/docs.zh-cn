@@ -15,68 +15,68 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-ms.openlocfilehash: 40f24a4ea628ce92a27ab1bfe97fc87a57dfa4f0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8ca5ab70f60de4d783800fb18612a8f04cb9cee1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432555"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177703"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField 方法
-使用指定的元数据签名创建字段的定义，并获取该字段定义的标记。  
+为具有指定元数据签名的字段创建定义，并获取该字段定义的令牌。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
-HRESULT DefineField (   
-    [in]  mdTypeDef   td,   
-    [in]  LPCWSTR     szName,   
-    [in]  DWORD       dwFieldFlags,   
-    [in]  PCCOR_SIGNATURE pvSigBlob,   
-    [in]  ULONG       cbSigBlob,   
-    [in]  DWORD       dwCPlusTypeFlag,   
-    [in]  void const  *pValue,   
-    [in]  ULONG       cchValue,   
-    [out] mdFieldDef  *pmd   
+HRESULT DefineField (
+    [in]  mdTypeDef   td,
+    [in]  LPCWSTR     szName,
+    [in]  DWORD       dwFieldFlags,
+    [in]  PCCOR_SIGNATURE pvSigBlob,
+    [in]  ULONG       cbSigBlob,
+    [in]  DWORD       dwCPlusTypeFlag,
+    [in]  void const  *pValue,
+    [in]  ULONG       cchValue,
+    [out] mdFieldDef  *pmd
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `td`  
- 中封闭类或接口的 `mdTypeDef` 标记。  
+ [在]封闭`mdTypeDef`类或接口的令牌。  
   
  `szName`  
- 中Unicode 中的字段名称。  
+ [在]Unicode 中的字段名称。  
   
  `dwFieldFlags`  
- 中字段特性。 这是 `CorFieldAttr` 值的位掩码。  
+ [在]字段属性。 这是值的`CorFieldAttr`位掩码。  
   
  `pvSigBlob`  
- 中作为 BLOB 的字段签名。  
+ [在]字段签名作为 BLOB。  
   
  `cbSigBlob`  
- 中`pvSigBlob`中的字节计数。  
+ [在]中的`pvSigBlob`字节计数。  
   
  `dwCPlusTypeFlag`  
- 中常量值的 `ELEMENT_TYPE_` *\** 。 这是 `CorElementType` 值。 如果没有为字段定义常数值，请使用 `ELEMENT_TYPE_END`。  
+ [在]常`ELEMENT_TYPE_`*\** 量值的 。 这是一个`CorElementType`值。 如果未为字段定义常量值，请使用`ELEMENT_TYPE_END`。  
   
  `pValue`  
- 中字段的常数值。  
+ [在]字段的常量值。  
   
  `cchValue`  
- 中`pValue`的大小（Unicode）字符。  
+ [在]的大小（Unicode）字符。 `pValue`  
   
  `pmd`  
- 弄分配 `mdFieldDef` 标记。  
+ [出]分配的`mdFieldDef`令牌。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: e1f8d636e793b2d8b984fe1aa0b823fa58a4981d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8cadeac0bcbf301f7d973e93435885de82052603
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040183"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151658"
 ---
 # <a name="connection-string-builders"></a>连接字符串生成器
-在早期版本的 ADO.NET 中，不会发生使用串联字符串值的连接字符串的编译时检查，因此在运行时，不正确的关键字生成了 <xref:System.ArgumentException>。 每个 .NET Framework 数据访问接口支持不同的连接字符串关键字语法，这使得在手动操作时很难构建有效的连接字符串。 为了解决此问题，ADO.NET 2.0 为每个 .NET Framework 数据提供程序引入了新的连接字符串生成器。 每个数据提供程序包括一个从 <xref:System.Data.Common.DbConnectionStringBuilder> 继承的强类型连接字符串生成器类。 下表列出了 .NET Framework 数据提供程序及其关联的连接字符串生成器类。  
+在ADO.NET的早期版本中，未对连接字符串的编译时间检查与串联字符串值进行，因此在运行时生成了不正确的关键字<xref:System.ArgumentException>。 每个 .NET Framework 数据提供程序都支持连接字符串关键字的不同语法，这使得手动构造有效连接字符串变得困难。 为了解决此问题，ADO.NET 2.0 为每个 .NET Framework 数据提供程序引入了新的连接字符串生成器。 每个数据提供程序包括一个从 <xref:System.Data.Common.DbConnectionStringBuilder> 继承的强类型连接字符串生成器类。 下表列出了 .NET Framework 数据提供程序及其关联的连接字符串生成器类。  
   
-|Provider|ConnectionStringBuilder 类|  
+|提供程序|ConnectionStringBuilder 类|  
 |--------------|-----------------------------------|  
 |<xref:System.Data.SqlClient>|<xref:System.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=nameWithType>|  
 |<xref:System.Data.OleDb>|<xref:System.Data.OleDb.OleDbConnectionStringBuilder?displayProperty=nameWithType>|  
@@ -67,7 +67,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
 ```xml  
 <connectionStrings>  
   <clear/>  
-  <add name="partialConnectString"   
+  <add name="partialConnectString"
     connectionString="Initial Catalog=Northwind;"  
     providerName="System.Data.SqlClient" />  
 </connectionStrings>  
@@ -79,7 +79,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  [!code-csharp[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/CS/source.cs#1)]
  [!code-vb[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/VB/source.vb#1)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [连接字符串](connection-strings.md)
 - [隐私和数据安全性](privacy-and-data-security.md)

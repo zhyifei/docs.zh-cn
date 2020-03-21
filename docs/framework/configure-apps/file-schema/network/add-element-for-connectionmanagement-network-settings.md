@@ -10,36 +10,36 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 19ebbfba477eeba253a7af0742953cc6a4d45a0e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 093b68d31e03094bedefa96a2f2d53eb3d84edf0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088521"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155006"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<为 connectionManagement 添加 > 元素（网络设置）
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<添加连接管理>元素（网络设置）
 将 IP 地址或 DNS 名称添加到连接管理列表。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-\<&nbsp;&nbsp;[ **> 的**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<连接管理>**](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<添加>**
 
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<add   
-  address="address expression"   
-  maxconnection="integer"   
+<add
+  address="address expression"
+  maxconnection="integer"
 />  
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>属性  
   
-|**特性**|**描述**|  
+|**属性**|**说明**|  
 |-------------------|---------------------|  
 |`address`|描述 IP 地址或 DNS 名称的字符串。|  
 |`maxconnection`|允许连接至服务器的最大连接数。 如果未提供，则默认为 2。|  
@@ -49,7 +49,7 @@ ms.locfileid: "74088521"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[connectionManagement](connectionmanagement-element-network-settings.md)|指定到网络主机的最大连接数。|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "74088521"
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例将应用程序配置为使用服务器 `www.contoso.com` 的四个连接，并将两个连接连接到所有其他服务器。  
+ 下面的示例将应用程序配置为使用到服务器`www.contoso.com`的四个连接和到所有其他服务器的两个连接。  
   
 ```xml  
 <configuration>  
@@ -75,7 +75,7 @@ ms.locfileid: "74088521"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>

@@ -15,58 +15,58 @@ helpviewer_keywords:
 ms.assetid: e8138f6e-a0a4-48d4-8dae-9466b4dc6180
 topic_type:
 - apiref
-ms.openlocfilehash: 2210dcd9e8a8af92b7905ec680c53c1119e6a3cf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 88acd50c83eb1ff4d59aa50d677db2383912659a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136710"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176274"
 ---
 # <a name="ihostmemorymanagergetmemoryload-method"></a>IHostMemoryManager::GetMemoryLoad 方法
-获取主机报告的当前正在使用的物理内存量，因而不可用。  
+获取主机报告当前正在使用且因此不可用的物理内存量。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT GetMemoryLoad (  
-    [out] DWORD*  pMemoryLoad,   
+    [out] DWORD*  pMemoryLoad,
     [out] SIZE_T  *pAvailableBytes  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `pMemoryLoad`  
- 弄一个指针，指向当前正在使用的总物理内存的百分比。  
+ [出]指向当前正在使用的总物理内存的近似百分比的指针。  
   
  `pAvailableBytes`  
- 弄指向公共语言运行时（CLR）可用的字节数的指针。  
+ [出]指向公共语言运行时 （CLR） 可用的字节数的指针。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`GetMemoryLoad` 成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
-|HOST_E_TIMEOUT|调用超时。|  
-|HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
-|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
+|S_OK|`GetMemoryLoad`已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或者 CLR 处于无法成功运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|呼叫超时。|  
+|HOST_E_NOT_OWNER|调用方不拥有锁。|  
+|HOST_E_ABANDONED|当阻塞的线程或光纤等待事件时，事件已被取消。|  
+|E_FAIL|发生了未知的灾难性故障。 当方法返回E_FAIL时，CLR 在进程中不再可用。 对托管方法的后续调用返回HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- `GetMemoryLoad` 包装 Win32 `GlobalMemoryStatus` 函数。 `pMemoryLoad` 的值等效于从 `GlobalMemoryStatus`返回的 `MEMORYSTATUS` 结构中的 `dwMemoryLoad` 字段。  
+ `GetMemoryLoad`包装 Win32`GlobalMemoryStatus`函数。 的值`pMemoryLoad`相当于从`dwMemoryLoad``MEMORYSTATUS``GlobalMemoryStatus`返回的结构中的字段。  
   
- 运行时使用返回值作为垃圾回收器的试探法。 例如，如果主机报告大部分内存正在使用中，垃圾回收器可能会选择从多个代进行收集，以增加可能会变得可用的内存量。  
+ 运行时使用返回值作为垃圾回收器的启发式。 例如，如果主机报告大多数内存正在使用中，垃圾回收器可能会选择从多代收集，以增加可能可用的内存量。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Mscoree.dll  
+ **标题：** MSCorEE.h  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包含在 MSCorEE.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.GC?displayProperty=nameWithType>
 - [IHostMemoryManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

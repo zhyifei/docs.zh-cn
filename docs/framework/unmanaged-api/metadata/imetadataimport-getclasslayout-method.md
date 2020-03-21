@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f35414d-f40b-4b99-8768-9adb675c622a
 topic_type:
 - apiref
-ms.openlocfilehash: 8360a74e9e18e5b68ecc9edd7be2e3a711cb61c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e02d7dd4b287d027b633ae9bf2e98e036062bdd0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437781"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175403"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>IMetaDataImport::GetClassLayout 方法
 获取指定的 TypeDef 标记所引用类的布局信息。  
@@ -28,8 +28,8 @@ ms.locfileid: "74437781"
 ## <a name="syntax"></a>语法  
   
 ```cpp  
-HRESULT GetClassLayout  (   
-   [in]  mdTypeDef          td,   
+HRESULT GetClassLayout  (
+   [in]  mdTypeDef          td,
    [out] DWORD              *pdwPackSize,  
    [out] COR_FIELD_OFFSET   rFieldOffset[],  
    [in]  ULONG              cMax,  
@@ -38,33 +38,33 @@ HRESULT GetClassLayout  (
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `td`  
- 中具有要返回的布局的类的 TypeDef 标记。  
+ [在]要返回布局的类的 TypeDef 令牌。  
   
  `pdwPackSize`  
- 弄值1、2、4、8或16，表示类的 pack 大小。  
+ [出]值 1、2、4、8 或 16，表示类的包大小。  
   
  `rFieldOffset`  
- 弄[COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)值的数组。  
+ [出][COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)值的数组。  
   
  `cMax`  
  [in] `rFieldOffset` 数组的最大大小。  
   
  `pcFieldOffset`  
- 弄`rFieldOffset`中返回的元素的数目。  
+ [出]中`rFieldOffset`返回的元素数。  
   
  `pulClassSize`  
- 弄`td`所表示的类的大小（以字节为单位）。  
+ [出]以 的类大小（以字节为单位）。 `td`  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包含在 MsCorEE.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

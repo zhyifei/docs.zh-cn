@@ -1,6 +1,6 @@
 ---
-title: QualifierSet_Delete 函数（非托管 API 参考）
-description: QualifierSet_Delete 函数按名称删除限定符。
+title: QualifierSet_Delete功能（非托管 API 引用）
+description: QualifierSet_Delete函数按名称删除限定符。
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Delete
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Delete function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: e7bedcb5c56f9976f8dfd2619081971075d0d809
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0d2a02ba9d89ba16e776bb73563eaebf8a92f1fd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127298"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174896"
 ---
 # <a name="qualifierset_delete-function"></a>QualifierSet_Delete 函数
 按名称删除指定限定符。  
@@ -30,48 +30,46 @@ ms.locfileid: "73127298"
   
 ```cpp  
 HRESULT QualifierSet_Delete (
-   [in] int                  vFunc, 
-   [in] IWbemQualifierSet*   ptr, 
+   [in] int                  vFunc,
+   [in] IWbemQualifierSet*   ptr,
    [in] LPCWSTR              wszName
-); 
+);
 ```  
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
 `vFunc`  
-中此参数未使用。
+[在]此参数未使用。
 
-`ptr`   
-中指向[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)实例的指针。
+`ptr`[在]指向[IWbem 限定符集实例的](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)指针。
 
-`wszName`   
-中要删除的限定符的名称。
+`wszName`[在]要删除的限定符的名称。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
+此函数返回的以下值在*WbemCli.h*标头文件中定义，或者您可以在代码中将它们定义为常量：
 
-|返回的常量  |“值”  |描述  |
+|一直  |值  |说明  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` 参数无效。 |
-|`WBEM_E_INVALID_OPERATION` | 0x80041016 | 删除此限定符是非法的。 |
-|`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的限定符。 |
+|`WBEM_E_INVALID_OPERATION` | 0 x80041016 | 删除此限定符是非法的。 |
+|`WBEM_E_NOT_FOUND` | 0 x80041002 | 未找到指定的限定符。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
-| `WBEM_S_RESET_TO_DEFAULT` | 0x40002 | 已删除本地替代，并且父对象的原始限定符已恢复范围。 |
+| `WBEM_S_RESET_TO_DEFAULT` | 0 x40002 | 本地重写已被删除，父对象的原始限定符已恢复作用域。 |
 
 ## <a name="remarks"></a>备注
 
-此函数包装对[IWbemQualifierSet：:D e)](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete)方法的调用。
+此函数包装对[IWbem 限定符集：:Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete)方法的调用。
 
-由于限定符传播规则，特定限定符可能已从另一个对象继承，并且仅在当前类或实例中被重写。 在这种情况下，`QualifierSet_Delete` 方法会将限定符重置为其原始的继承值。 在这种情况下，函数将返回状态代码 `WBEM_S_RESET_TO_DEFAULT`。
+由于限定符传播规则，特定限定符可能从另一个对象继承，并且只是在当前类或实例中重写。 在这种情况下，`QualifierSet_Delete`该方法将限定符重置为其原始继承的值。 在这种情况下，函数返回状态代码`WBEM_S_RESET_TO_DEFAULT`。
 
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标头：** WMINet_Utils .idl  
+ **标题：** WMINet_Utils.idl  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WMI 和性能计数器（非托管 API 参考）](index.md)

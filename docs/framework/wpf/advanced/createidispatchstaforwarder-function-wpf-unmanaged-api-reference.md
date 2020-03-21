@@ -1,5 +1,5 @@
 ---
-title: CreateIDispatchSTAForwarder 函数-WPF 非托管 API 参考
+title: 创建IDispatchSTA转发器功能 - WPF非托管 API 引用
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
@@ -9,46 +9,46 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 57a02dfa-f091-4ace-9c06-1f4ab52b3527
-ms.openlocfilehash: 67f2542733fb9c6af197c99ede2bd097ce876b5d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e151ffa6eb5f1dc7479c699e0d7f9f3f57833ebd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738028"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174714"
 ---
-# <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>CreateIDispatchSTAForwarder 函数（WPF 非托管 API 参考）
-此 API 支持 Windows Presentation Foundation （WPF）基础结构，不应在代码中直接使用。  
+# <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>创建IDispatchSTA转发器功能（WPF非托管 API 参考）
+此 API 支持 Windows 演示基础 （WPF） 基础结构，不用于直接从代码中使用。  
   
- 由 Windows Presentation Foundation （WPF）基础结构用于线程和 Windows 管理。  
+ 由 Windows 演示基础 （WPF） 基础结构用于线程和窗口管理。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT CreateIDispatchSTAForwarder(  
-   __in IDispatch *pDispatchDelegate,   
+   __in IDispatch *pDispatchDelegate,
    __deref_out IDispatch **ppForwarder  
 )  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
- pDispatchDelegate  
- 指向 `IDispatch` 接口的指针。  
+ p调度委托  
+ 指向接口的`IDispatch`指针。  
   
- ppForwarder  
- 指向 `IDispatch` 接口的地址的指针。  
+ pp 转发器  
+ 指向接口地址的`IDispatch`指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[.NET Framework 系统要求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[.NET 框架系统要求](../../get-started/system-requirements.md)。  
   
- **.DLL**  
+ **Dll：**  
   
- 在 .NET Framework 3.0 和3.5： PresentationHostDLL  
+ 在 .NET 框架 3.0 和 3.5 中：演示HostDLL.dll  
   
- 在 .NET Framework 4 及更高版本中： PresentationHost_v0400 .dll  
+ 在 .NET 框架 4 及更高版本：PresentationHost_v0400.dll  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

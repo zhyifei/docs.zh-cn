@@ -15,76 +15,76 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-ms.openlocfilehash: cea84f47a5289df4bc9c50381e18d7077b3b8dad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2662af41fbd2cdc3ce8a6df1e036dfc5b22ff6a3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440473"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175544"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope 方法
-将程序集导入到当前作用域中，并为合并的作用域获取新的元数据签名。  
+将程序集导入当前作用域，并为合并作用域获取新的元数据签名。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
-HRESULT TranslateSigWithScope (   
-    [in]  IMetaDataAssemblyImport   *pAssemImport,   
-    [in]  const void                *pbHashValue,   
-    [in]  ULONG                     cbHashValue,   
-    [in]  IMetaDataImport           *import,   
-    [in]  PCCOR_SIGNATURE           pbSigBlob,   
+HRESULT TranslateSigWithScope (
+    [in]  IMetaDataAssemblyImport   *pAssemImport,
+    [in]  const void                *pbHashValue,
+    [in]  ULONG                     cbHashValue,
+    [in]  IMetaDataImport           *import,
+    [in]  PCCOR_SIGNATURE           pbSigBlob,
     [in]  ULONG                     cbSigBlob,  
-    [in]  IMetaDataAssemblyEmit     *pAssemEmit,   
-    [in]  IMetaDataEmit             *emit,   
-    [out] PCOR_SIGNATURE            pvTranslatedSig,   
-    [in]  ULONG                     cbTranslatedSigMax,   
-    [out] ULONG                     *pcbTranslatedSig   
+    [in]  IMetaDataAssemblyEmit     *pAssemEmit,
+    [in]  IMetaDataEmit             *emit,
+    [out] PCOR_SIGNATURE            pvTranslatedSig,
+    [in]  ULONG                     cbTranslatedSigMax,
+    [out] ULONG                     *pcbTranslatedSig
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `pAssemImport`  
- 中导入程序集的接口（在其中定义签名）。  
+ [在]导入程序集的接口（定义签名的位置）。  
   
  `pbHashValue`  
- 中程序集的哈希 blob。  
+ [在]程序集的哈希 blob。  
   
  `cbHashValue`  
- 中`pbHashValue`中的字节计数。  
+ [在]中的`pbHashValue`字节计数。  
   
  `import`  
- 中导入元数据范围的接口。  
+ [在]导入元数据作用域的接口。  
   
  `pbSigBlob`  
- 中要导入的签名。  
+ [在]要导入的签名。  
   
  `cbSigBlob`  
- 中`pbSigBlob`的大小（以字节为单位）。  
+ [在]的大小（以字节为单位）的大小`pbSigBlob`。  
   
  `pAssemEmit`  
- 中导出程序集的接口。  
+ [在]导出程序集的接口。  
   
  `emit`  
- 中导出元数据范围的接口。  
+ [在]导出元数据作用域的接口。  
   
  `pvTranslatedSig`  
- 弄用于保存已转换的签名 blob 的缓冲区。  
+ [出]用于保存已翻译的签名 blob 的缓冲区。  
   
  `cbTranslatedSigMax`  
- 中`pvTranslatedSig`的容量（以字节为单位）。  
+ [在]的容量（以字节为单位`pvTranslatedSig`）。  
   
  `pcbTranslatedSig`  
- 弄已翻译签名中的实际字节数。  
+ [出]翻译签名中的实际字节数。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

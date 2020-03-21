@@ -1,5 +1,5 @@
 ---
-title: ServicePoint 字段 m_ConnectionGroupList
+title: 服务点.m_ConnectionGroupList字段
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-ms.openlocfilehash: f2759f82f335415edf7bab33edbd446eec6ffbb5
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2b1b46085ed035b67fd01447727b406fe3895980
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215521"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155890"
 ---
-# <a name="servicepointm_connectiongrouplist-field"></a>ServicePoint\_ConnectionGroupList 字段
+# <a name="servicepointm_connectiongrouplist-field"></a>服务点.m\_连接组列表字段
 
-`ServicePoint.m_ConnectionGroupList` 是连接组的 <xref:System.Collections.Hashtable>，每个组都具有 <xref:System.Net.ServicePoint>URI 的连接。
+`ServicePoint.m_ConnectionGroupList`是连接<xref:System.Collections.Hashtable>组，每个组都持有<xref:System.Net.ServicePoint>URI 的连接。
 
 ## <a name="syntax"></a>语法
   
@@ -28,14 +28,14 @@ private Hashtable m_ConnectionGroupList
 ```
 
 > [!WARNING]
-> `ServicePoint.m_ConnectionGroupList` 字段是专用的，不应在代码中直接使用。
-> 
-> 在任何情况下，Microsoft 不支持在生产应用程序中使用此字段。
+> 该`ServicePoint.m_ConnectionGroupList`字段是私有的，不应直接用于代码。
+>
+> 在任何情况下，Microsoft 都不支持在生产应用程序中使用此字段。
 
 ## <a name="requirements"></a>要求
 
-**命名空间：** <xref:System.Net>
+**命名空间：**<xref:System.Net>
 
-**程序集：** 系统（在 System.web 中）
+**装配：** 系统（系统中）
 
-**.NET Framework 版本：** 自2.0 起可用。
+**.NET 框架版本：** 自 2.0 起可用。

@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: 7d90dcee-0206-4540-807b-06982fe65f1a
 topic_type:
 - apiref
-ms.openlocfilehash: 10f31d56a9727e99157f49038c19781f12cd9958
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 47377e892aaf2bdd96a297630c47fe52215b0564
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440427"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177384"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>IMetaDataFilter::IsTokenMarked 方法
-获取一个值，该值指示指定的元数据标记是否已标记为已处理。  
+获取指示指定元数据令牌是否已标记为已处理的值。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT IsTokenMarked (  
-    [in]  mdToken  tk,   
+    [in]  mdToken  tk,
     [out] BOOL     *pIsMarked  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `tk`  
- 中要检查处理标记的标记。  
+ [在]要检查处理标记的令牌。  
   
  `pIsMarked`  
- 弄如果已处理 `tk`，则为 `true` 的值;否则 `false`。  
+ [出]`true`已处理的值`tk`;如果已处理，则为否则`false`。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

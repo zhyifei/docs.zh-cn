@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 985951180a5c8ee09460b7fe4bf3213b986c3bb6
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: b68787980a8b64d9ee90ed8d834fab2c5c69006b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980062"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149331"
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET 中的性能计数器
 ADO.NET 2.0 引入了对性能计数器的扩展支持，包括对 <xref:System.Data.SqlClient> 和 <xref:System.Data.OracleClient> 的支持。 在早期版本的 ADO.NET 中提供的 <xref:System.Data.SqlClient> 性能计数器已被否决，并已替换为本主题讨论的新性能计数器。 可以使用 ADO.NET 性能计数器来监视应用程序的状态和应用程序所使用的连接资源。 可以使用 Windows 性能监视器来监视性能计数器，或使用 <xref:System.Diagnostics.PerformanceCounter> 命名空间中的 <xref:System.Diagnostics> 类以编程方式访问性能计数器。  
@@ -18,27 +18,27 @@ ADO.NET 2.0 引入了对性能计数器的扩展支持，包括对 <xref:System.
 ## <a name="available-performance-counters"></a>可用的性能计数器  
  当前有 14 个不同的性能计数器可用于下表中所描述的 <xref:System.Data.SqlClient> 和 <xref:System.Data.OracleClient>。 请注意，未本地化 Microsoft .NET Framework 各区域版本中的各个计数器的名称。  
   
-|性能计数器|描述|  
+|性能计数器|说明|  
 |-------------------------|-----------------|  
 |`HardConnectsPerSecond`|每秒与数据库服务器连接的数量。|  
 |`HardDisconnectsPerSecond`|每秒与数据库服务器断开连接的数量。|  
 |`NumberOfActiveConnectionPoolGroups`|处于活动状态的唯一连接池组的数量。 此计数器由 AppDomain 中唯一连接字符串的数量控制。|  
 |`NumberOfActiveConnectionPools`|连接池的总数。|  
-|`NumberOfActiveConnections`|当前正在使用的活动连接的数量。 **注意：** 默认情况下不启用此性能计数器。 若要启用此性能计数器，请参阅[激活默认的计数器](#ActivatingOffByDefault)。|  
-|`NumberOfFreeConnections`|连接池中可用连接的数量。 **注意：** 默认情况下不启用此性能计数器。 若要启用此性能计数器，请参阅[激活默认的计数器](#ActivatingOffByDefault)。|  
+|`NumberOfActiveConnections`|当前正在使用的活动连接的数量。 **注：** 默认情况下，不会启用此性能计数器。 要启用此性能计数器，请参阅[激活非默认计数器](#ActivatingOffByDefault)。|  
+|`NumberOfFreeConnections`|连接池中可用连接的数量。 **注：** 默认情况下，不会启用此性能计数器。 要启用此性能计数器，请参阅[激活非默认计数器](#ActivatingOffByDefault)。|  
 |`NumberOfInactiveConnectionPoolGroups`|标记为删除的唯一连接池组的数量。 此计数器由 AppDomain 中唯一连接字符串的数量控制。|  
 |`NumberOfInactiveConnectionPools`|最近未进行任何活动且等待被释放的非活动连接池的数量。|  
 |`NumberOfNonPooledConnections`|未存入池中的活动连接的数量。|  
 |`NumberOfPooledConnections`|由连接池基础结构管理的活动连接的数量。|  
 |`NumberOfReclaimedConnections`|通过垃圾回收而回收的连接的数量，其中应用程序未调用 `Close` 或 `Dispose`。 非显式关闭或释放连接会影响性能。|  
 |`NumberOfStasisConnections`|当前正在等待完成某项操作并因此无法供应用程序使用的连接的数量。|  
-|`SoftConnectsPerSecond`|从连接池中拉出的活动连接的数量。 **注意：** 默认情况下不启用此性能计数器。 若要启用此性能计数器，请参阅[激活默认的计数器](#ActivatingOffByDefault)。|  
-|`SoftDisconnectsPerSecond`|被返回连接池的活动连接的数量。 **注意：** 默认情况下不启用此性能计数器。 若要启用此性能计数器，请参阅[激活默认的计数器](#ActivatingOffByDefault)。|  
+|`SoftConnectsPerSecond`|从连接池中拉出的活动连接的数量。 **注：** 默认情况下，不会启用此性能计数器。 要启用此性能计数器，请参阅[激活非默认计数器](#ActivatingOffByDefault)。|  
+|`SoftDisconnectsPerSecond`|被返回连接池的活动连接的数量。 **注：** 默认情况下，不会启用此性能计数器。 要启用此性能计数器，请参阅[激活非默认计数器](#ActivatingOffByDefault)。|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>连接池组和连接池  
- 在使用 Windows 身份验证（集成安全性）时，必须监视 `NumberOfActiveConnectionPoolGroups` 和 `NumberOfActiveConnectionPools` 性能计数器。 这样做的原因是连接池组会映射为唯一连接字符串。 在使用集成安全性时，连接池会映射为连接字符串，此外，连接池还会为各个 Windows 标识创建单独的池。 例如，如果 Fred 和 Julie 在同一 AppDomain 中，并且二者都使用连接字符串 `"Data Source=MySqlServer;Integrated Security=true"`，则将为连接字符串创建一个连接池组，还将为 Fred 和 Julie 分别创建一个其他池。 如果 John 和 Martha 使用 SQL Server 登录名相同的连接字符串，`"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`，则只为**lowPrivUser**标识创建一个池。  
+ 在使用 Windows 身份验证（集成安全性）时，必须监视 `NumberOfActiveConnectionPoolGroups` 和 `NumberOfActiveConnectionPools` 性能计数器。 这样做的原因是连接池组会映射为唯一连接字符串。 在使用集成安全性时，连接池会映射为连接字符串，此外，连接池还会为各个 Windows 标识创建单独的池。 例如，如果 Fred 和 Julie 在同一 AppDomain 中，并且二者都使用连接字符串 `"Data Source=MySqlServer;Integrated Security=true"`，则将为连接字符串创建一个连接池组，还将为 Fred 和 Julie 分别创建一个其他池。 如果 John 和 Martha 使用具有相同 SQL Server`"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`登录名的连接字符串 ，则仅为**lowPrivUser**标识创建单个池。  
   
-<a name="ActivatingOffByDefault"></a>   
+<a name="ActivatingOffByDefault"></a>
 ### <a name="activating-off-by-default-counters"></a>激活默认情况下为关的计数器  
  性能计数器 `NumberOfFreeConnections`、`NumberOfActiveConnections`、`SoftDisconnectsPerSecond` 和 `SoftConnectsPerSecond` 默认情况下为关。 将下面的信息添加到应用程序配置文件中，以启用这些信息：  
   
@@ -55,7 +55,7 @@ ADO.NET 2.0 引入了对性能计数器的扩展支持，包括对 <xref:System.
  下面的控制台应用程序演示如何在应用程序中检索性能计数器的值。 必须打开连接并且确保连接处于活动状态，才能为所有 ADO.NET 性能计数器返回信息。  
   
 > [!NOTE]
-> 此示例使用 SQL Server 附带的**AdventureWorks**示例数据库。 在此示例代码中提供的连接字符串假定安装了数据库，该数据库在实例名为 SqlExpress 的本地计算机上；还假定你已创建了 SQL Server 登录，此登录与连接字符串中提供的登录相匹配。 如果使用仅允许 Windows 身份验证的默认安全设置来配置服务器，则需要启用 SQL Server 登录。 可以根据您的环境需要修改连接字符串。  
+> 此示例使用 SQL Server 附带的示例**AdventureWorks**数据库。 在此示例代码中提供的连接字符串假定安装了数据库，该数据库在实例名为 SqlExpress 的本地计算机上；还假定你已创建了 SQL Server 登录，此登录与连接字符串中提供的登录相匹配。 如果使用仅允许 Windows 身份验证的默认安全设置来配置服务器，则需要启用 SQL Server 登录。 可以根据您的环境需要修改连接字符串。  
   
 ### <a name="example"></a>示例  
   
@@ -74,7 +74,7 @@ Class Program
   
     Public Shared Sub Main()  
         Dim prog As Program = New Program  
-        ' Open a connection and create the performance counters.   
+        ' Open a connection and create the performance counters.
         prog.connection.ConnectionString = _  
            GetIntegratedSecurityConnectionString()  
         prog.SetUpPerformanceCounters()  
@@ -171,17 +171,17 @@ Class Program
     Private Declare Function GetCurrentProcessId Lib "kernel32.dll" () As Integer  
   
     Private Function GetInstanceName() As String  
-        'This works for Winforms apps.   
+        'This works for Winforms apps.
         Dim instanceName As String = _  
            System.Reflection.Assembly.GetEntryAssembly.GetName.Name  
   
-        ' Must replace special characters like (, ), #, /, \\   
+        ' Must replace special characters like (, ), #, /, \\
         Dim instanceName2 As String = _  
            AppDomain.CurrentDomain.FriendlyName.ToString.Replace("(", "[") _  
            .Replace(")", "]").Replace("#", "_").Replace("/", "_").Replace("\\", "_")  
   
-        'For ASP.NET applications your instanceName will be your CurrentDomain's   
-        'FriendlyName. Replace the line above that sets the instanceName with this:   
+        'For ASP.NET applications your instanceName will be your CurrentDomain's
+        'FriendlyName. Replace the line above that sets the instanceName with this:
         'instanceName = AppDomain.CurrentDomain.FriendlyName.ToString.Replace("(", "[") _  
         '    .Replace(")", "]").Replace("#", "_").Replace("/", "_").Replace("\\", "_")  
   
@@ -201,22 +201,22 @@ Class Program
     End Sub  
   
     Private Shared Function GetIntegratedSecurityConnectionString() As String  
-        ' To avoid storing the connection string in your code,   
-        ' you can retrieve it from a configuration file.   
-        Return ("Data Source=.\SqlExpress;Integrated Security=True;" &   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
+        Return ("Data Source=.\SqlExpress;Integrated Security=True;" &
           "Initial Catalog=AdventureWorks")  
     End Function  
   
     Private Shared Function GetSqlConnectionString() As String  
-        ' To avoid storing the connection string in your code,   
-        ' you can retrieve it from a configuration file.   
-        Return ("Data Source=.\SqlExpress;User Id=LowPriv;Password=Data!05;" &   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
+        Return ("Data Source=.\SqlExpress;User Id=LowPriv;Password=Data!05;" &
           "Initial Catalog=AdventureWorks")  
     End Function  
   
     Private Shared Function GetSqlConnectionStringDifferent() As String  
-        ' To avoid storing the connection string in your code,   
-        ' you can retrieve it from a configuration file.   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
         Return ("Initial Catalog=AdventureWorks;Data Source=.\SqlExpress;" & _  
           "User Id=LowPriv;Password=Data!05;")  
     End Function  
@@ -347,7 +347,7 @@ class Program
             AppDomain.CurrentDomain.FriendlyName.ToString().Replace('(', '[')  
             .Replace(')', ']').Replace('#', '_').Replace('/', '_').Replace('\\', '_');  
   
-        // For ASP.NET applications your instanceName will be your CurrentDomain's   
+        // For ASP.NET applications your instanceName will be your CurrentDomain's
         // FriendlyName. Replace the line above that sets the instanceName with this:  
         // instanceName = AppDomain.CurrentDomain.FriendlyName.ToString().Replace('(','[')  
         // .Replace(')',']').Replace('#','_').Replace('/','_').Replace('\\','_');  
@@ -398,7 +398,7 @@ class Program
 
 - [连接到数据源](connecting-to-a-data-source.md)
 - [OLE DB、ODBC 和 Oracle 连接池](ole-db-odbc-and-oracle-connection-pooling.md)
-- [ASP.NET 的性能计数器](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
+- [ASP.NET 性能计数器](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
 - [运行时分析](../../debug-trace-profile/runtime-profiling.md)
-- [监视性能阈值简介](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
+- [监控性能阈值简介](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [ADO.NET 概述](ado-net-overview.md)

@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-ms.openlocfilehash: 6914437b9b238c1d82cf4cc8a480a15dd8dda7ad
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f9761cc8bc881cd694f5d9620e5c4ab5987a2ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126809"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176391"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 类
-提供用于创建本机可移植可执行（PE）文件的功能。 接口通常由编译器用来生成其已编译的输出可执行文件。  
+提供用于创建本机可移植可执行文件 （PE） 文件的功能。 编译器通常使用该接口来生成其编译的输出可执行文件。  
   
 > [!NOTE]
-> `ICeeFileGen` 支持 .NET Framework 基础结构，不应在代码中直接使用。  
+> `ICeeFileGen`支持 .NET 框架基础结构，不打算直接从代码中使用。  
   
- 此接口已弃用，并将在将来的版本中删除。  
+ 此接口已被弃用，将在将来的版本中删除。  
   
 ## <a name="syntax"></a>语法  
   
@@ -149,7 +149,7 @@ public:
         HCEESECTION section, ULONG num, ULONG size, ULONG offset = 0);  
   
     virtual HRESULT EmitMetaDataEx (HCEEFILE ceeFile,  
-        IMetaDataEmit *emitter);   
+        IMetaDataEmit *emitter);
   
     virtual HRESULT EmitLibraryNameEx (HCEEFILE ceeFile,  
         IMetaDataEmit *emitter);  
@@ -237,10 +237,10 @@ public:
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ICeeFileGen  
+ **标题：** ICeeFileGen.h  
   
- **.NET Framework 版本：** 1.0  
+ **.NET 框架版本：** 1.0  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

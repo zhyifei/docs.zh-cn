@@ -2,15 +2,15 @@
 title: 在代码中配置 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 5d05fe5f70f4e2b1490c728cc019430cd94ff925
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 4ff49b4e17ae179426cc033a955ecf2c71f2a3e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569506"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174805"
 ---
 # <a name="configuring-wcf-services-in-code"></a>在代码中配置 WCF 服务
-Windows Communication Foundation （WCF）允许开发人员使用配置文件或代码来配置服务。  当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 WCF 还允许您在代码中配置服务。 在早期版本的 WCF （4.0 及更早版本）中，可以轻松地在自承载方案中配置代码中的服务，<xref:System.ServiceModel.ServiceHost> 类允许你在调用 ServiceHost 之前配置终结点和行为。 但是，在 Web 承载方案中，你不具备针对 <xref:System.ServiceModel.ServiceHost> 类的直接访问权限。 若要配置 Web 承载的服务，你需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从 .NET 4.5 开始，WCF 提供了一种更简单的方法来在代码中配置自承载服务和 web 托管服务。  
+Windows 通信基础 （WCF） 允许开发人员使用配置文件或代码配置服务。  当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 WCF 还允许您在代码中配置服务。 在早期版本的 WCF（4.0 和更早版本）中，在自托管方案中配置服务很容易，<xref:System.ServiceModel.ServiceHost>该类允许您在调用 ServiceHost.Open 之前配置终结点和行为。 但是，在 Web 承载方案中，你不具备针对 <xref:System.ServiceModel.ServiceHost> 类的直接访问权限。 若要配置 Web 承载的服务，你需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从 .NET 4.5 开始，WCF 提供了一种更简单的方法来在代码中配置自托管服务和 Web 托管服务。  
   
 ## <a name="the-configure-method"></a>Configure 方法  
  只需在您的服务实现类中使用以下签名定义名为 `Configure` 的公共静态方法：  
@@ -19,7 +19,7 @@ Windows Communication Foundation （WCF）允许开发人员使用配置文件�
 public static void Configure(ServiceConfiguration config)  
 ```  
   
- Configure 方法采用 <xref:System.ServiceModel.ServiceConfiguration> 实例，使开发者可以添加终结点和行为。 在打开服务主机之前，WCF 调用此方法。 定义后，将忽略 app.config 或 web.config 文件中指定的任何服务配置设置。  
+ Configure 方法采用 <xref:System.ServiceModel.ServiceConfiguration> 实例，使开发者可以添加终结点和行为。 在打开服务主机之前，WCF 会调用此方法。 定义后，将忽略 app.config 或 web.config 文件中指定的任何服务配置设置。  
   
  下面的代码段阐释如何定义 `Configure` 方法和添加服务终结点、终结点行为以及服务行为：  
   
@@ -59,39 +59,39 @@ public class Service1 : IService1
  要为服务启用协议（如 https），可以显式添加使用协议的终结点，也可以通过调用 ServiceConfiguration.EnableProtocol(Binding) 自动添加终结点，这样可为与协议兼容的每个基址和定义的每个服务协定添加终结点。 下面的代码演示如何使用 ServiceConfiguration.EnableProtocol 方法：  
   
 ```csharp  
-public class Service1 : IService1   
-{   
-    public string GetData(int value);   
-    public static void Configure(ServiceConfiguration config)   
-    {   
-        // Enable "Add Service Reference" support   
-       config.Description.Behaviors.Add( new ServiceMetadataBehavior { HttpGetEnabled = true });   
-       // set up support for http, https, net.tcp, net.pipe   
-       config.EnableProtocol(new BasicHttpBinding());   
-       config.EnableProtocol(new BasicHttpsBinding());   
-       config.EnableProtocol(new NetTcpBinding());   
-       config.EnableProtocol(new NetNamedPipeBinding());   
-       // add an extra BasicHttpBinding endpoint at http:///basic   
-       config.AddServiceEndpoint(typeof(IService1), new BasicHttpBinding(),"basic");   
-    }   
-}   
+public class Service1 : IService1
+{
+    public string GetData(int value);
+    public static void Configure(ServiceConfiguration config)
+    {
+        // Enable "Add Service Reference" support
+       config.Description.Behaviors.Add( new ServiceMetadataBehavior { HttpGetEnabled = true });
+       // set up support for http, https, net.tcp, net.pipe
+       config.EnableProtocol(new BasicHttpBinding());
+       config.EnableProtocol(new BasicHttpsBinding());
+       config.EnableProtocol(new NetTcpBinding());
+       config.EnableProtocol(new NetNamedPipeBinding());
+       // add an extra BasicHttpBinding endpoint at http:///basic
+       config.AddServiceEndpoint(typeof(IService1), new BasicHttpBinding(),"basic");
+    }
+}
 ```  
   
- 仅当不以编程方式向 <xref:System.ServiceModel.ServiceConfiguration> 中添加应用程序终结点时，才使用 <`protocolMappings`> "部分中的设置。您可以选择从默认应用程序配置文件加载服务配置，方法是调用 <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> 然后更改设置。 <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> 类还允许您从集中式配置加载配置。 下面的代码演示如何实现这一点：  
+ 仅当未以编程方式`protocolMappings`将应用程序终结点添加到中时，才会使用<>部分中的<xref:System.ServiceModel.ServiceConfiguration>设置。您可以通过调用<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>然后更改设置，从默认应用程序配置文件中选择加载服务配置。 <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> 类还允许您从集中式配置加载配置。 下面的代码演示如何实现这一点：  
   
 ```csharp
-public class Service1 : IService1   
-{   
-    public void DoWork();   
-    public static void Configure(ServiceConfiguration config)   
-    {   
-          config.LoadFromConfiguration(ConfigurationManager.OpenMappedExeConfiguration(new ExeConfigurationFileMap { ExeConfigFilename = @"c:\sharedConfig\MyConfig.config" }, ConfigurationUserLevel.None));   
-    }   
+public class Service1 : IService1
+{
+    public void DoWork();
+    public static void Configure(ServiceConfiguration config)
+    {
+          config.LoadFromConfiguration(ConfigurationManager.OpenMappedExeConfiguration(new ExeConfigurationFileMap { ExeConfigFilename = @"c:\sharedConfig\MyConfig.config" }, ConfigurationUserLevel.None));
+    }
 }  
 ```  
   
 > [!IMPORTANT]
-> 请注意，<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> 忽略 <`service`> < 标记 <`host`> 设置`system.serviceModel`。 从概念上讲，<`host`> 是指主机配置，而不是服务配置，并在配置方法执行之前加载。  
+> 请注意，<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>忽略<><>`host``service``system.serviceModel`标记中<>设置。 从概念上讲`host`，<>是关于主机配置的，而不是服务配置，并且在"配置"方法执行之前加载它。  
   
 ## <a name="see-also"></a>另请参阅
 

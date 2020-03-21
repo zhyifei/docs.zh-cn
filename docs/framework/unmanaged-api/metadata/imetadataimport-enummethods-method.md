@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8cc3b0c3-d97d-4f71-9e7d-ef2a92b4959a
 topic_type:
 - apiref
-ms.openlocfilehash: 8e9e08ac903423b2e121f22cc9e43a660ccfac7b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 218b65b5899692774c434ae136a3976ecb97ea2f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450081"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177308"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods 方法
 枚举表示指定类型的方法的 MethodDef 标记。  
@@ -29,45 +29,45 @@ ms.locfileid: "74450081"
   
 ```cpp  
 HRESULT EnumMethods (  
-   [in, out] HCORENUM   *phEnum,   
-   [in]  mdTypeDef      cl,   
-   [out] mdMethodDef    rMethods[],   
-   [in]  ULONG          cMax,   
+   [in, out] HCORENUM   *phEnum,
+   [in]  mdTypeDef      cl,
+   [out] mdMethodDef    rMethods[],
+   [in]  ULONG          cMax,
    [out] ULONG          *pcTokens  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `phEnum`  
- [in，out]指向枚举器的指针。 第一次调用此方法时，此值必须为 NULL。  
+ [进出]指向枚举器的指针。 对于此方法的第一次调用，这必须为 NULL。  
   
  `cl`  
- 中一个 TypeDef 标记，它表示具有要枚举的方法的类型。  
+ [在]表示具有要枚举的方法的类型的 TypeDef 令牌。  
   
  `rMethods`  
- 弄用于存储 MethodDef 标记的数组。  
+ [出]要存储方法Def令牌的数组。  
   
  `cMax`  
- 中`rMethods` 数组的 MethodDef 的最大大小。  
+ [在]方法Def`rMethods`数组的最大大小。  
   
  `pcTokens`  
- 弄`rMethods`中返回的 MethodDef 标记的数目。  
+ [出]在 中`rMethods`返回的 MethodDef 令牌数。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods` 成功返回。|  
-|`S_FALSE`|没有要枚举的 MethodDef 标记。 在这种情况下，`pcTokens` 为零。|  
+|`S_OK`|`EnumMethods`已成功返回。|  
+|`S_FALSE`|没有要枚举的 MethodDef 令牌。 在这种情况下，`pcTokens`为零。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包含在 MsCorEE.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

@@ -15,43 +15,43 @@ helpviewer_keywords:
 ms.assetid: d1de53ad-9435-4b5f-9df7-07f21210e5b5
 topic_type:
 - apiref
-ms.openlocfilehash: 0c78ce8192d6456dd1b1be990d87b9209b028e09
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b780ca513d8a0b4f88e66594e86e9ff8290f6523
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440369"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177361"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum 方法
-获取由指定枚举器检索的枚举中的元素数目。  
+获取指定枚举器检索的枚举中的元素数。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT CountEnum (  
-   [in]  HCORENUM    hEnum,   
+   [in]  HCORENUM    hEnum,
    [out] ULONG       *pulCount  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `hEnum`  
- 中枚举器的句柄。  
+ [在]枚举器的句柄。  
   
  `pulCount`  
- 弄枚举的元素的数目。  
+ [出]枚举的元素数。  
   
 ## <a name="remarks"></a>备注  
- `hEnum` 指定的句柄是从以前的 `Enum`*名称*调用（例如[IMetaDataImport：： EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)）获取的。  
+ 指定的`hEnum`句柄是从以前的`Enum` *Name*调用（例如[，IMetaDataImport：：enumTypeDefs）获取的](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包含在 MsCorEE.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

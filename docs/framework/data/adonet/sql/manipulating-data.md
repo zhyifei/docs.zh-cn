@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: a84f74bde8da9ca7e40184b76efe51cea129b66a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 70ee6041b14feb298d93ab452e16ee23607b3fcc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451845"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174285"
 ---
 # <a name="manipulating-data"></a>操作数据
-在引入多个活动结果集 (MARS) 之前，开发人员必须使用多个连接或服务器端游标来解决某些方案。 此外，如果在事务情境下使用多个连接，则需要绑定的连接（使用 sp_getbindtoken 和 sp_bindsession）。 以下方案显示如何使用启用 MARS 的连接来取代多个连接。  
+在引入多重活动结果集 (MARS) 之前，开发人员必须使用多个连接或服务器端游标来解决某些情况。 此外，如果在事务情境下使用多个连接，则需要绑定的连接（使用 sp_getbindtoken 和 sp_bindsession）********。 以下场景说明了如何使用启用了 MARS 的连接，而不是使用多个连接。  
   
 ## <a name="using-multiple-commands-with-mars"></a>对 MARS 使用多个命令  
- 以下控制台应用程序演示如何对两个 <xref:System.Data.SqlClient.SqlDataReader> 对象和单个启用了 MARS 的 <xref:System.Data.SqlClient.SqlCommand> 对象使用两个 <xref:System.Data.SqlClient.SqlConnection> 对象。  
+ 下面的控制台应用程序演示如何使用两个包含两个 <xref:System.Data.SqlClient.SqlCommand> 对象的 <xref:System.Data.SqlClient.SqlDataReader> 对象和一个启用了 MARS 的 <xref:System.Data.SqlClient.SqlConnection> 对象。  
   
 ### <a name="example"></a>示例  
- 该示例将打开一个到**AdventureWorks**数据库的连接。 使用 <xref:System.Data.SqlClient.SqlCommand> 对象创建一个 <xref:System.Data.SqlClient.SqlDataReader> 对象。 在使用该读取器时，打开第二个 <xref:System.Data.SqlClient.SqlDataReader>，使用来自第一个 <xref:System.Data.SqlClient.SqlDataReader> 的数据作为第二个读取器的 WHERE 子句的输入。  
+ 该示例将打开与 AdventureWorks**** 数据库的单个连接。 使用 <xref:System.Data.SqlClient.SqlCommand> 对象时，将创建一个 <xref:System.Data.SqlClient.SqlDataReader>。 使用阅读器时，打开第二个 <xref:System.Data.SqlClient.SqlDataReader>，使用第一个 <xref:System.Data.SqlClient.SqlDataReader> 的数据作为第二个阅读器的 WHERE 子句的输入。  
   
 > [!NOTE]
-> 下面的示例使用随 SQL Server 提供的 AdventureWorks 示例数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
+> 下面的示例使用随 SQL Server 提供的 AdventureWorks 示例数据库****。 示例代码中提供的连接字符串假定数据库已安装并且在本地计算机上可用。 根据环境需要修改连接字符串。  
   
 ```vb  
 Option Strict On  
@@ -44,7 +44,7 @@ Module Module1
     Dim productCmd As SqlCommand  
     Dim productReader As SqlDataReader  
   
-    Dim vendorSQL As String = & _   
+    Dim vendorSQL As String = & _
       "SELECT VendorId, Name FROM Purchasing.Vendor"  
     Dim productSQL As String = _  
         "SELECT Production.Product.Name FROM Production.Product " & _  
@@ -108,20 +108,20 @@ static void Main()
   
   int vendorID;  
   SqlDataReader productReader = null;  
-  string vendorSQL =   
+  string vendorSQL =
     "SELECT VendorId, Name FROM Purchasing.Vendor";  
-  string productSQL =   
+  string productSQL =
     "SELECT Production.Product.Name FROM Production.Product " +  
     "INNER JOIN Purchasing.ProductVendor " +  
-    "ON Production.Product.ProductID = " +   
+    "ON Production.Product.ProductID = " +
     "Purchasing.ProductVendor.ProductID " +  
     "WHERE Purchasing.ProductVendor.VendorID = @VendorId";  
   
-  using (SqlConnection awConnection =   
+  using (SqlConnection awConnection =
     new SqlConnection(connectionString))  
   {  
     SqlCommand vendorCmd = new SqlCommand(vendorSQL, awConnection);  
-    SqlCommand productCmd =   
+    SqlCommand productCmd =
       new SqlCommand(productSQL, awConnection);  
   
     productCmd.Parameters.Add("@VendorId", SqlDbType.Int);  
@@ -157,20 +157,20 @@ static void Main()
   {  
     // To avoid storing the connection string in your code,  
     // you can retrieve it from a configuration file.  
-    return "Data Source=(local);Integrated Security=SSPI;" +   
+    return "Data Source=(local);Integrated Security=SSPI;" +
       "Initial Catalog=AdventureWorks;MultipleActiveResultSets=True";  
   }  
 }  
 ```  
   
 ## <a name="reading-and-updating-data-with-mars"></a>使用 MARS 读取和更新数据  
- MARS 允许连接供读取操作以及数据操作语言 (DML) 操作使用，包含多个挂起操作。 通过此功能，应用程序不需要处理连接忙的错误。 此外，MARS 可以替换服务器端游标的使用，这通常会消耗更多资源。 最后，因为可以在单个连接上执行多个操作，所以，这些操作可以共享相同的事务上下文，不需要使用 sp_getbindtoken 和 sp_bindsession 系统存储过程。  
+ MARS 允许将连接用于读取操作和数据操作语言 (DML) 操作，其中有多个待处理操作。 此功能使应用程序无需处理连接繁忙错误。 此外，MARS 可以取代服务器端游标的使用，后者通常消耗更多资源。 最后，因为可以在单个连接上执行多个操作，所以，这些操作可以共享相同的事务上下文，不需要使用 sp_getbindtoken 和 sp_bindsession 系统存储过程********。  
   
 ### <a name="example"></a>示例  
- 以下控制台应用程序演示如何对三个 <xref:System.Data.SqlClient.SqlDataReader> 对象和单个启用了 MARS 的 <xref:System.Data.SqlClient.SqlCommand> 对象使用两个 <xref:System.Data.SqlClient.SqlConnection> 对象。 第一个命令对象检索信用评级为 5 的供应商列表。 第二个命令对象使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:System.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。 每个产品记录通过第二个 <xref:System.Data.SqlClient.SqlDataReader> 访问。 通过执行计算来确定新的 OnOrderQty。 然后，通过第三个命令对象来使用新值更新 ProductVendor 表。 整个过程在单个事务中进行，在结束时回滚。  
+ 下面的控制台应用程序演示如何使用两个包含三个 <xref:System.Data.SqlClient.SqlCommand> 对象的 <xref:System.Data.SqlClient.SqlDataReader> 对象和一个启用了 MARS 的 <xref:System.Data.SqlClient.SqlConnection> 对象。 第一个命令对象检索信用评级为 5 的供应商列表。 第二个命令对象使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:System.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。 每个产品记录由第二个 <xref:System.Data.SqlClient.SqlDataReader> 访问。 通过执行计算来确定新的 OnOrderQty****。 然后，通过第三个命令对象来使用新值更新 ProductVendor 表****。 整个过程发生在单个事务中，该事务在结束时回滚。  
   
 > [!NOTE]
-> 下面的示例使用随 SQL Server 提供的 AdventureWorks 示例数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
+> 下面的示例使用随 SQL Server 提供的 AdventureWorks 示例数据库****。 示例代码中提供的连接字符串假定数据库已安装并且在本地计算机上可用。 根据环境需要修改连接字符串。  
   
 ```vb  
 Option Strict On  
@@ -211,7 +211,7 @@ Module Module1
         "FROM Purchasing.ProductVendor " & _  
         "WHERE VendorID = @VendorID"  
     Dim updateSQL As String = _  
-        "UPDATE Purchasing.ProductVendor " & _   
+        "UPDATE Purchasing.ProductVendor " & _
         "SET OnOrderQty = @OrderQty " & _  
         "WHERE ProductID = @ProductID AND VendorID = @VendorID"  
   
@@ -263,7 +263,7 @@ Module Module1
         End While  
       End Using  
   
-      Console.WriteLine("Total Records Updated: " & _   
+      Console.WriteLine("Total Records Updated: " & _
         CStr(totalRecordsUpdated))  
       updateTx.Rollback()  
       Console.WriteLine("Transaction Rolled Back")  
@@ -315,18 +315,18 @@ static void Main()
   int totalRecordsUpdated = 0;  
   
   string vendorSQL =  
-      "SELECT VendorID, Name FROM Purchasing.Vendor " +   
+      "SELECT VendorID, Name FROM Purchasing.Vendor " +
       "WHERE CreditRating = 5";  
   string prodVendSQL =  
       "SELECT ProductID, MaxOrderQty, MinOrderQty, OnOrderQty " +  
-      "FROM Purchasing.ProductVendor " +   
+      "FROM Purchasing.ProductVendor " +
       "WHERE VendorID = @VendorID";  
   string updateSQL =  
-      "UPDATE Purchasing.ProductVendor " +   
+      "UPDATE Purchasing.ProductVendor " +
       "SET OnOrderQty = @OrderQty " +  
       "WHERE ProductID = @ProductID AND VendorID = @VendorID";  
   
-  using (SqlConnection awConnection =   
+  using (SqlConnection awConnection =
     new SqlConnection(connectionString))  
   {  
     awConnection.Open();  
@@ -382,7 +382,7 @@ static void Main()
         }  
       }  
     }  
-    Console.WriteLine("Total Records Updated: " +   
+    Console.WriteLine("Total Records Updated: " +
       totalRecordsUpdated.ToString());  
     updateTx.Rollback();  
     Console.WriteLine("Transaction Rolled Back");  
@@ -395,8 +395,8 @@ private static string GetConnectionString()
 {  
   // To avoid storing the connection string in your code,  
   // you can retrieve it from a configuration file.  
-  return "Data Source=(local);Integrated Security=SSPI;" +   
-    "Initial Catalog=AdventureWorks;" +   
+  return "Data Source=(local);Integrated Security=SSPI;" +
+    "Initial Catalog=AdventureWorks;" +
     "MultipleActiveResultSets=True";  
   }  
 }  
@@ -404,5 +404,5 @@ private static string GetConnectionString()
   
 ## <a name="see-also"></a>另请参阅
 
-- [多重活动结果集 (MARS)](multiple-active-result-sets-mars.md)
+- [多个活动的结果集 (MARS)](multiple-active-result-sets-mars.md)
 - [ADO.NET 概述](../ado-net-overview.md)

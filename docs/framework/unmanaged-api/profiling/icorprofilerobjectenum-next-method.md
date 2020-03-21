@@ -15,45 +15,45 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: 0c833416cca965f2655266152c5bdf5f11624d14
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b6e26d1538cab30db66e887aee89b8fbae501bdb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861121"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177002"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next 方法
-从对象的顺序集合中获取指定数目的连续对象，从该序列中的枚举器的当前位置开始。  
+从对象的顺序集合中获取指定数量的连续对象，从枚举器在序列中的当前位置开始。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT Next (  
     [in] ULONG                    celt,  
-    [out, size_is(celt), length_is(*pceltFetched)]    
+    [out, size_is(celt), length_is(*pceltFetched)]
         ObjectID                  objects[],  
     [out] ULONG                   *pceltFetched  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `celt`  
  [in] 要检索的对象数。  
   
  `objects`  
- 弄`ObjectID` 值的数组，其中每个值都表示检索到的对象。  
+ [出]值数组`ObjectID`，每个值表示检索的对象。  
   
  `pceltFetched`  
  [out] 指向 `objects` 数组中实际返回的元素数目的指针。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

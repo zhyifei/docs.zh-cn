@@ -2,15 +2,15 @@
 title: 类型系统 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-ms.openlocfilehash: f99d63bd526981c4a9f079c25851dc9bbd89cf7c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b8b721aff5b7886fdb897ecaa3dcc163ec94ae79
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738460"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149826"
 ---
 # <a name="type-system-entity-sql"></a>类型系统 (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持多种类型：  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]支持多种类型：  
   
 - 基元（简单）类型，如 `Int32` 和 `String.`。  
   
@@ -18,15 +18,15 @@ ms.locfileid: "73738460"
   
 - 架构中未显式定义的匿名类型：<xref:System.Data.Metadata.Edm.CollectionType>、<xref:System.Data.Metadata.Edm.RowType> 和 <xref:System.Data.Metadata.Edm.RefType>。  
   
- 本部分讨论架构中未显式定义但实体 SQL 支持的匿名类型。 有关基元类型和名义类型的信息，请参阅[概念模型类型（CSDL）](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)。  
+ 本节讨论未在架构中显式定义但实体 SQL 支持的匿名类型。 有关基元和标称类型的信息，请参阅[概念模型类型 （CSDL）。](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)  
   
-## <a name="rows"></a>行  
+## <a name="rows"></a>“行”  
  行的结构取决于该行所包含的类型化以命名成员的序列。 行类型没有标识，不能被继承。 如果同一行类型的实例的成员分别等效，则这些实例是等效的。 行不具有超出其结构等效项的行为，在公共语言运行库中没有等效项。 查询可产生包含行或行的集合的结构。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询和主机语言之间的 API 绑定定义行在产生结果的查询中的实现方式。 有关如何构造行实例的信息，请参阅[构造类型](constructing-types-entity-sql.md)。  
   
 ## <a name="collections"></a>集合  
  集合类型表示其他对象的零个或零个以上的实例。 有关如何构造集合的信息，请参阅[构造类型](constructing-types-entity-sql.md)。  
   
-## <a name="references"></a>reference  
+## <a name="references"></a>参考  
  引用是指向特定实体集中的特定实体的逻辑指针。  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持使用以下运算符对引用进行构造、解构和导航：  
@@ -35,22 +35,22 @@ ms.locfileid: "73738460"
   
 - [CREATEREF](createref-entity-sql.md)  
   
-- [KEY](key-entity-sql.md)  
+- [关键](key-entity-sql.md)  
   
 - [DEREF](deref-entity-sql.md)  
   
  可以使用成员访问（点）运算符 (`.`) 对引用进行导航。 下面的代码段通过对 r（引用）属性进行导航提取 Order 的 Id 属性。  
   
 ```sql  
-select o2.r.Id   
-from (select ref(o) as r from LOB.Orders as o) as o2   
+select o2.r.Id
+from (select ref(o) as r from LOB.Orders as o) as o2
 ```  
   
  如果引用值为 null，或引用的目标不存在，则结果为 null。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [实体 SQL 概述](entity-sql-overview.md)
+- [Entity SQL 概述](entity-sql-overview.md)
 - [实体 SQL 引用](entity-sql-reference.md)
 - [CAST](cast-entity-sql.md)
 - [CSDL、SSDL 和 MSL 规范](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)

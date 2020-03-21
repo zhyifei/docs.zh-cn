@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: 7cc8ff5391fca7c3315dda433785a182f476bca7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 76c2a6cb0661a0e39fc3a0dd599fcbb3c046f382
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783875"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149607"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>使用 CommandBuilder 生成命令
 如果在运行时动态指定 `SelectCommand` 属性（例如，通过接受用户提供的文本命令的查询工具），那么您可能无法在设计时指定适当的 `InsertCommand`、`UpdateCommand` 或 `DeleteCommand`。 如果您的 <xref:System.Data.DataTable> 映射到单个数据库表或者是从单个数据库表中生成的，那么您可以利用 <xref:System.Data.Common.DbCommandBuilder> 对象来自动生成 `DeleteCommand` 的 `InsertCommand`、`UpdateCommand` 和 <xref:System.Data.Common.DbDataAdapter>。  
@@ -23,21 +23,21 @@ ms.locfileid: "70783875"
   
  当与 `DataAdapter` 关联时，<xref:System.Data.Common.DbCommandBuilder> 会自动生成 `InsertCommand` 的 `UpdateCommand`、`DeleteCommand` 和 `DataAdapter` 属性（如果它们为空引用）。 如果某个属性已存在 `Command`，则使用现有 `Command`。  
   
- 通过联接两个或更多个表来创建的数据库视图不会被视为单个数据库表。 在这种情况下，您无法使用 <xref:System.Data.Common.DbCommandBuilder> 来自动生成命令；必须显式指定命令。 有关显式设置命令以将更新`DataSet`解析回数据源的信息，请参阅[使用 dataadapter 更新数据源](updating-data-sources-with-dataadapters.md)。  
+ 通过联接两个或更多个表来创建的数据库视图不会被视为单个数据库表。 在这种情况下，您无法使用 <xref:System.Data.Common.DbCommandBuilder> 来自动生成命令；必须显式指定命令。 有关显式设置命令以解析回`DataSet`数据源的更新的信息，请参阅[使用数据适配器更新数据源](updating-data-sources-with-dataadapters.md)。  
   
  您可能需要将输出参数映射回 `DataSet` 的更新行。 一项常见的任务是从数据源中检索自动生成的标识字段或时间戳的值。 默认情况下，<xref:System.Data.Common.DbCommandBuilder> 不会将输出参数映射到更新行中的列。 在这种情况下，必须显式指定命令。 有关将自动生成的标识字段映射回插入行的列的示例，请参阅[检索标识或自动编号值](retrieving-identity-or-autonumber-values.md)。  
   
 ## <a name="rules-for-automatically-generated-commands"></a>自动生成命令的规则  
  下表显示创建自动生成命令的规则。  
   
-|命令|规则|  
+|Command|规则|  
 |-------------|----------|  
 |`InsertCommand`|在数据源处为表中所有 <xref:System.Data.DataRow.RowState%2A> 为 <xref:System.Data.DataRowState.Added> 的行插入一行。 插入所有可更新列的值（但是不包括标识、表达式或时间戳等列）。|  
 |`UpdateCommand`|在数据源处更新表中所有 `RowState` 为 <xref:System.Data.DataRowState.Modified> 的行。 更新所有列的值，不可更新的列除外，例如标识列或表达式列。 更新符合以下条件的所有行：数据源中的列值匹配行的主键列值，并且数据源中的剩余列匹配行的原始值。 有关更多信息，请参见本主题后面的“更新和删除的开放式并发模型”。|  
 |`DeleteCommand`|在数据源处删除表中所有 `RowState` 为 <xref:System.Data.DataRowState.Deleted> 的行。 删除符合以下条件的所有行：列值匹配行的主键列值，并且数据源中的剩余列匹配行的原始值。 有关更多信息，请参见本主题后面的“更新和删除的开放式并发模型”。|  
   
 ## <a name="optimistic-concurrency-model-for-updates-and-deletes"></a>更新和删除的开放式并发模型  
- 自动为 UPDATE 和 DELETE 语句生成命令的逻辑基于*开放式并发性*，即，记录未锁定，无法进行编辑，并可随时由其他用户或进程进行修改。 由于在从 SELECT 语句中返回某记录之后但在发出 UPDATE 或 DELETE 语句之前，该记录可能已被修改，所以自动生成的 UPDATE 或 DELETE 语句包含一个 WHERE 子句，指定只有在行包含所有原始值并且尚未从数据源中删除时，才会更新该行。 这样做的目的是为了避免覆盖新数据。 当自动生成的 UPDATE 命令试图更新已删除或不包含 <xref:System.Data.DataSet> 中原始值的行时，该命令不会影响任何记录，并且会引发 <xref:System.Data.DBConcurrencyException>。  
+ 自动为 UPDATE 和 DELETE 语句生成命令的逻辑基于*乐观并发*-即记录不会锁定以进行编辑，并且可以随时由其他用户或进程修改。 由于在从 SELECT 语句中返回某记录之后但在发出 UPDATE 或 DELETE 语句之前，该记录可能已被修改，所以自动生成的 UPDATE 或 DELETE 语句包含一个 WHERE 子句，指定只有在行包含所有原始值并且尚未从数据源中删除时，才会更新该行。 这样做的目的是为了避免覆盖新数据。 当自动生成的 UPDATE 命令试图更新已删除或不包含 <xref:System.Data.DataSet> 中原始值的行时，该命令不会影响任何记录，并且会引发 <xref:System.Data.DBConcurrencyException>。  
   
  如果要使 UPDATE 或 DELETE 在不考虑原始值的情况下完成，必须为 `UpdateCommand` 显式设置 `DataAdapter`，而不依赖自动命令生成。  
   
@@ -48,13 +48,13 @@ ms.locfileid: "70783875"
  自动命令生成逻辑为独立表生成 INSERT、UPDATE 或 DELETE 语句，而不考虑与数据源中其他表的任何关系。 因此，在调用 `Update` 以提交对参与数据库中外键约束的列的更改时，可能会失败。 若要避免这一异常，请不要使用 <xref:System.Data.Common.DbCommandBuilder> 来更新参与外键约束的列，而应显式地指定用于执行该操作的语句。  
   
 ### <a name="table-and-column-names"></a>表名称和列名称  
- 如果列名称或表名称包含任何特殊字符（如空格、句点、问号或其他非字母数字字符），则即使这些字符用括号分隔，自动命令生成逻辑也可能会失败。 根据具体提供程序，通过设置 QuotePrefix 和 QuoteSuffix 参数，生成逻辑可以处理空格，但无法转义特殊字符。 支持*目录. schema*格式的完全限定的表名。  
+ 如果列名称或表名称包含任何特殊字符（如空格、句点、问号或其他非字母数字字符），则即使这些字符用括号分隔，自动命令生成逻辑也可能会失败。 根据具体提供程序，通过设置 QuotePrefix 和 QuoteSuffix 参数，生成逻辑可以处理空格，但无法转义特殊字符。 支持*目录.schema.表*形式的完全限定的表名称。  
   
 ## <a name="using-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>使用 CommandBuilder 自动生成 SQL 语句  
  若要为 `DataAdapter` 自动生成 SQL 语句，请先设置 `SelectCommand` 的 `DataAdapter` 属性，然后创建 `CommandBuilder` 对象，并将该对象指定为 `DataAdapter` 将自动为其生成 SQL 语句的 `CommandBuilder` 的自变量。  
   
 ```vb  
-' Assumes that connection is a valid SqlConnection object   
+' Assumes that connection is a valid SqlConnection object
 ' inside of a Using block.  
 Dim adapter As SqlDataAdapter = New SqlDataAdapter( _  
   "SELECT * FROM dbo.Customers", connection)  
@@ -90,7 +90,7 @@ Console.WriteLine(builder.GetUpdateCommand().CommandText)
 Console.WriteLine(builder.GetUpdateCommand().CommandText);
 ```
   
- 下面的示例在 `Customers` 数据集中重新创建 `custDS` 表。 调用**RefreshSchema**方法来刷新带有此新列信息的自动生成的命令。  
+ 下面的示例在 `Customers` 数据集中重新创建 `custDS` 表。 调用**RefreshSchema**方法以使用此新列信息刷新自动生成的命令。  
   
 ```vb  
 ' Assumes an open SqlConnection and SqlDataAdapter inside of a Using block.  
@@ -104,7 +104,7 @@ adapter.Fill(custDS, "Customers")
   
 ```csharp  
 // Assumes an open SqlConnection and SqlDataAdapter inside of a using block.  
-adapter.SelectCommand.CommandText =   
+adapter.SelectCommand.CommandText =
   "SELECT CustomerID, ContactName FROM dbo.Customers";  
 builder.RefreshSchema();  
   
@@ -112,7 +112,7 @@ custDS.Tables.Remove(custDS.Tables["Customers"]);
 adapter.Fill(custDS, "Customers");  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [命令和参数](commands-and-parameters.md)
 - [执行命令](executing-a-command.md)

@@ -5,50 +5,50 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: b6fa4207531e86cbde8657d0c47596f22c886f89
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5e37a04ff731a99664d636e0d4175f99214c2646
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791867"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174506"
 ---
 # <a name="provider-statistics-for-sql-server"></a>用于 SQL Server 的提供程序统计信息
-从 .NET Framework 2.0 版开始，适用于 SQL Server 的 .NET Framework 数据提供程序支持运行时统计信息。 必须在创建了有效的连接对象后将 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 对象的 <xref:System.Data.SqlClient.SqlConnection> 属性设置为 `True`，以启用统计信息。 启用了统计信息之后，可以通过 <xref:System.Collections.IDictionary> 对象的 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 方法检索 <xref:System.Data.SqlClient.SqlConnection> 引用，以将统计信息作为“实时快照”查看。 通过列表作为一组名称/值对字典条目进行枚举。 这些名称/值对不排序。 可以随时调用 <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> 对象的 <xref:System.Data.SqlClient.SqlConnection> 方法，以重置计数器。 如果尚未启用统计信息收集功能，则不会生成异常。 此外，如果调用 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 之前没有先调用 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>，检索到的值是每个条目的初始值。 如果启用了统计信息，运行应用程序一段时间，然后禁用统计信息，检索到的值将反映在禁用统计信息之前收集的值。 所有统计信息值按照连接进行收集。  
+从 .NET Framework 2.0 版开始，适用于 SQL Server 的 .NET Framework 数据提供程序支持运行时统计信息。 必须通过将 <xref:System.Data.SqlClient.SqlConnection> 对象的 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 属性设置为 `True` 来启用统计信息。 启用统计信息后，可以通过 <xref:System.Data.SqlClient.SqlConnection> 对象的 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 方法检索 <xref:System.Collections.IDictionary> 引用，以“即时快照”的方式查看统计信息。 可以将该列表枚举为一组名称/值对字典条目。 这些名称/值对是无序的。 随时都可以调用 <xref:System.Data.SqlClient.SqlConnection> 对象的 <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> 方法来重置计数器。 如果尚未启用统计信息收集，则不会生成异常。 此外，如果在未首先调用 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 的情况下调用 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>，则检索的值是每个条目的初始值。 如果启用统计信息，请运行应用程序一段时间，然后禁用统计信息，检索到的值将反映收集的值，直到禁用统计信息为止。 收集的所有统计值都基于每个连接。  
   
 ## <a name="statistical-values-available"></a>可用的统计信息值  
- 当前，Microsoft SQL Server 提供程序中共有 18 个不同的可用项。 可以通过返回的<xref:System.Collections.IDictionary> <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>接口引用的 "**计数**" 属性访问可用项的数目。 提供程序统计信息的所有计数器均使用公共语言运行<xref:System.Int64>时类型 （long C# in 和 Visual Basic），这是64位宽。 Int64 定义的**int64**数据类型的最大值 **。此字段为**（（2 ^ 63）-1））。 计数器的值达到此最大值时，应不再将这些值作为准确的值。 这意味着**int64。** 同为1（（2 ^ 63）-2）实际上是任何统计信息的最大有效值。  
+ Microsoft SQL Server 提供程序中目前提供 18 个不同的项。 可用的项数可以通过 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 返回的 <xref:System.Collections.IDictionary> 接口引用的 Count 属性进行访问****。 提供程序统计信息的所有计数器均使用公共语言运行时 <xref:System.Int64> 类型（C# 和 Visual Basic 中为 long），宽度为 64 位****。 int64 数据类型的最大值由 int64.MaxValue 字段定义，最大值为 ((2^63)-1))********。 当计数器的值达到此最大值时，它们将不再被认为是准确的。 这意味着 int64.MaxValue-1((2^63)-2) 实际上是任何统计信息的最大有效值****。  
   
 > [!NOTE]
-> 字典用于返回提供程序统计信息，因为以后可能会更改返回的统计信息的数目、名称和顺序。 应用程序不应依靠字典中找到的特定值，而应检查该值是否存在并相应进行分支。  
+> 字典用于返回提供程序统计信息，因为返回的统计信息的数量、名称和顺序可能会在将来发生变化。 应用程序不应依赖于在字典中找到的特定值，而应检查该值是否存在，并相应地设置分支。  
   
- 下表说明当前可用的统计信息值。 注意，在 Microsoft .NET Framework 的地区版本中，各个值的键名未本地化。  
+ 下表显示了当前可用的统计值。 注意，在 Microsoft .NET Framework 的地区版本中，各个值的键名未本地化。  
   
-|键名|描述|  
+|键名|说明|  
 |--------------|-----------------|  
-|`BuffersReceived`|返回在应用程序使用提供程序启动并启用了统计信息之后，提供程序从 SQL Server 接收的表格格式数据流 (TDS) 数据包数。|  
-|`BuffersSent`|返回在启用了统计信息之后，由提供程序发送到 SQL Server 的 TDS 数据包数。 大命令可能需要多个缓冲区。 例如，如果某个大命令发送到服务器，并且需要六个数据包，`ServerRoundtrips` 将以 1 递增，`BuffersSent` 将以 6 递增。|  
+|`BuffersReceived`|返回应用程序开始使用提供程序并启用统计信息后，提供程序从 SQL Server 接收到的表格格式数据流 (TDS) 数据包的数量。|  
+|`BuffersSent`|返回启用了统计信息之后，提供程序向 SQL Server 发送的 TDS 数据包的数量。 如果命令较大，可能需要多个缓冲区。 例如，如果将较大的命令发送到服务器，并且它需要六个数据包，则将 `ServerRoundtrips` 增加 1，将 `BuffersSent` 增加 6。|  
 |`BytesReceived`|返回在应用程序使用提供程序启动并启用了统计信息之后，提供程序从 SQL Server 接收的 TDS 数据包中的数据字节数。|  
-|`BytesSent`|返回在应用程序使用提供程序启动并启用了统计信息之后，在 TDS 数据包中发送到 SQL Server 的数据字节数。|  
-|`ConnectionTime`|连接在统计信息启用之后已打开的时间（单位为毫秒；如果在打开连接之前就启用了统计信息，则为总连接时间）。|  
-|`CursorOpens`|返回在应用程序使用提供程序启动并启用了统计信息之后，通过连接打开游标的次数。<br /><br /> 注意，SELECT 语句返回的只读/只进结果不属于游标，所以不影响此计数器。|  
-|`ExecutionTime`|返回在启用统计信息之后提供程序用于处理的累计时间（以毫秒为单位），包括等待服务器答复所用的时间以及执行提供程序本身的代码所用的时间。<br /><br /> 包含计时代码的类如下：<br /><br /> SqlConnection<br /><br /> SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> 为了保持对性能要求很高的成员尽可能小，下列成员不计时：<br /><br /> SqlDataReader<br /><br /> this[] 运算符（所有重载）<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> GetOrdinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean<br /><br /> GetSqlByte<br /><br /> GetSqlDateTime<br /><br /> GetSqlDecimal<br /><br /> GetSqlDouble<br /><br /> GetSqlGuid<br /><br /> GetSqlInt16<br /><br /> GetSqlInt32<br /><br /> GetSqlInt64<br /><br /> GetSqlMoney<br /><br /> GetSqlSingle<br /><br /> GetSqlString<br /><br /> GetString<br /><br /> IsDBNull|  
+|`BytesSent`|返回在应用程序使用提供程序启动并启用了统计信息之后，发送到 SQL Server 的 TDS 数据包中的数据字节数。|  
+|`ConnectionTime`|连接在统计信息启用之后已打开的时间（如果在打开连接之前就启用了统计信息，则为总连接时间），以毫秒为单位。|  
+|`CursorOpens`|返回在应用程序使用提供程序启动并启用了统计信息之后，通过连接打开游标的次数。<br /><br /> 请注意，SELECT 语句返回的只读/仅转发结果不被视为游标，因此不会影响此计数器。|  
+|`ExecutionTime`|返回在启用统计信息之后，提供程序用于处理方面的累计时间（以毫秒为单位），包括等待服务器回复所用的时间以及执行提供程序本身的代码所用的时间。<br /><br /> 包含计时代码的类如下：<br /><br /> SqlConnection<br /><br /> SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> 为了尽可能减少性能关键成员数，不会对以下成员计时：<br /><br /> SqlDataReader<br /><br /> this[] 运算符（所有重载）<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> GetOrdinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean<br /><br /> GetSqlByte<br /><br /> GetSqlDateTime<br /><br /> GetSqlDecimal<br /><br /> GetSqlDouble<br /><br /> GetSqlGuid<br /><br /> GetSqlInt16<br /><br /> GetSqlInt32<br /><br /> GetSqlInt64<br /><br /> GetSqlMoney<br /><br /> GetSqlSingle<br /><br /> GetSqlString<br /><br /> GetString<br /><br /> IsDBNull|  
 |`IduCount`|返回在应用程序使用提供程序启动并启用了统计信息之后，通过连接执行的 INSERT、DELETE 和 UPDATE 语句的总数。|  
-|`IduRows`|返回在应用程序使用提供程序启动并启用了统计信息之后，受到通过连接执行的 INSERT、DELETE 和 UPDATE 语句影响的行的总数。|  
-|`NetworkServerTime`|返回在应用程序使用提供程序启动并启用了统计信息之后，提供程序等待服务器答复所用的累计时间（以毫秒为单位）。|  
+|`IduRows`|返回在应用程序使用提供程序启动并启用了统计信息之后，受通过连接执行的 INSERT、DELETE 和 UPDATE 语句影响的行的总数。|  
+|`NetworkServerTime`|返回在应用程序使用提供程序启动并启用了统计信息之后，提供程序等待服务器回复所用的累计时间（以毫秒为单位）。|  
 |`PreparedExecs`|返回在应用程序使用提供程序启动并启用了统计信息之后，通过连接执行的已准备命令数。|  
 |`Prepares`|返回在应用程序使用提供程序启动并启用了统计信息之后，通过连接准备的语句数。|  
-|`SelectCount`|返回在应用程序使用提供程序启动并启用了统计信息之后，通过连接执行的 SELECT 语句数。 其中包括用于从游标检索行的 FETCH 语句，SELECT 语句的计数在到达 <xref:System.Data.SqlClient.SqlDataReader> 的结尾时更新。|  
-|`SelectRows`|返回在应用程序使用提供程序启动并启用了统计信息之后所选的行数。 此计数器反映 SQL 语句生成的所有行，即使是调用方没有真正使用的行。 例如，如果在读取整个结果集之前关闭数据读取器，不会影响该计数。 其中包括通过 FETCH 语句从游标检索的行。|  
-|`ServerRoundtrips`|返回在应用程序使用提供程序启动并启用了统计信息之后，连接向服务器发送命令并收到回复的次数。|  
-|`SumResultSets`|返回在应用程序使用提供程序启动并启用了统计信息之后使用过的结果集数。 例如，此值可能包括返回到客户端的任何结果集。 对于光标，每个获取或块获取操作都属于独立的结果集。|  
-|`Transactions`|返回在应用程序使用提供程序启动并启用了统计信息之后启动的用户事务数（包括回滚）。 如果连接在启用自动提交的情况下运行，则每个命令都属于一个事务。<br /><br /> 只要执行了 BEGIN TRAN 语句，无论事务是提交还是以后回滚，此计数器都会使事务计数递增。|  
-|`UnpreparedExecs`|返回在应用程序使用提供程序启动并启用了统计信息之后，通过连接执行的非准备语句数。|  
+|`SelectCount`|返回在应用程序使用提供程序启动并启用了统计信息之后，通过连接执行的 SELECT 语句数。 这包括用于从游标检索行的 FETCH 语句，当到达 <xref:System.Data.SqlClient.SqlDataReader> 的末尾时，将更新 SELECT 语句的计数。|  
+|`SelectRows`|返回在应用程序使用提供程序启动并启用了统计信息之后选定的行数。 此技术反映了由 SQL 语句生成的所有行，即使调用方并未真正占用这些行也是如此。 例如，在读取整个结果集之前关闭数据读取器不会影响计数。 这包括通过 FETCH 语句从游标中检索的行。|  
+|`ServerRoundtrips`|返回在应用程序使用提供程序启动并启用了统计信息之后，连接将命令发送到服务器并收到回复的次数。|  
+|`SumResultSets`|返回在应用程序使用提供程序启动并启用了统计信息之后已使用的结果集的数目。 例如，这将包括返回到客户端的任何结果集。 对于游标，每个提取或块提取操作都被视为独立的结果集。|  
+|`Transactions`|返回在应用程序使用提供程序启动并启用了统计信息（包括回滚）后启动的用户事务数。 如果在自动提交启用的情况下运行连接，则每个命令均被视为事务。<br /><br /> 一旦执行 BEGIN TRAN 语句，此计数器就会增加事务计数，而无需考虑稍后是提交还是回滚事务。|  
+|`UnpreparedExecs`|返回在应用程序使用提供程序启动并启用了统计信息之后，通过连接执行的未准备语句数。|  
   
 ### <a name="retrieving-a-value"></a>检索值  
- 以下控制台应用程序显示如何在连接上启用统计信息，如何分别检索四个统计信息值，以及如何将统计信息输出到控制台窗口。  
+ 下面的控制台应用程序显示了如何启用连接的统计信息，检索四个单独的统计值并将它们写出到控制台窗口。  
   
 > [!NOTE]
-> 下面的示例使用 SQL Server 附带的**AdventureWorks**示例数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
+> 下面的示例使用随 SQL Server 提供的 AdventureWorks 示例数据库****。 示例代码中提供的连接字符串假定数据库已安装并且在本地计算机上可用。 根据环境需要修改连接字符串。  
   
 ```vb  
 Option Strict On  
@@ -65,7 +65,7 @@ Module Module1
   
     Using awConnection As New SqlConnection(connectionString)  
       ' StatisticsEnabled is False by default.  
-      ' It must be set to True to start the   
+      ' It must be set to True to start the
       ' statistic collection process.  
       awConnection.StatisticsEnabled = True  
   
@@ -136,16 +136,16 @@ namespace CS_Stats_Console_GetValue
     {  
       string connectionString = GetConnectionString();  
   
-      using (SqlConnection awConnection =   
+      using (SqlConnection awConnection =
         new SqlConnection(connectionString))  
       {  
         // StatisticsEnabled is False by default.  
-        // It must be set to True to start the   
+        // It must be set to True to start the
         // statistic collection process.  
         awConnection.StatisticsEnabled = true;  
   
         string productSQL = "SELECT * FROM Production.Product";  
-        SqlDataAdapter productAdapter =   
+        SqlDataAdapter productAdapter =
           new SqlDataAdapter(productSQL, awConnection);  
   
         DataSet awDataSet = new DataSet();  
@@ -193,7 +193,7 @@ namespace CS_Stats_Console_GetValue
     {  
       // To avoid storing the connection string in your code,  
       // you can retrieve it from a configuration file.  
-      return "Data Source=localhost;Integrated Security=SSPI;" +   
+      return "Data Source=localhost;Integrated Security=SSPI;" +
         "Initial Catalog=AdventureWorks";  
     }  
   }  
@@ -201,10 +201,10 @@ namespace CS_Stats_Console_GetValue
 ```  
   
 ### <a name="retrieving-all-values"></a>检索所有值  
- 以下控制台应用程序显示如何在连接上启用统计信息，如何使用枚举器检索所有可用统计信息值，以及如何将统计信息输出到控制台窗口。  
+ 下面的控制台应用程序显示了如何启用连接的统计信息，如何使用枚举器检索所有可用的统计信息值并将它们写入控制台窗口。  
   
 > [!NOTE]
-> 下面的示例使用 SQL Server 附带的**AdventureWorks**示例数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
+> 下面的示例使用随 SQL Server 提供的 AdventureWorks 示例数据库****。 示例代码中提供的连接字符串假定数据库已安装并且在本地计算机上可用。 根据环境需要修改连接字符串。  
   
 ```vb  
 Option Strict On  
@@ -220,7 +220,7 @@ Module Module1
   
     Using awConnection As New SqlConnection(connectionString)  
       ' StatisticsEnabled is False by default.  
-      ' It must be set to True to start the   
+      ' It must be set to True to start the
       ' statistic collection process.  
       awConnection.StatisticsEnabled = True  
   
@@ -284,11 +284,11 @@ namespace CS_Stats_Console_GetAll
     {  
       string connectionString = GetConnectionString();  
   
-      using (SqlConnection awConnection =   
+      using (SqlConnection awConnection =
         new SqlConnection(connectionString))  
       {  
         // StatisticsEnabled is False by default.  
-        // It must be set to True to start the   
+        // It must be set to True to start the
         // statistic collection process.  
         awConnection.StatisticsEnabled = true;  
   
@@ -331,14 +331,14 @@ namespace CS_Stats_Console_GetAll
     {  
       // To avoid storing the connection string in your code,  
       // you can retrieve it from a configuration file.  
-      return "Data Source=localhost;Integrated Security=SSPI;" +   
+      return "Data Source=localhost;Integrated Security=SSPI;" +
         "Initial Catalog=AdventureWorks";  
     }  
   }  
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [SQL Server 和 ADO.NET](index.md)
 - [ADO.NET 概述](../ado-net-overview.md)

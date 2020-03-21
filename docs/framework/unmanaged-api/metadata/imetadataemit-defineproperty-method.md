@@ -15,80 +15,80 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: f11b374ed0ecbfc137c43fb641ae691237604691
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: eb3ecbf39376e7126b5ec93a26badcbf5076d1db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431518"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175780"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty 方法
-使用指定的 `get` 和 `set` 方法访问器创建指定类型的属性定义，并获取该属性定义的标记。  
+使用指定的`get`和方法`set`访问器为指定类型创建属性定义，并获取该属性定义的令牌。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
-HRESULT DefineProperty (   
-    [in]  mdTypeDef          td,   
-    [in]  LPCWSTR            szProperty,   
-    [in]  DWORD              dwPropFlags,   
-    [in]  PCCOR_SIGNATURE    pvSig,   
-    [in]  ULONG              cbSig,   
-    [in]  DWORD              dwCPlusTypeFlag,   
-    [in]  void const         *pValue,   
-    [in]  ULONG              cchValue,   
-    [in]  mdMethodDef        mdSetter,   
-    [in]  mdMethodDef        mdGetter,   
-    [in]  mdMethodDef        rmdOtherMethods[],   
-    [out] mdProperty         *pmdProp   
+HRESULT DefineProperty (
+    [in]  mdTypeDef          td,
+    [in]  LPCWSTR            szProperty,
+    [in]  DWORD              dwPropFlags,
+    [in]  PCCOR_SIGNATURE    pvSig,
+    [in]  ULONG              cbSig,
+    [in]  DWORD              dwCPlusTypeFlag,
+    [in]  void const         *pValue,
+    [in]  ULONG              cchValue,
+    [in]  mdMethodDef        mdSetter,
+    [in]  mdMethodDef        mdGetter,
+    [in]  mdMethodDef        rmdOtherMethods[],
+    [out] mdProperty         *pmdProp
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `td`  
- 中正在为其定义属性的类或接口的标记。  
+ [在]正在定义属性的类或接口的令牌。  
   
  `szProperty`  
- 中属性的名称。  
+ [在]属性的名称。  
   
  `dwPropFlags`  
- 中属性标志。  
+ [在]属性标志。  
   
  `pvSig`  
- 中属性签名。  
+ [在]属性签名。  
   
  `cbSig`  
- 中`pvSig`中的字节计数。  
+ [在]中的`pvSig`字节计数。  
   
  `dwCPlusTypeFlag`  
- 中属性的默认值的类型。  
+ [在]属性的默认值的类型。  
   
  `pValue`  
- 中属性的默认值。  
+ [在]属性的默认值。  
   
  `cchValue`  
- 中`pValue`中的（Unicode）字符的计数。  
+ [在]中的（Unicode） 字符的`pValue`计数。  
   
  `mdSetter`  
- 中用于设置属性值的方法。  
+ [在]设置属性值的方法。  
   
  `mdGetter`  
- 中获取属性值的方法。  
+ [在]获取属性值的方法。  
   
  `rmdOtherMethods[]`  
- 中与属性关联的其他方法的数组。 使用 `mdTokenNil`终止数组。  
+ [在]与 属性关联的其他方法的数组。 使用 终止数组`mdTokenNil`。  
   
  `pmdProp`  
- 弄分配 `mdProperty` 标记。  
+ [出]分配的`mdProperty`令牌。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: 连接接口 (adodb)
+title: 连接接口（adodb）
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,23 +9,23 @@ api_location:
 - adodb.dll
 api_type:
 - Assembly
-ms.openlocfilehash: f5c2fba0224b7e457f45dd4b31cfbcd2d89d5d6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb80fb7071398e07e1d86aa920fae1895ea34081
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706255"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156202"
 ---
 # <a name="connection-interface"></a>连接接口
 
 ```csharp
 [GuidAttribute("00000550-0000-0010-8000-00AA006D2EA4")]
-public interface Connection : _Connection, 
+public interface Connection : _Connection,
   ConnectionEvents_Event
 ```
 
 ## <a name="requirements"></a>要求
 
-**Namespace**：`adodb`
+**命名空间：**`adodb`
 
-**程序集：** adodb （在 adodb.dll)
+**程序集**：adodb（在 adodb.dll 中）

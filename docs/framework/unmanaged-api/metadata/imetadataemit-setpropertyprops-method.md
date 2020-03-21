@@ -15,64 +15,64 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-ms.openlocfilehash: 0fdec87324d6efa0f911e37573093c19b93c0349
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dc6375f3e2cff1a744a8ff2e6a6adab27bbf8af3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440551"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177481"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps 方法
-设置由之前调用[DefineProperty 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)定义的属性的元数据中存储的功能。  
+设置存储在元数据中的属性的功能，该属性由之前调用[DefineProperty 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)定义。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
-HRESULT SetPropertyProps (   
-    [in]  mdProperty      pr,   
-    [in]  DWORD           dwPropFlags,   
-    [in]  DWORD           dwCPlusTypeFlag,   
-    [in]  void const      *pValue,   
-    [in]  ULONG           cchValue,   
-    [in]  mdMethodDef     mdSetter,   
-    [in]  mdMethodDef     mdGetter,   
-    [in]  mdMethodDef     rmdOtherMethods[]   
+HRESULT SetPropertyProps (
+    [in]  mdProperty      pr,
+    [in]  DWORD           dwPropFlags,
+    [in]  DWORD           dwCPlusTypeFlag,
+    [in]  void const      *pValue,
+    [in]  ULONG           cchValue,
+    [in]  mdMethodDef     mdSetter,
+    [in]  mdMethodDef     mdGetter,
+    [in]  mdMethodDef     rmdOtherMethods[]
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `pr`  
- 中要更改的属性的标记  
+ [在]要更改的属性的令牌  
   
  `dwPropFlags`  
- 中属性标志。  
+ [在]属性标志。  
   
  `dwCPlusTypeFlag`  
- 中属性的默认值的类型。  
+ [在]属性的默认值的类型。  
   
  `pValue`  
- 中属性的默认值。  
+ [在]属性的默认值。  
   
  `cchValue`  
- 中`pValue`中的（Unicode）字符的计数。  
+ [在]中的（Unicode） 字符的`pValue`计数。  
   
  `mdSetter`  
- 中用于设置属性值的方法。  
+ [在]设置属性值的方法。  
   
  `mdGetter`  
- 中获取属性值的方法。  
+ [在]获取属性值的方法。  
   
  `rmdOtherMethods[]`  
- 中与属性关联的其他方法的数组。 使用 `mdTokenNil` 标记终止此数组。  
+ [在]与 属性关联的其他方法的数组。 使用令牌终止`mdTokenNil`此数组。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

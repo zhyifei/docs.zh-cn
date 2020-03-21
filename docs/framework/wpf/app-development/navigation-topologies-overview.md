@@ -9,18 +9,18 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 5679bac06b87b3c4e50cbc4a238d7daf3e33a564
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 08f6342095706e5ffe9479f5236457d21474152a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636271"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174194"
 ---
 # <a name="navigation-topologies-overview"></a>导航拓扑概述
-<a name="introduction"></a>本概述介绍 WPF 中的导航拓扑。 三个常见导航拓扑及示例将在随后讨论。  
+<a name="introduction"></a>本概述介绍了 WPF 中的导航拓扑。 三个常见导航拓扑及示例将在随后讨论。  
   
 > [!NOTE]
-> 在阅读本主题之前，你应该熟悉使用页面功能的 WPF 中的结构化导航的概念。 有关这两个主题的详细信息，请参阅[结构化导航概述](structured-navigation-overview.md)。  
+> 在阅读本主题之前，您应该熟悉使用页面函数在 WPF 中进行结构化导航的概念。 有关这两个主题的详细信息，请参阅[结构化导航概述](structured-navigation-overview.md)。  
   
  本主题包含以下各节：  
   
@@ -34,21 +34,21 @@ ms.locfileid: "75636271"
   
 - [在动态生成的拓扑中导航](#Navigation_over_a_Dynamically_Generated_Topology)  
   
-<a name="Navigation_Topologies"></a>   
+<a name="Navigation_Topologies"></a>
 ## <a name="navigation-topologies"></a>导航拓扑  
- 在 WPF 中，导航通常由页面（<xref:System.Windows.Controls.Page>）组成，其中包含在单击时导航到其他页面的超链接（<xref:System.Windows.Documents.Hyperlink>）。 导航到的页面由统一资源标识符（Uri）标识（请参阅[WPF 中的 Pack uri](pack-uris-in-wpf.md)）。 请看下面的简单示例，其中显示了页面、超链接和统一资源标识符（Uri）：  
+ 在 WPF 中，导航通常由<xref:System.Windows.Controls.Page>具有超链接 （<xref:System.Windows.Documents.Hyperlink>） 的页面组成，这些页面在单击时导航到其他页面。 导航到的页面由统一的资源标识符 （URI） 标识（请参阅[WPF 中的 Pack URI）。](pack-uris-in-wpf.md) 请考虑以下显示页面、超链接和统一资源标识符 （URI） 的简单示例：  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page2.xaml#page2)]  
   
- 这些页面在导航拓扑中进行排列，*导航拓扑*中的结构由您如何在页面之间导航。 此特定导航拓扑适用于简单的应用场景，尽管导航可以要求更复杂的拓扑（其中的一些只能在应用程序运行时定义）。  
+ 这些页面排列在*导航拓扑*中，其结构取决于如何在页面之间导航。 此特定导航拓扑适用于简单的应用场景，尽管导航可以要求更复杂的拓扑（其中的一些只能在应用程序运行时定义）。  
   
- 本主题介绍三个常见的导航拓扑：*固定线性*、*固定层次结构*和*动态生成*的拓扑。 每个导航拓扑都带有一个示例，该示例包含一个 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，如下图所示：  
+ 本主题涵盖三种常见的导航拓扑：*固定线性*、*固定分层*和*动态生成*。 每个导航拓扑都使用示例进行演示，该示例具有[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]下图所示的示例：  
   
  ![包含数据项和导航按钮的任务页。](./media/navigation-topologies-overview/navigation-topology-data-items.png)  
   
-<a name="Structured_Navigation_Topologies"></a>   
+<a name="Structured_Navigation_Topologies"></a>
 ## <a name="structured-navigation-topologies"></a>结构化导航拓扑  
  有两种广义类型的导航拓扑：  
   
@@ -58,15 +58,15 @@ ms.locfileid: "75636271"
   
  虽然使用页可以创建导航拓扑，但是这些示例使用页函数，因为它们提供附加支持，从而通过拓扑页简化对传递和返回数据的支持。  
   
-<a name="Navigation_over_a_Fixed_Linear_Topology"></a>   
+<a name="Navigation_over_a_Fixed_Linear_Topology"></a>
 ## <a name="navigation-over-a-fixed-linear-topology"></a>在固定线性拓扑中导航  
- 固定线性拓扑类似于向导的结构，即在固定序列中导航一个或多个向导页。 下图显示了具有固定线性拓扑的向导的高级结构和流：  
+ 固定线性拓扑类似于向导的结构，即在固定序列中导航一个或多个向导页。 下图显示了具有固定线性拓扑的向导的高级结构和流程：  
   
- ![显示固定线性拓扑的关系图。](./media/navigation-topologies-overview/navigation-topology-fixed-linear.png)  
+ ![显示固定线性拓扑的图表。](./media/navigation-topologies-overview/navigation-topology-fixed-linear.png)  
   
  在固定线性拓扑中导航的典型行为包括以下内容：  
   
-- 从调用页导航到启动程序页，启动程序页初始化向导并导航到第一个向导页。 不需要启动程序页（[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]<xref:System.Windows.Navigation.PageFunction%601>），因为调用页可以直接调用第一个向导页。 但是，使用启动程序页可以简化向导初始化，特别是初始化较复杂时。  
+- 从调用页导航到启动程序页，启动程序页初始化向导并导航到第一个向导页。 启动器页 （[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]无<xref:System.Windows.Navigation.PageFunction%601>-） 不是必需的，因为调用页可以直接调用第一个向导页。 但是，使用启动程序页可以简化向导初始化，特别是初始化较复杂时。  
   
 - 用户可以使用“后退”和“前进”按钮（或超链接）在不同的页面之间导航。  
   
@@ -82,19 +82,19 @@ ms.locfileid: "75636271"
   
 - 向导完成（接受或取消）后，向导所包含的页便会从日志中删除。 这使得每个向导实例都保持独立，从而避免潜在的数据反常或状态异常。  
   
-<a name="Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology"></a>   
+<a name="Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology"></a>
 ## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>在固定分层拓扑中动态导航  
- 在某些应用程序中，页允许导航到两个或更多其他页，如下图所示： 
+ 在某些应用程序中，页面允许导航到两个或多个其他页面，如下图所示：
   
- ![显示可以导航到多个页面的页面的关系图。](./media/navigation-topologies-overview/navigation-topology-multiple-pages.png)  
+ ![显示可导航到多个页面的页面的图表。](./media/navigation-topologies-overview/navigation-topology-multiple-pages.png)  
   
- 此结构称为固定分层拓扑，分层的遍历序列通常在运行时由应用程序或用户确定。 运行时，对于允许导航到两个或更多其他页的分层中的每个页面，会收集确定导航到的页所需的数据。 下图说明了基于上图的几个可能的导航序列之一：  
+ 此结构称为固定分层拓扑，分层的遍历序列通常在运行时由应用程序或用户确定。 运行时，对于允许导航到两个或更多其他页的分层中的每个页面，会收集确定导航到的页所需的数据。 下图说明了基于上图的几种可能的导航序列之一：  
   
- ![显示可能的导航序列的关系图。](./media/navigation-topologies-overview/navigation-topology-fixed-hierarchical.png)  
+ ![显示可能的导航序列的图表。](./media/navigation-topologies-overview/navigation-topology-fixed-hierarchical.png)  
   
  即使固定分层结构中的页导航序列在运行时确定，用户体验仍会与固定线性拓扑的用户体验相同：  
   
-- 从调用页导航到启动程序页，启动程序页初始化向导并导航到第一个向导页。 不需要启动程序页（[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]<xref:System.Windows.Navigation.PageFunction%601>），因为调用页可以直接调用第一个向导页。 但是，使用启动程序页可以简化向导初始化，特别是初始化较复杂时。  
+- 从调用页导航到启动程序页，启动程序页初始化向导并导航到第一个向导页。 启动器页 （[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]无<xref:System.Windows.Navigation.PageFunction%601>-） 不是必需的，因为调用页可以直接调用第一个向导页。 但是，使用启动程序页可以简化向导初始化，特别是初始化较复杂时。  
   
 - 用户可以使用“后退”和“前进”按钮（或超链接）在不同的页面之间导航。  
   
@@ -112,19 +112,19 @@ ms.locfileid: "75636271"
   
 - 向导完成（接受或取消）后，向导所包含的页便会从日志中删除。 这使得每个向导实例都保持独立，从而避免潜在的数据反常或状态异常。  
   
-<a name="Navigation_over_a_Dynamically_Generated_Topology"></a>   
+<a name="Navigation_over_a_Dynamically_Generated_Topology"></a>
 ## <a name="navigation-over-a-dynamically-generated-topology"></a>在动态生成的拓扑中导航  
- 在某些应用程序中，两个或更多页的导航序列只能在运行时由用户、应用程序或外部数据确定。 下图说明了一组具有不确定的导航序列的页面：  
+ 在某些应用程序中，两个或更多页的导航序列只能在运行时由用户、应用程序或外部数据确定。 下图说明了一组具有不确定导航序列的页面：  
   
- ![具有不确定的导航序列的一组页。](./media/navigation-topologies-overview/navigation-topology-dynamically-generated.png)  
+ ![具有不确定导航序列的一组页面。](./media/navigation-topologies-overview/navigation-topology-dynamically-generated.png)  
   
- 下图演示了用户在运行时选择的导航序列：  
+ 下图显示了用户在运行时选择的导航序列：  
   
- ![显示在运行时选择的导航序列的关系图。](./media/navigation-topologies-overview/navigation-topology-sequence-chosen-run-time.png)  
+ ![显示运行时选择的导航序列的图表。](./media/navigation-topologies-overview/navigation-topology-sequence-chosen-run-time.png)  
   
  该导航序列称为动态生成的拓扑。 对于用户而言，与其他导航拓扑一样，用户体验与以前拓扑的用户体验相同：  
   
-- 从调用页导航到启动程序页，启动程序页初始化向导并导航到第一个向导页。 不需要启动程序页（[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]<xref:System.Windows.Navigation.PageFunction%601>），因为调用页可以直接调用第一个向导页。 但是，使用启动程序页可以简化向导初始化，特别是初始化较复杂时。  
+- 从调用页导航到启动程序页，启动程序页初始化向导并导航到第一个向导页。 启动器页 （[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]无<xref:System.Windows.Navigation.PageFunction%601>-） 不是必需的，因为调用页可以直接调用第一个向导页。 但是，使用启动程序页可以简化向导初始化，特别是初始化较复杂时。  
   
 - 用户可以使用“后退”和“前进”按钮（或超链接）在不同的页面之间导航。  
   

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-ms.openlocfilehash: 1dbaa159314bf7bb05ff75287f601f619834fd7c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2e7fb97e5c0cb42deff43c411f47e8d30e2257ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794613"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149383"
 ---
 # <a name="paging-through-a-query-result"></a>通过查询结果分页
 查询结果分页是以较小数据子集（即页）的形式返回查询结果的过程。 它通常用于以易于管理的小块形式向用户显示结果。  
   
- **DataAdapter**通过**Fill**方法的重载提供仅返回一页数据的工具。 但是，这可能不是通过大型查询结果进行分页的最佳选择，尽管**DataAdapter**只填充目标<xref:System.Data.DataTable>或<xref:System.Data.DataSet>只使用请求的记录，但仍使用返回整个查询的资源. 若要在从数据源中返回一页数据时不使用返回整个查询的资源，请为查询指定附加条件，使返回的行数减少到只返回所需的行。  
+ **DataAdapter**提供了一个工具，用于通过**填充**方法的重载仅返回一页数据。 但是，这可能不是通过大型查询结果分页的最佳选择，因为尽管**DataAdapter**填充了目标<xref:System.Data.DataTable>或<xref:System.Data.DataSet>仅包含请求的记录，但仍使用返回整个查询的资源。 若要在从数据源中返回一页数据时不使用返回整个查询的资源，请为查询指定附加条件，使返回的行数减少到只返回所需的行。  
   
- 若要使用**Fill**方法返回数据页，请为数据页中的第一条记录指定**startRecord**参数，并为数据页中的记录数指定**maxRecords**参数。  
+ 要使用**Fill**方法返回数据页，请为数据页中的第一个记录指定**startRecord**参数，并为数据页中的记录数指定**maxRecord**参数。  
   
- 下面的代码示例演示如何使用**Fill**方法返回查询结果的第一页，其中页的大小为5条记录。  
+ 以下代码示例演示如何使用**Fill**方法返回查询结果的第一页，其中页面大小为五条记录。  
   
 ```vb  
 Dim currentIndex As Integer = 0  
@@ -46,7 +46,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- 在上面的示例中，**数据集**只填充了五条记录，但返回了整个**Orders**表。 若要用相同的五个记录填充**数据集**，但只返回5条记录，请在 SQL 语句中使用 TOP 和 WHERE 子句，如下面的代码示例所示。  
+ 在前面的示例中 **，DataSet**只填充五条记录，但返回整个**订单**表。 要用这五条记录填充**DataSet，** 但仅返回五条记录，请使用 SQL 语句中的 TOP 和 WHERE 子句，如以下代码示例所示。  
   
 ```vb  
 Dim pageSize As Integer = 5  
@@ -57,13 +57,13 @@ Dim adapter As SqlDataAdapter = _
   New SqlDataAdapter(orderSQL, connection)  
   
 Dim dataSet As DataSet = New DataSet()  
-adapter.Fill(dataSet, "Orders")   
+adapter.Fill(dataSet, "Orders")
 ```  
   
 ```csharp  
 int pageSize = 5;  
   
-string orderSQL = "SELECT TOP " + pageSize +   
+string orderSQL = "SELECT TOP " + pageSize +
   " * FROM Orders ORDER BY OrderID";  
 SqlDataAdapter adapter = new SqlDataAdapter(orderSQL, connection);  
   
@@ -79,11 +79,11 @@ Dim lastRecord As String = _
 ```  
   
 ```csharp  
-string lastRecord =   
+string lastRecord =
   dataSet.Tables["Orders"].Rows[pageSize - 1]["OrderID"].ToString();  
 ```  
   
- 若要使用**Fill**方法的重载返回**startRecord**和**maxRecords**参数的下一页记录，请将当前记录索引按页面大小递增，并填充表。 请记住，即使只有一页记录添加到**数据集**，数据库服务器仍返回整个查询结果。 在以下代码示例中，先清除表行，然后再用下一页数据填充这些表行。 您可能需要在本地缓存中保留一定数量的返回行，以减少与数据库服务器的往返次数。  
+ 要使用取**startRecord**和**maxRecord**参数的**Fill**方法重载返回记录的下一页，请按页大小增加当前记录索引并填充表。 请记住，数据库服务器返回整个查询结果，即使只向**DataSet**添加了一页记录。 在以下代码示例中，先清除表行，然后再用下一页数据填充这些表行。 您可能需要在本地缓存中保留一定数量的返回行，以减少与数据库服务器的往返次数。  
   
 ```vb  
 currentIndex = currentIndex + pageSize  
@@ -114,7 +114,7 @@ adapter.Fill(dataSet, "Orders")
 ```  
   
 ```csharp  
-orderSQL = "SELECT TOP " + pageSize +   
+orderSQL = "SELECT TOP " + pageSize +
   " * FROM Orders WHERE OrderID > " + lastRecord + " ORDER BY OrderID";  
 adapter.SelectCommand.CommandText = orderSQL;  
   
@@ -123,7 +123,7 @@ dataSet.Tables["Orders"].Rows.Clear();
 adapter.Fill(dataSet, "Orders");  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [DataAdapters 和 DataReaders](dataadapters-and-datareaders.md)
 - [ADO.NET 概述](ado-net-overview.md)

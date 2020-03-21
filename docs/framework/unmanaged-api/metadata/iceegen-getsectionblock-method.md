@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-ms.openlocfilehash: 0731053fb37c775d25052a5fd99a479a44ff5862
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a494b1aaa762549528e92ab93d18929ef73eb8da
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434879"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176079"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock 方法
 获取代码库的节块。  
@@ -31,37 +31,37 @@ ms.locfileid: "74434879"
   
 ```cpp  
 HRESULT GetSectionBlock (  
-    [in]  HCEESECTION    section,     
+    [in]  HCEESECTION    section,
     [in]  ULONG          len,  
     [in]  ULONG          align     = 1,  
     [out] void           **ppBytes = 0  
-);   
+);
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `section`  
- 中要从中检索基本代码块的部分。  
+ [在]从中检索代码库块的部分。  
   
  `len`  
- 中要检索的块的长度。  
+ [在]要检索的块的长度。  
   
  `align`  
- 中相对于部分开头的字节，用于对齐块的第一个字节。 这是块在节中的位置。  
+ [在]相对于节的开头的字节，用于对齐块的第一个字节。 这是块在节内的位置。  
   
  `ppBytes`  
- 弄一个指针，指向接收检索到的块的地址的位置。  
+ [出]指向接收检索的块地址的位置的指针。  
   
 ## <a name="remarks"></a>备注  
- 仅当你有其他方法未处理的特殊部分要求时，才调用 `GetSectionBlock`。  
+ 仅当`GetSectionBlock`您有特殊节要求时，其他方法未处理，才调用。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

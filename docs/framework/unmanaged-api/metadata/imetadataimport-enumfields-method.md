@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d23247e-c58c-45db-afd8-83aa89cde18e
 topic_type:
 - apiref
-ms.openlocfilehash: 2d32dc8ae59fc1a4a189d849437cc95ea3b94a4d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: be2845d1d660d86447cfbb6f2845a8e68b727e66
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449537"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175507"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields 方法
 枚举指定的 TypeDef 标记所引用的类型的 FieldDef 标记。  
@@ -28,46 +28,46 @@ ms.locfileid: "74449537"
 ## <a name="syntax"></a>语法  
   
 ```cpp  
-HRESULT EnumFields (   
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   cl,   
-   [out]     mdFieldDef  rFields[],   
-   [in]      ULONG       cMax,   
+HRESULT EnumFields (
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   cl,
+   [out]     mdFieldDef  rFields[],
+   [in]      ULONG       cMax,
    [out]     ULONG       *pcTokens  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `phEnum`  
- [in，out]指向枚举器的指针。  
+ [进出]指向枚举器的指针。  
   
  `cl`  
- 中要枚举其字段的类的 TypeDef 标记。  
+ [在]要枚举其字段的类的 TypeDef 令牌。  
   
  `rFields`  
- 弄FieldDef 标记的列表。  
+ [出]FieldDef 令牌的列表。  
   
  `cMax`  
  [in] `rFields` 数组的最大大小。  
   
  `pcTokens`  
- 弄`rFields`中返回的 FieldDef 令牌的实际数量。  
+ [出]在 中`rFields`返回的实际字段Def 令牌数。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields` 成功返回。|  
-|`S_FALSE`|没有要枚举的字段。 在这种情况下，`pcTokens` 为零。|  
+|`S_OK`|`EnumFields`已成功返回。|  
+|`S_FALSE`|没有要枚举的字段。 在这种情况下，`pcTokens`为零。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包含在 MsCorEE.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

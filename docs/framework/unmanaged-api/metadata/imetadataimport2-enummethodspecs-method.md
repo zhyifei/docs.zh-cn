@@ -15,59 +15,59 @@ helpviewer_keywords:
 ms.assetid: b3fc1e6c-bcb6-4915-baf8-7dc0a31b8724
 topic_type:
 - apiref
-ms.openlocfilehash: 4a1de144163ec2b4952bd16b59fb1c92b706631b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2df53ba53c64e042abc54a1d2ac043d301acdde9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428298"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177175"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>IMetaDataImport2::EnumMethodSpecs 方法
-获取与指定的 MethodDef 或 MemberRef 标记相关联的 MethodSpec 标记数组的枚举器。  
+获取与指定方法Def或会员Ref令牌关联的 MethodSpec 令牌数组的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT EnumMethodSpecs (  
-    [in, out] HCORENUM      *phEnum,   
+    [in, out] HCORENUM      *phEnum,
     [in]      mdToken       tk,  
     [out]     mdMethodSpec  rMethodSpecs[],  
     [in]      ULONG         cMax,  
     [out]     ULONG         *pcMethodSpecs  
-);   
+);
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `phEnum`  
- [in，out]指向 `rMethodSpecs`的枚举器的指针。  
+ [进出]指向 的枚举器的`rMethodSpecs`指针。  
   
  `tk`  
- 中MemberRef 或 MethodDef 标记，表示要枚举其 MethodSpec 标记的方法。 如果 `tk` 的值为0（零），则将枚举范围内的所有 MethodSpec 标记。  
+ [在]代表其方法Spec令牌的方法的会员Ref或 MethodDef 令牌。 如果 值`tk`为 0（零），则将枚举作用域中的所有 MethodSpec 令牌。  
   
  `rMethodSpecs`  
- 弄要枚举的 MethodSpec 标记的数组。  
+ [出]要枚举的 MethodSpec 令牌的数组。  
   
  `cMax`  
- 中请求的最大标记数 `rMethodSpecs`。  
+ [在]要放置在 中`rMethodSpecs`的最大令牌数。  
   
  `pcMethodSpecs`  
- 弄`rMethodSpecs`中放置的标记数。  
+ [出]放置在 的`rMethodSpecs`返回的令牌数。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSpecs` 成功返回。|  
-|`S_FALSE`|`phEnum` 没有成员元素。 在这种情况下，`pcMethodSpecs` 设置为0（零）。|  
+|`S_OK`|`EnumMethodSpecs`已成功返回。|  
+|`S_FALSE`|`phEnum`没有成员元素。 在这种情况下，`pcMethodSpecs`设置为 0（零）。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

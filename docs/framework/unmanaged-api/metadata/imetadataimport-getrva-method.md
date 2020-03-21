@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: ea422217-988b-4acd-b2db-c55357938275
 topic_type:
 - apiref
-ms.openlocfilehash: a3a5cadc1b5a9df7967aae271ff10296843121dd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 190bcacc84646cfd9294cf2b6b53b0474f38758f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436956"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177218"
 ---
 # <a name="imetadataimportgetrva-method"></a>IMetaDataImport::GetRVA 方法
-获取指定标记所表示的方法或字段的相对虚拟地址（RVA）和实现标志。  
+获取由指定令牌表示的方法或字段的相对虚拟地址 （RVA） 和实现标志。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT GetRVA (  
-   [in]  mdToken     tk,   
-   [out] ULONG       *pulCodeRVA,   
+   [in]  mdToken     tk,
+   [out] ULONG       *pulCodeRVA,
    [out]  DWORD      *pdwImplFlags  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `tk`  
- 中一个 MethodDef 或 FieldDef 元数据标记，它表示要为其返回 RVA 的代码对象。 如果标记为 FieldDef，则字段必须是全局变量。  
+ [在]表示要返回 RVA 的代码对象的 MethodDef 或 FieldDef 元数据令牌。 如果令牌是 FieldDef，则该字段必须是全局变量。  
   
  `pulCodeRVA`  
- 弄指向由标记表示的代码对象的相对虚拟地址的指针。  
+ [出]指向令牌表示的代码对象的相对虚拟地址的指针。  
   
  `pdwImplFlags`  
- 弄一个指针，指向方法的实现标志。 此值是[CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md)枚举中的位掩码。 仅当 `tk` 是 MethodDef 标记时，`pdwImplFlags` 的值才有效。  
+ [出]指向方法的实现标志的指针。 此值是[CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md)枚举中的位掩码。 仅当 是`pdwImplFlags`MethodDef`tk`令牌时，值才有效。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包含在 MsCorEE.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
