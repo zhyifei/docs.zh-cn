@@ -15,52 +15,52 @@ helpviewer_keywords:
 ms.assetid: 36cffbf7-82ca-4cf9-bf60-50ab491ac2d9
 topic_type:
 - apiref
-ms.openlocfilehash: 4e11a52c977de7796043868e80c147d8cfd1f506
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a0fd3fdb6dde9fd6b88ea6c64ed907c8a3e9e46d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431571"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175793"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a>IMetaDataEmit::DefinePermissionSet 方法
-使用指定的元数据签名创建权限集的定义，并获取该权限集定义的标记。  
+为具有指定元数据签名的权限集创建定义，并获取该权限集定义的令牌。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT DefinePermissionSet (  
-    [in]  mdToken        tk,   
-    [in]  DWORD          dwAction,   
-    [in]  void const     *pvPermission,   
-    [in]  ULONG          cbPermission,   
-    [out] mdPermission   *ppm   
+    [in]  mdToken        tk,
+    [in]  DWORD          dwAction,
+    [in]  void const     *pvPermission,
+    [in]  ULONG          cbPermission,
+    [out] mdPermission   *ppm
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `tk`  
- 中要修饰的对象。  
+ [在]要修饰的对象。  
   
  `dwAction`  
- 中一个[CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md)值，指定要使用的声明性安全类型。  
+ [在]指定要使用的声明性安全性类型的[CorDecl 安全](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md)值。  
   
  `pvPermission`  
- 中权限 BLOB。  
+ [在]权限 BLOB。  
   
  `cbPermission`  
- 中`pvPermission`的大小（以字节为单位）。  
+ [在]的大小（以字节为单位）的大小`pvPermission`。  
   
  `ppm`  
- 弄返回的权限标记。  
+ [出]返回的权限令牌。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

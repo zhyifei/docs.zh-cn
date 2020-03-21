@@ -15,55 +15,55 @@ helpviewer_keywords:
 ms.assetid: 9543b111-5705-40c9-935c-a3ffc7a581aa
 topic_type:
 - apiref
-ms.openlocfilehash: 2748460826deb422a3851713db11343209fe449a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 22141cf46a965c0624c076bd1d86d2624e5a09f3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449553"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176014"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources 方法
-获取一个指针，该指针指向当前程序集清单中引用的资源的枚举器。  
+获取当前程序集清单中引用的资源的指向枚举器的指针。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT EnumManifestResources (  
-    [in, out] HCORENUM         *phEnum,   
-    [out] mdManifestResource   rManifestResources[],   
-    [in]  ULONG                cMax,   
+    [in, out] HCORENUM         *phEnum,
+    [out] mdManifestResource   rManifestResources[],
+    [in]  ULONG                cMax,
     [out] ULONG                *pcTokens  
-);   
+);
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `phEnum`  
- [in，out]指向枚举器的指针。 当首次调用 `EnumManifestResources` 方法时，此值必须为 null 值。  
+ [进出]指向枚举器的指针。 当首次调用该方法时，`EnumManifestResources`这必须是 null 值。  
   
  `rManifestResources`  
- 弄用于存储 `mdManifestResource` 元数据标记的数组。  
+ [出]用于存储元数据令牌的`mdManifestResource`数组。  
   
  `cMax`  
- 中可放置在 `rManifestResources`中的 `mdManifestResource` 标记的最大数目。  
+ [在]可放置在 中`mdManifestResource`的最大令牌数`rManifestResources`。  
   
  `pcTokens`  
- 弄实际置于 `rManifestResources`中 `mdManifestResource` 标记的数目。  
+ [出]实际放置在`mdManifestResource`中的`rManifestResources`令牌数。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumManifestResources` 成功返回。|  
-|`S_FALSE`|没有要枚举的令牌。 在这种情况下，`pcTokens` 设置为零。|  
+|`S_OK`|`EnumManifestResources`已成功返回。|  
+|`S_FALSE`|没有要枚举的令牌。 在这种情况下，`pcTokens`设置为零。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

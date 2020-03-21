@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50a58a83-6287-40a4-b315-47823cea0a5c
 topic_type:
 - apiref
-ms.openlocfilehash: f1262181fa745e1b6d3fc48a4ad728c1020705b5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d02943f28435fc00aad8e319aa260a24cca5e307
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434313"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177592"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>IMetaDataEmit::GetTokenFromSig 方法
 获取指定元数据签名的令牌。  
@@ -28,31 +28,31 @@ ms.locfileid: "74434313"
 ## <a name="syntax"></a>语法  
   
 ```cpp  
-HRESULT GetTokenFromSig (   
-    [in]  PCCOR_SIGNATURE pvSig,   
-    [in]  ULONG       cbSig,   
-    [out] mdSignature *pmsig   
+HRESULT GetTokenFromSig (
+    [in]  PCCOR_SIGNATURE pvSig,
+    [in]  ULONG       cbSig,
+    [out] mdSignature *pmsig
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `pvSig`  
- 中要保持和存储的签名。  
+ [在]要保留和存储的签名。  
   
  `cbSig`  
- 中`pvSig`中的字节计数。  
+ [在]中的`pvSig`字节计数。  
   
  `pmsig`  
- 弄分配 `mdSignature` 标记。  
+ [出]分配的`mdSignature`令牌。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

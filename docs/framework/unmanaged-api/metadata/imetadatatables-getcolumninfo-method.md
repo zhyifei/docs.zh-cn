@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-ms.openlocfilehash: 854d3ad28cc00c03e903b9e1d2ce3863e3ceef17
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cc8aac32149fed952737d928e16a8f6efc448c79
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436105"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177124"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo 方法
 获取有关指定表中指定列的数据。  
@@ -28,7 +28,7 @@ ms.locfileid: "74436105"
 ## <a name="syntax"></a>语法  
   
 ```cpp  
-HRESULT GetColumnInfo (   
+HRESULT GetColumnInfo (
     [in]  ULONG        ixTbl,  
     [in]  ULONG        ixCol,  
     [out] ULONG        *poCol,  
@@ -38,61 +38,61 @@ HRESULT GetColumnInfo (
 );  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 =======
 
  `ixTbl`  
- 中所需表的索引。  
+ [在]所需表的索引。  
   
  `ixCol`  
- 中所需列的索引。  
+ [在]所需列的索引。  
   
  `poCol`  
- 弄指向行中列的偏移量的指针。  
+ [出]指向行中列偏移的指针。  
   
  `pcbCol`  
- 弄一个指针，指向列的大小（以字节为单位）。  
+ [出]指向列的大小（以字节为单位）的指针。  
   
  `pType`  
- 弄一个指针，指向列中值的类型。  
+ [出]指向列中值类型的指针。  
   
  `ppName`  
- 弄指向列名的指针的指针。  
- 
+ [出]指向列名称的指针。  
+
 ## <a name="remarks"></a>备注
 
-返回的列类型位于值的范围内：
+返回的列类型在值范围内：
 
-| pType                    | 说明   | Helper 函数                   |
+| p类型                    | 说明   | 帮助器功能                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`.。`iRidMax`<br>（0-63）   | 去掉           | **IsRidType**<br>**IsRidOrToken** |
-| `iCodedToken`.。`iCodedTokenMax`<br>（64.. 95） | 编码标记 | **IsCodedTokenType** <br>**IsRidOrToken** |
-| `iSHORT` （96）            | Int16         | **IsFixedType**                   |
-| `iUSHORT` （97）           | UInt16        | **IsFixedType**                   |
-| `iLONG` （98）             | Int32         | **IsFixedType**                   |
-| `iULONG` （99）            | UInt32        | **IsFixedType**                   |
-| `iBYTE` （100）            | 字节          | **IsFixedType**                   |
-| `iSTRING` （101）          | String        | **IsHeapType**                    |
-| `iGUID` （102）            | Guid          | **IsHeapType**                    |
-| `iBLOB` （103）            | Blob          | **IsHeapType**                    |
+| `0`..`iRidMax`<br>(0..63)   | 摆脱           | **IsRidType**<br>**IsRidorToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | 编码令牌 | **已编码令牌类型** <br>**IsRidorToken** |
+| `iSHORT`(96)            | Int16         | **固定类型**                   |
+| `iUSHORT`(97)           | UInt16        | **固定类型**                   |
+| `iLONG`(98)             | Int32         | **固定类型**                   |
+| `iULONG`(99)            | UInt32        | **固定类型**                   |
+| `iBYTE`(100)            | Byte          | **固定类型**                   |
+| `iSTRING`(101)          | String        | **IsHeap 类型**                    |
+| `iGUID`(102)            | Guid          | **IsHeap 类型**                    |
+| `iBLOB`(103)            | Blob          | **IsHeap 类型**                    |
 
-可以使用读取存储在*堆*中的值（即 `IsHeapType == true`）：
+可以使用以下方式读取堆中存储*的值（即* `IsHeapType == true`），
 
-- `iSTRING`： **IMetadataTables. GetString**
-- `iGUID`： **IMetadataTables. GetGUID**
-- `iBLOB`： **IMetadataTables. GetBlob**
+- `iSTRING`**：IMetadatatables.GetString**
+- `iGUID`**：IMetadatatables.GetGUID**
+- `iBLOB`**：IMetadatatables.获取Blob**
 
 > [!IMPORTANT]
-> 若要使用上表中定义的常量，请包含*cor*头文件提供的指令 `#define _DEFINE_META_DATA_META_CONSTANTS`。
+> 要使用上表中定义的常量，请包括`#define _DEFINE_META_DATA_META_CONSTANTS`*cor.h*标头文件提供的指令。
 
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: bd6ccde5-d578-48d8-abed-b474fbd48d13
 topic_type:
 - apiref
-ms.openlocfilehash: 49023424c21fced1c49b16ecdbea93c654b5e883
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 97f0d81c389ffd0bd8a69df2ca39322d726f98bc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448387"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176625"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod 方法
-获取此方法在中具有线条的文档。  
+获取此方法中具有行的文档。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT GetDocumentsForMethod(  
     [in]  ULONG32  cDocs,  
-    [out] ULONG32  *pcDocs,   
+    [out] ULONG32  *pcDocs,
     [in, size_is(cDocs)] ISymUnmanagedDocument* documents[]);  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `cDocs`  
- 中`pcDocs`所指向的缓冲区的长度。  
+ [在]指向 的缓冲区的长度`pcDocs`。  
   
  `pcDocs`  
- 弄指向 `ULONG32` 的指针，该指针接收包含文档所需的缓冲区大小（以字符数表示）。  
+ [出]指向 的指针`ULONG32`，该指针接收包含文档所需的缓冲区的大小（以字符表示）。  
   
  `documents`  
- 中包含文档的缓冲区。  
+ [在]包含文档的缓冲区。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则 S_OK;否则为错误代码。  
+ 如果方法成功，S_OK;否则，错误代码。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym，CorSym  
+ **标题：** 科西姆.伊德尔，科西姆.h  
   
 ## <a name="see-also"></a>另请参阅
 

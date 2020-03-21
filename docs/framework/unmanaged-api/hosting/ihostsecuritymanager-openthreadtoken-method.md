@@ -15,62 +15,62 @@ helpviewer_keywords:
 ms.assetid: d5999052-8bf0-4a9e-8621-da6284406b18
 topic_type:
 - apiref
-ms.openlocfilehash: 2ced153798355aff882f0244f3dd946c39dea2bd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11d042ea9eecc8d428761da6eaa15f7c2907ebd8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121472"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176261"
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken 方法
-打开与当前正在执行的线程关联的自由访问令牌。  
+打开与当前正在执行的线程关联的可自由访问令牌。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT OpenThreadToken (  
-    [in]  DWORD    dwDesiredAccess,   
-    [in]  BOOL     bOpenAsSelf,   
+    [in]  DWORD    dwDesiredAccess,
+    [in]  BOOL     bOpenAsSelf,
     [out] HANDLE   *phThreadToken  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `dwDesiredAccess`  
- 中访问值的掩码，指定请求的线程标记访问类型。 这些值在 Win32 `OpenThreadToken` 函数中定义。 请求的访问类型对令牌的自由访问控制列表（DACL）进行协调，以确定要授予或拒绝的访问权限的类型。  
+ [在]指定对线程令牌的请求访问类型的访问值的掩码。 这些值在 Win32`OpenThreadToken`函数中定义。 请求的访问类型与令牌的任意访问控制列表 （DACL） 协调，以确定授予或拒绝的访问类型。  
   
  `bOpenAsSelf`  
- [in] `true` 指定应使用调用线程的进程的安全上下文进行访问检查;`false` 指定应使用调用线程本身的安全上下文来执行访问检查。 如果线程正在模拟客户端，安全上下文可以是客户端进程的安全上下文。  
+ [在]`true`指定应使用调用线程的进程的安全上下文进行访问检查;`false`指定应使用调用线程本身的安全上下文执行访问检查。 如果线程正在模拟客户端，则安全上下文可以是客户端进程的安全上下文。  
   
  `phThreadToken`  
- 弄指向新打开的访问令牌的指针。  
+ [出]指向新打开的访问令牌的指针。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`OpenThreadToken` 成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
-|HOST_E_TIMEOUT|调用超时。|  
-|HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
-|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
+|S_OK|`OpenThreadToken`已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|公共语言运行时 （CLR） 尚未加载到进程中，或者 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|呼叫超时。|  
+|HOST_E_NOT_OWNER|调用方不拥有锁。|  
+|HOST_E_ABANDONED|当阻塞的线程或光纤等待事件时，事件已被取消。|  
+|E_FAIL|发生了未知的灾难性故障。 当方法返回E_FAIL时，CLR 在进程中不再可用。 对托管方法的后续调用返回HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- `IHostSecurityManager::OpenThreadToken` 的行为类似于具有相同名称的对应 Win32 函数，不同之处在于 Win32 函数允许调用方将句柄传入任意线程，而 `IHostSecurityManager::OpenThreadToken` 只打开与调用线程关联的标记。  
+ `IHostSecurityManager::OpenThreadToken`行为行为类似于同名的相应 Win32 函数，只不过 Win32 函数允许调用方在句柄中传递到任意线程，同时`IHostSecurityManager::OpenThreadToken`仅打开与调用线程关联的令牌。  
   
- `HANDLE` 类型不符合 COM 要求，也就是说，其大小特定于操作系统，并需要自定义封送处理。 因此，此令牌仅在该进程内的 CLR 和主机之间使用。  
+ 类型`HANDLE`不符合 COM，即其大小特定于操作系统，并且需要自定义封送。 因此，此令牌仅用于进程，在 CLR 和主机之间。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Mscoree.dll  
+ **标题：** MSCorEE.h  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包含在 MSCorEE.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IHostSecurityContext 接口](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
 - [IHostSecurityManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)

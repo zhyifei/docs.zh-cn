@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: 5f83cb96e39b257a1d35786130cd5ed31d071de7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 51741aa3a6d965c1e9743081628d8ad62e8fb04e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443868"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176196"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 枚举
-指定可在其上应用属性的应用程序元素。  
+指定可应用属性的应用程序元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,52 +44,52 @@ typedef enum CorAttributeTargets
     catDelegate            = 0x1000,  
     catGenericParameter    = 0x4000,  
   
-    catAll                 =   
-        catAssembly | catModule | catClass | catStruct |   
-        catEnum | catConstructor | catMethod | catProperty |   
-        catField | catEvent | catInterface | catParameter |   
+    catAll                 =
+        catAssembly | catModule | catClass | catStruct |
+        catEnum | catConstructor | catMethod | catProperty |
+        catField | catEvent | catInterface | catParameter |
         catDelegate | catGenericParameter,  
   
-    catClassMembers        =   
-        catClass | catStruct | catEnum | catConstructor |   
-        catMethod | catProperty | catField | catEvent |   
+    catClassMembers        =
+        catClass | catStruct | catEnum | catConstructor |
+        catMethod | catProperty | catField | catEvent |
         catDelegate | catInterface  
   
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
 |成员|说明|  
 |------------|-----------------|  
-|`catAssembly`|特性可应用于程序集。|  
-|`catModule`|特性可应用到可移植的可执行文件（.dll 或 .exe）模块。|  
-|`catClass`|特性可应用于类。|  
-|`catStruct`|特性可应用于结构;即值类型。|  
-|`catEnum`|特性可应用于枚举。|  
-|`catConstructor`|特性可应用于构造函数。|  
-|`catMethod`|特性可应用于方法。|  
-|`catProperty`|特性可应用于一个属性。|  
-|`catField`|特性可应用于字段。|  
-|`catEvent`|特性可应用于事件。|  
-|`catInterface`|特性可应用于接口。|  
-|`catParameter`|特性可应用于参数。|  
-|`catDelegate`|特性可应用于委托。|  
-|`catGenericParameter`|特性可应用于泛型参数。|  
-|`catAll`|特性可应用于任何应用程序元素。|  
-|`catClassMembers`|特性可应用于类的成员。|  
+|`catAssembly`|可以对程序集应用属性。|  
+|`catModule`|属性可以应用于可移植可执行 （.dll 或 .exe） 模块。|  
+|`catClass`|可以对类应用属性。|  
+|`catStruct`|可以对结构应用属性，即值类型。|  
+|`catEnum`|可以对枚举应用属性。|  
+|`catConstructor`|可以对构造函数应用属性。|  
+|`catMethod`|可以对方法应用属性。|  
+|`catProperty`|可以对属性 (Property) 应用属性 (Attribute)。|  
+|`catField`|可以对字段应用属性。|  
+|`catEvent`|可以对事件应用属性。|  
+|`catInterface`|可以对接口应用属性。|  
+|`catParameter`|可以对参数应用属性。|  
+|`catDelegate`|可以对委托应用属性。|  
+|`catGenericParameter`|可以对泛型参数应用属性。|  
+|`catAll`|可以对任何应用程序元素应用属性。|  
+|`catClassMembers`|属性可以应用于类的成员。|  
   
 ## <a name="remarks"></a>备注  
- `CorAttributeTargets` 枚举值可以与按位 "或" 运算结合使用来获取首选组合。  
+ 枚`CorAttributeTargets`举值可以与位或操作组合，以获得首选组合。  
   
- `CorAttributeTargets` 与托管 <xref:System.AttributeTargets?displayProperty=nameWithType> 枚举类似。  
+ 并行`CorAttributeTargets`化托管<xref:System.AttributeTargets?displayProperty=nameWithType>枚举。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Corhdr。h  
+ **标题：** 科尔赫德  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85667d38-611c-45a9-938d-930ac7a7b681
 topic_type:
 - apiref
-ms.openlocfilehash: 106ffeee521f69a73628b1fb6a611abc733583f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25baa6ffda3d50915cc7898275d6a557c1b3e947
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431873"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176027"
 ---
 # <a name="imetadataassemblyemitsetfileprops-method"></a>IMetaDataAssemblyEmit::SetFileProps 方法
 修改指定的 `File` 元数据结构。  
@@ -30,36 +30,36 @@ ms.locfileid: "74431873"
 ```cpp  
 HRESULT SetFileProps (  
     [in] mdFile        file,  
-    [in] const void    *pbHashValue,   
+    [in] const void    *pbHashValue,
     [in] ULONG         cbHashValue,  
     [in] DWORD         dwFileFlags  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `file`  
- 中用于指定要修改的 `File` 元数据结构的元数据标记。  
+ [在]指定要修改的`File`元数据结构的元数据令牌。  
   
  `pbHashValue`  
- 中指向与该文件关联的哈希数据的指针。  
+ [在]指向与文件关联的哈希数据的指针。  
   
  `cbHashValue`  
- 中`pbHashValue`的大小（以字节为单位）。  
+ [在]的大小（以字节为单位）。 `pbHashValue`  
   
  `dwFileFlags`  
- 中[CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)值的按位组合，用于指定文件的各种属性。  
+ [在][CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)值的位组合，用于指定文件的各种属性。  
   
 ## <a name="remarks"></a>备注  
- 若要创建 `File` 元数据结构，请使用[IMetaDataAssemblyEmit：:D efinefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)方法。  
+ 要创建`File`元数据结构，请使用[IMetaDataAssemblyEmit：:DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

@@ -15,47 +15,47 @@ helpviewer_keywords:
 ms.assetid: 15cfc300-8231-4ecb-9a04-19851c3eb484
 topic_type:
 - apiref
-ms.openlocfilehash: 62973a36e899b1a8c618888e5245bfc00d8ad777
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f7a943627e2087e6b8c78ced9fc32824843d44fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866049"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175130"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply 方法
-通知探查器远程处理调用的服务器端部分已完成，并且客户端现在正在接收，并即将处理答复。  
+通知探查器，远程呼叫的服务器端部分已完成，客户端正在接收并即将处理答复。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT RemotingClientReceivingReply(  
     [in] GUID *pCookie,  
-    [in] BOOL fIsAsync);   
+    [in] BOOL fIsAsync);
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `pCookie`  
- 中与以下条件下的[ICorProfilerCallback：： RemotingServerSendingReply](icorprofilercallback-remotingserversendingreply-method.md)中提供的值对应的值：  
+ [在]与[ICorProfiler 回拨](icorprofilercallback-remotingserversendingreply-method.md)中提供的值相对应的值：：在以下条件下重新发送服务器：  
   
-- 远程处理 GUID cookie 处于活动状态。  
+- 正在激活 GUID Cookie。  
   
 - 通道成功传输消息。  
   
-- GUID cookie 在服务器端进程中处于活动状态。  
+- GUID Cookie 在服务器端进程中处于活动状态。  
   
- 这样就可以轻松地配对远程调用。  
+ 这允许轻松配对远程呼叫。  
   
  `fIsAsync`  
- 中如果调用是异步的，则为 `true` 的值;否则，`false`。  
+ [在]`true`如果调用是异步的，则为值;否则， `false`.  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

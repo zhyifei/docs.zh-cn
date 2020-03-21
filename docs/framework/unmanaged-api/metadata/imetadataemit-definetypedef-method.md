@@ -15,59 +15,59 @@ helpviewer_keywords:
 ms.assetid: dd11c485-be95-4b97-9cd8-68679a4fb432
 topic_type:
 - apiref
-ms.openlocfilehash: 031996813718a074eebab62ff54a2de52b898c22
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4f1c3e823b35fcf7d5935eee111e042b2291d216
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450213"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175754"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef 方法
-创建公共语言运行时类型的类型定义，并获取该类型定义的元数据标记。  
+为通用语言运行时类型创建类型定义，并获取该类型定义的元数据令牌。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
-HRESULT DefineTypeDef (   
-    [in]  LPCWSTR     szTypeDef,   
-    [in]  DWORD       dwTypeDefFlags,   
-    [in]  mdToken     tkExtends,   
-    [in]  mdToken     rtkImplements[],   
+HRESULT DefineTypeDef (
+    [in]  LPCWSTR     szTypeDef,
+    [in]  DWORD       dwTypeDefFlags,
+    [in]  mdToken     tkExtends,
+    [in]  mdToken     rtkImplements[],
     [out] mdTypeDef   *ptd  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `szTypeDef`  
- 中Unicode 中类型的名称。  
+ [在]Unicode 中类型的名称。  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` 特性。 这是 `CoreTypeAttr` 值的位掩码。  
+ [在]`TypeDef`属性。 这是值的`CoreTypeAttr`位掩码。  
   
  `tkExtends`  
- 中基类的标记。 它必须是 `mdTypeDef` 或 `mdTypeRef` 令牌。  
+ [在]基类的令牌。 它必须是 或`mdTypeDef``mdTypeRef`标记。  
   
  `rtkImplements`  
- 中标记的数组，该数组指定此类或接口实现的接口。  
+ [在]指定此类或接口实现的接口的令牌数组。  
   
  `ptd`  
- 弄分配 `mdTypeDef` 标记。  
+ [出]分配的`mdTypeDef`令牌。  
   
 ## <a name="remarks"></a>备注  
- `dwTypeDefFlags` 中的标志指定正在创建的类型是通用类型系统引用类型（类或接口）还是通用类型系统值类型。  
+ 中`dwTypeDefFlags`的标志指定正在创建的类型是公共类型系统引用类型（类或接口）还是公共类型系统值类型。  
   
- 根据提供的参数，此方法也可以为此类型继承或实现的每个接口创建 `mdInterfaceImpl` 记录。 但是，此方法不会返回这些 `mdInterfaceImpl` 标记中的任何一个。 如果客户端想要稍后添加或修改 `mdInterfaceImpl` 令牌，则必须使用 `IMetaDataImport` 接口对其进行枚举。 如果要使用 `[default]` 接口的 COM 语义，应提供默认接口作为 `rtkImplements`中的第一个元素;在类上设置的自定义属性将指示类具有默认接口（始终假定为为类声明的第一个 `mdInterfaceImpl` 标记）。  
+ 根据提供的参数，此方法作为副作用，还可以为此类型继承或实现的每个接口创建`mdInterfaceImpl`记录。 但是，此方法不会返回任何这些`mdInterfaceImpl`令牌。 如果客户端希望以后添加或修改`mdInterfaceImpl`令牌，则必须使用接口`IMetaDataImport`枚举它们。 如果要使用接口的`[default]`COM 语义，则应将默认接口作为`rtkImplements`中的第一个元素提供 。类上的自定义属性集将指示类具有默认接口（始终假定该接口是为类声明的第一个`mdInterfaceImpl`令牌）。  
   
- `rtkImplements` 数组的每个元素都包含一个 `mdTypeDef` 或 `mdTypeRef` 标记。 数组中的最后一个元素必须是 `mdTokenNil`。  
+ `rtkImplements`数组的每个元素都包含 或`mdTypeDef``mdTypeRef`令牌。 数组中的最后一个元素必须为`mdTokenNil`。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

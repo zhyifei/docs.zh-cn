@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: 14218249-bdec-48ae-b5fc-9f57f7ca8501
 topic_type:
 - apiref
-ms.openlocfilehash: 04e0fabfc0d70c9d922e0715f32bd07237ce8741
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 492c37540ad68b5b134520218eedc59013c68519
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442311"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175923"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a>IMetaDataDispenser::OpenScopeOnMemory 方法
-打开包含现有元数据的内存区域。 也就是说，此方法将打开一个指定的内存区域，其中的现有数据将被视为元数据。  
+打开包含现有元数据的内存区域。 也就是说，此方法将打开指定内存区域，其中现有数据被视为元数据。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
 HRESULT OpenScopeOnMemory (  
-    [in]  LPCVOID     pData,   
-    [in]  ULONG       cbData,   
-    [in]  DWORD       dwOpenFlags,   
-    [in]  REFIID      riid,   
+    [in]  LPCVOID     pData,
+    [in]  ULONG       cbData,
+    [in]  DWORD       dwOpenFlags,
+    [in]  REFIID      riid,
     [out] IUnknown    **ppIUnk  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `pData`  
- 中指定内存区域起始地址的指针。  
+ [在]指定内存区域的起始地址的指针。  
   
  `cbData`  
- 中内存区域的大小（以字节为单位）。  
+ [在]内存区域的大小（以字节为单位）。  
   
  `dwOpenFlags`  
- 中[CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)枚举的值，该值指定用于打开的模式（读取、写入等）。  
+ [在][CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)枚举的值，用于指定打开的模式（读取、写入等）。  
   
  `riid`  
- 中要返回的所需元数据接口的 IID;调用方将使用接口导入（读取）或发出（写入）元数据。  
+ [在]要返回的所需元数据接口的 IID;调用方将使用接口导入（读取）或发出（写入）元数据。  
   
- `riid` 的值必须指定一个 "导入" 或 "发出" 接口。 有效值为 IID_IMetaDataEmit、IID_IMetaDataImport、IID_IMetaDataAssemblyEmit、IID_IMetaDataAssemblyImport、IID_IMetaDataEmit2 或 IID_IMetaDataImport2。  
+ 的值`riid`必须指定其中一个"导入"或"发射"接口。 有效值IID_IMetaDataEmit、IID_IMetaDataImport、IID_IMetaDataAssemblyEmit、IID_IMetaDataAssemblyImport、IID_IMetaDataEmit2或IID_IMetaDataImport2。  
   
  `ppIUnk`  
- 弄指向返回的接口的指针。  
+ [出]指向返回接口的指针。  
   
 ## <a name="remarks"></a>备注  
- 可以使用 "导入" 接口中的方法查询元数据的内存中副本，或使用 "发出" 接口之一中的方法将其添加到中。  
+ 可以使用"导入"接口之一的方法查询元数据的内存副本，也可以添加到使用"emit"接口之一的方法。  
   
- `OpenScopeOnMemory` 方法类似于[IMetaDataDispenser：： OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)方法，不同之处在于相关元数据已存在于内存中，而不是磁盘上的文件中。  
+ 该方法`OpenScopeOnMemory`类似于[IMetaDataDispenser：：openScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)方法，只不过感兴趣的元数据已存在于内存中，而不是磁盘上的文件中。  
   
- 如果内存的目标区域不包含公共语言运行时（CLR）元数据，则 `OpenScopeOnMemory` 方法将失败。  
+ 如果内存的目标区域不包含通用语言运行时 （CLR） 元数据，则`OpenScopeOnMemory`该方法将失败。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

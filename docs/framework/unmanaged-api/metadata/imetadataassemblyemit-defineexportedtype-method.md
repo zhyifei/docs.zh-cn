@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fad01d7a-3178-4c8c-9f0a-4641e3701c9b
 topic_type:
 - apiref
-ms.openlocfilehash: 44f97ef498eb8e64c55fc86b9f290b9e088293f6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 388f227377ddf73fe1297e1c777bb1c0607c13d2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432067"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177884"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType 方法
 创建包含指定导出类型的元数据的 `ExportedType` 结构，并返回关联的元数据标记。  
@@ -30,48 +30,48 @@ ms.locfileid: "74432067"
 ```cpp  
 HRESULT DefineExportedType (  
     [in]  LPCWSTR             szName,  
-    [in]  mdToken             tkImplementation,   
+    [in]  mdToken             tkImplementation,
     [in]  mdTypeDef           tkTypeDef,  
     [in]  DWORD               dwExportedTypeFlags,  
     [out] mdExportedType      *pmdct  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `szName`  
- 中要导出的类型的名称。 对于公共语言运行时版本1.1，导出类型的名称必须与在该类型的 `TypeDef` 中指定的名称完全匹配。  
+ [在]要导出的类型的名称。 对于通用语言运行时的版本 1.1，导出类型的名称必须与 类型中`TypeDef`给出的名称完全匹配。  
   
  `tkImplementation`  
- 中指定在何处实现导出类型的标记。 有效值及其关联的含义如下：  
+ [在]指定导出类型的实现位置的令牌。 有效值及其相关含义包括：  
   
-- `mdFile` 类型在此程序集内的其他文件中实现。  
+- `mdFile`该类型在此程序集中的其他文件中实现。  
   
-- `mdAssemblyRef` 类型是在不同的程序集中实现的。  
+- `mdAssemblyRef`该类型在不同的程序集中实现。  
   
-- `mdExportedTYpe` 类型嵌套在某个其他类型中。  
+- `mdExportedTYpe`类型嵌套在某种其他类型中。  
   
-- `mdFileNil` 类型与清单位于同一文件中，并且不是嵌套类型。  
+- `mdFileNil`类型与清单位于同一文件中，不是嵌套类型。  
   
  `tkTypeDef`  
- 中用于指定要导出的类型的元数据的令牌。 此值输入在实现类型的文件中的 `TypeDef` 表中，并且仅当该文件在此程序集中时才适用。  
+ [在]指定要导出的类型的元数据的令牌。 此值在文件中实现该类型的`TypeDef`表中输入，并且仅当该文件位于此程序集中时才相关。  
   
  `dwExportedTypeFlags`  
- 中[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)枚举值的按位组合，用于定义导出的类型的属性设置。  
+ [在][CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)枚举值的位组合，用于定义导出类型的属性设置。  
   
  `pmdct`  
- 弄指向返回的元数据标记的指针，该标记指示导出的类型。  
+ [出]指向返回的元数据令牌的指针，指示导出的类型。  
   
 ## <a name="remarks"></a>备注  
- 必须为此程序集公开的每个类型定义 `ExportedType` 的元数据结构，该结构在包含清单的模块中实现。  
+ 必须`ExportedType`为此程序集公开的并且在包含清单的模块以外的模块中实现的每一种类型定义元数据结构。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-ms.openlocfilehash: 4faf8646b81f92ddf65eff15fdc610d275b37864
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bd50d63b1f7080f510c29f90979b7b36242af1c0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440007"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177374"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents 方法
 枚举指定的 TypeDef 标记的事件定义标记。  
@@ -28,46 +28,46 @@ ms.locfileid: "74440007"
 ## <a name="syntax"></a>语法  
   
 ```cpp  
-HRESULT EnumEvents (   
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   td,   
-   [out]     mdEvent     rEvents[],   
+HRESULT EnumEvents (
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   td,
+   [out]     mdEvent     rEvents[],
    [in]      ULONG       cMax,  
    [out]    ULONG        *pcEvents  
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  `phEnum`  
- [in，out]指向枚举器的指针。  
+ [进出]指向枚举器的指针。  
   
  `td`  
- 中要枚举其事件定义的 TypeDef 标记。  
+ [在]要枚举事件定义的 TypeDef 令牌。  
   
  `rEvents`  
- 弄返回的事件的数组。  
+ [出]返回的事件的数组。  
   
  `cMax`  
  [in] `rEvents` 数组的最大大小。  
   
  `pcEvents`  
- 弄`rEvents`中返回的实际事件数。  
+ [出]在 中`rEvents`返回的事件的实际数。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` 成功返回。|  
-|`S_FALSE`|没有要枚举的事件。 在这种情况下，`pcEvents` 为零。|  
+|`S_OK`|`EnumEvents`已成功返回。|  
+|`S_FALSE`|没有要枚举的事件。 在这种情况下，`pcEvents`为零。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor  
+ **标题：** 科尔赫  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为资源包含在 MsCorEE.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
