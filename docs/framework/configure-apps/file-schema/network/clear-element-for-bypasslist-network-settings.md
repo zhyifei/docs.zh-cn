@@ -10,51 +10,51 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 2ad6b16370f600299439d2e810dfefa1b5fa3c06
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: c25477c2c99be66b34b07e1f7e50115bfa8d14e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087530"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154928"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a><span data-ttu-id="1242f-102">\<清除 bypasslist 的 > 元素（网络设置）</span><span class="sxs-lookup"><span data-stu-id="1242f-102">\<clear> Element for bypasslist (Network Settings)</span></span>
-<span data-ttu-id="1242f-103">清除代理跳过列表。</span><span class="sxs-lookup"><span data-stu-id="1242f-103">Clears the proxy bypass list.</span></span>  
+# <a name="clear-element-for-bypasslist-network-settings"></a><span data-ttu-id="45743-102">\<清除>元素以进行绕过列表（网络设置）</span><span class="sxs-lookup"><span data-stu-id="45743-102">\<clear> Element for bypasslist (Network Settings)</span></span>
+<span data-ttu-id="45743-103">清除代理绕过列表。</span><span class="sxs-lookup"><span data-stu-id="45743-103">Clears the proxy bypass list.</span></span>  
   
-<span data-ttu-id="1242f-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="1242f-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="1242f-105">\<&nbsp;&nbsp;[ **> 的**](system-net-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="1242f-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>\
-<span data-ttu-id="1242f-106">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="1242f-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)</span></span>\
-<span data-ttu-id="1242f-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bypasslist >** ](bypasslist-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="1242f-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bypasslist>**](bypasslist-element-network-settings.md)</span></span>\
-<span data-ttu-id="1242f-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**</span><span class="sxs-lookup"><span data-stu-id="1242f-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**</span></span>
+<span data-ttu-id="45743-104">[**\<配置>**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="45743-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="45743-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="45743-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>\
+<span data-ttu-id="45743-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<默认代理>**](defaultproxy-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="45743-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)</span></span>\
+<span data-ttu-id="45743-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<绕过列表>**](bypasslist-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="45743-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bypasslist>**](bypasslist-element-network-settings.md)</span></span>\
+<span data-ttu-id="45743-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<明确>**</span><span class="sxs-lookup"><span data-stu-id="45743-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="1242f-109">语法</span><span class="sxs-lookup"><span data-stu-id="1242f-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="45743-109">语法</span><span class="sxs-lookup"><span data-stu-id="45743-109">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="1242f-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="1242f-110">Attributes and Elements</span></span>  
- <span data-ttu-id="1242f-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="1242f-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="45743-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="45743-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="45743-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="45743-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="1242f-112">特性</span><span class="sxs-lookup"><span data-stu-id="1242f-112">Attributes</span></span>  
- <span data-ttu-id="1242f-113">无。</span><span class="sxs-lookup"><span data-stu-id="1242f-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="45743-112">属性</span><span class="sxs-lookup"><span data-stu-id="45743-112">Attributes</span></span>  
+ <span data-ttu-id="45743-113">无。</span><span class="sxs-lookup"><span data-stu-id="45743-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="1242f-114">子元素</span><span class="sxs-lookup"><span data-stu-id="1242f-114">Child Elements</span></span>  
- <span data-ttu-id="1242f-115">无。</span><span class="sxs-lookup"><span data-stu-id="1242f-115">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="45743-114">子元素</span><span class="sxs-lookup"><span data-stu-id="45743-114">Child Elements</span></span>  
+ <span data-ttu-id="45743-115">无。</span><span class="sxs-lookup"><span data-stu-id="45743-115">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="1242f-116">父元素</span><span class="sxs-lookup"><span data-stu-id="1242f-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="45743-116">父元素</span><span class="sxs-lookup"><span data-stu-id="45743-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="1242f-117">**元素**</span><span class="sxs-lookup"><span data-stu-id="1242f-117">**Element**</span></span>|<span data-ttu-id="1242f-118">**描述**</span><span class="sxs-lookup"><span data-stu-id="1242f-118">**Description**</span></span>|  
+|<span data-ttu-id="45743-117">**元素**</span><span class="sxs-lookup"><span data-stu-id="45743-117">**Element**</span></span>|<span data-ttu-id="45743-118">**说明**</span><span class="sxs-lookup"><span data-stu-id="45743-118">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="1242f-119">bypasslist</span><span class="sxs-lookup"><span data-stu-id="1242f-119">bypasslist</span></span>](bypasslist-element-network-settings.md)|<span data-ttu-id="1242f-120">提供了一组正则表达式，描述不使用代理的地址。</span><span class="sxs-lookup"><span data-stu-id="1242f-120">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
+|[<span data-ttu-id="45743-119">bypasslist</span><span class="sxs-lookup"><span data-stu-id="45743-119">bypasslist</span></span>](bypasslist-element-network-settings.md)|<span data-ttu-id="45743-120">提供一组常规表达式，用于描述不使用代理的地址。</span><span class="sxs-lookup"><span data-stu-id="45743-120">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1242f-121">备注</span><span class="sxs-lookup"><span data-stu-id="1242f-121">Remarks</span></span>  
- <span data-ttu-id="1242f-122">`clear` 元素将清除绕过列表中的所有条目。</span><span class="sxs-lookup"><span data-stu-id="1242f-122">The `clear` element clears all entries from the bypass list.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="45743-121">备注</span><span class="sxs-lookup"><span data-stu-id="45743-121">Remarks</span></span>  
+ <span data-ttu-id="45743-122">该`clear`元素清除旁路列表中的所有条目。</span><span class="sxs-lookup"><span data-stu-id="45743-122">The `clear` element clears all entries from the bypass list.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="1242f-123">配置文件</span><span class="sxs-lookup"><span data-stu-id="1242f-123">Configuration Files</span></span>  
- <span data-ttu-id="1242f-124">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="1242f-124">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="45743-123">配置文件</span><span class="sxs-lookup"><span data-stu-id="45743-123">Configuration Files</span></span>  
+ <span data-ttu-id="45743-124">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="45743-124">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1242f-125">示例</span><span class="sxs-lookup"><span data-stu-id="1242f-125">Example</span></span>  
- <span data-ttu-id="1242f-126">下面的示例清除了跳过列表，并将两个地址添加到了跳过列表。</span><span class="sxs-lookup"><span data-stu-id="1242f-126">The following example clears the bypass list and then adds two addresses to the bypass list.</span></span> <span data-ttu-id="1242f-127">首先，将跳过 contoso.com 域中所有服务器的代理;第二种方式是跳过其 IP 地址以192.168 开头的所有服务器的代理。</span><span class="sxs-lookup"><span data-stu-id="1242f-127">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
+## <a name="example"></a><span data-ttu-id="45743-125">示例</span><span class="sxs-lookup"><span data-stu-id="45743-125">Example</span></span>  
+ <span data-ttu-id="45743-126">下面的示例清除旁路列表，然后将两个地址添加到旁路列表中。</span><span class="sxs-lookup"><span data-stu-id="45743-126">The following example clears the bypass list and then adds two addresses to the bypass list.</span></span> <span data-ttu-id="45743-127">第一个绕过contoso.com域中所有服务器的代理;第二个服务器绕过其 IP 地址以 192.168 开头的所有服务器的代理。</span><span class="sxs-lookup"><span data-stu-id="45743-127">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
   
 ```xml  
 <configuration>  
@@ -67,10 +67,10 @@ ms.locfileid: "74087530"
       </bypasslist>  
     </defaultProxy>  
   </system.net>  
-</configuration>   
+</configuration>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1242f-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="1242f-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="45743-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="45743-128">See also</span></span>
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [<span data-ttu-id="1242f-129">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="1242f-129">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="45743-129">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="45743-129">Network Settings Schema</span></span>](index.md)

@@ -1,5 +1,5 @@
 ---
-title: HttpWebRequest 字段 _CoreResponse
+title: httpWeb请求._CoreResponse字段
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,32 +10,32 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: d16936f6984e73a886f5f48e05b53501ced63c1b
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: b275f3eece96ac8a9ae3fb0ebd030c8d79e21fc1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740448"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155916"
 ---
-# <a name="httpwebrequest_coreresponse-field"></a><span data-ttu-id="c0c93-102">HttpWebRequest.\_CoreResponse 字段</span><span class="sxs-lookup"><span data-stu-id="c0c93-102">HttpWebRequest.\_CoreResponse Field</span></span>
+# <a name="httpwebrequest_coreresponse-field"></a><span data-ttu-id="2cee1-102">HttpWeb请求。\_核心响应字段</span><span class="sxs-lookup"><span data-stu-id="2cee1-102">HttpWebRequest.\_CoreResponse Field</span></span>
 
-<span data-ttu-id="c0c93-103">`HttpWebRequest._CoreResponse` 是包含 HTTP 响应分析结果的对象（ [CoreResponseData](coreresponsedata.md)或 <xref:System.Exception>）。</span><span class="sxs-lookup"><span data-stu-id="c0c93-103">`HttpWebRequest._CoreResponse` is an object (either a [CoreResponseData](coreresponsedata.md) or an <xref:System.Exception>) containing the result of HTTP response parsing.</span></span>
+<span data-ttu-id="2cee1-103">`HttpWebRequest._CoreResponse`是包含 HTTP 响应分析结果的对象（[核心响应数据](coreresponsedata.md)或<xref:System.Exception>）。</span><span class="sxs-lookup"><span data-stu-id="2cee1-103">`HttpWebRequest._CoreResponse` is an object (either a [CoreResponseData](coreresponsedata.md) or an <xref:System.Exception>) containing the result of HTTP response parsing.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="c0c93-104">语法</span><span class="sxs-lookup"><span data-stu-id="c0c93-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="2cee1-104">语法</span><span class="sxs-lookup"><span data-stu-id="2cee1-104">Syntax</span></span>
   
 ```csharp
 private object _CoreResponse
 ```
 
 > [!WARNING]
-> <span data-ttu-id="c0c93-105">此 API 不应在代码中直接使用。</span><span class="sxs-lookup"><span data-stu-id="c0c93-105">This API is not meant to be used directly in your code.</span></span> <span data-ttu-id="c0c93-106">相反，应使用 <xref:System.Diagnostics.DiagnosticSource> 挂钩网络代码。</span><span class="sxs-lookup"><span data-stu-id="c0c93-106">Instead, you should use a <xref:System.Diagnostics.DiagnosticSource> to hook networking code.</span></span> <span data-ttu-id="c0c93-107">请参阅[DiagnosticSource 用户指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。</span><span class="sxs-lookup"><span data-stu-id="c0c93-107">See [DiagnosticSource User's Guide](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).</span></span>
-> 
-> <span data-ttu-id="c0c93-108">在任何情况下，Microsoft 不支持在生产应用程序中使用此类。</span><span class="sxs-lookup"><span data-stu-id="c0c93-108">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
+> <span data-ttu-id="2cee1-105">此 API 不应直接用于代码。</span><span class="sxs-lookup"><span data-stu-id="2cee1-105">This API is not meant to be used directly in your code.</span></span> <span data-ttu-id="2cee1-106">相反，您应该使用 挂钩<xref:System.Diagnostics.DiagnosticSource>网络代码。</span><span class="sxs-lookup"><span data-stu-id="2cee1-106">Instead, you should use a <xref:System.Diagnostics.DiagnosticSource> to hook networking code.</span></span> <span data-ttu-id="2cee1-107">请参阅[诊断源用户指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。</span><span class="sxs-lookup"><span data-stu-id="2cee1-107">See [DiagnosticSource User's Guide](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).</span></span>
+>
+> <span data-ttu-id="2cee1-108">在任何情况下，Microsoft 都不支持在生产应用程序中使用此类。</span><span class="sxs-lookup"><span data-stu-id="2cee1-108">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="c0c93-109">需求</span><span class="sxs-lookup"><span data-stu-id="c0c93-109">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="2cee1-109">要求</span><span class="sxs-lookup"><span data-stu-id="2cee1-109">Requirements</span></span>
 
-<span data-ttu-id="c0c93-110">**Namespace**：<xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="c0c93-110">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="2cee1-110">**命名空间：**<xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="2cee1-110">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="c0c93-111">**程序集**：系统 （在 System.dll)</span><span class="sxs-lookup"><span data-stu-id="c0c93-111">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="2cee1-111">**装配：** 系统（系统中）</span><span class="sxs-lookup"><span data-stu-id="2cee1-111">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="c0c93-112">**.NET framework 版本**：自 2.0 之后可用。</span><span class="sxs-lookup"><span data-stu-id="c0c93-112">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="2cee1-112">**.NET 框架版本：** 自 2.0 起可用。</span><span class="sxs-lookup"><span data-stu-id="2cee1-112">**.NET Framework versions:** Available since 2.0.</span></span>

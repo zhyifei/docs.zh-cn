@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: 4d69fb6d-ee35-4318-8224-5eea2bd16818
 topic_type:
 - apiref
-ms.openlocfilehash: 0a1d244a4bf077970d2031c3c3b2bc56a0dd3d79
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fe0b4b7fef0d05c4acc06dad5bc8a4eaf0722c9c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426822"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175572"
 ---
-# <a name="imetadataemitsetrva-method"></a><span data-ttu-id="e2ce4-102">IMetaDataEmit::SetRVA 方法</span><span class="sxs-lookup"><span data-stu-id="e2ce4-102">IMetaDataEmit::SetRVA Method</span></span>
-<span data-ttu-id="e2ce4-103">设置指定方法的相对虚拟地址。</span><span class="sxs-lookup"><span data-stu-id="e2ce4-103">Sets the relative virtual address of the specified method.</span></span>  
+# <a name="imetadataemitsetrva-method"></a><span data-ttu-id="b1693-102">IMetaDataEmit::SetRVA 方法</span><span class="sxs-lookup"><span data-stu-id="b1693-102">IMetaDataEmit::SetRVA Method</span></span>
+<span data-ttu-id="b1693-103">设置指定方法的相对虚拟地址。</span><span class="sxs-lookup"><span data-stu-id="b1693-103">Sets the relative virtual address of the specified method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e2ce4-104">语法</span><span class="sxs-lookup"><span data-stu-id="e2ce4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b1693-104">语法</span><span class="sxs-lookup"><span data-stu-id="b1693-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetRVA (  
-    [in]  mdMethodDef  md,   
-    [in]  ULONG        ulRVA   
+    [in]  mdMethodDef  md,
+    [in]  ULONG        ulRVA
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e2ce4-105">参数</span><span class="sxs-lookup"><span data-stu-id="e2ce4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b1693-105">parameters</span><span class="sxs-lookup"><span data-stu-id="b1693-105">Parameters</span></span>  
  `md`  
- <span data-ttu-id="e2ce4-106">中目标方法或方法实现的标记。</span><span class="sxs-lookup"><span data-stu-id="e2ce4-106">[in] The token for the target method or method implementation.</span></span>  
+ <span data-ttu-id="b1693-106">[在]目标方法或方法实现的令牌。</span><span class="sxs-lookup"><span data-stu-id="b1693-106">[in] The token for the target method or method implementation.</span></span>  
   
  `ulRVA`  
- <span data-ttu-id="e2ce4-107">中代码或数据区域的地址。</span><span class="sxs-lookup"><span data-stu-id="e2ce4-107">[in] The address of the code or data area.</span></span>  
+ <span data-ttu-id="b1693-107">[在]代码或数据区域的地址。</span><span class="sxs-lookup"><span data-stu-id="b1693-107">[in] The address of the code or data area.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e2ce4-108">要求</span><span class="sxs-lookup"><span data-stu-id="e2ce4-108">Requirements</span></span>  
- <span data-ttu-id="e2ce4-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e2ce4-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b1693-108">要求</span><span class="sxs-lookup"><span data-stu-id="b1693-108">Requirements</span></span>  
+ <span data-ttu-id="b1693-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b1693-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e2ce4-110">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="e2ce4-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b1693-110">**标题：** 科尔赫</span><span class="sxs-lookup"><span data-stu-id="b1693-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e2ce4-111">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="e2ce4-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b1693-111">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="b1693-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e2ce4-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e2ce4-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b1693-112">**.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b1693-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e2ce4-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e2ce4-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1693-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b1693-113">See also</span></span>
 
-- [<span data-ttu-id="e2ce4-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="e2ce4-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="e2ce4-115">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="e2ce4-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="b1693-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="b1693-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="b1693-115">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="b1693-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

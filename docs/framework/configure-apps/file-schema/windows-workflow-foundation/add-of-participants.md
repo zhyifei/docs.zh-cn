@@ -3,95 +3,95 @@ title: <add> 的 <participants>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c730850-6f8e-4102-acb8-8effb4e09463
-ms.openlocfilehash: 479430abd06561cc294b3da3d0922b737364b50f
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 61832edbf7d206d6a5f7a85619eb17ebc010c193
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398932"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152354"
 ---
-# <a name="add-of-participants"></a><span data-ttu-id="4d65a-102">\<添加参与者的\<> ></span><span class="sxs-lookup"><span data-stu-id="4d65a-102">\<add> of \<participants></span></span>
-<span data-ttu-id="4d65a-103">配置一个跟踪参与者，它侦听直接从运行时发出的跟踪记录，并按照配置跟踪参与者的任何方式处理这些记录。</span><span class="sxs-lookup"><span data-stu-id="4d65a-103">Configure a tracking participant that listens to the tracking records being emitted from the runtime directly and process them in whatever way it was configured.</span></span> <span data-ttu-id="4d65a-104">这包括写入特定输出（例如，文件、控制台、ETW）、处理/聚合记录或可能需要的任何其他组合。</span><span class="sxs-lookup"><span data-stu-id="4d65a-104">This includes writing to a specific output (e.g., file, Console, ETW), processing/aggregating the records, or any other combination that might be required.</span></span>  
+# <a name="add-of-participants"></a><span data-ttu-id="f367b-102">\<添加参与者>> \<</span><span class="sxs-lookup"><span data-stu-id="f367b-102">\<add> of \<participants></span></span>
+<span data-ttu-id="f367b-103">配置一个跟踪参与者，它侦听直接从运行时发出的跟踪记录，并按照配置跟踪参与者的任何方式处理这些记录。</span><span class="sxs-lookup"><span data-stu-id="f367b-103">Configure a tracking participant that listens to the tracking records being emitted from the runtime directly and process them in whatever way it was configured.</span></span> <span data-ttu-id="f367b-104">这包括写入特定输出（例如，文件、控制台、ETW）、处理/聚合记录或可能需要的任何其他组合。</span><span class="sxs-lookup"><span data-stu-id="f367b-104">This includes writing to a specific output (e.g., file, Console, ETW), processing/aggregating the records, or any other combination that might be required.</span></span>  
   
- <span data-ttu-id="4d65a-105">有关工作流跟踪和跟踪参与者的详细信息，请参阅[工作流跟踪和](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)跟踪和[跟踪参与者](../../../windows-workflow-foundation/tracking-participants.md)。</span><span class="sxs-lookup"><span data-stu-id="4d65a-105">For more information in workflow tracking and tracking participants, see [Workflow Tracking and Tracing](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Participants](../../../windows-workflow-foundation/tracking-participants.md).</span></span>  
+ <span data-ttu-id="f367b-105">有关工作流跟踪和跟踪参与者的详细信息，请参阅[工作流跟踪和跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)[参与者](../../../windows-workflow-foundation/tracking-participants.md)。</span><span class="sxs-lookup"><span data-stu-id="f367b-105">For more information in workflow tracking and tracking participants, see [Workflow Tracking and Tracing](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Participants](../../../windows-workflow-foundation/tracking-participants.md).</span></span>  
   
-<span data-ttu-id="4d65a-106">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="4d65a-106">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="4d65a-107">&nbsp;&nbsp;[ **\<主板.>** ](system-servicemodel-of-workflow.md)</span><span class="sxs-lookup"><span data-stu-id="4d65a-107">&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)</span></span>\
-<span data-ttu-id="4d65a-108">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<跟踪 >** ](tracking.md)</span><span class="sxs-lookup"><span data-stu-id="4d65a-108">&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking.md)</span></span>\
-<span data-ttu-id="4d65a-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<参与者 >** ](participants.md)</span><span class="sxs-lookup"><span data-stu-id="4d65a-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<participants>**](participants.md)</span></span>\
-<span data-ttu-id="4d65a-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**</span><span class="sxs-lookup"><span data-stu-id="4d65a-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>  
+<span data-ttu-id="f367b-106">[**\<配置>**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="f367b-106">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="f367b-107">&nbsp;&nbsp;[**\<系统。服务模式>**](system-servicemodel-of-workflow.md)</span><span class="sxs-lookup"><span data-stu-id="f367b-107">&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)</span></span>\
+<span data-ttu-id="f367b-108">&nbsp;&nbsp;&nbsp;&nbsp;[**\<跟踪>**](tracking.md)</span><span class="sxs-lookup"><span data-stu-id="f367b-108">&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking.md)</span></span>\
+<span data-ttu-id="f367b-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<参与者>**](participants.md)</span><span class="sxs-lookup"><span data-stu-id="f367b-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<participants>**](participants.md)</span></span>\
+<span data-ttu-id="f367b-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<添加>**</span><span class="sxs-lookup"><span data-stu-id="f367b-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4d65a-111">语法</span><span class="sxs-lookup"><span data-stu-id="4d65a-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f367b-111">语法</span><span class="sxs-lookup"><span data-stu-id="f367b-111">Syntax</span></span>  
   
 ```xml
 <tracking>
   <participants>
     <add name="String" profileName="String" type="String" />
   </participants>
-</tracking>   
+</tracking>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="4d65a-112">特性和元素</span><span class="sxs-lookup"><span data-stu-id="4d65a-112">Attributes and Elements</span></span>  
- <span data-ttu-id="4d65a-113">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="4d65a-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f367b-112">特性和元素</span><span class="sxs-lookup"><span data-stu-id="f367b-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="f367b-113">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="f367b-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="4d65a-114">特性</span><span class="sxs-lookup"><span data-stu-id="4d65a-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f367b-114">属性</span><span class="sxs-lookup"><span data-stu-id="f367b-114">Attributes</span></span>  
   
-|<span data-ttu-id="4d65a-115">元素</span><span class="sxs-lookup"><span data-stu-id="4d65a-115">Element</span></span>|<span data-ttu-id="4d65a-116">描述</span><span class="sxs-lookup"><span data-stu-id="4d65a-116">Description</span></span>|  
+|<span data-ttu-id="f367b-115">元素</span><span class="sxs-lookup"><span data-stu-id="f367b-115">Element</span></span>|<span data-ttu-id="f367b-116">说明</span><span class="sxs-lookup"><span data-stu-id="f367b-116">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="4d65a-117">NAME</span><span class="sxs-lookup"><span data-stu-id="4d65a-117">name</span></span>|<span data-ttu-id="4d65a-118">一个字符串，指定跟踪参与者的名称。</span><span class="sxs-lookup"><span data-stu-id="4d65a-118">A string that specifies the name of a tracking participant.</span></span>|  
-|<span data-ttu-id="4d65a-119">profileName</span><span class="sxs-lookup"><span data-stu-id="4d65a-119">profileName</span></span>|<span data-ttu-id="4d65a-120">一个字符串，指定跟踪配置文件的名称，该跟踪配置文件定义跟踪参与者已订阅的跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="4d65a-120">A string that specifies the name of the tracking profile which defines the tracking records the tracking participant has subscribed to.</span></span>|  
-|<span data-ttu-id="4d65a-121">type</span><span class="sxs-lookup"><span data-stu-id="4d65a-121">type</span></span>|<span data-ttu-id="4d65a-122">一个字符串，指定跟踪参与者的类型。</span><span class="sxs-lookup"><span data-stu-id="4d65a-122">A string that specifies the type of a tracking participant.</span></span>|  
+|<span data-ttu-id="f367b-117">name</span><span class="sxs-lookup"><span data-stu-id="f367b-117">name</span></span>|<span data-ttu-id="f367b-118">一个字符串，指定跟踪参与者的名称。</span><span class="sxs-lookup"><span data-stu-id="f367b-118">A string that specifies the name of a tracking participant.</span></span>|  
+|<span data-ttu-id="f367b-119">profileName</span><span class="sxs-lookup"><span data-stu-id="f367b-119">profileName</span></span>|<span data-ttu-id="f367b-120">一个字符串，指定跟踪配置文件的名称，该跟踪配置文件定义跟踪参与者已订阅的跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="f367b-120">A string that specifies the name of the tracking profile which defines the tracking records the tracking participant has subscribed to.</span></span>|  
+|<span data-ttu-id="f367b-121">type</span><span class="sxs-lookup"><span data-stu-id="f367b-121">type</span></span>|<span data-ttu-id="f367b-122">一个字符串，指定跟踪参与者的类型。</span><span class="sxs-lookup"><span data-stu-id="f367b-122">A string that specifies the type of a tracking participant.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="4d65a-123">子元素</span><span class="sxs-lookup"><span data-stu-id="4d65a-123">Child Elements</span></span>  
- <span data-ttu-id="4d65a-124">无。</span><span class="sxs-lookup"><span data-stu-id="4d65a-124">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f367b-123">子元素</span><span class="sxs-lookup"><span data-stu-id="f367b-123">Child Elements</span></span>  
+ <span data-ttu-id="f367b-124">无。</span><span class="sxs-lookup"><span data-stu-id="f367b-124">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="4d65a-125">父元素</span><span class="sxs-lookup"><span data-stu-id="4d65a-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f367b-125">父元素</span><span class="sxs-lookup"><span data-stu-id="f367b-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="4d65a-126">元素</span><span class="sxs-lookup"><span data-stu-id="4d65a-126">Element</span></span>|<span data-ttu-id="4d65a-127">描述</span><span class="sxs-lookup"><span data-stu-id="4d65a-127">Description</span></span>|  
+|<span data-ttu-id="f367b-126">元素</span><span class="sxs-lookup"><span data-stu-id="f367b-126">Element</span></span>|<span data-ttu-id="f367b-127">说明</span><span class="sxs-lookup"><span data-stu-id="f367b-127">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="4d65a-128">\<participants></span><span class="sxs-lookup"><span data-stu-id="4d65a-128">\<participants></span></span>](participants.md)|<span data-ttu-id="4d65a-129">跟踪参与者的列表</span><span class="sxs-lookup"><span data-stu-id="4d65a-129">A list of tracking participants</span></span>|  
+|[<span data-ttu-id="f367b-128">\<参与者></span><span class="sxs-lookup"><span data-stu-id="f367b-128">\<participants></span></span>](participants.md)|<span data-ttu-id="f367b-129">跟踪参与者的列表</span><span class="sxs-lookup"><span data-stu-id="f367b-129">A list of tracking participants</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4d65a-130">备注</span><span class="sxs-lookup"><span data-stu-id="4d65a-130">Remarks</span></span>  
- <span data-ttu-id="4d65a-131">跟踪参与者用于获取从工作流发出的跟踪数据并将其存储在不同的媒体中。</span><span class="sxs-lookup"><span data-stu-id="4d65a-131">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="4d65a-132">同样，也可以在跟踪参与者中执行对跟踪记录的任何后续处理。</span><span class="sxs-lookup"><span data-stu-id="4d65a-132">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f367b-130">备注</span><span class="sxs-lookup"><span data-stu-id="f367b-130">Remarks</span></span>  
+ <span data-ttu-id="f367b-131">跟踪参与者用于获取从工作流发出的跟踪数据并将其存储在不同的媒体中。</span><span class="sxs-lookup"><span data-stu-id="f367b-131">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="f367b-132">同样，也可以在跟踪参与者中执行对跟踪记录的任何后续处理。</span><span class="sxs-lookup"><span data-stu-id="f367b-132">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
   
- <span data-ttu-id="4d65a-133">多个跟踪参与者可同时使用跟踪事件。</span><span class="sxs-lookup"><span data-stu-id="4d65a-133">Multiple tracking participants can consume the tracking events simultaneously.</span></span> <span data-ttu-id="4d65a-134">每个跟踪参与者都可与不同的跟踪配置文件关联。</span><span class="sxs-lookup"><span data-stu-id="4d65a-134">Each tracking participant can be associated with a different tracking profile.</span></span>  
+ <span data-ttu-id="f367b-133">多个跟踪参与者可同时使用跟踪事件。</span><span class="sxs-lookup"><span data-stu-id="f367b-133">Multiple tracking participants can consume the tracking events simultaneously.</span></span> <span data-ttu-id="f367b-134">每个跟踪参与者都可与不同的跟踪配置文件关联。</span><span class="sxs-lookup"><span data-stu-id="f367b-134">Each tracking participant can be associated with a different tracking profile.</span></span>  
   
- <span data-ttu-id="4d65a-135">提供了将跟踪记录写入 ETW 会话的标准跟踪参与者。</span><span class="sxs-lookup"><span data-stu-id="4d65a-135">A standard tracking participant is provided which writes the tracking records to an ETW session.</span></span> <span data-ttu-id="4d65a-136">通过在配置文件中添加特定于跟踪的行为，可以对工作流服务配置参与者。</span><span class="sxs-lookup"><span data-stu-id="4d65a-136">The participant is configured on a workflow service by adding a tracking-specific behavior in a configuration file.</span></span> <span data-ttu-id="4d65a-137">通过启用 ETW 跟踪参与者，可以在事件查看器中查看跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="4d65a-137">Enabling an ETW tracking participant allows tracking records to be viewed in the event viewer.</span></span> <span data-ttu-id="4d65a-138">如果这不能满足您的需求，您还可以编写自定义跟踪参与者。</span><span class="sxs-lookup"><span data-stu-id="4d65a-138">If that does not meet your requirements, you can also write a custom tracking participant.</span></span>  
+ <span data-ttu-id="f367b-135">提供了将跟踪记录写入 ETW 会话的标准跟踪参与者。</span><span class="sxs-lookup"><span data-stu-id="f367b-135">A standard tracking participant is provided which writes the tracking records to an ETW session.</span></span> <span data-ttu-id="f367b-136">通过在配置文件中添加特定于跟踪的行为，可以对工作流服务配置参与者。</span><span class="sxs-lookup"><span data-stu-id="f367b-136">The participant is configured on a workflow service by adding a tracking-specific behavior in a configuration file.</span></span> <span data-ttu-id="f367b-137">通过启用 ETW 跟踪参与者，可以在事件查看器中查看跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="f367b-137">Enabling an ETW tracking participant allows tracking records to be viewed in the event viewer.</span></span> <span data-ttu-id="f367b-138">如果这不能满足您的需求，您还可以编写自定义跟踪参与者。</span><span class="sxs-lookup"><span data-stu-id="f367b-138">If that does not meet your requirements, you can also write a custom tracking participant.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4d65a-139">示例</span><span class="sxs-lookup"><span data-stu-id="4d65a-139">Example</span></span>  
- <span data-ttu-id="4d65a-140">下面的配置示例演示在 Web.config 文件中配置的标准 ETW 跟踪参与者。</span><span class="sxs-lookup"><span data-stu-id="4d65a-140">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
+## <a name="example"></a><span data-ttu-id="f367b-139">示例</span><span class="sxs-lookup"><span data-stu-id="f367b-139">Example</span></span>  
+ <span data-ttu-id="f367b-140">下面的配置示例演示在 Web.config 文件中配置的标准 ETW 跟踪参与者。</span><span class="sxs-lookup"><span data-stu-id="f367b-140">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
   
- <span data-ttu-id="4d65a-141">Etw 跟踪参与者用于将跟踪记录写入 etw 的提供程序 Id 在 "  **\<诊断 >** " 部分中定义。</span><span class="sxs-lookup"><span data-stu-id="4d65a-141">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the **\<diagnostics>** section.</span></span> <span data-ttu-id="4d65a-142">跟踪参与者具有一个与其关联的配置文件，用来指定跟踪参与者已订阅的跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="4d65a-142">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="4d65a-143">这由 **profileName** 的属性 **\<添加>** 元素。</span><span class="sxs-lookup"><span data-stu-id="4d65a-143">This is defined by the **profileName** attribute of the **\<add>** element.</span></span> <span data-ttu-id="4d65a-144">定义这些后，跟踪参与者将添加到 **\<etwTracking >** 服务行为。</span><span class="sxs-lookup"><span data-stu-id="4d65a-144">Once these are defined, the Tracking Participant is added to the **\<etwTracking>** service behavior.</span></span> <span data-ttu-id="4d65a-145">这会将所选跟踪参与者添加到工作流实例的扩展中，以便它们开始接收跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="4d65a-145">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
+ <span data-ttu-id="f367b-141">ETW 跟踪参与者用于将跟踪记录写入 ETW 的提供程序 ID 在**\<诊断>** 部分中定义。</span><span class="sxs-lookup"><span data-stu-id="f367b-141">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the **\<diagnostics>** section.</span></span> <span data-ttu-id="f367b-142">跟踪参与者具有一个与其关联的配置文件，用来指定跟踪参与者已订阅的跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="f367b-142">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="f367b-143">这由**\<添加>** 元素的**配置文件名称**属性定义。</span><span class="sxs-lookup"><span data-stu-id="f367b-143">This is defined by the **profileName** attribute of the **\<add>** element.</span></span> <span data-ttu-id="f367b-144">定义这些后，跟踪参与者将添加到**\<etw 跟踪>** 服务行为。</span><span class="sxs-lookup"><span data-stu-id="f367b-144">Once these are defined, the Tracking Participant is added to the **\<etwTracking>** service behavior.</span></span> <span data-ttu-id="f367b-145">这会将所选跟踪参与者添加到工作流实例的扩展中，以便它们开始接收跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="f367b-145">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
   
 ```xml  
-<configuration>   
-  <system.web>   
-    <compilation targetFrameworkMoniker=".NETFramework,Version=v4.0"/>   
-  </system.web>   
-  <system.serviceModel>   
-    <diagnostics etwProviderId="52A3165D-4AD9-405C-B1E8-7D9A257EAC9F" />                
-    <tracking>   
-      <participants>   
-        <add name="EtwTrackingParticipant"   
-             type="System.Activities.Tracking.EtwTrackingParticipant, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"   
-             profileName="HealthMonitoring_Tracking_Profile"/>   
-      </participants>   
-    </tracking>   
-    <behaviors>   
-      <serviceBehaviors>   
-        <behavior>   
+<configuration>
+  <system.web>
+    <compilation targetFrameworkMoniker=".NETFramework,Version=v4.0"/>
+  </system.web>
+  <system.serviceModel>
+    <diagnostics etwProviderId="52A3165D-4AD9-405C-B1E8-7D9A257EAC9F" />
+    <tracking>
+      <participants>
+        <add name="EtwTrackingParticipant"
+             type="System.Activities.Tracking.EtwTrackingParticipant, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+             profileName="HealthMonitoring_Tracking_Profile"/>
+      </participants>
+    </tracking>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior>
           <etwTracking profileName="Sample Tracking Profile"/>  
-        </behavior>   
-      </serviceBehaviors>   
-    </behaviors>   
-  </system.serviceModel>   
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+  </system.serviceModel>
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4d65a-146">请参阅</span><span class="sxs-lookup"><span data-stu-id="4d65a-146">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f367b-146">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f367b-146">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
-- [<span data-ttu-id="4d65a-147">工作流跟踪</span><span class="sxs-lookup"><span data-stu-id="4d65a-147">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="4d65a-148">跟踪参与者</span><span class="sxs-lookup"><span data-stu-id="4d65a-148">Tracking Participants</span></span>](../../../windows-workflow-foundation/tracking-participants.md)
+- [<span data-ttu-id="f367b-147">工作流跟踪</span><span class="sxs-lookup"><span data-stu-id="f367b-147">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="f367b-148">跟踪参与者</span><span class="sxs-lookup"><span data-stu-id="f367b-148">Tracking Participants</span></span>](../../../windows-workflow-foundation/tracking-participants.md)

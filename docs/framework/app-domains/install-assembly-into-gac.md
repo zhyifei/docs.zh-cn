@@ -9,56 +9,56 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-ms.openlocfilehash: e670f5dba47393b7df047fb4e6f7d92df8cb187c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64878a795a7c5b790c8991064e32b82505685c0c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119806"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155558"
 ---
-# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a><span data-ttu-id="5968b-102">如何：将程序集安装到全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="5968b-102">How to: Install an assembly into the global assembly cache</span></span>
+# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a><span data-ttu-id="a98e6-102">如何：将程序集安装到全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="a98e6-102">How to: Install an assembly into the global assembly cache</span></span>
 
-<span data-ttu-id="5968b-103">全局程序集缓存 (GAC) 存储由多个应用程序共享的程序集。</span><span class="sxs-lookup"><span data-stu-id="5968b-103">The global assembly cache (GAC) stores assemblies that several applications share.</span></span> <span data-ttu-id="5968b-104">使用以下任一组件将程序集安装到[全局程序集缓存](gac.md)中：</span><span class="sxs-lookup"><span data-stu-id="5968b-104">Install an assembly into the [global assembly cache](gac.md) with one of the following components:</span></span> 
+<span data-ttu-id="a98e6-103">全局程序集缓存 (GAC) 存储由多个应用程序共享的程序集。</span><span class="sxs-lookup"><span data-stu-id="a98e6-103">The global assembly cache (GAC) stores assemblies that several applications share.</span></span> <span data-ttu-id="a98e6-104">使用以下任一组件将程序集安装到[全局程序集缓存](gac.md)中：</span><span class="sxs-lookup"><span data-stu-id="a98e6-104">Install an assembly into the [global assembly cache](gac.md) with one of the following components:</span></span>
 
-- [<span data-ttu-id="5968b-105">Windows 安装程序</span><span class="sxs-lookup"><span data-stu-id="5968b-105">Windows Installer</span></span>](#windows-installer)
-- [<span data-ttu-id="5968b-106">全局程序集缓存工具</span><span class="sxs-lookup"><span data-stu-id="5968b-106">Global Assembly Cache tool</span></span>](#global-assembly-cache-tool)
+- [<span data-ttu-id="a98e6-105">Windows 安装程序</span><span class="sxs-lookup"><span data-stu-id="a98e6-105">Windows Installer</span></span>](#windows-installer)
+- [<span data-ttu-id="a98e6-106">全局程序集缓存工具</span><span class="sxs-lookup"><span data-stu-id="a98e6-106">Global Assembly Cache tool</span></span>](#global-assembly-cache-tool)
 
 > [!IMPORTANT]
-> <span data-ttu-id="5968b-107">可以只将强名称程序集安装到全局程序集缓存中。</span><span class="sxs-lookup"><span data-stu-id="5968b-107">You can install only strong-named assemblies into the global assembly cache.</span></span> <span data-ttu-id="5968b-108">有关如何创建具有强名称的程序集的信息，请参阅[如何：使用强名称为程序集签名](../../standard/assembly/sign-strong-name.md)。</span><span class="sxs-lookup"><span data-stu-id="5968b-108">For information about how to create a strong-named assembly, see [How to: Sign an assembly with a strong name](../../standard/assembly/sign-strong-name.md).</span></span>
+> <span data-ttu-id="a98e6-107">可以只将强名称程序集安装到全局程序集缓存中。</span><span class="sxs-lookup"><span data-stu-id="a98e6-107">You can install only strong-named assemblies into the global assembly cache.</span></span> <span data-ttu-id="a98e6-108">有关如何创建强名称程序集的信息，请参阅[如何：使用强名称对程序集进行签名](../../standard/assembly/sign-strong-name.md)。</span><span class="sxs-lookup"><span data-stu-id="a98e6-108">For information about how to create a strong-named assembly, see [How to: Sign an assembly with a strong name](../../standard/assembly/sign-strong-name.md).</span></span>
 
-## <a name="windows-installer"></a><span data-ttu-id="5968b-109">Windows Installer</span><span class="sxs-lookup"><span data-stu-id="5968b-109">Windows Installer</span></span>
+## <a name="windows-installer"></a><span data-ttu-id="a98e6-109">Windows Installer</span><span class="sxs-lookup"><span data-stu-id="a98e6-109">Windows Installer</span></span>
 
-<span data-ttu-id="5968b-110">建议使用 [Windows Installer](/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache)（即 Windows 安装引擎）将程序集添加到全局程序集缓存。</span><span class="sxs-lookup"><span data-stu-id="5968b-110">[Windows Installer](/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache), the Windows installation engine, is the recommended way to add assemblies to the global assembly cache.</span></span> <span data-ttu-id="5968b-111">Windows Installer 可提供全局程序集缓存中程序集的引用计数，还具有其他优点。</span><span class="sxs-lookup"><span data-stu-id="5968b-111">Windows Installer provides reference counting of assemblies in the global assembly cache and other benefits.</span></span> <span data-ttu-id="5968b-112">若要创建 Windows Installer 的安装程序包，请使用[适用于 Visual Studio 2017 的 WiX 工具集扩展](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension)。</span><span class="sxs-lookup"><span data-stu-id="5968b-112">To create an installer package for Windows Installer, use the [WiX toolset extension for Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension).</span></span>
+<span data-ttu-id="a98e6-110">建议使用 [Windows Installer](/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache)（即 Windows 安装引擎）将程序集添加到全局程序集缓存。</span><span class="sxs-lookup"><span data-stu-id="a98e6-110">[Windows Installer](/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache), the Windows installation engine, is the recommended way to add assemblies to the global assembly cache.</span></span> <span data-ttu-id="a98e6-111">Windows Installer 可提供全局程序集缓存中程序集的引用计数，还具有其他优点。</span><span class="sxs-lookup"><span data-stu-id="a98e6-111">Windows Installer provides reference counting of assemblies in the global assembly cache and other benefits.</span></span> <span data-ttu-id="a98e6-112">若要创建 Windows Installer 的安装程序包，请使用[适用于 Visual Studio 2017 的 WiX 工具集扩展](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension)。</span><span class="sxs-lookup"><span data-stu-id="a98e6-112">To create an installer package for Windows Installer, use the [WiX toolset extension for Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension).</span></span>
 
-## <a name="global-assembly-cache-tool"></a><span data-ttu-id="5968b-113">“全局程序集缓存”工具</span><span class="sxs-lookup"><span data-stu-id="5968b-113">Global Assembly Cache tool</span></span>
+## <a name="global-assembly-cache-tool"></a><span data-ttu-id="a98e6-113">全局程序集缓存工具</span><span class="sxs-lookup"><span data-stu-id="a98e6-113">Global Assembly Cache tool</span></span>
 
-<span data-ttu-id="5968b-114">可以使用 [.NET 全局程序集实用程序 (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 将程序集添加到全局程序集缓存，并查看全局程序集缓存的内容。</span><span class="sxs-lookup"><span data-stu-id="5968b-114">You can use the [.NET Global Assembly Cache utility (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) to add assemblies to the global assembly cache and to view the contents of the global assembly cache.</span></span>
+<span data-ttu-id="a98e6-114">可以使用 [.NET 全局程序集实用程序 (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 将程序集添加到全局程序集缓存，并查看全局程序集缓存的内容。</span><span class="sxs-lookup"><span data-stu-id="a98e6-114">You can use the [.NET Global Assembly Cache utility (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) to add assemblies to the global assembly cache and to view the contents of the global assembly cache.</span></span>
 
    > [!NOTE]
-   > <span data-ttu-id="5968b-115">Gacutil.exe 仅用于开发目的。</span><span class="sxs-lookup"><span data-stu-id="5968b-115">*Gacutil.exe* is for development purposes only.</span></span> <span data-ttu-id="5968b-116">请勿用于将生产程序集安装到全局程序集缓存。</span><span class="sxs-lookup"><span data-stu-id="5968b-116">Don't use it to install production assemblies into the global assembly cache.</span></span>
+   > <span data-ttu-id="a98e6-115">Gacutil.exe 仅用于开发目的\*\*。</span><span class="sxs-lookup"><span data-stu-id="a98e6-115">*Gacutil.exe* is for development purposes only.</span></span> <span data-ttu-id="a98e6-116">请勿用于将生产程序集安装到全局程序集缓存。</span><span class="sxs-lookup"><span data-stu-id="a98e6-116">Don't use it to install production assemblies into the global assembly cache.</span></span>
 
-<span data-ttu-id="5968b-117">使用 gacutil.exe 在 GAC 中安装程序集的语法如下：</span><span class="sxs-lookup"><span data-stu-id="5968b-117">The syntax for using *gacutil.exe* to install an assembly in the GAC is as follows:</span></span>
+<span data-ttu-id="a98e6-117">使用 gacutil.exe 在 GAC 中安装程序集的语法如下：\*\*</span><span class="sxs-lookup"><span data-stu-id="a98e6-117">The syntax for using *gacutil.exe* to install an assembly in the GAC is as follows:</span></span>
 
 ```cmd
 gacutil -i <assembly name>
 ```
 
-<span data-ttu-id="5968b-118">在此命令中，\<assembly name> 是要在全局程序集缓存中安装的程序集的名称。</span><span class="sxs-lookup"><span data-stu-id="5968b-118">In this command, *\<assembly name>* is the name of the assembly to install in the global assembly cache.</span></span>
+<span data-ttu-id="a98e6-118">在此命令中，*\<程序集名称>* 是要在全局程序集缓存中安装的程序集的名称。</span><span class="sxs-lookup"><span data-stu-id="a98e6-118">In this command, *\<assembly name>* is the name of the assembly to install in the global assembly cache.</span></span>
 
-<span data-ttu-id="5968b-119">如果 gacutil.exe 不在系统路径中，则使用 [VS 开发人员命令提示符\<版本>](../tools/developer-command-prompt-for-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="5968b-119">If *gacutil.exe* isn't in your system path, use the [Developer command prompt for VS *\<version>*](../tools/developer-command-prompt-for-vs.md).</span></span>
+<span data-ttu-id="a98e6-119">如果*gacutil.exe*不在系统路径中，请使用["开发人员"命令提示符进行 VS*\<版本>* ](../tools/developer-command-prompt-for-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="a98e6-119">If *gacutil.exe* isn't in your system path, use the [Developer command prompt for VS *\<version>*](../tools/developer-command-prompt-for-vs.md).</span></span>
 
-<span data-ttu-id="5968b-120">下面的示例将文件名为 hello.dll 的程序集安装到全局程序集缓存。</span><span class="sxs-lookup"><span data-stu-id="5968b-120">The following example installs an assembly with the file name *hello.dll* into the global assembly cache.</span></span>
+<span data-ttu-id="a98e6-120">下面的示例将文件名为 hello.dll 的程序集安装到全局程序集缓存\*\*。</span><span class="sxs-lookup"><span data-stu-id="a98e6-120">The following example installs an assembly with the file name *hello.dll* into the global assembly cache.</span></span>
 
 ```cmd
 gacutil -i hello.dll
 ```
 
 > [!NOTE]
-> <span data-ttu-id="5968b-121">在 .NET Framework 的早期版本中，可以使用 Shfusion.dll Windows 外壳扩展通过将程序集拖到“文件资源管理器”来安装这些程序集。</span><span class="sxs-lookup"><span data-stu-id="5968b-121">In earlier versions of the .NET Framework, the *Shfusion.dll* Windows shell extension let you install assemblies by dragging them to File Explorer.</span></span> <span data-ttu-id="5968b-122">从 .NET Framework 4 开始，Shfusion.dll 已过时。</span><span class="sxs-lookup"><span data-stu-id="5968b-122">Beginning with .NET Framework 4, *Shfusion.dll* is obsolete.</span></span>
+> <span data-ttu-id="a98e6-121">在 .NET Framework 的早期版本中，可以使用 Shfusion.dll Windows 外壳扩展通过将程序集拖到“文件资源管理器”来安装这些程序集\*\*。</span><span class="sxs-lookup"><span data-stu-id="a98e6-121">In earlier versions of the .NET Framework, the *Shfusion.dll* Windows shell extension let you install assemblies by dragging them to File Explorer.</span></span> <span data-ttu-id="a98e6-122">从 .NET Framework 4 开始，Shfusion.dll 已过时\*\*。</span><span class="sxs-lookup"><span data-stu-id="a98e6-122">Beginning with .NET Framework 4, *Shfusion.dll* is obsolete.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="5968b-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="5968b-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a98e6-123">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a98e6-123">See also</span></span>
 
-- [<span data-ttu-id="5968b-124">使用程序集和全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="5968b-124">Work with assemblies and the global assembly cache</span></span>](working-with-assemblies-and-the-gac.md)
-- [<span data-ttu-id="5968b-125">如何：从全局程序集缓存中移除程序集</span><span class="sxs-lookup"><span data-stu-id="5968b-125">How to: Remove an assembly from the global assembly cache</span></span>](how-to-remove-an-assembly-from-the-gac.md)
-- [<span data-ttu-id="5968b-126">Gacutil.exe（全局程序集缓存工具）</span><span class="sxs-lookup"><span data-stu-id="5968b-126">Gacutil.exe (Global Assembly Cache tool)</span></span>](../tools/gacutil-exe-gac-tool.md)
-- [<span data-ttu-id="5968b-127">如何：使用强名称为程序集签名</span><span class="sxs-lookup"><span data-stu-id="5968b-127">How to: Sign an assembly with a strong name</span></span>](../../standard/assembly/sign-strong-name.md)
+- [<span data-ttu-id="a98e6-124">使用程序集和全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="a98e6-124">Work with assemblies and the global assembly cache</span></span>](working-with-assemblies-and-the-gac.md)
+- [<span data-ttu-id="a98e6-125">如何：从全局程序集缓存中删除程序集</span><span class="sxs-lookup"><span data-stu-id="a98e6-125">How to: Remove an assembly from the global assembly cache</span></span>](how-to-remove-an-assembly-from-the-gac.md)
+- [<span data-ttu-id="a98e6-126">Gacutil.exe（全球装配缓存工具）</span><span class="sxs-lookup"><span data-stu-id="a98e6-126">Gacutil.exe (Global Assembly Cache tool)</span></span>](../tools/gacutil-exe-gac-tool.md)
+- [<span data-ttu-id="a98e6-127">如何：使用强名称对程序集进行签名</span><span class="sxs-lookup"><span data-stu-id="a98e6-127">How to: Sign an assembly with a strong name</span></span>](../../standard/assembly/sign-strong-name.md)
