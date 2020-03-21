@@ -15,38 +15,38 @@ helpviewer_keywords:
 ms.assetid: a4926d0a-261b-46b1-9994-82633661a64b
 topic_type:
 - apiref
-ms.openlocfilehash: e8c145632911817e8e19d587bb8afead0a6c33af
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3b8aed6522b1c7eb2d8916f71d8a66b367623765
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434346"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177607"
 ---
-# <a name="imetadataemitdeletetoken-method"></a><span data-ttu-id="a30fb-102">IMetaDataEmit::DeleteToken 方法</span><span class="sxs-lookup"><span data-stu-id="a30fb-102">IMetaDataEmit::DeleteToken Method</span></span>
-<span data-ttu-id="a30fb-103">从当前的元数据范围中删除指定的标记。</span><span class="sxs-lookup"><span data-stu-id="a30fb-103">Deletes the specified token from the current metadata scope.</span></span>  
+# <a name="imetadataemitdeletetoken-method"></a><span data-ttu-id="2b038-102">IMetaDataEmit::DeleteToken 方法</span><span class="sxs-lookup"><span data-stu-id="2b038-102">IMetaDataEmit::DeleteToken Method</span></span>
+<span data-ttu-id="2b038-103">从当前元数据作用域中删除指定的令牌。</span><span class="sxs-lookup"><span data-stu-id="2b038-103">Deletes the specified token from the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a30fb-104">语法</span><span class="sxs-lookup"><span data-stu-id="a30fb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2b038-104">语法</span><span class="sxs-lookup"><span data-stu-id="2b038-104">Syntax</span></span>  
   
 ```cpp  
-HRESULT DeleteToken (   
-    [in]  mdToken     tkObj   
+HRESULT DeleteToken (
+    [in]  mdToken     tkObj
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a30fb-105">参数</span><span class="sxs-lookup"><span data-stu-id="a30fb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2b038-105">parameters</span><span class="sxs-lookup"><span data-stu-id="2b038-105">Parameters</span></span>  
  `tkObj`  
- <span data-ttu-id="a30fb-106">中要删除的标记。</span><span class="sxs-lookup"><span data-stu-id="a30fb-106">[in] The token to be deleted.</span></span>  
+ <span data-ttu-id="2b038-106">[在]要删除的令牌。</span><span class="sxs-lookup"><span data-stu-id="2b038-106">[in] The token to be deleted.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a30fb-107">要求</span><span class="sxs-lookup"><span data-stu-id="a30fb-107">Requirements</span></span>  
- <span data-ttu-id="a30fb-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a30fb-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2b038-107">要求</span><span class="sxs-lookup"><span data-stu-id="2b038-107">Requirements</span></span>  
+ <span data-ttu-id="2b038-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2b038-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a30fb-109">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="a30fb-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="2b038-109">**标题：** 科尔赫</span><span class="sxs-lookup"><span data-stu-id="2b038-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a30fb-110">**库：** 用作 Mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="a30fb-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2b038-110">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="2b038-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a30fb-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a30fb-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2b038-111">**.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b038-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a30fb-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a30fb-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2b038-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2b038-112">See also</span></span>
 
-- [<span data-ttu-id="a30fb-113">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="a30fb-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="a30fb-114">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="a30fb-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="2b038-113">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="2b038-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="2b038-114">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="2b038-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
