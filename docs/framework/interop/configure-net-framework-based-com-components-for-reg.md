@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: dedf5ab51ab5cf9befb5bd183968388406df4e5b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e273bd3e4bf2bb6945fe48c850783a54fa9a869
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181467"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291759"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活
 基于 .NET Framework 的组件的免注册激活略复杂于 COM 组件的免注册激活。 安装需要两个清单：  
@@ -24,7 +24,7 @@ ms.locfileid: "79181467"
   
  本主题将介绍如何应用程序清单与应用程序关联，如何将组件清单与组件关联，以及如何在程序集中嵌入组件清单。  
   
-### <a name="to-create-an-application-manifest"></a>创建应用程序清单  
+## <a name="create-an-application-manifest"></a>创建应用程序清单  
   
 1. 使用 XML 编辑器创建（或修改）COM 应用程序拥有的应用程序清单，该应用程序与一个或多个托管组件进行交互操作。  
   
@@ -32,7 +32,8 @@ ms.locfileid: "79181467"
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
      有关清单元素及其属性的信息，请参阅[应用程序清单](/windows/desktop/SbsCs/application-manifests)。  
@@ -46,7 +47,8 @@ ms.locfileid: "79181467"
                         name="myOrganization.myDivision.myComApp"
                         version="1.0.0.0"
                         processorArchitecture="msil"
-      />  
+      />
+    </assembly>  
     ```  
   
 4. 标识依赖程序集。 以下示例中，`myComApp` 依赖于 `myManagedComp`。  
@@ -75,9 +77,9 @@ ms.locfileid: "79181467"
   
 5. 保存并命名清单文件。 应用程序清单的名称是程序集可执行文件的名称后加 .manifest 扩展名。 例如，myComApp.exe 的应用程序清单文件名称是 myComApp.exe.manifest。  
   
- 可在与 COM 应用程序相同的目录中安装应用程序清单。 或者，可将其作为资源添加到应用程序的 .exe 文件。 有关其他信息，请参阅[关于并行程序集](/windows/desktop/SbsCs/about-side-by-side-assemblies-)。  
+可在与 COM 应用程序相同的目录中安装应用程序清单。 或者，可将其作为资源添加到应用程序的 .exe 文件。 有关详细信息，请参阅[关于并行程序集](/windows/desktop/SbsCs/about-side-by-side-assemblies-)。  
   
-#### <a name="to-create-a-component-manifest"></a>创建组件清单  
+## <a name="create-a-component-manifest"></a>创建组件清单  
   
 1. 使用 XML 编辑器创建组件清单，描述托管程序集。  
   
@@ -85,7 +87,8 @@ ms.locfileid: "79181467"
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
 3. 标识文件的所有者。 应用程序清单文件中 `<dependentAssembly>` 元素的 `<assemblyIdentity>` 元素必须与组件清单中的该元素相匹配。 以下示例中，`myManagedComp` 版本 1.2.3.4 拥有清单文件。  
@@ -98,12 +101,13 @@ ms.locfileid: "79181467"
                         version="1.2.3.4"  
                         publicKeyToken="8275b28176rcbbef"  
                         processorArchitecture="msil"  
-           />  
+           />
+    </assembly>
     ```  
   
 4. 标识程序集中的每个类。 使用 `<clrClass>` 元素来唯一地标识托管程序集中的每个类。 该元素是 `<assembly>` 元素的子元素，具有下表中描述的属性。  
   
-    |Attribute|说明|必选|  
+    |特性|描述|必选|  
     |---------------|-----------------|--------------|  
     |`clsid`|用于指定要激活的类的标识符。|是|  
     |`description`|用于通知用户组件相关信息的字符串。 空字符串为默认值。|否|  
@@ -168,7 +172,7 @@ ms.locfileid: "79181467"
   
      同样，`myresource.res` 是包含嵌入资源的资源文件的名称。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [免注册 COM 互操作](registration-free-com-interop.md)
 - [免注册 COM 互操作的需求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))

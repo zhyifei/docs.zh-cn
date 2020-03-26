@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3D graphics [WPF]
 - graphics [WPF], 3D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: b8a3876030c533dd37eca0b00ebd50bccf309e53
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: e4918f7737bbe57a4f29c6c5cff1099f4f21674b
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80112383"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291808"
 ---
 # <a name="3d-graphics-overview"></a>3D 图形概述
 <a name="introduction"></a>中的[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3D 功能使开发人员能够在标记和程序代码中绘制、转换和设置 3D 图形的动画。 开发人员可以组合 2D 和 3D 图形以创建丰富的控件、提供复杂的数据插图或增强应用程序界面的用户体验。 3D[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]支持不是旨在提供功能齐全的游戏开发平台。 本主题概述了图形系统中的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]3D 功能。  
@@ -71,7 +71,7 @@ ms.locfileid: "80112383"
   
  属性<xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>指定一个<xref:System.Windows.Point>s 集合，告诉图形系统如何映射确定纹理如何绘制到网格顶点的坐标。 <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>指定为介于零和 1 之间的值，包括。  与<xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>属性一样，图形系统可以计算默认纹理坐标，但您可以选择设置不同的纹理坐标，以控制包含重复图案的一部分的纹理的映射。例如。 有关纹理坐标的详细信息，可在后续主题或 Managed Direct3D SDK 中找到。  
   
- 下面的示例演示如何在过程代码中创建立方体模型的一面。 请注意，可以将整个立方体绘制为单个 GeometryModel3D；此示例将该立方体面绘制为一个不同的模型，以便在以后向每个面应用不同的纹理。  
+ 下面的示例演示如何在过程代码中创建立方体模型的一面。 您可以将整个立方体绘制为单个几何模型3D;但是，您可以将整个立方体绘制为单个几何模型3D。本示例将立方体的面绘制为不同的模型，以便以后将单独的纹理应用于每个面。  
   
  [!code-csharp[3doverview#3DOverview3DN6](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn6)]
  [!code-vb[3doverview#3DOverview3DN6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn6)]  
@@ -105,7 +105,7 @@ ms.locfileid: "80112383"
   
 <a name="lights"></a>
 ## <a name="illuminating-the-scene"></a>照亮场景  
- 3D 图形中的灯光可以像灯光在现实世界中一起做什么：它们使曲面可见。 更确切地说，光确定了场景的哪个部分将包括在投影中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的光对象创建了各种光和阴影效果，并且按照各种实际光的行为进行了建模。 必须至少在场景中包括一个光，否则模型将不可见。  
+ 3D 图形中的灯光可以像灯光在现实世界中一起做什么：它们使曲面可见。 更确切地说，光确定了场景的哪个部分将包括在投影中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的光对象创建了各种光和阴影效果，并且按照各种实际光的行为进行了建模。 场景中至少包含一个灯光，否则看不到任何模型。  
   
  以下灯光派生自基类<xref:System.Windows.Media.Media3D.Light>：  
   
@@ -113,7 +113,7 @@ ms.locfileid: "80112383"
   
 - <xref:System.Windows.Media.Media3D.DirectionalLight>：像远处的光源一样发光。  方向灯光指定<xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A>为 Vector3D，但没有指定的位置。  
   
-- <xref:System.Windows.Media.Media3D.PointLight>：像附近的光源一样发光。 PointLights 具有一个位置并从该位置投射光。 场景中的对象根据对象相对于光源的位置和距离被照亮。 <xref:System.Windows.Media.Media3D.PointLightBase>公开属性<xref:System.Windows.Media.Media3D.PointLightBase.Range%2A>，该属性确定模型不会被光线照亮的距离。 PointLight 还公开了多个衰减属性，这些属性确定光源的亮度如何随距离的增加而减小。 可以为光源的衰减指定恒定、线性或二次内插算法。  
+- <xref:System.Windows.Media.Media3D.PointLight>：像附近的光源一样发光。 PointLights 具有一个位置并从该位置投射光。 场景中的对象根据对象相对于光源的位置和距离被照亮。 <xref:System.Windows.Media.Media3D.PointLightBase>公开属性<xref:System.Windows.Media.Media3D.PointLightBase.Range%2A>，该属性确定模型不会被光线照亮的距离。 PointLight 还公开衰减属性，这些衰减属性决定了光线的强度在距离上是如何减小的。 可以为光源的衰减指定恒定、线性或二次内插算法。  
   
 - <xref:System.Windows.Media.Media3D.SpotLight>：从<xref:System.Windows.Media.Media3D.PointLight>继承。 Spotlights 的照亮方式与 PointLight 类似，但是它既具有位置又具有方向。 它们在由<xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A>和<xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A>属性设置的锥形区域中投射光线，以度为单位指定。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "80112383"
 ## <a name="transforming-models"></a>转换模型  
  创建模型时，它们在场景中有特定的位置。 为了在场景中移动、旋转这些模型或者更改这些模型的大小而更改用来定义模型本身的顶点不切实际。  相反，就像在 2D 中一样，您将变换应用于模型。  
   
- 每个模型对象都有一<xref:System.Windows.Media.Media3D.Model3D.Transform%2A>个属性，您可以使用该属性移动、重新定向或调整模型的大小。  应用转换时，实际上是按照由转换功能指定的矢量或值（以适用者为准）来偏移模型的所有点。 换言之，用户已经转换了在其中定义模型的坐标空间（“模型空间”），但是尚未更改在整个场景的坐标系（“全局空间”）中构成模型几何形状的值。  
+ 每个模型对象都有一<xref:System.Windows.Media.Media3D.Model3D.Transform%2A>个属性，您可以使用该属性移动、调整方向或调整模型的大小。  应用转换时，实际上是按照由转换功能指定的矢量或值（以适用者为准）来偏移模型的所有点。 换言之，用户已经转换了在其中定义模型的坐标空间（“模型空间”），但是尚未更改在整个场景的坐标系（“全局空间”）中构成模型几何形状的值。  
   
  有关变换模型的详细信息，请参阅[3D 变换概述](3-d-transformations-overview.md)。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "80112383"
 ## <a name="animating-models"></a>对模型进行动画处理  
  3D[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]实现与 2D 图形参与相同的计时和动画系统。 换句话说，要为 3D 场景设置动画，为其模型的属性设置动画。 可以直接对基元的属性进行动画处理，但是通常很容易对用来更改模型位置或外观的转换进行动画处理。 由于转换可以应用于<xref:System.Windows.Media.Media3D.Model3DGroup>对象以及单个模型，因此可以将一组动画应用于 Model3DGroup 的子级动画，将另一组动画应用于一组子对象。 还可以通过对场景的照明属性进行动画处理来实现各种视觉效果。 最后，可以选择通过对照相机的位置或视野进行动画处理来对投影本身进行动画处理。 有关 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 计时和动画系统的背景信息，请参阅[动画概述](animation-overview.md)、[演示图板概述](storyboards-overview.md)和 [Freezable 对象概述](../advanced/freezable-objects-overview.md)主题。  
   
- 若要对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的对象进行动画处理，可以创建时间线、定义动画（实际上是随着时间的推移而更改某个属性值）并指定要向其应用动画的属性。 由于 3D 场景中的所有对象都是 的<xref:System.Windows.Controls.Viewport3D>子对象，因此要应用于该场景的任何动画的目标属性都是 Viewport3D 属性的属性。  
+ 若要对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的对象进行动画处理，可以创建时间线、定义动画（实际上是随着时间的推移而更改某个属性值）并指定要向其应用动画的属性。 由于 3D 场景中的所有对象都是 的<xref:System.Windows.Controls.Viewport3D>子对象，因此要应用于该场景的任何动画的目标属性都是 Viewport3D 的属性。  
   
  假设你希望实现模型看上去是在原地摇摆的效果。 您可以选择对模型应用 ，<xref:System.Windows.Media.Media3D.RotateTransform3D>并为其旋转轴从一个矢量到另一个矢量设置动画。 下面的代码示例演示如何将 Vector3DAnimation 应用于该转换的 Rotation3D 的 Axis 属性，并假设 RotateTransform3D 是应用于具有 TransformGroup 的模型的几个转换之一。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "80112383"
   
  [!code-xaml[hostingwpfusercontrolinwf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Controls.Viewport3D>
 - <xref:System.Windows.Media.Media3D.PerspectiveCamera>
@@ -174,6 +174,6 @@ ms.locfileid: "80112383"
 - <xref:System.Windows.Media.Media3D.Material>
 - [3D 转换概述](3-d-transformations-overview.md)
 - [最大程度地提高 WPF 3D 性能](maximize-wpf-3d-performance.md)
-- [如何使用主题](3-d-graphics-how-to-topics.md)
+- [帮助主题](3-d-graphics-how-to-topics.md)
 - [WPF 中的形状和基本绘图概述](shapes-and-basic-drawing-in-wpf-overview.md)
 - [使用图像、绘图和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)

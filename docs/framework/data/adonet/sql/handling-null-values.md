@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: c64f11c00174981925342f1493ef0b809a57ecb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c45c6672983866df6c47ec84981cc7bd11637c0c
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148642"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249072"
 ---
 # <a name="handling-null-values"></a>处理 Null 值
 如果列中的值未知或缺失，则使用关系数据库中的 null 值。 null 既不是空字符串（对于字符或日期/时间数据类型），也不是零值（对于数值数据类型）。 ANSI SQL-92 规范规定，所有数据类型的 null 值必须相同，以便一致地处理所有 null 值。 <xref:System.Data.SqlTypes> 命名空间通过实现 <xref:System.Data.SqlTypes.INullable> 接口提供 null 语义。 <xref:System.Data.SqlTypes> 中的每个数据类型都有其自己的 `IsNull` 属性和可分配给该数据类型的实例的 `Null` 值。  
   
 > [!NOTE]
-> .NET Framework 2.0 版引入了对可以为 null 的类型的支持，这允许程序员扩展值类型以表示基础类型的所有值。 这些 CLR 可以为 null 的类型表示 <xref:System.Nullable> 结构的实例。 当对值类型进行装箱和取消装箱时，此功能特别有用，从而增强了与对象类型的兼容性。 CLR 可以为 null 的类型不用于存储数据库 null 值，因为 ANSI SQL null 与 `null` 引用（或 Visual Basic 中的 `Nothing`）的行为方式不同。 若要使用数据库 ANSI SQL null 值，请使用 <xref:System.Data.SqlTypes> null 值，而不是 <xref:System.Nullable>。 有关在可视化基本版中使用 CLR 可空类型的详细信息，请参阅[空值类型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)，有关 C#，请参阅[空值类型](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)。  
+> .NET Framework 版本 2.0 引入了对空值类型的支持，它允许程序员扩展值类型以表示基础类型的所有值。 这些 CLR 可 null 值类型表示<xref:System.Nullable>结构的实例。 当对值类型进行装箱和取消装箱时，此功能特别有用，从而增强了与对象类型的兼容性。 CLR 可空值类型不用于存储数据库 null，因为 ANSI SQL null 的表示方式与`null`引用（或`Nothing`Visual Basic 中）不同。 若要使用数据库 ANSI SQL null 值，请使用 <xref:System.Data.SqlTypes> null 值，而不是 <xref:System.Nullable>。 有关在 Visual Basic 中使用 CLR 值空类型的详细信息，请参阅[空值类型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)，有关 C# 请参阅[空值类型](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)。  
   
 ## <a name="nulls-and-three-valued-logic"></a>空和三值逻辑  
  允许列定义中的 null 值在应用程序中引入了三值逻辑。 比较的计算结果可以为以下三种情况之一：  
@@ -141,7 +141,7 @@ String.Equals instance method:
   Two empty strings=True
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [SQL 服务器数据类型和ADO.NET](sql-server-data-types.md)
+- [SQL Server 数据类型和 ADO.NET](sql-server-data-types.md)
 - [ADO.NET 概述](../ado-net-overview.md)

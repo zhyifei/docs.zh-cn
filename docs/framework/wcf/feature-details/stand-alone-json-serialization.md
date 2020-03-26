@@ -2,12 +2,12 @@
 title: 使用数据合同Jon序列化器实现独立JSON序列化
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 36945f2d42f22ef3aa4f27bcbe403466f124a279
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 614776a905ec319624f76876762c25bfca15a357
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184414"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249443"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>使用数据合同Jon序列化器实现独立JSON序列化
 
@@ -42,7 +42,7 @@ JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行�
 |集合、字典和数组|Array|请参见本主题的“集合、字典和数组”一节。|
 |复杂类型（应用了 <xref:System.Runtime.Serialization.DataContractAttribute> 或 <xref:System.SerializableAttribute>）|复杂类型|数据成员变为 JavaScript 复杂类型的成员。|
 |实现 <xref:System.Runtime.Serialization.ISerializable> 接口的复杂类型|复杂类型|与其他复杂类型相同，但不支持某些 <xref:System.Runtime.Serialization.ISerializable> 类型（请参见本主题“高级信息”一节的“ISerializable 支持”部分）。|
-|任何类型的 `Null` 值|Null|也支持可以为 null 的类型，这些类型映射到 JSON 的方式与不可以为 null 的类型相同。|
+|任何类型的 `Null` 值|Null|还支持空值类型，并且以与非空值类型相同的方式映射到 JSON。|
 
 ### <a name="enumerations-and-json"></a>枚举和 JSON
 
@@ -117,7 +117,7 @@ JSON 类型在反序列化时并不一定要与上面的表匹配。 例如，`I
 
 有关多态序列化工作方式的详细信息，以及使用多态序列化时必须遵从的部分限制的讨论，请参见本主题后面的“高级信息”一节。
 
-### <a name="versioning"></a>版本控制
+### <a name="versioning"></a>版本管理
 
 JSON 中完全支持数据协定版本管理功能，其中包括 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口。 不仅如此，在多数情况下还可以将一个类型反序列化为一种格式（例如 XML），然后再将其序列化为另一种格式（例如 JSON），同时仍然保留 <xref:System.Runtime.Serialization.IExtensibleDataObject> 中的数据。 有关详细信息，请参阅[向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。 请记住，JSON 不进行排序，因此所有顺序信息都将丢失。 而且，JSON 不支持多个键/值对使用同一键名。 最后，对 <xref:System.Runtime.Serialization.IExtensibleDataObject> 执行的所有操作在本质上都是多态的，即它们的派生类型均被分配给所有类型的基类型 <xref:System.Object>。
 
@@ -293,6 +293,6 @@ WCF<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>和 ASP.NE
 
 序列化程序 XML 编码的键名不是有效的 XML 名称。 例如，名称为"123"的数据成员将\_具有编码名称，如"x0031\_\_x0032\_\_x0033"，\_因为"123"是无效的 XML 元素名称（以数字开头）。 在 XML 名称中，如果某些国际字符集无效，也会出现类似的情况。 有关 XML 对 JSON 处理的这种影响的说明，请参阅[JSON 和 XML 之间的映射](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [支持 JSON 和其他数据传输格式](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+- [对 JSON 和其他数据传输格式的支持](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

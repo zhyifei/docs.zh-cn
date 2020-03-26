@@ -6,14 +6,14 @@ helpviewer_keywords:
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: 2919e8d4c1af858973ff3d2b58b4d3bc4f925527
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b83ecda30bba8af1f3175eb6ad08593b07a80e6c
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018051"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249534"
 ---
-# <a name="xmlserializer-element"></a>\<xmlSerializer > 元素
+# <a name="xmlserializer-element"></a>\<xml 序列化器>元素
 指定是否完成 <xref:System.Xml.Serialization.XmlSerializer> 进度的额外检查。  
   
  \<configuration>  
@@ -22,7 +22,7 @@ ms.locfileid: "62018051"
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<xmlSerializer checkDeserializerAdvance = "true"|"false" />  
+<xmlSerializer checkDeserializerAdvance = "true|false" />  
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -33,7 +33,7 @@ ms.locfileid: "62018051"
 |特性|描述|  
 |---------------|-----------------|  
 |**checkDeserializeAdvances**|指定是否已检查 <xref:System.Xml.Serialization.XmlSerializer> 的进度。 将特性设置为“true”或“false”。 默认值为“true”。|  
-|**useLegacySerializationGeneration**|指定 <xref:System.Xml.Serialization.XmlSerializer> 是否使用旧的序列化生成，该方法通过将 C# 代码写入到一个文件，然后将其编译为程序集来生成程序集。 默认值为 false。|  
+|**useLegacySerializationGeneration**|指定 <xref:System.Xml.Serialization.XmlSerializer> 是否使用旧的序列化生成，该方法通过将 C# 代码写入到一个文件，然后将其编译为程序集来生成程序集。 默认值为**false**。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -42,15 +42,15 @@ ms.locfileid: "62018051"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<system.xml.serialization> 元素](../../../docs/standard/serialization/system-xml-serialization-element.md)|包含 <xref:System.Xml.Serialization.XmlSerializer> 和 <xref:System.Xml.Serialization.XmlSchemaImporter> 类的配置设置。|  
+|[\<系统.xml.序列化>元素](../../../docs/standard/serialization/system-xml-serialization-element.md)|包含 <xref:System.Xml.Serialization.XmlSerializer> 和 <xref:System.Xml.Serialization.XmlSchemaImporter> 类的配置设置。|  
   
 ## <a name="remarks"></a>备注  
- 默认情况下，当反序列化不受信任的数据时，<xref:System.Xml.Serialization.XmlSerializer> 会额外提供一层防范潜在拒绝服务攻击的安全保护。 它通过在反序列化期间尝试检测无限循环来实现以上保护。 如果检测到此类情况，则引发异常并显示以下消息："内部错误： 反序列化无法越过基础流。"  
+ 默认情况下，当反序列化不受信任的数据时，<xref:System.Xml.Serialization.XmlSerializer> 会额外提供一层防范潜在拒绝服务攻击的安全保护。 它通过在反序列化期间尝试检测无限循环来实现以上保护。 如果检测到以上状况，则将引发异常并显示以下消息：“内部错误: 反序列化无法越过基础流。”  
   
- 接收到此消息并不一定表示正在发生拒绝服务攻击。 在某些极少出现的情况下，无限循环检测机制会产生误报，并对合法的传入消息引发异常。 如果发现在你的特定应用程序中，合法消息被这一额外的保护层拒绝，请将 checkDeserializeAdvances 属性设置为“false”。  
+ 接收到此消息并不一定表示正在发生拒绝服务攻击。 在某些极少出现的情况下，无限循环检测机制会产生误报，并对合法的传入消息引发异常。 如果发现在你的特定应用程序中，合法消息被这一额外的保护层拒绝，请将 checkDeserializeAdvances 属性设置为“false”****。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例将 checkDeserializeAdvances 属性设置为“false”。  
+ 下面的代码示例将 checkDeserializeAdvances 属性设置为“false”****。  
   
 ```xml  
 <configuration>  
@@ -63,5 +63,5 @@ ms.locfileid: "62018051"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [\<system.xml.serialization> 元素](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [\<系统.xml.序列化>元素](../../../docs/standard/serialization/system-xml-serialization-element.md)
 - [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)

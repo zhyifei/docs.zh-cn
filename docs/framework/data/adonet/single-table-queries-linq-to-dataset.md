@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 7bb8d8e19ac9cf36eabc061ceba9c649b8a4cc00
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89c90fd217285fac449aba40682aa947fcfb3a07
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148967"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249085"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>单表查询 (LINQ to DataSet)
 语言集成查询 （LINQ） 查询用于实现接口或接口的<xref:System.Collections.Generic.IEnumerable%601><xref:System.Linq.IQueryable%601>数据源。 类<xref:System.Data.DataTable>不实现任一接口，因此如果要在 LINQ<xref:System.Data.DataTableExtensions.AsEnumerable%2A>查询`From`的子句中使用<xref:System.Data.DataTable>作为源，则必须调用 方法。  
@@ -26,11 +26,11 @@ ms.locfileid: "79148967"
   
  然后，`foreach` 循环枚举由 `Select` 返回的可枚举对象，并生成查询结果。 由于查询是一种可以实现 <xref:System.Linq.Enumerable> 的 <xref:System.Collections.Generic.IEnumerable%601> 类型，因此，查询的计算将推迟到使用 `foreach` 循环来循环访问查询变量之后进行。 推迟查询计算可使查询保持为可进行多次计算的值，每次计算都可能生成不同的结果。  
   
- <xref:System.Data.DataRowExtensions.Field%2A> 方法提供对 <xref:System.Data.DataRow> 列值的访问，而 <xref:System.Data.DataRowExtensions.SetField%2A>（前面的示例未演示）设置 <xref:System.Data.DataRow> 中的列值。 <xref:System.Data.DataRowExtensions.Field%2A> 方法和 <xref:System.Data.DataRowExtensions.SetField%2A> 方法都可以处理可以为 null 的类型，因此不必显式检查 null 值。 这两种方法也都是泛型方法，这意味着您不必强制转换返回类型。 您可以使用 <xref:System.Data.DataRow> 中预先存在的列访问器（例如 `o["OrderDate"]`），但是这样做要求您将返回对象强制转换为相应的类型。  如果列可以为 null，则必须使用 <xref:System.Data.DataRow.IsNull%2A> 方法检查值是否为 null。 有关详细信息，请参阅[通用字段和设置字段方法](generic-field-and-setfield-methods-linq-to-dataset.md)。  
+ <xref:System.Data.DataRowExtensions.Field%2A> 方法提供对 <xref:System.Data.DataRow> 列值的访问，而 <xref:System.Data.DataRowExtensions.SetField%2A>（前面的示例未演示）设置 <xref:System.Data.DataRow> 中的列值。 <xref:System.Data.DataRowExtensions.Field%2A>该方法和方法<xref:System.Data.DataRowExtensions.SetField%2A>都处理空值类型，因此不必显式检查 null 值。 这两种方法也都是泛型方法，这意味着您不必强制转换返回类型。 您可以使用 <xref:System.Data.DataRow> 中预先存在的列访问器（例如 `o["OrderDate"]`），但是这样做要求您将返回对象强制转换为相应的类型。  如果列是空值类型，则必须使用<xref:System.Data.DataRow.IsNull%2A>方法检查该值是否为空。 有关详细信息，请参阅[通用字段和设置字段方法](generic-field-and-setfield-methods-linq-to-dataset.md)。  
   
  请注意，`T` 方法和 <xref:System.Data.DataRowExtensions.Field%2A> 方法的泛型参数 <xref:System.Data.DataRowExtensions.SetField%2A> 中指定的数据类型必须与基础值的类型相匹配，否则将引发 <xref:System.InvalidCastException>。 指定的列名称也必须与 <xref:System.Data.DataSet> 中的列名称相匹配，否则将引发 <xref:System.ArgumentException>。 在这两种情况下，异常都是在执行查询期间的运行时数据枚举时引发的。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [跨表查询](cross-table-queries-linq-to-dataset.md)
 - [查询类型化数据集](querying-typed-datasets.md)

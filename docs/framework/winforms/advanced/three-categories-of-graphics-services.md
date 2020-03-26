@@ -8,12 +8,12 @@ helpviewer_keywords:
 - vector graphics
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-ms.openlocfilehash: b0f2ad8293daf6ad53899a0f8be82985c24ff50d
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: fa7391ef0f7170ddb9d9d24aa5a1a03635bf46e0
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111200"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291728"
 ---
 # <a name="three-categories-of-graphics-services"></a>图形服务的三个类别
 Windows 窗体中的图形产品分为以下三大类：  
@@ -25,7 +25,7 @@ Windows 窗体中的图形产品分为以下三大类：
 - 版式  
   
 ## <a name="2d-vector-graphics"></a>2D 矢量图形  
- 二维矢量图形是基元图形;如直线、曲线和图形;由坐标系上的点集指定。 例如，直线由其两个端点指定，矩形由一个点指定，该点给出其左上角的位置，以及一对表示其宽度和高度的数字。 简单路径由由直线连接的点数组指定。 贝塞尔样条线是由四个控制点指定的复杂曲线。  
+ 二维矢量图形（如直线、曲线和图形）是由坐标系上的点集指定的基元。 例如，直线由其两个端点指定，矩形由一个点指定，该点给出其左上角的位置，以及一对表示其宽度和高度的数字。 简单路径由由直线连接的点数组指定。 贝塞尔样条线是由四个控制点指定的复杂曲线。  
   
  GDI+ 提供类和结构，这些类和结构存储有关基元本身的信息、存储有关基元绘制方式的信息的类以及实际执行绘图的类。 例如，结构存储<xref:System.Drawing.Rectangle>矩形的位置和大小;例如，该结构存储矩形的位置和大小。类<xref:System.Drawing.Pen>存储有关线颜色、线宽和线样式的信息;<xref:System.Drawing.Graphics>类具有绘制线条、矩形、路径和其他图形的方法。 还有几个<xref:System.Drawing.Brush>类存储有关如何用颜色或图案填充闭合的数字和路径的信息。  
   
@@ -39,7 +39,7 @@ Windows 窗体中的图形产品分为以下三大类：
   
  此外，Windows 窗体还提供使用类<xref:System.Windows.Forms.TextRenderer>中的 GDI 功能绘制文本的选项。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [图形概述](graphics-overview-windows-forms.md)
 - [关于 GDI+ 托管代码](about-gdi-managed-code.md)

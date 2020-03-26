@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 5e99a8cbf1a3fcac2b6785128c284911949f7997
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 05847271cf82739a6a0b609771043c02a7ffc0e9
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111837"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291590"
 ---
 # <a name="graphics-rendering-tiers"></a>图形呈现层
 呈现层为运行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的设备定义图形硬件功能和性能级别。  
@@ -45,7 +45,7 @@ ms.locfileid: "80111837"
 ### <a name="rendering-tier-0"></a>呈现层 0  
  呈现层的值为 0 意味着设备上的应用程序没有图形硬件加速可用。 在这一层次级别，应假设所有图形都由软件呈现，未采用硬件加速。 此层的功能对应于小于 9.0 的 DirectX 版本。  
   
-### <a name="rendering-tier-1-and-rendering-tier-2"></a>呈现层 1 与呈现层 2  
+### <a name="rendering-tier-1-and-rendering-tier-2"></a>呈现层 1 与呈现层 2
   
 > [!NOTE]
 > 从 .NET 框架 4 开始，渲染层 1 已重新定义为仅包括支持 DirectX 9.0 或更高级别的图形硬件。 支持 DirectX 7 或 8 的图形硬件现在定义为呈现层 0。  
@@ -72,7 +72,7 @@ ms.locfileid: "80111837"
 |3D MIP 映射|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 在呈现 3D 内容时尝试使用 MIP 映射。 当纹理占用 中的较小视图场时，MIP 映射可提高纹理渲染的质量<xref:System.Windows.Controls.Viewport3D>。|  
 |径向渐变|虽然支持，但避免<xref:System.Windows.Media.RadialGradientBrush>在大型对象上使用。|  
 |3D 光照计算|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 执行每个顶点的光照，这意味着必须在应用于网格的每个材料的每个顶点计算光照强度。|  
-|文本呈现|子像素字体呈现使用图形硬件上可用的像素着色器。|  
+|文本呈现|子像素字体渲染在图形硬件上使用可用的像素底影。|  
   
  以下功能仅对呈现层 2 采用硬件加速：  
   
@@ -98,7 +98,7 @@ ms.locfileid: "80111837"
 ### <a name="graphics-rendering-registry-settings"></a>图形呈现注册表设置  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了四个注册表设置来控制 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 呈现：  
   
-|设置|说明|  
+|设置|描述|  
 |-------------|-----------------|  
 |**禁用硬件加速选项**|指定是否应启用硬件加速。|  
 |**最大多重采样值**|指定用于抗锯齿 3D 内容的多采样程度。|  
@@ -110,7 +110,7 @@ ms.locfileid: "80111837"
 ### <a name="wpf-performance-profiling-tools"></a>WPF 性能分析工具  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一套性能分析工具，此工具可帮助分析应用程序的运行时行为，并确定可应用的性能优化类型。 下表列出了 Windows SDK 工具 WPF 性能套件中包含的性能分析工具：  
   
-|工具|说明|  
+|工具|描述|  
 |----------|-----------------|  
 |分析器|用于分析呈现行为。|  
 |可视化探查器|用于按可视化树中的元素分析 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 服务（如布局和事件处理）的使用。|  
@@ -127,7 +127,7 @@ ms.locfileid: "80111837"
  ![屏幕截图：DirectX 诊断工具](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 “DirectX 诊断工具”主窗口  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>

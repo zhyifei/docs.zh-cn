@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [Windows Forms], defining within Windows Forms custom controls
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-ms.openlocfilehash: 6799b229de8e8eb49dd3b8bbaffe0d08a32b7208
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a4738373b10fbcb1d2406406d30f10b795aeb914
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142285"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228842"
 ---
 # <a name="defining-an-event-in-windows-forms-controls"></a>在 Windows 窗体控件中定义事件
 有关定义自定义事件的详细信息，请参阅[事件](../../../standard/events/index.md)。 如果你定义的事件没有任何关联的数据，则使用事件数据的基类型 <xref:System.EventArgs>，并使用 <xref:System.EventHandler> 作为事件委托。 剩下的就是定义事件成员和引发事件的受保护`On`*事件Name*方法。  
@@ -71,12 +71,12 @@ public class FlashTrackBar : Control {
    // changed. Derived controls can override this method.
    protected virtual void OnValueChanged(EventArgs e)
    {  
-       ValueChanged?.Invoke(this, e);  
+       onValueChanged?.Invoke(this, e);  
    }  
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Windows 窗体控件中的事件](events-in-windows-forms-controls.md)
 - [事件](../../../standard/events/index.md)

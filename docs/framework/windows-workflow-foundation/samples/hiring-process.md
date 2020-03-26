@@ -2,12 +2,12 @@
 title: 招聘流程
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 258ad41f52957023fd091f1668a9532ead270f39
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: ade72422d29d170e9c80f602f151ce765a1a00f7
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111876"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291689"
 ---
 # <a name="hiring-process"></a>招聘流程
 本示例演示如何使用消息传递活动和作为工作流服务承载的两个工作流来实现业务流程。 这些工作流是 Contoso, Inc 虚构公司的 IT 基础结构的一部分。  
@@ -95,9 +95,9 @@ ms.locfileid: "80111876"
 ## <a name="projects-in-the-sample"></a>示例中的项目  
  下表显示示例解决方案中的项目。  
   
-|Project|说明|  
+|Project|描述|  
 |-------------|-----------------|  
-|ContosoHR|包含数据协定、业务对象和储存库类。|  
+|ContosoHR|包含数据协定、业务对象和存储库类。|  
 |HiringRequestService|包含招聘请求流程工作流的定义。<br /><br /> 此项目实现为控制台应用程序，该应用程序自承载作为服务的工作流（xaml 文件）。|  
 |ResumeRequestService|收集申请者的简历（直到超时到期或有人决定必须停止此流程为止）的工作流服务。<br /><br /> 此项目实现为声明性工作流服务 (xamlx)。|  
 |OrgService|公开组织信息（员工、职位、职位类型和部门）的服务。 可将此服务视为企业资源计划 (ERP) 的公司组织模块。<br /><br /> 此项目作为控制台应用程序实现，该应用程序公开 Windows 通信基础 （WCF） 服务。|  
@@ -108,7 +108,7 @@ ms.locfileid: "80111876"
 ## <a name="feature-summary"></a>功能摘要  
  下表说明每个功能在此示例中的使用方式。  
   
-|Feature|说明|Project|  
+|Feature|描述|Project|  
 |-------------|-----------------|-------------|  
 |流程图|业务流程表示为流程图。 此流程图说明表示流程的方式与业务在白板中绘制流程的方式相同。|HiringRequestService|  
 |工作流服务|包含流程定义的流程图承载于某服务（在此示例中，此服务承载于控制台应用程序中）。|HiringRequestService|  
@@ -122,7 +122,7 @@ ms.locfileid: "80111876"
 |并行活动|-   <xref:System.Activities.Statements.ParallelForEach%601>用于并行在 CEO 和 HR 经理的收件箱中注册（等待两个人力资源经理的批准步骤）。<br />-   <xref:System.Activities.Statements.Parallel>用于在"已完成"和"已拒绝"步骤中执行一些清理任务|HiringRequestService|  
 |模型取消|此流程图使用 <xref:System.Activities.Statements.CancellationScope> 创建取消行为（在此情况下它执行一些清理操作）。|HiringRequestService|  
 |客户持久性参与者|`HiringRequestPersistenceParticipant` 将工作流变量中的数据保存到 Contoso HR 数据库中存储的某个表中。|HiringRequestService|  
-|工作流服务|使用工作流服务实现 `ResumeRequestService`。 工作流定义和服务信息包含在 ResumeRequestService.xamlx 中。 此服务配置为使用持久性和跟踪。|ResumeRequestService|  
+|工作流服务|使用工作流服务实现 `ResumeRequestService`。 工作流定义和服务信息包含在简历请求服务.xamlx 中。 此服务配置为使用持久性和跟踪。|ResumeRequestService|  
 |持久性计时器|`ResumeRequestService` 使用持久性计时器定义招聘启事的持续时间（一旦超时到期，将关闭招聘启事）。|ResumeRequestService|  
 |事务|<xref:System.Activities.Statements.TransactionScope> 用于确保数据在若干个活动的执行期间（接收新简历时）保持一致。|ResumeRequestService|  
 |事务|自定义持久性参与者 (`HiringRequestPersistenceParticipant`) 和自定义跟踪参与者 (`HistoryFileTrackingParticipant`) 使用相同的事务。|HiringRequestService|  
@@ -209,7 +209,7 @@ ms.locfileid: "80111876"
   
 3. HR 还可停止收集简历（例如，确定了合适的人选）。  
   
-## <a name="troubleshooting"></a>故障排除  
+## <a name="troubleshooting"></a>疑难解答  
   
 1. 确保您运行具有管理员权限的可视化工作室。  
   

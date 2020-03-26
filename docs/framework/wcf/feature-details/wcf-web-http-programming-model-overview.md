@@ -2,12 +2,12 @@
 title: WCF Web HTTP 编程模型概述
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: fb6ef0fdcefbc6ceec75ce30db3abf5896d85c61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f2350b58e3cb33613ebc8e2c3cda1e234bcde25
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184186"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291744"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 编程模型概述
 Windows 通信基础 （WCF） WEB HTTP 编程模型提供了使用 WCF 构建 WEB HTTP 服务所需的基本元素。 WCF WEB HTTP 服务旨在由最广泛的客户端（包括 Web 浏览器）访问，并且具有以下独特要求：  
@@ -135,7 +135,7 @@ interface ICustomer
   
  这意味着 WCF WEB HTTP 编程模型可以处理任何类型的数据，但您可能正在针对<xref:System.IO.Stream>进行编程。  
   
- .NET 框架 3.5 支持 JSON 数据 （AJAX） 以及联合馈送（包括 ATOM 和 RSS）。 有关这些功能的详细信息，请参阅[WCF Web 格式](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)和[AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。  
+ .NET 框架 3.5 支持 JSON 数据 （AJAX） 以及联合馈送（包括 ATOM 和 RSS）。 有关这些功能的详细信息，请参阅[WCF Web HTTP 格式](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[、WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) [、AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP 编程模型和安全  
 
@@ -144,7 +144,7 @@ interface ICustomer
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP 编程模型疑难解答  
  当使用 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 调用 WCF WEB HTTP 服务以创建通道时，即使将其他 <xref:System.ServiceModel.Description.WebHttpBehavior> 传递给 <xref:System.ServiceModel.EndpointAddress>，<xref:System.ServiceModel.EndpointAddress> 也会使用配置文件中设置的 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [WCF 联合](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [WCF Web HTTP 编程对象模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

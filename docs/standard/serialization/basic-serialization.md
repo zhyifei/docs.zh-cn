@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: a2dde9f795dfe31ff6ef821272a0d5e8d20e8b2f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: ce86f7897c5c117c4fd6f1eabc4c8b802103261c
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159944"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248025"
 ---
 # <a name="basic-serialization"></a>基本序列化
 
@@ -42,7 +42,7 @@ formatter.Serialize(stream, obj);
 stream.Close();  
 ```  
   
-此示例使用二进制格式化程序执行序列化。 只需创建该流的实例及要使用的格式化程序，然后在该格式化程序上调用 Serialize 方法。 要序列化的流和对象将作为参数提供给此调用。 尽管未在此示例中明确演示，但类的所有成员变量都将被序列化，即使将变量标记为私有也是如此。 在这一方面，二进制序列化与 <xref:System.Xml.Serialization.XmlSerializer> 类不同，后者只序列化公共字段。 有关从二进制序列化排除成员变量的信息，请参阅[选择性的序列化](selective-serialization.md)。  
+此示例使用二进制格式化程序执行序列化。 只需创建该流的实例及要使用的格式化程序，然后在该格式化程序上调用 Serialize 方法****。 要序列化的流和对象将作为参数提供给此调用。 尽管未在此示例中明确演示，但类的所有成员变量都将被序列化，即使将变量标记为私有也是如此。 在这一方面，二进制序列化与 <xref:System.Xml.Serialization.XmlSerializer> 类不同，后者只序列化公共字段。 有关从二进制序列化排除成员变量的信息，请参阅[选择性的序列化](selective-serialization.md)。  
   
 将对象还原回以前的状态同样很容易。 首先，创建用于读取的流和 <xref:System.Runtime.Serialization.Formatter>，然后指导格式化程序对该对象进行反序列化。 下面的代码示例演示如何完成以上过程。  
   
@@ -60,7 +60,7 @@ Console.WriteLine("str: {0}", obj.str);
   
 上面使用的 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 非常有效，还可生成压缩字节流。 使用此格式化程序序列化的所有对象也可使用它进行反序列化，这使得它成为对将在 .NET Framework 上反序列化的对象进行序列化的理想工具。 需要特别注意的是，反序列化对象时不调用构造函数。 这是出于性能原因而对反序列化进行的约束。 然而，这违反了运行库对对象编写器制定的某些常用协定，并且将对象标记为可序列化时开发人员应确保了解其后果。  
   
-如果要求可迁移性，请改用 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>。 只需将以上代码中的 BinaryFormatter 替换为 SoapFormatter，然后同前面一样调用 Serialize 和 Deserialize。 此格式化程序针对以上使用的示例产生下面的输出：  
+如果要求可迁移性，请改用 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>。 只需将以上代码中的 BinaryFormatter 替换为 SoapFormatter，然后同前面一样调用 Serialize 和 Deserialize****************。 此格式化程序针对以上使用的示例产生下面的输出：  
   
 ```xml  
 <SOAP-ENV:Envelope  
@@ -68,9 +68,7 @@ Console.WriteLine("str: {0}", obj.str);
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"  
   xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"  
-  SOAP-ENV:encodingStyle=  
-  "http://schemas.microsoft.com/soap/encoding/clr/1.0"  
-  "http://schemas.xmlsoap.org/soap/encoding/"  
+  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"  
   xmlns:a1="http://schemas.microsoft.com/clr/assem/ToFile">  
   
   <SOAP-ENV:Body>  
@@ -94,7 +92,7 @@ public class MyStuff : MyObject
   
  使用 [Serializable](xref:System.SerializableAttribute) 属性非常方便，但有以上所述的限制。 有关何时应标记类以进行序列化的信息，请参阅[序列化准则](serialization-guidelines.md)。 若类已编译，则无法对其进行序列化。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [二进制序列化](binary-serialization.md)
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

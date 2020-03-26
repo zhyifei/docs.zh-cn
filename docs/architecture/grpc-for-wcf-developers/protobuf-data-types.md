@@ -2,12 +2,12 @@
 title: 原型标量数据类型 - gRPC，适用于 WCF 开发人员
 description: 了解 Protobuf 和 gRPC 在 .NET Core 中支持的基本和众所周知的数据类型。
 ms.date: 09/09/2019
-ms.openlocfilehash: a40f51fa32ddb97ba417ec01f31e1f0187f0d544
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea3b53426ecf6f50f3bae22a537e227b07248508
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148122"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249430"
 ---
 # <a name="protobuf-scalar-data-types"></a>Protobuf 标量数据类型
 
@@ -125,7 +125,7 @@ Protobuf 将使用生成的消息`T?`属性的简单 （`int?`例如 ， ） 。
 | `uint?`   | `google.protobuf.UInt32Value` |
 | `ulong?`  | `google.protobuf.UInt64Value` |
 
-已知类型`Timestamp`，并在`Duration`.NET 中表示为类，因此不需要空版本。 但是，在转换为`DateTimeOffset`或`TimeSpan`时，请务必检查这些类型的属性的 null。
+已知类型`Timestamp`，并在`Duration`.NET 中表示为类。 在 C# 8 及以后，可以使用可无引用类型。 但是，在转换为`DateTimeOffset`或`TimeSpan`时，请务必检查这些类型的属性的 null。
 
 ## <a name="decimals"></a>小数
 
