@@ -11,7 +11,7 @@
       href: project-structure.md
     - name: 启动
       href: app-startup.md
-    - name: 组件数
+    - name: 组件
       href: components.md
     - name: 页面、路由和布局
       href: pages-routing-layouts.md
@@ -23,7 +23,7 @@
       href: data.md
     - name: 中间件
       href: middleware.md
-    - name: 配置
+    - name: Configuration
       href: config.md
     - name: 安全性
       href: security-authentication-authorization.md

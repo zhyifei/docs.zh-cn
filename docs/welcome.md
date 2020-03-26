@@ -3,12 +3,12 @@ title: 欢迎使用 .NET
 description: .NET 系列技术入门。
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bfc9b55f06a5830c13df52f992d2630f1f45d8be
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124216"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228787"
 ---
 # <a name="welcome-to-net"></a>欢迎使用 .NET
 
@@ -44,7 +44,7 @@ ms.locfileid: "77124216"
 
 - [.NET 指南](standard/index.md)
 - [.NET Core 指南](core/index.md)
-- [.NET Framework 指南](framework/index.md)
+- [.NET Framework 指南](framework/index.yml)
 - [C# 指南](csharp/index.yml)
 - [F # 指南](fsharp/index.yml)
 - [Visual Basic 指南](visual-basic/index.yml)

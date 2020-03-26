@@ -1,7 +1,7 @@
 - name: 语言集成查询 (LINQ)
   href: index.md
   items:
-    - name: LINQ 简介
+    - name: LINQ 介绍
       href: introduction-to-linq.md
     - name: LINQ 入门
       href: getting-started-with-linq.md
@@ -345,7 +345,7 @@
               href: functional-transformation-of-xml.md
             - name: 教程：延迟执行
               href: tutorial-deferred-execution.md
-            - name: LINQ to XML 中的延迟执行和迟缓计算
+            - name: LINQ to XML 中的延迟执行和延迟计算
               href: deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
             - name: 延迟执行示例
               href: deferred-execution-example.md

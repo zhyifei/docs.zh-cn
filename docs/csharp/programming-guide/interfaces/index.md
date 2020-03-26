@@ -5,16 +5,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: f4ee269f41e79562c113a7627816f797b083095e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb1b812fdbf1d521ed3fd86e23f430bcd04d00f6
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79157073"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249176"
 ---
 # <a name="interfaces-c-programming-guide"></a>接口（C# 编程指南）
 
-接口包含非抽象[类](../../language-reference/keywords/class.md)或[结构](../../language-reference/builtin-types/struct.md)必须实现的一组相关功能的定义。 接口可以定义 `static` 方法，此类方法必须具有实现。 接口可以为其任何或所有的声明实例成员提供默认实现。 接口不能声明实例数据，如字段、自动实现的属性或类似属性的事件。
+接口包含非抽象[类](../../language-reference/keywords/class.md)或[结构](../../language-reference/builtin-types/struct.md)必须实现的一组相关功能的定义。 接口可以定义 `static` 方法，此类方法必须具有实现。 从 C# 8.0 开始，接口可为成员定义默认实现。 接口不能声明实例数据，如字段、自动实现的属性或类似属性的事件。
 
 例如，使用接口可以在类中包括来自多个源的行为。 该功能在 C# 中十分重要，因为该语言不支持类的多重继承。 此外，如果要模拟结构的继承，也必须使用接口，因为它们无法实际从另一个结构或类继承。
 
@@ -54,7 +54,7 @@ ms.locfileid: "79157073"
 - 接口无法直接进行实例化。 其成员由实现接口的任何类或结构来实现。
 - 一个类或结构可以实现多个接口。 一个类可以继承一个基类，还可实现一个或多个接口。
 
-## <a name="BKMK_RelatedSections"></a>相关部分
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a>相关部分
 
 - [接口属性](../classes-and-structs/interface-properties.md)  
 - [接口中的索引器](../indexers/indexers-in-interfaces.md)  

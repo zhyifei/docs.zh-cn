@@ -4,24 +4,24 @@ description: .NET Core 是一种高性能的模块化 .NET 实现，用于创建
 author: richlander
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 3db98d21a7cdc80d8a98b23782a81ffa37520937
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d2ce5951fa01ca3945ce0e64aa58fbadc8ab5af
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75740746"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546544"
 ---
 # <a name="net-core-guide"></a>.NET Core 指南
 
 [.NET Core](about.md) 是[开放源代码](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)通用开发平台，由 Microsoft 和 .NET 社区在 [GitHub](https://github.com/dotnet/core) 上共同维护。 它跨平台（支持 Windows、macOS 和 Linux），并且可用于生成设备、云和 IoT 应用程序。
 
-请参阅[关于 .NET Core](about.md)，以详细了解 .NET Core，包括它的特征、支持的语言和框架以及密钥 API。
+请参阅[关于 .NET Core](about.md)，详细了解 .NET Core，包括它的特征、支持的语言和框架以及关键 API。
 
 请学习 [.NET Core 教程](tutorials/index.md)，了解如何创建简单的 .NET Core 应用程序。 只需几分钟即可生成并运行第一个应用。 若要尝试在浏览器中使用 .NET Core，请参阅 [C# 中的数字](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml)在线教程。
 
 ## <a name="download-net-core"></a>下载 .NET Core
 
-下载 [.NET Core SDK](https://www.microsoft.com/net/download)，以尝试在 Windows、macOS 或 Linux 计算机上使用 .NET Core。 如果首选使用 Docker 容器，请访问 [.NET Core Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core/)。
+下载 [.NET Core SDK](https://dotnet.microsoft.com/download)，以尝试在 Windows、macOS 或 Linux 计算机上使用 .NET Core。 如果首选使用 Docker 容器，请访问 [.NET Core Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core/)。
 
 若要使用其他版本 .NET Core，可以在 [.NET Core 下载内容](https://dotnet.microsoft.com/download/dotnet-core)中找到所有版本 .NET Core。
 

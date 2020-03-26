@@ -6,9 +6,9 @@
     - name: 入门
       href: getting-started-with-net-native.md
       items:
-        - name: '示例:动态编程疑难解答'
+        - name: 示例：动态编程疑难解答
           href: example-troubleshooting-dynamic-programming.md
-        - name: '示例:处理绑定数据时出现的异常'
+        - name: 示例：处理绑定数据时出现的异常
           href: example-handling-exceptions-when-binding-data.md
         - name: .NET 本机应用中的运行时异常
           href: runtime-exceptions-in-net-native-apps.md

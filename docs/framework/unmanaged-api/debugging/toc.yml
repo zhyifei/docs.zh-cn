@@ -1038,7 +1038,7 @@
               href: icordebugprocess6-getexportstepinfo-method.md
             - name: MarkDebuggerAttached 方法
               href: icordebugprocess6-markdebuggerattached-method.md
-            - name: ProcessStateChanged 方法
+            - name: “进程状态已更改”方法
               href: icordebugprocess6-processstatechanged-method.md
         - name: ICorDebugProcess7 接口
           href: icordebugprocess7-interface.md

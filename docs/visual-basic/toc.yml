@@ -26,7 +26,7 @@
           items:
             - name: 如何：以异步方式调用 Web 服务
               href: developing-apps/programming/how-to-call-a-web-service-asynchronously.md
-        - name: Accessing Application Settings
+        - name: 访问应用程序设置
           href: developing-apps/programming/app-settings/index.md
         - name: 处理驱动器、目录和文件
           href: developing-apps/programming/drives-directories-files/processing.md
@@ -75,7 +75,7 @@
       href: programming-guide/concepts/covariance-contravariance/index.md
     - name: 表达式树
       href: programming-guide/concepts/expression-trees/index.md
-    - name: Iterators
+    - name: 迭代器
       href: programming-guide/concepts/iterators.md
     - name: 语言集成查询 (LINQ)
       href: programming-guide/concepts/linq/index.md

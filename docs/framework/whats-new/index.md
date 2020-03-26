@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: fa7138127379b069b646c4b2488d1973a3ddd628
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79143312"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249690"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework 中的新增功能
 
@@ -94,7 +94,7 @@ ms.locfileid: "79143312"
 
 运行状况终结点由业务流程工具广泛使用以基于其运行状况状态来管理服务。 运行状况检查还可由监视工具使用以跟踪并提供有关服务的可用性和性能的通知。
 
- ServiceHealthBehavior 是一个 WCF 服务行为，该行为可扩展 <xref:System.ServiceModel.Description.IServiceBehavior>。  添加到 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType> 集合后，服务行为会执行以下操作：
+ServiceHealthBehavior 是一个 WCF 服务行为，该行为可扩展 <xref:System.ServiceModel.Description.IServiceBehavior>。  添加到 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType> 集合后，服务行为会执行以下操作：
 
 - 返回带有 HTTP 响应代码的服务运行状况状态。 可以在查询字符串中指定 HTTP/GET 运行状况探测请求的 HTTP 状态代码。
 
@@ -427,7 +427,7 @@ c.SameSite = SameSiteMode.Lax
       <forms cookieSameSite="Lax">
          <!-- ...   -->
       </forms>
-   <authentication />
+   </authentication>
    <sessionState cookieSameSite="Lax"></sessionState>
 </system.web>
 ```
@@ -500,10 +500,10 @@ NET Framework 4.7.2 为基于 enclave 的 Always Encrypted 添加支持。 Alway
 从 .NET Framework 4.7.2 开始，诊断助手可以找到从给定源 URI 创建的  <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries>。 （此功能通过诊断助手使用，而非生产应用程序。）诊断助手（例如 Visual Studio 的“编辑并继续”）让用户可以编辑 ResourceDictionary 以将更改应用到正在运行的应用程序。 要实现这一点，其中一个步骤是从被编辑的字典中找到正在运行的应用程序创建的所有 ResourceDictionaries。 例如，应用程序可以声明某个从给定源 URI 复制内容的 ResourceDictionary：
 
 ```xml
-<ResourceDictionary Source="MyRD.xaml">
+<ResourceDictionary Source="MyRD.xaml" />
 ```
 
-编辑 MyRD.xaml    中的原始标记的诊断助手可以使用新功能来找到字典。 此功能通过新的静态方法 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType> 实现。 诊断助手使用标识原始标记的绝对 URI 调用新方法，如以下代码所示：
+编辑 MyRD.xaml  中的原始标记的诊断助手可以使用新功能来找到字典。 此功能通过新的静态方法 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType> 实现。 诊断助手使用标识原始标记的绝对 URI 调用新方法，如以下代码所示：
 
 ```csharp
 IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(new Uri("pack://application:,,,/MyApp;component/MyRD.xaml"));
@@ -1236,7 +1236,7 @@ Windows 现在提供将现有 Windows 桌面应用（包括 WPF 和 Windows 窗�
 
 ### <a name="debugging-improvements"></a>调试改进
 
-非托管调试 API 在 .NET Framework 4.6.2 中得到了增强，可在引发 <xref:System.NullReferenceException> 时执行附加分析，让你能够确定单行源代码中哪个变量是 `null`  。   为支持此方案，已将以下 API 添加到非托管调试 API。
+非托管调试 API 在 .NET Framework 4.6.2 中得到了增强，可在引发 <xref:System.NullReferenceException> 时执行附加分析，让你能够确定单行源代码中哪个变量是 `null`。   为支持此方案，已将以下 API 添加到非托管调试 API。
 
 - [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md)、[ICorDebugVariableHome](../unmanaged-api/debugging/icordebugvariablehome-interface.md) 和 [ICorDebugVariableHomeEnum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) 接口，它们公开托管变量的本机位置。 这使调试器能够在 <xref:System.NullReferenceException> 发生时执行某些代码流分析并逆向工作，以确定对应于为 `null` 的本机位置的托管变量。
 
@@ -1944,7 +1944,7 @@ Windows 窗体的改进包括：
 
 - 多个范围。
 
-- 创建 Windows 8.x 应用商店应用时可以使用一部分 MEF。 此子集可作为 NuGet 库中的[可下载程序包](https://www.nuget.org/packages/Microsoft.Composition)提供。 若要安装此程序包，请在 Visual Studio 中打开项目，从“项目”  菜单中选择“管理 NuGet 包”  ，然后联机搜索 `Microsoft.Composition` 程序包。
+- 创建 Windows 8.x 应用商店应用时可以使用一部分 MEF。 此子集可作为 NuGet 库中的[可下载程序包](https://www.nuget.org/packages/Microsoft.Composition)提供。 若要安装此程序包，请在 Visual Studio 中打开项目，从“项目”菜单中选择“管理 NuGet 包”，然后联机搜索 `Microsoft.Composition` 程序包。
 
 有关详细信息，请参阅 [Managed Extensibility Framework (MEF)](../mef/index.md)。
 
@@ -1976,7 +1976,7 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 
 - [适用于 Visual Studio 2013 的 ASP.NET 和 Web 工具发行说明](/aspnet/visual-studio/overview/2013/release-notes)
 
-### <a name="networking-a-namenetworking-"></a>网络连接<a name="networking" />
+### <a name="networking"></a>网络连接<a name="networking" />
 
 .NET Framework 4.5 新增了 HTTP 应用程序的编程接口。 有关详细信息，请参阅新的 <xref:System.Net.Http?displayProperty=nameWithType> 和 <xref:System.Net.Http.Headers?displayProperty=nameWithType> 命名空间。
 
@@ -2078,13 +2078,13 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 
 - 增强的工作流设计器功能如下:
 
-  - Visual Studio 中增强的工作流搜索功能，包括“快速查找”  和“在文件中查找”  。
+  - Visual Studio 中增强的工作流搜索功能，包括“快速查找”和“在文件中查找”。
 
   - 将第二个子活动添加到容器活动中时自动创建“序列”活动以及在“序列”活动中包括这两个活动的能力。
 
   - 平移支持，可让工作流的可见部分发生更改，而无需使用滚动条。
 
-  - 新“文档大纲”  视图，它在树样式的大纲视图中显示工作流组件并允许在“文档大纲”  视图中选择组件。
+  - 新“文档大纲”视图，它在树样式的大纲视图中显示工作流组件并允许在“文档大纲”视图中选择组件。
 
   - 向活动中添加批注的能力。
 
@@ -2120,7 +2120,7 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 
 Windows 8.x 应用商店应用专为特定外形规格而设计，并利用 Windows 操作系统的强大技术支持。 可以使用一部分 .NET Framework 4.5 或 4.5.1 生成用 C# 或 Visual Basic 编写的 Windows 相关 Windows 8.x 应用商店应用。 该部分被称作适用于 Windows 8.x 应用商店应用的 .NET，详见[概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))
 
-### <a name="portable-class-libraries-a-nameportable-"></a>可移植类库<a name="portable" />
+### <a name="portable-class-libraries"></a>可移植类库<a name="portable" />
 
 利用 Visual Studio 2012（及更高版本）中的可移植类库项目，可以编写和生成在多个 .NET Framework 平台上运行的托管程序集。 使用可移植类库项目，可以选择目标平台（如 Windows Phone 和适用于 Windows 8.x 应用商店应用的 .NET）。 项目中的可用类型和成员自动限制为这些平台中的公共类型和成员。 有关详细信息，请参阅[可移植类库](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)。
 

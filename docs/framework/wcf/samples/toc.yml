@@ -262,7 +262,7 @@
           items:
             - name: WCF 安全中的加密灵活性
               href: cryptographic-agility-in-wcf-security.md
-        - name: 服务
+        - name: Services
           href: services.md
           items:
             - name: 宿主
