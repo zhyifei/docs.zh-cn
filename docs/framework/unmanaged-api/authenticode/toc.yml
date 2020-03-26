@@ -1,4 +1,4 @@
-- name: 验证码
+- name: Authenticode
   href: index.md
   items:
     - name: _AxlGetIssuerPublicKeyHash 函数

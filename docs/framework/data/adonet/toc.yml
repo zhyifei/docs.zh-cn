@@ -302,7 +302,7 @@
       href: model-defined-function.md
     - name: Navigation Property — 导航属性
       href: navigation-property.md
-    - name: 属性
+    - name: property
       href: property.md
     - name: 引用完整性约束
       href: referential-integrity-constraint.md

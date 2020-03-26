@@ -59,8 +59,6 @@
           href: xml-language-handling.md
         - name: 'XAML 中的 xml:space 处理'
           href: xml-space-handling.md
-    - name: 从 WPF 迁移到 System.Xaml 的类型
-      href: types-migrated-from-wpf-to-system.md
     - name: 了解 XAML 节点流结构和概念
       href: understanding-xaml-node-stream-structures-and-concepts.md
     - name: XAMLServices 类和基本的 XAML 读取或写入

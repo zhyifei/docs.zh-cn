@@ -173,7 +173,7 @@
               href: less-than-or-equal-to-entity-sql.md
             - name: '!=（不等于）'
               href: not-equal-to-entity-sql.md
-            - name: . （成员访问）
+            - name: 。 （成员访问）
               href: member-access-entity-sql.md
             - name: '--（注释）'
               href: comment-entity-sql.md
@@ -237,7 +237,7 @@
               href: ref-entity-sql.md
             - name: ROW
               href: row-entity-sql.md
-            - name: 选择
+            - name: SELECT
               href: select-entity-sql.md
             - name: SET
               href: set-entity-sql.md
