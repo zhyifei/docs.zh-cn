@@ -9,31 +9,33 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: f2ed51a2ad757fe29e70c0930e962d22add8de75
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710214"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248181"
 ---
-# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="96df8-102">高级 (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="96df8-102">Advanced (Windows Presentation Foundation)</span></span>
-<span data-ttu-id="96df8-103">本节介绍 WPF 中的部分高级区域。</span><span class="sxs-lookup"><span data-stu-id="96df8-103">This section describes some of the advanced areas in WPF.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="96df8-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="96df8-104">In This Section</span></span>
+# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="8e3a7-102">高级 (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-102">Advanced (Windows Presentation Foundation)</span></span>
 
-[<span data-ttu-id="96df8-105">WPF 体系结构</span><span class="sxs-lookup"><span data-stu-id="96df8-105">WPF Architecture</span></span>](wpf-architecture.md)  
-[<span data-ttu-id="96df8-106">WPF 中的 XAML</span><span class="sxs-lookup"><span data-stu-id="96df8-106">XAML in WPF</span></span>](xaml-in-wpf.md)  
-[<span data-ttu-id="96df8-107">基元素类</span><span class="sxs-lookup"><span data-stu-id="96df8-107">Base Element Classes</span></span>](base-elements.md)  
-[<span data-ttu-id="96df8-108">元素树和序列化</span><span class="sxs-lookup"><span data-stu-id="96df8-108">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
-[<span data-ttu-id="96df8-109">WPF 属性系统</span><span class="sxs-lookup"><span data-stu-id="96df8-109">WPF Property System</span></span>](properties-wpf.md)  
-[<span data-ttu-id="96df8-110">WPF 中的事件</span><span class="sxs-lookup"><span data-stu-id="96df8-110">Events in WPF</span></span>](events-wpf.md)  
-[<span data-ttu-id="96df8-111">输入</span><span class="sxs-lookup"><span data-stu-id="96df8-111">Input</span></span>](input-wpf.md)  
-[<span data-ttu-id="96df8-112">拖放</span><span class="sxs-lookup"><span data-stu-id="96df8-112">Drag and Drop</span></span>](drag-and-drop.md)  
-[<span data-ttu-id="96df8-113">资源</span><span class="sxs-lookup"><span data-stu-id="96df8-113">Resources</span></span>](resources-wpf.md)  
-[<span data-ttu-id="96df8-114">文档</span><span class="sxs-lookup"><span data-stu-id="96df8-114">Documents</span></span>](documents.md)  
-[<span data-ttu-id="96df8-115">全球化和本地化</span><span class="sxs-lookup"><span data-stu-id="96df8-115">Globalization and Localization</span></span>](globalization-and-localization.md)  
-[<span data-ttu-id="96df8-116">布局</span><span class="sxs-lookup"><span data-stu-id="96df8-116">Layout</span></span>](layout.md)  
-[<span data-ttu-id="96df8-117">迁移和互操作性</span><span class="sxs-lookup"><span data-stu-id="96df8-117">Migration and Interoperability</span></span>](migration-and-interoperability.md)  
-[<span data-ttu-id="96df8-118">性能</span><span class="sxs-lookup"><span data-stu-id="96df8-118">Performance</span></span>](performance.md)  
-[<span data-ttu-id="96df8-119">线程模型</span><span class="sxs-lookup"><span data-stu-id="96df8-119">Threading Model</span></span>](threading-model.md)  
-[<span data-ttu-id="96df8-120">非托管 WPF API 参考</span><span class="sxs-lookup"><span data-stu-id="96df8-120">Unmanaged WPF API Reference</span></span>](wpf-unmanaged-api-reference.md)  
+<span data-ttu-id="8e3a7-103">本节介绍 WPF 中的部分高级区域。</span><span class="sxs-lookup"><span data-stu-id="8e3a7-103">This section describes some of the advanced areas in WPF.</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="8e3a7-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="8e3a7-104">In This Section</span></span>
+
+<span data-ttu-id="8e3a7-105">[WPF 架构](wpf-architecture.md)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-105">[WPF Architecture](wpf-architecture.md)</span></span>\
+<span data-ttu-id="8e3a7-106">[WPF 中的 XAML](xaml-in-wpf.md)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-106">[XAML in WPF](xaml-in-wpf.md)</span></span>\
+<span data-ttu-id="8e3a7-107">[基本元素类](base-elements.md)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-107">[Base Element Classes](base-elements.md)</span></span>\
+<span data-ttu-id="8e3a7-108">[元素树和序列化](element-tree-and-serialization.md)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-108">[Element Tree and Serialization](element-tree-and-serialization.md)</span></span>\
+<span data-ttu-id="8e3a7-109">[WPF 属性系统](properties-wpf.md)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-109">[WPF Property System](properties-wpf.md)</span></span>\
+<span data-ttu-id="8e3a7-110">[WPF 中的事件](events-wpf.md)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-110">[Events in WPF](events-wpf.md)</span></span>\
+<span data-ttu-id="8e3a7-111">[输入](input-wpf.md)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-111">[Input](input-wpf.md)</span></span>\
+<span data-ttu-id="8e3a7-112">[拖放](drag-and-drop.md)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-112">[Drag and Drop](drag-and-drop.md)</span></span>\
+<span data-ttu-id="8e3a7-113">[资源](resources-wpf.md)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-113">[Resources](resources-wpf.md)</span></span>\
+<span data-ttu-id="8e3a7-114">[文件](documents.md)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-114">[Documents](documents.md)</span></span>\
+<span data-ttu-id="8e3a7-115">[全球化与本地化](globalization-and-localization.md)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-115">[Globalization and Localization](globalization-and-localization.md)</span></span>\
+<span data-ttu-id="8e3a7-116">[布局](layout.md)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-116">[Layout](layout.md)</span></span>\
+<span data-ttu-id="8e3a7-117">[从 WPF 迁移到 System.Xaml 的类型](types-migrated-from-wpf-to-system.md)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-117">[Types migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system.md)</span></span>\
+<span data-ttu-id="8e3a7-118">[迁移和互操作性](migration-and-interoperability.md)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-118">[Migration and Interoperability](migration-and-interoperability.md)</span></span>\
+<span data-ttu-id="8e3a7-119">[性能](performance.md)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-119">[Performance](performance.md)</span></span>\
+<span data-ttu-id="8e3a7-120">[线程模型](threading-model.md)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-120">[Threading Model](threading-model.md)</span></span>\
+<span data-ttu-id="8e3a7-121">[非托管 WPF API 参考](wpf-unmanaged-api-reference.md)</span><span class="sxs-lookup"><span data-stu-id="8e3a7-121">[Unmanaged WPF API Reference](wpf-unmanaged-api-reference.md)</span></span>\
