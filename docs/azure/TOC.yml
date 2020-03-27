@@ -1,0 +1,16 @@
+- name: 面向 .NET 开发人员的 Azure
+  href: index.yml
+  items:
+    - name: Azure 和 .NET 简介
+      href: intro.md
+    - name: 迁移到 Azure
+      expanded: true
+      items:
+        - name: 选择 Azure 托管选项
+          href: ./migration/choose.md
+        - name: 将 .NET Web 应用或服务迁移到 Azure 应用服务
+          href: ./migration/app-service.md
+        - name: 将 ASP.NET 应用迁移到 Azure VM
+          href: ./migration/vm.md
+        - name: 将 SQL Server 数据库迁移到 Azure
+          href: ./migration/sql.md

@@ -116,8 +116,10 @@
                   href: how-to-strip-invalid-characters-from-a-string.md
                 - name: 如何确认字符串是有效的电子邮件格式
                   href: how-to-verify-that-strings-are-in-valid-email-format.md
-        - name: .NET 中的字符编码
-          href: character-encoding.md
+    - name: .NET 中的字符编码
+      href: character-encoding-introduction.md
+    - name: 如何使用字符编码类
+      href: character-encoding.md
     - name: 分析字符串
       href: parsing-strings.md
       items:

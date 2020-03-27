@@ -1,0 +1,130 @@
+### YamlMime:Landing
+title: .NET Framework 文档
+summary: 了解 .NET Framework，它是用于为 Web、Windows 和 Microsoft Azure 构建应用的开发平台。
+metadata:
+  title: .NET Framework 文档
+  description: 了解 .NET Framework，它是用于为 Web、Windows 和 Microsoft Azure 构建应用的开发平台。
+  ms.topic: landing-page
+  ms.custom: updateeachrelease
+  f1_keywords:
+  - f61f02f2-2f20-483d-8f56-a9c8f3a54986
+  helpviewer_keywords:
+  - .NET Framework guide
+  ms.date: 03/23/2020
+  ms.openlocfilehash: 5f362cff359800b0bffd2283819824b8660cfa24
+  ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 03/24/2020
+  ms.locfileid: "80228851"
+landingContent:
+- title: 了解 .NET Framework
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: .NET Framework 概述
+      url: get-started/overview.md
+    - text: 系统要求
+      url: get-started/system-requirements.md
+  - linkListType: concept
+    links:
+    - text: .NET Framework 的较旧版本
+      url: /previous-versions/dotnet/
+  - linkListType: deploy
+    links:
+    - text: 开发人员部署指南
+      url: deployment/deployment-guide-for-developers.md
+- title: 安装 .NET Framework
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 安装指南
+      url: install/index.md
+  - linkListType: concept
+    links:
+    - text: .NET Framework 和 Windows OS 版本
+      url: migration-guide/versions-and-dependencies.md
+  - linkListType: how-to-guide
+    links:
+    - text: 确定已安装哪些版本
+      url: migration-guide/how-to-determine-which-versions-are-installed.md
+    - text: 在 Windows 10 上安装 .NET Framework
+      url: install/on-windows-10.md
+    - text: 安装 .NET Framework 3.5
+      url: install/dotnet-35-windows-10.md
+    - text: 安装开发人员包或可再发行组件
+      url: install/guide-for-developers.md
+    - text: 阻止安装疑难解答
+      url: install/troubleshoot-blocked-installations-and-uninstallations.md
+- title: 创建 Windows 服务应用
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows 服务应用简介
+      url: windows-services/introduction-to-windows-service-applications.md
+  - linkListType: tutorial
+    links:
+    - text: 创建 Windows 服务应用
+      url: windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md
+  - linkListType: how-to-guide
+    links:
+    - text: 安装和卸载 Windows 服务
+      url: windows-services/how-to-install-and-uninstall-services.md
+- title: 创建 Windows 窗体应用
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows 窗体概述
+      url: winforms/index.md
+  - linkListType: tutorial
+    links:
+    - text: Windows 窗体设计器入门
+      url: /visualstudio/designers/walkthrough-windows-forms-designer
+    - text: 通过命令行创建 Windows 窗体应用
+      url: winforms/how-to-create-a-windows-forms-application-from-the-command-line.md
+  - linkListType: how-to-guide
+    links:
+    - text: 通过 ComboBox 控件、ListBox 控件和 CheckedListBox 控件添加和删除项目
+      url: winforms/controls/add-and-remove-items-from-a-wf-combobox.md
+    - text: 对控件进行线程安全的调用
+      url: winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md
+- title: 创建 WPF 应用
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: WPF 概述
+      url: wpf/index.md
+  - linkListType: tutorial
+    links:
+    - text: 在 Visual Studio 中创建第一个 WPF 应用
+      url: wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md
+- title: 使用 ADO.NET 处理数据
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: ADO.NET 概述
+      url: data/adonet/ado-net-overview.md
+  - linkListType: tutorial
+    links:
+    - text: 使用实体框架进行模型优先的开发
+      url: /ef/ef6/modeling/designer/workflows/model-first
+    - text: 使用实体框架进行数据库优先的开发
+      url: /ef/ef6/modeling/designer/workflows/database-first
+  - linkListType: concept
+    links:
+    - text: 连接字符串和配置文件
+      url: data/adonet/connection-strings-and-configuration-files.md
+    - text: SQL Server 连接池
+      url: data/adonet/sql-server-connection-pooling.md
+  - linkListType: how-to-guide
+    links:
+    - text: 使用 DataReader 检索数据
+      url: data/adonet/retrieving-data-using-a-datareader.md
+    - text: 将数据添加到数据表中
+      url: data/adonet/dataset-datatable-dataview/adding-data-to-a-datatable.md
+  - linkListType: reference
+    links:
+    - text: 连接字符串语法
+      url: data/adonet/connection-string-syntax.md
+    - text: 示例 SQL Server 数据库
+      url: data/adonet/sql/linq/downloading-sample-databases.md

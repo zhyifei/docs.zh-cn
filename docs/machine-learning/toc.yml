@@ -11,7 +11,7 @@
       items:
         - name: ML.NET 模型生成器工具
           href: automate-training-with-model-builder.md
-        - name: ML.NET 命令行接口
+        - name: ML.NET 命令行界面
           href: automate-training-with-cli.md
 - name: 教程
   items:

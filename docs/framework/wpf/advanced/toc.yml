@@ -144,7 +144,7 @@
               href: how-to-register-an-attached-property.md
             - name: 重写依赖属性的元数据
               href: how-to-override-metadata-for-a-dependency-property.md
-    - name: 活动
+    - name: 事件
       href: events-wpf.md
       items:
         - name: 路由事件概述
@@ -481,6 +481,8 @@
     - name: 迁移和互操作性
       href: migration-and-interoperability.md
       items:
+        - name: 从 WPF 3.X 迁移到 WPF 4.5
+          href: types-migrated-from-wpf-to-system.md
         - name: WPF 和 Windows 窗体互操作
           href: wpf-and-windows-forms-interoperation.md
           items:
@@ -508,7 +510,7 @@
               href: walkthrough-arranging-windows-forms-controls-in-wpf.md
             - name: 演练：在混合应用程序中绑定到数据
               href: walkthrough-binding-to-data-in-hybrid-applications.md
-            - name: 演练：在 Windows 窗体中承载 3-D WPF 复合控件
+            - name: 演练：在 Windows 窗体中承载三维 WPF 复合控件
               href: walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md
             - name: 演练：在 Windows 窗体中承载 WPF 复合控件
               href: walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md
@@ -562,11 +564,11 @@
               href: optimizing-performance-object-behavior.md
             - name: 应用程序资源
               href: optimizing-performance-application-resources.md
-            - name: 文本
+            - name: Text
               href: optimizing-performance-text.md
             - name: 数据绑定
               href: optimizing-performance-data-binding.md
-            - name: 控制
+            - name: 控件
               href: optimizing-performance-controls.md
             - name: 其他性能建议
               href: optimizing-performance-other-recommendations.md

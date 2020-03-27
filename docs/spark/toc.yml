@@ -35,6 +35,8 @@
       href: how-to-guides/ubuntu-instructions.md
     - name: 在 Windows 上生成应用程序
       href: how-to-guides/windows-instructions.md
+    - name: 在 Azure HDInsight 上安装交互式笔记本
+      href: how-to-guides/hdinsight-notebook-installation.md
 - name: 参考
   items:
     - name: API 参考
