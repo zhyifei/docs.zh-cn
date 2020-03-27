@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 4e0c583eeef4bf068c08b273c833506ce80cbc3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9676ae4053553b84488602627b28790aae22eff6
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185600"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345284"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>如何：配置自定义 WS-Metadata Exchange 绑定
 本主题将说明如何配置自定义 WS-Metadata 交换绑定。 Windows 通信基础 （WCF） 包括四个系统定义的元数据绑定，但您可以使用所需的任何绑定发布元数据。 本主题将演示如何使用 `wsHttpBinding` 发布元数据。 此绑定提供了以安全方式公开元数据的选择。 本文中的代码基于[入门](../samples/getting-started-sample.md)。  
@@ -32,8 +32,8 @@ ms.locfileid: "79185600"
 2. 将一个 `behaviorConfiguration` 属性添加到该服务标记，该属性引用这一新行为：  
   
     ```xml  
-    <service        name="Microsoft.ServiceModel.Samples.CalculatorService"  
-    behaviorConfiguration="CalculatorServiceBehavior">
+    <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
+    behaviorConfiguration="CalculatorServiceBehavior" />
     ```  
   
 3. 添加一个元数据终结点，该终结点将 mex 指定为地址，将 `wsHttpBinding` 指定为绑定，并将 <xref:System.ServiceModel.Description.IMetadataExchange> 指定为协定：  
@@ -113,10 +113,10 @@ ms.locfileid: "79185600"
     Console.WriteLine("Metadata section: " + section.Dialect.ToString());  
     ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [元数据发布行为](../samples/metadata-publishing-behavior.md)
 - [检索元数据](../samples/retrieve-metadata.md)
-- [元](../feature-details/metadata.md)
+- [元数据](../feature-details/metadata.md)
 - [发布元数据](../feature-details/publishing-metadata.md)
 - [发布元数据终结点](../publishing-metadata-endpoints.md)

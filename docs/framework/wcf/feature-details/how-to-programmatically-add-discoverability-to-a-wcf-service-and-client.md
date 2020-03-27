@@ -1,16 +1,16 @@
 ---
-title: 如何：以编程方式向 WCF 服务和客户端添加可检测性
+title: 如何：以编程方式向 WCF 服务和客户端添加可发现性
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: dd96bc168413eef99260a5251e74971aa1309ff4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf89c793cbd72a0a3980e6ec8e42c688dcedec26
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184888"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344976"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>如何：以编程方式向 WCF 服务和客户端添加可检测性
-本主题介绍如何使 Windows 通信基础 （WCF） 服务可发现。 它基于[自主机](https://go.microsoft.com/fwlink/?LinkId=145523)示例。  
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>如何：以编程方式向 WCF 服务和客户端添加可发现性
+本主题介绍如何使 Windows 通信基础 （WCF） 服务可发现。 它基于[自主机](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)示例。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>针对 Discovery 配置现有自承载服务示例  
   
@@ -124,7 +124,7 @@ ms.locfileid: "79184888"
   
      此方法使用从 `FindCalculatorServiceAddress` 返回的终结点地址调用计算器服务。  
   
-11. 在 `InvokeCalculatorService` 方法的内部，创建 `CalculatorServiceClient` 类的实例。 此类由[自主机](https://go.microsoft.com/fwlink/?LinkId=145523)示例定义。 并且是使用 Svcutil.exe 生成的。  
+11. 在 `InvokeCalculatorService` 方法的内部，创建 `CalculatorServiceClient` 类的实例。 此类由[自主机](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)示例定义。 并且是使用 Svcutil.exe 生成的。  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ ms.locfileid: "79184888"
     ```  
   
 ## <a name="example"></a>示例  
- 下面是此示例的代码清单。 由于此代码基于[自主机](https://go.microsoft.com/fwlink/?LinkId=145523)示例，因此仅列出已更改的文件。 有关自主机示例的详细信息，请参阅[设置说明](https://go.microsoft.com/fwlink/?LinkId=145522)。  
+ 下面是此示例的代码清单。 由于此代码基于[自主机](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)示例，因此仅列出已更改的文件。 有关自主机示例的详细信息，请参阅[设置说明](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions)。  
   
 ```csharp  
 // Service.cs  
@@ -340,7 +340,7 @@ namespace DiscoveryClientApp
 }  
 ```  
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [WCF 发现对象模型](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+- [WCF Discovery 对象模型](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

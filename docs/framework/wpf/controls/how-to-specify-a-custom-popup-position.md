@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - Popup control [WPF], specifying custom position
 ms.assetid: 28c24f39-d3aa-4ee2-b950-384b4a5dab92
-ms.openlocfilehash: dc516f0eb1cfcbac6662497eb4019041eefec2a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea8d73c51dd018608b95104f00bf341ff434225c
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911204"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344955"
 ---
 # <a name="how-to-specify-a-custom-popup-position"></a>如何：指定自定义 Popup 位置
-此示例演示如何指定的自定义位置<xref:System.Windows.Controls.Primitives.Popup>控制何时<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>属性设置为<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>。  
+此示例演示如何在<xref:System.Windows.Controls.Primitives.Popup><xref:System.Windows.Controls.Primitives.Popup.Placement%2A>属性设置为<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>时为控件指定自定义位置。  
   
 ## <a name="example"></a>示例  
- 当<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>属性设置为<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>，则<xref:System.Windows.Controls.Primitives.Popup>调用的定义的实例<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>委托。 此委托返回的可能是相对于目标区域的左上的角和的左上的角的点集<xref:System.Windows.Controls.Primitives.Popup>。 <xref:System.Windows.Controls.Primitives.Popup>位置出现在提供最佳的可见性的点。  
+ 当<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>属性设置为<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>时，<xref:System.Windows.Controls.Primitives.Popup>调用<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>委托的已定义实例。 此委托返回一组相对于目标区域左上角和 左<xref:System.Windows.Controls.Primitives.Popup>上角的可能点。 放置<xref:System.Windows.Controls.Primitives.Popup>发生在提供最佳可见性的点。  
   
- 下面的示例演示如何定义的位置<xref:System.Windows.Controls.Primitives.Popup>通过设置<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>属性设置为<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>。 它还演示如何创建和分配<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>委托以定位<xref:System.Windows.Controls.Primitives.Popup>。  回调委托返回两个<xref:System.Windows.Controls.Primitives.CustomPopupPlacement>对象。  如果<xref:System.Windows.Controls.Primitives.Popup>情况下的第一个位置，在屏幕边缘隐藏<xref:System.Windows.Controls.Primitives.Popup>放在第二个位置。  
+ 下面的示例演示如何通过将<xref:System.Windows.Controls.Primitives.Popup><xref:System.Windows.Controls.Primitives.Popup.Placement%2A>属性设置为<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>来定义 的位置。 它还演示如何创建和分配<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>委托，以便定位 。 <xref:System.Windows.Controls.Primitives.Popup>  回调委托返回两<xref:System.Windows.Controls.Primitives.CustomPopupPlacement>个对象。  <xref:System.Windows.Controls.Primitives.Popup>如果在第一个位置由屏幕边缘隐藏，<xref:System.Windows.Controls.Primitives.Popup>则 将放置在第二个位置。  
   
  [!code-xaml[PopupCustomPlacement#CustomPlacement](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupCustomPlacement/CSharp/Window1.xaml#customplacement)]  
   
@@ -30,7 +30,7 @@ ms.locfileid: "61911204"
  [!code-csharp[PopupCustomPlacement#DelegateDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupCustomPlacement/CSharp/Window1.xaml.cs#delegatedefinition)]
  [!code-vb[PopupCustomPlacement#DelegateDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupCustomPlacement/visualbasic/window1.xaml.vb#delegatedefinition)]  
   
- 有关完整示例，请参阅[Popup 放置示例](https://go.microsoft.com/fwlink/?LinkID=160032)。  
+ 有关完整示例，请参阅[弹出放置示例](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)。  
   
 ## <a name="see-also"></a>请参阅
 

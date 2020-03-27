@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 1a94acde3d0726808deebcae1437e7318f5392df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3aacc7c73167771a632bb31164f2c551d60ce8f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183563"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345239"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 此示例演示如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 类来自定义序列化和反序列化过程。 此示例演示如何在序列化和反序列化过程中动态添加已知类型。  
@@ -356,11 +356,11 @@ Lists combined:
   
 5. 如果应用程序未正确运行，请按照以下步骤确保已正确设置了您的环境：  
   
-6. 确保已为 Windows[通信基础示例执行一次性设置过程](https://go.microsoft.com/fwlink/?LinkId=150774)。  
+6. 确保已为 Windows[通信基础示例执行一次性设置过程](https://docs.microsoft.com/dotnet/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples)。  
   
-7. 要生成解决方案，请按照生成 Windows[通信基础示例](https://go.microsoft.com/fwlink/?LinkId=150775)中的说明进行操作。  
+7. 要生成解决方案，请按照生成 Windows[通信基础示例](https://docs.microsoft.com/dotnet/framework/wcf/samples/building-the-samples)中的说明进行操作。  
   
-8. 要在单机或跨计算机配置中运行示例，请按照[运行 Windows 通信基础示例中的](https://go.microsoft.com/fwlink/?LinkId=150776)说明操作。  
+8. 要在单机或跨计算机配置中运行示例，请按照[运行 Windows 通信基础示例中的](https://docs.microsoft.com/dotnet/framework/wcf/samples/running-the-samples)说明操作。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

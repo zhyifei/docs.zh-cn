@@ -9,30 +9,30 @@ helpviewer_keywords:
 - RectangleGeometry objects [WPF], animating with key frames
 - animation [WPF], RectangleGeometry objects with key frames
 ms.assetid: a8b45ceb-0e32-4ba1-928f-df6d30db17c6
-ms.openlocfilehash: 03953b79127ffceeb49e4ece2070d09f382448a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bcc9e7f198b8a20ffe13daf6508fb8a735937652
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010093"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344682"
 ---
 # <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>如何：使用关键帧对矩形几何形状进行动画处理
-此示例演示如何进行动画处理<xref:System.Windows.Media.RectangleGeometry.Rect%2A>属性的<xref:System.Windows.Media.RectangleGeometry>使用关键帧。  
+此示例演示如何使用关键帧对<xref:System.Windows.Media.RectangleGeometry.Rect%2A>属性<xref:System.Windows.Media.RectangleGeometry>进行动画处理。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用<xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>类进行动画处理<xref:System.Windows.Media.RectangleGeometry.Rect%2A>属性的<xref:System.Windows.Media.RectangleGeometry>。 此动画按以下方式使用三个关键帧：  
+ 下面的示例使用 类<xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>为 属性<xref:System.Windows.Media.RectangleGeometry>设置<xref:System.Windows.Media.RectangleGeometry.Rect%2A>动画。 此动画按以下方式使用三个关键帧：  
   
-1. 在前两秒中，使用的实例<xref:System.Windows.Media.Animation.LinearRectKeyFrame>类进行动画处理中的位置、 宽度和的矩形的高度变化。 之类的线性关键帧<xref:System.Windows.Media.Animation.LinearRectKeyFrame>创建值之间平滑的线性转换。  
+1. 在前两秒钟内<xref:System.Windows.Media.Animation.LinearRectKeyFrame>，使用类的实例对矩形的位置、宽度和高度进行动画处理。 线性关键帧（<xref:System.Windows.Media.Animation.LinearRectKeyFrame>如在值之间创建平滑线性过渡）  
   
-2. 在结束时的下一个前半秒中，使用的实例<xref:System.Windows.Media.Animation.DiscreteRectKeyFrame>类突然降低矩形的高度。 之类的离散关键帧<xref:System.Windows.Media.Animation.DiscreteRectKeyFrame>之间创建突然变化的值，也就是说，快速发生高度减小，而不是。  
+2. 在下半秒结束时，使用<xref:System.Windows.Media.Animation.DiscreteRectKeyFrame>类的实例突然降低矩形的高度。 离散的关键帧（<xref:System.Windows.Media.Animation.DiscreteRectKeyFrame>如在值之间创建突然变化）表示，高度的降低会迅速发生，并且不微妙。  
   
-3. 在最后两秒内，使用的实例<xref:System.Windows.Media.Animation.SplineRectKeyFrame>类将矩形更改回其原始大小和位置。 之类的自由绘制曲线关键帧<xref:System.Windows.Media.Animation.SplineRectKeyFrame>创建根据的值在值之间的变量转换<xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A>属性。 在此示例中，变化开始时缓慢，然后以指数级加速，直到时间段结束。  
+3. 在最后两秒钟内<xref:System.Windows.Media.Animation.SplineRectKeyFrame>，使用类的实例将矩形更改回其原始大小和位置。 样条线键帧，<xref:System.Windows.Media.Animation.SplineRectKeyFrame>如根据<xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A>属性的值在值之间创建可变转换。 在此示例中，变化开始时缓慢，然后以指数级加速，直到时间段结束。  
   
  [!code-csharp[keyframes_snip#RectAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/RectAnimationUsingKeyFramesExample.cs#rectanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#RectAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/rectanimationusingkeyframesexample.vb#rectanimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#RectAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/RectAnimationUsingKeyFramesExample.xaml#rectanimationusingkeyframeswholepage)]  
   
- 有关完整示例，请参阅[关键帧动画示例](https://go.microsoft.com/fwlink/?LinkID=160012)。  
+ 有关完整示例，请参阅[关键帧动画示例](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation)。  
   
 ## <a name="see-also"></a>请参阅
 

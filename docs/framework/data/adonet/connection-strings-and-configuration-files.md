@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 30198930a260b7370d061e85efe4935e88ad4d8a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8862aa34c2d2677f5bc3e737c01cc61036c243e1
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151622"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345063"
 ---
 # <a name="connection-strings-and-configuration-files"></a>连接字符串和配置文件
+
 在应用程序代码中嵌入连接字符串可能导致安全漏洞和维护问题。 使用 [Ildasm.exe（IL 反汇编程序）](../../tools/ildasm-exe-il-disassembler.md)工具可以查看编译到应用程序源代码中的未加密连接字符串。 此外，如果连接字符串发生更改，则必须重新编译应用程序。 因此，我们建议您将连接字符串存储在应用程序配置文件中。  
   
 ## <a name="working-with-application-configuration-files"></a>使用应用程序配置文件  
@@ -74,7 +75,7 @@ ms.locfileid: "79151622"
   
  您可以使用 <xref:System.Configuration.ConnectionStringSettingsCollection> 从应用程序配置文件中检索连接字符串。 它包含 <xref:System.Configuration.ConnectionStringSettings> 对象的集合，每个对象表示 connectionStrings 节中的一项****。 它的属性 (Property) 映射为连接字符串属性 (Attribute)，从而允许您通过指定名称或提供程序名称来检索连接字符串。  
   
-|properties|说明|  
+|properties|描述|  
 |--------------|-----------------|  
 |<xref:System.Configuration.ConnectionStringSettings.Name%2A>|连接字符串的名称。 映射到 name 属性****。|  
 |<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|完全限定提供程序名。 映射到 providerName 属性****。|  
@@ -125,16 +126,16 @@ ms.locfileid: "79151622"
 <configProtectedData defaultProvider="RsaProtectedConfigurationProvider">  
   <providers>  
     <add name="RsaProtectedConfigurationProvider"
-      type="System.Configuration.RsaProtectedConfigurationProvider, ... />  
+      type="System.Configuration.RsaProtectedConfigurationProvider" />  
     <add name="DataProtectionConfigurationProvider"
-      type="System.Configuration.DpapiProtectedConfigurationProvider, ... />  
+      type="System.Configuration.DpapiProtectedConfigurationProvider" />  
   </providers>  
 </configProtectedData>  
 ```  
   
  可以配置其他受保护配置提供程序，方法是将它们添加到 machine.config 文件中****。 还可以通过从 <xref:System.Configuration.ProtectedConfigurationProvider> 抽象基类继承来创建自己的受保护配置提供程序。 下表描述了 .NET Framework 附带的两个配置文件。  
   
-|提供程序|说明|  
+|提供程序|描述|  
 |--------------|-----------------|  
 |<xref:System.Configuration.RsaProtectedConfigurationProvider>|使用 RSA 加密算法来加密和解密数据。 RSA 算法既可用于公钥加密，也可用于数字签名。 它还称为“公共密钥”或非对称加密，因为它使用两个不同的密钥。 可以使用 [ASP.NET IIS 注册工具 (Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) 来加密 Web.config 文件中的节和管理加密密钥。 ASP.NET 在处理配置文件时解密该文件。 ASP.NET 应用程序的标识必须对用于加密和解密各加密节的加密密钥具有读取权限。|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|使用 Windows Data Protection API (DPAPI) 来加密配置节。 它使用 Windows 内置加密服务，并可为计算机特定或用户帐户特定保护进行配置。 对于同一服务器上需要共享信息的多个应用程序来说，计算机特定保护非常有用。 用户帐户特定保护可与以特定用户标识运行的服务（如共享宿主环境）一起使用。 每个应用程序以单独的标识运行，这样就限制了对文件和数据库等资源的访问。|  
@@ -169,7 +170,7 @@ ms.locfileid: "79151622"
   
  有关保护ASP.NET应用程序的详细信息，请参阅[保护ASP.NET网站](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [连接字符串生成器](connection-string-builders.md)
 - [保护连接信息](protecting-connection-information.md)
