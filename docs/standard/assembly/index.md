@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: f85fef37ac952c91ac73570f26d80d8a46f4eedf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b61d079a86bdd4a809d44ad128f19a7b358c8384
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156500"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228680"
 ---
 # <a name="assemblies-in-net"></a>.NET 中的程序集
 
@@ -116,3 +116,4 @@ ms.locfileid: "78156500"
 - [如何：加载和卸载程序集](load-unload.md)
 - [如何：在 .NET Core 中使用和调试程序集可卸载性](unloadability.md)
 - [如何：确定文件是否为程序集](identify.md)
+- [如何：使用 MetadataLoadContext 检查程序集内容](inspect-contents-using-metadataloadcontext.md)

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 0fffbb2f1b58d8ba65d9c5ca8b7c8edc583af2da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd27f2fb893def9e186504cc9973bae71473f005
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397622"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248903"
 ---
 # <a name="get-started-with-net-framework"></a>.NET Framework 入门
 
 .NET Framework 是管理面向 .NET Framework 的应用的运行时执行环境。 它包括公共语言运行时（提供内存管理和其他系统服务）和一个全面的类库（使程序员能利用强大可靠的代码实现所有主要领域的应用开发）。
 
 > [!NOTE]
-> .NET Framework 仅适用于 Windows 系统。 可以使用 [.NET Core](../../core/index.md) 在 Windows、MacOS 和 Linux 上运行应用。
+> .NET Framework 仅适用于 Windows 系统。 可使用 [.NET Core](../../core/index.md) 在 Windows、MacOS 和 Linux 上开发和运行应用。
 
 ## <a name="what-is-net-framework"></a>什么是 .NET Framework？
 
@@ -85,7 +85,7 @@ ms.locfileid: "79397622"
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Framework 指南](../index.md)
+- [.NET Framework 指南](../index.yml)
 - [新增功能](../whats-new/index.md)
 - [.NET API 浏览器](../../../api/index.md)
 - [开发指南](../development-guide.md)

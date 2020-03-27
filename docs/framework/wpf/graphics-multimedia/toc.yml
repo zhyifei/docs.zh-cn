@@ -125,7 +125,7 @@
                   href: how-to-define-a-rectangle-using-a-rectanglegeometry.md
                 - name: 圆化 RectangleGeometry 的角
                   href: how-to-round-the-corners-of-a-rectanglegeometry.md
-        - name: 图像
+        - name: 映像
           href: images.md
           items:
             - name: 图像处理概述
@@ -233,7 +233,7 @@
     - name: 三维图形概述
       href: 3-d-graphics-overview.md
       items:
-        - name: 三维变换概述
+        - name: 三维转换概述
           href: 3-d-transformations-overview.md
         - name: 最大程度地提高 WPF 三维性能
           href: maximize-wpf-3d-performance.md
@@ -244,7 +244,7 @@
               href: how-to-create-a-3-d-scene.md
             - name: 向三维模型应用绘图
               href: how-to-apply-a-drawing-to-a-3-d-model.md
-            - name: 向三维对象的正面和背面应用 Material
+            - name: 向三维对象的正面和背面应用材料
               href: how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md
             - name: 向三维对象应用放射材料
               href: how-to-apply-emissive-material-to-a-3-d-object.md
@@ -254,7 +254,7 @@
               href: how-to-apply-multiple-transformations-to-a-3-d-model.md
             - name: 对三维转换进行动画处理
               href: how-to-animate-3-d-translations.md
-            - name: 使用情节提要对三维旋转进行动画处理
+            - name: 使用故事板对三维旋转进行动画处理
               href: how-to-animate-a-3-d-rotation-using-storyboards.md
             - name: 使用 Rotation3DAnimation 对三维旋转进行动画处理
               href: how-to-animate-a-3-d-rotation-using-rotation3danimation.md
@@ -268,7 +268,7 @@
               href: how-to-animate-camera-position-and-direction-in-a-3d-scene.md
             - name: 使用关键帧对照相机位置和方向进行动画处理
               href: how-to-animate-camera-position-and-direction-using-key-frames.md
-            - name: 在三维场景中对材料属性进行动画处理
+            - name: 对三维场景中的材料属性进行动画处理
               href: how-to-animate-material-properties-in-a-3-d-scene.md
             - name: 在 Viewport3D 中进行命中测试
               href: how-to-hit-test-in-a-viewport3d.md

@@ -25,7 +25,7 @@
           href: net-core-net-framework-containers/net-container-os-targets.md
         - name: 官方 .NET Docker 映像
           href: net-core-net-framework-containers/official-net-docker-images.md
-    - name: 构建基于容器和微服务的应用程序
+    - name: 构建基于容器和微服务的应用
       href: architect-microservice-container-applications/index.md
       items:
         - name: 容器化整体式应用程序
@@ -60,12 +60,12 @@
           href: architect-microservice-container-applications/resilient-high-availability-microservices.md
         - name: 协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
           href: architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md
-    - name: 基于 Docker 的应用程序的开发流程
+    - name: 基于 Docker 的应用的开发流程
       href: docker-application-development-process/index.md
       items:
         - name: Docker 应用开发工作流
           href: docker-application-development-process/docker-app-development-workflow.md
-    - name: 设计和开发多容器化微服务 .NET 应用
+    - name: 设计和开发基于微服务的多容器 .NET 应用
       href: multi-container-microservice-net-applications/index.md
       items:
         - name: 设计面向微服务的应用程序
@@ -125,7 +125,7 @@
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-web-api-design.md
         - name: 使用 Web API 实现微服务应用层
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md
-    - name: 实现具有恢复能力的应用程序
+    - name: 实现可复原的应用
       href: implement-resilient-applications/index.md
       items:
         - name: 处理部分失败错误
@@ -136,9 +136,7 @@
           href: implement-resilient-applications/implement-retries-exponential-backoff.md
         - name: 实现复原 Entity Framework Core SQL 连接
           href: implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md
-        - name: 探索使用指数退避的自定义 HTTP 调用重试
-          href: implement-resilient-applications/explore-custom-http-call-retries-exponential-backoff.md
-        - name: 使用 HttpClientFactory 实现复原 HTTP 请求
+        - name: 使用 IHttpClientFactory 实现复原 HTTP 请求
           href: implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md
         - name: 通过 Polly 实现使用指数退避算法的 HTTP 调用重试
           href: implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md
