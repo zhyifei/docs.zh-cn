@@ -5,16 +5,16 @@ author: cartermp
 ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: b7856cbb12ac78830ceace6ad44214ca32444a82
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: f6496ae38827da5d00c8b278011a9c373afe0e76
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80228801"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344089"
 ---
 # <a name="net-guide"></a>.NET 指南
 
-.NET 指南提供关于 .NET 的信息。 根据对 .NET 的熟悉程度，可浏览本指南的不同部分和其他指南，例如 [.NET Core](../core/index.md) 或 [.NET Framework](../framework/index.yml)。
+.NET 指南提供关于 .NET 的信息。 根据对 .NET 的熟悉程度，可浏览本指南的不同部分和其他指南，例如 [.NET Core](../core/index.yml) 或 [.NET Framework](../framework/index.yml)。
 
 ## <a name="new-to-net"></a>初次使用 .NET
 
