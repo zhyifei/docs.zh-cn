@@ -3,40 +3,42 @@ title: 在 Ubuntu 19.04 包管理器上安装 .NET Core - .NET Core
 description: 使用包管理器在 Ubuntu 19.04 上安装 .NET Core SDK 和运行时。
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
-ms.openlocfilehash: c7b30d2760a0a83a0fdd7ff5fa35b2f3d490494f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: a0a6cedb6dbf572750fcc238aff59b7f66edf44f
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920680"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134144"
 ---
-# <a name="ubuntu-1904-package-manager---install-net-core"></a><span data-ttu-id="69067-103">Ubuntu 19.04 包管理器 - 安装 .NET Core</span><span class="sxs-lookup"><span data-stu-id="69067-103">Ubuntu 19.04 Package Manager - Install .NET Core</span></span>
+# <a name="ubuntu-1904-package-manager---install-net-core"></a><span data-ttu-id="85a46-103">Ubuntu 19.04 包管理器 - 安装 .NET Core</span><span class="sxs-lookup"><span data-stu-id="85a46-103">Ubuntu 19.04 Package Manager - Install .NET Core</span></span>
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-<span data-ttu-id="69067-104">本文介绍如何使用包管理器在 Ubuntu 19.04 上安装 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="69067-104">This article describes how to use a package manager to install .NET Core on Ubuntu 19.04.</span></span> <span data-ttu-id="69067-105">如果要安装该运行时，建议安装 [ASP.NET Core 运行时](#install-the-aspnet-core-runtime)，因为它同时包括 .NET Core 和 ASP.NET Core 运行时。</span><span class="sxs-lookup"><span data-stu-id="69067-105">If you're installing the runtime, we suggest you install the [ASP.NET Core runtime](#install-the-aspnet-core-runtime), as it includes both .NET Core and ASP.NET Core runtimes.</span></span>
+<span data-ttu-id="85a46-104">本文介绍如何使用包管理器在 Ubuntu 19.04 上安装 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="85a46-104">This article describes how to use a package manager to install .NET Core on Ubuntu 19.04.</span></span>
 
-## <a name="register-microsoft-key-and-feed"></a><span data-ttu-id="69067-106">注册 Microsoft 密钥和源</span><span class="sxs-lookup"><span data-stu-id="69067-106">Register Microsoft key and feed</span></span>
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-<span data-ttu-id="69067-107">安装 .NET 之前，需要：</span><span class="sxs-lookup"><span data-stu-id="69067-107">Before installing .NET, you'll need to:</span></span>
+## <a name="register-microsoft-key-and-feed"></a><span data-ttu-id="85a46-105">注册 Microsoft 密钥和源</span><span class="sxs-lookup"><span data-stu-id="85a46-105">Register Microsoft key and feed</span></span>
 
-- <span data-ttu-id="69067-108">注册 Microsoft 密钥。</span><span class="sxs-lookup"><span data-stu-id="69067-108">Register the Microsoft key.</span></span>
-- <span data-ttu-id="69067-109">注册产品存储库。</span><span class="sxs-lookup"><span data-stu-id="69067-109">Register the product repository.</span></span>
-- <span data-ttu-id="69067-110">安装必需的依赖项。</span><span class="sxs-lookup"><span data-stu-id="69067-110">Install required dependencies.</span></span>
+<span data-ttu-id="85a46-106">安装 .NET 之前，需要：</span><span class="sxs-lookup"><span data-stu-id="85a46-106">Before installing .NET, you'll need to:</span></span>
 
-<span data-ttu-id="69067-111">每台计算机只需要执行一次此操作。</span><span class="sxs-lookup"><span data-stu-id="69067-111">This only needs to be done once per machine.</span></span>
+- <span data-ttu-id="85a46-107">注册 Microsoft 密钥。</span><span class="sxs-lookup"><span data-stu-id="85a46-107">Register the Microsoft key.</span></span>
+- <span data-ttu-id="85a46-108">注册产品存储库。</span><span class="sxs-lookup"><span data-stu-id="85a46-108">Register the product repository.</span></span>
+- <span data-ttu-id="85a46-109">安装必需的依赖项。</span><span class="sxs-lookup"><span data-stu-id="85a46-109">Install required dependencies.</span></span>
 
-<span data-ttu-id="69067-112">打开终端并运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="69067-112">Open a terminal and run the following commands.</span></span>
+<span data-ttu-id="85a46-110">每台计算机只需要执行一次此操作。</span><span class="sxs-lookup"><span data-stu-id="85a46-110">This only needs to be done once per machine.</span></span>
+
+<span data-ttu-id="85a46-111">打开终端并运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="85a46-111">Open a terminal and run the following commands.</span></span>
 
 ```bash
-wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+wget https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-## <a name="install-the-net-core-sdk"></a><span data-ttu-id="69067-113">安装 .NET Core SDK</span><span class="sxs-lookup"><span data-stu-id="69067-113">Install the .NET Core SDK</span></span>
+## <a name="install-the-net-core-sdk"></a><span data-ttu-id="85a46-112">安装 .NET Core SDK</span><span class="sxs-lookup"><span data-stu-id="85a46-112">Install the .NET Core SDK</span></span>
 
-<span data-ttu-id="69067-114">更新可供安装的产品，然后安装 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="69067-114">Update the products available for installation, then install the .NET Core SDK.</span></span> <span data-ttu-id="69067-115">在终端中，运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="69067-115">In your terminal, run the following commands.</span></span>
+<span data-ttu-id="85a46-113">更新可供安装的产品，然后安装 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="85a46-113">Update the products available for installation, then install the .NET Core SDK.</span></span> <span data-ttu-id="85a46-114">在终端中，运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="85a46-114">In your terminal, run the following commands.</span></span>
 
 ```bash
 sudo apt-get update
@@ -46,11 +48,11 @@ sudo apt-get install dotnet-sdk-3.1
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="69067-116">如果收到类似于“找不到包 dotnet-sdk-3.1”  的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。</span><span class="sxs-lookup"><span data-stu-id="69067-116">If you receive an error message similar to **Unable to locate package dotnet-sdk-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
+> <span data-ttu-id="85a46-115">如果收到类似于“找不到包 dotnet-sdk-3.1”  的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。</span><span class="sxs-lookup"><span data-stu-id="85a46-115">If you receive an error message similar to **Unable to locate package dotnet-sdk-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
 
-## <a name="install-the-aspnet-core-runtime"></a><span data-ttu-id="69067-117">安装 ASP.NET Core 运行时</span><span class="sxs-lookup"><span data-stu-id="69067-117">Install the ASP.NET Core runtime</span></span>
+## <a name="install-the-aspnet-core-runtime"></a><span data-ttu-id="85a46-116">安装 ASP.NET Core 运行时</span><span class="sxs-lookup"><span data-stu-id="85a46-116">Install the ASP.NET Core runtime</span></span>
 
-<span data-ttu-id="69067-118">更新可供安装的产品，然后安装 ASP.NET Core 运行时。</span><span class="sxs-lookup"><span data-stu-id="69067-118">Update the products available for installation, then install the ASP.NET Core runtime.</span></span> <span data-ttu-id="69067-119">在终端中，运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="69067-119">In your terminal, run the following commands.</span></span>
+<span data-ttu-id="85a46-117">更新可供安装的产品，然后安装 ASP.NET Core 运行时。</span><span class="sxs-lookup"><span data-stu-id="85a46-117">Update the products available for installation, then install the ASP.NET Core runtime.</span></span> <span data-ttu-id="85a46-118">在终端中，运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="85a46-118">In your terminal, run the following commands.</span></span>
 
 ```bash
 sudo apt-get update
@@ -60,11 +62,11 @@ sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="69067-120">如果收到类似于“找不到包 aspnetcore-runtime-3.1”  的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。</span><span class="sxs-lookup"><span data-stu-id="69067-120">If you receive an error message similar to **Unable to locate package aspnetcore-runtime-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
+> <span data-ttu-id="85a46-119">如果收到类似于“找不到包 aspnetcore-runtime-3.1”  的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。</span><span class="sxs-lookup"><span data-stu-id="85a46-119">If you receive an error message similar to **Unable to locate package aspnetcore-runtime-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
 
-## <a name="install-the-net-core-runtime"></a><span data-ttu-id="69067-121">安装 .NET Core 运行时</span><span class="sxs-lookup"><span data-stu-id="69067-121">Install the .NET Core runtime</span></span>
+## <a name="install-the-net-core-runtime"></a><span data-ttu-id="85a46-120">安装 .NET Core 运行时</span><span class="sxs-lookup"><span data-stu-id="85a46-120">Install the .NET Core runtime</span></span>
 
-<span data-ttu-id="69067-122">更新可供安装的产品，然后安装 .NET Core 运行时。</span><span class="sxs-lookup"><span data-stu-id="69067-122">Update the products available for installation, then install the .NET Core runtime.</span></span> <span data-ttu-id="69067-123">在终端中，运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="69067-123">In your terminal, run the following commands.</span></span>
+<span data-ttu-id="85a46-121">更新可供安装的产品，然后安装 .NET Core 运行时。</span><span class="sxs-lookup"><span data-stu-id="85a46-121">Update the products available for installation, then install the .NET Core runtime.</span></span> <span data-ttu-id="85a46-122">在终端中，运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="85a46-122">In your terminal, run the following commands.</span></span>
 
 ```bash
 sudo apt-get update
@@ -74,19 +76,19 @@ sudo apt-get install dotnet-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="69067-124">如果收到类似于“找不到包 dotnet-runtime-3.1”  的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。</span><span class="sxs-lookup"><span data-stu-id="69067-124">If you receive an error message similar to **Unable to locate package dotnet-runtime-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
+> <span data-ttu-id="85a46-123">如果收到类似于“找不到包 dotnet-runtime-3.1”  的错误消息，请参阅[包管理器疑难解答](#troubleshoot-the-package-manager)部分。</span><span class="sxs-lookup"><span data-stu-id="85a46-123">If you receive an error message similar to **Unable to locate package dotnet-runtime-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
 
-## <a name="how-to-install-other-versions"></a><span data-ttu-id="69067-125">如何安装其他版本</span><span class="sxs-lookup"><span data-stu-id="69067-125">How to install other versions</span></span>
+## <a name="how-to-install-other-versions"></a><span data-ttu-id="85a46-124">如何安装其他版本</span><span class="sxs-lookup"><span data-stu-id="85a46-124">How to install other versions</span></span>
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="troubleshoot-the-package-manager"></a><span data-ttu-id="69067-126">包管理器疑难解答</span><span class="sxs-lookup"><span data-stu-id="69067-126">Troubleshoot the package manager</span></span>
+## <a name="troubleshoot-the-package-manager"></a><span data-ttu-id="85a46-125">包管理器疑难解答</span><span class="sxs-lookup"><span data-stu-id="85a46-125">Troubleshoot the package manager</span></span>
 
-<span data-ttu-id="69067-127">本部分提供有关使用程序包管理器安装 .NET Core 时可能会遇到的常见错误的信息。</span><span class="sxs-lookup"><span data-stu-id="69067-127">This section provides information on common errors you may get while using the package manager to install .NET Core.</span></span>
+<span data-ttu-id="85a46-126">本部分提供有关使用程序包管理器安装 .NET Core 时可能会遇到的常见错误的信息。</span><span class="sxs-lookup"><span data-stu-id="85a46-126">This section provides information on common errors you may get while using the package manager to install .NET Core.</span></span>
 
-### <a name="unable-to-locate"></a><span data-ttu-id="69067-128">无法定位</span><span class="sxs-lookup"><span data-stu-id="69067-128">Unable to locate</span></span>
+### <a name="unable-to-locate"></a><span data-ttu-id="85a46-127">无法定位</span><span class="sxs-lookup"><span data-stu-id="85a46-127">Unable to locate</span></span>
 
-<span data-ttu-id="69067-129">如果收到类似于“找不到包 {.NET Core 包}”  的错误消息，请运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="69067-129">If you receive an error message similar to **Unable to locate package {the .NET Core package}**, run the following commands.</span></span>
+<span data-ttu-id="85a46-128">如果收到类似于“找不到包 {.NET Core 包}”  的错误消息，请运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="85a46-128">If you receive an error message similar to **Unable to locate package {the .NET Core package}**, run the following commands.</span></span>
 
 ```bash
 sudo dpkg --purge packages-microsoft-prod && sudo dpkg -i packages-microsoft-prod.deb
@@ -94,13 +96,13 @@ sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
 
-<span data-ttu-id="69067-130">如果这不起作用，可使用以下命令运行手动安装。</span><span class="sxs-lookup"><span data-stu-id="69067-130">If that doesn't work, you can run a manual install with the following commands.</span></span>
+<span data-ttu-id="85a46-129">如果这不起作用，可使用以下命令运行手动安装。</span><span class="sxs-lookup"><span data-stu-id="85a46-129">If that doesn't work, you can run a manual install with the following commands.</span></span>
 
 ```bash
 sudo apt-get install -y gpg
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
+wget -O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
-wget -q https://packages.microsoft.com/config/ubuntu/19.04/prod.list
+wget https://packages.microsoft.com/config/ubuntu/19.04/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
 sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
@@ -109,6 +111,6 @@ sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
 
-### <a name="failed-to-fetch"></a><span data-ttu-id="69067-131">未能提取</span><span class="sxs-lookup"><span data-stu-id="69067-131">Failed to fetch</span></span>
+### <a name="failed-to-fetch"></a><span data-ttu-id="85a46-130">未能提取</span><span class="sxs-lookup"><span data-stu-id="85a46-130">Failed to fetch</span></span>
 
 [!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]
