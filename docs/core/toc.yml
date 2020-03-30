@@ -1,6 +1,8 @@
-- name: .NET Core 指南
-  href: index.md
-- name: 关于 .NET Core
+- name: .NET Core 文档
+  href: index.yml
+- name: .NET Core 简介
+  href: introduction.md
+- name: .NET Core 概述
   href: about.md
 - name: 安装
   items:
@@ -40,8 +42,8 @@
           href: install/linux-package-manager-fedora29.md
         - name: OpenSUSE 15
           href: install/linux-package-manager-opensuse15.md
-        - name: RHEL 8.1
-          href: install/linux-package-manager-rhel81.md
+        - name: RHEL 8
+          href: install/linux-package-manager-rhel8.md
         - name: RHEL 7
           href: install/linux-package-manager-rhel7.md
         - name: SLES 15
@@ -166,6 +168,18 @@
               href: tools/dotnet-nuget-locals.md
             - name: dotnet nuget push
               href: tools/dotnet-nuget-push.md
+            - name: dotnet nuget add source
+              href: tools/dotnet-nuget-add-source.md
+            - name: dotnet nuget disable source
+              href: tools/dotnet-nuget-disable-source.md
+            - name: dotnet nuget enable source
+              href: tools/dotnet-nuget-enable-source.md
+            - name: dotnet nuget list source
+              href: tools/dotnet-nuget-list-source.md
+            - name: dotnet nuget remove source
+              href: tools/dotnet-nuget-remove-source.md
+            - name: dotnet nuget update source
+              href: tools/dotnet-nuget-update-source.md
         - name: dotnet pack
           href: tools/dotnet-pack.md
         - name: dotnet publish
@@ -230,8 +244,6 @@
       href: tools/elevated-access.md
     - name: 启用 Tab 自动补全
       href: tools/enable-tab-autocomplete.md
-    - name: 扩展性模型
-      href: tools/extensibility.md
 - name: 诊断工具
   items:
     - name: 概述
