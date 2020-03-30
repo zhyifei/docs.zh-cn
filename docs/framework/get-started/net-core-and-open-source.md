@@ -2,16 +2,16 @@
 title: .NET Core 和开放源代码
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: b5aa42d0460d743bffe8f17a2603773c03c09ce0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8f44eedddc4424b39f7aedceb4bb8f02c6feb42
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181614"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345030"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core 和开放源代码
 
-本文提供有关 .NET Core 概念的简要概述并展示如何查找更多信息。 若要查找有关 .NET Core 的完整文档列表，请访问 [.NET Core 指南](../../core/index.md)。
+本文提供有关 .NET Core 概念的简要概述并展示如何查找更多信息。 若要查找有关 .NET Core 的完整文档列表，请访问 [.NET Core 指南](../../core/index.yml)。
 
 ## <a name="what-is-net-core"></a>.NET Core 是什么？  
 
@@ -46,5 +46,5 @@ ms.locfileid: "79181614"
 ## <a name="see-also"></a>另请参阅
 
 - [.NET 教程 - Hello World 10 分钟入门](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
-- [.NET Core 指南](../../core/index.md)
+- [.NET Core 指南](../../core/index.yml)
 - [ASP.NET Core 文档](/aspnet/core/)

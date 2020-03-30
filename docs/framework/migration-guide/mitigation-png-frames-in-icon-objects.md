@@ -2,12 +2,12 @@
 title: 缓解操作：图标对象中的 PNG 帧
 ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
-ms.openlocfilehash: d661e45bfbbe5e1c5ca5b7eb123e71aa32a096ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 713e6a0fa615ac748134fac501e5142a65e434f1
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181225"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248890"
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a>缓解操作：图标对象中的 PNG 帧
 从 .NET Framework 4.6 开始， <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> 方法成功将带 PNG 帧的图标转换为 <xref:System.Drawing.Bitmap> 对象。  
@@ -29,8 +29,8 @@ ms.locfileid: "79181225"
   
 ```xml  
 <AppContextSwitchOverrides
-      value="Switch.System.Drawing.DontSupportPngFramesInIcons=true;<previous key>=<previous value>" />  
-```  
+      value="Switch.System.Drawing.DontSupportPngFramesInIcons=true;previous key=previous-value" />
+```
   
 ## <a name="see-also"></a>另请参阅
 

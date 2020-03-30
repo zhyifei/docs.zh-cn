@@ -3,12 +3,12 @@ title: 非托管类型 - C# 参考
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 8a4599514115aa21f17c32848ce203fea704072e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9dd2ab4e044b8a86bfe72a6fcf2481b8e1e80bf4
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846454"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507225"
 ---
 # <a name="unmanaged-types-c-reference"></a>非托管类型（C# 参考）
 
@@ -31,12 +31,12 @@ ms.locfileid: "78846454"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/unsafe-code.md#pointer-types)的[指针类型](~/_csharplang/spec/introduction.md)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[指针类型](~/_csharplang/spec/unsafe-code.md#pointer-types)部分。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [指针类型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [内存和跨度相关类型](../../../standard/memory-and-spans/index.md)
 - [sizeof 运算符](../operators/sizeof.md)
-- [stackalloc 运算符](../operators/stackalloc.md)
+- [stackalloc](../operators/stackalloc.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a8146db1fb54d63d4716b879ce793f7d817cef59
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64e854b06895ca54a9ab9870b85868788a731c00
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937301"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79549610"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>共享框架：从 Microsoft.AspNetCore.App 中删除了程序集
 
@@ -36,7 +36,7 @@ ms.locfileid: "75937301"
 
 有关详细信息，请参阅 [dotnet/aspnetcore#3612](https://github.com/dotnet/aspnetcore/issues/3612)。
 
-Entity Framework Core 作为 NuGet 包提供。 此更改将使随附模型与 .NET 上的所有其他数据访问库保持一致。 它在支持各种 .NET 平台的同时，为 Entity Framework Core 提供最简单的途径来继续创新。 将 Entity Framework Core 移出共享框架不会影响其作为 Microsoft 开发、支持和可服务的库的状态。 [.NET Core 支持策略](https://www.microsoft.com/net/platform/support-policy)继续支持此功能。
+Entity Framework Core 作为 NuGet 包提供。 此更改将使随附模型与 .NET 上的所有其他数据访问库保持一致。 它在支持各种 .NET 平台的同时，为 Entity Framework Core 提供最简单的途径来继续创新。 将 Entity Framework Core 移出共享框架不会影响其作为 Microsoft 开发、支持和可服务的库的状态。 [.NET Core 支持策略](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)继续支持此功能。
 
 Json.NET 和 Entity Framework Core 可继续使用 ASP.NET Core。 但是，它们不会包含在共享框架中。
 

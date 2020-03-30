@@ -2,12 +2,12 @@
 title: 云优化应用程序中的 Microsoft 技术
 description: 通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序 | 云优化应用程序中的 Microsoft 技术
 ms.date: 04/28/2018
-ms.openlocfilehash: 915aa99d2331c5b9c46eabef3335fb809baa9370
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5222ba13258f9c8a40ca3b9ce240aeb9f41da63
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69578220"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546505"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>云优化应用程序中的 Microsoft 技术
 
@@ -19,7 +19,7 @@ ms.locfileid: "69578220"
 
 - **托管云**：选择托管云选项后，你可以避免在管理和支持底层基础结构、VM、OS 修补程序和网络配置方面的开销和复杂性。 如果选择使用 IaaS 进行迁移，则需要负责所有这些任务以及相关的成本。 在托管云选项中，只管理你开发的应用程序和服务。 云服务提供商通常会管理其他所有内容。 Azure 中托管云服务的示例包括 [Azure SQL 数据库](https://azure.microsoft.com/services/sql-database)、[Azure Redis 缓存](https://azure.microsoft.com/services/cache/)、[Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)、[Azure 存储](https://azure.microsoft.com/services/storage/)、[Azure Database for MySQL](https://azure.microsoft.com/services/mysql/)、[Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/)、[Azure Active Directory](https://azure.microsoft.com/services/active-directory/) 和托管计算服务（如 [VM 规模集](https://azure.microsoft.com/services/virtual-machine-scale-sets/)）、[Azure 应用服务](https://azure.microsoft.com/services/app-service/)以及 [Azure Kubernetes 服务](https://azure.microsoft.com/services/container-service/)。
 
-- **应用程序开发**：生成在容器中运行的应用程序时，可以选择多种语言。 本指南重点介绍 [.NET](https://www.microsoft.com/net)，但你可以使用其他语言（如 node.js、Python、Spring/Java 或 Go）来开发基于容器的应用。
+- **应用程序开发**：生成在容器中运行的应用程序时，可以选择多种语言。 本指南重点介绍 [.NET](https://dotnet.microsoft.com)，但你可以使用其他语言（如 node.js、Python、Spring/Java 或 Go）来开发基于容器的应用。
 
 - **监视、遥测、日志记录和审核**：对于任何云优化应用程序，监视和审核云中运行的应用程序和容器的能力至关重要。 [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) 和 [Microsoft Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite) 是为云优化应用提供监视和审核的主要 Microsoft 工具。
 

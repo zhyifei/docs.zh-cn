@@ -3,12 +3,12 @@ title: 为服务器应用选择 .NET Core 或 .NET Framework
 description: 关于在 .NET 中生成服务器应用时应考虑使用哪种 .NET 实现的指南。
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: 0b6bf4c2eb66aa4de497923a0a16b65a955ba6fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 393d6d89fb299e87edf55cf50991537e8afe9753
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159970"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344154"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
@@ -105,7 +105,7 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 - [在 ASP.NET 和 ASP.NET Core 之间进行选择](/aspnet/core/choose-aspnet-framework)
 - [面向 .NET Framework 的 ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
 - [目标框架](frameworks.md)
-- [.NET Core 指南](../core/index.md)
+- [.NET Core 指南](../core/index.yml)
 - [从 .NET Framework 移植到 .NET Core](../core/porting/index.md)
 - [.NET 和 Docker 简介](../core/docker/introduction.md)
 - [.NET 组件概述](components.md)

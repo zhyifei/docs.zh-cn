@@ -2,12 +2,12 @@
 title: dotnet test 命令
 description: dotnet test 命令可用于在给定项目中执行单元测试。
 ms.date: 02/27/2020
-ms.openlocfilehash: 6e906ab396a788905c99f50e73390b765b240efc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157005"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507303"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -20,11 +20,13 @@ ms.locfileid: "78157005"
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame]
-    [-c|--configuration] [--collect] [-d|--diag] [-f|--framework]
-    [--filter] [-l|--logger] [--no-build] [--no-restore]
-    [-o|--output] [-r|--results-directory] [-s|--settings]
-    [-t|--list-tests] [-v|--verbosity] [-- <RunSettings arguments>]
+dotnet test [<PROJECT> | <SOLUTION>]
+    [-a|--test-adapter-path] [--blame] [-c|--configuration]
+    [--collect] [-d|--diag] [-f|--framework] [--filter]
+    [--interactive] [-l|--logger] [--no-build] [--nologo]
+    [--no-restore] [-o|--output] [-r|--results-directory]
+    [--runtime] [-s|--settings] [-t|--list-tests]
+    [-v|--verbosity] [[--] <RunSettings arguments>]
 
 dotnet test [-h|--help]
 ```
@@ -39,9 +41,9 @@ dotnet test [-h|--help]
 
 ## <a name="arguments"></a>自变量
 
-- **`PROJECT`**
+- **`PROJECT | SOLUTION`**
 
-  指向测试项目的路径。 如未指定，则默认为当前目录。
+  测试项目或解决方案的路径。 如未指定，则默认为当前目录。
 
 ## <a name="options"></a>选项
 
@@ -49,11 +51,11 @@ dotnet test [-h|--help]
 
   在测试运行中使用来自指定路径的自定义测试适配器。
 
-- **`-blame`**
+- **`--blame`**
 
   在意见模式中运行测试。 此选项有助于隔离导致测试主机出现故障的有问题的测试。 它会在当前目录中创建一个输出文件 (Sequence.xml)，其中捕获了故障前的测试执行顺序  。
 
-- **`c|--configuration {Debug|Release}`**
+- **`c|--configuration <CONFIGURATION>`**
 
   定义生成配置。 默认值为 `Debug`，但项目配置可以替代此默认 SDK 设置。
 
@@ -77,6 +79,10 @@ dotnet test [-h|--help]
 
   打印出有关命令的简短帮助。
 
+- **`--interactive`**
+
+  允许命令停止并等待用户输入或操作。 例如，完成身份验证。 自 .NET Core 3.0 SDK 起可用。
+
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
   指定测试结果记录器。
@@ -84,6 +90,10 @@ dotnet test [-h|--help]
 - **`--no-build`**
 
   不在运行测试项目之前生成它。 还将隐式设置 - `--no-restore` 标记。
+
+- **`--nologo`**
+
+  运行测试，而不显示 Microsoft TestPlatform 横幅。 自 .NET Core 3.0 SDK 起可用。
 
 - **`--no-restore`**
 
@@ -96,6 +106,10 @@ dotnet test [-h|--help]
 - **`-r|--results-directory <PATH>`**
 
   用于放置测试结果的目录。 如果指定的目录不存在，则会创建该目录。
+
+- **`--runtime <RUNTIME_IDENTIFIER>`**
+
+  要针对其测试的目标运行时。
 
 - **`-s|--settings <SETTINGS_FILE>`**
 

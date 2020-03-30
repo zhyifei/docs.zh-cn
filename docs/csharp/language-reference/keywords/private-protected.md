@@ -2,12 +2,12 @@
 title: private protected - C# 参考
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: a73d61712075cf24d2b94c505104df1fade629e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 01a8b716ce87a63a50a92a25b2842f7bb12d4c9f
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713204"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134367"
 ---
 # <a name="private-protected-c-reference"></a>private protected（C# 参考）
 
@@ -21,8 +21,6 @@ ms.locfileid: "75713204"
 仅当变量的静态类型是派生类类型时，可从派生的类型访问基类的私有受保护成员（在其包含程序集中访问）。 以下面的代码段为例：  
 
 ```csharp
-// Assembly1.cs  
-// Compile with: /target:library  
 public class BaseClass
 {
     private protected int myValue = 0;
