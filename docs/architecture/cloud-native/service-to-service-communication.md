@@ -3,12 +3,12 @@ title: 服务到服务通信
 description: 了解后端云原生微服务如何与其他后端微服务进行通信。
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: a5124b8b83f62ff17b1230ead63db26e0c1f2a5b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 926be3c2eb4513c89ebcd1f31dceb7d58639dc6f
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401759"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523553"
 ---
 # <a name="service-to-service-communication"></a>服务到服务通信
 
@@ -232,4 +232,4 @@ Azure 服务总线和事件网格为公开单个离散事件（如新文档）�
 
 >[!div class="step-by-step"]
 >[上一个](front-end-communication.md)
->[下一个](rest-grpc.md)
+>[下一个](grpc.md)

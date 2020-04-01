@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: d8b216bf5497cf2a1faa2fa24ba1d8b3102f6f10
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aca3b5c54bff9c2b4c5380c04dd0da162215b088
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185743"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523314"
 ---
 # <a name="configuring-tracing"></a>配置跟踪
 本主题描述您可以如何启用跟踪，配置要发出跟踪的跟踪源并设置跟踪级别，设置活动跟踪和传播以支持端对端的跟踪关联，以及设置要访问跟踪的跟踪侦听器。  
@@ -38,7 +38,7 @@ ms.locfileid: "79185743"
 <configuration>  
    <system.diagnostics>  
       <sources>  
-            <source name="System.ServiceModel"
+         <source name="System.ServiceModel"
                     switchValue="Information, ActivityTracing"  
                     propagateActivity="true">  
             <listeners>  
@@ -152,7 +152,7 @@ ms.locfileid: "79185743"
   
 |跟踪级别|被跟踪事件的特性|被跟踪事件的内容|被跟踪事件|用户目标|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
-|关闭|空值|空值|不发出任何跟踪。|空值|  
+|关闭|不可用|不可用|不发出任何跟踪。|不可用|  
 |严重|"负"事件：指示意外处理或错误条件的事件。||将记录包括下列各项的未经处理的异常：<br /><br /> - 内存异常<br />- 线程中止Exception（CLR 调用任何线程中止异常处理程序）<br />- 堆栈溢出异常（无法捕获）<br />- 配置错误例外<br />- SEH例外<br />- 应用程序启动错误<br />- 故障快点事件<br />- 系统挂起<br />- 毒消息：导致应用程序失败的消息跟踪。|管理员<br /><br /> 应用程序开发人员|  
 |错误|"负"事件：指示意外处理或错误条件的事件。|已发生意外处理。 应用程序未能执行预期的任务。 然而，应用程序仍处于开启状态并在运行。|记录所有异常。|管理员<br /><br /> 应用程序开发人员|  
 |警告|"负"事件：指示意外处理或错误条件的事件。|可能的问题已经出现或可能出现，但是，应用程序仍在正常工作。 不过，该应用程序可能不会继续正常工作。|- 应用程序收到的请求超过其限制设置允许的请求数。<br />- 接收队列接近其最大配置容量。<br />- 超时已超出。<br />- 凭据被拒绝。|管理员<br /><br /> 应用程序开发人员|  
@@ -180,7 +180,7 @@ ms.locfileid: "79185743"
   
  不能将 `propagateActivity` 属性与用户定义的跟踪源一起使用。 对于用户代码活动 ID 传播，请确保未设置 ServiceModel `ActivityTracing`，而同时仍将 ServiceModel `propagateActivity` 属性设置为 `true`。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)
