@@ -16,7 +16,7 @@ ms.locfileid: "79173440"
 ---
 # <a name="await-operator-c-reference"></a>await 运算符（C# 参考）
 
-`await` 运算符暂停对封闭 [async](../keywords/async.md) 方法的求值，直到其操作数表示的异步操作完成。 异步操作完成后，`await` 运算符将返回操作的结果（如果有）。 当 `await` 运算符应用到表示已完成操作的操作数时，它将立即返回操作的结果，而不会暂停封闭的方法。 `await` 运算符不会阻止计算异步方法的线程。 当 `await` 运算符暂停封闭的异步方法时，控件将返回到方法的调用方。
+`await` 运算符暂停对其所属的 [async](../keywords/async.md) 方法的求值，直到其操作数表示的异步操作完成。 异步操作完成后，`await` 运算符将返回操作的结果（如果有）。 当 `await` 运算符应用到表示已完成操作的操作数时，它将立即返回操作的结果，而不会暂停其所属的方法。 `await` 运算符不会阻止计算异步方法的线程。 当 `await` 运算符暂停其所属的异步方法时，控件将返回到方法的调用方。
 
 在下面的示例中，<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> 方法返回 `Task<byte[]>` 实例，该实例表示在完成时生成字节数组的异步操作。 在操作完成之前，`await` 运算符将暂停 `DownloadDocsMainPageAsync` 方法。 当 `DownloadDocsMainPageAsync` 暂停时，控件将返回到 `Main` 方法，该方法是 `DownloadDocsMainPageAsync` 的调用方。 `Main` 方法将执行，直至它需要 `DownloadDocsMainPageAsync` 方法执行的异步操作的结果。 当 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 获取所有字节时，将计算 `DownloadDocsMainPageAsync` 方法的其余部分。 之后，将计算 `Main` 方法的其余部分。
 
