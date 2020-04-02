@@ -12,12 +12,12 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 6aaff20e2955fc9f121b3e60b14c0bbcf7515660
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 2dc1110b858f639624e05382a67ddccf3ea1b047
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159853"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588468"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>如何：指定 XML 流的替代元素名称
   
@@ -25,15 +25,15 @@ ms.locfileid: "78159853"
   
 ## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>用替代元素名称创建 XML 流  
   
-1. 创建 <xref:System.Xml.Serialization.XmlElementAttribute> 类的一个实例。  
+1. 创建的 <xref:System.Xml.Serialization.XmlElementAttribute> 类的实例。  
   
 2. 将 <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> 的 <xref:System.Xml.Serialization.XmlElementAttribute> 设置为“BookID”。  
   
-3. 创建 <xref:System.Xml.Serialization.XmlAttributes> 类的一个实例。  
+3. 创建的 <xref:System.Xml.Serialization.XmlAttributes> 类的实例。  
   
 4. 向通过 `XmlElementAttribute` 的 <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> 属性访问的集合中添加 <xref:System.Xml.Serialization.XmlAttributes> 对象。  
   
-5. 创建 <xref:System.Xml.Serialization.XmlAttributeOverrides> 类的一个实例。  
+5. 创建的 <xref:System.Xml.Serialization.XmlAttributeOverrides> 类的实例。  
   
 6. 将 `XmlAttributes` 添加至 <xref:System.Xml.Serialization.XmlAttributeOverrides>，同时传递要重写的对象类型以及要被重写的成员名称。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "78159853"
 ## <a name="example"></a>示例  
   
 ```vb  
-Public Class SerializeOverride()  
+Public Function SerializeOverride()  
     ' Creates an XmlElementAttribute with the alternate name.  
     Dim myElementAttribute As XmlElementAttribute = _  
     New XmlElementAttribute()  
@@ -64,7 +64,7 @@ End Class
 ```  
   
 ```csharp  
-public class SerializeOverride()  
+public void SerializeOverride()  
 {  
     // Creates an XmlElementAttribute with the alternate name.  
     XmlElementAttribute myElementAttribute = new XmlElementAttribute();  
@@ -91,7 +91,7 @@ public class SerializeOverride()
 </Book>  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.Serialization.XmlElementAttribute>
 - <xref:System.Xml.Serialization.XmlAttributes>

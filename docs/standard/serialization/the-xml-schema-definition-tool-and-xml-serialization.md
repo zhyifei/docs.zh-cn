@@ -7,29 +7,30 @@ helpviewer_keywords:
 - XML Schema Definition tool
 - serialization, XML Schema Definition tool
 ms.assetid: 3c03f855-f931-47ff-bbc6-50c0367a16e4
-ms.openlocfilehash: e855d3fdee5e8f37af8eaa362ecfdeea6e054bf6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b51b9a0112893d9a7838155f4af051e7079c8cdd
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645037"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588393"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>XML 架构定义工具和 XML 序列化
-XML 架构定义工具 ([XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) 是作为 Windows® 软件开发工具包 (SDK) 的一部分随 .NET Framework 工具一起安装的。 该工具主要有下面两个用途：  
+
+XML 架构定义工具[（XML 架构定义工具 （Xsd.exe）](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)与 .NET 框架工具一起安装，作为&reg;Windows 软件开发工具包 （SDK） 的一部分。 该工具主要有下面两个用途：  
   
-- 生成 C# 或 Visual Basic 类文件，而这些文件符合特定的 XML 架构定义语言 (XSD) 架构。 该工具将 XML 架构用作参数，并输出一个包含若干类的文件，在使用 <xref:System.Xml.Serialization.XmlSerializer> 进行序列化时，这些类符合这种架构。 有关如何使用该工具生成符合特定架构的类的信息，请参阅[如何：使用 XML 架构定义工具生成类和 XML 架构文档](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)。  
+- 生成 C# 或 Visual Basic 类文件，而这些文件符合特定的 XML 架构定义语言 (XSD) 架构。 该工具将 XML 架构用作参数，并输出一个包含若干类的文件，在使用 <xref:System.Xml.Serialization.XmlSerializer> 进行序列化时，这些类符合这种架构。 有关如何使用该工具生成符合特定架构的类的信息，请参阅 [How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)。  
   
-- 通过 .dll 或 .exe 文件生成 XML 架构文档。 若要查看已经创建或已使用特性进行修改的一组文件的架构，可以将 DLL 或 EXE 作为参数传递到该工具，以便生成 XML 架构。 有关如何使用该工具从一组类生成 XML 架构文档的信息，请参阅[如何：使用 XML 架构定义工具生成类和 XML 架构文档](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)。  
+- 通过 .dll 或 .exe 文件生成 XML 架构文档。 若要查看已经创建或已使用特性进行修改的一组文件的架构，可以将 DLL 或 EXE 作为参数传递到该工具，以便生成 XML 架构。 有关如何使用该工具从一组类生成 XML 架构文档的信息，请参阅 [How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)。  
   
- 有关此工具和其他工具的更多信息，请参阅[工具](../../../docs/framework/tools/index.md)。 有关此工具的选项的信息，请参阅 [XML 架构定义工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)。  
+有关使用该工具的详细信息，请参阅 XML[架构定义工具 （Xsd.exe）。](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Data.DataSet>
 - [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [XML 架构定义工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- [XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [如何：将对象序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 - [如何：使用 XML 架构定义工具生成类和 XML 架构文档](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)
 - [XML 架构绑定支持](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sh1e66zd(v=vs.100))

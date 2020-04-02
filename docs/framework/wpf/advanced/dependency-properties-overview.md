@@ -14,22 +14,22 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 9bf0b168633bbf9f56694e79cf81f8051f9b8ac0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1df75814c45a6f1c245d43e2390b8a6ce692a779
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186386"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587797"
 ---
 # <a name="dependency-properties-overview"></a>依赖属性概述
 
-Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于扩展类型的[属性](../../../standard/base-types/common-type-system.md#Properties)的功能。 这些服务通常统称为 WPF 属性系统。 由 WPF 属性系统支持的属性称为依赖属性。 本概述介绍 WPF 属性系统以及依赖属性的功能。 这包括如何在 XAML 和在代码中使用现有依赖属性。 本概述还介绍依赖属性所特有的方面（如依赖属性元数据），并说明如何在自定义类中创建自己的依赖属性。
+Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于扩展类型的[属性](../../../standard/base-types/common-type-system.md#properties)的功能。 这些服务通常统称为 WPF 属性系统。 由 WPF 属性系统支持的属性称为依赖属性。 本概述介绍 WPF 属性系统以及依赖属性的功能。 这包括如何在 XAML 和在代码中使用现有依赖属性。 本概述还介绍依赖属性所特有的方面（如依赖属性元数据），并说明如何在自定义类中创建自己的依赖属性。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 本主题假设你在 .NET 类型系统和面向对象的编程方面有一些基础知识。 为了能理解本主题中的示例，还应了解 XAML 并知道如何编写 WPF 应用程序。 有关详细信息，请参阅[演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
 ## <a name="dependency-properties-and-clr-properties"></a>依赖属性和 CLR 属性
- 在 WPF 中，属性通常公开为标准 .NET [属性](../../../standard/base-types/common-type-system.md#Properties)。 在基本级别，可以直接与这些属性交互，而不必了解它们是以依赖属性的形式实现的。 但是，应当熟悉 WPF 属性系统的部分或全部功能，以便利用这些功能。
+ 在 WPF 中，属性通常公开为标准 .NET [属性](../../../standard/base-types/common-type-system.md#properties)。 在基本级别，可以直接与这些属性交互，而不必了解它们是以依赖属性的形式实现的。 但是，应当熟悉 WPF 属性系统的部分或全部功能，以便利用这些功能。
 
 依赖属性的用途在于提供一种方法来基于其他输入的值计算属性值。 这些其他输入可能包括系统属性（如主题和用户首选项）、实时属性确定机制（如数据绑定和动画/情节提要）、重用模板（如资源和样式）或者通过与元素树中其他元素的父子关系来公开的值。 另外，可以通过实现依赖属性来提供独立验证、默认值、监视其他属性的更改的回叫以及可以基于可能的运行时信息来强制指定属性值的系统。 派生类还可以通过重写依赖属性元数据（而不是重写现有属性的实际实现或者创建新属性）来更改现有属性的某些具体特征。
 
@@ -196,9 +196,9 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 
 - 通常，依赖属性应当被视为公共属性，这些公共属性可以由任何具有实例访问权限的调用方访问，或至少可被这样的调用方发现。 有关详细信息，请参阅[依赖属性的安全性](dependency-property-security.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [自定义依赖属性](custom-dependency-properties.md)
-- [只读依赖属性](read-only-dependency-properties.md)
+- [自定义依赖项属性](custom-dependency-properties.md)
+- [只读依赖项属性](read-only-dependency-properties.md)
 - [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [WPF 体系结构](wpf-architecture.md)
