@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 测�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 2b347442c4a9b7b6cf912ec461248f901dc45417
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fa87fdba830398786cce8951d353e86bc4ff7491
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147486"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111044"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>测试 ASP.NET Core MVC 应用
 
@@ -40,7 +40,7 @@ ms.locfileid: "79147486"
 
 > “很多时候，开发系统类似于修建房屋。 虽然这个类比并不完全准确，但是我们可将其延伸，用以理解单元测试与功能测试的区别。 单元测试类似于巡查房屋建筑工地的建筑检查员。 建筑检查员专注于房屋的各种内部系统、地基、框架、电路、管道等。 他确保（测试）房屋各部分功能正常且安全，即符合建筑规范。 在这种情景下，功能测试类似于出现在同一建筑工地上的房主。 他假定房屋内部系统一切正常，建筑检查员履行了其检查职责。 房主关心的是住在这个房屋里的体验。 他关心房屋外观如何、每个房间是否大小合适、房屋是否能满足家庭需要，以及窗外是否有好的风景。 也就是说，房主对房屋执行功能测试。 他是站在用户角度。 建筑检察员则是对房屋进行单元测试。 他站在建筑商角度。”
 
-来源：[单元测试与功能测试](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
+源：[单元测试与功能测试](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
 
 我认为：“作为开发人员，我们的失败可能体现在两方面：我们构建应用的方式错误，或者我们的应用不能满足客户需求。” 单元测试可确保构建应用的方式正确；功能测试可确保我们的应用可满足客户需求。
 
@@ -64,7 +64,7 @@ Martin Fowler 提出了测试金字塔概念，如图 9-1 所示。
 
 可按最适合你的方式组织测试项目。 最好按照类型（单元测试和集成测试）以及测试内容（按项目和按命名空间）分离测试。 此分离由单个测试项目内的文件夹构成，还是由多个测试项目构成，这取决于设计决策。 虽然一个项目最为简单，但是对于包含多个测试的大型项目，或者为了更轻松地运行不同测试集，可能需要具有一系列不同的测试项目。 许多团队基于要测试的项目组织测试项目，对于具有很多项目的应用程序而言，这可能导致出现大量测试项目，在根据每个项目中的测试类型进行细分的情况下更是如此。 一种折衷方式是让每个测试类型、每个应用程序具有一个项目，测试项目内的文件夹指示要测试的项目（和类）。
 
-一种常见方式是在“src”文件夹下组织应用程序项目，在平行的“tests”文件夹下组织应用程序的测试项目。 如果你认为这种组织方式有用，可以在 Visual Studio 中创建匹配的解决方案文件夹。
+一种常见方式是在“src”文件夹下组织应用程序项目，在并行的“tests”文件夹下组织应用程序的测试项目。 如果你认为这种组织方式有用，可以在 Visual Studio 中创建匹配的解决方案文件夹。
 
 ![解决方案中的测试组织](./media/image9-2.png)
 
@@ -145,7 +145,7 @@ public IActionResult GetImage(int id)
 
 `_logger` 和 `_imageService` 都作为依赖项注入。 现在，可测试是否传递到操作方法的相同 ID 被传递到 `_imageService`，以及生成的字节是否作为 FileResult 的一部分返回。 还可测试错误日志记录是否按预期发生，以及如果映像缺失，是否返回 `NotFound` 结果（假定这是重要的应用程序行为，即不只是开发人员为诊断问题而添加的临时代码）。 已将实际文件逻辑移动到单独的实现服务，并已将其扩充，以在缺失文件的情况下返回特定于应用程序的异常。 可使用集成测试独立测试该实现。
 
-在大多数情况下，需要在控制器中使用全局异常处理程序，因此它们中的逻辑量应该是最小的，并且可能不值得进行单元测试。 应该使用功能测试和下面介绍的 `TestServer` 类对控制器操作进行大部分测试。
+在大多数情况下，需要在控制器中使用全局异常处理程序，因此它们中的逻辑量应该是最小的，并且可能不值得进行单元测试。 使用功能测试和下面介绍的 `TestServer` 类对控制器操作进行大部分测试。
 
 ## <a name="integration-testing-aspnet-core-apps"></a>对 ASP.NET Core 应用执行集成测试
 
@@ -153,7 +153,7 @@ ASP.NET Core 应用中的大多数集成测试应该是测试基础结构项目�
 
 ## <a name="functional-testing-aspnet-core-apps"></a>对 ASP.NET Core 应用执行功能测试
 
-对于 ASP.NET Core 应用程序，`TestServer` 类让功能测试非常易于编写。 可以直接使用 `TestServer`（或 `WebHostBuilder`）（针对应用程序的一般操作）或使用 `HostBuilder` 类型（自 2.1 版开始提供）来配置 `WebApplicationFactory`。 应尝试将测试主机与生产主机进行尽可能密切的匹配，以便让测试执行与应用将在生产中进行的行为类似的行为。 `WebApplicationFactory` 类有助于配置 TestServer 的 ContentRoot，该 ContentRoot 由 ASP.NET Core 用于定位静态资源（例如视图）。
+对于 ASP.NET Core 应用程序，`TestServer` 类让功能测试非常易于编写。 可以直接使用 `WebHostBuilder`（或 `HostBuilder`）（针对应用程序的一般操作）或使用 `WebApplicationFactory` 类型（自 2.1 版开始提供）来配置 `TestServer`。 尝试将测试主机与生产主机进行尽可能密切的匹配，以便让测试执行与应用将在生产中进行的行为类似的行为。 `WebApplicationFactory` 类有助于配置 TestServer 的 ContentRoot，该 ContentRoot 由 ASP.NET Core 用于定位静态资源（例如视图）。
 
 可以通过创建实现 IClassFixture\<WebApplicationFactory\<TEntry>>（其中 TEntry 为 Web 应用的启动类）的测试类来创建简单的功能测试。 创建完成后，测试固定例程可使用中心的 CreateClient 方法来创建客户端：
 
@@ -290,7 +290,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 }
 ```
 
-该功能测试执行完整的 ASP.NET Core MVC/Razor Pages 应用程序堆栈，包括所有中间件、筛选器、绑定器等。 它验证给定的路由 ("/") 是否返回预期的成功状态代码和 HTML 输出。 它无需设置实际 Web 服务器即可实现该操作，因此可避免使用实际 Web 服务器进行测试可能遇到的许多问题（例如防火墙设置问题）。 虽然针对 TestServer 运行的功能测试通常比集成测试和单元测试更慢，但是比测试 Web 服务器的网络上运行的测试速度更快。 应使用功能测试来确保应用程序的前端堆栈按预期运行。 当在控制器或页面中发现了重复内容并通过添加筛选器找到了这些重复内容时，这些测试将尤为有用。 理想情况下，此重构不会改变应用程序的行为，并且将有一套功能测试来验证确实如此。
+该功能测试执行完整的 ASP.NET Core MVC/Razor Pages 应用程序堆栈，包括所有中间件、筛选器、绑定器等。 它验证给定的路由 ("/") 是否返回预期的成功状态代码和 HTML 输出。 它无需设置实际 Web 服务器即可实现该操作，因此可避免使用实际 Web 服务器进行测试可能遇到的许多问题（例如防火墙设置问题）。 虽然针对 TestServer 运行的功能测试通常比集成测试和单元测试更慢，但是比测试 Web 服务器的网络上运行的测试速度更快。 使用功能测试来确保应用程序的前端堆栈按预期运行。 当在控制器或页面中发现了重复内容并通过添加筛选器找到了这些重复内容时，这些测试将尤为有用。 理想情况下，此重构不会改变应用程序的行为，并且将有一套功能测试来验证确实如此。
 
 > ### <a name="references--test-aspnet-core-mvc-apps"></a>参考 - 测试 ASP.NET Core MVC 应用
 >

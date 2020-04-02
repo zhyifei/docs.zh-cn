@@ -1,18 +1,18 @@
 ---
 title: readonly 关键字 - C# 参考
-ms.date: 06/21/2018
+ms.date: 03/26/2020
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 165b6287e1610e013b289601e1535a08fdd3b5c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 344d5e54fcd500e283c52fa7953c6366823f13f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398123"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345154"
 ---
 # <a name="readonly-c-reference"></a>readonly（C# 参考）
 
@@ -28,7 +28,7 @@ ms.locfileid: "79398123"
   > [!WARNING]
   > 包含属于可变引用类型的外部可见只读字段的外部可见类型可能存在安全漏洞，可能会触发警告 [CA2104](/visualstudio/code-quality/ca2104)：“不要声明只读可变引用类型。”
 
-- 在 [`readonly struct` 定义](#readonly-struct-example)中，`readonly` 指示 `struct` 是不可变的。
+- 在 `readonly struct` 类型定义中，`readonly` 指示结构类型是不可变的。 有关详细信息，请参阅[结构类型](../builtin-types/struct.md)一文中的 [`readonly` 结构](../builtin-types/struct.md#readonly-struct)一节。
 - 在 [`readonly` 成员定义](#readonly-member-examples)中，`readonly` 表示 `struct` 的成员不会改变结构的内部状态。
 - 在 [`ref readonly` 方法返回](#ref-readonly-return-example)中，`readonly` 修饰符指示该方法返回一个引用，且不允许向该引用写入内容。
 
@@ -71,28 +71,6 @@ p2.y = 66;        // Error
 你将收到编译器错误消息：
 
 **无法对只读的字段赋值（构造函数或变量初始值指定项中除外）**
-
-## <a name="readonly-struct-example"></a>只读结构示例
-
-`struct` 定义上的 `readonly` 修饰符声明该结构是不可变的  。 `struct` 的每个实例字段都必须被标记为 `readonly`，如下例所示：
-
-[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]
-
-前面的示例使用[只读自动属性](../../properties.md#read-only)来声明其存储。 该操作指示编译器为这些属性创建 `readonly` 支持字段。 还可以直接声明 `readonly` 字段：
-
-```csharp
-public readonly struct Point
-{
-    public readonly double X;
-    public readonly double Y;
-
-    public Point(double x, double y) => (X, Y) = (x, y);
-
-    public override string ToString() => $"({X}, {Y})";
-}
-```
-
-添加未标记 `readonly` 的字段会生成编译器错误 `CS8340`：“只读结构的实例字段必须为只读。”
 
 ## <a name="readonly-member-examples"></a>Readonly 成员示例
 
@@ -144,6 +122,7 @@ public string Message { readonly get; set; }
 `ref return` 上的 `readonly` 修饰符指示返回的引用无法修改。 下面的示例返回了一个对来源的引用。 它使用 `readonly` 修饰符来指示调用方无法修改来源：
 
 [!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
+
 所返回的类型不需要为 `readonly struct`。 `ref` 能返回的任何类型都能由 `ref readonly` 返回。
 
 ## <a name="c-language-specification"></a>C# 语言规范

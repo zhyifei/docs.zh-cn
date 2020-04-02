@@ -10,12 +10,12 @@ helpviewer_keywords:
 - namespace [C#]
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: a18e52ea05d49bf2b3a468923f1433f09fff9a8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84c418627462f83630fe5072a0b0e2089f6588f6
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712671"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507121"
 ---
 # <a name="-operator-c-reference"></a>:: 运算符（C# 参考）
 
@@ -56,13 +56,13 @@ ms.locfileid: "75712671"
   > [!NOTE]
   > 仅当 `global` 关键字是 `::` 限定符的左侧标识符时，该关键字才是全局命名空间别名。
 
-此外，你还可以使用[成员访问 `.` 运算符](member-access-operators.md#member-access-operator-)来访问设置了别名的命名空间的成员。 但是，`.` 运算符还可用于访问类型成员。 `::` 限定符确保其左侧标识符始终引用命名空间别名，即使存在同名的类型或命名空间也是如此。
+此外，还可以使用 [`.` 令牌](member-access-operators.md#member-access-expression-)来访问设置了别名的命名空间的成员。 不过，`.` 令牌还可用于访问类型成员。 `::` 限定符确保其左侧标识符始终引用命名空间别名，即使存在同名的类型或命名空间也是如此。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers)中的[命名空间别名限定符](~/_csharplang/spec/introduction.md)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[命名空间别名限定符](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers)部分。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)

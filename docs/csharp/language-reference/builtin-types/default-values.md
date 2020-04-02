@@ -5,12 +5,12 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 93b6079b9a3bbf6d537094cab9dfb305ace7f6bf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e34d291ec15c738f3bc9409df321ede454b6710
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77625860"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507251"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>C# 类型的默认值（C# 参考）
 
@@ -27,7 +27,7 @@ ms.locfileid: "77625860"
 |[struct](struct.md)|通过如下设置生成的值：将所有值类型的字段设置为其默认值，将所有引用类型的字段设置为 `null`。|
 |任何[可以为 null 的值类型](nullable-value-types.md)|<xref:System.Nullable%601.HasValue%2A> 属性为 `false` 且 <xref:System.Nullable%601.Value%2A> 属性未定义的实例。 该默认值也称为可以为 null 的值类型的“null”  值。|
 
-使用[默认运算符](../operators/default.md)生成默认类型值，如下面的示例所示：
+使用 [`default` 运算符](../operators/default.md#default-operator)生成默认类型值，如下面的示例所示：
 
 ```csharp
 int a = default(int);
@@ -55,7 +55,7 @@ Console.WriteLine(n);  // output: (0, 0)
 - [默认值](~/_csharplang/spec/variables.md#default-values)
 - [默认构造函数](~/_csharplang/spec/types.md#default-constructors)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [构造函数](../../programming-guide/classes-and-structs/constructors.md)

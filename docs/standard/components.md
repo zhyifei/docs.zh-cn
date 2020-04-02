@@ -4,12 +4,12 @@ description: 描述 .NET 体系结构组件，例如 .NET Standard、.NET 实现
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: eadcf05069edfa32a52c5e73045b4cebd1a9a6ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 027fdb4cec47550f88f6930a4bbdff4ab5cdfb36
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398759"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344170"
 ---
 # <a name="net-architectural-components"></a>.NET 体系结构组件
 
@@ -21,7 +21,7 @@ ms.locfileid: "79398759"
 
 .NET Standard 也是一个[目标框架](glossary.md#target-framework)。 如果代码面向 .NET Standard 版本，则它可在支持该 .NET Standard 版本的任何 .NET 实现上运行。
 
-若要详细了解 .NET Standard 以及如何将其作为目标，请参阅 [.NET Standard](net-standard.md) 主题。
+若要详细了解 .NET Standard 以及如何将其作为目标，请参阅 [.NET Standard](net-standard.md)。
 
 ## <a name="net-implementations"></a>.NET 实现
 
@@ -38,13 +38,13 @@ Microsoft 积极开发和维护的主要 .NET 实现有 4 个：.NET Core、.NET
 
 .NET Core 是 .NET 的跨平台实现，专用于处理大规模的服务器和云工作负荷。 可在 Windows、macOS 和 Linux 上运行。 它实现 .NET Standard，因此面向 .NET Standard 的代码都可在 .NET Core 上运行。 [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core)、[Windows 窗体](../framework/winforms/windows-forms-overview.md)和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 都在 .NET Core 上运行。
 
-要了解有关 .NET Core 的详细信息，请参阅 [.NET Core 指南](../core/index.md)和[为服务器应用选择 .NET Core 或 .NET Framework](choosing-core-framework-server.md)。
+要了解有关 .NET Core 的详细信息，请参阅 [.NET Core 指南](../core/index.yml)和[为服务器应用选择 .NET Core 或 .NET Framework](choosing-core-framework-server.md)。
 
 ### <a name="net-framework"></a>.NET Framework
 
-.Net Framework 是自 2002 年起就已存在的原始 .NET 实现。 它是当前 .NET 开发人员经常使用的 .NET Framework。 4\.5 版以及更高版本实现 .NET Standard，因此面向 .NET Standard 的代码都可在这些版本的 .NET Framework 上运行。 它还包含一些特定于 Windows 的 API，如通过 Windows 窗体和 WPF 进行 Windows 桌面开发的 API。 .NET Framework 非常适合用于生成 Windows 桌面应用程序。
+.Net Framework 是自 2002 年起就已存在的原始 .NET 实现。 4\.5 版以及更高版本实现 .NET Standard，因此面向 .NET Standard 的代码都可在这些版本的 .NET Framework 上运行。 它还包含一些特定于 Windows 的 API，如通过 Windows 窗体和 WPF 进行 Windows 桌面开发的 API。 .NET Framework 非常适合用于生成 Windows 桌面应用程序。
 
-若要了解有关 .NET Framework 的详细信息，请参阅 [.NET Framework 指南](../framework/index.md)。
+若要了解有关 .NET Framework 的详细信息，请参阅 [.NET Framework 指南](../framework/index.yml)。
 
 ### <a name="mono"></a>Mono
 
@@ -60,7 +60,7 @@ Mono 通常与实时编译器一起使用，但它也提供在 iOS 之类的平�
 
 ### <a name="universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP)
 
-UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件的 .NET 实现。 它旨在统一可能想要以其为目标的不同类型的设备，包括电脑、平板电脑、平板手机、电话，甚至 Xbox。 UWP 提供许多服务，如集中式应用商店、执行环境 (AppContainer) 和一组 Windows API（用于代替 Win32 (WinRT)）。 应用可采用 C++、C#、Visual Basic 和 JavaScript 编写。 使用 C# 和 Visual Basic 时，.NET API 由 .NET Core 提供。
+UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件的 .NET 实现。 它旨在统一可能想要以其为目标的不同类型的设备，包括电脑、平板电脑、电话，甚至 Xbox。 UWP 提供许多服务，如集中式应用商店、执行环境 (AppContainer) 和一组 Windows API（用于代替 Win32 (WinRT)）。 应用可采用 C++、C#、Visual Basic 和 JavaScript 编写。 使用 C# 和 Visual Basic 时，.NET API 由 .NET Core 提供。
 
 若要详细了解 UWP，请参阅[通用 Windows 平台简介](/windows/uwp/get-started/universal-application-platform-guide)。
 
@@ -75,7 +75,7 @@ UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件
 
 ## <a name="net-tooling-and-common-infrastructure"></a>.NET 工具和常见基础结构
 
-可访问一整套适用于每种 .NET 实现的工具和基础结构组件。 包括（但不限于）以下几种：
+可访问一整套适用于每种 .NET 实现的工具和基础结构组件。 这些工具和组件包括：
 
 - .NET 语言及其编译器
 - .NET 项目系统（基于 .csproj  .vbproj  和 .fsproj  文件）
@@ -85,7 +85,7 @@ UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件
 
 ## <a name="applicable-standards"></a>适用标准
 
-C# 语言和公共语言基础结构 (CLI) 规范通过 [Ecma International®](https://www.ecma-international.org/) 进行标准化。 这些标准的第一版已于 2001 年 12 月由 Ecma 发布。
+C# 语言和公共语言基础结构 (CLI) 规范通过 [Ecma International&reg;](https://www.ecma-international.org/) 进行标准化。 这些标准的第一版已于 2001 年 12 月由 Ecma 发布。
 
 这些标准的后续版本由编程委员技术委员会 ([TC49](https://www.ecma-international.org/memento/tc49.htm)) 的 TC49-TG2 (C#) 和 TC49-TG3 (CLI) 任务组编制，被 Ecma General Assembly 采纳，随后通过 ISO 快速跟踪流程被 ISO/IEC JTC 1 采纳。
 
@@ -107,8 +107,8 @@ C# 语言和公共语言基础结构 (CLI) 规范通过 [Ecma International®](h
 
 - [为服务器应用选择 .NET Core 或 .NET Framework](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
-- [.NET Core 指南](../core/index.md)
-- [.NET Framework 指南](../framework/index.md)
+- [.NET Core 指南](../core/index.yml)
+- [.NET Framework 指南](../framework/index.yml)
 - [C# 指南](../csharp/index.yml)
 - [F# 指南](../fsharp/index.yml)
 - [Visual Basic 指南](../visual-basic/index.yml)

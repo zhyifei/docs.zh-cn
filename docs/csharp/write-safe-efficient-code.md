@@ -4,12 +4,12 @@ description: 通过 C# 语言最新增强功能，可以编写可验证的安全
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: d4a7916b80e15c7f00fa0a7da213ed0593e0959d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 365320fef5a2f9cd123086c1baed9a786ede9f05
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78239971"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345079"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>编写安全有效的 C# 代码
 
@@ -21,7 +21,7 @@ ms.locfileid: "78239971"
 
 本文重点介绍以下资源管理技术：
 
-- 声明 [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example) 表示类型为“不可变”，并使编译器在使用 [`in`](language-reference/keywords/in-parameter-modifier.md) 参数时保存副本  。
+- 声明一个 [`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct) 以表示类型是不可变的  。 这使编译器可以在使用 [`in`](language-reference/keywords/in-parameter-modifier.md) 参数时保存防御性副本。
 - 如果类型是可变的，请声明 `struct` 成员 `readonly`，以表示该成员不修改状态。
 - 当返回值 `struct` 大于 <xref:System.IntPtr.Size?displayProperty=nameWithType> 且存储生存期大于返回值的方法时，请使用 [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) 返回。
 - 当 `readonly struct` 的大小大于 <xref:System.IntPtr.Size?displayProperty=nameWithType> 时，出于性能原因，应将其作为 `in` 参数传递。
@@ -72,7 +72,7 @@ readonly public struct ReadonlyPoint3D
 
 ## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>结构可变时声明 readonly 成员
 
-在 C# 8.0 及更高版本中，结构类型为可变类型时，应将不会引起变化的成员声明为 `readonly`。 例如，以下是三维点结构的可变变体：
+在 C# 8.0 及更高版本中，结构类型为可变类型时，应将不会引起变化的成员声明为 `readonly`。 请考虑其他需要三维点结构的应用程序，但必须支持可变性。 以下版本的三维点结构仅将 `readonly` 修饰符添加到不修改结构的成员。 当你的设计必须支持某些成员对结构的修改时，但仍然需要对某些成员强制执行只读操作的便利时，请遵循以下示例：
 
 ```csharp
 public struct Point3D
@@ -214,13 +214,13 @@ public struct Point3D
 
 `in` 参数指定还可用于引用类型或数值。 但是，这两种情况下获得的好处都是最少的（如果有）。
 
-## <a name="never-use-mutable-structs-as-in-in-argument"></a>切勿在 `in` 参数中使用可变结构
+## <a name="avoid-mutable-structs-as-an-in-argument"></a>避免在 `in` 参数中使用可变结构
 
 上述技术解释了如何通过返回引用和按引用传递值来避免创建副本。 当参数类型声明为 `readonly struct` 类型时，这些技术最有效。 否则，编译器必须在许多情况下创建“防御副本”以强制执行任何参数的只读状态  。 请考虑下面这个计算三维点到原点距离的示例：
 
 [!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
-`Point3D` 结构不是只读结构  。 此方法的主体中有六个不同的属性访问调用。 在首次检查时，你可能认为这些访问是安全的。 毕竟，`get` 访问器不应该修改对象的状态。 但是没有强制执行的语言规则。 它只是通用约定。 任何类型都可以实现修改内部状态的 `get` 访问器。 如果没有语言保证，编译器必须在调用任何成员之前创建参数的临时副本。 在堆栈上创建临时存储，将参数的值复制到临时存储中，并将每个成员访问的值作为 `this` 参数复制到堆栈中。 在许多情况下，当参数类型不是 `readonly struct` 时，这些副本会降低性能，使得按值传递比按只读引用传递速度更快。
+`Point3D` 结构不是只读结构  。 此方法的主体中有六个不同的属性访问调用。 在首次检查时，你可能认为这些访问是安全的。 毕竟，`get` 访问器不应该修改对象的状态。 但是没有强制执行的语言规则。 它只是通用约定。 任何类型都可以实现修改内部状态的 `get` 访问器。 如果没有语言保证，编译器必须在调用任何未标记为 `readonly` 修饰符的成员之前创建参数的临时副本。 在堆栈上创建临时存储，将参数的值复制到临时存储中，并将每个成员访问的值作为 `this` 参数复制到堆栈中。 在许多情况下，当参数类型不是 `readonly struct`，并且该方法调用成员未标记为 `readonly` 时，这些副本会降低性能，使得按值传递比按只读引用传递速度更快。 如果将不修改结构状态的所有方法标记为 `readonly`，编译器就可以安全地确定不修改结构状态，并且不需要防御性复制。
 
 相反，如果距离计算使用不可变结构 `ReadonlyPoint3D`，则不需要临时对象：
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 883902142a91e275ab64ad5d12c197c665bd9b36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a3ba2838458d6e6833035186dfd69b34c780317
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398471"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248129"
 ---
 # <a name="standard-date-and-time-format-strings"></a>标准日期和时间格式字符串
 
@@ -54,7 +54,7 @@ ms.locfileid: "79398471"
 |“T”|长时间模式。<br /><br /> 更多信息：[长时间（“T”）格式说明符](#LongTime)。|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|
 |“u”|通用可排序日期/时间模式。<br /><br /> 更多信息：[通用可排序（“u”）格式说明符](#UniversalSortable)。|带有 <xref:System.DateTime> 值：2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> 带有 <xref:System.DateTimeOffset> 值：2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|
 |“U”|通用完整日期/时间模式。<br /><br /> 更多信息：[通用完整（“U”）格式说明符](#UniversalFull)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|
-|“Y”、“y”|年月模式。<br /><br /> 更多信息：[年月（“Y”、“y”）格式说明符](#YearMonth)。|2009-06-15T13:45:30 -> June, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|
+|“Y”、“y”|年月模式。<br /><br /> 更多信息：[年月（“Y”、“y”）格式说明符](#YearMonth)。|2009-06-15T13:45:30 -> June 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|
 |任何其他单个字符|未知说明符。|引发运行时 <xref:System.FormatException>。|
 
 ## <a name="how-standard-format-strings-work"></a>标准格式字符串的工作原理

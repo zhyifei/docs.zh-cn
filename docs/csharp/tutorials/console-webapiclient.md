@@ -3,12 +3,12 @@ title: 使用 .NET Core 创建 REST 客户端
 description: 此教程将介绍 .NET Core 和 C# 语言的许多功能。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 5796df2d2fd8c4d9aaca783d720448c90858c067
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0105db519f7accec6bf8bfbafdc6a67a444b1074
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156852"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249163"
 ---
 # <a name="rest-client"></a>REST 客户端
 
@@ -163,7 +163,7 @@ JSON 序列化程序将忽略所使用的类类型未包含的信息。
 
 至此，你已创建类型，让我们来进行反序列化吧。
 
-接下来，使用序列化程序将 JSON 转换成 C# 对象。 使用以下三行代码替换 `ProcessRepositories` 方法中对 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> 的调用：
+接下来，使用序列化程序将 JSON 转换成 C# 对象。 使用以下行替换 `ProcessRepositories` 方法中对 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> 的调用：
 
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
@@ -288,23 +288,16 @@ foreach (var repo in repositories)
 2016-02-08T21:27:00Z
 ```
 
-此格式不符合任何标准 .NET <xref:System.DateTime> 格式。 因此，需要编写一个自定义转换方法。 你可能也不希望向 `Repository` 类的用户公开原始字符串。 特性还有助于控制此情况。 首先，定义一个 `public` 属性，该属性将保存 `Repository` 类中日期和时间的字符串表示形式，并定义一个 `LastPush` `readonly` 属性，该属性返回表示返回日期的格式化字符串：
+该格式为协调世界时 (UTC)，因此，你将获得一个 <xref:System.DateTime> 值，该值的 <xref:System.DateTime.Kind%2A> 属性为 <xref:System.DateTimeKind.Utc>。 如果你倾向于以时区表示的日期，则需要编写自定义转换方法。 首先，定义一个 `public` 属性，该属性将保存 `Repository` 类中日期和时间的 UTC 表示形式，并定义一个 `LastPush` `readonly` 属性，该属性返回转换为本地时间的日期：
 
 ```csharp
 [JsonPropertyName("pushed_at")]
-public string JsonDate { get; set; }
+public DateTime LastPushUtc { get; set; }
 
-public DateTime LastPush =>
-    DateTime.ParseExact(JsonDate, "yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture);
+public DateTime LastPush => LastPushUtc.ToLocalTime();
 ```
 
-让我们来看一下刚定义的新构造。 `LastPush` 属性使用 `get` 访问器的 expression-bodied member  进行定义。 不存在 `set` 访问器。 省略 `set` 访问器就是在 C# 中定义只读  属性的方式。 （是的，可以在 C# 中创建*只写*属性，但属性值受限。）<xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> 方法分析字符串，并使用提供的日期格式创建 <xref:System.DateTime> 对象，然后使用 `CultureInfo` 对象将其他元数据添加到 `DateTime` 中。 如果分析操作失败，那么属性访问器会抛出异常。
-
-若要使用 <xref:System.Globalization.CultureInfo.InvariantCulture>，需要在 `repo.cs` 中将 <xref:System.Globalization> 命名空间添加到 `using` 指令：
-
-```csharp
-using System.Globalization;
-```
+让我们来看一下刚定义的新构造。 `LastPush` 属性使用 `get` 访问器的 expression-bodied member  进行定义。 不存在 `set` 访问器。 省略 `set` 访问器就是在 C# 中定义只读  属性的方式。 （是的，可以在 C# 中创建*只写*属性，但属性值受限。）
 
 最后，在控制台中再添加一个输出语句，然后就可以再次生成并运行此应用程序：
 

@@ -2,220 +2,159 @@
 title: dotnet 命令
 description: 了解 dotnet 命令（.NET Core CLI 的通用驱动程序）及其用法。
 ms.date: 02/13/2020
-ms.openlocfilehash: 364978465b63401907b46ead64dbceb2f15c8169
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 8692d419afd528bf49e1dc7dc1a7a5fd698b363b
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451163"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134079"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+ 本文适用于： ✔️ .NET Core 2.1 SDK 及更高版本
 
 ## <a name="name"></a>“属性”
 
-`dotnet` - 一款管理 .NET 源代码和二进制文件的工具。
+`dotnet` - .NET Core CLI 的通用驱动程序。
 
 ## <a name="synopsis"></a>摘要
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
+获取有关可用命令和环境的信息：
 
 ```dotnetcli
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
-    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
+dotnet [-h|--help] [--version] [--info]
+    [--list-runtimes] [--list-sdks]
 ```
 
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
+运行命令（需要 SDK 安装）：
 
 ```dotnetcli
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
-    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx]
-    [--runtimeconfig] [-v|--verbosity] [--version]
+dotnet <COMMAND> [-d|--diagnostics] [-h|--help] [--verbosity]
+    [command-options] [arguments]
 ```
 
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
+运行应用程序：
 
 ```dotnetcli
-dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
-    [--fx-version] [-h|--help] [--info] [--runtimeconfig] [-v|--verbosity] [--version]
+dotnet [--additionalprobingpath] [--additional-deps]
+    [--fx-version]  [--roll-forward]
+    <PATH_TO_APPLICATION> [arguments]
+
+dotnet exec [--additionalprobingpath] [--additional-deps]
+    [--fx-version]  [--roll-forward]
+    <PATH_TO_APPLICATION> [arguments]
 ```
 
----
+`--roll-forward` 自 .NET Core 3.x 起可用。 使用 .NET Core 2.x 的 `--roll-forward-on-no-candidate-fx`。
 
 ## <a name="description"></a>描述
 
-`dotnet` 是一款管理 .NET 源代码和二进制文件的工具。 它公开执行特定任务的命令，例如 [`dotnet build`](dotnet-build.md) 和 [`dotnet run`](dotnet-run.md)。 每个命令都定义自己的参数。 在每个命令后键入 `--help` 以访问简要帮助文档。
+`dotnet` 命令有两个函数：
 
-可以使用 `dotnet` 来运行应用程序，方法是指定应用程序 DLL，如 `dotnet myapp.dll`. 要了解部署选项，请参阅 [.NET Core 应用程序部署](../deploying/index.md)。
+- 它提供了用于处理 .NET Core 项目的命令。
+
+  例如，[`dotnet build`](dotnet-build.md) 生成项目。 每个命令定义自己的选项和参数。 所有命令都支持 `--help` 选项，用于打印有关如何使用命令的简短文档。
+
+- 它运行 .NET Core 应用程序。
+
+  指定应用程序 `.dll` 文件的路径以运行应用程序。 例如，`dotnet myapp.dll` 运行 `myapp` 应用程序。 要了解部署选项，请参阅 [.NET Core 应用程序部署](../deploying/index.md)。
 
 ## <a name="options"></a>选项
 
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
+`dotnet` 本身有不同的选项，可用于运行命令和运行应用程序。
 
-`--additional-deps <PATH>`
+### <a name="options-for-dotnet-by-itself"></a>dotnet 本身的选项
 
-附加 .deps.json 文件的路径  。
+以下是 `dotnet` 本身的选项。 例如 `dotnet --info`。 这些选项打印出有关环境的信息。
 
-`--additionalprobingpath <PATH>`
+- **`--info`**
 
-包含要进行探测的探测策略和程序集的路径。
+  打印出有关 .NET Core 安装和计算机环境（如当前操作系统）的详细信息，并提交 .NET Core 版本的 SHA。
 
-`--depsfile`
+- **`--version`**
 
-deps.json 文件的路径  。
+  打印使用中的 .NET Core SDK 版本。
 
-deps.json 文件包含依赖项、编译依赖项和用于解决程序集冲突的版本信息列表  。 有关此文件的详细信息，请参阅 GitHub 上的[运行时配置文件](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)。
+- **`--list-runtimes`**
 
-`-d|--diagnostics`
+  打印已安装的 .NET Core 运行时的列表。
 
-启用诊断输出。
+- **`--list-sdks`**
 
-`--fx-version <VERSION>`
+  打印已安装的 .NET Core SDK 的列表。
 
-用于运行应用程序的 .NET Core 运行时版本。
+- **`-h|--help`**
 
-`-h|--help`
+  打印可用命令列表。
 
-打印出给定命令的文档，如 `dotnet build --help`。 `dotnet --help` 打印可用命令列表。
+### <a name="sdk-options-for-running-a-command"></a>用于运行命令的 SDK 选项
 
-`--info`
+以下选项适用于使用命令的 `dotnet`。 例如 `dotnet build --help`。
 
-打印出有关 .NET Core 安装和计算机环境（如当前操作系统）的详细信息，并提交 .NET Core 版本的 SHA。
+- **`-d|--diagnostics`**
 
-`--list-runtimes`
+  启用诊断输出。
 
-显示已安装的 .NET Core 运行时。
+- **`-v|--verbosity <LEVEL>`**
 
-`--list-sdks`
+  设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 并非在每个命令中均受支持。 请参阅特定的命令页，确定此选项是否可用。
 
-显示已安装的 .NET Core SDK。
+- **`-h|--help`**
 
-`--roll-forward-on-no-candidate-fx <N>`
+  打印出给定命令的文档，如 `dotnet build --help`。
 
-所需的共享框架不可用时，请定义行为。 `N` 可以是：
+- **`command options`**
 
-- `0` - 禁用次要版本前滚。
-- `1` - 前滚次要版本，但不前滚主版本。 这是默认行为。
-- `2` - 前滚次要和主版本。
+  每个命令定义特定于该命令的选项。 有关可用选项的列表，请参阅特定命令页。
 
- 有关详细信息，请参阅[前滚](../whats-new/dotnet-core-2-1.md#roll-forward)。
+### <a name="runtime-options"></a>运行时选项
 
-`--runtimeconfig`
+`dotnet` 运行应用程序时，可以使用以下选项。 例如 `dotnet myapp.dll --fx-version 3.1.1`。
 
-runtimeconfig.template.json 文件的路径  。
+- **`--additionalprobingpath <PATH>`**
 
-runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 有关详细信息，请参阅 [.NET Core 运行时配置设置](../run-time-config/index.md#runtimeconfigjson)。
+  包含要进行探测的探测策略和程序集的路径。
 
-`-v|--verbosity <LEVEL>`
+- **`--additional-deps <PATH>`**
 
-设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 并非在每个命令中均受支持；请参阅特定的命令页，确定此选项是否可用。
+  附加 .deps.json 文件的路径  。 deps.json 文件包含依赖项、编译依赖项和用于解决程序集冲突的版本信息列表  。 有关详细信息，请参阅 GitHub 上的[运行时配置文件](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)。
 
-`--version`
+- **`--fx-version <VERSION>`**
 
-打印使用中的 .NET Core SDK 版本。
+  用于运行应用程序的 .NET Core 运行时版本。
 
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
+- **`--runtimeconfig`**
 
-`--additional-deps <PATH>`
+  runtimeconfig.template.json 文件的路径  。 runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 有关详细信息，请参阅 [.NET Core 运行时配置设置](../run-time-config/index.md#runtimeconfigjson)。
 
-附加 .deps.json 文件的路径  。
+- `--roll-forward-on-no-candidate-fx <N>` 在 .NET Core 2.x SDK 中可用   。
 
-`--additionalprobingpath <PATH>`
+  所需的共享框架不可用时，请定义行为。 `N` 可以是：
 
-包含要进行探测的探测策略和程序集的路径。
+  - `0` - 禁用次要版本前滚。
+  - `1` - 前滚次要版本，但不前滚主版本。 这是默认行为。
+  - `2` - 前滚次要和主版本。
 
-`--depsfile`
+   有关详细信息，请参阅[前滚](../whats-new/dotnet-core-2-1.md#roll-forward)。
 
-deps.json 文件的路径  。
+- `--roll-forward <SETTING>` 自 .NET Core SDK 3.0 起可用   。
 
-deps.json 文件包含依赖项、编译依赖项和用于解决程序集冲突的版本信息列表  。 有关详细信息，请参阅 GitHub 上的[运行时配置文件](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)。
+  控制将前滚操作应用于应用的方式。 `SETTING` 可以为下列值之一。 如果未指定，则 `Minor` 为默认类型。
 
-`-d|--diagnostics`
+  - `LatestPatch` - 前滚到最高补丁版本。 这会禁用次要版本前滚。
+  - `Minor` - 如果缺少所请求的次要版本，则前滚到最低的较高次要版本。 如果存在所请求的次要版本，则使用 LatestPatch 策略。
+  - `Major` - 如果缺少所请求的主要版本，则前滚到最低的较高主要版本和最低的次要版本。 如果存在所请求的主要版本，则使用 Minor 策略。
+  - `LatestMinor` - 即使存在所请求的次要版本，仍前滚到最高次要版本。 适用于组件托管方案。
+  - `LatestMajor` - 即使存在所请求的主要版本，仍前滚到最高主要版本和最高次要版本。 适用于组件托管方案。
+  - `Disable` - 不前滚。 仅绑定到指定的版本。 建议不要将此策略用于一般用途，因为它会禁用前滚到最新补丁的功能。 该值仅建议用于测试。
 
-启用诊断输出。
+除 `Disable` 外，所有设置都将使用可用的最高补丁版本。
 
-`--fx-version <VERSION>`
-
-用于运行应用程序的 .NET Core 运行时版本。
-
-`-h|--help`
-
-打印出给定命令的文档，如 `dotnet build --help`。 `dotnet --help` 打印可用命令列表。
-
-`--info`
-
-打印出有关 .NET Core 安装和计算机环境（如当前操作系统）的详细信息，并提交 .NET Core 版本的 SHA。
-
-`--roll-forward-on-no-candidate-fx`
-
- 如果设置为 `0`，则禁用次要版本前滚。 有关详细信息，请参阅[前滚](../whats-new/dotnet-core-2-1.md#roll-forward)。
-
-`--runtimeconfig`
-
-runtimeconfig.template.json 文件的路径  。
-
-runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 有关详细信息，请参阅 [.NET Core 运行时配置设置](../run-time-config/index.md#runtimeconfigjson)。
-
-`-v|--verbosity <LEVEL>`
-
-设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 并非在每个命令中均受支持；请参阅特定的命令页，确定此选项是否可用。
-
-`--version`
-
-打印使用中的 .NET Core SDK 版本。
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-`--additionalprobingpath <PATH>`
-
-包含要进行探测的探测策略和程序集的路径。
-
-`--depsfile`
-
-deps.json 文件的路径  。
-
-deps.json 文件包含依赖项、编译依赖项和用于解决程序集冲突的版本信息列表  。 有关详细信息，请参阅 GitHub 上的[运行时配置文件](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)。
-
-`-d|--diagnostics`
-
-启用诊断输出。
-
-`--fx-version <VERSION>`
-
-用于运行应用程序的 .NET Core 运行时版本。
-
-`-h|--help`
-
-打印出给定命令的文档，如 `dotnet build --help`。 `dotnet --help` 打印可用命令列表。
-
-`--info`
-
-打印出有关 .NET Core 安装和计算机环境（如当前操作系统）的详细信息，并提交 .NET Core 版本的 SHA。
-
-`--runtimeconfig`
-
-runtimeconfig.template.json 文件的路径  。
-
-runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 有关详细信息，请参阅 [.NET Core 运行时配置设置](../run-time-config/index.md#runtimeconfigjson)。
-
-`-v|--verbosity <LEVEL>`
-
-设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 并非在每个命令中均受支持；请参阅特定的命令页，确定此选项是否可用。
-
-`--version`
-
-打印使用中的 .NET Core SDK 版本。
-
----
+前滚行为还可以在项目文件属性、运行时配置文件属性和环境变量中进行配置。 有关详细信息，请参阅[主版本运行时前滚](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward)。
 
 ## <a name="dotnet-commands"></a>dotnet 命令
 
 ### <a name="general"></a>常规
-
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 | 命令                                       | 函数                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
@@ -233,42 +172,6 @@ runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 �
 | [dotnet sln](dotnet-sln.md)                   | 用于添加、删除和列出解决方案文件中项目的选项。       |
 | [dotnet store](dotnet-store.md)               | 将程序集存储到运行时包存储区。                     |
 | [dotnet test](dotnet-test.md)                 | 使用测试运行程序运行测试。                                     |
-
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
-
-| 命令                             | 函数                                                            |
-| ----------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)     | 生成 .NET Core 应用程序。                                     |
-| [dotnet clean](dotnet-clean.md)     | 清除生成输出。                                              |
-| [dotnet help](dotnet-help.md)       | 显示命令更详细的在线文档。           |
-| [dotnet migrate](dotnet-migrate.md) | 将有效的预览版 2 项目迁移到 .NET Core SDK 1.0 项目。  |
-| [dotnet msbuild](dotnet-msbuild.md) | 提供对 MSBuild 命令行的访问权限。                        |
-| [dotnet new](dotnet-new.md)         | 为给定的模板初始化 C# 或 F# 项目。                |
-| [dotnet pack](dotnet-pack.md)       | 创建代码的 NuGet 包。                               |
-| [dotnet publish](dotnet-publish.md) | 发布 .NET 依赖于框架或独立应用程序。 |
-| [dotnet restore](dotnet-restore.md) | 还原给定应用程序的依赖项。                  |
-| [dotnet run](dotnet-run.md)         | 从源运行应用程序。                                   |
-| [dotnet sln](dotnet-sln.md)         | 用于添加、删除和列出解决方案文件中项目的选项。       |
-| [dotnet store](dotnet-store.md)     | 将程序集存储到运行时包存储区。                     |
-| [dotnet test](dotnet-test.md)       | 使用测试运行程序运行测试。                                     |
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-| 命令                             | 函数                                                            |
-| ----------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)     | 生成 .NET Core 应用程序。                                     |
-| [dotnet clean](dotnet-clean.md)     | 清除生成输出。                                              |
-| [dotnet migrate](dotnet-migrate.md) | 将有效的预览版 2 项目迁移到 .NET Core SDK 1.0 项目。  |
-| [dotnet msbuild](dotnet-msbuild.md) | 提供对 MSBuild 命令行的访问权限。                        |
-| [dotnet new](dotnet-new.md)         | 为给定的模板初始化 C# 或 F# 项目。                |
-| [dotnet pack](dotnet-pack.md)       | 创建代码的 NuGet 包。                               |
-| [dotnet publish](dotnet-publish.md) | 发布 .NET 依赖于框架或独立应用程序。 |
-| [dotnet restore](dotnet-restore.md) | 还原给定应用程序的依赖项。                  |
-| [dotnet run](dotnet-run.md)         | 从源运行应用程序。                                   |
-| [dotnet sln](dotnet-sln.md)         | 用于添加、删除和列出解决方案文件中项目的选项。       |
-| [dotnet test](dotnet-test.md)       | 使用测试运行程序运行测试。                                     |
-
----
 
 ### <a name="project-references"></a>项目引用
 
@@ -290,8 +193,14 @@ runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 �
 命令 | 函数
 --- | ---
 [dotnet nuget delete](dotnet-nuget-delete.md) | 从服务器删除或取消列出包。
-[dotnet nuget locals](dotnet-nuget-locals.md) | 清除或列出本地 NuGet 资源，例如 http 请求缓存、临时缓存或计算机范围的全局包文件夹。
 [dotnet nuget push](dotnet-nuget-push.md) | 将包推送到服务器，并将其发布。
+[dotnet nuget locals](dotnet-nuget-locals.md) | 清除或列出本地 NuGet 资源，例如 http 请求缓存、临时缓存或计算机范围的全局包文件夹。
+[dotnet nuget add source](dotnet-nuget-add-source.md) | 添加 NuGet 源。
+[dotnet nuget disable source](dotnet-nuget-disable-source.md) | 禁用 NuGet 源。
+[dotnet nuget enable source](dotnet-nuget-enable-source.md) | 启用 NuGet 源。
+[dotnet nuget list source](dotnet-nuget-list-source.md) | 列出所有已配置的 NuGet 源。
+[dotnet nuget remove source](dotnet-nuget-remove-source.md) | 删除 NuGet 源。
+[dotnet nuget update source](dotnet-nuget-update-source.md) | 更新 NuGet 源。
 
 ### <a name="global-tool-path-and-local-tools-commands"></a>全局、工具路径和本地工具命令
 
@@ -322,79 +231,83 @@ runtimeconfig.template.json 文件是包含运行时设置的配置文件  。 �
 
 创建新的 .NET Core 控制台应用程序：
 
-`dotnet new console`
-
-还原给定应用程序的依赖项：
-
-`dotnet restore`
-
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+```dotnetcli
+dotnet new console
+```
 
 生成给定目录中的项目及其依赖项：
 
-`dotnet build`
+```dotnetcli
+dotnet build
+```
 
-运行应用程序 DLL，如 `myapp.dll`：
+运行应用程序：
 
-`dotnet myapp.dll`
+```dotnetcli
+dotnet myapp.dll
+```
 
 ## <a name="environment-variables"></a>环境变量
 
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
+- `DOTNET_ROOT`，`DOTNET_ROOT(x86)`
 
-`DOTNET_PACKAGES`
+  指定 .NET Core 运行时的位置（如果运行时未安装在默认位置）。 Windows 上的默认位置为 `C:\Program Files\dotnet`。 Linux 和 macOS 上的默认位置为 `/usr/share/dotnet`。 此环境变量仅在通过生成的可执行文件 (apphosts) 运行应用时使用。 在 64 位 OS 上运行 32 位可执行文件时，改用 `DOTNET_ROOT(x86)`。
 
-全局包文件夹。 如果未设置，则默认为 Unix 上的 `~/.nuget/packages` 或 Windows 上的 `%userprofile%\.nuget\packages`。
+- `DOTNET_PACKAGES`
 
-`DOTNET_SERVICING`
+  全局包文件夹。 如果未设置，则默认为 Unix 上的 `~/.nuget/packages` 或 Windows 上的 `%userprofile%\.nuget\packages`。
 
-指定加载运行时期间共享主机要使用的服务索引的位置。
+- `DOTNET_SERVICING`
 
-`DOTNET_CLI_TELEMETRY_OPTOUT`
+  指定加载运行时期间共享主机要使用的服务索引的位置。
 
-指定是否收集并向 Microsoft 发送 .NET Core 工具使用情况的相关数据。 设置为 `true` 以选择退出遥测功能（接受的值为 `true`、`1` 或 `yes`）。 否则，设置为 `false` 以选择加入遥测功能（接受的值为 `false`、`0` 或 `no`）。 如果未设置，则默认为 `false` 且遥测功能为活动状态。
+- `DOTNET_NOLOGO`
 
-`DOTNET_MULTILEVEL_LOOKUP`
+  指定是否在首次运行时显示 .NET Core 欢迎消息和遥测消息。 设置为 `true` 可将这些消息静音（接受 `true`、`1` 或 `yes` 值），或者，设置为 `false` 可允许显示消息（接受 `false`、`0` 或 `no` 值）。 如果未设置，则默认值为 `false`，表示在首次运行时将显示消息。 请注意，此标志对遥测不起作用（请参阅 `DOTNET_CLI_TELEMETRY_OPTOUT` 中关于如何选择不发送遥测数据的信息）。
 
-指定是否从全局位置解析 .NET Core 运行时、共享框架或 SDK。 如果未设置，则默认为 `true`。 设置为 `false` 不从全局位置解析，并且具有独立的 .NET Core 安装（接受的值为 `0` 或 `false`）。 有关多级别查找的详细信息，请参阅 [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)（多级别 SharedFX 查找）。
+- `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-`DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
+  指定是否收集并向 Microsoft 发送 .NET Core 工具使用情况的相关数据。 设置为 `true` 以选择退出遥测功能（接受的值为 `true`、`1` 或 `yes`）。 否则，设置为 `false` 以选择加入遥测功能（接受的值为 `false`、`0` 或 `no`）。 如果未设置，则默认为 `false` 且遥测功能为活动状态。
 
-如果设置为 `0`，则禁用次要版本前滚。 有关详细信息，请参阅[前滚](../whats-new/dotnet-core-2-1.md#roll-forward)。
+- `DOTNET_MULTILEVEL_LOOKUP`
 
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
+  指定是否从全局位置解析 .NET Core 运行时、共享框架或 SDK。 如果未设置，则默认为 1（逻辑 `true`）。 设置为 0（逻辑 `false`），不从全局位置解析，并且具有独立的 .NET Core 安装。 有关多级别查找的详细信息，请参阅 [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)（多级别 SharedFX 查找）。
 
-`DOTNET_PACKAGES`
+- `DOTNET_ROLL_FORWARD` 自 .NET Core 3.x SDK 起可用  。
 
-主包缓存。 如果未设置，则默认为 Unix 上的 `$HOME/.nuget/packages` 或 Windows 上的 `%userprofile%\.nuget\packages`。
+  确定前滚行为。 有关详细信息，请参阅本文章前面介绍的 `--roll-forward` 选项。
 
-`DOTNET_SERVICING`
+- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` 在 .NET Core 2.x SDK 中可用  。
 
-指定加载运行时期间共享主机要使用的服务索引的位置。
+  如果设置为 `0`，则禁用次要版本前滚。 有关详细信息，请参阅[前滚](../whats-new/dotnet-core-2-1.md#roll-forward)。
 
-`DOTNET_CLI_TELEMETRY_OPTOUT`
+- `DOTNET_CLI_UI_LANGUAGE`
 
-指定是否收集并向 Microsoft 发送 .NET Core 工具使用情况的相关数据。 设置为 `true` 以选择退出遥测功能（接受的值为 `true`、`1` 或 `yes`）。 否则，设置为 `false` 以选择加入遥测功能（接受的值为 `false`、`0` 或 `no`）。 如果未设置，则默认为 `false` 且遥测功能为活动状态。
+  使用区域设置值（如 `en-us`）设置 CLI UI 的语言。 支持的值与 Visual Studio 中的值相同。 有关详细信息，请参阅 [Visual Studio 安装文档](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)中有关更改安装程序语言一节。 .NET 资源管理器规则适用，因此你无需选取精确匹配项 &mdash; 你还可以在 `CultureInfo` 树中选取后代。 例如，如果将其设置为 `fr-CA`，CLI 将查找并使用 `fr` 翻译。 如果你将其设置为不受支持的语言，CLI 会退回到英语。
 
-`DOTNET_MULTILEVEL_LOOKUP`
+- `DOTNET_DISABLE_GUI_ERRORS`
 
-指定是否从全局位置解析 .NET Core 运行时、共享框架或 SDK。 如果未设置，则默认为 `true`。 设置为 `false` 不从全局位置解析，并且具有独立的 .NET Core 安装（接受的值为 `0` 或 `false`）。 有关多级别查找的详细信息，请参阅 [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)（多级别 SharedFX 查找）。
+  对于启用了 GUI 的已生成可执行文件 - 禁用对话框弹出窗口，此窗口通常显示某些类错误。 在这些情况下，它仅写入到 `stderr` 并退出。
+  
+- `DOTNET_ADDITIONAL_DEPS`
 
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
+  等效于 CLI 选项 `--additional-deps`。
 
-`DOTNET_PACKAGES`
+- `DOTNET_RUNTIME_ID`
 
-主包缓存。 如果未设置，则默认为 Unix 上的 `$HOME/.nuget/packages` 或 Windows 上的 `%userprofile%\.nuget\packages`。
+  替代检测到的 RID。
 
-`DOTNET_SERVICING`
+- `DOTNET_SHARED_STORE`
 
-指定加载运行时期间共享主机要使用的服务索引的位置。
+  程序集解析在某些情况下将回退到的“共享存储”的位置。
 
-`DOTNET_CLI_TELEMETRY_OPTOUT`
+- `DOTNET_STARTUP_HOOKS`
 
-指定是否收集并向 Microsoft 发送 .NET Core 工具使用情况的相关数据。 设置为 `true` 以选择退出遥测功能（接受的值为 `true`、`1` 或 `yes`）。 否则，设置为 `false` 以选择加入遥测功能（接受的值为 `false`、`0` 或 `no`）。 如果未设置，则默认为 `false` 且遥测功能为活动状态。
+  要从中加载和执行启动挂钩的程序集列表。
 
----
+- `COREHOST_TRACE`, `COREHOST_TRACEFILE`, `COREHOST_TRACE_VERBOSITY`
+
+  控制来自托管组件（例如 `dotnet.exe`、`hostfxr` 和 `hostpolicy`）的诊断跟踪。
 
 ## <a name="see-also"></a>请参阅
 

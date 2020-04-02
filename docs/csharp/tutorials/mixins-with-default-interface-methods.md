@@ -3,12 +3,12 @@ title: 使用默认接口方法创建 mixin 类型
 description: 使用默认接口成员，可以通过实现器的可选默认实现来扩展接口。
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: aaf8d34e27c9c56d95560656eb7a7b24b152c053
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee0536ef51f9bea3e6851be23cc19fa28cc6916b
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240101"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134376"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>教程：当通过默认接口方法创建使用接口的类时实现的混入功能
 
@@ -117,7 +117,7 @@ public class OverheadLight : ITimerLight { }
 
 [!code-csharp[Enumeration for power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
 
-默认实现采用 AC 电源：
+默认实现不使用电源：
 
 [!code-csharp[Report a default power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
 

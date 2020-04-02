@@ -3,12 +3,12 @@ title: 在查询表达式中处理 NULL 值（C# 中的 LINQ）
 description: 了解如何在 C# 中的 LINQ 查询表达式中处理 NULL 值。
 ms.date: 12/01/2016
 ms.assetid: ac63ae8b-724d-4251-9334-528f4e884ae7
-ms.openlocfilehash: c9a3aaec05fa029a8db66826bdcb4a1d106176e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3da490b72bd518df7be8c14b34655af8c6f84929
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73736856"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249300"
 ---
 # <a name="handle-null-values-in-query-expressions"></a>在查询表达式中处理 null 值
 
@@ -24,11 +24,11 @@ ms.locfileid: "73736856"
 
 ## <a name="example"></a>示例
 
-在 join 子句中，如果只有一个比较键是可以为 null 的类型，则可以在查询表达式中将另一个比较键转换为可以为 null 的类型。 在以下示例中，假定 `EmployeeID` 是包含 `int?` 类型的值列：
+在 join 子句中，如果只有一个比较键是可以为 null 的值类型，则可以在查询表达式中将另一个比较键转换为可以为 null 的值类型。 在以下示例中，假定 `EmployeeID` 是包含 `int?` 类型的值列：
 
 [!code-csharp[csProgGuideLINQ#83](~/samples/snippets/csharp/concepts/linq/how-to-handle-null-values-in-query-expressions_2.cs)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Nullable%601>
 - [语言集成查询 (LINQ)](index.md)

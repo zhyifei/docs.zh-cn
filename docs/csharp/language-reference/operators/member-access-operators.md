@@ -1,5 +1,5 @@
 ---
-title: 成员访问运算符 - C# 参考
+title: 成员访问运算符和表达式 - C# 参考
 description: 了解可用于访问类型成员的 C# 运算符。
 ms.date: 09/18/2019
 author: pkulikov
@@ -32,25 +32,25 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 4d4bc0c192912b5fa87a8e91bc5ba0e1d4ce3598
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: da2ca4517bd007678d74ae9b76e10cad4c2696b4
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398207"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546635"
 ---
-# <a name="member-access-operators-c-reference"></a>成员访问运算符（C# 参考）
+# <a name="member-access-operators-and-expressions-c-reference"></a>成员访问运算符和表达式（C# 参考）
 
-访问类型成员时，可以使用以下运算符：
+访问类型成员时，可以使用以下运算符和表达式：
 
-- [`.`（成员访问）](#member-access-operator-)：用于访问命名空间或类型的成员
+- [`.`（成员访问）](#member-access-expression-)：用于访问命名空间或类型的成员
 - [`[]`（数组元素或索引器访问）](#indexer-operator-)：用于访问数组元素或类型索引器
 - [`?.` 和 `?[]`（null 条件运算符）](#null-conditional-operators--and-)：仅当操作数为非 null 时才用于执行成员或元素访问运算
-- [`()`（调用）](#invocation-operator-)：用于调用被访问的方法或调用委托
+- [`()`（调用）](#invocation-expression-)：用于调用被访问的方法或调用委托
 - [`^`（从末尾开始索引）](#index-from-end-operator-)：指示元素位置来自序列的末尾
 - [`..`（范围）](#range-operator-)：指定可用于获取一系列序列元素的索引范围
 
-## <a name="member-access-operator-"></a>成员访问运算符 .
+## <a name="member-access-expression-"></a>成员访问表达式。
 
 可以使用 `.` 标记来访问命名空间或类型的成员，如以下示例所示：
 
@@ -109,7 +109,7 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Null 条件运算符 ?. 和 ?[]
 
-Null 条件运算符在 C# 6 及更高版本中可用，仅当操作数的计算结果为非 null 时，null 条件运算符才会将[成员访问](#member-access-operator-) `?.` 或[元素访问](#indexer-operator-) `?[]` 运算应用于其操作数；否则，将返回 `null`。 即：
+Null 条件运算符在 C# 6 及更高版本中可用，仅当操作数的计算结果为非 null 时，null 条件运算符才会将[成员访问](#member-access-expression-) `?.` 或[元素访问](#indexer-operator-) `?[]` 运算应用于其操作数；否则，将返回 `null`。 即：
 
 - 如果 `a` 的计算结果为 `null`，则 `a?.x` 或 `a?[x]` 的结果为 `null`。
 - 如果 `a` 的计算结果为非 null，则 `a?.x` 或 `a?[x]` 的结果将分别与 `a.x` 或 `a[x]` 的结果相同。
@@ -150,7 +150,7 @@ if (handler != null)
 }
 ```
 
-## <a name="invocation-operator-"></a>调用运算符 ()
+## <a name="invocation-expression-"></a>调用表达式 ()
 
 使用括号 `()` 调用[方法](../../programming-guide/classes-and-structs/methods.md)或调用[委托](../../programming-guide/delegates/index.md)。
 

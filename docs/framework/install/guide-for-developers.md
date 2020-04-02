@@ -1,5 +1,6 @@
 ---
 title: 安装 .NET Framework 开发人员包或可再发行组件
+description: 开发人员可以下载并安装 .NET Framework 开发人员包和目标包。 可以包含应用的 .NET Framework 可再发行组件。
 ms.custom: updateeachrelease
 ms.date: 01/17/2020
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 66643021ce4939505af24cf3a72ab194662a15f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a099c5fb0492cd6cb9fd02e2c2ee1af63e7166e
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398603"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79506991"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安装面向开发人员的 .NET Framework
 

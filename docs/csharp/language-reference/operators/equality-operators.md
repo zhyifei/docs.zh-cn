@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 079522b18afdf86a942d502672174516d45d37fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7dd3e544dc03fb94577892b42aecd1a15a6621ac
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398255"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110914"
 ---
 # <a name="equality-operators-c-reference"></a>相等运算符（C# 参考）
 
@@ -43,7 +43,7 @@ ms.locfileid: "79398255"
 
 用户定义的 [struct](../builtin-types/struct.md) 类型默认情况下不支持 `==` 运算符。 要支持 `==` 运算符，用户定义的结构必须[重载](operator-overloading.md)它。
 
-从 C# 7.3 开始，`==` 和 `!=` 运算符由 C# [元组](../../tuples.md)支持。 有关详细信息，请参阅 [C# 元组类型](../../tuples.md#equality-and-tuples)一文的[相等性和元组](../../tuples.md)部分。
+从 C# 7.3 开始，`==` 和 `!=` 运算符由 C# [元组](../../tuples.md)支持。 有关详细信息，请参阅 [C# 元组类型](../../tuples.md)一文的[相等性和元组](../../tuples.md#equality-and-tuples)部分。
 
 ### <a name="reference-types-equality"></a>引用类型的相等性
 
@@ -55,7 +55,7 @@ ms.locfileid: "79398255"
 
 ### <a name="string-equality"></a>字符串相等性
 
-如果两个字符串均为 [ 或者两个字符串实例具有相等长度且在每个字符位置有相同字符，则这两个](../builtin-types/reference-types.md#the-string-type)字符串`null`操作数相等：
+如果两个字符串均为 `null` 或者两个字符串实例具有相等长度且在每个字符位置有相同字符，则这两个[字符串](../builtin-types/reference-types.md#the-string-type)操作数相等：
 
 [!code-csharp-interactive[string equality](snippets/EqualityOperators.cs#StringEquality)]
 
@@ -67,7 +67,7 @@ ms.locfileid: "79398255"
 
 [!code-csharp-interactive[delegate equality](snippets/EqualityOperators.cs#DelegateEquality)]
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#delegate-equality-operators)中的[委托相等运算符](~/_csharplang/spec/introduction.md)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[委托相等运算符](~/_csharplang/spec/expressions.md#delegate-equality-operators)部分。
 
 通过计算语义上相同的 [Lambda 表达式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)生成的委托不相等，如以下示例所示：
 
@@ -87,9 +87,9 @@ ms.locfileid: "79398255"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators)中的[关系和类型测试运算符](~/_csharplang/spec/introduction.md)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[关系和类型测试运算符](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators)部分。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)

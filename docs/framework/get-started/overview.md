@@ -7,12 +7,12 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: de9cbdab5d5786b9d59d23ba675fa3f78f807716
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ace42738118cde4bcda4b78607d7bdb045d3501e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181595"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248916"
 ---
 # <a name="overview-of-net-framework"></a>.NET Framework 概述
 
@@ -71,7 +71,7 @@ Internet Explorer 是承载运行时（以 MIME 类型扩展的形式）的非�
 
 例如，.NET Framework 集合类实现一组用于开发自己的集合类的接口。 你的集合类与 .NET Framework 中的类无缝地混合。
 
-正如您对面向对象的类库所希望的那样，.NET Framework 类型使您能够完成一系列常见编程任务（包括诸如字符串管理、数据收集、数据库连接以及文件访问等任务）。 除这些常规任务之外，类库还包括支持多种专用开发方案的类型。 使用 .NET Framework 开发下列类型的应用和服务：
+正如你对面向对象的类库所希望的那样，.NET Framework 类型使你能够完成一系列常见编程任务，包括字符串管理、数据收集、数据库连接以及文件访问。 除这些常规任务之外，类库还包括支持多种专用开发方案的类型。 可以使用 .NET Framework 开发下列类型的应用和服务：
 
 - Console 应用。 请参阅[生成控制台应用程序](../../standard/building-console-apps.md)。
 

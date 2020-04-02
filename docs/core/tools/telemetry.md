@@ -3,12 +3,12 @@ title: .NET Core SDK 遥测
 description: 了解可收集使用情况信息以供分析的 .NET Core SDK 遥测功能、收集的数据，以及如何禁用遥测。
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 9d5d7ff09ade89712f2fbbe35224851bb1c28b4c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a79b791abc99331ff39f5e281ee0fdc62b258989
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156681"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507277"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遥测
 
@@ -45,6 +45,8 @@ The .NET Core tools collect usage data in order to help us improve your experien
 
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
+
+若要禁用此消息和 .NET Core 欢迎消息，请将 `DOTNET_NOLOGO` 环境变量设置为 `true`。 请注意，此变量在遥测选择退出时不起作用。
 
 ## <a name="data-points"></a>数据点
 

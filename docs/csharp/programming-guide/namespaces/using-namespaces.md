@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 5193fc7aaae83cbc0c75e81835244eaaaece69a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0947e597da93d6db1c5965b3685a509961778586
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700193"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507043"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>using 命名空间（C# 编程指南）
 
@@ -42,7 +42,7 @@ ms.locfileid: "75700193"
   
 ## <a name="using-namespaces-to-control-scope"></a>使用命名空间控制范围
 
- `namespace` 关键字用于声明范围。 在项目内创建范围有助于整理代码，并允许创建全局唯一类型。 在下面的示例中，名为 `SampleClass` 的类在两个命名空间中定义，其中一个嵌套在另一个之中。 [成员访问 `.` 运算符](../../language-reference/operators/member-access-operators.md#member-access-operator-)用于区分调用的方法。  
+ `namespace` 关键字用于声明范围。 在项目内创建范围有助于整理代码，并允许创建全局唯一类型。 在下面的示例中，名为 `SampleClass` 的类在两个命名空间中定义，其中一个嵌套在另一个之中。 [`.` 令牌](../../language-reference/operators/member-access-operators.md#member-access-expression-)用于区分调用的方法。  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -64,13 +64,13 @@ ms.locfileid: "75700193"
   
 - 类名 `C2` 在此代码中使用了两次。 但完全限定名称是唯一的。 `C2` 的第一个实例在 `C1` 中声明；因此，其完全限定名称是：`N1.C1.C2`。 `C2` 的第二个实例在命名空间 `N2` 中声明；因此，其完全限定名称是 `N1.N2.C2`。  
   
- 使用前面的代码段，可向命名空间 `C3` 添加新的类成员 `N1.N2`，如下所示：  
+ 使用前面的代码段，可向命名空间 `N1.N2` 添加新的类成员 `C3`，如下所示：  
   
  [!code-csharp[csProgGuideNamespaces#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#10)]  
   
  一般情况下，使用[命名空间别名限定符 `::`](../../language-reference/operators/namespace-alias-qualifier.md) 来引用命名空间别名，或使用 `global::` 来引用全局命名空间，以及使用 `.` 来限定类型或成员。  
   
- 将 `::` 与引用类型而非引用命名空间的别名一起使用是错误的。 例如:  
+ 将 `::` 与引用类型而非引用命名空间的别名一起使用是错误的。 例如：  
   
  [!code-csharp[csProgGuideNamespaces#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#11)]  
   
@@ -90,10 +90,10 @@ ms.locfileid: "75700193"
   
  这是可行的，但如果随后要引入名为 `Alias` 的类型，`Alias.` 将改为绑定到该类型。 使用 `Alias::Exception` 确保 `Alias` 被视为命名空间别名，而不被误解为类型。  
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../index.md)
 - [命名空间](./index.md)
-- [. 运算符](../../language-reference/operators/member-access-operators.md#member-access-operator-)
+- [成员访问表达式](../../language-reference/operators/member-access-operators.md#member-access-expression-)
 - [:: 运算符](../../language-reference/operators/namespace-alias-qualifier.md)
 - [外部别名](../../language-reference/keywords/extern-alias.md)

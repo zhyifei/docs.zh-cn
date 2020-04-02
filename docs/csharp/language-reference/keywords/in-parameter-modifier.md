@@ -1,19 +1,19 @@
 ---
 title: in 参数修饰符 - C# 参考
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: cbde7a571fb71ed7577077c77a5c61db553ec859
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20956f9e25b6830a8876824a4c9dad1dbc4c4f3e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173609"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249365"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 参数修饰符（C# 参考）
 
-`in` 关键字通过引用传递参数。 它让形参成为实参的别名，这必须是变量。 换而言之，对形参执行的任何操作都是对实参执行的。 它类似于 [ref](ref.md) 或 [out](out-parameter-modifier.md) 关键字，不同之处在于 `in` 参数无法通过调用的方法进行修改。 `ref` 参数必须由调用的方法进行修改，这些修改在调用上下文中是可观察的，而 `out` 参数是可以修改的。
+`in` 关键字通过引用传递参数。 它让形参成为实参的别名，这必须是变量。 换而言之，对形参执行的任何操作都是对实参执行的。 它类似于 [ref](ref.md) 或 [out](out-parameter-modifier.md) 关键字，不同之处在于 `in` 参数无法通过调用的方法进行修改。 `out` 参数必须由调用的方法进行修改，这些修改在调用上下文中是可观察的，而 `ref` 参数是可以修改的。
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
@@ -56,7 +56,7 @@ class InOverloads
 
 首先，在调用站点指定 `in` 会强制编译器选择使用匹配的 `in` 参数定义的方法。 否则，如果两种方法唯一的区别在于是否存在 `in`，则按值重载的匹配度会更高。
 
-第二点，指定 `in` 会声明你想按引用传递参数。 结合 `in` 使用的参数必须代表一个可以直接引用的位置。 `out` 和 `ref` 参数的相同常规规则适用：不能使用常数、普通属性或其他生成值的表达式。 否则，在调用站点省略 `in` 就会通知编译器你将允许它创建临时变量，并按只读引用传递至方法。 编译器创建临时变量以克服一些 `in` 参数的限制：
+第二点，指定 `in` 会声明你想按引用传递参数。 结合 `in` 使用的参数必须代表一个可以直接引用的位置。 `out` 和 `ref` 参数的相同常规规则适用：不得使用常量、普通属性或其他生成值的表达式。 否则，在调用站点省略 `in` 就会通知编译器你将允许它创建临时变量，并按只读引用传递至方法。 编译器创建临时变量以克服一些 `in` 参数的限制：
 
 - 临时变量允许将编译时常数作为 `in` 参数。
 - 临时变量允许使用属性或 `in` 参数的其他表达式。
@@ -115,12 +115,14 @@ Method(in i); // passed by readonly reference, explicitly using `in`
 不能将 `in`、`ref` 和 `out` 关键字用于以下几种方法：  
   
 - 异步方法，通过使用 [async](async.md) 修饰符定义。  
-- 迭代器方法，包括 [yield return](yield.md) 或 `yield break` 语句。  
+- 迭代器方法，包括 [yield return](yield.md) 或 `yield break` 语句。
+- 扩展方法的第一个参数不能有 `in` 修饰符，除非该参数是结构。
+- 扩展方法的第一个参数，其中该参数是泛型类型（即使该类型被约束为结构。）
 
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)

@@ -1,17 +1,18 @@
 ---
 title: 安装和卸载 .NET Framework 受阻疑难解答
+description: 解决遇到的 .NET Framework 安装受阻问题。 有关解决问题的信息，请参阅状态消息。
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
 helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
-ms.openlocfilehash: edc471ad2c389a37a2ffbf739a74d4d5d0e9696f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 70cefb53d29c7a895a3e242776bae39b7636fd65
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76965979"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79506952"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>安装和卸载 .NET Framework 受阻疑难解答
 

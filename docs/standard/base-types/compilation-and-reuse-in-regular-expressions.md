@@ -12,12 +12,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, compilation
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
-ms.openlocfilehash: 3e1dfe8373145286b03e503f038e267ff0d4c4f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b89f7f88233ecdab25ba2a74647aafeb4d8b74af
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091729"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344194"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>正则表达式中的编译和重复使用
 通过了解正则表达式引擎编译表达式的方式以及正则表达式的缓存方式，可以优化大量使用正则表达式的应用程序的性能。 本主题介绍编译和缓存。  
@@ -25,20 +25,18 @@ ms.locfileid: "73091729"
 ## <a name="compiled-regular-expressions"></a>已编译的正则表达式  
  默认情况下，正则表达式引擎将正则表达式编译成内部指令序列（这些指令序列是不同于 Microsoft 中间语言 (MSIL) 的高级代码）。 当引擎执行正则表达式时，会解释内部代码。  
   
- 如果 <xref:System.Text.RegularExpressions.Regex> 对象是通过 <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 选项构造而成，它会将正则表达式编译为显式 MSIL 代码，而不是高级正则表达式内部指令。 这样，.NET 的实时 (JIT) 编译器便可以将表达式转换为本机代码以获得更高的性能。  
-  
-但是，生成的 MSIL 不能卸载。 卸载代码的唯一方法是卸载整个应用程序域（即，卸载应用程序的所有代码）。 实际上，一旦使用 <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 选项编译正则表达式，就永远不会释放由已编译表达式使用的资源，即使创建正则表达式的 <xref:System.Text.RegularExpressions.Regex> 对象本身已被释放给垃圾回收器，也不例外。  
-  
- 为了避免占用过多资源，必须注意限制使用 <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 选项编译的不同正则表达式数。 如果应用程序必须使用较大数量或极大数量的正则表达式，应该解释每个表达式，而不要编译它们。 不过，如果重用数目较少的正则表达式，应使用 <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 进行编译，以提升性能。 替换方法是，使用预编译正则表达式。 可以使用 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> 方法，将所有表达式都编译到可重用的 DLL 中。 这样一来，就无需在运行时编译，同时还仍受益于已编译正则表达式的速度优势。  
+ 如果 <xref:System.Text.RegularExpressions.Regex> 对象是通过 <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 选项构造而成，它会将正则表达式编译为显式 MSIL 代码，而不是高级正则表达式内部指令。 这样，.NET 的实时 (JIT) 编译器便可以将表达式转换为本机代码以获得更高的性能。  构造 <xref:System.Text.RegularExpressions.Regex> 对象的成本可能会更高，但执行其匹配项的开销可能会小得多。
+
+ 替换方法是，使用预编译正则表达式。 可以使用 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> 方法，将所有表达式都编译到可重用的 DLL 中。 这样一来，就无需在运行时编译，同时还仍受益于已编译正则表达式的速度优势。  
   
 ## <a name="the-regular-expressions-cache"></a>正则表达式缓存  
  为了提高性能，正则表达式引擎为已编译的正则表达式维护了一个应用程序范围的缓存。 该缓存只存储静态方法调用中使用的正则表达式模式。 （不缓存提供给实例方法的正则表达式模式。）这样，在每次使用正则表达式时，就无需将正则表达式重新分析成高级字节代码。  
   
  缓存正则表达式数上限由 `static`（Visual Basic 中的 `Shared`）<xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType> 属性的值决定。 默认情况下，正则表达式引擎最多可缓存 15 个已编译的正则表达式。 如果已编译正则表达式的数目超过缓存大小，则丢弃最早使用的正则表达式并缓存新的正则表达式。  
   
- 应用程序可通过以下两种方式之一来利用预编译的正则表达式：  
+ 应用程序可通过以下两种方式之一来重用正则表达式：  
   
-- 使用 <xref:System.Text.RegularExpressions.Regex> 对象的静态方法定义正则表达式。 如果要使用的正则表达式模式已在其他静态方法调用中定义，则正则表达式引擎将从缓存中检索该模式。 如果不是这样，则引擎将编译正则表达式并将其添加到缓存中。  
+- 使用 <xref:System.Text.RegularExpressions.Regex> 对象的静态方法定义正则表达式。 如果要使用的正则表达式模式已由其他静态方法调用定义，则正则表达式引擎将尝试从缓存中检索该模式。 如果它在缓存中不可用，则引擎将编译正则表达式并将其添加到缓存中。
   
 - 重用现有 <xref:System.Text.RegularExpressions.Regex> 对象（只要需要使用正则表达式模式）。  
   

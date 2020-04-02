@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 365cf0b2ef36dd0be624d022e3dea5e16a9eb58c
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: 6e3742991820a8805b3c9b57767079940899d8fc
+  ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/14/2020
-  ms.locfileid: "73969413"
+  ms.lasthandoff: 03/18/2020
+  ms.locfileid: "79507004"
 items:
 - durationInMinutes: 1
   content: >
@@ -202,7 +202,7 @@ items:
     此示例强调了使用字符串时需要注意的几个重要概念。 控制字符串的方法返回的是新字符串对象，而不是就地进行修改。 可以看到，对任何 `Trim` 方法的所有调用都是返回新字符串，而不是更改原始消息。
 
 
-    还可以通过其他方法使用字符串。 例如，可能之前已在编辑器或字处理器中使用了搜索和替换命令。 <xref:System.String.Replace%2A> 方法在字符串中执行类似操作。 此方法搜索子字符串，并将它替换为其他文本。 <xref:System.String.Replace%2A> 方法需要使用两个参数。 这两个字符串用括号括住。 第一个字符串是要搜索的文本。 第二个字符串是替换后的文本。 亲自试一试吧。 添加以下代码。 当你在 `.Re` 变量后面开始键入 `sayHello` 时，键入它以查看提示：
+    还可以通过其他方法使用字符串。 例如，可能之前已在编辑器或字处理器中使用了搜索和替换命令。 <xref:System.String.Replace%2A> 方法在字符串中执行类似操作。 此方法搜索子字符串，并将它替换为其他文本。 <xref:System.String.Replace%2A> 方法需要使用两个参数。 这两个字符串用括号括住。 第一个字符串是要搜索的文本。 第二个字符串是替换后的文本。 亲自试一试吧。 添加以下代码。 当你在 `sayHello` 变量后面开始键入 `.Re` 时，键入它以查看提示：
 
 
     ```csharp
@@ -218,7 +218,7 @@ items:
     ```
 
 
-    还有两个实用方法，可以将字符串设为全部大写或小写。 试试运行以下代码。 在你开始键入 ** 时，键入它以查看**`To` IntelliSense 如何提供提示：
+    还有两个实用方法，可以将字符串设为全部大写或小写。 试试运行以下代码。 在你开始键入 `To` 时，键入它以查看 IntelliSense 如何提供提示：
 
 
     ```csharp
@@ -250,7 +250,7 @@ items:
     ```
 
 
-    <xref:System.String.Contains%2A> 方法返回布尔值，指明是否找到了要搜索的字符串。 布尔变量存储 `true` 或 `false` 值。 今后推出的课程将详细介绍布尔值。
+    <xref:System.String.Contains%2A> 方法返回布尔值，指明是否找到了要搜索的字符串。 布尔变量存储 `true` 或 `false` 值。 显示为文本输出时，它们为大写：分别为 `True` 和 `False`。 今后推出的课程将详细介绍布尔值。
 
 
     ***挑战***
@@ -296,11 +296,11 @@ items:
 
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - content: >-
-    你已完成“C# 初探”C# 教程简介。 可选择下方的“C# 中的数字”链接开始下一个交互式教程，或者可访问 **.NET 站点**下载 .NET Core SDK，在计算机上创建项目，并继续编码[](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)。 请通过“后续步骤”部分返回到这些教程。
+    你已完成“C# 初探”C# 教程简介。 可选择下方的“C# 中的数字”链接开始下一个交互式教程，或者可访问 [.NET 站点](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 请通过“后续步骤”部分返回到这些教程。
 
 
     有关 `string` 类型的其他阅读材料：
 
-    - [字符串](../../programming-guide/index.md)中的 [C# 编程指南](../../programming-guide/strings/index.md)主题。
+    - [字符串](../../programming-guide/strings/index.md)中的 [C# 编程指南](../../programming-guide/index.md)主题。
 
     - [有关使用字符串的操作方法提示](../../how-to/index.md#working-with-strings)。

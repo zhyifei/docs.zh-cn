@@ -4,12 +4,12 @@ description: 了解 C# 中的模式匹配表达式
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0c302499543c90bd01427e2791435968d580f644
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb6baf3771024d02b2027f81fd35b8be4872cf6e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170379"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249228"
 ---
 # <a name="pattern-matching"></a>模式匹配
 
@@ -106,7 +106,7 @@ ms.locfileid: "79170379"
 
 [!code-csharp[NullCase](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
-`null` 模式的特殊行为十分有趣，因为模式中的常量 `null` 没有类型，但可以转换为任何引用类型或可以为 null 的类型。 语言定义 `null` 值不会匹配任何类型模式（无论变量的编译时类型如何），而不是将 `null` 转换为任何类型。 此行为使新的基于 `switch` 的类型模式与 `is` 语句保持一致：如果检查的值为 `null`，`is` 语句始终返回 `false`。 它也更简单；也就是说，在检查类型后，便无需执行其他 null 检查。 可以从上面示例中的任何 case 块都没有 null 检查得知：此类检查不是必需的，因为与类型模式匹配即可保证非 null 值。
+`null` 模式的特殊行为十分有趣，因为模式中的常量 `null` 没有类型，但可以转换为任何引用类型或可以为 null 的值类型。 语言定义 `null` 值不会匹配任何类型模式（无论变量的编译时类型如何），而不是将 `null` 转换为任何类型。 此行为使新的基于 `switch` 的类型模式与 `is` 语句保持一致：如果检查的值为 `null`，`is` 语句始终返回 `false`。 它也更简单；也就是说，在检查类型后，便无需执行其他 null 检查。 可以从上面示例中的任何 case 块都没有 null 检查得知：此类检查不是必需的，因为与类型模式匹配即可保证非 null 值。
 
 ## <a name="var-declarations-in-case-expressions"></a>`case` 表达式中的 `var` 声明
 

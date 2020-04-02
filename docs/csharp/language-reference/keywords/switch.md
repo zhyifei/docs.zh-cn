@@ -12,14 +12,16 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49b3836f17e91ae8de10d68e97fd662aae80d1ff
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345396"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249313"
 ---
 # <a name="switch-c-reference"></a>switch（C# 参考）
+
+本文介绍 `switch` 语句。 有关 `switch` 表达式（在 C# 8.0 中引入）的信息，请参阅 [表达式和运算符](../operators/index.md)部分中有关 [`switch` 表达式](../operators/switch-expression.md)的文章。
 
 `switch` 是一个选择语句，它根据与匹配表达式  匹配的模式，从候选列表中选择单个开关部分  进行执行。
 
@@ -106,7 +108,7 @@ switch (caseSwitch)
 
 `default` case 可以在 `switch` 语句中以任何顺序显示。 无论它在源代码中的顺序如何，始终都将在计算所有 `case` 标签后，最后计算它。
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a>使用 `switch` 语句的 <a name="pattern" /> 模式匹配
+## <a name="pattern-matching-with-the-switch-statement"></a>使用 `switch` 语句的 <a name="pattern" /> 模式匹配
 
 每个 `case` 语句定义一个模式，如果它与匹配表达式相匹配，则会导致执行其包含的开关部分。 所有版本的 C# 都支持常量模式。 其余模式从 C# 7.0 开始支持。
 
@@ -183,7 +185,7 @@ case null:
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" />`case` 语句和 `when` 子句
+## <a name="the-case-statement-and-the-when-clause"></a><a name="when" />`case` 语句和 `when` 子句
 
 从 C# 7.0 开始，因为 case 语句不需要互相排斥，因此可以添加 `when` 子句来指定必须满足的附加条件使 case 语句计算为 true。 `when` 子句可以是返回布尔值的任何表达式。
 

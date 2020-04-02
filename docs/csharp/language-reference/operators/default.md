@@ -1,25 +1,30 @@
 ---
-title: default 运算符 - C# 参考
-description: 使用 default 运算符生成类型的默认值
-ms.date: 08/01/2019
+title: default value 表达式 - C# 参考
+description: 使用 default value 表达式可获取类型的默认值
+ms.date: 03/13/2020
+f1_keywords:
+- default_CSharpKeyword
+- default
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 0d37fe952e71e74f014872231a2e58663dea9d18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2adfd8d24066e9dad50c3c18407d3ade71b4b68e
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398183"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507173"
 ---
-# <a name="default-operator-c-reference"></a>default 运算符（C# 参考）
+# <a name="default-value-expressions-c-reference"></a>default value 表达式（C# 参考）
 
-`default` 运算符生成类型的[默认值](../builtin-types/default-values.md)。 `default` 运算符的实参必须是类型或类型形参的名称。
-
-下面的示例演示 `default` 运算符的用法：
-
-[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
+default value 表达式生成类型的[默认值](../builtin-types/default-values.md)。 有两种类型的 default value 表达式：[default 运算符](#default-operator)调用和 [default 文本](#default-literal)。
 
 你还可以将 `default` 关键字用作 [`switch` 语句](../keywords/switch.md)中的默认用例标签。
+
+## <a name="default-operator"></a>default 运算符
+
+`default` 运算符的实参必须是类型或类型形参的名称，如以下示例所示：
+
+[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
 
 ## <a name="default-literal"></a>default 文本
 
@@ -36,11 +41,11 @@ ms.locfileid: "79398183"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#default-value-expressions)中的 [默认值表达式](~/_csharplang/spec/introduction.md)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的 [默认值表达式](~/_csharplang/spec/expressions.md#default-value-expressions)部分。
 
 有关 `default` 文本的详细信息，请参阅[功能建议说明](~/_csharplang/proposals/csharp-7.1/target-typed-default.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)

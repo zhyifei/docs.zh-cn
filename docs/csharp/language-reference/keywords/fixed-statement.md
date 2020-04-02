@@ -6,12 +6,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: e527e8a54a739391d18b180532372b5b70f34d37
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 53bee82bf24a847b0b21ed2375d09a6303d4fe48
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713524"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507186"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed 语句（C# 参考）
 
@@ -25,7 +25,7 @@ ms.locfileid: "75713524"
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
 
-从 C# 7.3 开始，`fixed` 语句可在数组、字符串、固定大小缓冲区或非托管变量以外的其他类型上执行。 实施名为 `GetPinnableReference` 的方法的任何类型都可以被固定。 `GetPinnableReference` 必须返回`ref`非托管类型[ 的 ](../builtin-types/unmanaged-types.md) 变量。 .NET Core 2.0 中引入的 .NET 类型 <xref:System.Span%601?displayProperty=nameWithType> 和 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> 使用此模式，并且可以固定。 下面的示例对此进行了演示：
+从 C# 7.3 开始，`fixed` 语句可在数组、字符串、固定大小缓冲区或非托管变量以外的其他类型上执行。 实施名为 `GetPinnableReference` 的方法的任何类型都可以被固定。 `GetPinnableReference` 必须返回[非托管类型](../builtin-types/unmanaged-types.md) 的 `ref` 变量。 .NET Core 2.0 中引入的 .NET 类型 <xref:System.Span%601?displayProperty=nameWithType> 和 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> 使用此模式，并且可以固定。 下面的示例对此进行了演示：
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
 
@@ -62,13 +62,13 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-可以在堆栈上分配内存，在这种情况下，内存不受垃圾回收的约束，因此不需要固定。 要执行此操作，请使用 [`stackalloc` 运算符](../operators/stackalloc.md)。
+可以在堆栈上分配内存，在这种情况下，内存不受垃圾回收的约束，因此不需要固定。 为此，请使用 [`stackalloc` 表达式](../operators/stackalloc.md)。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/unsafe-code.md#the-fixed-statement)中的 [fixed 语句](~/_csharplang/spec/introduction.md)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的 [fixed 语句](~/_csharplang/spec/unsafe-code.md#the-fixed-statement)部分。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)

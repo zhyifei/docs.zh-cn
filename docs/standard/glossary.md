@@ -3,12 +3,12 @@ title: .NET 术语表
 description: 了解 .NET 文档中所用的选定术语的含义。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed4dceed1a3f39c5c4ce7a278efc37bb38ed0d94
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398747"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344205"
 ---
 # <a name="net-glossary"></a>.NET 术语表
 
@@ -26,13 +26,13 @@ ms.locfileid: "79398747"
 
 随 .NET Framework 一起提供的原始 ASP.NET 实现。
 
-有时 ASP.NET 是一个涵盖性术语，指包含 ASP.NET Core 在内的两个 ASP.NET 实现。 该术语在任何给定实例中的含义取决于上下文。 若要指明不要使用 ASP.NET 表示这两种实现，请参考 ASP.NET 4.x。
+有时 ASP.NET 是一个涵盖性术语，指包含 ASP.NET Core 在内的两个 ASP.NET 实现。 该术语在任何给定实例中的含义取决于上下文。 若要指明不要使用 ASP.NET 来表示这两种实现，请参考 ASP.NET 4.x。
 
 请参阅 [ASP.NET 文档](/aspnet/#pivot=aspnet)。
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
-.NET Core 上生成的跨平台、高性能、 开放源 ASP.NET 实现。
+.NET Core 上生成的跨平台、高性能、开放源 ASP.NET 实现。
 
 请参阅 [ASP.NET Core 文档](/aspnet/#pivot=core)。
 
@@ -46,7 +46,7 @@ ms.locfileid: "79398747"
 
 公共语言运行时。
 
-确切含义取决于上下文，但它通常指 .NET Framework 的运行时。 CLR 处理内存分配和管理。 CLR 也是一个虚拟机，不仅可执行应用，还可使用 [JIT](#jit) 编译器快速生成和编译代码。 当前的 Microsoft CLR 实现仅限 Windows。
+确切含义取决于上下文，但公共语言运行时通常指 .NET Framework 的运行时。 CLR 处理内存分配和管理。 CLR 也是一个虚拟机，不仅可执行应用，还可使用 [JIT](#jit) 编译器快速生成和编译代码。 当前的 Microsoft CLR 实现仅限 Windows。
 
 ## <a name="coreclr"></a>CoreCLR
 
@@ -64,7 +64,7 @@ ms.locfileid: "79398747"
 
 .NET Core 运行时。
 
-与 CLR/CoreCLR 相比，CoreRT 不是虚拟机，这意味着它不包含用于快速生成并运行代码的功能，因为它不包括 [JIT](#jit)。 但它包含 [GC](#gc) 以及运行时类型标识 (RTTI) 和反射功能。 只是由于设计有类型系统，因此并不需要元数据反射功能。 包含这些功能使它具有 [AOT](#aot) 工具链，该工具链可去除多余的元数据，更重要的是可识别应用不使用的代码。 CoreRT 正在开发中。
+与 CLR/CoreCLR 相比，CoreRT 不是虚拟机，这意味着它不包含用于快速生成并运行代码的功能，因为它不包括 [JIT](#jit)。 但它包含 [GC](#gc) 以及运行时类型标识 (RTTI) 和反射功能。 只是由于设计有类型系统，因此并不需要元数据反射功能。 不需要元数据使它具有 [AOT](#aot) 工具链，该工具链可去除多余的元数据，更重要的是可识别应用不使用的代码。 CoreRT 正在开发中。
 
 请参阅 [.NET Native 和 CoreRT 简介](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)。
 
@@ -92,11 +92,11 @@ ms.locfileid: "79398747"
 
 在现有的文档中，“框架”有时指 [.NET 的实现](#implementation-of-net)。 例如，某文章可能会将 .NET Core 称为框架。 我们计划从文档中去掉这种令人困惑的用法。
 
-## <a name="gc"></a>“GC”
+## <a name="gc"></a>GC
 
 垃圾回收器。
 
-垃圾回收器是自动内存管理的实现。  GC 可释放对象占用的不再使用的内存。
+垃圾回收器是自动内存管理的实现。  GC 可释放不再使用的对象占用的内存。
 
 请参阅[垃圾回收](garbage-collection/index.md)。
 
@@ -114,11 +114,11 @@ C# 等较高级的 .NET 语言编译为称为中间语言 (IL) 的硬件无关�
 
 ## <a name="implementation-of-net"></a>.NET 实现
 
-.NET 的实现包括以下项：
+.NET 的实现包括：
 
 - 一个或多个运行时。 示例：CLR、CoreCLR、CoreRT。
 - 实现 .NET Standard 的某版本并且可能包含其他 API 的类库。 示例：.NET Framework 基类库、.NET Core 基类库。
-- 可选择包含一个或多个应用程序框架。 示例： ASP.NET、Windows 窗体和 WPF 包含在 .NET Framework 中。
+- 可选择包含一个或多个应用程序框架。 示例：ASP.NET、Windows 窗体和 WPF 包含在 .NET Framework 中。
 - 可包含开发工具。 某些开发工具在多个实现之间共享。
 
 .NET 实现的示例：
@@ -141,7 +141,7 @@ C# 等较高级的 .NET 语言编译为称为中间语言 (IL) 的硬件无关�
 
 ## <a name="mono"></a>Mono
 
-Mono 是主要在需要小型运行时使用的开放源、[跨平台](#cross-platform) .NET 实现。 它是运行时，在 Android、Mac、iOS、tvOS 和 watchOS 上为 Xamarin 应用程序提供技术支持，主要针对内存占用少的应用程序。
+Mono 是主要在需要小型运行时使用的开放源、[跨平台](#cross-platform) .NET 实现。 它是在 Android、Mac、iOS、tvOS 和 watchOS 上为 Xamarin 应用程序提供技术支持的运行时，主要针对内存占用少的应用程序。
 
 它支持所有当前已发布的 .NET Standard 版本。
 
@@ -153,7 +153,7 @@ Mono 通常与实时编译器一起使用，但它也提供在 iOS 之类的平�
 
 ## <a name="net"></a>.NET
 
-[.NET Standard](#net-standard) 和所有 [.NET 实现](#implementation-of-net)及工作负荷的涵盖性术语。 始终采用大写形式，请勿使用“.Net”。
+[.NET Standard](#net-standard) 和所有 [.NET 实现](#implementation-of-net)及工作负荷的涵盖性术语。 始终采用全大写形式，请勿使用“.Net”。
 
 请参阅 [.NET 指南](index.md)
 
@@ -161,7 +161,7 @@ Mono 通常与实时编译器一起使用，但它也提供在 iOS 之类的平�
 
 一种跨平台、高性能的开放源 .NET 实现。 包括 Core 公共语言运行时 (CoreCLR)、Core AOT 运行时（正在开发的 CoreRT）、Core 基类库和 Core SDK。
 
-请参阅 [.NET Core](../core/index.md)。
+请参阅 [.NET Core](../core/index.yml)。
 
 ## <a name="net-core-cli"></a>.NET Core CLI
 
@@ -179,7 +179,7 @@ Mono 通常与实时编译器一起使用，但它也提供在 iOS 之类的平�
 
 仅在 Windows 上运行的 .NET 实现。 包括公共语言运行时 (CLR)、基类库和 ASP.NET、Windows 窗体和 WPF 之类的应用程序框架库。
 
-请查阅 [.NET Framework 指南](../framework/index.md)。
+请查阅 [.NET Framework 指南](../framework/index.yml)。
 
 ## <a name="net-native"></a>.NET Native
 
@@ -205,7 +205,7 @@ UWP 是 .NET Native 支持的首个应用程序框架。 现在，我们支持�
 
 可将此方法视为永久性 JIT 编译器。 它通常在执行代码的计算机上编译该代码，但通常在安装时进行编译。
 
-## <a name="package"></a>程序包
+## <a name="package"></a>包
 
 NuGet 包 &mdash; 或只是一个包 &mdash; 是一个 .zip  文件，其中具有一个或多个名称相同的程序集以及作者姓名等其他元数据。
 
@@ -269,12 +269,12 @@ NuGet 包 &mdash; 或只是一个包 &mdash; 是一个 .zip  文件，其中具�
 
 通用 Windows 平台。
 
-用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件的 .NET 实现。 它旨在统一可能想要以其为目标的不同类型的设备，包括电脑、平板电脑、平板手机、电话，甚至 Xbox。 UWP 提供许多服务，如集中式应用商店、执行环境 (AppContainer) 和一组 Windows API（用于代替 Win32 (WinRT)）。 应用可采用 C++、C#、Visual Basic 和 JavaScript 编写。 使用 C# 和 Visual Basic 时，.NET API 由 .NET Core 提供。
+用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件的 .NET 实现。 它旨在统一可能想要以其为目标的不同类型的设备，包括电脑、平板电脑、电话，甚至 Xbox。 UWP 提供许多服务，如集中式应用商店、执行环境 (AppContainer) 和一组 Windows API（用于代替 Win32 (WinRT)）。 应用可采用 C++、C#、Visual Basic 和 JavaScript 编写。 使用 C# 和 Visual Basic 时，.NET API 由 .NET Core 提供。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [.NET 指南](index.md)
-- [.NET Framework 指南](../framework/index.md)
-- [.NET Core](../core/index.md)
+- [.NET Framework 指南](../framework/index.yml)
+- [.NET Core](../core/index.yml)
 - [ASP.NET 概述](/aspnet/index#pivot=aspnet)
 - [ 概述](/aspnet/index#pivot=core)

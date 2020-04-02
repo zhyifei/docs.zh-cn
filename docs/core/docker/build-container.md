@@ -4,12 +4,12 @@ description: 在本教程中，你将了解如何使用 Docker 容器化 .NET Co
 ms.date: 01/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e1904430a591b0e74a69d50a53869a130fc0a248
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8be12792e4a9e8511dba87e657f700cc4ec97a16
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157825"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546570"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>教程：使 .NET Core 应用程序容器化
 
@@ -26,8 +26,8 @@ ms.locfileid: "78157825"
 
 你将了解用于 .NET Core 应用的 Docker 容器生成和部署任务。 Docker 平台  使用 Docker 引擎  快速生成应用，并将应用打包为 Docker 映像  。 这些映像采用 Dockerfile  格式编写，以供在分层容器中部署和运行。
 
-> [!TIP]
-> 如果要使用现有的 ASP.NET Core 应用，请参阅教程[了解如何容器化 ASP.NET Core 应用](/aspnet/core/host-and-deploy/docker/building-net-docker-images)。
+> [!WARNING]
+> **本教程不适用于 ASP.NET Core 应用。** 如果使用的是 ASP.NET Core，请参阅教程[了解如何容器化 ASP.NET Core 应用程序](/aspnet/core/host-and-deploy/docker/building-net-docker-images)。
 
 ## <a name="prerequisites"></a>先决条件
 

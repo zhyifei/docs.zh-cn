@@ -3,16 +3,16 @@ title: 卸载工具
 description: .NET Core 卸载工具概述，它是一种可实现 .NET Core SDK 和运行时的受控清理的引导式工具。
 author: sfoslund
 ms.date: 01/06/2020
-ms.openlocfilehash: 4944c983cbd02b456c3a09a1b03bc28ba6e458cc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 816aef6ab8bc0e51bb8befb14fde60513d4fadfc
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714544"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507316"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core 卸载工具
 
-[.NET Core 卸载工具](https://github.com/dotnet/cli-lab/releases) (`dotnet-core-uninstall`) 使你可以从系统中删除 .NET Core SDK 和运行时。 可使用选项集合来指定要卸载的版本。
+[.NET Core 卸载工具](https://aka.ms/dotnet-core-uninstall-tool) (`dotnet-core-uninstall`) 使你可以从系统中删除 .NET Core SDK 和运行时。 可使用选项集合来指定要卸载的版本。
 
 该工具支持 Windows 和 macOS。 目前不支持 Linux。
 
@@ -27,10 +27,10 @@ ms.locfileid: "75714544"
 
 ## <a name="install-the-tool"></a>安装工具
 
-可以从 [dotnet/cli-lab](https://github.com/dotnet/cli-lab/releases) GitHub 存储库下载 .NET Core 卸载工具。
+可以从[此处](https://aka.ms/dotnet-core-uninstall-tool)下载 .NET Core 卸载工具，然后在 [dotnet/cli-lab](https://github.com/dotnet/cli-lab) GitHub 存储库中找到资源代码。
 
 > [!NOTE]
-> 此工具需要提升才能卸载 .NET Core SDK 和运行时。 因此，应将其安装在写入保护的目录中，如 Windows 上的 C:\Program Files  或 macOS 上的 /usr/local/bin  。 另请参阅[提升的 Dotnet 命令访问权限](../tools/elevated-access.md)。 [GitHub 版本页](https://github.com/dotnet/cli-lab/releases)上提供了详细的安装说明。
+> 此工具需要提升才能卸载 .NET Core SDK 和运行时。 因此，应将其安装在写入保护的目录中，如 Windows 上的 C:\Program Files  或 macOS 上的 /usr/local/bin  。 另请参阅[提升的 Dotnet 命令访问权限](../tools/elevated-access.md)。 有关详细信息，请参阅[详细安装说明](https://aka.ms/dotnet-core-uninstall-tool)。
 
 ## <a name="run-the-tool"></a>运行该工具
 
@@ -45,6 +45,9 @@ ms.locfileid: "75714544"
 
 `dotnet-core-uninstall list` 命令列出了已安装的 .NET Core SDK 和运行时，可以通过此工具将其删除。 Visual Studio 可能需要某些 SDK 和运行时，它们将显示出来，并说明为何不建议将其卸载。
 
+> [!NOTE]
+> 在大多数情况下，`dotnet-core-uninstall list` 命令的输出将与 `dotnet --info` 输出中的已安装版本列表不匹配。 具体而言，此工具将不会显示通过 zip 文件安装的版本，也不会显示由 Visual Studio（Visual Studio 2019 16.3 或更高版本）托管的版本。 检查某个版本是否由 Visual Studio 托管的一种方法是在 `Add or Remove Programs` 中查看该版本，由 Visual Studio 托管的版本在显示名称中会以这种方式标记。
+
 **dotnet-core-uninstall list**
 
 #### <a name="synopsis"></a>摘要
@@ -55,7 +58,7 @@ dotnet-core-uninstall list [options]
 
 #### <a name="options"></a>选项
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--aspnet-runtime`**
 
@@ -85,7 +88,7 @@ dotnet-core-uninstall list [options]
 
   列出可通过此工具卸载的所有 x86 .NET Core SDK 和运行时。
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--runtime`**
 
@@ -148,7 +151,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 #### <a name="options"></a>选项
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--all`**
 
@@ -218,7 +221,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 2. `--all`、`--all-below`、`--all-but`、`--all-but-latest`、`--all-lower-patches`、`--all-previews`、`--all-previews-but-latest`、`--major-minor` 和 `[<VERSION>...]` 除外。
 3. 如果未指定 `--x64` 或 `--x86`，则同时删除 x64 和 x86。
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--all`**
 
@@ -328,7 +331,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 #### <a name="options"></a>选项
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--all`**
 
@@ -400,7 +403,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 2. `--all`、`--all-below`、`--all-but`、`--all-but-latest`、`--all-lower-patches`、`--all-previews`、`--all-previews-but-latest`、`--major-minor` 和 `[<VERSION>...]` 除外。
 3. 如果未指定 `--x64` 或 `--x86`，则同时删除 x64 和 x86。
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--all`**
 
@@ -511,13 +514,13 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 ## <a name="uninstall-the-tool"></a>卸载工具
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 1. 打开“添加或删除程序”  。
 2. 搜索 `Microsoft .NET Core SDK Uninstall Tool`。
 3. 选择“卸载”  。
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 从安装目录中删除已下载的 dotnet-core-uninstall.tar.gz  文件。 如果将此文件的内容解压缩到其他目录中，请务必同时删除该内容。
 
