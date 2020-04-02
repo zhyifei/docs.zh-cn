@@ -1,9 +1,0 @@
-- name: 特性
-  href: index.md
-  items:
-    - name: 应用特性
-      href: applying-attributes.md
-    - name: 编写自定义特性
-      href: writing-custom-attributes.md
-    - name: 检索存储在特性中的信息
-      href: retrieving-information-stored-in-attributes.md
