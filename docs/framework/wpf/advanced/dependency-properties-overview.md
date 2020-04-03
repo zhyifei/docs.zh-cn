@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 1df75814c45a6f1c245d43e2390b8a6ce692a779
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80587797"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80636026"
 ---
 # <a name="dependency-properties-overview"></a>依赖属性概述
 
@@ -128,7 +128,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 ### <a name="styles"></a>样式
 样式和模板是使用依赖属性的两个主要激发方案。 在设置定义应用程序[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 的属性时，样式尤其有用。 在 XAML 中，通常将样式定义为资源。 样式与属性系统交互，因为它们通常包含特定属性的“资源库”，以及基于另一个属性的实时值更改属性值的“触发器”。
 
-以下示例创建非常简单的样式（该样式在 <xref:System.Windows.FrameworkElement.Resources%2A> 字典中定义，未显示），然后将该样式直接应用于 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.FrameworkElement.Style%2A> 属性。 样式中的资源库将带样式 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Controls.Control.Background%2A> 属性设置为绿色。
+下面的示例创建一个简单的样式（将在<xref:System.Windows.FrameworkElement.Resources%2A>字典中定义，不显示），然后将该样式直接<xref:System.Windows.FrameworkElement.Style%2A>应用于 属性。 <xref:System.Windows.Controls.Button> 样式中的资源库将带样式 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Controls.Control.Background%2A> 属性设置为绿色。
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyleDef](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyledef)]
 
@@ -146,7 +146,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 有关对属性进行动画处理的详细信息，请参阅[动画概述](../graphics-multimedia/animation-overview.md)和[情节提要概述](../graphics-multimedia/storyboards-overview.md)。
 
 ### <a name="metadata-overrides"></a>元数据重写
-在从最初注册依赖属性的类派生时，可以通过重写依赖属性的元数据来更改该属性的某些行为。 重写元数据依赖于 <xref:System.Windows.DependencyProperty> 标识符。 重写元数据不需要重新实现属性。 元数据的更改由属性系统在本机处理；对于所有从基类继承的属性，每个类都有可能基于每个类型保留元数据。
+在从最初注册依赖属性的类派生时，可以通过重写依赖属性的元数据来更改该属性的某些行为。 重写元数据依赖于 <xref:System.Windows.DependencyProperty> 标识符。 重写元数据不需要重新实现该属性。 元数据的更改由属性系统在本机处理；对于所有从基类继承的属性，每个类都有可能基于每个类型保留元数据。
 
 以下示例重写依赖属性 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> 的元数据。 重写此特定依赖属性的元数据是某个实现模式的一部分，该模式创建可以使用主题中的默认样式的控件。
 
@@ -183,18 +183,18 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 [!code-xaml[PropertiesOvwSupport#MiniPrecedence](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#miniprecedence)]  
 
 ### <a name="why-does-dependency-property-precedence-exist"></a>为什么存在依赖属性优先级？
-通常，你不会希望总是应用样式，而且不希望样式遮盖单个元素的哪怕一个本地设置值（否则，通常很难使用样式或元素）。 因此，来自样式的值的操作优先级低于本地设置的值。 有关依赖属性以及它的有效值可能来自何处的更完整列表，请参阅[依赖属性值优先级](dependency-property-value-precedence.md)。
+通常，您不希望样式始终应用和遮盖单个元素的本地设置值（否则，通常很难使用样式或元素）。 因此，来自样式的值的操作优先级低于本地设置的值。 有关依赖属性以及它的有效值可能来自何处的更完整列表，请参阅[依赖属性值优先级](dependency-property-value-precedence.md)。
 
 > [!NOTE]
 > 在 WPF 元素定义了许多非依赖属性的属性。 一般说来，只有在需要支持至少一个由属性系统启用的方案（数据绑定、样式、动画、默认值支持、继承、附加属性或失效）时，才将属性实现为依赖属性。
 
 ## <a name="learning-more-about-dependency-properties"></a>了解有关依赖属性的详细信息  
 
-- 附加属性是一种支持 XAML 中的专用语法的属性。 附加属性通常与通用语言运行时 （CLR） 属性没有 1：1 的对应关系，不一定是依赖项属性。 附加属性的典型用途是使子元素可以向其父元素报告属性值，即使父元素和子元素的类成员列表中均没有该属性也是如此。 一种主要情况是使子元素能够告知父元素应如何在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 中呈现它们；有关示例，请参阅 <xref:System.Windows.Controls.DockPanel.Dock%2A> 或 <xref:System.Windows.Controls.Canvas.Left%2A>。 有关详细信息，请参阅[附加属性概述](attached-properties-overview.md)。
+- 附加属性是一种支持 XAML 中的专用语法的属性。 附加属性通常与通用语言运行时 （CLR） 属性没有 1：1 的对应关系，不一定是依赖项属性。 附加属性的典型目的是允许子元素将属性值报告给父元素，即使父元素和子元素都不具备该属性作为类成员列表的一部分。 一种主要情况是使子元素能够告知父元素应如何在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 中呈现它们；有关示例，请参阅 <xref:System.Windows.Controls.DockPanel.Dock%2A> 或 <xref:System.Windows.Controls.Canvas.Left%2A>。 有关详细信息，请参阅[附加属性概述](attached-properties-overview.md)。
 
 - 组件开发人员或应用程序开发人员可能希望创建自己的依赖属性，以便实现数据绑定或样式支持之类的功能，或者实现对失效和值强制的支持。 有关详细信息，请参阅[自定义依赖属性](custom-dependency-properties.md)。
 
-- 通常，依赖属性应当被视为公共属性，这些公共属性可以由任何具有实例访问权限的调用方访问，或至少可被这样的调用方发现。 有关详细信息，请参阅[依赖属性的安全性](dependency-property-security.md)。
+- 将依赖项属性视为公共属性，可访问或至少可供有权访问实例的任何调用方发现。 有关详细信息，请参阅[依赖属性的安全性](dependency-property-security.md)。
 
 ## <a name="see-also"></a>请参阅
 
