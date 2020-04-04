@@ -3,12 +3,12 @@ title: 欢迎使用 .NET
 description: .NET 系列技术入门。
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: f5673f91545b98fb706d8f1cc03ef7746f1b19b8
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: ecdbdf13aa64de0f07b09eb73953e64d66755bb0
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345307"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635964"
 ---
 # <a name="welcome-to-net"></a>欢迎使用 .NET
 
@@ -42,11 +42,11 @@ ms.locfileid: "80345307"
 
 本文列出了涉及使用 .NET 的多种平台和语言。 可通过下列任意一节开始了解 .NET 及其语言：
 
-- [.NET 指南](standard/index.md)
+- [.NET 指南](standard/index.yml)
 - [.NET Core 指南](core/index.yml)
 - [.NET Framework 指南](framework/index.yml)
 - [C# 指南](csharp/index.yml)
-- [F # 指南](fsharp/index.yml)
+- [F# 指南](fsharp/index.yml)
 - [Visual Basic 指南](visual-basic/index.yml)
 - [ML.NET 指南](machine-learning/index.yml)
 - [.NET for Apache Spark](spark/index.yml)
