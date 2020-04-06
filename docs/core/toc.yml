@@ -290,6 +290,8 @@
       href: deploying/creating-nuget-packages.md
     - name: 自包含部署运行时前滚
       href: deploying/runtime-patch-selection.md
+    - name: 裁剪自包含部署和可执行文件
+      href: deploying/trim-self-contained.md
     - name: 运行时包存储区
       href: deploying/runtime-store.md
 - name: Docker

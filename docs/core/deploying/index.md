@@ -1,13 +1,13 @@
 ---
 title: 应用程序发布
 description: 了解如何发布 .NET Core 应用程序。 .NET Core 可以发布特定于平台或跨平台的应用。 可将应用发布为独立应用或依赖于运行时的应用。 每个模式都会影响用户运行应用的方式。
-ms.date: 01/31/2020
-ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/01/2020
+ms.openlocfilehash: a4e5f9fe048d40c751f582bd49732cb903202db4
+ms.sourcegitcommit: 45cced471d59d5dac3f0c92abc9d4849716098a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397586"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665543"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core 应用程序发布概述
 
@@ -15,7 +15,7 @@ ms.locfileid: "79397586"
 
 将应用作为独立应用，生成的应用程序将包含 .NET Core 运行时和库，以及该应用程序及其依赖项。  应用程序的用户可以在未安装 .NET Core 运行时的计算机上运行该应用程序。
 
-将应用发布为依赖于运行时的应用，生成的应用程序仅包含该应用程序本身及其依赖项。  应用程序的用户必须单独安装 .NET Core 运行时。
+若将应用发布为依赖于运行时（以前称为“依赖于框架”），则生成的应用程序仅包含该应用程序本身及其依赖项。   应用程序的用户必须单独安装 .NET Core 运行时。
 
 默认情况下，这两种发布模式都会生成特定于平台的可执行文件。 不使用可执行文件也可以创建依赖于运行时的应用程序，这些应用程序是跨平台的。
 
