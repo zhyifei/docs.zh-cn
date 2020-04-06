@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc, mlnet-tooling
-ms.openlocfilehash: c027fe57f571c791784b0bdb7ad9503fc49daa1c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 750738f8e3c65363e9996667feeccd1b84391f9f
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187700"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438245"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>教程：将回归与模型生成器配合使用以预测价格
 
@@ -177,7 +177,7 @@ ms.locfileid: "79187700"
 
 若要详细了解本教程中所述的主题，请访问以下资源:
 
-- [模型生成器应用场景](../automate-training-with-model-builder.md#scenarios)
+- [模型生成器应用场景](../automate-training-with-model-builder.md#scenario)
 - [回归](../resources/glossary.md#regression)
 - [回归模型指标](../resources/metrics.md#evaluation-metrics-for-regression-and-recommendation)
 - [NYC TLC 出租车行程数据集](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)

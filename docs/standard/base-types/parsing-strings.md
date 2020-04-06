@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Parse method
 - parsing strings
 ms.assetid: 5e758b41-db93-456b-8999-99b7304b090d
-ms.openlocfilehash: e4bf14981e538d95aebac3b0f36d38b61747989f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 717022e5d2e292c1624e6155bd7571e4daa997b9
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73084319"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523801"
 ---
 # <a name="parsing-strings-in-net"></a>分析 .NET 中的字符串
 分析操作将表示某种 .NET 基类型的字符串转换为该基类型。 例如，分析操作用于将字符串转换为浮点数字或日期和时间值。 最常用于执行分析操作的方法是 `Parse` 方法。 因为分析是格式设置（涉及将基类型转换为其字符串表示形式）的反向操作，所以有许多相同规则和约定适用。 就像格式设置使用对象来实现 <xref:System.IFormatProvider> 接口以提供区域性敏感型格式设置信息一样，分析也使用对象来实现 <xref:System.IFormatProvider> 接口，以确定如何解释字符串表示形式。 有关详细信息，请参阅[类型格式设置](../../../docs/standard/base-types/formatting-types.md)。  
@@ -34,7 +34,4 @@ ms.locfileid: "73084319"
  介绍了基本格式设置概念，如格式说明符和格式提供程序。  
   
  [.NET 中的类型转换](../../../docs/standard/base-types/type-conversion.md)  
- 介绍了如何转换类型。  
-  
- [基类型](../../../docs/standard/base-types/index.md)  
- 介绍了可以对 .NET 基类型执行的常见操作。
+ 介绍了如何转换类型。

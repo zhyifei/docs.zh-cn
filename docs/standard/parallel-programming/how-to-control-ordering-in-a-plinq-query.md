@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to control ordering
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
-ms.openlocfilehash: d38c039fa99433d9476d62c1e96dff7e306fd766
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 86011cff71fabed5e47e085f91b1759238638c9a
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73123125"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588491"
 ---
 # <a name="how-to-control-ordering-in-a-plinq-query"></a>如何：在 PLINQ 查询中控制排序
 这些示例展示了如何使用 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 扩展方法控制 PLINQ 查询中的顺序。  
@@ -46,4 +46,4 @@ ms.locfileid: "73123125"
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Linq.ParallelEnumerable>
-- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

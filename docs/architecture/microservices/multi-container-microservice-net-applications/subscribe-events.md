@@ -2,12 +2,12 @@
 title: 订阅事件
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解发布和订阅集成事件的详细信息。
 ms.date: 01/30/2020
-ms.openlocfilehash: 544af8035ed23dd6507dfed4944b0c327c81d943
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3bfcdb1766a15b1a8e8deab46055f14e1791c2cc
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501813"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523596"
 ---
 # <a name="subscribing-to-events"></a>订阅事件
 
@@ -211,7 +211,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUp
       // Publish the integration event through the event bus
       _eventBus.Publish(priceChangedEvent);
 
-      integrationEventLogService.MarkEventAsPublishedAsync(
+      _integrationEventLogService.MarkEventAsPublishedAsync(
                                                 priceChangedEvent);
   }
 

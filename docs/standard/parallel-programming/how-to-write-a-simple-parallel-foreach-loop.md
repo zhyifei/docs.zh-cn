@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: 02b94b673dc4468e68a1dadd83aab0e3bfcfaa16
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0300f8900cd18159ba3a2170cfba96f302f282a0
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160295"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588144"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>如何：编写简单的 Parallel.ForEach 循环
 
@@ -39,7 +39,7 @@ ms.locfileid: "78160295"
 [!code-csharp[TPL_Parallel#07](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/nongeneric.cs#07)]
 [!code-vb[TPL_Parallel#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/nongeneric.vb#07)]
 
-还可以使用并行 LINQ (PLINQ) 并行处理 <xref:System.Collections.Generic.IEnumerable%601> 数据源。 借助 PLINQ，可以使用声明性查询语法来表达循环行为。 有关详细信息，请参阅[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)。
+还可以使用并行 LINQ (PLINQ) 并行处理 <xref:System.Collections.Generic.IEnumerable%601> 数据源。 借助 PLINQ，可以使用声明性查询语法来表达循环行为。 有关详细信息，请参阅[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)。
 
 ## <a name="compile-and-run-the-code"></a>编译并运行代码
 
@@ -65,4 +65,4 @@ Visual Studio 中有适用于 Windows 桌面和 .NET Core 的 Visual Basic 和 C
 
 - [数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [并行编程](../../../docs/standard/parallel-programming/index.md)
-- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

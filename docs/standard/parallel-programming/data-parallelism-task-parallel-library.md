@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: 72696a41cd3b71f47fdcf43e4ece70ebeb7d34d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f0910ae928e94b487df5a3dfd456ee9d7c0fb7df
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73123163"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587597"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>数据并行（任务并行库）
 *数据并行*指的是对源集合或数组的元素同时（即，并行）执行相同操作的场景。 在数据并行操作中，对源集合进行分区，以便多个线程能够同时在不同的网段上操作。  
@@ -35,7 +35,7 @@ ms.locfileid: "73123163"
   
  有关详细信息，请参阅[并行编程模式：了解并通过 .NET Framework 4 应用并行模式](https://www.microsoft.com/download/details.aspx?id=19222)。  
   
- PLINQ 支持使用声明性或查询类语法的数据并行。 有关详细信息，请参阅[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)。  
+ PLINQ 支持使用声明性或查询类语法的数据并行。 有关详细信息，请参阅[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)。  
   
 ## <a name="related-topics"></a>相关主题  
   

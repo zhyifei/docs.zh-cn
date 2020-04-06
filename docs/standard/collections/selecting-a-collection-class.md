@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-ms.openlocfilehash: fb03200c810290c970f7aa56a0e15d385aca7ca8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 621d64183c1cacc14c2d432e4eef43f4d3ba5474
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711345"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588329"
 ---
 # <a name="selecting-a-collection-class"></a>选择集合类
 
@@ -79,7 +79,7 @@ ms.locfileid: "75711345"
 ## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects 与 PLINQ  
  LINQ to Objects 让开发人员能够使用 LINQ 查询访问内存中对象，条件是该对象类型实现 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>。 LINQ 查询提供了一种通用的数据访问模式，与标准 `foreach` 循环相比，它通常更加简洁，可读性更高，并且可提供筛选、排序和分组功能。 有关详细信息，请参阅 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) 和 [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)。  
   
- PLINQ 提供 LINQ to Objects 的并行实现，在许多情况下，可通过更有效地利用多核计算机提供更快的查询执行。 有关详细信息，请参阅[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)。  
+ PLINQ 提供 LINQ to Objects 的并行实现，在许多情况下，可通过更有效地利用多核计算机提供更快的查询执行。 有关详细信息，请参阅[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)。  
   
 ## <a name="see-also"></a>另请参阅
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-ms.openlocfilehash: 151bf40cf042517b7441b89688122373259dc7dc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5345c90d966ea9ce0a0bbf6c884b8d8abc8b5fa7
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140060"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523940"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>如何：定义和使用自定义数值格式提供程序
 .NET Framework 使你可以全面控制数值的字符串表示形式。 它支持用于自定义数值格式的以下功能：  
@@ -84,8 +84,4 @@ ms.locfileid: "73140060"
  [!code-csharp[System.ICustomFormatter.Format#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.ICustomFormatter.Format/cs/format.cs#1)]
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
- 在此示例中，实现 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 的方法旨在用作 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法的回调方法。 因此，它会检查 `formatProvider` 参数，以确定它是否包含对当前 `TelephoneFormatter` 对象的引用。 但是，也可以直接从代码调用该方法。 在这种情况下，可以使用 `formatProvider` 参数，提供用于提供区域性专用格式设置信息的 <xref:System.Globalization.CultureInfo> 或 <xref:System.Globalization.NumberFormatInfo> 对象。  
-  
-## <a name="see-also"></a>请参阅
-
-- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)
+ 在此示例中，实现 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 的方法旨在用作 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法的回调方法。 因此，它会检查 `formatProvider` 参数，以确定它是否包含对当前 `TelephoneFormatter` 对象的引用。 但是，也可以直接从代码调用该方法。 在这种情况下，可以使用 `formatProvider` 参数，提供用于提供区域性专用格式设置信息的 <xref:System.Globalization.CultureInfo> 或 <xref:System.Globalization.NumberFormatInfo> 对象。

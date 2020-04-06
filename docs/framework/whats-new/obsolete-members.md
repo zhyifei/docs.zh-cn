@@ -7,12 +7,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: 4a4da6bb36371fe5e2b14084d40df88e44dd17fa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e77f871f41dda2f7dd1a080ca6f3b696852b5ad
+ms.sourcegitcommit: 45cced471d59d5dac3f0c92abc9d4849716098a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75901321"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665573"
 ---
 # <a name="obsolete-members-in-net-framework"></a>.NET Framework 中的已过时成员
 
@@ -491,7 +491,7 @@ ms.locfileid: "75901321"
 > |<xref:System.Net.ServicePointManager?displayProperty=nameWithType>|<xref:System.Net.ServicePointManager.CertificatePolicy%2A>|<xref:System.Net.ServicePointManager.CertificatePolicy%2A> 对于此类型已过时。 请改用 <xref:System.Net.ServicePointManager.ServerCertificateValidationCallback%2A?displayProperty=nameWithType>。|
 > |<xref:System.Net.WebClient?displayProperty=nameWithType>|<xref:System.Net.WebClient.AllowReadStreamBuffering%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 使用此成员会生成编译器错误。<br /><br /> 此 API 支持 .NET Framework 基础结构，但不应在代码中直接使用。|
 > |<xref:System.Net.WebClient?displayProperty=nameWithType>|<xref:System.Net.WebClient.AllowWriteStreamBuffering%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 使用此成员会生成编译器错误。<br /><br /> 此 API 支持 .NET Framework 基础结构，但不应在代码中直接使用。|
-> |<xref:System.Net.WebClient?displayProperty=nameWithType>|<xref:System.Net.WebClient.OnWriteStreamClosed%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 使用此成员会生成编译器错误。<br /><br /> 此 API 支持 .NET Framework 基础结构，但不应在代码中直接使用。|
+> |<xref:System.Net.WebClient?displayProperty=nameWithType>|`System.Net.WebClient.OnWriteStreamClosed`|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 使用此成员会生成编译器错误。<br /><br /> 此 API 支持 .NET Framework 基础结构，但不应在代码中直接使用。|
 > |<xref:System.Net.WebClient?displayProperty=nameWithType>|<xref:System.Net.WebClient.WriteStreamClosed>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 使用此成员会生成编译器错误。<br /><br /> 此 API 支持 .NET Framework 基础结构，但不应在代码中直接使用。|
 > |<xref:System.Net.WebProxy?displayProperty=nameWithType>|<xref:System.Net.WebProxy.GetDefaultProxy%2A>|此方法已被否决。 请使用默认为你选择的代理。|
 > |<xref:System.Net.WebRequest?displayProperty=nameWithType>|<xref:System.Net.WebRequest.CreatorInstance%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 使用此成员会生成编译器错误。<br /><br /> 此 API 支持 .NET Framework 基础结构，但不应在代码中直接使用。|

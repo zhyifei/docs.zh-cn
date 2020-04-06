@@ -4,12 +4,12 @@ description: 了解如何在 C# 库和应用程序中运用继承。
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78833110db0e4f0382e5c0c6de7c6c8be9a16c8d
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156748"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391144"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的继承
 
@@ -28,7 +28,7 @@ ms.locfileid: "79156748"
 1. 将示例中的代码复制并粘贴到代码编辑器中。
 1. 在命令行处输入 [dotnet restore](../../core/tools/dotnet-restore.md) 命令，加载或还原项目的依赖项。
 
-  [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 1. 输入 [dotnet run](../../core/tools/dotnet-run.md) 命令，编译并执行示例。
 

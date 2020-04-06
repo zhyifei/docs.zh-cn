@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: 3419afb36d73599b8fdb0417a8c0cc4057f60089
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 98c9f28ca4ce6365ed4cf4ff1566a33dbe8f35ca
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187638"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438232"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>教程：使用 ML.NET 模型生成器在 Web 应用程序中分析网站评论的情绪
 
@@ -302,6 +302,6 @@ wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户
 
 若要详细了解本教程中所述的主题，请访问以下资源:
 
-- [模型生成器应用场景](../automate-training-with-model-builder.md#scenarios)
+- [模型生成器应用场景](../automate-training-with-model-builder.md#scenario)
 - [二元分类](../resources/glossary.md#binary-classification)
 - [二元分类模型指标](../resources/metrics.md#evaluation-metrics-for-binary-classification)

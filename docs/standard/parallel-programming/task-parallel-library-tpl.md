@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-ms.openlocfilehash: 487fe48462803ac19318f450f2576989f196a9be
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6785041730a048fb08677dbd054f727e351185d4
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139955"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588577"
 ---
 # <a name="task-parallel-library-tpl"></a>任务并行库 (TPL)
 任务并行库 (TPL) 是 <xref:System.Threading?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks?displayProperty=nameWithType> 空间中的一组公共类型和 API。 TPL 的目的是通过简化将并行和并发添加到应用程序的过程来提高开发人员的工作效率。 TPL 动态缩放并发的程度以最有效地使用所有可用的处理器。 此外，TPL 还处理工作分区、<xref:System.Threading.ThreadPool> 上的线程调度、取消支持、状态管理以及其他低级别的细节操作。 通过使用 TPL，你可以在将精力集中于程序要完成的工作，同时最大程度地提高代码的性能。  
@@ -28,7 +28,7 @@ ms.locfileid: "73139955"
 |[数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)|描述如何使用 TPL 数据流库中的数据流组件处理多项运算，这些运算必须彼此通信，或在数据可用时处理数据。|  
 |[将 TPL 和其他异步模式结合使用](../../../docs/standard/parallel-programming/using-tpl-with-other-asynchronous-patterns.md)|描述如何将 TPL 与 .NET 中的其他异步模式一起使用。|  
 |[数据和任务并行的潜在问题](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md)|描述一些常见缺陷以及如何避免它们。|  
-|[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|描述如何使用 LINQ 查询实现数据并行化。|  
+|[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)|描述如何使用 LINQ 查询实现数据并行化。|  
 |[并行编程](../../../docs/standard/parallel-programming/index.md)|.NET 并行编程的顶级节点。|  
   
 ## <a name="see-also"></a>另请参阅
