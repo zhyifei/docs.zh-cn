@@ -14,12 +14,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: 8acf0886215c2d31f949e38401c4705ac9e2aef5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b553f44ebc512ffd1194254fe8ebc90bcb2f763
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124307"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523910"
 ---
 # <a name="regular-expression-language---quick-reference"></a>正则表达式语言 - 快速参考
 
@@ -191,6 +191,5 @@ ms.locfileid: "77124307"
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [正则表达式](regular-expressions.md)
 - [正则表达式类](the-regular-expression-object-model.md)
-- [正则表达式示例](regular-expression-examples.md)
 - [正则表达式 - 快速参考（以 Word 格式下载）](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)
 - [正则表达式 - 快速参考（以 PDF 格式下载）](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
