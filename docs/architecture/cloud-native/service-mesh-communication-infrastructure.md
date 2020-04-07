@@ -3,12 +3,12 @@ title: 服务网格通信基础结构
 description: 了解服务网格技术如何简化云原生微服务通信
 author: robvet
 ms.date: 03/03/2020
-ms.openlocfilehash: 6b177ef33b804ec35f3acb919539a97683e5a487
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 8bb57e990dbf1baf8c246fe4aacfbb2904a251e6
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523522"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805748"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>服务网格通信基础结构
 
@@ -73,5 +73,5 @@ ms.locfileid: "80523522"
 - [使用 .NET 视频构建 gRPC 服务](https://channel9.msdn.com/Shows/The-Cloud-Native-Show/Building-Microservices-with-gRPC-and-NET)
 
 >[!div class="step-by-step"]
->[上一个](grpc.md)
->[下一个](Database-per-microservice.md)
+>[上一页](grpc.md)
+>[下一页](database-per-microservice.md)

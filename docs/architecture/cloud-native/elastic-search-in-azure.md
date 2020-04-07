@@ -2,13 +2,13 @@
 title: 云原生应用程序中的弹性搜索
 description: 了解如何将弹性搜索功能添加到云本机应用程序。
 author: robvet
-ms.date: 01/22/2020
-ms.openlocfilehash: 1bce255b6315006b11e0b6ac77040300f67ed984
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/02/2020
+ms.openlocfilehash: da6b9402cf266f5a298b05cf837805b2377bc75a
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141284"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805560"
 ---
 # <a name="elasticsearch-in-a-cloud-native-app"></a>云原生应用程序中的弹性搜索
 
@@ -43,8 +43,6 @@ ms.locfileid: "79141284"
 - [命令和查询责任分离 (CQRS) 模式](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
 - [事件采购模式](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
-
-- [RDBMS vs. NoSQL 数据库：概述](https://maxivak.com/rdbms-vs-nosql-databases/)
 
 - [为什么在 CAP 定理中 RDBMS 分区容错，为什么它可用？](https://stackoverflow.com/questions/36404765/why-isnt-rdbms-partition-tolerant-in-cap-theorem-and-why-is-it-available)
 
@@ -83,5 +81,5 @@ ms.locfileid: "79141284"
 - [阿帕奇·卢塞内简介](https://www.baeldung.com/lucene)
 
 >[!div class="step-by-step"]
->[上一个](azure-caching.md)
->[下一个](resiliency.md) <!-- Next Chapter -->
+>[上一页](azure-caching.md)
+>[下一页](resiliency.md) <!-- Next Chapter -->

@@ -1,16 +1,16 @@
 ---
-title: 关系与 NoSQL 数据
+title: 关系与NoSQL 数据
 description: 了解云原生应用程序中的关系数据和 NoSQL 数据
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: 04693e30ba3848f1e51f1c69a75be5f18ead4cf1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3fb3dcc3a87e278c05f3e15d261245f4d61453d1
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141414"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805807"
 ---
-# <a name="relational-vs-nosql-data"></a>关系与 NoSQL 数据
+# <a name="relational-vs-nosql-data"></a>关系与NoSQL 数据
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -110,7 +110,7 @@ NoSQL 数据库通常支持高可用性和分区容差。 它们横向扩展，�
 这些功能对于提供大量数据库但管理这些数据库的资源有限的组织尤其重要。
 通过选择处理核心、内存和基础存储的数量，可以在几分钟内预配 Azure 数据库。 您可以动态扩展数据库并动态调整资源，但停机时间很少或没有停机时间。
 
-## <a name="azure-sql-database"></a>Azure SQL 数据库
+## <a name="azure-sql-database"></a>Azure SQL Database
 
 具有 Microsoft SQL Server 专业知识的开发团队应考虑[Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/)。 它是基于 Microsoft SQL Server 数据库引擎的完全托管关系数据库即服务 （DBaaS）。 该服务共享 SQL Server 的本地版本中的许多功能，并运行 SQL Server 数据库引擎的最新稳定版本。
 
@@ -275,7 +275,7 @@ Kubernetes 使用*服务构造*允许客户端从单个 DNS 条目处理一组�
 
 更耗时的任务之一是从一个数据平台将数据迁移到另一个数据平台。 [Azure 数据迁移服务](https://azure.microsoft.com/services/database-migration/)可帮助加快此类工作。 它可以将数据从多个外部数据库源迁移到 Azure 数据平台，但停机时间最少。 目标平台包括以下服务：
 
-- Azure SQL 数据库
+- Azure SQL Database
 - Azure Database for MySQL
 - Azure Database for MariaDB
 - Azure Database for PostgreSQL
@@ -284,5 +284,5 @@ Kubernetes 使用*服务构造*允许客户端从单个 DNS 条目处理一组�
 该服务提供建议，指导您完成执行迁移所需的更改，无论是小还是大。
 
 >[!div class="step-by-step"]
->[上一个](Database-per-microservice.md)
->[下一个](azure-caching.md)
+>[上一页](database-per-microservice.md)
+>[下一页](azure-caching.md)
