@@ -51,7 +51,7 @@ Docker 应用的开发流程：1 - 编写应用代码，2 - 编写 Dockerfile/s�
 
 首先，请务必按以下说明所述安装适用于 Windows 的 [Docker 社区版 (CE)](https://docs.docker.com/docker-for-windows/)：
 
-[Get started with Docker CE for Windows](https://docs.docker.com/docker-for-windows/)（适用于 Windows 的 Docker CE 入门）
+[适用于 Windows 的 Docker CE 入门](https://docs.docker.com/docker-for-windows/)
 
 此外，需要安装了“.NET Core 跨平台开发”工作负载的 Visual Studio 2019 版本 16.4 或更高版本，如图 5-2 所示  。
 
@@ -63,7 +63,7 @@ Docker 应用的开发流程：1 - 编写应用代码，2 - 编写 Dockerfile/s�
 
 ### <a name="additional-resources"></a>其他资源
 
-- 适用于 Windows 的 Docker CE 入门 \ 
+- 适用于 Windows 的 Docker CE 入门   \
   <https://docs.docker.com/docker-for-windows/>
 
 - **Visual Studio 2019** \
@@ -495,7 +495,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 ### <a name="additional-resources"></a>其他资源
 
-- 将 ASP.NET 容器部署到远程 Docker 主机 \ 
+- 将 ASP.NET 容器部署到远程 Docker 主机   \
   <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>有关使用业务流程协调程序进行测试和部署的注意事项
@@ -532,7 +532,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 ### <a name="additional-resources"></a>其他资源
 
-- 在本地 Docker 容器中调试应用 \ 
+- 在本地 Docker 容器中调试应用   \
   [https://docs.microsoft.com/visualstudio/containers/edit-and-refresh](/visualstudio/containers/edit-and-refresh)
 
 - **Steve Lasker。Build, Debug, Deploy ASP.NET Core Apps with Docker**（使用 Docker 生成、调试、部署 ASP.NET Core 应用）。 视频。 \
