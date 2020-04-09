@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: 18282d14540027e4fae4fe152d3867ad8c223c37
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7df323dacfbee3361fe75d831f1e87df328b194
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181484"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989215"
 ---
 # <a name="default-marshaling-behavior"></a>默认封送处理行为
 互操作封送处理根据规则进行操作，该规则指定与方法参数相关联的数据在托管和非托管内存之间传递时的行为方式。 这些内置规则控制诸如此类的封送处理活动：数据类型转换、被调用方是否可以更改传递给它的数据并将这些更改返回给调用方以及在何种情况下封送拆收器提供性能优化。  
@@ -172,7 +172,7 @@ internal class DelegateTest {
   
  格式化的类型是复杂类型，其中包含显式控制其成员在内存中的布局的信息。 使用 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性提供成员布局信息。 布局可以是以下 <xref:System.Runtime.InteropServices.LayoutKind> 枚举值之一：  
   
-- LayoutKind.Automatic****  
+- **布局金德.自动**  
   
      指示公共语言运行时可以自由重新排序类型的成员以提高效率。 但是，当值类型传递到非托管代码中时，成员的布局是可预测的。 尝试将这种结构进行自动封送处理会导致异常。  
   
@@ -437,7 +437,7 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](blittable-and-non-blittable-types.md)
 - [复制和锁定](copying-and-pinning.md)
