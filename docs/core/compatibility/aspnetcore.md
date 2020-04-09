@@ -2,15 +2,15 @@
 title: ASP.NET Core 中断性变更
 titleSuffix: ''
 description: 列出 ASP.NET Core 中的中断性变更。
-ms.date: 01/10/2020
+ms.date: 03/27/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: c54735cd53fb9cb48eb84045791ccc559fe683cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 95057425614d7c717154ecfb687db2b9a6ca4a18
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093170"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391242"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 中断性变更
 
@@ -18,7 +18,6 @@ ASP.NET Core 提供 .NET Core 使用的 Web 应用开发功能。
 
 本页记录了以下中断性变更：
 
-- [HTTP：浏览器的 SameSite 更改会影响身份验证](#http-browser-samesite-changes-impact-authentication)
 - [已删除过时防伪、CORS、诊断、MVC 和路由 API](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [身份验证：Google+ 弃用](#authentication-google-deprecated-and-replaced)
 - [身份验证：已删除 HttpContext.Authentication 属性](#authentication-httpcontextauthentication-property-removed)
@@ -27,6 +26,7 @@ ASP.NET Core 提供 .NET Core 使用的 Web 应用开发功能。
 - [授权：AddAuthorization 重载已移到不同的程序集](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [授权：已从 AuthorizationFilterContext.Filters 中删除 IAllowAnonymous](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [授权：IAuthorizationPolicyProvider 实现需要新方法](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [Azure:Microsoft 预先指定的 Azure 集成包已删除](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [缓存：已删除 CompactOnMemoryPressure 属性](#caching-compactonmemorypressure-property-removed)
 - [缓存：Microsoft.Extensions.Caching.SqlServer 使用新的 SqlClient 包](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [缓存：ResponseCaching“Pubternal”类型已更改为内部类型](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -36,6 +36,7 @@ ASP.NET Core 提供 .NET Core 使用的 Web 应用开发功能。
 - [托管：已为 IIS 进程外应用启用 HTTPS 重定向](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
 - [托管：已替换 IHostingEnvironment 和 IApplicationLifetime 类型](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
 - [托管：已从 WebHostBuilder 依赖项中删除 ObjectPoolProvider](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
+- [HTTP：浏览器的 SameSite 更改会影响身份验证](#http-browser-samesite-changes-impact-authentication)
 - [HTTP：已删除 DefaultHttpContext 扩展性](#http-defaulthttpcontext-extensibility-removed)
 - [HTTP：HeaderNames 字段已更改为静态只读](#http-headernames-constants-changed-to-static-readonly)
 - [HTTP：响应正文基础结构更改](#http-response-body-infrastructure-changes)
@@ -65,10 +66,31 @@ ASP.NET Core 提供 .NET Core 使用的 Web 应用开发功能。
 - [SignalR：已删除 HubConnection 方法](#signalr-hubconnection-resetsendping-and-resettimeout-methods-removed)
 - [SignalR：已更改 HubConnectionContext 构造函数](#signalr-hubconnectioncontext-constructors-changed)
 - [SignalR：JavaScript 客户端包名称更改](#signalr-javascript-client-package-name-changed)
+- [SignalR：MessagePack 中心协议已移至 MessagePack 2.x 包](#signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package)
 - [SignalR：过时的 API](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
-- [SPA：SpaServices 和 NodeServices 已标记为过时](#spas-spaservices-and-nodeservices-marked-obsolete)
+- [SignalR：UseSignalR 和 UseConnections 方法已删除](#signalr-usesignalr-and-useconnections-methods-removed)
 - [SPA：SpaServices 和 NodeServices 控制台记录器回退默认更改](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
+- [SPA：SpaServices 和 NodeServices 已标记为过时](#spas-spaservices-and-nodeservices-marked-obsolete)
+- [静态文件：CSV 内容类型已更改为符合标准](#static-files-csv-content-type-changed-to-standards-compliant)
 - [目标框架：不支持 .NET Framework](#target-framework-net-framework-support-dropped)
+
+## <a name="aspnet-core-50"></a>ASP.NET Core 5.0
+
+[!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
+
+***
+
+[!INCLUDE[SignalR: MessagePack Hub Protocol moved to MessagePack 2.x package](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-package.md)]
+
+***
+
+[!INCLUDE[SignalR: UseSignalR and UseConnections methods removed](~/includes/core-changes/aspnetcore/5.0/signalr-usesignalr-useconnections-removed.md)]
+
+***
+
+[!INCLUDE[Static files: CSV content type changed to standards-compliant](~/includes/core-changes/aspnetcore/5.0/static-files-csv-content-type-changed.md)]
+
+***
 
 ## <a name="aspnet-core-31"></a>ASP.NET Core 3.1
 

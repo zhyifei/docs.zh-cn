@@ -8,20 +8,23 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: ed1b2df57c118a0ebb6b5ffa4326b3e2eac81dec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e9ef72c2691a4dbb9c68202b29e0f5c77dcdaa74
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75632358"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588185"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 介绍
 
+并行 LINQ (PLINQ) 是[语言集成查询 (LINQ)](../../csharp/programming-guide/concepts/linq/index.md) 模式的并行实现。 PLINQ 将整套 LINQ 标准查询运算符实现为 <xref:System.Linq> 命名空间的扩展方法，并提供适用于并行操作的其他运算符。 PLINQ 将 LINQ 语法的简洁和可靠性与并行编程的强大功能结合在一起。
+
+> [!TIP]
+> 如果不熟悉 LINQ，则它具有统一的模型，用于以类型安全方式查询任何可枚举数据源。 LINQ to Objects 是针对内存中集合（如 <xref:System.Collections.Generic.List%601> 和数组）运行的 LINQ 查询的名称。 本文假定你对 LINQ 有基本的了解。 有关详细信息，请参阅[语言集成查询 (LINQ)](../../csharp/programming-guide/concepts/linq/index.md)。
+
 ## <a name="what-is-a-parallel-query"></a>什么是并行查询？
 
-.NET Framework 3.5 中引入了语言集成查询 (LINQ)。 它具有统一的模型，以类型安全方式查询任何 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 数据源。 LINQ to Objects 是针对内存中集合（如 <xref:System.Collections.Generic.List%601> 和数组）运行的 LINQ 查询的名称。 本文假定你对 LINQ 有基本的了解。 有关详细信息，请参阅[语言集成查询 (LINQ) - C#](../../csharp/programming-guide/concepts/linq/index.md) 或[语言集成查询 (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)。
-
-并行 LINQ (PLINQ) 是 LINQ 模式的并行实现。 一个 PLINQ 查询的许多方面都类似于非并行的 LINQ to Objects 查询。 与顺序 LINQ 查询一样，PLINQ 查询对任何内存中 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 数据源执行操作，并且推迟了执行，即在枚举查询前不会开始执行。 主要区别在于，PLINQ 会尝试充分利用系统上的所有处理器。 方法是将数据源分区成片段，然后在多个处理器上针对单独工作线程上的每个片段执行并行查询。 在许多情况下，并行执行意味着查询运行速度显著提高。
+一个 PLINQ 查询的许多方面都类似于非并行的 LINQ to Objects 查询。 与顺序 LINQ 查询一样，PLINQ 查询对任何内存中 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 数据源执行操作，并且推迟了执行，即在枚举查询前不会开始执行。 主要区别在于，PLINQ 会尝试充分利用系统上的所有处理器。 方法是将数据源分区成片段，然后在多个处理器上针对单独工作线程上的每个片段执行并行查询。 在许多情况下，并行执行意味着查询运行速度显著提高。
 
 通过并行执行，通常只需向数据源添加 <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 查询操作，PLINQ 即可显著提升性能（与某些类型查询的旧代码相比）。 但是，并行可能会引入其自身的复杂性，因此并非所有的查询操作的运行速度在 PLINQ 中都更快。 事实上，并行实际上会降低某些查询的速度。 因此，应了解排序等问题将如何对并行查询产生影响。 有关详细信息，请参阅[了解 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。
 
@@ -134,5 +137,5 @@ PLINQ 支持固定数量的分区（尽管在运行时期间为了负载均衡�
 
 ## <a name="see-also"></a>请参阅
 
-- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [了解 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-ms.openlocfilehash: 272f25d62cb63c60209be3bc54dc5e76fb30df54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 312c71b787ac7b4aa092f1517d2ed5af314a22e4
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134233"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635881"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>如何：取消 PLINQ 查询
 下面的示例展示了取消 PLINQ 查询的两种方法。 第一个示例展示了如何取消主要由数据遍历组成的查询。 第二个示例展示了如何取消包含计算成本很高的用户函数的查询。
@@ -33,9 +33,9 @@ PLINQ 框架不会将一个 <xref:System.OperationCanceledException> 滚动到 <
 
 关于取消的一般性指南如下：
 
-1. 如果执行用户委托取消，应将外部 <xref:System.Threading.CancellationToken> 告知给 PLINQ，并抛出 <xref:System.OperationCanceledException>(externalCT)。
+1. 如果执行用户委托取消，应将外部 <xref:System.Threading.CancellationToken> 告知给 PLINQ，并引发 <xref:System.OperationCanceledException>(externalCT)。
 
-2. 如果发生取消且没有抛出其他任何异常，应处理 <xref:System.OperationCanceledException>，而不是 <xref:System.AggregateException>。
+2. 如果发生取消且没有引发其他任何异常，则处理 <xref:System.OperationCanceledException>，而不是 <xref:System.AggregateException>。
 
 ## <a name="example"></a>示例
 
@@ -44,14 +44,14 @@ PLINQ 框架不会将一个 <xref:System.OperationCanceledException> 滚动到 <
 [!code-csharp[PLINQ#17](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#17)]
 [!code-vb[PLINQ#17](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#17)]
 
-在用户代码中处理取消时，无需在查询定义中使用 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>。 不过，之所以建议这样做是因为，<xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 对查询性能没有影响，并让取消由查询运算符和用户代码进行处理。
+在用户代码中处理取消时，无需在查询定义中使用 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>。 不过，之所以建议使用 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 是因为，<xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 对查询性能没有影响，并让取消由查询运算符和用户代码进行处理。
 
 为了确保系统响应速度，建议每毫秒检查一次取消；不过，只要不超过每 10 毫秒一次，任何频率都认为是可接受的。 此频率不得对代码性能产生不利影响。
 
-如果枚举器已遭清理（例如，当代码跳出循环访问查询结果的 foreach（Visual Basic 中的 For Each）循环时），查询就会被取消，但不会抛出异常。
+如果枚举器已遭清理（例如，当代码跳出循环访问查询结果的 foreach（Visual Basic 中的 For Each）循环时），查询就会被取消，但不会引发异常。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Linq.ParallelEnumerable>
-- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [托管线程中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)
