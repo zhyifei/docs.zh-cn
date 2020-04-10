@@ -81,6 +81,8 @@
           href: how-to-guides/how-to-use-the-automl-api.md
     - name: API
       items:
+        - name: 安装额外的依赖项
+          href: how-to-guides/install-extra-dependencies.md
         - name: 加载数据
           href: how-to-guides/load-data-ml-net.md
         - name: 准备数据
