@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 341d5a2e62ca7f94a8448fa0c1286cf7e599c759
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: f0ca111000033f9db84145a38e8d567f96b75d1d
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546661"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121082"
 ---
 # <a name="c-operators-c-reference"></a>C# 运算符（C# 参考）
 
@@ -43,7 +43,7 @@ Console.WriteLine(a); //  output: 8
 | 运算符 | 类别或名称 |
 | --------- | ---------------- |
 | [x.y](member-access-operators.md#member-access-expression-)、[x?.y](member-access-operators.md#null-conditional-operators--and-)、[x?[y]](member-access-operators.md#null-conditional-operators--and-)、[f(x)](member-access-operators.md#invocation-expression-)、[a&#91;i&#93;](member-access-operators.md#indexer-operator-)、[x++](arithmetic-operators.md#increment-operator-)、[x--](arithmetic-operators.md#decrement-operator---)、[new](new-operator.md)、[typeof](type-testing-and-cast.md#typeof-operator)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](default.md)、[nameof](nameof.md)、[delegate](delegate-operator.md)、[sizeof](sizeof.md)、[stackalloc](stackalloc.md)、[x->y](pointer-related-operators.md#pointer-member-access-operator--) | 基本 |
-| [+x](arithmetic-operators.md#unary-plus-and-minus-operators)、[-x](arithmetic-operators.md#unary-plus-and-minus-operators)、[\!x](boolean-logical-operators.md#logical-negation-operator-)、[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-)、[++x](arithmetic-operators.md#increment-operator-)、[--x](arithmetic-operators.md#decrement-operator---)、[^x](member-access-operators.md#index-from-end-operator-)、[(T)x](type-testing-and-cast.md#cast-operator-)、[await](await.md)、[&x](pointer-related-operators.md#address-of-operator-)、[*x](pointer-related-operators.md#pointer-indirection-operator-)、[true 和 false](true-false-operators.md) | 一元 |
+| [+x](arithmetic-operators.md#unary-plus-and-minus-operators)、[-x](arithmetic-operators.md#unary-plus-and-minus-operators)、[\!x](boolean-logical-operators.md#logical-negation-operator-)、[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-)、[++x](arithmetic-operators.md#increment-operator-)、[--x](arithmetic-operators.md#decrement-operator---)、[^x](member-access-operators.md#index-from-end-operator-)、[(T)x](type-testing-and-cast.md#cast-expression)、[await](await.md)、[&x](pointer-related-operators.md#address-of-operator-)、[*x](pointer-related-operators.md#pointer-indirection-operator-)、[true 和 false](true-false-operators.md) | 一元 |
 | [x..y](member-access-operators.md#range-operator-) | 范围 |
 | [switch](../../whats-new/csharp-8.md#switch-expressions) | `switch` 表达式 |
 | [x * y](arithmetic-operators.md#multiplication-operator-)、[x / y](arithmetic-operators.md#division-operator-)、[x % y](arithmetic-operators.md#remainder-operator-) | 乘法|
@@ -64,8 +64,8 @@ Console.WriteLine(a); //  output: 8
 
 当运算符的优先级相同，运算符的结合性决定了运算的执行顺序：
 
-- 左结合运算符按从左到右的顺序计算。 除[赋值运算符](assignment-operator.md)和 [null 合并运算符](null-coalescing-operator.md)外，所有二元运算符都是左结合运算符。 例如，`a + b - c` 将计算为 `(a + b) - c`。
-- 右结合运算符按从右到左的顺序计算。 赋值运算符、null 合并运算符和[条件运算符`?:`](conditional-operator.md)是右结合运算符。 例如，`x = y = z` 将计算为 `x = (y = z)`。
+- 左结合运算符按从左到右的顺序计算。  除[赋值运算符](assignment-operator.md)和 [null 合并运算符](null-coalescing-operator.md)外，所有二元运算符都是左结合运算符。 例如，`a + b - c` 将计算为 `(a + b) - c`。
+- 右结合运算符按从右到左的顺序计算。  赋值运算符、null 合并运算符和[条件运算符`?:`](conditional-operator.md)是右结合运算符。 例如，`x = y = z` 将计算为 `x = (y = z)`。
 
 使用括号更改运算符结合性所施加的计算顺序：
 
