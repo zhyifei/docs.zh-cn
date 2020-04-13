@@ -3,12 +3,12 @@ title: 保护 .NET 微服务和 Web 应用程序
 description: .NET 微服务和 Web 应用中的安全性 - 了解 ASP.NET Core Web 应用中的身份验证选项。
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: 0ac2591f8650e9f8cf29560735a9ec803d29ee4f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 56ebd95c8a24c7c8d30d3c6acef6650cb63383c6
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628327"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988110"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>确保 .NET 微服务和 Web 应用的安全性
 
@@ -16,7 +16,7 @@ ms.locfileid: "77628327"
 
 ## <a name="implement-authentication-in-net-microservices-and-web-applications"></a>在 .NET 微服务和 Web 应用中实施身份验证
 
-通常有必要将服务发布的资源和 API 限制为特定受信任的用户或客户端。 制定有关这些种类的 API 级别信任决策的第一步是身份验证。 身份验证是可靠验证用户标识的流程。
+通常有必要将服务发布的资源和 API 限制为特定受信任的用户或客户端。 制定有关这些种类的 API 级别信任决策的第一步是身份验证。 身份验证是可靠验证用户身份的过程。
 
 在微服务方案中，通常会集中处理身份验证。 如果使用 API 网关，则网关是一个进行身份验证的好方法，如图 9-1 所示。 如果使用此方法，请确保在不使用 API 网关的情况下，无法直接访问各个微服务，除非其他安全性措施已就绪，可对来自网关和其他位置的消息进行身份验证。
 
@@ -34,7 +34,7 @@ ms.locfileid: "77628327"
 
 ### <a name="authenticate-with-aspnet-core-identity"></a>使用 ASP.NET Core 标识进行身份验证
 
-在 ASP.NET Core 中用于标识应用程序用户的主要机制是 [ASP.NET Core 标识](/aspnet/core/security/authentication/identity)成员身份系统。 ASP.NET Core 标识会将用户信息（包括登录信息、角色和声明）存储在由开发人员配置的数据存储中。 通常情况下，ASP.NET Core 标识数据存储是 `Microsoft.AspNetCore.Identity.EntityFrameworkCore` 包中提供的实体框架存储。 但是，自定义存储或其他第三方包可用于将标识信息存储在 Azure 表存储、CosmosDB 或其他位置。
+ASP.NET Core 中用于确定应用程序的用户的主要机制是 [ASP.NET Core 标识](/aspnet/core/security/authentication/identity)成员身份系统。 ASP.NET Core 标识会将用户信息（包括登录信息、角色和声明）存储在由开发人员配置的数据存储中。 通常情况下，ASP.NET Core 标识数据存储是 `Microsoft.AspNetCore.Identity.EntityFrameworkCore` 包中提供的实体框架存储。 但是，自定义存储或其他第三方包可用于将标识信息存储在 Azure 表存储、CosmosDB 或其他位置。
 
 > [!TIP]
 > ASP.NET Core 2.1 及更高版本提供了 [ASP.NET Core 标识](/aspnet/core/security/authentication/identity)作为 [Razor 类库](/aspnet/core/razor-pages/ui-class)，因此项目中不会有很多必要的代码，这与以前版本的情况相同。 有关如何根据需要自定义标识代码的详细信息，请参阅 [ASP.NET Core 项目中的基架标识](/aspnet/core/security/authentication/scaffold-identity)。
@@ -215,7 +215,7 @@ public void ConfigureServices(IServiceCollection services)
 
 [IdentityServer4](https://github.com/IdentityServer/IdentityServer4) 和 [OpenIddict](https://github.com/openiddict/openiddict-core) 是 OpenID Connect 提供程序，可轻松地与 ASP.NET Core 标识集成，使用户能够从 ASP.NET Core 服务颁发安全令牌。 [IdentityServer4 文档](https://identityserver4.readthedocs.io/en/latest/)具有有关如何使用库的详细说明。 但是，使用 IdentityServer4 颁发令牌的基本步骤如下所示。
 
-1. 调用 Startup.Configure 方法中的 app.UseIdentityServer，将 IdentityServer4 添加到应用程序的 HTTP 请求处理管道。 这使库能够为指向 OpenID Connect 和 OAuth2 终结点（如 /connect/token）的请求提供服务。
+1. 可在 Startup.Configure 方法中调用 app.UseIdentityServer，以将 IdentityServer4 添加到应用程序的 HTTP 请求处理管道。 这使库能够为指向 OpenID Connect 和 OAuth2 终结点（如 /connect/token）的请求提供服务。
 
 2. 通过调用 services.AddIdentityServer，配置 Startup.ConfigureServices 中的 IdentityServer4。
 
