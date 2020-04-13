@@ -3,12 +3,12 @@ title: 如何修改字符串内容 - C# 指南
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 260e4022c514db0cee3c1459b9d746a1c8e2addd
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543256"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121124"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>如何修改以 C\# 编写的字符串内容
 
@@ -70,7 +70,7 @@ ms.locfileid: "77543256"
 
 可以使用不安全的代码修改固定块中的字符串，但是强烈  建议不要在创建字符串后修改字符串内容。 这样做将以不可预知的方式中断操作。 例如，如果某人暂存一个与你的内容相同的字符串，他们将获得你的副本，并且根本不希望你修改他们的字符串。
 
-可通过查看 [GitHub 存储库](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的代码来尝试这些示例。 也可以下载这些示例的 [zip 文件](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
+可通过查看 [GitHub 存储库](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)中的代码来尝试这些示例。 也可以下载这些示例的 [zip 文件](../../../samples/snippets/csharp/how-to/strings.zip)。
 
 ## <a name="see-also"></a>另请参阅
 

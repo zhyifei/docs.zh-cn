@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 36bfa46cebd2b35c4985dfc23dbe84f8f5dc9201
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 658043f8d5e149064f6da328657b2ccef9b5da94
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846284"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121446"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! （null 包容）运算符（C# 参考）
 
@@ -19,7 +19,7 @@ ms.locfileid: "78846284"
 
 null 包容运算符在运行时不起作用。 它仅通过更改表达式的 null 状态来影响编译器的静态流分析。 在运行时，表达式 `x!` 的计算结果为基础表达式 `x` 的结果。
 
-有关可为空引用类型特性的详细信息，请参见[可为空引用类型](../../nullable-references.md)。
+有关可为空引用类型特性的详细信息，请参见[可为空引用类型](../builtin-types/nullable-reference-types.md)。
 
 ## <a name="examples"></a>示例
 

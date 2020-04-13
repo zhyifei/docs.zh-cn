@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e609b8006846cd202a6a7eeec2529cf1fbb09e7c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0be59258df10aa13920551f011d68bc8efe20b93
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937033"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888099"
 ---
 ### <a name="duplicated-apis-removed-from-windows-forms"></a>从 Windows 窗体中删除了重复的 API
 
@@ -12,7 +12,7 @@ ms.locfileid: "75937033"
 
 #### <a name="change-description"></a>更改描述
 
-.NET Core 3.0 预览版 4 在无意中复制了 <xref:System.Windows.Forms?displayProperty=fullName> 命名空间中已经存在的 <xref:System.ComponentModel.Design?displayProperty=fullName> 命名空间中的许多类型。 从 .NET Core 3.0 RC1 开始，这些重复的类型不再可用。 下表列出了原始类型及其重复类型：
+.NET Core 3.0 预览版 4 在无意中复制了 <xref:System.ComponentModel.Design?displayProperty=fullName> 命名空间中已经存在的 <xref:System.Windows.Forms?displayProperty=fullName> 命名空间中的许多类型。 从 .NET Core 3.0 RC1 开始，这些重复的类型不再可用。 下表列出了原始类型及其重复类型：
 
 > [!div class="mx-tdCol2BreakAll"]
 > |原始类型|重复类型|
@@ -37,7 +37,7 @@ Windows 窗体
 
 #### <a name="affected-apis"></a>受影响的 API
 
-- 无法通过 API 分析检测到。
+- 无。
 
 <!--
 

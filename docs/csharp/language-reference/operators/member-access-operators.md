@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: a132e527deadcffb4826c1965987fc09da470a09
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 90066b1e9c219f66fc0c76423679e81aa3fa6770
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635300"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81120983"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>成员访问运算符和表达式（C# 参考）
 
@@ -170,7 +170,7 @@ if (handler != null)
 
 此外可以使用括号来调整表达式中计算操作的顺序。 有关详细信息，请参阅 [C# 运算符](index.md)。
 
-[强制转换表达式](type-testing-and-cast.md#cast-operator-)，其执行显式类型转换，也可以使用括号。
+[强制转换表达式](type-testing-and-cast.md#cast-expression)，其执行显式类型转换，也可以使用括号。
 
 ## <a name="index-from-end-operator-"></a>从末尾运算符 ^ 开始索引
 
