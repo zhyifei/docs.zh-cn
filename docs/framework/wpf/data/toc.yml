@@ -80,8 +80,6 @@
       href: how-to-clear-bindings.md
     - name: 查找由 DataTemplate 生成的元素
       href: how-to-find-datatemplate-generated-elements.md
-    - name: 绑定到 Web 服务
-      href: how-to-bind-to-a-web-service.md
 - name: 使用 LINQ to XML 进行数据绑定
   items:
     - name: 概述
