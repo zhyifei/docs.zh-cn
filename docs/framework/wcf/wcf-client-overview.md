@@ -7,18 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 7905d540e0f06dd2863cf80381210307e3021918
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c12579062b04cfb46e14d5c3d734a7c155f8d654
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183063"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278881"
 ---
 # <a name="wcf-client-overview"></a>WCF 客户端概述
+
 本节介绍客户端应用程序执行哪些操作、如何配置、创建和使用 Windows 通信基础 （WCF） 客户端以及如何保护客户端应用程序。  
   
 ## <a name="using-wcf-client-objects"></a>使用 WCF 客户端对象  
- 客户端应用程序是使用 WCF 客户端与另一个应用程序进行通信的托管应用程序。 要为 WCF 服务创建客户端应用程序，需要以下步骤：  
+ 客户端应用程序是使用 WCF 客户端与另一个应用程序进行通信的托管应用程序。 为 WCF 服务创建客户端应用程序需要以下步骤：  
   
 1. 获取服务终结点的服务协定、绑定以及地址信息。  
   
@@ -28,7 +29,7 @@ ms.locfileid: "79183063"
   
 4. 关闭 WCF 客户端对象。  
   
- 以下部分将讨论上述这些步骤，并简单介绍以下问题：  
+以下部分将讨论上述这些步骤，并简单介绍以下问题：  
   
 - 处理错误。  
   
@@ -70,7 +71,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  可以通过使用其中一个构造函数将此类创建为一个本地对象，并对该本地对象进行配置，然后使用它连接到 `ISampleService` 类型的服务。  
   
- 建议您首先创建 WCF 客户端对象，然后使用它并在单个 try/catch 块内将其关闭。 不应使用 语句`using`（`Using`在 Visual Basic 中），因为它可能会掩盖某些失败模式下的异常。 有关详细信息，请参阅以下部分以及[使用关闭和中止来释放 WCF 客户端资源](./samples/use-close-abort-release-wcf-client-resources.md)。  
+ 建议您首先创建 WCF 客户端对象，然后使用它并在单个 try/catch 块内将其关闭。 不要使用 语句`using`（`Using`在 Visual Basic 中），因为它可以掩盖某些失败模式下的异常。 有关详细信息，请参阅以下部分以及[使用关闭和中止来释放 WCF 客户端资源](./samples/use-close-abort-release-wcf-client-resources.md)。  
   
 ### <a name="contracts-bindings-and-addresses"></a>协定、绑定和地址  
  在创建 WCF 客户端对象之前，必须配置客户端对象。 具体而言，它必须有一个服务*终结点*要使用。 终结点由服务协定、绑定和地址组成。 （有关终结点的详细信息，请参阅[终结点：地址、绑定和协定](./feature-details/endpoints-addresses-bindings-and-contracts.md)。通常，此信息位于客户端应用程序配置文件[\<中的终结点>](../configure-apps/file-schema/wcf/endpoint-of-client.md)元素中，例如 Svcutil.exe 工具生成的终结点，并在创建客户端对象时自动加载。 这两种 WCF 客户端类型都有重载，使您能够以编程方式指定此信息。  
@@ -79,7 +80,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  [!code-xml[C_GeneratedCodeFiles#19](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
   
- 此配置文件在 `<client>` 元素中指定目标终结点。 有关使用多个目标终结点的详细信息，请参阅 或<xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType><xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType>构造函数。  
+ 此配置文件在 `<client>` 元素中指定目标终结点。 有关使用多个目标终结点的详细信息，请参阅 或<xref:System.ServiceModel.ClientBase%601.%23ctor%2A><xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A>构造函数。  
   
 ## <a name="calling-operations"></a>调用操作  
  创建并配置客户端对象后，创建 try/catch 块，调用操作的方式与对象为本地时相同，并关闭 WCF 客户端对象。 当客户端应用程序调用第一个操作时，WCF 会自动打开基础通道，并且当回收对象时关闭基础通道。 （或者，还可以在调用其他操作之前或之后显式打开和关闭该通道。）  
@@ -127,7 +128,7 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- 可以通过创建 WCF 客户端对象并调用其方法来调用操作，如下代码示例所示。 请注意，WCF 客户端对象的打开、调用和关闭发生在单个 try/catch 块中。 有关详细信息，请参阅使用[WCF 客户端访问服务](./feature-details/accessing-services-using-a-client.md)[，并使用关闭和中止来释放 WCF 客户端资源](./samples/use-close-abort-release-wcf-client-resources.md)。  
+ 可以通过创建 WCF 客户端对象并调用其方法来调用操作，如下代码示例所示。 WCF 客户端对象的打开、调用和关闭发生在单个 try/catch 块中。 有关详细信息，请参阅使用[WCF 客户端访问服务](./feature-details/accessing-services-using-a-client.md)[，并使用关闭和中止来释放 WCF 客户端资源](./samples/use-close-abort-release-wcf-client-resources.md)。  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: d5dd2d962c554b860fb6f68110945d56c4ee03ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2326520039085beb5f5294e23db67b67f9d7d7da
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401027"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243266"
 ---
 # <a name="control-authoring-overview"></a>控件创作概述
 
@@ -227,7 +227,7 @@ ms.locfileid: "79401027"
 
 #### <a name="defining-resources-at-the-element-level"></a>在元素级别定义资源
 
-可以通过创建自定义资源字典并将其与控件的资源字典合并，在元素级别定义共享资源。  采用此方法时，可以为资源文件指定任意名称，并且资源文件可以与控件位于同一文件夹中。 元素级别的资源还可以使用简单字符串作为键。 下面的示例创建名为<xref:System.Windows.Media.LinearGradientBrush>字典1.xaml的资源文件。
+您可以通过创建自定义资源字典并将其与控件的资源字典合并，在元素级别定义共享资源。  采用此方法时，可以为资源文件指定任意名称，并且资源文件可以与控件位于同一文件夹中。 元素级别的资源还可以使用简单字符串作为键。 下面的示例创建名为<xref:System.Windows.Media.LinearGradientBrush>字典1.xaml的资源文件。
 
 [!code-xaml[SharedResources#1](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/Dictionary1.xaml#1)]
 
@@ -264,7 +264,7 @@ ms.locfileid: "79401027"
 
 无需为每一种主题都定义资源。 如果没有为特定主题定义资源，控件将在 `Classic.xaml` 中检查资源。 如果在与当前主题对应的文件或 `Classic.xaml` 中没有定义资源，控件将使用常规资源，该资源位于名为 `generic.xaml` 的资源字典文件中。  `generic.xaml` 文件与特定于主题的资源词典文件位于同一文件夹中。 尽管 `generic.xaml` 不与特定的 Windows 主题对应，但它仍是一个主题级别字典。
 
-包含主题和 UI 自动化支持的[C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp)或[可视化基本](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic)数字 UpDown 自定义控件包含`NumericUpDown`两个用于该控件的资源字典：一个在泛型.xaml 中，另一个位于 Luna.NormalColor.xaml 中。
+包含主题和 UI 自动化支持的[C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp)或[可视化基本](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic)数字 UpDown 自定义控件包含`NumericUpDown`两个用于该控件的资源字典：一个在泛型.xaml 中，另一个位于 Luna.NormalColor.xaml 中。
 
 将 放入<xref:System.Windows.Controls.ControlTemplate>任何特定于主题的资源字典文件中时，必须为控件创建静态构造函数，并在 上<xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29><xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>调用 方法，如以下示例所示。
 

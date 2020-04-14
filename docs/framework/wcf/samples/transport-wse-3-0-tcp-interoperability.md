@@ -2,12 +2,12 @@
 title: 传输：WSE 3.0 TCP 互操作性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 55c59fe3a677d3aea8de62ae714e1007cfcbb86a
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: f799f3b6968f31472acc7752846bab34351648db
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121288"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278894"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>传输：WSE 3.0 TCP 互操作性
 WSE 3.0 TCP 互操作性传输示例演示如何实现 TCP 双工会话作为自定义 Windows 通信基础 （WCF） 传输。 还演示如何通过网络，使用通道层的扩展性与已经过部署的现有系统进行交互。 以下步骤演示如何构建此自定义 WCF 传输：  
@@ -39,7 +39,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何实现 TCP 双工会话作为自
   
  一旦将 <xref:System.ServiceModel.Channels.Message> 编码为字节，就必须通过线路传输它。 这要求系统定义消息边界。 WSE 3.0 使用[DIME](https://docs.microsoft.com/archive/msdn-magazine/2002/december/sending-files-attachments-and-soap-messages-via-dime)版本作为其帧协议。 `WriteData` 封装框架逻辑以便将 byte[] 包装到一组 DIME 记录中。  
   
- 用来接收消息的逻辑与组帧逻辑非常相似。 其复杂性主要在于，处理读取套接字时所返回的字节数比已请求的更少这一情况。 若要接收消息，`WseTcpDuplexSessionChannel` 读取网络中的字节，对 DIME 组帧进行解码，然后使用 <xref:System.ServiceModel.Channels.MessageEncoder> 将 byte[] 转换为 <xref:System.ServiceModel.Channels.Message>。  
+ 接收消息的逻辑类似。 主要的复杂性是处理这样一个事实，即套接字读取可以返回的字节数比请求的要少。 若要接收消息，`WseTcpDuplexSessionChannel` 读取网络中的字节，对 DIME 组帧进行解码，然后使用 <xref:System.ServiceModel.Channels.MessageEncoder> 将 byte[] 转换为 <xref:System.ServiceModel.Channels.Message>。  
   
  基 `WseTcpDuplexSessionChannel` 假设它接收连接的套接字。 这个基类处理套接字的关闭。 可通过三个位置与套接字关闭进行交互：  
   
@@ -47,7 +47,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何实现 TCP 双工会话作为自
   
 - On[Begin]Close - 正常关闭套接字（软关闭）。  
   
-- session.CloseOutputSession - 关闭出站数据流（半关闭）。  
+- 会话。关闭输出会话 -- 关闭出站数据流（半关闭）。  
   
 ## <a name="channel-factory"></a>通道工厂  
  编写 TCP 传输的下一步是为客户端通道创建 <xref:System.ServiceModel.Channels.IChannelFactory> 的实现。  
@@ -170,7 +170,7 @@ Symbols:
         CONTOSO  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
+## <a name="set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
 1. 要运行此示例，必须安装 Microsoft .NET 的[Web 服务增强功能 （WSE） 3.0](https://www.microsoft.com/download/details.aspx?id=14089)和 WSE`TcpSyncStockService`示例。
   
@@ -179,7 +179,7 @@ Symbols:
   
 1. 安装了 `TcpSyncStockService` 示例后，请执行下列操作：  
   
-    1. 在 Visual Studio 中打开 `TcpSyncStockService`。（请注意，TcpSyncStockService 示例是随 WSE 3.0 一起安装的。 它不属于此示例的代码。）  
+    1. 打开`TcpSyncStockService`视觉工作室。 （TcpSyncStock服务示例与 WSE 3.0 一起安装。 它不是此示例代码的一部分。  
   
     2. 将 StockService 项目设置为启动项目。  
   

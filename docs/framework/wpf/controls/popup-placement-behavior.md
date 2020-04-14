@@ -7,12 +7,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 063b309ebaf0944787ce40725eed250e59f09dff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c377e62ffd334638031baee4d4831ac5a31acf3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176755"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243253"
 ---
 # <a name="popup-placement-behavior"></a>Popup 放置行为
 控件<xref:System.Windows.Controls.Primitives.Popup>在浮动在应用程序上的独立窗口中显示内容。 可以使用<xref:System.Windows.Controls.Primitives.Popup> <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>、 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>、 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>、 和<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>属性指定相对于控件、鼠标或屏幕的位置。  这些属性协同工作，使您能够灵活地指定 的位置<xref:System.Windows.Controls.Primitives.Popup>。  
@@ -205,4 +205,4 @@ ms.locfileid: "79176755"
   
 ## <a name="see-also"></a>另请参阅
 
-- [Popup 放置示例](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)
+- [Popup 放置示例](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: e7273c1e140e52eb37a30b6cabeb9e9a83a6fa2d
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 5649ef4cc05c9c16b1f8f626ba5e2e584b0e52eb
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121556"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278907"
 ---
 # <a name="override-the-identity-of-a-service-for-authentication"></a>重写服务标识以进行身份验证
 
 通常情况下不需要设置服务上的标识，因为客户端凭据类型的选择即规定了服务元数据中公开的标识的类型。 例如，以下配置代码使用[\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)元素并将`clientCredentialType`属性设置到 Windows。  
 
- 下面的 Web 服务描述语言 (WSDL) 片断演示前面定义的终结点的标识。 在此示例中，服务作为自托管服务在特定用户帐户 （username@contoso.com） 下运行，因此用户主体名称 （UPN） 标识包含帐户名称。 在 Windows 域中，UPN 也称为用户登录名。  
+ 下面的 Web 服务描述语言 (WSDL) 片断演示前面定义的终结点的标识。 在此示例中，服务作为自托管服务在特定用户帐户 （username@contoso.com） 下运行，因此用户主体名称 （UPN） 标识包含帐户名称。 UPN 也称为 Windows 域中的用户登录名称。  
 
  有关演示标识设置的示例应用程序，请参阅[服务标识示例](../samples/service-identity-sample.md)。 有关服务标识的详细信息，请参阅[服务标识和身份验证](../feature-details/service-identity-and-authentication.md)。  
   
@@ -41,24 +41,24 @@ ms.locfileid: "81121556"
   
 - 如果使用消息级安全，则根据身份验证模式的不同，身份验证可能会失败：  
   
-- 如果使用 `spnego` 模式，并且 `AllowNtlm` 属性设置为 `false`，则身份验证将失败。  
+- 如果使用`spnego`模式，并且`AllowNtlm`属性设置为`false`，身份验证将失败。  
   
-- 在使用 `spnego` 模式并且 `AllowNtlm` 属性设置为 `true` 的情况下，如果 UPN 为空，则身份验证将失败；如果 SPN 为空，则身份验证将成功。  
+- 如果使用`spnego`模式，并且`AllowNtlm`属性设置为`true`，如果 UPN 为空，则身份验证将失败，但如果 SPN 为空，则身份验证将成功。  
   
 - 如果使用 Kerberos direct（也称为“一次完成”），则身份验证将失败。  
   
-### <a name="using-the-identity-element-in-configuration"></a>在\<配置中使用标识>元素  
- 如果将前面演示的绑定中的客户端凭据类型更改为证书`,`，则生成的 WSDL 将包含一个 Base64 序列化 X.509 证书作为标识值，如下面的代码所示。 这是除 Windows 之外的所有客户端凭据类型的默认值。  
+### <a name="use-the-identity-element-in-configuration"></a>在\<配置中使用标识>元素  
+ 如果在以前显示的绑定中更改客户端凭据类型`Certificate`，则生成的 WSDL 包含标识值的 Base64 序列化 X.509 证书，如下代码所示。 这是除 Windows 之外的所有客户端凭据类型的默认值。  
 
  您可以通过在配置中使用<>`identity`元素或在代码中设置标识来更改默认服务标识的值或更改标识的类型。 下面的配置代码使用值 `contoso.com` 设置域名系统 (DNS) 标识。  
 
-### <a name="setting-identity-programmatically"></a>以编程方式设置标识  
- 服务不必显式指定标识，因为 WCF 会自动确定它。 但是，如果需要，WCF 允许您在终结点上指定标识。 下面的代码使用特定的 DNS 标识添加了一个新的服务终结点。  
+### <a name="set-identity-programmatically"></a>以编程方式设置标识  
+ 服务不必显式指定标识，因为 WCF 会自动确定它。 但是，如有必要，WCF 允许您在终结点上指定标识。 下面的代码使用特定的 DNS 标识添加了一个新的服务终结点。  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：创建自定义客户端标识验证工具](how-to-create-a-custom-client-identity-verifier.md)
 - [服务标识和身份验证](../feature-details/service-identity-and-authentication.md)
