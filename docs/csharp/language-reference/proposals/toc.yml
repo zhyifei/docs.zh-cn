@@ -74,6 +74,8 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/ranges.md
         - name: 基于模式的 using 和 using 声明
           href: ../../../../_csharplang/proposals/csharp-8.0/using.md
+        - name: 静态本地函数
+          href: ../../../../_csharplang/proposals/csharp-8.0/static-local-functions.md
         - name: Null 合并分配
           href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
         - name: 只读实例成员
