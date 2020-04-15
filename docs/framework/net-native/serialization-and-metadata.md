@@ -2,12 +2,12 @@
 title: 序列化和元数据
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-ms.openlocfilehash: 7c6fe241fbf92f52abfa0eb66c37bff4d227b4e5
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: cc9adf0e6627ef3190e74fea5d4f0f3afd581811
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241914"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389218"
 ---
 # <a name="serialization-and-metadata"></a>序列化和元数据
 
@@ -15,7 +15,7 @@ ms.locfileid: "81241914"
   
 - 基于反射的第三方序列化程序。 这些程序要求修改你的运行时指令文件，我们会在后面一部分对其进行讨论。  
   
-- 在 .NET Framework 类库中找到的非基于反射的序列化程序。 这些程序可能要求修改运行时指令文件，我们会在 [Microsoft 序列化程序](#Microsoft)部分对其进行讨论。  
+- 在 .NET Framework 类库中找到的非反射序列化器。 这些程序可能要求修改运行时指令文件，我们会在 [Microsoft 序列化程序](#Microsoft)部分对其进行讨论。  
   
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>第三方序列化程序
@@ -59,13 +59,13 @@ ms.locfileid: "81241914"
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
- 你必须为每个类型添加类似以下条目的条目到运行时指令文件：  
+将每种类型的条目（如以下内容）添加到运行时指令文件：  
   
 ```xml  
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- 有关示例中使用的语法的信息，请参阅[\<类型>元素](type-element-net-native.md)。  
+有关示例中使用的语法的信息，请参阅[\<类型>元素](type-element-net-native.md)。  
   
 ## <a name="see-also"></a>另请参阅
 

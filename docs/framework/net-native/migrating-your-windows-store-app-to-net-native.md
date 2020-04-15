@@ -2,12 +2,12 @@
 title: 将 Windows 应用商店应用迁移到 .NET Native
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 36f9ac4647b349ff379869f3415a5fb9e55228e3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 987669fc51eeaf7e3bdef3e91a2f1ce23164a055
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241940"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389707"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>将 Windows 应用商店应用迁移到 .NET 本机
 
@@ -85,7 +85,7 @@ Windows 应用商店应用的 .NET 和 .NET 本机应用在行为上存在许多
 
 - <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> 在基类中包含隐藏成员，因此可能会在没有显示重写的情况下遭到重写。 这也适用于其他 [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) 方法。
 
-- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 和 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 在你试图创建特定组合（例如，ByRef 阵列）时不会发生故障。
+- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>并尝试<xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType>创建某些组合（例如，`byref`对象数组）时，不要失败。
 
 - 你无法使用反射来调用具有指针参数的成员。
 
@@ -117,7 +117,7 @@ Windows 应用商店应用的 .NET 和 .NET 本机应用在行为上存在许多
 
 - 如果你替代了一个值类型的 <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> 和 <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> 方法，请勿调用基类实施。 在 Windows 应用商店应用的 .NET 中，这些方法依赖反射。 在编译时，.NET 本机生成不依赖于运行时反射的实现。 这意味着，如果不重写这两种方法，它们将按预期方式工作，因为 .NET Native 会在编译时生成实现。 然而，替代这些方法并调用基类实施会产生一个异常。
 
-- 大于 1 MB 的值类型不受支持。
+- 不支持大于 1 MB 的值类型。
 
 - 值类型不能在 .NET 本机中具有无参数构造函数。 （C# 和 Visual Basic 禁止对值类型进行无参数构造函数。 然而，这些可以在 IL 中进行创建。）
 
@@ -225,7 +225,7 @@ Cookie 处理由 <xref:System.Net.Http.HttpClient> 和 WinINet 同时执行。  
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
 
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 受支持，但在某些情况下会引发异常，如与 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) 或 byref 变量一起使用时。
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>支持，但在某些情况下，例如与[IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)或`byref`变体一起使用时，它会引发异常。
 
  用于[IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)支持的已弃用 API 包括：
 
@@ -324,7 +324,7 @@ Cookie 处理由 <xref:System.Net.Http.HttpClient> 和 WinINet 同时执行。  
 
 - 在托管类型上实施 <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> 接口
 
-- 通过 [属性，在托管类型上实现](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> 接口。 然而，请注意你无法通过 `IDispatch`调用 COM 对象，而且你的托管对象无法实施 `IDispatch`。
+- 通过 [属性，在托管类型上实现](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> 接口。 但是，不能通过`IDispatch`调用 COM 对象，并且托管对象无法实现`IDispatch`。
 
 使用反射来调用平台调用方法不受支持。 你可以巧妙绕过这种限制，具体做法是将方法调用包装在另一种方法中，并使用反射调用包装方法。
 
@@ -332,7 +332,7 @@ Cookie 处理由 <xref:System.Net.Http.HttpClient> 和 WinINet 同时执行。  
 
 ### <a name="other-differences-from-net-apis-for-windows-store-apps"></a>与 Windows 应用商店应用 .NET API 的其他差异
 
-本节列出了 .NET 本机中不支持的剩余 API。 最大一部分不受支持的 API 是 Windows Communication Foundation (WCF) API。
+本节列出了 .NET 本机中不支持的剩余 API。 最大的一组不支持的 API 是 Windows 通信基础 （WCF） API。
 
 **DataAnnotations (System.ComponentModel.DataAnnotations)**
 
@@ -396,7 +396,7 @@ Cookie 处理由 <xref:System.Net.Http.HttpClient> 和 WinINet 同时执行。  
 
 **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**
 
-.NET 本机中不支持[System.ServiceModel.* 命名空间](xref:System.ServiceModel)中的类型。 这些包括以下类型：
+.NET 本机中不支持[System.ServiceModel.* 命名空间](xref:System.ServiceModel)中的类型。 这些类型包括以下类型：
 
 - <xref:System.ServiceModel.ActionNotSupportedException?displayProperty=nameWithType>
 - <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>
