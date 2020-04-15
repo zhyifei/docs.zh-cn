@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: 0221889f6d736b41546b564273ebb41d49dfb039
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f52432bde84ab7c1ec30ff4033ce95c80606636e
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75559880"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243188"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 入门
 
@@ -28,13 +28,13 @@ ms.locfileid: "75559880"
 
 - [为 Visual Basic 程序员提供的附加资源](additional-resources.md) 提供网站和新闻组列表，它们能够帮助你找到常见问题的答案。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [获取 Visual Basic](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 收录了包含 Visual Basic 支持的 Visual Studio 版本（包括免费版本）的下载链接。
+- [获取 Visual Basic](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 收录了附带 Visual Basic 支持的 Visual Studio 版本（包括免费版本）的下载链接。
 
 - [面向对象的编程](../programming-guide/concepts/object-oriented-programming.md)收录了网页链接，这些网页分别介绍了面向对象的编程，以及如何创建你自己的对象和如何使用对象简化编码。
 
-- [示例](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)收录了指向 Visual Basic 中示例代码的链接。
+- [示例](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)收录了指向 Visual Basic 中示例代码的链接。
 
 - [演练](../walkthroughs.md)列出了阐述 Visual Basic 语言各个方面的帮助页。
 
