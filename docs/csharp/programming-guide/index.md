@@ -26,7 +26,7 @@ ms.locfileid: "75337256"
   
 ## <a name="program-sections"></a>程序部分
 
-[在 C# 程序内部](./inside-a-program/index.md)  
+[C# 程序内部探究](./inside-a-program/index.md)  
   
 [Main() 和命令行参数](./main-and-command-args/index.md)  
 
