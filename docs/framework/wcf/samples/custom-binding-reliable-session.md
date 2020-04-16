@@ -2,12 +2,12 @@
 title: 自定义绑定可靠会话
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: c39dc9c57332800628012e88e1b274296556e756
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 76c701aaae368171bc7047784e1dc126937c84f0
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710950"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463930"
 ---
 # <a name="custom-binding-reliable-session"></a>自定义绑定可靠会话
 
@@ -18,7 +18,7 @@ ms.locfileid: "74710950"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
+> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSession`
 
@@ -29,7 +29,7 @@ ms.locfileid: "74710950"
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。
 
-在定义自定义绑定时，绑定元素的排序非常重要，因为每个元素都表示通道堆栈中的一个层（请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)）。
+绑定元素的顺序在定义自定义绑定时非常重要，因为每个绑定都表示通道堆栈中的一个图层（请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)）。
 
 示例的服务配置定义如下面的代码示例所示。
 
@@ -103,24 +103,23 @@ Press <ENTER> to terminate client.
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 使用以下命令安装 ASP.NET 4.0：
+1. 使用以下命令安装ASP.NET 4.0：
 
     ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+2. 确保已为 Windows[通信基础示例执行一次性设置过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
-4. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
+4. 要在单机或跨计算机配置中运行示例，请按照[运行 Windows 通信基础示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)说明操作。
 
     > [!IMPORTANT]
-    > 在跨计算机配置中运行客户端时，请确保将[\<终结点 >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)元素的 `address` 属性中的 "localhost" 替换为相应计算机的名称，将[\<compositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)的 `clientBaseAddress` 属性替换为相应计算机的名称，如以下示例中所示。
+    > 在跨计算机配置中运行客户端时，请确保将`address`[\<终结点>](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)元素的属性中的"本地主机"和[\<复合Duplex>](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)`clientBaseAddress`的属性替换为相应计算机的名称，如下例所示。
 
     ```xml
     <endpoint name = ""
-    address="http://service_machine_name/servicemodelsamples/service.svc"
-    ... />
+    address="http://service_machine_name/servicemodelsamples/service.svc" />
     <compositeDuplex clientBaseAddress="http://client_machine_name:8000/myClient/" />
     ```

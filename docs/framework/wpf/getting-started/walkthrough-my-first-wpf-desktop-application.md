@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: 65b6fe31e86380162e90820c2cf118a9d1b96b4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: facb9ebebd9ce1904886a946277185ac2c2e4bc4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186588"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463928"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>教程：在 Visual Studio 2019 中创建您的第一个 WPF 应用程序
 
@@ -40,7 +40,7 @@ ms.locfileid: "79186588"
 >
 > 您可以使用此页面顶部的语言选择器在 C# 和 Visual Basic 之间切换示例代码的代码语言。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)安装 **.NET 桌面开发**工作负载。
 
@@ -293,11 +293,11 @@ ms.locfileid: "79186588"
 
 1. 在*`ExpenseItHome.xaml`* 中，将另一<xref:System.Windows.Controls.Grid.ColumnDefinitions%2A>列添加到固定<xref:System.Windows.Controls.ColumnDefinition.Width%2A>为 230 像素的 列：
 
-    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=52-55)]
+    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewColumn)]
 
 2. 向 添加<xref:System.Windows.Controls.Grid.RowDefinitions%2A>另一行，共四行：
 
-    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=57-62)]
+    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewRows)]
 
 3. 通过将<xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType>属性设置为三个控件（边框、ListBox 和 Button）中每个控件中的 1，将控件移动到第二列。
 
@@ -488,12 +488,12 @@ ms.locfileid: "79186588"
 有关创建应用程序的详细信息，请参阅以下主题：
 
 - [应用程序开发](../app-development/index.md)
-- [控制](../controls/index.md)
+- [控件](../controls/index.md)
 - [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)
 - [图形和多媒体](../graphics-multimedia/index.md)
 - [WPF 中的文档](../advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [面板概述](../controls/panels-overview.md)
 - [数据模板概述](../data/data-templating-overview.md)

@@ -2,12 +2,12 @@
 title: 客户端配置
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: ff82f56639ec451c04624d22fff0bcb03f46d946
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 141b7f7fc04f98f267ce520544fb89451beac7b6
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185361"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463867"
 ---
 # <a name="client-configuration"></a>客户端配置
 您可以使用 Windows 通信基础 （WCF） 客户端配置来指定客户端终结点的地址、绑定、行为和协定、客户端终结点的"ABC"属性，客户端用于连接到服务终结点。 客户端>元素具有[\<终结点>](../../configure-apps/file-schema/wcf/endpoint-of-client.md)元素，其属性用于配置终结点 ABC。 [ \<](../../configure-apps/file-schema/wcf/client.md) 这些属性在["配置终结点"](#configuring-endpoints)部分中讨论。  
@@ -41,7 +41,7 @@ ms.locfileid: "79185361"
               <servicePrincipalName value="host/localhost" />  
             </identity>  
           </endpoint>  
-// Add another endpoint by adding another <endpoint> element.  
+            <!-- Add another endpoint by adding another <endpoint> element. -->
           <endpoint  
             name="endpoint2">  
            //Configure another endpoint here.  
@@ -62,10 +62,10 @@ ms.locfileid: "79185361"
           </security>  
         </binding>  
         <binding name="Another Binding"  
-        //Configure this binding here.  
+          <!-- Configure this binding here. -->  
         </binding>  
           </wsHttpBinding>  
-        </bindings>  
+     </bindings>  
   
 //The behavior section references by the behaviorConfiguration endpoint attribute.  
         <behaviors>  
@@ -93,7 +93,7 @@ ms.locfileid: "79185361"
 ### <a name="configuring-metadata"></a>配置元数据  
  元数据>元素用于指定用于注册元数据导入扩展的设置。 [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) 有关扩展元数据系统的详细信息，请参阅[扩展元数据系统](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [终结点：地址、绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [配置客户端行为](../../../../docs/framework/wcf/configuring-client-behaviors.md)
