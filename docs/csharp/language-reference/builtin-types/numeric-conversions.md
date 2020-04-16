@@ -8,16 +8,16 @@ helpviewer_keywords:
 - numeric conversions [C#], explicit
 - conversions [C#], implicit numeric
 - conversions [C#], explicit numeric
-ms.openlocfilehash: 5380e8480c39d1940df13b2ecb50a0f394367388
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7d53e508e4d585c746a3cc61824cdace7707deb
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398285"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121449"
 ---
 # <a name="built-in-numeric-conversions-c-reference"></a>内置数值转换（C# 参考）
 
-C# 提供了一组[整型](integral-numeric-types.md)和[浮点](floating-point-numeric-types.md)数值类型。 任何两种数值类型之间都可以进行隐式或显式转换。 必须使用[强制转换运算符 `()`](../operators/type-testing-and-cast.md#cast-operator-) 才能调用显式转换。
+C# 提供了一组[整型](integral-numeric-types.md)和[浮点](floating-point-numeric-types.md)数值类型。 任何两种数值类型之间都可以进行隐式或显式转换。 必须使用[强制转换表达式](../operators/type-testing-and-cast.md#cast-expression)来执行显式转换。
 
 ## <a name="implicit-numeric-conversions"></a>隐式数值转换
 
@@ -29,7 +29,7 @@ C# 提供了一组[整型](integral-numeric-types.md)和[浮点](floating-point-
 |[byte](integral-numeric-types.md)|`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double` 或 `decimal`|
 |[short](integral-numeric-types.md)|`int`、`long`、`float`、`double` 或 `decimal`|
 |[ushort](integral-numeric-types.md)|`int`、`uint`、`long`、`ulong`、`float`、`double` 或 `decimal`。|
-|[int](integral-numeric-types.md)|`long`、 `float`、 `double`或 `decimal`|
+|[int](integral-numeric-types.md)|`long`、`float`、`double` 或 `decimal`|
 |[uint](integral-numeric-types.md)|`long`、`ulong`、`float`、`double` 或 `decimal`|
 |[long](integral-numeric-types.md)|`float`、`double` 或 `decimal`|
 |[ulong](integral-numeric-types.md)|`float`、`double` 或 `decimal`|
@@ -61,7 +61,7 @@ C# 提供了一组[整型](integral-numeric-types.md)和[浮点](floating-point-
 
 |From|到|
 |----------|--------|
-|[sbyte](integral-numeric-types.md)|`byte`、 `ushort`、 `uint`或 `ulong`|
+|[sbyte](integral-numeric-types.md)|`byte`、`ushort`、`uint` 或 `ulong`|
 |[byte](integral-numeric-types.md)|`sbyte`|
 |[short](integral-numeric-types.md)|`sbyte`、`byte`、`ushort`、`uint` 或 `ulong`|
 |[ushort](integral-numeric-types.md)|`sbyte`、`byte` 或 `short`|
@@ -70,7 +70,7 @@ C# 提供了一组[整型](integral-numeric-types.md)和[浮点](floating-point-
 |[long](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint` 或 `ulong`。|
 |[ulong](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint` 或 `long`。|
 |[float](floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong` 或 `decimal`|
-|[双精度](floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float` 或 `decimal`|
+|[double](floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float` 或 `decimal`|
 |[decimal](floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float` 或 `double`|
 
 > [!NOTE]
@@ -92,7 +92,7 @@ C# 提供了一组[整型](integral-numeric-types.md)和[浮点](floating-point-
 
 - 将 `double` 转换为 `float` 时，`double` 值舍入为最接近的 `float` 值。 如果 `double` 值太小或太大，无法匹配 `float` 类型，结果将为零或无穷大。
 
-- 将 `float` 或 `double` 转换为 `decimal` 时，源值转换为 `decimal` 表示形式，并四舍五入到第 28 位小数后最接近的数（如果需要）。 根据源值的值，可能出现以下结果之一：
+- 将 `float` 或 `double` 转换为 `decimal` 时，源值转换为 `decimal` 表示形式，并并五入到第 28 位小数后最接近的数（如果需要）。 根据源值的值，可能出现以下结果之一：
 
   - 如果源值太小，无法表示为 `decimal`，结果则为零。
 
@@ -107,7 +107,7 @@ C# 提供了一组[整型](integral-numeric-types.md)和[浮点](floating-point-
 - [隐式数值转换](~/_csharplang/spec/conversions.md#implicit-numeric-conversions)
 - [显式数值转换](~/_csharplang/spec/conversions.md#explicit-numeric-conversions)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [强制转换和类型转换](../../programming-guide/types/casting-and-type-conversions.md)

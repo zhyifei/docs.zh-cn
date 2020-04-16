@@ -2,18 +2,18 @@
 title: 使用 RabbitMQ 实现用于开发或测试环境的事件总线
 description: 容器化 .NET 应用程序的 .NET 微服务架构 | 使用 RabbitMQ 实现用于开发或测试环境的集成事件的事件总线消息传递。
 ms.date: 10/02/2018
-ms.openlocfilehash: ba1cea9384893955ae0743ac8d6a34c350224cd5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12e37fabfe915b4d2089d27f7852528a9a037d3c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74711201"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988292"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>使用 RabbitMQ 实现用于开发或测试环境的事件总线
 
 首先应假设基于在容器中运行的 RabbitMQ 创建自定义事件总线，正如 eShopOnContainers 应用程序一样，它应仅用于你的开发和测试环境。 你不应将其用于生产环境，除非你要将其构建为生产就绪服务总线的一部分。 简单的自定义事件总线可能缺少商业服务总线具有的许多生产就绪关键功能。
 
-eShopOnContainers 中的事件总线自定义实现之一基本上是一个使用 RabbitMQ API 的库（还有另一个基于 Azure 服务总线的实现）。
+eShopOnContainers 中的事件总线自定义实现之一基本上是一个使用 RabbitMQ API 的库. （还有另一个基于 Azure 服务总线的实现）。
 
 借助 RabbitMQ 的事件总线实现，微服务可订阅事件、发布事件和接收事件，如图 6-21 所示。
 
@@ -122,6 +122,6 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 - **MassTransit** \
   <https://masstransit-project.com/>
   
->[!div class="step-by-step"]
->[上一页](integration-event-based-microservice-communications.md)
->[下一页](subscribe-events.md)
+> [!div class="step-by-step"]
+> [上一页](integration-event-based-microservice-communications.md)
+> [下一页](subscribe-events.md)

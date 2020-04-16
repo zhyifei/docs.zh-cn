@@ -1,5 +1,5 @@
 ---
-title: 类型测试和强制转换运算符 - C# 引用
+title: 类型测试运算符和强制转换表达式 - C# 引用
 description: 了解可用于检查表达式结果的类型并根据需要将其转换为另一种类型的 C# 运算符。
 ms.date: 06/21/2019
 author: pkulikov
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 2dc215a91c55be15e8eee488f0030f41e3492af5
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 5a4f1d4c0c2ddd0d3967e15090d8f8c1ac42f83e
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507082"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121417"
 ---
-# <a name="type-testing-and-cast-operators-c-reference"></a>类型测试和强制转换运算符（C# 引用）
+# <a name="type-testing-operators-and-cast-expression-c-reference"></a>类型测试运算符和强制转换表达式（C# 引用）
 
-可以使用以下运算符来执行类型检查或类型转换：
+可以使用以下运算符和表达式来执行类型检查或类型转换：
 
 - [is 运算符](#is-operator)：用于检查表达式的运行时类型是否与给定类型兼容
 - [as 运算符](#as-operator)：用于将表达式显式转换为给定类型（如果其运行时类型与该类型兼容）
-- [强制转换运算符 ()](#cast-operator-)：用于执行显式转换
+- [强制转换表达式](#cast-expression)：执行显式转换
 - [typeof 运算符](#typeof-operator)：用于获取某个类型的 <xref:System.Type?displayProperty=nameWithType> 实例
 
 ## <a name="is-operator"></a>is 运算符
@@ -46,7 +46,7 @@ E is T
 
 其中 `E` 是返回一个值的表达式，`T` 是类型或类型参数的名称。 `E` 不得为匿名方法或 Lambda 表达式。
 
-如果 `E is T` 的结果为非 null 且可以通过引用转换、装箱转换或取消装箱转换来转换为类型 `true`，则 `E` 表达式将返回 `T`；否则，它将返回 `false`。 `is` 运算符不会考虑用户定义的转换。
+如果 `E` 的结果为非 null 且可以通过引用转换、装箱转换或取消装箱转换来转换为类型 `T`，则 `E is T` 表达式将返回 `true`；否则，它将返回 `false`。 `is` 运算符不会考虑用户定义的转换。
 
 以下示例演示，如果表达式结果的运行时类型派生自给定类型，即类型之间存在引用转换，`is` 运算符将返回 `true`：
 
@@ -56,7 +56,7 @@ E is T
 
 [!code-csharp-interactive[is with int](snippets/TypeTestingAndConversionOperators.cs#IsWithInt)]
 
-有关 C# 转换的信息，请参阅 [C# 语言规范](~/_csharplang/spec/conversions.md)的[转换](~/_csharplang/spec/introduction.md)一章。
+有关 C# 转换的信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[转换](~/_csharplang/spec/conversions.md)一章。
 
 ### <a name="type-testing-with-pattern-matching"></a>有模式匹配的类型测试
 
@@ -76,7 +76,7 @@ E is T v
 
 ## <a name="as-operator"></a>as 运算符
 
-`as` 运算符将表达式结果显式转换为给定的引用或可以为 null 值的类型。 如果无法进行转换，则 `as` 运算符返回 `null`。 与[强制转换运算符 ()](#cast-operator-) 不同，`as` 运算符永远不会引发异常。
+`as` 运算符将表达式结果显式转换为给定的引用或可以为 null 值的类型。 如果无法进行转换，则 `as` 运算符返回 `null`。 与[强制转换表达式](#cast-expression) 不同，`as` 运算符永远不会引发异常。
 
 形式如下的表达式
 
@@ -92,7 +92,7 @@ E is T ? (T)(E) : (T)null
 
 不同的是 `E` 只计算一次。
 
-`as` 运算符仅考虑引用、可以为 null、装箱和取消装箱转换。 不能使用 `as` 运算符执行用户定义的转换。 若要执行此操作，请使用[强制转换运算符 ()](#cast-operator-)。
+`as` 运算符仅考虑引用、可以为 null、装箱和取消装箱转换。 不能使用 `as` 运算符执行用户定义的转换。 为此，请使用[强制转换表达式](#cast-expression)。
 
 下面的示例演示 `as` 运算符的用法：
 
@@ -101,7 +101,7 @@ E is T ? (T)(E) : (T)null
 > [!NOTE]
 > 如之前的示例所示，你需要将 `as` 表达式的结果与 `null` 进行比较，以检查转换是否成功。 从 C# 7.0 开始，你可以使用 [is 运算符](#type-testing-with-pattern-matching)测试转换是否成功，如果成功，则将其结果分配给新变量。
 
-## <a name="cast-operator-"></a>强制转换运算符 ()
+## <a name="cast-expression"></a>强制转换表达式
 
 形式为 `(T)E` 的强制转换表达式将表达式 `E` 的结果显式转换为类型 `T`。 如果不存在从类型 `E` 到类型 `T` 的显式转换，则发生编译时错误。 在运行时，显式转换可能不会成功，强制转换表达式可能会引发异常。
 
@@ -109,7 +109,7 @@ E is T ? (T)(E) : (T)null
 
 [!code-csharp-interactive[cast expression](snippets/TypeTestingAndConversionOperators.cs#Cast)]
 
-有关支持的显式转换的信息，请参阅 [C# 语言规范](~/_csharplang/spec/conversions.md#explicit-conversions)的[显式转换](~/_csharplang/spec/introduction.md)部分。 有关如何定义自定义显式或隐式类型转换的信息，请参阅[用户定义转换运算符](user-defined-conversion-operators.md)。
+有关支持的显式转换的信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[显式转换](~/_csharplang/spec/conversions.md#explicit-conversions)部分。 有关如何定义自定义显式或隐式类型转换的信息，请参阅[用户定义转换运算符](user-defined-conversion-operators.md)。
 
 ### <a name="other-usages-of-"></a>() 的其他用法
 
@@ -117,7 +117,7 @@ E is T ? (T)(E) : (T)null
 
 括号的其他用法是调整表达式中计算操作的顺序。 有关详细信息，请参阅 [C# 运算符](index.md)。
 
-## <a name="typeof-operator"></a>TypeOf 运算符
+## <a name="typeof-operator"></a>typeof 运算符
 
 `typeof` 运算符用于获取某个类型的 <xref:System.Type?displayProperty=nameWithType> 实例。 `typeof` 运算符的实参必须是类型或类型形参的名称，如以下示例所示：
 
@@ -150,7 +150,7 @@ E is T ? (T)(E) : (T)null
 - [强制转换表达式](~/_csharplang/spec/expressions.md#cast-expressions)
 - [typeof 运算符](~/_csharplang/spec/expressions.md#the-typeof-operator)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)

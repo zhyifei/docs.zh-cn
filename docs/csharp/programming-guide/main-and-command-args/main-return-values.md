@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 3d97ab2b3f53179cb184f2ad3944ea29ff5566a2
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 7061b6c1988da9f6dfac115ee555a914531df863
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345118"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805924"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 返回值（C# 编程指南）
 
@@ -21,11 +21,11 @@ ms.locfileid: "80345118"
 
  [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-如果未使用 `Main` 的返回值，则返回 `void` 可以使代码变得略微简单。 但是，返回整数可使程序将状态信息传递给调用可执行文件的其他程序或脚本。 来自 `Main` 的返回值视为进程的退出代码。 如果 `void` 从 `Main` 返回，则退出代码将为隐式 `0`。 以下示例演示了如何访问 `Main` 的返回值。
+如果未使用 `Main` 的返回值，则返回 `void` 可以使代码变得略微简单。 但是，返回整数可使程序将状态信息传递给调用可执行文件的其他程序或脚本。 来自 `Main` 的返回值视为进程的退出代码。 如果从 `Main` 返回 `void`，则退出代码将为隐式 `0`。 以下示例演示了如何访问 `Main` 的返回值。
 
 ## <a name="example"></a>示例
 
-此示例使用 [.NET Core](../../../core/index.yml) 命令行工具。 如果不熟悉 .NET Core 命令行工具，可通过本[入门主题](../../../core/tutorials/cli-create-console-app.md)进行了解。
+此示例使用 [.NET Core](../../../core/index.yml) 命令行工具。 如果不熟悉 .NET Core 命令行工具，可通过本[入门文章](../../../core/tutorials/cli-create-console-app.md)进行了解。
 
 修改 program.cs 中的 `Main` 方法，如下所示  ：
 
@@ -37,7 +37,7 @@ ms.locfileid: "80345118"
 
 接下来，创建一个 Powershell 脚本来运行应用程序并显示结果。 将以下代码粘贴到文本文件中，并在包含该项目的文件夹中将其另存为 `test.ps1`。 可通过在 PowerShell 提示符下键入 `test.ps1` 来运行 PowerShell 脚本。
 
-因为代码返回零，所以批处理文件将报告成功。 但是，如果将 MainReturnValTest.cs 更改为返回非零值，然后重新编译程序，则 PowerShell 脚本的后续执行将报告失败。
+因为代码返回零，所以批处理文件将报告成功。 但是，如果将 MainReturnValTest.cs 更改为返回非零值，然后重新编译程序，则 PowerShell 脚本的后续执行将报告为失败。
 
 ```dotnetcli
 dotnet run
@@ -93,9 +93,9 @@ private static async Task<int> AsyncConsoleWork()
 - `static Task<int> Main(string[])` 导致编译器发出 `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();` 的等效项
 
 > [!NOTE]
->如果示例在 `async` 方法上使用 `Main` 修饰符，则编译器将生成相同的代码。
+>如果示例在 `Main` 方法上使用 `async` 修饰符，则编译器将生成相同的代码。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../index.md)
 - [C# 参考](../index.md)

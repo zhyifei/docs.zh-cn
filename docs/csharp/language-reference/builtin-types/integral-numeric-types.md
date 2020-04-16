@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b2506f48c3e72ff838a07087c8c5d9ea63bb46c
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093196"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121471"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整型数值类型（C# 参考）
 
@@ -118,7 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>转换
 
-可以将任何整型数值类型转换为其他整数数值类型。 如果目标类型可以存储源类型的所有值，则转换是隐式的。 否则，必须使用[强制转换运算符 `()`](../operators/type-testing-and-cast.md#cast-operator-) 来调用显式转换。 有关详细信息，请参阅[内置数值转换](numeric-conversions.md)。
+可以将任何整型数值类型转换为其他整数数值类型。 如果目标类型可以存储源类型的所有值，则转换是隐式的。 否则，需要使用[强制转换表达式](../operators/type-testing-and-cast.md#cast-expression)来执行显式转换。 有关详细信息，请参阅[内置数值转换](numeric-conversions.md)。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
@@ -127,7 +127,7 @@ var longVariable = (long)42;
 - [整型类型](~/_csharplang/spec/types.md#integral-types)
 - [整数文本](~/_csharplang/spec/lexical-structure.md#integer-literals)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [值类型](value-types.md)

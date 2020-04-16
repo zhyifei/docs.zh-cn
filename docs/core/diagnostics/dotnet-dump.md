@@ -2,12 +2,12 @@
 title: dotnet-dump - .NET Core
 description: 安装和使用 dotnet-dump 命令行工具。
 ms.date: 10/14/2019
-ms.openlocfilehash: 3c0e28d4efc96ae53ec7dfae243725ab400e6b8f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c78ddb6447021f61f2452c075733b7d33e051ca0
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76737667"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888197"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>转储收集和分析实用工具 (`dotnet-dump`)
 
@@ -38,7 +38,7 @@ dotnet-dump [-h|--help] [--version] <command>
 
 - **`--version`**
 
-  显示 dotnet-counters 实用工具的版本。
+  显示 dotnet-dump 实用工具的版本。
 
 - **`-h|--help`**
 

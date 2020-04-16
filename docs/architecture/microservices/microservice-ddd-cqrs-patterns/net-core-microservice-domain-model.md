@@ -2,12 +2,12 @@
 title: 使用 .NET Core 实现微服务域模型
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 获取面向 DDD 的域模型的实现详细信息。
 ms.date: 10/08/2018
-ms.openlocfilehash: bff9cbda08e519038056268151a1721427f0ac01
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 24f700b371d998cf99cbcf260a5278d797cb39d4
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73972045"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988422"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 实现微服务域模型
 
@@ -139,7 +139,7 @@ myOrder.OrderItems.Add(myNewOrderItem);
 ```csharp
 // RIGHT ACCORDING TO DDD--CODE AT THE APPLICATION LAYER OR COMMAND HANDLERS
 // The code in command handlers or WebAPI controllers, related only to application stuff
-// There is NO code here related to OrderItem object’s business logic
+// There is NO code here related to OrderItem object's business logic
 myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, units);
 
 // The code related to OrderItem params validations or domain rules should

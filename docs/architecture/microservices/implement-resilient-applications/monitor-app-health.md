@@ -2,12 +2,12 @@
 title: 运行状况监视
 description: 了解实现运行状况监视的一种方法。
 ms.date: 03/02/2020
-ms.openlocfilehash: d3d2bc72cf29b3d1ac93191e7ff2bd827c9ee68d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 88354ae0ae59dbfbe40dbe1b25320f8f93d042ce
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401543"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988851"
 ---
 # <a name="health-monitoring"></a>运行状况监视
 
@@ -50,7 +50,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-在上面的代码中，`services.AddHealthChecks()` 方法配置一个基本 HTTP 检查，会返回状态代码 200 以及“正常”。  此外，`AddCheck()` 扩展方法可配置自定义 `SqlConnectionHealthCheck`，用于检查相关 SQL 数据库的运行状况。
+在上面的代码中，`services.AddHealthChecks()` 方法配置一个基本 HTTP 检查，会返回状态代码 200 以及“正常”  。  此外，`AddCheck()` 扩展方法可配置自定义 `SqlConnectionHealthCheck`，用于检查相关 SQL 数据库的运行状况。
 
 `AddCheck()` 方法添加具有指定名称的新运行状况检查和类型 `IHealthCheck` 的实现。 可以使用 AddCheck 方法添加多个运行状况检查，使微服务在其所有检查均获得“正常”结果后才会提供“正常”状态。
 
@@ -257,7 +257,7 @@ public void ConfigureServices(IServiceCollection services)
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     //…
-    app.UseHealthChecksUI(config=> config.UIPath = “/hc-ui”);
+    app.UseHealthChecksUI(config=> config.UIPath = "/hc-ui");
     //…
 }
 ```
@@ -268,7 +268,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 例如，大多数业务流程协调程序可以使用运行状况检查来管理不会停机的部署。 仅当服务/容器的状态变为正常时，业务流程协调程序才会开始将流量路由到服务/容器实例。
 
-当业务流程协调程序执行应用程序升级时，运行状况监视尤为重要。 某些业务流程协调程序（如 Azure Service Fabric）会分阶段更新服务，例如，它们可能为每个应用程序升级更新五分之一的群集面。 同时升级的一组节点称为“升级域”。 完成每个升级域的升级操作并面向用户提供后，在部署进程移至下一升级域之前，该升级域必须通过运行状况检查。
+当业务流程协调程序执行应用程序升级时，运行状况监视尤为重要。 某些业务流程协调程序（如 Azure Service Fabric）会分阶段更新服务，例如，它们可能为每个应用程序升级更新五分之一的群集面。 同时升级的一组节点称为“升级域”  。 完成每个升级域的升级操作并面向用户提供后，在部署进程移至下一升级域之前，该升级域必须通过运行状况检查。
 
 服务运行状况的另一方面是报告服务的指标。 这是某些业务流程协调程序（如 Service Fabric）运行状况模型的高级功能。 因为要借助指标来平衡资源使用情况，所以在使用业务流程协调程序时，指标非常重要。 指标也可以是系统运行状况的指示器。 例如，某个应用程序包含多个微服务，并且每个实例都会报告每秒的请求数 (RPS) 指标。 如果某一服务使用的资源（内存、处理器等）比另一个服务多，则业务流程协调程序会在群集中移动服务实例，尝试使资源使用保持均衡状态。
 

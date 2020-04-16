@@ -2,12 +2,12 @@
 title: 使用 docker-compose.yml 定义多容器应用程序
 description: 如何使用 docker-compose.yml 指定多容器应用程序的微服务组合。
 ms.date: 01/30/2020
-ms.openlocfilehash: 9143801fbbffbdc5b795a232b3333edf71f05c7c
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 029fad8bb912457872dd5817a2f76aed57dc53c6
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523654"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888223"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定义多容器应用程序
 
@@ -177,7 +177,7 @@ docker-compose -f docker-compose.yml -f docker-compose-test.override.yml down
 
 默认情况下，Compose 读取两个文件，docker-compose.yml 和可选的 docker-compose.override.yml 文件。 如图 6-11 所示，使用 Visual Studio 并启用 Docker 支持时，Visual Studio 还会创建另一个用于调试应用程序的 docker compose.vs.debug.g.yml 文件，可在主解决方案文件夹的 obj\\Docker\\ 文件夹中查看此文件。
 
-![Docker 撰写项目中的文件的屏幕截图。](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
+![Docker Compose 项目中的文件。](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 图 6-11  。 Visual Studio 2019 中的 docker-compose 文件
 
@@ -201,7 +201,7 @@ docker-compose -f docker-compose.yml -f docker-compose-test.override.yml down
 
 图 6-12  。 重写基本 docker-compose.yml 文件中的值的多个 docker-compose 文件
 
-可组合多个 docker compose*.yml 文件来应对不同的环境。 从基本 docker-compose.yml 文件开始。 此基本文件必须包含不会根据环境更改的基本或静态配置设置。 例如，eShopOnContainers 将以下 docker-compose.yml 文件（使用少量服务以进行简化）作为基本文件。
+可组合多个 docker compose*.yml 文件来应对不同的环境。 从基本 docker-compose.yml 文件开始。 此基本文件包含的基本设置或静态配置设置不会因环境而更改。 例如，eShopOnContainers 应用将以下 docker-compose.yml 文件（使用少量服务以进行简化）作为基本文件。
 
 ```yml
 #docker-compose.yml (Base)
@@ -448,22 +448,22 @@ ENTRYPOINT ["dotnet", "run"]
 
 这样的 Dockerfile 为有效 Dockerfile。 但开发人员可以大幅优化映像，尤其是生产映像。
 
-开发人员会在容器和微服务模型中不断启动容器。 使用容器时，通常不会重启睡眠容器，因为该容器为一次性容器。 业务流程协调程序（如 Kubernetes 和 Azure Service Fabric）只创建映像的新实例。 这意味着，需要在生成应用程序时，通过预编译应用程序进行优化，这样可加快实例化过程。 当容器启动时，它应已准备好运行。 不应在运行时使用 dotnet CLI 中的 `dotnet restore` 和 `dotnet build` 命令进行还原和编译，正如许多有关 .NET Core 和 Docker 的博客文章所述。
+开发人员会在容器和微服务模型中不断启动容器。 使用容器时，通常不会重启睡眠容器，因为该容器为一次性容器。 业务流程协调程序（如 Kubernetes 和 Azure Service Fabric）只创建映像的新实例。 这意味着，需要在生成应用程序时，通过预编译应用程序进行优化，这样可加快实例化过程。 当容器启动时，它应已准备好运行。 请勿在运行时使用 `dotnet restore` 和 `dotnet build` CLI 命令进行还原和编译，如有关 .NET Core 和 Docker 的博客文章中所述。
 
 .NET 团队一直致力于使 .NET Core 和 ASP.NET Core 成为容器优化的框架。 .NET Core 不仅是一个内存占用少的轻量级框架；该团队还致力于针对三种主要方案优化了 Docker 映像，并在版本 2.1 及更高版本中，在 dotnet/core  的 Docker 中心注册表中发布了这些映像：
 
 1. **开发**：实现快速迭代和调试更改为优先事项，大小次之。
 
-2. **生成**：优先事项是编译应用程序，包括二进制文件和其他可优化二进制文件的依赖项。
+2. **生成**：编译应用程序是优先事项，此映像包括二进制文件和其他可优化二进制文件的依赖项。
 
-3. **生产**：其重点是实现快速部署和容器启动，所以这些映像仅限于二进制文件和运行应用程序所需的内容。
+3. **生产**：重点是实现快速部署和容器启动，所以这些映像仅限于二进制文件和运行应用程序所需的内容。
 
-为实现此目的，.NET 团队在 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/)（位于 Docker 中心）中提供了四个基本变体：
+.NET 团队在 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/)（位于 Docker Hub）中提供了四个基本变体：
 
 1. **sdk**：用于开发和生成方案
 1. **aspnet**：用于 ASP.NET 生产方案
 1. **runtime**：用于 .NET 生产方案
-1. **runtime-deps**：用于[自包含应用程序](../../../core/deploying/index.md#publish-self-contained)的生产方案。
+1. **runtime-deps**：用于[自包含应用程序](../../../core/deploying/index.md#publish-self-contained)的生产方案
 
 为了更快启动，运行时映像还会自动将 aspnetcore\_url 设置为端口 80，并使用 Ngen 创建程序集的本机映像缓存。
 

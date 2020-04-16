@@ -2,12 +2,12 @@
 title: 在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解在 eShopOnContainers 中的订购微服务中实现 CQRS 的方式。
 ms.date: 03/03/2020
-ms.openlocfilehash: 16fe46189a5b43591adebbb764d4acef2f7efbfb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eda0ee374b41a81811e92e2829b10dc8515e0ccd
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847149"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988487"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法
 

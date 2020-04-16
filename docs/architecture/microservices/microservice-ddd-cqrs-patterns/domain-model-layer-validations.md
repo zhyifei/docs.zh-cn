@@ -2,12 +2,12 @@
 title: 在域模型层中设计验证
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解域模型验证的关键概念。
 ms.date: 10/08/2018
-ms.openlocfilehash: 98ccc5df84c9f6f402ecbee83b077c806d6a76fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d2efc5f3b3267c4573409952791c6e883a01aae2
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75899671"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988500"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>在域模型层中设计验证
 

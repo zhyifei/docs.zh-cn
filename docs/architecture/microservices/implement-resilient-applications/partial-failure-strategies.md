@@ -2,12 +2,12 @@
 title: 处理部分失败的策略
 description: 了解妥善处理部分失败错误的几种策略。
 ms.date: 10/16/2018
-ms.openlocfilehash: e96fe99ab44b924460e01abaad30aa3e2432117a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: abf87df5afed02b4d794a1307a0ed943cafb4db3
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68674504"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988799"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>处理部分失败错误的策略
 

@@ -4,14 +4,15 @@ ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: c713aa929673e51e8e9986c536bae782121c7756
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 57308992268e1285cfeb82b28e2abf213e7a831b
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249339"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805868"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out 参数修饰符（C# 参考）
+
 `out` 关键字通过引用传递参数。 它让形参成为实参的别名，这必须是变量。 换而言之，对形参执行的任何操作都是对实参执行的。 它与 [ref](ref.md) 关键字相似，只不过 `ref` 要求在传递之前初始化变量。 它也类似于 [in](in-parameter-modifier.md) 关键字，只不过 `in` 不允许通过调用方法来修改参数值。 若要使用 `out` 参数，方法定义和调用方法均必须显式使用 `out` 关键字。 例如：  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#1)]  
@@ -55,7 +56,7 @@ class CS0663_Example
 
 ## <a name="declaring-out-parameters"></a>声明 `out` 参数
 
-使用 `out` 参数声明方法是返回多个值的经典解决方法。 自 C# 7.0 起，建议在类似方案中使用[元组](../../tuples.md)。 下面的示例使用 `out` 返回具有单个方法调用的三个变量。 注意，第三个参数赋 null 值。 这使得方法可以有选择地返回值。  
+使用 `out` 参数声明方法是返回多个值的经典解决方法。 自 C# 7.0 起，建议在类似方案中使用[元组](../../tuples.md)。 下面的示例使用 `out` 返回具有单个方法调用的三个变量。 第三个参数分配为 null。 这使得方法可以有选择地返回值。  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 

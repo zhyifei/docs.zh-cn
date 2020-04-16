@@ -9,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 252d509617ab5dbc53b282bac52e356396d82fab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae8f18deff5e96d7e475df8814ad64b38d14d585
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711891"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121393"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>强制转换和类型转换（C# 编程指南）
 
@@ -29,7 +29,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **隐式转换**：由于这种转换是类型安全且不会导致数据丢失，因此无需使用任何特殊语法。 示例包括从较小整数类型到较大整数类型的转换以及从派生类到基类的转换。  
   
-- **显式转换（强制转换）** ：必须使用[强制转换运算符`()`](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)，才能执行显式转换。 在转换中可能丢失信息时或在出于其他原因转换可能不成功时，必须进行强制转换。 典型的示例包括从数值到精度较低或范围较小的类型的转换和从基类实例到派生类的转换。  
+- **显式转换（强制转换）** ：必须使用[强制转换表达式](../../language-reference/operators/type-testing-and-cast.md#cast-expression)，才能执行显式转换。 在转换中可能丢失信息时或在出于其他原因转换可能不成功时，必须进行强制转换。 典型的示例包括从数值到精度较低或范围较小的类型的转换和从基类实例到派生类的转换。  
   
 - **用户定义的转换**：用户定义的转换是使用特殊方法执行，这些方法可定义为在没有基类和派生类关系的自定义类型之间启用显式转换和隐式转换。 有关详细信息，请参阅[用户定义转换运算符](../../language-reference/operators/user-defined-conversion-operators.md)。  
   
@@ -92,7 +92,7 @@ Giraffe g2 = (Giraffe) a;
 
 - [C# 编程指南](../index.md)
 - [类型](./index.md)
-- [() 强制转换运算符](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
+- [强制转换表达式](../../language-reference/operators/type-testing-and-cast.md#cast-expression)
 - [用户定义转换运算符](../../language-reference/operators/user-defined-conversion-operators.md)
 - [通用类型转换](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
 - [如何将字符串转换为数字](./how-to-convert-a-string-to-a-number.md)

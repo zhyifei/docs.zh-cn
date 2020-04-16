@@ -2,12 +2,12 @@
 title: Windows 窗体重大更改
 description: 列出适用于 .NET Core 的 Windows 窗体中的中断性变更。
 ms.date: 01/08/2020
-ms.openlocfilehash: 7fba78382d011bc9d489924fa185a44e598c5a76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25c568a8a0092a9c4874419c64c7dcebea4dce9e
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398009"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888101"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows 窗体中的中断性变更
 
@@ -15,21 +15,30 @@ ms.locfileid: "79398009"
 
 本页记录了以下中断性变更：
 
-- [已删除的控件](#removed-controls)
-- [如果显示工具提示，则不引发 CellFormatting 事件](#cellformatting-event-not-raised-if-tooltip-is-shown)
-- [Control.DefaultFont 已更改为 Segoe UI 9 pt](#default-control-font-changed-to-segoe-ui-9-pt)
-- [FolderBrowserDialog 的现代化](#modernization-of-the-folderbrowserdialog)
-- [已从一些 Windows 窗体类型中删除 SerializableAttribute](#serializableattribute-removed-from-some-windows-forms-types)
-- [不支持 AllowUpdateChildControlIndexForTabControls 兼容性开关](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
-- [不支持 DomainUpDown.UseLegacyScrolling 兼容性开关](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
-- [不支持 DoNotLoadLatestRichEditControl 兼容性开关](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
-- [不支持 DoNotSupportSelectAllShortcutInMultilineTextBox 兼容性开关](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
-- [不支持 DontSupportReentrantFilterMessage 兼容性开关](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
-- [不支持 EnableVisualStyleValidation 兼容性开关](#enablevisualstylevalidation-compatibility-switch-not-supported)
-- [不支持 UseLegacyContextMenuStripSourceControlValue 兼容性开关](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
-- [不支持 UseLegacyImages 兼容性开关](#uselegacyimages-compatibility-switch-not-supported)
-- [更改 AccessibleObject.RuntimeIDFirstItem 的访问权限](#change-of-access-for-accessibleobjectruntimeidfirstitem)
-- [已 Windows 窗体中删除重复的 API](#duplicated-apis-removed-from-windows-forms)
+| 重大更改 | 引入的版本 |
+| - | :-: |
+| [WinForms API 现在会引发 ArgumentNullException](#winforms-apis-now-throw-argumentnullexception) | 5.0 |
+| [已删除的控件](#removed-controls) | 3.1 |
+| [如果显示工具提示，则不引发 CellFormatting 事件](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
+| [Control.DefaultFont 已更改为 Segoe UI 9 pt](#default-control-font-changed-to-segoe-ui-9-pt) | 3.0 |
+| [FolderBrowserDialog 的现代化](#modernization-of-the-folderbrowserdialog) | 3.0 |
+| [已从一些 Windows 窗体类型中删除 SerializableAttribute](#serializableattribute-removed-from-some-windows-forms-types) | 3.0 |
+| [不支持 AllowUpdateChildControlIndexForTabControls 兼容性开关](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported) | 3.0 |
+| [不支持 DomainUpDown.UseLegacyScrolling 兼容性开关](#domainupdownuselegacyscrolling-compatibility-switch-not-supported) | 3.0 |
+| [不支持 DoNotLoadLatestRichEditControl 兼容性开关](#donotloadlatestricheditcontrol-compatibility-switch-not-supported) | 3.0 |
+| [不支持 DoNotSupportSelectAllShortcutInMultilineTextBox 兼容性开关](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported) | 3.0 |
+| [不支持 DontSupportReentrantFilterMessage 兼容性开关](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported) | 3.0 |
+| [不支持 EnableVisualStyleValidation 兼容性开关](#enablevisualstylevalidation-compatibility-switch-not-supported) | 3.0 |
+| [不支持 UseLegacyContextMenuStripSourceControlValue 兼容性开关](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported) | 3.0 |
+| [不支持 UseLegacyImages 兼容性开关](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
+| [更改 AccessibleObject.RuntimeIDFirstItem 的访问权限](#change-of-access-for-accessibleobjectruntimeidfirstitem) | 3.0 |
+| [已 Windows 窗体中删除重复的 API](#duplicated-apis-removed-from-windows-forms) | 3.0 |
+
+## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [null-args-cause-argumentnullexception](../../../includes/core-changes/windowsforms/5.0/null-args-cause-argumentnullexception.md)]
+
+***
 
 ## <a name="net-core-31"></a>.NET Core 3.1
 
@@ -95,6 +104,6 @@ ms.locfileid: "79398009"
 
 ***
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [将 Windows 窗体应用移植到 .NET Core](../porting/winforms.md)

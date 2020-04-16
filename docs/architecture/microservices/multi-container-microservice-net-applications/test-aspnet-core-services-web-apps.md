@@ -2,12 +2,12 @@
 title: 测试 ASP.NET Core 服务和 Web 应用
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 探索用于在容器中测试 ASP.NET Core 服务和 Web 应用的体系结构。
 ms.date: 01/30/2020
-ms.openlocfilehash: ab3ae6276ea4e4c741731f050913d956046271ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f66d6184d913405c9372904f8072dda1dbfbe6ac
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501991"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988227"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>测试 ASP.NET Core 服务和 Web 应用
 
