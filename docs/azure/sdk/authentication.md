@@ -3,12 +3,12 @@ title: 使用用于 .NET 的 Azure 库进行身份验证
 description: 在用于 .NET 的 Azure 库中进行身份验证
 ms.date: 08/22/2018
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: e562b60da0a2d34f716e80d3d5d0d0b5e55b0cdb
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: f6af813cd1423be8784b769b272756b2c8258392
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "81433144"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607869"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-net"></a>使用用于 .NET 的 Azure 库进行身份验证
 
@@ -45,7 +45,7 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 // Do things with the account here...
 ```
 
-服务连接字符串用于其他 Azure 服务，如[CosmosDB、Redis](/azure/documentdb/documentdb-dotnet-application#a-nametoc395637769astep-5-wiring-up-azure-cosmos-db)[的 Azure 缓存](/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)和服务[总线](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)，您可以使用 Azure 门户、CLI 或 PowerShell 获取这些字符串。 还可以使用用于 .NET 的 Azure 管理库来查询资源，以便在代码中生成连接字符串。
+服务连接字符串用于其他 Azure 服务，如[CosmosDB、Redis](https://docs.microsoft.com/azure/cosmos-db/)[的 Azure 缓存](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)[和服务总线](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)。 您可以使用 Azure 门户、CLI 或 PowerShell 获取这些字符串。 还可以使用用于 .NET 的 Azure 管理库来查询资源，以便在代码中生成连接字符串。
 
 以下代码片段使用管理库创建存储帐户连接字符串：
 

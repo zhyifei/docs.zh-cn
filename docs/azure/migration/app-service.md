@@ -3,16 +3,16 @@ title: 将 .NET Web 应用或服务迁移到 Azure 应用服务
 description: 了解如何将 .NET Web 应用或服务从本地迁移到 Azure 应用服务。
 ms.topic: conceptual
 ms.date: 08/11/2018
-ms.openlocfilehash: c9ef679743ce00add422110b11f2bfbdd8343530
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: 57f3b981a1d94c2193160f55f9c8242da694c169
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "81433234"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607875"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>将 .NET Web 应用或服务迁移到 Azure 应用服务
 
-[应用服务](https://docs.microsoft.com/azure/app-service/app-service-web-overview#why-use-web-apps)是一个完全托管的计算平台服务，经过优化，可承载可扩展的网站和 Web 应用程序。 本文提供有关如何将现有应用程序提升并移向 Azure 应用服务、需要考虑的修改以及[迁移到云](https://azure.microsoft.com/migration/web-applications/)的其他资源的信息。 大多数 ASP.NET 网站（Webforms、MVC）和服务（Web API、WCF）可以直接移到 Azure 应用服务而无需进行任何更改。 有些可能需要进行少量更改，而有些可能需要进行一些重构。
+[应用服务](https://docs.microsoft.com/azure/app-service/overview)是一个完全托管的计算平台服务，经过优化，可承载可扩展的网站和 Web 应用程序。 本文提供有关如何将现有应用程序提升并移向 Azure 应用服务、需要考虑的修改以及[迁移到云](https://azure.microsoft.com/migration/web-applications/)的其他资源的信息。 大多数 ASP.NET 网站（Webforms、MVC）和服务（Web API、WCF）可以直接移到 Azure 应用服务而无需进行任何更改。 有些可能需要进行少量更改，而有些可能需要进行一些重构。
 
 已准备就绪？ [将 ASP.NET + SQL 应用程序发布到 Azure 应用服务](https://tutorials.visualstudio.com/azure-webapp-migrate/intro)。
 

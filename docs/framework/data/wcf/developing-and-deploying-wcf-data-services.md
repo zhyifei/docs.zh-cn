@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 4591175da5078a194bfe69884701e5432a0c38a3
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 5c473f818ea874392011065dc3d07101d2ef3bf5
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389732"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607953"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>开发和部署 WCF 数据服务
 
@@ -42,7 +42,7 @@ ms.locfileid: "81389732"
 
 1. **本地 IIS 服务器**
 
-     当您创建在 Internet 信息服务 （IIS） 上运行ASP.NET应用程序或ASP.NET网站的数据服务时，我们建议您使用本地计算机上的 IIS 开发和测试数据服务。 在 IIS 上运行数据服务更便于在调试过程中跟踪 HTTP 请求。 这还允许预先确定 IIS 访问数据服务所需的文件、数据库和其他资源所必须具备的权限。 要在 IIS 上运行数据服务，请确保正确安装和配置 IIS 和 Windows 通信基础 （WCF），并授予对文件系统和数据库中的 IIS 帐户的访问权限。 有关详细信息，请参阅 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)。
+     当您创建在 Internet 信息服务 （IIS） 上运行ASP.NET应用程序或ASP.NET网站的数据服务时，我们建议您使用本地计算机上的 IIS 开发和测试数据服务。 在 IIS 上运行数据服务更便于在调试过程中跟踪 HTTP 请求。 这还使您能够预先确定 IIS 访问数据服务所需的文件、数据库和其他资源所需的必要权限。 要在 IIS 上运行数据服务，请确保正确安装和配置 IIS 和 Windows 通信基础 （WCF），并授予对文件系统和数据库中的 IIS 帐户的访问权限。 有关详细信息，请参阅 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)。
 
     > [!NOTE]
     > 您必须运行具有管理员权限的 Visual Studio，才能启用开发环境来配置本地 IIS 服务器。
@@ -51,7 +51,7 @@ ms.locfileid: "81389732"
 
      Visual Studio 包括一个内置的 Web 服务器，即可视化工作室开发服务器，它是ASP.NET项目的默认 Web 服务器。 此 Web 服务器旨在ASP.NET开发期间在本地计算机上运行项目。 [WCF 数据服务快速入门](quickstart-wcf-data-services.md)演示如何创建在可视化工作室开发服务器中运行的数据服务。
 
-     当您使用 Visual Studio 开发服务器开发数据服务时，应注意以下限制：
+     使用 Visual Studio 开发服务器开发数据服务时，请注意以下限制：
 
     - 该服务器只能在本地计算机上访问。
 
@@ -68,9 +68,9 @@ ms.locfileid: "81389732"
     > [!TIP]
     > 即使可以使用 Visual Studio 开发服务器在开发期间测试数据服务，但在部署到运行 IIS 的 Web 服务器后，也应再次测试它们。
 
-3. **Microsoft Azure 开发环境**
+3. **Azure 开发环境**
 
-     适用于可视化工作室的 Windows Azure 工具包括一组用于在可视化工作室中开发 Windows Azure 服务的集成工具。 使用这些工具，可以开发可部署到 Microsoft Azure 的数据服务，并且可以在部署之前在本地计算机上测试数据服务。 使用 Visual Studio 开发在 Windows Azure 平台上运行的数据服务时，请使用这些工具。 有关安装这些工具的信息，请参阅[Visual Studio 2015 的 Azure 工具](../../../azure/sdk/vs2015-install.md)。 有关开发在 Windows Azure 上运行的数据服务的详细信息，请参阅在[Windows Azure 中部署 OData 服务](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)的帖子。
+     适用于可视化工作室的 Windows Azure 工具包括一组用于在可视化工作室中开发 Azure 服务的集成工具。 使用这些工具，可以开发可部署到 Azure 的数据服务，也可以在部署之前在本地计算机上测试数据服务。 使用 Visual Studio 开发在 Azure 平台上运行的数据服务时，请使用这些工具。 有关安装这些工具的信息，请参阅[Visual Studio 2015 的 Azure 工具](../../../azure/sdk/vs2015-install.md)。 有关开发在 Azure 上运行的数据服务的详细信息，请参阅在 Azure[中部署 OData 服务](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)的帖子。
 
 ### <a name="development-tips"></a>开发提示
 
@@ -92,7 +92,7 @@ WCF 数据服务在选择承载数据服务的过程方面很灵活。 您可以
 
 - **承载有 IIS 的 Web 服务器**
 
-    当数据服务作为ASP.NET项目开发时，可以使用标准ASP.NET部署过程将其部署到 IIS Web 服务器。  Visual Studio 为ASP.NET提供以下部署技术，具体取决于承载要部署的数据服务的ASP.NET项目类型。
+    当数据服务作为ASP.NET项目开发时，可以使用标准ASP.NET部署过程将其部署到 IIS Web 服务器。 Visual Studio 为ASP.NET提供以下部署技术，具体取决于承载要部署的数据服务的ASP.NET项目类型。
 
   - **ASP.NET Web 应用程序的部署技术**
 
@@ -113,9 +113,9 @@ WCF 数据服务在选择承载数据服务的过程方面很灵活。 您可以
     > [!TIP]
     > 在尝试将数据服务部署到 IIS 之前，请确保已测试了向运行 IIS 的 Web 服务器的部署。 有关详细信息，请参阅 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)。
 
-- **Microsoft Azure**
+- **Azure**
 
-     可以使用 Visual Studio 的 Windows Azure 工具将数据服务部署到 Windows Azure。 可以从[微软下载中心](https://go.microsoft.com/fwlink/?LinkID=201848)下载 Visual Studio 的 Windows Azure 工具。 有关将数据服务部署到 Windows Azure 的详细信息，请参阅在 Windows [Azure 中部署 OData 服务](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)的帖子。
+     可以使用 Visual Studio 的 Azure[工具](../../../azure/sdk/vs2015-install.md)将数据服务部署到 Azure。 有关将数据服务部署到 Azure 的详细信息，请参阅[在 Azure 中部署 OData 服务](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)。
 
 ### <a name="deployment-considerations"></a>部署注意事项
 
@@ -125,7 +125,7 @@ WCF 数据服务在选择承载数据服务的过程方面很灵活。 您可以
 
 - 由于 WCF 数据服务包含基本的 WCF 实现，因此可以使用 Windows 服务器 AppFabric 监视部署到在 Windows 服务器上运行的 IIS 的数据服务。 有关使用 Windows 服务器 AppFabric 监视数据服务的详细信息，请参阅使用[Windows 服务器 AppFabric 跟踪 WCF 数据服务](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric)的帖子。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [承载数据服务](hosting-the-data-service-wcf-data-services.md)
 - [WCF 数据服务的安全](securing-wcf-data-services.md)
