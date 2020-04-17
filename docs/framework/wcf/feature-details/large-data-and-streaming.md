@@ -2,12 +2,12 @@
 title: 大型数据和流
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 91e53f66fb0f2f94a315c318eb0b203d78427bae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b6275a27fb1e09ecac1f8f00f56068a80a214ef
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184681"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464084"
 ---
 # <a name="large-data-and-streaming"></a>大型数据和流
 
@@ -88,7 +88,7 @@ Windows 通信基础 （WCF） 是基于 XML 的通信基础结构。 由于XML�
       </wsHttpBinding>  
     </bindings>  
      …  
-<system.serviceModel>  
+</system.serviceModel>  
 ```  
   
  如上所述，是否使用 MTOM 编码取决于您要发送的数据量。 另外，因为 MTOM 是在绑定级别启用的，所以启用 MTOM 会影响给定终结点上的所有操作。  
@@ -178,7 +178,7 @@ class MyData
       </basicHttpBinding>  
     </bindings>  
      …  
-<system.serviceModel>  
+</system.serviceModel>  
 ```  
   
  当通过代码实例化绑定时，必须将该绑定（如果您创建自定义绑定，则为传输绑定元素）的 `TransferMode` 属性设置为上面提到的某个值。  
@@ -239,6 +239,6 @@ public class UploadStreamMessage
 > [!NOTE]
 > 使用缓冲传输还是流传输是在终结点本地决定的。 对于 HTTP 传输，传输模式不会通过连接传播，也不会传播到代理服务器和其他中间方。 设置传输模式不会反映在服务接口的说明中。 将 WCF 客户端生成到服务后，必须编辑用于与流式传输一起使用的服务的配置文件以设置模式。 对于 TCP 和命名管道传输协议，该传输模式将作为策略断言传播。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [如何：启用流式处理](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [如何：启用流处理](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

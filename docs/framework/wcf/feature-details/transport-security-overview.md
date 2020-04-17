@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: f30b2c587d7f9b21c1f19fa1c3943621fc2607cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6796ca0b16e65a07735aec075d63b0cdfe38d080
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184345"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464018"
 ---
 # <a name="transport-security-overview"></a>传输安全概述
 Windows 通信基础 （WCF） 中的传输安全机制取决于所使用的绑定和传输。 例如，当使用 <xref:System.ServiceModel.WSHttpBinding> 类时，传输为 HTTP，保证传输安全的主要机制为 HTTP 上的安全套接字层 (SSL) （通常称为 HTTPS）。 本主题讨论 WCF 系统提供的绑定中使用的主要运输安全机制。  
   
 > [!NOTE]
-> 当 SSL 安全性与 .NET Framework 3.5 以及更高版本一起使用时，WCF 客户端使用其证书存储中的中间证书和 SSL 协商期间接收的中间证书，对服务的证书链进行验证证书。 .NET Framework 3.0 仅使用本地证书存储区中安装的中间证书。  
+> 当 SSL 安全性与 .NET Framework 3.5 以及更高版本一起使用时，WCF 客户端使用其证书存储中的中间证书和 SSL 协商期间接收的中间证书对服务的证书执行证书链验证。 .NET Framework 3.0 仅使用本地证书存储区中安装的中间证书。  
   
 > [!WARNING]
 > 在使用传输安全时，可能会覆盖 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 属性。 为了防止这种情况发生，<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType>将 设置为<xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 是可对服务说明设置的服务行为。  
@@ -82,7 +82,7 @@ Windows 通信基础 （WCF） 中的传输安全机制取决于所使用的绑�
  [!code-csharp[c_ProgrammingSecurity#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#12)]
  [!code-vb[c_ProgrammingSecurity#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#12)]  
   
-#### <a name="client"></a>Client  
+#### <a name="client"></a>客户端  
  在客户端，必须使用 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 类的 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> 方法指定证书。  
   
 > [!NOTE]
@@ -101,7 +101,7 @@ Windows 通信基础 （WCF） 中的传输安全机制取决于所使用的绑�
    <clientCredentials>  
      <clientCertificate findValue= "101010101010101010101010101010000000000"
       storeLocation="LocalMachine" storeName="My"
-      X509FindType="FindByThumbPrint"/>  
+      X509FindType="FindByThumbPrint">  
      </clientCertificate>  
    </clientCredentials>  
  </behavior>  
@@ -120,6 +120,6 @@ Windows 通信基础 （WCF） 中的传输安全机制取决于所使用的绑�
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding 和 NetMsmqBinding  
  有关使用消息队列（以前称为 MSMQ）传输安全性的完整讨论，请参阅[使用传输安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [WCF 安全编程](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

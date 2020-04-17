@@ -249,13 +249,11 @@ for (int index = 0; index < 10; index++)
 完成后，继续利用所学知识，试着自己编写一些代码。
 
 ## <a name="combine-branches-and-loops"></a>结合使用分支和循环
-
 至此，大家已了解 C# 语言中的 `if` 语句和循环构造。看看能否编写 C# 代码，以计算 1 到 20 中所有可被 3 整除的整数的总和。 下面是一些提示：
 
 - `%` 运算符可用于获取除法运算的余数。
 - `if` 语句中的条件可用于判断是否应将数字计入总和。
 - `for` 循环有助于对 1 到 20 中的所有数字重复执行一系列步骤。
-
 亲自试一试吧。 然后，看看自己是怎么做到的。 你理应得到的输出数值为 63。 通过[在 GitHub 上查看已完成的代码](https://github.com/dotnet/samples/tree/master/csharp/branches-quickstart/Program.cs#L46-L54)，你可以看到一个可能的答案。
 
 “分支和循环”教程至此已完成。
