@@ -51,5 +51,5 @@ class SampleClass
 - [可访问性级别](accessibility-levels.md)
 - [修饰符](index.md)
 - [private](private.md)
-- [受保护](protected.md)
-- [内部](internal.md)
+- [protected](protected.md)
+- [internal](internal.md)
