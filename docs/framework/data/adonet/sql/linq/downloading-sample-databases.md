@@ -3,12 +3,12 @@ title: 获取ADO.NET代码示例的示例 SQL Server 数据库
 description: 下载ADO.NET文档中代码示例中使用的示例 SQL Server 数据库，以及 SQL Server 和管理工具
 ms.date: 01/11/2019
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 19d659cbe8f39d27b71dc59c738355f12fce92a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3449f502834f449f5023bd52457d45ffaf9b0fa1
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148382"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607979"
 ---
 # <a name="get-the-sample-databases-for-adonet-code-samples"></a>获取ADO.NET代码示例的示例数据库
 
@@ -37,7 +37,7 @@ ms.locfileid: "79148382"
 
 1. 在新窗口中，在 **"文件名**"文本框中，为北风数据库的副本提供文件名。
 
-1. 选择 **“创建”**。 访问下载北风数据库并准备文件。
+1. 选择“创建”  。 访问下载北风数据库并准备文件。
 
 1. 此过程完成后，数据库将打开，并带有"欢迎"屏幕。
 
@@ -54,7 +54,7 @@ ms.locfileid: "79148382"
 
 [下载 SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms)
 
-您还可以在可视化工作室集成开发环境 （IDE） 中查看和管理数据库。 在[可视化工作室](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)中，从 SQL**服务器对象资源管理器**连接到数据库，或在**服务器资源管理器**中创建到数据库的数据连接。 从 **"视图"** 菜单打开这些资源管理器窗格。
+您还可以在可视化工作室集成开发环境 （IDE） 中查看和管理数据库。 在[可视化工作室](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)中，从 SQL**服务器对象资源管理器**连接到数据库，或在**服务器资源管理器**中创建到数据库的数据连接。 从 **"视图"** 菜单打开这些资源管理器窗格。
 
 ## <a name="get-sql-server-express"></a><a name="get_sql"></a>获取 SQL 服务器快速
 
@@ -62,8 +62,8 @@ SQL Server Express 是一个免费的入门级 SQL Server 版本，您可以使�
   
 [SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-如果您使用的是[Visual Studio，SQL](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)Server Express 本地DB 包含在 Visual Studio 的免费社区版以及专业版和更高版本中。  
+如果您使用的是[Visual Studio，SQL](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)Server Express 本地DB 包含在 Visual Studio 的免费社区版以及专业版和更高版本中。  
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [入门](getting-started.md)

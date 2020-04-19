@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3e9c817006930a36ebdce5c5965d78f1721c7056
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091593"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635144"
 ---
 # <a name="numerics-in-net"></a>.NET 中的数字
 
@@ -29,10 +29,10 @@ ms.locfileid: "73091593"
 |类型|有符号/无符号|大小（以字节为单位）|最小值|最大值|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
 |<xref:System.Byte?displayProperty=nameWithType>|无符号|1|0|255|  
-|<xref:System.Int16?displayProperty=nameWithType>|签名|2|-32,768|32,767|  
-|<xref:System.Int32?displayProperty=nameWithType>|签名|4|-2,147,483,648|2,147,483,647|  
-|<xref:System.Int64?displayProperty=nameWithType>|签名|8|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
-|<xref:System.SByte?displayProperty=nameWithType>|签名|1|-128|127|  
+|<xref:System.Int16?displayProperty=nameWithType>|有符号|2|-32,768|32,767|  
+|<xref:System.Int32?displayProperty=nameWithType>|有符号|4|-2,147,483,648|2,147,483,647|  
+|<xref:System.Int64?displayProperty=nameWithType>|有符号|8|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
+|<xref:System.SByte?displayProperty=nameWithType>|有符号|1|-128|127|  
 |<xref:System.UInt16?displayProperty=nameWithType>|无符号|2|0|65,535|  
 |<xref:System.UInt32?displayProperty=nameWithType>|无符号|4|0|4,294,967,295|  
 |<xref:System.UInt64?displayProperty=nameWithType>|无符号|8|0|18,446,744,073,709,551,615|  
@@ -62,9 +62,9 @@ ms.locfileid: "73091593"
 
 每个浮点类型都支持一组标准的算术运算符。 <xref:System.Math?displayProperty=nameWithType> 类为更广泛的数学函数集提供方法。 .NET Core 2.0 及更高版本包含 <xref:System.MathF?displayProperty=nameWithType> 类，该类提供接受 <xref:System.Single> 类型的参数的方法。
 
-还可以使用 <xref:System.Double> 类对 <xref:System.Single> 和 <xref:System.BitConverter?displayProperty=nameWithType> 值中的单个位进行运算。 <xref:System.Decimal?displayProperty=nameWithType> 结构具有自己处理十进制值单个位的方法（<xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> 和 <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>）以及一套执行其他数学运算的方法。
+还可以使用 <xref:System.BitConverter?displayProperty=nameWithType> 类对 <xref:System.Double> 和 <xref:System.Single> 值中的单个位进行运算。 <xref:System.Decimal?displayProperty=nameWithType> 结构具有自己处理十进制值单个位的方法（<xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> 和 <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>）以及一套执行其他数学运算的方法。
   
-<xref:System.Double> 和 <xref:System.Single> 类型旨在用于本质上不精确的值（例如，两颗行星之间的距离）和无需高度精确和舍入误差小的应用程序。 在需要较高准确度和尽量减小舍入误差的情况下，应使用 <xref:System.Decimal?displayProperty=nameWithType> 类型。
+<xref:System.Double> 和 <xref:System.Single> 类型旨在用于本质上不精确的值（例如，两颗行星之间的距离）和无需高度精确和舍入误差小的应用程序。 在需要较高准确度和尽量减小舍入误差的情况下，使用 <xref:System.Decimal?displayProperty=nameWithType> 类型。
 
 > [!NOTE]
 > <xref:System.Decimal> 类型不会消除对舍入的要求。 相反，它最大限度地减少了因舍入而导致的错误。
@@ -93,7 +93,6 @@ ms.locfileid: "73091593"
   
 启用了 SIMD 的类型以这样一种方式实现：即它们可以与未启用 SIMD 的硬件或 JIT 编译器一起使用。 要利用 SIMD 指令，你的 64 位应用必须由使用 RyuJIT 编译器的运行时运行，该编译器包含在 .NET Core 和 .NET Framework 4.6 及更高版本中。 它针对 64 位处理器增加了 SIMD 支持。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [应用程序要点](application-essentials.md)
 - [标准数字格式字符串](base-types/standard-numeric-format-strings.md)

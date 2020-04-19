@@ -2,12 +2,12 @@
 title: 使用 Web API 实现微服务应用层
 description: 了解依赖关系注入和转存进程模式及其在 Web API 应用层中的实现详细信息。
 ms.date: 01/30/2020
-ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76562d87b09a18e4a4ecb7625a2e823bc1ccff78
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502450"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988461"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 实现微服务应用层
 
@@ -449,7 +449,7 @@ public class CreateOrderCommandHandler
 
 还可以通过高可用性消息队列处理命令的管道，以将命令传递到相应的处理程序。 使用消息队列接受命令可能会进一步复杂化命令管道，因为很可能需要将管道拆分为通过外部消息队列连接的两个进程。 如果需要基于异步消息传送，提高可伸缩性和性能，则仍应使用此方法。 请思考图 7-26 的情况，控制器将命令消息发布到队列，然后返回。 然后命令处理程序按自己的步调处理消息。 这是队列的一大优点：消息队列可在需要超高可伸缩性时（例如股票或具有大量传入数据的任何其他方案）充当缓冲区。
 
-但是，由于消息队列具有异步性质，你需要解决如何就命令进程的成功或失败，与客户端应用程序通信。 一般来说，应永远不要使用“发后不理”命令。 每个业务应用程序需要了解命令是否处理成功，或至少了解是否已验证和接受。
+但是，由于消息队列具有异步性质，你需要了解如何与客户端应用程序就命令进程的成功或失败进行通信。 一般来说，应永远不要使用“发后不理”命令。 每个业务应用程序需要了解命令是否处理成功，或至少了解是否已验证和接受。
 
 因此，相较于运行事务后返回操作结果的进程内命令进程，如果要在验证提交到异步队列的命令消息后响应客户端，这会增加系统复杂性。 使用队列时，可能需要通过其他操作结果消息返回命令进程结果，这将需要在系统中使用其他组件和自定义通信。
 
@@ -546,7 +546,7 @@ public class IdentifiedCommand<T, R> : IRequest<R>
 }
 ```
 
-名为 [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) 的 IdentifiedCommand 的 CommandHandler 将基本上检查消息中的 ID 是否已存在于表格中。 如果已存在，将不会再次处理命令，因此它充当幂等命令。 基础结构代码由以下 `_requestManager.ExistAsync` 方法调用执行。
+名为 [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) 的 IdentifiedCommand 的 CommandHandler 将基本上检查消息中的 ID 是否已存在于表格中。 如果已存在，将不会再次处理该命令，因此它充当幂等命令。 基础结构代码由以下 `_requestManager.ExistAsync` 方法调用执行。
 
 ```csharp
 // IdentifiedCommandHandler.cs
@@ -664,7 +664,7 @@ public class MediatorModule : Autofac.Module
 }
 ```
 
-MediatR 的“魅力”就在于此。
+MediatR 的魅力就在于此。
 
 由于每个命令处理程序实现通用 `IAsyncRequestHandler<T>` 接口，注册程序集时，代码注册 `RegisteredAssemblyTypes`，所有类型标记为 `IAsyncRequestHandler`，同时将 `CommandHandlers` 与其 `Commands` 关联，这得益于 `CommandHandler` 类中声明的关系，如以下示例所示：
 

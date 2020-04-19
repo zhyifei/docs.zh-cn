@@ -2,12 +2,12 @@
 title: 使用 Entity Framework Core 实现基础结构持久性层
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 探索使用 Entity Framework Core 实现基础结构持久性层的细节。
 ms.date: 01/30/2020
-ms.openlocfilehash: 2d28d9246be3e102625ed5bb67ee1ccede03c942
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 7ab3be0d6a5affda478f7ec8f6c356571e304759
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523327"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805491"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 实现基础结构持久性层
 
@@ -78,7 +78,7 @@ public class Order : Entity
 }
 ```
 
-请注意，`OrderItems` 属性仅可通过 `IReadOnlyCollection<OrderItem>` 以只读形式进行访问。 此类型是只读的，因此它免受定期外部更新。
+`OrderItems` 属性仅可通过 `IReadOnlyCollection<OrderItem>` 以只读形式进行访问。 此类型是只读的，因此它免受定期外部更新。
 
 EF Core 提供一种方法，可将域模型映射到物理数据库，而不会“污染”域模型。 这是纯 .NET POCO 代码，因为映射操作在持久性层中实现。 在该映射操作中，需要配置“字段到数据库”映射。 在来自 `OrderingContext` 和 `OrderEntityTypeConfiguration` 类的 `OnModelCreating` 方法的以下示例中，调用 `SetPropertyAccessMode` 来告诉 EF Core 通过其字段访问 `OrderItems` 属性。
 
@@ -88,7 +88,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
    // ...
    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-   // Other entities’ configuration ...
+   // Other entities' configuration ...
 }
 
 // At OrderEntityTypeConfiguration.cs from eShopOnContainers
@@ -110,7 +110,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 }
 ```
 
-使用字段而不使用属性时，`OrderItem` 实体得以持久保存，好似它拥有 `List<OrderItem>` 属性。 但是，它公开单个访问器（`AddOrderItem` 方法），用于将新项添加到订单。 因此，行为和数据绑定在一起，将在使用域模型的任何应用程序代码间保持一致。
+使用字段而不使用属性时，`OrderItem` 实体得以持久保存，这就好像它有一个 `List<OrderItem>` 属性一样。 但是，它公开单个访问器（`AddOrderItem` 方法），用于将新项添加到订单。 因此，行为和数据绑定在一起，将在使用域模型的任何应用程序代码间保持一致。
 
 ## <a name="implement-custom-repositories-with-entity-framework-core"></a>使用 Entity Framework Core 实现自定义存储库
 
@@ -154,7 +154,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 }
 ```
 
-请注意，IBuyerRepository 接口来自于域模型层（采用协定的形式）。 但是，存储库在持久性和基础结构层上实现。
+`IBuyerRepository` 接口来自于域模型层（采用协定的形式）。 但是，存储库在持久性和基础结构层上实现。
 
 EF DbContext 经由依赖关系注入而通过构造函数。 它在同一 HTTP 请求范围内的多个存储库之间进行共享，这得益于其在 IoC 容器（也可使用 `services.AddDbContext<>` 进行显式设置）中的默认生存期 (`ServiceLifetime.Scoped`)。
 
@@ -168,7 +168,7 @@ EF DbContext 经由依赖关系注入而通过构造函数。 它在同一 HTTP 
 
 ### <a name="using-a-custom-repository-versus-using-ef-dbcontext-directly"></a>使用自定义存储库与直接使用 EF DbContext
 
-Entity Framework DbContext 类基于工作单元和存储库模式，且可直接通过代码（如 ASP.NET Core MVC 控制器）进行使用。 这是可以创建最简单代码的途径，就像在 eShopOnContainers 的 CRUD 目录微服务中。 如果需要尽可能简单的代码，建议直接使用 DbContext 类，就像许多开发人员操作的那样。
+实体框架 DbContext 类基于工作单元和存储库模式，且可直接通过代码（如 ASP.NET Core MVC 控制器）进行使用。 工作单元模式和存储库模式产生最简单的代码，如 eShopOnContainers 的 CRUD 目录微服务中所示。 如果需要尽可能简单的代码，建议直接使用 DbContext 类，就像许多开发人员操作的那样。
 
 但是，实现更复杂的微服务或应用程序时，实现自定义存储库将提供以下几个优势。 工作单元和存储库模式旨在封装基础结构持久性层，以便从应用程序和域模型层脱耦。 实现这些模式将促进用于模拟数据库访问的模拟数据库的使用。
 
@@ -228,7 +228,7 @@ builder.RegisterType<OrderRepository>()
     .InstancePerLifetimeScope();
 ```
 
-请注意，DbContext 设置为范围内 (InstancePerLifetimeScope) 生存期（DBContext 的默认生存期）时，为存储库使用的单一生存期可能导致严重的并发问题。
+DbContext 设置为范围内 (InstancePerLifetimeScope) 生存期（DBContext 的默认生存期）时，为存储库使用的单一生存期可能导致严重的并发问题。
 
 ### <a name="additional-resources"></a>其他资源
 
@@ -243,7 +243,7 @@ builder.RegisterType<OrderRepository>()
 
 ## <a name="table-mapping"></a>表映射
 
-表映射标识要从数据库查询并保存到数据库的表数据。 前面你已了解如何使用域实体（例如，产品或订单域）来生成相关的数据库架构。 EF 特别围绕着约定的概念进行设计  。 约定处理“表的名称是什么？” 或者“什么属性是主键？”这类问题。 约定通常基于约定俗成的名称，例如主键通常是一个以 Id 结尾的属性。
+表映射标识要从数据库查询并保存到数据库的表数据。 前面你已了解如何使用域实体（例如，产品或订单域）来生成相关的数据库架构。 EF 特别围绕着约定的概念进行设计  。 约定处理“表的名称是什么？” 或者“什么属性是主键？”这类问题 约定通常基于常规名称。 例如，主键通常是以 `Id` 结尾的属性。
 
 按照约定，每个实体将设置为映射到名称与 `DbSet<TEntity>` 属性（公开派生上下文中的实体）相同的表中。 如果给定实体未提供任何 `DbSet<TEntity>` 值，则使用类名。
 
@@ -265,7 +265,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
    // ...
    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-   // Other entities’ configuration ...
+   // Other entities' configuration ...
 }
 
 // At OrderEntityTypeConfiguration.cs from eShopOnContainers
@@ -422,7 +422,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-以下规范在给定购物篮 ID 或购物篮所属买家的 ID 情况下来加载单个购物篮实体。 它将[立即加载](https://docs.microsoft.com/ef/core/querying/related-data)购物篮的项目集合。
+以下规范在给定购物篮 ID 或购物篮所属买家的 ID 情况下来加载单个购物篮实体。 它将[立即加载](/ef/core/querying/related-data)购物篮的 `Items` 集合。
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION

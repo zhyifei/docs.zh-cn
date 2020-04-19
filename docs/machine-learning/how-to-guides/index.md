@@ -2,12 +2,12 @@
 title: ML.NET 操作指南
 description: 了解如何执行特定任务，以帮助自定义创建 AI 解决方案并将机器学习集成到 .NET 应用程序。
 ms.date: 03/01/2019
-ms.openlocfilehash: 4ce2de77c35062aa19449e3ba6bb3d5abd003d60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25c5cb6247c202e3ef51d0ed25b3b213fdca7a56
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715671"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607527"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>.NET 机器学习操作指南
 
@@ -19,7 +19,7 @@ ms.locfileid: "75715671"
 
 ### <a name="prepare-the-data"></a>准备数据
 
-* [使用规范化程序来预处理要在数据处理过程中使用的定型数据。](normalizers-preprocess-data-ml-net.md)
+* [使用规范化程序来预处理要在数据处理过程中使用的定型数据。](prepare-data-ml-net.md)
 
 ## <a name="train-the-model"></a>定型模型
 

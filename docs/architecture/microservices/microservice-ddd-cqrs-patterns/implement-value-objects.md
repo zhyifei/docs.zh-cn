@@ -2,12 +2,12 @@
 title: 实现值对象
 description: 适用于容器化的 .NET 应用程序的 .NET 微服务体系结构 | 深入了解有关使用新实体框架功能实现值对象的详细信息和选项。
 ms.date: 01/30/2020
-ms.openlocfilehash: 919b23f7c1a0cd0aec8c4417f3af98469a0743dd
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 4a8a92a8dabcf09654ecd0e5dea2a7df25d7abf7
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249417"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805735"
 ---
 # <a name="implement-value-objects"></a>实现值对象
 
@@ -133,7 +133,7 @@ public class Address : ValueObject
 
 在 EF Core 2.0 之前，实体框架 (EF) 使用的类中是不能没有 ID 字段的，EF Core 2.0 在实现不具有 ID 的更好值对象方面发挥了很大的作用。 下一节内容将对此进行详细介绍。
 
-也许有人会争辩说，由于值对象是不可变的，所以应该是只读的（即具有“只获取”属性），这是事实没错。 但是，值对象通常会被执行序列化和反序列化操作以遍历消息队列，并且由于是只读的，这阻止了反序列化器分配值，从而只将其保留为私有集，且其只读程度让此机制成为可能。
+也许有人会争辩说，由于值对象是不可变的，所以应该是只读的（即具有“只获取”属性），这是事实没错。 但是，值对象通常会被执行序列化和反序列化操作以遍历消息队列，并且由于是只读的，这阻止了反序列化器分配值，从而只将其保留为 `private set`，且其只读程度让此机制成为可能。
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>如何通过 EF Core 2.0 及更高版本在数据库中持久保存值对象
 
@@ -186,7 +186,7 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 
 请务必注意，固有类型在 EF Core 中永远不会由约定发现，因此你必须显式声明它们。
 
-在 eShopOnContainers 的 OrderingContext.cs 中，在 OnModelCreating() 方法内，应用了多个基础结构配置。 其中之一与 Order 实体相关。
+在 eShopOnContainers 中，在 OrderingContext.cs 文件中的 `OnModelCreating()` 方法中，应用了多个基础结构配置。 其中之一与 Order 实体相关。
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project

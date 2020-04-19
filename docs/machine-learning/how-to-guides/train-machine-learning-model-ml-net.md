@@ -1,16 +1,16 @@
 ---
 title: 训练和评估模型
 description: 了解如何使用 ML.NET 生成机器学习模型、收集指标以及测量性能。 机器学习模型识别训练数据内的模式以使用新数据进行预测。
-ms.date: 08/29/2019
+ms.date: 03/31/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 0e0f43225b9bf243c31b3095817bdcbdb3123012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 51499f2c0ece615a99740bd9b27f99d4b5ed1d01
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73976757"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523861"
 ---
 # <a name="train-and-evaluate-a-model"></a>训练和评估模型
 
@@ -82,7 +82,7 @@ HousingData[] housingData = new HousingData[]
 };
 ```
 
-使用 [`TrainTestSplit`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit*) 方法将数据拆分为训练集和测试集。 结果将是一个 [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) 对象，其中包含两个 [`IDataView`](xref:Microsoft.ML.IDataView) 成员，一个用于训练集，另一个用于测试集。 数据拆分百分比由 `testFraction` 参数确定。 下面的代码片段让测试集占用 20% 的原始数据。
+使用 [`TrainTestSplit`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) 方法将数据拆分为训练集和测试集。 结果将是一个 [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) 对象，其中包含两个 [`IDataView`](xref:Microsoft.ML.IDataView) 成员，一个用于训练集，另一个用于测试集。 数据拆分百分比由 `testFraction` 参数确定。 下面的代码片段让测试集占用 20% 的原始数据。
 
 ```csharp
 DataOperationsCatalog.TrainTestData dataSplit = mlContext.Data.TrainTestSplit(data, testFraction: 0.2);
@@ -100,9 +100,9 @@ ML.NET 算法对输入列类型存在约束。 此外，如果未指定任何值
 
 ML.NET 中的机器学习算法预期使用大小已知的浮点向量作为输入。 当所有数据都已经是数字格式并且打算一起处理（即图像像素）时，将 [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) 属性应用于数据模型。
 
-如果数据不全为数字格式，并且想要单独对每个列应用不同的数据转换，请在处理所有列后使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 方法，以将所有单独的列合并为一个特征向量并将特征向量输出到新列。
+如果数据不全为数字格式，并且想要单独对每个列应用不同的数据转换，请在处理所有列后使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) 方法，以将所有单独的列合并为一个特征向量并将特征向量输出到新列。
 
-以下代码片段将 `Size` 和 `HistoricalPrices` 列合并为一个特征向量，该特征向量输出到名为 `Features` 的新列。 由于比例存在差异，将 [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) 应用于 `Features` 列来规范化数据。
+以下代码片段将 `Size` 和 `HistoricalPrices` 列合并为一个特征向量，该特征向量输出到名为 `Features` 的新列。 由于比例存在差异，将 [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax%2A) 应用于 `Features` 列来规范化数据。
 
 ```csharp
 // Define Data Prep Estimator
@@ -123,7 +123,7 @@ IDataView transformedTrainingData = dataPrepTransformer.Transform(trainData);
 
 未指定列名时，ML.NET 算法会使用默认列名。 所有训练程序都有一个名为 `featureColumnName` 的参数可用于算法的输入，并且在适用情况下，它们还有一个用于预期值的名为 `labelColumnName` 的参数。 默认情况下，这些值分别为 `Features` 和 `Label`。
 
-通过在预处理期间使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 方法创建名为 `Features` 的新列，无需在算法的参数中指定特征列名，因为它已存在于预处理的 `IDataView` 中。 标签列为 `CurrentPrice`，但由于数据模型中使用了 [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 属性，ML.NET 将 `CurrentPrice` 列重命名为 `Label`，因而无需向机器学习算法估算器提供 `labelColumnName` 参数。
+通过在预处理期间使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) 方法创建名为 `Features` 的新列，无需在算法的参数中指定特征列名，因为它已存在于预处理的 `IDataView` 中。 标签列为 `CurrentPrice`，但由于数据模型中使用了 [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 属性，ML.NET 将 `CurrentPrice` 列重命名为 `Label`，因而无需向机器学习算法估算器提供 `labelColumnName` 参数。
 
 如果不想使用默认列名，请在定义机器学习算法估算器时将特征和标签列的名称作为参数传入，如以下代码片段所示：
 
@@ -131,9 +131,29 @@ IDataView transformedTrainingData = dataPrepTransformer.Transform(trainData);
 var UserDefinedColumnSdcaEstimator = mlContext.Regression.Trainers.Sdca(labelColumnName: "MyLabelColumnName", featureColumnName: "MyFeatureColumnName");
 ```
 
+## <a name="caching-data"></a>缓存数据
+
+默认情况下，在处理数据时，数据会延迟加载或流式传输，这意味着训练程序可以从磁盘加载数据，并在训练期间多次循环访问数据。 因此，建议对放入内存中的数据集进行缓存，以减少从磁盘加载数据的次数。 缓存使用 [`AppendCacheCheckpoint`](xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A) 作为 [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) 的一部分来完成。
+
+建议在任何训练程序处于管道中之前，使用 [`AppendCacheCheckpoint`](xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A)。
+
+使用以下 [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)，在 [`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) 训练程序之前添加 [`AppendCacheCheckpoint`](xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A) 可缓存以前估算器的结果以供训练程序以后使用。
+
+```csharp
+// 1. Concatenate Size and Historical into a single feature vector output to a new column called Features
+// 2. Normalize Features vector
+// 3. Cache prepared data
+// 4. Use Sdca trainer to train the model
+IEstimator<ITransformer> dataPrepEstimator =
+    mlContext.Transforms.Concatenate("Features", "Size", "HistoricalPrices")
+        .Append(mlContext.Transforms.NormalizeMinMax("Features"))
+        .AppendCacheCheckpoint(mlContext);
+        .Append(mlContext.Regression.Trainers.Sdca());
+```
+
 ## <a name="train-the-machine-learning-model"></a>训练机器学习模型
 
-对数据进行预处理后，使用 [`Fit`](xref:Microsoft.ML.Trainers.TrainerEstimatorBase`2.Fit*) 方法通过 [`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) 回归算法训练机器学习模型。
+对数据进行预处理后，使用 [`Fit`](xref:Microsoft.ML.Trainers.TrainerEstimatorBase%602.Fit%2A) 方法通过 [`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) 回归算法训练机器学习模型。
 
 ```csharp
 // Define StochasticDualCoordinateAscent regression algorithm estimator
@@ -156,7 +176,7 @@ var trainedModelParameters = trainedModel.Model as LinearRegressionModelParamete
 
 ## <a name="evaluate-model-quality"></a>评估模型质量
 
-若要帮助选择性能最佳的模型，必须评估其在测试数据中的性能。 使用 [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) 方法测量经过训练的模型的各种指标。
+若要帮助选择性能最佳的模型，必须评估其在测试数据中的性能。 使用 [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate%2A) 方法测量经过训练的模型的各种指标。
 
 > [!NOTE]
 > `Evaluate` 方法根据执行的机器学习任务生成不同的指标。 有关更多详细信息，请访问 [`Microsoft.ML.Data` API 文档](xref:Microsoft.ML.Data)并查找名称中包含 `Metrics` 的类。

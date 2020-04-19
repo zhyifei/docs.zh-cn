@@ -2,12 +2,12 @@
 title: 整体式应用程序
 description: 了解容器化整体式应用程序的核心概念。
 ms.date: 02/15/2019
-ms.openlocfilehash: 8664153ee2e9d1d253164e43ac13105f6dbf476c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3c186f6a300588816916886927f93e0c06ebd6bc
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72771036"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988981"
 ---
 # <a name="monolithic-applications"></a>整体式应用程序
 

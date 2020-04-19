@@ -2,12 +2,12 @@
 title: 在配置文件中配置发现
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: b2e604f6168e4adff36bfb0c22861124743b358d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 934b04b51b9954cf943f57f33250951048e5671b
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185328"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464202"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>在配置文件中配置发现
 发现功能主要采用四组配置设置。 本主题将简要介绍其中的每组设置，并用示例演示如何配置这些设置。 本主题每一部分后面都将提供一个链接，以便于您获取有关各个方面的更详尽的文档。  
@@ -26,6 +26,7 @@ ms.locfileid: "79185328"
           </serviceDiscovery>  
         </behavior>  
       </serviceBehaviors>  
+</behaviors>  
 ```  
   
  指定行为后，请从<>`service`元素引用它，如下例所示。  
@@ -41,7 +42,8 @@ ms.locfileid: "79185328"
          <!-- Discovery Endpoints -->  
          <endpoint kind="udpDiscoveryEndpoint" />  
         </service>  
-    </service>  
+    </services>  
+</system.serviceModel>  
 ```  
   
  为使服务可供检测，还必须添加发现终结点，上面的示例添加了一个 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 标准终结点。  
@@ -62,6 +64,7 @@ ms.locfileid: "79185328"
    <service name="AnnouncementListener">  
       <endpoint kind="udpAnnouncementEndpoint" />  
    </service>  
+</services>
 ```  
   
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 行为用于允许或禁止发现特定终结点。  下面的示例配置一个具有两个应用程序终结点的服务，其中一个终结点允许发现，另一个终结点禁止发现。 为每个终结点添加一个 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 行为。  
@@ -87,7 +90,7 @@ ms.locfileid: "79185328"
         <endpoint kind="udpDiscoveryEndpoint" />  
       </service>  
    </services>  
-    <behaviors>  
+   <behaviors>  
       <serviceBehaviors>  
         <behavior name="helloWorldServiceBehavior">  
           <serviceDiscovery />  
@@ -102,6 +105,7 @@ ms.locfileid: "79185328"
         </behavior>  
      </endpointBehaviors>  
    </behaviors>  
+</system.serviceModel>  
 ```  
   
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 行为还可用于向服务返回的终结点元数据添加自定义元数据。 以下示例演示如何执行此操作。  
@@ -163,7 +167,9 @@ ms.locfileid: "79185328"
           </discoveryClient>  
           <textMessageEncoding messageVersion="Soap11"/>  
           <httpTransport />  
-        </binding>  
+      </binding>
+   </customBinding>
+</bindings>  
 ```  
   
  客户端终结点必须引用此自定义绑定配置：  
@@ -174,7 +180,7 @@ ms.locfileid: "79185328"
                 binding="customBinding"  
                 bindingConfiguration="discoBindingConfiguration"  
                 contract="IHelloWorldService" />  
-    </client>  
+</client>  
 ```  
   
  有关查找条件的详细信息，请参阅[发现查找和查找条件](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)。 有关发现和绑定元素的详细信息，请参阅[WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
@@ -223,7 +229,8 @@ ms.locfileid: "79185328"
             maxReceivedMessageSize="8192"  
             maxBufferPoolSize="262144"/>  
         </standardEndpoint>  
-      </udpDiscoveryEndpoint>  
+      </udpDiscoveryEndpoint>
+</standardEndpoints>
 ```  
   
  添加标准终结点配置后，参考每个终结点<>`endpoint`元素中的配置，如以下示例所示。  

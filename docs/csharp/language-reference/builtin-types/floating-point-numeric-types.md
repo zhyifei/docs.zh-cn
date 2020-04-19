@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 95b7f266654bbbcdcd0f81e3aa11cfc94af9f0e5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a277215d438b5f6b0bbbef72e5e0121b6ce41990
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77215242"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121486"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮点数值类型（C# 引用）
 
@@ -107,7 +107,7 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>转换
 
-浮点数值类型之间只有一种隐式转换：从 `float` 到 `double`。 但是，可以使用[显式强制转换](../operators/type-testing-and-cast.md#cast-operator-)将任何浮点类型转换为任何其他浮点类型。 有关详细信息，请参阅[内置数值转换](numeric-conversions.md)。
+浮点数值类型之间只有一种隐式转换：从 `float` 到 `double`。 但是，可以使用[显式强制转换](../operators/type-testing-and-cast.md#cast-expression)将任何浮点类型转换为任何其他浮点类型。 有关详细信息，请参阅[内置数值转换](numeric-conversions.md)。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

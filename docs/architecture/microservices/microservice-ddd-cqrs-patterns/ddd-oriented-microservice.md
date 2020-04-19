@@ -2,12 +2,12 @@
 title: 设计面向 DDD 的微服务
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解面向 DDD 的订购微服务及其应用层的设计。
 ms.date: 10/08/2018
-ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 583e103c8bd9d828731a658ea2fd2aa0758e7a12
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401531"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988734"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>设计面向 DDD 的微服务
 

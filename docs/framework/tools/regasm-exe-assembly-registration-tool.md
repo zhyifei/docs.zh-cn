@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-ms.openlocfilehash: 0a1658e57f4a236e4bdd29c3ca224275c25ea727
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 5eeed43f3d60bd5e443226a16963557546d81e7c
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345009"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635405"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe（程序集注册工具）
 
@@ -36,7 +36,7 @@ regasm assemblyFile [options]
 
 |选项|描述|
 |------------|-----------------|
-|/codebase |在注册表中创建一个 Codebase 项。 Codebase 项指定未安装到全局程序集缓存中的程序集的文件路径。 如果随后将安装要注册到全局程序集缓存中的程序集，则不应指定此选项。 用 /codebase 选项指定的 assemblyFile 参数必须是[具有强名称的程序集](../../standard/assembly/strong-named.md)   。|
+|/codebase |在注册表中创建一个 Codebase 项。 Codebase 项指定未安装到全局程序集缓存中的程序集的文件路径。 如果随后将安装要注册到全局程序集缓存中的程序集，请勿指定此选项。 用 /codebase 选项指定的 assemblyFile 参数必须是[具有强名称的程序集](../../standard/assembly/strong-named.md)   。|
 |/registered |指定此工具将仅引用已经注册的类型库。|
 |/asmpath:directory |指定包含程序集引用的目录。 必须与 /regfile 选项一起使用  。|
 |**/nologo**|取消显示 Microsoft 启动版权标志。|
@@ -52,9 +52,9 @@ regasm assemblyFile [options]
 
 ## <a name="remarks"></a>备注
 
-可以使用 /regfile 选项生成包含注册表项的 .reg 文件，而不是直接对注册表进行更改  。 通过注册表编辑器工具 (Regedit.exe) 导入 .reg 文件，可以在计算机上更新注册表。 请注意，.reg 文件不包含任何可由用户定义的注册函数完成的注册表更新。  注意，/regfile 选项只为托管类发出注册表项  。  此选项不为 `TypeLibID` 或 `InterfaceID` 发出注册表项。
+可以使用 /regfile 选项生成包含注册表项的 .reg 文件，而不是直接对注册表进行更改  。 通过注册表编辑器工具 (Regedit.exe) 导入 .reg 文件，可以在计算机上更新注册表。 .reg 文件不包含任何可由用户定义的注册函数完成的注册表更新。 /regfile 选项只为托管类发出注册表项  。 此选项不为 `TypeLibID` 或 `InterfaceID` 发出注册表项。
 
-指定 /tlb 选项时，Regasm.exe 将生成并注册一个类型库，对在程序集中找到的类型进行描述  。 Regasm.exe 将生成的类型库放置在当前的工作目录中或为输出文件指定的目录中。 为引用其他程序集的程序集生成类型库可能导致同时生成几个类型库。 你可使用类型库向开发工具（如 Visual Studio）提供类型信息。 如果所注册的程序集是由类型库导入程序 ([Tlbimp.exe](tlbimp-exe-type-library-importer.md)) 生成的，则不应使用 /tlb 选项  。 如果程序集是从类型库导入的，则不能从它导出类型库。 除了类型库导出程序 ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) 不会注册其生成的类型库外，使用 /tlb 选项与使用 Tlbexp.exe 和 Regasm.exe 的效果相同  。  如果使用 /tlb  选项注册某个类型库，则可将 /tlb  选项和 /unregister  选项一起使用以注销类型库。 将两个选项一起使用将注销类型库和接口项，这样可较大程度地清理注册表。
+指定 /tlb 选项时，Regasm.exe 将生成并注册一个类型库，对在程序集中找到的类型进行描述  。 Regasm.exe 将生成的类型库放置在当前的工作目录中或为输出文件指定的目录中。 为引用其他程序集的程序集生成类型库可能导致同时生成几个类型库。 你可使用类型库向开发工具（如 Visual Studio）提供类型信息。 如果所注册的程序集是由类型库导入程序 ([Tlbimp.exe](tlbimp-exe-type-library-importer.md)) 生成的，请勿使用 /tlb 选项  。 如果程序集是从类型库导入的，则不能从它导出类型库。 除了类型库导出程序 ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) 不会注册其生成的类型库外，使用 /tlb 选项与使用 Tlbexp.exe 和 Regasm.exe 的效果相同  。  如果使用 /tlb  选项注册某个类型库，则可将 /tlb  选项和 /unregister  选项一起使用以注销类型库。 将两个选项一起使用将注销类型库和接口项，这样可较大程度地清理注册表。
 
 当你注册一个程序集供 COM 使用时，Regasm.exe 会在本地计算机上的注册表中添加一些项。 具体而言，它将创建一些与版本相关的注册表键，从而允许在一台计算机上并行运行同一程序集的多个版本。 在第一次注册某个程序集时，将会为该程序集创建一个顶级键，并为特定版本创建一个唯一的子键。 每次注册该程序集的新版本时，Regasm.exe 都将为新版本创建一个子键。
 

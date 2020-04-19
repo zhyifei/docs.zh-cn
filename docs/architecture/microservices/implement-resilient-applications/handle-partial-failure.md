@@ -2,12 +2,12 @@
 title: 处理部分失败错误
 description: 了解如何妥善处理部分失败错误。 微服务可能无法完全正常运行，但仍可以执行一些有用的工作。
 ms.date: 10/16/2018
-ms.openlocfilehash: f00e5349df74b543deb6ac941c751cb130b3837c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0300719360e1a2500db0af8454c91fdfe2e5b09b
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73732961"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988865"
 ---
 # <a name="handle-partial-failure"></a>处理部分失败错误
 

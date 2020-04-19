@@ -3,12 +3,12 @@ title: .NET 术语表
 description: 了解 .NET 文档中所用的选定术语的含义。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: ed4dceed1a3f39c5c4ce7a278efc37bb38ed0d94
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: d8f16579ea4dcbc9260aac83e16d3fbd30db519c
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344205"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635581"
 ---
 # <a name="net-glossary"></a>.NET 术语表
 
@@ -155,7 +155,7 @@ Mono 通常与实时编译器一起使用，但它也提供在 iOS 之类的平�
 
 [.NET Standard](#net-standard) 和所有 [.NET 实现](#implementation-of-net)及工作负荷的涵盖性术语。 始终采用全大写形式，请勿使用“.Net”。
 
-请参阅 [.NET 指南](index.md)
+请参阅 [.NET 指南](index.yml)
 
 ## <a name="net-core"></a>.NET Core
 
@@ -273,7 +273,7 @@ NuGet 包 &mdash; 或只是一个包 &mdash; 是一个 .zip  文件，其中具�
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET 指南](index.md)
+- [.NET 指南](index.yml)
 - [.NET Framework 指南](../framework/index.yml)
 - [.NET Core](../core/index.yml)
 - [ASP.NET 概述](/aspnet/index#pivot=aspnet)

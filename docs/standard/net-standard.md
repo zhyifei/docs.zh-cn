@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6e573056132c25b912ff1eb76b9b055f6e47cfe
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77452586"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438221"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -64,7 +64,7 @@ ms.locfileid: "77452586"
 
 ### <a name="official-artifacts"></a>正式项目
 
-正式规范是一组用于定义标准中包含的 API 的 .cs 文件。 [dotnet/standard 存储库](https://github.com/dotnet/standard/tree/master/src/netstandard/ref)中的 [Ref 目录](https://github.com/dotnet/standard)定义了 .NET Standard API。
+正式规范是一组用于定义标准中包含的 API 的 .cs 文件。 [dotnet/standard 存储库](https://github.com/dotnet/standard)中的 [Ref 目录](https://github.com/dotnet/standard/tree/master/src/netstandard/ref)定义了 .NET Standard API。
 
 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) 元包（[源代码](https://github.com/dotnet/standard/blob/master/src/netstandard/pkg/NETStandard.Library.dependencies.props)）描述用于部分定义一个或多个 .NET Standard 版本的库集。
 
@@ -82,7 +82,7 @@ ms.locfileid: "77452586"
 
 .NET Standard 引用程序集的主要分发载体是 [NuGet 包](../core/packages.md)。 实现会以适用于每个 .NET 实现的各种方式提供。
 
-NuGet 包面向一个或多个[框架](frameworks.md)。 .NET Standard 包定位“.NET Standard”框架。 可以使用 `netstandard` [精简 TFM](frameworks.md)（例如 `netstandard1.4`）来设定 .NET Standard 框架作为目标。 如果构建的库将在多个运行时中运行，就应将此框架作为目标。 对于最广泛的 API 集，将 `netstandard2.0` 设定为目标，因为 .NET Standard 2.0 的可用 API 数量比 .NET Standard 1.6 的两倍还多。
+NuGet 包面向一个或多个[框架](frameworks.md)。 .NET Standard 包定位“.NET Standard”框架。 可以使用 `netstandard` [精简 TFM](frameworks.md)（例如 `netstandard1.4`）来设定 .NET Standard 框架作为目标。 如果构建的库将用于在多个运行时上运行，就应将此框架作为目标。 对于最广泛的 API 集，将 `netstandard2.0` 设定为目标，因为 .NET Standard 2.0 的可用 API 数量比 .NET Standard 1.6 的两倍还多。
 
 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) 元包引用定义 .NET Standard 的一整套 NuGet 包。  要指定 `netstandard` 作为目标，最常见的方法是引用此元包。 它描述并提供了对大约 40 个 .NET 库及定义 .Net Standard 的相关 API 的访问权限。 可以引用以 `netstandard` 为目标的其他包来使用其他 API。
 
@@ -100,9 +100,9 @@ NuGet 包面向一个或多个[框架](frameworks.md)。 .NET Standard 包定位
 - 使用依赖相同或更低 .NET Standard 版本的库。
 - 如果发现依赖更高 .NET Standard 版本的库，要么需要采用相同的版本，要么不要使用此库。
 
-## <a name="targeting-net-standard"></a>定位 .NET Standard
+## <a name="target-net-standard"></a>定位 .NET Standard
 
-可以结合使用 [ 框架和 NETStandard.Library 元包来](../core/tutorials/libraries.md)构建.NET Standard 库`netstandard`。 可以查看[使用 .NET Core 工具定位 .NET Standard](../core/packages.md) 的示例。
+可以结合使用 `netstandard` 框架和 NETStandard.Library 元包来[构建.NET Standard 库](../core/tutorials/libraries.md)。 可以查看[使用 .NET Core 工具定位 .NET Standard](../core/packages.md) 的示例。
 
 ## <a name="net-framework-compatibility-mode"></a>.NET Framework 兼容性模式
 
@@ -159,7 +159,7 @@ NuGet 包面向一个或多个[框架](frameworks.md)。 .NET Standard 包定位
 | Profile157  | 1.0           | Windows 8.1、Windows Phone 8.1、Windows Phone Silverlight 8.1
 | Profile259  | 1.0           | .NET Framework 4.5、Windows 8, Windows Phone 8.1、Windows Phone Silverlight 8
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [.NET Standard 版本](https://github.com/dotnet/standard/blob/master/docs/versions.md)
 - [生成 .NET Standard 库](../core/tutorials/library-with-visual-studio.md)

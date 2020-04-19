@@ -3,13 +3,13 @@ title: 将 Windows 窗体应用移植到 .NET Core
 description: 了解如何将 .NET Framework Windows 窗体应用程序移植到 .NET Core for Windows。
 author: Thraka
 ms.author: adegeo
-ms.date: 03/01/2019
-ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 01/24/2020
+ms.openlocfilehash: 80b4bb225d6a6748743d91a4c70e8b09c10cc94b
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116026"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635514"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>如何将 Windows 窗体桌面应用程序移植到 .NET Core
 
@@ -17,16 +17,16 @@ ms.locfileid: "76116026"
 
 本文中的各种名称用于标识迁移所用的文件类型。 迁移项目时，你的文件将以不同的名称命名，因此，请自行在心里将它们与下面列出的文件进行匹配：
 
-| 文件 | 说明 |
+| 文件 | 描述 |
 | ---- | ----------- |
 | **MyApps.sln** | 解决方案文件的名称。 |
 | **MyForms.csproj** | 要移植的 .NET Framework Windows 窗体项目的名称。 |
 | **MyFormsCore.csproj** | 创建的新 .NET Core 项目的名称。 |
 | **MyAppCore.exe** | .NET Core Windows 窗体应用程序的可执行文件。 |
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
-- 适用于要执行的任何设计器工作的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。
+- 适用于要执行的任何设计器工作的 [Visual Studio 2019 16.5 预览版 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) 或更高版本。 建议更新到最新的 [Visual Studio 预览版](https://visualstudio.microsoft.com/vs/preview/)
 
   安装以下 Visual Studio 工作负载：
   - .NET 桌面开发
@@ -34,10 +34,11 @@ ms.locfileid: "76116026"
 
 - 在解决方案中顺利生成和运行的有效 Windows 窗体项目。
 - 用 C# 编码的项目。
-- [.NET Core](https://dotnet.microsoft.com/download/dotnet-core) 3.0 或更高版本。
 
 > [!NOTE]
->  Visual Studio 2017 不支持 .NET Core 3.0 项目。 Visual Studio 2019  支持 .NET Core 3.0 项目，但尚不支持适用于 .NET Core 3.0 Windows 窗体项目的可视化设计器。 要使用可视化设计器，解决方案中必须包含可与 .NET Core 项目共享窗体文件的 .NET Windows 窗体项目。
+> 仅在 Visual Studio 2019  或更高版本中支持 .NET Core 3.0 项目。 从 Visual Studio 2019 版本 16.5 预览版 1  开始，还支持 .NET Core Windows 窗体设计器。
+>
+> 若要启用该设计器，请转到“工具”   > “选项”   > “环境”   > “预览功能”  ，然后选择“将预览版 Windows 窗体设计器用于 .NET Core 应用”  选项。
 
 ### <a name="consider"></a>考虑
 
@@ -58,10 +59,6 @@ ms.locfileid: "76116026"
 01. 更新项目使用的 NuGet 包。
 
     在执行任何迁移之前使用最新版 NuGet 包始终是一个不错的做法。 如果应用程序引用任何 NuGet 包，请将它们更新到最新版本。 确保成功生成应用程序。 升级后，如果存在任何包错误，请将包降级到不会破坏代码的最新版本。
-
-01. Visual Studio 2019 尚不支持适用于 .NET Core 3.0 的窗体设计器
-
-    目前，如果要从 Visual Studio 中使用窗体设计器，需要保留现有的 .NET Framework Windows 窗体项目文件。
 
 ## <a name="create-a-new-sdk-project"></a>创建新的 SDK 项目
 
@@ -127,7 +124,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 - **RootNamespace**\
 项目使用的默认命名空间。 它应该与 .NET Framework 项目的默认命名空间匹配。
 
-将这三个元素添加到 `<PropertyGroup>` 文件中的 `MyFormsCore.csproj` 节点：
+将这三个元素添加到 `MyFormsCore.csproj` 文件中的 `<PropertyGroup>` 节点：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
@@ -188,7 +185,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework.Fonts
 
 借助上一步的示例，详细介绍正在处理的项目和文件。
 
-| 文件 | 说明 |
+| 文件 | 描述 |
 | ---- | ----------- |
 | **MyApps.sln** | 解决方案文件的名称。 |
 | **MyControls.csproj** | 要移植的 .NET Framework Windows 窗体控件项目的名称。 |

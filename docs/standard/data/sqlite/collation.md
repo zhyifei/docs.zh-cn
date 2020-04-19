@@ -2,12 +2,12 @@
 title: 排序规则
 ms.date: 12/13/2019
 description: 了解如何创建自定义整理序列。
-ms.openlocfilehash: b93c82a4ace154b8293b05effa8f9e9294fa7708
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 9879846cc191a62c4cb47a0fbaa47c59153ba61c
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79506536"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242967"
 ---
 # <a name="collation"></a>排序规则
 
@@ -21,7 +21,7 @@ SQLite 在比较 TEXT 值以确定顺序和相等性时使用分字序列。 您
 
 ## <a name="custom-collation"></a>自定义排序规则
 
-您还可以定义自己的整理序列或使用 重写的序列<xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>。 下面的示例显示覆盖 NOCASE 排序规则以支持 Unicode 字符。 [完整的示例代码](https://github.com/dotnet/samples/blob/master/snippets/standard/data/sqlite/CollationSample/Program.cs)在 GitHub 上可用。
+您还可以定义自己的整理序列或使用 重写的序列<xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>。 下面的示例显示覆盖 NOCASE 排序规则以支持 Unicode 字符。 [完整的示例代码](https://github.com/dotnet/docs/blob/master/samples/snippets/standard/data/sqlite/CollationSample/Program.cs)在 GitHub 上可用。
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/CollationSample/Program.cs?name=snippet_Collation)]
 

@@ -4,18 +4,18 @@ description: 本文总结了所有新版 .NET Standard 中的新功能和增强�
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: a90df0360211c3b02f4f2d8697890180099c5807
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28d6a3546e08bbc3a7d4a26f08ba9cc5e16a901b
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76921061"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438204"
 ---
-# <a name="whats-new-in-the-net-standard"></a>.NET Standard 中的新增功能
+# <a name="whats-new-in-net-standard"></a>.NET Standard 中的新增功能
 
 .NET Standard 是一种正式规范，它定义了一组版本化 API。这些 API 必须可用于符合相应 Standard 版本要求的 .NET 实现。 .NET Standard 面向库开发者。 定目标到 .NET Standard 版本的库可用于任意 .NET Framework、.NET Core 或支持 Standard 版本的 Xamarin 实现。
 
-.NET Standard 的最新版本是 2.0。 .NET Core 2.0 SDK 及已安装 .NET Core 工作负载的 Visual Studio 2017 版本 15.3 包含该版本。
+.NET Core SDK 及选择 .NET Core 工作负载时的 Visual Studio 包含 .NET Standard。
 
 ## <a name="supported-net-implementations"></a>支持的 .NET 实现
 
@@ -29,7 +29,7 @@ ms.locfileid: "76921061"
 - Xamarin.Android 8.0 或更高版本
 - 通用 Windows 平台 10.0.16299 或更高版本
 
-## <a name="whats-new-in-the-net-standard-20"></a>.NET Standard 2.0 中的新增功能
+## <a name="whats-new-in-net-standard-20"></a>.NET Standard 2.0 中的新增功能
 
 .NET Standard 2.0 新增了以下功能：
 
@@ -49,17 +49,17 @@ ms.locfileid: "76921061"
 - 增强了 <xref:System.String> 类中的字符串比较、枚举和规范化支持。
 - <xref:System.TimeZoneInfo.AdjustmentRule> 和 <xref:System.TimeZoneInfo.TransitionTime> 类支持夏令时调整和时间转换。
 - 显著改进了 <xref:System.Type> 类中的功能。
-- 通过添加包含 <xref:System.Runtime.Serialization.SerializationInfo> 和 <xref:System.Runtime.Serialization.StreamingContext> 参数的异常构造函数，改进了对异常对象反串行化的支持。
+- 通过添加包含 <xref:System.Runtime.Serialization.SerializationInfo> 和 <xref:System.Runtime.Serialization.StreamingContext> 参数的异常构造函数，改进了对异常对象反序列化的支持。
 
 ### <a name="support-for-net-framework-libraries"></a>支持 .NET Framework 库
 
-绝大多数库定目标到 .NET Framework，而不是 .NET Standard。 不过，这些库大多调用的是 .NET Standard 2.0 中的 API。 自 .NET Standard 2.0 起，可以使用[兼容性垫片](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification)从 .NET Standard 库访问 .NET Framework 库。 此兼容性层对开发人员透明；无需执行任何操作，即可使用 .NET Framework 库。
+绝大多数库定目标到 .NET Framework，而不是 .NET Standard。 不过，这些库大多调用的是 .NET Standard 2.0 中的 API。 自 .NET Standard 2.0 起，可以使用[兼容性填充码](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification)从 .NET Standard 库访问 .NET Framework 库。 此兼容性层对开发人员透明；无需执行任何操作，即可使用 .NET Framework 库。
 
 只有一项要求就是，.NET Framework 类库调用的 API 必须是 .NET Standard 2.0 中的 API。
 
 ### <a name="support-for-visual-basic"></a>支持 Visual Basic
 
-现在可以使用 Visual Basic 开发 .NET Standard 库。 如果 Visual Basic 开发人员使用的是已安装 .NET Core 工作负载的 Visual Studio 2017 版本 15.3 或更高版本，现在可以使用 Visual Studio 中的 .NET Standard 类库模板。 对于使用其他开发工具和环境的 Visual Basic 开发人员，可以使用 [dotnet new](../../core/tools/dotnet-new.md) 命令创建 .NET Standard 库项目。 有关详细信息，请参阅 [.NET Standard 库的工具支持](#tooling-support-for-net-standard-libraries)。
+现在可以使用 Visual Basic 开发 .NET Standard 库。 安装了 .NET Core 工作负载的 Visual Studio 2019 和 Visual Studio 2017 版本 15.3 或更高版本包含 .NET Standard 类库模板。 对于使用其他开发工具和环境的 Visual Basic 开发人员，可以使用 [dotnet new](../../core/tools/dotnet-new.md) 命令创建 .NET Standard 库项目。 有关详细信息，请参阅 [.NET Standard 库的工具支持](#tooling-support-for-net-standard-libraries)。
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>.NET Standard 库的工具支持
 
@@ -73,7 +73,7 @@ ms.locfileid: "76921061"
 
 ![添加新的 .NET Standard 库项目](./media/std-project-cs.png)
 
-如果使用的是 .NET Core CLI，可以运行下面的 [dotnet new](../../core/tools/dotnet-new.md) 命令，以创建定目标到 .NET Standard 2.0 的类库项目：
+如果使用的是 .NET Core CLI，可以运行下面的 [dotnet new](../../core/tools/dotnet-new.md) 命令，以创建以 .NET Standard 2.0 为目标的类库项目：
 
 ```dotnetcli
 dotnet new classlib
@@ -83,7 +83,7 @@ dotnet new classlib
 
 ![添加新的 .NET Standard 库项目](./media/std-project-vb.png)
 
-如果使用的是 .NET Core CLI，可以运行下面的 [dotnet new](../../core/tools/dotnet-new.md) 命令，以创建定目标到 .NET Standard 2.0 的类库项目：
+如果使用的是 .NET Core CLI，可以运行下面的 [dotnet new](../../core/tools/dotnet-new.md) 命令，以创建以 .NET Standard 2.0 为目标的类库项目：
 
 ```dotnetcli
 dotnet new classlib -lang vb
@@ -91,7 +91,7 @@ dotnet new classlib -lang vb
 
 ---
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [.NET Standard](../net-standard.md)
 - [.NET Standard 简介](https://devblogs.microsoft.com/dotnet/introducing-net-standard/)

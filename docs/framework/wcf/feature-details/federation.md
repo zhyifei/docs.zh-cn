@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 86c679af77f2b7b1960e7489e0e6e61b811e1bad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9616a5afb88e46bb5d69f1cd253c854cc1684d9f
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185228"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464187"
 ---
 # <a name="federation"></a>联合
 本主题概要介绍联合安全概念。 它还介绍了 Windows 通信基础 （WCF） 对部署联合安全体系结构的支持。 有关演示联合的示例应用程序，请参阅[联合示例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
@@ -26,7 +26,7 @@ ms.locfileid: "79185228"
 ### <a name="elements-of-a-federated-security-architecture"></a>联合安全体系结构的元素  
  联合安全体系结构有三个关键元素，如下表所述。  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |域/领域|安全管理或信任的单个单位。 典型的域可能包括单个组织。|  
 |联合|已建立信任的域的集合。 信任级别可能有所不同，但通常包括身份验证，几乎始终包括授权。 典型的联合可能包括为了对一组资源进行共享访问而建立信任的许多组织。|  
@@ -240,7 +240,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
                        storeLocation="LocalMachine"
                        storeName="My" />  
        </identity>  
-    <endpoint>  
+    </endpoint>  
   </service>  
 </services>  
   
@@ -289,6 +289,6 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ## <a name="summary"></a>总结  
  联合安全可以清晰划分责任范围并有助于生成安全、可伸缩的服务体系结构。 作为构建和部署分布式应用程序的平台，WCF 为实现联合安全性提供了本机支持。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [安全性](../../../../docs/framework/wcf/feature-details/security.md)

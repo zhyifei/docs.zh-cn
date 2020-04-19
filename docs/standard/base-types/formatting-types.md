@@ -25,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: a1f4d9107427140bcfa6b49bc8a850432fb204f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 124c32a09a32dd90b8b96b39aa80352094030b23
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75348252"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523948"
 ---
 # <a name="format-types-in-net"></a>.NET 中的格式类型
 
@@ -359,8 +359,7 @@ ms.locfileid: "75348252"
 |[自定义 TimeSpan 格式字符串](../../../docs/standard/base-types/custom-timespan-format-strings.md)|描述用于创建时间间隔的应用程序特定格式的自定义格式字符串。|
 |[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|描述用于创建枚举值的字符串表示形式的标准格式字符串。|
 |[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)|描述如何将一个或多个设置了格式的值嵌入字符串。 然后该字符串可以显示在控制台上或被写至流。|
-|[执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)|列出分步说明如何执行特定的格式设置操作的主题。|
-|[Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)|描述如何将对象初始化为这些对象的字符串表示形式所描述的值。 分析是格式化的反向操作。|
+|[分析字符串](../../../docs/standard/base-types/parsing-strings.md)|描述如何将对象初始化为这些对象的字符串表示形式所描述的值。 分析是格式化的反向操作。|
 
 ## <a name="reference"></a>参考
 

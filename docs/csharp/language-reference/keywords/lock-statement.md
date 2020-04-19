@@ -1,19 +1,19 @@
 ---
 title: lock 语句 - C# 参考
 description: 使用 C# lock 语句同步对共享资源的线程访问
-ms.date: 10/01/2018
+ms.date: 04/02/2020
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 467881dd36c97b6b18b7f31d4e4af25152b0d012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f2d42ae02a07a5e1b82cefd004f4d03b2a16dff
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713392"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635384"
 ---
 # <a name="lock-statement-c-reference"></a>lock 语句（C# 参考）
 
@@ -46,9 +46,9 @@ finally
 
 由于该代码使用 [try...finally](try-finally.md) 块，即使在 `lock` 语句的正文中引发异常，也会释放 lock。
 
-在 [ 语句的正文中不能使用 ](../operators/await.md)await 运算符`lock`。
+在 `lock` 语句的正文中不能使用 [await 运算符](../operators/await.md)。
 
-## <a name="remarks"></a>备注
+## <a name="guidelines"></a>准则
 
 当同步对共享资源的线程访问时，请锁定专用对象实例（例如，`private readonly object balanceLock = new object();`）或另一个不太可能被代码无关部分用作 lock 对象的实例。 避免对不同的共享资源使用相同的 lock 对象实例，因为这可能导致死锁或锁争用。 具体而言，避免将以下对象用作 lock 对象：
 
@@ -56,21 +56,23 @@ finally
 - <xref:System.Type> 实例（可以通过 [typeof](../operators/type-testing-and-cast.md#typeof-operator) 运算符或反射获取）。
 - 字符串实例，包括字符串文本，（这些可能是[暂存的](/dotnet/api/system.string.intern#remarks)）。
 
+尽可能缩短持有锁的时间，以减少锁争用。
+
 ## <a name="example"></a>示例
 
-以下示例定义了一个 `Account` 类，该类通过锁定专用的 `balance` 实例来同步对其专用 `balanceLock` 字段的访问。 使用相同的实例进行锁定可确保尝试同时调用 `balance` 或 `Debit` 方法的两个线程无法同时更新 `Credit` 字段。
+以下示例定义了一个 `Account` 类，该类通过锁定专用的 `balanceLock` 实例来同步对其专用 `balance` 字段的访问。 使用相同的实例进行锁定可确保尝试同时调用 `Debit` 或 `Credit` 方法的两个线程无法同时更新 `balance` 字段。
 
 [!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/statements.md#the-lock-statement)中的 [lock 语句](~/_csharplang/spec/introduction.md)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的 [lock 语句](~/_csharplang/spec/statements.md#the-lock-statement)部分。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
+- [C# 参考](../index.md)
+- [C# 关键字](index.md)
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.SpinLock?displayProperty=nameWithType>
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>
-- [C# 参考](../index.md)
-- [C# 关键字](index.md)
 - [同步基元概述](../../../standard/threading/overview-of-synchronization-primitives.md)

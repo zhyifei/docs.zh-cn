@@ -26,12 +26,12 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-ms.openlocfilehash: 9c8d459195693e8eb084f7e87427a3ea37dd63ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d64e3b5201e34541fdafa5724b0c7e8c3f6c0c0d
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129919"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243045"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>打包和部署 .NET 应用中的资源
 
@@ -50,10 +50,10 @@ ms.locfileid: "73129919"
 
 ## <a name="resource-naming-conventions"></a>资源命名约定
 
-在打包应用程序的资源时，必须使用公共语言运行时所要求的资源命名约定对其进行命名。 运行时可按其区域性名称标识资源。 每个区域性均被赋予唯一名称，通常是与语言相关的两个小写字母的区域性名称和必要情况下，与国家或地区相关的两个大写子母的区域性名称的组合。 子区域性名称跟在区域性名称后，以短划线 (-) 隔开。 例如：ja-JP 表示日本日语，en-US 表示美国英语，de-DE 表示德国德语，de-AT 表示奥地利德语。 请参阅 [Windows 支持的语言/区域名称列表](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)中的“语言标记”列。 列名遵循 [BCP 47](https://tools.ietf.org/html/bcp47) 定义的标准。
+在打包应用程序的资源时，必须使用公共语言运行时所要求的资源命名约定对其进行命名。 运行时可按其区域性名称标识资源。 每个区域性均被赋予唯一名称，通常是与语言相关的两个小写字母的区域性名称和必要情况下，与国家或地区相关的两个大写子母的区域性名称的组合。 子区域性名称跟在区域性名称后，以短划线 (-) 隔开。 例如：ja-JP 表示日本日语，en-US 表示美国英语，de-DE 表示德国德语，de-AT 表示奥地利德语。 请参阅 [Windows 支持的语言/区域名称列表](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)中的“语言标记”**** 列。 列名遵循 [BCP 47](https://tools.ietf.org/html/bcp47) 定义的标准。
 
 > [!NOTE]
-> 两个字母的区域性名称有一些例外，如中文（简体） `zh-Hans`。
+> 两个字母区域性名称有一些例外，例如`zh-Hans`中文（简体版）。
 
 > [!NOTE]
 > 有关创建资源文件的信息，请参阅[创建资源文件](creating-resource-files-for-desktop-apps.md)和[创建附属程序集](creating-satellite-assemblies-for-desktop-apps.md)。
@@ -71,7 +71,7 @@ ms.locfileid: "73129919"
 .NET Framework 资源回退进程包含以下步骤：
 
 > [!TIP]
-> 还可以使用 [ \<relativeBindForResources >](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 配置元素来优化资源回退过程和运行时针对资源程序集探测所依据的。 有关详细信息，请参阅 [优化资源回退进程](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing)一节。
+> 您可以使用[\<相对 BindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md)配置元素来优化资源回退过程和资源程序集的运行时探测过程。 有关详细信息，请参阅 [优化资源回退进程](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing)一节。
 
 1. 运行时首先检查[全局程序集缓存](../app-domains/gac.md)，找到与为应用程序请求的区域性匹配的程序集。
 
@@ -116,7 +116,7 @@ ms.locfileid: "73129919"
 
 - 应用程序代码不会处理 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。
 
-可通过在应用程序配置文件中包含 [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 元素并将其 `enabled` 属性设为 `true`，优化附属程序集探测，如下例所示。
+通过将[\<相对 BindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md)元素并将其`enabled`属性`true`设置为应用程序配置文件来优化附属程序集的探测，如以下示例所示。
 
 ```xml
 <configuration>
@@ -170,7 +170,7 @@ ms.locfileid: "73129919"
 
 ### <a name="ultimate-fallback-to-satellite-assembly"></a>最终回退到附属程序集
 
-可选择从主程序集中删除资源，并指定运行时应加载对应于特定区域性的附属程序集中的最终回退资源。 若要控制回退进程，请使用 <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=nameWithType> 构造函数并提供 <xref:System.Resources.UltimateResourceFallbackLocation> 参数的值，用于指定 Resource Manager 是应从主程序集还是应从附属程序集中提取回退资源。
+可选择从主程序集中删除资源，并指定运行时应加载对应于特定区域性的附属程序集中的最终回退资源。 若要控制回退进程，请使用 <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29> 构造函数并提供 <xref:System.Resources.UltimateResourceFallbackLocation> 参数的值，用于指定 Resource Manager 是应从主程序集还是应从附属程序集中提取回退资源。
 
 下面的 .NET Framework 示例使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性将应用程序回退资源存储在法语 (`fr`) 语言的附属程序集中。 本示例介绍了两个基于文本的资源文件，这两个文件用于定义名为 `Greeting` 的单个字符串资源。 第一个文件 resources.fr.txt 包含法语资源。
 
@@ -186,19 +186,19 @@ Greeting=Добрый день
 
 从命令行运行[资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 可将这两个文件编译为 .resources 文件。 对于法语资源，命令为：
 
-resgen.exe resources.fr.txt
+resgen.exe resources.fr.txt****
 
 对于俄语资源，命令为：
 
-resgen.exe resources.ru.txt
+resgen.exe resources.ru.txt****
 
 对于法语资源，从命令行运行[程序集连接器 (Al.exe)](../tools/al-exe-assembly-linker.md)，将 .resources 文件嵌入动态链接库，如下所示：
 
-al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll
+al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll****
 
 而对于俄语资源，则为如下所示：
 
-al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.dll
+al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.dll****
 
 应用程序源代码位于名为 Example1.cs 或 Example1.vb 的文件中。 它包括 <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性，以指示默认应用程序资源位于 fr 子目录中。 它可实例化 Resource Manager，检索 `Greeting` 资源的值，并将其显示到控制台。
 
@@ -229,7 +229,7 @@ Bon jour!
 
 由于时间或预算约束，可能无法为应用程序支持的每个子区域性均创建一组资源。 但可以为所有相关子区域性可用的父区域性创建单个附属程序集。 例如，可以提供单个英语附属程序集 (en)，请求特定于区域的英语资源的用户将检索该程序集，并且为请求特定于区域的德语资源的用户创建单个德语附属程序集 (de)。 例如，对德国德语 (de-DE)、奥地利德语 (de-AT) 和瑞士德语 (de-CH) 的请求均会回退到德语附属程序集 (de)。 默认资源是最终回退资源，因而应是大多数应用程序用户将请求的资源，因此应仔细选择这些资源。 此方法可部署区域性特定性较低，但可显著减少应用程序本地化成本的资源。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [桌面应用中的资源](index.md)
 - [全局程序集缓存](../app-domains/gac.md)

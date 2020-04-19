@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM,wrappers creating
 - COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
-ms.openlocfilehash: 623df8aa86d25d9a57d3039bee01b0ee39d402a8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 035d6439ec90426d7b68e05043ea8b6722f81d28
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123944"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121599"
 ---
 # <a name="how-to-create-com-wrappers"></a>如何：创建 COM 包装
 
@@ -28,18 +28,18 @@ ms.locfileid: "73123944"
 
 1. 打开托管应用程序的项目。
 
-2. 在“项目”菜单上，单击“显示所有文件”。
+2. 在“项目”菜单上，单击“显示所有文件”********。
 
-3. 在“项目”菜单上，单击“添加引用”。
+3. 在“项目”**** 菜单上，单击“添加引用”****。
 
-4. 在“添加引用”对话框中，单击“COM”选项卡，选择要使用的组件，然后单击“确定”。
+4. 在“添加引用”对话框中，单击“COM”选项卡，选择要使用的组件，然后单击“确定”********。
 
-     在“解决方案资源管理器”中检查 COM 组件是否已添加到项目的“引用”文件夹中。
+     在“解决方案资源管理器”中检查 COM 组件是否已添加到项目的“引用”文件夹中****。
 
 现在可以编写代码以访问 COM 对象。 可以从通过声明对象开始，例如使用适用于 Visual Basic 的 `Imports` 语句或适用于 C# 的 `Using` 语句。
 
 > [!NOTE]
-> 如果要编写 Microsoft Office 组件的程序，请首先从 Microsoft 下载中心安装 [Microsoft Office 主互操作程序集](https://go.microsoft.com/fwlink/?LinkId=50479) (PIA)。 在步骤 4 中，为所需的 Office 产品选择可用的最新版本的对象库，如 Microsoft Word 11.0 对象库。  
+> 如果要对 Microsoft Office 组件进行编程，请首先安装[Microsoft Office 主互通程序集可再分发](https://www.microsoft.com/Download/details.aspx?id=3508)。
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>使用 .NET Framework 工具创建运行时可调用包装器  
   
@@ -55,13 +55,13 @@ ms.locfileid: "73123944"
   
      在 AssemblyInfo 文件中验证程序集是否具有由四部分构成的完整版本号。 在 Windows 注册表中维护版本控制需要此版本号。 有关版本号的详细信息，请参阅[程序集版本控制](../../standard/assembly/versioning.md)。  
   
-2. 在“项目”菜单上，单击“属性”。  
+2. 在 **“项目”** 菜单上，单击 **“属性”**。  
   
-3. 单击“编译”选项卡。  
+3. 单击“编译”**** 选项卡。  
   
-4. 选择“为 COM 互操作注册”复选框。  
+4. 选择“为 COM 互操作注册”复选框****。  
   
- 生成项目时，将自动为 COM 互操作注册程序集。 如果要在 Visual Studio 2005 中生成本机应用程序，可以通过单击“项目”菜单上的“添加引用”来使用此程序集。  
+ 生成项目时，将自动为 COM 互操作注册程序集。 如果要在 Visual Studio 2005 中生成本机应用程序，可以通过单击“项目”菜单上的“添加引用”来使用此程序集********。  
   
 ### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>使用 .NET Framework 工具创建 COM 可调用包装器  
   
@@ -73,5 +73,5 @@ ms.locfileid: "73123944"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时可调用包装器](../../standard/native-interop/runtime-callable-wrapper.md)
-- [COM 可调用包装器](../../standard/native-interop/com-callable-wrapper.md)
+- [运行时可调用包装](../../standard/native-interop/runtime-callable-wrapper.md)
+- [COM 可调用包装](../../standard/native-interop/com-callable-wrapper.md)

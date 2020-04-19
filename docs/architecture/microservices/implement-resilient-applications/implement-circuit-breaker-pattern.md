@@ -2,12 +2,12 @@
 title: 实现断路器模式
 description: 了解如何实现断路器模式作为 Http 重试的互补系统。
 ms.date: 03/03/2020
-ms.openlocfilehash: a79c6fcca1e29f3c30d697cb369060d59a72c121
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bebe0b4a622db928175f78f8d3e303d3d7adf170
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847240"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988880"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>实现断路器模式
 
@@ -77,7 +77,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 一种方法是在断路器策略中将允许的重试次数减少为 1 次，并将整个解决方案重新部署到 Docker。 如果设为一次重试，部署过程中 HTTP 请求失败的可能性就会很大，断路器会打开，然后收到错误。
 
-另一种方法是使用 Basket 微服务中实现的自定义中间件。 启用此中间件后，它会捕获所有 HTTP 请求并返回状态代码 500。 可以通过向失败 URI 发出 GET 请求来启用此中间件，如下所示：
+另一种方法是使用 Basket  微服务中实现的自定义中间件。 启用此中间件后，它会捕获所有 HTTP 请求并返回状态代码 500。 可以通过向失败 URI 发出 GET 请求来启用此中间件，如下所示：
 
 - `GET http://localhost:5103/failing`\
   此请求返回中间件的当前状态。 如果启用了中间件，则请求返回状态代码 500。 如果禁用了中间件，则无响应。
@@ -132,7 +132,7 @@ public class CartController : Controller
 }
 ```
 
-下面是摘要。 重试策略尝试数次发出 HTTP 请求，并获取 HTTP 错误。 当重试次数达到断路器策略设置的最大次数时（此例中为 5），应用程序会引发 BrokenCircuitException。 结果是一条友好消息，如图 8-6 中所示。
+摘要如下。 重试策略尝试数次发出 HTTP 请求，并获取 HTTP 错误。 当重试次数达到断路器策略设置的最大次数时（此例中为 5），应用程序会引发 BrokenCircuitException。 结果是一条友好消息，如图 8-6 中所示。
 
 ![出现市场篮服务无效错误的 MVC Web 应用的屏幕截图。](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 

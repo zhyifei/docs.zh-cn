@@ -2,12 +2,12 @@
 title: dotnet test 命令
 description: dotnet test 命令可用于在给定项目中执行单元测试。
 ms.date: 02/27/2020
-ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 359e4522b26e2b59092d55eea3fca575d2afaf1f
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507303"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121043"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -85,7 +85,7 @@ dotnet test [-h|--help]
 
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
-  指定测试结果记录器。
+  指定测试结果记录器。 与 MSBuild 不同，dotnet 测试不接受缩写，应使用 `-l "console;verbosity=detailed"`，而不使用 `-l "console;v=d"`。
 
 - **`--no-build`**
 
@@ -121,7 +121,7 @@ dotnet test [-h|--help]
 
 - **`-v|--verbosity <LEVEL>`**
 
-  设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+  设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 默认值为 `minimal`。 有关详细信息，请参阅 <xref:Microsoft.Build.Framework.LoggerVerbosity>。
 
 - `RunSettings` 参数
 
@@ -149,6 +149,12 @@ dotnet test [-h|--help]
 
   ```dotnetcli
   dotnet test --logger trx
+  ```
+
+- 在当前目录中运行项目中的测试，并将详细的测试结果记录到控制台：
+
+  ```dotnetcli
+  dotnet test --logger "console;verbosity=detailed"
   ```
 
 ## <a name="filter-option-details"></a>筛选选项详细信息
@@ -192,3 +198,4 @@ dotnet test [-h|--help]
 
 - [框架和目标](../../standard/frameworks.md)
 - [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)
+- [通过命令行传递 runsettings 参数](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

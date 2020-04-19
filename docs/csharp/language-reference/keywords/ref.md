@@ -1,18 +1,18 @@
 ---
 title: ref 关键字 - C# 参考
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 05f0bd8566851678203a3f064b96bfff7dee18b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d54d932ca96f1966ecc05a532a2468b7e16fac46
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398129"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805848"
 ---
 # <a name="ref-c-reference"></a>ref（C# 参考）
 
@@ -59,7 +59,13 @@ class CS0663_Example
  不能将 `ref`、`in` 和 `out` 关键字用于以下几种方法：  
   
 - 异步方法，通过使用 [async](async.md) 修饰符定义。  
-- 迭代器方法，包括 [yield return](yield.md) 或 `yield break` 语句。  
+- 迭代器方法，包括 [yield return](yield.md) 或 `yield break` 语句。
+
+此外，[扩展方法](../../programming-guide/classes-and-structs/extension-methods.md)具有以下限制：
+
+- 不能对扩展方法的第一个参数使用 `out` 关键字。
+- 当参数不是结构或是不被约束为结构的泛型类型时，不能对扩展方法的第一个参数使用 `ref` 关键字。
+- 除非第一个参数是结构，否则不能使用 `in` 关键字。 即使约束为结构，也不能对任何泛型类型使用 `in` 关键字。
 
 ## <a name="passing-an-argument-by-reference-an-example"></a>按引用传递参数：示例
 
@@ -111,7 +117,7 @@ ref decimal estValue = ref Building.GetEstimatedValue();
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-请注意，在这两个示例中，必须在两个位置同时使用 `ref` 关键字，否则编译器将生成错误 CS8172：“无法使用值对按引用变量进行初始化”。
+在这两个示例中，必须在两个位置同时使用 `ref` 关键字，否则编译器将生成错误 CS8172：“无法使用值对按引用变量进行初始化”。
 
 从 C# 7.3 开始，`foreach` 语句的迭代变量可以是 ref local 变量，也可以是 ref readonly local 变量。 有关详细信息，请参阅 [foreach 语句](foreach-in.md)一文。
 

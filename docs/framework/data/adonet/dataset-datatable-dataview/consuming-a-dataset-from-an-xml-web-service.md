@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: d835ffe7a10492ee731de8e5301e6d34545f9c32
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d7328949e3eb4822b1a645bb5f0c1866f01ecb0a
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151385"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389751"
 ---
-# <a name="consuming-a-dataset-from-an-xml-web-service"></a>通过 XML Web 服务使用数据集
+# <a name="consume-a-dataset-from-an-xml-web-service"></a>使用 XML Web 服务的数据集
+
 <xref:System.Data.DataSet> 是用断开式设计来构建的，其部分目的是为了便于通过 Internet 来传输数据。 **DataSet**是"可序列化的"，因为它可以指定为 XML Web 服务的输入或输出，而无需任何其他编码才能将**DataSet**的内容从 XML Web 服务流式传输到客户端并返回。 **DataSet**使用 DiffGram 格式隐式转换为 XML 流，通过网络发送，然后从 XML 流重建为接收端的**DataSet。** 它为你使用 XML Web services 传输和返回关系数据提供了非常简单而灵活的方法。 有关 DiffGram 格式的详细信息，请参阅[DiffGram](diffgrams.md)。  
   
  下面的示例演示如何创建使用**DataSet**传输关系数据（包括修改数据）的 XML Web 服务和客户端，并将任何更新解析回原始数据源。  
@@ -20,7 +21,7 @@ ms.locfileid: "79151385"
 > [!NOTE]
 > 我们建议你在创建 XML Web services 时，应始终考虑到安全问题。 有关保护 XML Web 服务的信息，请参阅[保护使用 ASP.NET 创建的 XML Web 服务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))。  
   
-### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>创建返回和使用 DataSet 的 XML Web services  
+## <a name="create-an-xml-web-service"></a>创建 XML Web 服务
   
 1. 创建 XML Web services。  
   
@@ -189,9 +190,11 @@ ms.locfileid: "79151385"
   
 3. 创建 XML Web services 客户端。  
   
-     如果要让 Visual Studio 为您生成 Web 服务代理类，只需创建客户端项目，并在"解决方案资源管理器"窗口中右键单击项目，单击"**添加 Web 引用**"，然后从可用 Web 服务列表中选择 Web 服务（如果 Web 服务在当前解决方案中不可用，则可能需要提供 Web 服务终结点的地址，如果 Web 服务在当前解决方案中不可用，则在当前计算机上）。如果自己创建 XML Web 服务代理（如上一步所述），则可以将其导入到客户端代码中并使用 XML Web 服务方法。 以下示例代码导入代理库，调用**GetCustomer**以获取客户列表，添加新客户，然后返回带有**更新客户**更新的**DataSet。**  
+     如果要让 Visual Studio 为您生成 Web 服务代理类，只需创建客户端项目，并在解决方案资源管理器窗口中右键单击项目，然后选择"**添加** > **服务引用**"。 在 **"添加服务参考"** 对话框中，选择 **"高级**"，然后选择"**添加 Web 引用**"。 从可用 Web 服务列表中选择 Web 服务（如果 Web 服务在当前解决方案或当前计算机上不可用，则可能需要提供 Web 服务终结点的地址）。 如果自己创建 XML Web services 代理（按照前面的步骤所述），可以将其导入客户端代码并使用 XML Web services 方法。
+
+     以下示例代码导入代理库，调用**GetCustomer**以获取客户列表，添加新客户，然后返回带有**更新客户**更新的**DataSet。**  
   
-     请注意，该示例将**DataSet 返回的 DataSet** **获取更改**传递给**更新客户，** 因为只有修改的行需要传递给**更新客户**。 **UpdateCustomers**返回已解析**的 DataSet**，然后可以**合并**到现有**DataSet**中，以合并已解决的更改和更新中的任何行错误信息。 以下代码假定您已使用 Visual Studio 创建 Web 引用，并且您在 **"添加 Web 引用"** 对话框中将 Web 引用重命名为 DsSample。  
+     该示例将**DataSet 返回的数据集****传递给****更新客户，** 因为只有修改的行需要传递给**更新客户**。 **UpdateCustomers**返回已解析**的 DataSet**，然后可以**合并**到现有**DataSet**中，以合并已解决的更改和更新中的任何行错误信息。 以下代码假定您已使用 Visual Studio 创建 Web 引用，并且您在 **"添加 Web 引用"** 对话框中将 Web 引用重命名为 DsSample。  
   
     ```vb  
     Imports System  

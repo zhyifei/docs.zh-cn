@@ -2,12 +2,12 @@
 title: 域事件。 设计和实现
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 深入了解域事件（在聚合之间建立通信的一个关键概念）。
 ms.date: 10/08/2018
-ms.openlocfilehash: 3bba18d4a77b47abee55c16bae8a64ed27ac9aba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e03abba66945a6434f6a81eaa9f50d53998f346c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74884223"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988711"
 ---
 # <a name="domain-events-design-and-implementation"></a>域事件：设计和实现
 
@@ -82,7 +82,7 @@ ms.locfileid: "74884223"
 
 **图 7-15**。 处理每个域的多个操作
 
-同一个域事件在应用层中可以有多个处理程序，一个处理程序可以解决聚合之间的一致性，另一个处理程序可以发布集成事件，以便其他微服务可以对它执行操作。 事件处理程序通常在应用程序层中，因为会将存储库或应用程序 API 等基础结构对象用于微服务行为。 在此意义上，事件处理程序类似于命令处理程序，因此两者都在应用程序层中。 两者的重要区别是命令应只处理一次。 域事件可处理零或 n 次，因为它可被多个接收方或事件处理程序接收，针对每个处理程序具有不同用途。
+同一个域事件在应用层中可以有多个处理程序，一个处理程序可以解决聚合之间的一致性，另一个处理程序可以发布集成事件，以便其他微服务可以对它执行操作。 事件处理程序通常在应用程序层中，因为会将存储库或应用程序 API 等基础结构对象用于微服务行为。 在此意义上，事件处理程序类似于命令处理程序，因此两者都在应用程序层中。 两者的重要区别是命令应只处理一次。 域事件可处理零或 n 次，因为它可被多个接收方或事件处理程序接收，针对每个处理程序具有不同用途  。
 
 借助每个域事件的可变数量的处理程序，可添加所需数量的域规则，而不会影响当前代码。 例如，可以轻松地添加一些（或者甚至是一个）事件处理程序来实现以下业务规则：
 
@@ -136,7 +136,7 @@ Udi Dahan 最初建议（例如在 [Domain Events – Take 2](http://udidahan.co
 
 #### <a name="the-deferred-approach-to-raise-and-dispatch-events"></a>用于引发和调度事件的延迟方法
 
-一个更好的方法是将域事件添加到集合，然后在提交事务之前或之后立即调度这些域事件（正如 EF 中的 SaveChanges），而不是立即调度到域事件处理程序。 （Jimmy Bogard 的文章 [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)（一个更好的域事件模式）中介绍了此方法。）
+一个更好的方法是将域事件添加到集合，然后在提交事务之前或之后立即调度这些域事件（正如 EF 中的 SaveChanges），而不是立即调度到域事件处理程序    。 （Jimmy Bogard 的文章 [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)（一个更好的域事件模式）中介绍了此方法。）
 
 确定要在提交事务之前还是之后立即发送域事件非常重要，因为这决定了是将副作用添加到相同事务，还是不同事务中。 如果是将副作用添加到不同事务，需要处理跨多个聚合的最终一致性。 下一节中将对此主题进行讨论。
 
@@ -212,7 +212,7 @@ public class OrderingContext : DbContext, IUnitOfWork
 
 ### <a name="single-transaction-across-aggregates-versus-eventual-consistency-across-aggregates"></a>跨聚合的单个事务与跨聚合的最终一致性
 
-是跨聚合执行单个事务，还是依赖跨聚合的最终一致性，这一点存在争议。 Eric Evans 和 Vaughn Vernon 等许多作者提倡遵循一个事务 = 一个聚合的规则，因此支持跨聚合的最终一致性。 例如，Eric Evans 在他的著作《Domain-Driven Design》（域驱动的设计）中表示：
+是跨聚合执行单个事务，还是依赖跨聚合的最终一致性，这一点存在争议。 Eric Evans 和 Vaughn Vernon 等许多作者提倡遵循一个事务 = 一个聚合的规则，因此支持跨聚合的最终一致性。 例如，Eric Evans 在他的著作《Domain-Driven Design》（域驱动的设计）中表示  ：
 
 > 跨聚合的任何规则都不会始终保持最新状态。 通过事件处理、批处理或其他更新机制，其他依赖项可在特定时间内解析。 （第 128 页）
 
@@ -226,7 +226,7 @@ Vaughn Vernon 在 [Effective Aggregate Design.第 II 部分：让聚合共同工
 
 > 通常情况下，我希望域事件的副作用发生在相同的逻辑事务中，但不一定是在引发域事件的同一作用域 \[...\]在提交事务前，将事件调度到相应的处理程序。
 
-如果在提交原始事务前调度域事件，这是因为希望在相同事务中添加这些事件的副作用。 例如，如果 EF DbContext SaveChanges 方法失败，事务会回退所有更改，包括由相关域事件处理程序实现的副作用操作。 这是因为默认情况下 DbContext 生存范围定义为“已设置范围”。 因此，DbContext 对象跨多个在相同范围或对象图中实例化的存储库对象共享。 在开发 Web API 或 MVC 应用时，这与 HttpRequest 范围一致。
+如果在提交原始事务前调度域事件，这是因为希望在相同事务中添加这些事件的副作用  。 例如，如果 EF DbContext SaveChanges 方法失败，事务会回退所有更改，包括由相关域事件处理程序实现的副作用操作。 这是因为默认情况下 DbContext 生存范围定义为“已设置范围”。 因此，DbContext 对象跨多个在相同范围或对象图中实例化的存储库对象共享。 在开发 Web API 或 MVC 应用时，这与 HttpRequest 范围一致。
 
 实际上，这两种方法（单个原子事务和最终一致性）都是正确的。 实际上取决于你的域或业务要求，以及域专家的建议。 它还取决于所需的服务可缩放性（事务越细化，对数据库锁定的影响越小）。 它取决于你愿意在代码上进行的投资，由于最终一致性需要更复杂的代码以检测聚合中可能的不一致，且需要实现补偿操作。 请考虑以下情况：如果将更改提交到原始聚合，并且之后当调度事件时如果发生问题，事件处理程序无法提交副作用，则聚合之间将产生不一致。
 
@@ -346,7 +346,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
 ## <a name="additional-resources"></a>其他资源
 
-- **Greg Young.What is a Domain Event?**（什么是域事件？） \
+- **Greg Young.What is a Domain Event?** （什么是域事件？） \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf#page=25>
 
 - **Jan Stenberg。Domain Events and Eventual Consistency** （域事件和最终一致性） \
@@ -373,7 +373,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 - **Udi Dahan.Domain Events – Salvation** （域事件 – 救助） \
   <http://udidahan.com/2009/06/14/domain-events-salvation/>
 
-- **Jan Kronquist。Don't publish Domain Events, return them!**（不要发布域事件，返回它们！） \
+- **Jan Kronquist。Don't publish Domain Events, return them!** （不要发布域事件，返回它们！） \
   <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
 - **Cesar de la Torre。Domain Events vs.Integration Events in DDD and microservices architectures** （DDD 和微服务体系结构中的域事件和集成事件） \

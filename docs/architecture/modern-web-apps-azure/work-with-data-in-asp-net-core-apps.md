@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用 | 在 ASP.NET
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 5a38ca94b6df676858e7cb058272e450aaf1572e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b706332b28aec669a841f510046aa7b185be1373
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78241034"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987837"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>在 ASP.NET Core 应用中使用数据
 
@@ -130,7 +130,7 @@ var brandsWithItems = await _context.CatalogBrands
 可添加多种关系，也可使用 ThenInclude 添加子关系。 EF Core 将执行单一查询，检索生成的实体集。 或者，可以通过将“.”分隔的字符串传递给 `.Include()` 扩展方法来包含导航属性的导航属性，如下所示：
 
 ```csharp
-    .Include(“Items.Products”)
+    .Include("Items.Products")
 ```
 
 除了封装筛选逻辑，规范还可指定要返回的数据的形状，包括要填充的属性。 eShopOnWeb 示例包含几个规范，用于演示如何在规范内封装预先加载信息。 在此处可以查看如何将规范用作查询的一部分：

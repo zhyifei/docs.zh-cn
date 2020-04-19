@@ -2,12 +2,12 @@
 title: 设计基础结构持久性层
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 在基础结构持久性层的设计中探索存储库模式。
 ms.date: 10/08/2018
-ms.openlocfilehash: e10c8c1569089d5c8274df655ad7a12f2ebb7c22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b2665e81ade60affa84563121c04bca08537f07
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846804"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988474"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>设计基础结构持久性层
 

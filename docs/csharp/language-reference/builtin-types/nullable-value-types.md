@@ -4,19 +4,19 @@ description: 了解 C# 中可以为 null 的值类型及其使用方法
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: a84b3d60269491846b783e5046a84a1d14e258a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c13ef6a091ec6aebd4608c5ed8d2c03b067c7312
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398273"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888067"
 ---
 # <a name="nullable-value-types-c-reference"></a>可为空的值类型（C# 参考）
 
 可为 null 值类型  `T?` 表示其基础[值类型](value-types.md) `T` 的所有值及额外的 [null](../keywords/null.md) 值。 例如，可以将以下三个值中的任意一个指定给 `bool?` 变量：`true`、`false` 或 `null`。 基础值类型 `T` 本身不能是可为空的值类型。
 
 > [!NOTE]
-> C# 8.0 引入了可为空引用类型功能。 有关详细信息，请参阅[可为空引用类型](../../nullable-references.md)。 从 C# 2 开始，提供可为空的值类型。
+> C# 8.0 引入了可为空引用类型功能。 有关详细信息，请参阅[可为空引用类型](nullable-reference-types.md)。 从 C# 2 开始，提供可为空的值类型。
 
 任何可为空的值类型都是泛型 <xref:System.Nullable%601?displayProperty=nameWithType> 结构的实例。 可使用以下任何一种可互换形式引用具有基础类型 `T` 的可为空值类型：`Nullable<T>` 或 `T?`。
 
@@ -120,7 +120,7 @@ ms.locfileid: "79398273"
 [!code-csharp-interactive[whether an instance is of a nullable type](snippets/NullableValueTypes.cs#IsInstanceNullable)]
 
 > [!NOTE]
-> 此部分中所述的方法不适用于[可为空的引用类型](../../nullable-references.md)的情况。
+> 此部分中所述的方法不适用于[可为空的引用类型](nullable-reference-types.md)的情况。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
@@ -139,4 +139,4 @@ ms.locfileid: "79398273"
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>
-- [可为空引用类型](../../nullable-references.md)
+- [可为空引用类型](nullable-reference-types.md)

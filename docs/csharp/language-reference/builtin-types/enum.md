@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: ab5eb1679f846bf0e25d90a4d0e0a71f0bdb0096
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 15f5e9ccb1396277229ba935381812700f63ece8
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847699"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121158"
 ---
 # <a name="enumeration-types-c-reference"></a>枚举类型（C# 参考）
 
@@ -66,7 +66,7 @@ enum ErrorCode : ushort
 
 ## <a name="conversions"></a>转换
 
-对于任何枚举类型，枚举类型与其基础整型类型之间存在显式转换。 如果将枚举值[转换](../operators/type-testing-and-cast.md#cast-operator-)为其基础类型，则结果为枚举成员的关联整数值。
+对于任何枚举类型，枚举类型与其基础整型类型之间存在显式转换。 如果将枚举值[转换](../operators/type-testing-and-cast.md#cast-expression)为其基础类型，则结果为枚举成员的关联整数值。
 
 [!code-csharp[enum conversions](snippets/EnumType.cs#Conversions)]
 

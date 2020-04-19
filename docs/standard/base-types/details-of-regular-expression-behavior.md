@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0273d16028315452e35f83086dbc134d6fcb66c6
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124346"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635990"
 ---
 # <a name="details-of-regular-expression-behavior"></a>正则表达式行为的详细信息
 
@@ -71,7 +71,7 @@ ms.locfileid: "77124346"
 
      若要详细了解正预测先行断言，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
-- 负预测先行断言：`(?!`subexpression  `)`。 通过此功能可以仅当子表达式未能匹配时才匹配表达式。 这对于修剪搜索特别有用，因为针对应消除的情况提供表达式通常比针对必须包括的情况提供表达式要更简单。 例如，难以为不以“non”开头的单词编写表达式。 下面的示例使用负预测先行排除它们。
+- 负预测先行断言：`(?!`subexpression  `)`。 通过此功能可以仅当子表达式未能匹配时才匹配表达式。 这对于修剪搜索十分有用，因为针对应消除的情况提供表达式通常比针对必须包括的情况提供表达式要更简单。 例如，难以为不以“non”开头的单词编写表达式。 下面的示例使用负预测先行排除它们。
 
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]
@@ -151,7 +151,6 @@ ms.locfileid: "77124346"
 |[线程安全性](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|提供有关正则表达式线程安全的信息，并说明何时应同步对正则表达式对象进行的访问。|
 |[.NET Framework 正则表达式](../../../docs/standard/base-types/regular-expressions.md)|提供正则表达式的编程语言方面的概述。|
 |[正则表达式对象模型](../../../docs/standard/base-types/the-regular-expression-object-model.md)|提供演示如何使用正则表达式类的信息和代码示例。|
-|[正则表达式示例](../../../docs/standard/base-types/regular-expression-examples.md)|包含说明如何在常见应用程序中使用正则表达式的代码示例。|
 |[正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|提供有关可用来定义正则表达式的字符集、运算符和构造的信息。|
 
 ## <a name="reference"></a>参考

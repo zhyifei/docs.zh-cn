@@ -2,12 +2,12 @@
 title: 客户端验证（表示层中的验证）
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 探索客户端验证的关键概念。
 ms.date: 10/08/2018
-ms.openlocfilehash: 4e72dcafafc3144a75afe1fd23a4a779f5667459
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44c1e9fa280b19fcee87d4d1cdfcaa2ab9462f27
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68674354"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988696"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>客户端验证（表示层中的验证）
 

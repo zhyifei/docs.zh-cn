@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 7e879a44bd8056ac8753c1e86464fe14fd6b9e50
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: be5c26c81480dc2854b849dd7f2b1c46ee3e526a
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523583"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989163"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新增功能
 
@@ -140,7 +140,7 @@ dotnet publish -r <rid> -c Release
 
 ### <a name="tiered-compilation"></a>分层编译
 
-.NET Core 3.0 中默认启用了[分层编译](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) (TC)。 此功能使运行时能够更适应地使用实时 (JIT) 编译器来实现更好的性能。
+.NET Core 3.0 中默认启用了[分层编译](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md) (TC)。 此功能使运行时能够更适应地使用实时 (JIT) 编译器来实现更好的性能。
 
 分层编译的主要优势是提供两种实现实时的方法，可在低质量快速层或高质量慢速层中编译。 质量是指方法的优化程度。 这有助于提高应用程序在从启动到稳定状态的各个执行阶段的性能。 禁用分层编译后，每种方法都以同一种方式进行编译，这种方式倾向于牺牲启动性能来保证稳定状态性能。
 
@@ -506,7 +506,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 在适当的情况下，.NET 库已开始使用这些指令来改进性能。
 
-有关详细信息，请参阅 [.NET Platform Dependent Intrinsics](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md)（.NET 平台相关内部函数）。
+有关详细信息，请参阅 [.NET Platform Dependent Intrinsics](https://github.com/dotnet/designs/blob/master/accepted/2018/platform-intrinsics.md)（.NET 平台相关内部函数）。
 
 ### <a name="improved-net-core-version-apis"></a>改进的 .NET Core 版本 API
 

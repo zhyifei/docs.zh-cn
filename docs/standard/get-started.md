@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 01/21/2020
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: af0ce454a986f22dfb00888cab6e34901930c5a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1d5854d8bddea21bbb8a0a7fa032c9fbd15f3d5
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124255"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438178"
 ---
 # <a name="get-started"></a>入门
 
@@ -18,21 +18,23 @@ ms.locfileid: "77124255"
 
 ## <a name="get-started-using-net-languages"></a>开始使用 .NET 语言
 
-* [C# 入门](../csharp/getting-started/index.md)文章和 [C# 教程](../csharp/tutorials/index.md)提供多种以 C# 为中心的入门方法。
+有关 C#、Visual Basic 和 F# 的入门教程，请参阅：
 
-* [F# 入门](../fsharp/get-started/index.md)教程介绍了使用 F# 的三种主要方式：Visual Studio、Visual Studio Code 或命令行工具。
-
-* [Visual Basic 入门](../visual-basic/getting-started/index.md)文章提供了有关在 Visual Studio 中使用 Visual Basic 的指南。
+* [通过 C# 开始使用](../csharp/getting-started/index.md)
+* [C# 教程](../csharp/tutorials/index.md)
+* [F# 入门教程](../fsharp/get-started/index.md)
+* [Visual Basic 入门](../visual-basic/getting-started/index.md)
 
 ## <a name="get-started-using-net-core"></a>.NET Core 入门
 
-* [.NET Core 入门](../core/get-started.md)概述了如何在不同的操作系统上使用不同的工具实现 .NET Core 的入门。
+有关特定于 .NET Core 的指导，请参阅：
 
-* [.NET Core 教程](../core/tutorials/index.md)详细说明了通过所选的操作系统和工具来开始使用 .NET Core 的多种方法。
+* [.NET Core 入门](../core/get-started.md)
+* [.NET Core 教程](../core/tutorials/index.md)
 
 ## <a name="get-started-using-net-standard"></a>.NET Standard 入门
 
-* 有关介绍性教程，请参阅[在 Visual Studio 中生成 .NET Standard 库](../core/tutorials/library-with-visual-studio.md)。
+有关介绍性教程，请参阅[在 Visual Studio 中生成 .NET Standard 库](../core/tutorials/library-with-visual-studio.md)。
 
 ## <a name="get-started-using-net-core-on-docker"></a>开始在 Docker 上使用 .NET Core
 

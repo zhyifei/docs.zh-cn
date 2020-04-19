@@ -2,12 +2,12 @@
 title: 订阅事件
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解发布和订阅集成事件的详细信息。
 ms.date: 01/30/2020
-ms.openlocfilehash: 3bfcdb1766a15b1a8e8deab46055f14e1791c2cc
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 426dcebe175e9db9a02bcdb2f21ad039154a7bda
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523596"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888210"
 ---
 # <a name="subscribing-to-events"></a>订阅事件
 
@@ -93,11 +93,11 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 如果通过分布式消息传递系统（如事件总线）发布集成事件，在以原子方式更新原始数据库和发布事件时会出现问题（即，两个操作都已完成，或者都没有完成）。 例如，在前面所示的简化示例中，代码在产品价格发生变动时向数据库提交数据，然后发布 ProductPriceChangedIntegrationEvent 消息。 最开始，这两个操作看起来可能必须以原子方式执行。 但是，如果像在 [Microsoft 消息队列 (MSMQ)](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) 等早期系统中那样，使用涉及数据库和消息代理的分布式事务，那么根据 [CAP 定理](https://www.quora.com/What-Is-CAP-Theorem-1)所描述的原因，并不推荐这样做。
 
-微服务主要用于构建可缩放且高度可用的系统。 简单来说，CAP 定理认为你无法构建一个*兼具*持续可用性、强一致性和分区容错性的（分布式）数据库（或拥有其模型的微服务）。 你只能选择这三种属性中的两种。
+微服务主要用于构建可缩放且高度可用的系统。 简单来说，CAP 定理认为你无法构建一个兼具  持续可用性、强一致性和分区容错性的（分布式）数据库（或拥有其模型的微服务）。 你只能选择这三种属性中的两种。
 
 在基于微服务的体系结构中，应选择可用性和容错性，而不再强调强一致性。 因此，在大多数基于微服务的现代应用程序中，你通常不希望像在使用 [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) 基于 Windows 分布式事务处理协调器 (DTC) 实现[分布式事务](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85))时那样，在消息传递中使用分布式事务。
 
-让我们回到最初的问题及其示例。 如果服务在数据库更新之后（在本例中，也就是在运行 \_context.SaveChangesAsync() 代码行之后）但在发布集成事件之前崩溃，则整个系统会变得不一致。 这对业务而言可能很关键，具体取决于你正在处理的具体业务操作。
+让我们回到最初的问题及其示例。 如果服务在数据库更新之后（在本例中，也就是在运行 `_context.SaveChangesAsync()` 代码行之后）但在发布集成事件之前崩溃，则整个系统会变得不一致。 这对业务而言可能很关键，具体取决于你正在处理的具体业务操作。
 
 正如前面在体系结构部分中提到的那样，可以通过以下几种方法来处理此问题：
 
@@ -151,15 +151,15 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 图 6-23  。 使用辅助微服务将事件发布到事件总线时的原子性
 
-为简单起见，eShopOnContainers 示例使用第一种方法（没有附加进程或检查器微服务）和事件总线。 但是，eShopOnContainers 并未处理所有可能的故障情况。 在部署到云端的实际应用程序中，你必须接受最终会出现问题的事实，并且必须实施该检查并实现重新发送逻辑。 如果在通过事件总线发布事件（使用辅助角色）时，该表是单一的事件源，那么，将该表用作队列可能比第一种方法更有效。
+为简单起见，eShopOnContainers 示例使用第一种方法（没有附加进程或检查器微服务）和事件总线。 但 eShopOnContainers 示例并未处理所有可能的故障情况。 在部署到云端的实际应用程序中，你必须接受最终会出现问题的事实，并且必须实施该检查并实现重新发送逻辑。 如果在通过事件总线发布事件（使用辅助角色）时，该表是单一的事件源，那么，将该表用作队列可能比第一种方法更有效。
 
 ### <a name="implementing-atomicity-when-publishing-integration-events-through-the-event-bus"></a>通过事件总线发布集成事件时实现原子性
 
 以下代码展示如何创建涉及多个 DbContext 对象的单一事务：一个上下文与要更新的原始数据相关，另一个上下文与 IntegrationEventLog 表相关。
 
-请注意，如果在代码运行时，数据库连接出现任何问题，以下示例代码中的事务将无法复原。 在可能跨服务器移动数据库的基于云的系统（例如 Azure SQL DB）中，可能会出现这种问题。 若要在多个上下文中实现可复原的事务，请参阅本指南后面的[实现可复原的 Entity Framework Core SQL 连接](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md)部分。
+如果在代码运行时，数据库连接出现任何问题，以下示例代码中的事务将无法复原。 在可能跨服务器移动数据库的基于云的系统（例如 Azure SQL DB）中，可能会出现这种问题。 若要在多个上下文中实现可复原的事务，请参阅本指南后面的[实现可复原的 Entity Framework Core SQL 连接](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md)部分。
 
-为清楚起见，以下示例用一段单独的代码展示了整个过程。 不过，eShopOnContainers 实现实际上是重构的，并将此逻辑拆分成多个类，因此更容易维护。
+为清楚起见，以下示例用一段单独的代码展示了整个过程。 不过，eShopOnContainers 实现是重构的，并将此逻辑拆分成了多个类，因此更容易维护。
 
 ```csharp
 // Update Product from the Catalog microservice
@@ -285,7 +285,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ## <a name="idempotency-in-update-message-events"></a>更新消息事件中的幂等性
 
-更新消息事件的一个重要方面是，通信中任何一点的失败都应导致消息重试。 否则，后台任务可能会尝试发布已发布的事件，从而创建竞争条件。 你需要确保更新是幂等的，或者它们提供足够的信息来确保你能检测到重复事件、放弃它并仅发回一个响应。
+更新消息事件的一个重要方面是，通信中任何一点的失败都应导致消息重试。 否则，后台任务可能会尝试发布已发布的事件，从而创建竞争条件。 请确保更新是幂等的，或者它们提供足够的信息来确保你能检测到重复事件、放弃该事件并仅发回一个响应。
 
 如前所述，幂等性意味着可以多次执行某项操作而不改变结果。 在消息传递环境中，比如在传递事件时，如果一个事件可以被传递多次而不改变接收者微服务的结果，则该事件是幂等的。 事件本身的性质或者系统处理事件的方式可能要求事件必须幂等。 在任何使用消息传递的应用程序中，而不仅仅是在实现事件总线模式的应用程序中，消息幂等性都非常重要。
 
@@ -293,7 +293,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 设计幂等消息是可行的。 例如，可以创建一个指示“将产品价格设置为 $25”而不是“产品价格上涨 $5”的事件。 可以对第一条消息安全地处理任意多次，结果将相同。 第二条消息则非如此。 但即使在第一种情况下，你可能也不想处理第一个事件，因为系统也可能发送了更新的 price-change 事件，你会覆盖掉新价格。
 
-另一个示例可能是传播到多个订阅者的 order-completed 事件。 重要的是，订单信息只需在其他系统中更新一次，即使同一 order-completed 事件存在重复的消息事件也是如此。
+另一个示例可能是传播到多个订阅者的 order-completed 事件。 应用必须确保订单信息只需在其他系统中更新一次，即使同一 order-completed 事件存在重复的消息事件也是如此。
 
 为每个事件设置某种标识会很方便，这样你就可以创建逻辑来强制每个接收者只处理每个事件一次。
 
@@ -306,11 +306,11 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ## <a name="deduplicating-integration-event-messages"></a>删除重复的集成事件消息
 
-你可以确保每个订阅者在不同级别仅发送和处理消息事件一次。 一种方法是使用你正在使用的消息传递基础结构提供的重复数据删除功能。 另一种方法是在目标微服务中实现自定义逻辑。 最佳选择是在传输级别和应用程序级别同时实施验证。
+你可以确保每个订阅者在不同级别只发送和处理一次消息事件。 一种方法是使用你正在使用的消息传递基础结构提供的重复数据删除功能。 另一种方法是在目标微服务中实现自定义逻辑。 最佳选择是在传输级别和应用程序级别同时实施验证。
 
 ### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>在 EventHandler 级别删除重复的消息事件
 
-确保任何接收者对某个事件仅处理一次的一种方法是在事件处理程序中处理消息事件时实现特定逻辑。 例如，eShopOnContainers 应用程序中使用的方法，如收到 UserCheckoutAcceptedIntegrationEvent 集成事件时 [UserCheckoutAcceptedIntegrationEventHandler 类的源代码中](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs)所示。 （在这种情况下，我们使用 eventMsg.RequestId 作为标识符将 CreateOrderCommand 包装为 IdentifiedCommand，然后再将其发送到命令处理程序）。
+确保任何接收者对某个事件仅处理一次的一种方法是在事件处理程序中处理消息事件时实现特定逻辑。 例如，这是 eShopOnContainers 应用程序中使用的方法，正如 [UserCheckoutAcceptedIntegrationEventHandler 类](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) 收到 `UserCheckoutAcceptedIntegrationEvent` 集成事件时其源代码中所示。 （在这种情况下，`CreateOrderCommand` 会使用 `IdentifiedCommand` 进行包装，并会先将 `eventMsg.RequestId` 用作标识符后，再将其发送到命令处理程序）。
 
 ### <a name="deduplicating-messages-when-using-rabbitmq"></a>使用 RabbitMQ 时删除重复消息
 

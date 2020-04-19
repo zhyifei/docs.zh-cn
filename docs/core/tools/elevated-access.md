@@ -3,12 +3,12 @@ title: 提升的 Dotnet 命令访问权限
 description: 了解需要提升访问权限的 dotnet 命令的最佳做法。
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f99e0b257772e0a73d4945f1129997d1d3308ed2
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156759"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805787"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>提升的 Dotnet 命令访问权限
 
@@ -18,6 +18,7 @@ ms.locfileid: "78156759"
 
 - `dotnet tool` 命令，如 [dotnet tool install](dotnet-tool-install.md)。
 - `dotnet run --no-build`
+- `dotnet-core-uninstall`
 
 不建议运行其他提升的命令。 具体而言，不建议为使用 MSBuild（例如，[dotnet restore](dotnet-restore.md)、[dotnet build](dotnet-build.md) 和 [dotnet run](dotnet-run.md)）的命令提升访问权限。 主要问题是用户在发出 dotnet 命令后在根帐户和受限帐户之间来回切换时存在权限管理问题。 受限用户可能会发现自己无法访问根用户构建的文件。 有办法可以解决这种情况，但不一定要使用这些方法。
 

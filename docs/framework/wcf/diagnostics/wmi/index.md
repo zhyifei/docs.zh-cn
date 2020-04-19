@@ -2,12 +2,12 @@
 title: 使用 Windows Management Instrumentation 进行诊断
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 0c803e3988f7a63980d991190db87c263c992b80
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b14f9401266bdf7edccd7dca12cb818cdd2cb348
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185677"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121550"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 进行诊断
 Windows 通信基础 （WCF） 通过 WCF Windows 管理检测 （WMI） 提供程序在运行时公开服务的检查数据。  
@@ -141,7 +141,7 @@ Windows 通信基础 （WCF） 通过 WCF Windows 管理检测 （WMI） 提供�
     ```  
   
 ### <a name="granting-access-to-arbitrary-users-or-groups"></a>向任意用户或组授予访问权  
- 本节中的示例向所有本地用户授予 WMI 提供程序注册特权。 如果您希望向非内置的用户或组授予访问权，则必须获取该用户或组的安全标识符 (SID)。 获取任意用户的 SID 没有简单方法。 一个方法是以所需的用户身份登录，然后发出以下 shell 命令。  
+ 本节中的示例向所有本地用户授予 WMI 提供程序注册特权。 如果要向未内置的用户或组授予访问权限，则必须获取该用户或组的安全标识符 （SID）。 获取任意用户的 SID 没有简单方法。 一个方法是以所需的用户身份登录，然后发出以下 shell 命令。  
   
 ```console
 Whoami /user  
@@ -152,10 +152,11 @@ Whoami /user
 ## <a name="accessing-remote-wmi-object-instances"></a>访问远程 WMI 对象实例  
  如果需要在远程计算机上访问 WCF WMI 实例，则必须在用于访问的工具上启用数据包隐私。 以下部分描述如何通过使用 WMI CIM Studio、Windows Management Instrumentation 测试器以及 .NET SDK 2.0 实现这些目标。  
   
-### <a name="wmi-cim-studio"></a>WMI CIM Studio  
- 如果您已安装[WMI 管理工具](https://go.microsoft.com/fwlink/?LinkId=95185)，则可以使用 WMI CIM 工作室访问 WMI 实例。 这些工具位于以下文件夹中  
+### <a name="wmi-cim-studio"></a>WMI CIM Studio
+
+如果您安装了 WMI 管理工具，则可以使用 WMI CIM 工作室访问 WMI 实例。 这些工具位于以下文件夹中：
   
- **%windir%\程序文件\WMI 工具\\**  
+*%windir%\程序文件\WMI 工具\\*
   
 1. 在 **"连接到命名空间："** 窗口中，键入**root_ServiceModel**并单击 **"确定"。**  
   

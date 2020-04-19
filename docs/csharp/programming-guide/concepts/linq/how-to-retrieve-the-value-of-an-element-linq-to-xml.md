@@ -2,20 +2,25 @@
 title: 如何检索元素的值 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 17a7dac464e1ec40db357194000f5745cdf2f3a8
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: c4bb78e937fe0de08242923cdd7cd638abf571c7
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249202"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805829"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>如何检索元素的值 (LINQ to XML) (C#)
-本主题演示如何获取元素的值。 有两种主要方法可以完成此操作。 一种方法是将 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 强制转换为所需的类型。 然后，显式转换运算符将元素或属性的内容转换为指定的类型，并将其分配给变量。 此外，还可以使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 属性或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 属性。  
+
+本文演示如何获取元素的值。 获取此值的方法主要有两种：
+
+- 将 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 强制转换为所需的类型。 然后，显式转换运算符将元素或属性的内容转换为指定的类型，并将其分配给变量。
+
+- 使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 属性。 你还可使用这些属性设置该值。
+
+对于 C#，强制转换通常是更好的方法。 在检索可能存在也可能不存在的元素（或属性）的值时，如果将元素或属性强制转换为可以为 null 的值类型，则代码会更易于编写。 本文[最后一个示例](#element-might-not-exist-example)表明，强制转换对于元素可能不存在的情况更为简单。 但是，无法通过强制转换设置元素的内容，而通过 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 属性可以做到这一点。  
   
- 但是，对于 C#，强制转换通常是更好的方法。 在检索可能存在也可能不存在的元素（或属性）的值时，如果将元素或属性强制转换为可以为 null 的值类型，则代码会更易于编写。 本主题最后一个示例对此进行了演示。 但是，无法通过强制转换设置元素的内容，而通过 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 属性可以做到这一点。  
-  
-## <a name="example"></a>示例  
- 若要检索元素的值，只需将 <xref:System.Xml.Linq.XElement> 对象强制转换为所需的类型即可。 任何时候都可以将元素强制转换为字符串，如下所示：  
+## <a name="string-cast-example"></a>字符串强制转换示例  
+ 若要检索元素的值，只需将 <xref:System.Xml.Linq.XElement> 对象强制转换为所需的类型即可。 可将元素强制转换为字符串，如下所示：  
   
 ```csharp  
 XElement e = new XElement("StringElement", "abcde");  
@@ -30,7 +35,7 @@ Console.WriteLine("Value of e:" + (string)e);
 Value of e:abcde  
 ```  
   
-## <a name="example"></a>示例  
+## <a name="integer-cast-example"></a>整数强制转换示例  
  此外，还可以将元素强制转换为字符串以外的其他类型。 例如，如果有一个包含一个整数的元素，可以将它强制转换为 `int`，如下面的代码所示：  
   
 ```csharp  
@@ -50,7 +55,7 @@ Value of e:44
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 为 <xref:System.Xml.Linq.XAttribute> 对象提供了相同的强制转换运算符。  
   
-## <a name="example"></a>示例  
+## <a name="value-property-example"></a>值属性示例  
  可以使用 <xref:System.Xml.Linq.XElement.Value%2A> 属性来检索元素的内容：  
   
 ```csharp  
@@ -66,8 +71,8 @@ Console.WriteLine("Value of e:" + e.Value);
 Value of e:abcde  
 ```  
   
-## <a name="example"></a>示例  
- 有时，尽管不能确定某个元素是否存在，还是会尝试检索该元素的值。 在这种情况下，将强制转换后的元素分配给可以为 null 的参考类型或可以为 null 的值类型时，如果该元素不存在，则将分配的变量设置为 `null`。 下面的代码演示当元素可能存在也可能不存在时，使用强制转换比使用 <xref:System.Xml.Linq.XElement.Value%2A> 属性更加简单。  
+## <a name="element-might-not-exist-example"></a>有关元素可能不存在的示例
+ 有时，尽管不能确定某个元素是否存在，但还是会尝试检索该元素的值。 在这种情况下，将强制转换后的元素分配给可为 null 的参考类型或可为 null 的值类型时，如果该元素不存在，则会将分配的变量设置为 `null`。 下面的代码演示当元素可能存在也可能不存在时，使用强制转换比使用 <xref:System.Xml.Linq.XElement.Value%2A> 属性更加简单。  
   
 ```csharp  
 XElement root = new XElement("Root",  

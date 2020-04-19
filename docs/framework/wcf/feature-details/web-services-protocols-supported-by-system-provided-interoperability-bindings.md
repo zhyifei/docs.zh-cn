@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: a1e67401a09370a46bc7a3e8546c95467bc18b67
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25efda74d205a36332a801e91ddc508796f7df5d
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184150"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463987"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>系统提供的互操作性绑定支持的 Web 服务协议
 Windows 通信基础 （WCF） 旨在与支持一组称为 Web 服务规范的规范的 Web 服务进行互操作。 为了简化互操作性最佳实践的服务配置，WCF 引入了三个可互操作的系统提供的绑定：<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>和<xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>。 <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> 为了与结构化信息标准 （OASIS） 组织的标准进行互操作性，WCF 包括一个可互操作的系统提供的绑定： <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>。 对于元数据发布，WCF 包括两个可互操作的系统提供的绑定[\<：mexHttp绑定>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)和[\<mexHttps绑定>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)。 本主题列出系统提供的可互操作绑定支持的规范。  
@@ -76,7 +76,7 @@ Windows 通信基础 （WCF） 旨在与支持一组称为 Web 服务规范的�
        <message issuedKeyType="Symmetric"
                 issuedTokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">  
          <issuerMetadata address =
-         'http://localhost/FederationSample/HomeRealmSTS/STS.svc/mex'>  
+         'http://localhost/FederationSample/HomeRealmSTS/STS.svc/mex'/>  
        </message>  
      </security>  
   </binding>  
@@ -108,7 +108,7 @@ Windows 通信基础 （WCF） 旨在与支持一组称为 Web 服务规范的�
 |消息传递|WS-寻址 2005/08|[Web 服务寻址 1.0 – 核心（可能为英文网页）](https://www.w3.org/TR/ws-addr-core/)<br /><br /> [Web Services Addressing 1.0 - SOAP](https://www.w3.org/TR/ws-addr-soap/)|  
 |元数据|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF 实现 WS-元数据交换以检索 XML 架构、WSDL 和 WS-Policy。|  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [\<基本http绑定>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)

@@ -1,26 +1,26 @@
 ---
 title: 详细语法
-description: 了解F#编程语言中的详细和轻型语法之间的差异。
+description: 了解 F# 编程语言中详细语法和轻量级语法之间的区别。
 ms.date: 05/16/2016
-ms.openlocfilehash: 575585b201acc1366980cfc5cf523c4117259084
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 722807695c56beb0d681b95a78ed8cb8c1df3ddf
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421180"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463910"
 ---
 # <a name="verbose-syntax"></a>详细语法
 
-以下语言提供了两种形式的语法： " F# *详细语法*" 和 "*轻量语法*"。 详细语法并不常用，但优点在于缩进不太敏感。 轻量语法较短，并使用缩进来表示构造的开始和结束，而不是使用其他关键字，如 `begin`、`end`、`in`等。 默认语法为轻型语法。 本主题介绍未启用轻型F#语法时构造的语法。 详细语法始终处于启用状态，因此即使启用了轻型语法，仍可对某些构造使用详细语法。 您可以使用 `#light "off"` 指令禁用轻型语法。
+F# 语言中的许多构造有两种形式的语法：*详细语法*和*轻量级语法*。 详细语法不常用，但优点是对缩进不太敏感。 轻量级语法较短，并使用缩进来发出构造的开始和结束信号，而不是其他关键字，如`begin`、、`end``in`等。 默认语法是轻量级语法。 本主题介绍未启用轻量级语法时 F# 构造的语法。 详细语法始终启用，因此即使您启用轻量级语法，您仍可以为某些构造使用详细语法。 您可以使用`#light "off"`该指令禁用轻量级语法。
 
 ## <a name="table-of-constructs"></a>构造表
 
-下表显示了在这两种形式之间F#存在差异的上下文中语言构造的轻型和详细语法。 在此表中，尖括号（&lt;&gt;）将用户提供的语法元素括起来。 有关这些构造中使用的语法的更多详细信息，请参阅每个语言构造的文档。
+下表显示了 F# 语言构造的轻量级和详细语法，这些上下文中两种窗体之间存在差异。 在此表中，角括号 （&lt;&gt;） 括用户提供的语法元素。 有关这些构造中使用的语法的详细信息，请参阅每个语言构造的文档。
 
 <table>
 <tr>
 <th>语言构造</th>
-<th>轻型语法</th>
+<th>轻量级语法</th>
 <th>详细语法</th>
 </tr>
 <tr>
@@ -30,8 +30,8 @@ ms.locfileid: "73421180"
 <td>
 
 ```xml
-<expression1>
-<expression2>
+<expression1 />
+<expression2 />
 ```
 
 </td><td>
@@ -44,7 +44,7 @@ ms.locfileid: "73421180"
 </tr>
 <tr><td>
 
-嵌套 `let` 绑定
+嵌套`let`绑定
 
 </td><td>
 
@@ -164,7 +164,7 @@ in
 
 </td>
 </tr>
-<tr><td>记录
+<tr><td>记录 (record)
 </td><td>
 
 ```fsharp
@@ -208,7 +208,7 @@ type <class-name>(<params>) =
 
 </td>
 </tr>
-<tr><td>结构</td><td>
+<tr><td>structure</td><td>
 
 ```fsharp
 [<StructAttribute>]
@@ -227,7 +227,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td>可区分联合</td><td>
+<tr><td>歧视工会</td><td>
 
 ```fsharp
 type <union-name> =
@@ -330,7 +330,7 @@ type <type-name>
 
 </td>
 </tr>
-<tr><td>name</td><td>
+<tr><td>module</td><td>
 
 ```fsharp
 module <module-name> =
