@@ -3,14 +3,14 @@ title: 为服务器应用选择 .NET Core 或 .NET Framework
 description: 关于在 .NET 中生成服务器应用时应考虑使用哪种 .NET 实现的指南。
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: 393d6d89fb299e87edf55cf50991537e8afe9753
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 885a7fb3419eafa5d88ef621cf6ad04a8d48bb59
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344154"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607488"
 ---
-# <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
+# <a name="choose-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
 有两种支持的实现可用于通过 NET Framework 和 .NET Core 生成服务器端应用程序。 这两者共享许多相同的组件，可在它们之间共享代码。 但两者之间存在根本的差异，可根据需要实现的目标进行选择。  本文介绍了在何种情况下进行选择。
 
@@ -103,7 +103,7 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 ## <a name="see-also"></a>请参阅
 
 - [在 ASP.NET 和 ASP.NET Core 之间进行选择](/aspnet/core/choose-aspnet-framework)
-- [面向 .NET Framework 的 ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
+- [面向 .NET Framework 的 ASP.NET Core](/aspnet/core/introduction-to-aspnet-core#aspnet-core-targeting-net-framework)
 - [目标框架](frameworks.md)
 - [.NET Core 指南](../core/index.yml)
 - [从 .NET Framework 移植到 .NET Core](../core/porting/index.md)

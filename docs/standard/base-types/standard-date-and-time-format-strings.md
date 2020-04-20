@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 5a3ba2838458d6e6833035186dfd69b34c780317
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5db29046bfe67c530fe3a613c126c3841e6402e1
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248129"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242746"
 ---
 # <a name="standard-date-and-time-format-strings"></a>标准日期和时间格式字符串
 
@@ -440,7 +440,7 @@ ms.locfileid: "80248129"
 
 控制面板中 **“区域和语言选项”** 项中的设置会影响由格式化操作产生的结果字符串。 这些设置用于初始化与当前线程区域性关联的 <xref:System.Globalization.DateTimeFormatInfo> 对象，当前线程区域性提供用于控制格式设置的值。 使用不同设置的计算机将生成不同的结果字符串。
 
-此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 构造函数实例化一个新的 <xref:System.Globalization.CultureInfo> 对象以表示与当前的系统区域性相同的区域性，则通过控制面板中的 **“区域和语言选项”** 建立的任何自定义都将应用到新的 <xref:System.Globalization.CultureInfo> 对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。
+此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> 构造函数实例化一个新的 <xref:System.Globalization.CultureInfo> 对象以表示与当前的系统区域性相同的区域性，则通过控制面板中的 **“区域和语言选项”** 建立的任何自定义都将应用到新的 <xref:System.Globalization.CultureInfo> 对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。
 
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo 属性
 

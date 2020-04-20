@@ -2,13 +2,13 @@
 title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
-ms.date: 09/20/2017
-ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/08/2020
+ms.openlocfilehash: f321b9c742fed6fb1efaf8fbb1914c203dd6391b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398333"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389112"
 ---
 # <a name="the-history-of-c"></a>C\# 发展历史
 
@@ -120,7 +120,7 @@ C# 版本 4.0 随 Visual Studio 2010 一起发布，很难达到版本 3.0 的�
 C# 版本 5.0 随 Visual Studio 2012 一起发布，是该语言有针对性的一个版本。 对此版本中所做的几乎所有工作都归入另一个突破性语言概念：适用于异步编程的 `async` 和 `await` 模型。  下面是主要功能列表：
 
 - [异步成员](../async.md)
-- [调用方信息特性](../programming-guide/concepts/caller-information.md)
+- [调用方信息特性](../language-reference/attributes/caller-information.md)
 
 ### <a name="see-also"></a>另请参阅
 
@@ -154,7 +154,7 @@ C# 在 3.0 版和 5.0 版对面向对象的语言添加了主要的新功能。 
 
 ## <a name="c-version-70"></a>C# 7.0 版
 
-随 Visual Studio 2017 一起发布的 C# 版本 7.0 是最新的主版本。 虽然该版本继承和发展了 C# 6.0，但不包含编译器即服务。 以下介绍了部分新增功能：
+C# 7.0 版已与 Visual Studio 2017 一起发布。 虽然该版本继承和发展了 C# 6.0，但不包含编译器即服务。 以下介绍了部分新增功能：
 
 - [Out 变量](./csharp-7.md#out-variables)
 - [元组和析构函数](./csharp-7.md#tuples)
@@ -172,5 +172,86 @@ C# 在 3.0 版和 5.0 版对面向对象的语言添加了主要的新功能。 
 这些都为开发者提供了很棒的新功能，帮助编写比以往任何时候都简洁的代码。 重点是缩减了使用 `out` 关键字的变量声明，并通过元组实现了多个返回值。
 
 但 C# 的用途更加广泛了。 .NET Core 现在面向所有操作系统，着眼于云和可移植性。  语言设计者除了推出新功能外，也会在这些新功能方面付出时间和精力。
+
+## <a name="c-version-71"></a>C# 7.1 版
+
+C# 已开始随 C# 7.1 发布单点发行  。 此版本增加了[语言版本选择](../language-reference/configure-language-version.md)配置元素、三个新的语言功能和新的编译器行为。
+
+此版本中新增的语言功能包括：
+
+- [`async` `Main` 方法](./csharp-7-1.md#async-main)
+  - 应用程序的入口点可以含有 `async` 修饰符。
+- [`default` 文本表达式](./csharp-7-1.md#default-literal-expressions)
+  - 在可以推断目标类型的情况下，可在默认值表达式中使用默认文本表达式。
+- [推断元组元素名称](./csharp-7-1.md#inferred-tuple-element-names)
+  - 在许多情况下，可通过元组初始化来推断元组元素的名称。
+- [泛型类型参数的模式匹配](./csharp-7-1.md#pattern-matching-on-generic-type-parameters)
+  - 可以对类型为泛型类型参数的变量使用模式匹配表达式。
+
+最后，编译器有 `-refout` 和 `-refonly` 两个选项，可用于控制[引用程序集生成](./csharp-7-1.md#reference-assembly-generation)。
+
+## <a name="c-version-72"></a>C# 7.2 版
+
+C# 7.2 版添加了几个小型语言功能：
+
+- [编写安全高效代码的技巧](./csharp-7-2.md#safe-efficient-code-enhancements)
+  - 结合了多项语法改进，可使用引用语义处理值类型。
+- [非尾随命名参数](./csharp-7-2.md#non-trailing-named-arguments)
+  - 命名的参数可后接位置参数。
+- [数值文字中的前导下划线](./csharp-7-2.md#leading-underscores-in-numeric-literals)
+  - 数值文字现可在任何打印数字前放置前导下划线。
+- [`private protected` 访问修饰符](./csharp-7-2.md#private-protected-access-modifier)
+  - `private protected` 访问修饰符允许访问同一程序集中的派生类。
+- [条件 `ref` 表达式](./csharp-7-2.md#conditional-ref-expressions)
+  - 现在可以引用条件表达式 (`?:`) 的结果。
+
+## <a name="c-version-73"></a>C# 7.3 版
+
+C# 7.3 版本有两个主要主题。 第一个主题提供使安全代码的性能与不安全代码的性能一样好的功能。 第二个主题提供对现有功能的增量改进。 此外，在此版本中添加了新的编译器选项。
+
+以下新增功能支持使安全代码获得更好的性能的主题：
+
+- [无需固定即可访问固定的字段。](csharp-7-3.md#indexing-fixed-fields-does-not-require-pinning)
+- [可以重新分配 `ref` 本地变量。](csharp-7-3.md#ref-local-variables-may-be-reassigned)
+- [可以使用 `stackalloc` 数组上的初始值设定项。](csharp-7-3.md#stackalloc-arrays-support-initializers)
+- [可以对支持模式的任何类型使用 `fixed` 语句。](csharp-7-3.md#more-types-support-the-fixed-statement)
+- [可以使用其他泛型约束。](csharp-7-3.md#enhanced-generic-constraints)
+
+对现有功能进行了以下增强：
+
+- [可以使用元组类型测试 `==` 和 `!=`。](csharp-7-3.md#tuples-support--and-)
+- [可以在多个位置使用表达式变量。](csharp-7-3.md#extend-expression-variables-in-initializers)
+- [可以将特性附加到自动实现的属性的支持字段。](csharp-7-3.md#attach-attributes-to-the-backing-fields-for-auto-implemented-properties)
+- [由 `in` 区分的参数的方法解析得到了改进。](csharp-7-3.md#in-method-overload-resolution-tiebreaker)
+- [重载解析的多义情况现在变得更少。](csharp-7-3.md#improved-overload-candidates)
+
+新的编译器选项为：
+
+- [`-publicsign`，用于启用程序集的开放源代码软件 (OSS) 签名。](csharp-7-3.md#public-or-open-source-signing)
+- [`-pathmap`，用于提供源目录的映射。](csharp-7-3.md#pathmap)
+
+## <a name="c-version-80"></a>C# 8.0 版
+
+C# 8.0 版是专门面向 .NET C# Core 的第一个主要 C# 版本。 一些功能依赖于新的 CLR 功能，而其他功能依赖于仅在 .NET Core 中添加的库类型。 C# 8.0 向 C# 语言添加了以下功能和增强功能：
+
+- [Readonly 成员](./csharp-8.md#readonly-members)
+- [默认接口方法](./csharp-8.md#default-interface-methods)
+- [模式匹配增强功能](./csharp-8.md#more-patterns-in-more-places)：
+  - [Switch 表达式](./csharp-8.md#switch-expressions)
+  - [属性模式](./csharp-8.md#property-patterns)
+  - [元组模式](./csharp-8.md#tuple-patterns)
+  - [位置模式](./csharp-8.md#positional-patterns)
+- [Using 声明](./csharp-8.md#using-declarations)
+- [静态本地函数](./csharp-8.md#static-local-functions)
+- [可处置的 ref 结构](./csharp-8.md#disposable-ref-structs)
+- [可为空引用类型](../language-reference/builtin-types/nullable-reference-types.md)
+- [异步流](./csharp-8.md#asynchronous-streams)
+- [索引和范围](./csharp-8.md#indices-and-ranges)
+- [Null 合并赋值](./csharp-8.md#null-coalescing-assignment)
+- [非托管构造类型](./csharp-8.md#unmanaged-constructed-types)
+- [嵌套表达式中的 Stackalloc](./csharp-8.md#stackalloc-in-nested-expressions)
+- [内插逐字字符串的增强功能](./csharp-8.md#enhancement-of-interpolated-verbatim-strings)
+
+默认接口成员需要 CLR 中的增强功能。 这些功能已添加到 .NET Core 3.0 的 CLR 中。 范围和索引以及异步流需要 .NET Core 3.0 库中的新类型。 在编译器中实现时，可为 null 的引用类型在批注库时更有用，因为它可以提供有关参数和返回值的 null 状态的语义信息。 这些批注将添加到 .NET Core 库中。
 
 _文章_[_最初发布在 NDepend 博客上_](https://blog.ndepend.com/c-versions-look-language-history/) _，由 Erik Dietrich 和 Patrick Smacchia 提供_。

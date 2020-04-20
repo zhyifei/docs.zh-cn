@@ -4,12 +4,12 @@ description: 了解如何在 Azure HDInsight 的 Jupyter Notebook 中安装 .NET
 ms.date: 03/13/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 32047efcde093a3752bdd59baa88896d1547b93e
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 953bffe5f6ec56cd0adf4224afd2eedfe0001aa9
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546745"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607410"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>在 Azure HDInsight Spark 群集的 Jupyter Notebook 中安装 .NET for Apache Spark
 
@@ -24,7 +24,7 @@ Azure HDInsight 群集已附带 Jupyter Notebook，因此只需将 Jupyter Noteb
 
 ## <a name="prerequisites"></a>先决条件
 
-创建 [Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-hdinsight-spark-cluster) 群集（如果还没有此群集）。
+创建 [Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-apache-spark-cluster-in-hdinsight) 群集（如果还没有此群集）。
 
 1. 访问 [Azure 门户](https://portal.azure.com)并选择“+ 创建资源”。 
 

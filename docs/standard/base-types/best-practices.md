@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 9b09f5a2505888c6154a58a3512c94c51f89295b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff04b4950f48f2ba06f60b65cc3a46f1295711f3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124417"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243149"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中的正则表达式最佳做法
 
@@ -219,7 +219,7 @@ ms.locfileid: "77124417"
 
 正则表达式超时间隔定义了在超时前正则表达式引擎用于查找单个匹配项的时间长度。默认超时间隔为 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>，这意味着正则表达式不会超时。可以按如下所示重写此值并定义超时间隔：
 
-- 在实例化一个 <xref:System.Text.RegularExpressions.Regex> 对象（通过调用 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 构造函数）时，提供一个超时值。
+- 在实例化一个 <xref:System.Text.RegularExpressions.Regex> 对象（通过调用 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> 构造函数）时，提供一个超时值。
 
 - 调用静态模式匹配方法，如 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>，其中包含 `matchTimeout` 参数。
 

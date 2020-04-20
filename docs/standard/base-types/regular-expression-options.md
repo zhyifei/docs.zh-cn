@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf352d6494a823d4f7b24eb2876d9bffa5877b2b
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73972103"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242772"
 ---
 # <a name="regular-expression-options"></a>正则表达式选项
 
@@ -40,7 +40,7 @@ ms.locfileid: "73972103"
 
 可以用下面三种方法之一指定正则表达式的选项：
 
-- 在 `options` 类构造函数或静态（在 Visual Basic 中为 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>）模式匹配方法的 `Shared` 参数中，如 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>。 `options` 参数是 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 枚举值的按位“或”组合。
+- 在 `options` 类构造函数或静态（在 Visual Basic 中为 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>）模式匹配方法的 `Shared` 参数中，如 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29> 或 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>。 `options` 参数是 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 枚举值的按位“或”组合。
 
   当通过使用类构造函数的 `options` 参数，将选项提供给 <xref:System.Text.RegularExpressions.Regex> 实例时，这些选项将分配给 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 属性。 然而，<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 属性不会在正则表达式模式本身中反映内联选项。
 

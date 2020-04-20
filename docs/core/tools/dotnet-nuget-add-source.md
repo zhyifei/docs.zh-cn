@@ -2,12 +2,12 @@
 title: dotnet nuget add source 命令
 description: Dotnet nuget add source 命令将新的包源添加到 NuGet 配置文件中。
 ms.date: 03/20/2020
-ms.openlocfilehash: c1e398699c7482a69b750cde718e6f9178b5c4bd
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 319501e026f1c3102006b0be5357f127b8e366a7
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148488"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463592"
 ---
 # <a name="dotnet-nuget-add-source"></a>dotnet nuget add source
 
@@ -20,10 +20,11 @@ ms.locfileid: "80148488"
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet nuget add source <PACKAGE_SOURCE_PATH> [--name] [--username]
-    [--password] [--store-password-in-clear-text] [--valid-authentication-types]
-    [--configfile]
-dotnet nuget add source [-h|--help]
+dotnet nuget add source <PACKAGE_SOURCE_PATH> [--name <SOURCE_NAME>] [--username <USER>]
+    [--password <PASSWORD>] [--store-password-in-clear-text]
+    [--valid-authentication-types <TYPES>] [--configfile <FILE>]
+
+dotnet nuget add source -h|--help
 ```
 
 ## <a name="description"></a>描述
@@ -38,15 +39,15 @@ dotnet nuget add source [-h|--help]
 
 ## <a name="options"></a>选项
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   NuGet 配置文件。 如果指定，则只使用此文件中的设置。 如果不指定，将使用当前目录中的配置文件的层次结构。 有关详细信息，请参阅[常见的 NuGet 配置](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)。
 
-- **`-n|--name`**
+- **`-n|--name <SOURCE_NAME>`**
 
   源的名称。
 
-- **`-p|--password`**
+- **`-p|--password <PASSWORD>`**
 
   连接到已验证源时要使用的密码。
 
@@ -54,11 +55,11 @@ dotnet nuget add source [-h|--help]
 
   通过禁用密码加密允许存储可移植包源凭据。
 
-- **`-u|--username`**
+- **`-u|--username <USER>`**
 
   连接到已经过身份验证的源时要使用的用户名。
 
-- **`--valid-authentication-types`**
+- **`--valid-authentication-types <TYPES>`**
 
   此源的有效身份验证类型的逗号分隔列表。 如果服务器公布 NTLM 或协商，并且你必须使用基本机制发送凭据（例如，在本地 Azure DevOps Server 中使用 PAT 时），则将此项设置为 `basic`。 其他有效值包括 `negotiate`、`kerberos`、`ntlm` 和 `digest`，但这些值不太可能有用。
 

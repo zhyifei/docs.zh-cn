@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 3e9c817006930a36ebdce5c5965d78f1721c7056
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: ec5d4c088d3a954a4670891e3bb115c73e6cfdcf
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635144"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242759"
 ---
 # <a name="numerics-in-net"></a>.NET 中的数字
 
@@ -62,7 +62,7 @@ ms.locfileid: "80635144"
 
 每个浮点类型都支持一组标准的算术运算符。 <xref:System.Math?displayProperty=nameWithType> 类为更广泛的数学函数集提供方法。 .NET Core 2.0 及更高版本包含 <xref:System.MathF?displayProperty=nameWithType> 类，该类提供接受 <xref:System.Single> 类型的参数的方法。
 
-还可以使用 <xref:System.BitConverter?displayProperty=nameWithType> 类对 <xref:System.Double> 和 <xref:System.Single> 值中的单个位进行运算。 <xref:System.Decimal?displayProperty=nameWithType> 结构具有自己处理十进制值单个位的方法（<xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> 和 <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>）以及一套执行其他数学运算的方法。
+还可以使用 <xref:System.BitConverter?displayProperty=nameWithType> 类对 <xref:System.Double> 和 <xref:System.Single> 值中的单个位进行运算。 <xref:System.Decimal?displayProperty=nameWithType> 结构具有自己处理十进制值单个位的方法（<xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> 和 <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29>）以及一套执行其他数学运算的方法。
   
 <xref:System.Double> 和 <xref:System.Single> 类型旨在用于本质上不精确的值（例如，两颗行星之间的距离）和无需高度精确和舍入误差小的应用程序。 在需要较高准确度和尽量减小舍入误差的情况下，使用 <xref:System.Decimal?displayProperty=nameWithType> 类型。
 

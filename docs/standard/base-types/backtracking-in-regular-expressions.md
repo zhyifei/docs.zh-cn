@@ -17,12 +17,12 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: 1b61cc88de4f73abfe6d8e77f8f32c2c71e70a9d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c525229eb1ba5ca00ad1042864f92621bb366d2
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78158059"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243227"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正则表达式中的回溯
 当正则表达式模式包含可选[限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)或[备用构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)时，会发生回溯，并且正则表达式引擎会返回以前保存的状态，以继续搜索匹配项。 回溯是正则表达式的强大功能的中心；它使得表达式强大、灵活，可以匹配非常复杂的模式。 同时，这种强大功能需要付出一定代价。 通常，回溯是影响正则表达式引擎性能的单个最重要的因素。 幸运的是，开发人员可以控制正则表达式引擎的行为及其使用回溯的方式。 本主题说明回溯的工作方式以及如何对其进行控制。  
@@ -106,14 +106,14 @@ ms.locfileid: "78158059"
  通过回溯可以创建强大、灵活的正则表达式。 但如上一节所示，回溯在提供这些优点的同时，可能也会使性能差的无法接受。 若要防止过度回溯，则应在实例化 <xref:System.Text.RegularExpressions.Regex> 对象或调用静态正则表达式匹配方法时定义超时间隔。 下一节中将对此进行讨论。 此外，.NET 支持下面三个正则表达式语言元素，它们限制或禁止回溯、支持复杂的正则表达式，且不或几乎不损害性能：[原子组](#atomic-groups)、[回顾后发断言](#lookbehind-assertions)和[先行断言](#lookahead-assertions)。 有关每个语言元素的详细信息，请参见 [分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
 
 ### <a name="defining-a-time-out-interval"></a>定义超时间隔  
- 从 .NET Framework 4.5 开始，可以设置超时值，该值表示正则表达式引擎在放弃尝试并引发 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 异常之前将搜索单个匹配项的最长间隔。 你可以通过向实例正则表达式的 <xref:System.TimeSpan> 构造函数提供 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 值来指定超时间隔。 此外，每种静态模式匹配方法都具有带 <xref:System.TimeSpan> 参数的重载，该参数允许你指定超时值。 默认情况下，超时间隔设置为 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> 且正则表达式引擎不会超时。  
+ 从 .NET Framework 4.5 开始，可以设置超时值，该值表示正则表达式引擎在放弃尝试并引发 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 异常之前将搜索单个匹配项的最长间隔。 你可以通过向实例正则表达式的 <xref:System.TimeSpan> 构造函数提供 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> 值来指定超时间隔。 此外，每种静态模式匹配方法都具有带 <xref:System.TimeSpan> 参数的重载，该参数允许你指定超时值。 默认情况下，超时间隔设置为 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> 且正则表达式引擎不会超时。  
   
 > [!IMPORTANT]
 > 如果正则表达式依赖回溯，建议你始终设置超时间隔。  
   
  <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 异常指示正则表达式引擎无法在指定的超时间隔内找到匹配项，但不指示引发异常的原因。 原因可能是过度回溯，但也可能是超时间隔设置得过小（在引发异常时产生系统负载）。 在处理异常时，你可以选择放弃与输入字符串的进一步匹配或增大超时间隔，然后重试匹配操作。  
   
- 例如，下面的代码调用 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 构造函数来实例化超时值为 1 秒的 <xref:System.Text.RegularExpressions.Regex> 对象。 正则表达式模式 `(a+)+$`（与行尾的一个或多个“a”字符的一个或多个序列匹配）受过度回溯的约束。 如果引发 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 异常，该示例会将超时值增大到三秒最长间隔。 之后，它放弃尝试匹配模式。  
+ 例如，下面的代码调用 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> 构造函数来实例化超时值为 1 秒的 <xref:System.Text.RegularExpressions.Regex> 对象。 正则表达式模式 `(a+)+$`（与行尾的一个或多个“a”字符的一个或多个序列匹配）受过度回溯的约束。 如果引发 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 异常，该示例会将超时值增大到三秒最长间隔。 之后，它放弃尝试匹配模式。  
   
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  

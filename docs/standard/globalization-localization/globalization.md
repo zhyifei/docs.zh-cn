@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: fe03bbdd7d037a9f1fb4985b62b447c6ef9c6535
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c08f4309d7673d7e7fb1c6bd84307e4323411d9e
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79174779"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242681"
 ---
 # <a name="globalization"></a>全球化
 
@@ -336,7 +336,7 @@ ms.locfileid: "79174779"
 
 - .NET 支持替换区域性。 由此可定义补充现有标准区域性或完全替换现有标准区域性的新的自定义区域性。
 
-- 在 Windows 系统上，用户可使用“控制面板”中的“区域和语言”  应用，自定义区域性专用设置。 在实例化 <xref:System.Globalization.CultureInfo> 对象时，可调用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来确定它是否反射这些用户自定义。 通常，对最终用户应用而言，你应考虑用户首选项，以用户期望的格式呈现数据。
+- 在 Windows 系统上，用户可使用“控制面板”中的“区域和语言”  应用，自定义区域性专用设置。 在实例化 <xref:System.Globalization.CultureInfo> 对象时，可调用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 构造函数来确定它是否反射这些用户自定义。 通常，对最终用户应用而言，你应考虑用户首选项，以用户期望的格式呈现数据。
 
 ## <a name="see-also"></a>请参阅
 

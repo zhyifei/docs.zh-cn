@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: 3360652f22ed39ccfd99f9863052fe584b78562f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b1c6be08dad37afe9e6627b15d93453aa23f6408
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159255"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242694"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>集合内的比较和排序
 <xref:System.Collections> 类在管理集合所涉及的几乎所有进程中执行比较，无论是搜索待删除的元素或返回键值对的值。  
@@ -32,7 +32,7 @@ ms.locfileid: "78159255"
   
 - 如果类型 T 未实现 <xref:System.IEquatable%601>，则使用 <xref:System.Object.Equals%2A?displayProperty=nameWithType> 。  
   
- 此外，字典集合的某些构造函数重载接受 <xref:System.Collections.Generic.IEqualityComparer%601> 实现，用于比较键是否相等。 有关示例，请参见 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> 构造函数。  
+ 此外，字典集合的某些构造函数重载接受 <xref:System.Collections.Generic.IEqualityComparer%601> 实现，用于比较键是否相等。 有关示例，请参见 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A> 构造函数。  
   
 <a name="BKMK_Determiningsortorder"></a>
 ## <a name="determining-sort-order"></a>确定排序顺序  

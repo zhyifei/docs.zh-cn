@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: b33366922677b26f8fe99454206cacd5bb124f32
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32b3c9de708d22ba4150c5f01ef79d74d5824e27
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159268"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242993"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自定义日期和时间格式字符串
 
@@ -97,7 +97,7 @@ ms.locfileid: "78159268"
 
 以下各节提供有关每个自定义日期和时间格式说明符的附加信息。 除非另行说明，否则，每个说明符将生成相同的字符串表示形式，这与它是与 <xref:System.DateTime> 值一起使用还是与 <xref:System.DateTimeOffset> 值一起使用无关。
 
-## <a name="dSpecifier"></a>“d”自定义格式说明符
+## <a name="the-d-custom-format-specifier"></a><a name="dSpecifier"></a>“d”自定义格式说明符
 
 “d”自定义格式说明符将一个月中的某一天表示为从 1 到 31 的数字。 一位数的日期设置为不带前导零的格式。
 
@@ -110,7 +110,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="ddSpecifier"></a>“dd”自定义格式说明符
+## <a name="the-dd-custom-format-specifier"></a><a name="ddSpecifier"></a>“dd”自定义格式说明符
 
 “dd”自定义格式字符串将一个月中的某一天表示为从 01 到 31 的数字。 一位数的日期设置为带有前导零的格式。
 
@@ -121,7 +121,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="dddSpecifier"></a>“ddd”自定义格式说明符
+## <a name="the-ddd-custom-format-specifier"></a><a name="dddSpecifier"></a>“ddd”自定义格式说明符
 
 “ddd”自定义格式说明符表示一周中某天的缩写名称。 一周中某天的本地化缩写名称通过当前或指定区域性的 <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A?displayProperty=nameWithType> 属性进行检索。
 
@@ -132,7 +132,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="ddddSpecifier"></a>“dddd”自定义格式说明符
+## <a name="the-dddd-custom-format-specifier"></a><a name="ddddSpecifier"></a>“dddd”自定义格式说明符
 
 “dddd”自定义格式说明符（以及任意数量的附加“d”说明符）表示一周中某天的完整名称。 一周中某天的本地化名称通过当前或指定区域性的 <xref:System.Globalization.DateTimeFormatInfo.DayNames%2A?displayProperty=nameWithType> 属性进行检索。
 
@@ -143,7 +143,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="fSpecifier"></a>“f”自定义格式说明符
+## <a name="the-f-custom-format-specifier"></a><a name="fSpecifier"></a>“f”自定义格式说明符
 
 “f”自定义格式说明符表示秒部分的最高有效位；也就是说，它表示日期和时间值的十分之几秒。
 
@@ -158,7 +158,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="ffSpecifier"></a>“ff”自定义格式说明符
+## <a name="the-ff-custom-format-specifier"></a><a name="ffSpecifier"></a>“ff”自定义格式说明符
 
 “ff”自定义格式说明符表示秒部分的前两个有效位；也就是说，它表示日期和时间值的百分之几秒。
 
@@ -169,7 +169,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="fffSpecifier"></a>“fff”自定义格式说明符
+## <a name="the-fff-custom-format-specifier"></a><a name="fffSpecifier"></a>“fff”自定义格式说明符
 
 “fff”自定义格式说明符表示秒部分的前三个有效位；也就是说，它表示日期和时间值的毫秒。
 
@@ -180,7 +180,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="ffffSpecifier"></a>“ffff”自定义格式说明符
+## <a name="the-ffff-custom-format-specifier"></a><a name="ffffSpecifier"></a>“ffff”自定义格式说明符
 
 “ffff”自定义格式说明符表示秒部分的前四个有效位；也就是说，它表示日期和时间值的万分之几秒。
 
@@ -188,7 +188,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="fffffSpecifier"></a>“fffff”自定义格式说明符
+## <a name="the-fffff-custom-format-specifier"></a><a name="fffffSpecifier"></a>“fffff”自定义格式说明符
 
 “fffff”自定义格式说明符表示秒部分的前五个有效位；也就是说，它表示日期和时间值的十万分之几秒。
 
@@ -196,7 +196,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="ffffffSpecifier"></a>“ffffff”自定义格式说明符
+## <a name="the-ffffff-custom-format-specifier"></a><a name="ffffffSpecifier"></a>“ffffff”自定义格式说明符
 
 “ffffff”自定义格式说明符表示秒部分的前六个有效位；也就是说，它表示日期和时间值的百万分之几秒。
 
@@ -204,7 +204,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="fffffffSpecifier"></a>“fffffff”自定义格式说明符
+## <a name="the-fffffff-custom-format-specifier"></a><a name="fffffffSpecifier"></a>“fffffff”自定义格式说明符
 
 “fffffff”自定义格式说明符表示秒部分的前七个有效位；也就是说，它表示日期和时间值的千万分之几秒。
 
@@ -212,7 +212,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="F_Specifier"></a>“F”自定义格式说明符
+## <a name="the-f-custom-format-specifier"></a><a name="F_Specifier"></a>“F”自定义格式说明符
 
 “F”自定义格式说明符表示秒部分的最高有效位；也就是说，它表示日期和时间值的十分之几秒。 如果该数字为零，则不显示任何内容。
 
@@ -227,7 +227,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="FF_Specifier"></a>“FF”自定义格式说明符
+## <a name="the-ff-custom-format-specifier"></a><a name="FF_Specifier"></a>“FF”自定义格式说明符
 
 “FF”自定义格式说明符表示秒部分的前两个有效位；也就是说，它表示日期和时间值的百分之几秒。 但不显示尾随零或两个零位。
 
@@ -238,7 +238,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="FFF_Specifier"></a>“FFF”自定义格式说明符
+## <a name="the-fff-custom-format-specifier"></a><a name="FFF_Specifier"></a>“FFF”自定义格式说明符
 
 “FFF”自定义格式说明符表示秒部分的前三个有效位；也就是说，它表示日期和时间值的毫秒。 但不显示尾随零或三个零位。
 
@@ -249,7 +249,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="FFFF_Specifier"></a>“FFFF”自定义格式说明符
+## <a name="the-ffff-custom-format-specifier"></a><a name="FFFF_Specifier"></a>“FFFF”自定义格式说明符
 
 “FFFF”自定义格式说明符表示秒部分的前四个有效位；也就是说，它表示日期和时间值的万分之几秒。 但不显示尾随零或四个零位。
 
@@ -257,7 +257,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="FFFFF_Specifier"></a>“FFFFF”自定义格式说明符
+## <a name="the-fffff-custom-format-specifier"></a><a name="FFFFF_Specifier"></a>“FFFFF”自定义格式说明符
 
 “FFFFF”自定义格式说明符表示秒部分的前五个有效位；也就是说，它表示日期和时间值的十万分之几秒。 但不显示尾随零或五个零位。
 
@@ -265,7 +265,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="FFFFFF_Specifier"></a>“FFFFFF”自定义格式说明符
+## <a name="the-ffffff-custom-format-specifier"></a><a name="FFFFFF_Specifier"></a>“FFFFFF”自定义格式说明符
 
 “FFFFFF”自定义格式说明符表示秒部分的前六个有效位；也就是说，它表示日期和时间值的百万分之几秒。 但不显示尾随零或六个零位。
 
@@ -273,7 +273,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="FFFFFFF_Specifier"></a>“FFFFFFF”自定义格式说明符
+## <a name="the-fffffff-custom-format-specifier"></a><a name="FFFFFFF_Specifier"></a>“FFFFFFF”自定义格式说明符
 
 “FFFFFFF”自定义格式说明符表示秒部分的前七个有效位；也就是说，它表示日期和时间值的千万分之几秒。 但不显示尾随零或七个零位。
 
@@ -281,7 +281,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="gSpecifier"></a>“g”或“gg”自定义格式说明符
+## <a name="the-g-or-gg-custom-format-specifier"></a><a name="gSpecifier"></a>“g”或“gg”自定义格式说明符
 
 “g”或“gg”自定义格式说明符（以及任意数量的附加“g”说明符）表示时期或纪元（例如 A.D）。 如果要设置格式的日期没有关联的时期或纪元字符串，则格式设置操作将忽略此说明符。
 
@@ -294,7 +294,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="hSpecifier"></a>“h”自定义格式说明符
+## <a name="the-h-custom-format-specifier"></a><a name="hSpecifier"></a>“h”自定义格式说明符
 
 “h”自定义格式说明符将小时表示为从 1 至 12 的数字，即采用 12 小时制表示小时，自午夜或中午开始对整小时计数。 午夜后经过的某特定小时数与中午过后的相同小时数无法加以区分。 小时数不进行舍入，一位数字的小时数设置为不带前导零的格式。 例如，给定上午或下午时间为 5:43，则此自定义格式说明符显示“5”。
 
@@ -307,7 +307,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="hhSpecifier"></a>“hh”自定义格式说明符
+## <a name="the-hh-custom-format-specifier"></a><a name="hhSpecifier"></a>“hh”自定义格式说明符
 
 “hh”自定义格式说明符（以及任意数量的附加“h”说明符）将小时表示为从 01 至 12 的数字，即采用 12 小时制表示小时，自午夜或中午开始对整小时计数。 午夜后经过的某特定小时数与中午过后的相同小时数无法加以区分。 小时数不进行舍入，一位数字的小时数设置为带前导零的格式。 例如，给定上午或下午时间为 5:43，则此格式说明符显示“05”。
 
@@ -318,7 +318,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="H_Specifier"></a>“H”自定义格式说明符
+## <a name="the-h-custom-format-specifier"></a><a name="H_Specifier"></a>“H”自定义格式说明符
 
 “H”自定义格式说明符将小时表示为从 0 至 23 的数字，即通过从零开始的 24 小时制表示小时，自午夜或中午开始对整小时计数。 一位数字的小时数设置为不带前导零的格式。
 
@@ -331,7 +331,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="HH_Specifier"></a>“HH”自定义格式说明符
+## <a name="the-hh-custom-format-specifier"></a><a name="HH_Specifier"></a>“HH”自定义格式说明符
 
 “HH”自定义格式说明符（以及任意数量的附加“H”说明符）将小时表示为从 00 至 23 的数字，即通过从零开始的 24 小时制表示小时，自午夜或中午开始对整小时计数。 一位数字的小时数设置为带前导零的格式。
 
@@ -342,7 +342,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="KSpecifier"></a>“K”自定义格式说明符
+## <a name="the-k-custom-format-specifier"></a><a name="KSpecifier"></a>“K”自定义格式说明符
 
 “K”自定义格式说明符表示日期和时间值的时区信息。 当此格式说明符与 <xref:System.DateTime> 值一起使用时，结果字符串由 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 属性的值进行定义：
 
@@ -363,7 +363,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="mSpecifier"></a>“m”自定义格式说明符
+## <a name="the-m-custom-format-specifier"></a><a name="mSpecifier"></a>“m”自定义格式说明符
 
 “m”自定义格式说明符将分钟表示为从 0 到 59 的数字。 分钟表示自上一小时以来经过的整分钟数。 一位数字的分钟数设置为不带前导零的格式。
 
@@ -376,7 +376,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="mmSpecifier"></a>“mm”自定义格式说明符
+## <a name="the-mm-custom-format-specifier"></a><a name="mmSpecifier"></a>“mm”自定义格式说明符
 
 “mm”自定义格式说明符（以及任意数量的附加“m”说明符）将分钟表示为从 00 到 59 的数字。 分钟表示自上一小时以来经过的整分钟数。 一位数字的分钟数设置为带前导零的格式。
 
@@ -387,7 +387,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="M_Specifier"></a>“M”自定义格式说明符
+## <a name="the-m-custom-format-specifier"></a><a name="M_Specifier"></a>“M”自定义格式说明符
 
 “M”自定义格式说明符将月份表示为从 1 到 12 的数字（对于有 13 个月的日历，将月份表示为从 1 到 13 的数字）。 一位数字的月份数设置为不带前导零的格式。
 
@@ -400,7 +400,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="MM_Specifier"></a>“MM”自定义格式说明符
+## <a name="the-mm-custom-format-specifier"></a><a name="MM_Specifier"></a>“MM”自定义格式说明符
 
 “MM”自定义格式说明符将月份表示为从 01 到 12 的数字（对于有 13 个月的日历，将月份表示为从 1 到 13 的数字）。 一位数字的月份数设置为带有前导零的格式。
 
@@ -411,7 +411,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="MMM_Specifier"></a>“MMM”自定义格式说明符
+## <a name="the-mmm-custom-format-specifier"></a><a name="MMM_Specifier"></a>“MMM”自定义格式说明符
 
 “MMM”自定义格式说明符表示月份的缩写名称。 月份的本地化缩写名称通过当前或指定区域性的 <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedMonthNames%2A?displayProperty=nameWithType> 属性进行检索。
 
@@ -422,7 +422,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="MMMM_Specifier"></a>“MMMM”自定义格式说明符
+## <a name="the-mmmm-custom-format-specifier"></a><a name="MMMM_Specifier"></a>“MMMM”自定义格式说明符
 
 “MMMM”自定义格式说明符表示月份的完整名称。 月份的本地化名称通过当前或指定区域性的 <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> 属性进行检索。
 
@@ -433,7 +433,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="sSpecifier"></a>“s”自定义格式说明符
+## <a name="the-s-custom-format-specifier"></a><a name="sSpecifier"></a>“s”自定义格式说明符
 
 “s”自定义格式说明符将秒表示为从 0 到 59 的数字。 结果表示自上一分钟以来经过的整秒数。 一位数字的秒数设置为不带前导零的格式。
 
@@ -446,7 +446,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="ssSpecifier"></a>“ss”自定义格式说明符
+## <a name="the-ss-custom-format-specifier"></a><a name="ssSpecifier"></a>“ss”自定义格式说明符
 
 “ss”自定义格式说明符（以及任意数量的附加“s”说明符）将秒表示为从 00 到 59 的数字。 结果表示自上一分钟以来经过的整秒数。 一位数字的秒数设置为带前导零的格式。
 
@@ -457,7 +457,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="tSpecifier"></a>“t”自定义格式说明符
+## <a name="the-t-custom-format-specifier"></a><a name="tSpecifier"></a>“t”自定义格式说明符
 
 “t”自定义格式说明符表示 AM/PM 指示符的第一个字符。 相应的本地化指示符通过当前或特定区域性的 <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> 或 <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> 属性进行检索。 AM 指示符用于自 0:00:00（午夜）到 11:59:59.999 的所有时间。 PM 指示符用于自 12:00:00（中午）到 23:59:59.999 的所有时间。
 
@@ -470,7 +470,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="ttSpecifier"></a>“tt”自定义格式说明符
+## <a name="the-tt-custom-format-specifier"></a><a name="ttSpecifier"></a>“tt”自定义格式说明符
 
 “tt”自定义格式说明符（以及任意数量的附加“t”说明符）表示整个 AM/PM 指示符。 相应的本地化指示符通过当前或特定区域性的 <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> 或 <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> 属性进行检索。 AM 指示符用于自 0:00:00（午夜）到 11:59:59.999 的所有时间。 PM 指示符用于自 12:00:00（中午）到 23:59:59.999 的所有时间。
 
@@ -483,7 +483,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="ySpecifier"></a>“y”自定义格式说明符
+## <a name="the-y-custom-format-specifier"></a><a name="ySpecifier"></a>“y”自定义格式说明符
 
 “y”自定义格式说明符将年份表示为一位或两位数字。 如果年份多于两位数，则结果中仅显示两位低位数。 如果两位数字的年份的第一个数字以零开始（例如，2008），则该数字设置为不带前导零的格式。
 
@@ -496,7 +496,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="yySpecifier"></a>“yy”自定义格式说明符
+## <a name="the-yy-custom-format-specifier"></a><a name="yySpecifier"></a>“yy”自定义格式说明符
 
 “yy”自定义格式说明符将年份表示为一位或两位数字。 如果年份多于两位数，则结果中仅显示两位低位数。 如果两位数年份的有效数字少于两个，则用前导零填充该数字以产生两位数。
 
@@ -512,7 +512,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="yyySpecifier"></a>“yyy”自定义格式说明符
+## <a name="the-yyy-custom-format-specifier"></a><a name="yyySpecifier"></a>“yyy”自定义格式说明符
 
 “yyy”自定义格式说明符至少使用三位数字表示年份。 如果年份的有效数字多于三个，则将它们包括在结果字符串中。 如果年份少于三位数，则用前导零填充该数字以产生三位数。
 
@@ -526,7 +526,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="yyyySpecifier"></a>“yyyy”自定义格式说明符
+## <a name="the-yyyy-custom-format-specifier"></a><a name="yyyySpecifier"></a>“yyyy”自定义格式说明符
 
 “yyyy”自定义格式说明符至少使用四位数字表示年份。 如果年份的有效数字多于四个，则将它们包括在结果字符串中。 如果年份少于四位数，则用前导零填充该数字使其达到四位数。
 
@@ -540,7 +540,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="yyyyySpecifier"></a>“yyyyy”自定义格式说明符
+## <a name="the-yyyyy-custom-format-specifier"></a><a name="yyyyySpecifier"></a>“yyyyy”自定义格式说明符
 
 “yyyyy”自定义格式说明符（以及任意数量的附加“y”说明符）最少将年份表示为五位数字。 如果年份的有效数字多于五个，则将它们包括在结果字符串中。 如果年份少于五位数，则用前导零填充该数字以产生五位数。
 
@@ -553,7 +553,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="zSpecifier"></a>“z”自定义格式说明符
+## <a name="the-z-custom-format-specifier"></a><a name="zSpecifier"></a>“z”自定义格式说明符
 
 与 <xref:System.DateTime> 值一起使用时，“z”自定义格式说明符表示本地操作系统的时区相对于协调世界时 (UTC) 的有符号偏移量（以小时为单位）。 它不反映一个实例的 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 属性的值。 出于此原因，不建议将“z”格式说明符与 <xref:System.DateTime> 值一起使用。
 
@@ -570,7 +570,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="zzSpecifier"></a>“zz”自定义格式说明符
+## <a name="the-zz-custom-format-specifier"></a><a name="zzSpecifier"></a>“zz”自定义格式说明符
 
 与 <xref:System.DateTime> 值一起使用时，“zz”自定义格式说明符表示本地操作系统的时区相对于 UTC 的有符号偏移量（以小时为单位）。 它不反映一个实例的 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 属性的值。 出于此原因，不建议将“zz”格式说明符与 <xref:System.DateTime> 值一起使用。
 
@@ -585,7 +585,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="zzzSpecifier"></a>“zzz”自定义格式说明符
+## <a name="the-zzz-custom-format-specifier"></a><a name="zzzSpecifier"></a>“zzz”自定义格式说明符
 
 与 <xref:System.DateTime> 值一起使用时，“zzz”自定义格式说明符表示本地操作系统的时区相对于 UTC 的有符号偏移量（以小时和分钟为单位）。 它不反映一个实例的 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 属性的值。 出于此原因，不建议将“zzz”格式说明符与 <xref:System.DateTime> 值一起使用。
 
@@ -600,7 +600,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="timeSeparator"></a>“:”自定义格式说明符
+## <a name="the--custom-format-specifier"></a><a name="timeSeparator"></a>“:”自定义格式说明符
 “:”自定义格式说明符表示时间分隔符，它用于区分小时、分钟和秒。 相应的本地化时间分隔符通过当前或指定区域性的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> 属性进行检索。
 
 > [!NOTE]
@@ -610,7 +610,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="dateSeparator"></a>“/”自定义格式说明符
+## <a name="the--custom-format-specifier"></a><a name="dateSeparator"></a>“/”自定义格式说明符
 
 “/”自定义格式说明符表示日期分隔符，它用于区分年、月和日。 相应的本地化日期分隔符检索自当前或指定区域性的 <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=nameWithType> 属性。
 
@@ -621,7 +621,7 @@ ms.locfileid: "78159268"
 
 [返回表首](#table)
 
-## <a name="Literals"></a>字符文本
+## <a name="character-literals"></a><a name="Literals"></a>字符文本
 
 自定义日期和时间格式字符串中的以下字符是保留的字符，始终解释为格式字符，但 "、’、/ 和 \\ 解释为特殊字符。
 
@@ -655,7 +655,7 @@ ms.locfileid: "78159268"
 
 ## <a name="notes"></a>备注
 
-### <a name="UsingSingleSpecifiers"></a>使用单个自定义格式说明符
+### <a name="using-single-custom-format-specifiers"></a><a name="UsingSingleSpecifiers"></a>使用单个自定义格式说明符
 
 自定义日期和时间格式字符串由两个或更多字符组成。 日期和时间格式设置方法将任何单字符字符串解释标准日期和时间格式字符串。 如果它们无法将该字符识别为有效格式说明符，则会引发 <xref:System.FormatException>。 例如，仅包含说明符“h”的格式字符串解释为标准日期和时间格式字符串。 但是，在此特定情况下将引发异常，原因是不存在“h”标准日期和时间格式说明符。
 
@@ -666,7 +666,7 @@ ms.locfileid: "78159268"
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#16](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/literal1.cs#16)]
 [!code-vb[Formatting.DateAndTime.Custom#16](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/literal1.vb#16)]
 
-### <a name="escape"></a>使用转义字符
+### <a name="using-the-escape-character"></a><a name="escape"></a>使用转义字符
 
 格式字符串中的“d”、“f”、“F”、“g”、“h”、“H”、“K”、“m”、“M”、“s”、“t”、“y”、“z”、“:”或“/”字符被解释为自定义格式说明符而不是文本字符。 若要防止某个字符被解释为格式说明符，可以在该字符前面加上反斜杠 (\\)，即转义字符。 转义字符表示以下字符为应包含在未更改的结果字符串中的字符文本。
 
@@ -684,7 +684,7 @@ ms.locfileid: "78159268"
 
 对于包含许多自定义日期和时间格式说明符的格式设置操作，控制面板中的“区域和语言选项”  设置会影响其产生的结果字符串。 这些设置用于初始化与当前线程区域性关联的 <xref:System.Globalization.DateTimeFormatInfo> 对象，当前线程区域性提供用于控制格式设置的值。 使用不同设置的计算机将生成不同的结果字符串。
 
-此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 构造函数实例化表示当前系统区域性的新 <xref:System.Globalization.CultureInfo> 对象，通过控制面板中的“区域和语言选项”  项创建的任何自定义都会应用于新 <xref:System.Globalization.CultureInfo> 对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。
+此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> 构造函数实例化表示当前系统区域性的新 <xref:System.Globalization.CultureInfo> 对象，通过控制面板中的“区域和语言选项”  项创建的任何自定义都会应用于新 <xref:System.Globalization.CultureInfo> 对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。
 
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo 属性
 

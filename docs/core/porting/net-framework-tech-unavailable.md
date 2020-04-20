@@ -4,12 +4,12 @@ titleSuffix: ''
 description: 了解在 .NET Core 上不可用的 .NET Framework 技术
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: bd2488de653ecdfed261100b4c9019bea58fcab3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7dfec63870950f12ec933ebf09041b3c8ce2cbb5
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092936"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607792"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Framework 技术在 .NET Core 上不可用
 
@@ -29,7 +29,7 @@ ms.locfileid: "77092936"
 
 对于跨进程通信，可将进程间通信 (IPC) 机制视为远程处理的备用方案，如 <xref:System.IO.Pipes> 类或 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> 类。
 
-对于跨计算机的通信，可将基于网络的解决方案用作备用方案。 最好使用低开销纯文本协议，例如 HTTP。 此处，ASP.NET Core 使用的 Web 服务器 [Kestrel Web 服务器](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)是一个选择。 也可考虑将 <xref:System.Net.Sockets> 用于基于网络的跨计算机的方案。 请参阅 [.NET 开放源代码开发人员项目：消息传送](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging)了解更多选项。
+对于跨计算机的通信，可将基于网络的解决方案用作备用方案。 最好使用低开销纯文本协议，例如 HTTP。 此处，ASP.NET Core 使用的 Web 服务器 [Kestrel Web 服务器](/aspnet/core/fundamentals/servers/kestrel)是一个选择。 也可考虑将 <xref:System.Net.Sockets> 用于基于网络的跨计算机的方案。 请参阅 [.NET 开放源代码开发人员项目：消息传送](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging)了解更多选项。
 
 ## <a name="code-access-security-cas"></a>代码访问安全性 (CAS)
 

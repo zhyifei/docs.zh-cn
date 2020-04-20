@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 689ca9f7278dcf91b12bc62b5255a968388bb9f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 725884d8ab6d6d9009ad1cdd7bc185889cd5e485
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398783"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243058"
 ---
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 
@@ -527,7 +527,7 @@ ms.locfileid: "79398783"
 
 ## <a name="the-clscompliantattribute-attribute"></a>CLSCompliantAttribute 特性
 
-<xref:System.CLSCompliantAttribute> 特性用于指示程序元素是否使用公共语言规范进行编译。 <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> 构造函数包含一个所需参数（`isCompliant`），此参数指示该程序元素是否符合 CLS。
+<xref:System.CLSCompliantAttribute> 特性用于指示程序元素是否使用公共语言规范进行编译。 <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29> 构造函数包含一个所需参数（`isCompliant`），此参数指示该程序元素是否符合 CLS。
 
 编译时，编译器检测到假定为符合 CLS 的不合规元素，并发出警告。 编译器不会对显式声明为不符合标准的类型或成员发出警告。
 

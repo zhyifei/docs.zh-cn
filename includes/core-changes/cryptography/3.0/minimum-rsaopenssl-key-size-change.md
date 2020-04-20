@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2fb980c8b75e25ba347c56ccc1c90f2959e83e21
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5b724afefcce69df706f2bea0b1612db653af03
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74567993"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81275130"
 ---
 ### <a name="minimum-size-for-rsaopenssl-key-generation-has-increased"></a>RSAOpenSsl 密钥生成的最小大小已增加
 
@@ -12,7 +12,7 @@ ms.locfileid: "74567993"
 
 #### <a name="change-description"></a>更改描述
 
-自 .NET Core 3.0 起，Linux 上 `LegalKeySizes`<xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType> 和 <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A?displayProperty=nameWithType> 中 RSA 实例上的 <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A?displayProperty=nameWithType> 属性报告的最低合法密钥大小已从 384 增加到 512。
+自 .NET Core 3.0 起，Linux 上 `LegalKeySizes`<xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType> 和 <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A> 中 RSA 实例上的 <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A> 属性报告的最低合法密钥大小已从 384 增加到 512。
 
 因此，在 .NET Core 2.2 及更早版本中，方法调用（如 `RSA.Create(384)`）会成功。 在 .NET Core 3.0 及更高版本中，方法调用 `RSA.Create(384)` 会引发异常，指示大小太小。
 
@@ -37,8 +37,8 @@ ms.locfileid: "74567993"
 
 - <xref:System.Security.Cryptography.AsymmetricAlgorithm.LegalKeySizes?displayProperty=nameWithType>
 - <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>
-- <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A?displayProperty=nameWithType>
-- <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A>
+- <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A>
 
 <!--
 ### Affected APIs

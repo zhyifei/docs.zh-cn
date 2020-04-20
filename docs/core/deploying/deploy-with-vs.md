@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f2299ac807c845dab482306cc4c710560bb7f1e7
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449018"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607857"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 应用
 
@@ -75,9 +75,9 @@ ms.locfileid: "77449018"
 
 1. 如果系统中已安装 `Newtonsoft.Json`，请在“管理解决方案包”  选项卡的右侧窗格中选择项目，将其添加到项目。
 
-如果依赖框架的部署具有第三方依赖项，则其可移植性只与第三方依赖项相同。 例如，如果某个第三方库只支持 macOS，该应用将无法移植到 Windows 系统。 当第三方依赖项本身取决于本机代码时，也可能发生此情况。 [Kestrel 服务器](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)就是一个很好的示例，它需要 [libuv](https://github.com/libuv/libuv) 的本机依赖项。 当为具有此类第三方依赖项的应用程序创建 FDD 时，已发布的输出会针对每个本机依赖项支持（存在于 NuGet 包中）的[运行时标识符 (RID)](../rid-catalog.md) 包含一个文件夹。
+如果依赖框架的部署具有第三方依赖项，则其可移植性只与第三方依赖项相同。 例如，如果某个第三方库只支持 macOS，该应用将无法移植到 Windows 系统。 当第三方依赖项本身取决于本机代码时，也可能发生此情况。 [Kestrel 服务器](/aspnet/core/fundamentals/servers/kestrel)就是一个很好的示例，它需要 [libuv](https://github.com/libuv/libuv) 的本机依赖项。 当为具有此类第三方依赖项的应用程序创建 FDD 时，已发布的输出会针对每个本机依赖项支持（存在于 NuGet 包中）的[运行时标识符 (RID)](../rid-catalog.md) 包含一个文件夹。
 
-## <a name="simpleSelf"></a>不包含第三方依赖项的独立部署
+## <a name="self-contained-deployment-without-third-party-dependencies"></a><a name="simpleSelf"></a>不包含第三方依赖项的独立部署
 
 部署没有第三方依赖项的独立部署包括创建项目、修改 csproj 文件、生成、测试以及发布应用  。 一个用 C# 编写的简单示例可说明此过程。 首先，对项目进行创建、编码及测试，就像对依赖框架的部署的操作一样：
 

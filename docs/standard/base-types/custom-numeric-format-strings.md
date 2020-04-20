@@ -16,12 +16,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 1eb9c3c189d7bba3a12fdcd0c3d600a66bf819ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5961cce4601a89b34708b7090207edfed63b5b08
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75348298"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242980"
 ---
 # <a name="custom-numeric-format-strings"></a>自定义数字格式字符串
 
@@ -265,7 +265,7 @@ ms.locfileid: "75348298"
 
 控制面板中“区域和语言选项”  项中的设置会影响由格式设置操作产生的结果字符串。 这些设置用于初始化与当前线程区域性关联的 <xref:System.Globalization.NumberFormatInfo> 对象，并且当前线程区域性将提供用于控制格式设置的值。 使用不同设置的计算机将生成不同的结果字符串。
 
-此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 构造函数实例化表示当前系统区域性的新 <xref:System.Globalization.CultureInfo> 对象，通过控制面板中的“区域和语言选项”  项创建的任何自定义都会应用于新 <xref:System.Globalization.CultureInfo> 对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。
+此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> 构造函数实例化表示当前系统区域性的新 <xref:System.Globalization.CultureInfo> 对象，通过控制面板中的“区域和语言选项”  项创建的任何自定义都会应用于新 <xref:System.Globalization.CultureInfo> 对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。
 
 ### <a name="rounding-and-fixed-point-format-strings"></a>舍入和定点格式字符串
 

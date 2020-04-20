@@ -2,12 +2,12 @@
 title: dotnet nuget remove source 命令
 description: dotnet nuget remove source 命令从 NuGet 配置文件中删除现有源。
 ms.date: 03/20/2020
-ms.openlocfilehash: 65c97b98ab50121fb4ebc184da65f021c16e0634
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: b259873e1885644b272136fa31414410bdfd9f27
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148464"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463491"
 ---
 # <a name="dotnet-nuget-remove-source"></a>dotnet nuget remove source
 
@@ -20,8 +20,9 @@ ms.locfileid: "80148464"
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet nuget remove source <NAME> [--configfile]
-dotnet nuget remove source [-h|--help]
+dotnet nuget remove source <NAME> [--configfile <FILE>]
+
+dotnet nuget remove source -h|--help
 ```
 
 ## <a name="description"></a>描述

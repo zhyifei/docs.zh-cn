@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: 2243aad0e787a3a594bde3dfa9884f104eab74e8
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 832124e6d027b240c4d06692ee87c84f57b982d3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546687"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243331"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>使用 ML.NET CLI 分析情绪
 
@@ -45,7 +45,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
 
 我们将使用用于“情绪分析”方案（二元分类机器学习任务）的现有数据集。 用户可以通过类似的方式使用自己的数据集，系统将为用户生成模型和代码。
 
-1. 下载 [UCI Sentiment Labeled Sentences 数据集 zip 文件（参见以下备注中的引文）](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)并在选择的任何文件夹中解压缩文件。
+1. 下载 [UCI Sentiment Labeled Sentences 数据集 zip 文件（参见以下备注中的引文）](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)并在选择的任何文件夹中解压缩文件。
 
     > [!NOTE]
     > 本教程使用的数据集摘自 KDD 2015 中由 Kotzias 等提出的“From Group to Individual Labels using Deep Features”， 并托管在 UCI 机器学习存储库中（Dua, D. 和 Karra Taniskidou, E.(2017)）。 UCI 机器学习存储库 [http://archive.ics.uci.edu/ml ]。 加利福尼亚州，加利福尼亚大学：欧文分校，信息与计算机科学学院。

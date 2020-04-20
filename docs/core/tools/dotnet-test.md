@@ -2,12 +2,12 @@
 title: dotnet test 命令
 description: dotnet test 命令可用于在给定项目中执行单元测试。
 ms.date: 02/27/2020
-ms.openlocfilehash: 359e4522b26e2b59092d55eea3fca575d2afaf1f
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: f9df03cda01bdaf649394a58e96903e764193338
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121043"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463378"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -21,14 +21,18 @@ ms.locfileid: "81121043"
 
 ```dotnetcli
 dotnet test [<PROJECT> | <SOLUTION>]
-    [-a|--test-adapter-path] [--blame] [-c|--configuration]
-    [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [--interactive] [-l|--logger] [--no-build] [--nologo]
-    [--no-restore] [-o|--output] [-r|--results-directory]
-    [--runtime] [-s|--settings] [-t|--list-tests]
-    [-v|--verbosity] [[--] <RunSettings arguments>]
+    [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
+    [-c|--configuration <CONFIGURATION>]
+    [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
+    [-d|--diag <PATH_TO_DIAGNOSTICS_FILE>] [-f|--framework <FRAMEWORK>]
+    [--filter <EXPRESSION>] [--interactive]
+    [-l|--logger <LOGGER_URI/FRIENDLY_NAME>] [--no-build]
+    [--nologo] [--no-restore] [-o|--output <OUTPUT_DIRECTORY>]
+    [-r|--results-directory <PATH>] [--runtime <RUNTIME_IDENTIFIER>]
+    [-s|--settings <SETTINGS_FILE>] [-t|--list-tests]
+    [-v|--verbosity <LEVEL>] [[--] <RunSettings arguments>]
 
-dotnet test [-h|--help]
+dotnet test -h|--help
 ```
 
 ## <a name="description"></a>描述
@@ -83,7 +87,7 @@ dotnet test [-h|--help]
 
   允许命令停止并等待用户输入或操作。 例如，完成身份验证。 自 .NET Core 3.0 SDK 起可用。
 
-- **`l|--logger <LoggerUri/FriendlyName>`**
+- **`l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
   指定测试结果记录器。 与 MSBuild 不同，dotnet 测试不接受缩写，应使用 `-l "console;verbosity=detailed"`，而不使用 `-l "console;v=d"`。
 

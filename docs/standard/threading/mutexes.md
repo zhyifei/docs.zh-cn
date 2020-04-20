@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Mutex class, about Mutex class
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: 874f879697db0b47c73626350eeb05a01b38e1bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f020db49bcdcbf6ce3d573348a93b06e87db199
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127558"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242720"
 ---
 # <a name="mutexes"></a>Mutexes
 <xref:System.Threading.Mutex> 对象可用于提供对资源的独占访问权限。 虽然 <xref:System.Threading.Mutex> 类使用的系统资源比 <xref:System.Threading.Monitor> 类更多，但它可以跨应用域边界进行封送，可用于多个等待操作以及同步不同进程中的线程。 有关托管同步机制的比较，请参阅[同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。  
@@ -50,7 +50,7 @@ ms.locfileid: "73127558"
 ## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.Mutex?displayProperty=nameWithType>
-- <xref:System.Threading.Mutex.%23ctor%2A?displayProperty=nameWithType>
+- <xref:System.Threading.Mutex.%23ctor%2A>
 - <xref:System.Security.AccessControl.MutexSecurity?displayProperty=nameWithType>
 - <xref:System.Security.AccessControl.MutexAccessRule?displayProperty=nameWithType>
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>

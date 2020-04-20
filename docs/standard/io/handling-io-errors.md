@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c592039b3b12eedcfceda45c2f54403a8e04b5d5
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120744"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242668"
 ---
 # <a name="handling-io-errors-in-net"></a>处理 .NET 中的 I/O 错误
 
@@ -39,7 +39,7 @@ ms.locfileid: "73120744"
 
 例如，在 Windows 操作系统，返回 `ERROR_FILE_NOT_FOUND`（或 0x02）错误代码的方法调用会映射到 <xref:System.IO.FileNotFoundException>，`ERROR_PATH_NOT_FOUND` 错误代码（或 0x03）则映射到 <xref:System.IO.DirectoryNotFoundException>。
 
-但是，操作系统返回特定错误代码的精确条件通常未记录或记录不当。 因此，会出现意外异常。 例如，因为使用的是目录而不是文件，可以预料到向 <xref:System.IO.DirectoryInfo.%23ctor%2A?displayProperty=nameWithType> 构造函数提供无效目录路径将引发 <xref:System.IO.DirectoryNotFoundException>。 但是，它也可能引发 <xref:System.IO.FileNotFoundException>。
+但是，操作系统返回特定错误代码的精确条件通常未记录或记录不当。 因此，会出现意外异常。 例如，因为使用的是目录而不是文件，可以预料到向 <xref:System.IO.DirectoryInfo.%23ctor%2A> 构造函数提供无效目录路径将引发 <xref:System.IO.DirectoryNotFoundException>。 但是，它也可能引发 <xref:System.IO.FileNotFoundException>。
 
 ## <a name="exception-handling-in-io-operations"></a>I/O 操作中的异常处理
 

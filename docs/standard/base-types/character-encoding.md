@@ -11,12 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 063cac1de6634125d7dabad9d627bceff877e567
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 1a294a577d10b3e621871b168344f2b0610693dd
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546732"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242733"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>如何在 .NET 中使用字符编码类
 
@@ -37,7 +37,7 @@ ms.locfileid: "79546732"
 
 - 调用编码的类构造函数。 以这种方式可以将 ASCII、utf-7、utf-8、utf-16 和 utf-32 编码对象实例化。 默认情况下，每个对象都使用替换回退处理不能进行编码的字符串和不能进行解码的字节，但你可指定应引发异常。 有关详细信息，请参阅[替换回退](../../../docs/standard/base-types/character-encoding.md#Replacement)和[异常回退](../../../docs/standard/base-types/character-encoding.md#Exception)。
 
-- 调用 <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> 构造函数并向其传递一个表示编码的整数。 标准编码对象使用替换回退，代码页编码和双字节字符集 (DBCS) 编码对象使用最佳回退处理不能进行编码的字符串和不能进行解码的字节。 有关详细信息，请参阅[最佳回退](../../../docs/standard/base-types/character-encoding.md#BestFit)。
+- 调用 <xref:System.Text.Encoding.%23ctor%28System.Int32%29> 构造函数并向其传递一个表示编码的整数。 标准编码对象使用替换回退，代码页编码和双字节字符集 (DBCS) 编码对象使用最佳回退处理不能进行编码的字符串和不能进行解码的字节。 有关详细信息，请参阅[最佳回退](../../../docs/standard/base-types/character-encoding.md#BestFit)。
 
 - 调用 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 方法，此方法返回 .NET 中的任何标准编码、代码页编码或 DBCS 编码。 可通过重载同时指定编码器和解码器的回退对象。
 

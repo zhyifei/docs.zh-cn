@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: 9e55910573b3aa3aecf9082f1b77659a45f883a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 560ef4f99ca451c3b48f23988519313eed26dcb3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73196980"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243201"
 ---
 # <a name="additional-resources"></a>其他资源
 
@@ -32,7 +32,7 @@ ms.locfileid: "73196980"
 
 |代码|说明|
 |----------|----------------|
-|[Visual Basic 文档示例](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)|包含整个 Visual Basic 和 .NET 文档中使用的示例。|
+|[Visual Basic 文档示例](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|包含整个 Visual Basic 和 .NET 文档中使用的示例。|
 
 ### <a name="forums"></a>论坛
 
