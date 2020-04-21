@@ -1,12 +1,12 @@
 ---
 title: 特性 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 62424163303417746a67707d9ef34185954db316
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 0379bb76cf18ff836bd14aafb9cb97c30aee8ec7
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389542"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645486"
 ---
 # <a name="attributes-c"></a>特性 (C#)
 
@@ -81,7 +81,7 @@ ms.locfileid: "81389542"
 
 指定 `field` 目标值，将特性应用到为[自动实现的属性](../../../properties.md)创建的支持字段。
 
-下面的示例展示了如何将特性应用于程序集和模块。 有关详细信息，请参阅[通用特性 (C#)](common-attributes.md)。
+下面的示例展示了如何将特性应用于程序集和模块。 有关详细信息，请参阅[通用特性 (C#)](../../../language-reference/attributes/global.md)。
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ using System.Reflection;
 - [创建自定义特性 (C#)](creating-custom-attributes.md)  
 - [使用反射访问特性 (C#)](accessing-attributes-by-using-reflection.md)  
 - [如何使用特性创建 C/C++ 联合 (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
-- [通用特性 (C#)](common-attributes.md)  
+- [通用特性 (C#)](../../../language-reference/attributes/global.md)  
 - [调用方信息 (C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>请参阅

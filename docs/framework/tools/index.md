@@ -7,12 +7,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 4503e2cff18f4aa901d20c76cfe4076a7fed3600
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60a9cb241f289cacc7437174f112114e843aca47
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715768"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645567"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 工具
 
@@ -36,7 +36,7 @@ ms.locfileid: "75715768"
 将 ActiveX 控件的 COM 类型库中的类型定义转换成 Windows 窗体控件。
 
 - [Caspol.exe（代码访问安全策略工具）](caspol-exe-code-access-security-policy-tool.md)  
-用于查看和配置计算机策略级别、用户策略级别和企业策略级别的安全策略。 在 .NET Framework 4 及更高版本中，此工具不会影响代码访问安全性 (CAS) 策略，除非 [\<legacyCasPolicy> 元素](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)设置为 `true`。 有关详细信息，请参阅[安全更改](../security/security-changes.md)。
+用于查看和配置计算机策略级别、用户策略级别和企业策略级别的安全策略。 在 .NET Framework 4 及更高版本中，此工具不会影响代码访问安全性 (CAS) 策略，除非 [\<legacyCasPolicy> 元素](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)设置为 `true`。 有关详细信息，请参阅[安全更改](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。
 
 - [Cert2spc.exe（软件发行者证书测试工具）](cert2spc-exe-software-publisher-certificate-test-tool.md)  
 通过一个或多个 X.509 证书创建发行者证书 (SPC)。 此工具仅用于测试目的。
