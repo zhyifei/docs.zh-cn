@@ -13,15 +13,15 @@ helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], using with BindingSource
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7fa2cf51-c09f-4375-adf0-e36c5617f099
-ms.openlocfilehash: 07248ec0b8ac4f2356d9c9915b6a904dfad30cb2
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 2fe4458aa43144a9c29ed67fd7bee99a37fe1434
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388980"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739681"
 ---
 # <a name="how-to-raise-change-notifications-using-a-bindingsource-and-the-inotifypropertychanged-interface"></a>如何：使用 BindingSource 和 INotifyPropertyChanged 接口引发更改通知
-<xref:System.Windows.Forms.BindingSource> 组件将在数据源中包含的类型实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口时自动删除数据源中的更改，并在属性值更改时引发 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件。 上述操作非常有用，因为已绑定到 <xref:System.Windows.Forms.BindingSource> 的控件之后会在数据源值更改时自动更新。  
+当<xref:System.Windows.Forms.BindingSource>数据源中包含的类型实现<xref:System.ComponentModel.INotifyPropertyChanged>时，组件会自动检测数据源中的更改，并在更改属性值时引发<xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged>事件。 此更改检测很有用，因为绑定到 的<xref:System.Windows.Forms.BindingSource>控件会随着数据源值的变化而自动更新。  
   
 > [!NOTE]
 > 如果数据源实现 <xref:System.ComponentModel.INotifyPropertyChanged>，并且你正在执行异步操作，则不应更改后台线程上的数据源。 相反，应读取后台线程上的数据，并将数据合并到 UI 线程上的列表。  
@@ -37,7 +37,7 @@ ms.locfileid: "81388980"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
-- 对 System、System.Data、System.Drawing 和 System.Windows.Forms 程序集的引用。  
+- 对系统、系统、数据、系统、绘图和系统.Windows.窗体程序集的引用。  
   
 ## <a name="see-also"></a>另请参阅
 

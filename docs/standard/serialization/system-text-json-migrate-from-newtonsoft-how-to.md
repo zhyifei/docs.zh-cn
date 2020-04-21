@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 957bafcdf69d5792702962db6598458a0c8ec974
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 0828a5654171df39230055215903d3a49690155d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291575"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739240"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>如何从 Newtonsoft.Json 迁移到 System.Text.Json
 
@@ -73,15 +73,15 @@ ms.locfileid: "80291575"
 | `JsonConvert.PopulateObject` 方法                   | ⚠️[不支持，解决方法](#populate-existing-objects) |
 | `ObjectCreationHandling`全局设置               | ⚠️[不支持，解决方法](#reuse-rather-than-replace-properties) |
 | 添加到没有设置器的集合                    | ⚠️[不支持，解决方法](#add-to-collections-without-setters) |
-| `PreserveReferencesHandling`全局设置           | ❌[不支持](#preserve-object-references-and-handle-loops) |
-| `ReferenceLoopHandling`全局设置                | ❌[不支持](#preserve-object-references-and-handle-loops) |
-| 对属性`System.Runtime.Serialization`的支持 | ❌[不支持](#systemruntimeserialization-attributes) |
-| `MissingMemberHandling`全局设置                | ❌[不支持](#missingmemberhandling) |
-| 允许没有引号的属性名称                   | ❌[不支持](#json-strings-property-names-and-string-values) |
-| 允许字符串值周围的单引号              | ❌[不支持](#json-strings-property-names-and-string-values) |
-| 允许字符串属性的非字符串 JSON 值    | ❌[不支持](#non-string-values-for-string-properties) |
+| `PreserveReferencesHandling`全局设置           | ❌ [不支持](#preserve-object-references-and-handle-loops) |
+| `ReferenceLoopHandling`全局设置                | ❌ [不支持](#preserve-object-references-and-handle-loops) |
+| 对属性`System.Runtime.Serialization`的支持 | ❌ [不支持](#systemruntimeserialization-attributes) |
+| `MissingMemberHandling`全局设置                | ❌ [不支持](#missingmemberhandling) |
+| 允许没有引号的属性名称                   | ❌ [不支持](#json-strings-property-names-and-string-values) |
+| 允许字符串值周围的单引号              | ❌ [不支持](#json-strings-property-names-and-string-values) |
+| 允许字符串属性的非字符串 JSON 值    | ❌ [不支持](#non-string-values-for-string-properties) |
 
-这不是功能的`Newtonsoft.Json`详尽列表。 该列表包括[GitHub 问题](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)或[堆栈溢出](https://stackoverflow.com/questions/tagged/system.text.json)帖子中请求的许多方案。 如果为此处列出的当前没有示例代码的方案之一实现解决方法，并且想要共享解决方案，请在此页面[的"反馈"部分](/dotnet/standard/serialization/system-text-json-migrate-from-newtonsoft-how-to#feedback)中选择**此页面**。 这将创建 GitHub 问题，并将其列在此页底部。
+这不是功能的`Newtonsoft.Json`详尽列表。 该列表包括[GitHub 问题](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)或[堆栈溢出](https://stackoverflow.com/questions/tagged/system.text.json)帖子中请求的许多方案。 如果为此处列出的当前没有示例代码的方案之一实现解决方法，并且想要共享解决方案，请在此页面底部**的"反馈"** 部分中选择**此页面**。 这在本文档的 GitHub 存储库中造成了问题，并在此页上**的"反馈"** 部分中列出。
 
 ## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>与牛顿软相比，默认Json序列器行为的差异
 
@@ -510,7 +510,7 @@ DOM<xref:System.Text.Json>无法添加、删除或修改 JSON 元素。 它以�
 
 ### <a name="utf8jsonreader-is-a-ref-struct"></a>Utf8JonReader 是一个参考结构
 
-由于`Utf8JsonReader`类型是*ref 结构*，因此具有[某些限制](../../csharp/language-reference/keywords/ref.md#ref-struct-types)。 例如，不能将其存储为类或结构上的字段，而不是 ref 结构。 为了实现高性能，此类型必须是 a，`ref struct`因为它需要缓存输入[ReadOnlySpan\<字节>](xref:System.ReadOnlySpan%601)，这本身就是一个 ref 结构。 此外，此类型是可变的，因为它保持状态。 因此，通过 ref 而不是按值**传递它**。 按值传递它将导致结构副本，并且调用方看不到状态更改。 这与 因为`Newtonsoft.Json``Newtonsoft.Json``JsonTextReader`是 类不同。 有关如何使用 ref 结构的详细信息，请参阅[编写安全高效的 C# 代码](../../csharp/write-safe-efficient-code.md)。
+由于`Utf8JsonReader`类型是*ref 结构*，因此具有[某些限制](../../csharp/language-reference/builtin-types/struct.md#ref-struct)。 例如，不能将其存储为类或结构上的字段，而不是 ref 结构。 为了实现高性能，此类型必须是 a，`ref struct`因为它需要缓存输入[ReadOnlySpan\<字节>](xref:System.ReadOnlySpan%601)，这本身就是一个 ref 结构。 此外，此类型是可变的，因为它保持状态。 因此，通过 ref 而不是按值**传递它**。 按值传递它将导致结构副本，并且调用方看不到状态更改。 这与 因为`Newtonsoft.Json``Newtonsoft.Json``JsonTextReader`是 类不同。 有关如何使用 ref 结构的详细信息，请参阅[编写安全高效的 C# 代码](../../csharp/write-safe-efficient-code.md)。
 
 ### <a name="read-utf-8-text"></a>阅读 UTF-8 文本
 

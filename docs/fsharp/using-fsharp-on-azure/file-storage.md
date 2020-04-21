@@ -3,18 +3,18 @@ title: 通过 F# 实现 Azure 文件存储入门
 description: 使用 Azure 文件存储在云中存储文件数据和从 Azure 虚拟机 (VM) 或从运行 Windows 的本地应用程序装载云文件共享。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 2088442e05ba36b388a3324942ebbf8c7eb263dd
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 1b38ee53f2f73f7b7f4ee12f712f487cb726d41e
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607462"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739588"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>使用 F 开始使用 Azure 文件存储\#
 
 Azure 文件存储是使用标准[服务器消息块 （SMB） 协议](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx)在云中提供文件共享的服务。 支持 SMB 2.1 和 SMB 3.0。 通过 Azure 文件存储，可以将依赖文件共享的旧版应用程序快速迁移到 Azure 且无成本高昂的重写。 在 Azure 虚拟机或云服务中或者从本地客户端运行的应用程序可以在云中装载文件共享，就像桌面应用程序装载典型的 SMB 共享一样。 之后，任意数量的应用程序组件可以装载并同时访问文件存储共享。
 
-有关文件存储的概念概述，请参阅[.NET 文件存储指南](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-files)。
+有关文件存储的概念概述[，请参阅文件存储的 .NET 指南](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-files)。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -133,7 +133,7 @@ Azure 存储分析支持文件存储的指标。 使用指标数据，可以跟�
 
 ## <a name="next-steps"></a>后续步骤
 
-请参阅以下链接以获取有关 Azure 文件存储的更多信息。
+有关 Azure 文件存储的详细信息，请参阅这些链接。
 
 ### <a name="conceptual-articles-and-videos"></a>概念性文章和视频
 

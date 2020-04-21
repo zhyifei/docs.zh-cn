@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: 5086401f4616074d364c1d387b751116120d5969
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: b207db459776c9f8fa7ea247d01071eeb8c995cf
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389002"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739300"
 ---
 # <a name="attached-properties-overview"></a>附加属性概述
 
@@ -20,11 +20,11 @@ ms.locfileid: "81389002"
 
 ## <a name="prerequisites"></a>先决条件 <a name="prerequisites"></a>
 
-本主题假定你从 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 类的现有依赖属性的使用者角度了解依赖属性，并且已阅读[依赖属性概述](dependency-properties-overview.md)。 要遵循本主题中的示例，您还应了解 XAML 并了解如何编写 WPF 应用程序。
+本文假定您从类上[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]现有依赖项属性的使用者的角度了解依赖项属性，并阅读了[依赖项属性概述](dependency-properties-overview.md)。 要遵循本文中的示例，您还应了解 XAML 并了解如何编写 WPF 应用程序。
 
 ## <a name="why-use-attached-properties"></a>为什么使用附加属性<a name="attached_properties_usage"></a>
 
-附加属性的一个用途是允许不同的子元素为实际在父元素中定义的属性指定唯一值。 此方案的一个具体应用是，让子元素通知父元素它们在 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中的呈现方式。 属性就是一<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>个示例。 该<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>属性创建为附加属性，因为它被设计为设置为在 中包含的<xref:System.Windows.Controls.DockPanel>元素上，而不是本身。 <xref:System.Windows.Controls.DockPanel> 类<xref:System.Windows.Controls.DockPanel><xref:System.Windows.DependencyProperty>定义名为<xref:System.Windows.Controls.DockPanel.DockProperty>的静态字段，然后作为附加属性的公共<xref:System.Windows.Controls.DockPanel.GetDock%2A>访问<xref:System.Windows.Controls.DockPanel.SetDock%2A>器提供 和 方法。
+附加属性的一个用途是允许不同的子元素为在父元素中定义的属性指定唯一值。 此方案的一个具体应用是，让子元素通知父元素它们在 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中的呈现方式。 属性就是一<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>个示例。 该<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>属性创建为附加属性，因为它被设计为设置为在 包含在 中<xref:System.Windows.Controls.DockPanel>的元素上，而不是自身元素上。 <xref:System.Windows.Controls.DockPanel> 类<xref:System.Windows.Controls.DockPanel><xref:System.Windows.DependencyProperty>定义名为<xref:System.Windows.Controls.DockPanel.DockProperty>的静态字段，然后作为附加属性的公共<xref:System.Windows.Controls.DockPanel.GetDock%2A>访问<xref:System.Windows.Controls.DockPanel.SetDock%2A>器提供 和 方法。
 
 ## <a name="attached-properties-in-xaml"></a>XAML 中的附加属性<a name="attached_properties_xaml"></a>
 
@@ -34,13 +34,13 @@ ms.locfileid: "81389002"
 
 [!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
-请注意，使用法与静态属性有些类似;您始终引用拥有并<xref:System.Windows.Controls.DockPanel>注册附加属性的类型，而不是引用名称指定的任何实例。
+使用法与静态属性有些类似;您始终引用拥有并<xref:System.Windows.Controls.DockPanel>注册附加属性的类型，而不是引用名称指定的任何实例。
 
-此外，由于 XAML 中的附加属性是在标记中设置的属性，因此，只有设置操作具有相关性。 尽管存在一些用于比较值的间接机制（如在样式中触发），但无法直接在 XAML 中直接获取属性（有关详细信息，请参阅[样式设置和模板化](../controls/styling-and-templating.md)）。
+此外，由于 XAML 中的附加属性是在标记中设置的属性，因此，只有设置操作具有相关性。 尽管存在一些用于比较值的间接机制（如在样式中触发），但无法直接在 XAML 中直接获取属性（有关详细信息，请参阅[样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)）。
 
 ### <a name="attached-property-implementation-in-wpf"></a>WPF 中的附加属性实现
 
-在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]中，WPF 类型中存在的大多数与 UI 表示相关的附加属性都作为依赖项属性实现。 附加属性是 XAML 概念，而依赖项属性是 WPF 概念。 由于 WPF 附加属性是依赖项属性，因此它们支持依赖项属性概念，如属性元数据和来自该属性元数据的默认值。
+在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]中，WPF 类型上与 UI 相关的大多数附加属性都作为依赖项属性实现。 附加属性是 XAML 概念，而依赖项属性是 WPF 概念。 由于 WPF 附加属性是依赖项属性，因此它们支持依赖项属性概念，如属性元数据和来自该属性元数据的默认值。
 
 ## <a name="how-attached-properties-are-used-by-the-owning-type"></a>所属类型如何使用附加属性<a name="howused"></a>
 
@@ -91,7 +91,7 @@ WPF 中的附加属性没有典型的 CLR"包装器"方法，便于获取/设置
 
 如果类严格定义附加属性以用于其他类型，则类不必派生自<xref:System.Windows.DependencyObject>。 但是，如果遵循具有附加属性<xref:System.Windows.DependencyObject>也是依赖项属性的整体 WPF 模型，则需要派生。
 
-通过声明类型`public static readonly`<xref:System.Windows.DependencyProperty>字段，将附加属性定义为依赖项属性。 使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法的返回值定义此字段。 字段名称必须与附加的属性名称（随字符串`Property`一起追加）匹配，才能遵循已建立的 WPF 模式来命名标识字段和它们表示的属性。 附加属性提供程序还必须提供静态**Get_PropertyName_** 和**Set_PropertyName_** 方法作为附加属性的访问器;如果不这样做，将导致属性系统无法使用附加属性。
+通过声明类型`public static readonly`<xref:System.Windows.DependencyProperty>字段，将附加属性定义为依赖项属性。 使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法的返回值定义此字段。 字段名称必须与附加的属性名称（随字符串`Property`一起追加）匹配，才能遵循已建立的 WPF 模式来命名标识字段和它们表示的属性。 附加属性提供程序还必须提供静态**Get_PropertyName_** 和**Set_PropertyName_** 方法作为附加属性的访问器;未能执行此操作会导致属性系统无法使用附加属性。
 
 > [!NOTE]
 > 如果省略附加属性的 get 访问器，则属性上的数据绑定在设计工具中不起作用，例如 Visual Studio 和 Visual Studio 的 Blend。
