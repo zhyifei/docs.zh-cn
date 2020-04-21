@@ -2,20 +2,20 @@
 title: 匿名记录
 description: 了解如何使用构造和使用匿名记录，匿名记录是帮助处理数据的语言功能。
 ms.date: 06/12/2019
-ms.openlocfilehash: ef3aa8fccdb6ff406542932816e4138040845a59
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 121f0f638dff2ae529b2488d8e3b1ad9c064cf90
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187495"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738504"
 ---
-# <a name="anonymous-records"></a><span data-ttu-id="f3d56-103">匿名记录</span><span class="sxs-lookup"><span data-stu-id="f3d56-103">Anonymous Records</span></span>
+# <a name="anonymous-records"></a><span data-ttu-id="10b34-103">匿名记录</span><span class="sxs-lookup"><span data-stu-id="10b34-103">Anonymous Records</span></span>
 
-<span data-ttu-id="f3d56-104">匿名记录是命名值的简单聚合，在使用前不需要声明。</span><span class="sxs-lookup"><span data-stu-id="f3d56-104">Anonymous records are simple aggregates of named values that don't need to be declared before use.</span></span> <span data-ttu-id="f3d56-105">您可以将它们声明为结构类型或引用类型。</span><span class="sxs-lookup"><span data-stu-id="f3d56-105">You can declare them as either structs or reference types.</span></span> <span data-ttu-id="f3d56-106">默认情况下，它们是引用类型。</span><span class="sxs-lookup"><span data-stu-id="f3d56-106">They're reference types by default.</span></span>
+<span data-ttu-id="10b34-104">匿名记录是命名值的简单聚合，在使用前不需要声明。</span><span class="sxs-lookup"><span data-stu-id="10b34-104">Anonymous records are simple aggregates of named values that don't need to be declared before use.</span></span> <span data-ttu-id="10b34-105">您可以将它们声明为结构类型或引用类型。</span><span class="sxs-lookup"><span data-stu-id="10b34-105">You can declare them as either structs or reference types.</span></span> <span data-ttu-id="10b34-106">默认情况下，它们是引用类型。</span><span class="sxs-lookup"><span data-stu-id="10b34-106">They're reference types by default.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="f3d56-107">语法</span><span class="sxs-lookup"><span data-stu-id="f3d56-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="10b34-107">语法</span><span class="sxs-lookup"><span data-stu-id="10b34-107">Syntax</span></span>
 
-<span data-ttu-id="f3d56-108">以下示例演示了匿名记录语法。</span><span class="sxs-lookup"><span data-stu-id="f3d56-108">The following examples demonstrate the anonymous record syntax.</span></span> <span data-ttu-id="f3d56-109">项分隔为`[item]`可选。</span><span class="sxs-lookup"><span data-stu-id="f3d56-109">Items delimited as `[item]` are optional.</span></span>
+<span data-ttu-id="10b34-108">以下示例演示了匿名记录语法。</span><span class="sxs-lookup"><span data-stu-id="10b34-108">The following examples demonstrate the anonymous record syntax.</span></span> <span data-ttu-id="10b34-109">项分隔为`[item]`可选。</span><span class="sxs-lookup"><span data-stu-id="10b34-109">Items delimited as `[item]` are optional.</span></span>
 
 ```fsharp
 // Construct an anonymous record
@@ -28,11 +28,11 @@ let value-name = Type-Name<[struct] {| Label1: Type1; Label2: Type2; ...|}>
 let function-name (arg-name: [struct] {| Label1: Type1; Label2: Type2; ...|}) ...
 ```
 
-## <a name="basic-usage"></a><span data-ttu-id="f3d56-110">基本用法</span><span class="sxs-lookup"><span data-stu-id="f3d56-110">Basic usage</span></span>
+## <a name="basic-usage"></a><span data-ttu-id="10b34-110">基本用法</span><span class="sxs-lookup"><span data-stu-id="10b34-110">Basic usage</span></span>
 
-<span data-ttu-id="f3d56-111">匿名记录最好视为 F# 记录类型，不需要在实例化之前声明。</span><span class="sxs-lookup"><span data-stu-id="f3d56-111">Anonymous records are best thought of as F# record types that don't need to be declared before instantiation.</span></span>
+<span data-ttu-id="10b34-111">匿名记录最好视为 F# 记录类型，不需要在实例化之前声明。</span><span class="sxs-lookup"><span data-stu-id="10b34-111">Anonymous records are best thought of as F# record types that don't need to be declared before instantiation.</span></span>
 
-<span data-ttu-id="f3d56-112">例如，在这里，如何与生成匿名记录的函数进行交互：</span><span class="sxs-lookup"><span data-stu-id="f3d56-112">For example, here how you can interact with a function that produces an anonymous record:</span></span>
+<span data-ttu-id="10b34-112">例如，在这里，如何与生成匿名记录的函数进行交互：</span><span class="sxs-lookup"><span data-stu-id="10b34-112">For example, here how you can interact with a function that produces an anonymous record:</span></span>
 
 ```fsharp
 open System
@@ -50,7 +50,7 @@ printfn "Circle with radius: %f has diameter %f, area %f, and circumference %f"
     r stats.Diameter stats.Area stats.Circumference
 ```
 
-<span data-ttu-id="f3d56-113">下面的示例扩展了上一`printCircleStats`个示例，该函数将匿名记录作为输入：</span><span class="sxs-lookup"><span data-stu-id="f3d56-113">The following example expands on the previous one with a `printCircleStats` function that takes an anonymous record as input:</span></span>
+<span data-ttu-id="10b34-113">下面的示例扩展了上一`printCircleStats`个示例，该函数将匿名记录作为输入：</span><span class="sxs-lookup"><span data-stu-id="10b34-113">The following example expands on the previous one with a `printCircleStats` function that takes an anonymous record as input:</span></span>
 
 ```fsharp
 open System
@@ -71,7 +71,7 @@ let stats = getCircleStats r
 printCircleStats r stats
 ```
 
-<span data-ttu-id="f3d56-114">使用`printCircleStats`与输入类型没有相同"形状"的任何匿名记录类型的调用将无法编译：</span><span class="sxs-lookup"><span data-stu-id="f3d56-114">Calling `printCircleStats` with any anonymous record type that doesn't have the same "shape" as the input type will fail to compile:</span></span>
+<span data-ttu-id="10b34-114">使用`printCircleStats`与输入类型没有相同"形状"的任何匿名记录类型的调用将无法编译：</span><span class="sxs-lookup"><span data-stu-id="10b34-114">Calling `printCircleStats` with any anonymous record type that doesn't have the same "shape" as the input type will fail to compile:</span></span>
 
 ```fsharp
 printCircleStats r {| Diameter = 2.0; Area = 4.0; MyCircumference = 12.566371 |}
@@ -79,9 +79,9 @@ printCircleStats r {| Diameter = 2.0; Area = 4.0; MyCircumference = 12.566371 |}
 // '["Area"; "Circumference"; "Diameter"]' and '["Area"; "Diameter"; "MyCircumference"]'
 ```
 
-## <a name="struct-anonymous-records"></a><span data-ttu-id="f3d56-115">结构匿名记录</span><span class="sxs-lookup"><span data-stu-id="f3d56-115">Struct anonymous records</span></span>
+## <a name="struct-anonymous-records"></a><span data-ttu-id="10b34-115">结构匿名记录</span><span class="sxs-lookup"><span data-stu-id="10b34-115">Struct anonymous records</span></span>
 
-<span data-ttu-id="f3d56-116">匿名记录也可以定义为使用可选`struct`关键字进行结构。</span><span class="sxs-lookup"><span data-stu-id="f3d56-116">Anonymous records can also be defined as struct with the optional `struct` keyword.</span></span> <span data-ttu-id="f3d56-117">以下示例通过生成和使用结构匿名记录来增强前一个示例：</span><span class="sxs-lookup"><span data-stu-id="f3d56-117">The following example augments the previous one by producing and consuming a struct anonymous record:</span></span>
+<span data-ttu-id="10b34-116">匿名记录也可以定义为使用可选`struct`关键字进行结构。</span><span class="sxs-lookup"><span data-stu-id="10b34-116">Anonymous records can also be defined as struct with the optional `struct` keyword.</span></span> <span data-ttu-id="10b34-117">以下示例通过生成和使用结构匿名记录来增强前一个示例：</span><span class="sxs-lookup"><span data-stu-id="10b34-117">The following example augments the previous one by producing and consuming a struct anonymous record:</span></span>
 
 ```fsharp
 open System
@@ -104,9 +104,9 @@ let stats = getCircleStats r
 printCircleStats r stats
 ```
 
-### <a name="structness-inference"></a><span data-ttu-id="f3d56-118">结构推理</span><span class="sxs-lookup"><span data-stu-id="f3d56-118">Structness inference</span></span>
+### <a name="structness-inference"></a><span data-ttu-id="10b34-118">结构推理</span><span class="sxs-lookup"><span data-stu-id="10b34-118">Structness inference</span></span>
 
-<span data-ttu-id="f3d56-119">结构匿名记录还允许"结构推理"，其中不需要在呼叫站点指定`struct`关键字。</span><span class="sxs-lookup"><span data-stu-id="f3d56-119">Struct anonymous records also allow for "structness inference" where you do not need to specify the `struct` keyword at the call site.</span></span> <span data-ttu-id="f3d56-120">在此示例中，在调用`struct``printCircleStats`时删除关键字：</span><span class="sxs-lookup"><span data-stu-id="f3d56-120">In this example, you elide the `struct` keyword when calling `printCircleStats`:</span></span>
+<span data-ttu-id="10b34-119">结构匿名记录还允许"结构推理"，其中不需要在呼叫站点指定`struct`关键字。</span><span class="sxs-lookup"><span data-stu-id="10b34-119">Struct anonymous records also allow for "structness inference" where you do not need to specify the `struct` keyword at the call site.</span></span> <span data-ttu-id="10b34-120">在此示例中，在调用`struct``printCircleStats`时删除关键字：</span><span class="sxs-lookup"><span data-stu-id="10b34-120">In this example, you elide the `struct` keyword when calling `printCircleStats`:</span></span>
 
 ```fsharp
 
@@ -117,16 +117,16 @@ let printCircleStats r (stats: struct {| Area: float; Circumference: float; Diam
 printCircleStats r {| Area = 4.0; Circumference = 12.6; Diameter = 12.6 |}
 ```
 
-<span data-ttu-id="f3d56-121">反向模式 （指定`struct`输入类型何时不是结构匿名记录 ） 将无法编译。</span><span class="sxs-lookup"><span data-stu-id="f3d56-121">The reverse pattern - specifying `struct` when the input type is not a struct anonymous record - will fail to compile.</span></span>
+<span data-ttu-id="10b34-121">反向模式 （指定`struct`输入类型何时不是结构匿名记录 ） 将无法编译。</span><span class="sxs-lookup"><span data-stu-id="10b34-121">The reverse pattern - specifying `struct` when the input type is not a struct anonymous record - will fail to compile.</span></span>
 
-## <a name="embedding-anonymous-records-within-other-types"></a><span data-ttu-id="f3d56-122">将匿名记录嵌入其他类型的</span><span class="sxs-lookup"><span data-stu-id="f3d56-122">Embedding anonymous records within other types</span></span>
+## <a name="embedding-anonymous-records-within-other-types"></a><span data-ttu-id="10b34-122">将匿名记录嵌入其他类型的</span><span class="sxs-lookup"><span data-stu-id="10b34-122">Embedding anonymous records within other types</span></span>
 
-<span data-ttu-id="f3d56-123">声明案例为记录[的受歧视工会](discriminated-unions.md)是很有用的。</span><span class="sxs-lookup"><span data-stu-id="f3d56-123">It's useful to declare [discriminated unions](discriminated-unions.md) whose cases are records.</span></span> <span data-ttu-id="f3d56-124">但是，如果记录中的数据与受区别的联合类型相同，则必须将所有类型定义为互递归。</span><span class="sxs-lookup"><span data-stu-id="f3d56-124">But if the data in the records is the same type as the discriminated union, you must define all types as mutually recursive.</span></span> <span data-ttu-id="f3d56-125">使用匿名记录可避免此限制。</span><span class="sxs-lookup"><span data-stu-id="f3d56-125">Using anonymous records avoids this restriction.</span></span> <span data-ttu-id="f3d56-126">以下是模式与它匹配的示例类型和函数：</span><span class="sxs-lookup"><span data-stu-id="f3d56-126">What follows is an example type and function that pattern matches over it:</span></span>
+<span data-ttu-id="10b34-123">声明案例为记录[的受歧视工会](discriminated-unions.md)是很有用的。</span><span class="sxs-lookup"><span data-stu-id="10b34-123">It's useful to declare [discriminated unions](discriminated-unions.md) whose cases are records.</span></span> <span data-ttu-id="10b34-124">但是，如果记录中的数据与受区别的联合类型相同，则必须将所有类型定义为互递归。</span><span class="sxs-lookup"><span data-stu-id="10b34-124">But if the data in the records is the same type as the discriminated union, you must define all types as mutually recursive.</span></span> <span data-ttu-id="10b34-125">使用匿名记录可避免此限制。</span><span class="sxs-lookup"><span data-stu-id="10b34-125">Using anonymous records avoids this restriction.</span></span> <span data-ttu-id="10b34-126">以下是模式与它匹配的示例类型和函数：</span><span class="sxs-lookup"><span data-stu-id="10b34-126">What follows is an example type and function that pattern matches over it:</span></span>
 
 ```fsharp
 type FullName = { FirstName: string; LastName: string }
 
-// Note that using a named for Manager and Executive would require mutually recursive definitions.
+// Note that using a named record for Manager and Executive would require mutually recursive definitions.
 type Employee =
     | Engineer of FullName
     | Manager of {| Name: FullName; Reports: Employee list |}
@@ -139,23 +139,23 @@ let getFirstName e =
     | Executive ex -> ex.Name.FirstName
 ```
 
-## <a name="copy-and-update-expressions"></a><span data-ttu-id="f3d56-127">复制和更新表达式</span><span class="sxs-lookup"><span data-stu-id="f3d56-127">Copy and update expressions</span></span>
+## <a name="copy-and-update-expressions"></a><span data-ttu-id="10b34-127">复制和更新表达式</span><span class="sxs-lookup"><span data-stu-id="10b34-127">Copy and update expressions</span></span>
 
-<span data-ttu-id="f3d56-128">匿名记录支持使用[复制和更新表达式构建](copy-and-update-record-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="f3d56-128">Anonymous records support construction with [copy and update expressions](copy-and-update-record-expressions.md).</span></span> <span data-ttu-id="f3d56-129">例如，下面介绍如何构造复制现有数据的匿名记录的新实例：</span><span class="sxs-lookup"><span data-stu-id="f3d56-129">For example, here's how you can construct a new instance of an anonymous record that copies an existing one's data:</span></span>
+<span data-ttu-id="10b34-128">匿名记录支持使用[复制和更新表达式构建](copy-and-update-record-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="10b34-128">Anonymous records support construction with [copy and update expressions](copy-and-update-record-expressions.md).</span></span> <span data-ttu-id="10b34-129">例如，下面介绍如何构造复制现有数据的匿名记录的新实例：</span><span class="sxs-lookup"><span data-stu-id="10b34-129">For example, here's how you can construct a new instance of an anonymous record that copies an existing one's data:</span></span>
 
 ```fsharp
 let data = {| X = 1; Y = 2 |}
 let data' = {| data with Y = 3 |}
 ```
 
-<span data-ttu-id="f3d56-130">但是，与命名记录不同，匿名记录允许您使用复制和更新表达式构造完全不同的窗体。</span><span class="sxs-lookup"><span data-stu-id="f3d56-130">However, unlike named records, anonymous records allow you to construct entirely different forms with copy and update expressions.</span></span> <span data-ttu-id="f3d56-131">以下示例采用上一示例中的相同匿名记录，并将其扩展到新的匿名记录：</span><span class="sxs-lookup"><span data-stu-id="f3d56-131">The follow example takes the same anonymous record from the previous example and expands it into a new anonymous record:</span></span>
+<span data-ttu-id="10b34-130">但是，与命名记录不同，匿名记录允许您使用复制和更新表达式构造完全不同的窗体。</span><span class="sxs-lookup"><span data-stu-id="10b34-130">However, unlike named records, anonymous records allow you to construct entirely different forms with copy and update expressions.</span></span> <span data-ttu-id="10b34-131">以下示例采用上一示例中的相同匿名记录，并将其扩展到新的匿名记录：</span><span class="sxs-lookup"><span data-stu-id="10b34-131">The follow example takes the same anonymous record from the previous example and expands it into a new anonymous record:</span></span>
 
 ```fsharp
 let data = {| X = 1; Y = 2 |}
 let expandedData = {| data with Z = 3 |} // Gives {| X=1; Y=2; Z=3 |}
 ```
 
-<span data-ttu-id="f3d56-132">还可以从命名记录实例构造匿名记录：</span><span class="sxs-lookup"><span data-stu-id="f3d56-132">It is also possible to construct anonymous records from instances of named records:</span></span>
+<span data-ttu-id="10b34-132">还可以从命名记录实例构造匿名记录：</span><span class="sxs-lookup"><span data-stu-id="10b34-132">It is also possible to construct anonymous records from instances of named records:</span></span>
 
 ```fsharp
 type R = { X: int }
@@ -163,7 +163,7 @@ let data = { X = 1 }
 let data' = {| data with Y = 2 |} // Gives {| X=1; Y=2 |}
 ```
 
-<span data-ttu-id="f3d56-133">您还可以将数据复制到引用和结构匿名记录：</span><span class="sxs-lookup"><span data-stu-id="f3d56-133">You can also copy data to and from reference and struct anonymous records:</span></span>
+<span data-ttu-id="10b34-133">您还可以将数据复制到引用和结构匿名记录：</span><span class="sxs-lookup"><span data-stu-id="10b34-133">You can also copy data to and from reference and struct anonymous records:</span></span>
 
 ```fsharp
 // Copy data from a reference record into a struct anonymous record
@@ -183,22 +183,22 @@ let data2 = {| r1 with Y = 1 |}
 let data3 = struct {| data2 with Z = r2.X |}
 ```
 
-## <a name="properties-of-anonymous-records"></a><span data-ttu-id="f3d56-134">匿名记录的属性</span><span class="sxs-lookup"><span data-stu-id="f3d56-134">Properties of anonymous records</span></span>
+## <a name="properties-of-anonymous-records"></a><span data-ttu-id="10b34-134">匿名记录的属性</span><span class="sxs-lookup"><span data-stu-id="10b34-134">Properties of anonymous records</span></span>
 
-<span data-ttu-id="f3d56-135">匿名记录具有许多特征，这些特征对于完全理解如何使用这些特征至关重要。</span><span class="sxs-lookup"><span data-stu-id="f3d56-135">Anonymous records have a number of characteristics that are essential to fully understanding how they can be used.</span></span>
+<span data-ttu-id="10b34-135">匿名记录具有许多特征，这些特征对于完全理解如何使用这些特征至关重要。</span><span class="sxs-lookup"><span data-stu-id="10b34-135">Anonymous records have a number of characteristics that are essential to fully understanding how they can be used.</span></span>
 
-### <a name="anonymous-records-are-nominal"></a><span data-ttu-id="f3d56-136">匿名记录是名义上的</span><span class="sxs-lookup"><span data-stu-id="f3d56-136">Anonymous records are nominal</span></span>
+### <a name="anonymous-records-are-nominal"></a><span data-ttu-id="10b34-136">匿名记录是名义上的</span><span class="sxs-lookup"><span data-stu-id="10b34-136">Anonymous records are nominal</span></span>
 
-<span data-ttu-id="f3d56-137">匿名记录是[名义类型](https://en.wikipedia.org/wiki/Nominal_type_system)。</span><span class="sxs-lookup"><span data-stu-id="f3d56-137">Anonymous records are [nominal types](https://en.wikipedia.org/wiki/Nominal_type_system).</span></span> <span data-ttu-id="f3d56-138">它们最好视为不需要预先声明的命名[记录](records.md)类型（也是名义上的）。</span><span class="sxs-lookup"><span data-stu-id="f3d56-138">They are best thought as named [record](records.md) types (which are also nominal) that do not require an up-front declaration.</span></span>
+<span data-ttu-id="10b34-137">匿名记录是[名义类型](https://en.wikipedia.org/wiki/Nominal_type_system)。</span><span class="sxs-lookup"><span data-stu-id="10b34-137">Anonymous records are [nominal types](https://en.wikipedia.org/wiki/Nominal_type_system).</span></span> <span data-ttu-id="10b34-138">它们最好视为不需要预先声明的命名[记录](records.md)类型（也是名义上的）。</span><span class="sxs-lookup"><span data-stu-id="10b34-138">They are best thought as named [record](records.md) types (which are also nominal) that do not require an up-front declaration.</span></span>
 
-<span data-ttu-id="f3d56-139">请考虑以下包含两个匿名记录声明的示例：</span><span class="sxs-lookup"><span data-stu-id="f3d56-139">Consider the following example with two anonymous record declarations:</span></span>
+<span data-ttu-id="10b34-139">请考虑以下包含两个匿名记录声明的示例：</span><span class="sxs-lookup"><span data-stu-id="10b34-139">Consider the following example with two anonymous record declarations:</span></span>
 
 ```fsharp
 let x = {| X = 1 |}
 let y = {| Y = 1 |}
 ```
 
-<span data-ttu-id="f3d56-140">`x`和`y`值的类型不同，并且彼此不兼容。</span><span class="sxs-lookup"><span data-stu-id="f3d56-140">The `x` and `y` values have different types and are not compatible with one another.</span></span> <span data-ttu-id="f3d56-141">它们不相等，也不可比拟。</span><span class="sxs-lookup"><span data-stu-id="f3d56-141">They are not equatable and they are not comparable.</span></span> <span data-ttu-id="f3d56-142">为了说明这一点，请考虑命名的记录等效项：</span><span class="sxs-lookup"><span data-stu-id="f3d56-142">To illustrate this, consider a named record equivalent:</span></span>
+<span data-ttu-id="10b34-140">`x`和`y`值的类型不同，并且彼此不兼容。</span><span class="sxs-lookup"><span data-stu-id="10b34-140">The `x` and `y` values have different types and are not compatible with one another.</span></span> <span data-ttu-id="10b34-141">它们不相等，也不可比拟。</span><span class="sxs-lookup"><span data-stu-id="10b34-141">They are not equatable and they are not comparable.</span></span> <span data-ttu-id="10b34-142">为了说明这一点，请考虑命名的记录等效项：</span><span class="sxs-lookup"><span data-stu-id="10b34-142">To illustrate this, consider a named record equivalent:</span></span>
 
 ```fsharp
 type X = { X: int }
@@ -208,11 +208,11 @@ let x = { X = 1 }
 let y = { Y = 1 }
 ```
 
-<span data-ttu-id="f3d56-143">与命名的记录等效项相比，匿名记录在类型等效性或比较方面没有任何内在区别。</span><span class="sxs-lookup"><span data-stu-id="f3d56-143">There isn't anything inherently different about anonymous records when compared with their named record equivalents when concerning type equivalency or comparison.</span></span>
+<span data-ttu-id="10b34-143">与命名的记录等效项相比，匿名记录在类型等效性或比较方面没有任何内在区别。</span><span class="sxs-lookup"><span data-stu-id="10b34-143">There isn't anything inherently different about anonymous records when compared with their named record equivalents when concerning type equivalency or comparison.</span></span>
 
-### <a name="anonymous-records-use-structural-equality-and-comparison"></a><span data-ttu-id="f3d56-144">匿名记录使用结构相等性和比较</span><span class="sxs-lookup"><span data-stu-id="f3d56-144">Anonymous records use structural equality and comparison</span></span>
+### <a name="anonymous-records-use-structural-equality-and-comparison"></a><span data-ttu-id="10b34-144">匿名记录使用结构相等性和比较</span><span class="sxs-lookup"><span data-stu-id="10b34-144">Anonymous records use structural equality and comparison</span></span>
 
-<span data-ttu-id="f3d56-145">与记录类型一样，匿名记录在结构上是等同的，并且具有可比性。</span><span class="sxs-lookup"><span data-stu-id="f3d56-145">Like record types, anonymous records are structurally equatable and comparable.</span></span> <span data-ttu-id="f3d56-146">仅当所有组成类型都支持相等性和比较性（如记录类型）时，才如此。</span><span class="sxs-lookup"><span data-stu-id="f3d56-146">This is only true if all constituent types support equality and comparison, like with record types.</span></span> <span data-ttu-id="f3d56-147">为了支持相等或比较，两个匿名记录必须具有相同的"形状"。</span><span class="sxs-lookup"><span data-stu-id="f3d56-147">To support equality or comparison, two anonymous records must have the same "shape".</span></span>
+<span data-ttu-id="10b34-145">与记录类型一样，匿名记录在结构上是等同的，并且具有可比性。</span><span class="sxs-lookup"><span data-stu-id="10b34-145">Like record types, anonymous records are structurally equatable and comparable.</span></span> <span data-ttu-id="10b34-146">仅当所有组成类型都支持相等性和比较性（如记录类型）时，才如此。</span><span class="sxs-lookup"><span data-stu-id="10b34-146">This is only true if all constituent types support equality and comparison, like with record types.</span></span> <span data-ttu-id="10b34-147">为了支持相等或比较，两个匿名记录必须具有相同的"形状"。</span><span class="sxs-lookup"><span data-stu-id="10b34-147">To support equality or comparison, two anonymous records must have the same "shape".</span></span>
 
 ```fsharp
 {| a = 1+1 |} = {| a = 2 |} // true
@@ -222,9 +222,9 @@ let y = { Y = 1 }
 {| a = 1 + 1 |} = {| a = 2;  b = 1|}
 ```
 
-### <a name="anonymous-records-are-serializable"></a><span data-ttu-id="f3d56-148">匿名记录可序列化</span><span class="sxs-lookup"><span data-stu-id="f3d56-148">Anonymous records are serializable</span></span>
+### <a name="anonymous-records-are-serializable"></a><span data-ttu-id="10b34-148">匿名记录可序列化</span><span class="sxs-lookup"><span data-stu-id="10b34-148">Anonymous records are serializable</span></span>
 
-<span data-ttu-id="f3d56-149">您可以像使用命名记录一样序列化匿名记录。</span><span class="sxs-lookup"><span data-stu-id="f3d56-149">You can serialize anonymous records just as you can with named records.</span></span> <span data-ttu-id="f3d56-150">下面是一个使用[牛顿软的示例。](https://www.nuget.org/packages/Newtonsoft.Json/)</span><span class="sxs-lookup"><span data-stu-id="f3d56-150">Here is an example using [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/):</span></span>
+<span data-ttu-id="10b34-149">您可以像使用命名记录一样序列化匿名记录。</span><span class="sxs-lookup"><span data-stu-id="10b34-149">You can serialize anonymous records just as you can with named records.</span></span> <span data-ttu-id="10b34-150">下面是一个使用[牛顿软的示例。](https://www.nuget.org/packages/Newtonsoft.Json/)</span><span class="sxs-lookup"><span data-stu-id="10b34-150">Here is an example using [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/):</span></span>
 
 ```fsharp
 open Newtonsoft.Json
@@ -236,11 +236,11 @@ let phillip = JsonConvert.DeserializeObject<{|name: string; age: int|}>(philStr)
 printfn "Name: %s Age: %d" phillip.name phillip.age
 ```
 
-<span data-ttu-id="f3d56-151">匿名记录可用于通过网络发送轻量级数据，而无需预先为序列化/反序列化类型定义域。</span><span class="sxs-lookup"><span data-stu-id="f3d56-151">Anonymous records are useful for sending lightweight data over a network without the need to define a domain for your serialized/deserialized types up front.</span></span>
+<span data-ttu-id="10b34-151">匿名记录可用于通过网络发送轻量级数据，而无需预先为序列化/反序列化类型定义域。</span><span class="sxs-lookup"><span data-stu-id="10b34-151">Anonymous records are useful for sending lightweight data over a network without the need to define a domain for your serialized/deserialized types up front.</span></span>
 
-### <a name="anonymous-records-interoperate-with-c-anonymous-types"></a><span data-ttu-id="f3d56-152">匿名记录与 C# 匿名类型互操作</span><span class="sxs-lookup"><span data-stu-id="f3d56-152">Anonymous records interoperate with C# anonymous types</span></span>
+### <a name="anonymous-records-interoperate-with-c-anonymous-types"></a><span data-ttu-id="10b34-152">匿名记录与 C# 匿名类型互操作</span><span class="sxs-lookup"><span data-stu-id="10b34-152">Anonymous records interoperate with C# anonymous types</span></span>
 
-<span data-ttu-id="f3d56-153">可以使用需要使用[C# 匿名类型的](../../csharp/programming-guide/classes-and-structs/anonymous-types.md).NET API。</span><span class="sxs-lookup"><span data-stu-id="f3d56-153">It is possible to use a .NET API that requires the use of [C# anonymous types](../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span> <span data-ttu-id="f3d56-154">使用匿名记录进行互操作的 C# 匿名类型微不足道。</span><span class="sxs-lookup"><span data-stu-id="f3d56-154">C# anonymous types are trivial to interoperate with by using anonymous records.</span></span> <span data-ttu-id="f3d56-155">下面的示例演示如何使用匿名记录来调用需要匿名类型的[LINQ](../../csharp/programming-guide/concepts/linq/index.md)重载：</span><span class="sxs-lookup"><span data-stu-id="f3d56-155">The following example shows how to use anonymous records to call a [LINQ](../../csharp/programming-guide/concepts/linq/index.md) overload that requires an anonymous type:</span></span>
+<span data-ttu-id="10b34-153">可以使用需要使用[C# 匿名类型的](../../csharp/programming-guide/classes-and-structs/anonymous-types.md).NET API。</span><span class="sxs-lookup"><span data-stu-id="10b34-153">It is possible to use a .NET API that requires the use of [C# anonymous types](../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span> <span data-ttu-id="10b34-154">使用匿名记录进行互操作的 C# 匿名类型微不足道。</span><span class="sxs-lookup"><span data-stu-id="10b34-154">C# anonymous types are trivial to interoperate with by using anonymous records.</span></span> <span data-ttu-id="10b34-155">下面的示例演示如何使用匿名记录来调用需要匿名类型的[LINQ](../../csharp/programming-guide/concepts/linq/index.md)重载：</span><span class="sxs-lookup"><span data-stu-id="10b34-155">The following example shows how to use anonymous records to call a [LINQ](../../csharp/programming-guide/concepts/linq/index.md) overload that requires an anonymous type:</span></span>
 
 ```fsharp
 open System.Linq
@@ -251,26 +251,26 @@ for ng in nameGrouping do
     printfn "%s has first letter %c" ng.Name ng.FirstLetter
 ```
 
-<span data-ttu-id="f3d56-156">在 .NET 中使用许多其他 API 需要使用匿名类型传递。</span><span class="sxs-lookup"><span data-stu-id="f3d56-156">There are a multitude of other APIs used throughout .NET that require the use of passing in an anonymous type.</span></span> <span data-ttu-id="f3d56-157">匿名记录是您处理这些记录的工具。</span><span class="sxs-lookup"><span data-stu-id="f3d56-157">Anonymous records are your tool for working with them.</span></span>
+<span data-ttu-id="10b34-156">在 .NET 中使用许多其他 API 需要使用匿名类型传递。</span><span class="sxs-lookup"><span data-stu-id="10b34-156">There are a multitude of other APIs used throughout .NET that require the use of passing in an anonymous type.</span></span> <span data-ttu-id="10b34-157">匿名记录是您处理这些记录的工具。</span><span class="sxs-lookup"><span data-stu-id="10b34-157">Anonymous records are your tool for working with them.</span></span>
 
-## <a name="limitations"></a><span data-ttu-id="f3d56-158">限制</span><span class="sxs-lookup"><span data-stu-id="f3d56-158">Limitations</span></span>
+## <a name="limitations"></a><span data-ttu-id="10b34-158">限制</span><span class="sxs-lookup"><span data-stu-id="10b34-158">Limitations</span></span>
 
-<span data-ttu-id="f3d56-159">匿名记录的使用有一些限制。</span><span class="sxs-lookup"><span data-stu-id="f3d56-159">Anonymous records have some restrictions in their usage.</span></span> <span data-ttu-id="f3d56-160">有些是其设计固有的，但另一些是可以改变的。</span><span class="sxs-lookup"><span data-stu-id="f3d56-160">Some are inherent to their design, but others are amenable to change.</span></span>
+<span data-ttu-id="10b34-159">匿名记录的使用有一些限制。</span><span class="sxs-lookup"><span data-stu-id="10b34-159">Anonymous records have some restrictions in their usage.</span></span> <span data-ttu-id="10b34-160">有些是其设计固有的，但另一些是可以改变的。</span><span class="sxs-lookup"><span data-stu-id="10b34-160">Some are inherent to their design, but others are amenable to change.</span></span>
 
-### <a name="limitations-with-pattern-matching"></a><span data-ttu-id="f3d56-161">模式匹配的限制</span><span class="sxs-lookup"><span data-stu-id="f3d56-161">Limitations with pattern matching</span></span>
+### <a name="limitations-with-pattern-matching"></a><span data-ttu-id="10b34-161">模式匹配的限制</span><span class="sxs-lookup"><span data-stu-id="10b34-161">Limitations with pattern matching</span></span>
 
-<span data-ttu-id="f3d56-162">匿名记录不支持模式匹配，与命名记录不同。</span><span class="sxs-lookup"><span data-stu-id="f3d56-162">Anonymous records do not support pattern matching, unlike named records.</span></span> <span data-ttu-id="f3d56-163">有三个原因：</span><span class="sxs-lookup"><span data-stu-id="f3d56-163">There are three reasons:</span></span>
+<span data-ttu-id="10b34-162">匿名记录不支持模式匹配，与命名记录不同。</span><span class="sxs-lookup"><span data-stu-id="10b34-162">Anonymous records do not support pattern matching, unlike named records.</span></span> <span data-ttu-id="10b34-163">有三个原因：</span><span class="sxs-lookup"><span data-stu-id="10b34-163">There are three reasons:</span></span>
 
-1. <span data-ttu-id="f3d56-164">模式必须考虑匿名记录的每个字段，这与命名的记录类型不同。</span><span class="sxs-lookup"><span data-stu-id="f3d56-164">A pattern would have to account for every field of an anonymous record, unlike named record types.</span></span> <span data-ttu-id="f3d56-165">这是因为匿名记录不支持结构子类型 - 它们是标称类型。</span><span class="sxs-lookup"><span data-stu-id="f3d56-165">This is because anonymous records do not support structural subtyping – they are nominal types.</span></span>
-2. <span data-ttu-id="f3d56-166">由于 （1），无法在模式匹配表达式中具有其他模式，因为每个不同的模式都意味着不同的匿名记录类型。</span><span class="sxs-lookup"><span data-stu-id="f3d56-166">Because of (1), there is no ability to have additional patterns in a pattern match expression, as each distinct pattern would imply a different anonymous record type.</span></span>
-3. <span data-ttu-id="f3d56-167">由于 （3），任何匿名记录模式将比使用"点"表示法更详细。</span><span class="sxs-lookup"><span data-stu-id="f3d56-167">Because of (3), any anonymous record pattern would be more verbose than the use of “dot” notation.</span></span>
+1. <span data-ttu-id="10b34-164">模式必须考虑匿名记录的每个字段，这与命名的记录类型不同。</span><span class="sxs-lookup"><span data-stu-id="10b34-164">A pattern would have to account for every field of an anonymous record, unlike named record types.</span></span> <span data-ttu-id="10b34-165">这是因为匿名记录不支持结构子类型 - 它们是标称类型。</span><span class="sxs-lookup"><span data-stu-id="10b34-165">This is because anonymous records do not support structural subtyping – they are nominal types.</span></span>
+2. <span data-ttu-id="10b34-166">由于 （1），无法在模式匹配表达式中具有其他模式，因为每个不同的模式都意味着不同的匿名记录类型。</span><span class="sxs-lookup"><span data-stu-id="10b34-166">Because of (1), there is no ability to have additional patterns in a pattern match expression, as each distinct pattern would imply a different anonymous record type.</span></span>
+3. <span data-ttu-id="10b34-167">由于 （3），任何匿名记录模式将比使用"点"表示法更详细。</span><span class="sxs-lookup"><span data-stu-id="10b34-167">Because of (3), any anonymous record pattern would be more verbose than the use of “dot” notation.</span></span>
 
-<span data-ttu-id="f3d56-168">有一个开放语言建议，[允许在有限的上下文中进行模式匹配](https://github.com/fsharp/fslang-suggestions/issues/713)。</span><span class="sxs-lookup"><span data-stu-id="f3d56-168">There is an open language suggestion to [allow pattern matching in limited contexts](https://github.com/fsharp/fslang-suggestions/issues/713).</span></span>
+<span data-ttu-id="10b34-168">有一个开放语言建议，[允许在有限的上下文中进行模式匹配](https://github.com/fsharp/fslang-suggestions/issues/713)。</span><span class="sxs-lookup"><span data-stu-id="10b34-168">There is an open language suggestion to [allow pattern matching in limited contexts](https://github.com/fsharp/fslang-suggestions/issues/713).</span></span>
 
-### <a name="limitations-with-mutability"></a><span data-ttu-id="f3d56-169">具有可变性的限制</span><span class="sxs-lookup"><span data-stu-id="f3d56-169">Limitations with mutability</span></span>
+### <a name="limitations-with-mutability"></a><span data-ttu-id="10b34-169">具有可变性的限制</span><span class="sxs-lookup"><span data-stu-id="10b34-169">Limitations with mutability</span></span>
 
-<span data-ttu-id="f3d56-170">当前无法使用`mutable`数据定义匿名记录。</span><span class="sxs-lookup"><span data-stu-id="f3d56-170">It is not currently possible to define an anonymous record with `mutable` data.</span></span> <span data-ttu-id="f3d56-171">有一个[开放语言建议](https://github.com/fsharp/fslang-suggestions/issues/732)，以允许可变数据。</span><span class="sxs-lookup"><span data-stu-id="f3d56-171">There is an [open language suggestion](https://github.com/fsharp/fslang-suggestions/issues/732) to allow mutable data.</span></span>
+<span data-ttu-id="10b34-170">当前无法使用`mutable`数据定义匿名记录。</span><span class="sxs-lookup"><span data-stu-id="10b34-170">It is not currently possible to define an anonymous record with `mutable` data.</span></span> <span data-ttu-id="10b34-171">有一个[开放语言建议](https://github.com/fsharp/fslang-suggestions/issues/732)，以允许可变数据。</span><span class="sxs-lookup"><span data-stu-id="10b34-171">There is an [open language suggestion](https://github.com/fsharp/fslang-suggestions/issues/732) to allow mutable data.</span></span>
 
-### <a name="limitations-with-struct-anonymous-records"></a><span data-ttu-id="f3d56-172">结构匿名记录的限制</span><span class="sxs-lookup"><span data-stu-id="f3d56-172">Limitations with struct anonymous records</span></span>
+### <a name="limitations-with-struct-anonymous-records"></a><span data-ttu-id="10b34-172">结构匿名记录的限制</span><span class="sxs-lookup"><span data-stu-id="10b34-172">Limitations with struct anonymous records</span></span>
 
-<span data-ttu-id="f3d56-173">无法将结构匿名记录声明为`IsByRefLike`或`IsReadOnly`。</span><span class="sxs-lookup"><span data-stu-id="f3d56-173">It is not possible to declare struct anonymous records as `IsByRefLike` or `IsReadOnly`.</span></span> <span data-ttu-id="f3d56-174">对于`IsByRefLike`和`IsReadOnly`匿名记录，有一个[开放语言建议](https://github.com/fsharp/fslang-suggestions/issues/712)。</span><span class="sxs-lookup"><span data-stu-id="f3d56-174">There is an [open language suggestion](https://github.com/fsharp/fslang-suggestions/issues/712) to for `IsByRefLike` and `IsReadOnly` anonymous records.</span></span>
+<span data-ttu-id="10b34-173">无法将结构匿名记录声明为`IsByRefLike`或`IsReadOnly`。</span><span class="sxs-lookup"><span data-stu-id="10b34-173">It is not possible to declare struct anonymous records as `IsByRefLike` or `IsReadOnly`.</span></span> <span data-ttu-id="10b34-174">对于`IsByRefLike`和`IsReadOnly`匿名记录，有一个[开放语言建议](https://github.com/fsharp/fslang-suggestions/issues/712)。</span><span class="sxs-lookup"><span data-stu-id="10b34-174">There is an [open language suggestion](https://github.com/fsharp/fslang-suggestions/issues/712) to for `IsByRefLike` and `IsReadOnly` anonymous records.</span></span>
