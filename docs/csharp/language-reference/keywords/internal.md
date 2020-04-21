@@ -100,4 +100,4 @@ public class TestAccess
 - [修饰符](index.md)
 - [public](./public.md)
 - [private](./private.md)
-- [受保护](./protected.md)
+- [protected](./protected.md)

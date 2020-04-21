@@ -60,5 +60,5 @@ ms.locfileid: "75713178"
 - [修饰符](index.md)
 - [public](public.md)
 - [private](private.md)
-- [内部](internal.md)
+- [internal](internal.md)
 - [Internal Virtual 关键字的安全问题](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))
