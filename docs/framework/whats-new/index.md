@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f56ba7d68be107e697d3f732767f0a5f11c1a622
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249690"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644220"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework 中的新增功能
 
@@ -94,7 +94,7 @@ ms.locfileid: "80249690"
 
 运行状况终结点由业务流程工具广泛使用以基于其运行状况状态来管理服务。 运行状况检查还可由监视工具使用以跟踪并提供有关服务的可用性和性能的通知。
 
-ServiceHealthBehavior 是一个 WCF 服务行为，该行为可扩展 <xref:System.ServiceModel.Description.IServiceBehavior>。  添加到 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType> 集合后，服务行为会执行以下操作：
+ ServiceHealthBehavior 是一个 WCF 服务行为，该行为可扩展 <xref:System.ServiceModel.Description.IServiceBehavior>。  添加到 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType> 集合后，服务行为会执行以下操作：
 
 - 返回带有 HTTP 响应代码的服务运行状况状态。 可以在查询字符串中指定 HTTP/GET 运行状况探测请求的 HTTP 状态代码。
 
@@ -503,7 +503,7 @@ NET Framework 4.7.2 为基于 enclave 的 Always Encrypted 添加支持。 Alway
 <ResourceDictionary Source="MyRD.xaml" />
 ```
 
-编辑 MyRD.xaml  中的原始标记的诊断助手可以使用新功能来找到字典。 此功能通过新的静态方法 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType> 实现。 诊断助手使用标识原始标记的绝对 URI 调用新方法，如以下代码所示：
+编辑 MyRD.xaml    中的原始标记的诊断助手可以使用新功能来找到字典。 此功能通过新的静态方法 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType> 实现。 诊断助手使用标识原始标记的绝对 URI 调用新方法，如以下代码所示：
 
 ```csharp
 IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(new Uri("pack://application:,,,/MyApp;component/MyRD.xaml"));
@@ -695,7 +695,7 @@ ASP.NET 处理包括 23 个事件的预定义管道中的请求。 ASP.NET 执�
 
 **通过 DataContractJsonSerializer 提供更出色的控制字符支持**
 
-在 .NET Framework 4.7 中，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 串行化符合 ECMAScript 6 标准的控制字符。 定位 .NET Framework 4.7 的应用程序默认启用此行为，而对于在 .NET Framework 4.7 控制下运行，但定位的是旧版 .NET Framework 的应用程序来说，这就是一项选择启用功能。 有关详细信息，请参阅 [.NET Framework 4.7 中的重定目标更改](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。
+在 .NET Framework 4.7 中，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 类会将符合 ECMAScript 6 标准的控制字符串行化。 面向 .NET Framework 4.7 的应用程序默认启用此行为，而对于在 .NET Framework 4.7 下运行但面向 .NET Framework 先前版本的应用程序来说，可选择启用此功能。 有关详细信息，请参阅[应用程序兼容性](../migration-guide/application-compatibility.md)部分。
 
 <a name="net47" />
 
@@ -768,11 +768,11 @@ WCF 包含大量代码更改，消除了争用条件，从而提升了序列化�
 
 **支持基于 Windows WM_POINTER 消息的触控/触笔堆栈**
 
-现在可以视情况使用基于 [WM_POINTER 消息](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages)的触控/触笔堆栈，而不使用 Windows Ink 服务平台 (WISP)。 这是 .NET Framework 中的一项选择启用功能。 有关详细信息，请参阅 [.NET Framework 4.7 中的重定目标更改](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。
+现在可以视情况使用基于 [WM_POINTER 消息](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages)的触控/触笔堆栈，而不使用 Windows Ink 服务平台 (WISP)。 这是 .NET Framework 中的一项可选择启用的功能。 有关详细信息，请参阅[应用程序兼容性](../migration-guide/application-compatibility.md)部分。
 
 **WPF 打印 API 的新实现代码**
 
-<xref:System.Printing.PrintQueue?displayProperty=nameWithType> 类中的 WPF 打印 API 调用 Windows [打印文档包 API](/windows/desktop/printdocs/tailored-app-printing-api)，而不调用弃用的 [XPS 打印 API](/windows/desktop/printdocs/xps-printing)。 若要了解此更改对应用程序兼容性造成的影响，请参阅 [.NET Framework 4.7 中的重定目标更改](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。
+<xref:System.Printing.PrintQueue?displayProperty=nameWithType> 类中的 WPF 打印 API 调用 Windows [打印文档包 API](/windows/desktop/printdocs/tailored-app-printing-api)，而不调用弃用的 [XPS 打印 API](/windows/desktop/printdocs/xps-printing)。 要了解此更改对应用程序兼容性的影响，请参阅[应用程序兼容性](../migration-guide/application-compatibility.md)部分。
 
 <a name="v462" />
 
@@ -1236,7 +1236,7 @@ Windows 现在提供将现有 Windows 桌面应用（包括 WPF 和 Windows 窗�
 
 ### <a name="debugging-improvements"></a>调试改进
 
-非托管调试 API 在 .NET Framework 4.6.2 中得到了增强，可在引发 <xref:System.NullReferenceException> 时执行附加分析，让你能够确定单行源代码中哪个变量是 `null`。   为支持此方案，已将以下 API 添加到非托管调试 API。
+非托管调试 API 在 .NET Framework 4.6.2 中得到了增强，可在引发 <xref:System.NullReferenceException> 时执行附加分析，让你能够确定单行源代码中哪个变量是 `null` 。   为支持此方案，已将以下 API 添加到非托管调试 API。
 
 - [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md)、[ICorDebugVariableHome](../unmanaged-api/debugging/icordebugvariablehome-interface.md) 和 [ICorDebugVariableHomeEnum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) 接口，它们公开托管变量的本机位置。 这使调试器能够在 <xref:System.NullReferenceException> 发生时执行某些代码流分析并逆向工作，以确定对应于为 `null` 的本机位置的托管变量。
 
@@ -1944,7 +1944,7 @@ Windows 窗体的改进包括：
 
 - 多个范围。
 
-- 创建 Windows 8.x 应用商店应用时可以使用一部分 MEF。 此子集可作为 NuGet 库中的[可下载程序包](https://www.nuget.org/packages/Microsoft.Composition)提供。 若要安装此程序包，请在 Visual Studio 中打开项目，从“项目”菜单中选择“管理 NuGet 包”，然后联机搜索 `Microsoft.Composition` 程序包。
+- 创建 Windows 8.x 应用商店应用时可以使用一部分 MEF。 此子集可作为 NuGet 库中的[可下载程序包](https://www.nuget.org/packages/Microsoft.Composition)提供。 若要安装此程序包，请在 Visual Studio 中打开项目，从“项目”  菜单中选择“管理 NuGet 包”  ，然后联机搜索 `Microsoft.Composition` 程序包。
 
 有关详细信息，请参阅 [Managed Extensibility Framework (MEF)](../mef/index.md)。
 
@@ -2078,13 +2078,13 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 
 - 增强的工作流设计器功能如下:
 
-  - Visual Studio 中增强的工作流搜索功能，包括“快速查找”和“在文件中查找”。
+  - Visual Studio 中增强的工作流搜索功能，包括“快速查找”  和“在文件中查找”  。
 
   - 将第二个子活动添加到容器活动中时自动创建“序列”活动以及在“序列”活动中包括这两个活动的能力。
 
   - 平移支持，可让工作流的可见部分发生更改，而无需使用滚动条。
 
-  - 新“文档大纲”视图，它在树样式的大纲视图中显示工作流组件并允许在“文档大纲”视图中选择组件。
+  - 新“文档大纲”  视图，它在树样式的大纲视图中显示工作流组件并允许在“文档大纲”  视图中选择组件。
 
   - 向活动中添加批注的能力。
 
