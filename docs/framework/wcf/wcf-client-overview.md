@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: c12579062b04cfb46e14d5c3d734a7c155f8d654
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b314b61584e45ac5e80a248e639bdac427ba4a57
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278881"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021722"
 ---
 # <a name="wcf-client-overview"></a>WCF 客户端概述
 
@@ -42,7 +42,7 @@ ms.locfileid: "81278881"
 - 使用客户端通道调用服务。  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>获取服务协定、绑定和地址  
- 在 WCF 中，服务和客户端使用托管属性、接口和方法对协定建模。 若要连接客户端应用程序中的服务，则需要获取该服务协定的类型信息。 通常，使用[ServiceModel 元数据实用程序工具 （Svcutil.exe）](servicemodel-metadata-utility-tool-svcutil-exe.md)执行此操作，该工具从服务下载元数据，以您选择的语言将其转换为托管源代码文件，并创建可用于配置 WCF 客户端对象的客户端应用程序配置文件。 例如，如果要创建 WCF 客户端对象以调用 ，`MyCalculatorService`并且知道该服务的元数据是在 发布于`http://computerName/MyCalculatorService/Service.svc?wsdl`的，则以下代码示例演示如何使用 Svcutil.exe 获取包含托管代码中的服务协定`ClientCode.vb`的文件。  
+ 在 WCF 中，服务和客户端使用托管属性、接口和方法对协定建模。 若要连接客户端应用程序中的服务，则需要获取该服务协定的类型信息。 通常，您可以使用[服务模型元数据实用程序工具 （Svcutil.exe）](servicemodel-metadata-utility-tool-svcutil-exe.md)获取服务协定的类型信息。 实用程序从服务下载元数据，以您选择的语言将其转换为托管源代码文件，并创建可用于配置 WCF 客户端对象的客户端应用程序配置文件。 例如，如果要创建 WCF 客户端对象以调用 ，`MyCalculatorService`并且知道该服务的元数据是在 发布于`http://computerName/MyCalculatorService/Service.svc?wsdl`的，则以下代码示例演示如何使用 Svcutil.exe 获取包含托管代码中的服务协定`ClientCode.vb`的文件。  
   
 ```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  

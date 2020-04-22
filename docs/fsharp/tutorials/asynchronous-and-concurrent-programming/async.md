@@ -2,12 +2,12 @@
 title: 异步编程
 description: 了解 F# 如何基于从核心函数编程概念派生的语言级编程模型为异步提供干净的支持。
 ms.date: 12/17/2018
-ms.openlocfilehash: 9b2e3057c126d84474c21fde653da5bbee32938a
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 0a7d400c9778e30d6b25798239f12b7b2b0e3d82
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81608031"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021519"
 ---
 # <a name="async-programming-in-f"></a>F 中的异步编程\#
 
@@ -16,7 +16,7 @@ ms.locfileid: "81608031"
 - 显示一个服务器进程，该服务器进程可以服务大量并发传入请求，同时最小化请求处理时占用的系统资源，等待来自该进程外部的系统或服务的输入
 - 维护响应灵敏的 UI 或主线程，同时推进后台工作
 
-尽管后台工作通常涉及多个线程的利用，但单独考虑异步和多线程的概念非常重要。 事实上，它们是单独的问题，一个并不意味着另一个。 本文中介绍的内容将更详细地介绍这一点。
+尽管后台工作通常涉及多个线程的利用，但单独考虑异步和多线程的概念非常重要。 事实上，它们是单独的问题，一个并不意味着另一个。 本文更详细地介绍不同的概念。
 
 ## <a name="asynchrony-defined"></a>已定义异步
 
@@ -26,7 +26,7 @@ ms.locfileid: "81608031"
 - 并行性;当多个计算或单个计算的几个部分完全同时运行时。
 - 异步;当一个或多个计算可以独立于主程序流执行时。
 
-这三个概念都是正交概念，但很容易组合，尤其是当它们一起使用时。 例如，您可能需要并行执行多个异步计算。 这并不意味着并行性或异步性相互暗示。
+这三个概念都是正交概念，但很容易组合，尤其是当它们一起使用时。 例如，您可能需要并行执行多个异步计算。 这种关系并不意味着并行性或异步性相互暗示。
 
 如果考虑"异步"一词的词源，则涉及两个部分：
 
@@ -35,7 +35,7 @@ ms.locfileid: "81608031"
 
 将这两个术语放在一起时，您将看到"异步"表示"不是同时"。 就这么简单！ 这个定义中没有并发性或并行性的含义。 在实践中也是如此。
 
-实际上，F# 中的异步计算计划独立于主程序流执行。 这并不意味着并发性或并行性，也不意味着计算总是在后台发生。 事实上，异步计算甚至可以同步执行，具体取决于计算的性质和计算执行的环境。
+实际上，F# 中的异步计算计划独立于主程序流执行。 这种独立执行并不意味着并发性或并行性，也不表示计算总是在后台发生。 事实上，异步计算甚至可以同步执行，具体取决于计算的性质和计算执行的环境。
 
 您应该有的主要要点是异步计算独立于主程序流。 尽管对异步计算执行的时间或方式几乎没有保证，但有一些方法来编排和调度它们。 本文的其余部分将探讨 F# 异步的核心概念以及如何使用 F# 中内置的类型、函数和表达式。
 
@@ -106,7 +106,7 @@ let main argv =
 1. 将命令行参数转换为`Async<unit>`具有`Array.map`的计算。
 2. 创建一`Async<'T[]>`个计划并在运行时并行`printTotalFileBytes`运行计算。
 3. 创建将`Async<unit>`运行并行计算并忽略其结果的
-4. 显式运行最后一个计算`Async.RunSynchronously`与 和 块，直到它完成。
+4. 显式运行最后一个计算`Async.RunSynchronously`，直到完成。
 
 运行此程序时，`printTotalFileBytes`每个命令行参数并行运行。 由于异步计算独立于程序流执行，因此它们无法按顺序打印其信息并完成执行。 计算将并行计划，但不能保证其执行顺序。
 
@@ -167,7 +167,7 @@ computation: Async<'T> * timeout: ?int -> Async<Async<'T>>
 签名：
 
 ```fsharp
-computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 ```
 
 使用场合：
@@ -185,7 +185,7 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 签名：
 
 ```fsharp
-computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
+computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellationToken: ?CancellationToken -> Task<'T>
 ```
 
 使用场合：
@@ -203,7 +203,7 @@ computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellatio
 签名：
 
 ```fsharp
-computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
+computations: seq<Async<'T>> * ?maxDegreesOfParallelism: int -> Async<'T[]>
 ```
 
 何时使用:
@@ -214,7 +214,7 @@ computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
 需要注意的：
 
 - 只有在所有计算完成后，才能访问生成的值数组。
-- 计算将运行，但它们最终都会得到计划。 这意味着您不能依赖他们的执行顺序。
+- 计算将在计划结束时运行。 此行为意味着您不能依赖他们的执行顺序。
 
 ### <a name="asyncsequential"></a>异步。顺序
 
@@ -242,7 +242,7 @@ computations: seq<Async<'T>> -> Async<'T[]>
 签名：
 
 ```fsharp
-task: Task<'T>  -> Async<'T>
+task: Task<'T> -> Async<'T>
 ```
 
 使用场合：
@@ -251,7 +251,7 @@ task: Task<'T>  -> Async<'T>
 
 需要注意的：
 
-- 异常按照任务并行库<xref:System.AggregateException>的约定进行包装，这与 F# 异步通常显示异常的方式不同。
+- 异常按照任务并行库<xref:System.AggregateException>的约定进行包装，并且此行为与 F# 异步通常显示异常的方式不同。
 
 ### <a name="asynccatch"></a>异步.捕获
 
@@ -287,7 +287,7 @@ computation: Async<'T> -> Async<unit>
 
 需要注意的：
 
-- 如果必须使用此，因为您希望使用`Async.Start`或其他需要`Async<unit>`的功能，请考虑丢弃结果是否可以执行。 放弃结果只是为了适合类型签名通常不应该做。
+- 如果由于希望使用`Async.Ignore``Async.Start`或其他需要`Async<unit>`的功能而必须使用，请考虑丢弃结果是否正常。 为了避免仅丢弃结果以适合类型签名。
 
 ### <a name="asyncrunsynchronously"></a>异步.同步运行
 
@@ -296,7 +296,7 @@ computation: Async<'T> -> Async<unit>
 签名：
 
 ```fsharp
-computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
+computation: Async<'T> * timeout: ?int * cancellationToken: ?CancellationToken -> 'T
 ```
 
 何时使用:
@@ -310,12 +310,12 @@ computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -
 
 ### <a name="asyncstart"></a>异步.开始
 
-在线程池中启动可异步计算，该`unit`计算返回 。 不等待结果。 从`Async.Start`开始嵌套计算完全独立于调用它们的父计算开始。 其生存期不与任何父计算相关联。 如果取消父计算，则不会取消子计算。
+在线程池中启动可异步计算，该`unit`计算返回 。 不等待结果。 开始的`Async.Start`嵌套计算独立于调用它们的父计算开始。 其生存期不与任何父计算相关联。 如果取消父计算，则不会取消子计算。
 
 签名：
 
 ```fsharp
-computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 ```
 
 仅在：
@@ -328,7 +328,7 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 需要注意的：
 
 - 由开始`Async.Start`计算引发的异常不会传播到调用方。 调用堆栈将完全解功能。
-- 任何有效的工作（如调用`printfn`）开始`Async.Start`不会导致在程序执行的主线程上发生效果。
+- 任何开始的工作（如调用`printfn`）`Async.Start`不会导致程序执行的主线程上发生效果。
 
 ## <a name="interoperate-with-net"></a>与 .NET 互操作
 

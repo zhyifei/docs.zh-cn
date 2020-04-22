@@ -4,12 +4,12 @@ description: 描述 Windows 演示基础 （WPF） 的 .NET 框架实现和 .NET
 author: thraka
 ms.date: 09/21/2019
 ms.author: adegeo
-ms.openlocfilehash: 4386654aad205e3c9f2cbd986d7b812e261e737f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 341e576f17c522fbcbb9c417176e9d4a13ab1b18
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "81433132"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021843"
 ---
 # <a name="differences-in-wpf"></a>WPF 的差异
 
@@ -40,7 +40,7 @@ ms.locfileid: "81433132"
 
 .NET 核心或 .NET Core 的 WPF 不支持代码访问安全性 （CAS）。 所有 CAS 相关功能均以完全信任为假设处理。 .NET Core 的 WPF 删除 CAS 相关代码。 这些类型的公共 API 表面仍然存在，以确保对这些类型的调用成功。
 
-公开定义的 CAS 相关类型从 WPF 程序集移出并移动到 CoreFX 程序集中。 WPF 程序集具有类型转发设置为移动类型的新位置。
+公开定义的 CAS 相关类型从 WPF 程序集移出并移动到 Core .NET 库程序集中。 WPF 程序集具有类型转发设置为移动类型的新位置。
 
 | 源程序集 | 目标程序集 | 类型                |
 | --------------- | --------------- | ------------------- |
