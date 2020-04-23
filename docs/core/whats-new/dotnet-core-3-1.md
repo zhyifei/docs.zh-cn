@@ -6,18 +6,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 323a2390f079c17b81db01e4e3787916251943bf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b52615a3fb288a6ca0622deb83f4db3c8e3587fb
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156551"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607901"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1 的新增功能
 
 本文介绍了 .NET Core 3.1 中的新增功能。 此版本包含对 .NET Core 3.0 的细微改进，重点介绍小型但重要的修复。 .NET Core 3.1 中最重要的特性为，它是[长期支持 (LTS)](#long-term-support) 版本。
 
-如果使用的是 Visual Studio 2019，则必须更新到 [Visual Studio 2019 版本 16.4](https://visualstudio.microsoft.com/downloads/) 才能使用 .NET Core 3.1 项目。 有关 Visual Studio 中新增功能的详细信息，请参阅 [Visual Studio 2019 版本 16.4 中的新增功能](/visualstudio/releases/2019/release-notes#whats-new-in-visual-studio-2019-version-164)。
+如果使用的是 Visual Studio 2019，则必须更新到 [Visual Studio 2019 版本 16.4 或更高版本](https://visualstudio.microsoft.com/downloads/)才能使用 .NET Core 3.1 项目。 有关 Visual Studio 版本 16.4 中新增功能的详细信息，请参阅 [Visual Studio 2019 版本 16.4 中的新增功能](/visualstudio/releases/2019/release-notes-v16.4#whats-new-in-visual-studio-2019-version-164)。
 
 Visual Studio for Mac 也支持 .NET Core 3.1，并且 Visual Studio for Mac 8.4 中就包括 .NET Core 3.1。
 

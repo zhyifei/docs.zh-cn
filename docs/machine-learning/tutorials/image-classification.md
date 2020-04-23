@@ -4,12 +4,12 @@ description: 了解如何将现有 TensorFlow 模型中的知识传输到新的 
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 1e5478f53c82f36ddafe19e3659e2234ff9687b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be21a94f571a1676d2a4bce2196dec34bf008121
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241021"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607566"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>教程：从预先训练的 TensorFlow 模型生成 ML.NET 图像分类模型
 
@@ -37,7 +37,7 @@ TensorFlow 模型经过训练，可以将图像分为一千个类别。 ML.NET �
 
 ## <a name="prerequisites"></a>先决条件
 
-* 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
+* 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或更高版本或 Visual Studio 2017 版本 15.6 或更高版本。
 * [教程资产目录 .ZIP 文件](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
 * [InceptionV1 机器学习模型](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 

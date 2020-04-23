@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2dfa3cdab9de47b55f7a3f73f0d6e9460390700c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a050d7673f7ef00cf11d959d04e709222cb2be8f
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76920099"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607553"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>教程：通过 ML.NET 图像分类 API 使用迁移学习自动进行肉眼检查
 
@@ -28,7 +28,7 @@ ms.locfileid: "76920099"
 
 ## <a name="prerequisites"></a>先决条件
 
-- 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
+- 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或更高版本或 Visual Studio 2017 版本 15.6 或更高版本。
 
 ## <a name="image-classification-transfer-learning-sample-overview"></a>图像分类迁移学习示例概述
 

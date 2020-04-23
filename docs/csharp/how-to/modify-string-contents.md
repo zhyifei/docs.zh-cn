@@ -3,12 +3,12 @@ title: 如何修改字符串内容 - C# 指南
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 260e4022c514db0cee3c1459b9d746a1c8e2addd
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 8e9bbe76c689d3c3f9f238ca9dd95cc7fcf98b18
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121124"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389513"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>如何修改以 C\# 编写的字符串内容
 
@@ -16,7 +16,7 @@ ms.locfileid: "81121124"
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-本文中演示了几种方法。 你可以替换现有文本。 可以搜索模式并将匹配的文本替换为其他文本。 可以将字符串视为字符序列。 还可以使用删除空格的简便方法。 应选择与你的方案最匹配的方法。
+本文中演示了几种方法。 你可以替换现有文本。 可以搜索模式并将匹配的文本替换为其他文本。 可以将字符串视为字符序列。 还可以使用删除空格的简便方法。 选择与你的方案最匹配的方法。
 
 ## <a name="replace-text"></a>替换文本
 
@@ -48,7 +48,7 @@ ms.locfileid: "81121124"
 
 可使用[正则表达式](../../standard/base-types/regular-expressions.md)将匹配模式的文本替换为新文本，新文本可能由模式定义。 下面的示例使用 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 类从源字符串中查找模式并将其替换为正确的大写。 <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> 方法使用将替换逻辑提供为其参数之一的函数。 在本示例中，该函数 `LocalReplaceMatchCase` 是在示例方法中声明的本地函数  。 `LocalReplaceMatchCase` 使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType>类，以生成具有正确大写的替换字符串。
 
-正则表达式最适合用于搜索和替换遵循模式的文本，而不是已知的文本。 请参阅[如何搜索字符串](search-strings.md)了解详细信息。 搜索模式“the\s”搜索“the”后接空格字符的单词。 该部分的模式可确保它不与源字符串中的“there”相匹配。 有关正则表达式语言元素的更多信息，请参阅[正则表达式语言 - 快速参考](../../standard/base-types/regular-expression-language-quick-reference.md)。
+正则表达式最适合用于搜索和替换遵循模式的文本，而不是已知的文本。 有关详细信息，请参阅[如何搜索字符串](search-strings.md)。 搜索模式“the\s”搜索“the”后接空格字符的单词。 该部分的模式可确保它不与源字符串中的“there”相匹配。 有关正则表达式语言元素的更多信息，请参阅[正则表达式语言 - 快速参考](../../standard/base-types/regular-expression-language-quick-reference.md)。
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#5)]
 
@@ -58,7 +58,7 @@ ms.locfileid: "81121124"
 
 可从字符串生成字符数组，修改数组的内容，然后从数组的已修改内容创建新的字符串。
 
-下面的示例演示如何替换字符串中的一组字符。 首先，它使用 <xref:System.String.ToCharArray?displayProperty=nameWithName> 方法来创建字符数组。 它使用 <xref:System.String.IndexOf%2A> 方法来查找单词“fox”的起始索引。 接下来的三个字符将替换为其他单词。 最终，从更新的字符串数组中构造了新的字符串。
+下面的示例演示如何替换字符串中的一组字符。 首先，它使用 <xref:System.String.ToCharArray?displayProperty=nameWithType> 方法来创建字符数组。 它使用 <xref:System.String.IndexOf%2A> 方法来查找单词“fox”的起始索引。 接下来的三个字符将替换为其他单词。 最终，从更新的字符串数组中构造了新的字符串。
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
@@ -72,7 +72,7 @@ ms.locfileid: "81121124"
 
 可通过查看 [GitHub 存储库](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)中的代码来尝试这些示例。 也可以下载这些示例的 [zip 文件](../../../samples/snippets/csharp/how-to/strings.zip)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [.NET Framework 正则表达式](../../standard/base-types/regular-expressions.md)
 - [正则表达式语言 - 快速参考](../../standard/base-types/regular-expression-language-quick-reference.md)

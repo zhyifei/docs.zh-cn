@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7ff9986c09e39f5c4d24f52c351db6455ff63e77
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9677c6c9da542123146fc9eef9c311ef30c174e
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77092715"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81608005"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教程：在 ML.NET 中使用 ONNX 检测对象
 
@@ -30,7 +30,7 @@ ms.locfileid: "77092715"
 
 ## <a name="pre-requisites"></a>先决条件
 
-- 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
+- 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或更高版本或 Visual Studio 2017 版本 15.6 或更高版本。
 - [Microsoft.ML Nuget 包](https://www.nuget.org/packages/Microsoft.ML/)
 - [Microsoft.ML.ImageAnalytics NuGet 包](https://www.nuget.org/packages/Microsoft.ML.ImageAnalytics/)
 - [Microsoft.ML.OnnxTransformer NuGet 包](https://www.nuget.org/packages/Microsoft.ML.OnnxTransformer/)
@@ -110,7 +110,7 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
     tar -xvzf tiny_yolov2.tar.gz
     ```
 
-1. 将提取的 `model.onnx` 文件从刚刚解压缩的目录复制到 ObjectDetection 项目的 `assets\Model` 目录中，并将其重命名为 `TinyYolo2_model.onnx`  。 此目录包含本教程所需的模型。
+1. 将提取的 `model.onnx` 文件从刚刚解压缩的目录复制到 ObjectDetection 项目的 `assets\Model` 目录中，并将其重命名为 `TinyYolo2_model.onnx` 。 此目录包含本教程所需的模型。
 
 1. 在“解决方案资源管理器”中，右键单击资产目录和子目录中的每个文件，再选择“属性”  。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 

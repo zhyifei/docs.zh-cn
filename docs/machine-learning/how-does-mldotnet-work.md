@@ -4,12 +4,12 @@ description: ML.NET 使你能够在联机或脱机场景中将机器学习添加
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 169250adf81992ad0025e78eb9c8f151107bcf40
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0929005e02ad9b43636213735f8c7232aa6d4f42
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185856"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607766"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什么是 ML.NET 以及它如何工作？
 
@@ -25,10 +25,10 @@ ML.NET 在使用 .NET Core 的 Windows、Linux 和 macOS 或使用 .NET Framewor
 
 |||
 |-|-|
-|分类/类别|自动将客户反馈划分为正面和负面类别|
+|分类/类别划分|自动将客户反馈划分为正面和负面类别|
 |回归/预测连续值|根据大小和位置预测房屋价格|
 |异常情况检测|检测欺诈性银行交易 |
-|建议|根据网购者以前的购买情况，推荐他们可能想购买的产品|
+|建议|根据在线购物者之前的购买情况向其建议可能想要购买的产品|
 |时序/顺序数据|预测天气/产品销售额|
 |图像分类|对医学影像中的病状进行分类|
 
@@ -230,7 +230,7 @@ ML.NET 应用程序从 <xref:Microsoft.ML.MLContext> 对象开始。 此单一�
     var price = predEngine.Predict(size);
 ```
 
-`CreatePredictionEngine()` 方法接受一个输入类和一个输出类。 字段名称和/或代码属性确定模型训练和预测期间使用的数据列的名称。 可以在“操作说明”部分中了解[如何进行单个预测](./how-to-guides/single-predict-model-ml-net.md)。
+`CreatePredictionEngine()` 方法接受一个输入类和一个输出类。 字段名称和/或代码属性确定模型训练和预测期间使用的数据列的名称。 有关详细信息，请参阅[使用经过训练的模型进行预测](how-to-guides/machine-learning-model-predictions-ml-net.md)。
 
 ### <a name="data-models-and-schema"></a>数据模型和架构
 

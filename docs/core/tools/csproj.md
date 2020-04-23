@@ -2,12 +2,12 @@
 title: .NET Core 的 csproj 格式的新增内容
 description: 了解现有文件和 .NET Core csproj 文件之间的区别
 ms.date: 04/08/2019
-ms.openlocfilehash: 9d9e212c9531828a8c2dd51fdd7488c17be41ba2
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: fadc6de43f522129970e48bc72914cf187fe3f82
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134056"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607701"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
@@ -145,7 +145,7 @@ ms.locfileid: "80134056"
 
 #### <a name="version"></a>Version
 
-所需的 `Version` 属性指定要还原的包的版本。 此属性遵循 [NuGet 版本控制](/nuget/reference/package-versioning#version-ranges-and-wildcards)方案规则。 默认行为是最小版本（包含）。 例如，指定 `Version="1.2.3"` 等效于 NuGet 表示法 `[1.2.3, )`，表示已解析的包的版本为 1.2.3（如果适用），如果不适用，则为更高版本。
+所需的 `Version` 属性指定要还原的包的版本。 此特性遵循 [NuGet 版本范围](/nuget/concepts/package-versioning#version-ranges)方案规则。 默认行为是最小版本（包含）。 例如，指定 `Version="1.2.3"` 等效于 NuGet 表示法 `[1.2.3, )`，表示已解析的包的版本为 1.2.3（如果适用），如果不适用，则为更高版本。
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets、ExcludeAssets 和 PrivateAssets
 

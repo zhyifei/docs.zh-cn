@@ -5,12 +5,12 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: a221289d0c232863f03a275c26dce835f2878bf7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a1d7ef6226580fd3172b5714f9d7358298ba6668
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241099"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607992"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>教程：使用矩阵因子分解和 ML.NET 生成影片推荐系统
 
@@ -38,7 +38,7 @@ ms.locfileid: "78241099"
 
 ## <a name="prerequisites"></a>先决条件
 
-* 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
+* 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或更高版本或 Visual Studio 2017 版本 15.6 或更高版本。
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>选择适当的机器学习任务
 

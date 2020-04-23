@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | Azure
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 640cfebea3c70314be4a597bc07b0dc6854f5848
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450033"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607888"
 ---
 # <a name="development-process-for-azure"></a>Azure 的开发过程
 
@@ -58,13 +58,13 @@ ms.locfileid: "77450033"
 
 无论新代码何时提交至项目的源代码管理存储库，CI 生成过程均会执行自动生成。 由此你可获得即时反馈，知悉代码已生成（且理想情况下可通过自动测试），并且或许可进行部署。 此 CI 生成将生成一个 Web 部署包项目，并将其发布，以供 CD 进程使用。
 
-[定义 CI 生成过程](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#ci)
+[定义 CI 生成过程](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/dotnet-core)
 
 请务必启用持续集成，从而使得无论何时团队成员提交新代码，系统均可将生成排队。 测试该生成，并验证其是否生成 Web 部署包作为其中一个项目。
 
 生成成功后，CD 过程会将 CI 生成结果部署到 Azure Web 应用。 如需对其配置，请创建并配置一个 Release（它将部署到 Azure 应用服务）。 
 
-[定义 CD 发布过程](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#cd)
+[部署 Azure web 应用](https://docs.microsoft.com/azure/devops/pipelines/targets/webapp)
 
 配置 CI/CD 管道后，即可更新 Web 应用，并将更新提交至源代码管理以进行部署。
 
@@ -100,7 +100,7 @@ ms.locfileid: "77450033"
 
 该 Web 应用运行时，可监视该应用程序的运行状况，并收集诊断和用户行为数据。 Application Insights 包含于 Visual Studio 中，为 ASP.NET 应用提供自动检测。 它可提供有关使用情况、异常、请求、性能和日志的信息。
 
-## <a name="references"></a>reference
+## <a name="references"></a>参考资料
 
 **构建 ASP.NET Core 应用并将其部署到 Azure**  
 <https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>

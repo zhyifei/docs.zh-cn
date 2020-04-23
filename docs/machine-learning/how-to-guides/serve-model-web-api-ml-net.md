@@ -5,20 +5,20 @@ ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: b6801b7de5a17257be706f77a7a67aa87df96524
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f1ca48ab29b04931961b52743bb6c7fab70b06d
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397757"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81608070"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>在 ASP.NET Core Web API 中部署模型
 
 了解如何使用 ASP.NET Core Web API 在 Web 上提供预先训练的 ML.NET 机器学习模型。 通过 Web API 提供模型可实现通过标准 HTTP 方法进行预测。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
-- 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
+- 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或更高版本或 Visual Studio 2017 版本 15.6 或更高版本。
 - PowerShell。
 - 预先定型的模型。 使用 [ML.NET 情绪分析教程](../tutorials/sentiment-analysis.md)生成自己的模型，或下载此[预先训练的情绪分析机器学习模型](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
 
@@ -100,9 +100,9 @@ ms.locfileid: "79397757"
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>注册 PredictionEnginePool 用于应用程序
 
-若要进行单一预测，必须创建 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是线程安全型。 此外，必须在应用程序中的每一处所需位置创建它的实例。 随着应用程序的增长，此过程可能会变得难以管理。 为了提高性能和线程安全，请结合使用依赖项注入和 `PredictionEnginePool` 服务，这将创建一个在整个应用程序中使用的 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) 对象的 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。
+若要进行单一预测，必须创建 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是线程安全型。 此外，必须在应用程序中的每一处所需位置创建它的实例。 随着应用程序的增长，此过程可能会变得难以管理。 为了提高性能和线程安全，请使用依赖项注入和 `PredictionEnginePool` 服务的组合，这将创建一个在整个应用程序中使用的 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 对象的 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)。
 
-如果想要详细了解 [ASP.NET Core 中的依赖项注入](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)，以下链接提供详细信息。
+如果想要详细了解 [ASP.NET Core 中的依赖项注入](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)，以下链接提供详细信息。
 
 1. 打开 Startup.cs  类，并将以下 using 语句添加到文件顶部：
 
@@ -123,7 +123,7 @@ ms.locfileid: "79397757"
         .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
     ```
 
-概括地讲，此代码在应用程序请求时自动初始化对象和服务供以后使用，无需手动执行初始化。
+概括地讲，此代码在应用程序请求时自动初始化对象和服务以供稍后使用，你无需手动执行初始化。
 
 机器学习模型不是静态的。 随着新的训练数据变得可用，模型将重新训练和重新部署。 将最新版本的模型引入应用程序的一种方法是重新部署整个应用程序。 但这会导致应用程序关闭。 `PredictionEnginePool` 服务提供了一种机制，用于在不使应用程序关闭的情况下重新加载已更新的模型。
 
@@ -186,7 +186,7 @@ ms.locfileid: "79397757"
     }
     ```
 
-此代码通过将 `PredictionEnginePool` 传递给控制器的构造函数（通过依赖项注入获得）来分配它。 然后，`Predict` 控制器的 `Post` 方法使用 `PredictionEnginePool`，来通过在 `SentimentAnalysisModel` 类中注册的 `Startup` 进行预测，并在成功时将结果返回给用户。
+此代码通过将 `PredictionEnginePool` 传递给控制器的构造函数（通过依赖项注入获得）来分配它。 然后，`Predict` 控制器的 `Post` 方法使用 `PredictionEnginePool`，来通过在 `Startup` 类中注册的 `SentimentAnalysisModel` 进行预测，并在成功时将结果返回给用户。
 
 ## <a name="test-web-api-locally"></a>在本地测试 Web API
 

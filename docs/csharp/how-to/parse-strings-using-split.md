@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: fb11ff59705188f9425beedfbbbf3c244d21f587
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: cf8307517213b54041b272843232eb595660b2e9
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121512"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389509"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>如何使用 String.Split 分析字符串（C# 指南）
+# <a name="how-to-parse-strings-using-stringsplit-in-c"></a>如何使用 String.Split 分析字符串（C\# 指南）
 
 <xref:System.String.Split%2A?displayProperty=nameWithType> 方法通过基于一个或多个分隔符拆分输入字符串来创建子字符串数组。 最简单的方法通常是分隔字边界上的字符串。 它也用于拆分其他特定字符或字符串上的字符串。
 
@@ -26,7 +26,7 @@ ms.locfileid: "81121512"
 
 [!code-csharp-interactive[split strings on word boundaries](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#1)]
 
-分隔符的每个实例都会在返回的数组中产生一个值。 连续的分隔符将生成空字符串作为返回的数组中的值。  在下方示例中可以看到上述情况，其中使用空格作为分隔符：
+分隔符的每个实例都会在返回的数组中产生一个值。 连续的分隔符将生成空字符串作为返回的数组中的值。 下面的示例介绍如何创建空字符串，该示例使用空格字符作为分隔符。
 
 [!code-csharp-interactive[split strings with repeated separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#2)]
 
@@ -50,7 +50,7 @@ ms.locfileid: "81121512"
 
 可通过查看 [GitHub 存储库](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)中的代码来尝试这些示例。 也可以下载这些示例的 [zip 文件](../../../samples/snippets/csharp/how-to/strings.zip)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../programming-guide/index.md)
 - [字符串](../programming-guide/strings/index.md)

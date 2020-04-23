@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 4f748373350ed0596a5f1d595c273243ae3227c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf8823c6674b1ff3f0028a50df8ce8d0f803cfc1
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77095293"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389497"
 ---
 # <a name="built-in-types-c-reference"></a>内置类型（C# 参考）
 
@@ -47,7 +47,9 @@ int a = 123;
 System.Int32 b = 123;
 ```
 
-## <a name="see-also"></a>另请参阅
+[`void`](void.md) 关键字表示缺少类型。 将其用作不返回值的方法的返回类型。
+
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [C# 类型的默认值](default-values.md)

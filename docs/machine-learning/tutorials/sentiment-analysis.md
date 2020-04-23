@@ -4,12 +4,12 @@ description: 本教程演示如何创建 .NET Core 控制台应用程序，该�
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 47b9a9fe37cbcacab3797ed7fb1398b0c524d746
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c6e13cfca93c54648b1a0423c5983013d3e2a1a0
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241125"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243292"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>教程：在 ML.NET 中使用二元分类分析网站评论的情绪
 
@@ -32,7 +32,7 @@ ms.locfileid: "78241125"
 
 - 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
-- [UCI Sentiment Labeled Sentences 数据集](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)（zip 文件）
+- [UCI Sentiment Labeled Sentences 数据集](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)（zip 文件）
 
 ## <a name="create-a-console-application"></a>创建控制台应用程序
 
@@ -49,7 +49,7 @@ ms.locfileid: "78241125"
 > [!NOTE]
 > 本教程的数据集摘自 KDD 2015 中由 Kotzias 等 提出的“From Group to Individual Labels using Deep Features”， 并托管在 UCI 机器学习存储库中（Dua, D. 和 Karra Taniskidou, E.(2017)）。 UCI 机器学习存储库 [http://archive.ics.uci.edu/ml ]。 加利福尼亚州，加利福尼亚大学：欧文分校，信息与计算机科学学院。
 
-1. 下载 [UCI Sentiment Labeled Sentences 数据集 zip 文件](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)并解压缩。
+1. 下载 [UCI Sentiment Labeled Sentences 数据集 zip 文件](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)并解压缩。
 
 2. 将 `yelp_labelled.txt` 文件复制到已创建的“Data”  目录中。
 
@@ -131,7 +131,7 @@ ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.ML.IDataView)。 `ID
 
     [!code-csharp[LoadData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#LoadData "loading dataset")]
 
-    [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) 用于定义数据架构并读取文件。 它使用数据路径变量并返回 `IDataView`。
+    [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) 方法用于定义数据架构并读取文件。 它使用数据路径变量并返回 `IDataView`。
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>拆分数据集以进行模型训练和测试
 
@@ -141,7 +141,7 @@ ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.ML.IDataView)。 `ID
 
     [!code-csharp[SplitData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#SplitData "Split the Data")]
 
-    上述代码使用 [TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) 方法将加载的数据集拆分为训练数据集和测试数据集，并在 [TrainTestData](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) 类中返回它们。 使用 `testFraction` 参数指定数据的测试集百分比。 默认值为 10%，在本例中使用 20%，以评估更多数据。
+    上述代码使用 [TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) 方法将加载的数据集拆分为训练数据集和测试数据集，并在 <xref:Microsoft.ML.DataOperationsCatalog.TrainTestData> 类中返回它们。 使用 `testFraction` 参数指定数据的测试集百分比。 默认值为 10%，在本例中使用 20%，以评估更多数据。
 
 2. 在 `LoadData()` 方法末尾返回 `splitDataView`：
 

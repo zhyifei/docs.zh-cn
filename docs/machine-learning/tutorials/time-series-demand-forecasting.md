@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 026421d7b1b2a0e39118ae712780ca7fc8f6e444
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bceb32f4ea22ade6d3b49b3a99d7ec48a7ba168d
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76921259"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607397"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>教程：使用时序分析和 ML.NET 预测自行车租赁服务需求
 
@@ -29,7 +29,7 @@ ms.locfileid: "76921259"
 
 ## <a name="prerequisites"></a>先决条件
 
-- 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
+- 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或更高版本或 Visual Studio 2017 版本 15.6 或更高版本。
 
 ## <a name="time-series-forecasting-sample-overview"></a>时序预测示例概述
 
@@ -60,7 +60,7 @@ ms.locfileid: "76921259"
 1. 下载 [DailyDemand.mdf 数据库文件](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf)并将其保存到“Data”目录中。  
 
 > [!NOTE]
-> 此教程使用的数据来自 [UCI 自行车共享数据集](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)。 作者 Fanaee-T,Hadi 和 Gama, Joao，“事件标签结合集合探测器和背景知识”，人工智能进展 (2013)：1-15 页，Springer Berlin Heidelberg，[网页链接](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3)。
+> 此教程使用的数据来自 [UCI 自行车共享数据集](http://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)。 作者 Fanaee-T,Hadi 和 Gama, Joao，“事件标签结合集合探测器和背景知识”，人工智能进展 (2013)：1-15 页，Springer Berlin Heidelberg，[网页链接](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3)。
 
 原始数据集包含与季节和天气相对应的若干列。 为了简洁起见，并且由于本教程使用的算法仅需要单个数值列中的值，因此，已将原始数据集精简为仅包括以下列：
 

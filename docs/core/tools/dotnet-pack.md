@@ -2,31 +2,35 @@
 title: dotnet pack 命令
 description: dotnet pack 命令可为 .NET Core 项目创建 NuGet 包。
 ms.date: 02/14/2020
-ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b9c46ecd5d67519728896b0018e27fb41ebd861
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503643"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463502"
 ---
-# <a name="dotnet-pack"></a>dotnet 包
+# <a name="dotnet-pack"></a>dotnet pack
 
 **本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet pack` - 将代码打包到 NuGet 包。
 
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive]
-    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable]
-    [-v|--verbosity] [--version-suffix]
-dotnet pack [-h|--help]
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
+    [--force] [--include-source] [--include-symbols] [--interactive]
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo]
+    [-o|--output <OUTPUT_DIRECTORY>] [--runtime <RUNTIME_IDENTIFIER>]
+    [-s|--serviceable] [-v|--verbosity <LEVEL>]
+    [--version-suffix <VERSION_SUFFIX>]
+
+dotnet pack -h|--help
 ```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 `dotnet pack` 命令生成项目并创建 NuGet 包。 该命令的结果是一个 NuGet 包，也就是一个 .nupkg 文件  。
 
@@ -38,6 +42,9 @@ dotnet pack [-h|--help]
 将被打包项目的 NuGet 依赖项添加到 *.nuspec* 文件，以便在安装包时可以进行正确解析。 项目到项目的引用不会打包到项目内。 目前，如果具有项目到项目的依赖项，则每个项目均必须包含一个包。
 
 默认情况下，`dotnet pack` 先构建项目。 如果希望避免此行为，则传递 `--no-build` 选项。 此选项在持续集成 (CI) 生成方案中通常非常有用，你可以知道代码是之前生成的。
+
+> [!NOTE]
+> 在某些情况下，无法执行隐式生成。 设置 `GeneratePackageOnBuild` 以避免生成目标和包目标之间的循环依赖关系时可能会发生这种情况。 如果存在锁定文件或其他问题，生成也可能失败。
 
 可向 `dotnet pack` 命令提供 MSBuild 属性，用于打包进程。 有关详细信息，请参阅 [NuGet 元数据属性](csproj.md#nuget-metadata-properties)和 [MSBuild 命令行引用](/visualstudio/msbuild/msbuild-command-line-reference)。 [示例](#examples)部分介绍了如何在不同的情况下使用 MSBuild -p 开关。
 
@@ -51,7 +58,7 @@ dotnet pack [-h|--help]
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `PROJECT | SOLUTION`
 
@@ -145,13 +152,13 @@ dotnet pack [-h|--help]
   dotnet pack --no-build --output nupkgs
   ```
 
-- 将项目的版本后缀配置为 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`.csproj*文件中的*，使用给定的后缀打包当前项目，并更新生成的程序包版本：
+- 将项目的版本后缀配置为 *.csproj* 文件中的 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`，使用给定的后缀打包当前项目，并更新生成的程序包版本：
 
   ```dotnetcli
   dotnet pack --version-suffix "ci-1234"
   ```
 
-- 使用 `2.1.0` MSBuild 属性将包版本设置为 `PackageVersion`：
+- 使用 `PackageVersion` MSBuild 属性将包版本设置为 `2.1.0`：
 
   ```dotnetcli
   dotnet pack -p:PackageVersion=2.1.0

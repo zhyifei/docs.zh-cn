@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: 98c9f28ca4ce6365ed4cf4ff1566a33dbe8f35ca
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 7761240055c90ae9c713b1c460e9e83316d256f9
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438232"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278946"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>教程：使用 ML.NET 模型生成器在 Web 应用程序中分析网站评论的情绪
 
@@ -103,9 +103,9 @@ wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户
 
 ## <a name="evaluate-the-model"></a>评估模型
 
-训练步骤的成果将是一个模型，该模型具备最佳的性能。 在模型生成器工具的评估步骤中，输出部分将包含“最佳模型”项中性能最佳模型使用的算法，并包含“最佳模型准确度”中的指标   。 此外还有一个摘要表格，包含性能最佳的前五种模型以及它们的指标信息。
+训练步骤的成果将是一个模型，该模型具备最佳的性能。 在模型生成器工具的评估步骤中，输出部分将包含“最佳模型”项中性能最佳模型使用的算法，并包含“最佳模型准确度”中的指标   。 此外还显示一个摘要表格，包含性能最佳的前五种模型以及它们的指标信息。
 
-如果对自己的准确性指标不满意，尝试提高模型准确性的简单方法是增加模型的训练时间或使用更多数据。 否则，选择“代码”  链接以转到模型生成器工具中的最后一步。
+如果你对自己的准确性指标不满意，则尝试提高模型准确性的简单方法是增加模型的训练时间或使用更多数据。 否则，选择“代码”  链接以转到模型生成器工具中的最后一步。
 
 ## <a name="add-the-code-to-make-predictions"></a>添加代码进行预测
 
@@ -124,7 +124,7 @@ wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户
 
 ### <a name="configure-the-predictionengine-pool"></a>配置 PredictionEngine 池
 
-若要进行单一预测，必须创建 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是线程安全型。 此外，必须在应用程序中的每一处所需位置创建它的实例。 随着应用程序的增长，此过程可能会变得难以管理。 为了提高性能和线程安全，请结合使用依赖项注入和 `PredictionEnginePool` 服务，这将创建一个在整个应用程序中使用的 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 对象的 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)。
+若要进行单一预测，必须创建 <xref:Microsoft.ML.PredictionEngine%602>。 <xref:Microsoft.ML.PredictionEngine%602> 不是线程安全。 此外，必须在应用程序中的每一处所需位置创建它的实例。 随着应用程序的增长，此过程可能会变得难以管理。 为了提高性能和线程安全，请结合使用依赖项注入和 `PredictionEnginePool` 服务，这将创建一个在整个应用程序中使用的 <xref:Microsoft.ML.PredictionEngine%602> 对象的 <xref:Microsoft.Extensions.ObjectPool.ObjectPool%601>。
 
 1. 安装 Microsoft.Extensions.ML NuGet 包  ：
 
@@ -277,7 +277,7 @@ wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户
 
 ## <a name="run-the-application"></a>运行此应用程序
 
-既然应用程序已设置，请运行应在浏览器中启动的应用程序。
+设置应用程序之后，接下来即可运行应在浏览器中启动的应用程序。
 
 当应用程序启动时，在文本区域中输入“Model Builder is cool!”  。 显示的预测情绪应为“Not Toxic”  。
 

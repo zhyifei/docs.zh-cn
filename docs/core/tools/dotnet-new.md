@@ -1,38 +1,42 @@
 ---
 title: dotnet new 命令
 description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
-ms.date: 02/13/2020
-ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/10/2020
+ms.openlocfilehash: 4ad0d7e54f93582237ed9457b562957018916d36
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398027"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463615"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
  本文适用于： ✔️ .NET Core 2.0 SDK 及更高版本
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet new` - 根据指定的模板，创建新的项目、配置文件或解决方案。
 
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name]
-    [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
-dotnet new <TEMPLATE> [-l|--list] [--type]
-dotnet new [-h|--help]
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install {PATH|NUGET_ID}]
+    [-lang|--language {C#|F#|VB}] [-n|--name <OUTPUT_NAME>]
+    [--nuget-source <SOURCE>] [-o|--output <OUTPUT_DIRECTORY>]
+    [-u|--uninstall] [--update-apply] [--update-check] [Template options]
+
+dotnet new <TEMPLATE> [-l|--list] [--type <TYPE>]
+
+dotnet new -h|--help
 ```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 `dotnet new` 命令基于模板创建 .NET Core 项目或其他项目。
 
 命令调用[模板引擎](https://github.com/dotnet/templating)，以根据指定的模板和选项在磁盘上创建项目。
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 - **`TEMPLATE`**
 
@@ -96,7 +100,7 @@ dotnet new [-h|--help]
 
 - **`-h|--help`**
 
-  打印命令帮助。 可针对 `dotnet new` 命令本身或任何模板调用它。 例如，`dotnet new mvc --help` 。
+  打印命令帮助。 可针对 `dotnet new` 命令本身或任何模板调用它。 例如 `dotnet new mvc --help`。
 
 - **`-i|--install <PATH|NUGET_ID>`**
 
@@ -115,13 +119,13 @@ dotnet new [-h|--help]
   要创建的模板的语言。 接受的语言因模板而异（请参阅[参数](#arguments)部分中的默认值）。 对于某些模板无效。
 
   > [!NOTE]
-  > 某些 shell 将 `#` 解释为特殊字符。 在这些情况下，请将语言参数值括在引号中。 例如，`dotnet new console -lang "F#"` 。
+  > 某些 shell 将 `#` 解释为特殊字符。 在这些情况下，请将语言参数值括在引号中。 例如 `dotnet new console -lang "F#"`。
 
 - **`-n|--name <OUTPUT_NAME>`**
 
   所创建的输出的名称。 如果未指定名称，使用的是当前目录的名称。
 
-- **`--nuget-source`**
+- **`--nuget-source <SOURCE>`**
 
   指定在安装期间要使用的 NuGet 源。 自 .NET Core 2.1 SDK 起可用。
 
@@ -129,9 +133,9 @@ dotnet new [-h|--help]
 
   用于放置生成的输出的位置。 默认为当前目录。
 
-- **`--type`**
+- **`--type <TYPE>`**
 
-  根据可用类型筛选模板。 预定义的值为“项目”、“项”或“其他”。
+  根据可用类型筛选模板。 预定义的值为 `project`、`item` 或 `other`。
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
@@ -140,7 +144,7 @@ dotnet new [-h|--help]
   如果未指定此选项的参数，该命令将列出已安装的模板及其详细信息。
 
   > [!NOTE]
-  > 若要使用 `PATH` 卸载模板，需要完全限定路径。 例如，C:/Users/*USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp\<* 有效，但是包含文件夹中的 ./GarciaSoftware.ConsoleTemplate.CSharp  无效。
+  > 若要使用 `PATH` 卸载模板，需要完全限定路径。 例如，C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp  有效，但是包含文件夹中的 ./GarciaSoftware.ConsoleTemplate.CSharp  无效。
   > 模板路径中不要包含最后的终止目录斜杠。
 
 - **`--update-apply`**
@@ -198,7 +202,7 @@ dotnet new [-h|--help]
 
 ***
 
-### <a name="wpf"></a> wpf、wpflib、wpfcustomcontrollib、wpfusercontrollib
+### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> wpf、wpflib、wpfcustomcontrollib、wpfusercontrollib
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -216,7 +220,7 @@ dotnet new [-h|--help]
 
 ***
 
-### <a name="winforms"></a> winforms、winformslib
+### <a name="winforms-winformslib"></a><a name="winforms"></a> winforms、winformslib
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -230,7 +234,7 @@ dotnet new [-h|--help]
 
 ***
 
-### <a name="web-others"></a> worker、grpc
+### <a name="worker-grpc"></a><a name="web-others"></a> worker、grpc
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -246,7 +250,7 @@ dotnet new [-h|--help]
 
 ***
 
-### <a name="test"></a> mstest、xunit
+### <a name="mstest-xunit"></a><a name="test"></a> mstest、xunit
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -306,7 +310,7 @@ dotnet new [-h|--help]
 
 ***
 
-### <a name="namespace"></a> viewimports、proto
+### <a name="viewimports-proto"></a><a name="namespace"></a> viewimports、proto
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
@@ -413,7 +417,7 @@ dotnet new [-h|--help]
 
 ***
 
-### <a name="web-options"></a> mvc、webapp
+### <a name="mvc-webapp"></a><a name="web-options"></a> mvc、webapp
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
@@ -472,7 +476,7 @@ dotnet new [-h|--help]
 
 - **`--no-https`**
 
-  关闭 HTTPS。 此选项仅适用于未使用 `Individual`、`IndividualB2C``SingleOrg` 和 `MultiOrg` 的情况。
+  关闭 HTTPS。 此选项仅适用于未使用 `Individual`、`IndividualB2C`、`SingleOrg` 和 `MultiOrg` 的情况。
 
 - **`-uld|--use-local-db`**
 
@@ -497,9 +501,13 @@ dotnet new [-h|--help]
 
   在项目中添加 BrowserLink。 选项在 .NET Core 2.2 和 3.1 SDK 中不可用。
 
+- **`-rrc|--razor-runtime-compilation`**
+
+  确定项目是否配置为在调试生成中使用 [Razor 运行时编译](/aspnet/core/mvc/views/view-compilation#runtime-compilation)。 自 .NET Core 3.1 SDK 起可用的选项。
+
 ***
 
-### <a name="spa"></a> angular、react
+### <a name="angular-react"></a><a name="spa"></a> angular、react
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
@@ -725,7 +733,7 @@ dotnet new [-h|--help]
   dotnet new globaljson --sdk-version 3.1.101
   ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [dotnet new 自定义模板](custom-templates.md)
 - [创建 dotnet new 自定义模板](../tutorials/cli-templates-create-item-template.md)

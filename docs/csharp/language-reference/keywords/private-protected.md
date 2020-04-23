@@ -2,12 +2,12 @@
 title: private protected - C# 参考
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 01a8b716ce87a63a50a92a25b2842f7bb12d4c9f
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 03fa90582d096919f2e6546fae2fde28e486fe41
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134367"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463052"
 ---
 # <a name="private-protected-c-reference"></a>private protected（C# 参考）
 
@@ -18,7 +18,7 @@ ms.locfileid: "80134367"
 
 ## <a name="example"></a>示例
 
-仅当变量的静态类型是派生类类型时，可从派生的类型访问基类的私有受保护成员（在其包含程序集中访问）。 以下面的代码段为例：  
+仅当变量的静态类型是派生类类型时，可从派生的类型访问基类的私有受保护成员（在其包含程序集中访问）。 以下面的代码段为例：
 
 ```csharp
 public class BaseClass
@@ -34,7 +34,7 @@ public class DerivedClass1 : BaseClass
 
         // Error CS1540, because myValue can only be accessed by
         // classes derived from BaseClass.
-        // baseObject.myValue = 5;  
+        // baseObject.myValue = 5;
 
         // OK, accessed through the current derived class instance
         myValue = 5;
@@ -43,8 +43,8 @@ public class DerivedClass1 : BaseClass
 ```
 
 ```csharp
-// Assembly2.cs  
-// Compile with: /reference:Assembly1.dll  
+// Assembly2.cs
+// Compile with: /reference:Assembly1.dll
 class DerivedClass2 : BaseClass
 {
     void Access()
@@ -57,16 +57,19 @@ class DerivedClass2 : BaseClass
 ```
 
 此示例包含两个文件，即 `Assembly1.cs` 和 `Assembly2.cs`。
-第一个文件包含公共基类 `BaseClass` 及其派生的类型 `DerivedClass1`。 `BaseClass` 拥有私有受保护成员 `myValue`，`DerivedClass1` 尝试以两种方式访问该成员。 通过 `myValue` 的实例第一次尝试访问 `BaseClass` 时会产生错误。 但是，如果尝试在 `DerivedClass1` 中将其用作继承的成员，则会成功。
+第一个文件包含公共基类 `BaseClass` 及其派生的类型 `DerivedClass1`。 `BaseClass` 拥有私有受保护成员 `myValue`，`DerivedClass1` 尝试以两种方式访问该成员。 通过 `BaseClass` 的实例第一次尝试访问 `myValue` 时会产生错误。 但是，如果尝试在 `DerivedClass1` 中将其用作继承的成员，则会成功。
+
 在第二个文件中，如果尝试将 `myValue` 作为 `DerivedClass2` 的继承成员进行访问，会生成错误，因为仅 Assembly1 中的派生类型可以访问它。
 
-结构成员不能为 `private protected`，因为无法继承结构。  
+如果 `Assembly1.cs` 包含命名为 `Assembly2` 的 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>，则派生类 `DerivedClass1` 将可以访问 `BaseClass` 中声明的 `private protected` 成员。 `InternalsVisibleTo` 使 `private protected` 成员对其他程序集中的派生类可见。
+
+结构成员不能为 `private protected`，因为无法继承结构。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: 6f67d01b4af4a72fb09e5f2aa225e226e268eee2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 571075f7d0f330cf88ac9618376876b4f72e75ed
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181589"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389475"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系统要求
 
@@ -54,14 +54,14 @@ ms.locfileid: "79181589"
 
 | 操作系统 | 支持的版本 | 随 OS 预安装 | 可单独安装 |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
-| Windows 10 2019 年 5 月更新 | 32 位和 64 位 | .NET Framework 4.8 | -- |
-| Windows 10 2018 年 10 月更新 | 32 位和 64 位 | .NET Framework 4.7.2 | .NET Framework 4.8 |
-| Windows 10 2018 年 4 月更新 | 32 位和 64 位 | .NET Framework 4.7.2 |.NET Framework 4.8|
-| Windows 10 Fall Creators Update | 32 位和 64 位 | .NET Framework 4.7.1 | .NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
-| Windows 10 创意者更新 | 32 位和 64 位 | .NET Framework 4.7 | .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
-| Windows 10 周年更新 | 32 位和 64 位 | .NET Framework 4.6.2 |.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8  |
-| Windows 10 November Update | 32 位和 64 位 | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
-| Windows 10 | 32 位和 64 位 | .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |
+| Windows 10 2019 年 5 月更新<br/> （版本 1903） | 32 位和 64 位 | .NET Framework 4.8 | -- |
+| Windows 10 2018 年 10 月更新<br/> （版本 1809） | 32 位和 64 位 | .NET Framework 4.7.2 | .NET Framework 4.8 |
+| Windows 10 2018 年 4 月更新<br/> （版本 1803） | 32 位和 64 位 | .NET Framework 4.7.2 |.NET Framework 4.8|
+| Windows 10 Fall Creators Update<br/> （版本 1709） | 32 位和 64 位 | .NET Framework 4.7.1 | .NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows 10 创意者更新<br/> （版本 1703） | 32 位和 64 位 | .NET Framework 4.7 | .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows 10 周年更新<br/> （版本 1607） | 32 位和 64 位 | .NET Framework 4.6.2 |.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8  |
+| Windows 10 November Update<br/> （版本 1511） | 32 位和 64 位 | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
+| Windows 10<br/> （版本 1507） | 32 位和 64 位 | .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |
 | Windows 8.1 | 32 位、64 位和 ARM | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
 | Windows 8 | 32 位、64 位和 ARM | .NET Framework 4.5 | .NET Framework 4.5.1<br /><br />.NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1 |
 | Windows 7 SP1|32 位和 64 位 | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |

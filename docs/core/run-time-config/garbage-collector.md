@@ -3,12 +3,12 @@ title: 垃圾回收器配置设置
 description: 了解用于配置垃圾回收器如何为 .NET Core 应用管理内存的运行时设置。
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 044083d69601f5092724a46d358b2ee5673d428d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dfb641eeda03d1acaa4771bd6253fcb33c4082a6
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76733521"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607805"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>用于垃圾回收的运行时配置选项
 
@@ -117,8 +117,8 @@ runtimeconfig.json 文件：
 
 - 限制通过垃圾回收器创建的堆数。
 - 仅适用于服务器垃圾回收。
-- 如果启用了默认的 GC 处理器关联，堆计数设置会将 `n` 个 GC 堆/线程关联到前 `n` 个处理器。 （使用关联掩码或关联范围设置来精确指定要关联的处理器。）
-- 如果禁用了 GC 处理器关联，则此设置会限制 GC 堆的数量。
+- 如果启用了默认的 [GC 处理器关联](#systemgcnoaffinitizecomplus_gcnoaffinitize)，堆计数设置会将 `n` 个 GC 堆/线程关联到前 `n` 个处理器。 （使用[关联掩码](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask)或[关联范围](#systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges)设置可精确指定要关联的处理器。）
+- 如果禁用了 [GC 处理器关联](#systemgcnoaffinitizecomplus_gcnoaffinitize)，则此设置会限制 GC 堆的数量。
 - 有关详细信息，请参阅 [GCHeapCount 备注](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md#remarks)。
 
 | | 设置名 | 值 | 引入的版本 |
@@ -145,7 +145,7 @@ runtimeconfig.json 文件：
 ### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System.GC.HeapAffinitizeMask/COMPlus_GCHeapAffinitizeMask
 
 - 指定垃圾回收器线程应使用的确切处理器数。
-- 如果通过将 `System.GC.NoAffinitize` 设置为 `true` 禁用了处理器关联，则忽略此设置。
+- 如果禁用了 [GC 处理器关联](#systemgcnoaffinitizecomplus_gcnoaffinitize)，则忽略此设置。
 - 仅适用于服务器垃圾回收。
 - 该值是一个位掩码，用于定义可用于该进程的处理器。 例如，十进制值 1023 或十六进制值 0x3FF 或 3FF（如果使用环境变量）在二进制记数法中为 0011 1111 1111。 这指定将使用前 10 个处理器。 若要指定接下来使用的 10 个处理器（即处理器 10-19），请指定一个十进制值 1047552（或十六进制值 0xFFC00 或 FFC00），它等效于二进制值 1111 1111 1100 0000 0000。
 
@@ -170,9 +170,9 @@ runtimeconfig.json 文件：
 ### <a name="systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges"></a>System.GC.GCHeapAffinitizeRanges/COMPlus_GCHeapAffinitizeRanges
 
 - 指定用于垃圾回收器线程的处理器列表。
-- 此设置与 `System.GC.HeapAffinitizeMask` 类似，只是它允许你指定超过 64 个的处理器。
+- 此设置与 [System.GC.HeapAffinitizeMask](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask) 类似，只是它允许你指定超过 64 个的处理器。
 - 对于 Windows 操作系统，请为处理器编号或范围加上相应的 [CPU 组](/windows/win32/procthread/processor-groups)作为前缀，例如“0:1-10,0:12,1:50-52,1:70”。
-- 如果通过将 `System.GC.NoAffinitize` 设置为 `true` 禁用了处理器关联，则忽略此设置。
+- 如果禁用了 [GC 处理器关联](#systemgcnoaffinitizecomplus_gcnoaffinitize)，则忽略此设置。
 - 仅适用于服务器垃圾回收。
 - 有关详细信息，请参阅 Maoni Stephens 的博客文章 [Making CPU configuration better for GC on machines with > 64 CPUs](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/)（在 CPU 大于 64 个的计算机上，为 GC 提供更好的 CPU 配置）。
 
@@ -239,6 +239,11 @@ runtimeconfig.json 文件：
 ### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System.GC.HeapHardLimit/COMPlus_GCHeapHardLimit
 
 - 指定 GC 堆和 GC 簿记的最大提交大小（以字节为单位）。
+- 此设置仅适用于 64 位计算机。
+- 默认值（仅在某些情况下适用）是 20 MB 或容器内存限制的 75%（以较小者为准）。 此默认值在以下情况下适用：
+
+  - 进程正在具有指定内存限制的容器中运行。
+  - [HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) 未设置。
 
 | | 设置名 | 值 | 引入的版本 |
 | - | - | - | - |
@@ -262,7 +267,14 @@ runtimeconfig.json 文件：
 
 ### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System.GC.HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
 
-- 指定 GC 堆使用量占总内存的百分比。
+- 指定允许的 GC 堆使用量占总物理内存的百分比。
+- 如果还设置了 [System.GC.heaphdlimit](#systemgcheaphardlimitcomplus_gcheaphardlimit)，则忽略此设置。
+- 此设置仅适用于 64 位计算机。
+- 如果进程正在具有指定内存限制的容器中运行，则百分比的计算结果将为该内存限制的百分比。
+- 默认值（仅在某些情况下适用）是 20 MB 或容器内存限制的 75%（以较小者为准）。 此默认值在以下情况下适用：
+
+  - 进程正在具有指定内存限制的容器中运行。
+  - [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit) 未设置。
 
 | | 设置名 | 值 | 引入的版本 |
 | - | - | - | - |

@@ -2,12 +2,12 @@
 title: dotnet vstest 命令
 description: dotnet vstest 命令可生成项目及其所有依赖项。
 ms.date: 02/27/2020
-ms.openlocfilehash: 88e5b6a8966d78d0746f9ea5ccbccab142a2e0f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8fa94cf12ca2fe5fb99c6e3c1dcdb52185798c0
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156928"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463284"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -20,11 +20,15 @@ ms.locfileid: "78156928"
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
-    [--TestAdapterPath] [--Platform] [--Framework] [--Parallel]
-    [--TestCaseFilter] [--logger] [-lt|--ListTests]
-    [--ParentProcessId] [--Port] [--Diag] [--Blame]
-    [--InIsolation] [[--] <args>...]] [-?|--Help]
+dotnet vstest [<TEST_FILE_NAMES>] [--Blame] [--Diag <PATH_TO_LOG_FILE>]
+    [--Framework <FRAMEWORK>] [--InIsolation] [-lt|--ListTests <FILE_NAME>]
+    [--logger <LOGGER_URI/FRIENDLY_NAME>] [--Parallel]
+    [--ParentProcessId <PROCESS_ID>] [--Platform] <PLATFORM_TYPE>
+    [--Port <PORT>] [--ResultsDirectory<PATH>] [--Settings <SETTINGS_FILE>]
+    [--TestAdapterPath <PATH>] [--TestCaseFilter <EXPRESSION>]
+    [--Tests <TEST_NAMES>] [[--] <args>...]]
+
+dotnet vstest -?|--Help
 ```
 
 ## <a name="description"></a>描述
@@ -39,39 +43,27 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
 
 ## <a name="options"></a>选项
 
-- **`--Settings <Settings File>`**
+- **`--Blame`**
 
-  运行测试时要使用的设置。
+  在意见模式中运行测试。 此选项有助于隔离导致测试主机出现故障的有问题的测试。 它会在当前目录中创建一个输出文件 (Sequence.xml)，其中捕获了故障前的测试执行顺序  。
 
-- **`--Tests <Test Names>`**
+- **`--Diag <PATH_TO_LOG_FILE>`**
 
-  运行具有与提供的值匹配的名称的测试。 用逗号分隔多个值。
+  为测试平台启用详细日志。 日志被写入到所提供的文件。
 
-- **`--TestAdapterPath`**
-
-  在测试运行中使用来自给定路径（如果有）的自定义测试适配器。
-
-- **`--Platform <Platform type>`**
-
-  用于执行测试的目标平台体系结构。 有效值为 `x86`、`x64` 和 `ARM`。
-
-- **`--Framework <Framework Version>`**
+- **`--Framework <FRAMEWORK>`**
 
   用于测试执行的目标 .NET Framework 版本。 有效值的示例为 `.NETFramework,Version=v4.6` 或 `.NETCoreApp,Version=v1.0`。 其他支持的值为 `Framework40`、`Framework45`、`FrameworkCore10` 和 `FrameworkUap10`。
 
-- **`--Parallel`**
+- **`--InIsolation`**
 
-  并行运行测试。 默认情况下，计算机上的所有可用内核都可供使用。 通过在 runsettings 文件的 `RunConfiguration` 节点下设置 `MaxCpuCount` 属性来指定显式内核数  。
+  在隔离的进程中运行测试。 虽然这使得 vstest.console.exe 进程不太可能在测试出错时停止，但测试的运行速度会较慢  。
 
-- **`--TestCaseFilter <Expression>`**
+- **`-lt|--ListTests <FILE_NAME>`**
 
-  运行与给定表达式匹配的测试。 `<Expression>` 的格式为 `<property>Operator<value>[|&<Expression>]`，其中运算符是 `=`、`!=` 或 `~` 之一。 运算符 `~` 具有“包含”语义，并适用于字符串属性，如 `DisplayName`。 括号 `()` 用于组的子表达式。
+  列出给定测试容器中所有已发现的测试。
 
-- **`-?|--Help`**
-
-  打印出有关命令的简短帮助。
-
-- **`--logger <Logger Uri/FriendlyName>`**
+- **`--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
   为测试结果指定一个记录器。
 
@@ -93,29 +85,45 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
     /logger:trx [;LogFileName=<Defaults to unique file name>]
     ```
 
-- **`-lt|--ListTests <File Name>`**
+- **`--Parallel`**
 
-  列出给定测试容器中所有已发现的测试。
+  并行运行测试。 默认情况下，计算机上的所有可用内核都可供使用。 通过在 runsettings 文件的 `RunConfiguration` 节点下设置 `MaxCpuCount` 属性来指定显式内核数  。
 
-- **`--ParentProcessId <ParentProcessId>`**
+- **`--ParentProcessId <PROCESS_ID>`**
 
   父进程的进程 ID 负责启动当前进程。
 
-- **`--Port <Port>`**
+- **`--Platform <PLATFORM_TYPE>`**
+
+  用于执行测试的目标平台体系结构。 有效值为 `x86`、`x64` 和 `ARM`。
+
+- **`--Port <PORT>`**
 
   指定套接字连接和接收事件消息的端口。
 
-- **`--Diag <Path to log file>`**
+- **`--ResultsDirectory:<PATH>`**
 
-  为测试平台启用详细日志。 日志被写入到所提供的文件。
+  如果不存在，则将在指定路径中创建测试结果目录。
 
-- **`--Blame`**
+- **`--Settings <SETTINGS_FILE>`**
 
-  在意见模式中运行测试。 此选项有助于隔离导致测试主机出现故障的有问题的测试。 它会在当前目录中创建一个输出文件 (Sequence.xml)，其中捕获了故障前的测试执行顺序  。
+  运行测试时要使用的设置。
 
-- **`--InIsolation`**
+- **`--TestAdapterPath <PATH>`**
 
-  在隔离的进程中运行测试。 虽然这使得 vstest.console.exe 进程不太可能在测试出错时停止，但测试的运行速度会较慢  。
+  在测试运行中使用来自给定路径（如果有）的自定义测试适配器。
+
+- **`--TestCaseFilter <EXPRESSION>`**
+
+  运行与给定表达式匹配的测试。 `<EXPRESSION>` 的格式为 `<property>Operator<value>[|&<EXPRESSION>]`，其中运算符是 `=`、`!=` 或 `~` 之一。 运算符 `~` 具有“包含”语义，并适用于字符串属性，如 `DisplayName`。 括号 `()` 用于组的子表达式。 有关详细信息，请参阅 [TestCase 筛选器](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)
+
+- **`--Tests <TEST_NAMES>`**
+
+  运行具有与提供的值匹配的名称的测试。 用逗号分隔多个值。
+
+- **`-?|--Help`**
+
+  打印出有关命令的简短帮助。
 
 - **`@<file>`**
 
@@ -156,3 +164,7 @@ dotnet vstest /Tests:TestMethod1
 ```dotnetcli
 dotnet vstest /Tests:TestMethod1,TestMethod2
 ```
+
+## <a name="see-also"></a>请参阅
+
+- [VSTest.Console.exe 命令行选项](/visualstudio/test/vstest-console-options)

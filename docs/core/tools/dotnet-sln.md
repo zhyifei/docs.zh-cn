@@ -2,28 +2,30 @@
 title: dotnet sln 命令
 description: 使用 dotnet-sln 命令，可以便捷地在解决方案文件中添加、删除和列出项目。
 ms.date: 02/14/2020
-ms.openlocfilehash: b2455c04a46b2a10b8142d8ddc2d8129f2154b27
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 231287477d986f9ec4a5404cc5278e76c297faa4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543477"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463401"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
 **本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet sln` - 在 .NET Core 解决方案文件中列出或修改项目。
 
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
+dotnet sln [<SOLUTION_FILE>] [command]
+
+dotnet sln [command] -h|--help
 ```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 使用 `dotnet sln` 命令，可以便捷地在解决方案文件中列出和修改项目。
 
@@ -33,7 +35,7 @@ dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 dotnet new sln
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 - **`SOLUTION_FILE`**
 
@@ -57,7 +59,7 @@ dotnet new sln
 dotnet sln list [-h|--help]
 ```
 
-#### <a name="arguments"></a>参数
+#### <a name="arguments"></a>自变量
 
 - **`SOLUTION_FILE`**
 
@@ -76,11 +78,11 @@ dotnet sln list [-h|--help]
 #### <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH> [<PROJECT_PATH>...]
+dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder <PATH>] <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln add [-h|--help]
 ```
 
-#### <a name="arguments"></a>参数
+#### <a name="arguments"></a>自变量
 
 - **`SOLUTION_FILE`**
 
@@ -100,7 +102,7 @@ dotnet sln add [-h|--help]
 
   将项目放在解决方案的根目录下，而不是创建解决方案文件夹。 自 .NET Core 3.0 SDK 起可用。
 
-- **`-s|--solution-folder`**
+- **`-s|--solution-folder <PATH>`**
 
   要将项目添加到的目标解决方案文件夹路径。 自 .NET Core 3.0 SDK 起可用。
 
@@ -115,7 +117,7 @@ dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 ```
 
-#### <a name="arguments"></a>参数
+#### <a name="arguments"></a>自变量
 
 - **`SOLUTION_FILE`**
 
@@ -175,8 +177,20 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   dotnet sln todo.sln add **/*.csproj
   ```
 
+- 使用 globbing 模式（仅限 Windows PowerShell）将多个 C# 项目添加到解决方案中：
+
+  ```dotnetcli
+  dotnet sln todo.sln add (ls **/*.csproj)
+  ```
+
 - 使用 glob 模式（仅限 Unix/Linux）将多个 C# 项目从解决方案中删除：
 
   ```dotnetcli
   dotnet sln todo.sln remove **/*.csproj
+  ```
+
+- 使用 globbing 模式（仅限 Windows PowerShell）将多个 C# 项目从解决方案中删除：
+
+  ```dotnetcli
+  dotnet sln todo.sln remove (ls **/*.csproj)
   ```

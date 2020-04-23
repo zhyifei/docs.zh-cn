@@ -4,12 +4,12 @@ description: 了解如何使用 MetadataLoadContext（可实现加载的 API）�
 author: MSDN-WhiteKnight
 ms.date: 03/10/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: a782b2db4fb62cfaedaa6768e2131bda6bec864c
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: d2589d51a6e0611504c0133d293d3fdfae32553c
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80229271"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242655"
 ---
 # <a name="how-to-inspect-assembly-contents-using-metadataloadcontext"></a>如何：使用 MetadataLoadContext 检查程序集内容
 
@@ -41,4 +41,4 @@ ms.locfileid: "80229271"
 
 ## <a name="example"></a>示例
 
-若要查看完整的代码示例，请参阅[使用 MetadataLoadContext 检查程序集内容](https://docs.microsoft.com/samples/dotnet/samples/inspect-assembly-contents-using-metadataloadcontext/)。
+若要查看完整的代码示例，请参阅[使用 MetadataLoadContext 检查程序集内容示例](https://github.com/dotnet/samples/tree/master/core/assembly/MetadataLoadContext)。

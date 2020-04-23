@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: b18b2bf31787fa58e614cd4f057fba9037fe8ad8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8822e731ae805e83d4072c5bd78dff3fcf9a31a1
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77627547"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81462513"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET 中的 System.IO.Pipelines
 
@@ -172,7 +172,7 @@ var pipe = new Pipe(options);
 * 第一个参数确定消耗的内存量。
 * 第二个参数确定观察到的缓冲区数。
 
-将数据标记为“已使用”意味着管道可以将内存返回到底层缓冲池。 将数据标记为“已观察”可控制对 `PipeReader.ReadAsync` 的下一个调用的操作。 将所有内容都标记为“已观察”意味着下次对 `PipeReader.ReadAsync` 的调用将不会返回，直到有更多数据写入管道。 任何其他值都将使对 `PipeReader.ReadAsync` 的下一次调用立即返回并包含已观察到的和未观察到的数据，但该数据已被使用  。
+将数据标记为“已使用”意味着管道可以将内存返回到底层缓冲池。 将数据标记为“已观察”可控制对 `PipeReader.ReadAsync` 的下一个调用的操作。 将所有内容都标记为“已观察”意味着下次对 `PipeReader.ReadAsync` 的调用将不会返回，直到有更多数据写入管道。 任何其他值都将使对 `PipeReader.ReadAsync` 的下一次调用立即返回并包含已观察到的和未观察到的数据，但不是已被使用的数据  。
 
 ### <a name="read-streaming-data-scenarios"></a>读取流数据方案
 

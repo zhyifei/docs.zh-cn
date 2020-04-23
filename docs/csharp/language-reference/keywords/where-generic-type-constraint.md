@@ -1,17 +1,17 @@
 ---
 title: where（泛型类型约束）- C# 参考
-ms.date: 04/12/2018
+ms.date: 04/15/2020
 f1_keywords:
 - whereconstraint
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a56b8058735d3ca786520a82424c79d1975bfc4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626706"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463016"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where（泛型类型约束）（C# 参考）
 
@@ -24,15 +24,19 @@ ms.locfileid: "77626706"
 > [!NOTE]
 > 有关查询表达式中的 where 子句的详细信息，请参阅 [where 子句](where-clause.md)。
 
-`where` 子句还可包括基类约束。 基类约束表明用作该泛型类型的类型参数的类型具有指定的类作为基类（或者是该基类），以用作该泛型类型的类型参数。 该基类约束一经使用，就必须出现在该类型参数的所有其他约束之前。 某些类型不允许作为基类约束：<xref:System.Object>、<xref:System.Array> 和 <xref:System.ValueType>。 在 C# 7.3 之前，<xref:System.Enum>、<xref:System.Delegate> 和 <xref:System.MulticastDelegate> 也不允许作为基类约束。 以下示例显示现可指定为基类的类型：
+`where` 子句还可包括基类约束。 基类约束表明用作该泛型类型的类型参数的类型具有指定的类作为基类（或者是该基类）。 该基类约束一经使用，就必须出现在该类型参数的所有其他约束之前。 某些类型不允许作为基类约束：<xref:System.Object>、<xref:System.Array> 和 <xref:System.ValueType>。 在 C# 7.3 之前，<xref:System.Enum>、<xref:System.Delegate> 和 <xref:System.MulticastDelegate> 也不允许作为基类约束。 以下示例显示现可指定为基类的类型：
 
 [!code-csharp[using an interface constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#2)]
+
+在 C# 8.0 及更高版本中的可为 null 上下文中，强制执行基类类型的为 null 性。 如果基类不可为 null（例如 `Base`），则类型参数必须不可为 null。 如果基类可为 null（例如 `Base?`），则类型参数可以是可为 null 或不可为 null 的引用类型。 当基类不可为 null 时，如果类型参数是可为 null 的引用类型，编译器将发出警告。
 
 `where` 子句可指定类型为 `class` 或 `struct`。 `struct` 约束不再需要指定 `System.ValueType` 的基类约束。 `System.ValueType` 类型可能不用作基类约束。 以下示例显示 `class` 和 `struct` 约束：
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-`where` 子句可能包含 `notnull` 约束。 `notnull` 约束将类型参数限制为不可为 null 的类型。 该类型可以是[值类型](../builtin-types/value-types.md)，也可以是不可为 null 的引用类型。 对于在 `notnull`[ 上下文`nullable enable`中编译的代码，从 C# 8.0 开始可以使用 ](../../nullable-references.md#nullable-contexts) 约束。 与其他约束不同，如果类型参数违反 `notnull` 约束，编译器会生成警告而不是错误。 警告仅在 `nullable enable` 上下文中生成。
+在 C# 8.0 及更高版本中的可为 null 上下文中，`class` 约束要求类型是不可为 null 的引用类型。 若要允许可为 null 的引用类型，请使用 `class?` 约束，该约束允许可为 null 和不可为 null 的引用类型。
+
+`where` 子句可能包含 `notnull` 约束。 `notnull` 约束将类型参数限制为不可为 null 的类型。 该类型可以是[值类型](../builtin-types/value-types.md)，也可以是不可为 null 的引用类型。 对于在 [`nullable enable` 上下文](../../nullable-references.md#nullable-contexts)中编译的代码，从 C# 8.0 开始可以使用 `notnull` 约束。 与其他约束不同，如果类型参数违反 `notnull` 约束，编译器会生成警告而不是错误。 警告仅在 `nullable enable` 上下文中生成。
 
 > [!IMPORTANT]
 > 包含 `notnull` 约束的泛型声明可以在可为 null 的不明显上下文中使用，但编译器不会强制执行约束。
@@ -43,7 +47,7 @@ ms.locfileid: "77626706"
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-`where` 子句也可能包括构造函数约束 `new()`。 该约束使得能够使用 `new` 运算符创建类型参数的实例。 [new() 约束](new-constraint.md)可以让编译器知道：提供的任何类型参数都必须具有可访问的无参数构造函数。 例如:
+`where` 子句也可能包括构造函数约束 `new()`。 该约束使得能够使用 `new` 运算符创建类型参数的实例。 [new() 约束](new-constraint.md)可以让编译器知道：提供的任何类型参数都必须具有可访问的无参数构造函数。 例如：
 
 [!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 
@@ -69,7 +73,7 @@ ms.locfileid: "77626706"
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)

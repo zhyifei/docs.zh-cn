@@ -2,12 +2,12 @@
 title: Docker 应用开发工作流
 description: 了解用于开发基于 Docker 的应用程序的工作流的详细信息。 分步深入了解有关优化 Dockerfile 的详细信息，最后了解使用 Visual Studio 时使用的简化工作流。
 ms.date: 01/30/2020
-ms.openlocfilehash: c58ea2436027968143777a19286a1a0a72107717
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f380c840e186c345f9222aa6b0cf1097a74874e
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401507"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389202"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 应用开发工作流
 
@@ -286,7 +286,7 @@ RUN dotnet restore
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj
  9  WORKDIR /src/src/Services/Catalog/Catalog.API
-10  RUN dotnet publish Catalog.API.csproj -c Release -0 /app
+10  RUN dotnet publish Catalog.API.csproj -c Release -o /app
 11
 12  FROM base AS final
 13  WORKDIR /app
@@ -479,7 +479,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 #### <a name="using-visual-studio"></a>使用 Visual Studio
 
-使用 Visual Studio 2019 运行多容器应用程序十分简单。 按 Ctrl-F5 可运行，按 F5 可调试，按照惯例，将 docker-compose 项目设置为启动项目    。  Visual Studio 处理所有需要的设置，所以你可以按照惯例创建断点，并使用已附加的调试程序调试最终在“远程服务器”中运行的独立进程。 就像这样。
+使用 Visual Studio 2019 运行多容器应用程序十分简单。 按 Ctrl-F5 可运行，按 F5 可调试，按照惯例，将 docker-compose 项目设置为启动项目    。  Visual Studio 处理所有需要的设置，所以你可以按照惯例创建断点，并使用已附加的调试程序调试最终在“远程服务器”中运行的独立进程，就是这样。
 
 如前所述，每次向解决方案中的项目添加对 Docker 的支持时，都会在全局（解决方案级别）docker-compose.yml 文件中配置该项目，因此开发人员可以同时运行或调试整个解决方案。 Visual Studio 将为每个启用了 Docker 解决方案支持的项目启动一个容器，并代为执行所有内部步骤（发布 dotnet、生成 Docker 等）。
 

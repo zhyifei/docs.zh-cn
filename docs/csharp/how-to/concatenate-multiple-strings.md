@@ -7,16 +7,16 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 9a0640a7ce73fa8454442cd301157bf5c265f9de
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bbdeba4ee3526140de29ac0d7c97e9a593729d47
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713902"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389525"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>如何连接多个字符串（C# 指南）
 
-串联  是将一个字符串追加到另一字符串末尾的过程。 可使用 `+` 运算符连接字符串。 对于字符串文本和字符串常量，会在编译时进行串联，运行时不串联。 对于字符串变量，仅在运行时串联。
+串联是将一个字符串追加到另一字符串末尾的过程。  可使用 `+` 运算符连接字符串。 对于字符串文本和字符串常量，会在编译时进行串联，运行时不串联。 对于字符串变量，仅在运行时串联。
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -37,7 +37,7 @@ ms.locfileid: "75713902"
 
 另一个字符串连接方法为 <xref:System.String.Format%2A?displayProperty=nameWithType>。 此方法非常适用于从少量组件字符串生成字符串的情况。
 
-在其他情况下，可能要将字符串合并在循环中，此时不知道要合并的源字符串的数量，而且源字符串的实际数量可能非常大。 <xref:System.Text.StringBuilder> 类专门用于此类方案。 以下代码使用 <xref:System.Text.StringBuilder.Append%2A> 类的 <xref:System.Text.StringBuilder> 方法串联字符串。  
+在其他情况下，可能需要将字符串合并在循环中，此时不知道要合并的源字符串的数量，而且源字符串的实际数量可能很大。 <xref:System.Text.StringBuilder> 类专门用于此类方案。 以下代码使用 <xref:System.Text.StringBuilder> 类的 <xref:System.Text.StringBuilder.Append%2A> 方法串联字符串。  
   
 [!code-csharp-interactive[string concatenation using string builder](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#4)]  
 
@@ -51,9 +51,9 @@ ms.locfileid: "75713902"
 
 [!code-csharp-interactive[string concatenation using LINQ expressions](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#6)]  
 
-可通过查看 [GitHub 存储库](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的代码来尝试这些示例。 也可以下载这些示例的 [zip 文件](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
+可通过查看[示例代码](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)来尝试这些示例。 也可以下载这些示例的 [zip 文件](../../../samples/snippets/csharp/how-to/strings.zip)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.String>
 - <xref:System.Text.StringBuilder>
