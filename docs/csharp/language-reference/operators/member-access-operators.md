@@ -182,9 +182,9 @@ if (handler != null)
 
 还可以将 `^` 运算符与[范围运算符](#range-operator-)一起使用以创建一个索引范围。 有关详细信息，请参阅[索引和范围](../../tutorials/ranges-indexes.md)。
 
-## <a name="range-operator-"></a>范围运算符 .
+## <a name="range-operator-"></a>范围运算符 ..
 
-`..` 运算符在 C# 8.0 和更高版本中提供，指定索引范围的开头和末尾作为其操作数。 左侧操作数是范围的包含性  开头。 右侧操作数是范围的包含性  末尾。 任一操作数都可以是序列开头或末尾的索引，如以下示例所示：
+C# 8.0 及更高版本中可使用 `..` 运算符，用于指定索引范围的起始项和结尾项作为其操作数。 左侧操作数是范围的*包含性*起始项。 右侧操作数是范围的*非包含性*结尾项。 任一操作数都可以是自某个序列起始项或结尾项的索引，如下例所示：
 
 [!code-csharp[range examples](snippets/MemberAccessOperators.cs#Ranges)]
 
