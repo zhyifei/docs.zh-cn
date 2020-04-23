@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 6850dc256a70e0c0343104b3904e9eda62d11e7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4dbe6a2c295e5afae1b6761f0c7b695fdb906428
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179203"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102902"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModule 地址：请求方法
 
@@ -36,7 +36,7 @@ HRESULT Request(
 );
 ```
 
-## <a name="parameters"></a>parameters
+## <a name="parameters"></a>参数
 
 `pDataModule`\
 [在]指向种子数据模块的指针。
@@ -49,11 +49,12 @@ HRESULT Request(
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标题：** 无**库：** 无  
-**.NET 框架版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)\
+**标题：** 无。
+**库：** 无。
+**.NET 框架版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>另请参阅
 
 - [调试](index.md)
-- [达格格获取模块地址接口](dacpgetmoduleaddress-structure.md)
+- [DacpGetModule 地址结构](dacpgetmoduleaddress-structure.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 95ae438e9fb52cc584d18a981bffb66147eb4a77
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8d5cd73bb9393533cb669581420e24297cb5ff71
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242811"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102926"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<应用上下文切换覆盖>元素
 
@@ -40,7 +40,7 @@ ms.locfileid: "81242811"
 
 ### <a name="value-attribute"></a>值属性
 
-|“值”|说明|
+|值|描述|
 |-----------|-----------------|
 |"名称=值"|预定义的开关名称及其值 （`true`或`false`。 多个开关名称/值对由分号分隔（";"）。 有关 .NET Framework 支持的预定义交换机名称的列表，请参阅备注部分。|
 
@@ -59,9 +59,9 @@ ms.locfileid: "81242811"
 
  `<AppContextSwitchOverrides>`元素`value`的属性由一个字符串组成，该字符串由一个或多个分号分隔的名称/值对组成。  每个名称标识兼容性开关，其相应的值是布尔 （`true`或`false`）， 指示是否设置了该开关。 默认情况下，开关为`false`，库提供新功能。 仅当设置开关（即其值为`true`）时，它们才提供以前的功能。 这允许库为现有 API 提供新的行为，同时允许依赖于前一个行为的调用方选择退出新功能。
 
- .NET 框架支持以下交换机：
+.NET 框架支持以下交换机：
 
-|切换名称|说明|介绍|
+|切换名称|描述|已引入|
 |-----------------|-----------------|----------------|
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|控制 Windows 演示文稿基础是否使用旧算法进行控件布局。 有关详细信息，请参阅[缓解：WPF 布局](../../../migration-guide/mitigation-wpf-layout.md)。|.NET Framework 4.6|
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|控制用于由包数字签名管理器对包部件进行签名的默认算法是 SHA1 还是 SHA256。<br>由于与 SHA1 冲突，Microsoft 建议使用 SHA256。|.NET Framework 4.7.1|
@@ -141,7 +141,7 @@ ms.locfileid: "81242811"
 
  库开发人员还可以定义自定义交换机，以允许调用方选择退出其库的更高版本中引入的已更改功能。 有关更多信息，请参见 <xref:System.AppContext> 类。
 
-## <a name="switches-in-aspnet-applications"></a>ASP.NET应用中的交换机
+## <a name="switches-in-aspnet-apps"></a>ASP.NET应用中的交换机
 
 通过将[\<>](../appsettings/add-element-for-appsettings.md)元素添加到 Web.config 文件[\<的应用设置>](../appsettings/index.md)部分，可以将ASP.NET应用程序配置为使用兼容性设置。
 
@@ -179,6 +179,7 @@ ms.locfileid: "81242811"
 
 ## <a name="see-also"></a>另请参阅
 
+- [减轻 .NET 框架 4.6 及更高版本中的新行为](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<运行时>元素](runtime-element.md)
 - [\<配置>元素](../configuration-element.md)

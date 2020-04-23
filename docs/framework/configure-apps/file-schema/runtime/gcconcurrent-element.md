@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-ms.openlocfilehash: 5957337aa960a0d5f445249b410dbfaddb7b08e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 249518ae7477d284d50f9010757db83b7752c657
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400979"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102900"
 ---
 # <a name="gcconcurrent-element"></a>\<gc并发>元素
 
@@ -35,15 +35,15 @@ ms.locfileid: "79400979"
 
 下列各节描述了特性、子元素和父元素。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
-|Attribute|说明|
+|特性|描述|
 |---------------|-----------------|
 |`enabled`|必需的特性。<br /><br />指定运行时是否并发运行服务器垃圾回收。|
 
 #### <a name="enabled-attribute"></a>启用的属性
 
-|值|说明|
+|值|描述|
 |-----------|-----------------|
 |`false`|不同时运行垃圾回收。|
 |`true`|并发运行垃圾回收。 这是默认值。|
@@ -54,7 +54,7 @@ ms.locfileid: "79400979"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|
@@ -82,7 +82,7 @@ ms.locfileid: "79400979"
 
 如果计算机配置文件中有**gcConcurrent设置，** 它将为所有 .NET Framework 应用程序定义默认值。 计算机配置文件设置将重写应用程序配置文件设置。
 
-有关并发和后台垃圾回收的详细信息，请参阅"[垃圾回收基础知识](../../../../standard/garbage-collection/fundamentals.md)"一文中的[并发垃圾回收](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection)、[后台工作站垃圾回收](../../../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection)和[后台服务器垃圾回收](../../../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection)部分。
+有关并发和后台垃圾回收的详细信息，请参阅[后台垃圾回收](../../../../standard/garbage-collection/background-gc.md)。
 
 ## <a name="example"></a>示例
 
@@ -100,4 +100,4 @@ ms.locfileid: "79400979"
 
 - [运行时设置架构](index.md)
 - [配置文件架构](../index.md)
-- [垃圾回收基础](../../../../standard/garbage-collection/fundamentals.md)
+- [垃圾回收的基础](../../../../standard/garbage-collection/fundamentals.md)
