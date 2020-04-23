@@ -130,6 +130,8 @@
           href: additional-security-considerations-in-windows-forms.md
     - name: Windows 窗体的 ClickOnce 部署
       href: clickonce-deployment-for-windows-forms.md
+    - name: NET Core 3.0 的辅助功能改进
+      href: windows-forms-accessibility-improvements.md
     - name: 如何：在 Windows 窗体中访问键控集合
       href: how-to-access-keyed-collections-in-windows-forms.md
     - name: 增强 Windows 窗体应用程序
