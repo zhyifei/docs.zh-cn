@@ -75,15 +75,15 @@ using static  增强功能可用于导入单个类的静态方法。 指定要�
 [!code-csharp[UsingStatic](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStatic)]
 
 > [!NOTE]
-> 在 static using 语句中必须使用完全限定的类名 `System.String`。  而不能使用 `string` 关键字。
+> 在 using static 语句中必须使用完全限定的类名 `System.String`。  而不能使用 `string` 关键字。
 
-从 `static using` 语句导入时，仅在使用扩展方法调用语法调用扩展方法时，扩展方法才在范围内。 作为静态方法调用时，扩展方法不在范围内。 你在 LINQ 查询中会经常看到这种情况。 可以通过导入 <xref:System.Linq.Enumerable> 或 <xref:System.Linq.Queryable> 来导入 LINQ 模式。
+从 `using static` 语句导入时，仅在使用扩展方法调用语法调用扩展方法时，扩展方法才在范围内。 作为静态方法调用时，扩展方法不在范围内。 你在 LINQ 查询中会经常看到这种情况。 可以通过导入 <xref:System.Linq.Enumerable> 或 <xref:System.Linq.Queryable> 来导入 LINQ 模式。
 
 [!code-csharp[UsingStaticLinq](../../../samples/snippets/csharp/new-in-6/newcode.cs#usingStaticLinq)]
 
 通常使用扩展方法调用表达式调用扩展方法。 在使用静态方法调用语法对其进行调用的罕见情况下，添加类名称可以解决歧义。
 
-`static using` 指令还可以导入任何嵌套的类型。 可以引用任何嵌套的类型，而无需限定。
+`using static` 指令还可以导入任何嵌套的类型。 可以引用任何嵌套的类型，而无需限定。
 
 ## <a name="null-conditional-operators"></a>Null 条件运算符
 
