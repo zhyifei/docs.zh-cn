@@ -24,7 +24,7 @@ ms.locfileid: "75706330"
 > [!NOTE]
 > 本部分中的大多示例是针对 .NET Core 支持的所有三个平台（Windows、Linux 和 macOS）提供的。 但是，在某些简短的演示性示例中，只显示了一个使用 Windows 文件名和扩展名（即，库的扩展名“dll”）的例子。 这并不意味着这些功能不能在 Linux 或 macOS 上使用，只是出于方便而未提到这些平台。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [平台调用 (P/Invoke)](pinvoke.md)
 - [类型封送](type-marshaling.md)

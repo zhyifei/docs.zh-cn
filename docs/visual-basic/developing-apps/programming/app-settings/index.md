@@ -26,14 +26,14 @@ ms.locfileid: "74353248"
 
  下表列出了演示如何访问应用程序窗体的示例。  
   
-|到|请参阅|  
+|功能|查看|  
 |--------|---------|  
 |更新用户设置的值|[如何：在 Visual Basic 中更改用户设置](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|在属性网格中显示应用程序和用户设置|[如何：在 Visual Basic 中创建用户设置的属性网格](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
-|保存已更新的用户设置值|[如何：在 Visual Basic 中保存用户设置](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|在属性网格中显示应用程序和用户设置|[如何：在 Visual Basic 中为用户设置创建属性网格](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|保存已更新的用户设置值|[如何：在 Visual Basic 中暂留用户设置](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
 |确定用户设置的值|[如何：在 Visual Basic 中读取应用程序设置](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [管理应用程序设置 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
 - [My.Settings 对象](../../../../visual-basic/language-reference/objects/my-settings-object.md)

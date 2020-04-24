@@ -2,12 +2,12 @@
 title: ML.NET 操作指南
 description: 了解如何执行特定任务，以帮助自定义创建 AI 解决方案并将机器学习集成到 .NET 应用程序。
 ms.date: 03/01/2019
-ms.openlocfilehash: 25c5cb6247c202e3ef51d0ed25b3b213fdca7a56
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: e83db6f1f754357b7e204485ea545feef9ad4a95
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607527"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102445"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>.NET 机器学习操作指南
 
@@ -27,15 +27,9 @@ ms.locfileid: "81607527"
 
 * [使用 ML.NET 定型回归模型来预测某个值。](train-machine-learning-model-ml-net.md)
 
-### <a name="evaluate-the-model-quality"></a>评估模型质量
-
-* [计算指标来评估模型质量。](verify-model-quality-ml-net.md)
-
 ### <a name="model-explainability"></a>模型可解释性
 
 * [使用排列特征的重要性来确定模型特征的重要性。](explain-machine-learning-model-permutation-feature-importance-ml-net.md)
-
-* [使用广义加性模型和形状函数来解释模型。](use-gams-for-model-explainability.md)
 
 ## <a name="run"></a>运行
 

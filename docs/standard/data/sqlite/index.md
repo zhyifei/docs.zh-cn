@@ -37,7 +37,7 @@ Install-Package Microsoft.Data.Sqlite
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/HelloWorldSample/Program.cs?name=snippet_HelloWorld)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [连接字符串](connection-strings.md)
 * [API 参考](/dotnet/api/?view=msdata-sqlite-3.0)

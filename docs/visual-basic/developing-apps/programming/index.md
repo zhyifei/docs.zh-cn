@@ -33,13 +33,13 @@ ms.locfileid: "74352110"
  [访问应用程序 Web 服务](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  所含文档介绍了如何使用 `My.WebServices` 对象访问应用程序引用的 Web 服务。  
   
- [Accessing Application Settings](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
+ [访问应用程序设置](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  所含文档介绍了如何使用 `My.Settings` 对象访问应用程序的设置。  
   
  [处理驱动器、目录和文件](drives-directories-files/index.md)  
  所含文档介绍了如何使用 `My.Computer.FileSystem` 对象访问文件系统。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Basic 语言功能](../../../visual-basic/programming-guide/language-features/index.md)
 - [编程概念](../../../visual-basic/programming-guide/concepts/index.md)
