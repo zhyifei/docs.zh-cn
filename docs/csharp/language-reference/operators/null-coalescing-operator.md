@@ -53,7 +53,7 @@ d ??= (e ??= f)
 
   [!code-csharp-interactive[with null-conditional](snippets/NullCoalescingOperator.cs#WithNullConditional)]
 
-- 当使用[可以为 null 值类型](../builtin-types/nullable-value-types.md)并且需要提供基础值类型的值时，可以使用 `??` 运算符为那些可能为 null 的表达式提供默认值：
+- 当使用[可以为 null 值类型](../builtin-types/nullable-value-types.md)并且需要提供基础值类型的值时，可以使用 `??` 运算符指定当可以为 null 的类型的值为 `null` 时要提供的值：
 
   [!code-csharp-interactive[with nullable types](snippets/NullCoalescingOperator.cs#WithNullableTypes)]
 
