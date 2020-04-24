@@ -5,12 +5,12 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: 24a5ea02992a5bce681b5bab4fb7f75505bd225d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c2ba4a7244b7849e28eac38fb34a2cdd0d1f1048
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79154097"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645360"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> 元素
 指定运行时是否为代码访问<xref:System.Security.Policy.Publisher>安全性 （CAS） 创建证据。  
@@ -29,15 +29,15 @@ ms.locfileid: "79154097"
 ## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>属性  
+### <a name="attributes"></a>特性  
   
-|Attribute|说明|  
+|特性|描述|  
 |---------------|-----------------|  
 |`enabled`|必需的特性。<br /><br /> 指定运行时是否创建<xref:System.Security.Policy.Publisher>证据。|  
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |`false`|不创建<xref:System.Security.Policy.Publisher>证据。|  
 |`true`|创建<xref:System.Security.Policy.Publisher>证据。 这是默认值。|  
@@ -55,7 +55,7 @@ ms.locfileid: "79154097"
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
-> 在 .NET 框架 4 及更高版本中，此元素对程序集加载时间没有影响。 有关详细信息，请参阅[安全更改](../../../security/security-changes.md)中的"安全策略简化"部分。  
+> 在 .NET 框架 4 及更高版本中，此元素对程序集加载时间没有影响。 有关详细信息，请参阅[安全更改](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)中的"安全策略简化"部分。  
   
  通用语言运行时 （CLR） 尝试在加载时验证身份验证签名，以创建程序集<xref:System.Security.Policy.Publisher>的证据。 但是，默认情况下，大多数应用程序不需要<xref:System.Security.Policy.Publisher>证据。 标准 CAS 策略不依赖于<xref:System.Security.Policy.PublisherMembershipCondition>。 您应该避免与验证发布者签名相关的不必要的启动成本，除非您的应用程序在具有自定义 CAS 策略的计算机上执行，或者打算满足部分信任环境中的需求<xref:System.Security.Permissions.PublisherIdentityPermission>。 （对标识权限的要求总是在完全信任的环境中成功。  
   

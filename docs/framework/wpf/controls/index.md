@@ -1,5 +1,5 @@
 ---
-title: 控制
+title: 控件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: 2ec8c0a99f4e2431aed0d8c24168b7329de669f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2aab0fc8adaf17a8e9820a6269a740ef09540cda
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187533"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646486"
 ---
-# <a name="controls"></a>控制
+# <a name="controls"></a>控件
 <a name="introduction"></a>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]附带许多常用的 UI 组件，这些组件用于几乎每个 Windows 应用程序，例如<xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Label>、<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.Menu> <xref:System.Windows.Controls.ListBox>。 以前，这些对象称为控件。 虽然[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]SDK 继续使用术语"控件"来松散地表示表示应用程序中可见对象的任何类，但请务必注意，类不需要从<xref:System.Windows.Controls.Control>类继承来具有可见状态。 从类继承的<xref:System.Windows.Controls.Control>类包含 ，<xref:System.Windows.Controls.ControlTemplate>它允许控件的使用者从根本上改变控件的外观，而无需创建新的子类。  本主题讨论如何在 中<xref:System.Windows.Controls.Control>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]常用控件（从类继承的控件和未从类继承的控件）  
 
@@ -54,7 +54,7 @@ ms.locfileid: "79187533"
   
  [!code-xaml[ControlsOverview#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   
- 还可以通过将键分配给样式并在控件`Style`的属性中指定该键，仅将样式应用于特定类型的特定控件。  有关样式的详细信息，请参阅[样式和模板](styling-and-templating.md)化。  
+ 还可以通过将键分配给样式并在控件`Style`的属性中指定该键，仅将样式应用于特定类型的特定控件。  有关样式的详细信息，请参阅[样式和模板](../../../desktop-wpf/fundamentals/styles-templates-overview.md)化。  
   
 ### <a name="creating-a-controltemplate"></a>创建 ControlTemplate  
  允许您<xref:System.Windows.Style>一次在多个控件上设置属性，但有时您可能希望自定义 的外观<xref:System.Windows.Controls.Control>，超出通过创建 可以执行的内容。 <xref:System.Windows.Style> 从类继承的<xref:System.Windows.Controls.Control>类具有 ，<xref:System.Windows.Controls.ControlTemplate>它定义 的<xref:System.Windows.Controls.Control>结构和外观。 的属性<xref:System.Windows.Controls.Control.Template%2A><xref:System.Windows.Controls.Control>是公共的，因此您可以给出与其默认值不同的 。 <xref:System.Windows.Controls.Control> <xref:System.Windows.Controls.ControlTemplate> 通常可以为 指定<xref:System.Windows.Controls.ControlTemplate><xref:System.Windows.Controls.Control>new，而不是从控件继承以自定义 的外观。 <xref:System.Windows.Controls.Control>  
@@ -99,12 +99,12 @@ ms.locfileid: "79187533"
   
 ## <a name="see-also"></a>另请参阅
 
-- [样式设置和模板化](styling-and-templating.md)
+- [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [按类别分类的控件](controls-by-category.md)
 - [控件库](control-library.md)
 - [数据模板化概述](../data/data-templating-overview.md)
 - [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)
 - [输入](../advanced/input-wpf.md)
 - [启用命令](../advanced/how-to-enable-a-command.md)
-- [演练：创建采用动画效果的自定义按钮](walkthroughs-create-a-custom-animated-button.md)
+- [演练：创建自定义的动画按钮](walkthroughs-create-a-custom-animated-button.md)
 - [控件自定义](control-customization.md)

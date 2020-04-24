@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c73a61b8c251b12d5b3dac67535632322779a6af
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80636026"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644054"
 ---
 # <a name="dependency-properties-overview"></a>依赖属性概述
 
@@ -123,7 +123,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 > [!NOTE]
 > 绑定被视为本地值，这意味着，如果设置另一个本地值，该绑定将被消除。 有关详细信息，请参阅[依赖属性值优先级](dependency-property-value-precedence.md)。
 
-为了生成数据绑定操作的 <xref:System.Windows.DependencyObject> 源属性值的更改通知，依赖属性或 <xref:System.Windows.DependencyObject> 类本身不支持 <xref:System.ComponentModel.INotifyPropertyChanged>。 有关如何创建要用在数据绑定中并且可以向数据绑定目标报告变化的属性的详细信息，请参阅[数据绑定概述](../data/data-binding-overview.md)。
+为了生成数据绑定操作的 <xref:System.Windows.DependencyObject> 源属性值的更改通知，依赖属性或 <xref:System.Windows.DependencyObject> 类本身不支持 <xref:System.ComponentModel.INotifyPropertyChanged>。 有关如何创建要用在数据绑定中并且可以向数据绑定目标报告变化的属性的详细信息，请参阅[数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)。
 
 ### <a name="styles"></a>样式
 样式和模板是使用依赖属性的两个主要激发方案。 在设置定义应用程序[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 的属性时，样式尤其有用。 在 XAML 中，通常将样式定义为资源。 样式与属性系统交互，因为它们通常包含特定属性的“资源库”，以及基于另一个属性的实时值更改属性值的“触发器”。
@@ -134,7 +134,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyle)]
 
-有关详细信息，请参阅[样式和模板](../controls/styling-and-templating.md)化。
+有关详细信息，请参阅[样式和模板](../../../desktop-wpf/fundamentals/styles-templates-overview.md)化。
 
 ### <a name="animations"></a>动画
 可以对依赖属性进行动画处理。 在应用和运行动画时，经过动画处理的值的操作优先级高于该属性以其他方式具有的任何值（如本地值）。
@@ -196,7 +196,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 
 - 将依赖项属性视为公共属性，可访问或至少可供有权访问实例的任何调用方发现。 有关详细信息，请参阅[依赖属性的安全性](dependency-property-security.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [自定义依赖项属性](custom-dependency-properties.md)
 - [只读依赖项属性](read-only-dependency-properties.md)

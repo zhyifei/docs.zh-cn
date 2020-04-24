@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 2326520039085beb5f5294e23db67b67f9d7d7da
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: a6ab5463cc28aa590454ae1304714d3d12ee7c6b
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243266"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646138"
 ---
 # <a name="control-authoring-overview"></a>控件创作概述
 
@@ -38,7 +38,7 @@ ms.locfileid: "81243266"
 
 - **触发器。** 允许您<xref:System.Windows.Trigger>动态更改控件的外观和行为，而无需创建新控件。 例如，假设您应用程序中有多个<xref:System.Windows.Controls.ListBox>控件，并希望每个<xref:System.Windows.Controls.ListBox>控件中的项在选择时为粗体和红色。 您的第一本能可能是创建一个类，该类继承<xref:System.Windows.Controls.ListBox>并重写<xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A>方法以更改所选项的外观，但更好的方法是将触发器添加到更改所选项外观的 样式<xref:System.Windows.Controls.ListBoxItem>。 触发器可以更改属性值或根据属性值执行操作。 使您能够<xref:System.Windows.EventTrigger>在发生事件时执行操作。
 
-有关样式、模板和触发器的详细信息，请参阅[样式设置和模板化](styling-and-templating.md)。
+有关样式、模板和触发器的详细信息，请参阅[样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)。
 
 一般情况下，如果控件可以镜像现有控件的功能，但希望该控件具有不同的外观，则应先考虑是否可以使用本节中讨论的某些方法来更改现有控件的外观。
 

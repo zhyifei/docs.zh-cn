@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [.NET Framework], code access security
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
-ms.openlocfilehash: 08d708e8f98bd2fe06757df3033a512e2fe1f3c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 352fa41cb9d3136f853b068d0101a6dcab5dfd7c
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400991"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645774"
 ---
 # <a name="code-access-security-basics"></a>代码访问安全性基础知识
 
@@ -53,7 +53,7 @@ ms.locfileid: "79400991"
 声明性安全语法使用[属性](../../standard/attributes/index.md)将安全信息放入代码的[元数据](../../standard/metadata-and-self-describing-components.md)中。 属性可以程序集、类或成员级别放置，以指示你要使用的请求、需求或重写的类型。 请求用于面向公共语言运行时的应用程序，以通知运行时安全系统有关应用程序需要或不想要的权限。 在库中使用要求和重写以帮助保护调用方的资源或重写默认安全行为。
 
 > [!NOTE]
-> 在 .NET 框架 4 中，对 .NET 框架安全模型和术语进行了重要更改。 有关这些更改的详细信息，请参阅[安全更改](../security/security-changes.md)。
+> 在 .NET 框架 4 中，对 .NET 框架安全模型和术语进行了重要更改。 有关这些更改的详细信息，请参阅[安全更改](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。
 
 为了使用声明性安全调用，必须初始化权限对象的状态数据，使其表示所需权限的特定形式。 每个内置权限都具有一个属性，会向该属性传递 <xref:System.Security.Permissions.SecurityAction> 枚举来描述你要执行的安全操作的类型。 但是，权限还接受自己独占的自己的参数。
 
@@ -165,5 +165,5 @@ public class MyClass {
 - [ActualRebinds](using-the-assert-method.md)
 - [代码访问安全性](code-access-security.md)
 - [代码访问安全性基础知识](code-access-security-basics.md)
-- [属性](../../standard/attributes/index.md)
+- [特性](../../standard/attributes/index.md)
 - [元数据和自描述组件](../../standard/metadata-and-self-describing-components.md)

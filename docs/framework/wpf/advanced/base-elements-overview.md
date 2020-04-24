@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 7d52d951d4fa4df83bbcca6b4cb479e18e532d2a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f6519675ebf3624152e1077e7582f04e38b1dce9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141623"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644043"
 ---
 # <a name="base-elements-overview"></a>基元素概述
 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]较高的类是从 SDK 文档中通常称为基元素类的四个类派生的。 这些类是<xref:System.Windows.UIElement> <xref:System.Windows.FrameworkElement>、<xref:System.Windows.ContentElement>和<xref:System.Windows.FrameworkContentElement>。 类<xref:System.Windows.DependencyObject>也是相关的，因为它是两个<xref:System.Windows.UIElement>和<xref:System.Windows.ContentElement>  
@@ -47,7 +47,7 @@ ms.locfileid: "79141623"
   
 - 样式和情节提要支持。 有关详细信息，请参阅<xref:System.Windows.Style>和[情节提要概述](../graphics-multimedia/storyboards-overview.md)。  
   
-- 数据绑定支持。 有关详细信息，请参阅 [数据绑定概述](../data/data-binding-overview.md)。  
+- 数据绑定支持。 有关详细信息，请参阅 [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)。  
   
 - 动态资源引用支持。 有关详细信息，请参阅 [XAML 资源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "79141623"
   
 - 样式和情节提要支持。 有关详细信息，请参阅<xref:System.Windows.Style>和[动画概述](../graphics-multimedia/animation-overview.md)。  
   
-- 数据绑定支持。 有关详细信息，请参阅 [数据绑定概述](../data/data-binding-overview.md)。  
+- 数据绑定支持。 有关详细信息，请参阅 [数据绑定概述](../../../desktop-wpf/data/data-binding-overview.md)。  
   
 - 动态资源引用支持。 有关详细信息，请参阅 [XAML 资源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)。  
   

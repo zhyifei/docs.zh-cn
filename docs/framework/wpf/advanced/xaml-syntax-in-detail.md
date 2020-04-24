@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: dbff4bed59c8d1e861555676578b52528e2aebbe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f8bb862ce443fd7397036b10f69cda65a6960bc
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186188"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646146"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 语法详述
 本主题定义用于描述 XAML 语法元素的术语。 这些术语在本文档的其余部分中经常使用，具体用于 WPF 文档，以及使用 XAML 或其他框架的其他框架，这些框架或在 System.Xaml 级别启用的 XAML 语言支持。 本主题将展开主题[XAML 概述 （WPF）](../../../desktop-wpf/fundamentals/xaml.md)中介绍的基本术语。  
@@ -130,7 +130,7 @@ ms.locfileid: "79186188"
   
  还可以使用*typeName*从可通过默认命名空间访问的任何对象命名任何事件。*事件*部分限定名称;此语法支持为路由事件附加处理程序，其中处理程序旨在处理来自子元素的事件路由，但父元素的成员表中也没有该事件。 此语法类似于附加的事件语法，但此处的事件不是真正的附加事件。 相反，您引用的事件具有限定名称。 有关详细信息，请参阅[路由事件概述](routed-events-overview.md)。  
   
- 对于某些方案，属性名称有时作为属性的值提供，而不是属性名称。 该属性名称还可以包括限定符，例如窗体*所有者类型*中指定的属性。*属项属性名称*。 在 XAML 中编写样式或模板时，此方案很常见。 作为属性值提供的属性名称的处理规则不同，并且受要设置的属性类型或特定 WPF 子系统的行为控制。 有关详细信息，请参阅[样式和模板](../controls/styling-and-templating.md)化。  
+ 对于某些方案，属性名称有时作为属性的值提供，而不是属性名称。 该属性名称还可以包括限定符，例如窗体*所有者类型*中指定的属性。*属项属性名称*。 在 XAML 中编写样式或模板时，此方案很常见。 作为属性值提供的属性名称的处理规则不同，并且受要设置的属性类型或特定 WPF 子系统的行为控制。 有关详细信息，请参阅[样式和模板](../../../desktop-wpf/fundamentals/styles-templates-overview.md)化。  
   
  属性名称的另一个用法是属性值描述属性-属性关系时。 此功能用于数据绑定和情节提要目标，并且由<xref:System.Windows.PropertyPath>类及其类型转换器启用。 有关查找语义的更完整说明，请参阅[属性路径 XAML 语法](propertypath-xaml-syntax.md)。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "79186188"
   
  在集合类型的 .NET 参考页中，在 XAML 语法部分中偶尔会将此语法与集合对象元素的故意省略记录称为隐式集合语法。  
   
- 除根元素外，作为另一个元素的子元素嵌套的 XAML 文件中的每个对象元素实际上是一个元素，它是以下一种情况之一或两种情况：其父元素的隐式集合属性的成员或指定父元素的 XAML 内容属性的值的元素（XAML 内容属性将在下一节中讨论）。 换句话说，标记页中的父元素和子元素的关系实际上是根上的单个对象，根下方的每个对象元素要么是提供父元素属性值的单个实例，要么是也是父级的集合类型属性值的集合。 这种单根概念在 XML 中很常见，并且在加载 XAML（如<xref:System.Windows.Markup.XamlReader.Load%2A>） 的 API 行为中经常被强化。  
+ 除根元素外，作为另一个元素的子元素嵌套的 XAML 文件中的每个对象元素实际上是一个元素，它是以下一种情况之一或两种情况：其父元素的隐式集合属性的成员，或指定父元素 XAML 内容属性值的元素（XAML 内容属性将在下一节中讨论）。 换句话说，标记页中的父元素和子元素的关系实际上是根上的单个对象，根下方的每个对象元素要么是提供父项属性值的单个实例，要么是集合中的项之一，也是父级的集合类型属性值。 这种单根概念在 XML 中很常见，并且在加载 XAML（如<xref:System.Windows.Markup.XamlReader.Load%2A>） 的 API 行为中经常被强化。  
   
  下面的示例是显式指定的集合的对象元素 （<xref:System.Windows.Media.GradientStopCollection>的语法。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "79186188"
   
 <a name="content_properties_and_collection_syntax_combined"></a>
 ## <a name="content-properties-and-collection-syntax-combined"></a>内容属性和集合语法组合  
- 为了接受多个对象元素作为内容，内容属性的类型必须特别为集合类型。 与集合类型的属性元素语法类似，XAML 处理器必须标识集合类型的类型。 如果元素具有 XAML 内容属性，并且 XAML 内容属性的类型是集合，则隐含的集合类型不需要在标记中指定为对象元素，并且不需要将 XAML 内容属性指定为属性元素。 因此，标记中的明显内容模型现在可以将多个子元素指定为内容。 以下是<xref:System.Windows.Controls.Panel>派生类的内容语法。 所有<xref:System.Windows.Controls.Panel>派生类都建立 XAML 内容属性<xref:System.Windows.Controls.Panel.Children%2A>，这需要 类型的<xref:System.Windows.Controls.UIElementCollection>值 。  
+ 为了接受多个对象元素作为内容，内容属性的类型必须特别为集合类型。 与集合类型的属性元素语法类似，XAML 处理器必须标识集合类型的类型。 如果元素具有 XAML 内容属性，并且 XAML 内容属性的类型是集合，则隐含集合类型不需要在标记中指定为对象元素，并且不需要将 XAML 内容属性指定为属性元素。 因此，标记中的明显内容模型现在可以将多个子元素指定为内容。 以下是<xref:System.Windows.Controls.Panel>派生类的内容语法。 所有<xref:System.Windows.Controls.Panel>派生类都建立 XAML 内容属性<xref:System.Windows.Controls.Panel.Children%2A>，这需要 类型的<xref:System.Windows.Controls.UIElementCollection>值 。  
   
  [!code-xaml[XAMLOvwSupport#SyntaxContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
   
@@ -316,7 +316,7 @@ ms.locfileid: "79186188"
 ## <a name="see-also"></a>另请参阅
 
 - [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [XAML 命名空间 (x:) 语言功能](../../../desktop-wpf/xaml-services/namespace-language-features.md)
+- [XAML 命名空间 (x:)语言功能](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [WPF XAML 扩展](wpf-xaml-extensions.md)
 - [依赖项属性概述](dependency-properties-overview.md)
 - [TypeConverters 和 XAML](typeconverters-and-xaml.md)

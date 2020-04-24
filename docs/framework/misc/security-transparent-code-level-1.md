@@ -9,12 +9,12 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: 980c684bced685a61ad82ff5713ccff2b974028f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f6c6ecd9ecab8c531be971a0e7896994127beb8
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181131"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645749"
 ---
 # <a name="security-transparent-code-level-1"></a>安全透明代码，级别 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -59,7 +59,7 @@ ms.locfileid: "79181131"
 ## <a name="transparency-attributes"></a>透明度特性  
  下表介绍可用于批注代码透明度的三个特性。  
   
-|Attribute|说明|  
+|特性|描述|  
 |---------------|-----------------|  
 |<xref:System.Security.SecurityTransparentAttribute>|只允许在程序集级别上应用。 将程序集中的所有类型和成员都标识为安全透明。 程序集不能包含任何安全关键代码。|  
 |<xref:System.Security.SecurityCriticalAttribute>|不带 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 属性在程序集级别使用时，默认将程序集中的所有代码都标识为安全透明的代码，但会指出程序集可能包含安全关键代码。<br /><br /> 在类级别使用时，将类或方法标识为安全关键，但不会如此标识类的成员。 若要使所有成员都成为安全关键成员，请将 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 属性设置为 <xref:System.Security.SecurityCriticalScope.Everything>。<br /><br /> 在成员级别使用时，特性仅应用于相应的成员。<br /><br /> 标识为安全关键的类或成员可以执行特权提升。 **重要提示：** 在级别 1 透明度中，当从程序集外部调用安全关键类型和成员时，它们将被视为安全关键类型。 应该通过针对完全信任的链接要求来保护安全关键类型和成员，以避免未经授权的特权提升。|  
@@ -131,4 +131,4 @@ public class B
 ## <a name="see-also"></a>另请参阅
 
 - [安全透明的代码，级别 2](security-transparent-code-level-2.md)
-- [安全更改](../security/security-changes.md)
+- [安全更改](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6fc54bb9e38768e390201ea77243d3df4cd67f10
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b0f269bd4dce8ddaaaa72c3760a4d7a0e3eb8b9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151736"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646018"
 ---
 # <a name="code-access-security-and-adonet"></a>代码访问安全性和 ADO.NET
 .NET Framework 提供基于角色的安全性和代码访问安全性 (CAS)，这两种安全性都可以通过公共语言运行库 (CLR) 提供的公共基础结构实现。 对于非托管代码，大多数应用程序都可以使用用户或主体权限执行。 因此，当拥有提升权限的用户运行恶意软件或包含错误的软件时，计算机系统可能会受到损坏并危及私有数据。  
@@ -50,7 +50,7 @@ ms.locfileid: "79151736"
  根据要生成的应用程序类型，还应考虑在数据库中实现基于角色的权限。 有关 SQL Server 中基于角色的安全性的详细信息，请参阅[SQL Server 安全性](./sql/sql-server-security.md)。  
   
 ## <a name="assemblies"></a>程序集  
- 程序集构成 .NET Framework 应用程序部署、版本控制、重复使用、激活范围和安全权限的基本单元。 程序集提供类型和资源的集合，二者结合在一起构成功能的逻辑单元。 对于 CLR，类型不存在于程序集的上下文之外。 有关创建和部署程序集的详细信息，请参阅[使用程序集进行编程](../../../standard/assembly/program.md)。  
+ 程序集构成 .NET Framework 应用程序部署、版本控制、重复使用、激活范围和安全权限的基本单元。 程序集提供类型和资源的集合，二者结合在一起构成功能的逻辑单元。 对于 CLR，类型不存在于程序集的上下文之外。 有关创建和部署程序集的详细信息，请参阅[使用程序集进行编程](../../../standard/assembly/index.md)。  
   
 ### <a name="strong-naming-assemblies"></a>强命名程序集  
  强名称（或数字签名）由程序集的标识组成，该标识包括程序集的简单文本名称、版本号和区域性信息（如果提供）、公钥和数字签名。 数字签名使用相应私钥从程序集文件生成。 程序集文件包含程序集清单，该清单包含组成程序集的所有文件的名称和哈希。  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: facb9ebebd9ce1904886a946277185ac2c2e4bc4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 9381873faa8cca1accf95d823f5183a218d28813
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463928"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646419"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>教程：在 Visual Studio 2019 中创建您的第一个 WPF 应用程序
 
@@ -358,7 +358,7 @@ ms.locfileid: "81463928"
 
 ## <a name="style-controls"></a>样式控件
 
-对于 UI 中相同类型的所有元素，各种元素的外观通常相同。 UI 使用[样式](../controls/styling-and-templating.md)使外观可跨多个元素重用。 样式的可重用性有助于简化 XAML 的创建和管理。 本部分替换在以前步骤中通过样式定义的按元素划分的属性。
+对于 UI 中相同类型的所有元素，各种元素的外观通常相同。 UI 使用[样式](../../../desktop-wpf/fundamentals/styles-templates-overview.md)使外观可跨多个元素重用。 样式的可重用性有助于简化 XAML 的创建和管理。 本部分替换在以前步骤中通过样式定义的按元素划分的属性。
 
 1. 打开*应用程序.xaml*或*App.xaml*。
 
@@ -481,7 +481,7 @@ ms.locfileid: "81463928"
 在本演练中，您学习了使用 Windows 演示文稿基础 （WPF） 创建 UI 的多种技术。 现在，您应该对数据绑定 .NET 应用的构建基块有基本的了解。 有关 WPF 体系结构和编程模型的详细信息，请参阅以下主题：
 
 - [WPF 架构](../advanced/wpf-architecture.md)
-- [XAML 概述 （WPF）](../advanced/xaml-overview-wpf.md)
+- [XAML 概述 （WPF）](../../../desktop-wpf/fundamentals/xaml.md)
 - [依赖项属性概述](../advanced/dependency-properties-overview.md)
 - [布局](../advanced/layout.md)
 
@@ -493,7 +493,7 @@ ms.locfileid: "81463928"
 - [图形和多媒体](../graphics-multimedia/index.md)
 - [WPF 中的文档](../advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [面板概述](../controls/panels-overview.md)
 - [数据模板概述](../data/data-templating-overview.md)

@@ -7,33 +7,33 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 7b4811290d58b946bd9f115cb15d5eb0fda03b1d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 00525e8bd085126e15de9c80bdd5fc0106d565d6
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741876"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646165"
 ---
 # <a name="xaml-in-wpf"></a>WPF 中的 XAML
 
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 是一种用于声明性应用程序编程的标记语言。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 实现 XAML 处理器实现并提供 XAML 语言支持。 实现 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 类型，以便它们可以为 XAML 表示形式提供所需的类型支持。 通常，你可以在 XAML 标记中创建大多数 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序 UI。  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]是声明性应用程序编程的标记语言。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]实现 XAML 处理器实现并提供 XAML 语言支持。 这些[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]类型是实现的，以便它们可以为 XAML 表示提供所需的类型支持。 通常，您可以在 XAML 标记中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]创建大多数应用程序 UI。  
   
 ## <a name="in-this-section"></a>本节内容  
 
-[XAML 概述 (WPF)](xaml-overview-wpf.md)  
+[XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)  
 [XAML 语法详述](xaml-syntax-in-detail.md)  
 [WPF 中的代码隐藏和 XAML](code-behind-and-xaml-in-wpf.md)  
 [XAML 及 WPF 的自定义类](xaml-and-custom-classes-for-wpf.md)  
 [标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)  
 [WPF XAML 的 XAML 命名空间和命名空间映射](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
 [WPF XAML 名称范围](wpf-xaml-namescopes.md)  
-[嵌入式样式和模板](inline-styles-and-templates.md)  
+[内联样式和模板](inline-styles-and-templates.md)  
 [XAML 中的空白处理](../../../desktop-wpf/xaml-services/white-space-processing.md)  
-[TypeConverter 和 XAML](typeconverters-and-xaml.md)  
+[TypeConverters 和 XAML](typeconverters-and-xaml.md)  
 [XML 字符实体和 XAML](../../../desktop-wpf/xaml-services/xml-character-entities.md)  
-[XAML 命名空间 (x:) 语言功能](../../../desktop-wpf/xaml-services/namespace-language-features.md)  
+[XAML 命名空间 (x:)语言功能](../../../desktop-wpf/xaml-services/namespace-language-features.md)  
 [WPF XAML 扩展](wpf-xaml-extensions.md)  
-[标记兼容 (mc:) 语言功能](markup-compatibility-mc-language-features.md)  
+[标记兼容 (mc:)语言功能](markup-compatibility-mc-language-features.md)  
   
 ## <a name="related-sections"></a>相关章节  
 
@@ -45,4 +45,4 @@ ms.locfileid: "76741876"
 [输入](input-wpf.md)  
 [资源](resources-wpf.md)  
 [样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
-[线程模型](threading-model.md)
+[线程处理模型](threading-model.md)

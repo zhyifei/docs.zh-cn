@@ -2,12 +2,12 @@
 title: 集合
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: ba16d04e781bcf69356b1f603d92e104816a0860
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 232b9ec7b5975092e73daf0a7384fa816f55f72f
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401411"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646342"
 ---
 # <a name="collections-visual-basic"></a>集合 (Visual Basic)
 
@@ -536,7 +536,7 @@ End Class
 
 <a name="BKMK_Iterators"></a>
 
-## <a name="iterators"></a>Iterators
+## <a name="iterators"></a>迭代器
 
 迭代器** 用于对集合执行自定义迭代。 迭代器可以是一种方法，或是一个 `get` 访问器。 迭代器使用[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)语句一次返回集合的每个元素一个。
 
@@ -570,11 +570,11 @@ End Function
 
 ## <a name="see-also"></a>另请参阅
 
-- [集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
+- [集合初始化器](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
 - [编程概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
-- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [并行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [并行 LINQ (PLINQ)](../../../standard/parallel-programming/introduction-to-plinq.md)
 - [集合和数据结构](../../../standard/collections/index.md)
 - [选择集合类](../../../standard/collections/selecting-a-collection-class.md)
 - [集合内的比较和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)

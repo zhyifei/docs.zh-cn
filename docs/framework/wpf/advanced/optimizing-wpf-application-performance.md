@@ -1,5 +1,5 @@
 ---
-title: 优化应用程序性能
+title: 优化应用性能
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application rendering [WPF], performance
@@ -7,27 +7,27 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: cc6ea051401199a87965565c920068fd55cb05d0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 54d69e87ef2a9c5318e394422e3bcfcabcc76210
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743945"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646247"
 ---
 # <a name="optimizing-wpf-application-performance"></a>优化 WPF 应用程序性能
-本部分旨在作为正在寻找提高应用程序性能的方法的 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序开发人员的参考。 如果你是 Microsoft .NET 框架和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的新手的开发人员，则应首先熟悉这两个平台。 本部分假设同时了解这两种情况，并为已知道足以启动并运行应用程序的程序员编写这些内容。  
+本节旨在为[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]寻求提高应用程序性能的应用程序开发人员提供参考。 如果您是 Microsoft .NET 框架的开发人员，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]并且 应首先熟悉这两个平台。 本节假定两者的工作知识，并编写给已经了解到足以启动和运行其应用程序的程序员。  
   
 > [!NOTE]
-> 本部分中提供的性能数据基于使用 512 RAM 和 ATI Radeon 9700 图形卡的 2.8 GHz 电脑上运行的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序。  
+> 本节中提供的性能数据基于[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]在具有 512 RAM 的 2.8 GHz PC 和 ATI Radeon 9700 显卡上运行的应用程序。  
   
 ## <a name="in-this-section"></a>本节内容  
  [规划应用程序性能](planning-for-application-performance.md)  
   
  [利用硬件](optimizing-performance-taking-advantage-of-hardware.md)  
   
- [布局和设计](optimizing-performance-layout-and-design.md)  
+ [布局和示例](optimizing-performance-layout-and-design.md)  
   
- [2D 图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)  
+ [二维图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)  
   
  [对象行为](optimizing-performance-object-behavior.md)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "76743945"
   
  [数据绑定](optimizing-performance-data-binding.md)  
   
- [控制](optimizing-performance-controls.md)  
+ [控件](optimizing-performance-controls.md)  
   
  [其他性能建议](optimizing-performance-other-recommendations.md)  
   
@@ -48,14 +48,14 @@ ms.locfileid: "76743945"
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>
 - [图形呈现层](graphics-rendering-tiers.md)
-- [WPF 图形呈现概述](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [WPF 图形呈现疑难解答](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [布局](layout.md)
 - [WPF 中的树](trees-in-wpf.md)
 - [Drawing 对象概述](../graphics-multimedia/drawing-objects-overview.md)
 - [使用 DrawingVisual 对象](../graphics-multimedia/using-drawingvisual-objects.md)
 - [依赖项属性概述](dependency-properties-overview.md)
 - [Freezable 对象概述](freezable-objects-overview.md)
-- [XAML 资源](xaml-resources.md)
+- [XAML 资源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [WPF 中的文档](documents-in-wpf.md)
 - [绘制格式化文本](drawing-formatted-text.md)
 - [WPF 中的版式](typography-in-wpf.md)

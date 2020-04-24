@@ -7,18 +7,18 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-ms.openlocfilehash: 7ac5660c2c431505f4992f5e687974c2b9d06672
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 12e991e4977b0866343158c05681ddf4bd0c869b
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217000"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645736"
 ---
 # <a name="security-transparent-code-level-2"></a>安全透明的代码，级别 2
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-.NET Framework 4 中引入了2级透明度。 此模型的三条原则是透明代码、安全可靠关键代码和安全关键代码。
+在 .NET 框架 4 中引入了 2 级透明度。 此模型的三条原则是透明代码、安全可靠关键代码和安全关键代码。
 
 - 透明代码（包括以完全信任权限运行的代码）只能调用其他透明代码或安全可靠关键代码。 它只能执行域的部分信任权限集（如果存在）允许的操作。 透明代码不能：
 
@@ -42,7 +42,7 @@ ms.locfileid: "77217000"
 
 ## <a name="usage-examples-and-behaviors"></a>用法示例和行为
 
-若要指定 .NET Framework 4 规则（2级透明度），请对程序集使用以下批注：
+要指定 .NET 框架 4 规则（第 2 级透明度），请使用以下注释进行程序集：
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -54,7 +54,7 @@ ms.locfileid: "77217000"
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-如果不对程序集添加批注，则默认情况下将使用 .NET Framework 4 规则。 但是，建议的最佳做法是使用 <xref:System.Security.SecurityRulesAttribute> 特性，而不是根据默认值。
+如果不对程序集进行编号，则默认情况下将使用 .NET 框架 4 规则。 但是，建议的最佳做法是使用 属性<xref:System.Security.SecurityRulesAttribute>，而不是根据默认值。
 
 ### <a name="assembly-wide-annotation"></a>程序集范围的批注
 
@@ -68,7 +68,7 @@ ms.locfileid: "77217000"
 
 - `AllowPartiallyTrustedCallers`（仅 2 级）：所有代码默认都是透明的。 但是，各个类型和成员可以有其他特性。
 
-下表将级别2的程序集级别行为与第1级比较。
+下表将级别 2 的程序集级别行为与级别 1 进行比较。
 
 |程序集属性|级别 2|级别 1|
 |------------------------|-------------|-------------|
@@ -165,19 +165,19 @@ ms.locfileid: "77217000"
 以下属性已添加到 <xref:System.Reflection> 命名空间，以确定类型、方法或字段是否为 `SecurityCritical``SecuritySafeCritical` 或 `SecurityTransparent`：<xref:System.Type.IsSecurityCritical%2A>、<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> 和 <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>。 使用这些属性可通过反射而非检查特性是否存在确定透明度。 透明度规则比较复杂，检查特性可能不够充分。
 
 > [!NOTE]
-> `SafeCritical` 方法同时返回 <xref:System.Type.IsSecurityCritical%2A> 和 <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>`true`，因为 `SafeCritical` 确实非常关键（它具有与关键代码相同的功能，但可以从透明代码调用）。
+> 方法`SafeCritical`返回`true`和<xref:System.Type.IsSecurityCritical%2A> <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>，因为`SafeCritical`确实至关重要（它具有与关键代码相同的功能，但可以从透明代码调用它）。
 
 动态方法继承其附加到的模块的透明度；他们不继承类型的透明度（如果它们附加到一个类型）。
 
 ### <a name="skip-verification-in-full-trust"></a>在完全信任的环境中跳过验证
 
-你可以通过在 <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 特性中将 `true` 属性设置为 <xref:System.Security.SecurityRulesAttribute>，跳过完全信任的透明程序集的验证。
+你可以通过在 <xref:System.Security.SecurityRulesAttribute> 特性中将 <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 属性设置为 `true`，跳过完全信任的透明程序集的验证。
 
 `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`
 
-<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 属性默认为 `false`，因此该属性必须设置为 `true` 才能跳过验证。 只能出于优化目的跳过验证。 应通过使用[peverify.exe 工具](../tools/peverify-exe-peverify-tool.md)中的 `transparent` 选项来确保程序集中的透明代码是可验证的。
+<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 属性默认为 `false`，因此该属性必须设置为 `true` 才能跳过验证。 只能出于优化目的跳过验证。 您应该通过使用`transparent`[PEVerify 工具](../tools/peverify-exe-peverify-tool.md)中的选项确保程序集中的透明代码是可验证的。
 
 ## <a name="see-also"></a>另请参阅
 
-- [安全透明代码，级别1](security-transparent-code-level-1.md)
-- [安全更改](../security/security-changes.md)
+- [安全透明代码，级别 1](security-transparent-code-level-1.md)
+- [安全更改](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)

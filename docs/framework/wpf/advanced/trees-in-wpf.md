@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 696772da1ebee405493f2ff0e1481daf93d08ec7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aed4350f1a7084b7894a70ac9d6d00cf25b39e34
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187022"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646201"
 ---
 # <a name="trees-in-wpf"></a>WPF 中的树
 在许多技术中，元素和组件都按树结构的形式组织。在这种结构中，开发人员可以直接操作树中的对象节点来影响应用程序的绘制或行为。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也使用了若干树结构形式来定义程序元素之间的关系。 多数情况下，在概念层面考虑对象树形式时，WPF 开发人员会用代码创建应用程序，或用 XAML 定义应用程序的组成部分，但他们会调用具体的 API 或使用特定的标记来执行此操作，而不是像在 XML DOM 中那样，使用某些常规对象树操作 API。 WPF 公开两个提供树隐喻视图的帮助器类，<xref:System.Windows.LogicalTreeHelper>和<xref:System.Windows.Media.VisualTreeHelper>。 WPF 文档中还使用了“可视化树”和“逻辑树”两个术语，它们有助于理解某些关键 WPF 功能的行为。 本主题定义可视化树和逻辑树代表的内容，讨论此类树与整体对象树概念的关系，并介绍<xref:System.Windows.LogicalTreeHelper>和。 <xref:System.Windows.Media.VisualTreeHelper>  
@@ -37,7 +37,7 @@ ms.locfileid: "79187022"
   
  但是，逻辑树不是应用程序 UI 在运行时存在的整个对象图，即使不考虑 XAML 隐式语法项也是如此。主要原因是视觉对象和模板。 例如，请考虑 。 <xref:System.Windows.Controls.Button> 逻辑树报告<xref:System.Windows.Controls.Button>对象及其字符串`Content`。 但在运行时对象树中，此按钮还有更多内容。 特别是，该按钮仅以它的方式出现在屏幕上，因为应用了特定的<xref:System.Windows.Controls.Button>控件模板。 来自应用模板的可视化对象（如视觉按钮周围的深灰色模板定义<xref:System.Windows.Controls.Border>）不会在逻辑树中报告，即使您在运行时查看逻辑树（例如处理来自可见 UI 的输入事件，然后读取逻辑树）。 若要查找模板视觉对象，需要改为检查可视化树。  
   
- 有关 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法如何映射到所创建的对象图，以及 XAML 中隐式语法的详细信息，请参阅 [XAML 语法详述](xaml-syntax-in-detail.md)或 [XAML 概述 (WPF)](xaml-overview-wpf.md)。  
+ 有关 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法如何映射到所创建的对象图，以及 XAML 中隐式语法的详细信息，请参阅 [XAML 语法详述](xaml-syntax-in-detail.md)或 [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)。  
   
 <a name="tree_property_inheritance_event_routing"></a>
 ### <a name="the-purpose-of-the-logical-tree"></a>逻辑树用途  
@@ -87,7 +87,7 @@ ms.locfileid: "79187022"
 ## <a name="see-also"></a>另请参阅
 
 - [输入概述](input-overview.md)
-- [WPF 图形呈现概述](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [WPF 图形呈现疑难解答](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [路由事件概述](routed-events-overview.md)
 - [不在对象树中的对象元素的初始化](initialization-for-object-elements-not-in-an-object-tree.md)
 - [WPF 体系结构](wpf-architecture.md)
