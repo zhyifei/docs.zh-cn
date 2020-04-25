@@ -393,7 +393,7 @@
       href: styles-and-templates.md
       items:
         - name: 样式设置和模板化
-          href: styling-and-templating.md
+          href: ../../../desktop-wpf/fundamentals/styles-templates-overview.md
         - name: 使用 ControlTemplate 自定义现有控件
           href: ../../../desktop-wpf/themes/how-to-create-apply-template.md
         - name: 如何：查找由 ControlTemplate 生成的元素

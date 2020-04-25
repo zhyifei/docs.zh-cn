@@ -295,7 +295,7 @@
           href: linq-to-xml-for-xpath-users.md
           items:
             - name: XPath 和 LINQ to XML 的比较
-              href: comparison-of-xpath-and-linq-to-xml.md
+              href: ../../../../csharp/programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md
             - name: 如何：查找子元素 (XPath-LINQ to XML)
               href: how-to-find-a-child-element-xpath-linq-to-xml.md
             - name: 如何：查找子元素列表 (XPath-LINQ to XML)
