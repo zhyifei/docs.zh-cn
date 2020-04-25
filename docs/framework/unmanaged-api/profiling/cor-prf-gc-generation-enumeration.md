@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d6ece160-26ad-4d39-abd7-05acd6f78c48
 topic_type:
 - apiref
-ms.openlocfilehash: 4eff8472e353c4e5fd2505b281cc9efc89f013fc
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 0eb1f57e3505f9ce5bb8b831d30c3891e51097c3
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867202"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158562"
 ---
 # <a name="cor_prf_gc_generation-enumeration"></a>COR_PRF_GC_GENERATION 枚举
 标识垃圾回收生成。  
@@ -31,34 +31,38 @@ typedef enum {
     COR_PRF_GC_GEN_0 = 0,  
     COR_PRF_GC_GEN_1 = 1,  
     COR_PRF_GC_GEN_2 = 2,  
-    COR_PRF_GC_LARGE_OBJECT_HEAP = 3  
+    COR_PRF_GC_LARGE_OBJECT_HEAP = 3,
+    COR_PRF_GC_PINNED_OBJECT_HEAP= 4
 } COR_PRF_GC_GENERATION;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`COR_PRF_GC_GEN_0`|对象存储为第0代。|  
 |`COR_PRF_GC_GEN_1`|对象存储为第1代。|  
 |`COR_PRF_GC_GEN_2`|对象存储为第2代。|  
 |`COR_PRF_GC_LARGE_OBJECT_HEAP`|对象存储在大型对象堆中。|  
+|`COR_PRF_GC_PINNED_OBJECT_HEAP`|对象存储在固定对象堆中。|  
   
 ## <a name="remarks"></a>备注  
- 垃圾回收器通过将对象划分为基于年龄的代来改善内存管理性能。 垃圾回收器当前使用三代，编号为0、1和2，以及用于大型对象的特殊堆段。 大小大于特定值的对象存储在大型对象堆中。 其他已分配对象开始属于0代。 发生垃圾回收后存在的所有对象都将升级到第1代。 在第1代中发生垃圾回收后存在的对象将移入第2代。  
+ 垃圾回收器通过将对象划分为基于年龄的代来改善内存管理性能。 垃圾回收器当前使用三个代，编号为0、1和2，以及两个特殊堆段，一个用于大型对象，一个用于固定的对象。
+  
+ 大小大于阈值的对象存储在大对象堆中。 固定的对象可以分配给固定对象堆，以避免在正常堆上分配这些对象的性能成本。 其他已分配对象开始属于0代。 发生垃圾回收后存在的所有对象都将升级到第1代。 在第1代中发生垃圾回收后存在的对象将移入第2代。  
   
  代的使用意味着垃圾回收器在任一时间只需要处理已分配对象的子集。  
   
- `COR_PRF_GC_GENERATION` 枚举由[COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md)结构使用。  
+ `COR_PRF_GC_GENERATION`枚举由[COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md)结构使用。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

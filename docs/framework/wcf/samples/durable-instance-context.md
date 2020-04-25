@@ -2,12 +2,12 @@
 title: 持久性实例上下文
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 3ff4cbcf7a6007339d98820384f5e2d4164d1b0b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 604a617dc03bf06b71fe3019b58b2161216ee3e0
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711941"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141189"
 ---
 # <a name="durable-instance-context"></a>持久性实例上下文
 
@@ -49,7 +49,7 @@ class DurableInstanceContextChannelBase
 }
 ```
 
-这两种方法使用所实现的 `IContextManager` 将上下文 ID 写入消息中或从消息中读取上下文 ID。 （`IContextManager` 是用于为所有上下文管理器定义协定的自定义接口。）通道可以在自定义 SOAP 标头或 HTTP cookie 标头中包含上下文 ID。 每个上下文管理器实现都继承自 `ContextManagerBase` 类，该类包含所有上下文管理器的常用功能。 使用该类中的 `GetContextId` 方法，可以客户端中产生上下文 ID。 首次产生某个上下文 ID 时，此方法会将该上下文 ID 保存到一个文本文件中，该文件的名称是由远程终结点地址构造的（典型 URI 中的无效文件名字符会替换为 @ 字符）。
+这两种方法使用所实现的 `IContextManager` 将上下文 ID 写入消息中或从消息中读取上下文 ID。 （`IContextManager`是用于为所有上下文管理器定义协定的自定义接口。）通道可以在自定义 SOAP 标头或 HTTP cookie 标头中包含上下文 ID。 每个上下文管理器实现都继承自 `ContextManagerBase` 类，该类包含所有上下文管理器的常用功能。 使用该类中的 `GetContextId` 方法，可以客户端中产生上下文 ID。 首次产生某个上下文 ID 时，此方法会将该上下文 ID 保存到一个文本文件中，该文件的名称是由远程终结点地址构造的（典型 URI 中的无效文件名字符会替换为 @ 字符）。
 
 以后，当需要针对同一个远程终结点使用该上下文 ID 时，此方法会检查是否存在相应的文件。 如果存在的话，此方法会读取并返回该上下文 ID。 否则，此方法会返回一个新生成的上下文 ID 并将其保存到文件中。 使用默认配置时，这些文件会放在名为 ContextStore 的目录中，该目录位于当前用户的临时目录中。 不过，可以使用绑定元素来配置此位置。
 
@@ -122,7 +122,7 @@ if (isFirstMessage)
 }
 ```
 
-然后，`DurableInstanceContextBindingElement` 类将这些通道实现添加到 WCF 信道运行时，并相应地 `DurableInstanceContextBindingElementSection` 类添加。 有关绑定元素和绑定元素部分的详细信息，请参阅[HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)信道示例文档。
+然后， `DurableInstanceContextBindingElement`类和`DurableInstanceContextBindingElementSection`类会相应地将这些通道实现添加到 WCF 信道运行时。 有关绑定元素和绑定元素部分的详细信息，请参阅[HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)信道示例文档。
 
 ## <a name="service-model-layer-extensions"></a>服务模型层扩展
 
@@ -234,13 +234,13 @@ else
 
 作为此过程的第一步，我们必须保存已通过通道层到达当前 InstanceContext 的上下文 ID。 InstanceContext 是一个运行时组件，它充当 WCF 调度程序和服务实例之间的链接。 可用来向服务实例提供其他状态和行为。 这是必不可少的，因为在会话通信中，上下文 ID 仅随第一条消息发送。
 
-WCF 允许通过使用其可扩展对象模式添加新的状态和行为来扩展其 InstanceContext 运行时组件。 在 WCF 中使用可扩展对象模式，以使用新功能扩展现有的运行时类，或者向对象中添加新的状态功能。 可扩展对象模式中有三个接口-IExtensibleObject\<T >、IExtension\<T > 和 IExtensionCollection\<T >：
+WCF 允许通过使用其可扩展对象模式添加新的状态和行为来扩展其 InstanceContext 运行时组件。 在 WCF 中使用可扩展对象模式，以使用新功能扩展现有的运行时类，或者向对象中添加新的状态功能。 可扩展对象模式中有三个接口-IExtensibleObject\<t>、IExtension\<t> 和 IExtensionCollection\<t>：
 
-- IExtensibleObject\<T > 接口由允许自定义其功能的扩展的对象实现。
+- IExtensibleObject\<T> 接口由允许自定义其功能的扩展的对象实现。
 
-- IExtension\<T > 接口由属于类型为 T 的类的扩展的对象实现。
+- IExtension\<t> 接口由属于类型为 T 的类的扩展的对象实现。
 
-- IExtensionCollection\<T > 接口是允许按类型检索 Iextension 的 Iextension 集合。
+- IExtensionCollection\<T> 接口是 iextension 的集合，允许按类型检索 iextension。
 
 因此，应当创建一个 InstanceContextExtension 类，该类实现 IExtension 接口并定义保存上下文 ID 所必需的状态。 此类还提供用来存放正使用的存储管理器的状态。 在保存了新状态之后，就无法对其进行修改。 因此，状态是在构造实例时提供并保存到实例中的，之后，只能使用只读属性来进行访问。
 
@@ -351,7 +351,7 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
 
 剩下的就是通过某种方法来将服务实例保存到持久性存储中。 如上所述，已经有一个必需的功能来将状态保存在 `IStorageManager` 实现中。 现在，我们必须将此集成到 WCF 运行时。 需要另一个适用于服务实现类中的方法的属性。 此属性假设应用于对服务实例的状态进行更改的方法。
 
-`SaveStateAttribute` 类实现了此功能。 它还实现 `IOperationBehavior` 类来修改每个操作的 WCF 运行时。 使用此特性标记方法时，WCF 运行时将调用 `ApplyBehavior` 方法，同时构造适当的 `DispatchOperation`。 在该方法实现中，有下面的一行代码：
+`SaveStateAttribute` 类实现了此功能。 它还实现`IOperationBehavior`类以修改每个操作的 WCF 运行时。 使用此特性标记方法时，WCF 运行时将调用`ApplyBehavior`方法，同时构造适当`DispatchOperation`的。 在该方法实现中，有下面的一行代码：
 
 ```csharp
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);
@@ -401,6 +401,7 @@ public class ShoppingCart : IShoppingCart
 type="Microsoft.ServiceModel.Samples.DurableInstanceContextBindingElementSection, DurableInstanceContextExtension, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"/>
    </bindingElementExtensions>
  </extensions>
+</system.serviceModel>
 ```
 
 现在，可以像其他标准绑定元素那样，将该绑定元素用于自定义绑定：
@@ -457,6 +458,6 @@ Press ENTER to shut down client
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`

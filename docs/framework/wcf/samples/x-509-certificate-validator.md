@@ -2,18 +2,18 @@
 title: X.509 证书验证程序
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: 628e4e12e1eafb6101503a59e3393777f9c30989
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ba73381bb6211dcbd1ddad1457f9ae8611008d43
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424625"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141215"
 ---
 # <a name="x509-certificate-validator"></a>X.509 证书验证程序
 
 此示例演示如何实现自定义 X.509 证书验证程序。 当内置的 X.509 证书验证模式都不能满足应用程序的要求时，实现自定义证书验证程序很有用。 此示例演示了具有自定义验证程序的服务，该验证程序接受自行颁发的证书。 客户端使用此类证书对服务进行身份验证。
 
-注意:任何人都可以构造自行颁发的证书服务使用的自定义验证程序是安全性低于 ChainTrust x509certificatevalidationmode 提供的默认行为。 在成品代码中使用此验证逻辑之前，应慎重考虑这样做的安全隐患。
+注意：因为任何人都可以构造自行颁发的证书，所以服务使用的自定义验证程序的安全性低于 ChainTrust X509CertificateValidationMode 提供的默认行为。 在成品代码中使用此验证逻辑之前，应慎重考虑这样做的安全隐患。
 
 概括而言，此示例演示：
 
@@ -23,7 +23,7 @@ ms.locfileid: "67424625"
 
 - 如何使用服务器的 X.509 证书对服务器进行身份验证。
 
-服务会公开单一终结点以便与使用 App.config 配置文件定义的服务进行通信。终结点由地址、绑定和协定组成。 使用标准配置的绑定`wsHttpBinding`，默认情况下使用`WSSecurity`和客户端证书身份验证。 服务行为指定对客户端 X.509 证书进行验证的“自定义”模式以及验证程序类的类型。 该行为还使用 serviceCertificate 元素指定服务器证书。 服务器证书必须包含相同的值`SubjectName`作为`findValue`中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。
+服务公开一个终结点，以便与使用配置文件 App.config 定义的服务进行通信。终结点由地址、绑定和协定组成。 绑定配置为使用默认为使用`wsHttpBinding` `WSSecurity`和客户端证书身份验证的标准。 服务行为指定对客户端 X.509 证书进行验证的“自定义”模式以及验证程序类的类型。 该行为还使用 serviceCertificate 元素指定服务器证书。 服务器证书必须包含与[ \<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) `findValue`中相同的值`SubjectName` 。
 
 ```xml
   <system.serviceModel>
@@ -242,6 +242,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
        customCertificateValidatorType =
 "Microsoft.ServiceModel.Samples. CustomX509CertificateValidator, service" />
    </clientCertificate>
+   </serviceCredentials>
    ...
   </behavior>
  </serviceBehaviors>
@@ -304,22 +305,22 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
 #### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例
 
-1. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
+1. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
 2. 若要用单一计算机配置或跨计算机配置来运行示例，请按照下列说明进行操作。
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例
 
-1. 从 Visual Studio 2012 命令提示符下使用管理员特权打开内示例安装文件夹运行 Setup.bat。 这将安装运行示例所需的所有证书。
+1. 从使用管理员特权打开的 Visual Studio 2012 命令提示符下的示例安装文件夹中运行安装程序。 这将安装运行示例所需的所有证书。
 
     > [!IMPORTANT]
-    > Setup.bat 批处理文件旨在为从 Visual Studio 2012 命令提示运行。 在 Visual Studio 2012 命令提示符点设置为包含 Setup.bat 脚本所需的可执行文件的目录路径环境变量。
+    > 设置 bat 批处理文件设计为在 Visual Studio 2012 命令提示符下运行。 在 Visual Studio 2012 命令提示符中设置的 PATH 环境变量指向包含安装程序 bat 脚本所需的可执行文件的目录。
 
 2. 启动 service\bin 中的 Service.exe。
 
 3. 启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。
 
-4. 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
+4. 如果客户端和服务无法进行通信，请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
 
 #### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例
 
@@ -331,29 +332,29 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
 4. 将客户端程序文件复制到客户端计算机上的客户端目录中。 另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。
 
-5. 在服务器上运行`setup.bat service`使用管理员特权打开在 Visual Studio 的开发人员命令提示。 运行`setup.bat`与`service`参数与计算机的名称的完全限定域名创建一个服务证书并将服务证书导出到名为 Service.cer 的文件。
+5. 在服务器上，在`setup.bat service`使用管理员特权打开的 Visual Studio 开发人员命令提示中运行。 使用`setup.bat` `service`参数运行将使用计算机的完全限定的域名创建一个服务证书，并将服务证书导出到名为的文件。
 
-6. 编辑 Service.exe.config 以反映新的证书名称 (在`findValue`中的属性[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 与计算机的名称的完全限定域名相同。 此外更改中的计算机名称\<服务 > /\<baseAddresses > 元素从本地主机到服务计算机的完全限定名称。
+6. `findValue` [编辑\<serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)以反映新的证书名称（在>中的属性中），该名称与计算机的完全限定域名相同。 同时将\<service>/\<baseAddresses> 元素中的计算机名更改为服务计算机的完全限定名称。
 
 7. 将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。
 
-8. 在客户端上运行`setup.bat client`使用管理员特权打开在 Visual Studio 的开发人员命令提示。 如果使用 `setup.bat` 自变量运行 `client`，则会创建一个名为 client.com 的客户端证书，并将此客户端证书导出到名为 Client.cer 的文件中。
+8. 在客户端上， `setup.bat client`在使用管理员特权打开的 Visual Studio 开发人员命令提示中运行。 如果使用 `setup.bat` 自变量运行 `client`，则会创建一个名为 client.com 的客户端证书，并将此客户端证书导出到名为 Client.cer 的文件中。
 
 9. 在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。 通过用服务器的完全限定域名替换 localhost 来执行此操作。
 
 10. 将客户端目录中的 Client.cer 文件复制到服务器上的服务目录中。
 
-11. 在客户端上运行 ImportServiceCert.bat 在开发人员命令提示符下使用管理员特权打开 Visual Studio。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。
+11. 在客户端上，在使用管理员特权打开的 Visual Studio 开发人员命令提示中运行 Importservicecert.bat。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。
 
-12. 在服务器上，运行 ImportClientCert.bat 在开发人员命令提示符下使用管理员特权打开 Visual Studio。 这会将 Client.cer 文件中的客户端证书导入 LocalMachine - TrustedPeople 存储区。
+12. 在服务器上，在使用管理员特权打开的 Visual Studio 开发人员命令提示中运行 Importclientcert.bat。 这会将 Client.cer 文件中的客户端证书导入 LocalMachine - TrustedPeople 存储区。
 
 13. 在服务器计算机上，从命令提示窗口中启动 Service.exe。
 
-14. 在客户端计算机上，从命令提示窗口中启动 Client.exe。 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
+14. 在客户端计算机上，从命令提示窗口中启动 Client.exe。 如果客户端和服务无法进行通信，请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
 
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理
 
 1. 运行完示例后运行示例文件夹中的 Cleanup.bat。 这将从证书存储区中移除服务器和客户端证书。
 
 > [!NOTE]
-> 此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 若要执行此操作，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
+> 此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果你已运行跨计算机使用证书 Windows Communication Foundation （WCF）示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
