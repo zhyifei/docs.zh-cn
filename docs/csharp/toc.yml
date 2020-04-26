@@ -119,8 +119,8 @@
       href: programming-guide/types/index.md
     - name: 可为空引用类型
       href: nullable-references.md
-    - name: 将 API 签名更新为可为空的引用
-      href: nullable-attributes.md
+    - name: 选择用于启用可为空引用类型的策略
+      href: nullable-migration-strategies.md
     - name: 命名空间
       href: programming-guide/namespaces/index.md
     - name: 基本类型
@@ -1200,6 +1200,8 @@
               href: programming-guide/xmldoc/exception.md
             - name: <include>
               href: programming-guide/xmldoc/include.md
+            - name: <inheritdoc>
+              href: programming-guide/xmldoc/inheritdoc.md
             - name: <list>
               href: programming-guide/xmldoc/list.md
             - name: <para>

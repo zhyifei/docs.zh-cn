@@ -20,6 +20,8 @@
       href: install/how-to-detect-installed-versions.md
     - name: Linux 包管理器
       items:
+        - name: Ubuntu 20.04
+          href: install/linux-package-manager-ubuntu-2004.md
         - name: Ubuntu 19.10
           href: install/linux-package-manager-ubuntu-1910.md
         - name: Ubuntu 19.04
@@ -351,7 +353,7 @@
     - name: 移植 Windows 窗体项目
       href: porting/winforms.md
     - name: 移植 WPF 项目
-      href: porting/wpf.md
+      href: ../desktop-wpf/migration/convert-project-from-net-framework.md
     - name: 端口 C++/CLI 项目
       href: porting/cpp-cli.md
 - name: 单元测试
@@ -418,7 +420,7 @@
         - name: 使用插件创建 .NET Core 应用程序
           href: tutorials/creating-app-with-plugin-support.md
         - name: 如何在 .NET Core 中使用和调试程序集可卸载性
-          href: ../standard/assembly/unloadability-howto.md
+          href: ../standard/assembly/unloadability.md
 - name: .NET Core 分发打包
   href: distribution-packaging.md
 - name: 向 COM 公开 .NET Core 组件

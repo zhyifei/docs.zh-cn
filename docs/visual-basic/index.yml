@@ -5,16 +5,20 @@ metadata:
   title: Visual Basic 文档 - 入门、教程、参考。
   description: 了解 .NET 中的 Visual Basic 编程 - 面向新手开发人员、刚开始接触 Visual Basic 的开发人员、以及经验丰富的 Visual Basic 开发人员
   ms.topic: landing-page
-  ms.date: 11/27/2019
-  ms.openlocfilehash: 9019ed13a6e9a02710ec063a6538a406f4940e21
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.date: 04/22/2020
+  ms.openlocfilehash: 0dba96b4d42085680a8e0aa25456ec756e8c9b42
+  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "75303428"
+  ms.lasthandoff: 04/24/2020
+  ms.locfileid: "82135784"
 landingContent:
 - title: 入门
   linkLists:
+  - linkListType: download
+    links:
+    - text: 下载 .NET SDK
+      url: https://dotnet.microsoft.com/download
   - linkListType: get-started
     links:
     - text: 使用 .NET Core 生成“Hello World”应用

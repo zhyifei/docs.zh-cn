@@ -3,19 +3,21 @@ title: 无服务器应用：体系结构、模式和 Azure 实现
 description: 无服务器体系结构指南。 了解何时、为何以及如何为企业应用程序实现无服务器体系结构（相对于基础结构即服务 [IaaS] 或平台即服务 [PaaS]）。
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: 9dea7dbccb5c9e125f792e6a7287a7dd2fad26f1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/22/2020
+ms.openlocfilehash: 16e658a99feda6537189a45b53da514e67766999
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73093539"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135681"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>无服务器应用：体系结构、模式和 Azure 实现
 
-![显示无服务器应用电子书封面的屏幕截图。](./media/index/serverless-apps-cover.jpg)
+![显示无服务器应用电子书封面的屏幕截图。](./media/index/serverless-apps-cover-v3.png)
 
-> 下载地址：<https://aka.ms/serverless-ebook>
+版本 v3.0 - 已更新到 Azure Functions v3 
+
+> 下载地址：<https://aka.ms/serverlessbookpdf>
 
 发布者
 
@@ -27,7 +29,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-版权所有 © 2018 Microsoft Corporation
+版权所有 &copy; 2018-2020 Microsoft Corporation
 
 保留所有权利。 未经发布者书面许可，不得以任何形式或任何方式复制或传播本书中的任何内容。
 
@@ -43,7 +45,7 @@ Mac 和 macOS 是 Apple Inc. 的商标
 
 作者:
 
-> Microsoft Corp. 高级云大使 **[Jeremy Likness](https://twitter.com/jeremylikness)**
+> [Jeremy Likness](https://twitter.com/jeremylikness)，Microsoft Corp. 的 .NET 数据高级项目经理 
 
 参与者：
 
@@ -97,7 +99,7 @@ IaaS 仍然需要大量开销，因为运营仍然负责执行各种任务。 �
 - 使操作系统保持最新状态。
 - 监控应用程序。
 
-新的发展通过平台即服务 (PaaS) 减少了开销。 借助 PaaS，云提供程序可处理操作系统、安全修补程序和支持特定平台所需的包。 开发者只需选择“平台目标”（如“Web 应用程序”或“API 终结点”）并直接部署代码，而不用生成 VM，然后配置 .NET Framework 并启用 Internet Information Services (IIS) 服务器。 基础结构问题减少到：
+新的发展通过平台即服务 (PaaS) 减少了开销。 借助 PaaS，云提供程序可处理操作系统、安全修补程序和支持特定平台所需的包。 开发人员只需选择平台目标（例如“Web 应用程序”或“API 终结点”）并直接部署代码，而不用生成 VM，然后配置 .NET 并启用 Internet Information Services (IIS) 服务器。 基础结构问题减少到：
 
 - 需要什么大小的服务？
 - 如何横向扩展服务（添加更多服务器或节点）？

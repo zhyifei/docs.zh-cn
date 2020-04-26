@@ -221,6 +221,8 @@
                   href: migration-guide/retargeting/4.5.1-4.7.1.md
                 - name: 4.5.1 至 4.7.2
                   href: migration-guide/retargeting/4.5.1-4.7.2.md
+                - name: 4.5.1 至 4.8
+                  href: migration-guide/retargeting/4.5.1-4.8.md
                 - name: 4.5.2 至 4.6
                   href: migration-guide/retargeting/4.5.2-4.6.md
                 - name: 4.5.2 至 4.6.1
@@ -277,6 +279,44 @@
                   href: migration-guide/retargeting/4.7.1-4.8.md
                 - name: 4.7.2 至 4.8
                   href: migration-guide/retargeting/4.7.2-4.8.md
+        - name: 行为缓解
+          items:
+            - name: 概述
+              href: migration-guide/mitigations.md
+            - name: 自定义 IMessageFilter.PreFilterMessage 实现
+              href: migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md
+            - name: 跨应用域进行对象反序列化
+              href: migration-guide/mitigation-deserialization-of-objects-across-app-domains.md
+            - name: 新的 64 位 JIT 编译器
+              href: migration-guide/mitigation-new-64-bit-jit-compiler.md
+            - name: 路径冒号检查
+              href: migration-guide/mitigation-path-colon-checks.md
+            - name: 路径规范化
+              href: migration-guide/mitigation-path-normalization.md
+            - name: 图标对象中的 PNG 帧
+              href: migration-guide/mitigation-png-frames-in-icon-objects.md
+            - name: 基于指针的触控和触笔支持
+              href: migration-guide/mitigation-pointer-based-touch-and-stylus-support.md
+            - name: 池阻止时间段
+              href: migration-guide/mitigation-pool-blocking-period.md
+            - name: 产品版本控制
+              href: migration-guide/mitigation-product-versioning.md
+            - name: 控制字符序列化
+              href: migration-guide/mitigation-serialization-control-characters.md
+            - name: TLS 协议
+              href: migration-guide/mitigation-tls-protocols.md
+            - name: WCF 服务和证书身份验证
+              href: migration-guide/mitigation-wcf-services-and-certificate-authentication.md
+            - name: WPF 布局
+              href: migration-guide/mitigation-wpf-layout.md
+            - name: WPF 窗口呈现
+              href: migration-guide/mitigation-wpf-window-rendering.md
+            - name: X509CertificateClaimSet.FindClaims 方法
+              href: migration-guide/mitigation-x509certificateclaimset-findclaims-method.md
+            - name: XML 架构验证
+              href: migration-guide/mitigation-xml-schema-validation.md
+            - name: ZipArchiveEntry.FullName 路径分隔符
+              href: migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md
         - name: 版本兼容性
           href: migration-guide/version-compatibility.md
     - name: .NET Framework 版本
