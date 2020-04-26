@@ -232,6 +232,10 @@
           displayName: garbage collection
         - name: 基础知识
           href: garbage-collection/fundamentals.md
+        - name: 工作站和服务器垃圾回收
+          href: garbage-collection/workstation-server-gc.md
+        - name: 后台垃圾回收
+          href: garbage-collection/background-gc.md
         - name: 大型对象堆
           href: garbage-collection/large-object-heap.md
         - name: 垃圾回收和性能
@@ -749,7 +753,7 @@
         - name: 如何：确定 .NET 标准对象是否可序列化
           href: serialization/how-to-determine-if-netstandard-object-is-serializable.md
         - name: 示例
-          href: serialization/samples-binary.md
+          href: serialization/basic-serialization-technology-sample.md
     - name: XML 和 SOAP 序列化
       items:
         - name: 概述
@@ -804,8 +808,6 @@
               href: serialization/xml-serializer-generator-tool-sgen-exe.md
             - name: XML 架构定义工具 (Xsd.exe)
               href: serialization/xml-schema-definition-tool-xsd-exe.md
-        - name: 示例
-          href: serialization/samples-xml.md
 - name: 多平台开发
   items:
     - name: 概述

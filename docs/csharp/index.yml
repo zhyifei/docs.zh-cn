@@ -6,12 +6,12 @@ metadata:
   description: 了解 C# 编程 - 面向新手开发人员、刚开始接触 C# 的开发人员、以及经验丰富的 C# / .NET 开发人员
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: a0de519e518cac70bac831cf689042e104cd1389
+  ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "75339160"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82102718"
 landingContent:
 - title: 了解如何使用 C# 编程
   linkLists:
@@ -77,8 +77,8 @@ landingContent:
       url: nullable-references.md
   - linkListType: concept
     links:
-    - text: 批注 API 的为 Null 性
-      url: nullable-attributes.md
+    - text: 选择可为空迁移策略
+      url: nullable-migration-strategies.md
   - linkListType: tutorial
     links:
     - text: 使用并生成异步流
