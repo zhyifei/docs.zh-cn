@@ -321,13 +321,13 @@ End Class
 [Int16](xref:System.Int16) | 16 位带符号整数
 [Int32](xref:System.Int32) | 32 位带符号整数
 [Int64](xref:System.Int64) | 64 位带符号整数
-[单精度](xref:System.Single) | 单精度浮点值
-[双精度](xref:System.Double) | 双精度浮点值
-[布尔值](xref:System.Boolean) | true 或 false 值类型
+[Single](xref:System.Single) | 单精度浮点值
+[Double](xref:System.Double) | 双精度浮点值
+[Boolean](xref:System.Boolean) | true 或 false 值类型
 [Char](xref:System.Char) | UTF 16 编码单元
-[小数](xref:System.Decimal) | 非浮点十进制数字
+[Decimal](xref:System.Decimal) | 非浮点十进制数字
 [IntPtr](xref:System.IntPtr) | 平台定义的大小的指针或句柄
-[字符串](xref:System.String) | 零个、一个或多个 Char 对象的集合
+[String](xref:System.String) | 零个、一个或多个 Char 对象的集合
 
 下表中所列的内部类型不符合 CLS。
 
@@ -2564,13 +2564,13 @@ End Structure
 
 构造函数或符合 CLS 的特性的属性只能公开以下类型：
 
-* [布尔值](xref:System.Boolean)
+* [Boolean](xref:System.Boolean)
 
 * [Byte](xref:System.Byte)
 
 * [Char](xref:System.Char)
 
-* [双精度](xref:System.Double)
+* [Double](xref:System.Double)
 
 * [Int16](xref:System.Int16)
 
@@ -2578,9 +2578,9 @@ End Structure
 
 * [Int64](xref:System.Int64)
 
-* [单精度](xref:System.Single)
+* [Single](xref:System.Single)
 
-* [字符串](xref:System.String)
+* [String](xref:System.String)
 
 * [Type](xref:System.Type)
 
