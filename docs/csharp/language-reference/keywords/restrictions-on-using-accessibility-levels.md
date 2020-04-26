@@ -117,6 +117,6 @@ public class A
 - [可访问性级别](../../language-reference/keywords/accessibility-levels.md)
 - [访问修饰符](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [public](../../language-reference/keywords/public.md)
-- [专用](../../language-reference/keywords/private.md)
-- [受保护](../../language-reference/keywords/protected.md)
+- [private](../../language-reference/keywords/private.md)
+- [protected](../../language-reference/keywords/protected.md)
 - [internal](../../language-reference/keywords/internal.md)

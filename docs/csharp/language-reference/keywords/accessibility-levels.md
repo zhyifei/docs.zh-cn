@@ -58,5 +58,5 @@ ms.locfileid: "75713816"
 - [访问修饰符](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [public](./public.md)
 - [private](./private.md)
-- [受保护](./protected.md)
-- [内部](./internal.md)
+- [protected](./protected.md)
+- [internal](./internal.md)

@@ -34,6 +34,6 @@ ms.locfileid: "75713837"
 - [对使用可访问性级别的限制](./restrictions-on-using-accessibility-levels.md)
 - [访问修饰符](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [public](./public.md)
-- [专用](./private.md)
-- [受保护](./protected.md)
+- [private](./private.md)
+- [protected](./protected.md)
 - [internal](./internal.md)
