@@ -7,7 +7,7 @@ helpviewer_keywords:
 - -deterministic compiler option [Visual Basic]
 ms.openlocfilehash: 9b611a72656bdd570eccec8a0585bf5ce6fa55f6
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75716795"
@@ -24,7 +24,7 @@ ms.locfileid: "75716795"
 
 ## <a name="remarks"></a>备注
 
-默认情况下，一组给定输入的编译器输出是唯一的，因为编译器会添加时间戳和随意数字生成的 GUID。 使用 `-deterministic` 选项生成确定性的程序集，只要输入保持不变，该程序集的二进制内容在整个编译中都是相同的。
+默认情况下，一组给定输入的编译器输出是唯一的，因为编译器会添加时间戳和随意数字生成的 GUID。 使用 `-deterministic` 选项生成确定性的程序集，只要输入保持不变，该程序集的二进制内容在整个编译中都是相同的  。
 
 出于确定性目的，编译器会考虑以下输入：
 
@@ -50,7 +50,7 @@ ms.locfileid: "75716795"
 
 当源公开可用时，可使用确定性编译来确定是否从可信源编译二进制内容。 它还可有效用于连续生成系统，确定是否需要执行依赖于二进制内容更改的生成步骤。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

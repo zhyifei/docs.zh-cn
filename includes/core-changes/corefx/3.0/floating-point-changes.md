@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ce4f09908b1025e8e5a0380c9bf035c6b0db479a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22dbb1e982f83687a9e0eb288ed72c78c676db77
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74568185"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021543"
 ---
 ### <a name="floating-point-formatting-and-parsing-behavior-changed"></a>浮点格式设置和分析行为已更改
 
@@ -26,7 +26,7 @@ ms.locfileid: "74568185"
 
 #### <a name="category"></a>类别
 
-CoreFx
+Core .NET 库
 
 #### <a name="affected-apis"></a>受影响的 API
 

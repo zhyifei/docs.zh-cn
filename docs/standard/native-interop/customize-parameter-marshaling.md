@@ -4,7 +4,7 @@ description: 了解如何自定义 .NET 将参数封送到本机表示形式的�
 ms.date: 01/18/2019
 ms.openlocfilehash: ff646ad942cf051ce90cd75b24c8562e536182d9
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79401159"

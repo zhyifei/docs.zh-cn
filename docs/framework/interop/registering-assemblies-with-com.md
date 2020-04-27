@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 ms.openlocfilehash: 9ff24a5705058d4e303b3b64b454ced8548053a4
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73113810"
@@ -32,18 +32,18 @@ ms.locfileid: "73113810"
   
 - 应用程序目录中。 从应用程序路径加载的程序集只能从应用程序访问。  
   
-- 沿 /codebase 选项指定的文件路径到 Regasm.exe。  
+- 沿 /codebase  选项指定的文件路径到 Regasm.exe。  
   
  Regasm.exe 也会在 HKCR\CLSID\\{0000…0000} 项下创建 InProcServer32 项。 项的默认值设置为初始化公共语言运行时 (Mscoree.dll) 的 DLL 的名称。  
   
 ## <a name="examining-registry-entries"></a>检查注册表项  
- COM 互操作提供标准的类工厂实现以创建任意 .NET Framework 类的实例。 客户端可以调用托管 DLL 上的“DllGetClassObject”以获取类工厂并创建对象，与使用任何其他 COM 组件相同。  
+ COM 互操作提供标准的类工厂实现以创建任意 .NET Framework 类的实例。 客户端可以调用托管 DLL 上的“DllGetClassObject”  以获取类工厂并创建对象，与使用任何其他 COM 组件相同。  
   
  关于 `InprocServer32` 子项, 出现在传统 COM 类型库中的对 Mscoree.dll 的引用表示公共语言运行时创建托管对象。  
   
 ## <a name="see-also"></a>请参阅
 
 - [向 COM 公开 .NET Framework 组件](exposing-dotnet-components-to-com.md)
-- [如何：从 COM 中引用 .NET 类型](how-to-reference-net-types-from-com.md)
+- [如何：从 COM 引用 .NET 类型](how-to-reference-net-types-from-com.md)
 - [调用 .NET 对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
 - [为 COM 访问部署应用程序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

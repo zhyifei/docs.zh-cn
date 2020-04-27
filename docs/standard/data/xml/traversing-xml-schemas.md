@@ -9,7 +9,7 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 ms.openlocfilehash: dbe02242f9bb8654e3f12d87b6ff6c2aea1f76b1
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710110"
@@ -67,7 +67,7 @@ ms.locfileid: "75710110"
 
 [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)主题中的代码示例使用了 <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> 集合，将属性 `CustomerId` 添加到 `Customer` 元素。 此属性是前架构编译属性。 对应的后架构编译信息集属性为 <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType> 集合，该集合包含复杂类型的所有属性，包括通过类型派生继承的属性。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)

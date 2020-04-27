@@ -2,12 +2,12 @@
 title: dotnet run 命令
 description: dotnet run 命令可便于使用源代码运行应用程序。
 ms.date: 02/19/2020
-ms.openlocfilehash: 28ed13a17c127ae1c61548fed8491315db279c20
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 77282fd8615ef01b7867c1bf0f741c834b6ddb30
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463421"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102758"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -47,6 +47,8 @@ dotnet myapp.dll
 
 若要运行应用程序，`dotnet run` 命令需从 NuGet 缓存解析共享运行时之外的应用程序依赖项。 因为它使用缓存的依赖项，因此，不推荐在生产中使用 `dotnet run` 来运行应用程序。 相反，使用 [`dotnet publish`](dotnet-publish.md)[ 命令创建部署](../deploying/index.md)，并部署已发布的输出。
 
+### <a name="implicit-restore"></a>隐式还原
+
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## <a name="options"></a>选项
@@ -77,7 +79,7 @@ dotnet myapp.dll
 
 - **`--launch-profile <NAME>`**
 
-  启动应用程序时要使用的启动配置文件（若有）的名称。 启动配置文件在 launchSettings.json 文件中进行定义，通常称为 `Development`、`Staging` 和 `Production`  。 有关详细信息，请参阅[使用多个环境](/aspnet/core/fundamentals/environments)。
+  启动应用程序时要使用的启动配置文件（若有）的名称。 启动配置文件在 launchSettings.json 文件中进行定义，通常称为 `Development`、`Staging` 和 `Production` 。 有关详细信息，请参阅[使用多个环境](/aspnet/core/fundamentals/environments)。
 
 - **`--no-build`**
 

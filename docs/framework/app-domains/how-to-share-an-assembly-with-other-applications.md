@@ -2,12 +2,12 @@
 title: 如何：与其他应用程序共享程序集
 ms.date: 08/19/2019
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
-ms.openlocfilehash: b1ef195458dd2de95eeb5e25089339e55d9e3fbb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: b4c183c3fc0b04121be8bbc2db4027887cbc3132
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972881"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644295"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications"></a>如何：与其他应用程序共享程序集
 程序集可以是私有或共享程序集：默认情况下，大多数简单程序都包含一个私有程序集，因为它们并不打算由其他应用程序使用。  
@@ -30,4 +30,4 @@ ms.locfileid: "70972881"
 
 - [C# 编程指南](../../../api/index.md)
 - [编程概念 (Visual Basic)](../../../api/index.md)
-- [使用程序集编程](../../standard/assembly/program.md)
+- [使用程序集编程](../../standard/assembly/index.md)

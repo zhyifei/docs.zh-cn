@@ -11,7 +11,7 @@ dev_langs:
 - vb
 ms.openlocfilehash: 9ffc173bbd0ed12eedea0c191f6d39baf181793a
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130207"

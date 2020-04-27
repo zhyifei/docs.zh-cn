@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
 ms.openlocfilehash: 87ae96944f9a9f2bbcefb54c343f429c75c3022d
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710383"
@@ -70,7 +70,7 @@ document.Load("books.xml");
 |<xref:System.Xml.XPath.XPathDocument>|`false`|  
 |<xref:System.Xml.XmlDocument>|`true`|  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

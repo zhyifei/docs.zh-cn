@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6a5cd260a2820e2a81142f6d55e32e91173ca503
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8790637c31d503455eb8ba722cca827c2a24b7c9
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147446"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021448"
 ---
 ### <a name="openssl-versions-on-macos"></a>macOS 上的 OpenSSL 版本
 
@@ -24,7 +24,7 @@ ms.locfileid: "79147446"
 
 - .NET Core 2.1 运行时使用 OpenSSL 1.0.x（如果可用），并且仅在没有 1.0.x 版本可用的情况下才回退到 OpenSSL 1.1.x。
 
-  2.1 运行时首选早期版本的 OpenSSL，因为 .NET Core 2.1 中不存在 <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> 属性，因此无法在运行时可靠地确定 OpenSSL 版本。
+  2\.1 运行时首选早期版本的 OpenSSL，因为 .NET Core 2.1 中不存在 <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> 属性，因此无法在运行时可靠地确定 OpenSSL 版本。
 
 #### <a name="version-introduced"></a>引入的版本
 
@@ -42,7 +42,7 @@ ms.locfileid: "79147446"
 
 #### <a name="category"></a>类别
 
-CoreFx
+Core .NET 库
 
 #### <a name="affected-apis"></a>受影响的 API
 

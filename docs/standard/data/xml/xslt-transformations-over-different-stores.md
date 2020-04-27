@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 369850e9-004a-45d2-b5c3-5060d9135adb
 ms.openlocfilehash: 490ac30a3e4f0c50cb5d011f1d583c6e5ce9e672
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709655"
@@ -18,6 +18,6 @@ ms.locfileid: "75709655"
   
  XML DOM 提供对 XML 文档数据的访问，并且提供了在 XML 文档中进行读取、写入和浏览的附加类。 <xref:System.Xml> 命名空间中支持这些类，这样也将 XML DOM 与 ADO.NET 提供的数据访问服务统一在一起。 <xref:System.Xml.XmlDataDocument> 提供对数据的关系访问。 <xref:System.Xml.XmlDataDocument> 将 XML 映射到 ADO.NET <xref:System.Data.DataSet> 中的关系数据。 任何基于 .NET Framework 的应用程序都可以使用 <xref:System.Xml> 命名空间中的类访问和处理 XML 文档和 <xref:System.Xml.XmlDataDocument> 中的相关数据。 此实现支持用于收集和分发数据的 n 层结构。 有关详细信息，请参阅[与关系数据和 ADO.NET 的 XML 集成](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

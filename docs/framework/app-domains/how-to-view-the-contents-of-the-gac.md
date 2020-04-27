@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
 ms.openlocfilehash: b5d8b31e7eb23789878da620f3a4517056a1ee3e
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119837"
@@ -30,7 +30,7 @@ ms.locfileid: "73119837"
 gacutil -l
 ```
 
-或
+\- 或 -
 
 ```shell
 gacutil /l

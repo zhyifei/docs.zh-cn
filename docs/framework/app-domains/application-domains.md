@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 ms.openlocfilehash: a5c9f4248e060d231941269f39cadbc7147ce27f
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79400907"
@@ -62,7 +62,7 @@ ms.locfileid: "79400907"
   
 - 如果程序集不是以非特定于域的形式进行加载，则它必须在加载的每个应用程序域中都是 JIT 编译的。 但是，通过卸载程序集加载的所有应用程序域，可以从进程中卸载程序集。  
   
- 运行时主机决定在将运行时加载到进程中时是否以非特定于域的形式加载程序集。 对于托管应用程序，将 <xref:System.LoaderOptimizationAttribute> 特性应用于进程的入口点方法，并从关联的 <xref:System.LoaderOptimization> 枚举指定一个值。 对于托管公共语言运行时的非托管应用程序，在调用 [CorBindToRuntimeEx 函数](../unmanaged-api/hosting/corbindtoruntimeex-function.md)方法时，指定适当的标志。  
+ 运行时宿主决定在将运行时加载到进程中时是否以非特定于域的形式加载程序集。 对于托管应用程序，将 <xref:System.LoaderOptimizationAttribute> 特性应用于进程的入口点方法，并从关联的 <xref:System.LoaderOptimization> 枚举指定一个值。 对于托管公共语言运行时的非托管应用程序，在调用 [CorBindToRuntimeEx 函数](../unmanaged-api/hosting/corbindtoruntimeex-function.md)方法时，指定适当的标志。  
   
  有三个选项用于加载非特定于域的程序集：  
   
@@ -108,7 +108,7 @@ ms.locfileid: "79400907"
   
  <xref:System.AppDomain> 是应用程序域的程序设计界面。 此类包括各种方法，这些方法可以创建和卸载域、创建域中各类型的实例以及注册各种通知（如应用程序域卸载）。 下表列出了常用的 <xref:System.AppDomain> 方法。  
   
-|AppDomain 方法|说明|  
+|AppDomain 方法|描述|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|创建新的应用程序域。 建议使用此方法指定 <xref:System.AppDomainSetup> 对象的重载形式。 这是设置新域的各个属性的首选方式，这些属性包括应用程序基（即该应用程序的根目录）、域的配置文件的位置、以及公共语言运行时用于将程序集加载到域中的搜索路径等。|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> 和 <xref:System.AppDomain.ExecuteAssemblyByName%2A>|执行应用程序域中的程序集。 这是一个实例方法，因此它可用来执行另一个应用程序域（你拥有对该域的引用）中的代码。|  
@@ -156,7 +156,7 @@ Type = REG_MULTI_SZ
 Value (to append) = COMPLUS_LoaderOptimization=1  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.AppDomain?displayProperty=nameWithType>
 - <xref:System.MarshalByRefObject?displayProperty=nameWithType>

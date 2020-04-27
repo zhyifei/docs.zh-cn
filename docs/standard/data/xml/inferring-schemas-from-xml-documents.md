@@ -9,7 +9,7 @@ dev_langs:
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
 ms.openlocfilehash: 5c2d997d9006a3f1eb971eac20982b9dd5677ebf
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710747"
@@ -80,7 +80,7 @@ ms.locfileid: "75710747"
 ## <a name="schemas-that-cannot-be-refined"></a>无法精选的架构  
  如果给定要精选的类型，有些 W3C XML 架构构造是 XML 架构定义语言 (XSD) 架构的 <xref:System.Xml.Schema.XmlSchemaInference> 过程无法处理的，并会引发异常。 例如顶级复合器不是序列的复杂类型。 在架构对象模型 (SOM) 中，这相对于 <xref:System.Xml.Schema.XmlSchemaComplexType>，它的 <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> 属性不是 <xref:System.Xml.Schema.XmlSchemaSequence> 的实例。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
 - [XML 架构对象模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

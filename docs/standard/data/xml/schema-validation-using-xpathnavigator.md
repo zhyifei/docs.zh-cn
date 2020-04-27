@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
 ms.openlocfilehash: bfcbf7306e896af54808c49e25f95d0631f5bcc0
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710201"
@@ -357,7 +357,7 @@ class ValidatingReaderExample
   
  若要详细了解只读和可编辑 <xref:System.Xml.XPath.XPathNavigator> 对象，请参阅[使用 XPathDocument 和 XmlDocument 读取 XML 数据](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)主题。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

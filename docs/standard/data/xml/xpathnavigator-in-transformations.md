@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
 ms.openlocfilehash: 240f9ca7a887a4a146437fdef46de776b299705a
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709746"
@@ -18,7 +18,7 @@ ms.locfileid: "75709746"
   
  <xref:System.Xml.XPath.XPathNavigator> 定义一个适用于任何存储区的游标模型，并提供对任何数据存储区的快速、只读 XPath 查询。 <xref:System.Xml.XPath.XPathNavigator> 还是用来循环访问结果树片段的类。  
   
- API 使您能够从存储区的当前节点中获取信息，并移动到连接的节点。 <xref:System.Xml.XPath.XPathNavigator> 是使用 Move 方法集遍历存储的游标样式模型。 <xref:System.Xml.XPath.XPathNavigator> 总是定位在节点上。 只要 Move 方法失败，<xref:System.Xml.XPath.XPathNavigator> 就会保持不变。  
+ API 使您能够从存储区的当前节点中获取信息，并移动到连接的节点。 <xref:System.Xml.XPath.XPathNavigator> 是使用 Move  方法集遍历存储的游标样式模型。 <xref:System.Xml.XPath.XPathNavigator> 总是定位在节点上。 只要 Move  方法失败，<xref:System.Xml.XPath.XPathNavigator> 就会保持不变。  
   
  <xref:System.Xml.XPath.XPathNavigator> 是用来循环访问结果树片段的类。 下面的代码示例通过调用带参数 `fragment`（包含 XML）的函数，在样式表中创建一个结果树片段。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "75709746"
 <root>Some text</root>  
 ```  
   
- 下面的代码使用 test.xsl 样式表和 test.xml 输入数据。  
+ 下面的代码使用 test.xsl  样式表和 test.xml  输入数据。  
   
 ```vb  
 Imports System  
@@ -108,12 +108,12 @@ public class sample
 ```  
   
 ## <a name="output"></a>Output  
- 转换结果位于文件 out.xml 中：  
+ 转换结果位于文件 out.xml  中：  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>Joe  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

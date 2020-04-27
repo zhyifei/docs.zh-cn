@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 ms.openlocfilehash: 64878a795a7c5b790c8991064e32b82505685c0c
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79155558"
@@ -24,7 +24,7 @@ ms.locfileid: "79155558"
 - [全局程序集缓存工具](#global-assembly-cache-tool)
 
 > [!IMPORTANT]
-> 可以只将强名称程序集安装到全局程序集缓存中。 有关如何创建强名称程序集的信息，请参阅[如何：使用强名称对程序集进行签名](../../standard/assembly/sign-strong-name.md)。
+> 可以只将强名称程序集安装到全局程序集缓存中。 有关如何创建强名称程序集的信息，请参阅[如何：使用强名称为程序集签名](../../standard/assembly/sign-strong-name.md)。
 
 ## <a name="windows-installer"></a>Windows Installer
 
@@ -35,30 +35,30 @@ ms.locfileid: "79155558"
 可以使用 [.NET 全局程序集实用程序 (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 将程序集添加到全局程序集缓存，并查看全局程序集缓存的内容。
 
    > [!NOTE]
-   > Gacutil.exe 仅用于开发目的**。 请勿用于将生产程序集安装到全局程序集缓存。
+   > Gacutil.exe 仅用于开发目的  。 请勿用于将生产程序集安装到全局程序集缓存。
 
-使用 gacutil.exe 在 GAC 中安装程序集的语法如下：**
+使用 gacutil.exe 在 GAC 中安装程序集的语法如下： 
 
 ```cmd
 gacutil -i <assembly name>
 ```
 
-在此命令中，*\<程序集名称>* 是要在全局程序集缓存中安装的程序集的名称。
+在此命令中，\<assembly name> 是要在全局程序集缓存中安装的程序集的名称  。
 
-如果*gacutil.exe*不在系统路径中，请使用["开发人员"命令提示符进行 VS*\<版本>* ](../tools/developer-command-prompt-for-vs.md)。
+如果 gacutil.exe 不在系统路径中，则使用 [VS 开发人员命令提示符\<版本>](../tools/developer-command-prompt-for-vs.md)   。
 
-下面的示例将文件名为 hello.dll 的程序集安装到全局程序集缓存**。
+下面的示例将文件名为 hello.dll 的程序集安装到全局程序集缓存  。
 
 ```cmd
 gacutil -i hello.dll
 ```
 
 > [!NOTE]
-> 在 .NET Framework 的早期版本中，可以使用 Shfusion.dll Windows 外壳扩展通过将程序集拖到“文件资源管理器”来安装这些程序集**。 从 .NET Framework 4 开始，Shfusion.dll 已过时**。
+> 在 .NET Framework 的早期版本中，可以使用 Shfusion.dll Windows 外壳扩展通过将程序集拖到“文件资源管理器”来安装这些程序集  。 从 .NET Framework 4 开始，Shfusion.dll 已过时  。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用程序集和全局程序集缓存](working-with-assemblies-and-the-gac.md)
 - [如何：从全局程序集缓存中删除程序集](how-to-remove-an-assembly-from-the-gac.md)
-- [Gacutil.exe（全球装配缓存工具）](../tools/gacutil-exe-gac-tool.md)
-- [如何：使用强名称对程序集进行签名](../../standard/assembly/sign-strong-name.md)
+- [Gacutil.exe（全局程序集缓存工具）](../tools/gacutil-exe-gac-tool.md)
+- [如何：使用强名称为程序集签名](../../standard/assembly/sign-strong-name.md)

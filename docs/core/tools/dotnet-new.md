@@ -2,12 +2,12 @@
 title: dotnet new 命令
 description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
 ms.date: 04/10/2020
-ms.openlocfilehash: 4ad0d7e54f93582237ed9457b562957018916d36
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1979f98a6005a414acc64c5eaa086a88aca9f033
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463615"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102822"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -35,6 +35,10 @@ dotnet new -h|--help
 `dotnet new` 命令基于模板创建 .NET Core 项目或其他项目。
 
 命令调用[模板引擎](https://github.com/dotnet/templating)，以根据指定的模板和选项在磁盘上创建项目。
+
+### <a name="implicit-restore"></a>隐式还原
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
 ## <a name="arguments"></a>自变量
 

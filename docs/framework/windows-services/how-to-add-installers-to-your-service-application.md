@@ -13,7 +13,7 @@ ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
 ms.openlocfilehash: 99e2376c50f0b47cc21002b2926818707188805e
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053651"
@@ -33,11 +33,11 @@ Visual Studio 提供可安装与服务应用程序关联资源的安装组件。
   
 ### <a name="to-add-installers-to-your-service-application"></a>将安装程序添加到服务应用程序  
   
-1. 在“解决方案资源管理器”中，访问要为其添加安装组件的服务的“设计”视图。  
+1. 在“解决方案资源管理器”  中，访问要为其添加安装组件的服务的“设计”  视图。  
   
 2. 单击设计器的背景以选择服务本身，而不是它的任何内容。  
   
-3. 设计器具有焦点时，右键单击，然后单击“添加安装程序”。  
+3. 设计器具有焦点时，右键单击，然后单击“添加安装程序”  。  
   
      将新类 `ProjectInstaller` 和两个安装组件 <xref:System.ServiceProcess.ServiceProcessInstaller> 和 <xref:System.ServiceProcess.ServiceInstaller> 添加到项目中，并将该服务的属性值复制到组件。  
   
@@ -45,7 +45,7 @@ Visual Studio 提供可安装与服务应用程序关联资源的安装组件。
   
 5. 要确定服务的启动方式，请单击 <xref:System.ServiceProcess.ServiceInstaller> 组件并将 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 属性设置为适当的值。  
   
-    |值|结果|  
+    |“值”|结果|  
     |-----------|------------|  
     |<xref:System.ServiceProcess.ServiceStartMode.Manual>|该服务必须在安装后手动启动。 有关详细信息，请参阅[如何：启动服务](how-to-start-services.md)。|  
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|只要重启计算机，服务就将自行启动。|  

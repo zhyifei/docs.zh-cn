@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 ms.openlocfilehash: 09045fb455a2163641d6f4af0ba07520ead59f1e
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123489"
@@ -43,7 +43,7 @@ ms.locfileid: "73123489"
 
 3. [调用 .NET 对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))。
 
-     COM 开发人员可采用在任何非托管类型上调用方法的方式在 .NET 对象上调用方法。 例如，COM CoCreateInstance API 激活 .NET 对象。
+     COM 开发人员可采用在任何非托管类型上调用方法的方式在 .NET 对象上调用方法。 例如，COM CoCreateInstance API 激活 .NET 对象  。
 
 4. [为 COM 访问部署应用程序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))。
 

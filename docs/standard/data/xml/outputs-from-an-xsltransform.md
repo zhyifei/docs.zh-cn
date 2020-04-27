@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
 ms.openlocfilehash: 93cbf7807630a605e17e7f513055c052aad0d08e
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159632"
@@ -22,10 +22,10 @@ ms.locfileid: "78159632"
 |-----------------------------------------|-------------------|  
 |method="xml"|XML|  
 |method="html"|HTML|  
-|method="text"|文本|  
+|method="text"|Text|  
   
 > [!NOTE]
-> 注意：当 `<xsl:output>` 方法的输出为 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 或 <xref:System.Xml.XmlReader> 时，将忽略 <xref:System.Xml.XmlWriter> 语句。  
+> 注意：当 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法的输出为 <xref:System.Xml.XmlReader> 或 <xref:System.Xml.XmlWriter> 时，将忽略 `<xsl:output>` 语句。  
   
  如果 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法的输出为 <xref:System.IO.Stream> 或 <xref:System.IO.TextWriter>，将支持下列属性：  
   
@@ -33,7 +33,7 @@ ms.locfileid: "78159632"
   
 - omit-xml-declaration  
   
-- standalone  
+- 独立  
   
 - doctype-public  
   
@@ -55,6 +55,6 @@ ms.locfileid: "78159632"
 ## <a name="escaping-special-characters"></a>转义特殊字符  
  `<xsl:text disable-output-escaping>` 标记用于指示特殊字符是需要转义为 XML 形式（例如使用 `<&lt>` 替代 `"<"` 符号）还是保持现在的状态。 如果转换为 `disable-output-escaping` 或 <xref:System.Xml.XmlReader> 对象，将忽略 <xref:System.Xml.XmlWriter> 属性，对特殊字符没有影响。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

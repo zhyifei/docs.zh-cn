@@ -4,12 +4,12 @@ description: 了解 C# 和 .NET 中的版本控制工作原理
 ms.date: 01/08/2017
 ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 124cce51865f04a555bc121fb6ce18cc95591bdc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc192337e4eaa5f9f1d6509ea8c15deeac34a48c
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156462"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645457"
 ---
 # <a name="versioning-in-c"></a>C\# 中的版本控制
 
@@ -43,7 +43,7 @@ SemVer 的最基本方法是 3 组件格式 `MAJOR.MINOR.PATCH`，其中：
 - 虚拟方法：如果在新版本中使虚拟方法成为非虚拟方法，则必须更新替代该方法的项目。 这是一项重大更改，强烈建议不要执行此操作。
 - 方法签名：虽然更新方法行为也需要更改其签名，但应创建重载，使调用该方法的代码仍可正常运行。
 始终可以使用旧方法签名来调用新方法签名，以使实现保持一致。
-- [已过时属性](programming-guide/concepts/attributes/common-attributes.md#Obsolete)：可在代码中使用此属性指定已弃用且很可能在将来版本中删除的类或类成员。 这可确保使用此库的开发人员能更好地为重大更改做好准备。
+- [已过时属性](language-reference/attributes/general.md#obsolete-attribute)：可在代码中使用此属性指定已弃用且很可能在将来版本中删除的类或类成员。 这可确保使用此库的开发人员能更好地为重大更改做好准备。
 - 可选方法参数：如果使以前的可选方法参数变为强制性方法参数或更改它们的默认值，则需要更新不提供这些参数的所有代码。
 
 > [!NOTE]

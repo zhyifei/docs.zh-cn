@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: b1f91616-3115-4264-9821-c66589d11d11
 ms.openlocfilehash: 3b9225f1efcca0f4874a98f2b83d1964aacef735
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710955"
@@ -23,7 +23,7 @@ ms.locfileid: "75710955"
  [使用 XPathNavigator 删除 XML 数据](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)  
  描述如何使用 <xref:System.Xml.XmlDocument> 类移除 <xref:System.Xml.XPath.XPathNavigator> 对象中的节点和值。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

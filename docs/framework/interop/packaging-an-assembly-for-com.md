@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 ms.openlocfilehash: 6866da283cc7cdd180aada252007d67bd72cd862
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73124097"
@@ -71,15 +71,15 @@ COM 开发人员可从其计划纳入应用程序的托管类型相关信息中�
 
 ## <a name="typelibconverter-class"></a>TypeLibConverter 类
 
-位于 System.Runtime.Interop命名空间中的 <xref:System.Runtime.InteropServices.TypeLibConverter> 类将程序集中包含的类和接口转换为 COM 类型库。 此 API 生成与类型库导出程序相同的类型信息，如上节所述。
+位于 System.Runtime.Interop  命名空间中的 <xref:System.Runtime.InteropServices.TypeLibConverter> 类将程序集中包含的类和接口转换为 COM 类型库。 此 API 生成与类型库导出程序相同的类型信息，如上节所述。
 
-TypeLibConverter 类实现 <xref:System.Runtime.InteropServices.ITypeLibConverter>。
+TypeLibConverter 类  实现 <xref:System.Runtime.InteropServices.ITypeLibConverter>。
 
 <a name="cpconpackagingassemblyforcomanchor3"></a>
 
 ## <a name="assembly-registration-tool"></a>程序集注册工具
 
-[程序集注册工具 (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) 可在应用 /tlb:选项时生成并注册类型库。 COM 客户端要求在 Windows 注册表中安装类型库。 如果不使用此选项，Regasm.exe 仅在程序集而非类型库中注册类型。 在程序集中注册类型和注册类型库是不同的活动。
+[程序集注册工具 (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) 可在应用 /tlb:  选项时生成并注册类型库。 COM 客户端要求在 Windows 注册表中安装类型库。 如果不使用此选项，Regasm.exe 仅在程序集而非类型库中注册类型。 在程序集中注册类型和注册类型库是不同的活动。
 
 <a name="cpconpackagingassemblyforcomanchor4"></a>
 

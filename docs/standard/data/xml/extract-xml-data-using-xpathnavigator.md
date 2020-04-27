@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
 ms.openlocfilehash: 627da3c8c45d007e677c4f92f4d5cd602d34ae84
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710851"
@@ -160,7 +160,7 @@ book.Close();
   
  该示例使用本主题前面所示的 `books.xml` 文件作为输入。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

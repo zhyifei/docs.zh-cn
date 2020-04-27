@@ -12,7 +12,7 @@ ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
 ms.openlocfilehash: 166eda4a9348188fa6e5048fd3ce41645cde4816
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053600"
@@ -24,7 +24,7 @@ ms.locfileid: "71053600"
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#12](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#12)]  
   
- 此代码示例也可作为 IntelliSense 代码片段。 在代码片段选取器中，它位于“Windows 操作系统 > Windows 服务”中。 有关详细信息，请参阅[代码片段](/visualstudio/ide/code-snippets)。  
+ 此代码示例也可作为 IntelliSense 代码片段。 在代码片段选取器中，它位于“Windows 操作系统 > Windows 服务”  中。 有关详细信息，请参阅[代码片段](/visualstudio/ide/code-snippets)。  
   
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  

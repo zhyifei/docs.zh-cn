@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
 ms.openlocfilehash: f45c5c9dccd2c1e8bdd67000a8b2f22425822ac9
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710461"
@@ -19,11 +19,11 @@ LINQ to XML 是 .NET Framework 3.5 版中用于处理 XML 数据的新模型。 
   
  有关其用法的详细讨论，请参阅 [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)。 有关 LINQ 框架的概述，请参阅[语言集成查询 (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md) 或[语言集成查询 (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.Linq>
 - <xref:System.Linq>
-- [LINQ to XML 与 DOM （C#）](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
-- [LINQ to XML 与 DOM （Visual Basic）](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
-- [LINQ to XML 与其他 XML 技术（C#）](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
-- [LINQ to XML 与其他 XML 技术（Visual Basic）](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
+- [LINQ to XML 与DOM (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
+- [LINQ to XML 与DOM (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
+- [LINQ to XML 与其他 XML 技术 (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
+- [LINQ to XML 与其他 XML 技术 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)

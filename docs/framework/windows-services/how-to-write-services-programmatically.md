@@ -11,7 +11,7 @@ ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
 ms.openlocfilehash: 5637d569ad5261bff6865af4ab2ed8b7631d2d38
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053564"
@@ -29,11 +29,11 @@ ms.locfileid: "71053564"
   
 1. 创建一个空项目并通过以下步骤创建对必要命名空间的引用：  
   
-    1. 在“解决方案资源管理器”中，右键单击“引用”节点，然后单击“添加引用”。  
+    1. 在“解决方案资源管理器”  中，右键单击“引用”  节点，然后单击  “添加引用”。  
   
-    2. 在“.NET Framework”选项卡上，滚动到“System.dll”，然后单击“选择”。  
+    2. 在“.NET Framework”  选项卡上，滚动到“System.dll”  ，然后单击“选择”  。  
   
-    3. 滚动到“System.ServiceProcess.dll”，然后单击“选择”。  
+    3. 滚动到“System.ServiceProcess.dll”  ，然后单击“选择”  。  
   
     4. 单击 **“确定”** 。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "71053564"
   
 7. 添加服务应用程序所必需的安装程序。 有关详细信息，请参阅[如何：将安装程序添加到服务应用程序](how-to-add-installers-to-your-service-application.md)。  
   
-8. 通过从“生成”菜单选择“生成解决方案”来生成项目。  
+8. 通过从“生成”  菜单选择“生成解决方案”  来生成项目。  
   
     > [!NOTE]
     > 不要通过按 F5 来运行你的项目 — 你无法通过这种方式运行服务项目。  

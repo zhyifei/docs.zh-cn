@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 ms.openlocfilehash: a63452df16e452a90eff3977ac8726cc0a5ac439
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710188"
@@ -59,7 +59,7 @@ ms.locfileid: "75710188"
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator>|  
 |`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator>|  
   
- CLR 数字类型转换为 <xref:System.Double>。 <xref:System.DateTime> 类型转换为 <xref:System.String>。 <xref:System.Xml.XPath.IXPathNavigable> 类型转换为 <xref:System.Xml.XPath.XPathNavigator>。 XPathNavigator[] 转换为 <xref:System.Xml.XPath.XPathNodeIterator>。  
+ CLR 数字类型转换为 <xref:System.Double>。 <xref:System.DateTime> 类型转换为 <xref:System.String>。 <xref:System.Xml.XPath.IXPathNavigable> 类型转换为 <xref:System.Xml.XPath.XPathNavigator>。 XPathNavigator[]  转换为 <xref:System.Xml.XPath.XPathNodeIterator>。  
   
  所有其他类型均将引发错误。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "75710188"
 </circles>  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [动态源代码生成和编译](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

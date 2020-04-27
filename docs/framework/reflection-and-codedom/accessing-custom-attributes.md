@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 ms.openlocfilehash: a5651e9dc8cf40e737dd523ec5d29e876a9c0765
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130305"
@@ -28,7 +28,7 @@ ms.locfileid: "73130305"
   
  自定义特性的可访问性根据附加该特性的程序集来进行检查。 这相当于在附加自定义特性的程序集中检查一种类型的方法能否调用该自定义特性的构造函数。  
   
- <xref:System.Reflection.Assembly.GetCustomAttributes%28System.Boolean%29?displayProperty=nameWithType> 等方法检查类型参数的可见性和可访问性。 只有包含用户定义类型的程序集中的代码才能使用 GetCustomAttributes检索该类型的自定义特性。  
+ <xref:System.Reflection.Assembly.GetCustomAttributes%28System.Boolean%29?displayProperty=nameWithType> 等方法检查类型参数的可见性和可访问性。 只有包含用户定义类型的程序集中的代码才能使用 GetCustomAttributes  检索该类型的自定义特性。  
   
  以下 C# 示例是一种典型的自定义特性设计模式。 它说明运行时自定义特性反射模型。  
   
@@ -52,17 +52,17 @@ public class LocalizationExtenderProvider
 }  
 ```  
   
- 如果运行时尝试为附加到 GetLanguage方法的公共自定义特性类型 <xref:System.ComponentModel.DescriptionAttribute> 检索自定义特性，则它将执行下列操作：  
+ 如果运行时尝试为附加到 GetLanguage  方法的公共自定义特性类型 <xref:System.ComponentModel.DescriptionAttribute> 检索自定义特性，则它将执行下列操作：  
   
-1. 运行时检查 Type.GetCustomAttributes（类型 type） 的 DescriptionAttribute 类型参数是否是公共类型参数；如果是，则它可见且可访问。  
+1. 运行时检查 Type.GetCustomAttributes（类型 type  ）  的 DescriptionAttribute  类型参数是否是公共类型参数；如果是，则它可见且可访问。  
   
-2. 运行时检查从 DescriptionAttribute 派生的用户定义类型 MyDescriptionAttribute 在 System.Web.DLL 程序集（它在该程序集中附加到 GetLanguage() 方法）内是否可见和可以访问。  
+2. 运行时检查从 DescriptionAttribute  派生的用户定义类型 MyDescriptionAttribute  在 System.Web.DLL  程序集（它在该程序集中附加到 GetLanguage  () 方法）内是否可见和可以访问。  
   
-3. 运行时检查 MyDescriptionAttribute 的构造函数是否在 System.Web.DLL 程序集中可见和可以访问。  
+3. 运行时检查 MyDescriptionAttribute  的构造函数是否在 System.Web.DLL  程序集中可见和可以访问。  
   
-4. 运行时调用带有自定义特性参数的 MyDescriptionAttribute 的构造函数，然后将新对象返回给调用方。  
+4. 运行时调用带有自定义特性参数的 MyDescriptionAttribute  的构造函数，然后将新对象返回给调用方。  
   
- 自定义特性反射模型可能会在定义类型的程序集外泄漏用户定义类型的实例。 这与运行时系统库中返回用户定义类型的实例的成员（例如返回 RuntimeMethodInfo 对象数组的 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType>）相同。 为了防止客户端发现关于用户定义的自定义特性类型的信息，请将该类型的成员定义为非公共成员。  
+ 自定义特性反射模型可能会在定义类型的程序集外泄漏用户定义类型的实例。 这与运行时系统库中返回用户定义类型的实例的成员（例如返回 RuntimeMethodInfo  对象数组的 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType>）相同。 为了防止客户端发现关于用户定义的自定义特性类型的信息，请将该类型的成员定义为非公共成员。  
   
  以下示例说明使用反射访问自定义特性的基本方法。  
   

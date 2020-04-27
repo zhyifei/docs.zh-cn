@@ -8,13 +8,13 @@ dev_langs:
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 ms.openlocfilehash: 55ea0e31bb8a2863dc0e0eb30f6ca5700c3110b8
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78155732"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>按名称或索引检索未排序节点
-XmlNamedNodeMap 在万维网联合会 (W3C) 规范中被描述为 NamedNodeMap，它对于处理未排序的节点集并能够按节点名称或索引引用节点是必需的。 访问 XmlNamedNodeMap 的唯一方式是通过方法或属性返回 XmlNamedNodeMap。 有三个方法或属性返回 XmlNamedNodeMap：  
+XmlNamedNodeMap  在万维网联合会 (W3C) 规范中被描述为 NamedNodeMap，它对于处理未排序的节点集并能够按节点名称或索引引用节点是必需的。 访问 XmlNamedNodeMap  的唯一方式是通过方法或属性返回 XmlNamedNodeMap  。 有三个方法或属性返回 XmlNamedNodeMap  ：  
   
 - XmlElement.Attributes  
   
@@ -22,9 +22,9 @@ XmlNamedNodeMap 在万维网联合会 (W3C) 规范中被描述为 NamedNodeMap�
   
 - XmlDocumentType.Notations  
   
- 例如，XmlDocumentType.Entities 属性获取在文档类型声明中声明的 XmlEntity 节点集合。 此集合作为 XmlNamedNodeMap 返回，可以使用 Count 属性循环访问此集合并显示实体信息。 有关循环访问 XmlNamedNodeMap 的示例，请参见 <xref:System.Xml.XmlDocumentType.Entities%2A>。  
+ 例如，XmlDocumentType.Entities  属性获取在文档类型声明中声明的 XmlEntity  节点集合。 此集合作为 XmlNamedNodeMap  返回，可以使用 Count  属性循环访问此集合并显示实体信息。 有关循环访问 XmlNamedNodeMap  的示例，请参见 <xref:System.Xml.XmlDocumentType.Entities%2A>。  
   
- XmlAttributeCollection 派生自 XmlNamedNodeMap，且只有属性是可以修改的，而表示法和实体则是只读的。 通过将 XmlNamedNodeMap 用于属性，可以基于属性的 XML 名称获取这些属性的节点。 这样，提供了一个处理元素节点的属性集合的简单方法。 该方法可与 XmlNodeList 直接进行比较，后者也实现 IEnumerable 接口但使用的是索引访问器而不是字符串。 RemoveNamedItem 和 SetNamedItem 方法只针对 XmlAttributeCollection 使用。 属性集合中的添加或移除操作（无论是使用 AttributeCollection 还是 XmlNamedNodeMap 实现）将修改元素的属性集合。 下面的代码示例显示如何移动属性并创建新属性。  
+  XmlAttributeCollection 派生自 XmlNamedNodeMap  ，且只有属性是可以修改的，而表示法和实体则是只读的。 通过将 XmlNamedNodeMap  用于属性，可以基于属性的 XML 名称获取这些属性的节点。 这样，提供了一个处理元素节点的属性集合的简单方法。 该方法可与 XmlNodeList  直接进行比较，后者也实现 IEnumerable  接口但使用的是索引访问器而不是字符串。 RemoveNamedItem  和 SetNamedItem  方法只针对 XmlAttributeCollection  使用。 属性集合中的添加或移除操作（无论是使用 AttributeCollection  还是 XmlNamedNodeMap  实现）将修改元素的属性集合。 下面的代码示例显示如何移动属性并创建新属性。  
   
 ```vb  
 Imports System  
@@ -115,8 +115,8 @@ class test {
 }  
 ```  
   
- 若要查看另一个显示从 AttributeCollection 中移除属性的代码示例，请参见 [XmlNamedNodeMap.RemoveNamedItem 方法](xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A)。 有关方法和属性的更多信息，请参见 [XmlNamedNodeMap 成员](xref:System.Xml.XmlNamedNodeMap)。  
+ 若要查看另一个显示从 AttributeCollection  中移除属性的代码示例，请参见 [XmlNamedNodeMap.RemoveNamedItem 方法](xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A)。 有关方法和属性的更多信息，请参见 [XmlNamedNodeMap 成员](xref:System.Xml.XmlNamedNodeMap)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

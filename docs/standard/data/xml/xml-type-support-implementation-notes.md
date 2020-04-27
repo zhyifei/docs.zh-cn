@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
 ms.openlocfilehash: 40ab0f746ef82ccd195fc6b873f5c8edb255f868
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709863"
@@ -14,7 +14,7 @@ ms.locfileid: "75709863"
 本主题介绍一些要注意的实现细节。  
   
 ## <a name="list-mappings"></a>列表映射  
- <xref:System.Collections.IList>、<xref:System.Collections.ICollection>、<xref:System.Collections.IEnumerable>、Type[] 和 <xref:System.String> 类型用于表示 XML 架构定义语言 (XSD) 列表类型。  
+ <xref:System.Collections.IList>、<xref:System.Collections.ICollection>、<xref:System.Collections.IEnumerable>、Type[]  和 <xref:System.String> 类型用于表示 XML 架构定义语言 (XSD) 列表类型。  
   
 ## <a name="union-mappings"></a>联合映射  
  联合类型使用 <xref:System.Xml.Schema.XmlAtomicValue> 或 <xref:System.String> 类型表示。 因此，源类型或目标类型必须始终为 <xref:System.String> 或 <xref:System.Xml.Schema.XmlAtomicValue>。  
@@ -32,7 +32,7 @@ ms.locfileid: "75709863"
   
  <xref:System.TimeSpan> 类不支持此部分排序。 而是为 1 年和 1 个月选取特定的天数；分别为 365 天和 30 天。  
   
- 有关 `xs:duration` 类型的详细信息，请参阅 [W3C XML 架构第 2 部分：数据类型建议](https://www.w3.org/TR/xmlschema-2/)。
+ 有关 `xs:duration` 类型的详细信息，请参见 W3C [XML 架构第 2 部分：数据类型建议](https://www.w3.org/TR/xmlschema-2/)。
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>xs:time、公历数据类型和 System.DateTime  
  `xs:time` 值映射到 <xref:System.DateTime> 对象时，<xref:System.DateTime.MinValue> 字段用于将 <xref:System.DateTime> 对象的日期属性（例如 <xref:System.DateTime.Year%2A>、<xref:System.DateTime.Month%2A> 和 <xref:System.DateTime.Day%2A>）初始化为 <xref:System.DateTime> 可能的最小值。  
@@ -45,6 +45,6 @@ ms.locfileid: "75709863"
 ### <a name="xsanyuri-and-systemuri"></a>xs:anyURI 和 System.Uri  
  表示相对 URI 的 `xs:anyURI` 的实例映射到 <xref:System.Uri> 时，<xref:System.Uri> 对象没有基 URI。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

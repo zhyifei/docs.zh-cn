@@ -1,5 +1,5 @@
 ---
-title: 如何：用反射发出定义泛型类型
+title: 如何：使用反射发出定义泛型类型
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 ms.openlocfilehash: b553fd2235c73cf879474dc4f44f958dddcb649c
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130160"
 ---
-# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>如何：用反射发出定义泛型类型
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>如何：使用反射发出定义泛型类型
 此主题说明如何创建具有两个参数的简单泛型类型、如何对类型参数应用类约束、接口约束和特殊约束，以及如何创建使用类的类型参数作为参数类型和返回类型的成员。  
   
 > [!IMPORTANT]
-> 某方法只要属于泛型类型，且使用该类型的类型参数，就不是泛型方法。 只有当方法有属于自己的类型参数列表时才是泛型方法。 多数泛型类型上的方法都不是泛型方法，如本示例所示。 有关发出泛型方法的示例，请参阅[如何：用反射发出定义泛型方法](how-to-define-a-generic-method-with-reflection-emit.md)。  
+> 某方法只要属于泛型类型，且使用该类型的类型参数，就不是泛型方法。 只有当方法有属于自己的类型参数列表时才是泛型方法。 多数泛型类型上的方法都不是泛型方法，如本示例所示。 有关发出泛型方法的示例，请参阅[如何：使用反射发出定义泛型方法](how-to-define-a-generic-method-with-reflection-emit.md)。  
   
 ### <a name="to-define-a-generic-type"></a>定义泛型类型  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73130160"
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
      [!code-vb[EmitGenericType#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#21)]  
   
-8. 定义使用泛型类型的类型参数的方法。 请注意，此类方法不是泛型方法，除非它们具有自己的类型参数列表。 以下代码定义一个 `static` 方法（在 Visual Basic 中为 `Shared`），该方法接收一个 `TFirst` 数组并返回包含该数组所有元素的 `List<TFirst>`（在 Visual Basic 中为 `List(Of TFirst)`）。 若要定义此方法，需要通过调用泛型类型定义 `List<T>` 上的 <xref:System.Type.MakeGenericType%2A> 来创建类型 `List<TFirst>`。 （使用 `typeof` 运算符（在 Visual Basic 中`GetType`）来获取泛型类型定义时，将省略 `T`。）使用 <xref:System.Type.MakeArrayType%2A> 方法创建参数类型。  
+8. 定义使用泛型类型的类型参数的方法。 请注意，此类方法不是泛型方法，除非它们具有自己的类型参数列表。 以下代码定义一个 `static` 方法（在 Visual Basic 中为 `Shared`），该方法接收一个 `TFirst` 数组并返回包含该数组所有元素的 `List<TFirst>`（在 Visual Basic 中为 `List(Of TFirst)`）。 若要定义此方法，需要通过调用泛型类型定义 `List<T>` 上的 <xref:System.Type.MakeGenericType%2A> 来创建类型 `List<TFirst>`。 （使用 `typeof` 运算符（在 Visual Basic 中为 `GetType`）获取泛型类型定义时，将忽略 `T`。）通过使用 <xref:System.Type.MakeArrayType%2A> 方法创建参数类型。  
   
      [!code-cpp[EmitGenericType#22](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#22)]
      [!code-csharp[EmitGenericType#22](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#22)]
@@ -79,7 +79,7 @@ ms.locfileid: "73130160"
   
      <xref:System.Reflection.Emit.GenericTypeParameterBuilder> 中不支持 <xref:System.Type.GetConstructor%2A> 方法，所以不可能直接获取 `List<TFirst>` 的构造函数。 首先，必须获取泛型类型定义 `List<T>` 的构造函数，然后调用一种可将其转换为 `List<TFirst>` 的对应构造函数的方法。  
   
-     用于此代码示例的构造函数接收 `IEnumerable<T>`。 但请注意，这不是 <xref:System.Collections.Generic.IEnumerable%601> 泛型接口的泛型类型定义；相反，必须将 `List<T>` 的类型参数 `T` 替代为 `IEnumerable<T>` 的类型参数 `T`。 （这似乎容易混淆，因为这两个类型都具有名为 `T` 的类型参数。 这就是为什么此代码示例使用 `TFirst` 和 `TSecond`的名称。）若要获取构造函数参数的类型，请从泛型类型定义开始 `IEnumerable<T>` 并通过 `List<T>`的第一个泛型类型参数调用 <xref:System.Type.MakeGenericType%2A>。 构造函数参数列表必须作为数组进行传递，在本例中只有一个参数。  
+     用于此代码示例的构造函数接收 `IEnumerable<T>`。 但请注意，这不是 <xref:System.Collections.Generic.IEnumerable%601> 泛型接口的泛型类型定义；相反，必须将 `List<T>` 的类型参数 `T` 替代为 `IEnumerable<T>` 的类型参数 `T`。 （这似乎容易混淆，因为这两个类型都具有名为 `T` 的类型参数。 这就是此代码示例使用名称 `TFirst` 和 `TSecond` 的原因。）若要获取构造函数的参数类型，请从泛型类型定义 `IEnumerable<T>` 开始并使用 `List<T>` 的第一个泛型类型参数调用 <xref:System.Type.MakeGenericType%2A>。 构造函数参数列表必须作为数组进行传递，在本例中只有一个参数。  
   
     > [!NOTE]
     > 在 C# 中使用 `typeof` 运算符时，泛型类型定义将表达为 `IEnumerable<>`；在 Visual Basic 中使用 `GetType` 运算符时，泛型类型定义将表达为 `IEnumerable(Of )`。  
@@ -96,7 +96,7 @@ ms.locfileid: "73130160"
      [!code-csharp[EmitGenericType#8](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#8)]
      [!code-vb[EmitGenericType#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#8)]  
   
-11. 调用方法。 `ExampleMethod` 不是泛型，但它所属的类型为泛型，因此，为了获取可以调用的 <xref:System.Reflection.MethodInfo>，需要从 `Sample` 的类型定义创建一个构造类型。 该构造类型使用 `Example` 类和 `ExampleDerived` 类，前者满足 `TFirst` 上的约束，因为它是引用类型并且具有默认的无参数构造函数，后者满足 `TSecond` 上的约束。 （示例代码部分提供了 `ExampleDerived` 的代码。）这两种类型被传递到 <xref:System.Type.MakeGenericType%2A> 来创建构造类型。 然后使用 <xref:System.Type.GetMethod%2A> 方法获取 <xref:System.Reflection.MethodInfo>。  
+11. 调用方法。 `ExampleMethod` 不是泛型，但它所属的类型为泛型，因此，为了获取可以调用的 <xref:System.Reflection.MethodInfo>，需要从 `Sample` 的类型定义创建一个构造类型。 该构造类型使用 `Example` 类和 `ExampleDerived` 类，前者满足 `TFirst` 上的约束，因为它是引用类型并且具有默认的无参数构造函数，后者满足 `TSecond` 上的约束。 （示例代码部分提供了 `ExampleDerived` 的代码。）将这两个类型传递给 <xref:System.Type.MakeGenericType%2A> 以创建构造类型。 然后使用 <xref:System.Type.GetMethod%2A> 方法获取 <xref:System.Reflection.MethodInfo>。  
   
      [!code-cpp[EmitGenericType#9](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#9)]
      [!code-csharp[EmitGenericType#9](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#9)]

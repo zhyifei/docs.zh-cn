@@ -5,7 +5,7 @@ ms.date: 10/19/2017
 ms.custom: azure-sdk-dotnet
 ms.openlocfilehash: a29709d56f2debe04d49ee4eafdc27acd4ca480f
 ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/19/2020
 ms.locfileid: "81433150"
@@ -18,18 +18,18 @@ ms.locfileid: "81433150"
 
 1. 下载并运行此 [Web 平台安装程序引导程序](https://www.microsoft.com/web/handlers/webpi.ashx?command=getinstallerredirect&appid=VWDOrVs2015AzurePack;MicrosoftAzure-ServiceFabric-VS2015)。
 
-2. 该引导程序会安装 Web 平台安装程序（如果需要），并自动将最新版本的**用于 Visual Studio 2015 的 Azure SDK** 以及**用于 Visual Studio 2015 的 Service Fabric SDK 和工具**项放入“要安装的项”列表中。** 单击“安装”  。
+2. 该引导程序会安装 Web 平台安装程序（如果需要），并自动将最新版本的**用于 Visual Studio 2015 的 Azure SDK** 以及**用于 Visual Studio 2015 的 Service Fabric SDK 和工具**项放入“要安装的项”列表中。  单击“安装”  。
 
     ![Web 平台安装程序](../media/sdk/vs2015-install/webpi.png)
 
-3. 在下一屏幕中，单击“我接受”。**** Web PI 会开始下载并安装所选的组件。
+3. 在下一屏幕中，单击“我接受”。  Web PI 会开始下载并安装所选的组件。
 
-4. 安装完成后，会显示确认屏幕。 单击“完成”  。 现在可以关闭 Web 平台安装程序。
+4. 安装完成后，会显示确认屏幕。 单击 **“完成”** 。 现在可以关闭 Web 平台安装程序。
 
 ## <a name="verifying-the-installation"></a>验证安装
 
-1. 在 Visual Studio 2015 中，依次单击“工具”菜单、“扩展和更新...”。********
+1. 在 Visual Studio 2015 中，依次单击“工具”菜单、“扩展和更新...”。  
 
-2. 显示的列表包含多个 Azure 工具，例如“Microsoft Azure 应用服务工具”、“Microsoft Azure 存储连接服务”和“Service Fabric 工具”。************
+2. 显示的列表包含多个 Azure 工具，例如“Microsoft Azure 应用服务工具”、“Microsoft Azure 存储连接服务”和“Service Fabric 工具”。   
 
     ![扩展和更新](../media/sdk/vs2015-install/ext-tools.png)

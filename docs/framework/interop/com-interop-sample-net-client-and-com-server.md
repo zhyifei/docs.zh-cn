@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 ms.openlocfilehash: d854f474845322ae6df1da5788890a69720a5272
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181486"
@@ -19,7 +19,7 @@ ms.locfileid: "79181486"
 # <a name="com-interop-sample-net-client-and-com-server"></a>COM 互操作示例：.NET 客户端和 COM 服务器
 本示例演示为访问 [COM 服务器](#cpconcominteropsamplenetclientcomserveranchor2)而生成的 [.NET client](#cpconcominteropsamplenetclientcomserveranchor1) 如何创建 COM 组件类的实例并调用类成员来执行抵押贷款计算。  
   
- 在本示例中，客户端将创建并调用 Loan**** 组件类的一个实例，将四个参数（其中一个等于零）传递给该实例，并显示计算结果。 本示例中出现的代码片段将贯穿本节。  
+ 在本示例中，客户端将创建并调用 Loan  组件类的一个实例，将四个参数（其中一个等于零）传递给该实例，并显示计算结果。 本示例中出现的代码片段将贯穿本节。  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>
 ## <a name="net-client"></a>.NET 客户端  
@@ -297,6 +297,6 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [向 .NET Framework 公开 COM 组件](exposing-com-components.md)

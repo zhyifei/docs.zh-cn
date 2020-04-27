@@ -9,7 +9,7 @@ dev_langs:
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
 ms.openlocfilehash: 906de1ded4961b7c67d48a010555d139df97cded
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710630"
@@ -246,7 +246,7 @@ Console.WriteLine(navigator.OuterXml);
 ## <a name="saving-an-xml-document"></a>保存 XML 文档  
  使用 <xref:System.Xml.XmlDocument> 类的方法保存本主题中所述的编辑方法对 <xref:System.Xml.XmlDocument> 对象的更改。 若要详细了解如何保存对 <xref:System.Xml.XmlDocument> 对象所做的更改，请参阅[保存和编写文档](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

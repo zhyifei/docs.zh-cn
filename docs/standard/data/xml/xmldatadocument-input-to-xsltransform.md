@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
 ms.openlocfilehash: 5f2a7ef22eb07bb221b6a145db4453996ad8bf8c
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709850"
@@ -20,7 +20,7 @@ ms.locfileid: "75709850"
   
  若要详细了解如何将转换应用于关系数据，请参阅[将 XSLT 转换应用于数据集](../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.XmlDataDocument>
 - [数据集和 XmlDataDocument 同步](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)

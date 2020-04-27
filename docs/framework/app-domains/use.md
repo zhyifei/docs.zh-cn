@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-ms.openlocfilehash: d6bbc2648608e9542158e0f281984174447633a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6ee02a3f27a645f19fd6a327052939586fac4aa9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119722"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645428"
 ---
 # <a name="using-application-domains"></a>使用应用程序域
 
@@ -57,7 +57,7 @@ ms.locfileid: "73119722"
 [.NET 中的程序集](../../standard/assembly/index.md)  
 概述程序集执行的功能。  
   
-[使用程序集编程](../../standard/assembly/program.md)  
+[使用程序集编程](../../standard/assembly/index.md)  
 描述如何在程序集上创建、签署和设置特性。  
   
 [发出动态方法和程序集](../reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  

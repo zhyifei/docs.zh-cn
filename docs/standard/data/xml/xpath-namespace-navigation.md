@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 ms.openlocfilehash: f35318b1439b762bf7c87cff217ed1787e8d007c
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78156317"
@@ -13,12 +13,12 @@ ms.locfileid: "78156317"
 # <a name="xpath-namespace-navigation"></a>XPath 命名空间浏览
 要对 XML 文档使用 XPath 查询，必须正确定位 XML 命名空间以及命名空间中包含的元素。 命名空间可防止在多个上下文中使用名称时可能产生的混淆情况；例如，名称 `ID` 可能引用与 XML 文档的不同元素相关联的多个标识符。 命名空间语法指定了 URI、名称和前缀，可区分 XML 文档的各个元素。  
   
- 本主题中的示例演示了通过 <xref:System.Xml.XPath.XPathNavigator> 在浏览 XML 文档时使用前缀。 有关命名空间和语法的详细信息，请参阅[Xml 文件：了解 Xml 命名空间](https://docs.microsoft.com/previous-versions/dotnet/articles/bb986013(v=msdn.10))。  
+ 本主题中的示例演示了通过 <xref:System.Xml.XPath.XPathNavigator> 在浏览 XML 文档时使用前缀。 有关命名空间和语法的详细信息，请参阅 [XML 文件：了解 XML 命名空间](https://docs.microsoft.com/previous-versions/dotnet/articles/bb986013(v=msdn.10))。  
   
 ## <a name="namespace-declarations"></a>命名空间声明  
  命名空间声明使得在使用 <xref:System.Xml.XPath.XPathNavigator> 的实例时，很容易区分和定位 XML 文档的各个元素。 命名空间前缀提供了一种简化的语法，用来定位命名空间。  
   
- 前缀可按此形式定义：`<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` 在此语法中，前缀“`e`”是命名空间的正式 URI 的缩写。 使用此语法可以将 `Body` 元素标识为 `Envelope` 命名空间的成员：`e:Body`。  
+ 前缀由以下形式定义：`<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` 在此语法中，前缀“`e`”是命名空间的正式 URI 的缩写。 使用此语法可以将 `Body` 元素标识为 `Envelope` 命名空间的成员：`e:Body`。  
   
  在下一节的浏览示例中，下面的 XML 文档将用作 `response.xml`。  
   
@@ -62,7 +62,7 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
   
  完全限定的命名空间和名称的精确度不仅仅是一种方便。 对前面的示例中的文档定义和代码进行一项小实验，可以验证如果不使用完全限定的元素名称进行浏览，就会引发异常。 例如，元素定义为 `<Search xmlns="http://schemas.microsoft.com/v1/Search">`，而查询字符串 `xpath = "/s:Envelope/s:Body/Search";` 没有对 `Search` 元素使用命名空间前缀，则此查询将返回 `null`，而不是 `Search` 元素。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 XPathNavigator 访问 XML 数据](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
 - [使用 XPathNavigator 选择、计算和匹配 XML 数据](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)

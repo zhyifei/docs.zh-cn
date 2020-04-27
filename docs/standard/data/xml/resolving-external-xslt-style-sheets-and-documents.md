@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 ms.openlocfilehash: 504519532d9a6988209cf04fd6b6196796f929f8
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710292"
@@ -41,7 +41,7 @@ ms.locfileid: "75710292"
   
  调用 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法时，将针对在加载时提供的证据来计算权限，并将权限集分配给整个转换过程。 如果 `document()` 函数尝试启动一个操作而该操作需要权限集中没有的权限，就会引发异常。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XslTransform 类的 XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
 - [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

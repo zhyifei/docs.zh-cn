@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 ms.openlocfilehash: 8383d8cb3e5819c46a0716c59323e492bb9add8e
 ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/14/2020
 ms.locfileid: "75937995"
@@ -21,12 +21,12 @@ Visual Studio 2005 版本重新设计了 XSLT 体系结构。 <xref:System.Xml.X
 
 ## <a name="performance"></a>性能
 
-<xref:System.Xml.Xsl.XslCompiledTransform> 类在性能方面进行了许多改进。 新的 XSLT 处理器将 XSLT 样式表编译为公共中间格式，与公共语言运行库 (CLR) 对其他编程语言的操作类似。 编译完该样式表之后，可以缓存并重用它。
+<xref:System.Xml.Xsl.XslCompiledTransform> 类在性能方面进行了许多改进。 新的 XSLT 处理器将 XSLT 样式表编译为公共中间格式，与公共语言运行库 (CLR) 对其他编程语言的操作类似。 样式表编译后，可以缓存并重复使用。
 
 <xref:System.Xml.Xsl.XslCompiledTransform> 类还进行了其他优化，使其比 <xref:System.Xml.Xsl.XslTransform> 类快得多。
 
 > [!NOTE]
-> 尽管 <xref:System.Xml.Xsl.XslCompiledTransform> 类的总体性能优于 <xref:System.Xml.Xsl.XslTransform> 类，但在首次对转换调用时，<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 类的 <xref:System.Xml.Xsl.XslCompiledTransform> 方法可能比 <xref:System.Xml.Xsl.XslTransform.Load%2A> 类的 <xref:System.Xml.Xsl.XslTransform> 方法慢。 这是因为必须先编译 XSLT 文件，才能加载该文件。 有关详细信息，请参阅以下博客文章：[XslCompiledTransform 比 XslTransform 慢？](https://docs.microsoft.com/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform)
+> 尽管 <xref:System.Xml.Xsl.XslCompiledTransform> 类的总体性能优于 <xref:System.Xml.Xsl.XslTransform> 类，但在首次对转换调用时，<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 类的 <xref:System.Xml.Xsl.XslCompiledTransform> 方法可能比 <xref:System.Xml.Xsl.XslTransform.Load%2A> 类的 <xref:System.Xml.Xsl.XslTransform> 方法慢。 这是因为必须先编译 XSLT 文件，才能加载该文件。 有关详细信息，请参阅以下博客文章：[XslCompiledTransform Slower than XslTransform?](https://docs.microsoft.com/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform)（XslCompiledTransform 比 XslTransform 慢？）
 
 ## <a name="security"></a>安全性
 
@@ -119,13 +119,13 @@ W3C XSL 转换 (XSLT) 1.0 版建议中涉及到实现提供者可以在哪些方
 
 - msxsl:node-set：<xref:System.Xml.Xsl.XslTransform> 要求 [node-set Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256197(v=vs.100)) 函数的参数是结果树片段。 <xref:System.Xml.Xsl.XslCompiledTransform> 类没有此需求。
 
-- msxsl:version：<xref:System.Xml.Xsl.XslCompiledTransform> 中支持此函数。
+- msxsl:version:<xref:System.Xml.Xsl.XslCompiledTransform> 支持此函数。
 
 - XPath 扩展函数：现在支持 [ms:string-compare Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100))、[ms:utc Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100))、[ms:namespace-uri Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100))、[ms:local-name Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100))、[ms:number Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100))、[ms:format-date Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100)) 和 [ms:format-time Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100)) 函数。
 
-- 与架构相关的 XPath 扩展函数：这些函数不受 <xref:System.Xml.Xsl.XslCompiledTransform> 本机支持。 但是，它们可以作为扩展函数实现。
+- 与架构相关的 XPath 扩展函数：<xref:System.Xml.Xsl.XslCompiledTransform> 不再支持这些函数。 但是，它们可以作为扩展函数实现。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

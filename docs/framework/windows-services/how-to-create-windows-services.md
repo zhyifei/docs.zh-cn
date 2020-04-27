@@ -8,13 +8,13 @@ ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
 ms.openlocfilehash: 514675b3c3ce1f6701dff571361df672fb520c6a
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053656"
 ---
 # <a name="how-to-create-windows-services"></a>如何：创建 Windows 服务
-创建服务时，可使用名为“Windows 服务”的 Visual Studio 项目模板。 通过引用适当的类和命名空间、为服务设置来自基类的继承和替代你可能想要替代的几个方法，此模板自动为你完成了许多工作。  
+创建服务时，可使用名为“Windows 服务”  的 Visual Studio 项目模板。 通过引用适当的类和命名空间、为服务设置来自基类的继承和替代你可能想要替代的几个方法，此模板自动为你完成了许多工作。  
   
 > [!WARNING]
 > Visual Studio 的速成版中未提供 Windows 服务项目模板。  
@@ -29,12 +29,12 @@ ms.locfileid: "71053656"
   
 ### <a name="to-create-a-windows-service-application"></a>要创建 Windows 服务应用程序  
   
-1. 创建“Windows 服务”项目。  
+1. 创建“Windows 服务”  项目。  
   
     > [!NOTE]
     > 有关不使用模板编写服务的说明，请参阅[如何：以编程方式编写服务](how-to-write-services-programmatically.md)。  
   
-2. 在“属性”窗口中，为服务设置 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性。  
+2. 在“属性”  窗口中，为服务设置 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性。  
   
      ![设置 ServiceName 属性。](./media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
   
@@ -52,7 +52,7 @@ ms.locfileid: "71053656"
     |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` 将在你的服务执行操作时向应用程序事件日志写入信息条目；`false` 将禁用该功能。 有关详细信息，请参阅[如何：记录关于服务的信息](how-to-log-information-about-services.md)。 **注意：** 默认情况下，<xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 设置为 `true`。|  
   
     > [!NOTE]
-    > 当 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 或 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 设置为 `false` 时，“服务控制管理器”将禁用相应的菜单选项来停止、暂停或继续该服务。  
+    > 当 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 或 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 设置为 `false` 时，“服务控制管理器”  将禁用相应的菜单选项来停止、暂停或继续该服务。  
   
 4. 访问代码编辑器，并填写你想要对 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 过程的处理。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "71053656"
   
 6. 添加服务应用程序所必需的安装程序。 有关详细信息，请参阅[如何：将安装程序添加到服务应用程序](how-to-add-installers-to-your-service-application.md)。  
   
-7. 通过从“生成”菜单选择“生成解决方案”来生成项目。  
+7. 通过从“生成”  菜单选择“生成解决方案”  来生成项目。  
   
     > [!NOTE]
     > 不要通过按 F5 来运行你的项目 — 你无法通过这种方式运行服务项目。  

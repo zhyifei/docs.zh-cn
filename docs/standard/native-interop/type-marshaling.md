@@ -4,7 +4,7 @@ description: 了解 .NET 如何将类型封送到本机表示形式。
 ms.date: 01/18/2019
 ms.openlocfilehash: 91b8f3d6cb53fd7a0adea7ea9669e7459e81445f
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75706261"
@@ -13,7 +13,7 @@ ms.locfileid: "75706261"
 
 **封送**是当类型需要在托管代码和本机代码之间切换时转换类型的过程。
 
-需要封送的原因在于托管代码与非托管代码中的类型并不相同。 例如，在托管代码中，你有一个 `String`，而在非托管环境中，字符串可以是 Unicode （"宽型"）、非 Unicode、null 结尾、ASCII，等等。默认情况下，P/Invoke 子系统会根据默认行为尝试执行正确的操作，如本文所述。 但是，如果需要额外的控制，可以使用 [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) 属性指定要在非托管端上使用的预期类型。 例如，如果想要将字符串作为以 null 结尾的 ANSI 字符串发送，则可以执行如下操作：
+需要封送的原因在于托管代码与非托管代码中的类型并不相同。 例如，在托管代码中，可指定 `String`。但在非托管环境中，字符串类型可以是 Unicode（“宽型”）、非 Unicode、null 结尾、ASCII 等。默认情况下，P/Invoke 子系统会尝试基于默认行为执行正确的操作，如本文中所述。 但是，如果需要额外的控制，可以使用 [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) 属性指定要在非托管端上使用的预期类型。 例如，如果想要将字符串作为以 null 结尾的 ANSI 字符串发送，则可以执行如下操作：
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

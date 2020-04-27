@@ -3,13 +3,13 @@ title: Azure 事件网格 - 无服务器应用
 description: Azure 事件网格是一种无服务器解决方案，用于在按事件付费模型上进行大规模可靠的事件传递和路由。
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: 3c577139c12567e762aabd58c9dc29457fa37aa1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/06/2020
+ms.openlocfilehash: 408e1b9cd1b1e5316c7c6a17bb1b0c76a38f9e11
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522712"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135706"
 ---
 # <a name="event-grid"></a>事件网格
 
@@ -132,14 +132,12 @@ Azure 提供了多个消息传递服务，包括[事件中心](https://docs.micr
 - [Azure 逻辑应用](https://docs.microsoft.com/azure/logic-apps)
 - [Azure 服务总线](https://docs.microsoft.com/azure/service-bus-messaging)
 - [Azure 表存储](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
-- [比较函数 1.x 和 2.x](https://docs.microsoft.com/azure/azure-functions/functions-versions)
 - [使用 Azure 本地数据网关连接到本地数据源](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
 - [在 Azure 门户中创建你的第一个函数](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
 - [使用 Azure CLI 创建第一个函数](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
 - [使用 Visual Studio 创建你的第一个函数](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)
 - [Functions 支持的语言](https://docs.microsoft.com/azure/azure-functions/supported-languages)
 - [监视 Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
-- [使用 Azure Functions 代理](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
 
 >[!div class="step-by-step"]
 >[上一页](logic-apps.md)

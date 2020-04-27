@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 ms.openlocfilehash: c6b1093d2e821a55cc5513b077a270748a780b71
 ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75347627"
@@ -199,7 +199,7 @@ public class MyClass
 }
 ```
 
-如果协定类型从 `dynamic` 关键字推断而出，则它将与任何协定类型匹配。 在这种情况下，导入应 **始终** 指定要依据其进行匹配的协定名称。 （如果未指定协定名称，将认为导入不匹配任何导出。）以下两个导出都将与前面的导入匹配。
+如果协定类型从 `dynamic` 关键字推断而出，则它将与任何协定类型匹配。 在这种情况下，导入应 **始终** 指定要依据其进行匹配的协定名称。 （如果未指定协定名称，则会将导入视为未与导出匹配。）下面的两个导出均将与前面的导入匹配。
 
 ```vb
 <Export("TheString", GetType(IMyAddin))>
@@ -341,7 +341,7 @@ public MyClass([Import(typeof(IMySubAddin))]IMyAddin MyAddin)
 
 `Import` 特性指定部件正常运行的要求。 如果导入无法得到满足，则该部件的组合将失败，并且部件将不可用。
 
-通过使用 *属性指定导入为* 可选 `AllowDefault` 。 在这种情况下，即使导入与任何可用的导出都不匹配，组合也将成功，并且导入属性将设置为其属性类型的默认值（对于对象属性为`null`，`false` 对于布尔值为零，对于数值属性为零。）下面的类使用可选的导入。
+通过使用 *属性指定导入为* 可选 `AllowDefault` 。 在这种情况下，即使导入未与任何可用的导出匹配，组合也将成功，并且导入属性将设置为其属性类型的默认值（对于对象属性则为 `null`，对于布尔值则为 `false`，对于数值属性则为零。）下面的类使用可选导入。
 
 ```vb
 Public Class MyClass1
@@ -464,7 +464,7 @@ public class DataThree
 
 ## <a name="metadata-and-metadata-views"></a>元数据和元数据视图
 
-导出可提供有关自身的附加信息（称为“元数据”）。 元数据可用于将导出的对象的属性传递到导入部件。 导入部件可以使用此数据来决定要使用哪些导出，或收集有关导出的信息而不必构造导出。 因此，导入必须为延迟导入才能使用元数据。
+导出可提供有关自身的附加信息（称为“元数据”  ）。 元数据可用于将导出的对象的属性传递到导入部件。 导入部件可以使用此数据来决定要使用哪些导出，或收集有关导出的信息而不必构造导出。 因此，导入必须为延迟导入才能使用元数据。
 
 为了使用元数据，你通常会声明一个称为 *元数据视图*的接口，该接口声明哪些元数据将可用。 元数据视图接口必须只有属性，并且这些属性必须具有 `get` 访问器。 下面的接口是一个示例元数据视图。
 
@@ -685,7 +685,7 @@ public class NumFour : NumThree
 }
 ```
 
-如果存在与 `InheritedExport` 特性关联的元数据，该元数据也将被继承。 （有关详细信息，请参阅前面的 "元数据和元数据视图" 一节。）继承的元数据不能由子类修改。 但是，通过使用相同协定名称和协定类型但使用新元数据重新声明 `InheritedExport` 特性，子类可以将继承的元数据替换为新元数据。 下面的类演示此原则。 `MegaLogger` 部件继承自 `Logger` 并包括 `InheritedExport` 特性。 由于 `MegaLogger` 重新声明名为 Status 的新元数据，因此它不会从 `Logger`中继承 Name 和 Version 元数据。
+如果存在与 `InheritedExport` 特性关联的元数据，该元数据也将被继承。 （有关详细信息，请参阅前面的“元数据和元数据视图”一节。）子类无法修改继承的元数据。 但是，通过使用相同协定名称和协定类型但使用新元数据重新声明 `InheritedExport` 特性，子类可以将继承的元数据替换为新元数据。 下面的类演示此原则。 `MegaLogger` 部件继承自 `Logger` 并包括 `InheritedExport` 特性。 由于 `MegaLogger` 重新声明名为 Status 的新元数据，因此它不会从 `Logger`中继承 Name 和 Version 元数据。
 
 ```vb
 <InheritedExport(GetType(IPlugin))>
@@ -745,7 +745,7 @@ public class MegaLogger : Logger        {
 }
 ```
 
-在重新声明 `InheritedExport` 特性以重写元数据时，请确保协定类型相同。 （在前面的示例中，`IPlugin` 为协定类型。）如果它们不同，则第二个特性会创建第二个独立于该部分的导出，而不是重写。 通常，这意味着你必须在重写 `InheritedExport` 特性时显式指定协定类型，如前面的示例所示。
+在重新声明 `InheritedExport` 特性以重写元数据时，请确保协定类型相同。 （在前面的示例中，`IPlugin` 为协定类型。）如果协定类型不同，则第二个特性将创建另一个独立于部件的导出（而不是重写）。 通常，这意味着你必须在重写 `InheritedExport` 特性时显式指定协定类型，如前面的示例所示。
 
 由于无法直接实例化接口，因此通常无法用 `Export` 或 `Import` 特性来修饰接口。 不过，可以在接口级别用 `InheritedExport` 特性修饰接口，并且任何实现类将随任何关联的元数据一起继承该导出。 但是，接口本身将不可用作部件。
 
@@ -980,7 +980,7 @@ public class PartSeven
 
 `IPartImportsSatisfiedNotification` 包含一个名为 `OnImportsSatisfied`的方法。 当组合已完成并且部件的导入可供使用时，组合窗口将对实现接口的任何部件调用此方法。 部件是组合引擎创建，用于满足其他部件的导入。 在设置好部件的导入之前，你无法执行任何依赖于部件构造函数中的导入值或对这些值进行操作的初始化，除非已通过使用 `ImportingConstructor` 特性将这些指定为必备。 此方法通常为首选方法，但在某些情况下，构造函数注入可能不可用。 在这些情况下，可以在 `OnImportsSatisfied`中执行初始化，并且部件应实现 `IPartImportsSatisfiedNotification`。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [第 9 频道视频：使用 Managed Extensibility Framework 打开应用程序](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
 - [第 9 频道视频：Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

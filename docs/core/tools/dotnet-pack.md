@@ -2,12 +2,12 @@
 title: dotnet pack 命令
 description: dotnet pack 命令可为 .NET Core 项目创建 NuGet 包。
 ms.date: 02/14/2020
-ms.openlocfilehash: 3b9c46ecd5d67519728896b0018e27fb41ebd861
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 2df096a088a177b77256b5d717f31e185507b249
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463502"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102809"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -55,6 +55,8 @@ dotnet pack -h|--help
    <IsPackable>true</IsPackable>
 </PropertyGroup>
 ```
+
+### <a name="implicit-restore"></a>隐式还原
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 

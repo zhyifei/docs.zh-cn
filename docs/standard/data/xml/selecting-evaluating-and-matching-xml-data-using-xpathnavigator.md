@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 46e059f8-4dc8-4185-9236-784be95228ed
 ms.openlocfilehash: 1a76edf22483c0df8871badcb5e162dd3e66001f
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710136"
@@ -32,7 +32,7 @@ ms.locfileid: "75710136"
  [已编译的 XPath 表达式](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)  
  介绍表示已编译的 XPath 查询的 <xref:System.Xml.XPath.XPathExpression> 类。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

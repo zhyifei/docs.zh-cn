@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 ms.openlocfilehash: 90a66e04bda4fb2ee4216e8aabd631afb2f28dd0
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710708"
@@ -27,6 +27,6 @@ ms.locfileid: "75710708"
   
  默认情况下，<xref:System.Xml.XmlDocument.Load%2A> 不会使用文档类型定义 (DTD) 或架构验证来验证 XML 是否有效。 只验证 XML 的格式是否正确。 要进行验证，需要使用 <xref:System.Xml.XmlReader> 类创建一个 <xref:System.Xml.XmlReaderSettings>。 <xref:System.Xml.XmlReader> 类可以使用 DTD 或架构定义语言 (XSD) 架构强制进行验证。 <xref:System.Xml.ValidationType> 类的 <xref:System.Xml.XmlReaderSettings> 属性确定 <xref:System.Xml.XmlReader> 实例是否强制进行验证。 有关验证 XML 数据的详细信息，请参阅 <xref:System.Xml.XmlReader> 引用页的“备注”部分。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

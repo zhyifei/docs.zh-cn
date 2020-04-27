@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 ms.openlocfilehash: e6e490c0f637aace57dacc88ef49cc9be87532cd
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709681"
@@ -29,7 +29,7 @@ XSLT 语言具有一组丰富的功能，为您带来强大的功能和灵活性
 #### <a name="guidelines"></a>准则  
  只有样式表来自可信的源时，才应启用脚本。 如果不能验证样式表的源，或者样式表不是来自可信的源，则为 XSLT 设置参数传入 `null`。  
   
-## <a name="external-resources"></a>外部資源  
+## <a name="external-resources"></a>外部资源  
  如果处理器需要解析 URI 引用，XSLT 语言包括 `xsl:import`、`xsl:include` 或 `document()` 函数等功能。 <xref:System.Xml.XmlResolver> 类用于解析外部资源。 在下列两种情况下，可能需要解析外部资源：  
   
 - 在编译样式表时，<xref:System.Xml.XmlResolver> 用于解析 `xsl:import` 和 `xsl:include`。  
@@ -54,7 +54,7 @@ XSLT 语言具有一组丰富的功能，为您带来强大的功能和灵活性
   
 - 如果要确保不访问任何外部资源，可以为 `null` 自变量指定 <xref:System.Xml.XmlResolver>。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [在 XSLT 处理期间解析外部资源](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)

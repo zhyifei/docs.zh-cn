@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 ms.openlocfilehash: 504057bd5e10498d39b2bce908742fc20b112c52
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710500"
@@ -21,10 +21,10 @@ ms.locfileid: "75710500"
 |特性名|行为|  
 |--------------------|--------------|  
 |method|支持。|  
-|版本|已忽略。 对于 XML，版本始终是 1.0，对于 HTML，版本始终是 4.0。|  
+|version|已忽略。 对于 XML，版本始终是 1.0，对于 HTML，版本始终是 4.0。|  
 |encoding|在输出到 <xref:System.IO.TextWriter> 时忽略。 使用 <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType> 属性取代。|  
 |omit-xml-declaration|支持。|  
-|standalone|支持。|  
+|独立|支持。|  
 |doctype-public|支持。|  
 |doctype-system|支持。|  
 |cdata-section-elements|支持。|  
@@ -40,10 +40,10 @@ ms.locfileid: "75710500"
 #### <a name="xmlwriter"></a>XmlWriter  
  <xref:System.Xml.XmlWriter> 类输出 XML 流或文件。 可以使用 <xref:System.Xml.XmlWriter> 类指定 <xref:System.Xml.XmlWriterSettings> 对象上要支持的功能，包括输出选项。 <xref:System.Xml.XmlWriter> 类是 <xref:System.Xml> 框架必不可少的一个部分。 使用此输出类型可以将输出结果通过管道发送给另一个 XML 进程。  
   
-#### <a name="string"></a>字符串  
+#### <a name="string"></a>String  
  使用此输出类型可以指定输出文件的 URI。  
   
-#### <a name="stream"></a>Stream  
+#### <a name="stream"></a>流  
  流是字节序列的抽象，例如文件、输入/输出设备、进程中通信管道或 TCP/IP 套接字。 <xref:System.IO.Stream> 类及其派生类提供这些不同类型的输入和输出的通用视图，使程序员与操作系统和基础设备的具体细节相隔离。  
   
  使用此输出类型可以将数据发送到 <xref:System.IO.FileStream>、<xref:System.IO.MemoryStream> 或输出流 (`Response.OutputStream`)。  
@@ -51,10 +51,10 @@ ms.locfileid: "75710500"
 #### <a name="textwriter"></a>TextWriter  
  <xref:System.IO.TextWriter> 输出序列字符。 此输出类型在 <xref:System.IO.StringWriter> 和 <xref:System.IO.StreamWriter> 类中实现，分别将字符输出到字符串或流。 如果希望输出到字符串，请使用此输出类型。  
   
-## <a name="notes"></a>注释  
+## <a name="notes"></a>说明  
   
 - 在写出空标记时，会在元素名的最后一个字符与反斜杠之间写入一个空格，例如 `<myElement />`。 这样，较旧的浏览器可以正确地显示生成的 HTML 页面。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)

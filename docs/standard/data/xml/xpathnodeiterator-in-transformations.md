@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
 ms.openlocfilehash: 63beeb3ca9d3f3cb6e6bde418e99ee2bd0a12e20
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709733"
@@ -26,7 +26,7 @@ ms.locfileid: "75709733"
   
  第一次查看一个节点集时，必须调用 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> 以将 <xref:System.Xml.XPath.XPathNodeIterator> 定位在选定节点集的第一个节点上。 这样可以编写 while 循环。  
   
- 以下代码示例显示如何将 <xref:System.Xml.XPath.XPathNodeIterator> 作为 <xref:System.Xml.Xsl.XslTransform> 中的参数传递给 <xref:System.Xml.Xsl.XsltArgumentList>。 代码输入是 books.xml，样式表是 text.xsl。 文件 test.xml 是 <xref:System.Xml.XPath.XPathDocument>。  
+ 以下代码示例显示如何将 <xref:System.Xml.XPath.XPathNodeIterator> 作为 <xref:System.Xml.Xsl.XslTransform> 中的参数传递给 <xref:System.Xml.Xsl.XsltArgumentList>。 代码输入是 books.xml  ，样式表是 text.xsl  。 文件 test.xml  是 <xref:System.Xml.XPath.XPathDocument>。  
   
 ```vb  
 Imports System  
@@ -156,6 +156,6 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </out>  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

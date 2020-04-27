@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 58d1c8cd3aff52703522391c14348bd81c108587
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 820825f0545aa78729414c388385b339225b1235
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74568145"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021670"
 ---
 ### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>自定义 EncoderFallbackBuffer 实例无法递归回退
 
@@ -38,7 +38,7 @@ ms.locfileid: "74568145"
 
 #### <a name="category"></a>类别
 
-CoreFx
+Core .NET 库
 
 #### <a name="affected-apis"></a>受影响的 API
 

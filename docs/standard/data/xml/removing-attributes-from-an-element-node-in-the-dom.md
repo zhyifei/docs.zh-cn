@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 ms.openlocfilehash: bb18e712d5ed2cd06c7ae0e867b19ca8a9ad2513
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710344"
@@ -37,6 +37,6 @@ ms.locfileid: "75710344"
   
  在使用 <xref:System.Xml.XmlAttribute> 调用时，<xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> 方法会将属性值设置为 String.Empty，因为属性不能没有值。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

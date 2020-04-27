@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 ms.openlocfilehash: d647a8cd73fa714e86454687a25501259f894f6d
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73120709"
@@ -37,4 +37,4 @@ COM 在以下几个重要方面与 .NET 运行时对象模型存在差别：
 - [运行时可调用包装器](runtime-callable-wrapper.md)
 - [COM 可调用包装器](com-callable-wrapper.md)
 - [自定义 .NET Framework 中的标准包装器](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
-- [如何：在 .NET Framework 中自定义运行时可调用包装](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))
+- [如何：自定义 .NET Framework 中的运行时可调用包装器](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))

@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 ms.openlocfilehash: a818fd46bd93682f0bede1d22b8cbc2ca6467a40
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75716745"
@@ -22,15 +22,15 @@ ms.locfileid: "75716745"
 -doc[+ | -]  
 ```
 
-或  
+or  
 
 ```console
 -doc:file  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
   
-|术语|Definition|  
+|术语|定义|  
 |---|---|  
 |`+` &#124; `-`|可选。 指定 + 或仅 `-doc` 会导致编译器生成文档信息并将其置于 XML 文件中。 指定 `-` 相当于未指定 `-doc`，因此不会创建任何文档信息。|  
 |`file`|如果使用 `-doc:`，则是必需的。 指定输出 XML 文件（由编译的源代码文件中的注释填充）。 如果文件名包含空格，请用引号 (" ") 括住该名称。|  
@@ -52,12 +52,12 @@ ms.locfileid: "75716745"
   
 |在 Visual Studio 集成开发环境中设置 -doc|  
 |---|  
-|1. 在**解决方案资源管理器**中选择了一个项目。 在“项目”菜单上，单击“属性”。 <br />2. 单击 "**编译**" 选项卡。<br />3. 在 "**生成 XML 文档文件**" 框中设置值。|  
+|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”   。 <br />2.单击“编译”  选项卡。<br />3.在“生成 XML 文档文件”  框中设置值。|  
   
 ## <a name="example"></a>示例  
  有关示例，请参阅[使用 XML 来记录代码](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [使用 XML 记录代码](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)

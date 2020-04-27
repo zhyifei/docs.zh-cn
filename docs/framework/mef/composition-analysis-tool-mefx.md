@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
 ms.openlocfilehash: 7d0acf16ace5aad60b32b7139a58a258fb080ee0
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181292"
@@ -70,7 +70,7 @@ MyAddin.AddIn
   
 <a name="finding_rejected_parts"></a>
 ## <a name="finding-rejected-parts"></a>查找拒绝的部件  
- 一旦加载可用部件，Mefx 将使用 MEF 组合引擎将它们组合起来。 不能成功组合的部件称为 *“拒绝的部件”*。 若要列出所有拒绝的部件，请使用 `/rejected` 操作。  
+ 一旦加载可用部件，Mefx 将使用 MEF 组合引擎将它们组合起来。 不能成功组合的部件称为 *“拒绝的部件”* 。 若要列出所有拒绝的部件，请使用 `/rejected` 操作。  
   
  你可以结合使用 `/verbose` 选项和 `/rejected` 选项打印关于拒绝的部件的详细信息。 在下面的示例中， `ClassLibrary1` DLL 包含 `AddIn` 部件，该部件导入 `MemberPart` 和 `ChainOne` 部件。 `ChainOne` 导入 `ChainTwo`，但 `ChainTwo` 不存在。 这意味着， `ChainOne` 被拒绝，这将导致 `AddIn` 被拒绝。  
   

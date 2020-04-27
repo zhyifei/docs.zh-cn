@@ -9,7 +9,7 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 ms.openlocfilehash: d7d9f8e0d4ec2f343b50e68e942bf94e93576f25
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710942"
@@ -137,7 +137,7 @@ ms.locfileid: "75710942"
 </xs:schema>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)

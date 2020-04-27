@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 ms.openlocfilehash: e454c1194e8c280042857f106e22d0d0509417e3
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78156356"
@@ -190,7 +190,7 @@ ms.locfileid: "78156356"
 <books xmlns:user="urn:books">Book1Book2Book3Book4</books>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [XslTransform 类的 XSLT 转换](xslt-transformations-with-the-xsltransform-class.md)

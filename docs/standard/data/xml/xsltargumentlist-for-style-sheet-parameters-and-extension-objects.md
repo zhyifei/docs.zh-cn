@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 ms.openlocfilehash: 34ffb9923337bbad90b2170a16d610d26c7f6f23
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160191"
@@ -362,6 +362,6 @@ public class Sample
   
  `</circles>`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

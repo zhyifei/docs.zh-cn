@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 ms.openlocfilehash: 712040c3482b51c4dafe0ee87fdda8cd848fb7fc
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123615"
@@ -101,7 +101,7 @@ extern "C" int MessageBox(
  详细的引用信息，请参阅 <xref:System.Runtime.InteropServices.DllImportAttribute>。  
   
 ## <a name="platform-invoke-security-considerations"></a>平台调用安全注意事项  
- <xref:System.Security.Permissions.SecurityAction> 枚举的 `Assert`、`Deny` 和 `PermitOnly` 成员被称为堆栈审核修饰符。 如果将这些成员用作平台调用声明和 COM 接口定义语言 (IDL) 语句上的声明性属性，则会被忽略。  
+ <xref:System.Security.Permissions.SecurityAction> 枚举的 `Assert`、`Deny` 和 `PermitOnly` 成员被称为堆栈审核修饰符  。 如果将这些成员用作平台调用声明和 COM 接口定义语言 (IDL) 语句上的声明性属性，则会被忽略。  
   
 ### <a name="platform-invoke-examples"></a>平台调用示例  
  本节中的平台调用示例阐明了如何将 `RegistryPermission` 属性和堆栈审核修饰符一起使用。  

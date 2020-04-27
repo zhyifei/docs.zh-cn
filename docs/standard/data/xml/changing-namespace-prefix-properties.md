@@ -8,13 +8,13 @@ dev_langs:
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
 ms.openlocfilehash: b1df520d00d3a98b2e518092d4eff51b5d0b7741
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78158020"
 ---
 # <a name="changing-namespace-prefix-properties"></a>更改命名空间前缀属性
-使用 XmlNode 类，可以更改与给定节点关联的命名空间前缀。 例如，下面的代码显示所更改元素的前缀。  
+使用 XmlNode  类，可以更改与给定节点关联的命名空间前缀。 例如，下面的代码显示所更改元素的前缀。  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -62,8 +62,8 @@ Console.WriteLine(doc.InnerXml);
 <a:test xmlns="123" xmlns:a="123" />  
 ```  
   
- 如果树由于 doc.InnerXml 调用而暂留到字符串，添加的 `xmlns:a='123'` 属性是为了暂留 `test` 元素的命名空间。 以前为 `'123'`，并保持为 `'123'`。  
+ 如果树由于 doc.InnerXml  调用而暂留到字符串，添加的 `xmlns:a='123'` 属性是为了暂留 `test` 元素的命名空间。 以前为 `'123'`，并保持为 `'123'`。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

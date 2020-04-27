@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
 ms.openlocfilehash: cc412042e69a43bbecec9dbe68618e2d307ca793
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709694"
@@ -38,7 +38,7 @@ ms.locfileid: "75709694"
   
  *等效于包含单个节点的节点集。  
   
- 如果参数对象不属于上述某个类，将根据下列规则进行转换。 公共语言运行库 (CLR) 数字类型转换为 <xref:System.Double>。 <xref:System.DateTime> 类型转换为 <xref:System.String>。 <xref:System.Xml.XPath.IXPathNavigable> 类型转换为 <xref:System.Xml.XPath.XPathNavigator>。 XPathNavigator[] 转换为 <xref:System.Xml.XPath.XPathNodeIterator>。  
+ 如果参数对象不属于上述某个类，将根据下列规则进行转换。 公共语言运行库 (CLR) 数字类型转换为 <xref:System.Double>。 <xref:System.DateTime> 类型转换为 <xref:System.String>。 <xref:System.Xml.XPath.IXPathNavigable> 类型转换为 <xref:System.Xml.XPath.XPathNavigator>。 XPathNavigator[]  转换为 <xref:System.Xml.XPath.XPathNodeIterator>。  
   
  所有其他类型均将引发错误。  
   
@@ -66,6 +66,6 @@ ms.locfileid: "75709694"
 </order>  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)

@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 7d1bbe8b-ed43-4e62-a5ba-d602d244f4ae
 ms.openlocfilehash: e19e0d18dc0f4aceb38bf006c3b9b80276455510
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709759"
@@ -37,6 +37,6 @@ StringWriter fs = new StringWriter();
 Xslt.Transform(doc, null, fs, null);  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

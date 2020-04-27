@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
 ms.openlocfilehash: c8466e78458d344a872aac7cdebc155342b13e0f
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75711163"
@@ -29,7 +29,7 @@ ms.locfileid: "75711163"
  [用户定义的函数和变量](../../../../docs/standard/data/xml/user-defined-functions-and-variables.md)  
  描述如何实现一个自定义 <xref:System.Xml.Xsl.XsltContext> 类，以及用于支持扩展函数和变量的接口 <xref:System.Xml.Xsl.IXsltContextFunction> 和 <xref:System.Xml.Xsl.IXsltContextVariable>。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

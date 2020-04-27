@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
 ms.openlocfilehash: 60fdc0317975d94433401e3214953b77d0970f60
 ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/08/2020
 ms.locfileid: "75741059"
@@ -109,21 +109,21 @@ Public Class MyObject
 End Class
 ```  
   
- 序列化期间调用 GetObjectData 时，由用户负责填充随方法调用一起提供的 <xref:System.Runtime.Serialization.SerializationInfo>。 将待序列化变量以名称和值对的形式添加。 任何文本都能用作名称。 如果对足够多的数据进行序列化，以在反序列化期间还原对象，您便可随意决定将哪些成员变量添加到 <xref:System.Runtime.Serialization.SerializationInfo>。 如果基对象实现 <xref:System.Runtime.Serialization.ISerializable>，则派生类应该对该基对象调用 GetObjectData 方法。  
+ 序列化期间调用 GetObjectData 时，由用户负责填充随方法调用一起提供的 <xref:System.Runtime.Serialization.SerializationInfo>  。 将待序列化变量以名称和值对的形式添加。 任何文本都能用作名称。 如果对足够多的数据进行序列化，以在反序列化期间还原对象，您便可随意决定将哪些成员变量添加到 <xref:System.Runtime.Serialization.SerializationInfo>。 如果基对象实现 <xref:System.Runtime.Serialization.ISerializable>，则派生类应该对该基对象调用 GetObjectData 方法  。  
   
- 请注意，序列化可以允许其他代码查看或修改用其他方式无法访问的对象实例数据。 因此，执行序列化的代码需使用指定了 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter> 标志的 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute)。 在默认策略下，通过 Internet 下载的代码或 Intranet 代码不会授予该权限；只有本地计算机上的代码才被授予该权限。 必须采用下列方式显式保护 GetObjectData 方法：要求使用使用指定了 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter> 标志的 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute)，或者要求具备专门用于帮助保护私有数据的其他权限。  
+ 请注意，序列化可以允许其他代码查看或修改用其他方式无法访问的对象实例数据。 因此，执行序列化的代码需使用指定了 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter> 标志的 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute)。 在默认策略下，通过 Internet 下载的代码或 Intranet 代码不会授予该权限；只有本地计算机上的代码才被授予该权限。 必须采用下列方式显式保护 GetObjectData 方法：要求使用使用指定了 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter> 标志的 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute)，或者要求具备专门用于帮助保护私有数据的其他权限  。  
   
- 若私有字段存储的是敏感信息，应该要求对 GetObjectData 具备相应权限，以便保护该数据。 请记住，如果已向代码授予指定了 SerializationFormatter 标志的 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute)，则该代码可查看和修改私有字段中存储的数据。 被授予此 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) 的恶意调用方可以查看相关数据（如隐藏的目录位置或授予的权限），还可以通过这些数据利用计算机中的安全漏洞。 有关可以指定的安全权限标志的完整列表，请参阅 [SecurityPermissionFlag 枚举](xref:System.Security.Permissions.SecurityPermissionFlag)。  
+ 若私有字段存储的是敏感信息，应该要求对 GetObjectData 具备相应权限，以便保护该数据  。 请记住，如果已向代码授予指定了 SerializationFormatter 标志的 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute)，则该代码可查看和修改私有字段中存储的数据  。 被授予此 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) 的恶意调用方可以查看相关数据（如隐藏的目录位置或授予的权限），还可以通过这些数据利用计算机中的安全漏洞。 有关可以指定的安全权限标志的完整列表，请参阅 [SecurityPermissionFlag 枚举](xref:System.Security.Permissions.SecurityPermissionFlag)。  
   
- 强调何时将 <xref:System.Runtime.Serialization.ISerializable> 添加到必须同时实现 **GetObjectData** 和特殊构造函数的某个类，这一点很重要。 如果缺少 GetObjectData，编译器会发出警告。 但是，鉴于无法强制实现构造函数，如果不存在该构造函数，则不会发出任何警告，但此时如果尝试对某个类进行反序列化，将会引发异常。  
+ 强调何时将 <xref:System.Runtime.Serialization.ISerializable> 添加到必须同时实现 **GetObjectData** 和特殊构造函数的某个类，这一点很重要。 如果缺少 GetObjectData，编译器会发出警告  。 但是，鉴于无法强制实现构造函数，如果不存在该构造函数，则不会发出任何警告，但此时如果尝试对某个类进行反序列化，将会引发异常。  
   
- 若要解决潜在的安全和版本化问题，当前的设计应该优先于 <xref:System.Runtime.Serialization.ISerializationSurrogate.SetObjectData%2A> 方法。 例如，如果将 `SetObjectData` 方法定义为接口的组成部分，则该方法必须是公共方法。因此，用户必须编写代码，以防多次调用 SetObjectData 方法。 否则，在执行某项操作的过程中，对某个对象调用 SetObjectData 方法的恶意应用程序可能会导致潜在的问题。  
+ 若要解决潜在的安全和版本化问题，当前的设计应该优先于 <xref:System.Runtime.Serialization.ISerializationSurrogate.SetObjectData%2A> 方法。 例如，如果将 `SetObjectData` 方法定义为接口的组成部分，则该方法必须是公共方法。因此，用户必须编写代码，以防多次调用 SetObjectData 方法  。 否则，在执行某项操作的过程中，对某个对象调用 SetObjectData 方法的恶意应用程序可能会导致潜在的问题  。  
   
  在反序列化期间，使用为这个目的提供的构造函数将 <xref:System.Runtime.Serialization.SerializationInfo> 传递到类。 反序列化该对象时，将会忽略对该构造函数施加的任何可见性限制。因此，可将该类标记为公共类、受保护的类、内部类或私有类。 但是，除非密封了该类，否则最好将构造函数设为受保护的函数；如果密封了该类，应将构造函数标记为私有函数。 构造函数还应该执行彻底的输入验证。 为避免被恶意代码误用，构造函数应该强制实施安全性检查和权限，而这些安全性检查和权限也是使用其他任何构造函数获取该类的实例所必需的。 如果不采纳上述建议，恶意代码会跳过使用公共构造函数在标准实例构造期间应用的所有安全性，预序列化对象，获取对使用指定了 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter> 标志的 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) 的控制，并反序列化客户端计算机上的对象。  
   
  若要还原对象的状态，只需使用序列化期间采用的名称从 <xref:System.Runtime.Serialization.SerializationInfo> 中检索变量值即可。 如果基类实现 <xref:System.Runtime.Serialization.ISerializable>，则应调用基构造函数，以使基对象可以还原其变量。  
   
- 从实现 <xref:System.Runtime.Serialization.ISerializable> 的类派生新类时，如果派生类的变量需要进行序列化，则该派生类必须同时实现构造函数和 GetObjectData 方法。 下面的代码示例演示如何使用前面说明的 `MyObject` 类完成此项操作。  
+ 从实现 <xref:System.Runtime.Serialization.ISerializable> 的类派生新类时，如果派生类的变量需要进行序列化，则该派生类必须同时实现构造函数和 GetObjectData 方法  。 下面的代码示例演示如何使用前面说明的 `MyObject` 类完成此项操作。  
   
 ```csharp
 [Serializable]
@@ -179,7 +179,7 @@ End Class
   
  对象是从内到外重新构造的；在反序列化期间调用方法时，可能会产生非预期的副作用，原因是调用的方法引用的可能是执行调用时尚未反序列化的对象引用。 如果正在被反序列化的类实现 <xref:System.Runtime.Serialization.IDeserializationCallback>，则反序列化整个对象图后，将会自动调用 <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%2A> 方法。 此时，便已完全还原引用的所有子对象。 哈希表是类的典型示例，在不使用事件侦听器的情况下，很难对哈希表进行反序列化。 虽然在反序列化期间易于检索键和值对，但是，将这些对象重新添加到哈希表时，可能会引起问题，原因是不能保证派生自哈希表的类已被反序列化。 因此，不建议在这个阶段对哈希表调用方法。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [二进制序列化](binary-serialization.md)
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

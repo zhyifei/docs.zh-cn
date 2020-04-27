@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 ms.openlocfilehash: 7b219788895ab2f89fa285c2e1b7de62639bfcf9
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160035"
@@ -65,10 +65,10 @@ XML 命名空间将 XML 文档中的元素和属性名称与自定义和预定�
   
  下面是可使用 <xref:System.Xml.XmlNamespaceManager> 类执行的一些管理和查找任务。 有关更多信息和示例，请遵循指向每个方法或属性的引用页的链接。  
   
-|至|使用|  
+|功能|使用|  
 |--------|---------|  
 |添加命名空间|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> 方法|  
-|删除命名空间|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> 方法|  
+|移除命名空间|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> 方法|  
 |查找默认命名空间的 URI|<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A> 属性|  
 |查找命名空间前缀的 URI|<xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A> 方法|  
 |查找命名空间 URI 的前缀|<xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A> 方法|  
@@ -77,7 +77,7 @@ XML 命名空间将 XML 文档中的元素和属性名称与自定义和预定�
 |检查是否在当前范围内定义了前缀|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> 方法|  
 |获取用于查找前缀和 URI 的名称表|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> 属性|  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.XmlNamespaceManager>
 - [XML 文档和数据](../../../../docs/standard/data/xml/index.md)

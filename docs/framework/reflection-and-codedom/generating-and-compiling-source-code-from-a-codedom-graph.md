@@ -28,7 +28,7 @@ helpviewer_keywords:
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
 ms.openlocfilehash: a8d3bf7363cb887834a1c251aead05c75e2e3fe8
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130218"
@@ -45,7 +45,7 @@ ms.locfileid: "73130218"
  [!code-csharp[CodeDomExample#21](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#21)]
  [!code-vb[CodeDomExample#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#21)]  
   
- 代码生成图通常包含在 <xref:System.CodeDom.CodeCompileUnit> 中。 若要为包含 CodeDOM 图的 **CodeCompileUnit** 生成代码，请调用代码提供程序的 <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> 方法。 此方法有一个可用于生成源代码的 <xref:System.IO.TextWriter> 参数，因此，有时需要首先创建一个可以写入的 **TextWriter**。 下面的示例演示了如何从 CodeCompileUnit 生成代码以及如何将生成的源代码写入名为 HelloWorld.cs 的文件。  
+ 代码生成图通常包含在 <xref:System.CodeDom.CodeCompileUnit> 中。 若要为包含 CodeDOM 图的 **CodeCompileUnit** 生成代码，请调用代码提供程序的 <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> 方法。 此方法有一个可用于生成源代码的 <xref:System.IO.TextWriter> 参数，因此，有时需要首先创建一个可以写入的 **TextWriter**。 下面的示例演示了如何从 CodeCompileUnit  生成代码以及如何将生成的源代码写入名为 HelloWorld.cs 的文件。  
   
  [!code-cpp[CodeDomExample#22](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#22)]
  [!code-csharp[CodeDomExample#22](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#22)]
@@ -62,17 +62,17 @@ ms.locfileid: "73130218"
   
  CodeDom 提供程序的所有标准编译-调用方法都有一个 <xref:System.CodeDom.Compiler.CompilerParameters> 类型的参数，指示用于编译的选项。  
   
- 可以在 CompilerParameters 的 <xref:System.CodeDom.Compiler.CompilerParameters.OutputAssembly%2A> 属性中指定输出程序集的文件名。 否则，将使用默认的输出文件名。  
+ 可以在 CompilerParameters  的 <xref:System.CodeDom.Compiler.CompilerParameters.OutputAssembly%2A> 属性中指定输出程序集的文件名。 否则，将使用默认的输出文件名。  
   
- 默认情况下，新的 CompilerParameters 在初始化时，其 <xref:System.CodeDom.Compiler.CompilerParameters.GenerateExecutable%2A> 属性将设置为 false。 如果编译可执行程序，必须将 GenerateExecutable 属性设置为 true。 GenerateExecutable 设置为 false 时，编译器将生成类库。  
+ 默认情况下，新的 CompilerParameters  在初始化时，其 <xref:System.CodeDom.Compiler.CompilerParameters.GenerateExecutable%2A> 属性将设置为 false  。 如果编译可执行程序，必须将 GenerateExecutable  属性设置为 true  。 GenerateExecutable  设置为 false  时，编译器将生成类库。  
   
  如果要从 CodeDOM 图编译可执行文件，则必须在该图中定义 <xref:System.CodeDom.CodeEntryPointMethod>。 如果有多个代码入口点，可能需要将 **CompilerParameters** 的 <xref:System.CodeDom.Compiler.CompilerParameters.MainClass%2A> 属性设置为定义要使用的入口点的类名。  
   
- 若要将调试信息包含在生成的可执行文件中，请将 <xref:System.CodeDom.Compiler.CompilerParameters.IncludeDebugInformation%2A> 属性设置为 true。  
+ 若要将调试信息包含在生成的可执行文件中，请将 <xref:System.CodeDom.Compiler.CompilerParameters.IncludeDebugInformation%2A> 属性设置为 true  。  
   
  如果项目引用了任何程序集，必须将作为 <xref:System.Collections.Specialized.StringCollection> 中的项的程序集名称指定为调用编译时使用的 **CompilerParameters** 的 <xref:System.CodeDom.Compiler.CompilerParameters.ReferencedAssemblies%2A> 属性。  
   
- 通过将 <xref:System.CodeDom.Compiler.CompilerParameters.GenerateInMemory%2A> 属性设置为 true，可以编译写入内存而不是磁盘中的程序集。 在内存中生成程序集时，代码可从 <xref:System.CodeDom.Compiler.CompilerResults> 的 <xref:System.CodeDom.Compiler.CompilerResults.CompiledAssembly%2A> 属性中获取对生成的程序集的引用。 如果程序集写入磁盘，可从 **CompilerResults** 的 <xref:System.CodeDom.Compiler.CompilerResults.PathToAssembly%2A> 属性中获取生成的程序集的路径。  
+ 通过将 <xref:System.CodeDom.Compiler.CompilerParameters.GenerateInMemory%2A> 属性设置为 true  ，可以编译写入内存而不是磁盘中的程序集。 在内存中生成程序集时，代码可从 <xref:System.CodeDom.Compiler.CompilerResults> 的 <xref:System.CodeDom.Compiler.CompilerResults.CompiledAssembly%2A> 属性中获取对生成的程序集的引用。 如果程序集写入磁盘，可从 **CompilerResults** 的 <xref:System.CodeDom.Compiler.CompilerResults.PathToAssembly%2A> 属性中获取生成的程序集的路径。  
   
  若要指定在调用编译进程时使用的自定义命令行参数字符串，请在 <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> 属性中设置该字符串。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "73130218"
   
  若要将 Win32 资源文件链接到编译的程序集，请在 <xref:System.CodeDom.Compiler.CompilerParameters.Win32Resource%2A> 属性中指定该 Win32 资源文件的名称。  
   
- 若要指定暂停编译的警告等级，请将 <xref:System.CodeDom.Compiler.CompilerParameters.WarningLevel%2A> 属性设置为一个整数，表示暂停编译的警告等级。 也可以通过将 <xref:System.CodeDom.Compiler.CompilerParameters.TreatWarningsAsErrors%2A> 属性设置为 true，将编译器配置为在遇到警告时暂停编译。  
+ 若要指定暂停编译的警告等级，请将 <xref:System.CodeDom.Compiler.CompilerParameters.WarningLevel%2A> 属性设置为一个整数，表示暂停编译的警告等级。 也可以通过将 <xref:System.CodeDom.Compiler.CompilerParameters.TreatWarningsAsErrors%2A> 属性设置为 true  ，将编译器配置为在遇到警告时暂停编译。  
   
  下面的代码示例演示如何使用从 <xref:System.CodeDom.Compiler.CodeDomProvider> 类派生的 CodeDom 提供程序编译源文件。  
   

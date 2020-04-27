@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 ms.openlocfilehash: a0ccb469a43c3a21a76eaf24fa7ce7b490dd5c4a
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79180511"
@@ -37,7 +37,7 @@ ms.locfileid: "79180511"
   
 ### <a name="to-compile-the-code-and-generate-the-documentation-file"></a>编译代码并生成文档文件  
   
-1. 将 /doc**** 编译器选项添加到 <xref:System.CodeDom.Compiler.CompilerParameters> 对象的 <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> 属性中，然后将该对象传递给 <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> 方法，以便在编译代码时创建 XML 文档文件。  
+1. 将 /doc  编译器选项添加到 <xref:System.CodeDom.Compiler.CompilerParameters> 对象的 <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> 属性中，然后将该对象传递给 <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> 方法，以便在编译代码时创建 XML 文档文件。  
   
      [!code-csharp[CodeDomHelloWorldSample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#6)]
      [!code-vb[CodeDomHelloWorldSample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#6)]  
@@ -77,7 +77,7 @@ ms.locfileid: "79180511"
   
 - 需要 `FullTrust` 权限集才可成功执行此代码示例。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 XML 记录代码](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [XML 文档注释](../../csharp/programming-guide/xmldoc/index.md)

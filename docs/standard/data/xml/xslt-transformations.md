@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 202f8820-224c-494f-b61e-cd127eac6e03
 ms.openlocfilehash: 4bbecfbf1b163a9d7bfe6957806095b5b17fbab7
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709629"
@@ -31,7 +31,7 @@ ms.locfileid: "75709629"
  [XslTransform 类的 XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  提供如何使用 <xref:System.Xml.Xsl.XslTransform> 类的信息。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Xml.Xsl.XslCompiledTransform>  
  <xref:System.Xml.Xsl.XsltArgumentList>  
  <xref:System.Xml.Xsl.XsltSettings>  

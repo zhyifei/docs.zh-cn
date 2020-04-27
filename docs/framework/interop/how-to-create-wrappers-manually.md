@@ -1,17 +1,17 @@
 ---
-title: 如何：手动创建包装
+title: 如何：手动创建包装器
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
 ms.openlocfilehash: a7818a1c08d8538acfacb22dc270d7ef23a7a582
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181428"
 ---
-# <a name="how-to-create-wrappers-manually"></a>如何：手动创建包装
+# <a name="how-to-create-wrappers-manually"></a>如何：手动创建包装器
 如果决定在托管源代码中手动声明 COM 类型，则最佳的着手点是现有的接口定义语言 (IDL) 文件或类型库。 不具备 IDL 文件或无法生成类型库文件时，可以通过创建托管的声明并将生成的程序集导出到类型库来模拟 COM 类型。  
   
 ### <a name="to-simulate-com-types-from-managed-source"></a>从托管源模拟 COM 类型  
@@ -60,7 +60,7 @@ coclass SATest
  };  
 ```  
   
- **托管源代码中的包装器**  
+ **托管源代码的包装器**  
   
 ```csharp  
 using System;  
@@ -97,7 +97,7 @@ namespace SAServer
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [自定义运行时可调用包装器](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))
 - [COM 数据类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))

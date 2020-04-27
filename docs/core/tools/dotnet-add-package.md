@@ -2,18 +2,18 @@
 title: dotnet add package 命令
 description: “dotnet add package”命令可便于添加对项目的 NuGet 包引用。
 ms.date: 02/14/2020
-ms.openlocfilehash: 24a25cdab2aab30d52f8407adfda437f47437290
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1d57aed59ccd45417c88f9b6a2f9dd768fda9b58
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463757"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102848"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
 **本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet add package` - 向项目文件添加包引用。
 
@@ -28,11 +28,9 @@ dotnet add [<PROJECT>] package <PACKAGE_NAME>
 dotnet add package -h|--help
 ```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 使用 `dotnet add package` 命令可方便地向项目文件添加包引用。 运行该命令后，还有一个兼容性检查，确保包与项目中的框架兼容。 如果通过了该检查，则将 `<PackageReference>` 元素添加到项目文件并运行 [dotnet 还原](dotnet-restore.md)。
-
-[!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 例如，将 `Newtonsoft.Json` 添加到 ToDo.csproj  后的输出如以下示例所示：
 
@@ -55,7 +53,11 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
 ```
 
-## <a name="arguments"></a>参数
+### <a name="implicit-restore"></a>隐式还原
+
+[!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
+
+## <a name="arguments"></a>自变量
 
 - **`PROJECT`**
 
@@ -115,7 +117,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在 NuGet 中管理全局包、缓存和临时文件夹](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
 - [NuGet 包版本控制](https://docs.microsoft.com/nuget/reference/package-versioning)

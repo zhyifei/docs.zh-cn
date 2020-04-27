@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f5ae4669c85ae4f5d57d88ab55f6e1c758a625a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2afe5ae80c2d7feca89737b767a6335950d04416
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147583"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021649"
 ---
 ### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a>JsonEncodedText.Encode 方法具有附加的 JavaScriptEncoder 参数
 
@@ -52,7 +52,7 @@ namespace System.Text.Json
 
 #### <a name="category"></a>类别
 
-CoreFx
+Core .NET 库
 
 #### <a name="affected-apis"></a>受影响的 API
 

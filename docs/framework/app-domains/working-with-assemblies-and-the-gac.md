@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-ms.openlocfilehash: 330555f907a5ee2ef9cfc11b0b5659a392c0dec7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: 7834fbc4d74b44c4bc5204ac451e92cac22e1ef5
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119708"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645421"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>使用程序集和全局程序集缓存
 
@@ -71,5 +71,5 @@ ms.locfileid: "73119708"
 [运行时如何定位程序集](../deployment/how-the-runtime-locates-assemblies.md)  
 描述公共语言运行时如何查找并加载构成应用程序的程序集。  
   
-[使用程序集编程](../../standard/assembly/program.md)  
+[使用程序集编程](../../standard/assembly/index.md)  
 描述托管应用程序的构造块 - 程序集。

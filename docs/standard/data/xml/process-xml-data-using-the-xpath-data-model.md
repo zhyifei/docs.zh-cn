@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
 ms.openlocfilehash: f964864577cf08eb074bdfb9af7f7daf3ffb37b9
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710435"
@@ -33,7 +33,7 @@ ms.locfileid: "75710435"
  [使用 XPathNavigator 验证架构](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
  描述如何验证 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中包含的 XML 内容。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

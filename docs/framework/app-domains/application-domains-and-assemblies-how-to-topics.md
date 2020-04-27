@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 ms.openlocfilehash: bcb2ae00b02571b97dfc23100a1e5a7d3e7d8f12
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119993"
@@ -25,15 +25,15 @@ ms.locfileid: "73119993"
   
 - [如何：将程序集加载到应用程序域中](how-to-load-assemblies-into-an-application-domain.md)  
   
-- [如何：从程序集获取类型和成员信息](../reflection-and-codedom/get-type-member-information.md)  
+- [如何：从程序集获得类型和成员信息](../reflection-and-codedom/get-type-member-information.md)  
   
  **程序集**  
   
-- [如何：确定程序集的完全限定的名称](../../standard/assembly/find-fully-qualified-name.md)  
+- [如何：确定程序集的完全限定名](../../standard/assembly/find-fully-qualified-name.md)  
   
 - [如何：生成单文件程序集](build-single-file-assembly.md)  
   
-- [如何：生成多文件程序集](build-multifile-assembly.md)  
+- [如何：生成单文件程序集](build-multifile-assembly.md)  
   
 - [如何：创建公钥/私钥对](../../standard/assembly/create-public-private-key-pair.md)  
   

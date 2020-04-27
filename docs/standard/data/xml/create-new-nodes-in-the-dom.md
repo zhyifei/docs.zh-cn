@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
 ms.openlocfilehash: f48990286405baee347becef87d0511cd42e9e77
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710994"
@@ -49,6 +49,6 @@ ms.locfileid: "75710994"
 |<xref:System.Xml.XmlNode.PrependChild%2A>|将节点添加到给定节点的子节点列表的开头。 如果所添加的节点是 <xref:System.Xml.XmlDocumentFragment>，则会将文档片段的全部内容移至该节点的子列表中。 有关更多信息，请参见 <xref:System.Xml.XmlNode.PrependChild%2A> 方法。|  
 |<xref:System.Xml.XmlAttributeCollection.Append%2A>|将 <xref:System.Xml.XmlAttribute> 节点追加到与元素关联的属性集合的末尾。 有关更多信息，请参见 <xref:System.Xml.XmlAttributeCollection.Append%2A> 方法。|  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

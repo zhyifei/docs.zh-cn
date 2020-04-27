@@ -6,12 +6,12 @@ helpviewer_keywords:
 - intranet applications, running in full trust
 - running intranet applications in full trust
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
-ms.openlocfilehash: c93f84dc53abbb86cbfc4ae36e9cdcbe0bd50273
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: 33b025fa62343277fc96fc7771587e95f556e7a6
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119748"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645450"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>在完全信任环境中运行 Intranet 应用程序
 
@@ -23,7 +23,7 @@ ms.locfileid: "73119748"
   
 - 库程序集必须与可执行程序集位于同一文件夹。 不能为位于子文件夹或通过不同路径引用的程序集提供完全信任的授予集。  
   
-- 如果可执行文件延迟加载程序集，则它必须使用启动可执行文件所用的路径。 例如，如果共享 \\\\network-computer\\share 映射到某个驱动器号，并且可执行文件是从该路径运行的，那么由该可执行文件使用网络路径加载的程序集将不会被授予完全信任。 若要在 <xref:System.Security.SecurityZone.MyComputer> 区域延迟加载程序集，则可执行文件必须使用驱动器号路径。  
+- 如果可执行文件延迟加载程序集，则它必须使用启动可执行文件所用的路径。 例如，如果共享 \\\\network-computer\\share 映射到某个驱动器号，并且可执行文件是从该路径运行的，那么由该可执行文件使用网络路径加载的程序集将不会被授予完全信任   。 若要在 <xref:System.Security.SecurityZone.MyComputer> 区域延迟加载程序集，则可执行文件必须使用驱动器号路径。  
   
 ## <a name="restoring-the-former-intranet-policy"></a>还原以前的 Intranet 策略  
 
@@ -37,4 +37,4 @@ ms.locfileid: "73119748"
   
 ## <a name="see-also"></a>请参阅
 
-- [使用程序集编程](../../standard/assembly/program.md)
+- [使用程序集编程](../../standard/assembly/index.md)

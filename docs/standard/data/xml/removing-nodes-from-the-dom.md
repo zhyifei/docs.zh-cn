@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 0a98e0ca-0555-45c1-ab69-0d8d20ca1abd
 ms.openlocfilehash: a34b92abc59215c3cb2b94afd88e2e30405b4e9a
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710305"
@@ -19,6 +19,6 @@ ms.locfileid: "75710305"
   
  若要删除属性，请参阅[删除 DOM 中元素节点的属性](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

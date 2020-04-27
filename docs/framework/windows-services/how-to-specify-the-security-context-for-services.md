@@ -13,7 +13,7 @@ ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
 ms.openlocfilehash: dd2a9c4485e151d4cb1c9d5ae3a95a69fcc416d4
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053584"
@@ -42,7 +42,7 @@ ms.locfileid: "71053584"
     > [!NOTE]
     > 对于每个服务应用程序，在 `ProjectInstaller` 类中至少有两个安装组件 — 一个用于安装项目中所有服务的进程，另一个是应用程序包含的每个服务的安装程序。 在这种情况下，你要选择 <xref:System.ServiceProcess.ServiceProcessInstaller>。  
   
-3. 在“属性”窗口中，将 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 设置为适当的值。  
+3. 在“属性”  窗口中，将 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 设置为适当的值。  
   
 ## <a name="see-also"></a>请参阅
 

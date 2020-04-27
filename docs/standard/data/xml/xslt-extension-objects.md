@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 ms.openlocfilehash: 6ad5b5140239ad7dc0ad72e65d10af744dfbd784
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709707"
@@ -36,7 +36,7 @@ ms.locfileid: "75709707"
   
 3. 将 <xref:System.Xml.Xsl.XsltArgumentList> 对象传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [XSLT 安全注意事项](../../../../docs/standard/data/xml/xslt-security-considerations.md)
