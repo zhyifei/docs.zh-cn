@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 34b1577f8bcea80c1f41b6f9605bf47d132fdb4f
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 086430a720e6dc7f39d459a4b99d5bbdb1cfcac3
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134402"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141304"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字符编码
 
@@ -246,7 +246,7 @@ actual =  65,536 + ((55,356 - 55,296) * 1,024) + (57,145 - 56320)
 
 * 字符串 (string)“á”由一个标量值表示，并包含一个 `char` 实例。
 
-  * `U+00E1 LATIN SMALL LETTER E WITH ACUTE`
+  * `U+00E1 LATIN SMALL LETTER A WITH ACUTE`
 
 * 字符串 (string)“á”看起来与“á”相同，但由两个标量值表示，并包含两个 `char` 实例。
 

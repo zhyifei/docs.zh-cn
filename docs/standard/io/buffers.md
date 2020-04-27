@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: f939164cd56b2fb2feeeb171236b0e1171327e19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d113def0182dc6a5bcea6c18b2d0e4b475946e31
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160113"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739619"
 ---
 # <a name="work-with-buffers-in-net"></a>使用 .NET 中的缓冲区
 
@@ -191,5 +191,5 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 ### <a name="sequencereadert-common-problems"></a>SequenceReader\<T\> 常见问题
 
 - 由于 `SequenceReader<T>` 是可变结构，因此应始终通过[引用](../../csharp/language-reference/keywords/ref.md)进行传递。
-- `SequenceReader<T>` 是[引用结构](../../csharp/language-reference/keywords/ref.md#ref-struct-types)，因此只能在同步方法中使用，不能存储在字段中。 有关详细信息，请参阅[编写安全有效的 C# 代码](../../csharp/write-safe-efficient-code.md)。
+- `SequenceReader<T>` 是[引用结构](../../csharp/language-reference/builtin-types/struct.md#ref-struct)，因此只能在同步方法中使用，不能存储在字段中。 有关详细信息，请参阅[编写安全有效的 C# 代码](../../csharp/write-safe-efficient-code.md)。
 - `SequenceReader<T>` 已进行了优化，可用作只进读取器。 `Rewind` 适用于无法利用其他 `Read`、`Peek` 和 `IsNext` API 来解决的小型备份。

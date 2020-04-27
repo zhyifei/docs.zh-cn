@@ -15,18 +15,18 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-ms.openlocfilehash: 792d89351b3759984b085fd8aee9c3ae8e012c09
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a5a4068d0bf6f6f158ea9b2880785e227f96243d
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180418"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645575"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe（代码访问安全策略工具）
 代码访问安全性 (CAS) 策略工具 (Caspol.exe) 使用户和管理员可修改计算机策略级别、用户策略级别和企业策略级别的安全策略。  
   
 > [!IMPORTANT]
-> 从 .NET Framework 4 开始，Caspol.exe 不再影响 CAS 策略，除非将 [\<legacyCasPolicy> 元素](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)设置为 `true`。 CasPol.exe 显示或修改的任何设置将只会影响选择使用 CAS 策略的应用程序。 有关详细信息，请参阅[安全更改](../security/security-changes.md)。  
+> 从 .NET Framework 4 开始，Caspol.exe 不再影响 CAS 策略，除非将 [\<legacyCasPolicy> 元素](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)设置为 `true`。 CasPol.exe 显示或修改的任何设置将只会影响选择使用 CAS 策略的应用程序。 有关详细信息，请参阅[安全更改](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。  
   
 > [!NOTE]
 > 64 位计算机同时包括 64 位和 32 位版本的安全策略。 若要确保你的策略更改同时应用于 32 位和 64 位应用程序，请同时运行 Caspol.exe 的 32 位和 64 位版本。  
@@ -54,7 +54,7 @@ caspol [options]
 |-customall  path<br /><br /> or<br /><br /> -ca  path|指示此选项后面的所有选项都应用于计算机策略、企业策略和指定的自定义用户策略。 必须用 *path* 参数指定自定义用户的安全配置文件的位置。|  
 |**-cu**[**stomuser**] *path*|允许管理不属于当前 Caspol.exe 正代表其运行的用户的自定义用户策略。 必须用 *path* 参数指定自定义用户的安全配置文件的位置。|  
 |**-enterprise**<br /><br /> or<br /><br /> **-en**|指示此选项后面的所有选项都应用于企业级策略。 非企业管理员用户尽管可以查看企业级策略，但没有足够的权限修改它。 在非企业方案中，默认情况下此策略不干预计算机策略和用户策略。|  
-|**-e**[**xecution**] {**on** &#124; **off**}|打开或关闭在代码开始执行前检查运行权限的机制。 **注意：** 在 .NET Framework 4 及更高版本中，此开关已删除。 有关详细信息，请参阅[安全更改](../security/security-changes.md)。|  
+|**-e**[**xecution**] {**on** &#124; **off**}|打开或关闭在代码开始执行前检查运行权限的机制。 **注意：** 在 .NET Framework 4 及更高版本中，此开关已删除。 有关详细信息，请参阅[安全更改](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。|  
 |**-f**[**orce**]|取消此工具的自销毁测试并按照用户的指定更改策略。 通常，Caspol.exe 会检查任何策略的更改是否会妨碍 Caspol.exe 本身的正常运行；如果是，则 Caspol.exe 不会保存策略更改，并会输出错误消息。 若即使在策略更改会妨碍 Caspol.exe 本身运行的情况下也要强制 Caspol.exe 更改策略，则使用 **–force** 选项。|  
 |**-h**[**elp**]|显示 Caspol.exe 的命令语法和选项。|  
 |**-l**[**ist**]|列出代码组层次结构及指定的计算机、用户、企业或所有策略级别的权限集。 Caspol.exe 首先显示代码组的标签，如果名称不是 null 的话，后面接着显示名称。|  
@@ -73,7 +73,7 @@ caspol [options]
 |**-resetlockdown**<br /><br /> or<br /><br /> **-rsld**|将策略返回到限制更多的默认状态版本，并将其保存到磁盘；创建以前的计算机策略的备份，并将其保存到名为 `security.config.bac` 的文件中。  锁定的策略类似于默认策略，但锁定的策略不向 `Local Intranet`、`Trusted Sites` 和 `Internet` 区域中的代码以及没有子代码组的对应代码组授予权限。|  
 |-resolvegroup assembly_file<br /><br /> or<br /><br /> -rsg  assembly_file|显示特定的程序集 (*assembly_file*) 所属的代码组。 默认情况下，此选项显示程序集所属的计算机、用户和企业策略级别。 若要只查看一个策略级别，请将此选项与 **-machine**、**-user** 或 **-enterprise** 选项之一一起使用。|  
 |-resolveperm assembly_file<br /><br /> or<br /><br /> -rsp assembly_file|显示在允许运行程序集的情况下指定的（或默认的）安全策略级别将会授予程序集的所有权限。 *assembly_file* 参数指定程序集。 如果指定 **-all** 选项，则 Caspol.exe 将基于用户策略、计算机策略和企业策略计算程序集的权限；否则，应用默认的行为规则。|  
-|**-s**[**ecurity**] {**on** &#124; **off**}|打开或关闭代码访问安全性。 指定 **-s off** 选项不会禁用基于角色的安全性。 **注意：** 在 .NET Framework 4 及更高版本中，此开关已删除。 有关详细信息，请参阅[安全更改](../security/security-changes.md)。 注意：当禁用代码访问安全性时，所有代码访问要求都会成功。 禁用代码访问安全性会使系统容易受到恶意代码（如病毒和蠕虫）的攻击。 关闭安全性会在某些方面提高性能，但应该只有在已采取其他安全性措施以确保整个系统安全性不受破坏时才可以使用。 其他的安全防范措施包括与公共网络断开连接、从物理上保证计算机的安全等等。|  
+|**-s**[**ecurity**] {**on** &#124; **off**}|打开或关闭代码访问安全性。 指定 **-s off** 选项不会禁用基于角色的安全性。 **注意：** 在 .NET Framework 4 及更高版本中，此开关已删除。 有关详细信息，请参阅[安全更改](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。 注意：当禁用代码访问安全性时，所有代码访问要求都会成功。 禁用代码访问安全性会使系统容易受到恶意代码（如病毒和蠕虫）的攻击。 关闭安全性会在某些方面提高性能，但应该只有在已采取其他安全性措施以确保整个系统安全性不受破坏时才可以使用。 其他的安全防范措施包括与公共网络断开连接、从物理上保证计算机的安全等等。|  
 |**-u**[**ser**]|指示此选项后面的所有选项都应用于 Caspol.exe 正在代表其运行的用户的用户级别策略。 对于非管理员用户来说，**-user** 是默认选项。|  
 |**-?**|显示 Caspol.exe 的命令语法和选项。|  
   
