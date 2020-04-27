@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 711b51c590be149545fda3130148e2bcaef8be4f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b55de00188d92623c493dfc5f9aca915890ae5df
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78262224"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021454"
 ---
-### <a name="private-fields-added-to-built-in-struct-types"></a><span data-ttu-id="a7da6-101">添加到内置结构类型的私有字段</span><span class="sxs-lookup"><span data-stu-id="a7da6-101">Private fields added to built-in struct types</span></span>
+### <a name="private-fields-added-to-built-in-struct-types"></a><span data-ttu-id="81af6-101">添加到内置结构类型的私有字段</span><span class="sxs-lookup"><span data-stu-id="81af6-101">Private fields added to built-in struct types</span></span>
 
-<span data-ttu-id="a7da6-102">私有字段已添加到[引用程序集](../../../../docs/standard/assembly/reference-assemblies.md)中的[特定结构类型](#affected-apis)。</span><span class="sxs-lookup"><span data-stu-id="a7da6-102">Private fields were added to [certain struct types](#affected-apis) in [reference assemblies](../../../../docs/standard/assembly/reference-assemblies.md).</span></span> <span data-ttu-id="a7da6-103">因此，在 C# 中，必须始终使用 [new 运算符](../../../../docs/csharp/language-reference/operators/new-operator.md)或[默认文本](../../../../docs/csharp/language-reference/operators/default.md#default-literal)来实例化结构类型。</span><span class="sxs-lookup"><span data-stu-id="a7da6-103">As a result, in C#, those struct types must always be instantiated by using the [new operator](../../../../docs/csharp/language-reference/operators/new-operator.md) or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal).</span></span>
+<span data-ttu-id="81af6-102">私有字段已添加到[引用程序集](../../../../docs/standard/assembly/reference-assemblies.md)中的[特定结构类型](#affected-apis)。</span><span class="sxs-lookup"><span data-stu-id="81af6-102">Private fields were added to [certain struct types](#affected-apis) in [reference assemblies](../../../../docs/standard/assembly/reference-assemblies.md).</span></span> <span data-ttu-id="81af6-103">因此，在 C# 中，必须始终使用 [new 运算符](../../../../docs/csharp/language-reference/operators/new-operator.md)或[默认文本](../../../../docs/csharp/language-reference/operators/default.md#default-literal)来实例化结构类型。</span><span class="sxs-lookup"><span data-stu-id="81af6-103">As a result, in C#, those struct types must always be instantiated by using the [new operator](../../../../docs/csharp/language-reference/operators/new-operator.md) or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal).</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="a7da6-104">更改描述</span><span class="sxs-lookup"><span data-stu-id="a7da6-104">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="81af6-104">更改描述</span><span class="sxs-lookup"><span data-stu-id="81af6-104">Change description</span></span>
 
-<span data-ttu-id="a7da6-105">在 .NET Core 2.0 和早期版本中，某些提供的结构类型（例如 <xref:System.ConsoleKeyInfo>）可以在不使用 `new` 运算符或[默认文本](../../../../docs/csharp/language-reference/operators/default.md#default-literal)的情况下在 C# 中实例化。</span><span class="sxs-lookup"><span data-stu-id="a7da6-105">In .NET Core 2.0 and previous versions, some provided struct types, for example, <xref:System.ConsoleKeyInfo>, could be instantiated without using the `new` operator or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal) in C#.</span></span> <span data-ttu-id="a7da6-106">这是因为 C# 编译器使用的[引用程序集](../../../../docs/standard/assembly/reference-assemblies.md)不包含结构的私有字段。</span><span class="sxs-lookup"><span data-stu-id="a7da6-106">This was because the [reference assemblies](../../../../docs/standard/assembly/reference-assemblies.md) used by the C# compiler didn't contain the private fields for the structs.</span></span> <span data-ttu-id="a7da6-107">从 .NET Core 2.1 开始，.NET 结构类型的所有私有字段都将添加到引用程序集。</span><span class="sxs-lookup"><span data-stu-id="a7da6-107">All private fields for .NET struct types are added to the reference assemblies starting in .NET Core 2.1.</span></span>
+<span data-ttu-id="81af6-105">在 .NET Core 2.0 和早期版本中，某些提供的结构类型（例如 <xref:System.ConsoleKeyInfo>）可以在不使用 `new` 运算符或[默认文本](../../../../docs/csharp/language-reference/operators/default.md#default-literal)的情况下在 C# 中实例化。</span><span class="sxs-lookup"><span data-stu-id="81af6-105">In .NET Core 2.0 and previous versions, some provided struct types, for example, <xref:System.ConsoleKeyInfo>, could be instantiated without using the `new` operator or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal) in C#.</span></span> <span data-ttu-id="81af6-106">这是因为 C# 编译器使用的[引用程序集](../../../../docs/standard/assembly/reference-assemblies.md)不包含结构的私有字段。</span><span class="sxs-lookup"><span data-stu-id="81af6-106">This was because the [reference assemblies](../../../../docs/standard/assembly/reference-assemblies.md) used by the C# compiler didn't contain the private fields for the structs.</span></span> <span data-ttu-id="81af6-107">从 .NET Core 2.1 开始，.NET 结构类型的所有私有字段都将添加到引用程序集。</span><span class="sxs-lookup"><span data-stu-id="81af6-107">All private fields for .NET struct types are added to the reference assemblies starting in .NET Core 2.1.</span></span>
 
-<span data-ttu-id="a7da6-108">例如，下面的 C# 代码在 .NET Core 2.0 中编译，但不在 .Net core 2.1 中编译：</span><span class="sxs-lookup"><span data-stu-id="a7da6-108">For example, the following C# code compiles in .NET Core 2.0, but not in .NET Core 2.1:</span></span>
+<span data-ttu-id="81af6-108">例如，下面的 C# 代码在 .NET Core 2.0 中编译，但不在 .Net core 2.1 中编译：</span><span class="sxs-lookup"><span data-stu-id="81af6-108">For example, the following C# code compiles in .NET Core 2.0, but not in .NET Core 2.1:</span></span>
 
 ```csharp
 ConsoleKeyInfo key;    // Struct type
@@ -25,17 +25,17 @@ if (key.ToString() == "y")
 }
 ```
 
-<span data-ttu-id="a7da6-109">在 .NET Core 2.1 中，之前的代码会导致以下编译器错误：**CS0165 - 使用了未赋值的局部变量“key”**</span><span class="sxs-lookup"><span data-stu-id="a7da6-109">In .NET Core 2.1, the previous code results in the following compiler error: **CS0165 - Use of unassigned local variable 'key'**</span></span>
+<span data-ttu-id="81af6-109">在 .NET Core 2.1 中，之前的代码会导致以下编译器错误：**CS0165 - 使用了未赋值的局部变量“key”**</span><span class="sxs-lookup"><span data-stu-id="81af6-109">In .NET Core 2.1, the previous code results in the following compiler error: **CS0165 - Use of unassigned local variable 'key'**</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="a7da6-110">引入的版本</span><span class="sxs-lookup"><span data-stu-id="a7da6-110">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="81af6-110">引入的版本</span><span class="sxs-lookup"><span data-stu-id="81af6-110">Version introduced</span></span>
 
-<span data-ttu-id="a7da6-111">2.1</span><span class="sxs-lookup"><span data-stu-id="a7da6-111">2.1</span></span>
+<span data-ttu-id="81af6-111">2.1</span><span class="sxs-lookup"><span data-stu-id="81af6-111">2.1</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="a7da6-112">建议操作</span><span class="sxs-lookup"><span data-stu-id="a7da6-112">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="81af6-112">建议操作</span><span class="sxs-lookup"><span data-stu-id="81af6-112">Recommended action</span></span>
 
-<span data-ttu-id="a7da6-113">使用 `new` 运算符或[默认文本](../../../../docs/csharp/language-reference/operators/default.md#default-literal)实例化结构类型。</span><span class="sxs-lookup"><span data-stu-id="a7da6-113">Instantiate struct types by using the `new` operator or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal).</span></span>
+<span data-ttu-id="81af6-113">使用 `new` 运算符或[默认文本](../../../../docs/csharp/language-reference/operators/default.md#default-literal)实例化结构类型。</span><span class="sxs-lookup"><span data-stu-id="81af6-113">Instantiate struct types by using the `new` operator or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal).</span></span>
 
-<span data-ttu-id="a7da6-114">例如：</span><span class="sxs-lookup"><span data-stu-id="a7da6-114">For example:</span></span>
+<span data-ttu-id="81af6-114">例如：</span><span class="sxs-lookup"><span data-stu-id="81af6-114">For example:</span></span>
 
 ```csharp
 ConsoleKeyInfo key = new ConsoleKeyInfo();    // Struct type.
@@ -51,11 +51,11 @@ if (key.ToString() == "y")
     Console.WriteLine("Yes!");
 ```
 
-#### <a name="category"></a><span data-ttu-id="a7da6-115">类别</span><span class="sxs-lookup"><span data-stu-id="a7da6-115">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="81af6-115">类别</span><span class="sxs-lookup"><span data-stu-id="81af6-115">Category</span></span>
 
-<span data-ttu-id="a7da6-116">CoreFx</span><span class="sxs-lookup"><span data-stu-id="a7da6-116">CoreFx</span></span>
+<span data-ttu-id="81af6-116">Core .NET 库</span><span class="sxs-lookup"><span data-stu-id="81af6-116">Core .NET libraries</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="a7da6-117">受影响的 API</span><span class="sxs-lookup"><span data-stu-id="a7da6-117">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="81af6-117">受影响的 API</span><span class="sxs-lookup"><span data-stu-id="81af6-117">Affected APIs</span></span>
 
 - <xref:System.ArraySegment%601.Enumerator?displayProperty=fullName>
 - <xref:System.ArraySegment%601?displayProperty=fullName>
