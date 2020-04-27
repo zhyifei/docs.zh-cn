@@ -191,7 +191,7 @@ Container.Nested nestedInstance = new Container.Nested()
 |------------------|----------------|
 |[public](../../language-reference/keywords/public.md)|同一程序集中的任何其他代码或引用该程序集的其他程序集都可以访问该类型或成员。|
 |[private](../../language-reference/keywords/private.md)|只有同一类中的代码可以访问该类型或成员。|
-|[受保护](../../language-reference/keywords/protected.md)|只有同一类或派生类中的代码可以访问该类型或成员。|
+|[protected](../../language-reference/keywords/protected.md)|只有同一类或派生类中的代码可以访问该类型或成员。|
 |[internal](../../language-reference/keywords/internal.md)|同一程序集中的任何代码都可以访问该类型或成员，但其他程序集中的代码不可以。|
 |[protected internal](../../language-reference/keywords/protected-internal.md)|同一程序集中的任何代码或其他程序集中的任何派生类都可以访问该类型或成员。|
 |[private protected](../../language-reference/keywords/private-protected.md)|同一类或基类程序集内派生类中的代码可以访问该类型或成员。|
