@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
 ms.openlocfilehash: 19e25ab7262bb006144eea71e74bd7454066b3f6
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710149"
@@ -23,9 +23,9 @@ ms.locfileid: "75710149"
 </root>
 ```
 
-发生这种情况是因为，`<?xml:stylesheet?>` 被视为对 DOM 无效的 ProcessingInstruction。 根据 XML 命名空间规范，任何 ProcessingInstruction 都只能是无冒号名称 (NCNames)，而不是限定名称 (QNames)。
+发生这种情况是因为，`<?xml:stylesheet?>` 被视为对 DOM 无效的 ProcessingInstruction  。 根据 XML 命名空间规范，任何 ProcessingInstruction  都只能是无冒号名称 (NCNames)，而不是限定名称 (QNames)。
 
-根据 XML 命名空间规范的第 6 节，让 Load 和 LoadXml 方法符合此规范所产生的效应是，在文档中：
+根据 XML 命名空间规范的第 6 节，让 Load  和 LoadXml  方法符合此规范所产生的效应是，在文档中：
 
 - 所有元素类型和属性名都包含零个或一个冒号。
 
@@ -35,6 +35,6 @@ ms.locfileid: "75710149"
 
 根据万维网联合会 (W3C) [将样式表与 XML 文档关联的 1.0 版建议](https://www.w3.org/TR/xml-stylesheet/)，将 XSLT 样式表与 XML 文档关联的处理指令是 `<?xml-stylesheet?>`（用短划线代替冒号）。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XML 文档对象模型 (DOM)](xml-document-object-model-dom.md)

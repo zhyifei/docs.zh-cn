@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 ms.openlocfilehash: 536c8dcd03d98879e24ae62d2b8a47e36564aaf6
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710656"
@@ -76,6 +76,6 @@ ms.locfileid: "75710656"
 |Comment 节点|<xref:System.Xml.XPath.XPathNavigator>|
 |Processing Instruction 节点|<xref:System.Xml.XPath.XPathNavigator>|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

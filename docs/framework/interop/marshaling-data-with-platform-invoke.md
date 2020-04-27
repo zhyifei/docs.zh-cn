@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 ms.openlocfilehash: b8c4e9d835db044912d1cbed92a14dd05e7de658
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79400943"
@@ -31,7 +31,7 @@ ms.locfileid: "79400943"
 
 下表列出了 Windows API 和 C 样式函数中使用的数据类型。 许多非托管库包含将这些数据类型作为参数和返回值传递的函数。 第三列列出了相应的 .NET Framework 内置值类型或可在托管代码中使用的类。 在某些情况下，你用相同大小的类型替代表中列出的类型。
 
-|Windows API 中的非托管类型|非托管 C 语言类型|托管类型|说明|
+|Windows API 中的非托管类型|非托管 C 语言类型|托管类型|描述|
 |--------------------------------|-------------------------------|------------------------|-----------------|
 |`VOID`|`void`|<xref:System.Void?displayProperty=nameWithType>|应用于不返回值的函数。|
 |`HANDLE`|`void *`|<xref:System.IntPtr?displayProperty=nameWithType> 或 <xref:System.UIntPtr?displayProperty=nameWithType>|在 32 位 Windows 操作系统上为 32 位、在 64 位 Windows 操作系统上为 64 位。|

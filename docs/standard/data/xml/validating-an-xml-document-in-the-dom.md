@@ -9,7 +9,7 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 ms.openlocfilehash: 93686ddf1afff76926e77acdbf5aa58e93d6cb77
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710032"
@@ -86,7 +86,7 @@ XML 架构验证错误在验证加载到 DOM 的 XML 数据时报告。 会通�
 
  有关说明 <xref:System.Xml.Schema.ValidationEventHandler> 的示例，请参见上面的“在 XML 文档加载到 DOM 时进行验证”和“在 DOM 中验证 XML 文档”。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XmlReader>

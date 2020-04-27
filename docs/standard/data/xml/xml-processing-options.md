@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
 ms.openlocfilehash: 1707ed10d944a518872132dded40751026a4c8e7
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709915"
@@ -15,7 +15,7 @@ ms.locfileid: "75709915"
   
 ## <a name="net-framework-options"></a>.NET Framework 选项  
   
-|**选项**|**处理类型**|**描述**|  
+|**选项**|**处理类型**|**说明**|  
 |----------------|-------------------------|---------------------|  
 |[LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) <br/> [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) <br />（<xref:System.Xml.Linq> 命名空间）|内存中|-   依据为 .NET Framework 语言集成查询 (LINQ) 技术。<br />-   提供与 SQL 类似的对象、关系数据和 XML 数据查询体验。<br />-   提供直观的文档创建和转换功能。<br />-   若要编写新代码，请使用此选项。|  
 |<xref:System.Xml.XmlReader?displayProperty=nameWithType>|基于流|-   提供用于访问 XML 数据的非缓存、仅正向的快速方法。<br />-   可以使用 <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> 方法创建对象，并使用 <xref:System.Xml.XmlReaderSettings> 类指定对对象启用的一组功能。|  
@@ -26,12 +26,12 @@ ms.locfileid: "75709915"
   
 ## <a name="win32-and-com-based-options"></a>基于 Win32 和 COM 的选项  
   
-|**选项**|**描述**|  
+|**选项**|**说明**|  
 |----------------|---------------------|  
 |[XmlLite](https://docs.microsoft.com/previous-versions/windows/desktop/ms752872(v=vs.85))|-   快速安全、非缓存、仅正向 XML 分析器，有助于生成高性能 XML 应用。<br />-   支持能够使用动态链接库 (DLL) 的任何语言；建议使用 C++。|  
 |[MSXML](https://docs.microsoft.com/previous-versions/windows/desktop/ms763742(v=vs.85))|-   基于 COM 的技术，用于处理 Windows 操作系统随附的 XML。<br />-   提供 DOM 本机实现，同时支持 XPath 和 XSLT。<br />-   包含 SAX2 基于事件的分析器。|  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 DOM 模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
 - [使用 XPath 数据模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

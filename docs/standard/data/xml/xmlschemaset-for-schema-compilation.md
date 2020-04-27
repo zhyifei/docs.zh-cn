@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 ms.openlocfilehash: 55347de81c65b7390584415dd29044f4ca4ba02a
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709811"
@@ -249,7 +249,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
   
  若要详细了解如何使用 <xref:System.Xml.Schema.XmlSchemaSet> 验证 XML 文档，请参阅[使用 XmlSchemaSet 进行 XML 架构 (XSD) 验证](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>
 - <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>

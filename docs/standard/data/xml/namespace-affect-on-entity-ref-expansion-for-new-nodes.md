@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 64359aee-aab0-4042-9a32-d19789af6ca7
 ms.openlocfilehash: 4772e3f7365069c537c4ec3bc8571f2f710bc9fc
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710617"
@@ -16,8 +16,8 @@ ms.locfileid: "75710617"
  分析 XML 时，`&aname;` 在分析时不用其替换内容扩展。 不执行 XML 扩展的原因在于对元素的命名空间解析只有在将节点放入文档中时才发生。 在此之前，并不知道范围中存在哪个命名空间。 将节点放入文档中后，将进行命名空间解析，生成的实体内容将被分析为相应节点。  
   
 > [!NOTE]
-> 新创建的实体引用节点进行扩展后，该扩展永远不会再次进行。 因此，在元素的替换文本中使用的命名空间将在设置父节点时绑定。 然而，命名空间可能会对现有实体引用节点（将它们删除并插入其他位置时）或用 CloneNode 方法克隆的实体引用节点变化。  
+> 新创建的实体引用节点进行扩展后，该扩展永远不会再次进行。 因此，在元素的替换文本中使用的命名空间将在设置父节点时绑定。 然而，命名空间可能会对现有实体引用节点（将它们删除并插入其他位置时）或用 CloneNode  方法克隆的实体引用节点变化。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

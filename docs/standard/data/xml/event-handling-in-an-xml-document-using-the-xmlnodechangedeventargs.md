@@ -8,13 +8,13 @@ dev_langs:
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
 ms.openlocfilehash: b27c51572b1ba83480d90eba4add7f930715a4e5
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78156525"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>使用 mlNodeChangedEventArgs 的 XML 文档中的事件处理
-XmlNodeChangedEventArgs 封装传递给事件处理程序的参数，这些处理程序在 XmlDocument 对象上注册为用于处理事件。 下表提供了事件以及关于何时引发事件的说明。  
+XmlNodeChangedEventArgs  封装传递给事件处理程序的参数，这些处理程序在 XmlDocument  对象上注册为用于处理事件。 下表提供了事件以及关于何时引发事件的说明。  
   
 |事件|引发|  
 |-----------|-----------|  
@@ -26,7 +26,7 @@ XmlNodeChangedEventArgs 封装传递给事件处理程序的参数，这些处�
 |<xref:System.Xml.XmlDocument.NodeChanged>|当节点值已经更改时。|  
   
 > [!NOTE]
-> 如果 XmlDataDocument 内存使用完全优化为使用 DataSet 存储，那么基础 DataSet 有更改时，XmlDataDocument 可能不会抛出上面列出的任何事件。 如果需要这些事件，必须遍历整个 XmlDocument 一遍，才能非完全优化内存使用。  
+> 如果 XmlDataDocument  内存使用完全优化为使用 DataSet  存储，那么基础 DataSet  有更改时，XmlDataDocument  可能不会抛出上面列出的任何事件。 如果需要这些事件，必须遍历整个 XmlDocument  一遍，才能非完全优化内存使用。  
   
  下面的代码示例显示如何定义事件处理程序以及如何将该事件处理程序添加到事件。  
   
@@ -71,9 +71,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- 某些 XML 文档对象模型 (DOM) 操作是可导致引发多个事件的复合操作。 例如，AppendChild 可能还必须删除从上一个父级追加的节点。 在此示例中，依次抛出 NodeRemoved 事件和 NodeInserted 事件。 设置 InnerXml 等操作可能会导致多个事件发生。  
+ 某些 XML 文档对象模型 (DOM) 操作是可导致引发多个事件的复合操作。 例如，AppendChild  可能还必须删除从上一个父级追加的节点。 在此示例中，依次抛出 NodeRemoved  事件和 NodeInserted  事件。 设置 InnerXml  等操作可能会导致多个事件发生。  
   
- 下面的代码示例展示了如何创建事件处理程序，以及如何处理 NodeInserted 事件。  
+ 下面的代码示例展示了如何创建事件处理程序，以及如何处理 NodeInserted  事件。  
   
 ```vb  
 Imports System  
@@ -204,8 +204,8 @@ public class Sample
 } // End class
 ```  
   
- 有关详细信息，请参阅 <xref:System.Xml.XmlNodeChangedEventArgs>和<xref:System.Xml.XmlNodeChangedEventHandler>。  
+ 有关详细信息，请参阅 <xref:System.Xml.XmlNodeChangedEventArgs> 和 <xref:System.Xml.XmlNodeChangedEventHandler>。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

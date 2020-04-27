@@ -2,12 +2,12 @@
 title: 有关适用于容器化应用的 Microsoft 平台和工具的简介
 description: 了解 Microsoft 提供来支持 Docker 应用程序生命周期的产品/服务。
 ms.date: 02/15/2019
-ms.openlocfilehash: 8cb7870035003e956ee57684a2a2528732849379
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 84f4136c6b6c284dd5ecb3fc174ac825857a567e
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738450"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158497"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>适用于容器化应用的 Microsoft 平台和工具的简介
 
@@ -16,7 +16,7 @@ ms.locfileid: "81738450"
 图 3-1 显示 Docker 应用的生命周期的主要支柱，这些应用根据多个团队（应用开发、DevOps 基础结构流程和 IT 管理和运营）交付的工作类型分类。 通常，在企业中，负责每个方面的“角色”的个人资料是不同的。 其技能也是如此。
 
 :::image type="complex" source="./media/index/microsoft-tools-contanerized-docker-app.png" alt-text="显示维护 Docker 应用所需的 Microsoft 工具的关系图。":::
-Microsoft 工具。 对于开发/设计工作负载：适合 Windows、VS 和 VS Code、.NET Core、Azure Kubernetes 服务的 Docker 引擎。 对于生成/测试/交付工作负载：Azure DevOps、Team Foundation Server、Docker CLI、Azure Kubernetes 服务。 对于运行/监视器/管理工作负载：Azure Monitor、Azure 门户、Azure Kubernetes 服务、Service Fabric 和其他业务流程协调程序。
+Microsoft 工具。 对于开发/设计工作负载：适合 Windows、Visual Studio 和 Visual Studio Code、.NET Core、Azure Kubernetes 服务的 Docker 引擎。 对于生成/测试/交付工作负载：Azure DevOps、Team Foundation Server、Docker CLI、Azure Kubernetes 服务。 对于运行/监视器/管理工作负载：Azure Monitor、Azure 门户、Azure Kubernetes 服务、Service Fabric 和其他业务流程协调程序。
 :::image-end:::
 
 **图 3-1。** 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期中的主要支柱

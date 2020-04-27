@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: c0528aae-83b3-4425-99f0-19448e9843e3
 ms.openlocfilehash: 9e5ad874431028faf17333a9bbd7e9356ef22d55
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347882"
@@ -27,7 +27,7 @@ ms.locfileid: "74347882"
   
  有关清单创建的详细信息，请参阅 [-win32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [“项目设计器”->“应用程序”页 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
