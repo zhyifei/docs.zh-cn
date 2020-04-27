@@ -2,12 +2,12 @@
 title: 集合 (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: a560155b936aef7a4a346d39eaed75e0a85c1a73
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d2996648690fc03b5f1d6a90e0be96155c5a24ed
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169878"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645472"
 ---
 # <a name="collections-c"></a>集合 (C#)
 
@@ -602,7 +602,7 @@ private static IEnumerable<int> EvenSequence(
 - [编程概念 (C#)](./index.md)
 - [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects (C#)](./linq/linq-to-objects.md)
-- [并行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [并行 LINQ (PLINQ)](../../../standard/parallel-programming/introduction-to-plinq.md)
 - [集合和数据结构](../../../standard/collections/index.md)
 - [选择集合类](../../../standard/collections/selecting-a-collection-class.md)
 - [集合内的比较和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)

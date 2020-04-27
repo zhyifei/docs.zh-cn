@@ -2,12 +2,12 @@
 title: 可为 null 的引用类型 - C# 引用
 description: 了解 C# 中可为 null 的引用类型及其使用方法
 ms.date: 04/06/2020
-ms.openlocfilehash: cbc7397ac76b43b79a4168f4c61fe2c631b4a46b
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: cb61b162b06faa51faabbcdd91e55618cdeaca73
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888286"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102692"
 ---
 # <a name="nullable-reference-types-c-reference"></a>可为 null 的引用类型（C# 引用）
 
@@ -61,11 +61,11 @@ try
 
 :::code language="csharp" source="snippets/NullableReferenceTypes.cs" id="SnippetLocalWarnings":::
 
-前面的示例演示编译器的静态分析，以确定引用变量的 null 状态。 编译器对 null 检查和分配应用语言规则以通知其分析。  编译器无法对方法或属性的语义进行假设。 如果调用执行 null 检查的方法，则编译器无法得知这些方法会影响变量的 null 状态。 可以将许多属性添加到 API，以通知编译器有关参数和返回值的语义。 这些属性已应用于 .NET Core 库中的许多常见 API。 例如，<xref:System.String.IsNullOrEmpty%2A> 已经更新，编译器正确地将该方法解释为 null 检查。 有关应用于 null 状态静态分析的属性的更多信息，请参阅[可为 null 属性](../../nullable-attributes.md)的文章。
+前面的示例演示编译器的静态分析，以确定引用变量的 null 状态。 编译器对 null 检查和分配应用语言规则以通知其分析。  编译器无法对方法或属性的语义进行假设。 如果调用执行 null 检查的方法，则编译器无法得知这些方法会影响变量的 null 状态。 可以将许多属性添加到 API，以通知编译器有关参数和返回值的语义。 这些属性已应用于 .NET Core 库中的许多常见 API。 例如，<xref:System.String.IsNullOrEmpty%2A> 已经更新，编译器正确地将该方法解释为 null 检查。 有关应用于 null 状态静态分析的属性的更多信息，请参阅[可为 null 属性](../attributes/nullable-analysis.md)的文章。
 
 ## <a name="setting-the-nullable-context"></a>设置可为 null 的上下文
 
-可以通过两种方式控制可为 null 的上下文。 在项目级别，可以添加 `<Nullable>enable</Nullable>` 项目设置。 在单个 C# 源文件中，可以添加 `#nullable enable` 来启用可为 null 的上下文。 请参阅关于[设置可为 null 策略](../../nullable-attributes.md)的文章。
+可以通过两种方式控制可为 null 的上下文。 在项目级别，可以添加 `<Nullable>enable</Nullable>` 项目设置。 在单个 C# 源文件中，可以添加 `#nullable enable` 来启用可为 null 的上下文。 请参阅关于[设置可为 null 策略](../../nullable-migration-strategies.md)的文章。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

@@ -3,12 +3,12 @@ title: C# 程序结构 - C# 语言介绍
 description: 了解 C# 程序的基本构建基块
 ms.date: 02/25/2020
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: c09c11a4dd957b29b2adb7aaa8d68a50f30620b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0a4dcaed7b53a7da7008d6000b3bec2ffe3ee7b
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156826"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141013"
 ---
 # <a name="program-structure"></a>程序结构
 
@@ -16,7 +16,7 @@ C# 中的关键组织结构概念包括***程序***、***命名空间***、***�
 
 可以使用 `dotnet new` 命令创建名为 acme 的库项目  ：
 
-```console
+```dotnetcli
 dotnet new classlib -o acme
 ```
 
@@ -26,7 +26,7 @@ dotnet new classlib -o acme
 
 此类的完全限定的名称为 `Acme.Collections.Stack`。 此类包含多个成员：一个 `top` 字段、两个方法（`Push` 和 `Pop`）和一个 `Entry` 嵌套类。 `Entry` 类还包含三个成员：一个 `next` 字段、一个 `data` 字段和一个构造函数。 命令：
 
-```console
+```dotnetcli
 dotnet build
 ```
 
@@ -48,7 +48,7 @@ dotnet build
 
 完成此操作后，`dotnet build` 会创建名为 `example.exe` 的可执行程序集，它将在运行时输出以下内容：
 
-```console
+```dotnetcli
 100
 10
 1

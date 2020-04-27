@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: af7bd917f57c8752a2026fbb98aa8b22adc98db7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea5481810e629d911c4d5aba62e60c98d0783f34
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74204519"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644360"
 ---
 # <a name="-target-c-compiler-options"></a>-target（C# 编译器选项）
 -target 编译器选项可指定为以下四种形式之一  ：  
@@ -37,7 +37,7 @@ ms.locfileid: "74204519"
  [/target:winmdobj](./target-winmdobj-compiler-option.md)  
  创建一个 .winmdobj 中间文件。  
   
- 如果不指定 -target:module，-target 会将 .NET Framework 程序集清单放入输出文件中   。 有关详细信息，请参阅 [.NET 中的程序集](../../../standard/assembly/index.md)和[公共属性](../../programming-guide/concepts/attributes/common-attributes.md)。  
+ 如果不指定 -target:module，-target 会将 .NET Framework 程序集清单放入输出文件中   。 有关详细信息，请参阅 [.NET 中的程序集](../../../standard/assembly/index.md)和[公共属性](../attributes/global.md)。  
   
  程序集清单放置在编译中的第一个 .exe 输出文件中，如果没有 .exe 输出文件，会放置在第一个 DLL 中。 例如，在以下的命令行中，清单将放置在 `1.exe` 中：  
   

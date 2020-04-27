@@ -2,12 +2,12 @@
 title: C# 语言版本控制 - C# 指南
 description: 了解如何根据项目确定 C# 语言版本，以及背后的原因。 了解如何手动重写默认值。
 ms.date: 02/21/2020
-ms.openlocfilehash: ef7275aad7638f52ecbfca1dfbdb962ae242fb48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 850c4a860878593d80aaa3b7b38efaff9e003f43
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398231"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102653"
 ---
 # <a name="c-language-versioning"></a>C# 语言版本控制
 
@@ -20,7 +20,7 @@ C# 8.0（和更高版本）仅在 .NET Core 3.x 和更高版本上受支持。 �
 - 默认接口成员实现需要使用 .NET Core 3.0 CLR 中的新功能。
 - 异步流需要使用新类型 <xref:System.IAsyncDisposable?displayProperty=nameWithType>、<xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>。
 - 索引和范围需要新类型 <xref:System.Index?displayProperty=nameWithType> 和 <xref:System.Range?displayProperty=nameWithType>。
-- 可为 null 的引用类型利用几个[特性](../nullable-attributes.md)来提供更准确的警告。 这些特性是在 .NET Core 3.0 中添加的。 其他目标框架并未使用这些特性中的任何一种进行批注。 这意味着可为 null 的警告可能无法准确反映潜在问题。
+- 可为 null 的引用类型利用几个[特性](attributes/nullable-analysis.md)来提供更准确的警告。 这些特性是在 .NET Core 3.0 中添加的。 其他目标框架并未使用这些特性中的任何一种进行批注。 这意味着可为 null 的警告可能无法准确反映潜在问题。
 
 ## <a name="defaults"></a>默认值
 

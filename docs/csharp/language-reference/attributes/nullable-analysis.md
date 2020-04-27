@@ -2,12 +2,12 @@
 title: C# 保留的特性：可为空的静态分析
 ms.date: 04/14/2020
 description: 编译器会解释这些属性，以便为可为 null 和不可为 null 的引用类型提供更好的静态分析。
-ms.openlocfilehash: 0315d78db7517541efe578d8675c0f2fe45f5aea
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 33521133a6a01196e6e1ab9c3cdc191a24f1ecf3
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389810"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102705"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>保留的特性有助于编译器的 null 状态静态分析
 
@@ -129,7 +129,7 @@ public Customer FindCustomer(string lastName, string firstName)
 
 你可能已经编写了类似的方法，以便在未找到所查找的名称时返回 `null`。 `null` 清楚地表明未找到记录。 在本例中，你可能会将返回类型从 `Customer` 更改为 `Customer?`。 将返回值声明为可为 null 的引用类型可以清楚地指定此 API 的意图。
 
-基于[泛型定义和为 null 性](../../nullable-attributes.md#generic-definitions-and-nullability)中所述的原因，该技术不适用于泛型方法。 你可能具有遵循类似模式的泛型方法：
+基于[泛型定义和为 null 性](../../nullable-migration-strategies.md#generic-definitions-and-nullability)中所述的原因，该技术不适用于泛型方法。 你可能具有遵循类似模式的泛型方法：
 
 ```csharp
 public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)
