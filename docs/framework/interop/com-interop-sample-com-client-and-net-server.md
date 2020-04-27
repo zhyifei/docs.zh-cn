@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 ms.openlocfilehash: 5a72f3f23f4601b8b0a2ee8c6f5df66ae0bc66a3
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181502"
 ---
-# <a name="com-interop-sample-com-client-and-net-server"></a><span data-ttu-id="e0a7d-102">COM 互操作示例：COM 客户端和 .NET 服务器</span><span class="sxs-lookup"><span data-stu-id="e0a7d-102">COM Interop Sample: COM Client and .NET Server</span></span>
-<span data-ttu-id="e0a7d-103">此示例演示 [COM 客户端](#cpconcominteropsamplecomclientnetserveranchor1) 和执行抵押计算的 [.NET 服务器](#cpconcominteropsamplecomclientnetserveranchor2)的互操作。</span><span class="sxs-lookup"><span data-stu-id="e0a7d-103">This sample demonstrates the interoperation of a [COM Client](#cpconcominteropsamplecomclientnetserveranchor1) and a [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) that performs mortgage calculations.</span></span> <span data-ttu-id="e0a7d-104">在本示例中，客户端创建并调用托管 `Loan` 类的实例，将四个参数（其中一个等于零）传递给该实例，并显示计算结果。</span><span class="sxs-lookup"><span data-stu-id="e0a7d-104">In this example, the client creates and calls an instance of the managed `Loan` class, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="e0a7d-105">本示例中的代码例子将贯穿本节。</span><span class="sxs-lookup"><span data-stu-id="e0a7d-105">Code examples from this sample appear throughout this section.</span></span>  
+# <a name="com-interop-sample-com-client-and-net-server"></a><span data-ttu-id="460cd-102">COM 互操作示例：COM 客户端和 .NET 服务器</span><span class="sxs-lookup"><span data-stu-id="460cd-102">COM Interop Sample: COM Client and .NET Server</span></span>
+<span data-ttu-id="460cd-103">此示例演示 [COM 客户端](#cpconcominteropsamplecomclientnetserveranchor1) 和执行抵押计算的 [.NET 服务器](#cpconcominteropsamplecomclientnetserveranchor2)的互操作。</span><span class="sxs-lookup"><span data-stu-id="460cd-103">This sample demonstrates the interoperation of a [COM Client](#cpconcominteropsamplecomclientnetserveranchor1) and a [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) that performs mortgage calculations.</span></span> <span data-ttu-id="460cd-104">在本示例中，客户端创建并调用托管 `Loan` 类的实例，将四个参数（其中一个等于零）传递给该实例，并显示计算结果。</span><span class="sxs-lookup"><span data-stu-id="460cd-104">In this example, the client creates and calls an instance of the managed `Loan` class, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="460cd-105">本示例中的代码例子将贯穿本节。</span><span class="sxs-lookup"><span data-stu-id="460cd-105">Code examples from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>
-## <a name="com-client"></a><span data-ttu-id="e0a7d-106">COM 客户端</span><span class="sxs-lookup"><span data-stu-id="e0a7d-106">COM Client</span></span>  
+## <a name="com-client"></a><span data-ttu-id="460cd-106">COM 客户端</span><span class="sxs-lookup"><span data-stu-id="460cd-106">COM Client</span></span>  
   
 ```cpp  
 // ConLoan.cpp : Defines the entry point for the console application.  
@@ -86,7 +86,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>
-## <a name="net-server"></a><span data-ttu-id="e0a7d-107">.NET 服务器</span><span class="sxs-lookup"><span data-stu-id="e0a7d-107">.NET Server</span></span>  
+## <a name="net-server"></a><span data-ttu-id="460cd-107">.NET 服务器</span><span class="sxs-lookup"><span data-stu-id="460cd-107">.NET Server</span></span>  
   
 ```vb  
 Imports System  
@@ -387,6 +387,6 @@ namespace LoanLib {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e0a7d-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e0a7d-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="460cd-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="460cd-108">See also</span></span>
 
-- [<span data-ttu-id="e0a7d-109">向 COM 公开 .NET Framework 组件</span><span class="sxs-lookup"><span data-stu-id="e0a7d-109">Exposing .NET Framework Components to COM</span></span>](exposing-dotnet-components-to-com.md)
+- [<span data-ttu-id="460cd-109">向 COM 公开 .NET Framework 组件</span><span class="sxs-lookup"><span data-stu-id="460cd-109">Exposing .NET Framework Components to COM</span></span>](exposing-dotnet-components-to-com.md)

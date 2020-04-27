@@ -2,22 +2,22 @@
 title: dotnet add package 命令
 description: “dotnet add package”命令可便于添加对项目的 NuGet 包引用。
 ms.date: 02/14/2020
-ms.openlocfilehash: 24a25cdab2aab30d52f8407adfda437f47437290
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1d57aed59ccd45417c88f9b6a2f9dd768fda9b58
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463757"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102848"
 ---
-# <a name="dotnet-add-package"></a><span data-ttu-id="f104d-103">dotnet add package</span><span class="sxs-lookup"><span data-stu-id="f104d-103">dotnet add package</span></span>
+# <a name="dotnet-add-package"></a><span data-ttu-id="56604-103">dotnet add package</span><span class="sxs-lookup"><span data-stu-id="56604-103">dotnet add package</span></span>
 
-<span data-ttu-id="f104d-104">**本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本</span><span class="sxs-lookup"><span data-stu-id="f104d-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
+<span data-ttu-id="56604-104">**本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本</span><span class="sxs-lookup"><span data-stu-id="56604-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="f104d-105">名称</span><span class="sxs-lookup"><span data-stu-id="f104d-105">Name</span></span>
+## <a name="name"></a><span data-ttu-id="56604-105">“属性”</span><span class="sxs-lookup"><span data-stu-id="56604-105">Name</span></span>
 
-<span data-ttu-id="f104d-106">`dotnet add package` - 向项目文件添加包引用。</span><span class="sxs-lookup"><span data-stu-id="f104d-106">`dotnet add package` - Adds a package reference to a project file.</span></span>
+<span data-ttu-id="56604-106">`dotnet add package` - 向项目文件添加包引用。</span><span class="sxs-lookup"><span data-stu-id="56604-106">`dotnet add package` - Adds a package reference to a project file.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="f104d-107">摘要</span><span class="sxs-lookup"><span data-stu-id="f104d-107">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="56604-107">摘要</span><span class="sxs-lookup"><span data-stu-id="56604-107">Synopsis</span></span>
 
 ```dotnetcli
 dotnet add [<PROJECT>] package <PACKAGE_NAME>
@@ -28,13 +28,11 @@ dotnet add [<PROJECT>] package <PACKAGE_NAME>
 dotnet add package -h|--help
 ```
 
-## <a name="description"></a><span data-ttu-id="f104d-108">说明</span><span class="sxs-lookup"><span data-stu-id="f104d-108">Description</span></span>
+## <a name="description"></a><span data-ttu-id="56604-108">描述</span><span class="sxs-lookup"><span data-stu-id="56604-108">Description</span></span>
 
-<span data-ttu-id="f104d-109">使用 `dotnet add package` 命令可方便地向项目文件添加包引用。</span><span class="sxs-lookup"><span data-stu-id="f104d-109">The `dotnet add package` command provides a convenient option to add a package reference to a project file.</span></span> <span data-ttu-id="f104d-110">运行该命令后，还有一个兼容性检查，确保包与项目中的框架兼容。</span><span class="sxs-lookup"><span data-stu-id="f104d-110">After running the command, there's a compatibility check to ensure the package is compatible with the frameworks in the project.</span></span> <span data-ttu-id="f104d-111">如果通过了该检查，则将 `<PackageReference>` 元素添加到项目文件并运行 [dotnet 还原](dotnet-restore.md)。</span><span class="sxs-lookup"><span data-stu-id="f104d-111">If the check passes, a `<PackageReference>` element is added to the project file and [dotnet restore](dotnet-restore.md) is run.</span></span>
+<span data-ttu-id="56604-109">使用 `dotnet add package` 命令可方便地向项目文件添加包引用。</span><span class="sxs-lookup"><span data-stu-id="56604-109">The `dotnet add package` command provides a convenient option to add a package reference to a project file.</span></span> <span data-ttu-id="56604-110">运行该命令后，还有一个兼容性检查，确保包与项目中的框架兼容。</span><span class="sxs-lookup"><span data-stu-id="56604-110">After running the command, there's a compatibility check to ensure the package is compatible with the frameworks in the project.</span></span> <span data-ttu-id="56604-111">如果通过了该检查，则将 `<PackageReference>` 元素添加到项目文件并运行 [dotnet 还原](dotnet-restore.md)。</span><span class="sxs-lookup"><span data-stu-id="56604-111">If the check passes, a `<PackageReference>` element is added to the project file and [dotnet restore](dotnet-restore.md) is run.</span></span>
 
-[!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
-
-<span data-ttu-id="f104d-112">例如，将 `Newtonsoft.Json` 添加到 ToDo.csproj  后的输出如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="f104d-112">For example, adding `Newtonsoft.Json` to *ToDo.csproj* produces output similar to the following example:</span></span>
+<span data-ttu-id="56604-112">例如，将 `Newtonsoft.Json` 添加到 ToDo.csproj  后的输出如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="56604-112">For example, adding `Newtonsoft.Json` to *ToDo.csproj* produces output similar to the following example:</span></span>
 
 ```console
 Writing C:\Users\me\AppData\Local\Temp\tmp95A8.tmp
@@ -49,73 +47,77 @@ info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks
 info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to file 'C:\projects\ToDo\ToDo.csproj'.
 ```
 
-<span data-ttu-id="f104d-113">*ToDo.csproj* 文件现包含用于引用的包的 [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) 元素。</span><span class="sxs-lookup"><span data-stu-id="f104d-113">The *ToDo.csproj* file now contains a [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) element for the referenced package.</span></span>
+<span data-ttu-id="56604-113">*ToDo.csproj* 文件现包含用于引用的包的 [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) 元素。</span><span class="sxs-lookup"><span data-stu-id="56604-113">The *ToDo.csproj* file now contains a [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) element for the referenced package.</span></span>
 
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
 ```
 
-## <a name="arguments"></a><span data-ttu-id="f104d-114">参数</span><span class="sxs-lookup"><span data-stu-id="f104d-114">Arguments</span></span>
+### <a name="implicit-restore"></a><span data-ttu-id="56604-114">隐式还原</span><span class="sxs-lookup"><span data-stu-id="56604-114">Implicit restore</span></span>
+
+[!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
+
+## <a name="arguments"></a><span data-ttu-id="56604-115">自变量</span><span class="sxs-lookup"><span data-stu-id="56604-115">Arguments</span></span>
 
 - **`PROJECT`**
 
-  <span data-ttu-id="f104d-115">指定项目文件。</span><span class="sxs-lookup"><span data-stu-id="f104d-115">Specifies the project file.</span></span> <span data-ttu-id="f104d-116">如果未指定，此命令会搜索当前目录来获取一个项目文件。</span><span class="sxs-lookup"><span data-stu-id="f104d-116">If not specified, the command searches the current directory for one.</span></span>
+  <span data-ttu-id="56604-116">指定项目文件。</span><span class="sxs-lookup"><span data-stu-id="56604-116">Specifies the project file.</span></span> <span data-ttu-id="56604-117">如果未指定，此命令会搜索当前目录来获取一个项目文件。</span><span class="sxs-lookup"><span data-stu-id="56604-117">If not specified, the command searches the current directory for one.</span></span>
 
 - **`PACKAGE_NAME`**
 
-  <span data-ttu-id="f104d-117">要添加的包引用。</span><span class="sxs-lookup"><span data-stu-id="f104d-117">The package reference to add.</span></span>
+  <span data-ttu-id="56604-118">要添加的包引用。</span><span class="sxs-lookup"><span data-stu-id="56604-118">The package reference to add.</span></span>
 
-## <a name="options"></a><span data-ttu-id="f104d-118">选项</span><span class="sxs-lookup"><span data-stu-id="f104d-118">Options</span></span>
+## <a name="options"></a><span data-ttu-id="56604-119">选项</span><span class="sxs-lookup"><span data-stu-id="56604-119">Options</span></span>
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  <span data-ttu-id="f104d-119">仅在以特定[框架](../../standard/frameworks.md)为目标时添加包引用。</span><span class="sxs-lookup"><span data-stu-id="f104d-119">Adds a package reference only when targeting a specific [framework](../../standard/frameworks.md).</span></span>
+  <span data-ttu-id="56604-120">仅在以特定[框架](../../standard/frameworks.md)为目标时添加包引用。</span><span class="sxs-lookup"><span data-stu-id="56604-120">Adds a package reference only when targeting a specific [framework](../../standard/frameworks.md).</span></span>
 
 - **`-h|--help`**
 
-  <span data-ttu-id="f104d-120">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="f104d-120">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="56604-121">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="56604-121">Prints out a short help for the command.</span></span>
 
 - **`--interactive`**
 
-  <span data-ttu-id="f104d-121">允许命令停止并等待用户输入或操作（例如，完成身份验证）。</span><span class="sxs-lookup"><span data-stu-id="f104d-121">Allows the command to stop and wait for user input or action (for example, to complete authentication).</span></span> <span data-ttu-id="f104d-122">从 .NET Core 2.1 SDK，版本 2.1.400 或更高版本开始可用。</span><span class="sxs-lookup"><span data-stu-id="f104d-122">Available since .NET Core 2.1 SDK, version 2.1.400 or later.</span></span>
+  <span data-ttu-id="56604-122">允许命令停止并等待用户输入或操作（例如，完成身份验证）。</span><span class="sxs-lookup"><span data-stu-id="56604-122">Allows the command to stop and wait for user input or action (for example, to complete authentication).</span></span> <span data-ttu-id="56604-123">从 .NET Core 2.1 SDK，版本 2.1.400 或更高版本开始可用。</span><span class="sxs-lookup"><span data-stu-id="56604-123">Available since .NET Core 2.1 SDK, version 2.1.400 or later.</span></span>
 
 - **`-n|--no-restore`**
 
-  <span data-ttu-id="f104d-123">在不执行还原预览和兼容性检查的情况下添加包引用。</span><span class="sxs-lookup"><span data-stu-id="f104d-123">Adds a package reference without performing a restore preview and compatibility check.</span></span>
+  <span data-ttu-id="56604-124">在不执行还原预览和兼容性检查的情况下添加包引用。</span><span class="sxs-lookup"><span data-stu-id="56604-124">Adds a package reference without performing a restore preview and compatibility check.</span></span>
 
 - **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  <span data-ttu-id="f104d-124">要在其中还原包的目录。</span><span class="sxs-lookup"><span data-stu-id="f104d-124">The directory where to restore the packages.</span></span> <span data-ttu-id="f104d-125">Windows 上的默认包还原位置为 `%userprofile%\.nuget\packages`，macOS 和 Linux 上的默认包还原位置为 `~/.nuget/packages`。</span><span class="sxs-lookup"><span data-stu-id="f104d-125">The default package restore location is `%userprofile%\.nuget\packages` on Windows and `~/.nuget/packages` on macOS and Linux.</span></span> <span data-ttu-id="f104d-126">有关详细信息，请参阅[在 NuGet 中管理全局包、缓存和临时文件夹](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)。</span><span class="sxs-lookup"><span data-stu-id="f104d-126">For more information, see [Managing the global packages, cache, and temp folders in NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).</span></span>
+  <span data-ttu-id="56604-125">要在其中还原包的目录。</span><span class="sxs-lookup"><span data-stu-id="56604-125">The directory where to restore the packages.</span></span> <span data-ttu-id="56604-126">Windows 上的默认包还原位置为 `%userprofile%\.nuget\packages`，macOS 和 Linux 上的默认包还原位置为 `~/.nuget/packages`。</span><span class="sxs-lookup"><span data-stu-id="56604-126">The default package restore location is `%userprofile%\.nuget\packages` on Windows and `~/.nuget/packages` on macOS and Linux.</span></span> <span data-ttu-id="56604-127">有关详细信息，请参阅[在 NuGet 中管理全局包、缓存和临时文件夹](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)。</span><span class="sxs-lookup"><span data-stu-id="56604-127">For more information, see [Managing the global packages, cache, and temp folders in NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).</span></span>
 
 - **`-s|--source <SOURCE>`**
 
-  <span data-ttu-id="f104d-127">要在还原操作期间使用的 NuGet 包源。</span><span class="sxs-lookup"><span data-stu-id="f104d-127">The NuGet package source to use during the restore operation.</span></span>
+  <span data-ttu-id="56604-128">要在还原操作期间使用的 NuGet 包源。</span><span class="sxs-lookup"><span data-stu-id="56604-128">The NuGet package source to use during the restore operation.</span></span>
 
 - **`-v|--version <VERSION>`**
 
-  <span data-ttu-id="f104d-128">包的版本。</span><span class="sxs-lookup"><span data-stu-id="f104d-128">Version of the package.</span></span> <span data-ttu-id="f104d-129">请参阅 [NuGet 包版本控制](https://docs.microsoft.com/nuget/reference/package-versioning)。</span><span class="sxs-lookup"><span data-stu-id="f104d-129">See [NuGet package versioning](https://docs.microsoft.com/nuget/reference/package-versioning).</span></span>
+  <span data-ttu-id="56604-129">包的版本。</span><span class="sxs-lookup"><span data-stu-id="56604-129">Version of the package.</span></span> <span data-ttu-id="56604-130">请参阅 [NuGet 包版本控制](https://docs.microsoft.com/nuget/reference/package-versioning)。</span><span class="sxs-lookup"><span data-stu-id="56604-130">See [NuGet package versioning](https://docs.microsoft.com/nuget/reference/package-versioning).</span></span>
 
-## <a name="examples"></a><span data-ttu-id="f104d-130">示例</span><span class="sxs-lookup"><span data-stu-id="f104d-130">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="56604-131">示例</span><span class="sxs-lookup"><span data-stu-id="56604-131">Examples</span></span>
 
-- <span data-ttu-id="f104d-131">将 `Newtonsoft.Json` NuGet 包添加到项目：</span><span class="sxs-lookup"><span data-stu-id="f104d-131">Add `Newtonsoft.Json` NuGet package to a project:</span></span>
+- <span data-ttu-id="56604-132">将 `Newtonsoft.Json` NuGet 包添加到项目：</span><span class="sxs-lookup"><span data-stu-id="56604-132">Add `Newtonsoft.Json` NuGet package to a project:</span></span>
 
   ```dotnetcli
   dotnet add package Newtonsoft.Json
   ```
 
-- <span data-ttu-id="f104d-132">向项目添加特定版本的包：</span><span class="sxs-lookup"><span data-stu-id="f104d-132">Add a specific version of a package to a project:</span></span>
+- <span data-ttu-id="56604-133">向项目添加特定版本的包：</span><span class="sxs-lookup"><span data-stu-id="56604-133">Add a specific version of a package to a project:</span></span>
 
   ```dotnetcli
   dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0
   ```
 
-- <span data-ttu-id="f104d-133">使用特定的 NuGet 源添加包：</span><span class="sxs-lookup"><span data-stu-id="f104d-133">Add a package using a specific NuGet source:</span></span>
+- <span data-ttu-id="56604-134">使用特定的 NuGet 源添加包：</span><span class="sxs-lookup"><span data-stu-id="56604-134">Add a package using a specific NuGet source:</span></span>
 
   ```dotnetcli
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 
-## <a name="see-also"></a><span data-ttu-id="f104d-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f104d-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="56604-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="56604-135">See also</span></span>
 
-- [<span data-ttu-id="f104d-135">在 NuGet 中管理全局包、缓存和临时文件夹</span><span class="sxs-lookup"><span data-stu-id="f104d-135">Managing the global packages, cache, and temp folders in NuGet</span></span>](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
-- [<span data-ttu-id="f104d-136">NuGet 包版本控制</span><span class="sxs-lookup"><span data-stu-id="f104d-136">NuGet package versioning</span></span>](https://docs.microsoft.com/nuget/reference/package-versioning)
+- [<span data-ttu-id="56604-136">在 NuGet 中管理全局包、缓存和临时文件夹</span><span class="sxs-lookup"><span data-stu-id="56604-136">Managing the global packages, cache, and temp folders in NuGet</span></span>](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
+- [<span data-ttu-id="56604-137">NuGet 包版本控制</span><span class="sxs-lookup"><span data-stu-id="56604-137">NuGet package versioning</span></span>](https://docs.microsoft.com/nuget/reference/package-versioning)
