@@ -1,14 +1,15 @@
 ---
-ms.openlocfilehash: 24e990d0561f1f0faade2c8e62ca640e4daba93f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eae6f9f80cfdf577a944b1bd49d72d24ab075328
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78848075"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140740"
 ---
 
 > [!div class="op_single_selector"]
 >
+> - [Ubuntu 20.04 - x64](../linux-package-manager-ubuntu-2004.md)
 > - [Ubuntu 19.10 - x64](../linux-package-manager-ubuntu-1910.md)
 > - [Ubuntu 19.04 - x64](../linux-package-manager-ubuntu-1904.md)
 > - [Ubuntu 18.04 - x64](../linux-package-manager-ubuntu-1804.md)
@@ -25,4 +26,4 @@ ms.locfileid: "78848075"
 > - [SLES 15 - x64](../linux-package-manager-sles15.md)
 > - [SLES 12 - x64](../linux-package-manager-sles12.md)
 
-<span data-ttu-id="56bb9-116">仅在 x64  体系结构上支持包管理器安装  。</span><span class="sxs-lookup"><span data-stu-id="56bb9-116">_Package manager installs are only supported on the **x64** architecture_.</span></span> <span data-ttu-id="56bb9-117">其他体系结构（如 ARM  ）必须[手动安装 .NET Core SDK](../sdk.md?pivots=os-linux#download-and-manually-install) 或[手动安装 .NET Core 运行时](../runtime.md?pivots=os-linux#download-and-manually-install)。</span><span class="sxs-lookup"><span data-stu-id="56bb9-117">Other architectures, such as **ARM**, must [manually install the .NET Core SDK](../sdk.md?pivots=os-linux#download-and-manually-install) or [manually install the .NET Core Runtime](../runtime.md?pivots=os-linux#download-and-manually-install).</span></span> <span data-ttu-id="56bb9-118">有关详细信息，请参阅 [.NET Core 依赖项和要求](../dependencies.md)。</span><span class="sxs-lookup"><span data-stu-id="56bb9-118">For more information, see [.NET Core dependencies and requirements](../dependencies.md).</span></span>
+<span data-ttu-id="225cb-117">仅在 x64  体系结构上支持包管理器安装  。</span><span class="sxs-lookup"><span data-stu-id="225cb-117">_Package manager installs are only supported on the **x64** architecture_.</span></span> <span data-ttu-id="225cb-118">其他体系结构（如 ARM  ）必须[手动安装 .NET Core SDK](../sdk.md?pivots=os-linux#download-and-manually-install) 或[手动安装 .NET Core 运行时](../runtime.md?pivots=os-linux#download-and-manually-install)。</span><span class="sxs-lookup"><span data-stu-id="225cb-118">Other architectures, such as **ARM**, must [manually install the .NET Core SDK](../sdk.md?pivots=os-linux#download-and-manually-install) or [manually install the .NET Core Runtime](../runtime.md?pivots=os-linux#download-and-manually-install).</span></span> <span data-ttu-id="225cb-119">有关详细信息，请参阅 [.NET Core 依赖项和要求](../dependencies.md)。</span><span class="sxs-lookup"><span data-stu-id="225cb-119">For more information, see [.NET Core dependencies and requirements](../dependencies.md).</span></span>
