@@ -3,12 +3,12 @@ title: 关系与NoSQL 数据
 description: 了解云本机应用程序中的关系数据和 NoSQL 数据
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: c074be0c973156c1757b97ffc727711d5dd072af
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: a2561b0abfc1975badfafeeb4fa2f2c6429814be
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199973"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507359"
 ---
 # <a name="relational-vs-nosql-data"></a>关系与NoSQL 数据
 
@@ -226,7 +226,7 @@ Azure Cosmos DB 提供了五个明确定义的[一致性模型](https://docs.mic
 
 **图 5-16**： Cosmos DB 一致性级别说明
 
-在下面[的文章9球： Cosmos DB 一致性级别介绍](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)了，Microsoft 云开发人员支持 Jeremy Likeness 提供了五种模型的出色说明。
+在下面[的文章9球： Cosmos DB 一致性级别介绍](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)的文章中，Microsoft Program Manager Jeremy Likness 提供了五种模型的出色说明。
 
 ### <a name="partitioning"></a>分区
 
