@@ -3,12 +3,12 @@ title: 垃圾回收器配置设置
 description: 了解用于配置垃圾回收器如何为 .NET Core 应用管理内存的运行时设置。
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: dfb641eeda03d1acaa4771bd6253fcb33c4082a6
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: ec575bdd17c8a7c290673b7085074bbba94cedef
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607805"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102861"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>用于垃圾回收的运行时配置选项
 
@@ -24,7 +24,7 @@ ms.locfileid: "81607805"
 
 ## <a name="flavors-of-garbage-collection"></a>垃圾回收的风格
 
-垃圾回收的两种主要风格是工作站 GC 和服务器 GC。 有关两者之间的差异的详细信息，请参阅[垃圾回收的基础知识](../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)。
+垃圾回收的两种主要风格是工作站 GC 和服务器 GC。 有关两者之间的差异的详细信息，请参阅[工作站和服务器垃圾回收](../../standard/garbage-collection/workstation-server-gc.md)。
 
 垃圾回收的次要风格是后台垃圾回收和非并发垃圾回收。
 
@@ -72,7 +72,7 @@ runtimeconfig.json 文件：
 
 - 配置是否启用后台（并发）垃圾回收。
 - 默认：启用 (`true`)。
-- 有关详细信息，请参阅[后台垃圾回收](../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection)和[后台服务器垃圾回收](../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection)。
+- 有关详细信息，请参阅[后台垃圾回收](../../standard/garbage-collection/background-gc.md)。
 
 | | 设置名 | 值 | 引入的版本 |
 | - | - | - | - |
@@ -240,7 +240,7 @@ runtimeconfig.json 文件：
 
 - 指定 GC 堆和 GC 簿记的最大提交大小（以字节为单位）。
 - 此设置仅适用于 64 位计算机。
-- 默认值（仅在某些情况下适用）是 20 MB 或容器内存限制的 75%（以较小者为准）。 此默认值在以下情况下适用：
+- 默认值（仅在某些情况下适用）是 20 MB 或容器内存限制的 75%（以较大者为准）。 此默认值在以下情况下适用：
 
   - 进程正在具有指定内存限制的容器中运行。
   - [HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) 未设置。

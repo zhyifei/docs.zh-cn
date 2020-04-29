@@ -2,12 +2,12 @@
 title: .NET Core 命令行工具体系结构
 description: 了解 .NET Core 工具层及最新版本中的更改。
 ms.date: 03/06/2017
-ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1a9fe59225c17d54f6e7213d2b3c3fa70ee58e0
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092910"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102874"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 工具中变更的高级概述
 
@@ -30,7 +30,7 @@ ms.locfileid: "77092910"
 
 ![预览版 2 工具高级体系结构](media/cli-msbuild-architecture/p2-arch.png)
 
-预览版 2 中工具的分层较为简单。 底层基底是 .NET Core CLI。 其他所有高级工具（如 Visual Studio 或 Visual Studio Code）依靠 CLI 来生成项目、还原依赖项以及完成其他操作。 例如，如果 Visual Studio 要执行还原操作，它会在 CLI 中调用 `dotnet restore`（[见备注](#dotnet-restore-note)）命令。
+预览版 2 中工具的分层较为简单。 底层基底是 .NET Core CLI。 其他所有高级工具（如 Visual Studio 或 Visual Studio Code）依靠 CLI 来生成项目、还原依赖项以及完成其他操作。 例如，如果 Visual Studio 要执行还原操作，它会在 CLI 中调入 `dotnet restore` 命令。
 
 随着迁移到新的项目系统，之前的图表会更改：
 
@@ -41,7 +41,7 @@ ms.locfileid: "77092910"
 > [!NOTE]
 > “目标”是一个 MSBuild 术语，指示 MSBuild 可调用的一个已命名的操作。 其通常伴随着执行此目标应执行的某个逻辑的一个或多个任务。 MSBuild 支持多个现成的目标，如 `Copy` 或 `Execute`；它还允许用户使用托管代码编写自己的任务，并定义要执行这些任务的目标。 有关详细信息，请参阅 [MSBuild 任务](/visualstudio/msbuild/msbuild-tasks)。
 
-现在所有工具集使用共享 SDK 组件及其目标，包括 CLI。 例如，Visual Studio 2019 不会调入 `dotnet restore`（[参见说明](#dotnet-restore-note)）命令来还原 .NET Core 项目的依赖项。 相反，它会直接使用“还原”目标。 由于这些皆是 MSBuild 目标，因此你也可通过 [dotnet msbuild](dotnet-msbuild.md) 命令使用原始 MSBuild 来执行。
+现在所有工具集使用共享 SDK 组件及其目标，包括 CLI。 例如，Visual Studio 2019 不会调入 `dotnet restore` 命令来还原 .NET Core 项目的依赖项。 相反，它会直接使用“还原”目标。 由于这些皆是 MSBuild 目标，因此你也可通过 [dotnet msbuild](dotnet-msbuild.md) 命令使用原始 MSBuild 来执行。
 
 ### <a name="cli-commands"></a>CLI 命令
 
@@ -73,5 +73,6 @@ ms.locfileid: "77092910"
 
 此规则的两个明显的例外情况是 `new` 和 `run` 命令。 它们未实现为 MSBuild 目标。
 
-<a name="dotnet-restore-note"></a>
+### <a name="implicit-restore"></a>隐式还原
+
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

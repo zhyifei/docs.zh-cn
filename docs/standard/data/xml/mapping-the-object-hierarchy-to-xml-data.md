@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
 ms.openlocfilehash: 642a7e5321d0150865f74a66a811914bc9f5d21d
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160022"
@@ -33,9 +33,9 @@ ms.locfileid: "78160022"
  ![示例节点树](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
 book 和 title 节点树表示形式  
   
- `book` 元素成为 XmlElement 对象，下一个元素 `title` 也成为 XmlElement，而元素内容成为 XmlText 对象。 查看 XmlElement 方法和属性可以得知，这些方法和属性不同于 XmlText 对象的方法和属性。 因此，知道 XML 标记成为的节点类型至关重要，因为其节点类型确定可以执行的操作。  
+ `book` 元素成为 XmlElement  对象，下一个元素 `title` 也成为 XmlElement  ，而元素内容成为 XmlText  对象。 查看 XmlElement  方法和属性可以得知，这些方法和属性不同于 XmlText  对象的方法和属性。 因此，知道 XML 标记成为的节点类型至关重要，因为其节点类型确定可以执行的操作。  
   
- 下面的示例读入 XML 数据并根据节点类型写出不同的文本。 将下面的 XML 数据文件用作输入文件 items.xml：  
+ 下面的示例读入 XML 数据并根据节点类型写出不同的文本。 将下面的 XML 数据文件用作输入文件 items.xml  ：  
   
  **输入**  
   
@@ -53,7 +53,7 @@ book 和 title 节点树表示形式
 </Items>  
 ```  
   
- 下面的代码示例读取 items.xml 文件，并显示每个节点类型的信息。  
+ 下面的代码示例读取 items.xml  文件，并显示每个节点类型的信息。  
   
 ```vb  
 Imports System  
@@ -204,7 +204,7 @@ public class Sample
 |def|def|XmlNodeType.Text|  
 |\</Item>|\</Item>|XmlNodeType.EndElement|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
-|Test with a char entity: &\#65;|与字符实体一起测试：A|XmlNodeType.Text|  
+|Test with a char entity: &\#65;|与字符实体一起测试：包含当前请求的 URL 的|XmlNodeType.Text|  
 |\</Item>|\</Item>|XmlNodeType.EndElement|  
 |\<!-- Fourteen chars in this element.-->|\<--Fourteen chars in this element.-->|XmlNodeType.Comment|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
@@ -214,10 +214,10 @@ public class Sample
   
  您必须知道分配的节点类型，因为节点类型控制哪些操作有效，以及可以设置和检索哪些属性。  
   
- 当 PreserveWhitespace 标志将数据加载到 DOM 中时，就会控制空格的节点创建。 有关详细信息，请参阅[加载 DOM 时处理空格和有效空格](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md)。  
+ 当 PreserveWhitespace  标志将数据加载到 DOM 中时，就会控制空格的节点创建。 有关详细信息，请参阅[加载 DOM 时处理空格和有效空格](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md)。  
   
  若要向 DOM 添加新节点，请参阅[将节点插入 XML 文档中](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)。 若要从 DOM 中删除节点，请参阅[从 XML 文档中删除节点、内容和值](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md)。 若要修改 DOM 中的节点内容，请参阅[修改 XML 文档中的节点、内容和值](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

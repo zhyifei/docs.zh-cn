@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: fc6a23cabd93323cacc33dfc4388116881c1fc84
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cb83fa015eea19b156faebb5bed18cc1f0970cc1
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74552270"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738795"
 ---
 # <a name="for-c-reference"></a>for（C# 参考）
 
-在指定的布尔表达式的计算结果为 `for` 时，`true` 语句会执行一条语句或一个语句块。
+在指定的布尔表达式的计算结果为 `true` 时，`for` 语句会执行一条语句或一个语句块。
 
-在 `for` 语句块中的任何点上，可以使用 [break](break.md) 语句中断循环，或者可以使用 [continue](continue.md) 语句继续执行到循环中的下一次迭代。 还可以使用 `for`goto[、](goto.md)return[ 或 ](return.md)throw[ 语句退出 ](throw.md) 循环。
+在 `for` 语句块中的任何点上，可以使用 [break](break.md) 语句中断循环，或者可以使用 [continue](continue.md) 语句继续执行到循环中的下一次迭代。 还可以使用 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 语句退出 `for` 循环。
 
 ## <a name="structure-of-the-for-statement"></a>`for` 语句的结构
 
@@ -55,7 +55,7 @@ for (initializer; condition; iterator)
 
   - [await](../operators/await.md) 表达式
 
-上例中的“初始化表达式”部分声明和初始化本地循环变量  `i`：
+上例中的“初始化表达式”部分声明和初始化本地循环变量 `i` ：
 
 ```csharp
 int i = 0
@@ -63,7 +63,7 @@ int i = 0
 
 ### <a name="the-condition-section"></a>“条件”部分 
 
-“条件”部分（如果存在）必须为布尔表达式  。 在每次循环迭代前计算该表达式。 如果“条件”部分不存在或者布尔表达式的计算结果为 *，则执行下一个循环迭代；否则退出循环*`true`。
+“条件”部分（如果存在）必须为布尔表达式  。 在每次循环迭代前计算该表达式。 如果“条件”部分不存在或者布尔表达式的计算结果为 `true`，则执行下一个循环迭代；否则退出循环  。
 
 上例中的“条件”部分确定循环是否根据本地循环变量的值终止  ：
 
@@ -105,9 +105,9 @@ i++
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/statements.md#the-for-statement)中的 [for 语句](/dotnet/csharp/language-reference/language-specification/introduction)部分。
+有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的 [for 语句](~/_csharplang/spec/statements.md#the-for-statement)部分。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)

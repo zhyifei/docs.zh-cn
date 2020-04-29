@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 ms.openlocfilehash: 4894b5cc64dca431c8d05b638847dd6cb7017bde
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79180496"
@@ -37,7 +37,7 @@ ms.locfileid: "79180496"
   
  反射提供 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo> 的方法，它允许你访问类型形参的数组并确定 <xref:System.Type> 的实例是表示类型形参还是表示实际类型。  
   
- 若要深入了解此处讨论的方法的示例代码演示，请参阅[如何：使用反射检查和实例化泛型类型](how-to-examine-and-instantiate-generic-types-with-reflection.md)。  
+ 有关演示此处讨论的方法的示例代码，请参阅[如何：使用反射检查和实例化泛型类型](how-to-examine-and-instantiate-generic-types-with-reflection.md)中提供的其他信息。  
   
  以下讨论假定熟悉泛型的术语，例如类型形参和实参之间的差异以及开放式或封闭式构造类型之间的差异。 有关详细信息，请参阅[泛型](../../standard/generics/index.md)。  
 
@@ -121,9 +121,9 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 
 ## <a name="related-topics"></a>相关主题  
   
-|标题|说明|  
+|Title|描述|  
 |-----------|-----------------|  
 |[如何：使用反射检查和实例化泛型类型](how-to-examine-and-instantiate-generic-types-with-reflection.md)|演示如何使用 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo> 的属性和方法来检查泛型类型。|  
-|[泛 型](../../standard/generics/index.md)|描述泛型功能以及 .NET Framework 如何支持它。|  
-|[如何：使用反射 Emit 定义泛型类型](how-to-define-a-generic-type-with-reflection-emit.md)|演示如何在动态程序集中使用反射发出生成泛型类型。|  
+|[泛型](../../standard/generics/index.md)|描述泛型功能以及 .NET Framework 如何支持它。|  
+|[如何：使用反射发出定义泛型类型](how-to-define-a-generic-type-with-reflection-emit.md)|演示如何在动态程序集中使用反射发出生成泛型类型。|  
 |[查看类型信息](viewing-type-information.md)|介绍 <xref:System.Type> 类并提供演示如何使用具有各种反射类的 <xref:System.Type> 来获取有关构造函数、方法、字段、属性和事件的信息的代码示例。|

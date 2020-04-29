@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 ms.openlocfilehash: 9bf57e0f74a353fb6512a24214e9479c1d813aab
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160204"
@@ -29,7 +29,7 @@ ms.locfileid: "78160204"
   
  其中 `msxsl` 是绑定到命名空间 `urn:schemas-microsoft-com:xslt` 的前缀。  
   
- `language` 属性不是必需的，但如果指定，则其值必须为下列值之一： `C#`、`VB`、`JScript`、`JavaScript`、`VisualBasic`或 `CSharp`。 如果未指定，则默认语言为 JScript。 `language-name` 不区分大小写，所以“JavaScript”和“javascript”等效。  
+ `language` 属性不是强制属性，但如果指定该属性，其值必须是下列值之一：`C#`、`VB`、`JScript`、`JavaScript`、`VisualBasic` 或 `CSharp`。 如果未指定，则默认语言为 JScript。 `language-name` 不区分大小写，所以“JavaScript”和“javascript”等效。  
   
  `implements-prefix` 属性是必选项。 此属性用于声明命名空间并将其与脚本块关联。 此属性的值是表示命名空间的前缀。 此命名空间可以在样式表中的某一位置定义。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "78160204"
   
  函数可以在 `msxsl:script` 元素内声明。 下表显示了默认情况下支持的命名空间。 可以在列出的命名空间的外部使用类。 然而，这些类必须是完全限定的。  
   
-|默认命名空间|说明|  
+|默认命名空间|描述|  
 |------------------------|-----------------|  
 |System|系统类。|  
 |System.Collection|集合类。|  
@@ -70,7 +70,7 @@ ms.locfileid: "78160204"
 |Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- 如果脚本函数使用下列数值类型之一：Int16、UInt16、Int32、UInt32、Int64、UInt64、Single 或 Decimal，则会将其强制转换为 Double，映射为 W3C XPath 类型的数字。 所有其他类型都通过调用 `ToString` 方法强制转换为字符串。  
+ 如果脚本函数使用下列数值类型之一：Int16、UInt16、Int32、UInt32、Int64、UInt64、单数或小数，则会被强制转换为 Double，映射为 W3C XPath 类型的数字。 所有其他类型都通过调用 `ToString` 方法强制转换为字符串。  
   
  如果脚本函数使用上述类型以外的类型，或者如果函数在样式表加载到 <xref:System.Xml.Xsl.XslTransform> 对象中时不进行编译，则会引发异常。  
   
@@ -229,6 +229,6 @@ public class Sample
 </circles>
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

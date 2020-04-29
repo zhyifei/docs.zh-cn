@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 ms.openlocfilehash: 6a0cc110c2b8bcd97b9f5c16a344db5a63046353
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709798"
@@ -438,12 +438,12 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 
 下表介绍 <xref:System.Xml.Schema.XmlSchemaValidator> 类的状态转换以及每个状态可以按顺序执行的方法调用。
 
-|State|切换|
+|状态|切换|
 |-----------|----------------|
 |Validate|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
 |TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|
-|元素|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* （<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> 内容\*）？ <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>&#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> 内容\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>&#124;|
-|Content|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|
+|元素|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|
+|内容|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|
 
 > [!NOTE]
 > 如果调用方法的顺序不符合 <xref:System.InvalidOperationException> 对象的当前状态，上表中的每种方法将引发 <xref:System.Xml.Schema.XmlSchemaValidator>。
@@ -455,7 +455,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 |符号|描述|
 |------------|-----------------|
 |&#124;|可以调用（竖线之前或竖线之后的）方法或状态。|
-|？|问号之前的方法或状态是可选的，但是如果调用，只能调用一次。|
+|?|问号之前的方法或状态是可选的，但是如果调用，只能调用一次。|
 |*|\* 符号之前的方法或状态是可选的，可以调用多次。|
 
 ## <a name="validation-context"></a>验证上下文
@@ -482,6 +482,6 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 > [!NOTE]
 > 调用上表中的任何方法时不会更改 <xref:System.Xml.Schema.XmlSchemaValidator> 类的各种属性返回的值。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.Schema.XmlSchemaValidator>

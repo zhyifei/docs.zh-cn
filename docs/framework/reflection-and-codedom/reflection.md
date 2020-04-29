@@ -23,14 +23,14 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 ms.openlocfilehash: 90d9cf4c473d73d1eeeb5f2a1098f8626c20359f
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79180477"
 ---
 # <a name="reflection-in-net"></a>.NET 中的反射
 
-<xref:System.Reflection>命名空间中的类以及<xref:System.Type?displayProperty=nameWithType>以及 ， 使您能够获取有关加载[程序集](../../standard/assembly/index.md)及其内定义的类型的信息，例如[类](../../standard/base-types/common-type-system.md#classes)、[接口](../../standard/base-types/common-type-system.md#interfaces)和值类型（即[结构和](../../standard/base-types/common-type-system.md#structures)[枚举](../../standard/base-types/common-type-system.md#enumerations)）。 可以使用反射在运行时创建、调用和访问类型实例。 有关反射的特定方面的主题，请参见本概述末的[相关主题](#related_topics)。
+<xref:System.Reflection> 命名空间中的类与 <xref:System.Type?displayProperty=nameWithType> 使你能够获取有关加载的[程序集](../../standard/assembly/index.md)和其中定义的类型的信息，如[类](../../standard/base-types/common-type-system.md#classes)、[接口](../../standard/base-types/common-type-system.md#interfaces)和值类型（即[结构](../../standard/base-types/common-type-system.md#structures)和[枚举](../../standard/base-types/common-type-system.md#enumerations)）。 可以使用反射在运行时创建、调用和访问类型实例。 有关反射的特定方面的主题，请参见本概述末的[相关主题](#related_topics)。
   
 [公共语言运行时](../../standard/clr.md)加载程序管理[应用程序域](../app-domains/application-domains.md)，应用程序域构成具有相同应用程序范围的对象周围定义的边界。 此管理包括将每个程序集加载到相应的应用程序域中和控制每个程序集内的类型层次结构的内存布局。  
   
@@ -71,14 +71,14 @@ ms.locfileid: "79180477"
 
 ## <a name="related-topics"></a>相关主题  
   
-|标题|说明|  
+|Title|描述|  
 |-----------|-----------------|  
 |[查看类型信息](viewing-type-information.md)|介绍 <xref:System.Type> 类，并提供演示如何使用具有几个反射类的 <xref:System.Type> 来获取有关构造函数、方法、字段、属性和事件的信息的代码示例。|  
 |[反射类型和泛型类型](reflection-and-generic-types.md)|说明反射如何处理泛型类型和泛型方法的类型参数和类型自变量。|  
 |[反射的安全注意事项](security-considerations-for-reflection.md)|描述确定可以在何种程度上使用反射来发现类型信息和访问类型的规则。|  
 |[动态加载和使用类型](dynamically-loading-and-using-types.md)|描述支持后期绑定的反射自定义绑定接口。|  
 |[如何：将程序集加载到仅反射上下文中](how-to-load-assemblies-into-the-reflection-only-context.md)|描述仅反射的加载上下文。 显示如何加载程序集、如何测试上下文以及如何检查应用到仅反射上下文中的程序集。|  
-|[访问自定义特性](accessing-custom-attributes.md)|演示如何使用反射来查询特性的存在和值。|  
+|[访问自定义属性](accessing-custom-attributes.md)|演示如何使用反射来查询特性的存在和值。|  
 |[指定完全限定的类型名称](specifying-fully-qualified-type-names.md)|描述 Backus-Naur 形式 (BNF) 的完全限定类型名称的格式，以及指定特殊字符、程序集名称、指针、引用和数组所需的语法。|  
 |[如何：使用反射将委托挂钩](how-to-hook-up-a-delegate-using-reflection.md)|说明如何创建方法的委托并将委托挂钩到事件。 说明如何使用 <xref:System.Reflection.Emit.DynamicMethod> 在运行时创建事件处理方法。|  
 |[发出动态方法和程序集](emitting-dynamic-methods-and-assemblies.md)|说明如何生成动态程序集和动态方法。|  

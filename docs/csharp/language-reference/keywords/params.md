@@ -1,5 +1,5 @@
 ---
-title: params 关键字 - C# 参考
+title: 参数数组的 params 关键字 - C# 参考
 ms.date: 07/20/2015
 f1_keywords:
 - params_CSharpKeyword
@@ -7,23 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], params
 - params keyword [C#]
+- parameter array
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
-ms.openlocfilehash: f462ccc2421fef3ea111d263ec035a701cf04775
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 77d7fd19ff57f80f401191027e2fae95026e1966
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173544"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738846"
 ---
 # <a name="params-c-reference"></a>params（C# 参考）
 
-使用 `params` 关键字可以指定采用数目可变的参数的[方法参数](method-parameters.md)。
-
-可以发送参数声明中所指定类型的逗号分隔的参数列表或指定类型的参数数组。 还可以不发送参数。 如果未发送任何参数，则 `params` 列表的长度为零。
+使用 `params` 关键字可以指定采用数目可变的参数的[方法参数](method-parameters.md)。 参数类型必须是一维数组。
 
 在方法声明中的 `params` 关键字之后不允许有任何其他参数，并且在方法声明中只允许有一个 `params` 关键字。
 
-声明的 `params` 参数类型必须是一维数组，如以下示例所示。 否则，发生编译器错误 [CS0225](../../misc/cs0225.md)。
+如果 `params` 参数的声明类型不是一维数组，则会发生编译器错误 [CS0225](../../misc/cs0225.md)。
+
+使用 `params` 参数调用方法时，可以传入：
+
+- 数组元素类型的参数的逗号分隔列表。
+- 指定类型的参数的数组。
+- 无参数。 如果未发送任何参数，则 `params` 列表的长度为零。
 
 ## <a name="example"></a>示例
 
@@ -35,7 +40,7 @@ ms.locfileid: "79173544"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)

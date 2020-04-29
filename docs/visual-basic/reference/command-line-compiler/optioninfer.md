@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
 ms.openlocfilehash: d7209e431b84e52e487bccbf73bd633a346efde0
 ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72775622"
@@ -34,13 +34,13 @@ ms.locfileid: "72775622"
 > 你可使用 `-noconfig` 选项来保留编译器的内部默认值(而非在 vbc.rsp 中指定的那些值）。 此选项默认的编译器是 `-optioninfer-`。  
   
 ## <a name="remarks"></a>备注  
- 如果源代码文件包含[选项推断语句](../../../visual-basic/language-reference/statements/option-infer-statement.md)，则该语句将重写 `-optioninfer` 命令行编译器设置。  
+ 如果源代码文件包含 [Option Infer 语句](../../../visual-basic/language-reference/statements/option-infer-statement.md)，则语句将重写 `-optioninfer` 命令行编译器设置。  
   
-### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>在 Visual Studio IDE 中设置-optioninfer  
+### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>若要在 Visual Studio IDE 中设置 -optioninfer  
   
-1. 在**解决方案资源管理器**中选择一个项目。 在“项目”菜单上，单击“属性”。  
+1. 在“解决方案资源管理器”  中选择项目。 在“项目”菜单上，单击“属性”   。  
   
-2. 在 "**编译**" 选项卡上，修改 "**选项推断**框" 中的值。  
+2. 在“编译”  选项卡上，修改“Option infer”  框中的值。  
   
 ## <a name="example"></a>示例  
  以下代码在启用局部类型推理的情况下编译 `test.vb`。  

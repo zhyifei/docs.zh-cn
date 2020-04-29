@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: f03084fa611c35c5504190b28fab79563d560d03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea9bf9e065b2953fd20e0503a19d1dc143064c5d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398063"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738736"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算术运算符（C# 参考）
 
@@ -51,13 +51,13 @@ ms.locfileid: "79398063"
 
 ### <a name="postfix-increment-operator"></a>后缀递增运算符
 
-`x++` 的结果是此操作前的 `x`  的值，如以下示例所示：
+`x++` 的结果是此操作前的 `x` 的值，如以下示例所示：
 
 [!code-csharp-interactive[postfix increment](snippets/ArithmeticOperators.cs#PostfixIncrement)]
 
 ### <a name="prefix-increment-operator"></a>前缀增量运算符
 
-`++x` 的结果是此操作后的 `x`  的值，如以下示例所示：
+`++x` 的结果是此操作后的 `x` 的值，如以下示例所示：
 
 [!code-csharp-interactive[prefix increment](snippets/ArithmeticOperators.cs#PrefixIncrement)]
 
@@ -69,13 +69,13 @@ ms.locfileid: "79398063"
 
 ### <a name="postfix-decrement-operator"></a>后缀递减运算符
 
-`x--` 的结果是此操作前的 `x`  的值，如以下示例所示：
+`x--` 的结果是此操作前的 `x` 的值，如以下示例所示：
 
 [!code-csharp-interactive[postfix decrement](snippets/ArithmeticOperators.cs#PostfixDecrement)]
 
 ### <a name="prefix-decrement-operator"></a>前缀减量运算符
 
-`--x` 的结果是此操作后的 `x`  的值，如以下示例所示：
+`--x` 的结果是此操作后的 `x` 的值，如以下示例所示：
 
 [!code-csharp-interactive[prefix decrement](snippets/ArithmeticOperators.cs#PrefixDecrement)]
 
@@ -131,7 +131,7 @@ ms.locfileid: "79398063"
 
 ### <a name="floating-point-remainder"></a>浮点余数
 
-对于 `float` 和 `double` 操作数，有限的 `x % y` 和 `x` 的 `y` 的结果是值 `z`，因此
+对于 `float` 和 `double` 操作数，有限的 `x` 和 `y` 的 `x % y` 的结果是值 `z`，因此
 
 - `z`（如果不为零）的符号与 `x` 的符号相同。
 - `z` 的绝对值是 `|x| - n * |y|` 得出的值，其中 `n` 是小于或等于 `|x| / |y|` 的最大可能整数，`|x|` 和 `|y|` 分别是 `x` 和 `y` 的绝对值。
@@ -139,9 +139,9 @@ ms.locfileid: "79398063"
 > [!NOTE]
 > 计算余数的此方法类似于用于整数操作数的方法，但与 IEEE 754 规范不同。 如果需要符合 IEEE 754 规范的余数运算，请使用 <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> 方法。
 
-有关非限定操作数的 `%` 运算符行为的信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#remainder-operator)的[余数运算符](~/_csharplang/spec/introduction.md)章节。
+有关非限定操作数的 `%` 运算符行为的信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[余数运算符](~/_csharplang/spec/expressions.md#remainder-operator)章节。
 
-对于 `decimal` 操作数，余数运算符 `%` 等效于 [ 类型的](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>)余数运算符<xref:System.Decimal?displayProperty=nameWithType>。
+对于 `decimal` 操作数，余数运算符 `%` 等效于 <xref:System.Decimal?displayProperty=nameWithType> 类型的[余数运算符](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>)。
 
 以下示例演示了具有浮动操作数的余数运算符的行为：
 
@@ -183,7 +183,7 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](snippets/ArithmeticOperators.cs#CompoundAssignment)]
 
-由于[数值提升](~/_csharplang/spec/expressions.md#numeric-promotions)，`op` 运算的结果可能不会隐式转换为 `T` 的 `x` 类型。 在这种情况下，如果 `op` 是预定义的运算符并且运算的结果可以显式转换为 `T` 的类型 `x`，则形式为 `x op= y` 的复合赋值表达式等效于 `x = (T)(x op y)`，但 `x` 仅计算一次。 以下示例演示了该行为：
+由于[数值提升](~/_csharplang/spec/expressions.md#numeric-promotions)，`op` 运算的结果可能不会隐式转换为 `x` 的 `T` 类型。 在这种情况下，如果 `op` 是预定义的运算符并且运算的结果可以显式转换为 `x` 的类型 `T`，则形式为 `x op= y` 的复合赋值表达式等效于 `x = (T)(x op y)`，但 `x` 仅计算一次。 以下示例演示了该行为：
 
 [!code-csharp-interactive[compound assignment with cast](snippets/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
@@ -204,7 +204,7 @@ x = x op y
 
 [!code-csharp-interactive[precedence and associativity](snippets/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
 
-要了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md#operator-precedence)一文中的[运算符优先级](index.md)部分。
+如需了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md#operator-precedence)一文中的[运算符优先级](index.md)部分。
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>算术溢出和被零除
 
@@ -262,7 +262,7 @@ x = x op y
 - [checked 和 unchecked 运算符](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
 - [数值提升](~/_csharplang/spec/expressions.md#numeric-promotions)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)

@@ -4,7 +4,7 @@ ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
 ms.openlocfilehash: 1a7fa7c3e5561fc9e48cf627a703abc747a72ba0
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159827"
@@ -17,7 +17,7 @@ ms.locfileid: "78159827"
 ## <a name="persistent-storage"></a>永久性存储
 经常有必要将对象的字段值存储至磁盘，以后再检索此数据。 尽管不依赖序列化也能很容易地实现这一点，但方法通常麻烦而容易出错，并且需要跟踪对象的层次结构时会逐渐变得更加复杂。 假设要编写一个包含数千个对象的大型商务应用程序，并且必须为每个对象编写代码，以便将字段和属性保存至磁盘以及从磁盘进行还原。 序列化为实现这一目标提供了方便的机制。
 
-公共语言运行库可管理对象在内存中存储的方式，并通过使用[反射](../../../docs/framework/reflection-and-codedom/reflection.md)提供一种自动序列化机制。 当序列化对象时，类的名称、程序集和类实例的所有数据成员被写入存储区。 对象经常以成员变量方式将引用存储至其他实例。 当序列化类时，序列化引擎跟踪被引用的对象（已序列化），以确保同一对象不会被多次序列化。 随一起提供的序列化体系结构 .NET Framework 会自动处理对象图和循环引用。 对于对象图的唯一要求是，必须将已序列化对象引用的所有对象也标记为 `Serializable`（有关详细信息，请参阅[基本序列化](basic-serialization.md)）。 如果未进行标记，序列化程序尝试序列化未标记的对象时将引发异常。
+公共语言运行库可管理对象在内存中存储的方式，并通过使用[反射](../../../docs/framework/reflection-and-codedom/reflection.md)提供一种自动序列化机制。 当序列化对象时，类的名称、程序集和类实例的所有数据成员被写入存储区。 对象经常以成员变量方式将引用存储至其他实例。 当序列化类时，序列化引擎跟踪被引用的对象（已序列化），以确保同一对象不会被多次序列化。 随 .NET Framework 一起提供的序列化体系结构可自动正确地处理对象图和循环引用。 对于对象图的唯一要求是，必须将已序列化对象引用的所有对象也标记为 `Serializable`（有关详细信息，请参阅[基本序列化](basic-serialization.md)）。 如果未进行标记，序列化程序尝试序列化未标记的对象时将引发异常。
 
 反序列化已序列化的类时，将重新创建该类，并且将自动还原所有数据成员的值。
 
@@ -30,7 +30,7 @@ ms.locfileid: "78159827"
  [二进制序列化](../../../docs/standard/serialization/binary-serialization.md)  
  描述随公共语言运行库一起提供的二进制序列化机制。  
   
- [.Net 远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+ [.NET 远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
  描述 .NET Framework 中为远程通信提供的多种通信方法。  
   
  [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  

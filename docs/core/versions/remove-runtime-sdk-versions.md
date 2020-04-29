@@ -1,16 +1,16 @@
 ---
 title: 删除 .NET Core 运行时和 SDK
 description: 本文介绍如何确定当前安装的 .NET Core 运行时和 SDK 的版本，以及如何在 Windows、Mac 和 Linux 上删除它们。
-ms.date: 12/17/2019
+ms.date: 04/22/2020
 author: billwagner
 ms.author: wiwagn
 ms.custom: updateeachrelease
-ms.openlocfilehash: 71c11825981c6259a779e1ac8f947a41618e922d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b3501bf7c730120d3885b8c3f29b901fb131215
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397847"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135758"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>如何删除 .NET Core 运行时和 SDK
 
@@ -226,26 +226,30 @@ apt-get remove dotnet-host
 
 如果使用 tarball 安装，则必须使用手动方法删除 .NET Core。
 
-通过删除包含该版本的目录，单独删除 SDK 和运行时。 例如，要删除 1.0.1 SDK 和运行时，可使用以下 bash 命令：
+在 Linux 上，必须通过删除进行版本控制的目录，分别删除 SDK 和运行时。 为清楚起见，这会从磁盘中删除 SDK 和运行时。 例如，要删除 1.0.1 SDK 和运行时，可使用以下 bash 命令：
 
 ```bash
-sudo rm -rf /usr/share/dotnet/sdk/1.0.1
-sudo rm -rf /usr/share/dotnet/shared/Microsoft.NETCore.App/1.0.1
-sudo rm -rf /usr/share/dotnet/shared/Microsoft.AspNetCore.App/1.0.1
-sudo rm -rf /usr/share/dotnet/host/fxr/1.0.1
+version="1.0.1"
+sudo rm -rf /usr/local/share/dotnet/sdk/$version
+sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.NETCore.App/$version
+sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.All/$version
+sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.App/$version
+sudo rm -rf /usr/local/share/dotnet/host/fxr/$version
 ```
 
 SDK 和运行时的父目录列在 `dotnet --list-sdks` 和 `dotnet --list-runtimes` 命令的输出中，如上表所示。
 
 # <a name="macos"></a>[macOS](#tab/macos)
 
-在 Mac 上，必须通过删除包含该版本的目录，分别删除 SDK 和运行时。 例如，要删除 1.0.1 SDK 和运行时，可使用以下 bash 命令：
+在 Mac 上，必须通过删除进行版本控制的目录，分别删除 SDK 和运行时。 为清楚起见，这会从磁盘中删除 SDK 和运行时。 例如，要删除 1.0.1 SDK 和运行时，可使用以下 bash 命令：
 
 ```bash
-sudo rm -rf /usr/local/share/dotnet/sdk/1.0.1
-sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.NETCore.App/1.0.1
-sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.App/1.0.1
-sudo rm -rf /usr/local/share/dotnet/host/fxr/1.0.1
+version="1.0.1"
+sudo rm -rf /usr/local/share/dotnet/sdk/$version
+sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.NETCore.App/$version
+sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.All/$version
+sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.App/$version
+sudo rm -rf /usr/local/share/dotnet/host/fxr/$version
 ```
 
 SDK 和运行时的父目录列在 `dotnet --list-sdks` 和 `dotnet --list-runtimes` 命令的输出中，如上表所示。

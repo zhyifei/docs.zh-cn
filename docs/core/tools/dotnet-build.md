@@ -2,18 +2,18 @@
 title: dotnet build 命令
 description: dotnet build 命令可生成项目及其所有依赖项。
 ms.date: 02/14/2020
-ms.openlocfilehash: 27deca4ab1c12314db5214c73660862a8a57a398
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1022df059493c7e045f81d4be93dff2fdab77eb1
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463709"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102835"
 ---
-# <a name="dotnet-build"></a>dotnet 生成
+# <a name="dotnet-build"></a>dotnet build
 
 **本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet build` - 生成项目及其所有依赖项。
 
@@ -29,7 +29,7 @@ dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet build -h|--help
 ```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 `dotnet build` 命令将项目及其依赖项生成为一组二进制文件。 二进制文件包括扩展名为 .dll 的中间语言 (IL) 文件中的项目代码  。  根据项目类型和设置，可能会包含其他文件，例如：
 
@@ -43,9 +43,13 @@ dotnet build -h|--help
 
 对于面向 .NET Core 3.0 及更高版本的可执行项目，库依赖项会被复制到输出文件夹。 这意味着如果没有其他任何特定于发布的逻辑（例如，Web 项目具有的逻辑），则应可部署生成输出。
 
-构建需要 *project.assets.json* 文件，该文件列出了你的应用程序的依赖项。 此文件在 [`dotnet restore`](dotnet-restore.md) 执行时创建。 如果资产文件未就位，那么工具将无法解析引用程序集，进而导致错误生成。 使用 .NET Core 1.x SDK，需要在运行 `dotnet restore` 之前显式运行 `dotnet build`。 自 .NET Core 2.0 SDK 起，`dotnet restore` 在 `dotnet build` 运行时隐式运行。 若要在运行 build 命令时禁用隐式还原，可以传递 `--no-restore` 选项。
+### <a name="implicit-restore"></a>隐式还原
+
+构建需要 *project.assets.json* 文件，该文件列出了你的应用程序的依赖项。 此文件在 [`dotnet restore`](dotnet-restore.md) 执行时创建。 如果资产文件未就位，那么工具将无法解析引用程序集，进而导致错误生成。
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
+
+### <a name="executable-or-library-output"></a>可执行文件或库输出
 
 项目是否可执行由项目文件中的 `<OutputType>` 属性决定。 以下示例显示生成可执行代码的项目：
 
@@ -65,7 +69,7 @@ dotnet build -h|--help
 
 运行 `dotnet build` 等同于运行 `dotnet msbuild -restore`；但是，输出的默认详细程度不同。
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `PROJECT | SOLUTION`
 

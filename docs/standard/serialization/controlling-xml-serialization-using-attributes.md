@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
 ms.openlocfilehash: e11152dc626b1e3619b9ecbc04d8a237ca9f13d3
 ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/25/2020
 ms.locfileid: "80248038"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>使用属性控制 XML 序列化
 
-使用属性可以控制对象的 XML 序列化，还可以利用同一组类创建其他 XML 流。 有关创建其他 XML 流的详细信息，请参见[如何：指定 XML 流的替代元素名称](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。
+使用属性可以控制对象的 XML 序列化，还可以利用同一组类创建其他 XML 流。 有关创建其他 XML 流的详细信息，请参阅[如何：指定 XML 流的替代元素名称](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。
 
 > [!NOTE]
-> 如果生成的 XML 必须符合万维网联盟 （W3C） 文档标题为["简单对象访问协议 （SOAP） 1.1"](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)的文档的第 5 节，请使用[控制编码 SOAP 序列化的属性](attributes-that-control-encoded-soap-serialization.md)中列出的属性。
+> 如果生成的 XML 必须符合万维网联合会 (W3C) 文档[简单对象访问协议 (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/) 第 5 节的内容，则需使用[控制编码的 SOAP 序列化的特性](attributes-that-control-encoded-soap-serialization.md)中所列的特性。
 
 默认情况下，XML 元素名称由类或成员名称确定。 在名为 `Book` 的简单类中，名为 `ISBN` 的字段将生成 XML 元素标记 \<ISBN>，如下面的示例所示。
 
@@ -241,7 +241,7 @@ public class Group {
 </Group>
 ```
 
-区别两种 XML 流的另一个方法是，使用 XML 架构定义工具，从编译好的代码生成 XML 架构 (XSD) 文档文件。 （有关使用该工具的更多详细信息，请参阅[XML 架构定义工具和 XML 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)。当没有属性应用于字段时，架构会以以下方式描述元素。
+区别两种 XML 流的另一个方法是，使用 XML 架构定义工具，从编译好的代码生成 XML 架构 (XSD) 文档文件。 （有关使用该工具的详细信息，请参见[XML 架构定义工具和 XML 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)。）没有将属性应用于字段时，架构会以下列方式描述元素。
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />

@@ -2,12 +2,12 @@
 title: SOA 应用程序
 description: 请记住，容器也可以是 SOA 应用程序的有用部署选项。
 ms.date: 02/15/2019
-ms.openlocfilehash: aa56ada7b14a465fb3dafd02b03b815782ac765b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f8619cb50a7d90b911db9ff2c8ef37c3c5fde210
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68672354"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738388"
 ---
 # <a name="service-oriented-applications"></a>面向服务的应用程序
 
@@ -17,7 +17,7 @@ ms.locfileid: "68672354"
 
 对于传统的面向服务的体系结构和更高级的微服务体系结构，Docker 容器都是有用的（但不是必需的）。
 
-归根结底，容器群集解决方案对于传统的 SOA 体系结构和更高级的微服务体系结构都很有用，其中每个微服务都拥有其数据模型。 由于有多个数据库，还可以扩展数据层，而不必使用 SOA 服务共享的单一数据库。 但是，关于拆分数据的讨论纯粹是关于架构和设计。
+归根结底，容器群集解决方案对于传统的 SOA 体系结构和更高级的微服务体系结构都很有用，其中每个微服务都拥有其数据模型。 由于有多个数据库，还可以横向扩展数据层，而不必使用 SOA 服务共享的单一数据库。 但是，关于拆分数据的讨论纯粹是关于架构和设计。
 
 >[!div class="step-by-step"]
 >[上一页](state-and-data-in-docker-applications.md)

@@ -1,14 +1,14 @@
 ---
 title: global.json 概述
 description: 了解如何在运行 .NET Core CLI 命令时使用 global.json 文件设置 .NET Core SDK 版本。
-ms.date: 01/14/2020
+ms.date: 04/21/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 70257566e1ff30f5c97212a5e0e3c308c27738b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5384b59cccb629a5409d26a8df7c81b3999fc95f
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77625990"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021346"
 ---
 # <a name="globaljson-overview"></a>global.json 概述
 
@@ -53,8 +53,8 @@ ms.locfileid: "77625990"
 
 如果未显式设置此值，则默认值将取决于是否从 Visual Studio 运行：
 
-- 如果未使用 Visual Studio，则默认值为 `true`  。
-- 如果使用 Visual Studio，它将使用请求的预发布状态。 也就是说，如果使用 Visual Studio 的预览版本，或者设置了“使用 .NET Core SDK 的预览版”选项（在“工具” > “选项” > “环境” > “预览功能”下方），则默认值为 `true`，否则为 `false`      。
+- 如果未使用 Visual Studio，则默认值为 `true` 。
+- 如果使用 Visual Studio，它将使用请求的预发布状态。 也就是说，如果使用 Visual Studio 的预览版本，或者设置了“使用 .NET Core SDK 的预览版”选项（在“工具” > “选项” > “环境” > “预览功能”下方），则默认值为 `true`，否则为 `false`     。
 
 #### <a name="rollforward"></a>rollForward
 
@@ -115,6 +115,17 @@ ms.locfileid: "77625990"
   "sdk": {
     "version": "3.1.100",
     "rollForward": "disable"
+  }
+}
+```
+
+下面的示例演示如何使用特定主版本和次版本的已安装最新功能区段和修补程序版本：
+
+```json
+{
+  "sdk": {
+    "version": "3.1.000",
+    "rollForward": "latestFeature"
   }
 }
 ```

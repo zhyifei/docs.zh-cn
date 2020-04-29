@@ -1,14 +1,15 @@
 ---
-ms.openlocfilehash: 24e990d0561f1f0faade2c8e62ca640e4daba93f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eae6f9f80cfdf577a944b1bd49d72d24ab075328
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78848075"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140740"
 ---
 
 > [!div class="op_single_selector"]
 >
+> - [Ubuntu 20.04 - x64](../linux-package-manager-ubuntu-2004.md)
 > - [Ubuntu 19.10 - x64](../linux-package-manager-ubuntu-1910.md)
 > - [Ubuntu 19.04 - x64](../linux-package-manager-ubuntu-1904.md)
 > - [Ubuntu 18.04 - x64](../linux-package-manager-ubuntu-1804.md)
