@@ -44,7 +44,7 @@
         - name: 服务网格通信基础结构
           href: service-mesh-communication-infrastructure.md
     - name: 分布式数据
-      href: database-per-microservice.md
+      href: distributed-data.md
       items:
         - name: 关系与NoSQL 数据
           href: relational-vs-nosql-data.md
