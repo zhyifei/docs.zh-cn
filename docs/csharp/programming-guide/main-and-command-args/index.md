@@ -12,12 +12,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 0571ec6dbc42f103ec922a6b2b13a52510640a78
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 190216b01ea416aedbca270a6d7a5acbf0c2e797
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75700596"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200114"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令行参数（C# 编程指南）
 
@@ -47,6 +47,8 @@ public static async Task<int> Main() { }
 public static async Task Main(string[] args) { }
 public static async Task<int> Main(string[] args) { }
 ```
+
+上述示例均使用公共访问器修饰符。 这是典型操作方式，但不是必需操作方式。
 
 添加 `async`、`Task` 和 `Task<int>` 返回类型可简化控制台应用程序需要启动时的程序代码，以及 `Main` 中的 `await` 异步操作。
 
