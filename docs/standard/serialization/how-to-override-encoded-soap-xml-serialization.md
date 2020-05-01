@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
 ms.openlocfilehash: 1bc9b228e61ccb0852ae489d44c5b692c54b642d
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61922585"
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>如何：替代编码的 SOAP XML 序列化
 
-将对象的 XML 序列化重写为 SOAP 消息的过程类似于重写标准 XML 序列化的过程。 有关重写标准 XML 序列化的信息，请参阅[如何：指定 XML Stream 的替代元素名称](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。
+将对象的 XML 序列化重写为 SOAP 消息的过程类似于重写标准 XML 序列化的过程。 有关重写标准 XML 序列化的信息，请参见[如何：指定 XML 流的替代元素名称](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。
 
 ## <a name="to-override-serialization-of-objects-as-soap-messages"></a>将对象的序列化重写为 SOAP 消息
 
@@ -283,6 +283,6 @@ public class Run
 - [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - [用来控制编码的 SOAP 序列化的属性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
 - [使用 XML Web services 进行 XML 序列化](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
-- [如何：将对象序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-- [如何：将对象序列化为 SOAP 编码的 XML Stream](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [如何：将对象序列化为 SOAP 编码的 XML 流](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
