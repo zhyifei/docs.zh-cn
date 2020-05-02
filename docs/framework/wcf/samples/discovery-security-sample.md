@@ -2,12 +2,12 @@
 title: 发现安全示例
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 94de324469d0d649a184dec5847e1a5c4cbba2cc
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 44022ee756f189347aaec606427ecb3c4c5ffa95
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141160"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728422"
 ---
 # <a name="discovery-security-sample"></a>发现安全示例
 
@@ -16,7 +16,7 @@ Discovery 规范不要求参与发现过程的终结点是安全的。 增强发
  自定义通道应用于发现和公告终结点的现有通道堆栈顶部。 这样，对于发送的每个消息都应用一个签名标头。 会对接收的消息验证签名，如果签名不匹配或消息没有签名，则丢弃消息。 本示例使用证书对消息进行签名和验证。  
   
 ## <a name="discussion"></a>讨论区  
- WCF 具有很强的可扩展性，使用户可以根据需要自定义通道。 本示例实现一个生成安全通道的发现安全绑定元素。 安全通道应用并验证消息签名，在当前堆栈顶部应用。  
+ WCF 可扩展，并允许用户根据需要自定义通道。 本示例实现一个生成安全通道的发现安全绑定元素。 安全通道应用并验证消息签名，在当前堆栈顶部应用。  
   
  安全绑定元素生成安全通道工厂和通道侦听器。  
   
@@ -40,7 +40,7 @@ Discovery 规范不要求参与发现过程的终结点是安全的。 增强发
   
  为计算签名，示例确定扩展的签名项。 根据 WS-Discovery 规范的要求，使用 `SignedInfo` 命名空间前缀创建 XML 签名 (`ds`)。 发现和寻址命名空间中的正文和所有标头都在签名中进行引用，因此无法对这些内容进行篡改。 每个引用的元素都使用专用规范化（http://www.w3.org/2001/10/xml-exc-c14n# ）进行转换，然后对 sha-1 摘要值进行计算（http://www.w3.org/2000/09/xmldsig#sha1 ）。 基于所有引用的元素及其摘要值，使用 RSA 算法（http://www.w3.org/2000/09/xmldsig#rsa-sha1 ）计算签名值。  
   
- 消息使用特定于客户端的证书进行签名。 创建绑定元素时必须指定存储位置、名称和证书主题名称。 精简签名中的 `KeyId` 表示签名令牌的密钥标识符，是签名令牌的主题密钥标识符 (SKI) 或者是（如果 SKI 不存在）签名令牌的公钥的 SHA-1 哈希值。  
+ 消息使用特定于客户端的证书进行签名。 创建绑定元素时，必须指定存储位置、名称和证书使用者名称。 精简签名中的 `KeyId` 表示签名令牌的密钥标识符，是签名令牌的主题密钥标识符 (SKI) 或者是（如果 SKI 不存在）签名令牌的公钥的 SHA-1 哈希值。  
   
 ## <a name="secure-channel-listener"></a>安全通道侦听器  
  安全通道侦听器创建输入或双工通道，这些通道验证接收的消息中的精简签名。 为验证签名，使用附加到消息的精简签名中指定的 `KeyId` 从指定存储区中选择证书。 如果消息没有签名或签名检查失败，则丢弃消息。 为使用安全绑定，本示例定义一个工厂，该工厂使用添加的发现安全绑定元素创建自定义 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 和 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>。 这些安全终结点可以用于发现公告侦听器和可发现服务。  

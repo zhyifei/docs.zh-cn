@@ -2,14 +2,14 @@
 title: 安全性验证
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: d635ae72b71df18934acd1016ac3e799d2c4aea1
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 90d335f32c43ecf575c69cf800ab69bee05f39ee
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140508"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728375"
 ---
-# <a name="security-validation"></a>安全性验证
+# <a name="security-validation"></a>安全验证
 此示例演示如何使用自定义行为来验证计算机上的服务，以确保服务符合特定条件。 在此示例中，自定义行为通过以下方法验证服务：扫描服务上的每个终结点，并查看这些终结点是否包含安全的绑定元素。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
   
 > [!NOTE]
@@ -78,9 +78,9 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 > 向所有服务中添加行为时，建议在进行任何更改之前备份 Machine.config 文件。  
   
- 现在运行此示例的 client\bin 目录中提供的客户端。 出现异常，出现以下消息： "无法激活请求的服务http://localhost/servicemodelsamples/service.svc。" 这是预期的行为，因为终结点验证行为认为某个终结点不安全，并阻止服务启动。 该行为还会引发一个内部异常，以描述哪个终结点不安全，并在“System.ServiceModel 4.0.0.0”源和“WebHost”类别下的系统事件查看器中写入一则消息。 还可以在此示例中打开对服务的跟踪。 这样可以使用户查看终结点验证行为引发的异常，方法是：使用服务跟踪查看器工具打开生成的服务跟踪。  
+ 现在运行此示例的 client\bin 目录中提供的客户端。 引发异常，并出现以下消息： "无法激活请求的服务http://localhost/servicemodelsamples/service.svc。" 这是预期的行为，因为终结点验证行为认为某个终结点不安全，并阻止服务启动。 该行为还会引发一个内部异常，以描述哪个终结点不安全，并在“System.ServiceModel 4.0.0.0”源和“WebHost”类别下的系统事件查看器中写入一则消息。 还可以在此示例中打开对服务的跟踪。 这样可以使用户查看终结点验证行为引发的异常，方法是：使用服务跟踪查看器工具打开生成的服务跟踪。  
   
-#### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>查看事件查看器中失败的终结点验证异常消息  
+### <a name="view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>查看事件查看器中失败的终结点验证异常消息  
   
 1. 单击 "**开始**" 菜单，然后选择 "**运行 ...**"。  
   
@@ -90,7 +90,7 @@ public void Validate(ServiceDescription serviceDescription,
   
 4. 在**应用程序**窗口中的 "WebHost" 类别下双击最近添加的 "system.servicemodel 4.0.0.0" 事件，以查看不安全的终结点消息。  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
+## <a name="set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
 1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   

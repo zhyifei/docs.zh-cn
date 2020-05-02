@@ -4,12 +4,12 @@ description: 有关可帮助了解 .NET 的 .NET Core、ASP.NET Core 和 C# 语�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 9a161d5325125fba8d4f4e53a0a306c989ed6bc5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44ce0d740502686db1801db428a2f79c2250f8c0
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397670"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507424"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 示例和教程
 
@@ -107,7 +107,7 @@ ms.locfileid: "79397670"
 
 1. 执行以下过程之一，下载包含示例代码的存储库：
    * 将 ZIP 格式的存储库下载到本地系统。 解压缩压缩存档文件。
-   * [分叉](https://help.github.com/articles/fork-a-repo/)存储库并将分叉点[克隆](https://help.github.com/articles/cloning-a-repository/)到你的本地系统。 分叉和克隆允许通过对分叉点进行更改，然后为官方文档存储库创建提取请求的方式参与文档创作。 有关详细信息，请参阅 [.NET 文档参与指南](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md)和 [ 文档参与指南](https://github.com/aspnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)。
+   * [分叉](https://help.github.com/articles/fork-a-repo/)存储库并将分叉点[克隆](https://help.github.com/articles/cloning-a-repository/)到你的本地系统。 分叉和克隆允许通过对分叉点进行更改，然后为官方文档存储库创建提取请求的方式参与文档创作。 有关详细信息，请参阅 [.NET 文档参与指南](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute)和 [ 文档参与指南](https://github.com/aspnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)。
    * 以本地方式克隆存储库。 如果你将文档存储库直接克隆到本地系统，则无法直接提交到官方存储库，因此稍后将无法参与文档创作。 如果你希望保留以后参与文档创作的机会，请使用之前介绍的分叉和克隆过程。
 1. 在存储库的文件夹中导航到示例的位置。 当你点击示例链接时，示例位置的相对路径将显示在浏览器的地址栏中。
 1. 要运行示例，你有多个选择：

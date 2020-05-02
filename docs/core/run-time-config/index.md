@@ -2,12 +2,12 @@
 title: 运行时配置选项
 description: 了解如何使用运行时配置设置来配置 .NET Core 应用程序。
 ms.date: 01/21/2020
-ms.openlocfilehash: ddf68c30e620a06856f65e71bd050e1b77618f20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d49707b93e272f0e527ff536a80140ec98e5c1a8
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397610"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506775"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core 运行时配置设置
 
@@ -18,7 +18,7 @@ ms.locfileid: "79397610"
 - 应用程序的多个实例在单个系统上同时运行，并且你想要将每个实例配置为获得最佳性能。
 
 > [!NOTE]
-> 本文档正在编写中。 如果你注意到此处提供的信息不完整或不准确，可以[创建一个问题](https://github.com/dotnet/docs/issues)告知我们，或[提交拉取请求](https://github.com/dotnet/docs/pulls)以解决问题。 要了解如何提交 dotnet/docs 存储库的拉取请求，请参阅[参与者指南](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md)。
+> 本文档正在编写中。 如果你注意到此处提供的信息不完整或不准确，可以[创建一个问题](https://github.com/dotnet/docs/issues)告知我们，或[提交拉取请求](https://github.com/dotnet/docs/pulls)以解决问题。 要了解如何提交 dotnet/docs 存储库的拉取请求，请参阅[参与者指南](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute)。
 
 .NET Core 提供以下用于配置运行时应用程序行为的机制：
 

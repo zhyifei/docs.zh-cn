@@ -2,15 +2,16 @@
 title: 扩展跟踪
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: ad46f09c69e94146f9e1569eb506cb350a2a9307
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: e61265210640d2b801ad55b9dc5a357cc4f161a7
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141240"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728396"
 ---
-# <a name="extending-tracing"></a>扩展跟踪
-此示例演示如何通过在客户端和服务代码中编写用户定义的活动跟踪来扩展 Windows Communication Foundation （WCF）跟踪功能。 这样使用户可以创建跟踪活动，并将跟踪分组为逻辑工作单元。 还可以通过传输（在同一个终结点内）和传播（在终结点之间）来关联活动。 在此示例中，同时为客户端和服务启用了跟踪。 有关如何在客户端和服务配置文件中启用跟踪的详细信息，请参阅[跟踪和消息日志记录](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)。  
+# <a name="extend-tracing"></a>扩展跟踪
+
+此示例演示如何通过在客户端和服务代码中编写用户定义的活动跟踪来扩展 Windows Communication Foundation （WCF）跟踪功能。 通过编写用户定义的活动跟踪，用户可以创建跟踪活动，并将跟踪分组为逻辑工作单元。 还可以通过传输（在同一个终结点内）和传播（在终结点之间）来关联活动。 在此示例中，同时为客户端和服务启用了跟踪。 有关如何在客户端和服务配置文件中启用跟踪的详细信息，请参阅[跟踪和消息日志记录](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)。  
   
  此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
   
@@ -29,8 +30,8 @@ ms.locfileid: "82141240"
 ## <a name="tracing-and-activity-propagation"></a>跟踪和活动传播  
  用户定义的活动跟踪允许用户创建自己的跟踪活动，以便将跟踪分组为逻辑工作单元，通过传输和传播关联活动，并降低 WCF 跟踪的性能成本（例如，日志文件的磁盘空间成本）。  
   
-### <a name="adding-custom-sources"></a>添加自定义源  
- 用户定义的跟踪既可以添加到客户端代码中，又可以添加到服务代码中。 将跟踪源添加到客户端或服务配置文件允许记录这些自定义跟踪并将其显示在[服务跟踪查看器工具（svctraceviewer.exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)中。 下面的代码演示如何在配置文件中添加一个名为 `ServerCalculatorTraceSource` 的用户定义的跟踪源。  
+### <a name="add-custom-sources"></a>添加自定义源  
+ 用户定义的跟踪既可以添加到客户端代码中，又可以添加到服务代码中。 将跟踪源添加到客户端或服务配置文件后，可以记录这些自定义跟踪并将其显示在[服务跟踪查看器工具（svctraceviewer.exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)中。 下面的代码演示如何在配置文件中添加一个名为 `ServerCalculatorTraceSource` 的用户定义的跟踪源。  
   
 ```xml  
 <system.diagnostics>  
@@ -67,7 +68,7 @@ ms.locfileid: "82141240"
 ....
 ```  
   
-### <a name="correlating-activities"></a>关联活动  
+### <a name="correlate-activities"></a>关联活动  
  若要跨终结点直接关联活动，必须将 `propagateActivity` 跟踪源中的 `true` 属性设置为 `System.ServiceModel`。 此外，若要传播跟踪而无需执行 WCF 活动，则必须关闭 "一起活动跟踪"。 这可以在以下代码示例中看到。  
   
 > [!NOTE]
@@ -85,10 +86,10 @@ ms.locfileid: "82141240"
 </system.diagnostics>  
 ```  
   
-### <a name="lessening-performance-cost"></a>降低性能成本  
- 将 `ActivityTracing` 跟踪源中的 `System.ServiceModel` 设置为 off 将生成一个只包含用户定义的活动跟踪的跟踪文件，而不包含任何 ServiceModel 活动跟踪。 这样将产生非常小的日志文件。 但会丢失关联 WCF 处理跟踪的机会。  
+### <a name="lessen-performance-cost"></a>降低性能成本  
+ 将 `ActivityTracing` 跟踪源中的 `System.ServiceModel` 设置为 off 将生成一个只包含用户定义的活动跟踪的跟踪文件，而不包含任何 ServiceModel 活动跟踪。 排除一起活动跟踪会导致更小的日志文件。 但会丢失关联 WCF 处理跟踪的机会。  
   
-##### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
+## <a name="set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
 1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
