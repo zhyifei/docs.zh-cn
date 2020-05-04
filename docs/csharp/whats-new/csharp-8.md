@@ -1,13 +1,13 @@
 ---
 title: C# 8.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 8.0 中提供的新功能。
-ms.date: 09/20/2019
-ms.openlocfilehash: 0013f621268e2a4f1b916b226d83d18c68445ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/07/2020
+ms.openlocfilehash: c29041972bf7ff608b73ddc9ea3cfcd253905a49
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398327"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200075"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
@@ -25,19 +25,20 @@ C# 8.0 向 C# 语言添加了以下功能和增强功能：
 - [可处置的 ref 结构](#disposable-ref-structs)
 - [可为空引用类型](#nullable-reference-types)
 - [异步流](#asynchronous-streams)
+- [异步可释放](#asynchronous-disposable)
 - [索引和范围](#indices-and-ranges)
 - [Null 合并赋值](#null-coalescing-assignment)
 - [非托管构造类型](#unmanaged-constructed-types)
 - [嵌套表达式中的 Stackalloc](#stackalloc-in-nested-expressions)
 - [内插逐字字符串的增强功能](#enhancement-of-interpolated-verbatim-strings)
 
-“.NET Core 3.x”和“.NET Standard 2.1”支持 C# 8.0。 有关详细信息，请参阅 [C# 语言版本控制](../language-reference/configure-language-version.md)。
+“.NET Core 3.x”和“.NET Standard 2.1”支持 C# 8.0   。 有关详细信息，请参阅 [C# 语言版本控制](../language-reference/configure-language-version.md)。
 
 本文的剩余部分将简要介绍这些功能。 如果有详细讲解的文章，则将提供指向这些教程和概述的链接。 可以使用 `dotnet try` 全局工具在环境中浏览这些功能：
 
 1. 安装 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全局工具。
 1. 克隆 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存储库。
-1. 将当前目录设置为 try-samples 存储库的 csharp8 子目录。
+1. 将当前目录设置为 try-samples 存储库的 csharp8 子目录   。
 1. 运行 `dotnet try`。
 
 ## <a name="readonly-members"></a>Readonly 成员
@@ -75,7 +76,7 @@ warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonl
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-请注意，`readonly` 修饰符对于只读属性是必需的。 编译器会假设 `get` 访问器可以修改状态；必须显式声明 `readonly`。 自动实现的属性是一个例外；编译器将所有自动实现的 Getter 视为 readonly，因此，此处无需向 `X` 和 `Y` 属性添加 `readonly` 修饰符。
+请注意，`readonly` 修饰符对于只读属性是必需的。 编译器会假设 `get` 访问器可以修改状态；必须显式声明 `readonly`。 自动实现的属性是一个例外；编译器会将所有自动实现的 Getter 视为 `readonly`，因此，此处无需向 `X` 和 `Y` 属性添加 `readonly` 修饰符。
 
 编译器确实会强制执行 `readonly` 成员不修改状态的规则。 除非删除 `readonly` 修饰符，否则不会编译以下方法：
 
@@ -87,25 +88,27 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-通过此功能，可以指定设计意图，使编译器可以强制执行该意图，并基于该意图进行优化。 有关详细信息，请参阅有关 [`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples) 的语言参考文章中的 readonly 成员。
+通过此功能，可以指定设计意图，使编译器可以强制执行该意图，并基于该意图进行优化。
+
+有关详细信息，请参阅[结构类型](../language-reference/builtin-types/struct.md)一文中的 [`readonly` 实例成员](../language-reference/builtin-types/struct.md#readonly-instance-members)部分。
 
 ## <a name="default-interface-methods"></a>默认接口方法
 
-现在可以将成员添加到接口，并为这些成员提供实现。 借助此语言功能，API 作者可以将方法添加到以后版本的接口中，而不会破坏与该接口当前实现的源或二进制文件兼容性。 现有的实现继承默认实现。 此功能使 C# 与面向 Android 或 Swift 的 API 进行互操作，此类 API 支持类似功能。 默认接口方法还支持类似于“特征”语言功能的方案。
+现在可以将成员添加到接口，并为这些成员提供实现。 借助此语言功能，API 作者可以将方法添加到以后版本的接口中，而不会破坏与该接口当前实现的源或二进制文件兼容性。 现有的实现继承默认实现  。 此功能使 C# 与面向 Android 或 Swift 的 API 进行互操作，此类 API 支持类似功能。 默认接口方法还支持类似于“特征”语言功能的方案。
 
 默认接口方法会影响很多方案和语言元素。 我们的第一个教程介绍如何[使用默认实现更新接口](../tutorials/default-interface-methods-versions.md)。 其他教程和参考更新将适时公开发布。
 
 ## <a name="more-patterns-in-more-places"></a>在更多位置中使用更多模式
 
-模式匹配提供了在相关但不同类型的数据中提供形状相关功能的工具。 C# 7.0 通过使用 [`is`](../language-reference/keywords/is.md) 表达式和 [`switch`](../language-reference/keywords/switch.md) 语句引入了类型模式和常量模式的语法。 这些功能代表了支持数据和功能分离的编程范例的初步尝试。 随着行业转向更多微服务和其他基于云的体系结构，还需要其他语言工具。
+模式匹配  提供了在相关但不同类型的数据中提供形状相关功能的工具。 C# 7.0 通过使用 [`is`](../language-reference/keywords/is.md) 表达式和 [`switch`](../language-reference/keywords/switch.md) 语句引入了类型模式和常量模式的语法。 这些功能代表了支持数据和功能分离的编程范例的初步尝试。 随着行业转向更多微服务和其他基于云的体系结构，还需要其他语言工具。
 
 C# 8.0 扩展了此词汇表，这样就可以在代码中的更多位置使用更多模式表达式。 当数据和功能分离时，请考虑使用这些功能。 当算法依赖于对象运行时类型以外的事实时，请考虑使用模式匹配。 这些技术提供了另一种表达设计的方式。
 
-除了可以在新位置使用新模式之外，C# 8.0 还添加了“递归模式”。 任何模式表达式的结果都是一个表达式。 递归模式只是应用于另一个模式表达式输出的模式表达式。
+除了可以在新位置使用新模式之外，C# 8.0 还添加了“递归模式”  。 任何模式表达式的结果都是一个表达式。 递归模式只是应用于另一个模式表达式输出的模式表达式。
 
 ### <a name="switch-expressions"></a>switch 表达式
 
-通常情况下，[`switch`](../language-reference/keywords/switch.md) 语句在其每个 `case` 块中生成一个值。 借助 Switch 表达式，可以使用更简洁的表达式语法。 只有些许重复的 `case` 和 `break` 关键字和大括号。  以下面列出彩虹颜色的枚举为例：
+通常情况下，[`switch`](../language-reference/keywords/switch.md) 语句在其每个 `case` 块中生成一个值。 借助 Switch 表达式  ，可以使用更简洁的表达式语法。 只有些许重复的 `case` 和 `break` 关键字和大括号。  以下面列出彩虹颜色的枚举为例：
 
 ```csharp
 public enum Rainbow
@@ -173,7 +176,7 @@ public static RGBColor FromRainbowClassic(Rainbow colorBand)
 
 ### <a name="property-patterns"></a>属性模式
 
-借助属性模式，可以匹配所检查的对象的属性。 请看一个电子商务网站的示例，该网站必须根据买家地址计算销售税。 这种计算不是 `Address` 类的核心职责。 它会随时间变化，可能比地址格式的更改更频繁。 销售税的金额取决于地址的 `State` 属性。 下面的方法使用属性模式从地址和价格计算销售税：
+借助属性模式  ，可以匹配所检查的对象的属性。 请看一个电子商务网站的示例，该网站必须根据买家地址计算销售税。 这种计算不是 `Address` 类的核心职责。 它会随时间变化，可能比地址格式的更改更频繁。 销售税的金额取决于地址的 `State` 属性。 下面的方法使用属性模式从地址和价格计算销售税：
 
 ```csharp
 public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
@@ -191,7 +194,7 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
 
 ### <a name="tuple-patterns"></a>元组模式
 
-一些算法依赖于多个输入。 使用元组模式，可根据表示为[元组](../tuples.md)的多个值进行切换。  以下代码显示了游戏“rock, paper, scissors（石头剪刀布）”的切换表达式：：
+一些算法依赖于多个输入。 使用元组模式，可根据表示为[元组](../tuples.md)的多个值进行切换  。  以下代码显示了游戏“rock, paper, scissors（石头剪刀布）”的切换表达式：  ：
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -211,7 +214,7 @@ public static string RockPaperScissors(string first, string second)
 
 ### <a name="positional-patterns"></a>位置模式
 
-某些类型包含 `Deconstruct` 方法，该方法将其属性解构为离散变量。 如果可以访问 `Deconstruct` 方法，就可以使用位置模式检查对象的属性并将这些属性用于模式。  考虑以下 `Point` 类，其中包含用于为 `X` 和 `Y` 创建离散变量的 `Deconstruct` 方法：
+某些类型包含 `Deconstruct` 方法，该方法将其属性解构为离散变量。 如果可以访问 `Deconstruct` 方法，就可以使用位置模式  检查对象的属性并将这些属性用于模式。  考虑以下 `Point` 类，其中包含用于为 `X` 和 `Y` 创建离散变量的 `Deconstruct` 方法：
 
 ```csharp
 public class Point
@@ -241,7 +244,7 @@ public enum Quadrant
 }
 ```
 
-下面的方法使用位置模式来提取 `x` 和 `y` 的值。 然后，它使用 `when` 子句来确定该点的 `Quadrant`：
+下面的方法使用位置模式  来提取 `x` 和 `y` 的值。 然后，它使用 `when` 子句来确定该点的 `Quadrant`：
 
 ```csharp
 static Quadrant GetQuadrant(Point point) => point switch
@@ -262,7 +265,7 @@ static Quadrant GetQuadrant(Point point) => point switch
 
 ## <a name="using-declarations"></a>using 声明
 
-using 声明是前面带 `using` 关键字的变量声明。 它指示编译器声明的变量应在封闭范围的末尾进行处理。 以下面编写文本文件的代码为例：
+using 声明  是前面带 `using` 关键字的变量声明。 它指示编译器声明的变量应在封闭范围的末尾进行处理。 以下面编写文本文件的代码为例：
 
 ```csharp
 static int WriteLinesToFile(IEnumerable<string> lines)
@@ -353,7 +356,7 @@ int M()
 
 ## <a name="nullable-reference-types"></a>可为空引用类型
 
-在可为空注释上下文中，引用类型的任何变量都被视为不可为空引用类型。 若要指示一个变量可能为 null，必须在类型名称后面附加 `?`，以将该变量声明为可为空引用类型。
+在可为空注释上下文中，引用类型的任何变量都被视为不可为空引用类型  。 若要指示一个变量可能为 null，必须在类型名称后面附加 `?`，以将该变量声明为可为空引用类型  。
 
 对于不可为空引用类型，编译器使用流分析来确保在声明时将本地变量初始化为非 Null 值。 字段必须在构造过程中初始化。 如果没有通过调用任何可用的构造函数或通过初始化表达式来设置变量，编译器将生成警告。 此外，不能向不可为空引用类型分配一个可以为 Null 的值。
 
@@ -393,6 +396,10 @@ await foreach (var number in GenerateSequence())
 
 可以在[创建和使用异步流](../tutorials/generate-consume-asynchronous-stream.md)的教程中自行尝试异步流。 默认情况下，在捕获的上下文中处理流元素。 如果要禁用上下文捕获，请使用 <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> 扩展方法。 有关同步上下文并捕获当前上下文的详细信息，请参阅有关[使用基于任务的异步模式](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)的文章。
 
+## <a name="asynchronous-disposable"></a>异步可释放
+
+从 C# 8.0 开始，语言支持实现 <xref:System.IAsyncDisposable?displayProperty=nameWithType> 接口的异步可释放类型。 `using` 表达式的操作数可以实现 <xref:System.IDisposable> 或 <xref:System.IAsyncDisposable>。 如果为 `IAsyncDisposable`，编译器将生成代码，以 `await` 从 <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType> 返回的 <xref:System.Threading.Tasks.Task>。 有关详细信息，请参阅 [`using` 语句](../language-reference/keywords/using-statement.md)。
+
 ## <a name="indices-and-ranges"></a>索引和范围
 
 索引和范围为访问序列中的单个元素或范围提供了简洁的语法。
@@ -406,7 +413,7 @@ await foreach (var number in GenerateSequence())
 
 让我们从索引规则开始。 请考虑数组 `sequence`。 `0` 索引与 `sequence[0]` 相同。 `^0` 索引与 `sequence[sequence.Length]` 相同。 请注意，`sequence[^0]` 不会引发异常，就像 `sequence[sequence.Length]` 一样。 对于任何数字 `n`，索引 `^n` 与 `sequence.Length - n` 相同。
 
-范围指定范围的开始和末尾。 包括此范围的开始，但不包括此范围的末尾，这表示此范围包含开始但不包含末尾。 范围 `[0..^0]` 表示整个范围，就像 `[0..sequence.Length]` 表示整个范围。
+范围指定范围的开始和末尾   。 包括此范围的开始，但不包括此范围的末尾，这表示此范围包含开始但不包含末尾   。 范围 `[0..^0]` 表示整个范围，就像 `[0..sequence.Length]` 表示整个范围。
 
 请看以下几个示例。 请考虑以下数组，用其顺数索引和倒数索引进行注释：
 
@@ -465,7 +472,7 @@ Range phrase = 1..4;
 var text = words[phrase];
 ```
 
-不仅数组支持索引和范围。 也可以将索引和范围用于 [string](../language-reference/builtin-types/reference-types.md#the-string-type)、<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>。 有关详细信息，请参阅[索引和范围的类型支持](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)。
+不仅数组支持索引和范围。 还可以将索引和范围用于 [string](../language-reference/builtin-types/reference-types.md#the-string-type)、<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>。 有关详细信息，请参阅[索引和范围的类型支持](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)。
 
 可在有关[索引和范围](../tutorials/ranges-indexes.md)的教程中详细了解索引和范围。
 
@@ -520,7 +527,7 @@ Span<Coords<int>> coordinates = stackalloc[]
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
-var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6 ,8 });
+var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6, 8 });
 Console.WriteLine(ind);  // output: 1
 ```
 

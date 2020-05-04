@@ -3,12 +3,12 @@ title: .NET Core SDK 概述
 description: 查看有关 .NET Core SDK 的信息，其是一组用于创建 .NET Core 项目的库和工具。
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: c2723e0e28c889f91f79ea3c0b26aa38f69fb41c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7eb06e4fd94ed2a73af2741e98e21e02728c27e4
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157461"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595736"
 ---
 # <a name="net-core-sdk-overview"></a>.NET Core SDK 概述
 
@@ -31,9 +31,9 @@ ms.locfileid: "78157461"
 
 默认情况下，SDK 以“并排”(SxS) 方式安装，这意味着多个版本可以随时在一台计算机上共存。 [选择要使用的 .NET Core 版本](versions/selection.md)一文中详细说明了如何在运行 CLI 命令时选择版本。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [.NET Core CLI 概述](tools/index.md)
 - [.NET Core 版本控制概述](versions/index.md)
-- [如何删除 .NET Core 运行时和 SDK](versions/remove-runtime-sdk-versions.md)
+- [如何删除 .NET Core 运行时和 SDK](install/remove-runtime-sdk-versions.md)
 - [选择要使用的 .NET Core 版本](versions/selection.md)

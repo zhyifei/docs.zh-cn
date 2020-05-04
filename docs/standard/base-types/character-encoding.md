@@ -11,12 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 1a294a577d10b3e621871b168344f2b0610693dd
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8e0cf961f4d6b481c354bdc854806f971458ce21
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242733"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624938"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>如何在 .NET 中使用字符编码类
 
@@ -103,7 +103,7 @@ ms.locfileid: "81242733"
 
 特定编码的 <xref:System.Text.Encoder> 对象可从此编码的 <xref:System.Text.Encoding.GetEncoder%2A?displayProperty=nameWithType> 属性获取。 特定编码的 <xref:System.Text.Decoder> 对象可从此编码的 <xref:System.Text.Encoding.GetDecoder%2A?displayProperty=nameWithType> 属性获取。 对于解码操作，请注意，从 <xref:System.Text.Decoder> 派生的类包括 <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 方法，但它们不具有对应于 <xref:System.Text.Encoding.GetString%2A?displayProperty=nameWithType>的方法。
 
-下面的示例演示使用 <xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType> 和 <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 方法解码 Unicode 字节数组的差异。 该示例将包含某些 Unicode 字符的字符串编码为文件，然后使用两种解码方法一次解码十个字节。 由于代理项对发生在第十个和第十一个字节，因此它在单独的方法调用中进行解码。 如输出所示， <xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType> 方法不能正确地对字节进行解码，而是将它们替换为 U + FFFD（替换字符）。 另一方面， <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 方法能够成功地对字节数组进行解码以获取原始字符串。
+下面的示例演示使用 <xref:System.Text.Encoding.GetString%2A?displayProperty=nameWithType> 和 <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 方法解码 Unicode 字节数组的差异。 该示例将包含某些 Unicode 字符的字符串编码为文件，然后使用两种解码方法一次解码十个字节。 由于代理项对发生在第十个和第十一个字节，因此它在单独的方法调用中进行解码。 如输出所示， <xref:System.Text.Encoding.GetString%2A?displayProperty=nameWithType> 方法不能正确地对字节进行解码，而是将它们替换为 U + FFFD（替换字符）。 另一方面， <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 方法能够成功地对字节数组进行解码以获取原始字符串。
 
 [!code-csharp[Conceptual.Encoding#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/stream1.cs#10)]
 [!code-vb[Conceptual.Encoding#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/stream1.vb#10)]

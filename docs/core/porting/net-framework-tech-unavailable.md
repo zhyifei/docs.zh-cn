@@ -4,24 +4,24 @@ titleSuffix: ''
 description: 了解在 .NET Core 上不可用的 .NET Framework 技术
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: 7dfec63870950f12ec933ebf09041b3c8ce2cbb5
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: f95205330837551085b8f58dfbdfcd702356c98f
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607792"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506826"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Framework 技术在 .NET Core 上不可用
 
 一些适用于 .NET Framework 库的技术不可用于 .NET Core，例如 AppDomains、远程处理、代码访问安全性 (CAS)、安全透明度和 System.EnterpriseServices。 如果库依赖于这些技术中的一个或多个，请考虑使用下面所述的替代方法。 有关 API 兼容性的详细信息，请参阅 [.NET Core 中断性变更](../compatibility/breaking-changes.md)。
 
-当前未实现某个 API 或技术并不因此意味着有意不对其提供支持。 搜索 .NET Core 的 GitHub 存储库，查看所遇到的特定问题是否是特意设计的。 如果找不到此类指示器，请在 [dotnet/runtime 存储库](https://github.com/dotnet/runtime/issues)中提出问题，请求提供特定 API 和技术。 移植请求的问题会标记为[端口到核心](https://github.com/dotnet/runtime/labels/port-to-core)标签。
+当前未实现某个 API 或技术并不因此意味着有意不对其提供支持。 搜索 .NET Core 的 GitHub 存储库，查看所遇到的特定问题是否是特意设计的。 如果找不到此类指示器，请在 [dotnet/runtime 存储库](https://github.com/dotnet/runtime/issues)中提出问题，请求提供特定 API 和技术。
 
 ## <a name="appdomains"></a>AppDomain
 
 应用程序域 (AppDomain) 可将应用相互隔离。 AppDomain 需要运行时支持并且通常价格昂贵。 不支持创建其他应用域，也尚未计划在将来添加此功能。 对于代码隔离，将流程或容器用作备用。 若要动态加载程序集，请使用 <xref:System.Runtime.Loader.AssemblyLoadContext> 类。
 
-.NET Core 公开了一些 <xref:System.AppDomain> API 曲面，以便可以更轻松地从 .NET Framework 进行代码迁移。 一些 API 可正常工作（例如 <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>），一些成员不会执行任何操作（例如 <xref:System.AppDomain.SetCachePath%2A>），也有一些会引发 <xref:System.PlatformNotSupportedException>（例如 <xref:System.AppDomain.CreateDomain%2A>）。 对照 [dotnet/runtime GitHub 存储库`System.AppDomain`中的 ](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs)[ 引用源](https://github.com/dotnet/runtime)检查所使用的类型。 确保选择与已实现的版本相匹配的分支。
+.NET Core 公开了一些 <xref:System.AppDomain> API 曲面，以便可以更轻松地从 .NET Framework 进行代码迁移。 一些 API 可正常工作（例如 <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>），一些成员不会执行任何操作（例如 <xref:System.AppDomain.SetCachePath%2A>），也有一些会引发 <xref:System.PlatformNotSupportedException>（例如 <xref:System.AppDomain.CreateDomain%2A>）。 对照 [dotnet/runtime GitHub 存储库](https://github.com/dotnet/runtime)中的 [`System.AppDomain` 引用源](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs)检查所使用的类型。 确保选择与已实现的版本相匹配的分支。
 
 ## <a name="remoting"></a>远程处理
 
@@ -29,7 +29,7 @@ ms.locfileid: "81607792"
 
 对于跨进程通信，可将进程间通信 (IPC) 机制视为远程处理的备用方案，如 <xref:System.IO.Pipes> 类或 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> 类。
 
-对于跨计算机的通信，可将基于网络的解决方案用作备用方案。 最好使用低开销纯文本协议，例如 HTTP。 此处，ASP.NET Core 使用的 Web 服务器 [Kestrel Web 服务器](/aspnet/core/fundamentals/servers/kestrel)是一个选择。 也可考虑将 <xref:System.Net.Sockets> 用于基于网络的跨计算机的方案。 请参阅 [.NET 开放源代码开发人员项目：消息传送](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging)了解更多选项。
+对于跨计算机的通信，可将基于网络的解决方案用作备用方案。 最好使用低开销纯文本协议，例如 HTTP。 此处，ASP.NET Core 使用的 Web 服务器 [Kestrel Web 服务器](/aspnet/core/fundamentals/servers/kestrel)是一个选择。 也可考虑将 <xref:System.Net.Sockets> 用于基于网络的跨计算机的方案。 有关更多选项，请参阅 [.NET 开放源代码开发人员项目：消息传送](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging)。
 
 ## <a name="code-access-security-cas"></a>代码访问安全性 (CAS)
 
@@ -47,6 +47,6 @@ ms.locfileid: "81607792"
 
 .NET Core 不支持 System.EnterpriseServices (COM+)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [有关从 .NET Framework 移植到 .NET Core 的概述](../porting/index.md)
