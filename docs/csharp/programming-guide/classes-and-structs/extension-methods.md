@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 0b35ad523fc7f0949cb5243edbdc50cd3e927999
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: fc816123134995b753beda0a6f281133d6ddd691
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249215"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506813"
 ---
 # <a name="extension-methods-c-programming-guide"></a>扩展方法（C# 编程指南）
 
@@ -119,7 +119,7 @@ static class DomainEntityExtensions
 ## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../index.md)
-- [并行编程示例（这些示例包括许多示例扩展方法）](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+- [并行编程示例（这些示例包括许多示例扩展方法）](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)
 - [Lambda 表达式](../statements-expressions-operators/lambda-expressions.md)
 - [标准查询运算符概述](../concepts/linq/standard-query-operators-overview.md)
 - [Conversion rules for Instance parameters and their impact](https://docs.microsoft.com/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact)（实例参数及其影响的转换规则）

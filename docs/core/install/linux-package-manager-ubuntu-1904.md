@@ -4,12 +4,12 @@ description: 使用包管理器在 Ubuntu 19.04 上安装 .NET Core SDK 和运�
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: 3f338832185ed626289141f48cec88c1bf2e3a33
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: df7f2b093c91a0056f612f167450b5244ebd451c
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645606"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595637"
 ---
 # <a name="ubuntu-1904-package-manager---install-net-core"></a>Ubuntu 19.04 包管理器 - 安装 .NET Core
 
@@ -100,7 +100,7 @@ sudo apt-get install {the .NET Core package}
 
 ```bash
 sudo apt-get install -y gpg
-wget -O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
+wget -O - https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
 wget https://packages.microsoft.com/config/ubuntu/19.04/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list

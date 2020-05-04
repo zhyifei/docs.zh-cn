@@ -3,12 +3,12 @@ title: 卸载工具
 description: .NET Core 卸载工具概述，它是一种可实现 .NET Core SDK 和运行时的受控清理的引导式工具。
 author: sfoslund
 ms.date: 01/06/2020
-ms.openlocfilehash: 816aef6ab8bc0e51bb8befb14fde60513d4fadfc
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 45cf0841391d02636770e98666e2897d2598fab4
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507316"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595710"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core 卸载工具
 
@@ -297,7 +297,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 `dotnet-core-uninstall remove` 卸载由选项集合指定的 .NET Core SDK 和运行时。 该工具不能用于卸载版本 5.0 或更高版本的 SDK 和运行时。
 
-由于此工具具有破坏性行为，因此强烈  建议在运行 remove 命令之前执行试运行。 使用 `remove` 命令时，试运行将显示要删除的 .NET Core SDK 和运行时。 请参阅[是否应删除版本？](../versions/remove-runtime-sdk-versions.md#should-i-remove-a-version)了解哪些 SDK 和运行时可以安全删除。
+由于此工具具有破坏性行为，因此强烈  建议在运行 remove 命令之前执行试运行。 使用 `remove` 命令时，试运行将显示要删除的 .NET Core SDK 和运行时。 请参阅[是否应删除版本？](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version)了解哪些 SDK 和运行时可以安全删除。
 
 > [!CAUTION]
 > 请记住以下注意事项：
@@ -510,7 +510,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 ### <a name="step-4---delete-the-nuget-fallback-folder-optional"></a>步骤 4 - 删除 NuGet 回退文件夹（可选）
 
-在某些情况下，你不再需要 `NuGetFallbackFolder`，可能希望将其删除。 有关删除此文件夹的详细信息，请参阅[删除 NuGetFallbackFolder](../versions/remove-runtime-sdk-versions.md#remove-the-nuget-fallback-folder)。
+在某些情况下，你不再需要 `NuGetFallbackFolder`，可能希望将其删除。 有关删除此文件夹的详细信息，请参阅[删除 NuGetFallbackFolder](../install/remove-runtime-sdk-versions.md#remove-the-nuget-fallback-folder)。
 
 ## <a name="uninstall-the-tool"></a>卸载工具
 

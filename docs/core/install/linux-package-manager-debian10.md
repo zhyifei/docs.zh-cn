@@ -4,12 +4,12 @@ description: 使用包管理器在 Debian 10 上安装 .NET Core SDK 和运行�
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: fd6f42684aa9fb3ea9429b80f858459698a1b825
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 038f5579f99f700ce47dc67be2fd344f01cf800c
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134319"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595605"
 ---
 # <a name="debian-10-package-manager---install-net-core"></a>Debian 10 包管理器 - 安装 .NET Core
 
@@ -19,12 +19,12 @@ ms.locfileid: "80134319"
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>注册 Microsoft 密钥和源
+## <a name="add-microsoft-repository-key-and-feed"></a>添加 Microsoft 存储库密钥和源
 
 安装 .NET 之前，需要：
 
-- 注册 Microsoft 密钥。
-- 注册产品存储库。
+- 将 Microsoft 包签名密钥添加到受信任密钥列表。
+- 将此存储库添加到包管理器。
 - 安装必需的依赖项。
 
 每台计算机只需要执行一次此操作。
@@ -32,7 +32,7 @@ ms.locfileid: "80134319"
 打开终端并运行以下命令。
 
 ```bash
-wget -O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
+wget -O - https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
 wget https://packages.microsoft.com/config/debian/10/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
