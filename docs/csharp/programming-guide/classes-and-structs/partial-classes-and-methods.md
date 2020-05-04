@@ -92,9 +92,9 @@ ms.locfileid: "79398423"
 
   - [public](../../language-reference/keywords/public.md)
 
-  - [专用](../../language-reference/keywords/private.md)
+  - [private](../../language-reference/keywords/private.md)
 
-  - [受保护](../../language-reference/keywords/protected.md)
+  - [protected](../../language-reference/keywords/protected.md)
 
   - [internal](../../language-reference/keywords/internal.md)
 

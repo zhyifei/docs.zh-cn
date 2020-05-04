@@ -75,7 +75,7 @@ ms.locfileid: "77628223"
 - [private](../../language-reference/keywords/private.md)
 - [public](../../language-reference/keywords/public.md)
 - [internal](../../language-reference/keywords/internal.md)
-- [受保护](../../language-reference/keywords/protected.md)
+- [protected](../../language-reference/keywords/protected.md)
 - [protected internal](../../language-reference/keywords/protected-internal.md)
 - [private protected](../../language-reference/keywords/private-protected.md)
 - [class](../../language-reference/keywords/class.md)
