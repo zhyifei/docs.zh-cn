@@ -4,12 +4,12 @@ description: 本指南提供了使用 ASP.NET Core 和 Azure 生成单片式 Web
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/4/2019
-ms.openlocfilehash: 18449ea02b7f9e89744a0f3088f80b7a51a807da
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 936a068507116033ad178f26e77945f30f70387e
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987889"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507188"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序
 
@@ -50,6 +50,12 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 编辑：
 
 > Maira Wenzel 
+
+## <a name="action-links"></a>操作链接
+
+- 此电子书还提供 PDF 格式（仅限英文）[下载](https://aka.ms/webappebook)
+
+- 克隆参考应用程序 [GitHub 上的 eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb) 或为其创建分支
 
 ## <a name="introduction"></a>介绍
 
@@ -102,7 +108,7 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 
 ## <a name="how-you-can-use-this-guide"></a>如何使用本指南
 
-本指南已精简为较小的文档，侧重介绍如何使用新式 .NET 技术和 Windows Azure 生成 web 应用程序。 可通读本指南，了解有关此类应用程序及其技术注意事项的基本信息。 本指南及其示例应用程序还可作为操作起点或参考。 可将相关示例应用程序作为你自己的应用程序的模板，或者了解如何组织应用程序的组件部件。 在对自己的应用程序进行选择权衡时，请参考指南的原则、体系结构的范围以及技术选项和决策注意事项。
+本指南已精简为较小的文档，侧重介绍如何使用新式 .NET 技术和 Azure 生成 Web 应用程序。 可通读本指南，了解有关此类应用程序及其技术注意事项的基本信息。 本指南及其示例应用程序还可作为操作起点或参考。 可将相关示例应用程序作为你自己的应用程序的模板，或者了解如何组织应用程序的组件部件。 在对自己的应用程序进行选择权衡时，请参考指南的原则、体系结构的范围以及技术选项和决策注意事项。
 
 请将本指南转发到团队中，这有助于确保对这些注意事项和机会的共同理解。 确保每个人使用共同的术语和基础原则工作，这有助于构建模式和做法的一致应用。
 

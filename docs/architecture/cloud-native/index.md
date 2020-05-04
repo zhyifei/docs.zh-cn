@@ -2,13 +2,13 @@
 title: 为 Azure 构建云本机 .NET 应用程序
 description: 构建利用 Azure 的容器、微服务和无服务器功能的云本机应用程序的指南。
 author: ardalis
-ms.date: 03/07/2019
-ms.openlocfilehash: cf3be07f0d37aacf4f0252ef2f4d922b7be93eee
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 04/23/2020
+ms.openlocfilehash: 24d5c75fc5d2e5623892e8f83daea52553d13765
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989059"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507385"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>为 Azure 构建云本机 .NET 应用程序
 
@@ -44,19 +44,25 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 
 作者：
 
-> **Steve "ardalis" Smith** - 软件设计师及培训师 - [Ardalis.com](https://ardalis.com)
+> Rob Vettor，Microsoft 首席云系统架构师/IP 架构师 ([thinkingincloudnative.com](http://thinkingincloudnative.com/about/)) 
 >
-> **Rob Vettor** - Microsoft - 首席云系统架构师/IP 架构师 - [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)
+> Steve "ardalis" Smith，[Ardalis.com](https://ardalis.com)  软件设计师及培训师
 
 参与者和审阅者：
 
 > **Cesar De Torre**，Microsoft .NET 团队首席项目经理
 >
-> Microsoft .NET 团队高级项目经理 Nish Anil 
+> Nish Anil，Microsoft .NET 团队高级项目经理 
+>
+> Jeremy Likness，Microsoft .NET 团队高级项目经理 
+>
+> Cecil Phillip，Microsoft 高级云大使 
+
+详细了解 eShopOnContainers
 
 编辑：
 
-> **Maira Wenzel**，Microsoft .NET 团队资深内容开发人员
+> Maira Wenzel，Microsoft .NET 团队高级项目经理 
 
 ## <a name="who-should-use-this-guide"></a>本指南的目标读者
 
