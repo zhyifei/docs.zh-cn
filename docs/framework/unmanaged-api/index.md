@@ -7,12 +7,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework]
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-ms.openlocfilehash: f7dd78b889129998dee31a22f5dd23325613b8ea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b8671f2bd278e9e6153476d742f43150a4f6e3e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73092017"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795607"
 ---
 # <a name="unmanaged-api-reference"></a>非托管 API 参考
 本节包括有关可由与托管代码相关的应用程序（例如运行时主机、编译器、反汇编程序、模糊处理程序、调试器和探查器）使用的非托管 API 的信息。  
@@ -61,4 +61,4 @@ ms.locfileid: "73092017"
  描述类型库导出程序 (Tlbexp.exe) 在从程序集到类型库的转换过程中使用的两个 Helper 函数和接口。  
   
 ## <a name="related-sections"></a>相关章节  
- [开发指南](../../../docs/framework/development-guide.md)  
+ [开发指南](../development-guide.md)  

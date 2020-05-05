@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 ms.openlocfilehash: 9fc8a4aeeeca40f71ed9114a9db40b9a56e5fe6b
 ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204563"
@@ -18,7 +18,7 @@ ms.locfileid: "74204563"
 借助卷影复制，无需卸载应用程序域就可更新用于此应用程序域的程序集。 这对必须连续可用的应用程序（如 ASP.NET 网站）特别有用。
 
 > [!IMPORTANT]
-> Windows 8.x 应用商店应用中不支持卷影复制。
+> 卷影复制在 Windows 8.x Store 应用中不受支持。
 
 公共语言运行时会在加载程序集时锁定程序集文件，因此只有卸载此程序集才能更新此文件。 从应用程序域中卸载程序集的唯一方法是卸载应用程序域，因此在正常情况下，只有卸载了正在使用程序集的所有应用程序域才能在磁盘中更新此程序集。
 
@@ -82,7 +82,7 @@ ms.locfileid: "74204563"
 
 <xref:System.AppDomain> 类具有几种可用来控制应用程序域中卷影复制的方法（如 <xref:System.AppDomain.SetShadowCopyFiles%2A> 和 <xref:System.AppDomain.ClearShadowCopyPath%2A>），但这些方法在 .NET Framework 2.0 版本中已标记为过时。 若要配置进行卷影复制的应用程序域，推荐使用 <xref:System.AppDomainSetup> 类的属性。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>

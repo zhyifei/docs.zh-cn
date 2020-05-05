@@ -2,12 +2,12 @@
 title: switch 表达式 - C# 参考
 description: 了解如何将 C# switch 表达式用于模式匹配和其他数据自检
 ms.date: 03/19/2020
-ms.openlocfilehash: 9e609bcea0f92f492b5f9b07840e47f75c1b71e4
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f53cbe873c841271f64496e4e5ff1f11750c7b8a
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249758"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140669"
 ---
 # <a name="switch-expression-c-reference"></a>switch 表达式（C# 参考）
 
@@ -22,15 +22,15 @@ ms.locfileid: "80249758"
 前面的示例展示了 switch 表达式的基本元素：
 
 - *范围表达式*：前面的示例使用变量 `direction` 作为范围表达式。
-- *switch expression arm*：每个 switch expression arm 都包含一个模式、一个可选的 case guard、`=>` 标记和一个表达式。
+- *switch expression arm*：每个 switch expression arm 都包含一个模式、  一个可选的 case guard  、`=>` 标记和一个表达式  。
 
-switch 表达式的结果是第一个 switch expression arm 的表达式的值，该 switch expression arm 的模式与范围表达式匹配，并且它的 cause guard（如果存在）求值为 `true`。 `=>` 标记右侧的表达式不能是表达式语句。
+switch 表达式  的结果是第一个 switch expression arm  的表达式的值，该 switch expression arm 的模式  与范围表达式  匹配，并且它的 case guard  （如果存在）求值为 `true`。 `=>` 标记右侧的表达式不能是表达式语句。 
 
-switch expression arm 按文本顺序求值。 如果无法选择较低的 switch expression arm，编译器会发出错误，因为较高的 switch expression arm 匹配其所有值。
+switch expression arm  按文本顺序求值。 如果无法选择较低的 switch expression arm  ，编译器会发出错误，因为较高的 switch expression arm  匹配其所有值。
 
 ## <a name="patterns-and-case-guards"></a>模式和 case guard
 
-switch expression arm 支持许多模式。 前面的示例使用了值模式。 值模式将范围表达式与一个值进行比较。 该值必须是编译时常量。 类型模式将范围表达式与已知类型进行比较。 下面的示例从序列中检索第三个元素。 它使用基于序列类型的不同方法：
+switch expression arm 支持许多模式。 前面的示例使用了值模式  。 值模式  将范围表达式与一个值进行比较。 该值必须是编译时常量。 类型模式  将范围表达式与已知类型进行比较。 下面的示例从序列中检索第三个元素。 它使用基于序列类型的不同方法：
 
 :::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetTypePattern":::
 
@@ -38,11 +38,11 @@ switch expression arm 支持许多模式。 前面的示例使用了值模式。
 
 :::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetRecursivePattern":::
 
-递归模式可以检查范围表达式的属性，但不能执行任意代码。 你可以使用 `when` 子句中指定的 case guard为其他序列类型提供类似的检查：
+递归模式可以检查范围表达式的属性，但不能执行任意代码。 你可以使用 `when` 子句中指定的 case guard  为其他序列类型提供类似的检查：
 
 :::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetGuardCase":::
 
-最后，可以添加 `_` 模式和 `null` 模式，以捕获不由任何其他 switch expression arm 处理的参数。 这会使 switch 表达式穷尽，这意味着将处理范围表达式的任何可能的值。 下面的示例添加了这些 expression arm：
+最后，可以添加 `_` 模式和 `null` 模式，以捕获不由任何其他 switch expression arm 处理的参数。 这会使 switch 表达式穷尽  ，这意味着将处理范围表达式的任何可能的值。 下面的示例添加了这些 expression arm：
 
 :::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetExhaustive":::
 

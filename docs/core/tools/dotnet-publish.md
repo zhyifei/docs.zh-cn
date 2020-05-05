@@ -2,12 +2,12 @@
 title: dotnet publish 命令
 description: dotnet publish 命令可将 .NET Core 项目或解决方案发布到目录。
 ms.date: 02/24/2020
-ms.openlocfilehash: 0e18220443f3713c86c257fcf401b98ddd716ebc
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 78ed8098be1b6887fc6a2a647fd169e2bf7f7fd1
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588270"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102796"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -20,13 +20,16 @@ ms.locfileid: "80588270"
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration]
-    [-f|--framework] [--force] [--interactive] [--manifest]
-    [--no-build] [--no-dependencies] [--no-restore] [--nologo]
-    [-o|--output] [-r|--runtime] [--self-contained]
-    [--no-self-contained] [-v|--verbosity] [--version-suffix]
+dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
+    [-f|--framework <FRAMEWORK>] [--force] [--interactive]
+    [--manifest <PATH_TO_MANIFEST_FILE>] [--no-build] [--no-dependencies]
+    [--no-restore] [--nologo] [-o|--output <OUTPUT_DIRECTORY>]
+    [-p:PublishReadyToRun=true] [-p:PublishSingleFile=true] [-p:PublishTrimmed=true]
+    [-r|--runtime <RUNTIME_IDENTIFIER>] [--self-contained [true|false]]
+    [--no-self-contained] [-v|--verbosity <LEVEL>]
+    [--version-suffix <VERSION_SUFFIX>]
 
-dotnet publish [-h|--help]
+dotnet publish -h|--help
 ```
 
 ## <a name="description"></a>描述
@@ -39,6 +42,10 @@ dotnet publish [-h|--help]
 - 应用程序的依赖项，将这些依赖项从 NuGet 缓存复制到输出文件夹。
 
 `dotnet publish` 命令的输出可供部署至托管系统（例如服务器、电脑、Mac、笔记本电脑）以便执行。 若要准备用于部署的应用程序，这是唯一正式受支持的方法。 根据项目指定的部署的类型，托管系统不一定已在其上安装 .NET Core 共享运行时。 有关详细信息，请参阅[使用 .NET Core CLI 发布 .NET Core 应用](../deploying/deploy-with-cli.md)。
+
+### <a name="implicit-restore"></a>隐式还原
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -114,6 +121,12 @@ dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
   
   如果未指定，则默认为依赖于运行时的可执行文件和跨平台二进制文件的路径 [project_file_folder]./bin/[configuration]/[framework]/publish/  。 默认为独立的可执行文件路径 [project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/  。
 
+  在 Web 项目中，如果输出文件夹位于项目文件夹，则连续的 `dotnet publish` 命令将产生嵌套的输出文件夹。 例如，如果项目文件夹是“myproject”，发布输出文件夹是“myproject/publish”，并且运行 `dotnet publish` 两次，则第二次运行会将“.config”和“.json”等内容文件放入“myproject/publish/publish”      。 若要避免嵌套发布文件夹，请指定不在项目文件夹正下方的发布文件夹，或从项目中排除发布文件夹。 若要排除名为“publishoutput”的发布文件夹，请将以下元素添加到“.csproj”文件中的 `PropertyGroup` 元素中   ：
+
+  ```xml
+  <DefaultItemExcludes>$(DefaultItemExcludes);publishoutput**</DefaultItemExcludes>
+  ```
+
   - .NET Core 3.x SDK 和更高版本
   
     如果在发布项目时指定了相对路径，则生成的输出目录相对于当前工作目录，而不是项目文件位置。
@@ -125,6 +138,26 @@ dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
     如果在发布项目时指定了相对路径，则生成的输出目录相对于项目文件位置，而不是当前工作目录。
 
     如果在发布解决方案时指定了相对路径，则每个项目的输出会进入相对于项目文件位置的单独文件夹中。 如果在发布解决方案时指定了绝对路径，则所有项目的所有发布输出都会进入指定文件夹中。
+
+- **`-p:PublishReadyToRun=true`**
+
+  以 ReadyToRun (R2R) 格式编译应用程序集。 R2R 是一种预先 (AOT) 编译形式。 有关详细信息，请参阅 [ReadyToRun 图像](../whats-new/dotnet-core-3-0.md#readytorun-images)。 自 .NET Core 3.0 SDK 起可用。
+
+  建议在发布配置文件中而不是在命令行中指定此选项。 有关详细信息，请参阅 [MSBuild](#msbuild)。
+
+- **`-p:PublishSingleFile=true`**
+
+  将应用打包到特定于平台的单个文件可执行文件中。 该可执行文件是自解压缩文件，包含运行应用所需的所有依赖项（包括本机依赖项）。 首次运行应用时，应用程序将根据应用名称和生成标识符自解压缩到一个目录中。 再次运行应用程序时，启动速度将变快。 除非使用了新版本，否则应用程序无需再次进行自解压缩。 自 .NET Core 3.0 SDK 起可用。
+
+  有关单文件发布的详细信息，请参阅[单文件捆绑程序设计文档](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md)。
+
+  建议在发布配置文件中而不是在命令行中指定此选项。 有关详细信息，请参阅 [MSBuild](#msbuild)。
+
+- **`-p:PublishTrimmed=true`**
+
+  在发布自包含的可执行文件时，剪裁未使用的库以减小应用的部署大小。 有关详细信息，请参阅[剪裁自包含部署和可执行文件](../deploying/trim-self-contained.md)。 自 .NET Core 3.0 SDK 起可用。
+
+  建议在发布配置文件中而不是在命令行中指定此选项。 有关详细信息，请参阅 [MSBuild](#msbuild)。
 
 - **`--self-contained [true|false]`**
 
@@ -203,3 +236,4 @@ dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
 - [MSBuild 命令行参考](/visualstudio/msbuild/msbuild-command-line-reference)
 - [用于 ASP.NET Core 应用部署的 Visual Studio 发布配置文件 (.pubxml)](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
 - [dotnet msbuild](dotnet-msbuild.md)
+- [ILLInk.Tasks](https://aka.ms/dotnet-illink)

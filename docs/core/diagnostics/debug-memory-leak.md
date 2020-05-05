@@ -2,13 +2,13 @@
 title: 调试内存泄漏教程
 description: 了解如何调试 .NET Core 中的内存泄漏。
 ms.topic: tutorial
-ms.date: 12/17/2019
-ms.openlocfilehash: 014945394f87edd02c94f7c3b28043bd07470d8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/20/2020
+ms.openlocfilehash: d47992bab9dab64cf7f88ff679eef407dd891b5a
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76737729"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021355"
 ---
 # <a name="tutorial-debug-a-memory-leak-in-net-core"></a>教程：调试 .NET Core 中的内存泄漏
 
@@ -137,7 +137,7 @@ Complete
 
 ### <a name="analyze-the-core-dump"></a>分析核心转储
 
-生成核心转储后，请使用 [dotnet-dump)](dotnet-dump.md) 工具分析转储：
+生成核心转储后，请使用 [dotnet-dump](dotnet-dump.md) 工具分析转储：
 
 ```dotnetcli
 dotnet-dump analyze core_20190430_185145
@@ -146,7 +146,7 @@ dotnet-dump analyze core_20190430_185145
 其中 `core_20190430_185145` 是要分析的核心转储的名称。
 
 > [!NOTE]
-> 如果你看到报错“找不到 libdl.so  ”，则可能需要安装 libc6-dev  包。 有关详细信息，请参阅 [Linux 上 .NET Core 的先决条件](../linux-prerequisites.md)。
+> 如果你看到报错“找不到 libdl.so  ”，则可能需要安装 libc6-dev  包。 有关详细信息，请参阅 [Linux 上 .NET Core 的先决条件](../install/dependencies.md?pivots=os-linux)。
 
 此时会显示一个提示，可在其中输入 SOS 命令。 通常，首先要查看的是托管堆的整体状态：
 

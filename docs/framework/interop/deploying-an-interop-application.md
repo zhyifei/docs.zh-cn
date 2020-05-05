@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 ms.openlocfilehash: 04f8e53220b2e0fa09735400ae84dcb8b1c3478a
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123563"
@@ -26,12 +26,12 @@ ms.locfileid: "73123563"
   
 - 使用嵌入的互操作类型：从 .NET Framework 4 开始，可以指示编译器将类型信息从互操作程序集嵌入到可执行文件中。 编译器只嵌入应用程序使用的类型信息。 无需将互操作程序集与应用程序一起部署。 这是推荐采用的方法。  
   
-- 部署互操作程序集：可通过这种方式创建对互操作程序集的标准引用。 这种情况下，互操作程序集必须与应用程序一起部署。 如果使用此方法且不使用专有 COM 组件，请始终引用由打算并入托管代码中的 COM 组件的创建者发布的主互操作程序集 (PIA)。 有关生成和使用主互操作程序集的详细信息，请参阅[主互操作程序集](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))。  
+- 部署互操作程序集：创建对互操作程序集的标准引用。 这种情况下，互操作程序集必须与应用程序一起部署。 如果使用此方法且不使用专有 COM 组件，请始终引用由打算并入托管代码中的 COM 组件的创建者发布的主互操作程序集 (PIA)。 有关生成和使用主互操作程序集的详细信息，请参阅[主互操作程序集](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))。  
   
  如果使用嵌入的互操作类型，则部署过程将既简单又直观。 无需执行任何特殊操作。 本文的其余部分将介绍将应用程序与互操作程序集一起部署的方案。  
   
 ## <a name="deploying-interop-assemblies"></a>部署互操作程序集  
- 程序集可以具有强名称。 具有强名称的程序集包括发布者的公钥，它提供一个唯一标识。 通过[类型库导入程序 (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) 生成的程序集可由发行者使用 /keyfile 选项签名。 可将已签名的程序集安装到全局程序集缓存中。 未签名程序集必须作为专用程序集安装在用户计算机上。  
+ 程序集可以具有强名称。 具有强名称的程序集包括发布者的公钥，它提供一个唯一标识。 通过[类型库导入程序 (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) 生成的程序集可由发行者使用 /keyfile 选项签名  。 可将已签名的程序集安装到全局程序集缓存中。 未签名程序集必须作为专用程序集安装在用户计算机上。  
   
 ### <a name="private-assemblies"></a>私有程序集  
  要安装私用程序集，必须在同一目录结构中安装应用程序可执行文件和包含导入的 COM 类型的互操作程序集。 下图显示由 Client1.exe 和 Client2.exe 私用的未签名互操作程序集，二者位于不同的应用程序目录中。 此示例中名为 LOANLib.dll 的互操作程序集安装了两次。  

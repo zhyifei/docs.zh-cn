@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 15f5e9ccb1396277229ba935381812700f63ece8
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 617c5ec037ad7a47b43cca2c13da4a77aa682997
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121158"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739091"
 ---
 # <a name="enumeration-types-c-reference"></a>枚举类型（C# 参考）
 
@@ -56,7 +56,7 @@ enum ErrorCode : ushort
 
 [!code-csharp[enum flags](snippets/EnumType.cs#Flags)]
 
-有关详细信息和示例，请参阅 <xref:System.FlagsAttribute?displayProperty=nameWithType> API 参考页和 [ API 参考页的](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute)非独占成员和 Flags 属性<xref:System.Enum?displayProperty=nameWithType>部分。
+有关详细信息和示例，请参阅 <xref:System.FlagsAttribute?displayProperty=nameWithType> API 参考页和 <xref:System.Enum?displayProperty=nameWithType> API 参考页的[非独占成员和 Flags 属性](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute)部分。
 
 ## <a name="the-systemenum-type-and-enum-constraint"></a>System.Enum 类型和枚举约束
 
@@ -72,7 +72,7 @@ enum ErrorCode : ushort
 
 使用 <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> 方法来确定枚举类型是否包含具有特定关联值的枚举成员。
 
-对于任何枚举类型，都存在分别与 [ 类型的](../../programming-guide/types/boxing-and-unboxing.md)装箱和取消装箱<xref:System.Enum?displayProperty=nameWithType>相互转换。
+对于任何枚举类型，都存在分别与 <xref:System.Enum?displayProperty=nameWithType> 类型的[装箱和取消装箱](../../programming-guide/types/boxing-and-unboxing.md)相互转换。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
@@ -85,7 +85,7 @@ enum ErrorCode : ushort
 - [显式枚举转换](~/_csharplang/spec/conversions.md#explicit-enumeration-conversions)
 - [隐式枚举转换](~/_csharplang/spec/conversions.md#implicit-enumeration-conversions)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [枚举格式字符串](../../../standard/base-types/enumeration-format-strings.md)

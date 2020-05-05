@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
 ms.openlocfilehash: db6b047f521d8ef44d2bd1b70b654a4233ebb1a7
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347916"
 ---
-# <a name="-nostdlib-visual-basic"></a>-nostdlib （Visual Basic）
+# <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 导致编译器不自动引用标准库。  
   
 ## <a name="syntax"></a>语法  
@@ -23,22 +23,22 @@ ms.locfileid: "74347916"
 ```  
   
 ## <a name="remarks"></a>备注  
- `-nostdlib` 选项删除对 System.web 程序集的自动引用，并阻止编译器读取 Vbc 文件。 Dcdiag.exe 文件与 dcdiag.exe 文件位于同一个目录中，引用常用 .NET Framework 程序集并导入 `System` 和 `Microsoft.VisualBasic` 命名空间。  
+ `-nostdlib` 选项会删除对 System.dll 程序集的自动引用，并防止编译器读取 Vbc.rsp 文件。 Vbc.rsp 文件（与 Vbc.exe 文件位于同一个目录）引用常用的 .NET Framework 程序集，并导入 `System` 和 `Microsoft.VisualBasic` 命名空间。  
   
 > [!NOTE]
-> Mscorlib 和 Microsoft. .dll 程序集始终被引用。  
+> 始终引用 Mscorlib.dll 和 Microsoft.VisualBasic.dll 程序集。  
   
 > [!NOTE]
-> `-nostdlib` 选项在 Visual Studio 开发环境中不可用;仅当从命令行进行编译时，它才可用。  
+> `-nostdlib` 选项在 Visual Studio 开发环境内无法使用；仅当从命令行编译时才可用。  
   
 ## <a name="example"></a>示例  
- 下面的代码编译 `T2.vb`，而不引用标准库。 必须将 `_MYTYPE` 条件编译常量设置为字符串 "Empty" 以删除 `My` 对象。  
+ 下面的代码在不引用标准库的情况下编译 `T2.vb`。 必须将 `_MYTYPE` 条件编译常量设置为字符串“Empty”，才能删除 `My` 对象。  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)

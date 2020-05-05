@@ -2,12 +2,12 @@
 title: dotnet 命令
 description: 了解 dotnet 命令（.NET Core CLI 的通用驱动程序）及其用法。
 ms.date: 02/13/2020
-ms.openlocfilehash: 8692d419afd528bf49e1dc7dc1a7a5fd698b363b
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 6a08297499d955db44e342dc82fed25b7b9b8171
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134079"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739068"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -22,26 +22,27 @@ ms.locfileid: "80134079"
 获取有关可用命令和环境的信息：
 
 ```dotnetcli
-dotnet [-h|--help] [--version] [--info]
-    [--list-runtimes] [--list-sdks]
+dotnet [--version] [--info] [--list-runtimes] [--list-sdks]
+
+dotnet -h|--help
 ```
 
 运行命令（需要 SDK 安装）：
 
 ```dotnetcli
-dotnet <COMMAND> [-d|--diagnostics] [-h|--help] [--verbosity]
+dotnet <COMMAND> [-d|--diagnostics] [-h|--help] [--verbosity <LEVEL>]
     [command-options] [arguments]
 ```
 
 运行应用程序：
 
 ```dotnetcli
-dotnet [--additionalprobingpath] [--additional-deps]
-    [--fx-version]  [--roll-forward]
+dotnet [--additionalprobingpath <PATH>] [--additional-deps <PATH>]
+    [--fx-version <VERSION>]  [--roll-forward <SETTING>]
     <PATH_TO_APPLICATION> [arguments]
 
-dotnet exec [--additionalprobingpath] [--additional-deps]
-    [--fx-version]  [--roll-forward]
+dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
+    [--fx-version <VERSION>]  [--roll-forward <SETTING>]
     <PATH_TO_APPLICATION> [arguments]
 ```
 
@@ -57,7 +58,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 - 它运行 .NET Core 应用程序。
 
-  指定应用程序 `.dll` 文件的路径以运行应用程序。 例如，`dotnet myapp.dll` 运行 `myapp` 应用程序。 要了解部署选项，请参阅 [.NET Core 应用程序部署](../deploying/index.md)。
+  指定应用程序 `.dll` 文件的路径以运行应用程序。  运行应用程序即意味着找到并执行入口点，对于控制台应用，入口点是 `Main` 方法。 例如，`dotnet myapp.dll` 运行 `myapp` 应用程序。 要了解部署选项，请参阅 [.NET Core 应用程序部署](../deploying/index.md)。
 
 ## <a name="options"></a>选项
 
@@ -77,7 +78,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 - **`--list-runtimes`**
 
-  打印已安装的 .NET Core 运行时的列表。
+  打印已安装的 .NET Core 运行时的列表。 x86 版本的 SDK 只列出 x86 运行时，而 x64 版本的 SDK 只列出 x64 运行时。
 
 - **`--list-sdks`**
 
@@ -263,7 +264,7 @@ dotnet myapp.dll
 
 - `DOTNET_NOLOGO`
 
-  指定是否在首次运行时显示 .NET Core 欢迎消息和遥测消息。 设置为 `true` 可将这些消息静音（接受 `true`、`1` 或 `yes` 值），或者，设置为 `false` 可允许显示消息（接受 `false`、`0` 或 `no` 值）。 如果未设置，则默认值为 `false`，表示在首次运行时将显示消息。 请注意，此标志对遥测不起作用（请参阅 `DOTNET_CLI_TELEMETRY_OPTOUT` 中关于如何选择不发送遥测数据的信息）。
+  指定是否在首次运行时显示 .NET Core 欢迎消息和遥测消息。 设置为 `true` 可将这些消息静音（接受 `true`、`1` 或 `yes` 值），或者，设置为 `false` 可允许显示消息（接受 `false`、`0` 或 `no` 值）。 如果未设置，则默认值为 `false`，表示在首次运行时将显示消息。 此标志对遥测不起作用（请参阅 `DOTNET_CLI_TELEMETRY_OPTOUT` 中关于如何选择不发送遥测数据的信息）。
 
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
 ms.openlocfilehash: 9886e2f20ef7954b01ea1f46a9eabdb9ea2cc12d
 ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75348436"
@@ -43,7 +43,7 @@ ms.locfileid: "75348436"
 
 此外，添加了新的可选字段时还有声明功能。 这是 <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> 特性的 <xref:System.Runtime.Serialization.OptionalFieldAttribute> 属性。
 
-以下各节将更详细地讨论这些功能。
+以下部分详细描述了这些功能。
 
 ### <a name="tolerance-of-extraneous-or-unexpected-data"></a>外来或意外数据容错功能
 
@@ -121,9 +121,9 @@ End Class
 
 序列化回调是一种机制，它在序列化/反序列化过程中的四个点提供挂钩。
 
-|属性|调用关联的方法时|典型用法|
+|特性|调用关联的方法时|典型用法|
 |---------------|------------------------------------------|-----------------|
-|<xref:System.Runtime.Serialization.OnDeserializingAttribute>|进行反序列化。\*|初始化可选字段的默认值。|
+|<xref:System.Runtime.Serialization.OnDeserializingAttribute>|反序列化之前。\*|初始化可选字段的默认值。|
 |<xref:System.Runtime.Serialization.OnDeserializedAttribute>|反序列化之后。|根据其他字段的内容修改可选字段值。|
 |<xref:System.Runtime.Serialization.OnSerializingAttribute>|序列化之前。|准备序列化。 例如，创建可选数据结构。|
 |<xref:System.Runtime.Serialization.OnSerializedAttribute>|序列化之后。|记录序列化事件。|
@@ -149,9 +149,9 @@ Private Sub SetCountryRegionDefault(sc As StreamingContext)
 End Sub
 ```
 
-这些方法旨在用于版本管理。 在反序列化期间，如果可选字段缺少数据，则可能无法正确初始化该字段。 若要更正这一情况，可以创建分配正确值的方法，然后将 OnDeserializingAttribute 或 OnDeserializedAttribute 特性应用于该方法。
+这些方法旨在用于版本管理。 在反序列化期间，如果可选字段缺少数据，则可能无法正确初始化该字段。 若要更正这一情况，可以创建分配正确值的方法，然后将 OnDeserializingAttribute 或 OnDeserializedAttribute 特性应用于该方法。  
 
-下面的示例演示类型上下文中的方法。 如果应用程序的较旧版本将 `Address` 类的实例发送至该应用程序的较新版本，将会丢失 `CountryField` 字段数据。 在反序列化后，该字段将设置为默认值 "日本"。
+下面的示例演示类型上下文中的方法。 如果应用程序的较旧版本将 `Address` 类的实例发送至该应用程序的较新版本，将会丢失 `CountryField` 字段数据。 但是反序列化之后，会将字段设置为默认值“Japan”。
 
 ```csharp
 [Serializable]
@@ -187,7 +187,7 @@ End Class
 
 ## <a name="the-versionadded-property"></a>VersionAdded 属性
 
-OptionalFieldAttribute 具有 VersionAdded 属性。 在 .NET Framework 2.0 版中，未使用这一属性。 然而，为确保类型与将来的序列化引擎兼容，需要正确设置此属性，这一点非常重要。
+OptionalFieldAttribute 具有 VersionAdded 属性。   在 .NET Framework 2.0 版中，未使用这一属性。 然而，为确保类型与将来的序列化引擎兼容，需要正确设置此属性，这一点非常重要。
 
 该属性指示向给定字段添加了类型的哪个版本。 每次修改类型时，版本应该正好增加一（从 2 开始），如下例所示：
 
@@ -262,7 +262,7 @@ End Class
 
 ## <a name="serializationbinder"></a>SerializationBinder
 
-由于服务器和客户端要求使用不同的类版本，因此，有些用户可能需要控制要序列化和反序列化哪些类。 <xref:System.Runtime.Serialization.SerializationBinder> 是抽象类，用于控制在序列化和反序列化期间使用的实际类型。 若要使用此类，请从 <xref:System.Runtime.Serialization.SerializationBinder> 派生类，并重写 <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> 和 <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> 方法。 有关详细信息，请参阅[用 SerializationBinder 控制序列化和反序列](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md)化。
+由于服务器和客户端要求使用不同的类版本，因此，有些用户可能需要控制要序列化和反序列化哪些类。 <xref:System.Runtime.Serialization.SerializationBinder> 是抽象类，用于控制在序列化和反序列化期间使用的实际类型。 若要使用此类，请从 <xref:System.Runtime.Serialization.SerializationBinder> 派生类，并重写 <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> 和 <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> 方法。 有关详细信息，请参阅[使用 SerializationBinder 控制序列化和反序列化](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md)。
 
 ## <a name="best-practices"></a>最佳实践
 
@@ -271,16 +271,16 @@ End Class
 - 切勿移除已序列化的字段。
 - 如果未在以前版本中将 <xref:System.NonSerializedAttribute> 特性应用于某个字段，则切勿将该特性应用于该字段。
 - 切勿更改已序列化字段的名称或类型。
-- 添加新的已序列化字段时，请应用 OptionalFieldAttribute 特性。
-- 从字段（在以前版本中不可序列化）中移除 NonSerializedAttribute 特性时，请应用 OptionalFieldAttribute 特性。
-- 对于所有可选字段，除非可接受 0 或 null 作为默认值，否则请使用序列化回调设置有意义的默认值。
+- 添加新的已序列化字段时，请应用 OptionalFieldAttribute 特性。 
+- 从字段（在以前版本中不可序列化）中移除 NonSerializedAttribute 特性时，请应用 OptionalFieldAttribute 特性。  
+- 对于所有可选字段，除非可接受 0 或 null 作为默认值，否则请使用序列化回调设置有意义的默认值。 
 
 要确保类型与将来的序列化引擎兼容，请遵循以下准则：
 
-- 始终正确设置 OptionalFieldAttribute 特性上的 VersionAdded 属性。
+- 始终正确设置 OptionalFieldAttribute 特性上的 VersionAdded 属性。  
 - 避免版本管理分支。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.SerializableAttribute>
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>

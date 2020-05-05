@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 ms.openlocfilehash: 7379bac07de9b78369d3742fa3288f6fea6a573f
 ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/29/2019
 ms.locfileid: "75544985"
@@ -35,7 +35,7 @@ ms.locfileid: "75544985"
 
   介绍 CodeDOM 的常见用途，并演示如何使用 CodeDOM 构建一个简单的对象图。  
   
-- [从 CodeDOM 图生成源代码并编译程序](generating-and-compiling-source-code-from-a-codedom-graph.md)  
+- [从 CodeDOM 图中生成源代码并编译程序](generating-and-compiling-source-code-from-a-codedom-graph.md)  
 
   介绍如何使用 `System.CodeDom.Compiler` 命名空间中定义的类，通过外部编译器生成源代码并编译生成的代码。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "75544985"
 
   介绍如何使用 CodeDOM 生成包含字段、属性、方法、构造函数和入口点的类。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
 
 - <xref:System.CodeDom>  
 
@@ -59,4 +59,4 @@ ms.locfileid: "75544985"
   
 ## <a name="related-sections"></a>相关章节  
 
-- 通过[CodeDOM 快速参考](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))，开发人员可以快速找到表示源代码元素的 CodeDOM 元素。
+- [CodeDOM 快速参考](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))为开发人员提供了一种方法，使其可以快速查找表示源代码元素的 CodeDOM 元素。

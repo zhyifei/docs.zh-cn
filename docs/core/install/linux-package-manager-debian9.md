@@ -4,12 +4,12 @@ description: 使用包管理器在 Debian 9 上安装 .NET Core SDK 和运行时
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: cfe28d04edfac97938612537986498636c141be0
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 2e45698d6b87499a54a25b6779ec1a767a2ece6b
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134294"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645380"
 ---
 # <a name="debian-9-package-manager---install-net-core"></a>Debian 9 包管理器 - 安装 .NET Core
 
@@ -19,12 +19,12 @@ ms.locfileid: "80134294"
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>注册 Microsoft 密钥和源
+## <a name="add-microsoft-repository-key-and-feed"></a>添加 Microsoft 存储库密钥和源
 
 安装 .NET 之前，需要：
 
-- 注册 Microsoft 密钥。
-- 注册产品存储库。
+- 将 Microsoft 包签名密钥添加到受信任密钥列表。
+- 将此存储库添加到包管理器。
 - 安装必需的依赖项。
 
 每台计算机只需要执行一次此操作。

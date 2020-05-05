@@ -4,19 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 0500e11d2897cfa7392cc8280a0b69c5e2fc515f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 665c7843fc4a46348619bde46a8d527dfed321e4
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79181618"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645985"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 开发指南
+
 本节介绍了如何创建、配置、调试、保护和部署 .NET Framework 应用。 本节还提供有关技术领域的信息，例如，动态编程、互操作性、扩展性、内存管理和线程处理。  
   
-## <a name="in-this-section"></a>本节内容  
- [应用程序要点](../standard/application-essentials.md)  
- 提供有关基本应用开发任务的信息，例如利用应用域和程序集编程、使用特性、格式化和分析基类型、使用集合、处理事件和异常、使用文件和数据流以及使用泛型。  
+## <a name="in-this-section"></a>本节内容
   
  [数据和建模](./data/index.md)  
  提供有关如何使用 ADO.NET、语言集成查询 (LINQ)、WCF 数据服务和 XML 访问数据的信息。  

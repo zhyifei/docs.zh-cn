@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
 ms.openlocfilehash: 2dc1110b858f639624e05382a67ddccf3ea1b047
 ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/02/2020
 ms.locfileid: "80588468"
@@ -25,15 +25,15 @@ ms.locfileid: "80588468"
   
 ## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>用替代元素名称创建 XML 流  
   
-1. 创建的 <xref:System.Xml.Serialization.XmlElementAttribute> 类的实例。  
+1. 创建 <xref:System.Xml.Serialization.XmlElementAttribute> 类的一个实例。  
   
 2. 将 <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> 的 <xref:System.Xml.Serialization.XmlElementAttribute> 设置为“BookID”。  
   
-3. 创建的 <xref:System.Xml.Serialization.XmlAttributes> 类的实例。  
+3. 创建 <xref:System.Xml.Serialization.XmlAttributes> 类的一个实例。  
   
 4. 向通过 `XmlElementAttribute` 的 <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> 属性访问的集合中添加 <xref:System.Xml.Serialization.XmlAttributes> 对象。  
   
-5. 创建的 <xref:System.Xml.Serialization.XmlAttributeOverrides> 类的实例。  
+5. 创建 <xref:System.Xml.Serialization.XmlAttributeOverrides> 类的一个实例。  
   
 6. 将 `XmlAttributes` 添加至 <xref:System.Xml.Serialization.XmlAttributeOverrides>，同时传递要重写的对象类型以及要被重写的成员名称。  
   

@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 ms.openlocfilehash: 9e273bd3e4bf2bb6945fe48c850783a54fa9a869
 ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/26/2020
 ms.locfileid: "80291759"
@@ -107,7 +107,7 @@ ms.locfileid: "80291759"
   
 4. 标识程序集中的每个类。 使用 `<clrClass>` 元素来唯一地标识托管程序集中的每个类。 该元素是 `<assembly>` 元素的子元素，具有下表中描述的属性。  
   
-    |特性|描述|必选|  
+    |特性|描述|必需|  
     |---------------|-----------------|--------------|  
     |`clsid`|用于指定要激活的类的标识符。|是|  
     |`description`|用于通知用户组件相关信息的字符串。 空字符串为默认值。|否|  
@@ -160,13 +160,13 @@ ms.locfileid: "80291759"
   
      在此语句中，`myManagedComp.manifest` 是正在嵌入的组件清单的名称。 对于此示例，脚本文件名称是 `myresource.rc`。  
   
-2. 使用 Microsoft Windows 资源编译器 (rc.exe) 编译脚本。 在命令提示符窗口中键入以下命令：  
+2. 使用 Microsoft Windows 资源编译器 (rc.exe) 编译脚本。 在命令提示符处，键入下列命令：  
   
      `rc myresource.rc`  
   
      Rc.exe 生成 `myresource.res` 资源文件。  
   
-3. 再次编译该程序集的源文件，并使用 /win32res**** 选项指定资源文件：  
+3. 再次编译该程序集的源文件，并使用 /win32res  选项指定资源文件：  
   
     `/win32res:myresource.res`  
   

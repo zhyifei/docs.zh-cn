@@ -3,13 +3,13 @@ title: 无服务器体系结构注意事项 - 无服务器应用
 description: 从状态管理和持久存储到缩放、日志记录、跟踪和诊断，了解构建无服务器应用程序所面临的挑战。
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: c856683cf6910be98661e634246cd003b93a6d76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/06/2020
+ms.openlocfilehash: 3c07e1149e6af41a6b9a9317238e5c71015d2c4e
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522428"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135667"
 ---
 # <a name="serverless-architecture-considerations"></a>无服务器体系结构注意事项
 
@@ -23,7 +23,7 @@ ms.locfileid: "72522428"
 
 - 使用临时数据存储或分布式缓存，例如 Redis
 - 将状态存储在数据库中，例如 SQL 或 CosmosDB
-- 通过工作流引擎（如持久函数）处理状态
+- 通过工作流引擎（如[持久函数](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview)）处理状态
 
 关键在于，你应该明白正在考虑使用无服务器实现的进程中是否需要进行任何状态管理。
 
@@ -79,7 +79,7 @@ DevOps 经常被忽略的方面是一旦部署就会监视应用程序。 制定
 
 ## <a name="versioning-and-greenblue-deployments"></a>版本控制和绿色/蓝色部署
 
-无服务器的主要优势是无需重新部署整个应用程序即可升级特定函数。 为使升级成功，必须对函数进行版本控制，以便将调用它们的服务路由到正确的代码版本。 部署新版本的策略也很重要。 一种常见的方法是使用“绿色/蓝色部署”。 绿色部署是当前函数。 新的“蓝色”版本已部署到生产环境中并进行了测试。 测试通过时，绿色和蓝色版本会互换，因此新版本生效。 如果遇到任何问题，可以将它们调换回来。 支持版本控制和绿色/蓝色部署需要编写函数以适应版本更改以及与无服务器平台一起处理部署的组合。 一种可能的方法是使用代理，这些代理在 [Azure 无服务器平台](azure-functions.md#proxies)一章中进行了介绍。
+无服务器的主要优势是无需重新部署整个应用程序即可升级特定函数。 为使升级成功，必须对函数进行版本控制，以便将调用它们的服务路由到正确的代码版本。 部署新版本的策略也很重要。 一种常见的方法是使用“绿色/蓝色部署”。 绿色部署是当前函数。 新的“蓝色”版本已部署到生产环境中并进行了测试。 测试通过时，绿色和蓝色版本会互换，因此新版本生效。 如果遇到任何问题，可以将它们调换回来。 支持版本控制和绿色/蓝色部署需要编写函数以适应版本更改以及与无服务器平台一起处理部署的组合。
 
 >[!div class="step-by-step"]
 >[上一页](serverless-architecture.md)

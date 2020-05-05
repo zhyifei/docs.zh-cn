@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 ms.openlocfilehash: 17429e77f7764873e607a8feaa62da1cc6e014a4
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710227"
@@ -33,14 +33,14 @@ ms.locfileid: "75710227"
 |unsignedInt|范围在 0 到 4294967295 之间的整数。|  
 |long|范围在 -9223372036854775808 到 9223372036854775807 之间的整数。|  
 |unsignedLong|范围在 0 到 18446744073709551615 之间的整数。|  
-|整数|可能使用“-”前缀的有穷位数字。|  
+|integer|可能使用“-”前缀的有穷位数字。|  
 |decimal|精度为 0 到 28 位的数值。|  
-|浮动|可以依次后接“E”或“e”和表示指数的整数值的十进制数。 十进制值的范围可以在 -16777216 到 16777216 之间。 指数值的范围可以在 -149 到 104 之间。<br /><br /> float 允许表示无穷值和非数值的特殊值。 特殊的浮点型值有：0、-0、INF、-INF、NaN。|  
-|双线|与 float 相同，只是十进制值的范围可以在 -9007199254740992 到 9007199254740992 之间，指数值的范围可以在 –1075 到 970 之间。<br /><br /> double 允许表示无穷值和非数值的特殊值。 特殊的浮点型值有：0、-0、INF、-INF、NaN。|  
+|float|可以依次后接“E”或“e”和表示指数的整数值的十进制数。 十进制值的范围可以在 -16777216 到 16777216 之间。 指数值的范围可以在 -149 到 104 之间。<br /><br /> float 允许表示无穷值和非数值的特殊值。 特殊的浮点型值有：0、-0、INF、-INF、NaN。|  
+|double|与 float 相同，只是十进制值的范围可以在 -9007199254740992 到 9007199254740992 之间，指数值的范围可以在 –1075 到 970 之间。<br /><br /> double 允许表示无穷值和非数值的特殊值。 特殊的浮点型值有：0、-0、INF、-INF、NaN。|  
 |duration|W3C duration 格式。|  
 |dateTime|W3C dateTime 格式。|  
 |time|W3C time 格式。|  
-|日期|年份值限制在 0001 到 9999 之间。|  
+|date|年份值限制在 0001 到 9999 之间。|  
 |gYearMonth|W3C 公历月份和年份的格式。|  
 |string|一个或多个 Unicode 字符。|  
   
@@ -67,14 +67,14 @@ ms.locfileid: "75710227"
 
 在架构引用过程中忽略下列架构定义属性。  
   
-|属性|描述|  
+|特性|描述|  
 |---------------|-----------------|  
 |`xsi:type`|如果遇到指定了 `xsi:type` 类型的元素，将忽略 `xsi:type`。|  
 |`xsi:nil`|如果遇到具有 `xsi:nil` 属性的元素，推断架构中的元素声明的值将为 `nillable="true"`。 `xsi:nil` 属性设置为 `true` 的元素不能包含子元素。|  
 |`xsi:schemaLocation`|如果遇到 `xsi:schemaLocation`，将忽略。|  
 |`xsi:noNamespaceSchemaLocation`|如果遇到 `xsi:noNamespaceSchemaLocation`，将忽略。|  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XML 架构对象模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
 - [从 XML 文档推断架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)

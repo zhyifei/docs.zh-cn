@@ -6,18 +6,18 @@ helpviewer_keywords:
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 ms.openlocfilehash: 2fefdff9dc27915066e3d92efd8439adffed9fc5
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74330301"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>创建和使用组件 (Visual Basic)
 
-组件是一个类，该类实现 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 接口或直接/间接派生自实现 <xref:System.ComponentModel.IComponent> 的类。 .NET Framework 组件是可重复使用的对象，可以与其他对象进行交互，并提供对外部资源和设计时支持的控制。  
+组件  是一个类，该类实现 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 接口或直接/间接派生自实现 <xref:System.ComponentModel.IComponent> 的类。 .NET Framework 组件是可重复使用的对象，可以和其他对象进行交互，并提供对外部资源和设计时支持的控制。  
   
- 组件的一个重要特性在于它们是可设计的，这意味着可在 Visual Studio 集成开发环境中使用作为组件的类。 可以将组件添加到“工具箱”、拖放到窗体以及在设计图面上操作。 请注意，在 .NET Framework 中内置了组件的基本设计时支持;组件开发人员无需执行任何其他工作即可利用基本设计时功能。  
+ 组件的一个重要特性在于它们是可设计的，这意味着可在 Visual Studio 集成开发环境中使用作为组件的类。 可以将组件添加到“工具箱”、拖放到窗体以及在设计图面上操作。 请注意，对组件的基本设计时支持已内置于 .NET Framework 中；组件开发人员不必执行任何附加工作便可利用基本设计时功能。  
   
- 控件与组件类似，二者都是可设计的。 不过，控件提供用户界面，而组件不提供。 控件必须派生自基控件类之一：<xref:System.Windows.Forms.Control> 或 <xref:System.Web.UI.Control>。  
+ 控件与组件类似，二者都是可设计的。  不过，控件提供用户界面，而组件不提供。 控件必须派生自基控件类之一：<xref:System.Windows.Forms.Control> 或 <xref:System.Web.UI.Control>。  
   
 ## <a name="when-to-create-a-component"></a>创建组件的时间  
 
@@ -66,6 +66,6 @@ ms.locfileid: "74330301"
  [控件和组件创作疑难解答](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  解释如何解决常见问题。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [如何：在 Windows 窗体中访问设计时支持](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

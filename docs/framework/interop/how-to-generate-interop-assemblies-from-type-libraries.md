@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
 ms.openlocfilehash: f4f099dfaf5ff02edd3958d7eab9354ce727a239
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74281803"
@@ -20,11 +20,11 @@ ms.locfileid: "74281803"
   
 ### <a name="to-generate-an-interop-assembly-from-a-type-library"></a>从类型库生成的互操作程序集  
   
-1. 请使用以下命令：  
+1. 使用以下命令：  
   
-     tlbimp **type-library-file**\<>  
+     tlbimp \<type-library-file   >  
   
-     添加 /out: 开关会生成具有已更改名称的互操作程序集，如 LOANLib.dll。 更改互操作程序集名称有助于将它与原始 COM DLL 区分开来，并防止因为具有重复名称而可能发生的问题。  
+     添加 /out: 开关会生成具有已更改名称的互操作程序集，如 LOANLib.dll  。 更改互操作程序集名称有助于将它与原始 COM DLL 区分开来，并防止因为具有重复名称而可能发生的问题。  
   
 ## <a name="example"></a>示例  
  以下命令在 `Loanlib` 命名空间中生成 Loanlib.dll 程序集。  
@@ -39,7 +39,7 @@ tlbimp Loanlib.tlb
 tlbimp LoanLib.tlb /out: LOANLib.dll  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [将类型库作为程序集导入](importing-a-type-library-as-an-assembly.md)
 - [向 .NET Framework 公开 COM 组件](exposing-com-components.md)

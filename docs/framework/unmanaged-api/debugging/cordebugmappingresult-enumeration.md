@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 701281dd-2936-45c8-a1f0-3bf7332b093b
 topic_type:
 - apiref
-ms.openlocfilehash: 317dc2fe8403ae25949410423f1a28ad365caf6a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a7a450e85f7eaa765766ffa985d7c01538e2669c
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789313"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795789"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult 枚举
 提供如何获取指令指针 (IP) 的值的详细信息。  
@@ -37,9 +37,9 @@ typedef enum CorDebugMappingResult {
 } CorDebugMappingResult;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`MAPPING_PROLOG`|本机代码在序言中，因此 IP 的值为0。|  
 |`MAPPING_EPILOG`|本机代码在 epilog 中，因此 IP 的值是方法的最后一条指令的地址。|  
@@ -51,14 +51,14 @@ typedef enum CorDebugMappingResult {
 ## <a name="remarks"></a>备注  
  可以使用[ICorDebugILFrame：： GetIP](icordebugilframe-getip-method.md)方法获取指令指针的值。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

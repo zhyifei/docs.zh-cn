@@ -2,12 +2,12 @@
 title: 如何：转换 XML 树的形状
 ms.date: 07/20/2015
 ms.assetid: 84b60854-48b2-452c-87f2-77d53e1d653a
-ms.openlocfilehash: 67ffd5f50572c0deba75c664ffd0e12ecfabf730
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 24cf02d84b498fc4b41238b1adaf7316cb139a10
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332418"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796101"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>如何：转换 XML 树的形状（Visual Basic）
 XML 文档的*形状*是指它的元素名称、属性名称以及它的层次结构的特征。  
@@ -56,7 +56,7 @@ Console.WriteLine(newCustOrd)
  此代码生成以下输出：  
   
 ```xml  
-        <Root>  
+<Root>  
 <Customer CustomerID="GREAL">  
   <CompanyName>Great Lakes Food Market</CompanyName>  
   <ContactName>Howard Snyder</ContactName>  
@@ -86,7 +86,8 @@ Console.WriteLine(newCustOrd)
   </FullAddress>  
   <Orders />  
 </Customer>  
-. . .  
+...
+</Root>
 ```  
   
 ## <a name="example"></a>示例  

@@ -1,32 +1,32 @@
 ---
-title: Windows 上的 LOH - .NET
+title: Windows 上的大型对象堆 (LOH)
 ms.date: 05/02/2018
 helpviewer_keywords:
 - large object heap (LOH)"
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: 5125b76dd26ffa4fb363ecf8449f65b490f57b93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab9beca58b3d6118bc0f5121b6f5dec71a9f9f36
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74283625"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102263"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 系统上的大型对象堆
 
-.NET 垃圾回收器 (GC) 将对象分为小型和大型对象。 如果是大型对象，它的某些特性将比对象较小时显得更为重要。 例如，压缩大型对象（也就是在内存中将其复制到堆上的其他地方）的费用相当高。 因此，.NET 垃圾回收器将大型对象放置在大型对象堆 (LOH) 上。 在本主题中，我们将深度探讨大型对象堆。 我们将讨论符合什么条件的对象才能称之为大型对象，如何回收这些大型对象，以及大型对象具备哪些性能意义。
+.NET 垃圾回收器 (GC) 将对象分为小型和大型对象。 如果是大型对象，它的某些特性将比对象较小时显得更为重要。 例如，压缩大型对象&mdash;（也就是在内存中将其复制到堆上的其他位置）&mdash;的费用相当高。 因此，垃圾回收器将大型对象放置在大型对象堆 (LOH) 上。 本文将讨论符合什么条件的对象才能称之为大型对象，如何回收大型对象，以及大型对象具备哪些性能意义。
 
 > [!IMPORTANT]
-> 本主题仅讨论 .NET Framework 中的大型对象堆和 Windows 系统上运行的 .NET Core。 不包括在其他平台上的 .NET 实现上运行的 LOH。
+> 本文仅讨论 .NET Framework 中的大型对象堆和 Windows 系统上运行的 .NET Core。 不包括在其他平台上的 .NET 实现上运行的 LOH。
 
-## <a name="how-an-object-ends-up-on-the-large-object-heap-and-how-gc-handles-them"></a>对象如何在大型对象堆上结束以及 GC 如何处理它们
+## <a name="how-an-object-ends-up-on-the-loh"></a>对象如何在 LOH 上结束
 
 如果对象的大小大于或等于 85,000 字节，将被视为大型对象。 此数字根据性能优化确定。 对象分配请求为 85,000 字节或更大时，运行时会将其分配到大型对象堆。
 
-若要了解其意义，可查看 .NET GC 的部分相关基础知识。
+若要了解其意义，可查看垃圾回收器的部分相关基础知识。
 
-.NET 垃圾回收器是分代回收器。 它包含三代：第 0 代、第 1 代和第 2 代。 包含 3 代的原因是，在优化良好的应用中，大部分对象都在第 0 代就清除了。 例如，在服务器应用中，与每个请求相关的分配应在请求完成后清除。 仍存在的分配请求将转到第 1 代，并在那里进行清除。 从本质上讲，第 1 代是新对象区域与生存期较长的对象区域之间的缓冲区。
+垃圾回收器是分代回收器。 它包含三代：第 0 代、第 1 代和第 2 代。 包含 3 代的原因是，在优化良好的应用中，大部分对象都在第 0 代就清除了。 例如，在服务器应用中，与每个请求相关的分配应在请求完成后清除。 仍存在的分配请求将转到第 1 代，并在那里进行清除。 从本质上讲，第 1 代是新对象区域与生存期较长的对象区域之间的缓冲区。
 
 小型对象始终在第 0 代中进行分配，或者根据它们的生存期，可能会提升为第 1 代或第 2 代。 大型对象始终在第 2 代中进行分配。
 
@@ -122,7 +122,7 @@ ms.locfileid: "74283625"
 
 在这三种因素中，前两个通常比第三个更重要。 因此，建议分配重复使用的大型对象池，而不是分配临时大型对象。
 
-## <a name="collecting-performance-data-for-the-loh"></a>收集 LOH 的性能数据
+## <a name="collect-performance-data-for-the-loh"></a>收集 LOH 的性能数据
 
 收集特定区域的性能数据之前，应完成以下操作：
 
@@ -310,6 +310,6 @@ bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 
 CLR 2.0 增加了称为“VM 囤积”的功能，用于频繁获取和释放段（包括在大型和小型对象堆上）的情况  。 若要指定 VM 囤积，可通过托管 API 指定称为 `STARTUP_HOARD_GC_VM` 的启动标记。 CLR 退回这些段上的内存并将其添加到备用列表中，而不会将该空段释放回操作系统。 （请注意 CLR 不会针对太大型的段执行此操作。）CLR 稍后将使用这些段来满足新段请求。 下一次应用需要新段时，CLR 将使用此备用列表中的某个足够大的段。
 
-VM 囤积还可用于想要保存已获取的段的应用程序（例如属于系统上运行的主要应用的部分服务器应用），以避免内存不足的异常。
+VM 囤积还可用于想要保存已获取段的应用程序（例如属于系统上运行的主要应用的部分服务器应用），以避免内存不足的异常。
 
 强烈建议你在使用此功能时认真测试应用程序，以确保应用程序的内存使用情况比较稳定。

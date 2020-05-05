@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3ccdf18-4ec6-494d-9024-48e5c8c724f5
 topic_type:
 - apiref
-ms.openlocfilehash: 69a8aabd1d79bb9bb4248259c99124ce50677600
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 9c22ca47a606da0949529cf55655bbcde19cb5c9
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789243"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795659"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState 枚举
 指定用于调试的线程的状态。  
@@ -33,26 +33,26 @@ typedef enum CorDebugThreadState {
 } CorDebugThreadState;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`THREAD_RUN`|线程自由运行，除非调试事件发生。|  
 |`THREAD_SUSPEND`|线程无法运行。|  
   
 ## <a name="remarks"></a>备注  
- 调试器使用 `CorDebugThreadState` 枚举来控制线程的执行。 可以使用[ICorDebugThread：： SetDebugState](icordebugthread-setdebugstate-method.md)或[ICorDebugController：： SetAllThreadsDebugState](icordebugcontroller-setallthreadsdebugstate-method.md)方法设置线程的状态。  
+ 调试器使用`CorDebugThreadState`枚举来控制线程的执行。 可以使用[ICorDebugThread：： SetDebugState](icordebugthread-setdebugstate-method.md)或[ICorDebugController：： SetAllThreadsDebugState](icordebugcontroller-setallthreadsdebugstate-method.md)方法设置线程的状态。  
   
- 向[宿主 API](../../../../docs/framework/unmanaged-api/hosting/index.md)提供的回调启用消息泵，因此不需要中断的状态。  
+ 向[宿主 API](../hosting/index.md)提供的回调启用消息泵，因此不需要中断的状态。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

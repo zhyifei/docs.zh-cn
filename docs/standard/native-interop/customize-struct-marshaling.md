@@ -7,7 +7,7 @@ dev_langs:
 - cpp
 ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79401165"
@@ -24,13 +24,13 @@ ms.locfileid: "79401165"
 
 ✔️ 当本机结构还具有显式布局（如联合）时，请务必仅将 `LayoutKind.Explicit` 用于封送。
 
-❌如果需要在`LayoutKind.Explicit`.NET Core 3.0 之前定位运行时，则在非 Windows 平台上对结构进行封送时使用。 3.0 之前的 .NET Core 运行时不支持按值将显式结构传递给英特尔或 AMD 64 位非 Windows 系统上的本机函数。 但是，运行时支持在所有平台上按引用传递显式结构。
+❌ 如果需要在 .NET Core 3.0 之前以运行时为目标，请避免在非 Windows 平台上封送结构时使用 `LayoutKind.Explicit`。 3\.0 之前的 .NET Core 运行时不支持在 Intel 或 AMD 64 位的非 Windows 系统上，按值将显式结构传递到本机函数。 但是，运行时支持在所有平台上按引用传递显式结构。
 
 ## <a name="customizing-boolean-field-marshaling"></a>自定义布尔字段封送
 
 本机代码具有许多不同的布尔表示形式。 仅在 Windows 上，有三种方式可用于表示布尔值。 运行时不知道结构的本机定义，因此，它最多只能对如何封送布尔值做出猜测。 .NET 运行时提供指示如何封送布尔字段的方式。 下面的示例介绍如何将 .NET `bool` 封送到不同的本机布尔类型。
 
-布尔值默认为本机 4 字节 Win32[`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL)值封送，如以下示例所示：
+布尔值默认作为本机 4 字节 Win32 [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) 值进行封送，如下面的示例所示：
 
 ```csharp
 public struct WinBool
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>自定义十进制字段封送
 
-如果您正在处理 Windows，则可能会遇到一些使用本机[`CY`或`CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1)结构的 API。 默认情况下，.NET`decimal`类型对本机[`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1)结构进行封送。 但是，可以使用包含 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 值的 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 来指示封送处理程序将 `decimal` 值转换为本机 `CY` 值。
+如果在 Windows 上操作，则可能会遇到一些使用本机 [`CY` 或 `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 结构的 API。 默认情况下，.NET `decimal` 类型会封送到本机 [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 结构。 但是，可以使用包含 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 值的 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 来指示封送处理程序将 `decimal` 值转换为本机 `CY` 值。
 
 ```csharp
 public struct Currency

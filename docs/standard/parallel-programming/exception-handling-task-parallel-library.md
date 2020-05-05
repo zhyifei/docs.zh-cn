@@ -1,6 +1,6 @@
 ---
 title: 异常处理（任务并行库）
-ms.date: 03/30/2017
+ms.date: 04/20/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-ms.openlocfilehash: 12777a5f34b8aadcc80977b8796fc2cd53c626a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa6d4b706eb11921ffd419402bcf4cf059a29b11
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134255"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021515"
 ---
 # <a name="exception-handling-task-parallel-library"></a>异常处理（任务并行库）
 
@@ -28,7 +28,7 @@ ms.locfileid: "73134255"
 
 可以通过只捕获 <xref:System.AggregateException> 而不观察任何内部异常来避免未处理的异常。 但是，我们建议你不要这样做，因为这样相当于在非并行情况下捕获基 <xref:System.Exception> 类型。 捕获异常而不采取具体措施从中恢复可能会使程序进入不确定状态。
 
-如果不想调用 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法来等待任务完成，也可以通过任务的 <xref:System.AggregateException> 属性检索 <xref:System.Threading.Tasks.Task.Exception%2A> 异常，如下面的示例所示。 有关详细信息，请参阅本主题中的[通过使用 Task.Exception 属性观察异常](#observing-exceptions-by-using-the-taskexception-property)部分。
+如果不想调用 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法来等待任务完成，也可以通过任务的 <xref:System.Threading.Tasks.Task.Exception%2A> 属性检索 <xref:System.AggregateException> 异常，如下面的示例所示。 有关详细信息，请参阅本主题中的[通过使用 Task.Exception 属性观察异常](#observing-exceptions-by-using-the-taskexception-property)部分。
 
 [!code-csharp[TPL_Exceptions#29](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/handling22.cs#29)]
 [!code-vb[TPL_Exceptions#29](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/handling22.vb#29)]
@@ -42,7 +42,7 @@ ms.locfileid: "73134255"
 
 ## <a name="attached-child-tasks-and-nested-aggregateexceptions"></a>附加子任务和嵌套 AggregateExceptions
 
-如果某个任务具有引发异常的附加子任务，则会在将该异常传播到父任务之前将其包装在 <xref:System.AggregateException> 中，父任务将该异常包装在自己的 <xref:System.AggregateException> 中，然后再将其传播回调用线程。 在这种情况下，在 <xref:System.AggregateException.InnerExceptions%2A>、<xref:System.AggregateException>、或 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法处捕获的 <xref:System.Threading.Tasks.Task.WaitAny%2A> 异常的 <xref:System.Threading.Tasks.Task.WaitAll%2A> 属性包含一个或多个 <xref:System.AggregateException> 实例，而不包含导致错误的原始异常。 为了避免必须循环访问嵌套 <xref:System.AggregateException> 异常，可以使用 <xref:System.AggregateException.Flatten%2A> 方法删除所有嵌套 <xref:System.AggregateException> 异常，以便 <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType> 属性包含原始异常。 在下面的示例中，嵌套 <xref:System.AggregateException> 实例已经平展，并且仅在一个循环中处理。
+如果某个任务具有引发异常的附加子任务，则会在将该异常传播到父任务之前将其包装在 <xref:System.AggregateException> 中，父任务将该异常包装在自己的 <xref:System.AggregateException> 中，然后再将其传播回调用线程。 在这种情况下，在 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Task.WaitAny%2A>、或 <xref:System.Threading.Tasks.Task.WaitAll%2A> 方法处捕获的 <xref:System.AggregateException> 异常的 <xref:System.AggregateException.InnerExceptions%2A> 属性包含一个或多个 <xref:System.AggregateException> 实例，而不包含导致错误的原始异常。 为了避免必须循环访问嵌套 <xref:System.AggregateException> 异常，可以使用 <xref:System.AggregateException.Flatten%2A> 方法删除所有嵌套 <xref:System.AggregateException> 异常，以便 <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType> 属性包含原始异常。 在下面的示例中，嵌套 <xref:System.AggregateException> 实例已经平展，并且仅在一个循环中处理。
 
 [!code-csharp[TPL_Exceptions#22](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/flatten2.cs#22)]
 [!code-vb[TPL_Exceptions#22](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/flatten2.vb#22)]
@@ -70,7 +70,7 @@ ms.locfileid: "73134255"
 
 ## <a name="using-the-handle-method-to-filter-inner-exceptions"></a>使用 Handle 方法筛选内部异常
 
-可以使用 <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> 方法，筛选掉可视为“已处理”的异常，而无需进一步使用任何逻辑。 在提供给 <xref:System.AggregateException.Handle%28System.Func%7BSystem.Exception%2CSystem.Boolean%7D%29?displayProperty=nameWithType> 方法的用户委托中，可以检查异常类型及其 <xref:System.Exception.Message%2A> 属性，或可便于确定异常是否为良性的其他任何信息。 在 `false` 方法返回结果后，便会立即在新实例 <xref:System.AggregateException> 中重新抛出委托针对其返回 <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> 的任何异常。
+可以使用 <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> 方法，筛选掉可视为“已处理”的异常，而无需进一步使用任何逻辑。 在提供给 <xref:System.AggregateException.Handle%28System.Func%7BSystem.Exception%2CSystem.Boolean%7D%29?displayProperty=nameWithType> 方法的用户委托中，可以检查异常类型及其 <xref:System.Exception.Message%2A> 属性，或可便于确定异常是否为良性的其他任何信息。 在 <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> 方法返回结果后，便会立即在新实例 <xref:System.AggregateException> 中重新抛出委托针对其返回 `false` 的任何异常。
 
 下面的示例在功能上相当于本主题中的第一个示例（检查 <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType> 集合中的所有异常）。  相反，此异常处理程序对每个异常调用 <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> 方法对象，并仅重新抛出不是 `CustomException` 实例的异常。
 
@@ -89,12 +89,19 @@ ms.locfileid: "73134255"
 [!code-csharp[TPL_Exceptions#27](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptionprop21.cs#27)]
 [!code-vb[TPL_Exceptions#27](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/exceptionprop21.vb#27)]
 
-在实际应用程序中，延续委托可能会记录有关异常的详细信息，并可能生成新任务以从异常中恢复。
+在有意义的应用程序中，延续委托可能会记录有关异常的详细信息，并可能生成新任务以从异常中恢复。 如果任务出错，以下表达式将引发异常：
+
+- `await task`
+- `task.Wait()`
+- `task.Result`
+- `task.GetAwaiter().GetResult()`
+
+使用 [`try-catch`](../../csharp/language-reference/keywords/try-catch.md) 语句来处理和观察引发的异常。 或者，通过访问 <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> 属性来观察异常。
 
 ## <a name="unobservedtaskexception-event"></a>UnobservedTaskException 事件
 
-在某些情况下（例如承载不受信任的插件时），良性异常可能比较普遍，因此很难以手动方式观察到所有异常。 在这种情况下，可以处理 <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType> 事件。 传递到处理程序的 <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType> 实例可用于阻止未观察到的异常传播回联接线程。
+在某些情况下（例如承载不受信任的插件时），良性异常可能比较普遍，因此很难以手动方式观察到所有异常。 在这些情况下，可以处理 <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType> 事件。 传递到处理程序的 <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType> 实例可用于阻止未观察到的异常传播回联接线程。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

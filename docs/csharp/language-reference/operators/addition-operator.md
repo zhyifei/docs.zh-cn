@@ -1,6 +1,6 @@
 ---
 title: + 和 += 运算符 - C# 参考
-ms.date: 05/24/2019
+ms.date: 04/23/2020
 f1_keywords:
 - +_CSharpKeyword
 - +=_CSharpKeyword
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: cafd07f4b4aefdcc4b43750d61c155fe3d65aa46
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18364d80b8117fd4074c2c4231eac07c76829bb3
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398099"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135732"
 ---
 # <a name="-and--operators-c-reference"></a>+ 和 += 运算符（C# 参考）
 
-内置`+`整型`+=`和[浮点](../builtin-types/integral-numeric-types.md)数值类型、[字符串](../builtin-types/floating-point-numeric-types.md)类型以及[委托](../builtin-types/reference-types.md#the-string-type)类型支持 [ 和 ](../builtin-types/reference-types.md#the-delegate-type) 运算符。
+内置[整型](../builtin-types/integral-numeric-types.md)和[浮点](../builtin-types/floating-point-numeric-types.md)数值类型、[字符串](../builtin-types/reference-types.md#the-string-type)类型以及[委托](../builtin-types/reference-types.md#the-delegate-type)类型支持 `+` 和 `+=` 运算符。
 
-有关算术 `+` 运算符的信息，请参阅[一元加和减运算符](arithmetic-operators.md#unary-plus-and-minus-operators)和[算术运算符](arithmetic-operators.md#addition-operator-)文章的[加法运算符 +](arithmetic-operators.md) 部分。
+有关算术 `+` 运算符的信息，请参阅[一元加和减运算符](arithmetic-operators.md#unary-plus-and-minus-operators)和[算术运算符](arithmetic-operators.md)文章的[加法运算符 +](arithmetic-operators.md#addition-operator-) 部分。
 
 ## <a name="string-concatenation"></a>字符串串联
 
-当其中的一个操作数是[字符串](../builtin-types/reference-types.md#the-string-type)类型或两个操作数都是字符串类型时，`+` 运算符将其操作数的字符串表示形式串联在一起：
+当其中的一个操作数是[字符串](../builtin-types/reference-types.md#the-string-type)类型或两个操作数都是字符串类型时，`+` 运算符将其操作数的字符串表示形式（`null` 的字符串表示形式）串联在一起：
 
 [!code-csharp-interactive[string concatenation](snippets/AdditionOperator.cs#AddStrings)]
 
@@ -66,7 +66,7 @@ x = x + y
 
 [!code-csharp-interactive[+= examples](snippets/AdditionOperator.cs#AddAndAssign)]
 
-在订阅`+=`事件[时，还可以使用 ](../keywords/event.md) 运算符来指定事件处理程序方法。 有关详细信息，请参阅[如何：订阅和取消订阅事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
+在订阅[事件](../keywords/event.md)时，还可以使用 `+=` 运算符来指定事件处理程序方法。 有关详细信息，请参阅[如何：订阅和取消订阅事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
@@ -74,9 +74,9 @@ x = x + y
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅[C# 语言规范](~/_csharplang/spec/expressions.md#unary-plus-operator)的[一元加运算符](~/_csharplang/spec/expressions.md#addition-operator)和[加法运算符](~/_csharplang/spec/introduction.md)部分。
+有关详细信息，请参阅[C# 语言规范](~/_csharplang/spec/introduction.md)的[一元加运算符](~/_csharplang/spec/expressions.md#unary-plus-operator)和[加法运算符](~/_csharplang/spec/expressions.md#addition-operator)部分。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)

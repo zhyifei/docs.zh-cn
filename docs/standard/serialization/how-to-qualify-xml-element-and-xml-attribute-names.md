@@ -1,5 +1,5 @@
 ---
-title: 如何限定 XML 元素和 XML 特性名称
+title: 如何限定 XML 元素和 XML 属性名
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
 ms.openlocfilehash: db0795dd83cc96aba49dd435c875e98a9a6c18cb
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159866"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>如何限定 XML 元素和 XML 特性名称
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>如何限定 XML 元素和 XML 属性名
 
-<xref:System.Xml.Serialization.XmlSerializerNamespaces> 类的实例所包含的 XML 命名空间必须符合[xml 中称为命名空间](https://www.w3.org/TR/REC-xml-names/)的万维网联合会（W3C）规范。
+<xref:System.Xml.Serialization.XmlSerializerNamespaces> 类的实例所包含的 XML 命名空间必须符合万维网联合会 (W3C) 规范，即 [XML 中的命名空间](https://www.w3.org/TR/REC-xml-names/)。
 
 XML 命名空间提供了一种方法，用来限定 XML 文档中 XML 元素和 XML 特性的名称。 限定名由前缀和本地名称组成，两者之间用冒号分隔。 前缀仅用作占位符；它将映射到用于指定命名空间的 URI。 统一管理的 URI 命名空间和本地名称的组合能够产生保证为全局唯一的名称。
 
@@ -162,7 +162,7 @@ public class Price
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [XML 架构定义工具和 XML 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)

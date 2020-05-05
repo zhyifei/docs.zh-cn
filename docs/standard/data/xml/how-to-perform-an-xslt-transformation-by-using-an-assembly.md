@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 ms.openlocfilehash: 447cf18c7a9d24addf9d0a4ad523f46a45a5d27a
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78155970"
@@ -177,9 +177,9 @@ xslt.Load(typeof(Transform));
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
 ```
   
-。 有关 Assembly. Load 方法的详细信息，请参阅 <xref:System.Reflection.Assembly.Load%2A>。  
+。 若要详细了解 Assembly.Load 方法，请参阅 <xref:System.Reflection.Assembly.Load%2A>。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - [XSLT 编译器 (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)

@@ -3,12 +3,12 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: f321b9c742fed6fb1efaf8fbb1914c203dd6391b
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: ed9555bcef1c71964937c2bc18fedbc7da94f0db
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389112"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738152"
 ---
 # <a name="the-history-of-c"></a>C\# 发展历史
 
