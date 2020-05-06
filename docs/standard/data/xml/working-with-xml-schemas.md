@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: bbbcc70c-bf9a-4f6a-af72-1bab5384a187
 ms.openlocfilehash: 0fd7313e800024ebb7e3563cb4323c5780cbf1c3
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710006"
@@ -13,7 +13,7 @@ ms.locfileid: "75710006"
 # <a name="working-with-xml-schemas"></a>使用 XML 架构
 要定义 XML 文档的结构及其元素关系、数据类型和内容约束，请使用文档类型定义 (DTD) 或 XML 架构定义语言 (XSD) 架构。 尽管 XML 文档如果符合万维网联合会 (W3C) 可扩展标记语言 (XML) 1.0 建议定义的所有语法要求，就被认为格式正确，但是，除非其格式正确并且符合其 DTD 或架构定义的约束，否则，不会认为该文档有效。 因此，尽管所有有效 XML 文档的格式都是正确的，但是并非所有格式正确的 XML 文档都有效。  
   
- 若要详细了解 XML，请参阅 [W3C XML 1.0 建议](https://www.w3.org/TR/REC-xml/)。 若要详细了解 XML 架构，请参阅 [W3C XML 架构第 1 部分：结构建议](https://www.w3.org/TR/xmlschema-1/)和 [W3C XML 架构第 2 部分：数据类型建议](https://www.w3.org/TR/xmlschema-2/)中提供的建议。  
+ 若要详细了解 XML，请参阅 [W3C XML 1.0 建议](https://www.w3.org/TR/REC-xml/)。 有关 XML 架构的详细信息，请参阅 [W3C XML 架构第 1 部分：Structures Recommendation](https://www.w3.org/TR/xmlschema-1/)（W3C XML 架构第 1 部分：结构建议）和 [W3C XML Schema Part 2:Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/)（W3C XML 架构第 2 部分：数据类型建议）建议。  
   
 ## <a name="in-this-section"></a>本节内容  
  [XML 架构对象模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
@@ -28,7 +28,7 @@ ms.locfileid: "75710006"
  [推断 XML 架构](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
  讨论如何使用 <xref:System.Xml.Schema.XmlSchemaInference> 类从 XML 文档的结构推断 XSD 架构。  
   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Xml.Schema.XmlSchemaSet> &#124; <xref:System.Xml.Schema.XmlSchemaInference> &#124; <xref:System.Xml.XmlReader>  
   
 ## <a name="related-sections"></a>相关章节  

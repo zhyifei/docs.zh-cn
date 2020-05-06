@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ddc37da-5c94-4beb-b61c-b54071c0e749
 topic_type:
 - apiref
-ms.openlocfilehash: e12882e53d1aa2120ab5c4b6793d7f2e34be76eb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 40dbfc60f8bde1198fd56a4a8aeed1dd6879d1ae
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132166"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795620"
 ---
 # <a name="coreclrdebugprocinfo-structure"></a>CoreClrDebugProcInfo 结构
 表示在远程计算机上运行的进程。  
@@ -36,16 +36,16 @@ struct  CoreClrDebugProcInfo {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`m_dwPID`|操作系统分配的进程标识符。|  
 |`m_dwInternalID`|由运行在目标计算机上的远程调试代理分配的进程标识符。 此标识符的回收通常少于 OS 标识符。|  
 |`m_wszName`|进程的命令行。 此成员可能会被截断。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** CoreClrRemoteDebuggingInterfaces  
   

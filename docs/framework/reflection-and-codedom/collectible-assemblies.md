@@ -8,14 +8,14 @@ helpviewer_keywords:
 - collectible assemblies, retrieving
 ms.openlocfilehash: 02c7048e0321282463aa3558287d1d13c5e4f8d2
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79180549"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>动态类型生成的可回收程序集
 
-可回收程序集** 是一个动态程序集，卸载该程序集时，无需卸载在其中创建了该程序集的应用程序域。 可回收程序集使用的所有托管和非托管内存及其包含的类型都是可回收的。 从内部表中删除了程序集名称等信息。
+可回收程序集  是一个动态程序集，卸载该程序集时，无需卸载在其中创建了该程序集的应用程序域。 可回收程序集使用的所有托管和非托管内存及其包含的类型都是可回收的。 从内部表中删除了程序集名称等信息。
 
 要启用卸载，请在创建动态程序集时使用 <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndCollect?displayProperty=nameWithType> 标志。 程序集是瞬态程序集（即无法保存），并受到[可回收程序集限制](#restrictions-on-collectible-assemblies)部分中所述的限制。 释放与程序集关联的所有对象时，公共语言运行时 (CLR) 会自动卸载可回收程序集。 在所有其他方面，可回收程序集的创建和使用方法与其他动态程序集相同。
 
@@ -23,7 +23,7 @@ ms.locfileid: "79180549"
 
 可回收程序集的生存期受控于是否存在对其包含的类型和从这些类型创建的对象的引用。 只要存在以下一项或多项（`T` 是程序集中定义的任何类型），公共语言运行时就不会卸载程序集：
 
-- `T` 的实例。
+- `T` 的一个实例。
 
 - `T` 数组的一个实例。
 
@@ -36,7 +36,7 @@ ms.locfileid: "79180549"
 
 - 仍可供执行代码访问的另一动态定义类型 `T1` 对 `T` 的静态引用。 例如，`T1` 可能派生自 `T`，或 `T` 可能为 `T1` 的方法中的参数类型。
 
-- 属于 `T` 的静态字段的 ByRef****。
+- 属于 `T` 的静态字段的 ByRef  。
 
 - 引用 `T` 或 `T` 的组件的 <xref:System.RuntimeTypeHandle>、<xref:System.RuntimeFieldHandle>、<xref:System.RuntimeMethodHandle>。
 
@@ -57,20 +57,20 @@ ms.locfileid: "79180549"
 
 对可回收程序集有以下限制：
 
-- **静态引用**普通动态程序集中的类型不能对在可收集程序集中定义的类型具有静态引用。 例如，如果定义了普通类型，且该类型继承自可回收程序集中的类型，则会引发 <xref:System.NotSupportedException> 异常。 可回收程序集中的类型可具有对另一可回收程序集中的类型的引用，但这可将引用程序集的生存期延长至引用的程序集的生存期。
+- 静态引用  ：普通动态程序集中的类型不能具有对可回收程序集中定义的类型的静态引用。 例如，如果定义了普通类型，且该类型继承自可回收程序集中的类型，则会引发 <xref:System.NotSupportedException> 异常。 可回收程序集中的类型可具有对另一可回收程序集中的类型的引用，但这可将引用程序集的生存期延长至引用的程序集的生存期。
 
-- **COM 互通**不能在可收集程序集中定义 COM 接口，并且无法将可收集程序集中的类型实例转换为 COM 对象。 可回收程序集中的类型不可用作 COM 可调用包装器 (CCW) 或运行时可调用包装器 (RCW)。 但是，可回收程序集中的类型可以使用实现 COM 接口的对象。
+- COM 互操作  ：任何 COM 接口都不可在可回收程序集中定义，并且可回收程序集内的任何类型实例都不可转换为 COM 对象。 可回收程序集中的类型不可用作 COM 可调用包装器 (CCW) 或运行时可调用包装器 (RCW)。 但是，可回收程序集中的类型可以使用实现 COM 接口的对象。
 
-- **平台调用**在可收集程序集<xref:System.Runtime.InteropServices.DllImportAttribute>中声明具有该属性的方法时，它们将不会编译。 <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> 指令不能用于可回收程序集中类型的实现，并且不可将此类类型封送到非托管代码。 但是，仍可使用非可回收程序集中声明的入口点调入本机代码。
+- 平台调用  ：在可回收程序集中声明具有 <xref:System.Runtime.InteropServices.DllImportAttribute> 属性的方法时，该方法不会进行编译。 <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> 指令不能用于可回收程序集中类型的实现，并且不可将此类类型封送到非托管代码。 但是，仍可使用非可回收程序集中声明的入口点调入本机代码。
 
-- **封送**无法对在可收集程序集中定义的对象（尤其是委托）进行封送。 这是对所有暂时性发出的类型的限制。
+- 封送  ：无法封送可回收程序集中定义的对象（尤其是委托）。 这是对所有暂时性发出的类型的限制。
 
-- **装配体加载**反射发出是加载可收集程序集的唯一机制。 使用任何其他形式的程序集加载机制加载的程序集无法卸载。
+- 程序集加载  ：对于加载可回收程序集，反射发出是支持的唯一机制。 使用任何其他形式的程序集加载机制加载的程序集无法卸载。
 
-- **上下文绑定对象**不支持上下文静态变量。 可回收程序集中的类型无法扩展 <xref:System.ContextBoundObject>。 但是，可回收程序集中的代码可使用在其他位置定义的上下文绑定对象。
+- 上下文绑定对象  ：不支持上下文静态变量。 可回收程序集中的类型无法扩展 <xref:System.ContextBoundObject>。 但是，可回收程序集中的代码可使用在其他位置定义的上下文绑定对象。
 
-- **线程静态数据**不支持线程静态变量。
+- 线程静态数据  ：不支持线程静态变量。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [发出动态方法和程序集](emitting-dynamic-methods-and-assemblies.md)

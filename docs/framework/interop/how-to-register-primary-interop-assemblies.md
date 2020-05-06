@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 ms.openlocfilehash: c799e4ead2932f1c376a57488df30390ad48b90f
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73107683"
@@ -36,9 +36,9 @@ ms.locfileid: "73107683"
 
 1. 在命令提示符处，键入：
 
-     regasm assemblyname
+     regasm  assemblyname 
 
-     在此命令中，assemblyname 是已注册的程序集的文件名。 Regasm.exe 会在与原始类型库相同的注册表项下为主互操作程序集添加一个条目。
+     在此命令中，assemblyname  是已注册的程序集的文件名。 Regasm.exe 会在与原始类型库相同的注册表项下为主互操作程序集添加一个条目。
 
 ## <a name="example"></a>示例
  下列示例注册 `CompanyA.UtilLib.dll` 主互操作程序集。

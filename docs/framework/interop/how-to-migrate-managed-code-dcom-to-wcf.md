@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 ms.openlocfilehash: 2576e88c25ae381e90ec7d613efb648048145b3b
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181391"
@@ -328,7 +328,7 @@ public class SessionBoundFactory : ISessionBoundFactory
   
 2. 在 `<services>` 节中，声明工厂和会话对象的服务终结点。  这使客户端可与服务终结点通信，可获取 <xref:System.ServiceModel.EndpointAddress10> 并可创建会话通道。  
   
- 以下是具有以下设置的示例配置文件：  
+ 以下是使用这些设置的配置文件示例：  
   
 ```xml  
 <configuration>  
@@ -420,7 +420,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [基本 WCF 编程](../wcf/basic-wcf-programming.md)
 - [设计和实现服务](../wcf/designing-and-implementing-services.md)

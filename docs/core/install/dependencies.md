@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 023b8fdf029dd6b17fe2186296d87dd7507c60b5
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 42765d4402dfa17d4e962b2ecaf7a83e91853c76
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546557"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140991"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core 依赖项和要求
 
@@ -95,7 +95,7 @@ ms.locfileid: "79546557"
 
 <!-- markdownlint-disable MD001 -->
 
-### <a name="windows-7--vista--81--server-2008-r2"></a>Windows 7/Vista/8.1/Server 2008 R2
+### <a name="windows-7--vista--81--server-2008-r2--server-2012-r2"></a><a name="additional-deps"></a> Windows 7 / Vista / 8.1 / Server 2008 R2 / Server 2012 R2
 
 如果要在以下 Windows 版本上安装 .NET SDK 或运行时，则需要其他依赖项：
 
@@ -113,6 +113,10 @@ ms.locfileid: "79546557"
 如果遇到一个以下错误，也需要满足上述要求：
 
 > 此程序无法启动，因为计算机上缺少 api-ms-win-crt-runtime-l1-1-0.dll  。 尝试重新安装该程序以解决此问题。
+>
+> \- 或 -
+>
+> 此程序无法启动，因为计算机上缺少 api-ms-win-cor-timezone-l1-1-0.dll  。 尝试重新安装该程序以解决此问题。
 >
 > \- 或 -
 >

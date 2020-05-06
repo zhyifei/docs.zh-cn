@@ -2,12 +2,12 @@
 title: Docker 应用的内部循环开发工作流
 description: 了解 Docker 应用程序开发的“内部循环”工作流。
 ms.date: 02/15/2019
-ms.openlocfilehash: 615cfd08f46609c4e100ea3e72b541fe2c1ae62a
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: bce047bd5ba75f9ef652a294ff6a15656fc5ac34
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989007"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738407"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 应用的内部循环开发工作流
 
@@ -54,7 +54,7 @@ Docker 映像的容器或实例将包含以下组件：
 
 此外，还需要代码编辑器，以便在使用 Docker CLI 时实际开发应用程序。
 
-Microsoft 提供 Visual Studio Code，它是 Windows、Linux 和 macOS 支持的轻量级代码编辑器，并为 IntelliSense 提供[多种语言的支持](https://code.visualstudio.com/docs/languages/overview)（JavaScript、.NET、Go、Java、Ruby、Python 和大多数现代语言）、[调试](https://code.visualstudio.com/Docs/editor/debugging)、[与 Git 集成](https://code.visualstudio.com/Docs/editor/versioncontrol)和[扩展插件支持](https://code.visualstudio.com/docs/extensions/overview)。 此编辑器是 macOS 和 Linux 开发人员的绝佳选择。 在 Windows 中，你还可以使用 Visual Studio。
+Microsoft 提供 Visual Studio Code，它是 Windows、Linux 和 macOS 支持的轻量级代码编辑器，并为 IntelliSense 提供[多种语言的支持](https://code.visualstudio.com/docs/languages/overview)（JavaScript、.NET、Go、Java、Ruby、Python 和大多数现代语言）、[调试](https://code.visualstudio.com/Docs/editor/debugging)、[与 Git 集成](https://code.visualstudio.com/Docs/editor/versioncontrol)和[扩展插件支持](https://code.visualstudio.com/docs/extensions/overview)。 此编辑器是 macOS 和 Linux 开发人员的绝佳选择。 在 Windows 中，还可以使用 Visual Studio。
 
 > [!TIP]
 > 如需了解用于 Windows、Linux 或 macOS 的 Visual Studio Code 的安装说明，请转到 <https://code.visualstudio.com/docs/setup/setup-overview/>。

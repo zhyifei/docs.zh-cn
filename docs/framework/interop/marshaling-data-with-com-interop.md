@@ -6,7 +6,7 @@ helpviewer_keywords:
 - marshaling data, COM interop
 ms.openlocfilehash: ae41713d5349321725599c0c38d7c6fc515c374b
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181375"

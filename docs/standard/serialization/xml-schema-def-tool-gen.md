@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
 ms.openlocfilehash: 2bbdced0f984b653a58afba9685683e8c0891271
 ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/15/2020
 ms.locfileid: "81389800"
@@ -17,12 +17,12 @@ ms.locfileid: "81389800"
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>如何：使用 XML 架构定义工具生成类和 XML 架构文档
 使用 XML 架构定义工具 (Xsd.exe) 可以生成描述类的 XML 架构，也可以生成 XML 架构定义的类。 下面的过程说明如何执行这两种操作。
 
-XML 架构定义工具 （Xsd.exe） 通常可以在以下路径中找到：*
-_C：\\程序文件\\（x86） 微软\\\\SDK 窗口\\\\[版本] bin NETFX [版本] 工具\\_
+XML 架构定义工具 (Xsd.exe) 通常可在以下路径中找到：\
+C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\{版本}\\bin\\NETFX {版本} Tools\\ 
 
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>生成符合特定架构的类  
   
-1. 打开命令提示符。  
+1. 打开命令提示。  
   
 2. 将 XML 架构作为参数传递给 XML 架构定义工具，该工具将创建与 XML 架构精确匹配的一组类，例如：  
   
@@ -30,7 +30,7 @@ _C：\\程序文件\\（x86） 微软\\\\SDK 窗口\\\\[版本] bin NETFX [版�
     xsd mySchema.xsd  
     ```  
   
-     该工具只能处理引用万维网联合会 2001 年 3 月 16 日的 XML 规范的架构。 换句话说，XML 架构命名空间必须为""，http://www.w3.org/2001/XMLSchema如以下示例所示。  
+     该工具只能处理引用万维网联合会 2001 年 3 月 16 日的 XML 规范的架构。 换句话说，XML 架构命名空间必须是“http://www.w3.org/2001/XMLSchema”，如以下示例所示。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -45,7 +45,7 @@ _C：\\程序文件\\（x86） 微软\\\\SDK 窗口\\\\[版本] bin NETFX [版�
   
 1. 将一个或多个类编译成 DLL。  
   
-2. 打开命令提示符。  
+2. 打开命令提示。  
   
 3. 将 DLL 作为参数传递给 Xsd.exe，例如：  
   
@@ -55,12 +55,12 @@ _C：\\程序文件\\（x86） 微软\\\\SDK 窗口\\\\[版本] bin NETFX [版�
   
      架构将被写入，以名称“schema0.xsd”开头。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Data.DataSet>
 - [XML 架构定义工具和 XML 序列化](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
 - [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [XML 架构定义工具 （Xsd.exe）](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- [XML 架构定义工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

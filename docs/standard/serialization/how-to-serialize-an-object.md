@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
 ms.openlocfilehash: 3e24d890d47747c51086214530073fc551321079
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159879"
@@ -50,7 +50,7 @@ ms.locfileid: "78159879"
     myWriter.Close();  
     ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

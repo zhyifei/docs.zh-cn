@@ -2,12 +2,12 @@
 title: dotnet add reference 命令
 description: dotnet add reference 命令可便于添加项目间引用。
 ms.date: 02/14/2020
-ms.openlocfilehash: f2bd67d181784c4858b8971d05053d196df7818e
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: b261e24ed6a9d5bd489d317d2663b1420b5c34ff
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463736"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158315"
 ---
 # <a name="dotnet-add-reference"></a>dotnet add reference
 
@@ -52,7 +52,7 @@ dotnet add reference -h|--help
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  仅在以特定[框架](../../standard/frameworks.md)为目标时添加项目引用。
+  仅在以特定[框架](../../standard/frameworks.md)为目标时使用 TFM 格式添加项目引用。
 
 - **`-h|--help`**
 
@@ -60,7 +60,7 @@ dotnet add reference -h|--help
 
 - **`--interactive`**
 
-  允许命令停止并等待用户输入或操作（例如，完成身份验证）。 自 .NET Core 3.0 SDK 起可用。
+  允许命令停止并等待用户输入或操作（通常用于完成身份验证）。 自 .NET Core 3.0 SDK 起可用。
 
 ## <a name="examples"></a>示例
 

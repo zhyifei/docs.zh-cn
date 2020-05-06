@@ -4,12 +4,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: 0a614f628faa98be778c627573e4dddc462c9107
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b89969f212da6ac90d0fb0d1bf388626e136b92e
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121958"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158588"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>内存\<T> 和跨度\<T> 使用准则
 
@@ -23,7 +23,7 @@ ms.locfileid: "73121958"
 
 - **所有权**。 缓冲区实例的所有者负责生存期管理，包括在不再使用缓冲区时将其销毁。 所有缓冲区都拥有一个所有者。 通常，所有者是创建缓冲区或从工厂接收缓冲区的组件。 所有权也可以转让；  组件 A 可以将缓冲区的控制权转让给组件 B  ，此时  组件 A 就无法再使用该缓冲区，  组件 B 将负责在不再使用缓冲区时将其销毁。
 
-- **使用**。 允许缓冲区实例的使用者通过从中读取并可能写入其中来使用缓冲区实例。 缓冲区一次可以拥有一个使用者，除非提供了某些外部同步机制。 请注意，缓冲区的当前使用者不一定是缓冲区的所有者。
+- **使用**。 允许缓冲区实例的使用者通过从中读取并可能写入其中来使用缓冲区实例。 缓冲区一次可以拥有一个使用者，除非提供了某些外部同步机制。 缓冲区的当前使用者不一定是缓冲区的所有者。
 
 - **租用**。 租用是允许特定组件成为缓冲区使用者的时长。
 
@@ -86,7 +86,7 @@ class Program
 
 - `WriteInt32ToBuffer` 和 `DisplayBufferToConsole` 方法接受 <xref:System.Memory%601> 作为公共 API。 因此，它们是缓冲区的使用者。 并且它们一次仅使用一个。
 
-尽管 `WriteInt32ToBuffer` 方法用于将值写入缓冲区，但 `DisplayBufferToConsole` 方法并不如此。 若要反映此情况，可以接受类型为 <xref:System.ReadOnlyMemory%601> 的参数。 有关 <xref:System.ReadOnlyMemory%601> 的其他信息，请参阅[规则 2：如果缓冲区应为只读，则使用 ReadOnlySpan\<T> 或 ReadOnlyMemory\<T>](#rule-2)。
+尽管 `WriteInt32ToBuffer` 方法用于将值写入缓冲区，但 `DisplayBufferToConsole` 方法并不如此。 若要反映此情况，可以接受类型为 <xref:System.ReadOnlyMemory%601> 的参数。 有关 <xref:System.ReadOnlyMemory%601> 的详细信息，请参阅[规则 2：如果缓冲区应为只读，则使用 ReadOnlySpan\<T> 或 ReadOnlyMemory\<T>](#rule-2)。
 
 ### <a name="ownerless-memoryt-instances"></a>“无所有者”内存\<T> 实例
 
@@ -110,7 +110,7 @@ class Program
 
 - 虽然 <xref:System.Span%601> 的堆栈分配特性优化了性能并使 <xref:System.Span%601> 成为在内存块上运行的首选类型，但它也使 <xref:System.Span%601> 受一些主要限制的约束。 请务必了解何时使用 <xref:System.Span%601> 以及何时使用 <xref:System.Memory%601>。
 
-下面介绍成功使用 <xref:System.Memory%601> 及其相关类型的建议。 请注意，除非另有明确说明，否则适用于 <xref:System.Memory%601> 和 <xref:System.Span%601> 的指南也适用于 <xref:System.ReadOnlyMemory%601> 和 <xref:System.ReadOnlySpan%601>。
+下面介绍成功使用 <xref:System.Memory%601> 及其相关类型的建议。 除非另有明确说明，否则适用于 <xref:System.Memory%601> 和 <xref:System.Span%601> 的指南也适用于 <xref:System.ReadOnlyMemory%601> 和 <xref:System.ReadOnlySpan%601>。
 
 **规则 1：对于同步 API，如有可能，请使用跨度\<T>（而不是内存\<T>）作为参数。**
 
@@ -336,7 +336,7 @@ public unsafe Task<int> ManagedWrapperAsync(Memory<byte> data)
 private static void MyCompletedCallbackImplementation(IntPtr state, int result)
 {
     GCHandle handle = (GCHandle)state;
-    var actualState = (MyCompletedCallbackState)state;
+    var actualState = (MyCompletedCallbackState)(handle.Target);
     handle.Free();
     actualState.MemoryHandle.Dispose();
 

@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
 ms.openlocfilehash: c24ba466a208fe5abdbf565169c41c4ee3f47482
 ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/31/2019
 ms.locfileid: "75559893"
@@ -23,7 +23,7 @@ ms.locfileid: "75559893"
 
 1. 使用要反序列化的对象的类型构造 <xref:System.Xml.Serialization.XmlSerializer>。
 
-1. 调用 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 方法以生成该对象的副本。 反序列化时，必须将返回的对象强制转换为原始的类型，如下面的示例中所示，该示例从文件反序列化对象（尽管它也可以从流反序列化）。
+1. 调用 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 方法以生成该对象的副本。 在反序列化时，必须将返回的对象强制转换为原始对象的类型，如以下示例所示，该示例从文件反序列化该对象（尽管也可以从流反序列化该对象）。
 
     ```vb
     ' Construct an instance of the XmlSerializer with the type
@@ -46,7 +46,7 @@ ms.locfileid: "75559893"
     var myObject = (MySerializableClass) mySerializer.Deserialize(myFileStream)
     ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XML 序列化简介](introducing-xml-serialization.md)
 - [如何：序列化对象](how-to-serialize-an-object.md)

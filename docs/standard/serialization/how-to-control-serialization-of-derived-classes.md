@@ -7,15 +7,15 @@ dev_langs:
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
 ms.openlocfilehash: af19981fd7cfeda3e8e985fa991fd7fdf2476b42
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159918"
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>如何：控制派生类的序列化
-使用 XmlElementAttribute 属性更改 XML 元素的名称不是自定义对象序列化的唯一方法。 您还可以自定义 XML 流，具体方法为从现有类派生以及指示 <xref:System.Xml.Serialization.XmlSerializer> 实例如何序列化新类。  
+使用 XmlElementAttribute 属性更改 XML 元素的名称不是自定义对象序列化的唯一方法  。 您还可以自定义 XML 流，具体方法为从现有类派生以及指示 <xref:System.Xml.Serialization.XmlSerializer> 实例如何序列化新类。  
   
- 例如，假设有一个 `Book` 类，您可以从该类派生，并创建一个具有多个属性的 `ExpandedBook` 类。 然而，序列化或反序列化时，必须指导 XmlSerializer 接受派生类型。 可以通过创建一个 <xref:System.Xml.Serialization.XmlElementAttribute> 实例并将其 Type 属性设置为派生类类型来完成此操作。 将 XmlElementAttribute 添加到  **实例**<xref:System.Xml.Serialization.XmlAttributes>。 再将 XmlAttributes 添加到  **实例，指定被重写的类型和接受派生类型的成员名**<xref:System.Xml.Serialization.XmlAttributeOverrides>。 这在下面的示例中显示。  
+ 例如，假设有一个 `Book` 类，您可以从该类派生，并创建一个具有多个属性的 `ExpandedBook` 类。 然而，序列化或反序列化时，必须指导 XmlSerializer 接受派生类型  。 可以通过创建一个 <xref:System.Xml.Serialization.XmlElementAttribute> 实例并将其 Type 属性设置为派生类类型来完成此操作  。 将 XmlElementAttribute 添加到 <xref:System.Xml.Serialization.XmlAttributes> 实例  。 再将 XmlAttributes 添加到 <xref:System.Xml.Serialization.XmlAttributeOverrides> 实例，指定被重写的类型和接受派生类型的成员名  。 这在下面的示例中显示。  
   
 ## <a name="example"></a>示例  
   
@@ -232,7 +232,7 @@ public class Run
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - <xref:System.Xml.Serialization.XmlElementAttribute>

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-ms.openlocfilehash: 92aee981aca3bac32c0ef264799e486315ca5103
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 288d7bfdf18be5cef032227c537032966fa68df4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789259"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795698"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason 枚举
 指示一个单步执行的结果。  
@@ -38,9 +38,9 @@ typedef enum CorDebugStepReason {
 } CorDebugStepReason;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`STEP_NORMAL`|单步执行在同一函数内正常完成。|  
 |`STEP_RETURN`|在函数返回后，按正常方式继续执行。|  
@@ -50,14 +50,14 @@ typedef enum CorDebugStepReason {
 |`STEP_INTERCEPT`|控件已传递给侦听器。|  
 |`STEP_EXIT`|线程在步骤完成之前退出。|  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

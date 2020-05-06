@@ -5,16 +5,16 @@ ms.topic: conceptual
 ms.date: 08/11/2018
 ms.openlocfilehash: 57f3b981a1d94c2193160f55f9c8242da694c169
 ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/17/2020
 ms.locfileid: "81607875"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>将 .NET Web 应用或服务迁移到 Azure 应用服务
 
-[应用服务](https://docs.microsoft.com/azure/app-service/overview)是一个完全托管的计算平台服务，经过优化，可承载可扩展的网站和 Web 应用程序。 本文提供有关如何将现有应用程序提升并移向 Azure 应用服务、需要考虑的修改以及[迁移到云](https://azure.microsoft.com/migration/web-applications/)的其他资源的信息。 大多数 ASP.NET 网站（Webforms、MVC）和服务（Web API、WCF）可以直接移到 Azure 应用服务而无需进行任何更改。 有些可能需要进行少量更改，而有些可能需要进行一些重构。
+[应用服务](https://docs.microsoft.com/azure/app-service/overview)是一个完全托管的计算平台服务，非常适合用来托管可缩放的网站和 Web 应用程序。 本文提供有关如何将现有应用程序直接迁移到 Azure 应用服务、要考虑的修改，以及[转移到云](https://azure.microsoft.com/migration/web-applications/)时所需的其他资源的信息。 大多数 ASP.NET 网站（Webforms、MVC）和服务（Web API、WCF）可以直接移到 Azure 应用服务而无需进行任何更改。 有些可能需要进行少量更改，而有些可能需要进行一些重构。
 
-已准备就绪？ [将 ASP.NET + SQL 应用程序发布到 Azure 应用服务](https://tutorials.visualstudio.com/azure-webapp-migrate/intro)。
+准备好开始了吗？ [将 ASP.NET + SQL 应用程序发布到 Azure 应用服务](https://tutorials.visualstudio.com/azure-webapp-migrate/intro)。
 
 ## <a name="considerations"></a>注意事项
 
@@ -25,7 +25,7 @@ ms.locfileid: "81607875"
 * 使用 [Azure 虚拟网络](https://docs.microsoft.com/azure/app-service/web-sites-integrate-with-vnet)创建将应用服务连接到本地资源的 VPN。
 * 使用 [Azure 中继](https://docs.microsoft.com/azure/service-bus-relay/relay-what-is-it)，在不更改防火墙的情况下，将本地服务安全地公开给云。
 * 将依赖项（如 [SQL 数据库](https://go.microsoft.com/fwlink/?linkid=863217)）迁移到 Azure。
-* 在云中使用平台即服务产品来减少依赖关系。 例如，不要连接到本地邮件服务器，而应考虑使用 [SendGrid](https://docs.microsoft.com/azure/sendgrid-dotnet-how-to-send-email)。
+* 在云中使用平台即服务产品/服务以减少依赖项。 例如，不要连接到本地邮件服务器，而应考虑使用 [SendGrid](https://docs.microsoft.com/azure/sendgrid-dotnet-how-to-send-email)。
 
 ### <a name="port-bindings"></a>端口绑定
 
@@ -50,31 +50,31 @@ Azure 应用服务默认支持匿名身份验证，并在需要时进行表单�
 
 ### <a name="assemblies-in-the-gac-global-assembly-cache"></a>GAC（全局程序集缓存）中的程序集
 
-不支持此操作。 请考虑将所需的程序集复制到应用的*\bin*文件夹。 无法使用安装在服务器上的自定义 *.msi*文件（例如 PDF 生成器）。
+不支持此操作。 请考虑将所需程序集复制到应用的 \bin 文件夹。  不能使用安装在服务器上的自定义 .msi（例如 PDF 生成器）。 
 
 ### <a name="iis-settings"></a>IIS 设置
-以往要在应用程序中通过 applicationHost.config 配置的所有设置现在可以通过 Azure 门户进行配置。 这适用于 AppPool 位、启用/禁用 WebSocket、托管管道版本、.NET 框架版本 （2.0/4.0）等。 若要修改[应用程序设置](https://docs.microsoft.com/azure/app-service/web-sites-configure)，请导航到 [Azure 门户](https://portal.azure.com)，打开 Web 应用的边栏选项卡，并选择“应用程序设置”选项卡。****
+以往要在应用程序中通过 applicationHost.config 配置的所有设置现在可以通过 Azure 门户进行配置。 这适用于 AppPool 位数、启用/禁用 WebSocket、托管管道版本、NET Framework 版本 (2.0/4.0)，等等。 若要修改[应用程序设置](https://docs.microsoft.com/azure/app-service/web-sites-configure)，请导航到 [Azure 门户](https://portal.azure.com)，打开 Web 应用的边栏选项卡，并选择“应用程序设置”选项卡。 
 
 #### <a name="iis5-compatibility-mode"></a>IIS5 兼容模式
-不支持 IIS5 兼容模式。 在 Azure 应用服务中，每个 Web 应用及其下的所有应用程序都在同一工作进程中使用一组特定的[应用程序池](https://technet.microsoft.com/library/cc735247(v=WS.10).aspx)运行。
+不支持 IIS5 兼容模式。 在 Azure 应用服务中，每个 Web 应用及其下的所有应用程序都在具有一组特定[应用程序池](https://technet.microsoft.com/library/cc735247(v=WS.10).aspx)的同一工作进程中运行。
 
 #### <a name="iis7-schema-compliance"></a>IIS7+ 架构符合性  
 Azure 应用服务 IIS 架构中未定义一些元素和属性。 如果遇到问题，请考虑使用 [XDT 转换](https://azure.microsoft.com/documentation/articles/web-sites-transform-extend/)。
 
 #### <a name="single-application-pool-per-site"></a>每个站点的单个应用程序池  
-在 Azure 应用服务中，每个 Web 应用及其下的所有应用程序都在同一应用程序池中运行。 请考虑使用通用设置建立单个应用程序池，或为每个应用程序创建单独的 Web 应用。
+在 Azure 应用服务中，每个 Web 应用及其下的所有应用程序都在同一个应用程序池中运行。 请考虑使用通用设置建立单个应用程序池，或为每个应用程序创建单独的 Web 应用。
 
 ### <a name="com-and-com-components"></a>COM 和 COM+ 组件  
-Azure 应用服务不允许在平台上注册 COM 组件。 如果应用使用任何 COM 组件，则需要在托管代码中重写这些组件，并与站点或应用程序一起部署这些组件。
+Azure 应用服务不允许在平台上注册 COM 组件。 如果你的应用使用任何 COM 组件，则需要在托管代码中重写这些组件并将其与站点或应用程序一起部署。
 
 ### <a name="physical-directories"></a>物理目录
-Azure 应用服务不允许访问物理驱动器。 您可能需要使用 Azure[文件](https://docs.microsoft.com/azure/storage/files/storage-files-introduction)通过 SMB 访问文件。 [Azure Blob存储](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)可以存储文件以通过 HTTPS 进行访问。
+Azure 应用服务不允许访问物理驱动器。 可能需要使用 [Azure 文件](https://docs.microsoft.com/azure/storage/files/storage-files-introduction)通过 SMB 访问文件。 [Azure Blob存储](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)可以存储文件以通过 HTTPS 进行访问。
 
 ### <a name="isapi-filters"></a>ISAPI 筛选器  
 Azure 应用服务可以支持使用 ISAPI 筛选器，但是，ISAPI DLL 必须与站点一起部署并通过 web.config 注册。
 
 ### <a name="https-bindings-and-ssl"></a>HTTPS 绑定和 SSL
-不会迁移 HTTPS 绑定，也不会与您的网站关联 SSL 证书。 但是，在完成站点迁移后，[可以手动上传 SSL证书](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-ssl)。
+将不会迁移 HTTPS 绑定，也不会迁移与网站关联的 SSL 证书。 但是，在完成站点迁移后，[可以手动上传 SSL证书](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-ssl)。
 
 ### <a name="sharepoint-and-frontpage"></a>SharePoint 和 FrontPage
 不支持 SharePoint 和 FrontPage 服务器扩展 (FPSE)。
@@ -104,4 +104,4 @@ AAD 不适用于免费应用。 若要使用 AAD，必须升级应用 SKU。 请
 
 * [如何确定应用是否符合应用服务的条件](https://appmigration.microsoft.com/)
 * [将数据库转移到云中](https://go.microsoft.com/fwlink/?linkid=863217)
-* [Azure Web 应用沙盒详细信息和限制](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox)
+* [Azure Web 应用沙盒的详细信息和限制](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox)

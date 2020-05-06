@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 86dba977-5cc4-4567-964f-027ffabc47b2
 ms.openlocfilehash: fa650e75d7661eeafea74146f5cbb61878978575
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710396"
@@ -42,16 +42,16 @@ ms.locfileid: "75710396"
   
  有多种实体。 下面的关系图显示实体类型和术语的分类。  
   
- ![实体类型层次结构的流程图](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")  
+ ![实体类型层次结构流程图](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")  
   
- Microsoft .NET Framework 实现的 XML 文档对象模型 (DOM) 的默认设置是暂留实体引用，并在加载 XML 时不扩展这些实体。 也就是说，将文档加载到 DOM 后，创建的是包含引用变量 `&publisher;` 的 XmlEntityReference 节点，其中子节点表示在 DTD 中声明的实体内容。  
+ Microsoft .NET Framework 实现的 XML 文档对象模型 (DOM) 的默认设置是暂留实体引用，并在加载 XML 时不扩展这些实体。 也就是说，将文档加载到 DOM 后，创建的是包含引用变量 `&publisher;` 的 XmlEntityReference  节点，其中子节点表示在 DTD 中声明的实体内容。  
   
- 下图展示了使用 `<!ENTITY publisher "Microsoft Press">` 实体声明创建的 XmlEntity 和 XmlText 节点。  
+ 下图展示了使用 `<!ENTITY publisher "Microsoft Press">` 实体声明创建的 XmlEntity  和 XmlText  节点。  
   
  ![从实体声明创建的节点](../../../../docs/standard/data/xml/media/xml-entitydeclaration-node2.png "xml_entitydeclaration_node2")  
   
  实体引用在展开与未展开时的差异使在内存中的 DOM 树中生成的节点不同。 [暂留实体引用](../../../../docs/standard/data/xml/entity-references-are-preserved.md)和[扩展但不暂留实体引用](../../../../docs/standard/data/xml/entity-references-are-expanded-and-not-preserved.md)这两个主题中介绍了生成的节点之间的区别。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

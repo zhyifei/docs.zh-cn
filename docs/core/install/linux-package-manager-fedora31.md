@@ -4,12 +4,12 @@ description: 使用包管理器在 Fedora 31 上安装 .NET Core SDK 和运行�
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: e6ead528c441c37d089ebb33719494353de41433
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 56e5789132af2aa1171ea51698ae55d1eea5d457
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134239"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645313"
 ---
 # <a name="fedora-31-package-manager---install-net-core"></a>Fedora 31 包管理器 - 安装 .NET Core
 
@@ -19,12 +19,12 @@ ms.locfileid: "80134239"
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>注册 Microsoft 密钥和源
+## <a name="add-microsoft-repository-key-and-feed"></a>添加 Microsoft 存储库密钥和源
 
 安装 .NET 之前，需要：
 
-- 注册 Microsoft 密钥。
-- 注册产品存储库。
+- 将 Microsoft 包签名密钥添加到受信任密钥列表。
+- 将此存储库添加到包管理器。
 - 安装必需的依赖项。
 
 每台计算机只需要执行一次此操作。

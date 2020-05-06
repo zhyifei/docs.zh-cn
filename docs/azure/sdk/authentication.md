@@ -5,7 +5,7 @@ ms.date: 08/22/2018
 ms.custom: azure-sdk-dotnet
 ms.openlocfilehash: f6af813cd1423be8784b769b272756b2c8258392
 ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/17/2020
 ms.locfileid: "81607869"
@@ -45,7 +45,7 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 // Do things with the account here...
 ```
 
-服务连接字符串用于其他 Azure 服务，如[CosmosDB、Redis](https://docs.microsoft.com/azure/cosmos-db/)[的 Azure 缓存](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)[和服务总线](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)。 您可以使用 Azure 门户、CLI 或 PowerShell 获取这些字符串。 还可以使用用于 .NET 的 Azure 管理库来查询资源，以便在代码中生成连接字符串。
+服务连接字符串用于 [CosmosDB](https://docs.microsoft.com/azure/cosmos-db/)、[Azure Cache for Redis](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache) 和[服务总线](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)等其他 Azure 服务。 可以使用 Azure 门户、CLI 或 PowerShell 获取这些字符串。 还可以使用用于 .NET 的 Azure 管理库来查询资源，以便在代码中生成连接字符串。
 
 以下代码片段使用管理库创建存储帐户连接字符串：
 
@@ -76,7 +76,7 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 
 创建服务主体后，可以使用两个选项对服务主体进行身份验证，以创建和管理资源。
 
-对于这两个选项，您需要将以下 NuGet 包添加到项目中。
+若要使用这两个选项，需将以下 NuGet 包添加到项目。
 
 ```powershell
 Install-Package Microsoft.Azure.Management.Fluent

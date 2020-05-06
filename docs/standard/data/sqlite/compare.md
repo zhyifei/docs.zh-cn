@@ -1,23 +1,23 @@
 ---
-title: 与 System.object 的比较
+title: 与 System.Data.SQLite 的比较
 ms.date: 12/13/2019
-description: 描述了 Microsoft 数据库和 System.object 库之间的一些差异。
+description: 介绍 Microsoft.Data.Sqlite 和 System.Data.SQLite 库之间的一些差异。
 ms.openlocfilehash: 076bbc6f746cf9296c96ec73047397a21a3b2558
 ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/11/2020
 ms.locfileid: "75900715"
 ---
-# <a name="comparison-to-systemdatasqlite"></a>与 System.object 的比较
+# <a name="comparison-to-systemdatasqlite"></a>与 System.Data.SQLite 的比较
 
-在2005中，Robert Simpson 创建了一个 ADO.NET 2.0 的 SQLite 提供程序。 在2010中，SQLite 团队接管了项目的维护和开发工作。 还值得注意的是，Mono 团队将2007中的代码分叉为单声道。 ADO.NET 具有较长的历史记录，并已发展为完整的、功能齐全的提供程序，并具有 Visual Studio 工具。 新版本会继续将与每个版本的 .NET Framework 兼容的程序集传送回版本2.0，甚至 .NET Compact Framework 3.5。
+在 2005 年，Robert Simpson 创建了System.Data.SQLite，这是 ADO.NET 2.0 的一个 SQLite 提供程序。 在 2010 年，SQLite 团队接管了项目的维护和开发工作。 同样值得注意的是，Mono 团队在 2007 年以 Mono.Data.Sqlite 形式为代码创建了分支。 System.Data.SQLite 历史悠久，并且已发展成为具有 Visual Studio 工具的稳定且功能齐全的 ADO.NET 提供程序。 新版本会继续将与每个版本的 .NET Framework 兼容的程序集传送回版本 2.0，甚至已涉及 .NET Compact Framework 3.5。
 
-.NET Core 的第一个版本（在2016中发布）是 .NET 的单个、轻型、新式和跨平台实现。 特意删除了具有更多新式替代项的过时 Api 和 Api。 ADO.NET 不包括任何数据集 Api （包括 DataTable 和 DataAdapter）。
+.NET Core 的第一个版本（于 2016 年发布）是 .NET 的单一轻量级跨平台新式实现。 过时的 API 和具有更新式替代项的 API 均已被有意删除。 ADO.NET 不包含任何 DataSet API（包括 DataTable 和 DataAdapter 在内）。
 
-实体框架团队在某种程度上熟悉了 system.exception 基本代码。 Brice Lambson 是 EF 团队的成员，以前已帮助 SQLite 团队添加对实体框架版本5和6的支持。 此外，Brice 还试验了其在计划 .NET Core 的同时，其自己的 SQLite ADO.NET 提供程序实现。 在长时间讨论后，实体框架团队决定根据 Brice 的原型创建。 这使他们能够创建新的轻型和新式实现，使其与 .NET Core 的目标保持一致。
+实体框架团队对 System.Data.SQLite 代码库多少有些熟悉。 Brice Lambson 是 EF 团队的成员，之前曾帮助 SQLite 团队添加对实体框架版本 5 和 6 的支持。 另外，Brice 在规划 .NET Core 的同时，还试验了自己的 SQLite ADO.NET 提供程序实现。 经过长时间的讨论，实体框架团队决定基于 Brice 的原型创建 Microsoft.Data.Sqlite。 这将使他们能够创建一种全新的轻量级新式实现方式，它将与 .NET Core 的目标保持一致。
 
-作为我们所说的更多新式的示例，这里是在 system.exception 和数据表中创建[用户定义函数](user-defined-functions.md)的代码。
+下面的示例展示了它的新式特性，此示例代码同时在 System.Data.SQLite 和 Microsoft.Data.Sqlite 中创建[用户定义函数](user-defined-functions.md)。
 
 ```csharp
 // System.Data.SQLite
@@ -32,48 +32,48 @@ connection.CreateFunction(
     (double arg) => Math.Ceiling(arg));
 ```
 
-在2017中，.NET Core 2.0 经历了策略更改。 它决定了与 .NET Framework 的兼容性对于 .NET Core 的成功至关重要。 许多已删除的 Api （包括数据集 Api）已添加回。 与许多其他方法一样，这种解除阻止的 System.object 也允许它移植到 .NET Core。 然而，在轻型和新式情况下，Microsoft 数据的原始目标仍保持不变。 有关不是由 ADO.NET 实现的 ADO.NET Api 的详细信息，请参阅相关[限制](adonet-limitations.md)。
+2017 年，.NET Core 2.0 发生了战略变化。 团队确定了与 .NET Framework 的兼容性对于 .NET Core 的成功至关重要。 因此，将许多已删除的 API（包括 DataSet API）都重新添加回来。 就像对其他许多工具所做的一样，这个不受限制的 System.Data.SQLite 也允许将其移植到 .NET Core。 但是，Microsoft.Data.Sqlite 的最初目标是仍保持轻量级的新式特性。 请参阅 [ADO.NET 限制](adonet-limitations.md)，详细了解哪些 ADO.NET API 不是由 Microsoft.Data.Sqlite 实现的。
 
-将新功能添加到了 node.js 后，会考虑到系统的设计。 尽可能将两个更改减至最小，以便在两者之间进行转换。
+将新功能添加到 Microsoft.Data.Sqlite 后，将考虑 System.Data.SQLite 的设计。 我们会尽可能尝试将两者之间的变化降到最少，以简化两者之间的过渡。
 
 ## <a name="data-types"></a>数据类型
 
-数据类型的处理方式与数据类型的处理方式最大。 如[数据类型](types.md)中所述，quirkiness 不会尝试隐藏 Sqlite 的基础，这允许将任意字符串指定为列类型，并且只有四个基元类型：整数、实数、文本和 BLOB。
+Microsoft.Data.Sqlite 和 System.Data.SQLite 之间的最大区别是处理数据类型的方式。 如[数据类型](types.md)中所述，Microsoft.Data.Sqlite 不会尝试隐藏 SQLite 的基础奇怪特征，此特征允许将任意字符串指定为列类型，并且只有四个基元类型：INTEGER、REAL、TEXT 和 BLOB。
 
-对于列类型，则将其他语义直接映射到 .NET 类型。 这为提供程序提供了一种更强类型的外观，但它具有一些粗糙的边缘。 例如，它们必须引入一个新的 SQL 语句（类型）来指定 SELECT 语句中表达式的列类型。
+System.Data.SQLite 将其他语义应用于列类型，从而将它们直接映射到 .NET 类型。 这为提供程序提供了一种更强类型的外观，但它具有一些粗糙的边缘。 例如，它们必须引入一个新的 SQL 语句 (TYPES) 来指定 SELECT 语句中表达式的列类型。
 
 ## <a name="connection-strings"></a>连接字符串
 
--Sqlite 的[连接字符串](connection-strings.md)关键字少很多。 下表显示了可改为使用的替代项。
+Microsoft.Data.Sqlite 的[连接字符串](connection-strings.md)关键字要少很多。 下表显示了可以替代使用的替代方法。
 
 | 关键字          | 替代项                                         |
 | ---------------- | --------------------------------------------------- |
-| 缓存大小       | 发送 `PRAGMA cache_size = <pages>`                  |
-| 默认超时  | 使用 SqliteConnection 上的 DefaultTimeout 属性 |
+| Cache Size       | 发送 `PRAGMA cache_size = <pages>`                  |
+| 默认超时  | 对 SqliteConnection 使用 DefaultTimeout 属性 |
 | FailIfMissing    | 使用 `Mode=ReadWrite`                                |
-| FullUri          | 使用数据源关键字                         |
-| 日志模式     | 发送 `PRAGMA journal_mode = <mode>`                 |
-| 旧格式    | 发送 `PRAGMA legacy_file_format = 1`                |
-| 最大页计数   | 发送 `PRAGMA max_page_count = <pages>`              |
-| 页面大小        | 发送 `PRAGMA page_size = <bytes>`                   |
+| FullUri          | 使用 Data Source 关键字                         |
+| Journal Mode     | 发送 `PRAGMA journal_mode = <mode>`                 |
+| Legacy Format    | 发送 `PRAGMA legacy_file_format = 1`                |
+| Max Page Count   | 发送 `PRAGMA max_page_count = <pages>`              |
+| Page Size        | 发送 `PRAGMA page_size = <bytes>`                   |
 | 只读        | 使用 `Mode=ReadOnly`                                 |
-| Synchronous      | 发送 `PRAGMA synchronous = <mode>`                  |
-| URI              | 使用数据源关键字                         |
+| 同步      | 发送 `PRAGMA synchronous = <mode>`                  |
+| URI              | 使用 Data Source 关键字                         |
 | UseUTF16Encoding | 发送 `PRAGMA encoding = 'UTF-16'`                   |
 
 ## <a name="authorization"></a>授权
 
-Node.js 没有任何 API 公开 SQLite 的授权回调。 使用问题[#13835](https://github.com/dotnet/efcore/issues/13835)提供有关此功能的反馈。
+Microsoft.Data.Sqlite 没有任何 API 公开 SQLite 的授权回调。 请使用问题 [#13835](https://github.com/dotnet/efcore/issues/13835) 提供有关此功能的反馈。
 
 ## <a name="data-change-notifications"></a>数据更改通知
 
-Node.js 没有任何 API 公开 SQLite 的数据更改通知。 使用问题[#13827](https://github.com/dotnet/efcore/issues/13827)提供有关此功能的反馈。
+Microsoft.Data.Sqlite 没有任何 API 公开 SQLite 的数据更改通知。 请使用问题 [#13827](https://github.com/dotnet/efcore/issues/13827) 提供有关此功能的反馈。
 
 ## <a name="virtual-table-modules"></a>虚拟表模块
 
-Node.js 没有用于创建虚拟表模块的任何 API。 使用问题[#13823](https://github.com/dotnet/efcore/issues/13823)提供有关此功能的反馈。
+Microsoft.Data.Sqlite 没有用于创建虚拟表模块的任何 API。 请使用问题 [#13823](https://github.com/dotnet/efcore/issues/13823) 提供有关此功能的反馈。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [数据类型](types.md)
 * [连接字符串](connection-strings.md)

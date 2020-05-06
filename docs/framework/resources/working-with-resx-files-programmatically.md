@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 ms.openlocfilehash: 3b84d77e4ac9b9889d1bc2f08e5ead6b81deecb0
 ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/13/2020
 ms.locfileid: "81243032"
 ---
 # <a name="work-with-resx-files-programmatically"></a>以编程方式使用 .resx 文件
 
-由于 XML 资源 (.resx) 文件必须由定义完善的 XML 组成，这些 XML 的标头必须遵循特定架构（后跟名称/值对的数据），因此你会发现手动创建这些文件很容易出错。 作为一种替代方法，可以使用 .NET 类库中的类型和成员以编程方式创建 .resx 文件。 还可以使用 .NET 类库来检索存储在 .resx 文件中的资源。 本文介绍如何使用<xref:System.Resources>命名空间中的类型和成员处理 .resx 文件。
+由于 XML 资源 (.resx) 文件必须由定义完善的 XML 组成，这些 XML 的标头必须遵循特定架构（后跟名称/值对的数据），因此你会发现手动创建这些文件很容易出错。 作为一种替代方法，可以使用 .NET 类库中的类型和成员以编程方式创建 .resx 文件。 还可以使用 .NET 类库来检索存储在 .resx 文件中的资源。 本文说明如何使用 <xref:System.Resources> 命名空间的类型和成员来操作 .resx 文件。
 
-本文讨论使用包含资源的 XML （.resx） 文件。 有关使用已嵌入到程序集中的二进制资源文件的信息，请参阅<xref:System.Resources.ResourceManager>。
+本文讨论的是如何操作包含资源的 XML (.resx) 文件。 有关操作嵌入程序集中的二进制资源文件的信息，请参阅 <xref:System.Resources.ResourceManager>。
 
 > [!WARNING]
 > 除编程方式以外还可以使用其他方式操作 .resx 文件。 如果将资源文件添加到 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 项目，那么 Visual Studio 会提供一个用于创建和维护 .resx 文件的接口，并且在编译时自动将 .resx 文件转换为 .resources 文件。 你还可以使用文本编辑器来直接操作 .resx 文件。 但是，若要避免破坏文件，请注意不要修改存储在文件中的任何二进制信息。
@@ -39,7 +39,7 @@ ms.locfileid: "81243032"
 > [!WARNING]
 > 请勿使用资源文件存储密码、 安全敏感信息或私人数据。
 
-下面的示例创建了一个名为 CarResources.resx 的 .resx 文件，该文件存储了六个字符串、一个图标和两个由应用程序定义的对象（两个 `Automobile` 对象）。 在`Automobile`示例中定义和实例化的类使用 属性<xref:System.SerializableAttribute>标记。
+下面的示例创建了一个名为 CarResources.resx 的 .resx 文件，该文件存储了六个字符串、一个图标和两个由应用程序定义的对象（两个 `Automobile` 对象）。 本示例中定义并实例化的 `Automobile` 类使用 <xref:System.SerializableAttribute> 属性进行标记。
 
 [!code-csharp[Conceptual.Resources.ResX#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resx/cs/create1.cs#1)]
 [!code-vb[Conceptual.Resources.ResX#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]
@@ -74,18 +74,18 @@ ms.locfileid: "81243032"
 
  这会生成一个具有与 .resx 文件相同的根文件名的二进制资源文件，并且该文件的扩展名为 .resources。 然后，可在编译时将该文件编译为可执行文件或库。 如果你使用的是 Visual Basic 编译器，则使用以下语法以在应用程序的可执行文件中嵌入一个 .resources 文件：
 
- vbc filename .vb -resource: .resourcesFilename**** ** **** **
+ **vbc** *filename* **.vb -resource:** *.resourcesFilename*
 
  如果使用的是 C#，则语法如下所示：
 
- csc filename .cs -resource: .resourcesFilename**** ** **** **
+ **csc** *filename* **.cs -resource:** *.resourcesFilename*
 
  还可以使用 [程序集链接器 (AL.exe)](../tools/al-exe-assembly-linker.md)在附属程序集中嵌入 .resources 文件，基本语法如下：
 
- al resourcesFilename -out: assemblyFilename**** ** **** **
+ **al** *resourcesFilename* **-out:** *assemblyFilename*
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [创建资源文件](creating-resource-files-for-desktop-apps.md)
 - [Resgen.exe（资源文件生成器）](../tools/resgen-exe-resource-file-generator.md)
-- [Al.exe（装配链接器）](../tools/al-exe-assembly-linker.md)
+- [Al.exe（程序集链接器）](../tools/al-exe-assembly-linker.md)

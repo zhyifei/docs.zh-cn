@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
 ms.openlocfilehash: c15f55f3a3c2b4e404767ddf96e258bc1e9771d7
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75716753"
 ---
-# <a name="-link-visual-basic"></a>-link （Visual Basic）
+# <a name="-link-visual-basic"></a>-link (Visual Basic)
 使编译器让指定程序集中的 COM 类型信息可供当前正在编译的项目使用。  
   
 ## <a name="syntax"></a>语法  
@@ -27,17 +27,17 @@ ms.locfileid: "75716753"
 -link:fileList  
 ```
 
-或  
+or  
 
 ```console
 -l:fileList  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
   
-|术语|Definition|  
+|术语|定义|  
 |---|---|  
-|`fileList`|必须的。 程序集文件名的逗号分隔列表。 如果文件名包含空格，则将名称括在引号内。|  
+|`fileList`|必需。 程序集文件名的逗号分隔列表。 如果文件名包含空格，则将名称括在引号内。|  
   
 ## <a name="remarks"></a>备注  
  `-link` 选项使你可以部署具有嵌入类型信息的应用程序。 应用程序随后可以使用运行时程序集中实现嵌入类型信息的类型，而无需引用运行时程序集。 如果发布了各种版本的运行时程序集，则包含嵌入类型信息的应用程序可以使用各种版本，而无需重新编译。 有关示例，请参阅[演练：嵌入托管程序集中的类型](../../../standard/assembly/embed-types-visual-studio.md)。  
@@ -49,7 +49,7 @@ ms.locfileid: "75716753"
 > [!NOTE]
 > 在代码中创建嵌入 COM 类型的实例时，必须使用适当的接口创建该实例。 尝试使用组件类创建嵌入 COM 类型的实例会导致错误。  
   
- 若要在 Visual Studio 中设置 `-link` 选项，请添加程序集引用并将 `Embed Interop Types` 属性设置为“true”。 `Embed Interop Types` 属性的默认值为 **false**。  
+ 若要在 Visual Studio 中设置 `-link` 选项，请添加程序集引用并将 `Embed Interop Types` 属性设置为“true”  。 `Embed Interop Types` 属性的默认值为 **false**。  
   
  如果链接到本身引用了其他 COM 程序集（程序集 B）的 COM 程序集（程序集 A），则在满足以下任一条件时，还必须链接到程序集 B：  
   
@@ -57,9 +57,9 @@ ms.locfileid: "75716753"
   
 - 调用具有程序集 B 中的返回类型或参数类型的字段、属性、事件或方法。  
   
- 使用[-libpath](libpath.md)可指定一个或多个程序集引用所在的目录。  
+ 使用 [-libpath](libpath.md) 指定一个或多个程序集引用所在的目录。  
   
- 与[-reference](reference.md)编译器选项一样，`-link` 编译器选项使用 Vbc 响应文件，该文件引用频繁使用的 .NET Framework 程序集。 如果你不希望编译器使用 Vbc 文件，请使用[-noconfig](noconfig.md)编译器选项。  
+ 与 [-reference](reference.md) 编译器选项类似，`-link` 编译器选项使用 Vbc.rsp 响应文件，该文件引用常用 .NET Framework 程序集。 如果不希望编译器使用 Vbc.rsp 文件，则使用 [-noconfig](noconfig.md) 编译器选项。  
   
  `-link` 的缩写形式是 `-l`。  
   
@@ -83,17 +83,17 @@ ms.locfileid: "75716753"
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>示例  
- 以下命令行编译源文件 `OfficeApp.vb` 和引用程序集中的 `COMData1.dll` 并 `COMData2.dll` 生成 `OfficeApp.exe`。  
+ 下面的命令行编译源文件 `OfficeApp.vb` 并引用来自 `COMData1.dll` 和 `COMData2.dll` 的程序集以生成 `OfficeApp.exe`。  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Basic 命令行编译器](index.md)
 - [演练：嵌入托管程序集中的类型](../../../standard/assembly/embed-types-visual-studio.md)
-- [-reference （Visual Basic）](reference.md)
+- [-reference (Visual Basic)](reference.md)
 - [-noconfig](noconfig.md)
 - [-libpath](libpath.md)
 - [示例编译命令行](sample-compilation-command-lines.md)

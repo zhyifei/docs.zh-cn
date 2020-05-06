@@ -4,12 +4,12 @@ description: 了解 C# 中可以为 null 的值类型及其使用方法
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: c13ef6a091ec6aebd4608c5ed8d2c03b067c7312
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: fcd49d7d25b0ad23363db8cb61596004b2e87a8d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888067"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738995"
 ---
 # <a name="nullable-value-types-c-reference"></a>可为空的值类型（C# 参考）
 
@@ -24,7 +24,7 @@ ms.locfileid: "80888067"
 
 ## <a name="declaration-and-assignment"></a>声明和赋值
 
-由于值类型可隐式转换为相应的可为空的值类型，因此可以像向其基础值类型赋值一样，向可为空值类型的变量赋值。 还可分配 `null` 值。 例如:
+由于值类型可隐式转换为相应的可为空的值类型，因此可以像向其基础值类型赋值一样，向可为空值类型的变量赋值。 还可分配 `null` 值。 例如：
 
 [!code-csharp[declare and assign](snippets/NullableValueTypes.cs#Declaration)]
 
@@ -40,7 +40,7 @@ ms.locfileid: "80888067"
 
 - <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> 指示可为空值类型的实例是否有基础类型的值。
 
-- 如果 <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> 为 <xref:System.Nullable%601.HasValue%2A>，则 `true` 获取基础类型的值。 如果 <xref:System.Nullable%601.HasValue%2A> 为 `false`，则 <xref:System.Nullable%601.Value%2A> 属性将引发 <xref:System.InvalidOperationException>。
+- 如果 <xref:System.Nullable%601.HasValue%2A> 为 `true`，则 <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> 获取基础类型的值。 如果 <xref:System.Nullable%601.HasValue%2A> 为 `false`，则 <xref:System.Nullable%601.Value%2A> 属性将引发 <xref:System.InvalidOperationException>。
 
 以下示例中的使用 `HasValue` 属性在显示值之前测试变量是否包含该值：
 
@@ -68,12 +68,12 @@ ms.locfileid: "80888067"
 
 ## <a name="lifted-operators"></a>提升的运算符
 
-预定义的一元运算符和二元[运算符](../operators/index.md)或值类型 `T` 支持的任何重载运算符也受相应的可为空值类型 `T?` 支持。 如果一个或全部两个操作数为  `null`，则这些运算符（也称为提升的运算符）将生成 `null`；否则，运算符使用其操作数所包含的值来计算结果。 例如:
+预定义的一元运算符和二元[运算符](../operators/index.md)或值类型 `T` 支持的任何重载运算符也受相应的可为空值类型 `T?` 支持。 如果一个或全部两个操作数为 `null` ，则这些运算符（也称为提升的运算符）将生成 `null`；否则，运算符使用其操作数所包含的值来计算结果。 例如：
 
 [!code-csharp[lifted operators](snippets/NullableValueTypes.cs#LiftedOperator)]
 
 > [!NOTE]
-> 对于 `bool?` 类型，预定义的 `&` 和 `|` 运算符不遵循此部分中描述的规则：即使其中一个操作数为 `null`，运算符计算结果也可以不为 NULL。 有关详细信息，请参阅[布尔逻辑运算符](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)一文的[可以为 null 的布尔逻辑运算符](../operators/boolean-logical-operators.md)部分。
+> 对于 `bool?` 类型，预定义的 `&` 和 `|` 运算符不遵循此部分中描述的规则：即使其中一个操作数为 `null`，运算符计算结果也可以不为 NULL。 有关详细信息，请参阅[布尔逻辑运算符](../operators/boolean-logical-operators.md)一文的[可以为 null 的布尔逻辑运算符](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)部分。
 
 对于[比较运算符](../operators/comparison-operators.md) `<`、`>`、`<=` 和 `>=`，如果一个或全部两个操作数都为 `null`，则结果为 `false`；否则，将比较操作数的包含值。 请勿作出如下假定：由于某个特定的比较（例如 `<=`）返回 `false`，则相反的比较 (`>`) 返回 `true`。 以下示例显示 10
 
@@ -101,7 +101,7 @@ ms.locfileid: "80888067"
 
 ## <a name="how-to-identify-a-nullable-value-type"></a>如何确定可为空的值类型
 
-下面的示例演示了如何确定 <xref:System.Type?displayProperty=nameWithType> 实例是否表示已构造的可为空值类型，即，具有指定类型参数 <xref:System.Nullable%601?displayProperty=nameWithType> 的 `T` 类型：
+下面的示例演示了如何确定 <xref:System.Type?displayProperty=nameWithType> 实例是否表示已构造的可为空值类型，即，具有指定类型参数 `T` 的 <xref:System.Nullable%601?displayProperty=nameWithType> 类型：
 
 [!code-csharp-interactive[whether Type is nullable](snippets/NullableValueTypes.cs#IsTypeNullable)]
 
@@ -132,7 +132,7 @@ ms.locfileid: "80888067"
 - [显式可为空转换](~/_csharplang/spec/conversions.md#explicit-nullable-conversions)
 - [提升的转换运算符](~/_csharplang/spec/conversions.md#lifted-conversion-operators)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [“提升”的准确含义是什么？](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean)
