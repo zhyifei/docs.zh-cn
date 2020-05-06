@@ -2,12 +2,12 @@
 title: 使用 IHttpClientFactory 实现复原 HTTP 请求
 description: 了解如何使用自 .NET Core 2.1 起可用的 IHttpClientFactory 来创建 `HttpClient` 实例，使其更轻松地在应用程序中使用。
 ms.date: 03/03/2020
-ms.openlocfilehash: 088fb6c7e10ad656247ee4065da5c13d383b2cf7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ade26208a931faa456c8e267def2caef7a3f32de
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847214"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507294"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>使用 IHttpClientFactory 实现复原 HTTP 请求
 
@@ -17,13 +17,13 @@ ms.locfileid: "78847214"
 
 常见的原始 <xref:System.Net.Http.HttpClient> 类非常易于使用，但在某些情况下，许多开发人员却并未正确使用该类。
 
-虽然此类实现 `IDisposable`，但并不是首选在 `using` 语句中声明和实例化它，因为释放 `HttpClient` 对象时，基础套接字不会立即释放，这可能会导致“套接字耗尽”问题。 有关此问题的详细信息，请参阅[你正在以错误方式使用 HttpClient，这将导致软件受损](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/)的博客文章。
+虽然此类实现 `IDisposable`，但并不是首选在 `using` 语句中声明和实例化它，因为释放 `HttpClient` 对象时，基础套接字不会立即释放，这可能会导致“套接字耗尽”问题  。 有关此问题的详细信息，请参阅[你正在以错误方式使用 HttpClient，这将导致软件受损](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/)的博客文章。
 
 因此，`HttpClient` 应进行一次实例化并在应用程序的生命周期中重复使用。 在负载较重的情况下，实例化每个请求的 `HttpClient` 类将耗尽可用的套接字数。 该问题会导致 `SocketException` 错误。 要解决此问题，可能的方法是将 `HttpClient` 对象创建为单一对象或静态对象，请参阅[关于 HttpClient 用法的 Microsoft 文章](../../../csharp/tutorials/console-webapiclient.md)中的说明。 对于生存期较短的控制台应用或一天运行几次的类似应用，这可能是一个不错的解决方案。
 
-在长期运行的进程中使用 `HttpClient` 的共享实例时，开发人员遇到的另一个问题。 在将 HttpClient 实例化为单一实例或静态对象的情况下，它无法处理 DNS 更改，如 dotnet/corefx GitHub 存储库的此[问题](https://github.com/dotnet/corefx/issues/11224)中所述。
+在长期运行的进程中使用 `HttpClient` 的共享实例时，开发人员遇到的另一个问题。 在将 HttpClient 实例化为单一实例或静态对象的情况下，它无法处理 DNS 更改，如 dotnet/runtime GitHub 存储库的此[问题](https://github.com/dotnet/runtime/issues/18348)中所述。
 
-但是，问题实际上不是 `HttpClient` 本身，而是 [HttpClient 的默认构造函数](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor)，因为它创建了一个新的实际 <xref:System.Net.Http.HttpMessageHandler> 实例，该实例具有上面提到的“套接字耗尽”和 DNS 更改问题。
+但是，问题实际上不是 `HttpClient` 本身，而是 [HttpClient 的默认构造函数](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor)，因为它创建了一个新的实际 <xref:System.Net.Http.HttpMessageHandler> 实例，该实例具有上面提到的“套接字耗尽”和 DNS 更改问题  。
 
 若要解决上述问题并使 `HttpClient` 实例可管理，.NET Core 2.1 引入了 <xref:System.Net.Http.IHttpClientFactory> 接口，该接口可用于在应用中通过依赖关系注入 (DI) 来配置和创建 `HttpClient` 实例。 它还提供基于 Polly 的中间件的扩展，以利用 HttpClient 中的委托处理程序。
 
@@ -39,7 +39,7 @@ ms.locfileid: "78847214"
 - 管理 <xref:System.Net.Http.HttpMessageHandler> 的生存期，避免在自行管理 `HttpClient` 生存期时出现上述问题。
 
 > [!TIP]
-> 由于关联的 `HttpMessageHandler` 由工厂管理，因此可安全释放由 DI 注入的 `HttpClient` 实例。 事实上，注入的 `HttpClient` 实例是从 DI 角度区分范围的。
+> 由于关联的 `HttpMessageHandler` 由工厂管理，因此可安全释放由 DI 注入的 `HttpClient` 实例。 事实上，注入的 `HttpClient` 实例是从 DI 角度区分范围的  。
 
 > [!NOTE]
 > `IHttpClientFactory` (`DefaultHttpClientFactory`) 实现与 `Microsoft.Extensions.DependencyInjection` NuGet 包中的 DI 实现紧密关联。 有关使用其他 DI 容器的详细信息，请参阅此 [GitHub 讨论](https://github.com/dotnet/extensions/issues/1345)。
@@ -190,16 +190,16 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 
 ## <a name="additional-resources"></a>其他资源
 
-- 在 .NET Core 中使用 HttpClientFactory  
+- 在 .NET Core 中使用 HttpClientFactory   
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- `dotnet/extensions` GitHub 存储库中的 HttpClientFactory 源代码  
+- `dotnet/extensions` GitHub 存储库中的 HttpClientFactory 源代码   
   <https://github.com/dotnet/extensions/tree/master/src/HttpClientFactory>
 
 - **Polly（.NET 的恢复和暂时性故障处理库）**  
   <http://www.thepollyproject.org/>
   
-- 使用无依赖项注入的 IHttpClientFactory（GitHub 问题）  
+- 使用无依赖项注入的 IHttpClientFactory（GitHub 问题）   
   <https://github.com/dotnet/extensions/issues/1345>
 
 >[!div class="step-by-step"]

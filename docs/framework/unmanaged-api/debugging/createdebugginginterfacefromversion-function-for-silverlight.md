@@ -8,12 +8,12 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-ms.openlocfilehash: 85b5a5a630f399d0e036de434365e2e4f8f02dea
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c83bdcca4fab75b4ae94500ceb785b6000cd802a
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793826"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860862"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>Silverlight 的 CreateDebuggingInterfaceFromVersion 函数
 接受从[CreateVersionStringFromModule 函数](createversionstringfrommodule-function.md)返回的公共语言运行时（CLR）版本字符串，并返回相应的调试器接口（通常为[ICorDebug](icordebug-interface.md)）。  
@@ -36,7 +36,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
 ## <a name="return-value"></a>返回值  
  S_OK  
- `ppCordb` 引用了实现[ICorDebug 接口](icordebug-interface.md)接口的有效对象。  
+ `ppCordb`引用实现[ICorDebug 接口](icordebug-interface.md)接口的有效对象。  
   
  E_INVALIDARG  
  `szDebuggeeVersion` 或 `ppCordb` 为 null。  
@@ -53,8 +53,8 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 ## <a name="remarks"></a>备注  
  返回的接口提供用于附加到目标进程中的 CLR 和调试 CLR 正在运行的托管代码的功能。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** dbgshim.dll  
   

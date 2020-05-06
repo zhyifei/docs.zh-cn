@@ -1,24 +1,24 @@
 ---
 title: 为服务器应用选择 .NET Core 或 .NET Framework
-description: 关于在 .NET 中生成服务器应用时应考虑使用哪种 .NET 实现的指南。
+description: 可帮助你确定在生成服务器应用时要使用的 .NET 实现的指南。
 author: cartermp
-ms.date: 06/19/2018
-ms.openlocfilehash: 885a7fb3419eafa5d88ef621cf6ad04a8d48bb59
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.date: 04/28/2020
+ms.openlocfilehash: 30157276bce53ed44dca5b660172e5556dab14f8
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607488"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507437"
 ---
-# <a name="choose-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
+# <a name="net-core-vs-net-framework-for-server-apps"></a>适用于服务器应用的 .NET Core 和. .NET Framework
 
-有两种支持的实现可用于通过 NET Framework 和 .NET Core 生成服务器端应用程序。 这两者共享许多相同的组件，可在它们之间共享代码。 但两者之间存在根本的差异，可根据需要实现的目标进行选择。  本文介绍了在何种情况下进行选择。
+有两种支持的 .NET 实现可用于生成服务器端应用：.NET Framework 和 .NET Core。 这两者共享许多相同的组件，可在它们之间共享代码。 但两者之间存在根本的差异，可根据需要实现的目标进行选择。 本文介绍了在何种情况下进行选择。
 
 在以下情况，对服务器应用程序使用 .NET Core：
 
 - 用户有跨平台需求。
-- 用户正在面向微服务。
-- 用户正在使用 Docker 容器。
+- 你正在以微服务为目标。
+- 你正在使用 Docker 容器。
 - 需要高性能和可扩展的系统。
 - 需按应用程序提供并行的 .NET 版本。
 
@@ -53,15 +53,17 @@ ms.locfileid: "81607488"
 
 Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管在 [Azure Kubernetes 服务](https://azure.microsoft.com/services/kubernetes-service/)等云服务中。 Azure Kubernetes 服务可管理、协调和缩放云中基于容器的应用程序。
 
-### <a name="a-need-for-high-performance-and-scalable-systems"></a>高性能和可扩展系统的需求
+### <a name="high-performance-and-scalable-systems"></a>高性能和可扩展的系统
 
 如果系统需要最佳的性能和可伸缩性，.NET Core 和 ASP.NET Core 是最佳的选择。 Windows Server 和 Linux 的高性能服务器运行时使 .NET 成为 [TechEmpower 基准](https://www.techempower.com/benchmarks/#hw=ph&test=plaintext)上执行最佳的 Web 框架。
 
 性能和可伸缩性对微服务体系结构尤为重要，体系结构中可能正在运行数百个微服务。 借助 ASP.NET Core，系统运行的服务器/虚拟机 (VM) 数要低得多。 减少服务器/VM 后可节省基础结构和托管成本。
 
-### <a name="a-need-for-side-by-side-of-net-versions-per-application-level"></a>需要按应用程序级别选择并行的 .NET 版本
+### <a name="side-by-side-net-versions-per-application-level"></a>按应用程序级别并行安装 .NET 版本
 
-若要安装含不同 .NET 版本上的依赖项的应用程序，建议使用 NET Core。 通过 .NET Core 可在同一计算机上并行安装不同版本的 .NET Core 运行时。 并行安装允许在同一服务器上使用多个服务，每个服务位于其相应的 .NET Core 版本上。 这还可在应用程序升级和 IT 运营时降低风险、节省成本。
+若要安装含不同 .NET 版本上的依赖项的应用程序，建议使用 NET Core。 .NET Core 支持在同一计算机上并行安装不同版本的 .NET Core 运行时。 并行安装允许在同一服务器上使用多个服务，每个服务位于其相应的 .NET Core 版本上。 这还可在应用程序升级和 IT 运营时降低风险、节省成本。
+
+.NET Framework 不支持并行安装。 它是一个 Windows 组件，一次只能有一个版本存在于计算机上。 .NET Framework 的每个版本均替换之前的版本。 如果安装面向 .NET Framework 更高版本的新应用，则可能会中断计算机上运行的现有应用，因为替换了之前的版本。
 
 ## <a name="when-to-choose-net-framework"></a>选择 .NET Framework 的情形
 
@@ -71,16 +73,22 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 
 在大多数情况下，不需要将现有应用程序迁移到 .NET Core。 相反，若要扩展现有的应用程序（例如，在 ASP.NET Core 中写入新的 Web 服务），建议使用 .NET Core。
 
-### <a name="a-need-to-use-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>需要使用不可用于 .NET Core 的第三方 .NET 库或 NuGet 包
+### <a name="aspnet-core-on-net-framework"></a>.NET Framework 上的 ASP.NET Core
+
+有关 .NET Framework 上的 ASP.NET Core 支持的信息，请参阅 [.NET Core 支持策略](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。
+
+### <a name="third-party-libraries-or-nuget-packages-not-available-for-net-core"></a>不可用于 .NET Core 的第三方库或 NuGet 包
 
 库很快将使用 .NET Standard。 通过 .NET Standard 可跨各种 .NET 实现（包括 .NET Core）共享代码。 使用 .NET Standard 2.0 则更简单：
 
 - API 曲面已变为更大。
-- 引入了 .NET Framework 兼容性模式。 此兼容性模式允许 .NET Standard/.NET Core 项目引用.NET Framework 库。 若要详细了解兼容性模式，请参阅 [Announcing .NET Standard 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/)（宣布发布 .NET Standard 2.0）。
+- 它引入了 .NET Framework 兼容性模式。
 
-因此，只有在库或 NuGet 包使用的技术在 .NET Standard/.NET Core 中不可用的情况下，才需要使用 .NET Framework。
+  此兼容性模式允许 .NET Standard 和 .NET Core 项目引用 .NET Framework 库。 若要详细了解兼容性模式，请参阅 [Announcing .NET Standard 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/)（宣布发布 .NET Standard 2.0）。
 
-### <a name="a-need-to-use-net-technologies-not-available-for-net-core"></a>需要使用不可用于 .NET Core 的 .NET 技术
+仅在以下情况下需要使用 .NET Framework：库或 NuGet 包使用 .NET Standard 或 .NET Core 中不提供的技术。
+
+### <a name="net-technologies-not-available-for-net-core"></a>不可用于 .NET Core 的 .NET 技术
 
 某些 .NET Framework 技术在 .NET Core 中不可用。 其中一些技术可能在更高版本的 .NET Core 中可用。 但其他技术不会应用于 .NET Core 面向的新应用程序模式，因此可能永远不可用。 以下列表显示无法在 .NET Core 中找到的最常见技术：
 
@@ -90,15 +98,13 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 
 - WCF 服务的实现。 虽然 [WCF 客户端库](https://github.com/dotnet/wcf)可从 .NET Core 使用 WCF 服务，WCF 服务器实现目前只在 .NET Framework 上可用。 这种情况虽然不属于 .NET Core 当前计划，但将来会考虑这点。
 
-- 工作流相关的服务：Windows Workflow Foundation (WF)、工作流服务（WCF + 单个服务中的 WF）和 WCF 数据服务（以前称为“ADO.NET 数据服务”）仅在 .NET Framework 上可用。  尚未计划将 WF/WCF+WF/WCF Data Services 引入 .NET Core。
+- 工作流相关的服务：Windows Workflow Foundation (WF)、工作流服务（WCF + 单个服务中的 WF）和 WCF Data Services（以前称为“ADO.NET Data Services”）仅在 .NET Framework 上可用。 目前没有将这些技术引入 .NET Core 的计划。
 
 - 语言支持：.NET Core 目前支持 Visual Basic 和 F#，但不是所有项目类型都支持。 有关支持的项目模板列表，请参阅 [dotnet new 的模板选项](../core/tools/dotnet-new.md#arguments)。
 
-除了正式的路线图，还有其他框架将植入 .NET Core。 若要查看完整列表，请参阅标记为 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) 的 CoreFX 问题。 此列表并不代表 Microsoft 承诺将这些组件引入 .NET Core。 这样做只是因为他们捕获到了社区所需。 如果关注任何标记为 `port-to-core` 的组件，请在 GitHub 上参与讨论。 如果认为遗漏了某些内容，请在 [.NET 存储库](https://github.com/dotnet/runtime/issues/new)中提出新的问题。
+### <a name="platform-doesnt-support-net-core"></a>平台不支持 .NET Core
 
-### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>需要使用不支持 .NET Core 的平台
-
-某些 Microsoft 或第三方平台不支持 .NET Core。 某些 Azure 服务提供尚不可用于 .NET Core 的 SDK。 这只是过渡情况，因为所有 Azure 服务都将使用 .NET Core。 在此期间，可用始终使用等效的 REST API 取代客户端 SDK。
+某些 Microsoft 或第三方平台不支持 .NET Core。 某些 Azure 服务提供尚不可用于 .NET Core 的 SDK。 这只是过渡情况，因为所有 Azure 服务都将使用 .NET Core。 在此期间，可使用等效的 REST API（而不是客户端 SDK）。
 
 ## <a name="see-also"></a>请参阅
 

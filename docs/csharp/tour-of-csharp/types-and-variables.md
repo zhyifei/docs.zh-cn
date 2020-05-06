@@ -1,20 +1,20 @@
 ---
 title: C# 类型和变量 - C# 语言介绍
 description: 了解如何在 C# 中定义类型和声明变量
-ms.date: 02/25/2020
+ms.date: 04/24/2020
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: b2a5255a243c12543a1cd59b5724b6c826306e04
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a3bd3dc802f0d080fd96036067f709e62faf426
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78159086"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140999"
 ---
 # <a name="types-and-variables"></a>类型和变量
 
 C# 有两种类型：*值类型*和*引用类型*。 值类型的变量直接包含数据，而引用类型的变量则存储对数据（称为“对象”）的引用。 对于引用类型，两个变量可以引用同一对象；因此，对一个变量执行的运算可能会影响另一个变量引用的对象。 借助值类型，每个变量都有自己的数据副本；因此，对一个变量执行的运算不会影响另一个变量（`ref` 和 `out` 参数变量除外）。
 
-C# 值类型又细分为*简单类型*、*枚举类型*、*结构类型*和*可以为 null 的值类型*。 C# 引用类型又细分为*类类型*、*接口类型*、*数组类型*和*委托类型*。
+C# 值类型又细分为简单类型、枚举类型、结构类型和可以为 null 的值类型。     C# 引用类型又细分为类类型、接口类型、数组类型和委托类型。    
 
 以下大纲概述了 C# 的类型系统。
 
@@ -32,6 +32,8 @@ C# 值类型又细分为*简单类型*、*枚举类型*、*结构类型*和*可�
     - 格式为 `struct S {...}` 的用户定义类型
   - [可以为 null 的值类型][NullableTypes]
     - 值为 `null` 的其他所有值类型的扩展
+  - [元组值类型][TupleTypes]
+    - 格式为 `(T1, T2, ...)` 的用户定义类型
 - [引用类型][ReferenceTypes]
   - [类类型][ClassTypes]
     - 其他所有类型的最终基类：`object`
@@ -49,6 +51,7 @@ C# 值类型又细分为*简单类型*、*枚举类型*、*结构类型*和*可�
 [EnumTypes]: ../language-reference/builtin-types/enum.md
 [StructTypes]: ../language-reference/builtin-types/struct.md
 [NullableTypes]: ../language-reference/builtin-types/nullable-value-types.md
+[TupleTypes]: ../tuples.md
 [ReferenceTypes]: ../language-reference/keywords/reference-types.md
 [ClassTypes]: ../language-reference/keywords/class.md
 [InterfaceTypes]: ../language-reference/keywords/interface.md
@@ -83,9 +86,9 @@ C# 采用统一的类型系统，因此任意类型的值都可视为 `object`�
 
 [!code-csharp[Boxing](../../../samples/snippets/csharp/tour/types-and-variables/Program.cs#L1-L10)]
 
-当值类型的值转换成 `object` 类型时，将分配 `object` 实例（亦称为“箱”）来包含值，然后该值会复制到相应的箱中。 相反，当 `object` 引用被显式转换成值类型时，将检查引用的 `object` 是否是具有正确值类型的箱；如果检查成功，则会将箱中的值复制出来。
+将值类型的值分配给 `object` 对象引用时，会分配一个“箱”来保存此值。 该箱是引用类型的实例，此值会被复制到该箱。 相反，当 `object` 引用被显式转换成值类型时，将检查引用的 `object` 是否是具有正确值类型的箱。 如果检查成功，则会将箱中的值复制到值类型。
 
-C# 的统一类型系统实际上意味着可以“按需”将值类型转换成对象。 鉴于这种统一性，使用类型 `object` 的常规用途库可以与引用类型和值类型结合使用。
+C# 的统一类型系统实际上意味着“按需”将值类型视为 `object` 引用。 鉴于这种统一性，使用类型 `object` 的常规用途库可以与派生自 `object` 的所有类型结合使用，包括引用类型和值类型。
 
 C# 有多种*变量*，其中包括字段、数组元素、局部变量和参数。 变量表示存储位置，每个变量都具有一种类型，用于确定可以在变量中存储哪些值，如下文所述。
 

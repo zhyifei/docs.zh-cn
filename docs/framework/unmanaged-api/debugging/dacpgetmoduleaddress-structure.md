@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1e3a62de3259c012438c64ece26e696682ec96e6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e460264e2393858c028ba51aec4a4f2c01649994
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789209"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860822"
 ---
 # <a name="dacpgetmoduleaddress-structure"></a>DacpGetModuleAddress 结构
 
@@ -37,27 +37,27 @@ struct DacpGetModuleAddress
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-| 成员      | 描述                |
+| 成员      | 说明                |
 | ----------- | -------------------------- |
 | `ModulePtr` | 指向模块的指针。 |
 
 ## <a name="methods"></a>方法
 
-| 方法                                                                                               | 描述                                                                    |
+| 方法                                                                                               | 说明                                                                    |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | [请求](dacpgetmoduleaddress-request-method.md) | 执行从给定的运行时结构填充结构的请求。 |
 
 ## <a name="remarks"></a>备注
 
-此结构存在于运行时中，并且不会通过任何标头或库文件公开。 若要使用它，请定义上面指定的结构，其中 `CLRDATA_ADDRESS` 为64位无符号整数。
+此结构存在于运行时中，并且不会通过任何标头或库文件公开。 若要使用它，请定义上面指定的结构， `CLRDATA_ADDRESS`其中是一个64位无符号整数。
 
-## <a name="requirements"></a>需求
-**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
 **标头：** 内容  
 **库：** 内容  
-**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另请参阅
 

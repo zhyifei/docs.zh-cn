@@ -4,12 +4,12 @@ description: 了解如何使用 .NET 可移植性分析器工具，评估代码�
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 397d9f08a0dd28f80d653ac5044d6acfa2418727
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 8d019bef5fddac9f7c3d93e416cea061905c82ff
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344299"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728447"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 可移植性分析器
 
@@ -67,12 +67,12 @@ ms.locfileid: "80344299"
 - 目标成员：目标平台缺少的方法
 - 程序集名称：缺少的 API 所在的 .NET Framework 程序集。
 - 每个选定的目标平台都是一列，例如“.NET Core”：“不支持”值表示此目标平台不支持 API。
-- 建议的更改：要进行更改的推荐 API 或技术。 对于许多 API，此字段当前为空或已过时。 由于 API 数量众多，在维护 API 方面，我们面临着巨大的挑战。 我们致力于提供备用解决方案，以便为客户提供有用的信息。
+- 建议的更改：要进行更改的推荐 API 或技术。 对于许多 API，此字段当前为空或已过时。 由于 API 数量众多，在维护 API 最新状态方面，我们面临着巨大的挑战。 我们致力于提供备用解决方案，以便为客户提供有用的信息。
 
 #### <a name="missing-assemblies"></a>缺少程序集
 
 ![缺少的程序集的屏幕截图。](./media/portability-analyzer/api-catalog-missing-assemblies.png)
 
-可以在报表中找到“缺少程序集”部分。 它告诉你，此程序集列表由分析的程序集引用，但不对其进行分析。 如果它是你自己拥有的程序集，请将其包含在 API 可移植性分析器运行过程中，以便你可以获得 API 级别的详细可移植性报表。 如果它是第三方库，则查找是否有支持自己的目标平台的最新版本。 如果有，请考虑转而使用最新版本。 最终，你希望此列表包含应用所依赖的所有第三方程序集，并确认其具有支持自己的目标平台的版本。
+可以在报表中找到“缺少程序集”部分。 此部分包含由你的经过分析的程序集引用的程序集列表（此列表未经过分析）。 如果它是你自己拥有的程序集，请将其包含在 API 可移植性分析器运行过程中，以便你可以获得详细的 API 级别可移植性报表。 如果它是第三方库，请检查是否存在支持目标平台的更新版本，并考虑转到较新的版本。 最终，此列表应该包含你的应用依赖的所有第三方程序集（其中具有支持目标平台的版本）。
 
 有关 .NET 可移植性分析器的详细信息，请访问 [GitHub 文档](https://github.com/Microsoft/dotnet-apiport#documentation)和[简要了解 .NET 可移植性分析器](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer)第 9 频道视频。

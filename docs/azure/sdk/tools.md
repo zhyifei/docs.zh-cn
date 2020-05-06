@@ -5,7 +5,7 @@ ms.date: 10/01/2018
 ms.custom: azure-sdk-dotnet
 ms.openlocfilehash: 1c6370e4b3e5e6e901ba6ef56c65d794f3da5abe
 ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/19/2020
 ms.locfileid: "81433162"
@@ -14,30 +14,30 @@ ms.locfileid: "81433162"
 
 ## <a name="sdk-downloads"></a>SDK 下载
 
-.NET 的 Azure 库作为[NuGet 包](https://www.nuget.org/packages?q=windowsazureofficial)实现。 有关 Azure 服务组织的安装说明，请参阅[API 参考](/dotnet/api/overview/azure/?view=azure-dotnet)。
+用于 .NET 的 Azure 库作为 [NuGet 程序包](https://www.nuget.org/packages?q=windowsazureofficial)实现。 若要查看 Azure 服务整理的安装说明，请参阅 [API 引用](/dotnet/api/overview/azure/?view=azure-dotnet)。
 
 ## <a name="development-tools"></a>开发工具
 
-Visual Studio 具有用于内置许多 Azure 服务的工具。 某些 Azure 服务具有其他可用工具或仿真器，如[Azure 存储资源管理器](https://azure.microsoft.com/features/storage-explorer/)。 如有必要，请参阅 Azure 服务的文档，了解任何其他工具。
+Visual Studio 内置了用于许多 Azure 服务的工具。 一些 Azure 服务有其他可用的工具或模拟器，例如 [Azure 存储资源管理器](https://azure.microsoft.com/features/storage-explorer/)。 如有必要，请参阅适用于你的 Azure 服务的文档，以获取其他工具的信息。
 
-这些说明为您的操作系统安装建议的启动开发环境。
+这些说明会为你的操作系统安装建议的启动开发环境。
 
 ## <a name="windows"></a>[Windows](#tab/windows)
 
-Visual Studio 版本 2017 及更高版本已内置支持 Azure 开发。 以下步骤描述了在可视化工作室中启用 Azure 开发支持。
+Visual Studio 2017 及更高版本针对 Azure 开发提供内置支持。 下面的步骤介绍了如何在 Visual Studio 中启动 Azure 开发支持。
 
-对于 Visual Studio 2015 及更早版本，<a href="vs2015-install.md">请按照以下说明操作</a>。
+对于 Visual Studio 2015 及更早版本，<a href="vs2015-install.md">请按照这些说明操作</a>。
 
-### <a name="step-1-download-visual-studio-2019"></a>第 1 步：下载视觉工作室 2019
+### <a name="step-1-download-visual-studio-2019"></a>步骤 1：下载 Visual Studio 2019
 
-如果您已经安装了 Visual Studio 2019，则可以跳过此步骤。
+如果已安装 Visual Studio 2019，则可跳过此步骤。
 
 > [!div class="nextstepaction"]
 > [下载 Visual Studio 2019](https://www.visualstudio.com/downloads/)
 
 ### <a name="step-2-install-the-two-azure-workloads"></a>步骤 2：安装两个 Azure 工作负荷
 
-在可视化工作室安装程序中，安装可视化工作室（或修改现有安装）。 确保选择了*Azure*开发和*ASP.NET和 Web 开发*工作负荷。
+在 Visual Studio 安装程序中，安装 Visual Studio（或修改现有安装）。 确保已选择“Azure 开发”以及“ASP.NET 和 Web 开发”工作负荷。  
 
 ### <a name="step-3-develop-with-net-on-azure"></a>步骤 3：在 Azure 上使用 .NET 进行开发
 
@@ -52,7 +52,7 @@ Visual Studio for Mac 提供所需的一切功能用于进行 Azure 开发。
 > [!div class="nextstepaction"]
 > [下载 Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
 
-在安装过程中，默认情况下选择 Azure 工具。
+安装时，默认情况下已选择 Azure 工具。
 
 ## <a name="linux"></a>[Linux](#tab/linux)
 

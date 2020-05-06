@@ -2,12 +2,12 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet-restore 命令还原依赖项和特定于项目的工具。
 ms.date: 02/27/2020
-ms.openlocfilehash: e74027ba70ddf6905a12f9691caeb0a406428ad6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cc8f374468ba95baccf058ac0b0a0175672cdf01
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157019"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158302"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -20,21 +20,46 @@ ms.locfileid: "78157019"
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet restore [<ROOT>] [--configfile] [--disable-parallel]
-    [--force] [--ignore-failed-sources] [--no-cache]
-    [--no-dependencies] [--packages] [-r|--runtime]
-    [-s|--source] [-v|--verbosity] [--interactive]
+dotnet restore [<ROOT>] [--configfile <FILE>] [--disable-parallel]
+    [-f|--force] [--force-evaluate] [--ignore-failed-sources]
+    [--interactive] [--lock-file-path <LOCK_FILE_PATH>] [--locked-mode]
+    [--no-cache] [--no-dependencies] [--packages <PACKAGES_DIRECTORY>]
+    [-r|--runtime <RUNTIME_IDENTIFIER>] [-s|--source <SOURCE>]
+    [--use-lockfile] [-v|--verbosity <LEVEL>]
 
-dotnet restore [-h|--help]
+dotnet restore -h|--help
 ```
 
 ## <a name="description"></a>描述
 
-`dotnet restore` 命令使用 NuGet 还原依赖项以及在 project 文件中指定的特定于项目的工具。 默认情况下会并行执行对依赖项和工具的还原。
+`dotnet restore` 命令使用 NuGet 还原依赖项以及在 project 文件中指定的特定于项目的工具。  在大多数情况下，不需要显式使用 `dotnet restore` 命令，因为在运行以下命令时，将会在必要时隐式运行 NuGet 还原：
 
-为了还原依赖项，NuGet 需要包所在的源。 通常通过“nuGet.config”配置文件提供源  。 安装 .NET Core SDK 时提供一个默认的配置文件。 可以通过在项目目录中创建自己的 nuGet.config 文件来指定其他源  。 可以使用 - `-s` 选项替代 nuget.config 源  。
+- [`dotnet new`](dotnet-new.md)
+- [`dotnet build`](dotnet-build.md)
+- [`dotnet build-server`](dotnet-build-server.md)
+- [`dotnet run`](dotnet-run.md)
+- [`dotnet test`](dotnet-test.md)
+- [`dotnet publish`](dotnet-publish.md)
+- [`dotnet pack`](dotnet-pack.md)
 
-对于依赖项，使用 `--packages` 参数指定还原操作期间放置还原包的位置。 如未指定，将使用默认的 NuGet 包缓存，可在所有操作系统上的用户主目录中的 `.nuget/packages` 目录找到它。 例如 Linux 上的 /home/user1 或 Windows 上的 C:\Users\user1   。
+有时，通过这些命令运行隐式 NuGet 还原可能不方便。 例如，某些自动化系统（如生成系统）需要显式调用 `dotnet restore`，以控制还原发生的时间，以便可以控制网络使用量。 为了防止运行隐式 NuGet 还原，可以通过上述任意命令使用 `--no-restore` 标记禁用隐式还原。
+
+### <a name="specify-feeds"></a>指定源
+
+为了还原依赖项，NuGet 需要包所在的源。 通常通过“nuGet.config”配置文件提供源  。 安装 .NET Core SDK 时提供一个默认的配置文件。 若要指定其他源，请执行以下任一项操作：
+
+- 在项目目录中创建自己的 nuget.config 文件  。 有关详细信息，请参阅本文后面介绍的[常见 NuGet 配置](/nuget/consume-packages/configuring-nuget-behavior)和 [nuget.config 差异](#nugetconfig-differences)。
+- 使用诸如 [`dotnet nuget add source`](dotnet-nuget-add-source.md) 等 `dotnet nuget` 命令。
+
+可以使用 `-s` 选项替代 nuget.config  源。
+
+有关如何使用经过身份验证的源的信息，请参阅[使用经过身份验证的源中的包](/nuget/consume-packages/consuming-packages-authenticated-feeds)。
+
+### <a name="global-packages-folder"></a>全局包文件夹
+
+对于依赖项，可以使用 `--packages` 参数指定还原操作期间放置还原包的位置。 如未指定，将使用默认的 NuGet 包缓存，可在所有操作系统上的用户主目录中的 `.nuget/packages` 目录找到它。 例如 Linux 上的 /home/user1 或 Windows 上的 C:\Users\user1   。
+
+### <a name="project-specific-tooling"></a>特定于项目的工具
 
 对于特定于项目的工具，`dotnet restore` 首先还原打包工具所在的包，然后继续还原 project 文件中指定的工具依赖项。
 
@@ -56,22 +81,6 @@ dotnet restore [-h|--help]
 
   此设置不适用，如 [NuGet 尚不支持跨平台验证](https://github.com/NuGet/Home/issues/7939)受信任包所述。
 
-## <a name="implicit-restore"></a>隐式还原
-
-在运行下列命令时，如有必要，会隐式运行 `dotnet restore` 命令：
-
-- [`dotnet new`](dotnet-new.md)
-- [`dotnet build`](dotnet-build.md)
-- [`dotnet build-server`](dotnet-build-server.md)
-- [`dotnet run`](dotnet-run.md)
-- [`dotnet test`](dotnet-test.md)
-- [`dotnet publish`](dotnet-publish.md)
-- [`dotnet pack`](dotnet-pack.md)
-
-在大多数情况下无需显式使用 `dotnet restore` 命令。
-
-有时，隐式运行 `dotnet restore` 可能不方便。 例如，某些自动化系统（如生成系统）需要显式调用 `dotnet restore`，以控制还原发生的时间，以便可以控制网络使用量。 要防止隐式运行 `dotnet restore`，可以通过上述任意命令使用 `--no-restore` 标记以禁用隐式还原。
-
 ## <a name="arguments"></a>自变量
 
 - **`ROOT`**
@@ -92,6 +101,10 @@ dotnet restore [-h|--help]
 
   强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件  。
 
+- **`--force-evaluate`**
+
+  即使锁定文件已存在，也会强制还原以重新评估所有依赖项。
+
 - **`-h|--help`**
 
   打印出有关命令的简短帮助。
@@ -100,9 +113,21 @@ dotnet restore [-h|--help]
 
   如果存在符合版本要求的包，则源失败时警告。
 
+- **`--interactive`**
+
+  允许命令停止并等待用户输入或操作（例如，完成身份验证）。 从 .NET Core 2.1.400 开始。
+
+- **`--lock-file-path <LOCK_FILE_PATH>`**
+
+  写入项目锁定文件的输出位置。 默认情况下，此位置为 PROJECT_ROOT \packages.lock.json  。
+
+- **`--locked-mode`**
+
+  不允许更新项目锁定文件。
+
 - **`--no-cache`**
 
-  指定不缓存包和 HTTP 请求。
+  指定不缓存 HTTP 请求。
 
 - **`--no-dependencies`**
 
@@ -120,13 +145,13 @@ dotnet restore [-h|--help]
 
   指定要在还原操作期间使用的 NuGet 包源。 此设置会替代 nuget.config 文件中指定的所有源  。 多次指定此选项可以提供多个源。
 
-- **`--verbosity <LEVEL>`**
+- **`--use-lockfile`**
+
+  允许生成项目锁定文件并与还原一起使用。
+
+- **`-v|--verbosity <LEVEL>`**
 
   设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 默认值是 `minimal`。
-
-- **`--interactive`**
-
-  允许命令停止并等待用户输入或操作（例如，完成身份验证）。 从 .NET Core 2.1.400 开始。
 
 ## <a name="examples"></a>示例
 

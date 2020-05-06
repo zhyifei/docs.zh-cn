@@ -6,14 +6,14 @@ ms.author: cesardl
 ms.date: 03/01/2020
 ms.openlocfilehash: a8ad946b03f97272cb8685620858af6b21a372dc
 ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/09/2020
 ms.locfileid: "81433348"
 ---
 # <a name="choose-the-right-azure-hosting-option"></a>选择正确的 Azure 托管选项
 
-本文提供 Azure 中从本地迁移到 Azure 的现有 .NET 框架应用程序时有多个选项之间的注意事项和比较。
+本文提供将现有 .NET Framework 应用程序从本地迁移到 Azure 时，可在 Azure 中使用多个选项的注意事项及其比较。
 
 将现有 .NET 应用程序迁移到 Azure 时要考虑的基本方面包括：
 
@@ -30,13 +30,13 @@ ms.locfileid: "81433348"
 
 |                 | Azure VM | Azure 应用服务 | Windows 容器 |
 |-----------------|-----------|-------------------|--------------------|
-|何时使用      |<ul><li>应用程序严重依赖于服务器和本地 .msi 安装。</li><li>想要使用最简单的应用程序迁移路径</li></ul>|应用在服务器上没有任何依赖项，只是一个能够访问数据库服务器的简洁 ASP.NET Web 应用（MVC、Web 窗体）或 N 层应用（Web API、WCF）。 |<ul><li>应用程序在原始服务器上存在依赖项，但可以在 Docker Windows 映像中包含这些依赖项。</li><li>想要使应用程序现代化，以便实现[云开发人员准备](../../architecture/modernize-with-azure-containers/modernize-existing-apps-to-cloud-optimized/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)</li></ul>|
-|优点和好处  |<ul><li>最简单的迁移路径</li><li>熟悉的环境。 部署环境是 VM，因此类似于本地服务器。</li></ul> |持续进行 PaaS 维护，在 Azure 中管理和缩放应用的最简单方法。 |<ul><li>云开发人员准备与应用容器中包含的依赖项。</li><li>几乎不需要重构 .NET /C# 代码。</li></ul> |
-|缺点             |属于 IaaS。 维护费用高昂。 您必须管理 VM 有关网络、负载均衡器、横向扩展、IIS 管理等的基础结构。 |<ul><li>并非[支持](https://appmigration.microsoft.com/assessment)所有应用</li><li>某些应用可能需要重构，甚至稍微重新构建，以便它们支持 Azure 应用服务。</li></ul> |<ul><li>Docker 的技能学习曲线</li><li>需要更改某些代码和应用配置设置</li></ul>|
-|要求 |Windows Server VM 的要求与本地应用相同 | 在[就绪检查](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Readiness-Checks)中指定的 Azure 应用服务要求。 |<ul><li>[Docker 引擎 - 适用于 Windows 服务器的企业 2019](https://azuremarketplace.microsoft.com/marketplace/apps/cloud-infrastructure-services.docker-windows-2019)<br />or</li><li>[Azure 容器服务 (AKS)](https://azure.microsoft.com/services/container-service/)（即 Kubernetes 业务流程协调程序）<br />or<li>[Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) 业务流程协调程序</li></ul> |
-|如何迁移 |请参阅[迁移到 Azure 虚拟机](vm.md) | 请参阅[迁移 Azure 应用服务](app-service.md) | 遵循[使用 Azure 和 Windows 容器电子书实现现有 .NET 应用的现代化](https://aka.ms/liftandshiftwithcontainersebook)中解释的注意事项、方案和演练 |
+|何时使用      |<ul><li>应用程序严重依赖于服务器和本地 .msi 安装。</li><li>想要使用最简单的应用程序迁移路径</li></ul>|应用在服务器上没有任何依赖项，只是一个能够访问数据库服务器的简洁 ASP.NET Web 应用（MVC、Web 窗体）或 N 层应用（Web API、WCF）。 |<ul><li>应用程序在原始服务器上存在依赖项，但可以在 Docker Windows 映像中包含这些依赖项。</li><li>想要将应用现代化，使其[随时可用于云 DevOps](../../architecture/modernize-with-azure-containers/modernize-existing-apps-to-cloud-optimized/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)</li></ul>|
+|优点和好处  |<ul><li>最简单的迁移路径</li><li>熟悉的环境。 部署环境是一个 VM，因此类似于本地服务器。</li></ul> |持续进行 PaaS 维护，在 Azure 中管理和缩放应用的最简单方法。 |<ul><li>应对未来需要，随时可用于云 DevOps，且在应用的容器中包含依赖项。</li><li>几乎不需要重构 .NET/C# 代码。</li></ul> |
+|缺点             |属于 IaaS。 维护费用高昂。 必须管理 VM 基础结构的网络、负载均衡器、横向扩展和 IIS 管理等方方面面。 |<ul><li>并非[支持](https://appmigration.microsoft.com/assessment)所有应用</li><li>某些应用可能需要重构，甚至稍微调整体系结构，这样才能支持 Azure 应用服务。</li></ul> |<ul><li>Docker 技能学习曲线</li><li>需要更改某些代码和应用配置设置</li></ul>|
+|要求 |Windows Server VM 的要求与本地应用相同 | [准备情况检查](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Readiness-Checks)中指定的 Azure 应用服务要求。 |<ul><li>[Docker 引擎 - Windows Server 2019 企业版](https://azuremarketplace.microsoft.com/marketplace/apps/cloud-infrastructure-services.docker-windows-2019)<br />or</li><li>[Azure 容器服务 (AKS)](https://azure.microsoft.com/services/container-service/)（即 Kubernetes 业务流程协调程序）<br />or<li>[Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) 业务流程协调程序</li></ul> |
+|如何迁移 |请参阅[迁移到 Azure 虚拟机](vm.md) | 请参阅[迁移 Azure 应用服务](app-service.md) | 遵循[使用 Azure 和 Windows 容器将现有 .NET 应用现代化电子书](https://aka.ms/liftandshiftwithcontainersebook)中的注意事项、方案和演练 |
 
-以程图图显示了规划现有 . NET Framework 应用程序迁移到 Azure 时的决策树。 如果可行，请尝试首先选择选项 A，但选项 B 是最容易执行的路径。
+以下流程图显示了在规划向 Azure 迁移现有 .NET Framework 应用程序时的决策树。 如果可行，请先尝试选项 A，但选项 B 是最容易执行的路径。
 
 ![显示托管决策树的流程图](../media/migration/choose/decision-tree.png)
 
@@ -55,13 +55,13 @@ ms.locfileid: "81433348"
 - 借助 IPsec VPN 或 ExpressRoute 确保连接安全
 - 精细控制子网之间的流量
 - 使用虚拟设备创建复杂的网络拓扑
-- 为您的应用程序提供一个孤立且高度安全的环境
+- 向应用程序提供独立且高度安全的环境
 
 若要开始构建自己的虚拟网络，请参阅 [Azure 虚拟网络文档](https://docs.microsoft.com/azure/virtual-network/)。
 
 ## <a name="authentication-and-authorization-considerations-when-migrating-to-azure"></a>迁移到 Azure 时的身份验证和授权注意事项
 
-对于任何组织而言，迁移到云的最重要考虑因素是安全性。 大多数公司都投入了大量的时间、资金和工程来设计和开发安全模型，因此，能够利用现有投资（如标识存储和单一登录解决方案）非常重要。
+对于任何组织而言，迁移到云的最重要考虑因素是安全性。 大多数公司已投入大量的时间、资金和工程力量来设计和开发安全模型，并且必须能够利用现有投资，例如标识存储和单一登录解决方案。
 
 本地运行的许多现有企业 B2E .NET 应用程序使用 Active Directory 进行身份验证和标识管理。 使用 Azure AD Connect 可将本地目录与 Azure Active Directory 集成。 若要开始集成，请参阅[将本地目录与 Azure Active Directory 集成](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)。
 

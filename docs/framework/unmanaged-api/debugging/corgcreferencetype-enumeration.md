@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: 17d47b6242bb12ff5ca3cfbde3e4ec183b9c19fc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d156f103c3812c91da380e722a1c6c95d621df4c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793865"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860913"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType 枚举
 标识要进行垃圾回收的对象的源。  
@@ -46,9 +46,9 @@ typedef enum {
 } CorGCReferenceType  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员名称|描述|  
+|成员名称|说明|  
 |-----------------|-----------------|  
 |`CorHandleStrong`|来自对象句柄表的强引用的句柄。|  
 |`CorHandleStrongPinning`|来自对象句柄表的固定强引用的句柄。|  
@@ -65,20 +65,20 @@ typedef enum {
 |`CorHandleAll`|返回句柄表中的所有引用。 此值仅由[ICorDebugProcess5：： EnumerateHandles](icordebugprocess5-enumeratehandles-method.md)方法使用。|  
   
 ## <a name="remarks"></a>备注  
- `CorGCReferenceType` 枚举的使用方式如下：  
+ `CorGCReferenceType`枚举的使用方式如下：  
   
-- 作为[COR_GC_REFERENCE](cor-gc-reference-structure.md)结构的 `type` 字段的值，它指示引用或句柄的源。  
+- 作为`type` [COR_GC_REFERENCE](cor-gc-reference-structure.md)结构的字段的值，它指示引用或句柄的源。  
   
-- 作为[ICorDebugProcess5：： EnumerateHandles](icordebugprocess5-enumeratehandles-method.md)方法的 `types` 参数，它指定要包括在枚举中的句柄的类型。  
+- 作为`types` [ICorDebugProcess5：： EnumerateHandles](icordebugprocess5-enumeratehandles-method.md)方法的参数，它指定要包括在枚举中的句柄的类型。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

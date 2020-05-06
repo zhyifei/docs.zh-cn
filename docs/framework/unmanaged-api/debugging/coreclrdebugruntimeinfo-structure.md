@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd01c30f-b7a8-4179-9497-622b6599b1a6
 topic_type:
 - apiref
-ms.openlocfilehash: 92a814d427fcf2e40c7f79e9eb9192e0b7eed4b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2c41e7db32ee8557a6c03217b95fd5b040655c70
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132129"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860931"
 ---
 # <a name="coreclrdebugruntimeinfo-structure"></a>CoreClrDebugRuntimeInfo 结构
 表示公共语言运行时 (CLR) 实例，该实例加载到远程计算机上的进程中。  
@@ -34,14 +34,14 @@ struct  CoreClrDebugRuntimeInfo {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`m_dwInternalID`|由运行在目标计算机上的远程调试代理分配的运行时标识符。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** CoreClrRemoteDebuggingInterfaces  
   

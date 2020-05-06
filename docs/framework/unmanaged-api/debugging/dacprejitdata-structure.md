@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 46031f29da6916eeaeea863ebef6924a720d7155
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4436ece72b0a6a405fc41cba5413093fc42ce750
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793818"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860776"
 ---
 # <a name="dacprejitdata-structure"></a>DacpReJitData 结构
 
@@ -47,9 +47,9 @@ struct MSLAYOUT DacpReJitData
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-| 成员           | 描述                                                                                      |
+| 成员           | 说明                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------ |
 | `rejitID`        | 方法的 ReJit 修订号。                                                          |
 | `flags`          | 一个标志，指示给定版本的该方法的 ReJit 检测的当前状态。 |
@@ -57,13 +57,13 @@ struct MSLAYOUT DacpReJitData
 
 ## <a name="remarks"></a>备注
 
-此结构存在于运行时中，并且不会通过任何标头或库文件公开。 若要使用它，请定义上面指定的结构。 如果不使用 Microsoft 编译器，还必须使用 `ms_struct` 封装来定义结构。
+此结构存在于运行时中，并且不会通过任何标头或库文件公开。 若要使用它，请定义上面指定的结构。 如果不使用 Microsoft 编译器，还`ms_struct`必须使用打包来定义结构。
 
-## <a name="requirements"></a>需求
-**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
 **标头：** 内容  
 **库：** 内容  
-**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另请参阅
 

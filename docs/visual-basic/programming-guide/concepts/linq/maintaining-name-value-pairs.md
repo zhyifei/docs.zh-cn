@@ -2,12 +2,12 @@
 title: 维护名称/值对
 ms.date: 07/20/2015
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
-ms.openlocfilehash: ed9c7f0aae2fe646cd723321f45455f89dd7c370
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b8c9487330239e7e6365055d5f08a02f2dbb0e37
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331667"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796140"
 ---
 # <a name="maintaining-namevalue-pairs-visual-basic"></a>维护名称/值对（Visual Basic）
 很多应用程序都必须维护需要保存为名称/值对的信息。 此信息可能是配置信息或全局设置。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 包含一些方法，能轻松保存一组名称/值对。 可以将这些信息保存为属性，也可以保存为一组子元素。  
@@ -100,7 +100,7 @@ Console.WriteLine(root)
   <Bottom>122</Bottom>  
   <Right>300</Right>  
   <DefaultColor>Color.Red</DefaultColor>  
-</Root>  
+</Root>
 ----  
 <Root>  
   <Top>10</Top>  
@@ -108,14 +108,14 @@ Console.WriteLine(root)
   <Bottom>122</Bottom>  
   <Right>300</Right>  
   <DefaultColor>Color.Red</DefaultColor>  
-</Root>  
-----  
+</Root>
+----
 <Root>  
   <Top>10</Top>  
   <Left>20</Left>  
   <Bottom>122</Bottom>  
   <Right>300</Right>  
-</Root>  
+</Root>
 ```  
   
 ## <a name="see-also"></a>另请参阅
