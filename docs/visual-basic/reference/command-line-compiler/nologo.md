@@ -9,34 +9,34 @@ helpviewer_keywords:
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
 ms.openlocfilehash: 03dc98c45a894304a67765c3e49cd19bbb089c8c
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335437"
 ---
-# <a name="-nologo-visual-basic"></a><span data-ttu-id="2c174-102">-nologo （Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="2c174-102">-nologo (Visual Basic)</span></span>
-<span data-ttu-id="2c174-103">在编译期间取消显示版权标志和信息性消息。</span><span class="sxs-lookup"><span data-stu-id="2c174-103">Suppresses display of the copyright banner and informational messages during compilation.</span></span>  
+# <a name="-nologo-visual-basic"></a><span data-ttu-id="0ca3c-102">-nologo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0ca3c-102">-nologo (Visual Basic)</span></span>
+<span data-ttu-id="0ca3c-103">在编译期间禁止显示版权标志和信息性消息。</span><span class="sxs-lookup"><span data-stu-id="0ca3c-103">Suppresses display of the copyright banner and informational messages during compilation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2c174-104">语法</span><span class="sxs-lookup"><span data-stu-id="2c174-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0ca3c-104">语法</span><span class="sxs-lookup"><span data-stu-id="0ca3c-104">Syntax</span></span>  
   
 ```console  
 -nologo  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="2c174-105">备注</span><span class="sxs-lookup"><span data-stu-id="2c174-105">Remarks</span></span>  
- <span data-ttu-id="2c174-106">如果指定 `-nologo`，编译器不会显示版权横幅。</span><span class="sxs-lookup"><span data-stu-id="2c174-106">If you specify `-nologo`, the compiler does not display a copyright banner.</span></span> <span data-ttu-id="2c174-107">默认情况，`-nologo` 是无效的。</span><span class="sxs-lookup"><span data-stu-id="2c174-107">By default, `-nologo` is not in effect.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0ca3c-105">备注</span><span class="sxs-lookup"><span data-stu-id="0ca3c-105">Remarks</span></span>  
+ <span data-ttu-id="0ca3c-106">如果指定 `-nologo`，编译器不会显示版权标志。</span><span class="sxs-lookup"><span data-stu-id="0ca3c-106">If you specify `-nologo`, the compiler does not display a copyright banner.</span></span> <span data-ttu-id="0ca3c-107">默认情况，`-nologo` 是无效的。</span><span class="sxs-lookup"><span data-stu-id="0ca3c-107">By default, `-nologo` is not in effect.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="2c174-108">`-nologo` 选项在 Visual Studio 开发环境中不可用;仅当从命令行进行编译时，它才可用。</span><span class="sxs-lookup"><span data-stu-id="2c174-108">The `-nologo` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
+> <span data-ttu-id="0ca3c-108">`-nologo` 选项在 Visual Studio 开发环境内无法使用；仅当从命令行编译时才可用。</span><span class="sxs-lookup"><span data-stu-id="0ca3c-108">The `-nologo` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2c174-109">示例</span><span class="sxs-lookup"><span data-stu-id="2c174-109">Example</span></span>  
- <span data-ttu-id="2c174-110">下面的代码将 `T2.vb` 进行编译，并且不显示版权横幅。</span><span class="sxs-lookup"><span data-stu-id="2c174-110">The following code compiles `T2.vb` and does not display a copyright banner.</span></span>  
+## <a name="example"></a><span data-ttu-id="0ca3c-109">示例</span><span class="sxs-lookup"><span data-stu-id="0ca3c-109">Example</span></span>  
+ <span data-ttu-id="0ca3c-110">以下代码编译 `T2.vb` 并且不显示任何版权标志。</span><span class="sxs-lookup"><span data-stu-id="0ca3c-110">The following code compiles `T2.vb` and does not display a copyright banner.</span></span>  
   
 ```console
 vbc -nologo t2.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2c174-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2c174-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0ca3c-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="0ca3c-111">See also</span></span>
 
-- [<span data-ttu-id="2c174-112">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="2c174-112">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="2c174-113">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="2c174-113">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="0ca3c-112">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="0ca3c-112">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="0ca3c-113">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="0ca3c-113">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
