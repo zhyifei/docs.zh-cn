@@ -2,85 +2,110 @@
 title: ASP.NET Core 中断性变更
 titleSuffix: ''
 description: 列出 ASP.NET Core 中的中断性变更。
-ms.date: 03/27/2020
+ms.date: 04/29/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 95057425614d7c717154ecfb687db2b9a6ca4a18
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: 63d39b1aa6e46b6bcbeb5a409efacac01dea4262
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391242"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728343"
 ---
-# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="b0174-103">ASP.NET Core 中断性变更</span><span class="sxs-lookup"><span data-stu-id="b0174-103">ASP.NET Core breaking changes</span></span>
+# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="befdb-103">ASP.NET Core 中断性变更</span><span class="sxs-lookup"><span data-stu-id="befdb-103">ASP.NET Core breaking changes</span></span>
 
-<span data-ttu-id="b0174-104">ASP.NET Core 提供 .NET Core 使用的 Web 应用开发功能。</span><span class="sxs-lookup"><span data-stu-id="b0174-104">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
+<span data-ttu-id="befdb-104">ASP.NET Core 提供 .NET Core 使用的 Web 应用开发功能。</span><span class="sxs-lookup"><span data-stu-id="befdb-104">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
 
-<span data-ttu-id="b0174-105">本页记录了以下中断性变更：</span><span class="sxs-lookup"><span data-stu-id="b0174-105">The following breaking changes are documented on this page:</span></span>
+<span data-ttu-id="befdb-105">本页记录了以下中断性变更：</span><span class="sxs-lookup"><span data-stu-id="befdb-105">The following breaking changes are documented on this page:</span></span>
 
-- [<span data-ttu-id="b0174-106">已删除过时防伪、CORS、诊断、MVC 和路由 API</span><span class="sxs-lookup"><span data-stu-id="b0174-106">Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed</span></span>](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
-- [<span data-ttu-id="b0174-107">身份验证：Google+ 弃用</span><span class="sxs-lookup"><span data-stu-id="b0174-107">Authentication: Google+ deprecation</span></span>](#authentication-google-deprecated-and-replaced)
-- [<span data-ttu-id="b0174-108">身份验证：已删除 HttpContext.Authentication 属性</span><span class="sxs-lookup"><span data-stu-id="b0174-108">Authentication: HttpContext.Authentication property removed</span></span>](#authentication-httpcontextauthentication-property-removed)
-- [<span data-ttu-id="b0174-109">身份验证：已替换 Newtonsoft.json 类型</span><span class="sxs-lookup"><span data-stu-id="b0174-109">Authentication: Newtonsoft.Json types replaced</span></span>](#authentication-newtonsoftjson-types-replaced)
-- [<span data-ttu-id="b0174-110">身份验证：已更改 OAuthHandler ExchangeCodeAsync 签名</span><span class="sxs-lookup"><span data-stu-id="b0174-110">Authentication: OAuthHandler ExchangeCodeAsync signature changed</span></span>](#authentication-oauthhandler-exchangecodeasync-signature-changed)
-- [<span data-ttu-id="b0174-111">授权：AddAuthorization 重载已移到不同的程序集</span><span class="sxs-lookup"><span data-stu-id="b0174-111">Authorization: AddAuthorization overload moved to different assembly</span></span>](#authorization-addauthorization-overload-moved-to-different-assembly)
-- [<span data-ttu-id="b0174-112">授权：已从 AuthorizationFilterContext.Filters 中删除 IAllowAnonymous</span><span class="sxs-lookup"><span data-stu-id="b0174-112">Authorization: IAllowAnonymous removed from AuthorizationFilterContext.Filters</span></span>](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
-- [<span data-ttu-id="b0174-113">授权：IAuthorizationPolicyProvider 实现需要新方法</span><span class="sxs-lookup"><span data-stu-id="b0174-113">Authorization: IAuthorizationPolicyProvider implementations require new method</span></span>](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
-- [<span data-ttu-id="b0174-114">Azure:Microsoft 预先指定的 Azure 集成包已删除</span><span class="sxs-lookup"><span data-stu-id="b0174-114">Azure: Microsoft-prefixed Azure integration packages removed</span></span>](#azure-microsoft-prefixed-azure-integration-packages-removed)
-- [<span data-ttu-id="b0174-115">缓存：已删除 CompactOnMemoryPressure 属性</span><span class="sxs-lookup"><span data-stu-id="b0174-115">Caching: CompactOnMemoryPressure property removed</span></span>](#caching-compactonmemorypressure-property-removed)
-- [<span data-ttu-id="b0174-116">缓存：Microsoft.Extensions.Caching.SqlServer 使用新的 SqlClient 包</span><span class="sxs-lookup"><span data-stu-id="b0174-116">Caching: Microsoft.Extensions.Caching.SqlServer uses new SqlClient package</span></span>](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
-- [<span data-ttu-id="b0174-117">缓存：ResponseCaching“Pubternal”类型已更改为内部类型</span><span class="sxs-lookup"><span data-stu-id="b0174-117">Caching: ResponseCaching "pubternal" types changed to internal</span></span>](#caching-responsecaching-pubternal-types-changed-to-internal)
-- [<span data-ttu-id="b0174-118">数据保护：DataProtection.AzureStorage 使用新的 Azure 存储 API</span><span class="sxs-lookup"><span data-stu-id="b0174-118">Data Protection: DataProtection.AzureStorage uses new Azure Storage APIs</span></span>](#data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis)
-- [<span data-ttu-id="b0174-119">托管：已从 Windows 托管捆绑包中删除 AspNetCoreModule V1</span><span class="sxs-lookup"><span data-stu-id="b0174-119">Hosting: AspNetCoreModule V1 removed from Windows Hosting Bundle</span></span>](#hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle)
-- [<span data-ttu-id="b0174-120">托管：通用主机限制 Startup 构造函数注入</span><span class="sxs-lookup"><span data-stu-id="b0174-120">Hosting: Generic host restricts Startup constructor injection</span></span>](#hosting-generic-host-restricts-startup-constructor-injection)
-- [<span data-ttu-id="b0174-121">托管：已为 IIS 进程外应用启用 HTTPS 重定向</span><span class="sxs-lookup"><span data-stu-id="b0174-121">Hosting: HTTPS redirection enabled for IIS out-of-process apps</span></span>](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
-- [<span data-ttu-id="b0174-122">托管：已替换 IHostingEnvironment 和 IApplicationLifetime 类型</span><span class="sxs-lookup"><span data-stu-id="b0174-122">Hosting: IHostingEnvironment and IApplicationLifetime types replaced</span></span>](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
-- [<span data-ttu-id="b0174-123">托管：已从 WebHostBuilder 依赖项中删除 ObjectPoolProvider</span><span class="sxs-lookup"><span data-stu-id="b0174-123">Hosting: ObjectPoolProvider removed from WebHostBuilder dependencies</span></span>](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
-- [<span data-ttu-id="b0174-124">HTTP：浏览器的 SameSite 更改会影响身份验证</span><span class="sxs-lookup"><span data-stu-id="b0174-124">HTTP: Browser SameSite changes impact authentication</span></span>](#http-browser-samesite-changes-impact-authentication)
-- [<span data-ttu-id="b0174-125">HTTP：已删除 DefaultHttpContext 扩展性</span><span class="sxs-lookup"><span data-stu-id="b0174-125">HTTP: DefaultHttpContext extensibility removed</span></span>](#http-defaulthttpcontext-extensibility-removed)
-- [<span data-ttu-id="b0174-126">HTTP：HeaderNames 字段已更改为静态只读</span><span class="sxs-lookup"><span data-stu-id="b0174-126">HTTP: HeaderNames fields changed to static readonly</span></span>](#http-headernames-constants-changed-to-static-readonly)
-- [<span data-ttu-id="b0174-127">HTTP：响应正文基础结构更改</span><span class="sxs-lookup"><span data-stu-id="b0174-127">HTTP: Response body infrastructure changes</span></span>](#http-response-body-infrastructure-changes)
-- [<span data-ttu-id="b0174-128">HTTP：已更改某些 Cookie SameSite 默认值</span><span class="sxs-lookup"><span data-stu-id="b0174-128">HTTP: Some cookie SameSite default values changed</span></span>](#http-some-cookie-samesite-defaults-changed-to-none)
-- [<span data-ttu-id="b0174-129">HTTP：已默认禁用同步 IO</span><span class="sxs-lookup"><span data-stu-id="b0174-129">HTTP: Synchronous IO disabled by default</span></span>](#http-synchronous-io-disabled-in-all-servers)
-- [<span data-ttu-id="b0174-130">标识：已删除 AddDefaultUI 方法重载</span><span class="sxs-lookup"><span data-stu-id="b0174-130">Identity: AddDefaultUI method overload removed</span></span>](#identity-adddefaultui-method-overload-removed)
-- [<span data-ttu-id="b0174-131">标识：UI 启动版本更改</span><span class="sxs-lookup"><span data-stu-id="b0174-131">Identity: UI Bootstrap version change</span></span>](#identity-default-bootstrap-version-of-ui-changed)
-- [<span data-ttu-id="b0174-132">标识：对于未经身份验证的标识，SignInAsync 会引发异常</span><span class="sxs-lookup"><span data-stu-id="b0174-132">Identity: SignInAsync throws exception for unauthenticated identity</span></span>](#identity-signinasync-throws-exception-for-unauthenticated-identity)
-- [<span data-ttu-id="b0174-133">标识：SignInManager 构造函数接受新参数</span><span class="sxs-lookup"><span data-stu-id="b0174-133">Identity: SignInManager constructor accepts new parameter</span></span>](#identity-signinmanager-constructor-accepts-new-parameter)
-- [<span data-ttu-id="b0174-134">标识：UI 使用静态 Web 资产功能</span><span class="sxs-lookup"><span data-stu-id="b0174-134">Identity: UI uses static web assets feature</span></span>](#identity-ui-uses-static-web-assets-feature)
-- [<span data-ttu-id="b0174-135">Kestrel：已删除连接适配器</span><span class="sxs-lookup"><span data-stu-id="b0174-135">Kestrel: Connection adapters removed</span></span>](#kestrel-connection-adapters-removed)
-- [<span data-ttu-id="b0174-136">Kestrel：已删除空 HTTPS 程序集</span><span class="sxs-lookup"><span data-stu-id="b0174-136">Kestrel: Empty HTTPS assembly removed</span></span>](#kestrel-empty-https-assembly-removed)
-- [<span data-ttu-id="b0174-137">Kestrel：请求尾部标头已移到新集合</span><span class="sxs-lookup"><span data-stu-id="b0174-137">Kestrel: Request trailer headers moved to new collection</span></span>](#kestrel-request-trailer-headers-moved-to-new-collection)
-- [<span data-ttu-id="b0174-138">Kestrel：传输抽象层更改</span><span class="sxs-lookup"><span data-stu-id="b0174-138">Kestrel: Transport abstraction layer changes</span></span>](#kestrel-transport-abstractions-removed-and-made-public)
-- [<span data-ttu-id="b0174-139">本地化：API 已标记为已过时</span><span class="sxs-lookup"><span data-stu-id="b0174-139">Localization: APIs marked obsolete</span></span>](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
-- [<span data-ttu-id="b0174-140">日志记录：已将 DebugLogger 类设为内部类</span><span class="sxs-lookup"><span data-stu-id="b0174-140">Logging: DebugLogger class made internal</span></span>](#logging-debuglogger-class-made-internal)
-- [<span data-ttu-id="b0174-141">MVC：已删除控制器操作 Async 后缀</span><span class="sxs-lookup"><span data-stu-id="b0174-141">MVC: Controller action Async suffix removed</span></span>](#mvc-async-suffix-trimmed-from-controller-action-names)
-- [<span data-ttu-id="b0174-142">MVC：JsonResult 已移至 Microsoft.AspNetCore.Mvc.Core</span><span class="sxs-lookup"><span data-stu-id="b0174-142">MVC: JsonResult moved to Microsoft.AspNetCore.Mvc.Core</span></span>](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
-- [<span data-ttu-id="b0174-143">MVC：已弃用预编译工具</span><span class="sxs-lookup"><span data-stu-id="b0174-143">MVC: Precompilation tool deprecated</span></span>](#mvc-precompilation-tool-deprecated)
-- [<span data-ttu-id="b0174-144">MVC：类型已更改为内部</span><span class="sxs-lookup"><span data-stu-id="b0174-144">MVC: Types changed to internal</span></span>](#mvc-pubternal-types-changed-to-internal)
-- [<span data-ttu-id="b0174-145">MVC：已删除 Web API 兼容性填充码</span><span class="sxs-lookup"><span data-stu-id="b0174-145">MVC: Web API compatibility shim removed</span></span>](#mvc-web-api-compatibility-shim-removed)
-- [<span data-ttu-id="b0174-146">Razor：运行时编译已移到包</span><span class="sxs-lookup"><span data-stu-id="b0174-146">Razor: Runtime compilation moved to a package</span></span>](#razor-runtime-compilation-moved-to-a-package)
-- [<span data-ttu-id="b0174-147">会话状态：已删除过时的 API</span><span class="sxs-lookup"><span data-stu-id="b0174-147">Session state: Obsolete APIs removed</span></span>](#session-state-obsolete-apis-removed)
-- [<span data-ttu-id="b0174-148">共享框架：已从 Microsoft.AspNetCore.App 中删除程序集</span><span class="sxs-lookup"><span data-stu-id="b0174-148">Shared framework: Assembly removal from Microsoft.AspNetCore.App</span></span>](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
-- [<span data-ttu-id="b0174-149">共享框架：已删除 Microsoft.AspNetCore.All</span><span class="sxs-lookup"><span data-stu-id="b0174-149">Shared framework: Microsoft.AspNetCore.All removed</span></span>](#shared-framework-removed-microsoftaspnetcoreall)
-- [<span data-ttu-id="b0174-150">SignalR：已替换 HandshakeProtocol.SuccessHandshakeData</span><span class="sxs-lookup"><span data-stu-id="b0174-150">SignalR: HandshakeProtocol.SuccessHandshakeData replaced</span></span>](#signalr-handshakeprotocolsuccesshandshakedata-replaced)
-- [<span data-ttu-id="b0174-151">SignalR：已删除 HubConnection 方法</span><span class="sxs-lookup"><span data-stu-id="b0174-151">SignalR: HubConnection methods removed</span></span>](#signalr-hubconnection-resetsendping-and-resettimeout-methods-removed)
-- [<span data-ttu-id="b0174-152">SignalR：已更改 HubConnectionContext 构造函数</span><span class="sxs-lookup"><span data-stu-id="b0174-152">SignalR: HubConnectionContext constructors changed</span></span>](#signalr-hubconnectioncontext-constructors-changed)
-- [<span data-ttu-id="b0174-153">SignalR：JavaScript 客户端包名称更改</span><span class="sxs-lookup"><span data-stu-id="b0174-153">SignalR: JavaScript client package name change</span></span>](#signalr-javascript-client-package-name-changed)
-- [<span data-ttu-id="b0174-154">SignalR：MessagePack 中心协议已移至 MessagePack 2.x 包</span><span class="sxs-lookup"><span data-stu-id="b0174-154">SignalR: MessagePack Hub Protocol moved to MessagePack 2.x package</span></span>](#signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package)
-- [<span data-ttu-id="b0174-155">SignalR：过时的 API</span><span class="sxs-lookup"><span data-stu-id="b0174-155">SignalR: Obsolete APIs</span></span>](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
-- [<span data-ttu-id="b0174-156">SignalR：UseSignalR 和 UseConnections 方法已删除</span><span class="sxs-lookup"><span data-stu-id="b0174-156">SignalR: UseSignalR and UseConnections methods removed</span></span>](#signalr-usesignalr-and-useconnections-methods-removed)
-- [<span data-ttu-id="b0174-157">SPA：SpaServices 和 NodeServices 控制台记录器回退默认更改</span><span class="sxs-lookup"><span data-stu-id="b0174-157">SPAs: SpaServices and NodeServices console logger fallback default change</span></span>](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
-- [<span data-ttu-id="b0174-158">SPA：SpaServices 和 NodeServices 已标记为过时</span><span class="sxs-lookup"><span data-stu-id="b0174-158">SPAs: SpaServices and NodeServices marked obsolete</span></span>](#spas-spaservices-and-nodeservices-marked-obsolete)
-- [<span data-ttu-id="b0174-159">静态文件：CSV 内容类型已更改为符合标准</span><span class="sxs-lookup"><span data-stu-id="b0174-159">Static files: CSV content type changed to standards-compliant</span></span>](#static-files-csv-content-type-changed-to-standards-compliant)
-- [<span data-ttu-id="b0174-160">目标框架：不支持 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="b0174-160">Target framework: .NET Framework not supported</span></span>](#target-framework-net-framework-support-dropped)
+- [<span data-ttu-id="befdb-106">已删除过时防伪、CORS、诊断、MVC 和路由 API</span><span class="sxs-lookup"><span data-stu-id="befdb-106">Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed</span></span>](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
+- [<span data-ttu-id="befdb-107">身份验证：Google+ 弃用</span><span class="sxs-lookup"><span data-stu-id="befdb-107">Authentication: Google+ deprecation</span></span>](#authentication-google-deprecated-and-replaced)
+- [<span data-ttu-id="befdb-108">身份验证：已删除 HttpContext.Authentication 属性</span><span class="sxs-lookup"><span data-stu-id="befdb-108">Authentication: HttpContext.Authentication property removed</span></span>](#authentication-httpcontextauthentication-property-removed)
+- [<span data-ttu-id="befdb-109">身份验证：已替换 Newtonsoft.json 类型</span><span class="sxs-lookup"><span data-stu-id="befdb-109">Authentication: Newtonsoft.Json types replaced</span></span>](#authentication-newtonsoftjson-types-replaced)
+- [<span data-ttu-id="befdb-110">身份验证：已更改 OAuthHandler ExchangeCodeAsync 签名</span><span class="sxs-lookup"><span data-stu-id="befdb-110">Authentication: OAuthHandler ExchangeCodeAsync signature changed</span></span>](#authentication-oauthhandler-exchangecodeasync-signature-changed)
+- [<span data-ttu-id="befdb-111">授权：AddAuthorization 重载已移到不同的程序集</span><span class="sxs-lookup"><span data-stu-id="befdb-111">Authorization: AddAuthorization overload moved to different assembly</span></span>](#authorization-addauthorization-overload-moved-to-different-assembly)
+- [<span data-ttu-id="befdb-112">授权：已从 AuthorizationFilterContext.Filters 中删除 IAllowAnonymous</span><span class="sxs-lookup"><span data-stu-id="befdb-112">Authorization: IAllowAnonymous removed from AuthorizationFilterContext.Filters</span></span>](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
+- [<span data-ttu-id="befdb-113">授权：IAuthorizationPolicyProvider 实现需要新方法</span><span class="sxs-lookup"><span data-stu-id="befdb-113">Authorization: IAuthorizationPolicyProvider implementations require new method</span></span>](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [<span data-ttu-id="befdb-114">Azure:Microsoft 预先指定的 Azure 集成包已删除</span><span class="sxs-lookup"><span data-stu-id="befdb-114">Azure: Microsoft-prefixed Azure integration packages removed</span></span>](#azure-microsoft-prefixed-azure-integration-packages-removed)
+- [<span data-ttu-id="befdb-115">缓存：已删除 CompactOnMemoryPressure 属性</span><span class="sxs-lookup"><span data-stu-id="befdb-115">Caching: CompactOnMemoryPressure property removed</span></span>](#caching-compactonmemorypressure-property-removed)
+- [<span data-ttu-id="befdb-116">缓存：Microsoft.Extensions.Caching.SqlServer 使用新的 SqlClient 包</span><span class="sxs-lookup"><span data-stu-id="befdb-116">Caching: Microsoft.Extensions.Caching.SqlServer uses new SqlClient package</span></span>](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
+- [<span data-ttu-id="befdb-117">缓存：ResponseCaching“Pubternal”类型已更改为内部类型</span><span class="sxs-lookup"><span data-stu-id="befdb-117">Caching: ResponseCaching "pubternal" types changed to internal</span></span>](#caching-responsecaching-pubternal-types-changed-to-internal)
+- [<span data-ttu-id="befdb-118">数据保护：DataProtection.AzureStorage 使用新的 Azure 存储 API</span><span class="sxs-lookup"><span data-stu-id="befdb-118">Data Protection: DataProtection.AzureStorage uses new Azure Storage APIs</span></span>](#data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis)
+- [<span data-ttu-id="befdb-119">扩展：影响某些 NuGet 包的包引用更改</span><span class="sxs-lookup"><span data-stu-id="befdb-119">Extensions: Package reference changes affecting some NuGet packages</span></span>](#extensions-package-reference-changes-affecting-some-nuget-packages)
+- [<span data-ttu-id="befdb-120">托管：已从 Windows 托管捆绑包中删除 AspNetCoreModule V1</span><span class="sxs-lookup"><span data-stu-id="befdb-120">Hosting: AspNetCoreModule V1 removed from Windows Hosting Bundle</span></span>](#hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle)
+- [<span data-ttu-id="befdb-121">托管：通用主机限制 Startup 构造函数注入</span><span class="sxs-lookup"><span data-stu-id="befdb-121">Hosting: Generic host restricts Startup constructor injection</span></span>](#hosting-generic-host-restricts-startup-constructor-injection)
+- [<span data-ttu-id="befdb-122">托管：已为 IIS 进程外应用启用 HTTPS 重定向</span><span class="sxs-lookup"><span data-stu-id="befdb-122">Hosting: HTTPS redirection enabled for IIS out-of-process apps</span></span>](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
+- [<span data-ttu-id="befdb-123">托管：已替换 IHostingEnvironment 和 IApplicationLifetime 类型</span><span class="sxs-lookup"><span data-stu-id="befdb-123">Hosting: IHostingEnvironment and IApplicationLifetime types replaced</span></span>](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
+- [<span data-ttu-id="befdb-124">托管：已从 WebHostBuilder 依赖项中删除 ObjectPoolProvider</span><span class="sxs-lookup"><span data-stu-id="befdb-124">Hosting: ObjectPoolProvider removed from WebHostBuilder dependencies</span></span>](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
+- [<span data-ttu-id="befdb-125">HTTP：标记为已过时并被替换的 Kestrel 和 IIS BadHttpRequestException 类型</span><span class="sxs-lookup"><span data-stu-id="befdb-125">HTTP: Kestrel and IIS BadHttpRequestException types marked obsolete and replaced</span></span>](#http-kestrel-and-iis-badhttprequestexception-types-marked-obsolete-and-replaced)
+- [<span data-ttu-id="befdb-126">HTTP：浏览器的 SameSite 更改会影响身份验证</span><span class="sxs-lookup"><span data-stu-id="befdb-126">HTTP: Browser SameSite changes impact authentication</span></span>](#http-browser-samesite-changes-impact-authentication)
+- [<span data-ttu-id="befdb-127">HTTP：已删除 DefaultHttpContext 扩展性</span><span class="sxs-lookup"><span data-stu-id="befdb-127">HTTP: DefaultHttpContext extensibility removed</span></span>](#http-defaulthttpcontext-extensibility-removed)
+- [<span data-ttu-id="befdb-128">HTTP：HeaderNames 字段已更改为静态只读</span><span class="sxs-lookup"><span data-stu-id="befdb-128">HTTP: HeaderNames fields changed to static readonly</span></span>](#http-headernames-constants-changed-to-static-readonly)
+- [<span data-ttu-id="befdb-129">HTTP：IHttpClientFactory 创建的 HttpClient 实例记录整数状态代码</span><span class="sxs-lookup"><span data-stu-id="befdb-129">HTTP: HttpClient instances created by IHttpClientFactory log integer status codes</span></span>](#http-httpclient-instances-created-by-ihttpclientfactory-log-integer-status-codes)
+- [<span data-ttu-id="befdb-130">HTTP：响应正文基础结构更改</span><span class="sxs-lookup"><span data-stu-id="befdb-130">HTTP: Response body infrastructure changes</span></span>](#http-response-body-infrastructure-changes)
+- [<span data-ttu-id="befdb-131">HTTP：已更改某些 Cookie SameSite 默认值</span><span class="sxs-lookup"><span data-stu-id="befdb-131">HTTP: Some cookie SameSite default values changed</span></span>](#http-some-cookie-samesite-defaults-changed-to-none)
+- [<span data-ttu-id="befdb-132">HTTP：已默认禁用同步 IO</span><span class="sxs-lookup"><span data-stu-id="befdb-132">HTTP: Synchronous IO disabled by default</span></span>](#http-synchronous-io-disabled-in-all-servers)
+- [<span data-ttu-id="befdb-133">标识：已删除 AddDefaultUI 方法重载</span><span class="sxs-lookup"><span data-stu-id="befdb-133">Identity: AddDefaultUI method overload removed</span></span>](#identity-adddefaultui-method-overload-removed)
+- [<span data-ttu-id="befdb-134">标识：UI 启动版本更改</span><span class="sxs-lookup"><span data-stu-id="befdb-134">Identity: UI Bootstrap version change</span></span>](#identity-default-bootstrap-version-of-ui-changed)
+- [<span data-ttu-id="befdb-135">标识：对于未经身份验证的标识，SignInAsync 会引发异常</span><span class="sxs-lookup"><span data-stu-id="befdb-135">Identity: SignInAsync throws exception for unauthenticated identity</span></span>](#identity-signinasync-throws-exception-for-unauthenticated-identity)
+- [<span data-ttu-id="befdb-136">标识：SignInManager 构造函数接受新参数</span><span class="sxs-lookup"><span data-stu-id="befdb-136">Identity: SignInManager constructor accepts new parameter</span></span>](#identity-signinmanager-constructor-accepts-new-parameter)
+- [<span data-ttu-id="befdb-137">标识：UI 使用静态 Web 资产功能</span><span class="sxs-lookup"><span data-stu-id="befdb-137">Identity: UI uses static web assets feature</span></span>](#identity-ui-uses-static-web-assets-feature)
+- [<span data-ttu-id="befdb-138">Kestrel：已删除连接适配器</span><span class="sxs-lookup"><span data-stu-id="befdb-138">Kestrel: Connection adapters removed</span></span>](#kestrel-connection-adapters-removed)
+- [<span data-ttu-id="befdb-139">Kestrel：已删除空 HTTPS 程序集</span><span class="sxs-lookup"><span data-stu-id="befdb-139">Kestrel: Empty HTTPS assembly removed</span></span>](#kestrel-empty-https-assembly-removed)
+- [<span data-ttu-id="befdb-140">Kestrel：请求尾部标头已移到新集合</span><span class="sxs-lookup"><span data-stu-id="befdb-140">Kestrel: Request trailer headers moved to new collection</span></span>](#kestrel-request-trailer-headers-moved-to-new-collection)
+- [<span data-ttu-id="befdb-141">Kestrel：传输抽象层更改</span><span class="sxs-lookup"><span data-stu-id="befdb-141">Kestrel: Transport abstraction layer changes</span></span>](#kestrel-transport-abstractions-removed-and-made-public)
+- [<span data-ttu-id="befdb-142">本地化：API 已标记为已过时</span><span class="sxs-lookup"><span data-stu-id="befdb-142">Localization: APIs marked obsolete</span></span>](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
+- [<span data-ttu-id="befdb-143">本地化：ResourceManagerWithCultureStringLocalizer 类和 WithCulture 接口成员已删除</span><span class="sxs-lookup"><span data-stu-id="befdb-143">Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed</span></span>](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
+- [<span data-ttu-id="befdb-144">日志记录：已将 DebugLogger 类设为内部类</span><span class="sxs-lookup"><span data-stu-id="befdb-144">Logging: DebugLogger class made internal</span></span>](#logging-debuglogger-class-made-internal)
+- [<span data-ttu-id="befdb-145">MVC：已删除控制器操作 Async 后缀</span><span class="sxs-lookup"><span data-stu-id="befdb-145">MVC: Controller action Async suffix removed</span></span>](#mvc-async-suffix-trimmed-from-controller-action-names)
+- [<span data-ttu-id="befdb-146">MVC：JsonResult 已移至 Microsoft.AspNetCore.Mvc.Core</span><span class="sxs-lookup"><span data-stu-id="befdb-146">MVC: JsonResult moved to Microsoft.AspNetCore.Mvc.Core</span></span>](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
+- [<span data-ttu-id="befdb-147">MVC：已弃用预编译工具</span><span class="sxs-lookup"><span data-stu-id="befdb-147">MVC: Precompilation tool deprecated</span></span>](#mvc-precompilation-tool-deprecated)
+- [<span data-ttu-id="befdb-148">MVC：类型已更改为内部</span><span class="sxs-lookup"><span data-stu-id="befdb-148">MVC: Types changed to internal</span></span>](#mvc-pubternal-types-changed-to-internal)
+- [<span data-ttu-id="befdb-149">MVC：已删除 Web API 兼容性填充码</span><span class="sxs-lookup"><span data-stu-id="befdb-149">MVC: Web API compatibility shim removed</span></span>](#mvc-web-api-compatibility-shim-removed)
+- [<span data-ttu-id="befdb-150">Razor：运行时编译已移到包</span><span class="sxs-lookup"><span data-stu-id="befdb-150">Razor: Runtime compilation moved to a package</span></span>](#razor-runtime-compilation-moved-to-a-package)
+- [<span data-ttu-id="befdb-151">会话状态：已删除过时的 API</span><span class="sxs-lookup"><span data-stu-id="befdb-151">Session state: Obsolete APIs removed</span></span>](#session-state-obsolete-apis-removed)
+- [<span data-ttu-id="befdb-152">共享框架：已从 Microsoft.AspNetCore.App 中删除程序集</span><span class="sxs-lookup"><span data-stu-id="befdb-152">Shared framework: Assembly removal from Microsoft.AspNetCore.App</span></span>](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
+- [<span data-ttu-id="befdb-153">共享框架：已删除 Microsoft.AspNetCore.All</span><span class="sxs-lookup"><span data-stu-id="befdb-153">Shared framework: Microsoft.AspNetCore.All removed</span></span>](#shared-framework-removed-microsoftaspnetcoreall)
+- [<span data-ttu-id="befdb-154">SignalR：已替换 HandshakeProtocol.SuccessHandshakeData</span><span class="sxs-lookup"><span data-stu-id="befdb-154">SignalR: HandshakeProtocol.SuccessHandshakeData replaced</span></span>](#signalr-handshakeprotocolsuccesshandshakedata-replaced)
+- [<span data-ttu-id="befdb-155">SignalR：已删除 HubConnection 方法</span><span class="sxs-lookup"><span data-stu-id="befdb-155">SignalR: HubConnection methods removed</span></span>](#signalr-hubconnection-resetsendping-and-resettimeout-methods-removed)
+- [<span data-ttu-id="befdb-156">SignalR：已更改 HubConnectionContext 构造函数</span><span class="sxs-lookup"><span data-stu-id="befdb-156">SignalR: HubConnectionContext constructors changed</span></span>](#signalr-hubconnectioncontext-constructors-changed)
+- [<span data-ttu-id="befdb-157">SignalR：JavaScript 客户端包名称更改</span><span class="sxs-lookup"><span data-stu-id="befdb-157">SignalR: JavaScript client package name change</span></span>](#signalr-javascript-client-package-name-changed)
+- [<span data-ttu-id="befdb-158">SignalR：MessagePack 中心协议已移至 MessagePack 2.x 包</span><span class="sxs-lookup"><span data-stu-id="befdb-158">SignalR: MessagePack Hub Protocol moved to MessagePack 2.x package</span></span>](#signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package)
+- [<span data-ttu-id="befdb-159">SignalR：MessagePack 中心协议选项类型已更改</span><span class="sxs-lookup"><span data-stu-id="befdb-159">SignalR: MessagePack Hub Protocol options type changed</span></span>](#signalr-messagepack-hub-protocol-options-type-changed)
+- [<span data-ttu-id="befdb-160">SignalR：过时的 API</span><span class="sxs-lookup"><span data-stu-id="befdb-160">SignalR: Obsolete APIs</span></span>](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
+- [<span data-ttu-id="befdb-161">SignalR：UseSignalR 和 UseConnections 方法已删除</span><span class="sxs-lookup"><span data-stu-id="befdb-161">SignalR: UseSignalR and UseConnections methods removed</span></span>](#signalr-usesignalr-and-useconnections-methods-removed)
+- [<span data-ttu-id="befdb-162">SPA：SpaServices 和 NodeServices 控制台记录器回退默认更改</span><span class="sxs-lookup"><span data-stu-id="befdb-162">SPAs: SpaServices and NodeServices console logger fallback default change</span></span>](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
+- [<span data-ttu-id="befdb-163">SPA：SpaServices 和 NodeServices 已标记为过时</span><span class="sxs-lookup"><span data-stu-id="befdb-163">SPAs: SpaServices and NodeServices marked obsolete</span></span>](#spas-spaservices-and-nodeservices-marked-obsolete)
+- [<span data-ttu-id="befdb-164">静态文件：CSV 内容类型已更改为符合标准</span><span class="sxs-lookup"><span data-stu-id="befdb-164">Static files: CSV content type changed to standards-compliant</span></span>](#static-files-csv-content-type-changed-to-standards-compliant)
+- [<span data-ttu-id="befdb-165">目标框架：不支持 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="befdb-165">Target framework: .NET Framework not supported</span></span>](#target-framework-net-framework-support-dropped)
 
-## <a name="aspnet-core-50"></a><span data-ttu-id="b0174-161">ASP.NET Core 5.0</span><span class="sxs-lookup"><span data-stu-id="b0174-161">ASP.NET Core 5.0</span></span>
+## <a name="aspnet-core-50"></a><span data-ttu-id="befdb-166">ASP.NET Core 5.0</span><span class="sxs-lookup"><span data-stu-id="befdb-166">ASP.NET Core 5.0</span></span>
 
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
 
 ***
 
+[!INCLUDE[Extensions: Package reference changes](~/includes/core-changes/aspnetcore/5.0/extensions-package-reference-changes.md)]
+
+***
+
+[!INCLUDE[HTTP: HttpClient instances created by IHttpClientFactory log integer status codes](~/includes/core-changes/aspnetcore/5.0/http-httpclient-instances-log-integer-status-codes.md)]
+
+***
+
+[!INCLUDE[HTTP: Kestrel and IIS BadHttpRequestException types marked obsolete and replaced](~/includes/core-changes/aspnetcore/5.0/http-badhttprequestexception-obsolete.md)]
+
+***
+
+[!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
 [!INCLUDE[SignalR: MessagePack Hub Protocol moved to MessagePack 2.x package](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-package.md)]
+
+***
+
+[!INCLUDE[SignalR: MessagePack Hub Protocol options type changed](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-hub-protocol-options-changed.md)]
 
 ***
 
@@ -92,13 +117,13 @@ ms.locfileid: "80391242"
 
 ***
 
-## <a name="aspnet-core-31"></a><span data-ttu-id="b0174-162">ASP.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="b0174-162">ASP.NET Core 3.1</span></span>
+## <a name="aspnet-core-31"></a><span data-ttu-id="befdb-167">ASP.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="befdb-167">ASP.NET Core 3.1</span></span>
 
 [!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]
 
 ***
 
-## <a name="aspnet-core-30"></a><span data-ttu-id="b0174-163">ASP.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="b0174-163">ASP.NET Core 3.0</span></span>
+## <a name="aspnet-core-30"></a><span data-ttu-id="befdb-168">ASP.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="befdb-168">ASP.NET Core 3.0</span></span>
 
 [!INCLUDE[Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 
