@@ -4,18 +4,18 @@ description: 了解如何使用内置 C# 迭代器以及如何创建自己的自
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 1933ecf83e9fa234f9b88c815d8ab527997c97f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: efa755c2243c18fb51b653abccb2bfc702bbc055
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398723"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507372"
 ---
 # <a name="iterators"></a>迭代器
 
 编写的几乎每个程序都需要循环访问集合。 因此需要编写代码来检查集合中的每一项。
 
-还需创建迭代器方法，这些方法可为该类的元素生成迭代器。 这些方法可用于：
+还需创建迭代器方法，这些方法可为该类的元素生成迭代器（该对象遍历容器，尤其是列表）。 这些方法可用于：
 
 + 对集合中的每个项执行操作。
 + 枚举自定义集合。

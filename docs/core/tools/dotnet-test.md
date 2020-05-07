@@ -1,13 +1,13 @@
 ---
 title: dotnet test 命令
 description: dotnet test 命令可用于在给定项目中执行单元测试。
-ms.date: 02/27/2020
-ms.openlocfilehash: f9df03cda01bdaf649394a58e96903e764193338
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.date: 04/29/2020
+ms.openlocfilehash: a8218b6596601069b89a60ad018adf89a1f47cf6
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463378"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624886"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -37,11 +37,15 @@ dotnet test -h|--help
 
 ## <a name="description"></a>描述
 
-`dotnet test` 命令用于执行给定项目中的单元测试。 `dotnet test` 命令启动为项目指定的测试运行程序控制台应用程序。 测试运行程序执行为单元测试框架（例如 MSTest、NUnit 或 xUnit）定义的测试，并报告每个测试是否成功。 如果所有测试均成功，测试运行程序将返回 0 作为退出代码；否则将返回 1。 测试运行程序和单元测试库打包为 NuGet 包并还原为该项目的普通依赖项。
+`dotnet test` 命令用于执行给定项目中的单元测试。 `dotnet test` 命令启动为项目指定的测试运行程序控制台应用程序。 测试运行程序执行为单元测试框架（例如 MSTest、NUnit 或 xUnit）定义的测试，并报告每个测试是否成功。 如果所有测试均成功，测试运行程序将返回 0 作为退出代码；否则将返回 1。 对于多目标项目，将为每个目标框架运行测试。 测试运行程序和单元测试库打包为 NuGet 包并还原为该项目的普通依赖项。
 
 测试项目使用普通 `<PackageReference>` 元素指定测试运行程序，如下方示例项目文件所示：
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
+
+### <a name="implicit-restore"></a>隐式还原
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
 ## <a name="arguments"></a>自变量
 
@@ -51,7 +55,7 @@ dotnet test -h|--help
 
 ## <a name="options"></a>选项
 
-- **`a|--test-adapter-path <PATH_TO_ADAPTER>`**
+- **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
   在测试运行中使用来自指定路径的自定义测试适配器。
 
@@ -59,19 +63,19 @@ dotnet test -h|--help
 
   在意见模式中运行测试。 此选项有助于隔离导致测试主机出现故障的有问题的测试。 它会在当前目录中创建一个输出文件 (Sequence.xml)，其中捕获了故障前的测试执行顺序  。
 
-- **`c|--configuration <CONFIGURATION>`**
+- **`-c|--configuration <CONFIGURATION>`**
 
   定义生成配置。 默认值为 `Debug`，但项目配置可以替代此默认 SDK 设置。
 
-- **`-collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
+- **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
   为测试运行启用数据收集器。 有关详细信息，请参阅[监视和分析测试运行](https://aka.ms/vstest-collect)。
 
-- **`d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
+- **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
   启用测试平台的诊断模式，并将诊断消息写入指定文件。
 
-- **`f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   查找特定[框架](../../standard/frameworks.md)的测试二进制文件。
 
@@ -79,7 +83,7 @@ dotnet test -h|--help
 
   使用给定表达式筛选掉当前项目中的测试。 有关详细信息，请参阅[筛选选项详细信息](#filter-option-details)部分。 若要获取使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
 
-- **`h|--help`**
+- **`-h|--help`**
 
   打印出有关命令的简短帮助。
 
@@ -87,7 +91,7 @@ dotnet test -h|--help
 
   允许命令停止并等待用户输入或操作。 例如，完成身份验证。 自 .NET Core 3.0 SDK 起可用。
 
-- **`l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
+- **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
   指定测试结果记录器。 与 MSBuild 不同，dotnet 测试不接受缩写，应使用 `-l "console;verbosity=detailed"`，而不使用 `-l "console;v=d"`。
 
@@ -105,11 +109,11 @@ dotnet test -h|--help
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  查找要运行的二进制文件的目录。
+  查找要运行的二进制文件的目录。 如果未指定，则默认路径为 `./bin/<configuration>/<framework>/`。  对于具有多个目标框架的项目（通过 `TargetFrameworks` 属性），在指定此选项时还需要定义 `--framework`。 `dotnet test` 始终从输出目录运行测试。 可以使用 <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> 以使用输出目录中的测试资产。
 
 - **`-r|--results-directory <PATH>`**
 
-  用于放置测试结果的目录。 如果指定的目录不存在，则会创建该目录。
+  用于放置测试结果的目录。 如果指定的目录不存在，则会创建该目录。 默认值为包含项目文件的目录中的 `TestResults`。
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -117,7 +121,10 @@ dotnet test -h|--help
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  `.runsettings` 文件用于运行测试。 [使用 `.runsettings` 文件配置单元测试。](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+  `.runsettings` 文件用于运行测试。 请注意，`TargetPlatform` 元素 (x86|x64) 对 `dotnet test` 不起作用。 若要运行面向 x86 的测试，请安装 .NET Core 的 x86 版本。 路径上 dotnet.exe 的位数是用于运行测试的内容  。 有关更多信息，请参见以下资源：
+
+  - [使用 `.runsettings` 文件配置单元测试。](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+  - [配置测试运行](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
 
 - **`-t|--list-tests`**
 
@@ -133,7 +140,7 @@ dotnet test -h|--help
 
   示例：`dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-  有关详细信息，请参阅 [vstest.console.exe：传递 RunSettings 参数](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
+  有关详细信息，请参阅[通过命令行传递 RunSettings 参数](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
 
 ## <a name="examples"></a>示例
 

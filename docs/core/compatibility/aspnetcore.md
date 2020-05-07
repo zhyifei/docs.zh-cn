@@ -2,15 +2,15 @@
 title: ASP.NET Core 中断性变更
 titleSuffix: ''
 description: 列出 ASP.NET Core 中的中断性变更。
-ms.date: 03/27/2020
+ms.date: 04/29/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 95057425614d7c717154ecfb687db2b9a6ca4a18
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: 63d39b1aa6e46b6bcbeb5a409efacac01dea4262
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391242"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728343"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 中断性变更
 
@@ -31,14 +31,17 @@ ASP.NET Core 提供 .NET Core 使用的 Web 应用开发功能。
 - [缓存：Microsoft.Extensions.Caching.SqlServer 使用新的 SqlClient 包](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [缓存：ResponseCaching“Pubternal”类型已更改为内部类型](#caching-responsecaching-pubternal-types-changed-to-internal)
 - [数据保护：DataProtection.AzureStorage 使用新的 Azure 存储 API](#data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis)
+- [扩展：影响某些 NuGet 包的包引用更改](#extensions-package-reference-changes-affecting-some-nuget-packages)
 - [托管：已从 Windows 托管捆绑包中删除 AspNetCoreModule V1](#hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle)
 - [托管：通用主机限制 Startup 构造函数注入](#hosting-generic-host-restricts-startup-constructor-injection)
 - [托管：已为 IIS 进程外应用启用 HTTPS 重定向](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
 - [托管：已替换 IHostingEnvironment 和 IApplicationLifetime 类型](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
 - [托管：已从 WebHostBuilder 依赖项中删除 ObjectPoolProvider](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
+- [HTTP：标记为已过时并被替换的 Kestrel 和 IIS BadHttpRequestException 类型](#http-kestrel-and-iis-badhttprequestexception-types-marked-obsolete-and-replaced)
 - [HTTP：浏览器的 SameSite 更改会影响身份验证](#http-browser-samesite-changes-impact-authentication)
 - [HTTP：已删除 DefaultHttpContext 扩展性](#http-defaulthttpcontext-extensibility-removed)
 - [HTTP：HeaderNames 字段已更改为静态只读](#http-headernames-constants-changed-to-static-readonly)
+- [HTTP：IHttpClientFactory 创建的 HttpClient 实例记录整数状态代码](#http-httpclient-instances-created-by-ihttpclientfactory-log-integer-status-codes)
 - [HTTP：响应正文基础结构更改](#http-response-body-infrastructure-changes)
 - [HTTP：已更改某些 Cookie SameSite 默认值](#http-some-cookie-samesite-defaults-changed-to-none)
 - [HTTP：已默认禁用同步 IO](#http-synchronous-io-disabled-in-all-servers)
@@ -52,6 +55,7 @@ ASP.NET Core 提供 .NET Core 使用的 Web 应用开发功能。
 - [Kestrel：请求尾部标头已移到新集合](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel：传输抽象层更改](#kestrel-transport-abstractions-removed-and-made-public)
 - [本地化：API 已标记为已过时](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
+- [本地化：ResourceManagerWithCultureStringLocalizer 类和 WithCulture 接口成员已删除](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [日志记录：已将 DebugLogger 类设为内部类](#logging-debuglogger-class-made-internal)
 - [MVC：已删除控制器操作 Async 后缀](#mvc-async-suffix-trimmed-from-controller-action-names)
 - [MVC：JsonResult 已移至 Microsoft.AspNetCore.Mvc.Core](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
@@ -67,6 +71,7 @@ ASP.NET Core 提供 .NET Core 使用的 Web 应用开发功能。
 - [SignalR：已更改 HubConnectionContext 构造函数](#signalr-hubconnectioncontext-constructors-changed)
 - [SignalR：JavaScript 客户端包名称更改](#signalr-javascript-client-package-name-changed)
 - [SignalR：MessagePack 中心协议已移至 MessagePack 2.x 包](#signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package)
+- [SignalR：MessagePack 中心协议选项类型已更改](#signalr-messagepack-hub-protocol-options-type-changed)
 - [SignalR：过时的 API](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
 - [SignalR：UseSignalR 和 UseConnections 方法已删除](#signalr-usesignalr-and-useconnections-methods-removed)
 - [SPA：SpaServices 和 NodeServices 控制台记录器回退默认更改](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
@@ -80,7 +85,27 @@ ASP.NET Core 提供 .NET Core 使用的 Web 应用开发功能。
 
 ***
 
+[!INCLUDE[Extensions: Package reference changes](~/includes/core-changes/aspnetcore/5.0/extensions-package-reference-changes.md)]
+
+***
+
+[!INCLUDE[HTTP: HttpClient instances created by IHttpClientFactory log integer status codes](~/includes/core-changes/aspnetcore/5.0/http-httpclient-instances-log-integer-status-codes.md)]
+
+***
+
+[!INCLUDE[HTTP: Kestrel and IIS BadHttpRequestException types marked obsolete and replaced](~/includes/core-changes/aspnetcore/5.0/http-badhttprequestexception-obsolete.md)]
+
+***
+
+[!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
 [!INCLUDE[SignalR: MessagePack Hub Protocol moved to MessagePack 2.x package](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-package.md)]
+
+***
+
+[!INCLUDE[SignalR: MessagePack Hub Protocol options type changed](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-hub-protocol-options-changed.md)]
 
 ***
 

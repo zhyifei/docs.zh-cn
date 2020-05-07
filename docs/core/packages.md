@@ -2,13 +2,13 @@
 title: 包、元包和框架 - .NET Core
 description: 了解包、元包和框架的术语。
 author: richlander
-ms.date: 06/20/2016
-ms.openlocfilehash: 657519edf1c0860ee3222c71ce85723e19029a9d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/29/2020
+ms.openlocfilehash: a6575226feb71b96f1fe5070406c118081a8cbf0
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397931"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595580"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>包、元包和框架
 
@@ -16,7 +16,7 @@ ms.locfileid: "79397931"
 
 每个 .Net Core 包都支持以框架形式通过多个 .Net 实现代码运行。 其中有些框架是传统框架，例如表示 .NET Framework 的 `net46`。 而另一些则是新框架，可视为是“基于包的框架”，这种是框架的另外一种新的定义模型。 这些基于包的框架整个是作为包进行创建的，它们自身也被定义成包，这就在包与框架之间形成了一种比较密切的关系。
 
-## <a name="packages"></a>包
+## <a name="packages"></a>package
 
 .NET Core 被分成一组包，它们提供基元类型、更高级的数据类型、应用组合类型和通用实用工具。 每一个包都代表着单独的同名程序集。 例如，[System.Runtime 包](https://www.nuget.org/packages/System.Runtime)包含 System.Runtime.dll。
 
@@ -55,7 +55,7 @@ ms.locfileid: "79397931"
 
 元包就是一个 NuGet 包约定，描述了一组意义相关的包。 元包通过使这组包成为依赖项来表示这组包。 通过指定一个框架，元包能够有选择地为这组包发布一个框架。
 
-默认情况下，早期版本的 .NET Core 工具（同时基于 project.json 和 csproj 的工具）指定一个框架和一个元包。 但目前，由目标框架隐式引用元包，以便将每个元包绑定到一个目标框架。 例如，`netstandard1.6` 框架引用 NetStandard.Library 1.6.0 版元包。 同样，`netcoreapp2.1` 框架引用 Microsoft.NETCore.App 2.1.0 版元包。 有关详细信息，请参阅 [.NET Core SDK 中的隐式元包引用](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md)。
+默认情况下，早期版本的 .NET Core 工具（同时基于 project.json 和 \*.csproj 的工具）指定一个框架和一个元包   。 但目前，由目标框架隐式引用元包，以便将每个元包绑定到一个目标框架。 例如，`netstandard1.6` 框架引用 NETStandard.Library 1.6.0 版元包。 同样，`netcoreapp2.1` 框架引用 Microsoft.NETCore.App 2.1.0 版元包。 有关详细信息，请参阅 [.NET Core SDK 中的隐式元包引用](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md)。
 
 以某个框架为目标以及隐式引用元包，这实际上是添加了对元包中每一个独立包的引用依赖。 这使这些包中的所有库都可用于 IntelliSense（或类似体验），同时也可用于发布应用。
 
@@ -108,7 +108,7 @@ ms.locfileid: "79397931"
 
 ### <a name="net-standard"></a>.NET Standard
 
-.NET Standard（[目标框架名字对象](../standard/frameworks.md)：`netstandard`）框架表示在 [.NET Standard](../standard/net-standard.md) 基础之上生成并由其定义的 API。 如果构建的库将在多个运行时中运行，就应将此框架作为目标。 这样便可在任何一种兼容 .NET Standard 的运行时上受支持，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 每个运行时都支持一组 .NET Standard 版本，具体取决于实现的 API。
+.NET Standard（[目标框架名字对象](../standard/frameworks.md)：`netstandard`）框架表示在 [.NET Standard](../standard/net-standard.md) 基础之上生成并由其定义的 API。 如果构建的库将用于在多个运行时上运行，就应将此框架作为目标。 这样便可在任何一种兼容 .NET Standard 的运行时上受支持，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 每个运行时都支持一组 .NET Standard 版本，具体取决于实现的 API。
 
 `netstandard` 框架隐式引用 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) 元包。 例如，以下 MSBuild 项目文件指示项目以 `netstandard1.6` 为目标，其引用 [`NETStandard.Library` 1.6 版](https://www.nuget.org/packages/NETStandard.Library/1.6.0)元包。
 
@@ -120,7 +120,7 @@ ms.locfileid: "79397931"
 </Project>
 ```
 
-但项目文件中的框架和元包引用不需要匹配，并且可使用项目文件中的 `<NetStandardImplicitPackageVersion>` 元素指定低于元包版本的框架版本。 例如，以下项目文件有效。
+通过将 `<NetStandardImplicitPackageVersion>` 元素添加到项目文件（隐式指定元包版本），可以指定低于元包版本的框架版本。 仅当面向 .NET Core 和 .NET Standard 时，`<NetStandardImplicitPackageVersion>` 元素才适用。 例如，以下项目文件有效。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

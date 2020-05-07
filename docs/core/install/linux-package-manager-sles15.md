@@ -4,12 +4,12 @@ description: 使用包管理器在 SLES 15 上安装 .NET Core SDK 和运行时�
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: b86b97bf17165f2f7a70e80ff581750ba39be375
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: be5a21db8c3942bfe8827dfbce41bcf88aec342a
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134178"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595599"
 ---
 # <a name="sles-15-package-manager---install-net-core"></a>SLES 15 包管理器 - 安装 .NET Core
 
@@ -19,12 +19,12 @@ ms.locfileid: "80134178"
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>注册 Microsoft 密钥和源
+## <a name="add-microsoft-repository-key-and-feed"></a>添加 Microsoft 存储库密钥和源
 
 安装 .NET 之前，需要：
 
-- 注册 Microsoft 密钥。
-- 注册产品存储库。
+- 将 Microsoft 包签名密钥添加到受信任密钥列表。
+- 将此存储库添加到包管理器。
 - 安装必需的依赖项。
 
 每台计算机只需要执行一次此操作。
@@ -33,6 +33,12 @@ ms.locfileid: "80134178"
 
 ```bash
 sudo rpm -Uvh https://packages.microsoft.com/config/sles/15/packages-microsoft-prod.rpm
+```
+
+目前，SLES 15 Microsoft 存储库安装包会将 microsoft-prod.repo 文件安装到错误的目录，从而导致 zypper 找不到 .NET Core 包  。 若要解决此问题，请在正确的目录中创建一个符号链接。
+
+```bash
+sudo ln -s /etc/yum.repos.d/microsoft-prod.repo /etc/zypp/repos.d/microsoft-prod.repo
 ```
 
 ## <a name="install-the-net-core-sdk"></a>安装 .NET Core SDK

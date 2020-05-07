@@ -6,18 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 658043f8d5e149064f6da328657b2ccef9b5da94
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 2a8db2882968dbcbe6a8868ab6fe1c128c94a41f
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121446"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624873"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! （null 包容）运算符（C# 参考）
 
 在 C# 8.0 及更高版本中可用，一元后缀 `!` 运算符是 null 包容运算符。 在已启用的[可为空的注释上下文](../../nullable-references.md#nullable-annotation-context)中，可以使用 null 包容运算符来声明可为空的引用类型的表达式 `x` 不为 `null`：`x!`。 一元前缀 `!` 运算符是[逻辑非运算符](boolean-logical-operators.md#logical-negation-operator-)。
 
 null 包容运算符在运行时不起作用。 它仅通过更改表达式的 null 状态来影响编译器的静态流分析。 在运行时，表达式 `x!` 的计算结果为基础表达式 `x` 的结果。
+
+> [!NOTE]
+> 在 C# 8 中，null 包容运算符终止前面的 [null 条件](member-access-operators.md#null-conditional-operators--and-)运算符的列表。 例如，表达式 `x?.y!.z` 分析为 `(x?.y)!.z`。 由于这种解释，即使 `x` 为 `null`，也会计算 `z`，这可能会导致 <xref:System.NullReferenceException>。
 
 有关可为空引用类型特性的详细信息，请参见[可为空引用类型](../builtin-types/nullable-reference-types.md)。
 
@@ -43,7 +46,7 @@ null 包容运算符的一个用例是测试参数验证逻辑。 例如，请�
 
 [!code-csharp[Use an attribute](snippets/NullForgivingOperator.cs#UseAttribute)]
 
-在前面的例子中，不需要使用 null 包容运算符，因为编译器有足够的信息来发现 `p` 不能是 `if` 语句中的 `null`。 如需深入了解允许你提供有关变量 null 状态的其他信息的属性，请参阅[使用属性升级 API 以定义 null 期望值](../../nullable-attributes.md)。
+在前面的例子中，不需要使用 null 包容运算符，因为编译器有足够的信息来发现 `p` 不能是 `if` 语句中的 `null`。 如需深入了解允许你提供有关变量 null 状态的其他信息的属性，请参阅[使用属性升级 API 以定义 null 期望值](../attributes/nullable-analysis.md)。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

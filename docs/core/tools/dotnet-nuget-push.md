@@ -3,18 +3,18 @@ title: dotnet nuget push 命令
 description: dotnet nuget push 命令可将包推送到服务器并发布。
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 96f8d008c8306a0782d5149360a24bb4097a1ec4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 8b0437d7f4ada2b56af50e30717d131668c21f7e
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463523"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728358"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 **本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
 `dotnet nuget push` - 将包推送到服务器，并将其发布。
 
@@ -30,11 +30,13 @@ dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
 dotnet nuget push -h|--help
 ```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 `dotnet nuget push` 将包推送到服务器，并将其发布。 push 命令使用在系统的 NuGet 配置文件或配置文件链中找到的服务器和凭据详细信息。 有关配置文件的详细信息，请参阅 [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior)（配置 NuGet 行为）。 通过加载 *%AppData%\NuGet\NuGet.config* (Windows) 或 *$HOME/.local/share* (Linux/macOS) 获得 NuGet 的默认配置，然后加载任意 *nuget.config* 或 *.nuget\nuget.config*，从驱动器的根目录开始，并在当前目录中结束。
 
-## <a name="arguments"></a>参数
+命令推送现有包。 它不会创建包。 若要创建包，请使用 [`dotnet pack`](dotnet-pack.md)。
+
+## <a name="arguments"></a>自变量
 
 - **`ROOT`**
 
@@ -104,31 +106,31 @@ dotnet nuget push -h|--help
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
   ```
   
-  * 将 foo.nupkg 推送到自定义推送源 *（指定 API 密钥）* `https://customsource`：
+  * 将 foo.nupkg 推送到自定义推送源 `https://customsource`（指定 API 密钥）  ：
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-- 将 *foo.nupkg* 推送到默认推送源：
+- 将 foo.nupkg 推送到默认推送源  ：
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
-- 将 *foo.symbols.nupkg* 推送到默认符号源：
+- 将 foo.symbols.nupkg 推送到默认符号源  ：
 
   ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
-- 将 foo.nupkg 推送到默认推送源（指定 360 秒超时时间）  ：
+- 将 foo.nupkg 推送到默认推送源（指定 360 秒超时）  ：
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-- 将当前目录中的所有 *.nupkg* 文件推送到默认推送源：
+- 将当前目录中的所有 .nupkg 文件推送到默认推送源  ：
 
   ```dotnetcli
   dotnet nuget push *.nupkg
@@ -143,3 +145,12 @@ dotnet nuget push -h|--help
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate
   ```
+
+- 将当前目录中的所有 .nupkg 文件推送到本地源目录  ：
+
+  ```dotnetcli
+  dotnet nuget push *.nupkg -s c:\mydir
+  ```
+
+  此命令不会将包存储在分层文件夹结构中，因此建议优化性能。 有关详细信息，请参阅[本地源](//nuget/hosting-packages/local-feeds)。
+  

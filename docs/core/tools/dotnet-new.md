@@ -2,12 +2,12 @@
 title: dotnet new 命令
 description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
 ms.date: 04/10/2020
-ms.openlocfilehash: 1979f98a6005a414acc64c5eaa086a88aca9f033
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 9a68baafa7ac3e6ad2fdc8f1c6e8621d6e15f1ff
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102822"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506852"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -46,14 +46,14 @@ dotnet new -h|--help
 
   调用命令时要实例化的模板。 每个模板可能具有可传递的特定选项。 有关详细信息，请参阅[模板选项](#template-options)。
 
-  可以运行 `dotnet new --list` 以查看所有已安装模板的列表。 如果 `TEMPLATE` 值与返回表中的“模板”  或“短名称”  列中的文本不完全匹配，则会对这两列执行 substring 匹配。
+  可以运行 `dotnet new --list` 或 `dotnet new -l` 以查看所有已安装模板的列表。 如果 `TEMPLATE` 值与返回表中的“模板”  或“短名称”  列中的文本不完全匹配，则会对这两列执行 substring 匹配。
 
   从 .NET Core 3.0 SDK 开始，当你在以下情况下调用 `dotnet new` 命令时，CLI 将在 NuGet.org 中搜索模板：
 
   - 如果在调用 `dotnet new` 时 CLI 找不到模板匹配项，即使是部分匹配也不行。
   - 如果有较新版本的模板可用。 在这种情况下，将创建项目或工件，但 CLI 会就模板的更新版本发出警告。
 
-  此命令包含默认的模板列表。 使用 `dotnet new -l` 获取可用模板的列表。 下表显示了随 .NET Core SDK 一起预安装的模板。 模板的默认语言显示在括号内。 单击短名称链接可查看特定的模板选项。
+  下表显示了随 .NET Core SDK 一起预安装的模板。 模板的默认语言显示在括号内。 单击短名称链接可查看特定的模板选项。
 
 | 模板                                    | 短名称                      | 语言     | Tags                                  | 已引入 |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
@@ -84,19 +84,19 @@ dotnet new -h|--help
 | Razor 类库                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/库/Razor 类库 | 2.1        |
 | ASP.NET Core Web API                         | [webapi](#webapi)               | [C#]，F#     | Web/WebAPI                            | 1.0        |
 | ASP.NET Core gRPC 服务                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
-| 协议缓冲区文件                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
 | dotnet gitignore 文件                        | `gitignore`                     |              | 配置                                | 3.0        |
 | global.json 文件                             | [globaljson](#globaljson)       |              | 配置                                | 2.0        |
 | NuGet 配置                                 | `nugetconfig`                   |              | 配置                                | 1.0        |
-| dotnet 本地工具清单文件              | `tool-manifest`                 |              | 配置                                | 3.0        |
+| Dotnet 本地工具清单文件              | `tool-manifest`                 |              | 配置                                | 3.0        |
 | Web 配置                                   | `webconfig`                     |              | 配置                                | 1.0        |
 | 解决方案文件                                | `sln`                           |              | 解决方案                              | 1.0        |
+| 协议缓冲区文件                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
 
 ## <a name="options"></a>选项
 
 - **`--dry-run`**
 
-  显示有关以下内容的摘要：给定命令运行时发生的情况。 自 .NET Core 2.2 SDK 起可用。
+  显示有关以下内容的摘要：给定命令运行导致模板创建时发生的情况。 自 .NET Core 2.2 SDK 起可用。
 
 - **`--force`**
 
@@ -139,7 +139,7 @@ dotnet new -h|--help
 
 - **`--type <TYPE>`**
 
-  根据可用类型筛选模板。 预定义的值为 `project`、`item` 或 `other`。
+  根据可用类型筛选模板。 预定义的值为 `project`、`item` 和 `other`。
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
@@ -507,7 +507,7 @@ dotnet new -h|--help
 
 - **`-rrc|--razor-runtime-compilation`**
 
-  确定项目是否配置为在调试生成中使用 [Razor 运行时编译](/aspnet/core/mvc/views/view-compilation#runtime-compilation)。 自 .NET Core 3.1 SDK 起可用的选项。
+  确定项目是否配置为在调试生成中使用 [Razor 运行时编译](/aspnet/core/mvc/views/view-compilation#runtime-compilation)。 自 .NET Core 3.1.201 SDK 起可用的选项。
 
 ***
 

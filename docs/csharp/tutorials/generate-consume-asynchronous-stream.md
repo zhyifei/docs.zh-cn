@@ -1,19 +1,19 @@
 ---
 title: 生成和使用异步流
-description: 本高级教程演示了生成和使用异步流提供一种更自然的方式来处理可能以异步方式生成的数据序列的场景。
+description: 本高级教程介绍如何生成和使用异步流。 异步流提供了一种更自然的方式来处理可能以异步方式生成的数据序列。
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: de090eb9cc1e8b511956313ab5169ee4d07a492f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 03254e5208a048469f4753d632de7b0d451cde40
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156735"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200101"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>教程：使用 C# 8.0 和 .NET Core 3.0 生成和使用异步流
 
-C# 8.0 引入了**异步流**，在能够以异步方式检索或生成数据流中的元素时，它将对数据的流式处理源进行建模。 异步流依赖于在 .NET Standard 2.1 中引入且在 .NET Core 3.0 中实现的新接口，以便为异步流式处理数据源提供一个自然的编程模型。
+C# 8.0 引入了异步流，这可针对流式处理数据源建模  。 数据流经常异步检索或生成元素。 异步流依赖于 .NET Standard 2.1 中引入的新接口。 .NET Core 3.0 以及更高版本支持这些接口。 它们为异步流式处理数据源提供了自然编程模型。
 
 在本教程中，你将了解：
 
@@ -21,6 +21,7 @@ C# 8.0 引入了**异步流**，在能够以异步方式检索或生成数据流
 >
 > - 创建以异步方式生成数据元素序列的数据源。
 > - 以异步方式使用该数据源。
+> - 支持异步流的取消和捕获的上下文。
 > - 识别新接口和数据源何时优先于先前的同步数据序列。
 
 ## <a name="prerequisites"></a>先决条件
@@ -41,13 +42,13 @@ C# 8.0 引入了**异步流**，在能够以异步方式检索或生成数据流
 
 ## <a name="run-the-starter-application"></a>运行初学者应用程序
 
-可以从 [csharp/tutorials/AsyncStreams](https://github.com/dotnet/samples/tree/master/csharp/tutorials/AsyncStreams/start) 文件夹中的 [dotnet/samples](https://github.com/dotnet/samples) 存储库获得本教程中使用的初学者应用程序代码。
+可以从 [csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) 文件夹中的 [dotnet/docs](https://github.com/dotnet/docs) 存储库获得本教程中使用的初学者应用程序代码。
 
 初学者应用程序是一个控制台应用程序，它使用 [GitHub GraphQL](https://developer.github.com/v4/) 接口检索最近在 [dotnet/docs](https://github.com/dotnet/docs) 存储库中编写的问题。 首先来看一下以下初学者应用 `Main` 方法的代码：
 
-[!code-csharp[StarterAppMain](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#StarterAppMain)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetStarterAppMain" :::
 
-可以将 `GitHubKey` 环境变量设置为个人访问令牌，也可以将对 `GenEnvVariable` 的调用中的最后一个参数替换为个人访问令牌。 如果要与他人一起保存源代码，或将其放入共享源代码存储库，请勿将访问代码放入源代码中。
+可以将 `GitHubKey` 环境变量设置为个人访问令牌，也可以将对 `GenEnvVariable` 的调用中的最后一个参数替换为个人访问令牌。 如果要与其他人共享源，请不要将访问代码放在源代码中。 不要将访问代码上传到共享源存储库。
 
 在创建 GitHub 客户端后，`Main` 中的代码将创建一个进度报告对象和一个取消令牌。 创建这些对象之后，`Main` 调用 `runPagedQueryAsync` 来检索最近创建的 250 个问题。 任务完成后，将显示结果。
 
@@ -57,13 +58,13 @@ C# 8.0 引入了**异步流**，在能够以异步方式检索或生成数据流
 
 该实现揭示了你观察到上一部分中讨论的行为的原因。 检查 `runPagedQueryAsync` 的代码：
 
-[!code-csharp[RunPagedQueryStarter](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetRunPagedQuery" :::
 
 让我们集中讨论前面代码的分页算法和异步结构。 （有关 GitHub GraphQL API 的详细信息，可以参考 [GitHub GraphQL 文档](https://developer.github.com/v4/guides/)。）`runPagedQueryAsync` 方法按从最新到最旧的顺序枚举问题。 它每页请求 25 个问题，并检查响应的 `pageInfo` 结构以继续上一页的操作。 这遵循了 GraphQL 对多页响应的标准分页支持。 响应包括 `pageInfo` 对象，该对象包含用于请求上一页的 `hasPreviousPages` 值和 `startCursor` 值。 问题在 `nodes` 数组中。 `runPagedQueryAsync` 方法将这些节点追加到一个数组中，其中包含所有页面的所有结果。
 
 在检索和还原结果页之后，`runPagedQueryAsync` 将报告进度并检查是否取消。 如果已请求取消，`runPagedQueryAsync` 将引发 <xref:System.OperationCanceledException>。
 
-此代码中有几个可以改进的元素。 最重要的是，`runPagedQueryAsync` 必须为返回的所有问题分配存储空间。 该示例在 250 个问题处停止，因为检索所有未决问题需要更多的内存来存储所有检索到的问题。 此外，支持进度和支持取消的协议使得算法在第一次读取时更加难以理解。 必须查找进度类，以找到报告进度的位置。 还必须通过 <xref:System.Threading.CancellationTokenSource> 及其关联的 <xref:System.Threading.CancellationToken> 跟踪通信，以了解在何处请求取消，以及在何处授予取消。
+此代码中有几个可以改进的元素。 最重要的是，`runPagedQueryAsync` 必须为返回的所有问题分配存储空间。 该示例在 250 个问题处停止，因为检索所有未决问题需要更多的内存来存储所有检索到的问题。 支持进度报告和取消的协议使得算法在第一次读取时更加难以理解。 涉及更多类型和 API。 必须通过 <xref:System.Threading.CancellationTokenSource> 及其关联的 <xref:System.Threading.CancellationToken> 跟踪通信，以了解在何处请求取消，以及在何处授予取消。
 
 ## <a name="async-streams-provide-a-better-way"></a>异步流可提供更好的方法
 
@@ -71,30 +72,9 @@ C# 8.0 引入了**异步流**，在能够以异步方式检索或生成数据流
 
 这些新语言功能依赖于添加到 .NET Standard 2.1 并在 .NET Core 3.0 中实现的三个新接口：
 
-```csharp
-namespace System.Collections.Generic
-{
-    public interface IAsyncEnumerable<out T>
-    {
-        IAsyncEnumerator<T> GetAsyncEnumerator(CancellationToken cancellationToken = default);
-    }
-
-    public interface IAsyncEnumerator<out T> : IAsyncDisposable
-    {
-        T Current { get; }
-
-        ValueTask<bool> MoveNextAsync();
-    }
-}
-
-namespace System
-{
-    public interface IAsyncDisposable
-    {
-        ValueTask DisposeAsync();
-    }
-}
-```
+- <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>
+- <xref:System.IAsyncDisposable?displayProperty=nameWithType>
 
 大多数 C# 开发人员都应该熟悉这三个接口。 它们的行为方式类似于其对应的同步对象：
 
@@ -108,33 +88,63 @@ namespace System
 
 接下来，转换 `runPagedQueryAsync` 方法以生成异步流。 首先，更改 `runPagedQueryAsync` 的签名以返回 `IAsyncEnumerable<JToken>`，并从参数列表删除取消令牌和进度对象，如以下代码所示：
 
-[!code-csharp[FinishedSignature](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#UpdateSignature)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetUpdateSignature" :::
 
 起始代码在检索页面时处理每个页面，如以下代码所示：
 
-[!code-csharp[StarterPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#ProcessPage)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetProcessPage" :::
 
 将这三行替换为以下代码：
 
-[!code-csharp[FinishedPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#YieldReturnPage)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetYieldReturnPage" :::
 
 还可以在此方法中删除前面的 `finalResults` 声明以及你修改的循环之后的 `return` 语句。
 
-已完成更改以生成异步流。 完成的方法应类似于下面的代码：
+已完成更改以生成异步流。 已完成的方法应与以下代码类似：
 
-[!code-csharp[FinishedGenerate](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#GenerateAsyncStream)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetGenerateAsyncStream" :::
 
 接下来，将使用集合的代码更改为使用异步流。 在 `Main` 中找到以下处理问题集合的代码：
 
-[!code-csharp[EnumerateOldStyle](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#EnumerateOldStyle)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetEnumerateOldStyle" :::
 
 将该代码替换为以下 `await foreach` 循环：
 
-[!code-csharp[FinishedEnumerateAsyncStream](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#EnumerateAsyncStream)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateAsyncStream" :::
+
+新接口 <xref:System.Collections.Generic.IAsyncEnumerator%601> 派生自 <xref:System.IAsyncDisposable>。 这意味着在循环完成时，前面的循环会以异步方式释放流。 可以假设循环类似于以下代码：
+
+```csharp
+int num = 0;
+var enumerator = runPagedQueryAsync(client, PagedIssueQuery, "docs").GetEnumeratorAsync();
+try
+{
+    while (await enumerator.MoveNextAsync())
+    {
+        var issue = enumerator.Current;
+        Console.WriteLine(issue);
+        Console.WriteLine($"Received {++num} issues in total");
+    }
+} finally
+{
+    if (enumerator != null)
+        await enumerator.DisposeAsync();
+}
+```
 
 默认情况下，在捕获的上下文中处理流元素。 如果要禁用上下文捕获，请使用 <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> 扩展方法。 有关同步上下文并捕获当前上下文的详细信息，请参阅有关[使用基于任务的异步模式](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)的文章。
 
-可以从 [csharp/tutorials/AsyncStreams](https://github.com/dotnet/samples/tree/master/csharp/tutorials/AsyncStreams/finished) 文件夹中的 [dotnet/samples](https://github.com/dotnet/samples) 存储库获得完成教程的代码。
+异步流支持使用与其他 `async` 方法相同的协议的取消。 要支持取消，请按如下所示修改异步迭代器方法的签名：
+
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetGenerateWithCancellation" :::
+
+<xref:System.Runtime.CompilerServices.EnumeratorCancellationAttribute?dipslayProperty=nameWithType> 属性导致编译器生成 <xref:System.Collections.Generic.IAsyncEnumerator%601> 的代码，该代码使传递给 `GetAsyncEnumerator` 的令牌对作为该参数的异步迭代器的主体可见。 在 `runQueryAsync` 中，可以检查令牌的状态，并在请求时取消进一步的工作。
+
+使用另一个扩展方法 <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.WithCancellation%2A>，将取消标记传递给异步流。 可以按如下所示修改枚举问题的循环：
+
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateWithCancellation" :::
+
+可以从 [csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) 文件夹中的 [dotnet/docs](https://github.com/dotnet/docs) 存储库获得完成教程的代码。
 
 ## <a name="run-the-finished-application"></a>运行完成的应用程序
 

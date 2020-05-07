@@ -4,12 +4,12 @@ ms.date: 06/25/2019
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 84131bc503a106961419a27fc4e3e0f2d82306a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed18c42cd28412a967c94a65c2a92b0b75097b52
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846228"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199724"
 ---
 # <a name="new-operator-c-reference"></a>new 运算符（C# 参考）
 
@@ -19,11 +19,11 @@ ms.locfileid: "78846228"
 
 ## <a name="constructor-invocation"></a>构造函数调用
 
-要创建类型的新实例，通常使用 [ 运算符调用该类型的某个](../../programming-guide/classes-and-structs/constructors.md)构造函数`new`：
+要创建类型的新实例，通常使用 `new` 运算符调用该类型的某个[构造函数](../../programming-guide/classes-and-structs/constructors.md)：
 
 [!code-csharp-interactive[invoke constructor](snippets/NewOperator.cs#Constructor)]
 
-可以使用带有 [ 运算符的](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)对象或集合初始值设定项`new`实例化和初始化一个语句中的对象，如下例所示：
+可以使用带有 `new` 运算符的[对象或集合初始值设定项](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)实例化和初始化一个语句中的对象，如下例所示：
 
 [!code-csharp-interactive[constructor with initializer](snippets/NewOperator.cs#ConstructorWithInitializer)]
 
@@ -47,7 +47,7 @@ ms.locfileid: "78846228"
 
 ## <a name="destruction-of-type-instances"></a>类型实例的析构
 
-无需销毁此前创建的类型实例。 引用和值类型的实例将自动销毁。 包含值类型的上下文销毁后，值类型的实例随之销毁。 在引用类型的最后一次引用被删除后，[垃圾回收器](../../../standard/garbage-collection/index.md)会在非指定的时间销毁其实例。
+无需销毁此前创建的类型实例。 引用和值类型的实例将自动销毁。 包含值类型的上下文销毁后，值类型的实例随之销毁。 在引用类型的最后一次引用被删除后，[垃圾回收器](../../../standard/garbage-collection/index.md)会在某个非指定的时间销毁其实例。
 
 对于包含非托管资源的类型实例（例如，文件句柄），建议采用确定性的清理来确保尽快释放其包含的资源。 有关详细信息，请参阅 <xref:System.IDisposable?displayProperty=nameWithType> API 参考和 [using 语句](../keywords/using-statement.md)一文。
 
@@ -57,9 +57,9 @@ ms.locfileid: "78846228"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#the-new-operator)的 [new 运算符](~/_csharplang/spec/introduction.md)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的 [new 运算符](~/_csharplang/spec/expressions.md#the-new-operator)部分。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)

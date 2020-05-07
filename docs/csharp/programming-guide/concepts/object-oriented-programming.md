@@ -2,12 +2,12 @@
 title: 面向对象的编程 (C#)
 ms.date: 02/08/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 01d6f55bf0752f902f351675c4596abbb8ac85c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b6be3384f76fa210c2b52c55ecf9bd865df43a6
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77627885"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200088"
 ---
 # <a name="object-oriented-programming-c"></a>面向对象的编程 (C#)
 
@@ -191,7 +191,7 @@ Container.Nested nestedInstance = new Container.Nested()
 |------------------|----------------|
 |[public](../../language-reference/keywords/public.md)|同一程序集中的任何其他代码或引用该程序集的其他程序集都可以访问该类型或成员。|
 |[private](../../language-reference/keywords/private.md)|只有同一类中的代码可以访问该类型或成员。|
-|[protected](../../language-reference/keywords/protected.md)|只有同一类或派生类中的代码可以访问该类型或成员。|
+|[受保护](../../language-reference/keywords/protected.md)|只有同一类或派生类中的代码可以访问该类型或成员。|
 |[internal](../../language-reference/keywords/internal.md)|同一程序集中的任何代码都可以访问该类型或成员，但其他程序集中的代码不可以。|
 |[protected internal](../../language-reference/keywords/protected-internal.md)|同一程序集中的任何代码或其他程序集中的任何派生类都可以访问该类型或成员。|
 |[private protected](../../language-reference/keywords/private-protected.md)|同一类或基类程序集内派生类中的代码可以访问该类型或成员。|

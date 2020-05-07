@@ -1,7 +1,7 @@
 ---
 title: 成员访问运算符和表达式 - C# 参考
 description: 了解可用于访问类型成员的 C# 运算符。
-ms.date: 03/31/2020
+ms.date: 04/17/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 90066b1e9c219f66fc0c76423679e81aa3fa6770
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 37a6cb7cd32a9d60607aec51b1994e4717c5349a
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81120983"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624860"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>成员访问运算符和表达式（C# 参考）
 
@@ -138,6 +138,9 @@ A?.B?[C];
 
 Null 条件成员访问运算符 `?.` 也称为 Elvis 运算符。
 
+> [!NOTE]
+> 在 C# 8 中，[null 包容运算符](null-forgiving.md)终止前面的 null 条件运算符的列表。 例如，表达式 `x?.y!.z` 分析为 `(x?.y)!.z`。 由于这种解释，即使 `x` 为 `null`，也会计算 `z`，这可能会导致 <xref:System.NullReferenceException>。
+
 ### <a name="thread-safe-delegate-invocation"></a>线程安全的委托调用
 
 使用 `?.` 运算符来检查委托是否非 null 并以线程安全的方式调用它（例如，[引发事件](../../../standard/events/how-to-raise-and-consume-events.md)时），如下面的代码所示：
@@ -155,6 +158,8 @@ if (handler != null)
     handler(…);
 }
 ```
+
+这是一种线程安全方法，可确保只调用非 null `handler`。 由于委托实例是不可变的，因此，任何线程都不能更改 `handler` 本地变量所引用的值。 具体而言，如果另一个线程执行的代码从 `PropertyChanged` 事件中取消订阅，并且 `PropertyChanged` 在调用 `handler` 之前变为 `null`，则 `handler` 引用的值不受影响。 `?.` 运算符对其左操作数的计算不超过一次，从而确保在验证为非 null 后，不能将其更改为 `null`。
 
 ## <a name="invocation-expression-"></a>调用表达式 ()
 
@@ -182,9 +187,9 @@ if (handler != null)
 
 还可以将 `^` 运算符与[范围运算符](#range-operator-)一起使用以创建一个索引范围。 有关详细信息，请参阅[索引和范围](../../tutorials/ranges-indexes.md)。
 
-## <a name="range-operator-"></a>范围运算符 ..
+## <a name="range-operator-"></a>范围运算符 .
 
-C# 8.0 及更高版本中可使用 `..` 运算符，用于指定索引范围的起始项和结尾项作为其操作数。 左侧操作数是范围的*包含性*起始项。 右侧操作数是范围的*非包含性*结尾项。 任一操作数都可以是自某个序列起始项或结尾项的索引，如下例所示：
+`..` 运算符在 C# 8.0 和更高版本中提供，指定索引范围的开头和末尾作为其操作数。 左侧操作数是范围的包含性  开头。 右侧操作数是范围的包含性  末尾。 任一操作数都可以是序列开头或末尾的索引，如以下示例所示：
 
 [!code-csharp[range examples](snippets/MemberAccessOperators.cs#Ranges)]
 

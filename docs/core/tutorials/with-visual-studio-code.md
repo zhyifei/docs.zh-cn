@@ -2,13 +2,13 @@
 title: C# 和 Visual Studio Code 入门
 description: 了解如何使用 Visual Studio Code 创建和调试首个 C# .NET Core 应用。
 author: kendrahavens
-ms.date: 12/05/2018
-ms.openlocfilehash: 6722b97cee5ca3672c9dddece6e61f4d13de05a9
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.date: 04/23/2020
+ms.openlocfilehash: 3dd7c4602fbb27e29bad977f8d3df34b6061bc23
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805815"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506869"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 和 Visual Studio Code 入门
 
@@ -22,39 +22,28 @@ ms.locfileid: "80805815"
 
 ## <a name="hello-world"></a>Hello World
 
-让我们从 .NET Core 上的一个简单“Hello World”程序入手：
+从 .NET Core 上的一个简单“Hello World”程序入手：
 
 1. 打开项目：
 
     - 打开 Visual Studio Code。
-    - 依次单击左侧菜单上的“资源管理器”图标和 **“打开文件夹”** 。
-    - 从主菜单中选择“文件” > “打开文件夹”，打开要在其中放置 C# 项目的文件夹，然后单击“选择文件夹”    。 在我们的示例中，为项目创建名为“HelloWorld”的文件夹  。
+    - 从主菜单中选择“文件” > “打开文件夹”   。
+    - 创建一个名为“HelloWorld”的文件夹，然后单击“选择文件夹”   。 默认情况下，文件夹名称将是项目名称和命名空间名称。 稍后将在本教程中添加代码，假定项目命名空间为 `HelloWorld`。
 
-      ![Visual Studio Code“打开文件夹”](media/with-visual-studio-code/vs-code-open-folder.png)
-
-2. 初始化 C# 项目：
+1. 初始化 C# 项目：
 
     - 通过从主菜单中选择“视图” > “终端”，从 Visual Studio Code 中打开终端   。
-    - 在终端窗口中，键入“`dotnet new console`”。
-    - 此命令在已编写“Hello World”简单程序的文件夹中创建“Program.cs”文件，以及名为“HelloWorld.csproj”的 C# 项目文件   。
+    - 在终端窗口中，键入 `dotnet new console`。
+
+      此命令在已编写“Hello World”简单程序的文件夹中创建“Program.cs”文件，以及名为“HelloWorld.csproj”的 C# 项目文件   。
 
       ![dotnet new 命令](media/with-visual-studio-code/dotnet-new-command.png)
 
-3. 解析生成资产：
+1. 运行“Hello World”程序：
 
-    - 对于 .NET Core 1.x  ，键入 `dotnet restore`。 运行 `dotnet restore` 后，便有权访问生成项目所需的 .NET Core 包。
-
-      ![dotnet restore 命令](media/with-visual-studio-code/dotnet-restore-command.png)
-
-      [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-
-4. 运行“Hello World”程序：
-
-    - 键入 `dotnet run`。
+    - 在终端窗口中，输入 `dotnet run`。
 
       ![dotnet run 命令](media/with-visual-studio-code/dotnet-run-command.png)
-
-还可以观看简短的视频教程，以获取更多关于在 [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core)、[macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) 或 [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) 上进行安装的帮助。
 
 ## <a name="debug"></a>调试
 
@@ -62,26 +51,26 @@ ms.locfileid: "80805815"
 
     ![打开 Program.cs 文件](media/with-visual-studio-code/open-program-cs.png)
 
-2. Visual Studio Code 会提示添加缺少的资产，以生成和调试应用。 选择 **“是”** 。
+1. Visual Studio Code 会提示添加缺少的资产，以生成和调试应用。 选择 **“是”** 。
 
     ![提示添加缺少的资产](media/with-visual-studio-code/missing-assets.png)
 
-3. 若要打开调试视图，请单击左侧菜单上的“调试”图标。
+1. 若要打开调试视图，请单击左侧菜单上的“调试”图标。
 
     ![在 Visual Studio Code 中打开“调试”选项卡](media/with-visual-studio-code/open-debug-tab.png)
 
-4. 找到窗格最上面的绿色箭头。 请确保已选择旁边下拉列表中的“.NET Core Launch (控制台)”  。
+1. 找到窗格最上面的绿色箭头。 请确保已选择旁边下拉列表中的“.NET Core Launch (控制台)”  。
 
     ![在 Visual Studio Code 中选择“.NET Core”](media/with-visual-studio-code/select-net-core.png)
 
-5. 单击第 9 行旁边的编辑器边距  （编辑器中行号左侧的空间）或者将文本光标移动到编辑器中的第 9 行并按 <kbd>F9</kbd>，为项目添加断点。
+1. 单击第 9 行旁边的编辑器边距  （编辑器中行号左侧的空间）或者将文本光标移动到编辑器中的第 9 行并按 <kbd>F9</kbd>，为项目添加断点。
 
     ![设置断点](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
-6. 请按 <kbd>F5</kbd> 或选择绿色箭头启动调试。 在到达你在上一步中设置的断点时，调试器会停止执行程序。
+1. 请按 <kbd>F5</kbd> 或选择绿色箭头启动调试。 在到达你在上一步中设置的断点时，调试器会停止执行程序。
     - 调试时，可以在左上角的窗格中查看局部变量，也可以使用调试控制台进行查看。
 
-7. 选择最上面的蓝色箭头以继续调试，或选择最上面的红色方块以停止调试。
+1. 选择最上面的蓝色箭头以继续调试，或选择最上面的红色方块以停止调试。
 
     ![在 Visual Studio Code 中运行并调试](media/with-visual-studio-code/run-debug-vs-code.png)
 
@@ -90,9 +79,9 @@ ms.locfileid: "80805815"
 
 ## <a name="add-a-class"></a>添加类
 
-1. 若要添加一个新类，请右键单击 VSCode Explorer 并选择“新文件”  。 此操作会将新文件添加到在 VSCode 中打开的文件夹中。
-2. 将文件命名为 MyClass.cs  。 必须在末尾使用 `.cs` 扩展名保存它，以便将其识别为 csharp 文件。
-3. 添加下面的代码，以创建第一个类。 确保包括正确的命名空间，以便可以从“Program.cs”文件引用它  ：
+1. 若要添加一个新类，请右键单击 Program.cs 下方的 VSCode Explorer 并选择“新建文件”   。 此操作会将新文件添加到在 VSCode 中打开的文件夹中。
+1. 将文件命名为 MyClass.cs  。 必须在末尾使用 `.cs` 扩展名保存它，以便将其识别为 csharp 文件。
+1. 添加下面的代码，以创建第一个类。
 
     ``` csharp
     using System;
@@ -109,7 +98,7 @@ ms.locfileid: "80805815"
     }
     ```
 
-4. 通过添加下面的代码，从“Program.cs”中的主要方法调用新类  ：
+1. 通过将 Program.cs 中的代码替换为以下代码，从 `Main` 方法调用新类  ：
 
     ```csharp
     using System;
@@ -127,13 +116,15 @@ ms.locfileid: "80805815"
     }
     ```
 
-5. 保存更改并再次运行程序。 新消息应显示追加的字符串。
+1. 保存更改。
+
+1. 再次运行程序。
 
     ```dotnetcli
     dotnet run
     ```
 
-    将返回以下输出：
+    新消息会显示追加的字符串。
 
     ```console
     Hello World! Happy coding!
