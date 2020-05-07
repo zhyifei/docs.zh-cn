@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 9f541ae9c26eb12acdcf9a8c59bab98c4772c3b0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 83ee51fcbcc5911c688e30542cefb1c56578a578
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173440"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141029"
 ---
 # <a name="await-operator-c-reference"></a>await 运算符（C# 参考）
 

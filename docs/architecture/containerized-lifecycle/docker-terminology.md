@@ -1,13 +1,13 @@
 ---
 title: Docker 术语
 description: 了解使用 Docker 时常用的一些基本术语。
-ms.date: 02/15/2019
-ms.openlocfilehash: c352bf7235e8a3dc2d52bbbfe4390863fff9991f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/16/2020
+ms.openlocfilehash: 34e50596eca21ec5b5505493414056814455d745
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68673534"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507320"
 ---
 # <a name="docker-terminology"></a>Docker 术语
 
@@ -17,7 +17,11 @@ ms.locfileid: "68673534"
 
 **Dockerfile**：包含有关如何生成 Docker 映像的说明的文本文件。 与批处理脚本相似，首先第一行将介绍基础映像，然后是关于安装所需程序、复制文件等操作的说明，直至获取所需的工作环境。
 
-**生成**：基于其 Dockerfile 提供的信息和上下文生成容器映像的操作，以及生成映像的文件夹中的其他文件。 可以使用 Docker `docker build` 命令生成映像  。
+**生成**：基于其 Dockerfile 提供的信息和上下文生成容器映像的操作，以及生成映像的文件夹中的其他文件。 可以使用以下 Docker 命令生成映像：
+
+```bash
+docker build
+```
 
 **容器**：Docker 映像的实例。 容器表示单个应用程序、进程或服务的执行。 它由 Docker 映像的内容、执行环境和一组标准指令组成。 在缩放服务时，可以从相同的映像创建多个容器实例。 或者，批处理作业可以从同一个映像创建多个容器，向每个实例传递不同的参数。
 
@@ -25,13 +29,13 @@ ms.locfileid: "68673534"
 
 **标记**：可以应用于映像的标记或标签，以便可以识别同一映像的不同映像或版本（具体取决于版本号或目标环境）。
 
-**多阶段生成**：Docker 17.05 或更高版本的一个功能，可帮助减小最终映像的大小。 概括来说，借助多阶段生成，可以使用一个包含 SDK 的大型基础映像（以此为例）编译和发布应用程序，然后使用发布文件夹和一个小型仅运行时基础映像生成一个更小的最终映像
+**多阶段生成**：Docker 17.05 或更高版本的一个功能，可帮助减小最终映像的大小。 概括来说，借助多阶段生成，可以使用一个包含 SDK 的大型基础映像（以此为例）编译和发布应用程序，然后使用发布文件夹和一个小型仅运行时基础映像生成一个更小的最终映像。
 
 **存储库 (repo)** ：相关的 Docker 映像集合，带有指示映像版本的标记。 某些存储库包含特定映像的多个变量，例如包含 SDK（较重）的映像，包含唯一运行时（较轻）的映像，等等。这些变量可以使用标记进行标记。 单个存储库中可包含平台变量，如 Linux 映像和 Windows 映像。
 
 **注册表**：提供存储库访问权限的服务。 大多数公共映像的默认注册表是 [Docker 中心](https://hub.docker.com/)（归作为组织的 Docker 所有）。 注册表通常包含来自多个团队的存储库。 公司通常使用私有注册表来存储和管理其创建的映像。 另一个示例是 Azure 容器注册表。
 
-**多体系结构映像**：多体系结构是一项功能，根据运行 Docker 的平台简化相应映像选择。例如，Dockerfile 从注册表请求基础映像 `FROM mcr.microsoft.com/dotnet/core/sdk:2.2` 时，实际上它会获得 `2.2-nanoserver-1709`、`2.2-nanoserver-1803`、`2.2-nanoserver-1809` 或 `2.2-stretch`，具体取决于操作系统和运行 Docker 的版本      。
+**多体系结构映像**：对于多体系结构，此功能可根据运行 Docker 的平台简化选择适当映像的过程。 例如，当 Dockerfile 从注册表中请求基础映像 FROM mcr.microsoft.com/dotnet/core/sdk:3.1  时，它实际上获取 3.1-sdk-nanoserver-1909  、3.1-sdk-nanoserver-1809  或 3.1-sdk-buster-slim  ，具体取决于运行 Docker 的操作系统和版本。
 
 **Docker 中心**：上传并使用映像的公共注册表。 Docker 中心提供 Docker 映像托管、公共或私有注册表，生成触发器和 Web 挂钩，以及与 GitHub 和 Bitbucket 集成。
 

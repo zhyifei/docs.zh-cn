@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: db1d09c8c9e606b5327a42977a74a74703282d84
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: becae23cd810623bbb33c693b707c2d4735aeece
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74568072"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158460"
 ---
-### <a name="net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences"></a>当替换格式错误的 UTF-8 字节序列时，.NET Core 3.0 遵循 Unicode 最佳做法
+### <a name="replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines"></a>替换格式错误的 UTF-8 字节序列将遵循 Unicode 准则
 
 <xref:System.Text.UTF8Encoding> 类在字节到字符转码操作期间遇到格式错误的 UTF-8 字节序列时，它将在输出字符串中用“�”（U+FFFD 替换字符）替换该序列。 .NET Core 3.0 与以前版本的 .NET Core 和 .NET Framework 的不同之处在于，在转码操作期间按照 Unicode 最佳做法执行此替换。
 
@@ -16,13 +16,13 @@ ms.locfileid: "74568072"
 
 从 .NET Core 3.0 开始，当将字节转码为字符时，<xref:System.Text.UTF8Encoding> 类会根据 Unicode 最佳做法执行字符替换。 [Unicode 标准 12.0 版第 3.9 节 (PDF)](https://www.unicode.org/versions/Unicode12.0.0/ch03.pdf) 的  “U+FFFD 替换最大子部分”标题中描述了使用的替换机制。
 
-仅当  输入字节序列包含格式错误的 UTF-8 数据时，此行为才适用。 此外，如果已通过 `throwOnInvalidBytes: true` 构造了 <xref:System.Text.UTF8Encoding> 实例（请参阅 [UTF8Encoding 构造函数文档] <xref:System.Text.UTF8Encoding.%23ctor(System.Boolean,System.Boolean)>），则 `UTF8Encoding` 实例将继续对无效输入引发，而不是执行 U+FFFD 替换。
+仅当  输入字节序列包含格式错误的 UTF-8 数据时，此行为才适用。 此外，如果已通过 `throwOnInvalidBytes: true` 构造了 <xref:System.Text.UTF8Encoding> 实例，则 `UTF8Encoding` 实例将继续对无效输入引发，而不是执行 U+FFFD 替换。 有关 `UTF8Encoding` 构造函数的详细信息，请参阅 <xref:System.Text.UTF8Encoding.%23ctor(System.Boolean,System.Boolean)>。
 
-下面通过无效的 3 字节输入说明了此更改的影响：
+下表通过无效的 3 字节输入说明了此更改的影响：
 
-|格式无效的 3 字节输入|.NET Core 3.0 之前的输出|从 .NET Core 3.0 开始的输出|
-|---|---|---|
-| `[ ED A0 90 ]` | `[ FFFD FFFD ]`（2 字符输出）| `[ FFFD FFFD FFFD ]`（3 字符输出）|
+| 格式无效的 3 字节输入 | .NET Core 3.0 之前的输出          | 从 .NET Core 3.0 开始的输出        |
+|-------------------------|--------------------------------------|-------------------------------------------|
+| `[ ED A0 90 ]`          | `[ FFFD FFFD ]`（2 字符输出） | `[ FFFD FFFD FFFD ]`（3 字符输出） |
 
 根据以前链接的 Unicode 标准 PDF 的表 3-9  ，此 3 字符输出为首选输出。
 
@@ -36,7 +36,7 @@ ms.locfileid: "74568072"
 
 #### <a name="category"></a>类别
 
-CoreFx
+Core .NET 库
 
 #### <a name="affected-apis"></a>受影响的 API
 

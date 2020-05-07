@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-ms.openlocfilehash: 824be4a401d265575b48f66045dd944d521e64a4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c50fe09648793ba7340960654811ff31187269d8
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789153"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860783"
 ---
 # <a name="_efn_getmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack 函数
 给定托管的异常对象地址后，将返回其中包含的堆栈跟踪的字符串版本。  
@@ -40,7 +40,7 @@ HRESULT _EFN_GetManagedExcepStack(
  中正在调试的客户端。  
   
  `StackObjAddr`  
- 中派生自 <xref:System.Exception>的托管对象指针。  
+ 中托管对象指针，派生自<xref:System.Exception>。  
   
  szStackString  
  弄返回的字符串。  
@@ -51,12 +51,12 @@ HRESULT _EFN_GetManagedExcepStack(
 ## <a name="remarks"></a>备注  
  如果当前上下文中的线程上没有托管代码，则该函数将返回具有0xa0 的工具值的 HRESULT SOS_E_NOMANAGEDCODE 和错误代码0x1000。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** SOS_Stacktrace。h  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 003bb138-7960-4291-ac88-0d87e470ff70
 topic_type:
 - apiref
-ms.openlocfilehash: 9af265144c9e38ffe132c16a318c374b08a920e3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 19d0dcf8a5633371765861fcc29df4ef8c91ebc4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778254"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795711"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister 枚举
 指定与给定处理器体系结构关联的寄存器。  
@@ -112,9 +112,9 @@ typedef enum CorDebugRegister {
 } CorDebugRegister;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`REGISTER_INSTRUCTION_POINTER`|任何处理器上的指令指针寄存器。|  
 |`REGISTER_STACK_POINTER`|任何处理器上的堆栈指针寄存器。|  
@@ -198,14 +198,14 @@ typedef enum CorDebugRegister {
   
  例如，如果需要指定 IA-64 处理器上的 #83 数据寄存器，请使用 `REGISTER_IA64_R0` + 83。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

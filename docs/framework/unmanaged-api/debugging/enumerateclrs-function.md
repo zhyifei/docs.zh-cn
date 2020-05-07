@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: cdf88ef193df71a638fff43add1a9648d8631731
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1f33fb98712939d1e687798547b784819f164d63
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789131"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860722"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs 函数
 提供枚举进程中 CLR 的机制。  
@@ -72,8 +72,8 @@ HRESULT EnumerateCLRs (
   
  为了在目标进程中返回 CLR 计数，可在两个数组参数均设为 null 的情况下调用此函数。 调用方可以从此计数推断将创建的缓冲区的大小：`(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** dbgshim.dll  
   

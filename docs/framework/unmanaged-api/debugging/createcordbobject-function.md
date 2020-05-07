@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-ms.openlocfilehash: 2716adcc8c79c8003202561ea2011c2469a6bc5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 340d2de09562ea9b767203a7fa839cdc6b729b3b
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179236"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860894"
 ---
 # <a name="createcordbobject-function"></a>CreateCordbObject 函数
-创建调试器接口 （[ICorDebug](icordebug-interface.md)）， 提供在远程进程上实例化托管调试会话的功能。  
+创建一个调试器接口（[ICorDebug](icordebug-interface.md)），该接口提供用于在远程进程中实例化托管调试会话的功能。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,12 +35,12 @@ HRESULT CordbCreateObject (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `iDebuggerVersion`  
  [in] 目标进程的调试器版本。 此参数必须为 CorDebugVersion_2_0 以用于远程调试。  
   
  `ppCordb`  
- [出]指向将强制转换为[ICorDebug](icordebug-interface.md)接口并返回的对象的指针。  
+ 弄指向对象的指针的指针，该对象将被强制转换为[ICorDebug](icordebug-interface.md)接口并返回。  
   
 ## <a name="return-value"></a>返回值  
  S_OK  
@@ -56,13 +56,13 @@ HRESULT CordbCreateObject (
  其他故障。  
   
 ## <a name="remarks"></a>备注  
- 返回的`ppCordb` [ICorDebug](icordebug-interface.md)接口是所有托管调试服务的顶级调试接口。  
+ 中[ICorDebug](icordebug-interface.md) `ppCordb`返回的 ICorDebug 接口是所有托管调试服务的顶级调试接口。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 核心Clr远程调试接口.h  
+ **标头：** CoreClrRemoteDebuggingInterfaces  
   
- **资料库：** mscordbi_macx86.dll  
+ **库：** mscordbi_macx86  
   
- **.NET 框架版本：** 3.5 SP1
+ **.NET Framework 版本：** 3.5 SP1

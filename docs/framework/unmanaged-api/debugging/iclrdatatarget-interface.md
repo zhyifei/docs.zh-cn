@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: e2f05155-9bef-4e11-b703-7f05890665ca
 topic_type:
 - apiref
-ms.openlocfilehash: 2b5c99e40aabdbc654bdc612729b2756e3ef5bb4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 30806394a8895084068acaec6f7d03c6b67bb14b
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793717"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860564"
 ---
 # <a name="iclrdatatarget-interface"></a>ICLRDataTarget 接口
 提供与公共语言运行时（CLR）的目标项交互的方法。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[GetCurrentThreadID 方法](iclrdatatarget-getcurrentthreadid-method.md)|获取当前线程的操作系统标识符。|  
 |[GetImageBase 方法](iclrdatatarget-getimagebase-method.md)|获取指定的图像的基本内存地址。|  
@@ -43,14 +43,14 @@ ms.locfileid: "76793717"
 ## <a name="remarks"></a>备注  
  API 客户端（即调试器）必须根据特定目标项实现此接口。 例如，活动进程的实现将不同于内存转储的。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** ClrData，ClrData  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

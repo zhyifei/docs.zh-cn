@@ -40,7 +40,7 @@ ms.locfileid: "82141264"
 </Binding>
 ```
 
-\- 或 -
+-或-
 
 ```xml
 <Binding>

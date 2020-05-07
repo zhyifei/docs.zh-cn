@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: eb9aa2ea8d6b1c96e0be7d377f7c047194b598de
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 481d3f7b87dbe874de010825c3c7f052e4bc33c0
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712788"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738745"
 ---
 # <a name="while-c-reference"></a>while（C# 参考）
 
-在指定的布尔表达式的计算结果为 `while` 时，`true` 语句会执行一条语句或一个语句块。 由于在每次执行循环之前都会计算此表达式，所以 `while` 循环会执行零次或多次。 这不同于 [do](do.md) 循环，该循环执行一次或多次。
+在指定的布尔表达式的计算结果为 `true` 时，`while` 语句会执行一条语句或一个语句块。 由于在每次执行循环之前都会计算此表达式，所以 `while` 循环会执行零次或多次。 这不同于 [do](do.md) 循环，该循环执行一次或多次。
 
 在 `while` 语句块中的任何点，都可使用 [break](break.md) 语句中断循环。
 
-可通过使用 `while`continue[ 语句直接步入 ](continue.md) 表达式的计算部分。 如果表达式计算结果为 `true`，则继续执行循环中的第一个语句。 否则，将在循环后的第一个语句处继续执行。
+可通过使用 [continue](continue.md) 语句直接步入 `while` 表达式的计算部分。 如果表达式计算结果为 `true`，则继续执行循环中的第一个语句。 否则，将在循环后的第一个语句处继续执行。
 
-还可以使用 `while`goto[、](goto.md)return[ 或 ](return.md)throw[ 语句退出 ](throw.md) 循环。
+还可以使用 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 语句退出 `while` 循环。
 
 ## <a name="example"></a>示例
 
@@ -32,9 +32,9 @@ ms.locfileid: "75712788"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/statements.md#the-while-statement)中的 [while 语句](/dotnet/csharp/language-reference/language-specification/introduction)部分。
+有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的 [while 语句](~/_csharplang/spec/statements.md#the-while-statement)部分。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1cf4ca8e-d9bb-4633-9adf-5e24315bf87a
 topic_type:
 - apiref
-ms.openlocfilehash: 0b210f105495fa3f5595adbcb0805e1d1fb62310
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2271611b5cbbfe487e5798be0429ed94c227a67f
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179222"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860884"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget 函数
-创建与在远程计算机上运行的调试器代理的连接，并返回一个[ICoreClrDebugTarget](icoreclrdebugtarget-interface.md)对象，该对象可用于查询远程计算机上的正在运行的进程和加载的运行时。  
+创建与远程计算机上运行的调试器代理的连接，并返回一个[ICoreClrDebugTarget](icoreclrdebugtarget-interface.md)对象，该对象可用于查询远程计算机上正在运行的进程和已加载的运行时。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,12 +35,12 @@ HRESULT CreateCoreClrDebugTarget (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `dwAddress`  
  [in] 远程目标计算机的 IPv4 地址。  
   
  `ppTarget`  
- [出]指向将创建的[ICoreClrDebugTarget](icoreclrdebugtarget-interface.md)对象的指针。  
+ 弄指向将创建的[ICoreClrDebugTarget](icoreclrdebugtarget-interface.md)对象的指针的指针。  
   
 ## <a name="return-value"></a>返回值  
  S_OK  
@@ -53,10 +53,10 @@ HRESULT CreateCoreClrDebugTarget (
  其他故障。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 核心Clr远程调试接口.h  
+ **标头：** CoreClrRemoteDebuggingInterfaces  
   
- **资料库：** mscordbi_macx86.dll  
+ **库：** mscordbi_macx86  
   
- **.NET 框架版本：** 3.5 SP1
+ **.NET Framework 版本：** 3.5 SP1

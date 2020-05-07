@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: caea7754-867c-4360-a65c-5ced4408fd9d
 topic_type:
 - apiref
-ms.openlocfilehash: cc5093a5ba0afcccaf960e9b8776f93a061cc2f5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a725aa2c0f1fdea523bbf7cba880bc805f855782
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785672"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860736"
 ---
 # <a name="_efn_stacktrace-function"></a>\_EFN\_StackTrace 函数
 提供托管堆栈跟踪的文本表示形式以及 `CONTEXT` 记录的数组，其中每项对应非托管代码和托管代码之间的每个转换。  
@@ -46,7 +46,7 @@ HRESULT CALLBACK _EFN_StackTrace(
  弄堆栈跟踪的文本表示形式。  
   
  `puiTextLength`  
- 弄一个指针，指向 `wszTextOut`中的字符数。  
+ 弄一个指针，指向中`wszTextOut`的字符数。  
   
  `pTransitionContexts`  
  弄转换上下文的数组。  
@@ -58,22 +58,22 @@ HRESULT CALLBACK _EFN_StackTrace(
  中上下文结构的大小。  
   
  `Flags`  
- 中设置为0或 SOS_STACKTRACE_SHOWADDRESSES （0x01）以在每 `module!functionname` 行的前面显示 EBP 寄存器并输入堆栈指针（ESP）。  
+ 中设置为0或 SOS_STACKTRACE_SHOWADDRESSES （0x01）以显示 EBP 寄存器，并在每`module!functionname`行前面设置输入堆栈指针（ESP）。  
   
 ## <a name="remarks"></a>备注  
- `_EFN_StackTrace` 结构可从 WinDbg 编程界面调用。 参数的使用方式如下：  
+ 此`_EFN_StackTrace`结构可从 WinDbg 编程界面调用。 参数的使用方式如下：  
   
-- 如果 `wszTextOut` 为 null 且 `puiTextLength` 不为 null，则函数返回 `puiTextLength`中的字符串长度。  
+- 如果`wszTextOut`为 null 且`puiTextLength`不为 null，则该函数将返回中`puiTextLength`的字符串长度。  
   
-- 如果 `wszTextOut` 不为 null，则该函数将在 `wszTextOut` 中存储文本，直到 `puiTextLength`指示的位置。 如果缓冲区中有足够的空间，则它将成功返回，如果缓冲区不够长，则返回 E_OUTOFMEMORY。  
+- 如果`wszTextOut`不为 null，则该函数将文本`wszTextOut`存储到指示的位置`puiTextLength`。 如果缓冲区中有足够的空间，则它将成功返回，如果缓冲区不够长，则返回 E_OUTOFMEMORY。  
   
-- 如果 `pTransitionContexts` 和 `puiTransitionContextCount` 均为 null，则忽略函数的转换部分。 在这种情况下，函数向调用方提供仅包含函数名称的文本输出。  
+- 如果`pTransitionContexts`和都为 null， `puiTransitionContextCount`则忽略函数的转换部分。 在这种情况下，函数向调用方提供仅包含函数名称的文本输出。  
   
-- 如果 `pTransitionContexts` 为 null 且 `puiTransitionContextCount` 不为 null，则该函数将返回 `puiTransitionContextCount`中所需的上下文条目数。  
+- 如果`pTransitionContexts`为 null 且`puiTransitionContextCount`不为 null，则该函数将在中`puiTransitionContextCount`返回所需数量的上下文项。  
   
-- 如果 `pTransitionContexts` 不为 null，则函数会将其视为长度为 `puiTransitionContextCount`的结构的数组。 结构大小由 `uiSizeOfContext`给定，并且必须是体系结构的[SimpleContext](stacktrace-simplecontext-structure.md)或 `CONTEXT` 的大小。  
+- 如果`pTransitionContexts`不为 null，则函数会将其视为长度`puiTransitionContextCount`的结构数组。 结构大小由`uiSizeOfContext`指定，并且必须是[SimpleContext](stacktrace-simplecontext-structure.md)的大小或`CONTEXT`体系结构的大小。  
   
-- `wszTextOut` 采用以下格式编写：  
+- `wszTextOut`采用以下格式编写：  
   
     ```output  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
@@ -86,18 +86,18 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 - 如果线程上当前没有托管代码，该函数将返回 SOS_E_NOMANAGEDCODE。  
   
-- `Flags` 参数为0或 SOS_STACKTRACE_SHOWADDRESSES，用于在每个 `module!functionname` 行的前面查看 EBP 和 ESP。 默认情况下，它是0。  
+- `Flags`参数为0或 SOS_STACKTRACE_SHOWADDRESSES，以在每`module!functionname`行的前面显示 EBP 和 ESP。 默认情况下，它是0。  
   
     ```cpp  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** SOS_Stacktrace。h  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

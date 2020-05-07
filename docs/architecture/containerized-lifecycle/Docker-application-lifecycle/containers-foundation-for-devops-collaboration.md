@@ -1,13 +1,13 @@
 ---
 title: 将容器作为 DevOps 协作的基础
 description: 了解容器在简化 DevOps 方面的关键作用。
-ms.date: 02/15/2019
-ms.openlocfilehash: 8258f4331212d92376d64fef318adcdff492f61f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/16/2020
+ms.openlocfilehash: 83bebc92a242a5ac2906d9997b7b278f87f0db96
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73094504"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507334"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>将容器作为 DevOps 协作的基础
 
@@ -23,7 +23,7 @@ ms.locfileid: "73094504"
 
 DevOps 支柱使用代码存储库中提供的 Dockerfile 定义构建 - 持续集成 (CI) 管道。 CI 系统从选定的 Docker 注册表中提取基础容器映像，并为应用程序构建自定义 Docker 映像。 然后验证这些映像，并将其推送到用于部署到多个环境的 Docker 注册表。
 
-在右侧的支柱中，运营团队管理生产中部署的应用程序和基础结构，同时监视环境和应用程序，以便他们可以向开发团队提供有关如何改进应用程序的反馈和见解。 容器应用通常使用容器业务流程协调程序在生产环境中运行。
+在右侧的支柱中，运营团队管理生产中部署的应用程序和基础结构，同时监视环境和应用程序，以便他们可以向开发团队提供有关如何改进应用程序的反馈和见解。 容器应用通常使用容器业务流程协调程序（如 [Kubernetes](https://kubernetes.io/)）在生产环境中运行，在这种情况下，通常会将 [Helm](https://helm.sh/) 图表用于配置部署单元，而不是 docker-compose 文件。
 
 这两个团队通过将关注点分离为协定的基础平台（Docker 容器）进行协作，同时极大地提高了两个团队在应用程序生命周期中的协作能力。 开发人员拥有容器内容、其操作环境和容器相互依赖项，而运营团队将构建的映像与清单一起使用，并在其业务流程系统中加以执行。
 

@@ -2,12 +2,12 @@
 title: Docker 术语
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | Docker 术语
 ms.date: 01/30/2020
-ms.openlocfilehash: fdcc5ec3603579c36d7339bd3ff651713b8eba88
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 16aaaa2df0f68434b766d4d1cc96974e83449953
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523337"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199893"
 ---
 # <a name="docker-terminology"></a>Docker 术语
 
@@ -17,9 +17,11 @@ ms.locfileid: "80523337"
 
 **Dockerfile**：包含有关如何生成 Docker 映像的说明的文本文件。 与批处理脚本相似，首先第一行将介绍基础映像，然后是关于安装所需程序、复制文件等操作的说明，直至获取所需的工作环境。
 
-**生成**：基于其 Dockerfile 提供的信息和上下文生成容器映像的操作，以及生成映像的文件夹中的其他文件。 可以使用 Docker 命令生成映像：
+**生成**：基于其 Dockerfile 提供的信息和上下文生成容器映像的操作，以及生成映像的文件夹中的其他文件。 可以使用以下 Docker 命令生成映像：
 
-> `docker build`
+```bash
+docker build
+```
 
 **容器**：Docker 映像的实例。 容器表示单个应用程序、进程或服务的执行。 它由 Docker 映像的内容、执行环境和一组标准指令组成。 在缩放服务时，可以从相同的映像创建多个容器实例。 或者，批处理作业可以从同一个映像创建多个容器，向每个实例传递不同的参数。
 
@@ -37,7 +39,7 @@ ms.locfileid: "80523337"
 
 **Docker 中心**：上传并使用映像的公共注册表。 Docker 中心提供 Docker 映像托管、公共或私有注册表，生成触发器和 Web 挂钩，以及与 GitHub 和 Bitbucket 集成。
 
-**Azure 容器注册表**：用于在 Azure 中使用 Docker 映像及其组件的公共资源。 这提供了接近 Azure 中部署的注册表，授予控制访问权限，使其可以使用 Azure Active Directory 组和权限。
+**Azure 容器注册表**：用于在 Azure 中使用 Docker 映像及其组件的公共资源。 这提供了与 Azure 中的部署接近的注册表，使你可以控制访问权限，从而可以使用 Azure Active Directory 组和权限。
 
 **Docker 受信任注册表 (DTR)** ：Docker 注册表服务（来自 Docker），可以安装在本地，因此它存在于组织的数据中心和网络中。 这对于应该在企业内部管理的私有映像来说很方便。 Docker 受信任注册表是 Docker 数据中心产品的一部分。 有关详细信息，请参阅 [Docker 受信任注册表 (DTR)](https://docs.docker.com/docker-trusted-registry/overview/)。
 
@@ -49,7 +51,7 @@ ms.locfileid: "80523337"
 
 **群集**：Docker 主机集合像单一虚拟 Docker 主机一样公开，以便应用程序可以扩展到服务分布在群集中多个主机的多个实例。 Docker 群集可以使用 Kubernetes、Azure Service Fabric、Docker Swarm 和 Mesosphere DC/OS创建。
 
-**业务流程协调程序**：简化群集和 Docker 主机管理的工具。 通过 CLI 或图形 UI，业务流程协调程序能够管理其映像、容器和主机。 可以管理容器网络、配置、负载均衡、服务发现、高可用性、Docker 主机配置等。 业务流程协调程序负责跨节点集合运行、分发、缩放和修复工作负荷。 通常情况下，业务流程协调程序产品是提供群集基础结构的同一产品，如 Kubernetes 和 Azure Service Fabric，以及市场中的其他产品/服务。
+**业务流程协调程序**：简化群集和 Docker 主机管理的工具。 通过命令行接口 (CLI) 或图形 UI，业务流程协调程序能够管理其映像、容器和主机。 可以管理容器网络、配置、负载均衡、服务发现、高可用性、Docker 主机配置等。 业务流程协调程序负责跨节点集合运行、分发、缩放和修复工作负荷。 通常情况下，业务流程协调程序产品是提供群集基础结构的同一产品，如 Kubernetes 和 Azure Service Fabric，以及市场中的其他产品/服务。
 
 >[!div class="step-by-step"]
 >[上一页](docker-defined.md)

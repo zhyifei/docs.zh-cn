@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: cc54664ea8ad61005de3f3fae7407946d1c861b2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d623fe862eaf5902fd89d0e512dd07f73a03246f
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793849"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860815"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData 结构
 
@@ -52,16 +52,16 @@ struct DacpMethodDescData
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-| 成员                       | 描述                                                                                     |
+| 成员                       | 说明                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
 | `bHasNativeCode`             | 指示运行时是否具有可用于方法的给定实例化的本机代码。 |
 | `bIsDynamic`                 | 指示是否通过轻型代码生成动态生成方法。           |
 | `wSlotNumber`                | 方法表中的方法的槽号。                                                   |
 | `NativeCodeAddr`             | 方法的初始本机地址。                                                            |
 | `data`                       | 指向运行时内部使用的缓冲区的指针。                                             |
-| `MethodDescPtr`              | 指向运行时中的 `MethodDesc` 的指针。                                                     |
+| `MethodDescPtr`              | 指向运行时`MethodDesc`中的的指针。                                                     |
 | `nativeCodeInfo`             | 指向由运行时内部用于跟踪方法的缓冲区的指针。                            |
 | `moduleInfo`                 | 指向由运行时内部用于模块信息的缓冲区的指针。                      |
 | `MDToken`                    | 与给定方法关联的标记。                                                         |
@@ -77,14 +77,14 @@ struct DacpMethodDescData
 
 此结构存在于运行时中，并且不会通过任何标头或库文件公开。 若要使用它，请定义上面指定的结构。
 
-## <a name="requirements"></a>需求
-**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
 **标头：** 内容  
 **库：** 内容  
-**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另请参阅
 
 - [调试](index.md)
 - [调试结构](debugging-structures.md)
-- [常见数据类型](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)
+- [常见数据类型](../common-data-types-unmanaged-api-reference.md)

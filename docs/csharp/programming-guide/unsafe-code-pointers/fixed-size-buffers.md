@@ -1,16 +1,16 @@
 ---
 title: 固定大小的缓冲区 - C# 编程指南
-ms.date: 04/20/2018
+ms.date: 04/23/2020
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 6770497b23212f1786b4f4a620ed2b650079c44b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5920dd125ded34969d60feb299568b56402056ab
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157021"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140545"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定大小的缓冲区（C# 编程指南）
 
@@ -38,15 +38,39 @@ private fixed char name[30];
 
 另一常见的固定大小的数组是 [bool](../../language-reference/builtin-types/bool.md) 数组。 `bool` 数组中的元素大小始终为一个字节。 `bool` 数组不适用于创建位数组或缓冲区。
 
-> [!NOTE]
-> 除了通过使用 [stackalloc](../../language-reference/operators/stackalloc.md) 创建的内存外，C# 编译器和公共语言运行时 (CLR) 不执行任何安全缓冲区溢出检查。 与所有不安全代码一样，请谨慎使用。
+固定大小的缓冲区使用 <xref:System.Runtime.CompilerServices.UnsafeValueTypeAttribute?displayProperty=nameWithType> 进行编译，它指示公共语言运行时 (CLR) 某个类型包含可能溢出的非托管数组。 这类似于使用 [stackalloc](../../language-reference/operators/stackalloc.md) 创建的内存，它会自动启用 CLR 中的缓冲区溢出检测功能。 前面的示例演示如何在 `unsafe struct` 中存在固定大小的缓冲区。
 
-不安全的缓冲区与常规数组的区别体现在以下方面：
+```csharp
+internal unsafe struct Buffer
+{
+    public fixed char fixedBuffer[128];
+}
+```
 
-- 只能在不安全的上下文中使用不安全的缓冲区。
-- 不安全的缓冲区始终是矢量或一维数组。
-- 数组的声明应包括计数，如 `char id[8]`。 不能使用 `char id[]`。
-- 在不安全的上下文中，不安全的缓冲区只能是结构的实例字段。
+为 `Buffer` 生成 C# 的编译器的特性如下：
+
+```csharp
+internal struct Buffer
+{
+    [StructLayout(LayoutKind.Sequential, Size = 256)]
+    [CompilerGenerated]
+    [UnsafeValueType]
+    public struct <fixedBuffer>e__FixedBuffer
+    {
+        public char FixedElementField;
+    }
+
+    [FixedBuffer(typeof(char), 128)]
+    public <fixedBuffer>e__FixedBuffer fixedBuffer;
+}
+```
+
+固定大小的缓冲区与常规数组的区别体现在以下方面：
+
+- 只能在 [unsafe](../../language-reference/keywords/unsafe.md) 上下文中使用。
+- 只能是结构的实例字段。
+- 它们始终是矢量或一维数组。
+- 声明应包括长度，如 `fixed char id[8]`。 不能使用 `fixed char id[]`。
 
 ## <a name="see-also"></a>请参阅
 

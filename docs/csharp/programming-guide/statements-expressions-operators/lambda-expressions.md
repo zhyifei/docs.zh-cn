@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: c549b9fcc91401aed846afd39e656b60e16afb74
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6fd2dab09fe97aa4af87d82e2d23664c4347c8b3
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937605"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82101990"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 表达式（C# 编程指南）
 
@@ -223,14 +223,14 @@ lambda 可以引用外部变量  。 这些变量是在定义 lambda 表达式�
 
 ## <a name="featured-book-chapter"></a>特别推荐书籍章节
 
-[C# 3.0 手册（第三版）：面向 C# 3.0 程序员的超过 250 个解决方案中的委托、事件和 Lambda 表达式  
+[C# 3.0 手册（第三版）：面向 C# 3.0 程序员的超过 250 个解决方案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)中的[委托、事件和 Lambda 表达式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29)  
   
 ## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../index.md)
 - [LINQ（语言集成查询）](../concepts/linq/index.md)
 - [表达式树](../concepts/expression-trees/index.md)
-- [本地函数与 lambda 表达式比较](../../local-functions-vs-lambdas.md)
+- [本地函数与 Lambda 表达式](../classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)
 - [隐式类型化 lambda 表达式](../../implicitly-typed-lambda-expressions.md)
 - [Visual Studio 2008 C# 示例（请参阅 LINQ 示例查询文件和 XQuery 程序）](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [递归 lambda 表达式](https://docs.microsoft.com/archive/blogs/madst/recursive-lambda-expressions)

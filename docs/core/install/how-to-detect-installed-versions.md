@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 3efc54cea7e10bc21a472a7fa9d4026e305be79a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3a78acee6cf427085e98f14353fc2c0ac65d3d80
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397979"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645336"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>如何检查是否已安装 .NET Core
 
@@ -163,6 +163,51 @@ Microsoft.NETCore.App 2.2.7 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 Microsoft.NETCore.App 3.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 ```
+
+::: zone-end
+
+## <a name="check-for-install-folders"></a>检查安装文件夹
+
+可以安装 .NET Core，但不能将其添加到操作系统或用户配置文件的 `PATH` 变量。 运行前面几节中的命令可能不起作用。 作为替代方法，可以检查 .NET Core 安装文件夹是否存在。
+
+从安装程序或脚本安装 .NET Core 时，会将其安装到标准文件夹中。 大多数时候，安装 .NET Core 时使用的安装程序或脚本会让你选择安装到另一个文件夹。 如果选择安装到其他文件夹，请调整文件夹路径的开头。
+
+::: zone pivot="os-windows"
+
+- dotnet executable  \
+C:\\program files\\dotnet\\dotnet.exe 
+
+- **.NET SDK**\
+C:\\program files\\dotnet\\sdk\\{version}\\ 
+
+- .NET Runtime  \
+C:\\program files\\dotnet\\shared\\{runtime-type}\\{version}\\ 
+
+::: zone-end
+
+::: zone pivot="os-linux"
+
+- dotnet executable  \
+/home/user/share/dotnet/dotnet 
+
+- **.NET SDK**\
+/home/user/share/dotnet/sdk/{version}/ 
+
+- .NET Runtime  \
+/home/user/share/dotnet/shared/{runtime-type}/{version}/ 
+
+::: zone-end
+
+::: zone pivot="os-macos"
+
+- dotnet executable  \
+/usr/local/share/dotnet/dotnet 
+
+- **.NET SDK**\
+/usr/local/share/dotnet/sdk/{version}/ 
+
+- .NET Runtime  \
+/usr/local/share/dotnet/shared/{runtime-type}/{version}/ 
 
 ::: zone-end
 

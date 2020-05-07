@@ -2,34 +2,35 @@
 title: dotnet remove reference 命令
 description: dotnet remove reference 命令可便于删除项目间引用。
 ms.date: 02/14/2020
-ms.openlocfilehash: 92d36bbbde64d806abc8f223c5f08e3f3d79ce9d
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: a45153376d7d6eb764c1d2c6b473d04a273a2de1
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463447"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158328"
 ---
 # <a name="dotnet-remove-reference"></a>dotnet remove reference
 
 **本文适用于：** ✔️ .NET Core 2.x SDK 及更高版本
 
-## <a name="name"></a>名称
+## <a name="name"></a>“属性”
 
-`dotnet remove reference` - 删除“项目到项目”引用。
+`dotnet remove reference` - 删除项目到项目 (P2P) 引用。
 
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet remove [<PROJECT>] reference [-f|--framework <FRAMEWORK>] <PROJECT_REFERENCES>
+dotnet remove [<PROJECT>] reference [-f|--framework <FRAMEWORK>]
+     <PROJECT_REFERENCES>
 
 dotnet remove reference -h|--help
 ```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 使用 `dotnet remove reference` 命令可方便地从项目删除项目引用。
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `PROJECT`
 
@@ -47,7 +48,7 @@ dotnet remove reference -h|--help
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  仅在以特定[框架](../../standard/frameworks.md)为目标时删除引用。
+  仅在以特定[框架](../../standard/frameworks.md)为目标时使用 TFM 格式删除引用。
 
 ## <a name="examples"></a>示例
 

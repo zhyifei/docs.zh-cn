@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 51d9f4a4-81a7-4527-8537-5212bdb05c70
 topic_type:
 - apiref
-ms.openlocfilehash: 7a274aaec4919b86f32f98e4d8278dc12748fb2b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e6c4d5f8cc911198add176cab9c4b9b89128068e
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785477"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860626"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>ICLRDataTarget::GetPointerSize 方法
 获取目标进程使用的指针类型的大小（以字节为单位）。 此方法由公共语言运行时数据访问服务调用。  
@@ -40,14 +40,14 @@ HRESULT GetPointerSize (
 ## <a name="remarks"></a>备注  
  此方法由调试应用程序的编写器实现。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** ClrData，ClrData  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

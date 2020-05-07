@@ -12,15 +12,15 @@ api_type:
 ms.assetid: 66076ed5-f05c-4114-9788-94cb143abb8a
 topic_type:
 - apiref
-ms.openlocfilehash: aed301fa136ff3d45269c82b46e4cad699074874
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3e73d0fc48dcfeafb3fe2f23ec07cdc04a561a9e
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785241"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860450"
 ---
 # <a name="iclrdatatarget3getexceptioncontextrecord-method"></a>ICLRDataTarget3::GetExceptionContextRecord 方法
-由公共语言运行时 (CLR) 数据访问服务调用，以检索与目标进程关联的上下文记录。 例如，对于转储目标，此操作等效于通过 Windows 调试帮助库（Dbghelp.dll）中的[MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump)函数的 `ExceptionParam` 参数传入的上下文记录。  
+由公共语言运行时 (CLR) 数据访问服务调用，以检索与目标进程关联的上下文记录。 例如，对于转储目标，此操作等效于通过 Windows 调试帮助库（Dbghelp.dll）中的`ExceptionParam` [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump)函数的参数传入的上下文记录。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +45,7 @@ HRESULT GetExceptionContextRecord(
 ## <a name="return-value"></a>返回值  
  如果成功，则返回值是 `S_OK`；如果失败，则返回失败 `HRESULT` 代码。 `HRESULT` 代码可以包括但不限于以下代码：  
   
-|返回代码|描述|  
+|返回代码|说明|  
 |-----------------|-----------------|  
 |`S_OK`|方法成功。 已将上下文记录复制到输出缓冲区。|  
 |`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|没有与目标关联的上下文记录。|  
@@ -56,14 +56,14 @@ HRESULT GetExceptionContextRecord(
   
  此方法由调试应用程序的编写器实现。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** ClrData，ClrData  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

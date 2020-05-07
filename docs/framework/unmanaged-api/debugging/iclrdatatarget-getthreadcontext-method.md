@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9d8c3b5-3a2e-4225-95d4-dd052c4532c3
 topic_type:
 - apiref
-ms.openlocfilehash: 3777ad4b12c7d0593c095c470aba81088137a859
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c0fb023dd355f3a9c1ed846913f86b354592ed5
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179184"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860604"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext 方法
-获取目标进程中给定线程的当前执行上下文。 此方法由通用语言运行时数据访问服务调用。  
+获取目标进程中给定线程的当前执行上下文。 此方法由公共语言运行时数据访问服务调用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,32 +37,32 @@ HRESULT GetThreadContext (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `threadID`  
- [在]目标进程中线程的操作系统标识符。  
+ 中目标进程中的线程的操作系统标识符。  
   
  `contextFlags`  
- [在]指定要返回上下文的哪些部分的标志。 实现将至少返回上下文的这些部分。  
+ 中指定要返回的上下文部分的标志。 该实现将返回至少上下文的这些部分。  
   
  `contextSize`  
- [在]上下文的大小。  
+ 中上下文的大小。  
   
  `context`  
- [出]指向要在其中放置上下文的缓冲区的指针。  
+ 弄指向要在其中放置上下文的缓冲区的指针。  
   
- 缓冲区中`context`的数据必须采用 Win32`CONTEXT`结构的格式。 上下文指定特定于处理器的寄存器数据，因此 Win32`CONTEXT`结构的定义取决于处理器的体系结构。 有关 Win32`CONTEXT`结构的定义，请参阅 WinNT.h 标头文件。  
+ `context`缓冲区中的数据必须采用 Win32 `CONTEXT`结构的格式。 上下文指定处理器特定的寄存器数据，因此 Win32 `CONTEXT`结构的定义取决于处理器的体系结构。 有关 Win32 `CONTEXT`结构的定义，请参阅 WinNT. .h 头文件。  
   
 ## <a name="remarks"></a>备注  
  此方法由调试应用程序的编写器实现。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** ClrData.idl， ClrData.h  
+ **标头：** ClrData，ClrData  
   
  **库：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
