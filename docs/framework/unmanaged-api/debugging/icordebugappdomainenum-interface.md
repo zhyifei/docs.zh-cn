@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: e9226e6e-ca2c-428e-bb38-0c099210f507
 topic_type:
 - apiref
-ms.openlocfilehash: 9fb849c78636d5e29f58a70f59aa4cb3cd22df40
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 38603fb53b9cd6548595437b05c1e99ef208d940
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784737"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895098"
 ---
 # <a name="icordebugappdomainenum-interface"></a>ICorDebugAppDomainEnum 接口
 
-提供 `Next` 方法，该方法从枚举中的下一个位置开始返回指定数目的 `ICorDebugAppDomainEnum` 值。 此接口是 "ICorDebugEnum" 的子类。  
+提供`Next`方法，该方法从枚举中的下`ICorDebugAppDomainEnum`一个位置开始返回指定数目的值。 此接口是 "ICorDebugEnum" 的子类。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[Next 方法](icordebugappdomainenum-next-method.md)|从当前游标位置开始，获取集合中指定数量的应用程序域。|  
   
@@ -36,14 +36,14 @@ ms.locfileid: "76784737"
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

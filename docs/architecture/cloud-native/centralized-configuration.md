@@ -1,29 +1,71 @@
 ---
 title: 集中式配置
-description: 使用 Azure Key Vault 进行集中配置可以更轻松地管理云本机应用。
-ms.date: 06/30/2019
-ms.openlocfilehash: 4c516b6773d913acd71ff06742302e9766a141e2
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+description: 使用 Azure 应用配置和 AzureKey 保管库集中使用云本机应用程序的配置。
+ms.date: 04/19/2020
+ms.openlocfilehash: 53bdc03370b04af4d830fe7abbd8aebad81e9650
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "73841137"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895659"
 ---
 # <a name="centralized-configuration"></a>集中式配置
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-与传统的单实例应用程序相比，云本机应用程序需要运行更多的服务。 管理数十个相互依赖的服务的配置设置可能很困难，这就是通常为分布式应用程序实现集中式配置存储的原因。
+不同于单个应用，其中的所有内容都在单个实例中运行，云本机应用程序由跨虚拟机、容器和地理区域分布的独立服务构成。 管理数十个相互依赖的服务的配置设置可能非常困难。 不同位置上的配置设置重复的副本容易出错并且难于管理。 集中式配置是分布式云本机应用程序的关键要求。
 
-如[第1章](introduction.md)所述，十二因素应用建议要求严格分隔代码和配置。 这意味着，将配置设置存储为代码中的常量或文本值是一个冲突。 存在此建议是因为应跨多个环境（包括开发、测试、暂存和生产）使用相同的代码。 但是，每个环境中的配置值可能会有所不同。 因此，配置值应存储在环境本身中，否则环境应将凭据存储到集中式配置存储中。
+如[第1章](introduction.md)所述，十二因素应用建议要求严格分隔代码和配置。 必须根据需要从应用程序外部存储配置并进行读取。 将配置值存储为代码中的常量或文本值是一个冲突。 同一应用程序中的许多服务通常使用相同的配置值。 此外，我们必须跨多个环境（如开发、测试和生产）支持相同的值。 最佳做法是将它们存储在集中式配置存储中。
 
-EShopOnContainers 应用程序包含每个微服务的本地应用程序设置文件。 这些文件签入到源代码管理中，但不包括诸如连接字符串或 API 密钥之类的生产机密。 在生产环境中，可能会覆盖每个服务环境变量的各个设置。 这种做法通常适用于托管应用程序，但不提供中央配置存储。 为了支持集中管理的配置设置，每个微服务都包含一个设置以在其使用本地设置或 Azure Key Vault 设置之间切换。
+Azure 云提供了几个不错的选项。
 
-## <a name="azure-key-vault"></a>Azure 密钥保管库
+## <a name="azure-app-configuration"></a>Azure 应用配置
 
-Azure Key Vault 提供令牌、密码、证书、API 密钥和其他敏感机密的安全存储。 访问 Key Vault 需要正确的调用方身份验证和授权，在这种情况下，eShopOnContainers 微服务意味着使用 ClientId/ClientSecret 组合。 请勿将这些凭据签入源控件，而是在应用程序的环境中进行设置。 使用[Key Vault FlexVolume](https://github.com/Azure/kubernetes-keyvault-flexvol)可以实现从 AKS 的直接访问 Key Vault。
+[Azure 应用配置](https://docs.microsoft.com/azure/azure-app-configuration/overview)是一项完全托管的 Azure 服务，可将非机密配置设置存储在一个安全的集中位置。 存储的值可以在多个服务和应用程序之间共享。
 
-使用集中式配置，适用于整个应用程序的设置（例如集中式日志记录终结点）只能设置一次，并由分布式应用程序的每个部分使用。 尽管微服务应该彼此独立，但通常仍有一些共享依赖项，其配置详细信息可从集中式配置存储中获益。
+此服务易于使用，并提供了若干优点：
+
+- 灵活键/值表示和映射
+- 用 Azure 标签标记
+- 用于管理的专用 UI
+- 敏感信息的加密
+- 查询和批量检索
+
+Azure 应用配置维护7天对键值设置所做的更改。 使用时间点快照功能，您可以重新构造设置的历史记录，甚至可以为失败的部署进行回滚。
+
+应用配置会自动缓存每个设置，以避免过多调用配置存储。 刷新操作会等待，直到某项设置的已缓存值过期才更新该设置，即使其值在配置存储中发生了更改。 默认缓存过期时间为 30 秒。 可以覆盖过期时间。
+
+应用配置对传输中和静态的所有配置值进行加密。 键名称和标签用作检索配置数据和未加密的索引。
+
+尽管应用配置提供强化的安全性，但 Azure Key Vault 仍是存储应用程序机密的最佳位置。 Key Vault 提供硬件级别的加密、精细的访问策略和管理操作，如证书轮换。 你可以创建引用存储在 Key Vault 中的密钥的应用配置值。
+
+## <a name="azure-key-vault"></a>Azure Key Vault
+
+Key Vault 是一种托管服务，用于安全地存储和访问机密。 机密是你希望严格控制对其的访问的任何东西，例如 API 密钥、密码或证书。 保管库是机密的逻辑组。
+
+Key Vault 可以大大减少机密意外泄露的可能性。 有了 Key Vault，应用程序开发人员就再也不需要将安全信息存储在应用程序中。 这种做法无需在代码中存储此信息。 例如，如果某个应用程序需要连接到数据库， 则可将连接字符串安全地存储在 Key Vault 中，而不是存储在应用代码中。
+
+应用程序可以使用 URI 安全访问其所需的信息。 这些 URI 允许应用程序检索特定版本的机密。 无需编写自定义代码来保护 Key Vault 中存储的任何机密信息。
+
+访问 Key Vault 需要正确的调用方身份验证和授权。 通常，每个云本机微服务使用 ClientId/ClientSecret 组合。 将这些凭据保留在源代码管理范围内是非常重要的。 最佳做法是在应用程序的环境中对其进行设置。 使用[Key Vault FlexVolume](https://github.com/Azure/kubernetes-keyvault-flexvol)可以实现从 AKS 的直接访问 Key Vault。
+
+## <a name="configuration-in-eshop"></a>EShop 中的配置
+
+EShopOnContainers 应用程序包含每个微服务的本地应用程序设置文件。 这些文件签入到源代码管理中，但不包括诸如连接字符串或 API 密钥之类的生产机密。 在生产环境中，可能会覆盖每个服务环境变量的各个设置。 在环境变量中注入机密是对托管应用程序的一种常见做法，但并不提供中央配置存储。 为了支持集中管理的配置设置，每个微服务都包含一个设置以在其使用本地设置或 Azure Key Vault 设置之间切换。
+
+## <a name="references"></a>参考
+
+- [EShopOnContainers 体系结构](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
+- [协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)
+- [Azure API 管理](https://docs.microsoft.com/azure/api-management/api-management-key-concepts)
+- [Azure SQL 数据库概述](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
+- [用于 Redis 的 Azure 缓存](https://azure.microsoft.com/services/cache/)
+- [Azure Cosmos DB 的 API for MongoDB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
+- [Azure 服务总线](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
+- [Azure Monitor 概述](https://docs.microsoft.com/azure/azure-monitor/overview)
+- [eShopOnContainers：在 AKS 中创建 Kubernetes 群集](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#create-kubernetes-cluster-in-aks)
+- [eShopOnContainers： Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)
+- [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about)
 
 >[!div class="step-by-step"]
 >[上一页](deploy-eshoponcontainers-azure.md)
