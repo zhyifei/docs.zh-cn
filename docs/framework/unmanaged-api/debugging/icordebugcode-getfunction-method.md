@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c568b737-fdb2-4816-accd-051f5ab760f1
 topic_type:
 - apiref
-ms.openlocfilehash: 217ca0a850926e5f697340cece264c6ed442a9bb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9f785eafa8925324e3bd269ca08a3b1367b74c44
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125645"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893589"
 ---
-# <a name="icordebugcodegetfunction-method"></a><span data-ttu-id="fb919-102">ICorDebugCode::GetFunction 方法</span><span class="sxs-lookup"><span data-stu-id="fb919-102">ICorDebugCode::GetFunction Method</span></span>
-<span data-ttu-id="fb919-103">获取与此 "ICorDebugCode" 关联的 "ICorDebugFunction"。</span><span class="sxs-lookup"><span data-stu-id="fb919-103">Gets the "ICorDebugFunction" associated with this "ICorDebugCode".</span></span>  
+# <a name="icordebugcodegetfunction-method"></a><span data-ttu-id="eb15e-102">ICorDebugCode::GetFunction 方法</span><span class="sxs-lookup"><span data-stu-id="eb15e-102">ICorDebugCode::GetFunction Method</span></span>
+<span data-ttu-id="eb15e-103">获取与此 "ICorDebugCode" 关联的 "ICorDebugFunction"。</span><span class="sxs-lookup"><span data-stu-id="eb15e-103">Gets the "ICorDebugFunction" associated with this "ICorDebugCode".</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fb919-104">语法</span><span class="sxs-lookup"><span data-stu-id="fb919-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eb15e-104">语法</span><span class="sxs-lookup"><span data-stu-id="eb15e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunction (  
@@ -33,18 +33,18 @@ HRESULT GetFunction (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fb919-105">参数</span><span class="sxs-lookup"><span data-stu-id="fb919-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eb15e-105">参数</span><span class="sxs-lookup"><span data-stu-id="eb15e-105">Parameters</span></span>  
  `ppFunction`  
- <span data-ttu-id="fb919-106">弄指向函数的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="fb919-106">[out] A pointer to the address of the function.</span></span>  
+ <span data-ttu-id="eb15e-106">弄指向函数的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="eb15e-106">[out] A pointer to the address of the function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fb919-107">备注</span><span class="sxs-lookup"><span data-stu-id="fb919-107">Remarks</span></span>  
- <span data-ttu-id="fb919-108">`ICorDebugCode` 和 `ICorDebugFunction` 保持一对一关系。</span><span class="sxs-lookup"><span data-stu-id="fb919-108">`ICorDebugCode` and `ICorDebugFunction` maintain a one-to-one relationship.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="eb15e-107">备注</span><span class="sxs-lookup"><span data-stu-id="eb15e-107">Remarks</span></span>  
+ <span data-ttu-id="eb15e-108">`ICorDebugCode`和`ICorDebugFunction`保持一对一关系。</span><span class="sxs-lookup"><span data-stu-id="eb15e-108">`ICorDebugCode` and `ICorDebugFunction` maintain a one-to-one relationship.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fb919-109">要求</span><span class="sxs-lookup"><span data-stu-id="fb919-109">Requirements</span></span>  
- <span data-ttu-id="fb919-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fb919-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eb15e-109">要求</span><span class="sxs-lookup"><span data-stu-id="eb15e-109">Requirements</span></span>  
+ <span data-ttu-id="eb15e-110">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="eb15e-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fb919-111">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fb919-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="eb15e-111">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="eb15e-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fb919-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fb919-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="eb15e-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eb15e-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fb919-113">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fb919-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="eb15e-113">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb15e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
