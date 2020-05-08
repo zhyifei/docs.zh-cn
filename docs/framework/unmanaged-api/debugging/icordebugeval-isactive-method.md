@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf2bba24-d278-43bd-b1c5-35680e748d3e
 topic_type:
 - apiref
-ms.openlocfilehash: bd10af53d7803964ed6e699ce5328aa8a860216c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4ee055812eb8dce2dc86f834dde92d7de5e1fdf9
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085023"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976208"
 ---
 # <a name="icordebugevalisactive-method"></a>ICorDebugEval::IsActive 方法
 获取一个值，该值指示此 ICorDebugEval 对象当前是否正在执行。  
@@ -38,10 +38,10 @@ HRESULT IsActive (
  弄指向一个值的指针，该值指示此计算是否处于活动状态。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce3025e8-defa-4c5e-8298-f49d71fa5736
 topic_type:
 - apiref
-ms.openlocfilehash: 38cc98f1bfd966d1f764e43b30003a2bae66297d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e9570d3c916123093f69e7f26d3778f1c7184b1f
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793471"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976182"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject 方法
 分配一个新的对象实例，并调用指定的构造函数方法。  
@@ -47,14 +47,14 @@ HRESULT NewObject (
  `ppArgs`  
  中ICorDebugValue 对象的数组，其中每个对象都表示要传递给构造函数的参数。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** 1.1、1.0  
+ **.NET Framework 版本：** 1.1、1。0  
   
 ## <a name="see-also"></a>另请参阅
 

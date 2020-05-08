@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29e7a14b-d50e-4852-bfda-011b76c0c9ee
 topic_type:
 - apiref
-ms.openlocfilehash: 8a5d421bf0eb8ec5a34fe21d6efc79bbe56c294c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b263fed7db5cb2ef687da45f8cbc99a02e1e3ea2
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137646"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976130"
 ---
 # <a name="icordebugevalnewstring-method"></a>ICorDebugEval::NewString 方法
 分配具有指定内容的新字符串实例。  
@@ -41,10 +41,10 @@ HRESULT NewString (
  始终在当前执行线程的应用程序域中创建字符串。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

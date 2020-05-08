@@ -2,12 +2,12 @@
 title: ICorDebugDataTarget3::GetLoadedModules 方法
 ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
-ms.openlocfilehash: d4c22146422085daa4dc9d90ae5b3735a12500c2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c3565f4f9284bc121b0e2d3b0885cbea927acfdd
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793559"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976416"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>ICorDebugDataTarget3::GetLoadedModules 方法
 获取到目前为止已加载的模块的列表。  
@@ -37,14 +37,14 @@ HRESULT GetLoadedModules(
 > [!NOTE]
 > 此方法仅适用于 .NET Native。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

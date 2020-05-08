@@ -2,12 +2,12 @@
 title: ICorDebugDataTarget2::GetImageFromPointer 方法
 ms.date: 03/30/2017
 ms.assetid: 939cabe1-b647-4090-b662-eeec23c6c58d
-ms.openlocfilehash: 3ac1f8ab98583357a3aa622b5032d9ae121ebdf2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f316ddb04cdaad2f528e8fac0a970ca6263ebd8f
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178917"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976468"
 ---
 # <a name="icordebugdatatarget2getimagefrompointer-method"></a>ICorDebugDataTarget2::GetImageFromPointer 方法
 返回该模块地址中的模块基址和大小。  
@@ -22,12 +22,12 @@ HRESULT GetImageFromPointer(
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `addr`  
- 表示模块中地址[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值。  
+ 一个[CORDB_ADDRESS](../common-data-types-unmanaged-api-reference.md)值，该值表示模块中的地址。  
   
  `pImageBase`  
- [出]表示模块基本地址[的CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值。  
+ 弄一个[CORDB_ADDRESS](../common-data-types-unmanaged-api-reference.md)值，该值表示模块的基址。  
   
  `pSize`  
  指针指向模块大小。  
@@ -38,15 +38,15 @@ HRESULT GetImageFromPointer(
 > 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICorDebugDataTarget2 接口](icordebugdatatarget2-interface.md)
+- [“ICor调试数据目标2”接口](icordebugdatatarget2-interface.md)
 - [调试接口](debugging-interfaces.md)

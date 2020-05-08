@@ -1,20 +1,20 @@
 ---
-title: ICorDebugExceptionDebugEvent 接口
+title: “ICor调试异常调试事件”接口
 ms.date: 03/30/2017
 ms.assetid: f9ba60d8-b54d-417e-bb3e-fde4b41ca44c
-ms.openlocfilehash: 168ba2945608a5b26432c5a0f583e5d406f6ce9b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: dfa65aa1b63c996068e75ff1165111d5fcfe77eb
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76782827"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976000"
 ---
-# <a name="icordebugexceptiondebugevent-interface"></a>ICorDebugExceptionDebugEvent 接口
+# <a name="icordebugexceptiondebugevent-interface"></a>“ICor调试异常调试事件”接口
 扩展[ICorDebugDebugEvent](icordebugdebugevent-interface.md)接口以支持异常事件。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[GetFlags 方法](icordebugexceptiondebugevent-getflags-method.md)|获取指示是否可拦截异常的标志。|  
 |[GetNativeIP 方法](icordebugexceptiondebugevent-getnativeip-method.md)|获取此异常调试事件的本机接口指针。|  
@@ -34,14 +34,14 @@ ms.locfileid: "76782827"
 > [!NOTE]
 > 此接口仅适用于 .NET Native。 尝试调用 `QueryInterface` 来检索接口指针会为 .NET Native 外部的 ICorDebug 方案返回 `E_NOINTERFACE`。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-ms.openlocfilehash: cc5598f9cbec4b97bb75f83fb18ccf8742904272
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7575be3f5074243b251c80b8dd5bdbb12e5d50fd
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783012"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976315"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum 接口
 
@@ -27,15 +27,15 @@ ms.locfileid: "76783012"
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[Clone 方法](icordebugenum-clone-method.md)|创建此 `ICorDebugEnum` 对象的副本。|  
+|[Clone 方法](icordebugenum-clone-method.md)|创建此 `ICorDebugEnum` 对象的一个副本。|  
 |[GetCount 方法](icordebugenum-getcount-method.md)|获取枚举中的项数。|  
 |[Reset 方法](icordebugenum-reset-method.md)|将光标移到枚举的开头。|  
 |[Skip 方法](icordebugenum-skip-method.md)|按指定的项数在枚举中向前移动光标。|  
   
 ## <a name="remarks"></a>备注  
- 以下枚举器派生自 `ICorDebugEnum`：  
+ 以下枚举器派生自`ICorDebugEnum`：  
   
 - ICorDebugAppDomainEnum  
   
@@ -82,14 +82,14 @@ ms.locfileid: "76783012"
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
