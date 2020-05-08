@@ -37,7 +37,7 @@ ms.locfileid: "78847646"
 
   [!code-csharp-interactive[delegate removal with no effect](snippets/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  前面的示例还演示了在删除委托期间对委托实例进行比较。 例如，通过计算相同的 [Lambda 表达式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)生成的委托不相等。 有关委托相等性的详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[委托相等运算符](~/_csharplang/spec/expressions.md#delegate-equality-operators)部分。
+  前面的示例还演示了在删除委托期间对委托实例进行比较。 例如，计算相同的 [Lambda 表达式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)所生成的委托不相等。 有关委托相等性的详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[委托相等运算符](~/_csharplang/spec/expressions.md#delegate-equality-operators)部分。
 
 - 如果左侧操作数为 `null`，则操作结果为 `null`。 如果右侧操作数为 `null`，则操作的结果是左侧操作数。
 
