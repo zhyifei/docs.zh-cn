@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7f470c5c-e1c0-4d8d-aad8-830f113ae751
 topic_type:
 - apiref
-ms.openlocfilehash: 4ac26ef4449dc02230f26b1247616b4587d217b7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1cf0080945ad78565fae3fedb454ceba7825cb4a
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085161"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976234"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction 方法
 
@@ -51,18 +51,18 @@ HRESULT CallFunction (
 
 ## <a name="remarks"></a>备注
 
-如果该函数是虚拟的，`CallFunction` 将执行虚拟调度。 如果该函数在不同的应用程序域中，只要所有参数也在该应用程序域中，就会发生转换。
+如果该函数是虚拟的`CallFunction` ，将执行虚拟调度。 如果该函数在不同的应用程序域中，只要所有参数也在该应用程序域中，就会发生转换。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
 
 **标头**：CorDebug.idl、CorDebug.h
 
 **库：** CorGuids.lib
 
-**.NET Framework 版本：** 1.1、1.0
+**.NET Framework 版本：** 1.1、1。0
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [CallParameterizedFunction 方法](icordebugeval2-callparameterizedfunction-method.md)
