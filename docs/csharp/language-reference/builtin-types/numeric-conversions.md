@@ -36,7 +36,7 @@ C# 提供了一组[整型](integral-numeric-types.md)和[浮点](floating-point-
 |[float](floating-point-numeric-types.md)|`double`|
 
 > [!NOTE]
-> 从 `int`、`uint`、`long` 或 `ulong` 到 `float` 的隐式转换以及从 `long` 或 `ulong` 到 `double` 的隐式转换可能会丢失精准率，但绝不会丢失一个数量级。 其他隐式数值转换不会丢失任何信息。
+> 从 `int`、`uint`、`long` 或 `ulong` 到 `float` 的隐式转换以及从 `long` 或 `ulong` 到 `double` 的隐式转换可能会导致精准度下降，但不会影响得到正确的数量级。 其他隐式数值转换不会导致任何信息丢失。
 
 另请注意
 
