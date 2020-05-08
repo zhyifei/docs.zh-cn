@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9d0b9628-a91c-40d0-b9bc-00b34a396b8f
 topic_type:
 - apiref
-ms.openlocfilehash: 46d045712e5d3f688ec35d039ccfecba0088037c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90ac981f9b5ee71ca59f76823e7b796471571e4e
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134690"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895203"
 ---
 # <a name="icordebugappdomaingetprocess-method"></a>ICorDebugAppDomain::GetProcess 方法
 获取包含应用程序域的进程。  
@@ -38,10 +38,10 @@ HRESULT GetProcess (
  弄指向表示进程的 ICorDebugProcess 对象地址的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

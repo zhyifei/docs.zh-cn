@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc437751-7093-44e2-bfdc-191d9ce3c192
 topic_type:
 - apiref
-ms.openlocfilehash: 0944f3379c18cba56ab65fe40a5b94a64d8a8991
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: bd1e86b83c43af20604416f158ab9e74f399821b
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778203"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894966"
 ---
 # <a name="icordebugarrayvalue-interface"></a>ICorDebugArrayValue 接口
 
@@ -27,7 +27,7 @@ ms.locfileid: "76778203"
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[GetBaseIndicies 方法](icordebugarrayvalue-getbaseindicies-method.md)|获取数组中每个维的基索引。|  
 |[GetCount 方法](icordebugarrayvalue-getcount-method.md)|获取数组中的元素总数。|  
@@ -39,19 +39,19 @@ ms.locfileid: "76778203"
 |[HasBaseIndicies 方法](icordebugarrayvalue-hasbaseindicies-method.md)|确定数组是否具有基索引。|  
   
 ## <a name="remarks"></a>备注  
- `ICorDebugArrayValue` 支持一维数组和多维数组。  
+ `ICorDebugArrayValue`支持一维数组和多维数组。  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

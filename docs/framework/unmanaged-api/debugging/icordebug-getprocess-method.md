@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 10a40ba0-1b65-4721-bd11-cf12d57b280d
 topic_type:
 - apiref
-ms.openlocfilehash: 2762d0680c5299732196cafe09f6e346e873f19a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 59afc8ae7d66e81e4dca3923f9c6f7ff3a3a6605
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785142"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895383"
 ---
 # <a name="icordebuggetprocess-method"></a>ICorDebug::GetProcess 方法
 获取指向指定进程的 "ICorDebugProcess" 实例的指针。  
@@ -39,16 +39,16 @@ HRESULT GetProcess (
  中进程的 ID。  
   
  `ppProcess`  
- 弄指向指定进程的 `ICorDebugProcess` 实例的地址的指针。  
+ 弄指向指定进程的`ICorDebugProcess`实例地址的指针。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

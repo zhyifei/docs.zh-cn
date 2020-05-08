@@ -1,5 +1,5 @@
 ---
-title: ICorDebugBlockingObjectEnum::Next Method
+title: ICorDebugBlockingObjectEnum::Next 方法
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBlockingObjectEnum.Next Method
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 0121753f-ebea-48d0-aeb2-ed7fda76dc60
 topic_type:
 - apiref
-ms.openlocfilehash: c25f26bb0f1f34e3799bab4bec7e697d393cccb4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0ef49d2d833841eac62b2b964a0fdc902b4fb6a9
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784516"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894776"
 ---
-# <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next Method
+# <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next 方法
 从当前位置开始，获取枚举中指定的[CorDebugBlockingObject](cordebugblockingobject-structure.md)对象数。  
   
 ## <a name="syntax"></a>语法  
@@ -47,27 +47,27 @@ HRESULT Next([in] ULONG  celt,
 ## <a name="return-value"></a>返回值  
  此方法会返回以下特定的 HRESULT。  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|该方法成功完成。|  
+|S_OK|该方法已成功完成。|  
 |S_FALSE|`pceltFetched` 不等于 `celt`。|  
   
 ## <a name="remarks"></a>备注  
  此方法的功能类似于典型的 COM 枚举器。  
   
- 输入数组值必须至少为 `celt`大小。 将用枚举中的下一个 `celt` 值填充数组，或在剩余值小于 `celt` 的情况下填充数组。 此方法返回时，将用检索到的值的数目来填充 `pceltFetched`。 如果 `values` 包含无效指针或指向小于 `celt`的缓冲区，或者如果 `pceltFetched` 是无效指针，则结果是不确定的。  
+ 输入数组值必须至少为大小`celt`。 数组将用枚举中的下一个`celt`值填充，如果小于`celt`保留，则用所有剩余值填充。 此方法返回时， `pceltFetched`将用检索到的值的数目进行填充。 如果`values`包含无效指针或指向小于`celt`的缓冲区，或者如果`pceltFetched`是无效指针，则结果是不确定的。  
   
 > [!NOTE]
 > 尽管不需要释放[CorDebugBlockingObject](cordebugblockingobject-structure.md)结构，但它内的 "ICorDebugValue" 接口需要释放。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

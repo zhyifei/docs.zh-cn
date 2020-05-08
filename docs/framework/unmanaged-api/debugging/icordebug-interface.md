@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 33f431d7-ab1a-494d-8af2-20ab15aba194
 topic_type:
 - apiref
-ms.openlocfilehash: 0ca66f001d04bc86b64e0fe2d1cd37559e4fc633
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 66b50bad0e8d2622922da96c213643ac3be83a9e
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785120"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895363"
 ---
 # <a name="icordebug-interface"></a>ICorDebug 接口
 提供允许开发人员在公共语言运行时（CLR）环境中调试应用程序的方法。  
@@ -29,7 +29,7 @@ ms.locfileid: "76785120"
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[CanLaunchOrAttach 方法](icordebug-canlaunchorattach-method.md)|确定是否可以在当前计算机和运行时配置的上下文中启动新进程或附加到给定进程。|  
 |[CreateProcess 方法](icordebug-createprocess-method.md)|在调试器的控制下启动进程及其主线程。|  
@@ -39,24 +39,24 @@ ms.locfileid: "76785120"
 |[Initialize 方法](icordebug-initialize-method.md)|初始化 `ICorDebug` 对象。|  
 |[SetManagedHandler 方法](icordebug-setmanagedhandler-method.md)|指定托管事件的事件处理程序对象。|  
 |[SetUnmanagedHandler 方法](icordebug-setunmanagedhandler-method.md)|指定非托管事件的事件处理程序对象。|  
-|[Terminate 方法](icordebug-terminate-method.md)|终止 `ICorDebug` 的对象。|  
+|[Terminate 方法](icordebug-terminate-method.md)|终止`ICorDebug`对象。|  
   
 ## <a name="remarks"></a>备注  
- `ICorDebug` 表示调试器进程的事件处理循环。 调试程序必须等待所有正在调试的进程中的[ICorDebugManagedCallback：： ExitProcess](icordebugmanagedcallback-exitprocess-method.md)回调，然后释放此接口。  
+ `ICorDebug`表示调试器进程的事件处理循环。 调试程序必须等待所有正在调试的进程中的[ICorDebugManagedCallback：： ExitProcess](icordebugmanagedcallback-exitprocess-method.md)回调，然后释放此接口。  
   
- `ICorDebug` 对象是用于控制所有进一步托管调试的初始对象。 在 .NET Framework 版本1.0 和1.1 中，此对象是从 COM 创建的 `CoClass` 对象。 在 .NET Framework 版本2.0 中，此对象不再是 `CoClass` 对象。 它必须通过[CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)函数创建，该函数更易于识别。 此新创建函数使客户端可以获取 `ICorDebug`的特定实现，这也会模拟调试 API 的特定版本。  
+ `ICorDebug`对象是控制所有进一步托管调试的初始对象。 在 .NET Framework 版本1.0 和1.1 中，此对象是从`CoClass` COM 创建的对象。 在 .NET Framework 版本2.0 中，此对象不再是`CoClass`对象。 它必须通过[CreateDebuggingInterfaceFromVersion](../hosting/createdebugginginterfacefromversion-function.md)函数创建，该函数更易于识别。 此新创建函数使客户端可以获取的`ICorDebug`特定实现，这也会模拟调试 API 的特定版本。  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

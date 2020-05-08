@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e30c29f7-3f19-4081-b572-a731aa14cd44
 topic_type:
 - apiref
-ms.openlocfilehash: 50794e96484432c8b7c203f6b8caa60130068a8c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 24dc55cc9a49c3602829ca627d584c761b4088ce
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122795"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894746"
 ---
 # <a name="icordebugbreakpointactivate-method"></a>ICorDebugBreakpoint::Activate 方法
-设置此 `ICorDebugBreakpoint`的活动状态。  
+设置此`ICorDebugBreakpoint`的活动状态。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,13 +35,13 @@ HRESULT Activate (
   
 ## <a name="parameters"></a>参数  
  `bActive`  
- 中将此值设置为 "`true`" 以将状态指定为 "活动";否则，请将此值设置为 `false`。  
+ 中将此值设置`true`为可将状态指定为活动状态;否则，将此值设置`false`为。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

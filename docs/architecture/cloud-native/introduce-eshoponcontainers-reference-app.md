@@ -2,12 +2,12 @@
 title: EShopOnContainers 参考应用简介
 description: 介绍适用于 ASP.NET Core 和 Azure 的 eShopOnContainers Cloud 本机微服务 Reference 应用。
 ms.date: 06/30/2019
-ms.openlocfilehash: 0d55f248acbc34bcc76d38987d7e1d537cf6065a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8d4ad982716a07613ebbef6668afab69d5a8b4f6
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841773"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895541"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>EShopOnContainers 参考应用简介
 
@@ -17,7 +17,7 @@ Microsoft 与领先社区专家合作，已生成了一个功能完备的云本�
 
 ![eShopOnContainers 示例应用屏幕快照。](./media/eshoponcontainers-sample-app-screenshot.png)
 
-**图 2-1**. eShopOnContainers 示例应用屏幕快照。
+**图 2-1**。 eShopOnContainers 示例应用屏幕快照。
 
 在开始本章之前，我们建议下载[eShopOnContainers 引用应用程序](https://github.com/dotnet-architecture/eShopOnContainers)。 如果执行此操作，则应更轻松地遵循所显示的信息。
 
@@ -30,7 +30,7 @@ Microsoft 与领先社区专家合作，已生成了一个功能完备的云本�
 - 按品牌筛选项目
 - 将商品添加到购物篮
 - 编辑或删除购物篮中的项
-- 检
+- 签出
 - 注册帐户
 - 登录
 - 注销
@@ -70,7 +70,7 @@ Microsoft 与领先社区专家合作，已生成了一个功能完备的云本�
 
 ## <a name="understanding-microservices"></a>了解微服务
 
-本书重点介绍使用 Azure 技术构建的云本机应用程序。 若要详细了解微服务最佳实践和如何构建基于微服务的应用程序，请阅读[适用于容器化 .Net 应用程序的 .Net 微服务：架构](https://dotnet.microsoft.com/learn/aspnet/microservices-architecture)。 本书以 PDF 或 eReader 格式提供。
+本书重点介绍使用 Azure 技术构建的云本机应用程序。 若要详细了解微服务最佳实践和如何构建基于微服务的应用程序，请阅读[适用于容器化 .Net 应用程序的 .Net 微服务：架构](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)。
 
 >[!div class="step-by-step"]
 >[上一页](candidate-apps.md)

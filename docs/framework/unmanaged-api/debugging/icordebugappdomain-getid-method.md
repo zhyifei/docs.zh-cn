@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 32c27576-71fa-42ee-8230-67b92913ea08
 topic_type:
 - apiref
-ms.openlocfilehash: 87c43d6f05dffbf10ca1dd9253abfe893db9adf5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 63346c679efc083dea9ab0eaa4f983a5308695f8
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110484"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895256"
 ---
 # <a name="icordebugappdomaingetid-method"></a>ICorDebugAppDomain::GetId 方法
 获取应用程序域的唯一标识符。  
@@ -41,10 +41,10 @@ HRESULT GetID (
  应用程序域的标识符在包含进程中是唯一的。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

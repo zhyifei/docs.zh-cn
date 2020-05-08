@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-ms.openlocfilehash: fde76c3b34fcc9f2321f3426d2801b310f681067
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 59a497d203d241bbc6e0f884007d4a401c112073
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179002"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893652"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode 方法
-获取指定函数的所有代码，这些代码为拆卸格式化。 此方法已在 .NET 框架版本 2.0 中弃用。 使用[ICorDebugCode2：：请改为获取代码块](icordebugcode2-getcodechunks-method.md)。  
+获取用于反汇编的指定函数的所有代码。 此方法在 .NET Framework 版本2.0 中已弃用。 改[为使用 ICorDebugCode2：： GetCodeChunks](icordebugcode2-getcodechunks-method.md) 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,33 +38,33 @@ HRESULT GetCode (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `startOffset`  
- [在]函数开头的偏移量。  
+ 中函数开头的偏移量。  
   
  `endOffset`  
- [在]函数末尾的偏移量。  
+ 中函数末尾的偏移量。  
   
  `cBufferAlloc`  
- [在]要将代码返回到`buffer`的数组的大小。  
+ 中将返回代码的`buffer`数组的大小。  
   
  `buffer`  
- [出]将代码返回到的数组。  
+ 弄将向其中返回代码的数组。  
   
  `pcBufferSize`  
- [出]返回的字节数。  
+ 弄返回的字节数。  
   
 ## <a name="remarks"></a>备注  
- 如果函数的代码已划分为多个区块，则它们按增加本机偏移的顺序串联。 未检查指令边界。  
+ 如果函数的代码已划分为多个块，则它们将按照增加的本机偏移量的顺序进行连接。 不检查指令边界。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET 框架版本：** 1.1， 1.0  
+ **.NET Framework 版本：** 1.1、1。0  
   
 ## <a name="see-also"></a>另请参阅
 

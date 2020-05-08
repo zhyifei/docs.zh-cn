@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0b8ab4b-d7d2-4fa0-945f-3d2b87e7e991
 topic_type:
 - apiref
-ms.openlocfilehash: 5a07550d44857526e8ab4ded9f1827ef12e3bba4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a6d26924773e6ad505975402ec3ace150d02cc3a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192135"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894618"
 ---
 # <a name="icordebugchaingetcaller-method"></a>ICorDebugChain::GetCaller 方法
 获取调用此链的链。  
@@ -37,16 +37,16 @@ HRESULT GetCaller (
  `ppChain`  
  弄指向表示调用链的 ICorDebugChain 对象地址的指针。  
   
- 如果此链是自发调用的（如果此链或调试器初始化了调用堆栈，就是这种情况），`ppChain` 将为 null。  
+ 如果此链是自发调用的（如果此链或调试器初始化调用堆栈，就是如此）， `ppChain`将为 null。  
   
 ## <a name="remarks"></a>备注  
  如果调用是在线程间封送的，则调用链可能位于不同的线程上。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

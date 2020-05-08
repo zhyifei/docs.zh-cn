@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0aba6096-5b38-435c-a72a-86d35db4daef
 topic_type:
 - apiref
-ms.openlocfilehash: 5a6e0b009674ff52595aaa0ae4a060f1cdfd1398
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb9b5ee329b41a8b842b94d59bd61c8bcf5f0bf5
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089049"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895153"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a>ICorDebugAppDomain2::GetFunctionPointerType 方法
 获取一个指针，该指针指向具有给定签名的函数。  
@@ -43,13 +43,13 @@ HRESULT GetFunctionPointerType (
  中指针的数组，其中每个都指向表示函数类型参数的 ICorDebugType 对象。 第一个元素是返回类型;其他每个元素都是一个参数类型。  
   
  `ppType`  
- 弄指向表示指向函数的指针的 `ICorDebugType` 对象地址的指针。  
+ 弄指向`ICorDebugType`对象地址的指针，该对象表示指向函数的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
