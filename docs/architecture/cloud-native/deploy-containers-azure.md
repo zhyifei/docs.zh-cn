@@ -2,12 +2,12 @@
 title: 在 Azure 中部署容器
 description: 在 Azure 中通过 Azure 容器注册表、Azure Kubernetes 服务和 Azure Dev Spaces 部署容器。
 ms.date: 04/13/2020
-ms.openlocfilehash: 6238460c6129583c34e6b328c38ed9042f32f3d6
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 57a4739d39b8ad022d699d54255f56f16d305440
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199555"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895604"
 ---
 # <a name="deploying-containers-in-azure"></a>在 Azure 中部署容器
 
@@ -108,8 +108,8 @@ az acr build --image sample/hello-world:v1  --registry myContainerRegistry008 --
 
 为了理解 Azure Dev Spaces 的价值，让我在 Microsoft Azure 的容器的 Gabe Monroy 中共享此报价：
 
-> 假设您是一名新员工，尝试修复由数十个组件组成的复杂微服务应用程序中的 bug，每个组件都有其自己的配置和支持服务。 若要开始，必须配置本地开发环境，使其可以模拟生产环境，包括设置 IDE、构建工具链、容器化服务依赖项、本地 Kubernetes 环境、模拟用于支持服务等。 在设置开发环境的过程中，解决第一个 bug 可能需要数天的时间。
-> 或者，可以使用 Dev 空格和 AKS。
+> "假设您是一名新员工，尝试修复由数十个组件组成的复杂的微服务应用程序中的 bug，每个组件都有其自己的配置和支持服务。 若要开始，必须配置本地开发环境，使其可以模拟生产环境，包括设置 IDE、构建工具链、容器化服务依赖项、本地 Kubernetes 环境、模拟用于支持服务等。 在设置开发环境的过程中，解决第一个 bug 可能需要数天的时间。
+> 或者，可以使用 Dev Spaces 和 AKS。 "
 
 使用 Azure Dev Spaces 的过程涉及以下步骤：
 

@@ -3,12 +3,12 @@ title: 定义云本机
 description: 了解提供适用于云原生系统成为的基础支柱
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: ba11cb1cf0d9d7ef9734ad49aee1df22f285fc4c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 33977ff736fc5cbfcf86ed6479e8d0b927b87a63
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199776"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895620"
 ---
 # <a name="defining-cloud-native"></a>定义云本机
 
@@ -35,8 +35,8 @@ ms.locfileid: "82199776"
 | Company | 体验 |
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | 在生产环境中有600多项服务。 每天部署数百次。 |
-| [Uber](https://eng.uber.com/micro-deploy/) | 生产中存储了1000多个服务。 每周部署几千个版本。 |
-| [微信](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | 生产中包含300多个服务。 每天进行约1000个更改。 |
+| [Uber](https://eng.uber.com/micro-deploy/) | 在生产环境中具有1000个以上的服务。 每周部署几千次。 |
+| [微信](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | 生产中包含300多个服务。 一天部署1000次。 |
 
 如您所见，Netflix、Uber 和 WeChat 公开了由数百个独立微服务组成的系统。 这种体系结构样式使其能够快速响应市场状况。 它们可即时更新实时、复杂应用程序的小区域，并根据需要单独缩放这些区域。
 
@@ -79,7 +79,7 @@ Azure 云平台支持这种类型的高度弹性基础结构，具有自动缩�
 |    |  因素 | 说明  |
 | :-------- | :-------- | :-------- |
 | 1 | 基本代码 | 每个微服务的一个基本代码，存储在其自己的存储库中。 通过版本控制进行跟踪，可部署到多个环境（QA、过渡、生产）。 |
-| 2 | 依赖项 | 每个微服务都隔离并打包其自己的依赖项，以在不影响整个系统的情况下进行更改。 |
+| 2 | 依赖关系 | 每个微服务都隔离并打包其自己的依赖项，以在不影响整个系统的情况下进行更改。 |
 | 3 | 配置  | 配置信息通过代码之外的配置管理工具移出微服务和外部化。 相同的部署可以在应用了正确配置的环境中进行传播。  |
 | 4 | 支持服务 | 辅助资源（数据存储、缓存、消息代理）应通过可寻址 URL 公开。 这样做会使资源与应用程序分离，使其能够互相替换。  |
 | 5 | 生成、发布、运行 | 每个版本都必须强制实施跨生成、发布和运行阶段的严格分离。 每个都应使用唯一 ID 标记，并支持回滚功能。 新式 CI/CD 系统有助于满足此原则。 |
@@ -88,7 +88,7 @@ Azure 云平台支持这种类型的高度弹性基础结构，具有自动缩�
 | 8 | 并发 | 服务跨大量的小型相同进程（副本）进行扩展，而不是在功能最强大的计算机上扩展单个大型实例。 |
 | 9 | Disposability | 服务实例应该是可释放的，favoring 快速启动以提高可伸缩性机会，并使系统保持正常状态。 Docker 容器以及 orchestrator 本身就满足了这一要求。 |
 | 10 | 开发/生产奇偶校验 | 使环境在应用程序生命周期中保持尽可能相似，避免成本高昂的快捷方式。 在这里，使用容器可以通过提升相同的执行环境来做出极大的贡献。 |
-| 11 | 日志记录 | 将微服务生成的日志视为事件流。 使用事件聚合器处理这些数据，并将数据传播到 Azure Monitor 或 Splunk 等数据挖掘/日志管理工具，最终长期存档。 |
+| 11 | Logging | 将微服务生成的日志视为事件流。 使用事件聚合器处理这些数据，并将数据传播到 Azure Monitor 或 Splunk 等数据挖掘/日志管理工具，最终长期存档。 |
 | 12 | 管理进程 | 以一次性进程的形式运行管理/管理任务。 任务可以包含报表的数据清理和拉取分析。 执行这些任务的工具应从生产环境中调用，而不是与应用程序一起调用。 |
 
 在本指南中，在 [十二个因素的应用程序之外](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)，将 Hoffman 的每一个原始12个因素（以2011编写）为依据。 此外，该书还提供了三个其他因素来反映当今的新式云应用程序设计。
@@ -96,7 +96,7 @@ Azure 云平台支持这种类型的高度弹性基础结构，具有自动缩�
 |    |  新因素 | 说明  |
 | :-------- | :-------- | :-------- |
 | 13 | API 优先 | 使所有内容成为服务。 假设你的代码将由前端客户端、网关或其他服务使用。 |
-| 14 | 遥测技术 | 在工作站上，你可以深入了解应用程序及其行为。 在云中，你不能。 请确保您的设计包括监视、特定于域的和健康/系统数据的收集。 |
+| 14 | 遥测 | 在工作站上，你可以深入了解应用程序及其行为。 在云中，你不能。 请确保您的设计包括监视、特定于域的和健康/系统数据的收集。 |
 | 15 | 身份验证/授权  | 开始实现标识。 考虑在公有云中提供[RBAC （基于角色的访问控制）](https://docs.microsoft.com/azure/role-based-access-control/overview)功能。  |
 
 我们将参考本章和整个书籍中的众多12个因素。
@@ -167,7 +167,7 @@ Azure 云平台支持这种类型的高度弹性基础结构，具有自动缩�
 
 - 每个微服务可以独立缩放。 只需横向扩展需要更多处理能力或网络带宽的服务，而不是将整个应用程序作为单个单元进行缩放。 这一细化方法可用于更好地控制系统，并可帮助你在扩展系统的部分而不是所有内容时降低总体成本。
 
-了解微服务的优秀参考指南是[.Net 微服务：容器化 .Net 应用程序的体系结构](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)。 本书深层深入到微服务设计和体系结构。 这是一种适用于 Microsoft 免费下载的[完整堆栈微服务参考体系结构](https://github.com/dotnet-architecture/eShopOnContainers)。
+了解微服务的优秀参考指南是[.Net 微服务：容器化 .Net 应用程序的体系结构](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)。 本书深层深入到微服务设计和体系结构。 这是一种适用于 Microsoft 免费下载的[完整堆栈微服务参考体系结构](https://github.com/dotnet-architecture/eShopOnContainers)。
 
 ### <a name="developing-microservices"></a>开发微服务
 

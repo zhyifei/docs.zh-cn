@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f671f519-1cb3-4ae5-b9f1-abc5e783459f
 topic_type:
 - apiref
-ms.openlocfilehash: f4bacfe94178ea78b1c3afd15a2e100076c38a84
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6ae0fec0f8de2bbe3862f9f70ed9cf3d32af34c4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777985"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894212"
 ---
 # <a name="icordebugchain-interface"></a>ICorDebugChain 接口
 
@@ -27,7 +27,7 @@ ms.locfileid: "76777985"
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[EnumerateFrames 方法](icordebugchain-enumerateframes-method.md)|获取一个枚举数，该枚举数包含链中所有托管堆栈帧（从最新帧开始）。|  
 |[GetActiveFrame 方法](icordebugchain-getactiveframe-method.md)|获取链上的活动（即最近的）帧。|  
@@ -43,19 +43,19 @@ ms.locfileid: "76777985"
 |[IsManaged 方法](icordebugchain-ismanaged-method.md)|获取一个值，该值指示此链是否正在运行托管代码。|  
   
 ## <a name="remarks"></a>备注  
- 链中的堆栈帧占用连续堆栈空间并共享相同的线程和上下文。 链可以表示托管或非托管代码链。 空的 `ICorDebugChain` 实例表示非托管代码链。  
+ 链中的堆栈帧占用连续堆栈空间并共享相同的线程和上下文。 链可以表示托管或非托管代码链。 空`ICorDebugChain`实例表示非托管代码链。  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
