@@ -53,7 +53,7 @@ public class ControlPanelController : Controller
 }
 ```
 
-在此示例中，仅管理员或 PowerUser 角色中的用户可访问 ControlPanel 控制器中的 API（如执行设置时间操作）。 ShutDown API 进一步限制为仅允许访问 Administrator 角色的用户。
+在此示例中，仅管理员或 PowerUser 角色中的用户可访问 ControlPanel 控制器中的 API（如执行 SetTime 操作）。 ShutDown API 已进一步限制为仅允许访问 Administrator 角色的用户。
 
 若要用户处于多种角色，则使用多个 Authorize 特性，如以下示例所示：
 
@@ -68,7 +68,7 @@ public ActionResult API1 ()
 
 在此示例中，要调用 API1，用户必须：
 
-- 处于 Administrator 或 PowerUser 角色；以及  
+- 具有 Administrator 或 PowerUser 角色；以及   
 
 - 处于 RemoteEmployee 角色； 
 
