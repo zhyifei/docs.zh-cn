@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbb1c4dc-269a-459b-ab1d-6c70788782ce
 topic_type:
 - apiref
-ms.openlocfilehash: d6c923f03309da3ad8092ea6119e7d850120ee2c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e494bbb24e8f2245593e7945625e72e70ae1dde5
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783808"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892774"
 ---
 # <a name="icordebugcontroller-interface"></a>ICorDebugController 接口
 
@@ -27,7 +27,7 @@ ms.locfileid: "76783808"
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |`ICorDebugController::CanCommitChanges`|此方法已过时。|  
 |`ICorDebugController::CommitChanges`|此方法已过时。|  
@@ -41,19 +41,19 @@ ms.locfileid: "76783808"
 |[Terminate 方法](icordebugcontroller-terminate-method.md)|用指定的退出代码终止进程。|  
   
 ## <a name="remarks"></a>备注  
- 如果 `ICorDebugController` 正在控制某个进程，则该范围将包括该进程的所有线程。 如果 `ICorDebugController` 正在控制某个应用程序域，则该作用域只包含该特定应用程序域的线程。  
+ 如果`ICorDebugController`正在控制某个进程，则该范围将包括该进程的所有线程。 如果`ICorDebugController`正在控制某个应用程序域，则该作用域只包含该特定应用程序域的线程。  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

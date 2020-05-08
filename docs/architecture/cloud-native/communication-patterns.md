@@ -3,12 +3,12 @@ title: 云本机通信模式
 description: 了解云本机应用程序中的重要服务通信问题
 author: robvet
 ms.date: 08/31/2019
-ms.openlocfilehash: 3bda9baa516b7bd8f893e0f58bbe5e2bfde2b61d
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: b3edc0817fb76ad99a1344b17d600eb747187f86
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "73841143"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895633"
 ---
 # <a name="cloud-native-communication-patterns"></a>云本机通信模式
 
@@ -44,7 +44,7 @@ ms.locfileid: "73841143"
 
 - 消息加密/解密十分重要。
 
-适用于[容器化 .Net 应用程序的微服务的体系结构](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)可从 Microsoft 免费获取，为微服务应用程序提供了更深入的通信模式。 在本章中，我们提供了这些模式以及 Azure 云中提供的实现选项的高级概述。
+适用于[容器化 .Net 应用程序的微服务的体系结构](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)可从 Microsoft 免费获取，为微服务应用程序提供了更深入的通信模式。 在本章中，我们提供了这些模式以及 Azure 云中提供的实现选项的高级概述。
 
 在本章中，我们将首先解决前端应用程序和后端微服务之间的通信。 接下来，我们将探讨后端微服务相互通信。 我们将探索 gRPC 的通信技术。 最后，我们将使用服务网格技术来了解新的创新性通信模式。 我们还将了解 Azure 云如何提供不同种类的*后备服务*来支持云本机通信。
 

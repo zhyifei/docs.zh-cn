@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6fd5eaa4-1997-4910-82f5-3887480db764
 topic_type:
 - apiref
-ms.openlocfilehash: 10584442d7e0bd61e6decaf2b494dfe39f339d6d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5644c20ec5df2606c7258131573691997f424e50
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088418"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895015"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>ICorDebugArrayValue::GetElementAtPosition 方法
 获取位于给定位置的元素，并将该数组视为从零开始的一维数组。  
@@ -42,13 +42,13 @@ HRESULT GetElementAtPosition (
  弄指向表示元素值的 ICorDebugValue 对象地址的指针。  
   
 ## <a name="remarks"></a>备注  
- 多维数组的布局遵循数组布局的C++样式。  
+ 多维数组的布局遵循数组布局的 c + + 样式。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -93,3 +93,5 @@
           href: infrastructure-as-code.md
         - name: 云本机应用程序捆绑包
           href: application-bundles.md
+    - name: 总结
+      href: summary.md

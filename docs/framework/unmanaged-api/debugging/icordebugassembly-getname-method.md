@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdeda721-b214-4503-a291-c70b68b5f36b
 topic_type:
 - apiref
-ms.openlocfilehash: 5e3619d12b9377a8482254703d3d97d0348a013b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: daf5319f5d57f44cb20ce9f28d3c7b84c7015ff6
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127174"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894909"
 ---
 # <a name="icordebugassemblygetname-method"></a>ICorDebugAssembly::GetName 方法
-获取此 `ICorDebugAssembly` 实例表示的程序集的名称。  
+获取此`ICorDebugAssembly`实例表示的程序集的名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,13 +46,13 @@ HRESULT GetName (
  弄存储名称的数组。  
   
 ## <a name="remarks"></a>备注  
- `GetName` 方法返回程序集的完整路径和文件名。  
+ `GetName`方法返回程序集的完整路径和文件名。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
