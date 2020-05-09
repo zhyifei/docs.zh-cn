@@ -106,9 +106,9 @@ calculateButton.Clicked += async (o, e) =>
 
     如果答案为“是”，则你的工作是 **CPU 绑定**。
 
-如果你的工作为 I/O 绑定，请使用 **和**（而不使用 `async`）`await`  `Task.Run`。  不应使用任务并行库  。  相关原因在[深入了解异步的文章](../standard/async-in-depth.md)中说明。
+如果你的工作为 **I/O 绑定**，请使用 `async` 和 `await`（而不使用 `Task.Run`）。不应使用任务并行库。相关原因在[深入了解异步的文章](../standard/async-in-depth.md)中说明。
 
-如果你的工作为 CPU 绑定，并且你重视响应能力，请使用 **和**，并在另一个线程上使用 `async` 生成工作。`await`  `Task.Run`  如果该工作同时适用于并发和并行，则应考虑使用[任务并行库](../standard/parallel-programming/task-parallel-library-tpl.md)。
+如果你的工作为 **CPU 绑定**，并且你重视响应能力，请使用 `async` 和 `await`，并在另一个线程上使用  `Task.Run` 生成工作。如果该工作同时适用于并发和并行，则应考虑使用[任务并行库](../standard/parallel-programming/task-parallel-library-tpl.md)。
 
 此外，应始终对代码的执行进行测量。  例如，你可能会遇到这样的情况：多线程处理时，上下文切换的开销高于 CPU 绑定工作的开销。  每种选择都有折衷，应根据自身情况选择正确的折衷方案。
 
