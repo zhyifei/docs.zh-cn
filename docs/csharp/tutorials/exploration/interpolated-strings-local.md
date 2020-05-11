@@ -2,12 +2,12 @@
 title: 字符串内插 - C# 教程
 description: 本教程介绍了如何使用 C# 字符串内插功能将格式化表达式结果添加到较大的字符串中。
 ms.date: 10/23/2018
-ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d1b78670361e8b333499d12b68c0364ad9e40a85
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346783"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796049"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>使用字符串内插构造格式化字符串
 
@@ -165,4 +165,4 @@ Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.3
 
 你已完成“字符串内插”教程。
 
-有关详细信息，请参阅[字符串内插](../../language-reference/tokens/interpolated.md)主题和 [C# 中的字符串内插](../../tutorials/string-interpolation.md)教程。
+有关详细信息，请参阅[字符串内插](../../language-reference/tokens/interpolated.md)主题和 [C# 中的字符串内插](../string-interpolation.md)教程。

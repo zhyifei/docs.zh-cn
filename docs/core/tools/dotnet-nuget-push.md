@@ -3,12 +3,12 @@ title: dotnet nuget push 命令
 description: dotnet nuget push 命令可将包推送到服务器并发布。
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 8b0437d7f4ada2b56af50e30717d131668c21f7e
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 1e7831de4c041591b3602e405418f89f1d1d27d1
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728358"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895454"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -152,5 +152,4 @@ dotnet nuget push -h|--help
   dotnet nuget push *.nupkg -s c:\mydir
   ```
 
-  此命令不会将包存储在分层文件夹结构中，因此建议优化性能。 有关详细信息，请参阅[本地源](//nuget/hosting-packages/local-feeds)。
-  
+  此命令不会将包存储在分层文件夹结构中，因此建议优化性能。 有关详细信息，请参阅[本地源](/nuget/hosting-packages/local-feeds)。  

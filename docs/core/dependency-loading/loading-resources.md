@@ -4,12 +4,12 @@ description: .NET Core 中附属程序集加载算法的详细说明
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: bfdc1d8179d46a13b3d137a87397fa3e573da33c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17f29a9aca79019daa91736e586bf1b6b753a9ec
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72303622"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859529"
 ---
 # <a name="satellite-assembly-loading-algorithm"></a>附属程序集加载算法
 
@@ -36,10 +36,11 @@ ms.locfileid: "72303622"
     - 检查当前正在执行程序集的目录，查找与请求的 <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType>（例如 `es-MX`）匹配的子目录。
 
         > [!NOTE]
-        > 3.0 版之前的 .NET Core 中未实现此功能。
+        > 3\.0 版之前的 .NET Core 中未实现此功能。
         >
         > [!NOTE]
         > 在 Linux 和 macOS 上，子目录区分大小写，并且必须是以下两种情况之一：
+        >
         > - 完全匹配大小写。
         > - 为小写。
 

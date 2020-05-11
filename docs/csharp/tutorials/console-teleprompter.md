@@ -4,12 +4,12 @@ description: 此教程将介绍 .NET Core 和 C# 语言的许多功能。
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 09ce36e7a61f576dc4449976ce676701dc57c9cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 06affa01b67edeea09088834cf131adb55650bbb
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76921125"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794658"
 ---
 # <a name="console-app"></a>控制台应用
 
@@ -175,7 +175,7 @@ private static async Task ShowTeleprompter()
 }
 ```
 
-你会注意到两处更改。 首先，此版本在方法主体中使用 `await` 关键字，而不是调用 <xref:System.Threading.Tasks.Task.Wait> 同步等待任务完成。 为此，需要将 `async` 修饰符添加到方法签名中。 此方法返回 `Task`。 请注意，没有用于返回 `Task` 对象的返回语句。 相反，`Task` 对象由编译器在你使用 `await` 运算符时生成的代码进行创建。 可以想象，此方法在到达 `await` 时返回。 返回的 `Task` 指示工作未完成。 在等待的任务完成时，此方法继续执行。 执行完后，返回的 `Task` 会指示已完成。
+你会注意到两处更改。 首先，此版本在方法主体中使用 <xref:System.Threading.Tasks.Task.Wait> 关键字，而不是调用 `await` 同步等待任务完成。 为此，需要将 `async` 修饰符添加到方法签名中。 此方法返回 `Task`。 请注意，没有用于返回 `Task` 对象的返回语句。 相反，`Task` 对象由编译器在你使用 `await` 运算符时生成的代码进行创建。 可以想象，此方法在到达 `await` 时返回。 返回的 `Task` 指示工作未完成。 在等待的任务完成时，此方法继续执行。 执行完后，返回的 `Task` 会指示已完成。
 调用代码可以通过监视返回的 `Task` 来确定完成时间。
 
 可以在 `Main` 方法中调用以下新方法：
@@ -313,4 +313,4 @@ RunTeleprompter().Wait();
 
 此教程介绍了与处理控制台应用程序相关的许多 C# 语言和 .NET Core 库功能。 可以在此教程的基础上进一步探索语言和本文介绍的类。 你已了解文件和控制台 I/O 的基础知识、基于任务的异步编程的阻止性和非阻止性用途、C# 语言介绍、C# 程序的组织结构，以及 .NET Core CLI。
 
-有关文件 I/O 的详细信息，请参阅[文件和流 I/O](../../standard/io/index.md) 主题。 有关本教程中使用的异步编程模型的详细信息，请参阅[基于任务的异步编程](../..//standard/parallel-programming/task-based-asynchronous-programming.md)主题和[异步编程](../async.md)主题。
+有关文件 I/O 的详细信息，请参阅[文件和流 I/O](../../standard/io/index.md) 主题。 有关本教程中使用的异步编程模型的详细信息，请参阅[基于任务的异步编程](../../standard/parallel-programming/task-based-asynchronous-programming.md)主题和[异步编程](../async.md)主题。

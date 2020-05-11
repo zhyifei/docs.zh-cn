@@ -3,12 +3,12 @@ title: .NET Core 上不支持的 API
 titleSuffix: ''
 description: 了解 .NET Framework 中始终在 .NET Core 上引发异常的 API。
 ms.date: 12/23/2019
-ms.openlocfilehash: bd3516d9480ef42b6ea89825ba64867a3ca104e3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 941e9149c7679afe4a888149108d0a9a28e5e7ab
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242941"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794593"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core"></a>始终在 .NET Core 上引发异常的 API
 
@@ -324,6 +324,6 @@ ms.locfileid: "81242941"
 
 ## <a name="see-also"></a>另请参阅
 
-- [从 .NET Framework 迁移到 .NET Core 的中断性变更](../compatibility/fx-core.md)
+- [从 .NET Framework 迁移到 .NET Core 的中断性变更](fx-core.md)
 - [.NET Core 中的二进制序列化](../../standard/serialization/binary-serialization.md#net-core)
 - [.NET 可移植性分析器](../../standard/analyzers/portability-analyzer.md)

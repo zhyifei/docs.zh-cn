@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 094dd1227033e167050ad73121b3005a592a0ae4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c3f1fcda8a8a6abc58d35bf37e51485bb3590fa3
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714524"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794632"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>在 .NET Core 上使用 Microsoft XML 序列化程序生成器
 
@@ -50,7 +50,7 @@ dotnet new console
 
 ### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a>在 MyApp 项目中向 Microsoft.XmlSerializer.Generator 包添加引用
 
-使用 [`dotnet add package`](../tools//dotnet-add-package.md) 命令在项目中添加引用。
+使用 [`dotnet add package`](../tools/dotnet-add-package.md) 命令在项目中添加引用。
 
 类型:
 
@@ -64,7 +64,7 @@ dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
 
 在文本编辑器中打开 MyApp.csproj  。
 
-运行 [`dotnet add package`](../tools//dotnet-add-package.md) 命令后，会将以下行添加到 MyApp.csproj 项目文件中  ：
+运行 [`dotnet add package`](../tools/dotnet-add-package.md) 命令后，会将以下行添加到 MyApp.csproj 项目文件中  ：
 
  ```xml
  <ItemGroup>

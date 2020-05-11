@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 930329b922f585ac4763e6a66d3b192ae839f14f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f85b88236c2e643f97453c64173a3f4f7159a35
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398195"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794996"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布尔逻辑运算符（C# 参考）
 
@@ -57,7 +57,7 @@ ms.locfileid: "79398195"
 
 从 C# 8.0 起，一元后缀 `!` 运算符为 [null 包容运算符](null-forgiving.md)。
 
-## <a name="logical-and-operator-"></a> 逻辑 AND 运算符 &amp;
+## <a name="logical-and-operator-amp"></a><a name="logical-and-operator-"></a> 逻辑 AND 运算符 &amp;
 
 `&` 运算符计算操作数的逻辑与。 如果 `x` 和 `y` 的计算结果都为 `true`，则 `x & y` 的结果为 `true`。 否则，结果为 `false`。
 
@@ -93,7 +93,7 @@ ms.locfileid: "79398195"
 
 对于[整型数值类型](../builtin-types/integral-numeric-types.md)的操作数，`|` 运算符计算其操作数的[位逻辑 OR](bitwise-and-shift-operators.md#logical-or-operator-)。
 
-## <a name="conditional-logical-and-operator-"></a> 条件逻辑 AND 运算符 &amp;&amp;
+## <a name="conditional-logical-and-operator-ampamp"></a><a name="conditional-logical-and-operator-"></a> 条件逻辑 AND 运算符 &amp;&amp;
 
 条件逻辑与运算符 `&&`（亦称为“短路”逻辑与运算符）计算操作数的逻辑与。 如果 `x` 和 `y` 的计算结果都为 `true`，则 `x && y` 的结果为 `true`。 否则，结果为 `false`。 如果 `x` 的计算结果为 `false`，则不计算 `y`。
 
@@ -157,7 +157,8 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](snippets/BooleanLogicalOperators.cs#CompoundAssignment)]
 
-条件逻辑运算符 `&&` 和 `||` 不支持复合赋值。
+> [!NOTE]
+> 条件逻辑运算符 `&&` 和 `||` 不支持复合赋值。
 
 ## <a name="operator-precedence"></a>运算符优先级
 

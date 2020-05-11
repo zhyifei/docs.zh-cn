@@ -1,12 +1,12 @@
 ---
 title: 演练：使用 C# 保留对象
 ms.date: 04/26/2018
-ms.openlocfilehash: 85c5d1b711180eda5734d5860d996242c6bc89d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bbe239008629d687084af7e28a75fa68560ca0ab
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167565"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796062"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>演练：使用 C\# 保留对象
 
@@ -102,4 +102,4 @@ New customer value: Henry Clay
 ## <a name="see-also"></a>另请参阅
 
 - [序列化 (C#)](index.md)
-- [C# 编程指南](../..//index.md)
+- [C# 编程指南](../../index.md)

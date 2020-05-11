@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 6e3742991820a8805b3c9b57767079940899d8fc
-  ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+  ms.openlocfilehash: 025b3e0fcaf693be00f1ca396b92617d6faf31aa
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/18/2020
-  ms.locfileid: "79507004"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860976"
 items:
 - durationInMinutes: 1
   content: >
@@ -38,11 +38,6 @@ items:
 
 
     接下来，将继续进一步探索。 本课程的其余部分探索了如何使用在 C# 中表示文本的 `string` 类型。 与 `Console` 类型一样，`string` 类型也包含方法。 `string` 方法处理的是文本。
-
-
-    > [!NOTE]
-
-    > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - title: 声明和使用变量
   durationInMinutes: 3
   content: >
@@ -119,11 +114,6 @@ items:
 
 
     再次选择“运行”，看看结果如何。 消息应该是“Hello Maira”，而不是“Hello {aFriend}”。
-
-
-    > [!NOTE]
-
-    > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - title: 使用字符串
   durationInMinutes: 5
   content: >
@@ -159,11 +149,6 @@ items:
     > [!TIP]
 
     > 这是自行探索的良好时机。 已了解到，`Console.WriteLine()` 将文本写入屏幕。 也已学习了如何声明变量，以及如何串联字符串。 在交互式窗口中试一试吧。 该窗口有一个名为 IntelliSense 的功能，可为你提供操作建议。 在 `firstFriend` 中的 `d` 后键入一个 `.`。 你将看到可以使用的属性和方法的建议列表。
-
-
-    > [!NOTE]
-
-    > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - title: 发掘字符串的更多精彩用途
   durationInMinutes: 5
   content: >
@@ -199,6 +184,9 @@ items:
     ```
 
 
+    方括号 `[` 和 `]` 帮助可视化 `Trim`、`TrimStart` 和 `TrimEnd` 方法的作用。 方括号出现在空格开始和结束的位置。
+
+
     此示例强调了使用字符串时需要注意的几个重要概念。 控制字符串的方法返回的是新字符串对象，而不是就地进行修改。 可以看到，对任何 `Trim` 方法的所有调用都是返回新字符串，而不是更改原始消息。
 
 
@@ -228,11 +216,6 @@ items:
     Console.WriteLine(sayHello.ToLower());
 
     ```
-
-
-    > [!NOTE]
-
-    > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - title: 搜索字符串
   durationInMinutes: 10
   content: >
@@ -265,11 +248,6 @@ items:
 
 
     如果字符串以“You”开头，以“hello”结尾的字符串，则应获得 `true`；如果以“goodbye”为开头或结尾，则获得 false。
-
-
-    > [!NOTE]
-
-    > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - title: 完成挑战
   durationInMinutes: 3
   content: >
@@ -290,11 +268,6 @@ items:
     Console.WriteLine(songLyrics.EndsWith("goodbye"));
 
     ```
-
-
-    > [!NOTE]
-
-    > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - content: >-
     你已完成“C# 初探”C# 教程简介。 可选择下方的“C# 中的数字”链接开始下一个交互式教程，或者可访问 [.NET 站点](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 请通过“后续步骤”部分返回到这些教程。
 

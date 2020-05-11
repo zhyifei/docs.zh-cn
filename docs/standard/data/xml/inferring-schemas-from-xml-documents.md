@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 5c2d997d9006a3f1eb971eac20982b9dd5677ebf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 2d991a7835d22af2c780b020d6884f626908665e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710747"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796166"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>从 XML 文档推断架构
 此主题描述如何使用 <xref:System.Xml.Schema.XmlSchemaInference> 类从 XML 文档的结构推断 XML 架构定义语言 (XSD) 架构。  
@@ -29,7 +29,7 @@ ms.locfileid: "75710747"
     <child>One</child>  
     <child>Two</child>  
 </parent>  
-<parent attribute1="A">  
+<parent attribute1="A" />
 ```  
   
  在上述示例中，当 `attribute1` 过程遇到值为 `6` 的 <xref:System.Xml.Schema.XmlSchemaInference> 属性时，假定类型为 `xs:unsignedByte`。 当 `parent` 过程遇到第二个 <xref:System.Xml.Schema.XmlSchemaInference> 元素时，类型将修改为 `xs:string`，从而放松约束，因为现在 `attribute1` 属性的值为 `A`。 同样，在架构中推断的所有 `minOccurs` 元素的 `child` 属性均放松为 `minOccurs="0"`，因为第二个父元素没有子元素。  

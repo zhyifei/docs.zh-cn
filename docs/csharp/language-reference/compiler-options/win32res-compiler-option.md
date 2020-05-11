@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 39f02c4c2e060c4be40002a2f48b0da31004a9ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3bb1614fcf28c62a9000c9b96af2f046f329fb1e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606193"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794372"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res（C# 编译器选项）
 -win32res 选项会在输出文件中插入 Win32 资源  。  
@@ -30,7 +30,7 @@ ms.locfileid: "69606193"
  想向输出文件添加的资源文件。  
   
 ## <a name="remarks"></a>备注  
- Win32 资源文件可以用[资源编译器](../../language-reference/compiler-options/resource-compiler-option.md)创建。 在编译 Visual C++ 程序时会调用资源编译器；.res 文件是从 .rc 文件创建的。  
+ Win32 资源文件可以用[资源编译器](resource-compiler-option.md)创建。 在编译 Visual C++ 程序时会调用资源编译器；.res 文件是从 .rc 文件创建的。  
   
  Win32 资源可以包含版本或位图（图标）信息，这些信息有助于在文件资源管理器中标识您的应用程序。 如果不指定 -win32res，编译器将根据程序集版本生成版本信息  。  
   
