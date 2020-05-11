@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 1b54ea8b3bbb63bdadb8386b0f6311f1f5458b42
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: 7736a2a26b37d8fbfac98328f94ce3c9a25be181
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/14/2020
-  ms.locfileid: "76737545"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860994"
 items:
 - durationInMinutes: 2
   content: >
@@ -47,18 +47,13 @@ items:
 
 
     下面再尝试一些其他数据类型的字符串内插示例。
-
-
-    > [!NOTE]
-
-    > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - title: 包含不同的数据类型
   durationInMinutes: 5
   content: >
     上一步使用了字符串内插将一个字符串插入到了另一字符串中。 不过，作为内插字符串表达式一部分的各个内插表达式可以是任何数据类型。 下面让我们在内插字符串中添加多种数据类型表达式的值。
 
 
-    在以下示例中，我们首先定义了具有 [、](../../tuples.md) 和 `Name` 成员的 `Price`tuple`perPackage`。 在交互式窗口中运行以下代码：
+    在以下示例中，我们首先定义了具有 `Name`、`Price` 和 `perPackage` 成员的 [tuple](../../tuples.md)。 在交互式窗口中运行以下代码：
 
 
     ```csharp
@@ -82,11 +77,6 @@ items:
 
 
     在此示例的输出中，日期过于精确（eggplant 的价格不会以秒为单位变化），且价格值没有标明货币单位。 下一步将介绍如何通过控制表达式结果的字符串表示形式来解决这些问题。
-
-
-    > [!NOTE]
-
-    > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - title: 控制内插表达式的格式
   durationInMinutes: 5
   content: >
@@ -103,18 +93,13 @@ items:
     可通过在内插表达式后接冒号（“:”）和格式字符串来指定格式字符串。 “d”是[标准日期和时间格式字符串](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)，表示短日期格式。 “C2”是[标准数值格式字符串](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)，用数字表示货币值（精确到小数点后两位）。
 
 
-    .NET 库中的许多类型支持一组预定义的格式字符串。 这些格式字符串包括所有数值类型以及日期和时间类型。 有关支持格式字符串的完整类型列表，请参阅 [.NET 中的格式化类型](../../../standard/base-types/formatting-types.md#format-strings-and-net-types)文章中的[格式字符串和. NET 类库类型](../../../standard/base-types/formatting-types.md)。
+    .NET 库中的许多类型支持一组预定义的格式字符串。 这些格式字符串包括所有数值类型以及日期和时间类型。 有关支持格式字符串的完整类型列表，请参阅 [.NET 中的格式化类型](../../../standard/base-types/formatting-types.md)文章中的[格式字符串和. NET 类库类型](../../../standard/base-types/formatting-types.md#format-strings-and-net-types)。
 
 
     尝试修改示例中的格式字符串，查看更改如何影响日期、时间和数值的格式。 将 `{date:d}` 中的“d”更改为“t”（显示短时间格式）、“y”（显示年份和月份）和“yyyy”（显示四位数年份）。 将 `{price:C2}` 中的“C2”更改为“e”（用于指数计数法）和“F3”（使数值在小数点后保持三位数字）。
 
 
     除了控制格式之外，还可以控制结果字符串中包含的格式字符串的字段宽度和对齐方式。 下一步将介绍如何执行此操作。
-
-
-    > [!NOTE]
-
-    > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - title: 控制内插表达式的字段宽度和对齐方式
   durationInMinutes: 6
   content: >
@@ -151,11 +136,6 @@ items:
     Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.342,15:N2}] feet");
 
     ```
-
-
-    > [!NOTE]
-
-    > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - content: >-
     你已完成“字符串内插”交互式教程。 可以访问 [.NET 站点](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下载 .NET Core SDK，在计算机上创建项目，并继续编码。
 
