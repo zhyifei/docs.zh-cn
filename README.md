@@ -1,12 +1,14 @@
 ---
-ms.openlocfilehash: 1e84a0c3636f36794ca7795ac54d192d3cb44217
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c6dcca8384cbd97a968b77e4bc834afa1f683298
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79141089"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895661"
 ---
 # <a name="net-docs"></a>.NET Docs
+
+![Markdownlint](https://github.com/dotnet/docs/workflows/Markdownlint/badge.svg)
 
 此存储库包含适用于 .NET 的概念文档。 [.NET 文档站点](https://docs.microsoft.com/dotnet)建立在多个存储库的基础上，还包括下面这个：
 

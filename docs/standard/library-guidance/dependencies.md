@@ -2,12 +2,12 @@
 title: 依赖项和.NET 库
 description: 管理 .NET 库中 NuGet 依赖项的最佳做法建议。
 ms.date: 10/02/2018
-ms.openlocfilehash: 6a260b54c45a0cd231059ab3bc6f2707ef7fb20e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 265e92e86d22c778f65476e7f1383d32e4964655
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76731476"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895709"
 ---
 # <a name="dependencies"></a>依赖项
 
@@ -40,7 +40,7 @@ ms.locfileid: "76731476"
 <PackageReference Include="ExamplePackage" Version="1.0" />
 ```
 
-NuGet 在解析依赖关系时使用的规则是 [complex](/nuget/consume-packages/dependency-resolution)，但 NuGet 始终查找适用的最低版本。 NuGet 倾向于使用最低适用版本，而不使用最高版本，因为最低版本的兼容性问题最少。
+NuGet 在解析依赖关系时使用的规则是 [complex](/nuget/consume-packages/dependency-resolution)，但[默认情况下](/nuget/consume-packages/install-use-packages-visual-studio#install-and-update-options)，NuGet 始终查找适用的最低版本。 NuGet 倾向于使用最低适用版本，而不使用最高版本，因为最低版本的兼容性问题最少。
 
 鉴于 NuGet 的最低适用版本规则，没有必要在包引用时放置较高版本或确切范围，以避免获取最新版本。 NuGet 已经尝试为你查找兼容性最高的最低版本。
 

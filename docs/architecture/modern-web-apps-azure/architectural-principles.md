@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 体�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: ffc890bf8cd6b07bd70d8fc7b2b8cfeaf474ae35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e291888bee25a9c87259560ca4b12635ee73c3c7
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450266"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975402"
 ---
 # <a name="architectural-principles"></a>体系结构原则
 
@@ -66,7 +66,7 @@ ms.locfileid: "77450266"
 
 ### <a name="dont-repeat-yourself-dry"></a>不要自我重复 (DRY)
 
-应用程序应避免在多个位置指定与特定概念相关的行为，因为这样经常会导致出错。 有些时候，对要求中的某处进行更改需要更改此行为，并且该行为可能至少有一个实例无法更新，这种可能性将导致出现不一致的系统行为。
+应用程序应避免在多个位置指定与特定概念相关的行为，因为这样经常会导致出错。 有时，如果要求发生变化，将要求更改此行为。 可能的情况是行为的至少一个实例将无法更新，这将导致系统行为不一致。
 
 请将逻辑封装在编程构造中，而不要重复该逻辑。 让此构造成为针对此行为的单一权限，并让应用程序中需要此行为的任何其他部分都使用新的构造。
 
