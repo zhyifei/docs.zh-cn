@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2221fd06-9e27-4113-972e-2530db8c3594
 topic_type:
 - apiref
-ms.openlocfilehash: f5af8e559b4fbfeb60530372185ca10104ade987
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5d0b231b4014e60a9e8778c6b9d6ed7758b2d8c5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178848"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208468"
 ---
-# <a name="icordebugheapenumnext-method"></a><span data-ttu-id="18a84-102">ICorDebugHeapEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="18a84-102">ICorDebugHeapEnum::Next Method</span></span>
-<span data-ttu-id="18a84-103">获取包含有关托管堆上对象信息的指定数量的[COR_HEAPOBJECT](cor-heapobject-structure.md)实例。</span><span class="sxs-lookup"><span data-stu-id="18a84-103">Gets the specified number of [COR_HEAPOBJECT](cor-heapobject-structure.md) instances that contain information about objects on the managed heap.</span></span>  
+# <a name="icordebugheapenumnext-method"></a><span data-ttu-id="d5ff2-102">ICorDebugHeapEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="d5ff2-102">ICorDebugHeapEnum::Next Method</span></span>
+<span data-ttu-id="d5ff2-103">获取指定数量的[COR_HEAPOBJECT](cor-heapobject-structure.md)实例，这些实例包含有关托管堆上的对象的信息。</span><span class="sxs-lookup"><span data-stu-id="d5ff2-103">Gets the specified number of [COR_HEAPOBJECT](cor-heapobject-structure.md) instances that contain information about objects on the managed heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="18a84-104">语法</span><span class="sxs-lookup"><span data-stu-id="18a84-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d5ff2-104">语法</span><span class="sxs-lookup"><span data-stu-id="d5ff2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next(  
@@ -34,29 +34,29 @@ HRESULT Next(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="18a84-105">parameters</span><span class="sxs-lookup"><span data-stu-id="18a84-105">Parameters</span></span>  
- <span data-ttu-id="18a84-106">celt</span><span class="sxs-lookup"><span data-stu-id="18a84-106">celt</span></span>  
- <span data-ttu-id="18a84-107">[in] 要检索的对象数。</span><span class="sxs-lookup"><span data-stu-id="18a84-107">[in] The number of objects to be retrieved.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d5ff2-105">参数</span><span class="sxs-lookup"><span data-stu-id="d5ff2-105">Parameters</span></span>  
+ <span data-ttu-id="d5ff2-106">celt</span><span class="sxs-lookup"><span data-stu-id="d5ff2-106">celt</span></span>  
+ <span data-ttu-id="d5ff2-107">[in] 要检索的对象数。</span><span class="sxs-lookup"><span data-stu-id="d5ff2-107">[in] The number of objects to be retrieved.</span></span>  
   
- <span data-ttu-id="18a84-108">对象</span><span class="sxs-lookup"><span data-stu-id="18a84-108">objects</span></span>  
- <span data-ttu-id="18a84-109">[出]指针数组，每个指针都[指向COR_HEAPOBJECT对象](cor-heapobject-structure.md)，该对象提供有关托管堆上的对象的信息。</span><span class="sxs-lookup"><span data-stu-id="18a84-109">[out] An array of pointers, each of which points to a [COR_HEAPOBJECT](cor-heapobject-structure.md) object that provides information about an object on the managed heap.</span></span>  
+ <span data-ttu-id="d5ff2-108">对象</span><span class="sxs-lookup"><span data-stu-id="d5ff2-108">objects</span></span>  
+ <span data-ttu-id="d5ff2-109">弄指针数组，其中每个都指向一个[COR_HEAPOBJECT](cor-heapobject-structure.md)对象，该对象提供有关托管堆上的对象的信息。</span><span class="sxs-lookup"><span data-stu-id="d5ff2-109">[out] An array of pointers, each of which points to a [COR_HEAPOBJECT](cor-heapobject-structure.md) object that provides information about an object on the managed heap.</span></span>  
   
- <span data-ttu-id="18a84-110">pceltFetched</span><span class="sxs-lookup"><span data-stu-id="18a84-110">pceltFetched</span></span>  
- <span data-ttu-id="18a84-111">[出]指向 中实际[返回COR_HEAPOBJECT对象的](cor-heapobject-structure.md)数量的指针`objects`。</span><span class="sxs-lookup"><span data-stu-id="18a84-111">[out] A pointer to the number of [COR_HEAPOBJECT](cor-heapobject-structure.md) objects actually returned in `objects`.</span></span> <span data-ttu-id="18a84-112">如果 `celt` 为 1，此值可能为 `null`。</span><span class="sxs-lookup"><span data-stu-id="18a84-112">This value may be `null` if `celt` is 1.</span></span>  
+ <span data-ttu-id="d5ff2-110">pceltFetched</span><span class="sxs-lookup"><span data-stu-id="d5ff2-110">pceltFetched</span></span>  
+ <span data-ttu-id="d5ff2-111">弄一个指针，指向在中实际返回的[COR_HEAPOBJECT](cor-heapobject-structure.md)对象的数量 `objects` 。</span><span class="sxs-lookup"><span data-stu-id="d5ff2-111">[out] A pointer to the number of [COR_HEAPOBJECT](cor-heapobject-structure.md) objects actually returned in `objects`.</span></span> <span data-ttu-id="d5ff2-112">如果 `celt` 为 1，此值可能为 `null`。</span><span class="sxs-lookup"><span data-stu-id="d5ff2-112">This value may be `null` if `celt` is 1.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="18a84-113">备注</span><span class="sxs-lookup"><span data-stu-id="18a84-113">Remarks</span></span>  
- <span data-ttu-id="18a84-114">`COR_HEAPOBJECT.type` 字段是嵌套的引用计数 COM 接口的标识符。</span><span class="sxs-lookup"><span data-stu-id="18a84-114">The `COR_HEAPOBJECT.type` field is the identifier of a nested reference-counted COM interface.</span></span> <span data-ttu-id="18a84-115">此引用必须由 `ICorDebugHeapEnum::Next` 的调用方释放。</span><span class="sxs-lookup"><span data-stu-id="18a84-115">This reference must be released by the caller of `ICorDebugHeapEnum::Next`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d5ff2-113">备注</span><span class="sxs-lookup"><span data-stu-id="d5ff2-113">Remarks</span></span>  
+ <span data-ttu-id="d5ff2-114">`COR_HEAPOBJECT.type` 字段是嵌套的引用计数 COM 接口的标识符。</span><span class="sxs-lookup"><span data-stu-id="d5ff2-114">The `COR_HEAPOBJECT.type` field is the identifier of a nested reference-counted COM interface.</span></span> <span data-ttu-id="d5ff2-115">此引用必须由 `ICorDebugHeapEnum::Next` 的调用方释放。</span><span class="sxs-lookup"><span data-stu-id="d5ff2-115">This reference must be released by the caller of `ICorDebugHeapEnum::Next`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="18a84-116">要求</span><span class="sxs-lookup"><span data-stu-id="18a84-116">Requirements</span></span>  
- <span data-ttu-id="18a84-117">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="18a84-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d5ff2-116">要求</span><span class="sxs-lookup"><span data-stu-id="d5ff2-116">Requirements</span></span>  
+ <span data-ttu-id="d5ff2-117">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d5ff2-117">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="18a84-118">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="18a84-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d5ff2-118">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d5ff2-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="18a84-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="18a84-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d5ff2-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d5ff2-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="18a84-120">**.NET 框架版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="18a84-120">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="d5ff2-120">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d5ff2-120">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="18a84-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="18a84-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d5ff2-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="d5ff2-121">See also</span></span>
 
-- [<span data-ttu-id="18a84-122">ICorDebugHeapEnum 接口</span><span class="sxs-lookup"><span data-stu-id="18a84-122">ICorDebugHeapEnum Interface</span></span>](icordebugheapenum-interface.md)
-- [<span data-ttu-id="18a84-123">调试接口</span><span class="sxs-lookup"><span data-stu-id="18a84-123">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="d5ff2-122">ICorDebugHeapEnum 接口</span><span class="sxs-lookup"><span data-stu-id="d5ff2-122">ICorDebugHeapEnum Interface</span></span>](icordebugheapenum-interface.md)
+- [<span data-ttu-id="d5ff2-123">调试接口</span><span class="sxs-lookup"><span data-stu-id="d5ff2-123">Debugging Interfaces</span></span>](debugging-interfaces.md)

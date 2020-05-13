@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f7653317-7e48-4163-be03-f50f1a4b0f70
 topic_type:
 - apiref
-ms.openlocfilehash: 852c77be0dc8ef91933bacbbd3d6b3f5a69ae8c8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ab2121605f974fdf3f9053214a4d29d8b0dd72db
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139386"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210616"
 ---
-# <a name="icordebugprocessistransitionstub-method"></a><span data-ttu-id="9b6ac-102">ICorDebugProcess::IsTransitionStub 方法</span><span class="sxs-lookup"><span data-stu-id="9b6ac-102">ICorDebugProcess::IsTransitionStub Method</span></span>
-<span data-ttu-id="9b6ac-103">获取一个值，该值指示地址是否在将导致转换到托管代码的存根内。</span><span class="sxs-lookup"><span data-stu-id="9b6ac-103">Gets a value that indicates whether an address is inside a stub that will cause a transition to managed code.</span></span>  
+# <a name="icordebugprocessistransitionstub-method"></a><span data-ttu-id="d65d0-102">ICorDebugProcess::IsTransitionStub 方法</span><span class="sxs-lookup"><span data-stu-id="d65d0-102">ICorDebugProcess::IsTransitionStub Method</span></span>
+<span data-ttu-id="d65d0-103">获取一个值，该值指示地址是否在将导致转换到托管代码的存根内。</span><span class="sxs-lookup"><span data-stu-id="d65d0-103">Gets a value that indicates whether an address is inside a stub that will cause a transition to managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9b6ac-104">语法</span><span class="sxs-lookup"><span data-stu-id="9b6ac-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d65d0-104">语法</span><span class="sxs-lookup"><span data-stu-id="d65d0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsTransitionStub(  
@@ -33,23 +33,23 @@ HRESULT IsTransitionStub(
     [out] BOOL *pbTransitionStub);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9b6ac-105">参数</span><span class="sxs-lookup"><span data-stu-id="9b6ac-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d65d0-105">参数</span><span class="sxs-lookup"><span data-stu-id="d65d0-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="9b6ac-106">中一个 `CORDB_ADDRESS` 值，该值指定相关的地址。</span><span class="sxs-lookup"><span data-stu-id="9b6ac-106">[in] A `CORDB_ADDRESS` value that specifies the address in question.</span></span>  
+ <span data-ttu-id="d65d0-106">中一个 `CORDB_ADDRESS` 值，该值指定相关的地址。</span><span class="sxs-lookup"><span data-stu-id="d65d0-106">[in] A `CORDB_ADDRESS` value that specifies the address in question.</span></span>  
   
  `pbTransitionStub`  
- <span data-ttu-id="9b6ac-107">弄一个指向布尔值的指针，如果指定的地址在将导致转换到托管代码的存根（stub）内，则为 `true`;否则为 `false``pbTransitionStub`。</span><span class="sxs-lookup"><span data-stu-id="9b6ac-107">[out] A pointer to a Boolean value that is `true` if the specified address is inside a stub that will cause a transition to managed code; otherwise \*`pbTransitionStub` is `false`.</span></span>  
+ <span data-ttu-id="d65d0-107">弄指向布尔值的指针， `true` 如果指定的地址在将导致转换到托管代码的存根内，则为; 否则 `pbTransitionStub` 为 `false` 。</span><span class="sxs-lookup"><span data-stu-id="d65d0-107">[out] A pointer to a Boolean value that is `true` if the specified address is inside a stub that will cause a transition to managed code; otherwise \*`pbTransitionStub` is `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9b6ac-108">备注</span><span class="sxs-lookup"><span data-stu-id="9b6ac-108">Remarks</span></span>  
- <span data-ttu-id="9b6ac-109">非托管的单步执行代码可以使用 `IsTransitionStub` 方法来确定何时将单步执行控件返回给托管分档器。</span><span class="sxs-lookup"><span data-stu-id="9b6ac-109">The `IsTransitionStub` method can be used by unmanaged stepping code to decide when to return stepping control to the managed stepper.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d65d0-108">备注</span><span class="sxs-lookup"><span data-stu-id="d65d0-108">Remarks</span></span>  
+ <span data-ttu-id="d65d0-109">`IsTransitionStub`非托管的单步执行代码可以使用方法来确定何时将单步执行控件返回给托管分档器。</span><span class="sxs-lookup"><span data-stu-id="d65d0-109">The `IsTransitionStub` method can be used by unmanaged stepping code to decide when to return stepping control to the managed stepper.</span></span>  
   
- <span data-ttu-id="9b6ac-110">还可以通过查看可移植可执行（PE）文件中的信息来标识转换存根。</span><span class="sxs-lookup"><span data-stu-id="9b6ac-110">You can also identity transition stubs by looking at information in the portable executable (PE) file.</span></span>  
+ <span data-ttu-id="d65d0-110">还可以通过查看可移植可执行（PE）文件中的信息来标识转换存根。</span><span class="sxs-lookup"><span data-stu-id="d65d0-110">You can also identity transition stubs by looking at information in the portable executable (PE) file.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9b6ac-111">要求</span><span class="sxs-lookup"><span data-stu-id="9b6ac-111">Requirements</span></span>  
- <span data-ttu-id="9b6ac-112">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9b6ac-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d65d0-111">要求</span><span class="sxs-lookup"><span data-stu-id="d65d0-111">Requirements</span></span>  
+ <span data-ttu-id="d65d0-112">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d65d0-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9b6ac-113">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9b6ac-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d65d0-113">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d65d0-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9b6ac-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9b6ac-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d65d0-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d65d0-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9b6ac-115">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9b6ac-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="d65d0-115">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d65d0-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
