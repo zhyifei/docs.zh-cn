@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK 概念和对象模型
 description: 此概述提供了高效使用 .NET 编译器 SDK 所需的背景。 介绍了 API 层、涉及的主要类型以及总体对象模型。
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: e563260e21fb8807017db90ff63e30fec0415a48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 529ce6fbdef22964251c8b22abbd5d8aadab633d
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156956"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975935"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>了解 .NET Compiler Platform SDK 模型
 
@@ -53,7 +53,7 @@ C# 交互式 REPL （读取–求值–打印循环）可使用这些 API。 借
 
 ### <a name="workspaces-apis"></a>工作区 API
 
-工作区层包含工作区 API，是对整个解决方案执行代码分析和重构的起点。 它有助于将解决方案中项目的全部相关信息组织为单个对象模型，可让用户直接访问编译器层对象模型，而无需分析文件、配置选项，或管理项目到项目依赖项。
+工作区层包含工作区 API，是对整个解决方案执行代码分析和重构的起点。 它协助你将解决方案中项目的全部相关信息整理到单个对象模型中，可便于你直接访问编译器层对象模型，而无需分析文件、配置选项或管理项目到项目依赖关系。
 
 此外，工作区层还包含一组 API，用于实现在 Visual Studio IDE 等主机环境中使用的代码分析和重构工具。 相关示例包括查找所有引用、格式设置和代码生成 API。
 

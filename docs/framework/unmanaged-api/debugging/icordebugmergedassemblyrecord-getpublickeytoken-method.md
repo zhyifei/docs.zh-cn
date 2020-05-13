@@ -2,12 +2,12 @@
 title: ICorDebugMergedAssemblyRecord::GetPublicKeyToken 方法
 ms.date: 03/30/2017
 ms.assetid: 72020b72-9611-4bc3-b1e7-5a16b023bfa3
-ms.openlocfilehash: 79df5c3e8b07879a26272f595664abab011101bd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4cd0ff788401a7b5d70e215209194c0eb6cad1f8
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178727"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212108"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>ICorDebugMergedAssemblyRecord::GetPublicKeyToken 方法
 获取程序集的公钥标记。  
@@ -22,7 +22,7 @@ HRESULT GetPublicKeyToken(
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `cbPublicKeyToken`  
  [in] `pbPublicKeyToken` 数组中的最大字节数。  
   
@@ -39,15 +39,15 @@ HRESULT GetPublicKeyToken(
 > 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [ICorDebugMergedAssemblyRecord 接口](icordebugmergedassemblyrecord-interface.md)
 - [调试接口](debugging-interfaces.md)

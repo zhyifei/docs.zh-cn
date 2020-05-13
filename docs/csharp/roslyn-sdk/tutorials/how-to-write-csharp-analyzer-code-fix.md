@@ -3,12 +3,12 @@ title: 教程：编写第一个分析器和代码修补程序
 description: 本教程提供了有关使用 .NET 编译器 SDK (Roslyn API) 生成分析器和代码修补程序的分步说明。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: f6fc21c010f9b5fcd5e709ef822639c020a7c93b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d6c3ddff288bf114e1c257ae77ebf3a419913990
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240545"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895441"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教程：编写第一个分析器和代码修补程序
 
@@ -265,7 +265,7 @@ using Microsoft.CodeAnalysis.Formatting;
 
 适用于分析器几乎每个测试的代码遵循这两种模式之一。 对于第一步，可以将这些测试作为数据驱动测试重新进行。 然后，可以轻松通过添加新字符串常量来表示不同的测试输入创建新的测试。
 
-为提高效率，第一步是将两个测试重构为数据驱动测试。 然后，只需每个新测试定义几个字符串常量。 在重构过程中，将这两种方法重命名为更好的名称。 将 `TestMethod1` 替换为此测试，以确保不会引发诊断：
+为提高效率，第一步是将两个测试重构为数据驱动测试。 然后，只需每个新测试定义几个字符串常量。 重构时，将这两种方法重命名为更有意义的名称。 将 `TestMethod1` 替换为此测试，以确保不会引发诊断：
 
 ```csharp
 [DataTestMethod]

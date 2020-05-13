@@ -3,12 +3,12 @@ title: 语法转换 (Roslyn API) 入门
 description: 介绍如何遍历、查询及浏览语法树。
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 5045dca839daba1070b34720e72cc9c4f7b94828
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 232fe5fcba35f152dbc3f00b2f2c092b5df0dd35
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240605"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794788"
 ---
 # <a name="get-started-with-syntax-transformation"></a>语法转换入门
 
@@ -59,7 +59,7 @@ ms.locfileid: "78240605"
 
 [!code-csharp[create the full identifier](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateFullNamespace "Build the System.Collections.Generic identifier")]
 
-再次运行此程序以查看你已为要添加的代码生成的树。
+再次运行此程序，以查看你已为要添加的代码生成的树。
 
 ### <a name="create-a-modified-tree"></a>创建修改后的树
 
@@ -174,10 +174,10 @@ Type variable;
 
 应看到 `File.WriteAllText` 代码下的波形曲线。 选择灯泡，并添加所需的 `using System.IO;` 语句。
 
-即将完成！ 还有一个步骤：创建测试 <xref:Microsoft.CodeAnalysis.Compilation>。 因为你在本快速入门教程期间尚未使用类型推理，所以它将是一个完美的测试用例。 遗憾的是，从 C# 项目文件中创建编译不在本演练范围内。 但幸运的是，如果你已仔细按照说明进行操作，那还是有希望的。 将 `CreateTestCompilation` 方法的内容替换为以下代码。 它将创建一个与本快速入门教程所述的项目相匹配的测试编译：
+即将完成！ 还剩一步，即创建测试 <xref:Microsoft.CodeAnalysis.Compilation>。 因为你在本快速入门教程期间尚未使用类型推理，所以它将是一个完美的测试用例。 遗憾的是，从 C# 项目文件中创建编译不在本演练范围内。 但幸运的是，如果你已仔细按照说明进行操作，那还是有希望的。 将 `CreateTestCompilation` 方法的内容替换为以下代码。 它将创建一个与本快速入门教程所述的项目相匹配的测试编译：
 
 [!code-csharp[CreateTestCompilation](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#CreateTestCompilation "Create a test compilation using the code written for this quickstart.")]
 
 运行项目，祈求好运吧。 在 Visual Studio 中，选择“调试”   > “启动调试”  。 应该会收到 Visual Studio 的提醒，指示项目中的文件已更改。 单击“全部同意”  以重载已修改的文件。 检查这些文件以观察效果。 请注意，如果没有所有那些显式和冗余类型的说明符，代码会看起来更加简洁。
 
-祝贺你！ 你已使用编译器 API  编写你自己的重构，以便在 C# 项目的所有文件中搜索某些语法模式、分析匹配这些模式的源代码语义，并对其进行转换。 现在，你已成为正式的重构作者！
+祝贺你！ 你已使用编译器 API  编写你自己的重构，以便在 C# 项目的所有文件中搜索某些语法模式、分析匹配这些模式的源代码语义，并对其进行转换。 现在，你已正式成为重构作者了！

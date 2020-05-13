@@ -3,14 +3,14 @@ title: .NET Core SDK 和运行时依赖项 - .NET Core
 description: 详细介绍在 Windows、Linux 和 macOS 上安装 .NET Core SDK 和运行时的操作系统和 CPU 体系结构先决条件。
 author: leecow
 ms.author: leecow
-ms.date: 12/04/2019
+ms.date: 04/30/2020
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 42765d4402dfa17d4e962b2ecaf7a83e91853c76
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 280aa1431686ff99257580bb024a84b1e57f85c0
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140991"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895485"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core 依赖项和要求
 
@@ -290,6 +290,24 @@ Fedora 用户：如果 OpenSSL 的版本为 1.1 及更高版本，则需要安�
 
 > [!WARNING]
 > CentOS 和 Fedora 的大多数版本都包含 libgdiplus 的早期版本。 可以通过将 Mono 存储库添加到系统来安装最新版 libgdiplus。 有关详细信息，请参阅 <https://www.mono-project.com/download/stable/>。
+
+### <a name="alpine"></a>Alpine
+
+Alpine 发行版需要安装以下库：
+
+- icu-libs（如果已禁用全球化，则不需要此库）
+- krb5-libs
+- libcurl
+- libintl
+- libssl1.1（适用于 Alpine 3.9 或更高版本）或 libssl1.0（适用于旧版本）
+- libstdc++
+- lttng-ust
+- numactl（可选，仅适用于启用了 NUMA 的设备）
+- zlib
+
+对于使用 System.Drawing.Common  程序集的 .NET Core 应用，还需要以下依赖项：
+
+- libgdiplus（只能用于边缘/测试存储库）
 
 ::: zone-end
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5cf5056-da4d-4629-914d-afe42a5393df
 topic_type:
 - apiref
-ms.openlocfilehash: 7a27b8ec512498c7bf817aca36267c37d8070a4c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1f1e42cd929d2d6282d282cf62dce00104b3a925
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788584"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210236"
 ---
 # <a name="icordebugilframe-interface"></a>ICorDebugILFrame 接口
 
@@ -40,20 +40,20 @@ ms.locfileid: "76788584"
 |[SetIP 方法](icordebugilframe-setip-method.md)|将指令指针设置为指向 MSIL 代码中的指定偏移位置。|  
   
 ## <a name="remarks"></a>备注  
- `ICorDebugILFrame` 接口是专用的 ICorDebugFrame 接口。 它可用于 MSIL 代码框架或实时（JIT）编译的帧。 JIT 编译的框架既实现了 `ICorDebugILFrame` 接口，又实现了 ICorDebugNativeFrame 接口。  
+ `ICorDebugILFrame`接口是专用的 ICorDebugFrame 接口。 它可用于 MSIL 代码框架或实时（JIT）编译的帧。 JIT 编译的帧实现 `ICorDebugILFrame` 接口和 ICorDebugNativeFrame 接口。  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [调试接口](debugging-interfaces.md)

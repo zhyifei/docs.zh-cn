@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da278a29-dc2e-4bf7-96ce-801bdc4d7025
 topic_type:
 - apiref
-ms.openlocfilehash: b7a33fd6e2178e0e9188b81f516b231702fb6460
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6b598352f734cf47514a82de1d0fca65d430a9ab
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122712"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209961"
 ---
 # <a name="icordebuginternalframegetframetype-method"></a>ICorDebugInternalFrame::GetFrameType 方法
 获取此内部帧的类型。  
@@ -35,16 +35,16 @@ HRESULT GetFrameType (
   
 ## <a name="parameters"></a>参数  
  `pType`  
- 弄一个指针，指向 CorDebugInternalFrameType 枚举的值，该值指示由此 `ICorDebugInternalFrame` 对象表示的内部帧的类型。  
+ 弄一个指针，指向 CorDebugInternalFrameType 枚举的值，该值指示由此对象表示的内部帧的类型 `ICorDebugInternalFrame` 。  
   
 ## <a name="remarks"></a>备注  
  内部帧类型永远不会 STUBFRAME_NONE。 调试器应正常忽略无法识别的内部帧类型。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

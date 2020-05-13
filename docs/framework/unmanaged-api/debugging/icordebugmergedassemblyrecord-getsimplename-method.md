@@ -2,12 +2,12 @@
 title: ICorDebugMergedAssemblyRecord::GetSimpleName 方法
 ms.date: 03/30/2017
 ms.assetid: bc3410f6-ebca-4bca-9b45-fc38c74fa9cb
-ms.openlocfilehash: 99ba27171e129e8725c3e0555a6991ef08b893da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f6c6682c8bb23143d308aa4f1a6887b28ea82fcd
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178705"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209703"
 ---
 # <a name="icordebugmergedassemblyrecordgetsimplename-method"></a>ICorDebugMergedAssemblyRecord::GetSimpleName 方法
 获取程序集的简单名。  
@@ -22,7 +22,7 @@ HRESULT GetSimpleName(
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `cchName`  
  [in] `szName` 缓冲区中的字符数。  
   
@@ -39,15 +39,15 @@ HRESULT GetSimpleName(
 > 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [ICorDebugMergedAssemblyRecord 接口](icordebugmergedassemblyrecord-interface.md)
 - [调试接口](debugging-interfaces.md)

@@ -4,12 +4,12 @@ description: 用于定位依赖项的 .NET Core 的 System.Runtime.Loader.Assemb
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 500ee6ee863b1f311970a9e718936f57f7d4efd6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e347c716c2d739a1bd03be056b57fdbda6c678f
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398003"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859509"
 ---
 # <a name="default-probing"></a>默认探测
 
@@ -21,7 +21,7 @@ ms.locfileid: "79398003"
 
 每个探测属性均可选。 如果存在，则每个属性都是一个字符串值，其中包含绝对路径的分隔列表。 在 Windows 上，分隔符为“;”，在所有其他平台上，分隔符为“:”。
 
-|属性名称                 |说明  |
+|属性名                 |描述  |
 |------------------------------|---------|
 |`TRUSTED_PLATFORM_ASSEMBLIES`   | 平台和应用程序程序集文件路径的列表。 |
 |`PLATFORM_RESOURCE_ROOTS`       | 用于搜索附属资源程序集的目录路径的列表。 |
@@ -31,14 +31,16 @@ ms.locfileid: "79398003"
 
 ### <a name="how-are-the-properties-populated"></a>如何填充属性？
 
-填充属性有两个主要方案，具体取决于 *myapp>.deps.json 文件是否存在\<* 。
+填充属性有两个主要方案，具体取决于 \<myapp>.deps.json 文件是否存在  。
 
-- 当 *.deps.json 文件存在时，将对其进行分析以填充探测属性\** 。
-- 如果 *.deps.json\** 文件不存在，则假定应用程序的目录以包含所有依赖项。 目录的内容用于填充探测属性。
+- 当 \*.deps.json 文件存在时，将对其进行分析以填充探测属性  。
+- 如果 \*.deps.json  文件不存在，则假定应用程序的目录以包含所有依赖项。 目录的内容用于填充探测属性。
 
-此外，也会对任何引用框架的 *.deps.json\** 文件进行类似的分析。
+此外，也会对任何引用框架的 \*.deps.json  文件进行类似的分析。
 
 最后，可使用环境变量 `ADDITIONAL_DEPS` 添加其他依赖项。
+
+默认不会填充 `APP_PATHS` 和 `APP_NI_PATHS` 属性，大多数应用程序都省略了它们。
 
 ### <a name="how-do-i-see-the-probing-properties-from-managed-code"></a>如何查看托管代码中的探测属性？
 
@@ -48,7 +50,7 @@ ms.locfileid: "79398003"
 
 启用某些环境变量后，.NET Core 运行时主机将输出有用的跟踪消息：
 
-|环境变量        |说明  |
+|环境变量        |描述  |
 |----------------------------|---------|
 |`COREHOST_TRACE=1`          |启用跟踪。|
 |`COREHOST_TRACEFILE=<path>` |跟踪文件路径而不是默认 `stderr`。|
@@ -58,7 +60,7 @@ ms.locfileid: "79398003"
 
 当探测以定位托管程序集时，<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> 会按以下顺序查找：
 
-- 与 <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> 中的 `TRUSTED_PLATFORM_ASSEMBLIES` 匹配的文件（在删除文件扩展名之后）。
+- 与 `TRUSTED_PLATFORM_ASSEMBLIES` 中的 <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> 匹配的文件（在删除文件扩展名之后）。
 - 包含公共文件扩展名的 `APP_NI_PATHS` 中的本机映像程序集文件。
 - 包含公共文件扩展名的 `APP_PATHS` 中的程序集文件。
 

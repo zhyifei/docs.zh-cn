@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: be86f4b5-418a-4c5c-a67c-97148c65ed8c
 topic_type:
 - apiref
-ms.openlocfilehash: b2429052173a187297b67c756213e5d27a79298b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ab48efccc88787f099a182627777db95304cdc3e
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792593"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212069"
 ---
 # <a name="icordebugprocess-interface"></a>ICorDebugProcess 接口
 表示正在执行托管代码的进程。 此接口是 ICorDebugController 的子类。  
@@ -43,7 +43,7 @@ ms.locfileid: "76792593"
 |[ModifyLogSwitch 方法](icordebugprocess-modifylogswitch-method.md)|设置指定的日志开关的严重性级别。|  
 |[ReadMemory 方法](icordebugprocess-readmemory-method.md)|从进程读取内存。|  
 |[SetThreadContext 方法](icordebugprocess-setthreadcontext-method.md)|设置给定线程的上下文。|  
-|[ThreadForFiberCookie 方法](icordebugprocess-threadforfibercookie-method.md)|已否决。|  
+|[ThreadForFiberCookie 方法](icordebugprocess-threadforfibercookie-method.md)|已弃用。|  
 |[WriteMemory 方法](icordebugprocess-writememory-method.md)|将数据写入进程中的内存区域。|  
   
 ## <a name="remarks"></a>备注  
@@ -51,16 +51,16 @@ ms.locfileid: "76792593"
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [ICorDebug 接口](icordebug-interface.md)
 - [调试接口](debugging-interfaces.md)

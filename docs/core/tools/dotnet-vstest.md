@@ -2,20 +2,23 @@
 title: dotnet vstest 命令
 description: dotnet vstest 命令可生成项目及其所有依赖项。
 ms.date: 02/27/2020
-ms.openlocfilehash: e8fa94cf12ca2fe5fb99c6e3c1dcdb52185798c0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: f7db58f4aab59354b8c69ce0371324c23482dafe
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463284"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975389"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
  本文适用于： ✔️ .NET Core 2.1 SDK 及更高版本
 
+> [!IMPORTANT]
+> `dotnet vstest` 命令被 `dotnet test` 取代，后者现在可用于运行程序集。 请参阅 [`dotnet test`](dotnet-test.md)。
+
 ## <a name="name"></a>“属性”
 
-`dotnet-vstest` - 从指定文件运行测试。
+`dotnet-vstest` - 从指定的程序集运行测试。
 
 ## <a name="synopsis"></a>摘要
 

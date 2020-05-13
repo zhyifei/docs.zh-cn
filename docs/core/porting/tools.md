@@ -2,13 +2,13 @@
 title: 用于移植到 .NET Core 的工具
 description: 了解可以用于移植到 .NET Core 的一些工具
 author: cartermp
-ms.date: 12/07/2018
-ms.openlocfilehash: 64bad7600d8e17ada83d4bd8bc56762fd1789f43
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 05/03/2020
+ms.openlocfilehash: d0cf0abf206950beb34556ca3ba7243d8cad241e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989124"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795581"
 ---
 # <a name="tools-to-help-with-porting-to-net-core"></a>用于帮助移植到 .NET Core 的工具
 
@@ -18,8 +18,4 @@ ms.locfileid: "80989124"
   - 作为[命令行工具](https://github.com/Microsoft/dotnet-apiport/releases)
   - 作为 [Visual Studio 扩展](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)
 - [.NET API 分析器](../../standard/analyzers/api-analyzer.md) - 一个 Roslyn 分析器，可用于发现不同平台上的潜在 C# API 兼容性风险，并检测是否调用了弃用的 API。
-
-此外，可以尝试使用 [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) 工具将较小的解决方案或单个项目移植到 .NET Core 项目文件格式。
-
-> [!WARNING]
-> CsprojToVs2017 是第三方工具。 不能保证它适用于所有项目，而且它可能会导致所依赖的行为发生细微变化。 CsprojToVs2017 应作为一个起点  ，以自动化可自动执行的基本操作。 它不是迁移项目文件格式的有保证的解决方案。
+- [try-convert](https://www.nuget.org/packages/try-convert/) - .NET Core 全局工具，可用于将项目或整个解决方案转换为 .NET SDK，包括将桌面应用迁移到 .NET Core。 如果创建了更复杂的生成（如自定义任务、目标或导入），并且拒绝许多与 .NET Core 不兼容的项目类型，则不建议使用此工具。

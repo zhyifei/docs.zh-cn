@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 32e4d6fa-e5a3-413e-9166-d5e2871d3114
 topic_type:
 - apiref
-ms.openlocfilehash: c573e6b768aee1e8b681dcf2e828dc24d409025b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 105e56f2508eabbb6876a09d35e6abfbfc08950b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793016"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212238"
 ---
 # <a name="icordebugmodule-interface"></a>ICorDebugModule 接口
 
@@ -35,7 +35,7 @@ ms.locfileid: "76793016"
 |[GetAssembly 方法](icordebugmodule-getassembly-method.md)|获取包含此模块的程序集。|  
 |[GetBaseAddress 方法](icordebugmodule-getbaseaddress-method.md)|获取模块的基址。|  
 |[GetClassFromToken 方法](icordebugmodule-getclassfromtoken-method.md)|从元数据中获取 ICorDebugClass。|  
-|[GetEditAndContinueSnapshot 方法](icordebugmodule-geteditandcontinuesnapshot-method.md)|已否决。|  
+|[GetEditAndContinueSnapshot 方法](icordebugmodule-geteditandcontinuesnapshot-method.md)|已弃用。|  
 |[GetFunctionFromRVA 方法](icordebugmodule-getfunctionfromrva-method.md)|未实现。|  
 |[GetFunctionFromToken 方法](icordebugmodule-getfunctionfromtoken-method.md)|获取元数据标记指定的函数。|  
 |[GetGlobalVariableValue 方法](icordebugmodule-getglobalvariablevalue-method.md)|获取指定全局变量的值对象。|  
@@ -52,16 +52,16 @@ ms.locfileid: "76793016"
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [ICorDebug 接口](icordebug-interface.md)
 - [调试接口](debugging-interfaces.md)

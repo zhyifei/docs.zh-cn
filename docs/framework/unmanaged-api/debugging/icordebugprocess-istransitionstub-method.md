@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7653317-7e48-4163-be03-f50f1a4b0f70
 topic_type:
 - apiref
-ms.openlocfilehash: 852c77be0dc8ef91933bacbbd3d6b3f5a69ae8c8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ab2121605f974fdf3f9053214a4d29d8b0dd72db
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139386"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210616"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a>ICorDebugProcess::IsTransitionStub 方法
 获取一个值，该值指示地址是否在将导致转换到托管代码的存根内。  
@@ -38,18 +38,18 @@ HRESULT IsTransitionStub(
  中一个 `CORDB_ADDRESS` 值，该值指定相关的地址。  
   
  `pbTransitionStub`  
- 弄一个指向布尔值的指针，如果指定的地址在将导致转换到托管代码的存根（stub）内，则为 `true`;否则为 `false``pbTransitionStub`。  
+ 弄指向布尔值的指针， `true` 如果指定的地址在将导致转换到托管代码的存根内，则为; 否则 `pbTransitionStub` 为 `false` 。  
   
 ## <a name="remarks"></a>备注  
- 非托管的单步执行代码可以使用 `IsTransitionStub` 方法来确定何时将单步执行控件返回给托管分档器。  
+ `IsTransitionStub`非托管的单步执行代码可以使用方法来确定何时将单步执行控件返回给托管分档器。  
   
  还可以通过查看可移植可执行（PE）文件中的信息来标识转换存根。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

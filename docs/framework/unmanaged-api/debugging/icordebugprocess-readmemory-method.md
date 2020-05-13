@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-ms.openlocfilehash: 383e3f8990a1f355c94ff5e9f9daa69bdbdd97bb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccd2350589126109ff11da439a8b83abfc4b91fa
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178655"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210470"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory 方法
-读取此过程的指定内存区域。  
+读取此进程的指定内存区域。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,31 +35,31 @@ HRESULT ReadMemory(
     [out] SIZE_T *read);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `address`  
- [在]指定`CORDB_ADDRESS`要读取的内存的基本地址的值。  
+ 中一个 `CORDB_ADDRESS` 值，该值指定要读取的内存的基址。  
   
  `size`  
- [在]要从内存中读取的字节数。  
+ 中要从内存中读取的字节数。  
   
  `buffer`  
- [出]接收内存内容的缓冲区。  
+ 弄接收内存内容的缓冲区。  
   
  `read`  
- [出]指向传输到指定缓冲区的字节数的指针。  
+ 弄一个指针，指向到指定缓冲区中传输的字节数。  
   
 ## <a name="remarks"></a>备注  
- 该方法`ReadMemory`主要用于内部调试，以检查调试器的非托管部分正在使用的内存区域。 此方法还可用于读取 Microsoft 中间语言 （MSIL） 代码和本机 JIT 编译代码。  
+ 此 `ReadMemory` 方法主要用于互操作调试，用于检查调试对象的非托管部分所使用的内存区域。 此方法还可用于读取 Microsoft 中间语言（MSIL）代码和本机 JIT 编译代码。  
   
- 任何托管断点都将从`buffer`参数中返回的数据中删除。 [ICorDebugProcess2：：：setUn托管断点](icordebugprocess2-setunmanagedbreakpoint-method.md)设置的本机断点不会进行调整。  
+ 将从参数中返回的数据删除所有托管断点 `buffer` 。 不会对[ICorDebugProcess2：： SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)设置的本机断点进行任何调整。  
   
- 不执行进程内存的缓存。  
+ 不会执行进程内存缓存。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

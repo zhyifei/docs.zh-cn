@@ -1,14 +1,14 @@
 ---
 title: global.json 概述
 description: 了解如何在运行 .NET Core CLI 命令时使用 global.json 文件设置 .NET Core SDK 版本。
-ms.date: 04/21/2020
+ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 5384b59cccb629a5409d26a8df7c81b3999fc95f
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 15d8e6191394b9ba67b1e5eb5e8ae54ebaf61bef
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021346"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795503"
 ---
 # <a name="globaljson-overview"></a>global.json 概述
 
@@ -85,6 +85,12 @@ ms.locfileid: "82021346"
 | `latestMajor` | 使用安装的最高 .NET Core SDK，并且该主版本大于或等于指定的值。 <br> 如果找不到，则失败。 |
 | `disable`     | 不前滚。 需要完全匹配。 |
 
+### <a name="msbuild-sdks"></a>msbuild-sdks
+
+类型：`object`
+
+可便于在一个位置（而不是在各个项目中）控制项目 SDK 版本。 有关详细信息，请参阅[如何解析项目 SDK](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)。
+
 ## <a name="examples"></a>示例
 
 下面的示例演示如何不使用预发布版本：
@@ -97,12 +103,12 @@ ms.locfileid: "82021346"
 }
 ```
 
-下面的示例演示如何使用安装的大于或等于指定版本的最高版本：
+下面的示例展示了如何使用安装的最高版本，此版本大于或等于指定的版本。 所示的 JSON 不允许任何低于 2.2.200 的 SDK 版本，而允许 2.2.200 或任何更高版本（包括 3.0.xxx 和 3.1.xxx）。
 
 ```json
 {
   "sdk": {
-    "version": "3.1.100",
+    "version": "2.2.200",
     "rollForward": "latestMajor"
   }
 }
@@ -119,23 +125,23 @@ ms.locfileid: "82021346"
 }
 ```
 
-下面的示例演示如何使用特定主版本和次版本的已安装最新功能区段和修补程序版本：
+下面的示例展示了如何使用特定主要版本和次要版本的已安装最新功能区段和修补程序版本。 所示的 JSON 不允许任何低于 3.1.102 的 SDK 版本，而允许 3.1.102 或任何更高的 3.1.xxx 版本（如 3.1.103 或 3.1.200）。
 
 ```json
 {
   "sdk": {
-    "version": "3.1.000",
+    "version": "3.1.102",
     "rollForward": "latestFeature"
   }
 }
 ```
 
-下面的示例演示如何使用安装的特定版本（格式为 3.1.1xx）的最高修补程序版本：
+下面的示例展示了如何使用特定版本的已安装最高修补程序版本。 所示的 JSON 不允许任何低于 3.1.102 的 SDK 版本，而允许 3.1.102 或任何更高的 3.1.1xx 版本（如 3.1.103 或 3.1.199）。
 
 ```json
 {
   "sdk": {
-    "version": "3.1.100",
+    "version": "3.1.102",
     "rollForward": "latestPatch"
   }
 }

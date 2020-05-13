@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27967230-144f-40d3-9e23-961d0241abd9
 topic_type:
 - apiref
-ms.openlocfilehash: 887d207aea3de9296107c041816606b2f5947406
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a089831c39c36b0f8a0c7746e95a96e4ddfc5d9
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124033"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209391"
 ---
 # <a name="icordebugfunctiongetclass-method"></a>ICorDebugFunction::GetClass 方法
 获取一个 ICorDebugClass 对象，该对象表示此函数所属的类。  
@@ -35,13 +35,13 @@ HRESULT GetClass (
   
 ## <a name="parameters"></a>参数  
  `ppClass`  
- 弄指向表示类的 `ICorDebugClass` 对象地址的指针; 如果此函数不是类的成员，则为 null。  
+ 弄指向表示类的对象的地址的指针 `ICorDebugClass` ; 如果此函数不是类的成员，则为 null。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

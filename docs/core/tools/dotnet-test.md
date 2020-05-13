@@ -2,12 +2,12 @@
 title: dotnet test 命令
 description: dotnet test 命令可用于在给定项目中执行单元测试。
 ms.date: 04/29/2020
-ms.openlocfilehash: a8218b6596601069b89a60ad018adf89a1f47cf6
-ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+ms.openlocfilehash: ef71e48daa7c4a6f33961d05a2f3def122087b0e
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624886"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975428"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -20,7 +20,7 @@ ms.locfileid: "82624886"
 ## <a name="synopsis"></a>摘要
 
 ```dotnetcli
-dotnet test [<PROJECT> | <SOLUTION>]
+dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
     [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
     [-c|--configuration <CONFIGURATION>]
     [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
@@ -37,11 +37,15 @@ dotnet test -h|--help
 
 ## <a name="description"></a>描述
 
-`dotnet test` 命令用于执行给定项目中的单元测试。 `dotnet test` 命令启动为项目指定的测试运行程序控制台应用程序。 测试运行程序执行为单元测试框架（例如 MSTest、NUnit 或 xUnit）定义的测试，并报告每个测试是否成功。 如果所有测试均成功，测试运行程序将返回 0 作为退出代码；否则将返回 1。 对于多目标项目，将为每个目标框架运行测试。 测试运行程序和单元测试库打包为 NuGet 包并还原为该项目的普通依赖项。
+`dotnet test` 命令用于在给定的解决方案中执行单元测试。 `dotnet test` 命令生成解决方案，并为解决方案中的每个测试项目运行测试主机应用程序。 测试主机使用测试框架（例如，MSTest、NUnit 或 xUnit）在给定项目中执行测试，并报告每个测试成功与否。 如果所有测试均成功，测试运行程序将返回 0 作为退出代码；否则将返回 1。
+
+对于多目标项目，将为每个目标框架运行测试。 测试主机和单元测试框架打包为 NuGet 包，并还原为项目的普通依赖项。
 
 测试项目使用普通 `<PackageReference>` 元素指定测试运行程序，如下方示例项目文件所示：
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
+
+如果 `Microsoft.NET.Test.Sdk` 是测试主机，则 `xunit` 是测试框架。 另外，`xunit.runner.visualstudio` 是测试适配器，可便于 xUnit 框架与测试主机一起运行。
 
 ### <a name="implicit-restore"></a>隐式还原
 
@@ -49,19 +53,24 @@ dotnet test -h|--help
 
 ## <a name="arguments"></a>自变量
 
-- **`PROJECT | SOLUTION`**
+- **`PROJECT | SOLUTION | DIRECTORY | DLL`**
 
-  测试项目或解决方案的路径。 如未指定，则默认为当前目录。
+  - 指向测试项目的路径。
+  - 解决方案的路径。
+  - 包含项目或解决方案的目录的路径。
+  - 测试项目 .dll  文件的路径。
+
+  如果未指定，则会在当前目录中搜索项目或解决方案。
 
 ## <a name="options"></a>选项
 
 - **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-  在测试运行中使用来自指定路径的自定义测试适配器。
+  要在其中搜索其他测试适配器的目录的路径。 只检查后缀为 `.TestAdapter.dll` 的 .dll  文件。 如果未指定，则会搜索测试 .dll  的目录。
 
 - **`--blame`**
 
-  在意见模式中运行测试。 此选项有助于隔离导致测试主机出现故障的有问题的测试。 它会在当前目录中创建一个输出文件 (Sequence.xml)，其中捕获了故障前的测试执行顺序  。
+  在意见模式中运行测试。 此选项有助于隔离导致测试主机出现故障的有问题的测试。 检测到故障时，它会在 `TestResults/<Guid>/<Guid>_Sequence.xml` 中创建一个序列文件，用于捕获在出现故障之前运行的测试的顺序。
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -73,11 +82,11 @@ dotnet test -h|--help
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  启用测试平台的诊断模式，并将诊断消息写入指定文件。
+  启用测试平台的诊断模式，并将诊断消息写入到指定文件及其旁边的文件。 正在记录消息的进程可确定创建了哪些文件，如测试主机日志的 `*.host_<date>.txt`，以及数据收集器日志的 `*.datacollector_<date>.txt`。
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  查找特定[框架](../../standard/frameworks.md)的测试二进制文件。
+  强制将 `dotnet` 或 .NET Framework 测试主机用于测试二进制文件。 此选项只确定要使用哪种类型的主机。 要使用的实际框架版本由测试项目的 runtimeconfig.json  决定。 如果未指定，则 [TargetFramework 程序集特性](/dotnet/api/system.runtime.versioning.targetframeworkattribute)用于确定主机的类型。 如果已从 .dll  中去除此特性，则使用的是 .NET Framework 主机。
 
 - **`--filter <EXPRESSION>`**
 
@@ -136,7 +145,7 @@ dotnet test -h|--help
 
 - `RunSettings` 参数
 
-  参数在测试中作为 `RunSettings` 配置传递。 参数在“-- ”（注意 -- 后的空格）后被指定为 `[name]=[value]` 对。 空格用于分隔多个 `[name]=[value]` 对。
+ 内联的 `RunSettings` 作为“-- ”（请注意 -- 后面有空格）后的最后一个命令行参数传递。 内联的 `RunSettings` 被指定为 `[name]=[value]` 对。 空格用于分隔多个 `[name]=[value]` 对。
 
   示例：`dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
@@ -166,6 +175,12 @@ dotnet test -h|--help
 
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
+  ```
+  
+  - 在当前目录下的项目中运行测试，并报告在测试主机发生故障时正在进行的测试：
+
+  ```dotnetcli
+  dotnet test --blame
   ```
 
 ## <a name="filter-option-details"></a>筛选选项详细信息

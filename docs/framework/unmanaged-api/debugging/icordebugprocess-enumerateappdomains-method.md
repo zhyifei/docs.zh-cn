@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d508981f-e2b2-445b-a649-69951c22702d
 topic_type:
 - apiref
-ms.openlocfilehash: 4489238df05edef384b4073ee738a184ff8809ff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 748a44075f7f73e54bab689bcb8865dee2b14946
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178677"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207830"
 ---
 # <a name="icordebugprocessenumerateappdomains-method"></a>ICorDebugProcess::EnumerateAppDomains 方法
-枚举在此过程中的所有应用程序域。  
+枚举此进程中的所有应用程序域。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,18 +32,18 @@ HRESULT EnumerateAppDomains(
     [out] ICorDebugAppDomainEnum **ppAppDomains);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `ppAppDomains`  
- [出]指向[ICorDebugAppDomainEnum](icordebugappdomainenum-interface.md)地址的指针，该地址是在此过程中应用程序域的枚举器。  
+ 弄一个指针，指向[ICorDebugAppDomainEnum](icordebugappdomainenum-interface.md)的地址，该地址是此进程中的应用程序域的枚举器。  
   
 ## <a name="remarks"></a>备注  
- 此方法可以在[ICorDebug 托管回调之前使用：创建进程](icordebugmanagedcallback-createprocess-method.md)回调。  
+ 此方法可在[ICorDebugManagedCallback：： CreateProcess](icordebugmanagedcallback-createprocess-method.md)回调之前使用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
