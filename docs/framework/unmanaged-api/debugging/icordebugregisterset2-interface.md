@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7fbccbf-3b6b-4db8-a96d-768e1cb6b1a6
 topic_type:
 - apiref
-ms.openlocfilehash: 161358fab9a4601e7b718321273d493bd84a3228
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f989f1c1f29c63af54ff125f4ad1aaa2bcee6757
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792015"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378201"
 ---
 # <a name="icordebugregisterset2-interface"></a>ICorDebugRegisterSet2 接口
 为包含64个以上注册的硬件平台扩展了[ICorDebugRegisterSet](icordebugregisterset-interface.md)接口的功能。  
@@ -37,16 +37,16 @@ ms.locfileid: "76792015"
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [调试接口](debugging-interfaces.md)
 - [ICorDebugRegisterSet 接口](icordebugregisterset-interface.md)

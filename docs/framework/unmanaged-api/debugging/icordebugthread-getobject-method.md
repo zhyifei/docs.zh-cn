@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1590febe-96c2-4046-97db-d81d81d67e01
 topic_type:
 - apiref
-ms.openlocfilehash: 5cb95fb7cf70dbf7616e9bc59ebf44de090de883
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 624469ca1ae4c96b4143f8768b4c5ff9c2601a2f
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133435"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378873"
 ---
 # <a name="icordebugthreadgetobject-method"></a>ICorDebugThread::GetObject 方法
 获取公共语言运行时（CLR）线程的接口指针。  
@@ -38,13 +38,13 @@ HRESULT GetObject (
  弄指向表示 CLR 线程的 ICorDebugValue 接口对象地址的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

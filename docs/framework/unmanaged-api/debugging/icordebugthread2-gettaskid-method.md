@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6ba3c6ee-4ba1-4c98-bf1e-8531acd3da09
 topic_type:
 - apiref
-ms.openlocfilehash: d5f2838007504e56ad44614a6778083be046629f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 841af546cc3586529fe290c69e686438f634b90d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140081"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377787"
 ---
 # <a name="icordebugthread2gettaskid-method"></a>ICorDebugThread2::GetTaskID 方法
 获取此线程上运行的任务的标识符。  
@@ -38,13 +38,13 @@ HRESULT GetTaskID (
  弄一个指针，指向在此 ICorDebugThread2 对象表示的线程上运行的任务的标识符。  
   
 ## <a name="remarks"></a>备注  
- 任务只能在线程与连接关联时在线程上运行。 如果线程与连接无关，则 `GetTaskID` 在 `pTaskId` 中返回零。  
+ 任务只能在线程与连接关联时在线程上运行。 `GetTaskID`如果线程与连接无关，则返回零 `pTaskId` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

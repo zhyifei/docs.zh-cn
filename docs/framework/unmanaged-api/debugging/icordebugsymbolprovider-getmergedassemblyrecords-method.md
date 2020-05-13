@@ -2,12 +2,12 @@
 title: ICorDebugSymbolProvider::GetMergedAssemblyRecords 方法
 ms.date: 03/30/2017
 ms.assetid: cc4c510d-550d-4941-af34-81987caf3425
-ms.openlocfilehash: 6a537a88bd4ab666eff8b5dda994da96bfcc5e52
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b7d26fa80a7a8ebe7b4606b914c8cd09c52df1e4
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791623"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379626"
 ---
 # <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>ICorDebugSymbolProvider::GetMergedAssemblyRecords 方法
 获取所有合并程序集的符号记录。  
@@ -37,16 +37,16 @@ HRESULT GetMergedAssemblyRecords(
 > [!NOTE]
 > 此方法仅适用于 .NET Native。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [ICorDebugSymbolProvider 接口](icordebugsymbolprovider-interface.md)
 - [调试接口](debugging-interfaces.md)

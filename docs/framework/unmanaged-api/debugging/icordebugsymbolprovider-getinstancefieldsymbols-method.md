@@ -2,12 +2,12 @@
 title: ICorDebugSymbolProvider::GetInstanceFieldSymbols 方法
 ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
-ms.openlocfilehash: 9c55ce4d36681e173047cfb51515a74899c5a9fe
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 9ecc61ed6cac73a519f33e00cbfbfecc20ac2ebe
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791638"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379635"
 ---
 # <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>ICorDebugSymbolProvider::GetInstanceFieldSymbols 方法
 获取与 Typespec 签名相对应的实例字段符号。  
@@ -45,16 +45,16 @@ HRESULT GetInstanceFieldSymbols(
 > [!NOTE]
 > 此方法仅适用于 .NET Native。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [GetStaticFieldSymbols 方法](icordebugsymbolprovider-getstaticfieldsymbols-method.md)
 - [ICorDebugSymbolProvider 接口](icordebugsymbolprovider-interface.md)

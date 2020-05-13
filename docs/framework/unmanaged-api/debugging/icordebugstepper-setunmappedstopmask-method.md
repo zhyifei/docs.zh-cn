@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1211981-e90c-4e05-8def-fa18d85ad9ab
 topic_type:
 - apiref
-ms.openlocfilehash: ff393b119c349e34898b781c3185cc82f2dba11f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ef458fda8e8b7e75f92a4b3c06eabec106180d23
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137555"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379254"
 ---
 # <a name="icordebugsteppersetunmappedstopmask-method"></a>ICorDebugStepper::SetUnmappedStopMask 方法
 设置一个值，该值指定执行过程中将暂停的未映射代码的类型。  
@@ -45,10 +45,10 @@ HRESULT SetUnmappedStopMask (
  如果调试器不使用分档器来输入方法，则不一定要逐过程执行非映射代码。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

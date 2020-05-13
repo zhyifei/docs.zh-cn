@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 723482d1-d1a1-410a-a405-677eeb04e2bf
 topic_type:
 - apiref
-ms.openlocfilehash: 402ffa232691bc8d0c77a9fa5aeb524dd5a9409b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e96d7c6fcb25a05deb7301e36b76b528a7982760
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137739"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83376013"
 ---
 # <a name="icordebugreferencevaluedereferencestrong-method"></a>ICorDebugReferenceValue::DereferenceStrong 方法
-未实现 `DereferenceStrong`。 请勿调用此方法。  
+`DereferenceStrong`未实现。 请勿调用此方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,10 +34,10 @@ HRESULT DereferenceStrong (
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

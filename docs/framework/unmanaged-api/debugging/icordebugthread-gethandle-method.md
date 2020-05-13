@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 172ef8c4-2ead-4cfc-bd2e-dee4fb7191cd
 topic_type:
 - apiref
-ms.openlocfilehash: 33219d9a67379244e23da49c13617a4c4a2fa66d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 16aafa439fc81c3606f98ca2ba860316ec46e0db
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133456"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379742"
 ---
 # <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle 方法
 获取此 ICorDebugThread 的活动部分的当前句柄。  
@@ -43,10 +43,10 @@ HRESULT GetHandle (
  此句柄属于调试 API。 调试器应在使用之前进行复制。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
