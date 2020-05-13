@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-ms.openlocfilehash: aeaa706ef35413a728f8b254cd325f0bcc83acd1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5bcced647af6436bd8f5b1f3779d9368b6173d11
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792717"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213031"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame 方法
 确定指定的帧是否为当前帧的父级。  
@@ -38,7 +38,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
  中一个指针，指向要为父状态计算的帧对象。  
   
  `pIsParent`  
- [out] 如果 `pPotentialParentFrame` 为当前帧的父级，则为 `true`;否则，`false`。  
+ [out] `true`如果 `pPotentialParentFrame` 为当前帧的父级，则为; 否则为 `false` 。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
@@ -49,21 +49,21 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 |E_FAIL|无法返回父状态。|  
 |E_INVALIDARG|`pPotentialParentFrame` 或 `pIsParent` 为 null。|  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
   
 ## <a name="remarks"></a>备注  
- 如果传递给该方法的帧对象是在其上调用方法的 frame 对象的父对象，`IsMatchingParentFrame` 将返回 `true`。 如果在不是指定帧的子级的帧上调用方法，则会返回错误。  
+ `IsMatchingParentFrame``true`如果传递给方法的帧对象是在其上调用方法的 frame 对象的父对象，则返回。 如果在不是指定帧的子级的帧上调用方法，则会返回错误。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [ICorDebugNativeFrame2 接口](icordebugnativeframe2-interface.md)
 - [调试接口](debugging-interfaces.md)

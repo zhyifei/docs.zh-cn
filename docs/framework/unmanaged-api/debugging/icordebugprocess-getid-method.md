@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0ba8453-fa7e-4c14-93e5-335409cd4a47
 topic_type:
 - apiref
-ms.openlocfilehash: ae0c23e3d48df6add8951a6d90029185a99bb323
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8cd40ffb60bf837a9aa3b0db34892350a05964d7
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128832"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213278"
 ---
 # <a name="icordebugprocessgetid-method"></a>ICorDebugProcess::GetID 方法
 获取进程的操作系统（OS） ID。  
@@ -36,10 +36,10 @@ HRESULT GetID([out] DWORD *pdwProcessId);
  弄进程的唯一 ID。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

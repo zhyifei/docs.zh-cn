@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c6bbf479-062e-48e9-9c70-0f92e293e36a
 topic_type:
 - apiref
-ms.openlocfilehash: 4229d567fc4ced5e3b78b390ced29fb9ea60f93b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e542145e888049231a6c5e4cccbb4ee96c62f98b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137846"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213252"
 ---
 # <a name="icordebugfunctiongettoken-method"></a>ICorDebugFunction::GetToken 方法
 获取此函数的元数据标记。  
@@ -35,13 +35,13 @@ HRESULT GetToken (
   
 ## <a name="parameters"></a>参数  
  `pMethodDef`  
- 弄一个指针，指向用于引用此函数的元数据的 `mdMethodDef` 标记。  
+ 弄指向 `mdMethodDef` 引用此函数的元数据的标记的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

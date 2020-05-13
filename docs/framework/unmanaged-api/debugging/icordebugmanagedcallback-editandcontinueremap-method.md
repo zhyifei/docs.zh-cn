@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24a8fcce-317e-48ff-aefc-d86123ada935
 topic_type:
 - apiref
-ms.openlocfilehash: 9cb956c0262fdcdb5971d049ea7b057aa4d952c0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 78b87b5c566b0d760a205757430123665fb2fcd3
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781910"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213694"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>ICorDebugManagedCallback::EditAndContinueRemap 方法
 此方法已被否决。 它通知调试器已将重新映射事件发送到集成开发环境（IDE）。  
@@ -37,17 +37,17 @@ HRESULT EditAndContinueRemap (
 ```  
   
 ## <a name="remarks"></a>备注  
- 当尝试在旧版本的更新函数中执行代码时，将调用 `EditAndContinueRemap` 方法。 公共语言运行时调用 `EditAndContinueRemap` 方法将重新映射事件发送到 IDE。  
+ `EditAndContinueRemap`当尝试在旧版本的更新函数中执行代码时，将调用方法。 公共语言运行时调用 `EditAndContinueRemap` 方法，将重新映射事件发送到 IDE。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [ICorDebugManagedCallback 接口](icordebugmanagedcallback-interface.md)

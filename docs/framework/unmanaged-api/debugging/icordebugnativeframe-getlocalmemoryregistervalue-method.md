@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 33a19f6e-1029-4d53-af64-19591c6e58ee
 topic_type:
 - apiref
-ms.openlocfilehash: 788ce2d47769caa72518e0357a0affdff5862699
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 91f0a75f127afcff89c2b92bf3ed67466b205081
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137287"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213044"
 ---
 # <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryRegisterValue 方法
 获取参数或本地变量的值，在此本机帧中，将低字和高位字分别存储在指定的寄存器和内存位置。  
@@ -45,7 +45,7 @@ HRESULT GetLocalMemoryRegisterValue (
  中"CorDebugRegister" 枚举的一个值，它指定包含值的低位字的寄存器。  
   
  `cbSigBlob`  
- 中一个整数，指定 `pvSigBlob` 参数引用的二进制元数据签名的大小。  
+ 中一个整数，指定参数引用的二进制元数据签名的大小 `pvSigBlob` 。  
   
  `pvSigBlob`  
  中一个 `PCCOR_SIGNATURE` 值，该值指向值类型的二进制元数据签名。  
@@ -54,12 +54,12 @@ HRESULT GetLocalMemoryRegisterValue (
  弄一个指向 "ICorDebugValue" 对象地址的指针，该对象表示存储在指定寄存器和内存位置的检索到的值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅

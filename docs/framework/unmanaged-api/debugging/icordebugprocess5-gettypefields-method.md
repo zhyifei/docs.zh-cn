@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-ms.openlocfilehash: 29006eba3d3a523fd24a461207ab12222a639782
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a2c7f7b722abac6acf71d3b64276862441695a5f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178592"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212784"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields 方法
 提供有关属于类型的字段的信息。  
@@ -36,32 +36,32 @@ HRESULT GetTypeFields(
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `id`  
- [在]检索字段信息的类型的类型标识符。  
+ 中检索其字段信息的类型的标识符。  
   
  `celt`  
- [在]要检索字段信息[COR_FIELD](cor-field-structure.md)对象数。  
+ 中要检索其字段信息的[COR_FIELD](cor-field-structure.md)对象的数量。  
   
  `fields`  
- [出]COR_FIELD[对象数组](cor-field-structure.md)，提供有关属于该类型的字段的信息。  
+ 弄[COR_FIELD](cor-field-structure.md)对象的数组，这些对象提供有关属于类型的字段的信息。  
   
  `pceltNeeded`  
- [出]指向 中包含的`fields`[COR_FIELD](cor-field-structure.md)对象的数量的指针。  
+ 弄一个指针，指向中包含的[COR_FIELD](cor-field-structure.md)对象的数量 `fields` 。  
   
 ## <a name="remarks"></a>备注  
- 参数`celt`指定方法用于填充`fields`的字段信息的字段数应对应于`COR_TYPE_LAYOUT::numFields`字段的值。  
+ `celt`参数，该参数指定方法用来填充字段信息的字段数量 `fields` ，应与字段的值相对应 `COR_TYPE_LAYOUT::numFields` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [ICorDebugProcess5 接口](icordebugprocess5-interface.md)
 - [调试接口](debugging-interfaces.md)

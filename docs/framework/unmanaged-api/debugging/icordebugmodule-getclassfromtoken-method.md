@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 622a4d3c-0425-4c54-a7e4-0735377cdad2
 topic_type:
 - apiref
-ms.openlocfilehash: 790999093f874a4d81dd5db74ef012b1d997a12f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f8a56dcf03748c6582bce07fc379113c5cdddd11
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109647"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212590"
 ---
 # <a name="icordebugmodulegetclassfromtoken-method"></a>ICorDebugModule::GetClassFromToken 方法
 获取元数据标记指定的类。  
@@ -36,16 +36,16 @@ HRESULT GetClassFromToken(
   
 ## <a name="parameters"></a>参数  
  `typedef`  
- 中引用类的元数据的 `mdTypeDef` 元数据标记。  
+ 中`mdTypeDef`引用类的元数据的元数据标记。  
   
  `ppClass`  
  弄指向表示类的 ICorDebugClass 对象地址的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

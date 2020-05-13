@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5b132ef1-8d4b-4525-89b3-54123596c194
 topic_type:
 - apiref
-ms.openlocfilehash: 41c5116d23655730f3586dc656aa69c8ae817b6c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2bdbf373144e2fb49074cfd035e7b0ffe3c8c291
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792628"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212879"
 ---
 # <a name="icordebugprocessgetthreadcontext-method"></a>ICorDebugProcess::GetThreadContext 方法
 获取此进程中给定线程的上下文。  
@@ -48,15 +48,15 @@ HRESULT GetThreadContext(
  上下文指定正在执行线程的处理器的体系结构。  
   
 ## <a name="remarks"></a>备注  
- 调试器应调用此方法而不是 Win32 `GetThreadContext` 方法，因为该线程实际可能处于 "被劫持" 状态，在该状态下，其上下文已暂时发生更改。 仅当线程在本机代码中时，才应使用此方法。 在托管代码中对线程使用[ICorDebugRegisterSet](icordebugregisterset-interface.md) 。  
+ 调试器应调用此方法而不是 Win32 `GetThreadContext` 方法，因为该线程实际可能处于 "被劫持" 状态，在该状态下，其上下文已暂时更改。 仅当线程在本机代码中时，才应使用此方法。 在托管代码中对线程使用[ICorDebugRegisterSet](icordebugregisterset-interface.md) 。  
   
- 返回的数据是当前平台的上下文结构。 与 Win32 `GetThreadContext` 方法一样，调用方应在调用此方法之前初始化 `context` 参数。  
+ 返回的数据是当前平台的上下文结构。 与 Win32 `GetThreadContext` 方法一样，调用方应在 `context` 调用此方法之前初始化参数。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
