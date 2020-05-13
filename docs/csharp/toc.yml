@@ -70,7 +70,7 @@
       href: tutorials/attributes.md
 - name: 'C# 教程'
   items:
-    - name: 介绍
+    - name: 简介
       href: tour-of-csharp/index.md
     - name: 程序结构
       href: tour-of-csharp/program-structure.md
@@ -84,11 +84,11 @@
       href: tour-of-csharp/classes-and-objects.md
     - name: 数组
       href: tour-of-csharp/arrays.md
-    - name: 接口
+    - name: 界面
       href: tour-of-csharp/interfaces.md
-    - name: 委托
+    - name: 委派
       href: tour-of-csharp/delegates.md
-    - name: 特性
+    - name: 属性
       href: tour-of-csharp/attributes.md
 - name: 'C# 中的新增功能'
   items:
@@ -131,7 +131,7 @@
       href: tuples.md
     - name: 析构元组和其他类型
       href: deconstruct.md
-    - name: 接口
+    - name: 界面
       href: programming-guide/interfaces/index.md
     - name: 方法
       href: methods.md
@@ -235,7 +235,7 @@
       href: programming-guide/interop/index.md
     - name: 记录代码
       href: codedoc.md
-    - name: 版本管理
+    - name: 版本控制
       href: versioning.md
 - name: '操作指南 C# 文章'
   items:
@@ -348,7 +348,7 @@
               href: programming-guide/concepts/async/handling-reentrancy-in-async-apps.md
             - name: 使用 Async 以进行文件访问
               href: programming-guide/concepts/async/using-async-for-file-access.md
-        - name: 特性
+        - name: 属性
           items:
             - name: 概述
               displayName: attributes
@@ -462,7 +462,7 @@
                   href: programming-guide/concepts/linq/linq-to-objects.md
                 - name: LINQ 和字符串
                   href: programming-guide/concepts/linq/linq-and-strings.md
-                - name: 操作指南
+                - name: 操作指南文章
                   items:
                     - name: 如何对某个词在字符串中出现的次数进行计数 (LINQ)
                       href: programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md
@@ -939,7 +939,7 @@
           href: programming-guide/classes-and-structs/objects.md
         - name: 继承
           href: programming-guide/classes-and-structs/inheritance.md
-        - name: 多态性
+        - name: 多形性
           items:
             - name: 概述
               displayName: polymorphism
@@ -994,7 +994,7 @@
               href: programming-guide/classes-and-structs/ref-returns.md
             - name: 参数
               items:
-                - name: 快速参考
+                - name: 传递参数
                   href: programming-guide/classes-and-structs/passing-parameters.md
                 - name: 传递值类型参数
                   href: programming-guide/classes-and-structs/passing-value-type-parameters.md
@@ -1046,7 +1046,7 @@
           href: programming-guide/classes-and-structs/anonymous-types.md
         - name: 如何在查询中返回元素属性的子集
           href: programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md
-    - name: 接口
+    - name: 界面
       items:
         - name: 概述
           displayName: interfaces
@@ -1057,7 +1057,7 @@
           href: programming-guide/interfaces/how-to-explicitly-implement-interface-members.md
         - name: 如何显式实现两个接口的成员
           href: programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md
-    - name: 委托
+    - name: 委派
       items:
         - name: 概述
           displayName: delegates
@@ -1337,7 +1337,7 @@
                   href: language-reference/builtin-types/reference-types.md
                 - name: class
                   href: language-reference/keywords/class.md
-                - name: interface
+                - name: 接口
                   href: language-reference/keywords/interface.md
                 - name: 可为空引用类型
                   href: language-reference/builtin-types/nullable-reference-types.md
@@ -1364,13 +1364,13 @@
                   href: language-reference/keywords/accessibility-domain.md
                 - name: 可访问性级别的使用限制
                   href: language-reference/keywords/restrictions-on-using-accessibility-levels.md
-                - name: internal
+                - name: 内部
                   href: language-reference/keywords/internal.md
-                - name: private
+                - name: 专用
                   href: language-reference/keywords/private.md
                 - name: protected
                   href: language-reference/keywords/protected.md
-                - name: public
+                - name: 公共
                   href: language-reference/keywords/public.md
                 - name: 受保护的内部
                   href: language-reference/keywords/protected-internal.md
@@ -1415,7 +1415,7 @@
               items:
                 - name: if-else
                   href: language-reference/keywords/if-else.md
-                - name: switch
+                - name: 开关
                   href: language-reference/keywords/switch.md
             - name: 迭代语句
               items:
@@ -1431,11 +1431,11 @@
               items:
                 - name: break
                   href: language-reference/keywords/break.md
-                - name: continue
+                - name: 继续
                   href: language-reference/keywords/continue.md
                 - name: goto
                   href: language-reference/keywords/goto.md
-                - name: return
+                - name: 返回
                   href: language-reference/keywords/return.md
             - name: 异常处理语句
               items:
@@ -1452,7 +1452,7 @@
                 - name: 概述
                   displayName: checked unchecked
                   href: language-reference/keywords/checked-and-unchecked.md
-                - name: checked
+                - name: 已选中
                   href: language-reference/keywords/checked.md
                 - name: unchecked
                   href: language-reference/keywords/unchecked.md
@@ -1474,9 +1474,9 @@
               href: language-reference/keywords/out-parameter-modifier.md
         - name: 命名空间关键字
           items:
-            - name: namespace
+            - name: 命名空间
               href: language-reference/keywords/namespace.md
-            - name: using
+            - name: 借助
               items:
                 - name: using 的上下文
                   href: language-reference/keywords/using.md
@@ -1490,7 +1490,7 @@
               href: language-reference/keywords/extern-alias.md
         - name: 类型测试关键字
           items:
-            - name: is
+            - name: 是
               href: language-reference/keywords/is.md
         - name: 泛型类型约束关键字
           items:
@@ -1502,11 +1502,11 @@
           items:
             - name: base
               href: language-reference/keywords/base.md
-            - name: this
+            - name: 此
               href: language-reference/keywords/this.md
         - name: 文字关键字
           items:
-            - name: 'null'
+            - name: 'Null'
               href: language-reference/keywords/null.md
             - name: true 和 false
               href: language-reference/builtin-types/bool.md
@@ -1548,7 +1548,7 @@
               href: language-reference/keywords/select-clause.md
             - name: group 子句
               href: language-reference/keywords/group-clause.md
-            - name: into
+            - name: 更改为
               href: language-reference/keywords/into.md
             - name: orderby 子句
               href: language-reference/keywords/orderby-clause.md
@@ -1566,7 +1566,7 @@
               href: language-reference/keywords/equals.md
             - name: by
               href: language-reference/keywords/by.md
-            - name: in
+            - name: 位于
               href: language-reference/keywords/in.md
     - name: 'C# 运算符和表达式'
       items:
@@ -1664,6 +1664,7 @@
       items:
         - name: 全局属性
           displayName: 'AssemblyName, AssemblyVersion, AssemblyCulture, AssemblyFlags, AssemblyProduct, AssemblyTrademark, AssemblyInformationalVersion, AssemblyCompany, AssemblyCopyright, AssemblyFileVersion, CLSCompliant, AssemblyTitle, AssemblyDescription, AssemblyConfiguration, AssemblyDefaultAlias'
+          href: language-reference/attributes/global.md
         - name: 常规
           displayName: 'Conditional, Obsolete, AttributeUsage'
           href: language-reference/attributes/general.md
