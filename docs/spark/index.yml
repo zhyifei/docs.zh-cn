@@ -11,14 +11,14 @@ metadata:
   author: mamccrea
   ms.author: mamccrea
   ms.date: 09/11/2019
-  ms.openlocfilehash: b75740fa84fd7c6fa383129075a082c4ea2ccdcc
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: 5b477daf0f52d48a6f068fa8eafeb1b787d19c39
+  ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "77542801"
+  ms.lasthandoff: 05/12/2020
+  ms.locfileid: "83212222"
 landingContent:
-- title: 关于 .NET for Apache Spark
+- title: .NET for Apache Spark 基础
   linkLists:
   - linkListType: whats-new
     links:
@@ -34,7 +34,7 @@ landingContent:
       url: /dotnet/api/?view=spark-dotnet
     - text: GitHub
       url: https://github.com/dotnet/spark
-- title: 入门
+- title: 10 分钟入门
   linkLists:
   - linkListType: tutorial
     links:
@@ -58,3 +58,15 @@ landingContent:
     links:
     - text: 调试应用程序
       url: how-to-guides/debug.md
+    - text: 部署辅助角色和 UDF 二进制文件
+      url: how-to-guides/deploy-worker-udf-binaries.md
+- title: 大数据处理
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 批处理
+      url: tutorials/batch-processing.md
+    - text: 结构化流式处理
+      url: tutorials/streaming.md
+    - text: 情绪分析
+      url: tutorials/ml-sentiment-analysis.md
