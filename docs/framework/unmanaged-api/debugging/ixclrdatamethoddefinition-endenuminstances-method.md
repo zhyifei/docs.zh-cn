@@ -15,20 +15,20 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 605a4244d20ef6c0b7af3c2b26b65ff2a63fa9dd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: febe6766c7a35228820421eee975c777988efd1f
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790448"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396493"
 ---
-# <a name="ixclrdatamethoddefinitionendenuminstances-method"></a><span data-ttu-id="acdc2-102">IXCLRDataMethodDefinition：： EndEnumInstances 方法</span><span class="sxs-lookup"><span data-stu-id="acdc2-102">IXCLRDataMethodDefinition::EndEnumInstances Method</span></span>
+# <a name="ixclrdatamethoddefinitionendenuminstances-method"></a><span data-ttu-id="262d6-102">IXCLRDataMethodDefinition：： EndEnumInstances 方法</span><span class="sxs-lookup"><span data-stu-id="262d6-102">IXCLRDataMethodDefinition::EndEnumInstances Method</span></span>
 
-<span data-ttu-id="acdc2-103">释放实例枚举期间使用的内部迭代器所使用的资源。</span><span class="sxs-lookup"><span data-stu-id="acdc2-103">Releases the resources used by internal iterators used during instance enumeration.</span></span>
+<span data-ttu-id="262d6-103">释放实例枚举期间使用的内部迭代器所使用的资源。</span><span class="sxs-lookup"><span data-stu-id="262d6-103">Releases the resources used by internal iterators used during instance enumeration.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="acdc2-104">语法</span><span class="sxs-lookup"><span data-stu-id="acdc2-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="262d6-104">语法</span><span class="sxs-lookup"><span data-stu-id="262d6-104">Syntax</span></span>
 
 ```cpp
 HRESULT EndEnumInstances(
@@ -36,23 +36,23 @@ HRESULT EndEnumInstances(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="acdc2-105">参数</span><span class="sxs-lookup"><span data-stu-id="acdc2-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="262d6-105">参数</span><span class="sxs-lookup"><span data-stu-id="262d6-105">Parameters</span></span>
 
 `handle`\
-<span data-ttu-id="acdc2-106">弄用于枚举实例的句柄。</span><span class="sxs-lookup"><span data-stu-id="acdc2-106">[out] A handle for enumerating the instances.</span></span>
+<span data-ttu-id="262d6-106">弄用于枚举实例的句柄。</span><span class="sxs-lookup"><span data-stu-id="262d6-106">[out] A handle for enumerating the instances.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="acdc2-107">备注</span><span class="sxs-lookup"><span data-stu-id="acdc2-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="262d6-107">备注</span><span class="sxs-lookup"><span data-stu-id="262d6-107">Remarks</span></span>
 
-<span data-ttu-id="acdc2-108">提供的方法是 `IXCLRDataMethodDefinition` 接口的一部分，并且对应于虚拟方法表的第五个槽。</span><span class="sxs-lookup"><span data-stu-id="acdc2-108">The provided method is part of the `IXCLRDataMethodDefinition` interface and corresponds to the fifth slot of the virtual method table.</span></span>
+<span data-ttu-id="262d6-108">提供的方法是接口的一部分 `IXCLRDataMethodDefinition` ，并且对应于虚拟方法表的第7个槽。</span><span class="sxs-lookup"><span data-stu-id="262d6-108">The provided method is part of the `IXCLRDataMethodDefinition` interface and corresponds to the 7th slot of the virtual method table.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="acdc2-109">需求</span><span class="sxs-lookup"><span data-stu-id="acdc2-109">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="262d6-109">要求</span><span class="sxs-lookup"><span data-stu-id="262d6-109">Requirements</span></span>
 
-<span data-ttu-id="acdc2-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="acdc2-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="acdc2-111">**标头：** 内容</span><span class="sxs-lookup"><span data-stu-id="acdc2-111">**Header:** None</span></span>  
-<span data-ttu-id="acdc2-112">**库：** 内容</span><span class="sxs-lookup"><span data-stu-id="acdc2-112">**Library:** None</span></span>  
-<span data-ttu-id="acdc2-113">**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="acdc2-113">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+<span data-ttu-id="262d6-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="262d6-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="262d6-111">**标头：** 内容</span><span class="sxs-lookup"><span data-stu-id="262d6-111">**Header:** None</span></span>  
+<span data-ttu-id="262d6-112">**库：** 内容</span><span class="sxs-lookup"><span data-stu-id="262d6-112">**Library:** None</span></span>  
+<span data-ttu-id="262d6-113">**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="262d6-113">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="acdc2-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="acdc2-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="262d6-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="262d6-114">See also</span></span>
 
-- [<span data-ttu-id="acdc2-115">调试</span><span class="sxs-lookup"><span data-stu-id="acdc2-115">Debugging</span></span>](index.md)
-- [<span data-ttu-id="acdc2-116">IXCLRDataMethodDefinition 接口</span><span class="sxs-lookup"><span data-stu-id="acdc2-116">IXCLRDataMethodDefinition Interface</span></span>](ixclrdatamethoddefinition-interface.md)
+- [<span data-ttu-id="262d6-115">调试</span><span class="sxs-lookup"><span data-stu-id="262d6-115">Debugging</span></span>](index.md)
+- [<span data-ttu-id="262d6-116">IXCLRDataMethodDefinition 接口</span><span class="sxs-lookup"><span data-stu-id="262d6-116">IXCLRDataMethodDefinition Interface</span></span>](ixclrdatamethoddefinition-interface.md)
