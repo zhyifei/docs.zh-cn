@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 605a4244d20ef6c0b7af3c2b26b65ff2a63fa9dd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: febe6766c7a35228820421eee975c777988efd1f
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790448"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396493"
 ---
 # <a name="ixclrdatamethoddefinitionendenuminstances-method"></a>IXCLRDataMethodDefinition：： EndEnumInstances 方法
 
@@ -43,16 +43,16 @@ HRESULT EndEnumInstances(
 
 ## <a name="remarks"></a>备注
 
-提供的方法是 `IXCLRDataMethodDefinition` 接口的一部分，并且对应于虚拟方法表的第五个槽。
+提供的方法是接口的一部分 `IXCLRDataMethodDefinition` ，并且对应于虚拟方法表的第7个槽。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
 **标头：** 内容  
 **库：** 内容  
-**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [调试](index.md)
 - [IXCLRDataMethodDefinition 接口](ixclrdatamethoddefinition-interface.md)

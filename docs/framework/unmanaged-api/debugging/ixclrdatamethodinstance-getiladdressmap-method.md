@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataMethodInstance::GetILAddressMap 方法
+title: IXCLRDataMethodInstance：： GetILAddressMap 方法
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodInstance::GetILAddressMap Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 66e4768acff7ab735c6ac9e8f8f51a9511f7e371
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7c4dcf59ce159434d5012120043f5bb548d49731
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744682"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396821"
 ---
-# <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance::GetILAddressMap 方法
+# <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance：： GetILAddressMap 方法
 
-获取到地址映射信息的 IL。
+获取用于寻址映射信息的 IL。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,24 +41,24 @@ HRESULT GetILAddressMap(
 ## <a name="parameters"></a>参数
 
 `mapLen`\
-[in]提供的映射数组的长度。
+中所提供的映射数组的长度。
 
 `mapNeeded`\
-[out]方法需要的映射条目数。
+弄该方法所需的映射项的数目。
 
 `maps`\
-[out，size_is(mapLen)]用于存储映射项数组。
+[out，size_is （mapLen）]用于存储映射项的数组。
 
 ## <a name="remarks"></a>备注
 
-提供的方法属于`IXCLRDataMethodInstance`接口，并对应于虚拟方法表 14 槽。
+提供的方法是接口的一部分 `IXCLRDataMethodInstance` ，并且对应于虚拟方法表的第15个槽。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** 无  
-**库：** 无  
-**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**标头：** 内容  
+**库：** 内容  
+**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: ISOSDacInterface::GetModuleData 方法
+title: ISOSDacInterface：： GetModuleData 方法
 ms.date: 02/01/2019
 api.name:
 - ISOSDacInterface::GetModuleData Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 97b297def9fba329ff6d9573f7b2e7cc811273f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 14e0eb812c84a0042150345d039451adf178caf1
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764724"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396913"
 ---
-# <a name="isosdacinterfacegetmoduledata-method"></a>ISOSDacInterface::GetModuleData 方法
+# <a name="isosdacinterfacegetmoduledata-method"></a>ISOSDacInterface：： GetModuleData 方法
 
-获取对应于在给定地址加载该模块的数据。
+提取与在给定地址加载的模块对应的数据。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,21 +40,21 @@ HRESULT GetModuleData(
 ## <a name="parameters"></a>参数
 
 `moduleAddr`\
-[in]要检索其信息的模块的地址。
+中要为其检索信息的模块的地址。
 
 `data`\
-[out][DacpModuleData 结构](dacpmoduledata-structure.md)来保存已加载模块的信息。
+弄用于保存已加载模块的信息的[DacpModuleData 结构](dacpmoduledata-structure.md)。
 
 ## <a name="remarks"></a>备注
 
-提供的方法属于`ISOSDacInterface`接口，并对应于虚拟方法表 13 槽。
+提供的方法是接口的一部分 `ISOSDacInterface` ，并且对应于虚拟方法表的第14个槽。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** None  
-**库：** 无  
-**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**标头：** 内容  
+**库：** 内容  
+**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>请参阅
 

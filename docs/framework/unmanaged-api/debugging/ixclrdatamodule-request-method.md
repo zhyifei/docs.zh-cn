@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataModule::Request 方法
+title: IXCLRDataModule：： Request 方法
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::Request Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7d04e5630bd196ef534f72a0c3924019315f3774
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 44ee4fc7fc2368b65f6f2fffe6ac239beddc6293
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632226"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395271"
 ---
-# <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule::Request 方法
+# <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule：： Request 方法
 
-若要填充缓冲区中提供了模块的数据的请求。
+请求填充模块数据所提供的缓冲区。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,28 +41,28 @@ HRESULT Request([in] ULONG32 reqCode,
 ## <a name="parameters"></a>参数
 
 `reqCode`\
-[in]请求类型发送。
+中要发送的请求类型。
 
 `inBufferSize`\
 [in] 要传入的输入缓冲区的大小。
 
 `inBuffer`\
-[in，size_is(inBufferSize)]要在请求中发送的原始数据的缓冲区指针。
+[in，size_is （inBufferSize）]要在请求中发送的原始数据的缓冲区指针。
 
 `outBufferSize`\
-[in]输出缓冲区的大小。
+中输出缓冲区的大小。
 
 `outBuffer`\
-[out，size_is(outBufferSize)]要用于存储请求响应的缓冲区指针。
+[out，size_is （outBufferSize）]用于存储请求响应的缓冲区指针。
 
 ## <a name="remarks"></a>备注
 
-提供的方法属于`IXCLRDataModule`接口，并对应于虚拟方法表 36th 槽。
+提供的方法是接口的一部分 `IXCLRDataModule` ，并且对应于虚拟方法表的37th 槽。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
-**标头：** 无**库：** 无 **.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
+**标头：** 无**库：** 无 **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>请参阅
 

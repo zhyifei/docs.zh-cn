@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb9ea96c-5b58-4655-8104-094fc8b393b8
 topic_type:
 - apiref
-ms.openlocfilehash: 2bb6fee00bb99555bc19f35e1250880cc3985f7f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 980f563d3b11fbfcce48b6d7c05275af520e14f1
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790929"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396508"
 ---
 # <a name="icordebugvariablehomeenumnext-method"></a>ICorDebugVariableHomeEnum：： Next 方法
 获取指定数量的[ICorDebugVariableHome](icordebugvariablehome-interface.md)实例，其中包含有关函数中的局部变量和参数的信息。  
@@ -48,24 +48,24 @@ HRESULT Next(
 ## <a name="return-value"></a>返回值  
  方法返回以下值。  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|该方法成功完成。|  
-|`S_FALSE`|检索到的实例的实际数量（在 `pceltFetched`中反映）小于请求的实例数。|  
+|`S_OK`|该方法已成功完成。|  
+|`S_FALSE`|检索到的实际实例数小于所请求的 `pceltFetched` 实例数。|  
   
 ## <a name="remarks"></a>备注  
- [ICorDebugVariableHomeEnum：： Next](icordebugvariablehomeenum-next-method.md)方法从枚举器当前位置开始检索最多 `celt` 个对象。 当方法返回时，`pceltFetched` 包含检索到的对象的实际数目。  
+ [ICorDebugVariableHomeEnum：： Next](icordebugvariablehomeenum-next-method.md)方法 `celt` 从枚举器的当前位置开始检索最多对象。 当方法返回时， `pceltFetched` 包含检索到的对象的实际数目。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [ICorDebugVariableHomeEnum 接口](icordebugvariablehomeenum-interface.md)
 - [ICorDebugVariableHome 接口](icordebugvariablehome-interface.md)

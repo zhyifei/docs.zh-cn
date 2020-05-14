@@ -2,12 +2,12 @@
 title: EShopOnContainers 参考应用简介
 description: 介绍适用于 ASP.NET Core 和 Azure 的 eShopOnContainers Cloud 本机微服务 Reference 应用。
 ms.date: 06/30/2019
-ms.openlocfilehash: 8d4ad982716a07613ebbef6668afab69d5a8b4f6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b97b62268db1d9990f762d9769233ad72551c226
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895541"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395404"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>EShopOnContainers 参考应用简介
 
@@ -50,7 +50,7 @@ Microsoft 与领先社区专家合作，已生成了一个功能完备的云本�
 
 可以从通过 HTTPS 访问应用程序的 web 或移动客户端访问 eShopOnContainers 应用程序，该应用程序针对的是 ASP.NET Core MVC 服务器应用程序或相应的 API 网关。 API 网关提供多种优势，例如将后端服务与单个前端客户端分离并提供更好的安全性。 该应用程序还使用称为后端的相关模式（BFF），该模式建议为每个前端客户端创建单独的 API 网关。 参考体系结构演示了如何根据请求是来自 web 客户端还是移动客户端来细分 API 网关。
 
-应用程序的功能分为多个不同的微服务。 有一些服务负责身份验证和标识、列出产品目录中的项目、管理用户的购物篮和订购订单。 每个单独的服务都有自己的持久存储。 请注意，没有与所有服务进行交互的单一主数据存储区。 相反，服务之间的协调和通信是根据需要以及通过使用消息总线来实现的。
+应用程序的功能分为多个不同的微服务。 有一些服务负责身份验证和标识、列出产品目录中的项目、管理用户的购物篮和订购订单。 每个单独的服务都有自己的持久存储。 没有单个主数据存储用于所有服务进行交互。 相反，服务之间的协调和通信是根据需要以及通过使用消息总线来实现的。
 
 每个不同的微服务根据其各自的需求进行了不同的设计。 这意味着，它们的技术堆栈可能不同，但它们都是使用 .NET Core 构建的，并且是为云设计的。 更简单的服务为基础数据存储提供基本的创建-读取-更新-删除（CRUD）访问，而更高级的服务则使用域驱动的设计方法和模式来管理业务复杂性。
 

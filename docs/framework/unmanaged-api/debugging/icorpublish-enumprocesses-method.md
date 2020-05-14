@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ae765f0-93b2-4b6f-aea1-7b0cf44e04a7
 topic_type:
 - apiref
-ms.openlocfilehash: 5f785b22a3fbda6403c124ec70757b16f5335907
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 70255a89cee13abfe63b01351f8ffba51e54665a
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790758"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396394"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses 方法
 获取在此计算机上运行的托管进程的枚举器。  
@@ -42,19 +42,19 @@ HRESULT EnumProcesses (
  一个指针，指向作为进程枚举器的[ICorPublishProcessEnum](icorpublishprocessenum-interface.md)实例的地址。  
   
 ## <a name="remarks"></a>备注  
- 枚举器的进程集合基于在调用 `EnumProcesses` 方法时正在运行的进程的快照。 枚举器将不包含在调用 `EnumProcesses` 之后终止或启动的任何进程。  
+ 枚举器的进程集合基于调用方法时正在运行的进程的快照 `EnumProcesses` 。 枚举器将不包含在调用之后终止或开始后终止的任何进程 `EnumProcesses` 。  
   
- 在此[ICorPublish](icorpublish-interface.md)实例上，可以多次调用 `EnumProcesses` 方法，以创建新的最新进程集合。 `EnumProcesses` 方法的后续调用将不会影响现有集合。  
+ `EnumProcesses`此方法可能会在此[ICorPublish](icorpublish-interface.md)实例上调用多次，以创建新的最新进程集合。 对方法的后续调用将不会影响现有集合 `EnumProcesses` 。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** CorPub，CorPub  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [ICorPublish 接口](icorpublish-interface.md)

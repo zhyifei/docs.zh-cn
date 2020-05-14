@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e86fcc72-388d-4009-ab21-8f9c3323e9a3
 topic_type:
 - apiref
-ms.openlocfilehash: 12d4e63480f03bfad613f30362ddaeaf12b57a88
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 27a676fd1d2d7903943e44f8a7201b88af4fba89
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791054"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396998"
 ---
 # <a name="icordebugvariablehomegetargumentindex-method"></a>ICorDebugVariableHome：： GetArgumentIndex 方法
 
@@ -43,7 +43,7 @@ HRESULT GetArgumentIndex(
 
 方法返回以下值。
 
-|{2&gt;值&lt;2}|描述|
+|“值”|说明|
 |-----------|-----------------|
 |`S_OK`|方法调用返回有效的参数索引。|
 |`E_FAIL`|当前[ICorDebugVariableHome](icordebugvariablehome-interface.md)实例表示局部变量。|
@@ -52,16 +52,16 @@ HRESULT GetArgumentIndex(
 
 参数索引可用于检索此参数的元数据。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
 
 **标头**：CorDebug.idl、CorDebug.h
 
 **库：** CorGuids.lib
 
-**.NET Framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]
+**.NET Framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [ICorDebugVariableHome 接口](icordebugvariablehome-interface.md)

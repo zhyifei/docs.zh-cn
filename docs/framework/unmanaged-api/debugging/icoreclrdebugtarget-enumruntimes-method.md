@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 316df866-442d-40cc-b049-45e8adcb65d1
 topic_type:
 - apiref
-ms.openlocfilehash: 4b55ac1d895bfecbe74be447bd06f4aa22b9d04f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fc8269d4cc22ab53569edaa48c27b4a01970dcc7
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790783"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397177"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes 方法
 枚举在远程计算机上运行的指定进程中的公共语言运行时 (CLR)。  
@@ -39,7 +39,7 @@ HRESULT EnumRuntimes (
   
 ## <a name="parameters"></a>参数  
  `dwInternalProcessID`  
- [in] 要枚举运行时的进程的内部进程 ID。 这将从相应的[CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)中 `m_dwInternalID`。  
+ [in] 要枚举运行时的进程的内部进程 ID。 这将 `m_dwInternalID` 来自相应的[CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)。  
   
  `pcRuntimes`  
  [out] `ppRuntimes` 中返回的运行时的数量。 此值可为 0（零）。  
@@ -63,8 +63,8 @@ HRESULT EnumRuntimes (
 ## <a name="remarks"></a>备注  
  若要释放此方法分配的内存，请调用[ICoreClrDebugTarget：： FreeMemory](icoreclrdebugtarget-freememory-method.md)方法。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** CoreClrRemoteDebuggingInterfaces  
   
@@ -72,6 +72,6 @@ HRESULT EnumRuntimes (
   
  **.NET Framework 版本：** 3.5 SP1  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [ICoreClrDebugTarget 接口](icoreclrdebugtarget-interface.md)

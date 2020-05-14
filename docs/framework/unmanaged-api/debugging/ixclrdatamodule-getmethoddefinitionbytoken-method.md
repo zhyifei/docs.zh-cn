@@ -1,5 +1,5 @@
 ---
-title: IXCLRData模块：获取方法定义令牌方法
+title: IXCLRDataModule：： GetMethodDefinitionByToken 方法
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::GetMethodDefinitionByToken Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 294c5340caf2217f9337d654a11a63a43d46febd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c70920205b27376d453bdd0a13223c6a5569075b
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176664"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395299"
 ---
-# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLRData模块：获取方法定义令牌方法
+# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLRDataModule：： GetMethodDefinitionByToken 方法
 
-获取与给定元数据令牌对应的方法定义。
+获取对应于给定元数据标记的方法定义。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -37,26 +37,26 @@ HRESULT GetMethodDefinitionByToken(
 );
 ```
 
-## <a name="parameters"></a>parameters
+## <a name="parameters"></a>参数
 
 `token`\
-[在]方法令牌。
+中方法标记。
 
 `methodDefinition`\
-[出]方法定义。
+弄方法定义。
 
 ## <a name="remarks"></a>备注
 
-提供的方法是接口的一`IXCLRDataModule`部分，对应于虚拟方法表的第 25 个插槽。
+提供的方法是接口的一部分 `IXCLRDataModule` ，并且对应于虚拟方法表的26个槽。
 
 ## <a name="requirements"></a>要求
 
 **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标题：** 没有  
-**库：** 没有  
-**.NET 框架版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**标头：** 内容  
+**库：** 内容  
+**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [调试](index.md)
 - [IXCLRDataModule 接口](ixclrdatamodule-interface.md)

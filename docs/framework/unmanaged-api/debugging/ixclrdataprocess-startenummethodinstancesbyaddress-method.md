@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::StartEnumMethodInstancesByAddress 方法
+title: IXCLRDataProcess：： StartEnumMethodInstancesByAddress 方法
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::StartEnumMethodInstancesByAddress Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: d7c395e68ad5d8042f9850f25757a5aa445e5c40
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e28fa73300e147ac07a2d325fbf517480bb73797
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752684"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394939"
 ---
-# <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::StartEnumMethodInstancesByAddress 方法
+# <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess：： StartEnumMethodInstancesByAddress 方法
 
-提供要枚举的方法实例的句柄`AppDomain`给定地址开始。
+提供用于枚举 `AppDomain` 从给定地址开始的方法实例的句柄。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,24 +41,24 @@ HRESULT StartEnumMethodInstancesByAddress(
 ## <a name="parameters"></a>参数
 
 `address`\
-[in]第一个方法实例的地址。
+中第一个方法实例的地址。
 
 `appDomain`\
-[in]方法实例的应用程序域。
+中方法实例的 AppDomain。
 
 `handle`\
-[out]枚举的方法实例句柄。
+弄枚举方法实例的句柄。
 
 ## <a name="remarks"></a>备注
 
-提供的方法属于`IXCLRDataProcess`接口，并对应于虚拟方法表 27 槽。
+提供的方法是接口的一部分 `IXCLRDataProcess` ，并且对应于虚拟方法表的第28个槽。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** 无  
-**库：** 无  
-**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**标头：** 内容  
+**库：** 内容  
+**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>请参阅
 

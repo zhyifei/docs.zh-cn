@@ -1,5 +1,5 @@
 ---
-title: ISOSDacInterface::GetMethodDescData 方法
+title: ISOSDacInterface：： GetMethodDescData 方法
 ms.date: 01/16/2019
 api.name:
 - ISOSDacInterface::GetMethodDescData Method
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: ea54fdd83b9470db4a08daceaa695e450f5ca1af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4c44379d9db0f5e98f3ca66ec0486961ec2df3a
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764820"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396950"
 ---
-# <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface::GetMethodDescData 方法
+# <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface：： GetMethodDescData 方法
 
 获取给定 MethodDesc 指针的数据。
 
@@ -44,33 +44,33 @@ HRESULT GetMethodDescData(
 ## <a name="parameters"></a>参数
 
 `methodDesc`\
-[in]MethodDesc 的地址。
+中MethodDesc 的地址。
 
 `ip`\
-[in]该方法的 IP 地址。
+中方法的 IP 地址。
 
 `data`\
-[out]返回从内部 Api 与 MethodDesc 关联的数据。
+弄与 MethodDesc 关联的、从内部 Api 返回的数据。
 
 `cRevertedRejitVersions`\
-[out]已还原的 rejit 版本数。
+弄已还原的 rejit 版本数。
 
 `rgRevertedRejitData`\
-[out]返回从内部 Api 与已还原的 rejit 版本关联的数据。
+弄与从内部 Api 返回的已恢复 rejit 版本关联的数据。
 
 `pcNeededRevertedRejitData`\
-[out]存储与已还原的 ReJit 版本关联的数据所需的字节数。
+弄存储与还原的 ReJit 版本关联的数据所需的字节数。
 
 ## <a name="remarks"></a>备注
 
-提供的方法属于`ISOSDacInterface`接口，并对应于虚拟方法表的 20 槽。 若要能够使用它们[ `CLRDATA_ADDRESS` ](../common-data-types-unmanaged-api-reference.md)必须定义为 64 位无符号整数。
+提供的方法是接口的一部分 `ISOSDacInterface` ，并且对应于虚拟方法表的21槽。 若要使用它们， [`CLRDATA_ADDRESS`](../common-data-types-unmanaged-api-reference.md) 必须将定义为64位无符号整数。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** 无  
-**库：** 无  
-**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**标头：** 内容  
+**库：** 内容  
+**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>请参阅
 

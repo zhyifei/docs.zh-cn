@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0fdeba3-c195-4ece-8caf-79b1f40025d2
 topic_type:
 - apiref
-ms.openlocfilehash: fc205e347fc39fd486d9b8a3fb256a5d29a980a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 83adea3d659eea6d4af9ae364aad18df67e69c03
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110068"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396622"
 ---
 # <a name="icordebugtypeenumnext-method"></a>ICorDebugTypeEnum::Next 方法
-从当前位置开始，获取从枚举 `celt` 指定的 "ICorDebugType" 实例的数目。  
+从当前位置开始，获取由枚举指定的 "ICorDebugType" 实例的数目 `celt` 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,21 +38,21 @@ HRESULT Next (
   
 ## <a name="parameters"></a>参数  
  `celt`  
- 中要检索的 `ICorDebugType` 实例的数目。  
+ 中`ICorDebugType`要检索的实例数。  
   
  `values`  
  弄指针的数组，其中每个都指向一个 `ICorDebugType` 对象。  
   
  `pceltFetched`  
- 弄一个指针，指向实际返回的 `ICorDebugType` 实例的数目。 如果 `celt` 为1，则此值可以为 null。  
+ 弄一个指针，指向 `ICorDebugType` 实际返回的实例数。 如果为1，则此值可以为 null `celt` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
