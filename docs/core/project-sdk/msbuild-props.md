@@ -3,16 +3,16 @@ title: Microsoft.NET.Sdk 的 MSBuild 属性
 description: .NET Core SDK 可以理解的 MSBuild 属性的引用。
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: d4a204a1e0216313418d278ec3bd333f72db8751
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 800ff59310d8437d7f770bf20a5bdf37714f8515
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "81386656"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795568"
 ---
 # <a name="msbuild-properties-for-net-core-sdk-projects"></a>.NET Core SDK 项目的 MSBuild 属性
 
-本页介绍用于配置 .NET Core 项目的 MSBuild 属性。
+本页介绍用于配置 .NET Core 项目的 MSBuild 属性。 可以将每个属性的元数据  指定为属性的子元素。
 
 > [!NOTE]
 > 此页面正在运行中，未列出 .NET Core SDK 的所有有用的 MSBuild 属性。 有关通用 MSBuild 属性的列表，请参阅[通用 MSBuild 属性](/visualstudio/msbuild/common-msbuild-project-properties)。
@@ -28,11 +28,9 @@ ms.locfileid: "81386656"
 `TargetFramework` 属性指定应用的目标框架版本，该版本隐式引用[元包](../packages.md#metapackages)。 有关有效的目标框架名字对象的列表，请参阅 [SDK 样式项目中的目标框架](../../standard/frameworks.md#supported-target-framework-versions)。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TargetFramework>netcoreapp3.1</TargetFramework>
+</PropertyGroup>
 ```
 
 有关详细信息，请参阅 [SDK 样式项目中的目标框架](../../standard/frameworks.md)。
@@ -45,11 +43,9 @@ ms.locfileid: "81386656"
 > 如果指定了 `TargetFramework`（单数），则忽略此属性。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net462</TargetFrameworks>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TargetFrameworks>netcoreapp3.1;net462</TargetFrameworks>
+</PropertyGroup>
 ```
 
 有关详细信息，请参阅 [SDK 样式项目中的目标框架](../../standard/frameworks.md)。
@@ -62,18 +58,31 @@ ms.locfileid: "81386656"
 如果要指定低于[元包](../packages.md#metapackages)版本的框架版本，请使用 `NetStandardImplicitPackageVersion` 属性。 以下示例中的项目文件以 `netstandard1.3` 为目标，但使用 `NETStandard.Library` 的 1.6.0 版本。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
-    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TargetFramework>netstandard1.3</TargetFramework>
+  <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+</PropertyGroup>
+```
+
+## <a name="package-properties"></a>包属性
+
+可以指定 `PackageId`、`PackageVersion`、`PackageIcon`、`Title` 和 `Description` 等属性来描述通过项目创建的包。 若要了解这些属性和其他属性，请参阅[包目标](/nuget/reference/msbuild-targets#pack-target)。
+
+```xml
+<PropertyGroup>
+  ...
+  <PackageId>ClassLibDotNetStandard</PackageId>
+  <Version>1.0.0</Version>
+  <Authors>John Doe</Authors>
+  <Company>Contoso</Company>
+</PropertyGroup>
 ```
 
 ## <a name="publish-properties"></a>发布属性
 
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
+- [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
@@ -81,11 +90,9 @@ ms.locfileid: "81386656"
 `RuntimeIdentifier` 属性可用于指定项目的单个[运行时标识符 (RID)](../rid-catalog.md)。 RID 支持发布独立部署。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
+</PropertyGroup>
 ```
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
@@ -96,11 +103,21 @@ ms.locfileid: "81386656"
 > `RuntimeIdentifier`（单数）可以在只需要一个运行时时提供更快的生成。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
+</PropertyGroup>
+```
+
+### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
+
+`TrimmerRootAssembly` 项允许通过[修整](../deploying/trim-self-contained.md)排除程序集  。 修整是从打包的应用程序中删除运行时未使用部分的过程。 在某些情况下，修整可能会错误地删除所需的引用。
+
+以下 XML 通过修整排除 `System.Security` 程序集。
+
+```xml
+<ItemGroup>
+  <TrimmerRootAssembly Include="System.Security" />
+</ItemGroup>
 ```
 
 ### <a name="useapphost"></a>UseAppHost
@@ -110,69 +127,206 @@ ms.locfileid: "81386656"
 在 .NET Core3.0 及更高版本中，默认情况下会创建依赖于框架的可执行文件。 将 `UseAppHost` 属性设置为 `false` 可禁用可执行文件的生成。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <UseAppHost>false</UseAppHost>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <UseAppHost>false</UseAppHost>
+</PropertyGroup>
 ```
 
 有关部署的详细信息，请参阅 [.NET Core 应用程序部署](../deploying/index.md)。
 
 ## <a name="compile-properties"></a>编译属性
 
+- [LangVersion](#langversion)
+
 ### <a name="langversion"></a>LangVersion
 
 `LangVersion` 属性可用于指定特定的编程语言版本。 例如，如果要访问 C# 预览功能，请将 `LangVersion` 设置为 `preview`。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <LangVersion>preview</LangVersion>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <LangVersion>preview</LangVersion>
+</PropertyGroup>
 ```
 
 有关详细信息，请参阅 [C# 语言版本控制](../../csharp/language-reference/configure-language-version.md#override-a-default)。
 
-## <a name="nuget-packages"></a>NuGet 包
+## <a name="run-time-configuration-properties"></a>运行时配置属性
 
-- [PackageReference](#packagereference)
-- [AssetTargetFallback](#assettargetfallback)
+可以通过在应用的项目文件中指定 MSBuild 属性来配置某些运行时行为。 有关配置运行时行为的其他方法的信息，请参阅 [.NET Core 运行时配置设置](../run-time-config/index.md)。
 
-### <a name="packagereference"></a>PackageReference
+- [ConcurrentGarbageCollection](#concurrentgarbagecollection)
+- [InvariantGlobalization](#invariantglobalization)
+- [RetainVMGarbageCollection](#retainvmgarbagecollection)
+- [ServerGarbageCollection](#servergarbagecollection)
+- [ThreadPoolMaxThreads](#threadpoolmaxthreads)
+- [ThreadPoolMinThreads](#threadpoolminthreads)
+- [TieredCompilation](#tieredcompilation)
+- [TieredCompilationQuickJit](#tieredcompilationquickjit)
+- [TieredCompilationQuickJitForLoops](#tieredcompilationquickjitforloops)
 
-`PackageReference` 项可用于指定 NuGet 依赖项。 例如，你可能想要引用单个包而不是[元包](../packages.md#metapackages)。 `Include` 属性指定包 ID。 以下示例中的项目文件片段引用 [System.Runtime](https://www.nuget.org/packages/System.Runtime/) 包。
+### <a name="concurrentgarbagecollection"></a>ConcurrentGarbageCollection
+
+`ConcurrentGarbageCollection` 属性配置是否启用 [后台（并发）垃圾回收](../../standard/garbage-collection/background-gc.md)。 将值设置为 `false` 以禁用后台垃圾回收。 有关详细信息，请参阅 [System.GC.Concurrent/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent)。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  ...
-  <ItemGroup>
-    <PackageReference Include="System.Runtime" Version="4.3.0" />
-  </ItemGroup>
-</Project>
+<PropertyGroup>
+  <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+</PropertyGroup>
 ```
 
-有关详细信息，请参阅[项目文件中的包引用](/nuget/consume-packages/package-references-in-project-files)。
+### <a name="invariantglobalization"></a>InvariantGlobalization
+
+`InvariantGlobalization` 属性配置应用是否在全球化固定模式下运行，这意味着它无权访问特定于区域性的数据  。 将值设置为 `true` 以在全球化固定模式下运行。 有关详细信息，请参阅[固定模式](../run-time-config/globalization.md#invariant-mode)。
+
+```xml
+<PropertyGroup>
+  <InvariantGlobalization>true</InvariantGlobalization>
+</PropertyGroup>
+```
+
+### <a name="retainvmgarbagecollection"></a>RetainVMGarbageCollection
+
+`RetainVMGarbageCollection` 属性配置垃圾回收器，以将已删除的内存段放置在备用列表上供将来使用或释放它们。 将值设置为 `true` 会告知垃圾回收器将段放在备用列表上。 有关详细信息，请参阅 [System.GC.RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm)。
+
+```xml
+<PropertyGroup>
+  <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+</PropertyGroup>
+```
+
+### <a name="servergarbagecollection"></a>ServerGarbageCollection
+
+`ServerGarbageCollection` 属性配置应用程序是使用[工作站垃圾回收还是服务器垃圾回收](../../standard/garbage-collection/workstation-server-gc.md)。 将值设置为 `true` 以使用服务器垃圾回收。 有关详细信息，请参阅 [System.GC.Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver)。
+
+```xml
+<PropertyGroup>
+  <ServerGarbageCollection>true</ServerGarbageCollection>
+</PropertyGroup>
+```
+
+### <a name="threadpoolmaxthreads"></a>ThreadPoolMaxThreads
+
+`ThreadPoolMaxThreads` 属性配置工作线程池的最大线程数。 有关详细信息，请参阅[最大线程数](../run-time-config/threading.md#maximum-threads)。
+
+```xml
+<PropertyGroup>
+  <ThreadPoolMaxThreads>20</ThreadPoolMaxThreads>
+</PropertyGroup>
+```
+
+### <a name="threadpoolminthreads"></a>ThreadPoolMinThreads
+
+`ThreadPoolMinThreads` 属性配置工作线程池的最小线程数。 有关详细信息，请参阅[最小线程数](../run-time-config/threading.md#minimum-threads)。
+
+```xml
+<PropertyGroup>
+  <ThreadPoolMinThreads>4</ThreadPoolMinThreads>
+</PropertyGroup>
+```
+
+### <a name="tieredcompilation"></a>TieredCompilation
+
+`TieredCompilation` 属性配置实时 (JIT) 编译器是否使用[分层编译](../whats-new/dotnet-core-3-0.md#tiered-compilation)。 将值设置为 `false` 以禁用分层编译。 有关详细信息，请参阅[分层编译](../run-time-config/compilation.md#tiered-compilation)。
+
+```xml
+<PropertyGroup>
+  <TieredCompilation>false</TieredCompilation>
+</PropertyGroup>
+```
+
+### <a name="tieredcompilationquickjit"></a>TieredCompilationQuickJit
+
+`TieredCompilationQuickJit` 属性配置 JIT 编译器是否使用快速 JIT。 将值设置为 `false` 以禁用快速 JIT。 有关详细信息，请参阅[快速 JIT](../run-time-config/compilation.md#quick-jit)。
+
+```xml
+<PropertyGroup>
+  <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+</PropertyGroup>
+```
+
+### <a name="tieredcompilationquickjitforloops"></a>TieredCompilationQuickJitForLoops
+
+`TieredCompilationQuickJitForLoops` 配置 JIT 编译器是否对包含循环的方法使用快速 JIT。 将值设置为 `true` 以对包含循环的方法启用快速 JIT。 有关详细信息，请参阅[适用于循环的快速 JIT](../run-time-config/compilation.md#quick-jit-for-loops)。
+
+```xml
+<PropertyGroup>
+  <TieredCompilationQuickJitForLoops>true</TieredCompilationQuickJitForLoops>
+</PropertyGroup>
+```
+
+## <a name="reference-properties"></a>引用属性
+
+- [AssetTargetFallback](#assettargetfallback)
+- [PackageReference](#packagereference)
+- [ProjectReference](#projectreference)
+- [引用](#reference)
+- [还原属性](#restore-properties)
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
-`AssetTargetFallback` 属性可用于为你的项目引用的项目以及你的项目所使用的 NuGet 包指定其他兼容的框架版本。 例如，如果使用 `PackageReference` 指定包依赖项，但该包不包含与项目的 `TargetFramework` 兼容的资源，则可使用 `AssetTargetFallback` 属性。 使用 `AssetTargetFallback` 中指定的每个目标框架重新检查引用包的兼容性。
+使用 `AssetTargetFallback` 属性，可以为项目引用和 NuGet 包指定其他兼容的框架版本。 例如，如果使用 `PackageReference` 指定包依赖项，但该包不包含与项目的 `TargetFramework` 兼容的资源，则可使用 `AssetTargetFallback` 属性。 使用 `AssetTargetFallback` 中指定的每个目标框架重新检查引用包的兼容性。
 
 可以将 `AssetTargetFallback` 属性设置为一个或多个[目标框架版本](../../standard/frameworks.md#supported-target-framework-versions)。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  ...
-  <PropertyGroup>
-    <AssetTargetFallback>net461</AssetTargetFallback>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <AssetTargetFallback>net461</AssetTargetFallback>
+</PropertyGroup>
 ```
 
-### <a name="pack-and-restore-targets"></a>包和还原目标
+### <a name="packagereference"></a>PackageReference
 
-MSBuild 15.1 引入了 `pack` 和 `restore` 目标，用于创建和还原作为生成一部分的 NuGet 包。 有关这些目标（包括 `PackageTargetFallback`）的 MSBuild 属性的信息，请参阅[作为 MSBuild 目标的 NuGet 包和还原](/nuget/reference/msbuild-targets)。
+`PackageReference` 定义对 NuGet 包的引用。 例如，你可能想要引用单个包而不是[元包](../packages.md#metapackages)。
+
+`Include` 属性指定包 ID。 `Version` 特性指定版本或版本范围。 若要了解如何指定最低版本、最高版本、范围或完全匹配，请参阅[版本范围](/nuget/concepts/package-versioning#version-ranges)。 还可以将下面的元数据添加到项目引用中：`IncludeAssets`、`ExcludeAssets` 和 `PrivateAssets`。
+
+以下示例中的项目文件片段引用 [System.Runtime](https://www.nuget.org/packages/System.Runtime/) 包。
+
+```xml
+<ItemGroup>
+  <PackageReference Include="System.Runtime" Version="4.3.0" />
+</ItemGroup>
+```
+
+有关详细信息，请参阅[项目文件中的包引用](/nuget/consume-packages/package-references-in-project-files)。
+
+### <a name="projectreference"></a>ProjectReference
+
+`ProjectReference` 项定义对另一个项目的引用。 被引用的项目作为 NuGet 包依赖项添加，即它被视为与 `PackageReference` 相同。
+
+`Include` 特性指定项目路径。 还可以将下面的元数据添加到项目引用中：`IncludeAssets`、`ExcludeAssets` 和 `PrivateAssets`。
+
+以下示例中的项目文件片段引用名为 `Project2` 的项目。
+
+```xml
+<ItemGroup>
+  <ProjectReference Include="..\Project2.csproj" />
+</ItemGroup>
+```
+
+### <a name="reference"></a>参考
+
+`Reference` 项定义对程序集文件的引用。
+
+`Include` 特性指定文件名，`HintPath` 子元素指定程序集路径。
+
+```xml
+<ItemGroup>
+  <Reference Include="MyAssembly">
+    <HintPath>..\..\Assemblies\MyAssembly.dll</HintPath>
+  </Reference>
+</ItemGroup>
+```
+
+### <a name="restore-properties"></a>还原属性
+
+还原被引用的包会安装它的所有直接依赖项，以及这些依赖项的全部依赖项。 可以通过指定 `RestorePackagesPath` 和 `RestoreIgnoreFailedSources` 等属性来自定义包还原。 若要详细了解这些属性和其他属性，请参阅[还原目标](/nuget/reference/msbuild-targets#restore-target)。
+
+```xml
+<PropertyGroup>
+  <RestoreIgnoreFailedSource>true</RestoreIgnoreFailedSource>
+</PropertyGroup>
+```
 
 ## <a name="see-also"></a>请参阅
 

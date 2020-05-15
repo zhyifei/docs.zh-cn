@@ -3,12 +3,12 @@ title: 使用 .NET Compiler Platform SDK 语法模型
 description: 此概述介绍了用于理解和操作语法节点的类型。
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: fc1b1f5ae5ec985425c8d6aec49ef7f830ea9162
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87b79c3af4958299fcd966dcc4b04868f88675c7
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75740471"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975909"
 ---
 # <a name="work-with-syntax"></a>使用语法
 
@@ -37,7 +37,7 @@ ms.locfileid: "75740471"
 
 每个节点都包含 <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType> 方法，可根据子节点在源文本中的位置按顺序返回子节点列表。 此列表中不包含标记。 每个节点还包含用于检查子代的方法（例如，<xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>、<xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A> 或 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A>），这些子代表示以该节点为根的子树中存在的所有节点、标记或琐碎内容的列表。
 
-此外，每个语法节点子类通过强类型属性公开所有相同的子级。 例如，<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> 节点类具有三个特定于二元运算符的其他属性：<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 和 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>。 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left> 和 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> 的类型为 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax>，<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 的类型为 <xref:Microsoft.CodeAnalysis.SyntaxToken>。
+此外，每个语法节点子类通过强类型属性公开所有相同的子级。 例如，<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> 节点类具有三个特定于二元运算符的其他属性：<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 和 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>。 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> 和 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax> 的类型为 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>，<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 的类型为 <xref:Microsoft.CodeAnalysis.SyntaxToken>。
 
 某些语法节点具有可选子级。 例如，<xref:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax> 具有可选的 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax>。 如果没有子级，则该属性返回 null。
 
@@ -71,7 +71,7 @@ ms.locfileid: "75740471"
 
 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A> 属性表示的文本范围包括节点的正常范围，加上任何前导或尾随琐碎内容的范围。
 
-例如:
+例如：
 
 ``` csharp
       if (x > 3)
@@ -85,7 +85,7 @@ ms.locfileid: "75740471"
 
 ## <a name="kinds"></a>种类
 
-每个节点、标记或琐碎内容都具有 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 类型的 <xref:System.Int32?displayProperty=nameWithType> 属性，标识所表示的确切语法元素。 此值可强制转换为特定语言的枚举。 每种语言（C# 或 Visual Basic）都具有单个 `SyntaxKind` 枚举（分别为 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 和 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>），列出了语法中所有可能的节点、标记和琐碎内容。 可通过访问 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A?displayProperty=nameWithType> 或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind%2A?displayProperty=nameWithType> 扩展方法自动完成此转换。
+每个节点、标记或琐碎内容都具有 <xref:System.Int32?displayProperty=nameWithType> 类型的 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 属性，标识所表示的确切语法元素。 此值可强制转换为特定语言的枚举。 每种语言（C# 或 Visual Basic）都具有单个 `SyntaxKind` 枚举（分别为 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 和 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>），列出了语法中所有可能的节点、标记和琐碎内容。 可通过访问 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A?displayProperty=nameWithType> 或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind%2A?displayProperty=nameWithType> 扩展方法自动完成此转换。
 
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> 属性可轻松消除共享同一节点类的语法节点类型的歧义。 对于标记和琐碎内容，此属性是区分不同元素类型的唯一方法。
 
