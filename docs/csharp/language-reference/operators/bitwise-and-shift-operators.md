@@ -92,7 +92,7 @@ ms.locfileid: "79398069"
 
 <span data-ttu-id="d2d45-132">有关 `>>` 运算符的右侧操作数如何定义移位计数的信息，请参阅[移位运算符的移位计数](#shift-count-of-the-shift-operators)部分。</span><span class="sxs-lookup"><span data-stu-id="d2d45-132">For information about how the right-hand operand of the `>>` operator defines the shift count, see the [Shift count of the shift operators](#shift-count-of-the-shift-operators) section.</span></span>
 
-## <a name="logical-and-operator-"></a> <span data-ttu-id="d2d45-133">逻辑 AND 运算符 &amp;</span><span class="sxs-lookup"><span data-stu-id="d2d45-133">Logical AND operator &amp;</span></span>
+## <a name="logical-and-operator-amp"></a><a name="logical-and-operator-"></a> <span data-ttu-id="d2d45-133">逻辑 AND 运算符 &amp;</span><span class="sxs-lookup"><span data-stu-id="d2d45-133">Logical AND operator &amp;</span></span>
 
 <span data-ttu-id="d2d45-134">`&` 运算符计算其操作数的位逻辑 AND：</span><span class="sxs-lookup"><span data-stu-id="d2d45-134">The `&` operator computes the bitwise logical AND of its operands:</span></span>
 

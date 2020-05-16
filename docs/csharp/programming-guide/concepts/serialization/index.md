@@ -75,7 +75,7 @@ ms.locfileid: "79167590"
 
 <span data-ttu-id="b5b68-157">设计器序列化是一种特殊形式的序列化，涉及与开发工具相关联的对象暂留。</span><span class="sxs-lookup"><span data-stu-id="b5b68-157">Designer serialization is a special form of serialization that involves the kind of object persistence associated with development tools.</span></span> <span data-ttu-id="b5b68-158">设计器序列化是指将对象图转换成源文件以供日后用于恢复对象图的过程。</span><span class="sxs-lookup"><span data-stu-id="b5b68-158">Designer serialization is the process of converting an object graph into a source file that can later be used to recover the object graph.</span></span> <span data-ttu-id="b5b68-159">源文件可以包含代码、标记或 SQL 表信息。</span><span class="sxs-lookup"><span data-stu-id="b5b68-159">A source file can contain code, markup, or even SQL table information.</span></span>
 
-## <a name="BKMK_RelatedTopics"></a><span data-ttu-id="b5b68-160">相关主题和示例</span><span class="sxs-lookup"><span data-stu-id="b5b68-160">Related Topics and Examples</span></span>  
+## <a name="related-topics-and-examples"></a><a name="BKMK_RelatedTopics"></a><span data-ttu-id="b5b68-160">相关主题和示例</span><span class="sxs-lookup"><span data-stu-id="b5b68-160">Related Topics and Examples</span></span>  
 
 <span data-ttu-id="b5b68-161">[System.Text.Json 概述](../../../../standard/serialization/system-text-json-overview.md) 演示如何获取 `System.Text.Json` 库。</span><span class="sxs-lookup"><span data-stu-id="b5b68-161">[System.Text.Json overview](../../../../standard/serialization/system-text-json-overview.md) Shows how to get the `System.Text.Json` library.</span></span>
 
