@@ -55,5 +55,5 @@ class Employee
 - [可访问性级别](accessibility-levels.md)
 - [修饰符](index.md)
 - [public](public.md)
-- [protected](protected.md)
-- [internal](internal.md)
+- [受保护](protected.md)
+- [内部](internal.md)

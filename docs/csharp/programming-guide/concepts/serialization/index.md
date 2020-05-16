@@ -75,7 +75,7 @@ XML 序列化将对象的公共字段和属性或方法的参数和返回值序�
 
 设计器序列化是一种特殊形式的序列化，涉及与开发工具相关联的对象暂留。 设计器序列化是指将对象图转换成源文件以供日后用于恢复对象图的过程。 源文件可以包含代码、标记或 SQL 表信息。
 
-## <a name="BKMK_RelatedTopics"></a>相关主题和示例  
+## <a name="related-topics-and-examples"></a><a name="BKMK_RelatedTopics"></a>相关主题和示例  
 
 [System.Text.Json 概述](../../../../standard/serialization/system-text-json-overview.md) 演示如何获取 `System.Text.Json` 库。
 

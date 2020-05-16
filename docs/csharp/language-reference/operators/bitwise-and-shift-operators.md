@@ -92,7 +92,7 @@ ms.locfileid: "79398069"
 
 有关 `>>` 运算符的右侧操作数如何定义移位计数的信息，请参阅[移位运算符的移位计数](#shift-count-of-the-shift-operators)部分。
 
-## <a name="logical-and-operator-"></a> 逻辑 AND 运算符 &amp;
+## <a name="logical-and-operator-amp"></a><a name="logical-and-operator-"></a> 逻辑 AND 运算符 &amp;
 
 `&` 运算符计算其操作数的位逻辑 AND：
 
