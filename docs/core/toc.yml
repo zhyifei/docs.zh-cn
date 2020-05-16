@@ -24,6 +24,8 @@
       href: install/how-to-detect-installed-versions.md
     - name: Linux 包管理器
       items:
+        - name: Ubuntu 20.04
+          href: install/linux-package-manager-ubuntu-2004.md
         - name: Ubuntu 19.10
           href: install/linux-package-manager-ubuntu-1910.md
         - name: Ubuntu 19.04
@@ -74,7 +76,7 @@
       href: whats-new/dotnet-core-2-1.md
     - name: .NET Core 2.0 的新增功能
       href: whats-new/dotnet-core-2-0.md
-- name: 中断性变更
+- name: 重大更改
   displayName: app compatibility
   href: compatibility/
 - name: 教程
@@ -393,7 +395,7 @@
       href: testing/unit-testing-published-output.md
     - name: 使用 Visual Studio 对 .NET Core 项目进行实时单元测试
       href: /visualstudio/test/live-unit-testing-start
-- name: 版本控制
+- name: 版本管理
   items:
     - name: 概述
       href: versions/index.md
