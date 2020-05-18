@@ -86,9 +86,11 @@
       items:
         - name: 云本机应用的 Azure 安全性
           href: azure-security.md
-    - name: 云本机 DevOps
+    - name: DevOps
       href: devops.md
       items:
+        - name: 特性标志
+          href: feature-flags.md
         - name: 基础结构即代码
           href: infrastructure-as-code.md
         - name: 云本机应用程序捆绑包
