@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 59417acb-4e59-46ad-acfe-d827e6ab6078
 topic_type:
 - apiref
-ms.openlocfilehash: bb796a12868cc3e44394ab493f7838dc48ab4dc5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8645878132359b6218cd62b1ff707208de53704b
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448492"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442145"
 ---
 # <a name="ibindingdisplayinitializeforprocess-method"></a>IBindingDisplay::InitializeForProcess 方法
-初始化[IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)对象。  
+初始化[IBindingDisplay](ibindingdisplay-interface.md)对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,17 +38,17 @@ HRESULT InitializeForProcess (
  中进程标识符。  
   
 ## <a name="remarks"></a>备注  
- 调试器在创建时调用 `InitializeForProcess` 方法来初始化绑定显示。 在调用 `IBindingDisplay` 上的任何其他方法之前，必须在创建时调用 `InitializeForProcess`。  
+ 调试器 `InitializeForProcess` 在创建时调用方法以初始化绑定显示。 `InitializeForProcess`调用任何其他方法之前，必须在创建时调用 `IBindingDisplay` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** BindingDisplay  
   
  **库：** BindingDisplay .idl  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IBindingDisplay 接口](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)
+- [IBindingDisplay 接口](ibindingdisplay-interface.md)

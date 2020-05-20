@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93de56b6-4ae8-4cca-acdc-25a434623509
 topic_type:
 - apiref
-ms.openlocfilehash: 041df959139a0be77f40d6aa5655ff15f93fb26f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 869d7d36ac24bfeee5b2361dd569945ad77eaf7f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427942"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610062"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>ISymUnmanagedWriter::Initialize2 方法
 设置此编写器将与之关联的元数据发射器接口，并设置调试符号将写入的输出文件名。 此方法还允许您设置程序数据库（PDB）文件的最终位置。  
@@ -41,16 +41,16 @@ HRESULT Initialize2(
  中指向元数据发射器接口的指针。  
   
  `tempfilename`  
- 中指向 `WCHAR` 的指针，该指针包含将调试符号写入到的文件名。 如果为不使用文件名的编写器指定文件名，则忽略此参数。  
+ 中指向的指针 `WCHAR` ，该指针包含向其中写入调试符号的文件名。 如果为不使用文件名的编写器指定文件名，则忽略此参数。  
   
  `pIStream`  
- 中如果已指定，则符号编写器会将符号发送到给定的 <xref:System.Runtime.InteropServices.ComTypes.IStream>，而不是发送到 `filename` 参数中指定的文件。 `pIStream` 参数是可选的。  
+ 中如果已指定，则符号编写器会将符号发送到给定的 <xref:System.Runtime.InteropServices.ComTypes.IStream> （而不是参数中指定的文件） `filename` 。 `pIStream` 参数是可选的。  
   
  `fFullBuild`  
- [in] 如果这是完全重新生成，则 `true`;如果这是增量编译，则 `false`。  
+ [in] `true`如果这是完全重新生成，则为;`false`如果这是增量编译，则为。  
   
  `finalfilename`  
- 中指向作为 PDB 文件最终位置路径字符串的 `WCHAR` 的指针。  
+ 中指向的指针 `WCHAR` ，它是 PDB 文件的最终位置的路径字符串。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -60,5 +60,5 @@ HRESULT Initialize2(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [Initialize 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)
+- [ISymUnmanagedWriter 接口](isymunmanagedwriter-interface.md)
+- [Initialize 方法](isymunmanagedwriter-initialize-method.md)

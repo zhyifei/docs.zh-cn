@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63021fc1-9c2d-4788-811f-fe8ca077206a
 topic_type:
 - apiref
-ms.openlocfilehash: 38c4819a375cdd94ee31c2744871c600d8de0b40
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f2996349fd2bf1765a3de5b67d3296a25b1eaa5e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446003"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610361"
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>ISymUnmanagedVariable::GetStartOffset 方法
 获取此变量在其父级内的起始偏移量。 如果这是一个作用域内的本地变量，则起始偏移量将在为该作用域定义的偏移量内。  
@@ -34,7 +34,7 @@ HRESULT GetStartOffset(
   
 ## <a name="parameters"></a>参数  
  `pRetVal`  
- 弄指向接收开始偏移量的 `ULONG32` 的指针。  
+ 弄指向的指针 `ULONG32` ，该指针接收开始偏移量。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -44,5 +44,5 @@ HRESULT GetStartOffset(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedVariable 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [GetEndOffset 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)
+- [ISymUnmanagedVariable 接口](isymunmanagedvariable-interface.md)
+- [GetEndOffset 方法](isymunmanagedvariable-getendoffset-method.md)

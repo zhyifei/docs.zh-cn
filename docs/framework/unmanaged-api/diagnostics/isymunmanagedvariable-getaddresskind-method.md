@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a71563c0-62f2-4eb4-970c-825d61827613
 topic_type:
 - apiref
-ms.openlocfilehash: 4d2de38e5e506873a6db262dcec19c7af9d8a0d0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 093c5e3e64395c8946acd9201990d132e8111fc7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446097"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610582"
 ---
 # <a name="isymunmanagedvariablegetaddresskind-method"></a>ISymUnmanagedVariable::GetAddressKind 方法
 获取此变量的地址类型。  
@@ -34,7 +34,7 @@ HRESULT GetAddressKind(
   
 ## <a name="parameters"></a>参数  
  `pRetVal`  
- 弄指向接收值的 `ULONG32` 的指针。 可能的值是在[CorSymAddrKind](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)枚举中定义的。  
+ 弄指向接收值的的指针 `ULONG32` 。 可能的值是在[CorSymAddrKind](corsymaddrkind-enumeration.md)枚举中定义的。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -44,4 +44,4 @@ HRESULT GetAddressKind(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedVariable 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [ISymUnmanagedVariable 接口](isymunmanagedvariable-interface.md)

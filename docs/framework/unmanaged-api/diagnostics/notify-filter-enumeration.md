@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4789d08f-8683-45d3-ac30-73d48c61e470
 topic_type:
 - apiref
-ms.openlocfilehash: 92e40dbe8892d48dba1c54d9cd16faa409440b24
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b20e18d5f4314a0ab1442ac7bd5c6514e4db85d5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438117"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609477"
 ---
 # <a name="notify_filter-enumeration"></a>NOTIFY_FILTER 枚举
-标识调试器函数的回调。 有关详细信息，请参阅[INotifySource2：： SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)方法。  
+标识调试器函数的回调。 有关详细信息，请参阅[INotifySource2：： SetNotifyFilter](inotifysource2-setnotifyfilter-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,15 +39,15 @@ enum tagNOTIFY_FILTER
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
-|`NOTIFY_FILTER_ONSYNCCALLOUT`|指示应调用[INotifySink2：： OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)方法。|  
-|`NOTIFY_FILTER_ONSYNCCALLENTER`|指示应调用[INotifySink2：： OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)方法。|  
-|`NOTIFY_FILTER_ONSYNCCALLEXIT`|指示应调用[INotifySink2：： OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)方法。|  
-|`NOTIFY_FILTER_ONSYNCCALLRETURN`|指示应调用[INotifySink2：： OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)方法。|  
-|`NOTIFY_FILTER_ALLSYNC`|指示应调用所有[INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)方法。|  
+|`NOTIFY_FILTER_ONSYNCCALLOUT`|指示应调用[INotifySink2：： OnSyncCallOut](inotifysink2-onsynccallout-method.md)方法。|  
+|`NOTIFY_FILTER_ONSYNCCALLENTER`|指示应调用[INotifySink2：： OnSyncCallEnter](inotifysink2-onsynccallenter-method.md)方法。|  
+|`NOTIFY_FILTER_ONSYNCCALLEXIT`|指示应调用[INotifySink2：： OnSyncCallExit](inotifysink2-onsynccallexit-method.md)方法。|  
+|`NOTIFY_FILTER_ONSYNCCALLRETURN`|指示应调用[INotifySink2：： OnSyncCallReturn](inotifysink2-onsynccallreturn-method.md)方法。|  
+|`NOTIFY_FILTER_ALLSYNC`|指示应调用所有[INotifySink2](inotifysink2-interface.md)方法。|  
 |`NOTIFY_FILTER_ALL`|激活所有现有和未来的通知。|  
 |`NOTIFY_FILTER_NONE`|指示不应调用任何通知方法。|  
   
@@ -56,4 +56,4 @@ enum tagNOTIFY_FILTER
   
 ## <a name="see-also"></a>另请参阅
 
-- [诊断符号存储区枚举](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [诊断符号存储区枚举](diagnostics-symbol-store-enumerations.md)

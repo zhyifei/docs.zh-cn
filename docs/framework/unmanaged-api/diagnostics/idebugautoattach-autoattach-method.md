@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3cf3bd9c-7d88-4afa-a476-94cdc7609aa6
 topic_type:
 - apiref
-ms.openlocfilehash: 766aeb31436101babeab31b615a1c633578bfcc5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: aae03b0dc76639c50f4615d41eef73990226b5f7
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445520"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442119"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach 方法
 执行服务器调用的调试器自动附加。  
@@ -40,13 +40,13 @@ HRESULT AutoAttach
   
 ## <a name="parameters"></a>参数  
  `guidPort`  
- 中始终设置为 `GUID_NULL`。  
+ 中始终设置为 `GUID_NULL` 。  
   
  `dwPid`  
- 中通常用 `GetCurrentProcessId` 函数检索的进程 ID。  
+ 中进程 ID，通常通过函数检索 `GetCurrentProcessId` 。  
   
  `dwProgramType`  
- 中程序类型： `AUTOATTACH_PROGRAM_WIN32`、`AUTOATTACH_PROGRAM_COMPLUS`或 `AUTOATTACH_PROGRAM_UNKNOWN`。  
+ 中程序类型： `AUTOATTACH_PROGRAM_WIN32` 、 `AUTOATTACH_PROGRAM_COMPLUS` 或 `AUTOATTACH_PROGRAM_UNKNOWN` 。  
   
  `dwProgramId`  
  中程序 ID。  
@@ -62,4 +62,4 @@ HRESULT AutoAttach
   
 ## <a name="see-also"></a>另请参阅
 
-- [IDebugAutoAttach 接口](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
+- [IDebugAutoAttach 接口](idebugautoattach-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8025e04-f0e5-40c8-849c-8cd51323420e
 topic_type:
 - apiref
-ms.openlocfilehash: a6a6aa937078ed0627688a4eed3d9142a2e6e0ac
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fdf24bb8533da7914128f9477987c427442383bb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428104"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610114"
 ---
 # <a name="isymunmanagedwriterclosemethod-method"></a>ISymUnmanagedWriter::CloseMethod 方法
 关闭当前方法。 方法关闭后，不能在其中定义更多符号。  
@@ -39,5 +39,5 @@ HRESULT CloseMethod();
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [OpenMethod 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)
+- [ISymUnmanagedWriter 接口](isymunmanagedwriter-interface.md)
+- [OpenMethod 方法](isymunmanagedwriter-openmethod-method.md)

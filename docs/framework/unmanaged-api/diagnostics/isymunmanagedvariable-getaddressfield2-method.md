@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1f25b294-72b6-4882-a49b-6c9d364b6008
 topic_type:
 - apiref
-ms.openlocfilehash: 794615994cd11ee00c2a381b9ba883cebb8233a0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6256d052780b1c610e61267be2517954d722a42d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446123"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610595"
 ---
 # <a name="isymunmanagedvariablegetaddressfield2-method"></a>ISymUnmanagedVariable::GetAddressField2 方法
 获取此变量的第二个地址字段。 其含义取决于地址的类型。  
@@ -34,7 +34,7 @@ HRESULT GetAddressField2(
   
 ## <a name="parameters"></a>参数  
  `pRetVal`  
- 弄指向接收第二个地址字段的 `ULONG32` 的指针。  
+ 弄指向的指针 `ULONG32` ，该指针接收第二个地址字段。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -44,7 +44,7 @@ HRESULT GetAddressField2(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedVariable 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [GetAddressField1 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield1-method.md)
-- [GetAddressField3 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield3-method.md)
-- [GetAddressKind 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddresskind-method.md)
+- [ISymUnmanagedVariable 接口](isymunmanagedvariable-interface.md)
+- [GetAddressField1 方法](isymunmanagedvariable-getaddressfield1-method.md)
+- [GetAddressField3 方法](isymunmanagedvariable-getaddressfield3-method.md)
+- [GetAddressKind 方法](isymunmanagedvariable-getaddresskind-method.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 025e358c-448f-4423-a2f2-57acf437c8a5
 topic_type:
 - apiref
-ms.openlocfilehash: 0c112819ef3bc4f9a7146ee80f55202ff89d689a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e88a844a7f79f14c717a5966b345588b3b3b9f81
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178320"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609412"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>ISymUnmanagedWriter3::OpenMethod2 方法
-打开方法并在图像中提供其实际截面偏移。  
+打开方法并在图像中提供其实际节偏移量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,23 +34,23 @@ HRESULT OpenMethod2(
     [in] ULONG32 offset);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `method`  
- [在]要打开的方法的元数据令牌。  
+ 中要打开的方法的元数据标记。  
   
  `isect`  
- [在]图像中的截面偏移。  
+ 中图像中的节偏移量。  
   
  `offset`  
- [在]图像中的偏移量。  
+ 中图像中的偏移量。  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，S_OK;否则，E_FAIL或其他错误代码。  
+ 如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **标题：** 科西姆.伊德尔，科西姆.h  
+ **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedWriter3 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
-- [OpenMethod 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)
+- [ISymUnmanagedWriter3 接口](isymunmanagedwriter3-interface.md)
+- [OpenMethod 方法](isymunmanagedwriter-openmethod-method.md)
