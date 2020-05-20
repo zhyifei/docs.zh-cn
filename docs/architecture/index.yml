@@ -6,12 +6,12 @@ metadata:
   description: 了解有关架构、构建和迁移 .NET 应用的建议做法。
   ms.topic: landing-page
   ms.date: 03/19/2020
-  ms.openlocfilehash: dc358f45532625bd5474b01af630674a170baf0b
-  ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+  ms.openlocfilehash: ff3b842d33ea3fd5d9cbed5b39b2757933c1a616
+  ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 05/15/2020
-  ms.locfileid: "83418974"
+  ms.lasthandoff: 05/19/2020
+  ms.locfileid: "83613637"
 landingContent:
 - title: 开发 ASP.NET Core 应用
   linkLists:
@@ -27,7 +27,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: 架构适用于 Azure 的云原生 .NET 应用（预览）
+    - text: 为 Azure 构建云本机 .NET 应用
       url: cloud-native/index.md
     - text: 无服务器应用：体系结构、模式和 Azure 实现
       url: serverless/index.md
