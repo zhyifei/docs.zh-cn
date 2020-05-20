@@ -14,35 +14,35 @@ helpviewer_keywords:
 ms.assetid: 873639e2-4837-4568-83b3-4493e67e4174
 topic_type:
 - apiref
-ms.openlocfilehash: e980356ad592e137df7d08dadd77431b0e295380
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 52fc21044d345998ad72c045cdf5e80a8a03a38e
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141000"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703798"
 ---
 # <a name="iclrmemorynotificationcallback-interface"></a>ICLRMemoryNotificationCallback 接口
-允许主机使用类似于 Win32 `CreateMemoryResourceNotification` 函数的方法来报告内存压力情况。  
+允许主机使用类似于 Win32 函数的方法来报告内存压力情况 `CreateMemoryResourceNotification` 。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[OnMemoryNotification 方法](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)|向公共语言运行时（CLR）通知计算机上的内存负载。|  
+|[OnMemoryNotification 方法](iclrmemorynotificationcallback-onmemorynotification-method.md)|向公共语言运行时（CLR）通知计算机上的内存负载。|  
   
 ## <a name="remarks"></a>备注  
- 主机使用 `ICLRMemoryNotificationCallback` 接口来请求 CLR 释放内存资源。  
+ 主机使用 `ICLRMemoryNotificationCallback` 接口请求 CLR 释放内存资源。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [IHostMemoryManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [IHostMemoryManager 接口](ihostmemorymanager-interface.md)
+- [承载接口](hosting-interfaces.md)

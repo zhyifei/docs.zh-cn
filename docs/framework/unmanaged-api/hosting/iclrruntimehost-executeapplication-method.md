@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f28cc4e-7176-4e00-aa1f-58ae6ee52fe4
 topic_type:
 - apiref
-ms.openlocfilehash: 4b56ffab8fb6a9ef70b51421f9cdc5535111e527
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 924d032c42dca95b253acea167d55dd6e2b811e5
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120484"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703333"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication 方法
 在基于清单的 ClickOnce 部署方案中用于指定要在新域中激活的应用程序。 有关这些方案的详细信息，请参阅[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)。  
@@ -40,16 +40,16 @@ HRESULT ExecuteApplication(
   
 ## <a name="parameters"></a>参数  
  `pwzAppFullName`  
- 中应用程序的完整名称，为 <xref:System.ApplicationIdentity>定义。  
+ 中为定义的应用程序的完整名称 <xref:System.ApplicationIdentity> 。  
   
  `dwManifestPaths`  
- 中`ppwzManifestPaths` 数组中包含的字符串的数目。  
+ 中数组中包含的字符串的数目 `ppwzManifestPaths` 。  
   
  `ppwzManifestPaths`  
  [in] 可选。 包含应用程序的清单路径的字符串数组。  
   
  `dwActivationData`  
- 中`ppwzActivationData` 数组中包含的字符串的数目。  
+ 中数组中包含的字符串的数目 `ppwzActivationData` 。  
   
  `ppwzActivationData`  
  [in] 可选。 一个字符串数组，其中包含应用程序的激活数据，如通过 Web 部署的应用程序的 URL 的查询字符串部分。  
@@ -59,37 +59,37 @@ HRESULT ExecuteApplication(
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication` 成功返回。|  
+|S_OK|`ExecuteApplication`已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
 |HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
-|E_FAIL|发生未知的灾难性故障。 如果某个方法返回 E_FAIL，则 CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
+|E_FAIL|发生未知的灾难性故障。 如果方法返回 E_FAIL，则 CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- `ExecuteApplication` 用于在新创建的应用程序域中激活 ClickOnce 应用程序。  
+ `ExecuteApplication`用于在新创建的应用程序域中激活 ClickOnce 应用程序。  
   
- `pReturnValue` 的 output 参数设置为应用程序返回的值。 如果为 `pReturnValue`提供 null 值，则 `ExecuteApplication` 不会失败，但不返回值。  
+ `pReturnValue`Output 参数设置为应用程序返回的值。 如果为提供 null 值，则不 `pReturnValue` 会 `ExecuteApplication` 失败，但它不返回值。  
   
 > [!IMPORTANT]
-> 请不要在调用 `ExecuteApplication` 方法之前调用[Start 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)方法来激活基于清单的应用程序。 如果首先调用 `Start` 方法，`ExecuteApplication` 方法调用将失败。  
+> 请不要在调用方法之前调用[Start 方法](iclrruntimehost-start-method.md)方法 `ExecuteApplication` 来激活基于清单的应用程序。 如果 `Start` 首先调用方法， `ExecuteApplication` 方法调用将失败。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ActivationContext>
 - <xref:System.AppDomainManager>
 - <xref:System.ApplicationIdentity>
-- [ICLRRuntimeHost 接口](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
-- [SetAppDomainManager 方法](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)
+- [ICLRRuntimeHost 接口](iclrruntimehost-interface.md)
+- [SetAppDomainManager 方法](ihostcontrol-setappdomainmanager-method.md)
 - [演练：在设计器中使用 ClickOnce 部署 API 按需下载程序集](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
