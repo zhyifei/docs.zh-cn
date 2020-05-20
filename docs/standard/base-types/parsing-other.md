@@ -31,7 +31,7 @@ ms.locfileid: "73127571"
  [!code-vb[Conceptual.String.Parse#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#2)]  
   
 ## <a name="boolean"></a>Boolean  
- Boolean  数据类型包含 Parse  方法，可用于将表示 Boolean 值的字符串转换为实际 Boolean  类型。 此方法不区分大小写，可以成功分析包含“True”或“False”的字符串。 与 Boolean  类型关联的 Parse  方法还可以分析两端是空格的字符串。 如果传递的是其他任何字符串，<xref:System.FormatException> 就会抛出。  
+ Boolean  数据类型包含 Parse  方法，可用于将表示 Boolean 值的字符串转换为实际 Boolean  类型。 此方法不区分大小写，可以成功分析包含“True”或“False”的字符串。 与 Boolean 类型关联的 Parse 方法还可以分析两端是空格的字符串。 如果传递的是其他任何字符串，<xref:System.FormatException> 就会抛出。  
   
  下面的代码示例使用 Parse  方法，将字符串转换为 Boolean 值。  
   

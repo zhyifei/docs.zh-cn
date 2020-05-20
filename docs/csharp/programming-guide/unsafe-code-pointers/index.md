@@ -48,7 +48,7 @@ ms.locfileid: "75711826"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/unsafe-code.md)中的[不安全代码](~/_csharplang/spec/introduction.md)主题。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[不安全代码](~/_csharplang/spec/unsafe-code.md)主题。
   
 ## <a name="see-also"></a>另请参阅
 

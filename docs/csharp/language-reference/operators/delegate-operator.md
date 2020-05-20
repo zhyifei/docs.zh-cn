@@ -34,7 +34,7 @@ ms.locfileid: "78847334"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#anonymous-function-expressions)中的 [匿名函数表达式](~/_csharplang/spec/introduction.md)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的 [匿名函数表达式](~/_csharplang/spec/expressions.md#anonymous-function-expressions)部分。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -23,7 +23,7 @@ ms.locfileid: "73141278"
 
 如果要创建旨在按区域性向用户显示结果的应用程序，则区分区域性的字符串操作无疑是一个有利条件。 默认情况下，区分区域性的方法从当前线程的 <xref:System.Globalization.CultureInfo.CurrentCulture%2A> 属性中获得要使用的区域性。
 
-请注意，并非在所有场合都需要执行区分区域性的字符串操作。 当结果不应依赖于区域性时，使用区分区域性的操作可能会导致应用程序代码在遇到自定义事例映射和排序规则的区域性时失败。 相关示例，请参阅[使用字符串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture)一文中的[“使用当前区域性的字符串比较”](../../../docs/standard/base-types/best-practices-strings.md)部分。
+请注意，并非在所有场合都需要执行区分区域性的字符串操作。 当结果不应依赖于区域性时，使用区分区域性的操作可能会导致应用程序代码在遇到自定义事例映射和排序规则的区域性时失败。 相关示例，请参阅[使用字符串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)一文中的[“使用当前区域性的字符串比较”](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture)部分。
 
 字符串操作是否应该区分区域性取决于应用程序使用结果的方式。 向用户显示结果的字符串操作通常应是区分区域性的。 例如，如果应用程序在列表框中显示本地化字符串的排序列表，则应用程序应执行区分区域性的排序操作。
 

@@ -33,7 +33,7 @@ ms.locfileid: "70970443"
 
 ## <a name="remarks"></a>备注
 
-除非与 [-keyfile](./keyfile-compiler-option.md) 或 [-keycontainer](./keycontainer-compiler-option.md) 一同使用，否则 -delaysign 选项将不起作用  。
+除非与 [-keyfile](./keyfile-compiler-option.md) 或 [-keycontainer](./keycontainer-compiler-option.md) 一同使用，否则 -delaysign 选项将不起作用。
 
  -Delaysign 和 -publicsign  选项互斥。
 

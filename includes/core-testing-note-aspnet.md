@@ -6,4 +6,4 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "70373808"
 ---
-本文介绍如何测试 .NET Core 项目。 如果要测试 ASP.NET Core 项目，请参阅 [ASP.NET Core 中的集成测试](/aspnet/core/test/integration-tests#test-app-prerequisites)  。
+本文介绍如何测试 .NET Core 项目。 如果要测试 ASP.NET Core 项目，请参阅 [ASP.NET Core 中的集成测试](/aspnet/core/test/integration-tests#test-app-prerequisites)。

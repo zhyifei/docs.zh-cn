@@ -165,7 +165,7 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "74447311"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe 错误消息
-在 Visual Studio 2012 中使用 Windows 运行时组件  模板时，生成进程调用 [Winmdexp.exe（Windows 运行时元数据导出工具）](winmdexp-exe-windows-runtime-metadata-export-tool.md)，因此“错误列表”  中会显示 Winmdexp.exe 错误消息。 Winmdexp.exe 在用 `/target:winmdobj` 选项编译的模块上运行。 由于它需要将编译的模块作为输入，因此不会显示错误消息，除非编译成功。  
+在 Visual Studio 2012 中使用 Windows 运行时组件模板时，生成进程调用 [Winmdexp.exe（Windows 运行时元数据导出工具）](winmdexp-exe-windows-runtime-metadata-export-tool.md)，因此“错误列表”中会显示 Winmdexp.exe 错误消息。 Winmdexp.exe 在用 `/target:winmdobj` 选项编译的模块上运行。 由于它需要将编译的模块作为输入，因此不会显示错误消息，除非编译成功。  
   
  错误消息包含解决其报告的错误条件所需的所有信息。 但是，有些问题需要消息以外的更多信息。 [诊断 Windows 运行时组件错误条件](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))中提供更多信息。  
   

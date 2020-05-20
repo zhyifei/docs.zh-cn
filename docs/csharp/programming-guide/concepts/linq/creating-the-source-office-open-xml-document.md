@@ -52,4 +52,4 @@ ms.locfileid: "70204151"
 6. 保存文档，并将其命名为 SampleDoc.docx。
 
     > [!NOTE]
-    > 如果使用的是 Microsoft Word 2003，请在“保存类型”  下拉列表中选择“Word 2007 文档”  。
+    > 如果使用的是 Microsoft Word 2003，请在“保存类型”下拉列表中选择“Word 2007 文档”。

@@ -27,7 +27,7 @@ ms.locfileid: "75713035"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/statements.md#the-try-statement)中的 [try 语句](~/_csharplang/spec/introduction.md)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的 [try 语句](~/_csharplang/spec/statements.md#the-try-statement)部分。
 
 ## <a name="see-also"></a>另请参阅
 

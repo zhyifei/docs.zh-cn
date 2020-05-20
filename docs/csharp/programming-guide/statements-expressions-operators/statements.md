@@ -86,7 +86,7 @@ ms.locfileid: "75711930"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/statements.md)中的[语句](~/_csharplang/spec/introduction.md)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[语句](~/_csharplang/spec/statements.md)部分。
 
 ## <a name="see-also"></a>另请参阅
 

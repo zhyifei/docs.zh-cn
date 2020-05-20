@@ -32,7 +32,7 @@ ms.locfileid: "75705439"
   
 ## <a name="c-language-specification"></a>C# 语言规范  
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/classes.md#private-constructors)中的[私有构造函数](/dotnet/csharp/language-reference/language-specification/introduction)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[私有构造函数](~/_csharplang/spec/classes.md#private-constructors)。 该语言规范是 C# 语法和用法的权威资料。
   
 ## <a name="see-also"></a>另请参阅
 

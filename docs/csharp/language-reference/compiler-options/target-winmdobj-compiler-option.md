@@ -25,7 +25,7 @@ ms.locfileid: "74204494"
   
  除非使用 [-out](./out-compiler-option.md) 选项，否则输出文件的名称采用第一个输入文件的名称。 不需要使用 [Main](../../programming-guide/main-and-command-args/index.md) 方法。  
   
- 如果在命令提示符处指定 -target:winmdobj 选项，则在指定下一个 -out 或 [-target:module](./target-module-compiler-option.md) 选项之前，会使用所有文件来创建 Windows 程序  。  
+ 如果在命令提示符处指定 -target:winmdobj 选项，则在指定下一个 -out 或 [-target:module](./target-module-compiler-option.md) 选项之前，会使用所有文件来创建 Windows 程序。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>在 Visual Studio IDE 中为 Windows 应用商店应用程序设置此编译器选项  
   

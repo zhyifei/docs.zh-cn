@@ -86,7 +86,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
 ## <a name="c-language-specification"></a>C# 语言规范  
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/classes.md#static-classes)中的[静态类](~/_csharplang/spec/classes.md#static-and-instance-members)和[静态和实例成员](/dotnet/csharp/language-reference/language-specification/introduction)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[静态类](~/_csharplang/spec/classes.md#static-classes)和[静态和实例成员](~/_csharplang/spec/classes.md#static-and-instance-members)。 该语言规范是 C# 语法和用法的权威资料。
   
 ## <a name="see-also"></a>另请参阅
 

@@ -33,7 +33,7 @@ ms.locfileid: "70970263"
 ## <a name="remarks"></a>备注  
  使用此选项时，编译器在程序集清单中插入指定字段的公钥，然后使用私钥对最终的程序集进行签名。 若要生成密钥文件，请在命令行键入 sn-k `file`。  
   
- 如果使用 -target:module 进行编译，密钥文件的名称将保存在模块中，并在使用 [-addmodule](./addmodule-compiler-option.md) 编译程序集时包含到创建的程序集中  。  
+ 如果使用 -target:module 进行编译，密钥文件的名称将保存在模块中，并在使用 [-addmodule](./addmodule-compiler-option.md) 编译程序集时包含到创建的程序集中。  
   
  也可以使用 [-keycontainer](./keycontainer-compiler-option.md) 将加密信息传递给编译器。 如果需要部分签名的程序集，请使用 [-delaysign](./delaysign-compiler-option.md)。  
   

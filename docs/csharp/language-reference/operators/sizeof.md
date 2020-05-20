@@ -46,7 +46,7 @@ ms.locfileid: "78847282"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator)的 [sizeof 运算符](~/_csharplang/spec/introduction.md)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的 [sizeof 运算符](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator)部分。
 
 ## <a name="see-also"></a>另请参阅
 

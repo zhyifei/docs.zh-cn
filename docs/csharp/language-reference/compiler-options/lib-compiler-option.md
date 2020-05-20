@@ -16,7 +16,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606819"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib（C# 编译器选项）
--lib 选项指定通过 [-reference（C# 编译器选项）](./reference-compiler-option.md)选项引用的程序集的位置  。  
+-lib 选项指定通过 [-reference（C# 编译器选项）](./reference-compiler-option.md)选项引用的程序集的位置。  
   
 ## <a name="syntax"></a>语法  
   

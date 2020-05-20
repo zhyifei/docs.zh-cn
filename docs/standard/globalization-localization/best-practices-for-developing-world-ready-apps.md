@@ -49,7 +49,7 @@ ms.locfileid: "73141295"
 
 9. 在国际操作系统版本上使用国际数据来测试应用程序功能。
 
-10. 如果安全决策基于字符串比较或大小写更改操作的结果，请使用不区分区域性的字符串操作。 这种做法可确保结果不会受 `CultureInfo.CurrentCulture` 值的影响。 有关展示了区分区域性字符串比较如何产生不一致结果的示例，请参阅[字符串使用最佳做法](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture)的[“使用当前区域性的字符串比较”](../../../docs/standard/base-types/best-practices-strings.md)部分。
+10. 如果安全决策基于字符串比较或大小写更改操作的结果，请使用不区分区域性的字符串操作。 这种做法可确保结果不会受 `CultureInfo.CurrentCulture` 值的影响。 有关展示了区分区域性字符串比较如何产生不一致结果的示例，请参阅[字符串使用最佳做法](../../../docs/standard/base-types/best-practices-strings.md)的[“使用当前区域性的字符串比较”](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture)部分。
 
 ## <a name="localization-best-practices"></a>本地化最佳做法
 

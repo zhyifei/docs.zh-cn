@@ -24,7 +24,7 @@ ms.locfileid: "79397763"
 
 ## <a name="binary-classification"></a>二元分类
 
-一个[分类](#classification)事例，其中[标签](#label)仅为两个类中的一个。 有关详细信息，请参阅[机器学习任务](tasks.md#binary-classification)主题的[二元分类](tasks.md)部分。
+一个[分类](#classification)事例，其中[标签](#label)仅为两个类中的一个。 有关详细信息，请参阅[机器学习任务](tasks.md)主题的[二元分类](tasks.md#binary-classification)部分。
 
 ## <a name="calibration"></a>校准
 
@@ -104,7 +104,7 @@ ML.NET 中实现 <xref:Microsoft.ML.IEstimator%601> 接口的类。
 
 ## <a name="multiclass-classification"></a>多类分类
 
-一个[分类](#classification)事例，其中[标签](#label)是三个或更多类中的一个。 有关详细信息，请参阅[机器学习任务](tasks.md#multiclass-classification)主题的[多类分类](tasks.md)部分。
+一个[分类](#classification)事例，其中[标签](#label)是三个或更多类中的一个。 有关详细信息，请参阅[机器学习任务](tasks.md)主题的[多类分类](tasks.md#multiclass-classification)部分。
 
 ## <a name="n-gram"></a>N 元语法
 
@@ -139,7 +139,7 @@ ML.NET 中实现 <xref:Microsoft.ML.IEstimator%601> 接口的类。
 
 ## <a name="regression"></a>回归测试
 
-[监管式机器学习](#supervised-machine-learning)任务，其中输出是一个实际值，例如，双精度值。 示例包括预测股票价格。 有关详细信息，请参阅[机器学习任务](tasks.md#regression)主题的[回归](tasks.md)部分。
+[监管式机器学习](#supervised-machine-learning)任务，其中输出是一个实际值，例如，双精度值。 示例包括预测股票价格。 有关详细信息，请参阅[机器学习任务](tasks.md)主题的[回归](tasks.md#regression)部分。
 
 ## <a name="relative-absolute-error"></a>相对绝对误差
 

@@ -22,7 +22,7 @@ ms.locfileid: "78156629"
 
    ![选定发布版本的 Visual Studio 工具栏](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
-1. 右键单击“HelloWorld”  项目（而不是 HelloWorld 解决方案），然后选择菜单中的“发布”  。 （还可以选择“生成”  主菜单中的“发布 HelloWorld”  。）
+1. 右键单击“HelloWorld”  项目（而不是 HelloWorld 解决方案），然后选择菜单中的“发布”  。 （还可以选择“生成”主菜单中的“发布 HelloWorld”。）
 
    ![Visual Studio 发布上下文菜单](media/publishing-with-visual-studio/publish-context-menu.png)
 

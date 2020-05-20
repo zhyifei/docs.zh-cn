@@ -76,7 +76,7 @@ doc2 did not validate
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例按照[示例 XSD 文件：客户和订单](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)中的架构验证[示例 XML 文件：客户和订单 (LINQ to XML)](./sample-xsd-file-customers-and-orders1.md) 中的 XML 文档是否有效。 然后修改源 XML 文档。 它更改第一个客户的 `CustomerID` 属性。 更改后，订单将指向不存在的客户，因此该 XML 文档不再有效。  
+ 下面的示例按照[示例 XSD 文件：客户和订单](./sample-xsd-file-customers-and-orders1.md)中的架构验证[示例 XML 文件：客户和订单 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) 中的 XML 文档是否有效。 然后修改源 XML 文档。 它更改第一个客户的 `CustomerID` 属性。 更改后，订单将指向不存在的客户，因此该 XML 文档不再有效。  
   
  本示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)。  
   

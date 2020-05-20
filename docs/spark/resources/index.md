@@ -15,7 +15,7 @@ ms.locfileid: "69620039"
 
 * [.NET for Apache Spark C# 和 F# 示例](https://github.com/dotnet/spark#samples)提供的示例涵盖多个分析案例，包括 Dataframe 和 SparkSQL、结构化流式处理以及 TPC-H 查询。
 
-* 使用 [Stack Overflow](https://stackoverflow.com/questions/tagged/spark-dotnet) 上的 spark-dotnet 标记  连接开发者社区。
+* 使用 [Stack Overflow](https://stackoverflow.com/questions/tagged/spark-dotnet) 上的 spark-dotnet 标记连接开发者社区。
 
 * 希望做出贡献？ 请访问 [GitHub 存储库](https://github.com/dotnet/spark)，了解如何通过数据源进行生成。
 

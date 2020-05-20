@@ -31,7 +31,7 @@ ms.locfileid: "69606377"
   
  除非使用 [-out](./out-compiler-option.md) 选项进行指定，否则输出文件名采用包含 [Main](../../programming-guide/main-and-command-args/index.md) 方法的输入文件的名称。  
   
- 在命令行中进行指定时，直到下一个 -out 或 [-target](./target-compiler-option.md) 选项为止的所有文件均用于创建 Windows 程序  。  
+ 在命令行中进行指定时，直到下一个 -out 或 [-target](./target-compiler-option.md) 选项为止的所有文件均用于创建 Windows 程序。  
   
  编译为 .exe 文件的源代码文件中只需要一个 **Main** 方法。 如果代码具有多个附带 Main 方法的类，则可使用 [-main](./main-compiler-option.md) 选项指定包含 Main 方法的类   。  
   

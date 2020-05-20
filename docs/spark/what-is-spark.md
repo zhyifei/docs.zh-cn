@@ -33,7 +33,7 @@ ms.locfileid: "73458179"
 
 ### <a name="real-time-data-stream-processing"></a>实时数据流处理
 
-流数据（或实时数据）是移动数据。 IoT 设备、网络日志和点击流中的遥测都是流数据示例。 可以处理实时数据以提供有用的信息，例如地理空间分析、远程监视和异常情况检测。 就像关系数据一样，可以在将数据移动到输出接收器之前筛选、聚合和准备流数据。 Apache Spark 通过 [Spark Streaming](/azure/architecture/data-guide/big-data/real-time-processing) 支持[实时数据流处理](https://spark.apache.org/streaming/)。
+流数据（或实时数据）是移动数据。 IoT 设备、网络日志和点击流中的遥测都是流数据示例。 可以处理实时数据以提供有用的信息，例如地理空间分析、远程监视和异常情况检测。 就像关系数据一样，可以在将数据移动到输出接收器之前筛选、聚合和准备流数据。 Apache Spark 通过 [Spark Streaming](https://spark.apache.org/streaming/) 支持[实时数据流处理](/azure/architecture/data-guide/big-data/real-time-processing)。
 
 ### <a name="batch-processing"></a>批处理
 

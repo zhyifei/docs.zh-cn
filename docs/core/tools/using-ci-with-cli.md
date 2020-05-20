@@ -159,7 +159,7 @@ install:
 
    ![添加生成步骤](./media/using-ci-with-cli/add-build-step.png)
 
-1. 此时，系统会显示“任务目录”  。 此目录包含在生成中使用的任务。 由于已有脚本，因此选择“PowerShell:运行 PowerShell 脚本”  旁边的“添加”  按钮。
+1. 此时，系统会显示“任务目录”  。 此目录包含在生成中使用的任务。 由于已有脚本，因此选择“PowerShell:运行 PowerShell 脚本”旁边的“添加”按钮。
 
    ![添加 PowerShell 脚本步骤](./media/using-ci-with-cli/add-powershell-script.png)
 
