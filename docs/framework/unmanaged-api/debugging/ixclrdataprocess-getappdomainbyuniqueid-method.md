@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::GetAppDomainByUniqueId 方法
+title: IXCLRDataProcess：： GetAppDomainByUniqueId 方法
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::GetAppDomainByUniqueId Method
@@ -15,20 +15,20 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8b468d40ef8eb523ba8881627fae15cf9b7c7b80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb02ffed09cbcc31e653bfd3165050c247908c5d
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775253"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420774"
 ---
-# <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a><span data-ttu-id="f8746-102">IXCLRDataProcess::GetAppDomainByUniqueId 方法</span><span class="sxs-lookup"><span data-stu-id="f8746-102">IXCLRDataProcess::GetAppDomainByUniqueId Method</span></span>
+# <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a><span data-ttu-id="8860d-102">IXCLRDataProcess：： GetAppDomainByUniqueId 方法</span><span class="sxs-lookup"><span data-stu-id="8860d-102">IXCLRDataProcess::GetAppDomainByUniqueId Method</span></span>
 
-<span data-ttu-id="f8746-103">获取`AppDomain`基于它的唯一标识符的进程中。</span><span class="sxs-lookup"><span data-stu-id="f8746-103">Gets an `AppDomain` in a process based on its unique identifier.</span></span>
+<span data-ttu-id="8860d-103">`AppDomain`基于其唯一标识符，在进程中获取。</span><span class="sxs-lookup"><span data-stu-id="8860d-103">Gets an `AppDomain` in a process based on its unique identifier.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="f8746-104">语法</span><span class="sxs-lookup"><span data-stu-id="f8746-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="8860d-104">语法</span><span class="sxs-lookup"><span data-stu-id="8860d-104">Syntax</span></span>
 
 ```cpp
 HRESULT GetAppDomainByUniqueID(
@@ -37,24 +37,24 @@ HRESULT GetAppDomainByUniqueID(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="f8746-105">参数</span><span class="sxs-lookup"><span data-stu-id="f8746-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="8860d-105">参数</span><span class="sxs-lookup"><span data-stu-id="8860d-105">Parameters</span></span>
 
 `id`\
-<span data-ttu-id="f8746-106">[in]AppDomain 的唯一标识符</span><span class="sxs-lookup"><span data-stu-id="f8746-106">[in] The unique identifier of the AppDomain</span></span>
+<span data-ttu-id="8860d-106">中AppDomain 的唯一标识符</span><span class="sxs-lookup"><span data-stu-id="8860d-106">[in] The unique identifier of the AppDomain</span></span>
 
 `appDomain`\
-<span data-ttu-id="f8746-107">[out]AppDomain</span><span class="sxs-lookup"><span data-stu-id="f8746-107">[out] The AppDomain</span></span>
+<span data-ttu-id="8860d-107">弄AppDomain</span><span class="sxs-lookup"><span data-stu-id="8860d-107">[out] The AppDomain</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="f8746-108">备注</span><span class="sxs-lookup"><span data-stu-id="f8746-108">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="8860d-108">备注</span><span class="sxs-lookup"><span data-stu-id="8860d-108">Remarks</span></span>
 
-<span data-ttu-id="f8746-109">提供的方法属于`IXCLRDataProcess`接口，并对应于虚拟方法表的 20 槽。</span><span class="sxs-lookup"><span data-stu-id="f8746-109">The provided method is part of the `IXCLRDataProcess` interface and corresponds to the 20th slot of the virtual method table.</span></span> <span data-ttu-id="f8746-110">`IXCLRDataAppDomain*`返回用于与其他 Api 的交互。</span><span class="sxs-lookup"><span data-stu-id="f8746-110">The `IXCLRDataAppDomain*` returned is used for interaction with other APIs.</span></span>
+<span data-ttu-id="8860d-109">提供的方法是接口的一部分 `IXCLRDataProcess` ，并且对应于虚拟方法表的第20个槽。</span><span class="sxs-lookup"><span data-stu-id="8860d-109">The provided method is part of the `IXCLRDataProcess` interface and corresponds to the 20th slot of the virtual method table.</span></span> <span data-ttu-id="8860d-110">`IXCLRDataAppDomain*`返回的用于与其他 api 交互。</span><span class="sxs-lookup"><span data-stu-id="8860d-110">The `IXCLRDataAppDomain*` returned is used for interaction with other APIs.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="f8746-111">要求</span><span class="sxs-lookup"><span data-stu-id="f8746-111">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="8860d-111">要求</span><span class="sxs-lookup"><span data-stu-id="8860d-111">Requirements</span></span>
 
-<span data-ttu-id="f8746-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f8746-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
-<span data-ttu-id="f8746-113">**标头：** 无**库：** 无 **.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="f8746-113">**Header:** None **Library:** None **.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>
+<span data-ttu-id="8860d-112">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8860d-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>
+<span data-ttu-id="8860d-113">**标头：** 无**库：** 无 **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="8860d-113">**Header:** None **Library:** None **.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f8746-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="f8746-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8860d-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8860d-114">See also</span></span>
 
-- [<span data-ttu-id="f8746-115">调试</span><span class="sxs-lookup"><span data-stu-id="f8746-115">Debugging</span></span>](index.md)
-- [<span data-ttu-id="f8746-116">IXCLRDataProcess 接口</span><span class="sxs-lookup"><span data-stu-id="f8746-116">IXCLRDataProcess Interface</span></span>](ixclrdataprocess-interface.md)
+- [<span data-ttu-id="8860d-115">调试</span><span class="sxs-lookup"><span data-stu-id="8860d-115">Debugging</span></span>](index.md)
+- [<span data-ttu-id="8860d-116">IXCLRDataProcess 接口</span><span class="sxs-lookup"><span data-stu-id="8860d-116">IXCLRDataProcess Interface</span></span>](ixclrdataprocess-interface.md)
