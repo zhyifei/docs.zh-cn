@@ -55,7 +55,7 @@ ms.locfileid: "75712359"
   
      [!code-csharp[csProgGuideDelegates#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#17)]  
   
-     这将创建一个新的与[静态](../../language-reference/keywords/static.md)方法 `Test.PrintTitle` 关联的委托对象。 同样，如下面的示例所示，传递对象 `AddBookToTotal` 中的非静态方法 `totaller`：  
+     这将创建一个新的与[静态](../../language-reference/keywords/static.md)方法 `Test.PrintTitle` 关联的委托对象。 同样，如下面的示例所示，传递对象 `totaller` 中的非静态方法 `AddBookToTotal`：  
   
      [!code-csharp[csProgGuideDelegates#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#18)]  
   

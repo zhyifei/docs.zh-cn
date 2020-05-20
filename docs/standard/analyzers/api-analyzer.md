@@ -48,7 +48,7 @@ API 分析器使用 API 专用错误代码，这些代码以 DE（全称是“De
    4. 搜索 Microsoft.DotNet.Analyzers.Compatibility  。
    5. 选择列表中的包。
    6. 选择“安装”按钮  。
-   7. 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。
+   7. 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。
 
 ### <a name="use-the-api-analyzer"></a>使用 API 分析器
 
@@ -62,18 +62,18 @@ API 分析器使用 API 专用错误代码，这些代码以 DE（全称是“De
 
 单击 ID 后，便会转到详细信息网页，其中说明了 API 遭弃用的原因，以及有关可用替换 API 的建议。
 
-可以禁止显示任何警告，具体方法是右键单击突出显示的成员，并选择“禁止 **诊断 ID>”\<** 。 禁止显示警告的方法有两种：
+可以禁止显示任何警告，具体方法是右键单击突出显示的成员，并选择“禁止 \<诊断 ID>”。 禁止显示警告的方法有两种：
 
 - [本地（在源中）](#suppress-warnings-locally)
 - [全局（在禁止文件中）](#suppress-warnings-globally)- 推荐方法
 
 ### <a name="suppress-warnings-locally"></a>在本地禁止显示警告
 
-若要在本地禁止显示警告，请右键单击要对其禁止显示警告的成员，再依次选择“快速操作和重构”   > “禁止诊断 ID **诊断 ID>  \<**  > “在源中”  。 此时，[#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告预处理器指令会添加到源代码中定义的范围内：![“用 #pragma 警告禁用指令框定的代码屏幕截图”](media/api-analyzer/suppress-in-source.jpg)
+若要在本地禁止显示警告，请右键单击要对其禁止显示警告的成员，再依次选择“快速操作和重构” > “禁止诊断 ID \<诊断 ID> > “在源中”。 此时，[#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告预处理器指令会添加到源代码中定义的范围内：![“用 #pragma 警告禁用指令框定的代码屏幕截图”](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppress-warnings-globally"></a>在全局禁止显示警告
 
-若要在全局禁止显示警告，请右键单击要对其禁止显示警告的成员，再依次选择“快速操作和重构”   > “禁止诊断 ID **诊断 ID>  \<**  > “在禁止文件中”  。
+若要在全局禁止显示警告，请右键单击要对其禁止显示警告的成员，再依次选择“快速操作和重构” > “禁止诊断 ID \<诊断 ID> > “在禁止文件中”。
 
 ![“显示绿色波浪线且左侧有灯泡的 WebClient API 屏幕截图”](media/api-analyzer/suppress-in-sup-file.jpg)
 

@@ -11,7 +11,7 @@ ms.locfileid: "73970024"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>如何使用 Task.WhenAll 扩展异步演练 (C#)
 
-可以使用 [ 方法来改进](./walkthrough-accessing-the-web-by-using-async-and-await.md)演练：使用 Async 和 Await 访问 Web (C#)<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 中的异步解决方案性能。 此方法以异步方式等待多个异步操作（它们表示为任务的集合）。
+可以使用 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法来改进[演练：使用 Async 和 Await 访问 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) 中的异步解决方案性能。 此方法以异步方式等待多个异步操作（它们表示为任务的集合）。
 
 你可能已在演练中注意到网站以不同速率进行下载。 有时一个网站非常慢，这会延迟所有其余下载。 运行在演练中生成的异步解决方案时，如果不想等待，则可以方便地结束程序，但更好的选项是同时启动所有下载，并让较快的下载继续进行而不等待延迟的下载。
 
@@ -24,13 +24,13 @@ ms.locfileid: "73970024"
 
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>向你的 GetURLContentsAsync 解决方案中添加 Task.WhenAll
 
-1. 向`ProcessURLAsync`演练：使用 Async 和 Await 访问 Web (C#)[ 中开发的第一个应用程序添加 ](./walkthrough-accessing-the-web-by-using-async-and-await.md) 方法。
+1. 向[演练：使用 Async 和 Await 访问 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) 中开发的第一个应用程序添加 `ProcessURLAsync` 方法。
 
     - 如果是从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下载的代码，请打开 AsyncWalkthrough 项目，然后向 MainWindow.xaml.cs 文件添加 `ProcessURLAsync`。
 
-    - 如果是通过完成演练开发的代码，请向包含 `ProcessURLAsync` 方法的应用程序添加 `GetURLContentsAsync`。 此应用程序的 MainWindow.xaml.cs 文件是“完成演练中的代码示例”部分中的第一个示例。
+    - 如果是通过完成演练开发的代码，请向包含 `GetURLContentsAsync` 方法的应用程序添加 `ProcessURLAsync`。 此应用程序的 MainWindow.xaml.cs 文件是“完成演练中的代码示例”部分中的第一个示例。
 
-    `ProcessURLAsync` 方法整合了原始演练的 `foreach` 中的 `SumPageSizesAsync` 循环体中的操作。 该方法以异步方式将指定网站的内容作为字节数组进行下载，然后显示并返回字节数组的长度。
+    `ProcessURLAsync` 方法整合了原始演练的 `SumPageSizesAsync` 中的 `foreach` 循环体中的操作。 该方法以异步方式将指定网站的内容作为字节数组进行下载，然后显示并返回字节数组的长度。
 
     ```csharp
     private async Task<int> ProcessURLAsync(string url)
@@ -41,7 +41,7 @@ ms.locfileid: "73970024"
     }
     ```
 
-2. 注释禁止或删除 `foreach` 中的 `SumPageSizesAsync` 循环，如以下代码所示。
+2. 注释禁止或删除 `SumPageSizesAsync` 中的 `foreach` 循环，如以下代码所示。
 
     ```csharp
     //var total = 0;
@@ -64,7 +64,7 @@ ms.locfileid: "73970024"
 
 3. 创建任务集合。 以下代码定义一个[查询](../linq/index.md)，由 <xref:System.Linq.Enumerable.ToArray%2A> 方法执行该查询时，它会创建下载每个网站内容的任务集合。 计算该查询时，会启动任务。
 
-    在 `SumPageSizesAsync` 的声明后，将以下代码添加到方法 `urlList` 中。
+    在 `urlList` 的声明后，将以下代码添加到方法 `SumPageSizesAsync` 中。
 
     ```csharp
     // Create a query.
@@ -96,13 +96,13 @@ ms.locfileid: "73970024"
 
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>向 HttpClient.GetByteArrayAsync 解决方案中添加 Task.WhenAll
 
-1. 向`ProcessURLAsync`演练：使用 Async 和 Await 访问 Web (C#)[ 中开发的第二个应用程序添加以下版本的 ](./walkthrough-accessing-the-web-by-using-async-and-await.md)。
+1. 向[演练：使用 Async 和 Await 访问 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) 中开发的第二个应用程序添加以下版本的 `ProcessURLAsync`。
 
     - 如果是从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下载的代码，请打开 AsyncWalkthrough_HttpClient 项目，然后向 MainWindow.xaml.cs 文件添加 `ProcessURLAsync`。
 
-    - 如果是通过完成演练开发的代码，请向使用 `ProcessURLAsync` 方法的应用程序添加 `HttpClient.GetByteArrayAsync`。 此应用程序的 MainWindow.xaml.cs 文件是“完成演练中的代码示例”部分中的第二个示例。
+    - 如果是通过完成演练开发的代码，请向使用 `HttpClient.GetByteArrayAsync` 方法的应用程序添加 `ProcessURLAsync`。 此应用程序的 MainWindow.xaml.cs 文件是“完成演练中的代码示例”部分中的第二个示例。
 
-    `ProcessURLAsync` 方法整合了原始演练的 `foreach` 中的 `SumPageSizesAsync` 循环体中的操作。 该方法以异步方式将指定网站的内容作为字节数组进行下载，然后显示并返回字节数组的长度。
+    `ProcessURLAsync` 方法整合了原始演练的 `SumPageSizesAsync` 中的 `foreach` 循环体中的操作。 该方法以异步方式将指定网站的内容作为字节数组进行下载，然后显示并返回字节数组的长度。
 
     与上面过程中的 `ProcessURLAsync` 方法的唯一区别是使用 <xref:System.Net.Http.HttpClient> 实例 `client`。
 
@@ -115,7 +115,7 @@ ms.locfileid: "73970024"
     }
     ```
 
-2. 注释禁止或删除 `For Each` 中的 `foreach` 或 `SumPageSizesAsync` 循环，如以下代码所示。
+2. 注释禁止或删除 `SumPageSizesAsync` 中的 `For Each` 或 `foreach` 循环，如以下代码所示。
 
     ```csharp
     //var total = 0;
@@ -139,7 +139,7 @@ ms.locfileid: "73970024"
 
 3. 定义一个[查询](../linq/index.md)，由 <xref:System.Linq.Enumerable.ToArray%2A> 方法执行该查询时，它会创建下载每个网站内容的任务集合。 计算该查询时，会启动任务。
 
-    在 `SumPageSizesAsync` 和 `client` 的声明后，将以下代码添加到方法 `urlList` 中。
+    在 `client` 和 `urlList` 的声明后，将以下代码添加到方法 `SumPageSizesAsync` 中。
 
     ```csharp
     // Create a query.

@@ -15,10 +15,10 @@ ms.locfileid: "73120922"
 # <a name="induced-collections"></a>被动回收
 在大多数情况下，垃圾回收器可以确定执行回收的最佳时间，应让其独立运行。 在某些不常见的情况下，强制回收可以提高应用程序的性能。 在这种情况下，可以使用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法强制执行垃圾回收，从而诱导垃圾回收。  
   
- 如果应用代码中特定点使用的内存量大量减少，请使用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法。 例如，如果应用使用包含多个控件的复杂对话框，那么在对话框关闭时调用 <xref:System.GC.Collect%2A> 可以立即回收对话框占用的内存，从而提升性能。 请确保应用程序不会过于频繁地引发垃圾回收，否则当垃圾回收器无效率地尝试回收对象时，可能会使性能降低。 可以向 <xref:System.GCCollectionMode.Optimized?displayProperty=nameWithType> 方法提供 <xref:System.GC.Collect%2A> 枚举值，以便仅在回收能够提高效率时才进行回收，如下一部分所述。  
+ 如果应用代码中特定点使用的内存量大量减少，请使用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法。 例如，如果应用使用包含多个控件的复杂对话框，那么在对话框关闭时调用 <xref:System.GC.Collect%2A> 可以立即回收对话框占用的内存，从而提升性能。 请确保应用程序不会过于频繁地引发垃圾回收，否则当垃圾回收器无效率地尝试回收对象时，可能会使性能降低。 可以向 <xref:System.GC.Collect%2A> 方法提供 <xref:System.GCCollectionMode.Optimized?displayProperty=nameWithType> 枚举值，以便仅在回收能够提高效率时才进行回收，如下一部分所述。  
   
 ## <a name="gc-collection-mode"></a>GC 回收模式  
- 可以使用包含 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 值的 <xref:System.GCCollectionMode> 方法重载之一，指定强制回收的行为，如下所示。  
+ 可以使用包含 <xref:System.GCCollectionMode> 值的 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法重载之一，指定强制回收的行为，如下所示。  
   
 |`GCCollectionMode` 值|说明|  
 |------------------------------|-----------------|  

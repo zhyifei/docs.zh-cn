@@ -44,7 +44,7 @@ ms.locfileid: "79398069"
 - 二进制 [`<<`（向左移位）](#left-shift-operator-)和 [`>>`（向右移位）](#right-shift-operator-)移位运算符
 - 二进制 [`&`（逻辑 AND）](#logical-and-operator-)、[`|`（逻辑 OR）](#logical-or-operator-)和 [`^`（逻辑异或）](#logical-exclusive-or-operator-)运算符
 
-这些运算符是针对 `int`、`uint`、`long` 和 `ulong` 类型定义的。 如果两个操作数都是其他整数类型（`sbyte`、`byte`、`short`、`ushort` 或 `char`），它们的值将转换为 `int` 类型，这也是一个运算的结果类型。 如果操作数是不同的整数类型，它们的值将转换为最接近的包含整数类型。 有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#numeric-promotions)的[数值提升](~/_csharplang/spec/introduction.md)部分。
+这些运算符是针对 `int`、`uint`、`long` 和 `ulong` 类型定义的。 如果两个操作数都是其他整数类型（`sbyte`、`byte`、`short`、`ushort` 或 `char`），它们的值将转换为 `int` 类型，这也是一个运算的结果类型。 如果操作数是不同的整数类型，它们的值将转换为最接近的包含整数类型。 有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[数值提升](~/_csharplang/spec/expressions.md#numeric-promotions)部分。
 
 `&`、`|` 和 `^` 运算符也是为 `bool` 类型的操作数定义的。 有关详细信息，请参阅[布尔逻辑运算符](boolean-logical-operators.md)。
 
@@ -136,7 +136,7 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](snippets/BitwiseAndShiftOperators.cs#CompoundAssignment)]
 
-由于[数值提升](~/_csharplang/spec/expressions.md#numeric-promotions)，`op` 运算的结果可能不会隐式转换为 `T` 的 `x` 类型。 在这种情况下，如果 `op` 是预定义的运算符并且运算的结果可以显式转换为 `T` 的类型 `x`，则形式为 `x op= y` 的复合赋值表达式等效于 `x = (T)(x op y)`，但 `x` 仅计算一次。 以下示例演示了该行为：
+由于[数值提升](~/_csharplang/spec/expressions.md#numeric-promotions)，`op` 运算的结果可能不会隐式转换为 `x` 的 `T` 类型。 在这种情况下，如果 `op` 是预定义的运算符并且运算的结果可以显式转换为 `x` 的类型 `T`，则形式为 `x op= y` 的复合赋值表达式等效于 `x = (T)(x op y)`，但 `x` 仅计算一次。 以下示例演示了该行为：
 
 [!code-csharp-interactive[compound assignment with cast](snippets/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
 
@@ -175,9 +175,9 @@ x = x op y
 
 ## <a name="enumeration-logical-operators"></a>枚举逻辑运算符
 
-所有`~`枚举`&`类型还支持 `|`、`^`、[ 和 ](../builtin-types/enum.md) 运算符。 对于相同枚举类型的操作数，对底层整数类型的相应值执行逻辑运算。 例如，对于具有底层类型 `x` 的枚举类型 `y` 的任何 `T` 和 `U`，`x & y` 表达式生成与 `(T)((U)x & (U)y)` 表达式相同的结果。
+所有[枚举](../builtin-types/enum.md)类型还支持 `~`、`&`、`|` 和 `^` 运算符。 对于相同枚举类型的操作数，对底层整数类型的相应值执行逻辑运算。 例如，对于具有底层类型 `U` 的枚举类型 `T` 的任何 `x` 和 `y`，`x & y` 表达式生成与 `(T)((U)x & (U)y)` 表达式相同的结果。
 
-通常使用具有枚举类型的位逻辑运算符，该枚举类型使用 [Flags](xref:System.FlagsAttribute) 特性定义。 有关详细信息，请参阅[枚举类型](../builtin-types/enum.md#enumeration-types-as-bit-flags)一文的[作为位标记的枚举类型](../builtin-types/enum.md)部分。
+通常使用具有枚举类型的位逻辑运算符，该枚举类型使用 [Flags](xref:System.FlagsAttribute) 特性定义。 有关详细信息，请参阅[枚举类型](../builtin-types/enum.md)一文的[作为位标记的枚举类型](../builtin-types/enum.md#enumeration-types-as-bit-flags)部分。
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 

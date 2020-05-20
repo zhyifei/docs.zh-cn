@@ -20,7 +20,7 @@ ms.locfileid: "74349205"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>如何：在 Visual Basic 中创建注册表项并设置其值
 
-`CreateSubKey` 对象的 `My.Computer.Registry` 方法可用于创建注册表项。
+`My.Computer.Registry` 对象的 `CreateSubKey` 方法可用于创建注册表项。
 
 ## <a name="procedure"></a>过程
 

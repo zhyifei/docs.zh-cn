@@ -54,13 +54,13 @@ class Program
 
 本示例演示如何将委托与具有参数的方法一起使用，这些参数的类型是委托签名参数类型的基类型。 通过逆变可以使用一个事件处理程序而不是多个单独的处理程序。 下面的示例使用两个委托：
 
-- 定义 <xref:System.Windows.Forms.KeyEventHandler>Button.KeyDown[ 事件签名的 ](xref:System.Windows.Forms.Control.KeyDown) 委托。 其签名为：
+- 定义 [Button.KeyDown](xref:System.Windows.Forms.Control.KeyDown) 事件签名的 <xref:System.Windows.Forms.KeyEventHandler> 委托。 其签名为：
 
    ```csharp
    public delegate void KeyEventHandler(object sender, KeyEventArgs e)
    ```
 
-- 定义 <xref:System.Windows.Forms.MouseEventHandler>Button.MouseClick[ 事件签名的 ](xref:System.Windows.Forms.Control.MouseDown) 委托。 其签名为：
+- 定义 [Button.MouseClick](xref:System.Windows.Forms.Control.MouseDown) 事件签名的 <xref:System.Windows.Forms.MouseEventHandler> 委托。 其签名为：
 
    ```csharp
    public delegate void MouseEventHandler(object sender, MouseEventArgs e)

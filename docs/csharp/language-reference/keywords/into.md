@@ -20,13 +20,13 @@ ms.locfileid: "75713629"
 
 ## <a name="example"></a>示例
 
-下面的示例演示使用 `into` 关键字来启用具有推断类型 `fruitGroup` 的临时标识符 `IGrouping`。 通过使用该标识符，可对每个组调用 <xref:System.Linq.Enumerable.Count%2A> 方法，并且仅选择那些包含两个或更多个单词的组。
+下面的示例演示使用 `into` 关键字来启用具有推断类型 `IGrouping` 的临时标识符 `fruitGroup`。 通过使用该标识符，可对每个组调用 <xref:System.Linq.Enumerable.Count%2A> 方法，并且仅选择那些包含两个或更多个单词的组。
 
 [!code-csharp[cscsrefQueryKeywords#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Into.cs#18)]
 
-仅当希望对每个组执行附加查询操作时，才需在 `into` 子句中使用 `group`。 有关详细信息，请参阅 [group 子句](group-clause.md)。
+仅当希望对每个组执行附加查询操作时，才需在 `group` 子句中使用 `into`。 有关详细信息，请参阅 [group 子句](group-clause.md)。
 
-有关在 `into` 子句中使用 `join` 的示例，请参见 [join 子句](join-clause.md)。
+有关在 `join` 子句中使用 `into` 的示例，请参见 [join 子句](join-clause.md)。
 
 ## <a name="see-also"></a>另请参阅
 

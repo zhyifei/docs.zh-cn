@@ -10,7 +10,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "79168929"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>如何使用 LINQ 查询 ArrayList (C#)
-如果使用 LINQ 来查询非泛型 <xref:System.Collections.IEnumerable> 集合（例如 <xref:System.Collections.ArrayList>），必须显式声明范围变量的类型，以反映集合中对象的特定类型。 例如，如果有 <xref:System.Collections.ArrayList> 对象的 `Student`，那么 [from 子句](../../../language-reference/keywords/from-clause.md)应如下所示：  
+如果使用 LINQ 来查询非泛型 <xref:System.Collections.IEnumerable> 集合（例如 <xref:System.Collections.ArrayList>），必须显式声明范围变量的类型，以反映集合中对象的特定类型。 例如，如果有 `Student` 对象的 <xref:System.Collections.ArrayList>，那么 [from 子句](../../../language-reference/keywords/from-clause.md)应如下所示：  
   
 ```csharp
 var query = from Student s in arrList  

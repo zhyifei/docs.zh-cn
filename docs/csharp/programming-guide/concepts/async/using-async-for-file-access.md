@@ -41,7 +41,7 @@ using System.Threading.Tasks;
 ## <a name="use-of-the-filestream-class"></a>使用 FileStream 类  
  本主题中的示例使用 <xref:System.IO.FileStream> 类，该类包含可导致在操作系统级别出现异步 I/O 的选项。 使用此选项可避免在许多情况下阻止 ThreadPool 线程。 若要启用此选项，可在构造函数调用中指定 `useAsync=true` 或 `options=FileOptions.Asynchronous` 参数。  
   
- 如果通过指定文件路径直接打开 <xref:System.IO.StreamReader> 和 <xref:System.IO.StreamWriter>，则无法将此选项与这二者配合使用。 但是，如果为二者提供已由 <xref:System.IO.Stream> 类打开的 <xref:System.IO.FileStream>，则可以使用此选项。 请注意，即使 ThreadPool 线程受到阻止，UI 应用中的异步调用仍然更快，因为 UI 线程在等待期间不会受到阻止。  
+ 如果通过指定文件路径直接打开 <xref:System.IO.StreamReader> 和 <xref:System.IO.StreamWriter>，则无法将此选项与这二者配合使用。 但是，如果为二者提供已由 <xref:System.IO.FileStream> 类打开的 <xref:System.IO.Stream>，则可以使用此选项。 请注意，即使 ThreadPool 线程受到阻止，UI 应用中的异步调用仍然更快，因为 UI 线程在等待期间不会受到阻止。  
   
 ## <a name="writing-text"></a>编写文本  
  下面的示例将文本写入文件。 在每个 await 语句中，该方法会立即退出。 文件 I/O 完成后，该方法将在 await 语句后面的语句中继续。 请注意，async 修饰符在使用 await 语句的方法的定义中。  
@@ -127,7 +127,7 @@ private async Task<string> ReadTextAsync(string filePath)
 ## <a name="parallel-asynchronous-io"></a>并行异步 I/O  
  下面的示例通过编写 10 个文本文件来演示并行处理。 对于每个文件，<xref:System.IO.Stream.WriteAsync%2A> 方法将返回一个任务，此任务随后将添加到任务列表中。 `await Task.WhenAll(tasks);` 语句将退出该方法，并在所有任务的文件处理完成时在此方法中继续。  
   
- 该示例将在任务完成后关闭 <xref:System.IO.FileStream> 块中的所有 `finally` 实例。 如果每个 `FileStream` 均已在 `using` 语句中创建，则可能在任务完成前释放 `FileStream`。  
+ 该示例将在任务完成后关闭 `finally` 块中的所有 <xref:System.IO.FileStream> 实例。 如果每个 `FileStream` 均已在 `using` 语句中创建，则可能在任务完成前释放 `FileStream`。  
   
  请注意，性能提升几乎完全来自并行处理而不是异步处理。 异步的优点在于它不会占用多个线程，也不会占用用户界面线程。  
   

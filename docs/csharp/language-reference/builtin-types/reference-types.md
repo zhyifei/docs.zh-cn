@@ -33,7 +33,7 @@ C# 具有多个内置引用类型。 这些类型包含的关键字或运算符�
 
 ## <a name="the-object-type"></a>对象类型
 
-`object` 类型是 <xref:System.Object?displayProperty=nameWithType> 在 .NET 中的别名。 在 C# 的统一类型系统中，所有类型（预定义类型、用户定义类型、引用类型和值类型）都是直接或间接从 <xref:System.Object?displayProperty=nameWithType> 继承的。 可以将任何类型的值赋给 `object` 类型的变量。 可以使用文本 `object` 将任何 `null` 变量赋值给其默认值。 将值类型的变量转换为对象的过程称为*装箱*。 将 `object` 类型的变量转换为值类型的过程称为取消装箱  。 有关详细信息，请参阅[装箱和取消装箱](../../programming-guide/types/boxing-and-unboxing.md)。
+`object` 类型是 <xref:System.Object?displayProperty=nameWithType> 在 .NET 中的别名。 在 C# 的统一类型系统中，所有类型（预定义类型、用户定义类型、引用类型和值类型）都是直接或间接从 <xref:System.Object?displayProperty=nameWithType> 继承的。 可以将任何类型的值赋给 `object` 类型的变量。 可以使用文本 `null` 将任何 `object` 变量赋值给其默认值。 将值类型的变量转换为对象的过程称为*装箱*。 将 `object` 类型的变量转换为值类型的过程称为取消装箱  。 有关详细信息，请参阅[装箱和取消装箱](../../programming-guide/types/boxing-and-unboxing.md)。
 
 ## <a name="the-string-type"></a>字符串类型
 
@@ -144,7 +144,7 @@ public delegate int AnotherDelegate(MyType m, long num);
 
 在大多数情况下，`dynamic` 类型与 `object` 类型的行为类似。 具体而言，任何非 Null 表达式都可以转换为 `dynamic` 类型。 `dynamic` 类型与 `object` 的不同之处在于，编译器不会对包含类型 `dynamic` 的表达式的操作进行解析或类型检查。 编译器将有关该操作信息打包在一起，之后这些信息会用于在运行时评估操作。 在此过程中，`dynamic` 类型的变量会编译为 `object` 类型的变量。 因此，`dynamic` 类型只在编译时存在，在运行时则不存在。
 
-下面的示例将 `dynamic` 类型的变量与 `object` 类型的变量进行对比。 若要在编译时验证每个变量的类型，请将鼠标指针放在 `dyn` 语句中的 `obj` 或 `WriteLine` 上。 请将下面的代码复制到可以使用 IntelliSense 的编辑器中。 IntelliSense 对  **显示“dynamic”** `dyn`，对  **显示“object”** `obj`。
+下面的示例将 `dynamic` 类型的变量与 `object` 类型的变量进行对比。 若要在编译时验证每个变量的类型，请将鼠标指针放在 `WriteLine` 语句中的 `dyn` 或 `obj` 上。 请将下面的代码复制到可以使用 IntelliSense 的编辑器中。 IntelliSense 对 `dyn` 显示“dynamic”，对 `obj` 显示“object”。
 
 [!code-csharp[csrefKeywordsTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#21)]
 

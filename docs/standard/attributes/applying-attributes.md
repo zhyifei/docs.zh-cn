@@ -42,7 +42,7 @@ ms.locfileid: "73130917"
  [!code-vb[Conceptual.Attributes.Usage#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source1.vb#3)]  
   
 ## <a name="applying-attributes-at-the-assembly-level"></a>在程序集级别应用特性  
- 如果要在程序集级别应用属性，请使用 **assembly**（Visual Basic 中用 `Assembly`）关键字。 下列代码显示在程序集级别应用的 **AssemblyTitleAttribute**。  
+ 如果要在程序集级别应用属性，请使用 **assembly`Assembly`（Visual Basic 中用 **）关键字。 下列代码显示在程序集级别应用的 **AssemblyTitleAttribute**。  
   
  [!code-cpp[Conceptual.Attributes.Usage#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source1.cpp#2)]
  [!code-csharp[Conceptual.Attributes.Usage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#2)]

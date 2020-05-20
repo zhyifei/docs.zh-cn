@@ -43,7 +43,7 @@ ms.locfileid: "73140138"
 ## <a name="ending-an-asynchronous-operation"></a>结束异步操作  
  `EndOperationName` 方法用于结束异步操作 OperationName  。 `EndOperationName` 方法的返回值与其同步对应方法的返回值类型相同，并且是特定于异步操作的。 例如， <xref:System.IO.FileStream.EndRead%2A> 方法返回从 <xref:System.IO.FileStream> 读取的字节数， <xref:System.Net.Dns.EndGetHostByName%2A> 方法返回包含有关主机的信息的 <xref:System.Net.IPHostEntry> 对象。 `EndOperationName` 方法采用该方法同步版本的签名中声明的所有输出参数或引用参数。 除了来自同步方法的参数外，`EndOperationName` 方法还包括 <xref:System.IAsyncResult> 参数。 调用方必须将对应调用返回的实例传递给 `BeginOperationName`。  
   
- 如果调用 <xref:System.IAsyncResult> 时 `EndOperationName` 对象表示的异步操作尚未完成，则 `EndOperationName` 将在异步操作完成之前阻止调用线程。 异步操作引发的异常是从 `EndOperationName` 方法引发的。 未定义多次使用同一 `EndOperationName` 调用 <xref:System.IAsyncResult> 方法的效果。 同样，也未定义使用 `EndOperationName`（相关 Begin 方法未返回）调用 <xref:System.IAsyncResult> 方法的效果。  
+ 如果调用 `EndOperationName` 时 <xref:System.IAsyncResult> 对象表示的异步操作尚未完成，则 `EndOperationName` 将在异步操作完成之前阻止调用线程。 异步操作引发的异常是从 `EndOperationName` 方法引发的。 未定义多次使用同一 <xref:System.IAsyncResult> 调用 `EndOperationName` 方法的效果。 同样，也未定义使用 <xref:System.IAsyncResult>（相关 Begin 方法未返回）调用 `EndOperationName` 方法的效果。  
   
 > [!NOTE]
 > 对于这两种未定义的情况，实施者应考虑引发 <xref:System.InvalidOperationException>。  

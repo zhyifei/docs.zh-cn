@@ -38,7 +38,7 @@ ms.locfileid: "79170068"
 - 方法签名在返回类型前面有 [ref](../../language-reference/keywords/ref.md) 关键字。
 - 方法主体中的每个 [return](../../language-reference/keywords/return.md) 语句都在返回实例的名称前面有 [ref](../../language-reference/keywords/ref.md) 关键字。
 
-下面的示例方法满足这些条件，且返回对名为 `Person` 的 `p` 对象的引用：
+下面的示例方法满足这些条件，且返回对名为 `p` 的 `Person` 对象的引用：
 
 ```csharp
 public ref Person GetContactInformation(string fname, string lname)

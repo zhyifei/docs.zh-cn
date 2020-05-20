@@ -28,11 +28,11 @@ ms.locfileid: "73140089"
   
 2. 在主窗体的窗体设计器中，Form1.cs（对于 Visual Basic，则为 Form1.vb）添加了 <xref:System.Windows.Forms.ToolStrip> 控件。  
   
-3. 向 <xref:System.Windows.Forms.ToolStripButton> 控件添加 <xref:System.Windows.Forms.ToolStrip> 控件。 将 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 属性设置为 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，并将 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为“添加工作项”  。  
+3. 向 <xref:System.Windows.Forms.ToolStrip> 控件添加 <xref:System.Windows.Forms.ToolStripButton> 控件。 将 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 属性设置为 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，并将 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为“添加工作项”  。  
   
-4. 向 <xref:System.Windows.Forms.ToolStripButton> 控件再添加一个 <xref:System.Windows.Forms.ToolStrip> 控件。 将 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 属性设置为 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，将 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为“Cancel”  ，并将 <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> 属性设置为 `False`。  
+4. 向 <xref:System.Windows.Forms.ToolStrip> 控件再添加一个 <xref:System.Windows.Forms.ToolStripButton> 控件。 将 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 属性设置为 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，将 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为“Cancel”  ，并将 <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> 属性设置为 `False`。  
   
-5. 向 <xref:System.Windows.Forms.ToolStripProgressBar> 控件添加四个 <xref:System.Windows.Forms.ToolStrip> 对象。  
+5. 向 <xref:System.Windows.Forms.ToolStrip> 控件添加四个 <xref:System.Windows.Forms.ToolStripProgressBar> 对象。  
   
 ## <a name="creating-the-dataflow-pipeline"></a>创建数据流管道  
  本部分介绍如何创建数据流管道，用以处理工作项以及更新进度条。  
@@ -61,7 +61,7 @@ ms.locfileid: "73140089"
      [!code-csharp[TPLDataflow_CancellationWinForms#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#4)]
      [!code-vb[TPLDataflow_CancellationWinForms#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#4)]  
   
- 因为 `incrementProgress` 和 `decrementProgress` 数据流块是在用户界面上操作，所以这些操作要在用户界面线程上执行，这一点很重要。 为此，在构造期间，每个对象都提供将 <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> 属性设置为 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> 的 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 对象。 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 方法会创建一个在当前同步上下文中执行工作的 <xref:System.Threading.Tasks.TaskScheduler> 对象。 因为 `Form1` 构造函数是从用户界面线程中调用的，所以 `incrementProgress` 和 `decrementProgress` 数据流块的操作也会在用户界面线程上运行。  
+ 因为 `incrementProgress` 和 `decrementProgress` 数据流块是在用户界面上操作，所以这些操作要在用户界面线程上执行，这一点很重要。 为此，在构造期间，每个对象都提供将 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> 属性设置为 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 的 <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> 对象。 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 方法会创建一个在当前同步上下文中执行工作的 <xref:System.Threading.Tasks.TaskScheduler> 对象。 因为 `Form1` 构造函数是从用户界面线程中调用的，所以 `incrementProgress` 和 `decrementProgress` 数据流块的操作也会在用户界面线程上运行。  
   
  此示例在构造管道成员时设置 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 属性。 由于 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 属性永久取消数据流块执行，因此如果用户在取消操作后又想再将更多工作项添加到管道中，必须重新创建整个管道。 有关演示使用另一种方法取消数据流块以便在取消操作后可以执行其他工作的示例，请参阅[演练：在 Windows 窗体应用程序中使用数据流](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
@@ -70,16 +70,16 @@ ms.locfileid: "73140089"
   
 ### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>将数据流管道连接到用户界面  
   
-1. 在主窗体的窗体设计器中，创建“添加工作项”<xref:System.Windows.Forms.ToolStripItem.Click>**按钮的**  事件的事件处理程序。  
+1. 在主窗体的窗体设计器中，创建“添加工作项”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件的事件处理程序。  
   
-2. 实现“添加工作项”<xref:System.Windows.Forms.ToolStripItem.Click>**按钮的**  事件。  
+2. 实现“添加工作项”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#5)]
      [!code-vb[TPLDataflow_CancellationWinForms#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#5)]  
   
-3. 在主窗体的窗体设计器中，创建“取消”<xref:System.Windows.Forms.ToolStripItem.Click>**按钮的**  事件的事件处理程序。  
+3. 在主窗体的窗体设计器中，创建“取消”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件的事件处理程序。  
   
-4. 实现“取消”<xref:System.Windows.Forms.ToolStripItem.Click>**按钮的**  事件处理程序。  
+4. 实现“取消”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件处理程序。  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#6)]
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  

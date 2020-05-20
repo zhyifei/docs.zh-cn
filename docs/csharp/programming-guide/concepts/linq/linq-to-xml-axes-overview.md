@@ -16,7 +16,7 @@ ms.locfileid: "75635517"
   
  除了返回集合的轴方法之外，还有两个方法会在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询中经常用到。 <xref:System.Xml.Linq.XContainer.Element%2A> 方法返回单个 <xref:System.Xml.Linq.XElement>。 <xref:System.Xml.Linq.XElement.Attribute%2A> 方法返回单个 <xref:System.Xml.Linq.XAttribute>。  
   
- 对于很多应用来说，LINQ 查询提供了检查树、从树中提取数据以及转换树的最有效的方法。 LINQ 查询对实现 <xref:System.Collections.Generic.IEnumerable%601> 的对象进行操作，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 轴返回 <xref:System.Collections.Generic.IEnumerable%601> 集合的 <xref:System.Xml.Linq.XElement>，以及 <xref:System.Collections.Generic.IEnumerable%601> 集合的 <xref:System.Xml.Linq.XAttribute>。 需要使用这些集合来执行查询。  
+ 对于很多应用来说，LINQ 查询提供了检查树、从树中提取数据以及转换树的最有效的方法。 LINQ 查询对实现 <xref:System.Collections.Generic.IEnumerable%601> 的对象进行操作，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 轴返回 <xref:System.Xml.Linq.XElement> 集合的 <xref:System.Collections.Generic.IEnumerable%601>，以及 <xref:System.Xml.Linq.XAttribute> 集合的 <xref:System.Collections.Generic.IEnumerable%601>。 需要使用这些集合来执行查询。  
   
  除了检索元素和属性集合的轴方法之外，还有一些轴方法可以十分详尽地循环访问树。 例如，可以处理树的节点，而不是处理元素和属性。 节点比元素和属性有更细的粒度。 处理节点时，可以检查 XML 注释、文本节点、处理指令以及其他方面。 该功能很重要，例如对正在编写字处理器并希望将文档保存为 XML 的用户非常有用。 但是，大部分 XML 程序员主要关心的是元素、属性和它们的值。  
   

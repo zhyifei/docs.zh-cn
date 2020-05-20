@@ -34,7 +34,7 @@ BCL 提供最基本的类型和实用工具功能，是其他所有 .NET 类库�
 * <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 表示内存字节的无符号 8 位整数。
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/builtin-types/bool.md)) - 表示 `true` 或 `false` 的布尔类型。
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/builtin-types/char.md)) - 表示 Unicode 字符的 16 位数字类型。
-* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) -表示一系列字符。 与 `char[]` 不同，但会针对 `char` 中的每个 `string` 启用索引。
+* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) -表示一系列字符。 与 `char[]` 不同，但会针对 `string` 中的每个 `char` 启用索引。
 
 ## <a name="data-structures"></a>数据结构
 

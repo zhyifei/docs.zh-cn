@@ -27,7 +27,7 @@ ms.locfileid: "79180740"
   
  通过将主机的 IP 地址与服务的端口号组合来定义 TCP/IP 服务的唯一地址，以创建该服务的终结点。 <xref:System.Net.Dns> 类提供了返回有关本地网络设备支持的网络地址信息的方法。 如果本地网络设备有多个网络地址或本地系统支持多个网络设备，该  Dns 类将返回所有网络地址信息，并且应用程序必须为此服务选择正确的地址。 Internet 编号分配机构 (IANA) 定义公共服务的端口号；有关详细信息，请参阅 [服务名称和传输协议端口号注册表](https://www.iana.org/assignments/port-numbers)。 其他服务可具有 1,024 到 65,535 范围内的注册端口号。  
   
- 通过将主机计算机的 <xref:System.Net.IPEndPoint>**Dns 返回的第一个 IP 地址与从已注册端口号范围内选择的端口号组合，以下示例为服务器创建** 。  
+ 通过将主机计算机的 Dns 返回的第一个 IP 地址与从已注册端口号范围内选择的端口号组合，以下示例为服务器创建 <xref:System.Net.IPEndPoint>。  
   
 ```vb  
 Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())  

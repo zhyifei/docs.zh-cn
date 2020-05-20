@@ -22,7 +22,7 @@ XML 文档注释需要使用分隔符，用来向编译器指示文档注释开�
   单行分隔符。 这是在文档示例中显示的格式，由 Visual C# 项目模板使用。 如果在分隔符后面有一个空格字符，那么此字符不会包括在 XML 输出中。
 
   > [!NOTE]
-  > Visual Studio IDE 具有一种称为智能注释编辑的功能，在代码编辑器中键入 \< 分隔符后，此功能可自动插入 \<summary> 和 `///`/summary> 标记，并在此标记中移动游标。 可以在[“选项”对话框](/visualstudio/ide/reference/options-text-editor-csharp-advanced)中打开/关闭此功能。
+  > Visual Studio IDE 具有一种称为智能注释编辑的功能，在代码编辑器中键入 `///` 分隔符后，此功能可自动插入 \<summary> 和 \</summary> 标记，并在此标记中移动游标。 可以在[“选项”对话框](/visualstudio/ide/reference/options-text-editor-csharp-advanced)中打开/关闭此功能。
   
 - `/** */`
 

@@ -21,12 +21,12 @@ ms.locfileid: "73139314"
   
 ### <a name="to-create-an-observer"></a>创建观察程序的具体步骤  
   
-1. 定义观察程序，即实现 <xref:System.IObserver%601?displayProperty=nameWithType> 接口的类型。 例如，下面的代码定义了 `TemperatureReporter` 类型，即使用 <xref:System.IObserver%601?displayProperty=nameWithType> 泛型类型参数的构造 `Temperature` 实现。  
+1. 定义观察程序，即实现 <xref:System.IObserver%601?displayProperty=nameWithType> 接口的类型。 例如，下面的代码定义了 `TemperatureReporter` 类型，即使用 `Temperature` 泛型类型参数的构造 <xref:System.IObserver%601?displayProperty=nameWithType> 实现。  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#8)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#8)]  
   
-2. 如果观察程序可以在提供程序调用 <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> 实现前停止接收通知，请定义专用变量，用于保留提供程序 <xref:System.IDisposable> 方法返回的 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> 实现。 还应定义订阅方法，用于调用提供程序的 <xref:System.IObservable%601.Subscribe%2A> 方法，并存储返回的 <xref:System.IDisposable> 对象。 例如，下面的代码定义 `unsubscriber` 专用变量，并定义 `Subscribe` 方法，用于调用提供程序的 <xref:System.IObservable%601.Subscribe%2A> 方法，并将返回的对象分配给 `unsubscriber` 变量。  
+2. 如果观察程序可以在提供程序调用 <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> 实现前停止接收通知，请定义专用变量，用于保留提供程序 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> 方法返回的 <xref:System.IDisposable> 实现。 还应定义订阅方法，用于调用提供程序的 <xref:System.IObservable%601.Subscribe%2A> 方法，并存储返回的 <xref:System.IDisposable> 对象。 例如，下面的代码定义 `unsubscriber` 专用变量，并定义 `Subscribe` 方法，用于调用提供程序的 <xref:System.IObservable%601.Subscribe%2A> 方法，并将返回的对象分配给 `unsubscriber` 变量。  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#9)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#9)]  
@@ -36,7 +36,7 @@ ms.locfileid: "73139314"
      [!code-csharp[Conceptual.ObserverDesign.HowTo#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#10)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#10)]  
   
-4. 实现 <xref:System.IObserver%601> 接口定义的三个方法：<xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>、<xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType> 和 <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>。 根据提供程序和应用需求，<xref:System.IObserver%601.OnError%2A> 和 <xref:System.IObserver%601.OnCompleted%2A> 方法可以是存根实现。 请注意，<xref:System.IObserver%601.OnError%2A> 方法不得将传入的 <xref:System.Exception> 对象处理为异常，<xref:System.IObserver%601.OnCompleted%2A> 方法可以随意调用提供程序的 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 实现。 下面的示例展示了 <xref:System.IObserver%601> 类的 `TemperatureReporter` 实现。  
+4. 实现 <xref:System.IObserver%601> 接口定义的三个方法：<xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>、<xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType> 和 <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>。 根据提供程序和应用需求，<xref:System.IObserver%601.OnError%2A> 和 <xref:System.IObserver%601.OnCompleted%2A> 方法可以是存根实现。 请注意，<xref:System.IObserver%601.OnError%2A> 方法不得将传入的 <xref:System.Exception> 对象处理为异常，<xref:System.IObserver%601.OnCompleted%2A> 方法可以随意调用提供程序的 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 实现。 下面的示例展示了 `TemperatureReporter` 类的 <xref:System.IObserver%601> 实现。  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#11)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#11)]  

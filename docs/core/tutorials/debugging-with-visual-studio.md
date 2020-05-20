@@ -30,7 +30,7 @@ ms.locfileid: "78156668"
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-1. 通过在读取  *的行上单击代码窗口的左边距来设置该行的断点*`Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");`。 也可以通过将插入符号置于代码行中，然后按 F9  或从菜单栏中选择“调试”   > “切换断点”  来设置断点。
+1. 通过在读取 `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` 的行上单击代码窗口的左边距来设置该行的断点。 也可以通过将插入符号置于代码行中，然后按 F9  或从菜单栏中选择“调试”   > “切换断点”  来设置断点。
 
    断点会在执行包含断点的代码行之前  暂时中断执行应用程序。
 
@@ -50,9 +50,9 @@ ms.locfileid: "78156668"
 
    1. 如果“即时”  窗口不可见，请选择“调试”   > “Windows”   > “即时”  来显示它。
 
-   1. 在“即时”`name = "Gracie"`**窗口中输入** ，然后按 Enter  键。
+   1. 在“即时”窗口中输入 `name = "Gracie"`，然后按 Enter 键。
 
-   1. 在“即时”`date = DateTime.Parse("11/16/2019 5:25 PM")`**窗口中输入** ，然后按 Enter  键。
+   1. 在“即时”窗口中输入 `date = DateTime.Parse("11/16/2019 5:25 PM")`，然后按 Enter 键。
 
    “即时”  窗口显示字符串变量的值和 <xref:System.DateTime> 值的属性。 此外，“局部变量”  窗口中也会更新变量值。
 
@@ -66,7 +66,7 @@ ms.locfileid: "78156668"
 
 # <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
-1. 通过在读取  *的行上单击代码窗口的左边距来设置该行的断点*`Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}!")`。 也可以通过将插入符号置于所需的行中，然后从菜单栏中选择“调试”   > “切换断点”  来设置断点。
+1. 通过在读取 `Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}!")` 的行上单击代码窗口的左边距来设置该行的断点。 也可以通过将插入符号置于所需的行中，然后从菜单栏中选择“调试”   > “切换断点”  来设置断点。
 
    断点会在执行包含断点的代码行之前  暂时中断执行应用程序。
 
@@ -84,9 +84,9 @@ ms.locfileid: "78156668"
 
    1. 如果“即时”  窗口不可见，请选择“调试”   > “Windows”   > “即时”  来显示它。
 
-   1. 在“即时”`name = "Gracie"`**窗口中输入** ，然后按 Enter  键。
+   1. 在“即时”窗口中输入 `name = "Gracie"`，然后按 Enter 键。
 
-   1. 在“即时”`date = DateTime.Parse("11/16/2019 5:25 PM")`**窗口中输入** ，然后按 Enter  键。
+   1. 在“即时”窗口中输入 `date = DateTime.Parse("11/16/2019 5:25 PM")`，然后按 Enter 键。
 
    “局部变量”  窗口中会更新变量值。
 
@@ -203,7 +203,7 @@ ms.locfileid: "78156668"
 
 1. 选择“调试”   > “单步执行”  ，或按 F11  。 Visual Studio 突出显示包含 `date` 变量赋值的语句。 “局部变量”  窗口显示 <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> 方法调用返回的值。 控制台窗口还显示在提示符处输入的字符串。
 
-1. 选择“调试”   > “单步执行”  ，或按 F11  。 “局部变量”  窗口显示通过 `date` 属性赋值后的 <xref:System.DateTime.Now?displayProperty=nameWithType> 变量值。 控制台窗口保持不变。
+1. 选择“调试”   > “单步执行”  ，或按 F11  。 “局部变量”窗口显示通过 <xref:System.DateTime.Now?displayProperty=nameWithType> 属性赋值后的 `date` 变量值。 控制台窗口保持不变。
 
 1. 选择“调试”   > “单步执行”  ，或按 F11  。 Visual Studio 调用 <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType> 方法。 控制台窗口会显示格式化的字符串。
 
@@ -247,7 +247,7 @@ ms.locfileid: "78156668"
 
 ![默认 Visual Studio 工具栏，其中突出显示调试](./media/debugging-with-visual-studio/visual-studio-toolbar-release.png)
 
-按 F5  或选择“生成”  菜单中的“生成解决方案”  后，Visual Studio 会编译应用程序的“发布”版本。 可像测试“调试”版本一样测试“发布”版本。
+按 F5 或选择“生成”菜单中的“生成解决方案”后，Visual Studio 会编译应用程序的“发布”版本。 可像测试“调试”版本一样测试“发布”版本。
 
 ## <a name="next-steps"></a>后续步骤
 

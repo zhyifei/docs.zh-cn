@@ -167,7 +167,7 @@ ms.locfileid: "78159996"
 ### <a name="the-match-collection"></a>Match 集合  
  <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法返回一个 <xref:System.Text.RegularExpressions.MatchCollection> 对象，该对象包含多个 <xref:System.Text.RegularExpressions.Match> 对象，这些对象表示正则表达式引擎在输入字符串中找到的所有匹配项（其顺序为这些匹配项在输入字符串中的显示顺序）。 如果没有匹配项，则此方法将返回一个不包含任何成员的 <xref:System.Text.RegularExpressions.MatchCollection> 对象。 利用 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 属性，你可以按照索引（从零到将 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 属性的值减 1 所得的值）访问集合中的各个成员。 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> 是集合的索引器（在 C# 中）和默认属性（在 Visual Basic 中）。  
   
- 默认情况下，调用 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法会使用延迟计算来填充 <xref:System.Text.RegularExpressions.MatchCollection> 对象。 访问需要完全填充的集合的属性（如 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 属性）可能会降低性能。 因此，建议你使用由 <xref:System.Collections.IEnumerator> 方法返回的 <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> 对象访问该集合。 各种语言都提供了用于包装集合的 `For Each` 接口的构造（如 Visual Basic 中的 `foreach` 和 C# 中的 <xref:System.Collections.IEnumerator>）。  
+ 默认情况下，调用 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法会使用延迟计算来填充 <xref:System.Text.RegularExpressions.MatchCollection> 对象。 访问需要完全填充的集合的属性（如 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 属性）可能会降低性能。 因此，建议你使用由 <xref:System.Collections.IEnumerator> 方法返回的 <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> 对象访问该集合。 各种语言都提供了用于包装集合的 <xref:System.Collections.IEnumerator> 接口的构造（如 Visual Basic 中的 `For Each` 和 C# 中的 `foreach`）。  
   
  下面的示例使用 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType> 方法将在输入字符串中找到的所有匹配项填充到 <xref:System.Text.RegularExpressions.MatchCollection> 对象中。 此示例枚举了该集合，将匹配项复制到字符串数组并将字符位置记录在整数数组中。  
   
@@ -196,7 +196,7 @@ ms.locfileid: "78159996"
   
 - <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回一个 <xref:System.Text.RegularExpressions.GroupCollection> 对象，该对象包含有关与正则表达式模式中的捕获组匹配的子字符串的信息。  
   
-- `Match.Captures` 属性返回一个 <xref:System.Text.RegularExpressions.CaptureCollection> 对象，该对象的使用是有限制的。 不会为其 <xref:System.Text.RegularExpressions.Match> 属性为 `Success` 的 `false` 的对象填充集合。 否则，它将包含一个 <xref:System.Text.RegularExpressions.Capture> 对象，该对象具有的信息与 <xref:System.Text.RegularExpressions.Match> 对象具有的信息相同。  
+- `Match.Captures` 属性返回一个 <xref:System.Text.RegularExpressions.CaptureCollection> 对象，该对象的使用是有限制的。 不会为其 `Success` 属性为 `false` 的 <xref:System.Text.RegularExpressions.Match> 的对象填充集合。 否则，它将包含一个 <xref:System.Text.RegularExpressions.Capture> 对象，该对象具有的信息与 <xref:System.Text.RegularExpressions.Match> 对象具有的信息相同。  
   
  有关这些对象的更多信息，请参阅本主题后面的[组集合](#GroupCollection)和[捕获集合](#CaptureCollection)部分。  
   

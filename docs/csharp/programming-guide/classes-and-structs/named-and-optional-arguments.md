@@ -100,7 +100,7 @@ C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特
 ## <a name="com-interfaces"></a>COM 接口  
  命名实参和可选实参，以及对动态对象的支持和其他增强功能大大提高了与 COM API（例如 Office Automation API）的互操作性。  
   
- 例如，Microsoft Office Excel 的 <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> 接口中的 <xref:Microsoft.Office.Interop.Excel.Range> 方法有七个可选形参。 这些形参如下图所示：  
+ 例如，Microsoft Office Excel 的 <xref:Microsoft.Office.Interop.Excel.Range> 接口中的 <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> 方法有七个可选形参。 这些形参如下图所示：  
   
  ![显示 AutoFormat 方法的 IntelliSense 快速信息的屏幕截图。](./media/named-and-optional-arguments/autoformat-method-parameters.png)  
   

@@ -34,7 +34,7 @@ ms.locfileid: "79181257"
   
 - 在某些极少数情况下，如果启用了编译器优化，条件位测试可能会返回错误的 <xref:System.Boolean> 值或引发异常。  
   
-- 在某些情况下，如果 `if` 语句用于在进入 `try` 块之前和从 `try` 块中退出之前测试条件，且在 `catch` 或 `finally` 块中计算的条件相同，那么新版 64 位 JIT 编译器会在优化代码时从 `if` 或 `catch` 块中删除 `finally` 条件。 因此，`if` 或 `catch` 块中的 `finally` 语句代码会无条件地执行。  
+- 在某些情况下，如果 `if` 语句用于在进入 `try` 块之前和从 `try` 块中退出之前测试条件，且在 `catch` 或 `finally` 块中计算的条件相同，那么新版 64 位 JIT 编译器会在优化代码时从 `catch` 或 `finally` 块中删除 `if` 条件。 因此，`catch` 或 `finally` 块中的 `if` 语句代码会无条件地执行。  
   
 <a name="General"></a>
 ## <a name="mitigation-of-known-issues"></a>已知问题的缓解措施  
@@ -61,9 +61,9 @@ ms.locfileid: "79181257"
     </configuration>  
     ```  
   
-- 对于每个用户，可以将名为 `REG_DWORD` 的 `useLegacyJit` 值添加到注册表的 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` 密钥中。 如果值为 1，可以启用旧版 64 位 JIT 编译器；如果值为 0，可以禁用旧版编译器，启用新版 64 位 JIT 编译器。  
+- 对于每个用户，可以将名为 `useLegacyJit` 的 `REG_DWORD` 值添加到注册表的 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` 密钥中。 如果值为 1，可以启用旧版 64 位 JIT 编译器；如果值为 0，可以禁用旧版编译器，启用新版 64 位 JIT 编译器。  
   
-- 对于每台计算机，可以将名为 `REG_DWORD` 的 `useLegacyJit` 值添加到注册表的 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` 密钥中。 如果值为 1，可以启用旧版 64 位 JIT 编译器；如果值为 0，可以禁用旧版编译器，启用新版 64 位 JIT 编译器。  
+- 对于每台计算机，可以将名为 `useLegacyJit` 的 `REG_DWORD` 值添加到注册表的 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` 密钥中。 如果值为 1，可以启用旧版 64 位 JIT 编译器；如果值为 0，可以禁用旧版编译器，启用新版 64 位 JIT 编译器。  
   
  还可以在 [Microsoft Connect](https://connect.microsoft.com/VisualStudio) 上报告 bug，告诉我们你遇到的问题。  
   

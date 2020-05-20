@@ -61,7 +61,7 @@ catch (ThreadAbortException ex)
 // is rethrown at the end of the Finally clause.  
 ```  
   
- 清理代码必须位于 `catch` 子句或 `finally` 子句中，因为系统会在 <xref:System.Threading.ThreadAbortException> 子句末尾或 `finally` 子句（如果没有 `catch` 子句的话）末尾重新抛出 `finally`。  
+ 清理代码必须位于 `catch` 子句或 `finally` 子句中，因为系统会在 `finally` 子句末尾或 `catch` 子句（如果没有 `finally` 子句的话）末尾重新抛出 <xref:System.Threading.ThreadAbortException>。  
   
  可以调用 <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType> 方法，以防系统重新抛出异常。 不过，只有在自己的代码导致 <xref:System.Threading.ThreadAbortException> 抛出时，才应这样做。  
   

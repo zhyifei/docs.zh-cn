@@ -43,7 +43,7 @@ ms.locfileid: "74345601"
   
      [!code-vb[VbVbalrMyComputer#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#42)]  
   
-7. 向 `Else` 语句添加 `If` 块以处理实际读取字符串的情况。 该块将来自串行端口的字符串追加到返回字符串。  
+7. 向 `If` 语句添加 `Else` 块以处理实际读取字符串的情况。 该块将来自串行端口的字符串追加到返回字符串。  
   
      [!code-vb[VbVbalrMyComputer#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#43)]  
   

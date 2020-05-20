@@ -33,7 +33,7 @@ namespace classes
 }
 ```
 
-在本教程中，将要新建表示银行帐户的类型。 通常情况下，开发者都会在不同的文本文件中定义每个类。 这样可以更轻松地管理不断增大的程序。 在 classes  目录中，新建名为 BankAccount.cs  的文件。
+在本教程中，将要新建表示银行帐户的类型。 通常情况下，开发者都会在不同的文本文件中定义每个类。 这样可以更轻松地管理不断增大的程序。 在 classes 目录中，新建名为 BankAccount.cs 的文件。
 
 此文件包含“银行帐户”定义。 面向对象的编程组织代码的方式为，创建类形式的类型。 这些类包含表示特定实体的代码。 `BankAccount` 类表示银行帐户。 代码通过方法和属性实现特定操作。 在本教程中，银行帐户支持以下行为：
 
@@ -73,7 +73,7 @@ namespace classes
 
 继续操作前，先来看看已经生成的内容。  借助 `namespace` 声明，可以按逻辑组织代码。 由于本教程的篇幅较小，因此所有代码都将添加到一个命名空间中。
 
-`public class BankAccount` 定义要创建的类或类型。 类声明后面 `{` 和 `}` 中的所有内容定义了类的状态和行为。 ***类有五个成员***`BankAccount`。 前三个成员是属性。 属性是数据元素，可以包含强制执行验证或其他规则的代码。 最后两个成员是方法。 方法是执行一个函数的代码块。 读取每个成员的名称应该能够为自己或其他开发者提供了解类用途的足够信息。
+`public class BankAccount` 定义要创建的类或类型。 类声明后面 `{` 和 `}` 中的所有内容定义了类的状态和行为。 `BankAccount` 类有五个成员。 前三个成员是属性。 属性是数据元素，可以包含强制执行验证或其他规则的代码。 最后两个成员是方法。 方法是执行一个函数的代码块。 读取每个成员的名称应该能够为自己或其他开发者提供了解类用途的足够信息。
 
 ## <a name="open-a-new-account"></a>打开新帐户
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-构造函数是在使用 [`new`](../../language-reference/operators/new-operator.md) 创建对象时进行调用。 将 Program.cs`Console.WriteLine("Hello World!");`*中的代码行* 替换为以下代码行（将 `<name>` 替换为自己的名称）：
+构造函数是在使用 [`new`](../../language-reference/operators/new-operator.md) 创建对象时进行调用。 将 Program.cs 中的代码行 `Console.WriteLine("Hello World!");` 替换为以下代码行（将 `<name>` 替换为自己的名称）：
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -123,7 +123,7 @@ accountNumberSeed++;
 
 [!code-csharp[Transaction](~/samples/snippets/csharp/classes-quickstart/Transaction.cs)]
 
-现在，将 <xref:System.Collections.Generic.List%601> 对象的 `Transaction` 添加到 `BankAccount` 类中。 添加以下声明：
+现在，将 `Transaction` 对象的 <xref:System.Collections.Generic.List%601> 添加到 `BankAccount` 类中。 添加以下声明：
 
 [!code-csharp[TransactionDecl](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
@@ -133,7 +133,7 @@ accountNumberSeed++;
 using System.Collections.Generic;
 ```
 
-现在，更改 `Balance` 的报告方式。  可以通过对所有交易的值进行求和计算余额。 将 `Balance` 类中 `BankAccount` 的声明修改为如下所示：
+现在，更改 `Balance` 的报告方式。  可以通过对所有交易的值进行求和计算余额。 将 `BankAccount` 类中 `Balance` 的声明修改为如下所示：
 
 [!code-csharp[BalanceComputation](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
 

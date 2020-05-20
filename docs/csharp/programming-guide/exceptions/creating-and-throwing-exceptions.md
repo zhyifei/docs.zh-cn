@@ -15,7 +15,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712294"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>创建和引发异常（C# 编程指南）
-异常用于指示在运行程序时发生了错误。 此时将创建一个描述错误的异常对象，然后使用 [throw](../../language-reference/keywords/throw.md) 关键字引发  。 然后，运行时搜索最兼容的异常处理程序。  
+异常用于指示在运行程序时发生了错误。 此时将创建一个描述错误的异常对象，然后使用 [throw](../../language-reference/keywords/throw.md) 关键字引发。 然后，运行时搜索最兼容的异常处理程序。  
   
  当存在下列一种或多种情况时，程序员应引发异常：  
   

@@ -87,7 +87,7 @@ public static void Test()
   
  如果仅使用变体支持来匹配方法签名和委托类型，且不使用 `in` 和 `out` 关键字，则可能会发现有时可以使用相同的 lambda 表达式或方法实例化委托，但不能将一个委托分配给另一个委托。  
   
- 在以下代码示例中，`SampleGenericDelegate<String>` 不能显式转换为 `SampleGenericDelegate<Object>`，尽管 `String` 继承 `Object`。 可以使用 `T` 关键字标记 泛型参数 `out` 解决此问题。  
+ 在以下代码示例中，`SampleGenericDelegate<String>` 不能显式转换为 `SampleGenericDelegate<Object>`，尽管 `String` 继承 `Object`。 可以使用 `out` 关键字标记 泛型参数 `T` 解决此问题。  
   
 ```csharp  
 public delegate T SampleGenericDelegate<T>();  
@@ -112,9 +112,9 @@ public static void Test()
 ### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>.NET Framework 中具有变体类型参数的泛型委托  
  .NET Framework 4 在几个现有泛型委托中引入了泛型类型参数的变体支持：  
   
-- `Action` 命名空间的 <xref:System> 委托，例如 <xref:System.Action%601> 和 <xref:System.Action%602>  
+- <xref:System> 命名空间的 `Action` 委托，例如 <xref:System.Action%601> 和 <xref:System.Action%602>  
   
-- `Func` 命名空间的 <xref:System> 委托，例如 <xref:System.Func%601> 和 <xref:System.Func%602>  
+- <xref:System> 命名空间的 `Func` 委托，例如 <xref:System.Func%601> 和 <xref:System.Func%602>  
   
 - <xref:System.Predicate%601> 委托  
   

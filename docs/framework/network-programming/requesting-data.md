@@ -28,13 +28,13 @@ ms.locfileid: "71047319"
 开发在如今 Internet 的分布式操作环境中运行的应用程序需要使用高效易用的方法从所有类型的资源中检索数据。 可以通过可插入协议开发使用单一接口从多个 Internet 协议检索数据的应用程序。  
   
 ## <a name="uploading-and-downloading-data-from-an-internet-server"></a>从 Internet 服务器上传和下载数据  
- 对于简单的请求和响应事务，<xref:System.Net.WebClient> 类提供最简单的方法来将数据上传到 Internet 服务器或从 Internet 服务器下载数据。 WebClient 提供用于上传和下载文件、发送和接收数据流和将数据缓冲区发送到服务器并接收响应的方法  。 WebClient 使用 **和** 类来实现与 Internet 资源的实际连接，因此可以使用任何已注册的可插入协议<xref:System.Net.WebRequest><xref:System.Net.WebResponse>。  
+ 对于简单的请求和响应事务，<xref:System.Net.WebClient> 类提供最简单的方法来将数据上传到 Internet 服务器或从 Internet 服务器下载数据。 WebClient 提供用于上传和下载文件、发送和接收数据流和将数据缓冲区发送到服务器并接收响应的方法  。 WebClient 使用 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类来实现与 Internet 资源的实际连接，因此可以使用任何已注册的可插入协议。  
   
- 需要执行更复杂事务的客户端应用程序使用 WebRequest 类及其后代从服务器请求数据  。 WebRequest 封装连接到服务器、发送请求和接收响应的详细信息  。 WebRequest 是一个抽象类，它定义一组使用可插入协议的所有应用程序均可使用的属性和方法  。 WebRequest 的后代（如 **）通过与基础协议一致的方法实现由 WebRequest 定义的属性和方法**<xref:System.Net.HttpWebRequest>  。  
+ 需要执行更复杂事务的客户端应用程序使用 WebRequest 类及其后代从服务器请求数据  。 WebRequest 封装连接到服务器、发送请求和接收响应的详细信息  。 WebRequest 是一个抽象类，它定义一组使用可插入协议的所有应用程序均可使用的属性和方法  。 WebRequest 的后代（如 <xref:System.Net.HttpWebRequest>）通过与基础协议一致的方法实现由 WebRequest 定义的属性和方法。  
   
- WebRequest 类使用传递到  **方法的 URI 值确定要创建的特定派生类实例，创建 WebRequest 后代特定于协议的实例**  <xref:System.Net.WebRequest.Create%2A>。 应用程序通过  **方法注册 WebRequest 后代的构造函数，指示将用于处理请求的后代**<xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType>。  
+ WebRequest 类使用传递到 <xref:System.Net.WebRequest.Create%2A> 方法的 URI 值确定要创建的特定派生类实例，创建 WebRequest 后代特定于协议的实例。 应用程序通过 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> 方法注册 WebRequest 后代的构造函数，指示将用于处理请求的后代。  
   
- 通过调用 WebRequest 上的 <xref:System.Net.WebRequest.GetResponse%2A> 方法，向 Internet 资源发送请求  。 GetResponse 方法从 WebRequest 的属性构造特定于协议的请求、将 TCP 或 UDP 套接字连接到服务器并发送请求   。 对于将数据发送到服务器的请求（如 HTTP Post 或 FTP Put 请求）， **方法提供要向其发送数据的网络数据流**  <xref:System.Net.WebRequest.GetRequestStream%2A?displayProperty=nameWithType>。  
+ 通过调用 WebRequest 上的 <xref:System.Net.WebRequest.GetResponse%2A> 方法，向 Internet 资源发送请求  。 GetResponse 方法从 WebRequest 的属性构造特定于协议的请求、将 TCP 或 UDP 套接字连接到服务器并发送请求   。 对于将数据发送到服务器的请求（如 HTTP Post 或 FTP Put 请求），<xref:System.Net.WebRequest.GetRequestStream%2A?displayProperty=nameWithType> 方法提供要向其发送数据的网络数据流。  
   
  GetResponse 方法返回特定于协议的 WebResponse，后者与 WebRequest 匹配    。  
   

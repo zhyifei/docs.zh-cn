@@ -34,7 +34,7 @@ ms.locfileid: "79167552"
     string fileName = "MyNewFile.txt";  
     ```  
   
-- 用以下代码中的 `if` 语句替换 -`else``using` 语句。  
+- 用以下代码中的 `using` 语句替换 `if`-`else` 语句。  
   
     ```csharp  
     using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))

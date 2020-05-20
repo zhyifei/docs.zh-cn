@@ -82,7 +82,7 @@ dotnet add reference ../MathService/MathService.fsproj
         MathServiceTests.fsproj
 ```
 
-在 unit-testing-with-fsharp`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`*目录中执行*。
+在 unit-testing-with-fsharp 目录中执行 `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`。
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 

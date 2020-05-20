@@ -43,7 +43,7 @@ ms.locfileid: "75777337"
 
 ## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project"></a>将现有项目替换为多目标的 .NET Core 项目
 
-重新组织存储库，以便删除任何现有的 *.csproj\** 文件，并创建以多个框架为目标的单一 *.csproj\** 文件。 这是一项不错的选择，因为单个项目可以编译不同的框架。 它还可以处理每个目标框架的不同编译选项和依赖项。
+重新组织存储库，以便删除任何现有的 \*.csproj 文件，并创建以多个框架为目标的单一 \*.csproj 文件。 这是一项不错的选择，因为单个项目可以编译不同的框架。 它还可以处理每个目标框架的不同编译选项和依赖项。
 
 ![创建以多个框架为目标的 csproj](./media/project-structure/multi-targeted-project.png)
 
@@ -51,7 +51,7 @@ ms.locfileid: "75777337"
 
 需注意的更改：
 
-- 用新的 *.NET Core* .csproj *替换 packages.config 和 \*.csproj*[ *\** ](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj)。 NuGet 包是使用 `<PackageReference> ItemGroup` 指定的。
+- 用新的 [.NET Core \*.csproj](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj) 替换 packages.config 和 \*.csproj。 NuGet 包是使用 `<PackageReference> ItemGroup` 指定的。
 
 ## <a name="keep-existing-projects-and-create-a-net-core-project"></a>保留现有项目并创建 .NET Core 项目
 

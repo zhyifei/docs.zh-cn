@@ -27,7 +27,7 @@ ms.locfileid: "71048778"
 |类名|说明|  
 |----------------|-----------------|  
 |<xref:System.Net.Cache.HttpRequestCachePolicy>|表示使用 <xref:System.Net.HttpWebRequest> 对象请求的资源的基于位置和基于时间的缓存策略。|  
-|<xref:System.Net.Cache.RequestCachePolicy>|表示使用 <xref:System.Net.Cache.RequestCacheLevel.Default> 对象请求的资源的基于位置的缓存策略或基于 <xref:System.Net.WebRequest> 时间的缓存策略。|  
+|<xref:System.Net.Cache.RequestCachePolicy>|表示使用 <xref:System.Net.WebRequest> 对象请求的资源的基于位置的缓存策略或基于 <xref:System.Net.Cache.RequestCacheLevel.Default> 时间的缓存策略。|  
 |<xref:System.Net.Cache.HttpCacheAgeControl>|指定用于创建基于时间的 <xref:System.Net.Cache.HttpRequestCachePolicy> 对象的值。|  
 |<xref:System.Net.Cache.HttpRequestCacheLevel>|指定用于创建基于位置和基于时间的 <xref:System.Net.Cache.HttpRequestCachePolicy> 对象的值。|  
 |<xref:System.Net.Cache.RequestCacheLevel>|指定用于创建基于位置或基于 <xref:System.Net.Cache.RequestCacheLevel.Default> 时间的 <xref:System.Net.Cache.RequestCachePolicy> 对象的值。|  

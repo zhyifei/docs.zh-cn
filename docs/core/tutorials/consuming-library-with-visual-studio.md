@@ -30,7 +30,7 @@ ms.locfileid: "76920456"
 
 就像[在 Visual Studio 中测试 .NET Standard 库](testing-library-with-visual-studio.md)所述的将单元测试和类库添加到同一解决方案中一样，可以将应用程序添加到同一解决方案中。 例如，可在控制台应用程序中使用类库，此应用程序将提示用户输入字符串，并报告第一个字符是否为大写：
 
-1. 打开在`ClassLibraryProjects`在 Visual Studio 中生成 .NET Standard 库[一文中创建的 ](library-with-visual-studio.md) 解决方案。
+1. 打开在[在 Visual Studio 中生成 .NET Standard 库](library-with-visual-studio.md)一文中创建的 `ClassLibraryProjects` 解决方案。
 
 1. 将名为“ShowCase”的新 .NET Core 控制台应用程序添加到解决方案。
 
@@ -38,9 +38,9 @@ ms.locfileid: "76920456"
 
    1. 在“创建新项目”  页面，在搜索框中输入“控制台”  。 从“语言”列表中选择“C#”  或“Visual Basic”  ，然后从“平台”列表中选择“所有平台”  。 选择“控制台应用 (.NET Core)”  模板，然后选择“下一步”  。
 
-   1. 在“配置新项目”  页面，在“项目名称”  框中输入“ShowCase”  。 然后，选择“创建”  。
+   1. 在“配置新项目”页面，在“项目名称”框中输入“ShowCase”。 然后，选择“创建”  。
 
-1. 在“**解决方案资源管理器**”中，右键单击“**ShowCase**”项目，在上下文菜单中选择“**设为启动项目**”。
+1. 在“解决方案资源管理器”****中，右键单击“ShowCase”**** 项目，在上下文菜单中选择“设为启动项目”。
 
    ![Visual Studio 中用于设置启动项目的项目上下文菜单](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
@@ -61,7 +61,7 @@ ms.locfileid: "76920456"
 
    该程序会提示用户输入字符串。 它会指明字符串是否以大写字符开头。 如果用户没有输入字符串就按 Enter 键，那么应用程序会终止，控制台窗口会关闭。
 
-1. 必要时，将工具栏更改为编译  **项目的“调试”** `ShowCase`版本。 选择“ShowCase”  按钮上的绿色箭头，编译并运行程序。
+1. 必要时，将工具栏更改为编译 `ShowCase` 项目的“调试”版本。 选择“ShowCase”  按钮上的绿色箭头，编译并运行程序。
 
    ![Visual Studio 中显示“调试”按钮的项目工具栏](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 

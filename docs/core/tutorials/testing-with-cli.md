@@ -47,7 +47,7 @@ ms.locfileid: "78239906"
 
 对于下列步骤，可使用 [NewTypes Pets 示例](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild)进行相关操作，也可以创建自己的文件与文件夹进行操作。 各类型按逻辑组织为文件夹结构，允许日后加入更多类型，测试也按逻辑放置在文件夹中，允许日后加入更多测试。
 
-此示例包含两种类型 `Dog` 和 `Cat`，并使它们实现一个公共接口 `IPet`。 对于 `NewTypes` 项目，目标是将与宠物相关的类型组织到 Pets  文件夹中。 如果之后添加了另一组类型（例如 WildAnimals  ），则将其与 Pets  文件夹一同放在 NewTypes  文件夹中。 WildAnimals  文件夹可包含不属于宠物的动物类型，如 `Squirrel` 和 `Rabbit` 类型。 按照这种方式添加类型，不会破坏项目的良好组织。
+此示例包含两种类型 `Dog` 和 `Cat`，并使它们实现一个公共接口 `IPet`。 对于 `NewTypes` 项目，目标是将与宠物相关的类型组织到 Pets  文件夹中。 如果之后添加了另一组类型（例如 WildAnimals），则将其与 Pets 文件夹一同放在 NewTypes 文件夹中。 WildAnimals  文件夹可包含不属于宠物的动物类型，如 `Squirrel` 和 `Rabbit` 类型。 按照这种方式添加类型，不会破坏项目的良好组织。
 
 创建以下文件夹结构，并指明文件内容：
 
@@ -158,7 +158,7 @@ public class PetTests
 }
 ```
 
-可选练习：如果先前向所有者添加了生成 `Bird` 的 `Tweet!` 类型，请向 PetTests.cs  文件 `BirdTalkToOwnerReturnsTweet` 添加测试方法，检查对于 `TalkToOwner` 类型，`Bird` 方法是否正常工作。
+可选练习：如果先前向所有者添加了生成 `Tweet!` 的 `Bird` 类型，请向 PetTests.cs 文件 `BirdTalkToOwnerReturnsTweet` 添加测试方法，检查对于 `Bird` 类型，`TalkToOwner` 方法是否正常工作。
 
 > [!NOTE]
 > 尽管期望 `expected` 和 `actual` 值相等，但使用 `Assert.NotEqual` 检查的初始断言表明这些值并不相等  。 务必最初创建一个失败的测试，以检查测试的逻辑是否正确。 确认测试失败后，调整断言，使测试通过。

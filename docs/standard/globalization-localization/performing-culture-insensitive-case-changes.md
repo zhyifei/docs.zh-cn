@@ -23,9 +23,9 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160126"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>执行不区分区域性的大小写更改
-<xref:System.String.ToUpper%2A?displayProperty=nameWithType>、<xref:System.String.ToLower%2A?displayProperty=nameWithType>、<xref:System.Char.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.Char.ToLower%2A?displayProperty=nameWithType> 方法提供不接受任何参数的重载。 默认情况下，这些不带参数的重载根据 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 的值执行大小写更改。 这样生成的结果（区分大小写）可能会因区域性而异。 为了明确希望大小写更改是区域性敏感型，还是非区域性敏感型，应使用这些要求显式指定 `culture` 参数的方法重载。 对于区域性敏感型大小写更改，请为 `CultureInfo.CurrentCulture` 参数指定 `culture`。 对于非区域性敏感型大小写更改，请为 `CultureInfo.InvariantCulture` 参数指定 `culture`。  
+<xref:System.String.ToUpper%2A?displayProperty=nameWithType>、<xref:System.String.ToLower%2A?displayProperty=nameWithType>、<xref:System.Char.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.Char.ToLower%2A?displayProperty=nameWithType> 方法提供不接受任何参数的重载。 默认情况下，这些不带参数的重载根据 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 的值执行大小写更改。 这样生成的结果（区分大小写）可能会因区域性而异。 为了明确希望大小写更改是区域性敏感型，还是非区域性敏感型，应使用这些要求显式指定 `culture` 参数的方法重载。 对于区域性敏感型大小写更改，请为 `culture` 参数指定 `CultureInfo.CurrentCulture`。 对于非区域性敏感型大小写更改，请为 `culture` 参数指定 `CultureInfo.InvariantCulture`。  
   
- 通常情况下，字符串会转换为标准大小写，以方便稍后查找。 如果按这种方式使用字符串，应为 `CultureInfo.InvariantCulture` 参数指定 `culture`，因为 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 的值可能会在大小写更改和执行查找时之间变化。  
+ 通常情况下，字符串会转换为标准大小写，以方便稍后查找。 如果按这种方式使用字符串，应为 `culture` 参数指定 `CultureInfo.InvariantCulture`，因为 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 的值可能会在大小写更改和执行查找时之间变化。  
   
  如果安全决策以大小写更改操作为依据，操作应为非区域性敏感型，以确保结果不受 `CultureInfo.CurrentCulture` 值的影响。 有关展示了区域性敏感型字符串操作如何产生不一致结果的示例，请参阅[字符串使用最佳做法](../../../docs/standard/base-types/best-practices-strings.md)的“使用当前区域性的字符串比较”部分。  
   

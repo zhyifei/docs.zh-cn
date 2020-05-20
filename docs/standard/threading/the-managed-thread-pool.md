@@ -65,7 +65,7 @@ ms.locfileid: "79398555"
 
 也可以通过从托管代码调用 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType>（或从非托管代码调用 [`ICorThreadpool::CorQueueUserWorkItem`](../../framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md)）并传递表示执行任务的方法的 <xref:System.Threading.WaitCallback?displayProperty=nameWithType> 委托来使用线程池。
 
-使用线程池的另一种方法是通过使用 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法并传递在发出信号或超时的时候调用 <xref:System.Threading.WaitHandle?displayProperty=nameWithType> 委托所表示的方法的 <xref:System.Threading.WaitOrTimerCallback?displayProperty=nameWithType>，从而对与等待操作相关的工作项排队。 线程池线程用于调用回调方法。  
+使用线程池的另一种方法是通过使用 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法并传递在发出信号或超时的时候调用 <xref:System.Threading.WaitOrTimerCallback?displayProperty=nameWithType> 委托所表示的方法的 <xref:System.Threading.WaitHandle?displayProperty=nameWithType>，从而对与等待操作相关的工作项排队。 线程池线程用于调用回调方法。  
 
 有关示例，请查看引用的 API 页面。
   

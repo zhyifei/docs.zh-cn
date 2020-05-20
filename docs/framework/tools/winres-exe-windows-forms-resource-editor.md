@@ -63,13 +63,13 @@ Winres.exe 是一种图形应用程序，它只需使用资源文件即可重新
 
 一般而言，在开始对应用程序的 Windows 窗体进行本地化之前，应先确定是使用 Visual Studio 还是使用 Winres.exe 作为本地化工具。 稍后介绍的版本兼容性可能会阻止从一个工具切换到另外一个工具。
 
-Visual Studio 的优点在于，它既可以用来开发应用程序，也可以用来本地化应用程序。 若要对某个窗体进行本地化，在完成开发之后，可以将该窗体的 <xref:System.ComponentModel.LocalizableAttribute>（“属性”编辑器中的  Localizable 属性）设置为 **，并将其 Language 属性改为所需的目标区域性**`true`  。 然后，编辑字符串并调整控件的位置和大小，以适应目标区域性的字符串。 保存本地化后的 .resx 文件时，Visual Studio 只将可本地化的属性（已在目标区域性中更改的属性）写入该文件。 Visual Studio 将在正确的目录位置为本地化的 .resx 文件自动创建附属程序集。
+Visual Studio 的优点在于，它既可以用来开发应用程序，也可以用来本地化应用程序。 若要对某个窗体进行本地化，在完成开发之后，可以将该窗体的 <xref:System.ComponentModel.LocalizableAttribute>（“属性”编辑器中的 Localizable 属性）设置为 `true`，并将其 Language 属性改为所需的目标区域性。 然后，编辑字符串并调整控件的位置和大小，以适应目标区域性的字符串。 保存本地化后的 .resx 文件时，Visual Studio 只将可本地化的属性（已在目标区域性中更改的属性）写入该文件。 Visual Studio 将在正确的目录位置为本地化的 .resx 文件自动创建附属程序集。
 
 虽然 Visual Studio 提供了一个集成的开发和本地化环境，但是，如果本地化工作由第三方本地化人员完成，则建议使用 Winres.exe 作为工具。 因为 Winres.exe 只是一个本地化工具，所以使用它可以将应用程序的代码与要本地化的窗体更加彻底地分离开来，这对于管理大型项目更为实用。
 
 ## <a name="using-winresexe"></a>使用 Winres.exe
 
-若要使用 Winres.exe 进行本地化，必须先使用 Visual Studio 中“Windows 窗体设计器”之类的可视化设计器来开发应用程序  。 开发完成后，将窗体的 <xref:System.ComponentModel.LocalizableAttribute>（“属性”编辑器中的 Localizable属性）设置为 **，然后将默认区域性的 .resx 文件交给第三方本地化人员**  `true`。 此 .resx 文件包含 Winres.exe 用于重新创建原始窗体的设计时版本的其他信息。
+若要使用 Winres.exe 进行本地化，必须先使用 Visual Studio 中“Windows 窗体设计器”之类的可视化设计器来开发应用程序  。 开发完成后，将窗体的 <xref:System.ComponentModel.LocalizableAttribute>（“属性”编辑器中的 Localizable属性）设置为 `true`，然后将默认区域性的 .resx 文件交给第三方本地化人员。 此 .resx 文件包含 Winres.exe 用于重新创建原始窗体的设计时版本的其他信息。
 
 > [!NOTE]
 > Winres.exe 不能用于编辑默认的资源文件。 Winres.exe 将所有更改后的属性都阐释为本地化属性，并将其保存到目标区域性资源文件中。
@@ -106,7 +106,7 @@ Winres.exe 具有下列特性和功能：
 
 1. 在开发人员命令提示符处键入 `winres` 以运行 Winres.exe。
 
-2. 若要打开要本地化的窗体的默认资源，请单击“文件”  菜单中的“打开”  命令，然后导航到该文件打开它。
+2. 若要打开要本地化的窗体的默认资源，请单击“文件”菜单中的“打开”命令，然后导航到该文件打开它。
 
      或
 

@@ -70,14 +70,14 @@ async Task<int> AccessTheWebAsync()
 }
 ```
 
-可以从前面的示例中了解几种做法。 从方法签名开始。 它包含 `async` 修饰符。 返回类型为 `Task<int>`（有关更多选项，请参阅“返回类型”部分）。 方法名称以 `Async` 结尾。 在方法的主体中，`GetStringAsync` 返回 `Task<string>`。 这意味着在 `await` 任务时，将获得 `string` (`urlContents`)。  在等待任务之前，可以通过 `string` 执行不依赖于 `GetStringAsync` 的工作。
+可以从前面的示例中了解几种做法。 从方法签名开始。 它包含 `async` 修饰符。 返回类型为 `Task<int>`（有关更多选项，请参阅“返回类型”部分）。 方法名称以 `Async` 结尾。 在方法的主体中，`GetStringAsync` 返回 `Task<string>`。 这意味着在 `await` 任务时，将获得 `string` (`urlContents`)。  在等待任务之前，可以通过 `GetStringAsync` 执行不依赖于 `string` 的工作。
 
 密切注意 `await` 运算符。 它将暂停 `AccessTheWebAsync`；
 
 - 在 `getStringTask` 完成之前，`AccessTheWebAsync` 无法继续。
 - 同时，控件返回至 `AccessTheWebAsync` 的调用方。
 - 当 `getStringTask` 完成时，控件将在此处继续。
-- 然后，`await` 运算符会从 `string` 检索 `getStringTask` 结果。
+- 然后，`await` 运算符会从 `getStringTask` 检索 `string` 结果。
 
 return 语句指定整数结果。 任何等待 `AccessTheWebAsync` 的方法都会检索长度值。
 
@@ -93,7 +93,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com/dot
 - 按照约定，异步方法的名称以“Async”后缀结尾。
 - 返回类型为下列类型之一：
 
-  - 如果你的方法有操作数为 <xref:System.Threading.Tasks.Task%601> 类型的返回语句，则为 `TResult`。
+  - 如果你的方法有操作数为 `TResult` 类型的返回语句，则为 <xref:System.Threading.Tasks.Task%601>。
   - 如果你的方法没有返回语句或具有没有操作数的返回语句，则为 <xref:System.Threading.Tasks.Task>。
   - `void`：如果要编写异步事件处理程序。
   - 包含 `GetAwaiter` 方法的其他任何类型（自 C# 7.0 起）。
@@ -131,7 +131,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com/dot
      因此，`AccessTheWebAsync` 使用一个 await 运算符来挂起其进度，并把控制权交给调用 `AccessTheWebAsync` 的方法。 `AccessTheWebAsync` 将 `Task<int>` 返回给调用方。 该任务表示对产生下载字符串长度的整数结果的一个承诺。
 
     > [!NOTE]
-    > 如果 `GetStringAsync`（因此 `getStringTask`）在 `AccessTheWebAsync` 等待前完成，则控制会保留在 `AccessTheWebAsync` 中。 如果异步调用过程 (`AccessTheWebAsync`) 已完成，并且 `getStringTask` 不必等待最终结果，则挂起然后返回到 `AccessTheWebAsync` 将造成成本浪费。
+    > 如果 `GetStringAsync`（因此 `getStringTask`）在 `AccessTheWebAsync` 等待前完成，则控制会保留在 `AccessTheWebAsync` 中。 如果异步调用过程 (`getStringTask`) 已完成，并且 `AccessTheWebAsync` 不必等待最终结果，则挂起然后返回到 `AccessTheWebAsync` 将造成成本浪费。
 
      在调用方内部（此示例中的事件处理程序），处理模式将继续。 在等待结果前，调用方可以开展不依赖于 `AccessTheWebAsync` 结果的其他工作，否则就需等待片刻。   事件处理程序等待 `AccessTheWebAsync`，而 `AccessTheWebAsync` 等待 `GetStringAsync`。
 
@@ -177,7 +177,7 @@ Windows 运行时也包含许多可以在 Windows 应用中与 `async` 和 `awai
 
 异步方法通常返回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。 在异步方法中，`await` 运算符应用于通过调用另一个异步方法返回的任务。
 
-如果方法包含指定 <xref:System.Threading.Tasks.Task%601> 类型操作数的 [`return`](../../../language-reference/keywords/return.md) 语句，将 `TResult` 指定为返回类型。
+如果方法包含指定 `TResult` 类型操作数的 [`return`](../../../language-reference/keywords/return.md) 语句，将 <xref:System.Threading.Tasks.Task%601> 指定为返回类型。
 
 如果方法不含任何 return 语句或包含不返回操作数的 return 语句，将 <xref:System.Threading.Tasks.Task> 用作返回类型。
 

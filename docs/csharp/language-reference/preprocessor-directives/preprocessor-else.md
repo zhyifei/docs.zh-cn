@@ -17,7 +17,7 @@ ms.locfileid: "75712554"
 `#else` 允许创建复合条件指令，因此，如果先前 [#if](./preprocessor-if.md) 或（可选）[#elif](./preprocessor-elif.md) 指令中的任何表达式的计算结果都不是 `true`，则编译器将对介于 `#else` 和后续 `#endif` 之间的所有代码进行求值。  
   
 ## <a name="remarks"></a>备注  
- [#endif](./preprocessor-endif.md) 必须是 `#else` 之后的下一个预处理器指令。 有关如何使用 [ 的示例，请参阅 ](./preprocessor-if.md)#if`#else`。  
+ [#endif](./preprocessor-endif.md) 必须是 `#else` 之后的下一个预处理器指令。 有关如何使用 `#else` 的示例，请参阅 [#if](./preprocessor-if.md)。  
   
 ## <a name="see-also"></a>另请参阅
 

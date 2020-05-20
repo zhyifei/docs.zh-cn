@@ -13,7 +13,7 @@ ms.locfileid: "74345490"
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>使用 Microsoft.Win32 命名空间读取和写入注册表 (Visual Basic)
 
-虽然在针对注册表进行编程时，`My.Computer.Registry` 应涵盖你的基本需求，不过你还可以使用 .NET Framework 的 <xref:Microsoft.Win32.Registry> 命名空间中的 <xref:Microsoft.Win32.RegistryKey> 和 <xref:Microsoft.Win32> 类。  
+虽然在针对注册表进行编程时，`My.Computer.Registry` 应涵盖你的基本需求，不过你还可以使用 .NET Framework 的 <xref:Microsoft.Win32> 命名空间中的 <xref:Microsoft.Win32.Registry> 和 <xref:Microsoft.Win32.RegistryKey> 类。  
   
 ## <a name="keys-in-the-registry-class"></a>注册表类中的项  
 
@@ -30,7 +30,7 @@ ms.locfileid: "74345490"
 |<xref:Microsoft.Win32.Registry.Users>|包含有关默认用户首选项的信息。|  
   
 > [!IMPORTANT]
-> 将数据写入当前用户 (<xref:Microsoft.Win32.Registry.CurrentUser>) 比写入本地计算机 (<xref:Microsoft.Win32.Registry.LocalMachine>) 更安全。 当你创建的项以前已由其他进程（可能是恶意的）进行了创建时，会发生通常称为“强占”的情况。 若要防止此情况发生，请使用在项尚未存在时返回 <xref:Microsoft.Win32.RegistryKey.GetValue%2A> 的方法（如 `Nothing`）。  
+> 将数据写入当前用户 (<xref:Microsoft.Win32.Registry.CurrentUser>) 比写入本地计算机 (<xref:Microsoft.Win32.Registry.LocalMachine>) 更安全。 当你创建的项以前已由其他进程（可能是恶意的）进行了创建时，会发生通常称为“强占”的情况。 若要防止此情况发生，请使用在项尚未存在时返回 `Nothing` 的方法（如 <xref:Microsoft.Win32.RegistryKey.GetValue%2A>）。  
   
 ## <a name="reading-a-value-from-the-registry"></a>从注册表中读取值  
 

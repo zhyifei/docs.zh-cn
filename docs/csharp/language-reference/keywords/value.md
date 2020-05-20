@@ -15,7 +15,7 @@ ms.locfileid: "75712892"
 ---
 # <a name="value-c-reference"></a>value（C# 参考）
 
-上下文关键字 `value` 在`set`属性[和](../../programming-guide/classes-and-structs/properties.md)索引器[声明的 ](../../programming-guide/indexers/index.md) 访问器中使用。 此关键字类似于方法的输入参数。 关键字 `value` 引用客户端代码尝试分配给属性或索引器的值。 在以下示例中，`MyDerivedClass` 有一个名为 `Name` 的属性，该属性使用 `value` 参数向支持字段 `name` 分配新字符串。 从客户端代码的角度来看，该操作写作一个简单的赋值语句。
+上下文关键字 `value` 在[属性](../../programming-guide/classes-and-structs/properties.md)和[索引器](../../programming-guide/indexers/index.md)声明的 `set` 访问器中使用。 此关键字类似于方法的输入参数。 关键字 `value` 引用客户端代码尝试分配给属性或索引器的值。 在以下示例中，`MyDerivedClass` 有一个名为 `Name` 的属性，该属性使用 `value` 参数向支持字段 `name` 分配新字符串。 从客户端代码的角度来看，该操作写作一个简单的赋值语句。
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 

@@ -44,7 +44,7 @@ ms.locfileid: "69606395"
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
 ## <a name="example"></a>示例  
- 通过创建 `in.cs` 编译 `in.dll`：  
+ 通过创建 `in.dll` 编译 `in.cs`：  
   
 ```console  
 csc -target:library in.cs  

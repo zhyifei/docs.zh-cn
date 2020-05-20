@@ -44,7 +44,7 @@ lambda 表达式的输入参数在编译时是强类型。 当编译器可以推
 member => expression;
 ```
 
-其中 `expression` 是有效的表达式。 `expression` 的返回类型必须可隐式转换为成员的返回类型。 如果成员的返回类型是 `void`，或者如果成员是构造函数、终结器或属性 `set` 访问器，则 `expression` 必须是[语句表达式 *，其可以是任意类型*](~/_csharplang/spec/statements.md#expression-statements)。
+其中 `expression` 是有效的表达式。 `expression` 的返回类型必须可隐式转换为成员的返回类型。 如果成员的返回类型是 `void`，或者如果成员是构造函数、终结器或属性 `set` 访问器，则 `expression` 必须是[语句表达式](~/_csharplang/spec/statements.md#expression-statements)，其可以是任意类型。
 
 以下示例演示了用于 `Person.ToString` 方法的表达式主体定义：
 
@@ -71,7 +71,7 @@ public override string ToString()
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关 lambda 运算符的详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#anonymous-function-expressions)中的[匿名函数表达式](~/_csharplang/spec/introduction.md)部分。
+有关 lambda 运算符的详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[匿名函数表达式](~/_csharplang/spec/expressions.md#anonymous-function-expressions)部分。
 
 ## <a name="see-also"></a>另请参阅
 

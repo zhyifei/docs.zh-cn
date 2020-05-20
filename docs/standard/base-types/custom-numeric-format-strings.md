@@ -27,7 +27,7 @@ ms.locfileid: "75348298"
 
 你可以创建自定义数字格式字符串，这种字符串由一个或多个自定义数字说明符组成，用于定义设置数值数据格式的方式。 自定义数字格式字符串是任何不属于 [标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)的格式字符串。
 
-所有数字类型的 `ToString` 方法的某些重载支持自定义数字格式字符串。 例如，可将数字格式字符串提供给 <xref:System.Int32.ToString%28System.String%29> 类型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 方法和 <xref:System.Int32> 方法。 .NET [复合格式功能](../../../docs/standard/base-types/composite-formatting.md)也支持自定义数字格式字符串，以供 `Write` 和 `WriteLine` 类的一些 <xref:System.Console> 和 <xref:System.IO.StreamWriter> 方法、<xref:System.String.Format%2A?displayProperty=nameWithType> 方法以及 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法使用。 [字符串内插](../../csharp/language-reference/tokens/interpolated.md)功能还支持自定义数字格式字符串。
+所有数字类型的 `ToString` 方法的某些重载支持自定义数字格式字符串。 例如，可将数字格式字符串提供给 <xref:System.Int32.ToString%28System.String%29> 类型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 方法和 <xref:System.Int32> 方法。 .NET [复合格式功能](../../../docs/standard/base-types/composite-formatting.md)也支持自定义数字格式字符串，以供 <xref:System.Console> 和 <xref:System.IO.StreamWriter> 类的一些 `Write` 和 `WriteLine` 方法、<xref:System.String.Format%2A?displayProperty=nameWithType> 方法以及 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法使用。 [字符串内插](../../csharp/language-reference/tokens/interpolated.md)功能还支持自定义数字格式字符串。
 
 > [!TIP]
 > 你可以下载格式设置实用工具，它属于一种 .NET Core Windows 窗体应用程序，通过该应用程序，你可将格式字符串应用于数值或日期和时间值并显示结果字符串  。 源代码适用于 [C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) 和 [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)。

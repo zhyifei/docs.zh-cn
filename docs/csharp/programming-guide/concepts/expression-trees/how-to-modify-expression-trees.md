@@ -16,7 +16,7 @@ ms.locfileid: "73969893"
   
 1. 创建新的**控制台应用程序**项目。  
   
-2. 为 `using` 命名空间的文件添加 `System.Linq.Expressions` 指令。  
+2. 为 `System.Linq.Expressions` 命名空间的文件添加 `using` 指令。  
   
 3. 向项目中添加 `AndAlsoModifier` 类。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73969893"
   
      此类继承 <xref:System.Linq.Expressions.ExpressionVisitor> 类，并且专用于修改表示条件 `AND` 运算的表达式。 它将运算从条件 `AND` 更改为条件 `OR`。 若要执行此操作，此类替代基类型的 <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> 方法，因为条件 `AND` 表达式表示为二进制表达式。 在 `VisitBinary` 方法中，如果传递给它的表达式表示条件 `AND` 操作，那么代码将构造一个新的表达式，此表达式包含条件 `OR` 运算符，而不是条件 `AND` 运算符。 如果传递给 `VisitBinary` 的表达式不表示条件 `AND` 运算，那么此方法遵从基类实现。 基类方法构造类似于所传递的表达式树的节点，但是这些节点将子树替换为访问者以递归方式生成的表达式树。  
   
-4. 为 `using` 命名空间的文件添加 `System.Linq.Expressions` 指令。  
+4. 为 `System.Linq.Expressions` 命名空间的文件添加 `using` 指令。  
   
 5. 向 Program.cs 文件中的 `Main` 方法添加代码以创建表达式树，并将其传递给将对其进行修改的方法。  
   

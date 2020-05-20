@@ -29,7 +29,7 @@ ms.locfileid: "69603082"
  要包含 Bug 报告的文件的名称。  
   
 ## <a name="remarks"></a>备注  
- -bugreport 选项指定以下信息应置于  **中**`file`：  
+ -bugreport 选项指定以下信息应置于 `file` 中：  
   
 - 编译中所有源代码文件副本。  
   

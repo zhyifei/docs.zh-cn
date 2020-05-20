@@ -19,7 +19,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "79173739"
 ---
 # <a name="-define-c-compiler-options"></a>-define（C# 编译器选项）
--define 选项将 `name` 定义为程序中所有源代码文件的符号  。  
+-define 选项将 `name` 定义为程序中所有源代码文件的符号。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,7 +32,7 @@ ms.locfileid: "79173739"
  一个或多个要定义的符号的名称。  
   
 ## <a name="remarks"></a>备注  
- -define 选项具有与使用 [#define](../preprocessor-directives/preprocessor-define.md) 预处理器指令相同的效果，但编译器选项对项目中的所有文件都有效  。 符号在源文件中保持已定义状态，直到源文件中的 [#undef](../preprocessor-directives/preprocessor-undef.md) 指令删除该定义。 使用 -define 选项时，一个文件中的 `#undef` 指令不影响项目中其他的源代码文件。  
+ -define 选项具有与使用 [#define](../preprocessor-directives/preprocessor-define.md) 预处理器指令相同的效果，但编译器选项对项目中的所有文件都有效。 符号在源文件中保持已定义状态，直到源文件中的 [#undef](../preprocessor-directives/preprocessor-undef.md) 指令删除该定义。 使用 -define 选项时，一个文件中的 `#undef` 指令不影响项目中其他的源代码文件。  
   
  可以将由此选项创建的符号同 [#if](../preprocessor-directives/preprocessor-if.md)、[#else](../preprocessor-directives/preprocessor-else.md)、[#elif](../preprocessor-directives/preprocessor-elif.md) 和 [#endif](../preprocessor-directives/preprocessor-endif.md) 一起使用，对源文件进行条件编译。  
   

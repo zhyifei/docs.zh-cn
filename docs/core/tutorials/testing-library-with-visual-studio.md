@@ -21,7 +21,7 @@ ms.locfileid: "78156616"
 
 若要创建单元测试项目，请执行以下操作：
 
-1. 打开在`ClassLibraryProjects`在 Visual Studio 中生成 .NET Standard 库[一文中创建的 ](library-with-visual-studio.md) 解决方案。
+1. 打开在[在 Visual Studio 中生成 .NET Standard 库](library-with-visual-studio.md)一文中创建的 `ClassLibraryProjects` 解决方案。
 
 1. 将名为“StringLibraryTest”的新单元测试项目添加到解决方案。
 
@@ -29,7 +29,7 @@ ms.locfileid: "78156616"
 
    1. 在“添加新项目”  页面，在搜索框中输入“mstest”  。 从“语言”列表中选择“C#”  或“Visual Basic”  ，然后从“平台”列表中选择“所有平台”  。 选择“MsTest 测试项目(.NET Core)”  模板，然后选择“下一步”  。
 
-   1. 在“配置新项目”  页面，在“项目名称”  框中输入“StringLibraryTest”  。 然后选择“创建”  。
+   1. 在“配置新项目”页面，在“项目名称”框中输入“StringLibraryTest”。 然后选择“创建”  。
 
    > [!NOTE]
    > 除了 MSTest 之外，还可以在 Visual Studio 中为 .NET Core 创建 xUnit 和 nUnit 测试项目。
@@ -70,11 +70,11 @@ ms.locfileid: "78156616"
 
    - 它会导入 <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> 命名空间，其中包含用于单元测试的类型。
 
-   - 向 [ 类应用 ](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute)TestClass`UnitTest1` 特性。 测试类中标记有 [TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) 属性的所有测试方法都会在单元测试运行时自动执行。
+   - 向 `UnitTest1` 类应用 [TestClass](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) 特性。 测试类中标记有 [TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) 属性的所有测试方法都会在单元测试运行时自动执行。
 
    - 它应用 [TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) 属性，将 C# 中的 `TestMethod1` 或将 Visual Basic 中的 `TestSub` 定义为在单元测试运行时自动执行的测试方法。
 
-1. 在“解决方案资源管理器”  中，右键单击“StringLibraryTest”  项目的“依赖项”  节点，并从上下文菜单中选择“添加引用”  。
+1. 在“解决方案资源管理器”中，右键单击“StringLibraryTest”项目的“依赖项”节点，并从上下文菜单中选择“添加引用”。
 
    > [!div class="mx-imgBorder"]
    > ![StringLibraryTest 依赖项的上下文菜单](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
@@ -85,7 +85,7 @@ ms.locfileid: "78156616"
 
 ## <a name="add-and-run-unit-test-methods"></a>添加并运行单元测试方法
 
-运行单元测试时，Visual Studio 执行单元测试类（对其应用了 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 特性的类）中标记有 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 特性的所有方法。 当第一次遇到测试不通过或测试方法中的所有测试均已成功通过时，测试方法终止。
+运行单元测试时，Visual Studio 执行单元测试类（对其应用了 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 特性的类）中标记有 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 特性的所有方法。 当第一次遇到测试不通过或测试方法中的所有测试均已成功通过时，测试方法终止。
 
 最常见的测试调用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 类的成员。 许多断言方法至少包含两个参数，其中一个是预期的测试结果，另一个是实际的测试结果。 下表显示了 `Assert` 类最常调用的一些方法：
 
@@ -100,7 +100,7 @@ ms.locfileid: "78156616"
 
 测试 `StringLibrary.StartsWithUpper` 方法时，需要提供许多以大写字符开头的字符串。 在这种情况下，此方法应返回 `true`，以便可以调用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A> 方法。 同样，需要提供许多以非大写字符开头的字符串。 在这种情况下，此方法应返回 `false`，以便可以调用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A> 方法。
 
-由于库方法处理的是字符串，因此还需要确保它能够成功处理[空字符串 (`String.Empty`)](xref:System.String.Empty)（不含字符且 <xref:System.String.Length> 为 0 的有效字符串）和 `null` 字符串（尚未初始化的字符串）。 如果对 `StartsWithUpper` 实例调用 <xref:System.String> 作为扩展方法，无法向其传递 `null` 字符串。 不过，还可以直接将其作为静态方法进行调用，并向其传递一个 <xref:System.String> 自变量。
+由于库方法处理的是字符串，因此还需要确保它能够成功处理[空字符串 (`String.Empty`)](xref:System.String.Empty)（不含字符且 <xref:System.String.Length> 为 0 的有效字符串）和 `null` 字符串（尚未初始化的字符串）。 如果对 <xref:System.String> 实例调用 `StartsWithUpper` 作为扩展方法，无法向其传递 `null` 字符串。 不过，还可以直接将其作为静态方法进行调用，并向其传递一个 <xref:System.String> 自变量。
 
 将定义三个方法，每个方法都会对字符串数组中的各个元素反复调用它的 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 方法。 由于测试方法在第一次遇到测试不通过时会立即失败，因此将调用方法重载，以便传递字符串来指明方法调用中使用的字符串值。
 
@@ -120,7 +120,7 @@ ms.locfileid: "78156616"
 
 1. 在“确认另存为”  对话框中，选择“是”  按钮，保存文件。
 
-1. 在“高级保存选项”  对话框的“编码”  下拉列表中，选择“Unicode (UTF-8 带签名) - 代码页 65001”  ，然后选择“确定”  。
+1. 在“高级保存选项”对话框的“编码”下拉列表中，选择“Unicode (UTF-8 带签名) - 代码页 65001”，然后选择“确定”。
 
    > [!div class="mx-imgBorder"]
    > ![Visual Studio“高级保存选项”对话框](./media/testing-library-with-visual-studio/advanced-save-options.png)
@@ -136,7 +136,7 @@ ms.locfileid: "78156616"
 
 由于运行的测试均通过，因此需进行少量改动，以使其中一个测试方法失败：
 
-1. 通过修改 `words` 方法中的 `TestDoesNotStartWithUpper` 数组来包含字符串“Error”。 由于 Visual Studio 将在生成运行测试的解决方案时自动保存打开的文件，因此无需手动保存。
+1. 通过修改 `TestDoesNotStartWithUpper` 方法中的 `words` 数组来包含字符串“Error”。 由于 Visual Studio 将在生成运行测试的解决方案时自动保存打开的文件，因此无需手动保存。
 
    ```csharp
    string[] words = { "alphabet", "Error", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",

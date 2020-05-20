@@ -51,9 +51,9 @@ ms.locfileid: "73103893"
 ## <a name="narrowing-conversions"></a>收缩转换  
  目标为 <xref:System.Single> 或 <xref:System.Double> 的收缩转换可能会导致信息丢失。 如果目标类型无法正确表达源类型的大小，则结果类型将设置为常数 `PositiveInfinity` 或 `NegativeInfinity`。 `PositiveInfinity` 是正数除以 0 的结果，也在 <xref:System.Single> 或 <xref:System.Double> 的值大于 `MaxValue` 字段的值时返回。 `NegativeInfinity` 是负数除以 0 的结果，也在 <xref:System.Single> 或 <xref:System.Double> 的值小于 `MinValue` 字段的值时返回。 从 <xref:System.Double> 转换到 <xref:System.Single> 可能会导致 `PositiveInfinity` 或 `NegativeInfinity`。  
   
- 收缩转换还可能导致其他数据类型的信息丢失。 不过，如果要转换的类型值不在目标类型的 <xref:System.OverflowException> 和 `MaxValue` 字段指定的范围内，就会抛出 `MinValue`，并且运行时会检查转换，以确保目标类型的值不超出它的 `MaxValue` 或 `MinValue`。 始终以这种方式检查使用 <xref:System.Convert?displayProperty=nameWithType> 类执行的转换。  
+ 收缩转换还可能导致其他数据类型的信息丢失。 不过，如果要转换的类型值不在目标类型的 `MaxValue` 和 `MinValue` 字段指定的范围内，就会抛出 <xref:System.OverflowException>，并且运行时会检查转换，以确保目标类型的值不超出它的 `MaxValue` 或 `MinValue`。 始终以这种方式检查使用 <xref:System.Convert?displayProperty=nameWithType> 类执行的转换。  
   
- 下表列出了使用 <xref:System.OverflowException> 抛出 <xref:System.Convert?displayProperty=nameWithType> 的转换，或要转换类型的值不在生成类型的定义范围内的任何已检查转换。  
+ 下表列出了使用 <xref:System.Convert?displayProperty=nameWithType> 抛出 <xref:System.OverflowException> 的转换，或要转换类型的值不在生成类型的定义范围内的任何已检查转换。  
   
 |类型|可转换为|  
 |----------|-------------------------|  

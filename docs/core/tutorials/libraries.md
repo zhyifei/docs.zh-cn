@@ -105,7 +105,7 @@ ms.locfileid: "77503504"
 
 如果项目同时支持 .NET Framework 和 .NET Core，可能需要面向较旧版本的 .NET Framework。 在此方案中，如果要为较新目标使用较新的 API 和语言构造，请在代码中使用 `#if` 指令。 可能还需要为要面向的每个平台添加不同的包和依赖项，以包含每种情况所需的不同 API。
 
-例如，假设有一个库，它通过 HTTP 执行联网操作。 对于 .NET Standard 和 .NET Framework 版本 4.5 或更高版本，可从 `HttpClient` 命名空间使用 `System.Net.Http` 类。 但是，.NET Framework 的早期版本没有 `HttpClient` 类，因此可对早期版本使用 `WebClient` 命名空间中的 `System.Net` 类。
+例如，假设有一个库，它通过 HTTP 执行联网操作。 对于 .NET Standard 和 .NET Framework 版本 4.5 或更高版本，可从 `System.Net.Http` 命名空间使用 `HttpClient` 类。 但是，.NET Framework 的早期版本没有 `HttpClient` 类，因此可对早期版本使用 `System.Net` 命名空间中的 `WebClient` 类。
 
 项目文件可能如下所示：
 
@@ -131,8 +131,8 @@ ms.locfileid: "77503504"
 在此处可看到三项主要更改：
 
 1. `TargetFramework` 节点已替换为 `TargetFrameworks`，其中表示了三个 TFM。
-1. `<ItemGroup>` 目标有一个 `net40` 节点，拉取一个 .NET Framework 引用。
-1. `<ItemGroup>` 目标中有一个 `net45` 节点，拉取两个 .NET Framework 引用。
+1. `net40` 目标有一个 `<ItemGroup>` 节点，拉取一个 .NET Framework 引用。
+1. `net45` 目标中有一个 `<ItemGroup>` 节点，拉取两个 .NET Framework 引用。
 
 生成系统可识别以下用在 `#if` 指令中的处理器符号：
 
@@ -239,7 +239,7 @@ netstandard1.4/
    |__MyProject.Test/
    ```
 
-1. 导航到测试项目的目录，然后添加对 `MyProject.Test` 中的 `MyProject` 的引用。
+1. 导航到测试项目的目录，然后添加对 `MyProject` 中的 `MyProject.Test` 的引用。
 
    ```dotnetcli
    cd MyProject.Test

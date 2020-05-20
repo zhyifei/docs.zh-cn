@@ -15,7 +15,7 @@ ms.locfileid: "74348873"
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>如何：在 Visual Basic 中向文本文件追加内容
 
-通过指定将 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 参数设置为 `append`，可使用 `True` 方法向文本文件追加内容。  
+通过指定将 `append` 参数设置为 `True`，可使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法向文本文件追加内容。  
   
 ### <a name="to-append-to-a-text-file"></a>向文本文件追加内容  
   

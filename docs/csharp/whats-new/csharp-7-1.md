@@ -114,5 +114,5 @@ var pair = (count, label); // element names are "count" and "label"
 
 ## <a name="reference-assembly-generation"></a>引用程序集生成
 
-有两个新编译器选项可生成仅引用程序集：[-refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)  。
+有两个新编译器选项可生成仅引用程序集：[-refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)。
 链接的文章详细介绍了这些选项和引用程序集。

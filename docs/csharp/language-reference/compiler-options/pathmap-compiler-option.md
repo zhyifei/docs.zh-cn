@@ -44,7 +44,7 @@ ms.locfileid: "69606625"
 
 ## <a name="example"></a>示例
 
-在目录 C:`t.cs`work**tests\\\\ 中编译**  并将该目录映射到输出中的 \publish  ：
+在目录 C:\\work\\tests 中编译 `t.cs` 并将该目录映射到输出中的 \publish：
 
 ```console
 csc -pathmap:C:\work\tests=\publish t.cs

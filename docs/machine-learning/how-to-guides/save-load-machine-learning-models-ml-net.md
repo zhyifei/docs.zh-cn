@@ -69,7 +69,7 @@ mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 1. 模型的 [`ITransformer`](xref:Microsoft.ML.ITransformer)。
 2. [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) 预期输入的 [`ITransformer`](xref:Microsoft.ML.ITransformer)。
 
-训练模型后，通过 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 方法使用输入数据的 `model.zip` 将经过训练的模型保存到名为 `DataViewSchema` 的文件中。
+训练模型后，通过 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 方法使用输入数据的 `DataViewSchema` 将经过训练的模型保存到名为 `model.zip` 的文件中。
 
 ```csharp
 // Save Trained Model

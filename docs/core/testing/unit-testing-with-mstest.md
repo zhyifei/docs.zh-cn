@@ -90,7 +90,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeServiceTests.csproj
 ```
 
-在 unit-testing-using-mstest[`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj` 目录中执行 ](../tools/dotnet-sln.md)  。
+在 unit-testing-using-mstest 目录中执行 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md)。
 
 ## <a name="create-the-first-test"></a>创建第一个测试
 

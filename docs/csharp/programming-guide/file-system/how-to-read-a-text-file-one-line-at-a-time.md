@@ -14,7 +14,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "79167502"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a>如何一次一行地读取文本文件（C# 编程指南）
-此示例使用 `ReadLine` 类的 `StreamReader` 方法，一次一行地将文本文件内容读入字符串。 每个文本行都存储到字符串 `line` 中并显示在屏幕上。  
+此示例使用 `StreamReader` 类的 `ReadLine` 方法，一次一行地将文本文件内容读入字符串。 每个文本行都存储到字符串 `line` 中并显示在屏幕上。  
   
 ## <a name="example"></a>示例  
   

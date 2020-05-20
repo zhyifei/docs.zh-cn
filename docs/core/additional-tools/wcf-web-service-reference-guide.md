@@ -13,7 +13,7 @@ ms.locfileid: "75715673"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>使用 WCF Web Service Reference Provider 工具
 
-多年来，许多 Visual Studio 开发者在其. NET Framework 项目需要访问 Web 服务时，都享受到了[添加服务引用**工具所带来的工作效率**](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)。  WCF Web 服务引用工具是 Visual Studio 连接服务的扩展，提供了类似于 .NET Core 和 ASP.NET Core 项目的“添加服务引用”功能的体验  。 此工具可从网络位置的当前解决方案的 web 服务中或从 WSDL 文件中检索元数据，并生成包含可用于访问 web 服务的 Windows Communication Foundation (WCF) 客户端代理代码的可兼容 .NET Core 的源文件。
+多年来，许多 Visual Studio 开发者在其. NET Framework 项目需要访问 Web 服务时，都享受到了[添加服务引用](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)工具所带来的工作效率。  WCF Web 服务引用工具是 Visual Studio 连接服务的扩展，提供了类似于 .NET Core 和 ASP.NET Core 项目的“添加服务引用”功能的体验  。 此工具可从网络位置的当前解决方案的 web 服务中或从 WSDL 文件中检索元数据，并生成包含可用于访问 web 服务的 Windows Communication Foundation (WCF) 客户端代理代码的可兼容 .NET Core 的源文件。
 
 > [!IMPORTANT]
 > 应仅从受信任源引用服务。 从不受信任的源添加引用可能会危及安全性。
@@ -27,9 +27,9 @@ ms.locfileid: "75715673"
 > [!NOTE]
 > “WCF Web 服务引用”选项适用于使用以下项目模板创建的项目  ：
 >
-> - Visual C# **.NET Core** >  
-> - Visual C# **.NET Standard** >  
-> - Visual C#**Web**ASP.NET Core Web 应用程序 >    >  
+> - Visual C# > .NET Core
+> - Visual C# > .NET Standard
+> - Visual C# > Web > ASP.NET Core Web 应用程序
 
 以“ASP.NET Core Web 应用程序”项目模板为例，本文将介绍如何向该项目中添加 WCF 服务引用  ：
 
@@ -84,7 +84,7 @@ ms.locfileid: "75715673"
 
 ## <a name="feedback--questions"></a>反馈和问题
 
-如果你有任何问题或反馈，请使用[报告问题](https://developercommunity.visualstudio.com/)工具在[开发者社区](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)进行报告。
+如果你有任何问题或反馈，请使用[报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)工具在[开发者社区](https://developercommunity.visualstudio.com/)进行报告。
 
 ## <a name="release-notes"></a>发行说明
 

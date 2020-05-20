@@ -33,7 +33,7 @@ ms.locfileid: "64647340"
   
  启用 IRI 和 IDN 会影响 <xref:System.Uri.DnsSafeHost%2A?displayProperty=nameWithType> 属性的值。 启用 IRI 和 IDN 还可能更改 <xref:System.Uri.Equals%2A?displayProperty=nameWithType>、<xref:System.Uri.OriginalString%2A?displayProperty=nameWithType>、<xref:System.Uri.GetComponents%2A?displayProperty=nameWithType> 和 <xref:System.Uri.IsWellFormedOriginalString%2A> 方法的行为。  
   
- <xref:System.GenericUriParser?displayProperty=nameWithType> 类已得到扩展，允许创建支持 IRI 和 IDN 的自定义分析。 通过将枚举中可用值的按位组合传递给 <xref:System.GenericUriParser?displayProperty=nameWithType> 构造函数 <xref:System.GenericUriParserOptions?displayProperty=nameWithType> 来指定 <xref:System.GenericUriParser?displayProperty=nameWithType> 对象的行为。 <xref:System.GenericUriParserOptions.IriParsing?displayProperty=nameWithType> 类型表示分析程序支持 RFC 3987 中为国际资源标识符 (IRI) 指定的分析规则。 是否实际使用 IRI 取决于是否启用 IRI。  
+ <xref:System.GenericUriParser?displayProperty=nameWithType> 类已得到扩展，允许创建支持 IRI 和 IDN 的自定义分析。 通过将枚举中可用值的按位组合传递给 <xref:System.GenericUriParserOptions?displayProperty=nameWithType> 构造函数 <xref:System.GenericUriParser?displayProperty=nameWithType> 来指定 <xref:System.GenericUriParser?displayProperty=nameWithType> 对象的行为。 <xref:System.GenericUriParserOptions.IriParsing?displayProperty=nameWithType> 类型表示分析程序支持 RFC 3987 中为国际资源标识符 (IRI) 指定的分析规则。 是否实际使用 IRI 取决于是否启用 IRI。  
   
  <xref:System.GenericUriParserOptions.Idn?displayProperty=nameWithType> 类型表示分析程序支持主机名的国际化域名 (IDN) 分析。 是否实际使用 IDN 取决于是否启用 IDN。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "64647340"
   
  <xref:System.Uri?displayProperty=nameWithType> 类中的 IRI 和 IDN 处理也可以通过使用 <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> 和 <xref:System.Configuration.IdnElement?displayProperty=nameWithType> 配置集类进行控制。 <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> 设置启用或禁用 <xref:System.Uri?displayProperty=nameWithType> 类中的 IRI 处理。 <xref:System.Configuration.IdnElement?displayProperty=nameWithType> 设置启用或禁用 <xref:System.Uri> 类中的 IDN 处理。 <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> 也可间接控制 IDN。 必须启用 IRI 处理才能进行 IDN 处理。 如果禁用 IRI，IDN 处理将被设置为默认值，这时 NET Framework 2.0 行为用于兼容性，并且 IDN 名称不可用。  
   
- 构造第一个 <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> 类后，将立即读取 <xref:System.Configuration.IdnElement?displayProperty=nameWithType> 和 <xref:System.Uri?displayProperty=nameWithType> 配置类的配置设置。 忽略时间后更改为默认设置。  
+ 构造第一个 <xref:System.Uri?displayProperty=nameWithType> 类后，将立即读取 <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> 和 <xref:System.Configuration.IdnElement?displayProperty=nameWithType> 配置类的配置设置。 忽略时间后更改为默认设置。  
   
 ## <a name="see-also"></a>另请参阅
 

@@ -23,7 +23,7 @@ ms.locfileid: "74334625"
   
 ### <a name="to-parse-a-fixed-width-text-file"></a>分析定宽文本文件  
   
-1. 创建一个新的 `TextFieldParser`。 下面的代码创建名为 `TextFieldParser` 的 `Reader`，并打开 `test.log` 文件。  
+1. 创建一个新的 `TextFieldParser`。 下面的代码创建名为 `Reader` 的 `TextFieldParser`，并打开 `test.log` 文件。  
   
      [!code-vb[VbFileIORead#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#9)]  
   
@@ -35,7 +35,7 @@ ms.locfileid: "74334625"
   
      [!code-vb[VbFileIORead#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#11)]  
   
-4. 用 `While` 和 `Using` 结束 `End While` 和 `End Using` 块。  
+4. 用 `End While` 和 `End Using` 结束 `While` 和 `Using` 块。  
   
      [!code-vb[VbFileIORead#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#12)]  
   

@@ -53,7 +53,7 @@ ms.locfileid: "75700726"
   
 2. 生成 COM 类型库并对它进行注册以供 COM 使用。  
   
-     可修改 Visual C# 项目属性以自动注册 COM 互操作的 C# 程序集。 Visual Studio 通过 [ 命令行开关使用 ](../../../framework/tools/regasm-exe-assembly-registration-tool.md)Regasm.exe（程序集注册工具）`/tlb`。此工具使用托管组件作为输入，以生成类型库。 此类型库描述程序集中的 `public` 类型并添加注册表项，以便 COM 客户端可以创建托管类。  
+     可修改 Visual C# 项目属性以自动注册 COM 互操作的 C# 程序集。 Visual Studio 通过 `/tlb` 命令行开关使用 [Regasm.exe（程序集注册工具）](../../../framework/tools/regasm-exe-assembly-registration-tool.md)。此工具使用托管组件作为输入，以生成类型库。 此类型库描述程序集中的 `public` 类型并添加注册表项，以便 COM 客户端可以创建托管类。  
   
  有关详细信息，请参阅[向 COM 公开 .NET Framework 组件](../../../framework/interop/exposing-dotnet-components-to-com.md)和 [COM 类示例](./example-com-class.md)。  
   

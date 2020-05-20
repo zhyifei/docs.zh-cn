@@ -21,7 +21,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "79173661"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference（C# 编译器选项）
--reference 选项使编译器将指定文件中的[公共](../keywords/public.md)类型信息导入当前项目，从而使你可从指定的程序集文件中引用元数据  。  
+-reference 选项使编译器将指定文件中的[公共](../keywords/public.md)类型信息导入当前项目，从而使你可从指定的程序集文件中引用元数据。  
   
 ## <a name="syntax"></a>语法  
   

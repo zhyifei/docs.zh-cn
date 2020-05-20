@@ -20,7 +20,7 @@ ms.locfileid: "74348754"
  如果没有找到与指定模式匹配的文件，则返回一个空集合。  
   
 > [!NOTE]
-> 有关使用 `DirectoryInfo` 命名空间的 `System.IO` 类返回文件列表的信息，请参阅 <xref:System.IO.DirectoryInfo.GetFiles%2A>。  
+> 有关使用 `System.IO` 命名空间的 `DirectoryInfo` 类返回文件列表的信息，请参阅 <xref:System.IO.DirectoryInfo.GetFiles%2A>。  
   
 ### <a name="to-find-files-with-a-specified-pattern"></a>查找具有指定模式的文件  
   

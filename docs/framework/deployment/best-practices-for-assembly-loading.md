@@ -119,11 +119,11 @@ ms.locfileid: "79181706"
 ## <a name="avoid-loading-an-assembly-into-multiple-contexts"></a>避免将一个程序集加载到多个上下文中  
  将一个程序集加载到多个上下文中会导致出现类型标识问题。 将同一个程序集中的相同类型加载到两个不同的上下文中，就像是加载具有相同名称的两个不同的类型一样。 如果尝试将一个类型强制转换为另一个类型，则将引发 <xref:System.InvalidCastException>，并显示一条令人混淆的消息，指示不能将类型 `MyType` 强制转换为类型 `MyType`。  
   
- 例如，假设在一个名为 `ICommunicate` 的程序集中声明 `Utility` 接口，该接口由程序及其加载的其他程序集引用。 这些其他程序集包含实现 `ICommunicate` 接口的类型，并允许程序使用它们。  
+ 例如，假设在一个名为 `Utility` 的程序集中声明 `ICommunicate` 接口，该接口由程序及其加载的其他程序集引用。 这些其他程序集包含实现 `ICommunicate` 接口的类型，并允许程序使用它们。  
   
  下面来看看在程序运行时会出现的情况。 程序所引用的程序集将加载到默认加载上下文中。 如果使用 <xref:System.Reflection.Assembly.Load%2A> 方法按照目标程序集的标识来加载该程序集，则该程序集及其依赖项都将位于默认加载上下文中。 程序和目标程序集将使用同一个 `Utility` 程序集。  
   
- 不过，假设使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法按照目标程序集的文件路径加载该程序集。 该程序集将在没有任何上下文的情况下进行加载，因此不会自动加载其依赖项。 可能具有 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的处理程序来提供依赖项，并且该处理程序可能会使用 `Utility` 方法在没有上下文的情况下加载 <xref:System.Reflection.Assembly.LoadFile%2A> 程序集。 此时，若创建目标程序集中包含的某个类型的实例，并尝试将该实例分配给类型 `ICommunicate` 的变量，则将引发 <xref:System.InvalidCastException>，因为运行时会将 `ICommunicate` 程序集的两个副本中的 `Utility` 接口视为不同的类型。  
+ 不过，假设使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法按照目标程序集的文件路径加载该程序集。 该程序集将在没有任何上下文的情况下进行加载，因此不会自动加载其依赖项。 可能具有 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的处理程序来提供依赖项，并且该处理程序可能会使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法在没有上下文的情况下加载 `Utility` 程序集。 此时，若创建目标程序集中包含的某个类型的实例，并尝试将该实例分配给类型 `ICommunicate` 的变量，则将引发 <xref:System.InvalidCastException>，因为运行时会将 `Utility` 程序集的两个副本中的 `ICommunicate` 接口视为不同的类型。  
   
  在许多其他情况下，也可以将一个程序集加载到多个上下文中。 最佳方法是通过在应用程序路径中重新定位目标程序集，并对 <xref:System.Reflection.Assembly.Load%2A> 方法使用完整的显示名称，从而避免冲突。 然后，将目标程序集加载到默认加载上下文中，并且两个程序集将使用同一个 `Utility` 程序集。  
   

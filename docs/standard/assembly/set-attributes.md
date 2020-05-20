@@ -39,7 +39,7 @@ ms.locfileid: "73740468"
 |---------------------------------|-----------------|
 |<xref:System.Reflection.AssemblyCultureAttribute>|表示程序集所支持的区域性的枚举字段。 程序集还可以指定区域性独立性，表示它包含默认区域性的资源。 注意：对于区域性特性未设置为 null 的任何程序集，运行时都会将它们视为附属程序集  。 此类程序集需遵循附属程序集绑定规则。 有关详细信息，请参阅[运行时如何定位程序集](../../framework/deployment/how-the-runtime-locates-assemblies.md)。|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|设置程序集特性（例如是否可以并行运行程序集）的值。|
-|<xref:System.Reflection.AssemblyVersionAttribute>|以 *主版本*.*次版本*.*内部版本*.*修订版本* 为格式的数值（例如 2.4.0.0）。 公共语言运行时使用此值在强名称程序集中执行绑定操作。 注意：如果 **特性不适用于程序集，则**、<xref:System.Reflection.AssemblyInformationalVersionAttribute> 和 <xref:System.Reflection.AssemblyVersionAttribute> 属性将使用由 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> 特性指定的版本号<xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType><xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>。|
+|<xref:System.Reflection.AssemblyVersionAttribute>|以 *主版本*.*次版本*.*内部版本*.*修订版本* 为格式的数值（例如 2.4.0.0）。 公共语言运行时使用此值在强名称程序集中执行绑定操作。 注意：如果 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 特性不适用于程序集，则 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>、<xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 属性将使用由 <xref:System.Reflection.AssemblyVersionAttribute> 特性指定的版本号。|
 
 下面的示例演示了如何将版本和区域性特性应用到程序集中。
 
@@ -73,7 +73,7 @@ ms.locfileid: "73740468"
 |<xref:System.Reflection.AssemblyCompanyAttribute>|指定公司名称的字符串值。|
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|指定版权信息的字符串值。|
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|指定 Win32 文件版本号的字符串值。 通常默认为程序集版本。|
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|指定公共语言运行时未使用的版本信息（例如完整的产品版本号）的字符串值。 注意：如果将此特性应用于程序集，可在运行时通过使用  **属性获得其指定的字符串**<xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>。 此字符串还用于 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 属性所提供的路径和注册表项。|
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|指定公共语言运行时未使用的版本信息（例如完整的产品版本号）的字符串值。 注意：如果将此特性应用于程序集，可在运行时通过使用 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> 属性获得其指定的字符串。 此字符串还用于 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 属性所提供的路径和注册表项。|
 |<xref:System.Reflection.AssemblyProductAttribute>|指定产品信息的字符串值。|
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|指定商标信息的字符串值。|
 

@@ -24,7 +24,7 @@ ms.locfileid: "71048567"
   
  请注意，要为 System.Net 命名空间中的所有类启用 IPv6 支持，必须修改计算机配置文件或应用程序的配置文件。 应用程序的配置文件优先于计算机配置文件。  
   
- 有关如何修改计算机配置文件 machine.config 以启用 Ipv6 支持的示例，请参阅[如何  ：修改计算机配置文件以启用 Ipv6 支持](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)。 此外，请确保操作系统启用了 IPv6 支持。  
+ 有关如何修改计算机配置文件 machine.config 以启用 Ipv6 支持的示例，请参阅[如何：修改计算机配置文件以启用 IPv6 支持](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)。 此外，请确保操作系统启用了 IPv6 支持。  
   
  .NET Framework 在配置文件中具有如下配置开关设置  
   
@@ -40,7 +40,7 @@ ms.locfileid: "71048567"
 </system.net>  
 ```  
   
- 对于 .NET Framework 1.1 及更早版本，ipv6 enabled 配置开关的值指定 <xref:System.Net.Dns?displayProperty=nameWithType> 类的成员是否返回 IPv6 地址  。  
+ 对于 .NET Framework 1.1 及更早版本，ipv6 enabled 配置开关的值指定 <xref:System.Net.Dns?displayProperty=nameWithType> 类的成员是否返回 IPv6 地址。  
   
  对于 .NET Framework 2.0 和更高版本，如果 Windows 支持 IPv6，则 <xref:System.Net.Dns?displayProperty=nameWithType> 类的成员（例如 <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> 方法）将返回含一个限制的 IPv6 地址。 DNS <xref:System.Net.Dns?displayProperty=nameWithType> 的已过时成员（例如，<xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> 方法）将读取并识别配置文件中 ipv6 enabled 设置的值。  
   

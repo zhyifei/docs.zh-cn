@@ -32,8 +32,8 @@ GlobalProxySelection.Select = proxyObject
 
 此示例需要：
 
-- System.Net[`using` 命名空间的 C# ](../../csharp/language-reference/keywords/using-directive.md) **指令**。
-- System.Net [`Imports`命名空间的 Visual Basic ](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) **语句**。
+- System.Net 命名空间的 C# [`using` 指令](../../csharp/language-reference/keywords/using-directive.md)。
+- System.Net 命名空间的 Visual Basic [`Imports` 语句](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。
 
 ## <a name="see-also"></a>另请参阅
 

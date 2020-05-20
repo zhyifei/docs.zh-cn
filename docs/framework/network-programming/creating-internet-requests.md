@@ -18,7 +18,7 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048623"
 ---
 # <a name="creating-internet-requests"></a>创建 Internet 请求
-应用程序通过 <xref:System.Net.WebRequest> 方法创建 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 实例。 这是一种基于传递给它的 URI 方案创建从 WebRequest 派生的类的静态方法  。  
+应用程序通过 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 方法创建 <xref:System.Net.WebRequest> 实例。 这是一种基于传递给它的 URI 方案创建从 WebRequest 派生的类的静态方法  。  
   
 ## <a name="web-file-and-ftp-requests"></a>Web、文件和 FTP 请求  
  .NET Framework 提供从 WebRequest 派生的 <xref:System.Net.HttpWebRequest> 类，用以处理 HTTP 和 HTTPS 请求  。 在大多数情况下，WebRequest 类提供提出请求所需的所有属性；但是，如有必要，将 WebRequest.Create 方法创建的 WebRequest 对象转换为 HttpWebRequest 类型，即可访问该请求特定于 HTTP 的属性     。 同样，HttpWebResponse 对象可处理来自 HTTP 和 HTTPS 请求的响应  。 要访问 HttpWebResponse 对象特定于 HTTP 的属性，需将 WebResponse 对象转换为 HttpWebResponse 类型    。  

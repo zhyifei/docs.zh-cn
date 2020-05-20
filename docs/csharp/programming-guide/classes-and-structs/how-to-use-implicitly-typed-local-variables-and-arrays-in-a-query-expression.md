@@ -17,7 +17,7 @@ ms.locfileid: "75705556"
  隐式类型本地变量使用 [var](../../language-reference/keywords/var.md) 上下文关键字进行声明。 有关详细信息，请参阅[隐式类型本地变量](./implicitly-typed-local-variables.md)和[隐式类型数组](../arrays/implicitly-typed-arrays.md)。  
   
 ## <a name="example"></a>示例  
- 以下示例演示必须使用 `var` 关键字的常见情景：用于生成一系列匿名类型的查询表达式。 在此情景中，必须使用 `foreach` 隐式类型化 `var` 语句中的查询变量和迭代变量，因为你无权访问匿名类型的类型名称。 有关匿名类型的详细信息，请参阅[匿名类型](./anonymous-types.md)。  
+ 以下示例演示必须使用 `var` 关键字的常见情景：用于生成一系列匿名类型的查询表达式。 在此情景中，必须使用 `var` 隐式类型化 `foreach` 语句中的查询变量和迭代变量，因为你无权访问匿名类型的类型名称。 有关匿名类型的详细信息，请参阅[匿名类型](./anonymous-types.md)。  
   
  [!code-csharp[csProgGuideLINQ#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#32)]  
   

@@ -67,7 +67,7 @@ protected override void Finalize()
  一般来说，C# 所占用的内存管理空间比使用不面向带有垃圾回收机制的运行时的语言进行开发时所使用的内存管理空间要少。 这是因为 .NET Framework 垃圾回收器会隐式管理对象的内存分配和释放。 但是，如果应用程序封装非托管的资源，例如窗口、文件和网络连接，则应使用终结器释放这些资源。 当对象符合终止条件时，垃圾回收器会运行对象的 `Finalize` 方法。  
   
 ## <a name="explicit-release-of-resources"></a>显式释放资源  
- 如果应用程序正在使用昂贵的外部资源，我们还建议在垃圾回收器释放对象前显式释放资源。 若要实现此操作，可从执行必要的对象清除的 `Dispose` 接口实现 <xref:System.IDisposable> 方法。 这样可大大提高应用程序的性能。 如果调用 `Dispose` 方法失败，那么即使拥有对资源的显式控制，终结器也会成为清除资源的一个保障。  
+ 如果应用程序正在使用昂贵的外部资源，我们还建议在垃圾回收器释放对象前显式释放资源。 若要实现此操作，可从执行必要的对象清除的 <xref:System.IDisposable> 接口实现 `Dispose` 方法。 这样可大大提高应用程序的性能。 如果调用 `Dispose` 方法失败，那么即使拥有对资源的显式控制，终结器也会成为清除资源的一个保障。  
   
  有关清除资源的详细信息，请参阅下列主题：  
   
@@ -84,7 +84,7 @@ protected override void Finalize()
   
 ## <a name="c-language-specification"></a>C# 语言规范  
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/classes.md#destructors)中的[析构函数](/dotnet/csharp/language-reference/language-specification/introduction)部分。
+有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[析构函数](~/_csharplang/spec/classes.md#destructors)部分。
   
 ## <a name="see-also"></a>另请参阅
 

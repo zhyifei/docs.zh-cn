@@ -26,7 +26,7 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "69950722"
 ---
 # <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a>如何：实现基于事件的异步模式的客户端
-下面的代码示例展示了如何使用符合[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)要求的组件。 此示例的窗体使用`PrimeNumberCalculator`如何：实现支持基于事件的异步模式的组件[中介绍的 ](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md) 组件。  
+下面的代码示例展示了如何使用符合[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)要求的组件。 此示例的窗体使用[如何：实现支持基于事件的异步模式的组件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)中介绍的 `PrimeNumberCalculator` 组件。  
   
  运行使用此示例的项目时，将会看到包含一个网格和两个按钮（“启动新任务”  和“取消”  ）的“质数计算器”窗体。 可以连续多次单击“启动新任务”  按钮。每次单击后，异步操作都会开始计算，以确定随机生成的测试数字是否为质数。 窗体会定期显示进度和增量结果。 每个操作都分配有唯一的任务 ID。 计算结果显示在“结果”  列中；如果测试数字不是质数，将会把它标记为“复合”  ，并显示第一个除数。  
   

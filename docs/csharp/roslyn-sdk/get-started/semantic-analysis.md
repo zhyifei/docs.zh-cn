@@ -60,19 +60,19 @@ ms.locfileid: "78240503"
 
 ## <a name="querying-the-semantic-model"></a>查询语义模型
 
-如果有 <xref:Microsoft.CodeAnalysis.Compilation>，你可以向它查询 <xref:Microsoft.CodeAnalysis.SemanticModel> 所包含的任何 <xref:Microsoft.CodeAnalysis.SyntaxTree> 的 <xref:Microsoft.CodeAnalysis.Compilation>。 你可将语义模型看作通常从智能感知中获取的所有信息的来源。 <xref:Microsoft.CodeAnalysis.SemanticModel> 可回答“此位置中范围内的名称是什么？”、“可通过此方法访问哪些成员？”、“此文本块中使用了什么变量？”和“此名称/表达式指的是什么？”等问题。 添加此声明以创建语义模型：
+如果有 <xref:Microsoft.CodeAnalysis.Compilation>，你可以向它查询 <xref:Microsoft.CodeAnalysis.Compilation> 所包含的任何 <xref:Microsoft.CodeAnalysis.SyntaxTree> 的 <xref:Microsoft.CodeAnalysis.SemanticModel>。 你可将语义模型看作通常从智能感知中获取的所有信息的来源。 <xref:Microsoft.CodeAnalysis.SemanticModel> 可回答“此位置中范围内的名称是什么？”、“可通过此方法访问哪些成员？”、“此文本块中使用了什么变量？”和“此名称/表达式指的是什么？”等问题。 添加此声明以创建语义模型：
 
 [!code-csharp[Create the semantic model](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#4 "Create the semantic model")]
 
 ## <a name="binding-a-name"></a>绑定名称
 
-<xref:Microsoft.CodeAnalysis.Compilation> 从 <xref:Microsoft.CodeAnalysis.SemanticModel> 创建 <xref:Microsoft.CodeAnalysis.SyntaxTree> 创建模型后，你可以查询以找到第一个 `using` 指令，并检索 `System` 命名空间的符号信息。 将这两行代码添加到 `Main` 方法以创建语义模型，并检索第一个 using 语句的符号：
+<xref:Microsoft.CodeAnalysis.Compilation> 从 <xref:Microsoft.CodeAnalysis.SyntaxTree> 创建 <xref:Microsoft.CodeAnalysis.SemanticModel> 创建模型后，你可以查询以找到第一个 `using` 指令，并检索 `System` 命名空间的符号信息。 将这两行代码添加到 `Main` 方法以创建语义模型，并检索第一个 using 语句的符号：
 
 [!code-csharp[Find the namespace symbol for the first using](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#5 "Find the namespace symbol for the first using")]
 
-上述代码示例演示如何绑定第一个 `using` 指令中的名称以检索 <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType> 命名空间的 `System`。 上述代码还说明，使用语法模型  查找代码的结构；使用语义模型理解它的含义  。  语法模型在 using 语句中找到字符串 `System`。  语义模型具有关于 `System` 命名空间中所定义类型的全部信息。
+上述代码示例演示如何绑定第一个 `using` 指令中的名称以检索 `System` 命名空间的 <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType>。 上述代码还说明，使用语法模型  查找代码的结构；使用语义模型理解它的含义  。  语法模型在 using 语句中找到字符串 `System`。  语义模型具有关于 `System` 命名空间中所定义类型的全部信息。
 
-可以从 <xref:Microsoft.CodeAnalysis.SymbolInfo> 对象获取使用 <xref:Microsoft.CodeAnalysis.ISymbol?displayProperty=nameWithType> 属性的 <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType>。 此属性返回此表达式所引用的符号。 对于不引用任何内容的表达式（例如数字参数），此属性为 `null`。 若 <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> 不为 null，<xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> 表示符号的类型。 在此示例中，<xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> 属性是 <xref:Microsoft.CodeAnalysis.SymbolKind.Namespace?displayProperty=nameWithType>。 将以下代码添加到 `Main` 方法。 它检索 `System` 命名空间的符号，然后将 `System` 命名空间中声明的所有子命名空间显示出来：
+可以从 <xref:Microsoft.CodeAnalysis.SymbolInfo> 对象获取使用 <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> 属性的 <xref:Microsoft.CodeAnalysis.ISymbol?displayProperty=nameWithType>。 此属性返回此表达式所引用的符号。 对于不引用任何内容的表达式（例如数字参数），此属性为 `null`。 若 <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> 不为 null，<xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> 表示符号的类型。 在此示例中，<xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> 属性是 <xref:Microsoft.CodeAnalysis.SymbolKind.Namespace?displayProperty=nameWithType>。 将以下代码添加到 `Main` 方法。 它检索 `System` 命名空间的符号，然后将 `System` 命名空间中声明的所有子命名空间显示出来：
 
 [!code-csharp[Display all the child namespaces](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#6 "Display all the child namespaces from this compilation")]
 

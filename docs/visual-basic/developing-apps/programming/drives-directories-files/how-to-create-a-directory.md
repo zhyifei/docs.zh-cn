@@ -14,7 +14,7 @@ ms.locfileid: "74348811"
 ---
 # <a name="how-to-create-a-directory-in-visual-basic"></a>如何：在 Visual Basic 中创建目录
 
-使用 `CreateDirectory` 对象的 `My.Computer.FileSystem` 方法来创建目录。  
+使用 `My.Computer.FileSystem` 对象的 `CreateDirectory` 方法来创建目录。  
   
  如果该目录已存在，则不引发任何异常。  
   

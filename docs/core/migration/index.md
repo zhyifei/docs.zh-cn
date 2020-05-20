@@ -34,7 +34,7 @@ ms.locfileid: "77450682"
 
 ![单向升级对话框，其中显示要迁移的项目的列表](media/one-way-upgrade.jpg)
 
-Visual Studio 自动迁移所选的项目。 迁移解决方案时，如果不选择所有项目，则会显示相同的对话框，要求升级该解决方案的其余项目。 迁移项目后，可通过在“解决方案资源管理器”窗口中右键单击该项目，并选择“编辑 **项目名称 > .csproj”来查看和修改其内容** **\<** 。
+Visual Studio 自动迁移所选的项目。 迁移解决方案时，如果不选择所有项目，则会显示相同的对话框，要求升级该解决方案的其余项目。 迁移项目后，可通过在“解决方案资源管理器”窗口中右键单击该项目，并选择“编辑 \<项目名称 > .csproj”来查看和修改其内容。
 
 已迁移的文件（project.json、global.json、.xproj 和解决方案文件）会移动到“备份”文件夹     。 迁移的解决方案文件会升级到 Visual Studio 2017 或 Visual Studio 2019，并且将无法在 Visual Studio 2015 或更早版本中打开该解决方案文件。 还会保存并自动打开名为 UpgradeLog.htm 的文件  ，该文件包含迁移报告。
 
@@ -75,12 +75,12 @@ Visual Studio 自动迁移所选的项目。 迁移解决方案时，如果不�
 随着工具的每个新的预发布版本的推出，.NET Core csproj 格式也在不断变化发展。 没有工具可以将项目文件从早期版本的 csproj 迁移到最新版本，因此需要手动编辑项目文件。 实际步骤取决于要迁移的项目文件的版本。 根据版本之间的变化，需考虑以下指导信息：
 
 - 从 `<Project>` 元素中删除工具版本属性（如果存在）。
-- 从 `xmlns` 元素中删除 XML 命名空间 (`<Project>`)。
+- 从 `<Project>` 元素中删除 XML 命名空间 (`xmlns`)。
 - 如果不存在，请将 `Sdk` 属性添加到 `<Project>` 元素，并将其设置为 `Microsoft.NET.Sdk` 或 `Microsoft.NET.Sdk.Web`。 此属性指定项目使用要使用的 SDK。 `Microsoft.NET.Sdk.Web` 用于 Web 应用。
 - 从项目的顶部和底部删除 `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` 和 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` 语句。 SDK 隐含这些 import 语句，因此项目中不需要这些语句。
 - 如果项目中含 `Microsoft.NETCore.App` 或 `NETStandard.Library``<PackageReference>` 项，应将其删除。 [SDK 隐含](https://aka.ms/sdkimplicitrefs)这些包引用。
-- 删除 `Microsoft.NET.Sdk` `<PackageReference>` 元素（如果存在）。 SDK 引用来自 `Sdk` 元素上的 `<Project>` 属性。
-- 删除 [SDK](https://en.wikipedia.org/wiki/Glob_(programming)) 隐含的 [glob](../project-sdk/overview.md#default-compilation-includes)。 在项目中留下这些 glob 会引发生成错误，因为编译项会发生重复。
+- 删除 `Microsoft.NET.Sdk` `<PackageReference>` 元素（如果存在）。 SDK 引用来自 `<Project>` 元素上的 `Sdk` 属性。
+- 删除 [SDK](../project-sdk/overview.md#default-compilation-includes) 隐含的 [glob](https://en.wikipedia.org/wiki/Glob_(programming))。 在项目中留下这些 glob 会引发生成错误，因为编译项会发生重复。
 
 完成这些步骤后，项目应与 RTM .NET Core csproj 格式完全兼容。
 

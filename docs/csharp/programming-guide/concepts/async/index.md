@@ -126,7 +126,7 @@ Console.WriteLine("Breakfast is ready!");
 
 ## <a name="await-tasks-efficiently"></a>高效地等待任务
 
-可以通过使用 `await` 类的方法改进上述代码末尾的一系列 `Task` 语句。 其中一个 API 是 <xref:System.Threading.Tasks.Task.WhenAll%2A>，它将返回一个其参数列表中的所有任务都已完成时才完成的 <xref:System.Threading.Tasks.Task>，如以下代码中所示：
+可以通过使用 `Task` 类的方法改进上述代码末尾的一系列 `await` 语句。 其中一个 API 是 <xref:System.Threading.Tasks.Task.WhenAll%2A>，它将返回一个其参数列表中的所有任务都已完成时才完成的 <xref:System.Threading.Tasks.Task>，如以下代码中所示：
 
 ```csharp
 await Task.WhenAll(eggsTask, baconTask, toastTask);

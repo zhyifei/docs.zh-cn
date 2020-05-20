@@ -22,7 +22,7 @@ ms.locfileid: "73127628"
 ---
 # <a name="padding-strings-in-net"></a>填充 .NET 中的字符串
 
-使用下面的 <xref:System.String> 方法之一，在原始字符串中填充前导或尾随字符，以达到指定总长度，从而新建字符串。 填充字符可以是空格或指定字符。 生成的字符串可能显示为右对齐或左对齐。 如果原始字符串的长度已经等于或大于所需总长度，则填充方法返回未经更改的原始字符串；有关详细信息，请参阅 **和** 方法的两个重载的“返回”部分<xref:System.String.PadLeft%2A?displayProperty=nameWithType><xref:System.String.PadRight%2A?displayProperty=nameWithType>。
+使用下面的 <xref:System.String> 方法之一，在原始字符串中填充前导或尾随字符，以达到指定总长度，从而新建字符串。 填充字符可以是空格或指定字符。 生成的字符串可能显示为右对齐或左对齐。 如果原始字符串的长度已经等于或大于所需总长度，则填充方法返回未经更改的原始字符串；有关详细信息，请参阅 <xref:System.String.PadLeft%2A?displayProperty=nameWithType> 和 <xref:System.String.PadRight%2A?displayProperty=nameWithType> 方法的两个重载的“返回”部分。
   
 |方法名称|用途|  
 |-----------------|---------|  

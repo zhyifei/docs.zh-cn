@@ -38,7 +38,7 @@ ms.locfileid: "74345577"
   
 - 对 <xref:System.Windows.Forms> 命名空间成员的访问权限。 如果未在代码中完全限定成员名称，则添加 `Imports` 语句。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
-- 窗体具有名为 <xref:System.Windows.Forms.ListBox> 的 `ListBox1` 控件。  
+- 窗体具有名为 `ListBox1` 的 <xref:System.Windows.Forms.ListBox> 控件。  
   
 ## <a name="robust-programming"></a>可靠编程  
 

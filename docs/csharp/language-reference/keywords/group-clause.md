@@ -17,7 +17,7 @@ ms.locfileid: "75713472"
 ---
 # <a name="group-clause-c-reference"></a>group 子句（C# 参考）
 
-`group` 子句返回一个 <xref:System.Linq.IGrouping%602> 对象序列，这些对象包含零个或更多与该组的键值匹配的项。 例如，可以按照每个字符串中的第一个字母对字符串序列进行分组。 在这种情况下，第一个字母就是键，类型为 [char](../builtin-types/char.md)，并且存储在每个 `Key` 对象的 <xref:System.Linq.IGrouping%602> 属性中。 编译器可推断键的类型。
+`group` 子句返回一个 <xref:System.Linq.IGrouping%602> 对象序列，这些对象包含零个或更多与该组的键值匹配的项。 例如，可以按照每个字符串中的第一个字母对字符串序列进行分组。 在这种情况下，第一个字母就是键，类型为 [char](../builtin-types/char.md)，并且存储在每个 <xref:System.Linq.IGrouping%602> 对象的 `Key` 属性中。 编译器可推断键的类型。
 
 可以用 `group` 子句结束查询表达式，如以下示例所示：
 
@@ -27,11 +27,11 @@ ms.locfileid: "75713472"
 
 [!code-csharp[cscsrefQueryKeywords#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#11)]
 
-对于含有和不含 `group` 的 `into`，本文中的“示例”部分提供有关其用法的更完整示例。
+对于含有和不含 `into` 的 `group`，本文中的“示例”部分提供有关其用法的更完整示例。
 
 ## <a name="enumerating-the-results-of-a-group-query"></a>枚举查询分组的结果
 
-由于 <xref:System.Linq.IGrouping%602> 查询产生的 `group` 对象实质上是一个由列表组成的列表，因此必须使用嵌套的 [foreach](foreach-in.md) 循环来访问每一组中的各个项。 外部循环用于循环访问组键，内部循环用于循环访问组本身包含的每个项。 组可能具有键，但没有元素。 下面的 `foreach` 循环执行上述代码示例中的查询：
+由于 `group` 查询产生的 <xref:System.Linq.IGrouping%602> 对象实质上是一个由列表组成的列表，因此必须使用嵌套的 [foreach](foreach-in.md) 循环来访问每一组中的各个项。 外部循环用于循环访问组键，内部循环用于循环访问组本身包含的每个项。 组可能具有键，但没有元素。 下面的 `foreach` 循环执行上述代码示例中的查询：
 
 [!code-csharp[cscsrefQueryKeywords#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#12)]
 
@@ -59,7 +59,7 @@ ms.locfileid: "75713472"
 
 ### <a name="grouping-by-composite-keys"></a>按复合键分组
 
-希望按照多个键对元素进行分组时，可使用复合键。 使用匿名类型或命名类型来存储键元素，创建复合键。 在下面的示例中，假定已经使用名为 `Person` 和 `surname` 的两个成员声明了类 `city`。 `group` 子句会为每组姓氏和城市相同的人员创建一个单独的组。
+希望按照多个键对元素进行分组时，可使用复合键。 使用匿名类型或命名类型来存储键元素，创建复合键。 在下面的示例中，假定已经使用名为 `surname` 和 `city` 的两个成员声明了类 `Person`。 `group` 子句会为每组姓氏和城市相同的人员创建一个单独的组。
 
 ```csharp
 group person by new {name = person.surname, city = person.city};
@@ -69,7 +69,7 @@ group person by new {name = person.surname, city = person.city};
 
 ## <a name="example"></a>示例
 
-下面的示例演示在没有向组应用附加查询逻辑时，将源数据按顺序放入组中的标准模式。 这称为不带延续的分组。 字符串数组中的元素按照它们的首字母进行分组。 查询的结果是 <xref:System.Linq.IGrouping%602> 类型（包含一个 `Key` 类型的公共 `char` 属性）和一个 <xref:System.Collections.Generic.IEnumerable%601> 集合（在分组中包含每个项）。
+下面的示例演示在没有向组应用附加查询逻辑时，将源数据按顺序放入组中的标准模式。 这称为不带延续的分组。 字符串数组中的元素按照它们的首字母进行分组。 查询的结果是 <xref:System.Linq.IGrouping%602> 类型（包含一个 `char` 类型的公共 `Key` 属性）和一个 <xref:System.Collections.Generic.IEnumerable%601> 集合（在分组中包含每个项）。
 
 `group` 子句的结果是由序列组成的序列。 因此，若要访问返回的每个组中的单个元素，请在循环访问组键的循环内使用嵌套的 `foreach` 循环，如以下示例所示。
 
@@ -77,7 +77,7 @@ group person by new {name = person.surname, city = person.city};
 
 ## <a name="example"></a>示例
 
-此示例演示在创建组之后，如何使用通过  *实现的延续*`into`对这些组执行附加逻辑。 有关详细信息，请参阅 [into](into.md)。 下面的示例查询每个组，仅选择键值为元音的元素。
+此示例演示在创建组之后，如何使用通过 `into` 实现的延续对这些组执行附加逻辑。 有关详细信息，请参阅 [into](into.md)。 下面的示例查询每个组，仅选择键值为元音的元素。
 
 [!code-csharp[cscsrefQueryKeywords#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#17)]
 

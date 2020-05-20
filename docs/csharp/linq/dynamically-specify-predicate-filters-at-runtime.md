@@ -18,15 +18,15 @@ ms.locfileid: "61659938"
 
 1. 打开一个新的控制台应用程序并将其命名为 `PredicateFilters`。
 
-2. 从`StudentClass`查询对象的集合[复制 ](query-a-collection-of-objects.md) 类，并将其粘贴到类 `PredicateFilters` 下方的命名空间 `Program`。 `StudentClass` 提供 `Student` 对象的列表。
+2. 从[查询对象的集合](query-a-collection-of-objects.md)复制 `StudentClass` 类，并将其粘贴到类 `Program` 下方的命名空间 `PredicateFilters`。 `StudentClass` 提供 `Student` 对象的列表。
 
-3. 注释禁止 `Main` 中的 `StudentClass` 方法。
+3. 注释禁止 `StudentClass` 中的 `Main` 方法。
 
 4. 将类 `Program` 替换为以下代码：
 
      [!code-csharp[csProgGuideLINQ#26](~/samples/snippets/csharp/concepts/linq/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]
 
-5. 将以下行添加到类 `Main` 中 `DynamicPredicates` 声明下的 `ids` 方法。
+5. 将以下行添加到类 `DynamicPredicates` 中 `ids` 声明下的 `Main` 方法。
 
      ```csharp
      QueryById(ids);
@@ -42,7 +42,7 @@ ms.locfileid: "61659938"
 
      Omelchenko: 111
 
-8. 下一步是再次运行该项目，此次是通过使用在运行时输入的输入而非数组 `ids` 来执行此操作。 在 `QueryByID(ids)` 方法中，将 `QueryByID(args)` 更改为 `Main`。
+8. 下一步是再次运行该项目，此次是通过使用在运行时输入的输入而非数组 `ids` 来执行此操作。 在 `Main` 方法中，将 `QueryByID(ids)` 更改为 `QueryByID(args)`。
 
 9. 使用命令行参数 `122 117 120 115` 运行该项目。 运行项目时，这些值将成为 `args` 的元素，它们是 `Main` 方法的参数。
 

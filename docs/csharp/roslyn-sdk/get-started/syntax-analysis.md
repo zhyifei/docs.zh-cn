@@ -86,7 +86,7 @@ SyntaxNode：蓝色 | SyntaxToken：绿色 | SyntaxTrivia：红色    ![C# 代�
 
 [!code-csharp[Declare the program text](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
-下一步，添加下列代码以生成  **常量中的代码文本的语法树**`programText`。  将下面这行代码添加到 `Main` 方法中：
+下一步，添加下列代码以生成 `programText` 常量中的代码文本的语法树。  将下面这行代码添加到 `Main` 方法中：
 
 [!code-csharp[Create the tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
 
@@ -156,7 +156,7 @@ The body text of the Main method follows:
 
 你经常需要查找语法树中特定类型的所有节点，例如某个文件中的每个属性声明。 通过扩展 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker?displayProperty=nameWithType> 类并重写 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitPropertyDeclaration(Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax)> 方法，处理语法树中的每个属性声明，且事先无需了解它的结构。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 是 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor> 中的一个特定类型，它以递归方式访问节点以及节点的每个子级。
 
-此示例实现了检查语法树的 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>。 它收集所找到的不导入 `using` 命名空间的 `System` 指令。
+此示例实现了检查语法树的 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>。 它收集所找到的不导入 `System` 命名空间的 `using` 指令。
 
 新建 C#“独立代码分析工具”项目  ，将其命名为 SyntaxWalker  。
 
@@ -166,7 +166,7 @@ The body text of the Main method follows:
 
 [!code-csharp[Define the code text to analyzer](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
 
-此源文本包含的 `using` 指令分散在四个不同的位置：文件级、顶级命名空间以及两个嵌套命名空间。 此示例重点介绍使用 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 类以查询代码的核心方案。 通过访问根语法树的每个节点来查找 using 声明会很麻烦。 替代方法是创建派生类，并改用只在树中的当前节点为 using 指令时才会调用的方法。 访问器不会在任何其他节点类型上做任何工作。 这一方法检查每个 `using` 语句并生成命名空间的集合，其中包含的命名空间都不在 `System` 命名空间中。 生成一个检查所有 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 语句（但仅检查 `using` 语句）的 `using`。
+此源文本包含的 `using` 指令分散在四个不同的位置：文件级、顶级命名空间以及两个嵌套命名空间。 此示例重点介绍使用 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 类以查询代码的核心方案。 通过访问根语法树的每个节点来查找 using 声明会很麻烦。 替代方法是创建派生类，并改用只在树中的当前节点为 using 指令时才会调用的方法。 访问器不会在任何其他节点类型上做任何工作。 这一方法检查每个 `using` 语句并生成命名空间的集合，其中包含的命名空间都不在 `System` 命名空间中。 生成一个检查所有 `using` 语句（但仅检查 `using` 语句）的 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>。
 
 现在，你已定义程序文本，需要创建 `SyntaxTree` 并获取该树的根：
 
@@ -174,7 +174,7 @@ The body text of the Main method follows:
 
 接下来，创建一个新类。 在 Visual Studio 中，依次选择“项目”   > “添加新项”  。 在“添加新项”对话框中键入 UsingCollector.cs 作为文件名   。
 
-在 `using` 类中实现 `UsingCollector` 访问器功能。 首先，从 `UsingCollector` 派生 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 类。
+在 `UsingCollector` 类中实现 `using` 访问器功能。 首先，从 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 派生 `UsingCollector` 类。
 
 [!code-csharp[Declare the base class for the using collector](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
 

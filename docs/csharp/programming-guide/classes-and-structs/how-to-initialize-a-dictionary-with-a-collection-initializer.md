@@ -17,7 +17,7 @@ ms.locfileid: "75741366"
 
 ## <a name="example"></a>示例
 
-在下面的代码示例中，使用类型 <xref:System.Collections.Generic.Dictionary%602> 的实例初始化 `StudentName`。  第一个初始化使用具有两个参数的 `Add` 方法。 编译器为每对 `Add` 键和 `int` 值生成对 `StudentName` 的调用。 第二个初始化使用 `Dictionary` 类的公共读取/写入索引器方法：
+在下面的代码示例中，使用类型 `StudentName` 的实例初始化 <xref:System.Collections.Generic.Dictionary%602>。  第一个初始化使用具有两个参数的 `Add` 方法。 编译器为每对 `int` 键和 `StudentName` 值生成对 `Add` 的调用。 第二个初始化使用 `Dictionary` 类的公共读取/写入索引器方法：
 
 [!code-csharp[InitializerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/HowToDictionaryInitializer.cs#HowToDictionaryInitializer)]  
 

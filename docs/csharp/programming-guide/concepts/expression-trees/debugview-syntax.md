@@ -43,7 +43,7 @@ ParameterExpression numParam =  Expression.Parameter(typeof(int));
 
 ## <a name="constantexpression"></a>ConstantExpression
 
-对于表示整数值、字符串和 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 的 `null` 对象，将显示常数的值。
+对于表示整数值、字符串和 `null` 的 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 对象，将显示常数的值。
 
 对于使用标准后缀作为 C# 原义字符的数值类型，将后缀添加到值。 下表显示与各种数值类型关联的后缀。
 

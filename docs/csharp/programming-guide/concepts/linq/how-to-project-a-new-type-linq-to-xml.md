@@ -49,7 +49,7 @@ class Program {
 }
 ```
 
-本示例使用主题<xref:System.Xml.Linq.XContainer.Element%2A>如何检索单个子元素 (LINQ to XML) (C#)[中引入的 ](how-to-retrieve-a-single-child-element-linq-to-xml.md) 方法。 还使用强制转换来检索 <xref:System.Xml.Linq.XContainer.Element%2A> 方法返回的元素值。  
+本示例使用主题[如何检索单个子元素 (LINQ to XML) (C#)](how-to-retrieve-a-single-child-element-linq-to-xml.md)中引入的 <xref:System.Xml.Linq.XContainer.Element%2A> 方法。 还使用强制转换来检索 <xref:System.Xml.Linq.XContainer.Element%2A> 方法返回的元素值。  
 
 该示例产生下面的输出：
 

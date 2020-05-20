@@ -27,7 +27,7 @@ ms.locfileid: "71048001"
   
  HttpWebRequest  是 WebRequest  使用的默认类，并且无需注册即可将 URI 传递到 WebRequest.Create  方法。  
   
- 可以通过将 <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A> 属性设置为 true  （默认值）来使应用程序自动遵循 HTTP 重定向。 应用程序将重定向请求，并且 HttpWebResponse<xref:System.Net.HttpWebResponse.ResponseUri%2A>**的** 属性将包含响应请求的实际 Web 资源。 如果将 AllowAutoRedirect  设置为 false  ，则需要应用程序能将重定向处理为 HTTP 协议错误。  
+ 可以通过将 <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A> 属性设置为 true  （默认值）来使应用程序自动遵循 HTTP 重定向。 应用程序将重定向请求，并且 HttpWebResponse 的 <xref:System.Net.HttpWebResponse.ResponseUri%2A> 属性将包含响应请求的实际 Web 资源。 如果将 AllowAutoRedirect  设置为 false  ，则需要应用程序能将重定向处理为 HTTP 协议错误。  
   
  应用程序通过捕获 <xref:System.Net.WebException>（其中 <xref:System.Net.WebException.Status%2A> 设置为 <xref:System.Net.WebExceptionStatus>）来接收 HTTP 协议错误。 <xref:System.Net.WebException.Response%2A> 属性包含由服务器发送的 WebResponse  ，并指示遇到的实际 HTTP 错误。  
   

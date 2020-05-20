@@ -37,7 +37,7 @@ ms.locfileid: "75635933"
 > 如果你已熟悉查询语言（如 SQL 或 XQuery），则可以跳过本主题的大部分内容。 请参阅下一节中的“`from` 子句”部分，了解 LINQ 查询表达式中的子句顺序。  
   
 ## <a name="obtaining-a-data-source"></a>获取数据源  
- 在 LINQ 查询中，第一步是指定数据源。 和大多数编程语言相同，在使用 C# 时也必须先声明变量，然后才能使用它。 在 LINQ 查询中，先使用 `from` 子句引入数据源 (`customers`) 和范围变量 ( *)* `cust`。  
+ 在 LINQ 查询中，第一步是指定数据源。 和大多数编程语言相同，在使用 C# 时也必须先声明变量，然后才能使用它。 在 LINQ 查询中，先使用 `from` 子句引入数据源 (`customers`) 和范围变量 (`cust`)。  
   
  [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   

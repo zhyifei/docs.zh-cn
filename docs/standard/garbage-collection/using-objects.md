@@ -45,7 +45,7 @@ C# 中的 `using` 语句和 Visual Basic 中的 `Using` 语句可以简化创建
 
 ## <a name="tryfinally-block"></a>Try/finally 块
 
-可以选择直接实现 `try/finally` 块，而不是将 `using` 块包装在 `try/finally` 语句中。 这可以是私有编码样式，或者你可能出于下列原因之一需要这样做：  
+可以选择直接实现 `try/finally` 块，而不是将 `try/finally` 块包装在 `using` 语句中。 这可以是私有编码样式，或者你可能出于下列原因之一需要这样做：  
   
 - 包含 `catch` 块可处理 `try` 块中引发的任何异常。 否则，不会处理 `using` 语句引发的任何异常，`using` 块中引发的任何异常也是如此，前提是 `try/catch` 块不存在。  
   

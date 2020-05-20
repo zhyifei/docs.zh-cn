@@ -15,7 +15,7 @@ ms.locfileid: "79170255"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>了解何时使用 Override 和 New 关键字（C# 编程指南）
 
-在 C# 中，派生类中的方法可具有与基类中的方法相同的名称。 可使用 [new](../../language-reference/keywords/new-modifier.md) 和 [override](../../language-reference/keywords/override.md) 关键字指定方法的交互方式。 `override` 修饰符用于扩展基类 *方法，而* 修饰符用于隐藏可访问的基类方法`virtual``new`  。 本主题中的示例阐释了这种差异。  
+在 C# 中，派生类中的方法可具有与基类中的方法相同的名称。 可使用 [new](../../language-reference/keywords/new-modifier.md) 和 [override](../../language-reference/keywords/override.md) 关键字指定方法的交互方式。 `override` 修饰符用于扩展基类 `virtual` 方法，而 `new` 修饰符用于隐藏可访问的基类方法。 本主题中的示例阐释了这种差异。  
   
  在控制台应用程序中，声明以下两个类：`BaseClass` 和 `DerivedClass`。 `DerivedClass` 继承自 `BaseClass`。  
   
@@ -69,7 +69,7 @@ class Program
 }  
 ```  
   
- 接着，将以下 `Method2` 方法添加到 `BaseClass`。 此方法的签名与 `Method2` 中 `DerivedClass` 方法的签名匹配。  
+ 接着，将以下 `Method2` 方法添加到 `BaseClass`。 此方法的签名与 `DerivedClass` 中 `Method2` 方法的签名匹配。  
   
 ```csharp  
 public void Method2()  
@@ -89,7 +89,7 @@ bcdc.Method1();
 bcdc.Method2();  
 ```  
   
- 当生成项目时，你将看到在 `Method2` 中添加 `BaseClass` 方法将引发警告。 警告显示 `Method2` 中的 `DerivedClass` 方法隐藏了 `Method2` 中的 `BaseClass` 方法。 如果希望获得该结果，则建议使用 `new` 定义中的 `Method2` 关键字。 或者，可重命名 `Method2` 方法之一来消除警告，但这始终不实用。  
+ 当生成项目时，你将看到在 `BaseClass` 中添加 `Method2` 方法将引发警告。 警告显示 `DerivedClass` 中的 `Method2` 方法隐藏了 `BaseClass` 中的 `Method2` 方法。 如果希望获得该结果，则建议使用 `Method2` 定义中的 `new` 关键字。 或者，可重命名 `Method2` 方法之一来消除警告，但这始终不实用。  
   
  添加 `new` 之前，请运行程序，查看其他调用语句生成的输出。 显示以下结果。  
   
@@ -105,7 +105,7 @@ bcdc.Method2();
   
  `new` 关键字可以保留生成该输出的关系，但它会禁止显示警告。 具有 `BaseClass` 类型的变量继续访问 `BaseClass` 的成员，而具有 `DerivedClass` 类型的变量首先继续访问 `DerivedClass` 中的成员，然后再考虑从 `BaseClass` 继承的成员。  
   
- 若要禁止显示警告，请将 `new` 修饰符添加到 `Method2` 中的 `DerivedClass` 定义，如下面的代码所示。 可在 `public` 前后添加修饰符。  
+ 若要禁止显示警告，请将 `new` 修饰符添加到 `DerivedClass` 中的 `Method2` 定义，如下面的代码所示。 可在 `public` 前后添加修饰符。  
   
 ```csharp  
 public new void Method2()  
@@ -116,7 +116,7 @@ public new void Method2()
   
  再次运行该程序，确认输出未发生更改。 此外，确认不再显示警告。 通过使用 `new`，断言你知道它修饰的成员将隐藏从基类继承的成员。 有关通过继承隐藏名称的详细信息，请参阅 [new 修饰符](../../language-reference/keywords/new-modifier.md)。  
   
- 若要将此行为与使用 `override` 的效果进行对比，请将以下方法添加到 `DerivedClass`。 可在 `override` 前后添加 `public` 修饰符。  
+ 若要将此行为与使用 `override` 的效果进行对比，请将以下方法添加到 `DerivedClass`。 可在 `public` 前后添加 `override` 修饰符。  
   
 ```csharp  
 public override void Method1()  
@@ -125,7 +125,7 @@ public override void Method1()
 }  
 ```  
   
- 将 `virtual` 修饰符添加到 `Method1` 中的 `BaseClass` 定义。 可在 `virtual` 前后添加 `public` 修饰符。  
+ 将 `virtual` 修饰符添加到 `BaseClass` 中的 `Method1` 定义。 可在 `public` 前后添加 `virtual` 修饰符。  
   
 ```csharp  
 public virtual void Method1()  
@@ -146,7 +146,7 @@ public virtual void Method1()
 // Base - Method2  
 ```  
   
- 使用 `override` 修饰符可使 `bcdc` 访问 `Method1` 中定义的 `DerivedClass` 方法。 通常，这是继承层次结构中所需的行为。 让具有从派生类创建的值的对象使用派生类中定义的方法。 可使用 `override` 扩展基类方法实现该行为。  
+ 使用 `override` 修饰符可使 `bcdc` 访问 `DerivedClass` 中定义的 `Method1` 方法。 通常，这是继承层次结构中所需的行为。 让具有从派生类创建的值的对象使用派生类中定义的方法。 可使用 `override` 扩展基类方法实现该行为。  
   
  下面的代码包括完整的示例。  
   
@@ -218,7 +218,7 @@ namespace OverrideAndNew
 }  
 ```  
   
- 下列阐释了不同上下文中的类似行为。 该示例定义了三个类：一个名为 `Car` 的基类和两个由其派生的 `ConvertibleCar` 和 `Minivan`。 基类中包含 `DescribeCar` 方法。 该方法给出了对一辆车的基本描述，然后调用 `ShowDetails` 提供其他信息。 这三个类中的每一个类都定义了 `ShowDetails` 方法。 `new` 修饰符用于定义 `ShowDetails` 类中的 `ConvertibleCar`。 `override` 修饰符用于定义 `ShowDetails` 类中的 `Minivan`。  
+ 下列阐释了不同上下文中的类似行为。 该示例定义了三个类：一个名为 `Car` 的基类和两个由其派生的 `ConvertibleCar` 和 `Minivan`。 基类中包含 `DescribeCar` 方法。 该方法给出了对一辆车的基本描述，然后调用 `ShowDetails` 提供其他信息。 这三个类中的每一个类都定义了 `ShowDetails` 方法。 `new` 修饰符用于定义 `ConvertibleCar` 类中的 `ShowDetails`。 `override` 修饰符用于定义 `Minivan` 类中的 `ShowDetails`。  
   
 ```csharp  
 // Define the base class, Car. The class defines two methods,  
@@ -288,7 +288,7 @@ public static void TestCars1()
 }  
 ```  
   
- `TestCars1` 将生成以下输出。 请特别注意 `car2` 的结果，该结果可能不是你需要的内容。 对象的类型是 `ConvertibleCar`，但 `DescribeCar` 不会访问 `ShowDetails` 类中定义的 `ConvertibleCar` 版本，因为方法已声明包含 `new` 修饰符声明，而不是 `override` 修饰符。 因此，`ConvertibleCar` 对象与 `Car` 对象显示的说明相同。 比较 `car3` 的结果，这是一个 `Minivan` 对象。 在这种情况下，`ShowDetails` 类中声明的 `Minivan` 方法会替代 `ShowDetails` 类中声明的 `Car` 方法，显示的说明描述小型货车。  
+ `TestCars1` 将生成以下输出。 请特别注意 `car2` 的结果，该结果可能不是你需要的内容。 对象的类型是 `ConvertibleCar`，但 `DescribeCar` 不会访问 `ConvertibleCar` 类中定义的 `ShowDetails` 版本，因为方法已声明包含 `new` 修饰符声明，而不是 `override` 修饰符。 因此，`ConvertibleCar` 对象与 `Car` 对象显示的说明相同。 比较 `car3` 的结果，这是一个 `Minivan` 对象。 在这种情况下，`Minivan` 类中声明的 `ShowDetails` 方法会替代 `Car` 类中声明的 `ShowDetails` 方法，显示的说明描述小型货车。  
   
 ```csharp  
 // TestCars1  
@@ -323,7 +323,7 @@ public static void TestCars2()
 }  
 ```  
   
- 显示以下输出。 请注意，它与 `TestCars1` 显示的输出相同。 不调用 `ShowDetails` 类的 `ConvertibleCar` 方法，不管该对象的类型是 `ConvertibleCar`（在 `TestCars1` 中）还是 `Car`（在 `TestCars2` 中）。 相反，在这两种情况下，`car3` 从 `ShowDetails` 调用 `Minivan` 方法，不管它拥有类型 `Minivan` 还是类型 `Car`。  
+ 显示以下输出。 请注意，它与 `TestCars1` 显示的输出相同。 不调用 `ConvertibleCar` 类的 `ShowDetails` 方法，不管该对象的类型是 `ConvertibleCar`（在 `TestCars1` 中）还是 `Car`（在 `TestCars2` 中）。 相反，在这两种情况下，`car3` 从 `Minivan` 调用 `ShowDetails` 方法，不管它拥有类型 `Minivan` 还是类型 `Car`。  
   
 ```csharp  
 // TestCars2  

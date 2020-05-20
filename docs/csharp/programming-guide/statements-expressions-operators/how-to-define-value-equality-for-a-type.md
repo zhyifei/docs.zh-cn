@@ -29,15 +29,15 @@ ms.locfileid: "79157086"
   
 4. 只要未修改 x 和 y 引用的对象，`x.Equals(y)` 的连续调用将返回相同的值。  
   
-5. 任何非 null 值均不等于 null。 但是，CLR 会在所有方法调用上检查 null，如果 `NullReferenceException` 引用为 null，则会引发 `this`。 因此，当 `x.Equals(y)` 为 null 时，`x` 将引发异常。 这会违反规则 1 或 2，具体取决于 `Equals` 的参数。
+5. 任何非 null 值均不等于 null。 但是，CLR 会在所有方法调用上检查 null，如果 `this` 引用为 null，则会引发 `NullReferenceException`。 因此，当 `x` 为 null 时，`x.Equals(y)` 将引发异常。 这会违反规则 1 或 2，具体取决于 `Equals` 的参数。
 
- 定义的任何结构都已具有其从 <xref:System.ValueType?displayProperty=nameWithType> 方法的 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 替代中继承的值相等性的默认实现。 此实现使用反射来检查类型中的所有字段和属性。 尽管此实现可生成正确的结果，但与专门为类型编写的自定义实现相比，它的速度相对较慢。  
+ 定义的任何结构都已具有其从 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法的 <xref:System.ValueType?displayProperty=nameWithType> 替代中继承的值相等性的默认实现。 此实现使用反射来检查类型中的所有字段和属性。 尽管此实现可生成正确的结果，但与专门为类型编写的自定义实现相比，它的速度相对较慢。  
   
  类和结构的值相等性的实现详细信息有所不同。 但是，类和结构都需要相同的基础步骤来实现相等性：  
   
-1. 替代[虚拟](../../language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法。 大多数情况下，`bool Equals( object obj )` 实现应只调入作为 `Equals` 接口的实现的类型特定 <xref:System.IEquatable%601?displayProperty=nameWithType> 方法。 （请参阅步骤 2。）  
+1. 替代[虚拟](../../language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法。 大多数情况下，`bool Equals( object obj )` 实现应只调入作为 <xref:System.IEquatable%601?displayProperty=nameWithType> 接口的实现的类型特定 `Equals` 方法。 （请参阅步骤 2。）  
   
-2. 通过提供类型特定的 <xref:System.IEquatable%601?displayProperty=nameWithType> 方法实现 `Equals` 接口。 实际的等效性比较将在此接口中执行。 例如，可能决定通过仅比较类型中的一两个字段来定义相等性。 不会从 `Equals`引发异常。 仅适用于类：此方法应仅检查类中声明的字段。 它应调用 `base.Equals` 来检查基类中的字段。 （如果类型直接从 <xref:System.Object> 中继承，则不要这样做，因为 <xref:System.Object> 的 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 实现会执行引用相等性检查。）  
+2. 通过提供类型特定的 `Equals` 方法实现 <xref:System.IEquatable%601?displayProperty=nameWithType> 接口。 实际的等效性比较将在此接口中执行。 例如，可能决定通过仅比较类型中的一两个字段来定义相等性。 不会从 `Equals`引发异常。 仅适用于类：此方法应仅检查类中声明的字段。 它应调用 `base.Equals` 来检查基类中的字段。 （如果类型直接从 <xref:System.Object> 中继承，则不要这样做，因为 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 的 <xref:System.Object> 实现会执行引用相等性检查。）  
   
 3. 可选，但建议这样做：重载 [==](../../language-reference/operators/equality-operators.md#equality-operator-) 和 [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 运算符。  
   

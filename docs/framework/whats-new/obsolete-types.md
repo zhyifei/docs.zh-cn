@@ -621,8 +621,8 @@ IEHost.dll 和 IEExec.exe 程序集已从 .NET Framework 中删除。 其所有�
 
 |类型|消息|
 |----------|-------------|
-|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|此类已弃用。 请改用 Microsoft.Build <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>*程序集中的* 。|
-|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|此类已弃用。 请改用 Microsoft.Build <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>*程序集中的* 。|
+|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|此类已弃用。 请改用 Microsoft.Build 程序集中的 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>。|
+|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|此类已弃用。 请改用 Microsoft.Build 程序集中的 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>。|
 
 [返回页首](#introduction)
 

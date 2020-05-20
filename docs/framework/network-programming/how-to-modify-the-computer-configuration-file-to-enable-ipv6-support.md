@@ -14,7 +14,7 @@ ms.locfileid: "79180802"
   
  也可以在应用程序的配置文件中做出这些设置，其优先级别高于计算机配置文件。  
   
- 对于 .NET Framework 1.1 及更早版本，ipv6 enabled 配置开关的值指定  **类的成员是否返回 IPv6 地址**<xref:System.Net.Dns?displayProperty=nameWithType>。  
+ 对于 .NET Framework 1.1 及更早版本，ipv6 enabled 配置开关的值指定 <xref:System.Net.Dns?displayProperty=nameWithType> 类的成员是否返回 IPv6 地址。  
   
  对于 .NET Framework 2.0 和更高版本，如果 Windows 支持 IPv6，则 <xref:System.Net.Dns?displayProperty=nameWithType> 类的所有成员（例如 <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> 方法）将返回含一个限制的 IPv6 地址。 <xref:System.Net.Dns?displayProperty=nameWithType> 类的已过时成员（例如，<xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> 方法）将读取并识别配置文件中的值。  
   

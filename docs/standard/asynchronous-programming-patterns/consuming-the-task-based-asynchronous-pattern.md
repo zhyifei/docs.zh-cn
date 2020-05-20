@@ -185,7 +185,7 @@ IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);
 await Task.WhenAll(asyncOps);
 ```
 
- 此代码不显式处理可能发生的异常，而是通过对 `await` 生成的任务执行 <xref:System.Threading.Tasks.Task.WhenAll%2A> 传播异常。  若要处理该异常，可以使用以下代码：
+ 此代码不显式处理可能发生的异常，而是通过对 <xref:System.Threading.Tasks.Task.WhenAll%2A> 生成的任务执行 `await` 传播异常。  若要处理该异常，可以使用以下代码：
 
 ```csharp
 IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);
@@ -199,7 +199,7 @@ catch(Exception exc)
 }
 ```
 
- 在这种情况下，如果任意异步操作失败，所有异常都会合并到 <xref:System.AggregateException> 异常中，此异常存储在 <xref:System.Threading.Tasks.Task> 方法返回的 <xref:System.Threading.Tasks.Task.WhenAll%2A> 中。  但是，仅通过 `await` 关键字传播其中一个异常。  如果想要检查所有异常，可以重写前面的代码，如下所示：
+ 在这种情况下，如果任意异步操作失败，所有异常都会合并到 <xref:System.AggregateException> 异常中，此异常存储在 <xref:System.Threading.Tasks.Task.WhenAll%2A> 方法返回的 <xref:System.Threading.Tasks.Task> 中。  但是，仅通过 `await` 关键字传播其中一个异常。  如果想要检查所有异常，可以重写前面的代码，如下所示：
 
 ```csharp
 Task [] asyncOps = (from addr in addrs select SendMailAsync(addr)).ToArray();

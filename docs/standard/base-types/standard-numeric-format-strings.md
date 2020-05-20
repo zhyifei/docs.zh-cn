@@ -32,8 +32,8 @@ ms.locfileid: "79398459"
 - `xx` 是称为“精度说明符”  的可选整数。 精度说明符的范围从 0 到 99，并且影响结果中的位数。 请注意，精度说明符控制数字的字符串表示形式中的数字个数。 它不舍入该数字。 若要执行舍入运算，请使用 <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType> 或 <xref:System.Math.Round%2A?displayProperty=nameWithType> 方法。
 
   当精度说明符控制结果字符串中的小数位数时，结果字符串会反映一个数字，该数字四舍五入到最接近无限精确结果的可表示结果  。 如果有两个同样接近的可表示结果：
-  - 在 .NET Framework 和.NET Core（.NET Core 2.0 及以下）上，运行时选择最低有效数字更高的结果（即使用 **）** <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>。
-  - 在 .NET Core 2.1 及更高版本上，运行时选择最低有效数字为偶数的结果（即使用 **）** <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>。
+  - 在 .NET Framework 和.NET Core（.NET Core 2.0 及以下）上，运行时选择最低有效数字更高的结果（即使用 <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>）。
+  - 在 .NET Core 2.1 及更高版本上，运行时选择最低有效数字为偶数的结果（即使用 <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>）。
 
   > [!NOTE]
   > 精度说明符确定结果字符串中的位数。 若要使用前导或尾随空格填充结果字符串，请使用[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)功能，并在格式项中定义*对齐组件*。
@@ -42,7 +42,7 @@ ms.locfileid: "79398459"
 
 - 所有数字类型的一些 `ToString` 方法重载。 例如，可以向 <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> 和 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法提供数字格式字符串。
 
-- .NET [复合格式功能](../../../docs/standard/base-types/composite-formatting.md)，由 `Write` 和 `WriteLine` 类的一些 <xref:System.Console> 和 <xref:System.IO.StreamWriter> 方法、<xref:System.String.Format%2A?displayProperty=nameWithType> 方法以及 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法使用。 复合格式功能允许你将多个数据项的字符串表示形式包含在单个字符串中，以指定字段宽度，并在字段中对齐数字。 有关更多信息，请参见[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)。
+- .NET [复合格式功能](../../../docs/standard/base-types/composite-formatting.md)，由 <xref:System.Console> 和 <xref:System.IO.StreamWriter> 类的一些 `Write` 和 `WriteLine` 方法、<xref:System.String.Format%2A?displayProperty=nameWithType> 方法以及 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法使用。 复合格式功能允许你将多个数据项的字符串表示形式包含在单个字符串中，以指定字段宽度，并在字段中对齐数字。 有关更多信息，请参见[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)。
 
 - C# 和 Visual Basic 中的[内插的字符串](../../csharp/language-reference/tokens/interpolated.md)，与复合格式字符串相比，语法更简化。
 
@@ -78,7 +78,7 @@ ms.locfileid: "79398459"
   [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
   [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]
 
-- 它可作为与 `formatString`、<xref:System.String.Format%2A?displayProperty=nameWithType> 和 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 等方法一起使用的格式项中的 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 参数提供。 有关更多信息，请参见[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)。 下面的示例使用格式项在字符串中插入货币值。
+- 它可作为与 <xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 等方法一起使用的格式项中的 `formatString` 参数提供。 有关更多信息，请参见[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)。 下面的示例使用格式项在字符串中插入货币值。
 
   [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
   [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]

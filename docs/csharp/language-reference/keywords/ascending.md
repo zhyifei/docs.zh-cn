@@ -15,7 +15,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713791"
 ---
 # <a name="ascending-c-reference"></a>ascending（C# 参考）
-查询表达式中的 `ascending`orderby 子句[ 中使用 ](./orderby-clause.md) 上下文关键字指定排序顺序为从小到大。 由于 `ascending` 为默认排序顺序，因此无需加以指定。  
+查询表达式中的 [orderby 子句](./orderby-clause.md) 中使用 `ascending` 上下文关键字指定排序顺序为从小到大。 由于 `ascending` 为默认排序顺序，因此无需加以指定。  
   
 ## <a name="example"></a>示例  
  下面的示例说明 `ascending` 在 [orderby 子句](./orderby-clause.md)中的用法。  

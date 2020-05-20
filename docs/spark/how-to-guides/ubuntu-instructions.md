@@ -19,9 +19,9 @@ ms.locfileid: "79187571"
 
 如果具备以下所有先决条件，请跳到[生成](#build)步骤。
 
-1. 下载并安装 [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1)  或 [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)  - 安装 SDK 会将 `dotnet` 工具链添加到路径。  支持 .NET Core 2.1、2.2 和 3.1。
+1. 下载并安装 [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1) 或 [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1) - 安装 SDK 会将 `dotnet` 工具链添加到路径。  支持 .NET Core 2.1、2.2 和 3.1。
 
-2. 安装 [OpenJDK 8](https://openjdk.java.net/install/)  。
+2. 安装 [OpenJDK 8](https://openjdk.java.net/install/)。
 
    - 可以使用以下命令：
 
@@ -45,7 +45,7 @@ ms.locfileid: "79187571"
       sudo update-alternatives --config java
       ```
 
-3. 安装 [Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)  。
+3. 安装 [Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)。
 
    * 运行下面的命令：
 
@@ -74,7 +74,7 @@ ms.locfileid: "79187571"
        OS name: "linux", version: "4.4.0-17763-microsoft", arch: "amd64", family: "unix"
        ```
 
-4. 安装 [Apache Spark 2.3+](https://spark.apache.org/downloads.html)  。
+4. 安装 [Apache Spark 2.3+](https://spark.apache.org/downloads.html)。
 下载 [Apache Spark 2.3+](https://spark.apache.org/downloads.html) 并将其提取到本地文件夹（例如 `~/bin/spark-2.3.2-bin-hadoop2.7`）。 （支持的 spark 版本为 2.3.*、2.4.0、2.4.1、2.4.3 和 2.4.4）
 
    ```bash

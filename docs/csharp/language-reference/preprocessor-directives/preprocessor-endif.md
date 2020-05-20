@@ -25,7 +25,7 @@ ms.locfileid: "75712541"
 ```  
   
 ## <a name="remarks"></a>备注  
- 以 `#if` 指令开头的条件指令必须以 `#endif` 指令显式终止。 有关如何使用 [ 的示例，请参阅 ](./preprocessor-if.md)#if`#endif`。  
+ 以 `#if` 指令开头的条件指令必须以 `#endif` 指令显式终止。 有关如何使用 `#endif` 的示例，请参阅 [#if](./preprocessor-if.md)。  
   
 ## <a name="see-also"></a>另请参阅
 

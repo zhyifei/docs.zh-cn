@@ -31,7 +31,7 @@ ms.locfileid: "71048635"
 # <a name="configuring-internet-applications"></a>配置 Internet 应用程序
 [\<System.Net > 元素（网络设置）](../configure-apps/file-schema/network/system-net-element-network-settings.md)配置元素包含应用程序的网络配置信息。 使用 [\<system.Net> 元素（网络设置）](../configure-apps/file-schema/network/system-net-element-network-settings.md)元素，可以设置代理服务器，设置连接管理参数，包括自定义应用程序内的身份验证和请求模块。  
   
- [\<defaultProxy>元素（网络设置）](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md)元素定义 `GlobalProxySelection` 类返回的代理服务器。 任何没有自身 <xref:System.Net.HttpWebRequest> 属性的 <xref:System.Net.HttpWebRequest.Proxy%2A> 都设置为使用默认代理的特定值。 除了设置代理地址外，还可以创建不使用代理的服务器地址列表，并指示不应将代理用于本地地址。  
+ [\<defaultProxy>元素（网络设置）](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md)元素定义 `GlobalProxySelection` 类返回的代理服务器。 任何没有自身 <xref:System.Net.HttpWebRequest.Proxy%2A> 属性的 <xref:System.Net.HttpWebRequest> 都设置为使用默认代理的特定值。 除了设置代理地址外，还可以创建不使用代理的服务器地址列表，并指示不应将代理用于本地地址。  
   
  请注意，Microsoft Internet Explorer 设置与配置设置相结合，并且后者具有优先级。  
   

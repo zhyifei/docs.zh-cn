@@ -26,13 +26,13 @@ ms.locfileid: "75711371"
   
  哈希函数是一种算法，返回基于键的数值哈希代码。 该键是所存储对象的某个属性的值。 哈希函数必须始终返回同一个键的同一哈希代码。 哈希函数有可能为两个不同的键生成相同的哈希代码，但从哈希表中检索元素时，为每个唯一的键生成唯一哈希代码的哈希函数具有更好的性能。  
   
- 在 <xref:System.Collections.Hashtable> 中用作元素的每个对象必须能够通过使用 <xref:System.Object.GetHashCode%2A> 方法的实现为自身生成哈希代码。 但是，还可以为 <xref:System.Collections.Hashtable> 中的所有元素指定哈希函数，方法是使用接受 <xref:System.Collections.Hashtable> 实现作为其参数之一的 <xref:System.Collections.IHashCodeProvider> 构造函数。  
+ 在 <xref:System.Collections.Hashtable> 中用作元素的每个对象必须能够通过使用 <xref:System.Object.GetHashCode%2A> 方法的实现为自身生成哈希代码。 但是，还可以为 <xref:System.Collections.Hashtable> 中的所有元素指定哈希函数，方法是使用接受 <xref:System.Collections.IHashCodeProvider> 实现作为其参数之一的 <xref:System.Collections.Hashtable> 构造函数。  
   
  当将对象添加到 <xref:System.Collections.Hashtable>时，其存储在与哈希代码相关联的存储桶中，此哈希代码匹配该对象的哈希代码。 当在 <xref:System.Collections.Hashtable> 中对一个值进行搜索时，则为该值生成哈希代码，并搜索与该哈希代码相关联的存储桶。  
   
  例如，用于字符串的哈希函数可能采用字符串中每个字符的 ASCII 代码，并将它们加总以生成哈希代码。 字符串“picnic”的哈希代码可能与字符串“basket”的哈希代码不同；因此，字符串“picnic”和“basket”可能在不同的存储桶中。 与此相反，“stressed”和“desserts”可能具有相同的哈希代码，并且位于同一个存储桶中。  
   
- <xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 类具有与 <xref:System.Collections.Hashtable> 类相同的功能。 特定类型（不包括 <xref:System.Collections.Generic.Dictionary%602>）的 <xref:System.Object> 与 <xref:System.Collections.Hashtable> 相比可为值类型提供更好的性能。 这是因为 <xref:System.Collections.Hashtable> 的元素属于 <xref:System.Object> 类型；因此，装箱和取消装箱通常发生在存储或检索值类型时。 可能有多个线程同时访问该集合时，应使用 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 类。  
+ <xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 类具有与 <xref:System.Collections.Hashtable> 类相同的功能。 特定类型（不包括 <xref:System.Object>）的 <xref:System.Collections.Generic.Dictionary%602> 与 <xref:System.Collections.Hashtable> 相比可为值类型提供更好的性能。 这是因为 <xref:System.Collections.Hashtable> 的元素属于 <xref:System.Object> 类型；因此，装箱和取消装箱通常发生在存储或检索值类型时。 可能有多个线程同时访问该集合时，应使用 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 类。  
   
 ## <a name="see-also"></a>另请参阅
 

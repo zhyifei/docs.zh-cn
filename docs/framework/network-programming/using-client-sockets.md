@@ -26,9 +26,9 @@ ms.locfileid: "71046954"
 # <a name="using-client-sockets"></a>使用客户端套接字
 在通过 <xref:System.Net.Sockets.Socket> 发起对话之前，必须在应用程序和远程设备之间创建数据管道。 尽管存在其他网络地址系列和协议，但本示例说明如何创建与远程服务的 TCP/IP 连接。  
   
- TCP/IP 使用一个网络地址和一个服务端口号来对唯一标识设备。 网络地址标识网络上的特定设备；端口号标识该设备要连接到的特定服务。 网络地址和服务端口的组合称为终结点，它在 .NET Framework 中由 <xref:System.Net.EndPoint> 类表示。 会为每个受支持的地址系列定义 EndPoint 的后代；对于 IP 地址系列，类为 **。** <xref:System.Net.IPEndPoint>  
+ TCP/IP 使用一个网络地址和一个服务端口号来对唯一标识设备。 网络地址标识网络上的特定设备；端口号标识该设备要连接到的特定服务。 网络地址和服务端口的组合称为终结点，它在 .NET Framework 中由 <xref:System.Net.EndPoint> 类表示。 会为每个受支持的地址系列定义 EndPoint 的后代；对于 IP 地址系列，类为 <xref:System.Net.IPEndPoint>。  
   
- <xref:System.Net.Dns> 类向使用 TCP/IP Internet 服务的应用程序提供域名服务。 <xref:System.Net.Dns.Resolve%2A> 方法查询 DNS 服务器以将用户友好的域名（如“host.contoso.com”）映射到数字形式的 Internet 地址（如 192.168.1.1）。 Resolve 返回一个 **，其包含所请求名称的地址和别名的列表。** <xref:System.Net.IPHostEntry> 在大多数情况下，可以使用 <xref:System.Net.IPHostEntry.AddressList%2A> 数组中返回的第一个地址。 下面的代码获取一个包含服务器 host.contoso.com 的 IP 地址的 <xref:System.Net.IPAddress>。  
+ <xref:System.Net.Dns> 类向使用 TCP/IP Internet 服务的应用程序提供域名服务。 <xref:System.Net.Dns.Resolve%2A> 方法查询 DNS 服务器以将用户友好的域名（如“host.contoso.com”）映射到数字形式的 Internet 地址（如 192.168.1.1）。 Resolve 返回一个 <xref:System.Net.IPHostEntry>，其包含所请求名称的地址和别名的列表。 在大多数情况下，可以使用 <xref:System.Net.IPHostEntry.AddressList%2A> 数组中返回的第一个地址。 下面的代码获取一个包含服务器 host.contoso.com 的 IP 地址的 <xref:System.Net.IPAddress>。  
   
 ```vb  
 Dim ipHostInfo As IPHostEntry = Dns.Resolve("host.contoso.com")  

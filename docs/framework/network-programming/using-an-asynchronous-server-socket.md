@@ -58,7 +58,7 @@ listener.BeginAccept(new AsyncCallback(SocketListener.AcceptCallback), listener)
   
  异步套接字使用系统线程池中的线程处理传入的连接。 一个线程负责接受连接，另一个线程则用于处理每个传入的连接，还有一个线程负责接收来自连接的数据。 这些线程可以是同一个线程，具体取决于线程池分配了哪一个线程。 在下面的示例中，<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 类将挂起主线程的执行并在执行可以继续时发出信号。  
   
- 下面的示例演示在本地计算机上创建异步 TCP/IP 套接字并开始接受连接的异步方法。 它假定存在一个名为 **的全局 ManualResetEvent，该方法是名为** 的类的成员，并且假定定义了一个名为 `allDone` 的回调方法。`SocketListener``AcceptCallback`  
+ 下面的示例演示在本地计算机上创建异步 TCP/IP 套接字并开始接受连接的异步方法。 它假定存在一个名为 `allDone` 的全局 ManualResetEvent，该方法是名为 `SocketListener` 的类的成员，并且假定定义了一个名为 `AcceptCallback` 的回调方法。  
   
 ```vb  
 Public Sub StartListening()  
@@ -125,7 +125,7 @@ public void StartListening()
 }  
 ```  
   
- 接受回调方法（即前例中的 `AcceptCallback`）负责向主应用程序线程发出信号，使其继续处理、建立与客户端的连接并开始异步读取客户端数据。 下面的示例是 `AcceptCallback` 方法的实现的第一部分。 这部分方法向主应用程序线程发出信号，使其继续处理并建立与客户端的连接。 它假定一个名为  **的全局 ManualResetEvent。** `allDone`  
+ 接受回调方法（即前例中的 `AcceptCallback`）负责向主应用程序线程发出信号，使其继续处理、建立与客户端的连接并开始异步读取客户端数据。 下面的示例是 `AcceptCallback` 方法的实现的第一部分。 这部分方法向主应用程序线程发出信号，使其继续处理并建立与客户端的连接。 它假定一个名为 `allDone` 的全局 ManualResetEvent。  
   
 ```vb  
 Public Sub AcceptCallback(ar As IAsyncResult)  
@@ -173,7 +173,7 @@ public class StateObject
   
  `AcceptCallback` 方法的这部分（即开始从客户端套接字接收数据的部分）首先初始化 `StateObject` 类的实例，然后调用 <xref:System.Net.Sockets.Socket.BeginReceive%2A> 方法开始从客户端套接字异步读取数据。  
   
- 以下示例显示完整的 `AcceptCallback` 方法。 它假定存在一个名为 **且定义了** 类的全局 ManualResetEvent，并且假定在名为 `allDone,` 的类中定义了 `StateObject` 方法。`ReadCallback``SocketListener`  
+ 以下示例显示完整的 `AcceptCallback` 方法。 它假定存在一个名为 `allDone,` 且定义了 `StateObject` 类的全局 ManualResetEvent，并且假定在名为 `SocketListener` 的类中定义了 `ReadCallback` 方法。  
   
 ```vb  
 Public Shared Sub AcceptCallback(ar As IAsyncResult)  

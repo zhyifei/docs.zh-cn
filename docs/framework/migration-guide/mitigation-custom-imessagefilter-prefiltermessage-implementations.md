@@ -25,7 +25,7 @@ ms.locfileid: "79398645"
 
 此更改仅影响面向从 .NET Framework 4.6.1 开始的 .NET Framework 版本的 Windows 窗体应用。
 
-对于面向以前版本的 .NET framework 的 Windows 窗体应用程序，在调用 <xref:System.IndexOutOfRangeException> 方法时，此类实现在某些情况下会引发 <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> 异常
+对于面向以前版本的 .NET framework 的 Windows 窗体应用程序，在调用 <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> 方法时，此类实现在某些情况下会引发 <xref:System.IndexOutOfRangeException> 异常
 
 ## <a name="mitigation"></a>缓解操作
 

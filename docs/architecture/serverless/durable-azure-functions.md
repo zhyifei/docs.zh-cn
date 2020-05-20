@@ -69,15 +69,15 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-可以同时启动并运行多个业务流程实例。 对 `StartNewAsync` 调用 `DurableOrchestrationClient` 方法将启动业务流程的新实例。 方法返回在业务流程启动时完成的 `Task<string>`。 如果业务流程未在 30 秒内启动，则会引发 `TimeoutException` 类型的异常。
+可以同时启动并运行多个业务流程实例。 对 `DurableOrchestrationClient` 调用 `StartNewAsync` 方法将启动业务流程的新实例。 方法返回在业务流程启动时完成的 `Task<string>`。 如果业务流程未在 30 秒内启动，则会引发 `TimeoutException` 类型的异常。
 
-从 `Task<string>` 完成的 `StartNewAsync` 应包含业务流程实例的唯一 ID。 此实例 ID 可用于在该特定业务流程上的调用操作。 可以查询业务流程以获取状态或发送事件通知。
+从 `StartNewAsync` 完成的 `Task<string>` 应包含业务流程实例的唯一 ID。 此实例 ID 可用于在该特定业务流程上的调用操作。 可以查询业务流程以获取状态或发送事件通知。
 
 ### <a name="the-activity-functions"></a>活动函数
 
 活动函数是可在业务流程函数内组合在一起以创建工作流的离散操作。 大多数情况下，大多数实际工作都是在这里进行。 它们表示业务逻辑，长时间运行的进程，以及更大的解决方案中的难题。
 
-`ActivityTriggerAttribute` 可用于注释 `DurableActivityContext` 类型的函数参数。 使用注释通知运行时，此函数将计划用作活动函数。 使用 `GetInput<T>` 参数的 `DurableActivityContext` 方法检索活动函数的输入值。
+`ActivityTriggerAttribute` 可用于注释 `DurableActivityContext` 类型的函数参数。 使用注释通知运行时，此函数将计划用作活动函数。 使用 `DurableActivityContext` 参数的 `GetInput<T>` 方法检索活动函数的输入值。
 
 与业务流程函数类似，活动的返回类型必须是 void、Task 或 JSON 可序列化值。
 

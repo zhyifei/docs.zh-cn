@@ -33,7 +33,7 @@ ms.locfileid: "73130940"
  描述根据基于事件的异步模式公开异步功能的需求。  
   
  [确定何时实现基于事件的异步模式](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
- 描述如何确定何时应选择实现基于事件的异步模式而不是由<xref:System.IAsyncResult>异步编程模型 (APM)[ 表示的 ](asynchronous-programming-model-apm.md) 模式
+ 描述如何确定何时应选择实现基于事件的异步模式而不是由[异步编程模型 (APM)](asynchronous-programming-model-apm.md) 表示的 <xref:System.IAsyncResult> 模式
   
  [如何：实现支持基于事件的异步模式的组件](component-that-supports-the-event-based-asynchronous-pattern.md)  
  说明如何创建实现基于事件的异步模式的组件。 它是使用 <xref:System.ComponentModel?displayProperty=nameWithType> 命名空间的帮助器类实现的，这可确保该组件在任何应用程序模型下均可正常工作。  

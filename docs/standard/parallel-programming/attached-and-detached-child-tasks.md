@@ -16,7 +16,7 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123184"
 ---
 # <a name="attached-and-detached-child-tasks"></a>已附加和已分离的子任务
-子任务  （或嵌套任务  ）是在另一个任务（称为“父任务”<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> *）的用户委托中创建的*  实例。 可以分离或附加子任务。 分离的子任务  是独立于父级而执行的任务。 附加的子任务  是使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 选项创建的嵌套任务，父级不显式或默认禁止附加任务。 一个任务可以创建任意数量的附加和分离子任务，这仅受系统资源限制。  
+子任务（或嵌套任务）是在另一个任务（称为“父任务”）的用户委托中创建的 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 实例。 可以分离或附加子任务。 分离的子任务  是独立于父级而执行的任务。 附加的子任务  是使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 选项创建的嵌套任务，父级不显式或默认禁止附加任务。 一个任务可以创建任意数量的附加和分离子任务，这仅受系统资源限制。  
   
  下表列出了两种子任务之间的基本差异。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "73123184"
 ## <a name="preventing-a-child-task-from-attaching-to-its-parent"></a>阻止子任务附加到其父任务  
  由子任务引发的未经处理的异常将传播到父任务中。 可以使用此行为，从一个根任务而无需遍历任务树来观察所有子任务异常。 但是，当父任务不需要其他代码的附件时，异常传播可能会产生问题。 例如，设想下从 <xref:System.Threading.Tasks.Task> 对象调用第三方库组件的应用。 如果第三方库组件也创建一个 <xref:System.Threading.Tasks.Task> 对象，并指定 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 以将其附加到父任务中，则子任务中出现的任何未经处理的异常将会传播到父任务。 这可能会导致主应用中出现意外行为。  
   
- 若要防止子任务附加到其父任务，请在创建父任务 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task> 对象时，指定 <xref:System.Threading.Tasks.Task%601> 选项。 当某项任务尝试附加到其父任务，且其父任务指定了 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> 选项时，则子任务将不能附加到父任务，并且将像未指定 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 选项一样进行执行。  
+ 若要防止子任务附加到其父任务，请在创建父任务 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 对象时，指定 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> 选项。 当某项任务尝试附加到其父任务，且其父任务指定了 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> 选项时，则子任务将不能附加到父任务，并且将像未指定 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 选项一样进行执行。  
   
  可能还想要防止子任务在没有及时完成时附加到其父任务。 因为父任务只有在所有子任务完成后才会完成，所以长时间运行的子任务会使整个应用执行得非常缓慢。 有关展示了如何通过防止子任务附加到父任务来提升应用性能的示例，请参阅[如何：防止子任务附加到父任务](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md)。  
   

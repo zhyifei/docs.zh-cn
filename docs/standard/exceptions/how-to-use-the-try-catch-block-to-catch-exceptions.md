@@ -20,7 +20,7 @@ ms.locfileid: "75708461"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>如何使用 try/catch 块捕获异常
 
-将可能引发异常的任何代码语句放置在 `try` 块中，将用于处理异常的语句放置在 `catch` 块下的一个或多个 `try` 块中。 每个 `catch` 块包括异常类型，并且可以包含处理该异常类型所需的其他语句。
+将可能引发异常的任何代码语句放置在 `try` 块中，将用于处理异常的语句放置在 `try` 块下的一个或多个 `catch` 块中。 每个 `catch` 块包括异常类型，并且可以包含处理该异常类型所需的其他语句。
 
 在以下示例中，<xref:System.IO.StreamReader> 将打开一个名为 data.txt 的文件  ，并从文件中检索行。 因为代码可能会引发任何三个异常，因此将其放置于 `try` 块中。 三个 `catch` 块捕获异常并通过将结果向控制台显示来处理它们。
 

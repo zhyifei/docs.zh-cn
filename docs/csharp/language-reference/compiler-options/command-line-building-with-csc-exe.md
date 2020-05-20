@@ -24,7 +24,7 @@ ms.locfileid: "76789860"
 
 也可以使用 MSBuild 以编程方式生成 C# 程序。 有关详细信息，请参阅 [MSBuild](/visualstudio/msbuild/msbuild)。
 
-csc.exe  可执行文件通常位于 Windows\\ *目录下的 Microsoft.NET\Framework\<* Version>  文件夹中。 根据每台计算机上的具体配置，此位置可能有所不同。 如果计算机上安装了不止一个版本的 .NET Framework，您将发现此文件的多个版本。 有关此类安装的详细信息，请参阅[如何：确定安装的 .NET Framework 版本](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)。
+csc.exe 可执行文件通常位于 Windows 目录下的 Microsoft.NET\Framework\\\<Version> 文件夹中。 根据每台计算机上的具体配置，此位置可能有所不同。 如果计算机上安装了不止一个版本的 .NET Framework，您将发现此文件的多个版本。 有关此类安装的详细信息，请参阅[如何：确定安装的 .NET Framework 版本](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)。
 
 > [!TIP]
 > 使用 Visual Studio IDE 生成项目时，可以在 **“输出”** 窗口显示 **“csc”** 命令以及与之关联的编译器选项。 若要显示此信息，请按照[如何：查看、保存和配置生成日志文件](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log)中的说明将日志数据的详细级别更改为 **“常规”** 或 **“详细”** 。 重新生成项目之后，在 **“输出”** 窗口中搜索 **“csc”** 即可找到所调用的 C# 编译器。
@@ -57,13 +57,13 @@ csc.exe  可执行文件通常位于 Windows\\ *目录下的 Microsoft.NET\Frame
 
 ## <a name="sample-command-lines-for-the-c-compiler"></a>C# 编译器的示例命令行
 
-- 编译生成 File.exe  的 File.cs  ：
+- 编译生成 File.exe 的 File.cs：
 
   ```console
   csc File.cs
   ```
 
-- 编译生成 File.dll  的 File.cs  ：
+- 编译生成 File.dll 的 File.cs：
 
   ```console
   csc -target:library File.cs

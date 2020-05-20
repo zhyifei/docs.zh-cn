@@ -26,7 +26,7 @@ ms.locfileid: "73122220"
   
 1. 创建一个 Visual C# 或 Visual Basic“Windows 窗体应用程序”项目  。 在以下步骤中，该项目命名为 `WriterReadersWinForms`。  
   
-2. 在主窗体的窗体设计器中，Form1.cs（对于 Visual Basic 则为 Form1.vb）添加了四个 <xref:System.Windows.Forms.CheckBox> 控件。 将 <xref:System.Windows.Forms.Control.Text%2A>、 **、** 、`checkBox1` 的  **属性分别设置为“读取器 1”** `checkBox2`、“读取器 2”  、“读取器 3”`checkBox3`**和“编写器”** `checkBox4`。 将每个控件的 <xref:System.Windows.Forms.Control.Enabled%2A> 属性设置为 `False`。  
+2. 在主窗体的窗体设计器中，Form1.cs（对于 Visual Basic 则为 Form1.vb）添加了四个 <xref:System.Windows.Forms.CheckBox> 控件。 将 `checkBox1`、`checkBox2`、`checkBox3`、`checkBox4` 的 <xref:System.Windows.Forms.Control.Text%2A> 属性分别设置为“读取器 1”、“读取器 2”、“读取器 3”和“编写器”。 将每个控件的 <xref:System.Windows.Forms.Control.Enabled%2A> 属性设置为 `False`。  
   
 3. 在窗体上添加一个 <xref:System.Windows.Forms.Timer> 控件。 将 <xref:System.Windows.Forms.Timer.Interval%2A> 属性设置为 `2500`。  
   

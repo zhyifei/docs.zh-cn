@@ -27,7 +27,7 @@ sealed class B : A {}
 
 ## <a name="example"></a>示例
 
-在下面的示例中，`Z` 继承自 `Y`，但 `Z` 无法替代在 `F` 中声明并在 `X` 中密封的虚函数 `Y`。
+在下面的示例中，`Z` 继承自 `Y`，但 `Z` 无法替代在 `X` 中声明并在 `Y` 中密封的虚函数 `F`。
 
 [!code-csharp[csrefKeywordsModifiers#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#16)]
 

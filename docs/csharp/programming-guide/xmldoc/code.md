@@ -37,7 +37,7 @@ ms.locfileid: "76789838"
 
 ## <a name="example"></a>示例
 
-有关如何使用 [code> 标记的示例，请参阅 \<](./example.md)example>\< 主题。
+有关如何使用 \<code> 标记的示例，请参阅 [\<example>](./example.md) 主题。
 
 ## <a name="see-also"></a>另请参阅
 

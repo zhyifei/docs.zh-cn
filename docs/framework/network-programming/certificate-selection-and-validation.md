@@ -16,7 +16,7 @@ ms.locfileid: "71048751"
  证书是 ASCII 字节流，包含公钥、属性（如版本号、序列号和到期日期）以及来自证书颁发机构的数字签名。 证书用于建立加密连接，或对服务器的客户端进行身份验证。  
   
 ## <a name="client-certificate-selection-and-validation"></a>客户端证书选择和验证  
- 客户端可以选择一个或多个用于特定 SSL 连接的证书。 客户端证书可以与 Web 服务器或 SMTP 邮件服务器的 SSL 连接相关联。 客户端将证书添加到 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 或 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 类对象集合。 以电子邮件为例，证书集合是一个与 <xref:System.Security.Cryptography.X509Certificates.X509CertificateCollection> 类的 <xref:System.Net.Mail.SmtpClient.ClientCertificates%2A> 属性相关联的 <xref:System.Net.Mail.SmtpClient> 实例。 <xref:System.Net.HttpWebRequest> 类具有类似的 <xref:System.Net.HttpWebRequest.ClientCertificates%2A> 属性。  
+ 客户端可以选择一个或多个用于特定 SSL 连接的证书。 客户端证书可以与 Web 服务器或 SMTP 邮件服务器的 SSL 连接相关联。 客户端将证书添加到 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 或 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 类对象集合。 以电子邮件为例，证书集合是一个与 <xref:System.Net.Mail.SmtpClient> 类的 <xref:System.Net.Mail.SmtpClient.ClientCertificates%2A> 属性相关联的 <xref:System.Security.Cryptography.X509Certificates.X509CertificateCollection> 实例。 <xref:System.Net.HttpWebRequest> 类具有类似的 <xref:System.Net.HttpWebRequest.ClientCertificates%2A> 属性。  
   
  <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 和 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 类的主要区别是私钥需要保存在 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 类的证书存储中。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "71048751"
   
  Winhttpcertcfg.exe  工具可用于配置客户端证书。 Winhttpcertcfg.exe  工具作为 Windows Server 2003 Resource Kit 的工具之一提供。 该工具在 [www.microsoft.com](https://www.microsoft.com) 上也是作为 Windows Server 2003 Resource Kit 工具的部件可供下载。  
   
-HttpCfg.exe 工具可用于配置  *类的服务器证书*<xref:System.Net.HttpListener>。 HttpCfg.exe  工具作为 Windows Server 2003 和 Windows XP Service Pack 2 的支持工具之一提供。 默认情况下，Windows Server 2003 或 Windows XP 上都未安装 HttpCfg.exe  和其他支持工具。 在 Windows Server 2003 上， 支持工具单独安装在 Windows Server 2003 CD-ROM 上的以下文件夹和文件中：  
+HttpCfg.exe 工具可用于配置 <xref:System.Net.HttpListener> 类的服务器证书。 HttpCfg.exe  工具作为 Windows Server 2003 和 Windows XP Service Pack 2 的支持工具之一提供。 默认情况下，Windows Server 2003 或 Windows XP 上都未安装 HttpCfg.exe  和其他支持工具。 在 Windows Server 2003 上， 支持工具单独安装在 Windows Server 2003 CD-ROM 上的以下文件夹和文件中：  
   
  \Support\Tools\Suptools.msi  
   

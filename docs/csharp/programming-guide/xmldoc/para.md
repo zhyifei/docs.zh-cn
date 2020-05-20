@@ -37,7 +37,7 @@ ms.locfileid: "76793411"
 
 ## <a name="example"></a>示例
 
-有关使用 [para> 的示例，请参阅 \<](./summary.md)summary>\<。
+有关使用 \<para> 的示例，请参阅 [\<summary>](./summary.md)。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -45,7 +45,7 @@ Sorry, invalid selection.
 
 ## <a name="example"></a>示例
 
-在本例中，`break` 语句仅用于在循环的每次迭代中脱离当前分支。 循环本身不受属于嵌套 `break`switch[ 语句的 ](./switch.md) 实例的影响。
+在本例中，`break` 语句仅用于在循环的每次迭代中脱离当前分支。 循环本身不受属于嵌套 [switch](./switch.md) 语句的 `break` 实例的影响。
 
 [!code-csharp[csrefKeywordsJump#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#8)]
 

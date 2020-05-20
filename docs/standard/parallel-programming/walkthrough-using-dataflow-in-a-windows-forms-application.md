@@ -80,7 +80,7 @@ ms.locfileid: "78159762"
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    > C# 版本的 `CreateCompositeBitmap` 方法使用指针启用高效处理 <xref:System.Drawing.Bitmap?displayProperty=nameWithType> 对象。 因此，若要使用 [unsafe](../../csharp/language-reference/keywords/unsafe.md) 关键字，必须在项目中启用“允许不安全代码”  选项。 有关如何在 Visual C# 项目中启用不安全代码的详细信息，请参阅[“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
+    > C# 版本的 `CreateCompositeBitmap` 方法使用指针启用高效处理 <xref:System.Drawing.Bitmap?displayProperty=nameWithType> 对象。 因此，若要使用 [unsafe](../../csharp/language-reference/keywords/unsafe.md) 关键字，必须在项目中启用“允许不安全代码”选项。 有关如何在 Visual C# 项目中启用不安全代码的详细信息，请参阅[“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
   
  下表描述了网络的成员。  
   
@@ -107,15 +107,15 @@ ms.locfileid: "78159762"
   
 ### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>将数据流网络连接到用户界面  
   
-1. 在主窗体的窗体设计器中，创建“选择文件夹”  按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件的事件处理程序。  
+1. 在主窗体的窗体设计器中，创建“选择文件夹”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件的事件处理程序。  
   
-2. 实现“选择文件夹”  按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
+2. 实现“选择文件夹”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
   
      [!code-csharp[TPLDataflow_CompositeImages#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#6)]  
   
-3. 在主窗体的窗体设计器中，创建“取消”  按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件的事件处理程序。  
+3. 在主窗体的窗体设计器中，创建“取消”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件的事件处理程序。  
   
-4. 实现“取消”  按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
+4. 实现“取消”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
   
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   

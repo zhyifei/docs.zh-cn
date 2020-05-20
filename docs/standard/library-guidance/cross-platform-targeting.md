@@ -35,7 +35,7 @@ ms.locfileid: "76731456"
 
 > .NET Standard 1.x 作为一组精细的 NuGet 包分发，它创建了一个大型的包依赖项关系图，并导致开发人员在构建时下载大量的包。 新式 .NET 平台（包括 .NET Framework 4.6.1、UWP 和 Xamarin）全部支持 .NET Standard 2.0。 如果需要专门面向较旧的平台，则只能面向 .NET Standard。
 
-✔️ 如果需要面向 `netstandard2.0` 目标，请务必包括 `netstandard1.x` 目标。
+✔️ 如果需要面向 `netstandard1.x` 目标，请务必包括 `netstandard2.0` 目标。
 
 > 所有支持 .NET Standard 2.0 的平台都将使用 `netstandard2.0` 目标，并从较小的包关系图中受益，而较旧的平台仍然可以正常运行并回退到使用 `netstandard1.x` 目标。
 
@@ -92,7 +92,7 @@ public static class GpsLocation
 
 > .NET Standard 程序集将自动供 NuGet 使用。 面向单个 .NET 实现会增加 `*.nupkg` 大小，不会提供任何好处。
 
-✔️ 请考虑在提供 `net461` 目标时为 `netstandard2.0` 添加目标。
+✔️ 请考虑在提供 `netstandard2.0` 目标时为 `net461` 添加目标。
 
 > 在 .NET Framework 中使用 .NET Standard 2.0 存在一些问题，这些在 .NET Framework 4.7.2 中已得到解决。 可以为仍在使用 .NET Framework 4.6.1 - 4.7.1 的开发人员提供为 .NET Framework 4.6.1 构建的二进制文件，从而改善其体验。
 

@@ -27,7 +27,7 @@ ms.locfileid: "75712060"
 > [!NOTE]
 > 上一示例还使用了[可选实参](../classes-and-structs/named-and-optional-arguments.md)功能，以便忽略 `Type.Missing`。  
   
- 与在 C# 3.0 及更早版本中设置 `Value` 对象的 <xref:Microsoft.Office.Interop.Excel.Range> 属性的值类似，需要两个参数。 一个为指定范围值类型的可选参数提供实参。 另一个提供 `Value` 属性的值。 下面的示例说明了这些方法。 两者都将 A1 单元格的值设置为 `Name`。
+ 与在 C# 3.0 及更早版本中设置 <xref:Microsoft.Office.Interop.Excel.Range> 对象的 `Value` 属性的值类似，需要两个参数。 一个为指定范围值类型的可选参数提供实参。 另一个提供 `Value` 属性的值。 下面的示例说明了这些方法。 两者都将 A1 单元格的值设置为 `Name`。
   
  [!code-csharp[csProgGuideIndexedProperties#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#3)]  
   

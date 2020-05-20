@@ -17,7 +17,7 @@ ms.locfileid: "74345607"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>如何：在 Visual Basic 中从注册表项中读取值
 
-`GetValue` 对象的 `My.Computer.Registry` 方法可以用于读取 Windows 注册表中的值。  
+`My.Computer.Registry` 对象的 `GetValue` 方法可以用于读取 Windows 注册表中的值。  
   
  如果在下面的示例中，“Software\MyApp”项不存在，则引发异常。 如果在下面的示例中，`ValueName`“Name”不存在，则返回 `Nothing`。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "74345607"
   
 ### <a name="to-read-a-value-from-a-registry-key"></a>从注册表项读取值  
   
-- 使用 `GetValue` 方法（指定路径和名称）可从注册表项读取值。 下面的示例从 `Name` 读取值 `HKEY_CURRENT_USER\Software\MyApp` 并将它显示在消息框中。  
+- 使用 `GetValue` 方法（指定路径和名称）可从注册表项读取值。 下面的示例从 `HKEY_CURRENT_USER\Software\MyApp` 读取值 `Name` 并将它显示在消息框中。  
   
      [!code-vb[VbResourceTasks#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#4)]  
   

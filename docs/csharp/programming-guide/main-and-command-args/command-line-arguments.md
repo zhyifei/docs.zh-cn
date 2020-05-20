@@ -20,13 +20,13 @@ ms.locfileid: "77093505"
 [!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]
 
 > [!NOTE]
-> 若要在 Windows 窗体应用程序的 `Main` 方法中启用命令行参数，必须手动修改 program.cs`Main`*中* 的签名。 Windows 窗体设计器生成的代码创建没有输入参数的 `Main`。 还可使用 <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> 或 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> 从控制台或 Windows 应用程序的任意位置访问命令行参数。
+> 若要在 Windows 窗体应用程序的 `Main` 方法中启用命令行参数，必须手动修改 program.cs 中 `Main` 的签名。 Windows 窗体设计器生成的代码创建没有输入参数的 `Main`。 还可使用 <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> 或 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> 从控制台或 Windows 应用程序的任意位置访问命令行参数。
 
 `Main` 方法的参数是一个表示命令行参数的 <xref:System.String> 数组。 通常，通过测试 `Length` 属性来确定参数是否存在，例如：
 
 [!code-csharp[csProgGuideMain#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#4)]
 
-还可以使用 <xref:System.Convert> 类或 `Parse` 方法将字符串参数转换为数字类型。 例如，以下语句使用 `string` 方法将 `long` 转换为 <xref:System.Int64.Parse%2A> 数字：
+还可以使用 <xref:System.Convert> 类或 `Parse` 方法将字符串参数转换为数字类型。 例如，以下语句使用 <xref:System.Int64.Parse%2A> 方法将 `string` 转换为 `long` 数字：
 
 ```csharp
 long num = Int64.Parse(args[0]);

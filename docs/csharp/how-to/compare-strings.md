@@ -45,8 +45,8 @@ ms.locfileid: "73973323"
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>不区分大小写的序号比较
 
-<xref:System.String.Equals(System.String,System.StringComparison)?displayProperty=nameWithType> 方法允许指定 <xref:System.StringComparison> 的 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 值
-对于不区分大小写的序号比较。 此外还有静态 <xref:System.String.Compare(System.String,System.String,System.StringComparison)?displayProperty=nameWithType> 方法，该方法执行不区分大小写的序号比较，前提是你指定 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 参数的 <xref:System.StringComparison> 值。 如以下代码所示：
+<xref:System.String.Equals(System.String,System.StringComparison)?displayProperty=nameWithType> 方法允许指定 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 的 <xref:System.StringComparison> 值
+对于不区分大小写的序号比较。 此外还有静态 <xref:System.String.Compare(System.String,System.String,System.StringComparison)?displayProperty=nameWithType> 方法，该方法执行不区分大小写的序号比较，前提是你指定 <xref:System.StringComparison> 参数的 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 值。 如以下代码所示：
 
 [!code-csharp-interactive[Comparing strings ignoring case](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#2)]
 
@@ -96,7 +96,7 @@ ms.locfileid: "73973323"
 
 ## <a name="linguistic-sorting-and-searching-strings-in-arrays"></a>数组中的语义排序和字符串搜索
 
-以下示例演示如何在数组中使用依赖当前区域性的语义比较对字符串进行排序和搜索。 使用采用 <xref:System.Array> 参数的静态 <xref:System.StringComparer?displayProperty=nameWithType> 方法。
+以下示例演示如何在数组中使用依赖当前区域性的语义比较对字符串进行排序和搜索。 使用采用 <xref:System.StringComparer?displayProperty=nameWithType> 参数的静态 <xref:System.Array> 方法。
 
 此示例演示如何使用当前区域性对字符串数组进行排序：
 
@@ -118,7 +118,7 @@ ms.locfileid: "73973323"
 
 在排序和搜索过程中，请始终确保使用相同的比较类型。 使用不同的比较类型进行排序和搜索会产生意外的结果。
 
-元素或键的类型为 <xref:System.Collections.Hashtable?displayProperty=nameWithType> 时，<xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>、<xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 和 <xref:System.StringComparer?displayProperty=nameWithType> 等集合类的构造函数具有 `string` 参数。 通常，应尽可能使用这些构造函数，并指定 <xref:System.StringComparer.Ordinal?displayProperty=nameWithType> 或 <xref:System.StringComparer.OrdinalIgnoreCase?displayProperty=nameWithType>。
+元素或键的类型为 `string` 时，<xref:System.Collections.Hashtable?displayProperty=nameWithType>、<xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 等集合类的构造函数具有 <xref:System.StringComparer?displayProperty=nameWithType> 参数。 通常，应尽可能使用这些构造函数，并指定 <xref:System.StringComparer.Ordinal?displayProperty=nameWithType> 或 <xref:System.StringComparer.OrdinalIgnoreCase?displayProperty=nameWithType>。
 
 ## <a name="reference-equality-and-string-interning"></a>引用相等性和字符串集中
 
@@ -127,7 +127,7 @@ ms.locfileid: "73973323"
 [!code-csharp-interactive[Demonstrating string interning](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#9)]
 
 > [!NOTE]
-> 测试字符串是否相等时，使用的方法应显式指定要执行的比较类型。 你的代码具备更强的可维护性和可读性。 重载采用了 <xref:System.String?displayProperty=nameWithType> 枚举参数的 <xref:System.Array?displayProperty=nameWithType> 和 <xref:System.StringComparison> 类的方法。 指定要执行的比较类型。 在测试相等性时，请避免使用 `==` 和 `!=` 运算符。 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 实例方法始终执行区分大小写的序号比较。 它们主要适用于按字母顺序进行的字符串排序。
+> 测试字符串是否相等时，使用的方法应显式指定要执行的比较类型。 你的代码具备更强的可维护性和可读性。 重载采用了 <xref:System.StringComparison> 枚举参数的 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Array?displayProperty=nameWithType> 类的方法。 指定要执行的比较类型。 在测试相等性时，请避免使用 `==` 和 `!=` 运算符。 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 实例方法始终执行区分大小写的序号比较。 它们主要适用于按字母顺序进行的字符串排序。
 
 可以通过调用 <xref:System.String.Intern%2A?displayProperty=nameWithType> 方法暂存字符串或检索对现有暂存字符串的引用。 要确定字符串是否暂存，请调用 <xref:System.String.IsInterned%2A?displayProperty=nameWithType> 方法。
 

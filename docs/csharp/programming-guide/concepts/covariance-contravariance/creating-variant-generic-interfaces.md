@@ -124,7 +124,7 @@ interface IInvariant<T> : ICovariant<T> { }
 interface IExtCovariant<out T> : ICovariant<T> { }
 ```
 
-尽管 `IInvariant<T>` 接口和 `T` 接口扩展的是同一个接口，但泛型类型参数 `IExtCovariant<out T>` 在前者中为固定参数，在后者中为协变参数。 此规则也适用于逆变泛型类型参数。
+尽管 `IInvariant<T>` 接口和 `IExtCovariant<out T>` 接口扩展的是同一个接口，但泛型类型参数 `T` 在前者中为固定参数，在后者中为协变参数。 此规则也适用于逆变泛型类型参数。
 
 无论泛型类型参数 `T` 在接口中是协变还是逆变，都可以创建一个接口来扩展这两类接口，只要在扩展接口中，该 `T` 泛型类型参数为固定参数。 以下代码示例阐释了这一点。
 

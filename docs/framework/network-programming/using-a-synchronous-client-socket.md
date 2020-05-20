@@ -42,7 +42,7 @@ int bytesSent = s.Send(msg);
   
  Send 方法从缓冲区移除字节，并用网络接口将这些字节排队以便发送到网络设备。  网络接口可能不会立即发送数据，但它最终将发送，只要使用 <xref:System.Net.Sockets.Socket.Shutdown%2A> 方法正常关闭连接。  
   
- 若要从网络设备接收数据，请将缓冲区传递到 Socket 类的数据接收方法之一（**和**）。 <xref:System.Net.Sockets.Socket.Receive%2A><xref:System.Net.Sockets.Socket.ReceiveFrom%2A> 同步套接字将挂起应用程序，直到从网络收到字节或者套接字关闭。 下面的示例接收来自网络的数据，然后将其显示在控制台上。 该示例假定来自网络的数据是用 ASCII 编码的文本。 Receive 方法返回从网络接收的字节数。   
+ 若要从网络设备接收数据，请将缓冲区传递到 Socket 类的数据接收方法之一（<xref:System.Net.Sockets.Socket.Receive%2A> 和 <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>）。  同步套接字将挂起应用程序，直到从网络收到字节或者套接字关闭。 下面的示例接收来自网络的数据，然后将其显示在控制台上。 该示例假定来自网络的数据是用 ASCII 编码的文本。 Receive 方法返回从网络接收的字节数。   
   
 ```vb  
 Dim bytes(1024) As Byte  

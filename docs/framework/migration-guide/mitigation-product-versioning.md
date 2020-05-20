@@ -17,11 +17,11 @@ ms.locfileid: "73457828"
 
 以下是详细更改：
 
-- `Version` 键的 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` 项的值在 .NET Framework 4.6 及其点版本中已更改为 `4.6.`*xxxxx*，在 .NET Framework 4.7 中已更改为 `4.7.`*xxxxx*。 在 .NET Framework 4.5、4.5.1 和 4.5.2 中，它的格式为 `4.5.`*xxxxx*。
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` 键的 `Version` 项的值在 .NET Framework 4.6 及其点版本中已更改为 `4.6.`*xxxxx*，在 .NET Framework 4.7 中已更改为 `4.7.`*xxxxx*。 在 .NET Framework 4.5、4.5.1 和 4.5.2 中，它的格式为 `4.5.`*xxxxx*。
 
 - .NET Framework 文件的文件和产品版本控制在 .NET Framework 4.6 及其点版本中已从 `4.0.30319.x` 的早期版本控制方案更改为 `4.6.X.0`，在 .NET Framework 4.7 及其点版本中已更改为 `4.7.X.0`。 右键单击某个文件后，查看文件的“属性”  时可以看到这些新值。
 
-- 对于 .NET Framework 4.6 及其点版本，托管程序集的 <xref:System.Reflection.AssemblyFileVersionAttribute> 和 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 特性具有格式为 <xref:System.Version> 的 `4.6.X.0` 值，对于 .NET Framework 4.7，则为格式 `4.7.X.0`。
+- 对于 .NET Framework 4.6 及其点版本，托管程序集的 <xref:System.Reflection.AssemblyFileVersionAttribute> 和 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 特性具有格式为 `4.6.X.0` 的 <xref:System.Version> 值，对于 .NET Framework 4.7，则为格式 `4.7.X.0`。
 
 - 从 .NET Framework 4.6 开始，<xref:System.Environment.Version%2A?displayProperty=nameWithType> 属性将返回修正后的版本字符串 `4.0.30319.42000`。 在 .NET Framework 4、4.5、4.5.1 和 4.5.2 中，它返回格式为 `4.0.30319.xxxxx`（其中 `xxxxx` 小于 42000）的版本字符串，例如“4.0.30319.18010”。 请注意，我们不建议应用程序代码对 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 属性产生任何新的依赖关系。
 
@@ -31,7 +31,7 @@ ms.locfileid: "73457828"
 
 - 若要检测 .NET Framework 的运行时版本，请参阅[如何：确定安装了哪些 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)。
 
-- 若要确定 .NET Framework 的安装路径，请使用 `InstallPath` 密钥中的 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` 条目的值。
+- 若要确定 .NET Framework 的安装路径，请使用 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` 密钥中的 `InstallPath` 条目的值。
 
   > [!IMPORTANT]
   > 子项名称是 `NET Framework Setup`，而不是 `.NET Framework Setup`。

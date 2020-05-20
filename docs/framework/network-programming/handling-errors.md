@@ -40,9 +40,9 @@ ms.locfileid: "79180874"
 ---
 # <a name="handling-errors"></a>处理错误
 
-<xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类都会引发系统异常（如 <xref:System.ArgumentException>）和特定于 Web 的异常（为 <xref:System.Net.WebException> 方法所引发的 <xref:System.Net.WebRequest.GetResponse%2A>）。  
+<xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类都会引发系统异常（如 <xref:System.ArgumentException>）和特定于 Web 的异常（为 <xref:System.Net.WebRequest.GetResponse%2A> 方法所引发的 <xref:System.Net.WebException>）。  
   
-每个 WebException 包括一个 **属性，它包含来自** 枚举的一个值<xref:System.Net.WebException.Status%2A><xref:System.Net.WebExceptionStatus>。 可以检查“状态”属性以确定发生的错误并采取适当的步骤解决该错误  。  
+每个 WebException 包括一个 <xref:System.Net.WebException.Status%2A> 属性，它包含来自 <xref:System.Net.WebExceptionStatus> 枚举的一个值。 可以检查“状态”属性以确定发生的错误并采取适当的步骤解决该错误  。  
   
 下表描述了“状态”属性可能的值  。  
   
@@ -166,7 +166,7 @@ End Try
   
 当 Windows 套接字上出现错误时，使用 <xref:System.Net.Sockets.Socket> 类的应用程序将引发 <xref:System.Net.Sockets.SocketException>。 <xref:System.Net.Sockets.TcpClient>、<xref:System.Net.Sockets.TcpListener> 和 <xref:System.Net.Sockets.UdpClient> 类在套接字类的顶层生成，并且也会引发 SocketExceptions   。  
   
-引发 SocketException 时，SocketException 类将  **属性设置为最后一次发生的操作系统套接字错误**  <xref:System.Net.Sockets.SocketException.ErrorCode%2A>。 有关套接字错误代码的详细信息，请参阅 MSDN 中的 Winsock 2.0 API 错误代码文档。  
+引发 SocketException 时，SocketException 类将 <xref:System.Net.Sockets.SocketException.ErrorCode%2A> 属性设置为最后一次发生的操作系统套接字错误。 有关套接字错误代码的详细信息，请参阅 MSDN 中的 Winsock 2.0 API 错误代码文档。  
   
 ## <a name="see-also"></a>另请参阅
 

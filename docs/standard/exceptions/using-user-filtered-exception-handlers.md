@@ -34,7 +34,7 @@ End Try
 ## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>结合特定异常和用户筛选的子句  
  Catch 语句可以同时包含特定异常和用户筛选的子句。 运行时首先测试特定异常。 如果特定异常成功，运行时会执行用户筛选。 普通筛选可包含对类筛选器中声明的变量的引用。 请注意，两个筛选子句的顺序不能颠倒。  
   
- 下面的 Visual Basic 示例介绍 `ClassLoadException`Catch**语句中的特定异常** 以及使用 **When** 关键字的用户筛选的子句。  
+ 下面的 Visual Basic 示例介绍 **Catch** 语句中的特定异常 `ClassLoadException` 以及使用 **When** 关键字的用户筛选的子句。  
   
 ```vb
 Try  

@@ -55,7 +55,7 @@ ms.locfileid: "71957373"
   
 ### <a name="to-create-the-component"></a>创建组件的具体步骤  
   
-- 创建继承自 `PrimeNumberCalculator` 的类 <xref:System.ComponentModel.Component>。  
+- 创建继承自 <xref:System.ComponentModel.Component> 的类 `PrimeNumberCalculator`。  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>定义公共异步事件和委托  
  组件使用事件与客户端进行通信。 _MethodName_**Completed** 事件预警客户端注意异步任务完成，_MethodName_**ProgressChanged** 事件向客户端告知异步任务的进度。  
@@ -103,7 +103,7 @@ ms.locfileid: "71957373"
   
 ### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>若要实现组件的内部异步行为，请执行以下操作：  
   
-1. 在 <xref:System.Threading.SendOrPostCallback> 类中声明并创建 `PrimeNumberCalculator` 委托。 在 <xref:System.Threading.SendOrPostCallback> 实用工具方法中创建 `InitializeDelegates` 对象。  
+1. 在 `PrimeNumberCalculator` 类中声明并创建 <xref:System.Threading.SendOrPostCallback> 委托。 在 `InitializeDelegates` 实用工具方法中创建 <xref:System.Threading.SendOrPostCallback> 对象。  
   
      需要使用两个委托：一个用于向客户端报告进度事件，另一个用于向客户端报告完成事件。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "71957373"
   
 4. 创建一个集合，用于管理挂起的异步操作的生存期。 客户端需要通过一种途径，跟踪已执行和完成的操作。若要执行这样的跟踪，客户端必须在调用异步方法时，传递唯一令牌或任务 ID。 `PrimeNumberCalculator` 组件必须跟踪所有调用，具体方法是将任务 ID 与其对应的调用相关联。 如果客户端传递的任务 ID 不唯一，`PrimeNumberCalculator` 组件必须抛出异常。  
   
-     `PrimeNumberCalculator` 组件使用特殊的集合类 <xref:System.Collections.Specialized.HybridDictionary> 跟踪任务 ID。 在类定义中，创建名为 <xref:System.Collections.Specialized.HybridDictionary> 的 `userTokenToLifetime`。  
+     `PrimeNumberCalculator` 组件使用特殊的集合类 <xref:System.Collections.Specialized.HybridDictionary> 跟踪任务 ID。 在类定义中，创建名为 `userTokenToLifetime` 的 <xref:System.Collections.Specialized.HybridDictionary>。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#23](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#23)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#23](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#23)]  
@@ -142,13 +142,13 @@ ms.locfileid: "71957373"
 ## <a name="implementing-the-completion-method"></a>实现完成方法  
  完成委托是在异步操作最终成功完成、出错或取消时，由基础的自由线程异步行为调用的方法。 此调用发生在任意线程上。  
   
- 在此方法中，客户端任务 ID 从唯一客户端令牌的内部集合中删除。 另外，此方法还对相应的 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 调用 <xref:System.ComponentModel.AsyncOperation>方法，结束特定异步操作的生存期。 此调用对适用于应用模型的线程抛出完成事件。 调用 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 后，便无法再使用此 <xref:System.ComponentModel.AsyncOperation> 实例，随后只要尝试使用它，就会导致异常抛出。  
+ 在此方法中，客户端任务 ID 从唯一客户端令牌的内部集合中删除。 另外，此方法还对相应的 <xref:System.ComponentModel.AsyncOperation> 调用 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>方法，结束特定异步操作的生存期。 此调用对适用于应用模型的线程抛出完成事件。 调用 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 后，便无法再使用此 <xref:System.ComponentModel.AsyncOperation> 实例，随后只要尝试使用它，就会导致异常抛出。  
   
  `CompletionMethod` 签名必须保留描述异步操作结果所需的全部状态。 它保留以下状态：此异步操作测试的数字是什么、数字是否为质数，以及第一个除数的值是什么（如果不是质数的话）。 此外，它还保留描述所发生的任何异常的状态，以及与此任务对应的 <xref:System.ComponentModel.AsyncOperation>。  
   
 ### <a name="to-complete-an-asynchronous-operation"></a>若要完成异步操作，请执行以下操作：  
   
-- 实现完成方法。 此方法需要使用六个参数，用于填充通过客户端的 `CalculatePrimeCompletedEventArgs` 返回到客户端的 `CalculatePrimeCompletedEventHandler`。 它还从内部集合中删除客户端的任务 ID 令牌，并通过调用 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 结束异步操作的生存期。 <xref:System.ComponentModel.AsyncOperation> 封送对适用于应用模型的线程或上下文执行的调用。  
+- 实现完成方法。 此方法需要使用六个参数，用于填充通过客户端的 `CalculatePrimeCompletedEventHandler` 返回到客户端的 `CalculatePrimeCompletedEventArgs`。 它还从内部集合中删除客户端的任务 ID 令牌，并通过调用 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 结束异步操作的生存期。 <xref:System.ComponentModel.AsyncOperation> 封送对适用于应用模型的线程或上下文执行的调用。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#26)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#26)]  
@@ -202,7 +202,7 @@ ms.locfileid: "71957373"
      [!code-csharp[System.ComponentModel.AsyncOperationManager#28](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#28)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#28](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#28)]  
   
-5. 从 `CalculatePrimeProgressChangedEventArgs` 派生 <xref:System.ComponentModel.ProgressChangedEventArgs>。 必须有此类，才能向 `ProgressChanged` 事件的客户端事件处理程序报告增量结果。 它新增有一个属性，即 `LatestPrimeNumber`。  
+5. 从 <xref:System.ComponentModel.ProgressChangedEventArgs> 派生 `CalculatePrimeProgressChangedEventArgs`。 必须有此类，才能向 `ProgressChanged` 事件的客户端事件处理程序报告增量结果。 它新增有一个属性，即 `LatestPrimeNumber`。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#29)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#29)]  
@@ -217,9 +217,9 @@ ms.locfileid: "71957373"
      剩下要编写的就是，异步操作的启动和取消方法，即 `CalculatePrimeAsync` 和 `CancelAsync`。  
   
 ## <a name="implementing-the-start-and-cancel-methods"></a>实现启动和取消方法  
- 若要对它自己的线程启动工作方法，请对包装方法的委托调用 `BeginInvoke`。 若要管理特定异步操作的生存期，请对 <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> 帮助程序类调用 <xref:System.ComponentModel.AsyncOperationManager> 方法。 这会返回 <xref:System.ComponentModel.AsyncOperation>，将对客户端事件处理程序的调用封送到适当的线程或上下文。  
+ 若要对它自己的线程启动工作方法，请对包装方法的委托调用 `BeginInvoke`。 若要管理特定异步操作的生存期，请对 <xref:System.ComponentModel.AsyncOperationManager> 帮助程序类调用 <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> 方法。 这会返回 <xref:System.ComponentModel.AsyncOperation>，将对客户端事件处理程序的调用封送到适当的线程或上下文。  
   
- 若要取消特定挂起操作，请对相应的 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 调用 <xref:System.ComponentModel.AsyncOperation>。 这样一来，可以结束操作，随后只要调用 <xref:System.ComponentModel.AsyncOperation> 都会导致异常抛出。  
+ 若要取消特定挂起操作，请对相应的 <xref:System.ComponentModel.AsyncOperation> 调用 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>。 这样一来，可以结束操作，随后只要调用 <xref:System.ComponentModel.AsyncOperation> 都会导致异常抛出。  
   
 ### <a name="to-implement-start-and-cancel-functionality"></a>若要实现启动和取消功能，请执行以下操作：  
   
@@ -245,7 +245,7 @@ ms.locfileid: "71957373"
  有关使用 `PrimeNumberCalculator` 组件的示例客户端，请参阅[如何：实现基于事件的异步模式的客户端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
   
 ## <a name="next-steps"></a>后续步骤  
- 可以编写与 `CalculatePrime` 方法相当的同步方法 `CalculatePrimeAsync`，扩充此示例。 这样一来，`PrimeNumberCalculator` 组件就完全符合基于事件的异步模式了。  
+ 可以编写与 `CalculatePrimeAsync` 方法相当的同步方法 `CalculatePrime`，扩充此示例。 这样一来，`PrimeNumberCalculator` 组件就完全符合基于事件的异步模式了。  
   
  若要改进此示例，可以保留对不同测试数字执行各种调用时发现的所有质数列表。 使用这种方法，所有任务都将受益于前面完成的任务。 请使用 `lock` 区域小心保护此列表，以序列化不同线程对列表的访问。  
   

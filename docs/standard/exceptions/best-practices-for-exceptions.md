@@ -108,7 +108,7 @@ ms.locfileid: "78160165"
 
 ## <a name="include-a-localized-string-message-in-every-exception"></a>在每个异常中都包含一个本地化字符串消息
 
-用户看到的错误消息派生自引发的异常的 <xref:System.Exception.Message?displayProperty=nameWithType> 属性，而不是派生自异常类的名称。 通常将值赋给 <xref:System.Exception.Message?displayProperty=nameWithType> 属性，方法是将消息字符串传递到`message`异常构造函数[的 ](xref:System.Exception.%23ctor%2A) 参数。
+用户看到的错误消息派生自引发的异常的 <xref:System.Exception.Message?displayProperty=nameWithType> 属性，而不是派生自异常类的名称。 通常将值赋给 <xref:System.Exception.Message?displayProperty=nameWithType> 属性，方法是将消息字符串传递到[异常构造函数](xref:System.Exception.%23ctor%2A)的 `message` 参数。
 
 对于本地化应用程序，应为应用程序可能引发的每个异常提供本地化消息字符串。 资源文件用于提供本地化错误消息。 有关本地化应用程序和检索本地化字符串的信息，请参阅以下文章：
 

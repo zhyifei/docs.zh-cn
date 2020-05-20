@@ -24,7 +24,7 @@ ms.locfileid: "73138074"
  本地和命名事件等待句柄均使用系统同步对象。为了确保资源获得释放，这些对象受 <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> 包装器保护。 可以使用 <xref:System.Threading.WaitHandle.Dispose%2A> 方法，在使用完对象后立即释放资源。  
   
 ## <a name="event-wait-handles-that-reset-automatically"></a>自动重置的事件等待句柄  
- 若要创建自动重置事件，可以在创建 <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> 对象时指定 <xref:System.Threading.EventWaitHandle>。 顾名思义，此同步事件在一个等待线程释放后收到信号时自动重置。 若要向事件发出信号，请调用它的 <xref:System.Threading.EventWaitHandle.Set%2A> 方法。  
+ 若要创建自动重置事件，可以在创建 <xref:System.Threading.EventWaitHandle> 对象时指定 <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType>。 顾名思义，此同步事件在一个等待线程释放后收到信号时自动重置。 若要向事件发出信号，请调用它的 <xref:System.Threading.EventWaitHandle.Set%2A> 方法。  
   
  自动重置事件通常用于一次向一个线程提供对资源的独占访问权限。 线程通过调用 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法来请求获取资源。 如果其他线程都没有等待句柄，此方法返回 `true`，且调用线程可以控制资源。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "73138074"
  如果向自动重置事件发出信号时没有线程正在等待，此信号会一直发出到有线程尝试在等待句柄上等待。 此时，事件会释放相应线程并立即重置自身，同时阻止后续线程。  
   
 ## <a name="event-wait-handles-that-reset-manually"></a>手动重置的事件等待句柄  
- 若要创建手动重置事件，可以在创建 <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> 对象时指定 <xref:System.Threading.EventWaitHandle>。 顾名思义，此同步事件必须在收到信号后进行手动重置。 调用 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法重置事件前，在事件句柄上等待的线程会立即继续运行，而不受阻止。  
+ 若要创建手动重置事件，可以在创建 <xref:System.Threading.EventWaitHandle> 对象时指定 <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType>。 顾名思义，此同步事件必须在收到信号后进行手动重置。 调用 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法重置事件前，在事件句柄上等待的线程会立即继续运行，而不受阻止。  
   
  手动重置事件如同畜栏口一样。 如果事件未收到信号，在事件句柄上等待的线程受阻止，如同畜栏中的马一样。 通过调用 <xref:System.Threading.EventWaitHandle.Set%2A> 方法向事件发出信号后，所有等待线程都获得释放，可以继续执行。 在 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法获得调用前，一直向事件发出信号。 这样一来，手动重置事件就非常适用于，阻止需要等待一个线程完成任务的线程。  
   

@@ -25,7 +25,7 @@ ms.locfileid: "73039492"
 ---
 # <a name="using-tcp-services"></a>使用 TCP 服务
 
-<xref:System.Net.Sockets.TcpClient> 类使用 TCP 从 Internet 资源请求数据。 TcpClient 的方法和属性会摘录为了通过 TCP 请求和接收数据而创建的  **的详细信息。** <xref:System.Net.Sockets.Socket> 与远程设备的连接表示为流，因此可以使用 .NET Framework 流处理技术读取和写入数据。
+<xref:System.Net.Sockets.TcpClient> 类使用 TCP 从 Internet 资源请求数据。 TcpClient 的方法和属性会摘录为了通过 TCP 请求和接收数据而创建的 <xref:System.Net.Sockets.Socket> 的详细信息。 与远程设备的连接表示为流，因此可以使用 .NET Framework 流处理技术读取和写入数据。
 
 TCP 协议与远程终结点建立连接，然后使用此连接发送和接收数据包。 TCP 负责确保将数据包发送到终结点，并在数据包到达时以正确的顺序对其进行汇编。
 
@@ -105,7 +105,7 @@ public class TcpTimeClient
 }
 ```
 
-<xref:System.Net.Sockets.TcpListener> 用于监视 TCP 端口上的传入请求，然后创建一个 Socket 或 TcpClient 来管理与客户端的连接。   <xref:System.Net.Sockets.TcpListener.Start%2A> 方法可使用侦听，而 <xref:System.Net.Sockets.TcpListener.Stop%2A> 方法禁用端口上的侦听。 <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> 方法接受传入的连接请求并创建 TcpClient 处理请求， **方法接受传入的连接请求并创建 Socket 处理请求。** <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> 
+<xref:System.Net.Sockets.TcpListener> 用于监视 TCP 端口上的传入请求，然后创建一个 Socket 或 TcpClient 来管理与客户端的连接。   <xref:System.Net.Sockets.TcpListener.Start%2A> 方法可使用侦听，而 <xref:System.Net.Sockets.TcpListener.Stop%2A> 方法禁用端口上的侦听。 <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> 方法接受传入的连接请求并创建 TcpClient 处理请求，<xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> 方法接受传入的连接请求并创建 Socket 处理请求。
 
 以下示例演示如何使用 TcpListener 创建网络时间服务器以监视 TCP 端口 13。  接受传入的连接请求时，时间服务器会使用主机服务器的当前日期和时间进行响应。
 

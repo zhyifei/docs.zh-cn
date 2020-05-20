@@ -16,7 +16,7 @@ ms.locfileid: "75713580"
 ---
 # <a name="descending-c-reference"></a>descending（C# 参考）
 
-查询表达式中的 `descending`orderby 子句[中使用 ](./orderby-clause.md) 上下文关键字指定排序顺序为从大到小。
+查询表达式中的 [orderby 子句](./orderby-clause.md)中使用 `descending` 上下文关键字指定排序顺序为从大到小。
 
 ## <a name="example"></a>示例
 

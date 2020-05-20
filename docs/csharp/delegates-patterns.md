@@ -133,7 +133,7 @@ Logger.WriteMessage -= LoggingMethods.LogToConsole;
 
 ## <a name="handling-null-delegates"></a>处理 Null 委托
 
-最后，更新 LogMessage 方法，从而在没有选择输出机制的情况下更加可靠。 `NullReferenceException` 委托没有附加调用列表时，当前实现将引发 `WriteMessage`。
+最后，更新 LogMessage 方法，从而在没有选择输出机制的情况下更加可靠。 `WriteMessage` 委托没有附加调用列表时，当前实现将引发 `NullReferenceException`。
 你可能更需要在没有附加方法时自行继续的设计。 将 null 条件运算符与 `Delegate.Invoke()` 方法结合使用时，很容易实现该目标：
 
 ```csharp
@@ -143,9 +143,9 @@ public static void LogMessage(string msg)
 }
 ```
 
-当左操作数（本例中为 `?.`）为 null 时，null 条件运算符（`WriteMessage`）会短路，这意味着不会尝试记录消息。
+当左操作数（本例中为 `WriteMessage`）为 null 时，null 条件运算符（`?.`）会短路，这意味着不会尝试记录消息。
 
-不会在 `Invoke()` 或 `System.Delegate` 的文档中列出 `System.MulticastDelegate` 方法。 编译器将为声明的所有委托类型生成类型安全的 `Invoke` 方法。 在此示例中，这意味着 `Invoke` 只需要一个 `string` 参数，并且有一个无效返回类型。
+不会在 `System.Delegate` 或 `System.MulticastDelegate` 的文档中列出 `Invoke()` 方法。 编译器将为声明的所有委托类型生成类型安全的 `Invoke` 方法。 在此示例中，这意味着 `Invoke` 只需要一个 `string` 参数，并且有一个无效返回类型。
 
 ## <a name="summary-of-practices"></a>实践摘要
 

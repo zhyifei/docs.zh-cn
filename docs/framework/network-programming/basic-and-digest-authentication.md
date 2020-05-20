@@ -29,7 +29,7 @@ ms.locfileid: "71048905"
 # <a name="basic-and-digest-authentication"></a>基本和摘要式身份验证
 基本身份验证和摘要式身份验证的 <xref:System.Net> 实现符合 RFC2617 – HTTP 身份验证：基本身份验证和摘要式身份验证（可从[万维网联合会](https://www.w3.org) 网站找到）。  
   
- 若要使用基本身份验证和摘要式身份验证，应用程序必须在 <xref:System.Net.WebRequest.Credentials%2A> 对象的 <xref:System.Net.WebRequest> 属性中提供用户名和密码，该对象用于从 Internet 中请求数据，如下例所示。  
+ 若要使用基本身份验证和摘要式身份验证，应用程序必须在 <xref:System.Net.WebRequest> 对象的 <xref:System.Net.WebRequest.Credentials%2A> 属性中提供用户名和密码，该对象用于从 Internet 中请求数据，如下例所示。  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  

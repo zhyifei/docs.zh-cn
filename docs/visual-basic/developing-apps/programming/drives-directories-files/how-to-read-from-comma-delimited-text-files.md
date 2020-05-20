@@ -20,7 +20,7 @@ ms.locfileid: "74335063"
   
 ### <a name="to-parse-a-comma-delimited-text-file"></a>分析逗号分隔的文本文件  
   
-1. 创建一个新的 `TextFieldParser`。 下面的代码创建名为 `TextFieldParser` 的 `MyReader`，并打开 `test.txt` 文件。  
+1. 创建一个新的 `TextFieldParser`。 下面的代码创建名为 `MyReader` 的 `TextFieldParser`，并打开 `test.txt` 文件。  
   
      [!code-vb[VbFileIORead#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#15)]  
   
@@ -32,7 +32,7 @@ ms.locfileid: "74335063"
   
      [!code-vb[VbFileIORead#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#17)]  
   
-4. 用 `While` 和 `Using` 结束 `End While` 和 `End Using` 块。  
+4. 用 `End While` 和 `End Using` 结束 `While` 和 `Using` 块。  
   
      [!code-vb[VbFileIORead#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#18)]  
   

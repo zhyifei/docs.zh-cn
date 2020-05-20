@@ -37,7 +37,7 @@ ms.locfileid: "73139880"
  [!code-vb[TPLDataflow_SlidingWindowBlock#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#1)]  
   
 ## <a name="deriving-from-ipropagatorblock-to-define-the-sliding-window-dataflow-block"></a>派生自 IPropagatorBlock 以定义滑动窗口数据流块  
- 下面的示例展示了 `SlidingWindowBlock` 类。 此类派生自 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602>，可用作数据的源和目标。 与上一示例中所述一样，`SlidingWindowBlock` 类是在现有数据流块类型的基础之上构建而成。 不同之处在于，`SlidingWindowBlock` 类还实现了 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>、<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 接口所需的方法。 这些方法全都将工作转发给预定义的数据流块类型成员。 例如，`Post` 方法将工作转交给也是 `m_target` 对象的 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 数据成员。  
+ 下面的示例展示了 `SlidingWindowBlock` 类。 此类派生自 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602>，可用作数据的源和目标。 与上一示例中所述一样，`SlidingWindowBlock` 类是在现有数据流块类型的基础之上构建而成。 不同之处在于，`SlidingWindowBlock` 类还实现了 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>、<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 接口所需的方法。 这些方法全都将工作转发给预定义的数据流块类型成员。 例如，`Post` 方法将工作转交给也是 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 对象的 `m_target` 数据成员。  
   
  如果需要自定义数据流功能，还需要提供其他方法、属性或字段的类型，此方式就很有用。 例如，`SlidingWindowBlock` 类也派生自 <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601>，这样就可以提供 <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> 和 <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceiveAll%2A> 方法了。 `SlidingWindowBlock` 类还具有扩展性，体现在提供 `WindowSize` 属性，以检索滑动窗口中的元素数量。  
   

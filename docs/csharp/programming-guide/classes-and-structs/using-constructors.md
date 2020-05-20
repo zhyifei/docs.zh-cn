@@ -15,7 +15,7 @@ ms.locfileid: "77626407"
 
 创建[类](../../language-reference/keywords/class.md)或[结构](../../language-reference/builtin-types/struct.md)时，将会调用其构造函数。 构造函数与该类或结构具有相同名称，并且通常初始化新对象的数据成员。  
   
- 在下面的示例中，通过使用简单构造函数定义了一个名为 `Taxi` 的类。 然后使用 [new](../../language-reference/operators/new-operator.md) 运算符对该类进行实例化。 在为新对象分配内存之后，`Taxi` 运算符立即调用 `new` 构造函数。  
+ 在下面的示例中，通过使用简单构造函数定义了一个名为 `Taxi` 的类。 然后使用 [new](../../language-reference/operators/new-operator.md) 运算符对该类进行实例化。 在为新对象分配内存之后，`new` 运算符立即调用 `Taxi` 构造函数。  
   
  [!code-csharp[csProgGuideObjects#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#53)]  
   
@@ -29,7 +29,7 @@ ms.locfileid: "77626407"
   
  有关详细信息，请参阅[私有构造函数](./private-constructors.md)。  
   
- [结构](../../language-reference/builtin-types/struct.md)类型的构造函数与类的构造函数类似，但是 `structs` 不包含显式无参数构造函数，因为编译器将自动提供一个显式无参数构造函数。 此构造函数会将 `struct` 中的每个字段初始化为[默认值](../../language-reference/builtin-types/default-values.md)。 但是，只有使用 `struct` 实例化 `new` 时，才会调用此无参数构造函数。 例如，此代码使用 <xref:System.Int32> 的无参数构造函数，因此可确保整数已初始化：  
+ [结构](../../language-reference/builtin-types/struct.md)类型的构造函数与类的构造函数类似，但是 `structs` 不包含显式无参数构造函数，因为编译器将自动提供一个显式无参数构造函数。 此构造函数会将 `struct` 中的每个字段初始化为[默认值](../../language-reference/builtin-types/default-values.md)。 但是，只有使用 `new` 实例化 `struct` 时，才会调用此无参数构造函数。 例如，此代码使用 <xref:System.Int32> 的无参数构造函数，因此可确保整数已初始化：  
   
 ```csharp  
 int i = new int();  
@@ -90,7 +90,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
 ## <a name="c-language-specification"></a>C# 语言规范  
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/classes.md#instance-constructors)中的[实例构造函数](~/_csharplang/spec/classes.md#static-constructors)和[静态构造函数](/dotnet/csharp/language-reference/language-specification/introduction)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[实例构造函数](~/_csharplang/spec/classes.md#instance-constructors)和[静态构造函数](~/_csharplang/spec/classes.md#static-constructors)。 该语言规范是 C# 语法和用法的权威资料。
   
 ## <a name="see-also"></a>另请参阅
 

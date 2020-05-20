@@ -32,9 +32,9 @@ Console.WriteLine(v.Amount + v.Message);
   
  匿名类型包含一个或多个公共只读属性。 包含其他种类的类成员（如方法或事件）为无效。 用来初始化属性的表达式不能为 `null`、匿名函数或指针类型。  
   
- 最常见的方案是用其他类型的属性初始化匿名类型。 在下面的示例中，假定名为 `Product`{2}{3} 的类存在。 类 `Product` 包括 `Color` 和 `Price` 属性，以及你不感兴趣的其他属性。 变量 `products``Product`{3} 是 {4}{5}{6} 对象的集合。 匿名类型声明以 `new`{2}{3} 关键字开始。 声明初始化了一个只使用 `Product`{2}{3} 的两个属性的新类型。 这将导致在查询中返回较少数量的数据。  
+ 最常见的方案是用其他类型的属性初始化匿名类型。 在下面的示例中，假定名为 `Product`{2}`Product` 的类存在。 类 `Product` 包括 `Color` 和 `Price` 属性，以及你不感兴趣的其他属性。 变量 `products``Product``products` 是 {3}{4}{3} 对象的集合。 匿名类型声明以 `new`{2}`new` 关键字开始。 声明初始化了一个只使用 `Product`{2}`Product` 的两个属性的新类型。 这将导致在查询中返回较少数量的数据。  
   
- 如果你没有在匿名类型中指定成员名称，编译器会为匿名类型成员指定与用于初始化这些成员的属性相同的名称。 必须为使用表达式初始化的属性提供名称，如下面的示例所示。 在下面示例中，匿名类型的属性名称都为 `Color``Price`{3} 和 {4}{5}{6}。  
+ 如果你没有在匿名类型中指定成员名称，编译器会为匿名类型成员指定与用于初始化这些成员的属性相同的名称。 必须为使用表达式初始化的属性提供名称，如下面的示例所示。 在下面示例中，匿名类型的属性名称都为 `Color``Price``Color` 和 {3}{4}{3}。  
   
  [!code-csharp[csRef30Features#81](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csRef30Features/CS/csref30.cs#81)]  
   
@@ -47,7 +47,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 ```  
   
 ## <a name="remarks"></a>备注  
- 匿名类型是直接从[对象](../../language-reference/keywords/class.md)派生的[类](../../language-reference/builtin-types/reference-types.md)类型，并且其无法强制转换为除[对象](../../language-reference/builtin-types/reference-types.md)外的任意类型。 虽然你的应用程序不能访问它，编译器还是提供了每一个匿名类型的名称。 从公共语言运行时的角度来看，匿名类型与任何其他引用类型没有什么不同。  
+ 匿名类型是直接从[对象](../../language-reference/builtin-types/reference-types.md)派生的[类](../../language-reference/keywords/class.md)类型，并且其无法强制转换为除[对象](../../language-reference/builtin-types/reference-types.md)外的任意类型。 虽然你的应用程序不能访问它，编译器还是提供了每一个匿名类型的名称。 从公共语言运行时的角度来看，匿名类型与任何其他引用类型没有什么不同。  
   
  如果程序集中的两个或多个匿名对象初始值指定了属性序列，这些属性采用相同顺序且具有相同的名称和类型，则编译器将对象视为相同类型的实例。 它们共享同一编译器生成的类型信息。  
   

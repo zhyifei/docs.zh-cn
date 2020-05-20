@@ -39,7 +39,7 @@ ms.locfileid: "73138107"
   
 ## <a name="passing-data-to-threads"></a>将数据传递到线程
 
- 在 .NET Framework 版本 2.0 中，可以在调用 <xref:System.Threading.ParameterizedThreadStart> 方法重载时，使用 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 委托将包含数据的对象轻松传递给线程。 有关代码示例，请参阅 <xref:System.Threading.ParameterizedThreadStart>。  
+ 在 .NET Framework 版本 2.0 中，可以在调用 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 方法重载时，使用 <xref:System.Threading.ParameterizedThreadStart> 委托将包含数据的对象轻松传递给线程。 有关代码示例，请参阅 <xref:System.Threading.ParameterizedThreadStart>。  
   
  使用 <xref:System.Threading.ParameterizedThreadStart> 委托不是传递数据的类型安全方式，因为 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 方法重载接受任何对象。 替换方法是，将线程过程和数据封装到帮助程序类中，并使用 <xref:System.Threading.ThreadStart> 委托执行线程过程。 下面的示例演示这一方法：
 

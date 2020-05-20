@@ -61,7 +61,7 @@ x = x op y
 
 ## <a name="null-coalescing-assignment"></a>Null 合并赋值
 
-从 C# 8.0 开始，只有在左操作数计算为 `??=` 时，才能使用 null 合并赋值运算符 `null` 将其右操作数的值分配给左操作数。 有关详细信息，请参阅 [?? 和 ??= 运算符](null-coalescing-operator.md)一文。
+从 C# 8.0 开始，只有在左操作数计算为 `null` 时，才能使用 null 合并赋值运算符 `??=` 将其右操作数的值分配给左操作数。 有关详细信息，请参阅 [?? 和 ??= 运算符](null-coalescing-operator.md)一文。
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
@@ -71,7 +71,7 @@ x = x op y
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#assignment-operators)中的[分配运算符](~/_csharplang/spec/introduction.md)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[分配运算符](~/_csharplang/spec/expressions.md#assignment-operators)部分。
 
 如需了解有关 ref 赋值运算符 `= ref` 的详细信息，请参阅[功能建议说明](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md)。
 

@@ -33,7 +33,7 @@ ms.locfileid: "74333846"
   
 ## <a name="parsing-files-with-multiple-formats"></a>分析具有多种格式的文件  
 
- 在读取各字段之前，可以使用 `PeekChars` 对象的 `TextFieldParser`方法来检查字段，这样可以为字段定义多种格式并采取相应的操作。 有关详细信息，请参阅[如何：读取具有多种格式的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)。  
+ 在读取各字段之前，可以使用 `TextFieldParser` 对象的 `PeekChars`方法来检查字段，这样可以为字段定义多种格式并采取相应的操作。 有关详细信息，请参阅[如何：读取具有多种格式的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)。  
   
 ## <a name="see-also"></a>另请参阅
 

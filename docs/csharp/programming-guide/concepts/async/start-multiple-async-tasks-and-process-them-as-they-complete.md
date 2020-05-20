@@ -29,7 +29,7 @@ ms.locfileid: "71736727"
 
 2. 在菜单栏上，依次选择  “文件” >   “打开” >   “项目/解决方案”。
 
-3. 在“打开项目”  对话框中，打开保存已下载的示例代码的文件夹，然后打开 AsyncFineTuningCS  *AsyncFineTuningVB*/ 的解决方案 (.sln  ) 文件。
+3. 在“打开项目”对话框中，打开保存已下载的示例代码的文件夹，然后打开 AsyncFineTuningCS/AsyncFineTuningVB 的解决方案 (.sln) 文件。
 
 4. 在“解决方案资源管理器”中，打开“ProcessTasksAsTheyFinish”项目的快捷菜单，选择“设为启动项目”。   
 

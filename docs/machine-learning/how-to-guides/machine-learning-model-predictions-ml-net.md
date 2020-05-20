@@ -40,7 +40,7 @@ public class HousingData
 
 与 `Features` 和 `Label` 输入列名一样，ML.NET 为模型生成的预测值列提供默认名称。 名称可能因任务而异。
 
-由于此示例中使用的算法是线性回归算法，输出列的默认名称为 `Score`，它由 [ 属性上的 `ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute)`PredictedPrice` 特性定义。
+由于此示例中使用的算法是线性回归算法，输出列的默认名称为 `Score`，它由 `PredictedPrice` 属性上的 [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 特性定义。
 
 ```csharp
 class HousingPrediction
@@ -86,7 +86,7 @@ HousingData inputData = new HousingData
 HousingPrediction prediction = predictionEngine.Predict(inputData);
 ```
 
-如果访问 `Score` 对象的 `prediction` 属性，则应获得类似于 `150079` 的值。
+如果访问 `prediction` 对象的 `Score` 属性，则应获得类似于 `150079` 的值。
 
 ## <a name="multiple-predictions"></a>多个预测
 

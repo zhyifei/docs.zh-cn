@@ -17,7 +17,7 @@ ms.locfileid: "76744556"
 
 * [MyGet](https://myget.org/)  是支持开源项目的自定义包源的存储库服务。 MyGet 公共自定义源是发布由你的 CI 服务创建的预发行包的理想位置。 MyGet 还提供用于商业目的的专用源。
 
-* [本地源](/nuget/hosting-packages/local-feeds)  使你能够将文件夹视为包存储库并使文件夹中的 `*.nupkg` 文件可由 NuGet 访问。 本地源可用于在将 NuGet 发布到 MyGet.org 前对 NuGet 包进行测试。
+* [本地源](/nuget/hosting-packages/local-feeds)使你能够将文件夹视为包存储库并使文件夹中的 `*.nupkg` 文件可由 NuGet 访问。 本地源可用于在将 NuGet 发布到 MyGet.org 前对 NuGet 包进行测试。
 
 > [!NOTE]
 > 上传包后，NuGet.org [不允许将其删除](/nuget/policies/deleting-packages)。 可以不列出包，使其不在 UI 中公开可见，但仍可在还原后下载 `*.nupkg`。 此外，nuget.org 不允许重复的包版本。 若要更正存在错误的 NuGet 包，必须取消列出不正确的包，递增版本号并发布新版本的包。

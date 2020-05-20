@@ -33,7 +33,7 @@ dotnet new console -o myApp
 cd myApp
 ```
 
-`dotnet` 命令将创建 `new` 类型的 `console` 应用程序。 `-o` 参数将创建名称为 `myApp` 的目录，会在其中存储应用并填充所需的文件。 `cd myApp` 命令会将你转到新创建的应用目录。
+`dotnet` 命令将创建 `console` 类型的 `new` 应用程序。 `-o` 参数将创建名称为 `myApp` 的目录，会在其中存储应用并填充所需的文件。 `cd myApp` 命令会将你转到新创建的应用目录。
 
 ## <a name="install-infernet-package"></a>安装 Infer.NET 包
 

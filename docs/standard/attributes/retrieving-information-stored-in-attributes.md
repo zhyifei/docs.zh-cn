@@ -58,7 +58,7 @@ The attribute was not found.
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>检索应用于同一范围的多个属性实例  
- 在上一示例中，要检查的类和要查找的特定属性都传递给 <xref:System.Attribute.GetCustomAttribute%2A>。 此代码非常适用于只有一个属性实例在类一级应用的情况。 不过，如果在相同的类一级应用多个属性实例，GetCustomAttribute  方法不会检索所有信息。 如果同一属性的多个实例应用于相同范围，可以使用 <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> 将所有属性实例添加到数组中。 例如，如果在相同的类一级应用两个 `DeveloperAttribute` 实例，可以将 `GetAttribute` 方法修改为显示在这两个属性中找到的信息。 请注意，若要在同一级别应用多个属性，必须在  **中定义属性，并将 AllowMultiple** **属性设为 true**<xref:System.AttributeUsageAttribute>。  
+ 在上一示例中，要检查的类和要查找的特定属性都传递给 <xref:System.Attribute.GetCustomAttribute%2A>。 此代码非常适用于只有一个属性实例在类一级应用的情况。 不过，如果在相同的类一级应用多个属性实例，GetCustomAttribute  方法不会检索所有信息。 如果同一属性的多个实例应用于相同范围，可以使用 <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> 将所有属性实例添加到数组中。 例如，如果在相同的类一级应用两个 `DeveloperAttribute` 实例，可以将 `GetAttribute` 方法修改为显示在这两个属性中找到的信息。 请注意，若要在同一级别应用多个属性，必须在 <xref:System.AttributeUsageAttribute> 中定义属性，并将 AllowMultiple 属性设为 true。  
   
  下面的代码示例展示了如何使用 GetCustomAttributes  方法来创建数组，以引用任何给定类中的所有 `DeveloperAttribute` 实例。 然后，所有属性的值都显示在控制台中。  
   

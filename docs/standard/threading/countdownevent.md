@@ -27,7 +27,7 @@ ms.locfileid: "73138113"
   
 - 创建实例后，可以递增信号计数。  
   
-- 在 <xref:System.Threading.CountdownEvent.Wait%2A> 方法调用返回 <xref:System.Threading.CountdownEvent.Reset%2A> 后，可以重用实例。  
+- 在 <xref:System.Threading.CountdownEvent.Reset%2A> 方法调用返回 <xref:System.Threading.CountdownEvent.Wait%2A> 后，可以重用实例。  
   
 - 实例公开 <xref:System.Threading.WaitHandle>，以与其他 .NET Framework 同步 API（如 <xref:System.Threading.WaitHandle.WaitAll%2A>）集成。  
   

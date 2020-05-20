@@ -37,7 +37,7 @@ ms.locfileid: "75713410"
 
 ## <a name="group-join"></a>分组联接
 
-含有 `join` 表达式的 `into` 子句称为分组联接。
+含有 `into` 表达式的 `join` 子句称为分组联接。
 
 [!code-csharp[cscsrefQueryKeywords#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#25)]
 
@@ -87,7 +87,7 @@ ms.locfileid: "75713410"
 
 ## <a name="remarks"></a>备注
 
-后面未跟 `join` 的 `into` 子句转换为 <xref:System.Linq.Enumerable.Join%2A> 方法调用。 后面跟 `join` 的 `into` 子句转换为 <xref:System.Linq.Enumerable.GroupJoin%2A> 方法调用。
+后面未跟 `into` 的 `join` 子句转换为 <xref:System.Linq.Enumerable.Join%2A> 方法调用。 后面跟 `into` 的 `join` 子句转换为 <xref:System.Linq.Enumerable.GroupJoin%2A> 方法调用。
 
 ## <a name="see-also"></a>另请参阅
 

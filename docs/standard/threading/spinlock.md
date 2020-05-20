@@ -13,7 +13,7 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "73106174"
 ---
 # <a name="spinlock"></a>SpinLock
-<xref:System.Threading.SpinLock> 结构是低级互斥同步基元，在等待获取锁时旋转。 在多核计算机上，如果应缩短等待时间且争用最少，那么 <xref:System.Threading.SpinLock> 的性能优于其他种类的锁。 不过，建议仅在通过分析确定 <xref:System.Threading.SpinLock> 方法或 <xref:System.Threading.Monitor?displayProperty=nameWithType> 方法显著降低程序性能时，才使用 <xref:System.Threading.Interlocked>。  
+<xref:System.Threading.SpinLock> 结构是低级互斥同步基元，在等待获取锁时旋转。 在多核计算机上，如果应缩短等待时间且争用最少，那么 <xref:System.Threading.SpinLock> 的性能优于其他种类的锁。 不过，建议仅在通过分析确定 <xref:System.Threading.Monitor?displayProperty=nameWithType> 方法或 <xref:System.Threading.Interlocked> 方法显著降低程序性能时，才使用 <xref:System.Threading.SpinLock>。  
   
  即使尚未获取锁，<xref:System.Threading.SpinLock> 也可能会生成线程的时间片。 这样做是为了避免线程优先级反转，并让垃圾回收器能够取得进展。 使用 <xref:System.Threading.SpinLock> 时，请确保没有线程可以将锁保留比较久的时间，也没有线程可以在保留锁时受阻止。  
   

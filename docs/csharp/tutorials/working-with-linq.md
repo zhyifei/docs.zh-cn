@@ -41,7 +41,7 @@ ms.locfileid: "78240010"
 
 ## <a name="create-the-data-set"></a>创建数据集
 
-开始前，请确保下列行在 `Program.cs` 生成的 `dotnet new console` 文件的顶部：
+开始前，请确保下列行在 `dotnet new console` 生成的 `Program.cs` 文件的顶部：
 
 ```csharp
 // Program.cs
@@ -145,7 +145,7 @@ public static void Main(string[] args)
 
 需要编写几种特殊的方法，我们称之为<xref:System.Collections.Generic.IEnumerable%601>扩展方法[，来添加一些功能，以便于与 LINQ 查询返回的 ](../programming-guide/classes-and-structs/extension-methods.md) 交互。 简而言之，扩展方法是具有特殊用途的静态方法，借助它无需修改你想要为其添加功能的已有原始类型，即可向其添加功能。 
 
-向程序添加新的静态类文件（名称为 *），以用于存放扩展方法，然后开始生成第一个扩展方法：* `Extensions.cs`
+向程序添加新的静态类文件（名称为 `Extensions.cs`），以用于存放扩展方法，然后开始生成第一个扩展方法：
 
 ```csharp
 // Extensions.cs
@@ -173,7 +173,7 @@ public static IEnumerable<T> InterleaveSequenceWith<T> (this IEnumerable<T> firs
 
 可以发现，在扩展方法的第一个自变量中添加了 `this` 修饰符。 也就是说，调用扩展方法，就像是第一个自变量类型的成员方法一样。 此方法声明还遵循标准惯用做法，其中输入和输出类型为 `IEnumerable<T>`。 遵循这种做法，可以将 LINQ 方法链在一起，从而执行更复杂的查询。
 
-正常情况下，将扑克牌分为两半后，需要将这两半合并在一起。 在代码中，这意味着一次性地枚举通过 <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 获得的两个序列， *`interleaving`* 元素，并创建一个序列：即现在洗牌后的扑克牌。 必须了解 <xref:System.Collections.Generic.IEnumerable%601> 的工作原理，才能编写处理两个序列的 LINQ 方法。
+正常情况下，将扑克牌分为两半后，需要将这两半合并在一起。 在代码中，这意味着一次性地枚举通过 <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 获得的两个序列，`interleaving` 元素，并创建一个序列：即现在洗牌后的扑克牌。 必须了解 <xref:System.Collections.Generic.IEnumerable%601> 的工作原理，才能编写处理两个序列的 LINQ 方法。
 
 <xref:System.Collections.Generic.IEnumerable%601> 接口有一个方法 (<xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>)。 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 返回的对象包含用于移动到下一个元素的方法，以及用于检索序列中当前元素的属性。 将使用这两个成员来枚举集合并返回元素。 由于此交错方法是迭代器方法，因此将使用上面的 `yield return` 语法，而不用生成并返回集合。
 

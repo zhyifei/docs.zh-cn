@@ -36,7 +36,7 @@ type[] arrayName;
 - 交错数组是数组的数组，因此其元素为引用类型且被初始化为 `null`。
 - 数组从零开始编制索引：包含 `n` 元素的数组从 `0` 索引到 `n-1`。
 - 数组元素可以是任何类型，其中包括数组类型。
-- 数组类型是从抽象的基类型 [ 派生的](../../language-reference/keywords/reference-types.md)引用类型<xref:System.Array>。 由于此类型实现 <xref:System.Collections.IEnumerable> 和 <xref:System.Collections.Generic.IEnumerable%601>，因此可以在 C# 中的所有数组上使用 [foreach](../../language-reference/keywords/foreach-in.md) 迭代。
+- 数组类型是从抽象的基类型 <xref:System.Array> 派生的[引用类型](../../language-reference/keywords/reference-types.md)。 由于此类型实现 <xref:System.Collections.IEnumerable> 和 <xref:System.Collections.Generic.IEnumerable%601>，因此可以在 C# 中的所有数组上使用 [foreach](../../language-reference/keywords/foreach-in.md) 迭代。
 
 ## <a name="related-sections"></a>相关章节
 

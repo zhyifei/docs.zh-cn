@@ -38,7 +38,7 @@ ms.locfileid: "74333784"
 
 2. 在“新建项目”窗格中，单击“Windows 应用程序”。  
 
-3. 在“名称”框中，键入 **，然后单击“确定”。** `MyDiary` 
+3. 在“名称”框中，键入 `MyDiary`，然后单击“确定”。
 
      Visual Studio 将项目添加到“解决方案资源管理器”中，“Windows 窗体设计器”随即打开   。
 
@@ -71,7 +71,7 @@ ms.locfileid: "74333784"
 > [!NOTE]
 > Visual Studio 集成开发环境 (IDE) 将返回代码编辑器，并将插入点放在应在其中添加代码的事件处理程序内。
 
-1. 若要写入该文件，请使用 <xref:System.IO.StreamWriter.Write%2A> 类的 <xref:System.IO.StreamWriter> 方法。 在 `Dim fw As StreamWriter` 后直接添加以下代码。 不需要担心如果找不到该文件会引发异常，因为如果它不存在，将创建该文件。
+1. 若要写入该文件，请使用 <xref:System.IO.StreamWriter> 类的 <xref:System.IO.StreamWriter.Write%2A> 方法。 在 `Dim fw As StreamWriter` 后直接添加以下代码。 不需要担心如果找不到该文件会引发异常，因为如果它不存在，将创建该文件。
 
      [!code-vb[VbVbcnMyFileSystem#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#37)]
 
@@ -102,7 +102,7 @@ ms.locfileid: "74333784"
 
 ### <a name="to-populate-the-combo-box"></a>填充组合框
 
-1. `PickEntries`<xref:System.Windows.Forms.ComboBox> 用于显示用户提交每一项的日期，这样，用户就可以选择特定日期的项。 创建 <xref:System.Windows.Forms.Control.Click> 按钮的 `GetEntries` 事件处理程序并添加以下代码。
+1. `PickEntries`<xref:System.Windows.Forms.ComboBox> 用于显示用户提交每一项的日期，这样，用户就可以选择特定日期的项。 创建 `GetEntries` 按钮的 <xref:System.Windows.Forms.Control.Click> 事件处理程序并添加以下代码。
 
      [!code-vb[VbVbcnMyFileSystem#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#41)]
 
@@ -110,11 +110,11 @@ ms.locfileid: "74333784"
 
 ### <a name="to-choose-and-display-individual-entries"></a>选择并显示个别项
 
-1. 创建 <xref:System.Windows.Forms.Control.Click> 按钮的 `Display` 事件处理程序并添加以下代码。
+1. 创建 `Display` 按钮的 <xref:System.Windows.Forms.Control.Click> 事件处理程序并添加以下代码。
 
      [!code-vb[VbVbcnMyFileSystem#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#42)]
 
-2. 若要测试代码，请按 F5 编译该应用程序，然后提交一项。 单击“获取项”，从  **中选择一项，然后单击“显示”。** <xref:System.Windows.Forms.ComboBox>  所选条目的内容显示在 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中。
+2. 若要测试代码，请按 F5 编译该应用程序，然后提交一项。 单击“获取项”，从 <xref:System.Windows.Forms.ComboBox> 中选择一项，然后单击“显示”。 所选条目的内容显示在 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中。
 
 ## <a name="enabling-users-to-delete-or-modify-entries"></a>允许用户删除或修改项
 
@@ -130,23 +130,23 @@ ms.locfileid: "74333784"
 
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>允许删除和修改项
 
-1. 在 `Display` 之后，将以下代码添加到 <xref:System.Windows.Forms.Control.Click> 按钮的 `DisplayEntry.Text = ReadString` 事件。
+1. 在 `DisplayEntry.Text = ReadString` 之后，将以下代码添加到 `Display` 按钮的 <xref:System.Windows.Forms.Control.Click> 事件。
 
      [!code-vb[VbVbcnMyFileSystem#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#43)]
 
-2. 创建 <xref:System.Windows.Forms.Control.Click> 按钮的 `DeleteEntry` 事件处理程序并添加以下代码。
+2. 创建 `DeleteEntry` 按钮的 <xref:System.Windows.Forms.Control.Click> 事件处理程序并添加以下代码。
 
      [!code-vb[VbVbcnMyFileSystem#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#44)]
 
-3. 用户显示某一项时，`EditEntry` 按钮将变为启用状态。 在 <xref:System.Windows.Forms.Control.Click> 之后，将以下代码添加到 `Display` 按钮的 `DisplayEntry.Text = ReadString` 事件。
+3. 用户显示某一项时，`EditEntry` 按钮将变为启用状态。 在 `DisplayEntry.Text = ReadString` 之后，将以下代码添加到 `Display` 按钮的 <xref:System.Windows.Forms.Control.Click> 事件。
 
      [!code-vb[VbVbcnMyFileSystem#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#45)]
 
-4. 创建 <xref:System.Windows.Forms.Control.Click> 按钮的 `EditEntry` 事件处理程序并添加以下代码。
+4. 创建 `EditEntry` 按钮的 <xref:System.Windows.Forms.Control.Click> 事件处理程序并添加以下代码。
 
      [!code-vb[VbVbcnMyFileSystem#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#46)]
 
-5. 创建 <xref:System.Windows.Forms.Control.Click> 按钮的 `SubmitEdit` 事件处理程序并添加以下代码
+5. 创建 `SubmitEdit` 按钮的 <xref:System.Windows.Forms.Control.Click> 事件处理程序并添加以下代码
 
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]
 

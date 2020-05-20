@@ -94,7 +94,7 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
   
 [!code-csharp[ListInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ListInitializer)]  
   
-如果集合的 [ 方法允许，则可以将 ](../../language-reference/keywords/null.md)null`Add` 指定为集合初始值设定项中的一个元素。  
+如果集合的 `Add` 方法允许，则可以将 [null](../../language-reference/keywords/null.md) 指定为集合初始值设定项中的一个元素。  
   
 [!code-csharp[ListInitializerNull](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ListInitialerWithNull)]  
   

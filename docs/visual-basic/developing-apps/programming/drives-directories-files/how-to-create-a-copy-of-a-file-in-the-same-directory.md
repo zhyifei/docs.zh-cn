@@ -22,13 +22,13 @@ ms.locfileid: "74348821"
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a>在同一文件夹中创建文件副本  
   
-- 使用 `CopyFile` 方法，提供目标文件和位置。 下面的示例创建名为 `test.txt` 的 `test2.txt` 副本。  
+- 使用 `CopyFile` 方法，提供目标文件和位置。 下面的示例创建名为 `test2.txt` 的 `test.txt` 副本。  
   
      [!code-vb[VbVbcnMyFileSystem#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#51)]  
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a>通过覆盖现有文件在同一文件夹中创建文件副本  
   
-- 使用 `CopyFile` 方法，提供目标文件和位置，并将 `overwrite` 设置为 `True`。 下面的示例创建名为 `test.txt` 的 `test2.txt` 副本，并用该名称覆盖任何现有文件。  
+- 使用 `CopyFile` 方法，提供目标文件和位置，并将 `overwrite` 设置为 `True`。 下面的示例创建名为 `test2.txt` 的 `test.txt` 副本，并用该名称覆盖任何现有文件。  
   
      [!code-vb[VbVbcnMyFileSystem#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#52)]  
   

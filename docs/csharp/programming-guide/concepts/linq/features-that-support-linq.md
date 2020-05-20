@@ -60,7 +60,7 @@ var newLargeOrderCustomers = from o in IncomingOrders
                             select new Customer { Name = o.Name, Phone = o.Phone };
 ```
 
-数据源可能具有比 `Customer` 类更多的属性，例如 `OrderSize`，但执行对象初始化后，从查询返回的数据被定型为所需的数据类型；我们选择与我们的类相关的数据。 因此，我们现在有填充了我们想要的多个新 `IEnumerable` 的 `Customer`。 上述代码也可以使用 LINQ 的方法语法编写：
+数据源可能具有比 `Customer` 类更多的属性，例如 `OrderSize`，但执行对象初始化后，从查询返回的数据被定型为所需的数据类型；我们选择与我们的类相关的数据。 因此，我们现在有填充了我们想要的多个新 `Customer` 的 `IEnumerable`。 上述代码也可以使用 LINQ 的方法语法编写：
 
 ```csharp
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });

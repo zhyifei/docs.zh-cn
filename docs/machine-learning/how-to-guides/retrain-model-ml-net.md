@@ -51,7 +51,7 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ## <a name="extract-pre-trained-model-parameters"></a>提取预先训练的模型参数
 
-加载模型后，通过访问预先训练模型的 [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) 属性来提取已学习的模型参数。 使用线性回归模型 [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) 训练预先训练的模型，该线性回归模型可创建输出 [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) 的 [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters)。 这些线性回归模型参数包含模型已学习的偏差和权重或系数。 这些值将用作新的重新训练模型的起点。
+加载模型后，通过访问预先训练模型的 [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) 属性来提取已学习的模型参数。 使用线性回归模型 [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) 训练预先训练的模型，该线性回归模型可创建输出 [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) 的 [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601)。 这些线性回归模型参数包含模型已学习的偏差和权重或系数。 这些值将用作新的重新训练模型的起点。
 
 ```csharp
 // Extract trained model parameters

@@ -25,7 +25,7 @@ ms.locfileid: "71047391"
 # <a name="programming-pluggable-protocols"></a>对可插入协议进行编程
 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 抽象类为可插入协议提供了基础。 通过从 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 派生协议特定的类，应用程序可以请求 Internet 资源中的数据并读取响应而无需指定所使用的协议。  
   
- 在创建协议特定的 <xref:System.Net.WebRequest> 前，必须首先注册其 Create 方法。 使用<xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29> 的静态 <xref:System.Net.WebRequest> 方法注册一个 <xref:System.Net.WebRequest> 子代来处理一组请求（包括对某一特定 Internet 方案的请求、对某个方案和服务器的请求或对某个方案、服务器和路径的请求）。  
+ 在创建协议特定的 <xref:System.Net.WebRequest> 前，必须首先注册其 Create 方法。 使用<xref:System.Net.WebRequest> 的静态 <xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29> 方法注册一个 <xref:System.Net.WebRequest> 子代来处理一组请求（包括对某一特定 Internet 方案的请求、对某个方案和服务器的请求或对某个方案、服务器和路径的请求）。  
   
  在大多数情况下，可以使用 <xref:System.Net.WebRequest> 类的方法和属性发送和接收数据。 但是，如果需要访问协议特定的属性，则可以将 <xref:System.Net.WebRequest> 的类型转换成特定的派生类实例。  
   

@@ -23,7 +23,7 @@ ms.locfileid: "78159645"
   
  公共语言运行时为用于控制程序流的某些未经处理的异常提供支持：  
   
-- 由于 <xref:System.Threading.ThreadAbortException> 得到调用，因此 <xref:System.Threading.Thread.Abort%2A> 在线程中抛出。  
+- 由于 <xref:System.Threading.Thread.Abort%2A> 得到调用，因此 <xref:System.Threading.ThreadAbortException> 在线程中抛出。  
   
 - 由于线程执行时所在的应用域正在卸载，因此 <xref:System.AppDomainUnloadedException> 在线程中抛出。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "78159645"
   
 - 在线程池线程中，没有诸如未经处理的异常这样的内容。 当某个任务引发了它无法处理的异常时，运行时会将异常堆栈跟踪打印至控制台，然后将线程返回至线程池。  
   
-- 在使用 <xref:System.Threading.Thread.Start%2A> 类的 <xref:System.Threading.Thread> 方法创建的线程中，不存在未经处理的异常等现象。 当在此类线程中运行的代码引发它无法处理的异常时，运行时会将异常堆栈跟踪打印至控制台，然后正常终止线程。  
+- 在使用 <xref:System.Threading.Thread> 类的 <xref:System.Threading.Thread.Start%2A> 方法创建的线程中，不存在未经处理的异常等现象。 当在此类线程中运行的代码引发它无法处理的异常时，运行时会将异常堆栈跟踪打印至控制台，然后正常终止线程。  
   
 - 在终结器线程中，没有诸如未经处理的异常这样的内容。 当终结器引发它无法处理的异常时，运行时会将异常堆栈跟踪打印至控制台，然后允许终结器线程继续运行终结器。  
   

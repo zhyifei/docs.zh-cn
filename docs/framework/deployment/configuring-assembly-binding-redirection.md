@@ -13,9 +13,9 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "79181682"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>配置程序集绑定重定向
-默认情况下，应用程序使用一组 .NET Framework 程序集，该程序集随用于编译该应用程序的运行时版本一起提供。 可以使用应用程序配置文件中  assemblyBinding>[ 元素上的 appliesTo 特性，将程序集绑定引用重定向到 .NET Framework 程序集的特定版本\<](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)。 此可选特性用 .NET Framework 版本号来指示它应用于哪个版本。 如果没有指定 appliesTo 特性，**assemblyBinding> 元素将适用于 .NET Framework 的所有版本** **\<** 。  
+默认情况下，应用程序使用一组 .NET Framework 程序集，该程序集随用于编译该应用程序的运行时版本一起提供。 可以使用应用程序配置文件中 [\<assemblyBinding>](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 元素上的 appliesTo 特性，将程序集绑定引用重定向到 .NET Framework 程序集的特定版本。 此可选特性用 .NET Framework 版本号来指示它应用于哪个版本。 如果没有指定 appliesTo 特性，\<assemblyBinding> 元素将适用于 .NET Framework 的所有版本。  
   
- 在 .NET Framework 1.1 版中引入了 appliesTo 特性，而在 .NET Framework 1.0 版中则忽略了此特性  。 这意味着，即使指定了 appliesTo 特性，在使用 .NET Framework 1.0 版时所有的 **assemblyBinding> 元素也都适用\<**  。  
+ 在 .NET Framework 1.1 版中引入了 appliesTo 特性，而在 .NET Framework 1.0 版中则忽略了此特性  。 这意味着，即使指定了 appliesTo 特性，在使用 .NET Framework 1.0 版时所有的 \<assemblyBinding> 元素也都适用。  
   
 > [!NOTE]
 > 使用 appliesTo 特性来限制运行时特定版本的程序集绑定重定向  。  
@@ -32,7 +32,7 @@ ms.locfileid: "79181682"
 </runtime>  
 ```  
   
- **assemblyBinding> 元素要区分顺序\<** 。 应首先输入任何 .NET Framework 1.0 版程序集的程序集绑定重定向信息，再输入任何 .NET Framework 1.1 版程序集的程序集绑定重定向信息。 最后，输入任何因不使用 **appliesTo** 特性而适用于所有版本的 .NET Framework 的.NET Framework 程序集重定向的程序集绑定重定向信息。 如果发生重定向冲突，请使用配置文件中的第一个匹配的重定向语句。  
+ \<assemblyBinding> 元素要区分顺序。 应首先输入任何 .NET Framework 1.0 版程序集的程序集绑定重定向信息，再输入任何 .NET Framework 1.1 版程序集的程序集绑定重定向信息。 最后，输入任何因不使用 **appliesTo** 特性而适用于所有版本的 .NET Framework 的.NET Framework 程序集重定向的程序集绑定重定向信息。 如果发生重定向冲突，请使用配置文件中的第一个匹配的重定向语句。  
   
  例如，若要将一个引用重定向到 .NET Framework 1.0 版程序集，而将另一个引用重定向到 .NET Framework 1.1 版程序集，将使用以下伪代码中所示的模式。  
   

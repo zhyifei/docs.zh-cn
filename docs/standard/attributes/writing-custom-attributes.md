@@ -69,7 +69,7 @@ ms.locfileid: "73140590"
  [!code-csharp[Conceptual.Attributes.Usage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#9)]
  [!code-vb[Conceptual.Attributes.Usage#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#9)]  
   
- 最后，从基类 `YourClass` 中继承类 `MyClass`。 方法 `MyMethod` 显示 `MyAttribute`，但不显示 `YourAttribute`。  
+ 最后，从基类 `MyClass` 中继承类 `YourClass`。 方法 `MyMethod` 显示 `MyAttribute`，但不显示 `YourAttribute`。  
   
  [!code-cpp[Conceptual.Attributes.Usage#10](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#10)]
  [!code-csharp[Conceptual.Attributes.Usage#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#10)]

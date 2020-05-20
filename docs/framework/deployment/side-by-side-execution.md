@@ -61,7 +61,7 @@ ms.locfileid: "79181649"
   
 ### <a name="runtime-version-information-in-the-application-configuration-file"></a>应用程序配置文件中的运行时版本信息  
 
-除了 PE 文件头中的信息，还可使用提供运行时版本信息的应用程序配置文件部署应用程序。 应用程序配置文件由应用程序开发人员创建，是基于 XML 的文件且与应用程序一同提供。 如果此文件中有 [\<startup> 部分](../configure-apps/file-schema/startup/requiredruntime-element.md)的 [\<requiredRuntime> 元素](../configure-apps/file-schema/startup/startup-element.md)，则指定运行时版本以及应用程序支持的组件版本。 还可在测试中使用此文件测试应用程序是否与不同的运行时版本兼容。  
+除了 PE 文件头中的信息，还可使用提供运行时版本信息的应用程序配置文件部署应用程序。 应用程序配置文件由应用程序开发人员创建，是基于 XML 的文件且与应用程序一同提供。 如果此文件中有 [\<startup> 部分](../configure-apps/file-schema/startup/startup-element.md)的 [\<requiredRuntime> 元素](../configure-apps/file-schema/startup/requiredruntime-element.md)，则指定运行时版本以及应用程序支持的组件版本。 还可在测试中使用此文件测试应用程序是否与不同的运行时版本兼容。  
   
 非托管代码（包括 COM 和 COM+ 应用程序）可具有运行时用于与托管代码进行交互的应用程序配置文件。 应用程序配置文件会影响任何通过 COM 激活的托管代码。 此文件可指定所支持的运行时版本以及程序集重定向。 默认情况下，调用到托管代码的 COM 互操作应用程序使用计算机上安装的最新版本的运行时。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "79181649"
   
 如果应用程序配置文件存在，则运行时根据以下过程的结果确定要加载的适当运行时版本：  
   
-1. 运行时检查应用程序配置文件中的 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 元素。 如果 **supportedRuntime> 元素中指定了一个或多个支持的运行时版本，则运行时加载第一个 \<supportedRuntime> 元素指定的运行时版本** **\<** 。 如果这一版本不可用，则运行时检查下一个 **supportedRuntime> 元素，并尝试加载所指定的运行时版本\<** 。 如果这一运行时版本仍不可用，则检查后面的 **supportedRuntime> 元素\<** 。 如果受支持的运行时版本均不可用，则运行时无法加载运行时版本，并向用户显示一条消息（请参阅步骤 3）。  
+1. 运行时检查应用程序配置文件中的 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 元素。 如果 \<supportedRuntime> 元素中指定了一个或多个支持的运行时版本，则运行时加载第一个 \<supportedRuntime> 元素指定的运行时版本。 如果这一版本不可用，则运行时检查下一个 \<supportedRuntime> 元素，并尝试加载所指定的运行时版本。 如果这一运行时版本仍不可用，则检查后面的 \<supportedRuntime> 元素。 如果受支持的运行时版本均不可用，则运行时无法加载运行时版本，并向用户显示一条消息（请参阅步骤 3）。  
   
 2. 运行时读取应用程序可执行文件的 PE 文件头。 如果 PE 文件头指定的运行时版本可用，则运行时加载此版本。 如果指定的运行时版本不可用，运行时将搜索 Microsoft 确定与 PE 文件头中的运行时版本兼容的运行时版本。 如果找不到此版本，则继续执行到步骤 3。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "79181649"
 
 因为它们是并行问题的潜在根源，部分限定的程序集引用仅可用于绑定到应用程序目录中的程序集。 避免在代码中使用部分限定的程序集引用。  
   
-若要减轻在代码中使用部分限定的程序集引用，可以利用应用程序配置文件中的 [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) 元素，对代码中出现的部分限定的程序集引用进行完全限定。 应当使用 **qualifyAssembly> 元素来仅指定未在部分引用中设置的字段\<** 。 fullName 属性中列出的程序集标识必须包含完全限定程序集名称所需的所有信息：程序集名称、公钥、区域性和版本  。  
+若要减轻在代码中使用部分限定的程序集引用，可以利用应用程序配置文件中的 [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) 元素，对代码中出现的部分限定的程序集引用进行完全限定。 应当使用 \<qualifyAssembly> 元素来仅指定未在部分引用中设置的字段。 fullName 属性中列出的程序集标识必须包含完全限定程序集名称所需的所有信息：程序集名称、公钥、区域性和版本  。  
   
  以下示例演示用于完全限定名为 `myAssembly` 的程序集的应用程序配置文件条目。  
   

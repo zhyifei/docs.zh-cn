@@ -22,13 +22,13 @@ ms.locfileid: "71048600"
   
  必须满足两个条件才能将协议特定的类用作可插入协议：该类必须实现 <xref:System.Net.IWebRequestCreate> 接口，并且必须使用 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> 方法注册。 该类必须覆盖 WebRequest 的所有抽象方法和属性，才能提供可插入接口  。  
   
- WebRequest 实例是一次性的，如果想再发出请求，请创建一个新的 WebRequest   。 WebRequest 支持  **接口，使开发人员能够序列化模板 WebRequest，然后针对其他请求重新构建模板**<xref:System.Runtime.Serialization.ISerializable>  。  
+ WebRequest 实例是一次性的，如果想再发出请求，请创建一个新的 WebRequest   。 WebRequest 支持 <xref:System.Runtime.Serialization.ISerializable> 接口，使开发人员能够序列化模板 WebRequest，然后针对其他请求重新构建模板。  
   
 ## <a name="iwebrequest-create-method"></a>IWebRequest Create 方法  
- <xref:System.Net.IWebRequestCreate.Create%2A> 方法负责初始化协议特定的类的新实例。 创建新 WebRequest 后， **方法会将请求的 URI 与使用 RegisterPrefix 方法注册的 URI 前缀进行匹配**<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>  。 正确的协议特定后代的 Create 方法必须返回该后代的初始化实例，该实例能够为协议执行标准请求/响应事务，且不需要修改任何协议特定的字段  。  
+ <xref:System.Net.IWebRequestCreate.Create%2A> 方法负责初始化协议特定的类的新实例。 创建新 WebRequest 后，<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 方法会将请求的 URI 与使用 RegisterPrefix 方法注册的 URI 前缀进行匹配。 正确的协议特定后代的 Create 方法必须返回该后代的初始化实例，该实例能够为协议执行标准请求/响应事务，且不需要修改任何协议特定的字段  。  
   
 ## <a name="connectiongroupname-property"></a>ConnectionGroupName 属性  
- <xref:System.Net.WebRequest.ConnectionGroupName%2A> 属性用于命名一组资源连接，以便可通过单个连接发出多个请求。 若要实现连接共享，必须使用协议特定的方法来集中和分配连接。 例如，提供的 <xref:System.Net.ServicePointManager> 类实现 <xref:System.Net.HttpWebRequest> 类的连接共享。 ServicePointManager 类创建可为每个连接组提供特定服务器连接的  <xref:System.Net.ServicePoint>。  
+ <xref:System.Net.WebRequest.ConnectionGroupName%2A> 属性用于命名一组资源连接，以便可通过单个连接发出多个请求。 若要实现连接共享，必须使用协议特定的方法来集中和分配连接。 例如，提供的 <xref:System.Net.ServicePointManager> 类实现 <xref:System.Net.HttpWebRequest> 类的连接共享。 ServicePointManager 类创建可为每个连接组提供特定服务器连接的 <xref:System.Net.ServicePoint>。  
   
 ## <a name="contentlength-property"></a>ContentLength 属性  
  <xref:System.Net.WebRequest.ContentLength%2A> 属性指定上传数据时将发送到服务器的数据的字节数。  
@@ -63,12 +63,12 @@ ms.locfileid: "71048600"
  <xref:System.Net.WebRequest.RequestUri%2A> 属性包含传递给 WebRequest.Create 方法的 URI  。 创建 WebRequest 后，它就为只读且不能更改  。 如果协议支持重定向，则可由其他 URI 所标识的资源发出响应。 如需提供对响应 URI 的访问权限，则必须提供一个包含该 URI 的其他属性。  
   
 ## <a name="timeout-property"></a>超时属性  
- <xref:System.Net.WebRequest.Timeout%2A> 属性包含请求超时并引发异常前等待的时长（以毫秒为单位）。 Timeout 仅适用于使用 **方法发出的同步请求，异步请求必须使用** 方法取消挂起的请求<xref:System.Net.WebRequest.GetResponse%2A><xref:System.Net.WebRequest.Abort%2A>。  
+ <xref:System.Net.WebRequest.Timeout%2A> 属性包含请求超时并引发异常前等待的时长（以毫秒为单位）。 Timeout 仅适用于使用 <xref:System.Net.WebRequest.GetResponse%2A> 方法发出的同步请求，异步请求必须使用 <xref:System.Net.WebRequest.Abort%2A> 方法取消挂起的请求。  
   
  仅当协议特定的类实现超时过程时，设置 Timeout 属性才有意义  。  
   
 ## <a name="abort-method"></a>Abort 方法  
- <xref:System.Net.WebRequest.Abort%2A> 方法取消服务器的挂起异步请求。 取消请求后，调用 GetResponse、BeginGetResponse、EndGetResponse、GetRequestStream、BeginGetRequestStream 或 EndGetRequestStream 将引发 **，且** 属性被设置为      <xref:System.Net.WebException><xref:System.Net.WebException.Status%2A><xref:System.Net.WebExceptionStatus>。  
+ <xref:System.Net.WebRequest.Abort%2A> 方法取消服务器的挂起异步请求。 取消请求后，调用 GetResponse、BeginGetResponse、EndGetResponse、GetRequestStream、BeginGetRequestStream 或 EndGetRequestStream 将引发 <xref:System.Net.WebException>，且<xref:System.Net.WebException.Status%2A> 属性被设置为 <xref:System.Net.WebExceptionStatus>。  
   
 ## <a name="begingetrequeststream-and-endgetrequeststream-methods"></a>BeginGetRequestStream 和 EndGetRequestStream 方法  
  <xref:System.Net.WebRequest.BeginGetRequestStream%2A> 方法为用于将数据上传到服务器的流启动异步请求。 <xref:System.Net.WebRequest.EndGetRequestStream%2A> 方法完成异步请求并返回所请求的流。 这些方法使用标准 .NET Framework 异步模式实现 GetRequestStream 方法  。  

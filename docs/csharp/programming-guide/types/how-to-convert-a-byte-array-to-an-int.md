@@ -40,7 +40,7 @@ ms.locfileid: "75698750"
 
 ## <a name="example"></a>示例
 
-在本示例中，将调用 <xref:System.BitConverter.GetBytes%28System.Int32%29> 类的 <xref:System.BitConverter> 方法，将 `int` 转换为字节数组。
+在本示例中，将调用 <xref:System.BitConverter> 类的 <xref:System.BitConverter.GetBytes%28System.Int32%29> 方法，将 `int` 转换为字节数组。
 
 > [!NOTE]
 > 输出可能会根据计算机体系结构的字节顺序而不同。

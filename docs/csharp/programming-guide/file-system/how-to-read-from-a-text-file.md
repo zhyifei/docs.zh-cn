@@ -17,7 +17,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705010"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>如何读取文本文件中的内容（C# 编程指南）
-此示例通过使用 <xref:System.IO.File.ReadAllText%2A> 类的 <xref:System.IO.File.ReadAllLines%2A> 和 <xref:System.IO.File?displayProperty=nameWithType> 静态方法来确定文本文件的内容。  
+此示例通过使用 <xref:System.IO.File?displayProperty=nameWithType> 类的 <xref:System.IO.File.ReadAllText%2A> 和 <xref:System.IO.File.ReadAllLines%2A> 静态方法来确定文本文件的内容。  
   
 有关使用 <xref:System.IO.StreamReader> 的示例，请参阅[如何一次一行地读取文本文件](./how-to-read-a-text-file-one-line-at-a-time.md)。
   

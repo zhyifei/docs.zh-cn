@@ -35,7 +35,7 @@ ms.locfileid: "78156044"
   
 - 在与该方法相同的类上定义 <em>MethodName</em>Completed 事件  。  
   
-- 为派生自 <xref:System.EventArgs> 类的 <em>MethodName</em>Completed 事件定义一个  **类和随附委托**<xref:System.ComponentModel.AsyncCompletedEventArgs>。 默认类名应采用 <em>MethodName</em>CompletedEventArgs  形式。  
+- 为派生自 <xref:System.ComponentModel.AsyncCompletedEventArgs> 类的 <em>MethodName</em>Completed 事件定义一个 <xref:System.EventArgs> 类和随附委托。 默认类名应采用 <em>MethodName</em>CompletedEventArgs  形式。  
   
 - 确保 <xref:System.EventArgs> 类特定于 <em>MethodName</em> 方法的返回值。 在使用 <xref:System.EventArgs> 类时，切勿要求开发人员强制转换结果。  
   
@@ -75,9 +75,9 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - 如果类定义了需要使用对象赋值状态参数或任务 ID 的 <em>MethodName</em>Async  重载，应务必使用相应任务 ID 跟踪操作的生存期，并将它 返回给完成事件处理器。 有一些用来提供帮助的帮助器类。 有关并发管理的详细信息，请参阅[如何：实现支持基于事件的异步模式的组件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)。  
   
-- 如果类定义了不使用状态参数的 <em>MethodName</em>Async  方法，且它不支持多个并发调用，则应确保在先前 <em>MethodName</em>Async  调用完成前，只要尝试调用 <em>MethodName</em>Async  都会导致 <xref:System.InvalidOperationException> 抛出。  
+- 如果类定义了不使用状态参数的 <em>MethodName</em>Async 方法，且它不支持多个并发调用，则应确保在先前 <em>MethodName</em>Async 调用完成前，只要尝试调用 <em>MethodName</em>Async 都会导致 <xref:System.InvalidOperationException> 抛出。  
   
-- 一般来说，如果多次调用不使用 <em>参数的</em>MethodName**Async**`userSuppliedState` 方法，导致多个未结操作出现，不得抛出异常。 如果类无法显式处理这种情况，将引发异常，但可假定开发人员能够处理多个不可区分回调。  
+- 一般来说，如果多次调用不使用 `userSuppliedState` 参数的 <em>MethodName</em>Async 方法，导致多个未结操作出现，不得抛出异常。 如果类无法显式处理这种情况，将引发异常，但可假定开发人员能够处理多个不可区分回调。  
   
 ### <a name="accessing-results"></a>访问结果  
   
@@ -99,7 +99,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - 如果你的类支持多个并发调用，则不要公开 `IsBusy` 属性。 例如，XML Web services 代理不会公开 `IsBusy` 属性，因为它们支持异步方法的多个并发调用。  
   
-- 在调用 `IsBusy`MethodName`true`Async 方法后，且在抛出 **MethodName**Completed 事件前，**属性应返回**。 否则，它应返回 `false`。 <xref:System.ComponentModel.BackgroundWorker> 和 <xref:System.Net.WebClient> 组件是公开 `IsBusy` 属性的类的示例。  
+- 在调用 <em>MethodName</em>Async 方法后，且在抛出 <em>MethodName</em>Completed 事件前，`IsBusy` 属性应返回 `true`。 否则，它应返回 `false`。 <xref:System.ComponentModel.BackgroundWorker> 和 <xref:System.Net.WebClient> 组件是公开 `IsBusy` 属性的类的示例。  
   
 ### <a name="cancellation"></a>取消  
   

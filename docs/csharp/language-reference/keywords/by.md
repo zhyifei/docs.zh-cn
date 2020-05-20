@@ -20,7 +20,7 @@ ms.locfileid: "75713729"
 
 ## <a name="example"></a>示例
 
-下面的示例演示在 `by` 字句中使用 `group` 关键字指定应根据每个学生的姓氏首字母对学生分组。
+下面的示例演示在 `group` 字句中使用 `by` 关键字指定应根据每个学生的姓氏首字母对学生分组。
 
 [!code-csharp[csrefKeywordsContextual#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#10)]
 

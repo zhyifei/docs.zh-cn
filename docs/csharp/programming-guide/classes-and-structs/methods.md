@@ -21,7 +21,7 @@ ms.locfileid: "77626524"
 
 ## <a name="method-signatures"></a>方法签名
 
-通过指定访问级别（如 [ 或 ](../../language-reference/keywords/class.md)）、可选修饰符（如 [ 或 ](../../language-reference/builtin-types/struct.md)）、返回值、方法的名称以及任何方法参数，在[类](../interfaces/index.md)、`public`结构`private`或`abstract`接口`sealed`中声明方法。 这些部件一起构成方法的签名。
+通过指定访问级别（如 `public` 或 `private`）、可选修饰符（如 `abstract` 或 `sealed`）、返回值、方法的名称以及任何方法参数，在[类](../../language-reference/keywords/class.md)、[结构](../../language-reference/builtin-types/struct.md)或[接口](../interfaces/index.md)中声明方法。 这些部件一起构成方法的签名。
 
 > [!NOTE]
 > 出于方法重载的目的，方法的返回类型不是方法签名的一部分。 但是在确定委托和它所指向的方法之间的兼容性时，它是方法签名的一部分。

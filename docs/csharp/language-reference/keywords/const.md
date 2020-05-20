@@ -36,7 +36,7 @@ private const string ProductName = "Visual C#";
 public const double X = 1.0, Y = 2.0, Z = 3.0;
 ```
 
-不允许在常数声明中使用 `static`{2}{3} 修饰符。
+不允许在常数声明中使用 `static`{2}`static` 修饰符。
 
 常数可以参与常数表达式，如下所示：
 
@@ -46,7 +46,7 @@ public const int C2 = C1 + 100;
 ```
 
 > [!NOTE]
-> [readonly](./readonly.md) 关键字与 `const` 关键字不同。 `const`{2}{3} 字段只能在该字段的声明中初始化。 `readonly` 字段可以在声明或构造函数中初始化。 因此，根据所使用的构造函数，`readonly` 字段可能具有不同的值。 另外，虽然 `const` 字段是编译时常量，但 `readonly` 字段可用于运行时常量，如此行所示：`public static readonly uint l1 = (uint)DateTime.Now.Ticks;`
+> [readonly](./readonly.md) 关键字与 `const` 关键字不同。 `const`{2}`const` 字段只能在该字段的声明中初始化。 `readonly`{2}`readonly` 字段可以在声明或构造函数中初始化。 因此，根据所使用的构造函数，`readonly`{2}`readonly` 字段可能具有不同的值。 另外，虽然 `const` 字段是编译时常量，但 `readonly` 字段可用于运行时常量，如此行所示：`public static readonly uint l1 = (uint)DateTime.Now.Ticks;`
 
 ## <a name="example"></a>示例
 

@@ -45,7 +45,7 @@ ms.locfileid: "78848647"
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. 从菜单栏选择“工具” **“扩展和更新”**  >  
+1. 从菜单栏选择“工具” > “扩展和更新”
 
     ![VS2017 打开“扩展管理器”对话框](./media/install-model-builder/vs2017-open-extensions-manager.png)
 
@@ -58,7 +58,7 @@ ms.locfileid: "78848647"
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-1. 从菜单栏选择“扩展” **“管理扩展”**  >  
+1. 从菜单栏选择“扩展” > “管理扩展”
 
     ![VS2019 打开“扩展管理器”对话框](./media/install-model-builder/vs2019-open-extensions-manager.png)
 
@@ -73,7 +73,7 @@ ms.locfileid: "78848647"
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. 从菜单栏选择“工具” **“扩展和更新”**  >  
+1. 从菜单栏选择“工具” > “扩展和更新”
 
     ![VS2017 打开“管理扩展”对话框](./media/install-model-builder/vs2017-open-extensions-manager.png)
 
@@ -86,7 +86,7 @@ ms.locfileid: "78848647"
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-1. 从菜单栏选择“扩展” **“管理扩展”**  >  
+1. 从菜单栏选择“扩展” > “管理扩展”
 
     ![VS2019 打开“管理扩展”对话框](./media/install-model-builder/vs2019-open-extensions-manager.png)
 

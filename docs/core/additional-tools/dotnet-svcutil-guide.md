@@ -16,7 +16,7 @@ Windows Communication Foundation (WCF) dotnet-svcutil  工具是一种 .NET 工�
 
 类似于 .NET Framework 项目的[服务模型元数据 - svcutil  ](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 工具，dotnet svcutil  是用于生成 Web 服务引用的命令行工具，与 .NET Core 和 .NET Standard 项目兼容。
 
-dotnet-svcutil 工具是 **WCF Web 服务引用** Visual Studio 连接服务提供程序（随 Visual Studio 2017 版本 15.5 首次推出）的替代选项[  ](wcf-web-service-reference-guide.md)。 dotnet-svcutil  工具作为一种 .NET 工具，可跨平台用于 Linux、macOS 和 Windows。
+dotnet-svcutil 工具是 [WCF Web 服务引用](wcf-web-service-reference-guide.md) Visual Studio 连接服务提供程序（随 Visual Studio 2017 版本 15.5 首次推出）的替代选项。 dotnet-svcutil  工具作为一种 .NET 工具，可跨平台用于 Linux、macOS 和 Windows。
 
 > [!IMPORTANT]
 > 应仅从受信任源引用服务。 从不受信任的源添加引用可能会危及安全性。
@@ -83,7 +83,7 @@ public interface ISayHello
     </ItemGroup>
     ```
 
-    然后使用  [ 命令还原 dotnet-svcutil`dotnet restore`](../tools/dotnet-restore.md) 包，如下所示：
+    然后使用 [`dotnet restore`](../tools/dotnet-restore.md) 命令还原 dotnet-svcutil 包，如下所示：
 
     ```dotnetcli
     dotnet restore

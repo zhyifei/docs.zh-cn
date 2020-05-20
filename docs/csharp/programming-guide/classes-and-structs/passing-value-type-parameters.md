@@ -23,7 +23,7 @@ ms.locfileid: "76744498"
  变量 `n` 是值类型。 它包含其数据，值为 `5`。 调用 `SquareIt` 时，`n` 的内容复制到参数 `x` 中，这是该方法内的平方值。 但是在 `Main` 中，`n` 的值在调用 `SquareIt` 方法之后与之前相同。 在方法内发生的更改只影响本地变量 `x`。  
   
 ## <a name="passing-value-types-by-reference"></a>按引用传递值类型  
- 下面的示例与上述示例相同，除了自变量是作为 `ref` 参数传递的。 `n` 在方法中更改时，基础自变量的值 `x` 也更改。  
+ 下面的示例与上述示例相同，除了自变量是作为 `ref` 参数传递的。 `x` 在方法中更改时，基础自变量的值 `n` 也更改。  
   
  [!code-csharp[csProgGuideParameters#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#4)]  
   

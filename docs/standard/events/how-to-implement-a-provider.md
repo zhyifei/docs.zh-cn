@@ -27,12 +27,12 @@ ms.locfileid: "73141554"
      [!code-csharp[Conceptual.ObserverDesign.HowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/data.cs#1)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/data.vb#1)]  
   
-2. 定义数据提供程序，即实现 <xref:System.IObservable%601?displayProperty=nameWithType> 接口的类型。 提供程序的泛型类型参数是提供程序发送给观察程序的类型。 下面的示例定义了 `TemperatureMonitor` 类，即使用 <xref:System.IObservable%601?displayProperty=nameWithType> 泛型类型参数的构造 `Temperature` 实现。  
+2. 定义数据提供程序，即实现 <xref:System.IObservable%601?displayProperty=nameWithType> 接口的类型。 提供程序的泛型类型参数是提供程序发送给观察程序的类型。 下面的示例定义了 `TemperatureMonitor` 类，即使用 `Temperature` 泛型类型参数的构造 <xref:System.IObservable%601?displayProperty=nameWithType> 实现。  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#2)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#2)]  
   
-3. 确定提供程序如何存储对观察程序的引用，以便视情况通知每个观察程序。 最常见的情况是，集合对象（如泛型 <xref:System.Collections.Generic.List%601> 对象）用于实现此目的。 下面的示例定义了在 <xref:System.Collections.Generic.List%601> 类构造函数中实例化的专用 `TemperatureMonitor` 对象。  
+3. 确定提供程序如何存储对观察程序的引用，以便视情况通知每个观察程序。 最常见的情况是，集合对象（如泛型 <xref:System.Collections.Generic.List%601> 对象）用于实现此目的。 下面的示例定义了在 `TemperatureMonitor` 类构造函数中实例化的专用 <xref:System.Collections.Generic.List%601> 对象。  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#3)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#3)]  
@@ -42,7 +42,7 @@ ms.locfileid: "73141554"
      [!code-csharp[Conceptual.ObserverDesign.HowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#4)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#4)]  
   
-5. 实现 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> 方法。 向此方法传递对 <xref:System.IObserver%601?displayProperty=nameWithType> 接口的引用，此方法应存储在第 3 步中为实现相应目的而设计的对象中。 然后，此方法应返回在第 4 步中开发的 <xref:System.IDisposable> 实现。 下面的示例展示了 <xref:System.IObservable%601.Subscribe%2A> 类中 `TemperatureMonitor` 方法的实现。  
+5. 实现 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> 方法。 向此方法传递对 <xref:System.IObserver%601?displayProperty=nameWithType> 接口的引用，此方法应存储在第 3 步中为实现相应目的而设计的对象中。 然后，此方法应返回在第 4 步中开发的 <xref:System.IDisposable> 实现。 下面的示例展示了 `TemperatureMonitor` 类中 <xref:System.IObservable%601.Subscribe%2A> 方法的实现。  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#5)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#5)]  

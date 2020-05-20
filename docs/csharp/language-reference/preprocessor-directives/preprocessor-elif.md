@@ -14,7 +14,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712567"
 ---
 # <a name="elif-c-reference"></a>#elif（C# 参考）
-`#elif` 可以创建复合条件指令。 如果之前的 `#elif`#if[ 和任何之前的可选 ](./preprocessor-if.md) 指令表达式的值为 `#elif`，则计算 `true` 表达式。 如果 `#elif` 表达式计算结果为 `true`，编译器将计算 `#elif` 和下一条件指令间的所有代码。 例如:  
+`#elif` 可以创建复合条件指令。 如果之前的 [#if](./preprocessor-if.md) 和任何之前的可选 `#elif` 指令表达式的值为 `true`，则计算 `#elif` 表达式。 如果 `#elif` 表达式计算结果为 `true`，编译器将计算 `#elif` 和下一条件指令间的所有代码。 例如:  
   
 ```csharp
 #define VC7  
@@ -38,7 +38,7 @@ ms.locfileid: "75712567"
   
  使用 `#elif` 更简单，因为每个 `#if` 均需要 [#endif](./preprocessor-endif.md)，但 `#elif` 可在没有匹配的 `#endif` 的情况下使用。  
   
- 有关如何使用 [ 的示例，请参阅 ](./preprocessor-if.md)#if`#elif`。  
+ 有关如何使用 `#elif` 的示例，请参阅 [#if](./preprocessor-if.md)。  
   
 ## <a name="see-also"></a>另请参阅
 

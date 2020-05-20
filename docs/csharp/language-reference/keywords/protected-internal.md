@@ -57,7 +57,7 @@ class DerivedClass : BaseClass
 
 此示例包含两个文件，即 `Assembly1.cs` 和 `Assembly2.cs`。
 第一个文件包含公共基类 `BaseClass` 和另一个类 `TestAccess`。 `BaseClass` 拥有受保护的内部成员 `myValue`，由 `TestAccess` 类型访问。
-在第二个文件中，如果尝试通过 `myValue` 的实例访问 `BaseClass` ，会生成错误，但如果尝试通过一个派生类的实例来访问此成员，`DerivedClass` 会成功。
+在第二个文件中，如果尝试通过 `BaseClass` 的实例访问 `myValue` ，会生成错误，但如果尝试通过一个派生类的实例来访问此成员，`DerivedClass` 会成功。
 
 结构成员不能为 `protected internal`，因为无法继承结构。
 

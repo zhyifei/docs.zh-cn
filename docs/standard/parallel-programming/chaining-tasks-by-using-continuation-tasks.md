@@ -45,7 +45,7 @@ ms.locfileid: "78159359"
  通过调用 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 方法创建在其前面的任务完成时执行的延续。 下面的示例演示基本模式（为清楚起见，省略了异常处理）。 它会执行一个先行任务 - `taskA`，将返回一个 <xref:System.DayOfWeek> 对象，指示当天为周几。 前面的任务完成时，将向延续任务 `continuation` 传递前面的任务，并显示包含其结果的字符串。
 
 > [!NOTE]
-> 本文中的 C# 示例利用 `async` 方法的 `Main` 修饰符。 此功能在 C# 7.1 及更高版本中提供。 以前的版本在编译此示例代码时生成 [`CS5001`](../../csharp/misc/cs5001.md)。 需要将语言版本设置为 C#7.1 或更高版本。 可以通过有关[配置语言版本](../../csharp/language-reference/configure-language-version.md)的文章了解如何配置语言版本。
+> 本文中的 C# 示例利用 `Main` 方法的 `async` 修饰符。 此功能在 C# 7.1 及更高版本中提供。 以前的版本在编译此示例代码时生成 [`CS5001`](../../csharp/misc/cs5001.md)。 需要将语言版本设置为 C#7.1 或更高版本。 可以通过有关[配置语言版本](../../csharp/language-reference/configure-language-version.md)的文章了解如何配置语言版本。
   
  [!code-csharp[TPL_Continuations#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/simple1.cs#1)]
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  

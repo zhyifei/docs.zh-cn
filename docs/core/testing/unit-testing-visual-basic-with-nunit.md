@@ -157,7 +157,7 @@ End Function
 
 [!code-vb[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-vb-nunit/vb/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
-运行 `dotnet test`，两项测试均失败。 若要使所有测试通过，可以在 PrimeServices.cs 文件中更改 `if` 方法开头的 `Main` 子句  ：
+运行 `dotnet test`，两项测试均失败。 若要使所有测试通过，可以在 PrimeServices.cs 文件中更改 `Main` 方法开头的 `if` 子句：
 
 ```vb
 if candidate < 2

@@ -37,7 +37,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
    ![Visual Studio for Mac 开始屏幕上的“新建”按钮](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
-1. 在“新建项目”  对话框中，选择“.NET Core”  节点下的“应用”  。 单击“下一步”  ，然后选择“控制台应用程序”  模板。
+1. 在“新建项目”对话框中，选择“.NET Core”节点下的“应用”。 单击“下一步”，然后选择“控制台应用程序”模板。
 
    ![新项目模板列表](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
 
@@ -47,7 +47,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
    ![配置新的控制台应用程序对话框](./media/using-on-mac-vs/visual-studio-mac-new-options.png)
 
-1. 等待还原项目的依赖项。 该项目包含一个 C# 文件 *Program.cs*，其中包含具有 `Program` 方法的 `Main` 类。 运行应用时，`Console.WriteLine` 语句将“Hello World!” 输出至控制台。
+1. 等待还原项目的依赖项。 该项目包含一个 C# 文件 *Program.cs*，其中包含具有 `Main` 方法的 `Program` 类。 运行应用时，`Console.WriteLine` 语句将“Hello World!” 输出至控制台。
 
    ![打开 Program.cs 文件的主窗口](./media/using-on-mac-vs/visual-studio-mac-editor.png)
 

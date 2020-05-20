@@ -37,7 +37,7 @@ ms.locfileid: "75714997"
  如果将 `virtual` 方法声明为 `abstract`，则该方法对于从抽象类继承的所有类而言仍然是虚方法。 继承抽象方法的类无法访问方法的原始实现，因此在上一示例中，类 F 上的 `DoWork` 无法调用类 D 上的 `DoWork`。通过这种方式，抽象类可强制派生类向虚拟方法提供新的方法实现。  
   
 ## <a name="sealed-classes-and-class-members"></a>密封类和类成员  
- 通过在类定义前面放置关键字 [，可以将类声明为](../../language-reference/keywords/sealed.md)密封类`sealed`。 例如:  
+ 通过在类定义前面放置关键字 `sealed`，可以将类声明为[密封类](../../language-reference/keywords/sealed.md)。 例如:  
   
  [!code-csharp[csProgGuideInheritance#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#16)]  
   

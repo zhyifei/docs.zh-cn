@@ -137,7 +137,7 @@ ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
         .PermutationFeatureImportance(sdcaModel, preprocessedTrainData, permutationCount:3);
 ```
 
-在训练数据集上使用 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) 的结果是 [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) 对象的 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics)。 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) 提供 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 的多个观测值的均值和标准差等摘要统计信息，观测值数量等于 `permutationCount` 参数指定的排列数。
+在训练数据集上使用 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) 的结果是 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) 对象的 [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray)。 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) 提供 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 的多个观测值的均值和标准差等摘要统计信息，观测值数量等于 `permutationCount` 参数指定的排列数。
 
 重要性（在本例中，由 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) 计算的 R 平方指标的绝对平均下降）可随后按从最重要到最不重要的顺序排序。
 

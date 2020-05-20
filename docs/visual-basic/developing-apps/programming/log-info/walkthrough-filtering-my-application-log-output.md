@@ -52,7 +52,7 @@ ms.locfileid: "74353593"
 
 ## <a name="filtering-for-all-myapplicationlog-listeners"></a>对所有 My.Application.Log 侦听器的筛选
 
-`My.Application.Log` 对象使用名为 <xref:System.Diagnostics.SourceSwitch> 的 `DefaultSwitch`，以控制将哪些消息从 `WriteEntry` 和 `WriteException` 方法传递到日志侦听器。 通过将 `DefaultSwitch` 的值设置为 <xref:System.Diagnostics.SourceLevels> 枚举值的其中一个，可在应用程序的配置文件中对其进行配置。 默认情况下，其值为“信息”。
+`My.Application.Log` 对象使用名为 `DefaultSwitch` 的 <xref:System.Diagnostics.SourceSwitch>，以控制将哪些消息从 `WriteEntry` 和 `WriteException` 方法传递到日志侦听器。 通过将 `DefaultSwitch` 的值设置为 <xref:System.Diagnostics.SourceLevels> 枚举值的其中一个，可在应用程序的配置文件中对其进行配置。 默认情况下，其值为“信息”。
 
 此表显示了在给定的特定 `DefaultSwitch` 设置下，日志将消息写入侦听器所需的严重级别。
 
@@ -164,7 +164,7 @@ ms.locfileid: "74353593"
 
 2. 在“解决方案资源管理器”中右键单击 app.config。  选择“打开”。 
 
-3. 找到 `<listeners>` 部分，该部分位于 `<source>` 属性为“DefaultSource”的 `name` 部分中，后者位于 `<sources>` 部分中。 `<sources>` 部分位于 `<system.diagnostics>` 部分中，后者位于顶级 `<configuration>` 部分中。
+3. 找到 `<listeners>` 部分，该部分位于 `name` 属性为“DefaultSource”的 `<source>` 部分中，后者位于 `<sources>` 部分中。 `<sources>` 部分位于 `<system.diagnostics>` 部分中，后者位于顶级 `<configuration>` 部分中。
 
 4. 将此元素添加到 `<listeners>` 部分：
 

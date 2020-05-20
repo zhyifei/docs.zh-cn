@@ -49,7 +49,7 @@ ms.locfileid: "77451100"
 </PropertyGroup>
 ```
 
-如果 `<AssemblyName>` 属性是在 project.json 中定义的，`<PackageId>` 将具有不同于 `buildOptions\outputName` 的其他值。
+如果 `buildOptions\outputName` 属性是在 project.json 中定义的，`<AssemblyName>` 将具有不同于 `<PackageId>` 的其他值。
 有关详细信息，请参阅[其他常用生成选项](#other-common-build-options)。
 
 ### <a name="version"></a>版本

@@ -50,7 +50,7 @@ public class HousingData
 
 ## <a name="prepare-the-data"></a>准备数据
 
-在使用数据生成机器学习模型之前预处理数据。 在此示例中，`Size` 和 `HistoricalPrices` 列合并为一个特征向量，其使用 `Features`[`Concatenate` 方法输出到名为 ](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 的新列。 除了将数据转换为 ML.NET 算法所期望的格式之外，连接列还通过对连接的列应用一次操作（而不是对每个单独的列应用操作），优化了管道中的后续操作。
+在使用数据生成机器学习模型之前预处理数据。 在此示例中，`Size` 和 `HistoricalPrices` 列合并为一个特征向量，其使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 方法输出到名为 `Features` 的新列。 除了将数据转换为 ML.NET 算法所期望的格式之外，连接列还通过对连接的列应用一次操作（而不是对每个单独的列应用操作），优化了管道中的后续操作。
 
 将列合并为单个向量后，[`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) 将应用于 `Features` 列，以使 `Size` 和 `HistoricalPrices` 处于 0-1 之间的同一范围内。
 
@@ -93,7 +93,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 
 ## <a name="evaluate-the-model"></a>评估模型
 
-可以通过单个 `Metrics`[`CrossValidationResult` 对象的 ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 属性访问不同的经过训练的模型的指标。 在本例中，通过变量 [ 访问和存储 ](https://en.wikipedia.org/wiki/Coefficient_of_determination)R 平方指标`rSquared`。
+可以通过单个 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 对象的 `Metrics` 属性访问不同的经过训练的模型的指标。 在本例中，通过变量 `rSquared` 访问和存储 [R 平方指标](https://en.wikipedia.org/wiki/Coefficient_of_determination)。
 
 ```csharp
 IEnumerable<double> rSquared =

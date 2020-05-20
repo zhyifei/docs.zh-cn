@@ -13,7 +13,7 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048263"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>如何：重写全局代理选择
-此示例将 WebRequest 发送到 **，其在端口 80 上使用名为**  的代理服务器替代全局代理选择`www.contoso.com``alternateproxy`。  
+此示例将 WebRequest 发送到 `www.contoso.com`，其在端口 80 上使用名为 `alternateproxy` 的代理服务器替代全局代理选择。  
   
 ## <a name="example"></a>示例  
   

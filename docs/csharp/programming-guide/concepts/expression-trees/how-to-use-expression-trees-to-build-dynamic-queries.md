@@ -24,7 +24,7 @@ ms.locfileid: "75635894"
           .OrderBy(company => company)
  ```
   
- <xref:System.Linq.Expressions> 命名空间中的工厂方法用于创建表达式树，这些表达式树表示构成总体查询的表达式。 表示标准查询运算符方法调用的表达式将引用这些方法的 <xref:System.Linq.Queryable> 实现。 最终的表达式树将传递给 <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 数据源的提供程序的 `IQueryable` 实现，以创建 `IQueryable` 类型的可执行查询。 通过枚举该查询变量获得结果。  
+ <xref:System.Linq.Expressions> 命名空间中的工厂方法用于创建表达式树，这些表达式树表示构成总体查询的表达式。 表示标准查询运算符方法调用的表达式将引用这些方法的 <xref:System.Linq.Queryable> 实现。 最终的表达式树将传递给 `IQueryable` 数据源的提供程序的 <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 实现，以创建 `IQueryable` 类型的可执行查询。 通过枚举该查询变量获得结果。  
   
 ```csharp  
 // Add a using directive for System.Linq.Expressions.  

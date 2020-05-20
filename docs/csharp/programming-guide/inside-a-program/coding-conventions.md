@@ -110,7 +110,7 @@ Microsoft 根据本文中的准则来开发样本和文档。
      [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
 
      > [!NOTE]
-     > 注意不要意外更改可迭代集合的元素类型。 例如，在 <xref:System.Linq.IQueryable?displayProperty=nameWithType> 语句中从 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 切换到 `foreach` 很容易，这会更改查询的执行。
+     > 注意不要意外更改可迭代集合的元素类型。 例如，在 `foreach` 语句中从 <xref:System.Linq.IQueryable?displayProperty=nameWithType> 切换到 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 很容易，这会更改查询的执行。
 
 ### <a name="unsigned-data-type"></a>无符号数据类型  
   

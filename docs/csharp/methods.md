@@ -49,7 +49,7 @@ ms.locfileid: "79398711"
 
 调用方法就像访问字段。 在对象名称（如果调用实例方法）或类型名称（如果调用 `static` 方法）后添加一个句点、方法名称和括号。 自变量列在括号里，并且用逗号分隔。
 
-该方法定义指定任何所需参数的名称和类型。 调用方调用该方法时，它为每个参数提供了称为自变量的具体值。 自变量必须与参数类型兼容，但调用代码中使用的自变量名（如果有）不需要与方法中定义的自变量名相同。 在下面示例中，`Square` 方法包含名为 i`int`*的类型为* 的单个参数。 第一种方法调用将向 `Square` 方法传递名为 num`int`*的* 类型的变量；第二个方法调用将传递数值常量；第三个方法调用将传递表达式。
+该方法定义指定任何所需参数的名称和类型。 调用方调用该方法时，它为每个参数提供了称为自变量的具体值。 自变量必须与参数类型兼容，但调用代码中使用的自变量名（如果有）不需要与方法中定义的自变量名相同。 在下面示例中，`Square` 方法包含名为 i 的类型为 `int` 的单个参数。 第一种方法调用将向 `Square` 方法传递名为 num 的 `int` 类型的变量；第二个方法调用将传递数值常量；第三个方法调用将传递表达式。
 
 [!code-csharp[csSnippets.Methods#74](../../samples/snippets/csharp/concepts/methods/params74.cs#74)]
 
@@ -95,7 +95,7 @@ C# 中的所有类型不是值类型  就是引用类型  。 有关内置值类
 
 引用类型的对象按值传递到方法中时，将按值传递对对象的引用。 也就是说，该方法接收的不是对象本身，而是指示该对象位置的自变量。 控件返回到调用方法时，如果通过使用此引用更改对象的成员，此更改将反映在对象中。 但是，当控件返回到调用方时，替换传递到方法的对象对原始对象无影响。
 
-下面的示例定义名为 `SampleRefType` 的类（属于引用类型）。 它实例化 `SampleRefType` 对象，将 44 赋予其 `value` 字段，并将该对象传递给 `ModifyObject` 方法。 该示例执行的内容实质上与先前示例相同，均按值将自变量传递到方法。 但因为使用了引用类型，结果会有所不同。 `ModifyObject` 中所做的对 `obj.value` 字段的修改，也会将 `value` 方法中的自变量 `rt` 的 `Main` 字段更改为 33，如示例中的输出值所示。
+下面的示例定义名为 `SampleRefType` 的类（属于引用类型）。 它实例化 `SampleRefType` 对象，将 44 赋予其 `value` 字段，并将该对象传递给 `ModifyObject` 方法。 该示例执行的内容实质上与先前示例相同，均按值将自变量传递到方法。 但因为使用了引用类型，结果会有所不同。 `ModifyObject` 中所做的对 `obj.value` 字段的修改，也会将 `Main` 方法中的自变量 `rt` 的 `value` 字段更改为 33，如示例中的输出值所示。
 
 [!code-csharp[csSnippets.Methods#42](../../samples/snippets/csharp/concepts/methods/byvalue42.cs#42)]
 
@@ -217,7 +217,7 @@ var person = GetPersonalInfo("111111111");
 Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 ```
 
-如果将数组作为自变量传递给一个方法，并修改各个元素的值，则该方法不一定会返回该数组，尽管选择这么操作的原因是为了实现更好的样式或功能性的值流。  这是因为 C# 会按值传递所有引用类型，而数组引用的值是指向该数组的指针。 在下面的示例中，引用该数组的任何代码都能观察到在 `values` 方法中对 `DoubleValues` 数组内容的更改。
+如果将数组作为自变量传递给一个方法，并修改各个元素的值，则该方法不一定会返回该数组，尽管选择这么操作的原因是为了实现更好的样式或功能性的值流。  这是因为 C# 会按值传递所有引用类型，而数组引用的值是指向该数组的指针。 在下面的示例中，引用该数组的任何代码都能观察到在 `DoubleValues` 方法中对 `values` 数组内容的更改。
 
 [!code-csharp[csSnippets.Methods#101](../../samples/snippets/csharp/concepts/methods/returnarray1.cs#101)]
 
@@ -247,7 +247,7 @@ Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 
 异步方法可以具有 <xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task>、 或 `void` 返回类型。 `void` 返回类型主要用于定义需要 `void` 返回类型的事件处理程序。 无法等待返回 `void` 的异步方法，并且返回 void 方法的调用方无法捕获该方法引发的异常。 从 C# 7.0 开始，异步方法可以有[任何类似任务的返回类型](./whats-new/csharp-7.md#generalized-async-return-types)。
 
-在下面的示例中，`DelayAsync` 是一个异步方法，包含返回整数的 return 语句。 由于它是异步方法，其方法声明必须具有返回类型 `Task<int>`。 因为返回类型是 `Task<int>`，`await` 中 `DoSomethingAsync` 表达式的计算将如以下 `int result = await delayTask` 语句所示得出整数。
+在下面的示例中，`DelayAsync` 是一个异步方法，包含返回整数的 return 语句。 由于它是异步方法，其方法声明必须具有返回类型 `Task<int>`。 因为返回类型是 `Task<int>`，`DoSomethingAsync` 中 `await` 表达式的计算将如以下 `int result = await delayTask` 语句所示得出整数。
 
 [!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
 

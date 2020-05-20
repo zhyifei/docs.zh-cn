@@ -37,11 +37,11 @@ ms.locfileid: "73141327"
   
 - Long  
   
-     在对象的 <xref:System.Object.Finalize%2A> 方法已调用后，长弱引用获得保留。 这样，便可以重新创建该对象，但该对象仍保持不可预知的状态。 若要使用长引用，请在 `true` 构造函数中指定 <xref:System.WeakReference>。  
+     在对象的 <xref:System.Object.Finalize%2A> 方法已调用后，长弱引用获得保留。 这样，便可以重新创建该对象，但该对象仍保持不可预知的状态。 若要使用长引用，请在 <xref:System.WeakReference> 构造函数中指定 `true`。  
   
      如果对象类型不包含 <xref:System.Object.Finalize%2A> 方法，应用的是短弱引用功能。弱引用只在目标被收集前有效，运行终结器后可以随时收集目标。  
   
- 若要建立强引用并重新使用对象，请将 <xref:System.WeakReference.Target%2A> 的 <xref:System.WeakReference> 属性强制转换为对象类型。 如果 <xref:System.WeakReference.Target%2A> 属性返回 `null`，表示对象已被收集；否则，可继续使用对象，因为应用已重新获得对它的强引用。  
+ 若要建立强引用并重新使用对象，请将 <xref:System.WeakReference> 的 <xref:System.WeakReference.Target%2A> 属性强制转换为对象类型。 如果 <xref:System.WeakReference.Target%2A> 属性返回 `null`，表示对象已被收集；否则，可继续使用对象，因为应用已重新获得对它的强引用。  
   
 ## <a name="guidelines-for-using-weak-references"></a>使用弱引用的准则  
  仅在必要时使用长弱引用，因为在终结后对象的状态不可预知。  

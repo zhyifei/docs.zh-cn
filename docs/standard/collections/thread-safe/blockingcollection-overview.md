@@ -52,7 +52,7 @@ ms.locfileid: "75711319"
  在针对有限集合的计时阻塞 <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> 和 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 操作中，此方法将尝试添加或取出某个项。 如果项可用，项会被置于通过引用传入的变量中，然后方法返回 true。 如果在指定的超时期限过后未检索到任何项，方法返回 false。 相应线程可以任意执行一些其他有用的工作，然后再重新尝试访问该集合。 有关计时阻塞访问的示例，请参阅[如何：在 BlockingCollection 中逐个添加和取出项](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)中的第二个示例。  
   
 ## <a name="cancelling-add-and-take-operations"></a>取消添加和取出操作  
- 添加和取出操作通常会在一个循环内执行。 可以通过以下方法来取消循环：向 <xref:System.Threading.CancellationToken> 或 <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> 方法传入 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A>，然后在每次迭代时检查该标记的 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 属性的值。 如果值为 true，由你自行决定是否通过清理所有资源并退出循环来响应取消请求。 下面的示例演示获取取消标记和使用该标记的代码的 <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> 重载：  
+ 添加和取出操作通常会在一个循环内执行。 可以通过以下方法来取消循环：向 <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> 或 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 方法传入 <xref:System.Threading.CancellationToken>，然后在每次迭代时检查该标记的 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 属性的值。 如果值为 true，由你自行决定是否通过清理所有资源并退出循环来响应取消请求。 下面的示例演示获取取消标记和使用该标记的代码的 <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> 重载：  
   
  [!code-csharp[CDS_BlockingCollection#05](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#05)]
  [!code-vb[CDS_BlockingCollection#05](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#05)]  

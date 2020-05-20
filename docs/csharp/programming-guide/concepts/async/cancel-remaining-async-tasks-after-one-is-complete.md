@@ -63,7 +63,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
 1. 注释禁止或删除循环。  
   
-2. 创建一个查询，它在执行时将生成常规任务的集合。 每次调用 `ProcessURLAsync` 均在 <xref:System.Threading.Tasks.Task%601> 为整数时返回 `TResult`。  
+2. 创建一个查询，它在执行时将生成常规任务的集合。 每次调用 `ProcessURLAsync` 均在 `TResult` 为整数时返回 <xref:System.Threading.Tasks.Task%601>。  
   
     ```csharp  
     // ***Create a query that, when executed, returns a collection of tasks.  

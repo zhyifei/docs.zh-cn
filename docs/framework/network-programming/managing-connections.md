@@ -29,16 +29,16 @@ ms.locfileid: "71047644"
   
  ServicePoint  类给应用程序提供了终结点，应用程序连接到终结点即可访问 Internet 资源。 每个 ServicePoint 都包含信息，该信息有助于通过共享连接之间的优化信息改进性能，优化与 Internet 服务器的连接  。  
   
- 每个 ServicePoint 都由统一资源标识符 (URI) 标识，并根据方案标识符和 URI 的主机片段分类  。 例如，将由同一 ServicePoint 实例提供对 URI **和** 的请求，因为它们具有相同的方案标识符片段 (http) 和主机片段(`http://www.contoso.com/index.htm`)`http://www.contoso.com/news.htm?date=today``www.contoso.com`。 如果应用程序已具有与服务器 `www.contoso.com` 的持久连接，它使用该连接检索两个请求，避免创建两个连接。  
+ 每个 ServicePoint 都由统一资源标识符 (URI) 标识，并根据方案标识符和 URI 的主机片段分类  。 例如，将由同一 ServicePoint 实例提供对 URI `http://www.contoso.com/index.htm` 和 `http://www.contoso.com/news.htm?date=today` 的请求，因为它们具有相同的方案标识符片段 (http) 和主机片段(`www.contoso.com`)。 如果应用程序已具有与服务器 `www.contoso.com` 的持久连接，它使用该连接检索两个请求，避免创建两个连接。  
   
-  ServicePointManager 是管理  ServicePoint 实例的创建和析构的静态类。 如果应用程序请求一个不在现有  ServicePoint 实例集合里的 Internet 资源，  ServicePointManager 将会创建  ServicePoint。 在 ServicePoint 实例超出最长空闲时间或现有数量超过应用程序的 ServicePoint 实例最大数量时，将销毁 ServicePoint 实例    。 可通过设置  ServicePointManager 上的 <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> 和 <xref:System.Net.ServicePointManager.MaxServicePoints%2A> 属性，来控制默认空闲时间的最大值和  ServicePoint 实例的最大数量。  
+  ServicePointManager 是管理  ServicePoint 实例的创建和析构的静态类。 如果应用程序请求一个不在现有  ServicePoint 实例集合里的 Internet 资源， ServicePointManager 将会创建 ServicePoint。 在 ServicePoint 实例超出最长空闲时间或现有数量超过应用程序的 ServicePoint 实例最大数量时，将销毁 ServicePoint 实例。 可通过设置 ServicePointManager 上的 <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> 和 <xref:System.Net.ServicePointManager.MaxServicePoints%2A> 属性，来控制默认空闲时间的最大值和 ServicePoint 实例的最大数量。  
   
  客户端和服务器之间的连接数可能会对应用程序吞吐量产生重大影响。 默认情况下，使用 <xref:System.Net.HttpWebRequest> 类的应用程序最多使用与给定服务器的两个持久连接，但是，可以基于每个应用程序设置最大连接数。  
   
 > [!NOTE]
 > HTTP/1.1 规范将一个应用程序中的连接数限制为每个服务器两个连接。  
   
- 连接的最佳数目取决于应用程序运行的实际情况。 增加应用程序的可用连接数可能不影响应用程序性能。 要确定更多连接的影响，请在改变连接数时运行性能测试。 在应用程序初始化时改变 ServicePointManager<xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>**类上的静态** 属性，可以更改应用程序使用的连接数，如以下代码示例所示。  
+ 连接的最佳数目取决于应用程序运行的实际情况。 增加应用程序的可用连接数可能不影响应用程序性能。 要确定更多连接的影响，请在改变连接数时运行性能测试。 在应用程序初始化时改变 ServicePointManager 类上的静态 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 属性，可以更改应用程序使用的连接数，如以下代码示例所示。  
   
 ```csharp  
 // Set the maximum number of connections per server to 4.  
@@ -50,7 +50,7 @@ ServicePointManager.DefaultConnectionLimit = 4;
 ServicePointManager.DefaultConnectionLimit = 4  
 ```  
   
- 更改  ServicePointManager.DefaultConnectionLimit 属性不会影响之前初始化的  ServicePoint 实例。 下面的代码演示如何将服务器 **现有 ServicePoint 上的连接限制更改为存储在** 中的值`http://www.contoso.com``newLimit`。  
+ 更改  ServicePointManager.DefaultConnectionLimit 属性不会影响之前初始化的  ServicePoint 实例。 下面的代码演示如何将服务器 `http://www.contoso.com` 现有 ServicePoint 上的连接限制更改为存储在 `newLimit` 中的值。  
   
 ```csharp  
 Uri uri = new Uri("http://www.contoso.com/");  

@@ -27,7 +27,7 @@ ms.locfileid: "69602733"
 ## <a name="arguments"></a>参数  
  `class`  
  此类型包含 **Main** 方法。  
- 提供的类名必须是完全限定类名；它必须包括完整命名空间（包含类），后跟类名。 例如，当 `Main` 方法位于 `Program` 命名空间中的 `MyApplication.Core` 类中时，编译器选项必须为 `-main:MyApplication.Core.Program`。
+ 提供的类名必须是完全限定类名；它必须包括完整命名空间（包含类），后跟类名。 例如，当 `Main` 方法位于 `MyApplication.Core` 命名空间中的 `Program` 类中时，编译器选项必须为 `-main:MyApplication.Core.Program`。
   
 ## <a name="remarks"></a>备注  
  如果编译包含具有 [Main](../../programming-guide/main-and-command-args/index.md) 方法的多个类型，则可以指定哪个类型包含你想用作程序入口点的 **Main** 方法。  

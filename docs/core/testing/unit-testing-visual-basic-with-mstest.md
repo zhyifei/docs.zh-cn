@@ -87,11 +87,11 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
         PrimeServiceTests.vbproj
 ```
 
-在 unit-testing-vb-mstest[`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj` 目录中执行 ](../tools/dotnet-sln.md)  。
+在 unit-testing-vb-mstest 目录中执行 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md)。
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
-编写一个失败测试，使其通过，然后重复此过程。 从 PrimeService.Tests  目录删除 UnitTest1.vb  ，并创建一个名为 PrimeService_IsPrimeShould.VB  的新 Visual Basic 文件。 添加以下代码：
+编写一个失败测试，使其通过，然后重复此过程。 从 PrimeService.Tests 目录删除 UnitTest1.vb，并创建一个名为 PrimeService_IsPrimeShould.VB 的新 Visual Basic 文件。 添加以下代码：
 
 ```vb
 Imports Microsoft.VisualStudio.TestTools.UnitTesting

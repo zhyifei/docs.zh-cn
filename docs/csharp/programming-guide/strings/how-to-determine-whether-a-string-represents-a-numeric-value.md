@@ -14,7 +14,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "79157060"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>如何确定字符串是否表示数值（C# 编程指南）
-若要确定字符串是否是指定数值类型的有效表示形式，请使用由所有基元数值类型以及如 `TryParse` 和 <xref:System.DateTime> 等类型实现的静态 <xref:System.Net.IPAddress> 方法。 以下示例演示如何确定“108”是否为有效的 [int](../../language-reference/builtin-types/integral-numeric-types.md)。  
+若要确定字符串是否是指定数值类型的有效表示形式，请使用由所有基元数值类型以及如 <xref:System.DateTime> 和 <xref:System.Net.IPAddress> 等类型实现的静态 `TryParse` 方法。 以下示例演示如何确定“108”是否为有效的 [int](../../language-reference/builtin-types/integral-numeric-types.md)。  
   
 ```csharp  
 int i = 0;
@@ -28,7 +28,7 @@ bool result = int.TryParse(s, out i); //i now = 108
 > 字符串可能仅包含数字字符，但对于你使用的 `TryParse` 方法的类型仍然无效。 例如，“256”不是 `byte` 的有效值，但对 `int` 有效。 “98.6”不是 `int` 的有效值，但它是有效的 `decimal`。  
   
 ## <a name="example"></a>示例  
- 以下示例演示如何对 `TryParse`、`long` 和 `byte` 值的字符串表示形式使用 `decimal`。  
+ 以下示例演示如何对 `long`、`byte` 和 `decimal` 值的字符串表示形式使用 `TryParse`。  
   
  [!code-csharp[csProgGuideStrings#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#14)]  
   

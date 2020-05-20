@@ -45,7 +45,7 @@ ms.locfileid: "74353609"
 
         如果这些部分不存在，则 `My.Application.Log` 将只有默认的日志侦听器。
 
-3. 在 <`add>` 部分找到 <`listeners>` 元素。
+3. 在 <`listeners>` 部分找到 <`add>` 元素。
 
      这些元素会将命名的日志侦听器添加到 `My.Application.Log` 源。
 

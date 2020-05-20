@@ -142,7 +142,7 @@ dotnet run
 
     [!code-csharp[Fibonacci Generator](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/FibonacciGenerator.cs)]
 
-02. 更改 `Main`Program.cs*文件中的* 方法，以实例化新的类并调用其方法，如下例所示：
+02. 更改 *Program.cs* 文件中的 `Main` 方法，以实例化新的类并调用其方法，如下例所示：
 
     [!code-csharp[New Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/Program.cs)]
 
@@ -176,7 +176,7 @@ dotnet run
 
 ## <a name="publish-your-app"></a>发布你的应用
 
-准备好分发应用后，使用 [dotnet publish](../tools/dotnet-publish.md) 命令在 bin_debug_netcoreapp3.1_publish\\（非 Windows 系统使用 \\）处生成 publish 文件夹\\\\_ `/`。 可以将 publish  文件夹的内容分发到其他平台，只要这些平台安装了 dotnet 运行时即可。
+准备好分发应用后，使用 [dotnet publish](../tools/dotnet-publish.md) 命令在 bin\\debug\\netcoreapp3.1\\publish\\（非 Windows 系统使用 `/`）处生成 publish 文件夹。 可以将 publish  文件夹的内容分发到其他平台，只要这些平台安装了 dotnet 运行时即可。
 
 ```dotnetcli
 dotnet publish

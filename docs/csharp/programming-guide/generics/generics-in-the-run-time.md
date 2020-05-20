@@ -24,7 +24,7 @@ ms.locfileid: "75702982"
   
  [!code-csharp[csProgGuideGenerics#43](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#43)]  
   
- 但是，假定在代码中另一点上再创建一个将不同值类型（例如 <xref:System.Collections.Generic.Stack%601> 或用户定义结构）作为参数的 `long` 类。 其结果是，运行时在 MSIL 中生成另一个版本的泛型类型并在适当位置替换 `long`。 转换已不再必要，因为每个专用化泛型类本机包含值类型。  
+ 但是，假定在代码中另一点上再创建一个将不同值类型（例如 `long` 或用户定义结构）作为参数的 <xref:System.Collections.Generic.Stack%601> 类。 其结果是，运行时在 MSIL 中生成另一个版本的泛型类型并在适当位置替换 `long`。 转换已不再必要，因为每个专用化泛型类本机包含值类型。  
   
  对于引用类型，泛型的作用方式略有不同。 首次使用任意引用类型构造泛型类型时，运行时创建一个专用化泛型类型，用对象引用替换 MSIL 中的参数。 之后，每次使用引用类型作为参数实例化已构造的类型时，无论何种类型，运行时皆重新使用先前创建的专用版泛型类型。 原因可能在于所有引用大小相同。  
   
@@ -38,11 +38,11 @@ ms.locfileid: "75702982"
   
  [!code-csharp[csProgGuideGenerics#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#45)]  
   
- 不同于值类型，不会为 <xref:System.Collections.Generic.Stack%601> 类型创建 `Order` 类的另一专用版。 相反，创建专用版 <xref:System.Collections.Generic.Stack%601> 类的实例并将 `orders` 变量设置为引用此实例。 假定之后遇到一行创建 `Customer` 类型堆栈的代码：  
+ 不同于值类型，不会为 `Order` 类型创建 <xref:System.Collections.Generic.Stack%601> 类的另一专用版。 相反，创建专用版 <xref:System.Collections.Generic.Stack%601> 类的实例并将 `orders` 变量设置为引用此实例。 假定之后遇到一行创建 `Customer` 类型堆栈的代码：  
   
  [!code-csharp[csProgGuideGenerics#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#46)]  
   
- 与之前使用通过 <xref:System.Collections.Generic.Stack%601> 类型创建的 `Order` 类一样，会创建专用 <xref:System.Collections.Generic.Stack%601> 类的另一个实例。 其中包含的指针设置为引用 `Customer` 类型大小的内存区。 由于引用类型的数量因程序不同而有较大差异，因此通过将编译器为引用类型的泛型类创建的专用类的数量减少至 1，泛型的 C# 实现可极大减少代码量。  
+ 与之前使用通过 `Order` 类型创建的 <xref:System.Collections.Generic.Stack%601> 类一样，会创建专用 <xref:System.Collections.Generic.Stack%601> 类的另一个实例。 其中包含的指针设置为引用 `Customer` 类型大小的内存区。 由于引用类型的数量因程序不同而有较大差异，因此通过将编译器为引用类型的泛型类创建的专用类的数量减少至 1，泛型的 C# 实现可极大减少代码量。  
   
  此外，使用值类型或引用类型参数实例化泛型 C# 类时，反射可在运行时对其进行查询，且其实际类型和类型参数皆可被确定。  
   

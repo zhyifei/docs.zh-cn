@@ -30,7 +30,7 @@ ms.locfileid: "74348932"
 |<xref:System.IO.FileAccess?displayProperty=nameWithType>|定义文件的读取、写入或读/写访问权限的常量。|  
 |<xref:System.IO.FileAttributes?displayProperty=nameWithType>|提供文件和目录的属性，例如 `Archive`、`Hidden` 和 `ReadOnly`。|  
 |<xref:System.IO.FileInfo?displayProperty=nameWithType>|提供用于创建、复制、删除、移动和打开文件的静态方法，并可帮助创建 `FileStream`。|  
-|<xref:System.IO.FileMode?displayProperty=nameWithType>|控制打开文件的方式。 在多个 `FileStream` 和 `IsolatedStorageFileStream` 的构造函数中指定此参数，此参数用于 `Open` 和 <xref:System.IO.File> 的 <xref:System.IO.FileInfo> 方法。|  
+|<xref:System.IO.FileMode?displayProperty=nameWithType>|控制打开文件的方式。 在多个 `FileStream` 和 `IsolatedStorageFileStream` 的构造函数中指定此参数，此参数用于 <xref:System.IO.File> 和 <xref:System.IO.FileInfo> 的 `Open` 方法。|  
 |<xref:System.IO.FileShare?displayProperty=nameWithType>|定义用于控制其他文件流可以对同一文件进行何种类型的访问的常量。|  
 |<xref:System.IO.Path?displayProperty=nameWithType>|提供用于处理目录字符串的方法和属性。|  
 |<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|通过定义 <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>、<xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>、<xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> 和 <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> 权限来控制对文件和文件夹的访问。|  

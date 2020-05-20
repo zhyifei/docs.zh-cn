@@ -12,7 +12,7 @@ ms.locfileid: "61659834"
 ---
 # <a name="perform-inner-joins"></a>执行内部联接
 
-在关系数据库术语中，内部联接  会生成一个结果集，在该结果集中，第一个集合的每个元素对于第二个集合中的每个匹配元素都会出现一次。 如果第一个集合中的元素没有匹配元素，则它不会出现在结果集中。 由 C# 中的 <xref:System.Linq.Enumerable.Join%2A> 子句调用的 `join` 方法可实现内部联接。
+在关系数据库术语中，内部联接  会生成一个结果集，在该结果集中，第一个集合的每个元素对于第二个集合中的每个匹配元素都会出现一次。 如果第一个集合中的元素没有匹配元素，则它不会出现在结果集中。 由 C# 中的 `join` 子句调用的 <xref:System.Linq.Enumerable.Join%2A> 方法可实现内部联接。
 
 本文演示如何执行内联的四种变体：
 
@@ -26,17 +26,17 @@ ms.locfileid: "61659834"
 
 ## <a name="example---simple-key-join"></a>示例 - 简单键联接
 
-下面的示例创建两个集合，其中包含两种用户定义类型 `Person` 和 `Pet` 的对象。 查询使用 C# 中的 `join` 子句将 `Person` 对象与 `Pet` 是该 `Owner` 的 `Person` 对象匹配。 C# 中的 `select` 子句定义结果对象的外观。 在此示例中，结果对象是由所有者名字和宠物姓名组成的匿名类型。
+下面的示例创建两个集合，其中包含两种用户定义类型 `Person` 和 `Pet` 的对象。 查询使用 C# 中的 `join` 子句将 `Person` 对象与 `Owner` 是该 `Person` 的 `Pet` 对象匹配。 C# 中的 `select` 子句定义结果对象的外观。 在此示例中，结果对象是由所有者名字和宠物姓名组成的匿名类型。
 
 [!code-csharp[CsLINQProgJoining#1](~/samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]
 
-请注意，`Person` 是“Huff”的 `LastName` 对象未出现在结果集中，因为没有 `Pet` 对象的 `Pet.Owner` 等于该 `Person`。
+请注意，`LastName` 是“Huff”的 `Person` 对象未出现在结果集中，因为没有 `Pet` 对象的 `Pet.Owner` 等于该 `Person`。
 
 ## <a name="example---composite-key-join"></a>示例 - 组合键联接
 
 可以使用复合键基于多个属性来比较元素，而不是只基于一个属性使元素相关联。 为此，请为每个集合指定键选择器函数，以返回由要比较的属性组成的匿名类型。 如果对属性进行标记，则它们必须在每个键的匿名类型中具有相同标签。 属性还必须按相同顺序出现。
 
-下面的示例使用 `Employee` 对象的列表和 `Student` 对象的列表来确定哪些雇员同时还是学生。 这两种类型都具有 `FirstName` 类型的 `LastName` 和 <xref:System.String> 属性。 通过每个列表的元素创建联接键的函数会返回由每个元素的 `FirstName` 和 `LastName` 属性组成的匿名类型。 联接运算会比较这些复合键是否相等，并从每个列表返回名字和姓氏都匹配的对象对。
+下面的示例使用 `Employee` 对象的列表和 `Student` 对象的列表来确定哪些雇员同时还是学生。 这两种类型都具有 <xref:System.String> 类型的 `FirstName` 和 `LastName` 属性。 通过每个列表的元素创建联接键的函数会返回由每个元素的 `FirstName` 和 `LastName` 属性组成的匿名类型。 联接运算会比较这些复合键是否相等，并从每个列表返回名字和姓氏都匹配的对象对。
 
 [!code-csharp[CsLINQProgJoining#2](~/samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]
 
@@ -46,9 +46,9 @@ ms.locfileid: "61659834"
 
 下面的示例创建三个集合：`Person` 对象的列表、`Cat` 对象的列表和 `Dog` 对象的列表。
 
-C# 中的第一个 `join` 子句基于与 `Person` 匹配的 `Cat.Owner` 对象来匹配人和猫。 它返回包含 `Person` 对象和 `Cat.Name` 的匿名类型的序列。
+C# 中的第一个 `join` 子句基于与 `Cat.Owner` 匹配的 `Person` 对象来匹配人和猫。 它返回包含 `Person` 对象和 `Cat.Name` 的匿名类型的序列。
 
-C# 中的第二个 `join` 子句基于由 `Dog` 类型的 `Owner` 属性和动物姓名的第一个字母组成的复合键，将第一个联接返回的匿名类型与提供的狗列表中的 `Person` 对象相关联。 它返回包含来自每个匹配对的 `Cat.Name` 和 `Dog.Name` 属性的匿名类型的序列。 由于这是内部联接，因此只返回第一个数据源中在第二个数据源中具有匹配项的对象。
+C# 中的第二个 `join` 子句基于由 `Owner` 类型的 `Person` 属性和动物姓名的第一个字母组成的复合键，将第一个联接返回的匿名类型与提供的狗列表中的 `Dog` 对象相关联。 它返回包含来自每个匹配对的 `Cat.Name` 和 `Dog.Name` 属性的匿名类型的序列。 由于这是内部联接，因此只返回第一个数据源中在第二个数据源中具有匹配项的对象。
 
 [!code-csharp[CsLINQProgJoining#3](~/samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]
 
@@ -56,7 +56,7 @@ C# 中的第二个 `join` 子句基于由 `Dog` 类型的 `Owner` 属性和动�
 
 下面的示例演示如何使用分组联接实现内部联接。
 
-在 `query1` 中，`Person` 对象的列表会基于与 `Pet` 属性匹配的 `Person`，分组联接到 `Pet.Owner` 对象队列中。 分组联接会创建中间组的集合，其中每个组都包含 `Person` 对象和匹配 `Pet` 对象的序列。
+在 `query1` 中，`Person` 对象的列表会基于与 `Pet.Owner` 属性匹配的 `Person`，分组联接到 `Pet` 对象队列中。 分组联接会创建中间组的集合，其中每个组都包含 `Person` 对象和匹配 `Pet` 对象的序列。
 
 通过向查询添加另一个 `from` 子句，此序列的序列会合并（或平展）为一个较长的序列。 最后一个序列的元素的类型由 `select` 子句指定。 在此示例中，该类型是由每个匹配对的 `Person.FirstName` 和 `Pet.Name` 属性组成的匿名类型。
 

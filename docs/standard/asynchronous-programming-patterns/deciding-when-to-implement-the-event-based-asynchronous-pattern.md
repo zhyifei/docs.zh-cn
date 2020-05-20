@@ -48,7 +48,7 @@ ms.locfileid: "67663716"
 
 - 在 <xref:System.IAsyncResult> 模式实现的基础之上生成基于事件的模式实现。
 
-- 避免对相同的类公开基于事件的模式和 <xref:System.IAsyncResult> 模式。 请对“高级”类公开基于事件的模式，并对“低级”类公开 <xref:System.IAsyncResult> 模式。 例如，比较 <xref:System.Net.WebClient> 组件上基于事件的模式与 <xref:System.IAsyncResult> 类上的 <xref:System.Web.HttpRequest> 模式。
+- 避免对相同的类公开基于事件的模式和 <xref:System.IAsyncResult> 模式。 请对“高级”类公开基于事件的模式，并对“低级”类公开 <xref:System.IAsyncResult> 模式。 例如，比较 <xref:System.Net.WebClient> 组件上基于事件的模式与 <xref:System.Web.HttpRequest> 类上的 <xref:System.IAsyncResult> 模式。
 
   - 出于兼容性需要，可以对相同的类公开基于事件的模式和 <xref:System.IAsyncResult> 模式。 例如，如果已释放使用 <xref:System.IAsyncResult> 模式的 API，需要保留 <xref:System.IAsyncResult> 模式，以实现向后兼容性。
 
@@ -76,7 +76,7 @@ ms.locfileid: "67663716"
 
 下面列出了一些在决定使用 <xref:System.IAsyncResult> 模式时要遵循的建议：
 
-- 仅在特别需要对 <xref:System.IAsyncResult> 或<xref:System.Threading.WaitHandle> 对象的支持时，才公开 <xref:System.IAsyncResult> 模式。
+- 仅在特别需要对 <xref:System.Threading.WaitHandle> 或<xref:System.IAsyncResult> 对象的支持时，才公开 <xref:System.IAsyncResult> 模式。
 
 - 仅在有使用 <xref:System.IAsyncResult> 模式的现有 API 时，才公开 <xref:System.IAsyncResult> 模式。
 

@@ -36,7 +36,7 @@ C# 6 中引入了针对方法和只读属性的表达式主体定义支持，并
 
 expression-bodied 方法包含单个表达式，它返回的值的类型与方法的返回类型匹配；或者，对于返回 `void` 的方法，其表达式则执行某些操作。 例如，替代 <xref:System.Object.ToString%2A> 方法的类型通常包含单个表达式，该表达式返回当前对象的字符串表示形式。
 
-下面的示例定义 `Person` 类，该类通过表达式主体定义替代 <xref:System.Object.ToString%2A>。 它还定义向控制台显示名称的 `DisplayName` 方法。 请注意，`return` 表达式主体定义中未使用 `ToString` 关键字。
+下面的示例定义 `Person` 类，该类通过表达式主体定义替代 <xref:System.Object.ToString%2A>。 它还定义向控制台显示名称的 `DisplayName` 方法。 请注意，`ToString` 表达式主体定义中未使用 `return` 关键字。
 
 [!code-csharp[expression-bodied-methods](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]  
 

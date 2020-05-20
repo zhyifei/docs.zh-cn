@@ -36,11 +36,11 @@ ms.locfileid: "74345524"
   
 ## <a name="playing-looping-sounds"></a>播放循环声音  
 
- 在下例中，指定 `My.Computer.Audio.Play` 时，`PlayMode.BackgroundLoop` 方法将播放指定的背景声音。 使用此示例时，应确保文件名可指代计算机中的 .wav 声音文件。  
+ 在下例中，指定 `PlayMode.BackgroundLoop` 时，`My.Computer.Audio.Play` 方法将播放指定的背景声音。 使用此示例时，应确保文件名可指代计算机中的 .wav 声音文件。  
   
  [!code-vb[VbVbalrMyComputer#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#11)]  
   
- 在下例中，指定 `My.Computer.Audio.Play` 时，`PlayMode.BackgroundLoop` 方法将播放指定的背景声音。 使用此示例时，应确保应用程序资源包含名为 Waterfall 的 .wav 声音文件。  
+ 在下例中，指定 `PlayMode.BackgroundLoop` 时，`My.Computer.Audio.Play` 方法将播放指定的背景声音。 使用此示例时，应确保应用程序资源包含名为 Waterfall 的 .wav 声音文件。  
   
  [!code-vb[VbVbalrMyComputer#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#12)]  
   

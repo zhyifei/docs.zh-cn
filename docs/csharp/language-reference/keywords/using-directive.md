@@ -35,7 +35,7 @@ ms.locfileid: "77093144"
     using Project = PC.MyCompany.Project;
     ```
 
-`using` 关键字还用于创建 using 语句，此类语句有助于确保正确处理  *对象（如文件和字体）* <xref:System.IDisposable>。 有关详细信息，请参阅 [using 语句](using-statement.md)。
+`using` 关键字还用于创建 using 语句，此类语句有助于确保正确处理 <xref:System.IDisposable> 对象（如文件和字体）。 有关详细信息，请参阅 [using 语句](using-statement.md)。
 
 ## <a name="using-static-type"></a>Using 静态类型
 
@@ -91,7 +91,7 @@ using 别名指令的右侧不能有开放式泛型类型。 例如，不能为 
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/namespaces.md#using-directives)中的[ Using 指令](/dotnet/csharp/language-reference/language-specification/introduction)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[ Using 指令](~/_csharplang/spec/namespaces.md#using-directives)。 该语言规范是 C# 语法和用法的权威资料。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -26,7 +26,7 @@ ms.locfileid: "73137952"
   
  此示例使用 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> 类，要求必须有用户同步，才能执行多线程访问。 在定目标到 .NET Framework 版本 4 的应用中，另一种选择是使用不需要任何用户锁的 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>。  
   
- 请注意，在 `false` 调用中使用 `False`（Visual Basic 中的 <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType>）。 这可提供最佳性能。 在 IA64 架构上指定 `true`（Visual Basic 中为 `True`）可使用内存栅栏，这会刷新写入缓冲区以确保锁现在可用于其他线程退出。  
+ 请注意，在 <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> 调用中使用 `false`（Visual Basic 中的 `False`）。 这可提供最佳性能。 在 IA64 架构上指定 `true`（Visual Basic 中为 `True`）可使用内存栅栏，这会刷新写入缓冲区以确保锁现在可用于其他线程退出。  
   
 ## <a name="see-also"></a>另请参阅
 

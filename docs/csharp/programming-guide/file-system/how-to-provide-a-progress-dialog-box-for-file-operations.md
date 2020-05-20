@@ -12,7 +12,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705127"
 ---
 # <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>如何提供文件操作进度对话框（C# 编程指南）
-如果在 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> 命名空间中使用 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 方法，可以在 Windows 中提供显示文件操作进度的标准对话框。  
+如果在 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 命名空间中使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> 方法，可以在 Windows 中提供显示文件操作进度的标准对话框。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

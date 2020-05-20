@@ -23,10 +23,10 @@ C# 程序员使用 [try](../../language-reference/keywords/try-catch.md) 块来�
   
  [!code-csharp[csProgGuideExceptions#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#8)]  
   
- 一个不具有 `try` 或 `catch` 块的 `finally` 块会导致编译器错误。  
+ 一个不具有 `catch` 或 `finally` 块的 `try` 块会导致编译器错误。  
   
 ## <a name="catch-blocks"></a>catch 块  
- `catch` 块可以指定要捕获的异常的类型。 该类型规范称为异常筛选器  。 异常类型应派生自 <xref:System.Exception>。 一般情况下，不要将 <xref:System.Exception> 指定为异常筛选器，除非了解如何处理可能在 `try` 块中引发的所有异常，或者已在 [ 块的末尾处包括了 ](../../language-reference/keywords/throw.md)throw`catch` 语句。  
+ `catch` 块可以指定要捕获的异常的类型。 该类型规范称为异常筛选器  。 异常类型应派生自 <xref:System.Exception>。 一般情况下，不要将 <xref:System.Exception> 指定为异常筛选器，除非了解如何处理可能在 `try` 块中引发的所有异常，或者已在 `catch` 块的末尾处包括了 [throw](../../language-reference/keywords/throw.md) 语句。  
   
  可将具有不同异常筛选器的多个 `catch` 块链接在一起。 代码中 `catch` 块的计算顺序为从上到下，但针对引发的每个异常，仅执行一个 `catch` 块。 将执行指定所引发的异常的确切类型或基类的第一个 `catch` 块。 如果没有 `catch` 块指定匹配的异常筛选器，则将选择不具有筛选器的 `catch` 块（如果语句中存在）。 务必首先定位具有最具体的（即，最底层派生的）异常类型的 `catch` 块。  
   
@@ -43,7 +43,7 @@ C# 程序员使用 [try](../../language-reference/keywords/try-catch.md) 块来�
      [!code-csharp[csProgGuideExceptions#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#10)]  
   
 ## <a name="finally-blocks"></a>Finally 块  
- `finally` 块让你可以清理在 `try` 块中所执行的操作。 如果存在 `finally` 块，将在执行 `try` 块和任何匹配的 `catch` 块之后，最后执行它。 无论是否会引发异常或找到匹配异常类型的 `finally` 块，`catch` 块都将始终运行。  
+ `finally` 块让你可以清理在 `try` 块中所执行的操作。 如果存在 `finally` 块，将在执行 `try` 块和任何匹配的 `catch` 块之后，最后执行它。 无论是否会引发异常或找到匹配异常类型的 `catch` 块，`finally` 块都将始终运行。  
   
  `finally` 块可用于发布资源（如文件流、数据库连接和图形句柄）而无需等待运行时中的垃圾回收器来完成对象。 有关详细信息，请参阅 [using 语句](../../language-reference/keywords/using-statement.md)。  
   
@@ -53,7 +53,7 @@ C# 程序员使用 [try](../../language-reference/keywords/try-catch.md) 块来�
   
 ## <a name="c-language-specification"></a>C# 语言规范  
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/exceptions.md)中的[异常](~/_csharplang/spec/statements.md#the-try-statement)和 [try 语句](/dotnet/csharp/language-reference/language-specification/introduction)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[异常](~/_csharplang/spec/exceptions.md)和 [try 语句](~/_csharplang/spec/statements.md#the-try-statement)。 该语言规范是 C# 语法和用法的权威资料。
   
 ## <a name="see-also"></a>另请参阅
 

@@ -49,7 +49,7 @@ var result = await myTask;
   
     - 对 <xref:System.Net.Http> 添加引用。  
   
-    - 在 MainWindow.xaml.cs 文件中添加用于 `using` 的 `System.Net.Http` 指令。  
+    - 在 MainWindow.xaml.cs 文件中添加用于 `System.Net.Http` 的 `using` 指令。  
   
 ### <a name="to-add-the-code"></a>添加代码  
   
@@ -95,7 +95,7 @@ var result = await myTask;
   
 4. 最后，定义方法 `CreateMultipleTasksAsync`，用于执行以下步骤。  
   
-    - 该方法声明 `HttpClient` 对象，这需要你访问 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 中的 `ProcessURLAsync` 方法。  
+    - 该方法声明 `HttpClient` 对象，这需要你访问 `ProcessURLAsync` 中的 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 方法。  
   
     - 此方法创建并启动三个类型为 <xref:System.Threading.Tasks.Task%601> 的任务，其中 `TResult` 是一个整数。 每个任务完成后，`DisplayResults` 显示任务的 URL 和下载内容的长度。 由于任务是异步运行的，因此显示结果的顺序可能与声明任务的顺序不同。  
   

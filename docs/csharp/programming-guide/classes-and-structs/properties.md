@@ -53,7 +53,7 @@ ms.locfileid: "79170099"
 
 在某些情况下，属性 `get` 和 `set` 访问器仅向支持字段赋值或仅从其中检索值，而不包括任何附加逻辑。 通过使用自动实现的属性，既能简化代码，还能让 C# 编译器透明地提供支持字段。
 
-如果属性具有 `get` 和 `set` 访问器，则必须自动实现这两个访问器。 自动实现的属性通过以下方式定义：使用 `get` 和 `set` 关键字，但不提供任何实现。 下面的示例与上一个示例基本相同，只不过 `Name` 和 `Price` 是自动实现的属性。 请注意，该示例还删除了参数化构造函数，以便通过调用无参数构造函数和`SaleItem`对象初始值设定项[立即初始化 ](object-and-collection-initializers.md) 对象。
+如果属性具有 `get` 和 `set` 访问器，则必须自动实现这两个访问器。 自动实现的属性通过以下方式定义：使用 `get` 和 `set` 关键字，但不提供任何实现。 下面的示例与上一个示例基本相同，只不过 `Name` 和 `Price` 是自动实现的属性。 请注意，该示例还删除了参数化构造函数，以便通过调用无参数构造函数和[对象初始值设定项](object-and-collection-initializers.md)立即初始化 `SaleItem` 对象。
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
@@ -71,7 +71,7 @@ ms.locfileid: "79170099"
   
 ## <a name="c-language-specification"></a>C# 语言规范  
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/classes.md#properties)中的[属性](/dotnet/csharp/language-reference/language-specification/introduction)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[属性](~/_csharplang/spec/classes.md#properties)。 该语言规范是 C# 语法和用法的权威资料。
   
 ## <a name="see-also"></a>另请参阅
 

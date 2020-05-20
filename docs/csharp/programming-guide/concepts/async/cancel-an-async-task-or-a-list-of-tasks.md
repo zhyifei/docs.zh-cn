@@ -42,7 +42,7 @@ ms.locfileid: "69595716"
 ### <a name="build-the-example"></a>生成示例
  下列更改将“取消”  按钮添加到下载网站的应用程序中。 如果不想下载或生成示例，则可在本主题末尾的“完整示例”部分查看最终产品。 星号标记了代码中的更改。
 
- 要自行生成示例，请按“下载示例”部分的说明逐步操作，选择“StarterCode”  而不是“CancelATask”  作为“启动项目”  。
+ 要自行生成示例，请按“下载示例”部分的说明逐步操作，选择“StarterCode”而不是“CancelATask”作为“启动项目”。
 
  然后将下列更改添加到该项目的 MainWindow.xaml.cs 文件。
 
@@ -77,7 +77,7 @@ ms.locfileid: "69595716"
         cts = new CancellationTokenSource();
         ```
 
-    - 在 `AccessTheWebAsync` 调用中（该操作下载指定网站的内容），将 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 的 `cts` 属性作为参数发送。 如果请求取消，则 `Token` 属性传播消息。 如果用户选择取消下载操作，请添加显示消息的 catch 块。 下列代码显示这些更改。
+    - 在 `AccessTheWebAsync` 调用中（该操作下载指定网站的内容），将 `cts` 的 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 属性作为参数发送。 如果请求取消，则 `Token` 属性传播消息。 如果用户选择取消下载操作，请添加显示消息的 catch 块。 下列代码显示这些更改。
 
         ```csharp
         try
@@ -97,7 +97,7 @@ ms.locfileid: "69595716"
         }
         ```
 
-4. 在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 类型中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient> 重载来下载网站内容。 将 `ct`（<xref:System.Threading.CancellationToken> 的 `AccessTheWebAsync` 参数）作为第二个参数传递。 如果用户选择“取消”  按钮，则令牌携带消息。
+4. 在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient> 类型中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 重载来下载网站内容。 将 `ct`（`AccessTheWebAsync` 的 <xref:System.Threading.CancellationToken> 参数）作为第二个参数传递。 如果用户选择“取消”  按钮，则令牌携带消息。
 
      下列代码显示 `AccessTheWebAsync` 中的更改。
 

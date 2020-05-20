@@ -38,7 +38,7 @@ ms.locfileid: "69922503"
  如果使用 -debug:full，请注意，对经过优化的 JIT 代码的速度和大小会存在一定影响，且对包含 -debug:full 的代码质量也有一定影响   。 建议使用 -debug:pdbonly 或不使用 PDB 生成发布代码  。  
   
 > [!NOTE]
-> -debug:pdbonly 和 -debug:full 之间的一个区别在于，使用 -debug:full，编译器将发出 **，用于告知 JIT 编译器有可用调试信息**   <xref:System.Diagnostics.DebuggableAttribute>。 因此，在使用 -debug:full 时，如果代码包含设置为 false 的 <xref:System.Diagnostics.DebuggableAttribute>，则将出现错误  。  
+> -debug:pdbonly 和 -debug:full 之间的一个区别在于，使用 -debug:full，编译器将发出 <xref:System.Diagnostics.DebuggableAttribute>，用于告知 JIT 编译器有可用调试信息。 因此，在使用 -debug:full 时，如果代码包含设置为 false 的 <xref:System.Diagnostics.DebuggableAttribute>，则将出现错误  。  
   
  有关如何配置应用程序的调试性能的详细信息，请参阅[令映像更易于调试](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md)。  
   

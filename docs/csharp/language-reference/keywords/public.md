@@ -29,7 +29,7 @@ class SampleClass
 
 ## <a name="example"></a>示例
 
-在下面的示例中，声明了两个类：`PointTest` 和 `MainClass`。 直接从 `x` 访问 `y` 的公共成员 `PointTest` 和 `MainClass`。
+在下面的示例中，声明了两个类：`PointTest` 和 `MainClass`。 直接从 `MainClass` 访问 `PointTest` 的公共成员 `x` 和 `y`。
 
 [!code-csharp[csrefKeywordsModifiers#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#13)]
 
@@ -39,7 +39,7 @@ class SampleClass
 
 ## <a name="c-language-specification"></a>C# 语言规范  
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/basic-concepts.md#declared-accessibility)中的[声明的可访问性](/dotnet/csharp/language-reference/language-specification/introduction)。 该语言规范是 C# 语法和用法的权威资料。
+有关详细信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/introduction)中的[声明的可访问性](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。 该语言规范是 C# 语法和用法的权威资料。
 
 ## <a name="see-also"></a>另请参阅
 

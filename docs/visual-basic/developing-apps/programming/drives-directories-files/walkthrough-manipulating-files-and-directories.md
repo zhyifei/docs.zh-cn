@@ -38,7 +38,7 @@ ms.locfileid: "74333811"
   
 2. 在“已安装的模板”窗格中，展开“Visual Basic”，然后单击“Windows”。    在中间的“模板”窗格中，单击“Windows 窗体应用程序”。    
   
-3. 在“名称”框中，键入  **以设置项目名称，然后单击“确定”。** `FileExplorer`   
+3. 在“名称”框中，键入 `FileExplorer` 以设置项目名称，然后单击“确定”。  
   
      Visual Studio 会将项目添加到“解决方案资源管理器”  中，此时“Windows 窗体设计器”随即打开。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "74333811"
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>选择一个文件夹，并列出文件夹中的文件  
   
-1. 通过双击窗体上的控件，创建 `Click` 的 `browseButton` 事件处理程序。 代码编辑器随即打开。  
+1. 通过双击窗体上的控件，创建 `browseButton` 的 `Click` 事件处理程序。 代码编辑器随即打开。  
   
 2. 将以下代码添加到 `Click` 事件处理程序中。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "74333811"
   
 ### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a>从文本文件获取文件的属性和内容  
   
-1. 通过双击窗体上的控件，创建 `Click` 的 `examineButton` 事件处理程序。  
+1. 通过双击窗体上的控件，创建 `examineButton` 的 `Click` 事件处理程序。  
   
 2. 将以下代码添加到 `Click` 事件处理程序中。  
   
@@ -140,15 +140,15 @@ ms.locfileid: "74333811"
   
      `SetEnabled` 方法启用还是禁用控件是由是否选中 `ListBox` 中的项决定的。  
   
-2. 通过双击窗体上的 `SelectedIndexChanged` 控件，创建 `filesListBox` 的 `ListBox` 事件处理程序。  
+2. 通过双击窗体上的 `ListBox` 控件，创建 `filesListBox` 的 `SelectedIndexChanged` 事件处理程序。  
   
-3. 在新的 `SetEnabled` 事件处理程序中添加对 `filesListBox_SelectedIndexChanged` 的调用。  
+3. 在新的 `filesListBox_SelectedIndexChanged` 事件处理程序中添加对 `SetEnabled` 的调用。  
   
-4. 在 `SetEnabled` 事件处理程序末尾添加对 `browseButton_Click` 的调用。  
+4. 在 `browseButton_Click` 事件处理程序末尾添加对 `SetEnabled` 的调用。  
   
-5. 在 `SetEnabled` 事件处理程序末尾添加对 `Form1_Load` 的调用。  
+5. 在 `Form1_Load` 事件处理程序末尾添加对 `SetEnabled` 的调用。  
   
-6. 运行该应用程序。 如果在  **中未选中任何项，将禁用“保存结果”复选框和“检查”按钮。**  `ListBox`  
+6. 运行该应用程序。 如果在 `ListBox` 中未选中任何项，将禁用“保存结果”复选框和“检查”按钮。  
   
 ## <a name="full-example-using-mycomputerfilesystem"></a>使用 My.Computer.FileSystem 的完整示例  
 

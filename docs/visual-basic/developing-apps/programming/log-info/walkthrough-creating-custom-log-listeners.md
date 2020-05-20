@@ -22,7 +22,7 @@ ms.locfileid: "74353615"
 
 #### <a name="to-create-the-listener"></a>创建侦听器
 
-- 在应用程序中，创建继承自 `SimpleListener` 的类，其名称为 <xref:System.Diagnostics.TraceListener>。
+- 在应用程序中，创建继承自 <xref:System.Diagnostics.TraceListener> 的类，其名称为 `SimpleListener`。
 
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]
 
@@ -45,7 +45,7 @@ ms.locfileid: "74353615"
 
 3. 选择 **“为程序集签名”** 框。
 
-4. 在“选择强名称密钥文件”下拉列表中，选择“**新建>”。\<** 
+4. 在“选择强名称密钥文件”下拉列表中，选择“\<新建>”。
 
      将打开“创建强名称密钥”对话框。 
 

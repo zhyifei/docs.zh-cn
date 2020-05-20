@@ -31,17 +31,17 @@ ms.locfileid: "78846440"
 
 ## <a name="three-valued-boolean-logic"></a>三值布尔逻辑
 
-如需支持三值逻辑（例如，在使用支持三值布尔类型的数据库时），请使用可为空 `bool?` 类型。 对于 `bool?` 操作数，预定义的 `&` 和 `|` 运算符支持三值逻辑。 有关详细信息，请参阅[布尔逻辑运算符](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)一文的[可以为 null 的布尔逻辑运算符](../operators/boolean-logical-operators.md)部分。
+如需支持三值逻辑（例如，在使用支持三值布尔类型的数据库时），请使用可为空 `bool?` 类型。 对于 `bool?` 操作数，预定义的 `&` 和 `|` 运算符支持三值逻辑。 有关详细信息，请参阅[布尔逻辑运算符](../operators/boolean-logical-operators.md)一文的[可以为 null 的布尔逻辑运算符](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)部分。
 
 有关可为空的值类型的详细信息，请参阅[可为空的值类型](nullable-value-types.md)。
 
 ## <a name="conversions"></a>转换
 
-C# 仅提供了两个涉及 `bool` 类型的转换。 它们是对相应的可以为空的 `bool?` 类型的隐式转换以及对 `bool?` 类型的显式转换。 但是，.NET 提供了其他方法可用来转换到 `bool` 类型从或此类型进行转换。 有关详细信息，请参阅 [ API 参考页的](/dotnet/api/system.boolean#converting-to-and-from-boolean-values)转换为布尔值和从布尔值转换<xref:System.Boolean?displayProperty=nameWithType>部分。
+C# 仅提供了两个涉及 `bool` 类型的转换。 它们是对相应的可以为空的 `bool?` 类型的隐式转换以及对 `bool?` 类型的显式转换。 但是，.NET 提供了其他方法可用来转换到 `bool` 类型从或此类型进行转换。 有关详细信息，请参阅 <xref:System.Boolean?displayProperty=nameWithType> API 参考页的[转换为布尔值和从布尔值转换](/dotnet/api/system.boolean#converting-to-and-from-boolean-values)部分。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/types.md#the-bool-type)中的 [bool 类型](~/_csharplang/spec/introduction.md)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的 [bool 类型](~/_csharplang/spec/types.md#the-bool-type)部分。
 
 ## <a name="see-also"></a>另请参阅
 

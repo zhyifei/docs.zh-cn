@@ -26,7 +26,7 @@ Author anonymousAuthorObject = new Author("P. Ackerman");
 anonymousAuthorObject.version = 1.1;  
 ```  
   
- 但是，在为特性查询 `SampleClass` 之前，代码将不会执行。 对 `GetCustomAttributes` 调用 `SampleClass` 会导致按上述方式构造并初始化一个 `Author` 对象。 如果该类具有其他特性，则将以类似方式构造其他特性对象。 然后 `GetCustomAttributes` 会以数组形式返回 `Author` 对象和任何其他特性对象。 之后你便可以循环访问此数组，根据每个数组元素的类型确定所应用的特性，并从特性对象中提取信息。  
+ 但是，在为特性查询 `SampleClass` 之前，代码将不会执行。 对 `SampleClass` 调用 `GetCustomAttributes` 会导致按上述方式构造并初始化一个 `Author` 对象。 如果该类具有其他特性，则将以类似方式构造其他特性对象。 然后 `GetCustomAttributes` 会以数组形式返回 `Author` 对象和任何其他特性对象。 之后你便可以循环访问此数组，根据每个数组元素的类型确定所应用的特性，并从特性对象中提取信息。  
   
 ## <a name="example"></a>示例  
  此处是一个完整的示例。 定义自定义特性、将其应用于多个实体，并通过反射对其进行检索。  
