@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - EInitializeNewDomainFlags enumeration [.NET Framework hosting]
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
-ms.openlocfilehash: 3693285e13d0650f7662e2187471027cc4c40704
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ff10f84d8d270d31c5d560fb3c9bd3c81cf3e24
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129418"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616224"
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>EInitializeNewDomainFlags 枚举
 使宿主能够向运行时提供有关应用程序域初始化的信息。  
@@ -31,26 +31,26 @@ typedef enum {
 } EInitializeNewDomainFlags;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
 |成员|描述|  
 |------------|-----------------|  
 |`eInitializeNewDomainFlags_None`|无标志。|  
-|`eInitializeNewDomainFlags_NoSecurityChanges`|通知公共语言运行时（CLR）宿主不会在 <xref:System.AppDomainManager.InitializeNewDomain%2A> 方法中更改应用程序域的安全状态。|  
+|`eInitializeNewDomainFlags_NoSecurityChanges`|通知公共语言运行时（CLR）宿主不会在方法中更改应用程序域的安全状态 <xref:System.AppDomainManager.InitializeNewDomain%2A> 。|  
   
 ## <a name="remarks"></a>备注  
- [ICLRDomainManager：： SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)方法使用 `EInitializeNewDomainFlags`类型的参数。  
+ [ICLRDomainManager：： SetAppDomainManagerType](iclrdomainmanager-setappdomainmanagertype-method.md)方法采用类型的参数 `EInitializeNewDomainFlags` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** Mscoree.dll  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
-- [SetAppDomainManagerType 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)
+- [承载枚举](hosting-enumerations.md)
+- [SetAppDomainManagerType 方法](iclrdomainmanager-setappdomainmanagertype-method.md)

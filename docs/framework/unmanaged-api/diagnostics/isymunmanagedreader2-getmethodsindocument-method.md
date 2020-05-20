@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7ae84d6-81e8-4cb7-a1f9-d48b6cde5d79
 topic_type:
 - apiref
-ms.openlocfilehash: 70c1d87ae32fb70f8d9f6e32b527394022459526
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 68a0f9ec8793d465a6fa3b1cb6936eddd7be4c8f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446434"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615405"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument 方法
 获取所提供文档中包含行信息的每个方法。  
@@ -41,10 +41,10 @@ HRESULT GetMethodsInDocument(
  中指向文档的指针。  
   
  `cMethod`  
- 中一个 `ULONG32`，指示 `pRetVal` 数组的大小。  
+ 中`ULONG32`指示数组大小的 `pRetVal` 。  
   
  `pcMethod`  
- 弄指向 `ULONG32` 的指针，该指针接收包含方法所需的缓冲区大小。  
+ 弄指向的指针 `ULONG32` ，该指针接收包含方法所需的缓冲区大小。  
   
  `pRetVal`  
  弄指向接收方法的缓冲区的指针。  
@@ -57,4 +57,4 @@ HRESULT GetMethodsInDocument(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedReader2 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [ISymUnmanagedReader2 接口](isymunmanagedreader2-interface.md)

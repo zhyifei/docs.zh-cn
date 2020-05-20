@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7105a6c8-6e4e-48de-ac3d-74ac75e5de2e
 topic_type:
 - apiref
-ms.openlocfilehash: ebbbdf02837cb1257ec4756c9d67f5a1ac0136fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 12a1142759532890f541a7c81006f8b3aed4d299
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131182"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616263"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>ECustomDumpItemKind 枚举
-保留以供将来扩展[CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)结构。  
+保留以供将来扩展[CustomDumpItem](customdumpitem-structure.md)结构。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,22 +32,22 @@ typedef enum {
 } ECustomDumpItemKind;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
 |成员|描述|  
 |------------|-----------------|  
-|`DUMP_ITEM_None`|留待将来使用。|  
+|`DUMP_ITEM_None`|保留供将来使用。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** Mscoree.dll  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICLRErrorReportingManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
-- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [ICLRErrorReportingManager 接口](iclrerrorreportingmanager-interface.md)
+- [承载枚举](hosting-enumerations.md)

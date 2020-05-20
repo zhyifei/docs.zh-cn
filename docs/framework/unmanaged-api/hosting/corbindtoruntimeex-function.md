@@ -15,32 +15,32 @@ helpviewer_keywords:
 ms.assetid: aae9fb17-5d01-41da-9773-1b5b5b642d81
 topic_type:
 - apiref
-ms.openlocfilehash: 3520af5f55f43183920dce7fbd24b70359c023a2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dcf2ce8bdb7cec1f567e548ff3314e160fffe9fd
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176495"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616627"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx 函数
-使非托管主机能够将通用语言运行时 （CLR） 加载到进程中。 [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)和`CorBindToRuntimeEx`函数执行相同的操作，`CorBindToRuntimeEx`但该函数允许您设置标志以指定 CLR 的行为。  
+使非托管宿主能够将公共语言运行时（CLR）加载到进程中。 [CorBindToRuntime](corbindtoruntime-function.md)和 `CorBindToRuntimeEx` 函数执行相同的操作，但 `CorBindToRuntimeEx` 函数允许您设置标志来指定 CLR 的行为。  
   
- 此功能已在 .NET 框架 4 中弃用。  
+ 此函数已在 .NET Framework 4 中弃用。  
   
- 此函数采用一组允许主机执行以下操作的参数：  
+ 此函数使用一组参数，这些参数允许主机执行以下操作：  
   
-- 指定将加载的运行时的版本。  
+- 指定要加载的运行时版本。  
   
 - 指示是否应加载服务器或工作站生成。  
   
-- 控制是否完成了并发垃圾回收或非并发垃圾回收。  
+- 控制并发垃圾回收或非并发垃圾回收是否已完成。  
   
 > [!NOTE]
-> 在 64 位系统上运行 WOW64 x86 仿真器的应用程序不支持并发垃圾回收，这些系统实现了英特尔 Itanium 架构（以前称为 IA-64）。 有关在 64 位 Windows 系统上使用 WOW64 的详细信息，请参阅[运行 32 位应用程序](/windows/desktop/WinProg64/running-32-bit-applications)。  
+> 在实现 Intel Itanium 体系结构（以前称为 IA-64）的64位系统上运行 WOW64 x86 模拟器的应用程序中不支持并发垃圾回收。 有关在64位 Windows 系统上使用 WOW64 的详细信息，请参阅[运行32位应用程序](/windows/desktop/WinProg64/running-32-bit-applications)。  
   
-- 控制程序集是否加载为域中立。  
+- 控制是否以非特定于域的形式加载程序集。  
   
-- 获取指向[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)的接口指针，该指针可用于在 CLR 启动之前设置用于配置 CLR 实例的其他选项。  
+- 获取一个指向[ICorRuntimeHost](icorruntimehost-interface.md)的接口指针，该指针可用于设置附加选项，以便在启动 CLR 实例之前对其进行配置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,23 +55,23 @@ HRESULT CorBindToRuntimeEx (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `pwszVersion`  
- [在]描述要加载的 CLR 版本的字符串。  
+ 中一个字符串，描述要加载的 CLR 的版本。  
   
- .NET 框架中的版本号由四个部分组成，由句点分隔：*主要.minor.build.revision*. 传递的`pwszVersion`字符串必须以字符"v"开头，后跟版本号的前三个部分（例如，"v1.0.1529"）。  
+ .NET Framework 中的版本号由以句点分隔的四个部分组成：*主*版本. 次要版本. 内部版本号. 修订号。 传递的字符串 `pwszVersion` 必须以字符 "v" 开头，后跟版本号的前三个部分（例如，"v 1.0.1529"）。  
   
- CLR 的某些版本都安装了策略语句，该语句指定与 CLR 的早期版本的兼容性。 默认情况下，启动希姆`pwszVersion`根据策略语句进行评估，并加载与所请求版本兼容的最新版本的运行时。 主机可以强制 him 跳过策略评估，并通过传递`pwszVersion``STARTUP_LOADER_SAFEMODE``startupFlags`参数的值来加载指定的确切版本，如下所述。  
+ 某些版本的 CLR 随策略声明一起安装，后者指定与以前版本的 CLR 的兼容性。 默认情况下，启动填充程序将 `pwszVersion` 根据策略语句进行评估，并加载与请求的版本兼容的运行时的最新版本。 主机可以通过为参数传递值来强制填充程序跳过策略评估并加载中指定的确切版本 `pwszVersion` `STARTUP_LOADER_SAFEMODE` `startupFlags` ，如下所述。  
   
- 如果调用方为`pwszVersion`指定`CorBindToRuntimeEx`null，则标识其版本号低于 .NET Framework 4 运行时的已安装运行时集，并从该集加载最新版本的运行时。 它不会加载 .NET 框架 4 或更高版本，如果没有安装早期版本，它将失败。 请注意，传递 null 使主机无法控制加载的哪个版本的运行时。 尽管此方法在某些情况下可能适用，但强烈建议主机提供要加载的特定版本。  
+ 如果调用方为指定 null `pwszVersion` ，则 `CorBindToRuntimeEx` 标识已安装的运行时集，这些运行时的版本号低于 .NET Framework 4 运行时，并从该集中加载最新版本的运行时。 它不会加载 .NET Framework 4 或更高版本，如果未安装任何早期版本，则会失败。 请注意，传递 null 会使宿主无法控制加载的运行时版本。 虽然这种方法可能适用于某些情况，但强烈建议主机提供要加载的特定版本。  
   
  `pwszBuildFlavor`  
- [在]指定是加载 CLR 的服务器还是工作站构建的字符串。 有效值为 `svr` 和 `wks`。 服务器生成经过优化，以利用多个处理器进行垃圾回收，工作站生成针对在单处理器计算机上运行的客户端应用程序进行了优化。  
+ 中一个字符串，指定是加载 CLR 的服务器还是工作站版本。 有效值为 `svr` 和 `wks`。 服务器版本经过优化，可利用多个处理器进行垃圾回收，工作站构建针对单处理器计算机上运行的客户端应用程序进行了优化。  
   
- 如果`pwszBuildFlavor`设置为 null，则加载工作站生成。 在单处理器计算机上运行时，工作站生成始终加载，即使`pwszBuildFlavor`设置为`svr`。 但是，如果`pwszBuildFlavor`设置为`svr`并指定了并发垃圾回收（请参阅`startupFlags`参数的说明），则加载服务器生成。  
+ 如果 `pwszBuildFlavor` 设置为 null，则加载工作站生成。 在单处理器计算机上运行时，始终会加载工作站构建，即使将 `pwszBuildFlavor` 设置为 `svr` 。 但是，如果将 `pwszBuildFlavor` 设置为 `svr` ，并且指定了并发垃圾回收（请参阅参数的说明 `startupFlags` ），则将加载服务器生成。  
   
  `startupFlags`  
- [在][STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)枚举的值的组合。 这些标志控制并发垃圾回收、域中立代码和`pwszVersion`参数的行为。 如果未设置标志，则默认值为单个域。 以下为有效值：  
+ 中[STARTUP_FLAGS](startup-flags-enumeration.md)枚举的值的组合。 这些标志控制并发垃圾回收、非特定于域的代码和参数的行为 `pwszVersion` 。 如果未设置任何标志，则默认值为单一域。 以下为有效值：  
   
 - `STARTUP_CONCURRENT_GC`  
   
@@ -99,49 +99,49 @@ HRESULT CorBindToRuntimeEx (
   
 - `STARTUP_ALWAYSFLOW_IMPERSONATION`  
   
- 有关这些标志的说明，请参阅[STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)枚举。  
+ 有关这些标志的说明，请参阅[STARTUP_FLAGS](startup-flags-enumeration.md)枚举。  
   
  `rclsid`  
- [在]`CLSID`实现[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)接口的共类。 支持的值CLSID_CorRuntimeHost或CLSID_CLRRuntimeHost。  
+ 中`CLSID`用于实现[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](iclrruntimehost-interface.md)接口的 coclass 的。 支持的值为 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
   
  `riid`  
- [在]从`IID`的请求接口的`rclsid`的 支持的值IID_ICorRuntimeHost或IID_ICLRRuntimeHost。  
+ 中所 `IID` 请求的接口的 `rclsid` 。 支持的值为 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
   
  `ppv`  
- [出]返回的接口指针到`riid`。  
+ 弄返回的接口指针 `riid` 。  
   
 ## <a name="remarks"></a>备注  
- 如果`pwszVersion`指定不存在的运行时版本，`CorBindToRuntimeEx`则返回 hRESULT 值CLR_E_SHIM_RUNTIMELOAD。  
+ 如果 `pwszVersion` 指定不存在的运行时版本，则 `CorBindToRuntimeEx` 返回的 HRESULT 值为 CLR_E_SHIM_RUNTIMELOAD。  
   
-## <a name="execution-context-and-flow-of-windows-identity"></a>执行上下文和 Windows 标识的流  
- 在 CLR 的版本 1<xref:System.Security.Principal.WindowsIdentity>中，对象不会跨异步点（如新线程、线程池或计时器回调）流动。 在 CLR 的版本 2.0<xref:System.Threading.ExecutionContext>中，对象会包装有关当前正在执行的线程的一些信息，并将其流过任何异步点，但不跨应用程序域边界。 同样，<xref:System.Security.Principal.WindowsIdentity>对象也流过任何异步点。 因此，线程上的当前模拟（如果有）也会流动。  
+## <a name="execution-context-and-flow-of-windows-identity"></a>执行上下文和 Windows 标识流  
+ 在 CLR 版本1中， <xref:System.Security.Principal.WindowsIdentity> 对象不流经异步点，如新线程、线程池或计时器回调。 在 CLR 版本2.0 中， <xref:System.Threading.ExecutionContext> 对象包装了有关当前正在执行的线程的某些信息，并在所有异步点（而不是跨应用程序域边界）对其进行流传递。 同样， <xref:System.Security.Principal.WindowsIdentity> 对象还在任何异步点上流动。 因此，线程上的当前模拟（如果有）也会流动。  
   
- 您可以通过两种方式更改流：  
+ 可以通过两种方式更改流：  
   
-1. 通过修改<xref:System.Threading.ExecutionContext>设置以按线程禁止流（请参阅 、<xref:System.Threading.ExecutionContext.SuppressFlow%2A><xref:System.Security.SecurityContext.SuppressFlow%2A>和方法）。 <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A>  
+1. 通过修改 <xref:System.Threading.ExecutionContext> 设置以在每个线程的基础上取消流（请参阅 <xref:System.Threading.ExecutionContext.SuppressFlow%2A> 、 <xref:System.Security.SecurityContext.SuppressFlow%2A> 和 <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A> 方法）。  
   
-2. 通过将进程默认模式更改为版本 1 兼容性模式，其中<xref:System.Security.Principal.WindowsIdentity>对象不会流过任何异步点，而不考虑当前线程上的<xref:System.Threading.ExecutionContext>设置。 更改默认模式的方式取决于您是使用托管可执行文件还是非托管托管接口来加载 CLR：  
+2. 通过将进程默认模式更改为版本1兼容模式，该模式中的 <xref:System.Security.Principal.WindowsIdentity> 对象不会在任何异步点上流动，无论 <xref:System.Threading.ExecutionContext> 当前线程上的设置如何。 更改默认模式的方式取决于您使用的是托管可执行文件还是非托管承载接口来加载 CLR：  
   
-    1. 对于托管可执行文件，必须将`enabled`[\<旧模拟策略>](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)元素的属性设置为`true`。  
+    1. 对于托管可执行文件，必须将 `enabled` [ \< legacyImpersonationPolicy>](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)元素的属性设置为 `true` 。  
   
-    2. 对于非托管托管接口，在`STARTUP_LEGACY_IMPERSONATION`调用`startupFlags``CorBindToRuntimeEx`函数时在参数中设置标志。  
+    2. 对于非托管承载接口，请在 `STARTUP_LEGACY_IMPERSONATION` `startupFlags` 调用函数时在参数中设置标志 `CorBindToRuntimeEx` 。  
   
-     版本 1 兼容性模式适用于整个过程和流程中的所有应用程序域。  
+     版本1兼容性模式适用于整个进程和进程中的所有应用程序域。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [CorBindToCurrentRuntime 函数](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)
-- [CorBindToRuntime 函数](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
-- [CorBindToRuntimeByCfg 函数](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)
-- [CorBindToRuntimeHost 函数](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)
-- [ICorRuntimeHost 接口](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
-- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [CorBindToCurrentRuntime 函数](corbindtocurrentruntime-function.md)
+- [CorBindToRuntime 函数](corbindtoruntime-function.md)
+- [CorBindToRuntimeByCfg 函数](corbindtoruntimebycfg-function.md)
+- [CorBindToRuntimeHost 函数](corbindtoruntimehost-function.md)
+- [ICorRuntimeHost 接口](icorruntimehost-interface.md)
+- [弃用的 CLR 承载函数](deprecated-clr-hosting-functions.md)

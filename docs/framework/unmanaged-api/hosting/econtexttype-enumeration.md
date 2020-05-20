@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 92b926a9-b87e-408a-9036-df7b752c9492
 topic_type:
 - apiref
-ms.openlocfilehash: 5e82f542bdc364a52fc558e582134a7d8d554ec3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ceb68410e808bf7843149e3f05a39c7a98d0c000
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131141"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616289"
 ---
 # <a name="econtexttype-enumeration"></a>EContextType 枚举
 描述当前正在执行的线程的安全上下文。  
@@ -33,27 +33,27 @@ typedef enum {
 } EContextType;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
 |成员|描述|  
 |------------|-----------------|  
-|`eCurrentContext`|指示公共语言运行时（CLR）在调用[IHostSecurityManager：： SetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md)方法的调用中调用[IHostSecurityManager：： GETSECURITYCONTEXT](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)方法或 CLR 请求的上下文时当前线程上的上下文。|  
+|`eCurrentContext`|指示公共语言运行时（CLR）在调用[IHostSecurityManager：： SetSecurityContext](ihostsecuritymanager-setsecuritycontext-method.md)方法的调用中调用[IHostSecurityManager：： GETSECURITYCONTEXT](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)方法或 CLR 请求的上下文时当前线程上的上下文。|  
 |`eRestrictedContext`|指示宿主具有更低权限的上下文，如垃圾回收器或类或模块构造函数。|  
   
 ## <a name="remarks"></a>备注  
- 在对 `IHostSecurityManager::GetSecurityContext` 和 `IHostSecurityManager::SetSecurityContext` 方法的调用中，CLR 将 `EContextType` 值之一作为参数值提供。  
+ `EContextType`在对和方法的调用中，CLR 将值之一作为参数值 `IHostSecurityManager::GetSecurityContext` 提供 `IHostSecurityManager::SetSecurityContext` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** Mscoree.dll  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IHostSecurityContext 接口](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
-- [IHostSecurityManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
-- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [IHostSecurityContext 接口](ihostsecuritycontext-interface.md)
+- [IHostSecurityManager 接口](ihostsecuritymanager-interface.md)
+- [承载枚举](hosting-enumerations.md)

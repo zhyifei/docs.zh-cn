@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 51f848be-84c5-4036-9839-c762c576bbf5
 topic_type:
 - apiref
-ms.openlocfilehash: cc0cea10b4a209583fb7afb551a6b80d52ad7f62
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8dda83df8a320733f45dbcc13599cdf37d26492
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127030"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617147"
 ---
 # <a name="host_type-enumeration"></a>HOST_TYPE 枚举
 包含的值用于指定启动应用程序的主机的类型。  
@@ -34,7 +34,7 @@ typedef enum {
 } HOST_TYPE;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
 |成员|描述|  
 |------------|-----------------|  
@@ -43,14 +43,14 @@ typedef enum {
 |`HOST_TYPE_DEFAULT`|与 HOST_TYPE_APPLAUNCH 相同。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** Mscoree.dll  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [承载枚举](hosting-enumerations.md)

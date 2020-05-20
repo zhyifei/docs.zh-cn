@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: a5cab4c6-990e-47f3-8798-cf422b791015
 topic_type:
 - apiref
-ms.openlocfilehash: 44578595b3cb790570c5359e714bd39c109cf1f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a60805e1fd78cb14835957a7afc14fe279cb20fb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176456"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616562"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess 函数
-关闭当前非托管进程。  
+关闭当前的非托管进程。  
   
- 此功能已在 .NET 框架 4 中弃用。 改用[ICLRMetaHost：：退出进程](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md)方法。  
+ 此函数已在 .NET Framework 4 中弃用。 改为使用[ICLRMetaHost：： ExitProcess](iclrmetahost-exitprocess-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,24 +38,24 @@ void STDMETHODCALLTYPE CorExitProcess (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `exitCode`  
- 指定进程退出代码的整数。  
+ 一个整数，指定进程退出代码。  
   
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
-> 从 .NET 框架 4`CorExitProcess`开始，退出进程中的每个启动运行时，而不仅仅是将旧 API 绑定到的运行时。  
+> 从 .NET Framework 4 开始， `CorExitProcess` 退出进程中的每个已启动的运行时，而不只是旧 api 所绑定到的运行时。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **库：** MSCorEE.dll  
+ **库：** Mscoree.dll  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [弃用的 CLR 承载函数](deprecated-clr-hosting-functions.md)

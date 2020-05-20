@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 17c45f15-8c44-44da-b070-f902077b36e4
 topic_type:
 - apiref
-ms.openlocfilehash: bf932b63973f93c56883f099ddaadd9d1519f337
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0acd31d85504688427cace0222a657885035c537
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446328"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615379"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>ISymUnmanagedScope::GetLocals 方法
 获取在此范围内定义的局部变量。  
@@ -37,10 +37,10 @@ HRESULT GetLocals(
   
 ## <a name="parameters"></a>参数  
  `cLocals`  
- 中一个 `ULONG32`，指示 `locals` 数组的大小。  
+ 中`ULONG32`指示数组大小的 `locals` 。  
   
  `pcLocals`  
- 弄指向 `ULONG32` 的指针，该指针接收包含本地变量所需的缓冲区大小。  
+ 弄指向的指针 `ULONG32` ，该指针接收包含本地变量所需的缓冲区大小。  
   
  `locals`  
  弄接收局部变量的数组。  
@@ -53,4 +53,4 @@ HRESULT GetLocals(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedScope 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [ISymUnmanagedScope 接口](isymunmanagedscope-interface.md)

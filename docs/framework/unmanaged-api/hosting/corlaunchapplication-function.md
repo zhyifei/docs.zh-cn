@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71f362a9-8fe2-47ce-9302-05a645cf3d7d
 topic_type:
 - apiref
-ms.openlocfilehash: e01698d2d8491b2496bb664c13dca97964cd1481
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 031bfc3d7fcd9f1f04e616e460cb3201813eae55
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136947"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616549"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication 函数
 使用指定的清单和其他应用程序数据，在指定的网络路径下启动应用程序。  
@@ -43,7 +43,7 @@ HRESULT CorLaunchApplication (
   
 ## <a name="parameters"></a>参数  
  `dwClickOnceHost`  
- 中[HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md)枚举的一个值，该值指定启动应用程序的主机的类型。  
+ 中一个[HOST_TYPE](host-type-enumeration.md)枚举的值，该值指定启动应用程序的主机的类型。  
   
  `pwzAppFullName`  
  中正在启动的应用程序的完整名称。  
@@ -64,14 +64,14 @@ HRESULT CorLaunchApplication (
  弄一个指针，指向有关已加载应用程序的进程的信息。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** Mscoree.dll  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [弃用的 CLR 承载函数](deprecated-clr-hosting-functions.md)

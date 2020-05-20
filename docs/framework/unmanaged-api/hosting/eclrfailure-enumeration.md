@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-ms.openlocfilehash: 7d935bff023d806cf8cfb6d87bde0f82666b51b5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e07210203d8a8010890eeb511ff1c08821bfc4a7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131121"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616328"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure 枚举
 描述主机可对其设置策略操作的失败集。  
@@ -38,33 +38,33 @@ typedef enum {
 } EClrFailure;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
 |成员|描述|  
 |------------|-----------------|  
 |`FAIL_NonCriticalResource`|尝试在非关键的代码区域中分配资源（如线程、内存块或锁定）时出错了。|  
 |`FAIL_CriticalResource`|尝试在关键的代码区域中分配资源（如线程、内存块或锁定）时出现错误。|  
 |`FAIL_FatalRuntime`|公共语言运行时（CLR）无法再运行进程中的托管代码。 之后，对任何宿主函数的调用都会返回 HOST_E_CLRNOTAVAILABLE 的 HRESULT 值。|  
-|`FAIL_OrphanedLock`|在从 <xref:System.AppDomain> 对象返回时，线程无法释放锁。 宿主无法将此失败设置为导致线程中止。|  
+|`FAIL_OrphanedLock`|在从对象返回时，线程无法释放锁 <xref:System.AppDomain> 。 宿主无法将此失败设置为导致线程中止。|  
 |`FAIL_StackOverflow`|发生堆栈溢出。|  
 |`FAIL_AccessViolation`|尝试读取或写入受保护的内存。 在 .NET Framework 4 中不受支持。|  
-|`FAIL_CodeContract`|发生代码协定失败。 请参阅[代码协定](../../../../docs/framework/debug-trace-profile/code-contracts.md)。|  
+|`FAIL_CodeContract`|发生代码协定失败。 请参阅[代码协定](../../debug-trace-profile/code-contracts.md)。|  
   
 ## <a name="remarks"></a>备注  
- 请参阅[ICLRPolicyManager：： SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)方法，以获取[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)值的列表，主机可以使用这些值来指定失败情况的策略操作。 有关代码的关键和非关键区域的详细信息，请参阅[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)。  
+ 请参阅[ICLRPolicyManager：： SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)方法，以获取[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)值的列表，主机可以使用这些值来指定失败情况的策略操作。 有关代码的关键和非关键区域的详细信息，请参阅[EClrOperation](eclroperation-enumeration.md)。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** Mscoree.dll  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICLRPolicyManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [SetActionOnFailure 方法](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)
-- [IHostPolicyManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
-- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [ICLRPolicyManager 接口](iclrpolicymanager-interface.md)
+- [SetActionOnFailure 方法](iclrpolicymanager-setactiononfailure-method.md)
+- [IHostPolicyManager 接口](ihostpolicymanager-interface.md)
+- [承载枚举](hosting-enumerations.md)

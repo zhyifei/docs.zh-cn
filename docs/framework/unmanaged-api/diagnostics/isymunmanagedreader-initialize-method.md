@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-ms.openlocfilehash: ca34d1d84d6f9960d021c35566f8412df321464d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 07d2de5d12fd769cb5cce243d9e721bb6fc185a7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429748"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615470"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize 方法
 用此读取器将与之关联的元数据导入程序接口以及模块的文件名初始化符号读取器。  
@@ -46,7 +46,7 @@ HRESULT Initialize (
  中模块的文件名。 可以改为使用 `pIStream` 参数。  
   
  `searchPath`  
- 中要搜索的路径。 此参数可选。  
+ 中要搜索的路径。 该参数为可选参数。  
   
  `pIStream`  
  中文件流，用作 filename 参数的替代项。  
@@ -62,4 +62,4 @@ HRESULT Initialize (
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedReader 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader 接口](isymunmanagedreader-interface.md)

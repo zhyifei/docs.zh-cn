@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-ms.openlocfilehash: f3b51c1b376fa9c664de53aa76ec724ca305ae6a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dd004a44b20d48dafc72711ac23abcb55739224
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178180"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617195"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion 函数
-使用指定的缓冲区获取指定文件的常见语言运行时 （CLR） 版本信息。  
+使用指定的缓冲区获取指定文件的公共语言运行时（CLR）版本信息。  
   
- 此功能已在 .NET 框架 4 中弃用。  
+ 此函数已在 .NET Framework 4 中弃用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,26 +37,26 @@ HRESULT GetFileVersion (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `szFilename`  
- [在]要检查的文件的路径。  
+ 中要检查的文件的路径。  
   
  `szBuffer`  
- [进出]为返回的版本信息分配的缓冲区。  
+ [in，out]为返回的版本信息分配的缓冲区。  
   
  `cchBuffer`  
- [在]的大小（以宽字符表示`szBuffer`）  
+ 中的大小（宽字符） `szBuffer` 。  
   
  `dwLength`  
- [出]返回`szBuffer`的大小（以字节为单位）。  
+ 弄返回的的大小（以字节为单位） `szBuffer` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** MSCorEE.h  
+ **标头：** Mscoree.dll  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [弃用的 CLR 承载函数](deprecated-clr-hosting-functions.md)
