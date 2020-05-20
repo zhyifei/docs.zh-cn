@@ -1,24 +1,22 @@
 ---
 title: 将 eShopOnContainers 映射到 Azure 服务
 description: 将 eShopOnContainers 映射到 azure 服务，如 Azure Kubernetes 服务、API 网关和 Azure 服务总线。
-ms.date: 04/20/2020
-ms.openlocfilehash: 26fce71ba71f7da643b669396ab59affe592649a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 271707404f7fb51aec59c6f682ddaefd0bac82cc
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895513"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613832"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>将 eShopOnContainers 映射到 Azure 服务
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 虽然这不是必需的，但 Azure 非常适合于支持 eShopOnContainers，因为该项目构建为云本机应用程序。 应用程序是用 .NET Core 构建的，因此它可以在 Linux 或 Windows 容器上运行，具体取决于 Docker 主机。 该应用程序由多个自治微服务组成，每个都有其自己的数据。 不同的微服务展示了不同的方法，范围从简单的 CRUD 操作到更复杂的 DDD 和 CQRS 模式。 微服务通过基于消息的通信，通过 HTTP 与客户端通信。 应用程序也为客户端支持多个平台，因为它采用 HTTP 作为标准通信协议，并包括在 Android、iOS 和 Windows 平台上运行 ASP.NET Core 和 Xamarin 移动应用。
 
 应用程序的体系结构如图2-5 所示。 左侧是客户端应用程序，分为移动、传统 Web 和 Web 单页应用程序（SPA）。 右侧是构成系统的服务器端组件，每个组件都可以托管在 Docker 容器和 Kubernetes 群集中。 传统 web 应用由显示为黄色的 ASP.NET Core MVC 应用程序提供支持。 此应用和移动和 web SPA 应用程序通过一个或多个 API 网关与各个微服务进行通信。 API 网关采用 "后端 for 前端" （BFF）模式，这意味着每个网关都设计为支持给定的前端客户端。 单个微服务在 API 网关的右侧列出，同时包含业务逻辑和某种类型的持久性存储区。 不同的服务利用 SQL Server 数据库、Redis 缓存实例和 MongoDB/CosmosDB 存储。 最右侧是系统的事件总线，用于微服务之间的通信。
 
-![eShopOnContainers 体系](./media/eshoponcontainers-architecture.png)
-结构**图 2-5**。 EShopOnContainers 体系结构。
+![eShopOnContainers 体系结构 ](./media/eshoponcontainers-architecture.png)
+ **图 2-5**。 EShopOnContainers 体系结构。
 
 此体系结构的服务器端组件可轻松映射到 Azure 服务。
 

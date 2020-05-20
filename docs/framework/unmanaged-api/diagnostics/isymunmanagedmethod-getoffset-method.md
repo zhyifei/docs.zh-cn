@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bf3cb62-89bf-4159-ad53-de606aba89e8
 topic_type:
 - apiref
-ms.openlocfilehash: f7993ebc15f95df97a9b45523717f318d8c435ce
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 358f3d3d7c231a2baa9d2c467935ba3a5867e36b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448944"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614469"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>ISymUnmanagedMethod::GetOffset 方法
 返回此方法内的偏移量，该偏移量对应于文档中的给定位置。  
@@ -46,7 +46,7 @@ HRESULT GetOffset(
  中为其请求偏移量的文档列。  
   
  `pRetVal`  
- 弄指向接收偏移量的 `ULONG32` 的指针。  
+ 弄指向 `ULONG32` 的指针，该指针接收偏移量。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -56,4 +56,4 @@ HRESULT GetOffset(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod 接口](isymunmanagedmethod-interface.md)

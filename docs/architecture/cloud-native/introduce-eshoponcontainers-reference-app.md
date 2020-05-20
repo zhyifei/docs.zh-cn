@@ -1,17 +1,15 @@
 ---
 title: EShopOnContainers 参考应用简介
 description: 介绍适用于 ASP.NET Core 和 Azure 的 eShopOnContainers Cloud 本机微服务 Reference 应用。
-ms.date: 06/30/2019
-ms.openlocfilehash: b97b62268db1d9990f762d9769233ad72551c226
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: a6f3defabec809eaf1cb143e2b521904248b74f2
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395404"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613962"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>EShopOnContainers 参考应用简介
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Microsoft 与领先社区专家合作，已生成了一个功能完备的云本机微服务参考应用程序 eShopOnContainers。 构建此应用程序时，可以使用 .NET Core 和 Docker，还可以选择使用 Azure、Kubernetes 和 Visual Studio 来构建在线店面。
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80f168af-a6a6-4c8f-b9e6-8a82dc834ed5
 topic_type:
 - apiref
-ms.openlocfilehash: cfc28dfcda7bf4b3d1fc6fe3530a212ee76fadd2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 29869abdd39f61c6c9cb51d6b2be50fa462c5b70
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446087"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615249"
 ---
 # <a name="isymunmanagedvariablegetattributes-method"></a>ISymUnmanagedVariable::GetAttributes 方法
 获取此变量的特性标志。  
@@ -34,7 +34,7 @@ HRESULT GetAttributes(
   
 ## <a name="parameters"></a>参数  
  `pRetVal`  
- 弄指向接收特性的 `ULONG32` 的指针。 返回的值将是[CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)枚举中定义的值之一。  
+ 弄指向接收特性的的指针 `ULONG32` 。 返回的值将是[CorSymVarFlag](corsymvarflag-enumeration.md)枚举中定义的值之一。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -44,4 +44,4 @@ HRESULT GetAttributes(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedVariable 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [ISymUnmanagedVariable 接口](isymunmanagedvariable-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ae6cfb29-bc2c-4606-af86-1d32ebd31020
 topic_type:
 - apiref
-ms.openlocfilehash: 9407942b81c5318509f2b026fa5db1cdd163e02d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 864acb07797676c825afe62321b0d65e37938fa6
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448278"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615002"
 ---
 # <a name="isymunmanagedreadergetmethod-method"></a>ISymUnmanagedReader::GetMethod 方法
 在给定方法标记的情况下，获取符号读取器方法。  
@@ -48,4 +48,4 @@ HRESULT GetMethod (
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedReader 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader 接口](isymunmanagedreader-interface.md)

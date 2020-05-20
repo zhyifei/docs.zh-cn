@@ -1,17 +1,15 @@
 ---
 title: 可观测性模式
 description: 适用于云原生应用程序的可观察性模式
-ms.date: 02/05/2020
-ms.openlocfilehash: a821235835b4553760b19887d500a29ca75e133e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: db6a56358923025cbcca9478908474227e5da96d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448501"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613806"
 ---
 # <a name="observability-patterns"></a>可观测性模式
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 正如为了帮助应用程序中的代码布局而开发的模式一样，以可靠方式为操作应用程序提供模式。 维护应用程序的三种有用模式已经出现：**日志记录**、**监视**和**警报**。
 
@@ -21,19 +19,19 @@ ms.locfileid: "77448501"
 
 ### <a name="challenges-when-logging-with-cloud-native-applications"></a>用云本机应用程序进行日志记录时遇到的难题
 
-在传统的应用程序中，日志文件通常存储在本地计算机上。 事实上，在类似 Unix 的操作系统上，有一个文件夹结构定义为保存任何日志，通常在 `/var/log`下。
+在传统的应用程序中，日志文件通常存储在本地计算机上。 事实上，在类似 Unix 的操作系统上，有一个文件夹结构定义为保存任何日志，通常在下 `/var/log` 。
 
-![日志记录到单一应用中的文件。](./media/single-monolith-logging.png)
+![记录到单一应用中的文件。 ](./media/single-monolith-logging.png)
 **图 7-1**。 记录到单一应用中的文件。
 
 在云环境中，将日志记录到单台计算机上的平面文件的有用性大大减少。 生成日志的应用程序可能无法访问本地磁盘或本地磁盘，因为容器是在物理计算机上无序的。 即使是在多个节点上进行单一应用程序的简单扩展，也可以很难找到相应的基于文件的日志文件。
 
-![日志记录到缩放的单一应用中的文件。](./media/multiple-node-monolith-logging.png)
+![记录到缩放的单一应用中的文件。 ](./media/multiple-node-monolith-logging.png)
 **图 7-2**。 记录到缩放的单一应用中的文件。
 
 使用微服务体系结构开发的云本机应用程序还会对基于文件的记录器带来一些挑战。 用户请求现在可能跨在不同计算机上运行的多个服务，可能包括无服务器功能，而不能访问本地文件系统。 将用户或会话中的日志与许多服务和计算机的关联起来非常困难。
 
-![日志记录到微服务应用中的本地文件。](./media/local-log-file-per-service.png)
+![在微服务应用中记录到本地文件。 ](./media/local-log-file-per-service.png)
 **图 7-3**。 在微服务应用中记录到本地文件。
 
 最后，某些云本机应用程序中的用户数很高。 假设每个用户登录到应用程序时都会生成几百行的日志消息。 隔离，这是可管理的，但比100000用户和日志量要大得多，因为需要使用专用工具来支持有效地使用日志。
@@ -42,11 +40,11 @@ ms.locfileid: "77448501"
 
 每种编程语言都有允许编写日志的工具，通常，写入这些日志的开销也很低。 许多日志记录库提供了记录不同种类的重要性，可在运行时进行优化。 例如， [Serilog 库](https://serilog.net/)是适用于 .net 的常用结构化日志记录库，提供以下日志记录级别：
 
-* “详细”
+* 详细
 * 调试
 * 信息
 * 警告
-* 错误
+* Error
 * 出现
 
 这些不同的日志级别提供日志记录的粒度。 当应用程序在生产环境中正常运行时，可以将其配置为仅记录重要的消息。 当应用程序行为不好时，可以增加日志级别，以便收集更详细的日志。 这会平衡性能，使其易于调试。
@@ -57,7 +55,7 @@ ms.locfileid: "77448501"
 
 构建跨越许多服务的日志记录时，遵循一些标准做法也是有帮助的。 例如，在时间较长的交互时生成[相关 ID](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) ，然后将其记录在与该交互相关的每个消息中，使得搜索所有相关消息变得更加容易。 只需查找单个消息，然后提取相关 ID 即可查找所有相关的消息。 另一个示例是确保每个服务的日志格式都是相同的，无论使用何种语言或日志记录库。 这一标准化使得读取日志变得更加容易。 图7-4 演示了微服务体系结构如何利用集中式日志记录作为其工作流的一部分。
 
-来自各种来源的 ![日志会被引入到一个集中的日志存储中。](./media/centralized-logging.png)
+![来自各种来源的日志会被引入到一个集中的日志存储中。 ](./media/centralized-logging.png)
 **图 7-4**。 来自各种来源的日志会被引入到一个集中的日志存储中。
 
 ## <a name="challenges-with-detecting-and-responding-to-potential-app-health-issues"></a>检测和响应潜在的应用运行状况问题的挑战

@@ -1,15 +1,15 @@
 ---
-title: 总结
+title: 摘要
 description: 用于 Azure 的云本机 .NET 应用指南/电子书的关键结论摘要。
-ms.date: 04/29/2020
-ms.openlocfilehash: 8cad8df1f69e159caf88d3ee119278dff8726385
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: b1a195c0c081565c57f5aac2e234411bb904ca08
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395323"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613650"
 ---
-# <a name="summary"></a>总结
+# <a name="summary"></a>摘要
 
 总而言之，以下是本指南中的重要结论：
 

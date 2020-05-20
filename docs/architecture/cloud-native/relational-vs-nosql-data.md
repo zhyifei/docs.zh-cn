@@ -2,17 +2,15 @@
 title: 关系与NoSQL 数据
 description: 了解云本机应用程序中的关系数据和 NoSQL 数据
 author: robvet
-ms.date: 01/22/2020
-ms.openlocfilehash: a2561b0abfc1975badfafeeb4fa2f2c6429814be
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 05/17/2020
+ms.openlocfilehash: cc47faa4fcd4468de9ddc468e488297db4289ff5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507359"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613780"
 ---
 # <a name="relational-vs-nosql-data"></a>关系与NoSQL 数据
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 关系型和 NoSQL 是通常在云本机应用程序中实现的两种类型的数据库系统。 它们的构建方式不同，以不同的方式存储数据，并以不同的方式进行访问。 在本部分中，我们将介绍这两种情况。 本章稍后将介绍一种名为*NewSQL*的新兴数据库技术。
 
@@ -28,7 +26,7 @@ NoSQL 数据库包含用于访问和管理数据的多个不同的模型，每�
 
 **图 5-9**： NoSQL 数据库的数据模型
 
-| 型号 | 特征 |
+| “模型” | 特征 |
 | :-------- | :-------- |
 | 文档存储 | 数据和元数据以分层形式存储在数据库中基于 JSON 的文档中。 |
 | 键值存储 | 最简单的 NoSQL 数据库数据以键值对的集合表示。 |
@@ -83,7 +81,6 @@ NoSQL 数据库通常支持高可用性和分区容差。 它们通常跨商用�
 | 数据检索很简单，往往是平面的 | 使用复杂的查询和报表|
 | 你的数据需要广泛的地理分布 | 用户是更集中的 |
 | 你的应用程序将部署到商用硬件上，如公有云 | 你的应用程序将部署到大型高端硬件 |
-|||
 
 在接下来的部分中，我们将探讨 Azure 云中提供的用于存储和管理云本机数据的选项。
 
@@ -134,7 +131,7 @@ Microsoft SQL Server 的专业技能的开发团队应考虑[AZURE SQL 数据库
 
 ### <a name="azure-database-for-mysql"></a>Azure Database for MySQL
 
-[MySQL](https://en.wikipedia.org/wiki/MySQL) 是一种开源关系数据库，是针对[灯泡软件堆栈](https://en.wikipedia.org/wiki/LAMP_(software_bundle))构建的应用程序的支柱。 广泛地选择用于*读取繁重*的工作负荷，许多大型组织（包括 Facebook、Twitter 和 YouTube）都将使用它。 社区版免费提供，而 enterprise edition 需要购买许可证。 最初在1995中创建，该产品由的 Sun 2008 Microsystems 购买。 Oracle 在2010中获取 Sun 和 MySQL。
+[MySQL](https://en.wikipedia.org/wiki/MySQL)  是一个开源关系数据库和一个支柱，适用于在[灯泡软件堆栈](https://en.wikipedia.org/wiki/LAMP_(software_bundle))上构建的应用程序。 广泛地选择用于*读取繁重*的工作负荷，许多大型组织（包括 Facebook、Twitter 和 YouTube）都将使用它。 社区版免费提供，而 enterprise edition 需要购买许可证。 最初在1995中创建，该产品由的 Sun 2008 Microsystems 购买。 Oracle 在2010中获取 Sun 和 MySQL。
 
 [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/)是基于开源 MySQL Server 引擎的托管关系数据库服务。 它使用 MySQL 社区版。 Azure MySQL 服务器是服务的管理点。 它是用于本地部署的相同 MySQL 服务器引擎。 引擎可以为每个服务器创建一个数据库，也可以为每个共享资源的服务器创建多个数据库。 您可以使用相同的开源工具继续管理数据，而不必学习新技能或管理虚拟机。
 
@@ -150,7 +147,7 @@ MariaDB 具有强大的社区，由许多大型企业使用。 尽管 Oracle 继
 
 [PostgreSQL](https://www.postgresql.org/)是一种开源关系数据库，其活动开发超过30年。 PostgresSQL 具有可靠性和数据完整性的强大信誉。 它的功能丰富、兼容 SQL 并且被视为比 MySQL 更高的性能，尤其适用于具有复杂查询和繁重写入的工作负荷。 许多大型企业（包括 Apple、Red Hat 和 Fujitsu）都使用 PostgreSQL 构建了产品。
 
-[Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/)是一项完全托管的关系数据库服务，它基于开源 Postgres 数据库引擎。 该服务支持许多开发平台，包括 c + +、Java、Python、Node\#、C 和 PHP。 你可以使用[命令行接口](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1)工具或 Azure 数据迁移服务将 PostgreSQL 数据库迁移到它。
+[Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/)是一项完全托管的关系数据库服务，它基于开源 Postgres 数据库引擎。 该服务支持许多开发平台，包括 c + +、Java、Python、Node、C \# 和 PHP。 你可以使用[命令行接口](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1)工具或 Azure 数据迁移服务将 PostgreSQL 数据库迁移到它。
 
 Azure Database for PostgreSQL 提供了两个部署选项：
 
@@ -190,21 +187,30 @@ Cosmos DB 支持全局级别的[主动/主动](https://kemptechnologies.com/whit
 
 ### <a name="multi-model-support"></a>多模型支持
 
-将单一应用程序 replatforming 到云本机体系结构时，开发团队有时必须迁移开源的 NoSQL 数据存储。 Cosmos DB 可以帮助你在这些 NoSQL 数据存储中保留投资，并将其用于*多模型*数据平台。 图5-13 显示了支持的 NoSQL[兼容性 api](https://www.wikiwand.com/en/Cosmos_DB)。
+将单一应用程序 replatforming 到云本机体系结构时，开发团队有时必须迁移开源的 NoSQL 数据存储。 Cosmos DB 可以帮助你在这些 NoSQL 数据存储中保留投资，并将其用于*多模型*数据平台。 下表显示了支持的 NoSQL[兼容性 api](https://www.wikiwand.com/en/Cosmos_DB)。
 
-![Cosmos DB 提供程序](./media/cosmos-db-providers.png)
-
-**图 5-13**： Cosmos DB 提供程序
+| 提供程序 | 说明  |
+| :-------- | :-------- |
+| SQL API | 支持 JSON 文档和基于 SQL 的查询的专有 API |
+| Mongo DB API | 支持 Mongo DB Api 和 JSON 文档|
+| Gremlin API | 支持具有基于图形的节点和边缘数据表示形式的 Gremlin API |
+| Cassandra API | 支持用于宽列数据表示形式的 Casandra API |  
+| 表 API  | 支持具有高级增强功能的 Azure 表存储 |  
+| etcd API | 启用 Cosmos DB 作为 Azure Kubernetes 服务群集的后备存储 |
 
 开发团队可以将现有的 Mongo、Gremlin 或 Cassandra 数据库迁移到 Cosmos DB 对数据或代码进行少量更改。 对于新应用程序，开发团队可以在开源选项或内置 SQL API 模型中进行选择。
 
 > 在内部，Cosmos 将数据存储为由基元数据类型组成的简单结构格式。 对于每个请求，数据库引擎将基元数据转换为您选择的模型表示形式。
 
-在上图5-13 中，请记下[表 API](https://docs.microsoft.com/azure/cosmos-db/table-introduction)选项。 此 API 是 Azure 表存储的演变。 两者共享同一个基础表模型，但 Cosmos DB 表 API 添加 Azure 存储 API 中未提供的高级增强功能。 这些功能在图5-4 中是相对的。
+在上表中，请记下[表 API](https://docs.microsoft.com/azure/cosmos-db/table-introduction)选项。 此 API 是 Azure 表存储的演变。 两者共享同一个基础表模型，但 Cosmos DB 表 API 添加 Azure 存储 API 中未提供的高级增强功能。 下表对这些功能进行了比较。
 
-![Azure 表 API](media/azure-table-api.png)
-
-**图 5-14**： Azure 表 API 提供商
+|  | Azure 表存储  | Azure Cosmos DB  |
+| :-------- | :-------- |:-------- |
+| 延迟 | 快速 | 在世界各地的任何位置进行读取和写入的一位数毫秒延迟 |
+| 吞吐量 | 每个表的20000操作数限制 | 10000000每个表的操作 |
+| 全局分发 | 具有可选的单个辅助读取区域的单个区域 | 具有自动故障转移功能的所有区域的全包式分布 |
+| 索引 | 仅适用于分区和行键属性 | 所有属性的自动索引 |
+| 定价 | 基于存储 | 基于吞吐量 |
 
 使用 Azure 表存储的微服务可以轻松地迁移到 Cosmos DB 表 API。 不需更改代码。
 
@@ -214,17 +220,21 @@ Cosmos DB 支持全局级别的[主动/主动](https://kemptechnologies.com/whit
 
 大多数分布式数据库允许开发人员在两种一致性模型之间进行选择：强一致性和最终一致性。 *强一致性*是数据可编程性的黄金标准。 它可以保证查询始终返回最新的数据，即使系统必须在等待更新复制到所有数据库副本时产生延迟。 虽然配置为*最终一致性*的数据库将立即返回数据，即使该数据不是最新的副本。 后一种方法可实现更高的可用性、更高的规模和更高的性能。
 
-Azure Cosmos DB 提供了五个明确定义的[一致性模型](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)，如图5-15 所示。
+Azure Cosmos DB 提供了五个明确定义的[一致性模型](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)，如图5-13 所示。
 
 ![Cosmos DB 一致性图形](./media/cosmos-consistency-level-graph.png)
 
-**图 5-15**： Cosmos DB 一致性级别
+**图 5-13**： Cosmos DB 一致性级别
 
- 利用这些选项，您可以针对数据的一致性、可用性和性能做出精确的选择和细化的权衡。 图5-16 介绍了每个级别。
+ 利用这些选项，您可以针对数据的一致性、可用性和性能做出精确的选择和细化的权衡。 下表中显示了这些级别。
 
-![Cosmos DB 一致性级别](./media/cosmos-db-consistency-levels.png)
-
-**图 5-16**： Cosmos DB 一致性级别说明
+| 一致性级别 | 说明  |
+| :-------- | :-------- |
+| 最终 | 不保证读取的顺序。 副本最终将聚合。 |
+| 常量前缀 | 读取仍是最终的，但会按写入数据的顺序返回数据。 |
+| 会话 | 保证您可以读取在当前会话期间写入的任何数据。 它是默认的一致性级别。 |
+| 有限过期 | 按指定的间隔读取跟踪写入。 |  
+| 强  | 读取可保证返回项的最新提交版本。 客户端不会看到未提交或部分读取。 |  
 
 在下面[的文章9球： Cosmos DB 一致性级别介绍](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)的文章中，Microsoft Program Manager Jeremy Likness 提供了五种模型的出色说明。
 
@@ -236,11 +246,11 @@ Azure Cosmos DB 采用自动[分区](https://docs.microsoft.com/azure/cosmos-db/
 
 容器位于 Cosmos DB 数据库中，表示项的架构无关分组。 项是添加到容器中的数据。 它们表示为文档、行、节点或边缘。 添加到容器中的所有项都自动编制索引。
 
-若要将容器分区，项被分为称为逻辑分区的不同子集。 逻辑分区基于与容器中每一项关联的分区键的值进行填充。 图5-18 显示了两个容器，每个容器都有一个基于分区键值的逻辑分区。
+若要将容器分区，项被分为称为逻辑分区的不同子集。 逻辑分区基于与容器中每一项关联的分区键的值进行填充。 图5-14 显示了两个容器，每个容器都有一个基于分区键值的逻辑分区。
 
 ![Cosmos DB 分区机制](./media/cosmos-db-partitioning.png)
 
-**图 5-18**： Cosmos DB 分区机制
+**图 5-14**： Cosmos DB 分区机制
 
 请注意，上图中的每一项都包含 "city" 或 "机场" 的分区键。 键确定项的逻辑分区。 带有城市代码的项将分配给左侧的容器，将带机场代码的项分配给右侧的容器。 将分区键值与 ID 值组合会创建一个项的索引，该索引将唯一标识该项。
 
@@ -248,16 +258,16 @@ Azure Cosmos DB 采用自动[分区](https://docs.microsoft.com/azure/cosmos-db/
 
 ## <a name="newsql-databases"></a>NewSQL 数据库
 
-*NewSQL* 是一种新兴的数据库技术，它结合了 NoSQL 的分布式可扩展性与关系型数据库的 ACID 保证。 NewSQL 数据库对于必须在跨分布式环境中处理大量数据的业务系统非常重要，具有完整的事务性支持和 ACID 遵从性。 虽然 NoSQL 数据库可以提供巨大的可伸缩性，但它不保证数据一致性。 不一致数据的间歇问题会给开发团队带来负担。 开发人员必须在其微服务代码中构建安全措施，以管理由不一致数据导致的问题。
+*NewSQL*  是一种新兴数据库技术，它结合了 NoSQL 的分布式可扩展性和关系数据库的 ACID 保证。 NewSQL 数据库对于必须在跨分布式环境中处理大量数据的业务系统非常重要，具有完整的事务性支持和 ACID 遵从性。 虽然 NoSQL 数据库可以提供巨大的可伸缩性，但它不保证数据一致性。 不一致数据的间歇问题会给开发团队带来负担。 开发人员必须在其微服务代码中构建安全措施，以管理由不一致数据导致的问题。
 
 云本机计算基础（CNCF）具有多个 NewSQL 数据库项目。
 
-| 项目 | 特征 |
+| Project | 特征 |
 | :-------- | :-------- |
-| 蟑螂 DB |全局缩放的 ACID 规范的关系数据库。 将新节点添加到群集，CockroachDB 负责跨实例和地理区域平衡数据。 它创建、管理和分发副本以确保可靠性。 它是开源的，免费提供。  |
+| 蟑螂 DB |全局缩放的 ACID 兼容的关系数据库。 将新节点添加到群集，CockroachDB 负责跨实例和地理区域平衡数据。 它创建、管理和分发副本以确保可靠性。 它是开源的，免费提供。  |
 | TiDB | 支持混合事务性和分析处理（HTAP）工作负荷的开源数据库。 它是与 MySQL 兼容的功能，可提供水平伸缩性、强一致性和高可用性。  TiDB 的作用类似于 MySQL 服务器。 你可以继续使用现有 MySQL 客户端库，而无需对应用程序进行大量代码更改。 |
 | YugabyteDB | 开源、高性能分布式 SQL 数据库。 它支持较低的查询延迟、针对故障的恢复能力和全局数据分布。 YugabyteDB 是 PostgressSQL 兼容的，可处理横向扩展 RDBMS 和 internet 缩放 OLTP 工作负载。 该产品还支持 NoSQL，并与 Cassandra 兼容。 |
-|Vitess | Vitess 是用于部署、缩放和管理 MySQL 实例的大型群集的数据库解决方案。 它可以在公共或私有云体系结构中运行。 它结合了许多重要的 MySQL 功能和功能，同时提供了垂直和水平分片支持。 源自 YouTube，Vitess 一直在为所有 YouTube 数据库流量提供服务，2011。 |
+|Vitess | Vitess 是用于部署、缩放和管理 MySQL 实例的大型群集的数据库解决方案。 它可以在公共或私有云体系结构中运行。 Vitess 结合了许多重要的 MySQL 功能和功能，同时提供了垂直和水平分片支持。 源自 YouTube，Vitess 一直在为所有 YouTube 数据库流量提供服务，2011。 |
 
 可从云本机计算基础获取上图中的开源项目。 其中三个产品是完整的数据库产品，其中包括 .NET Core 支持。 另一种是 Vitess，它是一种数据库群集系统，可用于水平缩放 MySQL 实例的大型群集。
 

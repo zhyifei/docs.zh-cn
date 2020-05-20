@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4dcc575-3ac8-4453-9be1-2b24f47363d7
 topic_type:
 - apiref
-ms.openlocfilehash: 951fc10a4560e0b4e256312017cdcd9a389f17f5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8b51a9dc3a968c6bd2f5f9b149f13f88dc6a1e05
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427812"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614742"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>ISymUnmanagedWriter::SetUserEntryPoint 方法
 指定用户定义的方法，该方法是此模块的入口点。 例如，在 main 之前，此入口点可能是用户的 main 方法，而不是编译器生成的存根。  
@@ -44,4 +44,4 @@ HRESULT SetUserEntryPoint(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter 接口](isymunmanagedwriter-interface.md)

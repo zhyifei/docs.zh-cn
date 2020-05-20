@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-ms.openlocfilehash: f6a741df3ea57b5e9b4fa8bc5d304bfedd1d6c15
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5730cdd910257d762230f5e54576d5e0a7ac1adb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428010"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614820"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable 方法
-在当前词法范围内定义单个变量。 对于在整个范围内具有多个住宅的同名变量，可以多次调用此方法。 但在这种情况下，`startOffset` 和 `endOffset` 参数的值不得重叠。  
+在当前词法范围内定义单个变量。 对于在整个范围内具有多个住宅的同名变量，可以多次调用此方法。 但在这种情况下， `startOffset` 和参数的值 `endOffset` 不能重叠。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,13 +43,13 @@ HRESULT DefineLocalVariable(
   
 ## <a name="parameters"></a>参数  
  `name`  
- 中一个指针，指向用于定义局部变量名称的 `WCHAR`。  
+ 中指向 `WCHAR` 的指针，该指针定义局部变量的名称。  
   
  `attributes`  
  中局部变量特性。  
   
  `cSig`  
- 中一个 `ULONG32`，指示 `signature` 缓冲区的大小（以字节为单位）。  
+ 中一个 `ULONG32` ，该值指示缓冲区的大小（以字节为单位） `signature` 。  
   
  `signature`  
  中局部变量签名。  
@@ -67,10 +67,10 @@ HRESULT DefineLocalVariable(
  中参数规范的第三个地址。  
   
  `startOffset`  
- 中变量的起始偏移量。 此参数可选。 如果为0，则忽略此参数，并在整个范围内定义变量。 如果它是非零值，则该变量将处于当前范围的偏移量内。  
+ 中变量的起始偏移量。 该参数为可选参数。 如果为0，则忽略此参数，并在整个范围内定义变量。 如果它是非零值，则该变量将处于当前范围的偏移量内。  
   
  `endOffset`  
- 中变量的结束偏移量。 此参数可选。 如果为0，则忽略此参数，并在整个范围内定义变量。 如果它是非零值，则该变量将处于当前范围的偏移量内。  
+ 中变量的结束偏移量。 该参数为可选参数。 如果为0，则忽略此参数，并在整个范围内定义变量。 如果它是非零值，则该变量将处于当前范围的偏移量内。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -80,6 +80,6 @@ HRESULT DefineLocalVariable(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [DefineGlobalVariable 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
-- [DefineLocalVariable2 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-definelocalvariable2-method.md)
+- [ISymUnmanagedWriter 接口](isymunmanagedwriter-interface.md)
+- [DefineGlobalVariable 方法](isymunmanagedwriter-defineglobalvariable-method.md)
+- [DefineLocalVariable2 方法](isymunmanagedwriter2-definelocalvariable2-method.md)

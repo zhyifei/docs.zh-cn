@@ -2,17 +2,15 @@
 title: 云本机通信模式
 description: 了解云本机应用程序中的重要服务通信问题
 author: robvet
-ms.date: 08/31/2019
-ms.openlocfilehash: b3edc0817fb76ad99a1344b17d600eb747187f86
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 3d678df44b5fef68427846e59f446b7408795625
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895633"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614209"
 ---
 # <a name="cloud-native-communication-patterns"></a>云本机通信模式
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 构造云本机系统时，通信成为一项重大设计决策。 前端客户端应用程序如何与后端微服务通信？ 后端微服务如何相互通信？ 在云本机应用程序中实现通信时，应考虑哪些原则、模式和最佳做法？
 

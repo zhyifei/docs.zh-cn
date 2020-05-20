@@ -1,17 +1,15 @@
 ---
 title: 其他容器部署选项
 description: 使用 Azure 的其他容器部署选项
-ms.date: 04/13/2020
-ms.openlocfilehash: 3cae771b3877215a7fc91afd4f406fdfc9ff2771
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: acb022e3d4fd4862c592fa571894e1b8ce17f465
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199997"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613754"
 ---
 # <a name="other-container-deployment-options"></a>其他容器部署选项
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 除了 Azure Kubernetes Service （AKS）以外，还可以为容器和 Azure 容器实例将容器部署到 Azure App Service。
 

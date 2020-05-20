@@ -1,17 +1,15 @@
 ---
 title: 适用于云原生应用的 Azure 安全性
 description: 构建适用于 Azure 的云本机 .NET 应用 |适用于云原生应用的 Azure 安全性
-ms.date: 06/30/2019
-ms.openlocfilehash: 27ef6c8313f1573ca686e8489a84f64a56116fa4
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: a39b64477eb9e896c6603e5609ede653bfee1e07
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394732"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614248"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>适用于云原生应用的 Azure 安全性
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 与传统的应用程序相比，云本机应用程序的安全性更强且更难。 缺点是，需要保护更小的应用程序，并将更多的精力用于构建安全基础结构。 大多数服务部署中的编程语言和样式的异类性质也意味着您需要更多地关注来自许多不同提供商的安全公告。
 

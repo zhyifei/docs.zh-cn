@@ -1,17 +1,15 @@
 ---
 title: 安全性
 description: 构建适用于 Azure 的云本机 .NET 应用 |安全
-ms.date: 06/30/2019
-ms.openlocfilehash: 848255de70038798417a558543d0b1ea8cff1e37
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 05/13/2020
+ms.openlocfilehash: 9afbc2c960fdd16721e1d3aa7fd01d5c0c1fe2f9
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73840993"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613663"
 ---
 # <a name="security"></a>安全性
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 这不是一天，这种情况下，新闻不会包含有关公司遭受黑客攻击或失去其客户数据的某些故事。 即使是国家/地区，也不会受到将安全性视为事后的问题所造成的问题。 多年来，公司已经处理了客户数据的安全问题，事实上，他们的整个网络都是 "良好"。 Windows server 仍处于未修补状态，古版本的 PHP 保持运行状态，并且 MongoDB 数据库在世界各地保持宽。
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a51f1f64-e084-44c5-830c-2222da5a6bbf
 topic_type:
 - apiref
-ms.openlocfilehash: 3bc578be680951a1d41c92fb2169c860882b2e31
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c2cc541b2a78f16d5ca6b19405794faa825a9d72
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448305"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615028"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>ISymUnmanagedReader::GetDocumentVersion 方法
-获取指定文档的指定版本。 文档版本从1开始，并在每次使用[UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)方法更新文档时递增。 如果 `pbCurrent` 参数 `true`，则这是该文档的最新版本。  
+获取指定文档的指定版本。 文档版本从1开始，并在每次使用[UpdateSymbolStore](isymunmanagedreader-updatesymbolstore-method.md)方法更新文档时递增。 如果 `pbCurrent` 参数为 `true` ，则这是最新版本的文档。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ HRESULT GetDocumentVersion (
  弄指向一个变量的指针，该变量接收指定文档的版本。  
   
  `pbCurrent`  
- 弄指向一个变量的指针，该变量接收 `true` 如果这是最新版本的文档，则为; 如果不是最新版本，则为 `false`。  
+ 弄指向一个变量的指针， `true` 如果这是该文档的最新版本，则为; `false` 如果它不是最新版本，则为。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -52,4 +52,4 @@ HRESULT GetDocumentVersion (
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedReader 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader 接口](isymunmanagedreader-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2dd5098-3e58-4be5-b7a2-e4160b3b505a
 topic_type:
 - apiref
-ms.openlocfilehash: b6cf7293f1d65db1f60301f49ce655c74df3daca
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 20bfb3e48f411524bd4d9798f17dd935595a12bb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448314"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615015"
 ---
 # <a name="isymunmanagedreadergetglobalvariables-method"></a>ISymUnmanagedReader::GetGlobalVariables 方法
 返回所有全局变量。  
@@ -37,10 +37,10 @@ HRESULT GetGlobalVariables(
   
 ## <a name="parameters"></a>参数  
  `cVars`  
- 中`pcVars`所指向的缓冲区的长度。  
+ 中所指向的缓冲区的长度 `pcVars` 。  
   
  `pcVars`  
- 弄指向 `ULONG32` 的指针，该指针接收包含变量所需的缓冲区大小。  
+ 弄指向的指针 `ULONG32` ，该指针接收包含变量所需的缓冲区大小。  
   
  `pVars`  
  弄包含变量的缓冲区。  
@@ -53,4 +53,4 @@ HRESULT GetGlobalVariables(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedReader 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader 接口](isymunmanagedreader-interface.md)

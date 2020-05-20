@@ -1,17 +1,15 @@
 ---
 title: 利用无服务器函数
 description: 在云本机应用程序中利用无服务器和 Azure Functions
-ms.date: 04/13/2020
-ms.openlocfilehash: 176499e3cd0349cd689b9d13d1c237a6343d13f3
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 53a0fdd29630b2a4368f3aa37ddfc5f93df10a24
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199737"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613858"
 ---
 # <a name="leveraging-serverless-functions"></a>利用无服务器函数
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 在极大范围内，从管理物理计算机到利用云功能，无服务器生活在极端的位置。 你唯一的责任就是你的代码，你只需在代码运行时付费。 Azure Functions 提供了一种将无服务器功能构建到你的云本机应用程序中的方法。
 
@@ -54,8 +52,8 @@ ms.locfileid: "82199737"
 
 图3-10 显示了冷启动模式。 请注意应用程序冷时所需的额外步骤。
 
-![冷启动](./media/cold-start-warm-start.png)
-**图 3-10**。 冷启动和热启动。
+![冷启动 ](./media/cold-start-warm-start.png)
+ **图 3-10**。 冷启动和热启动。
 
 为了避免冷启动，可能需要从[消耗计划切换到专用计划](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)。 你还可以配置一个或多个具有高级计划升级的[预准备好实例](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances)。 在这些情况下，当你需要添加另一个实例时，该实例已准备就绪，可以继续。 这些选项可帮助减少与无服务器计算相关的冷启动问题。
 

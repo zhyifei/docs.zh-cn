@@ -1,17 +1,15 @@
 ---
 title: 基础结构即代码
 description: 采用云本机应用程序的基础结构即代码（IaC）
-ms.date: 05/12/2020
-ms.openlocfilehash: 309dd8610ab3b72a6c6da5297f109f822520c5ff
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: cfc9e1f0b2733048d5921de5a0400998c282b1fa
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395350"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613949"
 ---
 # <a name="infrastructure-as-code"></a>基础结构即代码
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 云本机系统采用微服务、容器和新式系统设计来实现速度和灵活性。 它们提供自动化的生成和发布阶段，以确保代码的一致性和质量。 但这只是其中的一部分。 如何预配这些系统运行时所用的云环境？
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a8074f1-facc-4a3f-bb9b-d6574fc2fc74
 topic_type:
 - apiref
-ms.openlocfilehash: 9e8139a822c877e70731e18ae5a75b83e6b7578e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 031e9d9434bc655ba8947a2bb6aba56a150e9002
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448953"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614456"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters 方法
 获取此方法的参数。 按参数在方法签名中的定义顺序返回参数。  
@@ -40,7 +40,7 @@ HRESULT GetParameters(
  [in] `params` 数组的大小。  
   
  `pcParams`  
- 中指向 `ULONG32` 的指针，该指针接收包含参数所需的缓冲区大小。  
+ 中指向的指针 `ULONG32` ，该指针接收包含参数所需的缓冲区大小。  
   
  `params`  
  弄指向接收参数的缓冲区的指针。  
@@ -53,4 +53,4 @@ HRESULT GetParameters(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod 接口](isymunmanagedmethod-interface.md)

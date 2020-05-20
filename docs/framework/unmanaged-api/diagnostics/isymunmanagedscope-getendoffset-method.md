@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d0b15c9-8059-435f-9fce-346a08b9bd36
 topic_type:
 - apiref
-ms.openlocfilehash: 25a8188e3ab62c095355b72b3e63e767a6768114
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4d6bd239a15bd196f840007af120cb062499f4c9
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446355"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614846"
 ---
 # <a name="isymunmanagedscopegetendoffset-method"></a>ISymUnmanagedScope::GetEndOffset 方法
 获取此范围的结束偏移量。  
@@ -34,7 +34,7 @@ HRESULT GetEndOffset(
   
 ## <a name="parameters"></a>参数  
  `pRetVal`  
- 弄指向接收结束偏移量的 `ULONG32` 的指针。  
+ 弄指向的指针 `ULONG32` ，该指针接收结束偏移量。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -44,5 +44,5 @@ HRESULT GetEndOffset(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedScope 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [GetStartOffset 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getstartoffset-method.md)
+- [ISymUnmanagedScope 接口](isymunmanagedscope-interface.md)
+- [GetStartOffset 方法](isymunmanagedscope-getstartoffset-method.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 275ef87b-0b53-49f9-af6b-58506335dc06
 topic_type:
 - apiref
-ms.openlocfilehash: 9aace77c4b3549c033433d4c305b07daa1f7a8c1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9a490299c24f44b59da682f714f4b696fde3cba5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448990"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614508"
 ---
 # <a name="isymunmanagedencupdateupdatemethodlines-method"></a>ISymUnmanagedENCUpdate::UpdateMethodLines 方法
 允许更新尚未重新编译但行已单独移动的方法的行信息。 允许每个语句的增量。  
@@ -39,10 +39,10 @@ HRESULT UpdateMethodLines(
  中方法标记的元数据。  
   
  `pDeltas`  
- 中一个 `INT32` 值的数组，该值指示方法中的每个序列点的增量。  
+ 中`INT32`值的数组，指示方法中的每个序列点的增量。  
   
  `cDeltas`  
- 中包含 `pDeltas` 参数大小的 `ULONG`。  
+ 中一个 `ULONG` 包含参数大小的 `pDeltas` 。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -52,4 +52,4 @@ HRESULT UpdateMethodLines(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedENCUpdate 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [ISymUnmanagedENCUpdate 接口](isymunmanagedencupdate-interface.md)

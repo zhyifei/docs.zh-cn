@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a85283d8-379c-417a-9736-ddeeef9bcf50
 topic_type:
 - apiref
-ms.openlocfilehash: 1f1bd9c33f24847eae4ff7d26c5b996cd34afb72
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cd5d1f2d59d3e55ba454f23d2e5dd4b1316c0df4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448935"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615171"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges 方法
 给定文档中的某个位置后，将返回与该位置涵盖在此方法中的 Microsoft 中间语言（MSIL）范围对应的起始和结束偏移量对的数组。 数组是整数数组，格式为 [开始、结束、启动、结束]。 范围对的数目是数组的长度除以2。  
@@ -52,7 +52,7 @@ HRESULT GetRanges(
  [in] `ranges` 数组的大小。  
   
  `pcRanges`  
- 弄指向 `ULONG32` 的指针，该指针接收包含范围所需的缓冲区大小。  
+ 弄指向的指针 `ULONG32` ，该指针接收包含范围所需的缓冲区大小。  
   
  `ranges`  
  弄指向接收范围的缓冲区的指针。  
@@ -65,4 +65,4 @@ HRESULT GetRanges(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod 接口](isymunmanagedmethod-interface.md)

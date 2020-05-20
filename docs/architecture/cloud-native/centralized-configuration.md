@@ -1,17 +1,15 @@
 ---
 title: 集中式配置
 description: 使用 Azure 应用配置和 AzureKey 保管库集中使用云本机应用程序的配置。
-ms.date: 04/19/2020
-ms.openlocfilehash: 53bdc03370b04af4d830fe7abbd8aebad81e9650
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: d389d29dcdb1db5162d95370d181ab5a85d72dc8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895659"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614222"
 ---
 # <a name="centralized-configuration"></a>集中式配置
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 不同于单个应用，其中的所有内容都在单个实例中运行，云本机应用程序由跨虚拟机、容器和地理区域分布的独立服务构成。 管理数十个相互依赖的服务的配置设置可能非常困难。 不同位置上的配置设置重复的副本容易出错并且难于管理。 集中式配置是分布式云本机应用程序的关键要求。
 

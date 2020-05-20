@@ -1,17 +1,15 @@
 ---
 title: 云本机应用程序捆绑包
 description: 构建适用于 Azure 的云本机 .NET 应用 |云本机应用程序捆绑包
-ms.date: 05/12/2020
-ms.openlocfilehash: c16a9cba1fe31e025532ba98d644114a319bb9de
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: fc6ee96078650dccd2ebeb3e65a0a00c4e05ecdb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395487"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614339"
 ---
 # <a name="cloud-native-application-bundles"></a>云本机应用程序捆绑包
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 云本机应用程序的一个关键属性是，它们利用云的功能加快开发速度。 此设计通常意味着完整应用程序使用不同种类的技术。 应用程序可以在 Docker 容器中提供，某些服务可能使用 Azure Functions，而其他部分则可能会直接在具有硬件 GPU 加速功能的大型金属服务器上运行的虚拟机上运行。 没有两个云本机应用程序是相同的，因此很难提供单一机制来传送它们。
 

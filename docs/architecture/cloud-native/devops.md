@@ -1,17 +1,15 @@
 ---
 title: DevOps
 description: 云本机应用程序的 DevOps 注意事项
-ms.date: 05/12/2020
-ms.openlocfilehash: 498ce64c3a387433862142826059b4f7e513ec7b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: ce814595245d49e409e780cb0f63c436299c2e4e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395770"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614107"
 ---
 # <a name="devops"></a>DevOps
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 软件顾问最喜爱的口头禅是解答 "这一问题，它取决于所提出的任何问题。 这并不是因为软件顾问喜欢不是一个位置。 这是因为软件中的任何问题都没有真正的答案。 没有绝对权限和错误，而是相对之间的平衡。
 

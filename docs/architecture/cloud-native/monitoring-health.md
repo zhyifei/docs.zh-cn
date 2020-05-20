@@ -1,17 +1,15 @@
 ---
 title: 监视和运行状况
 description: 监视和运行状况
-ms.date: 09/23/2019
-ms.openlocfilehash: 6274040318b5442478e9cc291c4f223bdf533110
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 05/13/2020
+ms.openlocfilehash: 28e98bbdb39a68d8961d4f3ab48cde5a07a4762b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73842019"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613793"
 ---
 # <a name="monitoring-and-health"></a>监视和运行状况
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 微服务和云本机应用程序具有良好的 DevOps 做法。 对于许多人来说，DevOps 很多，但也许是从云拥护者和 DevOps 布道师 Donovan 棕色获得更好的定义之一：
 

@@ -1,17 +1,16 @@
 ---
 title: Azure 平台复原
 description: 构建适用于 Azure 的云本机 .NET 应用 |Azure 的云基础结构复原
-ms.date: 06/30/2019
-ms.openlocfilehash: 8b33c1cec1633c9fb25ae2b02e51f8be01c22941
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+author: robvet
+ms.date: 05/13/2020
+ms.openlocfilehash: 752f1320d9dfa18e52b078763d221a787da15e8e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337380"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613975"
 ---
 # <a name="azure-platform-resiliency"></a>Azure 平台复原
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 在云中生成可靠应用程序不同于传统的本地应用程序开发。 尽管在以前的环境中购买了更高端的硬件，但在云环境中进行了扩展。目标是最大程度地降低其效果并使系统保持稳定，而不是尝试防止故障。
 
@@ -22,31 +21,45 @@ ms.locfileid: "75337380"
 
 了解这些特性如何协同工作，以及它们如何影响成本，对于构建可靠的云本机应用程序至关重要。 接下来，我们将看看如何利用 Azure 云中的功能，在云本机应用程序中构建复原能力和可用性。
 
+## <a name="design-with-resiliency"></a>具有复原能力的设计
+
+我们已经说过复原功能，使应用程序能够应对故障并仍能正常工作。 白皮书（ [Azure 白皮书中的复原能力](https://azure.microsoft.com/mediahandler/files/resourcefiles/resilience-in-azure-whitepaper/Resilience%20in%20Azure.pdf)）提供了在 azure 平台中实现复原能力的指导。 下面是一些关键建议：
+
+- *硬件故障。* 通过在不同的容错域中部署组件，在应用程序中构建冗余。 例如，使用可用性集确保将 Azure Vm 放在不同的机架中。
+
+- *数据中心故障。* 通过跨数据中心的容错隔离区，在应用程序中构建冗余。 例如，通过使用 Azure 可用性区域确保将 Azure Vm 放置在不同的故障隔离数据中心。
+
+- *区域性故障。* 将数据和组件复制到另一个区域，以便能够快速恢复应用程序。 例如，使用 Azure Site Recovery 将 Azure Vm 复制到另一 Azure 区域。
+
+- *重负载。* 在实例之间进行负载平衡，处理高峰使用量。 例如，将两个或多个 Azure Vm 放在负载均衡器后面，以将流量分配到所有 Vm。
+
+- *意外的数据删除或损坏。* 备份数据，以便在发生任何删除或损坏时可以将其还原。 例如，使用 Azure 备份定期备份 Azure Vm。
+
 ## <a name="design-with-redundancy"></a>具有冗余的设计
 
 故障的影响范围有所不同。 硬件故障（例如磁盘故障）可能会影响群集中的单个节点。 网络交换机故障可能会影响整个服务器机架。 不太常见的故障（例如断电）可能会中断整个数据中心。 很少会出现整个区域不可用的情况。
 
-[冗余](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy)是提供应用程序复原能力的一种方法。 所需的确切冗余级别取决于你的业务需求，并将影响系统的成本和复杂性。 例如，多区域部署比单区域部署更昂贵且更复杂。 你将需要操作过程来管理故障转移和故障回复。 可能为一些业务方案（而不是其他方案）考虑额外的成本和复杂性。
+[冗余](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy)是提供应用程序复原能力的一种方法。 所需的确切冗余级别取决于你的业务需求，并将影响系统的成本和复杂性。 例如，多区域部署比单区域部署更昂贵且更复杂。 你将需要操作过程来管理故障转移和故障回复。 对于某些业务方案，而不是其他业务方案，可能会增加额外的成本和复杂性。
 
 若要构建冗余，需要确定应用程序中的关键路径，然后确定路径中每个点是否有冗余？ 如果子系统应失败，应用程序是否会故障转移到其他内容？ 最后，你需要清楚地了解内置于 Azure 云平台的功能，你可以利用这些功能满足你的冗余要求。 下面是用于构建冗余的建议：
 
-- *部署服务的多个实例。* 如果应用程序依赖于服务的单个实例，则会造成单一故障点。 预配多个实例能够提高复原能力和可伸缩性。 在 Azure Kubernetes 服务中托管时，可以通过声明方式在 Kubernetes 清单文件中配置冗余实例（副本集）。 可以通过编程方式、在门户中或通过自动缩放功能（稍后将对此进行讨论）对副本计数值进行管理。
+- *部署服务的多个实例。* 如果应用程序依赖于服务的单个实例，则会造成单一故障点。 预配多个实例能够提高复原能力和可伸缩性。 在 Azure Kubernetes 服务中托管时，可以通过声明方式在 Kubernetes 清单文件中配置冗余实例（副本集）。 可以通过编程方式、在门户中或通过自动缩放功能来管理副本计数值。
 
 - *利用负载均衡器。* 负载平衡将应用程序的请求分发到正常服务实例，并自动从旋转中删除不正常的实例。 部署到 Kubernetes 时，可以在 "服务" 部分的 Kubernetes 清单文件中指定负载平衡。
 
-- *规划多区域部署。* 如果你的应用程序部署到单个区域，并且该区域变为不可用，则你的应用程序也会变得不可用。 在应用程序的服务级别协议条款下，这可能是不可接受的。 请考虑跨多个区域部署应用程序及其服务。 例如，Azure Kubernetes Service （AKS）群集部署到单个区域。 为了保护系统免受区域性故障的危害，你可以将应用程序部署到跨不同区域的多个 AKS 群集，并使用[配对区域](https://buildazure.com/2017/01/06/azure-region-pairs-explained/)功能来协调平台更新并设置恢复工作的优先级。
+- *规划多区域部署。* 如果将应用程序部署到单个区域，并且该区域变得不可用，应用程序也会变得不可用。 在应用程序的服务级别协议条款下，这可能是不可接受的。 请考虑跨多个区域部署应用程序及其服务。 例如，Azure Kubernetes Service （AKS）群集部署到单个区域。 为了保护系统免受区域性故障的危害，你可以将应用程序部署到跨不同区域的多个 AKS 群集，并使用[配对区域](https://buildazure.com/2017/01/06/azure-region-pairs-explained/)功能来协调平台更新并设置恢复工作的优先级。
 
-- *启用[异地复制](https://docs.microsoft.com/azure/sql-database/sql-database-active-geo-replication)。* 适用于 Azure SQL 数据库和 Cosmos DB 等服务的异地复制将跨多个区域创建数据的次要副本。 尽管这两种服务都将自动复制同一区域内的数据，但异地复制可让你在故障转移到次要区域时防止出现区域性中断。 异地复制的另一种最佳做法是存储容器映像。 若要在 AKS 中部署服务，需要存储存储库中的映像并将其从存储库中提取。 Azure 容器注册表与 AKS 集成，可以安全地存储容器映像。 若要提高性能和可用性，请考虑将映像异地复制到每个区域中有 AKS 群集的注册表。 然后，每个 AKS 群集从其区域中的本地容器注册表中提取容器映像，如图6-6 所示：
+- *启用[异地复制](https://docs.microsoft.com/azure/sql-database/sql-database-active-geo-replication)。* 适用于 Azure SQL 数据库和 Cosmos DB 等服务的异地复制将跨多个区域创建数据的次要副本。 尽管这两种服务都将自动复制同一区域内的数据，但异地复制可让你在故障转移到次要区域时防止出现区域性中断。 异地复制的另一种最佳做法是存储容器映像。 若要在 AKS 中部署服务，需要存储存储库中的映像并将其从存储库中提取。 Azure 容器注册表与 AKS 集成，可以安全地存储容器映像。 若要提高性能和可用性，请考虑将映像异地复制到每个区域中有 AKS 群集的注册表。 然后，每个 AKS 群集从其区域中的本地容器注册表中提取容器映像，如图6-4 所示：
 
 ![跨区域复制的资源](./media/replicated-resources.png)
 
-图 6-6。 跨区域复制的资源
+**图 6-4**。 跨区域复制的资源
 
-- *实现 DNS 流量负载均衡器。* [Azure 流量管理器](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)通过 DNS 级别的负载均衡为关键应用程序提供高可用性。 它可以根据地理位置、群集响应时间甚至应用程序终结点运行状况，将流量路由到不同区域。 例如，Azure 流量管理器可以将客户定向到最近的 AKS 群集和应用程序实例。 如果在不同区域有多个 AKS 群集，请使用流量管理器控制流量如何流向每个群集中运行的应用程序。 图6-7 显示了这种情况。
+- *实现 DNS 流量负载均衡器。* [Azure 流量管理器](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)通过 DNS 级别的负载均衡为关键应用程序提供高可用性。 它可以根据地理位置、群集响应时间甚至应用程序终结点运行状况，将流量路由到不同区域。 例如，Azure 流量管理器可以将客户定向到最近的 AKS 群集和应用程序实例。 如果在不同的区域中创建了多个 AKS 群集，请使用流量管理器控制如何将流量传送到每个群集中运行的应用程序。 图6-5 显示了这种情况。
 
 ![AKS 和 Azure 流量管理器](./media/aks-traffic-manager.png)
 
-图 6-7。 AKS 和 Azure 流量管理器
+图 6-5****。 AKS 和 Azure 流量管理器
 
 ## <a name="design-for-scalability"></a>可伸缩性设计
 
@@ -56,11 +69,11 @@ ms.locfileid: "75337380"
 
 - 对*工作负荷进行分区*。 分解域转换为独立的独立微服务，使每个服务可以独立于其他服务进行缩放。 通常，服务具有不同的可伸缩性需求和要求。 利用分区，你只需缩放需要缩放的内容，而无需对整个应用程序进行缩放。
 
-- *优选横向扩展。* 基于云的应用程序倾向于横向扩展资源，而不是纵向扩展。 横向扩展（也称为水平缩放）涉及到将更多服务资源添加到现有系统以满足并共享所需的性能级别。 向上缩放（也称为垂直缩放）涉及到用功能更强大的硬件（更多的磁盘、内存和处理核心）替换现有资源。 可以使用某些 Azure 云资源中提供的自动缩放功能来自动调用横向扩展。 跨多个资源横向扩展还会增加整个系统的冗余性。 最后，增加单个资源通常比在多个较小的资源上横向扩展更昂贵。 图6-8 显示了两种方法：
+- *优选横向扩展。* 基于云的应用程序倾向于横向扩展资源，而不是纵向扩展。 横向扩展（也称为水平缩放）涉及到将更多服务资源添加到现有系统以满足并共享所需的性能级别。 向上缩放（也称为垂直缩放）涉及到用功能更强大的硬件（更多的磁盘、内存和处理核心）替换现有资源。 可以使用某些 Azure 云资源中提供的自动缩放功能来自动调用横向扩展。 跨多个资源横向扩展还会增加整个系统的冗余性。 最后，增加单个资源通常比在多个较小的资源上横向扩展更昂贵。 图6-6 显示了两种方法：
 
 ![向上缩放和向外缩放](./media/scale-up-scale-out.png)
 
-**图6-8。** 向上缩放和向外缩放
+**图6-6。** 向上缩放和向外缩放
 
 - *按比例缩放。* 缩放服务时，请考虑*资源集*。 如果要大幅扩展特定服务，对后端数据存储、缓存和依赖服务有什么影响？ 某些资源（如 Cosmos DB）可以按比例横向扩展，而其他资源则不能。 需要确保不会将资源扩展到将耗尽其他关联资源的点。
 
@@ -74,15 +87,15 @@ ms.locfileid: "75337380"
 
 我们建议在前面的部分中实现编程重试操作的最佳做法。 请记住，许多 Azure 服务及其对应的客户端 Sdk 还包括重试机制。 以下列表汇总了本书所述的许多 Azure 服务中的重试功能：
 
-- *Azure Cosmos DB。* 来自客户端 API 的 <xref:Microsoft.Azure.Documents.Client.DocumentClient> 类将自动停用失败的尝试。 重试次数和最长等待时间是可配置的。 客户端 API 引发的异常可能是超过重试策略或非暂时性错误的请求。
+- *Azure Cosmos DB。* <xref:Microsoft.Azure.Documents.Client.DocumentClient>来自客户端 API 的类将自动停用失败的尝试。 重试次数和最长等待时间是可配置的。 客户端 API 引发的异常可能是超过重试策略或非暂时性错误的请求。
 
 - *Azure Redis 缓存。* Redis Stackexchange.redis 客户端使用连接管理器类，其中包含尝试失败时的重试次数。 重试次数、特定的重试策略和等待时间都是可配置的。
 
-- *Azure 服务总线。* 服务总线客户端公开[RetryPolicy 类，该类](xref:Microsoft.ServiceBus.RetryPolicy)可以使用后向后间隔、重试次数和 <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer%2A>来配置，该操作指定操作可采用的最长时间。 默认策略为9次最大重试次数，两次尝试之间的回退时间间隔为30秒。
+- *Azure 服务总线。* 服务总线客户端公开[RetryPolicy 类，该类](xref:Microsoft.ServiceBus.RetryPolicy)可以使用后向后间隔、重试次数和 <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer%2A> （指定操作可以执行的最大时间）进行配置。 默认策略为9次最大重试次数，两次尝试之间的回退时间间隔为30秒。
 
 - *Azure SQL 数据库。* 使用[Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)库时，将提供重试支持。
 
-- Azure 存储。 存储客户端库支持重试操作。 每个 Azure 存储表、blob 和队列的策略各不相同。 同时，当启用异地冗余功能时，备用重试会在主要和辅助存储服务位置之间切换。
+- *Azure 存储。* 存储客户端库支持重试操作。 每个 Azure 存储表、blob 和队列的策略各不相同。 同时，当启用异地冗余功能时，备用重试会在主要和辅助存储服务位置之间切换。
 
 - *Azure 事件中心。* 事件中心客户端库具有 RetryPolicy 属性，该属性包含可配置的指数回退功能。
 

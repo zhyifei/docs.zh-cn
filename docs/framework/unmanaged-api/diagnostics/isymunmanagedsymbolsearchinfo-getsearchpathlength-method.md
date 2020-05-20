@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 274e73cf-8333-47ba-ac12-70214e2b0112
 topic_type:
 - apiref
-ms.openlocfilehash: 319ba58b5d012cbc0f9ddac0b83e5f3ae2ae062a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0be7297fbb71302035e71fbbf2c8b5e2a7faa2da
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446179"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615288"
 ---
 # <a name="isymunmanagedsymbolsearchinfogetsearchpathlength-method"></a>ISymUnmanagedSymbolSearchInfo::GetSearchPathLength 方法
 获取搜索路径长度。  
@@ -34,7 +34,7 @@ HRESULT GetSearchPathLength(
   
 ## <a name="parameters"></a>参数  
  `pcchPath`  
- 弄指向 `ULONG32` 的指针，该指针接收包含搜索路径长度所需的缓冲区大小（以字符数表示）。  
+ 弄指向的指针， `ULONG32` 该指针接收包含搜索路径长度所需的缓冲区大小（以字符数表示）。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -44,4 +44,4 @@ HRESULT GetSearchPathLength(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedSymbolSearchInfo 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
+- [ISymUnmanagedSymbolSearchInfo 接口](isymunmanagedsymbolsearchinfo-interface.md)

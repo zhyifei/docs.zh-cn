@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d58caac-2e75-4dfa-9249-32d8a624b247
 topic_type:
 - apiref
-ms.openlocfilehash: c956f5d68c992f1b08988e59038e8667b391f734
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 650a64e72b410cddfbee7dce676ddbb5a3b8b3d3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448913"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614443"
 ---
 # <a name="isymunmanagedmethodgetrootscope-method"></a>ISymUnmanagedMethod::GetRootScope 方法
 获取此方法内的根词法范围。 此范围包括整个方法。  
@@ -34,7 +34,7 @@ HRESULT GetRootScope(
   
 ## <a name="parameters"></a>参数  
  `pRetVal`  
- 弄设置为返回的[ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)接口的指针。  
+ 弄设置为返回的[ISymUnmanagedScope](isymunmanagedscope-interface.md)接口的指针。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -44,4 +44,4 @@ HRESULT GetRootScope(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod 接口](isymunmanagedmethod-interface.md)

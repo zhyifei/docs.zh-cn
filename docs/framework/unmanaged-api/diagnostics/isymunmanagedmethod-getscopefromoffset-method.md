@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d14cf210-81f8-46e1-8b19-6ddec0ba8b11
 topic_type:
 - apiref
-ms.openlocfilehash: 36b1b2394907f242c0e8c5e277c0d1c5b3b02e1b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4eefd019280f501a6ce194e5ce84388e32cc66e1
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448898"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615132"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>ISymUnmanagedMethod::GetScopeFromOffset 方法
 获取此方法内包含给定偏移量的最封闭的词法范围。 这可用于启动本地变量搜索。  
@@ -35,10 +35,10 @@ HRESULT GetScopeFromOffset(
   
 ## <a name="parameters"></a>参数  
  `offset`  
- 中一个包含偏移量的 `ULONG`。  
+ 中一个 `ULONG` 包含偏移量的。  
   
  `pRetVal`  
- 弄设置为返回的[ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)接口的指针。  
+ 弄设置为返回的[ISymUnmanagedScope](isymunmanagedscope-interface.md)接口的指针。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -48,4 +48,4 @@ HRESULT GetScopeFromOffset(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod 接口](isymunmanagedmethod-interface.md)

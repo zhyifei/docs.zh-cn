@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-ms.openlocfilehash: 7eea63cae27c08260177dfc7746046b975434611
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: aba551a1973a41a909869316cda07e8d655e9882
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428034"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614833"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField 方法
 定义不在方法中的单个变量。 此方法用于类中的某些字段、位域等。  
@@ -51,7 +51,7 @@ HRESULT DefineField(
  中字段特性。  
   
  `cSig`  
- 中一个 `ULONG32`，它是包含字段签名所需的缓冲区大小（以字符数表示）。  
+ 中一个 `ULONG32` ，它是包含字段签名所需的缓冲区大小（以字符数表示）。  
   
  `signature`  
  中字段签名的数组。  
@@ -76,4 +76,4 @@ HRESULT DefineField(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter 接口](isymunmanagedwriter-interface.md)

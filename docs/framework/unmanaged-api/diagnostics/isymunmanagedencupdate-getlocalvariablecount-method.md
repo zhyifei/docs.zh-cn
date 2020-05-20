@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9777d8bb-4abc-4be8-aa7c-34f853eceb9c
 topic_type:
 - apiref
-ms.openlocfilehash: cba4af737cc6a6441d38ba0f940fffe54f5c4f09
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d04c9865d8272bf8d04080f6049ddfb1d4c643bb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449062"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614573"
 ---
 # <a name="isymunmanagedencupdategetlocalvariablecount-method"></a>ISymUnmanagedENCUpdate::GetLocalVariableCount 方法
 获取局部变量的数目。  
@@ -38,7 +38,7 @@ HRESULT GetLocalVariableCount(
  中方法的元数据标记。  
   
  `pcLocals`  
- 弄指向 `ULONG32` 的指针，该指针接收包含局部变量数所需的缓冲区大小（以字符数表示）。  
+ 弄指向的指针， `ULONG32` 该指针接收包含局部变量数所需的缓冲区大小（以字符数表示）。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -48,4 +48,4 @@ HRESULT GetLocalVariableCount(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedENCUpdate 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [ISymUnmanagedENCUpdate 接口](isymunmanagedencupdate-interface.md)

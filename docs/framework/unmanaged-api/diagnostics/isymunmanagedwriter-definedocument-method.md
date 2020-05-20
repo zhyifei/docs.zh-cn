@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3bf15b0-3250-4bbe-b9b5-c5d695289b6f
 topic_type:
 - apiref
-ms.openlocfilehash: 02b270677131d0960db67b0ac8db38cba2b5e2df
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fdcfb0c4f9c21eb516f4196d0c8f682669468219
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428056"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615223"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument 方法
 定义源文档。 为已知语言、供应商和文档类型提供了 Guid。  
@@ -38,7 +38,7 @@ HRESULT DefineDocument(
   
 ## <a name="parameters"></a>参数  
  `url`  
- 中指向 `WCHAR` 的指针，该指针定义标识文档的统一资源定位器（URL）。  
+ 中指向的指针 `WCHAR` ，该指针定义标识文档的统一资源定位器（URL）。  
   
  `language`  
  中指向定义文档语言的 GUID 的指针。  
@@ -50,7 +50,7 @@ HRESULT DefineDocument(
  中指向定义文档类型的 GUID 的指针。  
   
  `pRetVal`  
- 弄指向返回的[ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)接口的指针。  
+ 弄指向返回的[ISymUnmanagedWriter](isymunmanagedwriter-interface.md)接口的指针。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -60,4 +60,4 @@ HRESULT DefineDocument(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter 接口](isymunmanagedwriter-interface.md)

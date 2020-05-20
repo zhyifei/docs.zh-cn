@@ -1,17 +1,16 @@
 ---
-title: 功能标志
+title: 特性标志
 description: 利用 Azure 应用 Config 实现云本机应用程序中的功能标志
-ms.date: 05/03/2020
-ms.openlocfilehash: 72e1bfe777854a74fcac926811caf97e59986146
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+author: robvet
+ms.date: 05/13/2020
+ms.openlocfilehash: 607bd14a415a25b382f550e697542cf749a21772
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83398319"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614066"
 ---
-# <a name="feature-flags"></a>功能标志
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="feature-flags"></a>特性标志
 
 第1章介绍了云本机的 affirmed，这就是速度和灵活性。 用户需要快速响应、创新的功能和零停机时间。 `Feature flags`是一种新式部署技术，有助于提高云本机应用程序的灵活性。 使用这些功能，您可以将新功能部署到生产环境中，但限制其可用性。 通过使用开关，你可以为特定用户激活一项新功能，而无需重新启动应用程序或部署新代码。 它们将新功能的发布与代码部署分离。
 

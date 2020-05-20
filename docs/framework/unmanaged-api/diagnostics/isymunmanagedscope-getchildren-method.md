@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bed524e-cc48-4bf0-b9fa-25d665e63ddb
 topic_type:
 - apiref
-ms.openlocfilehash: c7e9d2fe94c33127d8b105333ad6dac9d6cc5af6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c6d21f40c260890c9c88dcdfccd7e31161024ba3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446370"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614859"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>ISymUnmanagedScope::GetChildren 方法
 获取此作用域的子级。  
@@ -37,10 +37,10 @@ HRESULT GetChildren(
   
 ## <a name="parameters"></a>参数  
  `cChildren`  
- 中一个 `ULONG32`，指示 `children` 数组的大小。  
+ 中`ULONG32`指示数组大小的 `children` 。  
   
  `pcChildren`  
- 弄指向 `ULONG32` 的指针，该指针接收包含子级所需的缓冲区大小。  
+ 弄指向的指针 `ULONG32` ，该指针接收包含子级所需的缓冲区大小。  
   
  `children`  
  弄返回的子元素数组。  
@@ -53,5 +53,5 @@ HRESULT GetChildren(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedScope 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [GetParent 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)
+- [ISymUnmanagedScope 接口](isymunmanagedscope-interface.md)
+- [GetParent 方法](isymunmanagedscope-getparent-method.md)

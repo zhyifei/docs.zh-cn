@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea9d9af-8709-4a46-872b-f54d9e840088
 topic_type:
 - apiref
-ms.openlocfilehash: da2906187c02bbc7a35c937663e3fc7db1ebda13
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 48c50ac6be6d525676d85578e5a55a27104c180a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433885"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615093"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>ISymUnmanagedNamespace::GetNamespaces 方法
 获取此命名空间的子级。  
@@ -37,10 +37,10 @@ HRESULT GetNamespaces(
   
 ## <a name="parameters"></a>参数  
  `cNameSpaces`  
- 中一个 `ULONG32`，指示 `namespaces` 数组的大小。  
+ 中`ULONG32`指示数组大小的 `namespaces` 。  
   
  `pcNameSpaces`  
- 弄指向 `ULONG32` 的指针，该指针接收包含命名空间所需的缓冲区大小（以字符数表示）。  
+ 弄指向的指针， `ULONG32` 该指针接收包含命名空间所需的缓冲区大小（以字符数表示）。  
   
  `namespaces`  
  弄指向包含命名空间的缓冲区的指针。  
@@ -53,4 +53,4 @@ HRESULT GetNamespaces(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedNamespace 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [ISymUnmanagedNamespace 接口](isymunmanagednamespace-interface.md)

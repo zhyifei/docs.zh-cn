@@ -1,17 +1,15 @@
 ---
 title: 利用容器和协调器
 description: 利用 Azure 中的 Docker 容器和 Kubernetes 协调器
-ms.date: 04/13/2020
-ms.openlocfilehash: 64c6c0666398d9ccbc87efad18017bf278568fc4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 5d0b7f41caecb3422a4416514de2fdd54e94539a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895551"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613878"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>利用容器和协调器
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 容器和协调器旨在解决单一部署方法常见的问题。
 
@@ -19,7 +17,7 @@ ms.locfileid: "82895551"
 
 传统上，大多数应用程序都部署为单个单元。 此类应用程序称为单体架构。 这种将应用程序作为单一单元进行部署的通用方法，即使它们由多个模块或程序集组成，也称为单片体系结构，如图3-1 所示。
 
-![整体体系结构。](./media/monolithic-architecture.png)
+![整体体系结构。](./media/monolithic-design.png)
 
 **图 3-1**。 整体体系结构。
 
@@ -57,8 +55,9 @@ Docker 是最常用的容器管理平台。 它可与 Linux 或 Windows 上的�
 
 容器是不可变的。 定义容器后，可以完全相同的方式重新创建和运行。 这种不可变性适用于基于组件的设计。 如果应用程序的某些部分的演化不同于其他部分，那么当你只是部署最常发生变化的部件时，为什么会重新部署整个应用？ 应用的不同功能和交叉切削问题可以分解为单独的单位。 图3-2 显示了单一应用程序如何通过委托某些功能来利用容器和微服务。 应用程序本身中的其余功能也已容器化。
 
-![分解单一应用程序以在后端使用微服务。](./media/breaking-up-monolith-with-backend-microservices.png)
-**图 3-2**。 分解单一应用程序以在后端使用微服务。
+![分解单一应用程序以在后端使用微服务。](./media/cloud-native-design.png)
+
+**图 3-2**。 分解应用以接纳微服务。
 
 每个云本机服务都在单独的容器中生成和部署。 每个都可以根据需要进行更新。 可以在节点上托管单个服务，每个服务都有相应的资源。 每个服务的运行环境是不可变的，在开发、测试和生产环境之间共享，并且易于版本化。 应用程序的不同区域之间的耦合与服务间的调用或消息（而不是单体架构中的编译时依赖关系）显式发生。 你还可以选择最能充分利用给定功能的技术，无需更改应用程序的其余部分。
 
@@ -100,7 +99,7 @@ AKS 是一种基于群集的技术。 联合虚拟机或节点的池部署到 Az
 
 基于容器构建的服务可以利用 Kubernetes 等业务流程工具提供的缩放权益。 设计容器仅知道自己的情况。 如果有多个需要协同工作的容器，则应将其组织在更高的级别。 组织大量的容器及其共享依赖项（如网络配置）是业务流程工具在其中节省时间的地方！ Kubernetes 在一组容器上创建一个抽象层，然后将它们*组织到 pod*。 Pod 在称为*节点*的辅助角色计算机上运行。 此组织结构称为*群集*。 图3-3 显示了 Kubernetes 群集的不同组件。
 
-![Kubernetes 群集组件。](./media/kubernetes-cluster-components.png)
+![Kubernetes 群集组件。 ](./media/kubernetes-cluster-components.png)
 **图 3-3**。 Kubernetes 群集组件。
 
 缩放容器化工作负荷是容器协调器的一项重要功能。 AKS 支持跨两个维度的自动缩放：容器实例和计算节点。 它们共同使 AKS 能够快速有效地响应需求高峰并增加额外资源。 本章稍后将讨论 AKS 中的扩展。
@@ -111,7 +110,7 @@ Kubernetes 支持声明性和命令性配置。 命令式方法涉及运行各�
 
 命令性命令非常适用于学习和交互式试验。 但是，你将需要以声明方式创建 Kubernetes 清单文件，以将基础结构作为代码方法，从而提供可靠且可重复的部署。 清单文件将成为项目项目，并在 CI/CD 管道中用于自动执行 Kubernetes 部署。
 
-如果已使用命令性命令配置了群集，则可以使用`kubectl get svc SERVICENAME -o yaml > service.yaml`导出声明性清单。 此命令生成类似于下面所示的清单：
+如果已使用命令性命令配置了群集，则可以使用导出声明性清单 `kubectl get svc SERVICENAME -o yaml > service.yaml` 。 此命令生成类似于下面所示的清单：
 
 ```yaml
 apiVersion: v1
@@ -139,7 +138,7 @@ status:
   loadBalancer: {}
 ```
 
-使用声明性配置时，你可以在使用配置文件所在的文件夹上使用`kubectl diff -f FOLDERNAME`来预览将进行的更改。 确定要应用所做的更改后，运行`kubectl apply -f FOLDERNAME`。 添加`-R`以递归方式处理文件夹层次结构。
+使用声明性配置时，你可以在使用 `kubectl diff -f FOLDERNAME` 配置文件所在的文件夹上使用来预览将进行的更改。 确定要应用所做的更改后，运行 `kubectl apply -f FOLDERNAME` 。 添加 `-R` 以递归方式处理文件夹层次结构。
 
 你还可以将声明性配置用于其他 Kubernetes 功能，其中一项是部署。 声明性部署可帮助管理版本、更新和缩放。 它们指示 Kubernetes 部署控制器如何部署新更改、扩大负载或回滚到以前的修订版本。 如果群集不稳定，则声明性部署会自动将群集恢复到所需状态。 例如，如果某个节点出现故障，部署机制将重新部署替代以实现所需状态
 
@@ -181,7 +180,7 @@ Kubernetes 部署在生产环境中提供了极大的价值，但也可以在开
 - 启用容器网络接口（CNI）
 - 流入量
 
-安装 Minikube 后，可以通过运行`minikube start`命令快速开始使用它，这会下载映像并启动本地 Kubernetes 群集。 启动群集后，你可以使用标准 Kubernetes `kubectl`命令与它交互。
+安装 Minikube 后，可以通过运行命令快速开始使用它 `minikube start` ，这会下载映像并启动本地 Kubernetes 群集。 启动群集后，你可以使用标准 Kubernetes 命令与它交互 `kubectl` 。
 
 ### <a name="docker-desktop"></a>Docker Desktop
 
@@ -201,29 +200,29 @@ Visual Studio 支持基于 web 的应用程序的 Docker 开发。 创建新的 
 
 **图 3-5**。 Visual Studio 启用 Docker 支持
 
-如果选择此选项，则会`Dockerfile`在其根中创建项目，该项目可用于在 Docker 容器中生成和托管应用。 图 3-6 中显示了一个示例 Dockerfile
+如果选择此选项，则会 `Dockerfile` 在其根中创建项目，该项目可用于在 Docker 容器中生成和托管应用。 图 3-6 中显示了一个示例 Dockerfile
 
 ```docker
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-stretch-slim AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0-stretch AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["WebApplication3/WebApplication3.csproj", "WebApplication3/"]
-RUN dotnet restore "WebApplication3/WebApplication3.csproj"
+COPY ["eShopWeb/eShopWeb.csproj", "eShopWeb/"]
+RUN dotnet restore "eShopWeb/eShopWeb.csproj"
 COPY . .
-WORKDIR "/src/WebApplication3"
-RUN dotnet build "WebApplication3.csproj" -c Release -o /app
+WORKDIR "/src/eShopWeb"
+RUN dotnet build "eShopWeb.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "WebApplication3.csproj" -c Release -o /app
+RUN dotnet publish "eShopWeb.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "WebApplication3.dll"]
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "eShopWeb.dll"]
 ```
 
 **图 3-6**。 Visual Studio 生成的 Dockerfile
@@ -236,13 +235,17 @@ ENTRYPOINT ["dotnet", "WebApplication3.dll"]
 
 除了本地开发外， [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/)为多个开发人员提供了一种方便的方法，以便在 Azure 中使用自己的 Kubernetes 配置。 如图3-7 所示，还可以在 Azure Dev Spaces 中运行该应用程序。
 
-此外，随时可以向现有 ASP.NET Core 应用程序添加 Docker 支持。 在 Visual Studio 解决方案资源管理器中，右键单击项目并**添加** > **Docker 支持**，如图3-8 所示。
+此外，随时可以向现有 ASP.NET Core 应用程序添加 Docker 支持。 在 Visual Studio 解决方案资源管理器中，右键单击项目并**添加**  >  **Docker 支持**，如图3-8 所示。
+
+![Visual Studio 添加 Docker 支持](./media/visual-studio-add-docker-support.png)
 
 **图 3-8**。 向 Visual Studio 添加 Docker 支持
 
-还可以添加容器业务流程支持，如图3-8 所示。 默认情况下，orchestrator 将使用 Kubernetes 和 Helm。 选择 orchestrator 后，会将一个`azds.yaml`文件添加到项目根，并添加一个`charts`文件夹，其中包含用于配置应用程序并将其部署到 Kubernetes 的 Helm 图表。 图3-9 显示新项目中生成的文件。
+还可以添加容器业务流程支持，如图3-8 所示。 默认情况下，orchestrator 将使用 Kubernetes 和 Helm。 选择 orchestrator 后，会将一个 `azds.yaml` 文件添加到项目根，并 `charts` 添加一个文件夹，其中包含用于配置应用程序并将其部署到 Kubernetes 的 Helm 图表。 图3-9 显示新项目中生成的文件。
 
-还可以添加容器业务流程支持，如图3-8 所示。 默认情况下，orchestrator 将使用 Kubernetes 和 Helm。 选择 orchestrator 后，会将一个`azds.yaml`文件添加到项目根，并添加一个`charts`文件夹，其中包含用于配置应用程序并将其部署到 Kubernetes 的 Helm 图表。 图3-9 显示新项目中生成的文件。
+还可以添加容器业务流程支持，如图3-8 所示。 默认情况下，orchestrator 将使用 Kubernetes 和 Helm。 选择 orchestrator 后，会将一个 `azds.yaml` 文件添加到项目根，并 `charts` 添加一个文件夹，其中包含用于配置应用程序并将其部署到 Kubernetes 的 Helm 图表。 图3-9 显示新项目中生成的文件。
+
+![Visual Studio 添加 Orchestrator 支持](./media/visual-studio-add-orchestrator-support.png)
 
 **图 3-9**。 向 Visual Studio 添加业务流程支持
 

@@ -1,17 +1,15 @@
 ---
 title: 使用弹性堆栈进行日志记录
 description: 使用弹性堆栈、Logstash 和 Kibana 进行日志记录
-ms.date: 02/05/2020
-ms.openlocfilehash: 6863c66b63854fe3ecaabe2919beded2926ea64c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: e886141fa691b75b882b5d67eae4ceb242e8089f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448902"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613845"
 ---
 # <a name="logging-with-elastic-stack"></a>使用弹性堆栈进行日志记录
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 有很多非常好的集中式日志记录工具，从免费的开源工具到成本较高的选项，这些工具的成本会有所不同。 在许多情况下，免费的工具与付费的产品/服务非常好。 一个此类工具是三个开源组件的组合：弹性搜索、Logstash 和 Kibana。
 
@@ -30,8 +28,8 @@ KUBE_ENABLE_NODE_LOGGING=true
 
 这会在群集上安装 Elasticsearch，并将所有群集日志发送到该群集。
 
-![一个 Kibana 仪表板示例，其中显示了引入 from Kubernetes **7-6**](./media/kibana-dashboard.png)
-的针对日志的查询结果。 Kibana 仪表板的一个示例，显示针对引入 from Kubernetes 中的日志查询的结果
+![Kibana 仪表板的一个示例，显示针对 Kubernetes ](./media/kibana-dashboard.png)
+ **图 7-6**中的日志引入的查询结果。 Kibana 仪表板的一个示例，显示针对引入 from Kubernetes 中的日志查询的结果
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>弹性堆栈的优点是什么？
 
@@ -81,7 +79,7 @@ Logstash 收集了日志后，需要将其放在某个位置。 尽管 Logstash 
 
 精心设计为包含参数或通过 Logstash 处理将参数拆分为包含参数的日志消息可以直接查询，因为 Elasticsearch 会保留此信息。
 
-在图7-9 中搜索 `jill@example.com`访问的前10页的查询。
+`jill@example.com`在图7-9 中将会搜索访问的前10页的查询。
 
 ```
 "query": {

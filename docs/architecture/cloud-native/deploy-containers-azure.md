@@ -2,16 +2,14 @@
 title: 在 Azure 中部署容器
 description: 在 Azure 中通过 Azure 容器注册表、Azure Kubernetes 服务和 Azure Dev Spaces 部署容器。
 ms.date: 04/13/2020
-ms.openlocfilehash: 57a4739d39b8ad022d699d54255f56f16d305440
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: ba2854323ee0f1394a3cff0dd3756cb3c7c32d5b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895604"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614144"
 ---
 # <a name="deploying-containers-in-azure"></a>在 Azure 中部署容器
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 本章节和第1章讨论了容器。 我们发现，容器为云本机应用程序提供了许多好处，包括可移植性。 在 Azure 云中，你可以在过渡环境和生产环境中部署相同的容器化服务。 Azure 提供了多个用于托管容器化工作负荷的选项：
 
@@ -21,11 +19,11 @@ ms.locfileid: "82895604"
 
 ## <a name="azure-container-registry"></a>Azure 容器注册表
 
-容器化微服务时，您首先会生成一个 "映像"。 此图像是服务代码、依赖项和运行时的二进制表示形式。 尽管可以使用 Docker API 中的`Docker Build`命令手动创建映像，但更好的方法是将其创建为自动生成过程的一部分。
+容器化微服务时，您首先会生成一个 "映像"。 此图像是服务代码、依赖项和运行时的二进制表示形式。 尽管可以使用 `Docker Build` DOCKER API 中的命令手动创建映像，但更好的方法是将其创建为自动生成过程的一部分。
 
 创建后，容器映像存储在容器注册表中。 它们使你能够生成、存储和管理容器映像。 有很多可用的注册表项，无论是公共的还是私有的。 Azure 容器注册表（ACR）是 Azure 云中完全托管的容器注册表服务。 它将映像保存在 Azure 网络中，缩短将其部署到 Azure 容器主机的时间。 还可以使用与其他 Azure 资源相同的安全和标识过程来保护这些资源。
 
-使用[Azure 门户](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal)、 [Azure CLI](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli)或[PowerShell 工具](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell)创建 Azure 容器注册表。 在 Azure 中创建注册表非常简单。 它需要 Azure 订阅、资源组和唯一名称。 图3-11 显示了用于创建注册表的基本选项，这些选项将在上`registryname.azurecr.io`托管。
+使用[Azure 门户](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal)、 [Azure CLI](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli)或[PowerShell 工具](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell)创建 Azure 容器注册表。 在 Azure 中创建注册表非常简单。 它需要 Azure 订阅、资源组和唯一名称。 图3-11 显示了用于创建注册表的基本选项，这些选项将在上托管 `registryname.azurecr.io` 。
 
 ![创建容器注册表](./media/create-container-registry.png)
 
@@ -43,7 +41,7 @@ az acr login --name *registryname*
 docker tag mycontainer myregistry.azurecr.io/mycontainer:v1
 ```
 
-标记该映像后，使用`docker push`命令将该映像推送到 ACR 实例。
+标记该映像后，使用 `docker push` 命令将该映像推送到 ACR 实例。
 
 ```console
 docker push myregistry.azurecr.io/mycontainer:v1
@@ -59,7 +57,7 @@ docker rmi myregistry.azurecr.io/mycontainer:v1
 
 ## <a name="acr-tasks"></a>ACR 任务
 
-[ACR 任务](https://docs.microsoft.com/azure/container-registry/container-registry-tasks-overview)是一组 Azure 容器注册表中可用的功能。 它通过在 Azure 云中构建和管理容器映像来扩展你的[内部循环开发周期](https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow)。 它们不是在`docker build`开发`docker push`计算机上进行调用，而是由云中的 ACR 任务自动处理的。
+[ACR 任务](https://docs.microsoft.com/azure/container-registry/container-registry-tasks-overview)是一组 Azure 容器注册表中可用的功能。 它通过在 Azure 云中构建和管理容器映像来扩展你的[内部循环开发周期](https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow)。 它们不是在 `docker build` `docker push` 开发计算机上进行调用，而是由云中的 ACR 任务自动处理的。
 
 以下 AZ CLI 命令都生成一个容器映像并将其推送到 ACR：
 
@@ -96,7 +94,7 @@ az acr build --image sample/hello-world:v1  --registry myContainerRegistry008 --
 - 身份验证
 - 网络
 - 监视
-- Tags
+- 标记
 
 本[快速入门演示如何使用 Azure 门户部署 AKS 群集](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)。
 
@@ -118,16 +116,16 @@ az acr build --image sample/hello-world:v1  --registry myContainerRegistry008 --
 3. 配置子开发人员空间（适用于你自己的系统版本）。
 4. 连接到 dev 空间。
 
-所有这些步骤都可以使用 Azure CLI 和新`azds`的命令行工具来执行。 例如，若要为给定的 Kubernetes 群集创建新的 Azure Dev 空间，请使用如下所示的命令：
+所有这些步骤都可以使用 Azure CLI 和新的 `azds` 命令行工具来执行。 例如，若要为给定的 Kubernetes 群集创建新的 Azure Dev 空间，请使用如下所示的命令：
 
 ```azurecli
 az aks use-dev-spaces -g my-aks-resource-group -n MyAKSCluster
 ```
 
-接下来，可以使用`azds prep`命令生成用于运行应用程序的必需 Docker 和 Helm 图表资产。 然后，使用`azds up`在 AKS 中运行你的代码。 首次运行此命令时，将安装 Helm 图表。 容器将根据说明进行生成和部署。 此任务在首次运行时可能需要几分钟时间。 但是，在进行更改后，可以使用`azds space select`连接到自己的子开发人员空间，然后在隔离的子开发人员空间中部署和调试更新。 开发人员空间启动并运行后，可以通过重新发出`azds up`命令向其发送更新，或者在 Visual Studio 中使用内置工具或 Visual Studio Code。 使用 VS Code，可以使用命令面板连接到开发环境。 图3-12 演示了如何使用 Visual Studio 中的 Azure Dev Spaces 启动 web 应用程序。
+接下来，可以使用 `azds prep` 命令生成用于运行应用程序的必需 Docker 和 Helm 图表资产。 然后，使用在 AKS 中运行你的代码 `azds up` 。 首次运行此命令时，将安装 Helm 图表。 容器将根据说明进行生成和部署。 此任务在首次运行时可能需要几分钟时间。 但是，在进行更改后，可以使用连接到自己的子开发人员空间， `azds space select` 然后在隔离的子开发人员空间中部署和调试更新。 开发人员空间启动并运行后，可以通过重新发出命令向其发送更新， `azds up` 或者在 Visual Studio 中使用内置工具或 Visual Studio Code。 使用 VS Code，可以使用命令面板连接到开发环境。 图3-12 演示了如何使用 Visual Studio 中的 Azure Dev Spaces 启动 web 应用程序。
 
-![在 Visual Studio](./media/azure-dev-spaces-visual-studio-launchsettings.png)
-中连接到 Azure Dev Spaces**图 3-12**。 在 Visual Studio 中连接到 Azure Dev Spaces
+![在 Visual Studio 中连接到 Azure Dev Spaces ](./media/azure-dev-spaces-visual-studio-launchsettings.png)
+ **图 3-12**。 在 Visual Studio 中连接到 Azure Dev Spaces
 
 >[!div class="step-by-step"]
 >[上一页](combine-containers-serverless-approaches.md)

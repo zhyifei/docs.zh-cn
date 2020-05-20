@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 843c904a-8176-4d8f-bd47-b4d4c29f4c5c
 topic_type:
 - apiref
-ms.openlocfilehash: 94d1aa5bba87e8ca11b58bdf89a697e1ccf500b1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 674089f8a1076342a2479c64e253b7dda53ade87
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428020"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615197"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable 方法
-定义一个全局变量。  
+定义单个全局变量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,13 +41,13 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="parameters"></a>参数  
  `name`  
- 中指向定义全局变量名称的 `WCHAR` 的指针。  
+ 中指向 `WCHAR` 的指针，该指针定义全局变量名称。  
   
  `attributes`  
  中全局变量特性。  
   
  `cSig`  
- 中一个 `ULONG32`，指示 `signature` 缓冲区的大小（以字符为字符）。  
+ 中一个 `ULONG32` ，该值指示缓冲区的大小（以字符为字符） `signature` 。  
   
  `signature`  
  中全局变量签名。  
@@ -72,6 +72,6 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [DefineLocalVariable 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
-- [DefineGlobalVariable2 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)
+- [ISymUnmanagedWriter 接口](isymunmanagedwriter-interface.md)
+- [DefineLocalVariable 方法](isymunmanagedwriter-definelocalvariable-method.md)
+- [DefineGlobalVariable2 方法](isymunmanagedwriter2-defineglobalvariable2-method.md)

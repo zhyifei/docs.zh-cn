@@ -1,17 +1,15 @@
 ---
-title: 身份
+title: 标识
 description: 构建适用于 Azure 的云本机 .NET 应用 |标识
-ms.date: 09/23/2019
-ms.openlocfilehash: 4cc7c04bf323d2589777df466321f6801f511b6f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 05/13/2020
+ms.openlocfilehash: 9fa48977e58e2ca5a5f3e231372a4791640a85fd
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73840345"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614014"
 ---
-# <a name="identity"></a>身份
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="identity"></a>标识
 
 大多数软件应用程序都需要对调用它们的用户或进程有一定的了解。 与应用程序交互的用户或进程称为 "安全主体"，并对这些主体进行身份验证和授权的过程称为 "标识管理" 或简称为 "*标识*"。 简单的应用程序可能会在应用程序中包含它们的所有标识管理，但这种方法并不能很好地适应许多应用程序以及许多类型的安全主体。 Windows 支持使用 Active Directory 来提供集中式身份验证和授权。
 

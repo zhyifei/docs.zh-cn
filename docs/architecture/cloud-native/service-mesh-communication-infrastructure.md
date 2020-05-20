@@ -2,17 +2,15 @@
 title: 服务网格通信基础结构
 description: 了解服务网格技术如何简化云本地微服务通信
 author: robvet
-ms.date: 03/03/2020
-ms.openlocfilehash: 89bc4d307d725e7e31e020ef156c4c5967dd2a1c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 1b11024cd029433c756812850e2665b7836a13d3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199936"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613677"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>服务网格通信基础结构
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 在本章中，我们探讨了微服务通信的难题。 我们说，开发团队需要对后端服务之间的通信方式保密。 理想情况下，服务间通信越少，性能越好。 不过，由于后端服务经常依赖于另一种方式来完成操作，因此不一定能避免这种情况。
 
@@ -36,7 +34,7 @@ ms.locfileid: "82199936"
 
 第6章深入探讨了服务网格技术，其中包括对其体系结构和可用开源实现的讨论。
 
-## <a name="summary"></a>“摘要”
+## <a name="summary"></a>摘要
 
 在本章中，我们讨论了云本机通信模式。 我们首先检查前端客户端如何与后端微服务通信。 在此过程中，我们讨论了 API 网关平台和实时通信。 然后介绍了微服务如何与其他后端服务进行通信。 我们同时探讨了跨服务的同步 HTTP 通信和异步消息传递。 我们介绍了 gRPC，这是云中的一项技术。 最后，我们引入了一种新的、快速发展的技术，该技术可简化微服务通信。
 

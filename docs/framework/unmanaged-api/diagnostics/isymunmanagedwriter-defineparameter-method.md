@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a8e3dd32-6a44-4371-9a74-f417b11998c8
 topic_type:
 - apiref
-ms.openlocfilehash: bc1b65de026a674a3dff183050a5a205fd7052c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c695aa80ea3bf90a29ce7c5d11eda7fae5fe7b2d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427996"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614807"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter 方法
-在当前方法中定义一个参数。 参数类型从参数在方法签名中的位置（序列）中获取。  
+在当前方法中定义单个参数。 参数类型从参数在方法签名中的位置（序列）中获取。  
   
  如果在给定方法的元数据中定义了参数，则无需使用此方法再次定义这些参数。 符号读取器必须在检查符号存储区之前检查参数的正常元数据。  
   
@@ -70,4 +70,4 @@ HRESULT DefineParameter(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter 接口](isymunmanagedwriter-interface.md)

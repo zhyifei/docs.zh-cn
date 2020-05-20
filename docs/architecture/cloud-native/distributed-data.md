@@ -2,17 +2,15 @@
 title: 分布式数据
 description: 整体和云本机应用程序中的数据存储对比。
 author: robvet
-ms.date: 04/24/2020
-ms.openlocfilehash: 8a9f1478f1a46b2367df9372d4adaa3b4c711782
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 2eff37dcc57ae39daac0ba10d10322be5eb4e321
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82204706"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614131"
 ---
 # <a name="distributed-data"></a>分布式数据
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 正如我们在本书中看到的那样，云本机方法会改变设计、部署和管理应用程序的方式。 它还更改了管理和存储数据的方式。
 
@@ -128,7 +126,7 @@ Saga 模式通常编排为一系列相关事件，或作为一组相关命令进
 
 实现 CQRS 可以提高云本机服务的应用程序性能。 不过，它确实会导致设计更为复杂。 仔细并策略性地将此原则应用于云本机应用程序中将会从中受益的部分。 有关 CQRS 的详细信息，请参阅 Microsoft 书籍[.Net 微服务：适用于容器化 .Net 应用程序的体系结构](https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns)。
 
-### <a name="event-sourcing"></a>事件来源
+### <a name="event-sourcing"></a>事件溯源
 
 优化大容量数据方案的另一种方法涉及到[事件来源](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)。
 

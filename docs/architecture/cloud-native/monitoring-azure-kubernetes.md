@@ -1,17 +1,15 @@
 ---
 title: 在 Azure Kubernetes 服务中进行监视
 description: 在 Azure Kubernetes 服务中进行监视
-ms.date: 02/05/2020
-ms.openlocfilehash: 5c46b9e8599f70d430ad26cf1364343454d30a16
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: 138acf9d27fb4a676ec422c848097a6bea98fa42
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450058"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613819"
 ---
 # <a name="monitoring-in-azure-kubernetes-services"></a>在 Azure Kubernetes 服务中进行监视
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Kubernetes 中的内置日志记录为基元。 但是，有一些极佳的选项可让你从 Kubernetes 中取出日志，并将其放在正确分析的位置。 如果需要监视 AKS 群集，为 Kubernetes 配置弹性堆栈是一种很好的解决方案。
 
@@ -19,8 +17,8 @@ Kubernetes 中的内置日志记录为基元。 但是，有一些极佳的选�
 
 [容器 Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview)不仅支持从 Kubernetes 使用日志，还支持从其他业务流程引擎（例如 DC/OS、Docker Swarm 和 Red Hat OpenShift）使用日志。
 
-![从不同容器使用日志](./media/containers-diagram.png)
-**图 7-10**。 使用不同容器中的日志
+![使用不同容器中的日志 ](./media/containers-diagram.png)
+ **图 7-10**。 使用不同容器中的日志
 
 [Prometheus](https://prometheus.io/)是一个流行的开源指标监视解决方案。 它属于云本机计算基础。 通常，使用 Prometheus 需要使用其自己的存储管理 Prometheus 服务器。 但是，[为容器 Azure Monitor 提供与 Prometheus 指标端点的直接集成](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-prometheus-integration)，因此不需要单独的服务器。
 
@@ -30,7 +28,7 @@ Kubernetes 中的内置日志记录为基元。 但是，有一些极佳的选�
 
 无论哪个协调器或操作系统运行 Azure Monitor 守护程序，日志信息都将转发到与用户熟悉的 Azure Monitor 工具。 这可确保在混合不同的日志源（如混合 Kubernetes/Azure Functions 环境）的环境中获得并行体验。
 
-![一个示例仪表板，其中显示了多个正在运行的容器中的日志记录和指标信息。](./media/containers-dashboard.png)
+![显示多个正在运行的容器中的日志记录和指标信息的示例仪表板。 ](./media/containers-dashboard.png)
 **图 7-11**。 显示多个正在运行的容器中的日志记录和指标信息的示例仪表板。
 
 ## <a name="logfinalize"></a>Log Finalize （）

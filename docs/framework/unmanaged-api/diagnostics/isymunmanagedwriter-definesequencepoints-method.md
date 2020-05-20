@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64202baf-be6b-40ba-8162-8cc6c0c9b8e1
 topic_type:
 - apiref
-ms.openlocfilehash: 63ba108bc234e566450bb019afc63acb4e75ad1f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8889c412f414f38d1d18d33ec297e82fd052280d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427982"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614794"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints 方法
 在当前方法内定义一组序列点。 每个起始行和起始列定义方法中语句的开头。 每个结束行和结束列定义方法中语句的末尾。 应按偏移量的递增顺序对数组进行排序。 始终从方法的开头开始度量偏移量（以字节为单位）。  
@@ -43,7 +43,7 @@ HRESULT DefineSequencePoints(
  中正在为其定义序列点的文档对象。  
   
  `spCount`  
- 中一个 `ULONG32`，指示 `offsets`、`lines`、`columns`、`endLines`和 `endColumns` 缓冲区的大小。  
+ 中， `ULONG32` 指示、、、 `offsets` `lines` `columns` `endLines` 和 `endColumns` 缓冲区的大小。  
   
  `offsets`  
  中从方法的开头测量的序列点的偏移量。  
@@ -55,10 +55,10 @@ HRESULT DefineSequencePoints(
  中序列点的起始列号。  
   
  `endLines`  
- 中序列点的结束行号。 此参数可选。  
+ 中序列点的结束行号。 该参数为可选参数。  
   
  `endColumns`  
- 中序列点的结束列号。 此参数可选。  
+ 中序列点的结束列号。 该参数为可选参数。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -68,4 +68,4 @@ HRESULT DefineSequencePoints(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter 接口](isymunmanagedwriter-interface.md)

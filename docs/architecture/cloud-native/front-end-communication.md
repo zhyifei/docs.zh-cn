@@ -2,17 +2,15 @@
 title: 前端客户端通信
 description: 了解前端客户端如何与云本机系统进行通信
 author: robvet
-ms.date: 09/08/2019
-ms.openlocfilehash: 89f13ea1c9ecbe92e959ae63a4c21bf7775f8943
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 97421e9b90b19c720b1ab0ff8dd1e5f029cba5e4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895577"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614053"
 ---
 # <a name="front-end-client-communication"></a>前端客户端通信
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 在云本机系统中，前端客户端（移动、web 和桌面应用程序）要求通信通道与独立后端微服务交互。  
 
@@ -120,7 +118,7 @@ Azure API 管理跨[四个不同的层](https://azure.microsoft.com/pricing/deta
 - 开发人员
 - 基本
 - Standard
-- Premium
+- 高级
 
 开发人员层适用于非生产工作负荷和评估。 其他层提供更多的功能、功能和更高的服务级别协议（Sla）。 高级层提供了[Azure 虚拟网络](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview)和[多区域支持](https://docs.microsoft.com/azure/api-management/api-management-howto-deploy-multi-region)。 所有层都具有固定的每小时价格。
 

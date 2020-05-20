@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e3b73a3f-d089-4101-a9a9-5e0765d05b61
 topic_type:
 - apiref
-ms.openlocfilehash: c26c0a5f8c597613266e2e6d1998edfca8f17b82
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b8a3a74888a3caae03da6f88a003bd277939ae59
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448337"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615041"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>ISymUnmanagedReader::GetDocuments 方法
 返回在符号存储区中定义的所有文档的数组。  
@@ -53,4 +53,4 @@ HRESULT GetDocuments (
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedReader 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader 接口](isymunmanagedreader-interface.md)

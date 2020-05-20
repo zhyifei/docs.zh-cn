@@ -1,17 +1,15 @@
 ---
 title: 适用于云本机应用的 IdentityServer
 description: 构建适用于 Azure 的云本机 .NET 应用 |IdentityServer
-ms.date: 06/30/2019
-ms.openlocfilehash: 536a4cbdbdaee47f3a5a0d9f93b2736270d9ea7a
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: 81cce30568becacda29f65f9506398790af321e0
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394883"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614027"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>适用于云原生应用程序的 IdentityServer
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 IdentityServer 是一种开源身份验证服务器，用于实现 ASP.NET Core 的 OpenID Connect （OIDC）和 OAuth 2.0 标准。 它旨在提供一种通用方法来对所有应用程序的请求进行身份验证，无论这些请求是 web、本机、移动还是 API 终结点。 IdentityServer 可用于实现多个应用程序和应用程序类型的单一登录（SSO）。 它可用于通过登录窗体和类似用户界面以及基于服务的身份验证（通常涉及令牌颁发、验证和续订，无需任何用户界面）对实际用户进行身份验证。 IdentityServer 旨在作为可自定义的解决方案。 通常，每个实例都可以进行自定义，以适应单个组织和/或一组应用程序的需求。
 

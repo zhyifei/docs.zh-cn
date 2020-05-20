@@ -1,17 +1,15 @@
 ---
 title: 将 eShopOnContainers 部署到 Azure
 description: 使用 Azure Kubernetes 服务、Helm 和 DevSpaces 部署 eShopOnContainers 应用程序。
-ms.date: 04/20/2020
-ms.openlocfilehash: a3eacedac946cb25cf3cced305d7921e29f0d204
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 93a2848f095d7593e1e169f4a6c6c1818a76217d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895587"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614092"
 ---
 # <a name="deploying-eshoponcontainers-to-azure"></a>将 eShopOnContainers 部署到 Azure
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 可以将 eShopOnContainers 应用程序部署到各种 Azure 平台。 推荐的方法是将应用程序部署到 Azure Kubernetes Services （AKS）。 Helm 是一种 Kubernetes 部署工具，可用于降低部署复杂性。 开发人员可以根据需要实现 Kubernetes 的 Azure Dev Spaces，以简化开发过程。
 
@@ -57,10 +55,10 @@ spec:
 
 你将在/k8s/helm 文件夹中找到 eShopOnContainers helm 图。 图2-6 显示了如何将应用程序的不同组件组织到 helm 用于定义和管理部署的文件夹结构中。
 
-![eShopOnContainers 体系](./media/eshoponcontainers-helm-folder.png)
-结构**图 2-6**。 EShopOnContainers helm 文件夹。
+![eShopOnContainers 体系结构 ](./media/eshoponcontainers-helm-folder.png)
+ **图 2-6**。 EShopOnContainers helm 文件夹。
 
-使用`helm install`命令安装每个单独的组件。 eShop 包括一个 "部署全部" 脚本，该脚本循环遍历并使用各自的 helm 图表安装组件。 结果就是一个可重复执行的过程，该过程与源代码管理中的应用程序进行了版本控制，团队中的任何人都可以使用单行脚本命令将其部署到 AKS 群集。
+使用命令安装每个单独的组件 `helm install` 。 eShop 包括一个 "部署全部" 脚本，该脚本循环遍历并使用各自的 helm 图表安装组件。 结果就是一个可重复执行的过程，该过程与源代码管理中的应用程序进行了版本控制，团队中的任何人都可以使用单行脚本命令将其部署到 AKS 群集。
 
 > 请注意，Helm 的版本3不需要 Tiller 服务器组件。 可在[此处](https://medium.com/better-programming/why-is-tiller-missing-in-helm-3-2347c446714)找到有关此增强功能的详细信息。
 
@@ -72,13 +70,13 @@ spec:
 
 在图2-7 中，可以看到，开发人员 Susie 已将自行车微服务的更新版本部署到了其开发人员空间。 然后，她可以使用以她的空间名称（susie.s.dev.myapp.eus.azds.io）开头的自定义 URL 来测试她的更改。
 
-![eShopOnContainers 体系](./media/azure-devspaces-one.png)
-结构**图 2-7**。 开发人员 Susie 将部署自己的自行车微服务版本并对其进行测试。
+![eShopOnContainers 体系结构 ](./media/azure-devspaces-one.png)
+ **图 2-7**。 开发人员 Susie 将部署自己的自行车微服务版本并对其进行测试。
 
 同时，开发人员 John 正在自定义预订微服务，并需要对其更改进行测试。 他将其更改部署到自己的开发空间，而不会与 Susie 的更改发生冲突，如图2-8 所示。 John 然后使用自己的 URL （以其空间的名称（john.s.dev.myapp.eus.azds.io）作为前缀，来测试更改。
 
-![eShopOnContainers 体系](./media/azure-devspaces-two.png)
-结构**图 2-8**。 开发人员 John 部署自己的保留版本微服务，并对其进行测试，而不会与其他开发人员发生冲突。
+![eShopOnContainers 体系结构 ](./media/azure-devspaces-two.png)
+ **图 2-8**。 开发人员 John 部署自己的保留版本微服务，并对其进行测试，而不会与其他开发人员发生冲突。
 
 使用 Azure Dev Spaces，团队可以直接使用 AKS，同时对其更改进行单独的更改、部署和测试。 此方法减少了单独专用托管环境的需要，因为每个开发人员都有效地拥有自己的 AKS 环境。 开发人员可以使用其 CLI 来处理 Azure Dev Spaces 或启动其应用程序，以便直接从 Visual Studio Azure Dev Spaces。 [了解有关 Azure Dev Spaces 工作和配置的详细信息。](https://docs.microsoft.com/azure/dev-spaces/how-dev-spaces-works)
 

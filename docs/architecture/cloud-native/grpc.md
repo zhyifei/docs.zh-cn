@@ -2,17 +2,15 @@
 title: gRPC
 description: 了解 gRPC，它在云本机应用程序中的作用，以及它与 HTTP RESTful 通信有何不同。
 author: robvet
-ms.date: 03/31/2020
-ms.openlocfilehash: 01dd4c934f0b39041ea377691067edf4dbe20378
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: f34b267d7f5c6b4e593841c80df44d1ccbde95ae
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895569"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614040"
 ---
 # <a name="grpc"></a>gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 到目前为止，我们致力于[基于 REST 的](https://docs.microsoft.com/azure/architecture/best-practices/api-design)通信。 我们已经看到，REST 是一种灵活的体系结构样式，它定义了对实体资源的基于 CRUD 的操作。 客户端使用请求/响应通信模型跨 HTTP 与资源进行交互。 尽管 REST 是广泛实现的，但一种较新的通信技术 gRPC 已在云本机社区中获得巨大的动力。
 
@@ -39,9 +37,9 @@ gRPC 是轻型且高性能的。 与 JSON 序列化相比，与 JSON 序列化�
 
 ## <a name="protocol-buffers"></a>协议缓冲区
 
-gRPC 拥有称为[协议缓冲区](https://developers.google.com/protocol-buffers/docs/overview)的开源技术。 它们提供了一种高效且平台中立的序列化格式，用于序列化服务相互发送的结构化消息。 开发人员使用跨平台接口定义语言（IDL）为每个微服务定义服务协定。 作为基于`.proto`文本的文件实现的协定将描述每个服务的方法、输入和输出。 同一约定文件可用于在不同开发平台上构建的 gRPC 客户端和服务。
+gRPC 拥有称为[协议缓冲区](https://developers.google.com/protocol-buffers/docs/overview)的开源技术。 它们提供了一种高效且平台中立的序列化格式，用于序列化服务相互发送的结构化消息。 开发人员使用跨平台接口定义语言（IDL）为每个微服务定义服务协定。 作为基于文本的文件实现的协定将 `.proto` 描述每个服务的方法、输入和输出。 同一约定文件可用于在不同开发平台上构建的 gRPC 客户端和服务。
 
-使用 proto 文件，Protobuf 编译器`protoc`生成目标平台的客户端和服务代码。 此代码包括以下组件：
+使用 proto 文件，Protobuf 编译器 `protoc` 生成目标平台的客户端和服务代码。 此代码包括以下组件：
 
 - 由客户端和服务共享的强类型对象，表示消息的服务操作和数据元素。
 - 一个强类型的基类，其中包含远程 gRPC 服务可以继承和扩展的必需的网络管道。

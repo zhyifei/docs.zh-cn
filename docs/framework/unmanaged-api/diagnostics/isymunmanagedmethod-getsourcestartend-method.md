@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a420900-01f1-4461-8777-3a34a6dc1426
 topic_type:
 - apiref
-ms.openlocfilehash: 01ab69b73a7bc4929e2ebd49b3847f8d7c4646a2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25e797fdf563a01ab727f16e7173eec2552eeb27
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448863"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614417"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd 方法
 获取此方法的源的起始和结束文档位置。 第一个数组位置是开始，第二个数组位置是结束。  
@@ -46,7 +46,7 @@ HRESULT GetSourceStartEnd(
  中对应的源文档中的起始和结束列。  
   
  `pRetVal`  
- [out] `true` 是否定义了位置;否则，`false`。  
+ [out] `true`如果定义了位置，则为;否则为 `false` 。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -56,4 +56,4 @@ HRESULT GetSourceStartEnd(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod 接口](isymunmanagedmethod-interface.md)

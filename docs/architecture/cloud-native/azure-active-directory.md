@@ -2,16 +2,14 @@
 title: Azure Active Directory
 description: 构建适用于 Azure 的云本机 .NET 应用 |Azure Active Directory
 ms.date: 06/30/2019
-ms.openlocfilehash: 207043507a9052c47683383a98cef6417a1a2740
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 03f5ea8e84bc3c4a2a88a63d4b109aabf0c64f36
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73840729"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614274"
 ---
 # <a name="azure-active-directory"></a>Azure Active Directory
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Microsoft Azure Active Directory （Azure AD）以服务的形式提供标识和访问管理。 客户使用它来配置和维护用户是谁、存储他们的信息、谁可以访问该信息、谁可以管理该信息以及哪些应用程序可以访问它。 AAD 可以对配置为使用的应用程序的用户进行身份验证，从而提供单一登录（SSO）体验。 它可以单独使用，也可以与在本地运行的 Windows AD 集成。
 
