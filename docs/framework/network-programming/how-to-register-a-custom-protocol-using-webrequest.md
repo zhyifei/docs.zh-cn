@@ -12,10 +12,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048252"
 ---
-# <a name="how-to-register-a-custom-protocol-using-webrequest"></a><span data-ttu-id="b2bd3-102">如何：使用 WebRequest 注册自定义协议</span><span class="sxs-lookup"><span data-stu-id="b2bd3-102">How to: Register a Custom Protocol Using WebRequest</span></span>
-<span data-ttu-id="b2bd3-103">此示例演示如何注册在其他位置定义的特定于协议的类。</span><span class="sxs-lookup"><span data-stu-id="b2bd3-103">This example shows how to register a protocol specific class that is defined elsewhere.</span></span> <span data-ttu-id="b2bd3-104">在此示例中，`CustomWebRequestCreator` 是用户实现对象，它实现返回  **对象的“Create”** `CustomWebRequest`方法。</span><span class="sxs-lookup"><span data-stu-id="b2bd3-104">In this example, `CustomWebRequestCreator` is the user-implemented object that implements the **Create** method that returns the `CustomWebRequest` object.</span></span> <span data-ttu-id="b2bd3-105">此代码示例假定已编写了实现自定义协议的 `CustomWebRequest` 代码。</span><span class="sxs-lookup"><span data-stu-id="b2bd3-105">The code example assumes that you have written the `CustomWebRequest` code that implements the custom protocol.</span></span>  
+# <a name="how-to-register-a-custom-protocol-using-webrequest"></a><span data-ttu-id="86015-102">如何：使用 WebRequest 注册自定义协议</span><span class="sxs-lookup"><span data-stu-id="86015-102">How to: Register a Custom Protocol Using WebRequest</span></span>
+<span data-ttu-id="86015-103">此示例演示如何注册在其他位置定义的特定于协议的类。</span><span class="sxs-lookup"><span data-stu-id="86015-103">This example shows how to register a protocol specific class that is defined elsewhere.</span></span> <span data-ttu-id="86015-104">在此示例中，`CustomWebRequestCreator` 是用户实现对象，它实现返回 `CustomWebRequest` 对象的“Create”方法。</span><span class="sxs-lookup"><span data-stu-id="86015-104">In this example, `CustomWebRequestCreator` is the user-implemented object that implements the **Create** method that returns the `CustomWebRequest` object.</span></span> <span data-ttu-id="86015-105">此代码示例假定已编写了实现自定义协议的 `CustomWebRequest` 代码。</span><span class="sxs-lookup"><span data-stu-id="86015-105">The code example assumes that you have written the `CustomWebRequest` code that implements the custom protocol.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b2bd3-106">示例</span><span class="sxs-lookup"><span data-stu-id="b2bd3-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="86015-106">示例</span><span class="sxs-lookup"><span data-stu-id="86015-106">Example</span></span>  
   
 ```csharp  
 WebRequest.RegisterPrefix("custom", new CustomWebRequestCreator());  
@@ -27,11 +27,11 @@ WebRequest.RegisterPrefix("custom", New CustomWebRequestCreator())
 Dim req As WebRequest = WebRequest.Create("custom://customHost.contoso.com/")  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="b2bd3-107">编译代码</span><span class="sxs-lookup"><span data-stu-id="b2bd3-107">Compiling the Code</span></span>  
- <span data-ttu-id="b2bd3-108">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="b2bd3-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="86015-107">编译代码</span><span class="sxs-lookup"><span data-stu-id="86015-107">Compiling the Code</span></span>  
+ <span data-ttu-id="86015-108">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="86015-108">This example requires:</span></span>  
   
- <span data-ttu-id="b2bd3-109">对 <xref:System.Net> 命名空间的引用。</span><span class="sxs-lookup"><span data-stu-id="b2bd3-109">References to the <xref:System.Net> namespace.</span></span>  
+ <span data-ttu-id="86015-109">对 <xref:System.Net> 命名空间的引用。</span><span class="sxs-lookup"><span data-stu-id="86015-109">References to the <xref:System.Net> namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b2bd3-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b2bd3-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="86015-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="86015-110">See also</span></span>
 
-- [<span data-ttu-id="b2bd3-111">对可插入协议进行编程</span><span class="sxs-lookup"><span data-stu-id="b2bd3-111">Programming Pluggable Protocols</span></span>](programming-pluggable-protocols.md)
+- [<span data-ttu-id="86015-111">对可插入协议进行编程</span><span class="sxs-lookup"><span data-stu-id="86015-111">Programming Pluggable Protocols</span></span>](programming-pluggable-protocols.md)

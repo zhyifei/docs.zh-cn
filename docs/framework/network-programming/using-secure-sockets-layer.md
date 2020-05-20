@@ -22,18 +22,18 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "71046908"
 ---
-# <a name="using-secure-sockets-layer"></a><span data-ttu-id="8fb28-102">使用安全套接字层</span><span class="sxs-lookup"><span data-stu-id="8fb28-102">Using Secure Sockets Layer</span></span>
-<span data-ttu-id="8fb28-103"><xref:System.Net> 类使用安全套接字层 (SSL) 为若干网络协议加密连接。</span><span class="sxs-lookup"><span data-stu-id="8fb28-103">The <xref:System.Net> classes use the Secure Sockets Layer (SSL) to encrypt the connection for several network protocols.</span></span>  
+# <a name="using-secure-sockets-layer"></a><span data-ttu-id="47b1f-102">使用安全套接字层</span><span class="sxs-lookup"><span data-stu-id="47b1f-102">Using Secure Sockets Layer</span></span>
+<span data-ttu-id="47b1f-103"><xref:System.Net> 类使用安全套接字层 (SSL) 为若干网络协议加密连接。</span><span class="sxs-lookup"><span data-stu-id="47b1f-103">The <xref:System.Net> classes use the Secure Sockets Layer (SSL) to encrypt the connection for several network protocols.</span></span>  
   
- <span data-ttu-id="8fb28-104">对于 HTTP 连接，<xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类使用 SSL 与支持 SSL 的 Web 主机进行通信。</span><span class="sxs-lookup"><span data-stu-id="8fb28-104">For http connections, the <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes use SSL to communicate with web hosts that support SSL.</span></span> <span data-ttu-id="8fb28-105">根据为其给定的 URI，<xref:System.Net.WebRequest> 类决定是否使用 SSL。</span><span class="sxs-lookup"><span data-stu-id="8fb28-105">The decision to use SSL is made by the <xref:System.Net.WebRequest> class, based on the URI it is given.</span></span> <span data-ttu-id="8fb28-106">如果 URI 以“https:”开头，则使用 SSL；如果 URI 以“http:”开头，则使用未加密的连接。</span><span class="sxs-lookup"><span data-stu-id="8fb28-106">If the URI begins with "https:", SSL is used; if the URI begins with "http:", an unencrypted connection is used.</span></span>  
+ <span data-ttu-id="47b1f-104">对于 HTTP 连接，<xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类使用 SSL 与支持 SSL 的 Web 主机进行通信。</span><span class="sxs-lookup"><span data-stu-id="47b1f-104">For http connections, the <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes use SSL to communicate with web hosts that support SSL.</span></span> <span data-ttu-id="47b1f-105">根据为其给定的 URI，<xref:System.Net.WebRequest> 类决定是否使用 SSL。</span><span class="sxs-lookup"><span data-stu-id="47b1f-105">The decision to use SSL is made by the <xref:System.Net.WebRequest> class, based on the URI it is given.</span></span> <span data-ttu-id="47b1f-106">如果 URI 以“https:”开头，则使用 SSL；如果 URI 以“http:”开头，则使用未加密的连接。</span><span class="sxs-lookup"><span data-stu-id="47b1f-106">If the URI begins with "https:", SSL is used; if the URI begins with "http:", an unencrypted connection is used.</span></span>  
   
- <span data-ttu-id="8fb28-107">若要将 SSL 用于文件传输协议 (FTP)，请在调用 <xref:System.Net.FtpWebRequest.EnableSsl> 前将 <xref:System.Net.FtpWebRequest.GetResponse> 属性设置为 true。</span><span class="sxs-lookup"><span data-stu-id="8fb28-107">To use SSL with File Transfer Protocol (FTP), set the <xref:System.Net.FtpWebRequest.EnableSsl> property to true prior to calling <xref:System.Net.FtpWebRequest.GetResponse>.</span></span> <span data-ttu-id="8fb28-108">同样，要将 SSL 用于简单邮件传输协议 (SMTP)，请在发送电子邮件前将 <xref:System.Net.Mail.SmtpClient.EnableSsl> 属性设置为 true。</span><span class="sxs-lookup"><span data-stu-id="8fb28-108">Similarly, to use SSL with Simple Mail Transport Protocol (SMTP), set the <xref:System.Net.Mail.SmtpClient.EnableSsl> property to true prior to sending the email.</span></span>  
+ <span data-ttu-id="47b1f-107">若要将 SSL 用于文件传输协议 (FTP)，请在调用 <xref:System.Net.FtpWebRequest.GetResponse> 前将 <xref:System.Net.FtpWebRequest.EnableSsl> 属性设置为 true。</span><span class="sxs-lookup"><span data-stu-id="47b1f-107">To use SSL with File Transfer Protocol (FTP), set the <xref:System.Net.FtpWebRequest.EnableSsl> property to true prior to calling <xref:System.Net.FtpWebRequest.GetResponse>.</span></span> <span data-ttu-id="47b1f-108">同样，要将 SSL 用于简单邮件传输协议 (SMTP)，请在发送电子邮件前将 <xref:System.Net.Mail.SmtpClient.EnableSsl> 属性设置为 true。</span><span class="sxs-lookup"><span data-stu-id="47b1f-108">Similarly, to use SSL with Simple Mail Transport Protocol (SMTP), set the <xref:System.Net.Mail.SmtpClient.EnableSsl> property to true prior to sending the email.</span></span>  
   
- <span data-ttu-id="8fb28-109"><xref:System.Net.Security.SslStream> 类为 SSL 提供基于流的抽象，并且提供多种配置 SSL 握手的方法。</span><span class="sxs-lookup"><span data-stu-id="8fb28-109">The <xref:System.Net.Security.SslStream> class provides a stream-based abstraction for SSL, and offers many ways to configure the SSL handshake.</span></span>  
+ <span data-ttu-id="47b1f-109"><xref:System.Net.Security.SslStream> 类为 SSL 提供基于流的抽象，并且提供多种配置 SSL 握手的方法。</span><span class="sxs-lookup"><span data-stu-id="47b1f-109">The <xref:System.Net.Security.SslStream> class provides a stream-based abstraction for SSL, and offers many ways to configure the SSL handshake.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8fb28-110">示例</span><span class="sxs-lookup"><span data-stu-id="8fb28-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="47b1f-110">示例</span><span class="sxs-lookup"><span data-stu-id="47b1f-110">Example</span></span>  
   
-### <a name="code"></a><span data-ttu-id="8fb28-111">代码</span><span class="sxs-lookup"><span data-stu-id="8fb28-111">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="47b1f-111">代码</span><span class="sxs-lookup"><span data-stu-id="47b1f-111">Code</span></span>  
   
 ```vb  
 Dim MyURI As String = "https://www.contoso.com/"  
@@ -57,13 +57,13 @@ request.Method = WebRequestMethods.Ftp.DeleteFile;
 FtpWebResponse response = (FtpWebResponse)request.GetResponse();  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="8fb28-112">编译代码</span><span class="sxs-lookup"><span data-stu-id="8fb28-112">Compiling the Code</span></span>  
- <span data-ttu-id="8fb28-113">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="8fb28-113">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="47b1f-112">编译代码</span><span class="sxs-lookup"><span data-stu-id="47b1f-112">Compiling the Code</span></span>  
+ <span data-ttu-id="47b1f-113">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="47b1f-113">This example requires:</span></span>  
   
-- <span data-ttu-id="8fb28-114">引用 System.Net 命名空间  。</span><span class="sxs-lookup"><span data-stu-id="8fb28-114">References to the **System.Net** namespace.</span></span>  
+- <span data-ttu-id="47b1f-114">引用 System.Net 命名空间  。</span><span class="sxs-lookup"><span data-stu-id="47b1f-114">References to the **System.Net** namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8fb28-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8fb28-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="47b1f-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="47b1f-115">See also</span></span>
 
-- [<span data-ttu-id="8fb28-116">网络编程中的安全性</span><span class="sxs-lookup"><span data-stu-id="8fb28-116">Security in Network Programming</span></span>](security-in-network-programming.md)
-- [<span data-ttu-id="8fb28-117">.NET Framework 中的网络编程</span><span class="sxs-lookup"><span data-stu-id="8fb28-117">Network Programming in the .NET Framework</span></span>](index.md)
-- [<span data-ttu-id="8fb28-118">证书选择和验证</span><span class="sxs-lookup"><span data-stu-id="8fb28-118">Certificate Selection and Validation</span></span>](certificate-selection-and-validation.md)
+- [<span data-ttu-id="47b1f-116">网络编程中的安全性</span><span class="sxs-lookup"><span data-stu-id="47b1f-116">Security in Network Programming</span></span>](security-in-network-programming.md)
+- [<span data-ttu-id="47b1f-117">.NET Framework 中的网络编程</span><span class="sxs-lookup"><span data-stu-id="47b1f-117">Network Programming in the .NET Framework</span></span>](index.md)
+- [<span data-ttu-id="47b1f-118">证书选择和验证</span><span class="sxs-lookup"><span data-stu-id="47b1f-118">Certificate Selection and Validation</span></span>](certificate-selection-and-validation.md)
