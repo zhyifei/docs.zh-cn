@@ -10,7 +10,7 @@ ms.locfileid: "67804502"
 
 |   |   |
 |---|---|
-|详细信息|从 .NET Framework 4.6 开始，调用带有 <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> 的 <xref:System.Web.UI.HtmlTextWriter.RenderEndTag> 和 <code>&lt;BR /&gt;</code> 将正确插入唯一 <code>&lt;BR /&gt;</code>（而非两个）|
+|详细信息|从 .NET Framework 4.6 开始，调用带有 <code>&lt;BR /&gt;</code> 的 <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> 和 <xref:System.Web.UI.HtmlTextWriter.RenderEndTag> 将正确插入唯一 <code>&lt;BR /&gt;</code>（而非两个）|
 |建议|如果应用依赖于多余的 <code>&lt;BR /&gt;</code> 标记，应再次调用 <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)>。 请注意，此行为更改仅影响面向 .NET Framework 4.6 或更高版本的应用，因此另一选项是面向以前版本的 .NET Framework 以便获取旧行为。|
 |范围|边缘|
 |Version|4.6|

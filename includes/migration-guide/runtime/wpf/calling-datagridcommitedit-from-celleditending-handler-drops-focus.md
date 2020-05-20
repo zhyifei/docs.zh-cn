@@ -10,8 +10,8 @@ ms.locfileid: "67803201"
 
 |   |   |
 |---|---|
-|详细信息|从 <xref:System.Windows.Controls.DataGrid.CommitEdit> 的一个 <xref:System.Windows.Controls.DataGrid?displayProperty=name> 事件处理程序中调用 <xref:System.Windows.Controls.DataGrid.CellEditEnding?displayProperty=name> 导致 <xref:System.Windows.Controls.DataGrid?displayProperty=name> 失去焦点。|
-|建议|此 bug 已在 .NET Framework 4.5.2 中得到修复，因此升级 .NET Framework 可避免出现此问题。 或者，可通过在调用 <xref:System.Windows.Controls.DataGrid?displayProperty=name> 后显式重新选择 <xref:System.Windows.Controls.DataGrid.CommitEdit?displayProperty=name> 避免出现此问题。|
+|详细信息|从 <xref:System.Windows.Controls.DataGrid?displayProperty=name> 的一个 <xref:System.Windows.Controls.DataGrid.CellEditEnding?displayProperty=name> 事件处理程序中调用 <xref:System.Windows.Controls.DataGrid.CommitEdit> 导致 <xref:System.Windows.Controls.DataGrid?displayProperty=name> 失去焦点。|
+|建议|此 bug 已在 .NET Framework 4.5.2 中得到修复，因此升级 .NET Framework 可避免出现此问题。 或者，可通过在调用 <xref:System.Windows.Controls.DataGrid.CommitEdit?displayProperty=name> 后显式重新选择 <xref:System.Windows.Controls.DataGrid?displayProperty=name> 避免出现此问题。|
 |范围|边缘|
 |Version|4.5|
 |类型|运行时|

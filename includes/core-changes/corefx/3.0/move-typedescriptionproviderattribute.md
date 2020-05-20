@@ -22,7 +22,7 @@ ms.locfileid: "79147531"
 
 #### <a name="recommended-action"></a>建议操作
 
-此更改仅影响这样的应用程序，它们通过调用 <xref:System.ComponentModel.TypeDescriptionProviderAttribute> 等方法或调用假设类型位于特定程序集中的 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 的重载，使用反射过程来加载 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 类型。 若是如此，应更新在方法调用反射的程序集，以反射出类型的新程序集位置。
+此更改仅影响这样的应用程序，它们通过调用 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 等方法或调用假设类型位于特定程序集中的 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 的重载，使用反射过程来加载 <xref:System.ComponentModel.TypeDescriptionProviderAttribute> 类型。 若是如此，应更新在方法调用反射的程序集，以反射出类型的新程序集位置。
 
 #### <a name="category"></a>类别
 

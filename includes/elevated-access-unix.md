@@ -14,7 +14,7 @@ ms.locfileid: "67540080"
 sudo dotnet tool install PACKAGEID --tool-path /usr/local/share/dotnet-tools
 ```
 
-将使用权限 `/usr/local/share/dotnet-tools` 创建 `drwxr-xr-x`。 如果该目录已存在，请使用 `ls -l` 命令验证受限的用户是否无权编辑该目录。 如果是，请使用 `sudo chmod o-w -R /usr/share/dotnet-tools` 命令删除访问权限。
+将使用权限 `drwxr-xr-x` 创建 `/usr/local/share/dotnet-tools`。 如果该目录已存在，请使用 `ls -l` 命令验证受限的用户是否无权编辑该目录。 如果是，请使用 `sudo chmod o-w -R /usr/share/dotnet-tools` 命令删除访问权限。
 
 ### <a name="run-the-global-tool"></a>运行全局工具
 

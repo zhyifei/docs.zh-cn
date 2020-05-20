@@ -8,11 +8,11 @@ ms.locfileid: "77449205"
 ---
 ### <a name="boolean-parameter-of-signedcmscomputesignature-is-respected"></a>已考虑 SignedCms.ComputeSignature 的布尔参数
 
-在 .NET Core 中，已考虑 `silent` 方法的布尔 <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> 参数。 如果将此参数设置为 `true`，则不会显示 PIN 提示。
+在 .NET Core 中，已考虑 <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> 方法的布尔 `silent` 参数。 如果将此参数设置为 `true`，则不会显示 PIN 提示。
 
 #### <a name="change-description"></a>更改描述
 
-在 .NET Framework 中，`silent` 方法的 <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> 参数将被忽略，并且如果提供程序要求，则始终会显示 PIN 提示。 在 .NET Core 中，已考虑 `silent` 参数，并且如果将其设置为 `true`，则即使提供程序要求也不会显示 PIN 提示。
+在 .NET Framework 中，<xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> 方法的 `silent` 参数将被忽略，并且如果提供程序要求，则始终会显示 PIN 提示。 在 .NET Core 中，已考虑 `silent` 参数，并且如果将其设置为 `true`，则即使提供程序要求也不会显示 PIN 提示。
 
 在 2.1 版的 .NET Core 中引入了对 CMS/PKCS #7 消息的支持。
 

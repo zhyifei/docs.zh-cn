@@ -22,7 +22,7 @@ ms.locfileid: "76116329"
 
 #### <a name="recommended-action"></a>建议操作
 
-如果你的代码依赖于对 <xref:Microsoft.VisualBasic.Devices> 类型及其成员的使用，可使用 .NET 类库中的相应类型或成员。 例如，<xref:Microsoft.VisualBasic.Devices.Clock?displayProperty=nameWithType> 和 <xref:System.DateTime?displayProperty=nameWithType> 类型提供对 <xref:System.Environment?displayProperty=nameWithType> 类等效的功能，<xref:Microsoft.VisualBasic.Devices.Ports?displayProperty=nameWithType> 命名空间中的类型可提供对 <xref:System.IO.Ports?displayProperty=nameWithType> 类等效的功能。
+如果你的代码依赖于对 <xref:Microsoft.VisualBasic.Devices> 类型及其成员的使用，可使用 .NET 类库中的相应类型或成员。 例如，<xref:System.DateTime?displayProperty=nameWithType> 和 <xref:System.Environment?displayProperty=nameWithType> 类型提供对 <xref:Microsoft.VisualBasic.Devices.Clock?displayProperty=nameWithType> 类等效的功能，<xref:System.IO.Ports?displayProperty=nameWithType> 命名空间中的类型可提供对 <xref:Microsoft.VisualBasic.Devices.Ports?displayProperty=nameWithType> 类等效的功能。
 
 #### <a name="category"></a>类别
 

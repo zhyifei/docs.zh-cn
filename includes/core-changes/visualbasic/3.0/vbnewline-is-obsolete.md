@@ -16,13 +16,13 @@ ms.locfileid: "76116353"
 
 #### <a name="change-description"></a>更改描述
 
-自 .NET Core 3.0 预览版 8 起，已向 [ 常量应用 ](xref:System.ObsoleteAttribute)Obsolete<xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> 属性。 使用常量会引发编辑器警告。 在 .NET Framework 和之前的 .NET Core 版本中，它未被标记为已过时。
+自 .NET Core 3.0 预览版 8 起，已向 <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> 常量应用 [Obsolete](xref:System.ObsoleteAttribute) 属性。 使用常量会引发编辑器警告。 在 .NET Framework 和之前的 .NET Core 版本中，它未被标记为已过时。
 
 此项更改旨在支持将 Visual Basic 用作多平台开发的一种语言。 <xref:Microsoft.VisualBasic.Constants.vbNewLine> 常量与 Windows 上的换行符序列 `\r\n` 等效。 在基于 Unix 的系统上，换行符为 `\n`。
 
 #### <a name="recommended-action"></a>建议操作
 
-[ 的](xref:System.ObsoleteAttribute)已过时<xref:Microsoft.VisualBasic.Constants.vbNewLine>属性消息包含以下建议：
+<xref:Microsoft.VisualBasic.Constants.vbNewLine> 的[已过时](xref:System.ObsoleteAttribute)属性消息包含以下建议：
 
 对于回车符和换行符，请使用 <xref:Microsoft.VisualBasic.Constants.vbCrLf>。 对于当前平台的新行，请使用 <xref:System.Environment.NewLine?displayProperty=nameWithType>。
 

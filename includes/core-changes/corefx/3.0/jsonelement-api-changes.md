@@ -41,7 +41,7 @@ ms.locfileid: "74568140"
     }
     ```
 
-1. 现在，<xref:System.Text.Json.JsonElement.WriteTo%2A> 在其方法参数为 <xref:System.ArgumentNullException> 时引发 `null`。
+1. 现在，<xref:System.Text.Json.JsonElement.WriteTo%2A> 在其方法参数为 `null` 时引发 <xref:System.ArgumentNullException>。
 
 #### <a name="version-introduced"></a>引入的版本
 
@@ -51,7 +51,7 @@ ms.locfileid: "74568140"
 
 如果你的代码受这些更改的影响，则可以执行以下操作：
 
-- `WriteProperty` 中没有用于 <xref:System.Text.Json.JsonElement> 重载的替换 API。 相反，你可在调用 <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> 方法时一并调用某个 <xref:System.Text.Json.JsonElement.WriteTo%2A> 重载，以获得相同的结果。 例如:
+- <xref:System.Text.Json.JsonElement> 中没有用于 `WriteProperty` 重载的替换 API。 相反，你可在调用 <xref:System.Text.Json.JsonElement.WriteTo%2A> 方法时一并调用某个 <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> 重载，以获得相同的结果。 例如:
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -72,7 +72,7 @@ ms.locfileid: "74568140"
    }
    ```
 
-- 处理对 <xref:System.ArgumentNullException> 方法的调用中的 <xref:System.Text.Json.JsonElement.WriteTo%2A>。
+- 处理对 <xref:System.Text.Json.JsonElement.WriteTo%2A> 方法的调用中的 <xref:System.ArgumentNullException>。
 
 #### <a name="affected-apis"></a>受影响的 API
 
