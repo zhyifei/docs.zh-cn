@@ -1,13 +1,14 @@
 ---
 title: 如何：创建自定义活动设计器
+description: 本文介绍如何创建一个工作流基础自定义活动设计器，该设计器具有放置区，可在其中放置任意活动。
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 3c326508744f2aa2b34f5ee574cc9ec1e2863cf6
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: 015efd1e482e2b531d28b9caec411c76116c9653
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306348"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419780"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>如何：创建自定义活动设计器
 
@@ -15,7 +16,7 @@ ms.locfileid: "71306348"
 
 自定义活动设计器通常继承自 <xref:System.Activities.Presentation.ActivityDesigner>，后者是任何无特定设计器的活动的默认基活动设计器类型。 此类型提供与属性网格交互以及配置管理颜色和图标等基本方面的设计时体验。
 
-<xref:System.Activities.Presentation.ActivityDesigner> 采用两个帮助器控件，即 <xref:System.Activities.Presentation.WorkflowItemPresenter> 和 <xref:System.Activities.Presentation.WorkflowItemsPresenter>，以便更易于开发自定义活动设计器。 这两个控件处理常用功能，例如，拖放子元素，删除、选择和添加这些子元素。 允许内部的单个子 UI 元素（提供 "放置区域"）， <xref:System.Activities.Presentation.WorkflowItemsPresenter>而可以提供支持多个 UI 元素，包括排序、移动、删除和添加子元素等附加功能。 <xref:System.Activities.Presentation.WorkflowItemPresenter>
+<xref:System.Activities.Presentation.ActivityDesigner> 采用两个帮助器控件，即 <xref:System.Activities.Presentation.WorkflowItemPresenter> 和 <xref:System.Activities.Presentation.WorkflowItemsPresenter>，以便更易于开发自定义活动设计器。 这两个控件处理常用功能，例如，拖放子元素，删除、选择和添加这些子元素。 <xref:System.Activities.Presentation.WorkflowItemPresenter>允许内部的单个子 UI 元素（提供 "放置区域"），而 <xref:System.Activities.Presentation.WorkflowItemsPresenter> 可以提供支持多个 UI 元素，包括排序、移动、删除和添加子元素等附加功能。
 
 在实现自定义活动设计器的过程中，需要突出显示的情景的其他关键部分考虑到，使用 WPF 数据绑定将视觉对象编辑绑定到在设计器中编辑的内容的内存中存储的实例。 这是通过模型项树实现的，它还负责启用更改通知和跟踪事件（例如状态的更改）。
 
@@ -29,7 +30,7 @@ ms.locfileid: "71306348"
 
 1. 启动 Visual Studio 2010。
 
-2. 在 "**文件**" 菜单上，指向 "**新建**"，然后选择 "**项目 ...** "。
+2. 在 "**文件**" 菜单上，指向 "**新建**"，然后选择 "**项目 ...**"。
 
      **“新建项目”** 对话框随即打开。
 
@@ -37,19 +38,19 @@ ms.locfileid: "71306348"
 
 4. 在 "**模板**" 窗格中，选择 " **WPF 应用程序**"。
 
-5. 在 "**名称**" 框中`UsingWorkflowItemPresenter`，输入。
+5. 在 "**名称**" 框中，输入 `UsingWorkflowItemPresenter` 。
 
 6. 在 "**位置**" 框中，输入要保存项目的目录，或者单击 "**浏览**" 导航到该目录。
 
 7. 在 "**解决方案**" 框中，接受默认值。
 
-8. 单击 **“确定”** 。
+8. 单击“确定” 。
 
 9. 右键单击**解决方案资源管理器**中*的右击 mainwindows.xaml*文件，在 " **Microsoft Visual Studio** " 对话框中选择 "**删除**并确认 **" 确定 "** 。
 
 10. 在**解决方案资源管理器**中右键单击 "右击 usingworkflowitempresenter" 项目，依次选择 "**添加**"、"**新建项 ...** " 若要打开 "**添加新项**" 对话框，请从左侧的 "**已安装的模板**" 部分中选择 " **WPF** " 类别。
 
-11. 选择 "**窗口（WPF）** " 模板，将`RehostingWFDesigner`其命名为，然后单击 "**添加**"。
+11. 选择 "**窗口（WPF）** " 模板，将其命名为 `RehostingWFDesigner` ，然后单击 "**添加**"。
 
 12. 打开*rehostingwfdesigner.xaml*文件并将以下代码粘贴到其中以定义应用程序的 UI：
 
@@ -156,7 +157,7 @@ ms.locfileid: "71306348"
 
 14. 在解决方案资源管理器中右键单击 "引用" 目录，然后选择 "**添加引用 ...** " 显示 "**添加引用**" 对话框。
 
-15. 单击 " **.net** " 选项卡，找到名为 " **system.web**" 的程序集，选择它并单击 **"确定"** 。
+15. 单击 " **.net** " 选项卡，找到名为 " **system.web**" 的程序集，选择它并单击 **"确定"**。
 
 16. 使用相同的过程，添加对下列程序集的引用：
 
@@ -170,7 +171,7 @@ ms.locfileid: "71306348"
 
 18. 在**解决方案资源管理器**中右键单击 "右击 usingworkflowitempresenter" 项目，依次选择 "**添加**"、"**新建项 ...** " 若要打开 "**添加新项**" 对话框，请选择**左侧的**"**已安装的模板**" 部分。
 
-19. 选择 "**活动设计器**" 模板， `SimpleNativeDesigner`将其命名为，然后单击 "**添加**"。
+19. 选择 "**活动设计器**" 模板，将其命名为 `SimpleNativeDesigner` ，然后单击 "**添加**"。
 
 20. 打开*SimpleNativeDesigner*文件并将以下代码粘贴到其中。 请注意，此代码使用 <xref:System.Activities.Presentation.ActivityDesigner> 作为根元素，并演示如何使用绑定将 <xref:System.Activities.Presentation.WorkflowItemPresenter> 集成到设计器中，以便可以在复合活动设计器中显示子类型。
 
@@ -213,9 +214,9 @@ ms.locfileid: "71306348"
 
 21. 在**解决方案资源管理器**中右键单击 "右击 usingworkflowitempresenter" 项目，依次选择 "**添加**"、"**新建项 ...** " 若要打开 "**添加新项**" 对话框，请选择**左侧的**"**已安装的模板**" 部分。
 
-22. 选择 "**代码" 活动**模板，将`SimpleNativeActivity`其命名为，然后单击 "**添加**"。
+22. 选择 "**代码" 活动**模板，将其命名为 `SimpleNativeActivity` ，然后单击 "**添加**"。
 
-23. 通过在*SimpleNativeActivity.cs*文件中输入以下代码来实现类：`SimpleNativeActivity`
+23. 通过在 `SimpleNativeActivity` *SimpleNativeActivity.cs*文件中输入以下代码来实现类：
 
     ```csharp
     using System.Activities;
@@ -250,7 +251,7 @@ ms.locfileid: "71306348"
 
 ### <a name="to-create-a-custom-activity-designer-using-workflowitemspresenter"></a>使用 WorkflowItemsPresenter 创建自定义活动设计器
 
-1. 第二个自定义活动设计器的过程与第二个修改类似，第一种是对第二个应用程序`UsingWorkflowItemsPresenter`进行命名。 另外，此应用程序不会定义新的自定义活动。
+1. 第二个自定义活动设计器的过程与第二个修改类似，第一种是对第二个应用程序进行命名 `UsingWorkflowItemsPresenter` 。 另外，此应用程序不会定义新的自定义活动。
 
 2. 主要区别包含在*CustomParallelDesigner*和*RehostingWFDesigner.xaml.cs*文件中。 下面是*CustomParallelDesigner*文件中用于定义 UI 的代码：
 
@@ -343,7 +344,7 @@ ms.locfileid: "71306348"
     }
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Activities.Presentation.ActivityDesigner>
 - <xref:System.Activities.Presentation.WorkflowItemPresenter>

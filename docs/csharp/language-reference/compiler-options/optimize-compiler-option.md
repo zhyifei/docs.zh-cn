@@ -37,7 +37,7 @@ ms.locfileid: "69606597"
   
  -o 是 -optimize 的缩写形式   。  
   
- 可以将 -optimize 和 [-debug](./debug-compiler-option.md) 选项组合使用  。  
+ 可以将 -optimize 和 [-debug](./debug-compiler-option.md) 选项组合使用。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   

@@ -16,7 +16,7 @@ ms.locfileid: "65877993"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe（C# 编译器选项）
 
--unsafe 编译器选项允许使用[不安全](../keywords/unsafe.md)关键字进行编译的代码  。  
+-unsafe 编译器选项允许使用[不安全](../keywords/unsafe.md)关键字进行编译的代码。  
   
 ## <a name="syntax"></a>语法  
   

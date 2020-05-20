@@ -1,23 +1,24 @@
 ---
 title: Windows Workflow Foundation 中的新增功能
+description: 了解 .NET Framework 4 中的 Windows Workflow Foundation 更改。 工作流更易于创建、执行和维护。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-ms.openlocfilehash: 8f79c6d2a564571f8b753f322a79e91a01b1cf2f
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: b25b71a61f8a96d59c79e780d9fe5cd03abfa299
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142000"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419338"
 ---
 # <a name="whats-new-in-windows-workflow-foundation"></a>Windows Workflow Foundation 中的新增功能
 
 .NET Framework 4 中的 Windows Workflow Foundation （WF）更改了以前版本中的多个开发范例。 现在，工作流可以更方便地创建、执行、维护和实现许多新功能。 有关迁移 .NET 3.0 和 .NET 3.5 工作流应用程序以使用最新版本的详细信息，请参阅[迁移指南](migration-guidance.md)。  
   
 ## <a name="workflow-activity-model"></a>工作流活动模型  
- 现在，活动是创建工作流的基本单元，它取代了使用的 <xref:System.Workflow.Activities.SequentialWorkflowActivity> 或 <xref:System.Workflow.Activities.StateMachineWorkflowActivity> 类。 <xref:System.Activities.Activity> 类提供工作流行为的抽象基类。 然后，活动作者可以实现基本自定义活动的 <xref:System.Activities.CodeActivity> 功能，或实现使用运行时范围的自定义活动功能的 <xref:System.Activities.NativeActivity>。 <xref:System.Activities.Activity> 是活动创作者用来以声明方式表示其他 <xref:System.Activities.NativeActivity>、<xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity>或 <xref:System.Activities.DynamicActivity> 对象的新行为的类，无论它们是自定义开发还是包含在内置的[活动库](net-framework-4-5-built-in-activity-library.md)中。  
+ 现在，活动是创建工作流的基本单元，它取代了使用的 <xref:System.Workflow.Activities.SequentialWorkflowActivity> 或 <xref:System.Workflow.Activities.StateMachineWorkflowActivity> 类。 <xref:System.Activities.Activity> 类提供工作流行为的抽象基类。 然后，活动作者可以实现基本自定义活动的 <xref:System.Activities.CodeActivity> 功能，或实现使用运行时范围的自定义活动功能的 <xref:System.Activities.NativeActivity>。 <xref:System.Activities.Activity>是活动创作者用来以声明方式表示其他、、或对象的新行为的类 <xref:System.Activities.NativeActivity> <xref:System.Activities.CodeActivity> <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.DynamicActivity> ，无论它们是自定义开发的，还是包含在[内置活动库](net-framework-4-5-built-in-activity-library.md)中。  
   
 ## <a name="rich-composite-activity-options"></a>丰富的复合活动选项  
  <xref:System.Activities.Statements.Flowchart> 是一个功能强大的新控制流活动，作者可将其用于对任意循环和条件分支进行建模。 <xref:System.Activities.Statements.Flowchart> 提供了一个由事件驱动的编程模型，该模型以前只能通过 <xref:System.Workflow.Activities.StateMachineWorkflowActivity> 来实现。 程序工作流得益于对传统流控制结构进行建模的新增流控制活动，例如 <xref:System.Activities.Statements.TryCatch> 和 <xref:System.Activities.Statements.Switch%601>。  

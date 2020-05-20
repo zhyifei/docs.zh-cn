@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6325a782-6862-4346-8e20-d922ca246169
 topic_type:
 - apiref
-ms.openlocfilehash: 5d9ae66b7c77a0d3482b7c68a824a8a148ba2595
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 732a75a8efeb888501d6b90bb3b3bedf720f1b60
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139156"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420664"
 ---
 # <a name="shutdowndbgtransportmanager-function"></a>ShutdownDbgTransportManager 函数
 关闭用于远程目标计算机连接的传输管理器。  
@@ -33,7 +33,7 @@ void InitDbgTransportManager ();
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** CoreClrRemoteDebuggingInterfaces  
   

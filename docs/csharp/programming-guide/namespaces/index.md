@@ -43,7 +43,7 @@ ms.locfileid: "75937613"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/namespaces.md)中的[命名空间](~/_csharplang/spec/introduction.md)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[命名空间](~/_csharplang/spec/namespaces.md)部分。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -33,7 +33,7 @@ ms.locfileid: "70970178"
   
  `file` 不能包含程序集。 例如，如果输出文件使用 [-target:module](./target-module-compiler-option.md) 创建，其元数据可通过 -addmodule 导入  。  
   
- 如果输出文件通过使用 -target 选项而不是 -target:module 创建，则其元数据不能通过 -addmodule 导入，但可以通过 [-reference](./reference-compiler-option.md) 导入    。  
+ 如果输出文件通过使用 -target 选项而不是 -target:module 创建，则其元数据不能通过 -addmodule 导入，但可以通过 [-reference](./reference-compiler-option.md) 导入  。  
   
  此编译器选项在 Visual Studio 中不可用；项目不能引用模块。 此外，不能以编程方式更改此编译器选项。  
   

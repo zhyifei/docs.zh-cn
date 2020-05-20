@@ -1,13 +1,14 @@
 ---
 title: Windows 工作流基础概念
+description: 本文介绍了某些开发人员可能不熟悉的 .NET Framework 4.6.1 中的工作流开发中的一些概念。
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: 730679c892d96ff6de2d02ee1e1afdd52e452439
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 07498241280191fb62a35a559a3391f7148c05b9
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650931"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419884"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Windows 工作流基础概念
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]的工作流开发中会运用一些开发人员可能还不熟悉的概念。 本主题介绍其中的一些概念以及如何实现这些概念。  
@@ -51,8 +52,8 @@ ms.locfileid: "64650931"
   
  活动通过使用相应的 <xref:System.Activities.ActivityContext> 派生类（例如 <xref:System.Activities.NativeActivityContext> 或 <xref:System.Activities.CodeActivityContext>）获得访问工作流运行时环境的权限。 这些元素使用此类来解析自变量和变量，以便安排子活动和实现多种其他用途。  
   
-## <a name="services"></a>Services  
- 工作流提供一种自然的方式，以便使用消息活动实现和访问松耦合服务。 消息传递活动都基于 WCF 和是用于执行和跳出执行工作流中获取数据的主要机制。 您可将消息活动组合在一起，以便对您想要的任何类型的消息交换模式进行建模。 有关详细信息，请参阅[消息传递活动](../wcf/feature-details/messaging-activities.md)。 使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 类承载工作流服务。 有关详细信息，请参阅[承载工作流服务概述](../wcf/feature-details/hosting-workflow-services-overview.md)。 有关工作流服务的详细信息请参阅[工作流服务](../wcf/feature-details/workflow-services.md)  
+## <a name="services"></a>服务  
+ 工作流提供一种自然的方式，以便使用消息活动实现和访问松耦合服务。 消息传递活动基于 WCF 建立，是用于将数据传入和传出工作流的主要机制。 您可将消息活动组合在一起，以便对您想要的任何类型的消息交换模式进行建模。 有关详细信息，请参阅[消息传递活动](../wcf/feature-details/messaging-activities.md)。 使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 类承载工作流服务。 有关详细信息，请参阅[宿主工作流服务概述](../wcf/feature-details/hosting-workflow-services-overview.md)。 有关工作流服务的详细信息，请参阅[工作流服务](../wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>持久性、卸载和长时间运行的工作流  
  Windows 工作流通过提供以下功能，简化了创作长时间运行的反应式程序的过程：  

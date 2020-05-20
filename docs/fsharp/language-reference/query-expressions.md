@@ -1,20 +1,20 @@
 ---
 title: 查询表达式
-description: 了解F#编程语言中 LINQ 的查询表达式支持。
+description: '了解 F # 编程语言中对 LINQ 的查询表达式支持。'
 ms.date: 05/16/2016
-ms.openlocfilehash: f0c7245a930a06576487a61d73a1e5b94190ee59
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bbd15352aa89bd1891b409177921a675784a0227
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424889"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419182"
 ---
 # <a name="query-expressions"></a>查询表达式
 
 > [!NOTE]
 > 本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
-利用查询表达式，您可以查询数据源并将数据置于所需的窗体中。 查询表达式为 LINQ in F#提供支持。
+利用查询表达式，您可以查询数据源并将数据置于所需的窗体中。 查询表达式为 F # 中的 LINQ 提供支持。
 
 ## <a name="syntax"></a>语法
 
@@ -24,7 +24,7 @@ query { expression }
 
 ## <a name="remarks"></a>备注
 
-查询表达式是一种类似于序列表达式的计算表达式。 就像通过在序列表达式中提供代码来指定序列一样，通过在查询表达式中提供代码来指定一组数据。 在序列表达式中，`yield` 关键字标识作为结果序列的一部分返回的数据。 在查询表达式中，`select` 关键字执行相同的功能。 除了 `select` 关键字外， F#还支持多个查询运算符，这些运算符非常类似于 SQL SELECT 语句的各个部分。 下面是一个简单查询表达式的示例，以及连接到 Northwind OData 源的代码。
+查询表达式是一种类似于序列表达式的计算表达式。 就像通过在序列表达式中提供代码来指定序列一样，通过在查询表达式中提供代码来指定一组数据。 在序列表达式中， `yield` 关键字标识作为结果序列的一部分返回的数据。 在查询表达式中， `select` 关键字执行相同的功能。 除了 `select` 关键字外，F # 还支持多个查询运算符，这一点非常类似于 SQL SELECT 语句的各个部分。 下面是一个简单查询表达式的示例，以及连接到 Northwind OData 源的代码。
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -46,17 +46,17 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-在上面的代码示例中，查询表达式位于大括号中。 表达式中的代码含义为，返回查询结果中数据库的 Customers 表中的每个客户。 查询表达式返回实现 <xref:System.Linq.IQueryable%601> 和 <xref:System.Collections.Generic.IEnumerable%601>的类型，因此可以使用[Seq 模块](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)（如示例所示）对其进行循环访问。
+在上面的代码示例中，查询表达式位于大括号中。 表达式中的代码含义为，返回查询结果中数据库的 Customers 表中的每个客户。 查询表达式返回实现和的类型 <xref:System.Linq.IQueryable%601> ， <xref:System.Collections.Generic.IEnumerable%601> 因此可以使用[Seq 模块](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)（如示例所示）来循环访问。
 
-每个计算表达式类型都是从生成器类生成的。 查询计算表达式的生成器类 `QueryBuilder`。 有关详细信息，请参阅[计算表达式](computation-expressions.md)和[QueryBuilder 类](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)。
+每个计算表达式类型都是从生成器类生成的。 查询计算表达式的生成器类为 `QueryBuilder` 。 有关详细信息，请参阅[计算表达式](computation-expressions.md)和[QueryBuilder 类](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)。
 
 ## <a name="query-operators"></a>查询运算符
 
-利用查询运算符，您可以指定查询的详细信息，例如对要返回的记录添加条件或指定结果的排序顺序。 查询源必须支持查询运算符。 如果尝试使用不受支持的查询运算符，将会引发 `System.NotSupportedException`。
+利用查询运算符，您可以指定查询的详细信息，例如对要返回的记录添加条件或指定结果的排序顺序。 查询源必须支持查询运算符。 如果尝试使用不受支持的查询运算符， `System.NotSupportedException` 将引发。
 
-查询表达式中只允许使用可以转换为 SQL 的表达式。 例如，使用 `where` 查询运算符时，表达式中不允许使用函数调用。
+查询表达式中只允许使用可以转换为 SQL 的表达式。 例如，使用查询运算符时，表达式中不允许使用函数调用 `where` 。
 
-表1显示了可用的查询运算符。 此外，请参阅本主题后面的 Table2，它比较 SQL F#查询和等效的查询表达式。 某些类型提供程序不支持某些查询运算符。 特别是，由于 OData 的限制，OData 类型提供程序在支持的查询运算符中受到限制。 有关详细信息，请参阅[ODataService 类型提供F#程序（）](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)。
+表1显示了可用的查询运算符。 此外，请参阅 Table2，这将比较 SQL 查询和本主题后面的等效 F # 查询表达式。 某些类型提供程序不支持某些查询运算符。 特别是，由于 OData 的限制，OData 类型提供程序在支持的查询运算符中受到限制。 有关详细信息，请参阅[ODataService 类型提供程序（F #）](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)。
 
 此表假定数据库采用以下格式：
 
@@ -84,7 +84,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 <table style="width:100%">
   <tr>
     <th>运算符</th>
-    <th>描述</th>
+    <th>说明</th>
   </tr>
   <tr>
   <td><code>contains</code></td>
@@ -231,7 +231,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenBy</code></td><td>按给定的排序键对迄今为止选定的元素执行后续排序。 仅可在 <code>sortBy</code>、<code>sortByDescending</code>、<code>thenBy</code>或 <code>thenByDescending</code>后使用此运算符。<br/><br/>
+<td><code>thenBy</code></td><td>按给定的排序键对迄今为止选定的元素执行后续排序。 此运算符仅可在、、或之后使用 <code>sortBy</code> <code>sortByDescending</code> <code>thenBy</code> <code>thenByDescending</code> 。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -243,7 +243,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByDescending</code></td><td>按给定的排序键对迄今为止选定的元素执行后续排序。 仅可在 <code>sortBy</code>、<code>sortByDescending</code>、<code>thenBy</code>或 <code>thenByDescending</code>后使用此运算符。<br/><br/>
+<td><code>thenByDescending</code></td><td>按给定的排序键对迄今为止选定的元素执行后续排序。 此运算符仅可在、、或之后使用 <code>sortBy</code> <code>sortByDescending</code> <code>thenBy</code> <code>thenByDescending</code> 。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -265,7 +265,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>join</code></td><td>基于匹配键将两组选定值关联起来。 请注意，联接表达式中 = sign 的键顺序很重要。 在所有联接中，如果行在 <code>-&gt;</code> 符号之后拆分，则缩进的缩进量必须至少为关键字 <code>for</code>。<br/><br/>
+<td><code>join</code></td><td>基于匹配键将两组选定值关联起来。 请注意，联接表达式中 = sign 的键顺序很重要。 在所有联接中，如果行在符号后面拆分 <code>-&gt;</code> ，则缩进的缩进量必须至少为关键字 <code>for</code> 。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -474,7 +474,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullable</code></td><td>按照给定的可以为 null 的排序键，对迄今为止选定的元素执行后续排序。 此运算符仅可在 <code>sortBy</code>、<code>sortByDescending</code>、<code>thenBy</code>或 <code>thenByDescending</code>或其可为 null 的变量后立即使用。<br/><br/>
+<td><code>thenByNullable</code></td><td>按照给定的可以为 null 的排序键，对迄今为止选定的元素执行后续排序。 此运算符仅可在 <code>sortBy</code> 、、 <code>sortByDescending</code> <code>thenBy</code> 、或后立即使用 <code>thenByDescending</code> 。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -485,7 +485,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullableDescending</code></td><td>按给定的可以为 null 的排序键对迄今为止选定的元素执行后续排序。 此运算符仅可在 <code>sortBy</code>、<code>sortByDescending</code>、<code>thenBy</code>或 <code>thenByDescending</code>或其可为 null 的变量后立即使用。<br/><br/>
+<td><code>thenByNullableDescending</code></td><td>按给定的可以为 null 的排序键对迄今为止选定的元素执行后续排序。 此运算符仅可在 <code>sortBy</code> 、、 <code>sortByDescending</code> <code>thenBy</code> 、或后立即使用 <code>thenByDescending</code> 。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -500,14 +500,14 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Transact-SQL 和 F# 查询表达式的比较
 
-下表列出了一些常见的 Transact-sql 查询及其在中的等效F#项。 此表中的代码还假定与上表相同的数据库和用于设置类型提供程序的相同初始代码。
+下表列出了一些常见的 Transact-sql 查询及其在 F # 中的等效项。 此表中的代码还假定与上表相同的数据库和用于设置类型提供程序的相同初始代码。
 
-### <a name="table-2-transact-sql-and-f-query-expressions"></a>表2： Transact-SQL 和 F# 查询表达式
+### <a name="table-2-transact-sql-and-f-query-expressions"></a>表 2. Transact-SQL 和 F# 查询表达式
 
 <table style="width:100%">
   <tr>
     <th>Transact-sql （不区分大小写）</th>
-    <th>F#查询表达式（区分大小写）</th>
+    <th>F # 查询表达式（区分大小写）</th>
   </tr>
 <tr><td>
 从表中选择所有字段。<br>
@@ -543,11 +543,14 @@ query {
 <td><code>EXISTS</code>
 <br />
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE EXISTS
   (SELECT * FROM CourseSelection
    WHERE CourseSelection.StudentID = Student.StudentID)
 </code></pre>
+<!-- markdownlint-restore -->
 </td>
 
 <td>
@@ -608,11 +611,14 @@ query {
 </td></tr><tr><td>
 包含计数条件的分组。<br/>
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * )
 FROM Student
 GROUP BY Student.Age
 HAVING COUNT( * ) > 1
 </code></pre>
+<!-- markdownlint-restore -->
 
 </td><td>
 
@@ -652,12 +658,15 @@ query {
 </td></tr><tr><td>
 按计数进行分组、计数和排序。<br/>
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) as myCount
 FROM Student
 GROUP BY Student.Age
 HAVING COUNT( * ) > 1
 ORDER BY COUNT( * ) DESC
 </code></pre>
+<!-- markdownlint-restore -->
 
 </td><td>
 
@@ -674,7 +683,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>IN</code> 一组指定值<br/>
+<code>IN</code>一组指定值<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -715,7 +724,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> 模式匹配集。<br/>
+<code>LIKE</code>具有模式匹配集。<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -731,8 +740,8 @@ WHERE Student.Name LIKE '[abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td>带有 set 排除模式的 
-<code>LIKE</code>。<br/>
+</td></tr><tr><td>
+<code>LIKE</code>带有 set 排除模式的。<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -751,7 +760,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> 一个字段，但选择另一个字段。<br/>
+<code>LIKE</code>，但要选择不同的字段。<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -766,7 +775,7 @@ WHERE Student.Name LIKE '[^abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td><code>LIKE</code>，包含子字符串搜索。<br/>
+</td></tr><tr><td><code>LIKE</code>，其中包含子字符串搜索。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Name like '%A%'
@@ -783,7 +792,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-具有两个表的简单 <code>JOIN</code>。<br/>
+<code>JOIN</code>具有两个表的简单。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 JOIN CourseSelection
@@ -801,7 +810,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>具有两个表的 <code>LEFT JOIN</code>。<br/>
+</td></tr><tr><td><code>LEFT JOIN</code>具有两个表。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -820,7 +829,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code> 与 <code>COUNT</code><br/>
+</td></tr><tr><td>带 <code>COUNT</code> 的 <code>JOIN</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -903,7 +912,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>排序 <code>OR</code><br/>
+</td></tr><tr><td><code>OR</code>排序<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -921,7 +930,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>TOP</code>、<code>OR</code>和排序。<br/>
+</td></tr><tr><td><code>TOP</code>、 <code>OR</code> 和排序。<br/>
 
 <pre><code class="lang-sql">SELECT TOP 2 student.Name FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -943,12 +952,15 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>UNION</code> 两个查询。<br/>
+</td></tr><tr><td><code>UNION</code>的两个查询。<br/>
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
 SELECT * FROM lastStudent
 </code></pre>
+<!-- markdownlint-restore -->
 
 </td><td>
 
@@ -970,10 +982,13 @@ query2.Union (query1)
 
 </td></tr><tr><td>两个查询的交集。<br/>
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT * FROM Student
 INTERSECT
 SELECT * FROM LastStudent
 </code></pre>
+<!-- markdownlint-restore -->
 </td><td>
 
 <pre><code class="lang-fsharp">
@@ -992,7 +1007,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><code>CASE</code> 条件。<br/>
+</td></tr><tr><td><code>CASE</code>状态.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -1861,7 +1876,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-下面是以F#交互的运行此代码时的完整输出。
+下面是在 F# 交互窗口中运行此代码时的完整输出。
 
 ```console
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'
@@ -2422,8 +2437,8 @@ module Queries2 = begin
 end
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [F# 语言参考](index.md)
+- [F # 语言参考](index.md)
 - [QueryBuilder 类](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
 - [计算表达式](Computation-Expressions.md)

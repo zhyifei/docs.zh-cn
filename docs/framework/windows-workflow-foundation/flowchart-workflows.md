@@ -1,13 +1,14 @@
 ---
 title: 流程图工作流
+description: 本文介绍流程图活动，该活动通常用于实现 Workflow Foundation 中的非顺序工作流。
 ms.date: 03/30/2017
 ms.assetid: b0a3475c-d22f-49eb-8912-973c960aebf5
-ms.openlocfilehash: b84b0de34f8869d9775fe0694e74c340cc16a6b3
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: ce0661653a1d50b3f7264246b810faabbd12bf5f
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249059"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419910"
 ---
 # <a name="flowchart-workflows"></a>流程图工作流
 
@@ -17,7 +18,7 @@ ms.locfileid: "80249059"
 
  Flowchart 活动是一种活动，该活动包含要执行的活动集合。  流程图还包含流控制元素，如 <xref:System.Activities.Statements.FlowDecision> 和 <xref:System.Activities.Statements.FlowSwitch%601>，这些元素基于变量的值指示所包含活动之间的执行。
 
-## <a name="types-of-flow-nodes"></a>流节点的类型
+## <a name="types-of-flow-nodes"></a>流节点类型
 
  根据执行元素时所需的流控制类型，使用不同的元素类型。 流程图元素的类型包括：
 
@@ -53,7 +54,7 @@ ms.locfileid: "80249059"
 </Flowchart>
 ```
 
-### <a name="creating-a-conditional-flowchart-with-a-flowdecision-node"></a>使用 Flow决策节点创建条件流程图
+### <a name="creating-a-conditional-flowchart-with-a-flowdecision-node"></a>使用 FlowDecision 节点创建条件流程图
 
 若要在流程图工作流中建立条件流节点的模型（即，创建一个充当传统流程图的决策符号的链接），请使用 <xref:System.Activities.Statements.FlowDecision> 节点。 该节点的 <xref:System.Activities.Statements.FlowDecision.Condition%2A> 属性设置为定义条件的表达式，并且 <xref:System.Activities.Statements.FlowDecision.True%2A> 和 <xref:System.Activities.Statements.FlowDecision.False%2A> 属性设置为表达式计算结果为 <xref:System.Activities.Statements.FlowNode> 或 `true` 时要执行的 `false` 实例。 下面的示例演示如何定义使用 <xref:System.Activities.Statements.FlowDecision> 节点的工作流。
 
@@ -80,7 +81,7 @@ ms.locfileid: "80249059"
 </Flowchart>
 ```
 
-### <a name="creating-an-exclusive-switch-with-a-flowswitch-node"></a>使用 FlowSwitch 节点创建独占交换机
+### <a name="creating-an-exclusive-switch-with-a-flowswitch-node"></a>使用 FlowSwitch 节点创建独占开关
 
 若要建立某个流程图的模型，在该流程图中基于匹配的值选择了一个独占路径，请使用 <xref:System.Activities.Statements.FlowSwitch%601> 节点。 <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> 属性设置为 <xref:System.Activities.Activity%601>，其中类型参数 <xref:System.Object> 定义匹配选择的值。 <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> 属性定义要匹配条件表达式的键和 <xref:System.Activities.Statements.FlowNode> 对象的字典，以及一组 <xref:System.Activities.Statements.FlowNode> 对象，这些对象定义在给定情况与条件表达式匹配时的执行流方式。 <xref:System.Activities.Statements.FlowSwitch%601> 还定义一个 <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> 属性，该属性定义没有情况与条件表达式匹配时的执行流方式。 下面的示例演示如何定义使用 <xref:System.Activities.Statements.FlowSwitch%601> 元素的工作流。
 
