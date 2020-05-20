@@ -1,16 +1,17 @@
 ---
 title: 应用程序
+description: 本文是有关 Windows Workflow Foundation 中的工作流应用程序的详细过程的示例。
 ms.date: 03/30/2017
 ms.assetid: 22d27e12-ab04-432b-9695-9f74e098cff3
-ms.openlocfilehash: 5ee4f6513b8a400dcaef6e7e8caf168876db4dbc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 90c43c44781c3dca9fb91f68b44ccd40e9777242
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967864"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421392"
 ---
 # <a name="application"></a>应用程序
-本部分包含相关的工作流应用程序在 Windows Workflow Foundation (WF) 示例。  
+本部分包含与 Windows Workflow Foundation （WF）中的工作流应用程序相关的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [文档审批过程](document-approval-process.md)  
@@ -25,5 +26,5 @@ ms.locfileid: "61967864"
  [可视工作流跟踪](visual-workflow-tracking.md)  
  演示如何实现使用消息传递活动的业务流程和两个承载为工作流服务的工作流。  
   
- [已挂起的实例管理](suspended-instance-management.md)  
+ [挂起的实例管理](suspended-instance-management.md)  
  演示如何管理已挂起的工作流实例。

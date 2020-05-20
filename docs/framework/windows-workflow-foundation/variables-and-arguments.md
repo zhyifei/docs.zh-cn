@@ -1,16 +1,17 @@
 ---
 title: 变量和自变量
+description: 本文介绍变量，这些变量表示数据的存储和自变量，这些变量表示与 Workflow Foundation 中的活动之间的数据流。
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: f975f46a1858d204d12588f7570b7ea5a365e650
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 47b8a7bddc8c3a9a8427bcb3e93760a63e5fa976
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182686"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421301"
 ---
 # <a name="variables-and-arguments"></a>变量和自变量
-在 Windows 工作流基础 （WF） 中，变量表示数据的存储，参数表示进出活动的数据流。 活动拥有一组自变量，这些自变量构成活动的签名。 此外，活动可以维护一个变量列表，在工作流设计期间，开发人员可在该列表中添加或移除变量。 使用可返回值的表达式可以绑定参数。  
+在 Windows Workflow Foundation （WF）中，变量表示数据的存储，参数表示流入和流出活动的数据流。 活动拥有一组自变量，这些自变量构成活动的签名。 此外，活动可以维护一个变量列表，在工作流设计期间，开发人员可在该列表中添加或移除变量。 使用可返回值的表达式可以绑定参数。  
   
 ## <a name="variables"></a>变量  
  变量是数据的存储位置。 变量被声明为工作流定义的一部分。 变量在运行时获取值，并将这些值存储为工作流实例状态的一部分。 变量定义指定了变量的类型，如果需要，还可指定变量的名称。 以下代码演示如何声明变量，使用 <xref:System.Activities.Statements.Assign%601> 活动为变量赋值，然后使用 <xref:System.Activities.Statements.WriteLine> 活动将其值显示在控制台上。  
@@ -67,7 +68,7 @@ Variable<string> var = new Variable<string>
   
 2. 调用 <xref:System.Activities.InOutArgument%601.Set%2A> 时，运行时将立即设置值。  
   
-3. 可根据需要指定自变量的 <xref:System.Activities.Argument.EvaluationOrder%2A>。 <xref:System.Activities.Argument.EvaluationOrder%2A> 是指定自变量计算顺序的从零开始的值。 默认情况下，自变量的计算顺序未指定且等于 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 值。 将 <xref:System.Activities.Argument.EvaluationOrder%2A> 设置为一个大于或等于零的值，以便为此自变量指定一个计算顺序。 Windows 工作流基础以升序计算具有指定计算顺序的参数。 注意：未指定计算顺序的参数将先于指定计算顺序的参数计算。  
+3. 可根据需要指定自变量的 <xref:System.Activities.Argument.EvaluationOrder%2A>。 <xref:System.Activities.Argument.EvaluationOrder%2A> 是指定自变量计算顺序的从零开始的值。 默认情况下，自变量的计算顺序未指定且等于 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 值。 将 <xref:System.Activities.Argument.EvaluationOrder%2A> 设置为一个大于或等于零的值，以便为此自变量指定一个计算顺序。 Windows Workflow Foundation 按指定的计算顺序按升序计算参数。 注意：未指定计算顺序的参数将先于指定计算顺序的参数计算。  
   
  活动作者可使用强类型机制来公开该活动的自变量。 实现方法是声明 <xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601> 和 <xref:System.Activities.InOutArgument%601> 类型的属性。 这允许活动作者建立有关流入流出活动的数据的特定协定。  
   
@@ -141,4 +142,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- 有关在代码中使用参数、变量和表达式的详细信息，请参阅使用命令性代码和[必需参数和重载组](required-arguments-and-overload-groups.md)[创作工作流、活动和表达式](authoring-workflows-activities-and-expressions-using-imperative-code.md)。
+ 有关在代码中使用参数、变量和表达式的详细信息，请参阅使用命令性代码和[必需的参数和重载组](required-arguments-and-overload-groups.md)[创作工作流、活动和表达式](authoring-workflows-activities-and-expressions-using-imperative-code.md)。

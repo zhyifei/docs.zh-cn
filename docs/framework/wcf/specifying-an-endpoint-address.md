@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 47a7bb42ea2441ffef2fd27f26a20beceb871173
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 5ec6432d2f9cc7bf8619f59bad470c6b2cb190e0
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321138"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441014"
 ---
 # <a name="specifying-an-endpoint-address"></a>指定终结点地址
 
@@ -20,19 +20,19 @@ ms.locfileid: "72321138"
 
 ## <a name="definition-of-an-endpoint-address"></a>终结点地址的定义
 
-在 WCF 中，<xref:System.ServiceModel.EndpointAddress> 按 WS-ADDRESSING 标准中定义的终结点引用（EPR）建模。
+在 WCF 中，对 <xref:System.ServiceModel.EndpointAddress> ws-addressing 标准中定义的终结点引用（EPR）建模。
 
-大多数传输的地址 URI 包含四个部分。 例如，此 URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` 包含以下四个部分：
+大多数传输的地址 URI 包含四个部分。 例如，此 URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` 具有以下四个部分：
 
 - 方案：http:
 
-- 计算机： `www.fabrikam.com`
+- 设备`www.fabrikam.com`
 
 - （可选）端口：322
 
 - 路径：/mathservice.svc/secureEndpoint
 
-作为 EPR 模型的一部分，每个终结点引用都可以包含一些添加额外标识信息的引用参数。 在 WCF 中，这些引用参数建模为 <xref:System.ServiceModel.Channels.AddressHeader> 类的实例。
+作为 EPR 模型的一部分，每个终结点引用都可以包含一些添加额外标识信息的引用参数。 在 WCF 中，这些引用参数建模为类的实例 <xref:System.ServiceModel.Channels.AddressHeader> 。
 
 可以通过使用代码以强制方式或通过配置以声明方式指定服务的终结点地址。 在代码中定义终结点通常是不可行的，因为已部署服务的绑定和地址通常与在部署服务时所用的绑定和地址不同。 一般而言，使用配置定义服务终结点比使用代码更为可行。 通过将绑定和寻址信息放置在代码之外，可以在更改这些信息之后不必重新编译和重新部署应用程序。 如果在代码或配置中未指定任何终结点，则运行时在该服务实现的每个协定的每个基地址上添加一个默认终结点。
 
@@ -42,15 +42,15 @@ ms.locfileid: "72321138"
 
 ## <a name="defining-endpoint-addresses-in-configuration"></a>在配置中定义终结点地址
 
-若要在配置文件中定义终结点，请使用[\<endpoint >](../configure-apps/file-schema/wcf/endpoint-element.md)元素。
+若要在配置文件中定义终结点，请使用[ \< 终结点>](../configure-apps/file-schema/wcf/endpoint-element.md)元素。
 
-[!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]
+[!code-xml[S_UEHelloWorld#5](./snippets/specifying-an-endpoint-address/serviceapp2.config#5)]
 
-调用 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 方法时（即，当宿主应用程序尝试启动服务时），系统将查找名称特性为 "UE" 的[\<service >](../configure-apps/file-schema/wcf/service.md)元素。HelloService "。 如果找到[\<service >](../configure-apps/file-schema/wcf/service.md)元素，系统将加载指定的类并使用配置文件中提供的终结点定义创建终结点。 此机制允许您将绑定和寻址信息放置在代码之外，而用两行代码来加载和启动服务。 此方法的优点是在进行这些更改后不必重新编译或重新部署应用程序。
+<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>调用方法时（即，当宿主应用程序尝试启动服务时），系统将查找名称属性为 "UE" 的[ \< 服务>](../configure-apps/file-schema/wcf/service.md)元素。HelloService "。 如果找到[ \< 服务>](../configure-apps/file-schema/wcf/service.md)元素，系统将加载指定的类并使用配置文件中提供的终结点定义创建终结点。 此机制允许您将绑定和寻址信息放置在代码之外，而用两行代码来加载和启动服务。 此方法的优点是在进行这些更改后不必重新编译或重新部署应用程序。
 
-可选标头在[\<headers >](../configure-apps/file-schema/wcf/headers-element.md)中声明。 下面是一个元素的示例，用于在配置文件中指定服务的终结点，以区分两个标头： "黄金" 客户端从 `http://tempuri1.org/` 和 "标准" 客户端 `http://tempuri2.org/`。 调用此服务的客户端必须在其配置文件中具有相应的[\<headers >](../configure-apps/file-schema/wcf/headers-element.md) 。
+可选标头在[ \< 标头](../configure-apps/file-schema/wcf/headers-element.md)中声明>。 下面是一个元素的示例，用于在配置文件中指定服务的终结点，以区分两个标头： "黄金" 客户端 `http://tempuri1.org/` 和 "标准" 客户端 `http://tempuri2.org/` 。 调用此服务的客户端必须在其配置文件中>相应的[ \< 标头](../configure-apps/file-schema/wcf/headers-element.md)。
 
-[!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]
+[!code-xml[S_UEHelloWorld#1](./snippets/specifying-an-endpoint-address/serviceapp.config#1)]
 
 也可以为个别消息而不是终结点上的所有消息（如前面所示）设置标头。 可以通过使用 <xref:System.ServiceModel.OperationContextScope> 在客户端应用程序中创建新的上下文以向传出消息添加自定义标头，完成此操作，如以下示例中所示。
 
@@ -86,7 +86,7 @@ ms.locfileid: "72321138"
 
 如果显式提供了终结点，则仍可以添加默认终结点，方法是先在 <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> 上调用 <xref:System.ServiceModel.ServiceHost>，然后调用 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>。 有关默认终结点、绑定和行为的详细信息，请参阅[简化配置](simplified-configuration.md)和 [WCF 服务的简化配置](./samples/simplified-configuration-for-wcf-services.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceModel.EndpointAddress>
 - [服务标识和身份验证](./feature-details/service-identity-and-authentication.md)

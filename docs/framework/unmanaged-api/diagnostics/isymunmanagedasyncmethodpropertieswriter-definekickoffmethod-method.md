@@ -2,12 +2,12 @@
 title: ISymUnmanagedAsyncMethodPropertiesWriter::DefineKickoffMethod 方法
 ms.date: 03/30/2017
 ms.assetid: 4662f70d-817b-4374-8da8-e0545585939f
-ms.openlocfilehash: ccf1287a1b0218e7f2560e1afbb0930c93b43263
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c35455fc679d79d56814a9c2f026ec395e944f24
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129174"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441716"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefinekickoffmethod-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineKickoffMethod 方法
 设置启动异步操作的启动方法。  
@@ -20,7 +20,7 @@ HRESULT DefineKickoffMethod(    [in] mdToken kickoffMethod);
   
 ## <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |`kickoffMethod`||  
   
@@ -30,6 +30,6 @@ HRESULT DefineKickoffMethod(    [in] mdToken kickoffMethod);
 ## <a name="requirements"></a>要求  
  **标头：** CorSym，CorSym  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedAsyncMethodPropertiesWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)
+- [ISymUnmanagedAsyncMethodPropertiesWriter 接口](isymunmanagedasyncmethodpropertieswriter-interface.md)

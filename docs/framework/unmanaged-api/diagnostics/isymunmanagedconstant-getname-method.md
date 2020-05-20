@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cbaca4e1-4473-459b-ba34-f1f59ce7c0ba
 topic_type:
 - apiref
-ms.openlocfilehash: 924feaeb91b42404461ad5d276c0cb77279d4dc4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2dd70693528904459a34689dbad944c65c971254
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449280"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441638"
 ---
 # <a name="isymunmanagedconstantgetname-method"></a>ISymUnmanagedConstant::GetName 方法
 获取常数的名称。  
@@ -37,10 +37,10 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>参数  
  `cchName`  
- 中`szName` 参数指向的缓冲区的长度。  
+ 中参数指向的缓冲区的长度 `szName` 。  
   
  `pcchName`  
- 弄指向 `ULONG32` 的指针，该指针接收包含名称所需的缓冲区的大小（以字符数表示，包括 null 终止）。  
+ 弄指向的指针， `ULONG32` 该指针接收包含名称（包括 null 终止）所需的缓冲区的大小（以字符数表示）。  
   
  `szName`  
  弄存储名称的缓冲区。  
@@ -53,6 +53,6 @@ HRESULT GetName(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedConstant 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [GetSignature 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)
-- [GetValue 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)
+- [ISymUnmanagedConstant 接口](isymunmanagedconstant-interface.md)
+- [GetSignature 方法](isymunmanagedconstant-getsignature-method.md)
+- [GetValue 方法](isymunmanagedconstant-getvalue-method.md)

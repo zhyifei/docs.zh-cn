@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3eb41151-a228-43e3-ba8f-e6dd3ceb8542
 topic_type:
 - apiref
-ms.openlocfilehash: 401dfbea0da309db24f3052f462daa66e8bbef4a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 332d60418c744a9391c7c0afc20248c2239b090c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449264"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441615"
 ---
 # <a name="isymunmanagedconstantgetsignature-method"></a>ISymUnmanagedConstant::GetSignature 方法
 获取常量的签名。  
@@ -37,10 +37,10 @@ HRESULT GetSignature(
   
 ## <a name="parameters"></a>参数  
  `cSig`  
- 中`pcSig` 参数指向的缓冲区的长度。  
+ 中参数指向的缓冲区的长度 `pcSig` 。  
   
  `pcSig`  
- 弄指向 `ULONG32` 的指针，该指针接收包含签名所需的缓冲区大小（以字符数表示）。  
+ 弄指向的指针， `ULONG32` 该指针接收包含签名所需的缓冲区大小（以字符数表示）。  
   
  `sig`  
  弄存储签名的缓冲区。  
@@ -53,6 +53,6 @@ HRESULT GetSignature(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedConstant 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [GetName 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
-- [GetValue 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)
+- [ISymUnmanagedConstant 接口](isymunmanagedconstant-interface.md)
+- [GetName 方法](isymunmanagedconstant-getname-method.md)
+- [GetValue 方法](isymunmanagedconstant-getvalue-method.md)

@@ -1,15 +1,16 @@
 ---
-title: .NET framework 4.5 内置活动库
+title: .NET Framework 4.5 内置活动库
+description: 本文介绍了新的活动库，其中包含作为 .NET Framework 4.5 的一部分的扩展功能。
 ms.date: 03/30/2017
 ms.assetid: e559e87b-6aed-491d-9546-e92bcec16fdf
-ms.openlocfilehash: 6d47c36a55829684a0eefb2a560e65f7b91462a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ce4420759512ec3adfff70bf0c365014d96ec7b
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785998"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421483"
 ---
-# <a name="net-framework-45-built-in-activity-library"></a>.NET framework 4.5 内置活动库
+# <a name="net-framework-45-built-in-activity-library"></a>.NET Framework 4.5 内置活动库
 
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含具有扩展功能的全新活动库。 这些活动的类型包括以下类型：
 
@@ -21,7 +22,7 @@ ms.locfileid: "61785998"
 
 - [消息传递活动](../wcf/feature-details/messaging-activities.md)
 
-- [运行时](runtime-activities-in-wf.md)
+- [时会](runtime-activities-in-wf.md)
 
 - [基元](primitives-activities-in-wf.md)
 
@@ -33,4 +34,4 @@ ms.locfileid: "61785998"
 
 - [迁移](migration-activity-in-wf.md)
 
-内置活动库中的活动可以组合到工作流，或与自定义活动一起使用。 内置活动库中的活动是密封的；它们并不旨在用于通过继承创建新功能。
+内置活动库中的活动可以组合到工作流中，也可以与自定义活动一起使用。 内置活动库中的活动是密封的；它们并不旨在用于通过继承创建新功能。

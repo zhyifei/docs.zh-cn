@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bd6ccde5-d578-48d8-abed-b474fbd48d13
 topic_type:
 - apiref
-ms.openlocfilehash: 97f0d81c389ffd0bd8a69df2ca39322d726f98bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89be772ee3d8a6fc5acb74d5ebe6d3c691764f89
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176625"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441950"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod 方法
-获取此方法中具有行的文档。  
+获取此方法在中具有线条的文档。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,22 +34,22 @@ HRESULT GetDocumentsForMethod(
     [in, size_is(cDocs)] ISymUnmanagedDocument* documents[]);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `cDocs`  
- [在]指向 的缓冲区的长度`pcDocs`。  
+ 中所指向的缓冲区的长度 `pcDocs` 。  
   
  `pcDocs`  
- [出]指向 的指针`ULONG32`，该指针接收包含文档所需的缓冲区的大小（以字符表示）。  
+ 弄指向的指针， `ULONG32` 该指针接收包含文档所需的缓冲区大小（以字符数表示）。  
   
  `documents`  
- [在]包含文档的缓冲区。  
+ 中包含文档的缓冲区。  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，S_OK;否则，错误代码。  
+ 如果该方法成功，则 S_OK;否则为错误代码。  
   
 ## <a name="requirements"></a>要求  
- **标题：** 科西姆.伊德尔，科西姆.h  
+ **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymENCUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod 接口](isymencunmanagedmethod-interface.md)

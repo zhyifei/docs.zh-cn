@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd92dcaf-403c-464d-a254-21594985dddd
 topic_type:
 - apiref
-ms.openlocfilehash: 756ba2e71ca2e3e817a0a8b89165bb807368c1f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 97b9fa537fdd9147d6d9eda036013add5393e33c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449330"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441703"
 ---
 # <a name="isymunmanagedbinder2getreaderforfile2-method"></a>ISymUnmanagedBinder2::GetReaderForFile2 方法
 给定元数据接口和文件名后，将返回正确的[ISymUnmanagedReader](isymunmanagedreader-interface.md)接口，该接口将读取与模块关联的调试符号。  
   
- 与[ISymUnmanagedBinder：： GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)方法相比，此方法提供更广泛的程序数据库（PDB）文件搜索。  
+ 与[ISymUnmanagedBinder：： GetReaderForFile](isymunmanagedbinder-getreaderforfile-method.md)方法相比，此方法提供更广泛的程序数据库（PDB）文件搜索。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +49,7 @@ HRESULT GetReaderForFile2(
  中指向搜索路径的指针。  
   
  `searchPolicy`  
- 中[CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)枚举的一个值，该值指定在搜索符号读取器时要使用的策略。  
+ 中[CorSymSearchPolicyAttributes](corsymsearchpolicyattributes-enumeration.md)枚举的一个值，该值指定在搜索符号读取器时要使用的策略。  
   
  `pRetVal`  
  弄设置为返回的[ISymUnmanagedReader](isymunmanagedreader-interface.md)接口的指针。  
@@ -61,9 +61,9 @@ HRESULT GetReaderForFile2(
  **标头：** CorSym，CorSym  
   
 ## <a name="remarks"></a>备注  
- 此版本的方法可在模块旁的其他区域中搜索 PDB 文件。 可以通过组合[CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)来控制搜索策略。 例如，`AllowReferencePathAccess | AllowSymbolServerAccess` 将在可执行文件和符号服务器上查找 PDB，但不查询注册表或使用可执行文件中的路径。 如果提供了 `searchPath` 参数，则将始终搜索这些目录。  
+ 此版本的方法可在模块旁的其他区域中搜索 PDB 文件。 可以通过组合[CorSymSearchPolicyAttributes](corsymsearchpolicyattributes-enumeration.md)来控制搜索策略。 例如，将在 `AllowReferencePathAccess | AllowSymbolServerAccess` 可执行文件和符号服务器上查找 PDB，但不查询注册表或使用可执行文件中的路径。 如果 `searchPath` 提供了参数，将始终搜索这些目录。  
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymUnmanagedBinder2 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
-- [GetReaderForFile 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)
+- [ISymUnmanagedBinder2 接口](isymunmanagedbinder2-interface.md)
+- [GetReaderForFile 方法](isymunmanagedbinder-getreaderforfile-method.md)

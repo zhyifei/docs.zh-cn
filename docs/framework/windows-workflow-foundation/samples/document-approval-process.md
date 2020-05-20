@@ -1,13 +1,14 @@
 ---
 title: 文档审批过程
+description: 此示例演示文档审批过程中的许多 Windows Workflow Foundation 和 Windows Communication Foundation 功能。
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: cee43aff991f9482de7b3172174eb0e786ec1fe6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 18b4f978e9234daf22395f0d2f6f0889d0edf966
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710848"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421405"
 ---
 # <a name="document-approval-process"></a>文档审批过程
 
@@ -26,7 +27,7 @@ ms.locfileid: "74710848"
 
 下图演示了文档审批过程工作流：
 
-![文档审批过程工作流](./media/document-approval-process/document-approval-process.jpg)
+![文档审批进程工作流](./media/document-approval-process/document-approval-process.jpg)
 
 从客户端的角度来看，审批过程的工作方式如下：
 
@@ -90,7 +91,7 @@ ms.locfileid: "74710848"
 
 2. 要生成解决方案，按 Ctrl+Shift+B。
 
-3. 若要运行解决方案，请在**解决方案资源管理器**中右键单击 "ApprovalManager" 项目，然后单击 "**调试**"->从右键菜单中选择 "**启动**新实例"，以启动审批管理器应用程序。
+3. 若要运行解决方案，请在**解决方案资源管理器**中右键单击 "ApprovalManager" 项目，然后单击右键菜单中的 "**调试**" -> "**启动**新实例"，以启动审批管理器应用程序。
 
     等待管理器的输出指示已做好准备工作。
 
@@ -140,7 +141,7 @@ ms.locfileid: "74710848"
 
 6. 在 `UserType1` 客户端中，从下拉菜单中选择个人审批类型，然后键入文档名称和内容。 单击 "**请求批准**"。
 
-7. 在 `UserType2` 客户端中，将显示等待审批的文档。 选择它并按 "**批准**"，文档将传递到 `UserType3` 客户端。
+7. 在 `UserType2` 客户端中，将显示等待审批的文档。 选择它并按 "**批准**"，文档将传递给 `UserType3` 客户端。
 
     如果第一个 `UserType2` 团体批准该文档，则该文档将传递到 `UserType3` 客户端。
 

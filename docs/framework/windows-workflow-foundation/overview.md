@@ -1,13 +1,14 @@
 ---
 title: Windows 工作流概述
+description: 本文介绍 Workflow Foundation 工作流，这些工作流是描述实际过程的模型。
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: ada5ec75d130c9c518c5129db6c12b61c3acbf45
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ec1a00b37abe2cb842735fb98e1c113a97943758
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802526"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421470"
 ---
 # <a name="windows-workflow-overview"></a>Windows 工作流概述
 "工作流" 是一组称为 "*活动*" 的 elemental 单元，它们存储为描述现实世界流程的模型。 工作流提供了一种方法，用于描述多项短期运行或长期运行的工作之间的执行顺序和依赖关系。 此工作从头到尾地贯穿模型，并且活动可以人工执行或由系统功能执行。  
@@ -23,9 +24,9 @@ ms.locfileid: "74802526"
   
  上述每个类对表示为负责活动执行的 <xref:System.Activities.ActivityInstance> 的核心活动运行时进行包装。 在一个应用程序域中可以并发运行多个 <xref:System.Activities.ActivityInstance> 对象。  
   
- 上述三个主机交互对象中的每一个都是从称为工作流程序的活动树中创建的。 使用这些类型或包装 <xref:System.Activities.ActivityInstance>的自定义主机，可以在任何 Windows 进程（包括控制台应用程序、基于窗体的应用程序、Windows 服务、ASP.NET 网站和 Windows Communication Foundation （WCF）服务）内执行工作流。  
+ 上述三个主机交互对象中的每一个都是从称为工作流程序的活动树中创建的。 使用这些类型或包装的自定义主机 <xref:System.Activities.ActivityInstance> ，可以在任何 Windows 进程（包括控制台应用程序、基于窗体的应用程序、Windows 服务、ASP.NET 网站和 Windows Communication Foundation （WCF）服务）内执行工作流。  
   
- ![宿主进程中的工作流组件](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
+ ![托管进程中的工作流组件](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 托管进程中的工作流组件  
   
 ## <a name="interaction-between-workflow-components"></a>工作流组件之间的交互  

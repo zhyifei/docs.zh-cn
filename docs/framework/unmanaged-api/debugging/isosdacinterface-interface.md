@@ -15,22 +15,22 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 94349a3f7b18c8ce29bb3a71cb9d10ee4eac8036
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c9b4e6e5b36fe38b6c0ea78f6d1848d155008bcc
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790482"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420963"
 ---
 # <a name="isosdacinterface-interface"></a>ISOSDacInterface 接口
 
-提供用于从 `SOS`访问数据的帮助器方法。
+提供用于访问中的数据的帮助器方法 `SOS` 。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
 ## <a name="methods"></a>方法
 
-| 方法                                                                                                               | 描述                                                                                                                   |
+| 方法                                                                                                               | 说明                                                                                                                   |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | [GetMethodDescData](isosdacinterface-getmethoddescdata-method.md) | 获取给定 MethodDesc 指针的数据。 |
 | [GetMethodDescPtrFromIP](isosdacinterface-getmethoddescptrfromip-method.md) | 检索与包含给定本机指令地址的方法相对应的 MethodDesc 的指针。 |
@@ -38,14 +38,14 @@ ms.locfileid: "76790482"
 
 ## <a name="remarks"></a>备注
 
-此接口在运行时中存在，不会通过任何标头或库文件公开。 不过，它是一个使用 GUID `436f00f2-b42a-4b9f-870c-e73db66ae930` 派生的 COM 接口，可通过常用的 COM 机制来获取 `IUnknown`。
+此接口在运行时中存在，不会通过任何标头或库文件公开。 但是，它是从使用 GUID 派生的 COM 接口， `IUnknown` `436f00f2-b42a-4b9f-870c-e73db66ae930` 该接口可通过常用的 COM 机制获得。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
 **标头：** 内容  
 **库：** 内容  
-**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>另请参阅
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7da621fc-e7d0-4c00-9439-5c93619d7414
 topic_type:
 - apiref
-ms.openlocfilehash: 4799c1d04e8172c604eeec50f2b841a6db063949
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0c3b5da52b78150198fa9f910bf01b4657e4eba8
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790587"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421158"
 ---
 # <a name="icorpublishprocessenumappdomains-method"></a>ICorPublishProcess::EnumAppDomains 方法
 获取此[ICorPublishProcess](icorpublishprocess-interface.md)引用的进程中的应用程序域的枚举器。  
@@ -38,18 +38,18 @@ HRESULT EnumAppDomains (
  弄一个指针，指向允许在此进程中通过应用程序域集合进行迭代的[ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md)实例的地址。  
   
 ## <a name="remarks"></a>备注  
- 应用程序域的列表基于在调用 `EnumAppDomains` 方法时存在的应用程序域的快照。 可以多次调用此方法来创建新的最新列表。 此方法的后续调用将不会影响现有列表。  
+ 应用程序域的列表基于在调用方法时存在的应用程序域的快照 `EnumAppDomains` 。 可以多次调用此方法来创建新的最新列表。 此方法的后续调用将不会影响现有列表。  
   
- 如果进程已终止，`EnumAppDomains` 将失败，HRESULT 值为 CORDBG_E_PROCESS_TERMINATED。  
+ 如果进程已终止， `EnumAppDomains` 则将失败，并且 HRESULT 值为 CORDBG_E_PROCESS_TERMINATED。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** CorPub，CorPub  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

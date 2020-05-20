@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c5566ab-4ec7-4b61-9753-839bb90ae78c
 topic_type:
 - apiref
-ms.openlocfilehash: b8e72745eff09c6707afe5a5f20a1ddf38b239ae
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3ac8bb3a20ce82b734a572832a9cbb75fa2568c4
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448613"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441898"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument 方法
 获取特定文档中该方法的最小起始行和最大结束行。  
@@ -39,10 +39,10 @@ HRESULT GetSourceExtentInDocument(
  中指向文档的指针。  
   
  `pstartLine`  
- 弄指向接收起始行的 `ULONG32` 的指针。  
+ 弄指向的指针 `ULONG32` ，该指针接收起始行。  
   
  `pendLine`  
- 弄指向接收结束行的 `ULONG32` 的指针。  
+ 弄指向 `ULONG32` 的指针，该指针接收结束行。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
@@ -52,4 +52,4 @@ HRESULT GetSourceExtentInDocument(
   
 ## <a name="see-also"></a>另请参阅
 
-- [ISymENCUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod 接口](isymencunmanagedmethod-interface.md)

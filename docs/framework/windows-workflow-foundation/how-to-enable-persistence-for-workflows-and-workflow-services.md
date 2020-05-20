@@ -1,13 +1,14 @@
 ---
 title: 如何：对工作流和工作流服务启用持久性
+description: 了解如何配置 SQL 工作流实例存储以通过编程方式和使用配置文件为工作流和工作流服务启用持久性。
 ms.date: 03/30/2017
 ms.assetid: 2b1c8bf3-9866-45a4-b06d-ee562393e503
-ms.openlocfilehash: 5d0eeb8ad40f2f4f3349ab48487316014a561a1b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 31fe6e3f06989e9a42254747565342cf97e4b9f1
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460891"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421509"
 ---
 # <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>如何：对工作流和工作流服务启用持久性
 
@@ -15,7 +16,7 @@ ms.locfileid: "73460891"
 
 ## <a name="enable-persistence-for-workflows"></a>对工作流启用持久性
 
-可以通过使用 <xref:System.Activities.WorkflowApplication> 类的 <xref:System.Activities.WorkflowApplication.InstanceStore%2A> 属性将实例存储与**WorkflowApplication**关联。 <xref:System.Activities.WorkflowApplication.Persist%2A> 方法将工作流保存或持久保存到与应用程序关联的实例存储中。 <xref:System.Activities.WorkflowApplication.Unload%2A> 方法将工作流保存到实例存储中，然后从内存中卸载该实例。 **Load**方法使用实例持久性存储区中存储的工作流数据将工作流加载到内存中。
+通过使用类的属性，可以将实例存储与**WorkflowApplication**关联 <xref:System.Activities.WorkflowApplication.InstanceStore%2A> <xref:System.Activities.WorkflowApplication> 。 <xref:System.Activities.WorkflowApplication.Persist%2A> 方法将工作流保存或持久保存到与应用程序关联的实例存储中。 <xref:System.Activities.WorkflowApplication.Unload%2A> 方法将工作流保存到实例存储中，然后从内存中卸载该实例。 **Load**方法使用实例持久性存储区中存储的工作流数据将工作流加载到内存中。
 
 **持久性**方法执行以下步骤：
 
@@ -37,7 +38,7 @@ ms.locfileid: "73460891"
 
 ## <a name="enable-persistence-for-workflow-services-in-code"></a>在代码中实现工作流服务的持久性
 
-<xref:System.ServiceModel.WorkflowServiceHost> 类的**DurableInstancingOptions**成员具有一个名为**InstanceStore**的属性，可用于将实例存储与**WorkflowServiceHost**相关联。
+类的**DurableInstancingOptions**成员 <xref:System.ServiceModel.WorkflowServiceHost> 具有一个名为**InstanceStore**的属性，可用于将实例存储与**WorkflowServiceHost**相关联。
 
 ```csharp
 // wsh is an instance of WorkflowServiceHost class

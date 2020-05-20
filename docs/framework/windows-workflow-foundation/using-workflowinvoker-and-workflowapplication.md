@@ -1,16 +1,17 @@
 ---
 title: 使用 WorkflowInvoker 和 WorkflowApplication
+description: 本文介绍了如何使用 WorkflowInvoker 和 WorkflowApplication 在 Windows Workflow Foundation 中进行工作流托管。
 ms.date: 03/30/2017
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
-ms.openlocfilehash: 5d09fc3c902b1993b32edf3e9f92393433281636
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 50ad291bc73818092e7a08d489d6860636f9c379
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182703"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421314"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>使用 WorkflowInvoker 和 WorkflowApplication
-Windows 工作流基础 （WF） 提供了几种托管工作流的方法。 <xref:System.Activities.WorkflowInvoker> 提供一种简单工作流调用方法，就像方法调用一样，仅可用于不使用持久性的工作流。 <xref:System.Activities.WorkflowApplication> 为执行工作流（包括生命周期事件通知、执行控制、书签恢复和持久性）提供更丰富的模型。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 为消息传递活动提供支持，主要用于工作流服务。 本主题介绍使用 <xref:System.Activities.WorkflowInvoker> 和 <xref:System.Activities.WorkflowApplication> 的工作流承载。 有关 使用<xref:System.ServiceModel.Activities.WorkflowServiceHost>托管工作流的详细信息，请参阅[工作流服务和](../wcf/feature-details/workflow-services.md)[托管工作流服务概述](../wcf/feature-details/hosting-workflow-services-overview.md)。  
+Windows Workflow Foundation （WF）提供了几种托管工作流的方法。 <xref:System.Activities.WorkflowInvoker> 提供一种简单工作流调用方法，就像方法调用一样，仅可用于不使用持久性的工作流。 <xref:System.Activities.WorkflowApplication> 为执行工作流（包括生命周期事件通知、执行控制、书签恢复和持久性）提供更丰富的模型。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 为消息传递活动提供支持，主要用于工作流服务。 本主题介绍使用 <xref:System.Activities.WorkflowInvoker> 和 <xref:System.Activities.WorkflowApplication> 的工作流承载。 有关托管工作流的详细信息 <xref:System.ServiceModel.Activities.WorkflowServiceHost> ，请参阅[工作流服务](../wcf/feature-details/workflow-services.md)和[承载工作流服务概述](../wcf/feature-details/hosting-workflow-services-overview.md)。  
   
 ## <a name="using-workflowinvoker"></a>使用 WorkflowInvoker  
  <xref:System.Activities.WorkflowInvoker> 提供一种执行工作流的模型，如同使用方法调用。 若要使用 <xref:System.Activities.WorkflowInvoker> 调用工作流，请调用 <xref:System.Activities.WorkflowInvoker.Invoke%2A> 方法，并传入要调用的工作流的工作流定义。 在本示例中，使用 <xref:System.Activities.Statements.WriteLine> 调用 <xref:System.Activities.WorkflowInvoker> 活动。  
@@ -60,14 +61,14 @@ Windows 工作流基础 （WF） 提供了几种托管工作流的方法。 <xre
  [!code-csharp[CFX_WorkflowApplicationExample#30](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#30)]  
   
 ### <a name="retrieving-output-arguments-of-a-workflow"></a>检索工作流的输出自变量  
- 当工作流完成时，可通过访问 <xref:System.Activities.WorkflowApplication.Completed%2A> 字典在 <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType> 处理程序中检索任何输出自变量。 下面的示例使用 <xref:System.Activities.WorkflowApplication> 承载一个工作流。 使用<xref:System.Activities.WorkflowApplication>由单个`DiceRoll`活动组成的工作流定义构造实例。 `DiceRoll` 活动包含两个表示掷骰子操作结果的输出自变量。 当工作流完成时，将在 <xref:System.Activities.WorkflowApplication.Completed%2A> 处理程序中检索输出。  
+ 当工作流完成时，可通过访问 <xref:System.Activities.WorkflowApplication.Completed%2A> 字典在 <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType> 处理程序中检索任何输出自变量。 下面的示例使用 <xref:System.Activities.WorkflowApplication> 承载一个工作流。 <xref:System.Activities.WorkflowApplication>实例是使用由单个活动组成的工作流定义构造的 `DiceRoll` 。 `DiceRoll` 活动包含两个表示掷骰子操作结果的输出自变量。 当工作流完成时，将在 <xref:System.Activities.WorkflowApplication.Completed%2A> 处理程序中检索输出。  
   
  [!code-csharp[CFX_WorkflowApplicationExample#130](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#130)]  
   
  [!code-csharp[CFX_WorkflowApplicationExample#21](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#21)]  
   
 > [!NOTE]
-> <xref:System.Activities.WorkflowApplication> 和 <xref:System.Activities.WorkflowInvoker> 采用输入自变量字典，并返回 `out` 自变量的字典。 这些字典形参、属性及返回值的类型为 `IDictionary<string, object>`。 传入的字典类的实际实例可以是实现了 `IDictionary<string, object>` 的任何类。 在这些示例中使用了 `Dictionary<string, object>`。 有关字典的详细信息，请参阅<xref:System.Collections.Generic.IDictionary%602>和<xref:System.Collections.Generic.Dictionary%602>。  
+> <xref:System.Activities.WorkflowApplication> 和 <xref:System.Activities.WorkflowInvoker> 采用输入自变量字典，并返回 `out` 自变量的字典。 这些字典形参、属性及返回值的类型为 `IDictionary<string, object>`。 传入的字典类的实际实例可以是实现了 `IDictionary<string, object>` 的任何类。 在这些示例中使用了 `Dictionary<string, object>`。 有关字典的详细信息，请参阅 <xref:System.Collections.Generic.IDictionary%602> 和 <xref:System.Collections.Generic.Dictionary%602> 。  
   
 ### <a name="passing-data-into-a-running-workflow-using-bookmarks"></a>使用书签将数据传入运行中的工作流  
  书签是使活动能够被动等待继续的机制，也是将数据传入运行中的工作流实例的机制。 如果某个活动在等待数据，它可以创建 <xref:System.Activities.Bookmark>，并注册一个在继续 <xref:System.Activities.Bookmark> 时要调用的回调方法，如下例所示。  
@@ -85,17 +86,17 @@ Windows 工作流基础 （WF） 提供了几种托管工作流的方法。 <xre
  下面的代码示例与前一个示例类似，但在继续书签之前会枚举活动书签。 该示例启动工作流，一旦创建了 <xref:System.Activities.Bookmark> 并且工作流进入空闲状态，就调用 <xref:System.Activities.WorkflowApplication.GetBookmarks%2A>。 完成工作流时，会向控制台显示以下输出。  
   
  **你叫什么名字？**  
-**书签名称：用户名 - 所有者显示名称：阅读线**
-**史蒂夫**
-**你好，史蒂夫**
+**BookmarkName：用户名-OwnerDisplayName： ReadLine** 
+**Steve** 
+**你好，Steve**
 
 [!code-csharp[CFX_WorkflowApplicationExample#14](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#14)]  
   
- 下面的代码示例检查传递给 <xref:System.Activities.WorkflowApplicationIdleEventArgs> 实例的 <xref:System.Activities.WorkflowApplication.Idle%2A>  处理程序的 <xref:System.Activities.WorkflowApplication>。 在此示例中，进入空闲状态的工作流包含一个由名为 <xref:System.Activities.Bookmark> 的活动所拥有的名为 `EnterGuess` 的 `ReadInt`。 此代码示例基于[如何：运行工作流](how-to-run-a-workflow.md)，这是[入门教程](getting-started-tutorial.md)的一部分。 如果修改了该阶段中的 <xref:System.Activities.WorkflowApplication.Idle%2A> 处理程序以包含此示例中的代码，则将显示以下输出。  
+ 下面的代码示例检查传递给 <xref:System.Activities.WorkflowApplicationIdleEventArgs> 实例的 <xref:System.Activities.WorkflowApplication.Idle%2A>  处理程序的 <xref:System.Activities.WorkflowApplication>。 在此示例中，进入空闲状态的工作流包含一个由名为 <xref:System.Activities.Bookmark> 的活动所拥有的名为 `EnterGuess` 的 `ReadInt`。 此代码示例基于[如何：运行工作流，该工作流](how-to-run-a-workflow.md)是[入门教程](getting-started-tutorial.md)的一部分。 如果修改了该阶段中的 <xref:System.Activities.WorkflowApplication.Idle%2A> 处理程序以包含此示例中的代码，则将显示以下输出。  
   
  **BookmarkName: EnterGuess - OwnerDisplayName: ReadInt**
 
  [!code-csharp[CFX_WorkflowApplicationExample#2](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#2)]  
   
-## <a name="summary"></a>总结  
+## <a name="summary"></a>摘要  
  <xref:System.Activities.WorkflowInvoker> 提供了一个简便的方法来调用工作流，尽管提供了在工作流开始时传入数据以及从完成的工作流中提取数据的方法，但不提供使用 <xref:System.Activities.WorkflowApplication> 时可用的更为复杂的方案。
