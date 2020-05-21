@@ -14,59 +14,59 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 4f774915cdbb12b13fa334db37c8e0fa2a7e5829
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04260429dd69f5ba1d6a94b6628979341d12b9e8
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135134"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762066"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName 接口
-提供用于对具有强名称的程序集进行签名的基本全局静态函数。 所有 `ICLRStrongName` 方法返回标准 COM Hresult。  
+提供用于对具有强名称的程序集进行签名的基本全局静态函数。 所有 `ICLRStrongName` 方法都返回标准 COM hresult。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[GetHashFromAssemblyFile 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)|使用指定的哈希算法获取指定程序集文件的哈希。|  
-|[GetHashFromAssemblyFileW 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)|使用指定的哈希算法获取指定为 Unicode 字符串的程序集文件的哈希。|  
-|[GetHashFromBlob 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)|使用指定的哈希算法获取指定内存地址处的程序集的哈希。|  
-|[GetHashFromFile 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)|生成指定文件内容的哈希。|  
-|[GetHashFromFileW 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)|生成由 Unicode 字符串指定的文件内容的哈希。|  
-|[GetHashFromHandle 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)|使用指定的哈希算法，生成具有指定文件句柄的文件内容的哈希。|  
-|[StrongNameCompareAssemblies 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)|确定两个程序集是否仅是强名称签名不同。|  
-|[StrongNameFreeBuffer 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)|释放以前对强名称方法（如[StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)、 [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)或[StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)）的调用所分配的内存。|  
-|[StrongNameGetBlob 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)|使用指定地址处可执行文件的二进制表示形式填充指定的缓冲区。|  
-|[StrongNameGetBlobFromImage 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)|获取指定内存地址处程序集映像的二进制表示形式。|  
-|[StrongNameGetPublicKey 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)|从私钥/公钥对中获取公钥。|  
-|[StrongNameHashSize 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md)|使用指定的哈希算法获取哈希所需的缓冲区大小。|  
-|[StrongNameKeyDelete 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)|删除指定的密钥容器。|  
-|[StrongNameKeyGen 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)|创建新的公钥/私钥对，以便强名称使用。|  
-|[StrongNameKeyGenEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)|生成具有指定密钥大小的新公钥/私钥对，以便强名称使用。|  
-|[StrongNameKeyInstall 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)|将公钥/私钥对导入容器。|  
-|[StrongNameSignatureGeneration 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)|为指定的程序集生成强名称签名。|  
-|[StrongNameSignatureGenerationEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)|根据指定标志为指定的程序集生成强名称签名。|  
-|[StrongNameSignatureSize 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md)|返回强名称签名的大小。|  
-|[StrongNameSignatureVerification 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)|获取一个值，该值指示提供的路径中的程序集清单是否包含根据指定标志验证的强名称签名。|  
-|[StrongNameSignatureVerificationEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)|获取一个值，该值指示提供的路径中的程序集清单是否包含强名称签名。|  
-|[StrongNameSignatureVerificationFromImage 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)|验证已映射到内存的程序集对关联的公钥是否有效。|  
-|[StrongNameTokenFromAssembly 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)|从指定的程序集文件创建强名称令牌。|  
-|[StrongNameTokenFromAssemblyEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)|从指定的程序集文件创建强名称令牌并返回公钥。|  
-|[StrongNameTokenFromPublicKey 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)|获取表示公钥的令牌。|  
+|[GetHashFromAssemblyFile 方法](iclrstrongname-gethashfromassemblyfile-method.md)|使用指定的哈希算法获取指定程序集文件的哈希。|  
+|[GetHashFromAssemblyFileW 方法](iclrstrongname-gethashfromassemblyfilew-method.md)|使用指定的哈希算法获取指定为 Unicode 字符串的程序集文件的哈希。|  
+|[GetHashFromBlob 方法](iclrstrongname-gethashfromblob-method.md)|使用指定的哈希算法获取指定内存地址处的程序集的哈希。|  
+|[GetHashFromFile 方法](iclrstrongname-gethashfromfile-method.md)|生成指定文件内容的哈希。|  
+|[GetHashFromFileW 方法](iclrstrongname-gethashfromfilew-method.md)|生成由 Unicode 字符串指定的文件内容的哈希。|  
+|[GetHashFromHandle 方法](iclrstrongname-gethashfromhandle-method.md)|使用指定的哈希算法，生成具有指定文件句柄的文件内容的哈希。|  
+|[StrongNameCompareAssemblies 方法](iclrstrongname-strongnamecompareassemblies-method.md)|确定两个程序集是否仅是强名称签名不同。|  
+|[StrongNameFreeBuffer 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)|释放以前对强名称方法（如[StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)、 [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)或[StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md)）的调用所分配的内存。|  
+|[StrongNameGetBlob 方法](iclrstrongname-strongnamegetblob-method.md)|使用指定地址处可执行文件的二进制表示形式填充指定的缓冲区。|  
+|[StrongNameGetBlobFromImage 方法](iclrstrongname-strongnamegetblobfromimage-method.md)|获取指定内存地址处程序集映像的二进制表示形式。|  
+|[StrongNameGetPublicKey 方法](iclrstrongname-strongnamegetpublickey-method.md)|从私钥/公钥对中获取公钥。|  
+|[StrongNameHashSize 方法](iclrstrongname-strongnamehashsize-method.md)|使用指定的哈希算法获取哈希所需的缓冲区大小。|  
+|[StrongNameKeyDelete 方法](iclrstrongname-strongnamekeydelete-method.md)|删除指定的密钥容器。|  
+|[StrongNameKeyGen 方法](iclrstrongname-strongnamekeygen-method.md)|创建新的公钥/私钥对，以便强名称使用。|  
+|[StrongNameKeyGenEx 方法](iclrstrongname-strongnamekeygenex-method.md)|生成具有指定密钥大小的新公钥/私钥对，以便强名称使用。|  
+|[StrongNameKeyInstall 方法](iclrstrongname-strongnamekeyinstall-method.md)|将公钥/私钥对导入容器。|  
+|[StrongNameSignatureGeneration 方法](iclrstrongname-strongnamesignaturegeneration-method.md)|为指定的程序集生成强名称签名。|  
+|[StrongNameSignatureGenerationEx 方法](iclrstrongname-strongnamesignaturegenerationex-method.md)|根据指定标志为指定的程序集生成强名称签名。|  
+|[StrongNameSignatureSize 方法](iclrstrongname-strongnamesignaturesize-method.md)|返回强名称签名的大小。|  
+|[StrongNameSignatureVerification 方法](iclrstrongname-strongnamesignatureverification-method.md)|获取一个值，该值指示提供的路径中的程序集清单是否包含根据指定标志验证的强名称签名。|  
+|[StrongNameSignatureVerificationEx 方法](iclrstrongname-strongnamesignatureverificationex-method.md)|获取一个值，该值指示提供的路径中的程序集清单是否包含强名称签名。|  
+|[StrongNameSignatureVerificationFromImage 方法](iclrstrongname-strongnamesignatureverificationfromimage-method.md)|验证已映射到内存的程序集对关联的公钥是否有效。|  
+|[StrongNameTokenFromAssembly 方法](iclrstrongname-strongnametokenfromassembly-method.md)|从指定的程序集文件创建强名称令牌。|  
+|[StrongNameTokenFromAssemblyEx 方法](iclrstrongname-strongnametokenfromassemblyex-method.md)|从指定的程序集文件创建强名称令牌并返回公钥。|  
+|[StrongNameTokenFromPublicKey 方法](iclrstrongname-strongnametokenfrompublickey-method.md)|获取表示公钥的令牌。|  
   
-## <a name="remarks"></a>备注  
- 可以通过使用 `CLSID_CLRStrongName` 和 `IID_ICLRStrongName` 作为参数来调用[ICLRRuntimeInfo：： GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)方法来获取 `ICLRStrongName` 的实例。  
+## <a name="remarks"></a>注解  
+ 可以 `ICLRStrongName` 通过使用和作为参数调用[ICLRRuntimeInfo：： GetInterface](iclrruntimeinfo-getinterface-method.md)方法来获取的实例 `CLSID_CLRStrongName` `IID_ICLRStrongName` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** MetaHost  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [承载接口](hosting-interfaces.md)
+- [承载](index.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: c73a61b8c251b12d5b3dac67535632322779a6af
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 9a911b99b4543ae7957b685df06b4d85f13c7790
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644054"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762222"
 ---
 # <a name="dependency-properties-overview"></a>依赖属性概述
 
@@ -68,7 +68,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 [!code-xaml[PropertiesOvwSupport#PESyntaxProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#pesyntaxproperty)]
 
 ### <a name="setting-properties-in-code"></a>在代码中设置属性
- 在代码中设置依赖项属性值通常只是对 CLR"包装器"公开的集实现的调用。
+ 在代码中设置依赖属性值通常只是对 CLR "包装" 公开的集实现的调用。
 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyset)]
 [!code-vb[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyset)]
@@ -78,7 +78,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-您还可以<xref:System.Windows.DependencyObject.GetValue%2A><xref:System.Windows.DependencyObject.SetValue%2A>直接调用属性系统 API。 如果您正在使用现有属性（包装器更方便，并为开发人员工具提供更好的属性暴露），则通常不需要这样做，但直接调用 API 适用于某些方案。
+还可以直接调用属性系统 Api <xref:System.Windows.DependencyObject.GetValue%2A> <xref:System.Windows.DependencyObject.SetValue%2A> 。 如果使用现有属性（包装更方便，并为开发人员工具提供更好的属性公开），则通常不需要这样做，但在某些情况下，可以直接调用 Api。
 
 还可以在 XAML 中设置属性，然后通过代码隐藏在代码中访问这些属性。 有关详细信息，请参阅 [WPF 中的代码隐藏和 XAML](code-behind-and-xaml-in-wpf.md)。
 
@@ -93,7 +93,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 
 - [动画](#animations)
 
-- [元数据覆盖](#metadata-overrides)
+- [元数据重写](#metadata-overrides)
 
 - [属性值继承](#property-value-inheritance)
 
@@ -108,7 +108,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 
 [!code-xaml[PropertiesOvwSupport#ResourcesReference](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesreference)]
 
-这个特定资源称为 [DynamicResource 标记扩展](dynamicresource-markup-extension.md)（在 WPF XAML 中，可以使用静态或动态资源引用）。 若要使用动态资源引用，必须设置为依赖属性，因此它专门是由 WPF 属性系统启用的动态资源引用用法。 有关详细信息，请参阅 [XAML 资源](xaml-resources.md)。
+这个特定资源称为 [DynamicResource 标记扩展](dynamicresource-markup-extension.md)（在 WPF XAML 中，可以使用静态或动态资源引用）。 若要使用动态资源引用，必须设置为依赖属性，因此它专门是由 WPF 属性系统启用的动态资源引用用法。 有关详细信息，请参阅 [XAML 资源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)。
 
 > [!NOTE]
 > 资源被视为本地值，这意味着，如果设置另一个本地值，该资源引用将被消除。 有关详细信息，请参阅[依赖属性值优先级](dependency-property-value-precedence.md)。
@@ -128,13 +128,13 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 ### <a name="styles"></a>样式
 样式和模板是使用依赖属性的两个主要激发方案。 在设置定义应用程序[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 的属性时，样式尤其有用。 在 XAML 中，通常将样式定义为资源。 样式与属性系统交互，因为它们通常包含特定属性的“资源库”，以及基于另一个属性的实时值更改属性值的“触发器”。
 
-下面的示例创建一个简单的样式（将在<xref:System.Windows.FrameworkElement.Resources%2A>字典中定义，不显示），然后将该样式直接<xref:System.Windows.FrameworkElement.Style%2A>应用于 属性。 <xref:System.Windows.Controls.Button> 样式中的资源库将带样式 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Controls.Control.Background%2A> 属性设置为绿色。
+下面的示例创建一个简单样式（将在字典中定义 <xref:System.Windows.FrameworkElement.Resources%2A> ，而不会显示），然后将该样式直接应用于的 <xref:System.Windows.FrameworkElement.Style%2A> 属性 <xref:System.Windows.Controls.Button> 。 样式中的资源库将带样式 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Controls.Control.Background%2A> 属性设置为绿色。
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyleDef](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyledef)]
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyle)]
 
-有关详细信息，请参阅[样式和模板](../../../desktop-wpf/fundamentals/styles-templates-overview.md)化。
+有关详细信息，请参阅[样式设置和模板化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)。
 
 ### <a name="animations"></a>动画
 可以对依赖属性进行动画处理。 在应用和运行动画时，经过动画处理的值的操作优先级高于该属性以其他方式具有的任何值（如本地值）。
@@ -146,7 +146,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 有关对属性进行动画处理的详细信息，请参阅[动画概述](../graphics-multimedia/animation-overview.md)和[情节提要概述](../graphics-multimedia/storyboards-overview.md)。
 
 ### <a name="metadata-overrides"></a>元数据重写
-在从最初注册依赖属性的类派生时，可以通过重写依赖属性的元数据来更改该属性的某些行为。 重写元数据依赖于 <xref:System.Windows.DependencyProperty> 标识符。 重写元数据不需要重新实现该属性。 元数据的更改由属性系统在本机处理；对于所有从基类继承的属性，每个类都有可能基于每个类型保留元数据。
+在从最初注册依赖属性的类派生时，可以通过重写依赖属性的元数据来更改该属性的某些行为。 重写元数据依赖于 <xref:System.Windows.DependencyProperty> 标识符。 重写元数据不需要重新实现属性。 元数据的更改由属性系统在本机处理；对于所有从基类继承的属性，每个类都有可能基于每个类型保留元数据。
 
 以下示例重写依赖属性 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> 的元数据。 重写此特定依赖属性的元数据是某个实现模式的一部分，该模式创建可以使用主题中的默认样式的控件。
 
@@ -168,12 +168,12 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 有关详细信息，请参阅[属性值继承](property-value-inheritance.md)。
 
 ### <a name="wpf-designer-integration"></a>WPF 设计器集成
-具有作为依赖项属性实现的属性的自定义控件将收到适当的 WPF 设计器，用于可视化工作室支持。 一个示例就是能够在“属性”**** 窗口中编辑直接依赖属性和附加依赖属性。 有关详细信息，请参阅[控件创作概述](../controls/control-authoring-overview.md)。
+具有作为依赖属性实现的属性的自定义控件将接收适用于 Visual Studio 支持的相应 WPF 设计器。 一个示例就是能够在“属性”**** 窗口中编辑直接依赖属性和附加依赖属性。 有关详细信息，请参阅[控件创作概述](../controls/control-authoring-overview.md)。
 
 ## <a name="dependency-property-value-precedence"></a>依赖项属性值优先级
 获取依赖属性的值时，获得的值可能是通过参与 WPF 属性系统的其他任一基于属性的输入而在该属性上设置的。 由于存在依赖属性值优先级，使得属性获取值的方式的各种方案得以按可预测的方式交互。
 
-请考虑以下示例。 该示例包含适用于所有按钮及其 <xref:System.Windows.Controls.Control.Background%2A> 属性的样式，但也会指定一个具有本地设置的 <xref:System.Windows.Controls.Control.Background%2A> 值的按钮。
+请看下面的示例。 该示例包含适用于所有按钮及其 <xref:System.Windows.Controls.Control.Background%2A> 属性的样式，但也会指定一个具有本地设置的 <xref:System.Windows.Controls.Control.Background%2A> 值的按钮。
 
 > [!NOTE]
 > SDK 文档在讨论依赖属性时有时会使用“本地值”或“本地设置的值”等术语。 本地设置的值是指在代码中直接为对象实例设置的属性值，或者在 XAML 中设置为元素特性的属性值。  
@@ -183,18 +183,18 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 [!code-xaml[PropertiesOvwSupport#MiniPrecedence](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#miniprecedence)]  
 
 ### <a name="why-does-dependency-property-precedence-exist"></a>为什么存在依赖属性优先级？
-通常，您不希望样式始终应用和遮盖单个元素的本地设置值（否则，通常很难使用样式或元素）。 因此，来自样式的值的操作优先级低于本地设置的值。 有关依赖属性以及它的有效值可能来自何处的更完整列表，请参阅[依赖属性值优先级](dependency-property-value-precedence.md)。
+通常情况下，你不希望始终应用样式，也不希望只隐藏单个元素的本地设置值（否则，通常很难使用样式或元素）。 因此，来自样式的值的操作优先级低于本地设置的值。 有关依赖属性以及它的有效值可能来自何处的更完整列表，请参阅[依赖属性值优先级](dependency-property-value-precedence.md)。
 
 > [!NOTE]
 > 在 WPF 元素定义了许多非依赖属性的属性。 一般说来，只有在需要支持至少一个由属性系统启用的方案（数据绑定、样式、动画、默认值支持、继承、附加属性或失效）时，才将属性实现为依赖属性。
 
 ## <a name="learning-more-about-dependency-properties"></a>了解有关依赖属性的详细信息  
 
-- 附加属性是一种支持 XAML 中的专用语法的属性。 附加属性通常与通用语言运行时 （CLR） 属性没有 1：1 的对应关系，不一定是依赖项属性。 附加属性的典型目的是允许子元素将属性值报告给父元素，即使父元素和子元素都不具备该属性作为类成员列表的一部分。 一种主要情况是使子元素能够告知父元素应如何在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 中呈现它们；有关示例，请参阅 <xref:System.Windows.Controls.DockPanel.Dock%2A> 或 <xref:System.Windows.Controls.Canvas.Left%2A>。 有关详细信息，请参阅[附加属性概述](attached-properties-overview.md)。
+- 附加属性是一种支持 XAML 中的专用语法的属性。 附加属性通常与公共语言运行时（CLR）属性没有1:1 对应关系，并且不一定是依赖属性。 附加属性的典型用途是允许子元素将属性值报告给父元素，即使父元素和子元素不同时将该属性作为类成员列表的一部分。 一种主要情况是使子元素能够告知父元素应如何在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 中呈现它们；有关示例，请参阅 <xref:System.Windows.Controls.DockPanel.Dock%2A> 或 <xref:System.Windows.Controls.Canvas.Left%2A>。 有关详细信息，请参阅[附加属性概述](attached-properties-overview.md)。
 
 - 组件开发人员或应用程序开发人员可能希望创建自己的依赖属性，以便实现数据绑定或样式支持之类的功能，或者实现对失效和值强制的支持。 有关详细信息，请参阅[自定义依赖属性](custom-dependency-properties.md)。
 
-- 将依赖项属性视为公共属性，可访问或至少可供有权访问实例的任何调用方发现。 有关详细信息，请参阅[依赖属性的安全性](dependency-property-security.md)。
+- 将依赖属性视为公共属性（可访问）或至少由有权访问实例的任何调用方发现的公共属性。 有关详细信息，请参阅[依赖属性的安全性](dependency-property-security.md)。
 
 ## <a name="see-also"></a>另请参阅
 
