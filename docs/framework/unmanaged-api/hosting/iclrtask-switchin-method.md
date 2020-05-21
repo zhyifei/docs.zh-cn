@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d37ce20-aa65-4043-8f13-7c728b5d8a52
 topic_type:
 - apiref
-ms.openlocfilehash: fbfd44c8e20bc75638d6356fe405f02790da8ac7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d8f57af459d1bb3f338cfbfcbb29f69f533ea927
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124616"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762924"
 ---
 # <a name="iclrtaskswitchin-method"></a>ICLRTask::SwitchIn 方法
-通知公共语言运行时（CLR）当前[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例表示的任务现在处于可运行状态。  
+通知公共语言运行时（CLR）当前[ICLRTask](iclrtask-interface.md)实例表示的任务现在处于可运行状态。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,38 +35,38 @@ HRESULT SwitchIn (
   
 ## <a name="parameters"></a>参数  
  `threadHandle`  
- 中当前 `ICLRTask` 实例所表示的任务正在执行的物理线程的句柄。  
+ 中当前实例所表示的任务正在执行的物理线程的句柄 `ICLRTask` 。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`SwitchIn` 成功返回。|  
+|S_OK|`SwitchIn`已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
 |HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
 |E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
-|HOST_E_INVALIDOPERATION|调用 `SwitchIn` 之前未调用[SwitchOut 方法](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md)。|  
+|HOST_E_INVALIDOPERATION|`SwitchIn`调用[SwitchOut 方法](iclrtask-switchout-method.md)之前调用了。|  
   
-## <a name="remarks"></a>备注  
- `threadHandle` 参数表示操作系统线程的句柄，当前 `ICLRTask` 实例所表示的任务已在该线程上计划。 如果此线程上发生模拟，则必须先调用[IHostSecurityManager：： RevertToSelf](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-reverttoself-method.md) ，然后才能在该任务中切换。  
+## <a name="remarks"></a>注解  
+ `threadHandle`参数表示操作系统线程的句柄，该句柄由当前实例表示的任务已 `ICLRTask` 计划。 如果此线程上发生模拟，则必须先调用[IHostSecurityManager：： RevertToSelf](ihostsecuritymanager-reverttoself-method.md) ，然后才能在该任务中切换。  
   
 > [!NOTE]
-> 对 `SwitchIn` 的调用不会对 `SwitchOut` 的调用失败，HRESULT 值为 HOST_E_INVALIDOPERATION。  
+> 对不使用之前调用的的调用将 `SwitchIn` `SwitchOut` 失败，HRESULT 值为 HOST_E_INVALIDOPERATION。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICLRTask 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [ICLRTaskManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [IHostTask 接口](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [IHostTaskManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [ICLRTask 接口](iclrtask-interface.md)
+- [ICLRTaskManager 接口](iclrtaskmanager-interface.md)
+- [IHostTask 接口](ihosttask-interface.md)
+- [IHostTaskManager 接口](ihosttaskmanager-interface.md)

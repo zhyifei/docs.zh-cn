@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 98b097ef-2276-4dd9-8551-b03c972e8179
 topic_type:
 - apiref
-ms.openlocfilehash: 0b6ac83cdd0c88e87fdfd552c76c906a334f8928
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ccf48b6aea25bd602b55727c2e5958811702f6bf
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120304"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762573"
 ---
 # <a name="iclrruntimeinfogetversionstring-method"></a>ICLRRuntimeInfo::GetVersionString 方法
-获取与给定的[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)接口相关联的公共语言运行时（CLR）版本信息。  
+获取与给定的[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)接口相关联的公共语言运行时（CLR）版本信息。  
   
  此方法取代了以下函数：  
   
-- [GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
+- [GetRequestedRuntimeInfo](getrequestedruntimeinfo-function.md)  
   
-- [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
+- [GetRequestedRuntimeVersion](getrequestedruntimeversion-function.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +41,7 @@ HRESULT GetVersionString(
   
 ## <a name="parameters"></a>参数  
  `pwzBuffer`  
- 弄"V*A*" 格式的 .NET Framework 编译版本。*B.* [。*X*] "。 *A*、 *B*和*X*是与主版本、次版本和生成号对应的十进制数字。 *X*是可选的。 如果*X*不存在，则没有尾随句点。  
+ 弄"V*A*" 格式的 .NET Framework 编译版本。*B.*[。*X*] "。 *A*、 *B*和*X*是与主版本、次版本和生成号对应的十进制数字。 *X*是可选的。 如果*X*不存在，则没有尾随句点。  
   
 > [!NOTE]
 > 此参数必须匹配 .NET Framework 版本的目录名称，因为它显示在 C:\Windows\Microsoft.NET\Framework. 下。  
@@ -49,28 +49,28 @@ HRESULT GetVersionString(
  示例值为 "v1.0.3705"、"v 1.1.4322"、"v 2.0.50727" 和 "v4.0"。*x*"，其中*x*依赖于安装的生成号。 请注意，"v" 前缀是必需的。  
   
  `pchBuffer`  
- [in，out]指定 `pwzBuffer` 的大小以避免缓冲区溢出。 如果 `null``pwzBuffer`，`pchBuffer` 将返回所需的 `pwzBuffer` 大小以允许预先分配。  
+ [in，out]指定的大小 `pwzBuffer` 以避免缓冲区溢出。 如果 `pwzBuffer` 为 `null` ，则 `pchBuffer` 返回所需的大小 `pwzBuffer` 以允许预先分配。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
 |S_OK|该方法已成功完成。|  
 |E_POINTER|`pwzBuffer` 或 `pchBuffer` 为 null。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** MetaHost  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICLRRuntimeInfo 接口](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [.NET Framework 4 和 4.5 中添加的 CLR 承载接口](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
-- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo 接口](iclrruntimeinfo-interface.md)
+- [承载接口](hosting-interfaces.md)
+- [.NET Framework 4 和 4.5 中添加的 CLR 承载接口](clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
+- [承载](index.md)

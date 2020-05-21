@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 76d4f93a-5e25-4399-abcc-a1389549481d
 topic_type:
 - apiref
-ms.openlocfilehash: e789996af3aedd17251fc52cde52a336f65053ec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: edce771b3c36f2c56637aa2a21fe524be0ae12c8
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176339"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83763015"
 ---
 # <a name="iclrstrongnamestrongnamesignaturesize-method"></a>ICLRStrongName::StrongNameSignatureSize 方法
-返回强名称签名的大小。 编译器通常使用此方法来确定在创建延迟签名程序集时要在文件中保留多少空间。  
+返回强名称签名的大小。 此方法通常由编译器用来确定在创建延迟签名程序集时要在文件中保留多少空间。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,28 +35,28 @@ HRESULT StrongNameSignatureSize (
 );
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `pbPublicKeyBlob`  
- [在][公共密钥Blob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)类型的结构，其中包含用于生成强名称签名的密钥对的公共部分。  
+ 中[PublicKeyBlob](../strong-naming/publickeyblob-structure.md)类型的结构，它包含用于生成强名称签名的密钥对的公共部分。  
   
  `cbPublicKeyBlob`  
- [在]的大小（以字节为单位）的大小`pbPublicKeyBlob`。  
+ 中的大小（以字节为单位） `pbPublicKeyBlob` 。  
   
  `pcbSize`  
- [在]存储强名称签名所需的字节数。  
+ 中存储强名称签名所需的字节数。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK`如果方法成功完成;如果方法成功完成;否则，指示失败的 HRESULT 值（请参阅列表[的常用 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
+ `S_OK`如果该方法已成功完成，则为;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** MetaHost.h  
+ **标头：** MetaHost  
   
- **库：** 作为资源包含在 MSCorEE.dll 中  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICLRStrongName 接口](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [ICLRStrongName 接口](iclrstrongname-interface.md)
