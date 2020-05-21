@@ -2,19 +2,19 @@
 title: 为 Azure 构建云本机 .NET 应用程序
 description: 构建利用 Azure 的容器、微服务和无服务器功能的云本机应用程序的指南。
 author: ardalis
-ms.date: 04/23/2020
-ms.openlocfilehash: 24d5c75fc5d2e5623892e8f83daea52553d13765
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 05/13/2020
+ms.openlocfilehash: 1607c1bbcc9bbb3c9fe19840a2827aa5ea083728
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507385"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613989"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>为 Azure 构建云本机 .NET 应用程序
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 ![封面图像](./media/cover.png)
+
+**版本 v.1.0**
 
 发布者
 
@@ -26,7 +26,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-版权所有 &copy; 2019 Microsoft Corporation
+版权所有 &copy; 2020 Microsoft Corporation
 
 保留所有权利。 未经发布者书面许可，不得以任何形式或任何方式复制或传播本书中的任何内容。
 
@@ -44,25 +44,27 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 
 作者：
 
-> Rob Vettor，Microsoft 首席云系统架构师/IP 架构师 ([thinkingincloudnative.com](http://thinkingincloudnative.com/about/)) 
+> Rob Vettor，Microsoft 首席云系统架构师/IP 架构师 ([thinkingincloudnative.com](http://thinkingincloudnative.com/about/))
 >
-> Steve "ardalis" Smith，[Ardalis.com](https://ardalis.com)  软件设计师及培训师
+> Steve "ardalis" Smith，[Ardalis.com](https://ardalis.com) 软件设计师及培训师
 
 参与者和审阅者：
 
 > **Cesar De Torre**，Microsoft .NET 团队首席项目经理
 >
-> Nish Anil，Microsoft .NET 团队高级项目经理 
+> Nish Anil，Microsoft .NET 团队高级项目经理
 >
-> Jeremy Likness，Microsoft .NET 团队高级项目经理 
+> Jeremy Likness，Microsoft .NET 团队高级项目经理
 >
-> Cecil Phillip，Microsoft 高级云大使 
-
-详细了解 eShopOnContainers
+> Cecil Phillip，Microsoft 高级云大使
 
 编辑：
 
-> Maira Wenzel，Microsoft .NET 团队高级项目经理 
+> Maira Wenzel，Microsoft .NET 团队高级项目经理
+
+## <a name="version"></a>Version
+
+本指南的编写涵盖 .NET Core 3.1 版本以及与 .NET Core 3.1 同期的同一“批”技术（即 Azure 和其他第三方技术）的许多其他更新。
 
 ## <a name="who-should-use-this-guide"></a>本指南的目标读者
 
@@ -83,6 +85,10 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 - DevOps
 
 本指南有 PDF 格式和在线版本。 欢迎随时将此文档或其在线版本的链接转发给你的团队，以确保对这些主题有共同的理解。 这些主题中的大多数都得益于对基本原则和模式的一致理解，以及与这些主题相关的决策所涉及的权衡。 本文档的目标是为团队及其领导提供所需的信息，使其能够为应用程序的体系结构、开发和托管作出明智的决策。
+
+## <a name="send-your-feedback"></a>提供你的反馈
+
+我们正在不断完善本书和相关示例，欢迎你提供反馈！ 如果对如何改进本书有任何建议，请使用 [GitHub 问题](https://github.com/dotnet/docs/issues)上任何页面底部的反馈部分进行反馈。
 
 >[!div class="step-by-step"]
 >[下一页](introduction.md)
