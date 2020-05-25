@@ -23,7 +23,7 @@ C# 中有两种类型：引用类型和值类型。 引用类型的变量存储�
 
 - [class](class.md)
 
-- [接口](interface.md)
+- [interface](interface.md)
 
 - [delegate](../builtin-types/reference-types.md)
 
