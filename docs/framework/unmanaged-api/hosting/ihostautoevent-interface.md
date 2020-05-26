@@ -14,35 +14,35 @@ helpviewer_keywords:
 ms.assetid: 6c1d15c1-a80a-4ee9-b1e4-6e859db6575a
 topic_type:
 - apiref
-ms.openlocfilehash: 2b191243ea03adcfecaadbd3a5871e1773b28bb1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a24939ac0b0808546ef3615fae4909c6c3cf8a2e
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124453"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804995"
 ---
 # <a name="ihostautoevent-interface"></a>IHostAutoEvent 接口
 提供宿主自动重置事件的实现的表示形式。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[Set 方法](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|将当前 `IHostAutoEvent` 实例设置为终止状态。|  
-|[Wait 方法](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|导致当前 `IHostAutoEvent` 实例等待，直到事件拥有或经过指定的时间量。|  
+|[Set 方法](ihostautoevent-set-method.md)|将当前 `IHostAutoEvent` 实例设置为终止状态。|  
+|[Wait 方法](ihostautoevent-wait-method.md)|导致当前 `IHostAutoEvent` 实例等待，直到事件拥有或经过指定的时间量。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICLRSyncManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostManualEvent 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [IHostSyncManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
-- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [ICLRSyncManager 接口](iclrsyncmanager-interface.md)
+- [IHostManualEvent 接口](ihostmanualevent-interface.md)
+- [IHostSyncManager 接口](ihostsyncmanager-interface.md)
+- [承载接口](hosting-interfaces.md)

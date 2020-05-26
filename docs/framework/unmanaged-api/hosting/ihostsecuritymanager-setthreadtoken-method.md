@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e951c345-8a86-4587-911b-a1a57bc6428a
 topic_type:
 - apiref
-ms.openlocfilehash: aa17f637ef71373697db5ce66e4a6540c5cc5fbd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7891ddc5085eedd2a9010023f119d08f101e2fa3
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139492"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803780"
 ---
 # <a name="ihostsecuritymanagersetthreadtoken-method"></a>IHostSecurityManager::SetThreadToken 方法
 设置当前正在执行的线程的句柄。  
@@ -39,9 +39,9 @@ HRESULT SetThreadToken (
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`SetThreadToken` 成功返回。|  
+|S_OK|`SetThreadToken`已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -49,20 +49,20 @@ HRESULT SetThreadToken (
 |E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- `IHostSecurityManager::SetThreadToken` 的行为类似于具有相同名称的对应 Win32 函数，不同之处在于 Win32 函数允许调用方将句柄传入任意线程，而 `IHostSecurityManager::SetThreadToken` 只能将标记与当前正在执行的线程关联。  
+ `IHostSecurityManager::SetThreadToken`的行为类似于具有相同名称的对应 Win32 函数，不同之处在于 Win32 函数允许调用方将句柄传入任意线程，同时 `IHostSecurityManager::SetThreadToken` 只能将标记与当前正在执行的线程关联。  
   
- `HANDLE` 类型不符合 COM 要求;也就是说，其大小特定于操作系统并且需要自定义封送处理。 因此，此令牌仅在该进程内的 CLR 和主机之间使用。  
+ `HANDLE`类型不符合 COM 要求; 即，其大小特定于操作系统，并需要自定义封送处理。 因此，此令牌仅在该进程内的 CLR 和主机之间使用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [IHostSecurityManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
-- [IHostThreadPoolManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+- [IHostSecurityManager 接口](ihostsecuritymanager-interface.md)
+- [IHostThreadPoolManager 接口](ihostthreadpoolmanager-interface.md)

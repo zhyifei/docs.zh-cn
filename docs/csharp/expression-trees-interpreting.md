@@ -4,12 +4,12 @@ description: 了解如何编写代码来检查表达式树的结构。
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 1283d7d957c72558652b96cb428efd0f071f0184
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5734e1be6b59bfe3eae97f29d1bd91e7e3a3623f
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146003"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761858"
 ---
 # <a name="interpreting-expressions"></a>解释表达式
 
@@ -51,7 +51,7 @@ The value of the constant value is 24
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-> 我没有使用 `var` 来声明此表达式树，因为此操作无法执行，这是由于赋值右侧是隐式类型而导致的。 若要更深入地理解这一点，请阅读[此处](implicitly-typed-lambda-expressions.md)。
+> 我没有使用 `var` 来声明此表达式树，因为此操作无法执行，这是由于赋值右侧是隐式类型而导致的。
 
 根节点是 `LambdaExpression`。 为了获得 `=>` 运算符右侧的有用代码，需要找到 `LambdaExpression` 的子级之一。 我们将通过本部分中的所有表达式来实现此目的。 父节点确实有助于找到 `LambdaExpression` 的返回类型。
 

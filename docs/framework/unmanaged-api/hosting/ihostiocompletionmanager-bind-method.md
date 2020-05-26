@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: acd74cb5-7e22-4a07-83c3-82288e1abd9f
 topic_type:
 - apiref
-ms.openlocfilehash: 84fc99f6a5feb7ec73ee16942ba2794fc082dc89
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8d18e6c1dca7f52b17c19f4638410a08866905f7
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133897"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804799"
 ---
 # <a name="ihostiocompletionmanagerbind-method"></a>IHostIoCompletionManager::Bind 方法
-将指定的句柄绑定到由之前对[CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md)的调用创建的 i/o 完成端口。  
+将指定的句柄绑定到由之前对[CreateIoCompletionPort](ihostiocompletionmanager-createiocompletionport-method.md)的调用创建的 i/o 完成端口。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,16 +36,16 @@ HRESULT Bind (
   
 ## <a name="parameters"></a>参数  
  `hPort`  
- 中要绑定到的 i/o 完成端口 `hHandle`。 如果 `hPort` 的值为 null，`hHandle` 将绑定到默认 i/o 完成端口。  
+ 中要绑定到的 i/o 完成端口 `hHandle` 。 如果的值 `hPort` 为 null， `hHandle` 则绑定到默认 i/o 完成端口。  
   
  `hHandle`  
- 中要绑定到 `hPort`的操作系统句柄。  
+ 中要绑定到的操作系统句柄 `hPort` 。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`Bind` 成功返回。|  
+|S_OK|`Bind`已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -53,20 +53,20 @@ HRESULT Bind (
 |E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- I/o 完成端口是使用对 `CreateIoCompletionPort`的调用创建的。 CLR 调用 `Bind` 将句柄绑定到该端口。  
+ I/o 完成端口是使用对的调用创建的 `CreateIoCompletionPort` 。 CLR 调用 `Bind` 将句柄绑定到该端口。  
   
 > [!NOTE]
-> 当 i/o 请求完成时，主机必须调用[ICLRIoCompletionManager：： OnComplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md)方法。  
+> 当 i/o 请求完成时，主机必须调用[ICLRIoCompletionManager：： OnComplete](iclriocompletionmanager-oncomplete-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICLRIoCompletionManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
+- [ICLRIoCompletionManager 接口](iclriocompletionmanager-interface.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c6dcca8384cbd97a968b77e4bc834afa1f683298
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b90821d0d3495f6006d1d97b3d3377e984c74c5e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895661"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613585"
 ---
 # <a name="net-docs"></a>.NET Docs
 
@@ -12,7 +12,6 @@ ms.locfileid: "82895661"
 
 此存储库包含适用于 .NET 的概念文档。 [.NET 文档站点](https://docs.microsoft.com/dotnet)建立在多个存储库的基础上，还包括下面这个：
 
-- [代码示例和代码片段](https://github.com/dotnet/samples)
 - [API 参考](https://github.com/dotnet/dotnet-api-docs)
 - [.NET Compiler Platform SDK 参考](https://github.com/dotnet/roslyn-api-docs)
 

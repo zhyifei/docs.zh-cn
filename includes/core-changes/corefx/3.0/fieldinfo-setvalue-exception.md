@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9f8a790718fbb9d685bb8959808338dc1766bf2c
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 02c9305a36f47dfaf0b1fa8d19b07cd2d34badae
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021653"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721264"
 ---
 ### <a name="fieldinfosetvalue-throws-exception-for-static-init-only-fields"></a>FieldInfo.SetValue 将对静态、仅初始化字段引发异常
 
@@ -40,7 +40,7 @@ Core .NET 库
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Reflection.FieldInfo.SetValue(System.Object,System.Object)`
 - `M:System.Reflection.FieldInfo.SetValue(System.Object,System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Globalization.CultureInfo)`

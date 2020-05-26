@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c89abf5b-1120-4437-8b57-4a99fb3ae7f9
 topic_type:
 - apiref
-ms.openlocfilehash: f7ae4e4cbb757edea242c57720baeb70ced5c428
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1dd5ed4c556a5a4d4425a9c0730cebf22ff1785b
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192057"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804624"
 ---
 # <a name="ihostmallocfree-method"></a>IHostMAlloc::Free 方法
-释放使用[分配](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md)函数分配的内存。  
+释放使用[分配](ihostmalloc-alloc-method.md)函数分配的内存。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,9 +39,9 @@ HRESULT Free (
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`Free` 成功返回。|  
+|S_OK|`Free`已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -50,18 +50,18 @@ HRESULT Free (
 |HOST_E_INVALIDOPERATION|尝试释放未通过主机分配的内存。|  
   
 ## <a name="remarks"></a>备注  
- 如果 `pMem` 参数引用未使用对 `Alloc`进行分配的内存区域，则主机应返回 HOST_E_INVALIDOPERATION。  
+ 如果 `pMem` 参数引用未使用调用分配的内存区域 `Alloc` ，则宿主应返回 HOST_E_INVALIDOPERATION。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [IHostMemoryManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [IHostMalloc 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+- [IHostMemoryManager 接口](ihostmemorymanager-interface.md)
+- [IHostMalloc 接口](ihostmalloc-interface.md)

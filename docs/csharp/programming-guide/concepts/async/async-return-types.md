@@ -2,12 +2,12 @@
 title: 异步返回类型 (C#)
 ms.date: 04/14/2020
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 73a6e1924652c8635377547e2faddc864ac5540a
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: c2584f1e285a7ab76eb43f9a211a8d2a51c2c55e
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389138"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761871"
 ---
 # <a name="async-return-types-c"></a>异步返回类型 (C#)
 
@@ -26,7 +26,7 @@ ms.locfileid: "81389138"
   
 在下面的示例中，`GetLeisureHours` 异步方法包含返回整数的 `return` 语句。 因此，该方法声明必须指定 `Task<int>` 的返回类型。  <xref:System.Threading.Tasks.Task.FromResult%2A> 异步方法是返回字符串的操作的占位符。
   
-:::code language="csharp" source="./snippets/async-returns1.cs" id="SnippetFirstExample":::
+:::code language="csharp" source="./snippets/async-return-types/async-returns1.cs" id="SnippetFirstExample":::
 
 在 `ShowTodaysInfo` 方法中从 await 表达式内调用 `GetLeisureHours` 时，await 表达式检索存储在由 `GetLeisureHours` 方法返回的任务中的整数值（`leisureHours` 的值）。 有关 await 表达式的详细信息，请参阅 [await](../../../language-reference/operators/await.md)。  
   
@@ -35,14 +35,14 @@ ms.locfileid: "81389138"
 > [!IMPORTANT]
 > <xref:System.Threading.Tasks.Task%601.Result%2A> 属性为阻止属性。 如果你在其任务完成之前尝试访问它，当前处于活动状态的线程将被阻止，直到任务完成且值为可用。 在大多数情况下，应通过使用 `await` 访问此值，而不是直接访问属性。 <br/> 上一示例通过检索 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性的值来阻止主线程，从而使 `ShowTodaysInfo` 方法可在应用程序结束之前完成执行。  
 
-:::code language="csharp" source="./snippets/async-returns1a.cs" id="SnippetSecondVersion":::
+:::code language="csharp" source="./snippets/async-return-types/async-returns1a.cs" id="SnippetSecondVersion":::
 
 ## <a name="task-return-type"></a>Task 返回类型  
 不包含 `return` 语句的异步方法或包含不返回操作数的 `return` 语句的异步方法通常具有返回类型 <xref:System.Threading.Tasks.Task>。 如果此类方法同步运行，它们将返回 `void`。 如果在异步方法中使用 <xref:System.Threading.Tasks.Task> 返回类型，调用方法可以使用 `await` 运算符暂停调用方的完成，直至被调用的异步方法结束。  
   
 如下示例中，`WaitAndApologize` 异步方法不包含 `return` 语句，因此此方法返回 <xref:System.Threading.Tasks.Task> 对象。 返回 `Task` 可等待 `WaitAndApologize`。 <xref:System.Threading.Tasks.Task> 类型不包含 `Result` 属性，因为它不具有任何返回值。  
 
-:::code language="csharp" source="./snippets/async-returns2.cs" id="SnippetTaskReturn":::
+:::code language="csharp" source="./snippets/async-return-types/async-returns2.cs" id="SnippetTaskReturn":::
 
 通过使用 await 语句而不是 await 表达式等待 `WaitAndApologize`，类似于返回 void 的同步方法的调用语句。 Await 运算符的应用程序在这种情况下不生成值。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "81389138"
   
 以下代码将调用 `WaitAndApologize` 方法和等待此方法返回的任务分离。  
 
-:::code language="csharp" source="./snippets/async-returns2a.cs" id="SnippetAwaitTask":::
+:::code language="csharp" source="./snippets/async-return-types/async-returns2a.cs" id="SnippetAwaitTask":::
 
 ## <a name="void-return-type"></a>Void 返回类型
 
@@ -62,7 +62,7 @@ ms.locfileid: "81389138"
   
 以下示例演示异步事件处理程序的行为。 在本示例代码中，异步事件处理程序必须在完成时通知主线程。 然后，主线程可在退出程序之前等待异步事件处理程序完成。
 
-:::code language="csharp" source="./snippets/async-returns3.cs":::
+:::code language="csharp" source="./snippets/async-return-types/async-returns3.cs":::
 
 ## <a name="generalized-async-return-types-and-valuetasktresult"></a>通用的异步返回类型和 ValueTask\<TResult\>
 
@@ -72,13 +72,13 @@ ms.locfileid: "81389138"
 
 .NET 提供 <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> 结构作为返回任务的通用值的轻量实现。 要使用 <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> 类型，必须向项目添加 `System.Threading.Tasks.Extensions` NuGet 包。 如下示例使用 <xref:System.Threading.Tasks.ValueTask%601> 结构检索两个骰子的值。
   
-:::code language="csharp" source="./snippets/async-valuetask.cs":::
+:::code language="csharp" source="./snippets/async-return-types/async-valuetask.cs":::
 
 ## <a name="async-streams-with-iasyncenumerablet"></a>使用 IAsyncEnumerable\<T\> 的异步流
 
 从 C# 8.0 开始，异步方法可能返回异步流，由 <xref:System.Collections.Generic.IAsyncEnumerable%601> 表示  。 异步流提供了一种方法，来枚举在具有重复异步调用的块中生成元素时从流中读取的项。 以下示例显示生成异步流的异步方法：
 
-:::code language="csharp" source="./snippets/AsyncStreams.cs" id="SnippetGenerateAsyncStream":::
+:::code language="csharp" source="./snippets/async-return-types/AsyncStreams.cs" id="SnippetGenerateAsyncStream":::
 
 前面的示例异步读取字符串中的行。 读取每一行后，代码将枚举字符串中的每个单词。 调用方将使用 `await foreach` 语句枚举每个单词。 当需要从源字符串异步读取下一行时，该方法将等待。
 

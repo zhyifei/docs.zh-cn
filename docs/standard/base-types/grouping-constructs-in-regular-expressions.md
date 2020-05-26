@@ -65,7 +65,7 @@ ms.locfileid: "78159216"
   
 - 通过使用正则表达式中的命名的反向引用构造。 使用语法 `\k<`*name*`>`在同一正则表达式中引用匹配的子表达式，其中 *name* 是捕获组的名称，或使用 `\k<`*数字*`>`在同一正则表达式中引用匹配的子表达式，其中 *数字* 是捕获组的初始数字。 捕获组具有与其原始编号相同的默认名称。 有关更多信息，请参见本主题后面的 [命名匹配的子表达式](#named_matched_subexpression) 。  
   
-- 通过在 `$` 或 *方法调用中使用*数字<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType><xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 替换序列，其中“数字”  为捕获的子表达式的序号。  
+- 通过在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法调用中使用 `$`数字 替换序列，其中“数字” 为捕获的子表达式的序号。  
   
 - 以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 集合中位置零上的成员表示正则表达式匹配。 每个后续成员表示匹配的子表达式。 有关更多信息，请参见 [分组构造和正则表达式对象](#Objects) 一节。  
   
@@ -108,9 +108,9 @@ ms.locfileid: "78159216"
   
 - 通过使用正则表达式中的反向引用构造。 使用语法 `\`*数字*在同一正则表达式中引用匹配的子表达式，其中 *数字* 是捕获的表达式的初始数字。 已命名的匹配子表达式在匹配子表达式后从左到右连续编号。  
   
-- 通过在 `${` 或 *方法调用中使用*名称`}`<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType><xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 替换序列，其中“名称”  为捕获的子表达式的名称。  
+- 通过在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法调用中使用 `${`名称`}` 替换序列，其中“名称”为捕获的子表达式的名称。  
   
-- 通过在 `$` 或 *方法调用中使用*数字<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType><xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 替换序列，其中“数字”  为捕获的子表达式的序号。  
+- 通过在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法调用中使用 `$`数字 替换序列，其中“数字”为捕获的子表达式的序号。  
   
 - 以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 集合中位置零上的成员表示正则表达式匹配。 每个后续成员表示匹配的子表达式。 已命名的捕获组在集合中存储在已编号的捕获组后面。  
   
@@ -221,10 +221,10 @@ ms.locfileid: "78159216"
 |10|`(((?'Open'<)`|匹配“\<mno”中的左尖括号，并将它分配给 `Open` 组。 其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合现在具有单个值“<”。|  
 |11|`[^<>]*`|与“mno”匹配。|  
 |12|`)+`|“<mno”是第二个捕获组的值。<br /><br /> 输入字符串中的下一个字符是左尖括号，因此正则表达式引擎会循环回到 `(?'Open'<)[^<>]*)` 子模式。|  
-|13|`(((?'Open'<)`|匹配“\<xyz>”中的左尖括号，并将它分配给 `Open` 组。 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 组的 `Open` 集合现在包括两个捕获：“\<mno”中的左尖括号和“\<xyz>”中的左尖括号。|  
+|13|`(((?'Open'<)`|匹配“\<xyz>”中的左尖括号，并将它分配给 `Open` 组。 `Open` 组的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合现在包括两个捕获：“\<mno”中的左尖括号和“\<xyz>”中的左尖括号。|  
 |14|`[^<>]*`|与“xyz”匹配。|  
 |15|`)+`|“<xyz”是第二个捕获组的值。<br /><br /> 输入字符串中的下一个字符不是左尖括号，因此正则表达式引擎不会循环回到 `(?'Open'<)[^<>]*)` 子模式。|  
-|16|`((?'Close-Open'>)`|匹配“\<xyz>”中的右尖括号。 “xyz”将 `Open` 组合右尖括号之间的子字符串分配给 `Close` 组，并删除 `Open` 组的当前值。 前一个捕获的值（“\<mno”中的左尖括号）成为 `Open` 组的当前值。 <xref:System.Text.RegularExpressions.Group.Captures%2A> 组的 `Open` 集合现在包括一个捕获，即“\<xyz>”中的左尖括号。|  
+|16|`((?'Close-Open'>)`|匹配“\<xyz>”中的右尖括号。 “xyz”将 `Open` 组合右尖括号之间的子字符串分配给 `Close` 组，并删除 `Open` 组的当前值。 前一个捕获的值（“\<mno”中的左尖括号）成为 `Open` 组的当前值。 `Open` 组的 <xref:System.Text.RegularExpressions.Group.Captures%2A> 集合现在包括一个捕获，即“\<xyz>”中的左尖括号。|  
 |17|`[^<>]*`|查找非尖括号字符；未找到匹配项。|  
 |18|`)+`|第三个捕获组的值是“>”。<br /><br /> 输入字符串中的下一个字符是右尖括号，因此正则表达式引擎会循环回到 `((?'Close-Open'>)[^<>]*)` 子模式。|  
 |19|`((?'Close-Open'>)`|匹配“xyz>>”中的最后一个右尖括号，将“mno\<xyz>”（`Open` 组和右尖括号之间的子字符串）分配给 `Close` 组，并删除 `Open` 组的当前值。 `Open` 组现在为空。|  

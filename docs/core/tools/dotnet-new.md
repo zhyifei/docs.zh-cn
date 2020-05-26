@@ -2,12 +2,12 @@
 title: dotnet new 命令
 description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
 ms.date: 04/10/2020
-ms.openlocfilehash: 9a68baafa7ac3e6ad2fdc8f1c6e8621d6e15f1ff
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 1544f519f2a5f6a1a6e042c1db720eff45f5d98c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506852"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442236"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -21,7 +21,7 @@ ms.locfileid: "82506852"
 
 ```dotnetcli
 dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install {PATH|NUGET_ID}]
-    [-lang|--language {C#|F#|VB}] [-n|--name <OUTPUT_NAME>]
+    [-lang|--language {"C#"|"F#"|VB}] [-n|--name <OUTPUT_NAME>]
     [--nuget-source <SOURCE>] [-o|--output <OUTPUT_DIRECTORY>]
     [-u|--uninstall] [--update-apply] [--update-check] [Template options]
 
@@ -680,7 +680,7 @@ dotnet new -h|--help
 - 在当前目录中创建 F# 控制台应用程序项目：
 
   ```dotnetcli
-  dotnet new console -lang F#
+  dotnet new console -lang "F#"
   ```
 
 - 在指定的目录中创建 .NET Standard 类库项目：

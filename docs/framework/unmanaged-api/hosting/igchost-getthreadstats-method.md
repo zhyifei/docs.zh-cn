@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 826baa9b-9218-4736-a509-7ab193b125a0
 topic_type:
 - apiref
-ms.openlocfilehash: 36eeb7ed4f80979ef2edb930e65963a1db0c894f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4a7a2da58e197749d492f24c7a12134508efef57
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134907"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805233"
 ---
 # <a name="igchostgetthreadstats-method"></a>IGCHost::GetThreadStats 方法
 获取用于垃圾回收的每个线程的统计信息。  
@@ -39,17 +39,17 @@ HRESULT GetThreadStats (
  中指向指定要检索其统计信息的线程的纤程 cookie 的指针。  
   
  `pStats`  
- [in，out]指向[COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md)结构的指针，该结构包含指定线程的垃圾回收统计信息。  
+ [in，out]指向[COR_GC_THREAD_STATS](cor-gc-thread-stats-structure.md)结构的指针，该结构包含指定线程的垃圾回收统计信息。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** GCHost，GCHost  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [IGCHost 接口](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+- [IGCHost 接口](igchost-interface.md)

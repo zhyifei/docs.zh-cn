@@ -4,12 +4,12 @@ description: 本高级教程介绍如何生成和使用异步流。 异步流提
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 03254e5208a048469f4753d632de7b0d451cde40
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: fd9fed3469d18c919102640df7bb501b116f5e0e
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200101"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420365"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>教程：使用 C# 8.0 和 .NET Core 3.0 生成和使用异步流
 
@@ -42,7 +42,7 @@ C# 8.0 引入了异步流，这可针对流式处理数据源建模  。 数据�
 
 ## <a name="run-the-starter-application"></a>运行初学者应用程序
 
-可以从 [csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) 文件夹中的 [dotnet/docs](https://github.com/dotnet/docs) 存储库获得本教程中使用的初学者应用程序代码。
+可以从 [csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) 文件夹中的 [dotnet/docs](https://github.com/dotnet/docs) 存储库获得本教程中使用的初学者应用程序代码。
 
 初学者应用程序是一个控制台应用程序，它使用 [GitHub GraphQL](https://developer.github.com/v4/) 接口检索最近在 [dotnet/docs](https://github.com/dotnet/docs) 存储库中编写的问题。 首先来看一下以下初学者应用 `Main` 方法的代码：
 
@@ -144,7 +144,7 @@ try
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateWithCancellation" :::
 
-可以从 [csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) 文件夹中的 [dotnet/docs](https://github.com/dotnet/docs) 存储库获得完成教程的代码。
+可以从 [csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) 文件夹中的 [dotnet/docs](https://github.com/dotnet/docs) 存储库获得完成教程的代码。
 
 ## <a name="run-the-finished-application"></a>运行完成的应用程序
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 54a4562a5cc493fc287bdf2f6bcf9723557f2a05
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1d4a0f36292acafad409bf666f861b7637cd644
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157034"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442197"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>如何将字符串转换为数字（C# 编程指南）
 
@@ -58,4 +58,4 @@ ms.locfileid: "79157034"
 
 - [类型](./index.md)
 - [如何确定字符串是否表示数值](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
-- [示例：.NET Core WinForms 格式设置实用工具 (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
+- [示例：.NET Core WinForms 格式设置实用工具 (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f4984a8c-4c0e-4460-9aa1-d022b3621228
 topic_type:
 - apiref
-ms.openlocfilehash: ccff575974093de0bf00b257cba78c509f9cbd92
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d4814e44b1a5311cf6800c804df7a7e11000cbab
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134778"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805140"
 ---
 # <a name="igchostcontrolrequestvirtualmemlimit-method"></a>IGCHostControl::RequestVirtualMemLimit 方法
 请求主机更改虚拟内存的限制。  
@@ -42,14 +42,14 @@ HRESULT RequestVirtualMemLimit (
  [in，out]一个指针，指向所分配的内存的实际大小。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [IGCHostControl 接口](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)
+- [IGCHostControl 接口](igchostcontrol-interface.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 22dbb1e982f83687a9e0eb288ed72c78c676db77
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 719f336e1b38597674d6ee8f0c5429dd965054b1
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021543"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721676"
 ---
 ### <a name="floating-point-formatting-and-parsing-behavior-changed"></a>浮点格式设置和分析行为已更改
 
@@ -39,7 +39,7 @@ Core .NET 库
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - `Overload:System.Double.ToString`
 - `Overload:System.Single.ToString`

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1580c8c8b7bdad91656f494537230293dbaaf93b
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: bb264e406c6604c3606e564d99018eda0f9e8d89
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021569"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721346"
 ---
 ### <a name="apis-that-report-version-now-report-product-and-not-file-version"></a>报告版本的 API 现报告的是产品版本而不是文件版本
 
@@ -37,7 +37,7 @@ Core .NET 库
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `P:System.Environment.Version`
 - `P:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription`

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 907a2b43-68db-44a7-acac-89e792e7bb3c
 topic_type:
 - apiref
-ms.openlocfilehash: c3fa8aeebe529564c0ecc4a970f586fffc97ee05
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2b679a9ea427d53d67474a196b5b3ae2c698ea5e
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133879"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804787"
 ---
 # <a name="ihostiocompletionmanagercreateiocompletionport-method"></a>IHostIoCompletionManager::CreateIoCompletionPort 方法
 请求宿主创建新的 i/o 完成端口。  
@@ -39,9 +39,9 @@ HRESULT CreateIoCompletionPort (
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`CreateIoCompletionPort` 成功返回。|  
+|S_OK|`CreateIoCompletionPort`已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -50,18 +50,18 @@ HRESULT CreateIoCompletionPort (
 |E_OUTOFMEMORY|没有足够的内存可用于分配请求的资源。|  
   
 ## <a name="remarks"></a>备注  
- CLR 调用 `CreateIoCompletionPort` 方法来请求宿主创建新的 i/o 完成端口。 它通过调用[IHostIoCompletionManager：： Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)方法将 i/o 操作绑定到此端口。 主机通过调用[ICLRIoCompletionManager：： OnComplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md)将状态报告回 CLR。  
+ CLR 调用 `CreateIoCompletionPort` 方法来请求宿主创建新的 i/o 完成端口。 它通过调用[IHostIoCompletionManager：： Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)方法将 i/o 操作绑定到此端口。 主机通过调用[ICLRIoCompletionManager：： OnComplete](iclriocompletionmanager-oncomplete-method.md)将状态报告回 CLR。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICLRIoCompletionManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
-- [IHostIoCompletionManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+- [ICLRIoCompletionManager 接口](iclriocompletionmanager-interface.md)
+- [IHostIoCompletionManager 接口](ihostiocompletionmanager-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4dff3646-a050-4bd9-ac31-fe307e8637ec
 topic_type:
 - apiref
-ms.openlocfilehash: dd588fa85ff8aaa396a8d0e52a738ada46c2a9b1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: de41b5e0aaf835ee2d4e4f32696fe104d5830b57
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128613"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804454"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a>IHostMemoryManager::VirtualAlloc 方法
 用作相应 Win32 函数的逻辑包装。 的 Win32 实现 `VirtualAlloc` 保留或提交调用进程的虚拟地址空间中的页面区域。  
@@ -52,16 +52,16 @@ HRESULT VirtualAlloc (
  中要分配的页面区域的内存保护。  
   
  `dwCriticalLevel`  
- 中指示分配失败的影响的[EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md)值。  
+ 中指示分配失败的影响的[EMemoryCriticalLevel](ememorycriticallevel-enumeration.md)值。  
   
  `ppMem`  
  弄指向分配的内存的起始地址的指针; 如果无法满足请求，则为 null。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`VirtualAlloc` 成功返回。|  
+|S_OK|`VirtualAlloc`已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -70,19 +70,19 @@ HRESULT VirtualAlloc (
 |E_OUTOFMEMORY|没有足够的可用内存来完成分配请求|  
   
 ## <a name="remarks"></a>备注  
- 可以通过调用 `VirtualAlloc`在进程的地址空间中保留区域。 `pAddress` 参数包含所需内存块的起始地址。 此参数通常设置为 null。 操作系统会保留可用于进程的免费地址范围记录。 如果值为 null，则指示系统在其所看到的任何位置保留区域。 `pAddress` 或者，您可以为内存块提供特定的起始地址。 在这两种情况下，输出参数 `ppMem` 都作为指向已分配内存的指针返回。 函数本身返回 HRESULT 值。  
+ 可以通过调用在进程的地址空间中保留区域 `VirtualAlloc` 。 `pAddress`参数包含所需内存块的起始地址。 此参数通常设置为 null。 操作系统会保留可用于进程的免费地址范围记录。 如果 `pAddress` 值为 null，则指示系统在其认为合适的位置保留区域。 或者，您可以为内存块提供特定的起始地址。 在这两种情况下，output 参数 `ppMem` 将作为指向已分配内存的指针返回。 函数本身返回 HRESULT 值。  
   
- Win32 `VirtualAlloc` 函数没有 `ppMem` 的参数，而是返回指向分配的内存的指针。 有关详细信息，请参阅 Windows 平台文档。  
+ Win32 `VirtualAlloc` 函数没有 `ppMem` 参数，而是返回指向分配的内存的指针。 有关详细信息，请参阅 Windows 平台文档。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [IHostMemoryManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [IHostMemoryManager 接口](ihostmemorymanager-interface.md)

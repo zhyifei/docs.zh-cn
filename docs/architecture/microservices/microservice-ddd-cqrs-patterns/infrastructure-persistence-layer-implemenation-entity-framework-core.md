@@ -2,12 +2,12 @@
 title: 使用 Entity Framework Core 实现基础结构持久性层
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 探索使用 Entity Framework Core 实现基础结构持久性层的细节。
 ms.date: 01/30/2020
-ms.openlocfilehash: 7ab3be0d6a5affda478f7ec8f6c356571e304759
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: c91980504b0f9de859c6d211f3a1f47435b2d3cc
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805491"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396258"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 实现基础结构持久性层
 
@@ -117,7 +117,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 在实现级别上，当执行更新时，存储库就是一个具有数据持久性代码的类，由工作单元（EF Core 中的 DBContext）进行协调，如下面的类所示：
 
 ```csharp
-// using statements...
+// using directives...
 namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositories
 {
     public class BuyerRepository : IBuyerRepository

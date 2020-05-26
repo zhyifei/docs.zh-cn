@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d2250b38-c76a-40ce-80c8-ba45149886e8
 topic_type:
 - apiref
-ms.openlocfilehash: eb715e1a4f9a210a1440874a9a8cea2d85345d33
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0dc2f625da7f4e37583f198c8d6dba86f6dcdb10
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124581"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805056"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>IHostAssemblyManager::GetNonHostStoreAssemblies 方法
-获取一个指向[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)的接口指针，该指针表示宿主需要公共语言运行时（CLR）加载的程序集的列表。  
+获取一个指向[ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)的接口指针，该指针表示宿主需要公共语言运行时（CLR）加载的程序集的列表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,47 +35,47 @@ HRESULT GetNonHostStoreAssemblies (
   
 ## <a name="parameters"></a>参数  
  `ppReferenceList`  
- 弄一个指向 `ICLRAssemblyReferenceList` 的地址的指针，该指针包含对宿主预期 CLR 加载的程序集的引用列表。  
+ 弄指向的地址的指针 `ICLRAssemblyReferenceList` ，该地址包含对宿主预期 CLR 加载的程序集的引用的列表。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`GetNonHostStoreAssemblies` 成功返回。|  
+|S_OK|`GetNonHostStoreAssemblies`已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
 |HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
 |E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
-|E_OUTOFMEMORY|没有足够的内存可用于创建请求的 `ICLRAssemblyReferenceList`的引用列表。|  
+|E_OUTOFMEMORY|没有足够的内存可用于创建请求的引用列表 `ICLRAssemblyReferenceList` 。|  
   
 ## <a name="remarks"></a>备注  
  CLR 使用以下一组准则来解析引用：  
   
-- 首先，它会咨询 `GetNonHostStoreAssemblies`返回的程序集引用的列表。  
+- 首先，它会咨询返回的程序集引用的列表 `GetNonHostStoreAssemblies` 。  
   
 - 如果该程序集出现在列表中，则 CLR 正常绑定到该程序集。  
   
-- 如果程序集未出现在列表中，并且宿主已提供[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)的实现，则 CLR 将调用[IHostAssemblyStore：:P rovideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) ，以允许主机提供要绑定到的程序集。  
+- 如果程序集未出现在列表中，并且宿主已提供[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)的实现，则 CLR 将调用[IHostAssemblyStore：:P rovideassembly](ihostassemblystore-provideassembly-method.md) ，以允许主机提供要绑定到的程序集。  
   
 - 否则，CLR 无法绑定到程序集。  
   
- 如果主机将 `ppReferenceList` 设置为 null，则 CLR 首先探测全局程序集缓存，调用 `ProvideAssembly`，然后探测应用程序基以解析程序集引用。  
+ 如果主机设置 `ppReferenceList` 为 null，则 CLR 首先探测全局程序集缓存，调用 `ProvideAssembly` ，然后探测应用程序基以解析程序集引用。  
   
 > [!NOTE]
-> 初始化后，CLR 只调用一次 `GetNonHostStoreAssemblies`。 不会再次调用方法。  
+> 初始化后，CLR 只调用 `GetNonHostStoreAssemblies` 一次。 不会再次调用方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICLRAssemblyReferenceList 接口](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [IHostAssemblyManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
-- [IHostAssemblyStore 接口](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [ICLRAssemblyReferenceList 接口](iclrassemblyreferencelist-interface.md)
+- [IHostAssemblyManager 接口](ihostassemblymanager-interface.md)
+- [IHostAssemblyStore 接口](ihostassemblystore-interface.md)

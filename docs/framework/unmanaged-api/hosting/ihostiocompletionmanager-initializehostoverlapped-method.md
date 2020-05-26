@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c35199bf-bc47-4901-b467-4e8a37644bbb
 topic_type:
 - apiref
-ms.openlocfilehash: 9fd299ad25166bcbcf0202da13a5b4cbdd20d7d7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cf257ab86d27946c861c89dff5e6f09a42013e58
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133805"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804714"
 ---
 # <a name="ihostiocompletionmanagerinitializehostoverlapped-method"></a>IHostIoCompletionManager::InitializeHostOverlapped 方法
-向宿主提供初始化任何自定义数据以追加到用于异步 i/o 请求的 Win32 `OVERLAPPED` 结构的机会。  
+向宿主提供初始化任何自定义数据以追加到 `OVERLAPPED` 用于异步 i/o 请求的 Win32 结构的机会。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,13 +35,13 @@ HRESULT InitializeHostOverlapped (
   
 ## <a name="parameters"></a>参数  
  `pvOverlapped`  
- 中指向要包含在 i/o 请求中的 Win32 `OVERLAPPED` 结构的指针。  
+ 中指向要 `OVERLAPPED` 包含在 i/o 请求中的 Win32 结构的指针。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`InitializeHostOverlapped` 成功返回。|  
+|S_OK|`InitializeHostOverlapped`已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -50,24 +50,24 @@ HRESULT InitializeHostOverlapped (
 |E_OUTOFMEMORY|没有足够的内存可用于分配请求的资源。|  
   
 ## <a name="remarks"></a>备注  
- Windows 平台函数使用 `OVERLAPPED` 结构来存储异步 i/o 请求的状态。 CLR 调用 `InitializeHostOverlapped` 方法，使宿主有机会将自定义数据追加到 `OVERLAPPED` 实例。  
+ Windows 平台函数使用 `OVERLAPPED` 结构来存储异步 i/o 请求的状态。 CLR 将调用 `InitializeHostOverlapped` 方法，以为宿主向宿主追加自定义数据的机会 `OVERLAPPED` 。  
   
 > [!IMPORTANT]
-> 若要从自定义数据块开始，主机必须将偏移量设置为 `OVERLAPPED` 结构的大小（`sizeof(OVERLAPPED)`）。  
+> 若要从自定义数据块开始，主机必须将偏移量设置为结构的大小 `OVERLAPPED` （ `sizeof(OVERLAPPED)` ）。  
   
  E_OUTOFMEMORY 的返回值指示宿主未能初始化其自定义数据。 在这种情况下，CLR 将报告错误并导致调用失败。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICLRIoCompletionManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
-- [GetHostOverlappedSize 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-gethostoverlappedsize-method.md)
-- [IHostIoCompletionManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+- [ICLRIoCompletionManager 接口](iclriocompletionmanager-interface.md)
+- [GetHostOverlappedSize 方法](ihostiocompletionmanager-gethostoverlappedsize-method.md)
+- [IHostIoCompletionManager 接口](ihostiocompletionmanager-interface.md)

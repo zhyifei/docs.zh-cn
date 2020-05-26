@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d35de48dd22003c851cf5dba9e8517ec48b9217b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0551fa086644497c631cd9b6d7058398ff9ccfa
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74567765"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702279"
 ---
 ### <a name="c-locale-maps-to-the-invariant-locale"></a>“C”区域设置映射到固定区域设置
 
@@ -20,18 +20,20 @@ ms.locfileid: "74567765"
 
 3.0
 
-### <a name="recommended-action"></a>建议操作
+#### <a name="recommended-action"></a>建议操作
 
 除了解此变更外，没有什么特别之处需要注意。 此变更仅影响使用“C”本地映射的应用程序。
 
-### <a name="category"></a>类别
+#### <a name="category"></a>类别
 
 全球化
 
-### <a name="affected-apis"></a>受影响的 API
+#### <a name="affected-apis"></a>受影响的 API
 
 所有排序规则和区域性 API 都会受到此变更的影响。
 
 <!--
+
+#### Affected APIs
 
 -->

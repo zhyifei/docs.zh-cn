@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3153643e-cf5c-4b44-8e0e-c2b22cb08208
 topic_type:
 - apiref
-ms.openlocfilehash: b3778e12dd96d4f4653633252e13469601c4879d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ba221beaa0edce49e75f75edddaee72e1beb9747
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139436"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803504"
 ---
 # <a name="ihostsyncmanagercreateautoevent-method"></a>IHostSyncManager::CreateAutoEvent 方法
 创建自动重置事件对象。  
@@ -35,13 +35,13 @@ HRESULT CreateAutoEvent (
   
 ## <a name="parameters"></a>参数  
  `ppEvent`  
- 弄指向由主机实现的[IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)实例的地址的指针; 如果无法创建事件对象，则为 null。  
+ 弄指向由主机实现的[IHostAutoEvent](ihostautoevent-interface.md)实例的地址的指针; 如果无法创建事件对象，则为 null。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`CreateAutoEvent` 成功返回。|  
+|S_OK|`CreateAutoEvent`已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -50,20 +50,20 @@ HRESULT CreateAutoEvent (
 |E_OUTOFMEMORY|没有足够的内存可用于创建请求的事件对象。|  
   
 ## <a name="remarks"></a>备注  
- `CreateAutoEvent` 创建一个自动事件对象，其状态将在释放等待线程后自动更改为非终止状态。 此方法使用为 `bManualReset` 参数指定的 `false` 值来镜像 Win32 `CreateEvent` 函数  
+ `CreateAutoEvent`创建自动事件对象，其状态将在释放等待线程后自动更改为非终止状态。 此方法 `CreateEvent` 使用 `false` 为参数指定的值镜像 Win32 函数 `bManualReset`  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICLRSyncManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostAutoEvent 接口](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [IHostControl 接口](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
-- [IHostSyncManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [ICLRSyncManager 接口](iclrsyncmanager-interface.md)
+- [IHostAutoEvent 接口](ihostautoevent-interface.md)
+- [IHostControl 接口](ihostcontrol-interface.md)
+- [IHostSyncManager 接口](ihostsyncmanager-interface.md)

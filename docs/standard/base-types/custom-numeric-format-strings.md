@@ -16,12 +16,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 1eb9c3c189d7bba3a12fdcd0c3d600a66bf819ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e2456da9fd1b9bd26d0317c0d04c6d1b61cf16d
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75348298"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83440910"
 ---
 # <a name="custom-numeric-format-strings"></a>自定义数字格式字符串
 
@@ -30,7 +30,7 @@ ms.locfileid: "75348298"
 所有数字类型的 `ToString` 方法的某些重载支持自定义数字格式字符串。 例如，可将数字格式字符串提供给 <xref:System.Int32.ToString%28System.String%29> 类型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 方法和 <xref:System.Int32> 方法。 .NET [复合格式功能](../../../docs/standard/base-types/composite-formatting.md)也支持自定义数字格式字符串，以供 <xref:System.Console> 和 <xref:System.IO.StreamWriter> 类的一些 `Write` 和 `WriteLine` 方法、<xref:System.String.Format%2A?displayProperty=nameWithType> 方法以及 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法使用。 [字符串内插](../../csharp/language-reference/tokens/interpolated.md)功能还支持自定义数字格式字符串。
 
 > [!TIP]
-> 你可以下载格式设置实用工具，它属于一种 .NET Core Windows 窗体应用程序，通过该应用程序，你可将格式字符串应用于数值或日期和时间值并显示结果字符串  。 源代码适用于 [C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) 和 [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)。
+> 你可以下载格式设置实用工具，它属于一种 .NET Core Windows 窗体应用程序，通过该应用程序，你可将格式字符串应用于数值或日期和时间值并显示结果字符串  。 源代码适用于 [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) 和 [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)。
 
 <a name="table"></a> 下表描述自定义数字格式说明符并显示由每个格式说明符产生的示例输出。 有关使用自定义数字格式字符串的其他信息，请参阅[说明](#NotesCustomFormatting)部分，有关使用方法的完整演示，请参阅[示例](#example)部分。
 
@@ -265,7 +265,7 @@ ms.locfileid: "75348298"
 
 控制面板中“区域和语言选项”  项中的设置会影响由格式设置操作产生的结果字符串。 这些设置用于初始化与当前线程区域性关联的 <xref:System.Globalization.NumberFormatInfo> 对象，并且当前线程区域性将提供用于控制格式设置的值。 使用不同设置的计算机将生成不同的结果字符串。
 
-此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 构造函数实例化表示当前系统区域性的新 <xref:System.Globalization.CultureInfo> 对象，通过控制面板中的“区域和语言选项”  项创建的任何自定义都会应用于新 <xref:System.Globalization.CultureInfo> 对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。
+此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> 构造函数实例化表示当前系统区域性的新 <xref:System.Globalization.CultureInfo> 对象，通过控制面板中的“区域和语言选项”  项创建的任何自定义都会应用于新 <xref:System.Globalization.CultureInfo> 对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。
 
 ### <a name="rounding-and-fixed-point-format-strings"></a>舍入和定点格式字符串
 
@@ -291,5 +291,5 @@ ms.locfileid: "75348298"
 - [格式设置类型](../../../docs/standard/base-types/formatting-types.md)
 - [标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [如何：用前导零填充数字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
-- [示例：.NET Core WinForms 格式设置实用工具 (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
-- [示例：.NET Core WinForms 格式设置实用工具 (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)
+- [示例：.NET Core WinForms 格式设置实用工具 (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [示例：.NET Core WinForms 格式设置实用工具 (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)
