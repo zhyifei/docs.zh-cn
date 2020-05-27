@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b500a260-1d57-4953-95e1-c27063f7c8da
 topic_type:
 - apiref
-ms.openlocfilehash: 129750644962cee3206b9e38cbeaa77d38dddd71
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f66d34fcfdd8c61dcc92817ec1a928ac5b603fc
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176105"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008893"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc 方法
-向代码库添加 .reloc 指令。  
+将 .reloc 指令添加到基本代码。  
   
  此方法已过时，不应使用。  
   
@@ -38,28 +38,28 @@ HRESULT AddSectionReloc (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `section`  
- [在]要向其添加 .reloc 指令的内存代码部分。  
+ 中要将 .reloc 指令添加到的内存中代码部分。  
   
  `offset`  
- [在]节的偏移量。  
+ 中部分的偏移量。  
   
  `relativeTo`  
- [在]引用的`offset`节。  
+ 中引用的部分 `offset` 。  
   
  `relocType`  
- [在][CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md)值之一，指示要添加的 .reloc 指令的类型。  
+ 中[CeeSectionRelocType](ceesectionreloctype-enumeration.md)值之一，指示要添加的 .reloc 指令的类型。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen 接口](iceegen-interface.md)

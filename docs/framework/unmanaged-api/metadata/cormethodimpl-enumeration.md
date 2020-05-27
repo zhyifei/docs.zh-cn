@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-ms.openlocfilehash: a76a7a2d4ad68e367e38e175377aff40ce399346
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b32e8f0b03ef6d550c384f3d932cc295a7270028
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450205"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007658"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl 枚举
 包含一些值，用于描述方法实现功能。  
@@ -52,9 +52,9 @@ typedef enum CorMethodImpl {
 } CorMethodImpl;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
 |`miCodeTypeMask`|描述代码类型的标志。|  
 |`miIL`|指定方法实现为 Microsoft 中间语言（MSIL）。|  
@@ -71,15 +71,15 @@ typedef enum CorMethodImpl {
 |`miNoInlining`|指定方法不能内联。|  
 |`miAggressiveInlining`|指定方法应尽可能内联。|  
 |`miNoOptimization`|指定不应优化方法。|  
-|`miMaxMethodImplVal`|`CorMethodImpl`的最大有效值。|  
+|`miMaxMethodImplVal`|的最大有效值 `CorMethodImpl` 。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [元数据枚举](metadata-enumerations.md)

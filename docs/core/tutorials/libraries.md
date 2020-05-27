@@ -2,14 +2,13 @@
 title: 使用 .NET Core CLI 开发库
 description: 了解如何使用 .NET Core CLI 创建 .NET Core 库。 将创建一个支持多个框架的库。
 author: cartermp
-ms.topic: how-to
 ms.date: 05/01/2017
-ms.openlocfilehash: 7aadaf7bf7819d52a57c3a137beff46d924d8cb0
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396205"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "77503504"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>使用 .NET Core CLI 开发库
 

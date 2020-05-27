@@ -7,4 +7,4 @@ ms.lasthandoff: 05/15/2019
 ms.locfileid: "65629979"
 ---
 > [!NOTE]
-> 此 API 最初设计为在运行时内部使用。 虽然现在支持第三方使用，但我们建议使用[ `ICorDebug` ](../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)并[ `ICorProfiler` ](../docs/framework/unmanaged-api/profiling/profiling-interfaces.md) Api 在可能的情况。
+> 此 API 最初旨在供内部使用。 尽管它现在是第三方使用所支持的，但我们 [`ICorDebug`](../docs/framework/unmanaged-api/debugging/debugging-interfaces.md) 建议 [`ICorProfiler`](../docs/framework/unmanaged-api/profiling/profiling-interfaces.md) 在可能的情况下使用和 api。

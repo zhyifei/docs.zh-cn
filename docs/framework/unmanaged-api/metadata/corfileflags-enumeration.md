@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d16703fd-518f-412e-92cb-74433d11032e
 topic_type:
 - apiref
-ms.openlocfilehash: c315e2ae2753b59b4e277764d27c3fb3388b515c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c8c2757e99b80204ad52e69a596d62c55c369965
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445417"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007411"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags 枚举
-包含一些值，这些值描述在对[IMetaDataAssemblyEmit：:D efinefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)的调用中定义的文件类型。  
+包含一些值，这些值描述在对[IMetaDataAssemblyEmit：:D efinefile](imetadataassemblyemit-definefile-method.md)的调用中定义的文件类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,20 +35,20 @@ typedef enum CorFileFlags {
 } CorFileFlags;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
 |`ffContainsMetaData`|指示该文件不是资源文件。|  
 |`ffContainsNoMetaData`|指示文件可能不包含元数据，可能是资源文件。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [元数据枚举](metadata-enumerations.md)

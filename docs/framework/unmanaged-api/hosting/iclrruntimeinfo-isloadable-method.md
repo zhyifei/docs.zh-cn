@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 205ca53b-e78e-49b2-9a46-2a7823e96b8c
 topic_type:
 - apiref
-ms.openlocfilehash: 13b4e00cf002abca625dbdda010f7d8994360687
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: a1cd169fc4be5b1dd3ab1a83f4ad143ba2e2442b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762534"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007359"
 ---
 # <a name="iclrruntimeinfoisloadable-method"></a>ICLRRuntimeInfo::IsLoadable 方法
 指示是否可将与此接口关联的运行时加载到当前进程，并考虑可能已加载到进程中的其他运行时。  
@@ -44,7 +44,7 @@ HRESULT IsLoadable(
 |S_OK|该方法已成功完成。|  
 |E_POINTER|`pbLoadable` 为 null。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果已将另一个运行时加载到进程中，并且可以为进程内并行执行加载与此接口关联的运行时，则 `pbLoadable` 返回 `true` 。 如果两个运行时不能并行运行，则 `pbLoadable` 返回 `false` 。 例如，公共语言运行时（CLR）版本4可在 CLR 版本2.0 或 CLR 版本1.1 的同一进程中并行运行。 但是，CLR 版本1.1 和 CLR 版本2.0 无法在进程中并行运行。  
   
  如果没有任何运行时加载到进程中，此方法将始终返回 `true` 。  

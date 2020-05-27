@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: eb3ecbf39376e7126b5ec93a26badcbf5076d1db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 479cb25ad8e1c263d3539a4203ac5bea781eb931
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175780"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009368"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty 方法
-使用指定的`get`和方法`set`访问器为指定类型创建属性定义，并获取该属性定义的令牌。  
+使用指定的和方法访问器创建指定类型的属性定义， `get` `set` 并获取该属性定义的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,53 +44,53 @@ HRESULT DefineProperty (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `td`  
- [在]正在定义属性的类或接口的令牌。  
+ 中正在为其定义属性的类或接口的标记。  
   
  `szProperty`  
- [在]属性的名称。  
+ 中属性的名称。  
   
  `dwPropFlags`  
- [在]属性标志。  
+ 中属性标志。  
   
  `pvSig`  
- [在]属性签名。  
+ 中属性签名。  
   
  `cbSig`  
- [在]中的`pvSig`字节计数。  
+ 中中的字节数 `pvSig` 。  
   
  `dwCPlusTypeFlag`  
- [在]属性的默认值的类型。  
+ 中属性的默认值的类型。  
   
  `pValue`  
- [在]属性的默认值。  
+ 中属性的默认值。  
   
  `cchValue`  
- [在]中的（Unicode） 字符的`pValue`计数。  
+ 中中的（Unicode）字符的计数 `pValue` 。  
   
  `mdSetter`  
- [在]设置属性值的方法。  
+ 中用于设置属性值的方法。  
   
  `mdGetter`  
- [在]获取属性值的方法。  
+ 中获取属性值的方法。  
   
  `rmdOtherMethods[]`  
- [在]与 属性关联的其他方法的数组。 使用 终止数组`mdTokenNil`。  
+ 中与属性关联的其他方法的数组。 使用终止数组 `mdTokenNil` 。  
   
  `pmdProp`  
- [出]分配的`mdProperty`令牌。  
+ 弄`mdProperty`分配的令牌。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 接口](imetadataemit-interface.md)
+- [IMetaDataEmit2 接口](imetadataemit2-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-ms.openlocfilehash: 8ca5ab70f60de4d783800fb18612a8f04cb9cee1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccc4843864f375c167acdb12575c282dbe3a49e1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177703"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004798"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField 方法
-为具有指定元数据签名的字段创建定义，并获取该字段定义的令牌。  
+使用指定的元数据签名创建字段的定义，并获取该字段定义的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,44 +41,44 @@ HRESULT DefineField (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `td`  
- [在]封闭`mdTypeDef`类或接口的令牌。  
+ 中`mdTypeDef`封闭类或接口的标记。  
   
  `szName`  
- [在]Unicode 中的字段名称。  
+ 中Unicode 中的字段名称。  
   
  `dwFieldFlags`  
- [在]字段属性。 这是值的`CorFieldAttr`位掩码。  
+ 中字段特性。 这是一个值的位掩码 `CorFieldAttr` 。  
   
  `pvSigBlob`  
- [在]字段签名作为 BLOB。  
+ 中作为 BLOB 的字段签名。  
   
  `cbSigBlob`  
- [在]中的`pvSigBlob`字节计数。  
+ 中中的字节数 `pvSigBlob` 。  
   
  `dwCPlusTypeFlag`  
- [在]常`ELEMENT_TYPE_`*\** 量值的 。 这是一个`CorElementType`值。 如果未为字段定义常量值，请使用`ELEMENT_TYPE_END`。  
+ 中`ELEMENT_TYPE_` *\** 常数值的。 这是一个 `CorElementType` 值。 如果没有为字段定义常数值，请使用 `ELEMENT_TYPE_END` 。  
   
  `pValue`  
- [在]字段的常量值。  
+ 中字段的常数值。  
   
  `cchValue`  
- [在]的大小（Unicode）字符。 `pValue`  
+ 中的大小（Unicode）字符 `pValue` 。  
   
  `pmd`  
- [出]分配的`mdFieldDef`令牌。  
+ 弄`mdFieldDef`分配的令牌。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 接口](imetadataemit-interface.md)
+- [IMetaDataEmit2 接口](imetadataemit2-interface.md)

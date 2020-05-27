@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0451d752-1e5c-4c9a-8bad-6cd35b7ba3df
 topic_type:
 - apiref
-ms.openlocfilehash: 87a70587027f283ef5976089b3f2daf1204e68ec
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 387f5f01f2d2589c0b34e50b69398e1feb0e77e0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426127"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008240"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection 方法
 按指定长度截断指定的代码段。  
@@ -44,17 +44,17 @@ HRESULT TruncateSection (
  中用于截断部分的长度（以字节为单位）。  
   
 ## <a name="remarks"></a>备注  
- 仅当你有其他方法未处理的特殊部分要求时，才调用 `TruncateSection`。  
+ `TruncateSection`仅当有特殊部分的要求不是由其他方法处理时才调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
  **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen 接口](iceegen-interface.md)

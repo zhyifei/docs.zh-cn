@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-ms.openlocfilehash: dc6375f3e2cff1a744a8ff2e6a6adab27bbf8af3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5af877c26c20bf64a27618bf24a7bce5b410419
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177481"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007775"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps 方法
-设置存储在元数据中的属性的功能，该属性由之前调用[DefineProperty 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)定义。  
+设置由之前调用[DefineProperty 方法](imetadataemit-defineproperty-method.md)定义的属性的元数据中存储的功能。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,41 +40,41 @@ HRESULT SetPropertyProps (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `pr`  
- [在]要更改的属性的令牌  
+ 中要更改的属性的标记  
   
  `dwPropFlags`  
- [在]属性标志。  
+ 中属性标志。  
   
  `dwCPlusTypeFlag`  
- [在]属性的默认值的类型。  
+ 中属性的默认值的类型。  
   
  `pValue`  
- [在]属性的默认值。  
+ 中属性的默认值。  
   
  `cchValue`  
- [在]中的（Unicode） 字符的`pValue`计数。  
+ 中中的（Unicode）字符的计数 `pValue` 。  
   
  `mdSetter`  
- [在]设置属性值的方法。  
+ 中用于设置属性值的方法。  
   
  `mdGetter`  
- [在]获取属性值的方法。  
+ 中获取属性值的方法。  
   
  `rmdOtherMethods[]`  
- [在]与 属性关联的其他方法的数组。 使用令牌终止`mdTokenNil`此数组。  
+ 中与属性关联的其他方法的数组。 使用标记终止此数组 `mdTokenNil` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 接口](imetadataemit-interface.md)
+- [IMetaDataEmit2 接口](imetadataemit2-interface.md)

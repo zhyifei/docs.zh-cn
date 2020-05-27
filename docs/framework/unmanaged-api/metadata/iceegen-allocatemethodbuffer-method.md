@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 845ab77e-9639-47f5-99fb-f3b619e3e779
 topic_type:
 - apiref
-ms.openlocfilehash: 38b9ea2ffab439f55f0a6d34d7f42c7669629168
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8dc7f439cac56c2d55916ff8631ec3095c67680d
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177915"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008880"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>ICeeGen::AllocateMethodBuffer 方法
-为方法创建指定大小的缓冲区，并获取方法的相对虚拟地址。  
+为方法创建指定大小的缓冲区，并获取该方法的相对虚拟地址。  
   
  此方法已过时，不应使用。  
   
@@ -37,25 +37,25 @@ HRESULT AllocateMethodBuffer (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `cchBuffer`  
- [在]要创建的缓冲区的长度。  
+ 中要创建的缓冲区的长度。  
   
  `lpBuffer`  
- [出]返回的缓冲区。  
+ 弄返回的缓冲区。  
   
  `RVA`  
- [出]方法的相对虚拟地址。  
+ 弄方法的相对虚拟地址。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen 接口](iceegen-interface.md)

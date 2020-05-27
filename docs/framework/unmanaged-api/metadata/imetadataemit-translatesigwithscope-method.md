@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-ms.openlocfilehash: 2662af41fbd2cdc3ce8a6df1e036dfc5b22ff6a3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7ef6dbc46806febc6fba89b39a8b894377225c23
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175544"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003944"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope 方法
-将程序集导入当前作用域，并为合并作用域获取新的元数据签名。  
+将程序集导入到当前作用域中，并为合并的作用域获取新的元数据签名。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,53 +43,53 @@ HRESULT TranslateSigWithScope (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `pAssemImport`  
- [在]导入程序集的接口（定义签名的位置）。  
+ 中导入程序集的接口（在其中定义签名）。  
   
  `pbHashValue`  
- [在]程序集的哈希 blob。  
+ 中程序集的哈希 blob。  
   
  `cbHashValue`  
- [在]中的`pbHashValue`字节计数。  
+ 中中的字节数 `pbHashValue` 。  
   
  `import`  
- [在]导入元数据作用域的接口。  
+ 中导入元数据范围的接口。  
   
  `pbSigBlob`  
- [在]要导入的签名。  
+ 中要导入的签名。  
   
  `cbSigBlob`  
- [在]的大小（以字节为单位）的大小`pbSigBlob`。  
+ 中的大小（以字节为单位） `pbSigBlob` 。  
   
  `pAssemEmit`  
- [在]导出程序集的接口。  
+ 中导出程序集的接口。  
   
  `emit`  
- [在]导出元数据作用域的接口。  
+ 中导出元数据范围的接口。  
   
  `pvTranslatedSig`  
- [出]用于保存已翻译的签名 blob 的缓冲区。  
+ 弄用于保存已转换的签名 blob 的缓冲区。  
   
  `cbTranslatedSigMax`  
- [在]的容量（以字节为单位`pvTranslatedSig`）。  
+ 中的容量（以字节为单位） `pvTranslatedSig` 。  
   
  `pcbTranslatedSig`  
- [出]翻译签名中的实际字节数。  
+ 弄已翻译签名中的实际字节数。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataAssemblyEmit 接口](imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport 接口](imetadataassemblyimport-interface.md)
+- [IMetaDataEmit 接口](imetadataemit-interface.md)
+- [IMetaDataEmit2 接口](imetadataemit2-interface.md)
+- [IMetaDataImport 接口](imetadataimport-interface.md)

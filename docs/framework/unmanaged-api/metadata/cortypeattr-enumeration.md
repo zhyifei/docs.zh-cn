@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bede0ec-5fdf-42a2-b5b7-bee64056acb6
 topic_type:
 - apiref
-ms.openlocfilehash: b1586184c91619994ba0dfc9d5dcc277c10f99cf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b6936081ca3dbadb4f802a6856fafb53f6cef3fa
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436445"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008958"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr 枚举
 包含一些值，用于指示类型元数据。  
@@ -73,9 +73,9 @@ typedef enum CorTypeAttr {
 } CorTypeAttr;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
 |`tdVisibilityMask`|用于类型可见性信息。|  
 |`tdNotPublic`|指定该类型不在公共范围内。|  
@@ -103,7 +103,7 @@ typedef enum CorTypeAttr {
 |`tdAnsiClass`|指定此类型将 LPTSTR 解释为 ANSI。|  
 |`tdUnicodeClass`|指定此类型将 LPTSTR 解释为 Unicode。|  
 |`tdAutoClass`|指定此类型自动解释 LPTSTR。|  
-|`tdCustomFormatClass`|指定该类型具有非标准编码，由 `CustomFormatMask`指定。|  
+|`tdCustomFormatClass`|指定该类型具有由指定的非标准编码 `CustomFormatMask` 。|  
 |`tdCustomFormatMask`|使用此掩码获取本机互操作的非标准编码信息。 不指定这两个位的值的含义。|  
 |`tdBeforeFieldInit`|指定在第一次尝试访问静态字段之前必须先初始化类型。|  
 |`tdForwarder`|指定导出类型和类型转发器。|  
@@ -112,12 +112,12 @@ typedef enum CorTypeAttr {
 |`tdHasSecurity`|指定该类型具有与之关联的安全性。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [元数据枚举](metadata-enumerations.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c6b7fb4-cbca-4479-b650-ab9a99732ea0
 topic_type:
 - apiref
-ms.openlocfilehash: 9aef471c1155070af0e9bcca14975a65bc5dc763
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2858e924ab6effe192955ce53dad9d333d2d244d
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175962"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009062"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps 方法
-使用指定的元数据签名获取程序集引用的属性集。  
+获取具有指定元数据签名的程序集引用的属性集。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,49 +42,49 @@ HRESULT GetAssemblyRefProps (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `mdar`  
- [在]表示`mdAssemblyRef`要获取属性的程序集引用的元数据令牌。  
+ 中`mdAssemblyRef`表示要获取其属性的程序集引用的元数据标记。  
   
  `ppbPublicKeyOrToken`  
- [出]指向公钥或元数据令牌的指针。  
+ 弄指向公钥或元数据标记的指针。  
   
  `pcbPublicKeyOrToken`  
- [出]返回的公钥或令牌中的字节数。  
+ 弄返回的公钥或令牌中的字节数。  
   
  `szName`  
- [出]程序集的简单名称。  
+ 弄程序集的简单名称。  
   
  `cchName`  
- [在]大字符的大小`szName`。  
+ 中的大小（宽字符） `szName` 。  
   
  `pchName`  
- [出]指向 中实际返回的宽字符数的指针`szName`。  
+ 弄一个指针，指向在中实际返回的宽字符数 `szName` 。  
   
  `pMetaData`  
- [出]指向包含程序集元数据的装配元数据结构的指针。  
+ 弄指向 ASSEMBLYMETADATA 结构的指针，该结构包含程序集元数据。  
   
  `ppbHashValue`  
- [出]指向哈希值的指针。 这是使用 SHA-1 算法引用的程序集`PublicKey`属性的哈希值，除非设置了[AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)枚举的 arfFullOriginator 标志。  
+ 弄指向哈希值的指针。 这是所引用程序集的属性的哈希，使用 SHA-1 算法， `PublicKey` 除非已设置[AssemblyRefFlags](assemblyrefflags-enumeration.md)枚举的 arfFullOriginator 标志。  
   
  `pcbHashValue`  
- [出]返回的哈希值中的宽字符数。  
+ 弄返回的哈希值中的宽字符数。  
   
  `pdwAssemblyRefFlags`  
- [出]指向用于描述应用于程序集的元数据的标志的指针。 标志值是一个或多个[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)值的组合。  
+ 弄一个指针，指向用于描述应用于程序集的元数据的标志。 Flags 值是一个或多个[CorAssemblyFlags](corassemblyflags-enumeration.md)值的组合。  
   
 ## <a name="return-value"></a>返回值  
- 此方法如果成功，将返回S_OK;否则，它将返回 Winerror.h 标头文件中定义的错误代码之一。  
+ 如果成功，则此方法返回 S_OK;否则，它将返回在 Winerror.h 头文件中定义的错误代码之一。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport 接口](imetadataassemblyimport-interface.md)

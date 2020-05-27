@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f721c863-9642-4e64-917a-65f9e55c25b9
 topic_type:
 - apiref
-ms.openlocfilehash: 25b7f478ae0bd05b82fa960561fb8534efe2b4db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e24db7da7abbdb597b8ff64515e8053667af3ff
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175663"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008763"
 ---
 # <a name="imetadataemitsetcustomattributevalue-method"></a>IMetaDataEmit::SetCustomAttributeValue 方法
-设置或更新以前调用[IMetaDataEmit：:DefineCustom属性](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)）定义的自定义属性的值。  
+设置或更新通过之前对 IMetaDataEmit 的调用定义的自定义特性的值[：:D efinecustomattribute](imetadataemit-definecustomattribute-method.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,26 +35,26 @@ HRESULT SetCustomAttributeValue (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `pcv`  
- [在]目标自定义属性的令牌。  
+ 中目标自定义属性的标记。  
   
  `pCustomAttribute`  
- [在]指向包含自定义属性的数组的指针。  
+ 中指向包含自定义特性的数组的指针。  
   
  `cbCustomAttribute`  
- [在]自定义属性的大小（以字节为单位）。  
+ 中自定义属性的大小（以字节为单位）。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 接口](imetadataemit-interface.md)
+- [IMetaDataEmit2 接口](imetadataemit2-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97dc3a56-adfa-431f-889e-06a35ac84d51
 topic_type:
 - apiref
-ms.openlocfilehash: 09a1605deda5b51be604c3b8f0c69fa5adcf9dc0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f8c0c2cb8dea8ad2b9c0040654122ef5942aca0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175949"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008386"
 ---
 # <a name="imetadataconvertergetmetadatafromtypelib-method"></a>IMetaDataConverter::GetMetaDataFromTypeLib 方法
-获取指向[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)实例的接口指针，该实例表示指定`ITypeLib`实例表示的类型库的元数据签名。  
+获取一个接口指针，该指针指向表示由指定的实例表示的类型库的元数据签名的[IMetaDataImport](imetadataimport-interface.md)实例 `ITypeLib` 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,23 +34,23 @@ HRESULT GetMetaDataFromTypeLib (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `pITL`  
- [在]指向表示类型`ITypeLib`库的对象的指针。  
+ 中一个指针，指向 `ITypeLib` 表示类型库的对象。  
   
  `ppMDI`  
- [出]指向接收表示元数据签名的`IMetaDataImport`实例地址的位置的指针。  
+ 弄指向一个位置的指针，该位置接收 `IMetaDataImport` 表示元数据签名的实例的地址。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataEmit 接口](imetadataemit-interface.md)
+- [IMetaDataImport 接口](imetadataimport-interface.md)

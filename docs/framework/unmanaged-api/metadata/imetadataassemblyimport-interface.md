@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 29c6fba5-4cea-417d-b484-7ed22ebff1c9
 topic_type:
 - apiref
-ms.openlocfilehash: 289e26868ff2eb9e1d97cf084e9a888815062ea4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2a67f50fa1042e8d3957a9a0394507f260a328c6
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436304"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009010"
 ---
 # <a name="imetadataassemblyimport-interface"></a>IMetaDataAssemblyImport 接口
 提供访问和检查程序集清单内容的方法。  
@@ -28,31 +28,31 @@ ms.locfileid: "74436304"
   
 |方法|说明|  
 |------------|-----------------|  
-|[CloseEnum 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-closeenum-method.md)|释放到指定枚举器的句柄。|  
-|[EnumAssemblyRefs 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumassemblyrefs-method.md)|获取一个指向枚举数的接口指针，该枚举数包含当前元数据范围内的程序集所引用的程序集的 `mdAssemblyRef` 标记。|  
-|[EnumExportedTypes 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumexportedtypes-method.md)|获取一个指向枚举数的接口指针，该枚举数包含当前元数据范围内的程序集引用的 COM 类型的 `mdExportedType` 标记。|  
-|[EnumFiles 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumfiles-method.md)|获取一个指向枚举数的接口指针，该枚举数包含当前元数据范围内的程序集所引用的文件的 `mdFile` 标记。|  
-|[EnumManifestResources 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enummanifestresources-method.md)|获取一个指向枚举数的接口指针，该枚举数包含当前元数据范围内的程序集所引用资源的 `mdManifestResource` 标记。|  
-|[FindAssembliesByName 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findassembliesbyname-method.md)|获取具有指定名称的程序集的 `mdAssemblyRef` 标记的数组。|  
-|[FindExportedTypeByName 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findexportedtypebyname-method.md)|获取具有指定名称的 COM 类型的 `mdExportedType` 标记。|  
-|[FindManifestResourceByName 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findmanifestresourcebyname-method.md)|获取具有指定名称的资源的 `mdManifestResource` 标记。|  
-|[GetAssemblyFromScope 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyfromscope-method.md)|获取当前元数据范围内的程序集的标记。|  
-|[GetAssemblyProps 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyprops-method.md)|获取指定程序集的属性设置。|  
-|[GetAssemblyRefProps 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyrefprops-method.md)|获取指定 `mdAssemblyRef` 标记的属性设置。|  
-|[GetExportedTypeProps 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getexportedtypeprops-method.md)|获取指定 COM 类型的属性设置。|  
-|[GetFileProps 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getfileprops-method.md)|获取指定文件的属性设置。|  
-|[GetManifestResourceProps 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getmanifestresourceprops-method.md)|获取指定的清单资源的属性设置。|  
+|[CloseEnum 方法](imetadataassemblyimport-closeenum-method.md)|释放到指定枚举器的句柄。|  
+|[EnumAssemblyRefs 方法](imetadataassemblyimport-enumassemblyrefs-method.md)|获取一个接口指针，该指针指向包含 `mdAssemblyRef` 当前元数据范围内的程序集所引用的程序集的标记。|  
+|[EnumExportedTypes 方法](imetadataassemblyimport-enumexportedtypes-method.md)|获取一个指向枚举数的接口指针，该枚举数包含 `mdExportedType` 当前元数据范围内的程序集引用的 COM 类型的标记。|  
+|[EnumFiles 方法](imetadataassemblyimport-enumfiles-method.md)|获取一个接口指针，该指针指向一个枚举数，该枚举数包含 `mdFile` 当前元数据范围内的程序集所引用的文件的标记。|  
+|[EnumManifestResources 方法](imetadataassemblyimport-enummanifestresources-method.md)|获取一个接口指针，该指针指向包含 `mdManifestResource` 当前元数据范围内的程序集所引用资源的标记的枚举数。|  
+|[FindAssembliesByName 方法](imetadataassemblyimport-findassembliesbyname-method.md)|获取 `mdAssemblyRef` 具有指定名称的程序集的标记数组。|  
+|[FindExportedTypeByName 方法](imetadataassemblyimport-findexportedtypebyname-method.md)|获取 `mdExportedType` 具有指定名称的 COM 类型的标记。|  
+|[FindManifestResourceByName 方法](imetadataassemblyimport-findmanifestresourcebyname-method.md)|获取 `mdManifestResource` 具有指定名称的资源的标记。|  
+|[GetAssemblyFromScope 方法](imetadataassemblyimport-getassemblyfromscope-method.md)|获取当前元数据范围内的程序集的标记。|  
+|[GetAssemblyProps 方法](imetadataassemblyimport-getassemblyprops-method.md)|获取指定程序集的属性设置。|  
+|[GetAssemblyRefProps 方法](imetadataassemblyimport-getassemblyrefprops-method.md)|获取指定标记的属性设置 `mdAssemblyRef` 。|  
+|[GetExportedTypeProps 方法](imetadataassemblyimport-getexportedtypeprops-method.md)|获取指定 COM 类型的属性设置。|  
+|[GetFileProps 方法](imetadataassemblyimport-getfileprops-method.md)|获取指定文件的属性设置。|  
+|[GetManifestResourceProps 方法](imetadataassemblyimport-getmanifestresourceprops-method.md)|获取指定的清单资源的属性设置。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
  **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [元数据接口](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [元数据接口](metadata-interfaces.md)
+- [IMetaDataAssemblyEmit 接口](imetadataassemblyemit-interface.md)
