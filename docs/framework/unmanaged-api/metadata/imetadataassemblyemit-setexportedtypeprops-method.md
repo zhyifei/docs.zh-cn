@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c090153-fd5f-46c7-9cff-39a78d992c8f
 topic_type:
 - apiref
-ms.openlocfilehash: dd1d6f1da6e49837eebd9356500f403c199b011b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fa4f1f57cb8fe1ca81bbad6438a88bb43c48e7bf
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177856"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008074"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>IMetaDataAssemblyEmit::SetExportedTypeProps 方法
 修改指定的 `ExportedType` 元数据结构。  
@@ -36,31 +36,31 @@ HRESULT SetExportedTypeProps (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `ct`  
- [在]指定要修改的`ExportedType`元数据结构的元数据令牌。  
+ 中`ExportedType`用于指定要修改的元数据结构的元数据标记。  
   
  `tkImplementation`  
- [在]指定如何实现此类型的`File`令牌`AssemblyRef`的类型`ExportedType`。  
+ 中类型 `File` 为、或的标记， `AssemblyRef` `ExportedType` 用于指定如何实现此类型。  
   
  `tkTypeDef`  
- [在]代码`TypeDef`文件中引用的令牌。  
+ 中`TypeDef`在代码文件中引用的标记。  
   
  `dwExportedTypeFlags`  
- [在]指定类型属性的值的位组合。  
+ 中值的按位组合，用于指定类型的特性。  
   
 ## <a name="remarks"></a>备注  
- 要创建`ExportedType`元数据结构，请使用[IMetaDataAssemblyEmit：:Defineexportetype 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
+ 若要创建 `ExportedType` 元数据结构，请使用[IMetaDataAssemblyEmit：:D efineexportedtype](imetadataassemblyemit-defineexportedtype-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit 接口](imetadataassemblyemit-interface.md)

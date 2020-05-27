@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6372aca7-869a-4af6-ba2b-0eb1047ef5c0
 topic_type:
 - apiref
-ms.openlocfilehash: 531bd3ffe00c12ef580e8341cd6ad1f7d3924717
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 18355fe9c607977f9da47389216feb2307430e1b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123349"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008594"
 ---
 # <a name="itypenamebuildertostring-method"></a>ITypeNameBuilder::ToString 方法
 此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。  
@@ -34,14 +34,14 @@ HRESULT ToString (
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [承载接口](hosting-interfaces.md)

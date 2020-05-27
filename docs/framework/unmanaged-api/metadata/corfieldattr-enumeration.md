@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ae2c4be-212c-4e74-9288-40a11dc26522
 topic_type:
 - apiref
-ms.openlocfilehash: d28a0c8b7ee85f023026dde6f3cc8f3a8406aa64
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dea69e18fc517eddddc5b99950a6f3b16ee3e426
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450311"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007398"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr 枚举
 包含一些值，用于描述字段的相应元数据。  
@@ -56,12 +56,12 @@ typedef enum CorFieldAttr {
 } CorFieldAttr;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
 |`fdFieldAccessMask`|指定辅助功能信息。|  
-|`fdPrivateScope`|指定不能引用字段。|  
+|`fdPrivateScope`|指定该字段不能被引用。|  
 |`fdPrivate`|指定该字段只能由其父类型访问。|  
 |`fdFamANDAssem`|指定该字段可由其程序集中的派生类访问。|  
 |`fdAssembly`|指定该字段可由其程序集中的所有类型进行访问。|  
@@ -81,12 +81,12 @@ typedef enum CorFieldAttr {
 |`fdHasFieldRVA`|指定该字段具有相对虚拟地址。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [元数据枚举](metadata-enumerations.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d8ec8d3c-70f7-4cc6-9957-68068fd8f49c
 topic_type:
 - apiref
-ms.openlocfilehash: 04dc12ab4d7d178ebf1575a3260f9f4981972782
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2985c419b25b8bf76df8fee0f0f37ba9ebee3df7
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176183"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007892"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor 枚举
-指定将检查重复项的元数据令牌。  
+指定将检查重复项的元数据标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,43 +66,43 @@ typedef enum CorCheckDuplicatesFor {
   
 ## <a name="members"></a>成员  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
-|`MDDupAll`|检查所有元数据令牌的重复项。|  
+|`MDDupAll`|检查所有元数据标记的重复项。|  
 |`MDDupENC`|未使用。|  
-|`MDNoDupChecks`|不要检查元数据令牌的重复项。|  
-|`MDDupTypeDef`|检查令牌的`mdTypeDef`重复项。|  
-|`MDDupInterfaceImpl`|检查令牌的`mdInterfaceImpl`重复项。|  
-|`MDDupMethodDef`|检查令牌的`mdMethodDef`重复项。|  
-|`MDDupTypeRef`|检查令牌的`mdTypeRef`重复项。|  
-|`MDDupMemberRef`|检查令牌的`mdMemberRef`重复项。|  
-|`MDDupCustomAttribute`|检查令牌的`mdCustomAttribute`重复项。|  
-|`MDDupParamDef`|检查令牌的`mdParamDef`重复项。|  
-|`MDDupPermission`|检查令牌的`mdPermission`重复项。|  
-|`MDDupProperty`|检查令牌的`mdProperty`重复项。|  
-|`MDDupEvent`|检查令牌的`mdEvent`重复项。|  
-|`MDDupFieldDef`|检查令牌的`mdFieldDef`重复项。|  
-|`MDDupSignature`|检查令牌的`mdSignature`重复项。|  
-|`MDDupModuleRef`|检查令牌的`mdModuleRef`重复项。|  
-|`MDDupTypeSpec`|检查令牌的`mdTypeSpec`重复项。|  
-|`MDDupImplMap`|检查令牌的`mdImplMap`重复项。|  
-|`MDDupAssemblyRef`|检查令牌的`mdAssemblyRef`重复项。|  
-|`MDDupFile`|检查令牌的`mdFile`重复项。|  
-|`MDDupExportedType`|检查令牌的`mdExportedType`重复项。|  
-|`MDDupManifestResource`|检查令牌的`mdManifestResource`重复项。|  
-|`MDDupGenericParam`|检查令牌的`mdGenericParam`重复项。|  
-|`MDDupMethodSpec`|检查令牌的`mdMethodSpec`重复项。|  
-|`MDDupGenericParamConstraint`|检查令牌的`mdGenericParamConstraint`重复项。|  
-|`MDDupAssembly`|检查令牌的`mdAssembly`重复项。|  
-|`MDDupDefault`|检查`mdMemberRef`、、、`mdTypeRef``mdSignature``mdTypeSpec`和`mdMethodSpec`令牌的重复项。|  
+|`MDNoDupChecks`|请勿检查重复项的元数据标记。|  
+|`MDDupTypeDef`|检查标记的重复项 `mdTypeDef` 。|  
+|`MDDupInterfaceImpl`|检查标记的重复项 `mdInterfaceImpl` 。|  
+|`MDDupMethodDef`|检查标记的重复项 `mdMethodDef` 。|  
+|`MDDupTypeRef`|检查标记的重复项 `mdTypeRef` 。|  
+|`MDDupMemberRef`|检查标记的重复项 `mdMemberRef` 。|  
+|`MDDupCustomAttribute`|检查标记的重复项 `mdCustomAttribute` 。|  
+|`MDDupParamDef`|检查标记的重复项 `mdParamDef` 。|  
+|`MDDupPermission`|检查标记的重复项 `mdPermission` 。|  
+|`MDDupProperty`|检查标记的重复项 `mdProperty` 。|  
+|`MDDupEvent`|检查标记的重复项 `mdEvent` 。|  
+|`MDDupFieldDef`|检查标记的重复项 `mdFieldDef` 。|  
+|`MDDupSignature`|检查标记的重复项 `mdSignature` 。|  
+|`MDDupModuleRef`|检查标记的重复项 `mdModuleRef` 。|  
+|`MDDupTypeSpec`|检查标记的重复项 `mdTypeSpec` 。|  
+|`MDDupImplMap`|检查标记的重复项 `mdImplMap` 。|  
+|`MDDupAssemblyRef`|检查标记的重复项 `mdAssemblyRef` 。|  
+|`MDDupFile`|检查标记的重复项 `mdFile` 。|  
+|`MDDupExportedType`|检查标记的重复项 `mdExportedType` 。|  
+|`MDDupManifestResource`|检查标记的重复项 `mdManifestResource` 。|  
+|`MDDupGenericParam`|检查标记的重复项 `mdGenericParam` 。|  
+|`MDDupMethodSpec`|检查标记的重复项 `mdMethodSpec` 。|  
+|`MDDupGenericParamConstraint`|检查标记的重复项 `mdGenericParamConstraint` 。|  
+|`MDDupAssembly`|检查标记的重复项 `mdAssembly` 。|  
+|`MDDupDefault`|检查、、、 `mdMemberRef` `mdTypeRef` `mdSignature` `mdTypeSpec` 和标记的重复项 `mdMethodSpec` 。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫德  
+ **标头：** Corhdr。h  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [元数据枚举](metadata-enumerations.md)

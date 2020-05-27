@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb8db3b6-d81d-49fc-b74c-dbc908a9eab9
 topic_type:
 - apiref
-ms.openlocfilehash: fda890cee5f513ea8cf7e82e710f5451a860c49f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b1a83f07f03ddb17d5c306453cf838101a77ed65
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443909"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007931"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags 枚举
 包含一些值，用于描述应用于程序集编译的元数据。  
@@ -53,9 +53,9 @@ typedef enum CorAssemblyFlags {
 } CorAssemblyFlags;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
 |`afPublicKey`|指示程序集引用包含经过哈希的完整公钥。|  
 |`afPA_None`|指示未指定处理器体系结构。|  
@@ -64,25 +64,25 @@ typedef enum CorAssemblyFlags {
 |`afPA_IA64`|指示处理器体系结构为 Itanium （PE32 +）。|  
 |`afPA_AMD64`|指示处理器体系结构为 AMD X64 （PE32 +）。|  
 |`afPA_ARM`|指示处理器体系结构为 ARM （PE32）。|  
-|`afPA_NoPlatform`|指示程序集是引用程序集;也就是说，它适用于任何体系结构，但不能在任何体系结构上运行。 因此，标志与 `afPA_Mask`相同。|  
-|`afPA_Specified`|指示处理器体系结构标志应传播到 `AssemblyRef` 记录。|  
+|`afPA_NoPlatform`|指示程序集是引用程序集;也就是说，它适用于任何体系结构，但不能在任何体系结构上运行。 因此，标志与相同 `afPA_Mask` 。|  
+|`afPA_Specified`|指示应将处理器体系结构标志传播到 `AssemblyRef` 记录。|  
 |`afPA_Mask`|描述处理器体系结构的掩码。|  
 |`afPA_FullMask`|指定包含处理器体系结构说明。|  
 |`afPA_Shift`|指示处理器体系结构标志中与索引之间的移位计数。|  
-|`afEnableJITcompileTracking`|指示 <xref:System.Diagnostics.DebuggableAttribute>的 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> 中的相应值。|  
-|`afDisableJITcompileOptimizer`|指示 <xref:System.Diagnostics.DebuggableAttribute>的 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> 中的相应值。|  
+|`afEnableJITcompileTracking`|指示的中的对应值 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> <xref:System.Diagnostics.DebuggableAttribute> 。|  
+|`afDisableJITcompileOptimizer`|指示的中的对应值 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> <xref:System.Diagnostics.DebuggableAttribute> 。|  
 |`afRetargetable`|指示程序集可在运行时从不同的发布服务器重定向到程序集。|  
 |`afContentType_Mask`|描述内容类型的掩码。|  
 |`afContentType_Default`|指示默认内容类型。|  
 |`afContentType_WindowsRuntime`|指示 Windows 运行时内容类型。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [元数据枚举](metadata-enumerations.md)

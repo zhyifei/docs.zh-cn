@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ef78d3c-1c69-4141-b687-dcb065b7a74d
 topic_type:
 - apiref
-ms.openlocfilehash: 812b70a594b5aa933f52d36f32d96d712267ecf4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a11b7d5939c4c20504b1ff3dfb4613f85bca0db4
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177958"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007970"
 ---
 # <a name="cor_native_link-structure"></a>COR_NATIVE_LINK 结构
 包含用于链接本机代码的信息。  
@@ -37,23 +37,23 @@ typedef struct
   
 ## <a name="members"></a>成员  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
-|`m_linkType`|要在本机代码中链接的类型。 此值是[CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)值之一。|  
-|`m_flags`|链接器在链接本机代码时使用的标志。 此值是[CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)值之一。|  
-|`m_entryPoint`|表示入口点的会员Ref 元数据令牌。 格式为 `lib:entrypoint`。|  
+|`m_linkType`|要在本机代码中链接的类型。 此值为[CorNativeLinkType](cornativelinktype-enumeration.md)值之一。|  
+|`m_flags`|链接本机代码时链接器使用的标志。 此值为[CorNativeLinkFlags](cornativelinkflags-enumeration.md)值之一。|  
+|`m_entryPoint`|表示入口点的 MemberRef 元数据标记。 格式为 `lib:entrypoint`。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [元数据结构](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
-- [CorNativeLinkType 枚举](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)
-- [CorNativeLinkFlags 枚举](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)
+- [元数据结构](metadata-structures.md)
+- [CorNativeLinkType 枚举](cornativelinktype-enumeration.md)
+- [CorNativeLinkFlags 枚举](cornativelinkflags-enumeration.md)

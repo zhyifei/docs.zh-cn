@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-ms.openlocfilehash: a4e9268d292004f447b30c82f1db4d0fe58404fe
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 25fb3278e576ebe4a538379918e868b2e5f87911
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937952"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007866"
 ---
 # <a name="corelementtype-enumeration"></a>CorElementType 枚举
 
-指定公共语言运行时 <xref:System.Type>、类型修饰符或元数据类型签名中的类型的相关信息。
+指定公共语言运行时 <xref:System.Type> 、类型修饰符或元数据类型签名中的类型的相关信息。
 
 ## <a name="syntax"></a>语法
 
@@ -75,7 +75,7 @@ typedef enum CorElementType {
 } CorElementType;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 |成员|描述|
 |------------|-----------------|
@@ -118,34 +118,34 @@ typedef enum CorElementType {
 
 ## <a name="remarks"></a>备注
 
-类型修饰符构成了用于表示更复杂类型的基础。 `CorElementType` 类型修饰符值应用于在类型签名中紧跟在其后面的值。 按照下表中的说明，`CorElementType` 类型修饰符值之后的值可以是一个 `CorElementType` 简单类型值、一个元数据标记或其他值。
+类型修饰符构成了用于表示更复杂类型的基础。 `CorElementType`类型修饰符值应用于在类型签名中紧跟在其后面的值。 在 `CorElementType` 类型修饰符值之后的值可以是 `CorElementType` 简单类型值、元数据标记或其他值，如下表所示。
 
 > [!NOTE]
 > 所有数字（*数字*、*参数计数*、*元数据标记*、*排名*、*计数*和*界限*）都存储为压缩整数。 有关详细信息，请参阅 ECMA 网站上的[标准 ECMA-335-公共语言基础结构（CLI）](http://www.ecma-international.org/publications/standards/Ecma-335.htm) 。
 
 |类型修饰符|格式|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<`CorElementType` 值 >|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<`CorElementType` 值 >|
-|`ELEMENT_TYPE_VALUETYPE`|`mdTypeDef` 元数据标记 \<ELEMENT_TYPE_VALUETYPE >|
-|`ELEMENT_TYPE_CLASS`|`mdTypeDef` 元数据标记 \<ELEMENT_TYPE_CLASS >|
-|`ELEMENT_TYPE_VAR`|\<号码 ELEMENT_TYPE_VAR >|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<`CorElementType` 值 > \<> \<> \<> \<> \<|
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<`mdTypeDef` 元数据令牌 > \<参数计数 > \<arg1 > ... \<argN >|
-|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<函数的完整签名，包括调用约定 >|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<`CorElementType` 值 >|
-|`ELEMENT_TYPE_MVAR`|\<号码 ELEMENT_TYPE_MVAR >|
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<`mdTypeRef` 或 `mdTypeDef` 的元数据标记 >|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<`mdTypeRef` 或 `mdTypeDef` 的元数据标记 >|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR\<a `CorElementType` value>|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF\<a `CorElementType` value>|
+|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE\<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS\<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR\<number>|
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN>\<boundN>|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<an `mdTypeDef` metadata token> \<argument Count> \<arg1> .。。\<argN>|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR\<complete signature for the function, including calling convention>|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY\<a `CorElementType` value>|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR\<number>|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<a `mdTypeRef` or `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT\<a `mdTypeRef` or `mdTypeDef` metadata token>|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
 
 **标头：** Corhdr。h
 
-**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>另请参阅
 
-- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [元数据枚举](metadata-enumerations.md)

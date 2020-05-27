@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0290a49-3818-4a43-ad46-3014faa34f97
 topic_type:
 - apiref
-ms.openlocfilehash: 7db27670b72a5018a03d4614b69486f67bcef155
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87e00a69643b6bc403188fb0fdb6f9e3f3d82115
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175676"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003867"
 ---
 # <a name="imetadataemitsavetostream-method"></a>IMetaDataEmit::SaveToStream 方法
-将当前作用域中的所有元数据保存到指定的`IStream`。  
+将当前范围中的所有元数据保存到指定的 `IStream` 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,23 +34,23 @@ HRESULT SaveToStream (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `pIStream`  
- [在]要保存到的可写流。  
+ 中要保存到的可写流。  
   
  `dwSaveFlags`  
  [in] 保留。 必须为零。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 接口](imetadataemit-interface.md)
+- [IMetaDataEmit2 接口](imetadataemit2-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-ms.openlocfilehash: 74807a678b5c0c2738f33fe552f6462af93ca1f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 629e18b6cd2fd7910804ecc608a45d2406dddea1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436463"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007489"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType 枚举
 指示元数据标记的类型。  
@@ -59,47 +59,47 @@ typedef enum CorTokenType {
 } CorTokenType;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
-|`mdtModule`|`mdModule` 标记。|  
-|`mdtTypeRef`|`mdTypeRef` 标记。|  
-|`mdtTypeDef`|`mdTypeDef` 标记。|  
-|`mdtFieldDef`|`mdFieldDef` 标记。|  
-|`mdtMethodDef`|`mdMethodDef` 标记。|  
-|`mdtParamDef`|`mdParamDef` 标记。|  
-|`mdtInterfaceImpl`|`mdInterfaceImpl` 标记。|  
-|`mdtMemberRef`|`mdMemberRef` 标记。|  
-|`mdtCustomAttribute`|`mdCustomAttribute` 标记。|  
-|`mdtPermission`|`mdPermission` 标记。|  
-|`mdtSignature`|`mdSignature` 标记。|  
-|`mdtEvent`|`mdEvent` 标记。|  
-|`mdtProperty`|`mdProperty` 标记。|  
-|`mdtModuleRef`|`mdModuleRef` 标记。|  
-|`mdtTypeSpec`|`mdTypeSpec` 标记。|  
-|`mdtAssembly`|`mdAssembly` 标记。|  
-|`mdtAssemblyRef`|`mdAssemblyRef` 标记。|  
-|`mdtFile`|`mdFile` 标记。|  
-|`mdtExportedType`|`mdExportedType` 标记。|  
-|`mdtManifestResource`|`mdManifestResource` 标记。|  
-|`mdtGenericParam`|`mdGenericParam` 标记。|  
-|`mdtMethodSpec`|`mdMethodSpec` 标记。|  
-|`mdtGenericParamConstraint`|`mdGenericParamConstraint` 标记。|  
-|`mdtString`|`mdString` 标记。|  
-|`mdtName`|`mdName` 标记。|  
+|`mdtModule`|`mdModule`标记。|  
+|`mdtTypeRef`|`mdTypeRef`标记。|  
+|`mdtTypeDef`|`mdTypeDef`标记。|  
+|`mdtFieldDef`|`mdFieldDef`标记。|  
+|`mdtMethodDef`|`mdMethodDef`标记。|  
+|`mdtParamDef`|`mdParamDef`标记。|  
+|`mdtInterfaceImpl`|`mdInterfaceImpl`标记。|  
+|`mdtMemberRef`|`mdMemberRef`标记。|  
+|`mdtCustomAttribute`|`mdCustomAttribute`标记。|  
+|`mdtPermission`|`mdPermission`标记。|  
+|`mdtSignature`|`mdSignature`标记。|  
+|`mdtEvent`|`mdEvent`标记。|  
+|`mdtProperty`|`mdProperty`标记。|  
+|`mdtModuleRef`|`mdModuleRef`标记。|  
+|`mdtTypeSpec`|`mdTypeSpec`标记。|  
+|`mdtAssembly`|`mdAssembly`标记。|  
+|`mdtAssemblyRef`|`mdAssemblyRef`标记。|  
+|`mdtFile`|`mdFile`标记。|  
+|`mdtExportedType`|`mdExportedType`标记。|  
+|`mdtManifestResource`|`mdManifestResource`标记。|  
+|`mdtGenericParam`|`mdGenericParam`标记。|  
+|`mdtMethodSpec`|`mdMethodSpec`标记。|  
+|`mdtGenericParamConstraint`|`mdGenericParamConstraint`标记。|  
+|`mdtString`|`mdString`标记。|  
+|`mdtName`|`mdName`标记。|  
 |`mdtBaseType`|未使用。|  
   
 ## <a name="remarks"></a>备注  
  每个值都等于对应的元数据标记中的顶部字节的值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [元数据枚举](metadata-enumerations.md)

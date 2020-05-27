@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9dcc8b3d-33ee-4c7c-8d6f-322c57b94a0f
 topic_type:
 - apiref
-ms.openlocfilehash: 64d76efa8c2f29fda559e5c84217b865540027ba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ed5afbbf49b6680d00e78b6af3d45c6f0a7229d
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175819"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004486"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl 方法
-为从接口继承的方法的实现创建定义，并将令牌返回到该方法实现定义。  
+创建一个定义，用于实现从接口继承的方法，并返回该方法实现定义的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,26 +35,26 @@ HRESULT DefineMethodImpl (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `td`  
- [在]实现`mdTypedef`类的令牌。  
+ 中`mdTypedef`实现类的标记。  
   
  `tkBody`  
- [在]代码`mdMethodDef`正文`mdMemberRef`的 或 令牌。  
+ 中`mdMethodDef` `mdMemberRef` 代码主体的或标记。  
   
  `tkDecl`  
- [在]正在`mdMethodDef`实现的`mdMemberRef`接口方法的 或 令牌。  
+ 中`mdMethodDef` `mdMemberRef` 要实现的接口方法的或标记。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 接口](imetadataemit-interface.md)
+- [IMetaDataEmit2 接口](imetadataemit2-interface.md)

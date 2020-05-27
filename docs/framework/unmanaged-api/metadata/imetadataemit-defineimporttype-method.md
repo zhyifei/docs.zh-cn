@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37fd27af-8062-4904-ace4-51bb78ec600a
 topic_type:
 - apiref
-ms.openlocfilehash: 6825a5198976cc7ab2c04ebd6e782418dcf4a8f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: edce5cb93b770fb5730e5a06633ffffacf332f7a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177682"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004682"
 ---
 # <a name="imetadataemitdefineimporttype-method"></a>IMetaDataEmit::DefineImportType 方法
-创建对在当前作用域之外定义的指定类型的引用，并为该引用定义令牌。  
+创建对在当前范围外定义的指定类型的引用，并定义该引用的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,41 +39,41 @@ HRESULT DefineImportType (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `pAssemImport`  
- [在][IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)，表示从中导入目标类型的程序集。  
+ 中一个[IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)接口，它表示从其导入目标类型的程序集。  
   
  `pbHashValue`  
- [在]包含 的数组，其中包含 由 指定的`pAssemImport`程序集的哈希值。  
+ 中一个数组，其中包含由指定的程序集的哈希 `pAssemImport` 。  
   
  `cbHashValue`  
  [in] `pbHashValue` 数组中的字节数。  
   
  `pImport`  
- [在][IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)接口，表示从中导入目标类型的元数据范围。  
+ 中表示要从其导入目标类型的元数据范围的[IMetaDataImport](imetadataimport-interface.md)接口。  
   
  `tdImport`  
- [在]指定`mdTypeDef`目标类型的令牌。  
+ 中`mdTypeDef`指定目标类型的标记。  
   
  `pAssemEmit`  
- [在][IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)接口，表示将目标类型导入到的程序集。  
+ 中一个[IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)接口，该接口表示要将目标类型导入到其中的程序集。  
   
  `ptr`  
- [出]类型`mdTypeRef`引用的当前作用域中定义的令牌。  
+ 弄`mdTypeRef`在类型引用的当前范围中定义的标记。  
   
 ## <a name="remarks"></a>备注  
- 在调用[IMetaDataEmit：:DefineImportI成员](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md)方法之前，可以使用`DefineImportType`该方法为成员的父类或父接口在当前作用域中创建类型引用。  
+ 在调用[IMetaDataEmit：:D efineimportmember](imetadataemit-defineimportmember-method.md)方法之前，可以使用 `DefineImportType` 方法在当前作用域中为成员的父类或父接口创建类型引用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 接口](imetadataemit-interface.md)
+- [IMetaDataEmit2 接口](imetadataemit2-interface.md)

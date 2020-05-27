@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-ms.openlocfilehash: 9d505b917c343c40c7fa2a7aecf3466578ae0a8d
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: da830aaaced179fed642340c33e7b7c37b350aa3
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936644"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006553"
 ---
 # <a name="runtime_info_flags-enumeration"></a>RUNTIME_INFO_FLAGS 枚举
 包含指示应返回有关公共语言运行时（CLR）的哪些信息的值。  
@@ -41,7 +41,7 @@ typedef enum {
 } RUNTIME_INFO_FLAGS;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
 |成员|描述|  
 |------------|-----------------|  
@@ -63,15 +63,15 @@ typedef enum {
   
 - RUNTIME_INFO_REQUEST_X86  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** Mscoree.dll  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [承载枚举](hosting-enumerations.md)

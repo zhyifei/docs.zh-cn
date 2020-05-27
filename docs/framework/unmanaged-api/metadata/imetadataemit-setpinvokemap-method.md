@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6bfd574-1da3-4ba7-82f2-46ca5efcbaba
 topic_type:
 - apiref
-ms.openlocfilehash: 4c68754bc44fe035fd8e7143c52895928beae395
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d34c7a2992a2779b96ec87f1a0175d8fcbce34a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175585"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007788"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>IMetaDataEmit::SetPinvokeMap 方法
-设置或更改方法的 PInvoke 签名的功能，由之前调用[IMetaDataEmit：:DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md)定义。  
+设置或更改方法的 PInvoke 签名的功能，由之前调用[IMetaDataEmit：:D efinepinvokemap](imetadataemit-definepinvokemap-method.md)定义。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,29 +36,29 @@ HRESULT SetPinvokeMap (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `tk`  
- [在]映射`mdToken`信息应用于的。  
+ 中`mdToken`应用映射信息的。  
   
  `dwMappingFlags`  
- [在]PInvoke 用于执行映射的标志。 这是值的`CorPinvokeMap`位掩码。  
+ 中PInvoke 用来执行映射的标志。 这是一个值的位掩码 `CorPinvokeMap` 。  
   
  `szImportName`  
- [在]本机 DLL 中的目标导出的名称。  
+ 中本机 DLL 中目标导出的名称。  
   
  `mrImportDLL`  
- [在]目标`mdModuleRef`非托管 DLL 的令牌。  
+ 中`mdModuleRef`目标非托管 DLL 的标记。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 接口](imetadataemit-interface.md)
+- [IMetaDataEmit2 接口](imetadataemit2-interface.md)

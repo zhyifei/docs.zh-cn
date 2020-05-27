@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b74d7629-5f46-458f-8d67-2456a1e7030c
 topic_type:
 - apiref
-ms.openlocfilehash: 69c3ee366dbb8505e0df744037c480da996bb836
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aee258c49e6726ebef990257456fd273b01b9ef0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175611"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007840"
 ---
 # <a name="imetadataemitsetmoduleprops-method"></a>IMetaDataEmit::SetModuleProps 方法
-更新对以前调用[IMetaDataEmit：:DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md)） 定义的模块的引用。  
+更新对[IMetaDataEmit：:D efinemoduleref](imetadataemit-definemoduleref-method.md)之前调用定义的模块的引用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,20 +33,20 @@ HRESULT SetModuleProps (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `szName`  
- [在]Unicode 中的模块名称。 这只是文件名，而不是完整的路径名称。  
+ 中Unicode 中的模块名称。 这只是文件名，而不是完整路径名称。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 接口](imetadataemit-interface.md)
+- [IMetaDataEmit2 接口](imetadataemit2-interface.md)

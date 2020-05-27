@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dfd4133f-a074-4db3-a7ee-4f250fe9ad3a
 topic_type:
 - apiref
-ms.openlocfilehash: 81640e8e34335898f4dd7f4f43eafbd3ef191d19
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 5e6f77b9b5da061a75d23d7f3f7b673754b62afd
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938160"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006358"
 ---
 # <a name="strongnamesignatureverificationex2-method"></a>StrongNameSignatureVerificationEx2 方法
 验证强名称程序集的签名，并提供从 ECMA 密钥到实际密钥的映射。  
@@ -41,7 +41,7 @@ HRESULT StrongNameSignatureVerificationEx (
  中要验证的程序集的可移植可执行文件（.exe 或 .dll）文件的路径。  
   
  `fForceVerification`  
- [in] `true` 执行验证，即使需要重写注册表设置，否则，`false`。  
+ [in] `true`若要执行验证，即使需要重写注册表设置，否则为 `false` 。  
   
  `pbEcmaPublicKey`  
  中一个指针，指向用于验证的从 ECMA 公钥到实际密钥的映射。  
@@ -50,22 +50,22 @@ HRESULT StrongNameSignatureVerificationEx (
  中实际 ECMA 公钥的长度。  
   
  `pfWasVerified`  
- [out] 如果验证强名称签名，则 `true`;否则，`false`。 如果验证因为注册表设置而成功，则此参数也设置为 `false`。  
+ [out] `true`如果验证了强名称签名，则为;否则为 `false` 。 `false`如果验证因为注册表设置而成功，则也将此参数设置为。  
   
 ## <a name="return-value"></a>返回值  
- 如果验证成功，则 `S_OK`;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
+ `S_OK`如果验证成功，则为;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
-## <a name="requirements"></a>需求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** MetaHost  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [StrongNameSignatureVerification 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
-- [StrongNameSignatureVerificationEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
-- [ICLRStrongName 接口](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameSignatureVerification 方法](iclrstrongname-strongnamesignatureverification-method.md)
+- [StrongNameSignatureVerificationEx 方法](iclrstrongname-strongnamesignatureverificationex-method.md)
+- [ICLRStrongName 接口](iclrstrongname-interface.md)

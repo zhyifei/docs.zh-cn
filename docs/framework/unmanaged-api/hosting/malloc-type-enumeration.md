@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c02476f9-23a2-4af7-9282-aa9c42c7429b
 topic_type:
 - apiref
-ms.openlocfilehash: 16f56809b4db159c71b06b3bb9d969f8a8f8fc54
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 630fe4e79b369bfdefc19be72780f1893090895e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090825"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008451"
 ---
 # <a name="malloc_type-enumeration"></a>MALLOC_TYPE 枚举
 包含指定正在分配的内存特性的值。  
@@ -33,7 +33,7 @@ typedef enum {
 } MALLOC_TYPE;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
 |成员|描述|  
 |------------|-----------------|  
@@ -41,14 +41,14 @@ typedef enum {
 |`MALLOC_THREADSAFE`|分配的内存是线程安全的。 也就是说，无需任何同步即可通过多个线程访问内存。<br /><br /> 如果未设置此标志，则必须序列化对该对象的调用。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** Mscoree.dll  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [承载枚举](hosting-enumerations.md)

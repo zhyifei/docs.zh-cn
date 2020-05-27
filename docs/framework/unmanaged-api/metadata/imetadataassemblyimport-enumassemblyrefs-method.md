@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8844d0dd-730e-4592-8a7b-c1462d312c70
 topic_type:
 - apiref
-ms.openlocfilehash: 6a4489d094974eb872b39824ceb185b0cbe48625
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b9700455da82fc7f4a39d4c208ac0b18ef79722
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177828"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009114"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs 方法
-枚举程序集`mdAssemblyRef`清单中定义的实例。  
+枚举 `mdAssemblyRef` 在程序集清单中定义的实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,35 +36,35 @@ HRESULT EnumAssemblyRefs (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `phEnum`  
- [进出]指向枚举器的指针。 当首次调用该方法时，`EnumAssemblyRefs`这必须是 null 值。  
+ [in，out]指向枚举器的指针。 第一次调用方法时，此值必须为 null 值 `EnumAssemblyRefs` 。  
   
  `rAssemblyRefs`  
- [出]元数据令牌的`mdAssemblyRef`枚举。  
+ 弄`mdAssemblyRef`元数据标记的枚举。  
   
  `cMax`  
- [在]可放置在`rAssemblyRefs`数组中的最大令牌数。  
+ 中可置于数组中的最大标记数 `rAssemblyRefs` 。  
   
  `pcTokens`  
- [出]实际放置在 中的`rAssemblyRefs`令牌数。  
+ 弄实际置于中的标记数 `rAssemblyRefs` 。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|说明|  
 |-------------|-----------------|  
 |`S_OK`|`EnumAssemblyRefs`已成功返回。|  
-|`S_FALSE`|没有要枚举的令牌。 在这种情况下，`pcTokens`设置为零。|  
+|`S_FALSE`|没有要枚举的令牌。 在这种情况下， `pcTokens` 设置为零。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport 接口](imetadataassemblyimport-interface.md)

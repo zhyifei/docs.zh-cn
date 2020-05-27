@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36cffbf7-82ca-4cf9-bf60-50ab491ac2d9
 topic_type:
 - apiref
-ms.openlocfilehash: a0fd3fdb6dde9fd6b88ea6c64ed907c8a3e9e46d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a069e2f4ec5d4114e9504fa5a58c5066fdfd7249
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175793"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008035"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a>IMetaDataEmit::DefinePermissionSet 方法
-为具有指定元数据签名的权限集创建定义，并获取该权限集定义的令牌。  
+使用指定的元数据签名创建权限集的定义，并获取该权限集定义的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,32 +37,32 @@ HRESULT DefinePermissionSet (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `tk`  
- [在]要修饰的对象。  
+ 中要修饰的对象。  
   
  `dwAction`  
- [在]指定要使用的声明性安全性类型的[CorDecl 安全](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md)值。  
+ 中一个[CorDeclSecurity](cordeclsecurity-enumeration.md)值，指定要使用的声明性安全类型。  
   
  `pvPermission`  
- [在]权限 BLOB。  
+ 中权限 BLOB。  
   
  `cbPermission`  
- [在]的大小（以字节为单位）的大小`pvPermission`。  
+ 中的大小（以字节为单位） `pvPermission` 。  
   
  `ppm`  
- [出]返回的权限令牌。  
+ 弄返回的权限标记。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 接口](imetadataemit-interface.md)
+- [IMetaDataEmit2 接口](imetadataemit2-interface.md)

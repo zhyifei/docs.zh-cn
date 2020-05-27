@@ -16,12 +16,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: 93f93574e6a3c24fc03a2cbc6c7d0f11f4fe61f6
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 04ac99c6b5100c3749eefc219e51b4d0084bef06
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440871"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398459"
 ---
 # <a name="standard-numeric-format-strings"></a>标准数字格式字符串
 
@@ -47,7 +47,7 @@ ms.locfileid: "83440871"
 - C# 和 Visual Basic 中的[内插的字符串](../../csharp/language-reference/tokens/interpolated.md)，与复合格式字符串相比，语法更简化。
 
 > [!TIP]
-> 你可以下载格式设置实用工具，它属于一种 .NET Core Windows 窗体应用程序，通过该应用程序，你可将格式字符串应用于数值或日期和时间值并显示结果字符串  。 源代码适用于 [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) 和 [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)。
+> 你可以下载格式设置实用工具，它属于一种 .NET Core Windows 窗体应用程序，通过该应用程序，你可将格式字符串应用于数值或日期和时间值并显示结果字符串  。 源代码适用于 [C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) 和 [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)。
 
 <a name="table"></a>下表介绍标准数字格式说明符并显示每个格式说明符产生的示例输出。 有关使用标准数字格式字符串的其他信息，请参见[注释](#NotesStandardFormatting)一节；有关使用方法的完整演示，请参见[示例](#example)一节。
 
@@ -355,7 +355,7 @@ ms.locfileid: "83440871"
 
 控制面板中“区域和语言选项”  项中的设置会影响由格式设置操作产生的结果字符串。 这些设置用于初始化与当前线程区域性关联的 <xref:System.Globalization.NumberFormatInfo> 对象，当前线程区域性提供用于控制格式设置的值。 使用不同设置的计算机将生成不同的结果字符串。
 
-此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> 构造函数实例化表示当前系统区域性的新 <xref:System.Globalization.CultureInfo> 对象，通过控制面板中的“区域和语言选项”  项创建的任何自定义都会应用于新 <xref:System.Globalization.CultureInfo> 对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。
+此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 构造函数实例化表示当前系统区域性的新 <xref:System.Globalization.CultureInfo> 对象，通过控制面板中的“区域和语言选项”  项创建的任何自定义都会应用于新 <xref:System.Globalization.CultureInfo> 对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。
 
 ### <a name="numberformatinfo-properties"></a>NumberFormatInfo 属性
 
@@ -388,5 +388,5 @@ ms.locfileid: "83440871"
 - [格式设置类型](../../../docs/standard/base-types/formatting-types.md)
 - [如何：用前导零填充数字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
 - [复合格式设置](../../../docs/standard/base-types/composite-formatting.md)
-- [示例：.NET Core WinForms 格式设置实用工具 (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
-- [示例：.NET Core WinForms 格式设置实用工具 (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)
+- [示例：.NET Core WinForms 格式设置实用工具 (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
+- [示例：.NET Core WinForms 格式设置实用工具 (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

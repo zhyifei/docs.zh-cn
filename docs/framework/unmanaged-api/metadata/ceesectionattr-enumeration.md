@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0db51881-b869-4677-a715-1726a9216489
 topic_type:
 - apiref
-ms.openlocfilehash: 97b28c961f43388679615ac0d5b19c4c69df1e3d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6da8a111f716906e403d85bc0b1a29eba7238100
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444251"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006059"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr 枚举
-提供指定节的属性的值，供[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)接口使用。  
+提供指定节的属性的值，供[ICeeGen](iceegen-interface.md)接口使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,9 +37,9 @@ typedef enum  {
 } CeeSectionAttr;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
 |`sdNone`|节没有特性。|  
 |`sdReadOnly`|部分包含初始化的数据，该数据只能读取，而不是更新。|  
@@ -47,14 +47,14 @@ typedef enum  {
 |`sdExecute`|部分包含允许读取和执行的可执行代码。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [元数据枚举](metadata-enumerations.md)

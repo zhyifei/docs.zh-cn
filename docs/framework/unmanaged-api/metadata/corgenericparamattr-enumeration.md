@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36c76266-71d8-48dc-bd89-54943fa659c1
 topic_type:
 - apiref
-ms.openlocfilehash: bf0008ce9429671f0c156df4256bed0b2aaee184
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea84b742c901ba58a3bb730f1f5033a0d90610ce
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176170"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007372"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr 枚举
-包含描述泛型类型的<xref:System.Type>参数的值，如调用[IMetaDataEmit2：:DefinegenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)中使用的。  
+包含描述 <xref:System.Type> 泛型类型参数的值，这些值在对[IMetaDataEmit2：:D efinegenericparam](imetadataemit2-definegenericparam-method.md)的调用中使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,25 +45,25 @@ typedef enum CorGenericParamAttr {
   
 ## <a name="members"></a>成员  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
-|`gpVarianceMask`|参数方差仅适用于接口和委托的泛型参数。|  
-|`gpNonVariant`|指示不存在方差。|  
-|`gpCovariant`|表示协方差。|  
-|`gpContravariant`|表示不差异。|  
-|`gpSpecialConstraintMask`|特殊约束可以应用于任何<xref:System.Type>参数。|  
-|`gpNoSpecialConstraint`|指示没有约束应用于参数<xref:System.Type>。|  
-|`gpReferenceTypeConstraint`|指示参数<xref:System.Type>必须是引用类型。|  
-|`gpNotNullableValueTypeConstraint`|指示参数<xref:System.Type>必须是不能为空值的值类型。|  
-|`gpDefaultConstructorConstraint`|指示<xref:System.Type>参数必须具有不需要参数的默认公共构造函数。|  
+|`gpVarianceMask`|参数变体仅适用于接口和委托的泛型参数。|  
+|`gpNonVariant`|指示缺少方差。|  
+|`gpCovariant`|指示协方差。|  
+|`gpContravariant`|指示逆变。|  
+|`gpSpecialConstraintMask`|特殊约束可应用于任何 <xref:System.Type> 参数。|  
+|`gpNoSpecialConstraint`|指示没有约束适用于 <xref:System.Type> 参数。|  
+|`gpReferenceTypeConstraint`|指示 <xref:System.Type> 参数必须为引用类型。|  
+|`gpNotNullableValueTypeConstraint`|指示 <xref:System.Type> 参数必须是不能为 null 值的值类型。|  
+|`gpDefaultConstructorConstraint`|指示 <xref:System.Type> 参数必须包含不带任何参数的默认公共构造函数。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫德  
+ **标头：** Corhdr。h  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [元数据枚举](metadata-enumerations.md)

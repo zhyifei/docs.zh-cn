@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27064ca2-4186-4433-90a7-3b297785e891
 topic_type:
 - apiref
-ms.openlocfilehash: fadd1974cd4fa8a51a06700835f46df24e37d7fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c33ede841324820da16e33d35bbf5e8f8e75924f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175767"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009361"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet 方法
-创建一组安全权限以附加到指定令牌引用的对象。  
+创建一组安全权限，以附加到指定标记所引用的对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,29 +36,29 @@ HRESULT DefineSecurityAttributeSet (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `tkObj`  
- [在]附加安全信息的令牌。  
+ 中安全信息附加到的令牌。  
   
  `rSecAttrs`  
- [在]结构数组`COR_SECATTR`。  
+ 中结构的数组 `COR_SECATTR` 。  
   
  `cSecAttrs`  
- [在]中`rSecAttrs`的元素数。  
+ 中中的元素数目 `rSecAttrs` 。  
   
  `pulErrorAttr`  
- [出]如果方法失败，则指定导致问题的元素`rSecAttrs`中的索引。  
+ 弄如果该方法失败，则指定 `rSecAttrs` 引起问题的元素在中的索引。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 接口](imetadataemit-interface.md)
+- [IMetaDataEmit2 接口](imetadataemit2-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1edd1670-976a-4fc8-bef7-7c41e60ad989
 topic_type:
 - apiref
-ms.openlocfilehash: 411fad0accb59431f776c5bd66e8bd3027ddd907
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e8065a5492884a4b7f5d662737e4beddc6fca5b3
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450157"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007593"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement 枚举
 指定在进行标记重新映射时将发送到元数据 API 客户端的通知。  
@@ -59,44 +59,44 @@ typedef enum CorNotificationForTokenMovement {
 } CorNotificationForTokenMovement;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
-|`MDNotifyDefault`|`mdTypeRef`、`mdMethodDef`、`mdMemberRef`或 `mdFieldDef` 标记移动时发出通知。|  
+|`MDNotifyDefault`|当 `mdTypeRef` 、、 `mdMethodDef` `mdMemberRef` 或 `mdFieldDef` 标记移动时通知。|  
 |`MDNotifyAll`|任何标记移动时发出通知。|  
 |`MDNotifyNone`|标记移动时不发出通知。|  
-|`MDNotifyMethodDef`|`mdMethodDef` 标记移动时发出通知。|  
-|`MDNotifyMemberRef`|`mdMemberRef` 标记移动时发出通知。|  
-|`MDNotifyFieldDef`|`mdFieldDef` 标记移动时发出通知。|  
-|`MDNotifyTypeRef`|`mdTypeRef` 标记移动时发出通知。|  
-|`MDNotifyTypeDef`|`mdTypeDef` 标记移动时发出通知。|  
-|`MDNotifyParamDef`|`mdParamDef` 标记移动时发出通知。|  
-|`MDNotifyInterfaceImpl`|`mdInterfaceImpl` 标记移动时发出通知。|  
-|`MDNotifyProperty`|`mdProperty` 标记移动时发出通知。|  
-|`MDNotifyEvent`|`mdEvent` 标记移动时发出通知。|  
-|`MDNotifySignature`|`mdSignature` 标记移动时发出通知。|  
-|`MDNotifyTypeSpec`|`mdTypeSpec` 标记移动时发出通知。|  
-|`MDNotifyCustomAttribute`|`mdCustomAttribute` 标记移动时发出通知。|  
-|`MDNotifySecurityValue`|`mdSecurityValue` 标记移动时发出通知。|  
-|`MDNotifyPermission`|`mdPermission` 标记移动时发出通知。|  
-|`MDNotifyModuleRef`|`mdModuleRef` 标记移动时发出通知。|  
-|`MDNotifyNameSpace`|`mdNameSpace` 标记移动时发出通知。|  
-|`MDNotifyAssemblyRef`|`mdAssemblyRef` 标记移动时发出通知。|  
-|`MDNotifyFile`|`mdFile` 标记移动时发出通知。|  
-|`MDNotifyExportedType`|`mdExportedType` 标记移动时发出通知。|  
-|`MDNotifyResource`|`mdManifestResource` 标记移动时发出通知。|  
+|`MDNotifyMethodDef`|移动令牌时发出通知 `mdMethodDef` 。|  
+|`MDNotifyMemberRef`|移动令牌时发出通知 `mdMemberRef` 。|  
+|`MDNotifyFieldDef`|移动令牌时发出通知 `mdFieldDef` 。|  
+|`MDNotifyTypeRef`|移动令牌时发出通知 `mdTypeRef` 。|  
+|`MDNotifyTypeDef`|移动令牌时发出通知 `mdTypeDef` 。|  
+|`MDNotifyParamDef`|移动令牌时发出通知 `mdParamDef` 。|  
+|`MDNotifyInterfaceImpl`|移动令牌时发出通知 `mdInterfaceImpl` 。|  
+|`MDNotifyProperty`|移动令牌时发出通知 `mdProperty` 。|  
+|`MDNotifyEvent`|移动令牌时发出通知 `mdEvent` 。|  
+|`MDNotifySignature`|移动令牌时发出通知 `mdSignature` 。|  
+|`MDNotifyTypeSpec`|移动令牌时发出通知 `mdTypeSpec` 。|  
+|`MDNotifyCustomAttribute`|移动令牌时发出通知 `mdCustomAttribute` 。|  
+|`MDNotifySecurityValue`|移动令牌时发出通知 `mdSecurityValue` 。|  
+|`MDNotifyPermission`|移动令牌时发出通知 `mdPermission` 。|  
+|`MDNotifyModuleRef`|移动令牌时发出通知 `mdModuleRef` 。|  
+|`MDNotifyNameSpace`|移动令牌时发出通知 `mdNameSpace` 。|  
+|`MDNotifyAssemblyRef`|移动令牌时发出通知 `mdAssemblyRef` 。|  
+|`MDNotifyFile`|移动令牌时发出通知 `mdFile` 。|  
+|`MDNotifyExportedType`|移动令牌时发出通知 `mdExportedType` 。|  
+|`MDNotifyResource`|移动令牌时发出通知 `mdManifestResource` 。|  
   
 ## <a name="remarks"></a>备注  
  可在元数据合并期间重新映射（即，移动）标记。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [元数据枚举](metadata-enumerations.md)
