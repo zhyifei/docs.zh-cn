@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: f2299ac807c845dab482306cc4c710560bb7f1e7
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 0fb21b09fbf97f9c9ac2bf2982c391b87e2debc1
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607857"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614352"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 应用
 
@@ -38,8 +38,8 @@ ms.locfileid: "81607857"
 
    在编辑器中打开 Program.cs 文件或 Program.vb 文件，然后使用下列代码替换自动生成的代码   。 它会提示用户输入文本，并显示用户输入的个别词。 它使用正则表达式 `\w+` 来将输入文本中的词分开。
 
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+   [!code-csharp[deployment#1](./snippets/deploy-with-vs/csharp/deployment-example.cs)]
+   [!code-vb[deployment#1](./snippets/deploy-with-vs/vb/deployment-example.vb)]
 
 1. 创建应用的调试版本。
 
@@ -89,8 +89,8 @@ ms.locfileid: "81607857"
 
    在编辑器中打开 Program.cs 或 Program.vb 文件，然后使用下列代码替换自动生成的代码   。 它会提示用户输入文本，并显示用户输入的个别词。 它使用正则表达式 `\w+` 来将输入文本中的词分开。
 
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+   [!code-csharp[deployment#1](./snippets/deploy-with-vs/csharp/deployment-example.cs)]
+   [!code-vb[deployment#1](./snippets/deploy-with-vs/vb/deployment-example.vb)]
 
 1. 确定是否要使用全球化固定模式。
 
@@ -98,7 +98,7 @@ ms.locfileid: "81607857"
 
    要启用固定模式，右键单击“解决方案资源管理器”中的项目（不是解决方案），然后选择“编辑 SCD.csproj”或“编辑 SCD.vbproj”    。 然后将以下突出显示的行添加到文件中：
 
-   [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj?highlight=6-8)]
+   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=6-8)]
 
 1. 创建应用程序的调试版本。
 

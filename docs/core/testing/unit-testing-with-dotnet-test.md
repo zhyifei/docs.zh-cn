@@ -4,12 +4,12 @@ description: 通过使用 dotnet test 和 xUnit 分步生成示例解决方案�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: c9e3d63a2cf4f560591459833340b729ffec1b95
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8cf0e29c8a482b39bd7e99bcde1fd60301f046f
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240891"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702945"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 和 xUnit 在 .NET Core 中进行 C# 单元测试
 
@@ -52,18 +52,18 @@ ms.locfileid: "78240891"
 * 将 PrimeService.cs 中的代码替换为以下代码：
   
   ```csharp
-    using System;
+  using System;
 
-    namespace Prime.Services
-    {
-        public class PrimeService
-        {
-            public bool IsPrime(int candidate)
-            {
-                throw new NotImplementedException("Not implemented.");
-            }
-        }
-    }
+  namespace Prime.Services
+  {
+      public class PrimeService
+      {
+          public bool IsPrime(int candidate)
+          {
+              throw new NotImplementedException("Not implemented.");
+          }
+      }
+  }
   ```
 
 * 前面的代码：
@@ -85,7 +85,7 @@ ms.locfileid: "78240891"
   ```
 
 * 上面的命令：
-  * 在 PrimeService.Tests 目录中创建 PrimeService.Tests 项目。 测试项目将 [xUnit](https://xunit.github.io/) 用作测试库。
+  * 在 PrimeService.Tests 目录中创建 PrimeService.Tests 项目。 测试项目将 [xUnit](https://xunit.net/) 用作测试库。
   * 通过将以下 `<PackageReference />` 元素添加到项目文件来配置测试运行程序：
     * “Microsoft.NET.Test.Sdk”
     * “xunit”
@@ -190,7 +190,6 @@ Assert.False(result, "1 should not be prime");
 仅当参数更改代码重复和测试膨胀中的结果时复制测试代码。 以下 xUnit 属性允许编写类似测试套件：
 
 - `[Theory]` 表示执行相同代码，但具有不同输入参数的测试套件。
-
 - `[InlineData]` 属性指定这些输入的值。
 
 可以不使用上述 xUnit 属性创建新测试，而是用来创建单个索引。 替换以下代码：
@@ -230,6 +229,6 @@ public bool IsPrime(int candidate)
 
 ### <a name="additional-resources"></a>其他资源
 
-- [xUnit.net 官方网站](https://xunit.github.io)
+- [xUnit.net 官方网站](https://xunit.net)
 - [ASP.NET Core 中的测试控制器逻辑](/aspnet/core/mvc/controllers/testing)
 - [`dotnet add reference`](../tools/dotnet-add-reference.md)

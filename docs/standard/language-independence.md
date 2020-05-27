@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 03751fa3758c239cb9eea5fe826dff66c1c1605b
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f04ff902743c91147a6f056bca3292ee47952bbd
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249573"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420547"
 ---
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 
@@ -321,13 +321,13 @@ End Class
 [Int16](xref:System.Int16) | 16 位带符号整数
 [Int32](xref:System.Int32) | 32 位带符号整数
 [Int64](xref:System.Int64) | 64 位带符号整数
-[Single](xref:System.Single) | 单精度浮点值
-[Double](xref:System.Double) | 双精度浮点值
-[Boolean](xref:System.Boolean) | true 或 false 值类型
+[单精度](xref:System.Single) | 单精度浮点值
+[双精度](xref:System.Double) | 双精度浮点值
+[布尔值](xref:System.Boolean) | true 或 false 值类型
 [Char](xref:System.Char) | UTF 16 编码单元
-[Decimal](xref:System.Decimal) | 非浮点十进制数字
+[小数](xref:System.Decimal) | 非浮点十进制数字
 [IntPtr](xref:System.IntPtr) | 平台定义的大小的指针或句柄
-[String](xref:System.String) | 零个、一个或多个 Char 对象的集合
+[字符串](xref:System.String) | 零个、一个或多个 Char 对象的集合
 
 下表中所列的内部类型不符合 CLS。
 
@@ -341,7 +341,7 @@ End Class
 
 .NET Framework 类库或任何其他类库可能包含不符合 CLS 的其他类型；例如：
 
-* 装箱的值类型。 下面的 C# 示例创建一个具有名为 `Value` 的 `int`* 类型的公共属性的类。 由于 `int`* 是一个装箱的值类型，因此编译器将其标记为不符合 CLS。
+* 装箱的值类型。 下面的 C# 示例创建一个具有名为 `int*` 的 `Value` 类型的公共属性的类。 由于 `int*` 是一个装箱的值类型，因此编译器将其标记为不符合 CLS。
 
 ```csharp
 using System;
@@ -2066,7 +2066,7 @@ End Class
 
 * 用于移除事件处理程序的名为 `remove`_*EventName* 的方法。 例如，`DbConnection.StateChange` 事件的移除方法名为 `remove_StateChange`。
 
-* 用于指示事件已发生的名为 `raise`\_EventName  的方法。
+* 用于指示事件已发生的名为 `raise`\_EventName 的方法。
 
 > [!NOTE]
 > 大多数关于事件的公共语言规范的规则都通过语言编译器实施，且对组件开发人员是透明的。
@@ -2564,13 +2564,13 @@ End Structure
 
 构造函数或符合 CLS 的特性的属性只能公开以下类型：
 
-* [Boolean](xref:System.Boolean)
+* [布尔值](xref:System.Boolean)
 
 * [Byte](xref:System.Byte)
 
 * [Char](xref:System.Char)
 
-* [Double](xref:System.Double)
+* [双精度](xref:System.Double)
 
 * [Int16](xref:System.Int16)
 
@@ -2578,9 +2578,9 @@ End Structure
 
 * [Int64](xref:System.Int64)
 
-* [Single](xref:System.Single)
+* [单精度](xref:System.Single)
 
-* [String](xref:System.String)
+* [字符串](xref:System.String)
 
 * [Type](xref:System.Type)
 
@@ -2667,7 +2667,7 @@ End Class
 
 `CLSCompliantAttribute` 特性的值由包含的程序元素继承。 例如，如果程序集标记为符合 CLS，则其类型也符合 CLS。 如果类型标记为符合 CLS，则其嵌套的类型和成员也符合 CLS。
 
-您可以通过将 `CLSCompliantAttribute` 特性应用到包含的编程元素来显式重写继承的遵从性。 例如，可以使用 isCompliant  值为 `false` 的 `CLSCompliantAttribute` 特性来定义符合标准的程序集中不符合标准的类型，还可以使用 isComplian  值为 `true` 的特性来定义不符合标准的程序集中符合标准的类型。 您还可以在符合标准的类型中定义不符合标准的成员。 但是，不符合标准的类型无法拥有符合标准的成员，因此无法使用 *isCompliant* 值为 `true` 的特性从一个不符合标准的类型重写继承。
+您可以通过将 `CLSCompliantAttribute` 特性应用到包含的编程元素来显式重写继承的遵从性。 例如，可以使用 isCompliant 值为 `false` 的 `CLSCompliantAttribute` 特性来定义符合标准的程序集中不符合标准的类型，还可以使用 isComplian 值为 `true` 的特性来定义不符合标准的程序集中符合标准的类型。 您还可以在符合标准的类型中定义不符合标准的成员。 但是，不符合标准的类型无法拥有符合标准的成员，因此无法使用 *isCompliant* 值为 `true` 的特性从一个不符合标准的类型重写继承。
 
 在开发组件时，应始终使用 `CLSCompliantAttribute` 特性来指示您的程序集、其类型及其成员是否符合 CLS。
 

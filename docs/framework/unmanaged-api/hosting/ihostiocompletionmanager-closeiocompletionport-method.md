@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e86ad7be-3758-498a-a972-5522d69dfbb3
 topic_type:
 - apiref
-ms.openlocfilehash: 254254af705f93793b030882e0ac79d0372ca55f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e2e49b4c993e127a31b54d40f721e0714198780
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133893"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804781"
 ---
 # <a name="ihostiocompletionmanagercloseiocompletionport-method"></a>IHostIoCompletionManager::CloseIoCompletionPort 方法
-请求宿主关闭通过之前对[CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md)的调用打开的端口。  
+请求宿主关闭通过之前对[CreateIoCompletionPort](ihostiocompletionmanager-createiocompletionport-method.md)的调用打开的端口。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,9 +39,9 @@ HRESULT CloseIoCompletionPort (
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`CloseIoCompletionPort` 成功返回。|  
+|S_OK|`CloseIoCompletionPort`已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -50,18 +50,18 @@ HRESULT CloseIoCompletionPort (
 |E_INVALIDARG|传递了无效的端口句柄。|  
   
 ## <a name="remarks"></a>备注  
- `hPort` 必须是先前调用 `CreateIoCompletionPort`创建的端口的句柄。  
+ `hPort`必须是由先前对的调用创建的端口的句柄 `CreateIoCompletionPort` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICLRIoCompletionManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
-- [IHostIoCompletionManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+- [ICLRIoCompletionManager 接口](iclriocompletionmanager-interface.md)
+- [IHostIoCompletionManager 接口](ihostiocompletionmanager-interface.md)

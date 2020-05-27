@@ -6,30 +6,30 @@ helpviewer_keywords:
 - native API reference [.NET Framework], hosting
 - hosting [.NET Framework], using the unmanaged API
 ms.assetid: 14295c28-1da8-408b-a656-9584abcd9896
-ms.openlocfilehash: 3fe07ba06d5e50c178c84dcb05351923e0548849
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6430e16de39b4acecf55d855785503ff19673ec
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73102678"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842304"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>承载（非托管 API 参考）
 利用承载 API，非托管主机能够将公共语言运行时 (CLR) 集成到其应用程序中。  
   
 ## <a name="in-this-section"></a>本节内容  
- [承载组件类](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
+ [承载组件类](hosting-coclasses.md)  
  描述承载 API 使用的非托管组件类。  
   
- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  
+ [承载枚举](hosting-enumerations.md)  
  描述承载 API 使用的非托管枚举。  
   
- [承载全局静态函数](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)  
+ [承载全局静态函数](hosting-global-static-functions.md)  
  描述承载 API 使用的非托管全局静态函数。  
   
- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
+ [承载接口](hosting-interfaces.md)  
  描述使运行时主机能够将 CLR 集成到非托管应用程序中的非托管接口。  
   
- [承载结构](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
+ [承载结构](hosting-structures.md)  
  描述承载 API 使用的非托管结构。  
   
 ## <a name="related-sections"></a>相关章节  

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9583d868ee01117d7bd6e465e7d89a734489d1a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b861dbaa02c97a03c015fdf4e63d25c40c90ea0a
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449205"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721042"
 ---
 ### <a name="boolean-parameter-of-signedcmscomputesignature-is-respected"></a>已考虑 SignedCms.ComputeSignature 的布尔参数
 
@@ -24,17 +24,17 @@ ms.locfileid: "77449205"
 
 为了确保在需要时显示 PIN 提示，桌面应用程序应调用 <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> 并将 Boolean 参数设置为 `false`。 无论是否禁用了静默上下文，所产生的行为都与 .NET Framework 上的行为相同。
 
-### <a name="category"></a>类别
+#### <a name="category"></a>类别
 
 密码
 
-### <a name="affected-apis"></a>受影响的 API
+#### <a name="affected-apis"></a>受影响的 API
 
 - <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType>
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)`
 

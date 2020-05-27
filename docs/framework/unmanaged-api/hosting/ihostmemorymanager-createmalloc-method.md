@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ee6e052-bef7-4350-9e4f-edfffd99ad6f
 topic_type:
 - apiref
-ms.openlocfilehash: 8bcb01f4a19e6043bd59fe6f1565cdf35ed1f77c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 89c1d7b043d4369bf16a851924711c3c9d75791e
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136728"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804533"
 ---
 # <a name="ihostmemorymanagercreatemalloc-method"></a>IHostMemoryManager::CreateMAlloc 方法
-获取一个接口指针，该指针指向用于从主机创建的堆发出分配请求的[IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)实例。  
+获取一个接口指针，该指针指向用于从主机创建的堆发出分配请求的[IHostMAlloc](ihostmalloc-interface.md)实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,16 +36,16 @@ HRESULT CreateMalloc (
   
 ## <a name="parameters"></a>参数  
  `dwMallocType`  
- 中指定正在分配的内存特征的[MALLOC_TYPE](../../../../docs/framework/unmanaged-api/hosting/malloc-type-enumeration.md)标志的组合。  
+ 中[MALLOC_TYPE](malloc-type-enumeration.md)标志的组合，这些标志指定正在分配的内存的特征。  
   
  `ppMAlloc`  
- 弄指向主机提供的 `IHostMAlloc` 实例的地址的指针。  
+ 弄指向主机提供的实例的地址的指针 `IHostMAlloc` 。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`CreateMAlloc` 成功返回。|  
+|S_OK|`CreateMAlloc`已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -54,18 +54,18 @@ HRESULT CreateMalloc (
 |E_OUTOFMEMORY|没有足够的物理内存可用于完成分配请求。|  
   
 ## <a name="remarks"></a>备注  
- `CreateMAlloc` 返回一个对象，该对象允许 CLR 通过主机而不是使用标准 Win32 函数发出分配请求。  
+ `CreateMAlloc`返回一个对象，该对象允许 CLR 通过主机发出分配请求，而不是使用标准的 Win32 函数。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [IHostMalloc 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
-- [IHostMemoryManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [IHostMalloc 接口](ihostmalloc-interface.md)
+- [IHostMemoryManager 接口](ihostmemorymanager-interface.md)

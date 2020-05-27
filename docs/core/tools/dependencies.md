@@ -1,17 +1,17 @@
 ---
-title: 管理 .NET Core 中的依赖项
-description: 介绍如何管理 .NET Core 应用程序的项目依赖项。
+title: ''
+description: ''
 no-loc:
 - dotnet add package
 - dotnet remove package
 - dotnet list package
-ms.date: 02/25/2020
-ms.openlocfilehash: 3e1d807ea69e66e31b277a92cd6a1dc0e76531b5
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.date: ''
+ms.openlocfilehash: 667b2d4d68edd82a4d18c370e45ea18f4d4b379a
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795542"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702841"
 ---
 # <a name="manage-dependencies-in-net-core-applications"></a>管理 .NET Core 应用程序中的依赖项
 
@@ -78,5 +78,5 @@ dotnet remove package Microsoft.EntityFrameworkCore
 
 ## <a name="see-also"></a>请参阅
 
-* [项目文件中的包引用](../project-sdk/msbuild-props.md#reference-properties)
-* [dotnet list package 命令](dotnet-remove-package.md)
+* [项目文件中的包引用](../project-sdk/msbuild-props.md#reference-properties-and-items)
+* [dotnet list package 命令](dotnet-list-package.md)

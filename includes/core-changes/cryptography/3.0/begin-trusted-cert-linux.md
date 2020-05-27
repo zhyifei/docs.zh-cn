@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1d9a5bbea49730ee6cf99eaae6b20a0035e70b97
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 3c6142fd536bad5676f02570fecd4eb0605db829
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135590"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83720891"
 ---
 ### <a name="begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux"></a>Linux 上的根证书不再支持“BEGIN TRUSTED CERTIFICATE”语法
 
@@ -41,17 +41,17 @@ lrwxrwxrwx  1 root root   20 Nov 12 16:58 openssl.cnf -> /etc/ssl/openssl.cnf
 lrwxrwxrwx  1 root root   16 Mar 27  2018 private -> /etc/ssl/private
 ```
 
-### <a name="category"></a>类别
+#### <a name="category"></a>类别
 
 密码
 
-### <a name="affected-apis"></a>受影响的 API
+#### <a name="affected-apis"></a>受影响的 API
 
 - <xref:System.Security.Cryptography.X509Certificates.X509Chain?displayProperty=fullName>
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `T:System.Security.Cryptography.X509Certificates.X509Chain`
 

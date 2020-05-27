@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 65d301f6-4dbb-4b5f-8eff-82540e2b6465
 topic_type:
 - apiref
-ms.openlocfilehash: 4400fab27ed82e540230ce4196844285e8e37d16
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0c20df85560f715e829fe02be599788854fcb0f1
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128640"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804482"
 ---
 # <a name="ihostmemorymanagerregistermemorynotificationcallback-method"></a>IHostMemoryManager::RegisterMemoryNotificationCallback 方法
 注册指向主机调用的回调函数的指针，以便向公共语言运行时（CLR）通知当前计算机上的当前内存负载。  
@@ -35,13 +35,13 @@ HRESULT RegisterMemoryNotificationCallback (
   
 ## <a name="parameters"></a>参数  
  `pCallback`  
- 中一个接口指针，该指针指向由 CLR 实现的[ICLRMemoryNotificationCallback](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)实例。  
+ 中一个接口指针，该指针指向由 CLR 实现的[ICLRMemoryNotificationCallback](iclrmemorynotificationcallback-interface.md)实例。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`RegisterMemoryNotificationCallback` 成功返回。|  
+|S_OK|`RegisterMemoryNotificationCallback`已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -49,21 +49,21 @@ HRESULT RegisterMemoryNotificationCallback (
 |E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- 由于 `ICLRMemoryNotificationCallback` 接口仅定义了一个方法（[ICLRMemoryNotificationCallback：： OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)），并且因为 `pCallback` 是指向 CLR 提供的 `ICLRMemoryNotificationCallback` 实例的指针，因此注册实际上适用于回调函数本身。 宿主调用 `OnMemoryNotification` 来报告内存压力条件，而不是使用标准的 Win32 `CreateMemoryResourceNotification` 函数。 有关详细信息，请参阅 Windows 平台文档。  
+ 由于 `ICLRMemoryNotificationCallback` 接口仅定义了一个方法（[ICLRMemoryNotificationCallback：： OnMemoryNotification](iclrmemorynotificationcallback-onmemorynotification-method.md)），并且由于 `pCallback` 是一个指向 `ICLRMemoryNotificationCallback` CLR 提供的实例的指针，因此注册对于回调函数本身是有效的。 宿主调用 `OnMemoryNotification` 以报告内存压力条件，而不是使用标准的 Win32 `CreateMemoryResourceNotification` 函数。 有关详细信息，请参阅 Windows 平台文档。  
   
 > [!NOTE]
-> 对 `OnMemoryNotification` 的调用从不会阻止。 它们始终立即返回。  
+> 对 `OnMemoryNotification` 从不阻止的的调用。 它们始终立即返回。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [ICLRMemoryNotificationCallback 接口](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)
-- [IHostMemoryManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [ICLRMemoryNotificationCallback 接口](iclrmemorynotificationcallback-interface.md)
+- [IHostMemoryManager 接口](ihostmemorymanager-interface.md)

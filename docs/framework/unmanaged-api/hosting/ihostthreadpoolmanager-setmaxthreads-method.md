@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 77cfd347-95c2-4425-b807-4ecc2a8d4578
 topic_type:
 - apiref
-ms.openlocfilehash: 30c4ff93688396dd9a6a8086fbb53ad1c763ead0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 53d42afda6668acc6462c419fcefd6bc1435a34c
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141292"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842447"
 ---
 # <a name="ihostthreadpoolmanagersetmaxthreads-method"></a>IHostThreadPoolManager::SetMaxThreads 方法
 设置宿主可在线程池中维护的最大线程数。  
@@ -39,32 +39,32 @@ HRESULT SetMaxThreads (
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`SetMaxThreads` 成功返回。|  
+|S_OK|`SetMaxThreads`已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
 |HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
 |E_FAIL|发生了未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
-|E_NOTIMPL|宿主不提供 `SetMaxThreads`的实现。|  
+|E_NOTIMPL|宿主不提供的实现 `SetMaxThreads` 。|  
   
 ## <a name="remarks"></a>备注  
- 宿主无需允许 CLR 配置线程池的大小。 出于实现、性能或可伸缩性等原因，某些主机可能需要对线程池进行独占控制。 在这种情况下，主机应返回 HRESULT 值 E_NOTIMPL。  
+ 宿主无需允许 CLR 配置线程池的大小。 出于实现、性能或可伸缩性等原因，某些主机可能需要对线程池进行独占控制。 在这种情况下，主机应返回 E_NOTIMPL 的 HRESULT 值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.ThreadPool.SetMaxThreads%2A>
 - <xref:System.Threading.ThreadPool>
-- [GetMaxThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)
-- [SetMinThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)
-- [IHostThreadPoolManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+- [GetMaxThreads 方法](ihostthreadpoolmanager-getmaxthreads-method.md)
+- [SetMinThreads 方法](ihostthreadpoolmanager-setminthreads-method.md)
+- [IHostThreadPoolManager 接口](ihostthreadpoolmanager-interface.md)

@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/09/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: ba996e4add1cfe44681154b00a6530b1f3e70b37
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 738fc49a820c3c5d94fb35c1bf7a8b718ed75cb3
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713999"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394829"
 ---
 # <a name="tutorial-create-your-first-net-core-console-application-in-visual-studio-2019"></a>教程：在 Visual Studio 2019 中创建第一个 .NET Core 控制台应用程序
 
@@ -100,7 +100,7 @@ ms.locfileid: "75713999"
 
 1. 将 `Main` 方法的内容（当前只是调用 `Console.WriteLine` 的行）替换为以下代码：
 
-   [!code-csharp[GettingStarted#1](~/samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
+   [!code-csharp[GettingStarted#1](~/samples/snippets/csharp/getting_started/with_visual_studio/HelloWorld.cs#1)]
 
    此代码在控制台中显示“What is your name?”， 然后等待用户输入字符串并按 Enter 键。 它将此字符串存储到名为 `name` 的变量中。 它还会检索 <xref:System.DateTime.Now?displayProperty=nameWithType> 属性的值（其中包含当前的本地时间），并将此值赋给 `date` 变量。 最后，使用[内插字符串](../../csharp/language-reference/tokens/interpolated.md)在控制台窗口中显示这些值。
 
@@ -118,7 +118,7 @@ ms.locfileid: "75713999"
 
 1. 将 `Main` 方法的内容（当前只是调用 `Console.WriteLine` 的行）替换为以下代码：
 
-   [!code-vb[GettingStarted#1](~/samples/snippets/core/tutorials/vb-with-visual-studio/helloworld.vb#1)]
+   [!code-vb[GettingStarted#1](~/samples/snippets/core/tutorials/vb-with-visual-studio/Program.vb#1)]
 
    此代码在控制台中显示“What is your name?”， 然后等待用户输入字符串并按 Enter 键。 它将此字符串存储到名为 `name` 的变量中。 它还会检索 <xref:System.DateTime.Now?displayProperty=nameWithType> 属性的值（其中包含当前的本地时间），并将此值赋给 `date` 变量。 最后，使用[内插字符串](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)在控制台窗口中显示这些值。
 

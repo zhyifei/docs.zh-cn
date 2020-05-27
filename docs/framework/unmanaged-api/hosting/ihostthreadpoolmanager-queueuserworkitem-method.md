@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41602053-8670-4827-9d61-cbfcba509b9c
 topic_type:
 - apiref
-ms.openlocfilehash: 39c35884d0fb53baefafbf86391a349e141418a0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b3d77e30cd48310c392d38dc29f62fab565c8b42
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141323"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842460"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem 方法
 将函数排队以便执行，并指定包含该函数要使用的数据的对象。 当线程变为可用时，该函数执行。  
@@ -40,16 +40,16 @@ HRESULT QueueUserWorkItem (
  中表示要执行的函数的函数指针。  
   
  `Context`  
- 中一个对象，包含 `Function`要使用的数据。  
+ 中包含要使用的数据的对象 `Function` 。  
   
  `Flags`  
- 中为 Win32 `QueueUserWorkItem` 方法定义的、用于控制执行的标志值之一。  
+ 中用于控制执行的、针对 Win32 方法定义的标志值之一 `QueueUserWorkItem` 。  
   
 ## <a name="return-value"></a>返回值  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`QueueUserWorkItem` 成功返回。|  
+|S_OK|`QueueUserWorkItem`已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -57,19 +57,19 @@ HRESULT QueueUserWorkItem (
 |E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- `QueueUserWorkItem` 将工作项排队到线程池中的工作线程。 其签名和参数类型与具有相同名称的对应 Win32 函数的签名和参数类型相同。 有关详细信息，请参阅 Windows 平台文档。  
+ `QueueUserWorkItem`将工作项排队到线程池中的工作线程。 其签名和参数类型与具有相同名称的对应 Win32 函数的签名和参数类型相同。 有关详细信息，请参阅 Windows 平台文档。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>
 - <xref:System.Threading.ThreadPool>
-- [IHostThreadPoolManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+- [IHostThreadPoolManager 接口](ihostthreadpoolmanager-interface.md)

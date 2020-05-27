@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f131933f3cf7890939854c46f115e8deb8da1cc2
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: c0c1c9c9d8e3aeb6f689f754d09b50b208b54112
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888160"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702304"
 ---
 ### <a name="stringinfo-and-textelementenumerator-are-now-uax29-compliant"></a>StringInfo 和 TextElementEnumerator 现在与 UAX29 兼容
 
@@ -91,21 +91,23 @@ Grapheme 1: "🤷🏽‍♀️"
 
 .NET 5.0 预览版 1
 
-### <a name="recommended-action"></a>建议操作
+#### <a name="recommended-action"></a>建议操作
 
 你不必执行任何操作。 你的应用将在各种全球化相关场景中以更符合标准的方式自动运行。
 
-### <a name="category"></a>类别
+#### <a name="category"></a>类别
 
 全球化
 
-### <a name="affected-apis"></a>受影响的 API
+#### <a name="affected-apis"></a>受影响的 API
 
 - <xref:System.Globalization.StringInfo?displayProperty=fullName>
 - <xref:System.Globalization.TextElementEnumerator?displayProperty=fullName>
 - <xref:Microsoft.VisualBasic.Strings.StrReverse%2A?displayProperty=fullName>
 
 <!--
+
+#### Affected APIs
 
 - `T:System.Globalization.StringInfo`
 - `T:System.Globalization.TextElementEnumerator`

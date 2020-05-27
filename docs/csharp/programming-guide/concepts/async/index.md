@@ -2,12 +2,12 @@
 title: C# 中的异步编程
 description: 对使用 async、await、Task 和 Task<T> 的异步编程的 C# 语言支持的概述
 ms.date: 03/18/2019
-ms.openlocfilehash: 4cbbff0f2c48f0ec2f8befa234ea5023465a1c5d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4bf00d5c77138dfa2d527a262a6cd54a72a688f5
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79169904"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761845"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>使用 Async 和 Await 的异步编程
 
@@ -22,7 +22,7 @@ ms.locfileid: "79169904"
 1. 在烤面包上加黄油和果酱。
 1. 倒一杯橙汁。
 
-如果你有烹饪经验，便可通过异步方式执行这些指令  。 你会先开始加热平底锅以备煎蛋，接着再从培根着手。 然后将面包放进烤面包机，再煎鸡蛋。 在此过程的每一步，你都可以先开始一项任务，然后将注意力转移到准备进行的其他任务上。
+如果你有烹饪经验，便可通过异步方式执行这些指令。 你会先开始加热平底锅以备煎蛋，接着再从培根着手。 你可将面包放进烤面包机，然后再煎鸡蛋。 在此过程的每一步，你都可以先开始一项任务，然后将注意力转移到准备进行的其他任务上。
 
 做早餐是非并行异步工作的一个好示例。 单人（或单线程）即可处理所有这些任务。 继续讲解早餐的类比，一个人可以以异步方式做早餐，即在第一个任务完成之前开始进行下一个任务。 不管是否有人在看着，做早餐的过程都在进行。 在开始加热平底锅准备煎蛋的同时就可以开始煎了培根。 在开始煎培根后，你可以将面包放进烤面包机。
 
@@ -30,7 +30,7 @@ ms.locfileid: "79169904"
 
 现在，考虑一下编写为 C# 语句的相同指令：
 
-[!code-csharp[SynchronousBreakfast](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-starter/Program.cs#Main)]
+[!code-csharp[SynchronousBreakfast](./snippets/index/AsyncBreakfast-starter/Program.cs#Main)]
 
 计算机不会按人类的方式来解释这些指令。 计算机将阻塞每条语句，直到工作完成，然后再继续运行下一条语句。 这将创造出令人不满意的早餐。 后续任务直到早前任务完成后才会启动。 这样做早餐花费的时间要长得多，有些食物在上桌之前就已经凉了。
 
@@ -46,7 +46,7 @@ ms.locfileid: "79169904"
 
 我们首先更新此代码，使线程在任务运行时不会阻塞。 `await` 关键字提供了一种非阻塞方式来启动任务，然后在此任务完成时继续执行。 “做早餐”代码的简单异步版本类似于以下片段：
 
-[!code-csharp[SimpleAsyncBreakfast](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V2/Program.cs#Main)]
+[!code-csharp[SimpleAsyncBreakfast](./snippets/index/AsyncBreakfast-V2/Program.cs#Main)]
 
 在煎鸡蛋或培根时，此代码不会阻塞。 不过，此代码也不会启动任何其他任务。 你还是会将面包放进烤面包机里，然后盯着烤面包机直到面包弹出。 但至少，你会回应任何想引起你注意的人。 在接受了多份订单的一家餐馆里，厨师可能会在做第一份早餐的同时开始制作另一份早餐。
 
@@ -116,11 +116,11 @@ Console.WriteLine("Breakfast is ready!");
 
 上述代码展示了可以使用 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 对象来保存运行中的任务。 你首先需要 `await` 每项任务，然后再使用它的结果。 下一步是创建表示其他工作组合的方式。 在提供早餐之前，你希望等待表示先烤面包再添加黄油和果酱的任务完成。 你可以使用以下代码表示此工作：
 
-[!code-csharp[ComposeToastTask](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V3/Program.cs#ComposeToastTask)]
+[!code-csharp[ComposeToastTask](./snippets/index/AsyncBreakfast-V3/Program.cs#ComposeToastTask)]
 
 上述方式的签名中具有 `async` 修饰符。 它会向编译器发出信号，说明此方法包含 `await` 语句；也包含异步操作。 此方法表示先烤面包，然后再添加黄油和果酱的任务。 此方法返回表示这三个操作的组合的 <xref:System.Threading.Tasks.Task%601>。 主要代码块现在变成了：
 
-[!code-csharp[StartConcurrentTasks](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V3/Program.cs#Main)]
+[!code-csharp[StartConcurrentTasks](./snippets/index/AsyncBreakfast-V3/Program.cs#Main)]
 
 上述更改说明了使用异步代码的一项重要技术。 你可以通过将操作分离到一个返回任务的新方法中来组合任务。 可以选择等待此任务的时间。 可以同时启动其他任务。
 
@@ -138,10 +138,10 @@ Console.WriteLine("Breakfast is ready!");
 
 另一种选择是使用 <xref:System.Threading.Tasks.Task.WhenAny%2A>，它将返回一个当其参数完成时才完成的 `Task<Task>`。 你可以等待返回的任务，了解它已经完成了。 以下代码展示了可以如何使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 等待第一个任务完成，然后再处理其结果。 处理已完成任务的结果之后，可以从传递给 `WhenAny` 的任务列表中删除此已完成的任务。
 
-[!code-csharp[AwaitAnyTask](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-final/Program.cs#AwaitAnyTask)]
+[!code-csharp[AwaitAnyTask](./snippets/index/AsyncBreakfast-final/Program.cs#AwaitAnyTask)]
 
 进行所有这些更改之后，`Main` 的最终版本类似于以下代码：
 
-[!code-csharp[Final](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-final/Program.cs#Main)]
+[!code-csharp[Final](./snippets/index/AsyncBreakfast-final/Program.cs#Main)]
 
 此最终代码是异步的。 它更为准确地反映了一个人做早餐的流程。 将上述代码与本文中的第一个代码示例进行比较。 阅读代码时，核心操作仍然很明确。 你可以按照阅读本文开始时早餐制作说明的相同方式阅读此代码。 `async` 和 `await` 的语言功能支持每个人做出转变以遵循这些书面指示：尽可能启动任务，不要在等待任务完成时造成阻塞。

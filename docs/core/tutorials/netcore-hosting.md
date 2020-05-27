@@ -2,13 +2,14 @@
 title: 编写自定义 .NET Core 运行时主机
 description: 了解从本机代码托管 .NET Core 运行时，以支持需要控制 .NET Core 运行时工作方式的高级方案。
 author: mjrousos
+ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 46c7873a1865db04cf1c2b1bb2ded2b5dacbcc8d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 342a0cec78303f70db3a5b31294be1d465459f55
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78239893"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394853"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>编写自定义 .NET Core 主机以从本机代码控制 .NET 运行时
 

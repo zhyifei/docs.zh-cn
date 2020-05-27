@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 1e0141ceafe4c3450b3f798463ddc62ea79f1b36
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: ca499f9762f52126720159fb7c22660b1001895c
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615210"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802931"
 ---
 # <a name="types-c-programming-guide"></a>类型（C# 编程指南）
 
@@ -92,14 +92,14 @@ C# 提供了一组标准的内置数值类型来表示整数、浮点值、布�
 
 值类型分为两类：[结构](../../language-reference/builtin-types/struct.md)和[枚举](../../language-reference/builtin-types/enum.md)。
 
-内置数值类型是结构，包含可以访问的属性和方法：
+内置的数值类型是结构，它们具有可访问的字段和方法：
 
 ```csharp
-// Static method on type byte.
+// constant field on type byte.
 byte b = byte.MaxValue;
 ```
 
-不过，可以声明数值类型并向其赋值，就像它们是简单的非聚合类型一样：
+但可将这些类型视为简单的非聚合类型，为其声明并赋值：
 
 ```csharp
 byte num = 0xA;
