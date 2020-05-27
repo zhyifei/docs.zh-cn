@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-ms.openlocfilehash: 74807a678b5c0c2738f33fe552f6462af93ca1f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 629e18b6cd2fd7910804ecc608a45d2406dddea1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436463"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007489"
 ---
-# <a name="cortokentype-enumeration"></a><span data-ttu-id="d2de2-102">CorTokenType 枚举</span><span class="sxs-lookup"><span data-stu-id="d2de2-102">CorTokenType Enumeration</span></span>
-<span data-ttu-id="d2de2-103">指示元数据标记的类型。</span><span class="sxs-lookup"><span data-stu-id="d2de2-103">Indicates the type of a metadata token.</span></span>  
+# <a name="cortokentype-enumeration"></a><span data-ttu-id="c7f91-102">CorTokenType 枚举</span><span class="sxs-lookup"><span data-stu-id="c7f91-102">CorTokenType Enumeration</span></span>
+<span data-ttu-id="c7f91-103">指示元数据标记的类型。</span><span class="sxs-lookup"><span data-stu-id="c7f91-103">Indicates the type of a metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d2de2-104">语法</span><span class="sxs-lookup"><span data-stu-id="d2de2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c7f91-104">语法</span><span class="sxs-lookup"><span data-stu-id="c7f91-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorTokenType {  
@@ -59,47 +59,47 @@ typedef enum CorTokenType {
 } CorTokenType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d2de2-105">Members</span><span class="sxs-lookup"><span data-stu-id="d2de2-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c7f91-105">成员</span><span class="sxs-lookup"><span data-stu-id="c7f91-105">Members</span></span>  
   
-|<span data-ttu-id="d2de2-106">成员</span><span class="sxs-lookup"><span data-stu-id="d2de2-106">Member</span></span>|<span data-ttu-id="d2de2-107">说明</span><span class="sxs-lookup"><span data-stu-id="d2de2-107">Description</span></span>|  
+|<span data-ttu-id="c7f91-106">成员</span><span class="sxs-lookup"><span data-stu-id="c7f91-106">Member</span></span>|<span data-ttu-id="c7f91-107">描述</span><span class="sxs-lookup"><span data-stu-id="c7f91-107">Description</span></span>|  
 |------------|-----------------|  
-|`mdtModule`|<span data-ttu-id="d2de2-108">`mdModule` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-108">An `mdModule` token.</span></span>|  
-|`mdtTypeRef`|<span data-ttu-id="d2de2-109">`mdTypeRef` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-109">An `mdTypeRef` token.</span></span>|  
-|`mdtTypeDef`|<span data-ttu-id="d2de2-110">`mdTypeDef` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-110">An `mdTypeDef` token.</span></span>|  
-|`mdtFieldDef`|<span data-ttu-id="d2de2-111">`mdFieldDef` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-111">An `mdFieldDef` token.</span></span>|  
-|`mdtMethodDef`|<span data-ttu-id="d2de2-112">`mdMethodDef` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-112">An `mdMethodDef` token.</span></span>|  
-|`mdtParamDef`|<span data-ttu-id="d2de2-113">`mdParamDef` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-113">An `mdParamDef` token.</span></span>|  
-|`mdtInterfaceImpl`|<span data-ttu-id="d2de2-114">`mdInterfaceImpl` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-114">An `mdInterfaceImpl` token.</span></span>|  
-|`mdtMemberRef`|<span data-ttu-id="d2de2-115">`mdMemberRef` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-115">An `mdMemberRef` token.</span></span>|  
-|`mdtCustomAttribute`|<span data-ttu-id="d2de2-116">`mdCustomAttribute` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-116">An `mdCustomAttribute` token.</span></span>|  
-|`mdtPermission`|<span data-ttu-id="d2de2-117">`mdPermission` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-117">An `mdPermission` token.</span></span>|  
-|`mdtSignature`|<span data-ttu-id="d2de2-118">`mdSignature` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-118">An `mdSignature` token.</span></span>|  
-|`mdtEvent`|<span data-ttu-id="d2de2-119">`mdEvent` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-119">An `mdEvent` token.</span></span>|  
-|`mdtProperty`|<span data-ttu-id="d2de2-120">`mdProperty` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-120">An `mdProperty` token.</span></span>|  
-|`mdtModuleRef`|<span data-ttu-id="d2de2-121">`mdModuleRef` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-121">An `mdModuleRef` token.</span></span>|  
-|`mdtTypeSpec`|<span data-ttu-id="d2de2-122">`mdTypeSpec` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-122">An `mdTypeSpec` token.</span></span>|  
-|`mdtAssembly`|<span data-ttu-id="d2de2-123">`mdAssembly` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-123">An `mdAssembly` token.</span></span>|  
-|`mdtAssemblyRef`|<span data-ttu-id="d2de2-124">`mdAssemblyRef` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-124">An `mdAssemblyRef` token.</span></span>|  
-|`mdtFile`|<span data-ttu-id="d2de2-125">`mdFile` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-125">An `mdFile` token.</span></span>|  
-|`mdtExportedType`|<span data-ttu-id="d2de2-126">`mdExportedType` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-126">An `mdExportedType` token.</span></span>|  
-|`mdtManifestResource`|<span data-ttu-id="d2de2-127">`mdManifestResource` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-127">An `mdManifestResource` token.</span></span>|  
-|`mdtGenericParam`|<span data-ttu-id="d2de2-128">`mdGenericParam` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-128">An `mdGenericParam` token.</span></span>|  
-|`mdtMethodSpec`|<span data-ttu-id="d2de2-129">`mdMethodSpec` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-129">An `mdMethodSpec` token.</span></span>|  
-|`mdtGenericParamConstraint`|<span data-ttu-id="d2de2-130">`mdGenericParamConstraint` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-130">An `mdGenericParamConstraint` token.</span></span>|  
-|`mdtString`|<span data-ttu-id="d2de2-131">`mdString` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-131">An `mdString` token.</span></span>|  
-|`mdtName`|<span data-ttu-id="d2de2-132">`mdName` 标记。</span><span class="sxs-lookup"><span data-stu-id="d2de2-132">An `mdName` token.</span></span>|  
-|`mdtBaseType`|<span data-ttu-id="d2de2-133">未使用。</span><span class="sxs-lookup"><span data-stu-id="d2de2-133">Not used.</span></span>|  
+|`mdtModule`|<span data-ttu-id="c7f91-108">`mdModule`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-108">An `mdModule` token.</span></span>|  
+|`mdtTypeRef`|<span data-ttu-id="c7f91-109">`mdTypeRef`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-109">An `mdTypeRef` token.</span></span>|  
+|`mdtTypeDef`|<span data-ttu-id="c7f91-110">`mdTypeDef`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-110">An `mdTypeDef` token.</span></span>|  
+|`mdtFieldDef`|<span data-ttu-id="c7f91-111">`mdFieldDef`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-111">An `mdFieldDef` token.</span></span>|  
+|`mdtMethodDef`|<span data-ttu-id="c7f91-112">`mdMethodDef`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-112">An `mdMethodDef` token.</span></span>|  
+|`mdtParamDef`|<span data-ttu-id="c7f91-113">`mdParamDef`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-113">An `mdParamDef` token.</span></span>|  
+|`mdtInterfaceImpl`|<span data-ttu-id="c7f91-114">`mdInterfaceImpl`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-114">An `mdInterfaceImpl` token.</span></span>|  
+|`mdtMemberRef`|<span data-ttu-id="c7f91-115">`mdMemberRef`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-115">An `mdMemberRef` token.</span></span>|  
+|`mdtCustomAttribute`|<span data-ttu-id="c7f91-116">`mdCustomAttribute`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-116">An `mdCustomAttribute` token.</span></span>|  
+|`mdtPermission`|<span data-ttu-id="c7f91-117">`mdPermission`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-117">An `mdPermission` token.</span></span>|  
+|`mdtSignature`|<span data-ttu-id="c7f91-118">`mdSignature`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-118">An `mdSignature` token.</span></span>|  
+|`mdtEvent`|<span data-ttu-id="c7f91-119">`mdEvent`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-119">An `mdEvent` token.</span></span>|  
+|`mdtProperty`|<span data-ttu-id="c7f91-120">`mdProperty`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-120">An `mdProperty` token.</span></span>|  
+|`mdtModuleRef`|<span data-ttu-id="c7f91-121">`mdModuleRef`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-121">An `mdModuleRef` token.</span></span>|  
+|`mdtTypeSpec`|<span data-ttu-id="c7f91-122">`mdTypeSpec`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-122">An `mdTypeSpec` token.</span></span>|  
+|`mdtAssembly`|<span data-ttu-id="c7f91-123">`mdAssembly`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-123">An `mdAssembly` token.</span></span>|  
+|`mdtAssemblyRef`|<span data-ttu-id="c7f91-124">`mdAssemblyRef`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-124">An `mdAssemblyRef` token.</span></span>|  
+|`mdtFile`|<span data-ttu-id="c7f91-125">`mdFile`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-125">An `mdFile` token.</span></span>|  
+|`mdtExportedType`|<span data-ttu-id="c7f91-126">`mdExportedType`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-126">An `mdExportedType` token.</span></span>|  
+|`mdtManifestResource`|<span data-ttu-id="c7f91-127">`mdManifestResource`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-127">An `mdManifestResource` token.</span></span>|  
+|`mdtGenericParam`|<span data-ttu-id="c7f91-128">`mdGenericParam`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-128">An `mdGenericParam` token.</span></span>|  
+|`mdtMethodSpec`|<span data-ttu-id="c7f91-129">`mdMethodSpec`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-129">An `mdMethodSpec` token.</span></span>|  
+|`mdtGenericParamConstraint`|<span data-ttu-id="c7f91-130">`mdGenericParamConstraint`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-130">An `mdGenericParamConstraint` token.</span></span>|  
+|`mdtString`|<span data-ttu-id="c7f91-131">`mdString`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-131">An `mdString` token.</span></span>|  
+|`mdtName`|<span data-ttu-id="c7f91-132">`mdName`标记。</span><span class="sxs-lookup"><span data-stu-id="c7f91-132">An `mdName` token.</span></span>|  
+|`mdtBaseType`|<span data-ttu-id="c7f91-133">未使用。</span><span class="sxs-lookup"><span data-stu-id="c7f91-133">Not used.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d2de2-134">备注</span><span class="sxs-lookup"><span data-stu-id="d2de2-134">Remarks</span></span>  
- <span data-ttu-id="d2de2-135">每个值都等于对应的元数据标记中的顶部字节的值。</span><span class="sxs-lookup"><span data-stu-id="d2de2-135">Each value is equal to the value of the top byte in the corresponding metadata token.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c7f91-134">备注</span><span class="sxs-lookup"><span data-stu-id="c7f91-134">Remarks</span></span>  
+ <span data-ttu-id="c7f91-135">每个值都等于对应的元数据标记中的顶部字节的值。</span><span class="sxs-lookup"><span data-stu-id="c7f91-135">Each value is equal to the value of the top byte in the corresponding metadata token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d2de2-136">要求</span><span class="sxs-lookup"><span data-stu-id="d2de2-136">Requirements</span></span>  
- <span data-ttu-id="d2de2-137">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d2de2-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c7f91-136">要求</span><span class="sxs-lookup"><span data-stu-id="c7f91-136">Requirements</span></span>  
+ <span data-ttu-id="c7f91-137">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c7f91-137">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d2de2-138">**标头：** Corhdr。h</span><span class="sxs-lookup"><span data-stu-id="d2de2-138">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="c7f91-138">**标头：** Corhdr。h</span><span class="sxs-lookup"><span data-stu-id="c7f91-138">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="d2de2-139">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d2de2-139">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c7f91-139">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c7f91-139">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d2de2-140">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d2de2-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c7f91-140">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c7f91-140">See also</span></span>
 
-- [<span data-ttu-id="d2de2-141">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="d2de2-141">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="c7f91-141">元数据枚举</span><span class="sxs-lookup"><span data-stu-id="c7f91-141">Metadata Enumerations</span></span>](metadata-enumerations.md)
