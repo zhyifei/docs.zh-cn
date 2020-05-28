@@ -3,6 +3,8 @@
   items:
     - name: 全球化
       href: globalization.md
+    - name: 全球化和 ICU
+      href: globalization-icu.md
     - name: 本地化评审
       href: localizability-review.md
     - name: 本地化

@@ -4,50 +4,56 @@ description: 请按照教程学习了解 .NET Core 以在 Mac、Linux 和 Window
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 84784787465bec43cc460d34ca84e4baa5a15d7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9fb87180bb001a7f54d93c6e95631562103c49e8
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77625929"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840918"
 ---
-# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a><span data-ttu-id="64a11-103">通过探讨这些教程来学习 .NET Core 和 .NET Core SDK 工具</span><span class="sxs-lookup"><span data-stu-id="64a11-103">Learn .NET Core and the .NET Core SDK tools by exploring these tutorials</span></span>
+# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a><span data-ttu-id="3aac0-103">通过探讨这些教程来学习 .NET Core 和 .NET Core SDK 工具</span><span class="sxs-lookup"><span data-stu-id="3aac0-103">Learn .NET Core and the .NET Core SDK tools by exploring these tutorials</span></span>
 
-<span data-ttu-id="64a11-104">以下教程可用于了解 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="64a11-104">The following tutorials are available for learning about .NET Core.</span></span>
+<span data-ttu-id="3aac0-104">以下教程可用于了解 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="3aac0-104">The following tutorials are available for learning about .NET Core.</span></span>
 
-## <a name="create-applications-with-visual-studio"></a><span data-ttu-id="64a11-105">使用 Visual Studio 创建应用程序</span><span class="sxs-lookup"><span data-stu-id="64a11-105">Create applications with Visual Studio</span></span>
+## <a name="use-visual-studio"></a><span data-ttu-id="3aac0-105">使用 Visual Studio</span><span class="sxs-lookup"><span data-stu-id="3aac0-105">Use Visual Studio</span></span>
 
-- [<span data-ttu-id="64a11-106">创建 Hello World 控制台应用程序</span><span class="sxs-lookup"><span data-stu-id="64a11-106">Create a Hello World console application</span></span>](with-visual-studio.md)
-- [<span data-ttu-id="64a11-107">调试 Hello World 应用程序</span><span class="sxs-lookup"><span data-stu-id="64a11-107">Debug your Hello World application</span></span>](debugging-with-visual-studio.md)
-- [<span data-ttu-id="64a11-108">发布 Hello World 应用程序</span><span class="sxs-lookup"><span data-stu-id="64a11-108">Publish your Hello World application</span></span>](publishing-with-visual-studio.md)
-- [<span data-ttu-id="64a11-109">生成类库</span><span class="sxs-lookup"><span data-stu-id="64a11-109">Build a class library</span></span>](library-with-visual-studio.md)
-- [<span data-ttu-id="64a11-110">测试类库</span><span class="sxs-lookup"><span data-stu-id="64a11-110">Test a class library</span></span>](testing-library-with-visual-studio.md)
-- [<span data-ttu-id="64a11-111">使用类库</span><span class="sxs-lookup"><span data-stu-id="64a11-111">Consume a class library</span></span>](consuming-library-with-visual-studio.md)
-- [<span data-ttu-id="64a11-112">Azure Cosmos DB：SQL API 和 .NET Core 入门</span><span class="sxs-lookup"><span data-stu-id="64a11-112">Azure Cosmos DB: Get started with the SQL API and .NET Core</span></span>](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [<span data-ttu-id="3aac0-106">创建控制台应用</span><span class="sxs-lookup"><span data-stu-id="3aac0-106">Create a console app</span></span>](with-visual-studio.md)
+- [<span data-ttu-id="3aac0-107">创建 F# 控制台应用</span><span class="sxs-lookup"><span data-stu-id="3aac0-107">Create an F# console app</span></span>](../../fsharp/get-started/get-started-visual-studio.md)
+- [<span data-ttu-id="3aac0-108">调试应用</span><span class="sxs-lookup"><span data-stu-id="3aac0-108">Debug an app</span></span>](debugging-with-visual-studio.md)
+- [<span data-ttu-id="3aac0-109">发布应用</span><span class="sxs-lookup"><span data-stu-id="3aac0-109">Publish an app</span></span>](publishing-with-visual-studio.md)
+- [<span data-ttu-id="3aac0-110">创建类库</span><span class="sxs-lookup"><span data-stu-id="3aac0-110">Create a class library</span></span>](library-with-visual-studio.md)
+- [<span data-ttu-id="3aac0-111">对类库进行单元测试</span><span class="sxs-lookup"><span data-stu-id="3aac0-111">Unit test a class library</span></span>](testing-library-with-visual-studio.md)
+- [<span data-ttu-id="3aac0-112">使用类库</span><span class="sxs-lookup"><span data-stu-id="3aac0-112">Use a class library</span></span>](consuming-library-with-visual-studio.md)
+- [<span data-ttu-id="3aac0-113">安装并使用包</span><span class="sxs-lookup"><span data-stu-id="3aac0-113">Install and use a package</span></span>](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
+- [<span data-ttu-id="3aac0-114">创建和发布包</span><span class="sxs-lookup"><span data-stu-id="3aac0-114">Create and publish a package</span></span>](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
 
-## <a name="build-applications-with-visual-studio-code"></a><span data-ttu-id="64a11-113">使用 Visual Studio Code 生成应用程序</span><span class="sxs-lookup"><span data-stu-id="64a11-113">Build applications with Visual Studio Code</span></span>
+## <a name="use-visual-studio-code"></a><span data-ttu-id="3aac0-115">使用 Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="3aac0-115">Use Visual Studio Code</span></span>
 
-- [<span data-ttu-id="64a11-114">C# 和 Visual Studio Code 入门</span><span class="sxs-lookup"><span data-stu-id="64a11-114">Get started with C# and Visual Studio Code</span></span>](with-visual-studio-code.md)
-- [<span data-ttu-id="64a11-115">macOS 上的 .NET Core 入门</span><span class="sxs-lookup"><span data-stu-id="64a11-115">Get started with .NET Core on macOS</span></span>](using-on-macos.md)
+<span data-ttu-id="3aac0-116">如果要使用 Visual Studio Code 或其他代码编辑器，请选择这些教程。</span><span class="sxs-lookup"><span data-stu-id="3aac0-116">Choose these tutorials if you want to use Visual Studio Code or some other code editor.</span></span> <span data-ttu-id="3aac0-117">全都使用 CLI 来处理 .NET Core 开发任务，因此全都可用于任意代码编辑器。</span><span class="sxs-lookup"><span data-stu-id="3aac0-117">All use the CLI for .NET Core development tasks, so all can be used with any code editor.</span></span>
 
-## <a name="build-applications-with-visual-studio-for-mac"></a><span data-ttu-id="64a11-116">使用 Visual Studio for Mac 生成应用程序</span><span class="sxs-lookup"><span data-stu-id="64a11-116">Build applications with Visual Studio for Mac</span></span>
+- [<span data-ttu-id="3aac0-118">创建控制台应用</span><span class="sxs-lookup"><span data-stu-id="3aac0-118">Create a console app</span></span>](with-visual-studio-code.md)
+- [<span data-ttu-id="3aac0-119">创建和发布控制台应用</span><span class="sxs-lookup"><span data-stu-id="3aac0-119">Create a console app and publish it</span></span>](cli-create-console-app.md)
+- [<span data-ttu-id="3aac0-120">创建 F# 控制台应用</span><span class="sxs-lookup"><span data-stu-id="3aac0-120">Create an F# console app</span></span>](../../fsharp/get-started/get-started-vscode.md)
+- [<span data-ttu-id="3aac0-121">创建库并对其进行单元测试 - macOS</span><span class="sxs-lookup"><span data-stu-id="3aac0-121">Create a library and unit test it - macOS</span></span>](using-on-macos.md)
+- [<span data-ttu-id="3aac0-122">安装并使用包</span><span class="sxs-lookup"><span data-stu-id="3aac0-122">Install and use a package</span></span>](/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli)
+- [<span data-ttu-id="3aac0-123">创建和发布包</span><span class="sxs-lookup"><span data-stu-id="3aac0-123">Create and publish a package</span></span>](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
 
-- [<span data-ttu-id="64a11-117">借助 Visual Studio for Mac 在 macOS 上开始使用 .NET Core</span><span class="sxs-lookup"><span data-stu-id="64a11-117">Get started with .NET Core on macOS using Visual Studio for Mac</span></span>](using-on-mac-vs.md)
-- [<span data-ttu-id="64a11-118">使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案</span><span class="sxs-lookup"><span data-stu-id="64a11-118">Building a complete .NET Core solution on macOS using Visual Studio for Mac</span></span>](using-on-mac-vs-full-solution.md)
+## <a name="use-visual-studio-for-mac"></a><span data-ttu-id="3aac0-124">使用 Visual Studio for Mac</span><span class="sxs-lookup"><span data-stu-id="3aac0-124">Use Visual Studio for Mac</span></span>
 
-## <a name="build-applications-with-the-net-core-cli"></a><span data-ttu-id="64a11-119">使用 .NET Core CLI 生成应用程序</span><span class="sxs-lookup"><span data-stu-id="64a11-119">Build applications with the .NET Core CLI</span></span>
+- [<span data-ttu-id="3aac0-125">创建控制台应用</span><span class="sxs-lookup"><span data-stu-id="3aac0-125">Create a console app</span></span>](using-on-mac-vs.md)
+- [<span data-ttu-id="3aac0-126">创建库并对其进行单元测试</span><span class="sxs-lookup"><span data-stu-id="3aac0-126">Create a library and unit test it</span></span>](using-on-mac-vs-full-solution.md)
+- [<span data-ttu-id="3aac0-127">安装并使用包</span><span class="sxs-lookup"><span data-stu-id="3aac0-127">Install and use a package</span></span>](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
-- [<span data-ttu-id="64a11-120">使用 .NET Core CLI 在 Windows/Linux/macOS 上开始使用 .NET Core</span><span class="sxs-lookup"><span data-stu-id="64a11-120">Get started with .NET Core on Windows/Linux/macOS using the .NET Core CLI</span></span>](cli-create-console-app.md)
-- [<span data-ttu-id="64a11-121">使用 .NET Core CLI 组织和测试项目</span><span class="sxs-lookup"><span data-stu-id="64a11-121">Organizing and testing projects with the .NET Core CLI</span></span>](testing-with-cli.md)
-- [<span data-ttu-id="64a11-122">F# 入门</span><span class="sxs-lookup"><span data-stu-id="64a11-122">Get started with F#</span></span>](../../fsharp/get-started/get-started-command-line.md)
+## <a name="advanced-topics"></a><span data-ttu-id="3aac0-128">高级主题</span><span class="sxs-lookup"><span data-stu-id="3aac0-128">Advanced topics</span></span>
 
-## <a name="other"></a><span data-ttu-id="64a11-123">其他</span><span class="sxs-lookup"><span data-stu-id="64a11-123">Other</span></span>
+- [<span data-ttu-id="3aac0-129">如何创建库</span><span class="sxs-lookup"><span data-stu-id="3aac0-129">How to create libraries</span></span>](libraries.md)
+- [<span data-ttu-id="3aac0-130">使用 xUnit 对应用进行单元测试</span><span class="sxs-lookup"><span data-stu-id="3aac0-130">Unit test an app with xUnit</span></span>](testing-with-cli.md)
+- [<span data-ttu-id="3aac0-131">结合使用 C#/VB/F# 和 NUnit/xUnit/MSTest 进行单元测试</span><span class="sxs-lookup"><span data-stu-id="3aac0-131">Unit test using C#/VB/F# with NUnit/xUnit/MSTest</span></span>](../testing/index.md)
+- [<span data-ttu-id="3aac0-132">使用 Visual Studio 进行实时单元测试</span><span class="sxs-lookup"><span data-stu-id="3aac0-132">Live unit test with Visual Studio</span></span>](/visualstudio/test/live-unit-testing-start)
+- [<span data-ttu-id="3aac0-133">创建 CLI 的模板</span><span class="sxs-lookup"><span data-stu-id="3aac0-133">Create templates for the CLI</span></span>](cli-templates-create-item-template.md)
+- [<span data-ttu-id="3aac0-134">创建和使用适用于 CLI 的工具</span><span class="sxs-lookup"><span data-stu-id="3aac0-134">Create and use tools for the CLI</span></span>](../tools/global-tools-how-to-create.md)
+- [<span data-ttu-id="3aac0-135">使用插件创建应用</span><span class="sxs-lookup"><span data-stu-id="3aac0-135">Create an app with plugins</span></span>](creating-app-with-plugin-support.md)
 
-- [<span data-ttu-id="64a11-124">在 .NET Core 中使用 dotnet测试的单元测试</span><span class="sxs-lookup"><span data-stu-id="64a11-124">Unit Testing in .NET Core using dotnet test</span></span>](../testing/unit-testing-with-dotnet-test.md)
-- [<span data-ttu-id="64a11-125">使用 MSTest 和 .NET Core 执行单元测试</span><span class="sxs-lookup"><span data-stu-id="64a11-125">Unit testing with MSTest and .NET Core</span></span>](../testing/unit-testing-with-mstest.md)
-- [<span data-ttu-id="64a11-126">使用跨平台工具开发库</span><span class="sxs-lookup"><span data-stu-id="64a11-126">Developing Libraries with Cross Platform Tools</span></span>](libraries.md)
-- [<span data-ttu-id="64a11-127">从本机代码承载 .NET Core</span><span class="sxs-lookup"><span data-stu-id="64a11-127">Hosting .NET Core from native code</span></span>](netcore-hosting.md)
-- [<span data-ttu-id="64a11-128">创建 CLI 的模板</span><span class="sxs-lookup"><span data-stu-id="64a11-128">Create templates for the CLI</span></span>](cli-templates-create-item-template.md)
-- [<span data-ttu-id="64a11-129">创建和使用适用于 CLI 的工具</span><span class="sxs-lookup"><span data-stu-id="64a11-129">Create and use tools for the CLI</span></span>](../tools/global-tools-how-to-create.md)
+## <a name="create-web-apps"></a><span data-ttu-id="3aac0-136">创建 Web 应用</span><span class="sxs-lookup"><span data-stu-id="3aac0-136">Create web apps</span></span>
 
-<span data-ttu-id="64a11-130">有关开发 ASP.NET Core Web 应用程序的教程，请参阅 [ASP.NET Core 文档](/aspnet/core/)。</span><span class="sxs-lookup"><span data-stu-id="64a11-130">For tutorials about developing ASP.NET Core web applications, see the [ASP.NET Core documentation](/aspnet/core/).</span></span>
+<span data-ttu-id="3aac0-137">有关开发 ASP.NET Core Web 应用程序的教程，请参阅 [ASP.NET Core 文档](/aspnet/core/)。</span><span class="sxs-lookup"><span data-stu-id="3aac0-137">For tutorials about developing ASP.NET Core web applications, see the [ASP.NET Core documentation](/aspnet/core/).</span></span>
