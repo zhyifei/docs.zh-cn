@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: aa782c46d6530bb30055c536dd10d78f9ab9f79f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 1882feee4e8071f1d32fb59ab02519c6e6fe2684
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963779"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84143558"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>在 Windows 进程激活服务中承载
 Windows 进程激活服务 (WAS) 管理辅助进程的激活和生命周期，这些进程包含托管 Windows Communication Foundation (WCF) 服务的应用程序。 WAS 进程模型通过删除对 HTTP 的依赖，将 HTTP 服务器的 IIS 6.0 进程模型通用化。 这使 WCF 服务可以在支持基于消息的激活的宿主环境中同时使用 HTTP 和非 HTTP 协议（例如 Net.tcp），并提供在给定计算机上托管大量应用程序的功能。  
@@ -34,11 +34,11 @@ Windows 进程激活服务 (WAS) 管理辅助进程的激活和生命周期，�
   
  下表演示了使用 HTTP 和非 HTTP 网站绑定的 WAS 网站的几个可能的寻址方案。  
   
-|方案|站点绑定|应用程序路径|基应用程序 URI|  
+|方案|网站绑定|应用程序路径|基应用程序 URI|  
 |--------------|-------------------|----------------------|---------------------------|  
-|仅 HTTP|http： *：80：\*|/appTwo|http://localhost/appTwo/|  
-|HTTP 和非 HTTP|http： *：80：\*<br /><br /> net.tcp：808：\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
-|仅非 HTTP|net.pipe: *|/appThree|net.pipe://appThree/|  
+|仅 HTTP|http： *：80：\*|/appTwo|`http://localhost/appTwo/`|  
+|HTTP 和非 HTTP|http： *：80：\*<br /><br /> net.tcp：808：\*|/appTwo|`http://localhost/appTwo/`<br />`net.tcp://localhost/appTwo/`|  
+|仅非 HTTP|net.pipe: *|/appThree|`net.pipe://appThree/`|  
   
  也可以对应用程序内的服务和资源进行寻址。 在应用程序内，相对于基应用程序路径对应用程序资源进行寻址。 例如，假定计算机上名为 contoso.com 的网站同时具有 HTTP 和 Net.TCP 协议的网站绑定。 还假定该网站包含一个位于 /Billing 处的应用程序，该应用程序在 GetOrders.svc 中公开服务。 然后，如果 GetOrders.svc 服务使用 SecureEndpoint 的相对地址公开了一个终结点，则将会在下面的两个 URI 中公开该服务终结点：  
   

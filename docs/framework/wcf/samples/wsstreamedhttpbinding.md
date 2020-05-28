@@ -2,12 +2,12 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: 36b4db5270205aec55ad52db40500c8d434a1560
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 663b7921e4e8a66d9b905404bad00f613e2f04cc
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714554"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144651"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 
@@ -53,7 +53,7 @@ ms.locfileid: "74714554"
 
 2. 添加配置支持
 
-    为了通过配置来公开传输，此示例还实现了另外两个类：`WSStreamedHttpBindingConfigurationElement` 和 `WSStreamedHttpBindingSection`。 类 `WSStreamedHttpBindingSection` 是向 WCF 配置系统公开 `WSStreamedHttpBinding` 的 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>。 批量实现委托给从 `WSStreamedHttpBindingConfigurationElement` 派生的 <xref:System.ServiceModel.Configuration.StandardBindingElement>。 `WSStreamedHttpBindingConfigurationElement` 类具有与 `WSStreamedHttpBinding` 的属性相对应的属性，以及用来将每个配置元素映射到绑定的函数。
+    为了通过配置来公开传输，此示例还实现了另外两个类：`WSStreamedHttpBindingConfigurationElement` 和 `WSStreamedHttpBindingSection`。 类 `WSStreamedHttpBindingSection` 是一个 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> 公开 `WSStreamedHttpBinding` 给 WCF 配置系统的。 批量实现委托给从 `WSStreamedHttpBindingConfigurationElement` 派生的 <xref:System.ServiceModel.Configuration.StandardBindingElement>。 `WSStreamedHttpBindingConfigurationElement` 类具有与 `WSStreamedHttpBinding` 的属性相对应的属性，以及用来将每个配置元素映射到绑定的函数。
 
     可通过将以下节添加到服务的配置文件中来向配置系统注册处理程序。
 
@@ -137,7 +137,7 @@ public class StreamedEchoService : IStreamedEchoService
 
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>WSStreamedHttpBinding 示例客户端
 
-在使用 `WSStreamedHttpBinding` 与服务进行交互时所用的客户端位于客户端子目录中。 由于本示例中使用的证书是用 Makecert 创建的测试证书，因此，当你尝试在浏览器中访问 HTTPS 地址（如 https://localhost/servicemodelsamples/service.svc ）时，会显示安全警报。 为了使 WCF 客户端能够使用测试证书，已向客户端添加了一些附加代码，以禁止显示安全警报。 使用生产证书时，不需要此代码和随附的类。
+在使用 `WSStreamedHttpBinding` 与服务进行交互时所用的客户端位于客户端子目录中。 由于本示例中使用的证书是用 Makecert 创建的测试证书，因此当你尝试在浏览器中访问 HTTPS 地址（例如）时，会显示安全 `https://localhost/servicemodelsamples/service.svc` 警报。 为了使 WCF 客户端能够使用测试证书，已向客户端添加了一些附加代码，以禁止显示安全警报。 使用生产证书时，不需要此代码和随附的类。
 
 ```csharp
 // WARNING: This code is only required for test certificates such as those created by makecert. It is

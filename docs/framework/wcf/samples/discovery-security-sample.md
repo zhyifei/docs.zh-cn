@@ -2,12 +2,12 @@
 title: 发现安全示例
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 44022ee756f189347aaec606427ecb3c4c5ffa95
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: c6ec9b7e13234b7dae03541eb09ccba98f4cc93a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728422"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144898"
 ---
 # <a name="discovery-security-sample"></a>发现安全示例
 
@@ -38,7 +38,7 @@ Discovery 规范不要求参与发现过程的终结点是安全的。 增强发
 > [!NOTE]
 > `PrefixList` 已加入 2008 Discovery 版本协议。  
   
- 为计算签名，示例确定扩展的签名项。 根据 WS-Discovery 规范的要求，使用 `SignedInfo` 命名空间前缀创建 XML 签名 (`ds`)。 发现和寻址命名空间中的正文和所有标头都在签名中进行引用，因此无法对这些内容进行篡改。 每个引用的元素都使用专用规范化（http://www.w3.org/2001/10/xml-exc-c14n# ）进行转换，然后对 sha-1 摘要值进行计算（http://www.w3.org/2000/09/xmldsig#sha1 ）。 基于所有引用的元素及其摘要值，使用 RSA 算法（http://www.w3.org/2000/09/xmldsig#rsa-sha1 ）计算签名值。  
+ 为计算签名，示例确定扩展的签名项。 根据 WS-Discovery 规范的要求，使用 `SignedInfo` 命名空间前缀创建 XML 签名 (`ds`)。 发现和寻址命名空间中的正文和所有标头都在签名中进行引用，因此无法对这些内容进行篡改。 每个引用的元素都使用专用规范化（ <http://www.w3.org/2001/10/xml-exc-c14n#> ）进行转换，然后对 sha-1 摘要值进行计算（ <http://www.w3.org/2000/09/xmldsig#sha1> ）。 基于所有引用的元素及其摘要值，使用 RSA 算法（）计算签名值 <http://www.w3.org/2000/09/xmldsig#rsa-sha1> 。  
   
  消息使用特定于客户端的证书进行签名。 创建绑定元素时，必须指定存储位置、名称和证书使用者名称。 精简签名中的 `KeyId` 表示签名令牌的密钥标识符，是签名令牌的主题密钥标识符 (SKI) 或者是（如果 SKI 不存在）签名令牌的公钥的 SHA-1 哈希值。  
   
@@ -72,6 +72,6 @@ Discovery 规范不要求参与发现过程的终结点是安全的。 增强发
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  

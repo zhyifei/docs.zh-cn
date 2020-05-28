@@ -4,35 +4,35 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-ms.openlocfilehash: 86e0c77b899ad590b9958fea3a050ad0e660bb43
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: d09dd6bcb8564f770df6b87751aee4cdb04cd12c
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463795"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144612"
 ---
 # <a name="security-protocols"></a>安全协议
-Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所有现有企业的消息传递安全要求。 本节介绍以下 Web 服务安全协议的 Windows 通信基础 （WCF） 详细信息（在<xref:System.ServiceModel.Channels.SecurityBindingElement>中实现）。  
+Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所有现有企业的消息传递安全要求。 本部分介绍 <xref:System.ServiceModel.Channels.SecurityBindingElement> 以下 Web 服务安全协议的 Windows Communication Foundation （WCF）详细信息（在中实现）。  
   
 |规范/文档|链接|  
 |-|-|  
-|WSS：SOAP 消息安全 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf|  
-|WSS：用户名令牌配置文件 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS：X509 令牌配置文件 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
-|WSS：SAML 1.1 令牌配置文件 1.0|http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf|  
-|WSS：SOAP 消息安全 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf|  
-|WSS 用户名令牌配置文件 1.1|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS：X.509 令牌配置文件 1.1|http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf|  
-|WSS：Kerberos 令牌配置文件 1.1|http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf|  
-|WSS：SAML 1.1 令牌配置文件 1.1|http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf|  
-|WS-Secure Conversation 1.3|http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512/ws-secureconversation-1.3-os.pdf|  
-|WS-Trust 1.3|http://docs.oasis-open.org/ws-sx/ws-trust/200512/ws-trust-1.3-os.pdf|  
+|WSS：SOAP 消息安全 1.0|<http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|  
+|WSS：用户名令牌配置文件 1.0|<http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|  
+|WSS：X509 令牌配置文件 1.0|<http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|  
+|WSS：SAML 1.1 令牌配置文件 1.0|<http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|  
+|WSS：SOAP 消息安全 1.1|<http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|  
+|WSS 用户名令牌配置文件 1.1|<http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|  
+|WSS：X.509 令牌配置文件 1.1|<http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|  
+|WSS：Kerberos 令牌配置文件 1.1|<http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|  
+|WSS：SAML 1.1 令牌配置文件 1.1|<http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|  
+|WS-Secure Conversation 1.3|<http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512/ws-secureconversation-1.3-os.pdf>|  
+|WS-Trust 1.3|<http://docs.oasis-open.org/ws-sx/ws-trust/200512/ws-trust-1.3-os.pdf>|  
 |应用说明：<br /><br /> 将 WS-Trust 用于 TLS 握手|即将发布|  
 |应用说明：<br /><br /> 将 WS-Trust 用于 SPNEGO|即将发布|  
 |应用说明：<br /><br /> Web 服务寻址终结点引用和标识|即将发布|  
-|WS-SecurityPolicy 1.2 (2007/04)|http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf|  
+|WS-SecurityPolicy 1.2 (2007/04)|<http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf>|  
   
- WCF 版本 1 提供了 17 种身份验证模式，可用作 Web 服务安全配置的基础。 每一种模式都针对一组常用部署需求进行了优化，如：  
+ WCF，版本1提供17个身份验证模式，可用作 Web 服务安全配置的基础。 每一种模式都针对一组常用部署需求进行了优化，如：  
   
 - 用于对客户端和服务进行身份验证的凭据。  
   
@@ -40,13 +40,13 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
   
 - 消息交换模式。  
   
-|身份验证模式|客户端身份验证|服务器身份验证|“模式”|  
+|身份验证模式|客户端身份验证|服务器身份验证|模式|  
 |-------------------------|---------------------------|---------------------------|----------|  
-|UserNameOverTransport|用户名/密码|X509|传输|  
-|CertificateOverTransport|X509|X509|传输|  
-|KerberosOverTransport|Windows|X509|传输|  
-|IssuedTokenOverTransport|联合|X509|传输|  
-|SspiNegotiatedOverTransport|协商的 Windows Sspi|协商的 Windows Sspi|传输|  
+|UserNameOverTransport|用户名/密码|X509|Transport|  
+|CertificateOverTransport|X509|X509|Transport|  
+|KerberosOverTransport|Windows|X509|Transport|  
+|IssuedTokenOverTransport|联合|X509|Transport|  
+|SspiNegotiatedOverTransport|协商的 Windows Sspi|协商的 Windows Sspi|Transport|  
 |AnonymousForCertificate|无|X509|消息|  
 |UserNameForCertificate|用户名/密码|X509|消息|  
 |MutualCertificate|X509|X509|消息|  
@@ -62,40 +62,40 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
   
  使用此类身份验证模式的终结点可以使用 WS-SecurityPolicy (WS-SP) 表示其安全要求。 本文档介绍每种身份验证模式的安全标头和基础结构消息的结构，并提供策略和消息的示例。  
   
- WCF 利用 WS-SecureConversation 提供安全会话支持，以保护应用程序之间的多消息交换。  请参见下面的“安全会话”了解实现细节。  
+ WCF 利用 Ws-secureconversation 提供安全会话支持来保护应用程序之间的多消息交换。  请参见下面的“安全会话”了解实现细节。  
   
- 除了身份验证模式外，WCF 还提供用于控制适用于大多数基于消息安全的身份验证模式的常见保护机制的设置，例如：签名顺序与加密操作、算法套件、密钥派生和签名确认。  
+ 除了身份验证模式之外，WCF 还提供一些设置，用于控制适用于大多数基于消息安全的身份验证模式的常见保护机制，例如：签名和加密操作的顺序、算法套件、密钥派生和签名确认。  
   
  本文档使用以下前缀和命名空间。  
   
 |前缀|命名空间|  
 |------------|---------------|  
-|s|http://www.w3.org/2003/05/soap-envelope|  
-|sp|http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702|  
-|a|http://www.w3.org/2005/08/addressing|  
+|s|`http://www.w3.org/2003/05/soap-envelope`|  
+|sp|`http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702`|  
+|a|`http://www.w3.org/2005/08/addressing`|  
 |wsse|TBD – OASIS WSS 1.0 URI|  
 |wsse11|TBD – OASIS WSS 1.1 URI|  
-|wsu|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd|  
+|wsu|`http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd`|  
 |ds|TBD – W3C XMLDSig URI|  
 |wst|TBD – WS-Trust 2005/02 URI|  
 |wssc|TBD – WS-SecureConversation 2005/02 URI|  
-|wsaw|http://www.w3.org/2006/05/addressing/wsdl|  
-|wsp|http://schemas.xmlsoap.org/ws/2004/09/policy|  
-|mssp|http://schemas.microsoft.com/ws/2005/07/securitypolicy|  
+|wsaw|`http://www.w3.org/2006/05/addressing/wsdl`|  
+|wsp|`http://schemas.xmlsoap.org/ws/2004/09/policy`|  
+|mssp|`http://schemas.microsoft.com/ws/2005/07/securitypolicy`|  
   
 ## <a name="1-token-profiles"></a>1. 令牌配置文件  
  Web 服务安全规范将凭据表示为安全令牌。 WCF 支持以下令牌类型：  
   
 ### <a name="11-usernametoken"></a>1.1 UsernameToken  
- WCF 遵循用户名令牌10和用户名令牌11配置文件，具有以下约束：  
+ WCF 遵循 UsernameToken10 和 UsernameToken11 配置文件，其约束如下：  
   
  R1101 UsernameToken\Password 元素的 PasswordType 属性必须省略或者值为 #PasswordText（默认值）。  
   
- 可以使用可扩展性实现 #PasswordDigest。 人们已经发现，#PasswordDigest 经常被误认为是足够安全的密码保护机制。 但实际上，#PasswordDigest 不可取代 UsernameToken 加密。 #PasswordDigest 的主要目的是防止重放攻击。 在 WCF 身份验证模式下，使用消息签名可缓解重播攻击威胁。  
+ 可以使用可扩展性实现 #PasswordDigest。 人们已经发现，#PasswordDigest 经常被误认为是足够安全的密码保护机制。 但实际上，#PasswordDigest 不可取代 UsernameToken 加密。 #PasswordDigest 的主要目的是防止重放攻击。 在 WCF 身份验证模式下，通过使用消息签名缓解重播攻击威胁。  
   
- B1102 WCF 从不发出 Nonce 和创建用户名令牌的子元素。  
+ B1102 WCF 从不发出 Nonce 并创建 UsernameToken 的子元素。  
   
- 这些子元素旨在帮助重放检测。 WCF 改用消息签名。  
+ 这些子元素旨在帮助重放检测。 WCF 使用消息签名。  
   
  OASIS WSS SOAP Message Security UsernameToken Profile 1.1 (UsernameToken11) 引入了从密码派生密钥的功能。  
   
@@ -104,7 +104,7 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
  根本原因：密码通常被视为过于脆弱，不适合用于加密操作。  
   
 ### <a name="12-x509-token"></a>1.2 X509 令牌  
- WCF 支持 X509v3 证书作为凭据类型，并遵循 X509TokenProfile1.0 和 X509TokenProfile1.1 具有以下约束：  
+ WCF 支持 X509v3 证书作为凭据类型，并遵循 X509tokenprofile1.1 1.0 和 X509tokenprofile1.1 1.1 的限制：  
   
  R1201 在包含 X509v3 证书时，BinarySecurityToken 元素的 ValueType 属性必须值为 #X509v3。  
   
@@ -118,37 +118,37 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
   
  R1204 如果使用 X509TokenProfile1.1，则对 X509 安全令牌的外部引用应该使用 WS-Security 1.1 引入的指纹。  
   
- WCF 支持 X509 发行人序列。 但是，X509问题处理串行存在互操作性问题：WCF 使用字符串比较 X509 消息序列的两个值。 因此，如果重新排序主题名称的组件，并向 WCF 服务发送对证书的引用，则可能无法找到它。  
+ WCF 支持 X509IssuerSerial。 但是，X509IssuerSerial 存在互操作性问题： WCF 使用字符串来比较 X509IssuerSerial 的两个值。 因此，如果一次重命名使用者名称的组件并将其发送到 WCF 服务，则可能找不到该证书。  
   
 ### <a name="13-kerberos-token"></a>1.3 Kerberos 令牌  
- WCF 支持 KerberosTokenProfile1.1，用于具有以下约束的 Windows 身份验证：  
+ 为了实现 Windows 身份验证，WCF 支持 KerberosTokenProfile 1.1，但具有以下限制：  
   
  R1301 Kerberos 令牌必须携带 GSS_API 和 Kerberos 规范中定义的 GSS 包装的 Kerberos v4 AP_REQ 的值，并且必须有值为 #GSS_Kerberosv5_AP_REQ 的 ValueType 属性。  
   
- WCF 使用 GSS 包装的 Kerberos AP-REQ，而不是裸露的 AP-REQ。 这是一种安全最佳做法。  
+ WCF 使用 GSS 包装的 Kerberos AP 要求，而不是要求空的 AP 要求。 这是一种安全最佳做法。  
   
 ### <a name="14-saml-v11-token"></a>1.4 SAML v1.1 令牌  
- WCF 支持 SAML v1.1 令牌的 WSS SAML 令牌配置文件 1.0 和 1.1。 可以实现其他版本的 SAML 令牌格式。  
+ 对于 SAML v1.1 令牌，WCF 支持 WSS SAML 令牌配置文件1.0 和1.1。 可以实现其他版本的 SAML 令牌格式。  
   
 ### <a name="15-security-context-token"></a>1.5 安全上下文令牌  
- WCF 支持 WS-安全对话中引入的安全上下文令牌 （SCT）。 SCT 用于表示在 SecureConversation 中建立的安全上下文以及下面所述的二进制协商协议 TLS 和 SSPI。  
+ WCF 支持 Ws-secureconversation 中引入的安全上下文令牌（SCT）。 SCT 用于表示在 SecureConversation 中建立的安全上下文以及下面所述的二进制协商协议 TLS 和 SSPI。  
   
-## <a name="2-common-message-security-parameters"></a>2. 通用消息安全参数  
+## <a name="2-common-message-security-parameters"></a>2. 公用消息安全参数  
   
 ### <a name="21-timestamp"></a>2.1 时间戳  
- 时间戳存在与否是使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 类的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 属性控制的。 WCF 始终序列化 wsse：时间戳与 ws：创建和 ws：过期字段。 使用签名时，总会对 wsse:TimeStamp 进行签名。  
+ 时间戳存在与否是使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 类的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 属性控制的。 WCF 始终序列化 wsse： TimeStamp with wsse：已创建和 wsse： Expires 字段。 使用签名时，总会对 wsse:TimeStamp 进行签名。  
   
 ### <a name="22-protection-order"></a>2.2 保护顺序  
- WCF 支持消息保护命令"加密前签名"和"签名前加密"（安全策略 1.2）。 建议使用“加密前签名”，其原因包括：除非使用 WS-Security 1.1 SignatureConfirmation 机制，否则使用“签名前加密”进行保护的消息易受签名替换攻击，并且对加密内容进行签名使得审核更加困难。  
+ WCF 支持消息保护顺序 "加密前签名" 和 "签名前加密" （安全策略1.2）。 建议使用“加密前签名”，其原因包括：除非使用 WS-Security 1.1 SignatureConfirmation 机制，否则使用“签名前加密”进行保护的消息易受签名替换攻击，并且对加密内容进行签名使得审核更加困难。  
   
 ### <a name="23-signature-protection"></a>2.3 签名保护  
  在使用“签名前加密”时，建议保护签名以防止对加密内容或签名密钥进行猜测的蛮力攻击（尤其是在自定义令牌与弱密钥材料一起使用时）。  
   
 ### <a name="24-algorithm-suite"></a>2.4 算法组  
- WCF 支持安全策略 1.2 中列出的所有算法套件。  
+ WCF 支持安全策略1.2 中列出的所有算法套件。  
   
 ### <a name="25-key-derivation"></a>2.5 密钥派生  
- WCF 使用 WS-SecureConversation 中描述的"对称密钥的密钥派生"。  
+ WCF 使用 "对称密钥的密钥派生"，如 Ws-secureconversation 中所述。  
   
 ### <a name="26-signature-confirmation"></a>2.6 签名确认  
  签名确认可用于防止中间人攻击以保护签名集。  
@@ -163,13 +163,13 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
 |LaxTimestampFirst|与 Lax 相同，只是安全标头中的第一项必须为 wsse:Timestamp|  
 |LaxTimestampLast|与 lax 相同，只是安全标头中的最后一项必须为 wsse:Timestamp|  
   
- WCF 支持所有四种安全标头布局模式。 以下针对身份验证模式的安全标头结构和消息示例遵循“Strict”模式。  
+ WCF 支持安全标头布局的所有四种模式。 以下针对身份验证模式的安全标头结构和消息示例遵循“Strict”模式。  
   
-## <a name="3-common-message-security-parameters"></a>3. 通用消息安全参数  
+## <a name="3-common-message-security-parameters"></a>3. 常见消息安全参数  
  本节介绍每种身份验证模式的示例策略以及演示客户端和服务所交换的消息中的安全标头结构的示例。  
   
-### <a name="31-transport-protection"></a>3.1 运输保护  
- WCF 提供了五种身份验证模式，使用安全传输来保护消息;用户名超传输、证书过传送、KerberosOver 传输、已颁发令牌过传递和 Sspi协商过路传输。  
+### <a name="31-transport-protection"></a>3.1 传输保护  
+ WCF 提供五种使用安全传输来保护消息的身份验证模式。UserNameOverTransport、CertificateOverTransport、KerberosOverTransport、IssuedTokenOverTransport 和 SspiNegotiatedOverTransport。  
   
  这些身份验证模式是使用 SecurityPolicy 中描述的传输绑定构造的。 对于 UserNameOverTransport 身份验证模式，UsernameToken 是签名支持令牌。 对于其他身份验证模式，令牌作为签名认可令牌出现。 SecurityPolicy 的附录 C.1.2 和 C.1.3 详细介绍了安全标头布局。 下面的示例安全标头演示给定身份验证模式的 Strict 布局。  
   
@@ -345,7 +345,7 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
 ```  
   
 #### <a name="315-sspinegotiatedovertransport"></a>3.1.5 SspiNegotiatedOverTransport  
- 在此模式下，将使用协商协议来执行客户端和服务器身份验证。 如果可能，就使用 Kerberos，否则使用 NTLM。 产生的 SCT 作为认可支持令牌（总是从发起方发送到接收方）出现在 SOAP 层上。 在传输层，服务还是由 X.509 证书另外进行身份验证。 所用绑定为传输绑定。 "SPNEGO"（协商）描述了 WCF 如何使用 SSPI 二进制协商协议与 WS-Trust。 在通过 SPNEGO 握手建立 SCT 之后，本节将介绍安全标头示例。  
+ 在此模式下，将使用协商协议来执行客户端和服务器身份验证。 如果可能，就使用 Kerberos，否则使用 NTLM。 产生的 SCT 作为认可支持令牌（总是从发起方发送到接收方）出现在 SOAP 层上。 在传输层，服务还是由 X.509 证书另外进行身份验证。 所用绑定为传输绑定。 "SPNEGO" （协商）描述 WCF 如何将 SSPI 二进制协商协议用于 WS-TRUST。 在通过 SPNEGO 握手建立 SCT 之后，本节将介绍安全标头示例。  
   
  策略  
   
@@ -368,7 +368,7 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp></o:Security>  
 ```  
   
-### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 使用 X.509 证书进行服务身份验证  
+### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 使用 x.509 证书进行服务身份验证  
  本节介绍以下身份验证模式：MutualCertificate WSS1.0、Mutual CertificateDuplex、MutualCertificate WSS1.1、AnonymousForCertificate、UserNameForCertificate 和 IssuedTokenForCertificate。  
   
 #### <a name="321-mutualcertificate-wss10"></a>3.2.1 MutualCertificate WSS1.0  
@@ -470,7 +470,7 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
 ```  
   
 #### <a name="323-using-symmetricbinding-with-x509-service-authentication"></a>3.2.3 将 SymmetricBinding 用于 X.509 服务身份验证  
- “WSS10”对 X509 令牌方案提供有限支持。 例如，如果消息仅使用服务 X509 令牌，则无法为其提供签名和加密保护。 “WSS11”将 EncryptedKey 用作对称令牌。 现在，为服务的 X.509 证书加密的临时密钥可同时用于请求和响应消息保护。 下面第 3.4 节中介绍的身份验证模式使用此模式。  
+ “WSS10”对 X509 令牌方案提供有限支持。 例如，如果消息仅使用服务 X509 令牌，则无法为其提供签名和加密保护。 “WSS11”将 EncryptedKey 用作对称令牌。 现在，为服务的 X.509 证书加密的临时密钥可同时用于请求和响应消息保护。 下面3.4 部分中描述的身份验证模式使用此模式。  
   
  WS-SecurityPolicy 描述了此模式，即将 SymmetricBinding 用于服务 X509 令牌作为保护令牌。  
   
@@ -701,7 +701,7 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-9025b930-4f15-42fe-8e78-35d3a3480177-2"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### <a name="34-issuedtoken"></a>3.4 已发行令牌  
+#### <a name="34-issuedtoken"></a>3.4 IssuedToken  
  在此身份验证模式下，客户端不向服务进行身份验证，而是提供一个由 STS 颁发的令牌，并证明掌握了共享密钥。 服务也不向客户端进行身份验证，而是由 STS 将共享密钥作为颁发的令牌的一部分进行加密，这样，只有服务才能解密该密钥。 所用绑定为对称绑定，具有以下属性：  
   
  保护令牌：颁发的令牌，包含模式设置为 .../IncludeToken/AlwaysToRecipient  
@@ -751,7 +751,7 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-7e004f51-63a3-4069-9b03-6a1a311a3181-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> </c:DerivedKeyToken> ... <c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-### <a name="35-using-sslnegotiated-for-service-authentication"></a>3.5 使用 Ssl 协商进行服务身份验证  
+### <a name="35-using-sslnegotiated-for-service-authentication"></a>3.5 使用 SslNegotiated 进行服务身份验证  
  本节介绍的一组身份验证模式将对称绑定用于保护令牌，作为安全上下文令牌（符合 WS-SecureConversation (WS-SC)），其键值是通过对 WS-Trust (WS-T) RST/RSTR 消息执行 TLS 协议进行协商的。 有关使用 WS-Trust 实现 TLS 握手的详细信息，请参见 TLSNEGO 中的内容。 此处的消息示例中，我们假设已通过握手建立了带有关联安全上下文的 SCT。  
   
  所用绑定为对称绑定，具有以下属性：  
@@ -932,7 +932,7 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-ede0bd89-1f7e-4453-96ed-13e58c7ba8fe-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-### <a name="36-sspinegotiated"></a>3.6 斯皮谈判  
+### <a name="36-sspinegotiated"></a>3.6 SspiNegotiated  
  在此身份验证模式下，将使用协商协议来执行客户端和服务器身份验证。 如果可能，就使用 Kerberos，否则使用 NTLM。 所用绑定为对称绑定，具有以下属性：  
   
  保护令牌：SpnegoContextToken，包含模式设置为 .../IncludeToken/AlwaysToRecipient  
@@ -982,7 +982,7 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-e0aabc81-6942-4fe6-81bc-9def184565ea-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-### <a name="37-secureconversation"></a>3.7 安全对话  
+### <a name="37-secureconversation"></a>3.7 Ws-secureconversation  
  所用绑定为对称绑定，保护令牌为符合 WS-SecureConversation (WS-SC) 的 SCT。 该 SCT 是根据嵌套的绑定使用 WS-Trust (WS-Trust) 或 WS-SecureConversation (WS-SC) 协商的，该嵌套绑定本身是使用协商协议的对称绑定。 如果可能，协商协议将使用 Kerberos 来执行客户端和服务器身份验证。 如果无法使用 Kerberos，则退而使用 NTLM。  
   
  策略  

@@ -3,12 +3,12 @@ title: 分布式数据
 description: 整体和云本机应用程序中的数据存储对比。
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 2eff37dcc57ae39daac0ba10d10322be5eb4e321
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 28513f8691c06cf58ed14d57bf7830bb35d94852
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614131"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144391"
 ---
 # <a name="distributed-data"></a>分布式数据
 
@@ -120,7 +120,7 @@ Saga 模式通常编排为一系列相关事件，或作为一组相关命令进
 
 **图 5-7**。 CQRS 实现
 
-在上图中，实现了单独的命令和查询模型。 每个数据写入操作都会保存到写存储，然后传播到读取存储。 请密切注意数据传播过程如何以[最终一致性](http://www.cloudcomputingpatterns.org/eventual_consistency/)原则运行。 读取模型最终与写入模型同步，但在此过程中可能会有一些延迟。 我们将在下一节中介绍最终的一致性。
+在上图中，实现了单独的命令和查询模型。 每个数据写入操作都会保存到写存储，然后传播到读取存储。 请密切注意数据传播过程如何以[最终一致性](https://www.cloudcomputingpatterns.org/eventual_consistency/)原则运行。 读取模型最终与写入模型同步，但在此过程中可能会有一些延迟。 我们将在下一节中介绍最终的一致性。
 
 这种分离使读取和写入可以独立缩放。 读取操作使用为查询优化的架构，而写入操作使用针对更新进行优化的架构。 读取查询针对非规范化数据，而复杂业务逻辑可应用于写入模型。 同样，对写入操作的安全性可能比公开读取操作的安全性更严格。
 

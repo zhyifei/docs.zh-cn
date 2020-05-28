@@ -2,12 +2,12 @@
 title: 在 Windows 事件跟踪中跟踪事件
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 2c397bcfa809a1306e9c31bf3f652b055d997f38
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: fa5d86e327bc9c6eca85ed2908775de5f647f410
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094574"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144885"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>在 Windows 事件跟踪中跟踪事件
 
@@ -47,21 +47,21 @@ Windows Workflow Foundation 提供了跟踪基础结构，用于跟踪工作流�
 
 3. 若要运行解决方案，请按 F5。
 
-    默认情况下，该服务正在侦听端口53797（ http://localhost:53797/SampleWorkflowService.xamlx)。
+    默认情况下，该服务正在侦听端口53797（ `http://localhost:53797/SampleWorkflowService.xamlx` ）。
 
 4. 使用文件资源管理器打开 WCF 测试客户端。
 
-    WCF 测试客户端（Wcftestclient.exe）位于 \<Visual Studio 2010 安装文件夹 > \Common7\IDE\ 文件夹中。
+    WCF 测试客户端（Wcftestclient.exe）位于 \<Visual Studio 2010 installation folder> \Common7\IDE\ 文件夹中。
 
     默认 Visual Studio 2010 安装文件夹为 C:\Program Files\Microsoft Visual Studio 10.0。
 
 5. 在 WCF 测试客户端中，从 "**文件**" 菜单中选择 "**添加服务**"。
 
-    在输入框中添加终结点地址。 默认为 `http://localhost:53797/SampleWorkflowService.xamlx`。
+    在输入框中添加终结点地址。 默认值为 `http://localhost:53797/SampleWorkflowService.xamlx`。
 
 6. 打开事件查看器应用程序。
 
-    在调用服务之前事件查看器，从 "**开始**" 菜单中选择 "**运行**"，然后键入 `eventvwr.exe`。 确保事件日志正在侦听从工作流服务发出的跟踪事件。
+    在调用服务之前事件查看器，从 "**开始**" 菜单中选择 "**运行**"，然后键入 `eventvwr.exe` 。 确保事件日志正在侦听从工作流服务发出的跟踪事件。
 
 7. 在事件查看器的树视图中，导航到 "**事件查看器**"、"**应用程序和服务日志**" 和 " **Microsoft**"。 右键单击 " **Microsoft** " 并选择 "查看"，然后选择 "**查看**和**调试日志**" 以启用分析日志和调试日志
 
@@ -125,7 +125,7 @@ Windows Workflow Foundation 提供了跟踪基础结构，用于跟踪工作流�
 
 #### <a name="to-clean-up-optional"></a>清理（可选）
 
-1. 打开“事件查看器”。
+1. 打开事件查看器。
 
 2. 导航到**事件查看器**、**应用程序和服务日志**、 **Microsoft**、 **Windows**、**应用程序服务器应用程序**。 右键单击 "**分析**"，然后选择 "**禁用日志**"。
 
@@ -136,9 +136,9 @@ Windows Workflow Foundation 提供了跟踪基础结构，用于跟踪工作流�
 ## <a name="known-issue"></a>已知问题
 
 > [!NOTE]
-> “事件查看器”中存在一个已知问题，可能无法解码 ETW 事件。 您可能会看到与下面类似的错误消息。
+> 事件查看器中存在一个已知问题，即可能无法解码 ETW 事件。 您可能会看到与下面类似的错误消息。
 >
-> 找不到源 Microsoft \<ID > 的事件 ID 说明。 未在本地计算机上安装引发此事件的组件，或者安装已损坏。 可在本地计算机上安装或修复该组件。
+> \<id>无法找到来自源 Microsoft-Windows 应用程序服务器-应用程序的事件 ID 的描述。 未在本地计算机上安装引发此事件的组件，或者安装已损坏。 可在本地计算机上安装或修复该组件。
 >
 > 如果遇到此错误，请在操作窗格中单击“刷新”。 事件现在应能正确解码。
 

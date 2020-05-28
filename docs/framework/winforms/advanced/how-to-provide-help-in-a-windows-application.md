@@ -8,34 +8,34 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 2f9c0a9791db28cebd055ca446fdff16b9e276a4
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 405de333ce936a864047e827e60f56a930059e26
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959611"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84143585"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>如何：在 Windows 应用程序中提供帮助
 
-您可使用的<xref:System.Windows.Forms.HelpProvider>组件将附加到 Windows 窗体上的特定控件的帮助文件中的帮助主题。 帮助文件可以是 HTML、HTMLHelp 1.x 或更高版本的格式。
+您可以使用 <xref:System.Windows.Forms.HelpProvider> 组件将帮助文件中的帮助主题附加到 Windows 窗体上的特定控件。 帮助文件可以是 HTML、HTMLHelp 1.x 或更高版本的格式。
 
-## <a name="provide-help"></a>提供的帮助信息
+## <a name="provide-help"></a>提供帮助
 
-1. 在 Visual Studio 中，从**工具箱**，拖动<xref:System.Windows.Forms.HelpProvider>向窗体组件。
+1. 在 Visual Studio 的 "**工具箱**" 中，将 <xref:System.Windows.Forms.HelpProvider> 组件拖到窗体上。
 
      该组件将位于 Windows 窗体设计器底部的栏中。
 
-2. 在中**属性**窗口中，设置<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>属性设置为.chm、.col 或.htm 帮助文件。
+2. 在 "**属性**" 窗口中，将 <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> 属性设置为 .chm、Col 或 .htm 帮助文件。
 
-3. 选择你在窗体中，然后在另一个控件**属性**窗口中，设置<xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A>属性。
+3. 选择窗体上的其他控件，并在 "**属性**" 窗口中设置 <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> 属性。
 
-     这是通过传递的字符串<xref:System.Windows.Forms.HelpProvider>组件到帮助文件用于请求相应的帮助主题。
+     这是通过组件传递给 <xref:System.Windows.Forms.HelpProvider> 帮助文件的字符串，用于获得相应的帮助主题。
 
-4. 在中**属性**窗口中，将<xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A>属性的值的<xref:System.Windows.Forms.HelpNavigator>枚举。
+4. 在 "**属性**" 窗口中，将 <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> 属性设置为枚举的 <xref:System.Windows.Forms.HelpNavigator> 值。
 
      这可确定以何种方式将 **HelpKeyword** 属性传递给帮助系统。 下表显示可能的设置及其说明。
 
-    |成员名称|描述|
+    |成员名称|说明|
     |-----------------|-----------------|
     |AssociateIndex|指定在指定 URL 中执行指定主题的索引。|
     |查找|指定显示指定 URL 的搜索页。|
@@ -44,16 +44,16 @@ ms.locfileid: "65959611"
     |TableOfContents|指定显示 HTML 1.0 帮助文件的目录。|
     |主题|指定显示指定 URL 引用的主题。|
 
- 在运行时，按 f1 键时控件 — 对于您设置**HelpKeyword**并**HelpNavigator**属性 — 具有焦点将打开与该关联的帮助文件<xref:System.Windows.Forms.HelpProvider>组件。
+ 在运行时，在控件（已设置了**HelpKeyword**和**HelpNavigator**属性）具有焦点的情况下按 F1 将打开与该组件关联的帮助文件 <xref:System.Windows.Forms.HelpProvider> 。
 
- 目前， **HelpNamespace**属性支持以下三种格式的帮助文件：HTMLHelp 1.x、 HTMLHelp 2.0 中和 HTML。 因此，可以将 **HelpNamespace** 属性设置为 http:// 地址（如网页）。 如果此操作已完成，系统会打开默认浏览器，并显示作为定位标记的 **HelpKeyword** 属性中指定的字符串所对应的网页。 定位标记用于跳转到 HTML 页的特定部分。
+ 目前，**HelpNamespace** 属性支持下列三种格式的帮助文件：HTMLHelp 1.x、HTMLHelp 2.0 和 HTML。 因此，您可以将**HelpNamespace**属性设置为一个 `http://` 地址，例如网页。 如果此操作已完成，系统会打开默认浏览器，并显示作为定位标记的 **HelpKeyword** 属性中指定的字符串所对应的网页。 定位标记用于跳转到 HTML 页的特定部分。
 
 > [!IMPORTANT]
 > 一定要先仔细检查从客户端发来的所有信息，再在应用程序中使用这些信息。 恶意用户可能会尝试发送或注入可执行脚本、SQL 语句或其他代码。 显示用户的输入、将其存储在数据库中或使用它之前，请确定它没有包含可能的不安全信息。 通常的检查方法是在收到某个用户发来的输入后，使用正则表达式查找关键字，如“SCRIPT”。
 
-此外可以使用<xref:System.Windows.Forms.HelpProvider>组件显示弹出帮助，即使将其配置为显示 Windows 窗体上控件的帮助文件。 有关详细信息，请参阅[如何：显示弹出帮助](how-to-display-pop-up-help.md)。
+你还可以使用 <xref:System.Windows.Forms.HelpProvider> 组件显示弹出帮助，即使已将该组件配置为显示 Windows 窗体上控件的帮助文件。 有关详细信息，请参阅[如何：显示弹出帮助](how-to-display-pop-up-help.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：显示弹出帮助](how-to-display-pop-up-help.md)
 - [使用工具提示的控件帮助](control-help-using-tooltips.md)

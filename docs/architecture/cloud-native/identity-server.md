@@ -2,12 +2,12 @@
 title: 适用于云本机应用的 IdentityServer
 description: 构建适用于 Azure 的云本机 .NET 应用 |IdentityServer
 ms.date: 05/13/2020
-ms.openlocfilehash: 81cce30568becacda29f65f9506398790af321e0
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2128001f0d25b1edd795dd9676e0d76018c1fa3a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614027"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144365"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>适用于云原生应用程序的 IdentityServer
 
@@ -29,7 +29,7 @@ IdentityServer 是一种开源身份验证服务器，用于实现 ASP.NET Core 
 
 在上述每种情况下，都需要确保公开的功能不受未经授权的使用。 通常，这通常需要对请求资源的用户进行身份验证。 此身份验证可使用几种常用协议，如 SAML2p、WS 送连接或 OpenID Connect。 与 Api 通信通常使用 OAuth2 协议及其对安全令牌的支持。 从应用程序自身分离这些重要的交叉切削安全问题及其实现细节可确保一致性并提高安全性和可维护性。 将这些问题外包给专用产品（如 IdentityServer）可帮助每个应用程序自行解决这些问题。
 
-IdentityServer 提供在 ASP.NET Core 应用程序中运行的中间件，并添加对 OpenID Connect 和 OAuth2 的支持（请参阅[支持的规范](http://docs.identityserver.io/en/latest/intro/specs.html)）。 组织将使用 IdentityServer 中间件创建自己的 ASP.NET Core 应用程序，将其用作所有基于令牌的安全协议的 STS。 IdentityServer 中间件公开终结点以支持标准功能，其中包括：
+IdentityServer 提供在 ASP.NET Core 应用程序中运行的中间件，并添加对 OpenID Connect 和 OAuth2 的支持（请参阅[支持的规范](https://docs.identityserver.io/en/latest/intro/specs.html)）。 组织将使用 IdentityServer 中间件创建自己的 ASP.NET Core 应用程序，将其用作所有基于令牌的安全协议的 STS。 IdentityServer 中间件公开终结点以支持标准功能，其中包括：
 
 - 授权（对最终用户进行身份验证）
 - 标记（以编程方式请求标记）
@@ -40,7 +40,7 @@ IdentityServer 提供在 ASP.NET Core 应用程序中运行的中间件，并添
 - 吊销（令牌吊销）
 - 结束会话（触发器跨所有应用的单一注销）
 
-## <a name="getting-started"></a>入门
+## <a name="getting-started"></a>开始使用
 
 IdentityServer4 是开源的，可免费使用。 你可以使用其 NuGet 包将其添加到你的应用程序。 主包为[IdentityServer4](https://www.nuget.org/packages/IdentityServer4/) ，已在4000000次下载。 基包不包含任何用户界面代码，并且仅支持内存中的配置。 若要将其与数据库一起使用，你还需要一个数据访问接口（如[IdentityServer4](https://www.nuget.org/packages/IdentityServer4.EntityFramework) ），它使用 Entity Framework Core 来存储 IdentityServer 的配置和操作数据。 对于用户界面，可以将文件从[快速入门 UI 存储库](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI)复制到 ASP.NET Core MVC 应用程序中，以添加对使用 IdentityServer 中间件进行登录和注销的支持。
 
@@ -95,13 +95,13 @@ IdentityServer 还托管了公共演示网站，可用于测试各种协议和�
 
 ## <a name="javascript-clients"></a>JavaScript 客户端
 
-许多云本机应用程序在前端使用服务器端 Api 和丰富的客户端单页面应用程序（Spa）。 IdentityServer 通过 NPM 提供了一个[JavaScript 客户端](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)（ `oidc-client.js` ），可将其添加到 spa，使其能够使用 IdentityServer 进行登录、注销和 web api 的基于令牌的身份验证。
+许多云本机应用程序在前端使用服务器端 Api 和丰富的客户端单页面应用程序（Spa）。 IdentityServer 通过 NPM 提供了一个[JavaScript 客户端](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)（ `oidc-client.js` ），可将其添加到 spa，使其能够使用 IdentityServer 进行登录、注销和 web api 的基于令牌的身份验证。
 
 ## <a name="references"></a>参考
 
-- [IdentityServer 文档](http://docs.identityserver.io/en/latest/)
+- [IdentityServer 文档](https://docs.identityserver.io/en/latest/)
 - [应用程序类型](https://docs.microsoft.com/azure/active-directory/develop/app-types)
-- [JavaScript OIDC 客户端](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
+- [JavaScript OIDC 客户端](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]
 >[上一页](azure-active-directory.md)

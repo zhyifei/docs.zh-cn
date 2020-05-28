@@ -98,11 +98,6 @@
         - name: 对库进行单元测试
           href: tutorials/testing-library-with-visual-studio.md
           displayName: 'tutorials, visual studio, vs'
-        - name: 使用库
-          href: tutorials/consuming-library-with-visual-studio.md
-          displayName: 'tutorials, visual studio, vs'
-        - name: 实时单元测试
-          href: /visualstudio/test/live-unit-testing-start
         - name: 安装并使用包
           href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
           displayName: 'tutorials, visual studio, vs'

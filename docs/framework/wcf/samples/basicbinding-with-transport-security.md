@@ -2,12 +2,12 @@
 title: 使用传输安全的 BasicBinding
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-ms.openlocfilehash: 6c7426de0a2d2b0001442960819dd385f7b9ea9e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: adf245d29ca57d919957276dfc54d82a0f45373b
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716068"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144872"
 ---
 # <a name="basicbinding-with-transport-security"></a>使用传输安全的 BasicBinding
 
@@ -56,7 +56,7 @@ ms.locfileid: "74716068"
 </system.serviceModel>
 ```
 
-由于本示例中使用的证书是用 Makecert 创建的测试证书，因此，当你尝试在浏览器中访问 HTTPS：地址（如 https://localhost/servicemodelsamples/service.svc ）时，将出现安全警报。 若要允许 Windows Communication Foundation （WCF）客户端使用测试证书，则会向客户端添加一些额外的代码以禁止显示安全警报。 使用真正的证书时不需要此代码和附带的类。
+由于本示例中使用的证书是用 Makecert 创建的测试证书，因此，当你尝试在浏览器中访问 HTTPS：地址（例如）时，将出现安全 `https://localhost/servicemodelsamples/service.svc` 警报。 若要允许 Windows Communication Foundation （WCF）客户端使用测试证书，则会向客户端添加一些额外的代码以禁止显示安全警报。 使用真正的证书时不需要此代码和附带的类。
 
 ```csharp
 // This code is required only for test certificates such as those

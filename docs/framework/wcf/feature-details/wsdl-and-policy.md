@@ -2,57 +2,57 @@
 title: WSDL 和策略
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b032f91999695d848f20fac5009047dcc2e20451
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929657"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144677"
 ---
 # <a name="wsdl-and-policy"></a>WSDL 和策略
-本主题介绍 Windows Communication Foundation (WCF) WSDL 1.1、 Ws-policy 和 Ws-policyattachment 实现详细信息，以及其他 Ws-policy 断言和 WSDL 1.1 扩展引入的 WCF。  
+本主题介绍 Windows Communication Foundation （WCF） WSDL 1.1、WS 策略和 Ws-policyattachment 实现的详细信息，以及 WCF 引入的附加 WS 策略断言和 WSDL 1.1 扩展。  
   
- WCF 实现以及约束和声明本文档中所述提交给 W3C 的 Ws-policy 和 Ws-policyattachment 规范。  
+ WCF 通过本文档中所述的约束和说明，实现提交给 W3C 的 WS 策略和 Ws-policyattachment 规范。  
   
  本文档使用下表中所示的前缀和命名空间。  
   
 |前缀|命名空间|  
 |------------|---------------|  
-|wsp (WS-Policy 1.2)|http://schemas.xmlsoap.org/ws/2004/09/policy|  
-|wsp (WS-Policy 1.5)|http://www.w3.org/ns/ws-policy|  
-|http|http://schemas.microsoft.com/ws/06/2004/policy/http|  
-|msmq|http://schemas.microsoft.com/ws/06/2004/mspolicy/msmq|  
-|msf|http://schemas.microsoft.com/ws/2006/05/framing/policy|  
-|mssp|http://schemas.microsoft.com/ws/2005/07/securitypolicy|  
-|msc|http://schemas.microsoft.com/ws/2005/12/wsdl/contract|  
-|cdp|http://schemas.microsoft.com/net/2006/06/duplex|  
+|wsp (WS-Policy 1.2)|`http://schemas.xmlsoap.org/ws/2004/09/policy`|  
+|wsp (WS-Policy 1.5)|`http://www.w3.org/ns/ws-policy`|  
+|http|`http://schemas.microsoft.com/ws/06/2004/policy/http`|  
+|msmq|`http://schemas.microsoft.com/ws/06/2004/mspolicy/msmq`|  
+|msf|`http://schemas.microsoft.com/ws/2006/05/framing/policy`|  
+|mssp|`http://schemas.microsoft.com/ws/2005/07/securitypolicy`|  
+|msc|`http://schemas.microsoft.com/ws/2005/12/wsdl/contract`|  
+|cdp|`http://schemas.microsoft.com/net/2006/06/duplex`|  
   
 ## <a name="wcf-wsdl11-extensions"></a>WCF WSDL1.1 扩展  
- WCF 使用下列 WSDL1.1 扩展来描述协定会话需求。  
+ WCF 使用以下 WSDL 1.1 扩展来描述协定会话要求。  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
- xs: boolean，指示此操作会启动 WCF 会话;默认值是`false`。  
+ xs： boolean，指示此操作启动 WCF 会话;默认值为 `false` 。  
   
  wsdl:portType/wsdl:operation/@msc:isTerminating  
- xs: boolean，指示此操作将终止 WCF 会话;默认值是`false`。  
+ xs： boolean，指示此操作终止 WCF 会话;默认值为 `false` 。  
   
  wsdl:portType/wsdl:operation/@msc:usingSession  
  xs:boolean，指示此协定要求建立会话。  
   
 ### <a name="soap-1x-http-binding-transport-uris"></a>SOAP 1.x HTTP 绑定传输 URI  
- WCF 使用以下 Uri 来指示要用于 WSDL 1.1、soap 1.1 和 SOAP 1.2 绑定扩展元素的传输。  
+ WCF 使用以下 Uri 来指示要用于 WSDL 1.1、SOAP 1.1 和 SOAP 1.2 绑定扩展元素的传输。  
   
-|传输|URI|  
+|Transport|URI|  
 |---------------|---------|  
-|HTTP|http://schemas.xmlsoap.org/soap/http|  
-|TCP|http://schemas.microsoft.com/soap/tcp|  
-|MSMQ|http://schemas.microsoft.com/soap/msmq|  
-|命名管道|http://schemas.microsoft.com/soap/named-pipe|  
+|HTTP|`http://schemas.xmlsoap.org/soap/http`|  
+|TCP|`http://schemas.microsoft.com/soap/tcp`|  
+|MSMQ|`http://schemas.microsoft.com/soap/msmq`|  
+|命名管道|`http://schemas.microsoft.com/soap/named-pipe`|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>由 WCF 实现的策略断言  
- 除了在 Web 服务规范中引入的策略断言 (WS-*)，并在本文档其他部分中所述，WCF 实现以下策略断言。  
+ 除了在 Web Services 规范（WS-*）中引入的策略断言，以及本文档的其他部分所述，WCF 还实现了以下策略断言。  
   
-|策略断言|策略主题|描述|  
+|策略断言|策略主题|说明|  
 |----------------------|--------------------|-----------------|  
 |http:HttpBasicAuthentication|终结点|终结点使用 HTTP 基本身份验证。|  
 |http:HttpDigestAuthentication|终结点|终结点使用 HTTP 摘要式身份验证。|  
@@ -72,7 +72,7 @@ ms.locfileid: "61929657"
 |mssp:MustNotSendCancel|嵌套|指定一个需求，即不要将使用 Cancel 绑定 [WS-Trust、WS-SC] 的请求安全令牌 (RST) 请求消息 [WS-Trust] 发送给给定 SecurityContextToken 的颁发机构。 如果此断言存在，则不得将此类请求消息发送给颁发机构。 如果此断言不存在，则可以将此类请求消息发送给颁发机构。|  
 |mssp:RequireClientCertificate|嵌套|这一可选元素指定需要作为 TLSNEGO 协议的一部分提供的客户端证书。 如果此断言存在，则必须提供客户端证书。 如果此断言不存在，则不得提供客户端证书。 此断言不得在 mssp:SslContextToken 外部使用。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [自定义 WSDL 发布](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
 - [如何：导出自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
