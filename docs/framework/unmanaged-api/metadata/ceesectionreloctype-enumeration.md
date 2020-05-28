@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 124656f6-0dad-4ceb-9043-d3869ab65cde
 topic_type:
 - apiref
-ms.openlocfilehash: 44a84e0752eecc1c694f3b8cf6e568b72b7d0f5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78b30f624bd71234e8f1b56600b3a23d15fdf517
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176209"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006022"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType 枚举
-提供值以影响调用 ICeeGen 时发出的`reloc`指令类型[：：AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)。  
+提供一些值，以影响对 `reloc` [ICeeGen：： AddSectionReloc](iceegen-addsectionreloc-method.md)的调用中发出的指令的类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,35 +50,35 @@ typedef enum  {
   
 ## <a name="members"></a>成员  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
-|`srRelocAbsolute`|仅生成与节相关的`reloc`，不会将任何内容发送到 .reloc 节。|  
-|`srRelocHighLow`|为指针`reloc`大小的位置生成 。 根据平台的不同，这转换为BASED_HIGHLOW或BASED_DIR64。|  
-|`srRelocHighAdj`|为`reloc`32 位数字的前 16 位生成 一个，其中底部 16 位包含在 .reloc 表中的下一个单词中。|  
-|`srRelocMapToken`|生成令牌映射重新定位，不向 .reloc 部分发送任何内容。|  
-|`srRelocRelative`|指示该值是相对地址修复。|  
-|`srRelocFilePos`|仅生成与节相关的`reloc`，不会将任何内容发送到 .reloc 节。 这是`reloc`相对于节的文件位置，而不是节的虚拟地址。|  
-|`srRelocCodeRelative`|指定与代码相关的地址修复。|  
-|`srRelocIA64Imm64`|在`reloc`ia64 指令中为 64`movl`位地址生成 。|  
-|`srRelocDir64`|为`reloc`64 位地址生成 。|  
-|`srRelocIA64PcRel25`|在`reloc`ia64`br.call`指令中为 25 位 PC 相关地址生成 。|  
-|`srRelocIA64PcRel64`|在`reloc`ia64`brl.call`指令中为 64 位 PC 相关地址生成 。|  
-|`srRelocAbsoluteTagged`|生成 30 位节相对`reloc`， 用于标记的指针值。|  
-|`srRelocSentinel`|一个哨点值，可帮助确保此枚举的任何添加都反映到内部`reloc`名称数组。|  
-|`srNoBaseReloc`|指定不发出基`reloc`。|  
-|`srRelocPtr`|指示内存的预修复内容是指针而不是节偏移量的值。|  
+|`srRelocAbsolute`|仅生成一个相对节 `reloc` ，不向 .reloc 节发送任何内容。|  
+|`srRelocHighLow`|`reloc`为指针大小的位置生成。 这会根据平台转换为 BASED_HIGHLOW 或 BASED_DIR64。|  
+|`srRelocHighAdj`|`reloc`为32位数字的前16位生成，其中后16位包含在 .reloc 表中的下一个单词中。|  
+|`srRelocMapToken`|生成一个标记映射重定位，无需将其发送到 .reloc 部分。|  
+|`srRelocRelative`|指示值是相对地址链接地址。|  
+|`srRelocFilePos`|仅生成一个相对节 `reloc` ，不向 .reloc 节发送任何内容。 这与 `reloc` 节的文件位置相关，而不是部分的虚拟地址。|  
+|`srRelocCodeRelative`|指定代码相对地址链接地址。|  
+|`srRelocIA64Imm64`|`reloc`为 ia64 指令中的64位地址生成 `movl` 。|  
+|`srRelocDir64`|`reloc`为64位地址生成。|  
+|`srRelocIA64PcRel25`|`reloc`为 ia64 指令中的25位 PC 相对地址生成 `br.call` 。|  
+|`srRelocIA64PcRel64`|`reloc`为 ia64 指令中的64位电脑相对地址生成 `brl.call` 。|  
+|`srRelocAbsoluteTagged`|生成一个与标记的指针值相对应的30位部分 `reloc` 。|  
+|`srRelocSentinel`|一个 sentinel 值，用于帮助确保对此枚举的任何添加都反映到内部 `reloc` 名称数组中。|  
+|`srNoBaseReloc`|指定不发出 base `reloc` 。|  
+|`srRelocPtr`|一个值，该值指示内存的修正内容是指针而不是节偏移量。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 作为资源包含在 MsCorEE.dll 中  
+ **库：** 作为资源包括在 Mscoree.dll 中  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
-- [AddSectionReloc 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)
+- [元数据枚举](metadata-enumerations.md)
+- [ICeeGen 接口](iceegen-interface.md)
+- [AddSectionReloc 方法](iceegen-addsectionreloc-method.md)

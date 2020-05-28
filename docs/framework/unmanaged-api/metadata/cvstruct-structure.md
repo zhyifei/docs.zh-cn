@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9e4e497-d5fb-464b-991c-3bdd824664fd
 topic_type:
 - apiref
-ms.openlocfilehash: 19ee3097dfe80ba9dcbdaf316db0fd165b50abc6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 84791eba7c95d3278bd4650bd7d660e98fcb79d8
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436425"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008908"
 ---
 # <a name="cvstruct-structure"></a>CVStruct 结构
 包含在安装模块或复合图像时所使用的信息。  
@@ -35,24 +35,24 @@ typedef struct {
 } CVStruct;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
-|重要變更|主版本的内部版本号。|  
-|次要變更|次版本号。|  
-|子项|子生成号。|  
+|主要|主版本的内部版本号。|  
+|Minor|次版本号。|  
+|Sub|子生成号。|  
 |构建|内部版本号。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
  **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [元数据结构](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [元数据结构](metadata-structures.md)

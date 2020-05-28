@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-ms.openlocfilehash: 1799e0af91fa6074f174120b29e2302a27230c62
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b4694efffa0a3dd6fed1f97fc2359c5eb335d440
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141465"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006410"
 ---
 # <a name="startup_flags-enumeration"></a>STARTUP_FLAGS 枚举
 包含指示公共语言运行时（CLR）的启动行为的值。 默认情况下，垃圾回收不是并发的，并且仅将基类库加载到非特定于域的区域。  
@@ -51,7 +51,7 @@ typedef enum {
 } STARTUP_FLAGS;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
 |成员|描述|  
 |------------|-----------------|  
@@ -68,19 +68,19 @@ typedef enum {
 |`STARTUP_LEGACY_IMPERSONATION`|指定模拟应默认情况下不流经异步点。|  
 |`STARTUP_DISABLE_COMMITTHREADSTACK`|指定当线程开始运行时，不应提交完整线程堆栈。|  
 |`STARTUP_ALWAYSFLOW_IMPERSONATION`|指定通过平台调用实现的托管模拟和模拟将流经异步点。 默认情况下，仅托管模拟将流经异步点。|  
-|`STARTUP_TRIM_GC_COMMIT`|指定在系统内存不足时垃圾回收将使用较少的已提交空间。 请参阅[针对共享的 Web 托管的优化](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md)`gcTrimCommitOnLowMemory`。|  
-|`STARTUP_ETW`|指定为公共语言运行时事件启用 Windows 事件跟踪（ETW）。 从 Windows Vista 开始，始终启用事件跟踪，因此该标志不起作用。 请参阅[控制 .NET Framework 日志记录](../../../../docs/framework/performance/controlling-logging.md)。|  
-|`STARTUP_ARM`|指定启用应用程序域资源监视。 请参阅 <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> 属性和[\<appDomainResourceMonitoring > 元素](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)。|  
+|`STARTUP_TRIM_GC_COMMIT`|指定在系统内存不足时垃圾回收将使用较少的已提交空间。 请 `gcTrimCommitOnLowMemory` 参阅[针对共享 Web 托管的优化](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md)。|  
+|`STARTUP_ETW`|指定为公共语言运行时事件启用 Windows 事件跟踪（ETW）。 从 Windows Vista 开始，始终启用事件跟踪，因此该标志不起作用。 请参阅[控制 .NET Framework 日志记录](../../performance/controlling-logging.md)。|  
+|`STARTUP_ARM`|指定启用应用程序域资源监视。 请参见 <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> 属性和[ \<appDomainResourceMonitoring> 元素](../../configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** Mscoree.dll  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [承载枚举](hosting-enumerations.md)

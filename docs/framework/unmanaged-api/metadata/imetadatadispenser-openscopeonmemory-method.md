@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 14218249-bdec-48ae-b5fc-9f57f7ca8501
 topic_type:
 - apiref
-ms.openlocfilehash: 492c37540ad68b5b134520218eedc59013c68519
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 69e5e05012d2b44a76a986591ec990f66bf8ae20
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175923"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007320"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a>IMetaDataDispenser::OpenScopeOnMemory 方法
-打开包含现有元数据的内存区域。 也就是说，此方法将打开指定内存区域，其中现有数据被视为元数据。  
+打开包含现有元数据的内存区域。 也就是说，此方法将打开一个指定的内存区域，其中的现有数据将被视为元数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,47 +37,47 @@ HRESULT OpenScopeOnMemory (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `pData`  
- [在]指定内存区域的起始地址的指针。  
+ 中指定内存区域起始地址的指针。  
   
  `cbData`  
- [在]内存区域的大小（以字节为单位）。  
+ 中内存区域的大小（以字节为单位）。  
   
  `dwOpenFlags`  
- [在][CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)枚举的值，用于指定打开的模式（读取、写入等）。  
+ 中[CorOpenFlags](coropenflags-enumeration.md)枚举的值，该值指定用于打开的模式（读取、写入等）。  
   
  `riid`  
- [在]要返回的所需元数据接口的 IID;调用方将使用接口导入（读取）或发出（写入）元数据。  
+ 中要返回的所需元数据接口的 IID;调用方将使用接口导入（读取）或发出（写入）元数据。  
   
- 的值`riid`必须指定其中一个"导入"或"发射"接口。 有效值IID_IMetaDataEmit、IID_IMetaDataImport、IID_IMetaDataAssemblyEmit、IID_IMetaDataAssemblyImport、IID_IMetaDataEmit2或IID_IMetaDataImport2。  
+ 的值 `riid` 必须指定一个 "导入" 或 "发出" 接口。 有效值为 IID_IMetaDataEmit、IID_IMetaDataImport、IID_IMetaDataAssemblyEmit、IID_IMetaDataAssemblyImport、IID_IMetaDataEmit2 或 IID_IMetaDataImport2。  
   
  `ppIUnk`  
- [出]指向返回接口的指针。  
+ 弄指向返回的接口的指针。  
   
 ## <a name="remarks"></a>备注  
- 可以使用"导入"接口之一的方法查询元数据的内存副本，也可以添加到使用"emit"接口之一的方法。  
+ 可以使用 "导入" 接口中的方法查询元数据的内存中副本，或使用 "发出" 接口之一中的方法将其添加到中。  
   
- 该方法`OpenScopeOnMemory`类似于[IMetaDataDispenser：：openScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)方法，只不过感兴趣的元数据已存在于内存中，而不是磁盘上的文件中。  
+ `OpenScopeOnMemory`方法类似于[IMetaDataDispenser：： OpenScope](imetadatadispenser-openscope-method.md)方法，不同之处在于相关元数据已存在于内存中，而不是位于磁盘上的文件中。  
   
- 如果内存的目标区域不包含通用语言运行时 （CLR） 元数据，则`OpenScopeOnMemory`该方法将失败。  
+ 如果内存的目标区域不包含公共语言运行时（CLR）元数据，则该 `OpenScopeOnMemory` 方法将失败。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataDispenser 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
-- [IMetaDataDispenserEx 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataDispenser 接口](imetadatadispenser-interface.md)
+- [IMetaDataDispenserEx 接口](imetadatadispenserex-interface.md)
+- [IMetaDataAssemblyEmit 接口](imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport 接口](imetadataassemblyimport-interface.md)
+- [IMetaDataEmit 接口](imetadataemit-interface.md)
+- [IMetaDataEmit2 接口](imetadataemit2-interface.md)
+- [IMetaDataImport 接口](imetadataimport-interface.md)
+- [IMetaDataImport2 接口](imetadataimport2-interface.md)

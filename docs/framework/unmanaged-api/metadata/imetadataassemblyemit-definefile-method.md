@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-ms.openlocfilehash: cabd6a47e5d6fc2a4cea87b16d349d9c778b3507
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 61d81c94e3a9c092b5d45791962635c761e8da8a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176053"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008139"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile 方法
 创建包含此程序集引用的程序集的元数据的 `File` 元数据结构，并返回关联的元数据标记。  
@@ -37,34 +37,34 @@ HRESULT DefineFile (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `szName`  
- [在]要使用的文件的名称。  
+ 中要使用的文件的名称。  
   
  `pbHashValue`  
- [在]指向与程序集关联的哈希数据的指针。  
+ 中指向与程序集关联的哈希数据的指针。  
   
  `cbHashValue`  
- [在]的大小（以字节为单位）。 `pbHashValue`  
+ 中的大小（以字节为单位） `pbHashValue` 。  
   
  `dwFileFlags`  
- [在]指定属性设置的值的`FileFlags`位组合。  
+ 中值的按位组合 `FileFlags` ，用于指定属性设置。  
   
  `pmdf`  
- [出]指向返回`File`的令牌的指针。  
+ 弄指向返回的标记的指针 `File` 。  
   
 ## <a name="remarks"></a>备注  
- 必须`File`为生成此程序集时属于此程序集的每个文件定义一个元数据结构，不包括包含元数据的文件。  
+ `File`在生成此程序集时，必须为作为此程序集的一部分的每个文件定义一个元数据结构，其中包含元数据的文件除外。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit 接口](imetadataassemblyemit-interface.md)

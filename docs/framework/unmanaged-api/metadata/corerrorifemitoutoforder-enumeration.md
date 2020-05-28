@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d758aad-29a7-44fe-9481-bbff5b799a32
 topic_type:
 - apiref
-ms.openlocfilehash: 57460ba30a8ce974b5ca89f76796c4dcf49ffecf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fec049297bfa12d86cb2a7f7950e84ae540832b1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443582"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007424"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>CorErrorIfEmitOutOfOrder 枚举
 包含一些标志值，用于指示无序发出元数据时应生成错误消息的条件。  
@@ -41,9 +41,9 @@ typedef enum CorErrorIfEmitOutOfOrder {
 } CorErrorIfEmitOutOfOrder;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
 |`MDErrorOutOfOrderDefault`|指示默认行为，不会生成错误消息。|  
 |`MDErrorOutOfOrderNone`|指示编译器不应生成错误消息。|  
@@ -55,12 +55,12 @@ typedef enum CorErrorIfEmitOutOfOrder {
 |`MDEventOutOfOrder`|指示当事件顺序发出时，编译器应生成错误消息。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [元数据枚举](metadata-enumerations.md)

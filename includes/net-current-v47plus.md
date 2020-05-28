@@ -6,4 +6,4 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65629963"
 ---
-自 4.7 之后可用
+自4.7 之后可用

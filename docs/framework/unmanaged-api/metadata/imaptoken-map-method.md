@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9b4bf2f-1098-43d6-9619-a99b4bda1940
 topic_type:
 - apiref
-ms.openlocfilehash: 428b022ed560648f59798154d5987d382938c280
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 027694cee1b3e4d990796ba31300918f6d859679
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176066"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008191"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map 方法
 使用元数据签名映射程序集之间的关系。  
@@ -34,25 +34,25 @@ HRESULT Map (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `tkImp`  
- [在]表示导入的代码对象的元数据令牌。  
+ 中表示导入的代码对象的元数据标记。  
   
  `tkEmit`  
- [在]表示已发出的代码对象的元数据令牌。  
+ 中表示发出的代码对象的元数据标记。  
   
 ## <a name="remarks"></a>备注  
- 当令牌重新映射在合并期间发生时，原始令牌在导入的（源）元数据作用域中作用域，新令牌在已发出（目标）元数据作用域中作用域。  
+ 如果在合并过程中发生令牌重新映射，则原始令牌的作用域为导入（源）元数据范围内，并且新令牌的范围限定为发出（目标）元数据范围。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMapToken 接口](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)
+- [IMapToken 接口](imaptoken-interface.md)

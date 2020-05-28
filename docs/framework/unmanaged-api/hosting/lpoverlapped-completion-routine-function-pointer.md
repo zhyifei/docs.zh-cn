@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5fb645d9-b818-401c-8c2c-c30d86de58ba
 topic_type:
 - apiref
-ms.openlocfilehash: 103ac75e7c3eaf9739c3a448ff1c052c158621db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c0bdd9e59f5794dbb0d447dc2cc6cb682bfdf09f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090905"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008477"
 ---
 # <a name="lpoverlapped_completion_routine-function-pointer"></a>LPOVERLAPPED_COMPLETION_ROUTINE 函数指针
 指向一个函数，该函数在设备的重叠（即异步） i/o 完成时通知宿主。  
@@ -49,17 +49,17 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
  中指向结构的指针，该结构包含用于完成 i/o 请求的信息。  
   
 ## <a name="remarks"></a>备注  
- `LPOVERLAPPED_COMPLETION_ROUTINE` 点的函数是回调函数，并且必须由宿主应用程序的编写器实现。 回调函数允许主机处理已完成的 i/o 请求。  
+ 指向该函数的 `LPOVERLAPPED_COMPLETION_ROUTINE` 点是回调函数，并且必须由宿主应用程序的编写器实现。 回调函数允许主机处理已完成的 i/o 请求。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
  **库：** Mscorwks.dll  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [弃用的 CLR 承载函数](deprecated-clr-hosting-functions.md)

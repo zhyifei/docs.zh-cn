@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-ms.openlocfilehash: 2807458549db02598ba05f2aa80fa6ea6fbc5a13
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a58e03875ec021b41479085fa9e27a4321ae965e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177697"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004343"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam 方法
-为指定令牌引用的方法创建具有指定签名的参数定义，并获取该参数定义的令牌。  
+创建具有指定标记所引用的方法的指定签名的参数定义，并获取该参数定义的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,44 +40,44 @@ HRESULT DefineParam (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  `md`  
- [在]正在定义其参数的方法的令牌。  
+ 中正在定义其参数的方法的标记。  
   
  `ulParamSeq`  
- [在]参数序列号。  
+ 中参数序列号。  
   
  `szName`  
- [在]Unicode 中参数的名称。  
+ 中Unicode 中参数的名称。  
   
  `dwParamFlags`  
- [在]参数的标志。 这是值的`CorParamAttr`位掩码。  
+ 中参数的标志。 这是一个值的位掩码 `CorParamAttr` 。  
   
  `dwCPlusTypeFlag`  
- [在]`ELEMENT_TYPE_` *\**  
+ [in] `ELEMENT_TYPE_` *\** 用于常量值。  
   
  `pValue`  
- [在]参数的常量值。  
+ 中参数的常数值。  
   
  `cchValue`  
- [在]的大小（以 Unicode 字符表示`pValue`）  
+ 中的大小（以 Unicode 字符为格式） `pValue` 。  
   
  `ppd`  
- [出]分配的`mdParamDef`令牌。  
+ 弄`mdParamDef`分配的令牌。  
   
 ## <a name="remarks"></a>备注  
- 中的序列值以`ulParamSeq`1 开头的参数。 返回值的序列号为 0。  
+ 参数的序列值 `ulParamSeq` 从1开始。 返回值的序列号为0。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 科尔赫  
+ **标头：** Cor  
   
- **库：** 用作 MSCorEE.dll 中的资源  
+ **库：** 用作 Mscoree.dll 中的资源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 
-- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 接口](imetadataemit-interface.md)
+- [IMetaDataEmit2 接口](imetadataemit2-interface.md)
