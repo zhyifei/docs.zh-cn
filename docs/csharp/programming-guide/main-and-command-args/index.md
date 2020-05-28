@@ -12,18 +12,18 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 190216b01ea416aedbca270a6d7a5acbf0c2e797
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 723884dd448232777ae2cfeac5bfcf5ea24363b0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200114"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007736"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令行参数（C# 编程指南）
 
 `Main` 方法是 C# 应用程序的入口点。 （库和服务不要求使用 `Main` 方法作为入口点）。`Main` 方法是应用程序启动后调用的第一个方法。
 
- C# 程序中只能有一个入口点。 如果多个类包含 `Main` 方法，必须使用 **/main** 编译器选项来编译程序，以指定将哪个 `Main` 方法用作入口点。 有关详细信息，请参阅 [-main（C# 编译器选项）](../../language-reference/compiler-options/main-compiler-option.md)。
+C# 程序中只能有一个入口点。 如果多个类包含 `Main` 方法，必须使用 `-main` 编译器选项来编译程序，以指定将哪个 `Main` 方法用作入口点。 有关详细信息，请参阅 [-main（C# 编译器选项）](../../language-reference/compiler-options/main-compiler-option.md)。
 
 [!code-csharp[csProgGuideMain#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#17)]
 

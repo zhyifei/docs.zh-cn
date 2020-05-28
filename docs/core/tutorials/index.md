@@ -4,50 +4,56 @@ description: 请按照教程学习了解 .NET Core 以在 Mac、Linux 和 Window
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 84784787465bec43cc460d34ca84e4baa5a15d7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9fb87180bb001a7f54d93c6e95631562103c49e8
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77625929"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840918"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>通过探讨这些教程来学习 .NET Core 和 .NET Core SDK 工具
 
 以下教程可用于了解 .NET Core。
 
-## <a name="create-applications-with-visual-studio"></a>使用 Visual Studio 创建应用程序
+## <a name="use-visual-studio"></a>使用 Visual Studio
 
-- [创建 Hello World 控制台应用程序](with-visual-studio.md)
-- [调试 Hello World 应用程序](debugging-with-visual-studio.md)
-- [发布 Hello World 应用程序](publishing-with-visual-studio.md)
-- [生成类库](library-with-visual-studio.md)
-- [测试类库](testing-library-with-visual-studio.md)
+- [创建控制台应用](with-visual-studio.md)
+- [创建 F# 控制台应用](../../fsharp/get-started/get-started-visual-studio.md)
+- [调试应用](debugging-with-visual-studio.md)
+- [发布应用](publishing-with-visual-studio.md)
+- [创建类库](library-with-visual-studio.md)
+- [对类库进行单元测试](testing-library-with-visual-studio.md)
 - [使用类库](consuming-library-with-visual-studio.md)
-- [Azure Cosmos DB：SQL API 和 .NET Core 入门](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [安装并使用包](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
+- [创建和发布包](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
 
-## <a name="build-applications-with-visual-studio-code"></a>使用 Visual Studio Code 生成应用程序
+## <a name="use-visual-studio-code"></a>使用 Visual Studio Code
 
-- [C# 和 Visual Studio Code 入门](with-visual-studio-code.md)
-- [macOS 上的 .NET Core 入门](using-on-macos.md)
+如果要使用 Visual Studio Code 或其他代码编辑器，请选择这些教程。 全都使用 CLI 来处理 .NET Core 开发任务，因此全都可用于任意代码编辑器。
 
-## <a name="build-applications-with-visual-studio-for-mac"></a>使用 Visual Studio for Mac 生成应用程序
+- [创建控制台应用](with-visual-studio-code.md)
+- [创建和发布控制台应用](cli-create-console-app.md)
+- [创建 F# 控制台应用](../../fsharp/get-started/get-started-vscode.md)
+- [创建库并对其进行单元测试 - macOS](using-on-macos.md)
+- [安装并使用包](/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli)
+- [创建和发布包](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
 
-- [借助 Visual Studio for Mac 在 macOS 上开始使用 .NET Core](using-on-mac-vs.md)
-- [使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案](using-on-mac-vs-full-solution.md)
+## <a name="use-visual-studio-for-mac"></a>使用 Visual Studio for Mac
 
-## <a name="build-applications-with-the-net-core-cli"></a>使用 .NET Core CLI 生成应用程序
+- [创建控制台应用](using-on-mac-vs.md)
+- [创建库并对其进行单元测试](using-on-mac-vs-full-solution.md)
+- [安装并使用包](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
-- [使用 .NET Core CLI 在 Windows/Linux/macOS 上开始使用 .NET Core](cli-create-console-app.md)
-- [使用 .NET Core CLI 组织和测试项目](testing-with-cli.md)
-- [F# 入门](../../fsharp/get-started/get-started-command-line.md)
+## <a name="advanced-topics"></a>高级主题
 
-## <a name="other"></a>其他
-
-- [在 .NET Core 中使用 dotnet测试的单元测试](../testing/unit-testing-with-dotnet-test.md)
-- [使用 MSTest 和 .NET Core 执行单元测试](../testing/unit-testing-with-mstest.md)
-- [使用跨平台工具开发库](libraries.md)
-- [从本机代码承载 .NET Core](netcore-hosting.md)
+- [如何创建库](libraries.md)
+- [使用 xUnit 对应用进行单元测试](testing-with-cli.md)
+- [结合使用 C#/VB/F# 和 NUnit/xUnit/MSTest 进行单元测试](../testing/index.md)
+- [使用 Visual Studio 进行实时单元测试](/visualstudio/test/live-unit-testing-start)
 - [创建 CLI 的模板](cli-templates-create-item-template.md)
 - [创建和使用适用于 CLI 的工具](../tools/global-tools-how-to-create.md)
+- [使用插件创建应用](creating-app-with-plugin-support.md)
+
+## <a name="create-web-apps"></a>创建 Web 应用
 
 有关开发 ASP.NET Core Web 应用程序的教程，请参阅 [ASP.NET Core 文档](/aspnet/core/)。

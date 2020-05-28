@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-ms.openlocfilehash: eae1c38c2383d13bfb4dab83f2fe9551970b39f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5c601d18d92d9b57781bc8a09f26f0bc3a9216a
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120887"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842005"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>对 .NET 应用程序进行全球化和本地化
 
@@ -36,7 +36,7 @@ ms.locfileid: "73120887"
 
 遵循这三个步骤有两大好处：
 
-- 让你无需改进为支持单个区域性（如美国英语）而专门设计的应用程序以支持其他区域性。
+- 让你无需改进为支持单个区域性（如美国英语）而专门设计的应用程序以支持其他区域性。英语，以支持其他区域性。
 
 - 这会产生更加稳定并有少量 Bug 的本地化应用程序。
 
@@ -49,6 +49,10 @@ ms.locfileid: "73120887"
 [全球化](globalization.md)
 
 讨论创建全球通用的应用程序的第一个阶段，该阶段包括设计和编码为非特定区域性和非特定语言的应用程序。
+
+[.NET 全球化和 ICU](globalization-icu.md)
+
+介绍了 .NET 全球化如何使用 [Unicode 国际组件 (ICU)](http://site.icu-project.org/home)。
 
 [本地化评审](localizability-review.md)
 
@@ -66,7 +70,7 @@ ms.locfileid: "73120887"
 
 描述在全球化、本地化和开发全球通用的 ASP.NET 应用程序时遵循的最佳做法。
 
-## <a name="reference"></a>引用
+## <a name="reference"></a>参考
 
 - <xref:System.Globalization?displayProperty=nameWithType> 命名空间
 
