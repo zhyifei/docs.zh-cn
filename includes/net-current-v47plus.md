@@ -6,4 +6,4 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65629963"
 ---
-<span data-ttu-id="4e068-101">自 4.7 之后可用</span><span class="sxs-lookup"><span data-stu-id="4e068-101">Available since 4.7</span></span>
+<span data-ttu-id="a7f56-101">自4.7 之后可用</span><span class="sxs-lookup"><span data-stu-id="a7f56-101">Available since 4.7</span></span>
