@@ -26,7 +26,7 @@ ms.locfileid: "82135797"
 
 代码示例引用下面的类及其变体：
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
 
 ## <a name="namespaces"></a>命名空间
 
